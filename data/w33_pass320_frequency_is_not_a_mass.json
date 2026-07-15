@@ -1,0 +1,38 @@
+{
+  "schema": "w33.pass320.frequency_is_not_a_mass.v1",
+  "status": "PASS",
+  "what_is_built": "The oscillator. On the Heawood graph (L_H - qI)^2 = lambda I = 2I on the 12-dimensional middle shell -- re-verified here independently -- with omega = sqrt(lambda) = sqrt(2). This is the same sqrt(2) that Passes 297/298 showed is FORCED: a spectral invariant of the Fano incidence, true for every drawing.",
+  "the_gap": "omega = sqrt(2) is a DIMENSIONLESS eigenvalue of a combinatorial Laplacian; a mass is DIMENSIONFUL. Converting one to the other needs a scale with units -- a lattice spacing, a coupling, an energy per edge -- and w33_machine_clock_is_mass.py supplies none. The claim 'its frequency IS a mass' is therefore not wrong but INCOMPLETE, in a specific nameable way, and it cannot be tested until the missing scale is named.",
+  "the_fourth_failure_mode": "Pass 311 catalogued coordinate artefacts and over-reads; Pass 315 added unbuilt objects. This is an unbuilt HALF inside an otherwise sound file -- the file computes real things, so a file-level audit passes it, and only reading the sentences catches it. That is precisely why Pass 318 read instead of grepping.",
+  "what_would_fix_it": {
+    "(a) supply the scale": "state the units of an edge/hop so that m = hbar*omega/c^2 has a value comparable to a measured mass",
+    "(b) restate as a ratio": "dimensionless mass RATIOS need no scale, so 'omega_1/omega_2 = m_1/m_2' would be testable as written -- available immediately and costing nothing"
+  },
+  "option_b_evaluated": {
+    "the_two_shells": {
+      "E_minus": 1.5857864376269049,
+      "E_plus": 4.414213562373095
+    },
+    "shell_ratio": 2.7836116248912246,
+    "lepton_mass_ratios": {
+      "mu/e": 206.76828298766566,
+      "tau/mu": 16.81702933242618,
+      "tau/e": 3477.228280018971
+    },
+    "closest": "tau/mu",
+    "verdict": "the shell ratio (3+sqrt2)/(3-sqrt2) = 2.7836 matches NO lepton mass ratio (nearest is tau/mu, off by a factor 6.0). So the one dimensionless prediction the oscillator actually makes does not reproduce a mass ratio -- which is at least a check the current claim, having no scale, cannot even fail."
+  },
+  "reading": "The honest position: the Heawood oscillator is real and its sqrt(2) is forced, but 'the frequency IS a mass' names no object. The cheapest repair -- comparing dimensionless ratios -- is performed here and fails. So the claim should be withdrawn or given a scale; it should not continue to be quoted forward as a result.",
+  "checks": {
+    "middle_shell_12_dim": true,
+    "oscillator_identity_holds": true,
+    "omega_is_sqrt2": true,
+    "oscillator_is_BUILT": true,
+    "omega_is_dimensionless": true,
+    "a_mass_is_dimensionful": true,
+    "no_scale_supplied_in_the_file": true,
+    "claim_is_incomplete_not_wrong": true,
+    "shell_ratio_positive": true,
+    "shell_ratio_matches_no_lepton_ratio": true
+  }
+}

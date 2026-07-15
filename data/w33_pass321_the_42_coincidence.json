@@ -1,0 +1,31 @@
+{
+  "schema": "w33.pass321.the_42_coincidence.v1",
+  "status": "PASS",
+  "THE_CHECK": "|2T| = |SL(2,3)| = 24 = 2^3 * 3. Seven does not divide 24, so by Lagrange 2T has NO element of order 7 -- while AGL(1,7) has six. There is no group map identifying them and no AGL(1,7) action on 2T.",
+  "where_each_42_comes_from": {
+    "Csaszar": "|Aut| = |AGL(1,Phi_6)| = Phi_6*(Phi_6-1) = 7*6 = 42, where 7 = Phi_6(3) is the VERTEX count (g(K_n)=1 first at n=7)",
+    "D(2T)": "#anyons = sum over conjugacy classes [g] of #Irr(C(g)); SL(2,3) has 7 conjugacy classes and the sum is 42",
+    "the_difference": "Csaszar's 7 counts VERTICES of K7; 2T's 7 counts CONJUGACY CLASSES of SL(2,3). Different objects, and 7 does not divide |2T|."
+  },
+  "VERDICT": "COINCIDENCE. Same integer, unrelated structures. 42 is a small number and '42 appears twice' is not evidence of anything.",
+  "the_recurring_pattern": {
+    "Pass 279": "756 = 21 * 6^2 -- a rational integer flagged by a squarefree test as if it were sqrt(21); a false positive",
+    "Pass 309": "7 = Phi_6(3) looked like a tie between Aut(Csaszar) and the substrate until 7 was found not to divide |PGSp(4,3)| = 51840",
+    "Pass 321": "42 = |Aut(Csaszar)| and 42 = |D(2T) anyons| -- same integer, unrelated structures"
+  },
+  "why_check_at_all": "Because this program has twice been misled by exactly this: Pass 279's 756 (a rational integer that a squarefree test flagged as sqrt(21)) and Pass 309's 7 (which looked like a structural tie until Lagrange killed it). Each check costs one Lagrange argument and prevents a coincidence from being quoted forward as a result. That is the cheapest defence this arc has found.",
+  "checks": {
+    "both_are_42": true,
+    "2T_order_24": true,
+    "24_factors": true,
+    "7_does_not_divide_24": true,
+    "2T_has_no_order_7_element": true,
+    "AGL17_has_order_7_elements": true,
+    "no_group_map_identifies_them": true,
+    "phi6_is_7": true,
+    "csaszar_42_is_phi6_times_phi6_minus_1": true,
+    "sl23_has_7_conjugacy_classes": true,
+    "the_two_sevens_are_different_objects": true,
+    "third_instance_of_the_pattern": true
+  }
+}

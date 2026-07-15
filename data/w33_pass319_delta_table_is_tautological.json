@@ -1,0 +1,79 @@
+{
+  "schema": "w33.pass319.delta_table_is_tautological.v1",
+  "status": "PASS",
+  "VERDICT": "The proposed consistency check is TAUTOLOGICAL. delta(q) is DEFINED as char0(q) - rank_2(q), and for q = 2^t the rank IS Tr(B^t) + 1 (Pass 256), so delta(2^t) = char0(2^t) - Tr(B^t) - 1 identically. Comparing the closed form against itself cannot fail, and passing carries no information.",
+  "the_table": {
+    "1": {
+      "q": 2,
+      "char0": 10,
+      "rank_2": 10,
+      "delta": 0
+    },
+    "2": {
+      "q": 4,
+      "char0": 51,
+      "rank_2": 50,
+      "delta": 1
+    },
+    "3": {
+      "q": 8,
+      "char0": 325,
+      "rank_2": 298,
+      "delta": 27
+    },
+    "4": {
+      "q": 16,
+      "char0": 2313,
+      "rank_2": 1890,
+      "delta": 423
+    },
+    "5": {
+      "q": 32,
+      "char0": 17425,
+      "rank_2": 12250,
+      "delta": 5175
+    },
+    "6": {
+      "q": 64,
+      "char0": 135201,
+      "rank_2": 80018,
+      "delta": 55183
+    }
+  },
+  "delta_sequence_t_1_to_6": [
+    0,
+    1,
+    27,
+    423,
+    5175,
+    55183
+  ],
+  "asymptotics": {
+    "char0(2^t)": "~ q^3/2 = 8^t/2",
+    "Tr(B^t)": "~ lambda_+^t, lambda_+ = (9+sqrt17)/2 = 6.5616",
+    "delta": "a difference of two exponentials with different bases, dominated by char0; already as closed as the two laws that define it -- there is nothing further to find in this direction"
+  },
+  "the_pattern_this_repeats": "A computation that could not have come out otherwise carries no information. Pass 314 caught this in the char-3 tower (two ranks FORCE a 2x2 fit, so the fit is not evidence -- only the untested prediction is); Pass 313 caught it in Pass 308 (a true containment quoted as a selection argument that selects nothing new). This is the third instance, and it was my own proposal -- which is the point of running it rather than assuming it would be informative.",
+  "the_real_gap": {
+    "statement": "Pass 317: det(B_p) <=> delta(p^2). The gap is delta across p at fixed t=2.",
+    "delta(4)": 1,
+    "delta(9)": 26,
+    "delta(25)": "RUNNING (rank_5 W(3,25))",
+    "note": "Two points and no theory; Pass 317 checked the obvious candidate forms and none fits both. Nothing in the p=2 t-direction substitutes for the third point."
+  },
+  "checks": {
+    "delta_sequence_0_1_27_423": true,
+    "delta_t5_5175": true,
+    "matches_committed_deltas": true,
+    "delta_is_char0_minus_rank_by_definition": true,
+    "consistency_check_cannot_fail": true,
+    "so_it_is_not_evidence": true,
+    "lambda_plus_is_6_5616": true,
+    "char0_grows_like_8_pow_t": true,
+    "delta_dominated_by_char0": true,
+    "delta_4_is_1": true,
+    "delta_9_is_26": true,
+    "delta_25_needs_rank5": true,
+    "two_points_no_fit": true
+  }
+}
