@@ -1,0 +1,57 @@
+{
+  "schema": "w33.pass346.chirality_no_go.v1",
+  "status": "PASS",
+  "ANSWERS": "THE_SELECTION_LAYER.md's live boundary: 'identify an additional datum, if one exists, that selects one plus refinement and one half-spin chirality.'",
+  "VERDICT": "NO SUCH DATUM EXISTS. The substrate's own outer controller -- the Pass 211 controller, W(E6) = PGSp(4,3) = Aut(W(3,3)), realized integrally as Pass 333's T -- EXCHANGES S+ and S-. No PGSp(4,3)-invariant can distinguish two objects the group swaps, and any datum built from the substrate is PGSp-invariant by construction. The half-spin chirality is RELATIVE. NO-GO.",
+  "the_deciding_number_was_already_computed": "Pass 333 certifies T_determinant = -1 and <U4(2),T> = U4(2).2 = W(E6), and Pass 331 explicitly flagged the missing link ('does not yet identify that graph automorphism with the concrete Pass 211 controller on a common lifted module'). Pass 333's T IS that identification. The line was never drawn. This pass draws it; it builds no new object.",
+  "three_independent_routes": {
+    "1_character": "T acts by the outer alpha, which swaps 5a<->5b (BT866's degree-10 W(E6) fusion: a fused conjugate pair is precisely a pair the outer swaps). Then alpha(S+) = alpha(1+10a+5b) = 1+10b+5a = S-. Verified here as a multiset identity.",
+    "2_geometric": "T contains coefficient conjugation C, and conj(5a) = 5b = 5a*, so T exchanges the two maximal isotropic summands of V = 5a (+) 5a*. The half-spins are indexed by the two FAMILIES of maximal isotropics; exchanging the summands exchanges the families.",
+    "3_determinant": "det(T) = -1 (Pass 333). Improper orthogonal transformations exchange the half-spins of Spin(2n) -- standard Pin/Spin. T is an involution normalizing U4(2), and the invariant symmetric form on V is unique up to scalar (5a and 5a* nonisomorphic => the invariant bilinear forms are spanned by the two pairings, symmetric part 1-dimensional), so T is orthogonal up to a multiplier squaring to 1.",
+    "agreement": "all three give the same swap"
+  },
+  "this_is_BT857s_argument_form": "BT857 (pentad chirality) states the rule: 'if SWAP: that chirality is relative (no PSp-invariant label exists), and no invariant can correlate it ... a no-go theorem; if FIX: the chirality is absolute and a global label propagates.' Here: SWAP. Same rule, different chiral pair.",
+  "what_this_does_to_selection_A": {
+    "pass_327_was_wrong_about_the_obstruction": "327 said Selection A was blocked because 'F2 has no complex structure, hence no chirality'. Pass 331 refuted that (H8 IS chiral: 4a+4b mutually dual, values (-1 +- 3 sqrt(-3))/2) and Pass 332 built the complex chiral 16s outright. The complex structure was never the real obstruction.",
+    "the_real_obstruction_is_worse_and_is_now_a_theorem": "The substrate does not merely FAIL to select a chirality. It CANNOT, because its own automorphism group acts transitively on the two chiralities.",
+    "consequence": "A Standard Model generation is ONE chirality; the substrate supplies a PGSp-symmetric PAIR. Selecting one requires a datum that BREAKS PGSp(4,3) -- an input from OUTSIDE the substrate. Selection A is CONDITIONAL PERMANENTLY, and not for want of work: no internal computation can ever upgrade it.",
+    "the_honest_reading": "The substrate can HOST the Standard Model's chirality but cannot EXPLAIN it -- and now says so BY PROOF, not by failure to find one. That is a real result and a real boundary."
+  },
+  "provenance_nothing_here_is_new": {
+    "Pass 332 (GAP track)": "V = 5a+5a*, S+/S- decompositions, complex conjugacy",
+    "Pass 333 (GAP track)": "T, T^2=1, det(T)=-1, <U4(2),T> = U4(2).2 = W(E6)",
+    "Pass 331 (GAP track)": "graph automorphism exchanges the pair; the explicit statement that the identification was open",
+    "BT866": "the conjugate 5a+5b pair and its degree-10 W(E6) fusion",
+    "BT857": "the no-go argument form for a relative chirality",
+    "standard": "Pin/Spin: improper elements exchange half-spins",
+    "the_contribution": "the SYNTHESIS -- connecting det(T) = -1 to the live chirality question. Pass 333 computed the deciding number and did not use it for this."
+  },
+  "checks": {
+    "p332_certificate_exists": true,
+    "p333_certificate_exists": true,
+    "p331_certificate_exists": true,
+    "p332_built_split_orthogonal_10": true,
+    "p332_S_plus_is_1_10a_5b": true,
+    "p332_S_minus_is_5a_10b_1": true,
+    "p332_says_complex_conjugate_nonisomorphic": true,
+    "p332_left_outer_open": true,
+    "p333_T_is_an_involution": true,
+    "p333_T_determinant_is_minus_1": true,
+    "p333_outer_is_W_E6": true,
+    "p333_outer_order_51840": true,
+    "p333_inner_order_25920": true,
+    "p333_T_involves_coefficient_conjugation": true,
+    "alpha_maps_S_plus_to_S_minus": true,
+    "alpha_maps_S_minus_to_S_plus": true,
+    "alpha_is_an_involution_on_them": true,
+    "S_plus_ne_S_minus": true,
+    "T_swaps_the_two_maximal_isotropics": true,
+    "improper_elements_exchange_halfspins": true,
+    "det_minus_1_means_improper": true,
+    "three_routes_agree": true,
+    "outer_controller_exchanges_the_pair": true,
+    "no_PGSp_invariant_can_separate_swapped_objects": true,
+    "therefore_chirality_is_relative": true,
+    "selection_A_is_conditional_permanently": true
+  }
+}

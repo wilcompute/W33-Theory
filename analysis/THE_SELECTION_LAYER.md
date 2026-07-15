@@ -276,3 +276,60 @@ The selector frame, Clifford carrier, discriminant module, extension
 obstruction, and local-to-global lattice action are built. None is a physical
 Standard-Model identification. More rank-law or code-parameter passes would
 return to the rediscovery failure this document was written to stop.
+
+### 5.6 Pass 346 answers it: the chirality datum **cannot** exist
+
+**No such datum exists — and Pass 333 had already computed the deciding number.**
+
+Pass 331 flagged the exact missing link: the ATLAS 32 certifies that *"the D₅
+graph automorphism exchanges the half-spin pair"*, but *"this does not yet
+identify that graph automorphism with the concrete Pass 211 controller."*
+**Pass 333's `T` is that identification**, and the line was never drawn:
+
+| Pass 333 certificate | value |
+|---|---|
+| `T_order` | 2 |
+| **`T_determinant`** | **−1** |
+| `⟨U4(2),T⟩` | `U4(2).2 = W(E6) = PGSp(4,3)` — *the substrate's own controller* |
+| `T` formula | `R(S)C`, `C` = coefficient conjugation |
+
+Three independent routes agree that **`T` exchanges `S+` and `S−`**:
+
+1. **Character** — `T` acts by the outer `α`, which swaps `5a ↔ 5b` (BT866's
+   degree-10 `W(E6)` fusion: a *fused* conjugate pair is precisely a pair the
+   outer swaps). So `α(S+) = α(1+10a+5b) = 1+10b+5a = S−`.
+2. **Geometric** — `C` sends `5a → 5b = 5a*`, exchanging the two maximal
+   isotropic summands of `V = 5a ⊕ 5a*`; the half-spins are indexed by the two
+   *families* of maximal isotropics.
+3. **Determinant** — `det(T) = −1`: improper elements exchange the half-spins of
+   `Spin(2n)` (standard Pin/Spin). The invariant symmetric form on `V` is unique
+   up to scalar, since `5a ≇ 5a*`.
+
+> **NO-GO.** The substrate's own automorphism group acts **transitively on the two
+> chiralities**. No `PGSp(4,3)`-invariant can separate objects the group swaps —
+> and any datum built from the substrate *is* `PGSp`-invariant by construction.
+> The half-spin chirality is **relative**.
+
+This is **BT857's argument form** (pentad chirality) applied to a different chiral
+pair: *"if SWAP: that chirality is relative … a no-go theorem."* Here: SWAP.
+
+**What it does to Selection A.** Pass 327's stated obstruction ("F₂ has no complex
+structure, hence no chirality") was **wrong** — Pass 331 refuted it (`H8` *is*
+chiral) and Pass 332 built the complex chiral 16s. The real obstruction is worse,
+and is now a **theorem rather than a gap**:
+
+> The substrate does not merely **fail** to select a chirality. It **cannot** —
+> its own automorphism group exchanges the two.
+
+A Standard-Model generation is **one** chirality; the substrate supplies a
+`PGSp`-symmetric **pair**. Selecting one requires a datum that **breaks**
+`PGSp(4,3)` — an input from *outside*. **Selection A is conditional permanently,
+and no internal computation can ever upgrade it.**
+
+The substrate can **host** the Standard Model's chirality but cannot **explain**
+it — and now says so *by proof*, not by failure to find one. That closes the live
+boundary in the negative, which is the honest end of the selection layer.
+
+*Witness: `analysis/w33_pass346_the_chirality_no_go.py`, 26/26. It builds no new
+object; every input is prior art (Passes 331/332/333, BT866, BT857, Pin/Spin).
+The contribution is the connection.*
