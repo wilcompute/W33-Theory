@@ -1,0 +1,39 @@
+{
+  "schema": "w33.pass277.q27_frobenius_degree_3.v1",
+  "status": "PASS",
+  "q": 27,
+  "p": 3,
+  "frobenius_degree_t": 3,
+  "result": {
+    "n": 20440,
+    "lines": 20440,
+    "rank_2_computed": 10585,
+    "char0_prediction": 10585,
+    "match": true,
+    "dim_C_perp": 9855,
+    "g_law": 9855,
+    "k_css": 730,
+    "timings_s": {
+      "points": 0.3,
+      "lines": 16.8,
+      "rank": 23.5,
+      "total": 40.6
+    }
+  },
+  "why_this_matters": "In characteristic 2 the Frobenius degree t is everything: the rank is Tr(B^t)+1, exponential in t. Pass 266 claims odd characteristic is t-BLIND -- the rank is just the characteristic-0 value for any t. But every odd prime power tested so far (q=9, q=25) has t=2, so a hidden t-structure could have been missed. q = 27 = 3^3 is the first odd prime power with t=3, and therefore the first genuine test of t-blindness in odd characteristic.",
+  "reading": "W(3,27) was built over GF(27) = F_3[x]/(x^3-x+1) (20440 points and isotropic lines) and its F2 incidence rank computed directly. The result decides whether the Frobenius degree has any effect in odd characteristic. A match at t=3 -- after t=1 (six primes) and t=2 (q=9, q=25) -- makes the cross-characteristic mechanism of Pass 266 as well-attested as the char-2 side, and settles the asymmetry that Pass 262's refuted unification first exposed.",
+  "checks": {
+    "gf27_size": true,
+    "gf27_all_invertible": true,
+    "gf27_is_a_field": true,
+    "n_20440": true,
+    "lines_20440": true,
+    "line_size_28": true,
+    "rank_matches_char0_prediction": true,
+    "predicted_10585": true,
+    "g_9855": true,
+    "dual_dim_equals_g": true,
+    "k_730": true,
+    "odd_characteristic_is_t_blind": true
+  }
+}

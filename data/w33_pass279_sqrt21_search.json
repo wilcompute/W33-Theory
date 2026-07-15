@@ -1,0 +1,431 @@
+{
+  "schema": "w33.pass279.sqrt21_search.v1",
+  "status": "PASS",
+  "target": {
+    "eps_star": "(5 - sqrt 21)/2",
+    "numeric": 0.20871215252208,
+    "minimal_polynomial": "x^2 - 5x + 1",
+    "discriminant": 21,
+    "algebraic_nature": "a UNIT of norm 1 in Q(sqrt 21): eps * conj(eps) = 1",
+    "origin": "Pass 274: the FN(2,1,0) texture lands on the Koide light cone exactly at this eps"
+  },
+  "contrast": {
+    "even_tower_irrationality": "(9 +- sqrt 17)/2 from x^2 - 9x + 16",
+    "discriminant": 17,
+    "note": "the substrate's known quadratic irrationality is sqrt 17, not sqrt 21; det = 16 is not a unit, so lambda_pm are not units, unlike eps*"
+  },
+  "scanned_quantities": {
+    "2": {
+      "values": {
+        "v": 15,
+        "k_srg": 6,
+        "r": 1,
+        "s": -3,
+        "g": 5,
+        "char0_rank": 10,
+        "disc_srg": 16,
+        "NNt_top": 9,
+        "NNt_mid": 4,
+        "css_n": 15,
+        "css_k": 5,
+        "css_d": 3
+      },
+      "squarefree_parts": {
+        "v": 15,
+        "k_srg": 6,
+        "r": 1,
+        "s": 3,
+        "g": 5,
+        "char0_rank": 10,
+        "disc_srg": 1,
+        "NNt_top": 1,
+        "NNt_mid": 1,
+        "css_n": 15,
+        "css_k": 5,
+        "css_d": 3
+      }
+    },
+    "3": {
+      "values": {
+        "v": 40,
+        "k_srg": 12,
+        "r": 2,
+        "s": -4,
+        "g": 15,
+        "char0_rank": 25,
+        "disc_srg": 36,
+        "NNt_top": 16,
+        "NNt_mid": 6,
+        "css_n": 40,
+        "css_k": 10,
+        "css_d": 4
+      },
+      "squarefree_parts": {
+        "v": 10,
+        "k_srg": 3,
+        "r": 2,
+        "s": 1,
+        "g": 15,
+        "char0_rank": 1,
+        "disc_srg": 1,
+        "NNt_top": 1,
+        "NNt_mid": 6,
+        "css_n": 10,
+        "css_k": 10,
+        "css_d": 1
+      }
+    },
+    "4": {
+      "values": {
+        "v": 85,
+        "k_srg": 20,
+        "r": 3,
+        "s": -5,
+        "g": 34,
+        "char0_rank": 51,
+        "disc_srg": 64,
+        "NNt_top": 25,
+        "NNt_mid": 8,
+        "css_n": 85,
+        "css_k": 17,
+        "css_d": 5
+      },
+      "squarefree_parts": {
+        "v": 85,
+        "k_srg": 5,
+        "r": 3,
+        "s": 5,
+        "g": 34,
+        "char0_rank": 51,
+        "disc_srg": 1,
+        "NNt_top": 1,
+        "NNt_mid": 2,
+        "css_n": 85,
+        "css_k": 17,
+        "css_d": 5
+      }
+    },
+    "5": {
+      "values": {
+        "v": 156,
+        "k_srg": 30,
+        "r": 4,
+        "s": -6,
+        "g": 65,
+        "char0_rank": 91,
+        "disc_srg": 100,
+        "NNt_top": 36,
+        "NNt_mid": 10,
+        "css_n": 156,
+        "css_k": 26,
+        "css_d": 6
+      },
+      "squarefree_parts": {
+        "v": 39,
+        "k_srg": 30,
+        "r": 1,
+        "s": 6,
+        "g": 65,
+        "char0_rank": 91,
+        "disc_srg": 1,
+        "NNt_top": 1,
+        "NNt_mid": 10,
+        "css_n": 39,
+        "css_k": 26,
+        "css_d": 6
+      }
+    },
+    "7": {
+      "values": {
+        "v": 400,
+        "k_srg": 56,
+        "r": 6,
+        "s": -8,
+        "g": 175,
+        "char0_rank": 225,
+        "disc_srg": 196,
+        "NNt_top": 64,
+        "NNt_mid": 14,
+        "css_n": 400,
+        "css_k": 50,
+        "css_d": 8
+      },
+      "squarefree_parts": {
+        "v": 1,
+        "k_srg": 14,
+        "r": 6,
+        "s": 2,
+        "g": 7,
+        "char0_rank": 1,
+        "disc_srg": 1,
+        "NNt_top": 1,
+        "NNt_mid": 14,
+        "css_n": 1,
+        "css_k": 2,
+        "css_d": 2
+      }
+    },
+    "8": {
+      "values": {
+        "v": 585,
+        "k_srg": 72,
+        "r": 7,
+        "s": -9,
+        "g": 260,
+        "char0_rank": 325,
+        "disc_srg": 256,
+        "NNt_top": 81,
+        "NNt_mid": 16,
+        "css_n": 585,
+        "css_k": 65,
+        "css_d": 9
+      },
+      "squarefree_parts": {
+        "v": 65,
+        "k_srg": 2,
+        "r": 7,
+        "s": 1,
+        "g": 65,
+        "char0_rank": 13,
+        "disc_srg": 1,
+        "NNt_top": 1,
+        "NNt_mid": 1,
+        "css_n": 65,
+        "css_k": 65,
+        "css_d": 1
+      }
+    },
+    "9": {
+      "values": {
+        "v": 820,
+        "k_srg": 90,
+        "r": 8,
+        "s": -10,
+        "g": 369,
+        "char0_rank": 451,
+        "disc_srg": 324,
+        "NNt_top": 100,
+        "NNt_mid": 18,
+        "css_n": 820,
+        "css_k": 82,
+        "css_d": 10
+      },
+      "squarefree_parts": {
+        "v": 205,
+        "k_srg": 10,
+        "r": 2,
+        "s": 10,
+        "g": 41,
+        "char0_rank": 451,
+        "disc_srg": 1,
+        "NNt_top": 1,
+        "NNt_mid": 2,
+        "css_n": 205,
+        "css_k": 82,
+        "css_d": 10
+      }
+    },
+    "11": {
+      "values": {
+        "v": 1464,
+        "k_srg": 132,
+        "r": 10,
+        "s": -12,
+        "g": 671,
+        "char0_rank": 793,
+        "disc_srg": 484,
+        "NNt_top": 144,
+        "NNt_mid": 22,
+        "css_n": 1464,
+        "css_k": 122,
+        "css_d": 12
+      },
+      "squarefree_parts": {
+        "v": 366,
+        "k_srg": 33,
+        "r": 10,
+        "s": 3,
+        "g": 671,
+        "char0_rank": 793,
+        "disc_srg": 1,
+        "NNt_top": 1,
+        "NNt_mid": 22,
+        "css_n": 366,
+        "css_k": 122,
+        "css_d": 3
+      }
+    },
+    "13": {
+      "values": {
+        "v": 2380,
+        "k_srg": 182,
+        "r": 12,
+        "s": -14,
+        "g": 1105,
+        "char0_rank": 1275,
+        "disc_srg": 676,
+        "NNt_top": 196,
+        "NNt_mid": 26,
+        "css_n": 2380,
+        "css_k": 170,
+        "css_d": 14
+      },
+      "squarefree_parts": {
+        "v": 595,
+        "k_srg": 182,
+        "r": 3,
+        "s": 14,
+        "g": 1105,
+        "char0_rank": 51,
+        "disc_srg": 1,
+        "NNt_top": 1,
+        "NNt_mid": 26,
+        "css_n": 595,
+        "css_k": 170,
+        "css_d": 14
+      }
+    },
+    "16": {
+      "values": {
+        "v": 4369,
+        "k_srg": 272,
+        "r": 15,
+        "s": -17,
+        "g": 2056,
+        "char0_rank": 2313,
+        "disc_srg": 1024,
+        "NNt_top": 289,
+        "NNt_mid": 32,
+        "css_n": 4369,
+        "css_k": 257,
+        "css_d": 17
+      },
+      "squarefree_parts": {
+        "v": 4369,
+        "k_srg": 17,
+        "r": 15,
+        "s": 17,
+        "g": 514,
+        "char0_rank": 257,
+        "disc_srg": 1,
+        "NNt_top": 1,
+        "NNt_mid": 2,
+        "css_n": 4369,
+        "css_k": 257,
+        "css_d": 17
+      }
+    },
+    "25": {
+      "values": {
+        "v": 16276,
+        "k_srg": 650,
+        "r": 24,
+        "s": -26,
+        "g": 7825,
+        "char0_rank": 8451,
+        "disc_srg": 2500,
+        "NNt_top": 676,
+        "NNt_mid": 50,
+        "css_n": 16276,
+        "css_k": 626,
+        "css_d": 26
+      },
+      "squarefree_parts": {
+        "v": 4069,
+        "k_srg": 26,
+        "r": 6,
+        "s": 26,
+        "g": 313,
+        "char0_rank": 939,
+        "disc_srg": 1,
+        "NNt_top": 1,
+        "NNt_mid": 2,
+        "css_n": 4069,
+        "css_k": 626,
+        "css_d": 26
+      }
+    },
+    "27": {
+      "values": {
+        "v": 20440,
+        "k_srg": 756,
+        "r": 26,
+        "s": -28,
+        "g": 9855,
+        "char0_rank": 10585,
+        "disc_srg": 2916,
+        "NNt_top": 784,
+        "NNt_mid": 54,
+        "css_n": 20440,
+        "css_k": 730,
+        "css_d": 28
+      },
+      "squarefree_parts": {
+        "v": 5110,
+        "k_srg": 21,
+        "r": 26,
+        "s": 7,
+        "g": 1095,
+        "char0_rank": 10585,
+        "disc_srg": 1,
+        "NNt_top": 1,
+        "NNt_mid": 6,
+        "css_n": 5110,
+        "css_k": 730,
+        "css_d": 7
+      }
+    }
+  },
+  "other_invariants_squarefree_parts": {
+    "|PGSp(4,3)|": 10,
+    "|PSp(4,3)|": 5,
+    "|S6|": 5,
+    "|S3|": 6,
+    "w33_points": 10,
+    "sentinel_dim": 15,
+    "context_dim": 1,
+    "shell_27": 3,
+    "gq42_points": 5,
+    "dodecads": 1,
+    "theta_80": 5,
+    "srg_k": 3,
+    "srg_r": 2,
+    "srg_s": 1,
+    "E8_layer": 2,
+    "so10": 10,
+    "e6_27": 3,
+    "e8_248": 62,
+    "A8_min_words": 5
+  },
+  "raw_squarefree_hits": [
+    {
+      "q": 27,
+      "quantity": "k_srg",
+      "value": 756
+    }
+  ],
+  "genuine_irrational_hits": [],
+  "rational_coincidences": [
+    {
+      "q": 27,
+      "quantity": "k_srg",
+      "value": 756
+    }
+  ],
+  "srg_discriminant": "4q^2 -- a perfect square at every q, so the SRG eigenvalues q-1 and -(q+1) are always RATIONAL and the SRG contributes no irrationality at all",
+  "verdict": "sqrt(21) does NOT appear in the substrate. No discriminant has squarefree part 21; indeed the SRG discriminant is 4q^2, a perfect square at every q, so the collinearity graph is rational through and through. The one raw hit -- k_srg(27) = 756 = 21 * 6^2 -- is a FALSE POSITIVE of the crude squarefree test: 756 is a rational integer and contains no sqrt(21). The substrate's only genuine quadratic irrationality is sqrt 17, from the even-q transfer matrix x^2 - 9x + 16 -- a different field from Q(sqrt 21).",
+  "reading": "eps* = (5-sqrt21)/2 is genuinely distinguished as an algebraic number -- a norm-1 unit of Q(sqrt 21) -- but it is not a number the geometry contains. The substrate does carry a quadratic irrationality, sqrt 17, and it belongs to the even-q transfer matrix, a different field entirely. Combined with Pass 274 (FN accommodates Koide rather than deriving it), the conclusion is that eps* is an artefact of the FN parametrisation, not a fingerprint of W(3,q). The single raw hit (756 = 21*6^2 at q=27) is a rational integer and a false positive of the squarefree test -- worth recording precisely because it shows how easily such a search manufactures a coincidence. The Koide cone condition remains sharply stated (Pass 257: a null ray of the family clock's Minkowski metric) and unexplained, and this pass closes off one more way it might have been explained.",
+  "checks": {
+    "eps_minpoly_is_x2_5x_1": true,
+    "eps_is_unit_norm_1": true,
+    "eps_numeric": true,
+    "disc_of_eps_quadratic_is_21": true,
+    "tower_disc_is_17": true,
+    "17_and_21_differ": true,
+    "no_srg_disc_is_21": true,
+    "srg_disc_is_always_a_perfect_square": true,
+    "srg_contributes_no_irrationality": true,
+    "search_completed": true,
+    "no_genuine_sqrt21": true
+  }
+}

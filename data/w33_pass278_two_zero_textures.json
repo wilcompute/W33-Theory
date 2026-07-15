@@ -1,0 +1,135 @@
+{
+  "schema": "w33.pass278.two_zero_textures.v1",
+  "status": "PASS",
+  "context": "Pass 273 found Z_c predicts |theta_23-45| in [1.02,1.58] and Z_d predicts [5.93,8.54]; the observed 4.10 falls in the GAP between them. This sweep asks whether any richer texture reaches the gap.",
+  "observed_dev23": 4.100000000000001,
+  "textures": {
+    "modeA_zeros[none]": {
+      "n": 14,
+      "min": 0.13686467319045903,
+      "max": 20.01910404757295,
+      "median": 13.60591574582344,
+      "width": 19.88223937438249,
+      "contains_observed": true
+    },
+    "modeA_zeros[a]": {
+      "n": 20,
+      "min": 0.19477808163714627,
+      "max": 2.5434692215844947,
+      "median": 2.0664119975633213,
+      "width": 2.3486911399473485,
+      "contains_observed": false
+    },
+    "modeA_zeros[b]": {
+      "n": 0,
+      "note": "no admissible (base, eta)"
+    },
+    "modeA_zeros[c]": {
+      "n": 19,
+      "min": 9.03647739091793,
+      "max": 15.84468457733243,
+      "median": 9.036477509092258,
+      "width": 6.808207186414499,
+      "contains_observed": false
+    },
+    "modeA_zeros[d]": {
+      "n": 0,
+      "note": "no admissible (base, eta)"
+    },
+    "modeA_zeros[a,b]": {
+      "n": 0,
+      "note": "no admissible (base, eta)"
+    },
+    "modeA_zeros[a,c]": {
+      "n": 0,
+      "note": "no admissible (base, eta)"
+    },
+    "modeA_zeros[a,d]": {
+      "n": 0,
+      "note": "no admissible (base, eta)"
+    },
+    "modeA_zeros[b,c]": {
+      "n": 0,
+      "note": "no admissible (base, eta)"
+    },
+    "modeA_zeros[b,d]": {
+      "n": 0,
+      "note": "no admissible (base, eta)"
+    },
+    "modeA_zeros[c,d]": {
+      "n": 0,
+      "note": "no admissible (base, eta)"
+    },
+    "modeB_zeros[none]": {
+      "n": 13,
+      "min": 0.5405035329247809,
+      "max": 7.274386486967117,
+      "median": 2.6309354426805385,
+      "width": 6.733882954042336,
+      "contains_observed": true
+    },
+    "modeB_zeros[a]": {
+      "n": 1,
+      "min": 38.1230716195854,
+      "max": 38.1230716195854,
+      "median": 38.1230716195854,
+      "width": 0.0,
+      "contains_observed": false
+    },
+    "modeB_zeros[b]": {
+      "n": 0,
+      "note": "no admissible (base, eta)"
+    },
+    "modeB_zeros[c]": {
+      "n": 20,
+      "min": 1.0190173293766023,
+      "max": 1.5760982388637075,
+      "median": 1.2975577834581031,
+      "width": 0.5570809094871052,
+      "contains_observed": false
+    },
+    "modeB_zeros[d]": {
+      "n": 20,
+      "min": 5.929189602272466,
+      "max": 8.535589998667646,
+      "median": 7.232389832705525,
+      "width": 2.6064003963951805,
+      "contains_observed": false
+    },
+    "modeB_zeros[a,b]": {
+      "n": 0,
+      "note": "no admissible (base, eta)"
+    },
+    "modeB_zeros[a,c]": {
+      "n": 0,
+      "note": "no admissible (base, eta)"
+    },
+    "modeB_zeros[a,d]": {
+      "n": 0,
+      "note": "no admissible (base, eta)"
+    },
+    "modeB_zeros[b,c]": {
+      "n": 0,
+      "note": "no admissible (base, eta)"
+    },
+    "modeB_zeros[b,d]": {
+      "n": 0,
+      "note": "no admissible (base, eta)"
+    },
+    "modeB_zeros[c,d]": {
+      "n": 0,
+      "note": "no admissible (base, eta)"
+    }
+  },
+  "hits": [
+    "modeA_zeros[none]",
+    "modeB_zeros[none]"
+  ],
+  "narrow_hits": [],
+  "verdict": "texture(s) ['modeA_zeros[none]', 'modeB_zeros[none]'] contain 4.10 but only with a WIDE band, so they accommodate rather than predict it",
+  "reading": "Every structural option is swept: two breaking modes x (no zero, each single zero, each double zero). Double zeros remove two parameters and are maximally predictive, so if mu-tau breaking is the right mechanism, some texture should land on 4.10 deg. The outcome is reported as it comes -- a clean miss across the whole sweep would say the atmospheric angle has a different origin entirely.",
+  "checks": {
+    "swept_all_textures": true,
+    "some_texture_solvable": true
+  }
+}

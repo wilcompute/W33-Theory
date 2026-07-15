@@ -1,0 +1,71 @@
+{
+  "schema": "w33.pass275.doily_determines_the_tower.v1",
+  "status": "PASS",
+  "theorem": "det(B) = 16 = 2^4 = |F_2^4|, the doily's ambient symplectic space, so det(B^t) = q^4 = |F_q^4| at every rung (verified t=1..5). With Pass 270's Tr(B) = rank_2 W(3,2) - 1 = 9, the characteristic polynomial is char(B) = L^2 - (rank_2 W(3,2) - 1) L + |F_2^4| = L^2 - 9L + 16. Since B is fixed up to similarity by (Tr, det) (Pass 265) and rank_2 W(3,2^t) = Tr(B^t)+1 (Pass 256), the ENTIRE infinite even tower is determined by two facts about the single geometry W(3,2): its own F2 rank (10) and the size of its ambient space (16).",
+  "inputs": {
+    "doily_rank_2": 10,
+    "ambient_|F_2^4|": 16
+  },
+  "derived_invariants": {
+    "Tr(B)": 9,
+    "det(B)": 16,
+    "discriminant": 17,
+    "charpoly": "L^2 - 9L + 16"
+  },
+  "det_tower": {
+    "2": {
+      "t": 1,
+      "det(B^t)": 16,
+      "q^4": 16,
+      "match": true
+    },
+    "4": {
+      "t": 2,
+      "det(B^t)": 256,
+      "q^4": 256,
+      "match": true
+    },
+    "8": {
+      "t": 3,
+      "det(B^t)": 4096,
+      "q^4": 4096,
+      "match": true
+    },
+    "16": {
+      "t": 4,
+      "det(B^t)": 65536,
+      "q^4": 65536,
+      "match": true
+    },
+    "32": {
+      "t": 5,
+      "det(B^t)": 1048576,
+      "q^4": 1048576,
+      "match": true
+    }
+  },
+  "regenerated_tower": {
+    "1": 10,
+    "2": 50,
+    "3": 298,
+    "4": 1890,
+    "5": 12250,
+    "6": 80018
+  },
+  "closure": "Feeding ONLY (rank_2 doily, |F_2^4|) = (10, 16) into the recurrence regenerates 10, 50, 298, 1890, 12250 -- including the 1890 that Pass 250 obtained only by explicitly building W(3,16) over GF(16), and the 12250 of the independent transfer theorem (Pass 178). The infinite even tower is a shadow of the doily.",
+  "honest_scope": "det(B) = |F_2^4| is an exact numerical identification and the closure that follows is verified end to end. WHY the determinant should equal the ambient size is NOT derived here; a decisive structural test would require a symplectic geometry with a different ambient dimension, so that 'ambient size' and '2^4' come apart.",
+  "checks": {
+    "trace_from_doily_rank": true,
+    "det_is_ambient_size": true,
+    "committed_B_trace": true,
+    "committed_B_det": true,
+    "charpoly_is_L2_minus_9L_plus_16": true,
+    "det_Bt_equals_q4": true,
+    "regenerates_full_tower": true,
+    "regenerates_1890": true,
+    "regenerates_12250": true,
+    "inhomogeneous_constant_is_8": true,
+    "recurrence_form_agrees": true,
+    "closure_uses_only_two_numbers": true
+  }
+}

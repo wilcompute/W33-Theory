@@ -1,0 +1,75 @@
+{
+  "schema": "w33.pass276.kernel_lifting.v1",
+  "status": "PASS",
+  "theorem_saturation": "ker_Z(N) is a saturated sublattice of Z^v of rank g, so its reduction mod 2 has dimension exactly g and lies inside ker_F2. Hence dim ker_F2 >= g and rank_F2 <= v - g = the characteristic-0 rank -- an independent proof that the drop is never negative, complementing Pass 271's minor-lifting argument.",
+  "no_drop_condition": "rank_F2 = v - g holds iff ker_F2 equals the reduction of ker_Z, i.e. iff EVERY mod-2 kernel vector lifts to an integral one. So delta = dim ker_F2 - g counts the mod-2 kernel directions with no integral origin: the 2-modular drop is a kernel-LIFTING failure.",
+  "verification": {
+    "2": {
+      "n": 15,
+      "even_q": true,
+      "dim_ker_Q": 5,
+      "g_law": 5,
+      "rank_F2": 10,
+      "char0_rank": 10,
+      "dim_ker_F2": 5,
+      "dim_reduction_of_integral_kernel": 5,
+      "delta_nonlifting_directions": 0
+    },
+    "3": {
+      "n": 40,
+      "even_q": false,
+      "dim_ker_Q": 15,
+      "g_law": 15,
+      "rank_F2": 25,
+      "char0_rank": 25,
+      "dim_ker_F2": 15,
+      "dim_reduction_of_integral_kernel": 15,
+      "delta_nonlifting_directions": 0
+    },
+    "4": {
+      "n": 85,
+      "even_q": true,
+      "dim_ker_Q": 34,
+      "g_law": 34,
+      "rank_F2": 50,
+      "char0_rank": 51,
+      "dim_ker_F2": 35,
+      "dim_reduction_of_integral_kernel": 34,
+      "delta_nonlifting_directions": 1
+    },
+    "5": {
+      "n": 156,
+      "even_q": false,
+      "dim_ker_Q": 65,
+      "g_law": 65,
+      "rank_F2": 91,
+      "char0_rank": 91,
+      "dim_ker_F2": 65,
+      "dim_reduction_of_integral_kernel": 65,
+      "delta_nonlifting_directions": 0
+    }
+  },
+  "reading": "The drop now has two equivalent descriptions that agree exactly. In invariant factors (Pass 271) it is the number of EVEN elementary divisors; in kernels (here) it is the number of mod-2 kernel directions that fail to lift. At q=3 and q=5 both counts are 0 (cross characteristic: reduction is faithful). At q=4 both are 1 -- one even invariant factor of value 2, one non-lifting kernel direction. Defining characteristic creates kernel vectors mod 2 that no integral vector explains.",
+  "checks": {
+    "q2_ker_Q_dim_is_g": true,
+    "q2_rank_F2_le_char0": true,
+    "q2_dim_ker_F2_ge_g": true,
+    "q2_delta_matches": true,
+    "q3_ker_Q_dim_is_g": true,
+    "q3_rank_F2_le_char0": true,
+    "q3_dim_ker_F2_ge_g": true,
+    "q3_delta_matches": true,
+    "q4_ker_Q_dim_is_g": true,
+    "q4_rank_F2_le_char0": true,
+    "q4_dim_ker_F2_ge_g": true,
+    "q4_delta_matches": true,
+    "q5_ker_Q_dim_is_g": true,
+    "q5_rank_F2_le_char0": true,
+    "q5_dim_ker_F2_ge_g": true,
+    "q5_delta_matches": true,
+    "odd_q_every_kernel_vector_lifts": true,
+    "q2_every_kernel_vector_lifts": true,
+    "q4_exactly_one_nonlifting_direction": true,
+    "agrees_with_pass271_even_divisor_count": true
+  }
+}
