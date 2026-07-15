@@ -40,6 +40,28 @@ RE_LIN = re.compile(r"\[\s*\d+\s*,\s*\d+\s*,\s*\d+\s*\]")
 RE_INT = re.compile(r"(?<![\d.\-])(\d{3,7})(?![\d.])")
 RE_SEQ = re.compile(r"\b\d+(?:/\d+){2,}\b")
 
+# NAMED OBJECTS -- added at Pass 348, which found the blind spot the hard way.
+# The guard extracted ZERO tokens from Pass 347, whose rediscovered claim was
+# "A2 = the q=3 hexagonal lattice = the GKP base" (already in
+# w33_eisenstein_grand_synthesis.py, FACE 4). A2 is not a code parameter, not a
+# distinctive integer, not a sequence -- so a numbers-only guard is structurally
+# blind to it. Results-as-NAMES rediscover exactly as easily as results-as-NUMBERS.
+#
+# Kept to a hand-curated lexicon of load-bearing objects, NOT open-ended
+# capitalized-word extraction: the Pass 328 calibration showed that a guard which
+# flags everything is a guard nobody reads. Each entry is an object this repo
+# builds theories ON, so a collision is worth forty seconds of a human's time.
+NAMED = [
+    "Witting polytope", "GKP tower", "GKP code tower", "Heawood", "doily",
+    "Csaszar", "Szilassi", "Barnes-Wall", "Leech", "Golay", "tetracode",
+    "Eisenstein tower", "Shephard-Todd", "Weil representation", "Weil module",
+    "Smith group", "critical group", "Baer subgeometry", "Singer cycle",
+    "extraspecial", "trinification", "Hesse", "Steiner system", "Levi graph",
+]
+RE_NAMED = re.compile("|".join(re.escape(n) for n in NAMED), re.IGNORECASE)
+# lattice/root-system names need word boundaries or they match everything
+RE_ROOT = re.compile(r"\b(A2|D4|E6|E7|E8|F4|G2|A_2|D_4|E_6|E_8)\b")
+
 NOISE = {str(y) for y in range(1900, 2100)} | {
     "100", "1000", "200", "300", "400", "500", "600", "700", "800", "900",
     "128", "256", "512", "1024", "2048", "4096",
@@ -82,6 +104,9 @@ def results_in(text: str) -> set[str]:
     got: set[str] = set()
     for rx in (RE_CSS, RE_LIN, RE_SEQ):
         got |= {re.sub(r"\s+", "", m) for m in rx.findall(text)}
+    # named objects (Pass 348): results-as-NAMES, invisible to the numeric classes
+    got |= {m.lower() for m in RE_NAMED.findall(text)}
+    got |= {m for m in RE_ROOT.findall(text)}
     return got - SKIP
 
 

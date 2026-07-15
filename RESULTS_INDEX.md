@@ -19,7 +19,7 @@ shallow reads caused two retractions) before writing.
 This is a presence index, not an endorsement ledger: a hit may be a proof,
 a reuse, an obstruction, or an explicit retraction.
 
-Indexed **1310** files; **2457** distinctive results
+Indexed **1311** files; **2468** distinctive results
 (a token in >10 files identifies a topic, not a result, and is dropped).
 **872** appear in exactly one file — the sharpest signal.
 
@@ -191,6 +191,17 @@ Indexed **1310** files; **2457** distinctive results
 | `0/1/2` | `analysis/2026-05-21_q4_horizon_2skeleton_bridge.md` |
 | `2/4/8` | `passes/README_passes_240_249.md` |
 | `4/7/2` | `docs/index.html` |
+| `weil representation` | `PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md` · `PASS77_FRONTIER.md` · `W36_PAPER.tex` |
+| `eisenstein tower` | `analysis/BT1745_June24_25_commit_audit.md` · `docs/index.html` · `photonic_holonet.tex` |
+| `witting polytope` | `BT463_WITTING_TOMOTOPE_DUALITY.md` · `BT465_BREAKTHROUGH.md` · `BT467_BREAKTHROUGH.md` · `BT468_BREAKTHROUGH.md` · *(+5)* |
+| `steiner system` | `analysis/BT805_pg32_tetrahedron_model.md` · `docs/index.html` · `manuscripts/tex/part11_golay_code.tex` · `part11_golay_code.tex` · *(+2)* |
+| `trinification` | `analysis/BT1745_BT1748_execution_summary.md` · `analysis/BT1745_June24_25_commit_audit.md` · `analysis/BT889_fermion_content_of_27.md` · `analysis/THE_SELECTION_LAYER.md` · *(+4)* |
+| `extraspecial` | `PASS338_342_SELECTOR_CLIFFORD_COHOMOLOGY_SYNTHESIS.md` · `analysis/BT858_heisenberg_shell_torsors.md` · `analysis/BT865_dual_torsor_steinberg_compiler.md` · `analysis/THE_SELECTION_LAYER.md` · *(+3)* |
+| `singer cycle` | `analysis/2026-05-31_concrete_singer_phase_cycles.md` · `analysis/2026-05-31_heawood_eight_systems_singer_sylow.md` · `analysis/2026-05-31_singer_hexagon_affine_completion_canonicality.md` · `analysis/BT1251_arxiv_abstract_v2.md` |
+| `barnes-wall` | `docs/index.html` |
+| `smith group` | `PAPER_SECTION3_CRITICAL_GROUPS.tex` · `PASS88_SMITH_GROUP.md` · `PASS89_ARITHMETIC_CENSUS.md` · `PASS96_SWITCHING_LADDER.md` · *(+5)* |
+| `weil module` | `PASS214_218_SOURCE_TORSOR_DUAL_OVOID_WEIL_SYNTHESIS.md` · `w33_paper.tex` |
+| `gkp tower` | `docs/index.html` · `photonic_holonet.tex` |
 | `0212378` | `PASS214_218_SOURCE_TORSOR_DUAL_OVOID_WEIL_SYNTHESIS.md` · `PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md` · `w33_paper.tex` |
 | `0302219` | `W36_PRL_LETTER.tex` |
 | `0310429` | `analysis/BT852_seventeen_universals.md` |
@@ -1963,9 +1974,8 @@ Indexed **1310** files; **2457** distinctive results
 | `327` | `analysis/BT945_selector_appendix_compile_record.md` · `analysis/THE_SELECTION_LAYER.md` · `w33_paper.tex` |
 | `328` | `analysis/THE_SELECTION_LAYER.md` |
 | `329` | `PASS88_SMITH_GROUP.md` · `analysis/THE_SELECTION_LAYER.md` |
-| `331` | `PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md` · `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `W33_FOR_EVERYONE.tex` · `analysis/THE_SELECTION_LAYER.md` · *(+2)* |
+| `331` | `PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md` · `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `W33_FOR_EVERYONE.tex` · `analysis/A_REFLECTION_GROUP_CANNOT_ORIENT_ITSELF.md` · *(+3)* |
 | `332` | `PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md` · `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `analysis/THE_SELECTION_LAYER.md` · `docs/index.html` · *(+3)* |
-| `333` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `PASS338_342_SELECTOR_CLIFFORD_COHOMOLOGY_SYNTHESIS.md` · `W33_FOR_EVERYONE.tex` · `analysis/2026-05-21_pascal_oscillator_horizon_code.md` · *(+6)* |
 | `334` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `PASS338_342_SELECTOR_CLIFFORD_COHOMOLOGY_SYNTHESIS.md` · `analysis/BT1745_June24_25_commit_audit.md` · `analysis/THE_SELECTION_LAYER.md` · *(+2)* |
 | `335` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `PASS338_342_SELECTOR_CLIFFORD_COHOMOLOGY_SYNTHESIS.md` · `analysis/BT1376_s3_gauge_radius3_local_optimum_certificate.md` · `analysis/THE_SELECTION_LAYER.md` · *(+2)* |
 | `337` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `PASS338_342_SELECTOR_CLIFFORD_COHOMOLOGY_SYNTHESIS.md` · `analysis/THE_SELECTION_LAYER.md` · `docs/index.html` · *(+1)* |
@@ -1977,9 +1987,9 @@ Indexed **1310** files; **2457** distinctive results
 | `343` | `PASS70_TRACKS_A_B_C.md` · `W33_FOR_EVERYONE.tex` · `analysis/BT797_fractal_consensus_protocol.md` · `docs/index.html` · *(+1)* |
 | `344` | `PASS71_BLUEPRINT.md` · `docs/index.html` |
 | `345` | `PASS70_TRACKS_A_B_C.md` · `analysis/BT1102_A12_structure_constants.md` · `docs/index.html` |
-| `346` | `W33_FOR_EVERYONE.tex` · `analysis/THE_SELECTION_LAYER.md` · `docs/index.html` |
-| `347` | `analysis/BT1749_BT1751_execution_summary.md` · `analysis/BT1752_BT1754_execution_summary.md` · `docs/index.html` |
-| `348` | `docs/index.html` |
+| `346` | `W33_FOR_EVERYONE.tex` · `analysis/A_REFLECTION_GROUP_CANNOT_ORIENT_ITSELF.md` · `analysis/THE_SELECTION_LAYER.md` · `docs/index.html` · *(+1)* |
+| `347` | `analysis/BT1749_BT1751_execution_summary.md` · `analysis/BT1752_BT1754_execution_summary.md` · `docs/index.html` · `w33_paper.tex` |
+| `348` | `analysis/A_REFLECTION_GROUP_CANNOT_ORIENT_ITSELF.md` · `docs/index.html` |
 | `349` | `analysis/BT926_plus2_eigenlattice.md` |
 | `350` | `PASS177_ADDRESS_ROUTE_DUAL_THETA_SPLIT.md` · `docs/index.html` |
 | `351` | `W36_PAPER.tex` · `analysis/BT1097_tex_ci_status.md` · `analysis/BT822_magic_census_matter_is_magic.md` · `analysis/BT860_bell_shell_register_arithmetic.md` · *(+3)* |
@@ -2484,4 +2494,5 @@ Indexed **1310** files; **2457** distinctive results
 | `996` | `analysis/BT1002_ci_build_integration.md` · `analysis/BT1011_tex_build_hardening.md` · `analysis/BT996_r3_edgewise_hodge_stack_patch.md` · `analysis/BT999_apply_integrators_and_verify.md` · *(+1)* |
 | `997` | `analysis/BT1001_full_heat_supertrace_estimator_stack.md` · `analysis/BT997_k3_middle_heat_estimator.md` · `docs/index.html` |
 | `998` | `PASS95_GENUS_MASS.md` · `analysis/BT1000_k3_level2_feasibility_gate.md` · `analysis/BT1021_k3_real_degree2_incidence_shard.md` · `analysis/BT1022_k3_real_degree3_incidence_shard.md` · *(+2)* |
+| `E7` | `BT469_BREAKTHROUGH.md` · `BT470_BREAKTHROUGH.md` · `BT471_BREAKTHROUGH.md` · `analysis/BT1720_BT1723_repo_mining_execution.md` · *(+5)* |
 

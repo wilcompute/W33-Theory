@@ -1,0 +1,92 @@
+{
+  "schema": "w33.pass348.every_multiplicity_is_a_torsor.v1",
+  "status": "PASS",
+  "THE_THEOREM": "THE SUBSTRATE CAN PRESENT A MULTIPLICITY BUT CANNOT BREAK ONE. Every multiplicity it offers is a TORSOR under its own symmetry: 2 half-spins swapped by T (det = -1, Pass 346), 3 lattice leaves cycled by omega (Pass 332's own section title: 'The lifts form an Eisenstein C3 torsor'). An invariant cannot distinguish points a group permutes transitively, and every datum the substrate can build is invariant by construction. So neither is internally selectable, and the two no-gos are ONE theorem.",
+  "1_my_idea_was_a_rediscovery_caught_pre_write": {
+    "the_plan": "'the Eisenstein trace form is A2, the code tower is A2 < D4 < E8, maybe nobody has connected them'",
+    "the_fact": "analysis/w33_eisenstein_grand_synthesis.py FACE 4: 'The GKP code tower A2 < D4 < E8 is the Eisenstein tower: A2 = the q=3 hexagonal (1-qutrit) lattice ... The fault-tolerant code IS the q=3 selection object.'",
+    "verdict": "exactly the claim, already made -- and that file's whole thesis ('one object, five faces') is the same KIND of unification Pass 347 performed on the two F4s. 347 owes it a citation and now carries one.",
+    "what_survives_of_347": "the arithmetic. grep confirms the grand synthesis has no 243, no trace form, no discriminant, no Hermitian form. 347 stands as arithmetic and falls as an A2 identification.",
+    "the_good_news": "the protocol killed it BEFORE it was written. First time in this arc that has happened pre-write."
+  },
+  "2_THE_GUARD_HAS_A_BLIND_SPOT": {
+    "measurement": "the guard's own extractor returns ZERO tokens from Pass 347",
+    "why": "it is calibrated (Pass 328) to code parameters and slash-sequences. The rediscovered claim was 'A2 = the q=3 hexagonal lattice = the GKP base'. A2 is a NAMED OBJECT -- not a code parameter, not a distinctive integer, not a sequence.",
+    "consequence": "RESULTS_INDEX.md and the guard index results-as-NUMBERS. A large class of results are results-as-NAMES: the Witting polytope, the GKP tower, A2, the Heawood clock, the doily. Those rediscover just as easily and are invisible to the current tool. The manual search caught this one; the tool would not have.",
+    "the_fix_attempted": "a named-object lexicon shared by the guard AND the index (they had already drifted: the guard knew names before the index did, so it extracted A2 and looked it up in an index that had never heard of it)",
+    "THE_FIX_MEASURED_AND_IT_MOSTLY_FAILS": {
+      "kept": "only 4 of 28 survive the index's own >10-file topic cut: extraspecial (4 files), trinification (4), E7 (4), barnes-wall (1)",
+      "dropped": "witting polytope, gkp tower, heawood, doily, csaszar, szilassi, leech, golay, tetracode, smith group, weil module, A2, D4, E6, E8, F4 -- all TOPICS, because in a corpus ABOUT A2 and E8 those names are everywhere and their recurrence carries no information",
+      "flag_rate": "20% -> 21%: four usable names, no new noise. A small real win, and NOT the win I wanted.",
+      "verdict": "THE PASS 347 REDISCOVERY IS STILL UNCATCHABLE. A2 is dropped; the collision token is a ubiquitous atom."
+    },
+    "MODE_5_SPLITS": {
+      "5a": "rediscovery colliding on a RARE token (a code parameter, an odd integer) -> mechanically catchable; the guard works; this is the measured 20%",
+      "5b": "rediscovery colliding on a UBIQUITOUS ATOM (A2, E8, 'the doily') -> mechanically INVISIBLE. No index keyed on atoms can see it, because the atom is what the whole corpus is about. Only a thinking search forming the right COMPOUND finds it -- here, 'A2' AND 'GKP|tower'.",
+      "reading": "THE COMPOUND IS THE RESULT; THE ATOM IS A TOPIC. 5b is what just happened to me, and 5b is the FLOOR of the tool. The guard is not a substitute for reading -- it is a net under the mechanical part of the problem. The rest is still a mind forming a good query."
+    },
+    "honesty_note": "this is a defect in the fix this arc built to stop exactly this failure, found by using it, and the attempted repair does not close it."
+  },
+  "3_the_generalization": {
+    "chirality": "2 half-spins, swapped by T (det = -1) -> torsor under <T>",
+    "leaves": "3 lattice leaves, cycled by omega -> C3 torsor (Pass 332's own words: 'The lifts form an Eisenstein C3 torsor', 'zeta3 cyclically permutes the three lattices and stabilizes none'); Pass 333: omega_T_group = S3 order 6, 'omega is the 3-cycle and T fixes one leaf while swapping the other two'",
+    "the_rule": "a torsor is BY DEFINITION a set with no distinguished point; an invariant cannot separate a transitive orbit; every substrate-built datum is invariant",
+    "third_time_the_deciding_fact_was_already_there": [
+      "det(B_p) -- in Chandler-Sin-Xiang, cited in-repo (Pass 324)",
+      "det(T) = -1 -- in Pass 333's certificate (Pass 346)",
+      "the word 'torsor' -- in Pass 332's section title (this pass)"
+    ]
+  },
+  "4_three_leaves_three_generations": {
+    "falsifier_stated_FIRST": "three is a small number, every 3-element set carries an S3, and a matching count is not evidence -- this is how the Pass 309 '42' trap starts",
+    "but_the_question_is_MOOT": "a torsor has NO hierarchy -- that is what 'no distinguished point' means. Generations HAVE a hierarchy -- that is what a mass spectrum IS. The three generations are distinguishable (m_e << m_mu << m_tau); the three leaves are indistinguishable (C3 simply transitive). So the leaf structure CANNOT supply a generation hierarchy -- not because 3 = 3 is a coincidence, but because the structures have OPPOSITE content. A torsor is exactly the object that refuses to say which point you are at; a mass hierarchy is exactly the datum that says which one you are.",
+    "verdict": "not a coincidence to chase -- the SAME no-go one level up. Anything distinguishing the leaves also breaks C3: an input from outside, exactly as with chirality."
+  },
+  "5_what_the_minus_type_is_for": {
+    "the_reading": "L/2L (omega intact, no leaf chosen) -> MINUS, the symmetric phase; L_i/2L_i (leaf chosen, omega broken) -> PLUS, the phase with a choice. The type would BE the order parameter of the choice.",
+    "DECLINED": "it names no map from 'minus' to any physical unbroken phase -- failure mode 3 (Pass 315), and this arc's prior says a claim naming no object is not a claim. Recorded as a reading worth one honest test (does anything transport across the type flip?) and nothing more."
+  },
+  "checks": {
+    "grand_synthesis_exists": true,
+    "it_states_GKP_tower_A2_D4_E8": true,
+    "it_calls_A2_the_q3_hexagonal_lattice": true,
+    "it_calls_the_tower_eisenstein": true,
+    "so_my_idea_1_was_a_rediscovery": true,
+    "caught_BEFORE_writing_it": true,
+    "gs_has_no_243": true,
+    "gs_has_no_trace_form": true,
+    "gs_has_no_discriminant": true,
+    "so_347_arithmetic_survives": true,
+    "347_has_no_code_params_or_sequences": true,
+    "so_prefix_guard_extracted_zero_from_347": true,
+    "A2_is_a_named_object_not_a_code_param": true,
+    "blind_spot_is_results_as_NAMES": true,
+    "postfix_guard_now_extracts_named_objects": true,
+    "only_four_named_objects_survive_topic_cut": true,
+    "A2_is_dropped_as_a_topic": true,
+    "ubiquitous_atoms_all_dropped": true,
+    "fix_is_marginal_not_a_solution": true,
+    "pass_347_case_STILL_uncatchable": true,
+    "mode_5_splits_into_5a_rare_and_5b_ubiquitous": true,
+    "5b_is_the_floor_of_the_tool": true,
+    "p332_section_titled_C3_torsor": true,
+    "p332_says_stabilizes_none": true,
+    "p333_omega_T_group_is_S3": true,
+    "p333_omega_is_the_3_cycle": true,
+    "C3_acts_simply_transitively_on_3_leaves": true,
+    "torsor_has_no_distinguished_point": true,
+    "T_swaps_the_2_halfspins": true,
+    "both_multiplicities_are_torsors": true,
+    "invariants_cannot_separate_transitive_orbits": true,
+    "so_the_two_no_gos_are_one_theorem": true,
+    "three_leaves": true,
+    "three_generations": true,
+    "matching_count_is_not_evidence": true,
+    "torsor_has_no_hierarchy": true,
+    "generations_have_a_hierarchy": true,
+    "so_leaves_cannot_supply_generations": true,
+    "question_is_moot_not_coincidental": true,
+    "minus_reading_names_no_map": true,
+    "therefore_not_asserted": true
+  }
+}

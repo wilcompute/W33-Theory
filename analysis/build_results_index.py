@@ -32,11 +32,20 @@ Regenerate with:  py -3 analysis/build_results_index.py
 from __future__ import annotations
 
 import re
+import sys
 from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "RESULTS_INDEX.md"
+
+# Named objects live in ONE place -- scripts/check_rediscovery.py -- so the index
+# and the guard can never drift apart. Pass 348 found them drifted: the guard had
+# been taught named objects while the index had not, so `A2` was extracted from a
+# staged file and then looked up in an index that had never heard of it. A guard
+# and an index that disagree are worse than either alone.
+sys.path.insert(0, str(ROOT / "scripts"))
+from check_rediscovery import RE_NAMED, RE_ROOT  # noqa: E402
 
 # corpus: the places results actually live (Pass 322 learned analysis/*.md and
 # AUDIT_*.md the hard way -- they were NOT in the old "index.html + .tex" rule)
@@ -84,6 +93,11 @@ def main():
         for m in RE_INT.findall(txt):
             if m not in NOISE:
                 index[m].add(rel)
+        # results-as-NAMES (Pass 348) -- same lexicon the guard uses
+        for m in RE_NAMED.findall(txt):
+            index[m.lower()].add(rel)
+        for m in RE_ROOT.findall(txt):
+            index[m].add(rel)
 
     kept = {t: fs for t, fs in index.items() if 1 <= len(fs) <= MAX_FILES}
     uniq = {t: fs for t, fs in kept.items() if len(fs) == 1}

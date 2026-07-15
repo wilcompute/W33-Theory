@@ -1,6 +1,19 @@
 #!/usr/bin/env python3
 """Pass 347: the 243, the parity, and the type -- and they are ONE act.
 
+ATTRIBUTION (added at Pass 348). Section 2 below observes that the Eisenstein
+trace form is the A2 root lattice. The identification of A2 with the q=3
+Eisenstein structure and with the base of the code tower is NOT new here:
+analysis/w33_eisenstein_grand_synthesis.py, FACE 4, already states "The GKP code
+tower A2 < D4 < E8 is the Eisenstein tower: A2 = the q=3 hexagonal (1-qutrit)
+lattice, D4 = the matter shell, E8 = the Witting polytope", and its whole thesis
+("one object, five faces") is the same kind of unification this pass performs on
+the two F4s. Cite it, do not re-derive it.
+What IS new here is the arithmetic: 243 = |disc Q(omega)|^rank, the halving as the
+source of the parity, the traced-Hermitian type (-1)^5 = MINUS, and the
+leaf/type/chirality unification. The grand synthesis contains no 243, no trace
+form, no discriminant and no Hermitian form (grep-verified at Pass 348).
+
 Pass 332 left the form-level bridge explicitly NOT BUILT:
 
     "transported H10 polar forms are alternating, while the primitive halved
