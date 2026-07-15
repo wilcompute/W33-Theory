@@ -1,0 +1,100 @@
+{
+  "schema": "w33.pass292.absent_claim_audit.v1",
+  "status": "PASS",
+  "why": "Passes 279 and 285 both concluded sqrt(21) is absent and both were wrong. The error was SCOPE, not arithmetic: a negative search result is only as good as the space searched. Two false negatives in one sitting makes the base rate worth measuring.",
+  "the_rule": "Before publishing 'X is absent', state WHICH KINDS OF OBJECT were searched and whether X could live in a kind that was not. Pass 279's own rule ('test discriminants, not squarefree parts') was correct but silently assumed every irrationality is SPECTRAL; edge lengths are METRIC -- square roots of integer quadratic forms in coordinates, generating quadratic fields with no discriminant in sight.",
+  "known_false_negatives": {
+    "w33_pass279_sqrt21_search": {
+      "claim": "sqrt(21) does NOT appear in the substrate",
+      "space_searched": "SPECTRA: SRG eigenvalues, discriminants, group orders, CSS parameters",
+      "space_missed": "METRIC: polyhedron edge lengths",
+      "refuted_by": "Pass 286"
+    },
+    "w33_pass285_sqrt21_toroidal_cyclotomic": {
+      "claim": "still NOT sqrt(21) -- the toroidal 21 is a count",
+      "space_searched": "COUNTS: flags, edges, group orders",
+      "space_missed": "METRIC: the edge LENGTHS of the same polyhedra it was discussing",
+      "refuted_by": "Pass 286"
+    }
+  },
+  "negatives_that_state_their_space_and_survive": {
+    "w33_pass263_lightcone_survey": "neutrinos cannot reach Q=2/3 -- states the space exactly (Q in [1/3,1) for non-negative masses) and the bound is structural, not a search",
+    "w33_pass269_down_quark_cone": "down quarks recede -- a computed direction of travel at two scales, not an absence claim",
+    "w33_pass244_vacuum_rung_search": "no vacuum rung -- rests on the identity q != q+1, a proof rather than a search"
+  },
+  "negative_claims_found": [
+    {
+      "pass": "w33_pass225_spinor_selection",
+      "field": "reading",
+      "claim": "The CSS logical register (Pass 224) transforms as the VECTOR q^2+1 of SO(q^2+1); the matter content is the half-SPINOR 2^{(q^2-1)/2} of the SAME group. Every rung is chiral (q^2+1 == 2 mod 8), so the tower is never vecto"
+    },
+    {
+      "pass": "w33_pass227_magic_universality_tower",
+      "field": "theorem",
+      "claim": "Every rung of the W(3,q) CSS tower is Eastin-Knill non-universal (its logical gate group is the finite O+(q^2+1,2)), so magic must come from outside the code permutations. A GEOMETRIC magic source -- an exceptional overg"
+    },
+    {
+      "pass": "w33_pass250_even_q_rank_law",
+      "field": "verdict",
+      "claim": "literature 1890 CONFIRMED by explicit construction; cube law REFUTED"
+    },
+    {
+      "pass": "w33_pass250_even_q_rank_law",
+      "field": "reading",
+      "claim": "W(3,16) was built over GF(16) (4369 points, 4369 isotropic lines) and its F2 incidence rank computed directly, settling the even-q correction by explicit construction rather than extrapolation. RESULT: the quoted 1890 is"
+    },
+    {
+      "pass": "w33_pass254_vacuum_rung_search",
+      "field": "reading",
+      "claim": "The substrate's quadrangle codes are always genuine memories, never stabiliser states: k = q^2+1 > 0 is forced by q != q+1. Extending to the elliptic quadric Q(5,2) = GQ(2,4) (27 points, 45 lines) and its dual GQ(4,2) = "
+    },
+    {
+      "pass": "w33_pass262_unified_rank_law",
+      "field": "verdict",
+      "claim": "naive polynomial holds at q=9; the unified conjecture is REFUTED"
+    },
+    {
+      "pass": "w33_pass262_unified_rank_law",
+      "field": "reading",
+      "claim": "W(3,9) was built over GF(9) = F_3[x]/(x^2+1) (820 points, 820 isotropic lines) and its F2 incidence rank computed directly. This is the first ODD PRIME POWER ever tested in this program: every previous odd anchor (q=3,5,"
+    },
+    {
+      "pass": "w33_pass263_lightcone_survey",
+      "field": "reading",
+      "claim": "The light cone of the family clock is a CHARGED-LEPTON phenomenon, not a universal law of the substrate's mass vectors. The charged leptons sit on it to five digits; the up quarks (Q = 0.849) and down quarks (Q = 0.731) "
+    },
+    {
+      "pass": "w33_pass277_q27_frobenius_degree_3",
+      "field": "reading",
+      "claim": "W(3,27) was built over GF(27) = F_3[x]/(x^3-x+1) (20440 points and isotropic lines) and its F2 incidence rank computed directly. The result decides whether the Frobenius degree has any effect in odd characteristic. A mat"
+    },
+    {
+      "pass": "w33_pass279_sqrt21_search",
+      "field": "verdict",
+      "claim": "sqrt(21) does NOT appear in the substrate. No discriminant has squarefree part 21; indeed the SRG discriminant is 4q^2, a perfect square at every q, so the collinearity graph is rational through and through. The one raw "
+    },
+    {
+      "pass": "w33_pass281_all_primes_rank",
+      "field": "reading",
+      "claim": "Three things fell out, two of them refutations. (1) My law 'drop iff p divides q' is WRONG: at q=p (t=1) there is no drop at all, so the drop requires a PROPER prime power, t >= 2 -- which is also why delta(2) = 0. (2) C"
+    },
+    {
+      "pass": "w33_pass285_sqrt21_toroidal_cyclotomic",
+      "field": "verdict",
+      "claim": "FOUND: a real and previously-unnoticed link -- the Koide function is the cyclotomic ratio Phi_6/Phi_3, and Phi_6 is exactly the polynomial the repo already uses to parameterise the Csaszar torus (Phi_6(3)=7 vertices, 21 "
+    },
+    {
+      "pass": "w33_pass287_tr_law_deflation",
+      "field": "reading",
+      "claim": "Two corrections and one explanation. The trace law was never a law; det is the only real transfer content and remains unexplained (16 at p=2, 76 at p=3). But the t=1 no-drop fact -- which the tautology was silently ridin"
+    }
+  ],
+  "negative_claim_count": 13,
+  "verdict": "The distinction that matters is between a negative that is a THEOREM (Pass 244: no vacuum rung, because q != q+1; Pass 263: neutrinos cannot reach 2/3, because Q is confined to [1/3,1)) and a negative that is a SEARCH (Passes 279/285). Theorems bound the whole space; searches only bound the space searched. Both of this program's false negatives were searches presented with the confidence of theorems.",
+  "checks": {
+    "swept_committed_passes": true,
+    "found_negative_claims": true,
+    "two_known_false_negatives": true,
+    "sound_negatives_identified": true
+  }
+}

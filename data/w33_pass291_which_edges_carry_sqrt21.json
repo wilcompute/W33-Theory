@@ -1,0 +1,185 @@
+{
+  "schema": "w33.pass291.which_edges_carry_sqrt21.v1",
+  "status": "PASS",
+  "per_realization": {
+    "1": {
+      "sqrt21_edges": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "lengths": {
+        "(0, 4)": "5*sqrt(21)",
+        "(0, 12)": "5*sqrt(21)/2",
+        "(1, 5)": "5*sqrt(21)",
+        "(1, 13)": "5*sqrt(21)/2"
+      },
+      "count": 4,
+      "vertices_touched": [
+        0,
+        1,
+        4,
+        5,
+        12,
+        13
+      ],
+      "degree_profile": {
+        "1": 4,
+        "2": 2
+      },
+      "is_perfect_matching_on_its_vertices": false,
+      "faces_per_edge": {
+        "(0, 4)": [
+          0,
+          1
+        ],
+        "(0, 12)": [
+          1,
+          2
+        ],
+        "(1, 5)": [
+          2,
+          5
+        ],
+        "(1, 13)": [
+          0,
+          5
+        ]
+      }
+    },
+    "2": {
+      "sqrt21_edges": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "lengths": {
+        "(0, 4)": "21*sqrt(21)/4",
+        "(0, 12)": "2*sqrt(21)",
+        "(1, 5)": "21*sqrt(21)/4",
+        "(1, 13)": "2*sqrt(21)"
+      },
+      "count": 4,
+      "vertices_touched": [
+        0,
+        1,
+        4,
+        5,
+        12,
+        13
+      ],
+      "degree_profile": {
+        "1": 4,
+        "2": 2
+      },
+      "is_perfect_matching_on_its_vertices": false,
+      "faces_per_edge": {
+        "(0, 4)": [
+          0,
+          1
+        ],
+        "(0, 12)": [
+          1,
+          2
+        ],
+        "(1, 5)": [
+          2,
+          5
+        ],
+        "(1, 13)": [
+          0,
+          5
+        ]
+      }
+    }
+  },
+  "edge_set_v1": [
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      12
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      1,
+      13
+    ]
+  ],
+  "edge_set_v2": [
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      12
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      1,
+      13
+    ]
+  ],
+  "identical_edge_sets": true,
+  "shared_edges": [
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      12
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      1,
+      13
+    ]
+  ],
+  "verdict": "THE SAME four edges carry sqrt(21) in both Szilassi realizations. sqrt(21) is therefore attached to the Szilassi COMBINATORICS, not to either particular embedding -- a combinatorially distinguished 4-edge set that is metrically forced into Q(sqrt 21) in both known realizations.",
+  "reading": "Pass 290 established sqrt(21) as the unique field common to both Szilassi realizations. This pass asks whether that commonality is combinatorial (same edges) or metric (different edges, same field). The answer decides where to look next: at the Szilassi incidence structure, or at the realization moduli.",
+  "checks": {
+    "v1_four_sqrt21_edges": true,
+    "v2_four_sqrt21_edges": true,
+    "same_edge_set_in_both": true,
+    "comparison_made": true
+  }
+}

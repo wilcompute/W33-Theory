@@ -1,0 +1,247 @@
+{
+  "schema": "w33.pass290.sqrt21_is_distinguished.v1",
+  "status": "PASS",
+  "headline": "Across the seven realizations 36 distinct quadratic fields appear in the edge lengths, and sqrt(21) is the ONLY field present in BOTH Szilassi realizations. Every other field occurs in at most one Szilassi, and sqrt(21) occurs in NONE of the five Csaszar realizations. It is the unique metric invariant of the Szilassi pole -- not one of twenty.",
+  "per_realization": {
+    "Csaszarv1": {
+      "edges": 21,
+      "fields": [
+        2,
+        3,
+        5,
+        26,
+        37,
+        38,
+        149,
+        214
+      ],
+      "rational_edges": 2,
+      "nested_biquadratic": 0
+    },
+    "Csaszarv2": {
+      "edges": 21,
+      "fields": [
+        5,
+        6,
+        10,
+        15,
+        86
+      ],
+      "rational_edges": 1,
+      "nested_biquadratic": 4
+    },
+    "Csaszarv3": {
+      "edges": 21,
+      "fields": [
+        2,
+        15,
+        30,
+        39,
+        69
+      ],
+      "rational_edges": 1,
+      "nested_biquadratic": 10
+    },
+    "Csaszarv4": {
+      "edges": 21,
+      "fields": [
+        70,
+        134,
+        374,
+        662,
+        1238,
+        1398
+      ],
+      "rational_edges": 7,
+      "nested_biquadratic": 0
+    },
+    "Csaszarv5": {
+      "edges": 21,
+      "fields": [
+        2,
+        11,
+        17,
+        122,
+        218,
+        266,
+        362
+      ],
+      "rational_edges": 6,
+      "nested_biquadratic": 0
+    },
+    "Szilassiv1": {
+      "edges": 21,
+      "fields": [
+        2,
+        6,
+        21,
+        106,
+        206,
+        1514
+      ],
+      "rational_edges": 6,
+      "nested_biquadratic": 0
+    },
+    "Szilassiv2": {
+      "edges": 21,
+      "fields": [
+        13,
+        21,
+        29,
+        101,
+        253,
+        349
+      ],
+      "rational_edges": 6,
+      "nested_biquadratic": 0
+    }
+  },
+  "field_occurrences": {
+    "2": [
+      "Csaszarv1",
+      "Csaszarv3",
+      "Csaszarv5",
+      "Szilassiv1"
+    ],
+    "3": [
+      "Csaszarv1"
+    ],
+    "5": [
+      "Csaszarv1",
+      "Csaszarv2"
+    ],
+    "6": [
+      "Csaszarv2",
+      "Szilassiv1"
+    ],
+    "10": [
+      "Csaszarv2"
+    ],
+    "11": [
+      "Csaszarv5"
+    ],
+    "13": [
+      "Szilassiv2"
+    ],
+    "15": [
+      "Csaszarv2",
+      "Csaszarv3"
+    ],
+    "17": [
+      "Csaszarv5"
+    ],
+    "21": [
+      "Szilassiv1",
+      "Szilassiv2"
+    ],
+    "26": [
+      "Csaszarv1"
+    ],
+    "29": [
+      "Szilassiv2"
+    ],
+    "30": [
+      "Csaszarv3"
+    ],
+    "37": [
+      "Csaszarv1"
+    ],
+    "38": [
+      "Csaszarv1"
+    ],
+    "39": [
+      "Csaszarv3"
+    ],
+    "69": [
+      "Csaszarv3"
+    ],
+    "70": [
+      "Csaszarv4"
+    ],
+    "86": [
+      "Csaszarv2"
+    ],
+    "101": [
+      "Szilassiv2"
+    ],
+    "106": [
+      "Szilassiv1"
+    ],
+    "122": [
+      "Csaszarv5"
+    ],
+    "134": [
+      "Csaszarv4"
+    ],
+    "149": [
+      "Csaszarv1"
+    ],
+    "206": [
+      "Szilassiv1"
+    ],
+    "214": [
+      "Csaszarv1"
+    ],
+    "218": [
+      "Csaszarv5"
+    ],
+    "253": [
+      "Szilassiv2"
+    ],
+    "266": [
+      "Csaszarv5"
+    ],
+    "349": [
+      "Szilassiv2"
+    ],
+    "362": [
+      "Csaszarv5"
+    ],
+    "374": [
+      "Csaszarv4"
+    ],
+    "662": [
+      "Csaszarv4"
+    ],
+    "1238": [
+      "Csaszarv4"
+    ],
+    "1398": [
+      "Csaszarv4"
+    ],
+    "1514": [
+      "Szilassiv1"
+    ]
+  },
+  "fields_in_both_szilassi": [
+    21
+  ],
+  "fields_only_in_szilassi": [
+    13,
+    21,
+    29,
+    101,
+    106,
+    206,
+    253,
+    349,
+    1514
+  ],
+  "total_distinct_fields": 36,
+  "oscillator_asymmetry": "w33_genus_ladder_clock.py frames Csaszar and Szilassi as the two poles of a clock oscillator whose genus-0 middle is the SELF-DUAL tetrahedron -- the unique polyhedron with BOTH maximal adjacencies (K4 vertices and K4 faces), which the two toroidal poles split between them at genus 1 (Csaszar: every vertex pair adjacent = K7; Szilassi: every face pair shares an edge). Combinatorially the poles are dual and interchangeable. METRICALLY THEY ARE NOT: sqrt(21) is in both Szilassi realizations and in no Csaszar one. The duality that holds at the level of incidence is BROKEN at the level of the realization's metric, and sqrt(21) is exactly what breaks it.",
+  "why_this_matters": "eps* = (5 - sqrt 21)/2, the FN parameter on the Koide light cone (Pass 274), lives in Q(sqrt 21). That field is now not merely PRESENT in the substrate's metric data (Pass 286) but DISTINGUISHED within it: the single field common to both realizations of the face-complete toroidal pole. Whether the Koide occurrence and the Szilassi occurrence are related remains open -- but the coincidence is now much sharper than 'the integer 21 appears a lot'.",
+  "checks": {
+    "Csaszarv1_has_21_edges": true,
+    "Csaszarv2_has_21_edges": true,
+    "Csaszarv3_has_21_edges": true,
+    "Csaszarv4_has_21_edges": true,
+    "Csaszarv5_has_21_edges": true,
+    "Szilassiv1_has_21_edges": true,
+    "Szilassiv2_has_21_edges": true,
+    "census_covers_7_realizations": true,
+    "sqrt21_in_both_szilassi": true,
+    "sqrt21_is_the_ONLY_field_in_both_szilassi": true,
+    "sqrt21_in_no_csaszar": true,
+    "many_fields_total": true
+  }
+}
