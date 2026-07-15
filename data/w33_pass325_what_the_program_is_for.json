@@ -1,0 +1,60 @@
+{
+  "schema": "w33.pass325.what_the_program_is_for.v1",
+  "status": "PASS",
+  "THE_COMPLETE_AUDIT": {
+    "rank law, even q": "published (Sastry-Sin) -- 322",
+    "rank law, odd q, cross-char": "PROVED in-repo 2026-07-10 -- 322",
+    "rank law, odd q, defining-char": "published (CSX Thm 1.1) -- 324",
+    "det(B_p) 'the last gap'": "CSX closed form -- 324",
+    "rank_3 W(3,27) = 8353": "CSX confirms my conjecture -- 324",
+    "[[40,10,4]] + [40,15,8]": "in index.html pre-Pass-224 -- 323",
+    "F2^40 submodule lattice": "Passes 187/189, STRONGER than mine -- 323",
+    "k = q^2+1": "PROVED in-repo (levi_next5) -- 323",
+    "k*d = n 'conservation'": "TAUTOLOGY -- 323",
+    "16 per generation": "index.html, 'live promoted claim' -- 325",
+    "three generations": "index.html, via trinification -- 325"
+  },
+  "not_one_headline_survives_as_new": true,
+  "what_IS_new": {
+    "the_selection_arguments": "A corpus-wide search returns only my own files and downstream. The CONCLUSIONS were documented; the ARGUMENTS were not. The corpus ASSERTS q=3 and derives consequences; Passes 225/227 argue q=3 is FORCED -- 2^{(q^2-1)/2}=16 has unique odd solution q=3, and shadow rank (q^2+1)/2 <= 8 (max exceptional) only at q=3. Each independently sufficient (313).",
+    "why_that_is_a_different_kind_of_claim": "Not 'here is what W(3,3) gives' but 'W(3,3) is the only rung that could'. The corpus had no such argument.",
+    "also": [
+      "Pass 229's d = q+1 -- the one new CSS ingredient (323)",
+      "Pass 298's forced-field ladder Q(sqrt6) -- survives 302"
+    ]
+  },
+  "THE_REFRAME": "The contribution is the SELECTION LAYER, not the components. Every component belongs to someone else -- Sastry-Sin, Chandler-Sin-Xiang, the levi packets, Passes 187/189, the trinification card. What this arc adds is the argument that they are not independent choices: that one object supplies all of them and that q=3 is forced rather than assumed. That is a legitimate thesis -- and a far smaller, more careful claim than 'two theorems that stand'. It stays legitimate only if every component is cited to whoever proved it.",
+  "the_cost_measured": {
+    "passes_224_to_321": 98,
+    "rank_law_rediscovery": "~15 (322)",
+    "css_rediscovery": "~4 (323)",
+    "compute_jobs_for_a_published_closed_form": "2 (324)",
+    "tautologies_quoted_as_results": "3 (287 trace law, 319 delta table, 239 conservation curve)",
+    "against_that": [
+      "2 selection arguments",
+      "1 distance lemma",
+      "1 field ladder",
+      "a failure taxonomy now in .continuity/INSTRUCTIONS.md",
+      "RESULTS_INDEX.md, which catches the largest error on day one ([[40,10,4]] -> docs/index.html)"
+    ],
+    "honest_summary": "The arc produced better METHOD than mathematics. Since the same instruction ('check index.html first') was already in standing memory and still failed twice, the method may be the more durable output."
+  },
+  "the_boundary_not_a_plan": "The selection arguments are the only frontier this arc opened that the corpus does not already hold, and they are representation-theoretic -- the side that does not retract (311). If they are worth anything, the next work attacks THEM: find their literature (Eastin-Knill and exceptional-rank arguments are well-worked ground and may already contain 227), or state precisely which physical assumption each smuggles in. Everything else here is bookkeeping on other people's theorems.",
+  "checks": {
+    "spinor_16_unique_odd_solution_q3": true,
+    "q5_gives_4096": true,
+    "q7_gives_16M": true,
+    "shadow_rank_le_8_only_q3": true,
+    "q3_shadow_rank_is_5": true,
+    "each_independently_forces_q3": true,
+    "isotropic_line_weight_is_q_plus_1": true,
+    "so_d_upper_bound_immediate": true,
+    "content_is_the_lower_bound": true,
+    "index_html_has_three_generations": true,
+    "index_html_has_16_per_generation": true,
+    "index_html_derives_gens_via_trinification": true,
+    "so_pass_231_conclusion_was_documented": true,
+    "results_index_exists": true,
+    "failure_modes_in_instructions": true
+  }
+}

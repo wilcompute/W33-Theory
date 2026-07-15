@@ -36,8 +36,38 @@ supersedes the framing of any earlier pass it contradicts.*
 > integer, the sequence), never the topic.
 >
 > **§1.1 and §5 below are retained unedited as the record of what was believed.**
-> The rest of this document has **not** been re-tested against the corpus the same
-> way — §1.2's CSS *k* is already known to be the repo's boxed `rank₂A_L`.
+>
+> ### Passes 323–325 completed the audit. **No headline survives as new.**
+>
+> | result | status | pass |
+> |---|---|---|
+> | rank law, even q | published (Sastry–Sin) | 322 |
+> | rank law, odd q, cross-char | **proved in-repo 2026-07-10** | 322 |
+> | rank law, odd q, defining-char | published (**CSX Thm 1.1**) | 324 |
+> | `det(B_p)` — "the last gap" | **CSX closed form** | 324 |
+> | `rank₃W(3,27) = 8353` | **CSX confirms my conjecture** | 324 |
+> | `[[40,10,4]]`, `[40,15,8]` | in index.html **pre-Pass-224** | 323 |
+> | `F₂⁴⁰` submodule lattice | Passes 187/189, **stronger than mine** | 323 |
+> | `k = q²+1` | proved in-repo (levi_next5) | 323 |
+> | `k·d = n` "conservation curve" | **TAUTOLOGY** | 323 |
+> | 16/generation, three generations | index.html (via trinification) | 325 |
+>
+> **§3's "last real gap" is closed.** CSX Theorem 1.1: `rank_p = 1 + α₁ᵗ + α₂ᵗ`,
+> `α₁,α₂ = p(p+1)²/4 ± p(p+1)(p−1)√17/12`. At p=2 these are **(9±√17)/2 — the
+> eigenvalues of my B**. So `det(B_p) = −p²(p+1)²(2p²−13p+2)/36` (= 16, 76, 325 at
+> p=2,3,5), and `Tr = p(p+1)²/2 = char0(p)−1` — Pass 287's "tautology" *was* CSX's
+> trace. **"Why B?" is answered: B is the p=2 companion of CSX's αs.**
+>
+> **What is actually new** (Pass 325): not the components — the **selection layer**.
+> The corpus *asserts* q=3 and derives consequences; Passes 225/227 argue q=3 is
+> **forced**. Those arguments appear nowhere else in the corpus. Plus Pass 229's
+> `d = q+1` and Pass 298's `Q(√6)` ladder. Every other component belongs to
+> Sastry–Sin, Chandler–Sin–Xiang, the levi packets, or Passes 187/189, **and must
+> be cited to them**.
+>
+> **Use [RESULTS_INDEX.md](../RESULTS_INDEX.md) before claiming anything is new.**
+> It maps result → file (`[[40,10,4]]` → `docs/index.html`) and would have caught
+> the largest error here on day one.
 
 ---
 

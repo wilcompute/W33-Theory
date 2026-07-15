@@ -1,0 +1,75 @@
+{
+  "schema": "w33.pass323.css_family_audit.v1",
+  "status": "PASS",
+  "VERDICT": "The second of the 'two theorems that stand' also fails the corpus test in its headline form. The q=3 anchor [[40,10,4]] and its sentinel [40,15,8] were in docs/index.html BEFORE Pass 224 (git-verified at a9e38beb6~1), attributed to Passes 187/189 -- which prove MORE than I did: the full uniserial submodule lattice 1|14|1|8|1|14|1, exactly eight invariant binary codes, [40,15,8] as the UNIQUE invariant 15-space, C^perp/C FORCED, and the central eight (= my 'central quadratic shadow q^2-1=8') as the unique 8-dim subquotient.",
+  "finding_1_the_anchor_was_documented": {
+    "evidence": "git show a9e38beb6~1:docs/index.html contains both '40,10,4' and '40,15,8'; counts identical today (1 and 2)",
+    "index_html_text": "F2^40 is uniserial with layers 1|14|1|8|1|14|1. There are exactly eight invariant binary codes; the [40,15,8] sentinel is the unique invariant 15-space, C^perp/C is forced, and the central eight is the unique eight-dimensional subquotient. Endomorphism fields are F2 for the 14 and F4 for the eight.",
+    "attributed_to": "Passes 187/189 -- 'The Complete Binary Submodule Chain'",
+    "my_pass_224": "showed C^perp doubly-even + self-orthogonal => a CSS register exists, k=10. Strictly weaker: 187/189 had already PROVED C^perp/C is forced, with uniqueness."
+  },
+  "finding_2_k_was_already_a_theorem": {
+    "levi_next5_boxed": "rank_2 A_L = q^2 + 1, for EVERY odd prime power",
+    "that_is": "the family's k -- proved in-repo five days before Pass 224"
+  },
+  "finding_3_kd_equals_n_is_a_tautology": {
+    "pass_239_headline": "'k*d = n EXACTLY (conservation curve)'",
+    "the_fact": "n is DEFINED as the GQ(q,q) line count (q+1)(q^2+1); k = q^2+1 and d = q+1; so k*d = (q^2+1)(q+1) = n is the statement that n factors the way n is written. It cannot fail -- it even holds at q=6, which is not a prime power.",
+    "the_pattern": "third instance of the same error: Pass 287's 'trace law', Pass 319's delta table, and now Pass 239's 'conservation curve'. A computation that could not have come out otherwise carries no information."
+  },
+  "what_actually_survives": {
+    "the_generalization": "[[156,26,6]] / [[400,50,8]] appear in NO file predating my passes -- so extending the q=3 anchor to a family over all odd q is plausibly mine.",
+    "but_the_honest_decomposition": {
+      "n = (q+1)(q^2+1)": "standard GQ(q,q) line count -- textbook",
+      "k = q^2+1": "PROVED in-repo before Pass 224 (levi_next5, boxed)",
+      "d = q+1": "Pass 229 -- THE ONE genuinely new ingredient",
+      "k*d = n": "tautology"
+    },
+    "the_real_size": "The family reduces to ONE new claim: the CSS distance equals q+1. Its upper bound is immediate (isotropic lines have weight q+1); the content is the lower bound. That -- not 'a family with a conservation law' -- is the honest size of Passes 224/229/239."
+  },
+  "the_family_table": {
+    "3": {
+      "n": 40,
+      "k": 10,
+      "d": 4,
+      "k*d": 40
+    },
+    "5": {
+      "n": 156,
+      "k": 26,
+      "d": 6,
+      "k*d": 156
+    },
+    "7": {
+      "n": 400,
+      "k": 50,
+      "d": 8,
+      "k*d": 400
+    },
+    "9": {
+      "n": 820,
+      "k": 82,
+      "d": 10,
+      "k*d": 820
+    },
+    "11": {
+      "n": 1464,
+      "k": 122,
+      "d": 12,
+      "k*d": 1464
+    }
+  },
+  "checks": {
+    "k_times_d_equals_n_identically": true,
+    "so_the_conservation_curve_cannot_fail": true,
+    "it_is_the_statement_that_n_factors_as_written": true,
+    "holds_at_q_6_a_non_prime_power": true,
+    "q3_is_40_10_4": true,
+    "q5_is_156_26_6": true,
+    "index_html_names_40_10_4_today": true,
+    "index_html_names_40_15_8_today": true,
+    "index_html_has_uniserial_layers": true,
+    "index_html_says_Cperp_over_C_forced": true,
+    "both_predate_my_pass_224": true
+  }
+}
