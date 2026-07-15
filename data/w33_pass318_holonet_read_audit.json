@@ -1,0 +1,39 @@
+{
+  "schema": "w33.pass318.holonet_read_audit.v1",
+  "status": "PASS",
+  "method": "Pass 315 phrase-matched and said so: 'candidates, not verdicts -- each needs reading'. Phrase-matching is what caused the 279/285 failures. This pass READS the flagged files and re-verifies their central computations independently.",
+  "classification": {
+    "w33_machine_clock_is_mass.py": {
+      "oscillator": "BUILT -- (L_H - qI)^2 = 2I on the 12-dim middle shell, re-verified here; omega = sqrt(lambda) = sqrt(2), the same forced sqrt2 as Passes 297/298",
+      "frequency_IS_a_mass": "NOT BUILT -- omega = sqrt2 is a pure number and a mass is dimensionful; no scale is supplied to bridge them"
+    },
+    "w33_clock_is_dark_braiding.py": {
+      "group_chain": "BUILT -- 2T < SU(2) < SU(4) is a genuine subgroup chain, |2T| = 24, D(2T) has 42 anyons: real checkable facts",
+      "caution": "42 = |D(2T) anyons| and 42 = |Aut(Csaszar)| = |AGL(1,7)| are the SAME INTEGER for UNRELATED reasons (a group order vs an anyon-type count) -- the exact coincidence pattern Pass 309 caught"
+    },
+    "w33_thermal_time_clock.py": {
+      "modular_flow": "BUILT -- rho = I/81 gives K = (ln 81) I, so sigma_t = id and the gauge/matter sector is genuinely timeless under Tomita-Takesaki; re-verified here"
+    },
+    "bt1654_heawood_clock_homology.py": {
+      "coupling": "NOT BUILT -- asserts 'a coupled module' with no map; Pass 310 found every route obstructed. Still the outlier."
+    }
+  },
+  "VERDICT": "Pass 315's phrase-match OVER-FLAGGED. Three of the four files build their objects: the Heawood oscillator identity (L_H - qI)^2 = 2I on the 12-dim middle shell is a real constructed operator fact (re-verified here), the 2T < SU(2) < SU(4) chain is a real subgroup chain, and the thermal-time triviality rho = I/81 => sigma_t = id is a real computation. Only bt1654's 'coupled module' names no object.",
+  "the_one_unbuilt_half": "Within a file that DOES build its oscillator, w33_machine_clock_is_mass.py additionally claims 'its frequency IS a mass'. omega = sqrt(2) is a dimensionless eigenvalue; a mass is dimensionful. No scale is supplied, so that half is an identification without an object -- the defect can live inside an otherwise sound file, which a file-level audit would miss.",
+  "the_lesson_cuts_both_ways": "Pass 286 showed a search can UNDER-find (grep missed sqrt21 in the metric data). This pass shows a search can OVER-flag (grep implied an unbuilt corpus that is mostly built). Both failures come from matching text instead of reading it, and the correction is the same: read the file, re-verify the computation.",
+  "checks": {
+    "heawood_spectrum_as_claimed": true,
+    "oscillator_identity_on_middle_shell": true,
+    "middle_shell_is_12_dimensional": true,
+    "oscillator_object_is_built": true,
+    "omega_is_a_pure_number": true,
+    "frequency_is_a_mass_needs_a_scale": true,
+    "K_is_a_multiple_of_identity": true,
+    "modular_flow_is_trivial": true,
+    "gauge_sector_is_timeless_object_built": true,
+    "D2T_has_42_anyons": true,
+    "aut_csaszar_order_42": true,
+    "but_they_are_unrelated": true,
+    "same_integer_different_objects": true
+  }
+}

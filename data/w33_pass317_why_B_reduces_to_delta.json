@@ -1,0 +1,71 @@
+{
+  "schema": "w33.pass317.why_B_reduces_to_delta.v1",
+  "status": "PASS",
+  "THE_REDUCTION": "Tr(B_p) = char0(p) - 1 is a tautology (Pass 287: Tr is DEFINED as rank_p(t=1) - 1, and t=1 never drops). So det(B_p) = (Tr^2 - Tr(B^2))/2 with Tr(B^2) = rank_p(t=2) - 1 makes det a BIJECTIVE function of the second rank alone -- and the second rank is char0 minus the drop. Hence det(B_p) <=> rank_p(p^2) <=> delta(p^2), exactly. 'Why B = [[4,2],[2,5]]' is 'why the t=2 drop', and nothing else.",
+  "the_data": {
+    "2": {
+      "Tr(B_p)": 9,
+      "rank_p(p^2)": 50,
+      "char0(p^2)": 51,
+      "delta(p^2)": 1,
+      "det(B_p)": 16
+    },
+    "3": {
+      "Tr(B_p)": 24,
+      "rank_p(p^2)": 425,
+      "char0(p^2)": 451,
+      "delta(p^2)": 26,
+      "det(B_p)": 76
+    }
+  },
+  "what_delta_is": "Pass 282 exhibited the q=4 case explicitly: delta(4) = 1 is ONE mod-2 kernel vector (weight 18, meeting every isotropic line in an even number of points) with no integral origin. So delta(p^2) counts the mod-p kernel directions that fail to lift at Frobenius degree 2 -- a concrete countable object, not a mystery about a matrix.",
+  "candidate_forms_all_fail": {
+    "p^3 - 1": {
+      "p2": 7,
+      "p3": 26,
+      "p5": 124,
+      "fits_both": false
+    },
+    "(p-1)(p^2+p+1)": {
+      "p2": 7,
+      "p3": 26,
+      "p5": 124,
+      "fits_both": false
+    },
+    "p^3 - p^2": {
+      "p2": 4,
+      "p3": 18,
+      "p5": 100,
+      "fits_both": false
+    },
+    "(p^2-1)(p+1)/2": {
+      "p2": 4,
+      "p3": 16,
+      "p5": 72,
+      "fits_both": false
+    },
+    "p^4 - p^2 - ...": {
+      "p2": 12,
+      "p3": 72,
+      "p5": 600,
+      "fits_both": false
+    }
+  },
+  "why_two_points_are_not_enough": "delta(4) = 1 and delta(9) = 26 fit no simple form: p^3-1 gives 26 at p=3 but 7 at p=2; (p-1)(p^2+p+1) the same; p^3-p^2 gives 4 and 18. With two points and no theory any guess is curve-fitting -- the exact error Pass 314 flagged in the char-3 tower, where two ranks force a 2x2 fit that then carries no evidence.",
+  "the_third_point": "delta(25) = char0(25) - rank_5 W(3,25) = 8451 - rank_5. That is PRECISELY what det(B_5) needs, so the 'last gap' and the 'derive B' question are ONE computation. It is running now (~60 min) against the implementation Pass 314 validated on rank_3 W(3,9) = 425.",
+  "what_this_pass_does_not_do": "It does not derive delta. It shows the question is smaller and more concrete than 'why this matrix' -- a count of non-lifting kernel vectors at t=2 -- and that no answer is available from the data in hand. Stating that honestly is the point: Pass 314 caught the char-3 tower fitting two points and calling it a tower; this pass declines to do the same with delta.",
+  "checks": {
+    "p2_det_16": true,
+    "p3_det_76": true,
+    "p2_delta_1": true,
+    "p3_delta_26": true,
+    "det_is_a_function_of_rank_t2": true,
+    "det_is_injective_in_rank": true,
+    "so_det_iff_delta": true,
+    "Tr_is_char0_minus_1": true,
+    "no_simple_form_fits_both": true,
+    "two_points_cannot_determine": true,
+    "delta_25_needs_rank5_W325": true,
+    "det_B5_and_delta_25_are_the_same_computation": true
+  }
+}
