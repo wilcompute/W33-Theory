@@ -1,0 +1,138 @@
+{
+  "schema": "w33.pass293.sqrt21_is_chosen_not_forced.v1",
+  "status": "PASS",
+  "VERDICT": "sqrt(21) is CHOSEN, not FORCED. The Szilassi realization space is continuous (naive moduli dimension ~14: 42 coordinates minus rigid motions and scale, against 7 faces x 3 coplanarity conditions), and valid nearby realizations exist -- planarity residual < 1e-8 -- whose sqrt(21)-edges have moved off 5*sqrt(21) = 22.9129. Generic realizations lie in no particular quadratic field.",
+  "where_sqrt21_comes_from": {
+    "rule": "a length is in Q(sqrt 21) iff d^2 = 21 * (rational square)",
+    "published_values": {
+      "v1_(0,4)": {
+        "d2": "525",
+        "d2_over_21": "25",
+        "is_rational_square": true
+      },
+      "v1_(0,12)": {
+        "d2": "525/4",
+        "d2_over_21": "25/4",
+        "is_rational_square": true
+      },
+      "v2_(0,4)": {
+        "d2": "9261/16",
+        "d2_over_21": "441/16",
+        "is_rational_square": true
+      },
+      "v2_(0,12)": {
+        "d2": "84",
+        "d2_over_21": "4",
+        "is_rational_square": true
+      }
+    },
+    "note": "v2's {0,4} has d^2 = 21^3/16 exactly",
+    "reading": "sqrt(21) follows from Szilassi's chosen rational vertex coordinates, not from the combinatorics"
+  },
+  "moduli_test": {
+    "naive_dimension": 14,
+    "valid_nearby_found": 2,
+    "trials": [
+      {
+        "planarity_residual": 7.331114737496591e-08,
+        "valid": false,
+        "sqrt21_edge_lengths": [
+          23.398287,
+          12.976443,
+          23.29567,
+          10.63343
+        ],
+        "max_shift_from_published": 1.520003
+      },
+      {
+        "planarity_residual": 9.84785053503856e-09,
+        "valid": true,
+        "sqrt21_edge_lengths": [
+          22.886164,
+          11.047808,
+          23.099323,
+          12.00596
+        ],
+        "max_shift_from_published": 0.54952
+      },
+      {
+        "planarity_residual": 2.0444149484433183e-08,
+        "valid": false,
+        "sqrt21_edge_lengths": [
+          22.216749,
+          11.518475,
+          22.065094,
+          11.199337
+        ],
+        "max_shift_from_published": 0.847784
+      },
+      {
+        "planarity_residual": 3.178513097168434e-08,
+        "valid": false,
+        "sqrt21_edge_lengths": [
+          23.981742,
+          12.026552,
+          22.67146,
+          11.317404
+        ],
+        "max_shift_from_published": 1.068863
+      },
+      {
+        "planarity_residual": 2.1763339574931706e-08,
+        "valid": false,
+        "sqrt21_edge_lengths": [
+          22.620345,
+          11.931686,
+          22.78373,
+          11.233984
+        ],
+        "max_shift_from_published": 0.475246
+      },
+      {
+        "planarity_residual": 3.017930794158019e-09,
+        "valid": true,
+        "sqrt21_edge_lengths": [
+          23.062538,
+          11.826851,
+          22.803337,
+          11.450931
+        ],
+        "max_shift_from_published": 0.370411
+      },
+      {
+        "planarity_residual": 3.3268516830275985e-08,
+        "valid": false,
+        "sqrt21_edge_lengths": [
+          22.738223,
+          12.51672,
+          22.292817,
+          10.521717
+        ],
+        "max_shift_from_published": 1.06028
+      },
+      {
+        "planarity_residual": 4.4986531833046683e-08,
+        "valid": false,
+        "sqrt21_edge_lengths": [
+          23.359656,
+          11.967618,
+          23.215362,
+          10.907622
+        ],
+        "max_shift_from_published": 0.548817
+      }
+    ]
+  },
+  "what_this_does_to_pass290": "Pass 290's statement stays TRUE as stated -- among the seven PUBLISHED realizations, sqrt(21) is the unique quadratic field common to both Szilassi ones, and Pass 291's four edges really are the same in both. But the SIGNIFICANCE collapses: that is a fact about Szilassi's two coordinate choices (he picked pretty rational vertices, and both happened to land 21*square on the same four edges), not a metric invariant of the polyhedron. Pass 290's framing of sqrt(21) as 'the unique metric invariant of the Szilassi pole' is WITHDRAWN.",
+  "what_survives": "Pass 286 stands entirely: sqrt(21) IS present in the substrate's committed metric data, and Passes 279/285 were wrong to deny it. What 293 removes is the stronger claim that the polyhedron FORCES it. Honest position: sqrt(21) appears in both published Szilassi realizations on the same four edges -- a real, unexplained coincidence of two coordinate choices -- but it is not an invariant, so the Koide / Q(sqrt 21) link is weakened, not strengthened.",
+  "open": "Whether some natural SUB-family (e.g. C2-symmetric realizations with integer vertices) forces d^2 = 21*square is not settled here. That is the way the invariance claim could be rescued, and it is a well-posed question.",
+  "checks": {
+    "published_v1_is_planar": true,
+    "constraint_count_21": true,
+    "naive_moduli_dim_14": true,
+    "all_sqrt21_edges_are_21_times_a_square": true,
+    "v2_edge_is_21_cubed_over_16": true,
+    "found_valid_nearby_realizations": true,
+    "nearby_lengths_genuinely_differ": true
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schema": "w33.pass295.tetrahedron_the_middle.v1",
+  "status": "PASS",
+  "the_trio": {
+    "tetrahedron": {
+      "V": 4,
+      "E": 6,
+      "F": 4,
+      "chi": 2,
+      "genus": 0
+    },
+    "Csaszar": {
+      "V": 7,
+      "E": 21,
+      "F": 14,
+      "chi": 0,
+      "genus": 1
+    },
+    "Szilassi": {
+      "V": 14,
+      "E": 21,
+      "F": 7,
+      "chi": 0,
+      "genus": 1
+    }
+  },
+  "the_middle_has_both_adjacencies": {
+    "skeleton_complete_K4": true,
+    "every_face_pair_shares_an_edge": true,
+    "self_dual": true,
+    "meaning": "the tetrahedron is the unique polyhedron with BOTH maximal adjacencies; the two genus-1 poles split them (Csaszar takes vertex-completeness = K7, Szilassi takes face-completeness)"
+  },
+  "genus_numerator": {
+    "formula": "g(K_n) = ceil((n-3)(n-4)/12)",
+    "at_n_7": {
+      "n-3": 4,
+      "n-4": 3,
+      "product": 12,
+      "k": 12,
+      "genus": 1
+    },
+    "reading": "at n = 7 = Phi_6(3) the numerator is 4*3 = mu*q = k = 12, so the genus is exactly 1 -- the triangle (q=3) and the tetrahedron (mu=4) ARE the two factors"
+  },
+  "THE_ANSWER": "The middle carries NO quadratic field: the regular tetrahedron is equilateral, so there is only ONE edge length, every edge ratio is 1, and the field is Q. The oscillator's middle is the RATIONAL point between two poles whose realizations carry 36 different quadratic fields between them (Pass 290). And this is not a scaling artefact -- equilaterality means no ratio of edges can be irrational either.",
+  "the_bc_twist": {
+    "cosine": "-2/3",
+    "note": "the tetrahedron's BC-helix role DOES introduce an irrationality, but not in its lengths: the twist angle arccos(-(q-1)/q) = arccos(-2/3) has a RATIONAL cosine and an irrational angle. That is a different kind of object from the poles' quadratic edge fields."
+  },
+  "reading": "The oscillator has a clean metric signature: rational middle, irrational poles. The tetrahedron is equilateral (field Q) and self-dual with both maximal adjacencies; the two toroidal poles are dual to each other, split the adjacencies, and their realizations carry quadratic fields. Given Pass 293 -- sqrt(21) is a coordinate choice, not forced -- the poles' fields are properties of chosen realizations, whereas the middle's rationality is forced by equilaterality. The asymmetry between middle and poles is therefore real but weaker than it first looks: one side is an invariant, the other is a choice.",
+  "checks": {
+    "tetrahedron_genus_0": true,
+    "csaszar_genus_1": true,
+    "szilassi_genus_1": true,
+    "poles_are_dual_counts": true,
+    "all_three_have_21_or_6_edges": true,
+    "phi6_is_7": true,
+    "numerator_is_mu_times_q": true,
+    "genus_K7_is_1": true,
+    "genus_K4_is_0": true,
+    "tetra_skeleton_is_K4_complete": true,
+    "tetra_every_face_pair_shares_an_edge": true,
+    "tetra_has_BOTH_maximal_adjacencies": true,
+    "tetra_is_self_dual": true,
+    "regular_tetra_has_6_edges": true,
+    "regular_tetra_is_equilateral": true,
+    "all_edge_ratios_are_1": true,
+    "middle_field_is_Q": true,
+    "bc_twist_cosine_is_minus_two_thirds": true,
+    "bc_twist_cosine_is_rational": true,
+    "bc_twist_angle_is_not_a_nice_multiple_of_pi": true
+  }
+}

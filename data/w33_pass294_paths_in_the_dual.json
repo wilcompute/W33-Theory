@@ -1,0 +1,125 @@
+{
+  "schema": "w33.pass294.paths_in_the_dual.v1",
+  "status": "PASS",
+  "the_marked_set": {
+    "edges": [
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        12
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        13
+      ]
+    ],
+    "centres": [
+      0,
+      1
+    ],
+    "leaves": [
+      4,
+      5,
+      12,
+      13
+    ],
+    "structure": "two disjoint 2-paths: 4--0--12 and 5--1--13",
+    "centres_meaning": "vertices 0 and 1 are the C2-antipodal pair at (+-12, 0, 12) in both published realizations",
+    "C2_invariant": true,
+    "C2_action": "the symmetry swaps the two paths (0<->1, 4<->5, 12<->13)"
+  },
+  "dual_image": {
+    "rule": "a Szilassi edge lies on exactly 2 Szilassi faces; under duality those faces ARE two Csaszar vertices, so each marked edge names a Csaszar edge",
+    "per_edge": {
+      "(0, 4)": {
+        "szilassi_faces": [
+          0,
+          1
+        ],
+        "as_csaszar_edge": [
+          0,
+          1
+        ]
+      },
+      "(0, 12)": {
+        "szilassi_faces": [
+          1,
+          2
+        ],
+        "as_csaszar_edge": [
+          1,
+          2
+        ]
+      },
+      "(1, 5)": {
+        "szilassi_faces": [
+          2,
+          5
+        ],
+        "as_csaszar_edge": [
+          2,
+          5
+        ]
+      },
+      "(1, 13)": {
+        "szilassi_faces": [
+          0,
+          5
+        ],
+        "as_csaszar_edge": [
+          0,
+          5
+        ]
+      }
+    },
+    "csaszar_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        5
+      ]
+    ],
+    "degree_profile": {
+      "2": 4
+    },
+    "is_two_2paths_in_the_dual": false,
+    "dual_centres": [
+      0,
+      1,
+      2,
+      5
+    ]
+  },
+  "reading": "The four sqrt(21) edges are not metrically special (Pass 293: they are a coordinate choice), but the EDGE SET is combinatorially distinguished -- it is the same set in both published realizations and it is exactly C2-invariant, consisting of two 2-paths swapped by the symmetry and centred on the antipodal pair. Under Szilassi/Csaszar duality it maps to a 4-edge set of the Csaszar K7 skeleton, computed here. Since Csaszar's skeleton is complete, every pair of its vertices is an edge, so the image is distinguished only by its SHAPE, which is what the degree profile records.",
+  "honest_note": "This pass is purely combinatorial and therefore unaffected by Pass 293's deflation. What it does NOT show is that the marked set is canonical: it was singled out by a metric accident of two coordinate choices, so its combinatorial distinction may itself be an artefact of how it was found.",
+  "checks": {
+    "two_centres": true,
+    "four_leaves": true,
+    "centres_are_0_and_1": true,
+    "structure_is_two_2paths": true,
+    "marked_set_is_C2_invariant": true,
+    "C2_swaps_the_two_paths": true,
+    "each_marked_edge_on_two_faces": true,
+    "dual_image_is_four_edges": true,
+    "dual_structure_computed": true,
+    "dual_edges_are_K7_edges": true
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "w33.pass296.eps_star_in_edge_ratios.v1",
+  "status": "PASS",
+  "finding": "sqrt(21) is exactly a RATIO of two edge lengths in BOTH published Szilassi realizations: v1 has Edge7/Edge1 = (5*sqrt21/2)/(5/2) = sqrt(21), and v2 has Edge5/Edge1 = (2*sqrt21)/2 = sqrt(21). In each case the denominator is the realization's SHORTEST edge. Being a ratio, this is scale-invariant -- unlike the raw lengths.",
+  "sqrt21_ratios": {
+    "v1": [
+      {
+        "ratio": "e7/e1",
+        "numerator": "5*sqrt(21)/2",
+        "denominator": "5/2"
+      }
+    ],
+    "v2": [
+      {
+        "ratio": "e5/e1",
+        "numerator": "2*sqrt(21)",
+        "denominator": "2"
+      }
+    ]
+  },
+  "eps_star": {
+    "definition": "(5 - sqrt21)/2, the FN parameter on the Koide light cone (Pass 274)",
+    "from_the_ratio": "eps* = (5 - r)/2 with r = Edge7/Edge1 (v1) or Edge5/Edge1 (v2)",
+    "numeric": 0.20871215252208,
+    "minimal_polynomial": "x^2 - 5x + 1",
+    "unit": "eps* * conj(eps*) = 1 -- a norm-1 unit of Q(sqrt 21)"
+  },
+  "honest_weight": "This does NOT undo Pass 293. The ratio is still a consequence of Szilassi's chosen rational coordinates; a generic realization from the ~14-dimensional moduli space has no such relation. What the ratio formulation adds is that the occurrence is at least SCALE-INVARIANT -- not an artefact of how large the polyhedron was drawn -- and that both of Szilassi's independent coordinate choices produce the SAME ratio sqrt(21) against their respective shortest edges. That is a sharper coincidence than the raw lengths were, but it is still a coincidence of two choices, not an invariant.",
+  "reading": "eps* is reachable from the Szilassi metric by a scale-invariant construction: take the ratio of a sqrt(21)-edge to the shortest edge, get sqrt(21), and form (5 - sqrt21)/2. Whether that means anything depends entirely on Pass 293's open question -- whether some natural sub-family of realizations forces the relation. If it does, this is a bridge; if not, it is arithmetic on two pretty coordinate choices.",
+  "checks": {
+    "v1_realizes_sqrt21_as_an_edge_ratio": true,
+    "v2_realizes_sqrt21_as_an_edge_ratio": true,
+    "both_realizations_give_sqrt21_as_a_ratio": true,
+    "v1_e7_over_e1_is_sqrt21": true,
+    "v2_e5_over_e1_is_sqrt21": true,
+    "v1_denominator_is_shortest": true,
+    "v2_denominator_is_shortest": true,
+    "eps_star_from_ratio": true,
+    "eps_times_conjugate_is_1": true,
+    "eps_minpoly_x2_5x_1": true,
+    "ratios_are_scale_invariant": true
+  }
+}

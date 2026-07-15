@@ -1,0 +1,46 @@
+{
+  "schema": "w33.pass297.oscillator_corpus_reading.v1",
+  "status": "PASS",
+  "corpus_read": {
+    "w33_genus_ladder_clock.py": "the trio + oscillator: tetrahedron is the self-dual genus-0 MIDDLE with both maximal adjacencies; Csaszar/Szilassi are the genus-1 poles that split them; g(K_n)=ceil((n-3)(n-4)/12) gives 1 at n=7 because the numerator is 4*3 = mu*q = k = 12",
+    "bt1654_heawood_clock_homology.py": "THE OSCILLATOR'S SPECTRUM: Heawood Laplacian = 0, (3-sqrt2)^6, (3+sqrt2)^6, 6; beta_1 = 8; 28 six-cycles, 21 eight-cycles; and the honest boundary that the W33 Levi graph has girth 8 and no 6-cycles, so the clock is a coupled module, not a Levi subgraph",
+    "w33_klein_quartic_genus3.py": "the ladder past the torus: Klein quartic (24,84,56), genus 3, Aut = PSL(2,7) = 168 = lambda*k*Phi6, edges 84 = k*Phi6",
+    "w33_hurwitz_tower_qubit_crossover.py": "the {3,7} Hurwitz tower g = 3,7,14 with E = 42(g-1), V = k(g-1), Aut = 84(g-1)",
+    "bt1513_toroidal_7_21_3_bridge.py": "explicitly the ledger for the user's Csaszar/Szilassi 7/21/3 observation (7 point classes, 21 flag classes, 3 fibre classes)"
+  },
+  "the_oscillator_spectrum": {
+    "graph": "Heawood = Fano PG(2,2) point-line incidence = the Csaszar/Szilassi incidence",
+    "V": 14,
+    "E": 21,
+    "regular": 3,
+    "laplacian_spectrum": "0^1, (3-sqrt2)^6, (3+sqrt2)^6, 6^1",
+    "eigen_quadratic": "x^2 - 6x + 7, discriminant 8 -> sqrt(2)",
+    "field": "Q(sqrt 2)",
+    "status": "FORCED -- a spectral invariant of the combinatorics, true for every drawing"
+  },
+  "THE_DECISIVE_POINT": "The oscillator has a genuine, forced irrationality, and it is sqrt(2): the Heawood Laplacian's middle shells are 3 -+ sqrt2, an invariant of the combinatorics that no choice of drawing can change. The sqrt(21) of Passes 286/290/291 lives in the Szilassi EDGE LENGTHS, and Pass 293 showed it is a coordinate choice drawn from a ~14-dimensional moduli space. So Q(sqrt 2) and Q(sqrt 21) are not rivals and not related: the first is what the oscillator IS, the second is a property of two pretty drawings of one of its poles. The clock's field is sqrt(2).",
+  "consequence_for_koide": "eps* = (5 - sqrt21)/2 lives in Q(sqrt 21). The oscillator lives in Q(sqrt 2). If the Koide constant were going to come from the clock, it would have to come from Q(sqrt 2), and it does not. Combined with Pass 293 (sqrt21 not forced) and Pass 274 (FN accommodates rather than derives Koide), the toroidal route to Koide is now closed on three independent grounds -- which is worth knowing precisely because Passes 286/290/291 made it look open.",
+  "method_note": "This pass exists because Passes 279/285 searched instead of reading and had to be retracted. Every claim above was obtained by reading the file, and the oscillator spectrum was independently recomputed here from the Fano incidence rather than taken from the docstring.",
+  "checks": {
+    "heawood_14_vertices": true,
+    "heawood_21_edges": true,
+    "heawood_is_3_regular": true,
+    "spectrum_has_zero": true,
+    "spectrum_has_six": true,
+    "six_copies_of_3_minus_sqrt2": true,
+    "six_copies_of_3_plus_sqrt2": true,
+    "oscillator_field_is_Q_sqrt2": true,
+    "eigen_quadratic_discriminant_is_8": true,
+    "disc_squarefree_part_is_2": true,
+    "phi6_of_3_is_7": true,
+    "numerator_is_mu_q_equals_k": true,
+    "klein_chi_minus_4": true,
+    "klein_genus_3": true,
+    "klein_edges_are_k_times_phi6": true,
+    "klein_aut_168": true,
+    "klein_aut_is_lambda_k_phi6": true,
+    "sqrt2_is_spectral_and_forced": true,
+    "sqrt21_is_metric_and_chosen": true,
+    "fields_differ": true
+  }
+}
