@@ -206,13 +206,61 @@ since been \textbf{withdrawn}. Before relying on any section, consult the
 ledger in \texttt{analysis/W33\_HONEST\_SYNTHESIS.md}.
 
 \smallskip
-\textbf{What stands:} the incidence rank law (characteristic-$0$ rank
-$=\tfrac12(q^2+1)(q+2)$ for every $q$, from SRG multiplicities; odd $q$ has no
-$2$-modular drop, verified to $q=27$; even $q$ is $\operatorname{Tr}(B^t)+1$);
-the CSS family $[[(q+1)(q^2+1),q^2+1,q+1]]$; and the representation-theoretic
-selections forcing $q=3$. \textbf{What fell:} every \emph{metric} or
-\emph{basis-dependent} geometric claim. Five retractions, all from that side;
-none from the spectral side (Pass 311).
+\textbf{ATTRIBUTION --- READ FIRST (Passes 322--326).} An earlier version of this
+box claimed the incidence rank law and the CSS family as results of this
+programme. \textbf{Both claims were wrong, and are withdrawn.} The rank law is
+\emph{published}, and was \emph{already proved in this repository} before the
+passes that ``derived'' it:
+\begin{itemize}\itemsep0pt
+\item \textbf{Even $q$:} $\operatorname{rank}_2=\operatorname{Tr}(B^t)+1$ with
+$B=\begin{psmallmatrix}4&2\\2&5\end{psmallmatrix}$ \textbf{is} Sastry--Sin,
+\emph{The code of a regular generalized quadrangle of even order}: their
+$r_n=1+\big(\tfrac{1+\sqrt{17}}2\big)^{2n}+\big(\tfrac{1-\sqrt{17}}2\big)^{2n}$
+is the same formula, since $\big(\tfrac{1\pm\sqrt{17}}2\big)^2=\tfrac{9\pm\sqrt{17}}2$
+are the eigenvalues of $B$.
+\item \textbf{Odd $q$, cross characteristic:} $\tfrac12(q^2+1)(q+2)$ is the boxed,
+\emph{algebraically proved} $\tfrac12\!\left(q(q+1)^2+2\right)$ of
+\texttt{analysis/2026-07-10\_levi\_next5.md} (identical: both are
+$\tfrac12(q^3{+}2q^2{+}q{+}2)$), which also boxes $\operatorname{rank}_2A_L=q^2+1$
+--- the CSS family's $k$.
+\item \textbf{Odd $q$, defining characteristic:} Chandler--Sin--Xiang,
+\emph{J.\ Algebra} \textbf{323} (2010) 3157--3181 (arXiv:math/0603100), Thm.~1.1:
+$\operatorname{rank}_p=1+\alpha_1^t+\alpha_2^t$,
+$\alpha_{1,2}=\tfrac{p(p+1)^2}4\pm\tfrac{p(p+1)(p-1)}{12}\sqrt{17}$. This
+\textbf{closes} what this manuscript called the last open gap: $\det(B_p)=
+-\tfrac1{36}p^2(p+1)^2(2p^2{-}13p{+}2)$, giving $16,76,325$ at $p=2,3,5$, and
+$\operatorname{Tr}=\tfrac12p(p+1)^2=\mathrm{char}_0(p)-1$. At $p=2$ the $\alpha_i$
+\emph{are} the eigenvalues of $B$ --- which answers ``why $B$?''. It also confirms
+the conjecture $\operatorname{rank}_3W(3,27)=8353$.
+\item \textbf{The CSS code:} $[[40,10,4]]$ and its sentinel $[40,15,8]$ were in
+\texttt{docs/index.html} before the pass that claimed them, from Passes 187/189,
+which prove \emph{more}: $\mathbf F_2^{40}$ is uniserial with layers
+$1|14|1|8|1|14|1$, $[40,15,8]$ is the \emph{unique} invariant $15$-space, and
+$C^\perp\!/C$ is \emph{forced}. Moreover $k\cdot d=n$ is a \textbf{tautology}
+($n$ is \emph{defined} as $(q+1)(q^2+1)$), and $d=q+1$ is established only at
+$q=3$; for $q\ge5$ only $d\le q+1$ is proved. The honest family is
+$[[(q+1)(q^2+1),\,q^2+1,\,\le q+1]]$.
+\end{itemize}
+
+\smallskip
+\textbf{What is actually this programme's:} the \emph{selection layer} --- the
+argument that $q=3$ is forced rather than assumed (the corpus elsewhere assumes
+it). Both selections are \textbf{conditional}, each on one identification that is
+assumed and not derived: Pass 225 assumes the shadow half-spinor \emph{is} a
+Standard-Model generation ($2^{(q^2-1)/2}=16$ then has unique odd solution
+$q=3$); Pass 227 assumes the magic resource must be an exceptional-group cubic
+($\operatorname{rank}\le8$ then holds only at $q=3$) --- the QEC literature
+requires no such thing, restoring universality with \emph{any} magic state. The
+two assumptions differ, so the independence is real. The honest thesis is: \emph{if}
+these identifications hold, $q=3$ is doubly forced. Also ours: $d\le q+1$
+(Pass 229) and the forced-field ladder $\mathbf Q(\sqrt6)$ (Pass 298).
+
+\smallskip
+\textbf{What fell:} every \emph{metric} or \emph{basis-dependent} geometric claim
+(five retractions, none from the spectral side, Pass 311) --- \emph{and} both
+headline theorems, to prior art. Before claiming any result here is new, consult
+\texttt{RESULTS\_INDEX.md}, which maps result~$\to$~file; this corpus is indexed
+by \emph{date}, not topic, so a topic search cannot find its own proofs.
 }}\end{center}
 
 
@@ -12691,7 +12739,7 @@ conjugate reproduce the tower identically. Two ranks are fitted; $t=3,4,5$
 ($298,1890,12250$) are then \emph{forced} and all three are correct --- the law is
 not curve-fitting. What needs explaining is $\operatorname{Tr}=9$ (the doily's rank
 minus the trivial module) and $\det=16$.
-\emph{[Erratum: this section originally read $\det=16=|\mathbf F_2^4|$. That identification is \textbf{refuted} --- Pass 281 finds $\det B_3=76\neq3^4$, so $16=2^4$ was a coincidence at $p=2$ and $\det$ is not the ambient size. Pass 317 shows $\det(B_p)\iff\delta(p^2)$, so what needs explaining is the $t=2$ drop; it remains open.]}
+\emph{[Erratum: this section originally read $\det=16=|\mathbf F_2^4|$. That identification is \textbf{refuted} --- Pass 281 finds $\det B_3=76\neq3^4$, so $16=2^4$ was a coincidence at $p=2$ and $\det$ is not the ambient size. Pass 317 shows $\det(B_p)\iff\delta(p^2)$, so what needs explaining is the $t=2$ drop. \textbf{This is now CLOSED, and was never open}: Chandler--Sin--Xiang (arXiv:math/0603100, Thm.~1.1) give $\alpha_{1,2}=\tfrac{p(p+1)^2}4\pm\tfrac{p(p+1)(p-1)}{12}\sqrt{17}$, whence $\det(B_p)=\alpha_1\alpha_2=-\tfrac1{36}p^2(p+1)^2(2p^2{-}13p{+}2)=16,76,325$ at $p=2,3,5$, and $\operatorname{Tr}(B_p)=\tfrac12p(p+1)^2$. At $p=2$ the $\alpha_i$ are exactly the eigenvalues $\tfrac{9\pm\sqrt{17}}2$ of $B$: \emph{that} is why $B=\begin{psmallmatrix}4&2\\2&5\end{psmallmatrix}$. The paper had cited this reference since before the passes that called the quantity unexplained (Pass 324).]}
 
 \paragraph{Pass 267 --- the full package at $q=9$.} Every component holds at the
 first odd prime power: $n=820$, $\operatorname{rank}_2=451=\tfrac12(q^2+1)(q+2)$,

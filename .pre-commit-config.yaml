@@ -19,3 +19,11 @@ repos:
   rev: v1.5.0
   hooks:
     - id: detect-secrets
+- repo: local
+  hooks:
+    - id: rediscovery-guard
+      name: rediscovery guard (results already in the corpus)
+      entry: python scripts/check_rediscovery.py
+      language: system
+      files: ^(analysis|passes|exploration)/.*\.(py|md)$
+      pass_filenames: true

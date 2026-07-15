@@ -1,0 +1,47 @@
+{
+  "schema": "w33.pass326.the_last_survivors.v1",
+  "status": "PASS",
+  "VERDICT": "Both survivors are OURS and neither is refuted -- but both are smaller than advertised. d=q+1 is proved only at q=3, where the code was already known (323), and is an upper bound for q>=5 -- as Pass 229's own docstring says, contradicting its own headline. The selection arguments are genuinely novel but CONDITIONAL: each rests on one identification that is assumed, not derived.",
+  "part_1_d_equals_q_plus_1": {
+    "p229_own_prose": [
+      "'Exact at q=3 ...; a certified UPPER BOUND d(C)<=q+1 at q=5,7'",
+      "'a single line ... so it IS a logical operator: the CSS distance is <= q+1'"
+    ],
+    "but_the_headline": "[[ (q+1)(q^2+1), q^2+1, q+1 ]] -- d as an EQUALITY",
+    "and_the_code": "entry['css_distance_exact'] = w_line -- assigns the UPPER BOUND to a field named 'exact'",
+    "the_honest_family": "[[ (q+1)(q^2+1), q^2+1, <= q+1 ]]",
+    "failure_mode": "2 (over-read): the pass is RIGHT, its prose is CAREFUL, and its headline exceeds both.",
+    "it_compounds": "Pass 239's 'k*d = n EXACTLY' REQUIRES d=q+1 exactly, so beyond q=3 that headline rests on an unproven equality -- on top of being a tautology (323) once d=q+1 is granted, since n is DEFINED as (q+1)(q^2+1).",
+    "net_new_mathematics": "q=3: exact, but the q=3 code was in index.html pre-Pass-224, so not ours. q>=5: an upper bound only, assembled with levi_next5's boxed k=q^2+1. That is the honest size."
+  },
+  "part_2_the_selection_arguments": {
+    "status": "OURS -- clean on both corpus search (325) and literature search. Eastin-Knill (2009) and magic-state injection are standard; what is ABSENT from the literature is any requirement that the magic resource be an exceptional-group cubic.",
+    "that_absence_cuts_against_227": "The literature restores universality with ANY magic state. Nothing in QC forces the non-Clifford resource to be an exceptional Lie algebra's cubic invariant. The word 'GEOMETRIC' carries the entire argument and is an ASSUMPTION. Honest form: 'IF the magic resource must be an exceptional-group cubic invariant, THEN q=3 is the unique rung' -- far weaker than '227: q=3 is the unique COMPUTATIONALLY UNIVERSAL rung'. Every other rung is universal too, by ordinary magic-state distillation.",
+    "225_has_the_same_shape": "2^{(q^2-1)/2} = 16 has unique odd solution q=3 (verified). The 16 is a legitimate EMPIRICAL input (an SM generation has 16 Weyl fermions incl. nu_R), so this is NOT circular -- but it assumes the shadow half-spinor IS a generation: an IDENTIFICATION, not a derivation. 'IF the shadow half-spinor is an SM generation, THEN q=3.'",
+    "on_pass_313": "'Each is independently sufficient to force q=3' is true only modulo its own assumption. The two assumptions DIFFER, so the independence is real. Two independent CONDITIONAL selections -- a genuine, modest, honest result. Not 'q=3 is forced'."
+  },
+  "what_would_upgrade_them": {
+    "227": "derive that the magic resource must be geometric -- e.g. that the substrate admits no other non-Clifford resource. Nothing here shows that.",
+    "225": "derive that the shadow half-spinor must be the generation -- e.g. build a map from the code's logical space to the fermion content. That map is not built (compare Pass 310's clock-machine coupling: same defect, mode 3).",
+    "until_then": "the program's honest thesis is 'IF these two identifications hold, q=3 is doubly forced' -- worth stating, and worth not overstating."
+  },
+  "checks": {
+    "p229_says_upper_bound_at_q5_q7": true,
+    "p229_says_css_distance_is_leq": true,
+    "p229_exact_only_at_q3": true,
+    "p229_assigns_upper_bound_to_exact_field": true,
+    "p229_headline_claims_equality": true,
+    "so_family_notation_overreads_its_own_witness": true,
+    "honest_family_is_d_leq_q_plus_1": true,
+    "kd_eq_n_requires_unproven_equality_for_q_ge_5": true,
+    "225_unique_odd_solution_q3": true,
+    "227_rank_le_8_only_q3": true,
+    "227_q3_rank_is_5_le_8": true,
+    "227_q5_rank_is_13_gt_8": true,
+    "arithmetic_of_both_is_correct": true,
+    "225_assumes_halfspinor_IS_a_generation": true,
+    "227_assumes_magic_must_be_geometric": true,
+    "neither_identification_is_derived": true,
+    "the_two_assumptions_differ_so_independence_is_real": true
+  }
+}

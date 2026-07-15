@@ -17,9 +17,9 @@ searches ran and failed. A rediscovery always shares one thing with its original
 parameter, or sequence. If it hits, read those files *end to end* (Pass 286:
 shallow reads caused two retractions) before writing.
 
-Indexed **1306** files; **2449** distinctive results
+Indexed **1306** files; **2450** distinctive results
 (a token in >10 files identifies a topic, not a result, and is dropped).
-**877** appear in exactly one file — the sharpest signal.
+**878** appear in exactly one file — the sharpest signal.
 
 ## Index
 
@@ -86,7 +86,7 @@ Indexed **1306** files; **2449** distinctive results
 | `[360,9,9]` | `PASS70_TRACKS_A_B_C.md` |
 | `[40,10,4]` | `analysis/W33_HONEST_SYNTHESIS.md` · `docs/index.html` · `passes/README_passes_240_249.md` · `w33_paper.tex` |
 | `[40,12,4]` | `docs/index.html` |
-| `[40,15,8]` | `PASS173_INCIDENCE_TRANSCEIVER_ROUTE_DARK_LATTICE.md` · `PASS176_INCIDENCE_FIXED_LINE_E8_BRIDGE.md` · `PASS177_ADDRESS_ROUTE_DUAL_THETA_SPLIT.md` · `PASS179_SENTINEL_CONTEXT_POISSON_PAIR.md` · *(+5)* |
+| `[40,15,8]` | `PASS173_INCIDENCE_TRANSCEIVER_ROUTE_DARK_LATTICE.md` · `PASS176_INCIDENCE_FIXED_LINE_E8_BRIDGE.md` · `PASS177_ADDRESS_ROUTE_DUAL_THETA_SPLIT.md` · `PASS179_SENTINEL_CONTEXT_POISSON_PAIR.md` · *(+6)* |
 | `[40,20,4]` | `AUDIT_PASS126_156_SUBMISSION_PACKET.md` · `PAPER_SECTION5_MODULAR.tex` · `w33_submission.tex` |
 | `[40,24,6]` | `PASS86_MACWILLIAMS_DUAL.md` · `W36_PAPER.tex` · `docs/index.html` · `w33_paper.tex` |
 | `[40,25,4]` | `w33_paper.tex` |
@@ -189,7 +189,7 @@ Indexed **1306** files; **2449** distinctive results
 | `0212378` | `PASS214_218_SOURCE_TORSOR_DUAL_OVOID_WEIL_SYNTHESIS.md` · `w33_paper.tex` |
 | `0302219` | `W36_PRL_LETTER.tex` |
 | `0310429` | `analysis/BT852_seventeen_universals.md` |
-| `0603100` | `AUDIT_JUL10_11_2026_RECENT_COMMITS_PASS157_192_V5.md` · `analysis/W33_HONEST_SYNTHESIS.md` |
+| `0603100` | `AUDIT_JUL10_11_2026_RECENT_COMMITS_PASS157_192_V5.md` · `analysis/W33_HONEST_SYNTHESIS.md` · `w33_paper.tex` |
 | `0608226` | `analysis/W33_SPACETIME_DIMENSION_FROM_KO.md` |
 | `1000003` | `analysis/BT731_selector_sparse_export_certificate.md` · `analysis/BT732_selector_sibling_exports_certificate.md` · `analysis/BT739_aggregate_parity_bridge_theorem.md` · `analysis/BT751_root_natural_selector_harness.md` · *(+5)* |
 | `1179648` | `analysis/BT987_cp2_k3_edgewise_conversion.md` · `analysis/BT988_explicit_cp2_k3_edgewise_facets.md` · `analysis/BT989_edgewise_density_constants.md` · `analysis/BT993_edgewise_density_recurrences.md` |
@@ -1534,6 +1534,7 @@ Indexed **1306** files; **2449** distinctive results
 | `3099` | `analysis/BT1895_demonstrator_vs_fault_tolerant_stack.md` |
 | `3120` | `PASS173_INCIDENCE_TRANSCEIVER_ROUTE_DARK_LATTICE.md` · `PASS87_THETA_LATTICE.md` · `docs/index.html` · `w33_paper.tex` |
 | `3125` | `docs/index.html` · `photonic_holonet.tex` · `w33_paper.tex` |
+| `3157` | `w33_paper.tex` |
 | `3200` | `docs/index.html` |
 | `3215` | `W33_FOR_EVERYONE.tex` · `w33_paper.tex` |
 | `3264` | `analysis/BT1872_BT1874_summary.md` · `analysis/BT1874_larger_ring_glider_catalog.md` |
@@ -1846,7 +1847,7 @@ Indexed **1306** files; **2449** distinctive results
 | `184` | `AUDIT_JUL10_11_2026_RECENT_COMMITS_PASS157_192_V5.md` · `PASS181_192_AUDITED_CHIRAL_COMPLETION_SYNTHESIS.md` · `analysis/2026-05-21_pascal_oscillator_horizon_code.md` · `docs/index.html` · *(+1)* |
 | `185` | `PASS181_192_AUDITED_CHIRAL_COMPLETION_SYNTHESIS.md` · `W36_PAPER.tex` · `W36_PAPER_arxiv.tex` · `docs/index.html` · *(+3)* |
 | `186` | `AUDIT_JUL10_11_2026_RECENT_COMMITS_PASS157_192_V5.md` · `PASS181_192_AUDITED_CHIRAL_COMPLETION_SYNTHESIS.md` · `analysis/2026-05-21_pascal_oscillator_horizon_code.md` · `analysis/2026-05-21_universal_oscillator_stack.md` · *(+5)* |
-| `187` | `AUDIT_JUL10_11_2026_RECENT_COMMITS_PASS157_192_V5.md` · `PASS181_192_AUDITED_CHIRAL_COMPLETION_SYNTHESIS.md` · `analysis/BT1313_BT1315_holonet_optimality_stability_physical_budget.md` · `docs/index.html` · *(+1)* |
+| `187` | `AUDIT_JUL10_11_2026_RECENT_COMMITS_PASS157_192_V5.md` · `PASS181_192_AUDITED_CHIRAL_COMPLETION_SYNTHESIS.md` · `analysis/BT1313_BT1315_holonet_optimality_stability_physical_budget.md` · `analysis/W33_HONEST_SYNTHESIS.md` · *(+2)* |
 | `188` | `PASS181_192_AUDITED_CHIRAL_COMPLETION_SYNTHESIS.md` · `analysis/2026-07-10_levi_next5.md` · `docs/index.html` · `manuscripts/tex/PART_LV_LATEX_SKELETON.tex` · *(+3)* |
 | `190` | `AUDIT_JUL10_11_2026_RECENT_COMMITS_PASS157_192_V5.md` · `PASS181_192_AUDITED_CHIRAL_COMPLETION_SYNTHESIS.md` · `analysis/BT847_dark_dodecahedron.md` · `analysis/BT853_dark_orbit_zoo.md` · *(+3)* |
 | `191` | `PASS181_192_AUDITED_CHIRAL_COMPLETION_SYNTHESIS.md` · `analysis/BT1373_BT1375_synchronization_packet_operator_lifts.md` · `docs/index.html` · `manuscripts/tex/PART_LXIII_ARXIV_COMPLETE_PAPER.tex` · *(+2)* |
@@ -1949,9 +1950,9 @@ Indexed **1306** files; **2449** distinctive results
 | `317` | `analysis/BT732_selector_sibling_exports_certificate.md` · `w33_paper.tex` |
 | `319` | `analysis/W33_HONEST_SYNTHESIS.md` |
 | `321` | `analysis/2026-05-18_toroidal_metric_moment_operator.md` · `analysis/2026-06-23_full_commit_analysis.md` · `docs/index.html` |
-| `322` | `analysis/W33_HONEST_SYNTHESIS.md` · `manuscripts/tex/part26_amplituhedron.tex` · `part26_amplituhedron.tex` · `supplement_o_arxiv.tex` · *(+1)* |
-| `323` | `W36_PAPER.tex` · `analysis/2026-05-19_hamming_horizon_functor_search.md` · `docs/index.html` |
-| `325` | `docs/index.html` · `toe_master_synthesis.tex` · `w33_paper.tex` |
+| `322` | `analysis/W33_HONEST_SYNTHESIS.md` · `manuscripts/tex/part26_amplituhedron.tex` · `part26_amplituhedron.tex` · `supplement_o_arxiv.tex` · *(+2)* |
+| `323` | `W36_PAPER.tex` · `analysis/2026-05-19_hamming_horizon_functor_search.md` · `analysis/W33_HONEST_SYNTHESIS.md` · `docs/index.html` · *(+1)* |
+| `325` | `analysis/W33_HONEST_SYNTHESIS.md` · `docs/index.html` · `toe_master_synthesis.tex` · `w33_paper.tex` |
 | `327` | `analysis/BT945_selector_appendix_compile_record.md` |
 | `329` | `PASS88_SMITH_GROUP.md` |
 | `331` | `W33_FOR_EVERYONE.tex` · `docs/index.html` |
