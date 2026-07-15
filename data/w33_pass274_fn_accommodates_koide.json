@@ -1,0 +1,63 @@
+{
+  "schema": "w33.pass274.fn_accommodates_koide.v1",
+  "status": "PASS",
+  "closed_form": {
+    "Q_fn_2_1_0": "(eps^2 - eps + 1)/(eps^2 + eps + 1)",
+    "derivation": "eps^4+eps^2+1 = (eps^2+eps+1)(eps^2-eps+1)",
+    "Q_equals_two_thirds_when": "eps^2 - 5 eps + 1 = 0",
+    "eps_on_the_cone": "5/2 - sqrt(21)/2",
+    "eps_numeric": 0.20871215252208
+  },
+  "test_a_cone_eps_vs_data": {
+    "predicted_m_mu_over_m_tau": 0.04356076261039998,
+    "observed": 0.05946353426831603,
+    "predicted_m_e_over_m_tau": 0.0018975400391996215,
+    "observed_e": 0.0002875853753250115,
+    "verdict": "the eps that lands on the cone does NOT reproduce the observed lepton mass ratios"
+  },
+  "test_b_fit_then_predict": {
+    "(2,1,0)": {
+      "eps_fit_to_m_mu": 0.24385145943445988,
+      "predicted_m_e_over_m_tau": 0.003535911907679195,
+      "observed_m_e_over_m_tau": 0.0002875853753250115,
+      "ratio_pred_over_obs": 12.295172881037926,
+      "Q_resulting": 0.6257981215398021,
+      "Q_minus_two_thirds": -0.04086854512686455
+    },
+    "(3,1,0)": {
+      "eps_fit_to_m_mu": 0.24385145943445988,
+      "predicted_m_e_over_m_tau": 0.00021025781889202853,
+      "observed_m_e_over_m_tau": 0.0002875853753250115,
+      "ratio_pred_over_obs": 0.7311144339464687,
+      "Q_resulting": 0.6692187386930365,
+      "Q_minus_two_thirds": 0.002552072026369867
+    },
+    "(4,1,0)": {
+      "eps_fit_to_m_mu": 0.24385145943445988,
+      "predicted_m_e_over_m_tau": 1.2502673018867524e-05,
+      "observed_m_e_over_m_tau": 0.0002875853753250115,
+      "ratio_pred_over_obs": 0.043474648197036316,
+      "Q_resulting": 0.6809080247854308,
+      "Q_minus_two_thirds": 0.014241358118764147
+    }
+  },
+  "test_c_freedom_count": {
+    "fn_freedom": "integer charges + one continuous eps",
+    "lepton_constraints": "exactly two independent mass ratios",
+    "consequence": "Q is a function of the mass ratios alone, so once FN fits both ratios, Q is fixed by the fit",
+    "observed_Q": 0.6666605114773855
+  },
+  "verdict": "ACCOMMODATION, NOT EXPLANATION. There is a beautiful closed form -- the FN texture (2,1,0) sits exactly on the light cone at eps = (5 - sqrt 21)/2 = 0.2087 -- but that eps does not reproduce the observed lepton mass ratios. Conversely, a charge assignment with eps fitted to m_mu/m_tau can be made to track m_e/m_tau, and then Q = 2/3 follows automatically, because Q depends only on the two ratios that were fitted. Froggatt-Nielsen has enough freedom to absorb Koide, hence cannot claim to derive it. The charged-lepton nullness of Passes 257/263 remains UNEXPLAINED by the substrate's own mass mechanism.",
+  "reading": "This closes the loop opened by Pass 263: of all the sectors, only the charged leptons are null, and now we know the substrate's FN mass mechanism does not force them there. The pretty closed form eps = (5-sqrt21)/2 is real but lands at the wrong mass ratios, and the freedom count shows any FN fit that reproduces the ratios reproduces Q for free. Koide's 2/3 stays a genuine open problem -- sharply stated (Pass 257: a null ray of the family clock's Minkowski metric) but underived.",
+  "checks": {
+    "Q_simplifies_to_ratio_of_quadratics": true,
+    "cone_eps_is_5_minus_sqrt21_over_2": true,
+    "cone_eps_value": true,
+    "cone_eps_gives_Q_two_thirds": true,
+    "cone_eps_mu_ratio_off": true,
+    "cone_eps_e_ratio_off": true,
+    "some_charge_assignment_fits_electron": true,
+    "observed_Q_is_koide": true,
+    "fitting_both_ratios_reproduces_Q": true
+  }
+}

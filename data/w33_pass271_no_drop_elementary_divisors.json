@@ -1,0 +1,80 @@
+{
+  "schema": "w33.pass271.no_drop_elementary_divisors.v1",
+  "status": "PASS",
+  "theorem_1": "rank_F2(M) <= rank_Q(M) for every integer matrix M, because a nonzero minor mod 2 lifts to a nonzero minor over Q. Hence the drop delta = rank_Q - rank_F2 is always >= 0 -- proving a priori that the F2 rank can never exceed the characteristic-0 law of Pass 266.",
+  "theorem_2_snf_dictionary": "With elementary divisors d_1 | ... | d_r of N: rank_F2 = #{d_i odd} and delta = #{d_i even}. So 'no 2-modular drop' is exactly 'all invariant factors are odd'.",
+  "verification": {
+    "2": {
+      "n": 15,
+      "even_q": true,
+      "rank_Q_from_snf": 10,
+      "num_odd_elementary_divisors": 10,
+      "num_even_elementary_divisors": 0,
+      "rank_F2": 10,
+      "drop": 0,
+      "snf_dictionary_holds": true,
+      "even_divisor_values": [],
+      "seconds": 0.0
+    },
+    "3": {
+      "n": 40,
+      "even_q": false,
+      "rank_Q_from_snf": 25,
+      "num_odd_elementary_divisors": 25,
+      "num_even_elementary_divisors": 0,
+      "rank_F2": 25,
+      "drop": 0,
+      "snf_dictionary_holds": true,
+      "even_divisor_values": [],
+      "seconds": 0.0
+    },
+    "4": {
+      "n": 85,
+      "even_q": true,
+      "rank_Q_from_snf": 51,
+      "num_odd_elementary_divisors": 50,
+      "num_even_elementary_divisors": 1,
+      "rank_F2": 50,
+      "drop": 1,
+      "snf_dictionary_holds": true,
+      "even_divisor_values": [
+        2
+      ],
+      "seconds": 0.0
+    },
+    "5": {
+      "n": 156,
+      "even_q": false,
+      "rank_Q_from_snf": 91,
+      "num_odd_elementary_divisors": 91,
+      "num_even_elementary_divisors": 0,
+      "rank_F2": 91,
+      "drop": 0,
+      "snf_dictionary_holds": true,
+      "even_divisor_values": [],
+      "seconds": 0.1
+    }
+  },
+  "reading": "The Pass 266 mechanism is visible directly in the invariant factors. For odd q (and for q=2) every elementary divisor of the incidence matrix is ODD, so reduction mod 2 loses nothing and rank_F2 = rank_Q = (q^2+1)(q+2)/2. At q=4 exactly one invariant factor is EVEN, and the rank drops by exactly 1 -- matching delta(4) = 1. The 'delta' of Passes 250/256 is therefore a count of even invariant factors, and the odd/even dichotomy is the statement that defining characteristic (2 | q) forces even invariant factors while cross characteristic (2 does not divide q) does not.",
+  "honest_scope": "Theorem 1 and the SNF dictionary are proved. The general statement 'every invariant factor is odd for every odd q' is verified here at q = 3,5 (and at rank level for q = 3,5,7,9,11,13,17 in Passes 238/260/262/266) but is not proved for all odd q.",
+  "checks": {
+    "rank_F2_never_exceeds_rank_Q": true,
+    "so_delta_is_always_nonnegative": true,
+    "q2_snf_dictionary": true,
+    "q2_drop_equals_num_even_divisors": true,
+    "q2_rankQ_is_char0_law": true,
+    "q3_snf_dictionary": true,
+    "q3_drop_equals_num_even_divisors": true,
+    "q3_rankQ_is_char0_law": true,
+    "q4_snf_dictionary": true,
+    "q4_drop_equals_num_even_divisors": true,
+    "q4_rankQ_is_char0_law": true,
+    "q5_snf_dictionary": true,
+    "q5_drop_equals_num_even_divisors": true,
+    "q5_rankQ_is_char0_law": true,
+    "odd_q_all_divisors_odd": true,
+    "q2_all_divisors_odd": true,
+    "q4_has_one_even_divisor": true,
+    "q4_drop_is_1": true
+  }
+}

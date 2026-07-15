@@ -1,0 +1,45 @@
+{
+  "schema": "w33.pass273.texture_zeros.v1",
+  "status": "PASS",
+  "question": "does removing one parameter (a texture zero) restore the theta_23 predictivity that Pass 268 destroyed?",
+  "narrow_threshold_deg": 4.0,
+  "observed_dev23": 4.100000000000001,
+  "texture_zeros": {
+    "a": {
+      "n_bases": 30,
+      "n_solutions": 0,
+      "note": "no admissible (base, eta) with this texture zero"
+    },
+    "b": {
+      "n_bases": 0,
+      "n_solutions": 0,
+      "note": "no admissible (base, eta) with this texture zero"
+    },
+    "c": {
+      "n_bases": 30,
+      "n_solutions": 30,
+      "dev23_median": 1.5760982360831157,
+      "dev23_min": 1.0190173289740159,
+      "dev23_max": 1.57609823980183,
+      "band_width_deg": 0.5570809108278141,
+      "is_narrow": true,
+      "contains_observed": false
+    },
+    "d": {
+      "n_bases": 30,
+      "n_solutions": 30,
+      "dev23_median": 8.535589903493726,
+      "dev23_min": 5.929189611562812,
+      "dev23_max": 8.535590046421632,
+      "band_width_deg": 2.60640043485882,
+      "is_narrow": true,
+      "contains_observed": false
+    }
+  },
+  "verdict": "texture zero(s) ['c', 'd'] are narrow but EXCLUDE the observed 4.10 deg: they are falsified, which is itself informative",
+  "reading": "Pass 268 showed the mu-tau one-parameter prediction dissolves once the base matrix is marginalised. The obvious repair is to remove a parameter with a texture zero, so that eta must carry theta_13 and theta_23 together. Each of the four texture zeros is tried and its band reported. A wide band means the repair fails and the atmospheric angle stays unexplained; a narrow band that misses 4.10 deg would be a falsification; a narrow band containing it would be a genuine account. The outcome is reported as it comes.",
+  "checks": {
+    "all_texture_zeros_attempted": true,
+    "at_least_one_texture_zero_solvable": true
+  }
+}

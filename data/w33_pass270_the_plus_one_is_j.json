@@ -1,0 +1,118 @@
+{
+  "schema": "w33.pass270.the_plus_one_is_j.v1",
+  "status": "PASS",
+  "theorem": "Summing all lines of W(3,q) over F2 gives (q+1)j. For EVEN q, q+1 is odd, so the sum is j ITSELF: the geometry exhibits the all-ones vector inside the incidence code C. For ODD q, q+1 is even and the sum collapses to 0 (j is still in C -- tested -- but reached by another combination). So for even q the code carries a geometrically-exhibited trivial submodule <j>, and rank_2 = dim(C/<j>) + 1. Comparing with Pass 256 gives the identification Tr(B^t) = dim(C/<j>), verified exactly: rank-1 = 9, 49, 297, 1889 = Tr(B), Tr(B^2), Tr(B^3), Tr(B^4). The '+1' IS the all-ones vector, and the transfer matrix counts the non-trivial part of the incidence code.",
+  "per_q": {
+    "2": {
+      "n": 15,
+      "even": true,
+      "q_plus_1_parity": "odd",
+      "sum_of_all_lines_is_j": true,
+      "sum_of_all_lines_is_zero": false,
+      "matches_(q+1)j_prediction": true,
+      "j_in_C": true,
+      "dim_C": 10,
+      "dim_C_mod_j": 9
+    },
+    "3": {
+      "n": 40,
+      "even": false,
+      "q_plus_1_parity": "even",
+      "sum_of_all_lines_is_j": false,
+      "sum_of_all_lines_is_zero": true,
+      "matches_(q+1)j_prediction": true,
+      "j_in_C": true,
+      "dim_C": 25,
+      "dim_C_mod_j": 24
+    },
+    "4": {
+      "n": 85,
+      "even": true,
+      "q_plus_1_parity": "odd",
+      "sum_of_all_lines_is_j": true,
+      "sum_of_all_lines_is_zero": false,
+      "matches_(q+1)j_prediction": true,
+      "j_in_C": true,
+      "dim_C": 50,
+      "dim_C_mod_j": 49
+    },
+    "5": {
+      "n": 156,
+      "even": false,
+      "q_plus_1_parity": "even",
+      "sum_of_all_lines_is_j": false,
+      "sum_of_all_lines_is_zero": true,
+      "matches_(q+1)j_prediction": true,
+      "j_in_C": true,
+      "dim_C": 91,
+      "dim_C_mod_j": 90
+    },
+    "8": {
+      "n": 585,
+      "even": true,
+      "q_plus_1_parity": "odd",
+      "sum_of_all_lines_is_j": true,
+      "sum_of_all_lines_is_zero": false,
+      "matches_(q+1)j_prediction": true,
+      "j_in_C": true,
+      "dim_C": 298,
+      "dim_C_mod_j": 297
+    }
+  },
+  "identification": {
+    "2": {
+      "t": 1,
+      "rank_2": 10,
+      "rank_minus_1": 9,
+      "Tr(B^t)": 9,
+      "match": true
+    },
+    "4": {
+      "t": 2,
+      "rank_2": 50,
+      "rank_minus_1": 49,
+      "Tr(B^t)": 49,
+      "match": true
+    },
+    "8": {
+      "t": 3,
+      "rank_2": 298,
+      "rank_minus_1": 297,
+      "Tr(B^t)": 297,
+      "match": true
+    },
+    "16": {
+      "t": 4,
+      "rank_2": 1890,
+      "rank_minus_1": 1889,
+      "Tr(B^t)": 1889,
+      "match": true
+    }
+  },
+  "closes_pass261": "Pass 261 showed the inhomogeneous constant is c(1 - Tr B + det B) and needed c = 1. That c = 1 is now geometric: for even q the all-lines sum is exactly j, so <j> sits in C as a geometrically exhibited trivial submodule. The constant 8 = 1*(1-9+16) has a reason, not just a value.",
+  "parity_split_at_module_level": "CORRECTED BY TEST: j lies in C at BOTH parities, so the split is not 'has a trivial submodule vs not'. What differs is that for even q the all-lines sum EXHIBITS j (q+1 odd), tying <j> directly to the geometry and to the transfer-matrix decomposition rank = Tr(B^t)+1; for odd q the sum vanishes (q+1 even) and no transfer structure exists at all, the rank being simply the characteristic-0 rank (Pass 266). The honest statement is about how <j> is reached, not about whether it is present.",
+  "still_open": "det(B) = 16 = 2^4 = |F_2^4| is recorded but not derived from the module structure.",
+  "checks": {
+    "q2_sum_matches_(q+1)j": true,
+    "q2_dimC_matches_committed": true,
+    "q3_sum_matches_(q+1)j": true,
+    "q3_dimC_matches_committed": true,
+    "q4_sum_matches_(q+1)j": true,
+    "q4_dimC_matches_committed": true,
+    "q5_sum_matches_(q+1)j": true,
+    "q5_dimC_matches_committed": true,
+    "q8_sum_matches_(q+1)j": true,
+    "q8_dimC_matches_committed": true,
+    "even_q_sum_is_j": true,
+    "odd_q_sum_is_zero": true,
+    "even_q_j_in_C": true,
+    "j_in_C_for_both_parities": true,
+    "only_even_q_exhibits_j_as_all_lines_sum": true,
+    "Tr_Bt_equals_dim_C_mod_j": true,
+    "direct_q2_dim_mod_j_is_9": true,
+    "direct_q4_dim_mod_j_is_49": true,
+    "direct_q8_dim_mod_j_is_297": true,
+    "c_equals_1_because_j_in_C": true,
+    "constant_8_follows": true
+  }
+}

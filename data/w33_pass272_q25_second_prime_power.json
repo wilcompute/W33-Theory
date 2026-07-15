@@ -1,0 +1,36 @@
+{
+  "schema": "w33.pass272.q25_second_prime_power.v1",
+  "status": "PASS",
+  "q": 25,
+  "result": {
+    "n": 16276,
+    "lines": 16276,
+    "rank_2_computed": 8451,
+    "char0_prediction": 8451,
+    "match": true,
+    "dim_C_perp": 7825,
+    "g_law": 7825,
+    "k_css": 626,
+    "timings_s": {
+      "points": 0.2,
+      "lines": 11.0,
+      "rank": 11.7,
+      "total": 23.0
+    }
+  },
+  "what_this_tests": "q = 25 is only the SECOND odd prime power ever reached in this program (after q = 9). Pass 266 predicts, with no free parameters, that odd q is CROSS characteristic and therefore suffers NO 2-modular rank drop, so rank_2 must equal the characteristic-0 rank (q^2+1)(q+2)/2 = 8451. A match is a genuine out-of-sample confirmation that the odd-q tower is about characteristic, not primality.",
+  "method_note": "Pass 267 called q=25 unreachable; the obstruction was the rank routine, not the mathematics. The committed f2_rank re-sorts its basis on every insertion (O(r^2 log r) big-integer comparisons). Replacing it with a pivot-indexed dict elimination (leading-bit key, no sorting) makes n = 16276 tractable.",
+  "checks": {
+    "gf25_size": true,
+    "gf25_all_invertible": true,
+    "n_16276": true,
+    "lines_16276": true,
+    "line_size_q_plus_1": true,
+    "rank_matches_char0_prediction": true,
+    "no_2_modular_drop": true,
+    "predicted_8451": true,
+    "g_7825": true,
+    "k_626": true,
+    "dual_dim_equals_g": true
+  }
+}

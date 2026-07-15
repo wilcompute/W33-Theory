@@ -12696,4 +12696,61 @@ recede ($0.849\to0.889$). So $47.5^\circ$ is a near miss, not an approach, and
 Pass 263's verdict stands: only the charged leptons are null, and only in the deep
 infrared.
 
+
+\section{The ``$+1$'' Identified, $W(3,25)$ Built, and the Atmospheric Angle Falsified (Passes 270--274)}
+
+\paragraph{Pass 270 --- the ``$+1$'' is the all-ones vector.} Summing every line
+of $W(3,q)$ over $\mathbf F_2$ gives $(q+1)\,j$. For \emph{even} $q$, $q+1$ is odd,
+so the sum is $j$ itself: the geometry exhibits the all-ones vector inside the
+incidence code, and $\operatorname{rank}_2=\dim(C/\langle j\rangle)+1$. Comparing
+with Pass 256 yields the identification
+\[
+   \operatorname{Tr}(B^t)\;=\;\dim\bigl(C/\langle j\rangle\bigr),
+\]
+verified exactly: $\operatorname{rank}-1=9,49,297,1889$ at $q=2,4,8,16$ are
+precisely $\operatorname{Tr}B,\dots,\operatorname{Tr}B^4$. So the transfer matrix
+counts the \emph{non-trivial} part of the code, and Pass 261's constant
+$c=1$ acquires a geometric reason. (Correction, tested rather than assumed: $j$
+lies in $C$ at \emph{both} parities; what is special about even $q$ is that the
+all-lines sum \emph{exhibits} it, since for odd $q$ that sum collapses to $0$.)
+
+\paragraph{Pass 271 --- the drop, in invariant factors.} $\operatorname{rank}_{\mathbf F_2}(M)
+\le\operatorname{rank}_{\mathbf Q}(M)$ always (a nonzero minor mod $2$ lifts), so
+$\delta\ge0$ a priori. With elementary divisors $d_1|\cdots|d_r$ one has
+$\operatorname{rank}_{\mathbf F_2}=\#\{d_i\ \text{odd}\}$ and
+$\delta=\#\{d_i\ \text{even}\}$. Smith normal forms confirm it: $q=2,3,5$ have
+\emph{no} even invariant factor ($\delta=0$), while $q=4$ has exactly one, of
+value $2$, and $\delta=1$. The $\delta$ of Passes 250/256 is literally a count of
+even invariant factors.
+
+\paragraph{Pass 272 --- $W(3,25)$.} Pass 267 called $q=25$ unreachable; the
+obstruction was the rank routine, not the mathematics. Replacing the sorted-basis
+elimination with a pivot-indexed one (leading-bit dict, no sorting) makes
+$n=16276$ tractable, and the build confirms the parameter-free prediction of
+Pass 266 exactly:
+$\operatorname{rank}_2=\mathbf{8451}=\tfrac12(q^2+1)(q+2)$, $\dim C^{\perp}=7825=g$,
+$k=626=q^2+1$. This is the \emph{second} odd prime power ever reached, and it
+confirms out of sample that the odd-$q$ tower is about characteristic, not
+primality.
+
+\paragraph{Pass 273 --- the atmospheric angle is falsified, not merely
+unexplained.} Pass 268 showed the $\mu$--$\tau$ prediction dissolves under
+marginalisation. Removing a parameter via a texture zero restores predictivity
+for two of the four zeros --- and both \emph{miss}: $Z_c$ gives
+$|\theta_{23}-45^\circ|\in[1.02,1.58]$ and $Z_d$ gives $[5.93,8.54]$, while the
+observation, $4.10^\circ$, falls in the gap between them ($Z_a,Z_b$ admit no
+solution). So texture-zero $\mu$--$\tau$ breaking is falsified, which is sharper
+than Pass 268's inconclusive band.
+
+\paragraph{Pass 274 --- Froggatt--Nielsen accommodates Koide, it does not explain
+it.} For FN charges $(2,1,0)$ the Koide function collapses to
+$Q(\varepsilon)=(\varepsilon^2-\varepsilon+1)/(\varepsilon^2+\varepsilon+1)$, and
+$Q=\tfrac23$ exactly at $\varepsilon=\tfrac12(5-\sqrt{21})=0.20871\ldots$ --- a
+genuinely pretty closed form. But that $\varepsilon$ does \emph{not} reproduce the
+observed lepton mass ratios; and conversely, since $Q$ depends only on the two
+ratios, any FN assignment fitted to them reproduces $Q=\tfrac23$ for free. The
+substrate's own mass mechanism therefore absorbs Koide rather than deriving it.
+Combined with Passes 263/269, the charged-lepton nullness remains the single
+sharply-stated, underived fact.
+
 \end{document}
