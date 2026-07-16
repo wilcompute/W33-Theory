@@ -25,7 +25,7 @@ interconnected finite structure—and makes the remaining maps explicit.
 |---|---|
 | understand the project in five minutes | [Live atlas](https://wilcompute.github.io/W33-Theory/) — use the Navigator and Reader Guide |
 | see what the audit says is actually new | [The Selection Layer](analysis/THE_SELECTION_LAYER.md) |
-| inspect the newest exact breakthrough | [Pass 360: affine Clifford symmetry and logical Hadamard of the `[[137,1,21]]` code](PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md) |
+| inspect the newest exact breakthrough | [Passes 360–361: exact logical Hadamard and its Clifford-maximality boundary](PASS361_ALPHA_CODE_CLIFFORD_MAXIMALITY_SYNTHESIS.md) |
 | read the mathematical manuscript | [w33_paper.tex](w33_paper.tex) |
 | run the finite-geometry machine | [HOLONET.md](HOLONET.md) |
 | read the photonic program | [photonic_holonet.tex](photonic_holonet.tex) |
@@ -94,6 +94,14 @@ exact `AGL(1,137) = C137:C136` Clifford action of order `18,632`, whose nontrivi
 Hadamard on the encoded qubit.  Extending by the parity coordinate produces explicit `PSL(2,137)` symmetry of
 order `1,285,608`; the `PGL(2,137)` envelope of order `2,571,216` exchanges the two extended QR codes rather than
 preserving either one separately.  All of this is code-theoretic and certificate-backed.
+
+Pass 361 then proves the sharp boundary of that gate construction.  The QR/NQR checks give the orthogonal split
+`F2^137 = 68 + 68 + 1`; four of the six one-qubit Clifford label maps are impossible because they would force a
+nonzero support into the zero intersection of the two check spaces.  The only surviving uniform maps are identity
+and `X/Z` swap, so the simple affine/fold-transversal logical image is exactly `<H> ≅ C2`.  Two independent
+`4,692 × 137` phase-mask systems have full rank `137`, ruling out every nonzero subset-`S` mask in either
+direction.  A logical phase gate therefore needs a genuinely different circuit resource, not a stronger reading
+of the same symmetry.
 
 ## What the project contributes
 

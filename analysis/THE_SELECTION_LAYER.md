@@ -389,3 +389,27 @@ extended QR/NQR pair.  Again, pair symmetry is not member selection.
 
 *Witness: `analysis/w33_pass360_alpha_code_logical_hadamard.g`; generated
 certificate: `data/w33_pass360_alpha_code_logical_hadamard.json`.*
+
+### 5.9 Pass 361 proves the lift does not manufacture every choice
+
+The analogy has a sharp endpoint.  The two check spaces do more than intersect
+trivially: GAP proves the orthogonal decomposition
+
+> **`F2^137 = Qperp ⊥ Nperp ⊥ <1>`, dimensions `68+68+1`.**
+
+That split classifies every uniform one-qubit Clifford label map combined with
+an arbitrary coordinate permutation.  Four of the six maps in `GL(2,2)` send
+`X` or `Z` to `Y`; a nonzero `Y`-support would have to lie in both check spaces,
+contradicting their zero intersection.  Only identity and `X/Z` swap survive.
+Thus the duality lift supplies exactly `<logical H> = C2`, not a hidden full
+logical Clifford group.
+
+The most direct attempt to add a phase choice also fails exactly.  A subset
+phase mask must solve `4,692` binary constraints on `137` bits in either QR to
+NQR direction.  Both GAP matrices have rank `137`, hence nullity zero.  The
+selection lesson is stronger now: naming one external lift can create the
+operation that lift encodes, but it does not manufacture every other missing
+choice.  A logical phase gate requires another genuinely specified resource.
+
+*Witness: `analysis/w33_pass361_alpha_code_clifford_maximality.g`; generated
+certificate: `data/w33_pass361_alpha_code_clifford_maximality.json`.*

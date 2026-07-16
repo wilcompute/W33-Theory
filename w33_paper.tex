@@ -353,6 +353,32 @@ $p=137$ stabilizer transport, logical representatives, and 37-check GAP
 certificate---not a coupling-constant or hardware claim.
 
 \smallskip
+\textbf{CLIFFORD MAXIMALITY BOUNDARY (Pass 361).}  Put
+$A=Q^\perp$ and $B=N^\perp$ for the two rank-$68$ check spaces.  A second GAP
+certificate proves the nondegenerate orthogonal decomposition
+\[
+ \mathbf F_2^{137}=A\perp B\perp\langle\mathbf1\rangle,
+ \qquad \dim(A,B,\langle\mathbf1\rangle)=(68,68,1),
+\]
+and the dual identities
+$Q=B\oplus\langle\mathbf1\rangle$,
+$N=A\oplus\langle\mathbf1\rangle$.  This makes the simple logical-gate
+boundary exact.  Modulo Pauli phases a uniform one-qubit Clifford has one of
+the six label maps in $GL(2,2)$.  Four send $X$ or $Z$ to $Y$ and would force a
+nonzero permuted support into $A\cap B=0$; only identity and $X/Z$ swap survive.
+Thus the uniform-local-Clifford-plus-permutation logical image is exactly
+$\langle\bar H\rangle\cong C_2$.
+
+Nor can a subset phase mask supply the missing map.  For
+$D_m=\operatorname{diag}(m)$, the condition $D_mA\subseteq B$ gives
+$68\cdot69=4{,}692$ binary constraints on $137$ mask bits; GAP finds rank
+$137$ and nullity zero.  The reverse system $D_mB\subseteq A$ has the same
+rank.  Hence no nonzero subset of odd powers of $S$ works, even when combined
+with a pair-preserving or pair-swapping coordinate symmetry.  This no-go is
+limited to the named simple lift class: general Clifford circuits, entangling
+gates, ancillas, measurements, and code deformation remain outside its scope.
+
+\smallskip
 \textbf{What fell:} every \emph{metric} or \emph{basis-dependent} geometric claim
 (five retractions, none from the spectral side, Pass 311) --- \emph{and} both
 headline theorems, to prior art. Before claiming any result here is new, consult

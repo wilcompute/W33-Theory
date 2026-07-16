@@ -14500,6 +14500,18 @@
             <a href="../PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md">Open the construction and exact
               scope.</a></p>
         </div>
+        <div class="spotlight">
+          <p><strong>Exact gate boundary (Pass 361).</strong> The QR/NQR check spaces split the ambient binary space
+            orthogonally as <code>68 + 68 + 1</code>. That forces four of the six uniform one-qubit Clifford label
+            maps to fail: a nonzero <code>Y</code>-support would have to lie in both disjoint check spaces. Only
+            identity and <code>X/Z</code> swap survive, so the simple affine/fold-transversal logical image is exactly
+            <code>&lt;H&gt; &cong; C2</code>. The natural subset-phase escape is closed too: both
+            <code>4,692 &times; 137</code> mask systems have rank <code>137</code> and nullity zero. A logical phase gate
+            therefore needs a different circuit resource; the theorem does not rule out general circuits, ancillas,
+            measurements, or code deformation.
+            <a href="../PASS361_ALPHA_CODE_CLIFFORD_MAXIMALITY_SYNTHESIS.md">Read the proof and precise no-go
+              boundary.</a></p>
+        </div>
 
         <h3>Step 1 — The Geometry</h3>
         <p>W(3,3) is the symplectic polar space W(3, 𝔽₃). Its collinearity graph is a distinguished
