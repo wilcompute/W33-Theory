@@ -14512,6 +14512,17 @@
             <a href="../PASS361_ALPHA_CODE_CLIFFORD_MAXIMALITY_SYNTHESIS.md">Read the proof and precise no-go
               boundary.</a></p>
         </div>
+        <div class="spotlight">
+          <p><strong>Two-block real-Clifford breakthrough (Pass 362).</strong> Two QR-137 blocks give an exact
+            <code>[[274,2,21]]</code> code. Their encoded Hadamards and transversal CNOT preserve the rank-272
+            stabilizer and generate <code>O+(4,2) &cong; (S3 &times; S3):C2</code> of order <code>72</code> on logical
+            Pauli labels. Keeping signs gives one real-Clifford group of order <code>2,304</code> with two different
+            order-<code>1,152</code> shadows: its projective quotient is the centerless
+            <code>Aut(K4,4)=S4 wr C2</code>, while its total-Hadamard-parity kernel is the central
+            <code>W(F4)</code>. The shared number is therefore a quotient/kernel bifurcation, not a group identity.
+            <a href="../PASS362_ALPHA_CODE_REAL_CLIFFORD_K44_F4_SYNTHESIS.md">Open the 52-check construction and
+              corpus correction.</a></p>
+        </div>
 
         <h3>Step 1 — The Geometry</h3>
         <p>W(3,3) is the symplectic polar space W(3, 𝔽₃). Its collinearity graph is a distinguished
@@ -17822,14 +17833,15 @@
         <h4>Forbidden pocket F<sub>4</sub> normalizer</h4>
         <p>BT159 explains why the forbidden pocket exists. The eight forbidden macros are all anti-diagonal
           polarization-swappers, but together they generate a <code>1152</code>-element group:
-          <code>1152=|W(F<sub>4</sub>)|</code>, the full 24-cell Weyl order. The generated group splits exactly as
+          <code>1152=|W(F<sub>4</sub>)|</code> as a count. The generated group splits exactly as
           <code>576+576</code>: block-diagonal maps preserving the <code>2+2</code> Lagrangian split, plus
           anti-diagonal maps swapping it.
         </p>
-        <p>So the “bad” compiler macros are not failed design noise. They are the finite
-          <code>F<sub>4</sub></code>/24-cell/tomotope control normalizer. They fail as single global
-          q!-restoring macros because they stay inside that polarization normalizer; as a generated pocket, they
-          recover the local 24-cell symmetry the rest of the theory kept hinting at.
+        <p><strong>Pass 362 corrects the old order-only identification.</strong> BT159's element-order distribution
+          is not the Coxeter <code>W(F<sub>4</sub>)</code> distribution, so the pocket is an
+          <em>F<sub>4</sub>-sized polarization normalizer</em>, not a proved copy of the 24-cell Weyl group. The exact
+          <code>576+576</code> split and compiler obstruction remain valid. This is precisely why equal group orders
+          are interfaces to investigate, not isomorphisms to assume.
         </p>
 
         <h4>Reye-K<sub>12</sub> orientable horizon completion</h4>

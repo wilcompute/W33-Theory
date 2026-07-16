@@ -1,4 +1,4 @@
-"""Focused regressions for the GAP-owned Passes 358--361."""
+"""Focused regressions for the GAP-owned Passes 358--362."""
 
 from __future__ import annotations
 
@@ -137,6 +137,45 @@ def test_pass361_proves_the_simple_clifford_maximality_boundary() -> None:
     assert "general nonuniform Clifford circuits" in cert["boundary"]
 
 
+@pytest.mark.skipif(GAP is None, reason="GAP is required for Pass 362")
+def test_pass362_builds_the_real_clifford_k44_f4_double_shadow() -> None:
+    cert = _run_gap(
+        "analysis/w33_pass362_alpha_code_real_clifford_k44.g",
+        "Pass362 status=PASS",
+    )
+    assert cert["status"] == "PASS"
+    assert cert["check_count"] == 52 == len(cert["checks"])
+    assert all(cert["checks"].values())
+    assert cert["code"] == {
+        "physical_qubits": 274,
+        "logical_qubits": 2,
+        "stabilizer_rank": 272,
+        "inherited_distance": 21,
+    }
+    assert cert["logical_label_group"] == {
+        "group": "O+(4,2)",
+        "structure": "(S3 x S3):C2",
+        "order": 72,
+        "index_in_Sp4_2": 10,
+    }
+    assert cert["real_clifford"]["matrix_group_order"] == 2304
+    assert cert["real_clifford"]["real_pauli_order"] == 32
+    assert cert["two_order_1152_shadows"] == {
+        "projective_quotient": "Aut(K4,4) = S4 wr C2, center 1, 20 classes",
+        "even_hadamard_kernel": "W(F4), center 2, 25 classes",
+        "isomorphic": False,
+        "common_derived_order": 288,
+    }
+    assert cert["checks"]["transversal_cnot_preserves_stabilizer"]
+    assert cert["checks"]["logical_group_is_full_o_plus_4_2"]
+    assert cert["checks"]["projective_real_clifford_is_aut_k44"]
+    assert cert["checks"]["even_hadamard_subgroup_is_weyl_f4"]
+    assert cert["checks"]["real_clifford_is_not_weyl_f4"]
+    assert cert["checks"][
+        "projective_weyl_image_is_twisted_index_two_subgroup"
+    ]
+
+
 def test_results_index_integer_parser_normalizes_grouped_digits() -> None:
     spec = importlib.util.spec_from_file_location(
         "build_results_index", ROOT / "analysis" / "build_results_index.py"
@@ -167,6 +206,9 @@ def test_pass358_360_are_published_without_the_physical_overread() -> None:
     boundary_synthesis = (
         ROOT / "PASS361_ALPHA_CODE_CLIFFORD_MAXIMALITY_SYNTHESIS.md"
     ).read_text(encoding="utf-8")
+    double_shadow_synthesis = (
+        ROOT / "PASS362_ALPHA_CODE_REAL_CLIFFORD_K44_F4_SYNTHESIS.md"
+    ).read_text(encoding="utf-8")
     index = (ROOT / "RESULTS_INDEX.md").read_text(encoding="utf-8")
 
     assert "[[137,1,21]]" in readme
@@ -184,12 +226,22 @@ def test_pass358_360_are_published_without_the_physical_overread() -> None:
     assert "4,692" in readme
     assert "4{,}692" in paper
     assert "4,692" in website
+    assert "[[274,2,21]]" in readme
+    assert "Aut(K4,4)" in readme
+    assert "[[274,2,21]]" in paper
+    assert "operatorname{Aut}(K_{4,4})" in paper
+    assert "[[274,2,21]]" in website
+    assert "Aut(K4,4)" in website
     assert "does **not** identify the code rate with the physical" in synthesis
     assert "fine-structure constant" in synthesis
     assert "37-check" in gate_synthesis
     assert "does not derive a physical coupling" in gate_synthesis
     assert "68+68+1" in boundary_synthesis
     assert "general nonuniform Clifford circuits" in boundary_synthesis
+    assert "quotient by global sign" in double_shadow_synthesis
+    assert "kernel of total Hadamard parity" in double_shadow_synthesis
+    assert "F4-sized polarization normalizer" in double_shadow_synthesis
+    assert "F<sub>4</sub>-sized polarization normalizer" in website
     assert "| `35697025` |" in index
     assert "| `9316` |" in index
     assert "| `18632` |" in index

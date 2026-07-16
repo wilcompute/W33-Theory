@@ -25,7 +25,7 @@ interconnected finite structure—and makes the remaining maps explicit.
 |---|---|
 | understand the project in five minutes | [Live atlas](https://wilcompute.github.io/W33-Theory/) — use the Navigator and Reader Guide |
 | see what the audit says is actually new | [The Selection Layer](analysis/THE_SELECTION_LAYER.md) |
-| inspect the newest exact breakthrough | [Passes 360–361: exact logical Hadamard and its Clifford-maximality boundary](PASS361_ALPHA_CODE_CLIFFORD_MAXIMALITY_SYNTHESIS.md) |
+| inspect the newest exact breakthrough | [Pass 362: the QR-137 real-Clifford double shadow](PASS362_ALPHA_CODE_REAL_CLIFFORD_K44_F4_SYNTHESIS.md) |
 | read the mathematical manuscript | [w33_paper.tex](w33_paper.tex) |
 | run the finite-geometry machine | [HOLONET.md](HOLONET.md) |
 | read the photonic program | [photonic_holonet.tex](photonic_holonet.tex) |
@@ -90,8 +90,8 @@ does not derive the physical fine-structure constant.
 
 Pass 360 determines what this corrected code can actually *do*.  Its residue-affine permutations form
 `C137:C68` of order `9,316`; adjoining the nonresidue multiplier together with transversal Hadamard gives an
-exact `AGL(1,137) = C137:C136` Clifford action of order `18,632`, whose nontrivial quotient acts as logical
-Hadamard on the encoded qubit.  Extending by the parity coordinate produces explicit `PSL(2,137)` symmetry of
+exact `AGL(1,137) = C137:C136` Clifford action of order `18,632`, whose nontrivial quotient acts as logical Hadamard
+on the encoded qubit.  Extending by the parity coordinate produces explicit `PSL(2,137)` symmetry of
 order `1,285,608`; the `PGL(2,137)` envelope of order `2,571,216` exchanges the two extended QR codes rather than
 preserving either one separately.  All of this is code-theoretic and certificate-backed.
 
@@ -102,6 +102,14 @@ and `X/Z` swap, so the simple affine/fold-transversal logical image is exactly `
 `4,692 × 137` phase-mask systems have full rank `137`, ruling out every nonzero subset-`S` mask in either
 direction.  A logical phase gate therefore needs a genuinely different circuit resource, not a stronger reading
 of the same symmetry.
+
+Pass 362 takes the entangling route that Pass 361 intentionally left open.  Two QR-137 blocks form a
+`[[274,2,21]]` code; the two encoded Hadamards and transversal CNOT preserve its rank-272 stabilizer and generate
+the full real logical label group `O+(4,2) ≅ (S3 × S3):C2` of order `72`.  Keeping phases gives one real-Clifford
+matrix group of order `2,304`.  It has two **different** order-`1,152` shadows: quotienting by global sign gives
+the centerless `Aut(K4,4) = S4 wr C2`, while the kernel of total Hadamard parity is the central group `W(F4)`.
+The common count `1,152 = 72 × 16` therefore hides a quotient/kernel distinction, not a group identity.  GAP also
+locates `W(F4)/Z` as the twisted index-two subgroup of `Aut(K4,4)` cut out by equal permutation signs.
 
 ## What the project contributes
 
