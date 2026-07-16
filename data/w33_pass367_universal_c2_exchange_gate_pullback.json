@@ -1,0 +1,33 @@
+{
+  "schema": "w33.pass367.universal_c2_exchange_gate_pullback.gap.v1",
+  "status": "PASS",
+  "headline": "four exchange/gate parities synchronize in one C2-graded fiber product, but the QR affine factor proves that no common involutory C2 action exists",
+  "factors": [{"name":"W(E6) sign","orders":[51840,25920],"split":true},{"name":"outer Weil parity","orders":[103680,51840],"split":true},{"name":"QR-137 residue character","orders":[18632,9316],"split":false},{"name":"real Clifford H parity","orders":[2304,1152],"split":true}],
+  "pullback_exact_sequence": "1 -> PSp(4,3) x 2.U4(2) x (C137:C68) x W(F4) -> F -> C2 -> 1",
+  "even_kernel_order": 14420554127769600,
+  "pullback_order": 28841108255539200,
+  "odd_order_obstruction": {"QR_odd_orders":[8,136],"minimum_pullback_odd_order":8,"odd_involution_exists":false},
+  "boundary": "The construction unifies the four quotients as one parity grading and categorical fiber product. It proves they cannot be unified as one split C2 action: any odd tuple projects to the QR odd coset, which has no involution.",
+  "check_count": 19,
+  "checks": {
+    "we6_extension_orders_are_51840_25920": true,
+    "we6_quotient_is_c2": true,
+    "we6_extension_splits_by_involution": true,
+    "outer_weil_extension_orders_are_103680_51840": true,
+    "outer_weil_quotient_is_c2": true,
+    "outer_weil_has_one_odd_involution_class": true,
+    "affine_extension_orders_are_18632_9316": true,
+    "affine_even_subgroup_is_normal_index_two": true,
+    "affine_odd_coset_orders_are_8_or_136": true,
+    "affine_odd_coset_has_no_involution": true,
+    "affine_has_explicit_odd_order_eight_element": true,
+    "real_clifford_extension_orders_are_2304_1152": true,
+    "real_hadamard_parity_is_surjective": true,
+    "real_extension_splits_by_hadamard_involution": true,
+    "even_fiber_is_direct_product_of_four_kernels": true,
+    "synchronized_pullback_order_is_exact": true,
+    "odd_pullback_has_explicit_order_eight_tuple": true,
+    "no_odd_pullback_element_can_be_an_involution": true,
+    "universal_c2_grading_is_nonsplit": true
+  }
+}

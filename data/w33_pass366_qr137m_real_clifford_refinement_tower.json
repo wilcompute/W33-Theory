@@ -1,0 +1,31 @@
+{
+  "schema": "w33.pass366.qr137m_real_clifford_refinement_tower.gap.v1",
+  "status": "PASS",
+  "headline": "the m-fold QR-137 direct sum is [[137m,m,21]] with encoded real label group O+(2m,2), and the Sp/O+ index counts plus quadratic refinements",
+  "verified_tower": [{"m":1,"code":"[[137,1,21]]","Oplus_order":2,"Sp_index":3},{"m":2,"code":"[[274,2,21]]","Oplus_order":72,"Sp_index":10},{"m":3,"code":"[[411,3,21]]","Oplus_order":40320,"Sp_index":36},{"m":4,"code":"[[548,4,21]]","Oplus_order":348364800,"Sp_index":136}],
+  "general_formulas": {"code": "[[137m,m,21]]", "stabilizer_rank": "136m", "index": "[Sp(2m,2):O+(2m,2)]=2^(m-1)(2^m+1)", "nonzero_orbits": "2^(2m-1)+2^(m-1)-1 and 2^(2m-1)-2^(m-1)"},
+  "refinement_counts_m1_to_m4": [[3,1],[10,6],[36,28],[136,120]],
+  "refinement_theorem": "q_a=q+B(a,-) has plus type iff q(a)=0; Sp acts transitively on the plus refinements with stabilizer O+",
+  "exceptional_boundaries": {"m3_plus": "O+(6,2)=S8, not W(E6)", "m3_minus": "O-(6,2)=W(E6), Pass 365", "m4_plus": "O+(8,2)=W(E8)/{+-1}"},
+  "boundary": "The abstract real-Clifford quotient and orthogonal formulas are standard. New in this corpus is their exact QR-137 physical tower, refinement-torsor interpretation of the Pass-124 136/120 split, and the explicit separation of the m=3 plus and minus exceptional boundaries.",
+  "check_count": 17,
+  "checks": {
+    "qr_and_nqr_check_ranks_are_68": true,
+    "physical_stabilizer_ranks_are_136m": true,
+    "label_group_orders_m1_to_m4_are_exact": true,
+    "label_groups_equal_full_plus_orthogonal_orders": true,
+    "label_orbits_m1_to_m4_are_exact": true,
+    "each_label_orbit_is_quadratic_homogeneous": true,
+    "symplectic_orders_m1_to_m4_are_exact": true,
+    "real_to_full_indices_are_3_10_36_136": true,
+    "index_formula_is_two_power_times_fermion_number": true,
+    "refinement_counts_are_3_1_10_6_36_28_136_120": true,
+    "refinement_type_is_controlled_by_q_of_shift": true,
+    "m4_h_cnot_phase_group_is_full_sp8_2": true,
+    "m4_plus_refinement_action_is_transitive": true,
+    "m4_minus_refinement_action_is_transitive": true,
+    "m4_plus_refinement_stabilizer_has_o_plus_order": true,
+    "m4_real_group_is_weyl_e8_mod_sign_by_order": true,
+    "m3_plus_group_is_s8_not_weyl_e6": true
+  }
+}

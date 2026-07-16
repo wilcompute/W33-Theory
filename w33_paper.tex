@@ -426,6 +426,141 @@ Clifford definition and $O^+(2n,2)$ quotient are standard
 order-$1{,}152$ exact sequences are the result here.
 
 \smallskip
+\textbf{THE COMPLETE CHARACTER DIAMOND (Pass 363).}  The preceding two
+shadows are part of a rigid three-object diagram.  GAP proves
+\[
+ C_{\mathbb R}(2)^{\rm ab}\cong C_2^2
+\]
+and constructs all three nonzero characters.  Their kernels have order
+$1{,}152$, centre $C_2$, and common derived order $288$, but respectively
+$25$, $34$, and $19$ conjugacy classes:
+\[
+ W(F_4),\qquad
+ (2O\times2O)/\langle(-1,-1)\rangle,\qquad
+ 2_+^{1+4}:((C_3\times C_3):C_4).
+\]
+They are pairwise nonisomorphic; every pair intersects in
+$C_{\mathbb R}(2)'$ and generates the parent.  Thus the formal
+$S_3=\operatorname{Aut}(C_2^2)$ does not lift to a triality permuting the
+kernels.  Projectively the three images are the two twisted index-two groups
+$T_0,T_1$ and the base $S_4\times S_4$ inside
+$\operatorname{Aut}(K_{4,4})$.
+
+There is nevertheless a second exact action on the $48$ directions obtained
+by radially normalizing the $F_4$ roots.  The determinant kernel is transitive
+on this shell, with support pattern $8+24+16$, whereas $W(F_4)$ retains its
+$24+24$ short/long orbits and alone preserves the metric root system.  This
+also repairs an old notation-level error:
+\[
+ GL(2,3)=\operatorname{SmallGroup}(48,29)
+ \not\cong 2O=\operatorname{SmallGroup}(48,28);
+\]
+the two groups have $13$ and $1$ involutions, respectively, despite their
+common central quotient $S_4$.
+
+\smallskip
+\textbf{FOUR-BLOCK $E_8/2E_8$ REALIZATION (Pass 364).}  Four independent
+QR blocks form a $[[548,4,21]]$ code with rank-$544$ stabilizer.  GAP acts on
+all $1{,}096$ binary Pauli-label coordinates and verifies that four encoded
+Hadamards and all twelve directed transversal CNOTs preserve that stabilizer.
+On $(x_1,\ldots,x_4,z_1,\ldots,z_4)$ they generate
+\[
+ O^+(8,2),\qquad |O^+(8,2)|=348{,}364{,}800,\qquad
+ [Sp(8,2):O^+(8,2)]=136.
+\]
+The explicit interleaving
+\[
+ (x_1,x_2,x_3,x_4,z_1,z_2,z_3,z_4)
+ \longmapsto(x_1,z_1,x_2,z_2,x_3,z_3,x_4,z_4)
+\]
+preserves the quadratic and polar forms on all vectors and ordered pairs.
+It therefore realizes, on encoded logical labels, the Pass-124 tower
+\[
+ \operatorname{SRG}(255,126,61,63)
+ \supset
+ \operatorname{SRG}(135,70,37,35)
+ \sqcup
+ \operatorname{SRG}(120,63,30,36).
+\]
+Pass 124 owns the abstract graph theorem; the new object is its physical
+four-QR-block realization and the displayed chosen isometry.
+
+\smallskip
+\textbf{THREE-BLOCK MINUS REFINEMENT AND THE W33 SPREADS (Pass 365).}
+In interleaved coordinates put
+\[
+ q_+(v)=x_1z_1+x_2z_2+x_3z_3,\qquad
+ a=(0,0,0,0,1,1),\qquad
+ q_-(v)=q_+(v)+B(a,v).
+\]
+The $36$ nonsingular vectors of $q_-$ form
+$NO^-(6,2)=\operatorname{SRG}(36,15,6,6)$, and their transvections generate
+\[
+ O^-(6,2)\cong W(E_6),\qquad |O^-(6,2)|=51{,}840,
+\]
+with derived group $PSp(4,3)$ of order $25{,}920$.  GAP conjugates this
+degree-$36$ derived action to the native action on the $36$ W33 spreads and
+checks all pairs under the resulting explicit bijection:
+\[
+ |S_i\cap S_j|=4\quad\Longleftrightarrow\quad
+ B(v_{\phi(i)},v_{\phi(j)})=0.
+\]
+Relative to $q_+$ the nonsingular directions split as $16+20$: sixteen are
+already real-nonsingular and twenty use the phase refinement.  On the
+$[[411,3,21]]$ physical code the named rotation
+\[
+ \widehat R_{z_3}=\exp(-\pi i\bar Z_3/4),
+ \qquad \bar Z_3=Z^{\otimes137},
+\]
+fixes every stabilizer row and sends
+$\bar X_3\mapsto\bar X_3\bar Z_3$.  It is an exact encoded Clifford lift, but
+is not asserted to be transversal, local, low-weight, or fault-tolerant.
+
+\smallskip
+\textbf{THE UNIFORM REFINEMENT TOWER (Pass 366).}  Direct sum gives, for
+every positive $m$,
+\[
+ [[137m,m,21]],\qquad \operatorname{rank}S=136m,
+\]
+and the block Hadamards and CNOTs generate the standard real-Clifford label
+group $O^+(2m,2)$.  GAP checks the physical ranks and full logical groups for
+$m=1,2,3,4$, with orders
+\[
+ 2, 72, 40{,}320, 348{,}364{,}800
+\]
+and symplectic indices $3,10,36,136$.  For
+$q_a(v)=q(v)+B(a,v)$ it finds plus/minus refinement counts
+\[
+ (3,1),\ (10,6),\ (36,28),\ (136,120)
+\]
+and proves in the checked range the general identity
+\[
+ q_a\hbox{ is plus}\Longleftrightarrow q(a)=0,\qquad
+ [Sp(2m,2):O^+(2m,2)]=2^{m-1}(2^m+1).
+\]
+At $m=4$ the full $Sp(8,2)$ action is transitive on the $136$ plus
+refinements with an order-$348{,}364{,}800$ stabilizer, and separately on the
+$120$ minus refinements.  The exceptional boundary matters:
+$O^+(6,2)\cong S_8$ is not $W(E_6)$; the latter is the minus group of Pass
+365.  At $m=4$, $O^+(8,2)\cong W(E_8)/\{\pm1\}$.
+
+\smallskip
+\textbf{UNIVERSAL PARITY PULLBACK AND NONSPLITTING (Pass 367).}  Four
+index-two maps recur in the construction: $W(E_6)$ sign, outer-Weil parity,
+the QR residue character, and real-Clifford Hadamard parity.  Their
+synchronized fiber product $F$ fits into
+\[
+ 1\to PSp(4,3)\times2.U_4(2)\times(C_{137}:C_{68})\times W(F_4)
+ \to F\to C_2\to1
+\]
+and has order $28{,}841{,}108{,}255{,}539{,}200$.  The first, second, and
+fourth factor extensions split.  The QR odd affine coset, however, contains
+elements only of orders $8$ and $136$.  Hence no odd element of $F$ can be an
+involution; GAP constructs one of order $8$, proving the lower bound sharp.
+The four exchanges unify exactly as one grading, but not as one common
+involutory gate.
+
+\smallskip
 \textbf{What fell:} every \emph{metric} or \emph{basis-dependent} geometric claim
 (five retractions, none from the spectral side, Pass 311) --- \emph{and} both
 headline theorems, to prior art. Before claiming any result here is new, consult

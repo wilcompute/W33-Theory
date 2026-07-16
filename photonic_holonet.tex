@@ -1489,6 +1489,20 @@ world's vacuum selection are one substrate constant.
 \emph{Witness: \path{analysis/w33_magic_economy.py}.}
 \end{theorem}
 
+\paragraph{Exact resource boundary from the QR branch (Passes 361--367).}
+The theorem above is an architectural proposal for the qutrit/GKP branch; a
+count of contextual rays is not by itself a compiled injection circuit or a
+threshold theorem.  The independently certified binary QR-137 branch makes
+that distinction concrete.  Its one-block simple lift supplies only logical
+$H$; the multi-block construction supplies the real Clifford tower
+$O^+(2m,2)$; and the first named phase lift is the weight-$137$ Clifford
+rotation $\exp(-\pi i\bar Z/4)$.  That operator normalizes the exact
+stabilizer but is not yet transversal, local, low-weight, or proved
+fault-tolerant.  Consequently the QR witnesses do not establish $P=1$ or
+remove magic-state distillation.  Doing so requires an explicit protected
+resource-state preparation/injection circuit, decoder, and noise-threshold
+analysis for the chosen physical branch.
+
 \paragraph{The resource accounting.} Matter $=$ magic has a measurable payoff. Define
 the non-Clifford premium $P=\mathrm{cost}(\text{non-Clifford})/\mathrm{cost}(\text{Clifford})$.
 In the surface-code baseline a non-Clifford gate needs a distilled magic state, so

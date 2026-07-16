@@ -444,3 +444,92 @@ object was selected.
 
 *Witness: `analysis/w33_pass362_alpha_code_real_clifford_k44.g`; generated
 certificate: `data/w33_pass362_alpha_code_real_clifford_k44.json`.*
+
+### 5.11 Pass 363 resolves the whole character space, not just two shadows
+
+The real two-qubit Clifford group has abelianization `C2 x C2`.  GAP builds
+all three nonzero characters and proves that their order-`1,152` kernels are
+pairwise nonisomorphic:
+
+> Hadamard parity: `W(F4)`, `25` classes;
+>
+> determinant parity: `(2O x 2O)/diag(C2)`, `34` classes;
+>
+> mixed parity: `2_+^(1+4):((C3 x C3):C4)`, `19` classes.
+
+Every pair intersects in the commutator subgroup and generates the ambient
+group, but the unequal class and order profiles make every kernel
+characteristic.  The formal `S3=Aut(C2 x C2)` therefore does **not** lift to
+an automorphism triality of the matrix group.  This is exactly the kind of
+distinction the selection audit demands: a symmetry of a quotient ledger is
+not automatically a symmetry of the objects over it.
+
+Radial normalization supplies a second useful boundary.  `W(F4)` preserves
+the metric `24+24` root-length split, whereas the determinant kernel is
+transitive on the normalized 48-point shell.  Forgetting radius creates an
+interface, not a Weyl-group identity.  The same witness corrects the old
+`GL(2,3)=2O` shorthand: the two groups are `SmallGroup(48,29)` and
+`SmallGroup(48,28)`, with `13` and `1` involutions respectively.
+
+*Witness: `analysis/w33_pass363_real_clifford_character_diamond.g`; generated
+certificate: `data/w33_pass363_real_clifford_character_diamond.json`.*
+
+### 5.12 Passes 364–366 turn refinement choice into an encoded tower
+
+Four independent QR-137 blocks give `[[548,4,21]]`.  GAP checks the actual
+rank-`544` physical stabilizer under four encoded Hadamards and twelve
+transversal CNOTs; their logical label image is the full `O+(8,2)`.  The
+explicit interleaving
+
+> `(x1,x2,x3,x4,z1,z2,z3,z4) -> (x1,z1,x2,z2,x3,z3,x4,z4)`
+
+preserves the quadratic and polar forms and realizes the existing Pass-124
+`255=135+120` E8/2E8 graph split.  This is a named map from a physical code
+construction, not a count-level identification.
+
+The same mechanism has a sharp `[[411,3,21]]` three-block fork.  The plus group is
+`O+(6,2)=S8`, not `W(E6)`.  Shift the quadratic form by the nonsingular
+direction `(0,0,0,0,1,1)` and the minus group becomes
+`O-(6,2)=W(E6)`.  Its 36 nonsingular vectors are equivariantly identified
+with the 36 W33 spreads.  A weight-137 logical Pauli rotation supplies an
+exact stabilizer-normalizing lift of a phase transvection, while making no
+locality or fault-tolerance claim.
+
+Uniformly, the direct sum is `[[137m,m,21]]` with real logical label group
+`O+(2m,2)`.  The apparent index number is now an object:
+
+> `[Sp(2m,2):O+(2m,2)] = 2^(m-1)(2^m+1)`
+>
+> `= number of plus quadratic refinements of the polar form`.
+
+At `m=4`, GAP constructs the two refinement orbits of sizes `136` and `120`.
+Selection here means choosing a quadratic refinement; the full symplectic
+group moves that choice, while its orthogonal stabilizer records the chosen
+real structure.
+
+*Witnesses: `analysis/w33_pass364_qr548_e8_phase_space.g`,
+`analysis/w33_pass365_qr411_e6_minus_polar_lift.g`, and
+`analysis/w33_pass366_qr137m_real_clifford_refinement_tower.g`; generated
+certificates under `data/` with matching basenames.*
+
+### 5.13 Pass 367 finds the universal grading and proves it cannot be one gate
+
+Four recurring index-two quotients—`W(E6)` sign, outer-Weil parity, QR
+residue character, and real-Clifford Hadamard parity—do have a single exact
+universal object: their synchronized fiber product over `C2`.  Its order is
+
+> **`28,841,108,255,539,200`.**
+
+But three split extensions do not force the fourth to split.  The odd QR
+affine coset contains elements only of orders `8` and `136`; it has no
+involution.  Consequently every odd tuple in the pullback has order at least
+`8`, and GAP constructs one of order exactly `8`.  The extension has no
+section `C2 -> F`.
+
+This is the final selection-layer distinction for the packet: the four
+exchanges unify categorically as a parity **grading**, but not dynamically as
+one involutory exchange **operation**.
+
+*Witness: `analysis/w33_pass367_universal_c2_exchange_gate_pullback.g`;
+generated certificate:
+`data/w33_pass367_universal_c2_exchange_gate_pullback.json`.*

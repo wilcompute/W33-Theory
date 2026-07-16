@@ -154,6 +154,11 @@ data/*
 !data/w33_pass343_pass71_css_obstruction.json
 !data/w33_pass344_pass71_ihara_trivial_pole_audit.json
 !data/w33_pass345_pass70_spectral_code_retraction.json
+!data/w33_pass363_real_clifford_character_diamond.json
+!data/w33_pass364_qr548_e8_phase_space.json
+!data/w33_pass365_qr411_e6_minus_polar_lift.json
+!data/w33_pass366_qr137m_real_clifford_refinement_tower.json
+!data/w33_pass367_universal_c2_exchange_gate_pullback.json
 
 # Small vendored test fixtures needed for offline/CI collection
 !artifacts/

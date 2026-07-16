@@ -25,7 +25,7 @@ interconnected finite structure—and makes the remaining maps explicit.
 |---|---|
 | understand the project in five minutes | [Live atlas](https://wilcompute.github.io/W33-Theory/) — use the Navigator and Reader Guide |
 | see what the audit says is actually new | [The Selection Layer](analysis/THE_SELECTION_LAYER.md) |
-| inspect the newest exact breakthrough | [Pass 362: the QR-137 real-Clifford double shadow](PASS362_ALPHA_CODE_REAL_CLIFFORD_K44_F4_SYNTHESIS.md) |
+| inspect the newest exact breakthrough | [Passes 363–367: the QR Clifford/refinement tower](PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md) |
 | read the mathematical manuscript | [w33_paper.tex](w33_paper.tex) |
 | run the finite-geometry machine | [HOLONET.md](HOLONET.md) |
 | read the photonic program | [photonic_holonet.tex](photonic_holonet.tex) |
@@ -111,6 +111,26 @@ the centerless `Aut(K4,4) = S4 wr C2`, while the kernel of total Hadamard parity
 The common count `1,152 = 72 × 16` therefore hides a quotient/kernel distinction, not a group identity.  GAP also
 locates `W(F4)/Z` as the twisted index-two subgroup of `Aut(K4,4)` cut out by equal permutation signs.
 
+Pass 363 resolves the whole order-`1,152` neighborhood.  The order-`2,304` real Clifford group has three—and only
+three—nonzero `C2` characters.  Their kernels are pairwise nonisomorphic: `W(F4)`, the central product `2O o 2O`,
+and a mixed extraspecial kernel.  The apparent `Aut(C2^2)=S3` triality therefore does not lift.  Radial normalization
+also separates two different actions on the same 48-point shell: `W(F4)` preserves the metric `24+24` root-length
+split, while `2O o 2O` is transitive after the lengths are forgotten.  The same GAP witness corrects a legacy
+shorthand: `GL(2,3)=SmallGroup(48,29)` is not binary octahedral `SmallGroup(48,28)`.
+
+Passes 364–366 build the encoded exceptional tower.  Four QR blocks form `[[548,4,21]]`; all four encoded
+Hadamards and twelve transversal CNOTs preserve the actual rank-544 stabilizer and generate `O+(8,2)`.  The explicit
+interleaving `(x1,x2,x3,x4,z1,z2,z3,z4) -> (x1,z1,x2,z2,x3,z3,x4,z4)` identifies this phase space with the
+Pass-124 `E8/2E8` graph split `255=135+120`.  At three blocks, the `[[411,3,21]]` code's minus refinement gives
+`O-(6,2)=W(E6)` on the 36 W33 spreads, now with an explicit `PSp(4,3)`-equivariant bijection and a named
+stabilizer-normalizing phase rotation.  Uniformly, the direct sum is `[[137m,m,21]]`, and
+`[Sp(2m,2):O+(2m,2)]=2^(m-1)(2^m+1)` is exactly the number of plus quadratic refinements.
+
+Pass 367 closes the exchange-to-gate question without over-unifying it.  W(E6) sign, outer-Weil parity, QR residue
+character, and real-Clifford Hadamard parity synchronize in one `C2`-graded fiber product of order
+`28,841,108,255,539,200`.  But the QR odd coset has
+orders only `8` and `136`, hence no involution.  The common object is an exact grading, not one split `C2` action.
+
 ## What the project contributes
 
 The strongest current contribution is paper-sized and precise:
@@ -150,6 +170,14 @@ python3 -m pytest tests/test_pass338_342_gap_selector_clifford_cohomology.py -q
 gap -q analysis/w33_pass358_github_batch_integrity_audit.g
 gap -q analysis/w33_pass359_alpha_code_qr_css.g
 python3 -m pytest tests/test_pass358_359_gap_github_integrity_alpha_code.py -q
+
+# Rebuild the encoded Clifford/refinement capstone
+gap -q analysis/w33_pass363_real_clifford_character_diamond.g
+gap -q analysis/w33_pass364_qr548_e8_phase_space.g
+gap -q analysis/w33_pass365_qr411_e6_minus_polar_lift.g
+gap -q analysis/w33_pass366_qr137m_real_clifford_refinement_tower.g
+gap -q analysis/w33_pass367_universal_c2_exchange_gate_pullback.g
+python3 -m pytest tests/test_pass363_367_gap_qr_clifford_refinement.py -q
 ```
 
 Pass 341 can additionally use the optional GAP
@@ -243,8 +271,8 @@ code parameters; it does not replace reading.
 The exact finite atlas is mature; the continuum bridge and physical selection problem are not. The finite program
 has not supplied:
 
-- an internally canonical selector-to-fermion chirality assignment (Passes 346 and 358 prove that the full
-  controller exchanges the two choices, so any selection must import symmetry-breaking data);
+- a controller-invariant selector-to-fermion chirality choice—Passes 346 and 358 prove that none exists without
+  explicitly imported symmetry-breaking data;
 - a dynamical action that turns dimensionless finite spectra into measured masses and couplings;
 - a calibrated physical scale derived rather than inserted;
 - a rigorous continuum/locality limit with the required spacetime dynamics;

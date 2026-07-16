@@ -6,14 +6,14 @@ The Bell-line stabilizer is the Siegel parabolic P_2 = GL(2, F_3) ⋉ F_3^q
 Its representation theory turns out to be COMPLETELY substrate-clean.
 
 ==============================================================
-GL(2, F_3) = BINARY OCTAHEDRAL GROUP 2.S_4
+GL(2, F_3) IS A CENTRAL DOUBLE COVER OF S_4, DISTINCT FROM 2O
 ==============================================================
 
   |GL(2, F_3)| = 48 = k * mu
 
-GL(2, F_3) is isomorphic to the BINARY OCTAHEDRAL GROUP 2.S_4:
-  - double cover of S_4 (the symmetric group on 4 letters)
-  - inherits chiral symmetry of the octahedron
+GL(2, F_3) = SmallGroup(48,29), not binary octahedral SmallGroup(48,28):
+  - it is a different double cover of S_4 (the symmetric group on 4 letters)
+  - it has 13 involutions, whereas 2O has 1
   - has center Z = {+/- I} of order lambda = 2
   - quotient GL(2, F_3) / Z = PGL(2, F_3) = S_4 = order f = 24
 
@@ -21,7 +21,7 @@ GL(2, F_3) is isomorphic to the BINARY OCTAHEDRAL GROUP 2.S_4:
 IRREDUCIBLE REPRESENTATIONS
 ==============================================================
 
-GL(2, F_3) ≅ 2.S_4 has 8 conjugacy classes / 8 irreducible reps:
+GL(2, F_3) has 8 conjugacy classes / 8 irreducible reps:
 
   Dimensions: 1, 1, 2, 2, 2, 3, 3, 4
 
@@ -117,7 +117,8 @@ def main():
     GL2_order = (q**2 - 1) * (q**2 - q)
     assert GL2_order == 48 == k * mu
     print(f"|GL(2, F_3)| = (q^2-1)(q^2-q) = {GL2_order} = k * mu")
-    print(f"GL(2, F_3) =~ 2.S_4 (binary octahedral group)")
+    print("GL(2, F_3) has central quotient S_4 but is not binary octahedral: "
+          "SmallGroup(48,29) != 2O = SmallGroup(48,28)")
 
     # PGL(2, F_3) = S_4 = f
     PGL2_order = GL2_order // 2
@@ -172,7 +173,8 @@ def main():
     print(f"""
 NEW: GL(2, F_3) IRREP DIMENSIONS ARE EXACTLY {{1, lambda, q, mu}}.
 
-The 8 = 2^q irreducible representations of GL(2, F_3) =~ 2.S_4 have
+The 8 = 2^q irreducible representations of GL(2, F_3), whose central
+quotient is S_4 but which is not the binary octahedral cover 2O, have
 dimensions: 1, 1, 2, 2, 2, 3, 3, 4.
 
 EVERY dimension is a substrate primitive in {{1, lambda, q, mu}}, and
