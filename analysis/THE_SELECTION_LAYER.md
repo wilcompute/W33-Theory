@@ -358,3 +358,34 @@ keeps two constructions separate: Pass 331's `H8` is a characteristic-two
 
 *Witness: `analysis/w33_pass358_github_batch_integrity_audit.g`; generated
 certificate: `data/w33_pass358_github_batch_integrity_audit.json`.*
+
+### 5.8 Pass 360 turns an exchanged pair into a gate, not a selection
+
+The corrected `[[137,1,21]]` quadratic-residue CSS code supplies a clean
+operational model of the distinction above.  Its two QR/NQR check spaces are
+separately preserved by the residue-affine group
+
+> **`C137:C68`, order `9,316`,**
+
+but a quadratic-nonresidue multiplier exchanges them.  The larger affine group
+therefore still does not select one half.  What it *can* do is act on the pair:
+compose the exchanging permutation with transversal Hadamard, which exchanges
+Pauli `X` and `Z` at the same time.  The result normalizes the stabilizer and
+acts as logical Hadamard on the all-ones logical Pauli representatives.  GAP
+certifies the exact sequence
+
+> `1 -> C137:C68 -> AGL~(1,137) -> <logical H> = C2 -> 1`.
+
+This is the constructive counterpart of the chirality no-go.  A symmetry that
+exchanges two candidates cannot canonically prefer one, but an independently
+specified duality lift can turn the exchange into a useful operation on the
+paired object.  The lift does not explain a physical chirality choice; it names
+the additional map and proves exactly what that map accomplishes.
+
+The parity extension closes the same picture projectively.  A chosen extended
+QR code is preserved by explicit `PSL(2,137)` generators of order `1,285,608`,
+whereas the index-two `PGL(2,137)` envelope of order `2,571,216` exchanges the
+extended QR/NQR pair.  Again, pair symmetry is not member selection.
+
+*Witness: `analysis/w33_pass360_alpha_code_logical_hadamard.g`; generated
+certificate: `data/w33_pass360_alpha_code_logical_hadamard.json`.*

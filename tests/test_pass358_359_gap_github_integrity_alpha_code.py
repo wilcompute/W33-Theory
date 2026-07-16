@@ -1,4 +1,4 @@
-"""Focused regressions for the GAP-owned Passes 358 and 359."""
+"""Focused regressions for the GAP-owned Passes 358--360."""
 
 from __future__ import annotations
 
@@ -81,6 +81,38 @@ def test_pass359_constructs_the_exact_qr_css_code() -> None:
     }
 
 
+@pytest.mark.skipif(GAP is None, reason="GAP is required for Pass 360")
+def test_pass360_builds_the_affine_logical_hadamard_and_psl_action() -> None:
+    cert = _run_gap(
+        "analysis/w33_pass360_alpha_code_logical_hadamard.g",
+        "Pass360 status=PASS",
+    )
+    assert cert["status"] == "PASS"
+    assert cert["check_count"] == 37 == len(cert["checks"])
+    assert all(cert["checks"].values())
+    assert cert["affine_symmetry"] == {
+        "full": "C137:C136",
+        "order": 18632,
+        "pure_permutation": "C137:C68",
+        "pure_order": 9316,
+    }
+    assert cert["extended_code_symmetry"] == {
+        "group": "PSL(2,137)",
+        "degree": 138,
+        "order": 1285608,
+        "point_stabilizer_order": 9316,
+    }
+    assert cert["extended_pair_envelope"] == {
+        "group": "PGL(2,137)",
+        "order": 2571216,
+        "role": "its nontrivial PSL coset swaps the two extended QR codes",
+    }
+    assert "transversal H" in cert["logical_gate"]
+    assert cert["checks"]["nonresidue_multiplier_sends_qr_checks_to_nqr"]
+    assert cert["checks"]["nonresidue_multiplier_sends_nqr_checks_to_qr"]
+    assert cert["checks"]["logical_ones_pair_anticommutes"]
+
+
 def test_results_index_integer_parser_normalizes_grouped_digits() -> None:
     spec = importlib.util.spec_from_file_location(
         "build_results_index", ROOT / "analysis" / "build_results_index.py"
@@ -88,19 +120,25 @@ def test_results_index_integer_parser_normalizes_grouped_digits() -> None:
     assert spec is not None and spec.loader is not None
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
-    text = "wrong determinant 35,697,025; canonical token 35697025"
-    assert {match.replace(",", "") for match in module.RE_INT.findall(text)} == {
-        "35697025"
-    }
+    text = (
+        "wrong determinant 35,697,025; canonical token 35697025; "
+        "TeX group order 1{,}285{,}608"
+    )
+    assert {
+        module.canonical_integer(match) for match in module.RE_INT.findall(text)
+    } == {"35697025", "1285608"}
     assert module.PINNED_RESULTS == {"[[40,10,4]]", "[40,15,8]"}
 
 
-def test_pass358_359_are_published_without_the_physical_overread() -> None:
+def test_pass358_360_are_published_without_the_physical_overread() -> None:
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     paper = (ROOT / "w33_paper.tex").read_text(encoding="utf-8")
     website = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")
     synthesis = (
         ROOT / "PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md"
+    ).read_text(encoding="utf-8")
+    gate_synthesis = (
+        ROOT / "PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md"
     ).read_text(encoding="utf-8")
     index = (ROOT / "RESULTS_INDEX.md").read_text(encoding="utf-8")
 
@@ -110,9 +148,21 @@ def test_pass358_359_are_published_without_the_physical_overread() -> None:
     assert "18=10+8" in paper
     assert "[[137,1,21]]" in website
     assert "18=10+8" in website
+    assert "logical Hadamard" in readme
+    assert "PGL(2,137)" in readme
+    assert "logical Hadamard" in paper
+    assert "PGL(2,137)" in paper
+    assert "logical Hadamard" in website
+    assert "PGL(2,137)" in website
     assert "does **not** identify the code rate with the physical" in synthesis
     assert "fine-structure constant" in synthesis
+    assert "37-check" in gate_synthesis
+    assert "does not derive a physical coupling" in gate_synthesis
     assert "| `35697025` |" in index
+    assert "| `9316` |" in index
+    assert "| `18632` |" in index
+    assert "| `1285608` |" in index
+    assert "| `2571216` |" in index
     assert "| `[[40,10,4]]` |" in index
     assert "| `[40,15,8]` |" in index
     assert "analysis/2026-07-15_pass92_wrq_landscape.md" in index

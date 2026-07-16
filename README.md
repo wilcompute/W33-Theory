@@ -25,7 +25,7 @@ interconnected finite structure—and makes the remaining maps explicit.
 |---|---|
 | understand the project in five minutes | [Live atlas](https://wilcompute.github.io/W33-Theory/) — use the Navigator and Reader Guide |
 | see what the audit says is actually new | [The Selection Layer](analysis/THE_SELECTION_LAYER.md) |
-| inspect the newest exact breakthrough | [Passes 358–359: outer Weil envelope and exact `[[137,1,21]]` code](PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md) |
+| inspect the newest exact breakthrough | [Pass 360: affine Clifford symmetry and logical Hadamard of the `[[137,1,21]]` code](PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md) |
 | read the mathematical manuscript | [w33_paper.tex](w33_paper.tex) |
 | run the finite-geometry machine | [HOLONET.md](HOLONET.md) |
 | read the photonic program | [photonic_holonet.tex](photonic_holonet.tex) |
@@ -87,6 +87,13 @@ carrier `9=5+4`, and proves that the smallest outer-stable oscillator is the rea
 packet identifies the length-137 cyclic construction as the binary quadratic-residue CSS code
 **`[[137,1,21]]`**, using an exact GAP construction plus the published QR(137) minimum distance. That code theorem
 does not derive the physical fine-structure constant.
+
+Pass 360 determines what this corrected code can actually *do*.  Its residue-affine permutations form
+`C137:C68` of order `9,316`; adjoining the nonresidue multiplier together with transversal Hadamard gives an
+exact `AGL(1,137) = C137:C136` Clifford action of order `18,632`, whose nontrivial quotient acts as logical
+Hadamard on the encoded qubit.  Extending by the parity coordinate produces explicit `PSL(2,137)` symmetry of
+order `1,285,608`; the `PGL(2,137)` envelope of order `2,571,216` exchanges the two extended QR codes rather than
+preserving either one separately.  All of this is code-theoretic and certificate-backed.
 
 ## What the project contributes
 

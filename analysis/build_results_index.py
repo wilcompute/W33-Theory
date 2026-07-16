@@ -96,11 +96,13 @@ SKIP_DIRS = {".git", "node_modules", ".venv", "data"}
 
 RE_CSS = re.compile(r"\[\[\s*\d+\s*,\s*\d+\s*,\s*\d+\s*\]\]")
 RE_LIN = re.compile(r"\[\s*\d+\s*,\s*\d+\s*,\s*\d+\s*\]")
-# Accept both machine and prose spellings of the same result.  Pass 358 found
-# that `35,697,025` disappeared while `35697025` was searchable: the comma form
-# was split into three unrelated short tokens.  Keep up to nine digits and
-# canonicalize grouping commas before indexing.
-RE_INT = re.compile(r"(?<![\d.\-])(\d{1,3}(?:,\d{3}){1,2}|\d{3,9})(?![\d.])")
+# Accept machine, prose, and TeX spellings of the same result.  Pass 358 found
+# that `35,697,025` disappeared while `35697025` was searchable; Pass 360 then
+# exposed the same blind spot for TeX's `1{,}285{,}608`.  Keep up to nine digits
+# and canonicalize both grouping forms before indexing.
+RE_INT = re.compile(
+    r"(?<![\d.\-])(\d{1,3}(?:(?:,|\{,\})\d{3}){1,2}|\d{3,9})(?![\d.])"
+)
 RE_SEQ = re.compile(r"\b\d+(?:/\d+){2,}\b")
 
 # integers that are noise: years, common dimensions, section numbers
@@ -112,6 +114,10 @@ NOISE = {str(y) for y in range(1900, 2100)} | {
 
 def norm(tok: str) -> str:
     return re.sub(r"\s+", "", tok)
+
+
+def canonical_integer(tok: str) -> str:
+    return tok.replace("{,}", "").replace(",", "")
 
 
 def main():
@@ -133,7 +139,7 @@ def main():
             for m in rx.findall(txt):
                 index[norm(m)].add(rel)
         for m in RE_INT.findall(txt):
-            integer = m.replace(",", "")
+            integer = canonical_integer(m)
             if integer not in NOISE:
                 index[integer].add(rel)
         # results-as-NAMES (Pass 348) -- same lexicon the guard uses

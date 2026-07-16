@@ -318,6 +318,41 @@ not the unproved $[[137,1,3]]$ in the parallel packet.  This is a code theorem;
 it does not derive the physical fine-structure constant.
 
 \smallskip
+\textbf{EXACT LOGICAL ACTION (Pass 360).}  Index the $137$ qubits by
+$\mathbf F_{137}$.  GAP verifies on the actual QR/NQR row spaces that translation
+and the residue multiplier $x\mapsto9x$ preserve both CSS check spaces, whereas
+the primitive nonresidue multiplier $x\mapsto3x$ exchanges them.  Consequently
+\[
+ \widetilde P_{a,b}=\begin{cases}
+ P_{a,b},&a\text{ quadratic-residue},\\
+ P_{a,b}H^{\otimes137},&a\text{ quadratic-nonresidue}
+ \end{cases}
+\]
+is a faithful Clifford action of
+\[
+ \widetilde{\operatorname{AGL}}(1,137)\cong C_{137}:C_{136},
+ \qquad |\widetilde{\operatorname{AGL}}(1,137)|=18{,}632.
+\]
+Its pure-permutation kernel is $C_{137}:C_{68}$ of order $9{,}316$.  The
+all-ones word lies in both normalizer codes but neither check space, has odd
+self-overlap, and supplies $\bar X=X(\mathbf1)$, $\bar Z=Z(\mathbf1)$; hence
+$P_{3,0}H^{\otimes137}$ acts as the exact logical Hadamard
+$\bar X\leftrightarrow\bar Z$.
+
+Adding the parity coordinate at infinity, the explicit Mobius maps
+$x\mapsto x+1$, $x\mapsto9x$, and $x\mapsto-1/x$ preserve the chosen
+$[138,69,22]$ extended QR code and generate doubly-transitive
+$PSL(2,137)$ of order $1{,}285{,}608$, whose infinity stabilizer is the same
+$C_{137}:C_{68}$.  Adjoining $x\mapsto3x$ gives the index-two
+$PGL(2,137)$ envelope of order $2{,}571{,}216$; its outer coset exchanges the
+two extended QR codes rather than preserving either separately.  The general
+$PSL_2(p)$ containment is classical (Tjhai et al., arXiv:0801.3926), and the
+permutation-plus-transversal-duality mechanism is fold-transversal
+(Breuckmann--Burton, arXiv:2202.06647).  The contribution here is the explicit
+$p=137$ stabilizer transport, logical representatives, and 37-check GAP
+certificate---not a coupling-constant or hardware claim.
+
+\smallskip
 \textbf{What fell:} every \emph{metric} or \emph{basis-dependent} geometric claim
 (five retractions, none from the spectral side, Pass 311) --- \emph{and} both
 headline theorems, to prior art. Before claiming any result here is new, consult
