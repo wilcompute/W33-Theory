@@ -4,7 +4,7 @@
 
 [![Pages](https://img.shields.io/badge/live_atlas-open-blue)](https://wilcompute.github.io/W33-Theory/)
 [![Method](https://img.shields.io/badge/claims-evidence_tiered-6f42c1)](docs/index.html#reader-guide)
-[![GAP](https://img.shields.io/badge/exact_group_witnesses-GAP-00a878)](analysis/w33_pass338_selector_frame_240.g)
+[![GAP](https://img.shields.io/badge/exact_group_witnesses-GAP-00a878)](analysis/w33_pass358_github_batch_integrity_audit.g)
 [![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 
 > **One geometry. Thousands of witnesses. Every bridge has to name its map.**
@@ -25,7 +25,7 @@ interconnected finite structure—and makes the remaining maps explicit.
 |---|---|
 | understand the project in five minutes | [Live atlas](https://wilcompute.github.io/W33-Theory/) — use the Navigator and Reader Guide |
 | see what the audit says is actually new | [The Selection Layer](analysis/THE_SELECTION_LAYER.md) |
-| inspect the newest exact breakthrough | [Passes 338–342 synthesis](PASS338_342_SELECTOR_CLIFFORD_COHOMOLOGY_SYNTHESIS.md) |
+| inspect the newest exact breakthrough | [Passes 358–359: outer Weil envelope and exact `[[137,1,21]]` code](PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md) |
 | read the mathematical manuscript | [w33_paper.tex](w33_paper.tex) |
 | run the finite-geometry machine | [HOLONET.md](HOLONET.md) |
 | read the photonic program | [photonic_holonet.tex](photonic_holonet.tex) |
@@ -81,6 +81,13 @@ The central correction is structural: the selector `240`-cover and the signed-`E
 same object. They already lie over nonconjugate `40`-point actions. The selector-sign class exists locally but
 does not globalize; its absence is a cohomological obstruction, not a missing numerical coincidence.
 
+Passes 358–359 then use the newest GitHub batch as an adversarial audit. GAP separates the equal-order groups
+`Sp(4,3)=2.U4(2)` and `W(E6)=PGSp(4,3)=U4(2).2`, replaces a contradictory `6+3` claim by the exact complex Weil
+carrier `9=5+4`, and proves that the smallest outer-stable oscillator is the real envelope `18=10+8`. The same
+packet identifies the length-137 cyclic construction as the binary quadratic-residue CSS code
+**`[[137,1,21]]`**, using an exact GAP construction plus the published QR(137) minimum distance. That code theorem
+does not derive the physical fine-structure constant.
+
 ## What the project contributes
 
 The strongest current contribution is paper-sized and precise:
@@ -115,6 +122,11 @@ gap -q analysis/w33_pass342_global_lattice_reconciliation.g
 
 # Rerun them through the focused regression harness
 python3 -m pytest tests/test_pass338_342_gap_selector_clifford_cohomology.py -q
+
+# Audit the newest GitHub batch and build the exact length-137 QR-CSS code
+gap -q analysis/w33_pass358_github_batch_integrity_audit.g
+gap -q analysis/w33_pass359_alpha_code_qr_css.g
+python3 -m pytest tests/test_pass358_359_gap_github_integrity_alpha_code.py -q
 ```
 
 Pass 341 can additionally use the optional GAP
@@ -206,9 +218,10 @@ code parameters; it does not replace reading.
 ## Current Frontier
 
 The exact finite atlas is mature; the continuum bridge and physical selection problem are not. The finite program
-has not yet supplied:
+has not supplied:
 
-- a canonical selector-to-fermion and chirality assignment;
+- an internally canonical selector-to-fermion chirality assignment (Passes 346 and 358 prove that the full
+  controller exchanges the two choices, so any selection must import symmetry-breaking data);
 - a dynamical action that turns dimensionless finite spectra into measured masses and couplings;
 - a calibrated physical scale derived rather than inserted;
 - a rigorous continuum/locality limit with the required spacetime dynamics;

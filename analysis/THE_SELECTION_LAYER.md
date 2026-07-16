@@ -333,3 +333,28 @@ boundary in the negative, which is the honest end of the selection layer.
 *Witness: `analysis/w33_pass346_the_chirality_no_go.py`, 26/26. It builds no new
 object; every input is prior art (Passes 331/332/333, BT866, BT857, Pin/Spin).
 The contribution is the connection.*
+
+### 5.7 Pass 358 closes the ordinary oscillator version
+
+The same no-go now appears directly in the complex Schrödinger--Weil carrier,
+not only in the characteristic-two half-spin bridge.  CTblLib gives two
+conjugate degree-five characters and two conjugate degree-four characters of
+`Sp(4,3)=2.U4(2)`, all with Frobenius--Schur indicator zero.  The central
+involution acts by `+1` on the five-dimensional sector and `-1` on the
+four-dimensional sector, so one Weil carrier has degree `9=5+4`; there is no
+degree-three irreducible and no conjugate `6+3` split.
+
+More strongly, the unique fusion into the signed outer group gives
+
+> `10 down = 5a+5b`, `8 down = 4a+4b`, hence
+> **`Wpsi + Wpsi* = 10+8`**.
+
+The degree-ten and degree-eight outer characters are real (`FS=+1`).  Thus the
+full controller contains the pair but selects neither nine-dimensional member:
+the smallest outer-stable oscillator is the real 18-dimensional envelope.  This
+is the ordinary-character counterpart of Pass 346's half-spin theorem.  It also
+keeps two constructions separate: Pass 331's `H8` is a characteristic-two
+`4a+4b` module, whereas the ordinary complex Weil carrier is `5+4`.
+
+*Witness: `analysis/w33_pass358_github_batch_integrity_audit.g`; generated
+certificate: `data/w33_pass358_github_batch_integrity_audit.json`.*

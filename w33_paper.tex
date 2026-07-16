@@ -292,6 +292,32 @@ Q(\omega)}|^{5}$ is forced by restriction of scalars, while the reported
 ($\mathrm{Tr}\mapsto A_2$, even; $\tfrac12\mathrm{Tr}\mapsto$ norm, odd).
 
 \smallskip
+\textbf{LATEST INTEGRITY AUDIT (Passes 358--359).}  A fetched parallel packet
+reintroduced several claims already contradicted by this manuscript.  The exact
+GAP repair is
+\[
+ \PSp(4,3)\cong U_4(2)=W(E_6)^+,
+ \quad \Sp(4,3)\cong2.U_4(2),
+ \quad \PGSp(4,3)\cong U_4(2).2=W(E_6),
+\]
+so the two groups of order $51840$ are not isomorphic: the first is perfect
+with centre $C_2$, while the reflection group has trivial centre and
+abelianization $C_2$.  The ordinary Weil carrier is $9=5+4$, not $6+3$;
+the unique signed-outer fusion gives the real envelope
+$18=10+8\downarrow=(5_a+5_b)+(4_a+4_b)$.  At $p=5$ the CSX polynomial is
+$x^2-90x+325$, with roots $45\pm10\sqrt{17}$, and
+$\operatorname{ord}_{3089}(2)=772$, closing the purported $q=7$ exception.
+Finally, GAP identifies the two degree-$68$ factors of $x^{137}-1$ as the
+quadratic-residue/nonresidue pair, constructs orthogonal rank-$68$ CSS checks,
+and gives $k=1$.  Applying the published exact QR distance
+$[137,69,21]$ (Tjhai--Tomlinson--Ambroze--Ahmed, arXiv:0801.3926) yields
+\[
+ \boxed{[[137,1,21]]},
+\]
+not the unproved $[[137,1,3]]$ in the parallel packet.  This is a code theorem;
+it does not derive the physical fine-structure constant.
+
+\smallskip
 \textbf{What fell:} every \emph{metric} or \emph{basis-dependent} geometric claim
 (five retractions, none from the spectral side, Pass 311) --- \emph{and} both
 headline theorems, to prior art. Before claiming any result here is new, consult
@@ -4508,8 +4534,13 @@ eigenspaces are \textbf{irreducible} $\PSp(4,3)$-modules --- the Artin--Ihara
 $L$-factors of \S\,\ref{sec:ihara-zeta} are equivariant.  The Weil
 (oscillator) representation of $\Sp(4,3)$ has degree $q^2=9=5+4=
 (q^2{+}1)/2+(q^2{-}1)/2$ (degrees $4,5$ are genuine irreducibles of
-$\Sp(4,3)$), the two-qutrit oscillator carrier; and the Smith normal form
-of $A$ is $1^{16}2^{8}8^{15}24$ (product $3\cdot2^{56}=|\det A|$).  Finally,
+$\Sp(4,3)$).  Pass~358 upgrades the old degree census to the exact CTblLib
+statement: the degree-five and degree-four sectors are separately conjugate
+FS-zero pairs, and the unique signed-outer fusion closes the two conjugate
+nine-dimensional carriers as the real envelope $18=10+8$.  This is the
+two-qutrit oscillator carrier without a controller-invariant choice of one
+complex member.  The Smith normal form of $A$ is
+$1^{16}2^{8}8^{15}24$ (product $3\cdot2^{56}=|\det A|$).  Finally,
 the \emph{geometric} separator of the two cospectral graphs: since $W(q)$
 has ovoids iff $q$ is even, $W_{3,3}$ ($q=3$) has none while the dual
 $Q(4,3)$ does, so the independence numbers differ,

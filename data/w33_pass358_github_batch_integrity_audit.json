@@ -1,0 +1,66 @@
+{
+  "schema": "w33.pass358.github_batch_integrity.gap.v1",
+  "status": "PASS",
+  "headline": "the exact correction is Sp(4,3)=2.U4(2), W(E6)=U4(2).2, Weil 9=5+4, and B5 has roots 45+-10sqrt(17)",
+  "group_ledger": {
+    "PSp(4,3)": "U4(2), order 25920",
+    "Sp(4,3)": "2.U4(2), order 51840, center C2, perfect",
+    "W(E6)": "U4(2).2 = PGSp(4,3), order 51840, center trivial, abelianization C2"
+  },
+  "weil_9": {
+    "split": "5+4",
+    "degree5_pair": [2,3],
+    "degree4_pair": [21,22],
+    "frobenius_schur": [0,0,0,0],
+    "outer_real_envelope": "18=10+8 restricts as (5a+5b)+(4a+4b)"
+  },
+  "transfer_p5": {
+    "polynomial": "x^2-90x+325",
+    "roots": "45+-10sqrt(17)",
+    "discriminant": 6800
+  },
+  "q7_order": {"prime": 3089, "ord_2": 772, "near_maximal_target": 1544, "passes_target": false},
+  "retractions": [
+    "Sp(4,3) is W(E6) or W(E6)/Z2 is PSp(4,3)",
+    "the q=3 Weil carrier has conjugate 6- and 3-dimensional constituents",
+    "det(B5)=35697025 with complex eigenvalues and discriminant=-8449^2",
+    "the q=7 order question remains open",
+    "E6 simple reflections can map to characteristic-3 symplectic transvections"
+  ],
+  "check_count": 33,
+  "checks": {
+    "sp_table_order_is_51840": true,
+    "we6_table_order_is_51840": true,
+    "outer_signed_table_order_is_103680": true,
+    "sp_center_has_order_2": true,
+    "we6_center_is_trivial": true,
+    "sp_has_one_linear_character": true,
+    "we6_has_two_linear_characters": true,
+    "sp_matrix_group_is_perfect": true,
+    "sp_matrix_group_center_has_order_2": true,
+    "we6_characters_are_all_real_orthogonal": true,
+    "degree5_pair_is_2_3": true,
+    "degree4_pair_is_21_22": true,
+    "degree5_pair_is_conjugate": true,
+    "degree4_pair_is_conjugate": true,
+    "weil_pairs_have_fs_zero": true,
+    "weil_pairs_have_conductor_3": true,
+    "degree5_center_is_plus": true,
+    "degree4_center_is_minus": true,
+    "sp_has_no_degree3_irreducible": true,
+    "outer_fusion_is_unique": true,
+    "outer_10_restricts_to_5_plus_5": true,
+    "outer_8_restricts_to_4_plus_4": true,
+    "outer_10_and_8_are_real": true,
+    "csx_p5_trace_is_90": true,
+    "csx_p5_determinant_is_325": true,
+    "csx_p5_discriminant_is_6800": true,
+    "claimed_8449_square_is_off_by_one": true,
+    "q7_candidate_is_prime": true,
+    "q7_order_is_772": true,
+    "q7_order_is_not_1544": true,
+    "symplectic_unipotent_preserves_form": true,
+    "symplectic_unipotent_has_order_3": true,
+    "symplectic_unipotent_is_not_an_involution": true
+  }
+}

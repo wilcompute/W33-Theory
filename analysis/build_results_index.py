@@ -86,11 +86,21 @@ GLOBS = ["docs/index.html", "*.tex", "analysis/*.md", "analysis/*.py",
 # result becomes central. The cut must be re-measured as the corpus grows; it is
 # not a constant.
 MAX_FILES = 25
+# The half-life is now observable, not hypothetical: after the July 15 batch,
+# [[40,10,4]] moved from 18 to 27 files and fell just beyond MAX_FILES.  These
+# central code objects must remain searchable even after becoming topics.  A
+# tiny explicit pin set preserves the index's purpose without raising the noise
+# ceiling for every token.
+PINNED_RESULTS = {"[[40,10,4]]", "[40,15,8]"}
 SKIP_DIRS = {".git", "node_modules", ".venv", "data"}
 
 RE_CSS = re.compile(r"\[\[\s*\d+\s*,\s*\d+\s*,\s*\d+\s*\]\]")
 RE_LIN = re.compile(r"\[\s*\d+\s*,\s*\d+\s*,\s*\d+\s*\]")
-RE_INT = re.compile(r"(?<![\d.\-])(\d{3,7})(?![\d.])")
+# Accept both machine and prose spellings of the same result.  Pass 358 found
+# that `35,697,025` disappeared while `35697025` was searchable: the comma form
+# was split into three unrelated short tokens.  Keep up to nine digits and
+# canonicalize grouping commas before indexing.
+RE_INT = re.compile(r"(?<![\d.\-])(\d{1,3}(?:,\d{3}){1,2}|\d{3,9})(?![\d.])")
 RE_SEQ = re.compile(r"\b\d+(?:/\d+){2,}\b")
 
 # integers that are noise: years, common dimensions, section numbers
@@ -123,8 +133,9 @@ def main():
             for m in rx.findall(txt):
                 index[norm(m)].add(rel)
         for m in RE_INT.findall(txt):
-            if m not in NOISE:
-                index[m].add(rel)
+            integer = m.replace(",", "")
+            if integer not in NOISE:
+                index[integer].add(rel)
         # results-as-NAMES (Pass 348) -- same lexicon the guard uses
         for m in RE_NAMED.findall(txt):
             index[m.lower()].add(rel)
@@ -134,7 +145,10 @@ def main():
         for c in compounds(txt):
             index[c].add(rel)
 
-    kept = {t: fs for t, fs in index.items() if 1 <= len(fs) <= MAX_FILES}
+    kept = {
+        t: fs for t, fs in index.items()
+        if 1 <= len(fs) <= MAX_FILES or t in PINNED_RESULTS
+    }
     uniq = {t: fs for t, fs in kept.items() if len(fs) == 1}
 
     def sort_key(t):
@@ -164,7 +178,7 @@ def main():
         "a reuse, an obstruction, or an explicit retraction.",
         "",
         f"Indexed **{len(files)}** files; **{len(kept)}** distinctive results",
-        f"(a token in >{MAX_FILES} files identifies a topic, not a result, and is dropped).",
+        f"(a token in >{MAX_FILES} files identifies a topic and is dropped unless explicitly pinned).",
         f"**{len(uniq)}** appear in exactly one file — the sharpest signal.",
         "",
         "## Index",

@@ -1,0 +1,55 @@
+{
+  "schema": "w33.pass359.alpha_code_qr_css.gap.v1",
+  "status": "PASS",
+  "headline": "the exact quadratic-residue CSS code is [[137,1,21]], not [[137,1,3]]",
+  "classical_codes": {
+    "quadratic_residue": "[137,69,21]",
+    "quadratic_nonresidue": "[137,69,21]",
+    "extended": "[138,69,22]"
+  },
+  "quantum_code": "[[137,1,21]]",
+  "gap_construction": {
+    "factor_degrees": [1,68,68],
+    "generator_ranks": [69,69],
+    "check_ranks": [68,68],
+    "css_product_rank": 0,
+    "logical_qubits": 1
+  },
+  "low_weight_search": {"weight3_hits": 0, "weight4_pair_collisions": 0, "weight5_witness": false},
+  "distance_source": {
+    "title": "On the Weight Distribution of the Extended Quadratic Residue Code of Prime 137",
+    "authors": "Tjhai, Tomlinson, Ambroze, Ahmed",
+    "url": "https://arxiv.org/abs/0801.3926",
+    "role": "published exact minimum distances 21 and 22; GAP verifies that the repo construction is precisely the QR/NQR CSS pair"
+  },
+  "boundary": "The exact code parameters do not identify its rate with the physical fine-structure constant or turn codewords into Feynman vertices.",
+  "check_count": 26,
+  "checks": {
+    "order_of_2_mod_137_is_68": true,
+    "factor_degrees_are_1_68_68": true,
+    "two_large_factors_exist": true,
+    "qr_root_set_has_size_68": true,
+    "first_two_root_sets_are_complementary": true,
+    "one_factor_is_exactly_qr": true,
+    "qr_generator_matrix_is_69_by_137": true,
+    "nqr_generator_matrix_is_69_by_137": true,
+    "qr_code_dimension_is_69": true,
+    "nqr_code_dimension_is_69": true,
+    "qr_check_rank_is_68": true,
+    "nqr_check_rank_is_68": true,
+    "css_checks_are_orthogonal": true,
+    "css_dimension_is_1": true,
+    "qr_dual_is_inside_nqr": true,
+    "nqr_dual_is_inside_qr": true,
+    "all_ones_belongs_to_qr": true,
+    "all_ones_belongs_to_nqr": true,
+    "qr_dual_is_even": true,
+    "nqr_dual_is_even": true,
+    "no_weight3_root_sum": true,
+    "no_weight4_pair_sum_collision": true,
+    "no_weight5_root_sum": true,
+    "published_qr_distance_is_21": true,
+    "published_extended_distance_is_22": true,
+    "quantum_distance_is_21": true
+  }
+}
