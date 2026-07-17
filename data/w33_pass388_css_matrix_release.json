@@ -1,0 +1,72 @@
+{
+  "checks": {
+    "all_graph_triangles_are_2_faces": true,
+    "boundary_squared_zero": true,
+    "complex_counts_40_240_40_160": true,
+    "logical_dimension_81": true,
+    "matrix_nnz": true,
+    "matrix_shapes": true,
+    "rank_HX_39": true,
+    "rank_HZ_120": true,
+    "x_no_cocycle_weight_one_or_two": true,
+    "x_witness_is_cocycle": true,
+    "x_witness_not_exact": true,
+    "z_lower_bound_four": true,
+    "z_witness_is_cycle": true,
+    "z_witness_not_boundary": true
+  },
+  "complex": {
+    "C0_vertices": 40,
+    "C1_edges": 240,
+    "C2_triangles": 160,
+    "isotropic_lines": 40
+  },
+  "css": {
+    "commuting": true,
+    "dX": 3,
+    "dZ": 4,
+    "k": 81,
+    "n": 240,
+    "parameters": "[[240,81,3]]_3 with asymmetric distances dX=3,dZ=4"
+  },
+  "distance_certificates": {
+    "dX": {
+      "lower_bound_argument": "All GF(3) vectors of support one or two were exhaustively tested against HZ and none is a cocycle.  The listed weight-3 cocycle is not in row(HX).",
+      "witness": [
+        {"coefficient": 1, "edge": [0, 1]},
+        {"coefficient": 1, "edge": [0, 2]},
+        {"coefficient": 1, "edge": [0, 3]}
+      ]
+    },
+    "dZ": {
+      "lower_bound_argument": "No support-1/2 graph cycle exists; every support-3 cycle is a graph triangle, and the enumerated graph triangles equal the 160 columns of d2.  The listed non-boundary 4-cycle is therefore minimal.",
+      "witness": [
+        {"coefficient": 1, "edge": [0, 1]},
+        {"coefficient": 2, "edge": [0, 13]},
+        {"coefficient": 1, "edge": [1, 4]},
+        {"coefficient": 1, "edge": [4, 13]}
+      ]
+    }
+  },
+  "field": "GF(3)",
+  "manifest_sha256": "172d31446f12d8868d49491d62528b25fc63085cf03cea68e433581b8057be06",
+  "matrices": {
+    "HX": {
+      "nnz": 480,
+      "path": "matrices/w33_HX_40x240_GF3.mtx",
+      "rank": 39,
+      "sha256": "b5d3becc40fca552be6427976e73275a3f71b2914741edaddf13ead792ec034d",
+      "shape": [40, 240]
+    },
+    "HZ": {
+      "nnz": 480,
+      "path": "matrices/w33_HZ_160x240_GF3.mtx",
+      "rank": 120,
+      "sha256": "ee43d7dfbdfdb27f5d060c180a6a66e0afc8c73b20cfaa3bb48eb6e73ca0972e",
+      "shape": [160, 240]
+    }
+  },
+  "pass": 388,
+  "title": "Canonical 240-edge qutrit CSS matrix release lock",
+  "verified": true
+}
