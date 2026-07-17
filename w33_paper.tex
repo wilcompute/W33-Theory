@@ -13833,12 +13833,41 @@ among the regular options.  A standalone assembly of Passes 368--371 is
 machine-checked against the witness certificates by
 \texttt{scripts/check\_claims\_ledger.py} (pre-commit hook \texttt{claims-ledger}).
 
+\paragraph{Pass 372 --- the rim is not a torsor; the $27$-match stops below
+geometry; the mod-$12$ clock.}
+Three sharp boundaries.  (i) The bulk's collinearity graph is $8$-regular
+while the $E_6$ $27$'s orthogonality graph is $\mathrm{SRG}(27,10,1,5)$:
+different degrees, so \emph{no} bijection matches the geometries --- the
+identification of Passes 370/371 is exactly \textbf{Pauli$+$Clifford and
+provably not geometric}.  By permutation-isomorphism the bulk in fact carries
+\emph{both} graphs --- its native $8$-regular one and the transported
+$10$-regular one --- invariant under the same Clifford group.  (ii) \textbf{The
+rim is not a torsor}, by Cauchy: $\mathrm{Stab}(p_0)$ acts on the $12$
+collinear points through a quotient of order $216$ (kernel: the three central
+elations), whose fixed-point-free elements have orders $\{3,4\}$ only; every
+group of order $12$ contains an involution, and a regular action needs it
+fixed-point-free.  The substrate's multiplicities therefore split:
+\emph{torsors} ($2,3,27,27$) versus the \emph{quartered} rim ($4$ lines of
+$3$).  (iii) The genus clock's denominator is exact:
+$(n{-}3)(n{-}4)\equiv0 \bmod 12 \iff n\equiv0,3,4,7 \pmod{12}$ --- the
+triangulation residues of Ringel--Youngs, with minimal triangulations settled
+by Jungerman--Ringel (\emph{Acta Math.}\ \textbf{145} (1980); lone orientable
+exception $g=2$); $n=7$ is the Cs\'asz\'ar torus rung, and the denominator
+$12=\mu q$ \emph{is} the rim, quartered.  Alongside: the base-$10$ trichotomy
+(terminating $\{1,2,4,5,8\}$ / purely periodic $\{3,7,9\}$ / mixed $\{6\}$ ---
+$6$ the unique transition in $1..9$), the theorem that $142857$'s digit set is
+exactly the non-multiples of $3$ (a $\bmod\,3$ obstruction on consecutive
+powers of $10$ mod $7$), and $7$ as the unique full-reptend prime $\le9$;
+the clock-face reading of $\{3,6,9\}$ is recorded as observation, with the
+structural content located in the quartering itself.
+
 \paragraph{Current boundary.}
 The finite question that closed this manuscript's previous edition ---
 ``whether any additional datum canonically selects one plus refinement and one
 half-spin chirality'' --- is now answered: \textbf{no such datum exists inside
 the substrate} (Pass 346), every offered multiplicity being a torsor
-(Passes 348/354).  What remains open is stated by the torsor inversion: the
+(Passes 348/354) --- refined by Pass~372: the torsor multiplicities are
+$2,3,27,27$, while the rim $12$ is quartered and provably \emph{not} a torsor.  What remains open is stated by the torsor inversion: the
 type, number, and sizes ($2,3,27,27$) of the sections the substrate cannot
 supply, and whether any \emph{physical} principle outside $\PGSp(4,3)$ selects
 them.  The Eisenstein rank-parity law (Pass 368) fixes which refinement is the
@@ -13886,6 +13915,8 @@ every offered multiplicity is a torsor & \textsc{cert} & P348/354 & this program
 missing input $=$ sections, sizes $2,3,27,27$ & \textsc{thm} & P354 & this programme \\
 two $27$s one torsor; abelian refuted & \textsc{cert} & P370 & this programme \\
 naturality: both sides qutrit Clifford & \textsc{cert} & P371 & this programme \\
+$27$-match is quantum, not geometric & \textsc{cert} & P372 & this programme \\
+rim $12$ is quartered, NOT a torsor & \textsc{cert} & P372 & this programme \\
 Eisenstein rank-parity law, type $=(-1)^n$ & \textsc{thm} & P368 & this programme (elementary) \\
 $36$ W33 spreads $=$ $E_6$ root pairs mod 2 & \textsc{cert} & P368 $+$ P365 & this programme $+$ GAP track \\
 $K_{12}$ mod 2 plus, $2080$ & \textsc{cert} & P369 & this programme \\

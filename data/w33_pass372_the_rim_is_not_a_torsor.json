@@ -1,0 +1,47 @@
+{
+  "schema": "w33.pass372.rim_not_a_torsor.v1",
+  "status": "PASS",
+  "HEADLINE": "Three boundaries, all sharp. (1) The 27 identification stops below geometry: the W33 bulk's collinearity is 8-regular, the E6 27's orthogonality is SRG(27,10,1,5) -- different degrees, so no bijection matches them; the match is exactly Pauli+Clifford, and by 371's permutation-isomorphism the bulk carries a SECOND, transported 10-regular invariant graph alongside its native one (permutation rank 6, suborbits [1, 1, 1, 8, 8, 8]). (2) THE RIM IS NOT A TORSOR, refuted by Cauchy: the rim image has order 216 (kernel = the 3 central elations), its FPF elements have orders {3,4} only, no FPF involution exists, and every order-12 group contains an involution. The substrate's multiplicities split into torsors (2,3,27,27) and the QUARTERED rim (4 lines of 3) -- the first non-torsor. (3) The mod-12 clock: (n-3)(n-4) = 0 mod 12 iff n = 0,3,4,7 mod 12 -- the Ringel triangulation residues (Jungerman-Ringel, Acta Math 145 (1980), lone orientable exception g=2), with n=7 the Csaszar torus rung and the genus denominator 12 = mu*q = the rim, quartered.",
+  "the_decimal_observation_verdict": {
+    "theorem": [
+      "trichotomy: terminating {1,2,4,5,8} / purely periodic {3,7,9} / MIXED {6} -- 6 is the unique transition type in 1..9",
+      "142857's digit set = {1,2,4,5,7,8} = non-multiples of 3 = terminating u {7}; proof: d_k = r_k - r_{k+1} mod 3 and the residue orbit mod 3 = 1,0,2,0,1,2 never repeats consecutively",
+      "7 is the unique full-reptend prime <= 9 (10 is a primitive root mod 7)"
+    ],
+    "charm_flagged_not_asserted": "'3,6,9 quarter twelve, 6 in the middle, 7 next' is a true clock-face observation; no map from the decimal trichotomy to the genus residues is claimed. What IS structural: the quartering itself -- the substrate realizes 12-in-quarters-of-3 as the rim's four lines, and that quartering is exactly what the torsor multiplicities lack. The clock's 12 is blocked; the register's 27 is free."
+  },
+  "exp9_scope_note": "exp-9 regular groups act with order-9 elements as three 9-cycles; whether the exp-3/exp-9 pair matches the ordinary/twisted Frobenius-Schur dichotomy (Vinroot; GAP track Pass 353) is open.",
+  "checks": {
+    "split_1_12_27": true,
+    "w33_bulk_graph_8_regular": true,
+    "e6_27_graph_10_regular": true,
+    "e6_graph_is_SRG_27_10_1_5": true,
+    "degrees_differ_8_vs_10": true,
+    "NO_bijection_matches_the_graphs": true,
+    "identification_is_quantum_not_geometric": true,
+    "bulk_action_order_648": true,
+    "permutation_rank_at_least_3": true,
+    "room_for_two_invariant_graphs": true,
+    "rim_image_order_216": true,
+    "rim_kernel_order_3_central_elations": true,
+    "rim_fpf_orders_are_3_and_4_only": true,
+    "no_fpf_involution_exists": true,
+    "cauchy_order12_group_has_involution": true,
+    "RIM_IS_NOT_A_TORSOR_refuted": true,
+    "rim_quartered_4_lines_of_3": true,
+    "ringel_residues_0_3_4_7": true,
+    "K7_is_the_torus_rung": true,
+    "12_equals_mu_times_q": true,
+    "rim_size_equals_genus_denominator": true,
+    "terminating_are_1_2_4_5_8": true,
+    "pure_are_3_7_9": true,
+    "6_is_the_unique_mixed": true,
+    "cycle_digits_are_nonmultiples_of_3": true,
+    "equals_terminating_plus_7": true,
+    "digits_from_residues_142857": true,
+    "consecutive_residues_never_equal_mod3": true,
+    "hence_no_digit_divisible_by_3": true,
+    "10_primitive_root_mod_7": true,
+    "7_unique_full_reptend_prime_le_9": true
+  }
+}

@@ -4667,6 +4667,45 @@ the rank-$6$ Eisenstein lattice (the Coxeter--Todd $K_{12}$) from scratch out
 of the hexacode: its shadow has sign $(+)$ with exactly $2080$ isotropic
 classes, just as the parity predicts. The tower keeps its promises.
 
+\subsection*{The $1/7$ clock, done honestly}
+
+A reader of this program noticed something about ordinary fractions. Among
+$1/1,\dots,1/9$, the ones whose decimals \emph{stop} are $1,2,4,5,8$; the ones
+that repeat forever are $3,7,9$; and $1/6=0.1666\ldots$ does \emph{both} ---
+one lone digit, then repetition. That split is a genuine theorem: $1/n$
+terminates exactly when $n$ has only $2$s and $5$s in it, repeats purely when
+$n$ has neither, and mixes otherwise --- and $6=2\times3$ is the \emph{only}
+mixed number below ten. The reader's ``middle ground'' is exactly the
+mathematician's mixed type.
+
+Better: the repeating block of $1/7$ is $142857$, and its digit set
+$\{1,2,4,5,7,8\}$ is precisely the terminating family plus $7$ itself ---
+equivalently, every digit \emph{not} divisible by $3$. That too is a theorem:
+each digit of the cycle is a difference of consecutive powers of $10$ modulo
+$7$, and those powers, read modulo $3$, run $1,0,2,0,1,2$ --- never the same
+twice in a row, so no digit of the cycle can be a multiple of $3$. The missing
+$\{3,6,9\}$ are not an accident; they are a $\bmod\,3$ obstruction. And $7$ is
+``the cyclical one'' because $10$ is a primitive root modulo $7$: the unique
+full-reptend prime below ten.
+
+Where does the reader's mod-$12$ hunch land? On the \emph{genus clock}. The
+formula $g(K_n)=\lceil(n-3)(n-4)/12\rceil$ is exact --- a true triangulation
+--- precisely when $n\equiv0,3,4,7\pmod{12}$: the residues of the
+Ringel--Youngs solution of the map-color problem, with the minimal
+triangulations settled by Jungerman and Ringel in 1980. At $n=7$ (just past
+the ``middle'' $6$, as the reader put it) the answer is $1$: the torus, built
+in the flesh as the Cs\'asz\'ar polyhedron, whose partner (the Szilassi
+polyhedron) and Heawood-graph pairing this program's clock section already
+owns. And the $12$ in that denominator is not a stranger: pick any point of
+$W(3,3)$ and its $12$ neighbours fall into \emph{four lines of three} --- the
+twelve, quartered into threes, exactly the reader's picture of the clock. The
+computation in Pass~372 shows this quartered twelve is the one multiplicity of
+the substrate that is \emph{not} a perfect shuffle (no fixed-point-free
+involution exists, and every group of order twelve needs one), while the
+unquartered $27$ is. The clock's twelve is blocked; the register's
+twenty-seven is free. That contrast --- not any single number --- is the real
+content of the hunch.
+
 \section{Reading guide}
 
 Each integer in the table above is the unique answer to a problem that some independent classical mathematician proved had a unique answer. No fitting is possible. The fact that they all sit inside the same table at $q = 3$ is the empirical content of the convergent-attractor theorem.
