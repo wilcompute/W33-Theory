@@ -20,7 +20,7 @@ from pathlib import Path
 SEED = 390_20260717
 TARGETS = {"I": 1.0, "X": 0.0, "Z": 0.0, "F3": 1.0 / 3.0}
 PHASES = [0.0, math.pi / 2.0, math.pi, 3.0 * math.pi / 2.0]
-REPLICATES = 20
+REPLICATES = 8
 SHOTS = 3000
 CALIBRATION = {"mode_overlap": 0.96, "non_dark_fraction": 0.98}
 ETA = CALIBRATION["mode_overlap"] * CALIBRATION["non_dark_fraction"]
@@ -157,7 +157,7 @@ def unblind(blinded_analysis: dict[str, dict], key: dict[str, str]) -> dict:
                 "divided by independently declared visibility dilution eta"
             ),
             "uncertainty": (
-                "normal 95% interval from the standard error across 20 independent "
+                "normal 95% interval from the standard error across 8 independent "
                 "replicate visibility estimates"
             ),
             "no_post_hoc_tuning": True,
