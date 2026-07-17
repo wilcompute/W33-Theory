@@ -1,0 +1,62 @@
+name: Pass 387-391 release gates
+
+on:
+  push:
+    branches: [master, main]
+    paths:
+      - 'analysis/w33_pass387_pluecker_duality_certificate.py'
+      - 'analysis/w33_pass388_css_matrix_release.py'
+      - 'analysis/w33_pass390_blinded_choi_visibility_dry_run.py'
+      - 'analysis/w33_pass391_prediction_registry.py'
+      - 'data/w33_pass387_pluecker_duality_certificate.json'
+      - 'data/w33_pass388_css_matrix_release.json'
+      - 'data/w33_pass390_choi_visibility_*.json'
+      - 'data/w33_prediction_registry_v1.json'
+      - 'matrices/w33_HX_40x240_GF3.mtx'
+      - 'matrices/w33_HZ_160x240_GF3.mtx'
+      - 'tests/test_pass387_391_release.py'
+      - '.github/workflows/pass387-391-release.yml'
+  pull_request:
+    branches: [master, main]
+    paths:
+      - 'analysis/w33_pass387_pluecker_duality_certificate.py'
+      - 'analysis/w33_pass388_css_matrix_release.py'
+      - 'analysis/w33_pass390_blinded_choi_visibility_dry_run.py'
+      - 'analysis/w33_pass391_prediction_registry.py'
+      - 'data/w33_pass387_pluecker_duality_certificate.json'
+      - 'data/w33_pass388_css_matrix_release.json'
+      - 'data/w33_pass390_choi_visibility_*.json'
+      - 'data/w33_prediction_registry_v1.json'
+      - 'matrices/w33_HX_40x240_GF3.mtx'
+      - 'matrices/w33_HZ_160x240_GF3.mtx'
+      - 'tests/test_pass387_391_release.py'
+      - '.github/workflows/pass387-391-release.yml'
+
+jobs:
+  finite-release-lock:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install test runner
+        run: python -m pip install --upgrade 'pytest<9'
+
+      - name: Verify deterministic generated artifacts
+        run: |
+          python analysis/w33_pass387_pluecker_duality_certificate.py --check
+          python analysis/w33_pass388_css_matrix_release.py --check
+          python analysis/w33_pass390_blinded_choi_visibility_dry_run.py --check
+          python analysis/w33_pass391_prediction_registry.py --check
+
+      - name: Run focused regression tests
+        run: python -m pytest -q tests/test_pass387_391_release.py
+
+      - name: Verify current paper claims ledger
+        run: python scripts/check_claims_ledger.py
