@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "w33.photonic.sealed-lab.v1",
+  "title": "W33 sealed photonic laboratory bundle",
+  "description": "Production contract for blinded raw counts, calibration, and a separately revealed blind key. Hash and timestamp ordering are additionally enforced by Pass 397.",
+  "$defs": {
+    "rawCounts": {
+      "type": "object",
+      "required": ["schema", "study_type", "blinded", "gate_labels_present", "acquisition_started_at", "acquisition_completed_at", "device_id", "phases_radians", "rows"],
+      "properties": {
+        "schema": {"const": "w33.photonic.sealed-lab.v1.raw-counts"},
+        "study_type": {"const": "physical_lab_raw_counts_v1"},
+        "blinded": {"const": true},
+        "gate_labels_present": {"const": false},
+        "device_id": {"type": "string", "minLength": 1},
+        "rows": {"type": "array", "minItems": 16}
+      }
+    },
+    "calibration": {
+      "type": "object",
+      "required": ["schema", "study_type", "calibrated_at", "device_id", "mode_overlap", "non_dark_fraction", "method", "operator"],
+      "properties": {
+        "schema": {"const": "w33.photonic.sealed-lab.v1.calibration"},
+        "study_type": {"const": "physical_lab_calibration_v1"},
+        "mode_overlap": {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+        "non_dark_fraction": {"type": "number", "exclusiveMinimum": 0, "maximum": 1}
+      }
+    },
+    "blindKey": {
+      "type": "object",
+      "required": ["schema", "study_type", "key_frozen_at", "key_revealed_at", "mapping", "custodian"],
+      "properties": {
+        "schema": {"const": "w33.photonic.sealed-lab.v1.blind-key"},
+        "study_type": {"const": "physical_lab_blind_key_v1"},
+        "mapping": {
+          "type": "object",
+          "minProperties": 4,
+          "maxProperties": 4,
+          "additionalProperties": {"enum": ["I", "X", "Z", "F3"]}
+        }
+      }
+    }
+  },
+  "oneOf": [
+    {"$ref": "#/$defs/rawCounts"},
+    {"$ref": "#/$defs/calibration"},
+    {"$ref": "#/$defs/blindKey"}
+  ]
+}
