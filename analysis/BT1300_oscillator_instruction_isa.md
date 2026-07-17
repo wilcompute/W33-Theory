@@ -1,8 +1,8 @@
-# BT1300 - Oscillator Instruction ISA
+# BT1300 — Finite Logic-Switch Instruction ISA
 
 ## Summary
 
-BT1299 identified the oscillator horizon
+BT1299 identified the legacy harmonic-named horizon
 
 ```text
 [72,66]_3 = 66 payload lanes + 6 parity lanes
@@ -103,12 +103,12 @@ finite logic-clock interpretation.  It does not yet provide an intertwiner
 from each individual Q3 toggle to a Q6 state delta, and it must not identify
 the binary cube transport group with the distinct tomotope-derived group.
 
-Passes 379--380 make the remaining compiler boundary concrete. The header
-depth shift is not a Q6 geometric operation through the pinned BT1371 table.
-The scheduler's minimal free-C3 label is (tomotope flag, phase trit), but its
-canonical lift anchors only two header cycles. A reviewed 16-row
-header-orbit binding table with phase offsets is still required before any
-state-level lowering is claimed.
+Passes 379--381 make the compiler boundary concrete. The header depth shift is
+not a Q6 geometric operation through the pinned BT1371 table. The scheduler's
+minimal free-C3 label is `(tomotope flag, phase trit)`; Pass 381 now supplies a
+reviewed 16-row header-orbit binding table with phase offsets and a checked
+48-pulse compiler trace.  That is executable ABI data, not a natural Q6 or
+group-theoretic intertwiner.
 
 ## Horizon Coordinate Split
 
@@ -150,14 +150,15 @@ has:
 
 ```text
 8 ticks      one route digit
-72 ticks     one oscillator microframe
+72 ticks     one finite control microframe
 2160 ticks   one E8-Coxeter mirror bus
 51840 ticks  one full Clifford supercycle
 ```
 
 The same unit is simultaneously a packet, a parity frame, a local network route,
 and a gate-synthesis clock.  The tomotope is the executable body.  The horizon
-code is the parity closure.  The E8-Coxeter bus is the repeating carrier.
+code is the parity closure.  The E8-Coxeter bus is a repeating finite control
+bus, not a physical carrier claim.
 
 ## Verification
 

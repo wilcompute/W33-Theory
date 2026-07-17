@@ -1,5 +1,5 @@
 {
-  "architecture_reading": "The holonet is a finite clocked control network. The 8-tick route digit is the instruction pulse, the [72,66]_3 horizon is the microframe, the 2160-slot mirror bus is a 30-frame E8 Coxeter bus, and the 51840 Clifford runtime is a 720-frame S6/Sp(4,2) supercycle.  Durable commits are always route-epoch aligned and become horizon-frame aligned exactly every q=3 levels.",
+  "architecture_reading": "The holonet is a finite clocked control network. The 8-tick route digit is the instruction pulse, the [72,66]_3 horizon is the microframe, the 2160-slot mirror bus is a 30-frame E8 Coxeter bus, and the 51840 Clifford runtime is a 720-frame S6/Sp(4,2) supercycle. Legacy oscillator field names denote these finite microframe counters. Durable commits are always route-epoch aligned and become horizon-frame aligned exactly every q=3 levels.",
   "checks": {
     "all_fractal_rows_preserve_frame_identities": true,
     "bt827_runtime_factorization_is_preserved": true,
@@ -30,7 +30,7 @@
   },
   "commit_clock": {
     "formula": "T(n)=4*(7^n-1)",
-    "oscillator_frame_alignment": "T(n) is divisible by 72 iff 3 divides n",
+    "oscillator_frame_alignment": "Legacy field: T(n) is divisible by the 72-tick control microframe iff 3 divides n",
     "route_epoch_alignment": "T(n) is divisible by 8 for all n",
     "table": [
       {

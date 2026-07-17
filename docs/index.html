@@ -24848,7 +24848,8 @@
             <p>This archive contains three related but distinct finite objects: a Heawood-graph spectral calculation,
               a 72-tick routing/parity ABI, and a clocked switch schedule. They support exact discrete invariants and
               executable routing claims. They do <strong>not</strong> identify a particle mass, an energy scale, or an
-              analogue harmonic oscillator without additional physical modelling.
+              physical oscillator. The verified object is a finite logic-switch
+              and control-microframe model.
             </p>
           </div>
 
@@ -24883,7 +24884,7 @@
             </div>
             <div class="card">
               <div class="label" style="color: var(--accent);">Logic-switch reading</div>
-              <div class="detail">Read computationally, the finite oscillator language names a clocked switch fabric.
+              <div class="detail">Read computationally, legacy oscillator language names a clocked switch fabric.
                 One route digit has up to three <strong>binary Q<sub>3</sub>-coordinate XOR</strong> toggles and up to
                 five apartment-routing slots. The 72-coordinate frame carries 66 payload coordinates and six
                 F<sub>3</sub> parity-check coordinates. The compiler's <code>bits3</code> register is binary; the
@@ -24908,7 +24909,7 @@
             </div>
             <div class="card">
               <div class="label" style="color: var(--accent);">BT1300 oscillator instruction ISA</div>
-              <div class="detail">The 72-tick oscillator frame now has an executable instruction layout:
+              <div class="detail">The 72-tick finite control frame now has an executable instruction layout:
                 <code>72 = 48 + 18 + 6</code>. The first <code>48 = q!&times;2<sup>q</sup></code> ticks are the
                 tomotope packet body; the final <code>24 = q&times;2<sup>q</sup></code> ticks are the local-lift
                 epilogue, split into <code>18</code> residual payload lanes and <code>6</code> F<sub>3</sub> parity
@@ -24919,14 +24920,14 @@
               </div>
             </div>
             <div class="card">
-              <div class="label" style="color: var(--accent);">Pass 377 binary Q3 switch-header clock</div>
+              <div class="label" style="color: var(--accent);">Pass 377&ndash;385 finite logic-switch boundary</div>
               <div class="detail">GAP follows every <code>3&times;3&times;40=360</code> directed binary-Q3 axis
                 toggle through the BT828 header formula. Their image is exactly <code>48</code> of the
                 <code>192</code> tomotope flags, split by axis as <code>24+12+12</code>; its fibers are
                 <code>24&times;5 + 24&times;10</code>. Incrementing the depth residue is the concrete
                 <code>flag &rarr; flag+64 (mod 192)</code> C3 clock, acting freely in <code>16</code>
                 three-cycles. This is a header-address control plane, not yet an intertwiner from a binary
-                toggle to a Q6 edge traversal, a pulse-state delta, or a physical switch. Pass 378 sharpens
+                toggle to a Q6 edge traversal, a pulse-state delta, or a physical switch; it does not identify a physical oscillator. Pass 378 sharpens
                 that boundary: the header clock and the 48-tick pulse phase set share bare
                 <code>16&times;C3</code> type, but the scheduler keeps a flag constant through each phase triple
                 while the header clock moves it. No C3-equivariant map can factor through the real scheduler
@@ -24937,8 +24938,22 @@
                 not a Q6 geometric operation or state traversal through that table.
                 Pass 380 then identifies the minimal scheduler state as
                 <code>(tomotope_flag, phase_trit)</code>, a <code>16&times;3</code> register. Its canonical
-                full-bus lift anchors only two header cycles and leaves fourteen explicit header-orbit bindings
-                to be supplied by a compiler table.
+                full-bus lift anchors only two header cycles. Pass 381 supplies the complete 16-row,
+                phase-offset header binding table: two rows are canonical anchors and fourteen are explicit
+                reviewed external configuration. GAP checks every one of the <code>48</code> compiled pulses,
+                so it is an executable ABI&mdash;not a natural Q6 geometry claim.
+                <a href="w33_pass382_reversible_logic_switch_controller.html">Pass 382's static controller trace</a>
+                presents the resulting reversible <code>LOAD/FLIP/LATCH</code> machine: its successor is one
+                48-cycle, while the phase clock disagrees at the 16 latches. Pass 383 resolves the control
+                group precisely: orientation-preserving branch selection gives <code>C6</code>; <code>S3</code>
+                needs an extra phase-reflecting primitive.
+                Pass 384 exhausts the strict coordinate-fold shortcut: zero of <code>540</code> one-bit
+                Q6-to-binary-Q3 folds exactly intertwine the live table, and the six profile-compatible folds
+                remain one noncanonical orbit. Pass 385 independently shows why the ABI cannot be recovered
+                by preserving the current inherited partitions: the two canonical anchors have the same header
+                orbit but opposite BT1371 colors, while the live stress path has trivial symmetry. The crosswalk
+                is therefore auditable compiler data with explicit provenance, not a geometric, photonic, or
+                physical-oscillator identification.
               </div>
             </div>
             <div class="card">
@@ -24951,7 +24966,7 @@
                 BT1303 states the stack contract:
                 <code>8 &rarr; 48 &rarr; 24 &rarr; 72 &rarr; 2160 &rarr; 51840</code>, with
                 <code>2160=30&times;72=540&times;4</code> and <code>51840=24&times;2160=720&times;72</code>.
-                Level <code>6</code> fills the tomotope body; level <code>9</code> fills one oscillator frame.
+                Level <code>6</code> fills the tomotope body; level <code>9</code> fills one finite control frame.
               </div>
             </div>
             <div class="card">
@@ -27570,7 +27585,7 @@
           central <code>C3</code> generation scheduler.
         </p>
         <p>The deterministic kernel is the protected finite Clifford runtime:
-          <code>720</code> oscillator frames, or <code>51840</code> hardware-tick windows, for the
+          <code>720</code> finite control microframes, or <code>51840</code> hardware-tick windows, for the
           <code>Sp(4,3)</code> supercycle. The universality boundary is explicit: this is a physical Clifford
           machine + explicit non-Clifford port, not a claim that the Clifford scheduler alone is universal. The port
           is the recorded Hesse-SIC/T measurement or Fibonacci-braiding resource.
@@ -27641,7 +27656,7 @@
 
         <h4>BT1407: 72-tick microframe transaction</h4>
         <p><a href="../analysis/BT1407_microframe_transaction_composer.md">BT1407</a>
-          closes the whole oscillator frame: <code>48</code> Q6 body pulse ticks plus
+          closes the whole finite control frame: <code>48</code> Q6 body pulse ticks plus
           <code>3</code> Hesse return words times <code>8</code> ticks equals <code>72</code>.
           The six-digit stress route's final target digit is <code>4</code>, so
           <code>4 mod 3 = 1</code> selects the <code>Z Omega</code> route branch and the

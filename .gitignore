@@ -167,6 +167,11 @@ data/*
 !data/w33_pass378_header_scheduler_c3_obstruction.json
 !data/w33_pass379_header_q6_geometry_boundary.json
 !data/w33_pass380_minimal_scheduler_phase_lift.json
+!data/w33_pass381_explicit_header_binding_abi.json
+!data/w33_pass382_reversible_logic_switch_controller.json
+!data/w33_pass383_branch_phase_control_group.json
+!data/w33_pass384_q6_q3_fold_obstruction.json
+!data/w33_pass385_header_stress_orbit_anchor_obstruction.json
 
 # Small vendored test fixtures needed for offline/CI collection
 !artifacts/

@@ -4289,7 +4289,7 @@ loss model.  (Witness:
 
 \subsection{BT1407 microframe transaction composer}
 
-BT1407 closes the whole oscillator frame.  BT1406 fills the first \(48\)
+BT1407 closes the whole finite control frame.  BT1406 fills the first \(48\)
 tomotope-body ticks.  The remaining BT1300 local-lift epilogue is
 \[
   24=3\times 8,
@@ -4937,6 +4937,39 @@ oriented anchors fixed, \(14!\,3^{14}=416971064282572800\) extensions remain.
 The needed next object is a typed sixteen-row header-orbit binding table with
 phase offsets, not an inferred Q6 geometry or optical implementation.  (GAP
 witness: \path{analysis/w33_pass380_minimal_scheduler_phase_lift.g}.)
+
+\smallskip
+\noindent\textbf{Passes 381--385: executable control ABI, not an inferred
+optical map.}  Pass~381 supplies that sixteen-row table as reviewed compiler
+input.  Its rule
+\[
+  c(e,p)=r_e+64(p+o_e)\pmod {192}
+\]
+is checked on all $48$ live body pulses; two rows preserve the canonical
+Pass-380 anchors and the other fourteen are labelled
+\texttt{reviewed\_external\_binding}.  This is an auditable firmware
+crosswalk, not a claim that it is forced by the Q6 cube.  Pass~382 makes the
+\texttt{LOAD/FLIP/LATCH} word an isolated reversible $48$-state controller:
+the controller successor is a $48$-cycle, while a free phase rotation differs
+at its $16$ latch transitions.  Pass~383 then gives the exact typed-control
+answer: an orientation-preserving branch lift yields $C_6$; an $S_3$ lift
+requires separately supplied phase reflection.
+
+Pass~384 exhausts the narrow coordinate explanation.  Of the $540$ strict
+surjective one-bit folds $\mathbb F_2^6\to\mathbb F_2^3$, none exactly
+intertwines the live BT1371 direction table and the $48$ header-axis labels;
+the six stress-profile fits remain one noncanonical orbit.  Pass~385 adds the
+inherited-orbit test: the two canonical anchors lie in one header eight-class
+orbit but opposite BT1371 colors, while the live stress path has trivial
+stabilizer even in full $Q_6$.  No binding preserving both partitions can
+retain both anchors.  Hence the complete crosswalk is a versioned logic-switch
+ABI with explicit external inputs, not a geometric, photonic, or oscillator
+identification.  (GAP witnesses:
+\path{analysis/w33_pass381_explicit_header_binding_abi.g},
+\path{analysis/w33_pass382_reversible_logic_switch_controller.g},
+\path{analysis/w33_pass383_branch_phase_control_group.g},
+\path{analysis/w33_pass384_q6_q3_fold_obstruction.g}, and
+\path{analysis/w33_pass385_header_stress_orbit_anchor_obstruction.g}.)
 
 BT1699 then lowers the same ticks onto the physical single-photon frame already
 used by the Witting/Fano automaton:

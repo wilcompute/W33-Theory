@@ -1,4 +1,4 @@
-# BT1299 - Harmonic Microframe Runtime
+# BT1299 — Finite Control-Microframe Runtime
 
 ## Summary
 
@@ -112,8 +112,8 @@ Thus q=3 is both the address radix and the durable frame-locking period.
 At every recursive holonet level, each W33 instance contributes:
 
 ```text
-30 oscillator frames to the mirror bus,
-720 oscillator frames to the full Clifford runtime.
+30 control microframes to the mirror bus,
+720 control microframes to the full Clifford runtime.
 ```
 
 Equivalently:
@@ -123,9 +123,10 @@ mirror slots  = 30 * 72 * (# W33 instances)
 runtime atoms = 720 * 72 * (# W33 instances).
 ```
 
-This makes the computer/network architecture a finite oscillator scheduler:
-route ticks, harmonic microframes, mirror buses, and Clifford supercycles are
-all the same substrate clock at different scales.
+This makes the computer/network architecture a finite control scheduler:
+route ticks, microframes, mirror buses, and Clifford supercycles are typed
+logic-switch layers at different scales.  “Harmonic” remains only in legacy
+artifact names and compatibility keys.
 
 ## Verification
 

@@ -96,7 +96,8 @@ def test_public_surfaces_keep_the_switch_boundary_explicit() -> None:
     ).read_text(encoding="utf-8")
 
     assert "binary Q<sub>3</sub>-coordinate XOR" in docs
-    assert "analogue harmonic oscillator without additional physical modelling" in docs
+    assert "does not identify a physical oscillator" in docs
+    assert "finite logic-switch" in docs
     assert "three-cube address-toggle bank" in photonic
     assert "established identification of the" in photonic
     assert "all $13$ generating pairs" in photonic
@@ -111,11 +112,14 @@ def test_public_surfaces_keep_the_switch_boundary_explicit() -> None:
     assert "order_matches_Sp43" in clock
     assert "Pass 379" in clock
     assert "Pass 380" in clock
+    assert "Pass 381" in clock
+    assert "Pass 383" in clock
     assert "m_top_from_clock" not in clock_payload
     assert "v_EW" not in clock_payload
     assert clock_payload["schema"] == "w33.heawood_logic_switch_clock.v2"
     assert "header_geometry_boundary" in clock_payload["typed_control_pipeline"]
     assert "scheduler_binding_boundary" in clock_payload["typed_control_pipeline"]
+    assert "branch_phase_group_boundary" in clock_payload["typed_control_pipeline"]
     assert "outside the logic-switch ABI" in toy_pump
     assert "gapless at\n``m=0``" in toy_pump
     assert "model calculation only" in spin_one_pump

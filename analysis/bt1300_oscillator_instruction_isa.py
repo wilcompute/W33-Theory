@@ -264,8 +264,8 @@ def build_payload() -> dict[str, Any]:
         "lane_layout": lanes,
         "edge_class_counts": edge_class_counts,
         "compiled_programs": compiled_programs,
-    "architecture_reading": (
-            "The 72-tick oscillator frame is an ISA frame. The first q!=6 "
+        "architecture_reading": (
+            "The 72-tick finite control frame is an ISA frame. The first q!=6 "
             "route digits form the 48-tick tomotope packet body. The final "
             "q=3 route digits form a 24-tick local-lift epilogue, split as "
             "18 payload lanes plus 6 F3 parity lanes. Existing BT828 route "
@@ -277,8 +277,9 @@ def build_payload() -> dict[str, Any]:
         "typed_control_boundary": (
             "Pass 379: the header depth shift is not a Q6 line-graph operation "
             "through the pinned BT1371 table. Pass 380: scheduler flag plus phase "
-            "is the minimal free-C3 label, but fourteen header-orbit bindings "
-            "still require explicit compiler data."
+            "is the minimal free-C3 label. Pass 381 supplies the reviewed "
+            "sixteen-row binding ABI and a 48-pulse trace; its fourteen external "
+            "rows remain configuration, not a geometric identification."
         ),
         "honesty_boundary": (
             "This is a deterministic instruction layout and coverage theorem "

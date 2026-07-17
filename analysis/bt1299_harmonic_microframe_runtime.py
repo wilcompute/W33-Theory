@@ -93,6 +93,8 @@ def build_payload() -> dict[str, Any]:
                 "route_epochs": ticks // route_tick,
                 "mod_horizon_frame": ticks % horizon_total,
                 "frame_locked": ticks % horizon_total == 0,
+                # Legacy field name retained for downstream compatibility; its
+                # value is a finite control-microframe count, not a frequency.
                 "oscillator_frames": (
                     ticks // horizon_total if ticks % horizon_total == 0 else None
                 ),
@@ -223,7 +225,7 @@ def build_payload() -> dict[str, Any]:
         "commit_clock": {
             "formula": "T(n)=4*(7^n-1)",
             "route_epoch_alignment": "T(n) is divisible by 8 for all n",
-            "oscillator_frame_alignment": "T(n) is divisible by 72 iff 3 divides n",
+            "oscillator_frame_alignment": "Legacy field: T(n) is divisible by the 72-tick control microframe iff 3 divides n",
             "table": commit_table,
         },
         "fractal_scaling": {
@@ -239,7 +241,8 @@ def build_payload() -> dict[str, Any]:
             "digit is the instruction pulse, the [72,66]_3 horizon is the "
             "microframe, the 2160-slot mirror bus is a 30-frame E8 Coxeter "
             "bus, and the 51840 Clifford runtime is a 720-frame S6/Sp(4,2) "
-            "supercycle.  Durable commits are always route-epoch aligned and "
+            "supercycle. Legacy oscillator field names denote these finite "
+            "microframe counters. Durable commits are always route-epoch aligned and "
             "become horizon-frame aligned exactly every q=3 levels."
         ),
         "honesty_boundary": (

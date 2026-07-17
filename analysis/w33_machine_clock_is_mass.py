@@ -19,8 +19,10 @@ builds:
       separate F3 coordinates are parity lanes, not ternary Q3 toggle gates.
       Pass 379 shows the header depth step is not a Q6 geometric operation
       through the pinned BT1371 address table.  Pass 380 shows that scheduler
-      flag plus phase is the minimal free-C3 lift, with fourteen header orbits
-      still requiring an explicit binding table.
+      flag plus phase is the minimal free-C3 lift; Pass 381 supplies the
+      reviewed sixteen-row compiler ABI, while keeping fourteen rows explicitly
+      configuration rather than geometry. Pass 383 then separates the ordinary
+      phase-preserving C6 control product from an extra phase-reflecting S3 lift.
   (4) The identities 8 -> 48 -> 24 -> 72 -> 2160 -> 51840 are finite layout and
       counting identities.  The equality 51840=|Sp(4,3)| does not itself supply an
       action, an enumeration of group elements, a mass scale, or a device model.
@@ -141,8 +143,13 @@ def main():
         ),
         "scheduler_binding_boundary": (
             "Pass 380: (tomotope_flag, phase_trit) is the minimal free-C3 "
-            "scheduler lift; fourteen of sixteen header-orbit bindings remain "
-            "explicit missing compiler data."
+            "scheduler lift. Pass 381 supplies a reviewed sixteen-row binding "
+            "ABI and 48-pulse trace; fourteen rows remain external configuration, "
+            "not a geometric identification."
+        ),
+        "branch_phase_group_boundary": (
+            "Pass 383: the orientation-preserving typed branch/phase switch "
+            "group is C6; S3 requires an additional phase-reflecting C2 lift."
         ),
         "boundary": "No state-level toggle-to-Q6 intertwiner or hardware implementation is claimed.",
     }
@@ -170,13 +177,13 @@ def main():
         "and an eight-bit F2 cycle-space register after a basis choice. The "
         "Holonet control ABI is a typed binary-Q3-toggle -> header -> Q6-address "
         "-> LOAD/FLIP/LATCH pipeline. Pass 379 keeps the header clock separate "
-        "from Q6 geometry, and Pass 380 identifies the missing fourteen-orbit "
-        "binding table. No mass, calibrated frequency, hardware, or group-action "
+        "from Q6 geometry, Pass 381 supplies a reviewed binding ABI, and Pass 383 "
+        "separates C6 from an extra S3 mirror lift. No mass, calibrated frequency, hardware, or group-action "
         "interpretation follows from these finite calculations."
     )
     out["sources"] = [
         "BT1654 Heawood graph calculation; BT1656 cycle-basis boundary; "
-        "BT1299/BT1300 runtime ISA; Passes 377-380 finite control boundaries"
+        "BT1299/BT1300 runtime ISA; Passes 377-383 finite control boundaries"
     ]
     with open("data/w33_machine_clock_is_mass.json", "w") as fh:
         json.dump(out, fh, indent=2)

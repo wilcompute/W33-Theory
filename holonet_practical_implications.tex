@@ -1031,10 +1031,26 @@ not one.
 Pass~380 identifies the smallest useful scheduler register for an actual
 firmware interface: \((\texttt{tomotope\_flag},\texttt{phase\_trit})\), with
 \(16\cdot3=48\) states.  It preserves the real flag identity while making the
-three phase steps explicit.  Its natural lift anchors only two header cycles;
-the other fourteen must be stored in a reviewed header-orbit binding table
-with phase offsets.  This turns the remaining gap into a bounded configuration
-artifact rather than a vague coupling claim.
+three phase steps explicit.  Its natural lift anchors only two header cycles.
+Pass~381 supplies the other fourteen as a reviewed, versioned 16-row
+header-orbit binding ABI with phase offsets and checks the whole 48-pulse
+compiler trace in GAP.  A device implementation can therefore replay and
+audit the crosswalk, but must retain its provenance: fourteen rows are
+configuration, not consequences of the cube geometry or of the scheduler
+labels.
+
+Passes~382--385 make the safety boundary useful to firmware rather than merely
+negative.  The \texttt{LOAD/FLIP/LATCH} word is an isolated reversible
+48-state control machine; its phase relabelling differs at exactly the latch
+transitions, so a firmware verifier can detect the substitution.  A
+phase-orientation-preserving branch control is \(C_6\); an \(S_3\) controller
+requires a separately declared phase-reflection primitive.  No strict
+one-bit \(Q_6\)-to-binary-\(Q_3\) coordinate fold derives the ABI from the
+current live table, and no binding that preserves the inherited header and
+BT1371 two-color partitions retains both canonical anchors.  The engineering
+rule is therefore precise: treat the crosswalk as signed, reviewable compiler
+data; do not infer it from an address increment, a coordinate fold, or an
+optical implementation.
 
 \paragraph{Firmware work per packet and per bus atlas.}
 A worst-case diameter-two packet performs two route decisions.  The exported

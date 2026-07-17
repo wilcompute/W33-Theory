@@ -1,0 +1,60 @@
+{
+  "schema": "w33.pass384.q6_q3_fold_obstruction.gap.v1",
+  "status": "PASS",
+  "theorem": "Q6-to-Binary-Q3 Coordinate-Fold and Header-Binding Obstruction Theorem",
+  "input_scope": "The live BT1371 192-row flag-to-Q6 table, the reconstructed Pass-377 48-flag header plane, and the live BT1407 scheduler direction word.",
+  "coordinate_convention": "Fold coordinate i is walk bit i-1. BT1371 q6_direction d corresponds to walk bit 5-d, hence table direction d reads fold coordinate 6-d.",
+  "map_counts": {"all_rank_three_linear_maps":234360,"strict_one_bit_surjective_coordinate_folds":540,"strict_affine_coordinate_folds":4320,"all_affine_epimorphisms":1874880},
+  "strict_fold_orbits": [
+    {"multiplicities":[ 1, 1, 4 ],"representative":[ 1, 1, 1, 1, 2, 3 ],"count":90,"full_action_orbit":90,"stabilizer_order":48},
+    {"multiplicities":[ 1, 2, 3 ],"representative":[ 1, 1, 1, 2, 2, 3 ],"count":360,"full_action_orbit":360,"stabilizer_order":12},
+    {"multiplicities":[ 2, 2, 2 ],"representative":[ 1, 1, 2, 2, 3, 3 ],"count":90,"full_action_orbit":90,"stabilizer_order":48}
+  ],
+  "stress_profile": {"walk_axis_usage":[ 3, 2, 2, 3, 4, 2 ],"header_axis_cycle_profile":[ 8, 4, 4 ],"nominal_relabelling_order":24,"induced_relabelling_order":12,"induced_stabilizer_order":2,"nominal_stabilizer_order":4,"folds":[
+    {"fold":[ 1, 1, 2, 1, 3, 2 ],"header_axis_matches":21},
+    {"fold":[ 1, 1, 3, 1, 2, 3 ],"header_axis_matches":21},
+    {"fold":[ 1, 2, 1, 1, 3, 2 ],"header_axis_matches":15},
+    {"fold":[ 1, 2, 2, 1, 3, 1 ],"header_axis_matches":22},
+    {"fold":[ 1, 3, 1, 1, 2, 3 ],"header_axis_matches":18},
+    {"fold":[ 1, 3, 3, 1, 2, 1 ],"header_axis_matches":21}
+  ]},
+  "anchor_test": {"scheduler_flags":[112,144],"walk_coordinates":[1,4],"header_axis":1,"compatible_profile_folds":6,"conclusion":"The two natural anchors do not select a fold."},
+  "live_table_obstruction": {
+    "direction_by_header_axis": [
+      [ 6, 2, 4 ],
+      [ 3, 1, 1 ],
+      [ 6, 1, 1 ],
+      [ 1, 4, 2 ],
+      [ 3, 0, 1 ],
+      [ 5, 4, 3 ]
+    ],
+    "exact_strict_intertwiners":0,"best_all_fold_match":25,"best_all_fold_count":4,"best_profile_fold":[ 1, 2, 2, 1, 3, 1 ],"best_profile_fold_match":22,"best_profile_fold_count":1,"diagnostic_only":true
+  },
+  "header_c3_direction_relation": {"group":"S6","order":720,"orbits":[ [ 1, 2, 3, 4, 5, 6 ] ],"all_colorings_invariant":3,"strict_surjective_invariant":0,"stress_profile_invariant":0},
+  "binding_boundary": {"axis_respecting_torsor":"S8 x S4 x S4 with independent C3 phase offsets","unanchored_count":"999730823454720","after_two_oriented_anchors":"1983592903680","six_labeled_folds_after_anchors":"11901557422080","unrestricted_to_axis_ratio":900900},
+  "translation_quotient_boundary": {"translation_orbit_sizes_divide":[1,2,4,8,16,32,64],"five_block_conclusion":"A homogeneous translation-equivariant Q6 quotient cannot itself be a transitive five-block quotient."},
+  "conclusion": "Given the current BT1371 table and the Pass-377 header-axis labels, no strict surjective coordinate-direction fold exactly intertwines Q6 directions with header axes on all forty-eight header flags. The header C3 direction relation is S6, so no strict surjective fold preserves its axis color under flag to flag plus 64. The unique 22-of-48 stress-profile fit is a pinned-table diagnostic, not a canonical header-to-scheduler binding. This leaves open an explicit sixteen-row binding table, a different address table, or a non-coordinate data-enriched map.",
+  "search_signature": "234360/540/90+360+90/6/22of48/0exact/S6-direction",
+  "check_count":19,
+  "checks": {
+    "bt1371_table_is_the_complete_ordered_192_flag_bus": true,
+    "pass377_header_plane_reconstructs_as_360_events_on_48_flags": true,
+    "pass377_header_axis_profile_is_24_12_12_and_8_4_4": true,
+    "live_scheduler_direction_word_reconstructs_the_3_2_2_3_4_2_profile": true,
+    "natural_pass380_anchors_use_walk_coordinates_1_and_4_and_header_axis_1": true,
+    "all_binary_rank_three_linear_maps_have_the_exact_234360_count": true,
+    "strict_coordinate_folds_are_exactly_the_540_surjective_colorings": true,
+    "full_s6_times_s3_action_has_the_three_expected_orbits": true,
+    "live_8_4_4_profile_has_exactly_the_six_expected_folds": true,
+    "profile_preserving_relabellings_have_one_six_fold_orbit": true,
+    "the_two_natural_anchors_do_not_select_one_of_the_six_profile_folds": true,
+    "live_bt1371_direction_by_header_axis_matrix_is_exact": true,
+    "no_strict_surjective_coordinate_fold_exactly_intertwines_the_live_table": true,
+    "best_unrestricted_strict_fit_is_only_25_of_48": true,
+    "best_8_4_4_profile_fit_is_uniquely_22_of_48_and_is_not_exact": true,
+    "header_c3_direction_relation_is_transitive_s6": true,
+    "header_c3_axis_invariance_leaves_only_three_constant_colorings": true,
+    "axis_profile_leaves_the_exact_row_binding_torsor": true,
+    "translation_equivariant_q6_quotients_cannot_form_a_transitive_five_block_quotient": true
+  }
+}

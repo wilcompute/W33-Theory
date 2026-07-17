@@ -25,7 +25,7 @@ interconnected finite structure—and makes the remaining maps explicit.
 |---|---|
 | understand the project in five minutes | [Live atlas](https://wilcompute.github.io/W33-Theory/) — use the Navigator and Reader Guide |
 | see what the audit says is actually new | [The Selection Layer](analysis/THE_SELECTION_LAYER.md) |
-| inspect the newest exact breakthrough | [Pass 380: the minimal scheduler phase lift](PASS380_MINIMAL_SCHEDULER_PHASE_LIFT.md) |
+| inspect the newest exact breakthrough | [Pass 385: the header/stress orbit-anchor obstruction](PASS385_HEADER_STRESS_ORBIT_ANCHOR_OBSTRUCTION.md) |
 | read the mathematical manuscript | [w33_paper.tex](w33_paper.tex) |
 | run the finite-geometry machine | [HOLONET.md](HOLONET.md) |
 | read the photonic program | [photonic_holonet.tex](photonic_holonet.tex) |
@@ -181,11 +181,25 @@ physical oscillator through that table. A different explicitly built intertwiner
 not an implied one.
 
 Pass 380 identifies the smallest real scheduler switch state: flag plus phase, a 48-state 16-by-3 register.
-It has a free C3 phase action, but that is only the existing pulse microcycle. Its canonical lift into the
-192-flag bus aligns just two complete header cycles, leaving fourteen scheduler-to-header orbit bindings
-unbuilt. Even after the two natural cycles are fixed, exactly 14! times 3^14 =
-416971064282572800 equivariant extensions remain. The next compiler object is therefore a typed 16-row
-header-orbit binding table with phase offsets, not a new physical or geometric identification.
+Pass 381 turns its remaining operational gap into a versioned, reviewed 16-row compiler ABI. Two rows preserve
+the canonical anchors; the other fourteen are explicitly marked external bindings. GAP checks its full
+48-pulse trace, bijectivity onto the header plane, inverse trace positions, and C3 phase steps. That produces
+an executable crosswalk, not a newly forced Q6 geometry.
+
+Pass 382 then isolates the computing content as a reversible 48-state `LOAD_FLAG -> FLIP_Q6_AXIS ->
+LATCH_VERTEX` controller: the controller tick is one 48-cycle, whereas the phase clock disagrees with it at
+the 16 latch steps. Pass 383 closes the branch/phase question at the correct typed level: an
+orientation-preserving branch switch gives `C6`; `S3` requires an additional phase-reflecting involution that
+the ABI does not supply.
+
+Passes 384–385 close the remaining naturality shortcuts rather than hiding them. No strict Q6-to-binary-Q3
+coordinate fold intertwines the current live table on all 48 header flags; the six profile-compatible folds
+remain one symmetry orbit, and the header depth relation generates `S6` on directions. Independently, the
+header quotient has two intrinsic eight-class orbits while the live stress path has trivial stabilizer even in
+the full Q6 edge automorphism group. The two canonical anchors lie in the same header orbit but opposite
+BT1371 colors, so no binding that preserves those inherited partitions retains both. The honest result is
+therefore a reproducible compiler contract with stated external inputs—not an implied geometric or physical
+identification.
 
 ## What the project contributes
 

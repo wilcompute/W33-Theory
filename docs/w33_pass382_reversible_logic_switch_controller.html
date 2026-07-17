@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pass 382 — Reversible Logic-Switch Controller</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #526174;
+      --line: #cbd5e1;
+      --paper: #f5f7fb;
+      --panel: #ffffff;
+      --load: #1d4ed8;
+      --flip: #7c3aed;
+      --latch: #b45309;
+      --scope: #9f1239;
+      --ok: #047857;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    header, main { max-width: 1240px; margin: 0 auto; }
+    header { padding: 36px 24px 22px; }
+    main { padding: 0 24px 54px; }
+    h1 { margin: 0; font-size: clamp(28px, 5vw, 46px); letter-spacing: -.025em; }
+    h2 { margin: 0 0 10px; font-size: clamp(19px, 2.8vw, 25px); }
+    h3 { margin: 0 0 8px; font-size: 16px; }
+    p { line-height: 1.58; }
+    .eyebrow { margin: 0 0 8px; color: var(--ok); font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .lede { max-width: 940px; margin: 12px 0 0; color: var(--muted); font-size: 18px; }
+    .panel, .stat, .fault {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+    .panel { margin-top: 18px; padding: 18px; }
+    .stats, .two-col, .fault-grid { display: grid; gap: 14px; }
+    .stats { grid-template-columns: repeat(4, minmax(130px, 1fr)); margin-top: 22px; }
+    .stat { padding: 15px; }
+    .stat .label { color: var(--muted); font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .stat .value { margin-top: 4px; font-size: 29px; font-weight: 800; }
+    .two-col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .formula {
+      overflow-x: auto;
+      margin: 10px 0 0;
+      padding: 12px;
+      border-radius: 8px;
+      background: #eff6ff;
+      color: #172554;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .scope {
+      border-color: #fda4af;
+      background: #fff1f2;
+    }
+    .scope h2 { color: var(--scope); }
+    .scope p { margin-bottom: 0; }
+    .badge {
+      display: inline-block;
+      margin-right: 7px;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      padding: 3px 8px;
+      font-size: 12px;
+      font-weight: 750;
+    }
+    .badge.load { color: var(--load); background: #eff6ff; }
+    .badge.flip { color: var(--flip); background: #f5f3ff; }
+    .badge.latch { color: var(--latch); background: #fff7ed; }
+    .fault-grid { grid-template-columns: repeat(3, minmax(210px, 1fr)); }
+    .fault { padding: 15px; }
+    .fault.phase { border-top: 4px solid var(--flip); }
+    .fault.stutter { border-top: 4px solid var(--scope); }
+    .fault.double { border-top: 4px solid var(--latch); }
+    .fault .number { margin: 5px 0; font-size: 30px; font-weight: 800; }
+    .fault dl { display: grid; grid-template-columns: auto 1fr; gap: 7px 10px; margin: 12px 0 0; font-size: 13px; }
+    .fault dt { color: var(--muted); }
+    .fault dd { margin: 0; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .table-wrap { overflow: auto; max-height: 720px; border: 1px solid var(--line); border-radius: 9px; }
+    table { width: 100%; min-width: 860px; border-collapse: collapse; background: #fff; }
+    caption { padding: 12px 14px; text-align: left; color: var(--muted); background: #f8fafc; font-size: 13px; }
+    th, td { padding: 10px 12px; border-bottom: 1px solid #e2e8f0; text-align: left; font-size: 13px; white-space: nowrap; }
+    th { position: sticky; top: 0; z-index: 1; background: #eaf0f8; color: #334155; font-size: 11px; letter-spacing: .07em; text-transform: uppercase; }
+    tr.load td:first-child { border-left: 4px solid var(--load); }
+    tr.flip td:first-child { border-left: 4px solid var(--flip); }
+    tr.latch { background: #fffaf3; }
+    tr.latch td:first-child { border-left: 4px solid var(--latch); }
+    tr.wrap { background: #fff1f2; }
+    .state, .mono, code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .yes { color: var(--ok); font-weight: 800; }
+    .no { color: var(--muted); }
+    .note { color: var(--muted); font-size: 13px; }
+    a { color: #1d4ed8; }
+    footer { margin-top: 20px; color: var(--muted); font-size: 13px; }
+    @media (max-width: 780px) {
+      header { padding: 26px 16px 16px; }
+      main { padding: 0 16px 36px; }
+      .stats { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+      .two-col, .fault-grid { grid-template-columns: 1fr; }
+      .panel { padding: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">Pass 382 · GAP certificate trace</p>
+    <h1>Reversible logic-switch controller</h1>
+    <p class="lede">A static, browser-visible rendering of the certified 48-state LOAD/FLIP/LATCH controller. This page only displays the precomputed GAP certificate; it has no JavaScript and performs no mathematics in the browser.</p>
+    <section class="stats" aria-label="Certified controller summary">
+      <div class="stat"><div class="label">Controller states</div><div class="value">48</div></div>
+      <div class="stat"><div class="label">Edge-step indices</div><div class="value">16</div></div>
+      <div class="stat"><div class="label">Phase clock</div><div class="value">C3</div></div>
+      <div class="stat"><div class="label">GAP checks</div><div class="value">15 / 15</div></div>
+    </section>
+  </header>
+  <main data-certified-source="../data/w33_pass382_reversible_logic_switch_controller.json">
+    <section class="panel scope" aria-labelledby="scope-heading">
+      <h2 id="scope-heading">Scope boundary</h2>
+      <p>This isolated controller contains no actual header flag, Q6 edge, route, or physical-oscillator binding. Its edge-step wrap is a controller-frame convention, not a Q6 path closure. Pass 380 owns the actual scheduler phase-lift result; this display neither refines nor binds that map.</p>
+    </section>
+
+    <section class="panel" aria-labelledby="clock-heading">
+      <h2 id="clock-heading">Two certified maps, with different roles</h2>
+      <div class="two-col">
+        <article>
+          <h3><span class="badge load">T</span> controller successor</h3>
+          <p>The reversible sequence clock moves through the three-operation word and advances the edge-step index only at a latch.</p>
+          <div class="formula">T(edge,0)=(edge,1)
+T(edge,1)=(edge,2)
+T(edge,2)=(edge+1 mod 16,0)</div>
+          <p class="note">Certified: exact order 48, one 48-state reachable orbit, and a two-sided inverse.</p>
+        </article>
+        <article>
+          <h3><span class="badge flip">P</span> phase clock</h3>
+          <p>The free C3 action rotates the phase position within an edge-step index; it is not the controller successor.</p>
+          <div class="formula">P(edge,phase)=(edge,phase+1 mod 3)</div>
+          <p class="note">Certified: 16 free three-state phase orbits. P differs from T on exactly the latch phase; the maps fail to commute on FLIP and LATCH states.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="fault-heading">
+      <h2 id="fault-heading">Certified fault-injection summaries</h2>
+      <p class="note">Each comparison is against the specified successor T. These are control-state diagnostics, not claims of fault correction, timing performance, or hardware realization.</p>
+      <div class="fault-grid">
+        <article class="fault phase" data-fault="phase_clock_substitution" data-map="P replaces T" data-mismatch="16" data-orbit-sizes="3" data-syndrome-pairs="0:32;45:16" data-mismatching-phases="2">
+          <h3>P replaces T</h3>
+          <div class="number">16 wrong ticks</div>
+          <dl><dt>affected phase</dt><dd>2 (LATCH)</dd><dt>orbit sizes</dt><dd>3</dd><dt>syndrome pairs</dt><dd>[0,32], [45,16]</dd></dl>
+        </article>
+        <article class="fault stutter" data-fault="stutter" data-map="identity replaces T" data-mismatch="48" data-orbit-sizes="1" data-syndrome-pairs="47:48">
+          <h3>Stutter</h3>
+          <div class="number">48 wrong ticks</div>
+          <dl><dt>replacement</dt><dd>identity</dd><dt>orbit sizes</dt><dd>1</dd><dt>syndrome pairs</dt><dd>[47,48]</dd></dl>
+        </article>
+        <article class="fault double" data-fault="double_tick" data-map="T^2 replaces T" data-mismatch="48" data-orbit-sizes="24" data-syndrome-pairs="1:48">
+          <h3>Double tick</h3>
+          <div class="number">48 wrong ticks</div>
+          <dl><dt>replacement</dt><dd>T^2</dd><dt>orbit sizes</dt><dd>24</dd><dt>syndrome pairs</dt><dd>[1,48]</dd></dl>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="table-heading">
+      <h2 id="table-heading">Full certified 48-state transition table</h2>
+      <p class="note"><span class="badge load">LOAD</span><span class="badge flip">FLIP</span><span class="badge latch">LATCH</span> Each row is copied from the GAP-emitted certificate. The final latch is the one controller-frame wrap.</p>
+      <div class="table-wrap">
+        <table>
+          <caption>State = (edge-step index, phase). “T previous” is the certified inverse-transition predecessor.</caption>
+          <thead><tr><th>state</th><th>operation</th><th>T next</th><th>T previous</th><th>P next</th><th>latch advances edge</th><th>frame wrap</th></tr></thead>
+          <tbody>
+            <tr class="state-row load" data-state="0,0" data-operation="LOAD_FLAG" data-t-next="0,1" data-t-previous="15,2" data-p-next="0,1" data-latch="false" data-frame-wrap="false"><td class="state">(0,0)</td><td>LOAD_FLAG</td><td class="mono">(0,1)</td><td class="mono">(15,2)</td><td class="mono">(0,1)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row flip" data-state="0,1" data-operation="FLIP_Q6_AXIS" data-t-next="0,2" data-t-previous="0,0" data-p-next="0,2" data-latch="false" data-frame-wrap="false"><td class="state">(0,1)</td><td>FLIP_Q6_AXIS</td><td class="mono">(0,2)</td><td class="mono">(0,0)</td><td class="mono">(0,2)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row latch" data-state="0,2" data-operation="LATCH_VERTEX" data-t-next="1,0" data-t-previous="0,1" data-p-next="0,0" data-latch="true" data-frame-wrap="false"><td class="state">(0,2)</td><td>LATCH_VERTEX</td><td class="mono">(1,0)</td><td class="mono">(0,1)</td><td class="mono">(0,0)</td><td class="yes">yes</td><td class="no">no</td></tr>
+            <tr class="state-row load" data-state="1,0" data-operation="LOAD_FLAG" data-t-next="1,1" data-t-previous="0,2" data-p-next="1,1" data-latch="false" data-frame-wrap="false"><td class="state">(1,0)</td><td>LOAD_FLAG</td><td class="mono">(1,1)</td><td class="mono">(0,2)</td><td class="mono">(1,1)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row flip" data-state="1,1" data-operation="FLIP_Q6_AXIS" data-t-next="1,2" data-t-previous="1,0" data-p-next="1,2" data-latch="false" data-frame-wrap="false"><td class="state">(1,1)</td><td>FLIP_Q6_AXIS</td><td class="mono">(1,2)</td><td class="mono">(1,0)</td><td class="mono">(1,2)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row latch" data-state="1,2" data-operation="LATCH_VERTEX" data-t-next="2,0" data-t-previous="1,1" data-p-next="1,0" data-latch="true" data-frame-wrap="false"><td class="state">(1,2)</td><td>LATCH_VERTEX</td><td class="mono">(2,0)</td><td class="mono">(1,1)</td><td class="mono">(1,0)</td><td class="yes">yes</td><td class="no">no</td></tr>
+            <tr class="state-row load" data-state="2,0" data-operation="LOAD_FLAG" data-t-next="2,1" data-t-previous="1,2" data-p-next="2,1" data-latch="false" data-frame-wrap="false"><td class="state">(2,0)</td><td>LOAD_FLAG</td><td class="mono">(2,1)</td><td class="mono">(1,2)</td><td class="mono">(2,1)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row flip" data-state="2,1" data-operation="FLIP_Q6_AXIS" data-t-next="2,2" data-t-previous="2,0" data-p-next="2,2" data-latch="false" data-frame-wrap="false"><td class="state">(2,1)</td><td>FLIP_Q6_AXIS</td><td class="mono">(2,2)</td><td class="mono">(2,0)</td><td class="mono">(2,2)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row latch" data-state="2,2" data-operation="LATCH_VERTEX" data-t-next="3,0" data-t-previous="2,1" data-p-next="2,0" data-latch="true" data-frame-wrap="false"><td class="state">(2,2)</td><td>LATCH_VERTEX</td><td class="mono">(3,0)</td><td class="mono">(2,1)</td><td class="mono">(2,0)</td><td class="yes">yes</td><td class="no">no</td></tr>
+            <tr class="state-row load" data-state="3,0" data-operation="LOAD_FLAG" data-t-next="3,1" data-t-previous="2,2" data-p-next="3,1" data-latch="false" data-frame-wrap="false"><td class="state">(3,0)</td><td>LOAD_FLAG</td><td class="mono">(3,1)</td><td class="mono">(2,2)</td><td class="mono">(3,1)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row flip" data-state="3,1" data-operation="FLIP_Q6_AXIS" data-t-next="3,2" data-t-previous="3,0" data-p-next="3,2" data-latch="false" data-frame-wrap="false"><td class="state">(3,1)</td><td>FLIP_Q6_AXIS</td><td class="mono">(3,2)</td><td class="mono">(3,0)</td><td class="mono">(3,2)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row latch" data-state="3,2" data-operation="LATCH_VERTEX" data-t-next="4,0" data-t-previous="3,1" data-p-next="3,0" data-latch="true" data-frame-wrap="false"><td class="state">(3,2)</td><td>LATCH_VERTEX</td><td class="mono">(4,0)</td><td class="mono">(3,1)</td><td class="mono">(3,0)</td><td class="yes">yes</td><td class="no">no</td></tr>
+            <tr class="state-row load" data-state="4,0" data-operation="LOAD_FLAG" data-t-next="4,1" data-t-previous="3,2" data-p-next="4,1" data-latch="false" data-frame-wrap="false"><td class="state">(4,0)</td><td>LOAD_FLAG</td><td class="mono">(4,1)</td><td class="mono">(3,2)</td><td class="mono">(4,1)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row flip" data-state="4,1" data-operation="FLIP_Q6_AXIS" data-t-next="4,2" data-t-previous="4,0" data-p-next="4,2" data-latch="false" data-frame-wrap="false"><td class="state">(4,1)</td><td>FLIP_Q6_AXIS</td><td class="mono">(4,2)</td><td class="mono">(4,0)</td><td class="mono">(4,2)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row latch" data-state="4,2" data-operation="LATCH_VERTEX" data-t-next="5,0" data-t-previous="4,1" data-p-next="4,0" data-latch="true" data-frame-wrap="false"><td class="state">(4,2)</td><td>LATCH_VERTEX</td><td class="mono">(5,0)</td><td class="mono">(4,1)</td><td class="mono">(4,0)</td><td class="yes">yes</td><td class="no">no</td></tr>
+            <tr class="state-row load" data-state="5,0" data-operation="LOAD_FLAG" data-t-next="5,1" data-t-previous="4,2" data-p-next="5,1" data-latch="false" data-frame-wrap="false"><td class="state">(5,0)</td><td>LOAD_FLAG</td><td class="mono">(5,1)</td><td class="mono">(4,2)</td><td class="mono">(5,1)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row flip" data-state="5,1" data-operation="FLIP_Q6_AXIS" data-t-next="5,2" data-t-previous="5,0" data-p-next="5,2" data-latch="false" data-frame-wrap="false"><td class="state">(5,1)</td><td>FLIP_Q6_AXIS</td><td class="mono">(5,2)</td><td class="mono">(5,0)</td><td class="mono">(5,2)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row latch" data-state="5,2" data-operation="LATCH_VERTEX" data-t-next="6,0" data-t-previous="5,1" data-p-next="5,0" data-latch="true" data-frame-wrap="false"><td class="state">(5,2)</td><td>LATCH_VERTEX</td><td class="mono">(6,0)</td><td class="mono">(5,1)</td><td class="mono">(5,0)</td><td class="yes">yes</td><td class="no">no</td></tr>
+            <tr class="state-row load" data-state="6,0" data-operation="LOAD_FLAG" data-t-next="6,1" data-t-previous="5,2" data-p-next="6,1" data-latch="false" data-frame-wrap="false"><td class="state">(6,0)</td><td>LOAD_FLAG</td><td class="mono">(6,1)</td><td class="mono">(5,2)</td><td class="mono">(6,1)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row flip" data-state="6,1" data-operation="FLIP_Q6_AXIS" data-t-next="6,2" data-t-previous="6,0" data-p-next="6,2" data-latch="false" data-frame-wrap="false"><td class="state">(6,1)</td><td>FLIP_Q6_AXIS</td><td class="mono">(6,2)</td><td class="mono">(6,0)</td><td class="mono">(6,2)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row latch" data-state="6,2" data-operation="LATCH_VERTEX" data-t-next="7,0" data-t-previous="6,1" data-p-next="6,0" data-latch="true" data-frame-wrap="false"><td class="state">(6,2)</td><td>LATCH_VERTEX</td><td class="mono">(7,0)</td><td class="mono">(6,1)</td><td class="mono">(6,0)</td><td class="yes">yes</td><td class="no">no</td></tr>
+            <tr class="state-row load" data-state="7,0" data-operation="LOAD_FLAG" data-t-next="7,1" data-t-previous="6,2" data-p-next="7,1" data-latch="false" data-frame-wrap="false"><td class="state">(7,0)</td><td>LOAD_FLAG</td><td class="mono">(7,1)</td><td class="mono">(6,2)</td><td class="mono">(7,1)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row flip" data-state="7,1" data-operation="FLIP_Q6_AXIS" data-t-next="7,2" data-t-previous="7,0" data-p-next="7,2" data-latch="false" data-frame-wrap="false"><td class="state">(7,1)</td><td>FLIP_Q6_AXIS</td><td class="mono">(7,2)</td><td class="mono">(7,0)</td><td class="mono">(7,2)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row latch" data-state="7,2" data-operation="LATCH_VERTEX" data-t-next="8,0" data-t-previous="7,1" data-p-next="7,0" data-latch="true" data-frame-wrap="false"><td class="state">(7,2)</td><td>LATCH_VERTEX</td><td class="mono">(8,0)</td><td class="mono">(7,1)</td><td class="mono">(7,0)</td><td class="yes">yes</td><td class="no">no</td></tr>
+            <tr class="state-row load" data-state="8,0" data-operation="LOAD_FLAG" data-t-next="8,1" data-t-previous="7,2" data-p-next="8,1" data-latch="false" data-frame-wrap="false"><td class="state">(8,0)</td><td>LOAD_FLAG</td><td class="mono">(8,1)</td><td class="mono">(7,2)</td><td class="mono">(8,1)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row flip" data-state="8,1" data-operation="FLIP_Q6_AXIS" data-t-next="8,2" data-t-previous="8,0" data-p-next="8,2" data-latch="false" data-frame-wrap="false"><td class="state">(8,1)</td><td>FLIP_Q6_AXIS</td><td class="mono">(8,2)</td><td class="mono">(8,0)</td><td class="mono">(8,2)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row latch" data-state="8,2" data-operation="LATCH_VERTEX" data-t-next="9,0" data-t-previous="8,1" data-p-next="8,0" data-latch="true" data-frame-wrap="false"><td class="state">(8,2)</td><td>LATCH_VERTEX</td><td class="mono">(9,0)</td><td class="mono">(8,1)</td><td class="mono">(8,0)</td><td class="yes">yes</td><td class="no">no</td></tr>
+            <tr class="state-row load" data-state="9,0" data-operation="LOAD_FLAG" data-t-next="9,1" data-t-previous="8,2" data-p-next="9,1" data-latch="false" data-frame-wrap="false"><td class="state">(9,0)</td><td>LOAD_FLAG</td><td class="mono">(9,1)</td><td class="mono">(8,2)</td><td class="mono">(9,1)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row flip" data-state="9,1" data-operation="FLIP_Q6_AXIS" data-t-next="9,2" data-t-previous="9,0" data-p-next="9,2" data-latch="false" data-frame-wrap="false"><td class="state">(9,1)</td><td>FLIP_Q6_AXIS</td><td class="mono">(9,2)</td><td class="mono">(9,0)</td><td class="mono">(9,2)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row latch" data-state="9,2" data-operation="LATCH_VERTEX" data-t-next="10,0" data-t-previous="9,1" data-p-next="9,0" data-latch="true" data-frame-wrap="false"><td class="state">(9,2)</td><td>LATCH_VERTEX</td><td class="mono">(10,0)</td><td class="mono">(9,1)</td><td class="mono">(9,0)</td><td class="yes">yes</td><td class="no">no</td></tr>
+            <tr class="state-row load" data-state="10,0" data-operation="LOAD_FLAG" data-t-next="10,1" data-t-previous="9,2" data-p-next="10,1" data-latch="false" data-frame-wrap="false"><td class="state">(10,0)</td><td>LOAD_FLAG</td><td class="mono">(10,1)</td><td class="mono">(9,2)</td><td class="mono">(10,1)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row flip" data-state="10,1" data-operation="FLIP_Q6_AXIS" data-t-next="10,2" data-t-previous="10,0" data-p-next="10,2" data-latch="false" data-frame-wrap="false"><td class="state">(10,1)</td><td>FLIP_Q6_AXIS</td><td class="mono">(10,2)</td><td class="mono">(10,0)</td><td class="mono">(10,2)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row latch" data-state="10,2" data-operation="LATCH_VERTEX" data-t-next="11,0" data-t-previous="10,1" data-p-next="10,0" data-latch="true" data-frame-wrap="false"><td class="state">(10,2)</td><td>LATCH_VERTEX</td><td class="mono">(11,0)</td><td class="mono">(10,1)</td><td class="mono">(10,0)</td><td class="yes">yes</td><td class="no">no</td></tr>
+            <tr class="state-row load" data-state="11,0" data-operation="LOAD_FLAG" data-t-next="11,1" data-t-previous="10,2" data-p-next="11,1" data-latch="false" data-frame-wrap="false"><td class="state">(11,0)</td><td>LOAD_FLAG</td><td class="mono">(11,1)</td><td class="mono">(10,2)</td><td class="mono">(11,1)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row flip" data-state="11,1" data-operation="FLIP_Q6_AXIS" data-t-next="11,2" data-t-previous="11,0" data-p-next="11,2" data-latch="false" data-frame-wrap="false"><td class="state">(11,1)</td><td>FLIP_Q6_AXIS</td><td class="mono">(11,2)</td><td class="mono">(11,0)</td><td class="mono">(11,2)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row latch" data-state="11,2" data-operation="LATCH_VERTEX" data-t-next="12,0" data-t-previous="11,1" data-p-next="11,0" data-latch="true" data-frame-wrap="false"><td class="state">(11,2)</td><td>LATCH_VERTEX</td><td class="mono">(12,0)</td><td class="mono">(11,1)</td><td class="mono">(11,0)</td><td class="yes">yes</td><td class="no">no</td></tr>
+            <tr class="state-row load" data-state="12,0" data-operation="LOAD_FLAG" data-t-next="12,1" data-t-previous="11,2" data-p-next="12,1" data-latch="false" data-frame-wrap="false"><td class="state">(12,0)</td><td>LOAD_FLAG</td><td class="mono">(12,1)</td><td class="mono">(11,2)</td><td class="mono">(12,1)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row flip" data-state="12,1" data-operation="FLIP_Q6_AXIS" data-t-next="12,2" data-t-previous="12,0" data-p-next="12,2" data-latch="false" data-frame-wrap="false"><td class="state">(12,1)</td><td>FLIP_Q6_AXIS</td><td class="mono">(12,2)</td><td class="mono">(12,0)</td><td class="mono">(12,2)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row latch" data-state="12,2" data-operation="LATCH_VERTEX" data-t-next="13,0" data-t-previous="12,1" data-p-next="12,0" data-latch="true" data-frame-wrap="false"><td class="state">(12,2)</td><td>LATCH_VERTEX</td><td class="mono">(13,0)</td><td class="mono">(12,1)</td><td class="mono">(12,0)</td><td class="yes">yes</td><td class="no">no</td></tr>
+            <tr class="state-row load" data-state="13,0" data-operation="LOAD_FLAG" data-t-next="13,1" data-t-previous="12,2" data-p-next="13,1" data-latch="false" data-frame-wrap="false"><td class="state">(13,0)</td><td>LOAD_FLAG</td><td class="mono">(13,1)</td><td class="mono">(12,2)</td><td class="mono">(13,1)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row flip" data-state="13,1" data-operation="FLIP_Q6_AXIS" data-t-next="13,2" data-t-previous="13,0" data-p-next="13,2" data-latch="false" data-frame-wrap="false"><td class="state">(13,1)</td><td>FLIP_Q6_AXIS</td><td class="mono">(13,2)</td><td class="mono">(13,0)</td><td class="mono">(13,2)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row latch" data-state="13,2" data-operation="LATCH_VERTEX" data-t-next="14,0" data-t-previous="13,1" data-p-next="13,0" data-latch="true" data-frame-wrap="false"><td class="state">(13,2)</td><td>LATCH_VERTEX</td><td class="mono">(14,0)</td><td class="mono">(13,1)</td><td class="mono">(13,0)</td><td class="yes">yes</td><td class="no">no</td></tr>
+            <tr class="state-row load" data-state="14,0" data-operation="LOAD_FLAG" data-t-next="14,1" data-t-previous="13,2" data-p-next="14,1" data-latch="false" data-frame-wrap="false"><td class="state">(14,0)</td><td>LOAD_FLAG</td><td class="mono">(14,1)</td><td class="mono">(13,2)</td><td class="mono">(14,1)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row flip" data-state="14,1" data-operation="FLIP_Q6_AXIS" data-t-next="14,2" data-t-previous="14,0" data-p-next="14,2" data-latch="false" data-frame-wrap="false"><td class="state">(14,1)</td><td>FLIP_Q6_AXIS</td><td class="mono">(14,2)</td><td class="mono">(14,0)</td><td class="mono">(14,2)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row latch" data-state="14,2" data-operation="LATCH_VERTEX" data-t-next="15,0" data-t-previous="14,1" data-p-next="14,0" data-latch="true" data-frame-wrap="false"><td class="state">(14,2)</td><td>LATCH_VERTEX</td><td class="mono">(15,0)</td><td class="mono">(14,1)</td><td class="mono">(14,0)</td><td class="yes">yes</td><td class="no">no</td></tr>
+            <tr class="state-row load" data-state="15,0" data-operation="LOAD_FLAG" data-t-next="15,1" data-t-previous="14,2" data-p-next="15,1" data-latch="false" data-frame-wrap="false"><td class="state">(15,0)</td><td>LOAD_FLAG</td><td class="mono">(15,1)</td><td class="mono">(14,2)</td><td class="mono">(15,1)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row flip" data-state="15,1" data-operation="FLIP_Q6_AXIS" data-t-next="15,2" data-t-previous="15,0" data-p-next="15,2" data-latch="false" data-frame-wrap="false"><td class="state">(15,1)</td><td>FLIP_Q6_AXIS</td><td class="mono">(15,2)</td><td class="mono">(15,0)</td><td class="mono">(15,2)</td><td class="no">no</td><td class="no">no</td></tr>
+            <tr class="state-row latch wrap" data-state="15,2" data-operation="LATCH_VERTEX" data-t-next="0,0" data-t-previous="15,1" data-p-next="15,0" data-latch="true" data-frame-wrap="true"><td class="state">(15,2)</td><td>LATCH_VERTEX</td><td class="mono">(0,0)</td><td class="mono">(15,1)</td><td class="mono">(15,0)</td><td class="yes">yes</td><td class="yes">yes</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <footer>
+      Source of record: <a href="../data/w33_pass382_reversible_logic_switch_controller.json">GAP JSON certificate</a> · <a href="../analysis/w33_pass382_reversible_logic_switch_controller.g">GAP witness</a> · <a href="../PASS382_REVERSIBLE_LOGIC_SWITCH_CONTROLLER.md">scope note</a>. This static page deliberately does not infer a header binding, Q6 route, physical oscillator, or hardware implementation.
+    </footer>
+  </main>
+</body>
+</html>

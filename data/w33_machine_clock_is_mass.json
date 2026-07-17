@@ -30,7 +30,8 @@
     "address": "BT1374 Q6 edge address",
     "transition": "BT1406/BT1698 LOAD_FLAG -> FLIP_Q6_AXIS -> LATCH_VERTEX",
     "header_geometry_boundary": "Pass 379: flag -> flag+64 mod 192 is not a Q6 line-graph automorphism through BT1371's pinned address table.",
-    "scheduler_binding_boundary": "Pass 380: (tomotope_flag, phase_trit) is the minimal free-C3 scheduler lift; fourteen of sixteen header-orbit bindings remain explicit missing compiler data.",
+    "scheduler_binding_boundary": "Pass 380: (tomotope_flag, phase_trit) is the minimal free-C3 scheduler lift. Pass 381 supplies a reviewed sixteen-row binding ABI and 48-pulse trace; fourteen rows remain external configuration, not a geometric identification.",
+    "branch_phase_group_boundary": "Pass 383: the orientation-preserving typed branch/phase switch group is C6; S3 requires an additional phase-reflecting C2 lift.",
     "boundary": "No state-level toggle-to-Q6 intertwiner or hardware implementation is claimed."
   },
   "runtime_accounting": {
@@ -42,8 +43,8 @@
     "h_E8": 30,
     "boundary": "Arithmetic equality to a group order is not an action or a group traversal."
   },
-  "summary": "The Heawood/Fano graph supplies J=(L_H-3I)/sqrt(2), an involutive six-by-six spectral branch selector on its 12-dimensional middle shell, and an eight-bit F2 cycle-space register after a basis choice. The Holonet control ABI is a typed binary-Q3-toggle -> header -> Q6-address -> LOAD/FLIP/LATCH pipeline. Pass 379 keeps the header clock separate from Q6 geometry, and Pass 380 identifies the missing fourteen-orbit binding table. No mass, calibrated frequency, hardware, or group-action interpretation follows from these finite calculations.",
+  "summary": "The Heawood/Fano graph supplies J=(L_H-3I)/sqrt(2), an involutive six-by-six spectral branch selector on its 12-dimensional middle shell, and an eight-bit F2 cycle-space register after a basis choice. The Holonet control ABI is a typed binary-Q3-toggle -> header -> Q6-address -> LOAD/FLIP/LATCH pipeline. Pass 379 keeps the header clock separate from Q6 geometry, Pass 381 supplies a reviewed binding ABI, and Pass 383 separates C6 from an extra S3 mirror lift. No mass, calibrated frequency, hardware, or group-action interpretation follows from these finite calculations.",
   "sources": [
-    "BT1654 Heawood graph calculation; BT1656 cycle-basis boundary; BT1299/BT1300 runtime ISA; Passes 377-380 finite control boundaries"
+    "BT1654 Heawood graph calculation; BT1656 cycle-basis boundary; BT1299/BT1300 runtime ISA; Passes 377-383 finite control boundaries"
   ]
 }

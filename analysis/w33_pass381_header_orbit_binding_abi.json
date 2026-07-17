@@ -1,0 +1,26 @@
+{
+  "schema": "w33.pass381.header_orbit_binding_abi.v1",
+  "kind": "explicit reviewed compiler input",
+  "scope": "This table supplies a scheduler-to-header crosswalk. It is not claimed to be induced by Q6 geometry, scheduler flags alone, schedule order alone, or a group-action naturality theorem.",
+  "header_phase_rule": "compiled_flag = header_cycle_rep + 64 * ((phase_trit + phase_offset) mod 3) mod 192",
+  "scheduler_phase_word": ["LOAD_FLAG", "FLIP_Q6_AXIS", "LATCH_VERTEX"],
+  "rows": [
+    {"edge_step": 0, "tomotope_flag": 159, "header_cycle_rep": 1, "phase_offset": 0, "binding_source": "reviewed_external_binding"},
+    {"edge_step": 1, "tomotope_flag": 83, "header_cycle_rep": 3, "phase_offset": 0, "binding_source": "reviewed_external_binding"},
+    {"edge_step": 2, "tomotope_flag": 84, "header_cycle_rep": 5, "phase_offset": 0, "binding_source": "reviewed_external_binding"},
+    {"edge_step": 3, "tomotope_flag": 22, "header_cycle_rep": 10, "phase_offset": 0, "binding_source": "reviewed_external_binding"},
+    {"edge_step": 4, "tomotope_flag": 13, "header_cycle_rep": 12, "phase_offset": 0, "binding_source": "reviewed_external_binding"},
+    {"edge_step": 5, "tomotope_flag": 144, "header_cycle_rep": 16, "phase_offset": 2, "binding_source": "canonical_full_bus_anchor"},
+    {"edge_step": 6, "tomotope_flag": 135, "header_cycle_rep": 18, "phase_offset": 0, "binding_source": "reviewed_external_binding"},
+    {"edge_step": 7, "tomotope_flag": 134, "header_cycle_rep": 24, "phase_offset": 0, "binding_source": "reviewed_external_binding"},
+    {"edge_step": 8, "tomotope_flag": 58, "header_cycle_rep": 27, "phase_offset": 0, "binding_source": "reviewed_external_binding"},
+    {"edge_step": 9, "tomotope_flag": 63, "header_cycle_rep": 33, "phase_offset": 0, "binding_source": "reviewed_external_binding"},
+    {"edge_step": 10, "tomotope_flag": 112, "header_cycle_rep": 48, "phase_offset": 1, "binding_source": "canonical_full_bus_anchor"},
+    {"edge_step": 11, "tomotope_flag": 113, "header_cycle_rep": 35, "phase_offset": 0, "binding_source": "reviewed_external_binding"},
+    {"edge_step": 12, "tomotope_flag": 44, "header_cycle_rep": 39, "phase_offset": 0, "binding_source": "reviewed_external_binding"},
+    {"edge_step": 13, "tomotope_flag": 37, "header_cycle_rep": 41, "phase_offset": 0, "binding_source": "reviewed_external_binding"},
+    {"edge_step": 14, "tomotope_flag": 73, "header_cycle_rep": 46, "phase_offset": 0, "binding_source": "reviewed_external_binding"},
+    {"edge_step": 15, "tomotope_flag": 180, "header_cycle_rep": 50, "phase_offset": 0, "binding_source": "reviewed_external_binding"}
+  ],
+  "review_boundary": "The two anchored rows reproduce Pass 380's canonical full-bus lift. The remaining fourteen rows are explicit configuration data and must travel with any compiled trace. Replacing them is an ABI change, not a theorem failure."
+}

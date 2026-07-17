@@ -678,6 +678,64 @@ sixteen-row header-orbit binding table with phase offsets.  The phase lift is
 not a newly discovered Q6 symmetry or a physical pulse map.
 
 \smallskip
+\textbf{EXPLICIT HEADER/SCHEDULER ABI AND REVERSIBLE CONTROLLER (Passes
+381--382).}  The required compiler object is now supplied as reviewed
+configuration, with one row
+\[
+(\texttt{edge\_step},\texttt{tomotope\_flag},
+  \texttt{header\_cycle\_rep},\texttt{phase\_offset})
+\]
+per scheduler orbit.  Its checked compiler rule is
+\[
+ c(e,p)=r_e+64(p+o_e)\pmod {192}.
+\]
+Two rows retain the genuine Pass-380 full-bus anchors; the remaining fourteen
+are deliberately named \texttt{reviewed\_external\_binding}.  GAP verifies a
+bijection from all $48$ live pulse positions onto the Pass-377 header plane,
+the inverse audit trace, and every phase step.  This is executable ABI input,
+not a derivation from $Q_6$ geometry.  On the same $16\cdot3$ state type,
+Pass~382 builds the isolated reversible
+\texttt{LOAD/FLIP/LATCH} controller.  Its successor is one $48$-cycle; the
+free phase rotation agrees on the $32$ load/flip states but differs at all
+$16$ latches.  Thus a phase relabelling is not silently a controller advance.
+(Witnesses:
+\path{analysis/w33_pass381_explicit_header_binding_abi.g} and
+\path{analysis/w33_pass382_reversible_logic_switch_controller.g}.)
+
+\smallskip
+\textbf{BRANCH/PHASE AND COORDINATE-FOLD BOUNDARIES (Passes 383--384).}
+On the typed space
+\[
+ \{0,1\}_{\mathrm{branch}}\times\{0,\ldots,15\}_{\mathrm{row}}
+ \times\mathbb Z/3_{\mathrm{phase}},
+\]
+the supplied orientation-preserving branch switch commutes with phase and
+therefore gives $C_2\times C_3\cong C_6$.  An $S_3$ action needs an extra
+phase-reflecting involution; the binding table does not manufacture one.
+Separately, GAP enumerates all $540$ strict surjective coordinate folds
+$\mathbb F_2^6\to\mathbb F_2^3$.  None intertwines the live BT1371 direction
+table with the Pass-377 header axes on all $48$ flags.  The six folds that
+match the live $[3,2,2,3,4,2]\to[8,4,4]$ usage profile form one candidate
+orbit, while the header-depth direction relation generates $S_6$.  Thus the
+current coordinate class does not canonize the ABI.  This does not prohibit a
+different address table or a separately supplied non-coordinate compiler map.
+(Witnesses:
+\path{analysis/w33_pass383_branch_phase_control_group.g} and
+\path{analysis/w33_pass384_q6_q3_fold_obstruction.g}.)
+
+\smallskip
+\textbf{ORBIT-ANCHOR OBSTRUCTION (Pass 385).}  The header quotient has two
+intrinsic eight-class orbits, whereas the live sixteen-edge stress path has
+trivial setwise stabilizer both in the BT1371 group and in the full $Q_6$ edge
+automorphism group.  The two Pass-380 anchors land in the same header orbit
+but in opposite BT1371 orbit colors.  Consequently no binding that preserves
+both inherited partitions can retain both canonical anchors.  This is exactly
+why the Pass-381 crosswalk is an explicit ABI boundary: any complete binding
+must relax an inherited partition or abandon an anchor orientation.  It is a
+finite control-plane result, not a hardware or oscillator no-go.  (Witness:
+\path{analysis/w33_pass385_header_stress_orbit_anchor_obstruction.g}.)
+
+\smallskip
 \textbf{What fell:} every \emph{metric} or \emph{basis-dependent} geometric claim
 (five retractions, none from the spectral side, Pass 311) --- \emph{and} both
 headline theorems, to prior art. Before claiming any result here is new, consult

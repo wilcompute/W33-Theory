@@ -1,0 +1,26 @@
+{
+  "schema": "w33.pass383.branch_phase_control_group.gap.v1",
+  "status": "PASS",
+  "theorem": "Typed Branch-Phase Control Group Boundary",
+  "state_space": {"branch_labels":2,"bound_rows":16,"phase_trits":3,"states":96},
+  "orientation_preserving_lift": {"branch_action":"(b,row,p)->(b+1,row,p)","phase_action":"(b,row,p)->(b,row,p+1)","group":"C6","order":6},
+  "phase_reflecting_lift": {"branch_action":"(b,row,p)->(b+1,row,-p)","relation":"m^-1 r m = r^-1","group":"S3","order":6},
+  "conclusion": "The supplied sixteen-row ABI permits a common typed branch/phase control space. A phase-orientation-preserving branch switch gives C6. S3 requires an extra phase-reflecting C2 lift, which neither Pass 381 nor the Heawood branch selector supplies. The binding table itself does not choose the lift.",
+  "search_signature": "96/16xC6/C6-vs-S3-control-boundary",
+  "check_count":13,
+  "checks": {
+    "pass381_supplies_exactly_sixteen_bound_row_identities": true,
+    "control_product_has_two_times_sixteen_times_three_states": true,
+    "phase_clock_is_free_c3": true,
+    "branch_switch_is_free_c2": true,
+    "orientation_preserving_branch_switch_commutes_with_phase": true,
+    "orientation_preserving_control_group_has_order_six": true,
+    "orientation_preserving_product_has_a_single_order_six_generator": true,
+    "orientation_preserving_control_group_is_cyclic_c6": true,
+    "phase_reflecting_branch_lift_has_order_two": true,
+    "phase_reflection_inverts_the_phase_clock": true,
+    "phase_reflecting_control_group_has_order_six": true,
+    "phase_reflecting_control_group_is_nonabelian_s3": true,
+    "pass381_row_binding_does_not_choose_between_the_two_c2_lifts": true
+  }
+}

@@ -58,8 +58,8 @@ from check_rediscovery import RE_NAMED, RE_ROOT, compounds  # noqa: E402
 # read the file. Pass 348 blamed the token classes ("A2 is a ubiquitous atom") and
 # was looking at the wrong layer: the corpus definition was wrong. Witnesses ARE
 # results; a tool that indexes only prose indexes only the write-up.
-GLOBS = ["docs/index.html", "*.tex", "analysis/*.md", "analysis/*.py",
-         "passes/*.md", "passes/*.py", "exploration/*.py", "scripts/*.py",
+GLOBS = ["docs/index.html", "*.tex", "analysis/*.md", "analysis/*.py", "analysis/*.g",
+         "passes/*.md", "passes/*.py", "passes/*.g", "exploration/*.py", "exploration/*.g", "scripts/*.py", "scripts/*.g",
          "PASS*.md", "AUDIT*.md", "BT*.md", "PART*.md", "formal/**/*.lean",
          "manuscripts/**/*.tex"]
 
@@ -103,6 +103,11 @@ PINNED_RESULTS = {
     "48/16x3/16!3^16/2/14+2",
     "192/64x3/960/geometry-boundary",
     "48/6/2/14!3^14/minimal-phase-lift",
+    "16/48/2+14/external-binding-abi",
+    "48-cycle/16xC3/LOAD-FLIP-LATCH/reversible-logic-switch",
+    "96/16xC6/C6-vs-S3-control-boundary",
+    "234360/540/90+360+90/6/22of48/0exact/S6-direction",
+    "48/16/8/8/16/96/1/46080/1/2/orbit-anchor",
 }
 SKIP_DIRS = {".git", "node_modules", ".venv", "data"}
 
