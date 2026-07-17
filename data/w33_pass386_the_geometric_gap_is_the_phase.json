@@ -1,0 +1,46 @@
+{
+  "schema": "w33.pass386.geometric_gap_is_the_phase.v1",
+  "status": "PASS",
+  "HEADLINE": "The geometric gap between the two 27s is EXACTLY the qutrit phase fiber. The 648-action has rank 6 with suborbits [1,1,1,8,8,8] -- the point stabilizer fixes the whole central C3 fiber -- and the two invariant geometries decompose as: W33 collinearity = one 8-suborbit (phase-BLIND); E6 orthogonality = central pair + one 8-suborbit (phase-AWARE; verified 27/27 omega-pairs orthogonal). The bulk graph itself is distance-regular of diameter 3 (spectrum 8, 2^12, -1^8, -4^6; intersection data {'1': (1, 1, 6), '2': (3, 4, 1), '3': (8, 0, 0)}), not an SRG. THE RIM LAW IS NOW ALL ODD q: every involution in Stab(p0) fixes a rim point (eigenspace dimension counts for T^2=1; Lagrangian eigenspaces for T^2=-1), the rim q(q+1) is even, Cauchy applies -- the rim is NEVER a torsor; verified by sampling at q=5. And the tomotope/Reye 12 (a 12_4 16_3 configuration) is a different twelve from the rim (a partition): valency 4 vs 1, killed.",
+  "intersection_data_by_distance": {
+    "1": [
+      1,
+      1,
+      6
+    ],
+    "2": [
+      3,
+      4,
+      1
+    ],
+    "3": [
+      8,
+      0,
+      0
+    ]
+  },
+  "checks": {
+    "spectrum_8_2x12_m1x8_m4x6": true,
+    "four_distinct_eigenvalues_not_srg": true,
+    "distance_distribution_1_8_16_2": true,
+    "bulk_graph_is_distance_regular": true,
+    "intersection_array_8_6_1__1_3_8": true,
+    "action_order_648": true,
+    "rank_6_suborbits_1_1_1_8_8_8": true,
+    "stabilizer_fixes_central_fiber": true,
+    "all_omega_pairs_orthogonal_27_of_27": true,
+    "ten_equals_2_plus_8": true,
+    "GEOMETRIC_GAP_IS_THE_PHASE_FIBER": true,
+    "w35_has_156_points": true,
+    "w35_rim_30": true,
+    "q5_involutions_sampled": true,
+    "q5_no_fpf_involution_on_rim": true,
+    "dim_count_type1": true,
+    "rim_size_q_qplus1_always_even": true,
+    "RIM_NEVER_A_TORSOR_ODD_Q": true,
+    "reye_is_12_4_16_3": true,
+    "rim_induced_structure_is_a_partition": true,
+    "valency_4_vs_1_kills_isomorphism": true,
+    "tomotope_12_same_integer_different_object": true
+  }
+}

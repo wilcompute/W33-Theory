@@ -14050,8 +14050,40 @@ $m=6$ Coxeter--Todd rung of the QR tower & \textsc{open} & P368/369 & handed to 
 selection A/B as physics & \textsc{cond} & P326 & on two named identifications \\
 $d=21\leftrightarrow\sqrt{21}$ & \textsc{killed} & P369 & (Legendre symbols) \\
 ``frequency is a mass'' & \textsc{killed} & P320 & (no scale supplied) \\
+geometric gap of the two $27$s $=$ the phase fiber & \textsc{cert} & P386 & this programme \\
+bulk graph is DRG $\{8,6,1;1,3,8\}$, not SRG & \textsc{cert} & P386 & this programme \\
+rim never a torsor, \emph{all} odd $q$ & \textsc{cert} & P386 & this programme (eigenspace proof) \\
+tomotope/Reye $12$ $=$ rim $12$ & \textsc{killed} & P386 & (valency $4$ vs $1$) \\
 \bottomrule
 \end{tabular}
 \end{center}
+
+\paragraph{Pass 386 --- the geometric gap is the phase; the rim law for all odd
+$q$.}
+The $648$-action on the bulk $27$ has permutation rank six, suborbits
+$[1,1,1,8,8,8]$: the point stabilizer fixes the whole central $C_3$ fiber
+(it commutes with the central $z$).  Over this menu the two invariant
+geometries decompose exactly: W33 collinearity $=$ one $8$-suborbit
+(\emph{phase-blind}); $E_6$ orthogonality $=$ the central pair plus one
+$8$-suborbit (\emph{phase-aware}: all $27$ pairs $(u,\omega u)$ are
+$B$-orthogonal, verified $27/27$).  So Pass 372's geometric ceiling has an
+exact form: \textbf{the two geometries differ precisely by the qutrit phase
+fiber}, and the quantum (Pauli$+$Clifford) identification is exactly what
+survives forgetting the phase reading.  The bulk graph itself is
+distance-regular of diameter $3$ with spectrum $\{8,2^{12},(-1)^8,(-4)^6\}$
+and intersection data $c,a,b = (1,1,6),(3,4,1),(8,0,0)$ at distances $1,2,3$
+--- four eigenvalues, so not strongly regular, against the $E_6$ side's
+$\mathrm{SRG}(27,10,1,5)$.  The rim refutation globalizes to a law:
+\textbf{for every odd $q$ the rim $q(q{+}1)$ is never a torsor} --- every
+involution of $\mathrm{Stab}(p_0)$ fixes a rim point ($T^2{=}1$: $\dim(V_+\cap
+p_0^\perp)\ge1$; $T^2{=}-1$, $q\equiv1\bmod4$: the Lagrangian eigenspace
+through $p_0$ lies in $p_0^\perp$), the rim has even size, and Cauchy
+finishes; verified by sampling at $q=5$.  The bulk $q^3$ remains the elation
+torsor for all odd $q$: \emph{rim blocked, bulk free} is a law of the tower.
+The tomotope/Reye twelve --- a $(12_4,16_3)$ configuration --- is a different
+twelve from the rim's partition (valency $4$ versus $1$): same integer,
+different object, killed.  A standalone, arXiv-ready statement of the
+orientation obstruction is at
+\texttt{papers/a\_reflection\_group\_cannot\_orient\_itself.tex}.
 
 \end{document}
