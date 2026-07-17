@@ -1,0 +1,38 @@
+name: Pass 399 Bulk Ramanujan and Quantum Release
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass399_bulk_ramanujan_quantum.py'
+      - 'data/w33_pass399_bulk_ramanujan_quantum.json'
+      - 'tests/test_pass399_bulk_ramanujan_quantum.py'
+      - 'PASS399_BULK_RAMANUJAN_QUANTUM_RELEASE.md'
+      - '.github/workflows/pass399-bulk-ramanujan-quantum.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pass399-bulk-ramanujan-quantum
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install focused dependencies
+        run: python -m pip install --upgrade numpy pytest
+      - name: Regenerate and compare the frozen certificate
+        run: python analysis/w33_pass399_bulk_ramanujan_quantum.py --check
+      - name: Run Pass 399 regressions
+        run: python -m pytest -q tests/test_pass399_bulk_ramanujan_quantum.py
+      - name: Verify the live claims ledger
+        run: python scripts/check_claims_ledger.py
