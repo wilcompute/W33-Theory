@@ -13808,11 +13808,30 @@ The witness then constructs an explicit isomorphism between the two concrete
 Heisenbergs and a base-point bijection
 $\varphi(h\cdot b_1)=\mathrm{iso}(h)\cdot b_2$, machine-checking equivariance
 at all $27$ points: \textbf{the W(3,3) bulk and the $E_6$ $27$ are one torsor},
-uniquely up to the torsor's own ambiguity.  (Naturality of $\varphi$ against
-the normalizer quotients remains open.)  The $m=6$ prediction also passes its
+uniquely up to the torsor's own ambiguity.  (Naturality of $\varphi$, left open
+here, is settled affirmatively by Pass~371 below.)  The $m=6$ prediction also passes its
 necessary test: $|\!\operatorname{Aut}(K_{12})|/2=39{,}191{,}040$ divides
 $|O^+(12,2)|$, by the same closed form that reproduces the tower's own
 $40320$, $51840$, and $348364800$.
+
+\paragraph{Pass 371 --- naturality holds: both $27$s carry the qutrit Clifford
+group.}
+The normalizer of the elation group in $\PSp(4,3)$ is the point stabilizer,
+order $648$; the normalizer of the regular Pauli group in $O^-(6,2)$ is
+computed to have order $648$; both have point stabilizers of order $24$ with
+exactly one involution --- hence $\mathrm{SL}(2,3)$ --- acting faithfully on
+$S/Z(S)=\FF_3^2$.  Both extensions are therefore $3^{1+2}{:}\mathrm{SL}(2,3)$,
+\textbf{the one-qutrit Clifford group}, and both $27$-point actions are its
+coset action on an $\mathrm{SL}(2,3)$ complement: permutation-isomorphic.  The
+torsor identification of Pass~370 extends to the full normalizer --- the
+substrate's bulk and the $E_6$ $27$ are the same quantum object at the Pauli
+\emph{and} Clifford levels.  Separately, the exponent-$9$ regular groups
+contain order-$9$ elements and so cannot consist of elations (order $3$):
+\emph{the incidence geometry itself selects the exponent-$3$ Pauli group}
+among the regular options.  A standalone assembly of Passes 368--371 is
+\texttt{analysis/THE\_27\_FOLD\_WAY.md}; the claims ledger below is now
+machine-checked against the witness certificates by
+\texttt{scripts/check\_claims\_ledger.py} (pre-commit hook \texttt{claims-ledger}).
 
 \paragraph{Current boundary.}
 The finite question that closed this manuscript's previous edition ---
@@ -13864,7 +13883,9 @@ $q=3$ Weil shadow chiral & \textsc{thm} & P331/353 & GAP cert.; Gow, Vinroot \\
 chirality unselectable from inside & \textsc{thm} & P346 & this programme \\
 leaf/type/chirality are one act & \textsc{cert} & P347 & this programme \\
 every offered multiplicity is a torsor & \textsc{cert} & P348/354 & this programme \\
-missing input $=$ sections, sizes $2,3,27,27$ & \textsc{thm} & P350/354 & this programme \\
+missing input $=$ sections, sizes $2,3,27,27$ & \textsc{thm} & P354 & this programme \\
+two $27$s one torsor; abelian refuted & \textsc{cert} & P370 & this programme \\
+naturality: both sides qutrit Clifford & \textsc{cert} & P371 & this programme \\
 Eisenstein rank-parity law, type $=(-1)^n$ & \textsc{thm} & P368 & this programme (elementary) \\
 $36$ W33 spreads $=$ $E_6$ root pairs mod 2 & \textsc{cert} & P368 $+$ P365 & this programme $+$ GAP track \\
 $K_{12}$ mod 2 plus, $2080$ & \textsc{cert} & P369 & this programme \\

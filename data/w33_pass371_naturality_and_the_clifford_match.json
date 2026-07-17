@@ -1,0 +1,31 @@
+{
+  "schema": "w33.pass371.naturality_and_clifford_match.v1",
+  "status": "PASS",
+  "HEADLINE": "NATURALITY HOLDS. Both normalizers -- Stab(p0) on the W(3,3) bulk and N(S) in O-(6,2) on the E6 27 -- have order 648 with point stabilizers of order 24 containing exactly one involution (hence SL(2,3)), acting faithfully on S/Z = F3^2. Both are the extension 3^{1+2}:SL(2,3) = the one-qutrit CLIFFORD group, and both 27-point actions are its coset action on an SL(2,3) complement -- so they are permutation-isomorphic and Pass 370's torsor identification extends to the full normalizer. The substrate's bulk and E6's 27 are the same quantum object at the Pauli AND Clifford levels. Separately: the exponent-9 regular groups contain order-9 elements, so they cannot consist of elations (which have order 3) -- the incidence geometry itself selects the exponent-3 Pauli group among the regular options.",
+  "scope": "Uses one standard classification fact (SL(2,3) has a unique faithful 2-dim F3-module up to equivalence); all else is explicit computation. No hardware claim: 'qutrit Clifford group' names a finite group.",
+  "checks": {
+    "w33_normalizer_order_648": true,
+    "w33_point_stab_order_24": true,
+    "w33_stab_unique_involution": true,
+    "so_w33_stab_is_SL23": true,
+    "w33_regular_heisenberg_recovered": true,
+    "e6_sylow_81": true,
+    "e6_exp3_S_found": true,
+    "e6_exp9_regular_contains_order9": true,
+    "e6_normalizer_order_648": true,
+    "e6_point_stab_order_24": true,
+    "e6_stab_unique_involution": true,
+    "so_e6_stab_is_SL23": true,
+    "center_of_S_order_3": true,
+    "stab_acts_faithfully_on_S_mod_Z": true,
+    "w33_stab_acts_faithfully_on_U_mod_Z": true,
+    "both_extensions_are_3_1plus2_colon_SL23": true,
+    "unique_faithful_2dim_F3_module_of_SL23": true,
+    "hence_permutation_isomorphic_coset_actions": true,
+    "NATURALITY_HOLDS": true,
+    "both_are_the_qutrit_clifford_group": true,
+    "elations_have_order_3": true,
+    "exp9_cannot_be_elation_groups": true,
+    "geometry_selects_exponent_3": true
+  }
+}

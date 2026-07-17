@@ -27,3 +27,9 @@ repos:
       language: system
       files: ^(analysis|passes|exploration)/.*\.(py|md)$
       pass_filenames: true
+    - id: claims-ledger
+      name: claims ledger is green (paper claims have PASS certificates)
+      entry: python scripts/check_claims_ledger.py
+      language: system
+      files: ^(w33_paper\.tex|data/w33_pass.*\.json)$
+      pass_filenames: false
