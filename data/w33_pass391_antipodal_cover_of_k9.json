@@ -1,0 +1,19 @@
+{
+  "schema": "w33.pass391.antipodal_cover_of_k9.v1",
+  "status": "PASS",
+  "HEADLINE": "SELF-CORRECTION OF 386: the bulk graph was never phase-blind. It is a distance-regular ANTIPODAL 3-FOLD COVER OF K9 -- 9 antipodal classes of size 3, verified to be EXACTLY the central elation (qutrit phase) fibers, with quotient K9 on the F3^2 torsor and intersection array {8,6,1;1,3,8} = the antipodal-cover form at (n,r,c2)=(9,3,3) (frame: Godsil-Hensel, JCTB 56 (1992)). The corrected picture: E6 orthogonality puts phase pairs at distance 1; W33 collinearity puts them at distance 3. The two invariant geometries are the two extreme metric placements of the SAME phase fiber over the SAME K9 quotient, and the quantum identification is what survives forgetting the placement.",
+  "scope_note": "The adjacent-vs-antipodal pair is a structural binary in the invariant-graph menu, not a group orbit; the torsor no-go does not formally apply to it and is not claimed.",
+  "checks": {
+    "nine_classes_of_size_3": true,
+    "pairwise_distance_3_within_classes": true,
+    "antipodal_classes_ARE_phase_fibers": true,
+    "quotient_is_K9": true,
+    "no_edges_inside_fibers": true,
+    "cover_formula_matches_8_6_1__1_3_8": true,
+    "spectrum_confirms": true,
+    "e6_puts_phase_at_distance_1": true,
+    "w33_puts_phase_at_distance_3": true,
+    "386_phase_blind_corrected": true,
+    "both_geometries_see_the_phase": true
+  }
+}
