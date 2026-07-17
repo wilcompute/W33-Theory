@@ -1,5 +1,5 @@
 {
-  "certificate_sha256": "391425d2a01795e26f40128dfb6ed0e3711bb7c9a07c658880963c5af7e3650d",
+  "certificate_sha256": "d7a0bf496528adcb3ee0761bf343b40fbbcedb0618dc33e66e187207bd1c728e",
   "checks": {
     "all_27_targets_unit_fidelity": true,
     "all_27_targets_zero_leakage": true,
@@ -120,31 +120,31 @@
     "type": "abelian"
   },
   "global_control_rank": 18,
-  "maximum_leakage": 4.440892098500626e-16,
+  "maximum_leakage_exact": 0,
   "minimality": {
     "rank_one": "after a scalar shift exp(-itR) has at most two eigenphases; the qutrit shift has three",
     "rank_two": "achieved by C, hence minimal in the fibre-local Hermitian circulant class",
     "translation_covariant_diagonal": "scalar on a fibre and cannot implement a cycle"
   },
-  "minimum_target_fidelity": 0.9999999999999991,
+  "minimum_target_fidelity_exact": 1,
   "native_gate_time": "2*pi/3",
   "schema": "w33.pass400.minimal_phase_control.v1",
   "scope": "q=3 Heisenberg bulk cell",
-  "single_fibre_control_matrix": [
+  "single_fibre_control_matrix_symbolic": [
     [
-      "0j",
-      "(-0-0.5773502691896258j)",
-      "0.5773502691896258j"
+      "0",
+      "-i/sqrt(3)",
+      "+i/sqrt(3)"
     ],
     [
-      "0.5773502691896258j",
-      "0j",
-      "(-0-0.5773502691896258j)"
+      "+i/sqrt(3)",
+      "0",
+      "-i/sqrt(3)"
     ],
     [
-      "(-0-0.5773502691896258j)",
-      "0.5773502691896258j",
-      "0j"
+      "-i/sqrt(3)",
+      "+i/sqrt(3)",
+      "0"
     ]
   ],
   "single_fibre_spectral_rank": 2,

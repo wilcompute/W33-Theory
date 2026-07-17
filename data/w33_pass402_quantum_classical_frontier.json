@@ -287,7 +287,7 @@
       }
     }
   ],
-  "certificate_sha256": "bf6a46322379e837e1f808a238c00c20b335d98f6dcd76a4daa7e0fa4bb1efb8",
+  "certificate_sha256": "746db24ca7be56d4dffe32cb39113f036eb935471b3375be2f01dd48f2de3b56",
   "checks": {
     "q3_a0_exact_controlled_shift": true,
     "q3_a0_frontier_law": true,
@@ -339,43 +339,49 @@
       "alpha": 0,
       "exact_unitary": "omega^1 S",
       "gate_time": "2*pi/3",
-      "maximum_matrix_error": 2.094764613337708e-15,
-      "minimum_column_target_fidelity": 0.9999999999999989
+      "matrix_identity_verified": true,
+      "maximum_leakage_exact": 0,
+      "minimum_column_target_fidelity_exact": 1
     },
     {
       "alpha": 1,
       "exact_unitary": "omega^2 S",
       "gate_time": "2*pi/3",
-      "maximum_matrix_error": 2.6995332434176307e-15,
-      "minimum_column_target_fidelity": 0.999999999999998
+      "matrix_identity_verified": true,
+      "maximum_leakage_exact": 0,
+      "minimum_column_target_fidelity_exact": 1
     },
     {
       "alpha": 2,
       "exact_unitary": "omega^3 S",
       "gate_time": "2*pi/3",
-      "maximum_matrix_error": 3.354161117955213e-15,
-      "minimum_column_target_fidelity": 0.9999999999999991
+      "matrix_identity_verified": true,
+      "maximum_leakage_exact": 0,
+      "minimum_column_target_fidelity_exact": 1
     },
     {
       "alpha": 3,
       "exact_unitary": "omega^4 S",
       "gate_time": "2*pi/3",
-      "maximum_matrix_error": 3.945785111981671e-15,
-      "minimum_column_target_fidelity": 0.9999999999999993
+      "matrix_identity_verified": true,
+      "maximum_leakage_exact": 0,
+      "minimum_column_target_fidelity_exact": 1
     },
     {
       "alpha": 4,
       "exact_unitary": "omega^5 S",
       "gate_time": "2*pi/3",
-      "maximum_matrix_error": 5.157759701249372e-15,
-      "minimum_column_target_fidelity": 0.9999999999999996
+      "matrix_identity_verified": true,
+      "maximum_leakage_exact": 0,
+      "minimum_column_target_fidelity_exact": 1
     },
     {
       "alpha": 5,
       "exact_unitary": "omega^6 S",
       "gate_time": "2*pi/3",
-      "maximum_matrix_error": 7.085499088353583e-15,
-      "minimum_column_target_fidelity": 0.9999999999999991
+      "matrix_identity_verified": true,
+      "maximum_leakage_exact": 0,
+      "minimum_column_target_fidelity_exact": 1
     }
   ],
   "qutrit_no_tradeoff_gate": {
