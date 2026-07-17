@@ -340,7 +340,7 @@ def main() -> None:
     if not validation["verified"]:
         raise SystemExit("\n".join(validation["errors"]))
     if args.check:
-        if args.output.read_text(encoding="utf-8") != text:
+        if json.loads(args.output.read_text(encoding="utf-8")) != registry:
             raise SystemExit("Pass 391 registry drift")
     else:
         args.output.parent.mkdir(parents=True, exist_ok=True)
