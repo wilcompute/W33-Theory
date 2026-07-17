@@ -1,0 +1,157 @@
+{
+  "certificate_sha256": "bae6a7ea304a1a759cca8d74a7031721b530317c7d3b939185add00df8806fd4",
+  "checks": {
+    "all_27_targets_unit_fidelity": true,
+    "all_27_targets_zero_leakage": true,
+    "control_commutes_with_native": true,
+    "control_hermitian": true,
+    "control_is_exact_shift": true,
+    "minimal_circulant_rank_argument": true,
+    "native_projective_return": true,
+    "single_fibre_rank_two": true,
+    "single_fibre_spectrum_minus1_0_plus1": true,
+    "spectral_control_lower_bound_12": true,
+    "total_is_phase_shift": true,
+    "zero_forcing_upper_bound_17": true
+  },
+  "control": "C=(i/sqrt(3))(S-S^*) on every central fibre",
+  "exact_gate": "exp[-i(2*pi/3)(A+C)] = exp(2*pi*i/3) S",
+  "full_local_control_bounds": {
+    "certified_zero_forcing_upper_bound": 17,
+    "claim": "12 <= minimum independently addressed diagonal actuator count <= 17; exact value not asserted",
+    "full_lie_dimension_when_using_the_17_projectors": 729,
+    "spectral_multiplicity_lower_bound": 12,
+    "zero_forcing_coordinates": [
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        2,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        2
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        0
+      ],
+      [
+        1,
+        2,
+        2
+      ],
+      [
+        2,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        2
+      ],
+      [
+        2,
+        1,
+        0
+      ],
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        2,
+        2,
+        1
+      ]
+    ],
+    "zero_forcing_implication": "the graph-infection theorem upgrades independent projectors on these sites to u(27)"
+  },
+  "generated_lie_algebra": {
+    "basis": [
+      "iA",
+      "iC"
+    ],
+    "real_dimension": 2,
+    "reason": "A and C commute and are linearly independent",
+    "type": "abelian"
+  },
+  "global_control_rank": 18,
+  "maximum_leakage": 2.220446049250313e-16,
+  "minimality": {
+    "rank_one": "after a scalar shift exp(-itR) has at most two eigenphases; the qutrit shift has three",
+    "rank_two": "achieved by C, hence minimal in the fibre-local Hermitian circulant class",
+    "translation_covariant_diagonal": "scalar on a fibre and cannot implement a cycle"
+  },
+  "minimum_target_fidelity": 0.9999999999999989,
+  "native_gate_time": "2*pi/3",
+  "schema": "w33.pass400.minimal_phase_control.v1",
+  "scope": "q=3 Heisenberg bulk cell",
+  "single_fibre_control_matrix": [
+    [
+      "0j",
+      "(-0-0.5773502691896258j)",
+      "0.5773502691896258j"
+    ],
+    [
+      "0.5773502691896258j",
+      "0j",
+      "(-0-0.5773502691896258j)"
+    ],
+    [
+      "(-0-0.5773502691896258j)",
+      "0.5773502691896258j",
+      "0j"
+    ]
+  ],
+  "single_fibre_spectral_rank": 2,
+  "single_fibre_spectrum": [
+    -1,
+    0,
+    1
+  ],
+  "status": "PASS"
+}

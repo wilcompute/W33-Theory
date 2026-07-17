@@ -1,0 +1,116 @@
+{
+  "action": "(a,c):(u,z)->(a+u,c+z+omega(a,u)); g:(u,z)->(gu,det(g)z); Frobenius coordinatewise",
+  "cases": [
+    {
+      "all_generators_preserve_adjacency": true,
+      "field_degree": 1,
+      "generator_edge_checks": {
+        "Tx_1": true,
+        "Ty_1": true,
+        "Tz_1": true,
+        "primitive_dilation": true,
+        "shear": true,
+        "symplectic_rotation": true
+      },
+      "generators": [
+        "Tx_1",
+        "Ty_1",
+        "Tz_1",
+        "shear",
+        "symplectic_rotation",
+        "primitive_dilation"
+      ],
+      "order_matches": true,
+      "permutation_group_order": 1296,
+      "point_stabilizer_order": 48,
+      "predicted_H_semidirect_GammaL_order": 1296,
+      "primitive_element_encoding": 2,
+      "q": 3,
+      "vertex_transitive": true
+    },
+    {
+      "all_generators_preserve_adjacency": true,
+      "field_degree": 1,
+      "generator_edge_checks": {
+        "Tx_1": true,
+        "Ty_1": true,
+        "Tz_1": true,
+        "primitive_dilation": true,
+        "shear": true,
+        "symplectic_rotation": true
+      },
+      "generators": [
+        "Tx_1",
+        "Ty_1",
+        "Tz_1",
+        "shear",
+        "symplectic_rotation",
+        "primitive_dilation"
+      ],
+      "order_matches": true,
+      "permutation_group_order": 60000,
+      "point_stabilizer_order": 480,
+      "predicted_H_semidirect_GammaL_order": 60000,
+      "primitive_element_encoding": 2,
+      "q": 5,
+      "vertex_transitive": true
+    },
+    {
+      "all_generators_preserve_adjacency": true,
+      "field_degree": 2,
+      "generator_edge_checks": {
+        "Tx_1": true,
+        "Tx_3": true,
+        "Ty_1": true,
+        "Ty_3": true,
+        "Tz_1": true,
+        "Tz_3": true,
+        "frobenius": true,
+        "primitive_dilation": true,
+        "shear": true,
+        "symplectic_rotation": true
+      },
+      "generators": [
+        "Tx_1",
+        "Ty_1",
+        "Tz_1",
+        "Tx_3",
+        "Ty_3",
+        "Tz_3",
+        "shear",
+        "symplectic_rotation",
+        "primitive_dilation",
+        "frobenius"
+      ],
+      "order_matches": true,
+      "permutation_group_order": 8398080,
+      "point_stabilizer_order": 11520,
+      "predicted_H_semidirect_GammaL_order": 8398080,
+      "primitive_element_encoding": 4,
+      "q": 9,
+      "vertex_transitive": true
+    }
+  ],
+  "certificate_sha256": "17414878f77ed79f89ce1549ca5e1aad61854fa0e49dedf050d05370cb414eaf",
+  "checks": {
+    "q3_edge_preservation": true,
+    "q3_order": true,
+    "q3_vertex_transitive": true,
+    "q5_edge_preservation": true,
+    "q5_order": true,
+    "q5_vertex_transitive": true,
+    "q9_edge_preservation": true,
+    "q9_order": true,
+    "q9_vertex_transitive": true
+  },
+  "classification_boundary": {
+    "extra_data_needed": "a regular Heisenberg action plus an oriented section whose triangle voltage is a nondegenerate alternating form",
+    "full_unoriented_group": "not asserted beyond the orientation-preserving voltage group without an independent graph-automorphism census",
+    "spectrum_and_intersection_array": "not unique in the DRACKN category",
+    "uniqueness": "in dimension two all nondegenerate alternating forms differ by a scalar, absorbed by det(g); hence the oriented Heisenberg voltage cover is unique up to semilinear isomorphism"
+  },
+  "order_formula": "q^3 (q^2-1)(q^2-q) f for q=p^f",
+  "oriented_automorphism_group": "H_q semidirect GammaL(2,q)",
+  "schema": "w33.pass403.drackn_semilinear.v1",
+  "status": "PASS"
+}

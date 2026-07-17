@@ -1,0 +1,403 @@
+{
+  "beyond_frontier": "the base-sector eigenvalue alpha(q-1)-1 dominates and classical contraction worsens",
+  "cases": [
+    {
+      "alpha": 0,
+      "degree": 8,
+      "frontier_condition": "alpha <= (3+2)/(3-2) = 5/1",
+      "nontrivial_radius": 4,
+      "normalized_radius": {
+        "denominator": 8,
+        "numerator": 4
+      },
+      "preserves_native_contraction_exactly": true,
+      "q": 3,
+      "spectrum": {
+        "-1": 8,
+        "-4": 6,
+        "2": 12,
+        "8": 1
+      }
+    },
+    {
+      "alpha": 1,
+      "degree": 10,
+      "frontier_condition": "alpha <= (3+2)/(3-2) = 5/1",
+      "nontrivial_radius": 5,
+      "normalized_radius": {
+        "denominator": 10,
+        "numerator": 5
+      },
+      "preserves_native_contraction_exactly": true,
+      "q": 3,
+      "spectrum": {
+        "-5": 6,
+        "1": 20,
+        "10": 1
+      }
+    },
+    {
+      "alpha": 2,
+      "degree": 12,
+      "frontier_condition": "alpha <= (3+2)/(3-2) = 5/1",
+      "nontrivial_radius": 6,
+      "normalized_radius": {
+        "denominator": 12,
+        "numerator": 6
+      },
+      "preserves_native_contraction_exactly": true,
+      "q": 3,
+      "spectrum": {
+        "-6": 6,
+        "0": 12,
+        "12": 1,
+        "3": 8
+      }
+    },
+    {
+      "alpha": 3,
+      "degree": 14,
+      "frontier_condition": "alpha <= (3+2)/(3-2) = 5/1",
+      "nontrivial_radius": 7,
+      "normalized_radius": {
+        "denominator": 14,
+        "numerator": 7
+      },
+      "preserves_native_contraction_exactly": true,
+      "q": 3,
+      "spectrum": {
+        "-1": 12,
+        "-7": 6,
+        "14": 1,
+        "5": 8
+      }
+    },
+    {
+      "alpha": 4,
+      "degree": 16,
+      "frontier_condition": "alpha <= (3+2)/(3-2) = 5/1",
+      "nontrivial_radius": 8,
+      "normalized_radius": {
+        "denominator": 16,
+        "numerator": 8
+      },
+      "preserves_native_contraction_exactly": true,
+      "q": 3,
+      "spectrum": {
+        "-2": 12,
+        "-8": 6,
+        "16": 1,
+        "7": 8
+      }
+    },
+    {
+      "alpha": 5,
+      "degree": 18,
+      "frontier_condition": "alpha <= (3+2)/(3-2) = 5/1",
+      "nontrivial_radius": 9,
+      "normalized_radius": {
+        "denominator": 18,
+        "numerator": 9
+      },
+      "preserves_native_contraction_exactly": true,
+      "q": 3,
+      "spectrum": {
+        "-3": 12,
+        "-9": 6,
+        "18": 1,
+        "9": 8
+      }
+    },
+    {
+      "alpha": 6,
+      "degree": 20,
+      "frontier_condition": "alpha <= (3+2)/(3-2) = 5/1",
+      "nontrivial_radius": 11,
+      "normalized_radius": {
+        "denominator": 20,
+        "numerator": 11
+      },
+      "preserves_native_contraction_exactly": false,
+      "q": 3,
+      "spectrum": {
+        "-10": 6,
+        "-4": 12,
+        "11": 8,
+        "20": 1
+      }
+    },
+    {
+      "alpha": 0,
+      "degree": 24,
+      "frontier_condition": "alpha <= (5+2)/(5-2) = 7/3",
+      "nontrivial_radius": 6,
+      "normalized_radius": {
+        "denominator": 24,
+        "numerator": 6
+      },
+      "preserves_native_contraction_exactly": true,
+      "q": 5,
+      "spectrum": {
+        "-1": 24,
+        "-6": 40,
+        "24": 1,
+        "4": 60
+      }
+    },
+    {
+      "alpha": 1,
+      "degree": 28,
+      "frontier_condition": "alpha <= (5+2)/(5-2) = 7/3",
+      "nontrivial_radius": 7,
+      "normalized_radius": {
+        "denominator": 28,
+        "numerator": 7
+      },
+      "preserves_native_contraction_exactly": true,
+      "q": 5,
+      "spectrum": {
+        "-7": 40,
+        "28": 1,
+        "3": 84
+      }
+    },
+    {
+      "alpha": 2,
+      "degree": 32,
+      "frontier_condition": "alpha <= (5+2)/(5-2) = 7/3",
+      "nontrivial_radius": 8,
+      "normalized_radius": {
+        "denominator": 32,
+        "numerator": 8
+      },
+      "preserves_native_contraction_exactly": true,
+      "q": 5,
+      "spectrum": {
+        "-8": 40,
+        "2": 60,
+        "32": 1,
+        "7": 24
+      }
+    },
+    {
+      "alpha": 3,
+      "degree": 36,
+      "frontier_condition": "alpha <= (5+2)/(5-2) = 7/3",
+      "nontrivial_radius": 11,
+      "normalized_radius": {
+        "denominator": 36,
+        "numerator": 11
+      },
+      "preserves_native_contraction_exactly": false,
+      "q": 5,
+      "spectrum": {
+        "-9": 40,
+        "1": 60,
+        "11": 24,
+        "36": 1
+      }
+    },
+    {
+      "alpha": 4,
+      "degree": 40,
+      "frontier_condition": "alpha <= (5+2)/(5-2) = 7/3",
+      "nontrivial_radius": 15,
+      "normalized_radius": {
+        "denominator": 40,
+        "numerator": 15
+      },
+      "preserves_native_contraction_exactly": false,
+      "q": 5,
+      "spectrum": {
+        "-10": 40,
+        "0": 60,
+        "15": 24,
+        "40": 1
+      }
+    },
+    {
+      "alpha": 0,
+      "degree": 48,
+      "frontier_condition": "alpha <= (7+2)/(7-2) = 9/5",
+      "nontrivial_radius": 8,
+      "normalized_radius": {
+        "denominator": 48,
+        "numerator": 8
+      },
+      "preserves_native_contraction_exactly": true,
+      "q": 7,
+      "spectrum": {
+        "-1": 48,
+        "-8": 126,
+        "48": 1,
+        "6": 168
+      }
+    },
+    {
+      "alpha": 1,
+      "degree": 54,
+      "frontier_condition": "alpha <= (7+2)/(7-2) = 9/5",
+      "nontrivial_radius": 9,
+      "normalized_radius": {
+        "denominator": 54,
+        "numerator": 9
+      },
+      "preserves_native_contraction_exactly": true,
+      "q": 7,
+      "spectrum": {
+        "-9": 126,
+        "5": 216,
+        "54": 1
+      }
+    },
+    {
+      "alpha": 2,
+      "degree": 60,
+      "frontier_condition": "alpha <= (7+2)/(7-2) = 9/5",
+      "nontrivial_radius": 11,
+      "normalized_radius": {
+        "denominator": 60,
+        "numerator": 11
+      },
+      "preserves_native_contraction_exactly": false,
+      "q": 7,
+      "spectrum": {
+        "-10": 126,
+        "11": 48,
+        "4": 168,
+        "60": 1
+      }
+    },
+    {
+      "alpha": 3,
+      "degree": 66,
+      "frontier_condition": "alpha <= (7+2)/(7-2) = 9/5",
+      "nontrivial_radius": 17,
+      "normalized_radius": {
+        "denominator": 66,
+        "numerator": 17
+      },
+      "preserves_native_contraction_exactly": false,
+      "q": 7,
+      "spectrum": {
+        "-11": 126,
+        "17": 48,
+        "3": 168,
+        "66": 1
+      }
+    }
+  ],
+  "certificate_sha256": "02100aceae5dca17198683ff8aa2e8ddba4ed8e5ad9d4ccd8110d2f78e605768",
+  "checks": {
+    "q3_a0_exact_controlled_shift": true,
+    "q3_a0_frontier_law": true,
+    "q3_a0_spectrum": true,
+    "q3_a1_exact_controlled_shift": true,
+    "q3_a1_frontier_law": true,
+    "q3_a1_spectrum": true,
+    "q3_a2_exact_controlled_shift": true,
+    "q3_a2_frontier_law": true,
+    "q3_a2_spectrum": true,
+    "q3_a3_exact_controlled_shift": true,
+    "q3_a3_frontier_law": true,
+    "q3_a3_spectrum": true,
+    "q3_a4_exact_controlled_shift": true,
+    "q3_a4_frontier_law": true,
+    "q3_a4_spectrum": true,
+    "q3_a5_exact_controlled_shift": true,
+    "q3_a5_frontier_law": true,
+    "q3_a5_spectrum": true,
+    "q3_a6_frontier_law": true,
+    "q3_a6_spectrum": true,
+    "q3_native_commutes_with_fibre_complete": true,
+    "q5_a0_frontier_law": true,
+    "q5_a0_spectrum": true,
+    "q5_a1_frontier_law": true,
+    "q5_a1_spectrum": true,
+    "q5_a2_frontier_law": true,
+    "q5_a2_spectrum": true,
+    "q5_a3_frontier_law": true,
+    "q5_a3_spectrum": true,
+    "q5_a4_frontier_law": true,
+    "q5_a4_spectrum": true,
+    "q5_native_commutes_with_fibre_complete": true,
+    "q7_a0_frontier_law": true,
+    "q7_a0_spectrum": true,
+    "q7_a1_frontier_law": true,
+    "q7_a1_spectrum": true,
+    "q7_a2_frontier_law": true,
+    "q7_a2_spectrum": true,
+    "q7_a3_frontier_law": true,
+    "q7_a3_spectrum": true,
+    "q7_native_commutes_with_fibre_complete": true,
+    "voltage_only_magnetic_phase_is_pure_gauge": true
+  },
+  "exact_contraction_frontier": "0 <= alpha <= (q+2)/(q-2) implies normalized nontrivial radius exactly 1/(q-1)",
+  "gauge_obstruction": "phases depending only on z'-z are G^*AG and are physically gauge-equivalent to native propagation",
+  "qutrit_gate_checks": [
+    {
+      "alpha": 0,
+      "exact_unitary": "omega^1 S",
+      "gate_time": "2*pi/3",
+      "maximum_matrix_error": 2.6775070903280992e-15,
+      "minimum_column_target_fidelity": 0.9999999999999989
+    },
+    {
+      "alpha": 1,
+      "exact_unitary": "omega^2 S",
+      "gate_time": "2*pi/3",
+      "maximum_matrix_error": 3.037682595260427e-15,
+      "minimum_column_target_fidelity": 0.9999999999999984
+    },
+    {
+      "alpha": 2,
+      "exact_unitary": "omega^3 S",
+      "gate_time": "2*pi/3",
+      "maximum_matrix_error": 2.689069833454742e-15,
+      "minimum_column_target_fidelity": 1.0
+    },
+    {
+      "alpha": 3,
+      "exact_unitary": "omega^4 S",
+      "gate_time": "2*pi/3",
+      "maximum_matrix_error": 4.938328454123255e-15,
+      "minimum_column_target_fidelity": 0.9999999999999989
+    },
+    {
+      "alpha": 4,
+      "exact_unitary": "omega^5 S",
+      "gate_time": "2*pi/3",
+      "maximum_matrix_error": 8.858182282623867e-15,
+      "minimum_column_target_fidelity": 0.9999999999999984
+    },
+    {
+      "alpha": 5,
+      "exact_unitary": "omega^6 S",
+      "gate_time": "2*pi/3",
+      "maximum_matrix_error": 5.011582186168135e-15,
+      "minimum_column_target_fidelity": 0.9999999999999996
+    }
+  ],
+  "qutrit_no_tradeoff_gate": {
+    "Hamiltonian": "A+alpha F+(i/sqrt(3))(S-S^*)",
+    "allowed_integer_alpha": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "interpretation": "the real routing layer retains the native 1/2 contraction while the magnetic layer supplies exact phase transfer",
+    "result": "at T=2*pi/3, U=omega^(1+alpha)S with unit fidelity and no leakage"
+  },
+  "real_fibre_augmentation": "H_alpha=A+alpha F, where F is q^2 disjoint copies of K_q",
+  "schema": "w33.pass402.quantum_classical_frontier.v1",
+  "spectrum_formula": {
+    "base_sector": "-1+alpha(q-1), multiplicity q^2-1",
+    "degree": "q^2-1+alpha(q-1)",
+    "negative_character_sector": "-q-1-alpha, multiplicity q(q-1)^2/2",
+    "positive_character_sector": "q-1-alpha, multiplicity q(q^2-1)/2"
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,47 @@
+{
+  "blinded_choi_protocol": {
+    "blind_labels": {
+      "A7": "native-only",
+      "B2": "native-plus-magnetic-control"
+    },
+    "physical_experiment_completed": false,
+    "predictions": {
+      "A7": "identity up to omega",
+      "B2": "central phase shift up to omega",
+      "process_cross_overlap": "0 because Tr(S)=0"
+    },
+    "required_ingestion": "Pass-397 sealed external raw-count bundle",
+    "study_type": "compiled_protocol_not_physical_data"
+  },
+  "certificate_sha256": "06e4b1426a3f20b8ce1dbc03d786b1b67bd344fba56501ccfb5874be1698a575",
+  "checks": {
+    "compiled_edges_equal_native_graph": true,
+    "control_edge_count_27": true,
+    "control_is_nine_oriented_triangles": true,
+    "each_K9_edge_once": true,
+    "four_base_pairs_per_layer": true,
+    "native_edge_count_108": true,
+    "nine_native_layers": true,
+    "no_mode_conflicts": true,
+    "twelve_mode_couplers_per_layer": true
+  },
+  "compiler_law": "for base pair u<v, connect (u,z) to (v,z+omega(u,v)); edge-colour K_9 with nine near-perfect matchings",
+  "control_hardware": {
+    "couplers": 27,
+    "directed_phase": "+pi/2",
+    "gate_time": "2*pi/3",
+    "layer": "nine simultaneous magnetic triangles",
+    "magnitude": "1/sqrt(3)"
+  },
+  "native_hardware": {
+    "base_pairs_per_layer": 4,
+    "idle_fibre_per_layer": 1,
+    "layers": 9,
+    "parallel_mode_couplers_per_layer": 12,
+    "total_edges": 108
+  },
+  "schedule_path": "data/w33_pass404_photonic_voltage_schedule_q3.json",
+  "schedule_sha256": "8dfc0361dfa0f197b90c64404c00f4e428f6666437e10b2b90cb8c24910c9a66",
+  "schema": "w33.pass404.photonic_voltage_compiler.v2",
+  "status": "PASS"
+}
