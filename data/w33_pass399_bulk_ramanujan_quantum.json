@@ -145,7 +145,7 @@
       "q": 5,
       "ramanujan_bound_squared": 92,
       "spanning_tree_count": null,
-      "spannning_tree_decimal_digits": 169,
+      "spanning_tree_decimal_digits": 169,
       "spanning_tree_decimal_sha256": "20c7f7afcb75ac759cea64af87f8bdb3aa02ef9f5ddb243266cef022cdfb2e01",
       "spectrum": {
         "-1": 24,
@@ -223,7 +223,7 @@
       "ramanujan_bound_squared": 188,
       "spanning_tree_count": null,
       "spanning_tree_decimal_digits": 572,
-      "spannning_tree_decimal_sha256": "de2b89b8ac855c80b65ecf03ad30a27c11a64111ffa53f89354cdc1509b04b4b",
+      "spanning_tree_decimal_sha256": "de2b89b8ac855c80b65ecf03ad30a27c11a64111ffa53f89354cdc1509b04b4b",
       "spectrum": {
         "-1": 48,
         "-8": 126,
