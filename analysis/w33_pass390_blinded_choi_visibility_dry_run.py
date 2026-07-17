@@ -192,11 +192,11 @@ def build_bundle(output_dir: Path) -> tuple[dict, dict, dict]:
     results = unblind(blinded, key_map)
 
     output_dir.mkdir(parents=True, exist_ok=True)
-    raw_text = json.dumps(raw, indent=2, sort_keys=True) + "\n"
-    key_text = json.dumps(key, indent=2, sort_keys=True) + "\n"
+    raw_text = json.dumps(raw, sort_keys=True, separators=(",", ":")) + "\n"
+    key_text = json.dumps(key, sort_keys=True, separators=(",", ":")) + "\n"
     results["raw_counts_sha256"] = sha256_text(raw_text)
     results["blind_key_sha256"] = sha256_text(key_text)
-    results_text = json.dumps(results, indent=2, sort_keys=True) + "\n"
+    results_text = json.dumps(results, sort_keys=True, separators=(",", ":")) + "\n"
 
     (output_dir / "w33_pass390_choi_visibility_raw_counts.json").write_text(
         raw_text, encoding="utf-8"
