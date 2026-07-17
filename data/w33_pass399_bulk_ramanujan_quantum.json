@@ -1,0 +1,287 @@
+{
+  "adjacency_law": "z'-z = y*x' - x*y' with distinct base coordinates",
+  "cases": [
+    {
+      "checks": {
+        "distance_shells": true,
+        "hashimoto_nontrivial_circle": true,
+        "normalized_nontrivial_radius": true,
+        "projective_period": true,
+        "quantum_formula": true,
+        "ramanujan": true,
+        "regular_degree": true,
+        "spanning_tree_formula": true,
+        "spectrum_matches_closed_form": true,
+        "vertex_count": true
+      },
+      "degree": 8,
+      "distance_shells": {
+        "0": 1,
+        "1": 8,
+        "2": 16,
+        "3": 2
+      },
+      "edges": 108,
+      "hashimoto_circle_radius_squared": 7,
+      "ihara_factors": [
+        {
+          "adjacency_eigenvalue": 8,
+          "multiplicity": 1,
+          "quadratic_constant": 1,
+          "quadratic_linear_coefficient": -8,
+          "quadratic_u2_coefficient": 7
+        },
+        {
+          "adjacency_eigenvalue": 2,
+          "multiplicity": 12,
+          "quadratic_constant": 1,
+          "quadratic_linear_coefficient": -2,
+          "quadratic_u2_coefficient": 7
+        },
+        {
+          "adjacency_eigenvalue": -1,
+          "multiplicity": 8,
+          "quadratic_constant": 1,
+          "quadratic_linear_coefficient": 1,
+          "quadratic_u2_coefficient": 7
+        },
+        {
+          "adjacency_eigenvalue": -4,
+          "multiplicity": 6,
+          "quadratic_constant": 1,
+          "quadratic_linear_coefficient": 4,
+          "quadratic_u2_coefficient": 7
+        }
+      ],
+      "laplacian_spectrum": {
+        "0": 1,
+        "12": 6,
+        "6": 12,
+        "9": 8
+      },
+      "nontrivial_adjacency_radius": 4,
+      "normalized_nontrivial_radius": {
+        "denominator": 2,
+        "numerator": 1
+      },
+      "projective_period": "2*pi/3",
+      "q": 3,
+      "ramanujan_bound_squared": 28,
+      "spanning_tree_count": "10362839986909376151552",
+      "spanning_tree_decimal_digits": 23,
+      "spanning_tree_decimal_sha256": "2724a4d69603133259b27a264886f5edd792258c6552e06bfe323839901860e4",
+      "spectrum": {
+        "-1": 8,
+        "-4": 6,
+        "2": 12,
+        "8": 1
+      },
+      "vertices": 27
+    },
+    {
+      "checks": {
+        "distance_shells": true,
+        "hashimoto_nontrivial_circle": true,
+        "normalized_nontrivial_radius": true,
+        "projective_period": true,
+        "quantum_formula": true,
+        "ramanujan": true,
+        "regular_degree": true,
+        "spanning_tree_formula": true,
+        "spectrum_matches_closed_form": true,
+        "vertex_count": true
+      },
+      "degree": 24,
+      "distance_shells": {
+        "0": 1,
+        "1": 24,
+        "2": 96,
+        "3": 4
+      },
+      "edges": 1500,
+      "hashimoto_circle_radius_squared": 23,
+      "ihara_factors": [
+        {
+          "adjacency_eigenvalue": 24,
+          "multiplicity": 1,
+          "quadratic_constant": 1,
+          "quadratic_linear_coefficient": -24,
+          "quadratic_u2_coefficient": 23
+        },
+        {
+          "adjacency_eigenvalue": 4,
+          "multiplicity": 60,
+          "quadratic_constant": 1,
+          "quadratic_linear_coefficient": -4,
+          "quadratic_u2_coefficient": 23
+        },
+        {
+          "adjacency_eigenvalue": -1,
+          "multiplicity": 24,
+          "quadratic_constant": 1,
+          "quadratic_linear_coefficient": 1,
+          "quadratic_u2_coefficient": 23
+        },
+        {
+          "adjacency_eigenvalue": -6,
+          "multiplicity": 40,
+          "quadratic_constant": 1,
+          "quadratic_linear_coefficient": 6,
+          "quadratic_u2_coefficient": 23
+        }
+      ],
+      "laplacian_spectrum": {
+        "0": 1,
+        "20": 60,
+        "25": 24,
+        "30": 40
+      },
+      "nontrivial_adjacency_radius": 6,
+      "normalized_nontrivial_radius": {
+        "denominator": 4,
+        "numerator": 1
+      },
+      "projective_period": "2*pi/5",
+      "q": 5,
+      "ramanujan_bound_squared": 92,
+      "spanning_tree_count": null,
+      "spanning_tree_decimal_digits": 169,
+      "spanning_tree_decimal_sha256": "20c7f7afcb75ac759cea64af87f8bdb3aa02ef9f5ddb243266cef022cdfb2e01",
+      "spectrum": {
+        "-1": 24,
+        "-6": 40,
+        "24": 1,
+        "4": 60
+      },
+      "vertices": 125
+    },
+    {
+      "checks": {
+        "distance_shells": true,
+        "hashimoto_nontrivial_circle": true,
+        "normalized_nontrivial_radius": true,
+        "projective_period": true,
+        "quantum_formula": true,
+        "ramanujan": true,
+        "regular_degree": true,
+        "spanning_tree_formula": true,
+        "spectrum_matches_closed_form": true,
+        "vertex_count": true
+      },
+      "degree": 48,
+      "distance_shells": {
+        "0": 1,
+        "1": 48,
+        "2": 288,
+        "3": 6
+      },
+      "edges": 8232,
+      "hashimoto_circle_radius_squared": 47,
+      "ihara_factors": [
+        {
+          "adjacency_eigenvalue": 48,
+          "multiplicity": 1,
+          "quadratic_constant": 1,
+          "quadratic_linear_coefficient": -48,
+          "quadratic_u2_coefficient": 47
+        },
+        {
+          "adjacency_eigenvalue": 6,
+          "multiplicity": 168,
+          "quadratic_constant": 1,
+          "quadratic_linear_coefficient": -6,
+          "quadratic_u2_coefficient": 47
+        },
+        {
+          "adjacency_eigenvalue": -1,
+          "multiplicity": 48,
+          "quadratic_constant": 1,
+          "quadratic_linear_coefficient": 1,
+          "quadratic_u2_coefficient": 47
+        },
+        {
+          "adjacency_eigenvalue": -8,
+          "multiplicity": 126,
+          "quadratic_constant": 1,
+          "quadratic_linear_coefficient": 8,
+          "quadratic_u2_coefficient": 47
+        }
+      ],
+      "laplacian_spectrum": {
+        "0": 1,
+        "42": 168,
+        "49": 48,
+        "56": 126
+      },
+      "nontrivial_adjacency_radius": 8,
+      "normalized_nontrivial_radius": {
+        "denominator": 6,
+        "numerator": 1
+      },
+      "projective_period": "2*pi/7",
+      "q": 7,
+      "ramanujan_bound_squared": 188,
+      "spanning_tree_count": null,
+      "spanning_tree_decimal_digits": 572,
+      "spanning_tree_decimal_sha256": "de2b89b8ac855c80b65ecf03ad30a27c11a64111ffa53f89354cdc1509b04b4b",
+      "spectrum": {
+        "-1": 48,
+        "-8": 126,
+        "48": 1,
+        "6": 168
+      },
+      "vertices": 343
+    }
+  ],
+  "certificate_sha256": "f7d3062c5794a7a39e302527cb76f324532c28689825e5371d6d2c9a3d3c41f4",
+  "checks": {
+    "q3_distance_shells": true,
+    "q3_hashimoto_nontrivial_circle": true,
+    "q3_normalized_nontrivial_radius": true,
+    "q3_projective_period": true,
+    "q3_quantum_formula": true,
+    "q3_ramanujan": true,
+    "q3_regular_degree": true,
+    "q3_spanning_tree_formula": true,
+    "q3_spectrum_matches_closed_form": true,
+    "q3_vertex_count": true,
+    "q5_distance_shells": true,
+    "q5_hashimoto_nontrivial_circle": true,
+    "q5_normalized_nontrivial_radius": true,
+    "q5_projective_period": true,
+    "q5_quantum_formula": true,
+    "q5_ramanujan": true,
+    "q5_regular_degree": true,
+    "q5_spanning_tree_formula": true,
+    "q5_spectrum_matches_closed_form": true,
+    "q5_vertex_count": true,
+    "q7_distance_shells": true,
+    "q7_hashimoto_nontrivial_circle": true,
+    "q7_normalized_nontrivial_radius": true,
+    "q7_projective_period": true,
+    "q7_quantum_formula": true,
+    "q7_ramanujan": true,
+    "q7_regular_degree": true,
+    "q7_spanning_tree_formula": true,
+    "q7_spectrum_matches_closed_form": true,
+    "q7_vertex_count": true
+  },
+  "laplacian_formula": {
+    "0": 1,
+    "q(q+1)": "q(q-1)^2/2",
+    "q(q-1)": "q(q^2-1)/2",
+    "q^2": "q^2-1"
+  },
+  "quantum_statement": "projective period 2*pi/q; exact phase-fibre-only revival forces sin(qt)=0 and exp(-i q^2 t)=1, hence only scalar identity evolution",
+  "ramanujan_statement": "max nontrivial |lambda| = q+1 <= 2*sqrt(q^2-2); normalized radius = 1/(q-1)",
+  "schema": "w33.pass399.bulk_ramanujan_quantum.v1",
+  "spanning_tree_formula": "q^(q^3+q^2-5) * (q-1)^(q(q^2-1)/2) * (q+1)^(q(q-1)^2/2)",
+  "spectrum_formula": {
+    "-1": "q^2-1",
+    "-q-1": "q(q-1)^2/2",
+    "q-1": "q(q^2-1)/2",
+    "q^2-1": 1
+  },
+  "status": "PASS",
+  "theorem_scope": "all odd prime powers q; executable verification at q=3,5,7"
+}
