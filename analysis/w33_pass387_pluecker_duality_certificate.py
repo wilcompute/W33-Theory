@@ -125,8 +125,9 @@ def pluecker(u: Vec4, v: Vec4) -> Vec5:
     for i, j in itertools.combinations(range(4), 2):
         minors[(i, j)] = (u[i] * v[j] - u[j] * v[i]) % P
 
-    # Symplectic isotropy is p02+p13=0. Eliminating p13 from
-    # p01*p23-p02*p13+p03*p12=0 gives p01*p23+p02^2+p03*p12=0.
+    # Symplectic isotropy is p02+p13=0.  Eliminating p13 from
+    # p01*p23-p02*p13+p03*p12=0 gives:
+    # p01*p23+p02^2+p03*p12=0.
     point = canonical(
         (
             minors[(0, 1)],
@@ -199,7 +200,10 @@ def maximum_clique_bitset(adjacency: list[set[int]]) -> tuple[int, tuple[int, ..
 
 def maximum_independent_set(n: int, edges: list[tuple[int, int]]) -> tuple[int, tuple[int, ...]]:
     adj = adjacency_sets(n, edges)
-    complement = [set(range(n)).difference({i}, adj[i]) for i in range(n)]
+    complement = [
+        set(range(n)).difference({i}, adj[i])
+        for i in range(n)
+    ]
     return maximum_clique_bitset(complement)
 
 
@@ -221,7 +225,9 @@ def build_certificate() -> dict:
     w_point_to_q_line: list[tuple[int, int, int, int]] = []
     for point_index in range(len(w_points)):
         incident_w_lines = [
-            line_index for line_index, line in enumerate(w_lines) if point_index in line
+            line_index
+            for line_index, line in enumerate(w_lines)
+            if point_index in line
         ]
         q_line = tuple(sorted(w_line_to_q_point[line_index] for line_index in incident_w_lines))
         w_point_to_q_line.append(q_line)
@@ -309,7 +315,7 @@ def main() -> None:
     args = parser.parse_args()
 
     payload = build_certificate()
-    text = json.dumps(payload, indent=2, sort_keys=True) + "\n"
+    text = json.dumps(payload, sort_keys=True, separators=(",", ":")) + "\n"
     if args.check:
         if not args.output.exists():
             raise SystemExit(f"missing committed certificate: {args.output}")
