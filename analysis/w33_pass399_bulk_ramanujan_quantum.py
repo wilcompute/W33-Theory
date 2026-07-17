@@ -65,6 +65,7 @@ def numerical_spectrum(A: np.ndarray) -> dict[int, int]:
 
 
 def laplacian_spectrum(q: int) -> dict[int, int]:
+    k = q * q - 1
     return {
         0: 1,
         q * q: q * q - 1,
@@ -77,7 +78,11 @@ def spanning_tree_formula(q: int) -> int:
     m_plus = q * (q * q - 1) // 2
     m_minus = q * (q - 1) * (q - 1) // 2
     q_exp = q**3 + q**2 - 5
-    return q**q_exp * (q - 1) ** m_plus * (q + 1) ** m_minus
+    return (
+        q**q_exp
+        * (q - 1) ** m_plus
+        * (q + 1) ** m_minus
+    )
 
 
 def spanning_tree_from_laplacian_spectrum(q: int) -> int:
@@ -91,6 +96,7 @@ def spanning_tree_from_laplacian_spectrum(q: int) -> int:
 
 
 def ihara_factor_data(q: int) -> list[dict[str, int]]:
+    """Return factors 1 - lambda*u + (k-1)u^2 with multiplicities."""
     k_minus_1 = q * q - 2
     spec = theoretical_spectrum(q)
     return [
@@ -105,13 +111,20 @@ def ihara_factor_data(q: int) -> list[dict[str, int]]:
     ]
 
 
-def hashimoto_root_moduli(q: int) -> dict[str, float]:
+def hashimoto_circle_check(q: int) -> bool:
+    """Check the exact discriminant criterion for all nontrivial eigenvalues.
+
+    For r^2-lambda*r+(q^2-2)=0, negative discriminant implies the conjugate
+    roots have squared modulus q^2-2.  The check is integer-only.
+    """
     k = q * q - 1
-    out: dict[str, float] = {}
     for lam in theoretical_spectrum(q):
-        roots = np.roots([1.0, -float(lam), float(k - 1)])
-        out[str(lam)] = max(abs(complex(r)) for r in roots)
-    return out
+        if lam == k:
+            continue
+        discriminant = lam * lam - 4 * (k - 1)
+        if discriminant >= 0:
+            return False
+    return True
 
 
 def distance_profile(A: np.ndarray, source: int = 0) -> Counter[int]:
@@ -192,12 +205,10 @@ def certificate_for_q(q: int) -> dict:
     expected = theoretical_spectrum(q)
     observed = numerical_spectrum(A)
     radius = max(abs(lam) for lam in expected if lam != k)
-    ramanujan_bound = 2 * math.sqrt(k - 1)
-    hash_moduli = hashimoto_root_moduli(q)
-    nontrivial_hashimoto = [
-        modulus for lam, modulus in hash_moduli.items() if int(lam) != k
-    ]
+    ramanujan_bound_squared = 4 * (k - 1)
     profile = distance_profile(A)
+    tree_count = spanning_tree_formula(q)
+    tree_decimal = str(tree_count)
 
     checks = {
         "vertex_count": A.shape == (n, n),
@@ -206,11 +217,9 @@ def certificate_for_q(q: int) -> dict:
         "distance_shells": profile == Counter({0: 1, 1: q * q - 1,
                                                 2: (q - 1) * (q * q - 1),
                                                 3: q - 1}),
-        "ramanujan": radius <= ramanujan_bound + 1e-12,
-        "normalized_nontrivial_radius": abs(radius / k - 1 / (q - 1)) < 1e-12,
-        "hashimoto_nontrivial_circle": all(
-            abs(x - math.sqrt(k - 1)) < 1e-8 for x in nontrivial_hashimoto
-        ),
+        "ramanujan": radius * radius <= ramanujan_bound_squared,
+        "normalized_nontrivial_radius": radius * (q - 1) == k,
+        "hashimoto_nontrivial_circle": hashimoto_circle_check(q),
         "spanning_tree_formula": (
             spanning_tree_formula(q) == spanning_tree_from_laplacian_spectrum(q)
         ),
@@ -234,13 +243,17 @@ def certificate_for_q(q: int) -> dict:
             str(key): value for key, value in sorted(laplacian_spectrum(q).items())
         },
         "distance_shells": {str(key): value for key, value in sorted(profile.items())},
-        "ramanujan_bound": ramanujan_bound,
+        "ramanujan_bound_squared": ramanujan_bound_squared,
         "nontrivial_adjacency_radius": radius,
-        "normalized_nontrivial_radius": radius / k,
-        "hashimoto_circle_radius": math.sqrt(k - 1),
-        "hashimoto_root_moduli": hash_moduli,
+        "normalized_nontrivial_radius": {
+            "numerator": 1,
+            "denominator": q - 1,
+        },
+        "hashimoto_circle_radius_squared": k - 1,
         "ihara_factors": ihara_factor_data(q),
-        "spanning_tree_count": str(spanning_tree_formula(q)),
+        "spanning_tree_decimal_digits": len(tree_decimal),
+        "spanning_tree_decimal_sha256": hashlib.sha256(tree_decimal.encode()).hexdigest(),
+        "spanning_tree_count": tree_decimal if q == 3 else None,
         "projective_period": f"2*pi/{q}",
         "checks": checks,
     }
