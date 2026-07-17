@@ -1,0 +1,78 @@
+{
+  "schema": "w33.pass368.eisenstein_rank_parity_law.v1",
+  "status": "PASS",
+  "THE_LAW": "Over F4, h(x,x) = sum x_i^3 = Hamming weight mod 2, so the traced rank-n Hermitian form has isotropic count (4^n + (-2)^n)/2 = 2^{2n-1} + (-1)^n 2^{n-1}: the F2 type of any Eisenstein structure is (-1)^{rank}. One line.",
+  "the_four_appearances": {
+    "rank 1 (A2)": "MINUS -> O-(2,2) = S3 = W(A2); the tower's unique minus refinement at m=1 IS the A2/GKP block structure",
+    "rank 3 (E6)": "MINUS -> O-(6,2) = W(E6) -- their Pass 365; the minus form IS E6/2E6, split 1+27+36",
+    "rank 4 (E8)": "PLUS -> O+(8,2) = W(E8)/{+-1} -- their Pass 364; split 1+135+120 is the E8 norm-4/root-pair split",
+    "rank 5 (5a lattice)": "MINUS forced on the omega-stable side (496); H10 certified PLUS (528) -> omega broken -- my Pass 347"
+  },
+  "the_sixth_certificate_instance": "Their Pass 365 witness line 'minus_group_vector_orbits_are_1_27_36' computed the E6/2E6 split and passed without naming it. The 27 nonzero isotropics are THE 27; the 36 nonsingular vectors are the 36 root pairs of E6 -- so by their own spread bijection, THE 36 W33 SPREADS ARE THE E6 ROOT PAIRS MOD 2.",
+  "what_it_adds_to_selection": "The ledger now says 'Selection here means choosing a quadratic refinement'. The law says WHICH refinement is Eisenstein-compatible at every block count -- the type-(-1)^m one -- and choosing the other type is precisely Pass 347's omega-breaking act. Refinement choice, leaf choice, and half-spin choice are one binary act at ranks m, 5, and on the D5 spinors; the substrate's own groups appear exactly on the Eisenstein-compatible side, the chirality-bearing logical objects on the broken side.",
+  "PREDICTION_for_m6": "K12 (Coxeter-Todd) is Eisenstein rank 6 with odd Hermitian discriminant -> mod-2 type PLUS, 2080 isotropic classes. At m=6, [[822,6,21]], the PLUS refinement should carry the mod-2 image of Aut(K12) = 6.PSU(4,3).2 inside O+(12,2) as a distinguished substructure, continuing the m=1,3,4 exceptional rungs. If it does NOT distinguish itself, the exceptional reading of the tower stops at E8 -- also worth knowing. Handed to the GAP track.",
+  "the_law_table": {
+    "1": {
+      "enumerated": 1,
+      "closed_form": 1,
+      "type": "MINUS"
+    },
+    "2": {
+      "enumerated": 10,
+      "closed_form": 10,
+      "type": "PLUS"
+    },
+    "3": {
+      "enumerated": 28,
+      "closed_form": 28,
+      "type": "MINUS"
+    },
+    "4": {
+      "enumerated": 136,
+      "closed_form": 136,
+      "type": "PLUS"
+    },
+    "5": {
+      "enumerated": 496,
+      "closed_form": 496,
+      "type": "MINUS"
+    }
+  },
+  "checks": {
+    "law_n1_enum_equals_closed": true,
+    "law_n2_enum_equals_closed": true,
+    "law_n3_enum_equals_closed": true,
+    "law_n4_enum_equals_closed": true,
+    "law_n5_enum_equals_closed": true,
+    "law_n3_is_28_minus": true,
+    "law_n4_is_136_plus": true,
+    "law_n5_is_496_minus": true,
+    "law_n6_is_2080_plus": true,
+    "E6_det_3": true,
+    "E6_even": true,
+    "E6_mod2_iso_28_minus": true,
+    "E6_split_1_27_36": true,
+    "matches_their_365_certificate_1_27_36": true,
+    "36_nonsingular_are_E6_root_pairs": true,
+    "27_isotropic_are_THE_27": true,
+    "E6_omega_integral": true,
+    "E6_omega_order_3": true,
+    "E6_omega_isometry": true,
+    "E6_omega_fixed_point_free": true,
+    "so_E6_is_eisenstein_rank_3": true,
+    "E8_unimodular_even": true,
+    "E8_mod2_iso_136_plus": true,
+    "E8_split_1_135_120": true,
+    "matches_their_364_srg_135_120": true,
+    "120_nonsingular_are_E8_root_pairs": true,
+    "O_minus_2_2_is_S3_order_6": true,
+    "O_minus_6_2_is_51840": true,
+    "O_plus_8_2_is_W_E8_over_pm": true,
+    "tower_boundary_is_rank_parity": true,
+    "H10_is_plus_528": true,
+    "eisenstein_forces_minus_496_at_n5": true,
+    "so_H10_is_on_the_broken_side": true,
+    "K12_is_eisenstein_rank_6_odd_disc": true,
+    "prediction_m6_plus_2080": true
+  }
+}

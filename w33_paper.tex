@@ -561,6 +561,56 @@ The four exchanges unify exactly as one grading, but not as one common
 involutory gate.
 
 \smallskip
+\textbf{EXACT BOUNDARY DECODER (Pass 368).}  Returning to the ternary W33
+edge complex, GAP proves that the triangle-boundary image itself is the
+classical code
+\[
+ B_1=\operatorname{im}\partial_2=[240,120,3]_3.
+\]
+The parity matrix has 240 nonzero, projectively distinct columns, excluding
+weights one and two, while every oriented triangle supplies a weight-three
+word.  Hence all 480 nonzero one-edge errors have different syndromes and the
+complete radius-one maximum-likelihood table has exactly 481 entries.  This
+does not replace the already-owned logical quotient theorem: the canonical CSS
+code remains $[[240,81,3]]_3$ with $(d_X,d_Z)=(3,4)$.
+
+\smallskip
+\textbf{NATURAL PHASE-SHEET ACTION (Pass 369).}  BT571/BT637/BT644 already
+own the four $\mathbb F_3^\times\!\times\mathbb F_3^\times$ scalar lifts over
+each of the 12960 projective minimal-pair incidences, together with their
+$25920+25920$ phase split and deck signs.  The missing equivariant question is
+now decided: the signed edge-chain action of $PSp(4,3)$ and
+$PGSp(4,3)\cong W(E_6)$ has four orbits of size 12960 on the 51840 nonzero
+minimal logical $X/Z$ vector pairings.  Their stabilizers are respectively
+$C_2$ and $C_2\times C_2$.  Thus the natural full action is four copies of
+$W(E_6)/(C_2\times C_2)$, not a regular $W(E_6)$ torsor; a regular lift would
+require additional phase transport not supplied by W33 collineations.
+
+\smallskip
+\textbf{PHASE-CHARACTER NORMALIZER OBSTRUCTION (Pass 370).}  Let
+$D=(\mathbb F_3^\times)^2\cong V_4$ be the scalar deck and retain the
+BT644 character $\chi(a,b)=ab$.  GAP gives
+\[
+ \operatorname{Aut}(D)=S_3,
+ \qquad \operatorname{Stab}_{\operatorname{Aut}(D)}(\ker\chi)=C_2.
+\]
+Thus $D{:}C_3\cong A_4$ and $D{:}S_3\cong S_4$ exist for the bare group,
+but the order-three automorphism cycles the three nonzero characters.  On the
+four scalar lifts the unrestricted normalizer is $S_4$, whereas the setwise
+stabilizer of the fixed $2+2$ phase partition is exactly $D_8$, with no
+order-three element.  Independently, if $K\cong V_4$ is the actual Pass-369
+stabilizer, then
+\[
+ |N_{W(E_6)}(K)|=32,
+ \qquad N_{W(E_6)}(K)/K\cong D_8.
+\]
+These are isomorphic normalizer quotients on different objects; no intertwiner
+is asserted.  The split enlargement $W(E_6)\times D$ does not repair the
+torsor: its explicit coset stabilizer has index $51840$, but a regular
+complement would force a subgroup of order $12960$ in $W(E_6)$, and GAP's 350
+subgroup classes contain none.
+
+\smallskip
 \textbf{What fell:} every \emph{metric} or \emph{basis-dependent} geometric claim
 (five retractions, none from the spectral side, Pass 311) --- \emph{and} both
 headline theorems, to prior art. Before claiming any result here is new, consult
@@ -1934,8 +1984,15 @@ r &= 1/\binom{\Phi_4}{2} = 1/45 = 0.0222
 \end{equation}
 The exact ratio $r = 1/45$ corresponds to the reciprocal of the $45$ tritangent planes on the $W(3,3)$ characteristic cubic surface.
 
-\subsection{Bekenstein-Hawking Entropy and QEC Code Distance}
-The holographic entropy bound of a black hole horizon is $S_{\text{BH}} = A / 4$. In the $W(3,3)$ substrate, the phenomenological horizon corresponds to a stabilizer restriction boundary (an edge cut). The maximum number of distinguishable logical states encoded on a boundary of $A$ physical edges is throttled by the minimum code distance required to breach the error-corrected interior. The $W(3,3)$ CSS code has exactly distance $d_Z = 4$. Thus, the universal $1/4$ factor in the Bekenstein-Hawking formula is natively the $1/d_Z$ QEC distance bound!
+\subsection{Bekenstein-Hawking Entropy and the One-Sided QEC Distance}
+The holographic entropy bound of a black hole horizon is $S_{\text{BH}} = A / 4$.
+In the $W(3,3)$ substrate, the proposed finite dictionary treats a stabilizer
+restriction boundary as an edge cut.  The exact edge-carrier CSS code is
+$[[240,81,3]]_3$, with asymmetric distances $d_X=3$ and $d_Z=4$.  Consequently
+the factor $1/4$ can be compared with the one-sided quantity $1/d_Z$, but not
+with the full CSS distance, which is $d=\min(d_X,d_Z)=3$.  This is a finite
+QEC analogy; the code calculation alone does not derive the continuum
+Bekenstein--Hawking law.
 
 \subsection{Discrete AdS/CFT and the Conformal Group}
 Holographic duality (AdS/CFT) relates a negatively curved hyperbolic bulk to a conformal boundary. The $W(3,3)$ graph Laplacian possesses a single negative eigenvalue ($-4$), denoting its intrinsic hyperbolic curvature limit. The multiplicity of this negative eigenvalue is exactly $g = 15$. Astonishingly, $15$ is precisely the geometric dimension of the $4$D minimal conformal group $SO(4,2)$. The $15$ negative-curvature modes of the discrete bulk perfectly match and generate the $15$ generators of the conformal boundary, realizing exact discrete AdS/CFT mapping without continuum strings.
@@ -13625,13 +13682,98 @@ The exact result is five local vertices and two controller-stable spines; the
 nearby Kirschmer counts cannot be identified with it without matching both the
 group representation and lattice equivalence.
 
+\paragraph{Pass 346 --- the chirality datum cannot exist.}
+The question just posed is closed, in the negative, by a symmetry argument
+whose deciding number was already certified.  Pass 333's integral involution
+$T$ satisfies $\det T=-1$ and $\langle U_4(2),T\rangle=U_4(2).2=W(E_6)$ --- the
+substrate's own controller.  Three independent routes show $T$ \emph{exchanges}
+the half-spins: the outer automorphism swaps $5a\leftrightarrow5b$ (BT866's
+degree-$10$ fusion), so $\alpha(1{+}10a{+}5b)=1{+}10b{+}5a$; coefficient
+conjugation exchanges the maximal isotropic summands of $V=5a\oplus5a^*$, which
+index the two half-spin families; and $\det T=-1$ is improper (Pin/Spin).
+Hence no $\PGSp(4,3)$-invariant separates the two chiralities, and every datum
+built from the substrate is invariant by construction.  Equivalently: $W(E_6)$
+is a reflection group, $\ker(\det)=U_4(2)$ has index two, and selecting a
+chirality is orienting the $E_6$ root system --- \textbf{a reflection group
+contains its own orientation reversals, so it cannot orient itself}.  The
+substrate hosts the Standard Model's chirality and provably cannot explain it;
+the missing datum must break $\PGSp(4,3)$ from outside.
+
+\paragraph{Pass 347 --- the $243$, the parity, and the type are one act.}
+The form-level facts of Pass 332 collapse into one.  $243=3^5=|d_{\QQ(\omega)}|^5$
+is forced by restriction of scalars; the ``odd versus alternating'' parity is
+an artefact of halving ($\mathrm{Tr}\mapsto A_2$, even; $\tfrac12\mathrm{Tr}\mapsto$
+norm, odd); and since $2$ is inert in $\ZZ[\omega]$, the residue field
+$\ZZ[\omega]/2=\FF_4$ \emph{is} Pass 331's $\operatorname{End}(H_8)$.  A traced
+rank-$5$ Hermitian form has $\FF_2$ type $(-1)^5=$ minus ($496$ isotropic),
+while $H_{10}$ is certified plus ($528$): so $H_{10}$ cannot carry an
+$\omega$-stable structure, and indeed it lives on a lattice leaf that $\omega$
+stabilises \emph{not at all}.  \textbf{Choosing a leaf simultaneously kills the
+Eisenstein scalar and flips the type minus$\to$plus} --- the same binary act as
+the half-spin choice.  The group that would make the choice is the group that
+undoes it.
+
+\paragraph{Passes 348/354 --- every multiplicity is a torsor; the missing input
+is a section.}
+The argument generalizes, and its instances were already certified: the two
+half-spins are exchanged by $T$; the three lattice leaves form --- in Pass 332's
+own words --- ``an Eisenstein $C_3$ torsor''; and
+\texttt{bt865\_dual\_torsor\_steinberg\_compiler} certifies two simply
+transitive order-$27$ actions (extraspecial $3^{1+2}$ point states, elementary
+$\FF_3^3$ line programs), regular in three independent fields of its own JSON.
+\[
+\textbf{Every multiplicity the substrate offers is a torsor under its own
+symmetry: } 2,\ 3,\ 27,\ 27.
+\]
+No invariant distinguishes points of a transitive orbit, so none is internally
+selectable.  The inversion is the useful part: a $G$-torsor \emph{is} $G$ once
+one point is chosen, so \textbf{the substrate specifies everything except the
+base points, and the missing physical input is exactly a section} --- one
+choice per torsor.  This also explains the programme's persistent near-miss:
+every structure came out right \emph{up to a choice}, because a torsor is its
+group up to a choice, and the gap between a $G$-set and $G$ is invisible to
+every invariant.  (Three leaves versus three generations is moot, not
+tantalizing: a torsor has no hierarchy, and a mass spectrum \emph{is} one.)
+
+\paragraph{Pass 368 --- the Eisenstein rank-parity law under the QR tower.}
+Passes 363--367's $[[137m,m,21]]$ tower has an ``exact exceptional boundary'':
+$W(E_6)$ appears at the $m{=}3$ \emph{minus} refinement, $W(E_8)/\{\pm1\}$ at
+the $m{=}4$ \emph{plus} refinement.  One elementary law underlies it.  Over
+$\FF_4$ every nonzero element cubes to $1$, so a traced rank-$n$ Hermitian form
+has $Q(x)=$ Hamming weight $\bmod\,2$ and isotropic count
+\[
+\tfrac12\!\left(4^n+(-2)^n\right)=2^{2n-1}+(-1)^n2^{n-1}
+\qquad\Longrightarrow\qquad
+\textbf{type}=(-1)^{\text{Eisenstein rank}}.
+\]
+$A_2$, $E_6$, $E_8$ are Eisenstein of ranks $1,3,4$ (the witness constructs the
+$A_2^3$-glue basis of $E_6$ with an explicit integral fixed-point-free
+$\omega$), so $W(A_2)=O^-(2,2)$, $W(E_6)=O^-(6,2)$, $W(E_8)/\{\pm1\}=O^+(8,2)$
+sit at ranks $1,3,4$ of \emph{one} tower --- and Pass 347's rank-$5$ flip is
+the same law's fourth appearance.  Computed from the root lattices:
+$E_6/2E_6$ splits $1+27+36$ (the $27$ are \emph{the} $27$; the $36$
+nonsingular vectors are the $36$ root pairs, so by Pass 365's own spread
+bijection \textbf{the $36$ $W(3,3)$ spreads are the $E_6$ root pairs mod~$2$});
+$E_8/2E_8$ splits $1+135+120$, Pass 364's SRG pair.  Prediction for the tower:
+the next exceptional Eisenstein rank is $6$ (Coxeter--Todd $K_{12}$, odd
+Hermitian discriminant, hence \emph{plus}, $2080$ isotropic), so at $m=6$ the
+plus refinement of $[[822,6,21]]$ should carry the mod-$2$ image of
+$\operatorname{Aut}(K_{12})=6.\mathrm{PSU}(4,3).2$ as a distinguished
+substructure.  If it does not, the exceptional reading of the tower stops at
+$E_8$ --- also worth knowing.
+
 \paragraph{Current boundary.}
-The principal curved selector frame, the finite Clifford carrier, the
-characteristic-three discriminant module, the global/local extension-class
-ledger, and the local-to-global lattice action are now explicit.  The remaining
-finite question is whether any additional datum canonically selects one of the
-two plus quadratic refinements and one half-spin chirality.  No result here
-identifies either with a physical generation or derives a Standard-Model
+The finite question that closed this manuscript's previous edition ---
+``whether any additional datum canonically selects one plus refinement and one
+half-spin chirality'' --- is now answered: \textbf{no such datum exists inside
+the substrate} (Pass 346), every offered multiplicity being a torsor
+(Passes 348/354).  What remains open is stated by the torsor inversion: the
+type, number, and sizes ($2,3,27,27$) of the sections the substrate cannot
+supply, and whether any \emph{physical} principle outside $\PGSp(4,3)$ selects
+them.  The Eisenstein rank-parity law (Pass 368) fixes which refinement is the
+$\omega$-compatible one at every block count of the QR tower, with the $m=6$
+Coxeter--Todd rung as its next falsifiable instance.  No result here identifies
+a torsor section with a physical generation or derives a Standard-Model
 observable.
 
 \end{document}
