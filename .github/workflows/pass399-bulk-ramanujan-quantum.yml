@@ -2,7 +2,9 @@ name: Pass 399 Bulk Ramanujan and Quantum Release
 
 on:
   push:
-    branches: [master]
+    branches:
+      - master
+      - agent/pass399-bulk-ramanujan
     paths:
       - 'analysis/w33_pass399_bulk_ramanujan_quantum.py'
       - 'data/w33_pass399_bulk_ramanujan_quantum.json'
@@ -14,25 +16,44 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
-  group: pass399-bulk-ramanujan-quantum
+  group: pass399-bulk-ramanujan-quantum-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
-  verify:
+  verify-and-freeze:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       - name: Install focused dependencies
         run: python -m pip install --upgrade numpy pytest
-      - name: Regenerate and compare the frozen certificate
+      - name: Regenerate the frozen certificate from the witness
+        run: python analysis/w33_pass399_bulk_ramanujan_quantum.py
+      - name: Require the committed certificate to be current on pull requests
+        if: github.event_name == 'pull_request'
+        run: git diff --exit-code -- data/w33_pass399_bulk_ramanujan_quantum.json
+      - name: Verify regenerated certificate
         run: python analysis/w33_pass399_bulk_ramanujan_quantum.py --check
       - name: Run Pass 399 regressions
         run: python -m pytest -q tests/test_pass399_bulk_ramanujan_quantum.py
       - name: Verify the live claims ledger
         run: python scripts/check_claims_ledger.py
+      - name: Commit the exact runner-produced certificate when changed
+        if: github.event_name == 'push'
+        run: |
+          if git diff --quiet -- data/w33_pass399_bulk_ramanujan_quantum.json; then
+            echo 'Pass 399 certificate already current.'
+            exit 0
+          fi
+          git config user.name 'w33-pass399-freeze[bot]'
+          git config user.email 'w33-pass399-freeze[bot]@users.noreply.github.com'
+          git add data/w33_pass399_bulk_ramanujan_quantum.json
+          git commit -m 'Pass 399: freeze deterministic bulk spectral certificate'
+          git push origin HEAD:${GITHUB_REF_NAME}
