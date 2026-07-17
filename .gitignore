@@ -159,6 +159,14 @@ data/*
 !data/w33_pass365_qr411_e6_minus_polar_lift.json
 !data/w33_pass366_qr137m_real_clifford_refinement_tower.json
 !data/w33_pass367_universal_c2_exchange_gate_pullback.json
+!data/w33_pass373_triangle_boundary_mlut.json
+!data/w33_pass374_minimal_pair_phase_sheet_obstruction.json
+!data/w33_pass375_phase_character_normalizer_obstruction.json
+!data/w33_pass376_marked_d8_bridge.json
+!data/w33_pass377_binary_q3_switch_header.json
+!data/w33_pass378_header_scheduler_c3_obstruction.json
+!data/w33_pass379_header_q6_geometry_boundary.json
+!data/w33_pass380_minimal_scheduler_phase_lift.json
 
 # Small vendored test fixtures needed for offline/CI collection
 !artifacts/

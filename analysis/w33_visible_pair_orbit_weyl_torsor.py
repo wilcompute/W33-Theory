@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Visible flag-quadrangle pairs as a homogeneous orbit.
+"""Visible flag-quadrangle rays as a homogeneous projective orbit.
 
 Previous finite dictionary:
   X_min = point-line flags of W(3,3)              (160 objects)
@@ -13,9 +13,13 @@ symplectic transvections.  The permutation group generated on the 40 projective
 points has order 25920 = |PSp(4,3)|, and the visible incidence orbit has size
 12960, so the stabilizer has order 2.
 
-Thus the Weyl count is not only arithmetic:
+Thus the projective layer is not only arithmetic:
   |W(E6)| = 4 * |visible projective flag-quadrangle incidences|.
-Equivalently, it is the scalar-phase lift of a homogeneous PSp(4,3) orbit.
+
+Scope correction (Pass 374): this file proves the 12,960-element projective
+orbit and the cardinality of its fourfold scalar lift.  It does not construct a
+torsor on the 51,840 vectors.  The natural signed-chain action splits that lift
+into four invariant 12,960-sheets under both PSp(4,3) and W(E6).
 """
 from __future__ import annotations
 
@@ -184,7 +188,7 @@ def main() -> int:
     }
 
     payload = {
-        "theorem_name": "Visible Pair Orbit-Weyl Torsor Theorem",
+        "theorem_name": "Visible Pair Projective Orbit and Weyl-Count Lift Theorem",
         "summary": {
             "points": len(points),
             "lines": len(lines),
@@ -203,7 +207,13 @@ def main() -> int:
             "PSp_order": "25920",
             "projective_visible_orbit": "12960 = 25920 / 2",
             "scalar_phase_lift": "4 * 12960 = 51840 = |W(E6)|",
-            "interpretation": "Nonzero vector-level minimal X/Z pairings are the scalar-phase lift of one homogeneous visible flag-quadrangle orbit.",
+            "interpretation": "The vector-level count is the fourfold scalar lift of one homogeneous projective orbit; Pass 374 proves the natural signed-chain action preserves four separate sheets rather than forming a W(E6)-torsor.",
+        },
+        "scalar_action_boundary": {
+            "owner": "analysis/w33_pass374_minimal_pair_phase_sheet_obstruction.g",
+            "full_orbit_profile": [12960, 12960, 12960, 12960],
+            "full_stabilizer": "C2 x C2",
+            "conclusion": "51840=|W(E6)| is a cardinality identity here, not a regular-action theorem.",
         },
     }
     root = Path(__file__).resolve().parents[1]

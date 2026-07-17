@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""BT1299 - Harmonic microframe runtime theorem.
+"""BT1299 - finite control-microframe runtime theorem.
 
-The older oscillator scripts prove the local horizon packet
+The legacy oscillator-named artifacts provide the local horizon packet
 
     [72,66]_3 = oscillator total / payload with parity 6.
 
@@ -12,16 +12,16 @@ The holonet runtime scripts prove a separate-looking packet/network stack:
     full Clifford runtime = 51840,
     durable commit clock T(n)=4*(7^n-1).
 
-BT1299 identifies the missing clock spine.  The 72-symbol oscillator horizon is
-the holonet microframe:
+BT1299 identifies the finite control spine. The 72-symbol horizon is the
+holonet microframe:
 
     72 = 9 * 8                     q^2 route digits per frame
     2160 = 30 * 72                 E8-Coxeter mirror bus
     51840 = 24 * 30 * 72           full Clifford runtime
           = 720 * 72               S6/Sp(4,2) frames
 
-The commit clock is always route-epoch aligned, but it is oscillator-frame
-aligned exactly at depths divisible by q=3.
+The commit clock is always route-epoch aligned, but it is microframe-aligned
+exactly at depths divisible by q=3. No physical oscillator is modeled here.
 """
 from __future__ import annotations
 
@@ -175,7 +175,7 @@ def build_payload() -> dict[str, Any]:
     }
 
     payload = {
-        "theorem": "BT1299 harmonic microframe runtime theorem",
+        "theorem": "BT1299 finite control-microframe runtime theorem",
         "verified": all(checks.values()),
         "checks": checks,
         "microframe": {
@@ -215,8 +215,8 @@ def build_payload() -> dict[str, Any]:
             "parity_completion": "72 - 66 = 6",
             "reading": (
                 "The tomotope packet ABI is the 48-symbol body of the frame. "
-                "Adding the local Clifford lift f=24 gives the full oscillator "
-                "frame, while adding the q*q!=18 active line-cone sector gives "
+                "Adding the local Clifford lift f=24 gives the full finite "
+                "control microframe, while adding the q*q!=18 active line-cone sector gives "
                 "the payload."
             ),
         },
@@ -235,7 +235,7 @@ def build_payload() -> dict[str, Any]:
             "rows": fractal_rows,
         },
         "architecture_reading": (
-            "The holonet is a clocked oscillator network.  The 8-tick route "
+            "The holonet is a finite clocked control network. The 8-tick route "
             "digit is the instruction pulse, the [72,66]_3 horizon is the "
             "microframe, the 2160-slot mirror bus is a 30-frame E8 Coxeter "
             "bus, and the 51840 Clifford runtime is a 720-frame S6/Sp(4,2) "
@@ -244,7 +244,7 @@ def build_payload() -> dict[str, Any]:
         ),
         "honesty_boundary": (
             "This is an exact finite runtime/clock factorization across the "
-            "existing oscillator, holonet, and tomotope artifacts. It does not "
+            "legacy oscillator-named, holonet, and tomotope artifacts. It does not "
             "claim a new physical hardware threshold or a new proof of the "
             "general Cayley diameter theorem."
         ),

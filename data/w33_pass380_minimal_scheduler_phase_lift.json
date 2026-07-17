@@ -1,0 +1,31 @@
+{
+  "schema": "w33.pass380.minimal_scheduler_phase_lift.gap.v1",
+  "status": "PASS",
+  "theorem": "Minimal Scheduler Phase-Lift and Header-Binding Theorem",
+  "scheduler": {"stress_flags":16,"phase_trits":3,"refined_labels":48,"label":"(tomotope_flag, phase_trit)","phase_word":["LOAD_FLAG","FLIP_Q6_AXIS","LATCH_VERTEX"]},
+  "minimality": "To retain sixteen distinct scheduler flag identities and make every phase orbit free under C3 requires at least 16*3=48 labels. The existing (flag, phase_trit) label achieves this bound; it is a phase-fiber refinement, not a new Q6 symmetry.",
+  "canonical_full_bus_lift": {"formula":"iota(flag,phase)=flag+64*phase mod 192","image_size":48,"header_intersection_size":6,"aligned_scheduler_flags":[112,144],"aligned_header_cycles":[
+    [ 16, 80, 144 ],
+    [ 48, 112, 176 ]
+  ]},
+  "binding_count": {"all_bare_equivariant_bijections":"900657498850357248000","after_two_oriented_anchors":"416971064282572800","unanchored_orbits":14},
+  "conclusion": "Flag plus phase is the minimal actual scheduler refinement carrying a free C3 action. Its canonical lift into the full flag bus naturally aligns only two of the sixteen header cycles. The other fourteen require an explicitly supplied header-orbit binding table and phase offsets; schedule order, Q6 metadata, or the shared 16*C3 set type does not construct one.",
+  "search_signature": "48/6/2/14!3^14/minimal-phase-lift",
+  "check_count":14,
+  "checks": {
+    "stress_scheduler_has_sixteen_distinct_flag_orbits": true,
+    "phase_refined_scheduler_has_exactly_48_labeled_pulses": true,
+    "phase_rotation_is_free_c3_on_the_refined_scheduler": true,
+    "flag_projection_is_constant_on_each_scheduler_phase_orbit": true,
+    "flag_plus_phase_meets_the_16_times_3_lower_bound": true,
+    "pass377_header_plane_has_sixteen_free_c3_cycles": true,
+    "canonical_lift_is_injective_on_all_48_scheduler_pulses": true,
+    "canonical_lift_is_c3_equivariant": true,
+    "canonical_lift_meets_header_plane_in_six_flags_only": true,
+    "intersection_is_exactly_two_complete_header_cycles": true,
+    "natural_scheduler_anchors_are_exactly_flags_112_and_144": true,
+    "fourteen_scheduler_and_header_orbits_remain_unanchored": true,
+    "all_bare_equivariant_bijections_have_the_known_16_factorial_count": true,
+    "after_fixing_two_oriented_anchors_the_exact_residual_count_is_14_factorial_3_power_14": true
+  }
+}

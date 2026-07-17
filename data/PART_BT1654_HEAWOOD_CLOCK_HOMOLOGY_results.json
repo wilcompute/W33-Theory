@@ -1,5 +1,5 @@
 {
-  "theorem": "BT1654 Heawood Clock Homology / Runtime Word Theorem",
+  "theorem": "BT1654 Heawood Finite Logic-Switch / Runtime Word Theorem",
   "heawood_clock": {
     "vertices": 14,
     "edges": 21,
@@ -23,12 +23,21 @@
       "4.414214": 6,
       "6.0": 1
     },
-    "oscillator_shell": {
+    "spectral_branch_switch": {
       "middle_shell_dimension": 12,
-      "lambda": 2,
-      "omega": 1.4142135623730951,
-      "energy_minus": 1.5857864376269049,
-      "energy_plus": 4.414213562373095
+      "laplacian_center": 3,
+      "branch_offset": 1.4142135623730951,
+      "laplacian_branches": [
+        1.5857864376269049,
+        4.414213562373095
+      ],
+      "normalized_operator": "J=(L_H-3I)/sqrt(2) on the middle shell",
+      "involution": "J^2=I",
+      "branch_profile": {
+        "-1": 6,
+        "+1": 6
+      },
+      "scope": "Finite reversible spectral selector; not a physical frequency, energy, mass, or continuum oscillator."
     }
   },
   "heawood_line_graph_flag_clock": {
@@ -60,14 +69,14 @@
     "girth": 8,
     "simple_6_cycles": 0,
     "simple_8_cycles": 1620,
-    "boundary": "Levi girth 8 and zero 6-cycles forbid a literal Heawood-clock subgraph; the Heawood/Fano clock is a separate runtime homology module, not an incidence subgraph of the W33 Levi graph."
+    "boundary": "Levi girth 8 and zero 6-cycles forbid a literal Heawood-clock subgraph; the Heawood/Fano clock is a separate runtime homology object, not an incidence subgraph of the W33 Levi graph. No coupling map or physical interpretation is constructed here."
   },
   "constant_bridge": {
     "14": "Heawood vertices = Fano points + Fano lines = dim(G2)",
     "21": "Heawood edges = Fano flags = C(7,2) bivector/K7 carrier",
-    "8": "Heawood beta_1 = runtime 8-tick word",
+    "8": "Heawood beta_1 = an eight-bit cycle-space register after a basis choice",
     "28": "Heawood simple 6-cycles = W33 externality mu = v-k = 40-12",
-    "12": "Heawood oscillator middle shell dimension = W33 degree k",
+    "12": "Heawood spectral branch-switch shell dimension = W33 degree k",
     "6": "Heawood girth and top Laplacian endpoint = g2",
     "4": "Heawood line graph degree = W33 nonadjacent common-neighbor number mu_GQ",
     "81": "W33 Levi beta_1 remains the protected H1 sector, separate from the 8-dimensional clock word."

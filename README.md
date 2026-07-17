@@ -25,7 +25,7 @@ interconnected finite structure—and makes the remaining maps explicit.
 |---|---|
 | understand the project in five minutes | [Live atlas](https://wilcompute.github.io/W33-Theory/) — use the Navigator and Reader Guide |
 | see what the audit says is actually new | [The Selection Layer](analysis/THE_SELECTION_LAYER.md) |
-| inspect the newest exact breakthrough | [Passes 363–367: the QR Clifford/refinement tower](PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md) |
+| inspect the newest exact breakthrough | [Pass 380: the minimal scheduler phase lift](PASS380_MINIMAL_SCHEDULER_PHASE_LIFT.md) |
 | read the mathematical manuscript | [w33_paper.tex](w33_paper.tex) |
 | run the finite-geometry machine | [HOLONET.md](HOLONET.md) |
 | read the photonic program | [photonic_holonet.tex](photonic_holonet.tex) |
@@ -131,6 +131,62 @@ character, and real-Clifford Hadamard parity synchronize in one `C2`-graded fibe
 `28,841,108,255,539,200`.  But the QR odd coset has
 orders only `8` and `136`, hence no involution.  The common object is an exact grading, not one split `C2` action.
 
+Pass 373 returns to the canonical W33 edge carrier and separates two objects that earlier summaries blurred.
+The triangle-boundary image itself is the classical ternary code **`[240,120,3]_3`**.  GAP certifies its distance
+from 240 nonzero, projectively distinct parity columns and an explicit triangle word, so all 480 nonzero
+single-edge errors have distinct syndromes.  The complete radius-one maximum-likelihood lookup table therefore has
+exactly **481 entries**.  This is not a new claim on the already-owned logical quotient: the canonical CSS code
+remains **`[[240,81,3]]_3`** with `(d_X,d_Z)=(3,4)`.
+
+Pass 374 then supplies the action-level theorem that the older BT571/BT637/BT644 scalar-cover lineage did not.
+Those packets already own the four `F3* x F3*` lifts, their `25,920 + 25,920` phase split, and their sign-deck
+maps.  On the 51,840 nonzero minimal X/Z vector pairings, the new GAP witness proves that both the connected and full geometric actions preserve four
+separate 12,960-state sheets; the full `W(E6)` stabilizer is `C2 x C2`.  Thus the scalar lift is four copies of
+`W(E6)/(C2 x C2)`, **not** a natural `W(E6)` torsor.  Any regular 51,840-state action would require additional
+phase transport beyond W33 collineations and the signed-chain functor.
+
+Pass 375 closes the two most obvious escape routes.  The scalar deck is `D=(F3*)^2 = V4`, but its owned phase
+character `chi(a,b)=ab` selects one of the three binary characters.  Although `Aut(D)=S3`, the character
+stabilizer is only `C2`; an order-three automorphism cycles the three kernels.  Accordingly the unrestricted
+sheet normalizer is `S4`, while the exact phase-compatible normalizer is **`D8`**, with no element of order three.
+The actual Pass-374 stabilizer independently satisfies `|N_W(E6)(K)|=32` and `N(K)/K=D8`, but the two `D8` objects
+are not yet identified.  Finally, GAP proves that the split enlargement `W(E6) x V4` has no regular 51,840-state
+complement: its projection kernel would have forbidden order 12,960 inside `W(E6)`.
+
+Pass 376 makes the next comparison without turning it into a state-space claim.  The phase normalizer and
+`N_W(E6)(K)/K` are isomorphic as marked `V4:C2` extensions: the phase deck maps to the canonical geometric
+deck `C_N(K)/K`, their centers correspond, and both quotient actions have the `1+1+2` fingerprint.  There are
+exactly **four** such marked isomorphisms, with residual ambiguity `C2 x C2`.  That identifies a central
+two-element line, not a preferred scalar-sheet-to-state map or a restored Weyl torsor.
+
+Pass 377 makes the Holonet oscillator language computationally precise.  BT828's `Q3 XOR` layer is a binary
+three-coordinate switch bank, not ternary parity arithmetic.  Across the `360` one-axis events and three depth
+residues, its exact header image is a `48`-flag plane with axis split `24+12+12`.  Depth acts on that plane by
+the free `C3` shift `flag -> flag+64 (mod 192)`, giving `16` three-cycles.  This is a header-address theorem;
+it does **not** yet identify a binary toggle with a Q6 edge traversal or a physical switch.
+
+Pass 378 closes the tempting but invalid shortcut from that header clock to the 48-tick pulse schedule.  Both
+objects have bare `16 x C3` set type, so abstract equivariant indexings exist, but there are exactly
+`16! * 3^16 = 900657498850357248000` of them.  The scheduler repeats one `tomotope_flag` across each
+`LOAD_FLAG / FLIP_Q6_AXIS / LATCH_VERTEX` triple while the header clock moves through three distinct flags.
+GAP therefore proves that no C3-equivariant correspondence can factor through the actual scheduler flag label.
+The common `16 x 3` shape is a noncanonical timing resemblance, not an edge, flag, or state intertwiner.
+
+Pass 379 takes the remaining geometric shortcut off the table for the current address ABI. Transporting the
+same header depth clock, flag to flag plus 64 modulo 192, through BT1371's pinned flag-to-Q6-edge table
+preserves only 146 of the Q6 line graph's 960 adjacent edge pairs; 814 are lost and balanced by 814 false
+positives. For example, adjacent flags 0 and 8 shift to nonadjacent Q6 edges at flags 64 and 72. The depth
+clock is therefore a finite control-address transition, not a Q6 geometric operation, state traversal, or
+physical oscillator through that table. A different explicitly built intertwiner remains an open construction,
+not an implied one.
+
+Pass 380 identifies the smallest real scheduler switch state: flag plus phase, a 48-state 16-by-3 register.
+It has a free C3 phase action, but that is only the existing pulse microcycle. Its canonical lift into the
+192-flag bus aligns just two complete header cycles, leaving fourteen scheduler-to-header orbit bindings
+unbuilt. Even after the two natural cycles are fixed, exactly 14! times 3^14 =
+416971064282572800 equivariant extensions remain. The next compiler object is therefore a typed 16-row
+header-orbit binding table with phase offsets, not a new physical or geometric identification.
+
 ## What the project contributes
 
 The strongest current contribution is paper-sized and precise:
@@ -178,6 +234,21 @@ gap -q analysis/w33_pass365_qr411_e6_minus_polar_lift.g
 gap -q analysis/w33_pass366_qr137m_real_clifford_refinement_tower.g
 gap -q analysis/w33_pass367_universal_c2_exchange_gate_pullback.g
 python3 -m pytest tests/test_pass363_367_gap_qr_clifford_refinement.py -q
+
+# Certify the W33 boundary decoder and classify the minimal-pair scalar sheets
+gap -q analysis/w33_pass373_triangle_boundary_mlut.g
+gap -q analysis/w33_pass374_minimal_pair_phase_sheet_obstruction.g
+python3 -m pytest \
+  tests/test_pass373_gap_triangle_boundary_mlut.py \
+  tests/test_pass374_gap_minimal_pair_phase_sheet_obstruction.py -q
+
+# Close the A4/S4 and split-deck escape routes
+gap -q analysis/w33_pass375_phase_character_normalizer_obstruction.g
+python3 -m pytest tests/test_pass375_gap_phase_character_normalizer_obstruction.py -q
+
+# Compare the phase and geometric D8s as marked V4:C2 extensions
+gap -q analysis/w33_pass376_marked_d8_bridge.g
+python3 -m pytest tests/test_pass376_gap_marked_d8_bridge.py -q
 ```
 
 Pass 341 can additionally use the optional GAP

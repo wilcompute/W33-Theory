@@ -91,7 +91,19 @@ MAX_FILES = 25
 # central code objects must remain searchable even after becoming topics.  A
 # tiny explicit pin set preserves the index's purpose without raising the noise
 # ceiling for every token.
-PINNED_RESULTS = {"[[40,10,4]]", "[40,15,8]"}
+PINNED_RESULTS = {
+    "[[40,10,4]]",
+    "[40,15,8]",
+    "[[240,81,3]]",
+    "[240,81,3]",
+    "[240,120,3]",
+    "[12960,12960,12960,12960]",
+    "32/8/4/2/1/1/2/4",
+    "360/48/24/12/12/5/10/16x3",
+    "48/16x3/16!3^16/2/14+2",
+    "192/64x3/960/geometry-boundary",
+    "48/6/2/14!3^14/minimal-phase-lift",
+}
 SKIP_DIRS = {".git", "node_modules", ".venv", "data"}
 
 RE_CSS = re.compile(r"\[\[\s*\d+\s*,\s*\d+\s*,\s*\d+\s*\]\]")
@@ -101,7 +113,7 @@ RE_LIN = re.compile(r"\[\s*\d+\s*,\s*\d+\s*,\s*\d+\s*\]")
 # exposed the same blind spot for TeX's `1{,}285{,}608`.  Keep up to nine digits
 # and canonicalize both grouping forms before indexing.
 RE_INT = re.compile(
-    r"(?<![\d.\-])(\d{1,3}(?:(?:,|\{,\})\d{3}){1,2}|\d{3,9})(?![\d.])"
+    r"(?<![\d.\-])(\d{1,3}(?:(?:,|\{,\})\d{3}){1,2}|\d{3,9})(?!\d)(?!\.\d)"
 )
 RE_SEQ = re.compile(r"\b\d+(?:/\d+){2,}\b")
 
@@ -138,6 +150,13 @@ def main():
         for rx in (RE_CSS, RE_LIN, RE_SEQ):
             for m in rx.findall(txt):
                 index[norm(m)].add(rel)
+        # A pinned result may deliberately fall outside the generic token
+        # grammars (for example a four-orbit profile).  Explicit pins are the
+        # small, reviewed exception to the noise-calibrated extractors.
+        compact = norm(txt)
+        for pinned in PINNED_RESULTS:
+            if pinned in compact:
+                index[pinned].add(rel)
         for m in RE_INT.findall(txt):
             integer = canonical_integer(m)
             if integer not in NOISE:

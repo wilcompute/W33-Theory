@@ -1,10 +1,15 @@
 # BT1654 — Heawood Clock Homology / Runtime Word Theorem
 
-## Why this was the next move
+## Computational reading
 
-The newest commit frontier moved the holonet architecture toward a very strong physical reading: the machine clock is a topological harmonic oscillator, the oscillator frequency sets a mass scale, and the supercycle is the gauge group. The missing finite-graph check was not another mass numerology layer; it was the topology of the clock itself.
+The legacy oscillator language is not the verified object. BT1654 supplies a
+finite graph calculation: a cycle-space register and a reversible spectral
+branch selector. It neither supplies a physical frequency or mass scale nor
+turns the supercycle count into a gauge-group traversal.
 
-BT1654 verifies that the Heawood/Fano incidence clock already carries the runtime constants before any physical interpretation is added.
+The Heawood/Fano incidence graph carries exact finite runtime constants, but
+those constants are useful as addresses, state dimensions, and switch labels
+only after an explicit typed interface is built.
 
 ## Verified construction
 
@@ -68,7 +73,7 @@ and
 
 the Fano/K7 bivector carrier.
 
-## Oscillator spectrum
+## Spectral branch-switch shell
 
 The adjacency spectrum is
 
@@ -98,11 +103,15 @@ and obeys
 (L_H-3I)^2=2I
 \]
 
-on that shell, giving
+on that shell. Define
 
 \[
-\omega=\sqrt2.
+J=(L_H-3I)/\sqrt2,\qquad J^2=I
 \]
+
+on that shell. Its two switch branches have multiplicities \(6\) and \(6\).
+This is a finite reversible selector between two spectral sectors, not a
+continuum Hamiltonian or physical oscillator frequency.
 
 ## Flag-clock line graph
 
@@ -128,7 +137,8 @@ triangles. Its Laplacian spectrum is
 0^1\oplus(3-\sqrt2)^6\oplus(3+\sqrt2)^6\oplus6^8.
 \]
 
-So passing from the clock to the flag-clock preserves the oscillator middle shell and lifts the top endpoint into an eight-dimensional shell:
+So passing from the clock to the flag-clock preserves the spectral
+branch-switch shell and lifts the top endpoint into an eight-dimensional shell:
 
 \[
 \boxed{6^8}.
@@ -166,9 +176,15 @@ Correct reading:
 \boxed{
 \text{Heawood/Fano clock} \neq \text{Levi subgraph};
 \quad
-\text{it is a separate runtime homology module coupled to W33.}
+\text{it is a separate runtime homology object; no coupling map to W33 is built.}
 }
 \]
+
+Pass 379 adds the corresponding address-layer boundary. The header depth
+clock is an exact finite control permutation, but through the current
+BT1371 flag-to-Q6 table it is not a Q6 line-graph automorphism. The spectral
+selector, header clock, Q6 address, and state transition therefore remain
+distinct typed layers.
 
 ## Constant bridge
 
@@ -178,7 +194,7 @@ Correct reading:
 | 21 | Heawood edges = Fano flags = \(\binom72\) bivector carrier |
 | 8 | Heawood \(\beta_1\) = eight-tick runtime word |
 | 28 | Heawood simple 6-cycles = W33 externality \(v-k\) |
-| 12 | oscillator middle shell dimension = W33 degree \(k\) |
+| 12 | spectral branch-switch shell dimension = W33 degree \(k\) |
 | 6 | Heawood girth and Laplacian endpoint = \(g_2\) |
 | 4 | flag-clock degree = GQ nonadjacent common-neighbor count |
 | 81 | W33 Levi \(H_1\), separate from the 8-dimensional clock word |

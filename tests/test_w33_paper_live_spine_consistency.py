@@ -11,18 +11,16 @@ def _normalized_paper_text() -> str:
     return " ".join(PAPER.read_text(encoding="utf-8").split())
 
 
-def test_master_seed_and_hubble_background_live_on_the_main_spine() -> None:
+def test_front_matter_keeps_the_current_evidence_boundary_on_the_main_spine() -> None:
     text = _normalized_paper_text()
 
-    assert "From the Diophantine Seed $q!=2q$" in text
-    assert "The live theorem spine uses $q!=2q$ as the master seed" in text
-    assert "Core-background Hubble fit: $H_0=\\Phitwelve-q!=67$." in text
-    assert "the core-background Hubble fit at $H_0=\\Phitwelve-q!=67$ km/s/Mpc" in text
-    assert (
-        "\\boxed{\\;q!=2q \\;\\Longrightarrow\\; q = 3 \\;\\Longrightarrow\\; "
-        "W_{3,3} \\;\\Longrightarrow\\; \\text{everything}.\\;}"
-        in text
-    )
+    assert "The Symplectic Polar Space $W(3,3)$" in text
+    assert "An Executable Atlas of Finite Geometry, Codes, and Exceptional Symmetry" in text
+    assert "evidence-tiered physics research programme" in text
+    assert "the symplectically constructed member of the $28$ non-isomorphic" in text
+    assert "the parameter tuple alone does not identify the graph" in text
+    assert "No result in this manuscript presently derives the Standard Model" in text
+    assert "A living historical record with an explicit current-claims ledger" in text
 
 
 def test_supplement_w_and_x_are_marked_as_subordinate_surfaces() -> None:
@@ -59,8 +57,8 @@ def test_organization_section_records_parseval_target_side_continuation() -> Non
     assert "\\mathrm{ETF}(36,15)" in text
     assert "$\\mathrm{SRG}(45,32,22,24)$" in text
     assert "Naimark shadow split $21 = 1 + 20$" in text
-    assert "scripts/w33\\_parseval\\_target\\_geometry\\_audit.py" in text
-    assert "tests/test\\_w33\\_parseval\\_target\\_geometry\\_audit.py" in text
+    assert "scripts/w33_parseval_target_geometry_audit.py" in text
+    assert "tests/test_w33_parseval_target_geometry_audit.py" in text
 
 
 def test_organization_section_records_q3_master_lock_closure() -> None:

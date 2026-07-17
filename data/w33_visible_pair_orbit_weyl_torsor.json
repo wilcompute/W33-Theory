@@ -9,9 +9,20 @@
   },
   "identities": {
     "PSp_order": "25920",
-    "interpretation": "Nonzero vector-level minimal X/Z pairings are the scalar-phase lift of one homogeneous visible flag-quadrangle orbit.",
+    "interpretation": "The vector-level count is the fourfold scalar lift of one homogeneous projective orbit; Pass 374 proves the natural signed-chain action preserves four separate sheets rather than forming a W(E6)-torsor.",
     "projective_visible_orbit": "12960 = 25920 / 2",
     "scalar_phase_lift": "4 * 12960 = 51840 = |W(E6)|"
+  },
+  "scalar_action_boundary": {
+    "conclusion": "51840=|W(E6)| is a cardinality identity here, not a regular-action theorem.",
+    "full_orbit_profile": [
+      12960,
+      12960,
+      12960,
+      12960
+    ],
+    "full_stabilizer": "C2 x C2",
+    "owner": "analysis/w33_pass374_minimal_pair_phase_sheet_obstruction.g"
   },
   "summary": {
     "W_E6_order": 51840,
@@ -26,5 +37,5 @@
     "visible_orbit_size": 12960,
     "visible_projective_pairs": 12960
   },
-  "theorem_name": "Visible Pair Orbit-Weyl Torsor Theorem"
+  "theorem_name": "Visible Pair Projective Orbit and Weyl-Count Lift Theorem"
 }

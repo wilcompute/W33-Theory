@@ -1,0 +1,24 @@
+{
+  "schema": "w33.pass373.triangle_boundary_mlut.gap.v1",
+  "status": "PASS",
+  "code": {"object":"image of the oriented W33 triangle boundary map over GF(3)","parameters":"[240,120,3]_3","length":240,"dimension":120,"minimum_distance":3},
+  "parity_certificate": {"rank":120,"nonzero_columns":240,"projective_column_classes":240},
+  "decoder": {"correction_radius":1,"nonzero_single_error_syndromes":480,"complete_mlut_entries":481},
+  "separation": "This [240,120,3]_3 classical boundary image is not itself the qutrit CSS code. The existing analysis/w33_css_exact_audit.py combines triangle and vertex checks and proves [[240,81,3]]_3 with d_X=3 and d_Z=4.",
+  "boundary": "The certificate proves exact classical ternary code parameters and complete correction of one edge-symbol error; it does not by itself construct a quantum stabilizer code or a physical fault-tolerance threshold.",
+  "check_count": 12,
+  "checks": {
+    "w33_has_40_points": true,
+    "w33_has_240_edges": true,
+    "clique_complex_has_160_triangles": true,
+    "triangle_boundary_rank_is_120": true,
+    "dual_parity_rank_is_120": true,
+    "generator_and_parity_checks_are_orthogonal": true,
+    "no_zero_parity_check_column": true,
+    "all_240_columns_are_projectively_distinct": true,
+    "explicit_triangle_word_has_weight_three": true,
+    "minimum_distance_is_exactly_three": true,
+    "all_480_single_errors_have_distinct_nonzero_syndromes": true,
+    "complete_radius_one_mlut_has_481_entries": true
+  }
+}

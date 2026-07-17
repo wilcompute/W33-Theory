@@ -1,9 +1,6 @@
 {
-  "m=0.0": [
-    -2,
-    -2,
-    2
-  ],
+  "schema": "w33.toy_spin1_pump_phase_diagram.v2",
+  "scope": "Model Hamiltonian only; excluded from the verified finite logic-switch ABI.",
   "m=0.5": [
     2,
     0,
@@ -19,23 +16,18 @@
     0,
     -2
   ],
-  "m=2.0": [
-    1,
-    1,
-    -1
-  ],
   "m=2.5": [
     0,
     0,
     0
   ],
-  "band_chern_m0": [
+  "band_chern_m1": [
     2,
     0,
     -2
   ],
   "theta": 2.300523983021863,
-  "result": "qutrit spin-1 topological pump, band Chern {+2,0,-2}, |C|=2",
-  "honest": "the qutrit-as-spin-1 follows from the BC twist being a rotation (2T in SU(2)); if a given device instead drives the Heisenberg-Weyl clock-shift, the bands re-sort but stay in the nonzero (topological) class -- protection is generic, the value |C|=2 is the rotation-drive realization.",
+  "result": "toy spin-1 pump at m=1.0, band Chern profile {+2,0,-2}",
+  "honest": "The spin-1 representation and parameter torus are model choices. A device-specific Hamiltonian and an implementation map would be required before assigning this Chern calculation to hardware.",
   "source": "Martin-Refael-Halperin, PRX 7, 041008 (2017); spin-S monopole Chern 2 m_s"
 }

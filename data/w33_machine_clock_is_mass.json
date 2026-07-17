@@ -1,28 +1,49 @@
 {
+  "schema": "w33.heawood_logic_switch_clock.v2",
+  "legacy_filename": "w33_machine_clock_is_mass.py",
   "heawood_laplacian": {
-    "-0.0": 1,
+    "0.0": 1,
     "1.5858": 6,
     "4.4142": 6,
     "6.0": 1
   },
-  "oscillator": {
-    "omega": 1.4142135623730951,
-    "E_minus": 1.5857864376269049,
-    "E_plus": 4.414213562373095,
-    "middle_shell_dim": 12,
-    "branches": "2 x 6 (Cl(1,1))"
+  "spectral_branch_switch": {
+    "normalized_operator": "J=(L_H-3I)/sqrt(2) on the 12-dimensional middle shell",
+    "involution": true,
+    "branch_profile": {
+      "-1": 6,
+      "1": 6
+    },
+    "spectral_displacement": 1.4142135623730951,
+    "scope": "A finite reversible spectral selector; no physical frequency, energy, or mass is asserted."
   },
-  "m_top_from_clock": 173.95,
-  "runtime": {
+  "cycle_register": {
+    "field": "F2",
+    "cycle_rank": 8,
+    "state_count": 256,
+    "nonzero_cycle_states": 255,
+    "basis_boundary": "The eight coordinate switches depend on a chosen cycle basis; beta_1=8 does not."
+  },
+  "typed_control_pipeline": {
+    "source": "binary Q3 coordinate toggle bank",
+    "header": "BT828 mirror/tomotope header flag",
+    "address": "BT1374 Q6 edge address",
+    "transition": "BT1406/BT1698 LOAD_FLAG -> FLIP_Q6_AXIS -> LATCH_VERTEX",
+    "header_geometry_boundary": "Pass 379: flag -> flag+64 mod 192 is not a Q6 line-graph automorphism through BT1371's pinned address table.",
+    "scheduler_binding_boundary": "Pass 380: (tomotope_flag, phase_trit) is the minimal free-C3 scheduler lift; fourteen of sixteen header-orbit bindings remain explicit missing compiler data.",
+    "boundary": "No state-level toggle-to-Q6 intertwiner or hardware implementation is claimed."
+  },
+  "runtime_accounting": {
     "word": 8,
     "frame": 72,
     "mirror_bus": 2160,
     "supercycle": 51840,
-    "is_Sp43": true,
-    "h_E8": 30
+    "order_matches_Sp43": true,
+    "h_E8": 30,
+    "boundary": "Arithmetic equality to a group order is not an action or a group traversal."
   },
-  "summary": "holonet clock = Heawood/Fano harmonic oscillator omega = sqrt(lambda) = sqrt2 (12-dim middle shell, 2x6 Cl(1,1)); that frequency = top mass v_EW/sqrt(lambda) = 173.95 GeV; runtime supercycle 51840 = |Sp(4,3)| = h(E8) x 72-frame x 24. Running the machine one supercycle = traversing the gauge group, clocked by the mass-setting oscillator.",
+  "summary": "The Heawood/Fano graph supplies J=(L_H-3I)/sqrt(2), an involutive six-by-six spectral branch selector on its 12-dimensional middle shell, and an eight-bit F2 cycle-space register after a basis choice. The Holonet control ABI is a typed binary-Q3-toggle -> header -> Q6-address -> LOAD/FLIP/LATCH pipeline. Pass 379 keeps the header clock separate from Q6 geometry, and Pass 380 identifies the missing fourteen-orbit binding table. No mass, calibrated frequency, hardware, or group-action interpretation follows from these finite calculations.",
   "sources": [
-    "Heawood graph = Fano PG(2,2) incidence (3-regular, spectrum +-3, +-sqrt2); |Sp(4,3)|=51840; index.html QCA/oscillator section + BT1299-1315 runtime stack"
+    "BT1654 Heawood graph calculation; BT1656 cycle-basis boundary; BT1299/BT1300 runtime ISA; Passes 377-380 finite control boundaries"
   ]
 }

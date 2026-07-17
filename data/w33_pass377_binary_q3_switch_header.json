@@ -1,0 +1,26 @@
+{
+  "schema": "w33.pass377.binary_q3_switch_header.gap.v1",
+  "status": "PASS",
+  "theorem": "Binary Q3 Switch Header Clock Theorem",
+  "source_model": {"address_labels":40,"binary_q3_blocks":5,"q3_coordinates":3,"depth_residues":3,"directed_one_axis_toggles":360},
+  "header_map": {"formula":"flag=4*((16*depth+3*source+target) mod 48)+(target mod 4)","flag_bus":192,"image_size":48,"axis_supports":[24,12,12],"axis_fibers":[5,10,10],"combined_fiber_profile":{"5":24,"10":24}},
+  "clock": {"depth_step":"flag -> flag+64 mod 192","group":"C3","free_flag_cycles":16,"axis_cycle_profile":[8,4,4],"identity":"48=16*3"},
+  "search_signature": "360/48/24/12/12/5/10/16x3",
+  "scope": "This is an exact header-address image of binary Q3 control toggles. BT1374 supplies a Q6 edge for each flag and BT1406/BT1698 supply pulse/state schedules, but this certificate does not identify a binary Q3 toggle with a Q6 edge traversal, construct a group intertwiner, or assert analogue-oscillator or hardware physics.",
+  "check_count":13,
+  "checks": {
+    "all_360_directed_one_axis_toggle_events_are_enumerated": true,
+    "every_toggle_stays_in_one_of_five_binary_q3_address_blocks": true,
+    "every_toggle_changes_exactly_one_binary_q3_coordinate": true,
+    "reduced_header_formula_agrees_with_bt828_original_formula": true,
+    "every_header_flag_lives_in_the_192_flag_bus": true,
+    "binary_switch_header_image_has_exactly_48_flags": true,
+    "axis_supports_split_as_24_12_12": true,
+    "axis_supports_are_pairwise_disjoint": true,
+    "axis_supports_exhaust_the_48_flag_image": true,
+    "axis_fibers_are_5_10_10_over_depth_residues": true,
+    "depth_increment_is_a_free_c3_shift_by_64_on_the_header_image": true,
+    "header_clock_decomposes_into_sixteen_three_cycles": true,
+    "axis_clock_cycle_profile_is_8_4_4": true
+  }
+}

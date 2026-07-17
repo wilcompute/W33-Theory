@@ -1,27 +1,24 @@
 #!/usr/bin/env python3
 """
-TINKER + TEST: do TWO switches generate the whole machine? (Wheeler's single
-carrier, minimal activation.)
+TINKER + TEST: do two abstract generators generate the finite gate group?
 
-The user's vision: a single carrier (Wheeler's one electron / the holonet photon)
-whose worldline braids through a topologically-structured medium IS the quantum
-computer; and 'flipping between two switches in a certain pattern' activates the
-whole TQC instance. The substrate makes that precise: the gate group is
-Sp(4,3) = Aut(W(3,3)) (the 2-qutrit Clifford mod Pauli, order 51840), and the
-question is whether two physical operations -- two 'switches' -- generate ALL of
-it. If yes, a binary WORD in two generators (a switching pattern in time) reaches
-every gate, and the substrate-fixed Boerdijk-Coxeter quasicrystal supplies the
-timing.
+This is a finite group calculation.  The target is
+Sp(4,3) = Aut(W(3,3)) (the two-qutrit Clifford group modulo Pauli, order 51840),
+and the question is whether two named symplectic matrices generate it.  If they
+do, a binary word in those generators reaches every group element.  Throughout
+this file, a ``switch'' means an abstract selected group generator; the search
+does not construct an optical braid, a worldline implementation, a clock, or a
+hardware schedule.
 
 The two natural switches:
   g1 = single-qutrit FOURIER on mode 1 (x) identity   (a one-mode gate -- the
        'tritter'/phase-plate switch),
   g2 = CONTROLLED-Z between the two modes              (the entangling switch).
 On the symplectic phase space F_3^4 = (x1,x2,p1,p2) these are 4x4 matrices over
-F_3. We verify both are symplectic and BFS-generate <g1,g2>, testing whether the
-order reaches |Sp(4,3)| = 51840. Mapped to the braiding picture, g1,g2 are two
-elementary braids of the carrier's worldline; their words are the gates,
-robust because braiding depends only on topology (the holonomic robustness).
+F_3. We verify that selected pairs are symplectic and enumerate their generated
+subgroups, testing whether the order reaches |Sp(4,3)| = 51840.  A separate
+compiler or hardware certificate would be required to assign these matrices to
+physical switches or braids.
 """
 from __future__ import annotations
 
@@ -114,14 +111,11 @@ def main():
     print("  (Fourier-on-mode-1, CZ) only reaches a 108-element subgroup -- two")
     print("  switches are NOT automatically enough. But a search over natural")
     print(f"  switches finds {len(winners)} generating pairs: e.g. <{a},{b}>")
-    print("  generates ALL of Sp(4,3) (51840 = the entire 2-qutrit Clifford =")
-    print("  Aut(W(3,3))). So TWO well-chosen switches DO suffice: a binary word")
-    print("  in them (a switching pattern in time) reaches every gate. The user's")
-    print("  'flip between two switches in a pattern to activate the TQC' is")
-    print("  correct -- but the two switches must be a generating pair, and the")
-    print("  one-mode-gate + CZ naive choice is NOT one. In the single-carrier")
-    print("  braiding picture these are two elementary worldline braids; words are")
-    print("  the gates, robust by topology; the BC quasicrystal is the schedule.")
+    print("  generates ALL of Sp(4,3) (51840 = the entire finite target). Thus")
+    print("  two well-chosen abstract generators suffice: a binary word in them")
+    print("  reaches every group element. The two switches must be a generating")
+    print("  pair; the one-mode-gate + CZ naive choice is not. This establishes")
+    print("  no physical braid, carrier, or timing interpretation.")
 
     out = {
         "result": "two well-chosen switches generate all of Sp(4,3)=51840",
@@ -130,15 +124,14 @@ def main():
         "example_generating_pairs": [f"<{a},{b}>" for a, b in winners[:8]],
         "minimal_activation_pair": f"<{a},{b}>",
         "Sp43_order": sp43,
-        "interpretation": ("a binary word in 2 well-chosen switches = a switching "
-                           "pattern in time reaches every gate; braids of one "
-                           "carrier's worldline, robust by topology; BC quasicrystal "
-                           "= the schedule. Validates minimal activation -- but the "
-                           "two switches must be a generating pair (F1+CZ is NOT)."),
-        "physical_map": ("single carrier (Wheeler electron / holonet photon) "
-                         "braiding in a topological-superconductor tiling, gate-"
-                         "defined by E&M switches, photoelectric matter<->light "
-                         "interface; braiding path-independent = holonomic FT"),
+        "interpretation": ("A binary word in two selected abstract symplectic "
+                           "generators reaches every Sp(4,3) element exactly when "
+                           "the pair generates the full group. The calculation "
+                           "distinguishes generating pairs from F1+CZ, which has "
+                           "order 108."),
+        "hardware_boundary": ("No physical-switch, braid, carrier, clock, or "
+                              "fault-tolerance implementation follows from this "
+                              "finite subgroup-generation calculation."),
         "sources": ["Majorana braiding TQC (Nature Commun. 14, 2023); worldlines "
                     "of Majorana zero modes = the computational model",
                     "Sp(4,3) is 2-generated (finite group theory)"],

@@ -1473,7 +1473,8 @@ distillation} --- a separate factory producing $10^3$--$10^6$ raw magic states p
 logical non-Clifford gate, feeding a Clifford error-correction layer. Here that cost is
 not paid twice: \emph{matter $=$ magic}. The $36$ magic rays $=(q!)^2$, graded
 $8{+}24{+}4=\{2^q,f,\mu\}$, \emph{are} the matter shell --- the same $D_4$/GKP code
-register (the $[[240,81,4,3]]_3$ Steinberg module of \S\ref{sec:memory}) that protects
+register (the $[[240,81,3]]_3$ Steinberg module of \S\ref{sec:memory}, equivalently
+$[[240,81,4,3]]_3$ in the explicitly ordered convention $[[n,k,d_Z,d_X]]_3$) that protects
 the logical data. The fuel is therefore structural, and it is genuine magic: the qutrit
 Strange state $\lvert S\rangle=(\lvert1\rangle-\lvert2\rangle)/\sqrt2$ has mana
 $\log(5/3)$, the single-qutrit maximum (computed from the discrete Wigner function;
@@ -1534,32 +1535,37 @@ does not merely clock the machine; it fuels it. (Witness:
 \paragraph{And the code is holographic.} The matter shell is not just a code but a
 \emph{holographic} one. From any pole the $40$ rays split $1+12+27=$ self $+$ gauge
 boundary $+$ matter bulk, and every bulk ray is screened by exactly $\mu=4$ boundary
-rays --- the strongly-regular $\mu$-parameter, equal to the code distance $d=4$. So the
-bulk matter is reconstructed from the boundary gauge \emph{redundantly}: erase up to
-$d-1=3$ of a bulk ray's boundary neighbours and it is still recoverable. The causal
+rays.  That strongly-regular screening multiplicity is a combinatorial redundancy,
+not the full CSS distance: the edge code has $d_X=3$, $d_Z=4$, and hence $d=3$.
+It therefore corrects one arbitrary qutrit error or two known-location arbitrary
+erasures.  The $\mu=4$ neighbourhood by itself does not prove recovery from three
+arbitrary erasures; an operational bulk-reconstruction map would be additional data. The causal
 diameter is $2$ (every bulk ray one hop from the boundary, two from the pole), the
 RT-like depth; and the logical register $H_1$ is the irreducible Steinberg module
 (dim $81=q^4$), so there is no local logical operator --- logical information lives only
-nonlocally on the boundary. Redundant bulk-from-boundary recovery, redundancy $=$
-distance, an RT-like causal depth, and no local recovery are the holographic signature:
+nonlocally on the boundary. Boundary redundancy, an RT-like causal depth, and no local
+logical representative are the proposed holographic signature:
 the ``holo'' in holonet is earned. (Witness:
 \path{analysis/w33_holographic_code.py}.)
 
 \begin{theorem}[The architecture is a self-fueling holographic memory]
 The three properties above are one object. The matter shell is simultaneously the
-holographic code (it stores the $81$ logical qutrits of the Steinberg module, bulk
-recovered from the boundary at redundancy $\mu=4=d$), the magic fuel (its $36=(q!)^2$
+holographic code (it stores the $81$ logical qutrits of the Steinberg module against
+the combinatorial screening multiplicity $\mu=4$, while its CSS distances are
+$d_X=3$, $d_Z=4$, and $d=3$), the magic fuel (its $36=(q!)^2$
 rays are the non-Clifford resource, so the non-Clifford premium is $P=1$ --- no
 distillation factory), and the system the irrational Boerdijk--Coxeter clock keeps
 non-Clifford ($\theta=\arccos(-2/3)$, $\theta/\pi$ irrational). So the machine needs no
 distillation factory (the fuel is the code), no separate fuel store (the magic is the
 error-correction redundancy), and never recurs (the irrational clock refreshes the
 magic): a holographic quantum memory whose error-correction \emph{is} its magic supply,
-kept alive by an irrational clock --- all controlled by $q=3$ ($\mu=4=d$,
+kept alive by an irrational clock --- all controlled by $q=3$ ($\mu=4$,
+$d_X=3$, $d_Z=4$,
 $1/\Phi_4=1/10$, $\cos\theta=-(q-1)/q$). Moreover the entanglement is geometric: a
 discrete Ryu--Takayanagi law holds, the entropy of a boundary region being the minimal
-graph cut, with a single ray's RT area the degree $k=12$, the minimal RT surface (one
-bulk qutrit) the code distance $d=4$, the gauge$\,|\,$matter cut $108=\mu\cdot27$, and an
+graph cut, with a single ray's RT area the degree $k=12$, the proposed one-bulk-qutrit
+RT cut having size $\mu=4$, equal to the one-sided $Z$-distance rather than the full
+distance $d=3$, the gauge$\,|\,$matter cut $108=\mu\cdot27$, and an
 area law (sub-volume). (Witnesses: \path{analysis/w33_self_fueling_memory.py},
 \path{analysis/w33_holographic_rt.py}.)
 \end{theorem}
@@ -1593,7 +1599,8 @@ cap at $1/\Phi_4$. (Witness: \path{analysis/w33_self_fueling_cost.py}.)
 \label{sec:memory}
 
 \begin{theorem}[The code register is the Steinberg module]
-The companion paper's CSS code $[[240,81,4,3]]_3$ stores its $81$
+The companion paper's CSS code $[[240,81,3]]_3$, with asymmetric distances
+$(d_X,d_Z)=(3,4)$, stores its $81$
 logical qutrits in $H_1$ of the $\W$ $2$-complex ($40$ vertices,
 $240$ edges, $160$ in-line triangles).  Complete character
 computation over all $25920$ group elements gives
@@ -1630,8 +1637,8 @@ every choice of triality element, not selected --- and every
 order-$9$ element ($5760$ of them) refines it into nine
 $9$-dimensional sub-generations.  In the code's own characteristic
 the parameters survive: $\mathrm{rank}_3\partial_0=39$,
-$\mathrm{rank}_3\partial_1=120$, $\dim H_1(\GF3)=81$, so
-$[[240,81,4,3]]_3$ is exact over $\GF3$.  The number of fermion
+$\mathrm{rank}_3\partial_1=120$, $\dim H_1(\GF3)=81$, so the logical
+dimension of $[[240,81,3]]_3$ is exact over $\GF3$.  The number of fermion
 generations is the defining-characteristic degeneracy of the
 protected register.
 \emph{Witness:
@@ -1880,11 +1887,24 @@ memory.  Equal 162-dimensional counts do not imply equivalent modules.}
 \label{fig:cache-transport-boundary}
 \end{figure}
 
-The error layer is native: the $[[240,81,4,3]]_3$ CSS code on the edge
-qutrits has all four parameters substrate-primitive; the dual
+The error layer is native: the $[[240,81,3]]_3$ CSS code on the edge
+qutrits has $(d_X,d_Z)=(3,4)$; the dual
 Cs\'asz\'ar/Szilassi cross-check supplies parity-free error detection;
 and the web's unique non-Ramanujan eigenspace --- dimension $15=g$ ---
-is the spectral sentinel where drift appears first.
+is the spectral sentinel where drift appears first.  At the classical
+boundary-image layer, Pass~373 gives the exact $[240,120,3]_3$ code and a
+complete 481-entry radius-one syndrome table, so one edge-symbol fault has a
+fully enumerated decoder.  Pass~374 adds a separate controller constraint:
+the 51840 nonzero minimal logical $X/Z$ vector pairings occupy four invariant
+12960-state sheets under the natural $W(E_6)$ action, with stabilizer
+$C_2\times C_2$.  A runtime using those scalar representatives must therefore
+retain the two deck-sign bits; geometry does not collapse them to one Weyl
+torsor.  Pass~375 sharpens the controller law: the fixed pairing character
+reduces the four-state sheet normalizer from abstract $S_4$ to the
+phase-compatible $D_8$, with no order-three operation.  The split controller
+$W(E_6)\times V_4$ has no regular 51840-state complement.  A future sheet
+fusion must therefore be a genuinely coupled transport, not an appended
+commuting phase register.
 
 %======================================================================
 \section{Time: three clocks and a quasicrystal}
@@ -3061,7 +3081,7 @@ dark orbit zoo / shadow bijection / $K_5$-complete dark sector & bt853--bt855\\
 dark charts $=$ mirror bus ($G$-set iso) & bt856\\
 Heisenberg/$\GF3^3$ shell torsors, Schl\"afli decoding & bt858\\
 Bell-shell register arithmetic ($[4,4,6,12]$ named) & bt860\\
-code register $=$ Steinberg ($[[240,81,4,3]]_3$) & bt861\\
+code register $=$ Steinberg ($[[240,81,3]]_3$, $d_X=3,d_Z=4$) & bt861\\
 $H_2=$ sign-twisted lines (homological dictionary) & bt862\\
 three generations $=$ Steinberg vanishing & bt863\\
 triality census (matter-blind, gauge-visible) & bt864\\
@@ -3103,7 +3123,7 @@ corpus corrections & bt818, bt823, bt824\\
 \label{sec:architecture-completeness}
 
 The holonet machine is now specified end to end: the $40$-point substrate
-register and its $W(3,3)$ commuting-projector Hamiltonian; the $[[240,81,4]]_3$
+register and its $W(3,3)$ commuting-projector Hamiltonian; the $[[240,81,3]]_3$
 Steinberg code as the native error-correcting register; the local gate set
 and transversal/holonomy operations; the gauge connection (flat along the
 $240$ edges, curved on the matter graph with binary-tetrahedral $2T$
@@ -3174,11 +3194,14 @@ inside a fractal of nested shells.
 gauge curvature on the matter graph, that discrete curvature is a finite-group
 lattice gauge theory whose continuum limit is the spectral action's
 gauge-plus-gravity field equations (with an exact mass gap $f$), the whole
-network is a holographic code --- black-hole entropy is the code distance, and the
-substrate carries a discrete AdS/CFT --- and the runtime closes it: the clock is a
-harmonic oscillator whose frequency $\sqrt\lambda$ is the top mass, and the
-supercycle is the gauge group $\mathrm{Sp}(4,3)$, so running the machine is the
-physics.
+network has a finite holographic-code analogue --- its screen multiplicity
+$\mu=4$ agrees with the one-sided distance $d_Z=4$, while the full CSS distance
+is $d=3$; that finite equality alone derives neither black-hole entropy nor a
+continuum AdS/CFT.  The runtime adds a separate typed finite control ABI:
+binary $Q_3$ address toggles lower to header flags and then to Q6 pulse
+transitions.  Its spectral displacement $\sqrt\lambda=\sqrt2$ and its
+$51840$-frame accounting do not by themselves supply a mass scale, group
+action, or continuum realization.
 \emph{(D) It is testable now}: a parameter-free near-term falsification protocol
 on the single-photon demonstrator.
 Throughout, one substrate number recurs --- $q-1=\lambda=2$ sets the drive angle,
@@ -3357,13 +3380,14 @@ both layers are substrate-fixed, with nothing left to choose:
   \underbrace{240\ \text{squeezed modes}}_{\text{physical}}
   \to \underbrace{120\ D_4\ \text{GKP pairs}}_{\substack{\text{inner: analog}\to\text{digital}\\ \text{gain }1.5\,\text{dB}}}
   \to 240\ \text{GKP qutrits}
-  \to \underbrace{[[240,81,4]]_3}_{\text{outer: Steinberg}}
+  \to \underbrace{[[240,81,3]]_3}_{\substack{\text{outer: Steinberg}\\d_X=3,\ d_Z=4}}
   \to 81\ \text{logical qutrits}.
 \]
 The inner code is the GKP code on the matter-shell lattice $D_4$ (converting
 continuous displacement noise into discrete qutrit errors, with the $1.5$~dB
 coding gain that eases the squeezing budget); the outer code is the
-$[[240,81,4]]_3$ Steinberg code on the substrate's $240$ edges. What remains is
+$[[240,81,3]]_3$ Steinberg code, with $(d_X,d_Z)=(3,4)$, on the substrate's
+$240$ edges. What remains is
 purely physical, and it is the \emph{universal} CV fault-tolerance bottleneck,
 not a $W(3,3)$-specific one:
 \begin{enumerate}
@@ -3379,7 +3403,7 @@ not a $W(3,3)$-specific one:
 \item homodyne detection for GKP and Steinberg syndrome readout.
 \end{enumerate}
 This is the precise, honest statement of what the holonet is and what it still
-needs: a concatenated $\mathrm{GKP}(D_4)\circ\text{Steinberg}\,[[240,81,4]]_3$
+needs: a concatenated $\mathrm{GKP}(D_4)\circ\text{Steinberg}\,[[240,81,3]]_3$
 continuous-variable qutrit computer in which $W(3,3)$ fixes \emph{both} code
 layers, the gate set ($\mathrm{Sp}(4,3)$ Gaussian $+$ $E_6$ cubic) and the
 network --- leaving \emph{zero design freedom above the hardware}. The only open
@@ -3478,7 +3502,7 @@ computation by magic-state injection \cite{howard14}. The qutrit $d=q=3$ is the
 smallest, cleanest case, and the substrate realizes the whole picture
 geometrically. The discrete phase space of two qutrits is $\mathbb Z_3^{4}$ with
 $3^4=81=q^4$ points --- \emph{exactly} the logical register $H_1=81$ of the
-$[[240,81,4]]_3$ code (irreducible under $\mathrm{PSp}(4,3)$); the Wigner function
+$[[240,81,3]]_3$ code (irreducible under $\mathrm{PSp}(4,3)$); the Wigner function
 lives on the same $81$ points the machine computes on. The $40$ vertices of
 $W(3,3)$ are the $(81-1)/2=40$ nonzero rays of that phase space --- the two-qutrit
 Pauli operators up to phase --- so the substrate \emph{is} the two-qutrit Pauli
@@ -3555,11 +3579,11 @@ shadow of the Yang--Mills mass gap, not a continuum proof.)} (Witness:
 The name is earned, not decorative: the architecture is a holographic
 quantum error-correcting code in three exact senses, each read straight off the
 substrate spectrum, and each tying a physics fact to a machine component.
-\emph{(i) Black-hole entropy is the code distance.} A horizon is a stabilizer
+\emph{(i) The black-hole quarter tracks the one-sided $Z$-distance.} A horizon is a stabilizer
 edge-cut, and the Bekenstein--Hawking law $S_{\mathrm{BH}}=A/4$ has its universal
 $\tfrac14$ \emph{equal to} the code's distance bound $1/d_Z$: the $W(3,3)$ CSS
-code has $d_Z=4=\mu$, so $S_{\mathrm{BH}}=A/d_Z=A/\mu$. The black-hole quarter is
-the QEC distance.
+code has $d_Z=4=\mu$, so $S_{\mathrm{BH}}=A/d_Z=A/\mu$. This finite dictionary
+uses the one-sided $Z$-distance; the full CSS distance remains $d=3$.
 \emph{(ii) Discrete AdS/CFT.} A holographic duality maps a negatively curved bulk
 to a conformal boundary. The collinearity graph has adjacency spectrum
 $\{12,2^{24},(-4)^{15}\}$; its single \emph{negative} (hyperbolic) eigenvalue
@@ -3570,7 +3594,7 @@ matter graph's Laplacian $\{0,24^{15},30^{24}\}$ puts the same $g/f$
 multiplicities on the gauge mass-gap spectrum.)
 \emph{(iii) The fractal is the holographic principle.} The nested-shell fractal
 of \S\ref{sec:fractal} is boundary-encodes-bulk made literal: each outer shell's
-$[[240,81,4]]_3$ code holographically contains the logical information of the
+$[[240,81,3]]_3$ code holographically contains the logical information of the
 inner layers, exactly the concatenated holographic code structure (the
 Pastawski--Yoshida--Harlow--Preskill picture), with the substrate fixing the
 dictionary. So the holonet is a holographic code whose entropy law, conformal
@@ -3618,14 +3642,13 @@ of the BTZ black hole. The leading area term captures the entropy to $\sim5\%$
 $\sim2$--$3\%$ by $n\!\sim\!5$, so the moonshine dimensions are a
 Strominger--Vafa-style microstate count of the substrate's own horizon, with
 $S=A/\mu$. Second --- and this is why the holographic story is not a separate
-layer --- the holographic \emph{redundancy is the error correction}. A
-holographic code over-encodes each bulk qudit on many boundary regions, and that
-over-encoding \emph{is} the code distance; on the holonet the identical
-redundancy appears three ways at once: the fractal nested shells (each outer
-$[[240,81,4]]_3$ shell re-encoding the inner layers), the timetable
-triple-storage (\S\ref{sec:sync}), and the holographic boundary. So the network's
-holographic/fractal redundancy and the computer's fault tolerance are one
-mechanism --- the precise sense in which the computer is the network. (Witness:
+layer --- the holographic \emph{redundancy supports the error correction}. A
+holographic code over-encodes each bulk qudit on many boundary regions.  On the
+holonet that redundancy appears three ways: the fractal nested shells (each outer
+$[[240,81,3]]_3$ shell re-encoding the inner layers), the timetable
+triple-storage (\S\ref{sec:sync}), and the holographic boundary.  Their shared
+geometry does not make every redundancy count equal to the minimum distance:
+the exact code has $d=3$ and one-sided $d_Z=4$. (Witness:
 \texttt{analysis/w33\_microstate\_count.py}.)
 
 The central charge even explains the generation number. The matter sector's affine
@@ -3678,18 +3701,20 @@ $\mathrm{SO}(10)\times\mathrm{SU}(4)$ it is $(\mathbf{16},\mathbf 4)\oplus(\over
 --- Standard-Model families (the $\mathbf{16}$) replicated under a \emph{hidden}
 $\mathrm{SU}(4)=\mathrm{SO}(6)$ with $\mu=4$ dark colors, so $E_8=\mathrm{SO}(16)\oplus\mathbf{128}$
 is a visible/dark split and the holographic boundary predicts dark matter.
-\emph{(b) Ryu--Takayanagi is exact and discrete}: a boundary region $A$ has
+\emph{(b) Ryu--Takayanagi has an exact finite combinatorial analogue}: a boundary region $A$ has
 entanglement entropy $S(A)=\delta(A)/\mu$, its minimal edge-cut over the Bekenstein
 factor (a point gives $q$, a $\mathrm{GQ}$ line gives $q^2$), with a symmetric Page
-curve; by the JLMS equality of bulk and boundary modular Hamiltonians the machine
-reconstructs its own bulk, the entanglement-wedge threshold being the code distance
-$d_Z=\mu$. \emph{(c) $q=3$ is selected thermodynamically}: the expanding de Sitter
+curve.  This finite dictionary identifies a one-sided $Z$-recovery scale
+$d_Z=\mu=4$, not the full CSS distance $d=3$; a continuum JLMS equality and an
+operational bulk-reconstruction map would be additional input.
+\emph{(c) $q=3$ is selected thermodynamically}: the expanding de Sitter
 horizon (temperature $T_H=k/2\pi$, curvature $\kappa=2/k$, entropy $A/\mu$) closes
 its first-law/Gauss--Bonnet condition $2(q-1)(q^2+1)=(1+q)(1+q^2)$ \emph{only} at
 $q=3$ --- the thermal clock is self-consistent only there. The unifying thread:
-the same $\mu=4$ is the Bekenstein factor, the QEC distance, the RT $1/\mu$ and its
-reconstruction threshold, the de Sitter entropy factor, \emph{and} the number of
-dark colors --- one holographic quantum. (Witnesses:
+the same $\mu=4$ appears as the finite Bekenstein normalization, the one-sided
+$Z$-distance, the RT normalization, the de Sitter entropy factor, \emph{and} the
+number of dark colors.  These exact finite coincidences do not by themselves prove
+that the corresponding continuum mechanisms are identical. (Witnesses:
 \texttt{analysis/w33\_dark\_sector\_128.py},
 \texttt{analysis/w33\_rt\_bulk\_reconstruction.py},
 \texttt{analysis/w33\_desitter\_q3\_selection.py}.)
@@ -3893,11 +3918,12 @@ edge-adjacent faces (the tetrahedron and Szilassi are the \emph{only} polyhedra 
 which every pair of faces touches), and its dual the Cs\'asz\'ar polyhedron, with
 $7$ mutually adjacent vertices ($K_7$). They share $21=\binom72$ edges --- the Fano
 flags --- and their incidence is the Heawood graph ($14=7+7$ vertices, $21$ edges),
-which is exactly the Fano clock whose Laplacian middle shell gives the oscillator
-frequency $\omega=\sqrt\lambda=\sqrt2$ of \S\ref{sec:clock-is-mass}. So the two
-toroidal polyhedra \emph{are} the clock oscillator, and the tetrahedral BC helix is
-its genus-$0$ companion: one triangulation ladder $3\to4\to7$, the triangle and the
-tetrahedron, builds the clock at both genera. (Witness:
+which gives the Fano clock graph used in \S\ref{sec:clock-is-mass}.  Its
+Laplacian has the finite middle-shell displacement $\sqrt2$, equivalently the
+normalized two-branch selector described there; this does not make either
+polyhedron an analogue oscillator or a physical time source.  The triangle,
+tetrahedron, and Fano incidence graph instead give a combinatorial
+triangulation ladder $3\to4\to7$ with distinct finite roles. (Witness:
 \texttt{analysis/w33\_genus\_ladder\_clock.py}.)
 
 And the ladder takes us all the way home: the same simplices generate the surfaces,
@@ -3914,7 +3940,7 @@ ladder, the Fano heptad becoming the genus-$3$ heptagonal surface.
 the $W(3,3)$ chain complex ($40,240,160$, $\partial^2=0$) the $160$ triangles are the
 weight-$3$ CSS $Z$-checks (rank $120$) and the vertices the $X$-checks (rank $39$),
 so the trits no triangle can save are $H_1=(240{-}39){-}120=81=q^4$, the logical
-register of the $[[240,81,4]]_3$ code --- closing a loop and encoding a qutrit are
+register of the $[[240,81,3]]_3$ code, with one-sided $d_Z=4$ --- closing a loop and encoding a qutrit are
 one act. \emph{Clock (the helix is a quasicrystal).} The tetrahelix twist
 $\arccos(-\tfrac23)$ is Niven-irrational, so the Boerdijk--Coxeter helix never
 closes in flat $3$D --- the aperiodic, two-incommensurate-frequency time-crystal
@@ -3928,67 +3954,68 @@ and time are one triangulation. (Witnesses:
 \texttt{analysis/w33\_trit\_saving\_code.py},
 \texttt{analysis/w33\_bc\_helix\_quasicrystal.py}.)
 
-\subsection{The clock is a mass and the supercycle is the gauge group: running the
-machine is the physics}
+\subsection{The Heawood clock is a finite control layer, not a mass scale}
 \label{sec:clock-is-mass}
 
-The movement closes on the runtime itself. The holonet's clock is not an external
-metronome --- it is a \emph{topological harmonic oscillator} living on the
-Heawood graph (the incidence graph of the Fano plane $\mathrm{PG}(2,2)$, the same
-$7$ points and $7$ lines that the time-bin guard shell uses). Its Laplacian
-spectrum is $\{0,(q-\sqrt\lambda)^{6},(q+\sqrt\lambda)^{6},2q\}
-=\{0,(3-\sqrt2)^{6},(3+\sqrt2)^{6},6\}$, and on the $12$-dimensional middle shell
+The Heawood graph is the incidence graph of the Fano plane
+$\mathrm{PG}(2,2)$: it has $14$ vertices, is $3$-regular, and has Laplacian
+spectrum
 \[
-  (L_H-qI)^2=\lambda I,\qquad \omega=\sqrt\lambda=\sqrt2,\qquad E_\pm=q\pm\sqrt\lambda=3\pm\sqrt2,
+  \{0,(3-\sqrt2)^6,(3+\sqrt2)^6,6\}.
 \]
-two six-mode $\mathrm{Cl}(1,1)$ branches --- an exact discrete oscillator whose
-frequency is $\sqrt\lambda$. That frequency is not abstract: it is a mass. The
-heaviest fermion sits at
+On its $12$-dimensional middle spectral subspace $M$ the normalized operator
 \[
-  m_{\mathrm{top}}=\frac{v_{EW}}{\sqrt\lambda}=\frac{246}{\sqrt2}=173.95\ \mathrm{GeV},
+  J=\frac{L_H-3I}{\sqrt2}\bigg|_M
+  \qquad\hbox{satisfies}\qquad J^2=I_M,
 \]
-so the machine's clock \emph{rate} is the top-quark mass scale. And the runtime
-stack $8\to48\to24\to72\to2160\to51840$ tops out at the full Clifford supercycle
-\[
-  51840=720\cdot72=24\cdot\underbrace{30}_{h(E_8)}\cdot\underbrace{72}_{q^2\cdot8}=\lvert \mathrm{Sp}(4,3)\rvert,
-\]
-with the $72$-tick frame $=q^2\times$ the eight-tick word and the $2160$ mirror
-bus $=h(E_8)\times$ frame. The supercycle is the order of the gauge group. So
-executing the machine for one supercycle is one complete traversal of
-$\mathrm{Sp}(4,3)$, ticked by the oscillator whose frequency is the top mass:
-the holonet does not \emph{simulate} the physics on a clock, its clock is the
-mass-setting oscillator and one run of its instruction stream is the gauge
-dynamics. Running the machine and enacting the physics are the same act.
-(Witness: \texttt{analysis/w33\_machine\_clock\_is\_mass.py}.)
+with two six-dimensional $+1$ and $-1$ branches.  This is an exact finite
+reversible spectral selector, useful as a clock-shell diagnostic.  The
+dimensionless displacement $\sqrt2$ is \emph{not} a particle frequency or a
+mass scale: no physical units, coupling, or calibrated Hamiltonian have been
+constructed.
 
-Yet the clock is a \emph{separate} module, and its arithmetic says why. The
-clock/readout layer is the Fano plane $\mathrm{PG}(2,2)$ with symmetry
-$\mathrm{PSL}(2,7)=\mathrm{PSL}(3,2)$ of order $168=2^3\cdot3\cdot7$ (the same
-layer that carries the $168=7\cdot f$ detector-bin weld), while the gauge/state
-layer is $\mathrm{Sp}(4,3)$ of order $51840=2^7\cdot3^4\cdot5$. The clock prime
-$7=\Phi_6(3)$ --- the external cyclotomic prime that also fixes $\beta_0^{\mathrm{QCD}}$
-and the atmospheric angle --- \emph{does not divide} the gauge order, so
-$\mathrm{PSL}(2,7)$ is no subgroup of $\mathrm{Sp}(4,3)$: the clock's Fano symmetry
-can never be a gauge operation, which is the group-order reason the Heawood clock
-is a separate homology module rather than a $W(3,3)$ subgraph (the girth
-obstruction). The two layers are coprime except for
+The useful computational object is instead a typed finite control system.
+The Heawood cycle space has
 \[
-  \gcd(51840,168)=24=f,
+  \beta_1=21-14+1=8,
 \]
-and both realize that shared scale as an order-$f$ subgroup --- the single-qutrit
-Clifford $2T=\mathrm{SL}(2,3)$ inside $\mathrm{Sp}(4,3)$, and the Fano
-point-stabilizer $S_4$ ($=168/7$) inside $\mathrm{PSL}(2,7)$. So the clock layer
-$=7\times f$ and the gauge layer $=(h(E_8)\cdot72)\times f$ are welded only at the
-matter count $f=24$, which is exactly where the clock--matter spectral resonance
-lands. The clock and the readout are one Fano layer, coprime to the computation
-and bonded to it at the $24$-cell core. (Witness:
-\texttt{analysis/w33\_clock\_gauge\_two\_layer.py}.)
+so, after choosing a spanning-tree basis, it is an eight-bit
+$\mathbb F_2$ register with $2^8$ states.  The dimension is invariant while
+the eight coordinates are not.  Separately, the executable route ABI lowers
+a binary $Q_3$ address toggle to a BT828 header flag, then to a Q6 address and
+a \texttt{LOAD\_FLAG}$\to$\texttt{FLIP\_Q6\_AXIS}$\to$\texttt{LATCH\_VERTEX}
+transition.  Pass~377 makes the header stage exact: its $360$ directed toggles
+compress to a disjoint $24+12+12$ support of $48$ header flags, with a free
+$C_3$ depth clock of $16$ three-cycles.  This is a finite logic-switch reading,
+not a claim that a binary toggle already equals a Q6 edge traversal or a
+physical switch.
+
+The runtime bookkeeping remains exact:
+\[
+  8\to48\to24\to72\to2160\to51840,
+  \qquad
+  51840=720\cdot72=24\cdot30\cdot72=\lvert\mathrm{Sp}(4,3)\rvert.
+\]
+It describes word, frame, bus, and supercycle counts.  Equality of the final
+count with a group order does not construct an action, enumerate group
+elements, or make one runtime pass a traversal of $\mathrm{Sp}(4,3)$.
+
+There is also a clean separation boundary.  The Fano symmetry
+$\mathrm{PSL}(3,2)$ has order $168=2^3\cdot3\cdot7$, whereas
+$\mathrm{Sp}(4,3)$ has order $51840=2^7\cdot3^4\cdot5$.  Since $7$ does not
+divide $51840$, the former cannot be a subgroup of the latter.  Their common
+factor $\gcd(168,51840)=24$ is an arithmetic overlap, not a canonical coupling
+or physical weld.  (Witnesses: \texttt{analysis/bt1654\_heawood\_clock\_homology.py},
+\texttt{analysis/bt1656\_runtime\_word\_cycle\_basis.py},
+\texttt{analysis/w33\_machine\_clock\_is\_mass.py}, and
+\texttt{analysis/w33\_pass377\_binary\_q3\_switch\_header.g}.)
 
 \subsection{Four further faces of the machine: time, topological order,
 scrambling, and periodic orbits}
 \label{sec:four-faces}
 
-Four short, exact results round out the physical reading of the machine.
+Four short calculations follow. Their finite statements should be read at their
+proved scope; any physical realization requires its own map and calibration.
 \emph{(i) Time is the modular flow, and only the clock can source it.} By the
 Connes--Rovelli thermal-time hypothesis, physical time is the modular
 (Tomita--Takesaki) automorphism flow of the state, generated by $K=-\ln\rho$. On
@@ -4837,6 +4864,79 @@ Thus the packet is a finite transition system:
 \[
   72=(16\cdot3)+(3\cdot8).
 \]
+The earlier BT828 ``Q3 XOR'' control word should be read literally as a binary
+three-cube address-toggle bank: it compares three low binary coordinate bits,
+whereas the six $\mathbb F_3$ symbols belong to the separate parity horizon.
+The compiler reaches this transition system through a typed header lowering
+(address bits $\to$ mirror/tomotope header $\to$ Q6 flag $\to$
+\texttt{LOAD/FLIP/LATCH}), not through an established identification of the
+binary cube transport group with the tomotope pulse group.  This is an exact
+finite-state ABI statement; it is not an analogue-oscillator, calibrated
+optical-switch, or continuum-physics claim.
+
+\smallskip
+\noindent\textbf{Pass 377: binary switch-header clock.}
+The missing finite control object can nevertheless be named exactly.  Across
+all $3\cdot3\cdot40=360$ directed one-axis binary-Q3 toggles and the three
+depth residues, the BT828 header formula reaches exactly $48$ of the $192$
+tomotope flags.  The three axis supports are disjoint of sizes
+\[
+  24+12+12=48,
+\]
+with combined fiber profile $24\cdot5+24\cdot10=360$.  Depth increment acts on
+these actual header addresses as
+\[
+  f\longmapsto f+64\pmod{192},
+  \qquad C_3\text{ freely on }48=16\cdot3\text{ flags}.
+\]
+This gives a finite logic-clock plane between binary address control and the
+Q6 address bus.  It does not yet make a binary toggle into a Q6 edge
+traversal or identify this $16\cdot3$ clock with the separately constructed
+LOAD/FLIP/LATCH schedule.  (GAP witness:
+\path{analysis/w33_pass377_binary_q3_switch_header.g}.)
+
+\smallskip
+\noindent\textbf{Pass 378: why the two $16\cdot C_3$ clocks still do not
+identify.}  The header plane and the $48$ phase positions of the BT1406
+six-digit stress schedule are both free $C_3$-sets with sixteen orbits.  Thus
+they admit abstract equivariant bijections, but exactly
+\(16!\,3^{16}=900657498850357248000\) of them: no one is natural from that
+set type alone.  More decisively, BT1406 retains one \texttt{tomotope\_flag}
+through each \texttt{LOAD/FLIP/LATCH} triple, whereas the Pass-377 action takes
+every header flag to a distinct flag.  GAP therefore proves that no
+$C_3$-equivariant correspondence can factor through the scheduler's actual
+flag label.  The live stress flags meet the header plane only in
+\(\{112,144\}\), and no header $C_3$-cycle contains a full stress triple.
+This is a structural non-intertwining result, not merely an absent hardware
+claim.  (Witness: \path{analysis/w33_pass378_header_scheduler_c3_obstruction.g}.)
+
+\smallskip
+\noindent\textbf{Pass 379: the header clock is not a \(Q_6\) geometric
+operation through the live address table.}  The same arithmetic
+$f\mapsto f+64\pmod {192}$ is a free control-address clock, but BT1371's
+pinned flag-to-$Q_6$ table need not turn it into a cube symmetry.  GAP checks
+the $Q_6$ edge line graph directly: of its $960=64\binom{6}{2}$ adjacent edge
+pairs, only $146$ stay adjacent under the transported shift, while $814$ are
+lost and $814$ nonadjacent pairs become adjacent.  Flags $\{0,8\}$ provide the
+first witness, shifting to $\{64,72\}$ whose assigned edges share no endpoint.
+Hence the header depth cycle is control metadata, not a $Q_6$ edge traversal,
+geometric switch, or optical operation through the current table.  This does
+not prohibit a future explicitly constructed different intertwiner.  (Witness:
+\path{analysis/w33_pass379_header_q6_geometry_boundary.g}.)
+
+\smallskip
+\noindent\textbf{Pass 380: minimal scheduler switch state and the remaining
+binding table.}  A scheduler flag alone has no free phase clock.  Retaining
+all sixteen live flag identities while making the C3 phase action free requires
+at least $16\cdot3=48$ states, achieved exactly by
+$(\texttt{tomotope\_flag},\texttt{phase\_trit})$.  The canonical full-bus lift
+\(\iota(f,p)=f+64p\pmod {192}\) is equivariant, but meets the Pass-377 header
+plane in only the cycles $[16,80,144]$ and $[48,112,176]$.  Hence two schedule
+orbits are naturally anchored and fourteen remain unbound.  Even with the two
+oriented anchors fixed, \(14!\,3^{14}=416971064282572800\) extensions remain.
+The needed next object is a typed sixteen-row header-orbit binding table with
+phase offsets, not an inferred Q6 geometry or optical implementation.  (GAP
+witness: \path{analysis/w33_pass380_minimal_scheduler_phase_lift.g}.)
 
 BT1699 then lowers the same ticks onto the physical single-photon frame already
 used by the Witting/Fano automaton:
@@ -6260,41 +6360,29 @@ massless carrier. The universe's primitive is one photon. (Witness:
 
 \subsection{The single carrier, the geon, and the fractal of nested shells}
 
-Three pictures of the same machine fall out, each tested. \emph{(i) Minimal
-activation.} If one carrier's worldline braids through the substrate's topology
-to compute, how few controls suffice? The gate group is
-$\mathrm{Sp}(4,3)$ (order $51840$), and it is $2$-generated: a search over the
-natural symplectic ``switches'' (one-mode Fourier/phase, two-mode $CZ$/$SUM$)
-finds $13$ generating \emph{pairs} --- e.g.\ $\langle F_2,\ F_1\!\cdot\! CZ\rangle$
-reaches all $51840$. So flipping \emph{two well-chosen switches} in the right
-temporal pattern (a binary word, scheduled by the Boerdijk--Coxeter quasicrystal)
-reaches every gate; the naive pair $\langle F_1, CZ\rangle$ does \emph{not}
-(it generates only a $108$-element subgroup), so the pair must be a generating
-one. Moreover the patterns are \emph{short}: the Cayley diameter of
-$\mathrm{Sp}(4,3)$ under such a pair is only $14$, so every one of the $51840$
-gates is a word of at most $14$ switch-flips (mean $\approx 10$), and the
-diameter is the same across the generating pairs tested --- the worst-case
-compilation length is substrate-fixed, with the hardware entering through
-\emph{which} operations are the two switches, not through the length. The
-switches are two elementary braids of the carrier's worldline, robust because
-braiding depends only on the topology --- the holonomic robustness again, and
-the photoelectric effect is the hinge that lets the same word run on a massless
-photon (all-at-once) or a massive electron braided through a machine's wiring.
-As literal braids the minimal hardware is tiny: a single qutrit needs three
-junctions ($B_3\twoheadrightarrow\mathrm{PSL}(2,\mathbb Z)\to\mathrm{SL}(2,3)=2T$,
-the same $2T$ as the gauge-connection holonomy), and four symplectic-transvection
-junctions already generate the full $\mathrm{Sp}(4,3)$. Their interaction graph
-(an edge where two junctions braid, $\langle v_i,v_j\rangle=\pm1$; a non-edge
-where they commute) is a \emph{path} $P_4$, so the minimal hardware is four
-junctions \emph{in a line} --- consecutive braid, non-consecutive commute. To run
-the machine on a given fabric is then to place that path: any wiring containing a
-simple four-junction path hosts it, which is every grid, ring, mesh, hypercube
-and almost every random fabric. Topology does genuinely matter in the
-pathological case --- a pure star has no four-path, and the symplectic geometry
-forbids reshaping the interaction graph into a three-leaf star (mutually
-commuting junctions are isotropic, at most a Lagrangian) --- but every real fabric
-qualifies, so ``runs on any classical machine'' becomes a concrete graph search
-for a four-junction path.
+This section records three architecture readings.  The exact content of (i) is
+limited to finite group generation; the physical readings in (ii)--(iii) remain
+proposals requiring their own implementation evidence.  \emph{(i) Abstract
+switch generation.} The gate group $\mathrm{Sp}(4,3)$ has order $51840$ and is
+$2$-generated.  A finite search over named symplectic generators finds $13$
+generating pairs, including $\langle F_2,\ F_1\!\cdot\! CZ\rangle$, while the
+naive pair $\langle F_1,CZ\rangle$ generates only a subgroup of order $108$.
+Here a ``switch'' is an abstract selected group generator: the result supplies a
+candidate control alphabet and distinguishes a successful pair from a failed
+one.  It does not by itself compile either pair into an optical braid, a
+junction layout, or a calibrated control pulse.
+
+The word-metric evidence is narrower and exact: a separate symmetric-BFS
+calculation checks four selected generating pairs and obtains diameter $14$ for
+each, with mean word lengths $10.407$ or $10.596$.  It does not establish that
+all $13$ generating pairs have the same metric.  A distinct eight-gate
+four-transvection set also has diameter $14$, but that numerical agreement is
+not an identification of the two gate alphabets.  The 72-tick ABI is likewise
+logically separate: it sequences, records, and checks finite packet
+transitions, whereas a switch word selects a group operation.  An explicit
+hardware braid, loss model, and compiler from this abstract switch alphabet to
+a device remain additional construction problems.  (Witness:
+\path{analysis/w33_hardware_compilation.py}.)
 
 \emph{(ii) The carrier as its own self-contained shell.} A single carrier
 recirculating in the closed loop is the informational analogue of Wheeler's
@@ -6339,7 +6427,8 @@ degree-$2$ cyclotomic skeleton $\{\Phi_3,\Phi_4,\Phi_6\}=\{13,10,7\}$ and the Wi
 object; which unfolds into the seven faces with \emph{no free integer parameter} (even
 $1/\alpha=137=\Phi_3\Phi_4+\Phi_6$ is cyclotomic, and the Leech kissing number
 $196560=6\mu q^2\Phi_3\Phi_4\Phi_6$); the matter shell is simultaneously the
-$[[240,81,4,3]]_3$ code, the magic fuel ($\text{matter}=\text{magic}$, no distillation
+$[[240,81,3]]_3$ code with $(d_X,d_Z)=(3,4)$, the magic fuel
+($\text{matter}=\text{magic}$, no distillation
 factory), and the clock-renewed resource --- one self-fueling holographic memory; whose
 bulk has positive Ollivier curvature $\kappa=\Lambda=1/6$, Newton constant $G=1/2^q$,
 de~Sitter entropy $S=f=24$. The theorem: \emph{from the single forced integer $q=3$,

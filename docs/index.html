@@ -1930,6 +1930,12 @@
               contribution and its remaining boundary.</li>
             <li><a href="../PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md">Passes 363--367</a> &mdash; the newest
               QR-code, real-Clifford, W33/E8 refinement, and parity-pullback packet.</li>
+            <li><a href="../PASS373_374_W33_BOUNDARY_MLUT_PHASE_SHEET_SYNTHESIS.md">Passes 373--374</a> &mdash; the
+              exact 481-entry W33 boundary decoder and the natural four-sheet action obstruction.</li>
+            <li><a href="../PASS375_W33_PHASE_CHARACTER_NORMALIZER_OBSTRUCTION.md">Pass 375</a> &mdash; the exact
+              <code>D8</code> phase normalizer and no-regular-complement theorem.</li>
+            <li><a href="../PASS376_MARKED_D8_BRIDGE.md">Pass 376</a> &mdash; the marked
+              <code>V4:C2</code> bridge with its exact fourfold ambiguity.</li>
             <li><a href="holonet_theorem_ledger.md">Holonet theorem ledger</a> &mdash; claim-to-artifact status for the
               software and architecture track.</li>
             <li><a href="#independent-verification">Independent Verification</a> &mdash; commands and certificates;
@@ -3782,14 +3788,16 @@
           <div class="card">
             <div class="label">Self-Fueling Holographic Memory + the Machine's Clock IS the Universe's Clock</div>
             <div class="detail"><strong>One object, three roles.</strong> The matter shell is at once the
-              holographic code (stores 81 logical qutrits, bulk recovered from boundary at redundancy
-              <code>&mu;=4=d</code>), the magic fuel (its 36=(q!)&sup2; rays, premium P=1, no distillation
+              holographic code (stores 81 logical qutrits against the combinatorial boundary-screening
+              multiplicity <code>&mu;=4</code>; the CSS distances are <code>d<sub>X</sub>=3</code>,
+              <code>d<sub>Z</sub>=4</code>, and <code>d=3</code>), the magic fuel (its 36=(q!)&sup2; rays, premium P=1, no distillation
               factory), and the system the irrational clock keeps non-Clifford. So the machine needs no
               distillation factory, no separate fuel store, and never recurs &mdash; <strong>a holographic
                 memory whose error-correction IS its magic supply, kept alive by an irrational clock</strong>,
               all q=3. <strong>The entanglement is geometric:</strong> a discrete Ryu-Takayanagi law (computed
-              by max-flow) &mdash; entropy = minimal graph cut; a ray's RT area = degree k=12; the minimal
-              RT surface (one bulk qutrit) = the code distance d=4; gauge|matter cut = 108=&mu;&middot;27;
+              by max-flow) &mdash; entropy = minimal graph cut; a ray's RT area = degree k=12; the proposed
+              one-bulk-qutrit RT cut has size <code>&mu;=4=d<sub>Z</sub></code>, matching the one-sided
+              Z-distance rather than the full distance <code>d=3</code>; gauge|matter cut = 108=&mu;&middot;27;
               an area law (sub-volume). <strong>And the machine's clock is the universe's clock:</strong> the
               Boerdijk-Coxeter twist <code>&theta;=arccos(-2/3)=-(q-1)/q</code> (the de Sitter angle) has beat
               <code>30=h(E8)</code>; inflation reads it off &mdash; e-folds <code>N=2&middot;30=60</code>, and the
@@ -3813,8 +3821,9 @@
               Temporal partner of the spatial no-ovoid result: the same q=3 forbids gauging the magic away in
               <em>space</em> (no ovoid) or <em>time</em> (no recurrence). <strong>The code is holographic.</strong>
               From any pole the 40 rays split <code>1+12+27</code> = self + gauge boundary + matter bulk; every
-              bulk ray is screened by exactly <code>&mu;=4</code> boundary rays = the code distance d=4, so the
-              bulk is reconstructed from the boundary redundantly (erase up to 3, still recover); causal diameter
+              bulk ray is screened by exactly <code>&mu;=4</code> boundary rays. This graph redundancy is distinct
+              from the full CSS distance <code>d=3</code>: the code corrects one arbitrary qutrit error or two
+              known-location arbitrary erasures, while <code>&mu;=4</code> alone does not prove three-erasure recovery. Causal diameter
               2 = RT depth; logical register = irreducible Steinberg module (dim 81) = no local logical. The
               "holo" in holonet is earned.
             </div>
@@ -3825,7 +3834,9 @@
                 distillation is the dominant cost</strong> &mdash; a separate factory making 10&sup3;&ndash;10&#8310;
               raw magic states per non-Clifford gate. Here that cost vanishes: <strong>matter = magic</strong>.
               The 36 magic rays (=(q!)&sup2;, graded 8+24+4={2^q,f,&mu;}) ARE the matter shell &mdash; the same
-              <code>D&#8324;</code>/GKP code register (the <code>[[240,81,4,3]]&#8323;</code> Steinberg module) that
+              <code>D&#8324;</code>/GKP code register (the canonical <code>[[240,81,3]]&#8323;</code> Steinberg module,
+              equivalently <code>[[240,81,4,3]]&#8323;</code> only in the explicitly ordered asymmetric convention
+              <code>[[n,k,d<sub>Z</sub>,d<sub>X</sub>]]&#8323;</code>) that
               protects the data. The fuel is structural, and it's genuine magic: the qutrit Strange state
               has <strong>mana log(5/3)</strong> (the single-qutrit max, computed from the Wigner function;
               stabilizer states have mana 0). Standing density = contextual fraction <code>1/&Phi;&#8324;=1/10</code>;
@@ -8097,7 +8108,8 @@
                 Lattice, Info Theory &amp; Knot Phases</strong> &mdash; three new phases added:
               <code>test_lattice_root_leech_ccxcvii.py</code> (43 tests) connecting W(3,3) to the Leech lattice and
               E<sub>8</sub> root system; <code>test_info_theory_quantum_codes_ccxcviii.py</code> (31 tests) proving the
-              [240,81,4] ternary homological code and information-theoretic package;
+              81-dimensional ternary logical quotient with one-sided <code>d<sub>Z</sub>=4</code>; the later full CSS
+              audit gives <code>[[240,81,3]]&#8323;</code> with <code>d<sub>X</sub>=3</code>;
               <code>test_knot_quantum_groups_ccxcix.py</code> (31 tests) proving the trefoil/Jones polynomial boundary
               &mu;=4 and quantum group algebra at q=3. All 105 new tests pass.</span></div>
           <div class="highlight-item" style="border-left:3px solid #ff6b6b;padding-left:1rem"><span class="hi-icon"
@@ -8286,7 +8298,8 @@
               from same action, 26 tests). <strong>CCCLXVII</strong> (Categorical QG: BM algebra = Frobenius algebra of
               dim q=3, 2D TQFT, Drinfeld center D&sup2;=v=40, Tannaka&ndash;Krein reconstruction of Sp(4,F<sub>3</sub>),
               nerve N<sub>2</sub>=N<sub>3</sub>=960, 25 tests). <strong>CCCLXVIII</strong> (QEC Codes: [[40,12,4]] CSS
-              code from adjacency, [[240,81,4]] ternary homological code with 3<sup>4</sup>=81 logical qutrits, quantum
+              code from adjacency, the canonical 240-edge ternary CSS code with 3<sup>4</sup>=81 logical qutrits,
+              one-sided <code>d<sub>Z</sub>=4</code>, and full parameters <code>[[240,81,3]]&#8323;</code>, quantum
               Hamming denom 121=(k&minus;1)&sup2;, overhead 10/3, 30 tests). <strong>CCCLXIX</strong> (Swampland &amp;
               UV Completion: WGC satisfied, zero moduli, refined dS OK, species scale=&radic;40, cobordism consistent,
               &alpha;<sup>&minus;1</sup>=137 as fixed point, 20 tests). Total: 369 phases, 30k+ tests.</span></div>
@@ -12884,7 +12897,8 @@
             <td>Ternary homological-code bridge</td>
             <td>The real W33 clique complex over <code>GF(3)</code> is an exact qutrit CSS code on the <code>240</code>
               edge qutrits. The commuting check ranks are <code>39</code> and <code>120</code>, the logical dimension is
-              exactly <code>81</code>, and the primal logical distance is exactly <code>4</code> via an explicit
+              exactly <code>81</code>, and the one-sided Z-logical distance <code>d<sub>Z</sub></code> is exactly
+              <code>4</code> via an explicit
               nontrivial weight-<code>4</code> cycle.</td>
             <td class="status-ok">✅ exact qutrit matter code</td>
           </tr>
@@ -14554,6 +14568,43 @@
             element orders only <code>8</code> and <code>136</code>, so the pullback has no odd involution and the
             extension cannot split. <a href="../PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md">Open all five GAP
               witnesses, maps, and scope boundaries.</a></p>
+        </div>
+        <div class="spotlight">
+          <p><strong>Boundary decoder and phase-sheet action (Passes 373&ndash;374).</strong> The oriented triangle
+            boundary image is the exact classical ternary code <code>[240,120,3]&#8323;</code>. Its 240 parity columns
+            are nonzero and projectively distinct, every triangle supplies weight three, and all 480 nonzero
+            single-edge errors have distinct syndromes; the complete radius-one MLUT therefore has
+            <strong>481 entries</strong>. This is separate from the already-owned logical code
+            <code>[[240,81,3]]&#8323;</code> with <code>(d<sub>X</sub>,d<sub>Z</sub>)=(3,4)</code>.
+            On the scalar side, BT571/BT637/BT644 already own the four lifts and deck characters. The new GAP action
+            theorem proves that the 51,840 nonzero minimal logical X/Z vector pairings form four invariant
+            12,960-state orbits under <code>W(E6)</code>, each with stabilizer <code>C2&times;C2</code>. The natural
+            action is four copies of <code>W(E6)/(C2&times;C2)</code>, not a Weyl torsor.
+            <a href="../PASS373_374_W33_BOUNDARY_MLUT_PHASE_SHEET_SYNTHESIS.md">Open the certificates, ownership
+              reconciliation, and exact scope.</a></p>
+        </div>
+        <div class="spotlight">
+          <p><strong>Phase-character normalizer obstruction (Pass 375).</strong> The scalar deck
+            <code>D=(F3*)&sup2;&cong;V4</code> has abstract automorphism group <code>S3</code>, but the owned pairing
+            character <code>&chi;(a,b)=ab</code> cuts its stabilizer to <code>C2</code>. The order-three automorphism
+            cycles the three binary characters, so the exact phase-compatible normalizer of the four lifts is
+            <strong><code>D8</code></strong>, not <code>A4</code> or <code>S4</code>. The geometric Pass-374 stabilizer
+            independently has normalizer quotient <code>N<sub>W(E6)</sub>(K)/K&cong;D8</code>; these are different
+            objects and no intertwiner is assumed. GAP also embeds the <code>V4</code> point stabilizer in
+            <code>W(E6)&times;V4</code> with index <code>51,840</code> and proves that no regular complement exists,
+            because it would force a nonexistent order-<code>12,960</code> subgroup of <code>W(E6)</code>.
+            <a href="../PASS375_W33_PHASE_CHARACTER_NORMALIZER_OBSTRUCTION.md">Read the 29-check GAP theorem and
+              ownership audit.</a></p>
+        </div>
+        <div class="spotlight">
+          <p><strong>Marked <code>D8</code> bridge (Pass 376).</strong> The phase-compatible normalizer and
+            <code>N<sub>W(E6)</sub>(K)/K</code> now agree as marked <code>V4:C2</code> extensions.  The scalar
+            deck maps to the canonical geometric deck <code>C<sub>N</sub>(K)/K</code>, their central
+            <code>C2</code> lines correspond, and both quotient actions have the exact orbit fingerprint
+            <code>1+1+2</code>.  There are exactly <strong>four</strong> marked isomorphisms, with residual
+            ambiguity <code>C2&times;C2</code>; this is deliberately not promoted to a preferred
+            scalar-sheet-to-state map or a regular Weyl action.
+            <a href="../PASS376_MARKED_D8_BRIDGE.md">Read the 20-check GAP certificate and scope boundary.</a></p>
         </div>
 
         <h3>Step 1 — The Geometry</h3>
@@ -24794,49 +24845,52 @@
               class="section-badge">April 2026</span></h2>
 
           <div class="spotlight">
-            <p>W(3,3) is simultaneously a <strong>quantum cellular automaton</strong> (index 27, topologically
-              protected), an <strong>information processor</strong> (128 bits at 99.3% entropy efficiency), and a
-              <strong>topological harmonic oscillator</strong> (frequency &radic;2 on the Heawood graph). These three
-              structures converge to produce mass.
+            <p>This archive contains three related but distinct finite objects: a Heawood-graph spectral calculation,
+              a 72-tick routing/parity ABI, and a clocked switch schedule. They support exact discrete invariants and
+              executable routing claims. They do <strong>not</strong> identify a particle mass, an energy scale, or an
+              analogue harmonic oscillator without additional physical modelling.
             </p>
           </div>
 
           <div class="stats-grid">
             <div class="stat-card">
               <div class="stat-num">27</div>
-              <div class="stat-label">QCA index = dim(E<sub>6</sub> fund.) = |&Delta;<sub>27</sub>|</div>
+              <div class="stat-label">legacy QCA-index proposal; not a physical derivation</div>
             </div>
             <div class="stat-card">
               <div class="stat-num">128</div>
-              <div class="stat-label">information bits = 2<sup>7</sup></div>
+              <div class="stat-label">legacy information estimate; not a hardware-capacity claim</div>
             </div>
             <div class="stat-card">
               <div class="stat-num">&radic;2</div>
-              <div class="stat-label">oscillator frequency = &radic;&lambda;</div>
+              <div class="stat-label">middle-shell spectral displacement on the Heawood graph</div>
             </div>
             <div class="stat-card">
               <div class="stat-num">99.3%</div>
-              <div class="stat-label">von Neumann entropy efficiency</div>
+              <div class="stat-label">legacy entropy estimate; scope-limited</div>
             </div>
           </div>
 
-          <h3>The Topological Harmonic Oscillator</h3>
+          <h3>The Heawood clock as a finite logic layer</h3>
           <div class="card-grid">
             <div class="card">
               <div class="label" style="color: var(--accent);">Heawood graph equation</div>
-              <div class="detail">The Heawood graph (14 vertices, Szilassi dual on the torus) carries a discrete
-                harmonic oscillator: <code>(L<sub>H</sub> &minus; qI)&sup2; = &lambda;I</code>, with frequency &omega; =
-                &radic;&lambda; = &radic;2 and energy levels E<sub>&plusmn;</sub> = q &plusmn; &radic;&lambda; = 3
-                &plusmn; &radic;2. The oscillator's 12-dimensional middle shell splits into two 6-mode branches via the
-                Clifford algebra Cl(1,1).</div>
+              <div class="detail">The Heawood graph (14 vertices) has exact Laplacian spectrum
+                <code>0<sup>1</sup>, (3&minus;&radic;2)<sup>6</sup>, (3+&radic;2)<sup>6</sup>, 6<sup>1</sup></code>.
+                On its 12-dimensional middle eigenspace, and only there,
+                <code>(L<sub>H</sub>&minus;3I)<sup>2</sup>=2I</code>. That is a finite spectral identity and a useful
+                clock-shell descriptor; it is not a continuum Hamiltonian or a particle-frequency calculation.</div>
             </div>
             <div class="card">
-              <div class="label" style="color: var(--accent);">Mass from frequency</div>
-              <div class="detail">The oscillator frequency &radic;&lambda; = &radic;2 enters physics directly:
-                <strong>m<sub>t</sub> = v<sub>EW</sub>/&radic;2 = v<sub>EW</sub>/&radic;&lambda;</strong>. The mass
-                hierarchy is generated by the unipotent generation matrix G = I + &epsilon;N with &epsilon; =
-                1/&radic;(|z|&sup2;&minus;1) = 1/&radic;136, whose SVD at n=136 iterations gives singular values [137,
-                1, 1/137] &mdash; the electromagnetic coupling emerges as the dominant eigenvalue.
+              <div class="label" style="color: var(--accent);">Logic-switch reading</div>
+              <div class="detail">Read computationally, the finite oscillator language names a clocked switch fabric.
+                One route digit has up to three <strong>binary Q<sub>3</sub>-coordinate XOR</strong> toggles and up to
+                five apartment-routing slots. The 72-coordinate frame carries 66 payload coordinates and six
+                F<sub>3</sub> parity-check coordinates. The compiler's <code>bits3</code> register is binary; the
+                F<sub>3</sub> structure belongs to the parity horizon, not to a claimed ternary gate alphabet. BT1698
+                further resolves the frame into 16 <code>LOAD/FLIP/LATCH</code> transition triples and three
+                eight-tick return words. This establishes a deterministic finite-state schedule, not an analogue
+                oscillator model or calibrated optical-switch implementation.
               </div>
             </div>
             <div class="card">
@@ -24859,9 +24913,32 @@
                 tomotope packet body; the final <code>24 = q&times;2<sup>q</sup></code> ticks are the local-lift
                 epilogue, split into <code>18</code> residual payload lanes and <code>6</code> F<sub>3</sub> parity
                 lanes. Each route digit is one 8-tick word:
-                <code>3</code> ternary XOR axes plus <code>5</code> apartment-hop slots. The existing BT828 route
+                <code>3</code> binary Q<sub>3</sub>-coordinate XOR updates plus <code>5</code> apartment-hop slots. The existing BT828 route
                 compiler lowers into this word exactly; the six-digit stress route uses <code>47</code> active ticks
                 inside the 48-tick tomotope body, leaving one idle tick as verified packet slack.
+              </div>
+            </div>
+            <div class="card">
+              <div class="label" style="color: var(--accent);">Pass 377 binary Q3 switch-header clock</div>
+              <div class="detail">GAP follows every <code>3&times;3&times;40=360</code> directed binary-Q3 axis
+                toggle through the BT828 header formula. Their image is exactly <code>48</code> of the
+                <code>192</code> tomotope flags, split by axis as <code>24+12+12</code>; its fibers are
+                <code>24&times;5 + 24&times;10</code>. Incrementing the depth residue is the concrete
+                <code>flag &rarr; flag+64 (mod 192)</code> C3 clock, acting freely in <code>16</code>
+                three-cycles. This is a header-address control plane, not yet an intertwiner from a binary
+                toggle to a Q6 edge traversal, a pulse-state delta, or a physical switch. Pass 378 sharpens
+                that boundary: the header clock and the 48-tick pulse phase set share bare
+                <code>16&times;C3</code> type, but the scheduler keeps a flag constant through each phase triple
+                while the header clock moves it. No C3-equivariant map can factor through the real scheduler
+                flag label; the shared shape is noncanonical indexing only.
+                Pass 379 checks the remaining geometric shortcut through BT1371's pinned flag-to-Q6-edge table:
+                the same depth shift preserves only <code>146</code> of the Q6 line graph's
+                <code>960</code> adjacent edge pairs. It is therefore a finite control-address transition,
+                not a Q6 geometric operation or state traversal through that table.
+                Pass 380 then identifies the minimal scheduler state as
+                <code>(tomotope_flag, phase_trit)</code>, a <code>16&times;3</code> register. Its canonical
+                full-bus lift anchors only two header cycles and leaves fourteen explicit header-orbit bindings
+                to be supplied by a compiler table.
               </div>
             </div>
             <div class="card">

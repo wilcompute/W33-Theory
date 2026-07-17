@@ -54,11 +54,11 @@
 \renewcommand{\l@section}{\@dottedtocline{1}{1.5em}{3.2em}}
 \makeatother
 
-\title{\Huge\bfseries The Number 3 \\
-\Large A theory of everything, told plainly}
+\title{\Huge\bfseries $W(3,3)$, told plainly \\
+\Large A finite-geometry research atlas for curious readers}
 
 \author{Wil Dahn \\
-\small \textit{compiled from 900+ verified results}}
+\small \textit{an evidence-tiered guide to exact certificates and open bridges}}
 
 \date{}
 
@@ -120,7 +120,7 @@
 
 \section*{Abstract}
 
-This paper is a plain-language guide to the $W(3,3)$ program. The exact finite core is the symplectic generalised quadrangle $W(3,3)$ over the ternary field $\mathbb{F}_3$: a $40$-vertex, $240$-edge strongly regular graph with parameters $(40,12,2,4)$ and automorphism group of order $51{,}840$. The same $40$-state structure was isolated by A.\,Yu.\ Vlasov (arXiv:2503.18431, 2025) as the Witting configuration in quantum communication (building on Penrose 1992); the present paper develops the proposal that this finite quantum-information geometry is the internal substrate of physical law. The paper separates four levels throughout: exact finite theorems, executable repository bridges, phenomenological predictions, and philosophical interpretations.
+This paper is a plain-language guide to the $W(3,3)$ program.  Its exact finite core is the symplectic generalised quadrangle $W(3,3)$ over $\mathbb{F}_3$: a $40$-vertex, $240$-edge strongly regular graph with parameters $(40,12,2,4)$ and a full graph-symmetry group of order $51{,}840$.  The parameters alone do not identify this graph: there are $28$ nonisomorphic graphs with the same tuple, and the symplectic incidence construction is essential.  The manuscript separates exact finite theorems, executable repository bridges, conditional physical proposals, and interpretation.
 
 From the substrate's core signature
 \[
@@ -129,7 +129,7 @@ From the substrate's core signature
 = \bigl(3,384,40,240,51{,}840,7\bigr)
 \end{gathered}
 \]
-the verified finite side derives the $40=1+12+27$ screen/rim/bulk split, the $81$-dimensional protected homology sector, the $[240,81,d_Z=4]_3$ qutrit CSS package, the $480$ directed photonic carrier, and the $0\to81\to162\to81\to0$ nilpotent tail. The broader program then uses these exact integers to build bridges to the Standard-Model gauge group, three generations, $3{+}1$ spacetime, $\alpha^{-1}=137+\delta_{\rm RG}$, the dressed electroweak share $3/13$, and testable cosmological and particle-physics predictions. Those bridges are stated as bridges unless the finite theorem already proves them. The aim is maximum readability without hiding the proof boundary.
+the verified finite side contains the $40=1+12+27$ screen/rim/bulk split, an $81$-dimensional homology sector, a qutrit CSS package, the $480$ directed carrier, and the $0\to81\to162\to81\to0$ nilpotent tail.  Recent certificates also distinguish a classical $[240,120,3]_3$ boundary decoder from the logical CSS quotient, rule out a natural $W(E_6)$ torsor on the four minimal-pair sheets, and identify a fourfold ambiguity in the marked $D_8$ bridge.  The broader program proposes bridges to physics, but finite geometry alone does not currently derive the Standard Model, measured masses or couplings, spacetime dynamics, or cosmology.  The aim is maximum readability without blurring that boundary.
 
 \vspace{1em}
 \noindent\rule{0.98\linewidth}{0.4pt}
@@ -137,7 +137,7 @@ the verified finite side derives the $40=1+12+27$ screen/rim/bulk split, the $81
 
 \section*{What this paper is about, in one paragraph}
 
-We will show that an astonishing number of things in mathematics, physics, chemistry, and biology all share the same small set of underlying numbers --- and that this set is forced by \emph{one equation} which has only one positive integer answer. That answer is the number $3$. From this single equation, we will reach the Standard Model of particle physics, the genetic code, sphere packing in 24 dimensions, the Monster sporadic group, and the fine-structure constant. We will be careful at each step. Nothing will be hand-waved. We will introduce every piece of mathematical formalism with a plain-English explanation the first time it appears, and then use it rigorously thereafter. You will not be asked to know anything that an attentive reader cannot verify on a piece of paper.
+This is a guided tour of one unusually rich finite geometry and of the computational certificates built around it.  The equation $q!=2q$ has the unique positive solution $q=3$; that arithmetic fact motivates one selection narrative, but it does not by itself force a field, a geometry, or a physical theory.  What readers can check here are the constructions and their finite consequences.  Where the text turns those consequences into a physics proposal, it will say so plainly.  The goal is not to make the story smaller; it is to make every layer usable, falsifiable, and honestly labelled.
 
 \vspace{1em}
 \noindent\rule{0.98\linewidth}{0.4pt}
@@ -163,12 +163,16 @@ This manuscript deliberately mixes elementary exposition, exact finite geometry,
 \begin{enumerate}[label=\textbf{Tier \arabic*:},leftmargin=4.8em]
 \item \textbf{Exact finite theorem.} A theorem about $W(3,3)$, finite fields, graphs, chain complexes, or finite groups. These are the strongest claims in the paper.
 \item \textbf{Executable bridge.} A repository verifier checks an identity, correspondence, or consistency ledger. This is machine-checked support, but it may still be a bridge between mathematical domains.
-\item \textbf{Phenomenological prediction.} A numerical physics claim derived by the program and compared with experiment. These are falsifiable and may be revised by future data or higher-order corrections.
+\item \textbf{Phenomenological proposal.} A numerical physics claim suggested by a bridge and compared with experiment. These are falsifiable, but a numerical agreement is not a finite-geometry derivation.
 \item \textbf{Interpretation.} A philosophical, metaphysical, aesthetic, or ethical reading of the finite structure. These sections explain why the mathematics matters; they are not substitutes for the exact finite theorems.
 \end{enumerate}
 \end{statusbox}
 
 When the paper says ``proves'' without qualification, it means Tier 1 or a directly checked Tier 2 statement. When it says ``bridge,'' ``reading,'' ``proposal,'' or ``frontier,'' it is deliberately not claiming more than the current verification supports.
+
+\begin{statusbox}[title=Read this first: the current map]
+The current exact frontier is unusually useful precisely because it contains both constructions and limits.  The symplectic graph, its finite groups, chain complexes, and code objects are mathematical data.  The newest certificates prove a classical $[240,120,3]_3$ boundary decoder with a $481$-entry radius-one table; four invariant minimal-logical-pair sheets rather than a natural $W(E_6)$ torsor; and a marked $D_8$ comparison with exactly four choices.  Separately, the $27$-point Heisenberg/Clifford bridge is a finite group-action result.  None of these facts selects chirality, identifies a physical phase, supplies a continuum spacetime, or derives a measured particle parameter.  Those remain bridges to build or hypotheses to test.
+\end{statusbox}
 
 \section*{The working vocabulary}
 
@@ -211,21 +215,18 @@ The analytic problem of passing from exact finite internal data to curved four-d
 \end{description}
 \end{statusbox}
 
-\section*{The whole argument in one page}
+\section*{The evidence spine in one page}
 
-The paper has a simple spine. The details are long only because every word is unpacked.
+The paper has a simple spine.  Its arrows do not all have the same status, so the status is part of the argument.
 
 \begin{enumerate}[leftmargin=2em]
-\item The smallest closed loop has three points. This makes $3$ the first number capable of stable self-reference.
-\item The Master Equation $q! = 2q$ has the unique positive integer solution $q=3$.
-\item The smallest field richer than Boolean logic is $\mathbb{F}_3$.
-\item The smallest non-degenerate symplectic projective geometry over $\mathbb{F}_3$ is $\mathrm{PG}(3,\mathbb{F}_3)$.
-\item Its symplectic collinearity graph is $W(3,3)$: $40$ vertices, $240$ edges, degree $12$, spectrum $12,2,-4$.
-\item Every anchor splits the graph as $40=1+12+27$: an observer point, a local screen/rim, and an affine bulk.
-\item The affine bulk lifts ternarily to $27\cdot3=81$, the protected homology/matter sector.
-\item The edge set gives a qutrit QEC/photonic carrier: $240$ physical edge-qutrits, $81$ logical qutrits, $480$ directed carrier slots, and the nilpotent tail $0\to81\to162\to81\to0$.
-\item The exact finite data then bridge to physics: gauge algebra dimension $12=8+3+1$, three generations, the dressed electroweak share $3/13$, and the finite ingredients of the curved $4$D product.
-\item The open work is not hidden: the full curved spectral-action theorem, higher-order RG refinements, and experimental predictions remain frontier tests.
+\item \textbf{Arithmetic fact.} The equation $q! = 2q$ has the unique positive integer solution $q=3$.
+\item \textbf{Chosen construction.} Over $\mathbb{F}_3$, a non-degenerate alternating form on $\mathrm{PG}(3,\mathbb{F}_3)$ gives the symplectic collinearity graph $W(3,3)$.
+\item \textbf{Exact finite geometry.} The graph has $40$ vertices, $240$ edges, degree $12$, spectrum $12,2,-4$, and the anchor split $40=1+12+27$.
+\item \textbf{Exact algebra and coding objects.} The incidence and chain data produce homology, qutrit-code, and directed-carrier constructions; each must be read with its stated distance and object boundary.
+\item \textbf{Exact recent boundaries.} The boundary image is $[240,120,3]_3$ with a $481$-entry radius-one table; the natural minimal-pair action has four sheets, not one Weyl torsor; and the marked $D_8$ bridge retains four choices.
+\item \textbf{Conditional bridges.} Equal integers, representation matches, or executable correspondences can motivate physical questions, but they do not alone identify gauge fields, generations, masses, couplings, or spacetime.
+\item \textbf{Open work.} A physical model would still need a chirality selector, a map from finite data to observables, a continuum dynamics theorem, and independent experimental tests.
 \end{enumerate}
 
 \vspace{1em}
@@ -313,7 +314,7 @@ q = 5: \quad &\quad 5! = 120, \;\;\; 2 \cdot 5 = 10. && \text{Not equal.}
 The equation $q! = 2q$ has exactly one positive integer solution: $q = 3$.
 \end{theorem}
 
-This is the only assumption we will make. Everything else follows.
+This is an elementary arithmetic fact.  Selecting $\mathbb{F}_3$, a symplectic form, and a physical interpretation requires additional choices; later sections must state those choices rather than treating them as consequences of this equation alone.
 
 \section{Why this equation is so special}
 
@@ -327,12 +328,12 @@ For a square ($q = 4$) there are $24$ rearrangements but only $8$ rigid motions.
 $q = 3$ is the unique number at which a polygon's combinatorial freedom equals its geometric freedom.
 \end{observation}
 
-\section{\texorpdfstring{From distinction to $W(3,3)$: the chain from nothing}{From distinction to W(3,3): the chain from nothing}}
+\section{\texorpdfstring{A proposed selection narrative for $W(3,3)$}{A proposed selection narrative for W(3,3)}}
 
-Before introducing any formalism, we record the deepest logical fact: $W(3,3)$ is not assumed --- it is forced by a chain of necessities starting from \emph{nothing at all}.
+Before introducing further formalism, we separate a motivating narrative from a theorem.  The following chain explains why the program studies $W(3,3)$; it is not a derivation of the geometry, let alone of physics, from logic alone.
 
-\begin{theorem}[Pure-Logic Chain]
-Beginning with the single primitive operation of \textbf{distinction} ($0 \neq 1$, the act of separating one thing from another), the following six logical implications are all forced --- each step is a necessity, not a postulate:
+\begin{note}[Selection narrative, not a pure-logic theorem]
+Beginning with the primitive operation of \textbf{distinction} ($0 \neq 1$), the following arrows mix standard mathematics with modelling and minimality preferences:
 \begin{align*}
 \underbrace{\text{distinction}}_{\text{pure logic}}
 \;&\Longrightarrow\; \underbrace{\mathbb{N}}_{\text{ZF set theory}}
@@ -340,44 +341,44 @@ Beginning with the single primitive operation of \textbf{distinction} ($0 \neq 1
 \;\Longrightarrow\; \underbrace{\mathbb{F}_3}_{\text{first beyond-Boolean field}} \\[0.3em]
 \;&\Longrightarrow\; \underbrace{\mathrm{PG}(3,\mathbb{F}_3)}_{\text{minimum self-dual geometry}}
 \;\Longrightarrow\; \underbrace{W(3,3)}_{\text{symplectic collinearity graph}}
-\;\Longrightarrow\; \underbrace{\text{all physics}}_{\text{RG bootstrap}}.
+\;\Longrightarrow\; \underbrace{\text{a proposed physics bridge}}_{\text{requires extra maps}}.
 \end{align*}
-\end{theorem}
+\end{note}
 
 The six steps in plain English:
 
 \begin{enumerate}[leftmargin=2em]
 \item \textbf{Distinction $\Rightarrow$ $\mathbb{N}$.} The only thing that needs to exist is the act of separating ``this'' from ``not-this.'' From the empty set $\emptyset$, the singleton $\{\emptyset\}$, and the pair $\{\emptyset, \{\emptyset\}\}$, the entire natural-number system is bootstrapped (von Neumann's construction).
-\item \textbf{$\mathbb{N}$ $\Rightarrow$ primes.} Unique factorization (the Fundamental Theorem of Arithmetic) is a logical theorem about $\mathbb{N}$, not an axiom. Primes are forced.
-\item \textbf{Primes $\Rightarrow$ $\mathbb{F}_3$.} The finite field $\mathbb{F}_2 = \{0,1\}$ \emph{is} Boolean logic itself --- it cannot model anything richer than the rules used to describe it. Moreover, binary can record \emph{that} a distinction occurred but cannot encode \emph{the act of distinguishing} (Part DCCCLXIV). To re-enact, propagate, or recurse a distinction, a third element is required: marked, unmarked, \emph{and} the boundary-transition between them. $\mathbb{F}_3 = \{0,1,2\}$ is the smallest field that carries this third element. This recovers Peirce's three categories exactly: Firstness (ground), Secondness (first distinction), Thirdness ($\mathbb{F}_3$ as the relation-mediating algebra).
-\item \textbf{$\mathbb{F}_3$ $\Rightarrow$ $\mathrm{PG}(3,\mathbb{F}_3)$.} Among projective spaces over $\mathbb{F}_3$, projective $3$-space is the lowest dimension that admits a non-degenerate symplectic form (which requires even dimension). Symplecticity is the requirement that no point or direction is distinguished from any other --- the algebraic statement of ``no preferred frame.''
-\item \textbf{$\mathrm{PG}(3,\mathbb{F}_3)$ $\Rightarrow$ $W(3,3)$.} The collinearity graph of $\mathrm{PG}(3,\mathbb{F}_3)$ with respect to the symplectic form $\omega$ is $W(3,3)$. Two points are adjacent iff $\omega(u,v) = 0$. This is the unique graph encoding the full incidence structure of the geometry.
-\item \textbf{$W(3,3)$ $\Rightarrow$ physics.} The renormalization-group flow on $W(3,3)$ (Part DCCCXVII of the repository) produces gauge group, generation count, codec, dynamics, and cosmological observables. Bootstrap closure $\mathcal{F}(W(3,3)) = W(3,3)$ certifies the chain.
+\item \textbf{$\mathbb{N}$ $\Rightarrow$ primes.} Unique factorization is a theorem about the natural numbers.  It does not choose one prime as physically preferred.
+\item \textbf{Primes $\Rightarrow$ $\mathbb{F}_3$.} Choosing the smallest nonbinary field is a modelling preference.  It may be useful for a ternary program, but it is not forced by logic or by the existence of primes.
+\item \textbf{$\mathbb{F}_3$ $\Rightarrow$ $\mathrm{PG}(3,\mathbb{F}_3)$.} Projective $3$-space is the smallest projective dimension admitting a non-degenerate alternating form over $\mathbb{F}_3$; choosing symplecticity is an additional mathematical design choice.
+\item \textbf{$\mathrm{PG}(3,\mathbb{F}_3)$ $\Rightarrow$ $W(3,3)$.} Once that form is chosen, its collinearity graph is $W(3,3)$.  This is an exact construction, not a uniqueness claim among all possible physical models.
+\item \textbf{$W(3,3)$ $\Rightarrow$ physics.} This last arrow is a research programme, not a proved implication.  It requires explicit maps to observables and independent empirical support.
 \end{enumerate}
 
 \begin{quote}
 \itshape
-Every arrow is a logical necessity, not a physical assumption. No appeal to experiment is made anywhere in steps 1--5. The substrate of the universe follows from the act of distinction alone.
+The first arithmetic and finite-geometric statements have ordinary mathematical proofs.  The selection and physics arrows add assumptions; they are presented here so that readers can test, refine, or reject them rather than mistake them for deductions.
 \end{quote}
 
-This pure-logic chain is the answer to Hilbert's program at its deepest level: a universe \emph{must} exist, because nothing is self-contradictory; the universe \emph{must} be $W(3,3)$, because it is the unique self-consistent fixed point of the chain.
+The narrative is useful as a source of questions, but it is not an answer to Hilbert's program and it does not show that a universe must be $W(3,3)$.
 
-\section{Why a graph at all?  The meta-bootstrap}
+\section{Why investigate a graph at all?  A methodological preference}
 
 A natural objection: \emph{why a finite combinatorial graph rather than a continuous manifold, a string, or a category?}
 
-\begin{theorem}[Meta-Bootstrap]
-Any description of physical law that is simultaneously (a) finitely specifiable, (b) computable, and (c) self-consistent must be a \textbf{finite combinatorial structure over a finite field}.
-\end{theorem}
+\begin{note}[Methodological preference, not a no-go theorem]
+Finite, computable combinatorial structures are attractive candidates for exact internal models.  This is a research preference, not a proof that continuum, categorical, or other mathematical frameworks cannot describe fundamental physics.
+\end{note}
 
-\textbf{Proof sketch.}
+\textbf{Why this preference is useful.}
 \begin{itemize}[leftmargin=2em]
-\item A \emph{continuous} structure (real-number manifold, smooth metric) requires infinite precision and so fails finite specifiability (a).
-\item A \emph{non-computable} structure (e.g., a Turing-degree-$\mathbf{0}'$ oracle theory) fails (b).
-\item A \emph{logically inconsistent} structure (proving its own negation) fails (c).
+\item A finite object can be completely enumerated, reproduced, and checked without numerical approximation.
+\item A computable construction can expose its assumptions as code and test data rather than hiding them in rhetoric.
+\item A logically inconsistent proposal is unusable, but consistency alone never selects one mathematical model of nature.
 \end{itemize}
 
-The unique minimal structure passing all three filters is a finite graph over a finite field; and among finite graphs over finite fields, the unique self-consistent fixed point is $W(3,3)$. This forecloses continuous geometry, string theory, and loop quantum gravity as fundamental --- they survive only as the \emph{continuum limit} of the discrete substrate.
+These filters motivate the study of finite graphs over finite fields.  They do not select a unique graph, foreclose continuum geometry, string theory, loop quantum gravity, or establish that any of them is a limit of this construction.
 
 % ─────────────────────────────────────────────────────────────────────────
 \part{Building the formalism}
@@ -553,12 +554,12 @@ The graph $\W$ is built from $\mathbb{F}_3^4$ (the $81$-element vector space) as
 \end{itemize}
 \end{definition}
 
-\begin{theorem}[Tits classification, 1957]
-$\W$ is the unique strongly regular graph with parameters
+\begin{theorem}[Symplectic construction]
+The symplectic construction above produces a strongly regular graph with parameters
 \[
 (v, k, \lambda, \mu) \;=\; (40, 12, 2, 4),
 \]
-and its automorphism group is $W(E_6)$, the Weyl group of the exceptional Lie algebra $E_6$, of order $51{,}840$.
+and its automorphism group is $\PGSp(4,3)\cong W(E_6)$, of order $51{,}840$.  The parameters alone do \emph{not} characterize the graph: Spence classified exactly $28$ nonisomorphic strongly regular graphs with this tuple.  The symplectic incidence construction is what identifies $\W$.
 \end{theorem}
 
 \begin{mathnote}
@@ -3806,12 +3807,12 @@ There is exactly one self-consistent finite substrate, $W(3,3)$. Any candidate s
 
 The anthropic principle becomes a theorem: the physical constants are the \emph{unique} values supporting Turing-complete stabilizer subgraphs. There is no selection from a distribution because the distribution has measure zero everywhere except at the $W(3,3)$ point. Cosmic fine-tuning is not improbable --- it is forced.
 
-\section{The 21-bit seed: a Kolmogorov bound}
+\section{The 21-bit seed: an informal description budget}
 
-\begin{theorem}[Kolmogorov Bound for $W(3,3)$]
-The Kolmogorov complexity $K(W(3,3))$ of the substrate, relative to any universal Turing machine that knows ordinary integer arithmetic, satisfies
+\begin{note}[Informal description budget, not a Kolmogorov theorem]
+With a fixed encoding convention, the following construction data can be summarized in roughly
 \[
-K(W(3,3)) \;\leq\; 21 \;\text{bits}.
+21 \;\text{bits}.
 \]
 Specifically the data
 \begin{align*}
@@ -3819,18 +3820,18 @@ Specifically the data
 &\text{strongly-regular parameters } (v, k, \lambda, \mu) = (40, 12, 2, 4) && (\sim 15 \text{ bits}), \\
 &\text{boolean self-consistency flags (symplectic, projective, ternary)} && (\sim 4 \text{ bits}),
 \end{align*}
-sum to $\sim 21$ bits, and uniquely determine $W(3,3)$ up to isomorphism.
-\end{theorem}
+sum to $\sim 21$ bits once the encoding convention and the symplectic construction are supplied.  This is an explanatory bookkeeping device, not a machine-independent Kolmogorov-complexity bound and not a uniqueness theorem for physical law.
+\end{note}
 
-\textbf{Proof.} The unique strongly regular graph with parameters $(40, 12, 2, 4)$ admitting a faithful action of $\mathrm{Sp}(4, \mathbb{F}_3)$ is $W(3,3)$ (Cameron 1976; Brouwer--van Maldeghem 2022). Three Boolean flags (symplectic structure preserved; collinearity graph of $\mathrm{PG}(3, \mathbb{F}_3)$; ternary base field) uniquely fix the realisation. $q$ is encodable in $2$ bits and $(v, k, \lambda, \mu) \in \{0,\ldots,63\}^4$ in $24$ bits, but $\lambda$ and $\mu$ are forced by $(v, k)$ once strong regularity is known, reducing to $\sim 15$ bits. Adding the three boolean flags: $2 + 15 + 4 = 21$. $\square$
+\textbf{Explanation.} The symplectic construction, the ternary field, and the incidence rule identify the intended realisation.  The parameter tuple alone cannot do so, because it has $28$ nonisomorphic realizations.  The count $2+15+4=21$ is therefore a compact way to remember one specified construction, not a universal compression theorem.
 
 \medskip
 
-\textbf{Reading.} The necessary content of the universe --- the gauge group, the generation count, the codec, the spacetime signature, the classical-mathematics primitives, the structural integers of the periodic table, the biological gene-codon ratios --- all follow deterministically from these $\sim 21$ bits, with \emph{zero} further parameters. The remaining contingent content (initial conditions, RG-allowed coupling deformations) is provably non-compressible into the seed.
+\textbf{Reading.} A short construction description can be mathematically elegant.  It does not imply that gauge groups, generations, spacetime, chemistry, biology, or measured physical constants follow from those bits.  Any such claim needs a separately specified map and empirical test.
 
-\begin{theorem}[Maximum Lossless Compression of Physics]
-The necessary part of physical law has Kolmogorov complexity bounded by $21$ bits. No theory expressed in fewer bits can predict the Standard-Model gauge group, three generations, $3{+}1$ spacetime, and $\alpha^{-1} = 137$ without dropping at least one of these.
-\end{theorem}
+\begin{note}[Historical conjecture, not a theorem]
+No lower bound of this kind has been established.  The text below is retained as a historical proposal about description length, not as a proof that a $21$-bit object predicts any physical observable.
+\end{note}
 
 The bound is constructive: the repository implements the $21$-bit-to-physics inflation as a deterministic program.
 

@@ -45,7 +45,7 @@ So the frame splits as:
 
 ## The 8-Tick Word
 
-Each ternary route digit lowers into one fixed 8-tick micro-op word:
+Each route digit lowers into one fixed 8-tick micro-op word:
 
 ```text
 tick 0: q3_xor_axis_0
@@ -61,7 +61,7 @@ tick 7: apartment_hop_4
 This is exactly the BT828 route compiler budget:
 
 ```text
-3 Q3 XOR axes + 5 apartment hops = 8 ticks.
+up to 3 binary Q3-coordinate XOR toggles + up to 5 apartment-routing slots = 8 ticks.
 ```
 
 The existing route programs compile without changing their reversible-move
@@ -77,6 +77,38 @@ six_digit_stress 47 active ticks inside a 48-tick packet
 
 The six-digit stress program has route bound 48 and active work 47, so it fills
 the tomotope body with exactly one idle tick of slack.
+
+## Logic-switch reading
+
+The `Q3` in the first three micro-op labels is the binary three-cube used by
+the route compiler: `bits3` extracts the low three binary coordinate bits of a
+W33 address, and `xor_axes` lists the coordinates that differ.  Thus these
+slots form a conditional three-toggle control bank, not a claim that the route
+compiler has implemented ternary arithmetic.  The six F3 symbols belong to the
+separate parity horizon.
+
+The executable chain is deliberately typed:
+
+```text
+binary Q3 address toggle
+    -> packet header (mirror slot, tomotope block, clock phase)
+    -> Q6/tomotope flag address
+    -> LOAD_FLAG / FLIP_Q6_AXIS / LATCH_VERTEX transition
+    -> Hesse correction and return word
+```
+
+BT1374 supplies the header-to-Q6 address lowering, BT1406--1407 supply the
+tick schedule, and BT1698 verifies a total 72-tick state trace.  This is a
+finite logic-clock interpretation.  It does not yet provide an intertwiner
+from each individual Q3 toggle to a Q6 state delta, and it must not identify
+the binary cube transport group with the distinct tomotope-derived group.
+
+Passes 379--380 make the remaining compiler boundary concrete. The header
+depth shift is not a Q6 geometric operation through the pinned BT1371 table.
+The scheduler's minimal free-C3 label is (tomotope flag, phase trit), but its
+canonical lift anchors only two header cycles. A reviewed 16-row
+header-orbit binding table with phase offsets is still required before any
+state-level lowering is claimed.
 
 ## Horizon Coordinate Split
 

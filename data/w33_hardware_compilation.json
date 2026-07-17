@@ -1,5 +1,5 @@
 {
-  "result": "minimal switching-sequence = Cayley diameter of Sp(4,3); hardware-specific (depends on the switch pair)",
+  "result": "Cayley word metrics of Sp(4,3) for four selected abstract two-generator alphabets",
   "per_hardware": {
     "<F2, F1.CZ>": {
       "size": 51840,
@@ -27,8 +27,8 @@
     "diameter": 14,
     "mean_word_len": 10.407
   },
-  "interpretation": "any gate reachable in <= diameter switch-flips; different switch pairs (machine topologies) -> different diameters -> hardware-specific compilation",
-  "photoelectric_duality": "photon (massless, all-at-once) <-> electron (braided worldline, hardware-specific) via the photoelectric effect; the hardware graph fixes the braid embedding; the switch-word is the compiled program",
+  "interpretation": "Each selected pair provides an abstract binary word alphabet. The recorded diameter is a finite Cayley word-metric bound for that alphabet, not a physical latency or optical-switch-depth prediction.",
+  "hardware_boundary": "No braid, photon/electron implementation, loss model, or layout follows from this group-theoretic word-metric calculation.",
   "sources": [
     "Cayley graph / word metric (geometric group theory)",
     "Majorana braiding TQC (Nature Commun. 14, 2023)"

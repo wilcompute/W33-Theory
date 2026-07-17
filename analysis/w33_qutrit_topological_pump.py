@@ -1,19 +1,13 @@
 #!/usr/bin/env python3
-"""
-TEST (caveat removal): the QUTRIT carrier's topological self-protection.
+"""Toy spin-1 pump phase diagram, not a Holonet logic-switch certificate.
 
-The qubit toy gave Chern C=+1. But the substrate carrier is a QUTRIT, and the BC
-twist is a genuine rotation (the holonomy group 2T = SL(2,3) sits in SU(2)), so
-the qutrit transforms as the SPIN-1 representation of that rotation. The natural
-two-tone drive is therefore the SPIN-1 topological pump
+For a chosen spin-1 two-tone Hamiltonian
     H(phi1,phi2) = B(phi1,phi2) . S ,   S = spin-1 angular momentum,
     B = (sin phi1, sin phi2, m + cos phi1 + cos phi2),
-and the band Chern numbers of a spin-S monopole are 2*m_s, i.e. for spin-1 the
-three bands carry C = (+2, 0, -2): the qutrit carries DOUBLE the protection of
-the qubit. We compute the three band Chern numbers (Fukui-Hatsugai-Suzuki) and
-confirm {+2,0,-2} at the natural point, with the quantized energy-pumping rate
-dW/dt = (C/2pi) omega1 omega2 per band. This is the qutrit device invariant for
-the rotation-drive realization -- removing the 'canonical-qubit-only' caveat.
+the spin-1 bands can have Chern profile (+2,0,-2) in the gapped region 0<m<2.
+This is a model calculation only. It does not establish a qutrit device
+Hamiltonian, a physical pump, or any connection to the verified binary-Q3/Q6
+logic-switch pipeline. The gapless m=0 and m=2 boundaries are excluded.
 """
 from __future__ import annotations
 
@@ -54,47 +48,39 @@ def chern_bands(m, N=28):
 
 
 def main():
-    out = {}
+    out = {
+        "schema": "w33.toy_spin1_pump_phase_diagram.v2",
+        "scope": "Model Hamiltonian only; excluded from the verified finite logic-switch ABI.",
+    }
     theta = np.arccos(-2 / 3)
-    print("[spin-1 (qutrit) two-tone topological pump: band Chern numbers vs m]")
+    print("[toy spin-1 two-tone pump: gapped band Chern samples vs m]")
     print("  band order: [lowest, middle, highest] eigenvalue")
-    for m in (0.0, 0.5, 1.0, 1.5, 2.0, 2.5):
+    for m in (0.5, 1.0, 1.5, 2.5):
         C = chern_bands(m)
         Cr = [int(round(c)) for c in C]
         regime = "TOPOLOGICAL" if any(Cr) else "trivial"
         print(f"  m={m:4.1f}: Chern (lo,mid,hi) = {Cr}  sum={sum(Cr)}  ({regime})")
         out[f"m={m}"] = Cr
 
-    # NOTE: m=0 is a band-touching singularity for spin-1 (Bz=cos1+cos2 vanishes
-    # on lines, middle band touches) -> FHS is unreliable there. The clean
-    # topological regime is the interior 0<m<2; use m=1.0 as the operating point.
+    # The clean model regime is the interior 0<m<2; use m=1.0 as a sample point.
     C0 = [int(round(c)) for c in chern_bands(1.0)]
     print(f"\n  at the interior operating point m=1.0: band Chern = {C0}, "
           f"sum = {sum(C0)}")
     print(f"  (m=0 is a band-touching singularity -> excluded; topological regime")
     print(f"   is 0<m<2, trivializing past the gap-closing at m=2.)")
-    print(f"  qutrit bands carry |C|=2 (vs qubit |C|=1): DOUBLE protection.")
+    print(f"  this spin-1 model has extremal |C|=2 (vs the toy two-band |C|=1).")
     assert sorted(C0) == [-2, 0, 2] and sum(C0) == 0
 
-    print("\n[quantized pumping]  dW/dt = (C_band/2pi) * omega_round * omega_twist")
-    print(f"  omega_round=2pi, omega_twist=theta=arccos(-2/3)={theta:.4f};")
-    print(f"  extremal bands pump at +-2 units -> twice the qubit rate, protected.")
-    out["band_chern_m0"] = C0
+    out["band_chern_m1"] = C0
     out["theta"] = float(theta)
 
-    print("\nRESULT (tested): the QUTRIT carrier is a spin-1 topological frequency")
-    print("  converter with band Chern numbers {+2,0,-2} at the natural point --")
-    print("  double the qubit protection. This is the qutrit device invariant for")
-    print("  the rotation-drive (2T in SU(2)) realization, removing the canonical-")
-    print("  qubit-only caveat: the substrate carrier's self-protection is a")
-    print("  computed, quantized topological invariant, and it is STRONGER for the")
-    print("  qutrit (|C|=2) than it would be for a qubit (|C|=1).")
-    out["result"] = "qutrit spin-1 topological pump, band Chern {+2,0,-2}, |C|=2"
-    out["honest"] = ("the qutrit-as-spin-1 follows from the BC twist being a "
-                     "rotation (2T in SU(2)); if a given device instead drives the "
-                     "Heisenberg-Weyl clock-shift, the bands re-sort but stay in "
-                     "the nonzero (topological) class -- protection is generic, the "
-                     "value |C|=2 is the rotation-drive realization.")
+    print("\nRESULT (model only): this chosen gapped spin-1 Hamiltonian has")
+    print("  band Chern profile {+2,0,-2} at m=1.0. It supplies no device map, no")
+    print("  calibrated pump, and no evidence for a Holonet state transition.")
+    out["result"] = "toy spin-1 pump at m=1.0, band Chern profile {+2,0,-2}"
+    out["honest"] = ("The spin-1 representation and parameter torus are model choices. "
+                     "A device-specific Hamiltonian and an implementation map would "
+                     "be required before assigning this Chern calculation to hardware.")
     out["source"] = "Martin-Refael-Halperin, PRX 7, 041008 (2017); spin-S monopole Chern 2 m_s"
     with open("data/w33_qutrit_topological_pump.json", "w") as f:
         json.dump(out, f, indent=2)

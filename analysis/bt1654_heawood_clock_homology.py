@@ -1,22 +1,24 @@
 #!/usr/bin/env python3
 """
-BT1654 — Heawood clock homology / runtime-word verifier.
+BT1654 — Heawood finite logic-switch / runtime-word verifier.
 
-Recent holonet commits identify the machine clock with the Heawood/Fano
-incidence oscillator.  This verifier extracts the purely combinatorial part of
-that claim using NetworkX, and it also keeps the honest boundary against the
-W33 point-line Levi graph.
+The legacy clock vocabulary is retained in file and data names, but the
+computational object is finite: the Heawood/Fano incidence graph supplies a
+cycle-space register and a reversible spectral branch selector. This verifier
+extracts that combinatorial reading using NetworkX and keeps the honest
+boundary against the W33 point-line Levi graph.
 
 Main result:
   * the Heawood clock has |V|=14, |E|=21, beta_1=8;
   * it has exactly 28 simple 6-cycles and 21 simple 8-cycles;
-  * its Laplacian has the oscillator spectrum
+  * its Laplacian has the finite spectral shell
         0^1, (3-sqrt(2))^6, (3+sqrt(2))^6, 6^1;
   * its line graph has 21 vertices, is 4-regular, has 14 triangles, and carries
-    the same middle oscillator shell plus an 8-dimensional top shell at 6;
+    the same middle spectral branch shell plus an 8-dimensional top shell at 6;
   * the W33 point-line Levi graph has girth 8 and zero 6-cycles, so the Heawood
-    clock is not a literal Levi subgraph.  It is a separate clock/homology
-    module coupled to the W33 machine.
+    clock is not a literal Levi subgraph. It is a separate finite control
+    object; this verifier constructs no coupling map, physical oscillator, or
+    mass scale.
 """
 from __future__ import annotations
 
@@ -180,7 +182,7 @@ def main() -> None:
     levi = w33_levi_graph()
 
     result = {
-        "theorem": "BT1654 Heawood Clock Homology / Runtime Word Theorem",
+        "theorem": "BT1654 Heawood Finite Logic-Switch / Runtime Word Theorem",
         "heawood_clock": {
             "vertices": H.number_of_nodes(),
             "edges": H.number_of_edges(),
@@ -192,12 +194,15 @@ def main() -> None:
             "simple_8_cycles": count_simple_cycles_of_length(H, 8),
             "adjacency_spectrum": spectrum_counter(H_adj),
             "laplacian_spectrum": spectrum_counter(H_lap),
-            "oscillator_shell": {
+            "spectral_branch_switch": {
                 "middle_shell_dimension": 12,
-                "lambda": LAMBDA,
-                "omega": math.sqrt(LAMBDA),
-                "energy_minus": Q - math.sqrt(LAMBDA),
-                "energy_plus": Q + math.sqrt(LAMBDA),
+                "laplacian_center": Q,
+                "branch_offset": math.sqrt(LAMBDA),
+                "laplacian_branches": [Q - math.sqrt(LAMBDA), Q + math.sqrt(LAMBDA)],
+                "normalized_operator": "J=(L_H-3I)/sqrt(2) on the middle shell",
+                "involution": "J^2=I",
+                "branch_profile": {"-1": 6, "+1": 6},
+                "scope": "Finite reversible spectral selector; not a physical frequency, energy, mass, or continuum oscillator.",
             },
         },
         "heawood_line_graph_flag_clock": {
@@ -217,14 +222,14 @@ def main() -> None:
             "girth": graph_girth(levi),
             "simple_6_cycles": count_simple_cycles_of_length(levi, 6),
             "simple_8_cycles": count_simple_cycles_of_length(levi, 8),
-            "boundary": "Levi girth 8 and zero 6-cycles forbid a literal Heawood-clock subgraph; the Heawood/Fano clock is a separate runtime homology module, not an incidence subgraph of the W33 Levi graph.",
+            "boundary": "Levi girth 8 and zero 6-cycles forbid a literal Heawood-clock subgraph; the Heawood/Fano clock is a separate runtime homology object, not an incidence subgraph of the W33 Levi graph. No coupling map or physical interpretation is constructed here.",
         },
         "constant_bridge": {
             "14": "Heawood vertices = Fano points + Fano lines = dim(G2)",
             "21": "Heawood edges = Fano flags = C(7,2) bivector/K7 carrier",
-            "8": "Heawood beta_1 = runtime 8-tick word",
+            "8": "Heawood beta_1 = an eight-bit cycle-space register after a basis choice",
             "28": "Heawood simple 6-cycles = W33 externality mu = v-k = 40-12",
-            "12": "Heawood oscillator middle shell dimension = W33 degree k",
+            "12": "Heawood spectral branch-switch shell dimension = W33 degree k",
             "6": "Heawood girth and top Laplacian endpoint = g2",
             "4": "Heawood line graph degree = W33 nonadjacent common-neighbor number mu_GQ",
             "81": "W33 Levi beta_1 remains the protected H1 sector, separate from the 8-dimensional clock word.",

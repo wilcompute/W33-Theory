@@ -1,5 +1,5 @@
 {
-  "architecture_reading": "The holonet is a clocked oscillator network.  The 8-tick route digit is the instruction pulse, the [72,66]_3 horizon is the microframe, the 2160-slot mirror bus is a 30-frame E8 Coxeter bus, and the 51840 Clifford runtime is a 720-frame S6/Sp(4,2) supercycle.  Durable commits are always route-epoch aligned and become horizon-frame aligned exactly every q=3 levels.",
+  "architecture_reading": "The holonet is a finite clocked control network. The 8-tick route digit is the instruction pulse, the [72,66]_3 horizon is the microframe, the 2160-slot mirror bus is a 30-frame E8 Coxeter bus, and the 51840 Clifford runtime is a 720-frame S6/Sp(4,2) supercycle.  Durable commits are always route-epoch aligned and become horizon-frame aligned exactly every q=3 levels.",
   "checks": {
     "all_fractal_rows_preserve_frame_identities": true,
     "bt827_runtime_factorization_is_preserved": true,
@@ -208,7 +208,7 @@
       }
     ]
   },
-  "honesty_boundary": "This is an exact finite runtime/clock factorization across the existing oscillator, holonet, and tomotope artifacts. It does not claim a new physical hardware threshold or a new proof of the general Cayley diameter theorem.",
+  "honesty_boundary": "This is an exact finite runtime/clock factorization across the legacy oscillator-named, holonet, and tomotope artifacts. It does not claim a new physical hardware threshold or a new proof of the general Cayley diameter theorem.",
   "microframe": {
     "first_full_route_frame_depth": 9,
     "frame_identity": "72 = 9*8 = q^2 route ticks",
@@ -239,11 +239,11 @@
     "s6_order": 720,
     "sp4_2_order": 720
   },
-  "theorem": "BT1299 harmonic microframe runtime theorem",
+  "theorem": "BT1299 finite control-microframe runtime theorem",
   "tomotope_to_oscillator": {
     "parity_completion": "72 - 66 = 6",
     "payload_completion": "48 + 18 = 66",
-    "reading": "The tomotope packet ABI is the 48-symbol body of the frame. Adding the local Clifford lift f=24 gives the full oscillator frame, while adding the q*q!=18 active line-cone sector gives the payload.",
+    "reading": "The tomotope packet ABI is the 48-symbol body of the frame. Adding the local Clifford lift f=24 gives the full finite control microframe, while adding the q*q!=18 active line-cone sector gives the payload.",
     "tomotope_packet_abi": 48,
     "total_completion": "48 + 24 = 72"
   },

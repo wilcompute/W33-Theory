@@ -1,0 +1,26 @@
+{
+  "schema": "w33.pass378.header_scheduler_c3_obstruction.gap.v1",
+  "status": "PASS",
+  "theorem": "Header/Scheduler C3 Factorization Obstruction Theorem",
+  "header_clock": {"toggle_events":360,"flags":48,"free_c3_orbits":16,"shift":"flag -> flag+64 mod 192"},
+  "scheduler": {"stress_edges":16,"phase_positions":48,"phase_word":["LOAD_FLAG","FLIP_Q6_AXIS","LATCH_VERTEX"],"stress_flags":[159,83,84,22,13,144,135,134,58,63,112,113,44,37,73,180],"flag_projection":"constant on each phase triple"},
+  "comparison": {"bare_c3_set_type":"16*C3","equivariant_bijection_count":"900657498850357248000","header_scheduler_flag_intersection":[112,144],"header_cycle_stress_hit_profile":{"0":14,"1":2}},
+  "obstruction": "The scheduler phase action changes position but preserves its tomotope flag, while the header C3 action moves every flag. Therefore no C3-equivariant map from scheduler positions to header flags can factor through the scheduler tomotope_flag label. The common 16*C3 shape supplies only noncanonical abstract correspondences.",
+  "search_signature": "48/16x3/16!3^16/2/14+2",
+  "check_count":13,
+  "checks": {
+    "header_enumeration_has_360_binary_toggle_events": true,
+    "header_image_is_48_flags": true,
+    "header_shift_is_free_c3_on_48_flags": true,
+    "header_clock_has_sixteen_c3_orbits": true,
+    "stress_scheduler_has_sixteen_distinct_edge_flags": true,
+    "scheduler_has_sixteen_free_phase_c3_orbits": true,
+    "scheduler_flag_projection_is_constant_on_every_phase_orbit": true,
+    "an_explicit_c3_equivariant_bijection_of_bare_position_sets_exists": true,
+    "all_equivariant_bijections_number_16_factorial_times_3_power_16": true,
+    "no_c3_equivariant_map_can_factor_through_scheduler_flag_labels": true,
+    "stress_flags_intersect_the_header_image_in_exactly_two_labels": true,
+    "stress_flag_set_is_not_header_shift_stable": true,
+    "header_cycle_stress_hit_profile_is_fourteen_zero_plus_two_singletons": true
+  }
+}

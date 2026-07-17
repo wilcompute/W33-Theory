@@ -1,32 +1,32 @@
 #!/usr/bin/env python3
-"""
-The machine's clock is a topological harmonic oscillator, its frequency IS a mass,
-and its supercycle IS the gauge group: running the holonet enacts the physics.
+"""Finite Heawood control-clock calculation (legacy filename retained).
 
-The document states three faces of W(3,3) that "converge to produce mass": a QCA
-(index 27), an information processor, and a topological harmonic oscillator on the
-Heawood graph (the Fano incidence graph, PG(2,2)). This script makes the machine
-reading exact and ties the runtime stack to it.
+The former version of this file over-read a dimensionless graph eigenvalue as a
+particle mass and an order coincidence as a traversal of a gauge group.  Pass 320
+already isolated the missing scale; Pass 377 now supplies the useful computational
+reading.  This revision keeps the exact finite calculation and states only what it
+builds:
 
-  (1) THE CLOCK IS AN OSCILLATOR. On the Heawood graph H (14 vertices = 7 Fano
-      points + 7 lines, 3-regular, bipartite) the Laplacian L_H has spectrum
-      {0, (q-sqrt(l))^6, (q+sqrt(l))^6, 2q} = {0, (3-sqrt2)^6, (3+sqrt2)^6, 6}.
-      On the 12-dim middle shell, (L_H - q I)^2 = l I = 2 I: a discrete harmonic
-      oscillator with frequency omega = sqrt(lambda) = sqrt(2) and energy levels
-      E_pm = q +- sqrt(l) = 3 +- sqrt2, splitting into two 6-mode Cl(1,1) branches.
-  (2) THE FREQUENCY IS A MASS. That same omega = sqrt(lambda) sets the heaviest
-      fermion: m_top = v_EW / sqrt(lambda) = 246/sqrt2 = 173.95 GeV. The machine's
-      clock RATE is the top-quark mass scale -- the clock is not metaphorical.
-  (3) THE SUPERCYCLE IS THE GAUGE GROUP. The runtime stack 8 -> 48 -> 24 -> 72 ->
-      2160 -> 51840 has full Clifford supercycle 51840 = |Sp(4,3)| = 720*72 =
-      24*30*72, with 2160 = 30*72 = h(E8)*frame (the E8-Coxeter mirror bus) and a
-      72-tick oscillator frame = q^2 * 8 (eight-tick word). One supercycle is one
-      complete traversal of the automorphism/gauge group.
+  (1) The 14-vertex Heawood/Fano incidence graph has a 12-dimensional middle
+      spectral shell.  On that shell, J=(L_H-3I)/sqrt(2) is an involution with two
+      six-dimensional +/- branches.  J is a reversible *spectral branch switch*,
+      not a continuum Hamiltonian, energy, or physical frequency.
+  (2) The connected graph has cycle rank 21-14+1=8.  Once a cycle basis is chosen,
+      its F2 cycle space is an eight-bit switch register with 2^8 states.  The
+      dimension is invariant; the particular eight coordinates are not.
+  (3) The executable routing ABI is typed: binary Q3 address toggles lower to a
+      BT828 header, then to a Q6 flag address and a LOAD/FLIP/LATCH schedule.  The
+      separate F3 coordinates are parity lanes, not ternary Q3 toggle gates.
+      Pass 379 shows the header depth step is not a Q6 geometric operation
+      through the pinned BT1371 address table.  Pass 380 shows that scheduler
+      flag plus phase is the minimal free-C3 lift, with fourteen header orbits
+      still requiring an explicit binding table.
+  (4) The identities 8 -> 48 -> 24 -> 72 -> 2160 -> 51840 are finite layout and
+      counting identities.  The equality 51840=|Sp(4,3)| does not itself supply an
+      action, an enumeration of group elements, a mass scale, or a device model.
 
-CONCLUSION: the holonet does not SIMULATE the physics on a clock -- its clock IS
-the harmonic oscillator whose frequency is a mass, and one supercycle of its
-runtime IS one pass through the gauge group Sp(4,3). Executing the machine and
-enacting the gauge dynamics that generate the mass spectrum are the same act.
+The output path keeps its historical name for existing links, but its contents are
+now explicitly a logic-switch certificate.
 """
 from __future__ import annotations
 
@@ -50,7 +50,10 @@ def heawood_adjacency():
 
 
 def main():
-    out = {}
+    out = {
+        "schema": "w33.heawood_logic_switch_clock.v2",
+        "legacy_filename": "w33_machine_clock_is_mass.py",
+    }
     A, lines = heawood_adjacency()
     deg = A.sum(1)
     assert np.all(deg == 3), "Heawood is 3-regular"
@@ -66,87 +69,114 @@ def main():
     assert rounded == expected, (rounded, expected)
     out["heawood_laplacian"] = {str(v): m for v, m in sorted(rounded.items())}
 
-    # middle shell: (L - qI)^2 = lambda I on the 12-dim middle eigenspaces
-    mid_evals = [x for x in ev if abs(abs(x - Q) - s2) < 1e-6]
-    print(f"\n[1b] middle shell: {len(mid_evals)} modes with (L - qI)^2 = lambda I")
-    osc = [(x - Q) ** 2 for x in mid_evals]
+    # Middle shell: a normalized involution is an exact reversible branch switch.
+    middle_indices = [
+        index for index, value in enumerate(ev) if abs(abs(value - Q) - s2) < 1e-6
+    ]
+    P = np.linalg.eigh(L)[1][:, middle_indices]
+    branch_switch = (P.T @ (L - Q * np.eye(14)) @ P) / s2
+    branch_eigenvalues = np.linalg.eigvalsh(branch_switch)
+    branch_profile = Counter(round(float(value)) for value in branch_eigenvalues)
     print(
-        f"     (L-qI)^2 eigenvalues all = lambda = {LAM}: "
-        f"{all(abs(o - LAM) < 1e-6 for o in osc)}"
+        f"\n[1b] spectral branch switch: {len(middle_indices)} middle-shell modes, "
+        "J=(L-3I)/sqrt(2)"
     )
     print(
-        f"     frequency omega = sqrt(lambda) = sqrt(2) = {s2:.6f}; "
-        f"E_pm = q +- sqrt(lambda) = {Q-s2:.4f}, {Q+s2:.4f}"
+        f"     J^2=I: {np.allclose(branch_switch @ branch_switch, np.eye(12))}; "
+        f"branch profile: {dict(sorted(branch_profile.items()))}"
     )
-    assert len(mid_evals) == 12 and all(abs(o - LAM) < 1e-6 for o in osc)
-    out["oscillator"] = {
-        "omega": s2,
-        "E_minus": Q - s2,
-        "E_plus": Q + s2,
-        "middle_shell_dim": 12,
-        "branches": "2 x 6 (Cl(1,1))",
+    assert len(middle_indices) == 12
+    assert np.allclose(branch_switch @ branch_switch, np.eye(12), atol=1e-8)
+    assert branch_profile == Counter({-1: 6, 1: 6})
+    out["spectral_branch_switch"] = {
+        "normalized_operator": "J=(L_H-3I)/sqrt(2) on the 12-dimensional middle shell",
+        "involution": True,
+        "branch_profile": {str(key): value for key, value in sorted(branch_profile.items())},
+        "spectral_displacement": s2,
+        "scope": "A finite reversible spectral selector; no physical frequency, energy, or mass is asserted.",
     }
 
-    # (2) the clock frequency IS the top-quark mass scale
-    v_EW = 246.0
-    m_top = v_EW / s2
+    # The Heawood cycle space supplies an eight-bit register only after a basis choice.
+    cycle_rank = 21 - 14 + 1
     print(
-        f"\n[2] clock frequency = mass: m_top = v_EW / sqrt(lambda) = "
-        f"{v_EW}/sqrt(2) = {m_top:.2f} GeV (obs 172.69, {abs(m_top-172.69)/172.69*100:.2f}%)"
+        f"\n[2] cycle-space switch register: beta_1 = 21-14+1 = {cycle_rank}; "
+        f"2^{cycle_rank} = {2**cycle_rank} register states"
     )
-    assert abs(m_top - 173.95) < 0.1
-    out["m_top_from_clock"] = round(m_top, 2)
+    assert cycle_rank == 8
+    out["cycle_register"] = {
+        "field": "F2",
+        "cycle_rank": cycle_rank,
+        "state_count": 2**cycle_rank,
+        "nonzero_cycle_states": 2**cycle_rank - 1,
+        "basis_boundary": "The eight coordinate switches depend on a chosen cycle basis; beta_1=8 does not.",
+    }
 
-    # (3) the runtime supercycle IS the gauge group
+    # These are typed bookkeeping identities, not a group traversal.
     word, body, epi, frame = 8, 48, 24, 72
     bus, supercycle = 2160, 51840
     h_E8 = 30
     sp43 = 51840
-    print(f"\n[3] runtime stack 8 -> 48 -> 24 -> 72 -> 2160 -> 51840:")
+    print(f"\n[3] typed runtime accounting 8 -> 48 -> 24 -> 72 -> 2160 -> 51840:")
     print(
-        f"    8-tick word = q axes(3) + apartment-hops(5); 72 frame = q^2 * 8 "
+        f"    8-tick word = up to 3 binary Q3 toggles + up to 5 apartment slots; "
+        f"72 frame = q^2 * 8 "
         f"= {Q**2*word}"
     )
     print(f"    2160 mirror bus = h(E8) * frame = {h_E8} * {frame} = {h_E8*frame}")
     print(
-        f"    51840 supercycle = 720 * 72 = 24 * 30 * 72 = {24*30*72} = "
-        f"|Sp(4,3)| = {sp43}"
+        f"    51840 runtime count = 720 * 72 = 24 * 30 * 72 = {24*30*72}; "
+        f"it happens to equal |Sp(4,3)| = {sp43}"
     )
     assert Q**2 * word == frame == 72
     assert h_E8 * frame == bus == 2160
     assert 720 * frame == 24 * h_E8 * frame == supercycle == sp43 == 51840
-    out["runtime"] = {
+    out["typed_control_pipeline"] = {
+        "source": "binary Q3 coordinate toggle bank",
+        "header": "BT828 mirror/tomotope header flag",
+        "address": "BT1374 Q6 edge address",
+        "transition": "BT1406/BT1698 LOAD_FLAG -> FLIP_Q6_AXIS -> LATCH_VERTEX",
+        "header_geometry_boundary": (
+            "Pass 379: flag -> flag+64 mod 192 is not a Q6 line-graph "
+            "automorphism through BT1371's pinned address table."
+        ),
+        "scheduler_binding_boundary": (
+            "Pass 380: (tomotope_flag, phase_trit) is the minimal free-C3 "
+            "scheduler lift; fourteen of sixteen header-orbit bindings remain "
+            "explicit missing compiler data."
+        ),
+        "boundary": "No state-level toggle-to-Q6 intertwiner or hardware implementation is claimed.",
+    }
+    out["runtime_accounting"] = {
         "word": word,
         "frame": frame,
         "mirror_bus": bus,
         "supercycle": supercycle,
-        "is_Sp43": True,
+        "order_matches_Sp43": True,
         "h_E8": h_E8,
+        "boundary": "Arithmetic equality to a group order is not an action or a group traversal.",
     }
 
-    print("\nRESULT: the holonet's clock is the topological harmonic oscillator on")
-    print("  the Fano/Heawood graph -- frequency omega = sqrt(lambda) = sqrt(2),")
-    print("  a 12-dim middle shell of two 6-mode Cl(1,1) branches. That SAME")
-    print("  frequency is the top-quark mass scale m_top = v_EW/sqrt(lambda) =")
-    print("  173.95 GeV. And the runtime's full Clifford supercycle 51840 IS the")
-    print("  gauge group |Sp(4,3)|, built as h(E8)=30 mirror phases x the 72-tick")
-    print("  oscillator frame x 24. So executing the machine for one supercycle IS")
-    print("  one complete traversal of the gauge group, ticked by the oscillator")
-    print("  whose frequency is the heaviest mass. The machine does not simulate")
-    print("  the physics -- running it IS the physics.")
+    print("\nRESULT: the Heawood layer supplies a finite spectral branch switch and")
+    print("  an eight-bit cycle-space register. BT828/BT1374/BT1406/BT1698 supply")
+    print("  a separately typed binary-toggle -> header -> Q6 -> state-transition")
+    print("  pipeline, with explicit header-geometry and scheduler-binding boundaries.")
+    print("  The numbers sqrt(2) and 51840 are exact finite invariants and")
+    print("  counts; this calculation derives neither a physical mass nor a calibrated")
+    print("  oscillator, device, group traversal, or continuum dynamics.")
 
     out["summary"] = (
-        "holonet clock = Heawood/Fano harmonic oscillator omega = "
-        "sqrt(lambda) = sqrt2 (12-dim middle shell, 2x6 Cl(1,1)); "
-        "that frequency = top mass v_EW/sqrt(lambda) = 173.95 GeV; "
-        "runtime supercycle 51840 = |Sp(4,3)| = h(E8) x 72-frame x "
-        "24. Running the machine one supercycle = traversing the "
-        "gauge group, clocked by the mass-setting oscillator."
+        "The Heawood/Fano graph supplies J=(L_H-3I)/sqrt(2), an involutive "
+        "six-by-six spectral branch selector on its 12-dimensional middle shell, "
+        "and an eight-bit F2 cycle-space register after a basis choice. The "
+        "Holonet control ABI is a typed binary-Q3-toggle -> header -> Q6-address "
+        "-> LOAD/FLIP/LATCH pipeline. Pass 379 keeps the header clock separate "
+        "from Q6 geometry, and Pass 380 identifies the missing fourteen-orbit "
+        "binding table. No mass, calibrated frequency, hardware, or group-action "
+        "interpretation follows from these finite calculations."
     )
     out["sources"] = [
-        "Heawood graph = Fano PG(2,2) incidence (3-regular, "
-        "spectrum +-3, +-sqrt2); |Sp(4,3)|=51840; index.html QCA/"
-        "oscillator section + BT1299-1315 runtime stack"
+        "BT1654 Heawood graph calculation; BT1656 cycle-basis boundary; "
+        "BT1299/BT1300 runtime ISA; Passes 377-380 finite control boundaries"
     ]
     with open("data/w33_machine_clock_is_mass.json", "w") as fh:
         json.dump(out, fh, indent=2)

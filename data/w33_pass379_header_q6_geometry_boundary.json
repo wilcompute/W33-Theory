@@ -1,0 +1,33 @@
+{
+  "schema": "w33.pass379.header_q6_geometry_boundary.gap.v1",
+  "status": "PASS",
+  "theorem": "Header Clock / Q6 Geometry Boundary Theorem",
+  "input": "BT1371's pinned 192-row tomotope-flag to Q6-edge address table",
+  "header_clock": {"shift":"flag -> flag+64 mod 192","group":"C3","full_bus_cycles":64,"pass377_subclock":"48=16*3"},
+  "q6_adjacency": {"adjacent_edge_pairs":960,"preserved_by_header_shift":146,"lost":814,"false_positives":814},
+  "first_adjacency_failure": {"source_flags":[0,8],"shifted_flags":[64,72]},
+  "direction_transition_matrix": [
+    [ 5, 4, 4, 5, 6, 8 ],
+    [ 4, 5, 5, 4, 8, 6 ],
+    [ 3, 2, 6, 3, 8, 10 ],
+    [ 2, 3, 3, 6, 10, 8 ],
+    [ 5, 13, 7, 7, 0, 0 ],
+    [ 13, 5, 7, 7, 0, 0 ]
+  ],
+  "conclusion": "The header C3 is a valid finite control-address clock, but through the current BT1371 address table it is not a Q6 line-graph automorphism. Hence it is not a cube-edge geometric operation or a Q6 state traversal. The result leaves open an explicitly supplied different address-table intertwiner; none is built here.",
+  "search_signature": "192/64x3/960/geometry-boundary",
+  "check_count":11,
+  "checks": {
+    "bt1371_table_has_all_192_rows": true,
+    "table_flags_are_the_canonical_192_bus": true,
+    "table_rows_are_distinct_q6_edges": true,
+    "every_table_row_is_a_single_q6_bit_edge": true,
+    "q6_table_has_six_parallel_classes_of_32_edges": true,
+    "header_depth_shift_is_free_c3_on_the_full_192_flag_bus": true,
+    "pass377_toggle_image_is_a_48_flag_c3_subclock": true,
+    "q6_line_graph_has_the_expected_960_adjacent_edge_pairs": true,
+    "header_shift_does_not_preserve_q6_edge_adjacency_in_bt1371_table": true,
+    "adjacency_defect_is_balanced_by_false_positives": true,
+    "witness_is_an_actual_adjacency_failure": true
+  }
+}

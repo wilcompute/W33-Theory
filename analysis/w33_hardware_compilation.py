@@ -1,20 +1,13 @@
 #!/usr/bin/env python3
 """
-TINKER + TEST: compiling the TQC instance to a machine -- the minimal switching
-sequence, and how it depends on the 'hardware' (which two switches).
+TINKER + TEST: finite word metrics for selected two-generator alphabets.
 
-The single-carrier picture: an electron braids through a classical machine's
-wiring, driven by E&M 'switches'; the photoelectric effect is the matter<->light
-hinge that lets the SAME W(3,3) computation run on the electron (massive, braided
-worldline, hardware-specific) or the photon (massless, all-at-once). Two well-
-chosen switches generate the whole gate group Sp(4,3) (w33_two_switch_generation),
-so any gate is a WORD in the two switches -- a switching pattern in time. The
-practical question: HOW LONG a pattern? That is the Cayley-graph diameter of
-Sp(4,3) under the chosen switch pair (the worst-case sequence length), and it is
-HARDWARE-SPECIFIC: different switch pairs (different machine topologies) give
-different diameters. We BFS the Cayley graph from the identity (vertex-transitive
-=> eccentricity = diameter) for several generating pairs and report the diameter
-and mean word length -- the compilation cost on each 'hardware'.
+Two selected abstract symplectic generators can generate Sp(4,3), so every
+group element has a word in that alphabet.  This file computes the Cayley-graph
+diameter and mean word length for four such selected pairs.  The resulting
+metric is a property of the chosen abstract generating set.  It is not a
+device-level compilation, a braid construction, or evidence that a particular
+physical machine topology has that cost.
 """
 from __future__ import annotations
 
@@ -87,7 +80,7 @@ def main():
         "<CZ, F1.SUM>": [lib["CZ"], F1SUM],
     }
 
-    print("[Cayley-graph diameter of Sp(4,3) per 'hardware' (switch pair)]")
+    print("[Cayley-graph diameter of Sp(4,3) per abstract switch pair]")
     print("  pair (two switches)        | group size | DIAMETER | mean word len")
     out_pairs = {}
     best = None
@@ -99,36 +92,26 @@ def main():
         if best is None or diam < best[1]:
             best = (name, diam, mean)
 
-    print(f"\n  best 'hardware' (shortest worst-case sequence): {best[0]} "
+    print(f"\n  best selected pair (shortest worst-case sequence): {best[0]} "
           f"diameter={best[1]}")
     print("  => every one of the 51840 gates is reachable in at most "
           f"{best[1]} switch-flips on that pair; mean ~{best[2]:.1f}.")
-    print("  Different switch pairs (different machine topologies) give different")
-    print("  diameters: the compilation cost is HARDWARE-SPECIFIC, exactly as the")
-    print("  vision says -- the layout fixes the entanglement/braid pattern.")
-
-    print("\n[photoelectric duality]")
-    print("  the SAME W(3,3) computation runs on either carrier, joined by the")
-    print("  photoelectric effect: PHOTON (massless, tau=0, all-at-once logic) <->")
-    print("  ELECTRON (massive, braided worldline through the hardware wiring,")
-    print("  driven by E&M switches). 'Single electron on any classical machine' =")
-    print("  the matter-side dual; the hardware graph fixes the braid embedding,")
-    print("  and the switch-word length above is the compiled program length.")
+    print("  The calculation compares abstract generator alphabets only; a physical")
+    print("  topology or braid embedding needs a separate compiler and device model.")
 
     out = {
-        "result": "minimal switching-sequence = Cayley diameter of Sp(4,3); "
-                  "hardware-specific (depends on the switch pair)",
+        "result": "Cayley word metrics of Sp(4,3) for four selected abstract "
+                  "two-generator alphabets",
         "per_hardware": out_pairs,
         "best_hardware": {"pair": best[0], "diameter": best[1],
                           "mean_word_len": round(best[2], 3)},
-        "interpretation": ("any gate reachable in <= diameter switch-flips; "
-                           "different switch pairs (machine topologies) -> "
-                           "different diameters -> hardware-specific compilation"),
-        "photoelectric_duality": ("photon (massless, all-at-once) <-> electron "
-                                  "(braided worldline, hardware-specific) via the "
-                                  "photoelectric effect; the hardware graph fixes "
-                                  "the braid embedding; the switch-word is the "
-                                  "compiled program"),
+        "interpretation": ("Each selected pair provides an abstract binary word "
+                           "alphabet. The recorded diameter is a finite Cayley "
+                           "word-metric bound for that alphabet, not a physical "
+                           "latency or optical-switch-depth prediction."),
+        "hardware_boundary": ("No braid, photon/electron implementation, loss "
+                              "model, or layout follows from this group-theoretic "
+                              "word-metric calculation."),
         "sources": ["Cayley graph / word metric (geometric group theory)",
                     "Majorana braiding TQC (Nature Commun. 14, 2023)"],
     }

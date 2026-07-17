@@ -2,7 +2,7 @@
 
 ## Summary
 
-The harmonic oscillator stack already had the local horizon packet
+The legacy harmonic-named stack already had the local horizon packet
 
 ```text
 [72,66]_3 = 66 payload symbols + 6 parity symbols.
@@ -14,13 +14,14 @@ runtime.  BT1299 identifies the missing architecture layer:
 
 ```text
 8      = one worst-case recursive route digit
-72     = 9 * 8 = q^2 route digits = one oscillator microframe
+72     = 9 * 8 = q^2 route digits = one finite control microframe
 2160   = 30 * 72 = one E8-Coxeter mirror bus
 51840  = 24 * 30 * 72 = 720 * 72 = one Clifford supercycle
 ```
 
-So the holonet is not merely a network with clocks attached.  It is a clocked
-oscillator network.
+So the holonet is not merely a network with clocks attached. It is a finite
+clocked control network. The word oscillator is a legacy label here, not a
+claim of a physical frequency, mass, or analogue carrier.
 
 ## The New Bridge
 
@@ -56,7 +57,7 @@ Architecturally:
 - `30` is the E8 Coxeter clock;
 - `2160` is the shared mirror bus seen in either basis.
 
-## Tomotope to Oscillator
+## Tomotope to control microframe
 
 The tomotope packet ABI is the body of the microframe:
 
@@ -74,13 +75,13 @@ The full frame adds the local Clifford lift `24=f`.  The payload adds the
 The route compiler has per-digit bound:
 
 ```text
-3 Q3 XOR hops + 5 apartment hops = 8 ticks.
+up to 3 binary Q3-coordinate XOR toggles + up to 5 apartment-routing slots = 8 ticks.
 ```
 
 Therefore:
 
 ```text
-q^2 route digits = 9 * 8 = 72 = one oscillator frame.
+q^2 route digits = 9 * 8 = 72 = one finite control frame.
 ```
 
 Depth `q^2=9` is the first recursion depth whose worst-case route consumes one

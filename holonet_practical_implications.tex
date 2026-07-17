@@ -155,6 +155,18 @@ crash / $5$ Byzantine faults); second eigenvalue $\lambda_2=2$, far below the Ra
 conflict-free link schedule; Holevo air-gap capacity $\log_2 3 = 1.585$ bit/photon; metabolic floor
 $2.6\times10^{-19}$~J/cycle at $300$~K.
 
+\paragraph{The first exact edge decoder contract.}  The oriented triangle-boundary image is
+$[240,120,3]_3$, and its 240 nonzero projectively distinct parity columns give 480 distinct nonzero
+single-edge syndromes.  Including the zero syndrome, a complete radius-one MLUT needs exactly 481 entries.
+This is a small, deployable decoder ABI, not a threshold theorem and not the logical
+$[[240,81,3]]_3$ quotient itself.  Minimal logical $X/Z$ scalar representatives additionally live on four
+invariant 12960-state sheets under the natural $W(E_6)$ action; a controller must carry the corresponding
+two sign bits rather than infer a unique representative from the projective incidence.  Pass~375 proves their
+maximal phase-compatible permutation normalizer is $D_8$, not $A_4$ or $S_4$, and the split
+$W(E_6)\times V_4$ controller contains no regular 51840-state complement.  Any controller that fuses the four
+sheets must therefore implement a coupled, explicitly certified transport rather than append a commuting deck
+register.
+
 \begin{honestbox}
 The geometry, the group order, the $\mathrm{Sp}(4,3)$ closure, the bisection, the $1$-factorization,
 the robustness, and the Landauer floor are computed in the public witnesses. The two-carrier
@@ -980,6 +992,49 @@ supercycle is
 so the packet clock, tomotope/Witting mirror bus, and \(\mathrm{Sp}(4,3)\)
 runtime window are not three unrelated scales.  They are one integer clock
 viewed at packet, bus, and supercycle resolution.
+
+\paragraph{Binary switch-header subclock (Pass~377).}
+The useful implementation reading is more specific than the word
+``oscillator.''  The BT828 route control uses three low \emph{binary} Q3
+coordinates; the six \(\mathbb F_3\) symbols are parity coordinates in a
+different layer.  Enumerating every one-axis control toggle across the three
+depth residues gives a $48$-flag header plane inside the $192$-flag tomotope
+bus, with axis split
+\[
+  48=24+12+12.
+\]
+Depth advances this plane by the concrete free $C_3$ permutation
+\(f\mapsto f+64\pmod {192}\), hence by $16$ three-cycles.  For a firmware or
+diagnostic implementation, this is a compact typed control-plane checksum:
+the compiler may emit a header flag and its depth phase, but it must not
+silently treat that label as a physical Q6 pulse or an analogue frequency.  A
+state-level toggle-to-Q6 compiler remains a separate task.
+
+Pass~378 makes the separation testable rather than merely cautionary.  The
+header plane and the sixteen three-phase BT1406 edge slots have the common bare
+type \(16\cdot C_3\), but the scheduler flag is constant through a
+\texttt{LOAD/FLIP/LATCH} triple while the header \(C_3\) action is free on
+distinct flags.  Hence no equivariant bridge can factor through the scheduler
+flag label.  A firmware implementation should preserve this type distinction:
+a phase index is not a header-clock state, even when both have forty-eight
+positions.
+
+Pass~379 adds a separate geometry guard.  Under BT1371's live
+flag-to-\(Q_6\)-edge table, the header step
+\(f\mapsto f+64\pmod {192}\) preserves only \(146\) of the \(960\)
+edge-adjacencies and changes the other \(814\).  Thus firmware may use the
+depth phase as a reversible control-address switch, but must not compile that
+increment itself as a \(Q_6\) edge operation.  An edge-level implementation
+needs an explicit transition map and validation; the address table alone is
+not one.
+
+Pass~380 identifies the smallest useful scheduler register for an actual
+firmware interface: \((\texttt{tomotope\_flag},\texttt{phase\_trit})\), with
+\(16\cdot3=48\) states.  It preserves the real flag identity while making the
+three phase steps explicit.  Its natural lift anchors only two header cycles;
+the other fourteen must be stored in a reviewed header-orbit binding table
+with phase offsets.  This turns the remaining gap into a bounded configuration
+artifact rather than a vague coupling claim.
 
 \paragraph{Firmware work per packet and per bus atlas.}
 A worst-case diameter-two packet performs two route decisions.  The exported
