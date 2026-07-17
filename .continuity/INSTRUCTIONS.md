@@ -101,3 +101,22 @@ commit. That is the whole protocol.
 **Ownership reconciliation:** when both tracks hold the same result, the earlier
 commit owns it and the later one cites it. Check with
 `git log --diff-filter=A --format='%ad %h' --date=short -1 -- <file>`, not memory.
+
+## Batch intake (remote/GitHub batches — run the guard BEFORE accepting claims)
+
+A third contribution stream now submits batched claims. The July 15 batch
+proposed an unsupported `[[137,1,3]]` that GAP had to refute after the fact
+(Pass 358–359: the correct object is `[[137,1,21]]`). Audit at **intake**, not
+after commit:
+
+1. `py -3 analysis/build_results_index.py` (refresh), then
+   `py -3 scripts/check_rediscovery.py <batch files>` — collisions name the
+   prior art to read first.
+2. Grep the batch's *results* (code parameters, distinctive integers,
+   compounds like `a2+eisenstein`) against `RESULTS_INDEX.md`.
+3. Any claim that contradicts a certified `data/*.json` value is rejected
+   until it names the certificate it supersedes and why.
+4. Certificates are part of the corpus: **re-read the JSON, not just the
+   prose.** Six separate times a question was "open" while its answer sat in a
+   committed certificate (`det(B_p)`, `det(T)=-1`, "torsor", the missing
+   `*.py` glob, the q=3 Weil split vs Pass 331, `[1,27,36]` vs E6/2E6).

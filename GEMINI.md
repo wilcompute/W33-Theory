@@ -10,54 +10,54 @@
 This project uses Continuity to keep repo-local decisions and session context available through MCP and generated instruction files. Prefer MCP when connected; otherwise fall back to the repo files.
 
 ## Project Context
-- **Total Decisions:** 4424
-- **Known Topics:** needs-review, auto-draft, why, w33, testing, toe, architecture, holonet, docs, photonic, audit, qec, github, selector, tomotope
+- **Total Decisions:** 4566
+- **Known Topics:** needs-review, auto-draft, why, w33, testing, toe, architecture, docs, holonet, photonic, qec, audit, github, selector, gap
 
 ## Current State
 **Branch:** master
 
 **Recent Commits:**
-- `f6a5baf95 Pass 326 + paper attribution + rediscovery guard: the last survivors are ours, conditional, and smaller than advertised`
-- `1c637cc3b Passes 323-325 + RESULTS_INDEX: the audit completes — no headline survives, CSX closes the last gap and confirms 8353, and the real contribution is the selection layer`
-- `fb0088e1d Pass 322: the rank law was already ours — and already published. The fifth failure mode: REDISCOVERY.`
-- `c68610e71 Passes 319-321 + paper sweep: my own delta idea was tautological, "frequency is a mass" has no scale, and 42 is a coincidence`
-- `4065ed3ce Passes 317-318 + paper prune: "why B" reduces to "why delta(p^2)"; the holonet corpus is mostly BUILT (315 over-flagged); two verifications running`
+- `414c4304f Pass 368: the Eisenstein rank-parity law — one line under the whole QR tower — and both papers updated`
+- `90a9e3e3b Passes 363-367: encode the QR Clifford refinement tower`
+- `948803522 Pass 362: separate the real Clifford K4,4 and F4 shadows`
+- `0742dc14b Pass 361: prove the QR Clifford maximality boundary`
+- `fb47f6c66 Pass 360: exact affine logical Hadamard and PSL/PGL closure`
 
 **Working Tree:**
 - M .continuity/INSTRUCTIONS.md
 - M .continuity/SESSION_NOTES.md
-- M scripts/check_rediscovery.py
-- ?? .continuity/.gitattributes
-- ?? .continuity/decisions.json
-- ?? .continuity/decisions.jsonl
-- ?? BT359_twist_results.json
-- ?? E8
-- ?? PART_BT367_E6_HOLONOMY_BRIDGE.md
-- ?? _check_vals.py
-- ?? _gap_120sheet_scheme.g
-- ?? _gap_we6_steiner_trihedra.g
-- ?? _gap_we6_test.g
-- ?? _search_eigenspace_signings.py
-- ?? analysis/BT367_association_scheme.g
+- M .cursorrules
+- M .github/copilot-instructions.md
+- M .github/workflows/bt1094-tex-check.yml
+- M .github/workflows/ci.yml
+- M .github/workflows/holonet-build.yml
+- M .github/workflows/pytest.yml
+- M AGENTS.md
+- M CLAUDE.md
+- M GEMINI.md
+- M README.md
+- M W33_FOR_EVERYONE.tex
+- M analysis/build_results_index.py
+- M analysis/w33_ihara_zeta.py
 
 ## Working Memory Snapshot
 **Mode:** degraded-fallback
-**Generated At:** 2026-07-15T13:51:25.293Z
-**Startup Summary:** mode=degraded-fallback | decisions=4422 | lastTask=2026-06-05 current goal: refresh origin/master, absorb the BT285-BT317 remote batch, and continue the selector/hypercube theory with a scoped verified packet. | next=Recent commits: | branch=master | health=MCP server disconnected. | fallback-files=12
-**Decision Count:** 4422
+**Generated At:** 2026-07-17T14:11:21.664Z
+**Startup Summary:** mode=degraded-fallback | decisions=4565 | lastTask=2026-06-05 current goal: refresh origin/master, absorb the BT285-BT317 remote batch, and continue the selector/hypercube theory with a scoped verified packet. | next=Recent commits: | branch=master | health=MCP server disconnected. | fallback-files=12
+**Decision Count:** 4565
 **Fallback Chain:** AGENTS.md, CLAUDE.md, GEMINI.md, .cursorrules, .github/copilot-instructions.md, .continuity/INSTRUCTIONS.md, .continuity/SESSION_NOTES.md, .continuity/mcp-health.json, .continuity/unfinished-task.json, .continuity/working-memory.json, SESSION_HANDOFF.md, .continuity/decisions.json
 
 ## Workspace MCP Self-Test
 **Status:** Ready
-**Last Checked:** 2026-07-15T02:39:55.190Z
+**Last Checked:** 2026-07-17T12:11:29.057Z
 **Summary:** No MCP summary recorded.
 
 ## Resume Snapshot
 **Last Task:** 2026-06-05 current goal: refresh origin/master, absorb the BT285-BT317 remote batch, and continue the selector/hypercube theory with a scoped verified packet.
-**Last Completed Milestone:** Auto-saved at 2026-07-15T13:50:52.335Z (reason: threshold-commits)
+**Last Completed Milestone:** Auto-saved at 2026-07-17T13:41:21.728Z (reason: timer)
 **Next Expected Step:** Recent commits:
 **Last Successful Tool Call:** log_decision @ 2026-07-03T21:11:53.588Z
-**Relevant Files:** analysis\W33_HONEST_SYNTHESIS.md, .continuity\INSTRUCTIONS.md, analysis\w33_genus_ladder_clock.py, data\Toroidal-Polyhedra-Realizations.txt, tools\bt1526_csaszar_all_five_tetra_audit.py, .vscode\mcp.json
+**Relevant Files:** .continuity/SESSION_NOTES.md, .cursorrules, .github/copilot-instructions.md, .github/workflows/bt1094-tex-check.yml, .github/workflows/ci.yml, .github/workflows/holonet-build.yml
 
 ## Workflow
 
@@ -256,15 +256,34 @@ commit. That is the whole protocol.
 commit owns it and the later one cites it. Check with
 `git log --diff-filter=A --format='%ad %h' --date=short -1 -- <file>`, not memory.
 
+## Batch intake (remote/GitHub batches — run the guard BEFORE accepting claims)
+
+A third contribution stream now submits batched claims. The July 15 batch
+proposed an unsupported `[[137,1,3]]` that GAP had to refute after the fact
+(Pass 358–359: the correct object is `[[137,1,21]]`). Audit at **intake**, not
+after commit:
+
+1. `py -3 analysis/build_results_index.py` (refresh), then
+   `py -3 scripts/check_rediscovery.py <batch files>` — collisions name the
+   prior art to read first.
+2. Grep the batch's *results* (code parameters, distinctive integers,
+   compounds like `a2+eisenstein`) against `RESULTS_INDEX.md`.
+3. Any claim that contradicts a certified `data/*.json` value is rejected
+   until it names the certificate it supersedes and why.
+4. Certificates are part of the corpus: **re-read the JSON, not just the
+   prose.** Six separate times a question was "open" while its answer sat in a
+   committed certificate (`det(B_p)`, `det(T)=-1`, "torsor", the missing
+   `*.py` glob, the q=3 Weil split vs Pass 331, `[1,27,36]` vs E6/2E6).
+
 
 ## Recent Decisions
-1. **decision-595a088a** (7/15/2026) [why, audit]
-   - Q: Where does the W(3,q) rank law and CSS code actually come from, and what is g...
-   - A: Passes 322-325 completed the audit; NO headline survives as new. Rank law eve...
+1. **decision-6e18db2a** (7/17/2026) [why, go]
+   - Q: Why does one parity law underlie the QR tower's exceptional boundary, and wha...
+   - A: Pass 368: over F4 every nonzero element cubes to 1, so a traced rank-n Hermit...
 
-2. **decision-17840831** (7/13/2026) [auto-draft, needs-review]
-   - Q: Why: Passes 204-208: ninth round — the QEC gate set and the second Platonic c...
-   - A: (Auto-drafted from commit 592163b on 2026-07-13.) Please review and expand wi...
+2. **decision-17841505** (7/15/2026) [auto-draft, needs-review]
+   - Q: Why: Pass 326 + paper attribution + rediscovery guard: the last survivors are...
+   - A: (Auto-drafted from commit f6a5baf on 2026-07-15.) Please review and expand wi...
 
 3. **decision-3587a7a6** (7/1/2026) [architecture, e6]
    - Q: What is the mathematical identity of the 120-sheet Holonet selector and its r...
@@ -316,6 +335,6 @@ commit owns it and the later one cites it. Check with
 
 ---
 
-*Auto-generated by Continuity CLI | Updated: 2026-07-15*
+*Auto-generated by Continuity CLI | Updated: 2026-07-17*
 
 <!-- END CONTINUITY AUTO-GENERATED CONTENT -->

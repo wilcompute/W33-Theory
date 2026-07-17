@@ -1,0 +1,31 @@
+{
+  "schema": "w33.pass369.the_27_is_a_heisenberg_torsor.v1",
+  "status": "PASS",
+  "HEADLINE": "The 27 isotropic classes of E6/2E6 admit a regular action of the extraspecial Heisenberg group 3^{1+2} of exponent 3 -- EXACTLY the group of bt865's point-state torsor -- found constructively via transvection walks. The substrate's torsor list (2,3,27,27) now has its 27s realized inside the E6 shadow the QR tower's minus refinement carries. K12 is built from first principles (hexacode Construction A over Z[omega], halved trace form: det 729, even, rootless, min 4) and its mod-2 shadow has exactly 2080 isotropic classes -- PLUS -- verifying the rank-parity law's m=6 substrate half on the actual lattice. And the d=21/sqrt21 numerology is killed by five Legendre symbols.",
+  "the_open_named_map": "NOT asserted: that bt865's 27 point states and the E6 27 are equivariantly the same torsor. Candidate map: the corpus's own 40 = 1+12+27 screen/rim/bulk split of the W(3,3) points -- whether the 27 bulk points biject Heisenberg-equivariantly with the 27 isotropics is the next named construction (mode 3 discipline).",
+  "what_remains_for_gap": "only the tower half of the m=6 prediction: whether 6.PSU(4,3).2 mod 2 distinguishes itself inside the m=6 plus refinement's O+(12,2) on [[822,6,21]].",
+  "checks": {
+    "27_isotropics_36_nonsingular": true,
+    "order3_fpf_elements_exist": true,
+    "regular_order27_group_FOUND": true,
+    "it_is_nonabelian": true,
+    "exponent_3": true,
+    "hence_extraspecial_heisenberg_3_1plus2": true,
+    "same_group_as_bt865_point_state_torsor": true,
+    "elementary_F3cubed_not_found_negative_search_only": true,
+    "hexacode_found": true,
+    "hexacode_is_fourier_form": true,
+    "trace_gram_all_even": true,
+    "K12_det_729": true,
+    "K12_even": true,
+    "root_search_box_sufficient": true,
+    "K12_min_norm_4_rootless": true,
+    "K12_mod2_iso_2080_PLUS": true,
+    "law_rank6_verified_on_the_lattice": true,
+    "137_is_1_mod_4": true,
+    "3_nonresidue_mod_137": true,
+    "7_residue_mod_137": true,
+    "21_nonresidue_mod_137": true,
+    "sqrt21_link_killed": true
+  }
+}
