@@ -1,0 +1,243 @@
+{
+  "annihilator": "on the degree-zero lattice, q^4(q^2-1) is in the Laplacian ideal via (L-q^2I)(L-q(q-1)I)(L-q(q+1)I)=0",
+  "bockstein_certificates": {
+    "3": {
+      "2": {
+        "beta1_rank": 6,
+        "beta2_rank": 0,
+        "cumulative_divisibility_counts_p_p2_p3": [
+          12,
+          6,
+          6
+        ],
+        "left_kernel_dimension": 12,
+        "right_kernel_dimension": 12,
+        "tree_order_p_valuation": 24
+      },
+      "3": {
+        "beta1_rank": 8,
+        "beta2_rank": 1,
+        "cumulative_divisibility_counts_p_p2_p3": [
+          16,
+          8,
+          7
+        ],
+        "left_kernel_dimension": 16,
+        "right_kernel_dimension": 16,
+        "tree_order_p_valuation": 31
+      }
+    },
+    "5": {
+      "2": {
+        "beta1_rank": 0,
+        "beta2_rank": 20,
+        "cumulative_divisibility_counts_p_p2_p3": [
+          60,
+          60,
+          40
+        ],
+        "left_kernel_dimension": 60,
+        "right_kernel_dimension": 60,
+        "tree_order_p_valuation": 160
+      },
+      "3": {
+        "beta1_rank": 40,
+        "beta2_rank": 0,
+        "cumulative_divisibility_counts_p_p2_p3": [
+          40,
+          0,
+          0
+        ],
+        "left_kernel_dimension": 40,
+        "right_kernel_dimension": 40,
+        "tree_order_p_valuation": 40
+      },
+      "5": {
+        "beta1_rank": 56,
+        "beta2_rank": 10,
+        "cumulative_divisibility_counts_p_p2_p3": [
+          89,
+          33,
+          23
+        ],
+        "left_kernel_dimension": 89,
+        "right_kernel_dimension": 89,
+        "tree_order_p_valuation": 145
+      }
+    },
+    "7": {
+      "2": {
+        "beta1_rank": 42,
+        "beta2_rank": 0,
+        "cumulative_divisibility_counts_p_p2_p3": [
+          168,
+          126,
+          126
+        ],
+        "left_kernel_dimension": 168,
+        "right_kernel_dimension": 168,
+        "tree_order_p_valuation": 546
+      },
+      "3": {
+        "beta1_rank": 168,
+        "beta2_rank": 0,
+        "cumulative_divisibility_counts_p_p2_p3": [
+          168,
+          0,
+          0
+        ],
+        "left_kernel_dimension": 168,
+        "right_kernel_dimension": 168,
+        "tree_order_p_valuation": 168
+      },
+      "7": {
+        "beta1_rank": 176,
+        "beta2_rank": 35,
+        "cumulative_divisibility_counts_p_p2_p3": [
+          258,
+          82,
+          47
+        ],
+        "left_kernel_dimension": 258,
+        "right_kernel_dimension": 258,
+        "tree_order_p_valuation": 387
+      }
+    }
+  },
+  "certificate_sha256": "5a60350e638007aaf76c04f97e5e1d2ff0495476ea987c1e6ee53dcf6053c4d3",
+  "checks": {
+    "q3_q_primary_matches_formula": true,
+    "q3_snf_order_matches_tree_formula": true,
+    "q3_two_primary_matches_formula": true,
+    "q5_q_primary_matches_formula": true,
+    "q5_snf_order_matches_tree_formula": true,
+    "q5_two_primary_matches_formula": true,
+    "q7_q_primary_bockstein_matches_formula": true,
+    "q7_three_primary_is_elementary": true,
+    "q7_two_primary_first_three_levels": true,
+    "q7_two_primary_fourth_level_forced_by_order_and_annihilator": true
+  },
+  "exact_full_smith_forms": {
+    "3": {
+      "1": 10,
+      "18": 1,
+      "216": 6,
+      "3": 4,
+      "54": 1,
+      "6": 4
+    },
+    "5": {
+      "1": 35,
+      "120": 7,
+      "20": 20,
+      "3000": 23,
+      "5": 29,
+      "600": 10
+    }
+  },
+  "exact_q3_critical_group": "Z/3^8 + Z/9 + (Z/27)^7 + (Z/2)^6 + (Z/8)^6",
+  "exact_q5_primary_description": {
+    "2_primary": "(Z/4)^20 + (Z/8)^40",
+    "3_primary": "(Z/3)^40",
+    "5_primary": "(Z/5)^56 + (Z/25)^10 + (Z/125)^23"
+  },
+  "odd_q_two_primary_law": {
+    "formula": "(Z/2^a)^(q(q-1)) + (Z/2^(a+b))^(q(q-1)^2/2), a=v2(q-1), b=v2(q+1)",
+    "instances": {
+      "3": {
+        "a_v2_q_minus_1": 1,
+        "b_v2_q_plus_1": 2,
+        "cumulative": [
+          12,
+          6,
+          6
+        ],
+        "elementary_counts": {
+          "2": 6,
+          "8": 6
+        }
+      },
+      "5": {
+        "a_v2_q_minus_1": 2,
+        "b_v2_q_plus_1": 1,
+        "cumulative": [
+          60,
+          60,
+          40
+        ],
+        "elementary_counts": {
+          "4": 20,
+          "8": 40
+        }
+      },
+      "7": {
+        "a_v2_q_minus_1": 1,
+        "b_v2_q_plus_1": 3,
+        "cumulative": [
+          168,
+          126,
+          126,
+          126
+        ],
+        "elementary_counts": {
+          "16": 126,
+          "2": 42
+        }
+      }
+    },
+    "status": "conjectured for odd q; exact at q=3,5 and Bockstein/order-certified at q=7"
+  },
+  "prime_q_q_primary_law": {
+    "formula": "(Z/q)^(q^3+1-2*C(q+2,3)) + (Z/q^2)^(C(q+2,3)-q^2) + (Z/q^3)^(q^2-2)",
+    "instances": {
+      "3": {
+        "cumulative": [
+          16,
+          8,
+          7
+        ],
+        "elementary_counts": {
+          "27": 7,
+          "3": 8,
+          "9": 1
+        },
+        "q_adic_order_exponent": 31
+      },
+      "5": {
+        "cumulative": [
+          89,
+          33,
+          23
+        ],
+        "elementary_counts": {
+          "125": 23,
+          "25": 10,
+          "5": 56
+        },
+        "q_adic_order_exponent": 145
+      },
+      "7": {
+        "cumulative": [
+          258,
+          82,
+          47
+        ],
+        "elementary_counts": {
+          "343": 47,
+          "49": 35,
+          "7": 176
+        },
+        "q_adic_order_exponent": 387
+      }
+    },
+    "status": "conjectured for every odd prime; exactly certified at q=3,5,7"
+  },
+  "q7_certified_primary_description": {
+    "2_primary": "(Z/2)^42 + (Z/16)^126",
+    "3_primary": "(Z/3)^168",
+    "7_primary": "(Z/7)^176 + (Z/49)^35 + (Z/343)^47",
+    "method": "two Bockstein pages plus exact order and the cubic Laplacian annihilator"
+  },
+  "schema": "w33.pass401.critical_group_bockstein.v1",
+  "status": "PASS"
+}

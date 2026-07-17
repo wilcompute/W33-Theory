@@ -1,0 +1,75 @@
+name: Pass 400-404 Five Frontiers
+
+on:
+  push:
+    branches: [master, agent/pass400-404-five-frontiers]
+    paths:
+      - 'analysis/w33_pass400_404_common.py'
+      - 'analysis/w33_pass400_minimal_phase_control.py'
+      - 'analysis/w33_pass401_critical_group_bockstein.py'
+      - 'analysis/w33_pass402_quantum_classical_frontier.py'
+      - 'analysis/w33_pass403_drackn_semilinear_classification.py'
+      - 'analysis/w33_pass404_photonic_voltage_compiler.py'
+      - 'data/w33_pass400_minimal_phase_control.json'
+      - 'data/w33_pass401_critical_group_bockstein.json'
+      - 'data/w33_pass402_quantum_classical_frontier.json'
+      - 'data/w33_pass403_drackn_semilinear_classification.json'
+      - 'data/w33_pass404_photonic_voltage_compiler.json'
+      - 'data/w33_pass404_photonic_voltage_schedule_q3.json'
+      - 'tests/test_pass400_404_five_frontiers.py'
+      - 'PASS400_404_FIVE_FRONTIERS_RELEASE.md'
+      - '.github/workflows/pass400-404-five-frontiers.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pass400-404-five-frontiers-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify-and-freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install focused dependencies
+        run: python -m pip install --upgrade numpy sympy python-flint pytest
+      - name: Regenerate all five certificates and the hardware schedule
+        run: |
+          python analysis/w33_pass400_minimal_phase_control.py
+          python analysis/w33_pass401_critical_group_bockstein.py
+          python analysis/w33_pass402_quantum_classical_frontier.py
+          python analysis/w33_pass403_drackn_semilinear_classification.py
+          python analysis/w33_pass404_photonic_voltage_compiler.py
+      - name: Require frozen products to be current on pull requests
+        if: github.event_name == 'pull_request'
+        run: git diff --exit-code -- data/w33_pass400_minimal_phase_control.json data/w33_pass401_critical_group_bockstein.json data/w33_pass402_quantum_classical_frontier.json data/w33_pass403_drackn_semilinear_classification.json data/w33_pass404_photonic_voltage_compiler.json data/w33_pass404_photonic_voltage_schedule_q3.json
+      - name: Verify frozen products
+        run: |
+          python analysis/w33_pass400_minimal_phase_control.py --check
+          python analysis/w33_pass401_critical_group_bockstein.py --check
+          python analysis/w33_pass402_quantum_classical_frontier.py --check
+          python analysis/w33_pass403_drackn_semilinear_classification.py --check
+          python analysis/w33_pass404_photonic_voltage_compiler.py --check
+      - name: Run focused regressions
+        run: python -m pytest -q tests/test_pass400_404_five_frontiers.py
+      - name: Verify live claims ledger
+        run: python scripts/check_claims_ledger.py
+      - name: Commit exact runner-produced data on branch pushes
+        if: github.event_name == 'push' && github.ref != 'refs/heads/master'
+        run: |
+          if git diff --quiet -- data/w33_pass400_minimal_phase_control.json data/w33_pass401_critical_group_bockstein.json data/w33_pass402_quantum_classical_frontier.json data/w33_pass403_drackn_semilinear_classification.json data/w33_pass404_photonic_voltage_compiler.json data/w33_pass404_photonic_voltage_schedule_q3.json; then
+            echo 'Frozen products already current.'
+            exit 0
+          fi
+          git config user.name 'w33-pass400-404-freeze[bot]'
+          git config user.email 'w33-pass400-404-freeze[bot]@users.noreply.github.com'
+          git add -f data/w33_pass400_minimal_phase_control.json data/w33_pass401_critical_group_bockstein.json data/w33_pass402_quantum_classical_frontier.json data/w33_pass403_drackn_semilinear_classification.json data/w33_pass404_photonic_voltage_compiler.json data/w33_pass404_photonic_voltage_schedule_q3.json
+          git commit -m 'Passes 400-404: freeze five-frontier certificates'
+          git push origin HEAD:agent/pass400-404-five-frontiers
