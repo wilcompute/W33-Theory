@@ -1,0 +1,11 @@
+{
+  "schema": "w33.pass399.release_attestation.v1",
+  "status": "READY_FOR_PR_VALIDATION",
+  "certificate_schema": "w33.pass399.bulk_ramanujan_quantum.v1",
+  "certificate_sha256": "f7d3062c5794a7a39e302527cb76f324532c28689825e5371d6d2c9a3d3c41f4",
+  "certificate_freeze_commit": "b671d9357b960e9361689d2e48698496d0ba84e1",
+  "serialization_policy": "integer-and-string fields only; exact runner regeneration; pull-request clean-diff gate",
+  "verified_rungs": [3, 5, 7],
+  "focused_checks": 30,
+  "focused_regressions": 5
+}
