@@ -1,0 +1,303 @@
+{
+  "schema": "w33.pass393.cover_law_of_the_tower.v2",
+  "status": "PASS",
+  "HEADLINE": "THE COVER IS A LAW OF THE TOWER: at q=5 the 125-point bulk is a distance-regular antipodal 5-fold cover of K25, array {24,20,1;1,5,24} = the cover form at (25,5,5), with all 25 distance-3 classes equal to the phase fibers -- exactly as at q=3. The invariant-graph menu at q=3 is complete: five symmetric orbitals (valencies 2,8,8,8 plus diagonal), all regular unions tabulated; the two geometric graphs are two entries of the menu. And the native geometry's Cayley connection set S is verified to hit each nonzero coset of Z(H) exactly once: S IS A SECTION of the torsor projection -- the register cell's own wiring is built from the object type (a section) that the no-go says the substrate cannot canonically supply.",
+  "menu": [
+    {
+      "orbitals": [
+        0
+      ],
+      "degree": 1,
+      "distinct_eigenvalues": 5
+    },
+    {
+      "orbitals": [
+        1
+      ],
+      "degree": 1,
+      "distinct_eigenvalues": 5
+    },
+    {
+      "orbitals": [
+        0,
+        1
+      ],
+      "degree": 2,
+      "distinct_eigenvalues": 2
+    },
+    {
+      "orbitals": [
+        2
+      ],
+      "degree": 8,
+      "distinct_eigenvalues": 4
+    },
+    {
+      "orbitals": [
+        0,
+        2
+      ],
+      "degree": 9,
+      "distinct_eigenvalues": 20
+    },
+    {
+      "orbitals": [
+        1,
+        2
+      ],
+      "degree": 9,
+      "distinct_eigenvalues": 21
+    },
+    {
+      "orbitals": [
+        0,
+        1,
+        2
+      ],
+      "degree": 10,
+      "distinct_eigenvalues": 3
+    },
+    {
+      "orbitals": [
+        3
+      ],
+      "degree": 8,
+      "distinct_eigenvalues": 11
+    },
+    {
+      "orbitals": [
+        0,
+        3
+      ],
+      "degree": 9,
+      "distinct_eigenvalues": 27
+    },
+    {
+      "orbitals": [
+        1,
+        3
+      ],
+      "degree": 9,
+      "distinct_eigenvalues": 27
+    },
+    {
+      "orbitals": [
+        0,
+        1,
+        3
+      ],
+      "degree": 10,
+      "distinct_eigenvalues": 11
+    },
+    {
+      "orbitals": [
+        2,
+        3
+      ],
+      "degree": 16,
+      "distinct_eigenvalues": 10
+    },
+    {
+      "orbitals": [
+        0,
+        2,
+        3
+      ],
+      "degree": 17,
+      "distinct_eigenvalues": 27
+    },
+    {
+      "orbitals": [
+        1,
+        2,
+        3
+      ],
+      "degree": 17,
+      "distinct_eigenvalues": 27
+    },
+    {
+      "orbitals": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "degree": 18,
+      "distinct_eigenvalues": 9
+    },
+    {
+      "orbitals": [
+        4
+      ],
+      "degree": 8,
+      "distinct_eigenvalues": 9
+    },
+    {
+      "orbitals": [
+        0,
+        4
+      ],
+      "degree": 9,
+      "distinct_eigenvalues": 27
+    },
+    {
+      "orbitals": [
+        1,
+        4
+      ],
+      "degree": 9,
+      "distinct_eigenvalues": 27
+    },
+    {
+      "orbitals": [
+        0,
+        1,
+        4
+      ],
+      "degree": 10,
+      "distinct_eigenvalues": 10
+    },
+    {
+      "orbitals": [
+        2,
+        4
+      ],
+      "degree": 16,
+      "distinct_eigenvalues": 11
+    },
+    {
+      "orbitals": [
+        0,
+        2,
+        4
+      ],
+      "degree": 17,
+      "distinct_eigenvalues": 27
+    },
+    {
+      "orbitals": [
+        1,
+        2,
+        4
+      ],
+      "degree": 17,
+      "distinct_eigenvalues": 27
+    },
+    {
+      "orbitals": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "degree": 18,
+      "distinct_eigenvalues": 11
+    },
+    {
+      "orbitals": [
+        3,
+        4
+      ],
+      "degree": 16,
+      "distinct_eigenvalues": 3
+    },
+    {
+      "orbitals": [
+        0,
+        3,
+        4
+      ],
+      "degree": 17,
+      "distinct_eigenvalues": 21
+    },
+    {
+      "orbitals": [
+        1,
+        3,
+        4
+      ],
+      "degree": 17,
+      "distinct_eigenvalues": 20
+    },
+    {
+      "orbitals": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "degree": 18,
+      "distinct_eigenvalues": 4
+    },
+    {
+      "orbitals": [
+        2,
+        3,
+        4
+      ],
+      "degree": 24,
+      "distinct_eigenvalues": 3
+    },
+    {
+      "orbitals": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "degree": 25,
+      "distinct_eigenvalues": 9
+    },
+    {
+      "orbitals": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "degree": 25,
+      "distinct_eigenvalues": 9
+    },
+    {
+      "orbitals": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "degree": 26,
+      "distinct_eigenvalues": 2
+    }
+  ],
+  "queued": "q=7 rung ({48,42,1;1,7,48} predicted); Godsil-Hensel comparison of S against the canonical GH(3,3) cover under Aut(H) (order 432).",
+  "checks": {
+    "q5_bulk_125": true,
+    "q5_regular_24": true,
+    "q5_diameter_3": true,
+    "q5_shells_1_24_96_4": true,
+    "q5_distance_regular_sampled": true,
+    "q5_array_24_20_1__1_5_24": true,
+    "q5_matches_cover_form_25_5_5": true,
+    "q5_25_classes_of_5": true,
+    "q5_classes_are_phase_fibers": true,
+    "COVER_LAW_TWO_RUNGS": true,
+    "five_nontrivial_orbitals": true,
+    "valencies_1_1_8_8_8": true,
+    "two_transpose_pairs": true,
+    "unique_symmetric_orbital": true,
+    "native_is_THE_symmetric_orbital": true,
+    "phase_arrows_are_a_transpose_pair": true,
+    "only_symmetric_10_graph_is_native_plus_phase": true,
+    "E6_GEOMETRY_CONTAINS_W33_GEOMETRY": true,
+    "648_sees_directed_phase_AND_directed_8_pair": true,
+    "menu_computed": true,
+    "native_8_graph_in_menu": true,
+    "transported_10_graph_in_menu": true,
+    "regular_on_bulk": true,
+    "S_size_8": true,
+    "S_disjoint_from_centre": true,
+    "S_hits_each_nonzero_coset_once": true,
+    "S_IS_A_SECTION_OF_THE_TORSOR_PROJECTION": true
+  }
+}
