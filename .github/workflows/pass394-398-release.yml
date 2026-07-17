@@ -1,0 +1,82 @@
+name: Pass 394-398 Release and Formula Freeze
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass394_antipodal_cover_theorem.py'
+      - 'analysis/w33_pass395_cayley_section_classification.py'
+      - 'analysis/w33_pass396_pluecker_chain_dirac_lift.py'
+      - 'analysis/w33_pass397_sealed_lab_ingestion.py'
+      - 'analysis/w33_pass398_formula_search_universe.py'
+      - 'schemas/w33_photonic_lab_bundle_v1.schema.json'
+      - 'tests/test_pass394_398_execution.py'
+      - 'PASS394_398_COVER_SECTION_DIRAC_LAB_FORMULA_RELEASE.md'
+      - 'docs/index.html'
+      - '*.tex'
+      - 'analysis/**/*.md'
+      - 'analysis/**/*.g'
+      - 'passes/**/*'
+      - 'exploration/**/*'
+      - 'scripts/**/*'
+      - 'PASS*.md'
+      - 'AUDIT*.md'
+      - 'BT*.md'
+      - 'PART*.md'
+      - 'formal/**/*.lean'
+      - 'manuscripts/**/*.tex'
+      - 'papers/**/*.tex'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pass394-398-master
+  cancel-in-progress: false
+
+jobs:
+  verify-and-freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install focused dependencies
+        run: python -m pip install --upgrade numpy pytest
+      - name: Regenerate finite certificates and test the production contract
+        run: |
+          python analysis/w33_pass394_antipodal_cover_theorem.py
+          python analysis/w33_pass395_cayley_section_classification.py
+          python analysis/w33_pass396_pluecker_chain_dirac_lift.py
+          python analysis/w33_pass397_sealed_lab_ingestion.py contract-test
+          python analysis/w33_pass398_formula_search_universe.py --self-test
+      - name: Run focused regressions
+        run: python -m pytest -q tests/test_pass394_398_execution.py
+      - name: Verify live claims ledger
+        run: python scripts/check_claims_ledger.py
+      - name: Generate the complete repository formula universe
+        if: github.event_name != 'pull_request'
+        run: |
+          python analysis/w33_pass398_formula_search_universe.py \
+            --root . \
+            --output data/w33_formula_search_universe_v1.json \
+            --repository-head "$GITHUB_SHA" \
+            --frozen-at "$(git show -s --format=%cI "$GITHUB_SHA")"
+      - name: Commit the frozen formula universe when changed
+        if: github.event_name != 'pull_request'
+        run: |
+          if git diff --quiet -- data/w33_formula_search_universe_v1.json && git ls-files --error-unmatch data/w33_formula_search_universe_v1.json >/dev/null 2>&1; then
+            echo 'Formula universe already current.'
+            exit 0
+          fi
+          git config user.name 'w33-formula-freeze[bot]'
+          git config user.email 'w33-formula-freeze[bot]@users.noreply.github.com'
+          git add -f data/w33_formula_search_universe_v1.json
+          git commit -m 'Pass 398: freeze complete formula-search universe'
+          git push origin HEAD:master
