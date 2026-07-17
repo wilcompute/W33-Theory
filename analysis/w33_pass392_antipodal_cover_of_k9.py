@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Pass 391: the bulk graph is an antipodal 3-fold cover of K9 -- and it was
+"""Pass 392: the bulk graph is an antipodal 3-fold cover of K9 -- and it was
 never phase-blind. The phase sits at distance 3.
 
-SELF-CORRECTION OF PASS 386 (renumbered 387->391: authored 8 minutes before the GAP track's Pluecker Pass 387, but a network outage kept this one local while theirs reached origin; the unpublished commit renumbers). That pass read the orbital decomposition
+SELF-CORRECTION OF PASS 386 (renumbered 387->391->392; the GAP track claimed 387 and then 391 on origin while this commit was in flight: authored 8 minutes before the GAP track's Pluecker Pass 387, but a network outage kept this one local while theirs reached origin; the unpublished commit renumbers). That pass read the orbital decomposition
     W33 collinearity = one 8-suborbit        "phase-BLIND"
     E6 orthogonality = central pair + 8      "phase-AWARE"
 and called the native geometry blind to the qutrit phase. The blindness was a
@@ -58,7 +58,7 @@ from pathlib import Path
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "data" / "w33_pass391_antipodal_cover_of_k9.json"
+OUT = ROOT / "data" / "w33_pass392_antipodal_cover_of_k9.json"
 
 
 def canon(v):
@@ -152,7 +152,7 @@ def main():
 
     all_pass = all(v for v in checks.values() if isinstance(v, bool))
     payload = {
-        "schema": "w33.pass391.antipodal_cover_of_k9.v1",
+        "schema": "w33.pass392.antipodal_cover_of_k9.v1",
         "status": "PASS" if all_pass else "FAIL",
         "HEADLINE": (
             "SELF-CORRECTION OF 386: the bulk graph was never phase-blind. It is "
