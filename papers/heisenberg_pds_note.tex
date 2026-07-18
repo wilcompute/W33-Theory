@@ -107,23 +107,38 @@ $q-2$ times as a difference $xy^{-1}$ $(x,y\in D)$, each non-identity element
 outside $D$ exactly $q+2$ times. (Verified by full enumeration at $q=3,5$.)
 \end{theorem}
 
-\begin{theorem}[witnesses P370, P432]
-The parameter set $(27,10,1,5)$ admits no abelian partial difference set in
-any group.
+\begin{theorem}[witness P433]
+For every odd $q$, the parameter set
+$\bigl(q^3,(q-1)(q+2),q-2,q+2\bigr)$ admits no partial difference set in any
+abelian group.
 \end{theorem}
 
 \begin{proof}
-$\mathrm{SRG}(27,10,1,5)$ is unique: its complement has least eigenvalue
-$-2$ and spectrum $\{16,4^6,(-2)^{20}\}$, so Seidel's classification applies.
-An abelian PDS would embed its group as a regular abelian subgroup of the
-automorphism group $W(E_6)$ acting on the $27$ vertices. The order-$27$
-subgroups of $W(E_6)$ are exactly the four index-$3$ subgroups of a Sylow
-$3$-subgroup (Frattini-hyperplane preimages, a complete enumeration): the
-exponent-$3$ extraspecial, two exponent-$9$ extraspecials, and the elementary
-abelian $\FF_3^3$; the groups $\ZZ_9\times\ZZ_3$ and $\ZZ_{27}$ do not occur,
-and the elementary abelian subgroup has fixed points. No abelian group acts
-regularly.
+Suppose $D$ were one, in an abelian $A$ of order $q^3$. Every nontrivial
+character takes on $D$ the value $r=q-2$ or $s=-(q+2)$; let $E$ be the set of
+characters with value $s$. Fourier inversion gives, for $x\neq0$,
+\[
+q^3\,\mathbf 1_D(x)\;=\;(k-r)+(s-r)\,S_E(x),
+\qquad S_E(x)=\sum_{\chi\in E}\overline\chi(x),
+\]
+with $k-r=q^2$ and $s-r=-2q$. For any $x\notin D$ (which exists, as
+$k<q^3-1$) this forces $S_E(x)=q/2$: a rational non-integer which, as a sum
+of roots of unity, would be an algebraic integer. Contradiction. (For
+$x\in D$ the branch gives the integer $-(q^2-q)/2$, as it must.)
 \end{proof}
+
+\begin{remark}
+The proof is an application of the standard character-integrality criterion
+for abelian partial difference sets (cf.\ S.L.~Ma's survey, \emph{Des.\ Codes
+Cryptogr.}\ \textbf{4} (1994)); the application to this family is what is
+new. At $q=3$ a second, independent route (witnesses P370, P432) proves the
+stronger \emph{graph-level} statement: $\mathrm{SRG}(27,10,1,5)$ is the
+unique graph with its parameters (complement least eigenvalue $-2$, Seidel),
+and a complete Sylow-level enumeration of $W(E_6)$ shows no abelian group of
+order $27$ acts regularly on its vertices --- $\ZZ_9\times\ZZ_3$ and
+$\ZZ_{27}$ do not embed, and the elementary abelian $\FF_3^3$ has fixed
+points.
+\end{remark}
 
 \begin{remark}
 Nonabelian partial difference sets are scarce; see Polhill et al.\

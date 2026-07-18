@@ -1,0 +1,36 @@
+{
+  "schema": "w33.pass433.abelian_pds_tower_theorem.v1",
+  "status": "PASS",
+  "HEADLINE": "THEOREM, all odd q: the parameters (q^3,(q-1)(q+2),q-2,q+2) admit NO abelian PDS in any abelian group -- Fourier inversion forces S_E(x) = q/2 on the complement of D, a rational non-integer that would have to be an algebraic integer. Two lines, uniform in q, replacing 432's q=3-only route (an application of the standard Ma-survey integrality criterion; the application is new, the criterion is not). Polhill et al.'s 'genuinely nonabelian' definition is met verbatim at every odd q. The exact 2-adic sandpile shapes: q=3 gives {1: 6, 3: 6} (cross-validating 431's Z_2^6 x Z_8^6), q=5 gives {2: 20, 3: 40} (61 factors, total 2^160). The batch repair spec and v1.2 milestone gates ship alongside.",
+  "q3_2adic_shape": {
+    "2^1": 6,
+    "2^3": 6
+  },
+  "q5_2adic_shape": {
+    "2^2": 20,
+    "2^3": 40
+  },
+  "checks": {
+    "k_minus_r_is_q_squared": true,
+    "s_minus_r_is_minus_2q": true,
+    "obstruction_q_over_2": true,
+    "inD_branch_integral": true,
+    "sum_of_roots_of_unity_is_algebraic_integer": true,
+    "rational_algebraic_integer_is_integer": true,
+    "THEOREM_no_abelian_pds_all_odd_q": true,
+    "ma_survey_criterion_cited_application_new": true,
+    "polhill_definition_matches_verbatim": true,
+    "nonabelian_pds_srg_spectrum_intact": true,
+    "q3_2adic_matches_431": true,
+    "q5_2adic_total_160": true,
+    "q5_even_count_60_plus_kernel": true,
+    "q5_rank_124": true,
+    "q5_shape_is_Z4_20_Z8_40": true,
+    "shape_law_matches_q3": true,
+    "shape_law_matches_q5": true,
+    "shape_law_q7_total_consistent": true,
+    "shape_law_is_a_conjecture_two_points": true,
+    "repair_spec_exists": true,
+    "milestones_exists": true
+  }
+}
