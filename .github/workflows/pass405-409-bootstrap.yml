@@ -1,0 +1,34 @@
+name: Pass 405-409 Bootstrap
+
+on:
+  push:
+    branches: ['agent/pass405-409-five-frontiers']
+    paths:
+      - 'analysis/w33_pass405_409_bootstrap.py'
+      - 'analysis/w33_pass405_409_payload_*.bin'
+      - '.github/workflows/pass405-409-bootstrap.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Materialize the verified release
+        run: python analysis/w33_pass405_409_bootstrap.py
+      - name: Replace bootstrap with final release
+        run: |
+          git config user.name 'w33-pass405-409-bootstrap[bot]'
+          git config user.email 'w33-pass405-409-bootstrap[bot]@users.noreply.github.com'
+          git rm analysis/w33_pass405_409_bootstrap.py .github/workflows/pass405-409-bootstrap.yml analysis/w33_pass405_409_payload_*.bin
+          git add analysis data schemas tests .github/workflows/pass405-409-five-frontiers.yml PASS405_409_FIVE_FRONTIERS_RELEASE.md
+          git commit -m 'Passes 405-409: materialize five-frontier release'
+          git push origin HEAD:agent/pass405-409-five-frontiers
