@@ -22,6 +22,15 @@ def test_gf9_field_ring_boundary():
     assert field["status"] == "PASS"
     assert field["two_primary_shape"] == {"2^3": 72, "2^4": 288}
     assert ring["two_primary_shape"] == {"2^1": 6, "2^3": 60, "2^4": 216}
+    assert ring["adjacency_spectrum_multiplicities"] == {
+        "80": 1,
+        "26": 12,
+        "8": 270,
+        "-1": 224,
+        "-10": 216,
+        "-28": 6,
+    }
+    assert ring["checks"]["smith_tree_v2_matches_actual_spectrum"]
     assert ring["two_primary_shape"] != field["two_primary_shape"]
 
 
