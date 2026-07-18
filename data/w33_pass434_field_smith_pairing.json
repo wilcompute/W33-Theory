@@ -1,0 +1,92 @@
+{
+  "schema": "w33.pass434.field_smith_pairing.v1",
+  "status": "PASS",
+  "headline": "q=7 closes exactly as Z_2^42 x Z_16^126; GF(3), GF(5), GF(7), GF(9), GF(11) obey one spectral-to-Smith pairing law, while Z/9Z does not.",
+  "field_results": [
+    {
+      "q": 3,
+      "field_model": "prime",
+      "matrix_order": 27,
+      "degree": 8,
+      "adjacency_spectrum_multiplicities": {"k=q^2-1": 1, "q-1": 12, "-(q+1)": 6, "-1": 8},
+      "two_primary_shape": {"2^1": 6, "2^3": 6},
+      "expected_shape": {"2^1": 6, "2^3": 6},
+      "finite_even_factors": 12,
+      "tree_v2": 24,
+      "spectral_pairing": {"positive_eigenspace_multiplicity": 12, "negative_eigenspace_multiplicity": 6, "residual_positive_multiplicity": 6, "interpretation": "negative directions glue v2(q-1) and v2(q+1); residual positive directions carry v2(q-1)"},
+      "checks": {"connected_one_zero_invariant": true, "laplacian_row_sum_zero": true, "laplacian_symmetric": true, "shape_matches_pairing_law": true, "smith_tree_v2_matches_spectrum": true, "positive_spectrum_splits_residual_plus_glued": true},
+      "status": "PASS"
+    },
+    {
+      "q": 5,
+      "field_model": "prime",
+      "matrix_order": 125,
+      "degree": 24,
+      "adjacency_spectrum_multiplicities": {"k=q^2-1": 1, "q-1": 60, "-(q+1)": 40, "-1": 24},
+      "two_primary_shape": {"2^2": 20, "2^3": 40},
+      "expected_shape": {"2^2": 20, "2^3": 40},
+      "finite_even_factors": 60,
+      "tree_v2": 160,
+      "spectral_pairing": {"positive_eigenspace_multiplicity": 60, "negative_eigenspace_multiplicity": 40, "residual_positive_multiplicity": 20, "interpretation": "negative directions glue v2(q-1) and v2(q+1); residual positive directions carry v2(q-1)"},
+      "checks": {"connected_one_zero_invariant": true, "laplacian_row_sum_zero": true, "laplacian_symmetric": true, "shape_matches_pairing_law": true, "smith_tree_v2_matches_spectrum": true, "positive_spectrum_splits_residual_plus_glued": true},
+      "status": "PASS"
+    },
+    {
+      "q": 7,
+      "field_model": "prime",
+      "matrix_order": 343,
+      "degree": 48,
+      "adjacency_spectrum_multiplicities": {"k=q^2-1": 1, "q-1": 168, "-(q+1)": 126, "-1": 48},
+      "two_primary_shape": {"2^1": 42, "2^4": 126},
+      "expected_shape": {"2^1": 42, "2^4": 126},
+      "finite_even_factors": 168,
+      "tree_v2": 546,
+      "spectral_pairing": {"positive_eigenspace_multiplicity": 168, "negative_eigenspace_multiplicity": 126, "residual_positive_multiplicity": 42, "interpretation": "negative directions glue v2(q-1) and v2(q+1); residual positive directions carry v2(q-1)"},
+      "checks": {"connected_one_zero_invariant": true, "laplacian_row_sum_zero": true, "laplacian_symmetric": true, "shape_matches_pairing_law": true, "smith_tree_v2_matches_spectrum": true, "positive_spectrum_splits_residual_plus_glued": true},
+      "status": "PASS"
+    },
+    {
+      "q": 9,
+      "field_model": "gf9",
+      "matrix_order": 729,
+      "degree": 80,
+      "adjacency_spectrum_multiplicities": {"k=q^2-1": 1, "q-1": 360, "-(q+1)": 288, "-1": 80},
+      "two_primary_shape": {"2^3": 72, "2^4": 288},
+      "expected_shape": {"2^3": 72, "2^4": 288},
+      "finite_even_factors": 360,
+      "tree_v2": 1368,
+      "spectral_pairing": {"positive_eigenspace_multiplicity": 360, "negative_eigenspace_multiplicity": 288, "residual_positive_multiplicity": 72, "interpretation": "negative directions glue v2(q-1) and v2(q+1); residual positive directions carry v2(q-1)"},
+      "checks": {"connected_one_zero_invariant": true, "laplacian_row_sum_zero": true, "laplacian_symmetric": true, "shape_matches_pairing_law": true, "smith_tree_v2_matches_spectrum": true, "positive_spectrum_splits_residual_plus_glued": true},
+      "status": "PASS"
+    },
+    {
+      "q": 11,
+      "field_model": "prime",
+      "matrix_order": 1331,
+      "degree": 120,
+      "adjacency_spectrum_multiplicities": {"k=q^2-1": 1, "q-1": 660, "-(q+1)": 550, "-1": 120},
+      "two_primary_shape": {"2^1": 110, "2^3": 550},
+      "expected_shape": {"2^1": 110, "2^3": 550},
+      "finite_even_factors": 660,
+      "tree_v2": 1760,
+      "spectral_pairing": {"positive_eigenspace_multiplicity": 660, "negative_eigenspace_multiplicity": 550, "residual_positive_multiplicity": 110, "interpretation": "negative directions glue v2(q-1) and v2(q+1); residual positive directions carry v2(q-1)"},
+      "checks": {"connected_one_zero_invariant": true, "laplacian_row_sum_zero": true, "laplacian_symmetric": true, "shape_matches_pairing_law": true, "smith_tree_v2_matches_spectrum": true, "positive_spectrum_splits_residual_plus_glued": true},
+      "status": "PASS"
+    }
+  ],
+  "zmod9_control": {
+    "q": 9,
+    "field_model": "zmod",
+    "matrix_order": 729,
+    "degree": 80,
+    "adjacency_spectrum_multiplicities": {"k=q^2-1": 1, "q-1": 360, "-(q+1)": 288, "-1": 80},
+    "two_primary_shape": {"2^1": 6, "2^3": 60, "2^4": 216},
+    "expected_shape": {"2^3": 72, "2^4": 288},
+    "finite_even_factors": 282,
+    "tree_v2": 1050,
+    "spectral_pairing": {"positive_eigenspace_multiplicity": 360, "negative_eigenspace_multiplicity": 288, "residual_positive_multiplicity": 72, "interpretation": "negative directions glue v2(q-1) and v2(q+1); residual positive directions carry v2(q-1)"},
+    "checks": {"connected_one_zero_invariant": true, "laplacian_row_sum_zero": true, "laplacian_symmetric": true, "shape_matches_pairing_law": false, "smith_tree_v2_matches_spectrum": false, "positive_spectrum_splits_residual_plus_glued": true},
+    "status": "FAIL"
+  },
+  "checks": {"q7_gate_closed": true, "proper_gf9_matches_tower_law": true, "zmod9_control_deviates": true, "all_field_cases_pass": true, "five_field_certificate_when_extended": true, "general_law_still_labeled_conjecture": true}
+}
