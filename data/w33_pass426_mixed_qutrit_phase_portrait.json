@@ -14,12 +14,12 @@
       "seeded_hilbert_schmidt_interior": 48
     },
     "maximum_steps": 30,
-    "minimum_acceptance": 0.012345679012,
+    "minimum_acceptance": 0.012346,
     "mixed_attractor_count": 135,
     "seed_count": 141,
     "unresolved_count": 0
   },
-  "certificate_sha256": "f1254e0c0cfa9d62731b09207f28b51cc0c2ae70cce2200c03637eabcc304f35",
+  "certificate_sha256": "9e163fe6aab6b4385b6ae4531955c4b01828594afd2008d6ecc4fa6b11ffb746",
   "checks": {
     "all_iterates_remain_positive": true,
     "all_random_interior_seeds_converge": true,
@@ -40,43 +40,43 @@
   },
   "computational_axis": [
     {
-      "acceptance": 0.012345679012,
+      "acceptance": 0.012346,
       "matrix_error": 0.0,
       "output_r": 0.0,
       "r": 0.0
     },
     {
-      "acceptance": 0.012345679012,
+      "acceptance": 0.012346,
       "matrix_error": 0.0,
       "output_r": 1e-05,
       "r": 0.1
     },
     {
-      "acceptance": 0.012345679012,
+      "acceptance": 0.012346,
       "matrix_error": 0.0,
-      "output_r": 0.0009765625,
+      "output_r": 0.000977,
       "r": 0.25
     },
     {
-      "acceptance": 0.012345679012,
+      "acceptance": 0.012346,
       "matrix_error": 0.0,
       "output_r": 0.03125,
       "r": 0.5
     },
     {
-      "acceptance": 0.012345679012,
+      "acceptance": 0.012346,
       "matrix_error": 0.0,
-      "output_r": 0.2373046875,
+      "output_r": 0.237305,
       "r": 0.75
     },
     {
-      "acceptance": 0.012345679012,
+      "acceptance": 0.012346,
       "matrix_error": 0.0,
       "output_r": 0.59049,
       "r": 0.9
     },
     {
-      "acceptance": 0.012345679012,
+      "acceptance": 0.012346,
       "matrix_error": 0.0,
       "output_r": 1.0,
       "r": 1.0
@@ -89,8 +89,8 @@
     "samples": [
       {
         "classification": "maximally_mixed",
-        "distance": 1.8e-11,
-        "minimum_acceptance": 0.012345679012,
+        "distance": 0.0,
+        "minimum_acceptance": 0.012346,
         "positive": true,
         "radius": 0.8,
         "steps": 7
@@ -98,7 +98,7 @@
       {
         "classification": "maximally_mixed",
         "distance": 0.0,
-        "minimum_acceptance": 0.012345679012,
+        "minimum_acceptance": 0.012346,
         "positive": true,
         "radius": 0.805,
         "steps": 8
@@ -106,7 +106,7 @@
       {
         "classification": "maximally_mixed",
         "distance": 0.0,
-        "minimum_acceptance": 0.012345679012,
+        "minimum_acceptance": 0.012346,
         "positive": true,
         "radius": 0.81,
         "steps": 8
@@ -114,7 +114,7 @@
       {
         "classification": "maximally_mixed",
         "distance": 0.0,
-        "minimum_acceptance": 0.012345679012,
+        "minimum_acceptance": 0.012346,
         "positive": true,
         "radius": 0.815,
         "steps": 8
@@ -122,15 +122,15 @@
       {
         "classification": "maximally_mixed",
         "distance": 0.0,
-        "minimum_acceptance": 0.012345679012,
+        "minimum_acceptance": 0.012346,
         "positive": true,
         "radius": 0.82,
         "steps": 8
       },
       {
         "classification": "maximally_mixed",
-        "distance": 1e-12,
-        "minimum_acceptance": 0.012345679012,
+        "distance": 0.0,
+        "minimum_acceptance": 0.012346,
         "positive": true,
         "radius": 0.825,
         "steps": 8
@@ -138,7 +138,7 @@
       {
         "classification": "maximally_mixed",
         "distance": 0.0,
-        "minimum_acceptance": 0.012345679012,
+        "minimum_acceptance": 0.012346,
         "positive": true,
         "radius": 0.83,
         "steps": 9
@@ -146,7 +146,7 @@
       {
         "classification": "maximally_mixed",
         "distance": 0.0,
-        "minimum_acceptance": 0.012345679012,
+        "minimum_acceptance": 0.012346,
         "positive": true,
         "radius": 0.835,
         "steps": 9
@@ -154,15 +154,15 @@
       {
         "classification": "maximally_mixed",
         "distance": 0.0,
-        "minimum_acceptance": 0.012345679012,
+        "minimum_acceptance": 0.012346,
         "positive": true,
         "radius": 0.84,
         "steps": 9
       },
       {
         "classification": "maximally_mixed",
-        "distance": 6e-12,
-        "minimum_acceptance": 0.012345679012,
+        "distance": 0.0,
+        "minimum_acceptance": 0.012346,
         "positive": true,
         "radius": 0.845,
         "steps": 9
@@ -170,7 +170,7 @@
       {
         "classification": "maximally_mixed",
         "distance": 0.0,
-        "minimum_acceptance": 0.012345679012,
+        "minimum_acceptance": 0.012346,
         "positive": true,
         "radius": 0.85,
         "steps": 10
@@ -178,7 +178,7 @@
       {
         "classification": "maximally_mixed",
         "distance": 0.0,
-        "minimum_acceptance": 0.012345679012,
+        "minimum_acceptance": 0.012346,
         "positive": true,
         "radius": 0.855,
         "steps": 10
@@ -186,7 +186,7 @@
       {
         "classification": "maximally_mixed",
         "distance": 0.0,
-        "minimum_acceptance": 0.012345679012,
+        "minimum_acceptance": 0.012346,
         "positive": true,
         "radius": 0.86,
         "steps": 11
@@ -194,7 +194,7 @@
       {
         "classification": "maximally_mixed",
         "distance": 0.0,
-        "minimum_acceptance": 0.012345679012,
+        "minimum_acceptance": 0.012346,
         "positive": true,
         "radius": 0.865,
         "steps": 11
@@ -202,7 +202,7 @@
       {
         "classification": "maximally_mixed",
         "distance": 0.0,
-        "minimum_acceptance": 0.012345679012,
+        "minimum_acceptance": 0.012346,
         "positive": true,
         "radius": 0.87,
         "steps": 12
@@ -210,7 +210,7 @@
       {
         "classification": "maximally_mixed",
         "distance": 0.0,
-        "minimum_acceptance": 0.012345679012,
+        "minimum_acceptance": 0.012346,
         "positive": true,
         "radius": 0.875,
         "steps": 13
@@ -218,7 +218,7 @@
       {
         "classification": "maximally_mixed",
         "distance": 0.0,
-        "minimum_acceptance": 0.012345679012,
+        "minimum_acceptance": 0.012346,
         "positive": true,
         "radius": 0.88,
         "steps": 13
@@ -226,7 +226,7 @@
       {
         "classification": "maximally_mixed",
         "distance": 0.0,
-        "minimum_acceptance": 0.012345679012,
+        "minimum_acceptance": 0.012346,
         "positive": true,
         "radius": 0.885,
         "steps": 14
@@ -234,7 +234,7 @@
       {
         "classification": "maximally_mixed",
         "distance": 0.0,
-        "minimum_acceptance": 0.012345679012,
+        "minimum_acceptance": 0.012346,
         "positive": true,
         "radius": 0.89,
         "steps": 14
@@ -242,49 +242,49 @@
       {
         "classification": "maximally_mixed",
         "distance": 0.0,
-        "minimum_acceptance": 0.012345679012,
+        "minimum_acceptance": 0.012346,
         "positive": true,
         "radius": 0.895,
         "steps": 15
       },
       {
         "classification": "boundary_purifying",
-        "distance": 0.792571486397,
-        "minimum_acceptance": 0.0235822632,
+        "distance": 0.792571,
+        "minimum_acceptance": 0.023582,
         "period_residuals": {
-          "1": 1.185223916753,
-          "2": 1.185772979528,
-          "3": 1.005918021595,
-          "4": 0.746585971513,
-          "5": 0.909168768207,
-          "6": 0.859943934394
+          "1": 1.185224,
+          "2": 1.185773,
+          "3": 1.005918,
+          "4": 0.746586,
+          "5": 0.909169,
+          "6": 0.859944
         },
         "positive": true,
-        "purity": 0.961502894384,
+        "purity": 0.961503,
         "radius": 0.9,
         "steps": 30
       },
       {
         "classification": "boundary_purifying",
-        "distance": 0.815362633887,
-        "minimum_acceptance": 0.025707728563,
+        "distance": 0.815363,
+        "minimum_acceptance": 0.025708,
         "period_residuals": {
-          "1": 0.93232163626,
-          "2": 1.308562965504,
-          "3": 1.095390074622,
-          "4": 1.282068711526,
-          "5": 0.979446350517,
-          "6": 1.189079193521
+          "1": 0.932322,
+          "2": 1.308563,
+          "3": 1.09539,
+          "4": 1.282069,
+          "5": 0.979446,
+          "6": 1.189079
         },
         "positive": true,
-        "purity": 0.998149558072,
+        "purity": 0.99815,
         "radius": 0.905,
         "steps": 30
       },
       {
         "classification": "maximally_mixed",
         "distance": 0.0,
-        "minimum_acceptance": 0.012345679012,
+        "minimum_acceptance": 0.012346,
         "positive": true,
         "radius": 0.91,
         "steps": 22
@@ -292,7 +292,7 @@
       {
         "classification": "maximally_mixed",
         "distance": 0.0,
-        "minimum_acceptance": 0.012345679012,
+        "minimum_acceptance": 0.012346,
         "positive": true,
         "radius": 0.915,
         "steps": 23
@@ -300,7 +300,7 @@
       {
         "classification": "maximally_mixed",
         "distance": 0.0,
-        "minimum_acceptance": 0.012345679012,
+        "minimum_acceptance": 0.012346,
         "positive": true,
         "radius": 0.92,
         "steps": 22
@@ -308,7 +308,7 @@
       {
         "classification": "maximally_mixed",
         "distance": 0.0,
-        "minimum_acceptance": 0.012345679012,
+        "minimum_acceptance": 0.012346,
         "positive": true,
         "radius": 0.925,
         "steps": 18
@@ -316,7 +316,7 @@
       {
         "classification": "maximally_mixed",
         "distance": 0.0,
-        "minimum_acceptance": 0.012345679012,
+        "minimum_acceptance": 0.012346,
         "positive": true,
         "radius": 0.93,
         "steps": 20
@@ -324,7 +324,7 @@
       {
         "classification": "maximally_mixed",
         "distance": 0.0,
-        "minimum_acceptance": 0.012345679012,
+        "minimum_acceptance": 0.012346,
         "positive": true,
         "radius": 0.935,
         "steps": 18
@@ -332,144 +332,144 @@
       {
         "classification": "maximally_mixed",
         "distance": 0.0,
-        "minimum_acceptance": 0.012345679012,
+        "minimum_acceptance": 0.012346,
         "positive": true,
         "radius": 0.94,
         "steps": 28
       },
       {
         "classification": "boundary_purifying",
-        "distance": 0.805448580271,
-        "minimum_acceptance": 0.028553475663,
+        "distance": 0.805449,
+        "minimum_acceptance": 0.028553,
         "period_residuals": {
-          "1": 0.890481449606,
-          "2": 1.245356122586,
-          "3": 1.05700518301,
-          "4": 0.88126798534,
-          "5": 0.939370064844,
-          "6": 1.060568602619
+          "1": 0.890481,
+          "2": 1.245356,
+          "3": 1.057005,
+          "4": 0.881268,
+          "5": 0.93937,
+          "6": 1.060569
         },
         "positive": true,
-        "purity": 0.982080748794,
+        "purity": 0.982081,
         "radius": 0.945,
         "steps": 30
       },
       {
         "classification": "boundary_purifying",
-        "distance": 0.799018903583,
-        "minimum_acceptance": 0.022366333189,
+        "distance": 0.799019,
+        "minimum_acceptance": 0.022366,
         "period_residuals": {
-          "1": 0.859738317073,
-          "2": 1.048731140429,
-          "3": 1.241652639212,
-          "4": 1.118459247018,
-          "5": 1.375080881622,
-          "6": 1.129944257902
+          "1": 0.859738,
+          "2": 1.048731,
+          "3": 1.241653,
+          "4": 1.118459,
+          "5": 1.375081,
+          "6": 1.129944
         },
         "positive": true,
-        "purity": 0.971764541617,
+        "purity": 0.971765,
         "radius": 0.95,
         "steps": 30
       },
       {
         "classification": "boundary_purifying",
-        "distance": 0.816496402529,
-        "minimum_acceptance": 0.027270999322,
+        "distance": 0.816496,
+        "minimum_acceptance": 0.027271,
         "period_residuals": {
-          "1": 1.196963567424,
-          "2": 1.144691344269,
-          "3": 0.955963575877,
-          "4": 1.404989063579,
-          "5": 1.023053110098,
-          "6": 1.321875400709
+          "1": 1.196964,
+          "2": 1.144691,
+          "3": 0.955964,
+          "4": 1.404989,
+          "5": 1.023053,
+          "6": 1.321875
         },
         "positive": true,
-        "purity": 0.999999708677,
+        "purity": 1.0,
         "radius": 0.955,
         "steps": 30
       },
       {
         "classification": "boundary_purifying",
-        "distance": 0.814094088859,
-        "minimum_acceptance": 0.01599342761,
+        "distance": 0.814094,
+        "minimum_acceptance": 0.015993,
         "period_residuals": {
-          "1": 0.955384205187,
-          "2": 1.028839594655,
-          "3": 1.094967290863,
-          "4": 1.041478540247,
-          "5": 1.378087887825,
-          "6": 0.713287467834
+          "1": 0.955384,
+          "2": 1.02884,
+          "3": 1.094967,
+          "4": 1.041479,
+          "5": 1.378088,
+          "6": 0.713287
         },
         "positive": true,
-        "purity": 0.996082518848,
+        "purity": 0.996083,
         "radius": 0.96,
         "steps": 30
       },
       {
         "classification": "boundary_purifying",
-        "distance": 0.816496579611,
-        "minimum_acceptance": 0.026803829344,
+        "distance": 0.816497,
+        "minimum_acceptance": 0.026804,
         "period_residuals": {
-          "1": 1.309493244356,
-          "2": 0.931376468186,
-          "3": 0.848833390715,
-          "4": 0.140461287426,
-          "5": 1.334021423771,
-          "6": 0.901635852612
+          "1": 1.309493,
+          "2": 0.931376,
+          "3": 0.848833,
+          "4": 0.140461,
+          "5": 1.334021,
+          "6": 0.901636
         },
         "positive": true,
-        "purity": 0.99999999785,
+        "purity": 1.0,
         "radius": 0.965,
         "steps": 30
       },
       {
         "classification": "boundary_purifying",
-        "distance": 0.816496571433,
-        "minimum_acceptance": 0.032700342337,
+        "distance": 0.816497,
+        "minimum_acceptance": 0.0327,
         "period_residuals": {
-          "1": 1.177289302128,
-          "2": 0.995359806586,
-          "3": 1.239958917766,
-          "4": 0.303164144782,
-          "5": 1.284163870677,
-          "6": 0.914880502734
+          "1": 1.177289,
+          "2": 0.99536,
+          "3": 1.239959,
+          "4": 0.303164,
+          "5": 1.284164,
+          "6": 0.914881
         },
         "positive": true,
-        "purity": 0.999999984495,
+        "purity": 1.0,
         "radius": 0.97,
         "steps": 30
       },
       {
         "classification": "boundary_purifying",
-        "distance": 0.816495255759,
-        "minimum_acceptance": 0.032022926089,
+        "distance": 0.816495,
+        "minimum_acceptance": 0.032023,
         "period_residuals": {
-          "1": 1.204032596869,
-          "2": 1.146106135725,
-          "3": 0.683248701,
-          "4": 1.177902441938,
-          "5": 1.006102754978,
-          "6": 1.176300695766
+          "1": 1.204033,
+          "2": 1.146106,
+          "3": 0.683249,
+          "4": 1.177902,
+          "5": 1.006103,
+          "6": 1.176301
         },
         "positive": true,
-        "purity": 0.99999783601,
+        "purity": 0.999998,
         "radius": 0.975,
         "steps": 30
       },
       {
         "classification": "boundary_purifying",
-        "distance": 0.816496423307,
-        "minimum_acceptance": 0.021632856221,
+        "distance": 0.816496,
+        "minimum_acceptance": 0.021633,
         "period_residuals": {
-          "1": 0.577828700228,
-          "2": 0.569068569457,
-          "3": 0.957758949854,
-          "4": 1.352689524334,
-          "5": 1.376409274857,
-          "6": 0.631774058095
+          "1": 0.577829,
+          "2": 0.569069,
+          "3": 0.957759,
+          "4": 1.35269,
+          "5": 1.376409,
+          "6": 0.631774
         },
         "positive": true,
-        "purity": 0.999999742606,
+        "purity": 1.0,
         "radius": 0.98,
         "steps": 30
       }
@@ -479,225 +479,225 @@
     {
       "direction": 0,
       "halving_orders": [
-        2.994061307896,
-        2.996722529047
+        2.994061,
+        2.996723
       ],
       "response_norms": [
-        0.000210333023,
-        2.6400077e-05,
-        3.307515e-06
+        0.00021,
+        2.6e-05,
+        3e-06
       ],
       "second_difference_quotients": [
-        0.005326432606,
-        0.001331624101,
-        0.000332906275
+        0.005326,
+        0.001332,
+        0.000333
       ]
     },
     {
       "direction": 1,
       "halving_orders": [
-        3.015956272743,
-        3.008014474604
+        3.015956,
+        3.008014
       ],
       "response_norms": [
-        0.000151993143,
-        1.8790169e-05,
-        2.335759e-06
+        0.000152,
+        1.9e-05,
+        2e-06
       ],
       "second_difference_quotients": [
-        0.009733391543,
-        0.002433377386,
-        0.000608344807
+        0.009733,
+        0.002433,
+        0.000608
       ]
     },
     {
       "direction": 2,
       "halving_orders": [
-        2.983978556492,
-        2.991930040095
+        2.983979,
+        2.99193
       ],
       "response_norms": [
-        0.00017109892,
-        2.16262e-05,
-        2.718439e-06
+        0.000171,
+        2.2e-05,
+        3e-06
       ],
       "second_difference_quotients": [
-        0.013128358803,
-        0.00328211906,
-        0.000820530224
+        0.013128,
+        0.003282,
+        0.000821
       ]
     },
     {
       "direction": 3,
       "halving_orders": [
-        3.008599679183,
-        3.004189406042
+        3.0086,
+        3.004189
       ],
       "response_norms": [
-        0.000191382394,
-        2.3780623e-05,
-        2.963958e-06
+        0.000191,
+        2.4e-05,
+        3e-06
       ],
       "second_difference_quotients": [
-        0.011425257341,
-        0.00285635225,
-        0.000714088655
+        0.011425,
+        0.002856,
+        0.000714
       ]
     },
     {
       "direction": 4,
       "halving_orders": [
-        2.989588705785,
-        2.994419302829
+        2.989589,
+        2.994419
       ],
       "response_norms": [
-        0.000127449724,
-        1.60466e-05,
-        2.013599e-06
+        0.000127,
+        1.6e-05,
+        2e-06
       ],
       "second_difference_quotients": [
-        0.011067222092,
-        0.002766831151,
-        0.000691708186
+        0.011067,
+        0.002767,
+        0.000692
       ]
     },
     {
       "direction": 5,
       "halving_orders": [
-        3.002036321885,
-        3.00072780053
+        3.002036,
+        3.000728
       ],
       "response_norms": [
-        0.000177642432,
-        2.2173984e-05,
-        2.77035e-06
+        0.000178,
+        2.2e-05,
+        3e-06
       ],
       "second_difference_quotients": [
-        0.009405324634,
-        0.002351354156,
-        0.000587838898
+        0.009405,
+        0.002351,
+        0.000588
       ]
     },
     {
       "direction": 6,
       "halving_orders": [
-        2.989852385722,
-        2.994657369463
+        2.989852,
+        2.994657
       ],
       "response_norms": [
-        0.000198473165,
-        2.4984263e-05,
-        3.13462e-06
+        0.000198,
+        2.5e-05,
+        3e-06
       ],
       "second_difference_quotients": [
-        0.007293050717,
-        0.001823286678,
-        0.000455822044
+        0.007293,
+        0.001823,
+        0.000456
       ]
     },
     {
       "direction": 7,
       "halving_orders": [
-        2.993525158975,
-        2.9966640526
+        2.993525,
+        2.996664
       ],
       "response_norms": [
-        0.000197566174,
-        2.4806856e-05,
-        3.108035e-06
+        0.000198,
+        2.5e-05,
+        3e-06
       ],
       "second_difference_quotients": [
-        0.01243322412,
-        0.00310833982,
-        0.000777085484
+        0.012433,
+        0.003108,
+        0.000777
       ]
     },
     {
       "direction": 8,
       "halving_orders": [
-        3.005392105887,
-        3.00258834093
+        3.005392,
+        3.002588
       ],
       "response_norms": [
-        0.000234218959,
-        2.9168149e-05,
-        3.639483e-06
+        0.000234,
+        2.9e-05,
+        4e-06
       ],
       "second_difference_quotients": [
-        0.006200075288,
-        0.001550041319,
-        0.000387510681
+        0.0062,
+        0.00155,
+        0.000388
       ]
     },
     {
       "direction": 9,
       "halving_orders": [
-        3.005687516499,
-        3.002609217029
+        3.005688,
+        3.002609
       ],
       "response_norms": [
-        0.000154616048,
-        1.9250963e-05,
-        2.402022e-06
+        0.000155,
+        1.9e-05,
+        2e-06
       ],
       "second_difference_quotients": [
-        0.007955499548,
-        0.001988892255,
-        0.000497223335
+        0.007955,
+        0.001989,
+        0.000497
       ]
     },
     {
       "direction": 10,
       "halving_orders": [
-        3.003553536291,
-        3.000927518336
+        3.003554,
+        3.000928
       ],
       "response_norms": [
-        0.000144671841,
-        1.8039492e-05,
-        2.253487e-06
+        0.000145,
+        1.8e-05,
+        2e-06
       ],
       "second_difference_quotients": [
-        0.012344311735,
-        0.00308611832,
-        0.000771530211
+        0.012344,
+        0.003086,
+        0.000772
       ]
     },
     {
       "direction": 11,
       "halving_orders": [
-        2.995767788117,
-        2.997798659871
+        2.995768,
+        2.997799
       ],
       "response_norms": [
-        0.000225963433,
-        2.832841e-05,
-        3.546458e-06
+        0.000226,
+        2.8e-05,
+        4e-06
       ],
       "second_difference_quotients": [
-        0.007352873787,
-        0.00183824342,
-        0.000459561245
+        0.007353,
+        0.001838,
+        0.00046
       ]
     }
   ],
   "maximally_mixed": {
-    "acceptance_probability": 0.012345679012,
+    "acceptance_probability": 0.012346,
     "jacobian_eigenvalues": [
       [
-        5e-10,
+        0.0,
         0.0
       ],
       [
-        -5e-10,
+        -0.0,
         0.0
       ],
       [
-        -5e-12,
+        -0.0,
         0.0
       ],
       [
-        2e-12,
+        0.0,
         0.0
       ],
       [
@@ -717,7 +717,7 @@
         -0.0
       ]
     ],
-    "jacobian_spectral_radius": 5e-10
+    "jacobian_spectral_radius": 0.0
   },
   "schema": "w33.pass426.mixed_qutrit_phase_portrait.v1",
   "selected_basin_records": [
@@ -725,7 +725,7 @@
       "classification": "maximally_mixed",
       "distance": 0.0,
       "family": "depolarized_pure_fixed_point",
-      "minimum_acceptance": 0.012345679012,
+      "minimum_acceptance": 0.012346,
       "positive": true,
       "radius": 0.1,
       "seed_index": 0,
@@ -735,7 +735,7 @@
       "classification": "maximally_mixed",
       "distance": 0.0,
       "family": "depolarized_pure_fixed_point",
-      "minimum_acceptance": 0.012345679012,
+      "minimum_acceptance": 0.012346,
       "positive": true,
       "radius": 0.5,
       "seed_index": 0,
@@ -745,7 +745,7 @@
       "classification": "maximally_mixed",
       "distance": 0.0,
       "family": "depolarized_pure_fixed_point",
-      "minimum_acceptance": 0.012345679012,
+      "minimum_acceptance": 0.012346,
       "positive": true,
       "radius": 0.9,
       "seed_index": 0,
@@ -755,7 +755,7 @@
       "classification": "maximally_mixed",
       "distance": 0.0,
       "family": "depolarized_pure_fixed_point",
-      "minimum_acceptance": 0.012345679012,
+      "minimum_acceptance": 0.012346,
       "positive": true,
       "radius": 0.1,
       "seed_index": 1,
@@ -765,7 +765,7 @@
       "classification": "maximally_mixed",
       "distance": 0.0,
       "family": "depolarized_pure_fixed_point",
-      "minimum_acceptance": 0.012345679012,
+      "minimum_acceptance": 0.012346,
       "positive": true,
       "radius": 0.5,
       "seed_index": 1,
@@ -775,7 +775,7 @@
       "classification": "maximally_mixed",
       "distance": 0.0,
       "family": "depolarized_pure_fixed_point",
-      "minimum_acceptance": 0.012345679012,
+      "minimum_acceptance": 0.012346,
       "positive": true,
       "radius": 0.9,
       "seed_index": 1,
@@ -785,7 +785,7 @@
       "classification": "maximally_mixed",
       "distance": 0.0,
       "family": "depolarized_pure_fixed_point",
-      "minimum_acceptance": 0.012345679012,
+      "minimum_acceptance": 0.012346,
       "positive": true,
       "radius": 0.1,
       "seed_index": 30,
@@ -795,7 +795,7 @@
       "classification": "maximally_mixed",
       "distance": 0.0,
       "family": "depolarized_pure_fixed_point",
-      "minimum_acceptance": 0.012345679012,
+      "minimum_acceptance": 0.012346,
       "positive": true,
       "radius": 0.5,
       "seed_index": 30,
@@ -805,7 +805,7 @@
       "classification": "maximally_mixed",
       "distance": 0.0,
       "family": "depolarized_pure_fixed_point",
-      "minimum_acceptance": 0.012345679012,
+      "minimum_acceptance": 0.012346,
       "positive": true,
       "radius": 0.9,
       "seed_index": 30,
@@ -815,8 +815,8 @@
       "classification": "maximally_mixed",
       "distance": 0.0,
       "family": "seeded_hilbert_schmidt_interior",
-      "initial_purity": 0.524399789673,
-      "minimum_acceptance": 0.012345679012,
+      "initial_purity": 0.5244,
+      "minimum_acceptance": 0.012346,
       "positive": true,
       "seed_index": 0,
       "steps": 5
@@ -825,8 +825,8 @@
       "classification": "maximally_mixed",
       "distance": 0.0,
       "family": "seeded_hilbert_schmidt_interior",
-      "initial_purity": 0.506180721638,
-      "minimum_acceptance": 0.012345679012,
+      "initial_purity": 0.506181,
+      "minimum_acceptance": 0.012346,
       "positive": true,
       "seed_index": 1,
       "steps": 4
@@ -835,8 +835,8 @@
       "classification": "maximally_mixed",
       "distance": 0.0,
       "family": "seeded_hilbert_schmidt_interior",
-      "initial_purity": 0.471105786603,
-      "minimum_acceptance": 0.012345679012,
+      "initial_purity": 0.471106,
+      "minimum_acceptance": 0.012346,
       "positive": true,
       "seed_index": 2,
       "steps": 4
@@ -845,8 +845,8 @@
       "classification": "maximally_mixed",
       "distance": 0.0,
       "family": "seeded_hilbert_schmidt_interior",
-      "initial_purity": 0.492907245995,
-      "minimum_acceptance": 0.012345679012,
+      "initial_purity": 0.492907,
+      "minimum_acceptance": 0.012346,
       "positive": true,
       "seed_index": 3,
       "steps": 4
@@ -855,8 +855,8 @@
       "classification": "maximally_mixed",
       "distance": 0.0,
       "family": "seeded_hilbert_schmidt_interior",
-      "initial_purity": 0.419812248071,
-      "minimum_acceptance": 0.012345679012,
+      "initial_purity": 0.419812,
+      "minimum_acceptance": 0.012346,
       "positive": true,
       "seed_index": 4,
       "steps": 4
@@ -865,8 +865,8 @@
       "classification": "maximally_mixed",
       "distance": 0.0,
       "family": "seeded_hilbert_schmidt_interior",
-      "initial_purity": 0.437987130313,
-      "minimum_acceptance": 0.012345679012,
+      "initial_purity": 0.437987,
+      "minimum_acceptance": 0.012346,
       "positive": true,
       "seed_index": 5,
       "steps": 4
@@ -875,8 +875,8 @@
       "classification": "maximally_mixed",
       "distance": 0.0,
       "family": "seeded_hilbert_schmidt_interior",
-      "initial_purity": 0.425886094387,
-      "minimum_acceptance": 0.012345679012,
+      "initial_purity": 0.425886,
+      "minimum_acceptance": 0.012346,
       "positive": true,
       "seed_index": 42,
       "steps": 4
@@ -885,8 +885,8 @@
       "classification": "maximally_mixed",
       "distance": 0.0,
       "family": "seeded_hilbert_schmidt_interior",
-      "initial_purity": 0.390130029551,
-      "minimum_acceptance": 0.012345679012,
+      "initial_purity": 0.39013,
+      "minimum_acceptance": 0.012346,
       "positive": true,
       "seed_index": 43,
       "steps": 4
@@ -895,8 +895,8 @@
       "classification": "maximally_mixed",
       "distance": 0.0,
       "family": "seeded_hilbert_schmidt_interior",
-      "initial_purity": 0.55394189372,
-      "minimum_acceptance": 0.012345679012,
+      "initial_purity": 0.553942,
+      "minimum_acceptance": 0.012346,
       "positive": true,
       "seed_index": 44,
       "steps": 5
@@ -905,8 +905,8 @@
       "classification": "maximally_mixed",
       "distance": 0.0,
       "family": "seeded_hilbert_schmidt_interior",
-      "initial_purity": 0.446740919622,
-      "minimum_acceptance": 0.012345679012,
+      "initial_purity": 0.446741,
+      "minimum_acceptance": 0.012346,
       "positive": true,
       "seed_index": 45,
       "steps": 4
@@ -915,8 +915,8 @@
       "classification": "maximally_mixed",
       "distance": 0.0,
       "family": "seeded_hilbert_schmidt_interior",
-      "initial_purity": 0.521180555533,
-      "minimum_acceptance": 0.012345679012,
+      "initial_purity": 0.521181,
+      "minimum_acceptance": 0.012346,
       "positive": true,
       "seed_index": 46,
       "steps": 4
@@ -925,8 +925,8 @@
       "classification": "maximally_mixed",
       "distance": 0.0,
       "family": "seeded_hilbert_schmidt_interior",
-      "initial_purity": 0.479825112936,
-      "minimum_acceptance": 0.012345679012,
+      "initial_purity": 0.479825,
+      "minimum_acceptance": 0.012346,
       "positive": true,
       "seed_index": 47,
       "steps": 4
