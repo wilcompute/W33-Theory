@@ -1,8 +1,7 @@
 name: Pass 415-419 Bootstrap
 on:
-  push:
-    branches: ['agent/pass415-419-five-frontiers']
-    paths: ['.github/workflows/pass415-419-bootstrap.yml']
+  pull_request:
+    branches: [master]
   workflow_dispatch:
 permissions:
   contents: write
@@ -12,6 +11,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   materialize:
+    if: github.event_name != 'pull_request' || github.head_ref == 'agent/pass415-419-five-frontiers'
     runs-on: ubuntu-24.04
     env:
       OPENBLAS_NUM_THREADS: '1'
