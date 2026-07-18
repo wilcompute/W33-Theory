@@ -127,6 +127,7 @@ def build_payload() -> tuple[dict, dict]:
     distance_basis, distance = distance_matrices(a)
     projectors = spectral_projectors(a)
 
+    # Verify every explicit permutation and form an exact integer twirl.
     automorphism_checks = []
     for record in autos:
         p = np.array(record["permutation"], dtype=int)
@@ -163,17 +164,17 @@ def build_payload() -> tuple[dict, dict]:
             inverse[image] = i
         inverse_record = perm_to_record[tuple(inverse)]
         word, _ = rng.choice(clifford_items)
-        schedule_entries.append({
-            "epoch": epoch,
-            "spatial_randomizer": {"matrix": list(record["matrix"]), "shift": list(record["shift"]), "central": record["central"]},
-            "spatial_inverse": {"matrix": list(inverse_record["matrix"]), "shift": list(inverse_record["shift"]), "central": inverse_record["central"]},
-            "qutrit_clifford_word": word or "I",
-            "permutation_sha256": hashlib.sha256(bytes(permutation)).hexdigest(),
-        })
+        schedule_entries.append([
+            epoch,
+            [*record["matrix"], *record["shift"], record["central"]],
+            [*inverse_record["matrix"], *inverse_record["shift"], inverse_record["central"]],
+            word or "I",
+        ])
 
     schedule = {
         "schema": "w33.pass413.twirl_schedule.v1",
         "seed": 413,
+        "record_layout": ["epoch", "spatial_randomizer_[m00,m01,m10,m11,ax,ay,c]", "spatial_inverse_same_layout", "qutrit_clifford_word"],
         "epochs": schedule_entries,
         "execution_rule": "conjugate each calibration epoch by the listed spatial automorphism and Clifford, then compile the exact inverse before the terminal measurement",
     }

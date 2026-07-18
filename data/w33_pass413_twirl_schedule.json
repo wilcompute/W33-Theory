@@ -1,1992 +1,1422 @@
 {
-  "certificate_sha256": "4f5a80ae7eb4ab8e01d1f6894f0e278166313b4b941081f0cc12a3bed548f58f",
+  "certificate_sha256": "0518529ea5c7e84b669cda4cef4469d021c58e66103eb4054ab9ca6e41e7e99a",
   "epochs": [
-    {
-      "epoch": 0,
-      "permutation_sha256": "06e23d4bc6a005ffad43c7016eab2118b036a82ccd32282714b951e7a6cbba44",
-      "qutrit_clifford_word": "PFPPFF",
-      "spatial_inverse": {
-        "central": 2,
-        "matrix": [
-          2,
-          0,
-          1,
-          2
-        ],
-        "shift": [
-          1,
-          0
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 1,
-        "matrix": [
-          2,
-          0,
-          2,
-          2
-        ],
-        "shift": [
-          1,
-          1
-        ]
-      }
-    },
-    {
-      "epoch": 1,
-      "permutation_sha256": "4b6e16bf635f562913eec9058a99ac8f67c1c6afa0803b0b4d8fd26f9266d73e",
-      "qutrit_clifford_word": "XPFPPFF",
-      "spatial_inverse": {
-        "central": 0,
-        "matrix": [
-          1,
-          0,
-          0,
-          2
-        ],
-        "shift": [
-          1,
-          1
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 0,
-        "matrix": [
-          1,
-          0,
-          0,
-          2
-        ],
-        "shift": [
-          2,
-          1
-        ]
-      }
-    },
-    {
-      "epoch": 2,
-      "permutation_sha256": "ce0d17e029097e2192968e8d6d926f14443397caf51f594fbc2c3935037120bb",
-      "qutrit_clifford_word": "XPXFP",
-      "spatial_inverse": {
-        "central": 0,
-        "matrix": [
-          0,
-          1,
-          2,
-          0
-        ],
-        "shift": [
-          2,
-          0
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 0,
-        "matrix": [
-          0,
-          2,
-          1,
-          0
-        ],
-        "shift": [
-          0,
-          1
-        ]
-      }
-    },
-    {
-      "epoch": 3,
-      "permutation_sha256": "bef2570ad2865c69c96f39fadf37674afb0847644f72f2b84085464f35e7c2d4",
-      "qutrit_clifford_word": "XPFPF",
-      "spatial_inverse": {
-        "central": 0,
-        "matrix": [
-          1,
-          1,
-          2,
-          1
-        ],
-        "shift": [
-          1,
-          2
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 0,
-        "matrix": [
-          2,
-          1,
-          2,
-          2
-        ],
-        "shift": [
-          2,
-          0
-        ]
-      }
-    },
-    {
-      "epoch": 4,
-      "permutation_sha256": "eb0308ef54ce79073e125e6cdce221e8edfd580b8aea3a9002227e8282593c5e",
-      "qutrit_clifford_word": "FFPFZ",
-      "spatial_inverse": {
-        "central": 1,
-        "matrix": [
-          0,
-          2,
-          1,
-          1
-        ],
-        "shift": [
-          1,
-          2
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 2,
-        "matrix": [
-          1,
-          1,
-          2,
-          0
-        ],
-        "shift": [
-          0,
-          1
-        ]
-      }
-    },
-    {
-      "epoch": 5,
-      "permutation_sha256": "9b3e081c93e1889e688daa36f058b6e35db612b2d841328af3bda41b767ff126",
-      "qutrit_clifford_word": "PPFP",
-      "spatial_inverse": {
-        "central": 2,
-        "matrix": [
-          1,
-          0,
-          0,
-          2
-        ],
-        "shift": [
-          2,
-          0
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 2,
-        "matrix": [
-          1,
-          0,
-          0,
-          2
-        ],
-        "shift": [
-          1,
-          0
-        ]
-      }
-    },
-    {
-      "epoch": 6,
-      "permutation_sha256": "39881a9f6d70accbaf3ec8df0fcac3059cf883f79a0853360c3654f77dd6463a",
-      "qutrit_clifford_word": "PFPF",
-      "spatial_inverse": {
-        "central": 1,
-        "matrix": [
-          2,
-          2,
-          0,
-          1
-        ],
-        "shift": [
-          0,
-          1
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 1,
-        "matrix": [
-          2,
-          2,
-          0,
-          1
-        ],
-        "shift": [
-          1,
-          2
-        ]
-      }
-    },
-    {
-      "epoch": 7,
-      "permutation_sha256": "1f6bfe0ce03d99262bf58cefe80b8e918bb974ff1ee4f6549e268611368f54b1",
-      "qutrit_clifford_word": "FPXP",
-      "spatial_inverse": {
-        "central": 0,
-        "matrix": [
-          2,
-          2,
-          2,
-          0
-        ],
-        "shift": [
-          2,
-          2
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 0,
-        "matrix": [
-          0,
-          2,
-          2,
-          1
-        ],
-        "shift": [
-          2,
-          0
-        ]
-      }
-    },
-    {
-      "epoch": 8,
-      "permutation_sha256": "9a7afe6c9745e02311aeb16b8c1ce677175731467ca1aa7b9c3cc2821bbc2dea",
-      "qutrit_clifford_word": "XXPP",
-      "spatial_inverse": {
-        "central": 0,
-        "matrix": [
-          1,
-          1,
-          0,
-          2
-        ],
-        "shift": [
-          2,
-          1
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 0,
-        "matrix": [
-          1,
-          1,
-          0,
-          2
-        ],
-        "shift": [
-          0,
-          1
-        ]
-      }
-    },
-    {
-      "epoch": 9,
-      "permutation_sha256": "fd8b7b2e0196a1a69db34b47380cdc9872aeecf7cc228abbd1a039cbcf7ccbae",
-      "qutrit_clifford_word": "XXP",
-      "spatial_inverse": {
-        "central": 1,
-        "matrix": [
-          2,
-          0,
-          2,
-          2
-        ],
-        "shift": [
-          2,
-          2
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 2,
-        "matrix": [
-          2,
-          0,
-          1,
-          2
-        ],
-        "shift": [
-          2,
-          0
-        ]
-      }
-    },
-    {
-      "epoch": 10,
-      "permutation_sha256": "19d62d8512af7b396cfe3ccf197cfc20503fb9042f903f75effa147863073bb4",
-      "qutrit_clifford_word": "FPFZFF",
-      "spatial_inverse": {
-        "central": 1,
-        "matrix": [
-          2,
-          2,
-          2,
-          1
-        ],
-        "shift": [
-          0,
-          0
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 2,
-        "matrix": [
-          1,
-          1,
-          1,
-          2
-        ],
-        "shift": [
-          0,
-          0
-        ]
-      }
-    },
-    {
-      "epoch": 11,
-      "permutation_sha256": "5f1e12112c2c9b1e6760adf9f4526e66a66507501dbf16e4f343706f111d9125",
-      "qutrit_clifford_word": "ZFPPX",
-      "spatial_inverse": {
-        "central": 0,
-        "matrix": [
-          2,
-          1,
-          2,
-          0
-        ],
-        "shift": [
-          0,
-          0
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 0,
-        "matrix": [
-          0,
-          2,
-          1,
-          2
-        ],
-        "shift": [
-          0,
-          0
-        ]
-      }
-    },
-    {
-      "epoch": 12,
-      "permutation_sha256": "81ca533afc8e2a06d47883d9e51ab801a71c96075a7ab52afb9c4f68c60c5af0",
-      "qutrit_clifford_word": "XXPPFP",
-      "spatial_inverse": {
-        "central": 0,
-        "matrix": [
-          0,
-          2,
-          1,
-          2
-        ],
-        "shift": [
-          2,
-          1
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 0,
-        "matrix": [
-          2,
-          1,
-          2,
-          0
-        ],
-        "shift": [
-          1,
-          2
-        ]
-      }
-    },
-    {
-      "epoch": 13,
-      "permutation_sha256": "10317f8e8dac0fea964a192c098c9934558fc2baa59ab07e9aff733a2b14fe39",
-      "qutrit_clifford_word": "XFPFFF",
-      "spatial_inverse": {
-        "central": 2,
-        "matrix": [
-          2,
-          0,
-          1,
-          2
-        ],
-        "shift": [
-          0,
-          2
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 1,
-        "matrix": [
-          2,
-          0,
-          2,
-          2
-        ],
-        "shift": [
-          0,
-          2
-        ]
-      }
-    },
-    {
-      "epoch": 14,
-      "permutation_sha256": "27f8fd5248a17257676f8bdff9c09d73751707b3f907b4258a58ebae00f37862",
-      "qutrit_clifford_word": "ZPFPF",
-      "spatial_inverse": {
-        "central": 2,
-        "matrix": [
-          1,
-          1,
-          0,
-          2
-        ],
-        "shift": [
-          0,
-          0
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 2,
-        "matrix": [
-          1,
-          1,
-          0,
-          2
-        ],
-        "shift": [
-          0,
-          0
-        ]
-      }
-    },
-    {
-      "epoch": 15,
-      "permutation_sha256": "b0a8035d4be97fa4c73181f78d95b6412f055df0a366568256db3929dbb14a5e",
-      "qutrit_clifford_word": "XZF",
-      "spatial_inverse": {
-        "central": 0,
-        "matrix": [
-          0,
-          2,
-          1,
-          1
-        ],
-        "shift": [
-          2,
-          0
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 0,
-        "matrix": [
-          1,
-          1,
-          2,
-          0
-        ],
-        "shift": [
-          1,
-          2
-        ]
-      }
-    },
-    {
-      "epoch": 16,
-      "permutation_sha256": "d77c964b5c8e3a725d5bdcc35a7bc497d86c5837dffb3fb7926778c3fc164ec4",
-      "qutrit_clifford_word": "XPFZP",
-      "spatial_inverse": {
-        "central": 1,
-        "matrix": [
-          0,
-          1,
-          2,
-          1
-        ],
-        "shift": [
-          1,
-          1
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 2,
-        "matrix": [
-          1,
-          2,
-          1,
-          0
-        ],
-        "shift": [
-          0,
-          2
-        ]
-      }
-    },
-    {
-      "epoch": 17,
-      "permutation_sha256": "950ebd460c93a627174fc55f79dbe9831a5c632191ed101c75fb10740d83a4fc",
-      "qutrit_clifford_word": "XZFF",
-      "spatial_inverse": {
-        "central": 2,
-        "matrix": [
-          2,
-          1,
-          0,
-          2
-        ],
-        "shift": [
-          0,
-          1
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 1,
-        "matrix": [
-          2,
-          2,
-          0,
-          2
-        ],
-        "shift": [
-          1,
-          1
-        ]
-      }
-    },
-    {
-      "epoch": 18,
-      "permutation_sha256": "c120337c01487d76c8f9bd2ff02dd0fbda7cc05c88ff8a26cdc3b804ff1f47b8",
-      "qutrit_clifford_word": "FZPFPP",
-      "spatial_inverse": {
-        "central": 1,
-        "matrix": [
-          0,
-          2,
-          2,
-          0
-        ],
-        "shift": [
-          0,
-          0
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 1,
-        "matrix": [
-          0,
-          2,
-          2,
-          0
-        ],
-        "shift": [
-          0,
-          0
-        ]
-      }
-    },
-    {
-      "epoch": 19,
-      "permutation_sha256": "a1857a75af994741f24dc5cc208fbc4b3274d51b29ca3fdb90730862826f06ba",
-      "qutrit_clifford_word": "ZFFP",
-      "spatial_inverse": {
-        "central": 0,
-        "matrix": [
-          2,
-          1,
-          0,
-          1
-        ],
-        "shift": [
-          2,
-          0
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 0,
-        "matrix": [
-          2,
-          1,
-          0,
-          1
-        ],
-        "shift": [
-          2,
-          0
-        ]
-      }
-    },
-    {
-      "epoch": 20,
-      "permutation_sha256": "19bc5e4264436dd7e9c95c0a8b27a5f2d694dc84e79c0c879cfa7eac7a95950f",
-      "qutrit_clifford_word": "FPXX",
-      "spatial_inverse": {
-        "central": 1,
-        "matrix": [
-          1,
-          0,
-          2,
-          1
-        ],
-        "shift": [
-          2,
-          0
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 2,
-        "matrix": [
-          1,
-          0,
-          1,
-          1
-        ],
-        "shift": [
-          1,
-          1
-        ]
-      }
-    },
-    {
-      "epoch": 21,
-      "permutation_sha256": "b5f2de6d41349294f6c73290ea53a223d8f4241978458b02cc34889aa5c12078",
-      "qutrit_clifford_word": "FZP",
-      "spatial_inverse": {
-        "central": 2,
-        "matrix": [
-          2,
-          2,
-          2,
-          1
-        ],
-        "shift": [
-          0,
-          0
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 1,
-        "matrix": [
-          1,
-          1,
-          1,
-          2
-        ],
-        "shift": [
-          0,
-          0
-        ]
-      }
-    },
-    {
-      "epoch": 22,
-      "permutation_sha256": "860ff1327dcf99b01f1cade5da032340d1233434686b7fcd448810ef0ce7b4cf",
-      "qutrit_clifford_word": "FFPXFP",
-      "spatial_inverse": {
-        "central": 2,
-        "matrix": [
-          0,
-          2,
-          1,
-          1
-        ],
-        "shift": [
-          1,
-          0
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 1,
-        "matrix": [
-          1,
-          1,
-          2,
-          0
-        ],
-        "shift": [
-          2,
-          1
-        ]
-      }
-    },
-    {
-      "epoch": 23,
-      "permutation_sha256": "71f96f2175b7db068616422a4d0691bd17489feea0066a95edc619c3f75ac8ad",
-      "qutrit_clifford_word": "FPXX",
-      "spatial_inverse": {
-        "central": 2,
-        "matrix": [
-          1,
-          1,
-          0,
-          1
-        ],
-        "shift": [
-          0,
-          2
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 1,
-        "matrix": [
-          1,
-          2,
-          0,
-          1
-        ],
-        "shift": [
-          2,
-          1
-        ]
-      }
-    },
-    {
-      "epoch": 24,
-      "permutation_sha256": "d9fe77d75260b906ae91f3bb66f7a6744910c11d587d25ce76cc4bb7b2cd4ec3",
-      "qutrit_clifford_word": "XPPFPF",
-      "spatial_inverse": {
-        "central": 2,
-        "matrix": [
-          2,
-          2,
-          2,
-          0
-        ],
-        "shift": [
-          1,
-          2
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 2,
-        "matrix": [
-          0,
-          2,
-          2,
-          1
-        ],
-        "shift": [
-          2,
-          2
-        ]
-      }
-    },
-    {
-      "epoch": 25,
-      "permutation_sha256": "e064516d65a17cedd2144bd62d7a15287b3f00c9b89c3c8f801f839e3e74564c",
-      "qutrit_clifford_word": "ZFFF",
-      "spatial_inverse": {
-        "central": 2,
-        "matrix": [
-          1,
-          1,
-          0,
-          1
-        ],
-        "shift": [
-          0,
-          0
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 1,
-        "matrix": [
-          1,
-          2,
-          0,
-          1
-        ],
-        "shift": [
-          0,
-          0
-        ]
-      }
-    },
-    {
-      "epoch": 26,
-      "permutation_sha256": "73d381cd7ff5eb06598df59ff59624638d087c21383630fb3828d4e97ab04be6",
-      "qutrit_clifford_word": "FPFP",
-      "spatial_inverse": {
-        "central": 2,
-        "matrix": [
-          1,
-          1,
-          0,
-          1
-        ],
-        "shift": [
-          1,
-          1
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 1,
-        "matrix": [
-          1,
-          2,
-          0,
-          1
-        ],
-        "shift": [
-          0,
-          2
-        ]
-      }
-    },
-    {
-      "epoch": 27,
-      "permutation_sha256": "75c1f076c888a94478ced736e80a1ff4f8747d563a2934326bb25c5666d0e0b4",
-      "qutrit_clifford_word": "XXZZ",
-      "spatial_inverse": {
-        "central": 2,
-        "matrix": [
-          0,
-          1,
-          2,
-          0
-        ],
-        "shift": [
-          2,
-          1
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 1,
-        "matrix": [
-          0,
-          2,
-          1,
-          0
-        ],
-        "shift": [
-          1,
-          1
-        ]
-      }
-    },
-    {
-      "epoch": 28,
-      "permutation_sha256": "b226be71531d81c7436eba6966a61c1b2dbc7ac786e13abfa2aa9b6600b7e6c0",
-      "qutrit_clifford_word": "FFPPF",
-      "spatial_inverse": {
-        "central": 2,
-        "matrix": [
-          2,
-          0,
-          2,
-          1
-        ],
-        "shift": [
-          2,
-          0
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 2,
-        "matrix": [
-          2,
-          0,
-          2,
-          1
-        ],
-        "shift": [
-          2,
-          2
-        ]
-      }
-    },
-    {
-      "epoch": 29,
-      "permutation_sha256": "a4498bc126e41fa78fc8f727b756d793fc32bbd4255cdb62f5d9c25ee447b634",
-      "qutrit_clifford_word": "XPFFFP",
-      "spatial_inverse": {
-        "central": 2,
-        "matrix": [
-          1,
-          2,
-          0,
-          2
-        ],
-        "shift": [
-          2,
-          1
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 2,
-        "matrix": [
-          1,
-          2,
-          0,
-          2
-        ],
-        "shift": [
-          2,
-          1
-        ]
-      }
-    },
-    {
-      "epoch": 30,
-      "permutation_sha256": "97bf321f98a5d0db3be4ced4db75a23de3eab14fdb6ec70a07d68264a7fc2916",
-      "qutrit_clifford_word": "FPFZFF",
-      "spatial_inverse": {
-        "central": 2,
-        "matrix": [
-          0,
-          1,
-          2,
-          2
-        ],
-        "shift": [
-          1,
-          0
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 1,
-        "matrix": [
-          2,
-          2,
-          1,
-          0
-        ],
-        "shift": [
-          1,
-          2
-        ]
-      }
-    },
-    {
-      "epoch": 31,
-      "permutation_sha256": "8b3d5b2d6a3d300c9860d6b0db585e1a6ddf352ad2fde4431c7f34b98caea4b3",
-      "qutrit_clifford_word": "XFPFFF",
-      "spatial_inverse": {
-        "central": 0,
-        "matrix": [
-          1,
-          1,
-          0,
-          1
-        ],
-        "shift": [
-          0,
-          2
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 0,
-        "matrix": [
-          1,
-          2,
-          0,
-          1
-        ],
-        "shift": [
-          2,
-          1
-        ]
-      }
-    },
-    {
-      "epoch": 32,
-      "permutation_sha256": "a5f17a9c29f5fda1085894d82c7c9e0419e7ee08b2c9e81241e08de24c42afa7",
-      "qutrit_clifford_word": "FZFZ",
-      "spatial_inverse": {
-        "central": 1,
-        "matrix": [
-          2,
-          2,
-          0,
-          2
-        ],
-        "shift": [
-          0,
-          1
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 2,
-        "matrix": [
-          2,
-          1,
-          0,
-          2
-        ],
-        "shift": [
-          2,
-          1
-        ]
-      }
-    },
-    {
-      "epoch": 33,
-      "permutation_sha256": "73d0f541f483bc64358aecc99fd5a8a9c1567be76df1f09ce81771c7e78b1c00",
-      "qutrit_clifford_word": "PFZF",
-      "spatial_inverse": {
-        "central": 2,
-        "matrix": [
-          2,
-          2,
-          2,
-          1
-        ],
-        "shift": [
-          2,
-          0
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 1,
-        "matrix": [
-          1,
-          1,
-          1,
-          2
-        ],
-        "shift": [
-          1,
-          1
-        ]
-      }
-    },
-    {
-      "epoch": 34,
-      "permutation_sha256": "e5dc8f94eeb2f3c866737bb880a22cf82597f57cf2a57630e4bb30ad14269fe2",
-      "qutrit_clifford_word": "FFPXFP",
-      "spatial_inverse": {
-        "central": 2,
-        "matrix": [
-          1,
-          2,
-          0,
-          1
-        ],
-        "shift": [
-          1,
-          1
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 1,
-        "matrix": [
-          1,
-          1,
-          0,
-          1
-        ],
-        "shift": [
-          1,
-          2
-        ]
-      }
-    },
-    {
-      "epoch": 35,
-      "permutation_sha256": "c4cead9b9f7bcc2e4087bce18e3f2d70af4ca834d6239b08204740e91c95188f",
-      "qutrit_clifford_word": "XZFF",
-      "spatial_inverse": {
-        "central": 0,
-        "matrix": [
-          2,
-          1,
-          0,
-          1
-        ],
-        "shift": [
-          1,
-          1
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 0,
-        "matrix": [
-          2,
-          1,
-          0,
-          1
-        ],
-        "shift": [
-          0,
-          2
-        ]
-      }
-    },
-    {
-      "epoch": 36,
-      "permutation_sha256": "e90259a055d4b7fccc8f252edc094c37852b2ac7ed06cd731d61dd419171135e",
-      "qutrit_clifford_word": "XX",
-      "spatial_inverse": {
-        "central": 0,
-        "matrix": [
-          1,
-          2,
-          1,
-          0
-        ],
-        "shift": [
-          2,
-          0
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 0,
-        "matrix": [
-          0,
-          1,
-          2,
-          1
-        ],
-        "shift": [
-          0,
-          2
-        ]
-      }
-    },
-    {
-      "epoch": 37,
-      "permutation_sha256": "95009c6b7f9fdd7aa460f41637c699e5b964f9846ce133765bfe73cb43010273",
-      "qutrit_clifford_word": "ZFPFPP",
-      "spatial_inverse": {
-        "central": 2,
-        "matrix": [
-          1,
-          2,
-          0,
-          2
-        ],
-        "shift": [
-          0,
-          0
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 2,
-        "matrix": [
-          1,
-          2,
-          0,
-          2
-        ],
-        "shift": [
-          0,
-          0
-        ]
-      }
-    },
-    {
-      "epoch": 38,
-      "permutation_sha256": "89b4aac33b8bbae023f19f70608464fe134a127767440beca1358d8833522ae0",
-      "qutrit_clifford_word": "XPFF",
-      "spatial_inverse": {
-        "central": 0,
-        "matrix": [
-          0,
-          2,
-          1,
-          0
-        ],
-        "shift": [
-          1,
-          1
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 0,
-        "matrix": [
-          0,
-          1,
-          2,
-          0
-        ],
-        "shift": [
-          2,
-          1
-        ]
-      }
-    },
-    {
-      "epoch": 39,
-      "permutation_sha256": "1af23ea5e86e265b0348bb46bb064c2afe67c6d40d5c4d97446ad7950f59dd4a",
-      "qutrit_clifford_word": "ZZF",
-      "spatial_inverse": {
-        "central": 2,
-        "matrix": [
-          2,
-          2,
-          1,
-          0
-        ],
-        "shift": [
-          2,
-          1
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 1,
-        "matrix": [
-          0,
-          1,
-          2,
-          2
-        ],
-        "shift": [
-          2,
-          0
-        ]
-      }
-    },
-    {
-      "epoch": 40,
-      "permutation_sha256": "3303759a9c251f0e8f69f540bae327982c90d499fd622e7366e43bc9f79929d4",
-      "qutrit_clifford_word": "XPPX",
-      "spatial_inverse": {
-        "central": 2,
-        "matrix": [
-          2,
-          2,
-          0,
-          2
-        ],
-        "shift": [
-          0,
-          2
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 1,
-        "matrix": [
-          2,
-          1,
-          0,
-          2
-        ],
-        "shift": [
-          1,
-          2
-        ]
-      }
-    },
-    {
-      "epoch": 41,
-      "permutation_sha256": "166e6d9ae1a60042a584efc4190784cefe09db87145c87e5afd5d293863d8cac",
-      "qutrit_clifford_word": "FFF",
-      "spatial_inverse": {
-        "central": 0,
-        "matrix": [
-          2,
-          2,
-          0,
-          2
-        ],
-        "shift": [
-          2,
-          0
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 0,
-        "matrix": [
-          2,
-          1,
-          0,
-          2
-        ],
-        "shift": [
-          2,
-          0
-        ]
-      }
-    },
-    {
-      "epoch": 42,
-      "permutation_sha256": "177d198e6202543df8f6baa79ce7e1a3b71ed15acb1ab8018ee2f4b5420d586e",
-      "qutrit_clifford_word": "FFPXF",
-      "spatial_inverse": {
-        "central": 0,
-        "matrix": [
-          1,
-          1,
-          1,
-          2
-        ],
-        "shift": [
-          0,
-          1
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 0,
-        "matrix": [
-          2,
-          2,
-          2,
-          1
-        ],
-        "shift": [
-          1,
-          2
-        ]
-      }
-    },
-    {
-      "epoch": 43,
-      "permutation_sha256": "81fd7eba0bfd5c2bd4f4c429351c739c372cefe4fd27e745c58ce6a550ae3ad2",
-      "qutrit_clifford_word": "PFPPFF",
-      "spatial_inverse": {
-        "central": 1,
-        "matrix": [
-          1,
-          0,
-          0,
-          1
-        ],
-        "shift": [
-          0,
-          2
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 2,
-        "matrix": [
-          1,
-          0,
-          0,
-          1
-        ],
-        "shift": [
-          0,
-          1
-        ]
-      }
-    },
-    {
-      "epoch": 44,
-      "permutation_sha256": "b67be8d37983505b1295450928a930249c6e4c9733945c0eb22a6a3dbc94c8e3",
-      "qutrit_clifford_word": "ZZF",
-      "spatial_inverse": {
-        "central": 0,
-        "matrix": [
-          1,
-          2,
-          2,
-          2
-        ],
-        "shift": [
-          2,
-          1
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 0,
-        "matrix": [
-          2,
-          1,
-          1,
-          1
-        ],
-        "shift": [
-          1,
-          0
-        ]
-      }
-    },
-    {
-      "epoch": 45,
-      "permutation_sha256": "c2481658cd2b1f9993f951c98084fbe83ce29c5e98ad912f1af8fc4fb322b7c3",
-      "qutrit_clifford_word": "ZFPFP",
-      "spatial_inverse": {
-        "central": 1,
-        "matrix": [
-          2,
-          2,
-          2,
-          0
-        ],
-        "shift": [
-          2,
-          2
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 1,
-        "matrix": [
-          0,
-          2,
-          2,
-          1
-        ],
-        "shift": [
-          2,
-          0
-        ]
-      }
-    },
-    {
-      "epoch": 46,
-      "permutation_sha256": "729e79a04a070bfbe11cd7859ad6d9f837fc61312b002a1ebf79b03de703189d",
-      "qutrit_clifford_word": "FFPPFP",
-      "spatial_inverse": {
-        "central": 0,
-        "matrix": [
-          2,
-          0,
-          2,
-          2
-        ],
-        "shift": [
-          2,
-          0
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 0,
-        "matrix": [
-          2,
-          0,
-          1,
-          2
-        ],
-        "shift": [
-          2,
-          1
-        ]
-      }
-    },
-    {
-      "epoch": 47,
-      "permutation_sha256": "05bab33afd960be3c1255f0e5c2e763e85e5e97423dc16d6b9b3b5df6c82dfdb",
-      "qutrit_clifford_word": "PXFP",
-      "spatial_inverse": {
-        "central": 1,
-        "matrix": [
-          0,
-          1,
-          2,
-          1
-        ],
-        "shift": [
-          1,
-          2
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 2,
-        "matrix": [
-          1,
-          2,
-          1,
-          0
-        ],
-        "shift": [
-          1,
-          2
-        ]
-      }
-    },
-    {
-      "epoch": 48,
-      "permutation_sha256": "87dab633a970c81bfada44952f5bd144aa26e7475e3b49befa4bd0978ff82140",
-      "qutrit_clifford_word": "ZFZFF",
-      "spatial_inverse": {
-        "central": 0,
-        "matrix": [
-          1,
-          1,
-          2,
-          0
-        ],
-        "shift": [
-          0,
-          1
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 0,
-        "matrix": [
-          0,
-          2,
-          1,
-          1
-        ],
-        "shift": [
-          1,
-          2
-        ]
-      }
-    },
-    {
-      "epoch": 49,
-      "permutation_sha256": "06c5aa0fc50e18f171d3b7771a1588a60093a89c7d58c49f6ecd54df71c144be",
-      "qutrit_clifford_word": "FZ",
-      "spatial_inverse": {
-        "central": 0,
-        "matrix": [
-          2,
-          2,
-          0,
-          1
-        ],
-        "shift": [
-          1,
-          0
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 0,
-        "matrix": [
-          2,
-          2,
-          0,
-          1
-        ],
-        "shift": [
-          1,
-          0
-        ]
-      }
-    },
-    {
-      "epoch": 50,
-      "permutation_sha256": "9d6950e541b693f22682b6ddb478a7758294247044616dbb5a1859f7a87b979f",
-      "qutrit_clifford_word": "ZFPXP",
-      "spatial_inverse": {
-        "central": 0,
-        "matrix": [
-          2,
-          2,
-          0,
-          1
-        ],
-        "shift": [
-          0,
-          1
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 0,
-        "matrix": [
-          2,
-          2,
-          0,
-          1
-        ],
-        "shift": [
-          1,
-          2
-        ]
-      }
-    },
-    {
-      "epoch": 51,
-      "permutation_sha256": "4377982031ebf758fddbe0a21475d01460a68b28704e97e4a580cd40c714b160",
-      "qutrit_clifford_word": "FPFP",
-      "spatial_inverse": {
-        "central": 2,
-        "matrix": [
-          2,
-          0,
-          1,
-          1
-        ],
-        "shift": [
-          1,
-          0
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 2,
-        "matrix": [
-          2,
-          0,
-          1,
-          1
-        ],
-        "shift": [
-          1,
-          2
-        ]
-      }
-    },
-    {
-      "epoch": 52,
-      "permutation_sha256": "9e52ff55f3253965d236f60450776946bef687eb6eeb0852b6442266f0248f62",
-      "qutrit_clifford_word": "XPFF",
-      "spatial_inverse": {
-        "central": 1,
-        "matrix": [
-          1,
-          0,
-          2,
-          1
-        ],
-        "shift": [
-          0,
-          2
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 2,
-        "matrix": [
-          1,
-          0,
-          1,
-          1
-        ],
-        "shift": [
-          0,
-          1
-        ]
-      }
-    },
-    {
-      "epoch": 53,
-      "permutation_sha256": "15d3b3aa92c997c7ef3a2679b6bf84666b9d64f8c4d742af1ddcd9b643f5eeeb",
-      "qutrit_clifford_word": "FPFP",
-      "spatial_inverse": {
-        "central": 0,
-        "matrix": [
-          1,
-          2,
-          0,
-          2
-        ],
-        "shift": [
-          0,
-          0
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 0,
-        "matrix": [
-          1,
-          2,
-          0,
-          2
-        ],
-        "shift": [
-          0,
-          0
-        ]
-      }
-    },
-    {
-      "epoch": 54,
-      "permutation_sha256": "f73012fa831c7e71cfaf19936c5aa594465ee669906ed8468c18e90331c3bd3d",
-      "qutrit_clifford_word": "XFPFZP",
-      "spatial_inverse": {
-        "central": 0,
-        "matrix": [
-          0,
-          2,
-          1,
-          0
-        ],
-        "shift": [
-          2,
-          0
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 0,
-        "matrix": [
-          0,
-          1,
-          2,
-          0
-        ],
-        "shift": [
-          0,
-          2
-        ]
-      }
-    },
-    {
-      "epoch": 55,
-      "permutation_sha256": "c0a41ef3ce1e8c4c89ad4bcaf60040337cc08a65626dcc07f0dc46041c5d65cb",
-      "qutrit_clifford_word": "XFPFF",
-      "spatial_inverse": {
-        "central": 2,
-        "matrix": [
-          0,
-          2,
-          1,
-          1
-        ],
-        "shift": [
-          2,
-          2
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 1,
-        "matrix": [
-          1,
-          1,
-          2,
-          0
-        ],
-        "shift": [
-          2,
-          2
-        ]
-      }
-    },
-    {
-      "epoch": 56,
-      "permutation_sha256": "ff2788c29ac8b6a8edb2c264670109c394d85ba7d8c11ecbe9c63917c07865be",
-      "qutrit_clifford_word": "ZZFPP",
-      "spatial_inverse": {
-        "central": 0,
-        "matrix": [
-          2,
-          1,
-          2,
-          2
-        ],
-        "shift": [
-          0,
-          0
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 0,
-        "matrix": [
-          1,
-          1,
-          2,
-          1
-        ],
-        "shift": [
-          0,
-          0
-        ]
-      }
-    },
-    {
-      "epoch": 57,
-      "permutation_sha256": "67d6401b43d4f0b936726752f9bfb7ad432e7ca74ce6641cc2faa97e3b52f5e8",
-      "qutrit_clifford_word": "XFP",
-      "spatial_inverse": {
-        "central": 1,
-        "matrix": [
-          2,
-          2,
-          0,
-          1
-        ],
-        "shift": [
-          1,
-          1
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 1,
-        "matrix": [
-          2,
-          2,
-          0,
-          1
-        ],
-        "shift": [
-          2,
-          2
-        ]
-      }
-    },
-    {
-      "epoch": 58,
-      "permutation_sha256": "b47f382cd0e98949c54fabfba1b40a520094dc9de920879cca5fde635d113a65",
-      "qutrit_clifford_word": "FZPP",
-      "spatial_inverse": {
-        "central": 0,
-        "matrix": [
-          2,
-          0,
-          2,
-          1
-        ],
-        "shift": [
-          0,
-          1
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 0,
-        "matrix": [
-          2,
-          0,
-          2,
-          1
-        ],
-        "shift": [
-          0,
-          2
-        ]
-      }
-    },
-    {
-      "epoch": 59,
-      "permutation_sha256": "07dafce5a52798b01c8fa75e30cf128aeaeb83b1e71877a2ab24e4b0d9f00169",
-      "qutrit_clifford_word": "XPF",
-      "spatial_inverse": {
-        "central": 2,
-        "matrix": [
-          2,
-          1,
-          0,
-          1
-        ],
-        "shift": [
-          0,
-          1
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 2,
-        "matrix": [
-          2,
-          1,
-          0,
-          1
-        ],
-        "shift": [
-          2,
-          2
-        ]
-      }
-    },
-    {
-      "epoch": 60,
-      "permutation_sha256": "5619358ba5adb6161c400237b6d3bf32141fd3552f1e3cfa57eebc1285f77066",
-      "qutrit_clifford_word": "FFF",
-      "spatial_inverse": {
-        "central": 2,
-        "matrix": [
-          1,
-          1,
-          2,
-          0
-        ],
-        "shift": [
-          0,
-          0
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 1,
-        "matrix": [
-          0,
-          2,
-          1,
-          1
-        ],
-        "shift": [
-          0,
-          0
-        ]
-      }
-    },
-    {
-      "epoch": 61,
-      "permutation_sha256": "e1d9b26f3f9fa411b3ef1f4fbc3731a4138507826be38d80bd3b99842f2d081d",
-      "qutrit_clifford_word": "PPFPF",
-      "spatial_inverse": {
-        "central": 1,
-        "matrix": [
-          1,
-          1,
-          0,
-          1
-        ],
-        "shift": [
-          2,
-          1
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 2,
-        "matrix": [
-          1,
-          2,
-          0,
-          1
-        ],
-        "shift": [
-          2,
-          2
-        ]
-      }
-    },
-    {
-      "epoch": 62,
-      "permutation_sha256": "7636607b4e9a84efbe0ee83f84eac7973867fde751dcf1f8d88ab41d86188093",
-      "qutrit_clifford_word": "ZPXFPF",
-      "spatial_inverse": {
-        "central": 1,
-        "matrix": [
-          0,
-          1,
-          1,
-          2
-        ],
-        "shift": [
-          2,
-          2
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 1,
-        "matrix": [
-          1,
-          1,
-          1,
-          0
-        ],
-        "shift": [
-          2,
-          1
-        ]
-      }
-    },
-    {
-      "epoch": 63,
-      "permutation_sha256": "bccca113c70701ba9ddcd524e33babb3015d9c12a6e7d5736f76bd254f74b24c",
-      "qutrit_clifford_word": "XPFFP",
-      "spatial_inverse": {
-        "central": 1,
-        "matrix": [
-          0,
-          2,
-          2,
-          2
-        ],
-        "shift": [
-          0,
-          2
-        ]
-      },
-      "spatial_randomizer": {
-        "central": 1,
-        "matrix": [
-          1,
-          2,
-          2,
-          0
-        ],
-        "shift": [
-          2,
-          0
-        ]
-      }
-    }
+    [
+      0,
+      [
+        2,
+        0,
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      [
+        2,
+        0,
+        1,
+        2,
+        1,
+        0,
+        2
+      ],
+      "PFPPFF"
+    ],
+    [
+      1,
+      [
+        1,
+        0,
+        0,
+        2,
+        2,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        2,
+        1,
+        1,
+        0
+      ],
+      "XPFPPFF"
+    ],
+    [
+      2,
+      [
+        0,
+        2,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        2,
+        0,
+        2,
+        0,
+        0
+      ],
+      "XPXFP"
+    ],
+    [
+      3,
+      [
+        2,
+        1,
+        2,
+        2,
+        2,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        0
+      ],
+      "XPFPF"
+    ],
+    [
+      4,
+      [
+        1,
+        1,
+        2,
+        0,
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "FFPFZ"
+    ],
+    [
+      5,
+      [
+        1,
+        0,
+        0,
+        2,
+        1,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        0,
+        2,
+        2,
+        0,
+        2
+      ],
+      "PPFP"
+    ],
+    [
+      6,
+      [
+        2,
+        2,
+        0,
+        1,
+        1,
+        2,
+        1
+      ],
+      [
+        2,
+        2,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "PFPF"
+    ],
+    [
+      7,
+      [
+        0,
+        2,
+        2,
+        1,
+        2,
+        0,
+        0
+      ],
+      [
+        2,
+        2,
+        2,
+        0,
+        2,
+        2,
+        0
+      ],
+      "FPXP"
+    ],
+    [
+      8,
+      [
+        1,
+        1,
+        0,
+        2,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        2,
+        2,
+        1,
+        0
+      ],
+      "XXPP"
+    ],
+    [
+      9,
+      [
+        2,
+        0,
+        1,
+        2,
+        2,
+        0,
+        2
+      ],
+      [
+        2,
+        0,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "XXP"
+    ],
+    [
+      10,
+      [
+        1,
+        1,
+        1,
+        2,
+        0,
+        0,
+        2
+      ],
+      [
+        2,
+        2,
+        2,
+        1,
+        0,
+        0,
+        1
+      ],
+      "FPFZFF"
+    ],
+    [
+      11,
+      [
+        0,
+        2,
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ZFPPX"
+    ],
+    [
+      12,
+      [
+        2,
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        2,
+        2,
+        1,
+        0
+      ],
+      "XXPPFP"
+    ],
+    [
+      13,
+      [
+        2,
+        0,
+        2,
+        2,
+        0,
+        2,
+        1
+      ],
+      [
+        2,
+        0,
+        1,
+        2,
+        0,
+        2,
+        2
+      ],
+      "XFPFFF"
+    ],
+    [
+      14,
+      [
+        1,
+        1,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        1,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      "ZPFPF"
+    ],
+    [
+      15,
+      [
+        1,
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        1,
+        2,
+        0,
+        0
+      ],
+      "XZF"
+    ],
+    [
+      16,
+      [
+        1,
+        2,
+        1,
+        0,
+        0,
+        2,
+        2
+      ],
+      [
+        0,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "XPFZP"
+    ],
+    [
+      17,
+      [
+        2,
+        2,
+        0,
+        2,
+        1,
+        1,
+        1
+      ],
+      [
+        2,
+        1,
+        0,
+        2,
+        0,
+        1,
+        2
+      ],
+      "XZFF"
+    ],
+    [
+      18,
+      [
+        0,
+        2,
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        2,
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      "FZPFPP"
+    ],
+    [
+      19,
+      [
+        2,
+        1,
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      [
+        2,
+        1,
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      "ZFFP"
+    ],
+    [
+      20,
+      [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        0,
+        2,
+        1,
+        2,
+        0,
+        1
+      ],
+      "FPXX"
+    ],
+    [
+      21,
+      [
+        1,
+        1,
+        1,
+        2,
+        0,
+        0,
+        1
+      ],
+      [
+        2,
+        2,
+        2,
+        1,
+        0,
+        0,
+        2
+      ],
+      "FZP"
+    ],
+    [
+      22,
+      [
+        1,
+        1,
+        2,
+        0,
+        2,
+        1,
+        1
+      ],
+      [
+        0,
+        2,
+        1,
+        1,
+        1,
+        0,
+        2
+      ],
+      "FFPXFP"
+    ],
+    [
+      23,
+      [
+        1,
+        2,
+        0,
+        1,
+        2,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        0,
+        2,
+        2
+      ],
+      "FPXX"
+    ],
+    [
+      24,
+      [
+        0,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        2,
+        2,
+        0,
+        1,
+        2,
+        2
+      ],
+      "XPPFPF"
+    ],
+    [
+      25,
+      [
+        1,
+        2,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        2
+      ],
+      "ZFFF"
+    ],
+    [
+      26,
+      [
+        1,
+        2,
+        0,
+        1,
+        0,
+        2,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        2
+      ],
+      "FPFP"
+    ],
+    [
+      27,
+      [
+        0,
+        2,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        2,
+        0,
+        2,
+        1,
+        2
+      ],
+      "XXZZ"
+    ],
+    [
+      28,
+      [
+        2,
+        0,
+        2,
+        1,
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        0,
+        2,
+        1,
+        2,
+        0,
+        2
+      ],
+      "FFPPF"
+    ],
+    [
+      29,
+      [
+        1,
+        2,
+        0,
+        2,
+        2,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        0,
+        2,
+        2,
+        1,
+        2
+      ],
+      "XPFFFP"
+    ],
+    [
+      30,
+      [
+        2,
+        2,
+        1,
+        0,
+        1,
+        2,
+        1
+      ],
+      [
+        0,
+        1,
+        2,
+        2,
+        1,
+        0,
+        2
+      ],
+      "FPFZFF"
+    ],
+    [
+      31,
+      [
+        1,
+        2,
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        0,
+        2,
+        0
+      ],
+      "XFPFFF"
+    ],
+    [
+      32,
+      [
+        2,
+        1,
+        0,
+        2,
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        2,
+        0,
+        2,
+        0,
+        1,
+        1
+      ],
+      "FZFZ"
+    ],
+    [
+      33,
+      [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      [
+        2,
+        2,
+        2,
+        1,
+        2,
+        0,
+        2
+      ],
+      "PFZF"
+    ],
+    [
+      34,
+      [
+        1,
+        1,
+        0,
+        1,
+        1,
+        2,
+        1
+      ],
+      [
+        1,
+        2,
+        0,
+        1,
+        1,
+        1,
+        2
+      ],
+      "FFPXFP"
+    ],
+    [
+      35,
+      [
+        2,
+        1,
+        0,
+        1,
+        0,
+        2,
+        0
+      ],
+      [
+        2,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "XZFF"
+    ],
+    [
+      36,
+      [
+        0,
+        1,
+        2,
+        1,
+        0,
+        2,
+        0
+      ],
+      [
+        1,
+        2,
+        1,
+        0,
+        2,
+        0,
+        0
+      ],
+      "XX"
+    ],
+    [
+      37,
+      [
+        1,
+        2,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        2,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      "ZFPFPP"
+    ],
+    [
+      38,
+      [
+        0,
+        1,
+        2,
+        0,
+        2,
+        1,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "XPFF"
+    ],
+    [
+      39,
+      [
+        0,
+        1,
+        2,
+        2,
+        2,
+        0,
+        1
+      ],
+      [
+        2,
+        2,
+        1,
+        0,
+        2,
+        1,
+        2
+      ],
+      "ZZF"
+    ],
+    [
+      40,
+      [
+        2,
+        1,
+        0,
+        2,
+        1,
+        2,
+        1
+      ],
+      [
+        2,
+        2,
+        0,
+        2,
+        0,
+        2,
+        2
+      ],
+      "XPPX"
+    ],
+    [
+      41,
+      [
+        2,
+        1,
+        0,
+        2,
+        2,
+        0,
+        0
+      ],
+      [
+        2,
+        2,
+        0,
+        2,
+        2,
+        0,
+        0
+      ],
+      "FFF"
+    ],
+    [
+      42,
+      [
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        2,
+        0,
+        1,
+        0
+      ],
+      "FFPXF"
+    ],
+    [
+      43,
+      [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        1
+      ],
+      "PFPPFF"
+    ],
+    [
+      44,
+      [
+        2,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        2,
+        2,
+        2,
+        1,
+        0
+      ],
+      "ZZF"
+    ],
+    [
+      45,
+      [
+        0,
+        2,
+        2,
+        1,
+        2,
+        0,
+        1
+      ],
+      [
+        2,
+        2,
+        2,
+        0,
+        2,
+        2,
+        1
+      ],
+      "ZFPFP"
+    ],
+    [
+      46,
+      [
+        2,
+        0,
+        1,
+        2,
+        2,
+        1,
+        0
+      ],
+      [
+        2,
+        0,
+        2,
+        2,
+        2,
+        0,
+        0
+      ],
+      "FFPPFP"
+    ],
+    [
+      47,
+      [
+        1,
+        2,
+        1,
+        0,
+        1,
+        2,
+        2
+      ],
+      [
+        0,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "PXFP"
+    ],
+    [
+      48,
+      [
+        0,
+        2,
+        1,
+        1,
+        1,
+        2,
+        0
+      ],
+      [
+        1,
+        1,
+        2,
+        0,
+        0,
+        1,
+        0
+      ],
+      "ZFZFF"
+    ],
+    [
+      49,
+      [
+        2,
+        2,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        2,
+        2,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "FZ"
+    ],
+    [
+      50,
+      [
+        2,
+        2,
+        0,
+        1,
+        1,
+        2,
+        0
+      ],
+      [
+        2,
+        2,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "ZFPXP"
+    ],
+    [
+      51,
+      [
+        2,
+        0,
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      [
+        2,
+        0,
+        1,
+        1,
+        1,
+        0,
+        2
+      ],
+      "FPFP"
+    ],
+    [
+      52,
+      [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        0,
+        2,
+        1,
+        0,
+        2,
+        1
+      ],
+      "XPFF"
+    ],
+    [
+      53,
+      [
+        1,
+        2,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "FPFP"
+    ],
+    [
+      54,
+      [
+        0,
+        1,
+        2,
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        0,
+        2,
+        0,
+        0
+      ],
+      "XFPFZP"
+    ],
+    [
+      55,
+      [
+        1,
+        1,
+        2,
+        0,
+        2,
+        2,
+        1
+      ],
+      [
+        0,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "XFPFF"
+    ],
+    [
+      56,
+      [
+        1,
+        1,
+        2,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        1,
+        2,
+        2,
+        0,
+        0,
+        0
+      ],
+      "ZZFPP"
+    ],
+    [
+      57,
+      [
+        2,
+        2,
+        0,
+        1,
+        2,
+        2,
+        1
+      ],
+      [
+        2,
+        2,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "XFP"
+    ],
+    [
+      58,
+      [
+        2,
+        0,
+        2,
+        1,
+        0,
+        2,
+        0
+      ],
+      [
+        2,
+        0,
+        2,
+        1,
+        0,
+        1,
+        0
+      ],
+      "FZPP"
+    ],
+    [
+      59,
+      [
+        2,
+        1,
+        0,
+        1,
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        1,
+        0,
+        1,
+        0,
+        1,
+        2
+      ],
+      "XPF"
+    ],
+    [
+      60,
+      [
+        0,
+        2,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        2,
+        0,
+        0,
+        0,
+        2
+      ],
+      "FFF"
+    ],
+    [
+      61,
+      [
+        1,
+        2,
+        0,
+        1,
+        2,
+        2,
+        2
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        2,
+        1,
+        1
+      ],
+      "PPFPF"
+    ],
+    [
+      62,
+      [
+        1,
+        1,
+        1,
+        0,
+        2,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      "ZPXFPF"
+    ],
+    [
+      63,
+      [
+        1,
+        2,
+        2,
+        0,
+        2,
+        0,
+        1
+      ],
+      [
+        0,
+        2,
+        2,
+        2,
+        0,
+        2,
+        1
+      ],
+      "XPFFP"
+    ]
   ],
   "execution_rule": "conjugate each calibration epoch by the listed spatial automorphism and Clifford, then compile the exact inverse before the terminal measurement",
+  "record_layout": [
+    "epoch",
+    "spatial_randomizer_[m00,m01,m10,m11,ax,ay,c]",
+    "spatial_inverse_same_layout",
+    "qutrit_clifford_word"
+  ],
   "schema": "w33.pass413.twirl_schedule.v1",
   "seed": 413
 }

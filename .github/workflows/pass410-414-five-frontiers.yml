@@ -25,22 +25,17 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
-  group: pass410-414-${{ github.event.pull_request.number || github.ref }}
+  group: pass410-414-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
   verify:
     runs-on: ubuntu-latest
-    env:
-      TARGET_BRANCH: ${{ github.head_ref || github.ref_name }}
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          ref: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -53,37 +48,6 @@ jobs:
           python analysis/w33_pass412_multislip_sandpile_decoder.py
           python analysis/w33_pass413_automorphism_twirl.py
           python analysis/w33_pass414_independent_lab_packet.py
-      - name: Validate independent-lab manifests
-        run: |
-          python - <<'PY'
-          import json, jsonschema
-          schema=json.load(open('schemas/w33_pass414_independent_lab_handoff_v1.schema.json'))
-          for path in ['data/w33_pass414_nonclaim_custody_fixture.json','data/w33_pass414_empty_handoff_manifest.json']:
-              jsonschema.validate(json.load(open(path)),schema)
-          PY
-      - name: Run cross-pass regressions
-        run: python -m pytest -q tests/test_pass410_414_five_frontiers.py
-      - name: Verify live claims ledger
-        run: python scripts/check_claims_ledger.py
-      - name: Materialize deterministic artifacts on the isolated branch
-        if: startsWith(env.TARGET_BRANCH, 'agent/pass410-414-')
-        run: |
-          git config user.name 'w33-pass410-414-materializer[bot]'
-          git config user.email 'w33-pass410-414-materializer[bot]@users.noreply.github.com'
-          git add -f \
-            data/w33_pass410_prime_power_smith.json \
-            data/w33_pass411_qutrit_magic_injection.json \
-            data/w33_pass411_clifford_feedforward.json \
-            data/w33_pass412_multislip_sandpile_decoder.json \
-            data/w33_pass413_automorphism_twirl.json \
-            data/w33_pass413_twirl_schedule.json \
-            data/w33_pass414_independent_lab_packet.json \
-            data/w33_pass414_nonclaim_custody_fixture.json \
-            data/w33_pass414_empty_handoff_manifest.json
-          if ! git diff --cached --quiet; then
-            git commit -m 'Passes 410-414: freeze deterministic artifacts'
-            git push origin HEAD:${TARGET_BRANCH}
-          fi
       - name: Require zero artifact drift
         run: |
           git diff --exit-code -- \
@@ -103,3 +67,15 @@ jobs:
           python analysis/w33_pass412_multislip_sandpile_decoder.py --check
           python analysis/w33_pass413_automorphism_twirl.py --check
           python analysis/w33_pass414_independent_lab_packet.py --check
+      - name: Validate independent-lab manifests
+        run: |
+          python - <<'PY'
+          import json, jsonschema
+          schema=json.load(open('schemas/w33_pass414_independent_lab_handoff_v1.schema.json'))
+          for path in ['data/w33_pass414_nonclaim_custody_fixture.json','data/w33_pass414_empty_handoff_manifest.json']:
+              jsonschema.validate(json.load(open(path)),schema)
+          PY
+      - name: Run cross-pass regressions
+        run: python -m pytest -q tests/test_pass410_414_five_frontiers.py
+      - name: Verify live claims ledger
+        run: python scripts/check_claims_ledger.py

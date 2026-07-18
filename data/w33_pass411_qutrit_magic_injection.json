@@ -1,5 +1,5 @@
 {
-  "certificate_sha256": "724826cbd8a5c6c4ce660b9fd61ebfae407ae160089cde16c7369e53c0969f79",
+  "certificate_sha256": "ecf3a15b907930c4259da011f692f693237cfbb3089240c13ec76c1f2957ce79",
   "checks": {
     "Bell_outcomes_equiprobable": true,
     "T_conjugates_X_to_clifford": true,
@@ -61,8 +61,8 @@
   },
   "magic_state": {
     "definition": "|M_T>=T F|0>",
-    "maximum_single_qutrit_stabilizer_fidelity": 0.7123860142010862,
-    "stabilizer_infidelity_witness": 0.28761398579891384
+    "maximum_single_qutrit_stabilizer_fidelity": 0.7123860142010864,
+    "stabilizer_infidelity_witness": 0.2876139857989136
   },
   "non_clifford_gate": {
     "Pauli_conjugates": {
