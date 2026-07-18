@@ -14058,6 +14058,9 @@ bulk graph $=$ antipodal $3$-cover of $K_9$; fibers $=$ phase & \textsc{cert} & 
 cover law at $q=5$: $\{24,20,1;1,5,24\}$, fibers $=$ phase & \textsc{cert} & P393 & this programme \\
 $E_6$ geometry $=$ W33 geometry $+$ phase pairing (nesting) & \textsc{cert} & P393 & this programme \\
 Cayley set $S$ $=$ a section of the torsor projection & \textsc{cert} & P393 & this programme \\
+cover law proved, \emph{all} odd $q$ (perp-of-span) & \textsc{thm} & P394 & this programme \\
+$9/81$ sections are DRG; one $\mathrm{Aut}(H)$-orbit; stab $=$ GL$(2,3)$ & \textsc{cert} & P394 & this programme \\
+one similitude orients all directed pairs & \textsc{cert} & P394 & this programme \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -14098,5 +14101,30 @@ twelve from the rim's partition (valency $4$ versus $1$): same integer,
 different object, killed.  A standalone, arXiv-ready statement of the
 orientation obstruction is at
 \texttt{papers/a\_reflection\_group\_cannot\_orient\_itself.tex}.
+
+\paragraph{Pass 394 --- the cover law proved; the sections classified; one
+similitude orients everything.}
+The two verified rungs of the cover law (Passes 392/393) become a theorem for
+\emph{all} odd $q$ by a perp-of-span argument: for a central elation $z$,
+$L(x,zx)=L(x,p_0)$, so \emph{all} $q{+}1$ common neighbours of fiber-mates lie
+in the rim (fibers antipodal); for cross pairs $p_0\notin L(x,y)$, so the
+hyperbolic line $L(x,y)^\perp$ meets $p_0^\perp$ in exactly one point
+($c_2=q$); for collinear pairs the totally isotropic span is self-perp, giving
+$\lambda=q-2$; and $c_3=q^2-1$ follows from L1.  Each lemma is
+machine-verified at $q=3,5$ and the $q=7$ rung confirmed as a corollary
+(shells $1+48+288+6$).  The Cayley sections are then \emph{classified by
+exhaustion}: of the $81$ inverse-closed sections of $(H/Z)\setminus\{0\}$,
+exactly \textbf{nine} give the distance-regular cover; they form a single
+orbit under the $432$-element $\operatorname{Aut}(H)$ with stabilizer of
+order $48=|\mathrm{GL}(2,3)|$ (the Levi), and the GQ's own elation section is
+the flat one in elation coordinates.  (The draft predicted the flat section
+would fail, from a hand computation that confused $\lambda$ with $c_2$; the
+machine refuted it, and the confession is preserved in the witness.)
+Finally, the one-bit orientation: the similitude $\mathrm{diag}(1,1,2,2)$
+(non-square factor, fixing $p_0$) preserves the native graph while
+conjugating $z\mapsto z^2$ --- simultaneously swapping the phase arrows and
+the directed $8$-pair of Pass 393's orbital menu.  All directed structure of
+the register cell hangs on the square-class bit of $\FF_q^\times$, the same
+unselectable orientation of Pass 346.
 
 \end{document}

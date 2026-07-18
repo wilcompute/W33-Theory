@@ -1,0 +1,38 @@
+{
+  "schema": "w33.pass394.cover_law_proof_and_sections.v1",
+  "status": "PASS",
+  "HEADLINE": "THE COVER LAW IS A THEOREM for all odd q -- four perp-of-span lemmas (fibers antipodal; c2 = q with the 1-rim/q-bulk split; lambda = q-2 from the self-perp isotropic line; c3 = q^2-1), each verified at q=3 and q=5, with the q=7 rung confirmed as a corollary by its 1+48+288+6 shells. THE SECTIONS ARE CLASSIFIED by exhaustion: of the 81 inverse-closed sections, 9 give the distance-regular cover, they form a SINGLE orbit under the 432-element Aut(H), the GQ's own elation section is one of them -- and the GQ's own section is FLAT in elation coordinates -- the draft's contrary prediction died of a lambda/c2 confusion, confessed in the source. Stabilizer order 48 = GL(2,3), the Levi. AND ONE SIMILITUDE ORIENTS EVERYTHING: diag(1,1,2,2), the non-square similitude fixing p0, preserves the native graph while conjugating z to z^2 -- swapping the phase arrows (and with them every directed pair of the orbital menu). All directed structure of the register cell hangs on the one square-class bit that Pass 346 proved unselectable.",
+  "n_drg_sections": 9,
+  "gq_section_offsets": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "checks": {
+    "q3_L1_fiber_common_nbrs_all_rim": true,
+    "q3_L2_c2_split_1_rim_q_bulk": true,
+    "q3_L3_lambda_q_minus_2": true,
+    "q5_L1_fiber_common_nbrs_all_rim": true,
+    "q5_L2_c2_split_1_rim_q_bulk": true,
+    "q5_L3_lambda_q_minus_2": true,
+    "proof_lemmas_hold_q3_q5": true,
+    "q7_bulk_343": true,
+    "q7_shells_1_48_288_6": true,
+    "THEOREM_all_odd_q": true,
+    "four_coset_pairs": true,
+    "flat_section_IS_drg": true,
+    "draft_prediction_refuted_lambda_vs_c2_confusion": true,
+    "nine_of_81_sections_are_drg": true,
+    "stabilizer_order_48_gl23": true,
+    "aut_H_count_432": true,
+    "gq_section_well_defined": true,
+    "gq_section_is_drg": true,
+    "drg_sections_single_aut_orbit": true,
+    "similitude_factor_2_nonsquare": true,
+    "similitude_fixes_p0": true,
+    "similitude_swaps_phase_arrows": true,
+    "similitude_preserves_native_graph": true,
+    "one_bit_orients_everything": true
+  }
+}
