@@ -1,0 +1,65 @@
+{
+  "schema": "w33.pass447.spectral_census_twisted_fingerprint.v1",
+  "status": "PASS",
+  "HEADLINE": "THE q=5 SPECTRAL CENSUS: 400 random sections produced 396 distinct spectra (MANY spectral classes (near-injective)); 0 flat-cospectral hits. The twisted-field atlas over the sampled spectra has squarefree kernels [5] (sampled lower bound). THE EXP-9 WEIL FINGERPRINT is computed for both faithful irreps of the modular group (homomorphism verified on the full 27x27 table) and REBUILDS the SRG spectrum {10, 1^20, (-5)^6} from representation data alone -- the computable handle the deferred exp-3/exp-9 vs twisted-FS question needed, now recorded beside Pass 432's Heisenberg fingerprint.",
+  "census": {
+    "samples": 400,
+    "distinct_spectra": 396,
+    "flat_cospectral_hits": 0,
+    "collision_profile": {
+      "1": 392,
+      "2": 4
+    },
+    "regime": "MANY spectral classes (near-injective)"
+  },
+  "field_atlas_kernels": {
+    "5": 7
+  },
+  "exp9_fingerprints": {
+    "irrep_pow1": [
+      [
+        -5.0,
+        0.0
+      ],
+      [
+        1.0,
+        -0.0
+      ],
+      [
+        1.0,
+        -0.0
+      ]
+    ],
+    "irrep_pow2": [
+      [
+        -5.0,
+        0.0
+      ],
+      [
+        1.0,
+        -0.0
+      ],
+      [
+        1.0,
+        -0.0
+      ]
+    ]
+  },
+  "heisenberg_fingerprint_ref": "data/w33_pass432_*.json",
+  "checks": {
+    "census_ran": true,
+    "distinct_spectra_recorded": true,
+    "regime_recorded_not_predicted": true,
+    "field_atlas_computed": true,
+    "q3_kernel_was_5": true,
+    "exp9_R_recovered": true,
+    "exp9_xy_coordinates_cover": true,
+    "exp9_conjugation_exponent_4_or_7": true,
+    "exp9_coord_is_isomorphism": true,
+    "exp9_irrep1_homomorphism_full_table": true,
+    "exp9_irrep2_homomorphism_full_table": true,
+    "exp9_fingerprint_computed": true,
+    "exp9_fingerprint_rebuilds_srg_spectrum": true,
+    "heisenberg_fingerprint_loaded": true
+  }
+}

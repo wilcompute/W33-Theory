@@ -62,8 +62,16 @@ focused regressions, and compiles the Lean package in a separate pinned job.
    in Lean, upgrading the Pass 441 algebraic kernel into an end-to-end proof.
 3. Replace the synthetic Pass 442 transfer kernel by a measured optical transfer
    matrix and execute the preregistered blind hardware holdout unchanged.
-4. Lift the section-curl/orbit/Smith classification from q=3 to q=5 using
-   cohomology and orbit reduction rather than enumerating the raw section space.
+4. ~~Lift the section-curl/orbit/Smith classification from q=3 to q=5.~~
+   **RESOLVED-NEGATIVE by Passes 446-447**: exact affine Burnside gives
+   20,592 Aut-orbits (validated at q=3 -> 2); the action is nearly free
+   (counting floor 20,345), so orbit classification is vacuous at q>=5 -- AND
+   the spectral census (400 samples -> 396 distinct spectra) shows invariant
+   VALUES are near-injective too. The q=3 flat/curved dichotomy is a
+   small-numbers accident in both senses. Replacement gate: explain the
+   sampled field atlas -- every quadratically-paired irrational eigenvalue
+   across 396 sampled q=5 spectra lies in Q(sqrt5), the SAME field as the q=3
+   curved class. Why sqrt5, uniformly, at two rungs?
 5. Extend the Hjelmslev conductor dictionary to length n≥3 and compare its
    filtration with affine-building and Bruhat–Tits residue layers.
 
