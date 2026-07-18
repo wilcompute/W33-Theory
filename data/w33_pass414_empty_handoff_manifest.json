@@ -1,0 +1,88 @@
+{
+  "artifacts": {
+    "accepted_bom": {
+      "path": null,
+      "sha256": null,
+      "signature_envelope": null
+    },
+    "blind_key": {
+      "path": null,
+      "sha256": null,
+      "signature_envelope": null
+    },
+    "blinded_analysis": {
+      "path": null,
+      "sha256": null,
+      "signature_envelope": null
+    },
+    "blinded_raw_counts": {
+      "path": null,
+      "sha256": null,
+      "signature_envelope": null
+    },
+    "calibration_certificate": {
+      "path": null,
+      "sha256": null,
+      "signature_envelope": null
+    },
+    "frozen_protocol": {
+      "path": null,
+      "sha256": null,
+      "signature_envelope": null
+    },
+    "independent_audit": {
+      "path": null,
+      "sha256": null,
+      "signature_envelope": null
+    },
+    "unblinded_result": {
+      "path": null,
+      "sha256": null,
+      "signature_envelope": null
+    }
+  },
+  "claim_eligible": false,
+  "claim_mode": "physical_production",
+  "device_id": null,
+  "physical_experiment_completed": false,
+  "roles": {
+    "acquisition_lab": {
+      "contact": null,
+      "organization": null,
+      "public_key_ed25519_base64": null
+    },
+    "blind_key_custodian": {
+      "contact": null,
+      "organization": null,
+      "public_key_ed25519_base64": null
+    },
+    "blinded_analyst": {
+      "contact": null,
+      "organization": null,
+      "public_key_ed25519_base64": null
+    },
+    "independent_auditor": {
+      "contact": null,
+      "organization": null,
+      "public_key_ed25519_base64": null
+    },
+    "protocol_owner": {
+      "contact": null,
+      "organization": null,
+      "public_key_ed25519_base64": null
+    }
+  },
+  "schema": "w33.pass414.independent-lab-handoff.v1",
+  "study_id": null,
+  "template_sha256": "2194dd559b850b3abb0f59f88919772f5a6aaf4b6512d3c24c95a6e993299c64",
+  "timestamps": {
+    "acquisition_completed_at": null,
+    "acquisition_started_at": null,
+    "analysis_completed_at": null,
+    "audit_completed_at": null,
+    "bom_accepted_at": null,
+    "calibrated_at": null,
+    "key_revealed_at": null,
+    "protocol_frozen_at": null
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "algorithm": {
+    "bockstein_recurrence": "extract every unit pivot over Z/(p^K), delete its row and column, divide the residual p-divisible block by p, and repeat",
+    "exactness": "each stage is Smith-equivalent over Z_p; the number of pivots at stage k is the number of invariant factors of exact p-adic valuation k",
+    "field_model": "polynomial-basis F_p[u]/(m(u))",
+    "graph": "vertices (x,y,z) in F_q^3; adjacency z'-z=y*x'-x*y'"
+  },
+  "certificate_sha256": "9820e5bc70c06fe15a8f3c31b77acc95ddd8a4f45a3165dbec8dc1ad7a03deb4",
+  "checks": {
+    "gf3_valid": true,
+    "gf5_valid": true,
+    "gf9_valid": true,
+    "q3_recovers_pass405": true,
+    "q5_recovers_pass405": true,
+    "q9_characteristic_valuation_1610": true,
+    "q9_exact_sequence": true,
+    "q9_full_primary_reconstructs_tree_order": true,
+    "q9_no_3_to_the_5_factors": true,
+    "q9_top_characteristic_layer_has_q2_minus_2": true,
+    "q9_tree_factorization": true
+  },
+  "instances": {
+    "3": {
+      "exact_p_adic_valuation_counts_including_units": {
+        "0": 10,
+        "1": 8,
+        "2": 1,
+        "3": 7
+      },
+      "extension_degree": 1,
+      "matches_frozen_sequence": true,
+      "p": 3,
+      "p_adic_tree_order_valuation": 31,
+      "p_primary_elementary_divisors": {
+        "27": 7,
+        "3": 8,
+        "9": 1
+      },
+      "q": 3,
+      "reduced_laplacian_size": 26,
+      "unit_invariant_factors": 10,
+      "vertices": 27
+    },
+    "5": {
+      "exact_p_adic_valuation_counts_including_units": {
+        "0": 35,
+        "1": 56,
+        "2": 10,
+        "3": 23
+      },
+      "extension_degree": 1,
+      "matches_frozen_sequence": true,
+      "p": 5,
+      "p_adic_tree_order_valuation": 145,
+      "p_primary_elementary_divisors": {
+        "125": 23,
+        "25": 10,
+        "5": 56
+      },
+      "q": 5,
+      "reduced_laplacian_size": 124,
+      "unit_invariant_factors": 35,
+      "vertices": 125
+    },
+    "9": {
+      "exact_p_adic_valuation_counts_including_units": {
+        "0": 100,
+        "1": 128,
+        "2": 292,
+        "3": 92,
+        "4": 37,
+        "6": 79
+      },
+      "extension_degree": 2,
+      "matches_frozen_sequence": true,
+      "p": 3,
+      "p_adic_tree_order_valuation": 1610,
+      "p_primary_elementary_divisors": {
+        "27": 92,
+        "3": 128,
+        "729": 79,
+        "81": 37,
+        "9": 292
+      },
+      "q": 9,
+      "reduced_laplacian_size": 728,
+      "unit_invariant_factors": 100,
+      "vertices": 729
+    }
+  },
+  "new_structural_observations": {
+    "missing_middle_layer": "the characteristic-primary Smith form contains no 3^5 elementary divisors",
+    "top_layer": "all q^2-2=79 trivial-central classes appear at 3^(3f)=3^6",
+    "unit_count_jump": "q=9 has 100 p-adic unit invariant factors, not the naive normalization count 25"
+  },
+  "q9_closed_form": "(Z/8)^72 + (Z/16)^288 + (Z/3)^128 + (Z/9)^292 + (Z/27)^92 + (Z/81)^37 + (Z/729)^79 + (Z/5)^288",
+  "q9_complete_critical_group_primary_decomposition": {
+    "2": {
+      "16": 288,
+      "8": 72
+    },
+    "3": {
+      "27": 92,
+      "3": 128,
+      "729": 79,
+      "81": 37,
+      "9": 292
+    },
+    "5": {
+      "5": 288
+    }
+  },
+  "q9_tree_order": {
+    "decimal_digits": 1382,
+    "prime_factorization": {
+      "2": 1368,
+      "3": 1610,
+      "5": 288
+    },
+    "sha256": "82bf68995a19a4b94749af1ac2214c20da4a5224c90f73b38f656527cd15071b"
+  },
+  "schema": "w33.pass410.prime_power_smith.v1",
+  "scope": {
+    "algorithmic_theorem": "for every explicitly represented odd prime power, unit-pivot elimination over Z/p^K computes exact characteristic-primary elementary divisors without integer SNF coefficient explosion",
+    "closed_instance": "complete Smith primary decomposition for the first non-prime field q=9",
+    "remaining_boundary": "a closed multiplicity formula for every extension degree f is not asserted"
+  },
+  "status": "PASS"
+}

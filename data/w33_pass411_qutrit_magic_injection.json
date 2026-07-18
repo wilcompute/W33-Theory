@@ -1,0 +1,87 @@
+{
+  "certificate_sha256": "724826cbd8a5c6c4ce660b9fd61ebfae407ae160089cde16c7369e53c0969f79",
+  "checks": {
+    "Bell_outcomes_equiprobable": true,
+    "T_conjugates_X_to_clifford": true,
+    "T_conjugates_Z_to_clifford": true,
+    "T_is_not_clifford": true,
+    "T_is_third_level": true,
+    "T_projective_order_nine": true,
+    "all_nine_Bell_outcomes_have_Clifford_feedforward": true,
+    "clifford_group_order_216": true,
+    "five_qutrit_bound_is_cubic": true,
+    "leakage_budget_example_below_5e_minus_5": true,
+    "magic_state_is_nonstabilizer": true,
+    "one_percent_contracts": true
+  },
+  "five_qutrit_distance_three_postselection_budget": {
+    "assumption": "all weight-one and weight-two input faults are detected; no-error input is accepted",
+    "claim_boundary": "This is an exact distance-three combinatorial upper bound, not the protocol-specific nonlinear distillation map of a selected stabilizer code.",
+    "conditional_logical_error_upper_bound": "[10 e^3(1-e)^2 + 5 e^4(1-e) + e^5]/(1-e)^5",
+    "contraction_threshold_upper_bound_model": 0.20862199378967533,
+    "examples": {
+      "0.001": 1.0035081155265422e-08,
+      "0.01": 1.0358257692639191e-05,
+      "0.05": 0.0014967091380433506,
+      "0.1": 0.014496435164016327
+    }
+  },
+  "gate_teleportation": {
+    "Bell_outcomes": 9,
+    "deterministic_after_feedforward": true,
+    "feedforward_path": "data/w33_pass411_clifford_feedforward.json",
+    "maximum_feedforward_word_length": 3,
+    "resource": "Choi magic pair (I tensor T)|Phi_3>"
+  },
+  "hardware_placement": {
+    "feedforward": "all nine corrections compile into the existing X,Z,F,P alphabet",
+    "location": "one fibre-local three-phase channel before the Pass-406 Clifford schedule or as a teleported Choi resource",
+    "phase_resolution_requirement": "resolve +/-2*pi/9 relative to the zero mode; tolerance remains an engineering input"
+  },
+  "leakage_budget": {
+    "bound": "1-(1-l(1-eta))^5",
+    "examples": [
+      {
+        "flag_efficiency": 0.99,
+        "input_leakage": 0.0001,
+        "undetected_round_bound": 4.999990000142951e-06
+      },
+      {
+        "flag_efficiency": 0.99,
+        "input_leakage": 0.001,
+        "undetected_round_bound": 4.999900000979274e-05
+      },
+      {
+        "flag_efficiency": 0.999,
+        "input_leakage": 0.001,
+        "undetected_round_bound": 4.999990000142951e-06
+      }
+    ],
+    "model": "each of five inputs leaks independently with rate l; a leakage flag fires with efficiency eta; any undetected leakage is conservatively counted as logical failure"
+  },
+  "magic_state": {
+    "definition": "|M_T>=T F|0>",
+    "maximum_single_qutrit_stabilizer_fidelity": 0.7123860142010862,
+    "stabilizer_infidelity_witness": 0.28761398579891384
+  },
+  "non_clifford_gate": {
+    "Pauli_conjugates": {
+      "X": {
+        "clifford_word": "PPX"
+      },
+      "Z": {
+        "clifford_word": "Z"
+      }
+    },
+    "clifford_hierarchy_level": 3,
+    "definition": "T=diag(1,zeta_9,zeta_9^-1)",
+    "physical_phase_vector_radians": [
+      0.0,
+      0.6981317007977318,
+      -0.6981317007977318
+    ],
+    "projective_order": 9
+  },
+  "schema": "w33.pass411.qutrit_magic_injection.v1",
+  "status": "PASS"
+}

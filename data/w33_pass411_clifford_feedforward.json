@@ -1,0 +1,98 @@
+{
+  "certificate_sha256": "2d0d7866d13cb38612dc1cc9d3a88245a148bc57547833b676aee9bf9d709fa7",
+  "entries": [
+    {
+      "bell_outcome": [
+        0,
+        0
+      ],
+      "corrected_operator_error": 7.850462293418876e-17,
+      "correction_word": "I",
+      "kraus_probability": 0.11111111111111117,
+      "projective_scalar_magnitude": 0.3333333333333335
+    },
+    {
+      "bell_outcome": [
+        0,
+        1
+      ],
+      "corrected_operator_error": 1.3877787807814457e-16,
+      "correction_word": "Z",
+      "kraus_probability": 0.11111111111111117,
+      "projective_scalar_magnitude": 0.3333333333333335
+    },
+    {
+      "bell_outcome": [
+        0,
+        2
+      ],
+      "corrected_operator_error": 1.5700924586837752e-16,
+      "correction_word": "ZZ",
+      "kraus_probability": 0.11111111111111116,
+      "projective_scalar_magnitude": 0.3333333333333335
+    },
+    {
+      "bell_outcome": [
+        1,
+        0
+      ],
+      "corrected_operator_error": 6.938893903907228e-17,
+      "correction_word": "XXP",
+      "kraus_probability": 0.11111111111111117,
+      "projective_scalar_magnitude": 0.3333333333333334
+    },
+    {
+      "bell_outcome": [
+        1,
+        1
+      ],
+      "corrected_operator_error": 1.6711069443220838e-16,
+      "correction_word": "XPX",
+      "kraus_probability": 0.11111111111111116,
+      "projective_scalar_magnitude": 0.3333333333333334
+    },
+    {
+      "bell_outcome": [
+        1,
+        2
+      ],
+      "corrected_operator_error": 1.844037074778884e-16,
+      "correction_word": "PXX",
+      "kraus_probability": 0.11111111111111116,
+      "projective_scalar_magnitude": 0.3333333333333334
+    },
+    {
+      "bell_outcome": [
+        2,
+        0
+      ],
+      "corrected_operator_error": 1.6711069443220838e-16,
+      "correction_word": "PPX",
+      "kraus_probability": 0.11111111111111117,
+      "projective_scalar_magnitude": 0.3333333333333335
+    },
+    {
+      "bell_outcome": [
+        2,
+        1
+      ],
+      "corrected_operator_error": 1.8875832159447664e-16,
+      "correction_word": "XPP",
+      "kraus_probability": 0.11111111111111116,
+      "projective_scalar_magnitude": 0.3333333333333334
+    },
+    {
+      "bell_outcome": [
+        2,
+        2
+      ],
+      "corrected_operator_error": 1.6883057536160646e-16,
+      "correction_word": "PXP",
+      "kraus_probability": 0.11111111111111116,
+      "projective_scalar_magnitude": 0.3333333333333334
+    }
+  ],
+  "measurement": "generalized Bell basis (I tensor X^a Z^b)|Phi_3>",
+  "resource": "(I tensor T)|Phi_3>, T=diag(1,zeta_9,zeta_9^-1)",
+  "schema": "w33.pass411.clifford_feedforward.v1"
+}
