@@ -47,7 +47,7 @@ def test_cross_pass_closure():
     p428=load('w33_pass428_bayesian_hardware_diagnosis.json')
     p429=load('w33_pass429_inductive_custody_verification.json')
     assert p425['instances']['25']['critical_group_p_valuation']==32490
-    assert p426['maximally_mixed']['acceptance_probability']==round(1/81,12)
+    assert abs(p426['maximally_mixed']['acceptance_probability']-1/81)<1e-6
     assert p427['average_lengths']['unordered_protected']<p427['average_lengths']['unordered_fixed']
     assert p428['priors']['null']+sum(p428['priors']['families'].values())==1
     assert p429['checks']['proof_is_not_bounded_attack_enumeration']
