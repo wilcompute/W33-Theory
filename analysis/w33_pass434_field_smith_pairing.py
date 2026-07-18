@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Pass 434: exact field-sensitive 2-adic Smith pairing certificate.
 
-Certified fields: GF(3), GF(5), GF(7), GF(9), GF(11). The q=7 run closes
-Pass 433's v1.2 gate. Z/9Z is retained as a negative control. The finite
+Certified fields: GF(3), GF(5), GF(7), GF(9), GF(11).  The q=7 run closes
+Pass 433's v1.2 gate.  Z/9Z is retained as a negative control.  The finite
 cases are theorems; the all-odd-prime-power shape remains a conjecture.
 """
 from __future__ import annotations
@@ -119,7 +119,7 @@ def certify(q:int,model:str)->dict:
 
 
 def main()->int:
-    ap=argparse.ArgumentParser(); ap.add_argument('--extended',action='store_true'); ap.add_argument('--output',type=Path,default=OUT); a=ap.parse_args()
+    ap=argparse.ArgumentParser(); ap.add_argument('--extended',action='store_true'); ap.add_argument('--check',action='store_true'); ap.add_argument('--output',type=Path,default=OUT); a=ap.parse_args()
     cases=[(3,'prime'),(5,'prime'),(7,'prime'),(9,'gf9')]+([(11,'prime')] if a.extended else [])
     fields=[certify(q,m) for q,m in cases]; ring=certify(9,'zmod')
     ring_shape=Counter({int(k.split('^')[1]):v for k,v in ring['two_primary_shape'].items()})
@@ -134,7 +134,12 @@ def main()->int:
         'schema':'w33.pass434.field_smith_pairing.v1','status':'PASS' if all(checks.values()) else 'FAIL',
         'headline':'q=7 closes exactly as Z_2^42 x Z_16^126; GF(3), GF(5), GF(7), GF(9), GF(11) obey one spectral-to-Smith pairing law, while Z/9Z does not.',
         'field_results':fields,'zmod9_control':ring,'checks':checks}
-    a.output.parent.mkdir(parents=True,exist_ok=True); a.output.write_text(json.dumps(payload,indent=2)+'\n')
+    serialized=json.dumps(payload,indent=2)+'\n'
+    if a.check:
+        if not a.output.exists() or a.output.read_text()!=serialized:
+            print(json.dumps({'status':'FAIL','reason':'certificate mismatch','output':str(a.output)})); return 1
+    else:
+        a.output.parent.mkdir(parents=True,exist_ok=True); a.output.write_text(serialized)
     print(json.dumps({'status':payload['status'],'cases':[(r['q'],r['field_model'],r['two_primary_shape']) for r in fields],'zmod9':ring['two_primary_shape'],'checks':checks}))
     return 0 if payload['status']=='PASS' else 1
 
