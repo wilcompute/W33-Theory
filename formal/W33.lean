@@ -3,3 +3,4 @@ import W33.FourierBlocks
 import W33.HeisenbergQ3
 import W33.ShadowDichotomy
 import W33.RankLaw
+import W33.Pass441SmithPairing
