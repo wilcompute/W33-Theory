@@ -102,6 +102,17 @@ commit. That is the whole protocol.
 commit owns it and the later one cites it. Check with
 `git log --diff-filter=A --format='%ad %h' --date=short -1 -- <file>`, not memory.
 
+**Pass-number reservation (added after three renumbers in one day — 387→391→392).**
+Claim the number BEFORE computing, not after: push an empty commit
+`git commit --allow-empty -m "Pass NNN reserved: <topic> (<track>)"` as your
+FIRST action on a new pass, where NNN = 1 + the highest number visible on
+`origin/master` (check commit subjects AND `analysis/` filenames). If the push
+is rejected, someone else claimed it — fetch, take the next number, push again.
+The reservation costs one empty commit; a collision costs a renumber, a
+force-of-habit rebase race, and (measured once) a silently wrong ledger row.
+Work may follow in the same session or later; an unused reservation is released
+by a follow-up empty commit "Pass NNN released".
+
 ## Batch intake (remote/GitHub batches — run the guard BEFORE accepting claims)
 
 A third contribution stream now submits batched claims. The July 15 batch

@@ -10,54 +10,54 @@
 This project uses Continuity to keep repo-local decisions and session context available through MCP and generated instruction files. Prefer MCP when connected; otherwise fall back to the repo files.
 
 ## Project Context
-- **Total Decisions:** 4566
-- **Known Topics:** needs-review, auto-draft, why, w33, testing, toe, architecture, docs, holonet, photonic, qec, audit, github, selector, gap
+- **Total Decisions:** 4421
+- **Known Topics:** needs-review, auto-draft, why, w33, testing, toe, architecture, holonet, docs, photonic, audit, qec, github, selector, tomotope
 
 ## Current State
 **Branch:** master
 
 **Recent Commits:**
-- `414c4304f Pass 368: the Eisenstein rank-parity law — one line under the whole QR tower — and both papers updated`
-- `90a9e3e3b Passes 363-367: encode the QR Clifford refinement tower`
-- `948803522 Pass 362: separate the real Clifford K4,4 and F4 shadows`
-- `0742dc14b Pass 361: prove the QR Clifford maximality boundary`
-- `fb47f6c66 Pass 360: exact affine logical Hadamard and PSL/PGL closure`
+- `ccc718195 Add the three P393 ledger rows that the previous commit's message claimed but a silently-failing heredoc omitted; ledger verified green (31 rows) and spine test green`
+- `3be6f436f Pass 393: the cover is a LAW of the tower, the E6 geometry CONTAINS the W33 geometry, and the Cayley set is a section`
+- `d87a037d6 Pass 389: enforce Pass 387-391 release gates in CI`
+- `ddc94209d Passes 387-391: document duality, CSS, photonic, and prediction release`
+- `f1fc09f1b Passes 387-391: add release regressions`
 
 **Working Tree:**
 - M .continuity/INSTRUCTIONS.md
 - M .continuity/SESSION_NOTES.md
 - M .cursorrules
 - M .github/copilot-instructions.md
-- M .github/workflows/bt1094-tex-check.yml
-- M .github/workflows/ci.yml
-- M .github/workflows/holonet-build.yml
-- M .github/workflows/pytest.yml
 - M AGENTS.md
 - M CLAUDE.md
 - M GEMINI.md
-- M README.md
-- M W33_FOR_EVERYONE.tex
-- M analysis/build_results_index.py
-- M analysis/w33_ihara_zeta.py
+- ?? .continuity/.gitattributes
+- ?? .continuity/decisions.json
+- ?? .continuity/decisions.jsonl
+- ?? BT359_twist_results.json
+- ?? E8
+- ?? PART_BT367_E6_HOLONOMY_BRIDGE.md
+- ?? PART_CCLIX_susy_results.json
+- ?? PART_CCLVIII_qcd_results.json
 
 ## Working Memory Snapshot
 **Mode:** degraded-fallback
-**Generated At:** 2026-07-17T14:11:21.664Z
-**Startup Summary:** mode=degraded-fallback | decisions=4565 | lastTask=2026-06-05 current goal: refresh origin/master, absorb the BT285-BT317 remote batch, and continue the selector/hypercube theory with a scoped verified packet. | next=Recent commits: | branch=master | health=MCP server disconnected. | fallback-files=12
-**Decision Count:** 4565
+**Generated At:** 2026-07-18T16:04:42.742Z
+**Startup Summary:** mode=degraded-fallback | decisions=4421 | lastTask=2026-06-05 current goal: refresh origin/master, absorb the BT285-BT317 remote batch, and continue the selector/hypercube theory with a scoped verified packet. | next=Recent commits: | branch=master | health=MCP server disconnected. | fallback-files=12
+**Decision Count:** 4421
 **Fallback Chain:** AGENTS.md, CLAUDE.md, GEMINI.md, .cursorrules, .github/copilot-instructions.md, .continuity/INSTRUCTIONS.md, .continuity/SESSION_NOTES.md, .continuity/mcp-health.json, .continuity/unfinished-task.json, .continuity/working-memory.json, SESSION_HANDOFF.md, .continuity/decisions.json
 
 ## Workspace MCP Self-Test
 **Status:** Ready
-**Last Checked:** 2026-07-17T12:11:29.057Z
+**Last Checked:** 2026-07-18T16:04:43.752Z
 **Summary:** No MCP summary recorded.
 
 ## Resume Snapshot
 **Last Task:** 2026-06-05 current goal: refresh origin/master, absorb the BT285-BT317 remote batch, and continue the selector/hypercube theory with a scoped verified packet.
-**Last Completed Milestone:** Auto-saved at 2026-07-17T13:41:21.728Z (reason: timer)
+**Last Completed Milestone:** Auto-saved at 2026-07-18T15:59:32.564Z (reason: startup)
 **Next Expected Step:** Recent commits:
 **Last Successful Tool Call:** log_decision @ 2026-07-03T21:11:53.588Z
-**Relevant Files:** .continuity/SESSION_NOTES.md, .cursorrules, .github/copilot-instructions.md, .github/workflows/bt1094-tex-check.yml, .github/workflows/ci.yml, .github/workflows/holonet-build.yml
+**Relevant Files:** .devcontainer\devcontainer.json, .continuity/SESSION_NOTES.md, .cursorrules, .github/copilot-instructions.md, AGENTS.md, CLAUDE.md
 
 ## Workflow
 
@@ -256,6 +256,17 @@ commit. That is the whole protocol.
 commit owns it and the later one cites it. Check with
 `git log --diff-filter=A --format='%ad %h' --date=short -1 -- <file>`, not memory.
 
+**Pass-number reservation (added after three renumbers in one day — 387→391→392).**
+Claim the number BEFORE computing, not after: push an empty commit
+`git commit --allow-empty -m "Pass NNN reserved: <topic> (<track>)"` as your
+FIRST action on a new pass, where NNN = 1 + the highest number visible on
+`origin/master` (check commit subjects AND `analysis/` filenames). If the push
+is rejected, someone else claimed it — fetch, take the next number, push again.
+The reservation costs one empty commit; a collision costs a renumber, a
+force-of-habit rebase race, and (measured once) a silently wrong ledger row.
+Work may follow in the same session or later; an unused reservation is released
+by a follow-up empty commit "Pass NNN released".
+
 ## Batch intake (remote/GitHub batches — run the guard BEFORE accepting claims)
 
 A third contribution stream now submits batched claims. The July 15 batch
@@ -277,13 +288,13 @@ after commit:
 
 
 ## Recent Decisions
-1. **decision-6e18db2a** (7/17/2026) [why, go]
-   - Q: Why does one parity law underlie the QR tower's exceptional boundary, and wha...
-   - A: Pass 368: over F4 every nonzero element cubes to 1, so a traced rank-n Hermit...
+1. **decision-17843222** (7/17/2026) [auto-draft, needs-review]
+   - Q: Why: Add the three P393 ledger rows that the previous commit's message claime...
+   - A: (Auto-drafted from commit ccc7181 on 2026-07-17.) Please review and expand wi...
 
-2. **decision-17841505** (7/15/2026) [auto-draft, needs-review]
-   - Q: Why: Pass 326 + paper attribution + rediscovery guard: the last survivors are...
-   - A: (Auto-drafted from commit f6a5baf on 2026-07-15.) Please review and expand wi...
+2. **decision-b6f8c717** (7/5/2026) [why, ci]
+   - Q: Why add a pytest harness for the GAP Pass 63 certificate?
+   - A: Added tests/test_pass63_gap_hilbert_transport.py so CI can run gap -q analysi...
 
 3. **decision-3587a7a6** (7/1/2026) [architecture, e6]
    - Q: What is the mathematical identity of the 120-sheet Holonet selector and its r...
@@ -335,6 +346,6 @@ after commit:
 
 ---
 
-*Auto-generated by Continuity CLI | Updated: 2026-07-17*
+*Auto-generated by Continuity CLI | Updated: 2026-07-18*
 
 <!-- END CONTINUITY AUTO-GENERATED CONTENT -->
