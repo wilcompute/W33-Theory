@@ -66,7 +66,7 @@ def build_payload()->dict:
 
 def main()->int:
     ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');ap.add_argument('--output',type=Path,default=OUT);a=ap.parse_args()
-    p=build_payload();text=json.dumps(p,indent=2,sort_keys=True)+'\n'
+    p=build_payload();text=json.dumps(p,sort_keys=True,separators=(',',':'))+'\n'
     if a.check:
         if not a.output.exists() or a.output.read_text()!=text:raise SystemExit('Pass 435 certificate drift')
     else:a.output.parent.mkdir(parents=True,exist_ok=True);a.output.write_text(text)
