@@ -1,0 +1,33 @@
+{
+  "schema": "w33.pass436.polhill_full_table_audit.v1",
+  "status": "PASS",
+  "source": {
+    "title": "Genuinely nonabelian partial difference sets",
+    "authors": ["John Polhill", "James A. Davis", "Ken W. Smith", "Eric Swartz"],
+    "journal": "Journal of Combinatorial Designs 32 (2024), 351-370",
+    "doi": "10.1002/jcd.21938",
+    "arxiv": "2306.00140"
+  },
+  "findings": {
+    "exact_parameter_family_present": true,
+    "odd_q_abelian_nonexistence_present_as_corollary_4_7": true,
+    "heisenberg_construction_all_odd_prime_powers_present": true,
+    "q3_27_10_1_5_example_explicit": true,
+    "schlafli_complement_identification_present": true,
+    "family_novelty_claim_rejected": true,
+    "kantor_1986_attribution_recorded": true
+  },
+  "surviving_project_boundary": [
+    "W(3,q) antipodal bulk cover and exact fiber-pairing recovery",
+    "q=3 linear section orbit classification",
+    "integral prime-to-characteristic Smith theorem",
+    "complete Smith weld",
+    "finite-field versus residue-ring conductor atlas",
+    "torsion-sensitive photonic falsifier"
+  ],
+  "checks": {
+    "paper_note_requires_correction": true,
+    "v1_2_final_gate_closed": true,
+    "no_priority_claim_for_pds_family": true
+  }
+}
