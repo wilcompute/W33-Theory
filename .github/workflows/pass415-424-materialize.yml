@@ -159,22 +159,26 @@ jobs:
           PY
       - name: Install pinned dependencies
         run: python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 networkx==3.6.1 cryptography==46.0.4 pytest==9.0.2 jsonschema==4.26.0
-      - name: Validate ten witnesses
-        run: |
-          for pass_name in \
-            415_frobenius_smith_packets \
-            416_qutrit_distillation_search \
-            417_divisor_cycle_hybrid_decoder \
-            418_twirl_breaking_spectroscopy \
-            419_adversarial_replication \
-            420_integral_conductor_gluing \
-            421_qutrit_phase_portrait \
-            422_telemetry_coding_theorem \
-            423_hardware_inverse_compiler \
-            424_custody_model_checker
-          do
-            python "analysis/w33_pass${pass_name}.py" --check
-          done
+      - name: Validate Pass 415
+        run: python analysis/w33_pass415_frobenius_smith_packets.py --check
+      - name: Validate Pass 416
+        run: python analysis/w33_pass416_qutrit_distillation_search.py --check
+      - name: Validate Pass 417
+        run: python analysis/w33_pass417_divisor_cycle_hybrid_decoder.py --check
+      - name: Validate Pass 418
+        run: python analysis/w33_pass418_twirl_breaking_spectroscopy.py --check
+      - name: Validate Pass 419
+        run: python analysis/w33_pass419_adversarial_replication.py --check
+      - name: Validate Pass 420
+        run: python analysis/w33_pass420_integral_conductor_gluing.py --check
+      - name: Validate Pass 421
+        run: python analysis/w33_pass421_qutrit_phase_portrait.py --check
+      - name: Validate Pass 422
+        run: python analysis/w33_pass422_telemetry_coding_theorem.py --check
+      - name: Validate Pass 423
+        run: python analysis/w33_pass423_hardware_inverse_compiler.py --check
+      - name: Validate Pass 424
+        run: python analysis/w33_pass424_custody_model_checker.py --check
       - name: Validate tests, schema, and claims
         run: |
           python -m pytest -q tests/test_pass415_419_five_frontiers.py tests/test_pass420_424_five_frontiers.py
