@@ -12,6 +12,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: pass405-409-bootstrap
+  cancel-in-progress: false
+
 jobs:
   materialize:
     runs-on: ubuntu-latest
