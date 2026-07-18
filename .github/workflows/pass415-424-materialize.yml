@@ -170,7 +170,7 @@ jobs:
           rm -f .github/workflows/pass415-424-ten-frontiers.yml
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          xargs -d '\n' git add -- < /tmp/pass415424-nonworkflow.txt
+          xargs -d '\n' git add -f -- < /tmp/pass415424-nonworkflow.txt
           git diff --cached --name-only | sort > /tmp/staged.txt
           sort /tmp/pass415424-nonworkflow.txt > /tmp/expected.txt
           diff -u /tmp/expected.txt /tmp/staged.txt
