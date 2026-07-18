@@ -39,7 +39,17 @@
       "corrected_operator_error": 6.387867715049633e-17,
       "correction_word": "XXP",
       "kraus_probability": 0.11111111111111117,
-      "projective_scalar_magnitude": 0.333333333333333p¢ÒÀ¢°¢&&VÆÅö÷WF6öÖR#¢°¢À¢¢ÒÀ¢&6÷'&V7FVEö÷W&F÷%öW'&÷"#¢ãSs“#CSƒcƒ3ssS&RÓbÀ¢&6÷'&V7F–öå÷v÷&B#¢%…‚"À¢&·&W5÷&ö&&–Æ—G’#¢ãrÀ¢'&ö¦V7F—fU÷66Æ%öÖvæ—GVFR#¢ã333333333333337
+      "projective_scalar_magnitude": 0.33333333333333337
+    },
+    {
+      "bell_outcome": [
+        1,
+        1
+      ],
+      "corrected_operator_error": 1.5700924586837752e-16,
+      "correction_word": "XPX",
+      "kraus_probability": 0.11111111111111117,
+      "projective_scalar_magnitude": 0.33333333333333337
     },
     {
       "bell_outcome": [
@@ -69,4 +79,20 @@
       "corrected_operator_error": 2.0014830212433607e-16,
       "correction_word": "XPP",
       "kraus_probability": 0.11111111111111117,
-      "projective_scalar_magnitude": 0.333333333333333p¢ÒÀ¢°¢&&VÆÅö÷WF6öÖR#¢°¢"À¢ ¢ÒÀ¢&6÷'&V7FVEö÷W&F÷%öW'&÷"#¢ãc#C3S3CsSs†RÓbÀ¢&6÷'&V7F–öå÷v÷&B#¢%…"À¢&·&W5÷&ö&&–Æ—G’#¢ãbÀ¢'&ö¦V7F—fU÷66Æ%öÖvæ—GVFR#¢ã3333333333333333p¢Ð¢ÒÀ¢&ÖV7W&VÖVçB#¢&vVæW&Æ—¦VB&VÆÂ&6—2„’FVç6÷"…æ¥æ"—Å†•ó3â"À¢'&W6÷W&6R#¢"„’FVç6÷"B—Å†•ó3âÂCÖF–rƒÇ¦WFó’Ç¦WFó•âÓ’"À¢'66†VÖ#¢'s32ç73Cæ6Æ–ff÷&EöfVVFf÷'v&Bçc §Ð 
+      "projective_scalar_magnitude": 0.33333333333333337
+    },
+    {
+      "bell_outcome": [
+        2,
+        2
+      ],
+      "corrected_operator_error": 1.6243534171511178e-16,
+      "correction_word": "PXP",
+      "kraus_probability": 0.11111111111111116,
+      "projective_scalar_magnitude": 0.33333333333333337
+    }
+  ],
+  "measurement": "generalized Bell basis (I tensor X^a Z^b)|Phi_3>",
+  "resource": "(I tensor T)|Phi_3>, T=diag(1,zeta_9,zeta_9^-1)",
+  "schema": "w33.pass411.clifford_feedforward.v1"
+}
