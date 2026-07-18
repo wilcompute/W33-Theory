@@ -40,6 +40,6 @@ jobs:
           git config user.name 'w33-pass405-409-bootstrap[bot]'
           git config user.email 'w33-pass405-409-bootstrap[bot]@users.noreply.github.com'
           git rm analysis/w33_pass405_409_bootstrap.py .github/workflows/pass405-409-bootstrap.yml analysis/w33_pass405_409_payload_*.bin
-          git add analysis data schemas tests .github/workflows/pass405-409-five-frontiers.yml PASS405_409_FIVE_FRONTIERS_RELEASE.md
+          git add -f analysis data schemas tests .github/workflows/pass405-409-five-frontiers.yml PASS405_409_FIVE_FRONTIERS_RELEASE.md
           git commit -m 'Passes 405-409: materialize five-frontier release'
           git push origin HEAD:agent/pass405-409-five-frontiers
