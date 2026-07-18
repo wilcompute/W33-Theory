@@ -96,17 +96,25 @@ def certify(q:int,model:str)->dict:
     shape=Counter(e for e in vals if e>0); expected=expected_shape(q)
     mplus=q*(q*q-1)//2; mminus=q*(q-1)**2//2; residual=mplus-mminus
     total=sum(e*n for e,n in shape.items())
+    if model=='zmod':
+        A=(q*q-1)*np.eye(q**3)-L
+        actual=Counter(int(x) for x in np.rint(np.linalg.eigvalsh(A)).astype(int))
+        spectrum={str(k):v for k,v in sorted(actual.items(),reverse=True)}
+        tree_v2_from_spectrum=sum(v2((q*q-1)-lam)*mult for lam,mult in actual.items() if lam!=q*q-1)
+    else:
+        spectrum=spectrum_multiplicities(q)
+        tree_v2_from_spectrum=spectral_tree_v2(q)
     checks={
         'connected_one_zero_invariant':len(vals)==q**3-1,
         'laplacian_row_sum_zero':bool(np.all(L.sum(axis=1)==0)),
         'laplacian_symmetric':bool(np.array_equal(L,L.T)),
         'shape_matches_pairing_law':shape==expected,
-        'smith_tree_v2_matches_spectrum':total==spectral_tree_v2(q),
+        'smith_tree_v2_matches_actual_spectrum':total==tree_v2_from_spectrum,
         'positive_spectrum_splits_residual_plus_glued':mplus==q*(q-1)+mminus,
     }
     return {
         'q':q,'field_model':model,'matrix_order':q**3,'degree':q*q-1,
-        'adjacency_spectrum_multiplicities':spectrum_multiplicities(q),
+        'adjacency_spectrum_multiplicities':spectrum,
         'two_primary_shape':{f'2^{e}':n for e,n in sorted(shape.items())},
         'expected_shape':{f'2^{e}':n for e,n in sorted(expected.items())},
         'finite_even_factors':sum(shape.values()),'tree_v2':total,
