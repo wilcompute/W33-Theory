@@ -1,0 +1,170 @@
+name: Pass 415-424 Materializer
+on:
+  pull_request_target:
+    branches: [master]
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+permissions:
+  contents: write
+  issues: read
+concurrency:
+  group: pass415-424-materialize
+  cancel-in-progress: false
+jobs:
+  materialize:
+    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.head.ref == 'agent/pass415-424-ten-frontiers' && github.event.pull_request.head.repo.full_name == github.repository)
+    runs-on: ubuntu-24.04
+    env:
+      EXPECTED_SHA: 80f56d75b7e68bca8b5142a09110a28de67a6cda6f46c75a462cb9d9edb46c9d
+      EXPECTED_BYTES: '70018'
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/pass415-424-ten-frontiers
+          fetch-depth: 0
+          token: ${{ github.token }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Reconstruct and extract hash-locked release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import base64, hashlib, json, os, re, tarfile, urllib.request
+          def get(url):
+              request = urllib.request.Request(
+                  url,
+                  headers={
+                      'Authorization': f"Bearer {os.environ['GH_TOKEN']}",
+                      'Accept': 'application/vnd.github+json',
+                      'X-GitHub-Api-Version': '2022-11-28',
+                  },
+              )
+              with urllib.request.urlopen(request) as response:
+                  return json.load(response)
+          base = f"https://api.github.com/repos/{os.environ['GITHUB_REPOSITORY']}/issues/119"
+          issue = get(base)
+          comments = get(base + '/comments?per_page=100')
+          text = '\n'.join([issue.get('body', '')] + [comment['body'] for comment in comments])
+          chunks = {}
+          for index in range(16):
+              if index == 8:
+                  suffixes = 'AB'
+              elif index == 15:
+                  suffixes = 'ABCDEFGHIJKL'
+              else:
+                  suffixes = None
+              if suffixes:
+                  parts = []
+                  for suffix in suffixes:
+                      pattern = rf'PASS415424_CHUNK_{index:02d}{suffix}_BEGIN -->\n(.*?)\n<!-- PASS415424_CHUNK_{index:02d}{suffix}_END'
+                      matches = re.findall(pattern, text, re.S)
+                      if not matches:
+                          raise SystemExit(f'missing chunk {index:02d}{suffix}')
+                      parts.append(''.join(matches[-1].split()))
+                  chunks[index] = ''.join(parts)
+              else:
+                  pattern = rf'PASS415424_CHUNK_{index:02d}_BEGIN -->\n(.*?)\n<!-- PASS415424_CHUNK_{index:02d}_END'
+                  matches = re.findall(pattern, text, re.S)
+                  if not matches:
+                      raise SystemExit(f'missing chunk {index:02d}')
+                  chunks[index] = ''.join(matches[-1].split())
+          blob = base64.b64decode(''.join(chunks[i] for i in range(16)), validate=True)
+          digest = hashlib.sha256(blob).hexdigest()
+          print({'decoded_bytes': len(blob), 'sha256': digest})
+          if len(blob) != int(os.environ['EXPECTED_BYTES']):
+              raise SystemExit('archive byte count mismatch')
+          if digest != os.environ['EXPECTED_SHA']:
+              raise SystemExit('archive SHA-256 mismatch')
+          expected = {
+              '.github/workflows/pass415-424-ten-frontiers.yml',
+              'PASS415_419_FIVE_FRONTIERS_RELEASE.md',
+              'PASS420_424_FIVE_FRONTIERS_RELEASE.md',
+              'analysis/w33_pass415_frobenius_smith_packets.py',
+              'analysis/w33_pass416_qutrit_distillation_search.py',
+              'analysis/w33_pass417_divisor_cycle_hybrid_decoder.py',
+              'analysis/w33_pass418_twirl_breaking_spectroscopy.py',
+              'analysis/w33_pass419_adversarial_replication.py',
+              'analysis/w33_pass420_integral_conductor_gluing.py',
+              'analysis/w33_pass421_qutrit_phase_portrait.py',
+              'analysis/w33_pass422_telemetry_coding_theorem.py',
+              'analysis/w33_pass423_hardware_inverse_compiler.py',
+              'analysis/w33_pass424_custody_model_checker.py',
+              'data/w33_pass415_frobenius_smith_packets.json',
+              'data/w33_pass416_qutrit_distillation_search.json',
+              'data/w33_pass417_divisor_cycle_hybrid_decoder.json',
+              'data/w33_pass418_defect_atlas.json',
+              'data/w33_pass418_twirl_breaking_spectroscopy.json',
+              'data/w33_pass419_adversarial_replication.json',
+              'data/w33_pass419_attack_matrix.json',
+              'data/w33_pass419_hardened_custody_fixture.json',
+              'data/w33_pass419_nonclaim_raw_counts.jsonl',
+              'data/w33_pass420_integral_conductor_gluing.json',
+              'data/w33_pass421_fixed_point_seeds.json',
+              'data/w33_pass421_qutrit_phase_portrait.json',
+              'data/w33_pass422_telemetry_coding_theorem.json',
+              'data/w33_pass423_hardware_component_atlas.json',
+              'data/w33_pass423_hardware_inverse_compiler.json',
+              'data/w33_pass424_custody_model_checker.json',
+              'docs/W33_PASS419_ADVERSARIAL_REPLICATION.md',
+              'schemas/w33_pass419_hardened_handoff_v2.schema.json',
+              'specs/W33Pass424Custody.tla',
+              'tests/test_pass415_419_five_frontiers.py',
+              'tests/test_pass420_424_five_frontiers.py',
+          }
+          with open('/tmp/release.tar.gz', 'wb') as handle:
+              handle.write(blob)
+          with tarfile.open('/tmp/release.tar.gz', 'r:gz') as archive:
+              names = {member.name for member in archive.getmembers() if member.isfile()}
+              if names != expected:
+                  raise SystemExit(f'manifest mismatch missing={expected - names} extra={names - expected}')
+              if any(member.name.startswith('/') or '..' in member.name.split('/') for member in archive.getmembers()):
+                  raise SystemExit('unsafe archive path')
+              archive.extractall('.', filter='data')
+          nonworkflow = sorted(path for path in expected if not path.startswith('.github/workflows/'))
+          with open('/tmp/pass415424-nonworkflow.txt', 'w') as handle:
+              handle.write('\n'.join(nonworkflow) + '\n')
+          PY
+      - name: Install pinned dependencies
+        run: python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 networkx==3.6.1 cryptography==46.0.4 pytest==9.0.2 jsonschema==4.26.0
+      - name: Validate ten witnesses
+        run: |
+          for pass_name in \
+            415_frobenius_smith_packets \
+            416_qutrit_distillation_search \
+            417_divisor_cycle_hybrid_decoder \
+            418_twirl_breaking_spectroscopy \
+            419_adversarial_replication \
+            420_integral_conductor_gluing \
+            421_qutrit_phase_portrait \
+            422_telemetry_coding_theorem \
+            423_hardware_inverse_compiler \
+            424_custody_model_checker
+          do
+            python "analysis/w33_pass${pass_name}.py" --check
+          done
+      - name: Validate tests, schema, and claims
+        run: |
+          python -m pytest -q tests/test_pass415_419_five_frontiers.py tests/test_pass420_424_five_frontiers.py
+          python - <<'PY'
+          import json, jsonschema
+          schema = json.load(open('schemas/w33_pass419_hardened_handoff_v2.schema.json'))
+          fixture = json.load(open('data/w33_pass419_hardened_custody_fixture.json'))
+          jsonschema.validate(fixture, schema)
+          PY
+          python scripts/check_claims_ledger.py
+      - name: Publish validated scientific tree
+        run: |
+          rm -f .github/workflows/pass415-424-ten-frontiers.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          xargs -d '\n' git add -- < /tmp/pass415424-nonworkflow.txt
+          git diff --cached --name-only | sort > /tmp/staged.txt
+          sort /tmp/pass415424-nonworkflow.txt > /tmp/expected.txt
+          diff -u /tmp/expected.txt /tmp/staged.txt
+          git commit -m 'Passes 415-424: materialize validated scientific release'
+          git push origin HEAD:agent/pass415-424-ten-frontiers
