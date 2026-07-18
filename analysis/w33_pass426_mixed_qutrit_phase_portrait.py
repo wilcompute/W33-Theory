@@ -8,7 +8,14 @@ import numpy as np
 from w33_pass410_414_common import certificate,write_json
 from w33_pass416_qutrit_distillation_search import five_qutrit_decoder,mixed_protocol
 
-def round_floats(x,digits=12):
+def round_floats(x,digits=6):
+    """Store portable diagnostics below the observed cross-runner float noise.
+
+    The theorem-level classifications and checks are exact/stable; long near-pure
+    iterates can vary at roughly 1e-7 across BLAS/CPU implementations.  Six
+    decimal places retain the numerical phase portrait without making the
+    content-addressed certificate depend on a runner microarchitecture.
+    """
     if isinstance(x,float): return round(x,digits)
     if isinstance(x,list): return [round_floats(v,digits) for v in x]
     if isinstance(x,tuple): return [round_floats(v,digits) for v in x]
