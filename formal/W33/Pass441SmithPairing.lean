@@ -24,29 +24,31 @@ def rightInverse (q : ℤ) : Matrix (Fin 2) (Fin 2) ℤ :=
 def smithDiagonal (q : ℤ) : Matrix (Fin 2) (Fin 2) ℤ :=
   !![1, 0; 0, q^2 * (q^2 - 1)]
 
-private tactic | `matrix_ring =>
-  `(tactic|
-    ext i j
-    fin_cases i <;> fin_cases j <;>
-      simp [Matrix.mul_apply, pairedBlock, leftWitness, rightWitness,
-        rightInverse, smithDiagonal] <;> ring)
-
 theorem leftWitness_involutive (q : ℤ) :
     leftWitness q * leftWitness q = 1 := by
-  matrix_ring
+  ext i j
+  fin_cases i <;> fin_cases j <;>
+    simp [Matrix.mul_apply, leftWitness] <;> ring
 
 theorem rightWitness_rightInverse (q : ℤ) :
     rightWitness q * rightInverse q = 1 := by
-  matrix_ring
+  ext i j
+  fin_cases i <;> fin_cases j <;>
+    simp [Matrix.mul_apply, rightWitness, rightInverse] <;> ring
 
 theorem rightInverse_rightWitness (q : ℤ) :
     rightInverse q * rightWitness q = 1 := by
-  matrix_ring
+  ext i j
+  fin_cases i <;> fin_cases j <;>
+    simp [Matrix.mul_apply, rightWitness, rightInverse] <;> ring
 
 /-- Constructive integral equivalence of the paired block to its Smith diagonal. -/
 theorem pairedBlock_reduction (q : ℤ) :
     leftWitness q * pairedBlock q * rightWitness q = smithDiagonal q := by
-  matrix_ring
+  ext i j
+  fin_cases i <;> fin_cases j <;>
+    simp [Matrix.mul_apply, pairedBlock, leftWitness, rightWitness,
+      smithDiagonal] <;> ring
 
 /-- Polynomial factorization underlying the nontrivial Smith divisor. -/
 theorem paired_divisor_factorization (q : ℤ) :
