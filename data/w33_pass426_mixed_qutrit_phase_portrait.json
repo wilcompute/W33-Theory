@@ -1,0 +1,943 @@
+{
+  "basin_summary": {
+    "boundary_purifying_count": 6,
+    "exceptional_clifford_orbit": [
+      8,
+      9,
+      16,
+      17,
+      27,
+      28
+    ],
+    "families": {
+      "depolarized_pure_fixed_point": 93,
+      "seeded_hilbert_schmidt_interior": 48
+    },
+    "maximum_steps": 30,
+    "minimum_acceptance": 0.012345679012,
+    "mixed_attractor_count": 135,
+    "seed_count": 141,
+    "unresolved_count": 0
+  },
+  "certificate_sha256": "6ed207ec3408b8564777a480a35e4d39ce235c4311bef022823bd479014bade5",
+  "checks": {
+    "all_iterates_remain_positive": true,
+    "all_random_interior_seeds_converge": true,
+    "computational_axis_constant_acceptance": true,
+    "computational_axis_exact_r_fifth": true,
+    "decoder_isometry": true,
+    "deterministic_census_has_141_seeds": true,
+    "exactly_six_boundary_purifying_seeds": true,
+    "generic_local_order_is_cubic": true,
+    "jacobian_zero_to_1e_8": true,
+    "maximally_mixed_acceptance_one_over_81": true,
+    "maximally_mixed_fixed": true,
+    "no_unresolved_census_seeds": true,
+    "pure_boundary_still_31_points": true,
+    "quadratic_term_vanishes_numerically": true,
+    "ray_has_interleaved_outcomes": true,
+    "remaining_135_converge_to_mixed": true
+  },
+  "computational_axis": [
+    {
+      "acceptance": 0.012345679012,
+      "matrix_error": 0.0,
+      "output_r": 0.0,
+      "r": 0.0
+    },
+    {
+      "acceptance": 0.012345679012,
+      "matrix_error": 0.0,
+      "output_r": 1e-05,
+      "r": 0.1
+    },
+    {
+      "acceptance": 0.012345679012,
+      "matrix_error": 0.0,
+      "output_r": 0.0009765625,
+      "r": 0.25
+    },
+    {
+      "acceptance": 0.012345679012,
+      "matrix_error": 0.0,
+      "output_r": 0.03125,
+      "r": 0.5
+    },
+    {
+      "acceptance": 0.012345679012,
+      "matrix_error": 0.0,
+      "output_r": 0.2373046875,
+      "r": 0.75
+    },
+    {
+      "acceptance": 0.012345679012,
+      "matrix_error": 0.0,
+      "output_r": 0.59049,
+      "r": 0.9
+    },
+    {
+      "acceptance": 0.012345679012,
+      "matrix_error": 0.0,
+      "output_r": 1.0,
+      "r": 1.0
+    }
+  ],
+  "exceptional_ray_scan": {
+    "outcome_transitions": 3,
+    "representative_seed": 8,
+    "sample_count": 37,
+    "samples": [
+      {
+        "classification": "maximally_mixed",
+        "distance": 1.8e-11,
+        "minimum_acceptance": 0.012345679012,
+        "positive": true,
+        "radius": 0.8,
+        "steps": 7
+      },
+      {
+        "classification": "maximally_mixed",
+        "distance": 0.0,
+        "minimum_acceptance": 0.012345679012,
+        "positive": true,
+        "radius": 0.805,
+        "steps": 8
+      },
+      {
+        "classification": "maximally_mixed",
+        "distance": 0.0,
+        "minimum_acceptance": 0.012345679012,
+        "positive": true,
+        "radius": 0.81,
+        "steps": 8
+      },
+      {
+        "classification": "maximally_mixed",
+        "distance": 0.0,
+        "minimum_acceptance": 0.012345679012,
+        "positive": true,
+        "radius": 0.815,
+        "steps": 8
+      },
+      {
+        "classification": "maximally_mixed",
+        "distance": 0.0,
+        "minimum_acceptance": 0.012345679012,
+        "positive": true,
+        "radius": 0.82,
+        "steps": 8
+      },
+      {
+        "classification": "maximally_mixed",
+        "distance": 1e-12,
+        "minimum_acceptance": 0.012345679012,
+        "positive": true,
+        "radius": 0.825,
+        "steps": 8
+      },
+      {
+        "classification": "maximally_mixed",
+        "distance": 0.0,
+        "minimum_acceptance": 0.012345679012,
+        "positive": true,
+        "radius": 0.83,
+        "steps": 9
+      },
+      {
+        "classification": "maximally_mixed",
+        "distance": 0.0,
+        "minimum_acceptance": 0.012345679012,
+        "positive": true,
+        "radius": 0.835,
+        "steps": 9
+      },
+      {
+        "classification": "maximally_mixed",
+        "distance": 0.0,
+        "minimum_acceptance": 0.012345679012,
+        "positive": true,
+        "radius": 0.84,
+        "steps": 9
+      },
+      {
+        "classification": "maximally_mixed",
+        "distance": 6e-12,
+        "minimum_acceptance": 0.012345679012,
+        "positive": true,
+        "radius": 0.845,
+        "steps": 9
+      },
+      {
+        "classification": "maximally_mixed",
+        "distance": 0.0,
+        "minimum_acceptance": 0.012345679012,
+        "positive": true,
+        "radius": 0.85,
+        "steps": 10
+      },
+      {
+        "classification": "maximally_mixed",
+        "distance": 0.0,
+        "minimum_acceptance": 0.012345679012,
+        "positive": true,
+        "radius": 0.855,
+        "steps": 10
+      },
+      {
+        "classification": "maximally_mixed",
+        "distance": 0.0,
+        "minimum_acceptance": 0.012345679012,
+        "positive": true,
+        "radius": 0.86,
+        "steps": 11
+      },
+      {
+        "classification": "maximally_mixed",
+        "distance": 0.0,
+        "minimum_acceptance": 0.012345679012,
+        "positive": true,
+        "radius": 0.865,
+        "steps": 11
+      },
+      {
+        "classification": "maximally_mixed",
+        "distance": 0.0,
+        "minimum_acceptance": 0.012345679012,
+        "positive": true,
+        "radius": 0.87,
+        "steps": 12
+      },
+      {
+        "classification": "maximally_mixed",
+        "distance": 0.0,
+        "minimum_acceptance": 0.012345679012,
+        "positive": true,
+        "radius": 0.875,
+        "steps": 13
+      },
+      {
+        "classification": "maximally_mixed",
+        "distance": 0.0,
+        "minimum_acceptance": 0.012345679012,
+        "positive": true,
+        "radius": 0.88,
+        "steps": 13
+      },
+      {
+        "classification": "maximally_mixed",
+        "distance": 0.0,
+        "minimum_acceptance": 0.012345679012,
+        "positive": true,
+        "radius": 0.885,
+        "steps": 14
+      },
+      {
+        "classification": "maximally_mixed",
+        "distance": 0.0,
+        "minimum_acceptance": 0.012345679012,
+        "positive": true,
+        "radius": 0.89,
+        "steps": 14
+      },
+      {
+        "classification": "maximally_mixed",
+        "distance": 0.0,
+        "minimum_acceptance": 0.012345679012,
+        "positive": true,
+        "radius": 0.895,
+        "steps": 15
+      },
+      {
+        "classification": "boundary_purifying",
+        "distance": 0.79257148638,
+        "minimum_acceptance": 0.0235822632,
+        "period_residuals": {
+          "1": 1.185223916182,
+          "2": 1.185772978876,
+          "3": 1.005918021081,
+          "4": 0.746585971124,
+          "5": 0.909168767643,
+          "6": 0.859943933223
+        },
+        "positive": true,
+        "purity": 0.961502894356,
+        "radius": 0.9,
+        "steps": 30
+      },
+      {
+        "classification": "boundary_purifying",
+        "distance": 0.815362633897,
+        "minimum_acceptance": 0.025707728559,
+        "period_residuals": {
+          "1": 0.932321635193,
+          "2": 1.308562971249,
+          "3": 1.095390062984,
+          "4": 1.282068697781,
+          "5": 0.979446326778,
+          "6": 1.189079201348
+        },
+        "positive": true,
+        "purity": 0.998149558088,
+        "radius": 0.905,
+        "steps": 30
+      },
+      {
+        "classification": "maximally_mixed",
+        "distance": 0.0,
+        "minimum_acceptance": 0.012345679012,
+        "positive": true,
+        "radius": 0.91,
+        "steps": 22
+      },
+      {
+        "classification": "maximally_mixed",
+        "distance": 0.0,
+        "minimum_acceptance": 0.012345679012,
+        "positive": true,
+        "radius": 0.915,
+        "steps": 23
+      },
+      {
+        "classification": "maximally_mixed",
+        "distance": 0.0,
+        "minimum_acceptance": 0.012345679012,
+        "positive": true,
+        "radius": 0.92,
+        "steps": 22
+      },
+      {
+        "classification": "maximally_mixed",
+        "distance": 0.0,
+        "minimum_acceptance": 0.012345679012,
+        "positive": true,
+        "radius": 0.925,
+        "steps": 18
+      },
+      {
+        "classification": "maximally_mixed",
+        "distance": 0.0,
+        "minimum_acceptance": 0.012345679012,
+        "positive": true,
+        "radius": 0.93,
+        "steps": 20
+      },
+      {
+        "classification": "maximally_mixed",
+        "distance": 0.0,
+        "minimum_acceptance": 0.012345679012,
+        "positive": true,
+        "radius": 0.935,
+        "steps": 18
+      },
+      {
+        "classification": "maximally_mixed",
+        "distance": 0.0,
+        "minimum_acceptance": 0.012345679012,
+        "positive": true,
+        "radius": 0.94,
+        "steps": 28
+      },
+      {
+        "classification": "boundary_purifying",
+        "distance": 0.805448577198,
+        "minimum_acceptance": 0.028553475663,
+        "period_residuals": {
+          "1": 0.890481322287,
+          "2": 1.245356200324,
+          "3": 1.057005170612,
+          "4": 0.881267787724,
+          "5": 0.939369938566,
+          "6": 1.060568815754
+        },
+        "positive": true,
+        "purity": 0.982080743844,
+        "radius": 0.945,
+        "steps": 30
+      },
+      {
+        "classification": "boundary_purifying",
+        "distance": 0.79901890344,
+        "minimum_acceptance": 0.022366333209,
+        "period_residuals": {
+          "1": 0.859738306218,
+          "2": 1.048731118027,
+          "3": 1.241652638913,
+          "4": 1.118459266621,
+          "5": 1.375080885363,
+          "6": 1.129944265489
+        },
+        "positive": true,
+        "purity": 0.971764541388,
+        "radius": 0.95,
+        "steps": 30
+      },
+      {
+        "classification": "boundary_purifying",
+        "distance": 0.816496402529,
+        "minimum_acceptance": 0.027270999325,
+        "period_residuals": {
+          "1": 1.196963565617,
+          "2": 1.144691341623,
+          "3": 0.955963573531,
+          "4": 1.404989062898,
+          "5": 1.02305311126,
+          "6": 1.321875399924
+        },
+        "positive": true,
+        "purity": 0.999999708677,
+        "radius": 0.955,
+        "steps": 30
+      },
+      {
+        "classification": "boundary_purifying",
+        "distance": 0.814094088892,
+        "minimum_acceptance": 0.01599342761,
+        "period_residuals": {
+          "1": 0.955384221601,
+          "2": 1.02883959756,
+          "3": 1.094967285653,
+          "4": 1.04147853635,
+          "5": 1.378087890062,
+          "6": 0.713287461982
+        },
+        "positive": true,
+        "purity": 0.996082518903,
+        "radius": 0.96,
+        "steps": 30
+      },
+      {
+        "classification": "boundary_purifying",
+        "distance": 0.816496579611,
+        "minimum_acceptance": 0.026803829343,
+        "period_residuals": {
+          "1": 1.309493244339,
+          "2": 0.931376468276,
+          "3": 0.848833390581,
+          "4": 0.140461287486,
+          "5": 1.334021423717,
+          "6": 0.901635852437
+        },
+        "positive": true,
+        "purity": 0.99999999785,
+        "radius": 0.965,
+        "steps": 30
+      },
+      {
+        "classification": "boundary_purifying",
+        "distance": 0.816496571433,
+        "minimum_acceptance": 0.032700342337,
+        "period_residuals": {
+          "1": 1.177289302249,
+          "2": 0.995359806315,
+          "3": 1.239958918111,
+          "4": 0.303164144243,
+          "5": 1.284163870834,
+          "6": 0.914880502433
+        },
+        "positive": true,
+        "purity": 0.999999984495,
+        "radius": 0.97,
+        "steps": 30
+      },
+      {
+        "classification": "boundary_purifying",
+        "distance": 0.816495255758,
+        "minimum_acceptance": 0.032022926089,
+        "period_residuals": {
+          "1": 1.204032597395,
+          "2": 1.146106130974,
+          "3": 0.683248697717,
+          "4": 1.177902448524,
+          "5": 1.006102749257,
+          "6": 1.17630069785
+        },
+        "positive": true,
+        "purity": 0.999997836009,
+        "radius": 0.975,
+        "steps": 30
+      },
+      {
+        "classification": "boundary_purifying",
+        "distance": 0.816496423307,
+        "minimum_acceptance": 0.021632856233,
+        "period_residuals": {
+          "1": 0.577828701485,
+          "2": 0.569068569391,
+          "3": 0.957758949777,
+          "4": 1.352689524738,
+          "5": 1.376409275583,
+          "6": 0.631774058146
+        },
+        "positive": true,
+        "purity": 0.999999742606,
+        "radius": 0.98,
+        "steps": 30
+      }
+    ]
+  },
+  "local_cubic_directions": [
+    {
+      "direction": 0,
+      "halving_orders": [
+        2.994061307899,
+        2.996722529045
+      ],
+      "response_norms": [
+        0.000210333023,
+        2.6400077e-05,
+        3.307515e-06
+      ],
+      "second_difference_quotients": [
+        0.005326432606,
+        0.001331624101,
+        0.000332906275
+      ]
+    },
+    {
+      "direction": 1,
+      "halving_orders": [
+        3.015956272747,
+        3.008014474603
+      ],
+      "response_norms": [
+        0.000151993143,
+        1.8790169e-05,
+        2.335759e-06
+      ],
+      "second_difference_quotients": [
+        0.009733391543,
+        0.002433377386,
+        0.000608344808
+      ]
+    },
+    {
+      "direction": 2,
+      "halving_orders": [
+        2.983978556496,
+        2.991930040125
+      ],
+      "response_norms": [
+        0.00017109892,
+        2.16262e-05,
+        2.718439e-06
+      ],
+      "second_difference_quotients": [
+        0.013128358803,
+        0.00328211906,
+        0.000820530224
+      ]
+    },
+    {
+      "direction": 3,
+      "halving_orders": [
+        3.008599679182,
+        3.004189406059
+      ],
+      "response_norms": [
+        0.000191382394,
+        2.3780623e-05,
+        2.963958e-06
+      ],
+      "second_difference_quotients": [
+        0.011425257341,
+        0.00285635225,
+        0.000714088655
+      ]
+    },
+    {
+      "direction": 4,
+      "halving_orders": [
+        2.98958870578,
+        2.994419302827
+      ],
+      "response_norms": [
+        0.000127449724,
+        1.60466e-05,
+        2.013599e-06
+      ],
+      "second_difference_quotients": [
+        0.011067222092,
+        0.002766831151,
+        0.000691708188
+      ]
+    },
+    {
+      "direction": 5,
+      "halving_orders": [
+        3.002036321882,
+        3.000727800566
+      ],
+      "response_norms": [
+        0.000177642432,
+        2.2173984e-05,
+        2.77035e-06
+      ],
+      "second_difference_quotients": [
+        0.009405324634,
+        0.002351354156,
+        0.000587838898
+      ]
+    },
+    {
+      "direction": 6,
+      "halving_orders": [
+        2.989852385722,
+        2.994657369474
+      ],
+      "response_norms": [
+        0.000198473165,
+        2.4984263e-05,
+        3.13462e-06
+      ],
+      "second_difference_quotients": [
+        0.007293050717,
+        0.001823286678,
+        0.000455822044
+      ]
+    },
+    {
+      "direction": 7,
+      "halving_orders": [
+        2.993525158974,
+        2.996664052597
+      ],
+      "response_norms": [
+        0.000197566174,
+        2.4806856e-05,
+        3.108035e-06
+      ],
+      "second_difference_quotients": [
+        0.01243322412,
+        0.00310833982,
+        0.000777085483
+      ]
+    },
+    {
+      "direction": 8,
+      "halving_orders": [
+        3.005392105889,
+        3.002588340941
+      ],
+      "response_norms": [
+        0.000234218959,
+        2.9168149e-05,
+        3.639483e-06
+      ],
+      "second_difference_quotients": [
+        0.006200075288,
+        0.001550041319,
+        0.00038751068
+      ]
+    },
+    {
+      "direction": 9,
+      "halving_orders": [
+        3.005687516502,
+        3.002609217029
+      ],
+      "response_norms": [
+        0.000154616048,
+        1.9250963e-05,
+        2.402022e-06
+      ],
+      "second_difference_quotients": [
+        0.007955499548,
+        0.001988892255,
+        0.000497223335
+      ]
+    },
+    {
+      "direction": 10,
+      "halving_orders": [
+        3.00355353629,
+        3.000927518437
+      ],
+      "response_norms": [
+        0.000144671841,
+        1.8039492e-05,
+        2.253487e-06
+      ],
+      "second_difference_quotients": [
+        0.012344311735,
+        0.00308611832,
+        0.000771530211
+      ]
+    },
+    {
+      "direction": 11,
+      "halving_orders": [
+        2.995767788114,
+        2.997798659886
+      ],
+      "response_norms": [
+        0.000225963433,
+        2.832841e-05,
+        3.546458e-06
+      ],
+      "second_difference_quotients": [
+        0.007352873787,
+        0.00183824342,
+        0.000459561245
+      ]
+    }
+  ],
+  "maximally_mixed": {
+    "acceptance_probability": 0.012345679012,
+    "jacobian_eigenvalues": [
+      [
+        2e-12,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        -5e-10,
+        0.0
+      ],
+      [
+        5e-10,
+        0.0
+      ],
+      [
+        -0.0,
+        0.0
+      ],
+      [
+        -0.0,
+        -0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -0.0
+      ]
+    ],
+    "jacobian_spectral_radius": 5e-10
+  },
+  "schema": "w33.pass426.mixed_qutrit_phase_portrait.v1",
+  "selected_basin_records": [
+    {
+      "classification": "maximally_mixed",
+      "distance": 0.0,
+      "family": "depolarized_pure_fixed_point",
+      "minimum_acceptance": 0.012345679012,
+      "positive": true,
+      "radius": 0.1,
+      "seed_index": 0,
+      "steps": 3
+    },
+    {
+      "classification": "maximally_mixed",
+      "distance": 0.0,
+      "family": "depolarized_pure_fixed_point",
+      "minimum_acceptance": 0.012345679012,
+      "positive": true,
+      "radius": 0.5,
+      "seed_index": 0,
+      "steps": 4
+    },
+    {
+      "classification": "maximally_mixed",
+      "distance": 0.0,
+      "family": "depolarized_pure_fixed_point",
+      "minimum_acceptance": 0.012345679012,
+      "positive": true,
+      "radius": 0.9,
+      "seed_index": 0,
+      "steps": 6
+    },
+    {
+      "classification": "maximally_mixed",
+      "distance": 0.0,
+      "family": "depolarized_pure_fixed_point",
+      "minimum_acceptance": 0.012345679012,
+      "positive": true,
+      "radius": 0.1,
+      "seed_index": 1,
+      "steps": 3
+    },
+    {
+      "classification": "maximally_mixed",
+      "distance": 0.0,
+      "family": "depolarized_pure_fixed_point",
+      "minimum_acceptance": 0.012345679012,
+      "positive": true,
+      "radius": 0.5,
+      "seed_index": 1,
+      "steps": 4
+    },
+    {
+      "classification": "maximally_mixed",
+      "distance": 0.0,
+      "family": "depolarized_pure_fixed_point",
+      "minimum_acceptance": 0.012345679012,
+      "positive": true,
+      "radius": 0.9,
+      "seed_index": 1,
+      "steps": 6
+    },
+    {
+      "classification": "maximally_mixed",
+      "distance": 0.0,
+      "family": "depolarized_pure_fixed_point",
+      "minimum_acceptance": 0.012345679012,
+      "positive": true,
+      "radius": 0.1,
+      "seed_index": 30,
+      "steps": 2
+    },
+    {
+      "classification": "maximally_mixed",
+      "distance": 0.0,
+      "family": "depolarized_pure_fixed_point",
+      "minimum_acceptance": 0.012345679012,
+      "positive": true,
+      "radius": 0.5,
+      "seed_index": 30,
+      "steps": 3
+    },
+    {
+      "classification": "maximally_mixed",
+      "distance": 0.0,
+      "family": "depolarized_pure_fixed_point",
+      "minimum_acceptance": 0.012345679012,
+      "positive": true,
+      "radius": 0.9,
+      "seed_index": 30,
+      "steps": 4
+    },
+    {
+      "classification": "maximally_mixed",
+      "distance": 0.0,
+      "family": "seeded_hilbert_schmidt_interior",
+      "initial_purity": 0.524399789673,
+      "minimum_acceptance": 0.012345679012,
+      "positive": true,
+      "seed_index": 0,
+      "steps": 5
+    },
+    {
+      "classification": "maximally_mixed",
+      "distance": 0.0,
+      "family": "seeded_hilbert_schmidt_interior",
+      "initial_purity": 0.506180721638,
+      "minimum_acceptance": 0.012345679012,
+      "positive": true,
+      "seed_index": 1,
+      "steps": 4
+    },
+    {
+      "classification": "maximally_mixed",
+      "distance": 0.0,
+      "family": "seeded_hilbert_schmidt_interior",
+      "initial_purity": 0.471105786603,
+      "minimum_acceptance": 0.012345679012,
+      "positive": true,
+      "seed_index": 2,
+      "steps": 4
+    },
+    {
+      "classification": "maximally_mixed",
+      "distance": 0.0,
+      "family": "seeded_hilbert_schmidt_interior",
+      "initial_purity": 0.492907245995,
+      "minimum_acceptance": 0.012345679012,
+      "positive": true,
+      "seed_index": 3,
+      "steps": 4
+    },
+    {
+      "classification": "maximally_mixed",
+      "distance": 0.0,
+      "family": "seeded_hilbert_schmidt_interior",
+      "initial_purity": 0.419812248071,
+      "minimum_acceptance": 0.012345679012,
+      "positive": true,
+      "seed_index": 4,
+      "steps": 4
+    },
+    {
+      "classification": "maximally_mixed",
+      "distance": 0.0,
+      "family": "seeded_hilbert_schmidt_interior",
+      "initial_purity": 0.437987130313,
+      "minimum_acceptance": 0.012345679012,
+      "positive": true,
+      "seed_index": 5,
+      "steps": 4
+    },
+    {
+      "classification": "maximally_mixed",
+      "distance": 0.0,
+      "family": "seeded_hilbert_schmidt_interior",
+      "initial_purity": 0.425886094387,
+      "minimum_acceptance": 0.012345679012,
+      "positive": true,
+      "seed_index": 42,
+      "steps": 4
+    },
+    {
+      "classification": "maximally_mixed",
+      "distance": 0.0,
+      "family": "seeded_hilbert_schmidt_interior",
+      "initial_purity": 0.390130029551,
+      "minimum_acceptance": 0.012345679012,
+      "positive": true,
+      "seed_index": 43,
+      "steps": 4
+    },
+    {
+      "classification": "maximally_mixed",
+      "distance": 0.0,
+      "family": "seeded_hilbert_schmidt_interior",
+      "initial_purity": 0.55394189372,
+      "minimum_acceptance": 0.012345679012,
+      "positive": true,
+      "seed_index": 44,
+      "steps": 5
+    },
+    {
+      "classification": "maximally_mixed",
+      "distance": 0.0,
+      "family": "seeded_hilbert_schmidt_interior",
+      "initial_purity": 0.446740919622,
+      "minimum_acceptance": 0.012345679012,
+      "positive": true,
+      "seed_index": 45,
+      "steps": 4
+    },
+    {
+      "classification": "maximally_mixed",
+      "distance": 0.0,
+      "family": "seeded_hilbert_schmidt_interior",
+      "initial_purity": 0.521180555533,
+      "minimum_acceptance": 0.012345679012,
+      "positive": true,
+      "seed_index": 46,
+      "steps": 4
+    },
+    {
+      "classification": "maximally_mixed",
+      "distance": 0.0,
+      "family": "seeded_hilbert_schmidt_interior",
+      "initial_purity": 0.479825112936,
+      "minimum_acceptance": 0.012345679012,
+      "positive": true,
+      "seed_index": 47,
+      "steps": 4
+    }
+  ],
+  "status": "PASS",
+  "theorem": {
+    "basin_census": "135 of 141 deterministic full-rank seeds converge to I/3; the six members of one Clifford orbit at radius 0.9 purify toward the pure boundary",
+    "boundary": "the interleaved one-ray outcomes are a numerical Julia-like signature, not a proof of a fractal boundary; near-pure long iterates require interval or exact arithmetic",
+    "interior_fixed_point": "I/3 is fixed with acceptance 1/81 and vanishing linearization",
+    "local_order": "generic traceless perturbations return with cubic order; the computational-axis invariant family is exceptionally quintic with r_out=r^5",
+    "pure_boundary": "the 31 pure projective fixed points remain repelling boundary points from Pass 421"
+  }
+}

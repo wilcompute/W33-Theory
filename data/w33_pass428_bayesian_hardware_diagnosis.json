@@ -1,0 +1,294 @@
+{
+  "certificate_sha256": "19ac65e0b20d9e0ccedeb5471d9e7bb9759fd28773f2bf90d95542d89aa4693a",
+  "checks": {
+    "all_150_family_correct": true,
+    "all_150_top5": true,
+    "at_least_149_of_150_top1": true,
+    "delay_bayes_factors_well_separated": true,
+    "delay_model_wins_all_24_shared_faults": true,
+    "dictionary_has_387_components": true,
+    "family_common_modes_orthonormal": true,
+    "family_priors_plus_null_sum_one": true,
+    "low_noise_mean_posterior_above_0_999": true,
+    "three_noise_scenarios": true,
+    "three_trim_model_wins_all_24_independent_faults": true
+  },
+  "delay_vs_trim": {
+    "delay_component": "delay_register_fibre_0_0",
+    "independent_trims_log_bayes_factor_range": [
+      -174.103461422145,
+      -126.288144953955
+    ],
+    "phase_trim_components": [
+      "phase_trim_0_1",
+      "phase_trim_0_2",
+      "phase_trim_1_2"
+    ],
+    "shared_delay_log_bayes_factor_range": [
+      0.371710882819,
+      5.973793133076
+    ],
+    "sign_convention": "positive favors shared delay; negative favors three independent trims"
+  },
+  "noise_scenarios": [
+    {
+      "correlation_scale": 0.04,
+      "family_correct": 50,
+      "mean_brier_score": 0.0,
+      "mean_true_posterior": 1.0,
+      "minimum_true_posterior": 1.0,
+      "sigma": 0.08,
+      "top1_correct": 50,
+      "top5_correct": 50,
+      "trials": 50
+    },
+    {
+      "correlation_scale": 0.08,
+      "family_correct": 50,
+      "mean_brier_score": 0.0,
+      "mean_true_posterior": 0.999999999815,
+      "minimum_true_posterior": 0.999999992186,
+      "sigma": 0.15,
+      "top1_correct": 50,
+      "top5_correct": 50,
+      "trials": 50
+    },
+    {
+      "correlation_scale": 0.12,
+      "family_correct": 50,
+      "mean_brier_score": 0.009126770817,
+      "mean_true_posterior": 0.973857118784,
+      "minimum_true_posterior": 0.606004893604,
+      "sigma": 0.25,
+      "top1_correct": 50,
+      "top5_correct": 50,
+      "trials": 50
+    }
+  ],
+  "priors": {
+    "amplitude_standard_deviation": 2.0,
+    "families": {
+      "delay_register": 0.13,
+      "detector_gain": 0.15,
+      "native_coupler": 0.25,
+      "parasitic_crosstalk": 0.2,
+      "phase_trim": 0.25
+    },
+    "null": 0.02
+  },
+  "schema": "w33.pass428.bayesian_hardware_diagnosis.v1",
+  "selected_posteriors": [
+    {
+      "correlation_scale": 0.04,
+      "injected": "detector_gain_mode_0",
+      "injected_family": "detector_gain",
+      "null_probability": 0.0,
+      "sigma": 0.08,
+      "top5": [
+        "detector_gain_mode_0",
+        "phase_trim_6_7",
+        "detector_gain_mode_2",
+        "parasitic_crosstalk_2_21",
+        "detector_gain_mode_10"
+      ],
+      "top_component": "detector_gain_mode_0",
+      "top_probability": 1.0,
+      "true_probability": 1.0
+    },
+    {
+      "correlation_scale": 0.04,
+      "injected": "detector_gain_mode_2",
+      "injected_family": "detector_gain",
+      "null_probability": 0.0,
+      "sigma": 0.08,
+      "top5": [
+        "detector_gain_mode_2",
+        "native_coupler_7_9",
+        "native_coupler_0_3",
+        "parasitic_crosstalk_5_17",
+        "parasitic_crosstalk_11_16"
+      ],
+      "top_component": "detector_gain_mode_2",
+      "top_probability": 1.0,
+      "true_probability": 1.0
+    },
+    {
+      "correlation_scale": 0.04,
+      "injected": "detector_gain_mode_5",
+      "injected_family": "detector_gain",
+      "null_probability": 0.0,
+      "sigma": 0.08,
+      "top5": [
+        "detector_gain_mode_5",
+        "parasitic_crosstalk_14_15",
+        "detector_gain_mode_19",
+        "delay_register_fibre_2_2",
+        "parasitic_crosstalk_6_9"
+      ],
+      "top_component": "detector_gain_mode_5",
+      "top_probability": 1.0,
+      "true_probability": 1.0
+    },
+    {
+      "correlation_scale": 0.04,
+      "injected": "detector_gain_mode_8",
+      "injected_family": "detector_gain",
+      "null_probability": 0.0,
+      "sigma": 0.08,
+      "top5": [
+        "detector_gain_mode_8",
+        "parasitic_crosstalk_6_10",
+        "detector_gain_mode_3",
+        "delay_register_fibre_1_0",
+        "detector_gain_mode_7"
+      ],
+      "top_component": "detector_gain_mode_8",
+      "top_probability": 1.0,
+      "true_probability": 1.0
+    },
+    {
+      "correlation_scale": 0.04,
+      "injected": "detector_gain_mode_11",
+      "injected_family": "detector_gain",
+      "null_probability": 0.0,
+      "sigma": 0.08,
+      "top5": [
+        "detector_gain_mode_11",
+        "delay_register_fibre_2_2",
+        "native_coupler_3_6",
+        "phase_trim_25_26",
+        "phase_trim_24_26"
+      ],
+      "top_component": "detector_gain_mode_11",
+      "top_probability": 1.0,
+      "true_probability": 1.0
+    },
+    {
+      "correlation_scale": 0.04,
+      "injected": "detector_gain_mode_14",
+      "injected_family": "detector_gain",
+      "null_probability": 0.0,
+      "sigma": 0.08,
+      "top5": [
+        "detector_gain_mode_14",
+        "native_coupler_16_24",
+        "phase_trim_16_17",
+        "delay_register_fibre_2_2",
+        "phase_trim_0_2"
+      ],
+      "top_component": "detector_gain_mode_14",
+      "top_probability": 1.0,
+      "true_probability": 1.0
+    },
+    {
+      "correlation_scale": 0.04,
+      "injected": "detector_gain_mode_17",
+      "injected_family": "detector_gain",
+      "null_probability": 0.0,
+      "sigma": 0.08,
+      "top5": [
+        "detector_gain_mode_17",
+        "native_coupler_22_26",
+        "delay_register_fibre_1_1",
+        "phase_trim_4_5",
+        "phase_trim_0_1"
+      ],
+      "top_component": "detector_gain_mode_17",
+      "top_probability": 1.0,
+      "true_probability": 1.0
+    },
+    {
+      "correlation_scale": 0.04,
+      "injected": "detector_gain_mode_20",
+      "injected_family": "detector_gain",
+      "null_probability": 0.0,
+      "sigma": 0.08,
+      "top5": [
+        "detector_gain_mode_20",
+        "detector_gain_mode_5",
+        "parasitic_crosstalk_0_19",
+        "detector_gain_mode_7",
+        "native_coupler_0_24"
+      ],
+      "top_component": "detector_gain_mode_20",
+      "top_probability": 1.0,
+      "true_probability": 1.0
+    },
+    {
+      "correlation_scale": 0.04,
+      "injected": "detector_gain_mode_23",
+      "injected_family": "detector_gain",
+      "null_probability": 0.0,
+      "sigma": 0.08,
+      "top5": [
+        "detector_gain_mode_23",
+        "native_coupler_15_26",
+        "native_coupler_1_13",
+        "delay_register_fibre_2_0",
+        "delay_register_fibre_1_0"
+      ],
+      "top_component": "detector_gain_mode_23",
+      "top_probability": 1.0,
+      "true_probability": 1.0
+    },
+    {
+      "correlation_scale": 0.04,
+      "injected": "detector_gain_mode_26",
+      "injected_family": "detector_gain",
+      "null_probability": 0.0,
+      "sigma": 0.08,
+      "top5": [
+        "detector_gain_mode_26",
+        "phase_trim_0_2",
+        "delay_register_fibre_0_0",
+        "parasitic_crosstalk_3_14",
+        "detector_gain_mode_1"
+      ],
+      "top_component": "detector_gain_mode_26",
+      "top_probability": 1.0,
+      "true_probability": 1.0
+    },
+    {
+      "correlation_scale": 0.04,
+      "injected": "native_coupler_0_3",
+      "injected_family": "native_coupler",
+      "null_probability": 0.0,
+      "sigma": 0.08,
+      "top5": [
+        "native_coupler_0_3",
+        "detector_gain_mode_18",
+        "native_coupler_6_17",
+        "native_coupler_17_23",
+        "parasitic_crosstalk_0_23"
+      ],
+      "top_component": "native_coupler_0_3",
+      "top_probability": 1.0,
+      "true_probability": 1.0
+    },
+    {
+      "correlation_scale": 0.04,
+      "injected": "native_coupler_1_13",
+      "injected_family": "native_coupler",
+      "null_probability": 0.0,
+      "sigma": 0.08,
+      "top5": [
+        "native_coupler_1_13",
+        "native_coupler_11_13",
+        "phase_trim_1_2",
+        "parasitic_crosstalk_9_22",
+        "native_coupler_9_16"
+      ],
+      "top_component": "native_coupler_1_13",
+      "top_probability": 1.0,
+      "true_probability": 1.0
+    }
+  ],
+  "status": "PASS",
+  "theorem": {
+    "boundary": "priors, amplitude scale, transfer dictionary, and covariance are synthetic calibration assumptions; no physical-device posterior or empirical failure rate is claimed",
+    "correlated_noise": "the likelihood includes independent readout noise plus four orbit-family common modes through an analytic Woodbury precision",
+    "hierarchical_model_selection": "a shared three-bin delay and three independent phase trims are separated by low-rank marginal likelihood, including the Occam determinant penalty",
+    "posterior": "the 387-component Pass-423 dictionary is upgraded from a sparse point estimate to normalized component and null posteriors with family-level priors",
+    "synthetic_recovery": "150/150 top-1, 150/150 top-5, and 150/150 family recovery across three seeded correlated-noise regimes"
+  }
+}

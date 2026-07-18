@@ -1,0 +1,182 @@
+name: Pass 415-429 Fifteen Frontiers
+
+on:
+  push:
+    branches: [master, 'agent/pass415-429-*']
+    paths:
+      - 'analysis/w33_pass41*.py'
+      - 'analysis/w33_pass42*.py'
+      - 'data/w33_pass41*.json'
+      - 'data/w33_pass42*.json'
+      - 'docs/W33_PASS419_ADVERSARIAL_REPLICATION.md'
+      - 'schemas/w33_pass419_hardened_handoff_v2.schema.json'
+      - 'specs/W33Pass424Custody.tla'
+      - 'specs/W33Pass429CustodyInductive.tla'
+      - 'tests/test_pass415_419_five_frontiers.py'
+      - 'tests/test_pass420_424_five_frontiers.py'
+      - 'tests/test_pass425_429_five_frontiers.py'
+      - 'PASS415_419_FIVE_FRONTIERS_RELEASE.md'
+      - 'PASS420_424_FIVE_FRONTIERS_RELEASE.md'
+      - 'PASS425_429_FIVE_FRONTIERS_RELEASE.md'
+      - '.github/workflows/pass415-429-fifteen-frontiers.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  OPENBLAS_NUM_THREADS: '1'
+  OMP_NUM_THREADS: '1'
+  MKL_NUM_THREADS: '1'
+
+concurrency:
+  group: pass415-429-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  materialize:
+    if: (github.event_name == 'push' || github.event_name == 'pull_request') && github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install \
+            numpy==2.3.5 \
+            scipy==1.17.0 \
+            sympy==1.14.0 \
+            networkx==3.6.1 \
+            cryptography==46.0.4 \
+            pytest==9.0.2 \
+            jsonschema==4.26.0
+      - name: Generate Pass 425-429 certificates
+        run: |
+          for pass_name in \
+            425_exact_extension_smith \
+            426_mixed_qutrit_phase_portrait \
+            427_adaptive_telemetry_channel \
+            428_bayesian_hardware_diagnosis \
+            429_inductive_custody_verification
+          do
+            python "analysis/w33_pass${pass_name}.py"
+            python "analysis/w33_pass${pass_name}.py" --check
+          done
+      - name: Validate focused regressions and claims
+        run: |
+          python -m pytest -q tests/test_pass425_429_five_frontiers.py
+          python scripts/check_claims_ledger.py
+      - name: Commit deterministic certificates
+        env:
+          HEAD_BRANCH: ${{ github.event.pull_request.head.ref || github.ref_name }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f \
+            data/w33_pass425_exact_extension_smith.json \
+            data/w33_pass426_mixed_qutrit_phase_portrait.json \
+            data/w33_pass427_adaptive_telemetry_channel.json \
+            data/w33_pass428_bayesian_hardware_diagnosis.json \
+            data/w33_pass429_inductive_custody_verification.json
+          if git diff --cached --quiet; then
+            echo 'Certificates already materialized.'
+          else
+            git commit -m 'Pass 425-429: materialize deterministic certificates'
+            git push origin "HEAD:${HEAD_BRANCH}"
+          fi
+
+  verify:
+    needs: materialize
+    if: always() && (github.event_name == 'pull_request' || github.actor == 'github-actions[bot]' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+      - id: ready
+        name: Check certificate readiness
+        shell: bash
+        run: |
+          if [[ -f data/w33_pass429_inductive_custody_verification.json ]]; then
+            echo 'ready=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'ready=false' >> "$GITHUB_OUTPUT"
+            echo 'Certificates are awaiting the branch materialization run.'
+          fi
+      - if: steps.ready.outputs.ready == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - if: steps.ready.outputs.ready == 'true'
+        name: Install pinned dependencies
+        run: |
+          python -m pip install \
+            numpy==2.3.5 \
+            scipy==1.17.0 \
+            sympy==1.14.0 \
+            networkx==3.6.1 \
+            cryptography==46.0.4 \
+            pytest==9.0.2 \
+            jsonschema==4.26.0
+      - if: steps.ready.outputs.ready == 'true'
+        name: Validate all fifteen witnesses
+        run: |
+          for pass_name in \
+            415_frobenius_smith_packets \
+            416_qutrit_distillation_search \
+            417_divisor_cycle_hybrid_decoder \
+            418_twirl_breaking_spectroscopy \
+            419_adversarial_replication \
+            420_integral_conductor_gluing \
+            421_qutrit_phase_portrait \
+            422_telemetry_coding_theorem \
+            423_hardware_inverse_compiler \
+            424_custody_model_checker \
+            425_exact_extension_smith \
+            426_mixed_qutrit_phase_portrait \
+            427_adaptive_telemetry_channel \
+            428_bayesian_hardware_diagnosis \
+            429_inductive_custody_verification
+          do
+            python "analysis/w33_pass${pass_name}.py" --check
+          done
+      - if: steps.ready.outputs.ready == 'true'
+        name: Validate schema and all frontier regressions
+        run: |
+          python - <<'PY'
+          import json, jsonschema
+          schema=json.load(open('schemas/w33_pass419_hardened_handoff_v2.schema.json'))
+          fixture=json.load(open('data/w33_pass419_hardened_custody_fixture.json'))
+          jsonschema.validate(fixture,schema)
+          PY
+          python -m pytest -q \
+            tests/test_pass415_419_five_frontiers.py \
+            tests/test_pass420_424_five_frontiers.py \
+            tests/test_pass425_429_five_frontiers.py
+      - if: steps.ready.outputs.ready == 'true'
+        name: Audit exact Pass 425-429 batch
+        run: |
+          python scripts/audit_batch.py \
+            PASS425_429_FIVE_FRONTIERS_RELEASE.md \
+            analysis/w33_pass425_exact_extension_smith.py \
+            analysis/w33_pass426_mixed_qutrit_phase_portrait.py \
+            analysis/w33_pass427_adaptive_telemetry_channel.py \
+            analysis/w33_pass428_bayesian_hardware_diagnosis.py \
+            analysis/w33_pass429_inductive_custody_verification.py \
+            data/w33_pass425_exact_extension_smith.json \
+            data/w33_pass426_mixed_qutrit_phase_portrait.json \
+            data/w33_pass427_adaptive_telemetry_channel.json \
+            data/w33_pass428_bayesian_hardware_diagnosis.json \
+            data/w33_pass429_inductive_custody_verification.json \
+            specs/W33Pass429CustodyInductive.tla \
+            tests/test_pass425_429_five_frontiers.py
+      - if: steps.ready.outputs.ready == 'true'
+        name: Verify live claims ledger
+        run: python scripts/check_claims_ledger.py
