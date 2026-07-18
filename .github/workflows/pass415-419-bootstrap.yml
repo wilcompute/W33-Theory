@@ -37,16 +37,15 @@ jobs:
               with urllib.request.urlopen(req) as r:return json.load(r)
           base=f"https://api.github.com/repos/{os.environ['GITHUB_REPOSITORY']}/issues/117"
           issue=get(base); comments=get(base+'/comments?per_page=100')
-          text='\n'.join([issue['body']]+[c['body'] for c in comments])
-          chunks={}
+          text='\n'.join([issue['body']]+[c['body'] for c in comments]); chunks={}
           for i in range(12):
-              if i==8:
-                  pieces=[]
+              if i in (5,7,8):
+                  parts=[]
                   for s in 'AB':
-                      m=re.findall(rf'PASS415_CHUNK_08{s}_BEGIN -->\n(.*?)\n<!-- PASS415_CHUNK_08{s}_END',text,re.S)
-                      if not m:raise SystemExit(f'missing 08{s}')
-                      pieces.append(m[-1].strip())
-                  chunks[i]=''.join(pieces)
+                      m=re.findall(rf'PASS415_CHUNK_{i:02d}{s}_BEGIN -->\n(.*?)\n<!-- PASS415_CHUNK_{i:02d}{s}_END',text,re.S)
+                      if not m:raise SystemExit(f'missing {i:02d}{s}')
+                      parts.append(m[-1].strip())
+                  chunks[i]=''.join(parts)
               else:
                   m=re.findall(rf'PASS415_CHUNK_{i:02d}_BEGIN -->\n(.*?)\n<!-- PASS415_CHUNK_{i:02d}_END',text,re.S)
                   if not m:raise SystemExit(f'missing {i:02d}')
@@ -83,12 +82,12 @@ jobs:
           PY
           python -m pytest -q tests/test_pass415_419_five_frontiers.py
           python scripts/check_claims_ledger.py
-      - name: Publish readable release and remove bootstrap
+      - name: Publish readable release and remove transport machinery
         run: |
-          rm .github/workflows/pass415-419-bootstrap.yml
+          rm .github/workflows/pass415-419-bootstrap.yml .github/workflows/pass415-419-transport-diagnostic.yml
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add .github/workflows/pass415-419-bootstrap.yml .github/workflows/pass415-419-five-frontiers.yml PASS415_419_FIVE_FRONTIERS_RELEASE.md analysis/w33_pass41*.py data/w33_pass41* schemas/w33_pass419_hardened_handoff_v2.schema.json docs/W33_PASS419_ADVERSARIAL_REPLICATION.md tests/test_pass415_419_five_frontiers.py
-          test "$(git diff --cached --name-only | wc -l)" -eq 20
+          git add .github/workflows/pass415-419-bootstrap.yml .github/workflows/pass415-419-transport-diagnostic.yml .github/workflows/pass415-419-five-frontiers.yml PASS415_419_FIVE_FRONTIERS_RELEASE.md analysis/w33_pass41*.py data/w33_pass41* schemas/w33_pass419_hardened_handoff_v2.schema.json docs/W33_PASS419_ADVERSARIAL_REPLICATION.md tests/test_pass415_419_five_frontiers.py
+          test "$(git diff --cached --name-only | wc -l)" -eq 21
           git commit -m 'Passes 415-419: execute five orthogonal frontiers'
           git push origin HEAD:agent/pass415-419-five-frontiers
