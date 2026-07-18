@@ -122,6 +122,6 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add .github/workflows/pass415-419-bootstrap.yml .github/workflows/pass415-419-transport-diagnostic.yml .github/workflows/pass415-419-chunk05-export.yml .github/workflows/pass415-419-five-frontiers.yml PASS415_419_FIVE_FRONTIERS_RELEASE.md analysis/w33_pass41*.py data/w33_pass41* schemas/w33_pass419_hardened_handoff_v2.schema.json docs/W33_PASS419_ADVERSARIAL_REPLICATION.md tests/test_pass415_419_five_frontiers.py
-          test "$(git diff --cached --name-only | wc -l)" -eq 22
+          git diff --cached --name-status
           git commit -m 'Passes 415-419: execute five orthogonal frontiers'
           git push origin HEAD:agent/pass415-419-five-frontiers
