@@ -1,0 +1,1169 @@
+{
+  "acquisition_completed_at": "2026-07-17T15:20:00-04:00",
+  "acquisition_started_at": "2026-07-17T15:00:00-04:00",
+  "blinded": true,
+  "device_id": "PASS409-NONCLAIM-FIXTURE",
+  "gate_labels_present": false,
+  "phases_radians": [
+    0.0,
+    1.5707963267948966,
+    3.141592653589793,
+    4.71238898038469
+  ],
+  "rows": [
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 0,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 0,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 0,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 0,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 1,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 1,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 1,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 1,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 2,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 2,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 2,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 2,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 3,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 3,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 3,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 3,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 4,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 4,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 4,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 4,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 5,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 5,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 5,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 5,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 6,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 6,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 6,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 6,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 7,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 7,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 7,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "A7",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 7,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1961,
+      "count_port1": 1039,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 0,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 0,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1039,
+      "count_port1": 1961,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 0,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 0,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1961,
+      "count_port1": 1039,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 1,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 1,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1039,
+      "count_port1": 1961,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 1,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 1,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1961,
+      "count_port1": 1039,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 2,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 2,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1039,
+      "count_port1": 1961,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 2,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 2,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1961,
+      "count_port1": 1039,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 3,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 3,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1039,
+      "count_port1": 1961,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 3,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 3,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1961,
+      "count_port1": 1039,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 4,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 4,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1039,
+      "count_port1": 1961,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 4,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 4,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1961,
+      "count_port1": 1039,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 5,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 5,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1039,
+      "count_port1": 1961,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 5,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 5,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1961,
+      "count_port1": 1039,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 6,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 6,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1039,
+      "count_port1": 1961,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 6,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 6,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1961,
+      "count_port1": 1039,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 7,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 7,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1039,
+      "count_port1": 1961,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 7,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "B2",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 7,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 2882,
+      "count_port1": 118,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 0,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 0,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 118,
+      "count_port1": 2882,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 0,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 0,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 2882,
+      "count_port1": 118,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 1,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 1,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 118,
+      "count_port1": 2882,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 1,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 1,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 2882,
+      "count_port1": 118,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 2,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 2,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 118,
+      "count_port1": 2882,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 2,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 2,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 2882,
+      "count_port1": 118,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 3,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 3,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 118,
+      "count_port1": 2882,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 3,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 3,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 2882,
+      "count_port1": 118,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 4,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 4,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 118,
+      "count_port1": 2882,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 4,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 4,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 2882,
+      "count_port1": 118,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 5,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 5,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 118,
+      "count_port1": 2882,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 5,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 5,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 2882,
+      "count_port1": 118,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 6,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 6,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 118,
+      "count_port1": 2882,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 6,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 6,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 2882,
+      "count_port1": 118,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 7,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 7,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 118,
+      "count_port1": 2882,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 7,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "C9",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 7,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 0,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 0,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 0,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 0,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 1,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 1,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 1,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 1,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 2,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 2,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 2,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 2,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 3,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 3,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 3,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 3,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 4,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 4,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 4,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 4,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 5,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 5,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 5,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 5,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 6,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 6,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 6,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 6,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 0,
+      "phase_radians": 0.0,
+      "replicate": 7,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 1,
+      "phase_radians": 1.5707963267948966,
+      "replicate": 7,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 2,
+      "phase_radians": 3.141592653589793,
+      "replicate": 7,
+      "shots": 3000
+    },
+    {
+      "blind_gate_code": "D4",
+      "count_port0": 1500,
+      "count_port1": 1500,
+      "phase_index": 3,
+      "phase_radians": 4.71238898038469,
+      "replicate": 7,
+      "shots": 3000
+    }
+  ],
+  "schema": "w33.photonic.sealed-lab.v1.raw-counts",
+  "study_type": "nonclaim_test_fixture"
+}

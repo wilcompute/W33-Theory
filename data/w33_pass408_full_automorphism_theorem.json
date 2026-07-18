@@ -1,0 +1,52 @@
+{
+  "certificate_sha256": "064cc82d4066a651ea786be44dbe59298087246f9f2a9e46b66d27e8d3d0f132",
+  "checks": {
+    "central_multiplier_quotient_q3_has_order_2": true,
+    "central_multiplier_quotient_q5_has_order_4": true,
+    "pass403_q3_order_agrees": true,
+    "pass403_q5_order_agrees": true,
+    "pass403_q9_order_agrees": true,
+    "q3_all_constructed_maps_preserve_voltage": true,
+    "q3_constructed_graph_maps_count_1296": true,
+    "q3_every_collineation_is_affine": true,
+    "q3_exhaustive_affine_plane_collineation_count_432": true,
+    "q5_full_group_order_60000": true,
+    "q5_gl_order_480": true,
+    "q5_representative_maps_preserve_voltage": true
+  },
+  "explicit_prime_field_action": "(u,z) -> (M u+a, det(M) z-omega(Mu,a)+c)",
+  "instances": {
+    "3": {
+      "central_orientation_fixed_subgroup_order": 648,
+      "exhaustive_no_extra_automorphisms": true,
+      "field_automorphism_order": 1,
+      "full_automorphism_order": 1296,
+      "multiplier_index": 2
+    },
+    "5": {
+      "central_orientation_fixed_subgroup_order": 15000,
+      "field_automorphism_order": 1,
+      "full_automorphism_order": 60000,
+      "important_conclusion": "the unoriented extension is larger than C2; all four nonzero central multipliers occur",
+      "multiplier_index": 4
+    },
+    "9": {
+      "field_automorphism_order": 2,
+      "full_automorphism_order": 8398080,
+      "multiplier_group_order": 8,
+      "source": "Pass 403 exact permutation-group census including Frobenius"
+    }
+  },
+  "orientation_result": "Fixing the central phase orientation corresponds to determinant multiplier 1. The full quotient of multipliers is F_q^*, of order q-1; only q=3 reduces this extension to C2.",
+  "proof_ledger": [
+    "Distance three is graph-theoretic, so every automorphism preserves the q-point antipodal fibres.",
+    "The triangle voltage omega(v-u,w-u) vanishes exactly for collinear base triples; graph automorphisms therefore induce affine-plane collineations.",
+    "The fundamental theorem of affine geometry gives an affine semilinear base map u -> M u^sigma+a.",
+    "Conjugating every perfect matching forces all fibre permutations to share one semilinear multiplier; the matching equation then gives the displayed z-coordinate cocycle.",
+    "These maps are exactly H_q semidirect GammaL(2,q), so no additional unoriented automorphisms remain."
+  ],
+  "schema": "w33.pass408.full_automorphism_theorem.v1",
+  "status": "PASS",
+  "theorem": "Aut(Gamma_q)=H_q semidirect GammaL(2,q), with order q^3(q^2-1)(q^2-q)f for q=p^f",
+  "theorem_scope": "every odd prime power q>2"
+}

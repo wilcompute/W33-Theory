@@ -1,0 +1,3067 @@
+{
+  "convention": "words are applied left-to-right in the affine symplectic composition used by the witness",
+  "elements": [
+    {
+      "displacement": [
+        0,
+        0
+      ],
+      "id": "1001:00",
+      "symplectic": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "word": "I"
+    },
+    {
+      "displacement": [
+        0,
+        0
+      ],
+      "id": "0210:00",
+      "symplectic": [
+        0,
+        2,
+        1,
+        0
+      ],
+      "word": "F"
+    },
+    {
+      "displacement": [
+        0,
+        0
+      ],
+      "id": "1011:00",
+      "symplectic": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "word": "P"
+    },
+    {
+      "displacement": [
+        1,
+        0
+      ],
+      "id": "1001:10",
+      "symplectic": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "word": "X"
+    },
+    {
+      "displacement": [
+        0,
+        1
+      ],
+      "id": "1001:01",
+      "symplectic": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "word": "Z"
+    },
+    {
+      "displacement": [
+        0,
+        0
+      ],
+      "id": "2002:00",
+      "symplectic": [
+        2,
+        0,
+        0,
+        2
+      ],
+      "word": "FF"
+    },
+    {
+      "displacement": [
+        0,
+        0
+      ],
+      "id": "2210:00",
+      "symplectic": [
+        2,
+        2,
+        1,
+        0
+      ],
+      "word": "FP"
+    },
+    {
+      "displacement": [
+        2,
+        0
+      ],
+      "id": "0210:20",
+      "symplectic": [
+        0,
+        2,
+        1,
+        0
+      ],
+      "word": "FZ"
+    },
+    {
+      "displacement": [
+        0,
+        0
+      ],
+      "id": "0212:00",
+      "symplectic": [
+        0,
+        2,
+        1,
+        2
+      ],
+      "word": "PF"
+    },
+    {
+      "displacement": [
+        0,
+        0
+      ],
+      "id": "1021:00",
+      "symplectic": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "word": "PP"
+    },
+    {
+      "displacement": [
+        1,
+        1
+      ],
+      "id": "1011:11",
+      "symplectic": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "word": "PX"
+    },
+    {
+      "displacement": [
+        1,
+        0
+      ],
+      "id": "0210:10",
+      "symplectic": [
+        0,
+        2,
+        1,
+        0
+      ],
+      "word": "XF"
+    },
+    {
+      "displacement": [
+        1,
+        0
+      ],
+      "id": "1011:10",
+      "symplectic": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "word": "XP"
+    },
+    {
+      "displacement": [
+        2,
+        0
+      ],
+      "id": "1001:20",
+      "symplectic": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "word": "XX"
+    },
+    {
+      "displacement": [
+        1,
+        1
+      ],
+      "id": "1001:11",
+      "symplectic": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "word": "XZ"
+    },
+    {
+      "displacement": [
+        0,
+        1
+      ],
+      "id": "0210:01",
+      "symplectic": [
+        0,
+        2,
+        1,
+        0
+      ],
+      "word": "ZF"
+    },
+    {
+      "displacement": [
+        0,
+        1
+      ],
+      "id": "1011:01",
+      "symplectic": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "word": "ZP"
+    },
+    {
+      "displacement": [
+        0,
+        2
+      ],
+      "id": "1001:02",
+      "symplectic": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "word": "ZZ"
+    },
+    {
+      "displacement": [
+        0,
+        0
+      ],
+      "id": "0120:00",
+      "symplectic": [
+        0,
+        1,
+        2,
+        0
+      ],
+      "word": "FFF"
+    },
+    {
+      "displacement": [
+        0,
+        0
+      ],
+      "id": "2022:00",
+      "symplectic": [
+        2,
+        0,
+        2,
+        2
+      ],
+      "word": "FFP"
+    },
+    {
+      "displacement": [
+        0,
+        2
+      ],
+      "id": "2002:02",
+      "symplectic": [
+        2,
+        0,
+        0,
+        2
+      ],
+      "word": "FFZ"
+    },
+    {
+      "displacement": [
+        0,
+        0
+      ],
+      "id": "2102:00",
+      "symplectic": [
+        2,
+        1,
+        0,
+        2
+      ],
+      "word": "FPF"
+    },
+    {
+      "displacement": [
+        0,
+        0
+      ],
+      "id": "1210:00",
+      "symplectic": [
+        1,
+        2,
+        1,
+        0
+      ],
+      "word": "FPP"
+    },
+    {
+      "displacement": [
+        2,
+        1
+      ],
+      "id": "2210:21",
+      "symplectic": [
+        2,
+        2,
+        1,
+        0
+      ],
+      "word": "FPX"
+    },
+    {
+      "displacement": [
+        2,
+        0
+      ],
+      "id": "2002:20",
+      "symplectic": [
+        2,
+        0,
+        0,
+        2
+      ],
+      "word": "FZF"
+    },
+    {
+      "displacement": [
+        2,
+        0
+      ],
+      "id": "2210:20",
+      "symplectic": [
+        2,
+        2,
+        1,
+        0
+      ],
+      "word": "FZP"
+    },
+    {
+      "displacement": [
+        0,
+        0
+      ],
+      "id": "2202:00",
+      "symplectic": [
+        2,
+        2,
+        0,
+        2
+      ],
+      "word": "PFP"
+    },
+    {
+      "displacement": [
+        2,
+        2
+      ],
+      "id": "0212:22",
+      "symplectic": [
+        0,
+        2,
+        1,
+        2
+      ],
+      "word": "PFZ"
+    },
+    {
+      "displacement": [
+        0,
+        0
+      ],
+      "id": "0211:00",
+      "symplectic": [
+        0,
+        2,
+        1,
+        1
+      ],
+      "word": "PPF"
+    },
+    {
+      "displacement": [
+        1,
+        2
+      ],
+      "id": "1021:12",
+      "symplectic": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "word": "PPX"
+    },
+    {
+      "displacement": [
+        1,
+        1
+      ],
+      "id": "0212:11",
+      "symplectic": [
+        0,
+        2,
+        1,
+        2
+      ],
+      "word": "PXF"
+    },
+    {
+      "displacement": [
+        1,
+        1
+      ],
+      "id": "1021:11",
+      "symplectic": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "word": "PXP"
+    },
+    {
+      "displacement": [
+        2,
+        2
+      ],
+      "id": "1011:22",
+      "symplectic": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "word": "PXX"
+    },
+    {
+      "displacement": [
+        1,
+        0
+      ],
+      "id": "2002:10",
+      "symplectic": [
+        2,
+        0,
+        0,
+        2
+      ],
+      "word": "XFF"
+    },
+    {
+      "displacement": [
+        1,
+        0
+      ],
+      "id": "2210:10",
+      "symplectic": [
+        2,
+        2,
+        1,
+        0
+      ],
+      "word": "XFP"
+    },
+    {
+      "displacement": [
+        1,
+        0
+      ],
+      "id": "0212:10",
+      "symplectic": [
+        0,
+        2,
+        1,
+        2
+      ],
+      "word": "XPF"
+    },
+    {
+      "displacement": [
+        1,
+        0
+      ],
+      "id": "1021:10",
+      "symplectic": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "word": "XPP"
+    },
+    {
+      "displacement": [
+        2,
+        1
+      ],
+      "id": "1011:21",
+      "symplectic": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "word": "XPX"
+    },
+    {
+      "displacement": [
+        2,
+        0
+      ],
+      "id": "1011:20",
+      "symplectic": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "word": "XXP"
+    },
+    {
+      "displacement": [
+        2,
+        1
+      ],
+      "id": "1001:21",
+      "symplectic": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "word": "XXZ"
+    },
+    {
+      "displacement": [
+        1,
+        1
+      ],
+      "id": "0210:11",
+      "symplectic": [
+        0,
+        2,
+        1,
+        0
+      ],
+      "word": "XZF"
+    },
+    {
+      "displacement": [
+        1,
+        2
+      ],
+      "id": "1001:12",
+      "symplectic": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "word": "XZZ"
+    },
+    {
+      "displacement": [
+        0,
+        1
+      ],
+      "id": "2002:01",
+      "symplectic": [
+        2,
+        0,
+        0,
+        2
+      ],
+      "word": "ZFF"
+    },
+    {
+      "displacement": [
+        0,
+        1
+      ],
+      "id": "2210:01",
+      "symplectic": [
+        2,
+        2,
+        1,
+        0
+      ],
+      "word": "ZFP"
+    },
+    {
+      "displacement": [
+        2,
+        1
+      ],
+      "id": "0210:21",
+      "symplectic": [
+        0,
+        2,
+        1,
+        0
+      ],
+      "word": "ZFZ"
+    },
+    {
+      "displacement": [
+        0,
+        1
+      ],
+      "id": "0212:01",
+      "symplectic": [
+        0,
+        2,
+        1,
+        2
+      ],
+      "word": "ZPF"
+    },
+    {
+      "displacement": [
+        0,
+        1
+      ],
+      "id": "1021:01",
+      "symplectic": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "word": "ZPP"
+    },
+    {
+      "displacement": [
+        1,
+        2
+      ],
+      "id": "1011:12",
+      "symplectic": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "word": "ZPX"
+    },
+    {
+      "displacement": [
+        0,
+        2
+      ],
+      "id": "0210:02",
+      "symplectic": [
+        0,
+        2,
+        1,
+        0
+      ],
+      "word": "ZZF"
+    },
+    {
+      "displacement": [
+        0,
+        2
+      ],
+      "id": "1011:02",
+      "symplectic": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "word": "ZZP"
+    },
+    {
+      "displacement": [
+        0,
+        0
+      ],
+      "id": "1120:00",
+      "symplectic": [
+        1,
+        1,
+        2,
+        0
+      ],
+      "word": "FFFP"
+    },
+    {
+      "displacement": [
+        0,
+        0
+      ],
+      "id": "0121:00",
+      "symplectic": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "word": "FFPF"
+    },
+    {
+      "displacement": [
+        0,
+        0
+      ],
+      "id": "2012:00",
+      "symplectic": [
+        2,
+        0,
+        1,
+        2
+      ],
+      "word": "FFPP"
+    },
+    {
+      "displacement": [
+        2,
+        2
+      ],
+      "id": "2022:22",
+      "symplectic": [
+        2,
+        0,
+        2,
+        2
+      ],
+      "word": "FFPX"
+    },
+    {
+      "displacement": [
+        0,
+        2
+      ],
+      "id": "0120:02",
+      "symplectic": [
+        0,
+        1,
+        2,
+        0
+      ],
+      "word": "FFZF"
+    },
+    {
+      "displacement": [
+        0,
+        2
+      ],
+      "id": "2022:02",
+      "symplectic": [
+        2,
+        0,
+        2,
+        2
+      ],
+      "word": "FFZP"
+    },
+    {
+      "displacement": [
+        0,
+        0
+      ],
+      "id": "0122:00",
+      "symplectic": [
+        0,
+        1,
+        2,
+        2
+      ],
+      "word": "FPFP"
+    },
+    {
+      "displacement": [
+        1,
+        2
+      ],
+      "id": "2102:12",
+      "symplectic": [
+        2,
+        1,
+        0,
+        2
+      ],
+      "word": "FPFZ"
+    },
+    {
+      "displacement": [
+        1,
+        1
+      ],
+      "id": "1210:11",
+      "symplectic": [
+        1,
+        2,
+        1,
+        0
+      ],
+      "word": "FPPX"
+    },
+    {
+      "displacement": [
+        2,
+        1
+      ],
+      "id": "2102:21",
+      "symplectic": [
+        2,
+        1,
+        0,
+        2
+      ],
+      "word": "FPXF"
+    },
+    {
+      "displacement": [
+        2,
+        1
+      ],
+      "id": "1210:21",
+      "symplectic": [
+        1,
+        2,
+        1,
+        0
+      ],
+      "word": "FPXP"
+    },
+    {
+      "displacement": [
+        1,
+        2
+      ],
+      "id": "2210:12",
+      "symplectic": [
+        2,
+        2,
+        1,
+        0
+      ],
+      "word": "FPXX"
+    },
+    {
+      "displacement": [
+        2,
+        0
+      ],
+      "id": "0120:20",
+      "symplectic": [
+        0,
+        1,
+        2,
+        0
+      ],
+      "word": "FZFF"
+    },
+    {
+      "displacement": [
+        2,
+        0
+      ],
+      "id": "2022:20",
+      "symplectic": [
+        2,
+        0,
+        2,
+        2
+      ],
+      "word": "FZFP"
+    },
+    {
+      "displacement": [
+        2,
+        2
+      ],
+      "id": "2002:22",
+      "symplectic": [
+        2,
+        0,
+        0,
+        2
+      ],
+      "word": "FZFZ"
+    },
+    {
+      "displacement": [
+        2,
+        0
+      ],
+      "id": "2102:20",
+      "symplectic": [
+        2,
+        1,
+        0,
+        2
+      ],
+      "word": "FZPF"
+    },
+    {
+      "displacement": [
+        2,
+        0
+      ],
+      "id": "1210:20",
+      "symplectic": [
+        1,
+        2,
+        1,
+        0
+      ],
+      "word": "FZPP"
+    },
+    {
+      "displacement": [
+        0,
+        0
+      ],
+      "id": "2120:00",
+      "symplectic": [
+        2,
+        1,
+        2,
+        0
+      ],
+      "word": "PFPF"
+    },
+    {
+      "displacement": [
+        0,
+        0
+      ],
+      "id": "1222:00",
+      "symplectic": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "word": "PFPP"
+    },
+    {
+      "displacement": [
+        2,
+        0
+      ],
+      "id": "2202:20",
+      "symplectic": [
+        2,
+        2,
+        0,
+        2
+      ],
+      "word": "PFPX"
+    },
+    {
+      "displacement": [
+        2,
+        2
+      ],
+      "id": "2202:22",
+      "symplectic": [
+        2,
+        2,
+        0,
+        2
+      ],
+      "word": "PFZP"
+    },
+    {
+      "displacement": [
+        0,
+        0
+      ],
+      "id": "2221:00",
+      "symplectic": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "word": "PPFP"
+    },
+    {
+      "displacement": [
+        2,
+        1
+      ],
+      "id": "0211:21",
+      "symplectic": [
+        0,
+        2,
+        1,
+        1
+      ],
+      "word": "PPFZ"
+    },
+    {
+      "displacement": [
+        1,
+        2
+      ],
+      "id": "0211:12",
+      "symplectic": [
+        0,
+        2,
+        1,
+        1
+      ],
+      "word": "PPXF"
+    },
+    {
+      "displacement": [
+        1,
+        1
+      ],
+      "id": "2022:11",
+      "symplectic": [
+        2,
+        0,
+        2,
+        2
+      ],
+      "word": "PXFF"
+    },
+    {
+      "displacement": [
+        1,
+        1
+      ],
+      "id": "2202:11",
+      "symplectic": [
+        2,
+        2,
+        0,
+        2
+      ],
+      "word": "PXFP"
+    },
+    {
+      "displacement": [
+        1,
+        1
+      ],
+      "id": "0211:11",
+      "symplectic": [
+        0,
+        2,
+        1,
+        1
+      ],
+      "word": "PXPF"
+    },
+    {
+      "displacement": [
+        1,
+        0
+      ],
+      "id": "0120:10",
+      "symplectic": [
+        0,
+        1,
+        2,
+        0
+      ],
+      "word": "XFFF"
+    },
+    {
+      "displacement": [
+        1,
+        0
+      ],
+      "id": "2022:10",
+      "symplectic": [
+        2,
+        0,
+        2,
+        2
+      ],
+      "word": "XFFP"
+    },
+    {
+      "displacement": [
+        1,
+        2
+      ],
+      "id": "2002:12",
+      "symplectic": [
+        2,
+        0,
+        0,
+        2
+      ],
+      "word": "XFFZ"
+    },
+    {
+      "displacement": [
+        1,
+        0
+      ],
+      "id": "2102:10",
+      "symplectic": [
+        2,
+        1,
+        0,
+        2
+      ],
+      "word": "XFPF"
+    },
+    {
+      "displacement": [
+        1,
+        0
+      ],
+      "id": "1210:10",
+      "symplectic": [
+        1,
+        2,
+        1,
+        0
+      ],
+      "word": "XFPP"
+    },
+    {
+      "displacement": [
+        1,
+        0
+      ],
+      "id": "2202:10",
+      "symplectic": [
+        2,
+        2,
+        0,
+        2
+      ],
+      "word": "XPFP"
+    },
+    {
+      "displacement": [
+        0,
+        2
+      ],
+      "id": "0212:02",
+      "symplectic": [
+        0,
+        2,
+        1,
+        2
+      ],
+      "word": "XPFZ"
+    },
+    {
+      "displacement": [
+        1,
+        0
+      ],
+      "id": "0211:10",
+      "symplectic": [
+        0,
+        2,
+        1,
+        1
+      ],
+      "word": "XPPF"
+    },
+    {
+      "displacement": [
+        2,
+        2
+      ],
+      "id": "1021:22",
+      "symplectic": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "word": "XPPX"
+    },
+    {
+      "displacement": [
+        2,
+        1
+      ],
+      "id": "0212:21",
+      "symplectic": [
+        0,
+        2,
+        1,
+        2
+      ],
+      "word": "XPXF"
+    },
+    {
+      "displacement": [
+        2,
+        1
+      ],
+      "id": "1021:21",
+      "symplectic": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "word": "XPXP"
+    },
+    {
+      "displacement": [
+        2,
+        0
+      ],
+      "id": "0212:20",
+      "symplectic": [
+        0,
+        2,
+        1,
+        2
+      ],
+      "word": "XXPF"
+    },
+    {
+      "displacement": [
+        2,
+        0
+      ],
+      "id": "1021:20",
+      "symplectic": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "word": "XXPP"
+    },
+    {
+      "displacement": [
+        2,
+        2
+      ],
+      "id": "1001:22",
+      "symplectic": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "word": "XXZZ"
+    },
+    {
+      "displacement": [
+        1,
+        1
+      ],
+      "id": "2002:11",
+      "symplectic": [
+        2,
+        0,
+        0,
+        2
+      ],
+      "word": "XZFF"
+    },
+    {
+      "displacement": [
+        1,
+        1
+      ],
+      "id": "2210:11",
+      "symplectic": [
+        2,
+        2,
+        1,
+        0
+      ],
+      "word": "XZFP"
+    },
+    {
+      "displacement": [
+        1,
+        2
+      ],
+      "id": "0210:12",
+      "symplectic": [
+        0,
+        2,
+        1,
+        0
+      ],
+      "word": "XZZF"
+    },
+    {
+      "displacement": [
+        0,
+        1
+      ],
+      "id": "0120:01",
+      "symplectic": [
+        0,
+        1,
+        2,
+        0
+      ],
+      "word": "ZFFF"
+    },
+    {
+      "displacement": [
+        0,
+        1
+      ],
+      "id": "2022:01",
+      "symplectic": [
+        2,
+        0,
+        2,
+        2
+      ],
+      "word": "ZFFP"
+    },
+    {
+      "displacement": [
+        0,
+        1
+      ],
+      "id": "2102:01",
+      "symplectic": [
+        2,
+        1,
+        0,
+        2
+      ],
+      "word": "ZFPF"
+    },
+    {
+      "displacement": [
+        0,
+        1
+      ],
+      "id": "1210:01",
+      "symplectic": [
+        1,
+        2,
+        1,
+        0
+      ],
+      "word": "ZFPP"
+    },
+    {
+      "displacement": [
+        2,
+        2
+      ],
+      "id": "2210:22",
+      "symplectic": [
+        2,
+        2,
+        1,
+        0
+      ],
+      "word": "ZFPX"
+    },
+    {
+      "displacement": [
+        2,
+        1
+      ],
+      "id": "2002:21",
+      "symplectic": [
+        2,
+        0,
+        0,
+        2
+      ],
+      "word": "ZFZF"
+    },
+    {
+      "displacement": [
+        0,
+        1
+      ],
+      "id": "2202:01",
+      "symplectic": [
+        2,
+        2,
+        0,
+        2
+      ],
+      "word": "ZPFP"
+    },
+    {
+      "displacement": [
+        0,
+        1
+      ],
+      "id": "0211:01",
+      "symplectic": [
+        0,
+        2,
+        1,
+        1
+      ],
+      "word": "ZPPF"
+    },
+    {
+      "displacement": [
+        1,
+        2
+      ],
+      "id": "0212:12",
+      "symplectic": [
+        0,
+        2,
+        1,
+        2
+      ],
+      "word": "ZPXF"
+    },
+    {
+      "displacement": [
+        0,
+        2
+      ],
+      "id": "2210:02",
+      "symplectic": [
+        2,
+        2,
+        1,
+        0
+      ],
+      "word": "ZZFP"
+    },
+    {
+      "displacement": [
+        2,
+        2
+      ],
+      "id": "0210:22",
+      "symplectic": [
+        0,
+        2,
+        1,
+        0
+      ],
+      "word": "ZZFZ"
+    },
+    {
+      "displacement": [
+        0,
+        2
+      ],
+      "id": "1021:02",
+      "symplectic": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "word": "ZZPP"
+    },
+    {
+      "displacement": [
+        0,
+        0
+      ],
+      "id": "1201:00",
+      "symplectic": [
+        1,
+        2,
+        0,
+        1
+      ],
+      "word": "FFFPF"
+    },
+    {
+      "displacement": [
+        1,
+        2
+      ],
+      "id": "1120:12",
+      "symplectic": [
+        1,
+        1,
+        2,
+        0
+      ],
+      "word": "FFFPX"
+    },
+    {
+      "displacement": [
+        0,
+        0
+      ],
+      "id": "1101:00",
+      "symplectic": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "word": "FFPFP"
+    },
+    {
+      "displacement": [
+        1,
+        1
+      ],
+      "id": "0121:11",
+      "symplectic": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "word": "FFPFZ"
+    },
+    {
+      "displacement": [
+        2,
+        1
+      ],
+      "id": "2012:21",
+      "symplectic": [
+        2,
+        0,
+        1,
+        2
+      ],
+      "word": "FFPPX"
+    },
+    {
+      "displacement": [
+        2,
+        2
+      ],
+      "id": "0121:22",
+      "symplectic": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "word": "FFPXF"
+    },
+    {
+      "displacement": [
+        2,
+        2
+      ],
+      "id": "2012:22",
+      "symplectic": [
+        2,
+        0,
+        1,
+        2
+      ],
+      "word": "FFPXP"
+    },
+    {
+      "displacement": [
+        0,
+        2
+      ],
+      "id": "1120:02",
+      "symplectic": [
+        1,
+        1,
+        2,
+        0
+      ],
+      "word": "FFZFP"
+    },
+    {
+      "displacement": [
+        0,
+        2
+      ],
+      "id": "0121:02",
+      "symplectic": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "word": "FFZPF"
+    },
+    {
+      "displacement": [
+        0,
+        2
+      ],
+      "id": "2012:02",
+      "symplectic": [
+        2,
+        0,
+        1,
+        2
+      ],
+      "word": "FFZPP"
+    },
+    {
+      "displacement": [
+        0,
+        0
+      ],
+      "id": "1112:00",
+      "symplectic": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "word": "FPFPP"
+    },
+    {
+      "displacement": [
+        0,
+        2
+      ],
+      "id": "0122:02",
+      "symplectic": [
+        0,
+        1,
+        2,
+        2
+      ],
+      "word": "FPFPX"
+    },
+    {
+      "displacement": [
+        1,
+        2
+      ],
+      "id": "0122:12",
+      "symplectic": [
+        0,
+        1,
+        2,
+        2
+      ],
+      "word": "FPFZP"
+    },
+    {
+      "displacement": [
+        2,
+        1
+      ],
+      "id": "1120:21",
+      "symplectic": [
+        1,
+        1,
+        2,
+        0
+      ],
+      "word": "FPXFF"
+    },
+    {
+      "displacement": [
+        2,
+        1
+      ],
+      "id": "0122:21",
+      "symplectic": [
+        0,
+        1,
+        2,
+        2
+      ],
+      "word": "FPXFP"
+    },
+    {
+      "displacement": [
+        2,
+        0
+      ],
+      "id": "1120:20",
+      "symplectic": [
+        1,
+        1,
+        2,
+        0
+      ],
+      "word": "FZFFP"
+    },
+    {
+      "displacement": [
+        2,
+        0
+      ],
+      "id": "0121:20",
+      "symplectic": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "word": "FZFPF"
+    },
+    {
+      "displacement": [
+        2,
+        0
+      ],
+      "id": "2012:20",
+      "symplectic": [
+        2,
+        0,
+        1,
+        2
+      ],
+      "word": "FZFPP"
+    },
+    {
+      "displacement": [
+        2,
+        2
+      ],
+      "id": "0120:22",
+      "symplectic": [
+        0,
+        1,
+        2,
+        0
+      ],
+      "word": "FZFZF"
+    },
+    {
+      "displacement": [
+        2,
+        0
+      ],
+      "id": "0122:20",
+      "symplectic": [
+        0,
+        1,
+        2,
+        2
+      ],
+      "word": "FZPFP"
+    },
+    {
+      "displacement": [
+        1,
+        2
+      ],
+      "id": "1222:12",
+      "symplectic": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "word": "PFPPX"
+    },
+    {
+      "displacement": [
+        2,
+        0
+      ],
+      "id": "2120:20",
+      "symplectic": [
+        2,
+        1,
+        2,
+        0
+      ],
+      "word": "PFPXF"
+    },
+    {
+      "displacement": [
+        2,
+        0
+      ],
+      "id": "1222:20",
+      "symplectic": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "word": "PFPXP"
+    },
+    {
+      "displacement": [
+        2,
+        2
+      ],
+      "id": "2120:22",
+      "symplectic": [
+        2,
+        1,
+        2,
+        0
+      ],
+      "word": "PFZPF"
+    },
+    {
+      "displacement": [
+        2,
+        2
+      ],
+      "id": "1222:22",
+      "symplectic": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "word": "PFZPP"
+    },
+    {
+      "displacement": [
+        0,
+        0
+      ],
+      "id": "2111:00",
+      "symplectic": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "word": "PPFPF"
+    },
+    {
+      "displacement": [
+        2,
+        2
+      ],
+      "id": "2221:22",
+      "symplectic": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "word": "PPFPX"
+    },
+    {
+      "displacement": [
+        2,
+        1
+      ],
+      "id": "2221:21",
+      "symplectic": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "word": "PPFZP"
+    },
+    {
+      "displacement": [
+        1,
+        2
+      ],
+      "id": "2012:12",
+      "symplectic": [
+        2,
+        0,
+        1,
+        2
+      ],
+      "word": "PPXFF"
+    },
+    {
+      "displacement": [
+        1,
+        2
+      ],
+      "id": "2221:12",
+      "symplectic": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "word": "PPXFP"
+    },
+    {
+      "displacement": [
+        1,
+        1
+      ],
+      "id": "2012:11",
+      "symplectic": [
+        2,
+        0,
+        1,
+        2
+      ],
+      "word": "PXFFP"
+    },
+    {
+      "displacement": [
+        1,
+        1
+      ],
+      "id": "2120:11",
+      "symplectic": [
+        2,
+        1,
+        2,
+        0
+      ],
+      "word": "PXFPF"
+    },
+    {
+      "displacement": [
+        1,
+        1
+      ],
+      "id": "1222:11",
+      "symplectic": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "word": "PXFPP"
+    },
+    {
+      "displacement": [
+        1,
+        1
+      ],
+      "id": "2221:11",
+      "symplectic": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "word": "PXPFP"
+    },
+    {
+      "displacement": [
+        1,
+        0
+      ],
+      "id": "1120:10",
+      "symplectic": [
+        1,
+        1,
+        2,
+        0
+      ],
+      "word": "XFFFP"
+    },
+    {
+      "displacement": [
+        1,
+        0
+      ],
+      "id": "0121:10",
+      "symplectic": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "word": "XFFPF"
+    },
+    {
+      "displacement": [
+        1,
+        0
+      ],
+      "id": "2012:10",
+      "symplectic": [
+        2,
+        0,
+        1,
+        2
+      ],
+      "word": "XFFPP"
+    },
+    {
+      "displacement": [
+        1,
+        2
+      ],
+      "id": "0120:12",
+      "symplectic": [
+        0,
+        1,
+        2,
+        0
+      ],
+      "word": "XFFZF"
+    },
+    {
+      "displacement": [
+        1,
+        2
+      ],
+      "id": "2022:12",
+      "symplectic": [
+        2,
+        0,
+        2,
+        2
+      ],
+      "word": "XFFZP"
+    },
+    {
+      "displacement": [
+        1,
+        0
+      ],
+      "id": "0122:10",
+      "symplectic": [
+        0,
+        1,
+        2,
+        2
+      ],
+      "word": "XFPFP"
+    },
+    {
+      "displacement": [
+        2,
+        2
+      ],
+      "id": "2102:22",
+      "symplectic": [
+        2,
+        1,
+        0,
+        2
+      ],
+      "word": "XFPFZ"
+    },
+    {
+      "displacement": [
+        1,
+        0
+      ],
+      "id": "2120:10",
+      "symplectic": [
+        2,
+        1,
+        2,
+        0
+      ],
+      "word": "XPFPF"
+    },
+    {
+      "displacement": [
+        1,
+        0
+      ],
+      "id": "1222:10",
+      "symplectic": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "word": "XPFPP"
+    },
+    {
+      "displacement": [
+        0,
+        2
+      ],
+      "id": "2202:02",
+      "symplectic": [
+        2,
+        2,
+        0,
+        2
+      ],
+      "word": "XPFZP"
+    },
+    {
+      "displacement": [
+        1,
+        0
+      ],
+      "id": "2221:10",
+      "symplectic": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "word": "XPPFP"
+    },
+    {
+      "displacement": [
+        2,
+        2
+      ],
+      "id": "0211:22",
+      "symplectic": [
+        0,
+        2,
+        1,
+        1
+      ],
+      "word": "XPPXF"
+    },
+    {
+      "displacement": [
+        2,
+        1
+      ],
+      "id": "2022:21",
+      "symplectic": [
+        2,
+        0,
+        2,
+        2
+      ],
+      "word": "XPXFF"
+    },
+    {
+      "displacement": [
+        2,
+        1
+      ],
+      "id": "2202:21",
+      "symplectic": [
+        2,
+        2,
+        0,
+        2
+      ],
+      "word": "XPXFP"
+    },
+    {
+      "displacement": [
+        2,
+        0
+      ],
+      "id": "0211:20",
+      "symplectic": [
+        0,
+        2,
+        1,
+        1
+      ],
+      "word": "XXPPF"
+    },
+    {
+      "displacement": [
+        1,
+        1
+      ],
+      "id": "0120:11",
+      "symplectic": [
+        0,
+        1,
+        2,
+        0
+      ],
+      "word": "XZFFF"
+    },
+    {
+      "displacement": [
+        1,
+        1
+      ],
+      "id": "2102:11",
+      "symplectic": [
+        2,
+        1,
+        0,
+        2
+      ],
+      "word": "XZFPF"
+    },
+    {
+      "displacement": [
+        0,
+        1
+      ],
+      "id": "1120:01",
+      "symplectic": [
+        1,
+        1,
+        2,
+        0
+      ],
+      "word": "ZFFFP"
+    },
+    {
+      "displacement": [
+        0,
+        1
+      ],
+      "id": "0121:01",
+      "symplectic": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "word": "ZFFPF"
+    },
+    {
+      "displacement": [
+        0,
+        1
+      ],
+      "id": "2012:01",
+      "symplectic": [
+        2,
+        0,
+        1,
+        2
+      ],
+      "word": "ZFFPP"
+    },
+    {
+      "displacement": [
+        0,
+        1
+      ],
+      "id": "0122:01",
+      "symplectic": [
+        0,
+        1,
+        2,
+        2
+      ],
+      "word": "ZFPFP"
+    },
+    {
+      "displacement": [
+        1,
+        2
+      ],
+      "id": "1210:12",
+      "symplectic": [
+        1,
+        2,
+        1,
+        0
+      ],
+      "word": "ZFPPX"
+    },
+    {
+      "displacement": [
+        2,
+        2
+      ],
+      "id": "1210:22",
+      "symplectic": [
+        1,
+        2,
+        1,
+        0
+      ],
+      "word": "ZFPXP"
+    },
+    {
+      "displacement": [
+        2,
+        1
+      ],
+      "id": "0120:21",
+      "symplectic": [
+        0,
+        1,
+        2,
+        0
+      ],
+      "word": "ZFZFF"
+    },
+    {
+      "displacement": [
+        0,
+        1
+      ],
+      "id": "2120:01",
+      "symplectic": [
+        2,
+        1,
+        2,
+        0
+      ],
+      "word": "ZPFPF"
+    },
+    {
+      "displacement": [
+        0,
+        1
+      ],
+      "id": "1222:01",
+      "symplectic": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "word": "ZPFPP"
+    },
+    {
+      "displacement": [
+        0,
+        1
+      ],
+      "id": "2221:01",
+      "symplectic": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "word": "ZPPFP"
+    },
+    {
+      "displacement": [
+        1,
+        2
+      ],
+      "id": "2202:12",
+      "symplectic": [
+        2,
+        2,
+        0,
+        2
+      ],
+      "word": "ZPXFP"
+    },
+    {
+      "displacement": [
+        0,
+        2
+      ],
+      "id": "2102:02",
+      "symplectic": [
+        2,
+        1,
+        0,
+        2
+      ],
+      "word": "ZZFPF"
+    },
+    {
+      "displacement": [
+        0,
+        2
+      ],
+      "id": "1210:02",
+      "symplectic": [
+        1,
+        2,
+        1,
+        0
+      ],
+      "word": "ZZFPP"
+    },
+    {
+      "displacement": [
+        0,
+        2
+      ],
+      "id": "0211:02",
+      "symplectic": [
+        0,
+        2,
+        1,
+        1
+      ],
+      "word": "ZZPPF"
+    },
+    {
+      "displacement": [
+        2,
+        1
+      ],
+      "id": "1201:21",
+      "symplectic": [
+        1,
+        2,
+        0,
+        1
+      ],
+      "word": "FFFPFZ"
+    },
+    {
+      "displacement": [
+        1,
+        2
+      ],
+      "id": "1201:12",
+      "symplectic": [
+        1,
+        2,
+        0,
+        1
+      ],
+      "word": "FFFPXF"
+    },
+    {
+      "displacement": [
+        1,
+        1
+      ],
+      "id": "1101:11",
+      "symplectic": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "word": "FFPFZP"
+    },
+    {
+      "displacement": [
+        2,
+        2
+      ],
+      "id": "1101:22",
+      "symplectic": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "word": "FFPXFP"
+    },
+    {
+      "displacement": [
+        0,
+        2
+      ],
+      "id": "1201:02",
+      "symplectic": [
+        1,
+        2,
+        0,
+        1
+      ],
+      "word": "FFZFPF"
+    },
+    {
+      "displacement": [
+        0,
+        2
+      ],
+      "id": "1101:02",
+      "symplectic": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "word": "FFZPFP"
+    },
+    {
+      "displacement": [
+        1,
+        1
+      ],
+      "id": "1112:11",
+      "symplectic": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "word": "FPFPPX"
+    },
+    {
+      "displacement": [
+        0,
+        2
+      ],
+      "id": "1112:02",
+      "symplectic": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "word": "FPFPXP"
+    },
+    {
+      "displacement": [
+        1,
+        2
+      ],
+      "id": "1112:12",
+      "symplectic": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "word": "FPFZPP"
+    },
+    {
+      "displacement": [
+        2,
+        1
+      ],
+      "id": "1112:21",
+      "symplectic": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "word": "FPXFPP"
+    },
+    {
+      "displacement": [
+        2,
+        0
+      ],
+      "id": "1201:20",
+      "symplectic": [
+        1,
+        2,
+        0,
+        1
+      ],
+      "word": "FZFFPF"
+    },
+    {
+      "displacement": [
+        2,
+        0
+      ],
+      "id": "1101:20",
+      "symplectic": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "word": "FZFPFP"
+    },
+    {
+      "displacement": [
+        2,
+        0
+      ],
+      "id": "1112:20",
+      "symplectic": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "word": "FZPFPP"
+    },
+    {
+      "displacement": [
+        2,
+        2
+      ],
+      "id": "2111:22",
+      "symplectic": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "word": "PPFPXF"
+    },
+    {
+      "displacement": [
+        2,
+        2
+      ],
+      "id": "1201:22",
+      "symplectic": [
+        1,
+        2,
+        0,
+        1
+      ],
+      "word": "PPFPXP"
+    },
+    {
+      "displacement": [
+        2,
+        1
+      ],
+      "id": "2111:21",
+      "symplectic": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "word": "PPFZPF"
+    },
+    {
+      "displacement": [
+        1,
+        2
+      ],
+      "id": "2111:12",
+      "symplectic": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "word": "PPXFPF"
+    },
+    {
+      "displacement": [
+        1,
+        1
+      ],
+      "id": "2111:11",
+      "symplectic": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "word": "PXPFPF"
+    },
+    {
+      "displacement": [
+        1,
+        1
+      ],
+      "id": "1201:11",
+      "symplectic": [
+        1,
+        2,
+        0,
+        1
+      ],
+      "word": "PXPFPP"
+    },
+    {
+      "displacement": [
+        1,
+        0
+      ],
+      "id": "1201:10",
+      "symplectic": [
+        1,
+        2,
+        0,
+        1
+      ],
+      "word": "XFFFPF"
+    },
+    {
+      "displacement": [
+        2,
+        2
+      ],
+      "id": "1120:22",
+      "symplectic": [
+        1,
+        1,
+        2,
+        0
+      ],
+      "word": "XFFFPX"
+    },
+    {
+      "displacement": [
+        1,
+        0
+      ],
+      "id": "1101:10",
+      "symplectic": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "word": "XFFPFP"
+    },
+    {
+      "displacement": [
+        2,
+        1
+      ],
+      "id": "0121:21",
+      "symplectic": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "word": "XFFPFZ"
+    },
+    {
+      "displacement": [
+        1,
+        2
+      ],
+      "id": "0121:12",
+      "symplectic": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "word": "XFFZPF"
+    },
+    {
+      "displacement": [
+        1,
+        0
+      ],
+      "id": "1112:10",
+      "symplectic": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "word": "XFPFPP"
+    },
+    {
+      "displacement": [
+        2,
+        2
+      ],
+      "id": "0122:22",
+      "symplectic": [
+        0,
+        1,
+        2,
+        2
+      ],
+      "word": "XFPFZP"
+    },
+    {
+      "displacement": [
+        0,
+        2
+      ],
+      "id": "2120:02",
+      "symplectic": [
+        2,
+        1,
+        2,
+        0
+      ],
+      "word": "XPFZPF"
+    },
+    {
+      "displacement": [
+        0,
+        2
+      ],
+      "id": "1222:02",
+      "symplectic": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "word": "XPFZPP"
+    },
+    {
+      "displacement": [
+        1,
+        0
+      ],
+      "id": "2111:10",
+      "symplectic": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "word": "XPPFPF"
+    },
+    {
+      "displacement": [
+        0,
+        2
+      ],
+      "id": "2221:02",
+      "symplectic": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "word": "XPPFPX"
+    },
+    {
+      "displacement": [
+        2,
+        1
+      ],
+      "id": "2120:21",
+      "symplectic": [
+        2,
+        1,
+        2,
+        0
+      ],
+      "word": "XPXFPF"
+    },
+    {
+      "displacement": [
+        2,
+        1
+      ],
+      "id": "1222:21",
+      "symplectic": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "word": "XPXFPP"
+    },
+    {
+      "displacement": [
+        2,
+        0
+      ],
+      "id": "2221:20",
+      "symplectic": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "word": "XXPPFP"
+    },
+    {
+      "displacement": [
+        1,
+        1
+      ],
+      "id": "1120:11",
+      "symplectic": [
+        1,
+        1,
+        2,
+        0
+      ],
+      "word": "XZFFFP"
+    },
+    {
+      "displacement": [
+        1,
+        1
+      ],
+      "id": "0122:11",
+      "symplectic": [
+        0,
+        1,
+        2,
+        2
+      ],
+      "word": "XZFPFP"
+    },
+    {
+      "displacement": [
+        0,
+        1
+      ],
+      "id": "1201:01",
+      "symplectic": [
+        1,
+        2,
+        0,
+        1
+      ],
+      "word": "ZFFFPF"
+    },
+    {
+      "displacement": [
+        0,
+        1
+      ],
+      "id": "1101:01",
+      "symplectic": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "word": "ZFFPFP"
+    },
+    {
+      "displacement": [
+        0,
+        1
+      ],
+      "id": "1112:01",
+      "symplectic": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "word": "ZFPFPP"
+    },
+    {
+      "displacement": [
+        0,
+        1
+      ],
+      "id": "2111:01",
+      "symplectic": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "word": "ZPPFPF"
+    },
+    {
+      "displacement": [
+        1,
+        2
+      ],
+      "id": "2120:12",
+      "symplectic": [
+        2,
+        1,
+        2,
+        0
+      ],
+      "word": "ZPXFPF"
+    },
+    {
+      "displacement": [
+        2,
+        1
+      ],
+      "id": "1101:21",
+      "symplectic": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "word": "XFFPFZP"
+    },
+    {
+      "displacement": [
+        1,
+        2
+      ],
+      "id": "1101:12",
+      "symplectic": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "word": "XFFZPFP"
+    },
+    {
+      "displacement": [
+        2,
+        2
+      ],
+      "id": "1112:22",
+      "symplectic": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "word": "XFPFZPP"
+    },
+    {
+      "displacement": [
+        0,
+        2
+      ],
+      "id": "2111:02",
+      "symplectic": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "word": "XPPFPXF"
+    },
+    {
+      "displacement": [
+        2,
+        0
+      ],
+      "id": "2111:20",
+      "symplectic": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "word": "XXPPFPF"
+    }
+  ],
+  "generator_set": {
+    "F": {
+      "hardware": "balanced 3x3 Fourier tritter",
+      "matrix": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "P": {
+      "hardware": "quadratic phase diag(1,1,omega)",
+      "matrix": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    "X": {
+      "action": "(a,b)->(a,b)+(1,0)",
+      "gate_time": "2*pi/3",
+      "hardware": "Pass-400 magnetic triangle"
+    },
+    "Z": {
+      "action": "(a,b)->(a,b)+(0,1)",
+      "hardware": "diagonal phase ramp diag(1,omega,omega^2)"
+    }
+  },
+  "schema": "w33.pass406.qutrit_clifford_schedule.v1"
+}

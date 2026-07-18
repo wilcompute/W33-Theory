@@ -1,0 +1,10 @@
+{
+  "eta": 0.92,
+  "half_control_false_pass_log10_upper_bound": -565.880741368,
+  "ideal_familywise_false_reject_log10_upper_bound": -55.257220098,
+  "ideal_protocol_pass_probability_statement": "at least 1-10^(-55.257220)",
+  "method": "distribution-free Hoeffding bounds for the preregistered four-phase estimator",
+  "schema": "w33.pass409.nonclaim_power_study.v1",
+  "stuck_identity_false_pass_log10_upper_bound": -3036.064369893,
+  "study_type": "analytic_power_bound_not_physical_data"
+}

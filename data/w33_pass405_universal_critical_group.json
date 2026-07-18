@@ -1,0 +1,202 @@
+{
+  "certificate_sha256": "b55e70011d19d5e795e296af55fc3a8ceb7dfe4f6454a081a12f3b4f7dff0232",
+  "checks": {
+    "conductor_first_rank": true,
+    "conductor_order_index": true,
+    "conductor_second_rank": true,
+    "cyclotomic_p2_layer_closed_form": true,
+    "cyclotomic_p_layer_closed_form": true,
+    "p11_instance_order": true,
+    "p3_bockstein_matches_universal_formula": true,
+    "p3_decomposition_order": true,
+    "p3_instance_order": true,
+    "p3_two_primary_first_pages": true,
+    "p5_bockstein_matches_universal_formula": true,
+    "p5_decomposition_order": true,
+    "p5_instance_order": true,
+    "p5_two_primary_first_pages": true,
+    "p7_bockstein_matches_universal_formula": true,
+    "p7_decomposition_order": true,
+    "p7_instance_order": true,
+    "p7_two_primary_first_pages": true,
+    "p_primary_order": true
+  },
+  "conductor_correction": {
+    "index": "p",
+    "promote_p2_to_p3_count": "p^2-2",
+    "remove_p2_count": "C(p,2)",
+    "remove_p_count": "p-1"
+  },
+  "instances": {
+    "11": {
+      "order_matches_decomposition": true,
+      "p_primary_elementary_counts": {
+        "11": 760,
+        "121": 165,
+        "1331": 119
+      },
+      "primary_decomposition": {
+        "11": {
+          "11": 760,
+          "121": 165,
+          "1331": 119
+        },
+        "2": {
+          "2": 110,
+          "8": 550
+        },
+        "3": {
+          "3": 550
+        },
+        "5": {
+          "5": 660
+        }
+      },
+      "tree_order_decimal_digits": 2761,
+      "tree_order_prime_factorization": {
+        "11": 1447,
+        "2": 1760,
+        "3": 550,
+        "5": 660
+      },
+      "tree_order_sha256": "9f4cc920e21ca283768cde244e50af9892dc3975d6364910035f2bcce496ba46",
+      "two_primary_elementary_counts": {
+        "2": 110,
+        "8": 550
+      }
+    },
+    "3": {
+      "order_matches_decomposition": true,
+      "p_primary_elementary_counts": {
+        "27": 7,
+        "3": 8,
+        "9": 1
+      },
+      "primary_decomposition": {
+        "2": {
+          "2": 6,
+          "8": 6
+        },
+        "3": {
+          "27": 7,
+          "3": 8,
+          "9": 1
+        }
+      },
+      "tree_order_decimal_digits": 23,
+      "tree_order_prime_factorization": {
+        "2": 24,
+        "3": 31
+      },
+      "tree_order_sha256": "2724a4d69603133259b27a264886f5edd792258c6552e06bfe323839901860e4",
+      "two_primary_elementary_counts": {
+        "2": 6,
+        "8": 6
+      }
+    },
+    "5": {
+      "order_matches_decomposition": true,
+      "p_primary_elementary_counts": {
+        "125": 23,
+        "25": 10,
+        "5": 56
+      },
+      "primary_decomposition": {
+        "2": {
+          "4": 20,
+          "8": 40
+        },
+        "3": {
+          "3": 40
+        },
+        "5": {
+          "125": 23,
+          "25": 10,
+          "5": 56
+        }
+      },
+      "tree_order_decimal_digits": 169,
+      "tree_order_prime_factorization": {
+        "2": 160,
+        "3": 40,
+        "5": 145
+      },
+      "tree_order_sha256": "20c7f7afcb75ac759cea64af87f8bdb3aa02ef9f5ddb243266cef022cdfb2e01",
+      "two_primary_elementary_counts": {
+        "4": 20,
+        "8": 40
+      }
+    },
+    "7": {
+      "order_matches_decomposition": true,
+      "p_primary_elementary_counts": {
+        "343": 47,
+        "49": 35,
+        "7": 176
+      },
+      "primary_decomposition": {
+        "2": {
+          "16": 126,
+          "2": 42
+        },
+        "3": {
+          "3": 168
+        },
+        "7": {
+          "343": 47,
+          "49": 35,
+          "7": 176
+        }
+      },
+      "tree_order_decimal_digits": 572,
+      "tree_order_prime_factorization": {
+        "2": 546,
+        "3": 168,
+        "7": 387
+      },
+      "tree_order_sha256": "de2b89b8ac855c80b65ecf03ad30a27c11a64111ffa53f89354cdc1509b04b4b",
+      "two_primary_elementary_counts": {
+        "16": 126,
+        "2": 42
+      }
+    }
+  },
+  "normalization_before_conductor": {
+    "cyclotomic_p2_count": "C(p+1,3)",
+    "cyclotomic_p_count": "p(p-1)(2p-1)/3",
+    "trivial_sector_p2_count": "p^2-2"
+  },
+  "proof_ledger": {
+    "lemma_1_cyclotomic_dft": {
+      "certificate": "zeta^(ij)=(1+pi)^(ij); successive forward differences make the jth pivot pi^j times a unit.",
+      "statement": "Over R=Z_p[zeta_p] with pi=zeta_p-1, finite-difference row and column operations put F_p into Smith form diag(pi^0,...,pi^(p-1))."
+    },
+    "lemma_2_symplectic_tensor": {
+      "multiplicity_formula": "#{(i,j):0<=i,j<p, i+j=s}",
+      "statement": "The nontrivial-central symplectic Fourier block is permutation-equivalent to F_p tensor F_p, hence pi-exponent s occurs with multiplicity s+1 for s<p and 2p-1-s for s>=p."
+    },
+    "lemma_3_conductor_gluing": {
+      "correction": {
+        "normalization_index_p_valuation": 1,
+        "promote_trivial_sector_p2_to_p3": 119,
+        "remove_p2_layer_generators": 55,
+        "remove_p_layer_generators": 10
+      },
+      "statement": "Z_p[C_p] is the fibre product of Z_p and R along F_p. Matching the trivial and cyclotomic lattices removes p-1 first-layer and C(p,2) second-layer generators, promotes p^2-2 trivial-sector classes by one p-adic level, and has total conductor index p."
+    },
+    "lemma_4_semisimple_primes": {
+      "statement": "For odd ell not dividing p, the three nonzero Laplacian eigenvalues are separated in the ell-adic Bose-Mesner algebra. Thus ell|p-1 contributes v_ell(p-1) on the q(q^2-1)/2 sector and ell|p+1 contributes v_ell(p+1) on the q(q-1)^2/2 sector."
+    },
+    "lemma_5_two_adic_pairing": {
+      "statement": "The two nontrivial character sectors coalesce modulo 2. Sum/difference integral lattices give p(p-1) factors of order 2^v2(p-1) and p(p-1)^2/2 factors of order 2^(v2(p-1)+v2(p+1))."
+    }
+  },
+  "schema": "w33.pass405.universal_critical_group.v1",
+  "status": "PASS",
+  "theorem": {
+    "odd_prime_to_p": "for odd ell|p-1: (Z/ell^v_ell(p-1))^(p(p^2-1)/2); for odd ell|p+1: (Z/ell^v_ell(p+1))^(p(p-1)^2/2)",
+    "p_primary": "(Z/p)^((p^2-1)(2p-3)/3) + (Z/p^2)^(C(p,3)) + (Z/p^3)^(p^2-2)",
+    "two_primary": "(Z/2^a)^(p(p-1)) + (Z/2^(a+b))^(p(p-1)^2/2), a=v2(p-1), b=v2(p+1)"
+  },
+  "theorem_scope": "complete critical group of the q^3-vertex Heisenberg bulk for every odd prime q=p"
+}

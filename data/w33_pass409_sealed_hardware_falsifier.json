@@ -1,0 +1,57 @@
+{
+  "bom_path": "data/w33_pass409_vendor_neutral_bom.json",
+  "bom_sha256": "40d149ad001bca2a99906f8086a8c97f4c12a4c27df286add6dd867869e85dea",
+  "calibration_sha256": "e3d3a24ea7a8e899398edfb32fd63c30991568513171ee6d93d4ce6209b28afc",
+  "certificate_sha256": "ad34e1115b54a07a88532ce6688eaf71a52e271d65112dff3b5d414e8c110f81",
+  "checks": {
+    "blind_key_frozen_before_fixture_acquisition": true,
+    "blind_key_revealed_after_fixture_analysis_window": true,
+    "bom_has_27_detector_channels": true,
+    "fixture_remains_blinded": true,
+    "half_control_rejected_at_least_95_percent": true,
+    "ideal_power_at_least_95_percent": true,
+    "magnetic_layer_has_27_couplers": true,
+    "native_schedule_has_108_activations": true,
+    "native_schedule_has_nine_slices": true,
+    "nonclaim_fixture_passes_preregistered_rule": true,
+    "physical_experiment_not_completed": true,
+    "protocol_frozen_before_fixture_acquisition": true,
+    "raw_counts_conserve_shots": true,
+    "raw_fixture_has_8_replicates_and_4_phases": true,
+    "raw_fixture_has_four_codes": true,
+    "stuck_identity_rejected_at_least_99_percent": true
+  },
+  "fixture_unblinded_estimates": {
+    "F3": {
+      "quadrature": 0.0,
+      "visibility": 0.333478009259
+    },
+    "I": {
+      "quadrature": 0.0,
+      "visibility": 0.999710648148
+    },
+    "X": {
+      "quadrature": 0.0,
+      "visibility": 0.0
+    },
+    "Z": {
+      "quadrature": 0.0,
+      "visibility": 0.0
+    }
+  },
+  "key_sha256": "934df27b89656b481de9e5579e684ed83d94331bf947660f7f2ec78ee31e62bd",
+  "nonclaim_fixture_paths": {
+    "blind_key": "data/w33_pass409_nonclaim_blind_key.json",
+    "calibration": "data/w33_pass409_nonclaim_calibration.json",
+    "raw": "data/w33_pass409_nonclaim_raw_counts.json"
+  },
+  "power_sha256": "9ef402f99b6147e11c107b2e3efc8aeace3ab44814d245f39af8219841a8b846",
+  "power_study_path": "data/w33_pass409_nonclaim_power_study.json",
+  "production_execution": "not performed; no genuine laboratory counts were supplied",
+  "protocol_path": "data/w33_pass409_preregistered_protocol.json",
+  "protocol_sha256": "b070d398581770d25f515b3a48dd737e5e3ff9f9de05cb8fe8ffc994b79bdb43",
+  "raw_sha256": "ca78300d6e137507af777df6faf1431f845ecfdc86566b0f52d07e190540fb86",
+  "required_next_physical_action": "populate the same sealed schema with externally acquired counts and run Pass 397 without --test-mode",
+  "schema": "w33.pass409.sealed_hardware_falsifier.v1",
+  "status": "PASS"
+}

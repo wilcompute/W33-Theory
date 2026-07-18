@@ -1,0 +1,10 @@
+{
+  "calibrated_at": "2026-07-17T14:30:00-04:00",
+  "device_id": "PASS409-NONCLAIM-FIXTURE",
+  "method": "deterministic nonclaim power-study fixture",
+  "mode_overlap": 0.96,
+  "non_dark_fraction": 0.96,
+  "operator": "automated-pass409",
+  "schema": "w33.photonic.sealed-lab.v1.calibration",
+  "study_type": "nonclaim_test_fixture"
+}
