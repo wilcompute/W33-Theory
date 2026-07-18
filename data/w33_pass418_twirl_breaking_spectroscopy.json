@@ -1,0 +1,249 @@
+{
+  "certificate_sha256": "fb1c9df47a80d34a7c2a2b46ccfc47b90349e60326d05a467ee7488bfc809d4a",
+  "checks": {
+    "AR1_lag_detected": true,
+    "all_four_defect_amplitudes_exact": true,
+    "all_four_single_defects_localized": true,
+    "atlas_has_378_coordinates": true,
+    "decomposition_reconstructs_probe": true,
+    "diameter_three": true,
+    "every_residual_has_zero_orbit_sum": true,
+    "graph_is_8_regular": true,
+    "median_sparse_recovery_all_orbits": true,
+    "orbit_sizes_27_108_216_27": true,
+    "symmetric_dimension_378": true,
+    "symmetry_breaking_kernel_rank_374": true,
+    "twirl_dimension_four": true,
+    "white_lag_near_zero": true
+  },
+  "defect_atlas_path": "data/w33_pass418_defect_atlas.json",
+  "hardware_readout": {
+    "claim_boundary": "The coordinates localize symmetry breaking in the measured covariance model. They do not by themselves identify the microscopic physical cause or establish Markovianity.",
+    "priority_order": [
+      "mode gains",
+      "native couplers",
+      "phase-fibre pairs",
+      "distance-two crosstalk"
+    ],
+    "reported_breaking_coordinates": 374,
+    "reported_invariants": [
+      "diagonal mean",
+      "native-coupler mean",
+      "distance-two mean",
+      "phase-fibre mean"
+    ]
+  },
+  "injected_defect_recovery": [
+    {
+      "expected_amplitude": 3.0,
+      "expected_coordinate": 7,
+      "family": "mode_gain",
+      "localized": true,
+      "orbit": 0,
+      "recovered_amplitude": 3.0,
+      "recovered_coordinate": 7,
+      "vertices": [
+        7,
+        7
+      ]
+    },
+    {
+      "expected_amplitude": -2.5,
+      "expected_coordinate": 41,
+      "family": "native_coupler",
+      "localized": true,
+      "orbit": 1,
+      "recovered_amplitude": -2.5,
+      "recovered_coordinate": 41,
+      "vertices": [
+        5,
+        15
+      ]
+    },
+    {
+      "expected_amplitude": 1.75,
+      "expected_coordinate": 137,
+      "family": "distance_two_crosstalk",
+      "localized": true,
+      "orbit": 2,
+      "recovered_amplitude": 1.75,
+      "recovered_coordinate": 137,
+      "vertices": [
+        10,
+        14
+      ]
+    },
+    {
+      "expected_amplitude": 4.0,
+      "expected_coordinate": 19,
+      "family": "phase_fibre_pair",
+      "localized": true,
+      "orbit": 3,
+      "recovered_amplitude": 4.0,
+      "recovered_coordinate": 19,
+      "vertices": [
+        18,
+        20
+      ]
+    }
+  ],
+  "orbit_families": [
+    {
+      "atoms": 27,
+      "distinct_inner_product": {
+        "denominator": 27,
+        "numerator": -1
+      },
+      "family": "mode_gain",
+      "kernel_rank": 26,
+      "nonzero_gram_eigenvalue": 1,
+      "nonzero_gram_multiplicity": 26,
+      "orbit": 0,
+      "self_inner_product": {
+        "denominator": 27,
+        "numerator": 26
+      }
+    },
+    {
+      "atoms": 108,
+      "distinct_inner_product": {
+        "denominator": 108,
+        "numerator": -1
+      },
+      "family": "native_coupler",
+      "kernel_rank": 107,
+      "nonzero_gram_eigenvalue": 1,
+      "nonzero_gram_multiplicity": 107,
+      "orbit": 1,
+      "self_inner_product": {
+        "denominator": 108,
+        "numerator": 107
+      }
+    },
+    {
+      "atoms": 216,
+      "distinct_inner_product": {
+        "denominator": 216,
+        "numerator": -1
+      },
+      "family": "distance_two_crosstalk",
+      "kernel_rank": 215,
+      "nonzero_gram_eigenvalue": 1,
+      "nonzero_gram_multiplicity": 215,
+      "orbit": 2,
+      "self_inner_product": {
+        "denominator": 216,
+        "numerator": 215
+      }
+    },
+    {
+      "atoms": 27,
+      "distinct_inner_product": {
+        "denominator": 27,
+        "numerator": -1
+      },
+      "family": "phase_fibre_pair",
+      "kernel_rank": 26,
+      "nonzero_gram_eigenvalue": 1,
+      "nonzero_gram_multiplicity": 26,
+      "orbit": 3,
+      "self_inner_product": {
+        "denominator": 27,
+        "numerator": 26
+      }
+    }
+  ],
+  "schema": "w33.pass418.twirl_breaking_spectroscopy.v1",
+  "sparse_recovery_trials": [
+    {
+      "baseline": 10.0,
+      "injected_support": [
+        7,
+        8,
+        12,
+        17,
+        25
+      ],
+      "orbit": 0,
+      "passed": true,
+      "recovered_support": [
+        7,
+        8,
+        12,
+        17,
+        25
+      ]
+    },
+    {
+      "baseline": 2.0,
+      "injected_support": [
+        6,
+        29,
+        36,
+        88,
+        98
+      ],
+      "orbit": 1,
+      "passed": true,
+      "recovered_support": [
+        6,
+        29,
+        36,
+        88,
+        98
+      ]
+    },
+    {
+      "baseline": -1.0,
+      "injected_support": [
+        60,
+        94,
+        140,
+        152,
+        206
+      ],
+      "orbit": 2,
+      "passed": true,
+      "recovered_support": [
+        60,
+        94,
+        140,
+        152,
+        206
+      ]
+    },
+    {
+      "baseline": 0.5,
+      "injected_support": [
+        2,
+        4,
+        12,
+        13,
+        22
+      ],
+      "orbit": 3,
+      "passed": true,
+      "recovered_support": [
+        2,
+        4,
+        12,
+        13,
+        22
+      ]
+    }
+  ],
+  "status": "PASS",
+  "temporal_drift_witness": {
+    "AR1_coefficient": 0.85,
+    "interpretation": "common-mode drift remains in the four twirl means; localized non-Markovian drift appears in a defect coordinate with persistent temporal correlation",
+    "localized_AR1_lag_one": 0.834318737918,
+    "samples": 512,
+    "white_noise_lag_one": 0.074687713007
+  },
+  "theorem": {
+    "dimensions": "378 = 4 twirl invariants + (26+107+215+26)=374 symmetry-breaking coordinates",
+    "orthogonal_decomposition": "Sym_27 = B_0 direct_sum B_1 direct_sum B_2 direct_sum B_3; each B_d splits into its orbit mean plus a centered regular-simplex defect space",
+    "single_defect_localization": "within an orbit of size m, centered atoms have Gram delta_ij-1/m; the largest matched-filter coefficient identifies the unique defective coordinate and rescales its amplitude by m/(m-1)",
+    "sparse_extension": "with fewer than m/2 corrupted coordinates in an orbit, median centering exactly recovers an unknown common-mode baseline and every noiseless sparse defect"
+  }
+}

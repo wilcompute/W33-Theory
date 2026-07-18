@@ -1,0 +1,227 @@
+{
+  "artifacts": [
+    {
+      "artifact_type": "frozen_protocol",
+      "envelope": {
+        "artifact_type": "frozen_protocol",
+        "device_id": "NO-PHYSICAL-DEVICE-A",
+        "manifest_nonce": "4190aabbccddeeff0011223344556677",
+        "payload_sha256": "d04d377eebc174e7c64ba7f53f293503140fc5b0a761c290181bdf2d70515ef1",
+        "predecessor_envelope_sha256": null,
+        "public_key_ed25519_base64": "nmfG0mHmn7Lsvc1kkygb6PrHIG+EmSqrhPEAVosWp0I=",
+        "schema": "w33.pass419.signature-envelope.v2",
+        "sequence": 0,
+        "signature_ed25519_base64": "OvSoqMB6ZxILK31LiQrSJUggQJJyz6xu9zIwA88gkQR9a0zuNWuTzkFGHuK4NTPFY5473eE/nbhh5uf//mnnCQ==",
+        "signed_at": "2026-07-18T09:00:00-04:00",
+        "signer_role": "protocol_owner",
+        "study_id": "PASS419-NONCLAIM-A"
+      },
+      "payload": {
+        "expected_raw_rows": 128,
+        "protocol": "Pass-409 four-gate Choi falsifier with Pass-413 twirl",
+        "required_gate_labels_present": false,
+        "study_type": "nonclaim_test_fixture",
+        "version": 2
+      }
+    },
+    {
+      "artifact_type": "accepted_bom",
+      "envelope": {
+        "artifact_type": "accepted_bom",
+        "device_id": "NO-PHYSICAL-DEVICE-A",
+        "manifest_nonce": "4190aabbccddeeff0011223344556677",
+        "payload_sha256": "436dcd643eee53dc715eff4c0f29b40cb7e01d4d3d6d9392f43a82f69ad5fdba",
+        "predecessor_envelope_sha256": "9ac5c2b534bb0d1dcc0ec4be4ea09d07e1a569e512e52508470b2141385900f3",
+        "public_key_ed25519_base64": "AL6KJnrQNvPqMrNtLrK5qCOARn2lsyR0IETQMZjogJM=",
+        "schema": "w33.pass419.signature-envelope.v2",
+        "sequence": 1,
+        "signature_ed25519_base64": "5jCWPwgbf+/aKW8ZVhAvr/s8GIubnYynPpg+JTp6HGwX/T2AIY0UER8mK0Dfgh4ho+8ECgVsGRpC1dVflmnyAA==",
+        "signed_at": "2026-07-18T09:20:00-04:00",
+        "signer_role": "independent_auditor",
+        "study_id": "PASS419-NONCLAIM-A"
+      },
+      "payload": {
+        "accepted": true,
+        "exceptions": [],
+        "protocol_payload_sha256": "d04d377eebc174e7c64ba7f53f293503140fc5b0a761c290181bdf2d70515ef1",
+        "study_type": "nonclaim_test_fixture"
+      }
+    },
+    {
+      "artifact_type": "calibration_certificate",
+      "envelope": {
+        "artifact_type": "calibration_certificate",
+        "device_id": "NO-PHYSICAL-DEVICE-A",
+        "manifest_nonce": "4190aabbccddeeff0011223344556677",
+        "payload_sha256": "5119d3d310dfc9827134900039294f70a9af947da8f4d7d9f73ec53f22b429de",
+        "predecessor_envelope_sha256": "5ffcbc644126d6c6f33664e3b0b12f130afea70b8d4fa4f5021c2aca9e8559d1",
+        "public_key_ed25519_base64": "NcBtPjCtIVSUw1ciJKfBwaBljM/CJcXc1T2fyB7dDss=",
+        "schema": "w33.pass419.signature-envelope.v2",
+        "sequence": 2,
+        "signature_ed25519_base64": "s0vYSE2UvGoFP9moe1s1xWgiu4lng8leWJCUuuvt4RoIL9t4TQL/4fh5S3FVY67bQxk3/KOT8RHdRGJzztb8BA==",
+        "signed_at": "2026-07-18T09:40:00-04:00",
+        "signer_role": "acquisition_lab",
+        "study_id": "PASS419-NONCLAIM-A"
+      },
+      "payload": {
+        "bom_payload_sha256": "436dcd643eee53dc715eff4c0f29b40cb7e01d4d3d6d9392f43a82f69ad5fdba",
+        "mode_overlap": 0.96,
+        "non_dark_fraction": 0.98,
+        "protocol_payload_sha256": "d04d377eebc174e7c64ba7f53f293503140fc5b0a761c290181bdf2d70515ef1",
+        "study_type": "nonclaim_test_fixture"
+      }
+    },
+    {
+      "artifact_type": "blinded_raw_counts",
+      "envelope": {
+        "artifact_type": "blinded_raw_counts",
+        "device_id": "NO-PHYSICAL-DEVICE-A",
+        "manifest_nonce": "4190aabbccddeeff0011223344556677",
+        "payload_sha256": "9ddf7282603f49da690167479baf3142ba7b56b1db3e1d74306db70ce055aa3b",
+        "predecessor_envelope_sha256": "f5e77543783bc8d768102309dac4aa359da329990d3ba8b0982e47109cb8f9fe",
+        "public_key_ed25519_base64": "NcBtPjCtIVSUw1ciJKfBwaBljM/CJcXc1T2fyB7dDss=",
+        "schema": "w33.pass419.signature-envelope.v2",
+        "sequence": 3,
+        "signature_ed25519_base64": "siWEOdmTW5mqrRyqSGMSti5w0osZ3nM0DU/+0VE7pIZ8bS9xJ/fjWZ5TmiGSLeIIPAknEQfDL7cQEjOs2F/gAA==",
+        "signed_at": "2026-07-18T10:30:00-04:00",
+        "signer_role": "acquisition_lab",
+        "study_id": "PASS419-NONCLAIM-A"
+      },
+      "payload": {
+        "calibration_payload_sha256": "5119d3d310dfc9827134900039294f70a9af947da8f4d7d9f73ec53f22b429de",
+        "content_sha256": "b06d81e66575a696ae07558f4fc06df4c2f12bf8275faed8684c303a3f62bae6",
+        "external_path": "data/w33_pass419_nonclaim_raw_counts.jsonl",
+        "gate_labels_present": false,
+        "row_count": 128,
+        "study_type": "nonclaim_test_fixture"
+      }
+    },
+    {
+      "artifact_type": "blinded_analysis",
+      "envelope": {
+        "artifact_type": "blinded_analysis",
+        "device_id": "NO-PHYSICAL-DEVICE-A",
+        "manifest_nonce": "4190aabbccddeeff0011223344556677",
+        "payload_sha256": "19b3271928fddec726342fe31aa93590da1ed7b052d1de953f45ede33d82e98f",
+        "predecessor_envelope_sha256": "33f18a060a0b92a947e9238a25e7ac71f6f527b47245815266e96c2cf0ce8e19",
+        "public_key_ed25519_base64": "rM3Qk3CA7atzYsAIj1eKRSEnzL4j9G/o1e+L/8wudEg=",
+        "schema": "w33.pass419.signature-envelope.v2",
+        "sequence": 4,
+        "signature_ed25519_base64": "dNPGaqVmh6tRU48bma0iVNpcyQ0a40MmI6jJ19AqQxY3syUe3RgnUdWdL8m9ca3FoRZIRsujLm/NGjxz8YeXBw==",
+        "signed_at": "2026-07-18T11:00:00-04:00",
+        "signer_role": "blinded_analyst",
+        "study_id": "PASS419-NONCLAIM-A"
+      },
+      "payload": {
+        "analysis_sha256": "bcf24e0f3677eda9103b109d5cf458992ab713a3eea9fcbe01131d2246b9fb79",
+        "gate_labels_present": false,
+        "raw_content_sha256": "b06d81e66575a696ae07558f4fc06df4c2f12bf8275faed8684c303a3f62bae6",
+        "study_type": "nonclaim_test_fixture"
+      }
+    },
+    {
+      "artifact_type": "blind_key",
+      "envelope": {
+        "artifact_type": "blind_key",
+        "device_id": "NO-PHYSICAL-DEVICE-A",
+        "manifest_nonce": "4190aabbccddeeff0011223344556677",
+        "payload_sha256": "236d63a7754ca453d5d77121aae3bf086a85b1a6363d1ebe938dd9c7d669ac56",
+        "predecessor_envelope_sha256": "2b4c01c7adfafa360f4a75e88fbb596101e156883ea7baac6482fc7693556dd9",
+        "public_key_ed25519_base64": "9uMQ1M5ORxvBUFv0SDgwcskzHY+0/2ulVFZM+L02uIc=",
+        "schema": "w33.pass419.signature-envelope.v2",
+        "sequence": 5,
+        "signature_ed25519_base64": "Z+sDLOx2/pMVzKr+T24Ll1W4islix45njYvuxXJSNnfldjG8TGoYGmC+SglUq7WqmiCk9aaSdwsswj6vdQR8Dg==",
+        "signed_at": "2026-07-18T11:15:00-04:00",
+        "signer_role": "blind_key_custodian",
+        "study_id": "PASS419-NONCLAIM-A"
+      },
+      "payload": {
+        "mapping_sha256": "e29d5a4c7586499837a4050197fc9df19aafaae39692b1269680ee95ce69ee68",
+        "study_type": "nonclaim_test_fixture"
+      }
+    },
+    {
+      "artifact_type": "unblinded_result",
+      "envelope": {
+        "artifact_type": "unblinded_result",
+        "device_id": "NO-PHYSICAL-DEVICE-A",
+        "manifest_nonce": "4190aabbccddeeff0011223344556677",
+        "payload_sha256": "b02372ce3268399d698f96ab1e3eb29112467543680b5c6a14975287c167b9a1",
+        "predecessor_envelope_sha256": "c152d1c154c0b561f340a833ec6228811c3bc42e1e2bfc3f251681fa8cbd0e98",
+        "public_key_ed25519_base64": "rM3Qk3CA7atzYsAIj1eKRSEnzL4j9G/o1e+L/8wudEg=",
+        "schema": "w33.pass419.signature-envelope.v2",
+        "sequence": 6,
+        "signature_ed25519_base64": "mC33HYoMPuxL91bwDHlnmWtqFXnEsnekoeR0JVh6YcZvmHD9ki3Lkym3X/3eyL+8bS1HwSBBH+rnxrXtz8KoCw==",
+        "signed_at": "2026-07-18T11:30:00-04:00",
+        "signer_role": "blinded_analyst",
+        "study_id": "PASS419-NONCLAIM-A"
+      },
+      "payload": {
+        "analysis_payload_sha256": "19b3271928fddec726342fe31aa93590da1ed7b052d1de953f45ede33d82e98f",
+        "blind_key_payload_sha256": "236d63a7754ca453d5d77121aae3bf086a85b1a6363d1ebe938dd9c7d669ac56",
+        "claim_eligible": false,
+        "physical_experiment_completed": false,
+        "study_type": "nonclaim_test_fixture"
+      }
+    },
+    {
+      "artifact_type": "independent_audit",
+      "envelope": {
+        "artifact_type": "independent_audit",
+        "device_id": "NO-PHYSICAL-DEVICE-A",
+        "manifest_nonce": "4190aabbccddeeff0011223344556677",
+        "payload_sha256": "f38cd309a9ea6397f506fd1f76a4d8bbb78b1c0e8286bd4f70e5b8381192a09d",
+        "predecessor_envelope_sha256": "a1f72b8bb3e07d6fb44dada02211d85def006f683548db32d58d108c3188ebcc",
+        "public_key_ed25519_base64": "AL6KJnrQNvPqMrNtLrK5qCOARn2lsyR0IETQMZjogJM=",
+        "schema": "w33.pass419.signature-envelope.v2",
+        "sequence": 7,
+        "signature_ed25519_base64": "2yRBXWKJcZ+aFxHSiiPj/hf/bGw2YtX8eFGTmDk8k2vl/JiZpMsB0/Sw53nhQvT3WrwRVLadGJCQYEjuvrnbAw==",
+        "signed_at": "2026-07-18T12:00:00-04:00",
+        "signer_role": "independent_auditor",
+        "study_id": "PASS419-NONCLAIM-A"
+      },
+      "payload": {
+        "claim_eligible": false,
+        "hash_chain_verified": true,
+        "physical_experiment_completed": false,
+        "role_separation_verified": true,
+        "study_type": "nonclaim_test_fixture"
+      }
+    }
+  ],
+  "certificate_sha256": "7c9ac4c7a49767872b0c2a7b7a778ebbb7795964066ce974c031dfb06dbe1096",
+  "claim_eligible": false,
+  "claim_mode": "nonclaim_test_fixture",
+  "device_id": "NO-PHYSICAL-DEVICE-A",
+  "manifest_nonce": "4190aabbccddeeff0011223344556677",
+  "physical_experiment_completed": false,
+  "roles": {
+    "acquisition_lab": {
+      "contact": null,
+      "organization": "pass419-A-fixture",
+      "public_key_ed25519_base64": "NcBtPjCtIVSUw1ciJKfBwaBljM/CJcXc1T2fyB7dDss="
+    },
+    "blind_key_custodian": {
+      "contact": null,
+      "organization": "pass419-A-fixture",
+      "public_key_ed25519_base64": "9uMQ1M5ORxvBUFv0SDgwcskzHY+0/2ulVFZM+L02uIc="
+    },
+    "blinded_analyst": {
+      "contact": null,
+      "organization": "pass419-A-fixture",
+      "public_key_ed25519_base64": "rM3Qk3CA7atzYsAIj1eKRSEnzL4j9G/o1e+L/8wudEg="
+    },
+    "independent_auditor": {
+      "contact": null,
+      "organization": "pass419-A-fixture",
+      "public_key_ed25519_base64": "AL6KJnrQNvPqMrNtLrK5qCOARn2lsyR0IETQMZjogJM="
+    },
+    "protocol_owner": {
+      "contact": null,
+      "organization": "pass419-A-fixture",
+      "public_key_ed25519_base64": "nmfG0mHmn7Lsvc1kkygb6PrHIG+EmSqrhPEAVosWp0I="
+    }
+  },
+  "schema": "w33.pass419.hardened-handoff.v2",
+  "study_id": "PASS419-NONCLAIM-A"
+}

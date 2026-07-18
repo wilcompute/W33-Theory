@@ -1,0 +1,426 @@
+{
+  "certificate_sha256": "e6adf4f94b6b3cdc02fde4a63e5896047cc2d24c910354fd8303ed9e338d04fd",
+  "checks": {
+    "adaptive_ordered_average_below_seven": true,
+    "adaptive_unordered_average_below_four": true,
+    "all_shortened_hamming_checks": true,
+    "ordered_protected_frame_21_bits": true,
+    "ordered_source_cardinality": true,
+    "unordered_protected_frame_18_bits": true,
+    "unordered_source_cardinality": true,
+    "worst_ordered_16_bits": true,
+    "worst_unordered_13_bits": true
+  },
+  "divisor_types": [
+    {
+      "divisor_multiplicity": 1,
+      "negative": [],
+      "ordered_cumulative": 35803,
+      "ordered_w0": 1,
+      "ordered_w1": 0,
+      "ordered_w2": 702,
+      "ordered_w3": 35100,
+      "positive": [],
+      "unordered_cumulative": 6202,
+      "unordered_w0": 1,
+      "unordered_w1": 0,
+      "unordered_w2": 351,
+      "unordered_w3": 5850,
+      "weight": 0
+    },
+    {
+      "divisor_multiplicity": 702,
+      "negative": [
+        1
+      ],
+      "ordered_cumulative": 5754,
+      "ordered_w0": 0,
+      "ordered_w1": 1,
+      "ordered_w2": 50,
+      "ordered_w3": 5703,
+      "positive": [
+        1
+      ],
+      "unordered_cumulative": 977,
+      "unordered_w0": 0,
+      "unordered_w1": 1,
+      "unordered_w2": 25,
+      "unordered_w3": 951,
+      "weight": 1
+    },
+    {
+      "divisor_multiplicity": 702,
+      "negative": [
+        2
+      ],
+      "ordered_cumulative": 151,
+      "ordered_w0": 0,
+      "ordered_w1": 0,
+      "ordered_w2": 1,
+      "ordered_w3": 150,
+      "positive": [
+        2
+      ],
+      "unordered_cumulative": 26,
+      "unordered_w0": 0,
+      "unordered_w1": 0,
+      "unordered_w2": 1,
+      "unordered_w3": 25,
+      "weight": 2
+    },
+    {
+      "divisor_multiplicity": 8775,
+      "negative": [
+        1,
+        1
+      ],
+      "ordered_cumulative": 296,
+      "ordered_w0": 0,
+      "ordered_w1": 0,
+      "ordered_w2": 2,
+      "ordered_w3": 294,
+      "positive": [
+        2
+      ],
+      "unordered_cumulative": 51,
+      "unordered_w0": 0,
+      "unordered_w1": 0,
+      "unordered_w2": 1,
+      "unordered_w3": 50,
+      "weight": 2
+    },
+    {
+      "divisor_multiplicity": 8775,
+      "negative": [
+        2
+      ],
+      "ordered_cumulative": 296,
+      "ordered_w0": 0,
+      "ordered_w1": 0,
+      "ordered_w2": 2,
+      "ordered_w3": 294,
+      "positive": [
+        1,
+        1
+      ],
+      "unordered_cumulative": 51,
+      "unordered_w0": 0,
+      "unordered_w1": 0,
+      "unordered_w2": 1,
+      "unordered_w3": 50,
+      "weight": 2
+    },
+    {
+      "divisor_multiplicity": 105300,
+      "negative": [
+        1,
+        1
+      ],
+      "ordered_cumulative": 580,
+      "ordered_w0": 0,
+      "ordered_w1": 0,
+      "ordered_w2": 4,
+      "ordered_w3": 576,
+      "positive": [
+        1,
+        1
+      ],
+      "unordered_cumulative": 98,
+      "unordered_w0": 0,
+      "unordered_w1": 0,
+      "unordered_w2": 2,
+      "unordered_w3": 96,
+      "weight": 2
+    },
+    {
+      "divisor_multiplicity": 702,
+      "negative": [
+        3
+      ],
+      "ordered_cumulative": 1,
+      "ordered_w0": 0,
+      "ordered_w1": 0,
+      "ordered_w2": 0,
+      "ordered_w3": 1,
+      "positive": [
+        3
+      ],
+      "unordered_cumulative": 1,
+      "unordered_w0": 0,
+      "unordered_w1": 0,
+      "unordered_w2": 0,
+      "unordered_w3": 1,
+      "weight": 3
+    },
+    {
+      "divisor_multiplicity": 17550,
+      "negative": [
+        2,
+        1
+      ],
+      "ordered_cumulative": 3,
+      "ordered_w0": 0,
+      "ordered_w1": 0,
+      "ordered_w2": 0,
+      "ordered_w3": 3,
+      "positive": [
+        3
+      ],
+      "unordered_cumulative": 1,
+      "unordered_w0": 0,
+      "unordered_w1": 0,
+      "unordered_w2": 0,
+      "unordered_w3": 1,
+      "weight": 3
+    },
+    {
+      "divisor_multiplicity": 70200,
+      "negative": [
+        1,
+        1,
+        1
+      ],
+      "ordered_cumulative": 6,
+      "ordered_w0": 0,
+      "ordered_w1": 0,
+      "ordered_w2": 0,
+      "ordered_w3": 6,
+      "positive": [
+        3
+      ],
+      "unordered_cumulative": 1,
+      "unordered_w0": 0,
+      "unordered_w1": 0,
+      "unordered_w2": 0,
+      "unordered_w3": 1,
+      "weight": 3
+    },
+    {
+      "divisor_multiplicity": 17550,
+      "negative": [
+        3
+      ],
+      "ordered_cumulative": 3,
+      "ordered_w0": 0,
+      "ordered_w1": 0,
+      "ordered_w2": 0,
+      "ordered_w3": 3,
+      "positive": [
+        2,
+        1
+      ],
+      "unordered_cumulative": 1,
+      "unordered_w0": 0,
+      "unordered_w1": 0,
+      "unordered_w2": 0,
+      "unordered_w3": 1,
+      "weight": 3
+    },
+    {
+      "divisor_multiplicity": 421200,
+      "negative": [
+        2,
+        1
+      ],
+      "ordered_cumulative": 9,
+      "ordered_w0": 0,
+      "ordered_w1": 0,
+      "ordered_w2": 0,
+      "ordered_w3": 9,
+      "positive": [
+        2,
+        1
+      ],
+      "unordered_cumulative": 2,
+      "unordered_w0": 0,
+      "unordered_w1": 0,
+      "unordered_w2": 0,
+      "unordered_w3": 2,
+      "weight": 3
+    },
+    {
+      "divisor_multiplicity": 1614600,
+      "negative": [
+        1,
+        1,
+        1
+      ],
+      "ordered_cumulative": 18,
+      "ordered_w0": 0,
+      "ordered_w1": 0,
+      "ordered_w2": 0,
+      "ordered_w3": 18,
+      "positive": [
+        2,
+        1
+      ],
+      "unordered_cumulative": 3,
+      "unordered_w0": 0,
+      "unordered_w1": 0,
+      "unordered_w2": 0,
+      "unordered_w3": 3,
+      "weight": 3
+    },
+    {
+      "divisor_multiplicity": 70200,
+      "negative": [
+        3
+      ],
+      "ordered_cumulative": 6,
+      "ordered_w0": 0,
+      "ordered_w1": 0,
+      "ordered_w2": 0,
+      "ordered_w3": 6,
+      "positive": [
+        1,
+        1,
+        1
+      ],
+      "unordered_cumulative": 1,
+      "unordered_w0": 0,
+      "unordered_w1": 0,
+      "unordered_w2": 0,
+      "unordered_w3": 1,
+      "weight": 3
+    },
+    {
+      "divisor_multiplicity": 1614600,
+      "negative": [
+        2,
+        1
+      ],
+      "ordered_cumulative": 18,
+      "ordered_w0": 0,
+      "ordered_w1": 0,
+      "ordered_w2": 0,
+      "ordered_w3": 18,
+      "positive": [
+        1,
+        1,
+        1
+      ],
+      "unordered_cumulative": 3,
+      "unordered_w0": 0,
+      "unordered_w1": 0,
+      "unordered_w2": 0,
+      "unordered_w3": 3,
+      "weight": 3
+    },
+    {
+      "divisor_multiplicity": 5920200,
+      "negative": [
+        1,
+        1,
+        1
+      ],
+      "ordered_cumulative": 36,
+      "ordered_w0": 0,
+      "ordered_w1": 0,
+      "ordered_w2": 0,
+      "ordered_w3": 36,
+      "positive": [
+        1,
+        1,
+        1
+      ],
+      "unordered_cumulative": 6,
+      "unordered_w0": 0,
+      "unordered_w1": 0,
+      "unordered_w2": 0,
+      "unordered_w3": 6,
+      "weight": 3
+    }
+  ],
+  "protected_codes": [
+    {
+      "fits_bytes": 3,
+      "minimum_distance": 3,
+      "parity_bits": 5,
+      "parity_check_columns": [
+        3,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "protected_bits": 18,
+      "single_bit_error_correctable": true,
+      "source_bits": 13,
+      "two_known_erasures_recoverable": true
+    },
+    {
+      "fits_bytes": 3,
+      "minimum_distance": 3,
+      "parity_bits": 5,
+      "parity_check_columns": [
+        3,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21,
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "protected_bits": 21,
+      "single_bit_error_correctable": true,
+      "source_bits": 16,
+      "two_known_erasures_recoverable": true
+    }
+  ],
+  "schema": "w33.pass422.telemetry_coding_theorem.v1",
+  "source_statistics": {
+    "ordered_average_bits": 6.635216954046,
+    "ordered_conditional_entropy": 5.812384346231,
+    "ordered_histories": 346441915,
+    "unordered_average_bits": 3.635595410385,
+    "unordered_conditional_entropy": 3.238586002996,
+    "unordered_histories": 58152160,
+    "unordered_length_histogram": {
+      "0": 176202,
+      "1": 842400,
+      "10": 685854,
+      "13": 6202,
+      "2": 9687600,
+      "3": 35521200,
+      "5": 18252,
+      "6": 895050,
+      "7": 10319400
+    }
+  },
+  "status": "PASS",
+  "theorem": {
+    "adaptive_gain": "uniform-over-histories average fixed-rank length is 3.635595 unordered and 6.635217 ordered bits",
+    "boundary": "the channel model covers serialized bit flips and known erasures; analog timing estimation remains a front-end problem",
+    "memory": "both protected packets fit in three bytes",
+    "robust_frames": "shortened binary Hamming frames [18,13,3] and [21,16,3] correct one serialized bit error or any two known erasures",
+    "side_information_code": "given the measured divisor, encode only the lexicographic rank inside its exact history fibre",
+    "worst_case": "13 bits unordered and 16 bits time ordered are information-theoretically optimal through weight three"
+  }
+}

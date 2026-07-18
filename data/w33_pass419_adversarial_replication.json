@@ -1,0 +1,49 @@
+{
+  "attack_summary": {
+    "attacks": [
+      "timestamp_substitution",
+      "authorized_key_leakage",
+      "cross_study_calibration_replay",
+      "cross_device_replay",
+      "role_key_collision",
+      "authorized_calibration_substitution",
+      "selective_row_deletion",
+      "authorized_resigned_row_deletion",
+      "artifact_reordering",
+      "early_key_release",
+      "manifest_nonce_substitution",
+      "nonclaim_flag_forgery"
+    ],
+    "count": 12,
+    "rejected": 12
+  },
+  "certificate_sha256": "f34b88d641183acb0c68991185f9c0ee978432e820e3a8e01f5a5d6ff380bb80",
+  "checks": {
+    "all_expected_rejection_reasons_observed": true,
+    "all_twelve_attacks_rejected": true,
+    "base_manifest_independently_verifies": true,
+    "base_manifest_schema_valid": true,
+    "eight_chain_bound_artifacts": true,
+    "every_signature_verifies": true,
+    "five_distinct_role_keys": true,
+    "fixture_remains_nonclaim": true,
+    "raw_fixture_has_128_rows": true
+  },
+  "finding": {
+    "v1_boundary": "Pass-414 v1 signs each artifact independently but does not cryptographically bind study ID, device ID, manifest nonce, sequence, or predecessor; production use therefore requires the hardened v2 chain",
+    "v2_resolution": "every signature binds study/device/nonce/sequence/predecessor, while the independent verifier enforces role-key uniqueness, cross-artifact hashes, raw-byte hashes, row counts, blindness, timestamp order, and nonclaim flags"
+  },
+  "hardened_contract": {
+    "attack_matrix_path": "data/w33_pass419_attack_matrix.json",
+    "chain_length": 8,
+    "fixture_path": "data/w33_pass419_hardened_custody_fixture.json",
+    "hash": "SHA-256",
+    "raw_fixture_path": "data/w33_pass419_nonclaim_raw_counts.jsonl",
+    "runbook_path": "docs/W33_PASS419_ADVERSARIAL_REPLICATION.md",
+    "schema_path": "schemas/w33_pass419_hardened_handoff_v2.schema.json",
+    "signature": "Ed25519 over canonical v2 envelope"
+  },
+  "physical_claim_boundary": "All keys, counts, signatures, and attacks are deterministic software fixtures. No physical acquisition occurred and no hardware claim is eligible.",
+  "schema": "w33.pass419.adversarial_replication.v1",
+  "status": "PASS"
+}

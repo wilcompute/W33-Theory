@@ -1,0 +1,272 @@
+{
+  "certificate_sha256": "fe7211946cd7094b901a3dad9d55c1dc089585e7f361d71484791b78f4890fc1",
+  "checks": {
+    "all_single_attacks_rejected_v2": true,
+    "all_unique_one_two_attack_states_rejected_v2": true,
+    "honest_v1_accepts": true,
+    "honest_v2_accepts": true,
+    "spec_declares_invariant": true,
+    "thirteen_single_attacks_present": true,
+    "v1_accepts_context_replays": true,
+    "v1_accepts_insider_substitution": true
+  },
+  "model": {
+    "artifact_stages": 8,
+    "attack_generators": 13,
+    "bounded_attack_depth": 2,
+    "formal_spec": "specs/W33Pass424Custody.tla",
+    "unique_mutated_states": 87
+  },
+  "schema": "w33.pass424.custody_model_checker.v1",
+  "single_attack_results": {
+    "artifact_duplication": {
+      "attacks": [
+        "artifact_duplication"
+      ],
+      "v1_errors": [
+        "length",
+        "role",
+        "type_order"
+      ],
+      "v2_errors": [
+        "dependency",
+        "extra",
+        "length",
+        "predecessor",
+        "role",
+        "sequence",
+        "type_order"
+      ]
+    },
+    "artifact_reorder": {
+      "attacks": [
+        "artifact_reorder"
+      ],
+      "v1_errors": [
+        "role",
+        "type_order"
+      ],
+      "v2_errors": [
+        "dependency",
+        "predecessor",
+        "role",
+        "sequence",
+        "type_order"
+      ]
+    },
+    "authorized_insider_substitution": {
+      "attacks": [
+        "authorized_insider_substitution"
+      ],
+      "v1_errors": [],
+      "v2_errors": [
+        "dependency"
+      ]
+    },
+    "cross_device_replay": {
+      "attacks": [
+        "cross_device_replay"
+      ],
+      "v1_errors": [],
+      "v2_errors": [
+        "context",
+        "predecessor"
+      ]
+    },
+    "cross_study_replay": {
+      "attacks": [
+        "cross_study_replay"
+      ],
+      "v1_errors": [],
+      "v2_errors": [
+        "context",
+        "predecessor"
+      ]
+    },
+    "dependency_rollback": {
+      "attacks": [
+        "dependency_rollback"
+      ],
+      "v1_errors": [],
+      "v2_errors": [
+        "dependency",
+        "predecessor"
+      ]
+    },
+    "early_key_release": {
+      "attacks": [
+        "early_key_release"
+      ],
+      "v1_errors": [
+        "role",
+        "type_order"
+      ],
+      "v2_errors": [
+        "dependency",
+        "predecessor",
+        "role",
+        "sequence",
+        "type_order"
+      ]
+    },
+    "nonce_substitution": {
+      "attacks": [
+        "nonce_substitution"
+      ],
+      "v1_errors": [],
+      "v2_errors": [
+        "context",
+        "predecessor"
+      ]
+    },
+    "predecessor_forgery": {
+      "attacks": [
+        "predecessor_forgery"
+      ],
+      "v1_errors": [],
+      "v2_errors": [
+        "predecessor"
+      ]
+    },
+    "premature_claim": {
+      "attacks": [
+        "premature_claim"
+      ],
+      "v1_errors": [],
+      "v2_errors": [
+        "artifact_claim_flag",
+        "nonclaim_fixture",
+        "predecessor"
+      ]
+    },
+    "role_key_collision": {
+      "attacks": [
+        "role_key_collision"
+      ],
+      "v1_errors": [],
+      "v2_errors": [
+        "key_collision",
+        "predecessor"
+      ]
+    },
+    "row_deletion": {
+      "attacks": [
+        "row_deletion"
+      ],
+      "v1_errors": [
+        "length",
+        "role",
+        "type_order"
+      ],
+      "v2_errors": [
+        "dependency",
+        "length",
+        "predecessor",
+        "role",
+        "sequence",
+        "type_order"
+      ]
+    },
+    "wrong_role_resign": {
+      "attacks": [
+        "wrong_role_resign"
+      ],
+      "v1_errors": [
+        "role"
+      ],
+      "v2_errors": [
+        "predecessor",
+        "role"
+      ]
+    }
+  },
+  "status": "PASS",
+  "theorem": {
+    "boundary": "this is an exhaustive bounded finite-state check through attack depth two, not an unbounded mechanized proof by TLC, Alloy, or ProVerif",
+    "invariants": [
+      "exact artifact order and sequence",
+      "study/device/nonce binding",
+      "predecessor hash chain",
+      "payload dependency chain",
+      "role and key separation",
+      "no premature or nonclaim eligibility"
+    ],
+    "safety": "every unique state reachable from the honest chain by one or two modeled replay, rollback, reordering, deletion, equivocation, key-collision, or claim-forgery attacks violates at least one v2 invariant",
+    "sensitivity": "the same checker recovers concrete v1 counterexamples for cross-study, cross-device, nonce, and authorized-insider substitution"
+  },
+  "v1_accepted_attack_traces": [
+    "authorized_insider_substitution",
+    "authorized_insider_substitution+dependency_rollback",
+    "cross_device_replay",
+    "cross_device_replay+authorized_insider_substitution",
+    "cross_device_replay+dependency_rollback",
+    "cross_device_replay+nonce_substitution",
+    "cross_device_replay+predecessor_forgery",
+    "cross_device_replay+premature_claim",
+    "cross_device_replay+role_key_collision",
+    "cross_study_replay",
+    "cross_study_replay+authorized_insider_substitution",
+    "cross_study_replay+cross_device_replay",
+    "cross_study_replay+dependency_rollback",
+    "cross_study_replay+nonce_substitution",
+    "cross_study_replay+predecessor_forgery",
+    "cross_study_replay+premature_claim",
+    "cross_study_replay+role_key_collision",
+    "dependency_rollback",
+    "nonce_substitution",
+    "nonce_substitution+authorized_insider_substitution",
+    "nonce_substitution+dependency_rollback",
+    "nonce_substitution+predecessor_forgery",
+    "nonce_substitution+premature_claim",
+    "nonce_substitution+role_key_collision",
+    "predecessor_forgery",
+    "predecessor_forgery+authorized_insider_substitution",
+    "predecessor_forgery+dependency_rollback",
+    "predecessor_forgery+premature_claim",
+    "predecessor_forgery+role_key_collision",
+    "premature_claim",
+    "premature_claim+authorized_insider_substitution",
+    "premature_claim+dependency_rollback",
+    "role_key_collision",
+    "role_key_collision+authorized_insider_substitution",
+    "role_key_collision+dependency_rollback",
+    "role_key_collision+premature_claim"
+  ],
+  "v2_rejection_histogram": {
+    "artifact_claim_flag,context,nonclaim_fixture,predecessor": 3,
+    "artifact_claim_flag,dependency,extra,length,nonclaim_fixture,predecessor,premature_claim,role,sequence,type_order": 1,
+    "artifact_claim_flag,dependency,length,nonclaim_fixture,predecessor,premature_claim,role,sequence,type_order": 1,
+    "artifact_claim_flag,dependency,nonclaim_fixture": 1,
+    "artifact_claim_flag,dependency,nonclaim_fixture,predecessor": 1,
+    "artifact_claim_flag,dependency,nonclaim_fixture,predecessor,role,sequence,type_order": 2,
+    "artifact_claim_flag,key_collision,nonclaim_fixture,predecessor": 1,
+    "artifact_claim_flag,nonclaim_fixture,predecessor": 2,
+    "artifact_claim_flag,nonclaim_fixture,predecessor,role": 1,
+    "context,dependency": 3,
+    "context,dependency,extra,length,predecessor,role,sequence,type_order": 3,
+    "context,dependency,predecessor": 3,
+    "context,dependency,predecessor,role,sequence,type_order": 6,
+    "context,key_collision,predecessor": 3,
+    "context,predecessor": 9,
+    "context,predecessor,role": 3,
+    "dependency": 1,
+    "dependency,extra,key_collision,length,predecessor,role,role_key,sequence,type_order": 1,
+    "dependency,extra,length,predecessor,role,sequence,type_order": 6,
+    "dependency,extra,length,role,sequence,type_order": 1,
+    "dependency,key_collision": 1,
+    "dependency,key_collision,length,predecessor,role,role_key,sequence,type_order": 1,
+    "dependency,key_collision,predecessor": 1,
+    "dependency,key_collision,predecessor,role,sequence,type_order": 2,
+    "dependency,length,predecessor,role,sequence,type_order": 6,
+    "dependency,length,role,sequence,type_order": 1,
+    "dependency,predecessor": 3,
+    "dependency,predecessor,role": 1,
+    "dependency,predecessor,role,sequence,type_order": 10,
+    "dependency,role": 1,
+    "dependency,role,sequence,type_order": 2,
+    "key_collision,predecessor": 2,
+    "key_collision,predecessor,role": 1,
+    "predecessor": 1,
+    "predecessor,role": 2
+  }
+}

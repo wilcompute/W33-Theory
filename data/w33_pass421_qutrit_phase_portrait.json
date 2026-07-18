@@ -1,0 +1,1303 @@
+{
+  "certificate_sha256": "e42f04f1526da52ac32cab9f9cfeaf08a944d63e45b4da2cfeacef6b6375ab58",
+  "checks": {
+    "31_unique_fixed_points": true,
+    "all_fixed_points_repelling": true,
+    "all_fixed_points_simple": true,
+    "all_projective_residuals_below_1e_8": true,
+    "clifford_orbit_partition_covers_31": true,
+    "clifford_orbit_sizes_3_4_and_four_6s": true,
+    "decoder_isometry": true,
+    "minimum_spectral_radius_above_two": true,
+    "quintic_CP2_fixed_point_number_31": true,
+    "seed_file_has_31_points": true
+  },
+  "clifford_orbits": [
+    {
+      "members": [
+        0,
+        10,
+        24
+      ],
+      "size": 3
+    },
+    {
+      "members": [
+        11,
+        12,
+        18,
+        30
+      ],
+      "size": 4
+    },
+    {
+      "members": [
+        1,
+        2,
+        5,
+        21,
+        22,
+        23
+      ],
+      "size": 6
+    },
+    {
+      "members": [
+        3,
+        4,
+        13,
+        14,
+        25,
+        26
+      ],
+      "size": 6
+    },
+    {
+      "members": [
+        6,
+        7,
+        15,
+        19,
+        20,
+        29
+      ],
+      "size": 6
+    },
+    {
+      "members": [
+        8,
+        9,
+        16,
+        17,
+        27,
+        28
+      ],
+      "size": 6
+    }
+  ],
+  "fixed_points": [
+    {
+      "acceptance_probability": 0.027777777778,
+      "classification": "repelling",
+      "fixed_point_infidelity": -0.0,
+      "index": 0,
+      "jacobian_eigenvalues": [
+        [
+          -3.0618621676,
+          -1.7677669485
+        ],
+        [
+          -3.0618621676,
+          1.7677669485
+        ],
+        [
+          3.0618621657,
+          -1.7677669464
+        ],
+        [
+          3.0618621657,
+          1.7677669464
+        ]
+      ],
+      "jacobian_spectral_radius": 3.5355338943,
+      "state": [
+        [
+          -0.707106780971,
+          4.13e-10
+        ],
+        [
+          0.707106781402,
+          0.0
+        ],
+        [
+          -5.04e-10,
+          6.03e-10
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.021366314762,
+      "classification": "repelling",
+      "fixed_point_infidelity": 0.0,
+      "index": 1,
+      "jacobian_eigenvalues": [
+        [
+          -2.4880819176,
+          -0.7629963776
+        ],
+        [
+          -2.4880819176,
+          0.7629963776
+        ],
+        [
+          -1.5906443387,
+          -3.0568211595
+        ],
+        [
+          -1.5906443387,
+          3.0568211595
+        ]
+      ],
+      "jacobian_spectral_radius": 3.4459113473,
+      "state": [
+        [
+          -0.343297844049,
+          0.36524310923
+        ],
+        [
+          0.705328379344,
+          0.0
+        ],
+        [
+          -0.343297843412,
+          0.365243110041
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.021366314791,
+      "classification": "repelling",
+      "fixed_point_infidelity": 0.0,
+      "index": 2,
+      "jacobian_eigenvalues": [
+        [
+          -2.4880819136,
+          -0.7629963811
+        ],
+        [
+          -2.4880819136,
+          0.7629963811
+        ],
+        [
+          -1.5906443311,
+          -3.0568211605
+        ],
+        [
+          -1.5906443311,
+          3.0568211605
+        ]
+      ],
+      "jacobian_spectral_radius": 3.4459113447,
+      "state": [
+        [
+          -0.343297843882,
+          0.365243109304
+        ],
+        [
+          -0.343297843607,
+          0.365243109565
+        ],
+        [
+          0.705328379538,
+          0.0
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.023158290988,
+      "classification": "repelling",
+      "fixed_point_infidelity": -0.0,
+      "index": 3,
+      "jacobian_eigenvalues": [
+        [
+          -2.6008401618,
+          -1.2437699486
+        ],
+        [
+          -2.6008401618,
+          1.2437699486
+        ],
+        [
+          0.3654699781,
+          -3.1415009656
+        ],
+        [
+          0.3654699781,
+          3.1415009656
+        ]
+      ],
+      "jacobian_spectral_radius": 3.1626881954,
+      "state": [
+        [
+          -0.228452352308,
+          -0.430542025415
+        ],
+        [
+          0.080542724565,
+          0.470313782138
+        ],
+        [
+          0.731273480257,
+          0.0
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.023158290988,
+      "classification": "repelling",
+      "fixed_point_infidelity": 0.0,
+      "index": 4,
+      "jacobian_eigenvalues": [
+        [
+          -2.6008401618,
+          -1.2437699484
+        ],
+        [
+          -2.6008401618,
+          1.2437699484
+        ],
+        [
+          0.3654699781,
+          -3.1415009657
+        ],
+        [
+          0.3654699781,
+          3.1415009657
+        ]
+      ],
+      "jacobian_spectral_radius": 3.1626881956,
+      "state": [
+        [
+          -0.228452352308,
+          -0.430542025415
+        ],
+        [
+          0.731273480257,
+          0.0
+        ],
+        [
+          0.080542724565,
+          0.470313782138
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.021366314803,
+      "classification": "repelling",
+      "fixed_point_infidelity": -0.0,
+      "index": 5,
+      "jacobian_eigenvalues": [
+        [
+          -1.5906443275,
+          -3.0568211584
+        ],
+        [
+          -1.5906443275,
+          3.0568211584
+        ],
+        [
+          2.4880819107,
+          -0.7629963812
+        ],
+        [
+          2.4880819107,
+          0.7629963812
+        ]
+      ],
+      "jacobian_spectral_radius": 3.4459113412,
+      "state": [
+        [
+          -0.128509479597,
+          0.4018361898
+        ],
+        [
+          0.641097882628,
+          0.0
+        ],
+        [
+          0.641097882628,
+          -0.0
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.014243367591,
+      "classification": "repelling",
+      "fixed_point_infidelity": 0.0,
+      "index": 6,
+      "jacobian_eigenvalues": [
+        [
+          -4.5787550355,
+          -3.5902581961
+        ],
+        [
+          -4.5787550355,
+          3.5902581961
+        ],
+        [
+          -3.2170479787,
+          -0.9472721061
+        ],
+        [
+          -3.2170479787,
+          0.9472721061
+        ]
+      ],
+      "jacobian_spectral_radius": 5.8185008026,
+      "state": [
+        [
+          -0.124391778783,
+          -0.375813316903
+        ],
+        [
+          0.828602481539,
+          0.0
+        ],
+        [
+          -0.124391779089,
+          -0.375813316811
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.014243367612,
+      "classification": "repelling",
+      "fixed_point_infidelity": 0.0,
+      "index": 7,
+      "jacobian_eigenvalues": [
+        [
+          -4.5787550411,
+          -3.5902581866
+        ],
+        [
+          -4.5787550411,
+          3.5902581866
+        ],
+        [
+          -3.2170479809,
+          -0.9472720932
+        ],
+        [
+          -3.2170479809,
+          0.9472720932
+        ]
+      ],
+      "jacobian_spectral_radius": 5.8185008011,
+      "state": [
+        [
+          -0.124391778649,
+          -0.375813316849
+        ],
+        [
+          -0.124391778485,
+          -0.375813316906
+        ],
+        [
+          0.828602481631,
+          0.0
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.037187328815,
+      "classification": "repelling",
+      "fixed_point_infidelity": -0.0,
+      "index": 8,
+      "jacobian_eigenvalues": [
+        [
+          -1.1805343606,
+          -0.8366165893
+        ],
+        [
+          -1.1805343606,
+          0.8366165893
+        ],
+        [
+          0.0505199286,
+          -2.0681742186
+        ],
+        [
+          0.0505199286,
+          2.0681742186
+        ]
+      ],
+      "jacobian_spectral_radius": 2.0687911595,
+      "state": [
+        [
+          -0.01599670094,
+          0.306963159034
+        ],
+        [
+          0.452050948004,
+          -0.391112566389
+        ],
+        [
+          0.740404366124,
+          0.0
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.037187328815,
+      "classification": "repelling",
+      "fixed_point_infidelity": -0.0,
+      "index": 9,
+      "jacobian_eigenvalues": [
+        [
+          -1.1805343604,
+          -0.8366165892
+        ],
+        [
+          -1.1805343604,
+          0.8366165892
+        ],
+        [
+          0.0505199287,
+          -2.0681742187
+        ],
+        [
+          0.0505199287,
+          2.0681742187
+        ]
+      ],
+      "jacobian_spectral_radius": 2.0687911596,
+      "state": [
+        [
+          -0.01599670094,
+          0.306963159034
+        ],
+        [
+          0.740404366124,
+          0.0
+        ],
+        [
+          0.452050948004,
+          -0.391112566389
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.027777777778,
+      "classification": "repelling",
+      "fixed_point_infidelity": 0.0,
+      "index": 10,
+      "jacobian_eigenvalues": [
+        [
+          -3.0618621756,
+          -1.767766951
+        ],
+        [
+          -3.0618621756,
+          1.767766951
+        ],
+        [
+          3.0618621667,
+          -1.7677669504
+        ],
+        [
+          3.0618621667,
+          1.7677669504
+        ]
+      ],
+      "jacobian_spectral_radius": 3.5355339024,
+      "state": [
+        [
+          -5.21e-10,
+          2.86e-10
+        ],
+        [
+          -0.707106780909,
+          1.07e-09
+        ],
+        [
+          0.707106781464,
+          0.0
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.012345679012,
+      "classification": "repelling",
+      "fixed_point_infidelity": 0.0,
+      "index": 11,
+      "jacobian_eigenvalues": [
+        [
+          -2.5,
+          -4.3301270189
+        ],
+        [
+          -2.5,
+          4.3301270189
+        ],
+        [
+          2.5,
+          -4.3301270189
+        ],
+        [
+          2.5,
+          4.3301270189
+        ]
+      ],
+      "jacobian_spectral_radius": 5.0,
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.012345679012,
+      "classification": "repelling",
+      "fixed_point_infidelity": 0.0,
+      "index": 12,
+      "jacobian_eigenvalues": [
+        [
+          -2.5,
+          -4.3301270189
+        ],
+        [
+          -2.5,
+          4.3301270189
+        ],
+        [
+          2.5,
+          -4.3301270189
+        ],
+        [
+          2.5,
+          4.3301270189
+        ]
+      ],
+      "jacobian_spectral_radius": 5.0,
+      "state": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.023158290988,
+      "classification": "repelling",
+      "fixed_point_infidelity": -0.0,
+      "index": 13,
+      "jacobian_eigenvalues": [
+        [
+          -2.6008401617,
+          -1.2437699486
+        ],
+        [
+          -2.6008401617,
+          1.2437699486
+        ],
+        [
+          0.365469978,
+          -3.1415009654
+        ],
+        [
+          0.365469978,
+          3.1415009654
+        ]
+      ],
+      "jacobian_spectral_radius": 3.1626881953,
+      "state": [
+        [
+          0.080542724565,
+          0.470313782138
+        ],
+        [
+          -0.228452352308,
+          -0.430542025415
+        ],
+        [
+          0.731273480257,
+          0.0
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.023158290988,
+      "classification": "repelling",
+      "fixed_point_infidelity": 0.0,
+      "index": 14,
+      "jacobian_eigenvalues": [
+        [
+          -2.6008401618,
+          -1.2437699486
+        ],
+        [
+          -2.6008401618,
+          1.2437699486
+        ],
+        [
+          0.3654699782,
+          -3.1415009659
+        ],
+        [
+          0.3654699782,
+          3.1415009659
+        ]
+      ],
+      "jacobian_spectral_radius": 3.1626881958,
+      "state": [
+        [
+          0.080542724565,
+          0.470313782138
+        ],
+        [
+          0.731273480257,
+          0.0
+        ],
+        [
+          -0.228452352308,
+          -0.430542025415
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.014243367604,
+      "classification": "repelling",
+      "fixed_point_infidelity": 0.0,
+      "index": 15,
+      "jacobian_eigenvalues": [
+        [
+          -3.2170479802,
+          -0.9472720978
+        ],
+        [
+          -3.2170479802,
+          0.9472720978
+        ],
+        [
+          4.578755039,
+          -3.59025819
+        ],
+        [
+          4.578755039,
+          3.59025819
+        ]
+      ],
+      "jacobian_spectral_radius": 5.8185008016,
+      "state": [
+        [
+          0.152221111338,
+          -0.52650380853
+        ],
+        [
+          0.591448422463,
+          0.0
+        ],
+        [
+          0.591448422463,
+          0.0
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.037187328815,
+      "classification": "repelling",
+      "fixed_point_infidelity": -0.0,
+      "index": 16,
+      "jacobian_eigenvalues": [
+        [
+          -1.1805343604,
+          -0.8366165892
+        ],
+        [
+          -1.1805343604,
+          0.8366165892
+        ],
+        [
+          0.0505199286,
+          -2.0681742185
+        ],
+        [
+          0.0505199286,
+          2.0681742185
+        ]
+      ],
+      "jacobian_spectral_radius": 2.0687911594,
+      "state": [
+        [
+          0.452050948004,
+          -0.391112566389
+        ],
+        [
+          -0.01599670094,
+          0.306963159034
+        ],
+        [
+          0.740404366124,
+          0.0
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.037187328815,
+      "classification": "repelling",
+      "fixed_point_infidelity": 0.0,
+      "index": 17,
+      "jacobian_eigenvalues": [
+        [
+          -1.1805343601,
+          -0.8366165889
+        ],
+        [
+          -1.1805343601,
+          0.8366165889
+        ],
+        [
+          0.0505199287,
+          -2.0681742184
+        ],
+        [
+          0.0505199287,
+          2.0681742184
+        ]
+      ],
+      "jacobian_spectral_radius": 2.0687911594,
+      "state": [
+        [
+          0.452050948004,
+          -0.391112566389
+        ],
+        [
+          0.740404366124,
+          0.0
+        ],
+        [
+          -0.01599670094,
+          0.306963159034
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.012345679012,
+      "classification": "repelling",
+      "fixed_point_infidelity": 0.0,
+      "index": 18,
+      "jacobian_eigenvalues": [
+        [
+          -2.5000000108,
+          -4.3301270268
+        ],
+        [
+          -2.5000000108,
+          4.3301270268
+        ],
+        [
+          -2.5000000047,
+          -4.3301270232
+        ],
+        [
+          -2.5000000047,
+          4.3301270232
+        ]
+      ],
+      "jacobian_spectral_radius": 5.0000000122,
+      "state": [
+        [
+          0.577350269157,
+          2.78e-10
+        ],
+        [
+          0.577350269182,
+          1.17e-10
+        ],
+        [
+          0.57735026923,
+          0.0
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.014243367622,
+      "classification": "repelling",
+      "fixed_point_infidelity": 0.0,
+      "index": 19,
+      "jacobian_eigenvalues": [
+        [
+          -3.2170479513,
+          -0.9472721149
+        ],
+        [
+          -3.2170479513,
+          0.9472721149
+        ],
+        [
+          4.5787549713,
+          -3.5902581974
+        ],
+        [
+          4.5787549713,
+          3.5902581974
+        ]
+      ],
+      "jacobian_spectral_radius": 5.8185007528,
+      "state": [
+        [
+          0.591448422346,
+          1.059e-09
+        ],
+        [
+          0.59144842239,
+          0.0
+        ],
+        [
+          0.152221111389,
+          -0.526503808727
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.01424336761,
+      "classification": "repelling",
+      "fixed_point_infidelity": -0.0,
+      "index": 20,
+      "jacobian_eigenvalues": [
+        [
+          -3.2170479795,
+          -0.9472721011
+        ],
+        [
+          -3.2170479795,
+          0.9472721011
+        ],
+        [
+          4.5787550559,
+          -3.5902581868
+        ],
+        [
+          4.5787550559,
+          3.5902581868
+        ]
+      ],
+      "jacobian_spectral_radius": 5.8185008129,
+      "state": [
+        [
+          0.591448422484,
+          0.0
+        ],
+        [
+          0.152221110837,
+          -0.52650380873
+        ],
+        [
+          0.591448422392,
+          -5.09e-10
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.021366314802,
+      "classification": "repelling",
+      "fixed_point_infidelity": 0.0,
+      "index": 21,
+      "jacobian_eigenvalues": [
+        [
+          -1.5906443281,
+          -3.0568211585
+        ],
+        [
+          -1.5906443281,
+          3.0568211585
+        ],
+        [
+          2.4880819113,
+          -0.762996381
+        ],
+        [
+          2.4880819113,
+          0.762996381
+        ]
+      ],
+      "jacobian_spectral_radius": 3.4459113415,
+      "state": [
+        [
+          0.64109788263,
+          0.0
+        ],
+        [
+          0.641097882629,
+          6.5e-11
+        ],
+        [
+          -0.128509479625,
+          0.401836189788
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.021366314802,
+      "classification": "repelling",
+      "fixed_point_infidelity": 0.0,
+      "index": 22,
+      "jacobian_eigenvalues": [
+        [
+          -1.5906443319,
+          -3.0568211585
+        ],
+        [
+          -1.5906443319,
+          3.0568211585
+        ],
+        [
+          2.4880819145,
+          -0.7629963757
+        ],
+        [
+          2.4880819145,
+          0.7629963757
+        ]
+      ],
+      "jacobian_spectral_radius": 3.4459113432,
+      "state": [
+        [
+          0.641097882662,
+          0.0
+        ],
+        [
+          -0.128509479961,
+          0.401836189619
+        ],
+        [
+          0.641097882635,
+          9.34e-10
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.021366314803,
+      "classification": "repelling",
+      "fixed_point_infidelity": 0.0,
+      "index": 23,
+      "jacobian_eigenvalues": [
+        [
+          -2.4880819107,
+          -0.7629963813
+        ],
+        [
+          -2.4880819107,
+          0.7629963813
+        ],
+        [
+          -1.5906443275,
+          -3.0568211584
+        ],
+        [
+          -1.5906443275,
+          3.0568211584
+        ]
+      ],
+      "jacobian_spectral_radius": 3.4459113412,
+      "state": [
+        [
+          0.705328379586,
+          0.0
+        ],
+        [
+          -0.343297843828,
+          0.365243109309
+        ],
+        [
+          -0.343297843828,
+          0.365243109309
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.027777777778,
+      "classification": "repelling",
+      "fixed_point_infidelity": 0.0,
+      "index": 24,
+      "jacobian_eigenvalues": [
+        [
+          -3.0618621771,
+          -1.7677669498
+        ],
+        [
+          -3.0618621771,
+          1.7677669498
+        ],
+        [
+          3.0618621805,
+          -1.7677669471
+        ],
+        [
+          3.0618621805,
+          1.7677669471
+        ]
+      ],
+      "jacobian_spectral_radius": 3.5355339047,
+      "state": [
+        [
+          0.707106781305,
+          0.0
+        ],
+        [
+          1.94e-10,
+          2.92e-10
+        ],
+        [
+          -0.707106781068,
+          -5.16e-10
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.023158290988,
+      "classification": "repelling",
+      "fixed_point_infidelity": 0.0,
+      "index": 25,
+      "jacobian_eigenvalues": [
+        [
+          -2.6008401618,
+          -1.2437699481
+        ],
+        [
+          -2.6008401618,
+          1.2437699481
+        ],
+        [
+          0.3654699784,
+          -3.1415009657
+        ],
+        [
+          0.3654699784,
+          3.1415009657
+        ]
+      ],
+      "jacobian_spectral_radius": 3.1626881956,
+      "state": [
+        [
+          0.731273480257,
+          0.0
+        ],
+        [
+          -0.228452352308,
+          -0.430542025415
+        ],
+        [
+          0.080542724565,
+          0.470313782138
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.023158290988,
+      "classification": "repelling",
+      "fixed_point_infidelity": 0.0,
+      "index": 26,
+      "jacobian_eigenvalues": [
+        [
+          -2.600840162,
+          -1.2437699484
+        ],
+        [
+          -2.600840162,
+          1.2437699484
+        ],
+        [
+          0.3654699782,
+          -3.1415009658
+        ],
+        [
+          0.3654699782,
+          3.1415009658
+        ]
+      ],
+      "jacobian_spectral_radius": 3.1626881957,
+      "state": [
+        [
+          0.731273480257,
+          0.0
+        ],
+        [
+          0.080542724565,
+          0.470313782138
+        ],
+        [
+          -0.228452352308,
+          -0.430542025415
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.037187328815,
+      "classification": "repelling",
+      "fixed_point_infidelity": -0.0,
+      "index": 27,
+      "jacobian_eigenvalues": [
+        [
+          -1.1805343603,
+          -0.836616589
+        ],
+        [
+          -1.1805343603,
+          0.836616589
+        ],
+        [
+          0.0505199285,
+          -2.0681742185
+        ],
+        [
+          0.0505199285,
+          2.0681742185
+        ]
+      ],
+      "jacobian_spectral_radius": 2.0687911594,
+      "state": [
+        [
+          0.740404366124,
+          0.0
+        ],
+        [
+          -0.01599670094,
+          0.306963159034
+        ],
+        [
+          0.452050948004,
+          -0.391112566389
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.037187328815,
+      "classification": "repelling",
+      "fixed_point_infidelity": 0.0,
+      "index": 28,
+      "jacobian_eigenvalues": [
+        [
+          -1.1805343598,
+          -0.8366165889
+        ],
+        [
+          -1.1805343598,
+          0.8366165889
+        ],
+        [
+          0.0505199286,
+          -2.0681742185
+        ],
+        [
+          0.0505199286,
+          2.0681742185
+        ]
+      ],
+      "jacobian_spectral_radius": 2.0687911594,
+      "state": [
+        [
+          0.740404366124,
+          0.0
+        ],
+        [
+          0.452050948004,
+          -0.391112566389
+        ],
+        [
+          -0.01599670094,
+          0.306963159034
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.014243367604,
+      "classification": "repelling",
+      "fixed_point_infidelity": -0.0,
+      "index": 29,
+      "jacobian_eigenvalues": [
+        [
+          -4.5787550391,
+          -3.5902581902
+        ],
+        [
+          -4.5787550391,
+          3.5902581902
+        ],
+        [
+          -3.2170479802,
+          -0.947272098
+        ],
+        [
+          -3.2170479802,
+          0.947272098
+        ]
+      ],
+      "jacobian_spectral_radius": 5.8185008018,
+      "state": [
+        [
+          0.828602481598,
+          0.0
+        ],
+        [
+          -0.124391778702,
+          -0.375813316869
+        ],
+        [
+          -0.124391778702,
+          -0.375813316869
+        ]
+      ]
+    },
+    {
+      "acceptance_probability": 0.012345679012,
+      "classification": "repelling",
+      "fixed_point_infidelity": 0.0,
+      "index": 30,
+      "jacobian_eigenvalues": [
+        [
+          -2.5,
+          -4.3301270189
+        ],
+        [
+          -2.5,
+          4.3301270189
+        ],
+        [
+          2.5,
+          -4.3301270189
+        ],
+        [
+          2.5,
+          4.3301270189
+        ]
+      ],
+      "jacobian_spectral_radius": 5.0,
+      "state": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    }
+  ],
+  "map": {
+    "definition": "[psi] -> [D^dagger psi^(tensor 5)] conditioned on nonzero acceptance",
+    "degree": 5,
+    "space": "CP^2 pure qutrit states"
+  },
+  "schema": "w33.pass421.qutrit_phase_portrait.v1",
+  "status": "PASS",
+  "theorem": {
+    "boundary": "periodic cycles, Julia-like basin boundaries, and the full eight-real-dimensional mixed-state Bloch body remain outside this certificate",
+    "clifford_partition": "the fixed points split into projective Clifford orbits of sizes 3,4,6,6,6,6",
+    "distillation_implication": "the five-qutrit code has no pure attracting fixed point; direct iterative purification cannot terminate at a pure fixed state of this map",
+    "fixed_point_census": "the homogeneous quintic map has 31 simple projective fixed points, saturating 1+d+d^2 for d=5",
+    "local_stability": "every fixed point has real projective Jacobian spectral radius greater than two and is repelling"
+  }
+}

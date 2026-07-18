@@ -1,0 +1,877 @@
+{
+  "certificate_sha256": "2d7d089958cee75d70dab8f8013398f22b008a1230da5f2e8333980203ab3215",
+  "checks": {
+    "all_encode_decode_trials_roundtrip": true,
+    "ordered_minimum_bits_is_16": true,
+    "oriented_edge_alphabet_702": true,
+    "pair_counter_has_all_ordered_pairs": true,
+    "pairing_only_maximum_is_six": true,
+    "pairing_only_requires_three_bits": true,
+    "unordered_minimum_bits_is_13": true,
+    "zero_codebook_size_6202": true,
+    "zero_ordered_cumulative_is_35803": true,
+    "zero_ordered_w2_is_702": true,
+    "zero_ordered_w3_is_35100": true,
+    "zero_unordered_cumulative_is_6202": true,
+    "zero_unordered_w2_is_351": true,
+    "zero_unordered_w3_is_5850": true
+  },
+  "codec": {
+    "claim_boundary": "13 bits recover the unordered multiset of up to three pulse relocations. They do not encode analog timing, amplitudes, or more than three slips.",
+    "decoder": "enumerate the same syndrome fibre and select the transmitted rank",
+    "edge_id_order": "lexicographic (source,target), source!=target over 27 modes",
+    "encoder": "sort at most three edge IDs, compute the net divisor, enumerate all sorted edge multisets with that divisor, and emit the lexicographic rank",
+    "fixed_width_packet": "13 bits for unordered pairing/cycle recovery; 16 bits when acquisition order is also part of the claim"
+  },
+  "net_type_fibre_census": [
+    {
+      "negative_partition": [],
+      "net_transport_weight": 0,
+      "ordered_cumulative": 35803,
+      "ordered_w0": 1,
+      "ordered_w1": 0,
+      "ordered_w2": 702,
+      "ordered_w3": 35100,
+      "positive_partition": [],
+      "unordered_cumulative": 6202,
+      "unordered_w0": 1,
+      "unordered_w1": 0,
+      "unordered_w2": 351,
+      "unordered_w3": 5850
+    },
+    {
+      "negative_partition": [
+        1
+      ],
+      "net_transport_weight": 1,
+      "ordered_cumulative": 5754,
+      "ordered_w0": 0,
+      "ordered_w1": 1,
+      "ordered_w2": 50,
+      "ordered_w3": 5703,
+      "positive_partition": [
+        1
+      ],
+      "unordered_cumulative": 977,
+      "unordered_w0": 0,
+      "unordered_w1": 1,
+      "unordered_w2": 25,
+      "unordered_w3": 951
+    },
+    {
+      "negative_partition": [
+        2
+      ],
+      "net_transport_weight": 2,
+      "ordered_cumulative": 151,
+      "ordered_w0": 0,
+      "ordered_w1": 0,
+      "ordered_w2": 1,
+      "ordered_w3": 150,
+      "positive_partition": [
+        2
+      ],
+      "unordered_cumulative": 26,
+      "unordered_w0": 0,
+      "unordered_w1": 0,
+      "unordered_w2": 1,
+      "unordered_w3": 25
+    },
+    {
+      "negative_partition": [
+        1,
+        1
+      ],
+      "net_transport_weight": 2,
+      "ordered_cumulative": 296,
+      "ordered_w0": 0,
+      "ordered_w1": 0,
+      "ordered_w2": 2,
+      "ordered_w3": 294,
+      "positive_partition": [
+        2
+      ],
+      "unordered_cumulative": 51,
+      "unordered_w0": 0,
+      "unordered_w1": 0,
+      "unordered_w2": 1,
+      "unordered_w3": 50
+    },
+    {
+      "negative_partition": [
+        2
+      ],
+      "net_transport_weight": 2,
+      "ordered_cumulative": 296,
+      "ordered_w0": 0,
+      "ordered_w1": 0,
+      "ordered_w2": 2,
+      "ordered_w3": 294,
+      "positive_partition": [
+        1,
+        1
+      ],
+      "unordered_cumulative": 51,
+      "unordered_w0": 0,
+      "unordered_w1": 0,
+      "unordered_w2": 1,
+      "unordered_w3": 50
+    },
+    {
+      "negative_partition": [
+        1,
+        1
+      ],
+      "net_transport_weight": 2,
+      "ordered_cumulative": 580,
+      "ordered_w0": 0,
+      "ordered_w1": 0,
+      "ordered_w2": 4,
+      "ordered_w3": 576,
+      "positive_partition": [
+        1,
+        1
+      ],
+      "unordered_cumulative": 98,
+      "unordered_w0": 0,
+      "unordered_w1": 0,
+      "unordered_w2": 2,
+      "unordered_w3": 96
+    },
+    {
+      "negative_partition": [
+        3
+      ],
+      "net_transport_weight": 3,
+      "ordered_cumulative": 1,
+      "ordered_w0": 0,
+      "ordered_w1": 0,
+      "ordered_w2": 0,
+      "ordered_w3": 1,
+      "positive_partition": [
+        3
+      ],
+      "unordered_cumulative": 1,
+      "unordered_w0": 0,
+      "unordered_w1": 0,
+      "unordered_w2": 0,
+      "unordered_w3": 1
+    },
+    {
+      "negative_partition": [
+        2,
+        1
+      ],
+      "net_transport_weight": 3,
+      "ordered_cumulative": 3,
+      "ordered_w0": 0,
+      "ordered_w1": 0,
+      "ordered_w2": 0,
+      "ordered_w3": 3,
+      "positive_partition": [
+        3
+      ],
+      "unordered_cumulative": 1,
+      "unordered_w0": 0,
+      "unordered_w1": 0,
+      "unordered_w2": 0,
+      "unordered_w3": 1
+    },
+    {
+      "negative_partition": [
+        1,
+        1,
+        1
+      ],
+      "net_transport_weight": 3,
+      "ordered_cumulative": 6,
+      "ordered_w0": 0,
+      "ordered_w1": 0,
+      "ordered_w2": 0,
+      "ordered_w3": 6,
+      "positive_partition": [
+        3
+      ],
+      "unordered_cumulative": 1,
+      "unordered_w0": 0,
+      "unordered_w1": 0,
+      "unordered_w2": 0,
+      "unordered_w3": 1
+    },
+    {
+      "negative_partition": [
+        3
+      ],
+      "net_transport_weight": 3,
+      "ordered_cumulative": 3,
+      "ordered_w0": 0,
+      "ordered_w1": 0,
+      "ordered_w2": 0,
+      "ordered_w3": 3,
+      "positive_partition": [
+        2,
+        1
+      ],
+      "unordered_cumulative": 1,
+      "unordered_w0": 0,
+      "unordered_w1": 0,
+      "unordered_w2": 0,
+      "unordered_w3": 1
+    },
+    {
+      "negative_partition": [
+        2,
+        1
+      ],
+      "net_transport_weight": 3,
+      "ordered_cumulative": 9,
+      "ordered_w0": 0,
+      "ordered_w1": 0,
+      "ordered_w2": 0,
+      "ordered_w3": 9,
+      "positive_partition": [
+        2,
+        1
+      ],
+      "unordered_cumulative": 2,
+      "unordered_w0": 0,
+      "unordered_w1": 0,
+      "unordered_w2": 0,
+      "unordered_w3": 2
+    },
+    {
+      "negative_partition": [
+        1,
+        1,
+        1
+      ],
+      "net_transport_weight": 3,
+      "ordered_cumulative": 18,
+      "ordered_w0": 0,
+      "ordered_w1": 0,
+      "ordered_w2": 0,
+      "ordered_w3": 18,
+      "positive_partition": [
+        2,
+        1
+      ],
+      "unordered_cumulative": 3,
+      "unordered_w0": 0,
+      "unordered_w1": 0,
+      "unordered_w2": 0,
+      "unordered_w3": 3
+    },
+    {
+      "negative_partition": [
+        3
+      ],
+      "net_transport_weight": 3,
+      "ordered_cumulative": 6,
+      "ordered_w0": 0,
+      "ordered_w1": 0,
+      "ordered_w2": 0,
+      "ordered_w3": 6,
+      "positive_partition": [
+        1,
+        1,
+        1
+      ],
+      "unordered_cumulative": 1,
+      "unordered_w0": 0,
+      "unordered_w1": 0,
+      "unordered_w2": 0,
+      "unordered_w3": 1
+    },
+    {
+      "negative_partition": [
+        2,
+        1
+      ],
+      "net_transport_weight": 3,
+      "ordered_cumulative": 18,
+      "ordered_w0": 0,
+      "ordered_w1": 0,
+      "ordered_w2": 0,
+      "ordered_w3": 18,
+      "positive_partition": [
+        1,
+        1,
+        1
+      ],
+      "unordered_cumulative": 3,
+      "unordered_w0": 0,
+      "unordered_w1": 0,
+      "unordered_w2": 0,
+      "unordered_w3": 3
+    },
+    {
+      "negative_partition": [
+        1,
+        1,
+        1
+      ],
+      "net_transport_weight": 3,
+      "ordered_cumulative": 36,
+      "ordered_w0": 0,
+      "ordered_w1": 0,
+      "ordered_w2": 0,
+      "ordered_w3": 36,
+      "positive_partition": [
+        1,
+        1,
+        1
+      ],
+      "unordered_cumulative": 6,
+      "unordered_w0": 0,
+      "unordered_w1": 0,
+      "unordered_w2": 0,
+      "unordered_w3": 6
+    }
+  ],
+  "roundtrip_examples": [
+    {
+      "fibre_size": 977,
+      "net_divisor": [
+        -1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "roundtrip": true,
+      "slips": [
+        [
+          0,
+          1
+        ]
+      ],
+      "telemetry_rank": 0
+    },
+    {
+      "fibre_size": 6202,
+      "net_divisor": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "roundtrip": true,
+      "slips": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "telemetry_rank": 1
+    },
+    {
+      "fibre_size": 6202,
+      "net_divisor": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "roundtrip": true,
+      "slips": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "telemetry_rank": 1
+    },
+    {
+      "fibre_size": 6202,
+      "net_divisor": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "roundtrip": true,
+      "slips": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "telemetry_rank": 1
+    },
+    {
+      "fibre_size": 6202,
+      "net_divisor": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "roundtrip": true,
+      "slips": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "telemetry_rank": 2
+    },
+    {
+      "fibre_size": 6202,
+      "net_divisor": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "roundtrip": true,
+      "slips": [
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "telemetry_rank": 3
+    },
+    {
+      "fibre_size": 6202,
+      "net_divisor": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "roundtrip": true,
+      "slips": [
+        [
+          0,
+          4
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "telemetry_rank": 4
+    },
+    {
+      "fibre_size": 6202,
+      "net_divisor": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "roundtrip": true,
+      "slips": [
+        [
+          0,
+          5
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "telemetry_rank": 5
+    },
+    {
+      "fibre_size": 6202,
+      "net_divisor": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "roundtrip": true,
+      "slips": [
+        [
+          0,
+          6
+        ],
+        [
+          6,
+          0
+        ]
+      ],
+      "telemetry_rank": 6
+    },
+    {
+      "fibre_size": 6202,
+      "net_divisor": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "roundtrip": true,
+      "slips": [
+        [
+          0,
+          7
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "telemetry_rank": 7
+    },
+    {
+      "fibre_size": 6202,
+      "net_divisor": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "roundtrip": true,
+      "slips": [
+        [
+          0,
+          8
+        ],
+        [
+          8,
+          0
+        ]
+      ],
+      "telemetry_rank": 8
+    },
+    {
+      "fibre_size": 6202,
+      "net_divisor": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "roundtrip": true,
+      "slips": [
+        [
+          0,
+          9
+        ],
+        [
+          9,
+          0
+        ]
+      ],
+      "telemetry_rank": 9
+    }
+  ],
+  "schema": "w33.pass417.divisor_cycle_hybrid_decoder.v1",
+  "status": "PASS",
+  "theorem": {
+    "minimum_time_ordered_bits": 16,
+    "minimum_unordered_bits": 13,
+    "optimality": "the zero-divisor fibre has 6202 unordered and 35803 ordered histories, giving matching information-theoretic lower bounds; the rank construction attains them",
+    "pairing_only_bits_without_cancellation": 3,
+    "sandpile_component": "the Pass-412 syndrome uniquely recovers the net divisor through transport weight three",
+    "telemetry_component": "conditioned on that divisor, lexicographic rank inside the complete slip-multiset fibre recovers hidden pairing and cycles"
+  },
+  "zero_divisor_fibre": {
+    "canonical_codebook_sha256": "1c4c7501c9b53c835d608249165c8fefccafeead31ec115722c20428f5db7dfb",
+    "directed_three_cycles": 5850,
+    "identity_history": 1,
+    "ordered_reciprocal_sequences": 702,
+    "ordered_three_cycle_sequences": 35100,
+    "ordered_total": 35803,
+    "reciprocal_two_cycles": 351,
+    "unordered_total": 6202
+  }
+}

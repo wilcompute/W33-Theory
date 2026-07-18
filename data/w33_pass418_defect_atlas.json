@@ -1,0 +1,4171 @@
+{
+  "certificate_sha256": "1577482bc0e034874d42192bbb2893ef71e27e0512b711fe139ac26686ae5db7",
+  "coordinate_convention": "orthonormal symmetric-matrix basis: E_ii on the diagonal and (E_ij+E_ji)/sqrt(2) off diagonal",
+  "entries": [
+    {
+      "coordinate_id": 0,
+      "family": "mode_gain",
+      "matrix_basis": "E_ii",
+      "orbit": 0,
+      "orbit_index": 0,
+      "vertices": [
+        0,
+        0
+      ]
+    },
+    {
+      "coordinate_id": 1,
+      "family": "mode_gain",
+      "matrix_basis": "E_ii",
+      "orbit": 0,
+      "orbit_index": 1,
+      "vertices": [
+        1,
+        1
+      ]
+    },
+    {
+      "coordinate_id": 2,
+      "family": "mode_gain",
+      "matrix_basis": "E_ii",
+      "orbit": 0,
+      "orbit_index": 2,
+      "vertices": [
+        2,
+        2
+      ]
+    },
+    {
+      "coordinate_id": 3,
+      "family": "mode_gain",
+      "matrix_basis": "E_ii",
+      "orbit": 0,
+      "orbit_index": 3,
+      "vertices": [
+        3,
+        3
+      ]
+    },
+    {
+      "coordinate_id": 4,
+      "family": "mode_gain",
+      "matrix_basis": "E_ii",
+      "orbit": 0,
+      "orbit_index": 4,
+      "vertices": [
+        4,
+        4
+      ]
+    },
+    {
+      "coordinate_id": 5,
+      "family": "mode_gain",
+      "matrix_basis": "E_ii",
+      "orbit": 0,
+      "orbit_index": 5,
+      "vertices": [
+        5,
+        5
+      ]
+    },
+    {
+      "coordinate_id": 6,
+      "family": "mode_gain",
+      "matrix_basis": "E_ii",
+      "orbit": 0,
+      "orbit_index": 6,
+      "vertices": [
+        6,
+        6
+      ]
+    },
+    {
+      "coordinate_id": 7,
+      "family": "mode_gain",
+      "matrix_basis": "E_ii",
+      "orbit": 0,
+      "orbit_index": 7,
+      "vertices": [
+        7,
+        7
+      ]
+    },
+    {
+      "coordinate_id": 8,
+      "family": "mode_gain",
+      "matrix_basis": "E_ii",
+      "orbit": 0,
+      "orbit_index": 8,
+      "vertices": [
+        8,
+        8
+      ]
+    },
+    {
+      "coordinate_id": 9,
+      "family": "mode_gain",
+      "matrix_basis": "E_ii",
+      "orbit": 0,
+      "orbit_index": 9,
+      "vertices": [
+        9,
+        9
+      ]
+    },
+    {
+      "coordinate_id": 10,
+      "family": "mode_gain",
+      "matrix_basis": "E_ii",
+      "orbit": 0,
+      "orbit_index": 10,
+      "vertices": [
+        10,
+        10
+      ]
+    },
+    {
+      "coordinate_id": 11,
+      "family": "mode_gain",
+      "matrix_basis": "E_ii",
+      "orbit": 0,
+      "orbit_index": 11,
+      "vertices": [
+        11,
+        11
+      ]
+    },
+    {
+      "coordinate_id": 12,
+      "family": "mode_gain",
+      "matrix_basis": "E_ii",
+      "orbit": 0,
+      "orbit_index": 12,
+      "vertices": [
+        12,
+        12
+      ]
+    },
+    {
+      "coordinate_id": 13,
+      "family": "mode_gain",
+      "matrix_basis": "E_ii",
+      "orbit": 0,
+      "orbit_index": 13,
+      "vertices": [
+        13,
+        13
+      ]
+    },
+    {
+      "coordinate_id": 14,
+      "family": "mode_gain",
+      "matrix_basis": "E_ii",
+      "orbit": 0,
+      "orbit_index": 14,
+      "vertices": [
+        14,
+        14
+      ]
+    },
+    {
+      "coordinate_id": 15,
+      "family": "mode_gain",
+      "matrix_basis": "E_ii",
+      "orbit": 0,
+      "orbit_index": 15,
+      "vertices": [
+        15,
+        15
+      ]
+    },
+    {
+      "coordinate_id": 16,
+      "family": "mode_gain",
+      "matrix_basis": "E_ii",
+      "orbit": 0,
+      "orbit_index": 16,
+      "vertices": [
+        16,
+        16
+      ]
+    },
+    {
+      "coordinate_id": 17,
+      "family": "mode_gain",
+      "matrix_basis": "E_ii",
+      "orbit": 0,
+      "orbit_index": 17,
+      "vertices": [
+        17,
+        17
+      ]
+    },
+    {
+      "coordinate_id": 18,
+      "family": "mode_gain",
+      "matrix_basis": "E_ii",
+      "orbit": 0,
+      "orbit_index": 18,
+      "vertices": [
+        18,
+        18
+      ]
+    },
+    {
+      "coordinate_id": 19,
+      "family": "mode_gain",
+      "matrix_basis": "E_ii",
+      "orbit": 0,
+      "orbit_index": 19,
+      "vertices": [
+        19,
+        19
+      ]
+    },
+    {
+      "coordinate_id": 20,
+      "family": "mode_gain",
+      "matrix_basis": "E_ii",
+      "orbit": 0,
+      "orbit_index": 20,
+      "vertices": [
+        20,
+        20
+      ]
+    },
+    {
+      "coordinate_id": 21,
+      "family": "mode_gain",
+      "matrix_basis": "E_ii",
+      "orbit": 0,
+      "orbit_index": 21,
+      "vertices": [
+        21,
+        21
+      ]
+    },
+    {
+      "coordinate_id": 22,
+      "family": "mode_gain",
+      "matrix_basis": "E_ii",
+      "orbit": 0,
+      "orbit_index": 22,
+      "vertices": [
+        22,
+        22
+      ]
+    },
+    {
+      "coordinate_id": 23,
+      "family": "mode_gain",
+      "matrix_basis": "E_ii",
+      "orbit": 0,
+      "orbit_index": 23,
+      "vertices": [
+        23,
+        23
+      ]
+    },
+    {
+      "coordinate_id": 24,
+      "family": "mode_gain",
+      "matrix_basis": "E_ii",
+      "orbit": 0,
+      "orbit_index": 24,
+      "vertices": [
+        24,
+        24
+      ]
+    },
+    {
+      "coordinate_id": 25,
+      "family": "mode_gain",
+      "matrix_basis": "E_ii",
+      "orbit": 0,
+      "orbit_index": 25,
+      "vertices": [
+        25,
+        25
+      ]
+    },
+    {
+      "coordinate_id": 26,
+      "family": "mode_gain",
+      "matrix_basis": "E_ii",
+      "orbit": 0,
+      "orbit_index": 26,
+      "vertices": [
+        26,
+        26
+      ]
+    },
+    {
+      "coordinate_id": 27,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 0,
+      "vertices": [
+        0,
+        3
+      ]
+    },
+    {
+      "coordinate_id": 28,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 1,
+      "vertices": [
+        0,
+        6
+      ]
+    },
+    {
+      "coordinate_id": 29,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 2,
+      "vertices": [
+        0,
+        9
+      ]
+    },
+    {
+      "coordinate_id": 30,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 3,
+      "vertices": [
+        0,
+        12
+      ]
+    },
+    {
+      "coordinate_id": 31,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 4,
+      "vertices": [
+        0,
+        15
+      ]
+    },
+    {
+      "coordinate_id": 32,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 5,
+      "vertices": [
+        0,
+        18
+      ]
+    },
+    {
+      "coordinate_id": 33,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 6,
+      "vertices": [
+        0,
+        21
+      ]
+    },
+    {
+      "coordinate_id": 34,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 7,
+      "vertices": [
+        0,
+        24
+      ]
+    },
+    {
+      "coordinate_id": 35,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 8,
+      "vertices": [
+        1,
+        4
+      ]
+    },
+    {
+      "coordinate_id": 36,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 9,
+      "vertices": [
+        1,
+        7
+      ]
+    },
+    {
+      "coordinate_id": 37,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 10,
+      "vertices": [
+        1,
+        10
+      ]
+    },
+    {
+      "coordinate_id": 38,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 11,
+      "vertices": [
+        1,
+        13
+      ]
+    },
+    {
+      "coordinate_id": 39,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 12,
+      "vertices": [
+        1,
+        16
+      ]
+    },
+    {
+      "coordinate_id": 40,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 13,
+      "vertices": [
+        1,
+        19
+      ]
+    },
+    {
+      "coordinate_id": 41,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 14,
+      "vertices": [
+        1,
+        22
+      ]
+    },
+    {
+      "coordinate_id": 42,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 15,
+      "vertices": [
+        1,
+        25
+      ]
+    },
+    {
+      "coordinate_id": 43,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 16,
+      "vertices": [
+        2,
+        5
+      ]
+    },
+    {
+      "coordinate_id": 44,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 17,
+      "vertices": [
+        2,
+        8
+      ]
+    },
+    {
+      "coordinate_id": 45,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 18,
+      "vertices": [
+        2,
+        11
+      ]
+    },
+    {
+      "coordinate_id": 46,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 19,
+      "vertices": [
+        2,
+        14
+      ]
+    },
+    {
+      "coordinate_id": 47,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 20,
+      "vertices": [
+        2,
+        17
+      ]
+    },
+    {
+      "coordinate_id": 48,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 21,
+      "vertices": [
+        2,
+        20
+      ]
+    },
+    {
+      "coordinate_id": 49,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 22,
+      "vertices": [
+        2,
+        23
+      ]
+    },
+    {
+      "coordinate_id": 50,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 23,
+      "vertices": [
+        2,
+        26
+      ]
+    },
+    {
+      "coordinate_id": 51,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 24,
+      "vertices": [
+        3,
+        6
+      ]
+    },
+    {
+      "coordinate_id": 52,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 25,
+      "vertices": [
+        3,
+        10
+      ]
+    },
+    {
+      "coordinate_id": 53,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 26,
+      "vertices": [
+        3,
+        13
+      ]
+    },
+    {
+      "coordinate_id": 54,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 27,
+      "vertices": [
+        3,
+        16
+      ]
+    },
+    {
+      "coordinate_id": 55,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 28,
+      "vertices": [
+        3,
+        20
+      ]
+    },
+    {
+      "coordinate_id": 56,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 29,
+      "vertices": [
+        3,
+        23
+      ]
+    },
+    {
+      "coordinate_id": 57,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 30,
+      "vertices": [
+        3,
+        26
+      ]
+    },
+    {
+      "coordinate_id": 58,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 31,
+      "vertices": [
+        4,
+        7
+      ]
+    },
+    {
+      "coordinate_id": 59,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 32,
+      "vertices": [
+        4,
+        11
+      ]
+    },
+    {
+      "coordinate_id": 60,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 33,
+      "vertices": [
+        4,
+        14
+      ]
+    },
+    {
+      "coordinate_id": 61,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 34,
+      "vertices": [
+        4,
+        17
+      ]
+    },
+    {
+      "coordinate_id": 62,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 35,
+      "vertices": [
+        4,
+        18
+      ]
+    },
+    {
+      "coordinate_id": 63,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 36,
+      "vertices": [
+        4,
+        21
+      ]
+    },
+    {
+      "coordinate_id": 64,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 37,
+      "vertices": [
+        4,
+        24
+      ]
+    },
+    {
+      "coordinate_id": 65,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 38,
+      "vertices": [
+        5,
+        8
+      ]
+    },
+    {
+      "coordinate_id": 66,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 39,
+      "vertices": [
+        5,
+        9
+      ]
+    },
+    {
+      "coordinate_id": 67,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 40,
+      "vertices": [
+        5,
+        12
+      ]
+    },
+    {
+      "coordinate_id": 68,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 41,
+      "vertices": [
+        5,
+        15
+      ]
+    },
+    {
+      "coordinate_id": 69,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 42,
+      "vertices": [
+        5,
+        19
+      ]
+    },
+    {
+      "coordinate_id": 70,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 43,
+      "vertices": [
+        5,
+        22
+      ]
+    },
+    {
+      "coordinate_id": 71,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 44,
+      "vertices": [
+        5,
+        25
+      ]
+    },
+    {
+      "coordinate_id": 72,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 45,
+      "vertices": [
+        6,
+        11
+      ]
+    },
+    {
+      "coordinate_id": 73,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 46,
+      "vertices": [
+        6,
+        14
+      ]
+    },
+    {
+      "coordinate_id": 74,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 47,
+      "vertices": [
+        6,
+        17
+      ]
+    },
+    {
+      "coordinate_id": 75,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 48,
+      "vertices": [
+        6,
+        19
+      ]
+    },
+    {
+      "coordinate_id": 76,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 49,
+      "vertices": [
+        6,
+        22
+      ]
+    },
+    {
+      "coordinate_id": 77,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 50,
+      "vertices": [
+        6,
+        25
+      ]
+    },
+    {
+      "coordinate_id": 78,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 51,
+      "vertices": [
+        7,
+        9
+      ]
+    },
+    {
+      "coordinate_id": 79,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 52,
+      "vertices": [
+        7,
+        12
+      ]
+    },
+    {
+      "coordinate_id": 80,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 53,
+      "vertices": [
+        7,
+        15
+      ]
+    },
+    {
+      "coordinate_id": 81,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 54,
+      "vertices": [
+        7,
+        20
+      ]
+    },
+    {
+      "coordinate_id": 82,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 55,
+      "vertices": [
+        7,
+        23
+      ]
+    },
+    {
+      "coordinate_id": 83,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 56,
+      "vertices": [
+        7,
+        26
+      ]
+    },
+    {
+      "coordinate_id": 84,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 57,
+      "vertices": [
+        8,
+        10
+      ]
+    },
+    {
+      "coordinate_id": 85,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 58,
+      "vertices": [
+        8,
+        13
+      ]
+    },
+    {
+      "coordinate_id": 86,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 59,
+      "vertices": [
+        8,
+        16
+      ]
+    },
+    {
+      "coordinate_id": 87,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 60,
+      "vertices": [
+        8,
+        18
+      ]
+    },
+    {
+      "coordinate_id": 88,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 61,
+      "vertices": [
+        8,
+        21
+      ]
+    },
+    {
+      "coordinate_id": 89,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 62,
+      "vertices": [
+        8,
+        24
+      ]
+    },
+    {
+      "coordinate_id": 90,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 63,
+      "vertices": [
+        9,
+        14
+      ]
+    },
+    {
+      "coordinate_id": 91,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 64,
+      "vertices": [
+        9,
+        16
+      ]
+    },
+    {
+      "coordinate_id": 92,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 65,
+      "vertices": [
+        9,
+        18
+      ]
+    },
+    {
+      "coordinate_id": 93,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 66,
+      "vertices": [
+        9,
+        23
+      ]
+    },
+    {
+      "coordinate_id": 94,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 67,
+      "vertices": [
+        9,
+        25
+      ]
+    },
+    {
+      "coordinate_id": 95,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 68,
+      "vertices": [
+        10,
+        12
+      ]
+    },
+    {
+      "coordinate_id": 96,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 69,
+      "vertices": [
+        10,
+        17
+      ]
+    },
+    {
+      "coordinate_id": 97,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 70,
+      "vertices": [
+        10,
+        19
+      ]
+    },
+    {
+      "coordinate_id": 98,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 71,
+      "vertices": [
+        10,
+        21
+      ]
+    },
+    {
+      "coordinate_id": 99,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 72,
+      "vertices": [
+        10,
+        26
+      ]
+    },
+    {
+      "coordinate_id": 100,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 73,
+      "vertices": [
+        11,
+        13
+      ]
+    },
+    {
+      "coordinate_id": 101,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 74,
+      "vertices": [
+        11,
+        15
+      ]
+    },
+    {
+      "coordinate_id": 102,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 75,
+      "vertices": [
+        11,
+        20
+      ]
+    },
+    {
+      "coordinate_id": 103,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 76,
+      "vertices": [
+        11,
+        22
+      ]
+    },
+    {
+      "coordinate_id": 104,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 77,
+      "vertices": [
+        11,
+        24
+      ]
+    },
+    {
+      "coordinate_id": 105,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 78,
+      "vertices": [
+        12,
+        17
+      ]
+    },
+    {
+      "coordinate_id": 106,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 79,
+      "vertices": [
+        12,
+        20
+      ]
+    },
+    {
+      "coordinate_id": 107,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 80,
+      "vertices": [
+        12,
+        22
+      ]
+    },
+    {
+      "coordinate_id": 108,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 81,
+      "vertices": [
+        12,
+        24
+      ]
+    },
+    {
+      "coordinate_id": 109,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 82,
+      "vertices": [
+        13,
+        15
+      ]
+    },
+    {
+      "coordinate_id": 110,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 83,
+      "vertices": [
+        13,
+        18
+      ]
+    },
+    {
+      "coordinate_id": 111,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 84,
+      "vertices": [
+        13,
+        23
+      ]
+    },
+    {
+      "coordinate_id": 112,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 85,
+      "vertices": [
+        13,
+        25
+      ]
+    },
+    {
+      "coordinate_id": 113,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 86,
+      "vertices": [
+        14,
+        16
+      ]
+    },
+    {
+      "coordinate_id": 114,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 87,
+      "vertices": [
+        14,
+        19
+      ]
+    },
+    {
+      "coordinate_id": 115,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 88,
+      "vertices": [
+        14,
+        21
+      ]
+    },
+    {
+      "coordinate_id": 116,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 89,
+      "vertices": [
+        14,
+        26
+      ]
+    },
+    {
+      "coordinate_id": 117,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 90,
+      "vertices": [
+        15,
+        19
+      ]
+    },
+    {
+      "coordinate_id": 118,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 91,
+      "vertices": [
+        15,
+        21
+      ]
+    },
+    {
+      "coordinate_id": 119,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 92,
+      "vertices": [
+        15,
+        26
+      ]
+    },
+    {
+      "coordinate_id": 120,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 93,
+      "vertices": [
+        16,
+        20
+      ]
+    },
+    {
+      "coordinate_id": 121,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 94,
+      "vertices": [
+        16,
+        22
+      ]
+    },
+    {
+      "coordinate_id": 122,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 95,
+      "vertices": [
+        16,
+        24
+      ]
+    },
+    {
+      "coordinate_id": 123,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 96,
+      "vertices": [
+        17,
+        18
+      ]
+    },
+    {
+      "coordinate_id": 124,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 97,
+      "vertices": [
+        17,
+        23
+      ]
+    },
+    {
+      "coordinate_id": 125,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 98,
+      "vertices": [
+        17,
+        25
+      ]
+    },
+    {
+      "coordinate_id": 126,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 99,
+      "vertices": [
+        18,
+        22
+      ]
+    },
+    {
+      "coordinate_id": 127,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 100,
+      "vertices": [
+        18,
+        26
+      ]
+    },
+    {
+      "coordinate_id": 128,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 101,
+      "vertices": [
+        19,
+        23
+      ]
+    },
+    {
+      "coordinate_id": 129,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 102,
+      "vertices": [
+        19,
+        24
+      ]
+    },
+    {
+      "coordinate_id": 130,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 103,
+      "vertices": [
+        20,
+        21
+      ]
+    },
+    {
+      "coordinate_id": 131,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 104,
+      "vertices": [
+        20,
+        25
+      ]
+    },
+    {
+      "coordinate_id": 132,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 105,
+      "vertices": [
+        21,
+        25
+      ]
+    },
+    {
+      "coordinate_id": 133,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 106,
+      "vertices": [
+        22,
+        26
+      ]
+    },
+    {
+      "coordinate_id": 134,
+      "family": "native_coupler",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 1,
+      "orbit_index": 107,
+      "vertices": [
+        23,
+        24
+      ]
+    },
+    {
+      "coordinate_id": 135,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 0,
+      "vertices": [
+        0,
+        4
+      ]
+    },
+    {
+      "coordinate_id": 136,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 1,
+      "vertices": [
+        0,
+        5
+      ]
+    },
+    {
+      "coordinate_id": 137,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 2,
+      "vertices": [
+        0,
+        7
+      ]
+    },
+    {
+      "coordinate_id": 138,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 3,
+      "vertices": [
+        0,
+        8
+      ]
+    },
+    {
+      "coordinate_id": 139,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 4,
+      "vertices": [
+        0,
+        10
+      ]
+    },
+    {
+      "coordinate_id": 140,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 5,
+      "vertices": [
+        0,
+        11
+      ]
+    },
+    {
+      "coordinate_id": 141,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 6,
+      "vertices": [
+        0,
+        13
+      ]
+    },
+    {
+      "coordinate_id": 142,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 7,
+      "vertices": [
+        0,
+        14
+      ]
+    },
+    {
+      "coordinate_id": 143,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 8,
+      "vertices": [
+        0,
+        16
+      ]
+    },
+    {
+      "coordinate_id": 144,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 9,
+      "vertices": [
+        0,
+        17
+      ]
+    },
+    {
+      "coordinate_id": 145,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 10,
+      "vertices": [
+        0,
+        19
+      ]
+    },
+    {
+      "coordinate_id": 146,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 11,
+      "vertices": [
+        0,
+        20
+      ]
+    },
+    {
+      "coordinate_id": 147,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 12,
+      "vertices": [
+        0,
+        22
+      ]
+    },
+    {
+      "coordinate_id": 148,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 13,
+      "vertices": [
+        0,
+        23
+      ]
+    },
+    {
+      "coordinate_id": 149,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 14,
+      "vertices": [
+        0,
+        25
+      ]
+    },
+    {
+      "coordinate_id": 150,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 15,
+      "vertices": [
+        0,
+        26
+      ]
+    },
+    {
+      "coordinate_id": 151,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 16,
+      "vertices": [
+        1,
+        3
+      ]
+    },
+    {
+      "coordinate_id": 152,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 17,
+      "vertices": [
+        1,
+        5
+      ]
+    },
+    {
+      "coordinate_id": 153,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 18,
+      "vertices": [
+        1,
+        6
+      ]
+    },
+    {
+      "coordinate_id": 154,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 19,
+      "vertices": [
+        1,
+        8
+      ]
+    },
+    {
+      "coordinate_id": 155,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 20,
+      "vertices": [
+        1,
+        9
+      ]
+    },
+    {
+      "coordinate_id": 156,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 21,
+      "vertices": [
+        1,
+        11
+      ]
+    },
+    {
+      "coordinate_id": 157,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 22,
+      "vertices": [
+        1,
+        12
+      ]
+    },
+    {
+      "coordinate_id": 158,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 23,
+      "vertices": [
+        1,
+        14
+      ]
+    },
+    {
+      "coordinate_id": 159,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 24,
+      "vertices": [
+        1,
+        15
+      ]
+    },
+    {
+      "coordinate_id": 160,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 25,
+      "vertices": [
+        1,
+        17
+      ]
+    },
+    {
+      "coordinate_id": 161,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 26,
+      "vertices": [
+        1,
+        18
+      ]
+    },
+    {
+      "coordinate_id": 162,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 27,
+      "vertices": [
+        1,
+        20
+      ]
+    },
+    {
+      "coordinate_id": 163,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 28,
+      "vertices": [
+        1,
+        21
+      ]
+    },
+    {
+      "coordinate_id": 164,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 29,
+      "vertices": [
+        1,
+        23
+      ]
+    },
+    {
+      "coordinate_id": 165,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 30,
+      "vertices": [
+        1,
+        24
+      ]
+    },
+    {
+      "coordinate_id": 166,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 31,
+      "vertices": [
+        1,
+        26
+      ]
+    },
+    {
+      "coordinate_id": 167,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 32,
+      "vertices": [
+        2,
+        3
+      ]
+    },
+    {
+      "coordinate_id": 168,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 33,
+      "vertices": [
+        2,
+        4
+      ]
+    },
+    {
+      "coordinate_id": 169,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 34,
+      "vertices": [
+        2,
+        6
+      ]
+    },
+    {
+      "coordinate_id": 170,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 35,
+      "vertices": [
+        2,
+        7
+      ]
+    },
+    {
+      "coordinate_id": 171,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 36,
+      "vertices": [
+        2,
+        9
+      ]
+    },
+    {
+      "coordinate_id": 172,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 37,
+      "vertices": [
+        2,
+        10
+      ]
+    },
+    {
+      "coordinate_id": 173,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 38,
+      "vertices": [
+        2,
+        12
+      ]
+    },
+    {
+      "coordinate_id": 174,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 39,
+      "vertices": [
+        2,
+        13
+      ]
+    },
+    {
+      "coordinate_id": 175,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 40,
+      "vertices": [
+        2,
+        15
+      ]
+    },
+    {
+      "coordinate_id": 176,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 41,
+      "vertices": [
+        2,
+        16
+      ]
+    },
+    {
+      "coordinate_id": 177,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 42,
+      "vertices": [
+        2,
+        18
+      ]
+    },
+    {
+      "coordinate_id": 178,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 43,
+      "vertices": [
+        2,
+        19
+      ]
+    },
+    {
+      "coordinate_id": 179,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 44,
+      "vertices": [
+        2,
+        21
+      ]
+    },
+    {
+      "coordinate_id": 180,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 45,
+      "vertices": [
+        2,
+        22
+      ]
+    },
+    {
+      "coordinate_id": 181,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 46,
+      "vertices": [
+        2,
+        24
+      ]
+    },
+    {
+      "coordinate_id": 182,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 47,
+      "vertices": [
+        2,
+        25
+      ]
+    },
+    {
+      "coordinate_id": 183,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 48,
+      "vertices": [
+        3,
+        7
+      ]
+    },
+    {
+      "coordinate_id": 184,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 49,
+      "vertices": [
+        3,
+        8
+      ]
+    },
+    {
+      "coordinate_id": 185,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 50,
+      "vertices": [
+        3,
+        9
+      ]
+    },
+    {
+      "coordinate_id": 186,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 51,
+      "vertices": [
+        3,
+        11
+      ]
+    },
+    {
+      "coordinate_id": 187,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 52,
+      "vertices": [
+        3,
+        12
+      ]
+    },
+    {
+      "coordinate_id": 188,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 53,
+      "vertices": [
+        3,
+        14
+      ]
+    },
+    {
+      "coordinate_id": 189,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 54,
+      "vertices": [
+        3,
+        15
+      ]
+    },
+    {
+      "coordinate_id": 190,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 55,
+      "vertices": [
+        3,
+        17
+      ]
+    },
+    {
+      "coordinate_id": 191,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 56,
+      "vertices": [
+        3,
+        18
+      ]
+    },
+    {
+      "coordinate_id": 192,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 57,
+      "vertices": [
+        3,
+        19
+      ]
+    },
+    {
+      "coordinate_id": 193,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 58,
+      "vertices": [
+        3,
+        21
+      ]
+    },
+    {
+      "coordinate_id": 194,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 59,
+      "vertices": [
+        3,
+        22
+      ]
+    },
+    {
+      "coordinate_id": 195,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 60,
+      "vertices": [
+        3,
+        24
+      ]
+    },
+    {
+      "coordinate_id": 196,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 61,
+      "vertices": [
+        3,
+        25
+      ]
+    },
+    {
+      "coordinate_id": 197,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 62,
+      "vertices": [
+        4,
+        6
+      ]
+    },
+    {
+      "coordinate_id": 198,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 63,
+      "vertices": [
+        4,
+        8
+      ]
+    },
+    {
+      "coordinate_id": 199,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 64,
+      "vertices": [
+        4,
+        9
+      ]
+    },
+    {
+      "coordinate_id": 200,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 65,
+      "vertices": [
+        4,
+        10
+      ]
+    },
+    {
+      "coordinate_id": 201,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 66,
+      "vertices": [
+        4,
+        12
+      ]
+    },
+    {
+      "coordinate_id": 202,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 67,
+      "vertices": [
+        4,
+        13
+      ]
+    },
+    {
+      "coordinate_id": 203,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 68,
+      "vertices": [
+        4,
+        15
+      ]
+    },
+    {
+      "coordinate_id": 204,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 69,
+      "vertices": [
+        4,
+        16
+      ]
+    },
+    {
+      "coordinate_id": 205,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 70,
+      "vertices": [
+        4,
+        19
+      ]
+    },
+    {
+      "coordinate_id": 206,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 71,
+      "vertices": [
+        4,
+        20
+      ]
+    },
+    {
+      "coordinate_id": 207,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 72,
+      "vertices": [
+        4,
+        22
+      ]
+    },
+    {
+      "coordinate_id": 208,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 73,
+      "vertices": [
+        4,
+        23
+      ]
+    },
+    {
+      "coordinate_id": 209,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 74,
+      "vertices": [
+        4,
+        25
+      ]
+    },
+    {
+      "coordinate_id": 210,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 75,
+      "vertices": [
+        4,
+        26
+      ]
+    },
+    {
+      "coordinate_id": 211,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 76,
+      "vertices": [
+        5,
+        6
+      ]
+    },
+    {
+      "coordinate_id": 212,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 77,
+      "vertices": [
+        5,
+        7
+      ]
+    },
+    {
+      "coordinate_id": 213,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 78,
+      "vertices": [
+        5,
+        10
+      ]
+    },
+    {
+      "coordinate_id": 214,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 79,
+      "vertices": [
+        5,
+        11
+      ]
+    },
+    {
+      "coordinate_id": 215,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 80,
+      "vertices": [
+        5,
+        13
+      ]
+    },
+    {
+      "coordinate_id": 216,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 81,
+      "vertices": [
+        5,
+        14
+      ]
+    },
+    {
+      "coordinate_id": 217,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 82,
+      "vertices": [
+        5,
+        16
+      ]
+    },
+    {
+      "coordinate_id": 218,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 83,
+      "vertices": [
+        5,
+        17
+      ]
+    },
+    {
+      "coordinate_id": 219,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 84,
+      "vertices": [
+        5,
+        18
+      ]
+    },
+    {
+      "coordinate_id": 220,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 85,
+      "vertices": [
+        5,
+        20
+      ]
+    },
+    {
+      "coordinate_id": 221,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 86,
+      "vertices": [
+        5,
+        21
+      ]
+    },
+    {
+      "coordinate_id": 222,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 87,
+      "vertices": [
+        5,
+        23
+      ]
+    },
+    {
+      "coordinate_id": 223,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 88,
+      "vertices": [
+        5,
+        24
+      ]
+    },
+    {
+      "coordinate_id": 224,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 89,
+      "vertices": [
+        5,
+        26
+      ]
+    },
+    {
+      "coordinate_id": 225,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 90,
+      "vertices": [
+        6,
+        9
+      ]
+    },
+    {
+      "coordinate_id": 226,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 91,
+      "vertices": [
+        6,
+        10
+      ]
+    },
+    {
+      "coordinate_id": 227,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 92,
+      "vertices": [
+        6,
+        12
+      ]
+    },
+    {
+      "coordinate_id": 228,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 93,
+      "vertices": [
+        6,
+        13
+      ]
+    },
+    {
+      "coordinate_id": 229,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 94,
+      "vertices": [
+        6,
+        15
+      ]
+    },
+    {
+      "coordinate_id": 230,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 95,
+      "vertices": [
+        6,
+        16
+      ]
+    },
+    {
+      "coordinate_id": 231,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 96,
+      "vertices": [
+        6,
+        18
+      ]
+    },
+    {
+      "coordinate_id": 232,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 97,
+      "vertices": [
+        6,
+        20
+      ]
+    },
+    {
+      "coordinate_id": 233,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 98,
+      "vertices": [
+        6,
+        21
+      ]
+    },
+    {
+      "coordinate_id": 234,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 99,
+      "vertices": [
+        6,
+        23
+      ]
+    },
+    {
+      "coordinate_id": 235,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 100,
+      "vertices": [
+        6,
+        24
+      ]
+    },
+    {
+      "coordinate_id": 236,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 101,
+      "vertices": [
+        6,
+        26
+      ]
+    },
+    {
+      "coordinate_id": 237,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 102,
+      "vertices": [
+        7,
+        10
+      ]
+    },
+    {
+      "coordinate_id": 238,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 103,
+      "vertices": [
+        7,
+        11
+      ]
+    },
+    {
+      "coordinate_id": 239,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 104,
+      "vertices": [
+        7,
+        13
+      ]
+    },
+    {
+      "coordinate_id": 240,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 105,
+      "vertices": [
+        7,
+        14
+      ]
+    },
+    {
+      "coordinate_id": 241,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 106,
+      "vertices": [
+        7,
+        16
+      ]
+    },
+    {
+      "coordinate_id": 242,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 107,
+      "vertices": [
+        7,
+        17
+      ]
+    },
+    {
+      "coordinate_id": 243,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 108,
+      "vertices": [
+        7,
+        18
+      ]
+    },
+    {
+      "coordinate_id": 244,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 109,
+      "vertices": [
+        7,
+        19
+      ]
+    },
+    {
+      "coordinate_id": 245,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 110,
+      "vertices": [
+        7,
+        21
+      ]
+    },
+    {
+      "coordinate_id": 246,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 111,
+      "vertices": [
+        7,
+        22
+      ]
+    },
+    {
+      "coordinate_id": 247,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 112,
+      "vertices": [
+        7,
+        24
+      ]
+    },
+    {
+      "coordinate_id": 248,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 113,
+      "vertices": [
+        7,
+        25
+      ]
+    },
+    {
+      "coordinate_id": 249,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 114,
+      "vertices": [
+        8,
+        9
+      ]
+    },
+    {
+      "coordinate_id": 250,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 115,
+      "vertices": [
+        8,
+        11
+      ]
+    },
+    {
+      "coordinate_id": 251,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 116,
+      "vertices": [
+        8,
+        12
+      ]
+    },
+    {
+      "coordinate_id": 252,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 117,
+      "vertices": [
+        8,
+        14
+      ]
+    },
+    {
+      "coordinate_id": 253,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 118,
+      "vertices": [
+        8,
+        15
+      ]
+    },
+    {
+      "coordinate_id": 254,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 119,
+      "vertices": [
+        8,
+        17
+      ]
+    },
+    {
+      "coordinate_id": 255,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 120,
+      "vertices": [
+        8,
+        19
+      ]
+    },
+    {
+      "coordinate_id": 256,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 121,
+      "vertices": [
+        8,
+        20
+      ]
+    },
+    {
+      "coordinate_id": 257,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 122,
+      "vertices": [
+        8,
+        22
+      ]
+    },
+    {
+      "coordinate_id": 258,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 123,
+      "vertices": [
+        8,
+        23
+      ]
+    },
+    {
+      "coordinate_id": 259,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 124,
+      "vertices": [
+        8,
+        25
+      ]
+    },
+    {
+      "coordinate_id": 260,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 125,
+      "vertices": [
+        8,
+        26
+      ]
+    },
+    {
+      "coordinate_id": 261,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 126,
+      "vertices": [
+        9,
+        12
+      ]
+    },
+    {
+      "coordinate_id": 262,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 127,
+      "vertices": [
+        9,
+        13
+      ]
+    },
+    {
+      "coordinate_id": 263,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 128,
+      "vertices": [
+        9,
+        15
+      ]
+    },
+    {
+      "coordinate_id": 264,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 129,
+      "vertices": [
+        9,
+        17
+      ]
+    },
+    {
+      "coordinate_id": 265,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 130,
+      "vertices": [
+        9,
+        19
+      ]
+    },
+    {
+      "coordinate_id": 266,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 131,
+      "vertices": [
+        9,
+        20
+      ]
+    },
+    {
+      "coordinate_id": 267,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 132,
+      "vertices": [
+        9,
+        21
+      ]
+    },
+    {
+      "coordinate_id": 268,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 133,
+      "vertices": [
+        9,
+        22
+      ]
+    },
+    {
+      "coordinate_id": 269,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 134,
+      "vertices": [
+        9,
+        24
+      ]
+    },
+    {
+      "coordinate_id": 270,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 135,
+      "vertices": [
+        9,
+        26
+      ]
+    },
+    {
+      "coordinate_id": 271,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 136,
+      "vertices": [
+        10,
+        13
+      ]
+    },
+    {
+      "coordinate_id": 272,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 137,
+      "vertices": [
+        10,
+        14
+      ]
+    },
+    {
+      "coordinate_id": 273,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 138,
+      "vertices": [
+        10,
+        15
+      ]
+    },
+    {
+      "coordinate_id": 274,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 139,
+      "vertices": [
+        10,
+        16
+      ]
+    },
+    {
+      "coordinate_id": 275,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 140,
+      "vertices": [
+        10,
+        18
+      ]
+    },
+    {
+      "coordinate_id": 276,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 141,
+      "vertices": [
+        10,
+        20
+      ]
+    },
+    {
+      "coordinate_id": 277,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 142,
+      "vertices": [
+        10,
+        22
+      ]
+    },
+    {
+      "coordinate_id": 278,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 143,
+      "vertices": [
+        10,
+        23
+      ]
+    },
+    {
+      "coordinate_id": 279,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 144,
+      "vertices": [
+        10,
+        24
+      ]
+    },
+    {
+      "coordinate_id": 280,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 145,
+      "vertices": [
+        10,
+        25
+      ]
+    },
+    {
+      "coordinate_id": 281,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 146,
+      "vertices": [
+        11,
+        12
+      ]
+    },
+    {
+      "coordinate_id": 282,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 147,
+      "vertices": [
+        11,
+        14
+      ]
+    },
+    {
+      "coordinate_id": 283,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 148,
+      "vertices": [
+        11,
+        16
+      ]
+    },
+    {
+      "coordinate_id": 284,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 149,
+      "vertices": [
+        11,
+        17
+      ]
+    },
+    {
+      "coordinate_id": 285,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 150,
+      "vertices": [
+        11,
+        18
+      ]
+    },
+    {
+      "coordinate_id": 286,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 151,
+      "vertices": [
+        11,
+        19
+      ]
+    },
+    {
+      "coordinate_id": 287,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 152,
+      "vertices": [
+        11,
+        21
+      ]
+    },
+    {
+      "coordinate_id": 288,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 153,
+      "vertices": [
+        11,
+        23
+      ]
+    },
+    {
+      "coordinate_id": 289,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 154,
+      "vertices": [
+        11,
+        25
+      ]
+    },
+    {
+      "coordinate_id": 290,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 155,
+      "vertices": [
+        11,
+        26
+      ]
+    },
+    {
+      "coordinate_id": 291,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 156,
+      "vertices": [
+        12,
+        15
+      ]
+    },
+    {
+      "coordinate_id": 292,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 157,
+      "vertices": [
+        12,
+        16
+      ]
+    },
+    {
+      "coordinate_id": 293,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 158,
+      "vertices": [
+        12,
+        18
+      ]
+    },
+    {
+      "coordinate_id": 294,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 159,
+      "vertices": [
+        12,
+        19
+      ]
+    },
+    {
+      "coordinate_id": 295,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 160,
+      "vertices": [
+        12,
+        21
+      ]
+    },
+    {
+      "coordinate_id": 296,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 161,
+      "vertices": [
+        12,
+        23
+      ]
+    },
+    {
+      "coordinate_id": 297,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 162,
+      "vertices": [
+        12,
+        25
+      ]
+    },
+    {
+      "coordinate_id": 298,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 163,
+      "vertices": [
+        12,
+        26
+      ]
+    },
+    {
+      "coordinate_id": 299,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 164,
+      "vertices": [
+        13,
+        16
+      ]
+    },
+    {
+      "coordinate_id": 300,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 165,
+      "vertices": [
+        13,
+        17
+      ]
+    },
+    {
+      "coordinate_id": 301,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 166,
+      "vertices": [
+        13,
+        19
+      ]
+    },
+    {
+      "coordinate_id": 302,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 167,
+      "vertices": [
+        13,
+        20
+      ]
+    },
+    {
+      "coordinate_id": 303,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 168,
+      "vertices": [
+        13,
+        21
+      ]
+    },
+    {
+      "coordinate_id": 304,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 169,
+      "vertices": [
+        13,
+        22
+      ]
+    },
+    {
+      "coordinate_id": 305,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 170,
+      "vertices": [
+        13,
+        24
+      ]
+    },
+    {
+      "coordinate_id": 306,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 171,
+      "vertices": [
+        13,
+        26
+      ]
+    },
+    {
+      "coordinate_id": 307,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 172,
+      "vertices": [
+        14,
+        15
+      ]
+    },
+    {
+      "coordinate_id": 308,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 173,
+      "vertices": [
+        14,
+        17
+      ]
+    },
+    {
+      "coordinate_id": 309,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 174,
+      "vertices": [
+        14,
+        18
+      ]
+    },
+    {
+      "coordinate_id": 310,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 175,
+      "vertices": [
+        14,
+        20
+      ]
+    },
+    {
+      "coordinate_id": 311,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 176,
+      "vertices": [
+        14,
+        22
+      ]
+    },
+    {
+      "coordinate_id": 312,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 177,
+      "vertices": [
+        14,
+        23
+      ]
+    },
+    {
+      "coordinate_id": 313,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 178,
+      "vertices": [
+        14,
+        24
+      ]
+    },
+    {
+      "coordinate_id": 314,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 179,
+      "vertices": [
+        14,
+        25
+      ]
+    },
+    {
+      "coordinate_id": 315,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 180,
+      "vertices": [
+        15,
+        18
+      ]
+    },
+    {
+      "coordinate_id": 316,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 181,
+      "vertices": [
+        15,
+        20
+      ]
+    },
+    {
+      "coordinate_id": 317,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 182,
+      "vertices": [
+        15,
+        22
+      ]
+    },
+    {
+      "coordinate_id": 318,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 183,
+      "vertices": [
+        15,
+        23
+      ]
+    },
+    {
+      "coordinate_id": 319,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 184,
+      "vertices": [
+        15,
+        24
+      ]
+    },
+    {
+      "coordinate_id": 320,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 185,
+      "vertices": [
+        15,
+        25
+      ]
+    },
+    {
+      "coordinate_id": 321,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 186,
+      "vertices": [
+        16,
+        18
+      ]
+    },
+    {
+      "coordinate_id": 322,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 187,
+      "vertices": [
+        16,
+        19
+      ]
+    },
+    {
+      "coordinate_id": 323,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 188,
+      "vertices": [
+        16,
+        21
+      ]
+    },
+    {
+      "coordinate_id": 324,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 189,
+      "vertices": [
+        16,
+        23
+      ]
+    },
+    {
+      "coordinate_id": 325,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 190,
+      "vertices": [
+        16,
+        25
+      ]
+    },
+    {
+      "coordinate_id": 326,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 191,
+      "vertices": [
+        16,
+        26
+      ]
+    },
+    {
+      "coordinate_id": 327,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 192,
+      "vertices": [
+        17,
+        19
+      ]
+    },
+    {
+      "coordinate_id": 328,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 193,
+      "vertices": [
+        17,
+        20
+      ]
+    },
+    {
+      "coordinate_id": 329,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 194,
+      "vertices": [
+        17,
+        21
+      ]
+    },
+    {
+      "coordinate_id": 330,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 195,
+      "vertices": [
+        17,
+        22
+      ]
+    },
+    {
+      "coordinate_id": 331,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 196,
+      "vertices": [
+        17,
+        24
+      ]
+    },
+    {
+      "coordinate_id": 332,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 197,
+      "vertices": [
+        17,
+        26
+      ]
+    },
+    {
+      "coordinate_id": 333,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 198,
+      "vertices": [
+        18,
+        21
+      ]
+    },
+    {
+      "coordinate_id": 334,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 199,
+      "vertices": [
+        18,
+        23
+      ]
+    },
+    {
+      "coordinate_id": 335,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 200,
+      "vertices": [
+        18,
+        24
+      ]
+    },
+    {
+      "coordinate_id": 336,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 201,
+      "vertices": [
+        18,
+        25
+      ]
+    },
+    {
+      "coordinate_id": 337,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 202,
+      "vertices": [
+        19,
+        21
+      ]
+    },
+    {
+      "coordinate_id": 338,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 203,
+      "vertices": [
+        19,
+        22
+      ]
+    },
+    {
+      "coordinate_id": 339,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 204,
+      "vertices": [
+        19,
+        25
+      ]
+    },
+    {
+      "coordinate_id": 340,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 205,
+      "vertices": [
+        19,
+        26
+      ]
+    },
+    {
+      "coordinate_id": 341,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 206,
+      "vertices": [
+        20,
+        22
+      ]
+    },
+    {
+      "coordinate_id": 342,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 207,
+      "vertices": [
+        20,
+        23
+      ]
+    },
+    {
+      "coordinate_id": 343,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 208,
+      "vertices": [
+        20,
+        24
+      ]
+    },
+    {
+      "coordinate_id": 344,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 209,
+      "vertices": [
+        20,
+        26
+      ]
+    },
+    {
+      "coordinate_id": 345,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 210,
+      "vertices": [
+        21,
+        24
+      ]
+    },
+    {
+      "coordinate_id": 346,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 211,
+      "vertices": [
+        21,
+        26
+      ]
+    },
+    {
+      "coordinate_id": 347,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 212,
+      "vertices": [
+        22,
+        24
+      ]
+    },
+    {
+      "coordinate_id": 348,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 213,
+      "vertices": [
+        22,
+        25
+      ]
+    },
+    {
+      "coordinate_id": 349,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 214,
+      "vertices": [
+        23,
+        25
+      ]
+    },
+    {
+      "coordinate_id": 350,
+      "family": "distance_two_crosstalk",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 2,
+      "orbit_index": 215,
+      "vertices": [
+        23,
+        26
+      ]
+    },
+    {
+      "coordinate_id": 351,
+      "family": "phase_fibre_pair",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 3,
+      "orbit_index": 0,
+      "vertices": [
+        0,
+        1
+      ]
+    },
+    {
+      "coordinate_id": 352,
+      "family": "phase_fibre_pair",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 3,
+      "orbit_index": 1,
+      "vertices": [
+        0,
+        2
+      ]
+    },
+    {
+      "coordinate_id": 353,
+      "family": "phase_fibre_pair",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 3,
+      "orbit_index": 2,
+      "vertices": [
+        1,
+        2
+      ]
+    },
+    {
+      "coordinate_id": 354,
+      "family": "phase_fibre_pair",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 3,
+      "orbit_index": 3,
+      "vertices": [
+        3,
+        4
+      ]
+    },
+    {
+      "coordinate_id": 355,
+      "family": "phase_fibre_pair",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 3,
+      "orbit_index": 4,
+      "vertices": [
+        3,
+        5
+      ]
+    },
+    {
+      "coordinate_id": 356,
+      "family": "phase_fibre_pair",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 3,
+      "orbit_index": 5,
+      "vertices": [
+        4,
+        5
+      ]
+    },
+    {
+      "coordinate_id": 357,
+      "family": "phase_fibre_pair",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 3,
+      "orbit_index": 6,
+      "vertices": [
+        6,
+        7
+      ]
+    },
+    {
+      "coordinate_id": 358,
+      "family": "phase_fibre_pair",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 3,
+      "orbit_index": 7,
+      "vertices": [
+        6,
+        8
+      ]
+    },
+    {
+      "coordinate_id": 359,
+      "family": "phase_fibre_pair",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 3,
+      "orbit_index": 8,
+      "vertices": [
+        7,
+        8
+      ]
+    },
+    {
+      "coordinate_id": 360,
+      "family": "phase_fibre_pair",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 3,
+      "orbit_index": 9,
+      "vertices": [
+        9,
+        10
+      ]
+    },
+    {
+      "coordinate_id": 361,
+      "family": "phase_fibre_pair",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 3,
+      "orbit_index": 10,
+      "vertices": [
+        9,
+        11
+      ]
+    },
+    {
+      "coordinate_id": 362,
+      "family": "phase_fibre_pair",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 3,
+      "orbit_index": 11,
+      "vertices": [
+        10,
+        11
+      ]
+    },
+    {
+      "coordinate_id": 363,
+      "family": "phase_fibre_pair",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 3,
+      "orbit_index": 12,
+      "vertices": [
+        12,
+        13
+      ]
+    },
+    {
+      "coordinate_id": 364,
+      "family": "phase_fibre_pair",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 3,
+      "orbit_index": 13,
+      "vertices": [
+        12,
+        14
+      ]
+    },
+    {
+      "coordinate_id": 365,
+      "family": "phase_fibre_pair",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 3,
+      "orbit_index": 14,
+      "vertices": [
+        13,
+        14
+      ]
+    },
+    {
+      "coordinate_id": 366,
+      "family": "phase_fibre_pair",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 3,
+      "orbit_index": 15,
+      "vertices": [
+        15,
+        16
+      ]
+    },
+    {
+      "coordinate_id": 367,
+      "family": "phase_fibre_pair",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 3,
+      "orbit_index": 16,
+      "vertices": [
+        15,
+        17
+      ]
+    },
+    {
+      "coordinate_id": 368,
+      "family": "phase_fibre_pair",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 3,
+      "orbit_index": 17,
+      "vertices": [
+        16,
+        17
+      ]
+    },
+    {
+      "coordinate_id": 369,
+      "family": "phase_fibre_pair",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 3,
+      "orbit_index": 18,
+      "vertices": [
+        18,
+        19
+      ]
+    },
+    {
+      "coordinate_id": 370,
+      "family": "phase_fibre_pair",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 3,
+      "orbit_index": 19,
+      "vertices": [
+        18,
+        20
+      ]
+    },
+    {
+      "coordinate_id": 371,
+      "family": "phase_fibre_pair",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 3,
+      "orbit_index": 20,
+      "vertices": [
+        19,
+        20
+      ]
+    },
+    {
+      "coordinate_id": 372,
+      "family": "phase_fibre_pair",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 3,
+      "orbit_index": 21,
+      "vertices": [
+        21,
+        22
+      ]
+    },
+    {
+      "coordinate_id": 373,
+      "family": "phase_fibre_pair",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 3,
+      "orbit_index": 22,
+      "vertices": [
+        21,
+        23
+      ]
+    },
+    {
+      "coordinate_id": 374,
+      "family": "phase_fibre_pair",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 3,
+      "orbit_index": 23,
+      "vertices": [
+        22,
+        23
+      ]
+    },
+    {
+      "coordinate_id": 375,
+      "family": "phase_fibre_pair",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 3,
+      "orbit_index": 24,
+      "vertices": [
+        24,
+        25
+      ]
+    },
+    {
+      "coordinate_id": 376,
+      "family": "phase_fibre_pair",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 3,
+      "orbit_index": 25,
+      "vertices": [
+        24,
+        26
+      ]
+    },
+    {
+      "coordinate_id": 377,
+      "family": "phase_fibre_pair",
+      "matrix_basis": "(E_ij+E_ji)/sqrt(2)",
+      "orbit": 3,
+      "orbit_index": 26,
+      "vertices": [
+        25,
+        26
+      ]
+    }
+  ],
+  "orbit_sizes": {
+    "0": 27,
+    "1": 108,
+    "2": 216,
+    "3": 27
+  },
+  "schema": "w33.pass418.defect_atlas.v1"
+}

@@ -1,0 +1,131 @@
+{
+  "all_attacks_rejected": true,
+  "all_expected_reasons_observed": true,
+  "attacks": [
+    {
+      "accepted": false,
+      "attack": "timestamp_substitution",
+      "expected_reason_observed": true,
+      "expected_rejection": "signature",
+      "rejection_reasons": [
+        "predecessor_chain",
+        "signature",
+        "timestamp_order"
+      ]
+    },
+    {
+      "accepted": false,
+      "attack": "authorized_key_leakage",
+      "expected_reason_observed": true,
+      "expected_rejection": "key_leakage_policy",
+      "rejection_reasons": [
+        "key_leakage_policy"
+      ]
+    },
+    {
+      "accepted": false,
+      "attack": "cross_study_calibration_replay",
+      "expected_reason_observed": true,
+      "expected_rejection": "study_binding",
+      "rejection_reasons": [
+        "device_binding",
+        "nonce_binding",
+        "predecessor_chain",
+        "role_key_registry",
+        "study_binding"
+      ]
+    },
+    {
+      "accepted": false,
+      "attack": "cross_device_replay",
+      "expected_reason_observed": true,
+      "expected_rejection": "device_binding",
+      "rejection_reasons": [
+        "device_binding",
+        "predecessor_chain",
+        "role_key_registry"
+      ]
+    },
+    {
+      "accepted": false,
+      "attack": "role_key_collision",
+      "expected_reason_observed": true,
+      "expected_rejection": "role_key_collision",
+      "rejection_reasons": [
+        "role_key_collision"
+      ]
+    },
+    {
+      "accepted": false,
+      "attack": "authorized_calibration_substitution",
+      "expected_reason_observed": true,
+      "expected_rejection": "calibration_protocol_binding",
+      "rejection_reasons": [
+        "calibration_protocol_binding",
+        "raw_calibration_binding"
+      ]
+    },
+    {
+      "accepted": false,
+      "attack": "selective_row_deletion",
+      "expected_reason_observed": true,
+      "expected_rejection": "raw_external_hash",
+      "rejection_reasons": [
+        "raw_external_hash",
+        "raw_manifest_row_count",
+        "raw_protocol_row_count"
+      ]
+    },
+    {
+      "accepted": false,
+      "attack": "authorized_resigned_row_deletion",
+      "expected_reason_observed": true,
+      "expected_rejection": "raw_protocol_row_count",
+      "rejection_reasons": [
+        "raw_protocol_row_count"
+      ]
+    },
+    {
+      "accepted": false,
+      "attack": "artifact_reordering",
+      "expected_reason_observed": true,
+      "expected_rejection": "artifact_order",
+      "rejection_reasons": [
+        "artifact_order",
+        "predecessor_chain",
+        "sequence",
+        "timestamp_order"
+      ]
+    },
+    {
+      "accepted": false,
+      "attack": "early_key_release",
+      "expected_reason_observed": true,
+      "expected_rejection": "timestamp_order",
+      "rejection_reasons": [
+        "timestamp_order"
+      ]
+    },
+    {
+      "accepted": false,
+      "attack": "manifest_nonce_substitution",
+      "expected_reason_observed": true,
+      "expected_rejection": "nonce_binding",
+      "rejection_reasons": [
+        "nonce_binding"
+      ]
+    },
+    {
+      "accepted": false,
+      "attack": "nonclaim_flag_forgery",
+      "expected_reason_observed": true,
+      "expected_rejection": "nonclaim_flags",
+      "rejection_reasons": [
+        "artifact_nonclaim_flags",
+        "nonclaim_flags"
+      ]
+    }
+  ],
+  "certificate_sha256": "70c59fe6888914ec1e33e5f55fbc8d08f4b037bfdf6c565bc38550815b0ad926",
+  "schema": "w33.pass419.attack_matrix.v1"
+}
