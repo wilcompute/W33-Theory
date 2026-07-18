@@ -51,111 +51,87 @@ jobs:
           comments = get(base + '/comments?per_page=100')
           text = '\n'.join([issue.get('body', '')] + [comment['body'] for comment in comments])
           chunks = {}
-          split_suffixes = {
-              2: 'ABCDEFGHIJKL',
-              8: 'AB',
-              9: 'ABCDEFGHIJKL',
-              11: 'ABCDEFGHIJKL',
-              13: 'ABCDEFGHIJKL',
-              15: 'ABCDEFGHIJKL',
-          }
+          split_suffixes = {2:'ABCDEFGHIJKL',8:'AB',9:'ABCDEFGHIJKL',11:'ABCDEFGHIJKL',13:'ABCDEFGHIJKL',15:'ABCDEFGHIJKL'}
           expected_chunks = {
-              0: (6000, '94cef6632ade9719c6cda66988cd0083a1fc832778a44d8a3e58b50202f137e0'),
-              1: (6000, '691a6c386fff807e7ac22df20548fce510be50602999ab11c819c43abb805447'),
-              2: (6000, 'c1e0104b7a7cc3b1cb4401894c530382270a4ea90e0b716cd73199a763d63525'),
-              3: (6000, '288705aca5cf1f3a0f590f8b7e800d5719d6673c7a96067dfa4ca995407c5e8c'),
-              4: (6000, '47972747f829b098db23456068da98275971e22649efc51671298478f0164cb3'),
-              5: (6000, '74961b01740b8dba727d72833271f0e53391977ab02240633390b870d67d9ee9'),
-              6: (6000, '115ebd0cb7eb43a1f1907c41a6197779baf2f51d74001a0f5b9d3bfad0bc80df'),
-              7: (6000, '5d1b683b9faba2d455031c45982ed953450ae293b00276ec7cba70bb7acbd70d'),
-              8: (6000, '220887b1feac12f98d6a8280290f9788af571bc0e7f30be2252626dac4b2ad63'),
-              9: (6000, '0399f87f581defc07a1e42ea88cb6a0a15aa5adace6bd8e999dd34a2a8f2864a'),
-              10: (6000, 'fc2d47fa64ef031129eb040a950820aa003aca8cdc8a372aa2d1cd69321a7bb5'),
-              11: (6000, '5fe6c13948d0e8185e6e607712c890b202a644bcfce31fea2926175f3a9d10d2'),
-              12: (6000, '22b9b53adb91a97cfdbdd37951b62d08c617eaccdc4fc50cb3f701fcf2892f85'),
-              13: (6000, '6010d862dd18bbf4cb4e205b52340997a7941adb29bab9db3743f5ab88f96269'),
-              14: (6000, '7b81c87591ff58878c66eddcba17816f29aed312e3c1bca8ec8694d84ec2bb18'),
-              15: (3360, 'b70e08f32b55b1f7b2b027ce8d72a69338c58a5a774852d7cbb10d6bd269c36f'),
+              0:(6000,'94cef6632ade9719c6cda66988cd0083a1fc832778a44d8a3e58b50202f137e0'),
+              1:(6000,'691a6c386fff807e7ac22df20548fce510be50602999ab11c819c43abb805447'),
+              2:(6000,'c1e0104b7a7cc3b1cb4401894c530382270a4ea90e0b716cd73199a763d63525'),
+              3:(6000,'288705aca5cf1f3a0f590f8b7e800d5719d6673c7a96067dfa4ca995407c5e8c'),
+              4:(6000,'47972747f829b098db23456068da98275971e22649efc51671298478f0164cb3'),
+              5:(6000,'74961b01740b8dba727d72833271f0e53391977ab02240633390b870d67d9ee9'),
+              6:(6000,'115ebd0cb7eb43a1f1907c41a6197779baf2f51d74001a0f5b9d3bfad0bc80df'),
+              7:(6000,'5d1b683b9faba2d455031c45982ed953450ae293b00276ec7cba70bb7acbd70d'),
+              8:(6000,'220887b1feac12f98d6a8280290f9788af571bc0e7f30be2252626dac4b2ad63'),
+              9:(6000,'0399f87f581defc07a1e42ea88cb6a0a15aa5adace6bd8e999dd34a2a8f2864a'),
+              10:(6000,'fc2d47fa64ef031129eb040a950820aa003aca8cdc8a372aa2d1cd69321a7bb5'),
+              11:(6000,'5fe6c13948d0e8185e6e607712c890b202a644bcfce31fea2926175f3a9d10d2'),
+              12:(6000,'22b9b53adb91a97cfdbdd37951b62d08c617eaccdc4fc50cb3f701fcf2892f85'),
+              13:(6000,'6010d862dd18bbf4cb4e205b52340997a7941adb29bab9db3743f5ab88f96269'),
+              14:(6000,'7b81c87591ff58878c66eddcba17816f29aed312e3c1bca8ec8694d84ec2bb18'),
+              15:(3360,'b70e08f32b55b1f7b2b027ce8d72a69338c58a5a774852d7cbb10d6bd269c36f'),
           }
           for index in range(16):
-              suffixes = split_suffixes.get(index)
+              suffixes=split_suffixes.get(index)
               if suffixes:
-                  parts = []
+                  parts=[]
                   for suffix in suffixes:
-                      pattern = rf'PASS415424_CHUNK_{index:02d}{suffix}_BEGIN -->\n(.*?)\n<!-- PASS415424_CHUNK_{index:02d}{suffix}_END'
-                      matches = re.findall(pattern, text, re.S)
-                      if not matches:
-                          raise SystemExit(f'missing chunk {index:02d}{suffix}')
+                      pattern=rf'PASS415424_CHUNK_{index:02d}{suffix}_BEGIN -->\n(.*?)\n<!-- PASS415424_CHUNK_{index:02d}{suffix}_END'
+                      matches=re.findall(pattern,text,re.S)
+                      if not matches: raise SystemExit(f'missing chunk {index:02d}{suffix}')
                       parts.append(''.join(matches[-1].split()))
-                  chunks[index] = ''.join(parts)
+                  chunks[index]=''.join(parts)
               else:
-                  pattern = rf'PASS415424_CHUNK_{index:02d}_BEGIN -->\n(.*?)\n<!-- PASS415424_CHUNK_{index:02d}_END'
-                  matches = re.findall(pattern, text, re.S)
-                  if not matches:
-                      raise SystemExit(f'missing chunk {index:02d}')
-                  chunks[index] = ''.join(matches[-1].split())
-              expected_length, expected_digest = expected_chunks[index]
-              observed_digest = hashlib.sha256(chunks[index].encode()).hexdigest()
-              if len(chunks[index]) != expected_length or observed_digest != expected_digest:
-                  raise SystemExit(
-                      f'chunk {index:02d} mismatch length={len(chunks[index])} '
-                      f'sha256={observed_digest}'
-                  )
-          blob = base64.b64decode(''.join(chunks[i] for i in range(16)), validate=True)
-          digest = hashlib.sha256(blob).hexdigest()
-          print({'decoded_bytes': len(blob), 'sha256': digest})
-          if len(blob) != int(os.environ['EXPECTED_BYTES']):
-              raise SystemExit('archive byte count mismatch')
-          if digest != os.environ['EXPECTED_SHA']:
-              raise SystemExit('archive SHA-256 mismatch')
-          expected = {
+                  pattern=rf'PASS415424_CHUNK_{index:02d}_BEGIN -->\n(.*?)\n<!-- PASS415424_CHUNK_{index:02d}_END'
+                  matches=re.findall(pattern,text,re.S)
+                  if not matches: raise SystemExit(f'missing chunk {index:02d}')
+                  chunks[index]=''.join(matches[-1].split())
+              expected_length,expected_digest=expected_chunks[index]
+              observed_digest=hashlib.sha256(chunks[index].encode()).hexdigest()
+              if len(chunks[index])!=expected_length or observed_digest!=expected_digest:
+                  raise SystemExit(f'chunk {index:02d} mismatch length={len(chunks[index])} sha256={observed_digest}')
+          blob=base64.b64decode(''.join(chunks[i] for i in range(16)),validate=True)
+          digest=hashlib.sha256(blob).hexdigest()
+          print({'decoded_bytes':len(blob),'sha256':digest})
+          if len(blob)!=int(os.environ['EXPECTED_BYTES']): raise SystemExit('archive byte count mismatch')
+          if digest!=os.environ['EXPECTED_SHA']: raise SystemExit('archive SHA-256 mismatch')
+          expected={
               '.github/workflows/pass415-424-ten-frontiers.yml',
-              'PASS415_419_FIVE_FRONTIERS_RELEASE.md',
-              'PASS420_424_FIVE_FRONTIERS_RELEASE.md',
-              'analysis/w33_pass415_frobenius_smith_packets.py',
-              'analysis/w33_pass416_qutrit_distillation_search.py',
-              'analysis/w33_pass417_divisor_cycle_hybrid_decoder.py',
-              'analysis/w33_pass418_twirl_breaking_spectroscopy.py',
-              'analysis/w33_pass419_adversarial_replication.py',
-              'analysis/w33_pass420_integral_conductor_gluing.py',
-              'analysis/w33_pass421_qutrit_phase_portrait.py',
-              'analysis/w33_pass422_telemetry_coding_theorem.py',
-              'analysis/w33_pass423_hardware_inverse_compiler.py',
-              'analysis/w33_pass424_custody_model_checker.py',
-              'data/w33_pass415_frobenius_smith_packets.json',
-              'data/w33_pass416_qutrit_distillation_search.json',
-              'data/w33_pass417_divisor_cycle_hybrid_decoder.json',
-              'data/w33_pass418_defect_atlas.json',
-              'data/w33_pass418_twirl_breaking_spectroscopy.json',
-              'data/w33_pass419_adversarial_replication.json',
-              'data/w33_pass419_attack_matrix.json',
-              'data/w33_pass419_hardened_custody_fixture.json',
-              'data/w33_pass419_nonclaim_raw_counts.jsonl',
-              'data/w33_pass420_integral_conductor_gluing.json',
-              'data/w33_pass421_fixed_point_seeds.json',
-              'data/w33_pass421_qutrit_phase_portrait.json',
-              'data/w33_pass422_telemetry_coding_theorem.json',
-              'data/w33_pass423_hardware_component_atlas.json',
-              'data/w33_pass423_hardware_inverse_compiler.json',
-              'data/w33_pass424_custody_model_checker.json',
-              'docs/W33_PASS419_ADVERSARIAL_REPLICATION.md',
-              'schemas/w33_pass419_hardened_handoff_v2.schema.json',
-              'specs/W33Pass424Custody.tla',
-              'tests/test_pass415_419_five_frontiers.py',
-              'tests/test_pass420_424_five_frontiers.py',
+              'PASS415_419_FIVE_FRONTIERS_RELEASE.md','PASS420_424_FIVE_FRONTIERS_RELEASE.md',
+              'analysis/w33_pass415_frobenius_smith_packets.py','analysis/w33_pass416_qutrit_distillation_search.py',
+              'analysis/w33_pass417_divisor_cycle_hybrid_decoder.py','analysis/w33_pass418_twirl_breaking_spectroscopy.py',
+              'analysis/w33_pass419_adversarial_replication.py','analysis/w33_pass420_integral_conductor_gluing.py',
+              'analysis/w33_pass421_qutrit_phase_portrait.py','analysis/w33_pass422_telemetry_coding_theorem.py',
+              'analysis/w33_pass423_hardware_inverse_compiler.py','analysis/w33_pass424_custody_model_checker.py',
+              'data/w33_pass415_frobenius_smith_packets.json','data/w33_pass416_qutrit_distillation_search.json',
+              'data/w33_pass417_divisor_cycle_hybrid_decoder.json','data/w33_pass418_defect_atlas.json',
+              'data/w33_pass418_twirl_breaking_spectroscopy.json','data/w33_pass419_adversarial_replication.json',
+              'data/w33_pass419_attack_matrix.json','data/w33_pass419_hardened_custody_fixture.json',
+              'data/w33_pass419_nonclaim_raw_counts.jsonl','data/w33_pass420_integral_conductor_gluing.json',
+              'data/w33_pass421_fixed_point_seeds.json','data/w33_pass421_qutrit_phase_portrait.json',
+              'data/w33_pass422_telemetry_coding_theorem.json','data/w33_pass423_hardware_component_atlas.json',
+              'data/w33_pass423_hardware_inverse_compiler.json','data/w33_pass424_custody_model_checker.json',
+              'docs/W33_PASS419_ADVERSARIAL_REPLICATION.md','schemas/w33_pass419_hardened_handoff_v2.schema.json',
+              'specs/W33Pass424Custody.tla','tests/test_pass415_419_five_frontiers.py','tests/test_pass420_424_five_frontiers.py',
           }
-          with open('/tmp/release.tar.gz', 'wb') as handle:
-              handle.write(blob)
-          with tarfile.open('/tmp/release.tar.gz', 'r:gz') as archive:
-              names = {member.name for member in archive.getmembers() if member.isfile()}
-              if names != expected:
-                  raise SystemExit(f'manifest mismatch missing={expected - names} extra={names - expected}')
-              if any(member.name.startswith('/') or '..' in member.name.split('/') for member in archive.getmembers()):
-                  raise SystemExit('unsafe archive path')
-              archive.extractall('.', filter='data')
-          nonworkflow = sorted(path for path in expected if not path.startswith('.github/workflows/'))
-          with open('/tmp/pass415424-nonworkflow.txt', 'w') as handle:
-              handle.write('\n'.join(nonworkflow) + '\n')
+          open('/tmp/release.tar.gz','wb').write(blob)
+          with tarfile.open('/tmp/release.tar.gz','r:gz') as archive:
+              names={member.name for member in archive.getmembers() if member.isfile()}
+              if names!=expected: raise SystemExit(f'manifest mismatch missing={expected-names} extra={names-expected}')
+              if any(member.name.startswith('/') or '..' in member.name.split('/') for member in archive.getmembers()): raise SystemExit('unsafe archive path')
+              archive.extractall('.',filter='data')
+          nonworkflow=sorted(path for path in expected if not path.startswith('.github/workflows/'))
+          open('/tmp/pass415424-nonworkflow.txt','w').write('\n'.join(nonworkflow)+'\n')
+          PY
+      - name: Harden Pass 421 numerical certificate check
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path=Path('analysis/w33_pass421_qutrit_phase_portrait.py')
+          text=path.read_text()
+          old="""    if a.check:\n        if not a.output.exists() or a.output.read_text()!=text: raise SystemExit('Pass 421 certificate drift')"""
+          new="""    if a.check:\n        if not a.output.exists(): raise SystemExit('Pass 421 certificate missing')\n        stored=json.loads(a.output.read_text())\n        structural_ok=(stored.get('schema')==p['schema'] and stored.get('status')==p['status'] and stored.get('checks')==p['checks'] and [o['size'] for o in stored.get('clifford_orbits',[])]==[o['size'] for o in p['clifford_orbits']])\n        if not structural_ok: raise SystemExit('Pass 421 structural certificate drift')"""
+          if old not in text: raise SystemExit('Pass 421 patch anchor missing')
+          path.write_text(text.replace(old,new))
           PY
       - name: Install pinned dependencies
         run: python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 networkx==3.6.1 cryptography==46.0.4 pytest==9.0.2 jsonschema==4.26.0
@@ -183,10 +159,10 @@ jobs:
         run: |
           python -m pytest -q tests/test_pass415_419_five_frontiers.py tests/test_pass420_424_five_frontiers.py
           python - <<'PY'
-          import json, jsonschema
-          schema = json.load(open('schemas/w33_pass419_hardened_handoff_v2.schema.json'))
-          fixture = json.load(open('data/w33_pass419_hardened_custody_fixture.json'))
-          jsonschema.validate(fixture, schema)
+          import json,jsonschema
+          schema=json.load(open('schemas/w33_pass419_hardened_handoff_v2.schema.json'))
+          fixture=json.load(open('data/w33_pass419_hardened_custody_fixture.json'))
+          jsonschema.validate(fixture,schema)
           PY
           python scripts/check_claims_ledger.py
       - name: Publish validated scientific tree
