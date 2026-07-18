@@ -1,0 +1,38 @@
+name: Pass 434 Field Smith Pairing
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass434_field_smith_pairing.py'
+      - 'analysis/PASS434_FIELD_SMITH_PAIRING.md'
+      - 'data/w33_pass434_field_smith_pairing.json'
+      - 'tests/test_w33_pass434_field_smith_pairing.py'
+      - 'PASS434_FIELD_SMITH_PAIRING_RELEASE.md'
+      - '.github/workflows/pass434-field-smith-pairing.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  OPENBLAS_NUM_THREADS: '1'
+  OMP_NUM_THREADS: '1'
+  MKL_NUM_THREADS: '1'
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install pinned dependencies
+        run: python -m pip install numpy==2.3.5 pytest==9.0.2
+      - name: Verify deterministic five-field certificate
+        run: python analysis/w33_pass434_field_smith_pairing.py --extended --check
+      - name: Run focused regressions
+        run: python -m pytest -q tests/test_w33_pass434_field_smith_pairing.py
