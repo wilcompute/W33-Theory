@@ -1,0 +1,67 @@
+name: Passes 453-457 Cyclotomic Collision FS Release
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass453_cyclotomic_covariance.py'
+      - 'analysis/w33_pass454_q7_field_falsifier.py'
+      - 'analysis/w33_pass455_frobenius_schur_indicators.py'
+      - 'analysis/w33_pass456_q5_collision_anatomy.py'
+      - 'analysis/w33_pass457_formal_perp_audit.py'
+      - 'analysis/PASS453_*.md'
+      - 'analysis/PASS454_*.md'
+      - 'analysis/PASS455_*.md'
+      - 'analysis/PASS456_*.md'
+      - 'analysis/PASS457_*.md'
+      - 'data/w33_pass453_*.json'
+      - 'data/w33_pass454_*.json'
+      - 'data/w33_pass455_*.json'
+      - 'data/w33_pass456_*.json'
+      - 'data/w33_pass457_*.json'
+      - 'formal/**'
+      - 'tests/test_pass453_457_cyclotomic_collision_fs_release.py'
+      - 'PASS453_457_CYCLOTOMIC_COLLISION_FS_RELEASE.md'
+      - '.github/workflows/pass453-457-cyclotomic-collision-fs.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  PYTHONHASHSEED: '0'
+
+jobs:
+  python-certificates:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install exact dependencies
+        run: python -m pip install numpy==2.3.5 sympy==1.14.0 networkx==3.6.1 pytest==9.0.2
+      - name: Verify certificates
+        run: |
+          python analysis/w33_pass453_cyclotomic_covariance.py --check
+          python analysis/w33_pass454_q7_field_falsifier.py --check
+          python analysis/w33_pass455_frobenius_schur_indicators.py --check
+          python analysis/w33_pass456_q5_collision_anatomy.py --check
+          python analysis/w33_pass457_formal_perp_audit.py --check
+      - name: Focused regressions
+        run: python -m pytest -q tests/test_pass453_457_cyclotomic_collision_fs_release.py
+
+  lean-perp-step:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formal
+          build: true
+          test: false
+          lint: false
+          nanoda: true
+          nanoda-allow-sorry: false
