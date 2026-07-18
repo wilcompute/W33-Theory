@@ -131,3 +131,10 @@ after commit:
    prose.** Six separate times a question was "open" while its answer sat in a
    committed certificate (`det(B_p)`, `det(T)=-1`, "torsor", the missing
    `*.py` glob, the q=3 Weil split vs Pass 331, `[1,27,36]` vs E6/2E6).
+5. **The protocol is executable: `py -3 scripts/audit_batch.py <files>`**
+   (archive contract with `--archive/--sha256/--size` BEFORE extraction; guard
+   sweep; certificate-vocabulary triage; certified-value contradiction scan).
+   A reservation commit for a batch merge must include the harness's output in
+   its message. First pre-merge run (Pass 432) found a stale branch that would
+   have regressed master and one certified-value contradiction — before merge,
+   not after.

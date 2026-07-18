@@ -10,27 +10,22 @@
 This project uses Continuity to keep repo-local decisions and session context available through MCP and generated instruction files. Prefer MCP when connected; otherwise fall back to the repo files.
 
 ## Project Context
-- **Total Decisions:** 4421
+- **Total Decisions:** 4424
 - **Known Topics:** needs-review, auto-draft, why, w33, testing, toe, architecture, holonet, docs, photonic, audit, qec, github, selector, tomotope
 
 ## Current State
 **Branch:** master
 
 **Recent Commits:**
-- `ccc718195 Add the three P393 ledger rows that the previous commit's message claimed but a silently-failing heredoc omitted; ledger verified green (31 rows) and spine test green`
-- `3be6f436f Pass 393: the cover is a LAW of the tower, the E6 geometry CONTAINS the W33 geometry, and the Cayley set is a section`
-- `d87a037d6 Pass 389: enforce Pass 387-391 release gates in CI`
-- `ddc94209d Passes 387-391: document duality, CSS, photonic, and prediction release`
-- `f1fc09f1b Passes 387-391: add release regressions`
+- `a2fae8426 Pass 432 reserved: genuinely-nonabelian PDS theorem + 2-part anatomy at q=5 + branch pre-audit + PDS companion note (python track)`
+- `951659960 Pass 398: freeze complete formula-search universe`
+- `f0872ad9c Pass 431: the nested SRG is a PDS in the Heisenberg group — the sandpile's 2-part lives entirely on the fibers — one obstruction, two faces — and the intake protocol is now executable`
+- `15e8dc32d Pass 431 reserved: batch-audit harness + SRG family location (PDS reading) + critical-group fiber anatomy + no-go twin paragraph + v1.1 (python track)`
+- `dbe1befd1 Ledger checker: exclude release-engineering artifacts (attestations/transport manifests) from witness-certificate verification — their pipeline-state vocabulary (READY_FOR_PR_VALIDATION) is not witness PASS/FAIL, and the third stream's Pass-399 attestation was correctly reddening the ledger through no fault of the mathematics. Documented in the source. 38 rows / 43 certs / green.`
 
 **Working Tree:**
 - M .continuity/INSTRUCTIONS.md
 - M .continuity/SESSION_NOTES.md
-- M .cursorrules
-- M .github/copilot-instructions.md
-- M AGENTS.md
-- M CLAUDE.md
-- M GEMINI.md
 - ?? .continuity/.gitattributes
 - ?? .continuity/decisions.json
 - ?? .continuity/decisions.jsonl
@@ -39,12 +34,17 @@ This project uses Continuity to keep repo-local decisions and session context av
 - ?? PART_BT367_E6_HOLONOMY_BRIDGE.md
 - ?? PART_CCLIX_susy_results.json
 - ?? PART_CCLVIII_qcd_results.json
+- ?? PART_CCLVII_hawking_radiation_results.json
+- ?? PART_CCLVI_maxwell_field_tensor_results.json
+- ?? PART_CCLXIII_island_formula_results.json
+- ?? PART_CCLXII_boson_sampling_results.json
+- ?? PART_CCLXIV_cosmic_strings_results.json
 
 ## Working Memory Snapshot
 **Mode:** degraded-fallback
-**Generated At:** 2026-07-18T16:04:42.742Z
-**Startup Summary:** mode=degraded-fallback | decisions=4421 | lastTask=2026-06-05 current goal: refresh origin/master, absorb the BT285-BT317 remote batch, and continue the selector/hypercube theory with a scoped verified packet. | next=Recent commits: | branch=master | health=MCP server disconnected. | fallback-files=12
-**Decision Count:** 4421
+**Generated At:** 2026-07-18T16:44:36.374Z
+**Startup Summary:** mode=degraded-fallback | decisions=4423 | lastTask=2026-06-05 current goal: refresh origin/master, absorb the BT285-BT317 remote batch, and continue the selector/hypercube theory with a scoped verified packet. | next=Recent commits: | branch=master | health=MCP server disconnected. | fallback-files=12
+**Decision Count:** 4423
 **Fallback Chain:** AGENTS.md, CLAUDE.md, GEMINI.md, .cursorrules, .github/copilot-instructions.md, .continuity/INSTRUCTIONS.md, .continuity/SESSION_NOTES.md, .continuity/mcp-health.json, .continuity/unfinished-task.json, .continuity/working-memory.json, SESSION_HANDOFF.md, .continuity/decisions.json
 
 ## Workspace MCP Self-Test
@@ -54,10 +54,10 @@ This project uses Continuity to keep repo-local decisions and session context av
 
 ## Resume Snapshot
 **Last Task:** 2026-06-05 current goal: refresh origin/master, absorb the BT285-BT317 remote batch, and continue the selector/hypercube theory with a scoped verified packet.
-**Last Completed Milestone:** Auto-saved at 2026-07-18T15:59:32.564Z (reason: startup)
+**Last Completed Milestone:** Auto-saved at 2026-07-18T16:34:36.908Z (reason: timer)
 **Next Expected Step:** Recent commits:
 **Last Successful Tool Call:** log_decision @ 2026-07-03T21:11:53.588Z
-**Relevant Files:** .devcontainer\devcontainer.json, .continuity/SESSION_NOTES.md, .cursorrules, .github/copilot-instructions.md, AGENTS.md, CLAUDE.md
+**Relevant Files:** w33_paper.tex, .git\rebase-merge\git-rebase-todo, W33_FOR_EVERYONE.tex, .continuity/SESSION_NOTES.md, .continuity/.gitattributes, .continuity/decisions.json
 
 ## Workflow
 
@@ -285,6 +285,13 @@ after commit:
    prose.** Six separate times a question was "open" while its answer sat in a
    committed certificate (`det(B_p)`, `det(T)=-1`, "torsor", the missing
    `*.py` glob, the q=3 Weil split vs Pass 331, `[1,27,36]` vs E6/2E6).
+5. **The protocol is executable: `py -3 scripts/audit_batch.py <files>`**
+   (archive contract with `--archive/--sha256/--size` BEFORE extraction; guard
+   sweep; certificate-vocabulary triage; certified-value contradiction scan).
+   A reservation commit for a batch merge must include the harness's output in
+   its message. First pre-merge run (Pass 432) found a stale branch that would
+   have regressed master and one certified-value contradiction — before merge,
+   not after.
 
 
 ## Recent Decisions

@@ -1,0 +1,58 @@
+{
+  "schema": "w33.pass432.genuinely_nonabelian_pds.v1",
+  "status": "PASS",
+  "HEADLINE": "THEOREM: (27,10,1,5) is a GENUINELY NONABELIAN PDS parameter set -- the unique SRG with these parameters (complement least eigenvalue -2, Seidel) admits a nonabelian PDS (431) and, by Pass 370's complete Sylow enumeration (elementary abelian has fixed points; Z9xZ3 and Z27 do not embed), NO abelian PDS in any group. The Weil fingerprint of the PDS (eigenvalues of rho(D) under both nonlinear irreps, homomorphism verified on all 729 products) is recorded as the datum any claimed prior construction must match. At q=5 the sandpile 2-part is bounded honestly (F2-rank computed, total order 2^160, full SNF deferred under budget). And the batch harness's first pre-merge run found the 415-429 branch STALE (no archive; would regress 430-431) with one certified-value contradiction ([[240,81,4]] vs [[240,81,3]]) flagged for d/d_Z disambiguation.",
+  "weil_fingerprints": {
+    "eps1_gamma2_kappa1": [
+      [
+        -5.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        -0.0
+      ]
+    ],
+    "eps2_gamma1_kappa1": [
+      [
+        -5.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        -0.0
+      ]
+    ]
+  },
+  "q5_two_part_partial": {
+    "rank2_L": 64,
+    "num_even_invariants": 61,
+    "total_2_order": "2^160",
+    "note": "full 125x125 SNF deferred (time budget); the even-invariant count and total order bound the shape"
+  },
+  "checks": {
+    "srg_spectrum_10_1p20_m5p6": true,
+    "complement_least_eigenvalue_minus2": true,
+    "seidel_uniqueness_applies": true,
+    "p370_abelian_exists_but_not_regular": true,
+    "p370_four_subgroups_complete": true,
+    "no_Z9xZ3_or_Z27_in_sylow": true,
+    "THEOREM_genuinely_nonabelian_27_10_1_5": true,
+    "polhill_table_lookup_flagged": true,
+    "our_group_exponent_3": true,
+    "feng_ambient_is_exponent_9_nonisomorphic": true,
+    "two_nonlinear_irreps_modeled": true,
+    "fingerprint_computed": true,
+    "q5_rank2_computed": true,
+    "q5_two_order_2p160": true,
+    "q5_shape_honestly_partial": true
+  }
+}

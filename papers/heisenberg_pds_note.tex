@@ -1,0 +1,151 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\FF}{\mathbb F}
+\newcommand{\ZZ}{\mathbb Z}
+\title{An antipodal cover, a strongly regular tower, and a genuinely
+nonabelian partial difference set\\ from elation generalized quadrangles}
+\author{W.~Dahn\thanks{All computational claims carry machine-verified
+witnesses in the repository \texttt{wilcompute/W33-Theory}, tag
+\texttt{v1.1-cover-law-and-audit}; witness numbers cited inline. Companion to
+\emph{A reflection group cannot orient itself} (same repository).}}
+\date{July 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent Fix a point $p_0$ of the symplectic generalized quadrangle $W(3,q)$,
+$q$ odd. We prove three structural results about the $q^3$ points opposite
+$p_0$, each with an elementary proof and a machine-checked certificate:
+(1) their collinearity graph is a distance-regular antipodal $q$-fold cover of
+$K_{q^2}$ whose fibers are the central elation orbits; (2) adjoining the fiber
+pairing yields a strongly regular graph
+$\mathrm{SRG}(q^3,(q-1)(q+2),q-2,q+2)$, recovering at $q=3$ the unique
+$\mathrm{SRG}(27,10,1,5)$ of the twenty-seven lines; and (3) the corresponding
+connection set is a partial difference set in the extraspecial group
+$q^{1+2}_+$ of exponent~$q$, whose parameters at $q=3$ admit \emph{no abelian
+partial difference set in any group}. The obstruction is a complete
+Sylow-level enumeration: the elementary abelian group of order $27$ embeds in
+the relevant automorphism group but never acts freely.
+\end{abstract}
+
+\section{Setting}
+
+Let $V=\FF_q^4$ carry the symplectic form
+$\langle x,y\rangle = x_0y_2-x_2y_0+x_1y_3-x_3y_1$, and let $W(3,q)$ be the
+generalized quadrangle of totally isotropic points and lines. Fix
+$p_0=(0,0,0,1)$. The $q^4-1\over q-1$ points split as
+$\{p_0\}\;\cup\;\mathrm{rim}\;\cup\;\mathrm{bulk}$, of sizes
+$1+q(q+1)+q^3$. The unipotent radical $H$ of the $p_0$-parabolic --- the
+elation group --- is the extraspecial group $q^{1+2}_+$ of exponent $q$ and
+acts regularly on the bulk (standard elation-quadrangle theory; witness
+P370).
+
+\section{The cover}
+
+\begin{theorem}[witness P394]
+The collinearity graph on the bulk is a distance-regular antipodal $q$-fold
+cover of $K_{q^2}$ with intersection array
+$\{q^2-1,\,q(q-1),\,1;\,1,\,q,\,q^2-1\}$, whose antipodal fibers are the
+central elation orbits $\{x,zx,\dots,z^{q-1}x\}$.
+\end{theorem}
+
+\begin{proof}
+Four perp-of-span observations. (L1) For a central elation $z$, $zx-x$ is
+proportional to $p_0$, so the projective span satisfies
+$L(x,zx)=L(x,p_0)$; all $q+1$ common neighbours of $x$ and $zx$ lie in
+$L(x,p_0)^\perp\subseteq p_0^\perp$, i.e.\ in the rim: fibers have no bulk
+common neighbours and no edges. (L2) For $x,y$ non-collinear with
+$y\notin\mathrm{fiber}(x)$: $p_0\notin L(x,y)$, so the hyperbolic line
+$L(x,y)^\perp$ meets the plane $p_0^\perp$ in exactly one point; of the $q+1$
+common neighbours, one is rim and $c_2=q$ are bulk. (L3) For collinear $x,y$
+the span is a totally isotropic line $L=L^\perp$; the common neighbours are
+$L\setminus\{x,y\}$, of which one is rim: $\lambda=q-2$, so $b_1=q(q-1)$.
+(L4) By L1 every neighbour of $zx$ is at distance $2$ from $x$:
+$c_3=q^2-1$, $a_3=0$, and the fibers are the antipodal classes.
+\end{proof}
+
+The Cayley connection sets realizing this cover are classified: of the $q^4$
+inverse-closed sections of $(H/Z)\setminus\{0\}$ at $q=3$, exactly nine are
+distance-regular; they form one orbit of $\operatorname{Aut}(H)$ (order 432)
+with stabilizer $\mathrm{GL}(2,3)$, and they are precisely the \emph{linear}
+sections $v\mapsto[w,v]$, $w\in\FF_3^2$: covers indexed by the characters of
+the base (witnesses P394, P430).
+
+\section{The tower}
+
+\begin{theorem}[witness P430]
+Adjoining the fiber pairing to the cover yields, for every odd $q$, a
+strongly regular graph $\mathrm{SRG}\bigl(q^3,(q-1)(q+2),q-2,q+2\bigr)$.
+\end{theorem}
+
+\begin{proof}
+By L2 each vertex has exactly one neighbour in each other fiber, so the
+adjacency operator commutes with the fiber operator $F$ (all-ones minus
+identity on each fiber). On fiber-constant functions $A$ is the quotient
+$K_{q^2}$ and $F=q-1$; on the complement $F=-1$ and $A\in\{q-1,-q-1\}$. The
+sum takes three values $q^2+q-2,\;q-2,\;-q-2$; three eigenvalues means
+strongly regular, and the parameters follow from
+$\mu=k+rs$, $\lambda=\mu+r+s$.
+\end{proof}
+
+At $q=3$ this is $\mathrm{SRG}(27,10,1,5)$ --- the collinearity graph of
+$\mathrm{GQ}(2,4)$, equivalently the twenty-seven lines of a cubic surface
+with orthogonality; the classical ``$E_6$'' geometry on $27$ objects is thus
+the $q=3$ face of an affine tower, differing from the quadrangle's own
+geometry by exactly the fiber pairing.
+
+\section{The partial difference set}
+
+\begin{theorem}[witness P431]
+Let $S$ be the flat section and $Z$ the centre. Then
+$D=S\cup(Z\setminus\{1\})$, of size $q^2+q-2$, is a partial difference set in
+$q^{1+2}_+$ with $\lambda=q-2$, $\mu=q+2$: each element of $D$ arises exactly
+$q-2$ times as a difference $xy^{-1}$ $(x,y\in D)$, each non-identity element
+outside $D$ exactly $q+2$ times. (Verified by full enumeration at $q=3,5$.)
+\end{theorem}
+
+\begin{theorem}[witnesses P370, P432]
+The parameter set $(27,10,1,5)$ admits no abelian partial difference set in
+any group.
+\end{theorem}
+
+\begin{proof}
+$\mathrm{SRG}(27,10,1,5)$ is unique: its complement has least eigenvalue
+$-2$ and spectrum $\{16,4^6,(-2)^{20}\}$, so Seidel's classification applies.
+An abelian PDS would embed its group as a regular abelian subgroup of the
+automorphism group $W(E_6)$ acting on the $27$ vertices. The order-$27$
+subgroups of $W(E_6)$ are exactly the four index-$3$ subgroups of a Sylow
+$3$-subgroup (Frattini-hyperplane preimages, a complete enumeration): the
+exponent-$3$ extraspecial, two exponent-$9$ extraspecials, and the elementary
+abelian $\FF_3^3$; the groups $\ZZ_9\times\ZZ_3$ and $\ZZ_{27}$ do not occur,
+and the elementary abelian subgroup has fixed points. No abelian group acts
+regularly.
+\end{proof}
+
+\begin{remark}
+Nonabelian partial difference sets are scarce; see Polhill et al.\
+(arXiv:2306.00140) for the ``genuinely nonabelian'' programme and Swartz
+(J.~Combin.\ Des.\ 2021) for parameter restrictions. A construction in the
+extraspecial groups of order $p^3$ and exponent $p^2$ is due to Feng et al.\
+(Des.\ Codes Cryptogr.\ 2013); the present family lives in the
+non-isomorphic exponent-$p$ sibling. Whether this family appears elsewhere is
+left open here; the constructions and proofs above are self-contained.
+\end{remark}
+
+\begin{remark}[the physical footnote]
+The critical group of the cover at $q=3$ is
+$\ZZ_3^4\oplus\ZZ_6^4\oplus\ZZ_{18}\oplus\ZZ_{54}\oplus\ZZ_{216}^6$, and ---
+since the quotient $K_9$ has odd sandpile $\ZZ_9^7$ --- its entire
+$2$-primary part is carried by the fibers (witness P431). In the quantum
+reading of the companion repository, the fibers are the qutrit phase, the
+regular Heisenberg action is the Pauli group, and both the impossibility of
+selecting a fiber point (a torsor obstruction) and the impossibility of
+moving between fiber points by the native adjacency flow (a revival
+obstruction, witness P399 of the repository's third stream) are faces of the
+same missing section.
+\end{remark}
+
+\end{document}
