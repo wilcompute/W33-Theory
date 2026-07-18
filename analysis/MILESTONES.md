@@ -16,51 +16,59 @@ executable batch intake; both papers compile.
 
 ## v1.2-integral-tower-and-attribution — shipped
 
-All three former gates are closed.
+Polhill attribution corrected; the prime-to-characteristic Smith theorem proved;
+characteristic and prime-to-characteristic layers welded through q=27; the
+finite-field/residue-ring atlas and synthetic torsion detector released.
 
-1. **Polhill literature gate — CLOSED by Pass 436.** The exact family
-   `(q^3,q^2+q-2,q-2,q+2)`, its odd-q abelian obstruction, the Heisenberg
-   construction for every odd prime power, and the `(27,10,1,5)` example are
-   explicitly present in Polhill--Davis--Smith--Swartz. The PDS note now rejects
-   novelty for the family and preserves only the cover/section/integral claims.
-2. **2-primary tower gate — UPGRADED TO A THEOREM by Pass 435.** For every odd
-   prime power,
+## v1.3-conductor-geometry-and-formal-kernel — shipped
 
-   \[
-   K_{(2)}\cong
-   (\mathbb Z/2^{\nu_2(q-1)})^{q(q-1)}\oplus
-   (\mathbb Z/2^{\nu_2(q^2-1)})^{q(q-1)^2/2}.
-   \]
+Passes 440–444 close all five mathematical/software gates opened after v1.2.
 
-   The proof uses central Fourier decomposition, the transpose fixed-space
-   lemma, primitive rank factorization, and an integral paired Smith block.
-3. **Batch 415–429 gate — CLOSED.** The complete fifteen-frontier release and
-   portable certificate hardening are on `master`.
+1. **Finite-chain-ring conductor tower — CLOSED by Pass 440.** For every odd
+   unramified finite chain ring of length n and residue order q, exact central
+   character conductor j gives the full rational spectrum and every
+   prime-to-characteristic Smith layer. Length one recovers the field theorem;
+   length two recovers the Z/p² atlas; length three is explicitly certified.
+2. **Independent formal kernel — CLOSED at the algebraic kernel by Pass 441.**
+   Lean/mathlib proves the explicit unimodular 2×2 Smith reduction and the
+   conductor/multiplicity polynomial identities without `sorry` or custom
+   axioms. The representation-theoretic central Fourier decomposition remains a
+   named formalization boundary rather than being silently assumed complete.
+3. **Blind optical preregistration — CLOSED as a synthetic dry run by Pass 442.**
+   Labels are hash-committed before prediction; the 16×16 transfer matrix,
+   affine-fit classifier, abstention threshold, and primary endpoint are frozen.
+   The sealed 192-sample holdout is classified 192/192 with all commitments
+   verified. A measured-hardware run remains an experimental gate, not a
+   mathematical one.
+4. **Section-sensitive torsion — CLOSED at q=3 by Pass 443.** The 81
+   inverse-closed sections split into exactly two Aut(H₃)-orbits, detected by a
+   two-component curl. The 9 flat sections and 72 curved sections have different
+   characteristic polynomials, spanning-tree prime supports, and critical
+   groups; no hidden cospectral/Smith-distinct third class exists at q=3.
+5. **Hjelmslev conductor geometry — CLOSED at length two by Pass 444.** Explicit
+   AHG(2,Z/9) and AHG(2,Z/25) incidence objects verify the neighbor map
+   point-by-point. The Gram law `BB^T=q²I+(q-1)N+J` identifies q³ residue-plane
+   modes with conductor one and q² within-neighborhood modes with primitive
+   conductor.
 
-Additional v1.2 closure:
+The permanent Passes 440–444 workflow regenerates all five certificates, runs
+focused regressions, and compiles the Lean package in a separate pinned job.
 
-- Pass 437 welds the characteristic-primary Pass 425 layers to every
-  prime-to-characteristic component and gives complete invariant factors at
-  `q=3,5,9,25,27`.
-- Pass 438 proves the finite-field/residue-ring conductor atlas for
-  `GF(p^2)` versus `Z/p^2Z`, with explicit `p=3,5,7` spectra and Smith shapes.
-- Pass 439 supplies a deterministic 16-step torsion-sensitive photonic
-  falsifier with 72/72 synthetic classifications and no physical-data claim.
-- The permanent Passes 435–439 workflow checks all four executable
-  certificates, focused regressions, and compilation of the corrected PDS note.
+## v1.4 — OPEN. Gates
 
-## v1.3 — OPEN. Gates
+1. Determine the characteristic-primary Smith layers for finite chain-ring
+   Heisenberg graphs at nilpotent length n≥2.
+2. Formalize the central Fourier decomposition and primitive rank factorization
+   in Lean, upgrading the Pass 441 algebraic kernel into an end-to-end proof.
+3. Replace the synthetic Pass 442 transfer kernel by a measured optical transfer
+   matrix and execute the preregistered blind hardware holdout unchanged.
+4. Lift the section-curl/orbit/Smith classification from q=3 to q=5 using
+   cohomology and orbit reduction rather than enumerating the raw section space.
+5. Extend the Hjelmslev conductor dictionary to length n≥3 and compare its
+   filtration with affine-building and Bruhat–Tits residue layers.
 
-1. Extend the residue-ring conductor theorem from `Z/p^2Z` to Galois rings
-   `GR(p^2,f)` and separate ramification from residue-degree effects.
-2. Give a second, independent integral proof of the transpose/rank-factorization
-   lemma using explicit symplectic Fourier bases or modular representation theory.
-3. Calibrate the Pass 439 period-2 detector against a measured optical transfer
-   matrix and preregister a blind field-versus-ring discrimination experiment.
-
-## Deferred beyond v1.3
+## Deferred beyond v1.4
 
 - m=6 Coxeter–Todd rung of the QR tower (GAP; handoff `data/m6_handoff_k12.json`).
-- exp-3/exp-9 versus ordinary/twisted Frobenius--Schur correspondence.
-- complete characteristic-primary formulas beyond the square biaffine/native
-  bulk operator.
+- exp-3/exp-9 versus ordinary/twisted Frobenius–Schur correspondence.
+- measured-device calibration and physical error bars for every photonic claim.
