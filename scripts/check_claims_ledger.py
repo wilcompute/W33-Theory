@@ -48,6 +48,14 @@ def main() -> int:
             continue
         for tag in tags:
             hits = sorted(DATA.glob(f"w33_pass{tag}_*.json"))
+            # Release-engineering artifacts (attestations, transport manifests)
+            # carry pipeline-state vocabularies (e.g. READY_FOR_PR_VALIDATION),
+            # not witness PASS/FAIL. Pass 430 found the third stream's
+            # w33_pass399_release_attestation.json correctly reddening the
+            # ledger through no fault of the mathematics. Witness certificates
+            # only:
+            hits = [h for h in hits if "attestation" not in h.name
+                    and "release_manifest" not in h.name]
             if not hits:
                 failures.append(f"P{tag}: no certificate data/w33_pass{tag}_*.json")
                 continue
