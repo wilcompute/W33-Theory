@@ -1,5 +1,5 @@
 {
-  "certificate_sha256": "ecf3a15b907930c4259da011f692f693237cfbb3089240c13ec76c1f2957ce79",
+  "certificate_sha256": "d9343f2fa4aa63924b72bf166954a1afee1697bc2d8b35c088aead08b640e2ff",
   "checks": {
     "Bell_outcomes_equiprobable": true,
     "T_conjugates_X_to_clifford": true,
@@ -18,12 +18,12 @@
     "assumption": "all weight-one and weight-two input faults are detected; no-error input is accepted",
     "claim_boundary": "This is an exact distance-three combinatorial upper bound, not the protocol-specific nonlinear distillation map of a selected stabilizer code.",
     "conditional_logical_error_upper_bound": "[10 e^3(1-e)^2 + 5 e^4(1-e) + e^5]/(1-e)^5",
-    "contraction_threshold_upper_bound_model": 0.20862199378967533,
+    "contraction_threshold_upper_bound_model": 0.20862199379,
     "examples": {
-      "0.001": 1.0035081155265422e-08,
-      "0.01": 1.0358257692639191e-05,
-      "0.05": 0.0014967091380433506,
-      "0.1": 0.014496435164016327
+      "0.001": 1.0035081e-08,
+      "0.01": 1.0358257693e-05,
+      "0.05": 0.001496709138043,
+      "0.1": 0.014496435164016
     }
   },
   "gate_teleportation": {
@@ -44,25 +44,25 @@
       {
         "flag_efficiency": 0.99,
         "input_leakage": 0.0001,
-        "undetected_round_bound": 4.999990000142951e-06
+        "undetected_round_bound": 4.99999e-06
       },
       {
         "flag_efficiency": 0.99,
         "input_leakage": 0.001,
-        "undetected_round_bound": 4.999900000979274e-05
+        "undetected_round_bound": 4.999900001e-05
       },
       {
         "flag_efficiency": 0.999,
         "input_leakage": 0.001,
-        "undetected_round_bound": 4.999990000142951e-06
+        "undetected_round_bound": 4.99999e-06
       }
     ],
     "model": "each of five inputs leaks independently with rate l; a leakage flag fires with efficiency eta; any undetected leakage is conservatively counted as logical failure"
   },
   "magic_state": {
     "definition": "|M_T>=T F|0>",
-    "maximum_single_qutrit_stabilizer_fidelity": 0.7123860142010864,
-    "stabilizer_infidelity_witness": 0.2876139857989136
+    "maximum_single_qutrit_stabilizer_fidelity": 0.712386014201,
+    "stabilizer_infidelity_witness": 0.287613985799
   },
   "non_clifford_gate": {
     "Pauli_conjugates": {
@@ -75,10 +75,15 @@
     },
     "clifford_hierarchy_level": 3,
     "definition": "T=diag(1,zeta_9,zeta_9^-1)",
+    "physical_phase_vector_exact": [
+      "0",
+      "2*pi/9",
+      "-2*pi/9"
+    ],
     "physical_phase_vector_radians": [
       0.0,
-      0.6981317007977318,
-      -0.6981317007977318
+      0.698131700798,
+      -0.698131700798
     ],
     "projective_order": 9
   },

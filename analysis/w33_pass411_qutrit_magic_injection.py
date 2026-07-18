@@ -127,14 +127,6 @@ def build_payload() -> tuple[dict, dict]:
         {"input_leakage": 1e-3, "flag_efficiency": 0.999},
     ]
 
-    feedforward = {
-        "schema": "w33.pass411.clifford_feedforward.v1",
-        "resource": "(I tensor T)|Phi_3>, T=diag(1,zeta_9,zeta_9^-1)",
-        "measurement": "generalized Bell basis (I tensor X^a Z^b)|Phi_3>",
-        "entries": feedforward_entries,
-    }
-    feedforward["certificate_sha256"] = certificate(feedforward)
-
     checks = {
         "clifford_group_order_216": len(cliffords) == 216,
         "T_is_not_clifford": projective_key(t_gate) not in cliffords,
@@ -152,20 +144,42 @@ def build_payload() -> tuple[dict, dict]:
 
     checks = {k: bool(v) for k, v in checks.items()}
 
+    # Published certificates avoid platform-sensitive BLAS residuals. Exact values
+    # are recorded where known; tolerance assertions above use the unrounded data.
+    published_feedforward_entries = [
+        {
+            "bell_outcome": entry["bell_outcome"],
+            "correction_word": entry["correction_word"],
+            "kraus_probability": {"numerator": 1, "denominator": 9},
+            "projective_scalar_magnitude": {"numerator": 1, "denominator": 3},
+            "corrected_operator_error_less_than": 1e-12,
+        }
+        for entry in feedforward_entries
+    ]
+    feedforward = {
+        "schema": "w33.pass411.clifford_feedforward.v2",
+        "resource": "(I tensor T)|Phi_3>, T=diag(1,zeta_9,zeta_9^-1)",
+        "measurement": "generalized Bell basis (I tensor X^a Z^b)|Phi_3>",
+        "entries": published_feedforward_entries,
+        "numerical_witness_policy": "exact rational probabilities/scalars; corrected operator residual certified below 1e-12 before publication",
+    }
+    feedforward["certificate_sha256"] = certificate(feedforward)
+
     payload = {
         "schema": "w33.pass411.qutrit_magic_injection.v1",
         "status": "PASS" if all(checks.values()) else "FAIL",
         "non_clifford_gate": {
             "definition": "T=diag(1,zeta_9,zeta_9^-1)",
-            "physical_phase_vector_radians": [0.0, 2 * math.pi / 9, -2 * math.pi / 9],
+            "physical_phase_vector_exact": ["0", "2*pi/9", "-2*pi/9"],
+            "physical_phase_vector_radians": [0.0, round(2 * math.pi / 9, 12), round(-2 * math.pi / 9, 12)],
             "projective_order": 9,
             "clifford_hierarchy_level": 3,
             "Pauli_conjugates": conjugates,
         },
         "magic_state": {
             "definition": "|M_T>=T F|0>",
-            "maximum_single_qutrit_stabilizer_fidelity": float(max_stabilizer_fidelity),
-            "stabilizer_infidelity_witness": float(1 - max_stabilizer_fidelity),
+            "maximum_single_qutrit_stabilizer_fidelity": round(float(max_stabilizer_fidelity), 12),
+            "stabilizer_infidelity_witness": round(float(1 - max_stabilizer_fidelity), 12),
         },
         "gate_teleportation": {
             "resource": "Choi magic pair (I tensor T)|Phi_3>",
@@ -177,14 +191,14 @@ def build_payload() -> tuple[dict, dict]:
         "five_qutrit_distance_three_postselection_budget": {
             "assumption": "all weight-one and weight-two input faults are detected; no-error input is accepted",
             "conditional_logical_error_upper_bound": "[10 e^3(1-e)^2 + 5 e^4(1-e) + e^5]/(1-e)^5",
-            "contraction_threshold_upper_bound_model": contraction_threshold(),
-            "examples": {str(e): distillation_bound(e) for e in error_grid},
+            "contraction_threshold_upper_bound_model": round(contraction_threshold(), 12),
+            "examples": {str(e): round(distillation_bound(e), 15) for e in error_grid},
             "claim_boundary": "This is an exact distance-three combinatorial upper bound, not the protocol-specific nonlinear distillation map of a selected stabilizer code.",
         },
         "leakage_budget": {
             "model": "each of five inputs leaks independently with rate l; a leakage flag fires with efficiency eta; any undetected leakage is conservatively counted as logical failure",
             "bound": "1-(1-l(1-eta))^5",
-            "examples": [dict(item, undetected_round_bound=leakage_bound(item["input_leakage"], item["flag_efficiency"])) for item in leakage_grid],
+            "examples": [dict(item, undetected_round_bound=round(leakage_bound(item["input_leakage"], item["flag_efficiency"]), 15)) for item in leakage_grid],
         },
         "hardware_placement": {
             "location": "one fibre-local three-phase channel before the Pass-406 Clifford schedule or as a teleported Choi resource",
