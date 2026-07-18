@@ -60,7 +60,7 @@ jobs:
           python analysis/w33_pass412_multislip_sandpile_decoder.py
           python analysis/w33_pass413_automorphism_twirl.py
           python analysis/w33_pass414_independent_lab_packet.py
-      - name: Require zero artifact drift
+      - name: Capture merge-ref drift
         run: |
           PATHS=(
             data/w33_pass410_prime_power_smith.json
@@ -73,13 +73,33 @@ jobs:
             data/w33_pass414_nonclaim_custody_fixture.json
             data/w33_pass414_empty_handoff_manifest.json
           )
-          echo 'Changed deterministic artifacts:'
-          git diff --name-only -- "${PATHS[@]}"
-          echo 'Diff summary:'
-          git diff --stat -- "${PATHS[@]}"
-          echo 'Bounded diff:'
-          git diff -- "${PATHS[@]}" | head -n 240
-          git diff --exit-code -- "${PATHS[@]}"
+          mkdir -p /tmp/pass410-414-drift/regenerated
+          git diff --name-only -- "${PATHS[@]}" > /tmp/pass410-414-drift/changed-files.txt
+          git diff --binary -- "${PATHS[@]}" > /tmp/pass410-414-drift/unified.diff
+          cp "${PATHS[@]}" /tmp/pass410-414-drift/regenerated/
+          git rev-parse HEAD > /tmp/pass410-414-drift/merge-ref.txt
+          python --version > /tmp/pass410-414-drift/python-version.txt
+          python -m pip freeze > /tmp/pass410-414-drift/pip-freeze.txt
+      - name: Upload drift witness
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pass410-414-drift-${{ github.run_id }}
+          path: /tmp/pass410-414-drift
+          if-no-files-found: error
+          retention-days: 1
+      - name: Require zero artifact drift
+        run: |
+          git diff --exit-code -- \
+            data/w33_pass410_prime_power_smith.json \
+            data/w33_pass411_qutrit_magic_injection.json \
+            data/w33_pass411_clifford_feedforward.json \
+            data/w33_pass412_multislip_sandpile_decoder.json \
+            data/w33_pass413_automorphism_twirl.json \
+            data/w33_pass413_twirl_schedule.json \
+            data/w33_pass414_independent_lab_packet.json \
+            data/w33_pass414_nonclaim_custody_fixture.json \
+            data/w33_pass414_empty_handoff_manifest.json
       - name: Run all witnesses in check mode
         run: |
           python analysis/w33_pass410_prime_power_smith.py --check
