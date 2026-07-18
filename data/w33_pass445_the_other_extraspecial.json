@@ -1,0 +1,61 @@
+{
+  "schema": "w33.pass445.the_other_extraspecial.v1",
+  "status": "PASS",
+  "HEADLINE": "(27,10,1,5) IS A PARTIAL DIFFERENCE SET IN THE EXPONENT-9 EXTRASPECIAL GROUP 3^{1+2}_- -- constructed from Pass 370's regular exp-9 subgroups, verified by full difference-multiset enumeration in the exponent-9 group law (lambda=1, mu=5). The known Kantor/Polhill construction is Heisenberg (exponent p); this companion realization is flagged against their tables. AND IT IS A q=3 PHENOMENON: at q=5 the complete Frattini enumeration of the Sylow-5 of H:SL(2,5) contains NO regular exponent-25 subgroup -- the bottom rung is special one more way, alongside E6, the 27 lines, and Seidel uniqueness. The 433->434/435 conjecture->theorem loop is recorded from both certificates.",
+  "d9_structure": {
+    "D9_in_centre": 2,
+    "D9_order9_elements": 6,
+    "D9_order3_elements": 4
+  },
+  "q5_profiles": [
+    {
+      "regular": true,
+      "max_order": 5
+    },
+    {
+      "regular": true,
+      "max_order": 5
+    },
+    {
+      "regular": false,
+      "max_order": 5
+    },
+    {
+      "regular": true,
+      "max_order": 5
+    },
+    {
+      "regular": true,
+      "max_order": 5
+    },
+    {
+      "regular": true,
+      "max_order": 5
+    }
+  ],
+  "checks": {
+    "left_translations_preserve_graph": true,
+    "unipotent_levi_preserves_graph": true,
+    "sylow3_order_81": true,
+    "four_order27_subgroups": true,
+    "two_exp9_regular_subgroups": true,
+    "R_nonabelian": true,
+    "R_exponent_9": true,
+    "regular_bijection": true,
+    "D9_size_10": true,
+    "D9_inverse_closed": true,
+    "PDS_lambda_1_in_exp9_group": true,
+    "PDS_mu_5_in_exp9_group": true,
+    "PDS_IN_3_1plus2_MINUS": true,
+    "centre_order_3": true,
+    "D9_meets_centre_in_2": true,
+    "q5_left_translations_preserve": true,
+    "q5_sylow5_order_625": true,
+    "q5_maximal_subgroups_enumerated": true,
+    "q5_NO_exp25_regular_subgroup": true,
+    "q5_scope_visible_group_only": true,
+    "p433_predicted_q7": true,
+    "p434_certified_q7": true,
+    "conjecture_to_theorem_loop_closed": true
+  }
+}

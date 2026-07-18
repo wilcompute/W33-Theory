@@ -71,4 +71,7 @@ focused regressions, and compiles the Lean package in a separate pinned job.
 
 - m=6 Coxeter–Todd rung of the QR tower (GAP; handoff `data/m6_handoff_k12.json`).
 - exp-3/exp-9 versus ordinary/twisted Frobenius–Schur correspondence.
+  (The PDS half closed in Pass 445: (27,10,1,5) is a PDS in the exponent-9
+  extraspecial group too — a q=3-only phenomenon, no exp-25 analogue at q=5
+  within H:SL(2,5). The character-theoretic half remains open.)
 - measured-device calibration and physical error bars for every photonic claim.
