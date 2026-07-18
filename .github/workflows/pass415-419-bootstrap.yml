@@ -50,7 +50,6 @@ jobs:
                   m=re.findall(rf'PASS415_CHUNK_{i:02d}_BEGIN -->\n(.*?)\n<!-- PASS415_CHUNK_{i:02d}_END',text,re.S)
                   if not m:raise SystemExit(f'missing {i:02d}')
                   chunks[i]=m[-1].strip()
-          # Issue transport introduced one verified same-length substitution in chunk 05.
           assert chunks[5][2213]=='l'
           chunks[5]=chunks[5][:2213]+'p'+chunks[5][2214:]
           blob=base64.b64decode(''.join(chunks[i] for i in range(12)),validate=True)
@@ -76,15 +75,26 @@ jobs:
           PY
       - name: Install pinned dependencies
         run: python -m pip install numpy==2.3.5 sympy==1.14.0 networkx==3.6.1 cryptography==46.0.4 pytest==9.0.2 jsonschema==4.26.0
-      - name: Validate complete release
+      - name: Pass 415 witness
+        run: python analysis/w33_pass415_frobenius_smith_packets.py --check
+      - name: Pass 416 witness
+        run: python analysis/w33_pass416_qutrit_distillation_search.py --check
+      - name: Pass 417 witness
+        run: python analysis/w33_pass417_divisor_cycle_hybrid_decoder.py --check
+      - name: Pass 418 witness
+        run: python analysis/w33_pass418_twirl_breaking_spectroscopy.py --check
+      - name: Pass 419 witness
+        run: python analysis/w33_pass419_adversarial_replication.py --check
+      - name: Validate hardened schema
         run: |
-          for p in 415_frobenius_smith_packets 416_qutrit_distillation_search 417_divisor_cycle_hybrid_decoder 418_twirl_breaking_spectroscopy 419_adversarial_replication; do python analysis/w33_pass${p}.py --check; done
           python - <<'PY'
           import json,jsonschema
           jsonschema.validate(json.load(open('data/w33_pass419_hardened_custody_fixture.json')),json.load(open('schemas/w33_pass419_hardened_handoff_v2.schema.json')))
           PY
-          python -m pytest -q tests/test_pass415_419_five_frontiers.py
-          python scripts/check_claims_ledger.py
+      - name: Run cross-pass regressions
+        run: python -m pytest -q tests/test_pass415_419_five_frontiers.py
+      - name: Verify claims ledger
+        run: python scripts/check_claims_ledger.py
       - name: Publish readable release and remove transport machinery
         run: |
           rm .github/workflows/pass415-419-bootstrap.yml .github/workflows/pass415-419-transport-diagnostic.yml .github/workflows/pass415-419-chunk05-export.yml
