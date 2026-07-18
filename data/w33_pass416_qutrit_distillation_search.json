@@ -1,0 +1,150 @@
+{
+  "certificate_sha256": "d30d31f510f634830c89f5cefc6e6c6c6b55724a3c1557d0970fc438384d992a",
+  "checks": {
+    "T_magic_clifford_orbit_size_72": true,
+    "all_orbit_inputs_have_same_acceptance": true,
+    "all_orbit_inputs_have_same_return_fidelity": true,
+    "decoder_is_isometry": true,
+    "degree_five_polynomial_fit_exact_to_1e_10": true,
+    "fully_mixed_is_fixed": true,
+    "logical_operators_commute_with_stabilizers": true,
+    "no_direct_depolarizing_improvement_on_grid": true,
+    "projective_clifford_group_order_216": true,
+    "projector_is_idempotent": true,
+    "projector_rank_three": true,
+    "pure_T_orbit_is_not_fixed": true,
+    "pure_T_orbit_return_fidelity_above_0_918": true,
+    "single_best_correction_on_open_interval": true,
+    "stabilizers_commute": true,
+    "strange_state_acceptance_one_over_36": true,
+    "strange_state_reference_fixed": true
+  },
+  "decoder_diagnostics": {
+    "decoder_isometry_error": 0.0,
+    "logical_commutator_error": 0.0,
+    "projector_idempotence_error": 0.0,
+    "projector_trace": 3.0,
+    "stabilizer_commutator_error": 0.0
+  },
+  "exact_degree_five_depolarizing_map": {
+    "maximum_fit_residual_less_than": 1e-10,
+    "output_fidelity": "target_overlap_numerator(e)/success(e)",
+    "success_polynomial_coefficients_low_to_high": [
+      0.039780521262,
+      -0.109739368999,
+      0.164609053498,
+      -0.109739368999,
+      0.02743484225,
+      0.0
+    ],
+    "target_overlap_numerator_coefficients_low_to_high": [
+      0.008953262499,
+      -0.01705571634,
+      0.019048502017,
+      -0.003191569627,
+      -0.006729682245,
+      0.003090430033
+    ]
+  },
+  "protocol": {
+    "code": "[[5,1,3]]_3 perfect stabilizer code",
+    "input_family": "rho_e=(1-e)|M_T><M_T|+e I/3, |M_T>=diag(1,zeta_9,zeta_9^-1)F|0>",
+    "search": "all 72 distinct Clifford images of |M_T> as inputs and all 72 images as output corrections",
+    "stabilizer_generators": [
+      "X Z Z^-1 X^-1 I",
+      "I X Z Z^-1 X^-1",
+      "X^-1 I X Z Z^-1",
+      "Z^-1 X^-1 I X Z"
+    ]
+  },
+  "reference_validation": {
+    "Strange_state_definition": "(|1>-|2>)/sqrt(2)",
+    "acceptance_probability": 0.027777777778,
+    "pure_fixed_point_fidelity": 1.0
+  },
+  "result": {
+    "best_output_clifford_word": "FPXF",
+    "claim_boundary": "This does not exclude conversion through the known five-qutrit attractors, parity checking, equatorialization, another stabilizer code, or a non-code-specific protocol.",
+    "classification": "direct-distillation no-go for this code and this T-state Clifford orbit",
+    "pure_input_acceptance_probability": 0.039780521262,
+    "pure_input_best_return_fidelity": 0.918222659014,
+    "pure_input_irreducible_orbit_infidelity": 0.081777340986,
+    "reason": "even a noiseless T-orbit input exits the code projection outside that orbit; therefore no neighborhood of the pure state can be directly attractive under this protocol"
+  },
+  "schema": "w33.pass416.qutrit_distillation_search.v1",
+  "selected_grid": [
+    {
+      "acceptance_probability": 0.039780521262,
+      "best_output_clifford_word": "FPXF",
+      "depolarizing_probability": 0.0,
+      "fidelity_gain": -0.081777340986,
+      "input_orbit_fidelity": 1.0,
+      "output_best_orbit_fidelity": 0.918222659014
+    },
+    {
+      "acceptance_probability": 0.038699479012,
+      "best_output_clifford_word": "FPXF",
+      "depolarizing_probability": 0.01,
+      "fidelity_gain": -0.079268690919,
+      "input_orbit_fidelity": 0.993333333333,
+      "output_best_orbit_fidelity": 0.914064642415
+    },
+    {
+      "acceptance_probability": 0.034691529492,
+      "best_output_clifford_word": "FPXF",
+      "depolarizing_probability": 0.05,
+      "fidelity_gain": -0.071249488104,
+      "input_orbit_fidelity": 0.966666666667,
+      "output_best_orbit_fidelity": 0.895417178563
+    },
+    {
+      "acceptance_probability": 0.030345679012,
+      "best_output_clifford_word": "FPXF",
+      "depolarizing_probability": 0.1,
+      "fidelity_gain": -0.066070559213,
+      "input_orbit_fidelity": 0.933333333333,
+      "output_best_orbit_fidelity": 0.86726277412
+    },
+    {
+      "acceptance_probability": 0.023582990398,
+      "best_output_clifford_word": "FPXF",
+      "depolarizing_probability": 0.2,
+      "fidelity_gain": -0.072882478576,
+      "input_orbit_fidelity": 0.866666666667,
+      "output_best_orbit_fidelity": 0.79378418809
+    },
+    {
+      "acceptance_probability": 0.018932784636,
+      "best_output_clifford_word": "FPXF",
+      "depolarizing_probability": 0.3,
+      "fidelity_gain": -0.100414009255,
+      "input_orbit_fidelity": 0.8,
+      "output_best_orbit_fidelity": 0.699585990745
+    },
+    {
+      "acceptance_probability": 0.014060356653,
+      "best_output_clifford_word": "FPXF",
+      "depolarizing_probability": 0.5,
+      "fidelity_gain": -0.170592664286,
+      "input_orbit_fidelity": 0.666666666667,
+      "output_best_orbit_fidelity": 0.496074002381
+    },
+    {
+      "acceptance_probability": 0.012452846365,
+      "best_output_clifford_word": "FPXF",
+      "depolarizing_probability": 0.75,
+      "fidelity_gain": -0.146521022751,
+      "input_orbit_fidelity": 0.5,
+      "output_best_orbit_fidelity": 0.353478977249
+    },
+    {
+      "acceptance_probability": 0.012345679012,
+      "best_output_clifford_word": "F",
+      "depolarizing_probability": 1.0,
+      "fidelity_gain": 0.0,
+      "input_orbit_fidelity": 0.333333333333,
+      "output_best_orbit_fidelity": 0.333333333333
+    }
+  ],
+  "status": "PASS"
+}

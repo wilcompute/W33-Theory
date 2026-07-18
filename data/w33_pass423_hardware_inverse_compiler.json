@@ -1,0 +1,563 @@
+{
+  "certificate_sha256": "41c446e4d761249c7252fbf1c631c899ccbe227dfc9016aa846f434a5214d356",
+  "checks": {
+    "all_24_sparse_trials_exact": true,
+    "dictionary_has_387_components": true,
+    "each_delay_has_three_phase_coordinates": true,
+    "mixed_fault_exact": true,
+    "nine_delay_registers": true,
+    "single_pair_selects_phase_trim": true,
+    "source_has_378_coordinates": true,
+    "triple_selects_delay": true
+  },
+  "component_atlas_path": "data/w33_pass423_hardware_component_atlas.json",
+  "deterministic_trials": [
+    {
+      "coefficients": [
+        3.0,
+        2.0,
+        -1.5,
+        0.75
+      ],
+      "exact_support": true,
+      "injected_components": [
+        "detector_gain_mode_4",
+        "native_coupler_0_9",
+        "parasitic_crosstalk_2_18",
+        "delay_register_fibre_1_2"
+      ],
+      "name": "mixed_four_fault",
+      "recovered_components": [
+        "delay_register_fibre_1_2",
+        "detector_gain_mode_4",
+        "native_coupler_0_9",
+        "parasitic_crosstalk_2_18"
+      ],
+      "residual_norm": 0.0
+    },
+    {
+      "coefficients": [
+        1.0
+      ],
+      "exact_support": true,
+      "injected_components": [
+        "phase_trim_0_1"
+      ],
+      "name": "single_pair_prefers_trim",
+      "recovered_components": [
+        "phase_trim_0_1"
+      ],
+      "residual_norm": 0.0
+    },
+    {
+      "coefficients": [
+        1.0
+      ],
+      "exact_support": true,
+      "injected_components": [
+        "delay_register_fibre_0_0"
+      ],
+      "name": "three_pair_pattern_prefers_delay",
+      "recovered_components": [
+        "delay_register_fibre_0_0"
+      ],
+      "residual_norm": 0.0
+    }
+  ],
+  "random_sparse_trials": [
+    {
+      "coefficients": [
+        3.0,
+        1.5,
+        -1.0
+      ],
+      "exact_support": true,
+      "injected_components": [
+        "parasitic_crosstalk_3_19",
+        "parasitic_crosstalk_4_8",
+        "parasitic_crosstalk_6_9"
+      ],
+      "name": "random_0",
+      "recovered_components": [
+        "parasitic_crosstalk_3_19",
+        "parasitic_crosstalk_6_9",
+        "parasitic_crosstalk_4_8"
+      ],
+      "residual_norm": 0.0
+    },
+    {
+      "coefficients": [
+        3.0,
+        1.5,
+        1.5
+      ],
+      "exact_support": true,
+      "injected_components": [
+        "native_coupler_2_17",
+        "parasitic_crosstalk_3_8",
+        "parasitic_crosstalk_17_20"
+      ],
+      "name": "random_1",
+      "recovered_components": [
+        "parasitic_crosstalk_17_20",
+        "native_coupler_2_17",
+        "parasitic_crosstalk_3_8"
+      ],
+      "residual_norm": 0.0
+    },
+    {
+      "coefficients": [
+        3.0,
+        1.5,
+        1.5
+      ],
+      "exact_support": true,
+      "injected_components": [
+        "detector_gain_mode_5",
+        "detector_gain_mode_13",
+        "parasitic_crosstalk_3_7"
+      ],
+      "name": "random_2",
+      "recovered_components": [
+        "detector_gain_mode_13",
+        "detector_gain_mode_5",
+        "parasitic_crosstalk_3_7"
+      ],
+      "residual_norm": 0.0
+    },
+    {
+      "coefficients": [
+        -2.0,
+        1.5,
+        -1.0
+      ],
+      "exact_support": true,
+      "injected_components": [
+        "native_coupler_8_24",
+        "native_coupler_13_25",
+        "native_coupler_17_25"
+      ],
+      "name": "random_3",
+      "recovered_components": [
+        "native_coupler_13_25",
+        "native_coupler_8_24",
+        "native_coupler_17_25"
+      ],
+      "residual_norm": 0.0
+    },
+    {
+      "coefficients": [
+        3.0,
+        -2.0,
+        -1.0
+      ],
+      "exact_support": true,
+      "injected_components": [
+        "native_coupler_5_9",
+        "native_coupler_6_14",
+        "native_coupler_17_25"
+      ],
+      "name": "random_4",
+      "recovered_components": [
+        "native_coupler_5_9",
+        "native_coupler_17_25",
+        "native_coupler_6_14"
+      ],
+      "residual_norm": 0.0
+    },
+    {
+      "coefficients": [
+        3.0,
+        3.0,
+        3.0
+      ],
+      "exact_support": true,
+      "injected_components": [
+        "detector_gain_mode_18",
+        "parasitic_crosstalk_4_12",
+        "phase_trim_4_5"
+      ],
+      "name": "random_5",
+      "recovered_components": [
+        "detector_gain_mode_18",
+        "parasitic_crosstalk_4_12",
+        "phase_trim_4_5"
+      ],
+      "residual_norm": 0.0
+    },
+    {
+      "coefficients": [
+        3.0,
+        -2.0,
+        1.5
+      ],
+      "exact_support": true,
+      "injected_components": [
+        "native_coupler_17_25",
+        "parasitic_crosstalk_0_16",
+        "parasitic_crosstalk_6_9"
+      ],
+      "name": "random_6",
+      "recovered_components": [
+        "parasitic_crosstalk_0_16",
+        "native_coupler_17_25",
+        "parasitic_crosstalk_6_9"
+      ],
+      "residual_norm": 0.0
+    },
+    {
+      "coefficients": [
+        3.0,
+        1.5,
+        -1.0
+      ],
+      "exact_support": true,
+      "injected_components": [
+        "parasitic_crosstalk_4_23",
+        "parasitic_crosstalk_7_14",
+        "parasitic_crosstalk_10_15"
+      ],
+      "name": "random_7",
+      "recovered_components": [
+        "parasitic_crosstalk_7_14",
+        "parasitic_crosstalk_4_23",
+        "parasitic_crosstalk_10_15"
+      ],
+      "residual_norm": 0.0
+    },
+    {
+      "coefficients": [
+        3.0,
+        3.0,
+        3.0
+      ],
+      "exact_support": true,
+      "injected_components": [
+        "detector_gain_mode_18",
+        "parasitic_crosstalk_7_21",
+        "parasitic_crosstalk_10_25"
+      ],
+      "name": "random_8",
+      "recovered_components": [
+        "detector_gain_mode_18",
+        "parasitic_crosstalk_7_21",
+        "parasitic_crosstalk_10_25"
+      ],
+      "residual_norm": 0.0
+    },
+    {
+      "coefficients": [
+        1.5,
+        1.5,
+        -1.0
+      ],
+      "exact_support": true,
+      "injected_components": [
+        "parasitic_crosstalk_3_25",
+        "parasitic_crosstalk_5_24",
+        "parasitic_crosstalk_17_24"
+      ],
+      "name": "random_9",
+      "recovered_components": [
+        "parasitic_crosstalk_3_25",
+        "parasitic_crosstalk_5_24",
+        "parasitic_crosstalk_17_24"
+      ],
+      "residual_norm": 0.0
+    },
+    {
+      "coefficients": [
+        3.0,
+        -2.0,
+        1.5
+      ],
+      "exact_support": true,
+      "injected_components": [
+        "detector_gain_mode_23",
+        "native_coupler_9_18",
+        "parasitic_crosstalk_6_23"
+      ],
+      "name": "random_10",
+      "recovered_components": [
+        "native_coupler_9_18",
+        "detector_gain_mode_23",
+        "parasitic_crosstalk_6_23"
+      ],
+      "residual_norm": 0.0
+    },
+    {
+      "coefficients": [
+        3.0,
+        -2.0,
+        1.5
+      ],
+      "exact_support": true,
+      "injected_components": [
+        "parasitic_crosstalk_7_18",
+        "parasitic_crosstalk_15_24",
+        "phase_trim_15_16"
+      ],
+      "name": "random_11",
+      "recovered_components": [
+        "phase_trim_15_16",
+        "parasitic_crosstalk_15_24",
+        "parasitic_crosstalk_7_18"
+      ],
+      "residual_norm": 0.0
+    },
+    {
+      "coefficients": [
+        -2.0,
+        -2.0,
+        -1.0
+      ],
+      "exact_support": true,
+      "injected_components": [
+        "native_coupler_1_19",
+        "parasitic_crosstalk_4_6",
+        "parasitic_crosstalk_11_14"
+      ],
+      "name": "random_12",
+      "recovered_components": [
+        "native_coupler_1_19",
+        "parasitic_crosstalk_4_6",
+        "parasitic_crosstalk_11_14"
+      ],
+      "residual_norm": 0.0
+    },
+    {
+      "coefficients": [
+        3.0,
+        -1.0,
+        -1.0
+      ],
+      "exact_support": true,
+      "injected_components": [
+        "parasitic_crosstalk_3_17",
+        "parasitic_crosstalk_14_15",
+        "parasitic_crosstalk_16_19"
+      ],
+      "name": "random_13",
+      "recovered_components": [
+        "parasitic_crosstalk_3_17",
+        "parasitic_crosstalk_14_15",
+        "parasitic_crosstalk_16_19"
+      ],
+      "residual_norm": 0.0
+    },
+    {
+      "coefficients": [
+        3.0,
+        -2.0,
+        1.5
+      ],
+      "exact_support": true,
+      "injected_components": [
+        "parasitic_crosstalk_3_22",
+        "parasitic_crosstalk_19_26",
+        "parasitic_crosstalk_23_25"
+      ],
+      "name": "random_14",
+      "recovered_components": [
+        "parasitic_crosstalk_19_26",
+        "parasitic_crosstalk_3_22",
+        "parasitic_crosstalk_23_25"
+      ],
+      "residual_norm": 0.0
+    },
+    {
+      "coefficients": [
+        3.0,
+        -1.0,
+        -1.0
+      ],
+      "exact_support": true,
+      "injected_components": [
+        "native_coupler_1_10",
+        "native_coupler_7_12",
+        "native_coupler_19_23"
+      ],
+      "name": "random_15",
+      "recovered_components": [
+        "native_coupler_19_23",
+        "native_coupler_1_10",
+        "native_coupler_7_12"
+      ],
+      "residual_norm": 0.0
+    },
+    {
+      "coefficients": [
+        3.0,
+        -2.0,
+        -1.0
+      ],
+      "exact_support": true,
+      "injected_components": [
+        "native_coupler_0_12",
+        "parasitic_crosstalk_4_6",
+        "parasitic_crosstalk_7_16"
+      ],
+      "name": "random_16",
+      "recovered_components": [
+        "parasitic_crosstalk_4_6",
+        "native_coupler_0_12",
+        "parasitic_crosstalk_7_16"
+      ],
+      "residual_norm": 0.0
+    },
+    {
+      "coefficients": [
+        3.0,
+        3.0,
+        3.0
+      ],
+      "exact_support": true,
+      "injected_components": [
+        "native_coupler_2_5",
+        "native_coupler_4_14",
+        "parasitic_crosstalk_2_15"
+      ],
+      "name": "random_17",
+      "recovered_components": [
+        "native_coupler_2_5",
+        "native_coupler_4_14",
+        "parasitic_crosstalk_2_15"
+      ],
+      "residual_norm": 0.0
+    },
+    {
+      "coefficients": [
+        3.0,
+        3.0,
+        -2.0
+      ],
+      "exact_support": true,
+      "injected_components": [
+        "parasitic_crosstalk_1_18",
+        "parasitic_crosstalk_4_22",
+        "parasitic_crosstalk_13_19"
+      ],
+      "name": "random_18",
+      "recovered_components": [
+        "parasitic_crosstalk_1_18",
+        "parasitic_crosstalk_13_19",
+        "parasitic_crosstalk_4_22"
+      ],
+      "residual_norm": 0.0
+    },
+    {
+      "coefficients": [
+        -2.0,
+        -1.0,
+        -1.0
+      ],
+      "exact_support": true,
+      "injected_components": [
+        "parasitic_crosstalk_2_24",
+        "parasitic_crosstalk_3_14",
+        "phase_trim_3_5"
+      ],
+      "name": "random_19",
+      "recovered_components": [
+        "parasitic_crosstalk_3_14",
+        "parasitic_crosstalk_2_24",
+        "phase_trim_3_5"
+      ],
+      "residual_norm": 0.0
+    },
+    {
+      "coefficients": [
+        3.0,
+        3.0,
+        -2.0
+      ],
+      "exact_support": true,
+      "injected_components": [
+        "parasitic_crosstalk_11_18",
+        "phase_trim_6_8",
+        "phase_trim_22_23"
+      ],
+      "name": "random_20",
+      "recovered_components": [
+        "parasitic_crosstalk_11_18",
+        "phase_trim_22_23",
+        "phase_trim_6_8"
+      ],
+      "residual_norm": 0.0
+    },
+    {
+      "coefficients": [
+        -2.0,
+        1.5,
+        -1.0
+      ],
+      "exact_support": true,
+      "injected_components": [
+        "native_coupler_2_17",
+        "parasitic_crosstalk_2_18",
+        "parasitic_crosstalk_2_25"
+      ],
+      "name": "random_21",
+      "recovered_components": [
+        "parasitic_crosstalk_2_18",
+        "native_coupler_2_17",
+        "parasitic_crosstalk_2_25"
+      ],
+      "residual_norm": 0.0
+    },
+    {
+      "coefficients": [
+        3.0,
+        1.5,
+        -1.0
+      ],
+      "exact_support": true,
+      "injected_components": [
+        "native_coupler_13_25",
+        "parasitic_crosstalk_7_24",
+        "parasitic_crosstalk_10_13"
+      ],
+      "name": "random_22",
+      "recovered_components": [
+        "parasitic_crosstalk_10_13",
+        "native_coupler_13_25",
+        "parasitic_crosstalk_7_24"
+      ],
+      "residual_norm": 0.0
+    },
+    {
+      "coefficients": [
+        1.5,
+        -1.0,
+        -1.0
+      ],
+      "exact_support": true,
+      "injected_components": [
+        "native_coupler_6_22",
+        "parasitic_crosstalk_5_24",
+        "parasitic_crosstalk_16_21"
+      ],
+      "name": "random_23",
+      "recovered_components": [
+        "parasitic_crosstalk_5_24",
+        "native_coupler_6_22",
+        "parasitic_crosstalk_16_21"
+      ],
+      "residual_norm": 0.0
+    }
+  ],
+  "recommended_workflow": [
+    "subtract four Pass-418 orbit means",
+    "run inverse compiler",
+    "service highest-confidence sparse component set",
+    "rerun twirled calibration and compare residual"
+  ],
+  "schema": "w33.pass423.hardware_inverse_compiler.v1",
+  "status": "PASS",
+  "theorem": {
+    "boundary": "this is a hardware-cause dictionary and model-selection layer; empirical priors and component transfer functions must be calibrated on the physical device",
+    "decoder": "normalized matched filtering with orthogonal matching pursuit exactly recovers the tested noiseless sparse faults",
+    "identifiability": "primitive single-coordinate causes are exact; the three-coordinate fibre signature distinguishes a shared delay fault from three independent phase trims by sparsity",
+    "inverse_map": "the 374 centered Pass-418 coordinates compile into detector, native-coupler, parasitic-crosstalk, local-phase, and shared-delay hypotheses"
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "certificate_sha256": "5a9ed0a7d0abf063711fa0f565891206e3e944192bc1963e3187d8a236b09e4a",
+  "checks": {
+    "incidence_lift_accounts_for_all_nonunit_factors_q9": true,
+    "q25_p_rank_positive": true,
+    "q25_top_layer": true,
+    "q27_p_rank_positive": true,
+    "q27_top_layer": true,
+    "q3_lift_exact": true,
+    "q3_nullity_q2_minus1": true,
+    "q3_p_rank_formula": true,
+    "q3_rank_q3_minus_q2_plus1": true,
+    "q3_tree_valuation": true,
+    "q5_lift_exact": true,
+    "q5_nullity_q2_minus1": true,
+    "q5_p_rank_formula": true,
+    "q5_rank_q3_minus_q2_plus1": true,
+    "q5_tree_valuation": true,
+    "q9_lift_exact": true,
+    "q9_nullity_q2_minus1": true,
+    "q9_p_rank_formula": true,
+    "q9_rank_q3_minus_q2_plus1": true,
+    "q9_tree_valuation": true
+  },
+  "exact_instances": [
+    {
+      "critical_p_valuation": 31,
+      "f": 1,
+      "frozen_critical_p_exponents": {
+        "1": 8,
+        "2": 1,
+        "3": 7
+      },
+      "incidence_nullity": 8,
+      "incidence_p_smith_exponents_including_units": {
+        "0": 10,
+        "1": 8,
+        "2": 1
+      },
+      "incidence_p_valuation": 10,
+      "incidence_rank": 19,
+      "lifted_critical_p_exponents": {
+        "1": 8,
+        "2": 1,
+        "3": 7
+      },
+      "p": 3,
+      "predicted_p_rank": 10,
+      "q": 3
+    },
+    {
+      "critical_p_valuation": 145,
+      "f": 1,
+      "frozen_critical_p_exponents": {
+        "1": 56,
+        "2": 10,
+        "3": 23
+      },
+      "incidence_nullity": 24,
+      "incidence_p_smith_exponents_including_units": {
+        "0": 35,
+        "1": 56,
+        "2": 10
+      },
+      "incidence_p_valuation": 76,
+      "incidence_rank": 101,
+      "lifted_critical_p_exponents": {
+        "1": 56,
+        "2": 10,
+        "3": 23
+      },
+      "p": 5,
+      "predicted_p_rank": 35,
+      "q": 5
+    },
+    {
+      "critical_p_valuation": 1610,
+      "f": 2,
+      "frozen_critical_p_exponents": {
+        "1": 128,
+        "2": 292,
+        "3": 92,
+        "4": 37,
+        "6": 79
+      },
+      "incidence_nullity": 80,
+      "incidence_p_smith_exponents_including_units": {
+        "0": 100,
+        "1": 128,
+        "2": 292,
+        "3": 92,
+        "4": 37
+      },
+      "incidence_p_valuation": 1136,
+      "incidence_rank": 649,
+      "lifted_critical_p_exponents": {
+        "1": 128,
+        "2": 292,
+        "3": 92,
+        "4": 37,
+        "6": 79
+      },
+      "p": 3,
+      "predicted_p_rank": 100,
+      "q": 9
+    }
+  ],
+  "extension_field_constraint_engine": [
+    {
+      "critical_top_exponent": 6,
+      "critical_top_multiplicity": 623,
+      "critical_total_p_valuation": 32490,
+      "f": 2,
+      "incidence_matrix_order": 15625,
+      "incidence_nullity": 624,
+      "incidence_p_rank": 1225,
+      "incidence_rank_over_Q": 15001,
+      "normalized_pre_conductor_counts": {
+        "125": 3576,
+        "25": 7176,
+        "5": 3576,
+        "625": 959
+      },
+      "p": 5,
+      "q": 25,
+      "status": "middle incidence Smith layers not yet uniquely determined by rank, order, duality, and conductor index alone"
+    },
+    {
+      "critical_top_exponent": 9,
+      "critical_top_multiplicity": 727,
+      "critical_total_p_valuation": 61221,
+      "f": 3,
+      "incidence_matrix_order": 19683,
+      "incidence_nullity": 728,
+      "incidence_p_rank": 1000,
+      "incidence_rank_over_Q": 18955,
+      "normalized_pre_conductor_counts": {
+        "243": 1274,
+        "27": 6942,
+        "3": 1274,
+        "729": 831,
+        "81": 4628,
+        "9": 4628
+      },
+      "p": 3,
+      "q": 27,
+      "status": "middle incidence Smith layers not yet uniquely determined by rank, order, duality, and conductor index alone"
+    }
+  ],
+  "schema": "w33.pass420.integral_conductor_gluing.v1",
+  "status": "PASS",
+  "theorem": {
+    "boundary": "the q=25 and q=27 middle layers are constrained exactly but are not asserted until an integral saturation/representation calculation fixes them",
+    "critical_lift": "for q=3,5,9, every positive p-power Smith factor of S occurs unchanged in the reduced critical group, and the only added layer is p^(3f) with multiplicity q^2-2",
+    "group_algebra_identities": [
+      "S^2=q^2 I+q(J-Z)",
+      "SZ=J",
+      "S^3=q^2 S on augmentation zero"
+    ],
+    "incidence_operator": "S=A+I is the square incidence matrix between affine points (x,y,z) and nonvertical planes z=c+bx-ay",
+    "topological_origin": "the q^2-2 top factors are the tree-quotient residue after the q^2-1-dimensional rational kernel of S and removal of the global constant direction"
+  }
+}

@@ -1,0 +1,383 @@
+{
+  "certificate_sha256": "4e5757c322f3eb86967c490f25a428ca5eb51c661ef76095d113c6c36ed5372b",
+  "checks": {
+    "q25_conductor_index_equals_f": true,
+    "q25_field_valid": true,
+    "q25_fourier_distribution_has_q_squared_entries": true,
+    "q25_frobenius_packets_are_1_1_2_2": true,
+    "q25_normalized_order_matches_closed_formula": true,
+    "q25_orbit_census_matches_mobius": true,
+    "q27_conductor_index_equals_f": true,
+    "q27_field_valid": true,
+    "q27_fourier_distribution_has_q_squared_entries": true,
+    "q27_frobenius_packets_are_1_plus_four_3_cycles": true,
+    "q27_normalized_order_matches_closed_formula": true,
+    "q27_orbit_census_matches_mobius": true,
+    "q3_conductor_index_equals_f": true,
+    "q3_field_valid": true,
+    "q3_fourier_distribution_has_q_squared_entries": true,
+    "q3_normalized_order_matches_closed_formula": true,
+    "q3_orbit_census_matches_mobius": true,
+    "q5_conductor_index_equals_f": true,
+    "q5_field_valid": true,
+    "q5_fourier_distribution_has_q_squared_entries": true,
+    "q5_normalized_order_matches_closed_formula": true,
+    "q5_orbit_census_matches_mobius": true,
+    "q9_conductor_index_equals_f": true,
+    "q9_correction_preserves_index_defect_two": true,
+    "q9_exact_top_layer_q_squared_minus_2": true,
+    "q9_field_valid": true,
+    "q9_fourier_distribution_has_q_squared_entries": true,
+    "q9_frobenius_packets_are_1_1_2": true,
+    "q9_missing_p_to_5_layer": true,
+    "q9_normalized_order_matches_closed_formula": true,
+    "q9_orbit_census_matches_mobius": true
+  },
+  "instances": {
+    "25": {
+      "checks": {
+        "conductor_index_equals_f": true,
+        "field_valid": true,
+        "fourier_distribution_has_q_squared_entries": true,
+        "normalized_order_matches_closed_formula": true,
+        "orbit_census_matches_mobius": true
+      },
+      "conductor_index_p_valuation": 2,
+      "critical_group_p_order_valuation": 32490,
+      "f": 2,
+      "frobenius_orbit_length_counts": {
+        "1": 2,
+        "2": 2
+      },
+      "frobenius_orbits": [
+        [
+          1
+        ],
+        [
+          5
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "mobius_predicted_orbit_length_counts": {
+        "1": 2,
+        "2": 2
+      },
+      "normalized_cyclotomic_zp_counts": {
+        "125": 3576,
+        "25": 7176,
+        "5": 3576,
+        "625": 336
+      },
+      "normalized_p_order_valuation": 32492,
+      "normalized_plus_trivial_zp_counts": {
+        "125": 3576,
+        "25": 7176,
+        "5": 3576,
+        "625": 959
+      },
+      "p": 5,
+      "pi_exponent_distribution": {
+        "0": 1,
+        "1": 4,
+        "10": 68,
+        "11": 52,
+        "12": 35,
+        "13": 20,
+        "14": 10,
+        "15": 4,
+        "16": 1,
+        "2": 10,
+        "3": 20,
+        "4": 35,
+        "5": 52,
+        "6": 68,
+        "7": 80,
+        "8": 85,
+        "9": 80
+      },
+      "projective_central_packets": 6,
+      "q": 25
+    },
+    "27": {
+      "checks": {
+        "conductor_index_equals_f": true,
+        "field_valid": true,
+        "fourier_distribution_has_q_squared_entries": true,
+        "normalized_order_matches_closed_formula": true,
+        "orbit_census_matches_mobius": true
+      },
+      "conductor_index_p_valuation": 3,
+      "critical_group_p_order_valuation": 61221,
+      "f": 3,
+      "frobenius_orbit_length_counts": {
+        "1": 1,
+        "3": 4
+      },
+      "frobenius_orbits": [
+        [
+          1
+        ],
+        [
+          3,
+          5,
+          4
+        ],
+        [
+          9,
+          13,
+          16
+        ],
+        [
+          10,
+          14,
+          17
+        ],
+        [
+          11,
+          12,
+          15
+        ]
+      ],
+      "mobius_predicted_orbit_length_counts": {
+        "1": 1,
+        "3": 4
+      },
+      "normalized_cyclotomic_zp_counts": {
+        "243": 1274,
+        "27": 6942,
+        "3": 1274,
+        "729": 104,
+        "81": 4628,
+        "9": 4628
+      },
+      "normalized_p_order_valuation": 61224,
+      "normalized_plus_trivial_zp_counts": {
+        "243": 1274,
+        "27": 6942,
+        "3": 1274,
+        "729": 831,
+        "81": 4628,
+        "9": 4628
+      },
+      "p": 3,
+      "pi_exponent_distribution": {
+        "0": 1,
+        "1": 6,
+        "10": 21,
+        "11": 6,
+        "12": 1,
+        "2": 21,
+        "3": 50,
+        "4": 90,
+        "5": 126,
+        "6": 141,
+        "7": 126,
+        "8": 90,
+        "9": 50
+      },
+      "projective_central_packets": 13,
+      "q": 27
+    },
+    "3": {
+      "checks": {
+        "conductor_index_equals_f": true,
+        "field_valid": true,
+        "fourier_distribution_has_q_squared_entries": true,
+        "normalized_order_matches_closed_formula": true,
+        "orbit_census_matches_mobius": true
+      },
+      "conductor_index_p_valuation": 1,
+      "critical_group_p_order_valuation": 31,
+      "f": 1,
+      "frobenius_orbit_length_counts": {
+        "1": 1
+      },
+      "frobenius_orbits": [
+        [
+          1
+        ]
+      ],
+      "mobius_predicted_orbit_length_counts": {
+        "1": 1
+      },
+      "normalized_cyclotomic_zp_counts": {
+        "3": 10,
+        "9": 4
+      },
+      "normalized_p_order_valuation": 32,
+      "normalized_plus_trivial_zp_counts": {
+        "3": 10,
+        "9": 11
+      },
+      "p": 3,
+      "pi_exponent_distribution": {
+        "0": 1,
+        "1": 2,
+        "2": 3,
+        "3": 2,
+        "4": 1
+      },
+      "projective_central_packets": 1,
+      "q": 3
+    },
+    "5": {
+      "checks": {
+        "conductor_index_equals_f": true,
+        "field_valid": true,
+        "fourier_distribution_has_q_squared_entries": true,
+        "normalized_order_matches_closed_formula": true,
+        "orbit_census_matches_mobius": true
+      },
+      "conductor_index_p_valuation": 1,
+      "critical_group_p_order_valuation": 145,
+      "f": 1,
+      "frobenius_orbit_length_counts": {
+        "1": 1
+      },
+      "frobenius_orbits": [
+        [
+          1
+        ]
+      ],
+      "mobius_predicted_orbit_length_counts": {
+        "1": 1
+      },
+      "normalized_cyclotomic_zp_counts": {
+        "25": 20,
+        "5": 60
+      },
+      "normalized_p_order_valuation": 146,
+      "normalized_plus_trivial_zp_counts": {
+        "25": 43,
+        "5": 60
+      },
+      "p": 5,
+      "pi_exponent_distribution": {
+        "0": 1,
+        "1": 2,
+        "2": 3,
+        "3": 4,
+        "4": 5,
+        "5": 4,
+        "6": 3,
+        "7": 2,
+        "8": 1
+      },
+      "projective_central_packets": 1,
+      "q": 5
+    },
+    "9": {
+      "checks": {
+        "conductor_index_equals_f": true,
+        "field_valid": true,
+        "fourier_distribution_has_q_squared_entries": true,
+        "normalized_order_matches_closed_formula": true,
+        "orbit_census_matches_mobius": true
+      },
+      "conductor_index_p_valuation": 2,
+      "critical_group_p_order_valuation": 1610,
+      "f": 2,
+      "frobenius_orbit_length_counts": {
+        "1": 2,
+        "2": 1
+      },
+      "frobenius_orbits": [
+        [
+          1
+        ],
+        [
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "mobius_predicted_orbit_length_counts": {
+        "1": 2,
+        "2": 1
+      },
+      "normalized_cyclotomic_zp_counts": {
+        "27": 160,
+        "3": 160,
+        "81": 24,
+        "9": 280
+      },
+      "normalized_p_order_valuation": 1612,
+      "normalized_plus_trivial_zp_counts": {
+        "27": 160,
+        "3": 160,
+        "81": 103,
+        "9": 280
+      },
+      "p": 3,
+      "pi_exponent_distribution": {
+        "0": 1,
+        "1": 4,
+        "2": 10,
+        "3": 16,
+        "4": 19,
+        "5": 16,
+        "6": 10,
+        "7": 4,
+        "8": 1
+      },
+      "projective_central_packets": 4,
+      "q": 9
+    }
+  },
+  "proof_ledger": {
+    "integral_boundary": "the theorem fixes the normalization, Frobenius packets, and total conductor index; a closed all-f formula for how the conductor redistributes individual p^k factors is not asserted",
+    "order_identity": "packet Fourier order f*q^2*(q-1) plus trivial order 2f(q^2-2) equals f(q^3+q^2-4), one factor q above the matrix-tree p-order",
+    "packet_descent": "cyclotomic Galois scales nonzero characters by F_p^*, leaving (q-1)/(p-1) projective packets; arithmetic Frobenius permutes those packets",
+    "tensor_descent": "an F_p-basis of F_q identifies its additive character table with F_p^(tensor f); the symplectic two-coordinate block is F_p^(tensor 2f)"
+  },
+  "q9_integral_conductor_correction": {
+    "exact_exponent_counts": {
+      "1": 128,
+      "2": 292,
+      "3": 92,
+      "4": 37,
+      "6": 79
+    },
+    "exact_minus_normalized": {
+      "1": -32,
+      "2": 12,
+      "3": -68,
+      "4": -66,
+      "6": 79
+    },
+    "interpretation": "the f=2 conductor removes 75 generators, shifts the q^2-2 trivial classes from p^(2f) to p^(3f), creates no p^5 layer, and has total index p^f=9",
+    "normalized_exponent_counts": {
+      "1": 160,
+      "2": 280,
+      "3": 160,
+      "4": 103
+    }
+  },
+  "schema": "w33.pass415.frobenius_smith_packets.v1",
+  "status": "PASS",
+  "symbolic_order_identities": {
+    "conductor_index": "p^f=q",
+    "critical_tree_order": "f*(q^3+q^2-5)",
+    "cyclotomic_order": "f*q^2*(q-1)",
+    "mean_pi_exponent": "f*(p-1)",
+    "normalized_total_order": "f*(q^3+q^2-4)",
+    "trivial_sector_order": "2*f*(q^2-2)"
+  },
+  "theorem": {
+    "central_packet_space": "nonzero additive characters modulo Gal(Q_p(zeta_p)/Q_p) are the projective lines F_q^*/F_p^*",
+    "conductor_index": "the normalization plus trivial-central lattice exceeds the integral critical lattice by p-adic order f, hence conductor index p^f=q",
+    "exact_orbit_count": "O_d=(1/d) sum_{e|d} mu(d/e) gcd((q-1)/(p-1),p^e-1)",
+    "fixed_packet_count": "Fix(sigma^d)=gcd((q-1)/(p-1), p^d-1)",
+    "frobenius_action": "sigma([a])=[a^p] on the cyclic group of order (q-1)/(p-1)",
+    "normalized_fourier_block": "over R=Z_p[zeta_p], every projective central packet has pi-Smith polynomial (1+x+...+x^(p-1))^(2f)"
+  }
+}

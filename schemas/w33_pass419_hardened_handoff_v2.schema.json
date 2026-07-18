@@ -1,0 +1,218 @@
+{
+  "$defs": {
+    "artifact": {
+      "additionalProperties": false,
+      "properties": {
+        "artifact_type": {
+          "type": "string"
+        },
+        "envelope": {
+          "$ref": "#/$defs/envelope"
+        },
+        "payload": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "artifact_type",
+        "payload",
+        "envelope"
+      ],
+      "type": "object"
+    },
+    "envelope": {
+      "additionalProperties": false,
+      "properties": {
+        "artifact_type": {
+          "type": "string"
+        },
+        "device_id": {
+          "type": "string"
+        },
+        "manifest_nonce": {
+          "pattern": "^[0-9a-f]{32}$",
+          "type": "string"
+        },
+        "payload_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "predecessor_envelope_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "public_key_ed25519_base64": {
+          "type": "string"
+        },
+        "schema": {
+          "const": "w33.pass419.signature-envelope.v2"
+        },
+        "sequence": {
+          "maximum": 7,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "signature_ed25519_base64": {
+          "type": "string"
+        },
+        "signed_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "signer_role": {
+          "type": "string"
+        },
+        "study_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "schema",
+        "study_id",
+        "device_id",
+        "manifest_nonce",
+        "sequence",
+        "artifact_type",
+        "signer_role",
+        "predecessor_envelope_sha256",
+        "payload_sha256",
+        "signed_at",
+        "public_key_ed25519_base64",
+        "signature_ed25519_base64"
+      ],
+      "type": "object"
+    },
+    "role": {
+      "additionalProperties": false,
+      "properties": {
+        "contact": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "organization": {
+          "type": "string"
+        },
+        "public_key_ed25519_base64": {
+          "minLength": 40,
+          "type": "string"
+        }
+      },
+      "required": [
+        "organization",
+        "public_key_ed25519_base64"
+      ],
+      "type": "object"
+    }
+  },
+  "$id": "w33.pass419.hardened-handoff.v2",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "claim_mode": {
+            "const": "nonclaim_test_fixture"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "claim_eligible": {
+            "const": false
+          },
+          "physical_experiment_completed": {
+            "const": false
+          }
+        }
+      }
+    }
+  ],
+  "properties": {
+    "artifacts": {
+      "items": {
+        "$ref": "#/$defs/artifact"
+      },
+      "maxItems": 8,
+      "minItems": 8,
+      "type": "array"
+    },
+    "certificate_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "claim_eligible": {
+      "type": "boolean"
+    },
+    "claim_mode": {
+      "enum": [
+        "physical_production",
+        "nonclaim_test_fixture"
+      ]
+    },
+    "device_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "manifest_nonce": {
+      "pattern": "^[0-9a-f]{32}$",
+      "type": "string"
+    },
+    "physical_experiment_completed": {
+      "type": "boolean"
+    },
+    "roles": {
+      "additionalProperties": false,
+      "properties": {
+        "acquisition_lab": {
+          "$ref": "#/$defs/role"
+        },
+        "blind_key_custodian": {
+          "$ref": "#/$defs/role"
+        },
+        "blinded_analyst": {
+          "$ref": "#/$defs/role"
+        },
+        "independent_auditor": {
+          "$ref": "#/$defs/role"
+        },
+        "protocol_owner": {
+          "$ref": "#/$defs/role"
+        }
+      },
+      "required": [
+        "protocol_owner",
+        "acquisition_lab",
+        "blind_key_custodian",
+        "blinded_analyst",
+        "independent_auditor"
+      ],
+      "type": "object"
+    },
+    "schema": {
+      "const": "w33.pass419.hardened-handoff.v2"
+    },
+    "study_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema",
+    "claim_mode",
+    "study_id",
+    "device_id",
+    "manifest_nonce",
+    "roles",
+    "artifacts",
+    "physical_experiment_completed",
+    "claim_eligible"
+  ],
+  "title": "W33 hardened independent laboratory handoff manifest v2",
+  "type": "object"
+}
