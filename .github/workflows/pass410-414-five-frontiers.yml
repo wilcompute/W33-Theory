@@ -1,0 +1,93 @@
+name: Pass 410-414 Five Frontiers
+
+on:
+  push:
+    branches: [master, 'agent/pass410-414-*']
+    paths:
+      - 'analysis/w33_pass410_414_common.py'
+      - 'analysis/w33_pass410_prime_power_smith.py'
+      - 'analysis/w33_pass411_qutrit_magic_injection.py'
+      - 'analysis/w33_pass412_multislip_sandpile_decoder.py'
+      - 'analysis/w33_pass413_automorphism_twirl.py'
+      - 'analysis/w33_pass414_independent_lab_packet.py'
+      - 'data/w33_pass410_*.json'
+      - 'data/w33_pass411_*.json'
+      - 'data/w33_pass412_*.json'
+      - 'data/w33_pass413_*.json'
+      - 'data/w33_pass414_*.json'
+      - 'schemas/w33_pass414_independent_lab_handoff_v1.schema.json'
+      - 'docs/W33_PASS414_INDEPENDENT_LAB_HANDOFF.md'
+      - 'tests/test_pass410_414_five_frontiers.py'
+      - 'PASS410_414_FIVE_FRONTIERS_RELEASE.md'
+      - '.github/workflows/pass410-414-five-frontiers.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  OPENBLAS_NUM_THREADS: '1'
+  OMP_NUM_THREADS: '1'
+  MKL_NUM_THREADS: '1'
+
+concurrency:
+  group: pass410-414-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install \
+            numpy==2.3.5 \
+            sympy==1.14.0 \
+            networkx==3.6.1 \
+            cryptography==46.0.4 \
+            pytest==9.0.2 \
+            jsonschema==4.26.0
+      - name: Regenerate all five passes
+        run: |
+          python analysis/w33_pass410_prime_power_smith.py
+          python analysis/w33_pass411_qutrit_magic_injection.py
+          python analysis/w33_pass412_multislip_sandpile_decoder.py
+          python analysis/w33_pass413_automorphism_twirl.py
+          python analysis/w33_pass414_independent_lab_packet.py
+      - name: Require zero artifact drift
+        run: |
+          git diff --exit-code -- \
+            data/w33_pass410_prime_power_smith.json \
+            data/w33_pass411_qutrit_magic_injection.json \
+            data/w33_pass411_clifford_feedforward.json \
+            data/w33_pass412_multislip_sandpile_decoder.json \
+            data/w33_pass413_automorphism_twirl.json \
+            data/w33_pass413_twirl_schedule.json \
+            data/w33_pass414_independent_lab_packet.json \
+            data/w33_pass414_nonclaim_custody_fixture.json \
+            data/w33_pass414_empty_handoff_manifest.json
+      - name: Run all witnesses in check mode
+        run: |
+          python analysis/w33_pass410_prime_power_smith.py --check
+          python analysis/w33_pass411_qutrit_magic_injection.py --check
+          python analysis/w33_pass412_multislip_sandpile_decoder.py --check
+          python analysis/w33_pass413_automorphism_twirl.py --check
+          python analysis/w33_pass414_independent_lab_packet.py --check
+      - name: Validate independent-lab manifests
+        run: |
+          python - <<'PY'
+          import json, jsonschema
+          schema=json.load(open('schemas/w33_pass414_independent_lab_handoff_v1.schema.json'))
+          for path in ['data/w33_pass414_nonclaim_custody_fixture.json','data/w33_pass414_empty_handoff_manifest.json']:
+              jsonschema.validate(json.load(open(path)),schema)
+          PY
+      - name: Run cross-pass regressions
+        run: python -m pytest -q tests/test_pass410_414_five_frontiers.py
+      - name: Verify live claims ledger
+        run: python scripts/check_claims_ledger.py

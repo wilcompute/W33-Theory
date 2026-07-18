@@ -1,0 +1,179 @@
+{
+  "artifacts": {
+    "accepted_bom": {
+      "payload": {
+        "accepted": true,
+        "exceptions": [],
+        "study_type": "nonclaim_test_fixture"
+      },
+      "payload_sha256": "25141e0624374a3cf6b3c0557617e392b11f1e781fb2aa9d2e06a200ac4fa1d4",
+      "signature_envelope": {
+        "artifact_type": "accepted_bom",
+        "payload_sha256": "25141e0624374a3cf6b3c0557617e392b11f1e781fb2aa9d2e06a200ac4fa1d4",
+        "public_key_ed25519_base64": "74Se8eo2+/UvSaEoFtNPeZlz0qXe2rxzy5+QTzqBttg=",
+        "schema": "w33.pass414.signature-envelope.v1",
+        "signature_ed25519_base64": "+4I7qP/j4TtHc3fWadiQryDNLAaxYNBr+fk+xGQh1BYgtk2ULzE0Z3+GEmlSZtv4h6uMlJrwkpdZ2Ddta9OjCQ==",
+        "signed_at": "2026-07-18T09:30:00-04:00",
+        "signer_role": "independent_auditor"
+      }
+    },
+    "blind_key": {
+      "payload": {
+        "mapping_sha256": "3e0fb0f18586b463a3d4ad1f58240d6502eb02160ab11744d066a49bf5a11f94",
+        "study_type": "nonclaim_test_fixture"
+      },
+      "payload_sha256": "e77c8511127645526ff70176dc5b7e65e4065dae38139cd0ace02404f649859a",
+      "signature_envelope": {
+        "artifact_type": "blind_key",
+        "payload_sha256": "e77c8511127645526ff70176dc5b7e65e4065dae38139cd0ace02404f649859a",
+        "public_key_ed25519_base64": "yvTK/rJEEOR6pbhqXkvPfaErOaMJF4c+t/aGg6yo44E=",
+        "schema": "w33.pass414.signature-envelope.v1",
+        "signature_ed25519_base64": "90/jB539OALoFqzb5drlZEvddDe3IA+nTazU9R6fmvxsUKtMuaywakcFZUGpXb4Gb2QQJop858HlBHwB1sFdCQ==",
+        "signed_at": "2026-07-18T11:30:00-04:00",
+        "signer_role": "blind_key_custodian"
+      }
+    },
+    "blinded_analysis": {
+      "payload": {
+        "analysis_sha256": "11ff07281aadc98f8cef91e918b2deb71359e145ef4c90698fe6eec78fd5d9ff",
+        "gate_labels_present": false,
+        "study_type": "nonclaim_test_fixture"
+      },
+      "payload_sha256": "6f1888ebf5b8e0cdf7a4b403a946688d8e6f1cf0076d11d40bca489f9677bb63",
+      "signature_envelope": {
+        "artifact_type": "blinded_analysis",
+        "payload_sha256": "6f1888ebf5b8e0cdf7a4b403a946688d8e6f1cf0076d11d40bca489f9677bb63",
+        "public_key_ed25519_base64": "k3xDQfLyuKw51SRu2KWyBEgumrP2nvkvZUlMGqRUDsY=",
+        "schema": "w33.pass414.signature-envelope.v1",
+        "signature_ed25519_base64": "f5j1JRNv7jZ6P5gLL/q64370cvoe8/rjbiB9z+l/48/Ge6h2yrxx3XBTc7GVlYMsoUPKhqzmlIkb3AvV4g+DBQ==",
+        "signed_at": "2026-07-18T11:15:00-04:00",
+        "signer_role": "blinded_analyst"
+      }
+    },
+    "blinded_raw_counts": {
+      "payload": {
+        "content_sha256": "ba1dc25f73006e36196536c155867f5bc08e1528857c416d1180836264deb34a",
+        "gate_labels_present": false,
+        "rows": 128,
+        "study_type": "nonclaim_test_fixture"
+      },
+      "payload_sha256": "ba79b18f34a1f0fa2b3e12520cc9425f1851e02a0b8100bc861ff672a18fe6f5",
+      "signature_envelope": {
+        "artifact_type": "blinded_raw_counts",
+        "payload_sha256": "ba79b18f34a1f0fa2b3e12520cc9425f1851e02a0b8100bc861ff672a18fe6f5",
+        "public_key_ed25519_base64": "1lG+wdZQI9+UIgtKx5ZIyydU9iXfFu50zVJ7+wb0Jb0=",
+        "schema": "w33.pass414.signature-envelope.v1",
+        "signature_ed25519_base64": "E1WjlbvDKKp18WRWXE2k0p287Yg1VsnauggpPMYwlGwfTd+QHHG2sxzDj8PFeNB3g0fVC2pikmmKZoTDYyzKAg==",
+        "signed_at": "2026-07-18T10:45:00-04:00",
+        "signer_role": "acquisition_lab"
+      }
+    },
+    "calibration_certificate": {
+      "payload": {
+        "mode_overlap": 0.96,
+        "non_dark_fraction": 0.98,
+        "study_type": "nonclaim_test_fixture"
+      },
+      "payload_sha256": "3733ef42e1357e28839b756d7660576912bf794ed98f333b1f4b4814432d153d",
+      "signature_envelope": {
+        "artifact_type": "calibration_certificate",
+        "payload_sha256": "3733ef42e1357e28839b756d7660576912bf794ed98f333b1f4b4814432d153d",
+        "public_key_ed25519_base64": "1lG+wdZQI9+UIgtKx5ZIyydU9iXfFu50zVJ7+wb0Jb0=",
+        "schema": "w33.pass414.signature-envelope.v1",
+        "signature_ed25519_base64": "YyAtSsw9X1fBkvDNOeewqb/BzohwzaqlSRzo6RPRmNDjGPagwa0JIak4m2vTKWTv2cR6epBlrAjQKErHYvMhDQ==",
+        "signed_at": "2026-07-18T10:00:00-04:00",
+        "signer_role": "acquisition_lab"
+      }
+    },
+    "frozen_protocol": {
+      "payload": {
+        "protocol": "Pass-409 four-gate Choi falsifier",
+        "study_type": "nonclaim_test_fixture",
+        "version": 1
+      },
+      "payload_sha256": "7f7985b5d1dbb2a3148b36c8ba833c83d8653dff38b2ded3b5c03cc58c8acb55",
+      "signature_envelope": {
+        "artifact_type": "frozen_protocol",
+        "payload_sha256": "7f7985b5d1dbb2a3148b36c8ba833c83d8653dff38b2ded3b5c03cc58c8acb55",
+        "public_key_ed25519_base64": "9iW/F7UGh8nn0VPgc/iy3aYJOcLnCQrOTqnWMhnI97Y=",
+        "schema": "w33.pass414.signature-envelope.v1",
+        "signature_ed25519_base64": "jYfwwUYDREWijvD/7w1IlpvMDyMC6+P5YIsZK80dhqlW+Q440ET4M+SIiju88kBrR04aVOjFX9+X42ROtjp5Dw==",
+        "signed_at": "2026-07-18T09:00:00-04:00",
+        "signer_role": "protocol_owner"
+      }
+    },
+    "independent_audit": {
+      "payload": {
+        "hash_chain_verified": true,
+        "role_separation_verified": true,
+        "study_type": "nonclaim_test_fixture"
+      },
+      "payload_sha256": "3ff78dd4ceb07be2e3618ad7bb531f8b13d3db2737ba238eac8572353786fbb2",
+      "signature_envelope": {
+        "artifact_type": "independent_audit",
+        "payload_sha256": "3ff78dd4ceb07be2e3618ad7bb531f8b13d3db2737ba238eac8572353786fbb2",
+        "public_key_ed25519_base64": "74Se8eo2+/UvSaEoFtNPeZlz0qXe2rxzy5+QTzqBttg=",
+        "schema": "w33.pass414.signature-envelope.v1",
+        "signature_ed25519_base64": "AqPp5ICiZDyVsnb0y2USJgKU6CQFOuHdei38zbEgQnuXE9xi7xRapAv5ckxM6MMyvDF3/1PbRg8sil61OivJCg==",
+        "signed_at": "2026-07-18T12:00:00-04:00",
+        "signer_role": "independent_auditor"
+      }
+    },
+    "unblinded_result": {
+      "payload": {
+        "claim_eligible": false,
+        "physical_experiment_completed": false,
+        "study_type": "nonclaim_test_fixture"
+      },
+      "payload_sha256": "ab9115208ab7995363dfd090741efac8750d7a8e02265601b997fe63ec6eb2f1",
+      "signature_envelope": {
+        "artifact_type": "unblinded_result",
+        "payload_sha256": "ab9115208ab7995363dfd090741efac8750d7a8e02265601b997fe63ec6eb2f1",
+        "public_key_ed25519_base64": "k3xDQfLyuKw51SRu2KWyBEgumrP2nvkvZUlMGqRUDsY=",
+        "schema": "w33.pass414.signature-envelope.v1",
+        "signature_ed25519_base64": "suSYHVZpVKYPJPQM+ZNIWADygi6H43+nFPcdBR5YHl1D0ywIC39KAPFCfOzI85CyGxi0+ohIFjIFVP2ngsa0Bg==",
+        "signed_at": "2026-07-18T11:30:00-04:00",
+        "signer_role": "blinded_analyst"
+      }
+    }
+  },
+  "certificate_sha256": "4df18caf947c6526c7c0fd3550839f161851353cf5a461564c7a7129d8d497d4",
+  "claim_eligible": false,
+  "claim_mode": "nonclaim_test_fixture",
+  "device_id": "NO-PHYSICAL-DEVICE",
+  "physical_experiment_completed": false,
+  "roles": {
+    "acquisition_lab": {
+      "organization": "nonclaim-fixture",
+      "public_key_ed25519_base64": "1lG+wdZQI9+UIgtKx5ZIyydU9iXfFu50zVJ7+wb0Jb0="
+    },
+    "blind_key_custodian": {
+      "organization": "nonclaim-fixture",
+      "public_key_ed25519_base64": "yvTK/rJEEOR6pbhqXkvPfaErOaMJF4c+t/aGg6yo44E="
+    },
+    "blinded_analyst": {
+      "organization": "nonclaim-fixture",
+      "public_key_ed25519_base64": "k3xDQfLyuKw51SRu2KWyBEgumrP2nvkvZUlMGqRUDsY="
+    },
+    "independent_auditor": {
+      "organization": "nonclaim-fixture",
+      "public_key_ed25519_base64": "74Se8eo2+/UvSaEoFtNPeZlz0qXe2rxzy5+QTzqBttg="
+    },
+    "protocol_owner": {
+      "organization": "nonclaim-fixture",
+      "public_key_ed25519_base64": "9iW/F7UGh8nn0VPgc/iy3aYJOcLnCQrOTqnWMhnI97Y="
+    }
+  },
+  "schema": "w33.pass414.independent-lab-handoff.v1",
+  "study_id": "PASS414-NONCLAIM-FIXTURE",
+  "timestamps": {
+    "acquisition_completed_at": "2026-07-18T10:45:00-04:00",
+    "acquisition_started_at": "2026-07-18T10:30:00-04:00",
+    "analysis_completed_at": "2026-07-18T11:15:00-04:00",
+    "audit_completed_at": "2026-07-18T12:00:00-04:00",
+    "bom_accepted_at": "2026-07-18T09:30:00-04:00",
+    "calibrated_at": "2026-07-18T10:00:00-04:00",
+    "key_revealed_at": "2026-07-18T11:30:00-04:00",
+    "protocol_frozen_at": "2026-07-18T09:00:00-04:00"
+  }
+}

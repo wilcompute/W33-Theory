@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "w33.pass414.independent-lab-handoff.v1",
+  "title": "W33 independent laboratory handoff manifest",
+  "type": "object",
+  "required": ["schema", "claim_mode", "study_id", "device_id", "roles", "artifacts", "timestamps", "physical_experiment_completed", "claim_eligible"],
+  "properties": {
+    "schema": {"const": "w33.pass414.independent-lab-handoff.v1"},
+    "claim_mode": {"enum": ["physical_production", "nonclaim_test_fixture"]},
+    "study_id": {"type": ["string", "null"]},
+    "device_id": {"type": ["string", "null"]},
+    "physical_experiment_completed": {"type": "boolean"},
+    "claim_eligible": {"type": "boolean"},
+    "roles": {
+      "type": "object",
+      "required": ["protocol_owner", "acquisition_lab", "blind_key_custodian", "blinded_analyst", "independent_auditor"],
+      "additionalProperties": false,
+      "properties": {
+        "protocol_owner": {"$ref": "#/$defs/role"},
+        "acquisition_lab": {"$ref": "#/$defs/role"},
+        "blind_key_custodian": {"$ref": "#/$defs/role"},
+        "blinded_analyst": {"$ref": "#/$defs/role"},
+        "independent_auditor": {"$ref": "#/$defs/role"}
+      }
+    },
+    "artifacts": {
+      "type": "object",
+      "required": ["frozen_protocol", "accepted_bom", "calibration_certificate", "blinded_raw_counts", "blinded_analysis", "blind_key", "unblinded_result", "independent_audit"],
+      "additionalProperties": false,
+      "properties": {
+        "frozen_protocol": {"$ref": "#/$defs/artifact"},
+        "accepted_bom": {"$ref": "#/$defs/artifact"},
+        "calibration_certificate": {"$ref": "#/$defs/artifact"},
+        "blinded_raw_counts": {"$ref": "#/$defs/artifact"},
+        "blinded_analysis": {"$ref": "#/$defs/artifact"},
+        "blind_key": {"$ref": "#/$defs/artifact"},
+        "unblinded_result": {"$ref": "#/$defs/artifact"},
+        "independent_audit": {"$ref": "#/$defs/artifact"}
+      }
+    },
+    "timestamps": {
+      "type": "object",
+      "required": ["protocol_frozen_at", "bom_accepted_at", "calibrated_at", "acquisition_started_at", "acquisition_completed_at", "analysis_completed_at", "key_revealed_at", "audit_completed_at"],
+      "additionalProperties": false,
+      "properties": {
+        "protocol_frozen_at": {"type": ["string", "null"], "format": "date-time"},
+        "bom_accepted_at": {"type": ["string", "null"], "format": "date-time"},
+        "calibrated_at": {"type": ["string", "null"], "format": "date-time"},
+        "acquisition_started_at": {"type": ["string", "null"], "format": "date-time"},
+        "acquisition_completed_at": {"type": ["string", "null"], "format": "date-time"},
+        "analysis_completed_at": {"type": ["string", "null"], "format": "date-time"},
+        "key_revealed_at": {"type": ["string", "null"], "format": "date-time"},
+        "audit_completed_at": {"type": ["string", "null"], "format": "date-time"}
+      }
+    }
+  },
+  "$defs": {
+    "role": {
+      "type": "object",
+      "required": ["organization", "public_key_ed25519_base64"],
+      "properties": {
+        "organization": {"type": ["string", "null"]},
+        "contact": {"type": ["string", "null"]},
+        "public_key_ed25519_base64": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "artifact": {
+      "type": "object",
+      "properties": {
+        "path": {"type": ["string", "null"]},
+        "sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+        "signature_envelope": {"type": ["object", "null"]},
+        "payload": {"type": "object"},
+        "payload_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      },
+      "additionalProperties": true
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"claim_mode": {"const": "nonclaim_test_fixture"}}},
+      "then": {"properties": {"physical_experiment_completed": {"const": false}, "claim_eligible": {"const": false}}}
+    }
+  ]
+}

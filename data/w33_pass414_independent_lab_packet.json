@@ -1,0 +1,62 @@
+{
+  "certificate_sha256": "b8cb0e755956beee9613d377f8778781821b76baddfcc18c142dd82a6a9c8986",
+  "checks": {
+    "acquisition_ordered": true,
+    "all_signatures_verify": true,
+    "analysis_after_acquisition": true,
+    "analysis_and_key_have_different_custodians": true,
+    "audit_after_unblinding": true,
+    "auditor_independent_of_acquisition": true,
+    "bom_before_acquisition": true,
+    "calibration_before_acquisition": true,
+    "five_separate_roles": true,
+    "fixture_cannot_claim_physical_completion": true,
+    "key_reveal_after_blinded_analysis": true,
+    "protocol_before_acquisition": true,
+    "raw_and_key_have_different_custodians": true,
+    "template_contains_all_eight_artifacts": true,
+    "template_defaults_to_no_claim": true
+  },
+  "custody_rules": {
+    "analyst_vs_key": "blinded analyst cannot possess the key before analysis completion",
+    "auditor": "must not be the acquisition signer or blind-key custodian",
+    "raw_counts_vs_blind_key": "must be held by different roles until blinded analysis is hash-frozen",
+    "signatures": "Ed25519 over canonical envelope containing artifact SHA-256, role, type, and timestamp"
+  },
+  "files": {
+    "empty_manifest": "data/w33_pass414_empty_handoff_manifest.json",
+    "human_runbook": "docs/W33_PASS414_INDEPENDENT_LAB_HANDOFF.md",
+    "nonclaim_signature_fixture": "data/w33_pass414_nonclaim_custody_fixture.json",
+    "schema": "schemas/w33_pass414_independent_lab_handoff_v1.schema.json"
+  },
+  "physical_claim_boundary": "No physical acquisition occurred in this release. Deterministic private keys and fixture payloads are test-only and must never be used in production.",
+  "production_runbook": [
+    "populate the empty handoff manifest and public keys before protocol freeze",
+    "freeze protocol and BOM; sign both before acquisition",
+    "calibrate and sign the calibration certificate before acquisition",
+    "acquire blinded counts with no gate labels and sign their raw-byte hash",
+    "run blinded analysis and sign its hash before key release",
+    "release the separately signed blind key",
+    "unblind through Pass 397 without --test-mode",
+    "independent auditor verifies every hash, signature, timestamp, role separation rule, and final claim boundary"
+  ],
+  "required_artifact_chain": [
+    "frozen_protocol",
+    "accepted_bom",
+    "calibration_certificate",
+    "blinded_raw_counts",
+    "blinded_analysis",
+    "blind_key",
+    "unblinded_result",
+    "independent_audit"
+  ],
+  "roles": [
+    "protocol_owner",
+    "acquisition_lab",
+    "blind_key_custodian",
+    "blinded_analyst",
+    "independent_auditor"
+  ],
+  "schema": "w33.pass414.independent_lab_packet.v1",
+  "status": "PASS"
+}

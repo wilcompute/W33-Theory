@@ -1,0 +1,134 @@
+{
+  "certificate_sha256": "fba1f713cace278dcf396af12e37792042ea60215b8e21f0e0c32b2e2e1f721f",
+  "checks": {
+    "Clifford_schedule_order_216": true,
+    "GL2_transitive_on_eight_nonzero_Paulis": true,
+    "Pauli_twirl_has_one_nonidentity_rate": true,
+    "SL2_transitive_on_eight_nonzero_Paulis": true,
+    "all_explicit_maps_preserve_adjacency": true,
+    "diameter_three": true,
+    "distance_basis_reconstructs_exact_twirl": true,
+    "four_orbitals": true,
+    "full_automorphism_order_1296": true,
+    "projector_ranks_1_12_8_6": true,
+    "projectors_are_pairwise_orthogonal": true,
+    "projectors_sum_to_identity": true,
+    "schedule_has_64_exact_inverse_epochs": true,
+    "twirl_is_constant_on_distance_classes": true
+  },
+  "combined_calibration_reduction": {
+    "Pauli_nonidentity_invariants": 1,
+    "raw_diagonal_axes": 216,
+    "recommended_report": [
+      "uniform mode",
+      "lambda=2 sector",
+      "lambda=-1 sector",
+      "lambda=-4 sector",
+      "leakage outside the qutrit subspace"
+    ],
+    "spatial_invariants": 4
+  },
+  "qutrit_channel_twirl": {
+    "GL2_order": 48,
+    "SL2_order": 24,
+    "free_parameters_after_trace_preservation": 1,
+    "nonidentity_Pauli_labels": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "raw_probe_weights": {
+      "(0, 1)": 8,
+      "(0, 2)": 15,
+      "(1, 0)": 4,
+      "(1, 1)": 11,
+      "(1, 2)": 18,
+      "(2, 0)": 7,
+      "(2, 1)": 14,
+      "(2, 2)": 21
+    },
+    "twirled_nonidentity_weight": {
+      "denominator": 4,
+      "numerator": 49
+    }
+  },
+  "randomized_compiling": {
+    "claim_boundary": "The twirl is exact as a group average. Experimental Markovianity, gate-independence, and sampling error remain measured assumptions.",
+    "epochs": 64,
+    "schedule_path": "data/w33_pass413_twirl_schedule.json",
+    "seed": 413
+  },
+  "schema": "w33.pass413.automorphism_twirl.v1",
+  "spatial_twirl": {
+    "adjacency_eigenvalues": [
+      8,
+      2,
+      -1,
+      -4
+    ],
+    "commutant_dimension": 4,
+    "distance_orbital_ranks": {
+      "0": 27,
+      "1": 216,
+      "2": 432,
+      "3": 54
+    },
+    "exact_twirl_coefficients_for_deterministic_probe": {
+      "0": {
+        "denominator": 1296,
+        "numerator": 116256
+      },
+      "1": {
+        "denominator": 1296,
+        "numerator": 124320
+      },
+      "2": {
+        "denominator": 1296,
+        "numerator": 131592
+      },
+      "3": {
+        "denominator": 1296,
+        "numerator": 118176
+      }
+    },
+    "group": "Aut(Gamma_3)=H_3 semidirect GL(2,3)",
+    "interpretation": "an arbitrary 27-mode covariance collapses to four spatial spectral powers",
+    "order": 1296,
+    "spectral_sector_ranks": {
+      "-1": 8,
+      "-4": 6,
+      "2": 12,
+      "8": 1
+    }
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,230 @@
+{
+  "certificate_sha256": "71db7a1e0bf209352f9a89d83f86d5077c39ba8c4e57fce777cf0d94948af652",
+  "checks": {
+    "all_erasure_trials_decode_uniquely": true,
+    "edge_connectivity_equals_degree_eight": true,
+    "graph_has_27_vertices": true,
+    "graph_is_8_regular": true,
+    "pairing_is_not_encoded": true,
+    "single_slip_count_702": true,
+    "single_syndromes_unique": true,
+    "weight_four_collision_same_syndrome": true,
+    "weight_four_witness_has_mass_four_each": true,
+    "weight_four_witness_is_principal": true,
+    "weight_three_net_count_9746802": true,
+    "weight_two_net_count_123552": true
+  },
+  "claim_boundary": "This corrects net pulse imbalance through weight three. It cannot infer hidden path pairing without time-bin or edge telemetry.",
+  "erasure_aided_decoder": {
+    "all_trials_unique": true,
+    "deterministic_regression_trials": 24,
+    "input": "sandpile syndrome plus detector-supplied affected-mode support of size at most six",
+    "method": "enumerate all degree-zero net divisors on that support with transport weight at most three"
+  },
+  "flow_kernel_boundary": {
+    "kernel": "integer directed cycle flows",
+    "statement": "the sandpile class depends only on net mode imbalance; source-to-target pairing is erased",
+    "telemetry_requirement": "time-bin or edge labels are required to reconstruct path pairing; affected-mode erasures are sufficient only for the net divisor",
+    "two_slip_pairing_witness": {
+      "net_divisor": [
+        1,
+        1,
+        0,
+        -1,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pairing_one_target_source": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "pairing_two_target_source": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ]
+      ]
+    }
+  },
+  "net_divisor_class_counts": {
+    "cumulative_zero_through_weight_three": 9871057,
+    "exact_weight": {
+      "1": 702,
+      "2": 123552,
+      "3": 9746802
+    },
+    "formula": "sum_{r,s>=1} C(n,r) C(n-r,s) C(w-1,r-1) C(w-1,s-1)"
+  },
+  "schema": "w33.pass412.multislip_sandpile_decoder.v1",
+  "status": "PASS",
+  "theorem": {
+    "principal_divisor_minimum_transport_weight": 8,
+    "proof": "For any nonconstant integer firing vector, its maximum-level set has outgoing cut at least lambda(Gamma_3)=8, so the positive degree of its Laplacian divisor is at least 8. A single fired vertex attains 8.",
+    "reason": "two net errors of transport weight at most 3 differ by transport weight at most 6, below the minimum nonzero principal weight 8",
+    "sharp_failure_weight": 4,
+    "unique_net_error_radius": 3
+  },
+  "weight_four_collision": {
+    "difference_equals_laplacian_column": [
+      8,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      -1,
+      0,
+      0
+    ],
+    "first_net_error": [
+      4,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "mode": 0,
+    "neighbors_partition": [
+      [
+        3,
+        6,
+        9,
+        12
+      ],
+      [
+        15,
+        18,
+        21,
+        24
+      ]
+    ],
+    "second_net_error": [
+      -4,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "shared_syndrome": [
+      107,
+      215,
+      215,
+      199,
+      4,
+      214,
+      199,
+      214,
+      4,
+      202,
+      214,
+      1,
+      202,
+      1,
+      214,
+      15,
+      213,
+      213,
+      12,
+      0,
+      213,
+      15,
+      213,
+      213,
+      12,
+      213
+    ]
+  }
+}

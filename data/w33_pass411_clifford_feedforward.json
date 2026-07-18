@@ -1,0 +1,153 @@
+{
+  "certificate_sha256": "0337af26c7a187af5539815d65b051ef9794dfa30927aedc3be03aa25c83d16d",
+  "entries": [
+    {
+      "bell_outcome": [
+        0,
+        0
+      ],
+      "corrected_operator_error_less_than": 1e-12,
+      "correction_word": "I",
+      "kraus_probability": {
+        "denominator": 9,
+        "numerator": 1
+      },
+      "projective_scalar_magnitude": {
+        "denominator": 3,
+        "numerator": 1
+      }
+    },
+    {
+      "bell_outcome": [
+        0,
+        1
+      ],
+      "corrected_operator_error_less_than": 1e-12,
+      "correction_word": "Z",
+      "kraus_probability": {
+        "denominator": 9,
+        "numerator": 1
+      },
+      "projective_scalar_magnitude": {
+        "denominator": 3,
+        "numerator": 1
+      }
+    },
+    {
+      "bell_outcome": [
+        0,
+        2
+      ],
+      "corrected_operator_error_less_than": 1e-12,
+      "correction_word": "ZZ",
+      "kraus_probability": {
+        "denominator": 9,
+        "numerator": 1
+      },
+      "projective_scalar_magnitude": {
+        "denominator": 3,
+        "numerator": 1
+      }
+    },
+    {
+      "bell_outcome": [
+        1,
+        0
+      ],
+      "corrected_operator_error_less_than": 1e-12,
+      "correction_word": "XXP",
+      "kraus_probability": {
+        "denominator": 9,
+        "numerator": 1
+      },
+      "projective_scalar_magnitude": {
+        "denominator": 3,
+        "numerator": 1
+      }
+    },
+    {
+      "bell_outcome": [
+        1,
+        1
+      ],
+      "corrected_operator_error_less_than": 1e-12,
+      "correction_word": "XPX",
+      "kraus_probability": {
+        "denominator": 9,
+        "numerator": 1
+      },
+      "projective_scalar_magnitude": {
+        "denominator": 3,
+        "numerator": 1
+      }
+    },
+    {
+      "bell_outcome": [
+        1,
+        2
+      ],
+      "corrected_operator_error_less_than": 1e-12,
+      "correction_word": "PXX",
+      "kraus_probability": {
+        "denominator": 9,
+        "numerator": 1
+      },
+      "projective_scalar_magnitude": {
+        "denominator": 3,
+        "numerator": 1
+      }
+    },
+    {
+      "bell_outcome": [
+        2,
+        0
+      ],
+      "corrected_operator_error_less_than": 1e-12,
+      "correction_word": "PPX",
+      "kraus_probability": {
+        "denominator": 9,
+        "numerator": 1
+      },
+      "projective_scalar_magnitude": {
+        "denominator": 3,
+        "numerator": 1
+      }
+    },
+    {
+      "bell_outcome": [
+        2,
+        1
+      ],
+      "corrected_operator_error_less_than": 1e-12,
+      "correction_word": "XPP",
+      "kraus_probability": {
+        "denominator": 9,
+        "numerator": 1
+      },
+      "projective_scalar_magnitude": {
+        "denominator": 3,
+        "numerator": 1
+      }
+    },
+    {
+      "bell_outcome": [
+        2,
+        2
+      ],
+      "corrected_operator_error_less_than": 1e-12,
+      "correction_word": "PXP",
+      "kraus_probability": {
+        "denominator": 9,
+        "numerator": 1
+      },
+      "projective_scalar_magnitude": {
+        "denominator": 3,
+        "numerator": 1
+      }
+    }
+  ],
+  "measurement": "generalized Bell basis (I tensor X^a Z^b)|Phi_3>",
+  "numerical_witness_policy": "exact rational probabilities/scalars; corrected operator residual certified below 1e-12 before publication",
+  "resource": "(I tensor T)|Phi_3>, T=diag(1,zeta_9,zeta_9^-1)",
+  "schema": "w33.pass411.clifford_feedforward.v2"
+}
