@@ -1,0 +1,1790 @@
+{
+  "average_lengths": {
+    "ordered_fixed": 21,
+    "ordered_protected": 10.633293985227,
+    "ordered_source": 6.635216954046,
+    "unordered_fixed": 18,
+    "unordered_protected": 6.817187186168,
+    "unordered_source": 3.635595410385
+  },
+  "certificate_sha256": "a136bd5fd59c56cfe957b0e3a114c07f83214e63f20935614b34e2d84091b169",
+  "channel_scenarios": [
+    {
+      "base_erasure_probability": 0.0,
+      "best": {
+        "adaptive_gain_over_fixed": 14.439668148293,
+        "adaptive_protected_expected_time": 8.225308827438,
+        "adaptive_unprotected_expected_time": 5.431008319554,
+        "fixed_frame_guaranteed_success": 0.953012218946,
+        "fixed_protected_expected_time": 22.664976975732,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.953012218946,
+        "symbol_duration": 1.2,
+        "total_erasure_probability": 0.045500263896
+      },
+      "bit_flip_probability": 0.0001,
+      "candidate_expected_times": [
+        {
+          "adaptive": 8.592104692551,
+          "fixed": 36.963654324123,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 8.225308827438,
+          "fixed": 22.664976975732,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 8.523139445142,
+          "fixed": 22.538375359457,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 8.862492152939,
+          "fixed": 23.402288886694,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 9.203229575066,
+          "fixed": 24.300383249795,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.05,
+      "ordered": false
+    },
+    {
+      "base_erasure_probability": 0.001,
+      "best": {
+        "adaptive_gain_over_fixed": 14.495462459896,
+        "adaptive_protected_expected_time": 8.227884293757,
+        "adaptive_unprotected_expected_time": 5.457240690645,
+        "fixed_frame_guaranteed_success": 0.950564203159,
+        "fixed_protected_expected_time": 22.723346753654,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.950564203159,
+        "symbol_duration": 1.2,
+        "total_erasure_probability": 0.046454763632
+      },
+      "bit_flip_probability": 0.0001,
+      "candidate_expected_times": [
+        {
+          "adaptive": 8.605086079276,
+          "fixed": 37.256042488104,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 8.227884293757,
+          "fixed": 22.723346753654,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 8.523454210442,
+          "fixed": 22.54641168419,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 8.862559949937,
+          "fixed": 23.403526787127,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 9.203283254729,
+          "fixed": 24.301173202899,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.05,
+      "ordered": false
+    },
+    {
+      "base_erasure_probability": 0.0,
+      "best": {
+        "adaptive_gain_over_fixed": 16.846279506342,
+        "adaptive_protected_expected_time": 9.596193632012,
+        "adaptive_unprotected_expected_time": 6.336176372813,
+        "fixed_frame_guaranteed_success": 0.953012218946,
+        "fixed_protected_expected_time": 26.442473138354,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.953012218946,
+        "symbol_duration": 1.4,
+        "total_erasure_probability": 0.045500263896
+      },
+      "bit_flip_probability": 0.0001,
+      "candidate_expected_times": [
+        {
+          "adaptive": 9.712814000275,
+          "fixed": 41.785000540313,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 9.596193632012,
+          "fixed": 26.442473138354,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 10.22776733417,
+          "fixed": 27.046050431348,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 10.907682649771,
+          "fixed": 28.802817091315,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 11.58925205749,
+          "fixed": 30.600482610853,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.1,
+      "ordered": false
+    },
+    {
+      "base_erasure_probability": 0.001,
+      "best": {
+        "adaptive_gain_over_fixed": 16.911372869879,
+        "adaptive_protected_expected_time": 9.599198342717,
+        "adaptive_unprotected_expected_time": 6.366780805752,
+        "fixed_frame_guaranteed_success": 0.950564203159,
+        "fixed_protected_expected_time": 26.510571212596,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.950564203159,
+        "symbol_duration": 1.4,
+        "total_erasure_probability": 0.046454763632
+      },
+      "bit_flip_probability": 0.0001,
+      "candidate_expected_times": [
+        {
+          "adaptive": 9.727488611355,
+          "fixed": 42.115526290901,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 9.599198342717,
+          "fixed": 26.510571212596,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 10.228145052531,
+          "fixed": 27.055694021028,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 10.90776609223,
+          "fixed": 28.804340661079,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 11.589319654104,
+          "fixed": 30.601477366614,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.1,
+      "ordered": false
+    },
+    {
+      "base_erasure_probability": 0.0,
+      "best": {
+        "adaptive_gain_over_fixed": 39.47346035697,
+        "adaptive_protected_expected_time": 11.954232615723,
+        "adaptive_unprotected_expected_time": 11.837552184225,
+        "fixed_frame_guaranteed_success": 0.560009565572,
+        "fixed_protected_expected_time": 51.427692972693,
+        "guard_sigma": 1.5,
+        "jitter_tail_erasure": 0.133614402538,
+        "minimum_frame_guaranteed_success": 0.560009565572,
+        "symbol_duration": 1.6,
+        "total_erasure_probability": 0.133614402538
+      },
+      "bit_flip_probability": 0.0001,
+      "candidate_expected_times": [
+        {
+          "adaptive": 11.954232615723,
+          "fixed": 51.427692972693,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 12.337963241158,
+          "fixed": 33.997465463597,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 13.637023112227,
+          "fixed": 36.061400575131,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 14.998063643435,
+          "fixed": 39.603873500559,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 16.361297022339,
+          "fixed": 43.200681332969,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.2,
+      "ordered": false
+    },
+    {
+      "base_erasure_probability": 0.001,
+      "best": {
+        "adaptive_gain_over_fixed": 39.862200220979,
+        "adaptive_protected_expected_time": 11.972293675514,
+        "adaptive_unprotected_expected_time": 11.901008763572,
+        "fixed_frame_guaranteed_success": 0.555614569277,
+        "fixed_protected_expected_time": 51.834493896493,
+        "guard_sigma": 1.5,
+        "jitter_tail_erasure": 0.133614402538,
+        "minimum_frame_guaranteed_success": 0.555614569277,
+        "symbol_duration": 1.6,
+        "total_erasure_probability": 0.134480788135
+      },
+      "bit_flip_probability": 0.0001,
+      "candidate_expected_times": [
+        {
+          "adaptive": 11.972293675514,
+          "fixed": 51.834493896493,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 12.341826440636,
+          "fixed": 34.08502013048,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 13.637526736708,
+          "fixed": 36.074258694704,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 14.998178376816,
+          "fixed": 39.605968408984,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 16.361392452852,
+          "fixed": 43.202085694043,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.2,
+      "ordered": false
+    },
+    {
+      "base_erasure_probability": 0.0,
+      "best": {
+        "adaptive_gain_over_fixed": 14.620480952138,
+        "adaptive_protected_expected_time": 8.24153633978,
+        "adaptive_unprotected_expected_time": 5.455737999118,
+        "fixed_frame_guaranteed_success": 0.944798515555,
+        "fixed_protected_expected_time": 22.862017291918,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.944798515555,
+        "symbol_duration": 1.2,
+        "total_erasure_probability": 0.045500263896
+      },
+      "bit_flip_probability": 0.001,
+      "candidate_expected_times": [
+        {
+          "adaptive": 8.630748581528,
+          "fixed": 37.51417754062,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 8.24153633978,
+          "fixed": 22.862017291918,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 8.528488901843,
+          "fixed": 22.610345924647,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 8.863937758678,
+          "fixed": 23.422541803554,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 9.203702634134,
+          "fixed": 24.307074451927,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.05,
+      "ordered": false
+    },
+    {
+      "base_erasure_probability": 0.001,
+      "best": {
+        "adaptive_gain_over_fixed": 14.679133374918,
+        "adaptive_protected_expected_time": 8.244397965235,
+        "adaptive_unprotected_expected_time": 5.482141911478,
+        "fixed_frame_guaranteed_success": 0.94226320018,
+        "fixed_protected_expected_time": 22.923531340153,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.94226320018,
+        "symbol_duration": 1.2,
+        "total_erasure_probability": 0.046454763632
+      },
+      "bit_flip_probability": 0.001,
+      "candidate_expected_times": [
+        {
+          "adaptive": 8.643969729818,
+          "fixed": 37.812293778875,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 8.244397965235,
+          "fixed": 22.923531340153,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 8.529189840877,
+          "fixed": 22.623266502416,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 8.864442147484,
+          "fixed": 23.429786931682,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 9.204218320561,
+          "fixed": 24.314341431331,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.05,
+      "ordered": false
+    },
+    {
+      "base_erasure_probability": 0.0,
+      "best": {
+        "adaptive_gain_over_fixed": 17.057227777494,
+        "adaptive_protected_expected_time": 9.615125729743,
+        "adaptive_unprotected_expected_time": 6.365027665637,
+        "fixed_frame_guaranteed_success": 0.944798515555,
+        "fixed_protected_expected_time": 26.672353507238,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.944798515555,
+        "symbol_duration": 1.4,
+        "total_erasure_probability": 0.045500263896
+      },
+      "bit_flip_probability": 0.001,
+      "candidate_expected_times": [
+        {
+          "adaptive": 9.75649839651,
+          "fixed": 42.407331132875,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 9.615125729743,
+          "fixed": 26.672353507238,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 10.234186682212,
+          "fixed": 27.132415109576,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 10.909461856835,
+          "fixed": 28.827743758221,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 11.589847761502,
+          "fixed": 30.608908569094,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.1,
+      "ordered": false
+    },
+    {
+      "base_erasure_probability": 0.001,
+      "best": {
+        "adaptive_gain_over_fixed": 17.125655604071,
+        "adaptive_protected_expected_time": 9.618464292775,
+        "adaptive_unprotected_expected_time": 6.395832230057,
+        "fixed_frame_guaranteed_success": 0.94226320018,
+        "fixed_protected_expected_time": 26.744119896845,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.94226320018,
+        "symbol_duration": 1.4,
+        "total_erasure_probability": 0.046454763632
+      },
+      "bit_flip_probability": 0.001,
+      "candidate_expected_times": [
+        {
+          "adaptive": 9.771444042403,
+          "fixed": 42.744332097859,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 9.618464292775,
+          "fixed": 26.744119896845,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 10.235027809053,
+          "fixed": 27.147919802899,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 10.910082643057,
+          "fixed": 28.836660838993,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 11.59049714441,
+          "fixed": 30.618059580194,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.1,
+      "ordered": false
+    },
+    {
+      "base_erasure_probability": 0.0,
+      "best": {
+        "adaptive_gain_over_fixed": 40.185640290911,
+        "adaptive_protected_expected_time": 12.007998026474,
+        "adaptive_unprotected_expected_time": 11.903480252388,
+        "fixed_frame_guaranteed_success": 0.551791385472,
+        "fixed_protected_expected_time": 52.193638317385,
+        "guard_sigma": 1.5,
+        "jitter_tail_erasure": 0.133614402538,
+        "minimum_frame_guaranteed_success": 0.551791385472,
+        "symbol_duration": 1.6,
+        "total_erasure_probability": 0.133614402538
+      },
+      "bit_flip_probability": 0.001,
+      "candidate_expected_times": [
+        {
+          "adaptive": 12.007998026474,
+          "fixed": 52.193638317385,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 12.36230450967,
+          "fixed": 34.293025937877,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 13.645582242949,
+          "fixed": 36.176553479435,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 15.000510053148,
+          "fixed": 39.638147667554,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 16.362138016238,
+          "fixed": 43.212576803427,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.2,
+      "ordered": false
+    },
+    {
+      "base_erasure_probability": 0.001,
+      "best": {
+        "adaptive_gain_over_fixed": 40.582016068254,
+        "adaptive_protected_expected_time": 12.026392667573,
+        "adaptive_unprotected_expected_time": 11.967426661947,
+        "fixed_frame_guaranteed_success": 0.547441002153,
+        "fixed_protected_expected_time": 52.608408735827,
+        "guard_sigma": 1.5,
+        "jitter_tail_erasure": 0.133614402538,
+        "minimum_frame_guaranteed_success": 0.547441002153,
+        "symbol_duration": 1.6,
+        "total_erasure_probability": 0.134480788135
+      },
+      "bit_flip_probability": 0.001,
+      "candidate_expected_times": [
+        {
+          "adaptive": 12.026392667573,
+          "fixed": 52.608408735827,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 12.366596947853,
+          "fixed": 34.38529701023,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 13.646703745404,
+          "fixed": 36.197226403865,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 15.001363634203,
+          "fixed": 39.650408653615,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 16.363054792108,
+          "fixed": 43.225495877921,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.2,
+      "ordered": false
+    },
+    {
+      "base_erasure_probability": 0.0,
+      "best": {
+        "adaptive_gain_over_fixed": 15.461535352673,
+        "adaptive_protected_expected_time": 8.316738574109,
+        "adaptive_unprotected_expected_time": 5.567622680492,
+        "fixed_frame_guaranteed_success": 0.908392260368,
+        "fixed_protected_expected_time": 23.778273926782,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.908392260368,
+        "symbol_duration": 1.2,
+        "total_erasure_probability": 0.045500263896
+      },
+      "bit_flip_probability": 0.005,
+      "candidate_expected_times": [
+        {
+          "adaptive": 8.806754416786,
+          "fixed": 40.0742890167,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 8.316738574109,
+          "fixed": 23.778273926782,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 8.556197518062,
+          "fixed": 22.977405774977,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 8.874967514835,
+          "fixed": 23.573780657393,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 9.210736035735,
+          "fixed": 24.404481433916,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.05,
+      "ordered": false
+    },
+    {
+      "base_erasure_probability": 0.001,
+      "best": {
+        "adaptive_gain_over_fixed": 15.533180995311,
+        "adaptive_protected_expected_time": 8.320867154893,
+        "adaptive_unprotected_expected_time": 5.594806222128,
+        "fixed_frame_guaranteed_success": 0.905506682304,
+        "fixed_protected_expected_time": 23.854048150204,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.905506682304,
+        "symbol_duration": 1.2,
+        "total_erasure_probability": 0.046454763632
+      },
+      "bit_flip_probability": 0.005,
+      "candidate_expected_times": [
+        {
+          "adaptive": 8.821067637592,
+          "fixed": 40.399233709952,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 8.320867154893,
+          "fixed": 23.854048150204,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 8.558573382336,
+          "fixed": 23.011221977357,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 8.877351494175,
+          "fixed": 23.606118919222,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 9.21323716031,
+          "fixed": 24.438645355999,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.05,
+      "ordered": false
+    },
+    {
+      "base_erasure_probability": 0.0,
+      "best": {
+        "adaptive_gain_over_fixed": 18.038457911452,
+        "adaptive_protected_expected_time": 9.702861669794,
+        "adaptive_unprotected_expected_time": 6.495559793907,
+        "fixed_frame_guaranteed_success": 0.908392260368,
+        "fixed_protected_expected_time": 27.741319581246,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.908392260368,
+        "symbol_duration": 1.4,
+        "total_erasure_probability": 0.045500263896
+      },
+      "bit_flip_probability": 0.005,
+      "candidate_expected_times": [
+        {
+          "adaptive": 9.955461514628,
+          "fixed": 45.301370192791,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 9.702861669794,
+          "fixed": 27.741319581246,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 10.267437021675,
+          "fixed": 27.572886929973,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 10.923036941336,
+          "fixed": 29.013883886023,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 11.598704637593,
+          "fixed": 30.731569213079,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.1,
+      "ordered": false
+    },
+    {
+      "base_erasure_probability": 0.001,
+      "best": {
+        "adaptive_gain_over_fixed": 18.122044494529,
+        "adaptive_protected_expected_time": 9.707678347375,
+        "adaptive_unprotected_expected_time": 6.527273925816,
+        "fixed_frame_guaranteed_success": 0.905506682304,
+        "fixed_protected_expected_time": 27.829722841904,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.905506682304,
+        "symbol_duration": 1.4,
+        "total_erasure_probability": 0.046454763632
+      },
+      "bit_flip_probability": 0.005,
+      "candidate_expected_times": [
+        {
+          "adaptive": 9.971641677278,
+          "fixed": 45.668698976467,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 9.707678347375,
+          "fixed": 27.829722841904,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 10.270288058803,
+          "fixed": 27.613466372828,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 10.925971069753,
+          "fixed": 29.053684823657,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 11.601854201872,
+          "fixed": 30.774590448294,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.1,
+      "ordered": false
+    },
+    {
+      "base_erasure_probability": 0.0,
+      "best": {
+        "adaptive_gain_over_fixed": 43.502656834663,
+        "adaptive_protected_expected_time": 12.252875710311,
+        "adaptive_unprotected_expected_time": 12.202718645598,
+        "fixed_frame_guaranteed_success": 0.516540667543,
+        "fixed_protected_expected_time": 55.755532544974,
+        "guard_sigma": 1.5,
+        "jitter_tail_erasure": 0.133614402538,
+        "minimum_frame_guaranteed_success": 0.516540667543,
+        "symbol_duration": 1.6,
+        "total_erasure_probability": 0.133614402538
+      },
+      "bit_flip_probability": 0.005,
+      "candidate_expected_times": [
+        {
+          "adaptive": 12.252875710311,
+          "fixed": 55.755532544974,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 12.475107861164,
+          "fixed": 35.667410890174,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 13.6899160289,
+          "fixed": 36.763849239964,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 15.019175794337,
+          "fixed": 39.894090343281,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 16.374641841307,
+          "fixed": 43.385744771406,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.2,
+      "ordered": false
+    },
+    {
+      "base_erasure_probability": 0.001,
+      "best": {
+        "adaptive_gain_over_fixed": 43.934839752849,
+        "adaptive_protected_expected_time": 12.27278975665,
+        "adaptive_unprotected_expected_time": 12.268898911579,
+        "fixed_frame_guaranteed_success": 0.512385956343,
+        "fixed_protected_expected_time": 56.207629509498,
+        "guard_sigma": 1.5,
+        "jitter_tail_erasure": 0.133614402538,
+        "minimum_frame_guaranteed_success": 0.512385956343,
+        "symbol_duration": 1.6,
+        "total_erasure_probability": 0.134480788135
+      },
+      "bit_flip_probability": 0.005,
+      "candidate_expected_times": [
+        {
+          "adaptive": 12.27278975665,
+          "fixed": 56.207629509498,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 12.48130073234,
+          "fixed": 35.781072225306,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 13.693717411737,
+          "fixed": 36.817955163771,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 15.023210220911,
+          "fixed": 39.948816632529,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 16.379088284996,
+          "fixed": 43.446480632886,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.2,
+      "ordered": false
+    },
+    {
+      "base_erasure_probability": 0.0,
+      "best": {
+        "adaptive_gain_over_fixed": 14.138847947403,
+        "adaptive_protected_expected_time": 12.931753358133,
+        "adaptive_unprotected_expected_time": 11.168550852013,
+        "fixed_frame_guaranteed_success": 0.930899159408,
+        "fixed_protected_expected_time": 27.070601305537,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.930899159408,
+        "symbol_duration": 1.2,
+        "total_erasure_probability": 0.045500263896
+      },
+      "bit_flip_probability": 0.0001,
+      "candidate_expected_times": [
+        {
+          "adaptive": 14.999501308349,
+          "fixed": 53.271293807853,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 12.931753358133,
+          "fixed": 27.070601305537,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 13.297769353184,
+          "fixed": 26.318861243878,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 13.82375922257,
+          "fixed": 27.303757197745,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 14.355031152634,
+          "fixed": 28.350613733668,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.05,
+      "ordered": true
+    },
+    {
+      "base_erasure_probability": 0.001,
+      "best": {
+        "adaptive_gain_over_fixed": 14.230073041075,
+        "adaptive_protected_expected_time": 12.941532611405,
+        "adaptive_unprotected_expected_time": 11.251131673327,
+        "fixed_frame_guaranteed_success": 0.927438750669,
+        "fixed_protected_expected_time": 27.17160565248,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.927438750669,
+        "symbol_duration": 1.2,
+        "total_erasure_probability": 0.046454763632
+      },
+      "bit_flip_probability": 0.0001,
+      "candidate_expected_times": [
+        {
+          "adaptive": 15.047113870827,
+          "fixed": 53.823316867011,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 12.941532611405,
+          "fixed": 27.17160565248,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 13.298992344628,
+          "fixed": 26.333423149066,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 13.823988838938,
+          "fixed": 27.30588656862,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 14.355200999386,
+          "fixed": 28.351892363507,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.05,
+      "ordered": true
+    },
+    {
+      "base_erasure_probability": 0.0,
+      "best": {
+        "adaptive_gain_over_fixed": 16.495322605304,
+        "adaptive_protected_expected_time": 15.087045584489,
+        "adaptive_unprotected_expected_time": 13.029975994016,
+        "fixed_frame_guaranteed_success": 0.930899159408,
+        "fixed_protected_expected_time": 31.582368189793,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.930899159408,
+        "symbol_duration": 1.4,
+        "total_erasure_probability": 0.045500263896
+      },
+      "bit_flip_probability": 0.0001,
+      "candidate_expected_times": [
+        {
+          "adaptive": 16.955958000743,
+          "fixed": 60.219723434965,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 15.087045584489,
+          "fixed": 31.582368189793,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 15.95732322382,
+          "fixed": 31.582633492654,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 17.013857504702,
+          "fixed": 33.604624243378,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 18.076705895909,
+          "fixed": 35.700772849804,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.1,
+      "ordered": true
+    },
+    {
+      "base_erasure_probability": 0.001,
+      "best": {
+        "adaptive_gain_over_fixed": 16.601751881254,
+        "adaptive_protected_expected_time": 15.098454713306,
+        "adaptive_unprotected_expected_time": 13.126320285549,
+        "fixed_frame_guaranteed_success": 0.927438750669,
+        "fixed_protected_expected_time": 31.70020659456,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.927438750669,
+        "symbol_duration": 1.4,
+        "total_erasure_probability": 0.046454763632
+      },
+      "bit_flip_probability": 0.0001,
+      "candidate_expected_times": [
+        {
+          "adaptive": 17.009780897457,
+          "fixed": 60.843749501839,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 15.098454713306,
+          "fixed": 31.70020659456,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 15.958790813554,
+          "fixed": 31.600107778879,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 17.014140109462,
+          "fixed": 33.607245007532,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 18.076919777004,
+          "fixed": 35.702382976268,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.1,
+      "ordered": true
+    },
+    {
+      "base_erasure_probability": 0.0,
+      "best": {
+        "adaptive_gain_over_fixed": 21.208271921105,
+        "adaptive_protected_expected_time": 19.3976300372,
+        "adaptive_unprotected_expected_time": 16.75282627802,
+        "fixed_frame_guaranteed_success": 0.930899159408,
+        "fixed_protected_expected_time": 40.605901958305,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.930899159408,
+        "symbol_duration": 1.8,
+        "total_erasure_probability": 0.045500263896
+      },
+      "bit_flip_probability": 0.0001,
+      "candidate_expected_times": [
+        {
+          "adaptive": 20.868871385529,
+          "fixed": 74.116582689187,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 19.3976300372,
+          "fixed": 40.605901958305,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 21.276430965094,
+          "fixed": 42.110177990205,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 23.394054068965,
+          "fixed": 46.206358334645,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 25.52005538246,
+          "fixed": 50.401091082076,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.2,
+      "ordered": true
+    },
+    {
+      "base_erasure_probability": 0.001,
+      "best": {
+        "adaptive_gain_over_fixed": 21.345109561612,
+        "adaptive_protected_expected_time": 19.412298917107,
+        "adaptive_unprotected_expected_time": 16.876697509991,
+        "fixed_frame_guaranteed_success": 0.927438750669,
+        "fixed_protected_expected_time": 40.75740847872,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.927438750669,
+        "symbol_duration": 1.8,
+        "total_erasure_probability": 0.046454763632
+      },
+      "bit_flip_probability": 0.0001,
+      "candidate_expected_times": [
+        {
+          "adaptive": 20.935114950716,
+          "fixed": 74.884614771494,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 19.412298917107,
+          "fixed": 40.75740847872,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 21.278387751405,
+          "fixed": 42.133477038505,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 23.39444265051,
+          "fixed": 46.209961885356,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 25.520357332241,
+          "fixed": 50.40336420179,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.2,
+      "ordered": true
+    },
+    {
+      "base_erasure_probability": 0.0,
+      "best": {
+        "adaptive_gain_over_fixed": 14.392985911501,
+        "adaptive_protected_expected_time": 12.980172792972,
+        "adaptive_unprotected_expected_time": 11.246396405789,
+        "fixed_frame_guaranteed_success": 0.920609867208,
+        "fixed_protected_expected_time": 27.373158704472,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.920609867208,
+        "symbol_duration": 1.2,
+        "total_erasure_probability": 0.045500263896
+      },
+      "bit_flip_probability": 0.001,
+      "candidate_expected_times": [
+        {
+          "adaptive": 15.115548821987,
+          "fixed": 54.237840954313,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 12.980172792972,
+          "fixed": 27.373158704472,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 13.314270794061,
+          "fixed": 26.431838025514,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 13.82826980371,
+          "fixed": 27.335990549703,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 14.35651118074,
+          "fixed": 28.361298335321,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.05,
+      "ordered": true
+    },
+    {
+      "base_erasure_probability": 0.001,
+      "best": {
+        "adaptive_gain_over_fixed": 14.488253250643,
+        "adaptive_protected_expected_time": 12.990770427394,
+        "adaptive_unprotected_expected_time": 11.329683468256,
+        "fixed_frame_guaranteed_success": 0.917063149523,
+        "fixed_protected_expected_time": 27.479023678038,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.917063149523,
+        "symbol_duration": 1.2,
+        "total_erasure_probability": 0.046454763632
+      },
+      "bit_flip_probability": 0.001,
+      "candidate_expected_times": [
+        {
+          "adaptive": 15.163972779006,
+          "fixed": 54.802046932453,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 12.990770427394,
+          "fixed": 27.479023678038,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 13.316664558232,
+          "fixed": 26.453909158032,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 13.829854801209,
+          "fixed": 27.347620426064,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 14.358122855229,
+          "fixed": 28.372887747971,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.05,
+      "ordered": true
+    },
+    {
+      "base_erasure_probability": 0.0,
+      "best": {
+        "adaptive_gain_over_fixed": 16.791816896751,
+        "adaptive_protected_expected_time": 15.143534925134,
+        "adaptive_unprotected_expected_time": 13.120795806754,
+        "fixed_frame_guaranteed_success": 0.920609867208,
+        "fixed_protected_expected_time": 31.935351821884,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.920609867208,
+        "symbol_duration": 1.4,
+        "total_erasure_probability": 0.045500263896
+      },
+      "bit_flip_probability": 0.001,
+      "candidate_expected_times": [
+        {
+          "adaptive": 17.087142146594,
+          "fixed": 61.312341948353,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 15.143534925134,
+          "fixed": 31.935351821884,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 15.977124952874,
+          "fixed": 31.718205630617,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 17.019408989181,
+          "fixed": 33.644296061173,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 18.078569635007,
+          "fixed": 35.714227533367,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.1,
+      "ordered": true
+    },
+    {
+      "base_erasure_probability": 0.001,
+      "best": {
+        "adaptive_gain_over_fixed": 16.902962125751,
+        "adaptive_protected_expected_time": 15.15589883196,
+        "adaptive_unprotected_expected_time": 13.217964046299,
+        "fixed_frame_guaranteed_success": 0.917063149523,
+        "fixed_protected_expected_time": 32.058860957711,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.917063149523,
+        "symbol_duration": 1.4,
+        "total_erasure_probability": 0.046454763632
+      },
+      "bit_flip_probability": 0.001,
+      "candidate_expected_times": [
+        {
+          "adaptive": 17.14188227192,
+          "fixed": 61.950140010599,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 15.15589883196,
+          "fixed": 32.058860957711,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 15.979997469878,
+          "fixed": 31.744690989639,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 17.021359755334,
+          "fixed": 33.658609755155,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 18.08059915103,
+          "fixed": 35.728821608556,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.1,
+      "ordered": true
+    },
+    {
+      "base_erasure_probability": 0.0,
+      "best": {
+        "adaptive_gain_over_fixed": 21.589478867251,
+        "adaptive_protected_expected_time": 19.470259189458,
+        "adaptive_unprotected_expected_time": 16.869594608683,
+        "fixed_frame_guaranteed_success": 0.920609867208,
+        "fixed_protected_expected_time": 41.059738056708,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.920609867208,
+        "symbol_duration": 1.8,
+        "total_erasure_probability": 0.045500263896
+      },
+      "bit_flip_probability": 0.001,
+      "candidate_expected_times": [
+        {
+          "adaptive": 21.030328795808,
+          "fixed": 75.461343936435,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 19.470259189458,
+          "fixed": 41.059738056708,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 21.302833270498,
+          "fixed": 42.290940840823,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 23.401687360124,
+          "fixed": 46.260907084112,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 25.522686543539,
+          "fixed": 50.420085929459,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.2,
+      "ordered": true
+    },
+    {
+      "base_erasure_probability": 0.001,
+      "best": {
+        "adaptive_gain_over_fixed": 21.732379875965,
+        "adaptive_protected_expected_time": 19.486155641092,
+        "adaptive_unprotected_expected_time": 16.994525202385,
+        "fixed_frame_guaranteed_success": 0.917063149523,
+        "fixed_protected_expected_time": 41.218535517057,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.917063149523,
+        "symbol_duration": 1.8,
+        "total_erasure_probability": 0.046454763632
+      },
+      "bit_flip_probability": 0.001,
+      "candidate_expected_times": [
+        {
+          "adaptive": 21.097701257748,
+          "fixed": 76.246326166891,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 19.486155641092,
+          "fixed": 41.218535517057,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 21.306663293171,
+          "fixed": 42.326254652852,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 23.404369663584,
+          "fixed": 46.280588413339,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 25.52555174263,
+          "fixed": 50.440689329727,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.2,
+      "ordered": true
+    },
+    {
+      "base_erasure_probability": 0.0,
+      "best": {
+        "adaptive_gain_over_fixed": 15.581382901642,
+        "adaptive_protected_expected_time": 13.204429732337,
+        "adaptive_unprotected_expected_time": 11.600524961647,
+        "fixed_frame_guaranteed_success": 0.875431252208,
+        "fixed_protected_expected_time": 28.785812633979,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.875431252208,
+        "symbol_duration": 1.2,
+        "total_erasure_probability": 0.045500263896
+      },
+      "bit_flip_probability": 0.005,
+      "candidate_expected_times": [
+        {
+          "adaptive": 15.646830879017,
+          "fixed": 58.770396747331,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 13.204429732337,
+          "fixed": 28.785812633979,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 13.399305329396,
+          "fixed": 27.00603869596,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 13.862467713426,
+          "fixed": 27.575070236866,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 14.378382551224,
+          "fixed": 28.515760474179,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.05,
+      "ordered": true
+    },
+    {
+      "base_erasure_probability": 0.001,
+      "best": {
+        "adaptive_gain_over_fixed": 15.695326690251,
+        "adaptive_protected_expected_time": 13.218664938719,
+        "adaptive_unprotected_expected_time": 11.687038277742,
+        "fixed_frame_guaranteed_success": 0.871550366458,
+        "fixed_protected_expected_time": 28.91399162897,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.871550366458,
+        "symbol_duration": 1.2,
+        "total_erasure_probability": 0.046454763632
+      },
+      "bit_flip_probability": 0.005,
+      "candidate_expected_times": [
+        {
+          "adaptive": 15.698987651293,
+          "fixed": 59.392141611465,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 13.218664938719,
+          "fixed": 28.91399162897,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 13.406749229457,
+          "fixed": 27.060209479001,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 13.86983477961,
+          "fixed": 27.626036591523,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 14.38612853415,
+          "fixed": 28.569703046038,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.05,
+      "ordered": true
+    },
+    {
+      "base_erasure_probability": 0.0,
+      "best": {
+        "adaptive_gain_over_fixed": 18.178280051915,
+        "adaptive_protected_expected_time": 15.40516802106,
+        "adaptive_unprotected_expected_time": 13.533945788589,
+        "fixed_frame_guaranteed_success": 0.875431252208,
+        "fixed_protected_expected_time": 33.583448072976,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.875431252208,
+        "symbol_duration": 1.4,
+        "total_erasure_probability": 0.045500263896
+      },
+      "bit_flip_probability": 0.005,
+      "candidate_expected_times": [
+        {
+          "adaptive": 17.687721863237,
+          "fixed": 66.436100670896,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 15.40516802106,
+          "fixed": 33.583448072976,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 16.079166395276,
+          "fixed": 32.407246435152,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 17.061498724217,
+          "fixed": 33.938547983835,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 18.106111360801,
+          "fixed": 35.908735411929,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.1,
+      "ordered": true
+    },
+    {
+      "base_erasure_probability": 0.001,
+      "best": {
+        "adaptive_gain_over_fixed": 18.311214471959,
+        "adaptive_protected_expected_time": 15.421775761839,
+        "adaptive_unprotected_expected_time": 13.6348779907,
+        "fixed_frame_guaranteed_success": 0.871550366458,
+        "fixed_protected_expected_time": 33.732990233798,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.871550366458,
+        "symbol_duration": 1.4,
+        "total_erasure_probability": 0.046454763632
+      },
+      "bit_flip_probability": 0.005,
+      "candidate_expected_times": [
+        {
+          "adaptive": 17.746681692766,
+          "fixed": 67.138942691221,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 15.421775761839,
+          "fixed": 33.732990233798,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 16.088099075348,
+          "fixed": 32.472251374802,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 17.070565882597,
+          "fixed": 34.001275804951,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 18.115865561522,
+          "fixed": 35.976663095011,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.1,
+      "ordered": true
+    },
+    {
+      "base_erasure_probability": 0.0,
+      "best": {
+        "adaptive_gain_over_fixed": 23.372074352463,
+        "adaptive_protected_expected_time": 19.806644598506,
+        "adaptive_unprotected_expected_time": 17.400787442471,
+        "fixed_frame_guaranteed_success": 0.875431252208,
+        "fixed_protected_expected_time": 43.178718950969,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.875431252208,
+        "symbol_duration": 1.8,
+        "total_erasure_probability": 0.045500263896
+      },
+      "bit_flip_probability": 0.005,
+      "candidate_expected_times": [
+        {
+          "adaptive": 21.769503831676,
+          "fixed": 81.767508518026,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 19.806644598506,
+          "fixed": 43.178718950969,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 21.438888527034,
+          "fixed": 43.209661913535,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 23.459560745799,
+          "fixed": 46.665503477773,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 25.561568979954,
+          "fixed": 50.69468528743,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.2,
+      "ordered": true
+    },
+    {
+      "base_erasure_probability": 0.001,
+      "best": {
+        "adaptive_gain_over_fixed": 23.542990035376,
+        "adaptive_protected_expected_time": 19.827997408079,
+        "adaptive_unprotected_expected_time": 17.530557416614,
+        "fixed_frame_guaranteed_success": 0.871550366458,
+        "fixed_protected_expected_time": 43.370987443455,
+        "guard_sigma": 2.0,
+        "jitter_tail_erasure": 0.045500263896,
+        "minimum_frame_guaranteed_success": 0.871550366458,
+        "symbol_duration": 1.8,
+        "total_erasure_probability": 0.046454763632
+      },
+      "bit_flip_probability": 0.005,
+      "candidate_expected_times": [
+        {
+          "adaptive": 21.842069775712,
+          "fixed": 82.632544850733,
+          "guard_sigma": 1.5
+        },
+        {
+          "adaptive": 19.827997408079,
+          "fixed": 43.370987443455,
+          "guard_sigma": 2.0
+        },
+        {
+          "adaptive": 21.45079876713,
+          "fixed": 43.296335166402,
+          "guard_sigma": 2.5
+        },
+        {
+          "adaptive": 23.47202808857,
+          "fixed": 46.751754231808,
+          "guard_sigma": 3.0
+        },
+        {
+          "adaptive": 25.575339616266,
+          "fixed": 50.790583192957,
+          "guard_sigma": 3.5
+        }
+      ],
+      "jitter_sigma_fraction": 0.2,
+      "ordered": true
+    }
+  ],
+  "checks": {
+    "adaptive_ordered_protected_average_below_10_64": true,
+    "adaptive_ordered_source_average_6_6352": true,
+    "adaptive_protected_wins_all_36_channel_scenarios": true,
+    "adaptive_unordered_protected_average_below_6_82": true,
+    "adaptive_unordered_source_average_3_6356": true,
+    "all_packets_fit_three_bytes": true,
+    "all_selected_guards_from_grid": true,
+    "all_shortened_frames_distance_three": true,
+    "ordered_histories_match": true,
+    "source_certificate_passes": true,
+    "unordered_histories_match": true,
+    "worst_ordered_still_21_bits": true,
+    "worst_unordered_still_18_bits": true
+  },
+  "frame_classes": [
+    {
+      "distance_three_verified": true,
+      "fits_bytes": 0,
+      "minimum_distance": null,
+      "parity_bits": 0,
+      "protected_bits": 0,
+      "source_bits": 0
+    },
+    {
+      "distance_three_verified": true,
+      "fits_bytes": 1,
+      "minimum_distance": 3,
+      "parity_bits": 2,
+      "protected_bits": 3,
+      "source_bits": 1
+    },
+    {
+      "distance_three_verified": true,
+      "fits_bytes": 1,
+      "minimum_distance": 3,
+      "parity_bits": 3,
+      "protected_bits": 5,
+      "source_bits": 2
+    },
+    {
+      "distance_three_verified": true,
+      "fits_bytes": 1,
+      "minimum_distance": 3,
+      "parity_bits": 3,
+      "protected_bits": 6,
+      "source_bits": 3
+    },
+    {
+      "distance_three_verified": true,
+      "fits_bytes": 1,
+      "minimum_distance": 3,
+      "parity_bits": 3,
+      "protected_bits": 7,
+      "source_bits": 4
+    },
+    {
+      "distance_three_verified": true,
+      "fits_bytes": 2,
+      "minimum_distance": 3,
+      "parity_bits": 4,
+      "protected_bits": 9,
+      "source_bits": 5
+    },
+    {
+      "distance_three_verified": true,
+      "fits_bytes": 2,
+      "minimum_distance": 3,
+      "parity_bits": 4,
+      "protected_bits": 10,
+      "source_bits": 6
+    },
+    {
+      "distance_three_verified": true,
+      "fits_bytes": 2,
+      "minimum_distance": 3,
+      "parity_bits": 4,
+      "protected_bits": 11,
+      "source_bits": 7
+    },
+    {
+      "distance_three_verified": true,
+      "fits_bytes": 2,
+      "minimum_distance": 3,
+      "parity_bits": 4,
+      "protected_bits": 12,
+      "source_bits": 8
+    },
+    {
+      "distance_three_verified": true,
+      "fits_bytes": 2,
+      "minimum_distance": 3,
+      "parity_bits": 4,
+      "protected_bits": 13,
+      "source_bits": 9
+    },
+    {
+      "distance_three_verified": true,
+      "fits_bytes": 2,
+      "minimum_distance": 3,
+      "parity_bits": 4,
+      "protected_bits": 14,
+      "source_bits": 10
+    },
+    {
+      "distance_three_verified": true,
+      "fits_bytes": 3,
+      "minimum_distance": 3,
+      "parity_bits": 5,
+      "protected_bits": 18,
+      "source_bits": 13
+    },
+    {
+      "distance_three_verified": true,
+      "fits_bytes": 3,
+      "minimum_distance": 3,
+      "parity_bits": 5,
+      "protected_bits": 21,
+      "source_bits": 16
+    }
+  ],
+  "schema": "w33.pass427.adaptive_telemetry_channel.v1",
+  "source_histograms": {
+    "ordered": {
+      "0": 702,
+      "10": 61074000,
+      "13": 4039308,
+      "16": 35803,
+      "2": 105300,
+      "3": 842400,
+      "4": 3790800,
+      "5": 58125600,
+      "6": 213127200,
+      "8": 106002,
+      "9": 5194800
+    },
+    "unordered": {
+      "0": 176202,
+      "1": 842400,
+      "10": 685854,
+      "13": 6202,
+      "2": 9687600,
+      "3": 35521200,
+      "5": 18252,
+      "6": 895050,
+      "7": 10319400
+    }
+  },
+  "status": "PASS",
+  "theorem": {
+    "adaptive_frames": "each payload length k uses the shortest systematic binary Hamming frame satisfying 2^r>=k+r+1",
+    "average_lengths": "unordered protected average 6.817187186168 bits; ordered protected average 10.633293985227 bits",
+    "boundary": "expected-time values use a guaranteed-correct-event repeat metric, not a measured link-layer ARQ implementation; real jitter and correlated errors require device calibration",
+    "jitter_model": "Gaussian timing-tail probability is converted to a known erasure; guard width is chosen by finite expected-time optimization",
+    "packetization": "the measured divisor determines the exact fibre size and therefore the payload length without an extra prefix header",
+    "robustness": "every nonempty frame has distance three, guaranteeing one bit correction or two known erasures"
+  }
+}

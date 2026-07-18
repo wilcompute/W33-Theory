@@ -1,0 +1,281 @@
+{
+  "certificate_sha256": "ec527d3a4b58127095802717e95367246cc30cb3efb1e8cfb8026352406c9887",
+  "checks": {
+    "all_24_append_induction_cases_preserve": true,
+    "all_eleven_guards_have_counterexamples": true,
+    "all_three_finalize_cases_preserve": true,
+    "all_three_unbounded_study_chains_finalize": true,
+    "arbitrary_interleaving_trace_preserves": true,
+    "initial_state_satisfies_invariant": true,
+    "proof_is_not_bounded_attack_enumeration": true,
+    "tla_has_init_next_safety": true,
+    "tla_uses_temporal_invariant": true
+  },
+  "finalization_cases": [
+    {
+      "claim_recorded": true,
+      "preserved": true,
+      "study": "S-A"
+    },
+    {
+      "claim_recorded": true,
+      "preserved": true,
+      "study": "S-B"
+    },
+    {
+      "claim_recorded": true,
+      "preserved": true,
+      "study": "S-C"
+    }
+  ],
+  "formal_spec": "specs/W33Pass429CustodyInductive.tla",
+  "guard_counterexamples": {
+    "artifact_claim": {
+      "breaks_invariant": true,
+      "errors": [
+        "S-A:artifact_claim"
+      ]
+    },
+    "complete_before_claim": {
+      "breaks_invariant": true,
+      "errors": [
+        "premature_claim"
+      ]
+    },
+    "context": {
+      "breaks_invariant": true,
+      "errors": [
+        "S-A:context"
+      ]
+    },
+    "dependency": {
+      "breaks_invariant": true,
+      "errors": [
+        "S-A:dependency"
+      ]
+    },
+    "device_nonce": {
+      "breaks_invariant": true,
+      "errors": [
+        "S-A:context"
+      ]
+    },
+    "distinct_role_keys": {
+      "breaks_invariant": true,
+      "errors": [
+        "key_collision"
+      ]
+    },
+    "predecessor": {
+      "breaks_invariant": true,
+      "errors": [
+        "S-A:predecessor"
+      ]
+    },
+    "role": {
+      "breaks_invariant": true,
+      "errors": [
+        "S-A:role",
+        "S-A:role_key"
+      ]
+    },
+    "role_key": {
+      "breaks_invariant": true,
+      "errors": [
+        "S-A:role_key"
+      ]
+    },
+    "sequence": {
+      "breaks_invariant": true,
+      "errors": [
+        "S-A:sequence"
+      ]
+    },
+    "type_order": {
+      "breaks_invariant": true,
+      "errors": [
+        "S-A:type_order"
+      ]
+    }
+  },
+  "induction_cases": [
+    {
+      "post_errors": [],
+      "pre_errors": [],
+      "prefix_length": 0,
+      "preserved": true,
+      "study": "S-A"
+    },
+    {
+      "post_errors": [],
+      "pre_errors": [],
+      "prefix_length": 1,
+      "preserved": true,
+      "study": "S-A"
+    },
+    {
+      "post_errors": [],
+      "pre_errors": [],
+      "prefix_length": 2,
+      "preserved": true,
+      "study": "S-A"
+    },
+    {
+      "post_errors": [],
+      "pre_errors": [],
+      "prefix_length": 3,
+      "preserved": true,
+      "study": "S-A"
+    },
+    {
+      "post_errors": [],
+      "pre_errors": [],
+      "prefix_length": 4,
+      "preserved": true,
+      "study": "S-A"
+    },
+    {
+      "post_errors": [],
+      "pre_errors": [],
+      "prefix_length": 5,
+      "preserved": true,
+      "study": "S-A"
+    },
+    {
+      "post_errors": [],
+      "pre_errors": [],
+      "prefix_length": 6,
+      "preserved": true,
+      "study": "S-A"
+    },
+    {
+      "post_errors": [],
+      "pre_errors": [],
+      "prefix_length": 7,
+      "preserved": true,
+      "study": "S-A"
+    },
+    {
+      "post_errors": [],
+      "pre_errors": [],
+      "prefix_length": 0,
+      "preserved": true,
+      "study": "S-B"
+    },
+    {
+      "post_errors": [],
+      "pre_errors": [],
+      "prefix_length": 1,
+      "preserved": true,
+      "study": "S-B"
+    },
+    {
+      "post_errors": [],
+      "pre_errors": [],
+      "prefix_length": 2,
+      "preserved": true,
+      "study": "S-B"
+    },
+    {
+      "post_errors": [],
+      "pre_errors": [],
+      "prefix_length": 3,
+      "preserved": true,
+      "study": "S-B"
+    },
+    {
+      "post_errors": [],
+      "pre_errors": [],
+      "prefix_length": 4,
+      "preserved": true,
+      "study": "S-B"
+    },
+    {
+      "post_errors": [],
+      "pre_errors": [],
+      "prefix_length": 5,
+      "preserved": true,
+      "study": "S-B"
+    },
+    {
+      "post_errors": [],
+      "pre_errors": [],
+      "prefix_length": 6,
+      "preserved": true,
+      "study": "S-B"
+    },
+    {
+      "post_errors": [],
+      "pre_errors": [],
+      "prefix_length": 7,
+      "preserved": true,
+      "study": "S-B"
+    },
+    {
+      "post_errors": [],
+      "pre_errors": [],
+      "prefix_length": 0,
+      "preserved": true,
+      "study": "S-C"
+    },
+    {
+      "post_errors": [],
+      "pre_errors": [],
+      "prefix_length": 1,
+      "preserved": true,
+      "study": "S-C"
+    },
+    {
+      "post_errors": [],
+      "pre_errors": [],
+      "prefix_length": 2,
+      "preserved": true,
+      "study": "S-C"
+    },
+    {
+      "post_errors": [],
+      "pre_errors": [],
+      "prefix_length": 3,
+      "preserved": true,
+      "study": "S-C"
+    },
+    {
+      "post_errors": [],
+      "pre_errors": [],
+      "prefix_length": 4,
+      "preserved": true,
+      "study": "S-C"
+    },
+    {
+      "post_errors": [],
+      "pre_errors": [],
+      "prefix_length": 5,
+      "preserved": true,
+      "study": "S-C"
+    },
+    {
+      "post_errors": [],
+      "pre_errors": [],
+      "prefix_length": 6,
+      "preserved": true,
+      "study": "S-C"
+    },
+    {
+      "post_errors": [],
+      "pre_errors": [],
+      "prefix_length": 7,
+      "preserved": true,
+      "study": "S-C"
+    }
+  ],
+  "interleaving_trace_length": 24,
+  "schema": "w33.pass429.inductive_custody_verification.v1",
+  "status": "PASS",
+  "theorem": {
+    "frame_rule": "an append changes exactly one study chain, so all other chains retain their invariant and the local preservation proof lifts to arbitrary finite study maps",
+    "guard_minimality": "removing each of eleven binding or claim guards admits an executable one-step counterexample",
+    "liveness_boundary": "weak fairness can imply eventual completion for continuously enabled honest actors, but liveness is not claimed without scheduler and availability assumptions; the TLA+ theorem is supplied but TLC/Apalache was not run",
+    "scope": "the number of studies and event interleavings is unbounded at the transition-system level; each study has the fixed eight-stage preregistered protocol",
+    "unbounded_safety": "by induction on event count, Init satisfies Safety and every enabled Append or Finalize transition preserves Safety; therefore every finite prefix of every arbitrarily long interleaving is safe"
+  }
+}
