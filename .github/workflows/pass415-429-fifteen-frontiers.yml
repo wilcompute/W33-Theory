@@ -161,5 +161,22 @@ jobs:
             tests/test_pass420_424_five_frontiers.py \
             tests/test_pass425_429_five_frontiers.py
       - if: steps.ready.outputs.ready == 'true'
+        name: Audit exact Pass 425-429 batch
+        run: |
+          python scripts/audit_batch.py \
+            PASS425_429_FIVE_FRONTIERS_RELEASE.md \
+            analysis/w33_pass425_exact_extension_smith.py \
+            analysis/w33_pass426_mixed_qutrit_phase_portrait.py \
+            analysis/w33_pass427_adaptive_telemetry_channel.py \
+            analysis/w33_pass428_bayesian_hardware_diagnosis.py \
+            analysis/w33_pass429_inductive_custody_verification.py \
+            data/w33_pass425_exact_extension_smith.json \
+            data/w33_pass426_mixed_qutrit_phase_portrait.json \
+            data/w33_pass427_adaptive_telemetry_channel.json \
+            data/w33_pass428_bayesian_hardware_diagnosis.json \
+            data/w33_pass429_inductive_custody_verification.json \
+            specs/W33Pass429CustodyInductive.tla \
+            tests/test_pass425_429_five_frontiers.py
+      - if: steps.ready.outputs.ready == 'true'
         name: Verify live claims ledger
         run: python scripts/check_claims_ledger.py
