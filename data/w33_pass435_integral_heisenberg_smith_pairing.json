@@ -1,0 +1,18 @@
+{
+  "cases": [
+    {"layers":{"2":{"1":6,"3":6}},"m_minus":6,"m_plus":12,"p":3,"paired_block":{"matrix":[[12,1],[0,6]],"smith":[1,72]},"q":3,"residual":6,"status":"PASS"},
+    {"layers":{"2":{"2":20,"3":40},"3":{"1":40}},"m_minus":40,"m_plus":60,"p":5,"paired_block":{"matrix":[[30,1],[0,20]],"smith":[1,600]},"q":5,"residual":20,"status":"PASS"},
+    {"layers":{"2":{"1":42,"4":126},"3":{"1":168}},"m_minus":126,"m_plus":168,"p":7,"paired_block":{"matrix":[[56,1],[0,42]],"smith":[1,2352]},"q":7,"residual":42,"status":"PASS"},
+    {"layers":{"2":{"3":72,"4":288},"5":{"1":288}},"m_minus":288,"m_plus":360,"p":3,"paired_block":{"matrix":[[90,1],[0,72]],"smith":[1,6480]},"q":9,"residual":72,"status":"PASS"},
+    {"layers":{"2":{"1":110,"3":550},"3":{"1":550},"5":{"1":660}},"m_minus":550,"m_plus":660,"p":11,"paired_block":{"matrix":[[132,1],[0,110]],"smith":[1,14520]},"q":11,"residual":110,"status":"PASS"},
+    {"layers":{"2":{"2":156,"3":936},"3":{"1":1092},"7":{"1":936}},"m_minus":936,"m_plus":1092,"p":13,"paired_block":{"matrix":[[182,1],[0,156]],"smith":[1,28392]},"q":13,"residual":156,"status":"PASS"},
+    {"layers":{"2":{"4":272,"5":2176},"3":{"2":2176}},"m_minus":2176,"m_plus":2448,"p":17,"paired_block":{"matrix":[[306,1],[0,272]],"smith":[1,83232]},"q":17,"residual":272,"status":"PASS"},
+    {"layers":{"13":{"1":7200},"2":{"3":600,"4":7200},"3":{"1":7800}},"m_minus":7200,"m_plus":7800,"p":5,"paired_block":{"matrix":[[650,1],[0,600]],"smith":[1,390000]},"q":25,"residual":600,"status":"PASS"},
+    {"layers":{"13":{"1":9828},"2":{"1":702,"3":9126},"7":{"1":9126}},"m_minus":9126,"m_plus":9828,"p":3,"paired_block":{"matrix":[[756,1],[0,702]],"smith":[1,530712]},"q":27,"residual":702,"status":"PASS"},
+    {"layers":{"2":{"4":2352,"5":56448},"3":{"1":58800},"5":{"2":56448}},"m_minus":56448,"m_plus":58800,"p":7,"paired_block":{"matrix":[[2450,1],[0,2352]],"smith":[1,5762400]},"q":49,"residual":2352,"status":"PASS"}
+  ],
+  "checks":{"all_census_rows_pass":true,"characteristic_part_supplied_by_pass425":true,"integral_theorem_all_odd_prime_powers":true,"q7_shape":true,"q9_shape":true},
+  "schema":"w33.pass435.integral_heisenberg_smith_pairing.v1",
+  "status":"PASS",
+  "theorem":{"ell_2":"(Z/2^v2(q-1))^(q(q-1)) plus (Z/2^v2(q^2-1))^(q(q-1)^2/2)","mechanism":"central Fourier decomposition + transpose rank lemma + primitive 2x2 Smith pairing","odd_ell_not_p":"(Z/ell^v(q-1))^m_plus plus (Z/ell^v(q+1))^m_minus"}
+}
