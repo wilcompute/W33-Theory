@@ -1,0 +1,108 @@
+name: Pass 425-429 Materializer
+
+on:
+  pull_request:
+    branches: [master]
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pass425-429-materialize
+  cancel-in-progress: false
+
+jobs:
+  materialize:
+    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.head.ref == 'agent/pass425-429-five-frontiers' && github.event.pull_request.head.repo.full_name == github.repository)
+    runs-on: ubuntu-24.04
+    env:
+      RELEASE_BLOB_SHA: 13ddbd06c7fcff7f1f4de2a278b85428ccf1c440
+      EXPECTED_SHA256: adafc32da8e152a9ecb7cbdf3685b0f7f1666fa1003c523f2ae404a450d05db0
+      EXPECTED_BYTES: '31305'
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/pass425-429-five-frontiers
+          fetch-depth: 0
+          token: ${{ github.token }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Fetch and extract immutable release blob
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import base64, hashlib, json, os, tarfile, urllib.request
+          url = f"https://api.github.com/repos/{os.environ['GITHUB_REPOSITORY']}/git/blobs/{os.environ['RELEASE_BLOB_SHA']}"
+          req = urllib.request.Request(url, headers={
+              'Authorization': f"Bearer {os.environ['GH_TOKEN']}",
+              'Accept': 'application/vnd.github+json',
+              'X-GitHub-Api-Version': '2022-11-28',
+          })
+          with urllib.request.urlopen(req) as response:
+              payload = json.load(response)
+          archive_b64 = base64.b64decode(''.join(payload['content'].split())).decode()
+          blob = base64.b64decode(''.join(archive_b64.split()), validate=True)
+          digest = hashlib.sha256(blob).hexdigest()
+          print({'decoded_bytes': len(blob), 'sha256': digest})
+          if len(blob) != int(os.environ['EXPECTED_BYTES']):
+              raise SystemExit('archive byte count mismatch')
+          if digest != os.environ['EXPECTED_SHA256']:
+              raise SystemExit('archive SHA-256 mismatch')
+          expected = {
+              'PASS425_429_FIVE_FRONTIERS_RELEASE.md',
+              'analysis/w33_pass425_exact_extension_smith.py',
+              'analysis/w33_pass426_mixed_qutrit_phase_portrait.py',
+              'analysis/w33_pass427_adaptive_telemetry_channel.py',
+              'analysis/w33_pass428_bayesian_hardware_diagnosis.py',
+              'analysis/w33_pass429_inductive_custody_verification.py',
+              'data/w33_pass425_exact_extension_smith.json',
+              'data/w33_pass426_mixed_qutrit_phase_portrait.json',
+              'data/w33_pass427_adaptive_telemetry_channel.json',
+              'data/w33_pass428_bayesian_hardware_diagnosis.json',
+              'data/w33_pass429_inductive_custody_verification.json',
+              'specs/W33Pass429CustodyInductive.tla',
+              'tests/test_pass425_429_five_frontiers.py',
+          }
+          open('/tmp/pass425429.tar.gz', 'wb').write(blob)
+          with tarfile.open('/tmp/pass425429.tar.gz', 'r:gz') as archive:
+              members = archive.getmembers()
+              names = {m.name for m in members if m.isfile()}
+              if names != expected:
+                  raise SystemExit(f'manifest mismatch missing={expected-names} extra={names-expected}')
+              if any(m.name.startswith('/') or '..' in m.name.split('/') for m in members):
+                  raise SystemExit('unsafe archive path')
+              archive.extractall('.', filter='data')
+          open('/tmp/pass425429-manifest.txt','w').write('\n'.join(sorted(expected))+'\n')
+          PY
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install \
+            numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 networkx==3.6.1 \
+            cryptography==46.0.4 pytest==9.0.2 jsonschema==4.26.0
+      - name: Validate five witnesses
+        run: |
+          python analysis/w33_pass425_exact_extension_smith.py --check
+          python analysis/w33_pass426_mixed_qutrit_phase_portrait.py --check
+          python analysis/w33_pass427_adaptive_telemetry_channel.py --check
+          python analysis/w33_pass428_bayesian_hardware_diagnosis.py --check
+          python analysis/w33_pass429_inductive_custody_verification.py --check
+      - name: Validate regressions and claims
+        run: |
+          python -m pytest -q tests/test_pass425_429_five_frontiers.py
+          python scripts/check_claims_ledger.py
+      - name: Publish validated scientific tree
+        run: |
+          rm -rf .release/pass425_429
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          xargs -d '\n' git add -f -- < /tmp/pass425429-manifest.txt
+          git add -A .release/pass425_429
+          git commit -m 'Passes 425-429: materialize validated scientific release'
+          git push origin HEAD:agent/pass425-429-five-frontiers
