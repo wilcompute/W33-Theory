@@ -1,0 +1,38 @@
+{
+  "schema": "w33.pass430.intake_audit_and_nesting_tower_law.v1",
+  "status": "PASS",
+  "HEADLINE": "Pass 399 intake-audited: GOOD -- its spectrum, tree count, Ramanujan bound and revival no-go all verify independently, it cites 392-394, and its boxed spectrum is located as a mechanical COROLLARY of the proved cover law (commuting fiber operator + trace-pinned multiplicities). THE NINE SECTIONS ARE THE CHARACTERS: the DRG sections of Pass 394 are exactly the linear sections v -> [w,v], w in F3^2 -- covers indexed by the dual of the base torsor, flat = trivial character. AND THE NESTING IS A TOWER LAW: native + phase-pairing = SRG(q^3,(q-1)(q+2),q-2,q+2) for every odd q (commuting-operator proof; q=3 gives the E6 SRG(27,10,1,5), q=5 verified as SRG(125,28,3,7)) -- the E6 nesting was never about E6; it is the q=3 face of the affine-polar tower.",
+  "census": {
+    "pre_tooling_224_330": "57/95",
+    "post_tooling_331_plus": "18/42",
+    "caveat": "not controlled -- the corpus and index both grew; flags on post files are largely CITED priors, which the guard exempts only when the prior filename appears in the text"
+  },
+  "checks": {
+    "q3_spectrum_matches_399_formula": true,
+    "q5_spectrum_matches_399_formula": true,
+    "multiplicities_pinned_by_trace": true,
+    "spectrum_is_corollary_of_394": true,
+    "tau3_equals_2p24_3p31": true,
+    "tau3_matches_399_digits": true,
+    "tau_formula_at_3": true,
+    "ramanujan_3q2_2q_9_positive": true,
+    "q3_revival_no_go_scan": true,
+    "399_attribution_present": true,
+    "nine_drg_sections_again": true,
+    "nine_linear_sections": true,
+    "SECTIONS_ARE_CHARACTERS": true,
+    "q3_one_neighbour_per_fiber": true,
+    "q3_nested_graph_three_eigenvalues": true,
+    "q3_nested_k": true,
+    "q3_srg_lambda_q_minus_2": true,
+    "q3_srg_mu_q_plus_2": true,
+    "q5_one_neighbour_per_fiber": true,
+    "q5_nested_graph_three_eigenvalues": true,
+    "q5_nested_k": true,
+    "q5_srg_lambda_q_minus_2": true,
+    "q5_srg_mu_q_plus_2": true,
+    "q3_case_is_the_E6_srg_27_10_1_5": true,
+    "NESTING_IS_A_TOWER_LAW": true,
+    "census_computed": true
+  }
+}
