@@ -1,0 +1,67 @@
+name: Passes 448-452 Characteristic Hjelmslev Release
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass448_z9_characteristic_smith.py'
+      - 'analysis/w33_pass449_q5_cubic_section_taxonomy.py'
+      - 'analysis/w33_pass450_formal_fourier_audit.py'
+      - 'analysis/w33_pass451_device_ready_blind_packet.py'
+      - 'analysis/w33_pass452_length3_hjelmslev_filtration.py'
+      - 'analysis/PASS448_Z9_CHARACTERISTIC_SMITH.md'
+      - 'analysis/PASS449_Q5_CUBIC_SECTION_TAXONOMY.md'
+      - 'analysis/PASS450_LEAN_CENTRAL_FOURIER_SCAFFOLD.md'
+      - 'analysis/PASS451_DEVICE_READY_BLIND_PACKET.md'
+      - 'analysis/PASS452_LENGTH3_HJELMSLEV_FILTRATION.md'
+      - 'data/w33_pass448_z9_characteristic_smith.json'
+      - 'data/w33_pass449_q5_cubic_section_taxonomy.json'
+      - 'data/w33_pass450_formal_fourier_audit.json'
+      - 'data/w33_pass451_device_ready_blind_packet.json'
+      - 'data/w33_pass452_length3_hjelmslev_filtration.json'
+      - 'formal/**'
+      - 'tests/test_pass448_452_characteristic_hjelmslev_release.py'
+      - 'PASS448_452_CHARACTERISTIC_HJELMSLEV_RELEASE.md'
+      - '.github/workflows/pass448-452-characteristic-hjelmslev.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  PYTHONHASHSEED: '0'
+
+jobs:
+  python-certificates:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install exact dependencies
+        run: python -m pip install numpy==2.3.5 sympy==1.14.0 pytest==9.0.2
+      - name: Verify certificates
+        run: |
+          python analysis/w33_pass448_z9_characteristic_smith.py --check
+          python analysis/w33_pass449_q5_cubic_section_taxonomy.py --check
+          python analysis/w33_pass450_formal_fourier_audit.py --check
+          python analysis/w33_pass451_device_ready_blind_packet.py --check
+          python analysis/w33_pass452_length3_hjelmslev_filtration.py --check
+      - name: Focused regressions
+        run: python -m pytest -q tests/test_pass448_452_characteristic_hjelmslev_release.py
+
+  lean-fourier-scaffold:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formal
+          build: true
+          test: false
+          lint: false
+          nanoda: true
+          nanoda-allow-sorry: false
