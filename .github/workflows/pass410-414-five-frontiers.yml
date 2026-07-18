@@ -38,9 +38,16 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
-      - name: Install exact dependencies
-        run: python -m pip install --upgrade numpy sympy networkx cryptography pytest jsonschema
+          python-version: '3.13'
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install \
+            numpy==2.3.5 \
+            sympy==1.14.0 \
+            networkx==3.6.1 \
+            cryptography==46.0.4 \
+            pytest==9.0.2 \
+            jsonschema==4.26.0
       - name: Regenerate all five passes
         run: |
           python analysis/w33_pass410_prime_power_smith.py
