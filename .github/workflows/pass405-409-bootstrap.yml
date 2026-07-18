@@ -7,13 +7,19 @@ on:
       - 'analysis/w33_pass405_409_bootstrap.py'
       - 'analysis/w33_pass405_409_payload_*.bin'
       - '.github/workflows/pass405-409-bootstrap.yml'
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass405_409_bootstrap.py'
+      - 'analysis/w33_pass405_409_payload_*.bin'
+      - '.github/workflows/pass405-409-bootstrap.yml'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: pass405-409-bootstrap
+  group: pass405-409-bootstrap-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -23,6 +29,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
