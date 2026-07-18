@@ -50,6 +50,9 @@ jobs:
                   m=re.findall(rf'PASS415_CHUNK_{i:02d}_BEGIN -->\n(.*?)\n<!-- PASS415_CHUNK_{i:02d}_END',text,re.S)
                   if not m:raise SystemExit(f'missing {i:02d}')
                   chunks[i]=m[-1].strip()
+          # Issue transport introduced one verified same-length substitution in chunk 05.
+          assert chunks[5][2213]=='l'
+          chunks[5]=chunks[5][:2213]+'p'+chunks[5][2214:]
           blob=base64.b64decode(''.join(chunks[i] for i in range(12)),validate=True)
           digest=hashlib.sha256(blob).hexdigest(); print({'bytes':len(blob),'sha256':digest})
           if digest!=os.environ['EXPECTED_SHA']:raise SystemExit('archive SHA mismatch')
@@ -84,10 +87,10 @@ jobs:
           python scripts/check_claims_ledger.py
       - name: Publish readable release and remove transport machinery
         run: |
-          rm .github/workflows/pass415-419-bootstrap.yml .github/workflows/pass415-419-transport-diagnostic.yml
+          rm .github/workflows/pass415-419-bootstrap.yml .github/workflows/pass415-419-transport-diagnostic.yml .github/workflows/pass415-419-chunk05-export.yml
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add .github/workflows/pass415-419-bootstrap.yml .github/workflows/pass415-419-transport-diagnostic.yml .github/workflows/pass415-419-five-frontiers.yml PASS415_419_FIVE_FRONTIERS_RELEASE.md analysis/w33_pass41*.py data/w33_pass41* schemas/w33_pass419_hardened_handoff_v2.schema.json docs/W33_PASS419_ADVERSARIAL_REPLICATION.md tests/test_pass415_419_five_frontiers.py
-          test "$(git diff --cached --name-only | wc -l)" -eq 21
+          git add .github/workflows/pass415-419-bootstrap.yml .github/workflows/pass415-419-transport-diagnostic.yml .github/workflows/pass415-419-chunk05-export.yml .github/workflows/pass415-419-five-frontiers.yml PASS415_419_FIVE_FRONTIERS_RELEASE.md analysis/w33_pass41*.py data/w33_pass41* schemas/w33_pass419_hardened_handoff_v2.schema.json docs/W33_PASS419_ADVERSARIAL_REPLICATION.md tests/test_pass415_419_five_frontiers.py
+          test "$(git diff --cached --name-only | wc -l)" -eq 22
           git commit -m 'Passes 415-419: execute five orthogonal frontiers'
           git push origin HEAD:agent/pass415-419-five-frontiers
