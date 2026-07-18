@@ -1,0 +1,82 @@
+name: Pass 415-424 Ten Frontiers
+
+on:
+  push:
+    branches: [master, 'agent/pass415-424-*']
+    paths:
+      - 'analysis/w33_pass41*.py'
+      - 'analysis/w33_pass42*.py'
+      - 'data/w33_pass41*'
+      - 'data/w33_pass42*'
+      - 'docs/W33_PASS419_ADVERSARIAL_REPLICATION.md'
+      - 'schemas/w33_pass419_hardened_handoff_v2.schema.json'
+      - 'specs/W33Pass424Custody.tla'
+      - 'tests/test_pass415_419_five_frontiers.py'
+      - 'tests/test_pass420_424_five_frontiers.py'
+      - 'PASS415_419_FIVE_FRONTIERS_RELEASE.md'
+      - 'PASS420_424_FIVE_FRONTIERS_RELEASE.md'
+      - '.github/workflows/pass415-424-ten-frontiers.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  OPENBLAS_NUM_THREADS: '1'
+  OMP_NUM_THREADS: '1'
+  MKL_NUM_THREADS: '1'
+
+concurrency:
+  group: pass415-424-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install \
+            numpy==2.3.5 \
+            scipy==1.17.0 \
+            sympy==1.14.0 \
+            networkx==3.6.1 \
+            cryptography==46.0.4 \
+            pytest==9.0.2 \
+            jsonschema==4.26.0
+      - name: Validate ten witnesses
+        run: |
+          for pass_name in \
+            415_frobenius_smith_packets \
+            416_qutrit_distillation_search \
+            417_divisor_cycle_hybrid_decoder \
+            418_twirl_breaking_spectroscopy \
+            419_adversarial_replication \
+            420_integral_conductor_gluing \
+            421_qutrit_phase_portrait \
+            422_telemetry_coding_theorem \
+            423_hardware_inverse_compiler \
+            424_custody_model_checker
+          do
+            python "analysis/w33_pass${pass_name}.py" --check
+          done
+      - name: Validate regressions and schema
+        run: |
+          python -m pytest -q \
+            tests/test_pass415_419_five_frontiers.py \
+            tests/test_pass420_424_five_frontiers.py
+          python - <<'PY'
+          import json
+          import jsonschema
+          schema = json.load(open('schemas/w33_pass419_hardened_handoff_v2.schema.json'))
+          fixture = json.load(open('data/w33_pass419_hardened_custody_fixture.json'))
+          jsonschema.validate(fixture, schema)
+          PY
+      - name: Verify live claims ledger
+        run: python scripts/check_claims_ledger.py
