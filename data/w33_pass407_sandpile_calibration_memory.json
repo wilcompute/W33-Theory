@@ -1,0 +1,47 @@
+{
+  "certificate_sha256": "35e5b91196e767f7c3a1f917140b8d8cdff9de2215d2d276f168f59e7ed915c6",
+  "checks": {
+    "all_702_oriented_single_slips_present": true,
+    "all_orders_divide_216": true,
+    "all_single_slip_syndromes_unique": true,
+    "critical_group_exponent_216": true,
+    "eleven_tick_adversarial_radius_is_safe": true,
+    "inverse_slips_cancel": true,
+    "minimum_torus_linf_distance_23_ticks": true,
+    "observed_orders_are_72_or_216": true,
+    "reduced_laplacian_size_26": true,
+    "seeded_noise_trials_all_decode": true
+  },
+  "exact_decoder": {
+    "closest_pair": [
+      1,
+      4,
+      13,
+      11
+    ],
+    "decoder_path": "data/w33_pass407_single_slip_decoder_q3.json",
+    "decoder_sha256": "a75c9d006adc9e21856b6485093afb1513e7abfa87c420f57abf6e32d2aa358d",
+    "guaranteed_unique_decode_radius": "strictly less than 23/2 ticks; every integer perturbation with |delta_i|<=11 is safe",
+    "minimum_pairwise_linf_ticks": 23,
+    "modulus_ticks": 216,
+    "oriented_single_slip_states": 702,
+    "syndrome_coordinates": 26
+  },
+  "interpretation": "A zero-sum pulse-slip vector is stored as a persistent class in the q=3 critical group. Compensation adds the inverse class; chip resets correspond to returning the syndrome to zero.",
+  "nonclaim_boundary": "This is an exact discrete calibration-memory and decoder model. It does not assert that a fabricated chip exhibits these slips or that measured analog noise is bounded by 11 syndrome ticks.",
+  "schema": "w33.pass407.sandpile_calibration_memory.v1",
+  "status": "PASS",
+  "torsion_clock": {
+    "category_distribution": {
+      "cross_phase_fibre_order_216": 612,
+      "cross_phase_fibre_order_72": 36,
+      "same_phase_fibre_order_216": 36,
+      "same_phase_fibre_order_72": 18
+    },
+    "meaning": "repeating the same uncompensated unit slip wraps after 72 or 216 applications, depending on its critical-group class",
+    "order_distribution": {
+      "216": 648,
+      "72": 54
+    }
+  }
+}

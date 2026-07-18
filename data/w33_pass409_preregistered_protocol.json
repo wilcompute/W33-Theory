@@ -1,0 +1,47 @@
+{
+  "calibration_requirements": {
+    "device_id_match_required": true,
+    "visibility_dilution_eta_min": 0.85
+  },
+  "claim_boundary": "A future passing sealed bundle would establish agreement with these process-visibility predictions under the calibrated apparatus model, not universal quantum computation or a fundamental-physics claim.",
+  "falsifying_alternatives": {
+    "half_control": {
+      "F3": 0.6666666666666666,
+      "I": 1.0,
+      "X": 0.5,
+      "Z": 0.5
+    },
+    "stuck_identity": {
+      "F3": 1.0,
+      "I": 1.0,
+      "X": 1.0,
+      "Z": 1.0
+    }
+  },
+  "gates": {
+    "F3": 0.3333333333333333,
+    "I": 1.0,
+    "X": 0.0,
+    "Z": 0.0
+  },
+  "minimum_design": {
+    "phases_radians": [
+      0.0,
+      1.5707963267948966,
+      3.141592653589793,
+      4.71238898038469
+    ],
+    "replicates_per_gate": 8,
+    "shots_per_phase": 3000
+  },
+  "physical_experiment_completed": false,
+  "primary_decision_rule": {
+    "all_gate_absolute_sine_quadrature_max": 0.08,
+    "all_gate_absolute_visibility_error_max": 0.08,
+    "integrity_contract": "Pass 397 seal -> analyze -> unblind with no synthetic production fallback",
+    "pass_condition": "all thresholds pass simultaneously; no post-hoc gate-specific relaxation"
+  },
+  "protocol_frozen_at": "2026-07-17T14:00:00-04:00",
+  "schema": "w33.pass409.preregistered_falsifier.v1",
+  "study_type": "future_physical_lab_protocol_not_yet_run"
+}

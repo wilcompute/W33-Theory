@@ -1,0 +1,59 @@
+{
+  "certificate_sha256": "a68d01f7f8a8a59084af14d63cedff493568f234e9bd9545d214facad9d7f8c4",
+  "checks": {
+    "all_216_have_hardware_words": true,
+    "all_symplectic_determinants_one": true,
+    "both_controls_traceless": true,
+    "coupling_support_is_minimal_connected_path": true,
+    "one_hamiltonian_cannot_be_nonabelian": true,
+    "projective_clifford_order_216": true,
+    "shortest_word_maximum_seven": true,
+    "symplectic_quotient_order_24": true,
+    "translation_subgroup_order_9": true,
+    "two_control_lie_dimension_su3": true
+  },
+  "clifford_compiler": {
+    "affine_symplectic_model": "F_3^2 semidirect SL(2,3)",
+    "generator_alphabet": [
+      "X",
+      "Z",
+      "F",
+      "P"
+    ],
+    "maximum_shortest_word_length": 7,
+    "projective_group_order": 216,
+    "schedule_path": "data/w33_pass406_qutrit_clifford_schedule.json",
+    "schedule_sha256": "c1a19b144f670d85c883578c66dc92ce9cdc88d9299d88e260078cab7e210a81",
+    "word_length_distribution": {
+      "0": 1,
+      "1": 4,
+      "2": 13,
+      "3": 32,
+      "4": 56,
+      "5": 65,
+      "6": 40,
+      "7": 5
+    }
+  },
+  "control_family": {
+    "basis_signatures": [
+      "a2f4253cf6d71d778ef79b662a282335853f2bee8bcaf6aeee57a887654ea54c",
+      "07625cc82105e7dcf0eeab5d72db73c1094026ea25ac71a3b952cc2f38044bfb",
+      "7798f58e55c6509115b6ffb5030e0c1917f2cbf0aedff5ff374089f640362127",
+      "5d7abe42f4c80525e1e3f6893068819f2d61e9dfa118b84a45da9886536067e2",
+      "b5c21b606190ab22aed0905cf8386f2db2bf416a41bef6cf092f63e3f118b0da",
+      "04ba9d81a08548ab294f9f442f14a64ead437de878117288cfced9520158ba92",
+      "fe68758b6895d67d8b497b937d65e24e9a1cb37e6af967f849cd547696e74d74",
+      "2fb1a67426bf4881ff589df5b7813cd4f340a37fbc9cf558f310d408fcfbfcb0"
+    ],
+    "diagonal_control": "D=diag(-4,-1,5)",
+    "exact_lie_algebra": "Lie_R(iD,iK)=su(3)",
+    "generator_minimality": "one Hamiltonian generates an abelian one-parameter group; two noncommuting Hamiltonians are the minimum possible",
+    "lie_dimension": 8,
+    "mixing_control": "K=|0><1|+|1><0|+|1><2|+|2><1|",
+    "support_minimality": "a connected graph on three modes needs at least two couplings; K uses exactly two"
+  },
+  "hardware_claim_boundary": "This is an exact gate/compiler certificate. Tritters, phase plates, losses, and switching timings remain engineering inputs; no physical run is claimed.",
+  "schema": "w33.pass406.nonabelian_clifford_compiler.v1",
+  "status": "PASS"
+}

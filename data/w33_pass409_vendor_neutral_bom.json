@@ -1,0 +1,112 @@
+{
+  "acceptance_tests": [
+    "reconstruct all 108 native edges exactly once",
+    "verify zero simultaneous mode conflicts in each native slice",
+    "measure magnetic triangle phase circulation before blinded acquisition",
+    "hash firmware, schedule, calibration, and blind-key commitments before acquisition"
+  ],
+  "compiled_counts": {
+    "detector_channels": 27,
+    "magnetic_directed_couplers": 27,
+    "native_coupler_activations": 108,
+    "native_time_slices": 9,
+    "parallel_native_couplers_per_slice": 12
+  },
+  "component_classes": [
+    {
+      "class": "heralded single-photon source",
+      "id": "SRC-1",
+      "quantity": 1,
+      "required_specifications": {
+        "g2_zero_max": null,
+        "heralding_efficiency": null,
+        "repetition_rate_hz": null
+      }
+    },
+    {
+      "class": "phase-stable optical modes",
+      "id": "MODE-27",
+      "quantity": 27,
+      "required_specifications": {
+        "path_length_drift_um_per_hour": null,
+        "relative_phase_stability_rad_rms": null
+      }
+    },
+    {
+      "class": "reconfigurable two-mode couplers",
+      "id": "SW-12",
+      "quantity": 12,
+      "required_specifications": {
+        "insertion_loss_db_max": null,
+        "splitting_ratio_error_max": null,
+        "switching_time_ns_max": null
+      },
+      "reuse_model": "reprogrammed across nine native slices"
+    },
+    {
+      "class": "oriented three-mode magnetic triangles",
+      "equivalent_directed_couplers": 27,
+      "id": "MAG-9",
+      "quantity": 9,
+      "required_specifications": {
+        "coupling_magnitude": "1/sqrt(3)",
+        "directed_phase_rad": "pi/2",
+        "phase_error_rad_max": null
+      }
+    },
+    {
+      "class": "balanced qutrit Fourier tritters",
+      "id": "TRI-9",
+      "quantity": 9,
+      "required_specifications": {
+        "insertion_loss_db_max": null,
+        "unitary_process_fidelity_min": null
+      }
+    },
+    {
+      "class": "independent phase shifters",
+      "id": "PHASE-27",
+      "quantity": 27,
+      "required_specifications": {
+        "phase_repeatability_rad_rms": null,
+        "phase_resolution_rad": null
+      }
+    },
+    {
+      "class": "time-slice delay registers",
+      "id": "DELAY-9",
+      "quantity": 9,
+      "required_specifications": {
+        "jitter_ps_rms": null,
+        "slice_delay_ns": null
+      }
+    },
+    {
+      "class": "single-photon detector channels",
+      "id": "DET-27",
+      "quantity": 27,
+      "required_specifications": {
+        "dark_count_hz_max": null,
+        "efficiency_min": null,
+        "timing_jitter_ps_max": null
+      }
+    },
+    {
+      "class": "deterministic schedule controller",
+      "id": "CTRL-1",
+      "quantity": 1,
+      "required_specifications": {
+        "blind_code_support": 4,
+        "calibration_triggers": 10,
+        "native_slices": 9
+      }
+    }
+  ],
+  "cost_fields": {
+    "currency": null,
+    "total_estimate": null,
+    "unit_costs": null
+  },
+  "schema": "w33.pass409.vendor_neutral_bom.v1",
+  "scope": "27-mode qutrit Heisenberg bulk demonstrator"
+}

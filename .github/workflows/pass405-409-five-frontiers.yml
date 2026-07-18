@@ -1,0 +1,115 @@
+name: Pass 405-409 Five Frontiers
+
+on:
+  push:
+    branches: [master, 'agent/pass405-409-*']
+    paths:
+      - 'analysis/w33_pass405_universal_critical_group.py'
+      - 'analysis/w33_pass406_nonabelian_clifford_compiler.py'
+      - 'analysis/w33_pass407_sandpile_calibration_memory.py'
+      - 'analysis/w33_pass408_full_automorphism_theorem.py'
+      - 'analysis/w33_pass409_sealed_hardware_falsifier.py'
+      - 'data/w33_pass405_universal_critical_group.json'
+      - 'data/w33_pass406_nonabelian_clifford_compiler.json'
+      - 'data/w33_pass406_qutrit_clifford_schedule.json'
+      - 'data/w33_pass407_sandpile_calibration_memory.json'
+      - 'data/w33_pass407_single_slip_decoder_q3.json'
+      - 'data/w33_pass408_full_automorphism_theorem.json'
+      - 'data/w33_pass409_*.json'
+      - 'schemas/w33_pass409_preregistered_falsifier_v1.schema.json'
+      - 'tests/test_pass405_409_five_frontiers.py'
+      - 'PASS405_409_FIVE_FRONTIERS_RELEASE.md'
+      - '.github/workflows/pass405-409-five-frontiers.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pass405-409-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install exact dependencies
+        run: python -m pip install --upgrade numpy sympy python-flint pytest jsonschema
+      - name: Regenerate all five passes
+        run: |
+          python analysis/w33_pass405_universal_critical_group.py
+          python analysis/w33_pass406_nonabelian_clifford_compiler.py
+          python analysis/w33_pass407_sandpile_calibration_memory.py
+          python analysis/w33_pass408_full_automorphism_theorem.py
+          python analysis/w33_pass409_sealed_hardware_falsifier.py
+      - name: Require frozen artifacts to be current
+        run: |
+          git diff --exit-code -- \
+            data/w33_pass405_universal_critical_group.json \
+            data/w33_pass406_nonabelian_clifford_compiler.json \
+            data/w33_pass406_qutrit_clifford_schedule.json \
+            data/w33_pass407_sandpile_calibration_memory.json \
+            data/w33_pass407_single_slip_decoder_q3.json \
+            data/w33_pass408_full_automorphism_theorem.json \
+            data/w33_pass409_sealed_hardware_falsifier.json \
+            data/w33_pass409_vendor_neutral_bom.json \
+            data/w33_pass409_preregistered_protocol.json \
+            data/w33_pass409_nonclaim_power_study.json \
+            data/w33_pass409_nonclaim_raw_counts.json \
+            data/w33_pass409_nonclaim_calibration.json \
+            data/w33_pass409_nonclaim_blind_key.json
+      - name: Verify every witness in check mode
+        run: |
+          python analysis/w33_pass405_universal_critical_group.py --check
+          python analysis/w33_pass406_nonabelian_clifford_compiler.py --check
+          python analysis/w33_pass407_sandpile_calibration_memory.py --check
+          python analysis/w33_pass408_full_automorphism_theorem.py --check
+          python analysis/w33_pass409_sealed_hardware_falsifier.py --check
+      - name: Validate preregistration schema
+        run: |
+          python - <<'PY'
+          import json
+          import jsonschema
+          schema=json.load(open('schemas/w33_pass409_preregistered_falsifier_v1.schema.json'))
+          protocol=json.load(open('data/w33_pass409_preregistered_protocol.json'))
+          jsonschema.validate(protocol,schema)
+          PY
+      - name: Exercise Pass 397 sealed pipeline on the explicit nonclaim fixture
+        run: |
+          python analysis/w33_pass397_sealed_lab_ingestion.py seal \
+            --raw data/w33_pass409_nonclaim_raw_counts.json \
+            --calibration data/w33_pass409_nonclaim_calibration.json \
+            --output /tmp/pass409-manifest.json \
+            --protocol-frozen-at 2026-07-17T14:00:00-04:00 \
+            --test-mode
+          python analysis/w33_pass397_sealed_lab_ingestion.py analyze \
+            --manifest /tmp/pass409-manifest.json \
+            --raw data/w33_pass409_nonclaim_raw_counts.json \
+            --calibration data/w33_pass409_nonclaim_calibration.json \
+            --output /tmp/pass409-blinded.json \
+            --completed-at 2026-07-17T15:30:00-04:00 \
+            --test-mode
+          python analysis/w33_pass397_sealed_lab_ingestion.py unblind \
+            --manifest /tmp/pass409-manifest.json \
+            --raw data/w33_pass409_nonclaim_raw_counts.json \
+            --calibration data/w33_pass409_nonclaim_calibration.json \
+            --blinded-analysis /tmp/pass409-blinded.json \
+            --key data/w33_pass409_nonclaim_blind_key.json \
+            --output /tmp/pass409-result.json \
+            --test-mode
+          python - <<'PY'
+          import json
+          result=json.load(open('/tmp/pass409-result.json'))
+          assert result['claim_eligible'] is False
+          assert result['physical_experiment_completed'] is False
+          PY
+      - name: Run cross-pass regressions
+        run: python -m pytest -q tests/test_pass405_409_five_frontiers.py
+      - name: Verify live claims ledger
+        run: python scripts/check_claims_ledger.py

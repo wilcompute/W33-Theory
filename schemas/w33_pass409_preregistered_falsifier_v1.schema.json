@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "w33.pass409.preregistered-falsifier.v1",
+  "title": "W33 preregistered photonic hardware falsifier",
+  "type": "object",
+  "required": [
+    "schema",
+    "protocol_frozen_at",
+    "study_type",
+    "physical_experiment_completed",
+    "gates",
+    "minimum_design",
+    "calibration_requirements",
+    "primary_decision_rule",
+    "falsifying_alternatives",
+    "claim_boundary"
+  ],
+  "properties": {
+    "schema": {"const": "w33.pass409.preregistered_falsifier.v1"},
+    "study_type": {"const": "future_physical_lab_protocol_not_yet_run"},
+    "physical_experiment_completed": {"const": false},
+    "gates": {
+      "type": "object",
+      "required": ["I", "X", "Z", "F3"],
+      "properties": {
+        "I": {"const": 1.0},
+        "X": {"const": 0.0},
+        "Z": {"const": 0.0},
+        "F3": {"const": 0.3333333333333333}
+      },
+      "additionalProperties": false
+    },
+    "minimum_design": {
+      "type": "object",
+      "required": ["replicates_per_gate", "shots_per_phase", "phases_radians"],
+      "properties": {
+        "replicates_per_gate": {"type": "integer", "minimum": 8},
+        "shots_per_phase": {"type": "integer", "minimum": 3000},
+        "phases_radians": {"type": "array", "minItems": 4, "maxItems": 4}
+      }
+    },
+    "primary_decision_rule": {
+      "type": "object",
+      "required": [
+        "all_gate_absolute_visibility_error_max",
+        "all_gate_absolute_sine_quadrature_max",
+        "integrity_contract",
+        "pass_condition"
+      ]
+    }
+  },
+  "additionalProperties": true
+}
