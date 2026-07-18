@@ -79,7 +79,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add \
+          git add -f \
             data/w33_pass425_exact_extension_smith.json \
             data/w33_pass426_mixed_qutrit_phase_portrait.json \
             data/w33_pass427_adaptive_telemetry_channel.json \
