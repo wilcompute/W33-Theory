@@ -1,0 +1,34 @@
+{
+  "schema": "w33.pass446.curl_bridge_sqrt5_q5_orbits.v1",
+  "status": "PASS",
+  "HEADLINE": "THREE results. (1) The exp-9 companion PDS is SECTION-SHAPED AND FLAT in its own group: D9's eight noncentral elements hit the eight Z(R)-cosets exactly once, so both extraspecial groups of order 27 carry the same graph as their flat section-plus-centre PDS -- 443's dichotomy is uniform across the two groups. (2) The curved class's sqrt5 has an exact Weil origin: the curved characteristic factor (x^2-x-11)^6 (disc 45 = 9*5) is certified from the built graph, and the twisted Weil sum's real eigenvalues land on the same quadratic -- the sqrt5 is the length of a twisted Gauss sum, recorded from the computation. (3) BURNSIDE AT q=5: Aut(H_5)-orbits on inverse-closed sections = 20592 -- flat plus TWO curved classes (the q=3 two-orbit collapse is GL(2,3)-transitivity on nonzero curls; GL(2,5) is not transitive on its curl space). Their v1.4 gate 4 delivered by Burnside instead of 5^12 enumeration.",
+  "weil_sum_eigenvalues": [
+    -2.854102,
+    -1.0,
+    3.854102
+  ],
+  "q5_section_orbits": 20592,
+  "checks": {
+    "exp9_subgroups_found": true,
+    "D9_noncentral_8": true,
+    "D9_hits_8_distinct_cosets": true,
+    "D9_is_section_plus_centre": true,
+    "commutator_central": true,
+    "decomposition_ok": true,
+    "cay_R_D9_is_the_flat_graph": true,
+    "COMPANION_PDS_IS_FLAT_IN_ITS_GROUP": true,
+    "curved_charpoly_matches_443": true,
+    "weil_model_verified_all_729": true,
+    "weil_sum_eigs_real": true,
+    "sqrt5_appears_in_weil_sum": true,
+    "third_eigenvalue_minus1": true,
+    "disc_45_is_9_times_5": true,
+    "twelve_pairs": true,
+    "gl25_order_480": true,
+    "burnside_integral": true,
+    "q5_orbit_count_20592": true,
+    "counting_floor_20345": true,
+    "action_nearly_free": true,
+    "formula_validates_q3_two_orbits": true
+  }
+}

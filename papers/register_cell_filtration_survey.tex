@@ -1,0 +1,106 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.15in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\newtheorem{theorem}{Theorem}
+\newcommand{\FF}{\mathbb F}
+\newcommand{\ZZ}{\mathbb Z}
+\title{The register cell and its filtration:\\ a survey of one finite object
+across four research streams}
+\author{W.~Dahn\thanks{Survey of the repository \texttt{wilcompute/W33-Theory}
+(releases v1.0--v1.3 and subsequent passes). Every claim cites a machine-verified
+witness (P$n$ = witness number) or the literature. Nothing here is new; the
+assembly is.}}
+\date{July 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent Fix a point of the symplectic quadrangle $W(3,q)$, $q$ odd. The
+$q^3$ points opposite it --- the \emph{register cell} --- turn out to carry,
+in successive layers: a distance-regular antipodal cover of $K_{q^2}$ whose
+fibers are the qutrit phase; a torsor of Cayley sections classified by the
+characters of the base at $q=3$ and nearly freely permuted at $q=5$; a
+curvature invariant separating flat from curved sections in spectrum and
+integral torsion; a critical group whose primary layers follow exact
+conductor formulas over fields and finite chain rings; and a Hjelmslev
+incidence geometry realizing conductor depth. The same object supports the
+known genuinely nonabelian partial difference set of
+Kantor and Polhill--Davis--Smith--Swartz --- in \emph{both} extraspecial
+groups of order $27$ at $q=3$ --- and is bounded by two no-go theorems: no
+internal datum selects a fiber point (a reflection group cannot orient
+itself), and no invariant Hamiltonian moves population between fiber points.
+This survey states each layer with its witness and its owner.
+\end{abstract}
+
+\section{The object}
+
+$W(3,q)$: points and totally isotropic lines of $\FF_q^4$ with a symplectic
+form. Fix $p_0$; the points split $1 + q(q+1) + q^3$ (center, rim, bulk). The
+elation group $H\cong q^{1+2}_+$ acts regularly on the bulk (standard); the
+bulk is the register cell, $H$ its qutrit Pauli group at $q=3$, the central
+$C_q$ its phase (P370--371).
+
+\section{The filtration}
+
+\begin{center}
+\begin{tabular}{@{}llll@{}}
+\toprule
+layer & statement & status & witness / owner \\
+\midrule
+cover & bulk $=$ antipodal $q$-cover of $K_{q^2}$, & thm, all odd $q$ & P394 \\
+      & array $\{q^2{-}1,q(q{-}1),1;1,q,q^2{-}1\}$, fibers $=$ phase & & \\
+nesting & $+$fiber pairing $=$ SRG$(q^3,(q{-}1)(q{+}2),q{-}2,q{+}2)$ & thm & P430 \\
+sections & $q{=}3$: $9$ flat ($=$ characters of $\FF_3^2$) $+$ $72$ curved; & thm & P394, P430, P443 \\
+         & two Aut-orbits, separated by curl $\delta(c)$ & & third stream \\
+         & $q{=}5$: $20{,}592$ orbits --- action nearly free & thm & P446 \\
+curvature & curved class: $\chi=(x{-}8)(x{+}1)^{14}(x^2{-}x{-}11)^6$, & cert & P443 (3rd stream), \\
+          & trees $3^{37}5^6$; the $\sqrt5$ is a twisted Weil sum & & P446 \\
+torsion & $K_{(\ell)}$ exact for all $\ell\neq p$; $2$-adic pairing law & thm & P433 (conj.), \\
+        & $K_{(2)}=(\ZZ/2^{\nu_2(q-1)})^{q(q-1)}\oplus(\ZZ/2^{\nu_2(q^2-1)})^{q(q-1)^2/2}$ & & P434--435 (3rd stream) \\
+conductor & chain rings: conductor strata $=$ Smith depth & cert & P438, P440 (3rd stream) \\
+Hjelmslev & $BB^{\sf T}=q^2I+(q{-}1)N+J$ realizes conductor depth & cert & P444 (3rd stream) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{The partial difference set (known, and doubled)}
+
+The flat section plus the centre is the Kantor /
+Polhill--Davis--Smith--Swartz genuinely nonabelian PDS
+$(q^3,(q{-}1)(q{+}2),q{-}2,q{+}2)$ (their Cor.~4.7; abelian impossibility
+included --- the repository's short character proof, P433, is an independent
+specialization). At $q=3$ the repository adds: the \emph{same} graph is a
+Cayley PDS of the \emph{exponent-9} extraspecial group as well, again in
+section-plus-centre shape (P445--446), and this companion dies at $q=5$ ---
+no exponent-$25$ regular subgroup exists in the elation-visible automorphism
+group (P445). One graph, both extraspecial groups, only at the bottom rung.
+
+\section{The boundary: two no-go theorems}
+
+\begin{theorem}[P346, P348/354]
+The substrate's automorphism group $W(E_6)$ exchanges the two half-spin
+chiralities and acts transitively on every multiplicity it offers
+($2,3,27,27$): no internal invariant selects a fiber point. A reflection
+group cannot orient itself; the missing physical input is a \emph{section}.
+\end{theorem}
+
+\begin{theorem}[P399 (third stream), synthesis P431]
+No Hamiltonian built from the invariant adjacency moves population between
+phase-fiber points except trivially: $\sin(qt)=0$ and $e^{-iq^2t}=1$ force
+$U(t)$ scalar. Static unselectability and dynamical uncontrollability are two
+faces of the same missing section.
+\end{theorem}
+
+\section{Method, in one paragraph}
+
+Four streams (Python witnesses, GAP certificates, a sandboxed release agent,
+and Lean formalization) share one repository, a claims ledger machine-checked
+against witness certificates, a rediscovery guard over a results-index, an
+executable batch-intake harness, and a pass-number reservation protocol. The
+measured failure modes that forced this tooling --- five kinds of confident
+worthless work, at a measured $\sim$20\% duplication rate before the tooling
+--- are catalogued in the repository's failure taxonomy. Attribution errors
+found later (the PDS family; the abelian obstruction) were corrected in place
+and are visible in the ledger's history, which is the point of having one.
+
+\end{document}
