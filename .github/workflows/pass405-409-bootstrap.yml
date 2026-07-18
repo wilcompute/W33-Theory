@@ -1,12 +1,6 @@
 name: Pass 405-409 Bootstrap
 
 on:
-  push:
-    branches: ['agent/pass405-409-five-frontiers']
-    paths:
-      - 'analysis/w33_pass405_409_bootstrap.py'
-      - 'analysis/w33_pass405_409_payload_*.bin'
-      - '.github/workflows/pass405-409-bootstrap.yml'
   pull_request:
     branches: [master]
     paths:
@@ -19,8 +13,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: pass405-409-bootstrap-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: false
+  group: pass405-409-bootstrap
+  cancel-in-progress: true
 
 jobs:
   materialize:
@@ -29,17 +23,18 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          ref: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
+          ref: ${{ github.head_ref }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       - name: Materialize the verified release
         run: python analysis/w33_pass405_409_bootstrap.py
-      - name: Replace bootstrap with final release
+      - name: Replace payload with scientific release files
         run: |
           git config user.name 'w33-pass405-409-bootstrap[bot]'
           git config user.email 'w33-pass405-409-bootstrap[bot]@users.noreply.github.com'
-          git rm analysis/w33_pass405_409_bootstrap.py .github/workflows/pass405-409-bootstrap.yml analysis/w33_pass405_409_payload_*.bin
-          git add -f analysis data schemas tests .github/workflows/pass405-409-five-frontiers.yml PASS405_409_FIVE_FRONTIERS_RELEASE.md
+          git rm analysis/w33_pass405_409_bootstrap.py analysis/w33_pass405_409_payload_*.bin
+          rm -f .github/workflows/pass405-409-five-frontiers.yml
+          git add -f analysis data schemas tests PASS405_409_FIVE_FRONTIERS_RELEASE.md
           git commit -m 'Passes 405-409: materialize five-frontier release'
           git push origin HEAD:agent/pass405-409-five-frontiers
