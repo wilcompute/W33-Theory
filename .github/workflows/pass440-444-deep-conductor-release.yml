@@ -1,0 +1,67 @@
+name: Passes 440-444 Deep Conductor Release
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass440_galois_ring_conductor_tower.py'
+      - 'analysis/w33_pass441_formal_kernel_audit.py'
+      - 'analysis/w33_pass442_blind_photonic_preregistration.py'
+      - 'analysis/w33_pass443_section_sensitive_smith_classification.py'
+      - 'analysis/w33_pass444_hjelmslev_conductor_geometry.py'
+      - 'analysis/PASS440_GALOIS_RING_CONDUCTOR_TOWER.md'
+      - 'analysis/PASS441_LEAN_SMITH_PAIRING_KERNEL.md'
+      - 'analysis/PASS442_BLIND_PHOTONIC_PREREGISTRATION.md'
+      - 'analysis/PASS443_SECTION_SENSITIVE_SMITH_CLASSIFICATION.md'
+      - 'analysis/PASS444_HJELMSLEV_CONDUCTOR_GEOMETRY.md'
+      - 'data/w33_pass440_galois_ring_conductor_tower.json'
+      - 'data/w33_pass441_formal_kernel_audit.json'
+      - 'data/w33_pass442_blind_photonic_preregistration.json'
+      - 'data/w33_pass443_section_sensitive_smith_classification.json'
+      - 'data/w33_pass444_hjelmslev_conductor_geometry.json'
+      - 'formal/**'
+      - 'tests/test_pass440_444_deep_conductor_release.py'
+      - 'PASS440_444_DEEP_CONDUCTOR_RELEASE.md'
+      - '.github/workflows/pass440-444-deep-conductor-release.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  PYTHONHASHSEED: '0'
+
+jobs:
+  python-certificates:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install exact dependencies
+        run: python -m pip install pytest==9.0.2 sympy==1.14.0
+      - name: Verify deterministic certificates
+        run: |
+          python analysis/w33_pass440_galois_ring_conductor_tower.py --check
+          python analysis/w33_pass441_formal_kernel_audit.py --check
+          python analysis/w33_pass442_blind_photonic_preregistration.py --check
+          python analysis/w33_pass443_section_sensitive_smith_classification.py --check
+          python analysis/w33_pass444_hjelmslev_conductor_geometry.py --check
+      - name: Run focused regressions
+        run: python -m pytest -q tests/test_pass440_444_deep_conductor_release.py
+
+  lean-formal-kernel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formal
+          build: true
+          test: false
+          lint: false
+          nanoda: true
+          nanoda-allow-sorry: false
