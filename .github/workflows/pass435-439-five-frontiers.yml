@@ -1,0 +1,56 @@
+name: Passes 435-439 Five Frontiers
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass435_integral_heisenberg_smith_pairing.py'
+      - 'analysis/w33_pass437_full_smith_weld.py'
+      - 'analysis/w33_pass438_field_ring_discrimination_atlas.py'
+      - 'analysis/w33_pass439_torsion_sensitive_photonic_fault_channel.py'
+      - 'analysis/PASS435_INTEGRAL_HEISENBERG_SMITH_PAIRING.md'
+      - 'analysis/PASS436_POLHILL_FULL_TABLE_AUDIT.md'
+      - 'analysis/PASS437_FULL_SMITH_WELD.md'
+      - 'analysis/PASS438_FIELD_RING_DISCRIMINATION_ATLAS.md'
+      - 'analysis/PASS439_TORSION_SENSITIVE_PHOTONIC_FAULT_CHANNEL.md'
+      - 'data/w33_pass435_integral_heisenberg_smith_pairing.json'
+      - 'data/w33_pass436_polhill_full_table_audit.json'
+      - 'data/w33_pass437_full_smith_weld.json'
+      - 'data/w33_pass438_field_ring_discrimination_atlas.json'
+      - 'data/w33_pass439_torsion_sensitive_photonic_fault_channel.json'
+      - 'papers/heisenberg_pds_note.tex'
+      - 'tests/test_pass435_439_five_frontiers.py'
+      - 'PASS435_439_FIVE_FRONTIERS_RELEASE.md'
+      - '.github/workflows/pass435-439-five-frontiers.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  PYTHONHASHSEED: '0'
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install test dependency
+        run: python -m pip install pytest==9.0.2
+      - name: Verify deterministic certificates
+        run: |
+          python analysis/w33_pass435_integral_heisenberg_smith_pairing.py --check
+          python analysis/w33_pass437_full_smith_weld.py --check
+          python analysis/w33_pass438_field_ring_discrimination_atlas.py --check
+          python analysis/w33_pass439_torsion_sensitive_photonic_fault_channel.py --check
+      - name: Run focused regressions
+        run: python -m pytest -q tests/test_pass435_439_five_frontiers.py
+      - name: Compile corrected PDS note
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: papers/heisenberg_pds_note.tex
