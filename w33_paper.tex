@@ -14126,6 +14126,17 @@ universal trace laws: $e_1{=}0$, $e_2{=}-q(q^2{-}1)/2$; $q{-}2$ free coefficient
 $q{=}3$ det law: $d\in\{-16,11\}$ complete invariant; $d\equiv q^2{+}2 \bmod q^3$ & \textsc{thm} & P473 & this programme (exhaustive, exact) \\
 the $q{=}3$ five $=$ $2^8-11^2 = 27\cdot5$ (determinantal, not cyclotomic) & \textsc{thm} & P473 & this programme; derives P453's assertion \\
 genuine collision $=$ sheet-data non-injectivity & \textsc{cert} & P473 & this programme; sharpens P463 \\
+exact $25$-dim original-coordinate intertwiner; triangle-gain firewall & \textsc{thm} & P474 & third stream \\
+$\mathrm{GR}(9,2)$ flat Weyl spectrum computed & \textsc{cert} & P475 & third stream \\
+characteristic-Smith predictions $\FF_5,\FF_7,\ZZ_{25},\ZZ_{27},\mathrm{GR}(9,2)$ & \textsc{cert} & P476 & third stream \\
+uniform projective cardinalities in Lean & \textsc{cert} & P477 & third stream (v1.9 gate 1) \\
+blind-run software packet; physical run blocked pending operator & \textsc{cert} & P478 & third stream \\
+det congruence law: $\det B_t \equiv \det(\mathrm{flat}) \bmod \lambda^{q+3}$, sharp & \textsc{thm} & P479 & this programme (exact; proof open) \\
+flat block spectrum $\{(q{-}1)^{(q+1)/2},(-(q{+}1))^{(q-1)/2}\}$ & \textsc{cert} & P479 & this programme (exact charpoly) \\
+``residue $= q^2{+}2$'' (P473 addendum guess) & \textsc{killed} & P479 & self-correction: fails at $q{=}5$ \\
+no monomial block intertwiner; integral-unitary case closed & \textsc{cert} & P479 & this programme; complements P474 \\
+$q{=}7$ section-orbit count $+$ census birthday model & \textsc{cert} & P479 & this programme (Burnside validated) \\
+five \emph{new} genuine cospectral pairs in $2000$ sections & \textsc{cert} & P479 & this programme (positive density) \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -14294,5 +14305,50 @@ remaining target; and the chain-ring/Galois-ring conductor arithmetic closed
 in every parameter (P464/P469).  A sealed hardware custody gate (P467/P472)
 holds templates for the blind optical run; no laboratory score is claimed.
 All 25 third-stream passes cleared the executable intake audit at merge.
+
+\paragraph{Passes 474--479 --- the determinant congruence law; the collision
+factory; the orbit count that ends censuses.}
+The third stream executed the v1.9 gates (P474--478): an exact
+$25$-dimensional original-coordinate intertwiner for the exchanged collision
+sheets, with a triangle-gain histogram firewall proving no permutation-plus-phase
+gauge implements the exchange; the first concrete $\mathrm{GR}(9,2)$ Weyl
+spectrum; characteristic-Smith predictions for five new parameter points; the
+uniform projective cardinalities in Lean; and the blind-run software packet
+(physical run blocked pending an independent operator).  Pass 479 then closed
+the determinant question opened in Pass 473 --- \textbf{by refuting its own
+guess}.  The observed $q=3$ congruence ``$d\equiv q^2{+}2 \bmod q^3$'' does
+not survive: at $q=5$ the valuation of $\det B-(q^2{+}2)$ is zero.  The true
+law, exhaustive at $q=3$ and sampled in exact cyclotomic arithmetic at
+$q=5,7$, is
+\[
+\det B_t(c)\;\equiv\;(q{-}1)^{(q+1)/2}\,\bigl(-(q{+}1)\bigr)^{(q-1)/2}
+\pmod{\lambda^{\,q+3}},\qquad \lambda=1-\zeta_q,
+\]
+with the depth $q{+}3$ \emph{sharp} at every $q$ tested ($v=6,8,10$): every
+section's block determinant is congruent to the \emph{flat} determinant, whose
+closed form follows from the flat block spectrum
+$\{(q{-}1)^{((q+1)/2)},(-(q{+}1))^{((q-1)/2)}\}$ (proved exactly from the
+$\mathrm{SRG}$ restricted eigenvalues $q{-}2,-(q{+}2)$ shifted by the centre).
+At $q=3$ the congruence ideal $(\lambda^6)=(27)$ explains why the law
+masqueraded as ``mod $q^3$'', and $11=q^2{+}2\equiv-16\bmod 27$ was a
+two-named coincidence.  Why the four extra orders of cancellation beyond the
+trivial $\lambda^{q-1}\mid p$ occur is the new open question.  The collision
+landscape also quantified: the affine Burnside count (revalidated at
+$q=3,5$) gives $q=7$ exactly $1{,}939{,}395{,}416{,}499{,}131$ section
+orbits, so orbit repeats are extinct in any feasible $q=7$ census
+(expected $\sim2\times10^{-9}$ per $80$ samples, matching Pass 454's $80/80$);
+at $q=5$ the model predicts $3.88$ orbit-repeat and $3.35$ spectral-collision
+pairs per $400$ samples against Pass 447's observed $3{+}1$.  A $2000$-section
+census then found \textbf{five new genuine pairs} (cospectral,
+affine-inequivalent; $79$ affine repeats), so sheet-data non-injectivity has
+\emph{positive density} --- the register cell mass-produces cospectral
+nonisomorphic Cayley graphs --- and every full-spectrum collision observed is
+already a sheet-level collision.  Finally, an exhaustive exact search over
+all $120$ permutations and phase gauges (four conjugation variants) shows
+\textbf{no monomial matrix intertwines the exchanged $5\times5$ blocks}; since
+an integral unitary over $\ZZ[\zeta_5]$ is necessarily monomial
+(totally-positive column norms), the integral-\emph{unitary} case of v1.9
+gate 3 is closed negatively at block level, complementing P474's
+$25$-dimensional firewall.
 
 \end{document}

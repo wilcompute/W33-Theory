@@ -59,7 +59,31 @@ def main() -> int:
             hits = [h for h in hits if "attestation" not in h.name
                     and "release_manifest" not in h.name]
             if not hits:
-                failures.append(f"P{tag}: no certificate data/w33_pass{tag}_*.json")
+                # The third stream's 474-478 release replaced per-pass
+                # certificates with one range-scoped execution ledger
+                # (data/PASS474_478_EXECUTION_LEDGER.json, status PASS).
+                # Accept a PASS execution ledger whose numeric range covers
+                # the tag before declaring the row uncertified.
+                covered = False
+                for el in DATA.glob("PASS*_EXECUTION_LEDGER.json"):
+                    m2 = re.match(r"PASS(\d+)_(\d+)_EXECUTION_LEDGER",
+                                  el.name)
+                    if not m2:
+                        continue
+                    lo, hi = int(m2.group(1)), int(m2.group(2))
+                    if lo <= int(tag) <= hi:
+                        try:
+                            st = json.loads(
+                                el.read_text(encoding="utf-8")).get("status")
+                        except Exception:
+                            continue
+                        if st == "PASS":
+                            covered = True
+                            checked += 1
+                            break
+                if not covered:
+                    failures.append(
+                        f"P{tag}: no certificate data/w33_pass{tag}_*.json")
                 continue
             for h in hits:
                 try:
