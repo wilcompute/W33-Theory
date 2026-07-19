@@ -14168,6 +14168,10 @@ flat-det formula holds at $q{=}25,27$ ($35$- and $39$-digit) & \textsc{cert} & P
 prime residual: $\min_c v_\lambda(\det D)=2q$ ($6,10,14$) & \textsc{cert} & P485 & this programme (Newton gives $q{+}1$) \\
 residual $=$ ``every eigenvalue of $D$ has $v_\lambda\ge2$'' & \textsc{open} & P485 & this programme (would close all $q$) \\
 $q{=}9$ depth criterion is \emph{not} $v_\lambda(S)$ & \textsc{killed} & P485 & self-correction (3rd refuted criterion) \\
+$v_\lambda(e_k(D))\ge2k$ for \emph{all} $k\le q{-}1$ (only $\det$ open) & \textsc{thm} & P486 & this programme (Newton $+$ $p_1{=}0$) \\
+$e_2(D)=qS$ exactly & \textsc{thm} & P486 & this programme (2nd closed form) \\
+law confirmed at $q{=}49$ (exp $16$) and $q{=}81$ ($f{=}4$, exp $12$) & \textsc{cert} & P486 & this programme (eight $q$, four $f$) \\
+$\lambda\mid$ all entries $\Rightarrow\lambda^n\mid\det$ (Lean) & \textsc{thm} & P486 & this programme \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -14607,5 +14611,37 @@ died: the depth is \emph{not} governed by $v_\lambda(S)$ either (every
 $v_\lambda(S)$ class realizes the minimum $8$), which is consistent with the
 $e_1/e_2$ cancellation --- after it, the binding constraint is a higher-order
 term, not the first-order one.
+
+\paragraph{Pass 486 --- the residual is one coefficient, and the law reaches
+$f=4$.}
+The Pass-485 conjecture ``every eigenvalue of $D$ has $v_\lambda\ge2$'' says
+exactly $v_\lambda(e_k(D))\ge2k$ for every $k$, and all but the last case is
+now a theorem.  Since $p_1=\operatorname{tr}D=0$, Newton's identity reads
+$k\,e_k=\sum_{i\ge2}(-1)^{i-1}e_{k-i}p_i$; with $v_\lambda(p_i)\ge v_\lambda(q)+i$
+and the inductive hypothesis $v_\lambda(e_{k-i})\ge2(k-i)$, every term has
+valuation at least $2k-i+v_\lambda(q)\ge2k$ \emph{because}
+$i\le k\le q-1=v_\lambda(q)$, and $k$ is a $\lambda$-unit below $q$.  Hence
+\[
+v_\lambda(e_k(D))\ \ge\ 2k \qquad (1\le k\le q-1),
+\]
+and the induction fails at $k=q$ for one identifiable reason --- there $i$ may
+equal $q$ and the constraint $i\le v_\lambda(q)=q-1$ misses by exactly one.
+\textbf{So the entire residual gap in the unified determinant law is the single
+coefficient $e_q=\det D$ of one characteristic polynomial}, where Newton gives
+$q+1$ against the measured $2q$.  A second exact closed form appears on the
+way: $e_2(D)=qS$, from $e_2=-p_2/2$ and $p_2=-2qS$.  Two more prime powers were
+then computed with the Bareiss determinant: \textbf{$q=49$} ($p=7$, $f=2$,
+predicted and observed $16$) and \textbf{$q=81$} ($p=3$, $f=4$, predicted and
+observed $12$), in $14$ and $48$ seconds.  The law now stands at eight prime
+powers spanning four values of $f$, and the pair $(49,81)$ is decisive
+rhetorically: $49<81$ but the exponent at $49$ is \emph{larger} ($16$ against
+$12$), because $v_\lambda(49)=12>8=v_\lambda(81)$.  Ordering by $q$ scrambles
+the data; ordering by ramification does not.  Finally, the $q=9$ depth was
+re-examined once more: the minimising coefficient is almost always $e_2$, yet
+the depth still varies, which is exactly what the $e_1/e_2$ cancellation
+predicts --- the depth is set by the \emph{residual} of that cancellation, not
+by the smallest coefficient, so ``$\arg\min_k v_\lambda(e_k)$'' joins
+collinearity, the $\FF_3$-subfield and $v_\lambda(S)$ on the list of refuted
+criteria.
 
 \end{document}

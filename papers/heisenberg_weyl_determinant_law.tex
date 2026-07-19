@@ -453,10 +453,38 @@ Every eigenvalue of $D$ has $\lambda$-valuation at least $2$; equivalently
 $\vlam(\det D)\ge 2q$.
 \end{conjecture}
 
-\noindent closes the prime case and with it the whole law. Partial evidence
-beyond the numerics: $D'$ reduces mod $\lambda$ to
-$\sum_a\kappa_aP_a$ with $\kappa_{-a}=-\kappa_a$ (so $\kappa_0=0$ and
-$\sum_a\kappa_a=0$), which lies in the augmentation ideal of
+\noindent closes the prime case and with it the whole law. In terms of the
+elementary symmetric functions $e_k=e_k(D)$ the conjecture says exactly
+$\vlam(e_k)\ge2k$ for all $k$, and all but the last case is a theorem.
+
+\begin{theorem}[the eigenvalue bound, off the top]\label{thm:ek2k}
+For every odd prime $q$ and every inverse-closed section,
+$\vlam(e_k)\ge 2k$ for all $1\le k\le q-1$.
+\end{theorem}
+
+\begin{proof}
+Induction on $k$. Since $p_1=\tr D=0$, Newton's identity reads
+$k\,e_k=\sum_{i=2}^{k}(-1)^{i-1}e_{k-i}p_i$. By Lemma~\ref{lem:power}
+$\vlam(p_i)\ge\vlam(q)+i$, and by induction $\vlam(e_{k-i})\ge2(k-i)$, so each
+term has valuation at least
+\[
+2(k-i)+\vlam(q)+i \;=\; 2k-i+\vlam(q)\;\ge\;2k ,
+\]
+because $i\le k\le q-1=\vlam(q)$. For $k\le q-1$ the integer $k$ is a unit at
+$\lambda$, so dividing by it is harmless.
+\end{proof}
+
+The induction fails at $k=q$ for one identifiable reason: there $i$ may equal
+$q$, and the inequality $i\le\vlam(q)=q-1$ misses by exactly one. Accordingly
+Newton yields only $\vlam(\det D)\ge q+1$ against the measured $2q$. So the
+entire residual gap in the determinant law is the single coefficient
+$e_q=\det D$ of one characteristic polynomial.
+
+Two further pieces of evidence. First, $e_2=qS$ exactly, from
+$e_2=(p_1^2-p_2)/2=-p_2/2$ and $p_2=-2qS$ (Lemma~\ref{lem:closed}); this is the
+second exact closed form in the family after $\tr H=qS$. Second, $D'$ reduces
+mod $\lambda$ to $\sum_a\kappa_aP_a$ with $\kappa_{-a}=-\kappa_a$ (so
+$\kappa_0=0$ and $\sum_a\kappa_a=0$), which lies in the augmentation ideal of
 $\FF_q[\ZZ/q]=\FF_q[s]/(s^{q})$ --- a nilpotent ideal. Hence every eigenvalue
 of $D'$ is a nonunit, giving valuation $>0$; the conjecture upgrades this to
 $\ge1$.
@@ -518,23 +546,26 @@ factorization of $q$; only the ramification varies.
 The measured minima agree with $\vlam(q)+4$ at every prime power tested,
 across three different values of $f$:
 \begin{center}
-\begin{tabular}{@{}lcccccc@{}}
+\begin{tabular}{@{}lcccccccc@{}}
 \toprule
-$q$ & $3$ & $5$ & $7$ & $9$ & $25$ & $27$\\
-$(p,f)$ & $(3,1)$ & $(5,1)$ & $(7,1)$ & $(3,2)$ & $(5,2)$ & $(3,3)$\\
+$q$ & $3$ & $5$ & $7$ & $9$ & $25$ & $49$ & $27$ & $81$\\
+$(p,f)$ & $(3,1)$ & $(5,1)$ & $(7,1)$ & $(3,2)$ & $(5,2)$ & $(7,2)$ & $(3,3)$ & $(3,4)$\\
 \midrule
-$\vlam(q)$ & $2$ & $4$ & $6$ & $4$ & $8$ & $6$\\
-$\vlam(q)+4$ & $6$ & $8$ & $10$ & $8$ & $12$ & $10$\\
-observed min & $6$ & $8$ & $10$ & $8$ & $12$ & $10$\\
+$\vlam(q)$ & $2$ & $4$ & $6$ & $4$ & $8$ & $12$ & $6$ & $8$\\
+$\vlam(q)+4$ & $6$ & $8$ & $10$ & $8$ & $12$ & $16$ & $10$ & $12$\\
+observed min & $6$ & $8$ & $10$ & $8$ & $12$ & $16$ & $10$ & $12$\\
 \bottomrule
 \end{tabular}
 \end{center}
-The last three columns are unconditional by Theorem~\ref{thm:sharp}. The
-determinants at $q=25$ and $q=27$ were computed by fraction-free (Bareiss)
-elimination over $\ZZ[\zeta_p]$, validated against cofactor expansion at
-$q=3,5,7$; the flat determinants there,
-$24^{13}26^{12}$ and $-26^{14}28^{13}$, are $35$- and $39$-digit integers
-matching Lemma~\ref{lem:flat} exactly.
+Eight prime powers across four values of $f$; the last five columns are
+unconditional by Theorem~\ref{thm:sharp}. Note that $q$ and $\vlam(q)$ order
+the columns differently --- $q=49$ has a larger exponent than $q=81$ --- which
+is the clearest sign that the ramification, not $q$, is the governing
+parameter. The determinants beyond $q=9$ were computed by fraction-free
+(Bareiss) elimination over $\ZZ[\zeta_p]$, validated against cofactor
+expansion at $q=3,5,7$; the flat determinants match Lemma~\ref{lem:flat}
+exactly in every case, including the $35$- and $39$-digit values
+$24^{13}26^{12}$ at $q=25$ and $-26^{14}28^{13}$ at $q=27$.
 
 \begin{thebibliography}{9}
 

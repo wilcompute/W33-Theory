@@ -13,3 +13,4 @@ import W33.Pass465CoverLawL2L4Q3
 import W33.Pass477UniformProjectiveCardinality
 import W33.Pass481FirstOrderPairing
 import W33.Pass484AntisymmetricVanishing
+import W33.Pass486DetDivisibility

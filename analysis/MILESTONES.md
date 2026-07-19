@@ -149,6 +149,16 @@ Pass 485 (`analysis/w33_pass485_top_term_and_large_prime_powers.py`, 7/7 exact):
 4. **Third q=9 depth criterion refuted:** the depth is *not* governed by `v_λ(S)` either — every v_λ(S) class realizes the minimum 8. Consistent with the e₁/e₂ cancellation: after it, the binding constraint is a *higher-order* term, not the first-order one. (Dead criteria so far: collinearity, F₃-subfield, v_λ(S).)
 5. **Literature placement (searched, not assumed):** Stickelberger's theorem is the classical analogue — the λ-adic valuation of a *Gauss sum* is the sum of p-adic digits. Our object is the *determinant of a sum of Weyl operators*, which does not appear in the accessible literature; the analogy is structural (valuation of a character sum), not a specialization.
 
+## Pass 486 addendum (python track) — the residual is ONE coefficient; the law reaches f=4
+
+Pass 486 (`analysis/w33_pass486_eigenvalue_bound_and_q49_q81.py`, 14/14 exact):
+
+1. **THEOREM: `v_λ(e_k(D)) ≥ 2k` for every `1 ≤ k ≤ q−1`.** Since `p₁ = tr D = 0`, Newton reads `k e_k = Σ_{i≥2} (−1)^{i−1} e_{k−i} p_i`; with `v(p_i) ≥ v(q)+i` and induction `v(e_{k−i}) ≥ 2(k−i)`, each term has valuation `≥ 2k − i + v(q) ≥ 2k` **because `i ≤ k ≤ q−1 = v(q)`**, and k is a λ-unit below q. This is precisely the Pass-485 eigenvalue conjecture for every elementary symmetric function **except the top one** — so **the entire residual gap in the unified law is the single coefficient `e_q = det D`**. The induction fails at k=q for one identifiable reason: there i may equal q and `i ≤ v(q) = q−1` misses by exactly one (Newton gives q+1 vs measured 2q).
+2. **Second closed form: `e₂(D) = qS`** exactly (from `e₂ = −p₂/2`, `p₂ = −2qS`).
+3. **q=49 and q=81 confirmed.** q=49 (p=7,f=2): predicted/observed **16**, 14 s. q=81 (p=3,f=4): predicted/observed **12**, 48 s. Flat-det formula exact in both. **Eight prime powers, four values of f.** The pair (49,81) is decisive: 49 < 81 but the exponent at 49 is *larger* (16 vs 12), since v_λ(49)=12 > 8=v_λ(81) — ordering by q scrambles the data, ordering by ramification does not.
+4. **Fourth q=9 criterion refuted:** `argmin_k v_λ(e_k)` is almost always k=2, yet the depth still varies — exactly what the e₁/e₂ cancellation predicts (the depth is set by the *residual* of the cancellation, not the smallest coefficient). Dead criteria: collinearity, F₃-subfield, v_λ(S), argmin_k.
+5. **Lean:** `formal/W33/Pass486DetDivisibility.lean` — `λ ∣ every entry ⇒ λⁿ ∣ det`, plus the arithmetic `f·a+4 ≤ (a+1)^f` behind "unconditional for f ≥ 2".
+
 ## Deferred
 
 - m=6 Coxeter–Todd rung of the QR tower (`data/m6_handoff_k12.json`).

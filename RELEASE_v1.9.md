@@ -23,6 +23,13 @@ machine-verified through Pass 481.
   **(q−1) from the ramification of q + 2 from inverse closure** — the latter
   formalized in Lean (`Pass481FirstOrderPairing.lean`:
   `w + w⁻¹ − 2 = −(1−w)(1−w⁻¹)`).
+- **The residual is one coefficient; the law reaches f=4 (P486).**
+  `v_λ(e_k(D)) ≥ 2k` is a theorem for every `k ≤ q−1`, so the Pass-485
+  eigenvalue conjecture holds for every elementary symmetric function except
+  the top one: **the whole remaining gap is `e_q = det D`**. Confirmed at
+  **q=49** (exponent 16) and **q=81** (f=4, exponent 12) — eight prime powers
+  across four values of f. That `49 < 81` while the exponent at 49 is *larger*
+  is the clearest evidence that ramification, not q, governs.
 - **The unified law is UNCONDITIONAL off the primes (P485).**
   The last hypothesis is free whenever `f ≥ 2`, since `D = λD'` forces
   `v(det D) ≥ q` and `q ≥ v(q)+4` for every non-prime prime power. Confirmed
