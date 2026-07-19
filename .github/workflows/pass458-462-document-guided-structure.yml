@@ -1,0 +1,68 @@
+name: Passes 458-462 Document-Guided Structure Release
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass458_collision_coherent_configuration.py'
+      - 'analysis/w33_pass459_prime_power_cyclotomic_covariance.py'
+      - 'analysis/w33_pass460_switching_trade_search.py'
+      - 'analysis/w33_pass461_integral_representation_lattices.py'
+      - 'analysis/w33_pass462_formal_cover_l1_audit.py'
+      - 'analysis/PASS458_COLLISION_COHERENT_CONFIGURATION.md'
+      - 'analysis/PASS459_PRIME_POWER_CYCLOTOMIC_COVARIANCE.md'
+      - 'analysis/PASS460_SWITCHING_TRADE_SEARCH.md'
+      - 'analysis/PASS461_INTEGRAL_REPRESENTATION_LATTICES.md'
+      - 'analysis/PASS462_LEAN_COVER_L1_Q3.md'
+      - 'analysis/PASS458_462_DOCUMENT_SOURCE_AUDIT.md'
+      - 'data/w33_pass458_collision_coherent_configuration.json'
+      - 'data/w33_pass459_prime_power_cyclotomic_covariance.json'
+      - 'data/w33_pass460_switching_trade_search.json'
+      - 'data/w33_pass461_integral_representation_lattices.json'
+      - 'data/w33_pass462_formal_cover_l1_audit.json'
+      - 'formal/**'
+      - 'tests/test_pass458_462_document_guided_structure_release.py'
+      - 'PASS458_462_DOCUMENT_GUIDED_STRUCTURE_RELEASE.md'
+      - '.github/workflows/pass458-462-document-guided-structure.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  PYTHONHASHSEED: '0'
+
+jobs:
+  python-certificates:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install exact dependencies
+        run: python -m pip install numpy==2.3.5 sympy==1.14.0 networkx==3.5 pytest==9.0.2
+      - name: Verify certificates
+        run: |
+          python analysis/w33_pass458_collision_coherent_configuration.py --check
+          python analysis/w33_pass459_prime_power_cyclotomic_covariance.py --check
+          python analysis/w33_pass460_switching_trade_search.py --check
+          python analysis/w33_pass461_integral_representation_lattices.py --check
+          python analysis/w33_pass462_formal_cover_l1_audit.py --check
+      - name: Focused regressions
+        run: python -m pytest -q tests/test_pass458_462_document_guided_structure_release.py
+
+  lean-cover-law-q3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formal
+          build: true
+          test: false
+          lint: false
+          nanoda: true
+          nanoda-allow-sorry: false
