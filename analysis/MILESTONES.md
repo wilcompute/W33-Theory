@@ -38,13 +38,25 @@ Passes 458–462 execute all five continuations from v1.5 while auditing the sup
 
 The permanent Passes 458–462 workflow regenerates all five certificates, runs focused regressions, and builds the integrated Lean package in a separate pinned job.
 
-## v1.7 — OPEN. Gates
+## v1.7-chain-ring-and-cover-frontier — partially closed
 
-1. Derive the exact local trade or algebra automorphism producing the q=5 Smith-identical collision, beyond the exhausted phase cube and natural switching families.
-2. Extend central-character covariance from finite fields to finite chain rings, tracking Frobenius orbits, conductor radicals, and ramified coefficient orders simultaneously.
-3. Generalize Pass 462 from the explicit q=3 model to a uniform odd-prime-power Lean theorem and formalize cover-law lemmas L2–L4.
-4. Derive a symbolic characteristic-primary Smith theorem explaining the Pass 448 exponent-six gap and top layers for general finite chain rings.
-5. Execute the frozen Pass 451 protocol on a measured optical transfer matrix and sealed hardware holdout.
+Passes 463–467 execute all five v1.7 gates, but release criteria remain fail-closed where the underlying physical or uniform theorem is absent.
+
+1. **q=5 collision mechanism — CLOSED by Pass 463.** The collision is an exact exchange of the two Galois-conjugate faithful quintics between square and nonsquare central characters. Their rational norm is unchanged; the marked Cayley relation is not.
+2. **Chain-ring central covariance — CLOSED by Pass 464.** Unit-Galois covariance, star symmetry, conductor orbits, alternating radicals, and ramified cyclotomic coefficient orders are exact for `Z/p^n`, with `Z/9` and `Z/25` witnesses.
+3. **Cover-law continuation — q=3 CLOSED, uniform geometry OPEN.** Pass 465 formalizes L2–L4 objectwise at q=3 and proves the parameter/shell arithmetic uniformly. The all-odd-prime-power projective cardinality proof is still open.
+4. **Characteristic-primary Smith explanation — universal theorem CLOSED, graph formula OPEN.** Pass 466 proves the kernel-growth/Bockstein recovery theorem and locates the exponent-six gap at the conductor-nine ramification index. A closed multiplicity formula in p and chain length is still open.
+5. **Blind hardware protocol — software CLOSED, physical run OPEN.** Pass 467 supplies the exact measured-data runner and templates. No measured transfer matrix or sealed holdout is present.
+
+The permanent Passes 463–467 workflow regenerates all certificates, runs focused regressions, and builds the integrated Lean package.
+
+## v1.8 — OPEN. Gates
+
+1. Prove the finite-field projective cardinality lemmas uniformly in Lean for every odd prime power, eliminating the remaining q=3 objectwise specialization.
+2. Derive the integral conductor-coupling matrix that predicts every characteristic-primary Smith multiplicity for `Z/p^n`, rather than recovering it from kernel growth.
+3. Construct an explicit algebraic intertwiner for the Pass-463 square/nonsquare sheet exchange and classify all such semisimple collisions.
+4. Execute Pass 467 on a genuinely measured transfer matrix and sealed optical holdout, preserving the frozen classifier and endpoint.
+5. Lift the chain-ring conductor theorem from `Z/p^n` to general finite local principal ideal rings and Galois rings.
 
 ## Deferred
 

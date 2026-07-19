@@ -1,0 +1,10 @@
+{
+  "acquisition_id": "",
+  "device_id": "",
+  "measured": false,
+  "notes": "Set measured=true only after a real acquisition. Replace calibration and sealed observations only.",
+  "operator": "",
+  "schema": "w33.pass467.measured_manifest.v1",
+  "shots_per_phase": 16384,
+  "timestamp_utc": ""
+}
