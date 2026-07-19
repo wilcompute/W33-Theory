@@ -189,6 +189,16 @@ Pass 489 (`analysis/w33_pass489_frobenius_generality.py`, 16/16 exact):
 4. **The residual is uniform too:** the measured `v_λ(det D) ≥ 2|R|` holds with *equality* over all three nilpotent rings (18, 54, 50), so the sole open step behaves identically off the field locus.
 5. **Paper rewritten** over finite local Frobenius rings with generating character of order p — fields are now one example, not the setting. Nothing in the proof used invertibility of nonzero elements, which is why the generalization costs nothing and the theorem is strictly stronger.
 
+## Pass 490 addendum (python track) — the hypothesis is NECESSARY; one inferred pattern was wrong
+
+Pass 490 (`analysis/w33_pass490_necessity_and_placement.py`, 7/7 exact):
+
+1. **NECESSITY CONFIRMED AT A SECOND PRIME.** Over ℤ/25 (character order 25, `v_λ(5)=20`, `v_λ(25)=40`, Newton divisions by 5,10,15,20,25 each costing 20 against 4 over ℤ[ζ₅]): the law would predict 44, **measured minimum 30**. So **"generating character of order p" is necessary, not merely sufficient** — the law fails at p=3 (ℤ/9) and p=5 (ℤ/25).
+2. **SELF-CORRECTION: "failure value = v_λ(q)" is WRONG.** ℤ/9 landed exactly on `v_λ(q)=12` and it was tempting to read that as a residual law; **ℤ/25 gives 30, strictly BELOW `v_λ(25)=40`**. Off the character-order-p locus there is a *failure*, not a second law — the ℤ/9 value was a coincidence of that case.
+3. **det D over 𝔽₃[x]/(x²):** valuations {18,20,22,24,26}, minimum `2|R| = 18`, all even, and **all rational** — unlike the field case at q=5 where det D is not rational. The nilpotent rings are the more tractable place to attack the sole remaining gap.
+4. **LITERATURE PLACEMENT (searched):** by **Wood's theorem** the finite Frobenius rings are exactly those satisfying the MacWilliams extension property, and a generating character is the standard tool — our setting is the usual one of ring-linear coding theory. Cited in the note (Wood, *Duality for modules over finite rings*, Amer. J. Math. **121** (1999) 555–575). The determinant congruence itself appears neither there nor in the Gauss-sum literature (where Stickelberger is the classical valuation statement).
+5. **Main-paper bridge:** the arithmetic half of the register-cell results now covers Frobenius rings, connecting to the repo's chain-ring/Hjelmslev machinery (Passes 464/469) — previously separate parts of the corpus.
+
 ## Deferred
 
 - m=6 Coxeter–Todd rung of the QR tower (`data/m6_handoff_k12.json`).

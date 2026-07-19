@@ -14183,6 +14183,9 @@ $\det D=0$ locus \emph{strictly contains} the flat orbit ($41$ vs $9$) & \textsc
 law holds over $\FF_p[x]/(x^k)$: $(3,2){\to}8$, $(3,3){\to}10$, $(5,2){\to}12$ & \textsc{cert} & P489 & this programme (two primes, two depths) \\
 exponent of $\FF_p[x]/(x^k)$ $=$ exponent of the \emph{field} of that size & \textsc{cert} & P489 & this programme (law can't see the difference) \\
 $v_\lambda(\det D)=2|R|$ over the nilpotent rings too ($18,54,50$) & \textsc{cert} & P489 & this programme (residual is uniform) \\
+``character order $p$'' is \emph{necessary}: $\ZZ/25$ fails too ($30$ vs $44$) & \textsc{cert} & P490 & this programme (2nd prime, negative half) \\
+``failure value $=v_\lambda(q)$'' & \textsc{killed} & P490 & self-correction: $\ZZ/9$ coincidence, $\ZZ/25$ gives $30<40$ \\
+hypothesis is Wood's Frobenius setting (MacWilliams extension) & \textsc{cert} & P490 & literature placement \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -14737,5 +14740,31 @@ rings with generating character of order $p$, with fields as one example rather
 than the setting; nothing in the proof used invertibility of nonzero elements,
 which is why the generalization costs nothing and the resulting theorem is
 strictly stronger.
+
+\paragraph{Pass 490 --- the hypothesis is necessary, and one inferred pattern
+was wrong.}
+The negative half of the trichotomy rested on a single example.  Repeating it at
+a second prime settles necessity: over $\ZZ/25$ the generating character has
+order $25$, $v_\lambda(5)=20$ and $v_\lambda(25)=40$, so Newton's divisions by
+$5,10,15,20,25$ each cost $20$ against the $4$ they cost over $\ZZ[\zeta_5]$.
+The law would predict exponent $44$; the measured minimum is $30$.  So
+\textbf{``generating character of order $p$'' is necessary, not merely
+sufficient} --- the law fails at $p=3$ and at $p=5$ once the character order
+exceeds $p$.  \emph{But a pattern I had inferred from $\ZZ/9$ is wrong}: there
+the failed exponent was exactly $v_\lambda(q)=12$, and it was tempting to read
+that as a residual law; $\ZZ/25$ gives $30$, strictly \emph{below}
+$v_\lambda(25)=40$.  Off the character-order-$p$ locus there is a failure, not
+a second law, and the $\ZZ/9$ value was a coincidence of that case.  Two
+smaller results close the round.  The determinants $\det D$ over
+$\FF_3[x]/(x^2)$ have valuations $\{18,20,22,24,26\}$ --- minimum $2|R|=18$,
+all even, and all of them \emph{rational}, unlike the field case at $q=5$ ---
+so the nilpotent rings are the more tractable place to attack the sole
+remaining gap.  And the Frobenius hypothesis is placed in the literature: by
+Wood's theorem the finite Frobenius rings are exactly those satisfying the
+MacWilliams extension property, and a generating character is the standard tool
+there, so our setting is the usual one of ring-linear coding theory --- though
+the determinant congruence itself appears neither there nor in the Gauss-sum
+literature, where Stickelberger's theorem is the classical valuation statement
+for character sums.
 
 \end{document}

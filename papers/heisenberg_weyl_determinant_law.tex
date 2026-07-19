@@ -78,7 +78,13 @@ $R=\FF_q$, and the truncated polynomial rings $R=\FF_p[x]/(x^k)$, whose socle
 is $(x^{k-1})$ and whose generating character is $\psi(c)=\zeta_p^{c_{k-1}}$.
 The reader who prefers may take $R=\FF_q$ throughout; nothing in the argument
 uses invertibility of nonzero elements, and Section~\ref{sec:pf} shows the
-distinction is invisible to the result. Set
+distinction is invisible to the result. The hypothesis is not ad hoc: by Wood's
+theorem \cite{Wood} the finite Frobenius rings are precisely the finite rings
+for which the MacWilliams extension theorem holds, and a generating character
+is the standard tool in that theory, so the setting here is the usual one of
+ring-linear coding theory. What our argument additionally requires --- and what
+fails over $\ZZ/p^2$ --- is only that the generating character have order $p$.
+Set
 \[
 H=\bigl\{(a,b,c):a,b,c\in R\bigr\},\qquad
 (a,b,c)(a',b',c')=(a+a',\,b+b',\,c+c'-ab'+a'b),
@@ -657,6 +663,17 @@ Conjecture~\ref{conj:top} also holds over each of them, with equality
 ($18$, $54$, $50$), so the sole open step behaves identically off the field
 locus.
 
+Finally, the hypothesis is \emph{necessary}, not merely convenient. Repeating
+the $\ZZ/9$ experiment at a second prime, over $\ZZ/25$ --- generating
+character of order $25$, $\vlam(5)=20$, $\vlam(25)=40$, so Newton's divisions
+by $5,10,15,20,25$ each cost $20$ against the $4$ they cost over
+$\ZZ[\zeta_5]$ --- the law would predict exponent $44$ and the measured
+minimum is $30$. So the law fails at both $p=3$ and $p=5$ once the character
+order exceeds $p$. It should be added that the failed value is \emph{not} a
+clean function of $\vlam(q)$: $\ZZ/9$ landed exactly on $\vlam(q)=12$, whereas
+$\ZZ/25$ gives $30$, strictly below $\vlam(25)=40$. Off the
+character-order-$p$ locus there is a failure, not a second law.
+
 \begin{thebibliography}{9}
 
 \bibitem{Ma}
@@ -671,6 +688,11 @@ J.~Combin.\ Des.\ \textbf{32} (2024), 351--370; see Corollary~4.7 and the
 discussion following Theorem~4.8 for the Heisenberg partial difference sets
 with parameters $\bigl(q^3,(q-1)(q+2),q-2,q+2\bigr)$ and the nonexistence of
 abelian examples.
+
+\bibitem{Wood}
+J.~A.~Wood,
+\emph{Duality for modules over finite rings and applications to coding theory},
+Amer.\ J.\ Math.\ \textbf{121} (1999), 555--575.
 
 \bibitem{mathlib}
 The mathlib Community,
