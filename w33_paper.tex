@@ -14085,6 +14085,51 @@ exp-$9$ Weil fingerprint $\{1,1,-5\}$ rebuilds the SRG spectrum & \textsc{cert} 
 \end{tabular}
 \end{center}
 
+\paragraph{Claims ledger, continued (Passes 448--473).}
+The third stream's five releases (448--452, 453--457, 458--462, 463--467,
+468--472) passed the executable intake audit
+(\texttt{scripts/audit\_batch.py}: 25 files clean; P455 independently
+re-run here, no certificate drift).
+
+\begin{center}\small
+\begin{tabular}{@{}p{0.44\textwidth}llp{0.30\textwidth}@{}}
+\toprule
+claim & status & witness & owner \\
+\midrule
+exact $\ZZ/9$ characteristic Smith decomposition & \textsc{cert} & P448 & third stream \\
+$625$ cubic sections $=$ five spectrum-and-Smith classes & \textsc{thm} & P449 & third stream (exhaustive) \\
+central Fourier scaffold in Lean & \textsc{cert} & P450 & third stream \\
+device-ready blind challenge packet & \textsc{cert} & P451 & third stream \\
+length-$3$ Hjelmslev filtration realized & \textsc{cert} & P452 & third stream \\
+$\sqrt5$ gate resolved: block coefficient fields $\subseteq\mathbf Q(\zeta_p)^+$ & \textsc{thm} & P453 & third stream; closes the P447 gate \\
+$q{=}7$ falsifier: no quadratic pairs; atlas $=$ real cyclotomic, disc $49$ & \textsc{cert} & P454 & third stream ($80/80$ distinct) \\
+FS indicators: ordinary $0$, twisted $+1$ --- identical exp-$3$/exp-$9$ & \textsc{cert} & P455 & third stream; re-verified here \\
+collision anatomy: $3$ affine repeats $+$ $1$ genuine pair & \textsc{cert} & P456 & third stream \\
+genuine pair: nonisomorphic, cospectral, \emph{Smith-identical} & \textsc{cert} & P456 & third stream \\
+perp antitonicity after span shift (Lean) & \textsc{cert} & P457 & third stream \\
+genuine pair separates at $2$-WL ($19$ vs $18$); Terwilliger $622/650$ & \textsc{cert} & P458 & third stream \\
+prime-power cyclotomic covariance, all $p^f$ & \textsc{thm} & P459 & third stream \\
+no natural switching generates the collision & \textsc{cert} & P460 & third stream (exhaustive in-cube) \\
+first exp-$3$/exp-$9$ separator: ramified integral lattices & \textsc{thm} & P461 & third stream \\
+cover-law L1 formal end-to-end at $q{=}3$ (Lean) & \textsc{cert} & P462 & third stream \\
+genuine collision $=$ Wedderburn sheet exchange & \textsc{thm} & P463 & third stream \\
+chain-ring conductor tower closed ($\ZZ/p^n$) & \textsc{thm} & P464 & third stream \\
+cover-law L2--L4 formal; arithmetic layer all $q$ (Lean) & \textsc{cert} & P465 & third stream \\
+Smith/Bockstein ramification; the P448 gap localized & \textsc{thm} & P466 & third stream \\
+hardware blind runner $+$ sealed templates & \textsc{cert} & P467 & third stream (no lab score) \\
+semisimple sheet intertwiner (companion normal form) & \textsc{cert} & P468 & third stream \\
+Galois-ring conductor tower $\mathrm{GR}(p^n,f)$ & \textsc{thm} & P469 & third stream \\
+integral conductor coupling, exact over $\ZZ/9$ & \textsc{cert} & P470 & third stream \\
+uniform cover witness over $\FF_3,\FF_5,\FF_7,\FF_9$ & \textsc{cert} & P471 & third stream \\
+hardware custody gate & \textsc{cert} & P472 & third stream (awaiting lab) \\
+universal trace laws: $e_1{=}0$, $e_2{=}-q(q^2{-}1)/2$; $q{-}2$ free coefficients & \textsc{thm} & P473 & this programme (exact arithmetic) \\
+$q{=}3$ det law: $d\in\{-16,11\}$ complete invariant; $d\equiv q^2{+}2 \bmod q^3$ & \textsc{thm} & P473 & this programme (exhaustive, exact) \\
+the $q{=}3$ five $=$ $2^8-11^2 = 27\cdot5$ (determinantal, not cyclotomic) & \textsc{thm} & P473 & this programme; derives P453's assertion \\
+genuine collision $=$ sheet-data non-injectivity & \textsc{cert} & P473 & this programme; sharpens P463 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
 \paragraph{Pass 386 --- the geometric gap is the phase; the rim law for all odd
 $q$.}
 The $648$-action on the bulk $27$ has permutation rank six, suborbits
@@ -14189,5 +14234,65 @@ dynamically every invariant Hamiltonian commutes with the symmetry and cannot
 move population between fiber points except trivially (399).  One obstruction,
 two faces; the symmetry-breaking input physics needs is the same missing
 section in both.
+
+\paragraph{Passes 448--473 --- the two fives; the collision Smith cannot see;
+the trace laws.}
+The $\sqrt5$ gate of Pass 447 (why does $\mathbf Q(\sqrt5)$ appear at both
+$q=3$ and $q=5$?) is resolved, and the answer is that \textbf{the two fives
+are unrelated}.  At $q=5$ the third stream proved (P453, generalized to all
+$p^f$ in P459) that every central Weyl block $B_t(c)$ has entries in
+$\ZZ[\zeta_p]$ with Galois covariance $\sigma_a(B_t)=B_{at}$, so all block
+coefficient fields lie in the maximal real cyclotomic field
+$\mathbf Q(\zeta_p)^+$ --- which \emph{is} $\mathbf Q(\sqrt5)$ at $p=5$.  The
+$q=7$ falsifier (P454) confirmed the mechanism: $80/80$ sampled sections give
+zero quadratic eigenvalue pairs and trace-cubic fields of discriminant $49$,
+exactly $\mathbf Q(\zeta_7)^+$.  At $q=3$ that explanation is empty
+($\mathbf Q(\zeta_3)^+=\mathbf Q$); the origin is instead
+\textbf{determinantal} (P473, exhaustive and in exact cyclotomic integer
+arithmetic): for every inverse-closed section, $\operatorname{tr}B=0$ and
+$\operatorname{tr}B^2=q(q^2{-}1)$ --- section-independent --- so at $q=3$ the
+whole characteristic polynomial is $x^3-12x-d$ with one free integer
+$d=\det B$, and over all $81$ sections $d$ takes exactly two values: $-16$ on
+the $9$ flat sections ($(x{+}4)(x{-}2)^2$; subtracting the centre term gives
+$\{-5,1,1\}$, the P447 PDS fingerprint) and $11$ on the $72$ curved ones
+($(x{+}1)(x^2{-}x{-}11)$).  Both satisfy $d\equiv q^2{+}2 \pmod{q^3}$.  Since
+$\operatorname{disc}(x^3{-}12x{-}d)=27\,(2^8-d^2)$, the curved field is
+$\mathbf Q(\sqrt{2^8-11^2})=\mathbf Q(\sqrt{135})=\mathbf Q(\sqrt5)$: the
+$q=3$ five is the arithmetic accident $2^8-11^2=27\cdot5$.  The agreement of
+the two fives was a numerical pun, and it cost one release gate to unmask.
+The trace laws also unify the census landscape: each block has exactly $q-2$
+free characteristic coefficients, so the $q=3$ flat/curved \emph{dichotomy}
+(one coefficient) and the $q\ge5$ \emph{near-injectivity} of Passes 447/454
+(three, five, \dots) are the two ends of one count.
+
+The four $q=5$ spectral collisions of Pass 447 were dissected (P456): three
+are repeats inside the $12{,}000$-element affine orbit; the fourth is a
+\textbf{genuine pair} --- nonisomorphic $125$-vertex Cayley graphs, cospectral,
+with \emph{identical complete critical groups}, so Smith torsion fails as a
+separator for the first time in the programme.  The pair separates at the
+first $2$-WL coherent refinement (rank $19$ vs $18$, P458); no natural
+switching operation generates it (P460, exhaustive in its phase cube); and
+mechanically it is a Wedderburn \emph{sheet exchange} --- the two graphs swap
+the Galois-conjugate $\mathbf Q(\sqrt5)$ quintics between square and
+nonsquare central characters (P463).  Pass 473 sharpens this: the det-twist
+$2\cdot(c_A\circ g^{-1})$ (an affine transform, hence isomorphic to $A$)
+matches $B$ \emph{sheet-by-sheet at every central character}, so the pair
+exhibits \textbf{sheet-data non-injectivity} --- no per-block spectral
+invariant, however refined, can ever separate it; the coherent/WL layer is
+genuinely necessary.
+
+The exp-$3$/exp-$9$ residual also closed: ordinary and centre-inverting
+twisted Frobenius--Schur indicators are \emph{identical} on both sides
+(all faithful irreps: ordinary $0$, twisted $+1$; P455, re-verified here),
+and the first clean separator turns out to be \emph{integral}: the invariant
+Hermitian lattices differ in ramified data --- the exponent-$9$
+representation carries three extra central congruence layers (P461).
+Meanwhile the formal spine crossed the geometry boundary end-to-end: cover-law
+L1 is fully formalized at $q=3$ (P462), the arithmetic layer of L2--L4 for
+all $q$ (P465), with the uniform finite-field cardinality proof the named
+remaining target; and the chain-ring/Galois-ring conductor arithmetic closed
+in every parameter (P464/P469).  A sealed hardware custody gate (P467/P472)
+holds templates for the blind optical run; no laboratory score is claimed.
+All 25 third-stream passes cleared the executable intake audit at merge.
 
 \end{document}

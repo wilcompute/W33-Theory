@@ -62,6 +62,15 @@ Passes 468–472 advance every v1.8 gate while preserving the formal and physica
 
 The permanent Passes 468–472 workflow regenerates all five certificates and runs focused regressions.
 
+## Pass 473 addendum (python track) — the two fives closed; a new congruence question
+
+Pass 473 (`analysis/w33_pass473_universal_trace_laws_and_q3_det_law.py`, 20/20, exact cyclotomic integer arithmetic):
+
+1. **Universal trace laws (THEOREM, all odd q).** `tr B_t = 0` and `tr B_t² = q(q²−1)` for every inverse-closed section and every nontrivial central character — so `e₁, e₂` are section-independent and each block has exactly `q−2` free characteristic coefficients. The q=3 flat/curved dichotomy and the q≥5 near-injective censuses (447/454) are the two ends of this one count.
+2. **The q=3 determinant law (exhaustive).** `charpoly(B) = x³ − 12x − d`, `d = det B ∈ {−16 (9 flat), 11 (72 curved)}` — a complete spectral invariant. `disc = 27(2⁸ − d²)`; at `d=11`, `2⁸ − 121 = 135 = 27·5`. **The q=3 five is determinantal, the q=5 five is cyclotomic (453/459); the two-fives agreement was a pun.** This derives the q=3 origin that Pass 453 asserted without computation.
+3. **Sheet-data non-injectivity (sharpens 463).** The det-twist of collision graph A matches B **sheet-by-sheet at every central character**, so no per-block spectral invariant can separate the genuine pair; the WL/coherent layer (458) is necessary, not just sufficient.
+4. **New question for v1.9+:** both q=3 determinant values satisfy `d ≡ q²+2 (mod q³)`. Is there a general determinant congruence law for central Weyl blocks (Stickelberger-type) at every odd q — and does it constrain which of the `q−2` free coefficients can collide at q=5?
+
 ## v1.9 — OPEN. Gates
 
 1. Prove the projective-point, perpendicular-line, and shell-cardinality formulas uniformly in Lean over every finite field of odd characteristic.

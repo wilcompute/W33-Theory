@@ -33,12 +33,14 @@ DATA = ROOT / "data"
 
 def main() -> int:
     tex = PAPER.read_text(encoding="utf-8", errors="ignore")
-    m = re.search(r"\\paragraph\{Claims ledger\.\}(.*?)\\end\{tabular\}",
-                  tex, re.S)
-    if not m:
+    # every ledger block: the original table plus any "Claims ledger,
+    # continued" tables added as the ledger outgrows one tabular
+    blocks = re.findall(r"\\paragraph\{Claims ledger[^}]*\}(.*?)\\end\{tabular\}",
+                        tex, re.S)
+    if not blocks:
         print("[claims-ledger] no ledger found in w33_paper.tex")
         return 1
-    block = m.group(1)
+    block = "\n".join(blocks)
     rows = [ln for ln in block.splitlines() if "&" in ln and "P3" in ln
             or ("&" in ln and re.search(r"P\d{3}", ln))]
     failures, checked = [], 0
