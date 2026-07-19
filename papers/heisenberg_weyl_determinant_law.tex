@@ -43,12 +43,19 @@ q+1 \;=\; \underbrace{(q-1)}_{\text{ramification of }q}
 The proof rests on a closed formula
 $\tr\bigl(\adj(F)\,D\bigr)=\det(F)\,q\,S/(q^2-1)$ in which $F$ is the block of
 the zero section and $S=\sum_{v}(\zeta_q^{-tc(v)}-1)$; the block $F$ is shown to
-satisfy $F^2+2F-(q^2-1)I=0$ by a symplectic character sum. Computation
-(exhaustive for $q=3$, sampled for $q=5,7$) indicates the stronger congruence
-$\det B_t(c)\equiv\det F \pmod{\lambda^{q+3}}$ with the exponent $q+3$ sharp,
-and we isolate the single cancellation that would prove it. At prime powers the
-formula for $\det F$ persists but the congruence exponent drops, so the law is
-a prime phenomenon.
+satisfy $F^2+2F-(q^2-1)I=0$ by a symplectic character sum. We then prove the
+congruence itself,
+\[
+\det B_t(c)\;\equiv\;\det F \pmod{\lambda^{q+1}},
+\]
+for every odd prime and every section. Two steps of that argument would fail
+on valuation counting alone --- the first power sum and the top exterior power
+--- and both are rescued by the same hypothesis, inverse closure. Computation
+(exhaustive for $q=3$, sampled for $q=5,7$) shows the sharper exponent $q+3$,
+and we reduce the entire remaining gap to one congruence between the first two
+power sums. At prime powers $q=p^f$ the same argument gives the exponent
+$f(p-1)+2$, sharp at $q=9$: the ramification summand shrinks while the
+inverse-closure summand survives.
 \end{abstract}
 
 \noindent\textbf{2020 MSC.} 11R18, 11T24, 15A15, 20C15, 05B10.\\
@@ -251,44 +258,112 @@ contributes valuation $2$ or $\infty$; therefore $\vlam(S)\ge2$ and
 $\vlam(T_1)\ge q+1$.
 \end{proof}
 
-\begin{corollary}
-$\det B_t(c)\equiv\det F \pmod{\lambda^{2}}$ for every section, and the
-first-order term alone is divisible by $\lambda^{q+1}$.
-\end{corollary}
+\section{The congruence}\label{sec:sharp}
 
-\section{Beyond first order}\label{sec:sharp}
+Write $G=F^{-1}D$, $p_m=\tr(G^m)$, and $e_k=e_k(G)$, so that
+$\det B_t(c)=\det(F)\bigl(1+\sum_{k\ge1}e_k\bigr)$. Note $G$ is
+$\lambda$-integral, since $F^{-1}=(F+2I)/(q^2-1)$ and $q^2-1$ is prime to
+$\lambda$; hence so is every $e_k$.
 
-Expanding multilinearly by columns, $\det(F+xD)=\sum_{k=0}^{q}T_kx^k$ with
-$T_0=\det F$ and $T_k=\det(F)\,e_k(F^{-1}D)$, where $e_k$ is the $k$-th
-elementary symmetric function of eigenvalues.
+\begin{lemma}[power sums]\label{lem:power}
+$\vlam(p_m)\ge q+1$ for every $m\ge1$.
+\end{lemma}
 
-\begin{proposition}[verified]\label{prop:orders}
-For $q=3$ (all $81$ sections) and $q=5,7$ (sampled), every section satisfies
+\begin{proof}
+Put $H=(F+2I)D$, so $p_m=\tr(H^m)/(q^2-1)^m$ and
+$\vlam(p_m)=\vlam(\tr H^m)$. Both $F$ and $D$ are $\ZZ[\zeta]$-linear
+combinations of the matrices $\rho_t(g)$, and $D=\sum_{v\neq0}d_v\rho_t(v,0)$
+with $d_v=\zeta^{tc(v)}-1$, each of valuation $\ge1$. Expanding $\tr(H^m)$
+therefore produces monomials
+$d_{v_1}\cdots d_{v_m}\cdot\tr\rho_t(g)$ for single group elements $g$, with
+exactly $m$ factors $d$. By Lemma~\ref{lem:trace} such a trace vanishes unless
+$g$ is central, in which case it equals $q$ times a root of unity. Every
+surviving monomial thus carries one factor $q$ and $m$ factors $d$, so
+$\vlam(\tr H^m)\ge(q-1)+m$, which is $\ge q+1$ for $m\ge2$.
+
+For $m=1$ this count gives only $q$. But by the computation in the proof of
+Theorem~\ref{thm:main}, $\tr H=\tr(FD)+2\tr D=qS$, and inverse closure gives
+$\vlam(S)\ge2$; hence $\vlam(p_1)=(q-1)+\vlam(S)\ge q+1$ as well.
+\end{proof}
+
+\begin{lemma}[top exterior power]\label{lem:top}
+$\vlam(e_q)\ge q+1$.
+\end{lemma}
+
+\begin{proof}
+$e_q=\det G=\det D/\det F$ and $\vlam(\det F)=0$, so it suffices that
+$\vlam(\det D)\ge q+1$. Every entry of $D$ is a $\ZZ[\zeta]$-combination of the
+$d_v$, so $D=\lambda D'$ with $D'$ $\lambda$-integral and
+$\det D=\lambda^{q}\det D'$; we must show $\det D'\equiv0\pmod\lambda$.
+
+Reduce modulo $\lambda$, identifying $\ZZ[\zeta]/\lambda=\FF_q$ via
+$\zeta\mapsto1$. Then $(\zeta^{k}-1)/(1-\zeta)\equiv-k$ and
+$\rho_t(v,0)\equiv P_{a_v}$, where $P_a$ is the permutation matrix of
+$x\mapsto x+a$; grouping the $q^2-1$ vectors by their first coordinate,
 \[
-\vlam(T_k)\ge q+1\ \ (k\ge1),\qquad
-\vlam(T_k)\ge q+3\ \ (k\ge3),\qquad
-\vlam(T_1+T_2)\ge q+3,
+D'\;\equiv\;\sum_{a\in\FF_q}\kappa_a P_a \pmod\lambda,
+\qquad
+\kappa_a=-t\sum_{b}c(a,b).
 \]
-and consequently
-$\det B_t(c)\equiv\det F\pmod{\lambda^{q+3}}$, with $q+3$ attained: at $q=3$
-every non-flat section gives $\vlam(\det B_t(c)-\det F)=6$ exactly, and at
-$q=5$ the observed values are $\{8,10,12\}$ with minimum $8=q+3$.
-\end{proposition}
+The $P_a$ span the group algebra
+$\FF_q[\ZZ/q]=\FF_q[y]/(y^{q}-1)=\FF_q[y]/\bigl((y-1)^{q}\bigr)$, in which the
+determinant of multiplication by $f(y)$ is $f(1)^{q}$. Hence
+$\det D'\equiv\bigl(\sum_a\kappa_a\bigr)^{q}
+=\bigl(-t\sum_{v\neq0}c(v)\bigr)^{q}$, and inverse closure makes
+$\sum_{v\neq0}c(v)=0$ because the terms cancel in pairs $\{v,-v\}$. So
+$\det D'\equiv0$.
+\end{proof}
 
-Only the case $k=1$ of the first display is proved above; the rest is
-computational. The structure is nonetheless clear: the exponent $q+3$ is
-\emph{$q+1$ at every order, plus one further cancellation between the first two
-orders}. We therefore isolate exactly what remains.
+\begin{theorem}[the congruence]\label{thm:cong}
+For every odd prime $q$, every $t\not\equiv0$, and every inverse-closed
+section $c$,
+\[
+\det B_t(c)\;\equiv\;\det F\pmod{\lambda^{q+1}} .
+\]
+\end{theorem}
+
+\begin{proof}
+By Newton's identities, $k\,e_k=\sum_{i=1}^{k}(-1)^{i-1}e_{k-i}p_i$. For
+$1\le k\le q-1$ the integer $k$ is a unit at $\lambda$, so induction on $k$
+together with Lemma~\ref{lem:power} and the $\lambda$-integrality of the
+$e_j$ gives $\vlam(e_k)\ge q+1$. For $k=q$ the same recursion would lose
+$\vlam(q)=q-1$, and Lemma~\ref{lem:top} supplies that case directly. Hence
+$\vlam(e_k)\ge q+1$ for all $k\ge1$ and
+$\det B_t(c)-\det F=\det(F)\sum_{k\ge1}e_k$ has valuation $\ge q+1$.
+\end{proof}
+
+\begin{remark}
+Both places where valuation counting alone is insufficient --- the first power
+sum in Lemma~\ref{lem:power} and the top exterior power in
+Lemma~\ref{lem:top} --- are rescued by inverse closure, in the first case
+through $\vlam(S)\ge2$ and in the second through $\sum_{v}c(v)=0$. Without
+that hypothesis the argument gives only $\lambda^{q}$.
+\end{remark}
+
+\subsection{The sharp exponent}
+
+Computation shows more. Expanding multilinearly by columns,
+$\det(F+xD)=\sum_{k}T_kx^{k}$ with $T_k=\det(F)e_k$, one finds for $q=3$ (all
+$81$ sections) and $q=5,7$ (sampled) that $\vlam(T_k)\ge q+3$ for $k\ge3$ and
+$\vlam(T_1+T_2)\ge q+3$, whence
+$\det B_t(c)\equiv\det F\pmod{\lambda^{q+3}}$ with $q+3$ attained: at $q=3$
+every non-flat section gives valuation exactly $6$, and at $q=5$ the observed
+values are $\{8,10,12\}$ with minimum $8=q+3$.
+
+The whole gap between Theorem~\ref{thm:cong} and this sharper statement is a
+single congruence. Indeed $\vlam(p_1^2)\ge2(q+1)\ge q+3$, so
+$e_2=(p_1^2-p_2)/2$ gives $e_1+e_2\equiv p_1-p_2/2 \pmod{\lambda^{q+3}}$.
 
 \begin{conjecture}\label{conj:sharp}
-For every odd prime $q$ and every inverse-closed section,
-$\vlam(T_k)\ge q+1$ for all $k\ge1$, and $T_1+T_2\equiv0\pmod{\lambda^{q+3}}$.
+$2p_1\equiv p_2 \pmod{\lambda^{q+3}}$ for every odd prime $q$ and every
+inverse-closed section; equivalently, with $H=(F+2I)D$,
+$2(q^2-1)\tr H\equiv\tr H^2$.
 \end{conjecture}
 
-A proof of the second statement along the lines of Theorem~\ref{thm:main} would
-require a closed form for $\tr\bigl((F^{-1}D)^2\bigr)$, obtainable in principle
-by the same argument with two symplectic factors in place of one; we have not
-carried this out.
+This is verified exhaustively at $q=3$ and by sampling at $q=5$. Proving it
+requires a closed form for $\tr(H^2)$ to match $\tr H=qS$; the exact identity
+$\tr(D^2)=-2qS$ holds, so the remaining unknowns are $\tr(FD^2)$ and
+$\tr(FDFD)$.
 
 \begin{remark}
 The residue class is the flat determinant, not a numerical coincidence of small
@@ -307,15 +382,38 @@ finds $F^2+2F-80I=0$, spectrum $\{8^5,(-10)^4\}$, and
 $\det F=8^5(-10)^4=327{,}680{,}000$, in agreement with the formula of
 Lemma~\ref{lem:flat}; the trace laws hold as well.
 
-The congruence does not survive. Over $60$ sampled non-collinear sections at
-$q=9$ the valuation $\vlam\bigl(\det B_t(c)-\det F\bigr)$ is not constant, and
-its \emph{minimum} --- the exponent of the congruence valid for every section
---- is $8$, strictly below the prime value $q+3=12$. Sections taking values in
-the subfield $\FF_p\subset\FF_q$ do not form a separate class: they realize the
-same minimum and an overlapping range. The identity
-$\vlam(q)=q-1$ underlying Theorem~\ref{thm:main} is replaced by
-$\vlam(p^f)=f(p-1)$, which already accounts for part of the discrepancy, and we
-do not know the correct prime-power statement.
+What changes is the ramification. The identity $\vlam(q)=q-1$ underlying
+Theorem~\ref{thm:main} becomes
+\[
+\vlam(p^{f})=f(p-1),
+\]
+since $(p)=(\lambda)^{p-1}$ in $\ZZ[\zeta_p]$. Every other ingredient of
+Theorem~\ref{thm:main} is insensitive to $f$: the flat-block lemma, the
+vanishing of $\tr\rho_t$ off the centre, and the pairing
+Lemma~\ref{lem:pair} all hold verbatim with $\psi_t$ in place of
+$\zeta^{t\,\cdot}$. Repeating the proof gives the following.
+
+\begin{theorem}\label{thm:pf}
+Let $q=p^f$ with $p$ odd. Then $T_1=\det(F)\,qS/(q^2-1)$ with
+$S=\sum_{v\neq0}\bigl(\psi_t(-c(v))-1\bigr)$, and
+\[
+\vlam(T_1)\;=\;f(p-1)+\vlam(S)\;\ge\;f(p-1)+2 .
+\]
+\end{theorem}
+
+At $q=9$ the bound reads $\vlam(T_1)\ge6$, and it is sharp: over sampled
+sections the observed first-order valuations are $\{6,8,12\}$, with minimum
+exactly $6$. Note $6<q+1=10$, so the prime-$q$ exponent genuinely fails one
+rung up --- the ramification summand shrinks from $q-1=8$ to $f(p-1)=4$ while
+the inverse-closure summand $2$ survives.
+
+The full congruence degrades correspondingly. Over $60$ sampled non-collinear
+sections at $q=9$ the valuation $\vlam\bigl(\det B_t(c)-\det F\bigr)$ is not
+constant, and its \emph{minimum} --- the exponent of the congruence valid for
+every section --- is $8$, strictly below the prime value $q+3=12$. Sections
+taking values in the subfield $\FF_p\subset\FF_q$ do not form a separate class:
+they realize the same minimum and an overlapping range. We do not know the
+sharp prime-power exponent.
 
 \begin{thebibliography}{9}
 

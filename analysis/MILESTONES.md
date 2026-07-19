@@ -119,6 +119,16 @@ Pass 482 (`analysis/w33_pass482_order_theorem_q9_criterion_mechanism_census.py`,
 4. **SELF-CORRECTION (q=9 criterion).** The F₃-subfield hypothesis is refuted: constructed F₃-valued sections (random sampling never produces one, p = 3⁻⁴⁰) share the generic minimum depth and an overlapping spectrum. Both proposed q=9 criteria are now dead; the question is open.
 5. **Gate 3 reduced to a named ideal class.** Sheet quintic `f = x⁵−60x³−35x²+366x+2`, irreducible over Q (its x⁴ and x³ coefficients 0 and −60 independently reproduce the universal trace laws). Gate 3 = are the two Z[ζ₅]-orders in the same ideal class of `K = Q(zeta_5)[x]/(f)`? Needs pari/sage. Standalone note `papers/heisenberg_weyl_determinant_law.tex` extracts the arithmetic for outside readers.
 
+## Pass 483 addendum (python track) — the congruence is a THEOREM
+
+Pass 483 (`analysis/w33_pass483_modlambda_qplus1_theorem.py`, 17/17 exact):
+
+1. **THEOREM (all odd primes):** `det B_t(c) ≡ det F (mod λ^(q+1))` for every inverse-closed section. Proof: (a) **power sums** — F and D are both Z[ζ]-combinations of ρ(g), so every monomial of tr(H^m), H=(F+2I)D, carries exactly m coefficients `d_v = ζ^{tc(v)}−1` times `tr ρ(g)` for a *single* group element, which vanishes off the centre and equals q·(root of unity) on it ⇒ `v(p_m) ≥ (q−1)+m`, settling m≥2; (b) **Newton** gives `v(e_k) ≥ q+1` for 1≤k≤q−1 (k a λ-unit); (c) the two escapes are **both rescued by inverse closure** — at m=1 the count gives only q but `tr H = qS` with `v(S) ≥ 2` (P481), and at k=q Newton loses q−1 so argue directly: `D = λD'`, `D' ≡ Σ_a κ_a P_a`, and in `F_q[y]/((y−1)^q)` the determinant of multiplication by f is `f(1)^q`, which vanishes since `Σ_v c(v) = 0`.
+2. **PRIME-POWER THEOREM:** at q=p^f the only change is `v(q) = f(p−1)` instead of q−1 (every other ingredient is f-insensitive), giving `v(T₁) ≥ f(p−1)+2`. At q=9 that is **6, and sharp** (observed {6,8,12}) — below q+1=10. The ramification summand shrinks; the inverse-closure summand survives.
+3. **The sharp step collapses to one congruence:** since `v(p₁²) ≥ 2(q+1) ≥ q+3` and `e₂=(p₁²−p₂)/2`, the whole remaining gap to q+3 is `2p₁ ≡ p₂ (mod λ^(q+3))` — verified exhaustive q=3, sampled q=5. Closed forms proved: `tr H = qS`, `tr(D²) = −2qS`; only `tr(FD²)` and `tr(FDFD)` remain.
+4. **Citations verified by web search** (idea 2): Polhill–Davis–Smith–Swartz, *Genuinely nonabelian partial difference sets*, J. Combin. Des. **32** (2024) 351–370 (arXiv:2306.00140); Ma, *A survey of partial difference sets*, Des. Codes Cryptogr. **4** (1994) 221–261. Both notes now carry correct bibliographies.
+5. **Second standalone note:** `papers/heisenberg_cospectral_mechanisms.tex` — the two cospectrality mechanisms as a self-contained combinatorics paper (census, definitions, integral separation, the equinumerosity question).
+
 ## Deferred
 
 - m=6 Coxeter–Todd rung of the QR tower (`data/m6_handoff_k12.json`).

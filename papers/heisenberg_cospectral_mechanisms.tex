@@ -1,0 +1,204 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.15in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage[colorlinks,linkcolor=blue,citecolor=blue]{hyperref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\FF}{\mathbb F}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\Cay}{\operatorname{Cay}}
+\newcommand{\Spec}{\operatorname{Spec}}
+
+\title{Two mechanisms for cospectral Cayley graphs\\ on the Heisenberg group}
+\author{W.~Dahn}
+\date{July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent Let $H$ be the Heisenberg group of order $q^3$, $q$ an odd prime. An
+\emph{inverse-closed section} assigns to each nonzero $v\in\FF_q^2$ a central
+coordinate $c(v)$ with $c(-v)=-c(v)$, and determines a connected
+$(q^2-1)$-regular Cayley graph $\Cay(H,S(c))$ on $q^3$ vertices. We report a
+census at $q=5$: among $6000$ random sections, $66$ pairs are cospectral
+without being related by the evident affine symmetries. Every one of them
+arises by one of exactly two mechanisms, which we name and separate by an
+integral invariant. In the first, the two Galois-conjugate ``sheets'' of the
+spectrum are \emph{exchanged} between the square and nonsquare central
+characters; in the second they \emph{coincide} sheet by sheet, so that the
+pair carries identical spectral data at every central character and is
+nonetheless inequivalent. The two mechanisms occur at strikingly similar
+rates ($34$ and $32$), which we do not explain.
+\end{abstract}
+
+\noindent\textbf{2020 MSC.} 05C50, 05C25, 20C15, 05E30.\\
+\textbf{Keywords.} Cospectral graphs, Cayley graphs, Heisenberg group,
+critical group, Weyl representation.
+
+\section{Setup}
+
+Let $q$ be an odd prime and
+\[
+H=\{(a,b,c):a,b,c\in\FF_q\},\qquad
+(a,b,c)(a',b',c')=(a+a',b+b',c+c'-ab'+a'b),
+\]
+with centre $Z=\{(0,0,c)\}$. A function
+$c:\FF_q^2\setminus\{0\}\to\FF_q$ with $c(-v)=-c(v)$ is an \emph{inverse-closed
+section}; it makes
+$S(c)=\{(v,c(v)):v\neq0\}$ inverse-closed, so
+$\Gamma(c):=\Cay\bigl(H,S(c)\bigr)$
+is an undirected $(q^2-1)$-regular graph on $q^3$ vertices.
+
+Two obvious symmetries act on sections. The group $\mathrm{GL}_2(\FF_q)$ acts by
+$c\mapsto\det(g)\,c\circ g^{-1}$, and translations act by
+$c\mapsto c+\ell$ for a linear form $\ell$; together they generate an
+\emph{affine} action of order $|\mathrm{GL}_2(\FF_q)|\,q^2$ under which
+$\Gamma(c)$ is unchanged up to isomorphism. Call two sections
+\emph{equivalent} if they lie in one orbit. At $q=5$ the number of orbits is
+$20{,}592$, so the action is very nearly free.
+
+\begin{definition}
+A pair of sections is \emph{genuine} if the graphs $\Gamma(c),\Gamma(c')$ are
+cospectral but the sections are inequivalent.
+\end{definition}
+
+\subsection*{Sheets}
+
+The spectrum of $\Gamma(c)$ decomposes along the characters of $Z$. The trivial
+character contributes the principal eigenvalue $q^2-1$; each nontrivial
+character $\psi_t$ contributes the spectrum of the $q\times q$ Weyl block
+\[
+B_t(c)=\sum_{v\neq0}\rho_t\bigl(v,c(v)\bigr),
+\qquad
+\rho_t(a,b,c)e_x=\zeta^{\,t(c+2xb+ab)}e_{x+a},
+\]
+each with multiplicity $q$. Blocks at $t$ and $t'$ are Galois conjugate when
+$t/t'$ is a square, so at $q=5$ there are exactly two distinct
+\emph{sheets},
+\[
+\Sigma^{+}(c)=\Spec B_1(c)\quad\text{(square coset)},\qquad
+\Sigma^{-}(c)=\Spec B_2(c)\quad\text{(nonsquare coset)} .
+\]
+Cospectrality of $\Gamma(c)$ and $\Gamma(c')$ says only that the
+\emph{multiset union} $\Sigma^{+}\cup\Sigma^{-}$ agrees; it does not say the
+sheets agree individually. That is precisely the room in which the two
+mechanisms live.
+
+\section{The two mechanisms}
+
+\begin{definition}
+A genuine pair $(c,c')$ is
+\begin{itemize}
+\item a \emph{sheet exchange} if
+$\Sigma^{+}(c)=\Sigma^{-}(c')$ and $\Sigma^{-}(c)=\Sigma^{+}(c')$ while
+$\Sigma^{+}(c)\neq\Sigma^{-}(c)$;
+\item a \emph{sheet coincidence} if
+$\Sigma^{+}(c)=\Sigma^{+}(c')$ and $\Sigma^{-}(c)=\Sigma^{-}(c')$.
+\end{itemize}
+\end{definition}
+
+A sheet exchange is cospectral because the union is symmetric in the two
+sheets: the pair swaps which Galois conjugate is attached to which square
+class of central characters, leaving the rational product unchanged. A sheet
+coincidence is a strictly stronger coincidence --- the two graphs agree at
+\emph{every} central character individually --- and is therefore invisible to
+any invariant computed sheet by sheet.
+
+\begin{proposition}[census]\label{prop:census}
+Among $6000$ uniformly random inverse-closed sections at $q=5$ there are $66$
+genuine pairs. Of these, $34$ are sheet exchanges and $32$ are sheet
+coincidences. No genuine pair is of any other type.
+\end{proposition}
+
+\begin{proposition}[integral separation]\label{prop:smith}
+Both members of every genuine pair have the same critical group. The critical
+groups nonetheless distinguish the mechanisms: for the sheet-exchange pairs
+examined the $5$-primary part is $(\ZZ/25)^{5}\oplus(\ZZ/5)^{16}$, while for
+the sheet-coincidence pair it is $(\ZZ/25)^{15}\oplus(\ZZ/5)^{6}$.
+\end{proposition}
+
+So Smith torsion, which fails to separate the two graphs \emph{within} a pair,
+does separate the two \emph{kinds} of pair. Weisfeiler--Leman refinement
+separates the graphs within a pair (rank $19$ versus $18$ at the first
+$2$-dimensional refinement), so no pair here is a counterexample to anything;
+the content is the dichotomy, not any single graph.
+
+\begin{remark}
+Neither mechanism is a Godsil--McKay switch in the naive sense: an exhaustive
+search over the $2^{10}$ partial applications of the exact offset difference
+of one exchange pair, and over the natural central-fibre, maximal-abelian-coset
+and central-slice vertex families, produces no switching set realizing the
+target.
+\end{remark}
+
+\section{What we cannot explain}
+
+\begin{question}\label{q:rates}
+Why are the two mechanisms nearly equinumerous? The census gives $34$ and
+$32$, well inside the fluctuation of a fair split, over a sample large enough
+that a systematic factor of two would have shown. Is there a bijection between
+sheet exchanges and sheet coincidences?
+\end{question}
+
+A natural candidate is the determinant twist $c\mapsto\det(g)\,c\circ g^{-1}$
+with $\det g$ a nonsquare, which is an affine map and hence carries a section
+to an equivalent one, but which exchanges the two sheets. Composing it with
+one member of an exchange pair turns that pair into a coincidence pair of
+\emph{equivalent} sections --- so the twist explains why the two phenomena are
+related, but not why inequivalent representatives of each occur equally often.
+
+\begin{question}
+Do both mechanisms persist for all odd $q$, and with what densities? At $q=3$
+there are no genuine pairs at all (the action has only two orbits), and at
+$q=7$ the orbit count $1{,}939{,}395{,}416{,}499{,}131$ makes a random census
+hopeless: a sample of $80$ sections yields $80$ distinct spectra. Only $q=5$
+is presently within reach.
+\end{question}
+
+\subsection*{Verification}
+
+All spectra are computed to $10^{-6}$ and compared as rounded multisets;
+inequivalence is decided by an exhaustive search over the full affine group of
+order $12{,}000$; critical groups are computed by exact $p$-adic elimination on
+the reduced Laplacian. Programs and certificates are archived
+in \cite{repo}.
+
+\begin{thebibliography}{9}
+
+\bibitem{BCN}
+A.~E.~Brouwer, A.~M.~Cohen, and A.~Neumaier,
+\emph{Distance-Regular Graphs},
+Ergeb.\ Math.\ Grenzgeb.\ (3) \textbf{18}, Springer, Berlin, 1989.
+
+\bibitem{GM}
+C.~D.~Godsil and B.~D.~McKay,
+\emph{Constructing cospectral graphs},
+Aequationes Math.\ \textbf{25} (1982), 257--268.
+
+\bibitem{Ma}
+S.~L.~Ma,
+\emph{A survey of partial difference sets},
+Des.\ Codes Cryptogr.\ \textbf{4} (1994), 221--261.
+
+\bibitem{PDSS}
+J.~Polhill, J.~A.~Davis, K.~W.~Smith, and E.~Swartz,
+\emph{Genuinely nonabelian partial difference sets},
+J.~Combin.\ Des.\ \textbf{32} (2024), 351--370.
+
+\bibitem{repo}
+W.~Dahn, \emph{W33-Theory} source repository; witnesses
+\texttt{w33\_pass456}, \texttt{w33\_pass479}--\texttt{w33\_pass482}.
+
+\end{thebibliography}
+
+\end{document}

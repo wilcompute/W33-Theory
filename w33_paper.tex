@@ -14152,6 +14152,11 @@ $v_\lambda(T_k)\ge q{+}3$ for $k\ge3$; $T_1{+}T_2\equiv0 \bmod \lambda^{q+3}$ & 
 $66$ genuine pairs $=$ $34$ exchange $+$ $32$ coincidence, \emph{no third} & \textsc{cert} & P482 & this programme ($6000$ sections) \\
 ``$\FF_3$-subfield indexes the $q{=}9$ depth'' & \textsc{killed} & P482 & self-correction (same min depth) \\
 sheet quintic $x^5{-}60x^3{-}35x^2{+}366x{+}2$ irreducible over $\QQ$ & \textsc{cert} & P482 & this programme (gate-3 reduction) \\
+$\det B_t(c)\equiv\det F \bmod \lambda^{q+1}$, \emph{all} odd primes & \textsc{thm} & P483 & this programme (power sums $+$ circulant) \\
+$v_\lambda(p_m)\ge(q{-}1){+}m$; top term via $\FF_q[y]/((y{-}1)^q)$ & \textsc{thm} & P483 & this programme (both saves $=$ inverse closure) \\
+prime-power law $v_\lambda(T_1)\ge f(p{-}1){+}2$, sharp at $q{=}9$ & \textsc{thm} & P483 & this programme (ramification shrinks) \\
+sharp step reduced to $2p_1\equiv p_2 \bmod \lambda^{q+3}$ & \textsc{open} & P483 & this programme (verified $q{=}3,5$) \\
+$\tr(H)=qS$, $\tr(D^2)=-2qS$ closed forms & \textsc{thm} & P483 & this programme \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -14482,5 +14487,45 @@ $e_1=0$, $e_2=-q(q^2{-}1)/2$).  Gate 3 is exactly: are the
 $\ZZ[\zeta_5]$-orders of the two sheets in the same ideal class of
 $K=\QQ(\zeta_5)[x]/(f)$?  Deciding it is a class-group computation in a
 degree-$20$ field, needing tooling absent from the repository.
+
+\paragraph{Pass 483 --- the congruence is a theorem, and both saves are
+inverse closure.}
+Pass 482 verified that every order of $\det(F+xD)$ vanishes to $q{+}1$; that
+statement is now \emph{proved} for every odd prime.  Write $G=F^{-1}D$,
+$p_m=\operatorname{tr}(G^m)$, $e_k=e_k(G)$.  Since $F$ and $D$ are both
+$\ZZ[\zeta]$-combinations of the matrices $\rho_t(g)$, expanding
+$\operatorname{tr}(H^m)$ with $H=(F{+}2I)D$ produces monomials carrying exactly
+$m$ coefficients $d_v=\zeta^{tc(v)}{-}1$ (each of valuation $\ge1$) times
+$\operatorname{tr}\rho_t(g)$ for a \emph{single} group element $g$; that trace
+vanishes off the centre and equals $q$ times a root of unity on it.  Hence
+$v_\lambda(p_m)\ge(q{-}1)+m$, which settles every $m\ge2$.  Newton's
+identities then give $v_\lambda(e_k)\ge q{+}1$ for $1\le k\le q{-}1$, where $k$
+is a $\lambda$-unit.  Exactly two steps escape this counting, and
+\textbf{both are rescued by inverse closure}: at $m=1$ the count yields only
+$q$, but $\operatorname{tr}H=qS$ with $v_\lambda(S)\ge2$ (Pass 481); and at
+$k=q$ Newton would lose $v_\lambda(q)=q{-}1$, so one argues directly ---
+writing $D=\lambda D'$ and reducing, $D'\equiv\sum_a\kappa_aP_a$ with
+$\kappa_a=-t\sum_bc(a,b)$, and in
+$\FF_q[\ZZ/q]=\FF_q[y]/\bigl((y{-}1)^q\bigr)$ the determinant of multiplication
+by $f$ is $f(1)^q$, which vanishes because $\sum_{v\neq0}c(v)=0$.  Therefore
+\[
+\det B_t(c)\;\equiv\;\det F \pmod{\lambda^{q+1}}\qquad\text{for every odd prime
+$q$ and every section.}
+\]
+The same argument at $q=p^f$ replaces $v_\lambda(q)=q{-}1$ by
+$v_\lambda(p^f)=f(p{-}1)$ --- every other ingredient is insensitive to $f$ ---
+giving $v_\lambda(T_1)\ge f(p{-}1)+2$, which at $q=9$ reads $6$ and is sharp
+(observed first-order valuations $\{6,8,12\}$).  This is the exact sense in
+which the prime law fails one rung up: the ramification summand shrinks while
+the inverse-closure summand survives.  Finally the gap to the sharp Pass-479
+exponent $q{+}3$ collapses to a single congruence: since
+$v_\lambda(p_1^2)\ge2(q{+}1)\ge q{+}3$ and $e_2=(p_1^2-p_2)/2$, everything
+reduces to $2p_1\equiv p_2 \pmod{\lambda^{q+3}}$, verified exhaustively at
+$q=3$ and by sampling at $q=5$; the closed forms $\operatorname{tr}H=qS$ and
+$\operatorname{tr}(D^2)=-2qS$ are proved, leaving $\operatorname{tr}(FD^2)$ and
+$\operatorname{tr}(FDFD)$ as the only unknowns.  Both standalone notes
+(\texttt{papers/heisenberg\_weyl\_determinant\_law.tex} and the new
+\texttt{papers/heisenberg\_cospectral\_mechanisms.tex}) carry these results in
+self-contained form.
 
 \end{document}

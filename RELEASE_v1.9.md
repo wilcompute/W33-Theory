@@ -23,6 +23,15 @@ machine-verified through Pass 481.
   **(q−1) from the ramification of q + 2 from inverse closure** — the latter
   formalized in Lean (`Pass481FirstOrderPairing.lean`:
   `w + w⁻¹ − 2 = −(1−w)(1−w⁻¹)`).
+- **The determinant congruence, proved (P483).**
+  `det B_t(c) ≡ det F (mod λ^(q+1))` for every odd prime and every section —
+  via power-sum bounds `v(p_m) ≥ (q−1)+m` from character vanishing off the
+  centre, Newton's identities, and a circulant argument in
+  `F_q[y]/((y−1)^q)` for the top exterior power. The two steps that valuation
+  counting alone cannot reach are **both rescued by inverse closure**.
+  At `q = p^f` the same proof gives `v(T₁) ≥ f(p−1)+2`, sharp at q=9.
+  The sharp exponent `q+3` now reduces to the single congruence
+  `2p₁ ≡ p₂ (mod λ^(q+3))`.
 - **Cover law (P394), nesting tower law (P430), no abelian PDS all odd q
   (P433; Polhill et al. Cor. 4.7), the 2-adic pairing law (P433→P434/435),
   prime-power cyclotomic covariance (P459), chain/Galois-ring conductor
