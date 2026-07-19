@@ -23,6 +23,17 @@ machine-verified through Pass 481.
   **(q−1) from the ramification of q + 2 from inverse closure** — the latter
   formalized in Lean (`Pass481FirstOrderPairing.lean`:
   `w + w⁻¹ − 2 = −(1−w)(1−w⁻¹)`).
+- **THE UNIFIED DETERMINANT LAW (P484).**
+  `det B_t(c) ≡ det F (mod λ^{v_λ(q)+4})` for every odd **prime power**,
+  modulo one identified top-term bound. The constant `4` splits as
+  `2` (inverse closure) plus `2` (the e₁/e₂ cancellation); only the
+  ramification `v_λ(q) = f(p−1)` varies.
+  The cancellation is proved: `Q ≡ 0` because a *symmetric*
+  coefficient meets an *antisymmetric* symplectic form (Lean-formalized), and
+  `R ≡ −2S` because the inner symplectic sum is `q²ω(v,s) ≡ 0`.
+  Measured minima 6,8,10,8 at q=3,5,7,9 match exactly.
+  *This retires the earlier "prime phenomenon" framing — q=9 was never a
+  counterexample, only the same law at a different ramification.*
 - **The determinant congruence, proved (P483).**
   `det B_t(c) ≡ det F (mod λ^(q+1))` for every odd prime and every section —
   via power-sum bounds `v(p_m) ≥ (q−1)+m` from character vanishing off the

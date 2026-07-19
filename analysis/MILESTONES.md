@@ -129,6 +129,16 @@ Pass 483 (`analysis/w33_pass483_modlambda_qplus1_theorem.py`, 17/17 exact):
 4. **Citations verified by web search** (idea 2): Polhill–Davis–Smith–Swartz, *Genuinely nonabelian partial difference sets*, J. Combin. Des. **32** (2024) 351–370 (arXiv:2306.00140); Ma, *A survey of partial difference sets*, Des. Codes Cryptogr. **4** (1994) 221–261. Both notes now carry correct bibliographies.
 5. **Second standalone note:** `papers/heisenberg_cospectral_mechanisms.tex` — the two cospectrality mechanisms as a self-contained combinatorics paper (census, definitions, integral separation, the equinumerosity question).
 
+## Pass 484 addendum (python track) — THE UNIFIED LAW; the sharp cancellation proved
+
+Pass 484 (`analysis/w33_pass484_unified_determinant_law.py`, 33/33 exact, primes and prime power through *identical* code):
+
+1. **THE SHARP CANCELLATION IS PROVED.** With `Q = Σ_{v,w} d_v d_w ψ_t(−ω(v,w))` and `R = tr(FDFD)/q`: exactly `tr H = qS`, `tr(D²) = −2qS`, `tr(FD²) = q(Q+2S)`, `tr(H²) = qR + 4qQ`; and mod λ⁴, **Q ≡ 0** (the surviving term pairs the *symmetric* `d_v d_w` against the *antisymmetric* ω, cancelling under (v,w)↦(w,v)) and **R ≡ −2S** (inner symplectic sum `= 2ω(v,s)+0+(q²−2)ω(v,s) = q²ω(v,s) ≡ 0`). Hence `2(q²−1)tr H − tr H² ≡ q·2q²S`, valuation ≥ v_λ(q)+4. Plus a **parity lemma**: the involution v↦−v against `c(−v)=−c(v)` kills the leading coefficient of `tr(H^m)` for odd m, giving `v(p_m) ≥ v_λ(q)+m+1`, so `v(p₃) ≥ v_λ(q)+4`. Newton finishes 3≤k≤q−1.
+2. **THE UNIFIED LAW:** `det B_t(c) ≡ det F (mod λ^{v_λ(q)+4})` for every odd **prime power**, modulo one identified top-term bound. `4 = 2 (inverse closure) + 2 (the e₁/e₂ cancellation)`; neither summand sees the factorization of q — only the ramification `v_λ(q) = f(p−1)` does.
+3. **SELF-CORRECTION (the big one):** "the determinant law is a prime phenomenon" (Passes 480–483) is **KILLED**. q=9's exponent 8 is not a failure of q+3=12 — it is the same law read at v_λ(9)=4. Measured minima 6,8,10,8 at q=3,5,7,9 match v_λ(q)+4 = 6,8,10,8 exactly. The illusion of two laws came from plotting against q instead of against the ramification.
+4. **Lean:** `formal/W33/Pass484AntisymmetricVanishing.lean` formalizes the symmetric-vs-antisymmetric vanishing driving Q ≡ 0.
+5. **Gate 3 tooling attempted and failed:** `pip install cypari2` needs the PARI C library, absent here. The ideal-class computation stays open.
+
 ## Deferred
 
 - m=6 Coxeter–Todd rung of the QR tower (`data/m6_handoff_k12.json`).

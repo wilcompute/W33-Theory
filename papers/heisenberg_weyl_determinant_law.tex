@@ -34,28 +34,31 @@ $c(v)\in\FF_q$ with $c(-v)=-c(v)$; the associated \emph{Weyl block}
 $B_t(c)$ is the image, in the $q$-dimensional irreducible representation
 attached to $\psi_t$, of the sum of the corresponding group elements. We prove
 that the first-order variation of $\det B_t(c)$ about the zero section is
-divisible by $\lambda^{q+1}$, where $\lambda=1-\zeta_q$, and that the exponent
-splits canonically as
+divisible by $\lambda^{\vlam(q)+2}$, where $\lambda=1-\zeta_p$, and that the
+exponent splits canonically as
 \[
-q+1 \;=\; \underbrace{(q-1)}_{\text{ramification of }q}
+\vlam(q) \;+\; 2,\qquad
+\underbrace{\vlam(q)}_{\text{ramification of }q}
 \;+\;\underbrace{2}_{\text{inverse closure}} .
 \]
 The proof rests on a closed formula
 $\tr\bigl(\adj(F)\,D\bigr)=\det(F)\,q\,S/(q^2-1)$ in which $F$ is the block of
 the zero section and $S=\sum_{v}(\zeta_q^{-tc(v)}-1)$; the block $F$ is shown to
 satisfy $F^2+2F-(q^2-1)I=0$ by a symplectic character sum. We then prove the
-congruence itself,
+congruence itself, in the form
 \[
-\det B_t(c)\;\equiv\;\det F \pmod{\lambda^{q+1}},
+\det B_t(c)\;\equiv\;\det F \pmod{\lambda^{\,\vlam(q)+4}},
 \]
-for every odd prime and every section. Two steps of that argument would fail
-on valuation counting alone --- the first power sum and the top exterior power
---- and both are rescued by the same hypothesis, inverse closure. Computation
-(exhaustive for $q=3$, sampled for $q=5,7$) shows the sharper exponent $q+3$,
-and we reduce the entire remaining gap to one congruence between the first two
-power sums. At prime powers $q=p^f$ the same argument gives the exponent
-$f(p-1)+2$, sharp at $q=9$: the ramification summand shrinks while the
-inverse-closure summand survives.
+valid for every odd prime \emph{power} $q=p^{f}$ and every section, modulo one
+explicitly identified lemma on the top exterior power. Here
+$\vlam(q)=f(p-1)$, so the exponent is $q+3$ when $q$ is prime and $8$ when
+$q=9$. The constant $4$ splits as $2+2$: two units of vanishing from inverse
+closure at first order, and two more from a cancellation between the first two
+orders whose mechanism is that a \emph{symmetric} coefficient is paired against
+the \emph{antisymmetric} symplectic form. Neither summand depends on the
+factorization of $q$; only the ramification does. Several steps of the
+argument would fail on valuation counting alone, and each is rescued by
+inverse closure.
 \end{abstract}
 
 \noindent\textbf{2020 MSC.} 11R18, 11T24, 15A15, 20C15, 05B10.\\
@@ -120,16 +123,17 @@ and consequently
 \]
 \end{theorem}
 
-The two summands are structurally distinct: $q-1$ is the ramification index
-\eqref{eq:vq}, while the $2$ comes from inverse closure through the
-factorization $w+w^{-1}-2=-(1-w)(1-w^{-1})$ applied to $w=\zeta^{tc(v)}$. We
-know of no reason for these to combine, and at prime powers they do not
-(Section~\ref{sec:pf}).
+The two summands are structurally distinct: $q-1=\vlam(q)$ is the ramification
+index \eqref{eq:vq}, while the $2$ comes from inverse closure through the
+factorization $w+w^{-1}-2=-(1-w)(1-w^{-1})$ applied to $w=\zeta^{tc(v)}$. Only
+the first depends on $q$ being prime; writing the bound as $\vlam(q)+2$ makes
+the statement correct for every prime power (Section~\ref{sec:pf}).
 
-Section~\ref{sec:sharp} records what computation says beyond first order: every
-order of the expansion of $\det(F+xD)$ is divisible by $\lambda^{q+1}$, and one
-further cancellation lifts the total to $\lambda^{q+3}$, sharply. We state the
-precise remaining step as Conjecture~\ref{conj:sharp}.
+Section~\ref{sec:sharp} proves the congruence at exponent $\vlam(q)+2$
+(Theorem~\ref{thm:cong}) and then lifts it to the sharp $\vlam(q)+4$
+(Theorems~\ref{thm:cancel} and \ref{thm:sharp}), modulo a single explicitly
+identified bound on the top exterior power. Section~\ref{sec:pf} explains why
+no separate prime-power statement is needed.
 
 \subsection*{Verification and reproducibility}
 All computations reported here are exact: cyclotomic integers are represented
@@ -315,10 +319,10 @@ $\det D'\equiv0$.
 \end{proof}
 
 \begin{theorem}[the congruence]\label{thm:cong}
-For every odd prime $q$, every $t\not\equiv0$, and every inverse-closed
+For every odd prime power $q$, every $t\not\equiv0$, and every inverse-closed
 section $c$,
 \[
-\det B_t(c)\;\equiv\;\det F\pmod{\lambda^{q+1}} .
+\det B_t(c)\;\equiv\;\det F\pmod{\lambda^{\,\vlam(q)+2}} .
 \]
 \end{theorem}
 
@@ -342,28 +346,96 @@ that hypothesis the argument gives only $\lambda^{q}$.
 
 \subsection{The sharp exponent}
 
-Computation shows more. Expanding multilinearly by columns,
-$\det(F+xD)=\sum_{k}T_kx^{k}$ with $T_k=\det(F)e_k$, one finds for $q=3$ (all
-$81$ sections) and $q=5,7$ (sampled) that $\vlam(T_k)\ge q+3$ for $k\ge3$ and
-$\vlam(T_1+T_2)\ge q+3$, whence
-$\det B_t(c)\equiv\det F\pmod{\lambda^{q+3}}$ with $q+3$ attained: at $q=3$
-every non-flat section gives valuation exactly $6$, and at $q=5$ the observed
-values are $\{8,10,12\}$ with minimum $8=q+3$.
+The exponent can be improved by exactly two, and the improvement is a single
+cancellation which we now prove.
 
-The whole gap between Theorem~\ref{thm:cong} and this sharper statement is a
-single congruence. Indeed $\vlam(p_1^2)\ge2(q+1)\ge q+3$, so
-$e_2=(p_1^2-p_2)/2$ gives $e_1+e_2\equiv p_1-p_2/2 \pmod{\lambda^{q+3}}$.
+\begin{lemma}[parity]\label{lem:parity}
+For odd $m$, $\vlam(p_m)\ge\vlam(q)+m+1$. In particular
+$\vlam(p_3)\ge\vlam(q)+4$.
+\end{lemma}
 
-\begin{conjecture}\label{conj:sharp}
-$2p_1\equiv p_2 \pmod{\lambda^{q+3}}$ for every odd prime $q$ and every
-inverse-closed section; equivalently, with $H=(F+2I)D$,
-$2(q^2-1)\tr H\equiv\tr H^2$.
-\end{conjecture}
+\begin{proof}
+By the proof of Lemma~\ref{lem:power} the coefficient of the leading power of
+$\lambda$ in $\tr(H^m)$ is, up to a unit, a sum over $m$-tuples $(v_1,\dots,v_m)$
+of total displacement zero of $m_{v_1}\cdots m_{v_m}$, where $d_v\equiv-m_v\lambda$
+and $m_v=\psi$-exponent of $c(v)$. The involution
+$(v_1,\dots,v_m)\mapsto(-v_1,\dots,-v_m)$ preserves the constraint, and
+$c(-v)=-c(v)$ sends each $m_{v_i}$ to $-m_{v_i}$, multiplying the summand by
+$(-1)^m=-1$. So the sum equals its own negative and vanishes in the residue
+field, gaining one further power of $\lambda$.
+\end{proof}
 
-This is verified exhaustively at $q=3$ and by sampling at $q=5$. Proving it
-requires a closed form for $\tr(H^2)$ to match $\tr H=qS$; the exact identity
-$\tr(D^2)=-2qS$ holds, so the remaining unknowns are $\tr(FD^2)$ and
-$\tr(FDFD)$.
+\begin{lemma}[the two closed forms]\label{lem:closed}
+Put $Q=\sum_{v,w\neq0}d_vd_w\,\psi_t\bigl(-\omega(v,w)\bigr)$ and
+$R=\tr(FDFD)/q$. Then, exactly,
+\[
+\tr H=qS,\quad \tr(D^2)=-2qS,\quad \tr(FD^2)=q\,(Q+2S),\quad
+\tr(H^2)=qR+4qQ,
+\]
+and, modulo $\lambda^{4}$, $\;Q\equiv0\;$ and $\;R\equiv-2S$.
+\end{lemma}
+
+\begin{proof}
+The exact identities follow as in Theorem~\ref{thm:main}, keeping track of
+which products of $\rho$'s are central. For $Q$: expanding
+$\psi_t(-\omega)\equiv1+\text{(linear in }\lambda)$ and using
+$d_vd_w\equiv m_vm_w\lambda^2$, the constant term is
+$\sum_{v,w}d_vd_w=S^2$, of valuation $\ge4$ since $\vlam(S)\ge2$; the surviving
+term pairs the symmetric coefficient $d_vd_w$ against the antisymmetric
+$\omega(v,w)$ and therefore cancels under $(v,w)\mapsto(w,v)$. For $R$:
+reparametrizing so that the two free vectors are summed for fixed $(v,w)$, and
+writing $s=-(v+w)$, the phase is $2\omega(x,v)+\omega(x,s)+\omega(v,s)$; summing
+over the $q^2-2$ admissible $x$ and using
+$\sum_{x\in\FF_q^2}\omega(x,v)=0$ gives
+$2\omega(v,s)+0+(q^2-2)\omega(v,s)=q^{2}\omega(v,s)$, which vanishes in the
+residue field. What survives is the count of admissible pairs, giving
+$R\equiv-2S$.
+\end{proof}
+
+\begin{theorem}[the cancellation]\label{thm:cancel}
+$2p_1\equiv p_2\pmod{\lambda^{\vlam(q)+4}}$; equivalently
+$e_1+e_2\equiv0\pmod{\lambda^{\vlam(q)+4}}$.
+\end{theorem}
+
+\begin{proof}
+By Lemma~\ref{lem:closed},
+\[
+2(q^2-1)\tr H-\tr(H^2)=q\bigl[\,2(q^2-1)S-R-4Q\,\bigr]
+\equiv q\bigl[\,2(q^2-1)S+2S\,\bigr]=q\cdot 2q^2S \pmod{q\lambda^4},
+\]
+and $\vlam(2q^{2}S)=2\vlam(q)+\vlam(S)\ge4$. Dividing by $(q^2-1)^2$, a
+$\lambda$-unit, gives $\vlam(2p_1-p_2)\ge\vlam(q)+4$. Finally
+$\vlam(p_1^{2})\ge2(\vlam(q)+2)\ge\vlam(q)+4$, so
+$e_2=(p_1^{2}-p_2)/2$ yields $e_1+e_2\equiv p_1-p_2/2\equiv0$.
+\end{proof}
+
+\begin{theorem}[the sharp law]\label{thm:sharp}
+Suppose $\vlam(e_q)\ge\vlam(q)+4$. Then for every odd prime power $q=p^f$,
+\[
+\det B_t(c)\;\equiv\;\det F\pmod{\lambda^{\,\vlam(q)+4}} .
+\]
+\end{theorem}
+
+\begin{proof}
+Newton's identities and Lemmas~\ref{lem:power},~\ref{lem:parity} give
+$\vlam(e_k)\ge\vlam(q)+4$ for $3\le k\le q-1$: the terms $e_{k-1}p_1$ and
+$e_{k-2}p_2$ are products of two quantities of valuation $\ge\vlam(q)+2$ by
+Theorem~\ref{thm:cong}, and $p_i$ for $i\ge3$ has valuation $\ge\vlam(q)+4$.
+Theorem~\ref{thm:cancel} handles $k=1,2$ jointly and the hypothesis handles
+$k=q$.
+\end{proof}
+
+The hypothesis on the top exterior power is the one step we have not proved;
+Lemma~\ref{lem:top} gives only $\vlam(e_q)\ge\vlam(q)+2$. It is verified for
+$q=3$ (all $81$ sections), $q=5$, $q=7$ and $q=9$.
+
+\begin{remark}
+The exponent is attained: at $q=3$ every non-flat section gives valuation
+exactly $6=\vlam(q)+4$, at $q=5$ the observed values are $\{8,10,12\}$ with
+minimum $8$, at $q=7$ the minimum is $10$, and at $q=9$ --- where
+$\vlam(9)=4$, not $q-1=8$ --- the minimum is $8$. All four agree with
+$\vlam(q)+4$.
+\end{remark}
 
 \begin{remark}
 The residue class is the flat determinant, not a numerical coincidence of small
@@ -382,38 +454,40 @@ finds $F^2+2F-80I=0$, spectrum $\{8^5,(-10)^4\}$, and
 $\det F=8^5(-10)^4=327{,}680{,}000$, in agreement with the formula of
 Lemma~\ref{lem:flat}; the trace laws hold as well.
 
-What changes is the ramification. The identity $\vlam(q)=q-1$ underlying
-Theorem~\ref{thm:main} becomes
+Nothing else changes. Every ingredient of the argument --- the flat-block
+Lemma~\ref{lem:flat}, the vanishing of $\tr\rho_t$ off the centre
+(Lemma~\ref{lem:trace}), the pairing Lemma~\ref{lem:pair}, the parity
+Lemma~\ref{lem:parity}, and the two closed forms of Lemma~\ref{lem:closed} ---
+holds verbatim with $\psi_t$ in place of $\zeta^{t\,\cdot}$ and $\omega$ the
+symplectic form over $\FF_q$. In particular the symplectic cancellations go
+through because $\sum_{x\in\FF_q^2}\omega(x,v)=0$ for $v\neq0$ and because
+$q^{2}\equiv0$ in the residue field, neither of which sees $f$.
+
+The single quantity that depends on $f$ is the ramification,
 \[
-\vlam(p^{f})=f(p-1),
+\vlam(q)=\vlam(p^{f})=f(p-1),
 \]
-since $(p)=(\lambda)^{p-1}$ in $\ZZ[\zeta_p]$. Every other ingredient of
-Theorem~\ref{thm:main} is insensitive to $f$: the flat-block lemma, the
-vanishing of $\tr\rho_t$ off the centre, and the pairing
-Lemma~\ref{lem:pair} all hold verbatim with $\psi_t$ in place of
-$\zeta^{t\,\cdot}$. Repeating the proof gives the following.
+since $(p)=(\lambda)^{p-1}$ in $\ZZ[\zeta_p]$. Theorems~\ref{thm:cong},
+\ref{thm:cancel} and \ref{thm:sharp} were therefore already stated in their
+correct generality: \emph{there is no separate prime-power theory}.
 
-\begin{theorem}\label{thm:pf}
-Let $q=p^f$ with $p$ odd. Then $T_1=\det(F)\,qS/(q^2-1)$ with
-$S=\sum_{v\neq0}\bigl(\psi_t(-c(v))-1\bigr)$, and
-\[
-\vlam(T_1)\;=\;f(p-1)+\vlam(S)\;\ge\;f(p-1)+2 .
-\]
-\end{theorem}
+\begin{remark}[why this is one law and not two]
+At prime $q$ we have $\vlam(q)=q-1$, so the sharp exponent
+$\vlam(q)+4$ reads $q+3$; at $q=9$ we have $\vlam(9)=4$ and it reads $8$. As
+functions of $q$ these look unrelated --- $8$ sits far below the value
+$q+3=12$ that the prime formula would predict --- which is why we first
+recorded the two cases as different phenomena, the prime case as a law and the
+prime-power case as its failure. As functions of $\vlam(q)$ they are one
+statement. The constant $4=2+2$ counts inverse closure twice, once at first
+order and once in the $e_1/e_2$ cancellation, and is blind to the
+factorization of $q$; only the ramification varies.
+\end{remark}
 
-At $q=9$ the bound reads $\vlam(T_1)\ge6$, and it is sharp: over sampled
-sections the observed first-order valuations are $\{6,8,12\}$, with minimum
-exactly $6$. Note $6<q+1=10$, so the prime-$q$ exponent genuinely fails one
-rung up --- the ramification summand shrinks from $q-1=8$ to $f(p-1)=4$ while
-the inverse-closure summand $2$ survives.
-
-The full congruence degrades correspondingly. Over $60$ sampled non-collinear
-sections at $q=9$ the valuation $\vlam\bigl(\det B_t(c)-\det F\bigr)$ is not
-constant, and its \emph{minimum} --- the exponent of the congruence valid for
-every section --- is $8$, strictly below the prime value $q+3=12$. Sections
-taking values in the subfield $\FF_p\subset\FF_q$ do not form a separate class:
-they realize the same minimum and an overlapping range. We do not know the
-sharp prime-power exponent.
+The measured minima are $6,8,10,8$ at $q=3,5,7,9$, against
+$\vlam(q)+4=6,8,10,8$. We do not know whether the top-term hypothesis of
+Theorem~\ref{thm:sharp} can fail for some $q$, nor whether the exponent stays
+sharp for $f\ge3$; the exact $q\times q$ determinant over $\ZZ[\zeta_p]$ is the
+computational bottleneck beyond $q=9$.
 
 \begin{thebibliography}{9}
 

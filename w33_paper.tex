@@ -14157,6 +14157,11 @@ $v_\lambda(p_m)\ge(q{-}1){+}m$; top term via $\FF_q[y]/((y{-}1)^q)$ & \textsc{th
 prime-power law $v_\lambda(T_1)\ge f(p{-}1){+}2$, sharp at $q{=}9$ & \textsc{thm} & P483 & this programme (ramification shrinks) \\
 sharp step reduced to $2p_1\equiv p_2 \bmod \lambda^{q+3}$ & \textsc{open} & P483 & this programme (verified $q{=}3,5$) \\
 $\tr(H)=qS$, $\tr(D^2)=-2qS$ closed forms & \textsc{thm} & P483 & this programme \\
+\textbf{unified law} $\det B_t(c)\equiv\det F \bmod \lambda^{v_\lambda(q)+4}$ & \textsc{thm} & P484 & this programme (mod top-term lemma) \\
+$Q\equiv0$: symmetric $d_vd_w$ vs antisymmetric $\omega$ (Lean) & \textsc{thm} & P484 & this programme \\
+$R\equiv-2S$: inner symplectic sum $=q^2\omega(v,s)\equiv0$ & \textsc{thm} & P484 & this programme \\
+parity: $v_\lambda(p_m)\ge v_\lambda(q){+}m{+}1$ for odd $m$ & \textsc{thm} & P484 & this programme (oddness of $c$) \\
+``the determinant law is a \emph{prime} phenomenon'' & \textsc{killed} & P484 & self-correction: one law in $v_\lambda(q)$ \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -14397,13 +14402,15 @@ $(q{-}1)^{(q+1)/2}(-(q{+}1))^{(q-1)/2}=8^5(-10)^4=327680000$ and the flat block
 spectrum $\{8^5,(-10)^4\}$ extend verbatim to the first prime power (the
 universal trace laws hold: $\operatorname{tr}=0$, $\operatorname{tr}B^2=720$),
 but the congruence depth does not: it is \emph{non-uniform}, with
-\emph{minimum} $8$, strictly below the prime value $q{+}3=12$.  The modulus
-$\lambda^{q+3}$ and its sharpness are prime-$q$ statements.  \emph{[Corrected
-by Pass~482: this paragraph originally reported the depth set as $\{8,10\}$
-from $6$ and $12$ samples.  At $60$ samples the generic spectrum is strictly
-wider, so ``both below $12$'' was a small-sample artefact.  The invariant that
-survives is the \emph{minimum} depth --- the modulus of the congruence holding
-for every section --- which is $8$.]}  Finally, the natural commutant-generated
+\emph{minimum} $8$, strictly below the prime value $q{+}3=12$.  \emph{[Corrected
+twice.  Pass~482: this paragraph originally reported the depth set as
+$\{8,10\}$ from $6$ and $12$ samples; at $60$ samples the generic spectrum is
+strictly wider, so ``both below $12$'' was a small-sample artefact, and the
+invariant that survives is the \emph{minimum} depth $8$.  Pass~484: the
+sentence ``the modulus $\lambda^{q+3}$ and its sharpness are prime-$q$
+statements'' is \emph{false}.  Writing the exponent as $v_\lambda(q)+4$ makes
+$q=9$ agree with $q=3,5,7$ exactly; $8=v_\lambda(9)+4$ is the same law, not its
+failure.]}  Finally, the natural commutant-generated
 intertwiner family for the genuine pair is uniformly non-integral over
 $\ZZ[\zeta_5]$ (bounded evidence for v1.9 gate 3; the
 Latimer--MacDuffee ideal-class computation remains the open core).
@@ -14527,5 +14534,41 @@ $\operatorname{tr}(FDFD)$ as the only unknowns.  Both standalone notes
 (\texttt{papers/heisenberg\_weyl\_determinant\_law.tex} and the new
 \texttt{papers/heisenberg\_cospectral\_mechanisms.tex}) carry these results in
 self-contained form.
+
+\paragraph{Pass 484 --- the sharp law is proved, and it was never a prime
+phenomenon.}
+Two things closed at once.  \emph{(i) The cancellation.}  Pass 483 reduced the
+sharp exponent to the single congruence $2p_1\equiv p_2$.  That congruence is
+now proved, from two closed forms.  Writing
+$Q=\sum_{v,w}d_vd_w\,\psi_t(-\omega(v,w))$ and $R=\operatorname{tr}(FDFD)/q$,
+one has exactly $\operatorname{tr}H=qS$, $\operatorname{tr}(D^2)=-2qS$,
+$\operatorname{tr}(FD^2)=q(Q+2S)$ and $\operatorname{tr}(H^2)=qR+4qQ$; and
+modulo $\lambda^4$, $Q\equiv0$ and $R\equiv-2S$.  \textbf{$Q$ vanishes because
+the surviving term pairs the \emph{symmetric} coefficient $d_vd_w$ against the
+\emph{antisymmetric} symplectic form}, so it cancels under $(v,w)\mapsto(w,v)$
+--- an identity now formalized in \texttt{Pass484AntisymmetricVanishing.lean}.
+$R$ collapses because the inner sum over the two free vectors is
+$2\omega(v,s)+0+(q^2{-}2)\omega(v,s)=q^2\omega(v,s)\equiv0$.  Hence
+$2(q^2{-}1)\operatorname{tr}H-\operatorname{tr}(H^2)\equiv q\cdot 2q^2S$, of
+valuation $\ge v_\lambda(q)+4$.  A parity lemma (the involution $v\mapsto-v$
+against $c(-v)=-c(v)$ forces the leading coefficient of $\operatorname{tr}(H^m)$
+to vanish for odd $m$) supplies $v_\lambda(p_3)\ge v_\lambda(q)+4$, and Newton
+does the rest.  \emph{(ii) The unification.}  Every step above is blind to the
+factorization of $q$ --- the symplectic sums use only
+$\sum_x\omega(x,v)=0$ and $q^2\equiv0$ in the residue field --- so the single
+$q$-dependent quantity is the ramification $v_\lambda(q)=f(p{-}1)$.  The law is
+therefore
+\[
+\det B_t(c)\;\equiv\;\det F \pmod{\lambda^{\,v_\lambda(q)+4}},
+\qquad 4 = 2\ (\text{inverse closure}) + 2\ (\text{the } e_1/e_2 \text{
+cancellation}),
+\]
+for every odd prime \emph{power}, modulo one identified bound on the top
+exterior power.  Measured minima $6,8,10,8$ at $q=3,5,7,9$ match
+$v_\lambda(q)+4=6,8,10,8$ exactly.  \textbf{This retires the ``prime
+phenomenon'' framing of Passes 480--483}: $q=9$'s exponent $8$ is not a failure
+of the prime law $q+3=12$ but the same law read at $v_\lambda(9)=4$ instead of
+$q-1$.  The two cases were one statement all along, and the appearance of two
+laws came from plotting against $q$ rather than against the ramification.
 
 \end{document}
