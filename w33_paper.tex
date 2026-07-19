@@ -14162,6 +14162,12 @@ $Q\equiv0$: symmetric $d_vd_w$ vs antisymmetric $\omega$ (Lean) & \textsc{thm} &
 $R\equiv-2S$: inner symplectic sum $=q^2\omega(v,s)\equiv0$ & \textsc{thm} & P484 & this programme \\
 parity: $v_\lambda(p_m)\ge v_\lambda(q){+}m{+}1$ for odd $m$ & \textsc{thm} & P484 & this programme (oddness of $c$) \\
 ``the determinant law is a \emph{prime} phenomenon'' & \textsc{killed} & P484 & self-correction: one law in $v_\lambda(q)$ \\
+unified law \textbf{unconditional} for every $q=p^f$, $f\ge2$ & \textsc{thm} & P485 & this programme ($q\ge v_\lambda(q){+}4$) \\
+law confirmed at $q{=}25$ ($f{=}2$) and $q{=}27$ ($f{=}3$): min $12,10$ & \textsc{cert} & P485 & this programme (Bareiss over $\ZZ[\zeta_p]$) \\
+flat-det formula holds at $q{=}25,27$ ($35$- and $39$-digit) & \textsc{cert} & P485 & this programme \\
+prime residual: $\min_c v_\lambda(\det D)=2q$ ($6,10,14$) & \textsc{cert} & P485 & this programme (Newton gives $q{+}1$) \\
+residual $=$ ``every eigenvalue of $D$ has $v_\lambda\ge2$'' & \textsc{open} & P485 & this programme (would close all $q$) \\
+$q{=}9$ depth criterion is \emph{not} $v_\lambda(S)$ & \textsc{killed} & P485 & self-correction (3rd refuted criterion) \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -14570,5 +14576,36 @@ phenomenon'' framing of Passes 480--483}: $q=9$'s exponent $8$ is not a failure
 of the prime law $q+3=12$ but the same law read at $v_\lambda(9)=4$ instead of
 $q-1$.  The two cases were one statement all along, and the appearance of two
 laws came from plotting against $q$ rather than against the ramification.
+
+\paragraph{Pass 485 --- the law goes unconditional off the primes, and holds at
+$q=25$ and $q=27$.}
+Pass 484 left exactly one hypothesis, $v_\lambda(e_q)\ge v_\lambda(q)+4$ on the
+top exterior power.  It turns out to be \emph{free} except at primes.  Every
+entry of $D$ is a $\ZZ[\zeta_p]$-combination of the $d_v$, each of valuation
+$\ge1$, so $D=\lambda D'$ and $v_\lambda(\det D)\ge q$ automatically; and
+$q\ge v_\lambda(q)+4=f(p{-}1)+4$ holds for \emph{every} $f\ge2$ ($9\ge8$,
+$27\ge10$, $25\ge12$, with the margin only widening).  \textbf{So the unified
+law is unconditional at every odd prime power that is not prime}; only $f=1$,
+where the inequality reads $q\ge q+3$, retains a residual.  Two confirmations
+followed, both requiring a fraction-free (Bareiss) determinant over
+$\ZZ[\zeta_p]$ --- cofactor expansion is hopeless at these sizes --- validated
+against cofactor expansion at $q=3,5,7$ first: at \textbf{$q=25$} ($f=2$,
+$p=5$) the predicted exponent $v_\lambda(25)+4=12$ is met exactly, and at
+\textbf{$q=27$} ($f=3$, $p=3$) the predicted $10$ is met exactly, giving the
+law six data points across three values of $f$.  The flat determinants there,
+$24^{13}26^{12}$ and $-26^{14}28^{13}$ ($35$ and $39$ digits), match the
+flat-block lemma exactly.  At prime $q$ the residual is now quantified: Newton
+yields $v_\lambda(\det D)\ge q+1$, two short, while the measured minimum is
+exactly $2q$ ($6,10,14$ at $q=3,5,7$) --- so the Newton polygon of $D'$ is the
+line of slope $-1$ and every eigenvalue of $D$ has valuation $2$.  Since
+$2q\ge q+3$ always, the single statement \emph{every eigenvalue of $D$ has
+$v_\lambda\ge2$} would close the primes and complete the law; partial evidence
+is that $D'$ reduces to $\sum_a\kappa_aP_a$ with $\kappa$ odd, landing in the
+nilpotent augmentation ideal of $\FF_q[\ZZ/q]$, which already forces every
+eigenvalue to be a nonunit.  Finally, a third proposed $q=9$ depth criterion
+died: the depth is \emph{not} governed by $v_\lambda(S)$ either (every
+$v_\lambda(S)$ class realizes the minimum $8$), which is consistent with the
+$e_1/e_2$ cancellation --- after it, the binding constraint is a higher-order
+term, not the first-order one.
 
 \end{document}

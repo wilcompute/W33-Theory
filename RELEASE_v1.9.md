@@ -23,6 +23,14 @@ machine-verified through Pass 481.
   **(q−1) from the ramification of q + 2 from inverse closure** — the latter
   formalized in Lean (`Pass481FirstOrderPairing.lean`:
   `w + w⁻¹ − 2 = −(1−w)(1−w⁻¹)`).
+- **The unified law is UNCONDITIONAL off the primes (P485).**
+  The last hypothesis is free whenever `f ≥ 2`, since `D = λD'` forces
+  `v(det D) ≥ q` and `q ≥ v(q)+4` for every non-prime prime power. Confirmed
+  at **q=25** (f=2, exponent 12) and **q=27** (f=3, exponent 10) by a Bareiss
+  determinant over `Z[ζ_p]` — six data points across three values of f. At
+  prime q the residual is exactly `v(det D) ≥ 2q` (measured 6, 10, 14;
+  Newton proves only q+1), equivalent to *every eigenvalue of D having
+  λ-valuation ≥ 2*.
 - **THE UNIFIED DETERMINANT LAW (P484).**
   `det B_t(c) ≡ det F (mod λ^{v_λ(q)+4})` for every odd **prime power**,
   modulo one identified top-term bound. The constant `4` splits as

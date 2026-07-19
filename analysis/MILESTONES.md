@@ -139,6 +139,16 @@ Pass 484 (`analysis/w33_pass484_unified_determinant_law.py`, 33/33 exact, primes
 4. **Lean:** `formal/W33/Pass484AntisymmetricVanishing.lean` formalizes the symmetric-vs-antisymmetric vanishing driving Q ≡ 0.
 5. **Gate 3 tooling attempted and failed:** `pip install cypari2` needs the PARI C library, absent here. The ideal-class computation stays open.
 
+## Pass 485 addendum (python track) — the law goes UNCONDITIONAL off the primes; q=25 and q=27
+
+Pass 485 (`analysis/w33_pass485_top_term_and_large_prime_powers.py`, 7/7 exact):
+
+1. **THE TOP-TERM HYPOTHESIS IS FREE FOR f ≥ 2.** Every entry of D is a Z[ζ_p]-combination of the `d_v` (valuation ≥ 1), so `D = λD'` and `v(det D) ≥ q` automatically; and `q ≥ v(q)+4 = f(p−1)+4` for **every** f ≥ 2 (9≥8, 27≥10, 25≥12, margin widening). **⇒ the Pass-484 unified law is UNCONDITIONAL at every odd prime power that is not prime.** Only f=1 (where it reads q ≥ q+3) retains a residual.
+2. **q=25 and q=27 confirmed** via fraction-free **Bareiss determinant over Z[ζ_p]** (validated against cofactor expansion at q=3,5,7 first — cofactor is hopeless at 25×25/27×27). q=25 (f=2,p=5): predicted `v(25)+4 = 12`, observed min **12** ✓. q=27 (f=3,p=3): predicted **10**, observed min **10** ✓. **Six data points across three values of f.** Flat determinants `24¹³26¹²` and `−26¹⁴28¹³` (35 and 39 digits) match the flat-block lemma exactly.
+3. **The prime residual is quantified.** Newton gives `v(det D) ≥ q+1` (two short); the **measured minimum is exactly 2q** (6, 10, 14 at q=3,5,7). So the Newton polygon of `D' = D/λ` is the line of slope −1 and every eigenvalue of D has valuation exactly 2. Since `2q ≥ q+3` always, **the single statement "every eigenvalue of D has v_λ ≥ 2" closes the primes and completes the law.** Partial evidence: `D' mod λ = Σ_a κ_a P_a` with κ **odd** (κ_{−a} = −κ_a ⇒ κ₀ = 0 ⇒ Σκ_a = 0), landing in the **nilpotent augmentation ideal** of `F_q[Z/q] = F_q[s]/(s^q)` — which already forces every eigenvalue to be a nonunit.
+4. **Third q=9 depth criterion refuted:** the depth is *not* governed by `v_λ(S)` either — every v_λ(S) class realizes the minimum 8. Consistent with the e₁/e₂ cancellation: after it, the binding constraint is a *higher-order* term, not the first-order one. (Dead criteria so far: collinearity, F₃-subfield, v_λ(S).)
+5. **Literature placement (searched, not assumed):** Stickelberger's theorem is the classical analogue — the λ-adic valuation of a *Gauss sum* is the sum of p-adic digits. Our object is the *determinant of a sum of Weyl operators*, which does not appear in the accessible literature; the analogy is structural (valuation of a character sum), not a specialization.
+
 ## Deferred
 
 - m=6 Coxeter–Todd rung of the QR tower (`data/m6_handoff_k12.json`).

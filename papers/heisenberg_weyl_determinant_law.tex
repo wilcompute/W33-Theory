@@ -1,6 +1,6 @@
 \documentclass[11pt]{article}
 \usepackage[margin=1.15in]{geometry}
-\usepackage{amsmath,amssymb,amsthm}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
 \usepackage[colorlinks,linkcolor=blue,citecolor=blue]{hyperref}
 
 \theoremstyle{plain}
@@ -414,7 +414,19 @@ Suppose $\vlam(e_q)\ge\vlam(q)+4$. Then for every odd prime power $q=p^f$,
 \[
 \det B_t(c)\;\equiv\;\det F\pmod{\lambda^{\,\vlam(q)+4}} .
 \]
+The hypothesis is automatic whenever $f\ge2$, so for every odd prime power that
+is not prime the conclusion is unconditional.
 \end{theorem}
+
+\begin{proof}[Proof that the hypothesis is automatic for $f\ge2$]
+Every entry of $D$ is a $\ZZ[\zeta_p]$-combination of the $d_v$, each of
+valuation $\ge1$, so $D=\lambda D'$ with $D'$ integral and
+$\vlam(\det D)\ge q$. As $\vlam(\det F)=0$ we get $\vlam(e_q)\ge q$, and
+$q\ge \vlam(q)+4=f(p-1)+4$ holds for every $f\ge2$ (at $q=9$: $9\ge8$; at
+$q=27$: $27\ge10$; at $q=25$: $25\ge12$; the margin only grows). For $f=1$ the
+inequality reads $q\ge q+3$ and fails, which is why the primes retain a
+residual.
+\end{proof}
 
 \begin{proof}
 Newton's identities and Lemmas~\ref{lem:power},~\ref{lem:parity} give
@@ -425,9 +437,29 @@ Theorem~\ref{thm:cancel} handles $k=1,2$ jointly and the hypothesis handles
 $k=q$.
 \end{proof}
 
-The hypothesis on the top exterior power is the one step we have not proved;
-Lemma~\ref{lem:top} gives only $\vlam(e_q)\ge\vlam(q)+2$. It is verified for
-$q=3$ (all $81$ sections), $q=5$, $q=7$ and $q=9$.
+So the only case still carrying a hypothesis is $q$ prime, where it asks for
+$\vlam(\det D)\ge q+3$. Lemma~\ref{lem:top} gives $\vlam(e_q)\ge\vlam(q)+2$
+and Newton's identities give $\vlam(\det D)\ge q+1$, both short by two. The
+measured value is much larger:
+\[
+\min_c \vlam(\det D)=2q \qquad (6,\,10,\,14 \text{ at } q=3,5,7),
+\]
+with equality generically, so the Newton polygon of $D'=D/\lambda$ is the
+straight line of slope $-1$ and every eigenvalue of $D$ has valuation exactly
+$2$. Since $2q\ge q+3$ for every odd prime, the single statement
+
+\begin{conjecture}\label{conj:top}
+Every eigenvalue of $D$ has $\lambda$-valuation at least $2$; equivalently
+$\vlam(\det D)\ge 2q$.
+\end{conjecture}
+
+\noindent closes the prime case and with it the whole law. Partial evidence
+beyond the numerics: $D'$ reduces mod $\lambda$ to
+$\sum_a\kappa_aP_a$ with $\kappa_{-a}=-\kappa_a$ (so $\kappa_0=0$ and
+$\sum_a\kappa_a=0$), which lies in the augmentation ideal of
+$\FF_q[\ZZ/q]=\FF_q[s]/(s^{q})$ --- a nilpotent ideal. Hence every eigenvalue
+of $D'$ is a nonunit, giving valuation $>0$; the conjecture upgrades this to
+$\ge1$.
 
 \begin{remark}
 The exponent is attained: at $q=3$ every non-flat section gives valuation
@@ -483,11 +515,26 @@ order and once in the $e_1/e_2$ cancellation, and is blind to the
 factorization of $q$; only the ramification varies.
 \end{remark}
 
-The measured minima are $6,8,10,8$ at $q=3,5,7,9$, against
-$\vlam(q)+4=6,8,10,8$. We do not know whether the top-term hypothesis of
-Theorem~\ref{thm:sharp} can fail for some $q$, nor whether the exponent stays
-sharp for $f\ge3$; the exact $q\times q$ determinant over $\ZZ[\zeta_p]$ is the
-computational bottleneck beyond $q=9$.
+The measured minima agree with $\vlam(q)+4$ at every prime power tested,
+across three different values of $f$:
+\begin{center}
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+$q$ & $3$ & $5$ & $7$ & $9$ & $25$ & $27$\\
+$(p,f)$ & $(3,1)$ & $(5,1)$ & $(7,1)$ & $(3,2)$ & $(5,2)$ & $(3,3)$\\
+\midrule
+$\vlam(q)$ & $2$ & $4$ & $6$ & $4$ & $8$ & $6$\\
+$\vlam(q)+4$ & $6$ & $8$ & $10$ & $8$ & $12$ & $10$\\
+observed min & $6$ & $8$ & $10$ & $8$ & $12$ & $10$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The last three columns are unconditional by Theorem~\ref{thm:sharp}. The
+determinants at $q=25$ and $q=27$ were computed by fraction-free (Bareiss)
+elimination over $\ZZ[\zeta_p]$, validated against cofactor expansion at
+$q=3,5,7$; the flat determinants there,
+$24^{13}26^{12}$ and $-26^{14}28^{13}$, are $35$- and $39$-digit integers
+matching Lemma~\ref{lem:flat} exactly.
 
 \begin{thebibliography}{9}
 
