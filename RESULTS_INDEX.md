@@ -19,7 +19,7 @@ shallow reads caused two retractions) before writing.
 This is a presence index, not an endorsement ledger: a hit may be a proof,
 a reuse, an obstruction, or an explicit retraction.
 
-Indexed **6119** files; **5364** distinctive results
+Indexed **6121** files; **5365** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
 **1897** appear in exactly one file — the sharpest signal.
 
@@ -612,7 +612,7 @@ Indexed **6119** files; **5364** distinctive results
 | `392/393/394` | `analysis/w33_pass430_intake_audit_and_nesting_tower_law.py` |
 | `456/473/479` | `analysis/w33_pass480_qplus3_mechanism_factory_pf_intertwiner.py` |
 | `469/475/476` | `w33_paper.tex` |
-| `474/479/480` | `analysis/MILESTONES.md` |
+| `474/479/480` | `analysis/MILESTONES.md` · `analysis/w33_pass481_t1_theorem_second_mechanism_q9_law_freeness.py` |
 | `720/240/120` | `w33_paper.tex` |
 | `85/88/90/91` | `PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md` |
 | `877/878/879` | `analysis/BT881_forty_local_gauge_groups.md` |
@@ -2811,6 +2811,7 @@ Indexed **6119** files; **5364** distinctive results
 | `47824` | `PASS173_INCIDENCE_TRANSCEIVER_ROUTE_DARK_LATTICE.md` · `analysis/w33_pass173_incidence_transceiver_route_dark_lattice.py` · `w33_paper.tex` |
 | `47896` | `analysis/BT993_edgewise_density_recurrences.md` |
 | `48000` | `analysis/bt1706_holonet_retry_economics.py` · `exploration/PART_CCCCCXXII_SPECTRAL_MOMENT_IDENTITY.py` |
+| `48109` | `analysis/w33_pass481_t1_theorem_second_mechanism_q9_law_freeness.py` |
 | `48120` | `analysis/w33_pass207_lean_shadow_certificate.g` |
 | `48282` | `analysis/bt1835_raw_artifact_importer.py` |
 | `48384` | `analysis/w33_BREAKTHROUGH_64_coxeter_spine_H4_shadow.py` |
@@ -4899,7 +4900,7 @@ Indexed **6119** files; **5364** distinctive results
 | `453` | `PASS453_457_CYCLOTOMIC_COLLISION_FS_RELEASE.md` · `analysis/MILESTONES.md` · `analysis/PASS453_457_RESERVATIONS.md` · `analysis/PASS453_CYCLOTOMIC_COVARIANCE.md` · *(+7)* |
 | `454` | `analysis/BT731_selector_sparse_export_certificate.md` · `analysis/BT732_selector_sibling_exports_certificate.md` · `analysis/MILESTONES.md` · `analysis/PASS453_457_RESERVATIONS.md` · *(+10)* |
 | `455` | `analysis/PASS453_457_RESERVATIONS.md` · `analysis/PASS455_FROBENIUS_SCHUR_INDICATORS.md` · `analysis/w33_BREAKTHROUGH_455_simplex_stair_face_completion.py` · `analysis/w33_BREAKTHROUGH_456_genus_quadratic_toroidal_simplex.py` · *(+10)* |
-| `456` | `analysis/MILESTONES.md` · `analysis/PASS453_457_RESERVATIONS.md` · `analysis/PASS456_Q5_COLLISION_ANATOMY.md` · `analysis/PASS463_Q5_CENTRAL_SHEET_EXCHANGE.md` · *(+13)* |
+| `456` | `analysis/MILESTONES.md` · `analysis/PASS453_457_RESERVATIONS.md` · `analysis/PASS456_Q5_COLLISION_ANATOMY.md` · `analysis/PASS463_Q5_CENTRAL_SHEET_EXCHANGE.md` · *(+14)* |
 | `457` | `PASS453_457_CYCLOTOMIC_COLLISION_FS_RELEASE.md` · `PASS458_462_DOCUMENT_GUIDED_STRUCTURE_RELEASE.md` · `analysis/BT1313_BT1315_holonet_optimality_stability_physical_budget.md` · `analysis/MILESTONES.md` · *(+15)* |
 | `458` | `BT472_GOLAY_BREAKTHROUGH.md` · `PASS458_462_DOCUMENT_GUIDED_STRUCTURE_RELEASE.md` · `analysis/BT1030_k3_ranks_topologically_forced.md` · `analysis/BT1102_A12_structure_constants.md` · *(+11)* |
 | `459` | `analysis/BT1000_k3_level2_feasibility_gate.md` · `analysis/BT993_edgewise_density_recurrences.md` · `analysis/BT998_cp2_level2_edgewise_rank_pipeline.md` · `analysis/MILESTONES.md` · *(+15)* |
@@ -4916,14 +4917,14 @@ Indexed **6119** files; **5364** distinctive results
 | `470` | `BT469_BREAKTHROUGH.md` · `BT470_BREAKTHROUGH.md` · `BT471_BREAKTHROUGH.md` · `PASS468_472_SEMISIMPLE_GALOIS_COVER_RELEASE.md` · *(+7)* |
 | `471` | `BT470_BREAKTHROUGH.md` · `BT471_BREAKTHROUGH.md` · `BT472_GOLAY_BREAKTHROUGH.md` · `BT473_TERNARY_GOLAY_BREAKTHROUGH.md` · *(+9)* |
 | `472` | `BT471_BREAKTHROUGH.md` · `BT472_GOLAY_BREAKTHROUGH.md` · `BT473_TERNARY_GOLAY_BREAKTHROUGH.md` · `BT474_GRAND_UNIFICATION.md` · *(+8)* |
-| `473` | `BT472_GOLAY_BREAKTHROUGH.md` · `BT473_TERNARY_GOLAY_BREAKTHROUGH.md` · `BT474_GRAND_UNIFICATION.md` · `PASS474_478_EXECUTION_LEDGER.md` · *(+6)* |
-| `474` | `BT474_GRAND_UNIFICATION.md` · `PASS474_478_EXECUTION_LEDGER.md` · `analysis/MILESTONES.md` · `analysis/PASS474_478_RESERVATIONS.md` · *(+7)* |
+| `473` | `BT472_GOLAY_BREAKTHROUGH.md` · `BT473_TERNARY_GOLAY_BREAKTHROUGH.md` · `BT474_GRAND_UNIFICATION.md` · `PASS474_478_EXECUTION_LEDGER.md` · *(+7)* |
+| `474` | `BT474_GRAND_UNIFICATION.md` · `PASS474_478_EXECUTION_LEDGER.md` · `analysis/MILESTONES.md` · `analysis/PASS474_478_RESERVATIONS.md` · *(+8)* |
 | `475` | `PASS474_478_EXECUTION_LEDGER.md` · `analysis/BT1084_incidence_ladder_weight_ledger.md` · `analysis/MILESTONES.md` · `analysis/PASS474_478_RESERVATIONS.md` · *(+6)* |
 | `476` | `PASS474_478_EXECUTION_LEDGER.md` · `analysis/BT1233_sp43_word_metric_tomography_protocol.md` · `analysis/BT1236_clifford_word_metric_integration_manifest.md` · `analysis/BT1237_word_metric_recovery_bands.md` · *(+16)* |
 | `477` | `PASS474_478_EXECUTION_LEDGER.md` · `analysis/2026-07-15_pass86_alpha_running_correction.md` · `analysis/MILESTONES.md` · `analysis/PASS474_478_RESERVATIONS.md` · *(+8)* |
 | `478` | `PASS474_478_EXECUTION_LEDGER.md` · `analysis/PASS474_478_RESERVATIONS.md` · `analysis/w33_BREAKTHROUGH_481_fibonacci_tier2_heegner_time_crystals.py` · `analysis/w33_logical_ladder.py` · *(+2)* |
-| `479` | `analysis/BT479_memory_topology.py` · `analysis/BT480_memory_topology_deep.py` · `analysis/MILESTONES.md` · `analysis/w33_BREAKTHROUGH_481_fibonacci_tier2_heegner_time_crystals.py` · *(+9)* |
-| `481` | `PASS373_374_W33_BOUNDARY_MLUT_PHASE_SHEET_SYNTHESIS.md` · `W33_FOR_EVERYONE.tex` · `W36_PAPER.tex` · `W36_PAPER_arxiv.tex` · *(+15)* |
+| `479` | `analysis/BT479_memory_topology.py` · `analysis/BT480_memory_topology_deep.py` · `analysis/MILESTONES.md` · `analysis/w33_BREAKTHROUGH_481_fibonacci_tier2_heegner_time_crystals.py` · *(+10)* |
+| `481` | `PASS373_374_W33_BOUNDARY_MLUT_PHASE_SHEET_SYNTHESIS.md` · `W33_FOR_EVERYONE.tex` · `W36_PAPER.tex` · `W36_PAPER_arxiv.tex` · *(+19)* |
 | `482` | `analysis/w33_BREAKTHROUGH_482_AI_coding_network_cognition.py` · `analysis/w33_homology_css.py` |
 | `483` | `analysis/w33_BREAKTHROUGH_483_fractal_RG_fixed_point_holography.py` · `exploration/PART_CCLXXXIV_RAMANUJAN_IHARA_BRIDGE.py` |
 | `484` | `analysis/w33_BREAKTHROUGH_484_0vbb_axion_DM_substrate.py` · `analysis/w33_gf35_code.py` · `exploration/F_THEORY_SYNTHESIS.py` · `exploration/PART_CCCVII_LINE_GRAPH_BRIDGE.py` · *(+2)* |

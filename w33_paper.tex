@@ -14141,6 +14141,11 @@ $q{+}3$ mechanism: $T_1=\operatorname{tr}(\operatorname{adj}(F)D)$ has $v_\lambd
 $5$ of $6$ genuine pairs $=$ sheet exchanges; the $6$th $=$ a \emph{second} mechanism & \textsc{cert} & P480 & this programme (conjecture refuted) \\
 flat det formula $+$ spectrum extend to $q{=}9$; depth drops to $\{8,10\}<12$ & \textsc{cert} & P480 & this programme (first $p^f$) \\
 natural intertwiner family uniformly non-integral & \textsc{cert} & P480 & this programme (gate 3 evidence) \\
+$v_\lambda(T_1)=(q{-}1)+v_\lambda(S)\ge q{+}1$, \emph{all} odd primes & \textsc{thm} & P481 & this programme (closed form; Lean pairing) \\
+$T_1=\det(F)\,q\,S/(q^2{-}1)$, $S=\sum_v(\zeta^{-tc(v)}{-}1)$ & \textsc{thm} & P481 & this programme (exact chain) \\
+second $q{=}5$ mechanism $=$ sheet coincidence (not exchange) & \textsc{cert} & P481 & this programme (mechanism named) \\
+$q{=}9$ collinear sections invisible; depth split $\{8,10\}$ open & \textsc{cert} & P481 & this programme \\
+gate-3 residual $=$ Latimer--MacDuffee ideal class & \textsc{open} & P481 & this programme (natural gens non-unimodular) \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -14395,5 +14400,43 @@ P464/469/475/476; gate 5 (measured optical run) is software-complete and
 physically blocked.  The register cell now carries two proved laws (universal
 traces, the determinant congruence), a quantitatively closed spectral census,
 and a collision landscape with two identified mechanisms.
+
+\paragraph{Pass 481 --- the first-order law is a theorem; the second mechanism
+is named.}
+The base valuation $q{+}1$ of the determinant congruence law is now
+\emph{proved} for every odd prime, with a closed form.  Writing $F$ for the
+flat block, $D=B_t(c)-F$, and $T_1=\operatorname{tr}(\operatorname{adj}(F)D)$
+for the first-order term of $\det(F+D)$:
+\begin{enumerate}
+\item $F$ has integer spectrum $\{(q{-}1)^{(q+1)/2},(-(q{+}1))^{(q-1)/2}\}$,
+so $F^2+2F-(q^2{-}1)I=0$ and $F^{-1}=(F+2I)/(q^2{-}1)$;
+\item $\operatorname{tr}D=0$ (P473), so
+$T_1=\det(F)\,\operatorname{tr}(FD)/(q^2{-}1)$;
+\item the product of a flat monomial $\rho(v,0)$ and a section monomial
+$\rho(w,c(w))$ is central iff $w=-v$, with central label $-c(v)$; by P473's
+vanishing of noncentral extraspecial characters,
+$\operatorname{tr}(FB)=q\sum_v\zeta^{-tc(v)}$, whence
+$\operatorname{tr}(FD)=q\,S$, $S=\sum_v(\zeta^{-tc(v)}-1)$.
+\end{enumerate}
+Thus $T_1=\det(F)\,qS/(q^2{-}1)$, and since $(q)=(\lambda)^{q-1}$ is totally
+ramified while $\det F$ and $q^2{-}1$ are prime to $\lambda$,
+\[
+v_\lambda(T_1)=(q{-}1)+v_\lambda(S)\ \ge\ (q{-}1)+2\ =\ q{+}1,
+\]
+the last step because inverse closure pairs $v,-v$ into
+$\zeta^{tc}+\zeta^{-tc}-2=-(1-\zeta^{tc})(1-\zeta^{-tc})$, of
+$\lambda$-valuation $2$.  \textbf{The base valuation $q{+}1$ is exactly
+$(q{-}1)$ from the ramification of $q$ plus $2$ from inverse closure} --- the
+pairing identity is formalized in \texttt{Pass481FirstOrderPairing.lean}.  The
+remaining $+2$ to the full $q{+}3$ is the $T_1/T_2$ cancellation of P480.
+Two smaller findings complete the round: the lone genuine $q=5$ pair that is
+\emph{not} a sheet exchange is a \emph{sheet coincidence} (its two coset
+sheets equal the partner's without swapping) --- so exchange and coincidence
+are the two $q=5$ cospectrality mechanisms; and at $q=9$ the $\FF_9$-collinear
+sections are the invisible flat class ($\det=\det F$), with the depth
+$\{8,10\}$ split among non-collinear sections left open.  The residual v1.9
+gate-3 obstruction is pinned to a Latimer--MacDuffee ideal class (the natural
+cyclic generators are non-unimodular over $\ZZ[\zeta_5]$).  See
+\texttt{RELEASE\_v1.9.md} for the consolidated release status.
 
 \end{document}

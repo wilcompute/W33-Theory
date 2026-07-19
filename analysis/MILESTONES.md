@@ -100,6 +100,15 @@ Pass 480 (`analysis/w33_pass480_qplus3_mechanism_factory_pf_intertwiner.py`, exa
 
 **v1.9 status:** gate 1 closed (477); gate 3 three-quarters closed (474/479/480, only the ideal-class case open); gates 2, 4 advanced (464/469/475/476); gate 5 software-complete, physically blocked. The two new laws (universal traces P473, determinant congruence P479) and the closed census/factory chapters (447/454/456/479/480) make v1.9 the strongest release once gate 3's ideal-class case or gate 5's lab run lands.
 
+## Pass 481 addendum (python track) — the first-order law PROVED; the second mechanism named; v1.9 written
+
+Pass 481 (`analysis/w33_pass481_t1_theorem_second_mechanism_q9_law_freeness.py`, 19/19 exact):
+
+1. **THEOREM (all odd primes): `v_λ(T₁) = (q−1) + v_λ(S) ≥ q+1`.** Closed form `T₁ = tr(adj(F)·D) = det(F)·q·S/(q²−1)`, `S = Σ_v(ζ^(−tc(v))−1)`, via `F² + 2F − (q²−1)I = 0` (integer flat spectrum), `tr D = 0` (P473), and the centrality of `ρ(v,0)·ρ(−v,c(−v))`. **The base valuation q+1 = (q−1) [ramification of q] + 2 [inverse closure]** — the pairing identity `w + w⁻¹ − 2 = −(1−w)(1−w⁻¹)` is formalized in `formal/W33/Pass481FirstOrderPairing.lean`. This is the rigorous first-order core of the P479 determinant law; the remaining +2 to q+3 is the P480 T₁/T₂ cancellation (verified, not yet proved).
+2. **The second collision mechanism is named:** the lone non-sheet-exchange genuine q=5 pair is a **sheet coincidence** — square- and nonsquare-coset sheets individually equal to the partner's (not swapped), between affine-inequivalent sections, with distinct 5-primary Smith {25¹⁵,5⁶}. Exchange (5 pairs) + coincidence (1 pair) = the two q=5 cospectrality mechanisms.
+3. **q=9 (idea refuted honestly):** F₉-collinear sections are the invisible flat class (det = flat det), NOT depth-8 as I first guessed; the depth split {8,10} lives among non-collinear sections by a finer, still-open criterion.
+4. **Gate 3 residual pinned:** natural cyclic generators non-unimodular over Z[ζ₅] ⇒ the obstruction is a Latimer–MacDuffee ideal class (needs pari/sage). `RELEASE_v1.9.md` written consolidating the release status.
+
 ## Deferred
 
 - m=6 Coxeter–Todd rung of the QR tower (`data/m6_handoff_k12.json`).
