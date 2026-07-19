@@ -10,3 +10,4 @@ import W33.Pass450CentralFourierScaffold
 import W33.Pass457PerpMonotonicity
 import W33.Pass462CoverLawL1Q3
 import W33.Pass465CoverLawL2L4Q3
+import W33.Pass477UniformProjectiveCardinality
