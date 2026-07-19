@@ -159,6 +159,16 @@ Pass 486 (`analysis/w33_pass486_eigenvalue_bound_and_q49_q81.py`, 14/14 exact):
 4. **Fourth q=9 criterion refuted:** `argmin_k v_λ(e_k)` is almost always k=2, yet the depth still varies — exactly what the e₁/e₂ cancellation predicts (the depth is set by the *residual* of the cancellation, not the smallest coefficient). Dead criteria: collinearity, F₃-subfield, v_λ(S), argmin_k.
 5. **Lean:** `formal/W33/Pass486DetDivisibility.lean` — `λ ∣ every entry ⇒ λⁿ ∣ det`, plus the arithmetic `f·a+4 ≤ (a+1)^f` behind "unconditional for f ≥ 2".
 
+## Pass 487 addendum (python track) — the law's scope is FIXED: "+4" is a field phenomenon
+
+Pass 487 (`analysis/w33_pass487_scope_of_the_law_and_det_hunt.py`, 10/10 exact):
+
+1. **THE ℤ/9 TEST — the hoped-for Galois-ring extension is REFUTED.** Same q=9, same group/sections/inverse-closure, but the ring ℤ/9 instead of the field 𝔽₉ (central character order 9 instead of 3). Construction fully validated: ρ is a homomorphism, tr ρ vanishes off the centre, flat block still obeys `F²+2F−80I=0` with spectrum `{8⁵,(−10)⁴}` and `det F = 327,680,000` — numerically identical to the field case. But `λ = 1−ζ₉` gives `v_λ(9) = 12`, so the law would predict 16. **Measured exponent is 12 = v_λ(q)** (depths {12,16,18} over 20 sections). **The whole +4 is lost.**
+2. **MECHANISM, exact:** Newton's identity divides by k, harmless only for a λ-unit k. `v_λ(3) = 2` over ℤ[ζ₃] but **`v_λ(3) = 6` over ℤ[ζ₉]**; with block size 9 the recursion passes k=3,6,9 in both cases, and only over the ring is the loss big enough to consume the cancellation. The symplectic sums degrade too — `Σ_x ψ(−ω(x,u))` vanishes only for *unimodular* u, and ℤ/9 has nonzero non-unimodular vectors. **⇒ v_λ(q) is robust; the 2 (inverse closure) + 2 (e₁/e₂) are genuinely field-theoretic.** Scope of the theorem is now fixed and stated in the paper.
+3. **det D hunt (idea 1, partial):** exhaustive q=3 gives `det D ∈ {0, 27, 81}` — rational, powers of q. But it does **not** generalize: at q=5 the valuations {10,12,14} are not multiples of `v_λ(5)=4`, so det D isn't rational there. No closed form; the last coefficient stays open.
+4. **Second identity (idea 2): REFUTED.** Exhaustive scan at q=3 — `tr D = 0` is the *only* identically-vanishing power trace. The Pass-486 induction has no second identity to push it past k=q.
+5. **Lean:** `formal/W33/Pass487NewtonInduction.lean` isolates the arithmetic core `2(k−i)+V+i ≥ 2k ⟺ i ≤ V`, plus the sharpness statement showing it fails by exactly one at i = V+1 — the formal reason the determinant is the sole residual.
+
 ## Deferred
 
 - m=6 Coxeter–Todd rung of the QR tower (`data/m6_handoff_k12.json`).

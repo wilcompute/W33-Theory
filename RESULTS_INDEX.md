@@ -19,9 +19,9 @@ shallow reads caused two retractions) before writing.
 This is a presence index, not an endorsement ledger: a hit may be a proof,
 a reuse, an obstruction, or an explicit retraction.
 
-Indexed **6128** files; **5371** distinctive results
+Indexed **6130** files; **5372** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
-**1903** appear in exactly one file — the sharpest signal.
+**1904** appear in exactly one file — the sharpest signal.
 
 ## Index
 
@@ -1391,7 +1391,7 @@ Indexed **6128** files; **5371** distinctive results
 | `316262961` | `exploration/w33_continuum_tail_operator_normal_form_bridge.py` |
 | `317206375` | `docs/index.html` |
 | `320480240` | `analysis/w33_richter_octahedron_cube_memory_dual.py` |
-| `327680000` | `analysis/w33_pass480_qplus3_mechanism_factory_pf_intertwiner.py` · `w33_paper.tex` |
+| `327680000` | `analysis/w33_pass480_qplus3_mechanism_factory_pf_intertwiner.py` · `analysis/w33_pass487_scope_of_the_law_and_det_hunt.py` · `w33_paper.tex` |
 | `346441915` | `analysis/w33_pass427_adaptive_telemetry_channel.py` |
 | `348364800` | `PASS117_122_E8_LATTICE_HOPF_SYNTHESIS.md` · `PASS124_SYMPLECTIC_SP82.md` · `PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md` · `analysis/w33_pass364_qr548_e8_phase_space.g` · *(+4)* |
 | `360288160` | `analysis/w33_projector_arithmetic_eigenvalue_derivation.py` |
@@ -4319,6 +4319,7 @@ Indexed **6128** files; **5371** distinctive results
 | `4862` | `analysis/w33_MDCXCV_MDCC_classical_math_substrate.py` |
 | `4868` | `w33_paper_v2.tex` |
 | `4869` | `analysis/w33_pass486_eigenvalue_bound_and_q49_q81.py` |
+| `4871` | `analysis/w33_pass487_scope_of_the_law_and_det_hunt.py` |
 | `4875` | `exploration/w33_cp_capacity_curve_bridge.py` |
 | `4895` | `analysis/w33_pass449_q5_cubic_section_taxonomy.py` |
 | `4896` | `exploration/w33_generation_splitting.py` |
@@ -4935,7 +4936,7 @@ Indexed **6128** files; **5371** distinctive results
 | `483` | `analysis/MILESTONES.md` · `analysis/w33_BREAKTHROUGH_483_fractal_RG_fixed_point_holography.py` · `analysis/w33_pass483_modlambda_qplus1_theorem.py` · `analysis/w33_pass484_unified_determinant_law.py` · *(+2)* |
 | `484` | `analysis/MILESTONES.md` · `analysis/w33_BREAKTHROUGH_484_0vbb_axion_DM_substrate.py` · `analysis/w33_gf35_code.py` · `analysis/w33_pass484_unified_determinant_law.py` · *(+9)* |
 | `485` | `analysis/2026-06-07_bc_ring_torus_lift.md` · `analysis/BT1084_incidence_ladder_weight_ledger.md` · `analysis/BT740_exact_braid_register_realization.md` · `analysis/BT808_600cell_icosahedral_orbits.md` · *(+15)* |
-| `487` | `analysis/2026-06-07_bc_ring_torus_lift.md` · `analysis/PASS458_COLLISION_COHERENT_CONFIGURATION.md` · `analysis/w33_cyclic_csaszar_seed_from_k4_ring.py` · `analysis/w33_general_k4_ring_torus_law.py` · *(+1)* |
+| `487` | `analysis/2026-06-07_bc_ring_torus_lift.md` · `analysis/PASS458_COLLISION_COHERENT_CONFIGURATION.md` · `analysis/w33_cyclic_csaszar_seed_from_k4_ring.py` · `analysis/w33_general_k4_ring_torus_law.py` · *(+5)* |
 | `488` | `analysis/2026-06-07_bc_ring_torus_lift.md` · `analysis/2026-06-07_toroidal_html_dual_repair.md` · `analysis/w33_BREAKTHROUGH_120_trace_tower_physical.py` · `analysis/w33_cyclic_csaszar_seed_from_k4_ring.py` · *(+3)* |
 | `489` | `analysis/2026-06-07_toroidal_html_dual_repair.md` · `analysis/w33_logical_ladder.py` · `analysis/w33_toroidal_dual_incidence_ladder.py` |
 | `490` | `analysis/2026-06-07_toroidal_html_dual_repair.md` · `analysis/w33_BREAKTHROUGH_22_partition_function_substrate.py` · `analysis/w33_BREAKTHROUGH_41_PG32_klein_quadric_audit.py` · `analysis/w33_csaszar_johnson_metric_decomposition.py` · *(+8)* |

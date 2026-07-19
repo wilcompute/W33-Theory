@@ -14,3 +14,4 @@ import W33.Pass477UniformProjectiveCardinality
 import W33.Pass481FirstOrderPairing
 import W33.Pass484AntisymmetricVanishing
 import W33.Pass486DetDivisibility
+import W33.Pass487NewtonInduction

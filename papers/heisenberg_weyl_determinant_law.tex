@@ -567,6 +567,33 @@ expansion at $q=3,5,7$; the flat determinants match Lemma~\ref{lem:flat}
 exactly in every case, including the $35$- and $39$-digit values
 $24^{13}26^{12}$ at $q=25$ and $-26^{14}28^{13}$ at $q=27$.
 
+\subsection{The law does not survive over $\ZZ/p^{n}$}
+
+It is natural to ask whether the field can be replaced by a finite chain ring.
+It cannot, and the failure is instructive. Take $q=9$ but with the ring
+$\ZZ/9$ in place of $\FF_9$: the group, the sections and the inverse-closure
+condition are unchanged, and only the central character changes, from order
+$3$ to order $9$. The construction remains valid --- $\rho$ is a homomorphism,
+$\tr\rho$ vanishes off the centre, and the flat block still satisfies
+$F^2+2F-80I=0$ with spectrum $\{8^5,(-10)^4\}$ and $\det F=327{,}680{,}000$,
+numerically identical to the field case. But now $\lambda=1-\zeta_9$ and
+$\vlam(9)=12$, so the law would predict exponent $16$.
+
+The measured exponent is $12=\vlam(q)$: over $20$ sections the depths are
+$\{12,16,18\}$. \emph{The entire $+4$ is lost.} The mechanism is exact.
+Newton's identity divides by $k$, which is harmless only when $k$ is a
+$\lambda$-unit; and while $\vlam(3)=2$ in $\ZZ[\zeta_3]$, in $\ZZ[\zeta_9]$ one
+has $\vlam(3)=6$. With block size $9$ the recursion passes through $k=3,6,9$ in
+both cases, and only over the ring is the loss large enough to consume the
+whole $+4$. The symplectic cancellations of Lemma~\ref{lem:closed} degrade for
+the same reason: $\sum_x\psi_t(-\omega(x,u))$ vanishes only for unimodular
+$u$, and $\ZZ/9$ has nonzero vectors that are not unimodular.
+
+So the base term $\vlam(q)$ is robust, but the two units from inverse closure
+and the two from the $e_1/e_2$ cancellation are genuinely field phenomena.
+This fixes the scope of Theorem~\ref{thm:sharp} and rules out a Galois-ring
+extension.
+
 \begin{thebibliography}{9}
 
 \bibitem{Ma}
@@ -575,7 +602,8 @@ S.~L.~Ma,
 Des.\ Codes Cryptogr.\ \textbf{4} (1994), 221--261.
 
 \bibitem{PDSS}
-J.~Polhill, J.~A.~Davis, K.~Smith, and E.~Swartz,
+J.~Polhill, J.~A.~Davis, K.~W.~Smith, and E.~Swartz,
+\emph{Genuinely nonabelian partial difference sets},
 J.~Combin.\ Des.\ \textbf{32} (2024), 351--370; see Corollary~4.7 and the
 discussion following Theorem~4.8 for the Heisenberg partial difference sets
 with parameters $\bigl(q^3,(q-1)(q+2),q-2,q+2\bigr)$ and the nonexistence of
