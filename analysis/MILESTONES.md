@@ -83,11 +83,22 @@ Pass 479 (`analysis/w33_pass479_det_congruence_sheet_census_and_orbit_burnside.p
 
 ## v1.9 — OPEN. Gates
 
-1. Prove the projective-point, perpendicular-line, and shell-cardinality formulas uniformly in Lean over every finite field of odd characteristic.
+1. **CLOSED by Pass 477** — uniform projective-point, perpendicular-line, and shell-cardinality formulas in Lean over every finite field of odd characteristic.
 2. Derive a symbolic integral coupling tower for the characteristic-primary Laplacian over `Z/p^n` and `GR(p^n,f)`, including closed Smith multiplicity formulas.
-3. Lift the Pass-468 companion-block swap back to an explicit intertwiner in the original Heisenberg/Weyl coordinate basis and determine its integral lattice obstruction.
-4. Construct concrete Weyl blocks over nontrivial Galois rings such as `GR(9,2)` and compare their spectra, Hjelmslev radicals, and characteristic-primary Smith modules.
+3. **PARTIALLY CLOSED** — the original-coordinate intertwiner exists exactly (Pass 474, 25-dim) but no permutation+phase gauge implements it (474 triangle-gain firewall); the integral-unitary case is closed negative at block level (Pass 479, exhaustive monomial + totally-positive lemma); the natural commutant family is uniformly non-unimodular (Pass 480). The full GL₅(Z[ζ₅]) Latimer–MacDuffee ideal-class computation remains open.
+4. Construct concrete Weyl blocks over nontrivial Galois rings such as `GR(9,2)` (Pass 475 did the flat spectrum) and compare their spectra, Hjelmslev radicals, and characteristic-primary Smith modules.
 5. Execute the custody-frozen blind protocol on a genuinely measured transfer matrix and sealed optical holdout.
+
+## Pass 480 addendum (python track) — the q+3 mechanism; the factory theorem; the law at q=9
+
+Pass 480 (`analysis/w33_pass480_qplus3_mechanism_factory_pf_intertwiner.py`, exact arithmetic):
+
+1. **The q+3 mechanism (Part A).** Writing `det B = det(F+D)` with `F` the flat block and `D` divisible by `λ` entrywise, the multilinear column expansion shows the first-order term `T₁ = tr(adj(F)·D)` already has `v_λ ≥ q+1` (a character-sum vanishing), and `T₁, T₂` share that base valuation and cancel — lifting the total to the sharp `q+3 = (q+1)+2` of Pass 479. Exhaustive q=3, sampled q=5 full decomposition, q=7 first-order.
+2. **The collision factory has (at least) TWO mechanisms (Part B) — conjecture REFUTED.** Of the six genuine q=5 cospectral pairs, **five** are Wedderburn sheet exchanges; the **sixth** is cospectral, Smith-identical, affine-inequivalent, yet *not* a sheet exchange — and it carries a distinct 5-primary critical-group signature ({25¹⁵,5⁶} vs the exchanges' {25⁵,5¹⁶}). "Every genuine collision is a sheet exchange" is false; a second cospectrality mechanism exists.
+3. **The determinant law at q=9 (Part C, first prime power).** The flat-determinant formula and flat spectrum `{8⁵,(−10)⁴}` extend verbatim (validated by the trace laws), but the congruence depth is **non-uniform ∈ {8,10}**, both below the prime value `q+3 = 12`. **The modulus `λ^(q+3)` and its sharpness are prime-q statements; prime-power depth is smaller and section-dependent.**
+4. **Intertwiner lattice (Part D).** The natural commutant-generated intertwiner family is uniformly non-unimodular — bounded evidence for gate 3, complementing 474/479; the ideal-class computation stays open.
+
+**v1.9 status:** gate 1 closed (477); gate 3 three-quarters closed (474/479/480, only the ideal-class case open); gates 2, 4 advanced (464/469/475/476); gate 5 software-complete, physically blocked. The two new laws (universal traces P473, determinant congruence P479) and the closed census/factory chapters (447/454/456/479/480) make v1.9 the strongest release once gate 3's ideal-class case or gate 5's lab run lands.
 
 ## Deferred
 

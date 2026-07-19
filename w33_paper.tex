@@ -14137,6 +14137,10 @@ flat block spectrum $\{(q{-}1)^{(q+1)/2},(-(q{+}1))^{(q-1)/2}\}$ & \textsc{cert}
 no monomial block intertwiner; integral-unitary case closed & \textsc{cert} & P479 & this programme; complements P474 \\
 $q{=}7$ section-orbit count $+$ census birthday model & \textsc{cert} & P479 & this programme (Burnside validated) \\
 five \emph{new} genuine cospectral pairs in $2000$ sections & \textsc{cert} & P479 & this programme (positive density) \\
+$q{+}3$ mechanism: $T_1=\operatorname{tr}(\operatorname{adj}(F)D)$ has $v_\lambda\ge q{+}1$; total $q{+}3$ & \textsc{cert} & P480 & this programme (order decomposition) \\
+$5$ of $6$ genuine pairs $=$ sheet exchanges; the $6$th $=$ a \emph{second} mechanism & \textsc{cert} & P480 & this programme (conjecture refuted) \\
+flat det formula $+$ spectrum extend to $q{=}9$; depth drops to $\{8,10\}<12$ & \textsc{cert} & P480 & this programme (first $p^f$) \\
+natural intertwiner family uniformly non-integral & \textsc{cert} & P480 & this programme (gate 3 evidence) \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -14350,5 +14354,46 @@ an integral unitary over $\ZZ[\zeta_5]$ is necessarily monomial
 (totally-positive column norms), the integral-\emph{unitary} case of v1.9
 gate 3 is closed negatively at block level, complementing P474's
 $25$-dimensional firewall.
+
+\paragraph{Pass 480 --- where the $q{+}3$ lives; a second collision mechanism;
+the law at $q=9$.}
+Three follow-ups to the determinant congruence law.  \emph{(i) The mechanism.}
+Writing $\det B_t(c)=\det(F+D)$ with $F$ the flat block and $D=B_t(c)-F$, every
+entry of $D$ is a difference of $q$-th roots of unity, hence divisible by
+$\lambda=1-\zeta_q$.  The multilinear column expansion
+$\det(F+D)=\sum_{k=0}^{q}T_k$ ($T_k=$ sum of the determinants with $k$ columns
+from $D$) then localizes the congruence: the first-order term
+$T_1=\operatorname{tr}(\operatorname{adj}(F)D)$ already has
+$v_\lambda(T_1)\ge q{+}1$ (exhaustive $q=3$, sampled $q=5,7$; the
+adjugate-weighted column sums of $D$ vanish to order $q{+}1$, a character-sum
+identity), and $T_1,T_2$ share that base valuation and partially cancel, so the
+total correction reaches the sharp $q{+}3=(q{+}1)+2$ of Pass 479.
+\emph{(ii) A second mechanism.}  With six genuine $q=5$ cospectral pairs now in
+hand (Pass 456 plus five from the Pass-479 census), we tested whether every
+genuine collision is a Wedderburn sheet exchange.  \textbf{It is not}: five of
+the six exchange the Galois-conjugate quintics between the square and nonsquare
+central cosets, but the sixth is cospectral, Smith-identical, and
+affine-inequivalent \emph{without} being a sheet exchange --- and it carries a
+distinct $5$-primary critical group ($\{25^{15},5^{6}\}$ against the exchanges'
+$\{25^{5},5^{16}\}$).  The register cell hosts at least two cospectrality
+mechanisms.  \emph{(iii) The law at $q=9$.}  The flat-determinant formula
+$(q{-}1)^{(q+1)/2}(-(q{+}1))^{(q-1)/2}=8^5(-10)^4=327680000$ and the flat block
+spectrum $\{8^5,(-10)^4\}$ extend verbatim to the first prime power (the
+universal trace laws hold: $\operatorname{tr}=0$, $\operatorname{tr}B^2=720$),
+but the congruence depth does not: it is \emph{non-uniform} in $\{8,10\}$, both
+below the prime value $q{+}3=12$.  The modulus $\lambda^{q+3}$ and its
+sharpness are prime-$q$ statements.  Finally, the natural commutant-generated
+intertwiner family for the genuine pair is uniformly non-integral over
+$\ZZ[\zeta_5]$ (bounded evidence for v1.9 gate 3; the
+Latimer--MacDuffee ideal-class computation remains the open core).
+
+\medskip\noindent\emph{Release status (v1.9).}  Gate 1 (uniform projective
+cardinalities in Lean) closed at P477; gate 3 (original-coordinate
+intertwiner) is closed except for the ideal-class case (P474/479/480); gates
+2 and 4 (chain/Galois-ring conductor and Smith towers) advanced at
+P464/469/475/476; gate 5 (measured optical run) is software-complete and
+physically blocked.  The register cell now carries two proved laws (universal
+traces, the determinant congruence), a quantitatively closed spectral census,
+and a collision landscape with two identified mechanisms.
 
 \end{document}
