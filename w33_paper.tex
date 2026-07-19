@@ -14177,6 +14177,9 @@ mechanism: $v_\lambda(3)=6$ over $\ZZ[\zeta_9]$ vs $2$ over $\ZZ[\zeta_3]$ & \te
 Galois-ring extension of the law & \textsc{killed} & P487 & self-correction (hoped-for, refuted) \\
 $\det D\in\{0,27,81\}$ at $q{=}3$; not rational at $q{=}5$ & \textsc{cert} & P487 & this programme (no closed form) \\
 only $\tr D=0$ vanishes identically & \textsc{cert} & P487 & this programme (no 2nd identity) \\
+discriminator $=$ \emph{character order}, not the field property & \textsc{thm} & P488 & this programme ($\FF_3[x]/(x^2)$ keeps $+4$) \\
+``symplectic sums degrade over $\ZZ/9$'' & \textsc{killed} & P488 & self-correction of P487 (Frobenius $\Rightarrow$ vanish) \\
+$\det D=0$ locus \emph{strictly contains} the flat orbit ($41$ vs $9$) & \textsc{cert} & P488 & this programme \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -14678,5 +14681,34 @@ $\det D$ is not rational there; and an exhaustive scan confirms that
 $\operatorname{tr}D=0$ is the \emph{only} identically-vanishing power trace, so
 the Pass-486 induction has no second identity available to push it past
 $k=q$.  The last coefficient remains the sole open step.
+
+\paragraph{Pass 488 --- the discriminator is the character order, and Pass 487's
+mechanism is corrected.}
+Pass 487 gave two reasons for the $\ZZ/9$ failure.  \textbf{The second was
+wrong.}  It claimed the symplectic sums degrade because $\ZZ/9$ has
+non-unimodular nonzero vectors; in fact, for any finite Frobenius ring with
+generating character $\psi$ one has $\sum_a\psi(au)=0$ for every $u\neq0$ ---
+the defining property --- so
+$\sum_x\psi(\omega(x,u))=(\sum_{x_0}\psi(x_0u_1))(\sum_{x_1}\psi(-u_0x_1))=0$
+for \emph{every} $u\neq0$, unimodular or not.  Verified exhaustively over
+$\ZZ/9$ and over $\FF_3[x]/(x^2)$: zero non-vanishing $u$ in both.  So the
+Newton division cost is the \emph{only} mechanism, and the scope question
+sharpens to: is the hypothesis ``field'' or ``character of order $p$''?
+A third experiment separates them.  Let $R=\FF_3[x]/(x^2)$ --- a Frobenius ring
+that is \textbf{not a field}, with zero divisors and non-unimodular nonzero
+vectors, but whose generating character $\psi(c)=\zeta_3^{c_1}$ (the socle
+coordinate) has order $3$, so $v_\lambda(9)=4$ exactly as over $\FF_9$.  With a
+homomorphism-validated representation, the flat block again satisfies
+$F^2+2F-80I=0$ with $\det F=327{,}680{,}000$, and the measured depths are
+$\{8,10,12\}$ with minimum $8=v_\lambda(q)+4$: \textbf{the $+4$ survives over a
+non-field}.  The trichotomy is therefore $\FF_9$ (field, order $3$) $\to8$;
+$\FF_3[x]/(x^2)$ (non-field, order $3$) $\to8$; $\ZZ/9$ (non-field, order $9$)
+$\to12$.  \emph{The field property plays no role}; the law is a statement about
+coefficient rings whose generating character has order $p$, and its proof runs
+verbatim in that generality --- a strictly larger theorem than the one Pass 487
+recorded.  Separately, the $q=3$ determinant strata are
+$\{0:41,\ 27:24,\ 81:16\}$, and since only $9$ of the $41$ vanishing sections
+are linear, the locus $\det D=0$ \emph{strictly contains} the flat orbit and so
+does not characterize flatness.
 
 \end{document}

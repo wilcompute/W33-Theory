@@ -580,19 +580,47 @@ numerically identical to the field case. But now $\lambda=1-\zeta_9$ and
 $\vlam(9)=12$, so the law would predict exponent $16$.
 
 The measured exponent is $12=\vlam(q)$: over $20$ sections the depths are
-$\{12,16,18\}$. \emph{The entire $+4$ is lost.} The mechanism is exact.
-Newton's identity divides by $k$, which is harmless only when $k$ is a
-$\lambda$-unit; and while $\vlam(3)=2$ in $\ZZ[\zeta_3]$, in $\ZZ[\zeta_9]$ one
-has $\vlam(3)=6$. With block size $9$ the recursion passes through $k=3,6,9$ in
-both cases, and only over the ring is the loss large enough to consume the
-whole $+4$. The symplectic cancellations of Lemma~\ref{lem:closed} degrade for
-the same reason: $\sum_x\psi_t(-\omega(x,u))$ vanishes only for unimodular
-$u$, and $\ZZ/9$ has nonzero vectors that are not unimodular.
+$\{12,16,18\}$. \emph{The entire $+4$ is lost.} The mechanism is exact, and it
+is a single one. Newton's identity divides by $k$, which is harmless only when
+$k$ is a $\lambda$-unit; and while $\vlam(3)=2$ in $\ZZ[\zeta_3]$, in
+$\ZZ[\zeta_9]$ one has $\vlam(3)=6$. With block size $9$ the recursion passes
+through $k=3,6,9$ in both cases, and only when the character has order $9$ is
+the loss large enough to consume the whole $+4$.
 
-So the base term $\vlam(q)$ is robust, but the two units from inverse closure
-and the two from the $e_1/e_2$ cancellation are genuinely field phenomena.
-This fixes the scope of Theorem~\ref{thm:sharp} and rules out a Galois-ring
-extension.
+It is tempting to blame the ring structure --- $\ZZ/9$ has zero divisors and
+nonzero vectors that are not unimodular, so one might expect the symplectic
+sums of Lemma~\ref{lem:closed} to degrade. \emph{They do not.} For any finite
+Frobenius ring $R$ with generating character $\psi$ one has
+$\sum_{a\in R}\psi(au)=0$ for every $u\neq0$ --- that is the defining property
+--- so
+\[
+\sum_{x\in R^2}\psi\bigl(\omega(x,u)\bigr)
+=\Bigl(\sum_{x_0}\psi(x_0u_1)\Bigr)\Bigl(\sum_{x_1}\psi(-u_0x_1)\Bigr)=0
+\]
+for every $u\neq0$, unimodular or not; we verified this exhaustively over
+$\ZZ/9$. The character sums are perfectly healthy over the ring.
+
+\begin{proposition}[the discriminator is the character order]\label{prop:scope}
+What controls the $+4$ is the order of the generating character, not whether
+the coefficient ring is a field.
+\end{proposition}
+
+The evidence is a third experiment, chosen to separate the two readings. Let
+$R=\FF_3[x]/(x^2)$, a Frobenius ring which is \emph{not} a field --- it has
+zero divisors and non-unimodular nonzero vectors --- but whose generating
+character $\psi(c)=\zeta_3^{c_1}$ (the socle coordinate) has order $3$. Then
+$|R|=9$ and $\vlam(9)=4$, exactly as over $\FF_9$. Running the same
+computation: $\rho$ is a homomorphism, the flat block again satisfies
+$F^2+2F-80I=0$ with $\det F=327{,}680{,}000$, and the measured depths are
+$\{8,10,12\}$ with minimum $8=\vlam(q)+4$. \textbf{The $+4$ survives over a
+non-field.}
+
+So the trichotomy is: $\FF_9$ (field, character order $3$) gives $8$;
+$\FF_3[x]/(x^2)$ (not a field, character order $3$) gives $8$; $\ZZ/9$ (not a
+field, character order $9$) gives $12$. The field hypothesis plays no role;
+Theorem~\ref{thm:sharp} should be read as a statement about coefficient rings
+whose generating character has order $p$, and its proof goes through verbatim
+in that generality.
 
 \begin{thebibliography}{9}
 

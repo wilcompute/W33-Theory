@@ -169,6 +169,16 @@ Pass 487 (`analysis/w33_pass487_scope_of_the_law_and_det_hunt.py`, 10/10 exact):
 4. **Second identity (idea 2): REFUTED.** Exhaustive scan at q=3 — `tr D = 0` is the *only* identically-vanishing power trace. The Pass-486 induction has no second identity to push it past k=q.
 5. **Lean:** `formal/W33/Pass487NewtonInduction.lean` isolates the arithmetic core `2(k−i)+V+i ≥ 2k ⟺ i ≤ V`, plus the sharpness statement showing it fails by exactly one at i = V+1 — the formal reason the determinant is the sole residual.
 
+## Pass 488 addendum (python track) — the discriminator is CHARACTER ORDER; Pass 487's mechanism corrected
+
+Pass 488 (`analysis/w33_pass488_character_order_is_the_discriminator.py`, 10/10 exact):
+
+1. **SELF-CORRECTION of Pass 487.** P487 blamed the ℤ/9 failure partly on "the symplectic sums degrade because ℤ/9 has non-unimodular nonzero vectors." **That is FALSE.** For any finite Frobenius ring with generating character ψ, `Σ_a ψ(au) = 0` for every u ≠ 0 (the defining property), so `Σ_x ψ(ω(x,u)) = (Σ_{x₀}ψ(x₀u₁))(Σ_{x₁}ψ(−u₀x₁)) = 0` for **every** u ≠ 0, unimodular or not. Verified exhaustively over ℤ/9 **and** 𝔽₃[x]/(x²): zero non-vanishing u in both. **The Newton division cost is the ONLY mechanism.**
+2. **THE DECISIVE EXPERIMENT — the field property is irrelevant.** `R = 𝔽₃[x]/(x²)` is a Frobenius ring that is **not a field** (zero divisors, non-unimodular vectors) but whose generating character `ψ(c) = ζ₃^{c₁}` (socle coordinate) has order **3**, so `v_λ(9) = 4` exactly as over 𝔽₉. Representation homomorphism-validated; flat block again `F²+2F−80I=0`, `det F = 327,680,000`; measured depths {8,10,12}, **min 8 = v_λ(q)+4 ⇒ the "+4" SURVIVES over a non-field.**
+3. **The trichotomy:** 𝔽₉ (field, char order 3) → 8; **𝔽₃[x]/(x²) (non-field, char order 3) → 8**; ℤ/9 (non-field, char order 9) → 12. **⇒ the law is about coefficient rings whose generating character has order p, and the proof runs verbatim there — a strictly LARGER theorem than Pass 487 recorded.**
+4. **q=3 det D strata:** {0: 41, 27: 24, 81: 16}. Only 9 of the 41 vanishing sections are linear, so **`det D = 0` strictly contains the flat orbit** and does not characterize flatness.
+5. **Lean:** `formal/W33/Pass488FlatBlockQuadratic.lean` — the excision step (`Σ = 0` off two points with both values 1 gives `−2`, the coefficient producing `−2F`) and invertibility from the quadratic relation.
+
 ## Deferred
 
 - m=6 Coxeter–Todd rung of the QR tower (`data/m6_handoff_k12.json`).
