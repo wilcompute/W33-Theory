@@ -24,24 +24,27 @@ Passes 445–452 added the exponent-nine PDS realization, exact q=5 orbit census
 
 ## v1.5-cyclotomic-and-collision-boundary — shipped
 
-Passes 453–457 resolve the five questions inherited from Pass 447.
+Passes 453–457 resolved the q=5 real-cyclotomic field, q=7 cubic falsifier, ordinary/twisted Frobenius–Schur thread, exact collision anatomy, and abstract span/perp formal kernel.
 
-1. **Square root five — RESOLVED by Pass 453.** Galois covariance sends the central block at character `t` to the block at `a t`, and inverse closure identifies `t` with `-t`. At q=5 the coefficient orbit is the real fifth cyclotomic field `Q(sqrt(5))`. This explains the quadratic atlas without invoking hidden golden-ratio dynamics.
-2. **q=7 falsifier — CLOSED by Pass 454.** Eighty deterministic samples give eighty spectra, no quadratic integer-trace/norm pairs, and eighty irreducible trace-cubic fields of discriminant 49: the real seventh cyclotomic field.
-3. **Frobenius–Schur thread — CLOSED-NEGATIVE by Pass 455.** Every faithful degree-three character on both extraspecial groups has ordinary indicator 0 and canonical center-inverting twisted indicator +1. These indicators do not distinguish exponent three from exponent nine.
-4. **The four q=5 collisions — RESOLVED by Pass 456.** Three are automorphism-orbit repeats. The fourth is an affine-inequivalent, nonisomorphic pair with the same spectrum and the same complete critical group. A local common-neighbor profile separates the graphs.
-5. **Perp monotonicity — FORMALIZED by Pass 457.** Lean combines Pass 447's shifted-span identity with bilinear orthogonal antitonicity. Finite-geometric identification and the rim/bulk cardinality step remain the named boundary.
+## v1.6-document-guided-local-structure — shipped
 
-The permanent Passes 453–457 workflow regenerates all certificates, runs focused regressions, and builds the integrated Lean package in a separate pinned job.
+Passes 458–462 execute all five continuations from v1.5 while auditing the supplied fifth-root, Fibonacci-word, Pascal-triangle, and golden-quartic documents as hypothesis sources.
 
-## v1.6 — OPEN. Gates
+1. **Natural collision separator — CLOSED by Pass 458.** The two Smith-identical q=5 graphs have first 2-WL refinement ranks 19 and 18, and rooted Terwilliger trace `tr(A²E₁AE₁)` values 622 and 650. Their full translation coherent closures are both the same thin rank-125 regular scheme; the marked Cayley relation, not the ambient scheme, carries the difference.
+2. **Prime-power cyclotomic covariance — CLOSED over finite fields by Pass 459.** For `q=p^f`, `sigma_a(B_t)=B_(at)` for `a in F_p*`, with inverse closure identifying `t` and `-t`. The coefficient field is controlled by `Q(zeta_p)^+`; q=9 gives four rational character lines and q=25 gives six quadratic `Q(sqrt(5))` lines. Chain-ring conductor coupling remains open.
+3. **Switching/F-move/Fibonacci-mask explanation — CLOSED-NEGATIVE by Pass 460 for the tested natural universe.** Exhaustion of all 1024 subtrades finds only the two endpoints cospectral. No candidate among 420 central-fiber, maximal-abelian-coset, central-slice, or Fibonacci/Beatty masks performs Godsil–McKay or regular Seidel switching to the target. The collision's degree-ten factor has no common factor with the supplied golden-quartic family through `n=500`.
+4. **First exponent-three/exponent-nine separator — CLOSED by Pass 461.** The natural trace-Hermitian discriminant modules are `(Z/3)^3` versus `(Z/3)^9 + (Z/9)^9`, while central visibility occurs at uniformizer depths 1 and 3. The residual representations agree, but ramified integral lattices distinguish the two extraspecial realizations exactly.
+5. **Cover-law L1 at q=3 — FORMALIZED by Pass 462.** Lean now contains an explicit PG(3,3) symplectic model and machine-checkable statements that every nontrivial central-elation fiber pair has exactly four projective common neighbors, all in the rim and none in the bulk. The uniform odd-q finite-field/cardinality theorem and L2–L4 remain open.
 
-1. Find an invariant natural to the Heisenberg section algebra that separates the Pass 456 nonisomorphic, cospectral, Smith-identical pair; candidates include coherent configurations, Terwilliger modules, higher Ihara zeta data, and integral representation lattices.
-2. Generalize the cyclotomic covariance theorem from prime q to prime powers and finite chain rings, tracking Frobenius orbits and conductor depth simultaneously.
-3. Determine where exponent-three and exponent-nine realizations first diverge after spectrum and ordinary/twisted FS indicators: integral representation lattices, extension classes, tensor indicators, or automorphism-twisted indicators beyond the canonical involution.
-4. Complete cover-law lemma L1 in Lean by defining the finite symplectic geometry, identifying the central elation displacement, and formalizing the rim/bulk count.
-5. Derive a symbolic characteristic-primary Smith theorem explaining the Pass 448 exponent-six gap and top layers for general finite chain rings.
-6. Execute the frozen Pass 451 protocol on a measured optical transfer matrix and sealed hardware holdout.
+The permanent Passes 458–462 workflow regenerates all five certificates, runs focused regressions, and builds the integrated Lean package in a separate pinned job.
+
+## v1.7 — OPEN. Gates
+
+1. Derive the exact local trade or algebra automorphism producing the q=5 Smith-identical collision, beyond the exhausted phase cube and natural switching families.
+2. Extend central-character covariance from finite fields to finite chain rings, tracking Frobenius orbits, conductor radicals, and ramified coefficient orders simultaneously.
+3. Generalize Pass 462 from the explicit q=3 model to a uniform odd-prime-power Lean theorem and formalize cover-law lemmas L2–L4.
+4. Derive a symbolic characteristic-primary Smith theorem explaining the Pass 448 exponent-six gap and top layers for general finite chain rings.
+5. Execute the frozen Pass 451 protocol on a measured optical transfer matrix and sealed hardware holdout.
 
 ## Deferred
 
