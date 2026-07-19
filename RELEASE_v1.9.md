@@ -35,16 +35,23 @@ machine-verified through Pass 481.
   (P447); the affine Burnside orbit counts are 2 / 20,592 /
   1,939,395,416,499,131 at q=3/5/7 (P446/479), and a birthday model matches
   the observed collision counts at both q=5 and q=7 (P479).
-- **The collision landscape has two mechanisms (P456/463/480/481).** Genuine
-  cospectral pairs have positive density (five new ones in 2000 sections,
-  P479). Of six genuine q=5 pairs, five are Wedderburn **sheet exchanges**
-  and one is a **sheet coincidence** (identical, not swapped, sheet data
-  between affine-inequivalent sections). All are Smith-identical within their
-  pair; the coincidence pair carries a distinct 5-primary critical group.
-- **The determinant law is characteristic-sensitive (P480/481).** At q=9 the
-  flat-det formula and flat spectrum extend verbatim, but the depth is
-  non-uniform in {8,10}, below the prime value 12; F₉-collinear sections are
-  the invisible flat class.
+- **The collision landscape has exactly two mechanisms (P456/463/480/481,
+  censused P482).** Genuine cospectral pairs have positive density. Over 6000
+  sections, **66 genuine pairs = 34 Wedderburn sheet exchanges + 32 sheet
+  coincidences + no third type** — the two mechanisms are the whole landscape
+  at this scale, at comparable rates. (A *coincidence* has identical, not
+  swapped, sheet data between affine-inequivalent sections.)
+- **All orders of the determinant expansion (P482).** Every order term has
+  `v_λ(T_k) ≥ q+1`, so `det B ≡ det F (mod λ^(q+1))` for all sections; and
+  `v_λ(T_k) ≥ q+3` for `k ≥ 3` with `T₁+T₂ ≡ 0 (mod λ^(q+3))`. The sharp
+  depth is base-(q+1) at every order plus exactly one order of T₁/T₂
+  cancellation.
+- **The determinant law is characteristic-sensitive (P480/481, corrected
+  P482).** At q=9 the flat-det formula and flat spectrum extend verbatim, but
+  the depth is non-uniform with **minimum 8**, below the prime value 12;
+  F₉-collinear sections are the invisible flat class. *(P480/481 reported the
+  depth set as {8,10} from 6 and 12 samples — a small-sample artefact; the
+  invariant that survives is the minimum.)*
 - **Exp-3/exp-9 extraspecial hosts** agree in PDS image, Frobenius–Schur
   indicators (P455), and PDS eigenvalues; the first separator is ramified
   integral-lattice data (P461).
@@ -53,14 +60,17 @@ machine-verified through Pass 481.
 
 1. **v1.9 gate 3, residual core.** The exchanged genuine sheets are similar
    over `Q(ζ₅)`; whether they are `GL₅(Z[ζ₅])`-conjugate is a
-   Latimer–MacDuffee ideal-class question. The natural cyclic generators are
+   Latimer–MacDuffee ideal-class question in `K = Q(ζ₅)[x]/(f)`,
+   `f = x⁵−60x³−35x²+366x+2` (P482). The natural cyclic generators are
    non-unimodular (P480/481); the integral-unitary and monomial/phase-gauge
    cases are closed negatively (P474/479). Needs number-field class-group
    tooling (pari/sage).
 2. **The full `q+3` depth proof.** `T₁ ≥ q+1` is proved (P481); the remaining
    `+2` to `q+3` is the `T₁/T₂` cancellation, verified (P480) not proved.
-3. **The q=9 depth criterion** separating 8 from 10 among non-collinear
-   sections.
+3. **The q=9 depth criterion.** Which section gets which depth is open; two
+   hypotheses are dead — "collinear ⇒ depth 8" (P481: collinear sections are
+   determinantally invisible instead) and "the F₃-subfield indexes the depth"
+   (P482: F₃-valued sections share the generic minimum and spectrum).
 4. **A determinant congruence at prime powers** (the `λ^(q+3)` modulus is a
    prime-q statement).
 5. **The measured optical run** — gate 5 is software-complete and physically

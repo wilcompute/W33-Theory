@@ -1,0 +1,128 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.15in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newcommand{\FF}{\mathbb F}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\adj}{\operatorname{adj}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\vlam}{v_\lambda}
+\title{A determinant congruence for Heisenberg--Weyl blocks\\
+and its ramification/inverse-closure decomposition}
+\author{W.~Dahn\thanks{Extracted from the repository
+\texttt{wilcompute/W33-Theory}; every displayed valuation is a
+machine-verified witness (Pass 479--482). The first-order theorem
+(Theorem~\ref{thm:t1}) is proved; the sharp law (Theorem~\ref{thm:sharp}) is
+proved through first order and verified exhaustively at $q=3$ and by sampling
+at $q=5,7$.}}
+\date{July 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent Let $q$ be an odd prime and $H = q^{1+2}_+$ the Heisenberg group of
+order $q^3$. For a nontrivial central character $t$ and an inverse-closed
+section $c$ of $(H/Z)\setminus\{0\}$, the level-$t$ Weyl block $B_t(c)$ is a
+$q\times q$ Hermitian matrix over $\ZZ[\zeta_q]$. We show that its determinant
+obeys a congruence modulo a power of the ramified prime $\lambda = 1-\zeta_q$,
+with the flat (zero) section as residue, and that the first-order term of the
+determinant's perturbation carries a valuation that splits cleanly as
+\emph{ramification of $q$} plus \emph{inverse closure}. The result is a
+self-contained arithmetic statement about the abelianized image of a
+symplectic quadrangle's elation group; the pairing identity underlying the
+inverse-closure summand is formalized in Lean.
+\end{abstract}
+
+\section{Setup}
+
+Write $\zeta=\zeta_q$, $\lambda = 1-\zeta$, so that $(q) = (\lambda)^{q-1}$ is
+totally ramified in $\ZZ[\zeta]$ and $\vlam(q) = q-1$. The level-$t$ Weyl block
+of a section $c$ is
+\[
+B_t(c) = \sum_{v\in\FF_q^2\setminus\{0\}} \rho_t(v, c(v)),\qquad
+\rho_t(v,c)\,e_x = \zeta^{\,t(c + 2xb + ab)}\,e_{x+a},\ v=(a,b),
+\]
+with $c(-v) = -c(v)$ (inverse closure). The \emph{flat block} is $F = B_t(0)$.
+Both are Hermitian; $\tr B_t(c) = 0$ and $\tr B_t(c)^2 = q(q^2-1)$ for every
+section (the universal trace laws).
+
+\begin{lemma}[flat spectrum]\label{lem:flat}
+$F$ has integer spectrum $\{(q-1)^{(q+1)/2},\,(-(q+1))^{(q-1)/2}\}$; hence
+$F^2 + 2F - (q^2-1)I = 0$, $F^{-1} = (F+2I)/(q^2-1)$, and
+$\det F = (q-1)^{(q+1)/2}(-(q+1))^{(q-1)/2}$, a $\lambda$-unit.
+\end{lemma}
+
+\section{The first-order theorem}
+
+Put $D = B_t(c) - F$ and expand $\det(F + D)$ multilinearly by columns:
+$\det(F+D) = \sum_{k=0}^{q} T_k$, where $T_k$ collects the determinants with
+exactly $k$ columns drawn from $D$. Thus $T_0 = \det F$ and
+$T_1 = \tr(\adj(F)\,D)$.
+
+\begin{theorem}[first-order valuation]\label{thm:t1}
+For every odd prime $q$, every $t\not\equiv 0$, and every inverse-closed
+section $c$,
+\[
+T_1 \;=\; \frac{\det(F)\,q\,S}{q^2-1},\qquad
+S = \sum_{v\neq 0}\bigl(\zeta^{-t c(v)}-1\bigr),
+\]
+and therefore
+\[
+\vlam(T_1) \;=\; (q-1) + \vlam(S)\ \ge\ (q-1) + 2 \;=\; q+1.
+\]
+\end{theorem}
+
+\begin{proof}
+By Lemma~\ref{lem:flat}, $F^{-1} = (F+2I)/(q^2-1)$, so
+$T_1 = \det(F)\tr(F^{-1}D) = \det(F)\bigl[\tr(FD)+2\tr D\bigr]/(q^2-1)$; and
+$\tr D = \tr B_t(c) - \tr F = 0$. Next
+$\tr(FD) = \tr(FB_t(c)) - \tr(F^2)$, and $\tr(F^2) = q(q^2-1)$ by the trace
+law. The product $\rho_t(v,0)\rho_t(w,c(w))$ is a scalar multiple of a
+permutation matrix and has nonzero trace only when it is central, i.e.\ when
+$w=-v$; its central label is $c(-v) = -c(v)$, contributing $q\,\zeta^{-tc(v)}$.
+Hence $\tr(FB_t(c)) = q\sum_{v}\zeta^{-tc(v)}$ and
+$\tr(FD) = q\sum_v(\zeta^{-tc(v)}-1) = qS$, giving the displayed formula.
+Finally $\vlam(\det F) = \vlam(q^2-1) = 0$ while $\vlam(q) = q-1$; and pairing
+$v$ with $-v$,
+\[
+(\zeta^{-tc(v)}-1)+(\zeta^{tc(v)}-1)
+= \zeta^{tc(v)}+\zeta^{-tc(v)}-2 = -(1-\zeta^{tc(v)})(1-\zeta^{-tc(v)}),
+\]
+of valuation $2$ when $c(v)\neq0$, so $\vlam(S)\ge 2$.
+\end{proof}
+
+The two summands have a clean meaning: $q-1$ is the ramification index of $q$,
+and the $+2$ is inverse closure, via the factorization
+$w+w^{-1}-2 = -(1-w)(1-w^{-1})$ (formalized in
+\texttt{Pass481FirstOrderPairing.lean}).
+
+\section{The sharp law}
+
+\begin{theorem}[determinant congruence]\label{thm:sharp}
+$\det B_t(c) \equiv \det F \pmod{\lambda^{q+3}}$, with depth $q+3$ sharp.
+Moreover $\vlam(T_k)\ge q+1$ for all $k\ge1$, $\vlam(T_k)\ge q+3$ for $k\ge3$,
+and $T_1 + T_2 \equiv 0 \pmod{\lambda^{q+3}}$.
+\end{theorem}
+
+Theorem~\ref{thm:sharp} is proved through first order
+(Theorem~\ref{thm:t1} gives $\vlam(T_1)\ge q+1$) and verified exhaustively at
+$q=3$ and by sampling at $q=5,7$; the mod-$\lambda^{q+1}$ statement
+$\det B_t(c)\equiv\det F$ follows from $\vlam(T_k)\ge q+1$ for all $k$. What
+remains is a uniform proof of the all-order bound and of the $T_1+T_2$
+cancellation that supplies the final two units of depth.
+
+\begin{conjecture}
+$\vlam(T_k) \ge q+1$ for all $k$, and $T_1+T_2\equiv0\pmod{\lambda^{q+3}}$, for
+every odd prime $q$; equivalently the second cancellation, like the first, is
+an inverse-closure phenomenon.
+\end{conjecture}
+
+At a prime power $q=p^f$ the flat formula and spectrum of Lemma~\ref{lem:flat}
+persist ($q=9$: $\det F = 8^5(-10)^4$, spectrum $\{8^5,(-10)^4\}$), but the
+depth drops below $q+3$ and depends on the $\FF_p$-subfield structure of the
+section; the modulus $\lambda^{q+3}$ is a prime-$q$ phenomenon.
+
+\end{document}

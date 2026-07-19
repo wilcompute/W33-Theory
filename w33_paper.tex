@@ -14139,13 +14139,19 @@ $q{=}7$ section-orbit count $+$ census birthday model & \textsc{cert} & P479 & t
 five \emph{new} genuine cospectral pairs in $2000$ sections & \textsc{cert} & P479 & this programme (positive density) \\
 $q{+}3$ mechanism: $T_1=\operatorname{tr}(\operatorname{adj}(F)D)$ has $v_\lambda\ge q{+}1$; total $q{+}3$ & \textsc{cert} & P480 & this programme (order decomposition) \\
 $5$ of $6$ genuine pairs $=$ sheet exchanges; the $6$th $=$ a \emph{second} mechanism & \textsc{cert} & P480 & this programme (conjecture refuted) \\
-flat det formula $+$ spectrum extend to $q{=}9$; depth drops to $\{8,10\}<12$ & \textsc{cert} & P480 & this programme (first $p^f$) \\
+flat det formula $+$ spectrum extend to $q{=}9$; \emph{minimum} depth $8<12$ & \textsc{cert} & P480, \textbf{corrected P482} & this programme (first $p^f$) \\
+``$q{=}9$ depth set is $\{8,10\}$'' & \textsc{killed} & P482 & self-correction: 6/12-sample artefact \\
 natural intertwiner family uniformly non-integral & \textsc{cert} & P480 & this programme (gate 3 evidence) \\
 $v_\lambda(T_1)=(q{-}1)+v_\lambda(S)\ge q{+}1$, \emph{all} odd primes & \textsc{thm} & P481 & this programme (closed form; Lean pairing) \\
 $T_1=\det(F)\,q\,S/(q^2{-}1)$, $S=\sum_v(\zeta^{-tc(v)}{-}1)$ & \textsc{thm} & P481 & this programme (exact chain) \\
 second $q{=}5$ mechanism $=$ sheet coincidence (not exchange) & \textsc{cert} & P481 & this programme (mechanism named) \\
 $q{=}9$ collinear sections invisible; depth split $\{8,10\}$ open & \textsc{cert} & P481 & this programme \\
 gate-3 residual $=$ Latimer--MacDuffee ideal class & \textsc{open} & P481 & this programme (natural gens non-unimodular) \\
+all orders $v_\lambda(T_k)\ge q{+}1$ $\Rightarrow$ $\det B\equiv\det F \bmod \lambda^{q+1}$ & \textsc{cert} & P482 & this programme ($k{=}1$ proved P481) \\
+$v_\lambda(T_k)\ge q{+}3$ for $k\ge3$; $T_1{+}T_2\equiv0 \bmod \lambda^{q+3}$ & \textsc{cert} & P482 & this programme (the sharp cancellation) \\
+$66$ genuine pairs $=$ $34$ exchange $+$ $32$ coincidence, \emph{no third} & \textsc{cert} & P482 & this programme ($6000$ sections) \\
+``$\FF_3$-subfield indexes the $q{=}9$ depth'' & \textsc{killed} & P482 & self-correction (same min depth) \\
+sheet quintic $x^5{-}60x^3{-}35x^2{+}366x{+}2$ irreducible over $\QQ$ & \textsc{cert} & P482 & this programme (gate-3 reduction) \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -14385,9 +14391,14 @@ mechanisms.  \emph{(iii) The law at $q=9$.}  The flat-determinant formula
 $(q{-}1)^{(q+1)/2}(-(q{+}1))^{(q-1)/2}=8^5(-10)^4=327680000$ and the flat block
 spectrum $\{8^5,(-10)^4\}$ extend verbatim to the first prime power (the
 universal trace laws hold: $\operatorname{tr}=0$, $\operatorname{tr}B^2=720$),
-but the congruence depth does not: it is \emph{non-uniform} in $\{8,10\}$, both
-below the prime value $q{+}3=12$.  The modulus $\lambda^{q+3}$ and its
-sharpness are prime-$q$ statements.  Finally, the natural commutant-generated
+but the congruence depth does not: it is \emph{non-uniform}, with
+\emph{minimum} $8$, strictly below the prime value $q{+}3=12$.  The modulus
+$\lambda^{q+3}$ and its sharpness are prime-$q$ statements.  \emph{[Corrected
+by Pass~482: this paragraph originally reported the depth set as $\{8,10\}$
+from $6$ and $12$ samples.  At $60$ samples the generic spectrum is strictly
+wider, so ``both below $12$'' was a small-sample artefact.  The invariant that
+survives is the \emph{minimum} depth --- the modulus of the congruence holding
+for every section --- which is $8$.]}  Finally, the natural commutant-generated
 intertwiner family for the genuine pair is uniformly non-integral over
 $\ZZ[\zeta_5]$ (bounded evidence for v1.9 gate 3; the
 Latimer--MacDuffee ideal-class computation remains the open core).
@@ -14438,5 +14449,38 @@ $\{8,10\}$ split among non-collinear sections left open.  The residual v1.9
 gate-3 obstruction is pinned to a Latimer--MacDuffee ideal class (the natural
 cyclic generators are non-unimodular over $\ZZ[\zeta_5]$).  See
 \texttt{RELEASE\_v1.9.md} for the consolidated release status.
+
+\paragraph{Pass 482 --- all orders, the mechanism census, and two
+self-corrections.}
+Four results, two of which correct this programme's own earlier claims.
+\emph{(i) All orders.}  Expanding $\det(F+xD)=\sum_k T_kx^k$, \emph{every}
+order term satisfies $v_\lambda(T_k)\ge q{+}1$ --- so
+$\det B_t(c)\equiv\det F \pmod{\lambda^{q+1}}$ for every section, extending
+the Pass-481 first-order theorem to all orders --- while $v_\lambda(T_k)\ge q{+}3$
+for $k\ge3$ and $T_1+T_2\equiv0\pmod{\lambda^{q+3}}$.  The sharp depth $q{+}3$
+is therefore \emph{base $(q{+}1)$ at every order, plus exactly one order of
+$T_1/T_2$ cancellation}; exhaustive at $q=3$ (all $81$ sections give total
+depth exactly $6$) and sampled at $q=5$ (total depths $\{8,10,12\}$, minimum
+$8=q{+}3$).  \emph{(ii) The mechanism census closes.}  Over $6000$ random
+$q=5$ sections, $66$ genuine (cospectral, affine-inequivalent) pairs appear:
+$34$ sheet exchanges, $32$ sheet coincidences, and \textbf{no third type}.
+The two mechanisms of Pass 481 are not artefacts of a six-pair sample; they
+are the whole landscape at this scale, and they occur at comparable rates.
+\emph{(iii) Two corrections.}  The $q=9$ depth set is \emph{not} $\{8,10\}$:
+that came from $6$- and $12$-section samples, and at $60$ sections the generic
+spectrum is strictly wider.  The invariant that survives is the
+\emph{minimum} depth $8$ --- the modulus of the congruence that holds for
+every section --- still below the prime value $q{+}3=12$.  Moreover the
+$\FF_3$-subfield hypothesis for the $q=9$ depth is refuted: constructed
+$\FF_3$-valued sections (which random sampling never produces, probability
+$3^{-40}$) share the generic minimum depth and an overlapping spectrum.  Both
+proposed $q=9$ criteria are now dead and the question is open.
+\emph{(iv) Gate 3 reduced.}  The sheet quintic is
+$f=x^5-60x^3-35x^2+366x+2$, irreducible over $\QQ$ (its $x^4$ and $x^3$
+coefficients $0$ and $-60$ independently reproduce the universal trace laws
+$e_1=0$, $e_2=-q(q^2{-}1)/2$).  Gate 3 is exactly: are the
+$\ZZ[\zeta_5]$-orders of the two sheets in the same ideal class of
+$K=\QQ(\zeta_5)[x]/(f)$?  Deciding it is a class-group computation in a
+degree-$20$ field, needing tooling absent from the repository.
 
 \end{document}
