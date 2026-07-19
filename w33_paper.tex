@@ -14180,6 +14180,9 @@ only $\tr D=0$ vanishes identically & \textsc{cert} & P487 & this programme (no 
 discriminator $=$ \emph{character order}, not the field property & \textsc{thm} & P488 & this programme ($\FF_3[x]/(x^2)$ keeps $+4$) \\
 ``symplectic sums degrade over $\ZZ/9$'' & \textsc{killed} & P488 & self-correction of P487 (Frobenius $\Rightarrow$ vanish) \\
 $\det D=0$ locus \emph{strictly contains} the flat orbit ($41$ vs $9$) & \textsc{cert} & P488 & this programme \\
+law holds over $\FF_p[x]/(x^k)$: $(3,2){\to}8$, $(3,3){\to}10$, $(5,2){\to}12$ & \textsc{cert} & P489 & this programme (two primes, two depths) \\
+exponent of $\FF_p[x]/(x^k)$ $=$ exponent of the \emph{field} of that size & \textsc{cert} & P489 & this programme (law can't see the difference) \\
+$v_\lambda(\det D)=2|R|$ over the nilpotent rings too ($18,54,50$) & \textsc{cert} & P489 & this programme (residual is uniform) \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -14710,5 +14713,29 @@ recorded.  Separately, the $q=3$ determinant strata are
 $\{0:41,\ 27:24,\ 81:16\}$, and since only $9$ of the $41$ vanishing sections
 are linear, the locus $\det D=0$ \emph{strictly contains} the flat orbit and so
 does not characterize flatness.
+
+\paragraph{Pass 489 --- the law restated in its true generality.}
+Pass 488 identified the governing hypothesis as ``generating character of order
+$p$''; Pass 489 tests that reading along both available axes and rewrites the
+theorem accordingly.  The family $R=\FF_p[x]/(x^k)$ --- socle $(x^{k-1})$,
+generating character $\psi(c)=\zeta_p^{c_{k-1}}$ of order $p$, $|R|=p^k$ ---
+realizes the hypothesis for every $p$ and $k$, with $k=1$ the field $\FF_p$ and
+$k\ge2$ a genuine non-field.  With homomorphism-validated representations, the
+flat-block quadratic and the closed-form flat determinant verified in each
+case:
+\[
+\FF_3[x]/(x^2)\to 8,\qquad \FF_3[x]/(x^3)\to 10,\qquad \FF_5[x]/(x^2)\to 12,
+\]
+each matching $v_\lambda(|R|)+4$ exactly --- a deeper nilpotency and a second
+residue characteristic.  \textbf{And each equals the exponent of the
+\emph{field} of the same size} ($\FF_{27}\to10$, $\FF_{25}\to12$): the law
+cannot distinguish $\FF_{p^k}$ from $\FF_p[x]/(x^k)$.  The sole open step
+behaves identically off the field locus too --- the measured bound
+$v_\lambda(\det D)\ge2|R|$ holds with equality ($18$, $54$, $50$) over all
+three rings.  The standalone note is now written over finite local Frobenius
+rings with generating character of order $p$, with fields as one example rather
+than the setting; nothing in the proof used invertibility of nonzero elements,
+which is why the generalization costs nothing and the resulting theorem is
+strictly stronger.
 
 \end{document}

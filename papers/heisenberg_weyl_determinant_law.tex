@@ -27,15 +27,17 @@
 \maketitle
 
 \begin{abstract}
-\noindent Let $q$ be an odd prime, $H$ the Heisenberg group of order $q^3$, and
-$\psi_t$ a nontrivial character of its centre. An \emph{inverse-closed
-section} $c$ assigns to each nonzero $v\in\FF_q^2$ a central coordinate
-$c(v)\in\FF_q$ with $c(-v)=-c(v)$; the associated \emph{Weyl block}
-$B_t(c)$ is the image, in the $q$-dimensional irreducible representation
-attached to $\psi_t$, of the sum of the corresponding group elements. We prove
-that the first-order variation of $\det B_t(c)$ about the zero section is
-divisible by $\lambda^{\vlam(q)+2}$, where $\lambda=1-\zeta_p$, and that the
-exponent splits canonically as
+\noindent Let $R$ be a finite commutative local Frobenius ring of odd residue
+characteristic whose generating character $\psi$ has order $p$ --- for example
+a finite field $\FF_q$, or $\FF_p[x]/(x^k)$ --- and write $q=|R|$. Let $H$ be
+the Heisenberg group of order $q^3$ over $R$ and $\psi_t$ a nontrivial
+character of its centre. An \emph{inverse-closed section} $c$ assigns to each
+nonzero $v\in R^2$ a central coordinate $c(v)\in R$ with $c(-v)=-c(v)$; the
+associated \emph{Weyl block} $B_t(c)$ is the image, in the $q$-dimensional
+representation attached to $\psi_t$, of the sum of the corresponding group
+elements. We prove that the first-order variation of $\det B_t(c)$ about the
+zero section is divisible by $\lambda^{\vlam(q)+2}$, where $\lambda=1-\zeta_p$,
+and that the exponent splits canonically as
 \[
 \vlam(q) \;+\; 2,\qquad
 \underbrace{\vlam(q)}_{\text{ramification of }q}
@@ -49,16 +51,18 @@ congruence itself, in the form
 \[
 \det B_t(c)\;\equiv\;\det F \pmod{\lambda^{\,\vlam(q)+4}},
 \]
-valid for every odd prime \emph{power} $q=p^{f}$ and every section, modulo one
-explicitly identified lemma on the top exterior power. Here
-$\vlam(q)=f(p-1)$, so the exponent is $q+3$ when $q$ is prime and $8$ when
-$q=9$. The constant $4$ splits as $2+2$: two units of vanishing from inverse
-closure at first order, and two more from a cancellation between the first two
-orders whose mechanism is that a \emph{symmetric} coefficient is paired against
-the \emph{antisymmetric} symplectic form. Neither summand depends on the
-factorization of $q$; only the ramification does. Several steps of the
-argument would fail on valuation counting alone, and each is rescued by
-inverse closure.
+valid for every such $R$ and every section, modulo one explicitly identified
+lemma on the top exterior power. Here $\vlam(q)=\log_p(q)\,(p-1)$, so the
+exponent is $q+3$ when $R=\FF_q$ with $q$ prime, and $8$ when $|R|=9$. The
+constant $4$ splits as $2+2$: two units of vanishing from inverse closure at
+first order, and two more from a cancellation between the first two orders
+whose mechanism is that a \emph{symmetric} coefficient is paired against the
+\emph{antisymmetric} symplectic form. Neither summand depends on the structure
+of $R$; only the ramification does. Several steps of the argument would fail on
+valuation counting alone, and each is rescued by inverse closure. The law is
+insensitive to whether $R$ is a field: $\FF_{p^k}$ and $\FF_p[x]/(x^k)$ give
+the same exponent, while $\ZZ/p^2$ --- whose generating character has order
+$p^2$ --- does not satisfy the law at all.
 \end{abstract}
 
 \noindent\textbf{2020 MSC.} 11R18, 11T24, 15A15, 20C15, 05B10.\\
@@ -67,13 +71,20 @@ valuation, ramification, determinant congruence, Gauss sums.
 
 \section{Introduction}
 
-Fix an odd prime $q$ and let
+Let $R$ be a finite commutative local Frobenius ring of odd residue
+characteristic $p$ whose generating character $\psi$ has order $p$, and put
+$q=|R|$. Two families of examples run through the paper: the finite fields
+$R=\FF_q$, and the truncated polynomial rings $R=\FF_p[x]/(x^k)$, whose socle
+is $(x^{k-1})$ and whose generating character is $\psi(c)=\zeta_p^{c_{k-1}}$.
+The reader who prefers may take $R=\FF_q$ throughout; nothing in the argument
+uses invertibility of nonzero elements, and Section~\ref{sec:pf} shows the
+distinction is invisible to the result. Set
 \[
-H=\bigl\{(a,b,c):a,b,c\in\FF_q\bigr\},\qquad
+H=\bigl\{(a,b,c):a,b,c\in R\bigr\},\qquad
 (a,b,c)(a',b',c')=(a+a',\,b+b',\,c+c'-ab'+a'b),
 \]
-the extraspecial group of order $q^3$ and exponent $q$, with centre
-$Z=\{(0,0,c)\}$. Each nontrivial character $\psi_t(0,0,c)=\zeta^{tc}$
+a group of order $q^3$ with centre $Z=\{(0,0,c)\}$; for $R=\FF_q$ it is the
+extraspecial group of exponent $q$. Each nontrivial character $\psi_t(0,0,c)=\zeta^{tc}$
 ($\zeta=e^{2\pi i/q}$, $t\not\equiv0$) determines a $q$-dimensional irreducible
 representation $\rho_t$ of $H$, realized on $\mathbb C^{\FF_q}$ by
 \begin{equation}\label{eq:rho}
@@ -618,9 +629,33 @@ non-field.}
 So the trichotomy is: $\FF_9$ (field, character order $3$) gives $8$;
 $\FF_3[x]/(x^2)$ (not a field, character order $3$) gives $8$; $\ZZ/9$ (not a
 field, character order $9$) gives $12$. The field hypothesis plays no role;
-Theorem~\ref{thm:sharp} should be read as a statement about coefficient rings
-whose generating character has order $p$, and its proof goes through verbatim
-in that generality.
+Theorem~\ref{thm:sharp} is a statement about coefficient rings whose generating
+character has order $p$, and its proof goes through verbatim in that
+generality.
+
+The family $R=\FF_p[x]/(x^k)$ --- socle $(x^{k-1})$, generating character
+$\psi(c)=\zeta_p^{c_{k-1}}$ of order $p$, $|R|=p^k$ --- realizes this for every
+$p$ and $k$, with $k=1$ the field $\FF_p$ and $k\ge2$ a genuine non-field. We
+tested it along both axes:
+\begin{center}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+$R$ & $|R|$ & field? & $\vlam(|R|)$ & predicted & observed min\\
+\midrule
+$\FF_3[x]/(x^2)$ & $9$  & no & $4$ & $8$  & $8$\\
+$\FF_3[x]/(x^3)$ & $27$ & no & $6$ & $10$ & $10$\\
+$\FF_5[x]/(x^2)$ & $25$ & no & $8$ & $12$ & $12$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Each is checked with a homomorphism-validated representation, the flat-block
+quadratic, and the closed-form flat determinant. The exponents coincide
+exactly with those of the \emph{fields} of the same size ($\FF_{27}\to10$,
+$\FF_{25}\to12$): \textbf{the law cannot distinguish $\FF_{p^k}$ from
+$\FF_p[x]/(x^k)$.} The measured bound $\vlam(\det D)\ge2|R|$ of
+Conjecture~\ref{conj:top} also holds over each of them, with equality
+($18$, $54$, $50$), so the sole open step behaves identically off the field
+locus.
 
 \begin{thebibliography}{9}
 

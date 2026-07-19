@@ -179,6 +179,16 @@ Pass 488 (`analysis/w33_pass488_character_order_is_the_discriminator.py`, 10/10 
 4. **q=3 det D strata:** {0: 41, 27: 24, 81: 16}. Only 9 of the 41 vanishing sections are linear, so **`det D = 0` strictly contains the flat orbit** and does not characterize flatness.
 5. **Lean:** `formal/W33/Pass488FlatBlockQuadratic.lean` — the excision step (`Σ = 0` off two points with both values 1 gives `−2`, the coefficient producing `−2F`) and invertibility from the quadratic relation.
 
+## Pass 489 addendum (python track) — the law restated in its TRUE generality
+
+Pass 489 (`analysis/w33_pass489_frobenius_generality.py`, 16/16 exact):
+
+1. **THE THEOREM IS ABOUT FROBENIUS RINGS, NOT FIELDS.** `det B_t(c) ≡ det F (mod λ^{v_λ(|R|)+4})` for any finite local Frobenius ring R of odd residue characteristic whose **generating character has order p**. The family `R = 𝔽_p[x]/(x^k)` (socle `(x^{k−1})`, `ψ(c) = ζ_p^{c_{k−1}}`, `|R| = p^k`) realizes it for every p, k — k=1 is the field 𝔽_p, k≥2 a genuine non-field.
+2. **Tested along both axes**, each with a homomorphism-validated representation, the flat-block quadratic, and the closed-form flat determinant: `𝔽₃[x]/(x²) → 8`, **`𝔽₃[x]/(x³) → 10`** (deeper nilpotency), **`𝔽₅[x]/(x²) → 12`** (second residue characteristic). All match `v_λ(|R|)+4` exactly.
+3. **The sharpest form:** each exponent **equals that of the FIELD of the same size** (𝔽₂₇→10, 𝔽₂₅→12). **The law cannot distinguish 𝔽_{p^k} from 𝔽_p[x]/(x^k).**
+4. **The residual is uniform too:** the measured `v_λ(det D) ≥ 2|R|` holds with *equality* over all three nilpotent rings (18, 54, 50), so the sole open step behaves identically off the field locus.
+5. **Paper rewritten** over finite local Frobenius rings with generating character of order p — fields are now one example, not the setting. Nothing in the proof used invertibility of nonzero elements, which is why the generalization costs nothing and the theorem is strictly stronger.
+
 ## Deferred
 
 - m=6 Coxeter–Todd rung of the QR tower (`data/m6_handoff_k12.json`).
