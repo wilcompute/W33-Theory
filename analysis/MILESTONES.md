@@ -50,13 +50,25 @@ Passes 463–467 execute all five v1.7 gates, but release criteria remain fail-c
 
 The permanent Passes 463–467 workflow regenerates all certificates, runs focused regressions, and builds the integrated Lean package.
 
-## v1.8 — OPEN. Gates
+## v1.8-semisimple-galois-cover-custody — partially closed
 
-1. Prove the finite-field projective cardinality lemmas uniformly in Lean for every odd prime power, eliminating the remaining q=3 objectwise specialization.
-2. Derive the integral conductor-coupling matrix that predicts every characteristic-primary Smith multiplicity for `Z/p^n`, rather than recovering it from kernel growth.
-3. Construct an explicit algebraic intertwiner for the Pass-463 square/nonsquare sheet exchange and classify all such semisimple collisions.
-4. Execute Pass 467 on a genuinely measured transfer matrix and sealed optical holdout, preserving the frozen classifier and endpoint.
-5. Lift the chain-ring conductor theorem from `Z/p^n` to general finite local principal ideal rings and Galois rings.
+Passes 468–472 advance every v1.8 gate while preserving the formal and physical boundaries.
+
+1. **Semisimple collision intertwiner — CLOSED in canonical normal form by Pass 468.** The unique nontrivial element of `F_5^*/{±1} ≅ C_2` is realized by an explicit companion-block swap. Restoring multiplicities gives a 100-dimensional faithful-component algebra intertwiner. An original-coordinate integral or monomial intertwiner remains open.
+2. **Galois-ring conductor arithmetic — CLOSED parametrically by Pass 469.** Exact formulas now cover `GR(p^n,f)` character strata, center kernels, alternating radicals, character orders, and cyclotomic ramification. Concrete Weyl-block construction in every polynomial presentation remains open.
+3. **Integral conductor coupling — TOP TOWER CLOSED by Pass 470.** The actual level-6, level-7, and level-8 Schur-complement matrices directly predict multiplicities `0,11,7`. A closed all-`p,n` formula for the complete tower remains open.
+4. **Uniform cover law — EXECUTABLE PRIME-POWER FRONTIER CLOSED by Pass 471.** Exhaustive witnesses over `F_3,F_5,F_7,F_9` recover the uniform intersection array and L1/L4 geometry. A single all-finite-field Lean cardinality proof remains open.
+5. **Optical custody — CLOSED; physical acquisition OPEN by Pass 472.** The frozen protocol and lab templates are bound into one SHA-256 custody token and fail closed without all measured inputs. Current status is `OPEN_NO_MEASURED_INPUTS`.
+
+The permanent Passes 468–472 workflow regenerates all five certificates and runs focused regressions.
+
+## v1.9 — OPEN. Gates
+
+1. Prove the projective-point, perpendicular-line, and shell-cardinality formulas uniformly in Lean over every finite field of odd characteristic.
+2. Derive a symbolic integral coupling tower for the characteristic-primary Laplacian over `Z/p^n` and `GR(p^n,f)`, including closed Smith multiplicity formulas.
+3. Lift the Pass-468 companion-block swap back to an explicit intertwiner in the original Heisenberg/Weyl coordinate basis and determine its integral lattice obstruction.
+4. Construct concrete Weyl blocks over nontrivial Galois rings such as `GR(9,2)` and compare their spectra, Hjelmslev radicals, and characteristic-primary Smith modules.
+5. Execute the custody-frozen blind protocol on a genuinely measured transfer matrix and sealed optical holdout.
 
 ## Deferred
 

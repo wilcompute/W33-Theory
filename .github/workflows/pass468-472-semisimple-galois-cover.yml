@@ -1,0 +1,49 @@
+name: Passes 468-472 Semisimple Galois Cover Release
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass468_semisimple_sheet_intertwiner.py'
+      - 'analysis/w33_pass469_galois_ring_conductor_tower.py'
+      - 'analysis/w33_pass470_integral_conductor_coupling.py'
+      - 'analysis/w33_pass471_uniform_cover_prime_power_witness.py'
+      - 'analysis/w33_pass472_hardware_custody_gate.py'
+      - 'analysis/PASS468_472_RESERVATIONS.md'
+      - 'data/w33_pass468_semisimple_sheet_intertwiner.json'
+      - 'data/w33_pass469_galois_ring_conductor_tower.json'
+      - 'data/w33_pass470_integral_conductor_coupling.json'
+      - 'data/w33_pass471_uniform_cover_prime_power_witness.json'
+      - 'data/w33_pass472_hardware_custody_gate.json'
+      - 'tests/test_pass468_472_semisimple_galois_cover_release.py'
+      - 'PASS468_472_SEMISIMPLE_GALOIS_COVER_RELEASE.md'
+      - '.github/workflows/pass468-472-semisimple-galois-cover.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  PYTHONHASHSEED: '0'
+
+jobs:
+  certificates:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install exact dependencies
+        run: python -m pip install numpy==2.3.5 sympy==1.14.0 pytest==9.0.2
+      - name: Verify certificates
+        run: |
+          python analysis/w33_pass468_semisimple_sheet_intertwiner.py --check
+          python analysis/w33_pass469_galois_ring_conductor_tower.py --check
+          python analysis/w33_pass470_integral_conductor_coupling.py --check
+          python analysis/w33_pass471_uniform_cover_prime_power_witness.py --check
+          python analysis/w33_pass472_hardware_custody_gate.py --check
+      - name: Focused regressions
+        run: python -m pytest -q tests/test_pass468_472_semisimple_galois_cover_release.py
