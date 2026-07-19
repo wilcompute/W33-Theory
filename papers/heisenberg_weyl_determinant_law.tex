@@ -669,10 +669,26 @@ character of order $25$, $\vlam(5)=20$, $\vlam(25)=40$, so Newton's divisions
 by $5,10,15,20,25$ each cost $20$ against the $4$ they cost over
 $\ZZ[\zeta_5]$ --- the law would predict exponent $44$ and the measured
 minimum is $30$. So the law fails at both $p=3$ and $p=5$ once the character
-order exceeds $p$. It should be added that the failed value is \emph{not} a
-clean function of $\vlam(q)$: $\ZZ/9$ landed exactly on $\vlam(q)=12$, whereas
-$\ZZ/25$ gives $30$, strictly below $\vlam(25)=40$. Off the
-character-order-$p$ locus there is a failure, not a second law.
+order exceeds $p$.
+
+The failed value is \emph{not} a function of $\vlam(q)$: $\ZZ/9$ landed exactly
+on $\vlam(q)=12$, whereas $\ZZ/25$ gives $30$, strictly below $\vlam(25)=40$.
+A third point resolves the picture. At $\ZZ/27$ the minimum is $36$, and
+\[
+12,\;30,\;36 \;=\; q+\frac{q}{p} \;=\; p^{\,n-1}(p+1)
+\qquad\text{at }\ZZ/p^{n}=\ZZ/9,\ \ZZ/25,\ \ZZ/27 .
+\]
+So the failure region carries a law of its own --- one agreeing with
+$\vlam(q)=n\,p^{n-1}(p-1)$ (namely $12,40,54$) only at $\ZZ/9$, which is
+precisely why two data points looked structureless.
+
+\begin{conjecture}
+Over $\ZZ/p^{n}$ with $p$ odd, $\min_c\vlam\bigl(\det B_t(c)-\det F\bigr)
+=p^{\,n-1}(p+1)$.
+\end{conjecture}
+
+\noindent Three data points; a proof would presumably come from tracking which
+Newton division dominates the recursion.
 
 \begin{thebibliography}{9}
 

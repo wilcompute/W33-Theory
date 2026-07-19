@@ -14186,6 +14186,11 @@ $v_\lambda(\det D)=2|R|$ over the nilpotent rings too ($18,54,50$) & \textsc{cer
 ``character order $p$'' is \emph{necessary}: $\ZZ/25$ fails too ($30$ vs $44$) & \textsc{cert} & P490 & this programme (2nd prime, negative half) \\
 ``failure value $=v_\lambda(q)$'' & \textsc{killed} & P490 & self-correction: $\ZZ/9$ coincidence, $\ZZ/25$ gives $30<40$ \\
 hypothesis is Wood's Frobenius setting (MacWilliams extension) & \textsc{cert} & P490 & literature placement \\
+$\det D$ lies in $\ZZ[\zeta_p]^+$ (Hermitian $\Rightarrow$ $\sigma_{-1}$-fixed) & \textsc{thm} & P491 & this programme (Lean) \\
+$v_\lambda(\det D)$ always \emph{even}; $\det D$ rational $\iff p{=}3$ & \textsc{thm} & P491 & this programme (corollaries) \\
+``$\det D$ rational is a \emph{nilpotent-ring} feature'' & \textsc{killed} & P491 & self-correction of P490: it is $p{=}3$ \\
+failure law $\min_c v_\lambda = q{+}q/p = p^{n-1}(p{+}1)$ over $\ZZ/p^n$ & \textsc{open} & P491 & this programme ($12,30,36$; 3 points) \\
+``off the order-$p$ locus there is no second law'' & \textsc{killed} & P491 & self-correction of P490: $\ZZ/27$ revealed it \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -14766,5 +14771,32 @@ there, so our setting is the usual one of ring-linear coding theory --- though
 the determinant congruence itself appears neither there nor in the Gauss-sum
 literature, where Stickelberger's theorem is the classical valuation statement
 for character sums.
+
+\paragraph{Pass 491 --- the real-subring lemma, and the failure region turns out
+to have a law.}
+Two corrections and one discovery, all from the same round.  \emph{(i) The
+real-subring lemma.}  $D$ is Hermitian, complex conjugation is $\sigma_{-1}$,
+and applying it entrywise to a Hermitian matrix is transposition, so
+$\sigma_{-1}(\det D)=\det(D^{\sf T})=\det D$: \textbf{$\det D$ always lies in
+$\ZZ[\zeta_p]^{+}$}.  Two corollaries follow --- $v_\lambda(\det D)$ is always
+\emph{even} (the ramified prime has index $2$ over the real subring), which
+explains the parity in every measurement taken so far; and $\det D$ is rational
+exactly when $p=3$, since $\QQ(\zeta_p)^{+}=\QQ$ iff $p=3$.  \emph{(ii) A
+correction.}  Pass 490 observed $\det D$ rational over $\FF_3[x]/(x^2)$ and read
+it as a feature of the nilpotent ring, calling those rings the tractable attack
+surface.  \textbf{Wrong}: rationality is exactly the condition $p=3$ and has
+nothing to do with nilpotency.  Verified: $\det D$ is equally rational over the
+\emph{field} $\FF_9$ ($\{18,24\}$) and equally irrational over the
+\emph{non-field} $\FF_5[x]/(x^2)$.  \emph{(iii) The failure region has a law.}
+Pass 490, holding only $\ZZ/9\to12$ and $\ZZ/25\to30$, concluded that off the
+character-order-$p$ locus ``there is a failure, not a second law''.  A third
+point overturns that: $\ZZ/27\to36$, and
+\[
+12,\;30,\;36\;=\;q+\frac qp\;=\;p^{\,n-1}(p+1)
+\]
+fits all three exactly.  It agrees with $v_\lambda(q)=n\,p^{n-1}(p-1)$ (i.e.\
+$12,40,54$) only at $\ZZ/9$ --- which is precisely why two points looked
+structureless, and a standing reminder that two data points cannot distinguish
+a coincidence from a law.
 
 \end{document}

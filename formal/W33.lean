@@ -16,3 +16,4 @@ import W33.Pass484AntisymmetricVanishing
 import W33.Pass486DetDivisibility
 import W33.Pass487NewtonInduction
 import W33.Pass488FlatBlockQuadratic
+import W33.Pass491HermitianRealDet

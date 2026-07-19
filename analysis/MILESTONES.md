@@ -199,6 +199,16 @@ Pass 490 (`analysis/w33_pass490_necessity_and_placement.py`, 7/7 exact):
 4. **LITERATURE PLACEMENT (searched):** by **Wood's theorem** the finite Frobenius rings are exactly those satisfying the MacWilliams extension property, and a generating character is the standard tool — our setting is the usual one of ring-linear coding theory. Cited in the note (Wood, *Duality for modules over finite rings*, Amer. J. Math. **121** (1999) 555–575). The determinant congruence itself appears neither there nor in the Gauss-sum literature (where Stickelberger is the classical valuation statement).
 5. **Main-paper bridge:** the arithmetic half of the register-cell results now covers Frobenius rings, connecting to the repo's chain-ring/Hjelmslev machinery (Passes 464/469) — previously separate parts of the corpus.
 
+## Pass 491 addendum (python track) — the real-subring lemma; the failure region HAS a law
+
+Pass 491 (`analysis/w33_pass491_real_subring_and_third_failure.py`, 16/16 exact):
+
+1. **THEOREM (real-subring lemma):** `det D ∈ ℤ[ζ_p]⁺` always. D is Hermitian, complex conjugation is σ₋₁, and applying it entrywise to a Hermitian matrix is transposition, so `σ₋₁(det D) = det(Dᵀ) = det D`. **Corollary 1:** `v_λ(det D)` is always **even** (λ has ramification index 2 over the real subring's prime) — this explains the parity in *every* measurement (6,8 at q=3; 10,12,14 at q=5; 18–26 over 𝔽₃[x]/(x²)). **Corollary 2:** det D is **rational iff p = 3**, since ℚ(ζ_p)⁺ = ℚ iff p = 3.
+2. **SELF-CORRECTION of Pass 490.** P490 read "det D all rational over 𝔽₃[x]/(x²)" as a nilpotent-ring feature and called those rings the tractable attack surface. **Wrong** — rationality is exactly `p = 3`. Verified: rational over the **field** 𝔽₉ ({18,24}), irrational over the **non-field** 𝔽₅[x]/(x²).
+3. **SELF-CORRECTION #2 — the failure region HAS a law.** P490, holding only ℤ/9→12 and ℤ/25→30, concluded "a failure, not a second law." The third point **ℤ/27 → 36** overturns that: **12, 30, 36 = q + q/p = p^(n−1)(p+1)**, fitting all three exactly. It agrees with `v_λ(q) = n·p^(n−1)(p−1)` (12, 40, 54) *only* at ℤ/9 — precisely why two points looked structureless. Recorded as a conjecture on three points.
+4. **Lean:** `formal/W33/Pass491HermitianRealDet.lean` — `star (det M) = det M` for Hermitian M, the algebraic core of the real-subring lemma.
+5. **Standing lesson:** two data points cannot distinguish a coincidence from a law. Both P490 self-corrections trace to inferring from two.
+
 ## Deferred
 
 - m=6 Coxeter–Todd rung of the QR tower (`data/m6_handoff_k12.json`).
