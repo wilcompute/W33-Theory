@@ -1,128 +1,347 @@
 \documentclass[11pt]{article}
 \usepackage[margin=1.15in]{geometry}
 \usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks,linkcolor=blue,citecolor=blue]{hyperref}
+
+\theoremstyle{plain}
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
 \newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{remark}[theorem]{Remark}
+
 \newcommand{\FF}{\mathbb F}
 \newcommand{\ZZ}{\mathbb Z}
 \newcommand{\QQ}{\mathbb Q}
 \newcommand{\adj}{\operatorname{adj}}
 \newcommand{\tr}{\operatorname{tr}}
 \newcommand{\vlam}{v_\lambda}
-\title{A determinant congruence for Heisenberg--Weyl blocks\\
-and its ramification/inverse-closure decomposition}
-\author{W.~Dahn\thanks{Extracted from the repository
-\texttt{wilcompute/W33-Theory}; every displayed valuation is a
-machine-verified witness (Pass 479--482). The first-order theorem
-(Theorem~\ref{thm:t1}) is proved; the sharp law (Theorem~\ref{thm:sharp}) is
-proved through first order and verified exhaustively at $q=3$ and by sampling
-at $q=5,7$.}}
+
+\title{A determinant congruence for Heisenberg--Weyl blocks}
+\author{W.~Dahn}
 \date{July 2026}
+
 \begin{document}
 \maketitle
 
 \begin{abstract}
-\noindent Let $q$ be an odd prime and $H = q^{1+2}_+$ the Heisenberg group of
-order $q^3$. For a nontrivial central character $t$ and an inverse-closed
-section $c$ of $(H/Z)\setminus\{0\}$, the level-$t$ Weyl block $B_t(c)$ is a
-$q\times q$ Hermitian matrix over $\ZZ[\zeta_q]$. We show that its determinant
-obeys a congruence modulo a power of the ramified prime $\lambda = 1-\zeta_q$,
-with the flat (zero) section as residue, and that the first-order term of the
-determinant's perturbation carries a valuation that splits cleanly as
-\emph{ramification of $q$} plus \emph{inverse closure}. The result is a
-self-contained arithmetic statement about the abelianized image of a
-symplectic quadrangle's elation group; the pairing identity underlying the
-inverse-closure summand is formalized in Lean.
+\noindent Let $q$ be an odd prime, $H$ the Heisenberg group of order $q^3$, and
+$\psi_t$ a nontrivial character of its centre. An \emph{inverse-closed
+section} $c$ assigns to each nonzero $v\in\FF_q^2$ a central coordinate
+$c(v)\in\FF_q$ with $c(-v)=-c(v)$; the associated \emph{Weyl block}
+$B_t(c)$ is the image, in the $q$-dimensional irreducible representation
+attached to $\psi_t$, of the sum of the corresponding group elements. We prove
+that the first-order variation of $\det B_t(c)$ about the zero section is
+divisible by $\lambda^{q+1}$, where $\lambda=1-\zeta_q$, and that the exponent
+splits canonically as
+\[
+q+1 \;=\; \underbrace{(q-1)}_{\text{ramification of }q}
+\;+\;\underbrace{2}_{\text{inverse closure}} .
+\]
+The proof rests on a closed formula
+$\tr\bigl(\adj(F)\,D\bigr)=\det(F)\,q\,S/(q^2-1)$ in which $F$ is the block of
+the zero section and $S=\sum_{v}(\zeta_q^{-tc(v)}-1)$; the block $F$ is shown to
+satisfy $F^2+2F-(q^2-1)I=0$ by a symplectic character sum. Computation
+(exhaustive for $q=3$, sampled for $q=5,7$) indicates the stronger congruence
+$\det B_t(c)\equiv\det F \pmod{\lambda^{q+3}}$ with the exponent $q+3$ sharp,
+and we isolate the single cancellation that would prove it. At prime powers the
+formula for $\det F$ persists but the congruence exponent drops, so the law is
+a prime phenomenon.
 \end{abstract}
 
-\section{Setup}
+\noindent\textbf{2020 MSC.} 11R18, 11T24, 15A15, 20C15, 05B10.\\
+\textbf{Keywords.} Heisenberg group, Weyl representation, cyclotomic
+valuation, ramification, determinant congruence, Gauss sums.
 
-Write $\zeta=\zeta_q$, $\lambda = 1-\zeta$, so that $(q) = (\lambda)^{q-1}$ is
-totally ramified in $\ZZ[\zeta]$ and $\vlam(q) = q-1$. The level-$t$ Weyl block
-of a section $c$ is
+\section{Introduction}
+
+Fix an odd prime $q$ and let
 \[
-B_t(c) = \sum_{v\in\FF_q^2\setminus\{0\}} \rho_t(v, c(v)),\qquad
-\rho_t(v,c)\,e_x = \zeta^{\,t(c + 2xb + ab)}\,e_{x+a},\ v=(a,b),
+H=\bigl\{(a,b,c):a,b,c\in\FF_q\bigr\},\qquad
+(a,b,c)(a',b',c')=(a+a',\,b+b',\,c+c'-ab'+a'b),
 \]
-with $c(-v) = -c(v)$ (inverse closure). The \emph{flat block} is $F = B_t(0)$.
-Both are Hermitian; $\tr B_t(c) = 0$ and $\tr B_t(c)^2 = q(q^2-1)$ for every
-section (the universal trace laws).
+the extraspecial group of order $q^3$ and exponent $q$, with centre
+$Z=\{(0,0,c)\}$. Each nontrivial character $\psi_t(0,0,c)=\zeta^{tc}$
+($\zeta=e^{2\pi i/q}$, $t\not\equiv0$) determines a $q$-dimensional irreducible
+representation $\rho_t$ of $H$, realized on $\mathbb C^{\FF_q}$ by
+\begin{equation}\label{eq:rho}
+\rho_t(a,b,c)\,e_x \;=\; \zeta^{\,t(c+2xb+ab)}\,e_{x+a}.
+\end{equation}
 
-\begin{lemma}[flat spectrum]\label{lem:flat}
-$F$ has integer spectrum $\{(q-1)^{(q+1)/2},\,(-(q+1))^{(q-1)/2}\}$; hence
-$F^2 + 2F - (q^2-1)I = 0$, $F^{-1} = (F+2I)/(q^2-1)$, and
-$\det F = (q-1)^{(q+1)/2}(-(q+1))^{(q-1)/2}$, a $\lambda$-unit.
+Call a function $c:\FF_q^2\setminus\{0\}\to\FF_q$ an \emph{inverse-closed
+section} if $c(-v)=-c(v)$; equivalently, the set
+$S(c)=\{(v,c(v)):v\neq0\}\subset H$ is closed under inversion, since
+$(a,b,z)^{-1}=(-a,-b,-z)$. Such sections index the ways of lifting the
+punctured plane $\FF_q^2\setminus\{0\}$ into $H$ compatibly with inversion,
+and the object of interest is the \emph{Weyl block}
+\[
+B_t(c)\;=\;\sum_{v\in\FF_q^2\setminus\{0\}}\rho_t\bigl(v,c(v)\bigr)
+\;\in\; M_q\bigl(\ZZ[\zeta]\bigr),
+\]
+a Hermitian matrix over the cyclotomic ring $\ZZ[\zeta]$. Write $F=B_t(0)$ for
+the block of the zero (\emph{flat}) section.
+
+Sections arise naturally: $S(c)$ together with $Z\setminus\{1\}$ is the Cayley
+set of a strongly regular graph on $H$ with parameters
+$\bigl(q^3,(q-1)(q+2),q-2,q+2\bigr)$ exactly when $c$ is flat up to the obvious
+symmetries, and the family of these partial difference sets in $H$ is
+classical \cite{Ma,PDSS}. The determinants $\det B_t(c)$, as $c$ ranges over
+all sections, are therefore a natural arithmetic invariant of that family. Our
+results describe how little they vary.
+
+Throughout, $\lambda=1-\zeta$ is the unique prime of $\ZZ[\zeta]$ above $q$, so
+that $(q)=(\lambda)^{q-1}$ and
+\begin{equation}\label{eq:vq}
+\vlam(q)=q-1,
+\end{equation}
+and $\vlam$ denotes the $\lambda$-adic valuation.
+
+\begin{theorem}[first-order law]\label{thm:main}
+Let $q$ be an odd prime, $t\not\equiv0$, and $c$ an inverse-closed section. Put
+$D=B_t(c)-F$ and $T_1=\tr\bigl(\adj(F)\,D\bigr)$, the first-order term of
+$\det(F+D)$. Then
+\[
+T_1\;=\;\frac{\det(F)\;q\;S}{q^2-1},
+\qquad
+S=\sum_{v\in\FF_q^2\setminus\{0\}}\bigl(\zeta^{-t c(v)}-1\bigr),
+\]
+and consequently
+\[
+\vlam(T_1)\;=\;(q-1)+\vlam(S)\;\ge\;(q-1)+2\;=\;q+1 .
+\]
+\end{theorem}
+
+The two summands are structurally distinct: $q-1$ is the ramification index
+\eqref{eq:vq}, while the $2$ comes from inverse closure through the
+factorization $w+w^{-1}-2=-(1-w)(1-w^{-1})$ applied to $w=\zeta^{tc(v)}$. We
+know of no reason for these to combine, and at prime powers they do not
+(Section~\ref{sec:pf}).
+
+Section~\ref{sec:sharp} records what computation says beyond first order: every
+order of the expansion of $\det(F+xD)$ is divisible by $\lambda^{q+1}$, and one
+further cancellation lifts the total to $\lambda^{q+3}$, sharply. We state the
+precise remaining step as Conjecture~\ref{conj:sharp}.
+
+\subsection*{Verification and reproducibility}
+All computations reported here are exact: cyclotomic integers are represented
+in the basis $1,\zeta,\dots,\zeta^{q-2}$ and valuations are read off from
+$\vlam(x)=v_q\bigl(N_{\QQ(\zeta)/\QQ}(x)\bigr)$. Witness programs and their
+certificates are archived in the repository \cite{repo}; the pairing identity
+of Lemma~\ref{lem:pair} is machine-checked in Lean~4 against
+Mathlib \cite{mathlib}.
+
+\section{The flat block}
+
+\begin{lemma}\label{lem:trace}
+For every noncentral $g\in H$ and every $t\not\equiv0$, $\tr\rho_t(g)=0$.
+Consequently $\tr F=0$ and $\tr B_t(c)=0$ for every section $c$.
 \end{lemma}
 
-\section{The first-order theorem}
-
-Put $D = B_t(c) - F$ and expand $\det(F + D)$ multilinearly by columns:
-$\det(F+D) = \sum_{k=0}^{q} T_k$, where $T_k$ collects the determinants with
-exactly $k$ columns drawn from $D$. Thus $T_0 = \det F$ and
-$T_1 = \tr(\adj(F)\,D)$.
-
-\begin{theorem}[first-order valuation]\label{thm:t1}
-For every odd prime $q$, every $t\not\equiv 0$, and every inverse-closed
-section $c$,
-\[
-T_1 \;=\; \frac{\det(F)\,q\,S}{q^2-1},\qquad
-S = \sum_{v\neq 0}\bigl(\zeta^{-t c(v)}-1\bigr),
-\]
-and therefore
-\[
-\vlam(T_1) \;=\; (q-1) + \vlam(S)\ \ge\ (q-1) + 2 \;=\; q+1.
-\]
-\end{theorem}
-
 \begin{proof}
-By Lemma~\ref{lem:flat}, $F^{-1} = (F+2I)/(q^2-1)$, so
-$T_1 = \det(F)\tr(F^{-1}D) = \det(F)\bigl[\tr(FD)+2\tr D\bigr]/(q^2-1)$; and
-$\tr D = \tr B_t(c) - \tr F = 0$. Next
-$\tr(FD) = \tr(FB_t(c)) - \tr(F^2)$, and $\tr(F^2) = q(q^2-1)$ by the trace
-law. The product $\rho_t(v,0)\rho_t(w,c(w))$ is a scalar multiple of a
-permutation matrix and has nonzero trace only when it is central, i.e.\ when
-$w=-v$; its central label is $c(-v) = -c(v)$, contributing $q\,\zeta^{-tc(v)}$.
-Hence $\tr(FB_t(c)) = q\sum_{v}\zeta^{-tc(v)}$ and
-$\tr(FD) = q\sum_v(\zeta^{-tc(v)}-1) = qS$, giving the displayed formula.
-Finally $\vlam(\det F) = \vlam(q^2-1) = 0$ while $\vlam(q) = q-1$; and pairing
-$v$ with $-v$,
-\[
-(\zeta^{-tc(v)}-1)+(\zeta^{tc(v)}-1)
-= \zeta^{tc(v)}+\zeta^{-tc(v)}-2 = -(1-\zeta^{tc(v)})(1-\zeta^{-tc(v)}),
-\]
-of valuation $2$ when $c(v)\neq0$, so $\vlam(S)\ge 2$.
+Write $g=(a,b,c)$. If $a\neq0$ then by \eqref{eq:rho} the matrix $\rho_t(g)$
+moves every basis vector $e_x$ to $e_{x+a}\neq e_x$, so its diagonal vanishes.
+If $a=0$ and $b\neq0$ then $\rho_t(0,b,c)$ is diagonal with entries
+$\zeta^{t(c+2xb)}$, and
+$\tr\rho_t(0,b,c)=\zeta^{tc}\sum_{x\in\FF_q}\zeta^{2tbx}=0$
+because $2tb\neq0$ in $\FF_q$ ($q$ is odd). Every element of $S(c)$ is
+noncentral, whence the last claim.
 \end{proof}
 
-The two summands have a clean meaning: $q-1$ is the ramification index of $q$,
-and the $+2$ is inverse closure, via the factorization
-$w+w^{-1}-2 = -(1-w)(1-w^{-1})$ (formalized in
-\texttt{Pass481FirstOrderPairing.lean}).
+Let $\omega(v,w)=ab'-a'b$ denote the symplectic form on $\FF_q^2$, where
+$v=(a,b)$ and $w=(a',b')$, so that $(v,0)(w,0)=(v+w,\,-\omega(v,w))$.
 
-\section{The sharp law}
+\begin{lemma}[flat block]\label{lem:flat}
+$F^2+2F-(q^2-1)I=0$. Hence $F$ has spectrum
+$\{(q-1)^{(q+1)/2},\,(-(q+1))^{(q-1)/2}\}$,
+\[
+\det F=(q-1)^{(q+1)/2}\bigl(-(q+1)\bigr)^{(q-1)/2},
+\qquad
+F^{-1}=\frac{F+2I}{q^2-1},
+\]
+and $\det F$ is a unit at $\lambda$.
+\end{lemma}
 
-\begin{theorem}[determinant congruence]\label{thm:sharp}
-$\det B_t(c) \equiv \det F \pmod{\lambda^{q+3}}$, with depth $q+3$ sharp.
-Moreover $\vlam(T_k)\ge q+1$ for all $k\ge1$, $\vlam(T_k)\ge q+3$ for $k\ge3$,
-and $T_1 + T_2 \equiv 0 \pmod{\lambda^{q+3}}$.
-\end{theorem}
+\begin{proof}
+Expanding and using $\rho_t(u,z)=\zeta^{tz}\rho_t(u,0)$,
+\[
+F^2=\sum_{v,w\neq0}\rho_t\bigl((v,0)(w,0)\bigr)
+    =\sum_{v,w\neq0}\zeta^{-t\,\omega(v,w)}\,\rho_t(v+w,0).
+\]
+Split according to $u=v+w$. The terms with $u=0$ have $w=-v$ and
+$\omega(v,-v)=0$, contributing $(q^2-1)I$. For fixed $u\neq0$ the constraint is
+$v\notin\{0,u\}$, and $\omega(v,u-v)=\omega(v,u)$, so those terms contribute
+\[
+\Bigl(\sum_{v\neq0,u}\zeta^{-t\,\omega(v,u)}\Bigr)\rho_t(u,0).
+\]
+Since $u\neq0$, the map $v\mapsto\omega(v,u)$ is a nonzero linear functional on
+$\FF_q^2$, so $\sum_{v\in\FF_q^2}\zeta^{-t\omega(v,u)}=0$; removing the two
+excluded values $v=0$ and $v=u$, both of which give $\omega=0$, leaves
+$-2$. Summing over $u\neq0$ gives $-2F$, so $F^2=(q^2-1)I-2F$.
 
-Theorem~\ref{thm:sharp} is proved through first order
-(Theorem~\ref{thm:t1} gives $\vlam(T_1)\ge q+1$) and verified exhaustively at
-$q=3$ and by sampling at $q=5,7$; the mod-$\lambda^{q+1}$ statement
-$\det B_t(c)\equiv\det F$ follows from $\vlam(T_k)\ge q+1$ for all $k$. What
-remains is a uniform proof of the all-order bound and of the $T_1+T_2$
-cancellation that supplies the final two units of depth.
+Thus the minimal polynomial of $F$ divides
+$x^2+2x-(q^2-1)=(x-(q-1))(x+(q+1))$, so the eigenvalues lie in
+$\{q-1,-(q+1)\}$. If they occur with multiplicities $\alpha,\beta$ then
+$\alpha+\beta=q$ and, by Lemma~\ref{lem:trace},
+$\alpha(q-1)-\beta(q+1)=0$; solving gives $\alpha=(q+1)/2$,
+$\beta=(q-1)/2$. The remaining assertions follow, the last because $q\pm1$ are
+prime to $q$.
+\end{proof}
 
-\begin{conjecture}
-$\vlam(T_k) \ge q+1$ for all $k$, and $T_1+T_2\equiv0\pmod{\lambda^{q+3}}$, for
-every odd prime $q$; equivalently the second cancellation, like the first, is
-an inverse-closure phenomenon.
+\begin{remark}
+Lemma~\ref{lem:flat} also reproves the two ``trace laws''
+$\tr F=0$ and $\tr F^2=q(q^2-1)$; the latter is
+$(q-1)^2\frac{q+1}{2}+(q+1)^2\frac{q-1}{2}=q(q^2-1)$. These hold for every
+section, not only the flat one, and are used below.
+\end{remark}
+
+\section{The first-order law}
+
+\begin{lemma}[pairing]\label{lem:pair}
+Let $R$ be a commutative ring and $w\in R$ a unit with inverse $w^{-1}$. Then
+\[
+w+w^{-1}-2=-(1-w)(1-w^{-1}).
+\]
+In particular, if $\mu\mid(1-w)$ and $\mu\mid(1-w^{-1})$ then
+$\mu^2\mid\bigl(w+w^{-1}-2\bigr)$.
+\end{lemma}
+
+\begin{proof}
+$(1-w)(1-w^{-1})=1-w-w^{-1}+ww^{-1}=2-w-w^{-1}$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Since $\det F$ is a $\lambda$-unit, $F$ is invertible and
+$T_1=\tr(\adj(F)D)=\det(F)\tr(F^{-1}D)$. By Lemma~\ref{lem:flat},
+$F^{-1}=(F+2I)/(q^2-1)$, and $\tr D=\tr B_t(c)-\tr F=0$ by
+Lemma~\ref{lem:trace}, so
+\[
+T_1=\frac{\det(F)}{q^2-1}\Bigl[\tr(FD)+2\tr D\Bigr]
+   =\frac{\det(F)\,\tr(FD)}{q^2-1}.
+\]
+Now $\tr(FD)=\tr\bigl(FB_t(c)\bigr)-\tr(F^2)=\tr\bigl(FB_t(c)\bigr)-q(q^2-1)$.
+For the first term,
+\[
+\tr\bigl(FB_t(c)\bigr)
+=\sum_{v,w\neq0}\tr\rho_t\bigl((v,0)(w,c(w))\bigr),
+\qquad
+(v,0)\bigl(w,c(w)\bigr)=\bigl(v+w,\;c(w)-\omega(v,w)\bigr).
+\]
+By Lemma~\ref{lem:trace} only central products contribute, i.e.\ only $w=-v$;
+then $\omega(v,-v)=0$ and the product is $\bigl(0,0,c(-v)\bigr)=(0,0,-c(v))$,
+whose trace is $q\,\zeta^{-tc(v)}$. Hence
+$\tr(FB_t(c))=q\sum_{v\neq0}\zeta^{-tc(v)}$, and since there are $q^2-1$
+nonzero $v$,
+\[
+\tr(FD)=q\sum_{v\neq0}\bigl(\zeta^{-tc(v)}-1\bigr)=q\,S,
+\]
+which is the displayed formula.
+
+For the valuation, $\vlam(\det F)=\vlam(q^2-1)=0$ and $\vlam(q)=q-1$ by
+\eqref{eq:vq}, so $\vlam(T_1)=(q-1)+\vlam(S)$. Group the sum defining $S$ into
+the $(q^2-1)/2$ pairs $\{v,-v\}$. Using $c(-v)=-c(v)$ and
+Lemma~\ref{lem:pair} with $w=\zeta^{tc(v)}$,
+\[
+\bigl(\zeta^{-tc(v)}-1\bigr)+\bigl(\zeta^{tc(v)}-1\bigr)
+=-\bigl(1-\zeta^{tc(v)}\bigr)\bigl(1-\zeta^{-tc(v)}\bigr).
+\]
+Each factor is $0$ if $c(v)=0$ and has valuation $1$ otherwise, so every pair
+contributes valuation $2$ or $\infty$; therefore $\vlam(S)\ge2$ and
+$\vlam(T_1)\ge q+1$.
+\end{proof}
+
+\begin{corollary}
+$\det B_t(c)\equiv\det F \pmod{\lambda^{2}}$ for every section, and the
+first-order term alone is divisible by $\lambda^{q+1}$.
+\end{corollary}
+
+\section{Beyond first order}\label{sec:sharp}
+
+Expanding multilinearly by columns, $\det(F+xD)=\sum_{k=0}^{q}T_kx^k$ with
+$T_0=\det F$ and $T_k=\det(F)\,e_k(F^{-1}D)$, where $e_k$ is the $k$-th
+elementary symmetric function of eigenvalues.
+
+\begin{proposition}[verified]\label{prop:orders}
+For $q=3$ (all $81$ sections) and $q=5,7$ (sampled), every section satisfies
+\[
+\vlam(T_k)\ge q+1\ \ (k\ge1),\qquad
+\vlam(T_k)\ge q+3\ \ (k\ge3),\qquad
+\vlam(T_1+T_2)\ge q+3,
+\]
+and consequently
+$\det B_t(c)\equiv\det F\pmod{\lambda^{q+3}}$, with $q+3$ attained: at $q=3$
+every non-flat section gives $\vlam(\det B_t(c)-\det F)=6$ exactly, and at
+$q=5$ the observed values are $\{8,10,12\}$ with minimum $8=q+3$.
+\end{proposition}
+
+Only the case $k=1$ of the first display is proved above; the rest is
+computational. The structure is nonetheless clear: the exponent $q+3$ is
+\emph{$q+1$ at every order, plus one further cancellation between the first two
+orders}. We therefore isolate exactly what remains.
+
+\begin{conjecture}\label{conj:sharp}
+For every odd prime $q$ and every inverse-closed section,
+$\vlam(T_k)\ge q+1$ for all $k\ge1$, and $T_1+T_2\equiv0\pmod{\lambda^{q+3}}$.
 \end{conjecture}
 
-At a prime power $q=p^f$ the flat formula and spectrum of Lemma~\ref{lem:flat}
-persist ($q=9$: $\det F = 8^5(-10)^4$, spectrum $\{8^5,(-10)^4\}$), but the
-depth drops below $q+3$ and depends on the $\FF_p$-subfield structure of the
-section; the modulus $\lambda^{q+3}$ is a prime-$q$ phenomenon.
+A proof of the second statement along the lines of Theorem~\ref{thm:main} would
+require a closed form for $\tr\bigl((F^{-1}D)^2\bigr)$, obtainable in principle
+by the same argument with two symplectic factors in place of one; we have not
+carried this out.
+
+\begin{remark}
+The residue class is the flat determinant, not a numerical coincidence of small
+$q$. At $q=3$ the two determinant values are $-16$ (flat orbit) and $11$, which
+differ by $27$; since $(\lambda^{6})=(27)$ for $q=3$, the congruence
+$\det B\equiv\det F\pmod{\lambda^{q+3}}$ there reads $\det B\equiv-16\pmod{27}$,
+and $11\equiv-16$. An earlier guess that the residue is $q^2+2$ fails already
+at $q=5$.
+\end{remark}
+
+\section{Prime powers}\label{sec:pf}
+
+Let $q=p^f$ with $f>1$, $\psi_t(z)=\zeta_p^{\operatorname{Tr}_{\FF_q/\FF_p}(tz)}$,
+and $\lambda=1-\zeta_p$. Lemma~\ref{lem:flat} survives verbatim: at $q=9$ one
+finds $F^2+2F-80I=0$, spectrum $\{8^5,(-10)^4\}$, and
+$\det F=8^5(-10)^4=327{,}680{,}000$, in agreement with the formula of
+Lemma~\ref{lem:flat}; the trace laws hold as well.
+
+The congruence does not survive. Over $60$ sampled non-collinear sections at
+$q=9$ the valuation $\vlam\bigl(\det B_t(c)-\det F\bigr)$ is not constant, and
+its \emph{minimum} --- the exponent of the congruence valid for every section
+--- is $8$, strictly below the prime value $q+3=12$. Sections taking values in
+the subfield $\FF_p\subset\FF_q$ do not form a separate class: they realize the
+same minimum and an overlapping range. The identity
+$\vlam(q)=q-1$ underlying Theorem~\ref{thm:main} is replaced by
+$\vlam(p^f)=f(p-1)$, which already accounts for part of the discrepancy, and we
+do not know the correct prime-power statement.
+
+\begin{thebibliography}{9}
+
+\bibitem{Ma}
+S.~L.~Ma,
+\emph{A survey of partial difference sets},
+Des.\ Codes Cryptogr.\ \textbf{4} (1994), 221--261.
+
+\bibitem{PDSS}
+J.~Polhill, J.~A.~Davis, K.~Smith, and E.~Swartz,
+J.~Combin.\ Des.\ \textbf{32} (2024), 351--370; see Corollary~4.7 and the
+discussion following Theorem~4.8 for the Heisenberg partial difference sets
+with parameters $\bigl(q^3,(q-1)(q+2),q-2,q+2\bigr)$ and the nonexistence of
+abelian examples.
+
+\bibitem{mathlib}
+The mathlib Community,
+\emph{The Lean mathematical library},
+Proc.\ 9th ACM SIGPLAN Int.\ Conf.\ on Certified Programs and Proofs (CPP 2020),
+367--381.
+
+\bibitem{repo}
+W.~Dahn, \emph{W33-Theory} source repository; witness programs
+\texttt{w33\_pass479}--\texttt{w33\_pass482} and the Lean file
+\texttt{formal/W33/Pass481FirstOrderPairing.lean}.
+
+\end{thebibliography}
 
 \end{document}
