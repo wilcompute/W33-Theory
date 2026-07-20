@@ -544,6 +544,19 @@ Write $m=dk$. If $m$ is odd and $p\mid k$, then $S_d=0$ identically, for every
 inverse-closed section.
 \end{theorem}
 
+\noindent The hypothesis is not really about $p$. Both ingredients below use
+$p$ only through the order $e$ of the generating character, which over $\FF_q$
+happens to equal $p$: step~(i) needs $kv=0$ for every $v$, and step~(ii) needs
+$\operatorname{ord}(u)\mid k$ for every $u$ in the image of $\psi$ --- and each
+of those is $e\mid k$. The theorem therefore holds verbatim over any finite
+Frobenius ring with generating character of order $e$, with $p\mid k$ replaced
+by $e\mid k$; and over $\ZZ/9$, where $e=9$, the constant class is measured to
+vanish at $m=9$ and $m=27$ and \emph{not} at $m=3$, exactly where ``$p\mid m$''
+would have predicted vanishing. The order of the generating character is the
+same invariant that governs the scope of the determinant law itself
+(\S\ref{sec:pf}): two statements proved and tested separately are indexed by
+the same number.
+
 \begin{proof}
 Since $m=dk$ is odd, both $d$ and $k$ are odd. Let $(v_1,\dots,v_d)$ represent
 an orbit of minimal period $d$ and put $M=\rho_{v_1}\cdots\rho_{v_d}$. By the
@@ -613,6 +626,15 @@ each equal to $\vlam(q)+m+1+\vlam(m!)$ --- minima over $250$ and $60$ sampled
 sections respectively --- and including the double increment at $m=25$ and the
 \emph{triple} increment at $m=27$, where $v_3(27!)=9+3+1=13$.
 
+A single surviving class also means $\tr(D^m)=m\,S_m$ exactly, so what the
+orbit \emph{weight} contributes separates from what the orbit \emph{sum}
+contributes, with no enumeration: $\vlam(S_m)=\vlam(\tr D^m)-\vlam(m)$, giving
+$6,16,50$ at $p=3$ and $10,46$ at $p=5$. The weight supplies $\vlam(m)=j(p-1)$,
+that is $j$ of the $\sum_i\lfloor m/p^i\rfloor$ Legendre terms --- all of them
+at $j=1$, half at $j=2$, and $3/13$ at $j=3$. So the orbit mechanism accounts
+for the first Legendre increment and a vanishing share thereafter. That is a
+quantified limit on the mechanism, not an account of the remainder.
+
 Second, the hypothesis of Theorem~\ref{thm:oddclass} is the bracket
 $[m\text{ odd}]$ of \eqref{eq:factorial}. That term --- the one ingredient of
 the law that had the look of a fitted correction --- is exactly the condition
@@ -621,15 +643,42 @@ ingredient of \eqref{eq:factorial} with a proof rather than a measurement. It
 uses inverse closure, the same hypothesis that rescues the first power sum
 (Lemma~\ref{lem:parity}) and the top exterior power.
 
-What the theorem does \emph{not} give is the even case, where it is silent. At
-$m=2p$ the orbit account remains partial: over twelve sections at $(p,m)=(3,6)$
-the short aggregate and the free class both sit at valuation $10$ while the
-total ranges over $12,14,18$, so the excess comes from cancellation
-\emph{between} them in a section-dependent amount. (Three of those twelve
-sections happen to annihilate the short classes exactly; a single section would
-have suggested a structural cancellation that the other nine refute.) The
-minimum, $12=\vlam(3)+6+0+\vlam(6!)$, is the value predicted by
-\eqref{eq:factorial}, consistent with the law being a minimum over sections.
+Theorem~\ref{thm:oddclass} says nothing when $m$ is even. What does say
+something there is that the $m=p$ vanishing \emph{propagates}.
+
+\begin{theorem}[propagation]\label{thm:propagation}
+Let $m=jp$ with $j\ge1$. Then
+\[
+\sum_{d\mid j} d\,S_d \;=\; q\Bigl(\sum_{v\neq0}d_v^{\,p}\Bigr)^{j}\;=\;0 .
+\]
+\end{theorem}
+
+\begin{proof}
+Let $d\mid j$ and let $(w_1,\dots,w_d)$ represent a period-$d$ orbit of
+$m$-tuples; every such orbit is a $j$-tuple pattern repeated $p$ times. Put
+$M=\rho_{w_1}\cdots\rho_{w_d}=\zeta^{s}\rho(w)$ with $w=\sum_i w_i$. Then
+$M^{m/d}=\zeta^{s\,pj/d}\rho\bigl((pj/d)w\bigr)=I$, because $p$ divides $pj/d$
+and so kills both the phase and the argument; hence $\tr(M^{m/d})=q$ and the
+orbit's value is $q\prod_{i\le d}d_{w_i}^{\,p}$. Summing over all $j$-tuples
+and grouping them by cyclic orbit reproduces $\sum_{d\mid j}d\,S_d$ on the left
+and $\bigl(\sum_v d_v^{\,p}\bigr)^{j}$ on the right. The bracket is the $m=p$
+constant class, zero by Theorem~\ref{thm:oddclass}.
+\end{proof}
+
+So at every multiple of $p$ the classes whose period divides $j=m/p$ cancel
+exactly, and only those $d\mid m$ with $d\nmid j$ survive. At $m=2p$ this says
+$S_1+2S_2=0$ identically --- verified exactly at $(p,m)=(3,6)$, $(5,10)$ and
+$(7,14)$, and the identity itself at $j$ up to $5$ --- so the residual at $m=2p$
+lives entirely in the class $d=p$, which $j=2$ does not reach. This also
+corrects a reading in an earlier draft, which lumped $d=3$ together with
+$d=1,2$ at $(3,6)$ and concluded that the short aggregate generically sits
+below the total; the aggregate over $d\mid j$ is not merely small but zero.
+
+The orbit account is therefore partial for a sharper reason than ``the even
+case is untouched'': what remains unexplained at $m=jp$ is exactly the classes
+with $d\nmid j$. At $(3,6)$ the total ranges over $12,14,18$ by section, with
+minimum $12=\vlam(3)+6+0+\vlam(6!)$, the value predicted by
+\eqref{eq:factorial} and consistent with the law being a minimum over sections.
 
 Finally, \eqref{eq:factorial} fails --- and fails \emph{from below} --- exactly
 where the determinant law fails. Over $\ZZ/9$ and $\ZZ/25$, whose generating

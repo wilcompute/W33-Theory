@@ -14229,6 +14229,10 @@ converse at $d{=}1$: one-pair section gives $2q\operatorname{Re}(u{-}1)^m$ & \te
 Legendre tower exact at $m{=}p^j$: $8,20,56$ ($p{=}3$), $14,54$ ($p{=}5$) & \textsc{cert} & P512 & this programme (single class $\Rightarrow$ no cancellation) \\
 failure region breaks ingredient (i): $8/80$ over $\ZZ/9$, $24/624$ over $\ZZ/25$ & \textsc{cert} & P512 & this programme (candidate, not a cause) \\
 pairing ingredient (iii) in Lean; guard backlog triaged $195\to74$ open & \textsc{cert} & P512 & this programme (CI kernel-checks Lean) \\
+odd-class vanishing is indexed by the CHARACTER ORDER $e$, not by $p$ & \textsc{thm} & P513 & this programme ($\ZZ/9$: vanishes at $m{=}9,27$, not $m{=}3$) \\
+propagation: $m{=}jp\Rightarrow\sum_{d\mid j}dS_d=q(\sum_v d_v^p)^j=0$ & \textsc{thm} & P513 & this programme (first general statement at even $m$) \\
+weight's share of the Legendre tower: $1,\ \tfrac12,\ \tfrac3{13}$ at $p{=}3$ & \textsc{cert} & P513 & this programme (quantified limit on the mechanism) \\
+$d$-pair minimal support: nonvanishing in $6/6$ cells where the hypothesis fails & \textsc{cert} & P513 & this programme (recipe, not an induction) \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -15155,5 +15159,62 @@ restate a measurement (``because'' should read ``measured''), $15$ are prose
 only, and $74$ are genuinely open mechanisms --- the only bucket that needs
 mathematics.  Buckets are assigned by vocabulary, not by reading; this ranks
 the backlog and does not clear it.
+
+\paragraph{Pass 513 --- the theorem is about the character order, and the
+vanishing propagates.}
+Two generalizations, both of which say that Passes 511--512 had named their
+hypotheses too narrowly.
+
+\emph{The invariant is the character order, not $p$.}  Both ingredients of the
+odd-class vanishing proof use $p$ only through the order $e$ of the generating
+character, which over $\FF_q$ happens to equal $p$: ingredient~(i) needs $kv=0$
+for every $v$, ingredient~(ii) needs $\operatorname{ord}(u)\mid k$ for every $u$
+in the image of $\psi$, and each of those is $e\mid k$.  So the theorem holds
+over any finite Frobenius ring with generating character of order $e$, with
+$p\mid k$ replaced by $e\mid k$.  Over $\ZZ/9$, where $e=9$, the constant class
+is measured to vanish at $m=9$ and $m=27$ and \emph{not} at $m=3$ --- precisely
+the cell where ``$p\mid m$'' predicts vanishing and the character-order form
+does not.  The order of the generating character is the same invariant that
+governs the determinant law's own scope, which holds at $e=p$ and fails over
+$\ZZ/p^n$ where $e=p^n$; two statements proved and tested separately turn out to
+be indexed by one number.
+
+\emph{The vanishing propagates to every multiple of $p$.}  Let $m=jp$.  For any
+$d\mid j$, a period-$d$ representative has
+$M^{m/d}=\zeta^{s\,pj/d}\rho\bigl((pj/d)w\bigr)=I$, because $p$ divides $pj/d$
+and kills both phase and argument; so its value is
+$q\prod_{i\le d}d_{w_i}^{\,p}$, and grouping all $j$-tuples by cyclic orbit
+gives
+\[
+\sum_{d\mid j} d\,S_d \;=\; q\Bigl(\sum_{v\neq0}d_v^{\,p}\Bigr)^{j}\;=\;0 ,
+\]
+the bracket being the $m=p$ constant class killed by Pass 511.  Verified exactly
+on $14$ cells across $p=3,5,7$ and $j=2,\dots,5$.  At $m=2p$ this reads
+$S_1+2S_2=0$ identically, so the residual there lives entirely in the class
+$d=p$, which $j=2$ does not reach.  This is the first general statement about
+\emph{even} $m$ --- which Passes 510--512 each recorded as untouched --- and it
+corrects Pass 511's Part~E reading, which lumped $d=3$ in with $d=1,2$ at
+$(3,6)$ and concluded that the short aggregate generically sits below the total.
+The aggregate over $d\mid j$ is not small; it is zero.
+
+Two quantitative results follow.  Since a single class survives at $m=p^{j}$,
+$\operatorname{tr}(D^m)=m\,S_m$ exactly and the orbit \emph{weight} separates
+from the orbit \emph{sum} with no enumeration: $v_\lambda(S_m)=6,16,50$ at
+$p=3$ and $10,46$ at $p=5$.  The weight supplies $v_\lambda(m)=j(p-1)$, i.e.\ $j$ of the
+$\sum_i\lfloor m/p^i\rfloor$ Legendre terms --- all of them at $j=1$, half at
+$j=2$, $3/13$ at $j=3$.  So the orbit mechanism accounts for the first Legendre
+increment and a vanishing share thereafter: a quantified limit, not an account
+of the remainder.  And the $d=1$ converse construction of Pass 512 extends to a
+recipe --- support the section on exactly $d$ inverse-closed pairs --- which
+produces a nonvanishing class in every one of six tested cells where the
+hypothesis fails.  A recipe on six cells is a recipe, not an induction; the
+converse for general $d$ is still unproved.
+
+Finally the flagged backlog is now keyed to its sources.  Certificates are
+script outputs, so editing the JSON would break every \texttt{--check} drift
+test; the fix has to happen in the producer.  Mapping each flagged certificate
+to the analysis file that writes it gives $196$ certificates carrying $342$
+claims, of which $128$ have a located producer and $68$ are third-stream or
+legacy artefacts that cannot be fixed from this track.
 
 \end{document}
