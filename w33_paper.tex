@@ -14245,6 +14245,10 @@ sieve is the WHOLE relation space: nullity $=\lvert T\rvert$ in $6/6$ cells & \t
 prime-power tower to $4$ rungs: $8,20,56,164$; $14,54$; $20,104$ & \textsc{cert} & P516 & this programme ($m{=}81$ and $m{=}49$ new) \\
 character order confirmed at $e{=}49$, a new prime & \textsc{cert} & P516 & this programme ($m{=}7,21$ separate $e$ from $p$) \\
 inward audit: $6$ of $11$ claims in P510--P515 are corollaries of one another & \textsc{cert} & P516 & this programme (rediscovery, turned inward) \\
+closed form $d\,S_d=q\sum_{c\mid d}\mu(d/c)\mathrm{Ps}(m/c)^c$; no enumeration & \textsc{thm} & P517 & this programme (checked vs enumeration, $40$ cells) \\
+the sieve theorem in two lines, by Möbius inversion & \textsc{thm} & P517 & this programme (second proof; says where it comes from) \\
+$\mathrm{free}(m)=1\iff m$ is a power of $p$ & \textsc{thm} & P517 & this programme (resolves the P516 confound by proof) \\
+completeness holds over $\mathbf Q(\zeta_p)$ too, incl.\ $(3,81),(5,25),(7,49)$ & \textsc{cert} & P517 & this programme (informative sections only) \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -15370,5 +15374,57 @@ five remain primitive.  The rows stay in the ledger, which is a historical
 record, but a reader coming to it fresh should be told which is which.  This is
 the rediscovery failure mode turned inward: a corpus can carry two generations
 of one theorem just as easily as two agents can.
+
+\paragraph{Pass 517 --- the enumeration was never necessary.}
+Every obstacle left in this arc was the same one: computing a period-$d$ class
+meant enumerating $d$-tuples, and at $(7,49)$ with $d=7$ that is $48^{7}$.  No
+enumeration is needed.  Write $\mathrm{Ps}(k)=\sum_{v\neq0}d_v^{\,k}$.  Then
+whenever $e\mid(m/d)$,
+\[
+d\,S_d \;=\; q\sum_{c\mid d}\mu(d/c)\,\mathrm{Ps}(m/c)^{\,c}.
+\]
+Put $x_v=d_v^{\,m/d}$; by the Pass 514 shortcut $d\,S_d$ is $q$ times the sum of
+$\prod_i x_{w_i}$ over $d$-tuples of exact period $d$.  A $d$-tuple has period
+dividing $c\mid d$ exactly when it is a $c$-tuple repeated $d/c$ times, whose
+product sums over all $c$-tuples to $\mathrm{Ps}(m/c)^{c}$; M\"obius inversion
+over the divisor lattice converts ``period dividing'' into ``period exactly''.
+Verified against the honest enumeration on $40$ cells before anything relied on
+it.
+
+\emph{This re-derives the sieve theorem in two lines.}  Summing over $d\mid t$
+and exchanging the order,
+$\sum_{d\mid t}d\,S_d=q\sum_{c\mid t}\mathrm{Ps}(m/c)^{c}\sum_{c\mid d\mid t}
+\mu(d/c)=q\,\mathrm{Ps}(m/t)^{t}$, the inner sum being $1$ at $c=t$ and $0$
+otherwise.  Pass 514 proved the sieve by counting orbits; this proof is shorter
+and says where the theorem comes from.  Computationally the difference is
+decisive --- a class costs $\tau(d)$ power sums instead of $\lvert V\rvert^{d}$
+tuples, so the cells Pass 516 recorded as out of reach take seconds, and
+$m=81$, $m=50$, $m=98$ become reachable for the first time.
+
+\emph{And it settles the prime-power confound.}  Pass 515 found
+$\mathrm{free}(p^{j})=1$ and Pass 516 asked whether that is about prime powers
+or merely about the divisor count.  It is about prime powers, provably:
+$\mathrm{free}(m)=1$ if and only if $m$ is a power of $p$.  For $m$ odd,
+$m=p^{a}r$ with $\gcd(r,p)=1$ gives $\mathrm{free}=\tau(r)$, which is $1$ only
+for $r=1$; for $m$ even, $m=2^{b}s$ with $b\ge1$ gives
+$\mathrm{free}=(b+1)\tau(s)-\tau(s/e)>\tau(s)\ge1$, since $\tau(s/e)<\tau(s)$
+whenever $e>1$ divides $s$.  No even $m$ has a single free class.  The confound
+is resolved by proof rather than by a search.
+
+\emph{Completeness, over the cyclotomic field.}  Pass 516 excluded only
+constant \emph{rational} coefficients.  Redoing the elimination in
+$\mathbf{Q}(\zeta_p)$ itself --- inverting through the multiplication matrix on
+the reduced power basis --- gives the same answer: the nullity equals
+$\lvert T\rvert$ at $(p,m)=(3,6),(3,9),(3,15),(3,27),(3,81),(5,25),(7,49)$, the
+last four reachable only because of the closed form.  Nonlinear and
+section-dependent relations remain outside the scope.
+
+One caution came out of a wrong first run, and is worth recording because it
+would be easy to repeat.  At odd $m$ a large fraction of sections give
+$\operatorname{tr}(D^m)=0$ identically, so the entire class vector vanishes and
+contributes nothing to the rank.  Sampling a fixed range of sections drew only
+such sections at $m=15,27,81$ and returned rank $0$ --- which reads as a
+missing relation and is in fact an empty sample.  The figures above count
+\emph{informative} sections, scanning until enough are found.
 
 \end{document}

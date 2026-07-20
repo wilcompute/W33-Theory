@@ -331,6 +331,19 @@ Pass 516 (`analysis/w33_pass516_sieve_is_complete.py`, 11/11 exact, idempotent):
 
 **TWO BOUNDARIES RECORDED, NOT CROSSED.** (a) The completeness test needs *every* class, and the shortcut still enumerates d-tuples: (7,49) at d=7 needs **48⁷**, (3,27) at d=9 needs **8⁹**. A first draft listed those and had to be killed — the surviving cells are those where the largest class below m has small period. (b) A fourth failure-depth point needs `min_c v_λ(det B_t − det F)` over ℤ/49: a **49×49 determinant over ℤ[ζ₄₉] (degree 42) per section, minimised over sections**. Out of reach here; the estimate is recorded so a later pass does not re-attempt it blindly.
 
+## Pass 517 addendum (python track) — the enumeration was never necessary
+
+Pass 517 (`analysis/w33_pass517_mobius_closed_form.py`):
+
+1. **THE CLOSED FORM.** With `Ps(k) = Σ_{v≠0} d_v^k`, and whenever `e | (m/d)`:
+   **`d·S_d = q · Σ_{c|d} μ(d/c) · Ps(m/c)^c`**.
+   Proof: a period-d orbit contributes `q·∏ x_{wᵢ}` with `x_v = d_v^{m/d}`; a d-tuple has period dividing `c|d` exactly when it is a c-tuple repeated d/c times, whose product sums over all c-tuples to `Ps(m/c)^c`; Möbius inversion over the divisor lattice turns "period dividing" into "period exactly". **Verified against honest enumeration before anything relied on it.**
+2. **THE SIEVE IN TWO LINES.** Summing over `d|t` and exchanging order: `Σ_{d|t} d·S_d = q Σ_{c|t} Ps(m/c)^c Σ_{c|d|t} μ(d/c) = q·Ps(m/t)^t`, the inner sum being 1 at c=t and 0 otherwise. Pass 514 proved the sieve by counting orbits; **this proof says where it comes from.** Both are correct.
+3. **THE COST WALL IS GONE.** A class costs **τ(d) power sums** instead of `|V|^d` tuples. The cells Pass 516 recorded as out of reach — (7,49) at 48⁷, (3,27) at 8⁹, (5,25) at 24⁵ — take seconds, and m=81, m=50, m=98 become reachable for the first time.
+4. **`free(m) = 1 ⟺ m is a power of p`, PROVED.** For m odd, `m = p^a·r` ⇒ `free = τ(r)` = 1 iff r=1. For m even, `m = 2^b·s` (b≥1) ⇒ `free = (b+1)τ(s) − τ(s/e) > τ(s) ≥ 1` since `τ(s/e) < τ(s)` whenever `e>1` divides s. **No even m has a single free class** — Pass 516's prime-power confound is resolved by proof, not by search.
+5. **COMPLETENESS OVER ℚ(ζ_p), not just ℚ.** Pass 516 excluded only constant *rational* coefficients. Redoing the elimination in the cyclotomic field itself (inverting via the multiplication matrix on the reduced power basis) gives the same answer. Nonlinear and section-dependent relations remain outside the scope.
+6. **The standalone note's abstract now leads with the sieve**, since the sieve — not the determinant congruence — is the paper's centre. Remaining work before submission is editorial judgement for the author, not mathematics.
+
 ## Deferred
 
 - m=6 Coxeter–Todd rung of the QR tower (`data/m6_handoff_k12.json`).

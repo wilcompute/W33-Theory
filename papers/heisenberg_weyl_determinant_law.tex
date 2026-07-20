@@ -64,6 +64,25 @@ valuation counting alone, and each is rescued by inverse closure. The law is
 insensitive to whether $R$ is a field: $\FF_{p^k}$ and $\FF_p[x]/(x^k)$ give
 the same exponent, while $\ZZ/p^2$ --- whose generating character has order
 $p^2$ --- does not satisfy the law at all.
+
+The congruence reduces to an identity about the power sums $\tr(D^m)$, and the
+main structural result of the paper concerns those. Expanding $\tr(D^m)$ over
+$m$-tuples of total displacement zero and grouping by cyclic orbit gives
+classes $S_d$ indexed by the divisors of $m$. We prove a \emph{sieve theorem}:
+if $e$ denotes the order of the generating character and $t\mid m$ satisfies
+$m/t$ odd and $e\mid(m/t)$, then
+\[
+\sum_{d\mid t} d\,S_d \;=\; q\Bigl(\sum_{v\neq0}d_v^{\,m/t}\Bigr)^{t}\;=\;0 .
+\]
+Two apparently separate phenomena are its corollaries. When $m$ is odd the
+index set of relations is downward closed, M\"obius inversion runs, and each
+$S_d$ with $e\mid(m/d)$ vanishes identically; when $m$ is even it is not, and
+the theorem degenerates to a single relation. The sieve system is triangular
+along divisibility, so its rank is the number of relations and the number of
+unconstrained classes is $\tau(m)-\#\{u\mid m: u\text{ odd},\ e\mid u\}$; this
+equals $1$ precisely when $m$ is a power of $p$. Finally $d\,S_d$ has the
+closed form $q\sum_{c\mid d}\mu(d/c)\bigl(\sum_v d_v^{\,m/c}\bigr)^{c}$, from
+which the sieve theorem follows in two lines.
 \end{abstract}
 
 \noindent\textbf{2020 MSC.} 11R18, 11T24, 15A15, 20C15, 05B10.\\
@@ -766,6 +785,76 @@ exponent $m=q$ the free counts are $2,2,3$ at $\ZZ/9,\ZZ/25,\ZZ/27$, so
 $\ZZ/9$ and $\ZZ/25$ share a free count while their depths differ by $18$; no
 function of the free count alone can produce both. We record the candidate as
 refused. The depths still match $p^{n-1}(p+1)$ exactly and remain unexplained.
+
+\subsection{A closed form, and the sieve in two lines}
+\label{sec:closedform}
+
+The classes need not be enumerated at all. Write
+$\mathrm{Ps}(k)=\sum_{v\neq0}d_v^{\,k}$.
+
+\begin{proposition}\label{prop:closed}
+Whenever $e\mid(m/d)$,
+\[
+d\,S_d \;=\; q\sum_{c\mid d}\mu(d/c)\,\mathrm{Ps}(m/c)^{\,c}.
+\]
+\end{proposition}
+
+\begin{proof}
+Put $x_v=d_v^{\,m/d}$. By the shortcut above, $d\,S_d$ is $q$ times the sum of
+$\prod_i x_{w_i}$ over $d$-tuples of exact period $d$. A $d$-tuple has period
+dividing $c\mid d$ exactly when it is a $c$-tuple repeated $d/c$ times, and
+then its product is $\bigl(\prod_{i\le c}x_{w_i}\bigr)^{d/c}$; summing over all
+$c$-tuples gives $\bigl(\sum_v x_v^{\,d/c}\bigr)^{c}=\mathrm{Ps}(m/c)^{c}$.
+M\"obius inversion over the divisor lattice converts ``period dividing'' into
+``period exactly''.
+\end{proof}
+
+\noindent This gives Theorem~\ref{thm:sieve} again, in two lines: summing over
+$d\mid t$ and exchanging the order of summation,
+\[
+\sum_{d\mid t}d\,S_d
+=q\sum_{c\mid t}\mathrm{Ps}(m/c)^{c}\!\!\sum_{c\mid d\mid t}\!\!\mu(d/c)
+=q\,\mathrm{Ps}(m/t)^{t},
+\]
+the inner sum being $1$ at $c=t$ and $0$ otherwise. The counting proof given
+above and this one are both correct; this one says where the theorem comes
+from.
+
+Computationally the difference is decisive. A class now costs $\tau(d)$ power
+sums, each a single loop over the $q^2-1$ vectors, in place of $\lvert
+V\rvert^{d}$ tuples --- so $(7,49)$ at $d=7$, which would have needed $48^{7}$
+tuples, and $(3,27)$ at $d=9$, which would have needed $8^{9}$, become
+immediate.
+
+Proposition~\ref{prop:closed} also settles which $m$ have a single free class.
+
+\begin{proposition}\label{prop:freeone}
+$\mathrm{free}(m)=1$ if and only if $m$ is a power of $p$.
+\end{proposition}
+
+\begin{proof}
+For $m$ odd write $m=p^{a}r$ with $\gcd(r,p)=1$; then
+$\lvert U\rvert=\tau(m/e)=a\,\tau(r)$ and $\tau(m)=(a+1)\tau(r)$, so
+$\mathrm{free}=\tau(r)$, which is $1$ exactly when $r=1$. For $m$ even write
+$m=2^{b}s$ with $b\ge1$ and $s$ odd; then
+$\mathrm{free}=(b+1)\tau(s)-\tau(s/e)\ge2\tau(s)-\tau(s/e)>\tau(s)\ge1$, since
+$\tau(s/e)<\tau(s)$ whenever $e>1$ divides $s$. So no even $m$ qualifies.
+\end{proof}
+
+\noindent The single-free-class behaviour is therefore a property of prime
+powers and not an accident of the divisor count.
+
+The closed form also lets the completeness test be redone with coefficients in
+$\QQ(\zeta_p)$ rather than $\QQ$, by carrying out the elimination in the field
+itself --- inverting through the multiplication matrix on the reduced power
+basis. The nullity again equals $\lvert T\rvert$, now at
+$(p,m)=(3,6),(3,9),(3,15),(3,27),(3,81),(5,25),(7,49)$, the last four of which
+only the closed form makes computable. One caution the first run supplied: at
+odd $m$ a large fraction of sections give $\tr(D^m)=0$ identically, so their
+entire class vector vanishes and contributes nothing to the rank. Sampling a
+fixed range of sections drew only such sections at $m=15,27,81$ and returned
+rank $0$, which looks like a missing relation and is really an empty sample;
+the figures above count \emph{informative} sections.
 
 Finally, the proof's first step is a useful computational tool in its own
 right: whenever $e\mid(m/d)$, a period-$d$ orbit's value is

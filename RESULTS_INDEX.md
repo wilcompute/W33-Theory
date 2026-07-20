@@ -19,9 +19,9 @@ shallow reads caused two retractions) before writing.
 This is a presence index, not an endorsement ledger: a hit may be a proof,
 a reuse, an obstruction, or an explicit retraction.
 
-Indexed **6149** files; **5419** distinctive results
+Indexed **6150** files; **5423** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
-**1951** appear in exactly one file — the sharpest signal.
+**1955** appear in exactly one file — the sharpest signal.
 
 ## Index
 
@@ -4486,8 +4486,8 @@ Indexed **6149** files; **5419** distinctive results
 | `6975` | `analysis/bt1707_qubit_contextuality_ladder.py` |
 | `6976` | `PASS425_429_FIVE_FRONTIERS_RELEASE.md` · `analysis/w33_pass425_exact_extension_smith.py` |
 | `7000` | `analysis/w33_BREAKTHROUGH_151_phi60_higher_cyclotomic.py` · `analysis/w33_pass511_constant_orbit_theorem.py` · `analysis/w33_pass514_sieve_theorem.py` |
-| `7001` | `analysis/w33_pass511_constant_orbit_theorem.py` · `analysis/w33_pass513_character_order_and_weight_share.py` · `analysis/w33_pass514_sieve_theorem.py` |
-| `7005` | `analysis/w33_pass511_constant_orbit_theorem.py` · `analysis/w33_pass513_character_order_and_weight_share.py` · `analysis/w33_pass514_sieve_theorem.py` |
+| `7001` | `analysis/w33_pass511_constant_orbit_theorem.py` · `analysis/w33_pass513_character_order_and_weight_share.py` · `analysis/w33_pass514_sieve_theorem.py` · `analysis/w33_pass517_mobius_closed_form.py` |
+| `7005` | `analysis/w33_pass511_constant_orbit_theorem.py` · `analysis/w33_pass513_character_order_and_weight_share.py` · `analysis/w33_pass514_sieve_theorem.py` · `analysis/w33_pass517_mobius_closed_form.py` |
 | `7008` | `analysis/w33_pass514_sieve_theorem.py` |
 | `7009` | `analysis/2026-07-10_levi_next5_v3.md` · `analysis/w33_pass514_sieve_theorem.py` |
 | `7012` | `analysis/w33_pass511_constant_orbit_theorem.py` |
@@ -4552,6 +4552,7 @@ Indexed **6149** files; **5419** distinctive results
 | `7944` | `analysis/w33_pass148_k3_transport_witness.py` · `docs/index.html` · `exploration/w33_continuum_tail_arithmetic_compatibility_bridge.py` · `exploration/w33_continuum_tail_primitive_generator_bridge.py` · *(+10)* |
 | `7976` | `analysis/BT803_seven_realizations_census.md` · `analysis/bt803_seven_realizations_census.py` · `analysis/w33_MDCCCCIII_MDCCCCXII_oscillator_time_crystal_origami.py` · `analysis/w33_MDCCCXCIII_MDCCCCII_toroidal_polyhedra_deep_dive.py` · *(+5)* |
 | `8000` | `analysis/BT1221_exact_sp43_generator.md` · `analysis/bt1828_runtime_replay_output_path.py` · `analysis/w33_BREAKTHROUGH_281_heegner_j_invariant_substrate_tower.py` · `analysis/w33_BREAKTHROUGH_297_elliptic_curves_F_q_substrate.py` · *(+19)* |
+| `8001` | `analysis/w33_pass517_mobius_closed_form.py` |
 | `8011` | `W36_PAPER.tex` |
 | `8016` | `analysis/2026-07-15_pass92_wrq_landscape.md` |
 | `8021` | `analysis/2026-07-15_pass92_wrq_landscape.md` |
@@ -4646,6 +4647,7 @@ Indexed **6149** files; **5419** distinctive results
 | `9009` | `analysis/w33_heptadecadal_superbeat_trigger.py` · `docs/index.html` |
 | `9063` | `analysis/BT1741_BT1744_execution_summary.md` · `analysis/bt1741_cocycle_local_rigidity.py` |
 | `9070` | `analysis/2026-06-23_full_commit_analysis.md` |
+| `9100` | `analysis/w33_pass517_mobius_closed_form.py` |
 | `9120` | `exploration/PART_CCCXCVIII_GRAPH_POLY_BRIDGE.py` · `scripts/w33_novel_chain15_e8_theta_series.py` |
 | `9122` | `AUDIT_JUL10_11_2026_RECENT_COMMITS_PASS157_192_V5.md` |
 | `9125` | `analysis/PASS449_Q5_CUBIC_SECTION_TAXONOMY.md` |
@@ -4654,6 +4656,8 @@ Indexed **6149** files; **5419** distinctive results
 | `9144` | `analysis/w33_doily_e15_packet_spectrum.py` · `docs/index.html` · `exploration/w33_refinement_bridge_synthesis.py` |
 | `9178` | `analysis/bt911_profile_observable_fitter.py` · `analysis/bt912_measured_data_comparison.py` · `analysis/bt913_sentinel_coordinate_dynamics.py` · `analysis/bt915_external_flavor_anchor_importer.py` · *(+1)* |
 | `9194` | `docs/index.html` · `exploration/w33_a4_rank_one_qutrit_bridge.py` · `exploration/w33_bridge_a4_normalization_bridge.py` · `exploration/w33_u1_family_a4_carrier_bridge.py` · *(+1)* |
+| `9201` | `analysis/w33_pass517_mobius_closed_form.py` |
+| `9205` | `analysis/w33_pass517_mobius_closed_form.py` |
 | `9215` | `analysis/BT1030_k3_ranks_topologically_forced.md` · `analysis/BT998_cp2_level2_edgewise_rank_pipeline.md` |
 | `9216` | `analysis/BT1000_k3_level2_feasibility_gate.md` · `analysis/BT987_cp2_k3_edgewise_conversion.md` · `analysis/BT988_explicit_cp2_k3_edgewise_facets.md` · `analysis/BT989_edgewise_density_constants.md` · *(+7)* |
 | `9240` | `exploration/DEEP_PROBE.py` |
@@ -5005,10 +5009,10 @@ Indexed **6149** files; **5419** distinctive results
 | `509` | `analysis/w33_pass509_cyclic_orbits_and_deviations.py` · `analysis/w33_pass510_orbit_size_decomposition.py` · `analysis/w33_richter_octahedron_cube_memory_dual.py` · `analysis/w33_richter_signed_xmin_face_codec.py` · *(+2)* |
 | `510` | `analysis/BT773_involution_cube_theorem.md` · `analysis/BT822_magic_census_matter_is_magic.md` · `analysis/MILESTONES.md` · `analysis/bt773_involution_cube_theorem.py` · *(+18)* |
 | `513` | `analysis/MILESTONES.md` · `analysis/w33_BREAKTHROUGH_44_hermitian_curve_family.py` · `analysis/w33_pass513_character_order_and_weight_share.py` · `analysis/w33_pass514_sieve_theorem.py` · *(+5)* |
-| `514` | `analysis/MILESTONES.md` · `analysis/w33_admissible_inversion_coupling_operator.py` · `analysis/w33_eisenstein_hurwitz_144_filter.py` · `analysis/w33_eisenstein_hurwitz_radial_shell_fold.py` · *(+10)* |
-| `515` | `PASS123_W33_AXIS_GLUE_E8_LIFT.md` · `analysis/BT1834_BT1836_summary.md` · `analysis/BT1834_correlated_error_stress.md` · `analysis/MILESTONES.md` · *(+9)* |
-| `516` | `analysis/BT732_selector_sibling_exports_certificate.md` · `analysis/MILESTONES.md` · `analysis/w33_admissible_inversion_coupling_operator.py` · `analysis/w33_exact_intertwiner_projector_identity.py` · *(+3)* |
-| `517` | `analysis/BT773_involution_cube_theorem.md` · `analysis/bt773_involution_cube_theorem.py` · `analysis/w33_30_now_octa_cube_memory_braid_lift.py` · `analysis/w33_cl8_local_octa_cube_fold.py` · *(+1)* |
+| `514` | `analysis/MILESTONES.md` · `analysis/w33_admissible_inversion_coupling_operator.py` · `analysis/w33_eisenstein_hurwitz_144_filter.py` · `analysis/w33_eisenstein_hurwitz_radial_shell_fold.py` · *(+11)* |
+| `515` | `PASS123_W33_AXIS_GLUE_E8_LIFT.md` · `analysis/BT1834_BT1836_summary.md` · `analysis/BT1834_correlated_error_stress.md` · `analysis/MILESTONES.md` · *(+10)* |
+| `516` | `analysis/BT732_selector_sibling_exports_certificate.md` · `analysis/MILESTONES.md` · `analysis/w33_admissible_inversion_coupling_operator.py` · `analysis/w33_exact_intertwiner_projector_identity.py` · *(+4)* |
+| `517` | `analysis/BT773_involution_cube_theorem.md` · `analysis/MILESTONES.md` · `analysis/bt773_involution_cube_theorem.py` · `analysis/w33_30_now_octa_cube_memory_braid_lift.py` · *(+4)* |
 | `518` | `W36_PAPER.tex` · `analysis/w33_eisenstein_hurwitz_144_filter.py` · `analysis/w33_eisenstein_hurwitz_radial_shell_fold.py` · `exploration/w33_clean_pair_character_generation_bridge.py` · *(+12)* |
 | `519` | `analysis/w33_exact_intertwiner_projector_identity.py` · `analysis/w33_projector_arithmetic_eigenvalue_derivation.py` |
 | `521` | `analysis/w33_eisenstein_hurwitz_144_filter.py` · `analysis/w33_np_horizon_complexity.py` · `analysis/w33_spectral_action_einstein_hilbert.py` · `exploration/PASCAL_CONSTANTS_BRIDGE.py` |
