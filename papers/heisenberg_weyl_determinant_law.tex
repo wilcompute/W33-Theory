@@ -694,6 +694,55 @@ the two relations leaves
 a relation at \emph{even} $m$ that is not an individual vanishing: neither
 $S_3$ nor $S_6$ is zero on its own in any section sampled.
 
+\subsection{How much the sieve pins}
+
+Since Pass 510 the standing verdict has been that the orbit account is
+\emph{partial}. Theorem~\ref{thm:sieve} makes that a dimension count.
+
+\begin{proposition}\label{prop:rank}
+The sieve system on the unknowns $\{S_d:d\mid m\}$ has rank $\lvert T\rvert$.
+Hence, with $U=\{u\mid m:\ u \text{ odd},\ e\mid u\}$,
+\[
+\mathrm{pinned}(m)=\lvert U\rvert,\qquad
+\mathrm{free}(m)=\tau(m)-\lvert U\rvert ,
+\]
+and writing $m=2^{b}s$ with $s$ odd,
+$\mathrm{free}(m)=(b+1)\tau(s)-\tau(s/e)$ when $e\mid s$, and $\tau(m)$
+otherwise.
+\end{proposition}
+
+\begin{proof}
+Relation $t$ involves exactly the $S_d$ with $d\mid t$, and $S_t$ occurs in
+relation $t$ and in no relation indexed by a proper divisor of $t$. So along
+any linear extension of divisibility the system is triangular with nonzero
+diagonal entries $t$, and its rank is the number of relations, $\lvert
+T\rvert=\lvert U\rvert$. The closed form is the divisor count
+$\lvert U\rvert=\tau(s/e)$ when $e\mid s$ and $0$ otherwise, together with
+$\tau(m)=(b+1)\tau(s)$.
+\end{proof}
+
+\noindent Checked against the rank of the actual matrix over $\QQ$ for
+$e\in\{3,5,7,9,25,27\}$ and $m\le60$. At a prime power $m=p^{j}$ the count is
+$\mathrm{free}=1$: the sieve pins $j$ of the $j+1$ classes and leaves only the
+free class $d=m$. So the whole Legendre tower above the first increment sits in
+a single class, in which no cancellation between classes can occur; the orbit
+weight supplies $j$ of the $\sum_i\lfloor m/p^i\rfloor$ terms and the orbit sum
+must supply $0,2,10,36$ at $p=3$ for $j=1,2,3,4$. That is the sharpest form we
+have of what remains unproved.
+
+The sieve also survives where the determinant law does not. Its proof uses only
+$e\mid(m/d)$, which holds over $\ZZ/p^{n}$ exactly as over a field, and nothing
+in it uses \eqref{eq:factorial}; the relations are verified to hold at
+$\ZZ/9$, $\ZZ/25$ and $\ZZ/27$. That separates the structural facts that
+survive the failure from the arithmetic one that does not.
+
+It is tempting to go further and read the failure depths $12,30,36$ as a shadow
+of how much the sieve leaves free. \emph{They are not.} At the relevant
+exponent $m=q$ the free counts are $2,2,3$ at $\ZZ/9,\ZZ/25,\ZZ/27$, so
+$\ZZ/9$ and $\ZZ/25$ share a free count while their depths differ by $18$; no
+function of the free count alone can produce both. We record the candidate as
+refused. The depths still match $p^{n-1}(p+1)$ exactly and remain unexplained.
+
 Finally, the proof's first step is a useful computational tool in its own
 right: whenever $e\mid(m/d)$, a period-$d$ orbit's value is
 $q\prod_i d_{w_i}^{\,m/d}$ with no matrix products at all. Checked against the

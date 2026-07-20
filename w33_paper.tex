@@ -14237,6 +14237,10 @@ THE SIEVE: $t\mid m$, $m/t$ odd, $e\mid(m/t)\Rightarrow\sum_{d\mid t}dS_d=0$ & \
 odd/even divide $=$ whether $T=\{t\}$ is downward closed & \textsc{thm} & P514 & this programme (Möbius inversion runs iff $m$ odd) \\
 new constraint at even $m$: $3S_3+6S_6=0$ at $m{=}18$, neither alone & \textsc{cert} & P514 & this programme ($\lvert T\rvert{=}2$) \\
 shortcut $q\prod d^{m/d}$ exact on $15{,}616$ orbits; $e{=}25,27$ confirmed & \textsc{cert} & P514 & this programme (validated before use) \\
+sieve rank $=\lvert T\rvert$; $\mathrm{free}(m)=\tau(m)-\#\{u\mid m: u$ odd$, e\mid u\}$ & \textsc{thm} & P515 & this programme (triangular; rank checked over $\mathbf Q$) \\
+$\mathrm{free}(p^j)=1$: the whole tower above increment 1 sits in one class & \textsc{thm} & P515 & this programme (orbit sum owes $0,2,10,36$ at $p{=}3$) \\
+the sieve survives the failure region ($\ZZ/9,\ZZ/25,\ZZ/27$) & \textsc{cert} & P515 & this programme (its proof never uses the law) \\
+REFUSED: failure depth is \emph{not} a function of the free count & \textsc{cert} & P515 & this programme ($\ZZ/9,\ZZ/25$ share free $2$, depths $12,30$) \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -15276,5 +15280,45 @@ collapsing the concatenation joins raises the locatable count from $115$ to
 $132$ of $274$, still under half.  What \emph{is} closed is the intake:
 \texttt{check\_mechanism\_claims.py} gained a \texttt{--staged} mode, so a new
 unmarked causal claim cannot quietly join the backlog.
+
+\paragraph{Pass 515 --- how much the sieve pins, and one candidate refused.}
+Since Pass 510 the standing verdict has been that the orbit account is
+\emph{partial}.  The sieve turns that into a dimension count.
+
+The unknowns are the $\tau(m)$ classes $S_d$; relation $t$ involves exactly the
+$S_d$ with $d\mid t$, and $S_t$ occurs in relation $t$ and in none indexed by a
+proper divisor of $t$.  So along any linear extension of divisibility the system
+is triangular with nonzero diagonal entries $t$, and its rank is the number of
+relations.  With $U=\{u\mid m: u\text{ odd},\ e\mid u\}$,
+\[
+\mathrm{pinned}(m)=\lvert U\rvert,\qquad
+\mathrm{free}(m)=\tau(m)-\lvert U\rvert,
+\]
+and writing $m=2^{b}s$ with $s$ odd, $\mathrm{free}(m)=(b+1)\tau(s)-\tau(s/e)$
+when $e\mid s$ and $\tau(m)$ otherwise.  Verified against the rank of the actual
+matrix over $\mathbf{Q}$ for $e\in\{3,5,7,9,25,27\}$ and $m\le60$.
+
+At a prime power the count is $1$: the sieve pins $j$ of the $j+1$ classes at
+$m=p^{j}$ and leaves only the free class $d=m$.  The whole Legendre tower above
+the first increment therefore sits in a single class in which no cancellation
+between classes can occur --- the orbit weight supplies $j$ of the
+$\sum_i\lfloor m/p^i\rfloor$ terms and the orbit sum must supply
+$0,2,10,36$ at $p=3$ for $j=1,2,3,4$.  That is the sharpest form we have of
+what is left to prove.
+
+The sieve also survives where the determinant law fails.  Its proof uses only
+$e\mid(m/d)$, which holds over $\ZZ/p^{n}$ exactly as over a field, and nothing
+in it uses the factorial law; the relations are verified at $\ZZ/9$, $\ZZ/25$
+and $\ZZ/27$.  That separates the structural facts that survive the failure
+region from the arithmetic one that does not.
+
+\emph{And one candidate is refused.}  It is tempting to read the failure depths
+$12,30,36=p^{n-1}(p+1)$ as a shadow of how much the sieve leaves free there.
+They are not: at the relevant exponent $m=q$ the free counts are $2,2,3$, so
+$\ZZ/9$ and $\ZZ/25$ share a free count while their depths differ by $18$, and
+no function of the free count alone can produce both.  Recorded as an
+eliminated candidate rather than as a near miss --- this programme has retracted
+two mechanisms that merely fitted, and one that does not even fit should not
+survive a paragraph.  The depths remain unexplained.
 
 \end{document}
