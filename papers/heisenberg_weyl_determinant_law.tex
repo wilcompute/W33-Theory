@@ -498,9 +498,16 @@ since $\vlam(q!)=q-1$ for prime $q$, \eqref{eq:factorial} collapses to
 $\vlam(\tr D^q)=3q-1$, reproducing $8,14,20,32$ at $q=3,5,7,11$.
 
 Since $3q-1\ge2q+2$ for every $q\ge3$, this settles the residual numerically.
-It also identifies the mechanism: the factorial is exactly what Newton's
-identities divide by, so what looked like a Frobenius signature at prime $q$ is
-the arithmetic of $m!$ inside the Newton recursion.
+
+We do \emph{not} claim to know why \eqref{eq:factorial} holds. One tempting
+story --- that the $m!$ is what Newton's identities divide by --- is wrong:
+Newton computes the $e_k$ \emph{from} the $p_m$, whereas the $p_m=\tr D^m$ are
+primary traces computed with no division at all, so no factorial can enter that
+way. A mechanism with the right shape is the classical congruence
+$\tr(M^{p^k})\equiv\tr(M^{p^{k-1}})\pmod{p^k}$ for integral $M$, which with
+$\tr D=0$ forces $\tr(D^{p^k})\equiv0 \pmod{p^k}$ and accumulates exactly as
+Legendre's $v_p(m!)=\sum_i\lfloor m/p^i\rfloor$; but we have verified only its
+first step, and do not assert it accounts for the whole profile.
 
 Two further facts sharpen this. First, \eqref{eq:factorial} \emph{implies} the
 determinant law. At $m=q$ it reads $\vlam(\tr D^q)=2q+\vlam(q!)$; Newton's
