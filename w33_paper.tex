@@ -14233,6 +14233,10 @@ odd-class vanishing is indexed by the CHARACTER ORDER $e$, not by $p$ & \textsc{
 propagation: $m{=}jp\Rightarrow\sum_{d\mid j}dS_d=q(\sum_v d_v^p)^j=0$ & \textsc{thm} & P513 & this programme (first general statement at even $m$) \\
 weight's share of the Legendre tower: $1,\ \tfrac12,\ \tfrac3{13}$ at $p{=}3$ & \textsc{cert} & P513 & this programme (quantified limit on the mechanism) \\
 $d$-pair minimal support: nonvanishing in $6/6$ cells where the hypothesis fails & \textsc{cert} & P513 & this programme (recipe, not an induction) \\
+THE SIEVE: $t\mid m$, $m/t$ odd, $e\mid(m/t)\Rightarrow\sum_{d\mid t}dS_d=0$ & \textsc{thm} & P514 & this programme (P511 and P513 are corollaries) \\
+odd/even divide $=$ whether $T=\{t\}$ is downward closed & \textsc{thm} & P514 & this programme (Möbius inversion runs iff $m$ odd) \\
+new constraint at even $m$: $3S_3+6S_6=0$ at $m{=}18$, neither alone & \textsc{cert} & P514 & this programme ($\lvert T\rvert{=}2$) \\
+shortcut $q\prod d^{m/d}$ exact on $15{,}616$ orbits; $e{=}25,27$ confirmed & \textsc{cert} & P514 & this programme (validated before use) \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -15216,5 +15220,61 @@ test; the fix has to happen in the producer.  Mapping each flagged certificate
 to the analysis file that writes it gives $196$ certificates carrying $342$
 claims, of which $128$ have a located producer and $68$ are third-stream or
 legacy artefacts that cannot be fixed from this track.
+
+\paragraph{Pass 514 --- the sieve theorem: one statement replaces two.}
+Passes 511 and 513 proved two things that turn out to be one thing seen at two
+values of a parameter.
+
+\begin{quote}
+\textbf{Theorem (the sieve).}  Let $e$ be the order of the generating character
+and let $t\mid m$ satisfy: $m/t$ odd and $e\mid(m/t)$.  Then
+$\sum_{d\mid t} d\,S_d = q\bigl(\sum_{v\neq0}d_v^{\,m/t}\bigr)^{t}=0$.
+\end{quote}
+
+\noindent Put $n=m/t$.  For $d\mid t$ one has $n\mid(m/d)$, hence
+$e\mid(m/d)$, so a period-$d$ representative has $M^{m/d}=I$ and the zero-sum
+condition is automatic; the orbit's value is therefore
+$q\prod_{i\le d}d_{w_i}^{\,m/d}=\prod_{i\le t}d_{w_i}^{\,n}$ over the repeated
+$t$-tuple.  Since $d\,S_d$ counts each period-$d$ orbit once per distinct
+$t$-tuple in it, summing over $d\mid t$ sweeps every $t$-tuple exactly once and
+gives $q(\sum_v d_v^{\,n})^{t}$, whose bracket vanishes because $n$ is odd and
+$e\mid n$.
+
+Write $T=\{t\mid m: m/t \text{ odd},\ e\mid(m/t)\}$.  For $m$ \emph{odd} $T$ is
+exactly the divisors of $m/e$ --- downward closed --- so M\"obius inversion
+gives $S_1=0$ and then $t\,S_t=-\sum_{d\mid t,d<t}d\,S_d=0$ for every
+$t\mid(m/e)$: \textbf{the odd-class vanishing theorem is a corollary}.  For $m$
+\emph{even} $T$ is not downward closed --- at $m=jp$ only $t=j$ survives --- and
+the theorem degenerates to Pass 513's propagation relation.  The odd/even
+divide, which had looked like two separate phenomena, is the question of
+whether a divisor set is downward closed.
+
+When $\lvert T\rvert>1$ the sieve reaches constraints neither corollary does.
+At $m=18$ with $e=3$, $T=\{2,6\}$ and subtracting the two relations leaves
+$3S_3+6S_6=0$ --- a relation at \emph{even} $m$ that is not an individual
+vanishing, since neither $S_3$ nor $S_6$ is zero alone in any section sampled.
+Separately, the sieve's individual-vanishing prediction is measured to be
+exactly the vanishing that holds in \emph{every} section: classes that vanish
+in some sections only (the $d=3$ class at $(3,6)$) are section accidents, and
+the sieve correctly does not predict them.
+
+The proof's first step doubles as a computational tool.  Whenever $e\mid(m/d)$
+a period-$d$ orbit's value is $q\prod_i d_{w_i}^{\,m/d}$ with \emph{no matrix
+products}; validated against the honest matrix computation on $15{,}616$ orbits
+over $\FF_3,\FF_5$ and on the constant class over $\ZZ/9$ before anything
+relied on it, it puts $\ZZ/25$ and $\ZZ/27$ --- $624$ and $728$ vectors with
+$25\times25$ and $27\times27$ blocks --- within reach, confirming the
+character-order form at a second $p^2$ and a first $p^3$.
+
+Two honest negatives.  The backlog patch is \emph{emitted, not applied}: each
+entry names a producing script and a source fragment, but applying it means
+re-running every producer, and a \texttt{--check} drift failure in an unrelated
+pass would be indistinguishable from a real regression.  And the fragments are
+harder to locate than expected --- certificate strings are assembled from
+adjacent string literals, so a fragment usually straddles a source line break;
+collapsing the concatenation joins raises the locatable count from $115$ to
+$132$ of $274$, still under half.  What \emph{is} closed is the intake:
+\texttt{check\_mechanism\_claims.py} gained a \texttt{--staged} mode, so a new
+unmarked causal claim cannot quietly join the backlog.
 
 \end{document}

@@ -643,36 +643,65 @@ ingredient of \eqref{eq:factorial} with a proof rather than a measurement. It
 uses inverse closure, the same hypothesis that rescues the first power sum
 (Lemma~\ref{lem:parity}) and the top exterior power.
 
-Theorem~\ref{thm:oddclass} says nothing when $m$ is even. What does say
-something there is that the $m=p$ vanishing \emph{propagates}.
+Theorem~\ref{thm:oddclass} says nothing when $m$ is even. Both it and the even
+case are consequences of one statement.
 
-\begin{theorem}[propagation]\label{thm:propagation}
-Let $m=jp$ with $j\ge1$. Then
+\begin{theorem}[the sieve]\label{thm:sieve}
+Let $e$ be the order of the generating character and let $t\mid m$ satisfy:
+$m/t$ is odd and $e\mid(m/t)$. Then
 \[
-\sum_{d\mid j} d\,S_d \;=\; q\Bigl(\sum_{v\neq0}d_v^{\,p}\Bigr)^{j}\;=\;0 .
+\sum_{d\mid t} d\,S_d \;=\; q\Bigl(\sum_{v\neq0}d_v^{\,m/t}\Bigr)^{t}\;=\;0 .
 \]
 \end{theorem}
 
 \begin{proof}
-Let $d\mid j$ and let $(w_1,\dots,w_d)$ represent a period-$d$ orbit of
-$m$-tuples; every such orbit is a $j$-tuple pattern repeated $p$ times. Put
-$M=\rho_{w_1}\cdots\rho_{w_d}=\zeta^{s}\rho(w)$ with $w=\sum_i w_i$. Then
-$M^{m/d}=\zeta^{s\,pj/d}\rho\bigl((pj/d)w\bigr)=I$, because $p$ divides $pj/d$
-and so kills both the phase and the argument; hence $\tr(M^{m/d})=q$ and the
-orbit's value is $q\prod_{i\le d}d_{w_i}^{\,p}$. Summing over all $j$-tuples
-and grouping them by cyclic orbit reproduces $\sum_{d\mid j}d\,S_d$ on the left
-and $\bigl(\sum_v d_v^{\,p}\bigr)^{j}$ on the right. The bracket is the $m=p$
-constant class, zero by Theorem~\ref{thm:oddclass}.
+Put $n=m/t$. For $d\mid t$ we have $n\mid(m/d)$, hence $e\mid(m/d)$, so a
+period-$d$ representative $(w_1,\dots,w_d)$ has
+$M^{m/d}=\zeta^{s\,m/d}\rho\bigl((m/d)w\bigr)=I$ and the zero-sum condition
+$(m/d)\sum_i w_i=0$ is automatic. So $\tr(M^{m/d})=q$ and the orbit's value is
+$q\prod_{i\le d}d_{w_i}^{\,m/d}$, which is $\prod_{i\le t}d_{w_i}^{\,n}$ read
+over the repeated $t$-tuple. Since $d\,S_d$ counts each period-$d$ orbit once
+per distinct $t$-tuple in it, summing over $d\mid t$ sweeps every $t$-tuple
+exactly once and gives $q\bigl(\sum_v d_v^{\,n}\bigr)^{t}$. The bracket
+vanishes because $n$ is odd and $e\mid n$: $(u-1)^n$ is purely imaginary and
+inverse closure pairs $v$ with $-v$.
 \end{proof}
 
-So at every multiple of $p$ the classes whose period divides $j=m/p$ cancel
-exactly, and only those $d\mid m$ with $d\nmid j$ survive. At $m=2p$ this says
-$S_1+2S_2=0$ identically --- verified exactly at $(p,m)=(3,6)$, $(5,10)$ and
-$(7,14)$, and the identity itself at $j$ up to $5$ --- so the residual at $m=2p$
-lives entirely in the class $d=p$, which $j=2$ does not reach. This also
-corrects a reading in an earlier draft, which lumped $d=3$ together with
-$d=1,2$ at $(3,6)$ and concluded that the short aggregate generically sits
-below the total; the aggregate over $d\mid j$ is not merely small but zero.
+Write $T=\{\,t\mid m:\ m/t\ \text{odd},\ e\mid(m/t)\,\}$. For $m$ \emph{odd},
+$T$ is exactly the set of divisors of $m/e$ --- downward closed --- so
+M\"obius inversion runs: $t=1$ gives $S_1=0$, and then
+$t\,S_t=-\sum_{d\mid t,\,d<t}d\,S_d=0$ for every $t\mid(m/e)$. That is
+precisely the hypothesis of Theorem~\ref{thm:oddclass}, so the odd-class
+vanishing theorem is a corollary. For $m$ \emph{even}, $T$ is not downward
+closed --- at $m=jp$ only $t=j$ survives --- and Theorem~\ref{thm:sieve}
+degenerates to the single relation $\sum_{d\mid j}d\,S_d=0$. One theorem covers
+both, and the difference between the odd and even cases becomes the question of
+whether a divisor set is downward closed.
+
+At $m=2p$ the relation reads $S_1+2S_2=0$ identically --- verified exactly at
+$(p,m)=(3,6)$, $(5,10)$, $(7,14)$ --- so the residual there lives entirely in
+the class $d=p$, which $t=2$ does not reach. This corrects a reading in an
+earlier draft, which lumped $d=3$ together with $d=1,2$ at $(3,6)$ and concluded
+that the short aggregate generically sits below the total; the aggregate over
+$d\mid t$ is not merely small but zero.
+
+When $\lvert T\rvert>1$ the theorem gives constraints neither of its two
+corollaries reaches. At $m=18$ with $e=3$ one has $T=\{2,6\}$, and subtracting
+the two relations leaves
+\[
+3S_3+6S_6=0 ,
+\]
+a relation at \emph{even} $m$ that is not an individual vanishing: neither
+$S_3$ nor $S_6$ is zero on its own in any section sampled.
+
+Finally, the proof's first step is a useful computational tool in its own
+right: whenever $e\mid(m/d)$, a period-$d$ orbit's value is
+$q\prod_i d_{w_i}^{\,m/d}$ with no matrix products at all. Checked against the
+honest matrix computation on $15{,}616$ orbits over $\FF_3,\FF_5$ and on the
+constant class over $\ZZ/9$, it is what puts $\ZZ/25$ and $\ZZ/27$ --- $624$
+and $728$ vectors carrying $25\times25$ and $27\times27$ blocks --- within
+reach, and there the character-order form of the hypothesis is confirmed at a
+second $p^2$ and a first $p^3$.
 
 The orbit account is therefore partial for a sharper reason than ``the even
 case is untouched'': what remains unexplained at $m=jp$ is exactly the classes

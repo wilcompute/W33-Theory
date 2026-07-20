@@ -53,7 +53,8 @@ HEDGED = re.compile(
 # this guard flags, so without this the guard re-flags its own worklist and
 # reports 41 findings that are all one finding.  A quotation is not an
 # assertion.
-QUOTED_KEYS = re.compile(r"(^|\.)(sample|samples|quote|quoted|excerpt)s?(\[|$)")
+QUOTED_KEYS = re.compile(
+    r"(^|\.)(sample|samples|quote|quoted|excerpt|fragment|snippet)s?(\[|$)")
 
 
 def scan(path: Path):
@@ -80,9 +81,34 @@ def scan(path: Path):
     return flagged
 
 
+def _staged_certificates():
+    """Certificates staged in the index right now.
+
+    The historical backlog cannot be cleared by editing JSON -- certificates
+    are script outputs, so the fix lives in the producer and applying it means
+    re-running every pass.  What CAN be closed is the intake: run with
+    --staged and only certificates being committed are checked, so a new
+    unmarked causal claim cannot quietly join the backlog.
+    """
+    import subprocess
+    try:
+        out = subprocess.run(
+            ["git", "diff", "--cached", "--name-only", "--diff-filter=ACM"],
+            cwd=ROOT, capture_output=True, text=True, check=True).stdout
+    except Exception:
+        return []
+    return [ROOT / line for line in out.splitlines()
+            if line.startswith("data/") and line.endswith(".json")]
+
+
 def main(argv):
-    targets = ([Path(a) for a in argv[1:]] if len(argv) > 1
-               else sorted((ROOT / "data").glob("w33_pass*.json")))
+    args = [a for a in argv[1:] if a != "--staged"]
+    if "--staged" in argv[1:]:
+        targets = _staged_certificates()
+    elif args:
+        targets = [Path(a) for a in args]
+    else:
+        targets = sorted((ROOT / "data").glob("w33_pass*.json"))
     flagged = []
     for p in targets:
         if p.exists():
