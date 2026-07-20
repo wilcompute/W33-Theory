@@ -14219,6 +14219,8 @@ factorial law \textbf{exact at $80/80$} exponents at $|R|{=}81$ & \textsc{cert} 
 cyclic-orbit structure verified: rotation-invariant, decomposition exact & \textsc{cert} & P509 & this programme (3rd candidate, and PRESENT) \\
 failure deviations purely below at $\ZZ/9,25,27$: minima $-16,-96,-208$ & \textsc{cert} & P509 & this programme (8 sections each) \\
 mechanism guard sweep: $79/339$ certificates carry unmarked causal claims & \textsc{cert} & P509 & this programme (advisory backlog) \\
+orbit account \emph{exact} at $m{=}p$: constant orbits vanish identically & \textsc{cert} & P510 & this programme (first Legendre increment) \\
+orbit account \emph{fails} at $m{=}2p$: classes cancel by $4$ orders & \textsc{cert} & P510 & this programme (partial mechanism only) \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -15010,5 +15012,31 @@ not a violation, and vanishes with more sections.  \emph{(iv) Housekeeping.}
 The mechanism guard, run over the whole corpus, flags $79$ of $339$
 certificates as carrying a causal claim that cites neither a proof nor a
 candidate tag --- an advisory backlog, recorded rather than acted on here.
+
+\paragraph{Pass 510 --- how far the orbit account actually reaches.}
+Pass 509 verified that the cyclic-orbit decomposition
+$\operatorname{tr}(D^m)=\sum_{d\mid m}d\,S_d$ is exact, and offered it as a
+mechanism that is at least \emph{present}.  The question that decides whether
+it can become a proof is whether the classes individually carry the valuation,
+or whether the total only reaches its value through cancellation between them.
+The answer is split, and the split is informative.
+
+\emph{At $m=p$ the account is exact.}  The period-one (constant) orbits sum to
+\emph{zero identically} --- an exact structural vanishing, not a near one ---
+and the free class alone carries the total, its weight $d=m=p$ contributing
+precisely $v_\lambda(p)$, which is the first Legendre increment of
+$v_\lambda(m!)$.  Measured: at $(p,m)=(3,3)$ the total is $10$ and the minimum
+class is $10$; at $(5,5)$ both are $16$.
+
+\emph{At $m=2p$ it is not.}  At $(3,6)$ the period-one and period-two classes
+both sit at valuation $8$ while the total is $12$: four orders arise from
+cancellation \emph{between} classes, which the decomposition does not explain.
+
+So the orbit structure accounts for the first increment of the factorial law
+and not the later ones.  That is a partial mechanism, and it is recorded as
+exactly that --- the discipline this programme adopted after two explanations
+that merely fitted had to be retracted.  (A first draft of this computation
+multiplied by a spurious factor $q$; the rebuild check against the direct trace
+caught it before any number was read.)
 
 \end{document}
