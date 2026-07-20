@@ -14211,6 +14211,10 @@ law holds over the noncommutative \emph{local} $\FF_9[\theta]$: depth $12$ & \te
 factorial law exact at $|R|{=}27$: $26/26$, all nine Legendre steps & \textsc{cert} & P507 & this programme (sharpest test) \\
 factorial law fails \emph{from below} in the failure region & \textsc{cert} & P507 & this programme (same locus, shared cause) \\
 ``factorial law falsified at $|R|{=}27$'' & \textsc{killed} & P507 & self-correction: test used $q{-}1$ for $v_\lambda(q)$ \\
+``the $m!$ is what Newton divides by'' & \textsc{killed} & P508 & self-correction: $p_m$ are primary traces \\
+Witt congruence holds but is \emph{vacuous} ($22$ vs guarantee $4$) & \textsc{cert} & P508 & this programme (2nd candidate eliminated) \\
+factorial law not falsified at $|R|{=}81$: $0/160$ below prediction & \textsc{cert} & P508 & this programme (sharpest test) \\
+failure region deviates \emph{below}: $\ZZ/9$ deltas $\le0$, growing & \textsc{cert} & P508 & this programme (contradicts P487 story) \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -14950,5 +14954,33 @@ test wrote the leading term as $q-1$ rather than $v_\lambda(q)$ --- equal only
 for prime $q$ --- and appeared to \emph{falsify} the factorial law at $|R|=27$
 by a constant $20=26-v_\lambda(27)$.  The constancy of the offset gave it away.
 The statement in Pass 506's paragraph above has been corrected accordingly.
+
+\paragraph{Pass 508 --- a mechanism retracted, a second candidate eliminated,
+and the sharpest test survived.}
+\emph{(i) The retraction.}  Passes 506/507 explained the factorial law by
+saying the $m!$ ``is what Newton's identities divide by''.  \textbf{That is
+unsound.}  Newton computes the $e_k$ \emph{from} the power sums; the
+$p_m=\operatorname{tr}D^m$ are primary traces, computed with no division at
+all, so no factorial can enter that way.  A derivation was asserted where only
+an association had been observed.  The empirical law is untouched --- excess
+exactly $v_\lambda(m!)$ wherever measured --- but the explanation is withdrawn
+and both papers now say the mechanism is not identified.  \emph{(ii) The
+replacement candidate also fails.}  We proposed the classical congruence
+$\operatorname{tr}(M^{p^k})\equiv\operatorname{tr}(M^{p^{k-1}})\pmod{p^k}$,
+which has Legendre's shape.  At $k=2$ over $\FF_9$ it \emph{holds} --- and is
+\emph{vacuous}: both traces already carry valuation $\ge10$ against a modulus
+of $v_\lambda(9)=4$, so the congruence constrains nothing.  Two candidates
+eliminated; the cause is genuinely open.  \emph{(iii) The sharpest test.}  At
+$|R|=81$, over $\FF_{81}$ and $\FF_3[x]/(x^4)$, $160$ measured exponents give
+\textbf{zero observations below the prediction} (points above it are expected,
+the profile being a minimum over only three sampled sections at $81\times81$).
+The law is not falsified where it is most exposed.  \emph{(iv) A third story
+contradicted.}  Over $\ZZ/9$ the deviations are $0,-4,-6,-6,-12,-12,-10,-16$
+--- uniformly \emph{below} and growing, i.e.\ \emph{more} cancellation than the
+law allows.  That is the opposite sign from Pass 487's ``Newton's divisions
+cost more'' account of the failure region, which is therefore also unproven.
+Finally, \texttt{scripts/check\_mechanism\_claims.py} now flags any certificate
+sentence asserting a cause without citing a proof or marking itself a
+candidate; it was validated by catching the exact wording retracted here.
 
 \end{document}

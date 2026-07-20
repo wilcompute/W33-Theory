@@ -259,6 +259,16 @@ Pass 507 (`analysis/w33_pass507_factorial_law_reduction.py`, 8/8 exact):
 4. **CORRECTION to the Pass 506 statement:** the leading term is **`v_λ(q)`, not `q−1`** (equal only for prime q). Both papers corrected.
 5. **NEAR-MISS worth recording:** the first run of this test used `q−1` and appeared to **falsify** the factorial law at |R|=27 — by a *constant* 20 = 26 − v_λ(27). The constancy of the offset gave away that the bug was in the test, not the law. Had I trusted the first run I would have retracted a correct result.
 
+## Pass 508 addendum (python track) — a mechanism retracted, a second candidate eliminated, the sharpest test survived
+
+Pass 508 (`analysis/w33_pass508_mechanism_audit_and_q81.py`, 5/5 exact):
+
+1. **RETRACTION OF A MECHANISM, NOT A RESULT.** P506/507 said the factorial law's `m!` "is what Newton's identities divide by." **Unsound**: Newton computes `e_k` *from* the power sums, and the `p_m = tr(D^m)` are **primary traces with no division**, so no factorial can enter that way. The empirical law is untouched; the explanation is withdrawn, and both papers now say the mechanism is **not identified**.
+2. **THE REPLACEMENT CANDIDATE ALSO FAILS.** The Dwork/Witt congruence `tr(M^{p^k}) ≡ tr(M^{p^{k−1}}) mod p^k` has Legendre's shape, but at k=2 over 𝔽₉ it **holds vacuously**: both traces already carry valuation ≥ 10 against a modulus of `v_λ(9) = 4`. It constrains nothing. **Two candidates eliminated; the cause is genuinely open.**
+3. **SHARPEST TEST SURVIVED.** At |R| = 81 over 𝔽₈₁ and 𝔽₃[x]/(x⁴): **160 exponents, zero below the prediction** (points above are expected — the profile is a minimum over only 3 sampled sections at 81×81). Not falsified where most exposed.
+4. **A THIRD STORY CONTRADICTED.** ℤ/9 deviations are `0, −4, −6, −6, −12, −12, −10, −16` — uniformly **below** and growing, i.e. *more* cancellation than the law allows. Opposite sign to Pass 487's "Newton's divisions cost more" account of the failure region, which is therefore also unproven.
+5. **NEW GUARD `scripts/check_mechanism_claims.py`** — flags any certificate string asserting a cause without citing a proof or marking itself a candidate. Advisory only (blocking trains `--no-verify`). Validated by catching the exact P506 wording retracted here. **Twice in one session a merely-fitting explanation reached the papers; this makes the check routine.**
+
 ## Deferred
 
 - m=6 Coxeter–Todd rung of the QR tower (`data/m6_handoff_k12.json`).
