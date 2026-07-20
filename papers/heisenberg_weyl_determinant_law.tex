@@ -507,7 +507,9 @@ way. A mechanism with the right shape is the classical congruence
 $\tr(M^{p^k})\equiv\tr(M^{p^{k-1}})\pmod{p^k}$ for integral $M$, which with
 $\tr D=0$ forces $\tr(D^{p^k})\equiv0 \pmod{p^k}$ and accumulates exactly as
 Legendre's $v_p(m!)=\sum_i\lfloor m/p^i\rfloor$; but we have verified only its
-first step, and do not assert it accounts for the whole profile.
+first step, and do not assert it accounts for the whole profile. One ingredient
+\emph{is} now proved --- the $[m\text{ odd}]$ bracket, in
+\S\ref{sec:oddclass} below.
 
 Two further facts sharpen this. First, \eqref{eq:factorial} \emph{implies} the
 determinant law. At $m=q$ it reads $\vlam(\tr D^q)=2q+\vlam(q!)$; Newton's
@@ -523,6 +525,73 @@ Second, \eqref{eq:factorial} has been tested at $|R|=27$ over both $\FF_{27}$
 and $\FF_3[x]/(x^3)$, matching \emph{exactly} at all $26$ exponents and across
 all nine increments of $\vlam(m!)$ --- including the double steps at $m=9,18$
 and the triple at $m=27$ predicted by Legendre's formula.
+
+\subsection{One ingredient, proved: the odd-class vanishing}
+\label{sec:oddclass}
+
+Expanding $\tr(D^m)$ over $m$-tuples $(v_1,\dots,v_m)$ of total displacement
+zero, the summand is invariant under cyclic rotation, so the trace decomposes
+over the cyclic orbits,
+\[
+\tr(D^m)\;=\;\sum_{d\mid m} d\,S_d ,\qquad
+S_d=\sum_{\text{orbits of minimal period }d}\ \text{value at a representative}.
+\]
+The following says that at odd $m$ most of these classes are not merely small
+but identically zero.
+
+\begin{theorem}[odd-class vanishing]\label{thm:oddclass}
+Write $m=dk$. If $m$ is odd and $p\mid k$, then $S_d=0$ identically, for every
+inverse-closed section.
+\end{theorem}
+
+\begin{proof}
+Since $m=dk$ is odd, both $d$ and $k$ are odd. Let $(v_1,\dots,v_d)$ represent
+an orbit of minimal period $d$ and put $M=\rho_{v_1}\cdots\rho_{v_d}$. By the
+Heisenberg cocycle $M=\zeta^{s}\rho(w)$ with $w=\sum_i v_i$, so
+$M^{k}=\zeta^{ks}\rho(kw)$; as $p\mid k$ this kills both the phase and the
+argument, giving $M^{k}=I$ and $\tr(M^{k})=q\in\ZZ$.
+
+The coefficient of the orbit is $\prod_{i\le d}(u_i-1)^{k}$ with each $u_i$ a
+$p$-th root of unity. For $u=e^{2\pi\mathrm{i}j/p}$ one has
+$u-1=e^{\mathrm{i}\pi j/p}\,2\mathrm{i}\sin(\pi j/p)$, hence
+\[
+(u-1)^{k}=e^{\mathrm{i}k\pi j/p}\,(2\mathrm{i})^{k}\sin^{k}(\pi j/p),
+\]
+which is purely imaginary exactly when $\tfrac{k-1}{2}+\tfrac{kj}{p}\in\ZZ$ for
+every $j$, i.e.\ exactly when $k$ is odd and $p\mid k$ --- our hypothesis. A
+product of $d$ purely imaginary numbers is purely imaginary because $d$ is odd.
+
+Finally, inverse closure gives $c(-v)=-c(v)$, hence $d_{-v}=\overline{d_v}$, so
+the orbit of $(v_1,\dots,v_m)$ pairs with that of $(-v_1,\dots,-v_m)$ and the
+two together contribute $q\cdot 2\operatorname{Re}(\text{purely imaginary})=0$.
+Summing over pairs gives $S_d=0$.
+\end{proof}
+
+Two remarks. First, $p\nmid m/d$ precisely when $d$ carries the whole $p$-part
+of $m$, so at odd $m$ the decomposition \emph{collapses}: the surviving classes
+are indexed by the divisors of $m/p^{\,v_p(m)}$, and when $m$ is a power of $p$
+exactly one class survives, the free class $d=m$. Numerically the free class
+then carries the entire valuation --- verified at $m=p$ and at $m=p^{2}=9$,
+where both short classes die in all twelve sampled sections. So the clean
+behaviour at $m=p$ is not a small-case accident; it is the prime-power case.
+
+Second, the hypothesis of Theorem~\ref{thm:oddclass} is the bracket
+$[m\text{ odd}]$ of \eqref{eq:factorial}. That term --- the one ingredient of
+the law that had the look of a fitted correction --- is exactly the condition
+under which these classes vanish, and Theorem~\ref{thm:oddclass} is the first
+ingredient of \eqref{eq:factorial} with a proof rather than a measurement. It
+uses inverse closure, the same hypothesis that rescues the first power sum
+(Lemma~\ref{lem:parity}) and the top exterior power.
+
+What the theorem does \emph{not} give is the even case, where it is silent. At
+$m=2p$ the orbit account remains partial: over twelve sections at $(p,m)=(3,6)$
+the short aggregate and the free class both sit at valuation $10$ while the
+total ranges over $12,14,18$, so the excess comes from cancellation
+\emph{between} them in a section-dependent amount. (Three of those twelve
+sections happen to annihilate the short classes exactly; a single section would
+have suggested a structural cancellation that the other nine refute.) The
+minimum, $12=\vlam(3)+6+0+\vlam(6!)$, is the value predicted by
+\eqref{eq:factorial}, consistent with the law being a minimum over sections.
 
 Finally, \eqref{eq:factorial} fails --- and fails \emph{from below} --- exactly
 where the determinant law fails. Over $\ZZ/9$ and $\ZZ/25$, whose generating
@@ -785,7 +854,9 @@ Proc.\ 9th ACM SIGPLAN Int.\ Conf.\ on Certified Programs and Proofs (CPP 2020),
 
 \bibitem{repo}
 W.~Dahn, \emph{W33-Theory} source repository; witness programs
-\texttt{w33\_pass479}--\texttt{w33\_pass482} and the Lean file
+\texttt{w33\_pass479}--\texttt{w33\_pass511} (in particular
+\texttt{w33\_pass511\_constant\_orbit\_theorem.py} for
+Theorem~\ref{thm:oddclass}) and the Lean file
 \texttt{formal/W33/Pass481FirstOrderPairing.lean}.
 
 \end{thebibliography}

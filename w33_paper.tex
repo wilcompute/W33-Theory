@@ -14221,6 +14221,10 @@ failure deviations purely below at $\ZZ/9,25,27$: minima $-16,-96,-208$ & \texts
 mechanism guard sweep: $79/339$ certificates carry unmarked causal claims & \textsc{cert} & P509 & this programme (advisory backlog) \\
 orbit account \emph{exact} at $m{=}p$: constant orbits vanish identically & \textsc{cert} & P510 & this programme (first Legendre increment) \\
 orbit account \emph{fails} at $m{=}2p$: classes cancel by $4$ orders & \textsc{cert} & P510 & this programme (partial mechanism only) \\
+odd-class vanishing: $m{=}dk$ odd, $p\mid k$ $\Rightarrow$ $S_d\equiv0$ & \textsc{thm} & P511 & this programme (proved; converse measured) \\
+at odd $m$ the decomposition collapses onto divisors of $m/p^{v_p(m)}$ & \textsc{thm} & P511 & this programme (corollary; single class at prime powers) \\
+the $[m$ odd$]$ bracket of the factorial law $=$ this vanishing hypothesis & \textsc{thm} & P511 & this programme (first ingredient with a proof) \\
+$m{=}2p$ excess is section-dependent ($12,14,18$ over $12$ sections) & \textsc{cert} & P511 & this programme (corrects a one-section draft) \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -15038,5 +15042,58 @@ exactly that --- the discipline this programme adopted after two explanations
 that merely fitted had to be retracted.  (A first draft of this computation
 multiplied by a spurious factor $q$; the rebuild check against the direct trace
 caught it before any number was read.)
+
+\paragraph{Pass 511 --- the odd-class vanishing theorem.}
+Pass 510 offered its central fact as a measurement: at $m=p$ the constant
+orbits sum to exactly zero.  That fact has a proof, and the proof proves much
+more than the fact.
+
+\begin{quote}
+\textbf{Theorem.}  Write $m=dk$.  If $m$ is \emph{odd} and $p\mid k$, then the
+period-$d$ class $S_d$ of the cyclic-orbit decomposition of
+$\operatorname{tr}(D^m)$ vanishes identically, for every inverse-closed
+section.
+\end{quote}
+
+\noindent Three ingredients.  (i) For a period-$d$ representative,
+$M=\rho_{v_1}\cdots\rho_{v_d}=\zeta^{s}\rho(w)$ with $w=\sum_i v_i$, so
+$M^{k}=\zeta^{ks}\rho(kw)=I$, because $p\mid k$ kills both the phase and the
+argument; hence $\operatorname{tr}(M^k)=q$, a rational integer.  (ii) The
+coefficient is $\prod_{i\le d}(u_i-1)^{k}$, and since
+$u-1=e^{\mathrm{i}\pi j/p}\,2\mathrm{i}\sin(\pi j/p)$ the power $(u-1)^k$ is
+purely imaginary exactly when $k$ is odd and $p\mid k$; a product of $d$ purely
+imaginary numbers is again purely imaginary because $m$ odd forces $d$ odd.
+(iii) Inverse closure gives $d_{-v}=\overline{d_v}$, so each orbit pairs with
+its negative and the two contribute $q\cdot2\operatorname{Re}$ of a purely
+imaginary number, namely $0$.
+
+Two consequences.  First, $p\nmid m/d$ exactly when $d$ carries the whole
+$p$-part of $m$, so at odd $m$ the decomposition \emph{collapses} onto the
+divisors of $m/p^{\,v_p(m)}$ --- and for $m$ a power of $p$ onto a single
+class, the free one.  The clean behaviour Pass 510 found at $m=p$ was therefore
+not the smallest case behaving nicely but the prime-power case; confirmed at
+$m=p^2=9$, where both short classes die and the free class carries the total in
+all twelve sampled sections.  Second, the hypothesis is the factorial law's own
+bracket: $v_\lambda(\operatorname{tr}D^m)=v_\lambda(q)+m+[m\text{ odd}]
++v_\lambda(m!)$, and the $[m\text{ odd}]$ term --- the one ingredient that had
+looked like a fitted correction --- is precisely the condition under which
+these classes vanish.  This is the first ingredient of the law with a proof
+rather than a measurement, and it uses inverse closure, the same hypothesis
+that rescues the first power sum and the top exterior power.  The converse is
+verified on $28$ cells and is \emph{not} proved.
+
+The even case is untouched, and a near miss is worth recording.  A first draft
+examined $(3,6)$ at a \emph{single} section, found the short classes
+annihilating exactly, and would have reported that the free class carries the
+total at $m=2p$ as it does at $m=p$.  Twelve sections refute it: generically
+the short aggregate and the free class \emph{both} sit at valuation $10$ while
+the total ranges over $12,14,18$ by section, so the excess comes from
+cancellation between them in a section-dependent amount, and only three of the
+twelve annihilate exactly.  Pass 510's verdict that the orbit account is
+partial at even $m$ stands, now measured over sections rather than one.  A
+second draft tested ``purely imaginary'' as $|\operatorname{Re}x|<10^{-9}$ in
+floating point and reported a counterexample at $(p,k)=(7,21)$, where
+$|x|\sim10^{6}$ makes an absolute tolerance meaningless; the published test is
+exact in $\ZZ[\zeta_p]$, namely $x+\sigma_{-1}(x)=0$.
 
 \end{document}
