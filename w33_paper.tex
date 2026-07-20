@@ -14215,6 +14215,10 @@ factorial law fails \emph{from below} in the failure region & \textsc{cert} & P5
 Witt congruence holds but is \emph{vacuous} ($22$ vs guarantee $4$) & \textsc{cert} & P508 & this programme (2nd candidate eliminated) \\
 factorial law not falsified at $|R|{=}81$: $0/160$ below prediction & \textsc{cert} & P508 & this programme (sharpest test) \\
 failure region deviates \emph{below}: $\ZZ/9$ deltas $\le0$, growing & \textsc{cert} & P508 & this programme (contradicts P487 story) \\
+factorial law \textbf{exact at $80/80$} exponents at $|R|{=}81$ & \textsc{cert} & P509 & this programme (attained, not just un-falsified) \\
+cyclic-orbit structure verified: rotation-invariant, decomposition exact & \textsc{cert} & P509 & this programme (3rd candidate, and PRESENT) \\
+failure deviations purely below at $\ZZ/9,25,27$: minima $-16,-96,-208$ & \textsc{cert} & P509 & this programme (8 sections each) \\
+mechanism guard sweep: $79/339$ certificates carry unmarked causal claims & \textsc{cert} & P509 & this programme (advisory backlog) \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -14982,5 +14986,29 @@ cost more'' account of the failure region, which is therefore also unproven.
 Finally, \texttt{scripts/check\_mechanism\_claims.py} now flags any certificate
 sentence asserting a cause without citing a proof or marking itself a
 candidate; it was validated by catching the exact wording retracted here.
+
+\paragraph{Pass 509 --- the factorial law attained at $|R|=81$, and a mechanism
+that is at least present.}
+\emph{(i) Attained, not merely un-falsified.}  Pass 508 could only say ``never
+below'' at $|R|=81$, having sampled three sections.  With twelve, the law is
+\textbf{exact at all $80$ exponents} over $\FF_{81}$ --- every one of the $27$
+increments, including the quadruple at $m=81$.  \emph{(ii) A mechanism that
+exists.}  With Newton eliminated (absent) and Witt eliminated (vacuous), the
+question was what division-generating structure the object actually has.  There
+is one: the trace is cyclic, so the expansion of $\operatorname{tr}(D^m)$ over
+$m$-tuples of zero sum is rotation-invariant and the tuples fall into
+$\ZZ/m$-orbits, giving
+$\operatorname{tr}(D^m)=q\sum_O|O|\cdot\mathrm{val}(\text{rep})$ with free
+orbits contributing a factor $m$.  Both facts are verified by full enumeration
+at $(p,m)=(3,3)$ and $(5,3)$.  \textbf{This is not a proof of the factorial law
+and is not offered as one} --- it is the observation that, after two
+eliminations, a structure of the right kind is present.  \emph{(iii) The
+failure region is purely one-sided.}  Sampling eight sections at each of
+$\ZZ/9,\ZZ/25,\ZZ/27$, every deviation is $\le0$, with minima $-16,-96,-208$
+and visible plateaus; an earlier apparent $+2$ at $\ZZ/9$ was under-sampling,
+not a violation, and vanishes with more sections.  \emph{(iv) Housekeeping.}
+The mechanism guard, run over the whole corpus, flags $79$ of $339$
+certificates as carrying a causal claim that cites neither a proof nor a
+candidate tag --- an advisory backlog, recorded rather than acted on here.
 
 \end{document}
