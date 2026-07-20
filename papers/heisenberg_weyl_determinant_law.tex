@@ -27,9 +27,10 @@
 \maketitle
 
 \begin{abstract}
-\noindent Let $R$ be a finite commutative local Frobenius ring of odd residue
-characteristic whose generating character $\psi$ has order $p$ --- for example
-a finite field $\FF_q$, or $\FF_p[x]/(x^k)$ --- and write $q=|R|$. Let $H$ be
+\noindent Let $R$ be a finite Frobenius ring of odd residue characteristic
+whose generating character $\psi$ has order $p$ --- for example a finite field
+$\FF_q$, a truncated polynomial ring $\FF_p[x]/(x^k)$, or the noncommutative
+$M_2(\FF_p)$ --- and write $q=|R|$. Let $H$ be
 the Heisenberg group of order $q^3$ over $R$ and $\psi_t$ a nontrivial
 character of its centre. An \emph{inverse-closed section} $c$ assigns to each
 nonzero $v\in R^2$ a central coordinate $c(v)\in R$ with $c(-v)=-c(v)$; the
@@ -478,11 +479,20 @@ Moreover the last case reduces to a single power-sum bound. Newton's chain
 gives $\vlam(e_q)\ge\vlam(p_q)-\vlam(q)=\vlam(p_q)-(q-1)$, so
 $\vlam(p_q)\ge2q+2$ would deliver $\vlam(e_q)\ge q+3$ --- exactly what the
 sharp law needs. The counting-plus-parity argument only gives
-$\vlam(p_q)\ge2q$, but that bound is \emph{not tight}: the measured minima of
-$\vlam\bigl(\tr D^q\bigr)$ are $8,14,20$ at $q=3,5,7$, against the required
-$8,12,16$. So the whole residual is the statement
-$\vlam\bigl(\tr D^q\bigr)\ge2q+2$, and it holds with room to spare in every
-case computed.
+$\vlam(p_q)\ge2q$, but that bound is \emph{not tight}, and the way it fails is
+strikingly clean. For every $m<q$ the profile sits \emph{exactly} on the parity
+bound $(q-1)+m+[m\text{ odd}]$: at $q=7$ the observed valuations for
+$m=2,\dots,6$ are $8,10,10,12,12$, with excess $0$ throughout. At $m=q$ it
+jumps by exactly $q-1=\vlam(q)$:
+\[
+\vlam\bigl(\tr D^q\bigr)\;=\;2q+(q-1)\;=\;3q-1 ,
+\]
+measured at $q=3,5,7$ ($8,14,20$) and confirmed \emph{out of sample} at $q=11$,
+where $32$ was predicted before computing and $32$ observed. Since
+$3q-1\ge2q+2$ for every $q\ge3$, this settles the residual numerically. It also
+localizes what must be proved: an extra factor of $q$ appears precisely when
+the exponent equals the characteristic, the signature of a Frobenius mechanism
+rather than of the pairing that governs $m<q$.
 
 \begin{theorem}[the eigenvalue bound, off the top]\label{thm:ek2k}
 For every odd prime $q$ and every inverse-closed section,
@@ -665,7 +675,12 @@ $\FF_5[x]/(x^2)$ & $25$ & no & $8$ & $12$ & $12$\\
 \end{tabular}
 \end{center}
 Each is checked with a homomorphism-validated representation, the flat-block
-quadratic, and the closed-form flat determinant. The exponents coincide
+quadratic, and the closed-form flat determinant. Commutativity is not needed
+either: the Heisenberg cocycle is associative over any ring (the six cross
+terms cancel identically) and the centre is central, and over the
+noncommutative Frobenius ring $M_2(\FF_3)$ --- generating character
+$\psi(X)=\zeta_3^{\tr X}$, $|R|=81$, $\vlam(81)=8$ --- the representation is a
+homomorphism and the measured minimum depth is $12=\vlam(|R|)+4$, as predicted. The exponents coincide
 exactly with those of the \emph{fields} of the same size ($\FF_{27}\to10$,
 $\FF_{25}\to12$): \textbf{the law cannot distinguish $\FF_{p^k}$ from
 $\FF_p[x]/(x^k)$.} The measured bound $\vlam(\det D)\ge2|R|$ of

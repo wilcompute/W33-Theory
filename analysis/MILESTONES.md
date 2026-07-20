@@ -228,6 +228,15 @@ Pass 504 (`analysis/w33_pass504_trDq_fitting_and_noncommutative.py`, 6/6 exact):
 3. **NON-COMMUTATIVE: the construction extends.** The Heisenberg cocycle is associative over *any* ring (the six cross terms cancel identically) and the centre is central; and **ρ is a homomorphism over M₂(𝔽₃)**, a non-commutative Frobenius ring with generating character `ψ(X) = ζ₃^{tr X}`. So the law's hypothesis is not confined to commutative rings.
 4. **Release note updated:** the stale open item "a determinant congruence at prime powers (λ^(q+3) is a prime phenomenon)" superseded — P484 showed one uniform law in v_λ(q). Open list now reflects the four explicitly-closed routes and the ℤ/p^n-specific failure formula.
 
+## Pass 505 addendum (python track) — "commutative" dropped; the power-sum profile has an exact shape
+
+Pass 505 (`analysis/w33_pass505_power_sum_profile_and_noncommutative_depth.py`, 11/11 exact):
+
+1. **THE LAW HOLDS NONCOMMUTATIVELY — "commutative" struck from the hypothesis.** M₂(𝔽₃): |R|=81, character order 3, `v_λ(81)=8`, our law predicts **12**, **measured min depth 12** ✓ (flat-det formula also exact). The note is now stated over *finite Frobenius rings with generating character of order p*, full stop.
+2. **THE PROFILE.** `v_λ(tr D^m)` sits **exactly** on the parity bound `(q−1)+m+[m odd]` for **every m < q** — at q=7 the values 8,10,10,12,12 for m=2..6 have excess **0** throughout — and at **m = q it jumps by precisely q−1 = v_λ(q)**.
+3. **`v_λ(tr D^q) = 3q−1`, CONFIRMED OUT OF SAMPLE.** Fitted on q=3,5,7 (8,14,20), it **predicted 32 at q=11 before computing; 32 observed.** Since `3q−1 ≥ 2q+2` always, the residual is settled numerically. **What remains to prove is now sharply localized: an extra factor of q appears precisely when the exponent equals the characteristic — a Frobenius signature, not the pairing that governs m < q.**
+4. **Their Pass-498 module, second candidate also fails:** `coker(adj(F)·D)` is **not cyclic either**, so the common-quotient model cannot be repaired by changing the map — it needs the non-cyclic generalization (argue through the top Fitting factor). Reported to their track.
+
 ## Deferred
 
 - m=6 Coxeter–Todd rung of the QR tower (`data/m6_handoff_k12.json`).

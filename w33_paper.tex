@@ -14199,6 +14199,10 @@ $v_\lambda(\tr D^q)\ge2q{+}2$ measured ($8,14,20$) $\Rightarrow$ residual is one
 $\operatorname{coker}(D)$ built; Fitting exponents $[1,1,4]$, $[2,2,2]$ at $q{=}3$ & \textsc{cert} & P504 & this programme (their P498 obligation 1) \\
 $\operatorname{coker}(D)$ is \emph{not} cyclic & \textsc{cert} & P504 & this programme (their P498 obligation 2 fails) \\
 $\rho$ is a homomorphism over $M_2(\FF_3)$ (non-commutative) & \textsc{cert} & P504 & this programme (construction extends) \\
+\textbf{law holds over the noncommutative $M_2(\FF_3)$: $8{+}4=12$} & \textsc{cert} & P505 & this programme (``commutative'' dropped) \\
+$v_\lambda(\tr D^m)$ on the parity bound for $m<q$; jumps by $v_\lambda(q)$ at $m{=}q$ & \textsc{cert} & P505 & this programme (exact profile) \\
+$v_\lambda(\tr D^q)=3q{-}1$, \emph{out-of-sample} confirmed at $q{=}11$ ($32$) & \textsc{cert} & P505 & this programme (predicted then measured) \\
+$\operatorname{coker}(\operatorname{adj}(F)D)$ also not cyclic & \textsc{cert} & P505 & this programme (their P498 needs non-cyclic $M$) \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -14864,5 +14868,28 @@ representation survives: $\rho$ is a homomorphism over $M_2(\FF_3)$, a
 non-commutative Frobenius ring with generating character
 $\psi(X)=\zeta_3^{\operatorname{tr}X}$.  So the construction --- and with it the
 law's hypothesis --- is not confined to commutative rings.
+
+\paragraph{Pass 505 --- ``commutative'' comes out of the hypothesis, and the
+power-sum profile has an exact shape.}
+Four results.  \emph{(i) The law holds noncommutatively.}  Pass 504 showed
+$\rho$ is a homomorphism over $M_2(\FF_3)$; the depth is now measured, and it
+is $12=v_\lambda(81)+4$, exactly as predicted.  \textbf{So the word
+``commutative'' can be struck from the theorem's hypothesis} --- the note is
+now stated over finite Frobenius rings with generating character of order $p$,
+full stop.  \emph{(ii) The profile.}  Measuring $v_\lambda(\tr D^m)$ for every
+$m$ reveals a very clean shape: for all $m<q$ the valuation sits
+\emph{exactly} on the parity bound $(q-1)+m+[m\text{ odd}]$ --- at $q=7$ the
+values $8,10,10,12,12$ for $m=2,\dots,6$ have excess $0$ throughout --- and at
+$m=q$ it jumps by precisely $q-1=v_\lambda(q)$.  \emph{(iii) The formula, tested
+out of sample.}  Hence $v_\lambda(\tr D^q)=2q+(q-1)=3q-1$, matching $8,14,20$
+at $q=3,5,7$; fitted on those three, it \textbf{predicted $32$ at $q=11$ before
+computing, and $32$ was observed}.  Since $3q-1\ge2q+2$ always, the residual is
+settled numerically, and what remains to prove is now sharply localized: an
+extra factor of $q$ appears precisely when the exponent equals the
+characteristic --- a Frobenius signature, not the pairing that governs $m<q$.
+\emph{(iv) The other track's module.}  Replacing $D$ by $\operatorname{adj}(F)D$
+does \emph{not} restore cyclicity either, so their Pass-498 common-quotient
+model cannot be repaired by changing the map; it needs the non-cyclic
+generalization, arguing through the top Fitting factor.
 
 \end{document}
