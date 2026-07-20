@@ -14225,6 +14225,10 @@ odd-class vanishing: $m{=}dk$ odd, $p\mid k$ $\Rightarrow$ $S_d\equiv0$ & \texts
 at odd $m$ the decomposition collapses onto divisors of $m/p^{v_p(m)}$ & \textsc{thm} & P511 & this programme (corollary; single class at prime powers) \\
 the $[m$ odd$]$ bracket of the factorial law $=$ this vanishing hypothesis & \textsc{thm} & P511 & this programme (first ingredient with a proof) \\
 $m{=}2p$ excess is section-dependent ($12,14,18$ over $12$ sections) & \textsc{cert} & P511 & this programme (corrects a one-section draft) \\
+converse at $d{=}1$: one-pair section gives $2q\operatorname{Re}(u{-}1)^m$ & \textsc{thm} & P512 & this programme (constructed witness, not a search) \\
+Legendre tower exact at $m{=}p^j$: $8,20,56$ ($p{=}3$), $14,54$ ($p{=}5$) & \textsc{cert} & P512 & this programme (single class $\Rightarrow$ no cancellation) \\
+failure region breaks ingredient (i): $8/80$ over $\ZZ/9$, $24/624$ over $\ZZ/25$ & \textsc{cert} & P512 & this programme (candidate, not a cause) \\
+pairing ingredient (iii) in Lean; guard backlog triaged $195\to74$ open & \textsc{cert} & P512 & this programme (CI kernel-checks Lean) \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -15095,5 +15099,61 @@ second draft tested ``purely imaginary'' as $|\operatorname{Re}x|<10^{-9}$ in
 floating point and reported a counterexample at $(p,k)=(7,21)$, where
 $|x|\sim10^{6}$ makes an absolute tolerance meaningless; the published test is
 exact in $\ZZ[\zeta_p]$, namely $x+\sigma_{-1}(x)=0$.
+
+\paragraph{Pass 512 --- the converse at $d=1$, and the Legendre tower where
+nothing can cancel.}
+Pass 511 left the converse of its theorem as a measurement over $28$ cells.
+For the constant class it is now a proof, and the witness is constructed rather
+than found.  Let $p\mid m$, fix one inverse-closed pair $\{v_0,-v_0\}$, and take
+the section with $\psi(c(v_0))=u\neq1$ and $c(v)=0$ for every other $v$.  Every
+$d_v$ vanishes but two, so the class is exactly
+$q[(u-1)^m+\overline{(u-1)^m}]=2q\operatorname{Re}(u-1)^m$, which is nonzero
+precisely when $(u-1)^m$ fails to be purely imaginary --- that is, precisely
+when $m$ is even.  So at $d=1$ the hypothesis ``$m$ odd'' is necessary as well
+as sufficient.  For $d>1$ the converse is still the $28$-cell measurement.
+
+The collapse corollary then buys a test that nothing else in this programme
+could run.  At $m=p^{j}$ exactly one class survives, so
+$v_\lambda(\operatorname{tr}D^{p^j})$ is that class's valuation with no
+inter-class cancellation to confound it --- the cleanest possible place to read
+the factorial law.  Measured as minima over $250$ (resp.\ $60$) sampled
+sections:
+\[
+\begin{array}{llll}
+p=3: & v_\lambda(\operatorname{tr}D^{3})=8, &
+       v_\lambda(\operatorname{tr}D^{9})=20, &
+       v_\lambda(\operatorname{tr}D^{27})=56;\\
+p=5: & v_\lambda(\operatorname{tr}D^{5})=14, &
+       v_\lambda(\operatorname{tr}D^{25})=54. &
+\end{array}
+\]
+Every value equals $v_\lambda(q)+m+1+v_\lambda(m!)$ exactly, including the
+double increment at $m=25$ and the \emph{triple} increment at $m=27$, where
+$v_3(27!)=9+3+1=13$.
+
+In the failure region the same theorem locates a broken hypothesis rather than
+merely a shared locus.  Ingredient~(i) needs $\rho_v^{\,p}=I$, which came from
+$(v,0)^p$ being the identity in characteristic $p$; over $\ZZ/p^n$ it is not,
+and severely so --- over $\ZZ/9$ only $8$ of $80$ nonzero vectors satisfy
+$\rho_v^{\,3}=I$ (exactly those with $3v=0$), over $\ZZ/25$ only $24$ of $624$.
+Correspondingly the constant class at $m=p$, which the theorem kills over
+$\FF_q$, is measured nonzero over both rings.  A specific hypothesis is false
+and the specific conclusion is false, in the same place the factorial law
+fails.  This is recorded as a \emph{candidate}: it says where the argument
+breaks, not that this is why the law does.
+
+Two housekeeping results.  Ingredient~(iii) --- the pairing --- is formalized
+in \texttt{formal/W33/Pass511OddClassVanishing.lean}, in the shape the proof
+actually uses (a sum over inverse-closed pairs, each contributing
+$x+\operatorname{star}x=0$), with ingredients (i) and (ii) left as explicit
+hypotheses; the local container has no Lean toolchain, so as with every module
+in \texttt{formal/} the kernel check is CI's.  And Pass 508's mechanism-guard
+count is now a worklist: sweeping all $3288$ committed certificates (not the
+$339$ of the original sample) flags $195$ unmarked causal claims, of which $38$
+already contain a proof or theorem in their own text (wording fixes), $68$
+restate a measurement (``because'' should read ``measured''), $15$ are prose
+only, and $74$ are genuinely open mechanisms --- the only bucket that needs
+mathematics.  Buckets are assigned by vocabulary, not by reading; this ranks
+the backlog and does not clear it.
 
 \end{document}

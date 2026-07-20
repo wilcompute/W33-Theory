@@ -567,6 +567,31 @@ two together contribute $q\cdot 2\operatorname{Re}(\text{purely imaginary})=0$.
 Summing over pairs gives $S_d=0$.
 \end{proof}
 
+For $d=1$ the hypothesis is also necessary, and the witness is explicit rather
+than found by search.
+
+\begin{proposition}[the converse at $d=1$]\label{prop:converse1}
+Let $p\mid m$, so that constant orbits exist. Then $S_1=0$ for every
+inverse-closed section if and only if $m$ is odd.
+\end{proposition}
+
+\begin{proof}
+Sufficiency is Theorem~\ref{thm:oddclass}. For necessity, fix one
+inverse-closed pair $\{v_0,-v_0\}$ and take the section with
+$\psi(c(v_0))=u\neq1$, $c(-v_0)=-c(v_0)$, and $c(v)=0$ for every other $v$;
+this is inverse-closed by construction. Every $d_v$ vanishes except
+$d_{v_0}=u-1$ and $d_{-v_0}=\bar u-1$, so
+\[
+S_1 \;=\; q\bigl[(u-1)^{m}+\overline{(u-1)^{m}}\bigr]
+\;=\; 2q\operatorname{Re}(u-1)^{m},
+\]
+which is nonzero exactly when $(u-1)^m$ is not purely imaginary --- by the
+criterion in the proof of Theorem~\ref{thm:oddclass}, exactly when $m$ is even.
+\end{proof}
+
+\noindent For $d>1$ the converse is verified on $28$ cells and remains
+unproved.
+
 Two remarks. First, $p\nmid m/d$ precisely when $d$ carries the whole $p$-part
 of $m$, so at odd $m$ the decomposition \emph{collapses}: the surviving classes
 are indexed by the divisors of $m/p^{\,v_p(m)}$, and when $m$ is a power of $p$
@@ -574,6 +599,19 @@ exactly one class survives, the free class $d=m$. Numerically the free class
 then carries the entire valuation --- verified at $m=p$ and at $m=p^{2}=9$,
 where both short classes die in all twelve sampled sections. So the clean
 behaviour at $m=p$ is not a small-case accident; it is the prime-power case.
+
+This makes $m=p^{j}$ the one place where \eqref{eq:factorial} can be read off
+with no inter-class cancellation to confound it, and there the Legendre tower
+is exact:
+\[
+\begin{array}{llll}
+p=3: & \vlam(\tr D^{3})=8, & \vlam(\tr D^{9})=20, & \vlam(\tr D^{27})=56;\\
+p=5: & \vlam(\tr D^{5})=14, & \vlam(\tr D^{25})=54, &
+\end{array}
+\]
+each equal to $\vlam(q)+m+1+\vlam(m!)$ --- minima over $250$ and $60$ sampled
+sections respectively --- and including the double increment at $m=25$ and the
+\emph{triple} increment at $m=27$, where $v_3(27!)=9+3+1=13$.
 
 Second, the hypothesis of Theorem~\ref{thm:oddclass} is the bracket
 $[m\text{ odd}]$ of \eqref{eq:factorial}. That term --- the one ingredient of
@@ -599,6 +637,18 @@ characters have order $p^2$, the measured power sums lie strictly under the
 right-hand side (at $\ZZ/9$, $m=9$: $30$ against $46$). So the two failures
 share a locus and presumably a cause, and \eqref{eq:factorial} is not a more
 robust statement than the law it implies.
+
+Theorem~\ref{thm:oddclass} sharpens that observation from a shared locus to a
+named broken hypothesis. Ingredient~(i) needs $\rho_v^{\,p}=I$, which came from
+$(v,0)^p=(pv,0)$ being the identity in characteristic $p$; over $\ZZ/p^{n}$ it
+is not, and the failure is severe --- over $\ZZ/9$ only $8$ of the $80$
+nonzero vectors satisfy $\rho_v^{\,3}=I$ (exactly those with $3v=0$), and over
+$\ZZ/25$ only $24$ of $624$. Correspondingly the constant class at $m=p$, which
+Theorem~\ref{thm:oddclass} kills over $\FF_q$, is measured to be nonzero over
+both rings. So in the failure region a specific hypothesis of the proof is
+false and the corresponding conclusion is false. We record this as a
+\emph{candidate}: it identifies where the argument breaks, and it does not
+establish that this is why \eqref{eq:factorial} fails.
 
 \begin{theorem}[the eigenvalue bound, off the top]\label{thm:ek2k}
 For every odd prime $q$ and every inverse-closed section,

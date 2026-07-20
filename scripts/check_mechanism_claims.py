@@ -48,6 +48,14 @@ HEDGED = re.compile(
 )
 
 
+# Keys whose values are QUOTATIONS from elsewhere in the corpus, not claims
+# the certificate is making.  Pass 512's triage report quotes the very claims
+# this guard flags, so without this the guard re-flags its own worklist and
+# reports 41 findings that are all one finding.  A quotation is not an
+# assertion.
+QUOTED_KEYS = re.compile(r"(^|\.)(sample|samples|quote|quoted|excerpt)s?(\[|$)")
+
+
 def scan(path: Path):
     try:
         doc = json.loads(path.read_text(encoding="utf-8"))
@@ -57,6 +65,8 @@ def scan(path: Path):
 
     def walk(node, key_path):
         if isinstance(node, str):
+            if QUOTED_KEYS.search(key_path):
+                return
             if CAUSAL.search(node) and not HEDGED.search(node):
                 flagged.append((path.name, key_path, node[:200]))
         elif isinstance(node, dict):
@@ -79,9 +89,15 @@ def main(argv):
             flagged.extend(scan(p))
     print(f"[mechanism-claims] certificates scanned: {len(targets)}; "
           f"unmarked causal claims: {len(flagged)}")
+    # The Windows console is cp1252; certificate text routinely carries Greek
+    # and subscripts, and an UnprintableError here would kill an ADVISORY
+    # guard.  Degrade the characters, never the check.
+    def safe(s):
+        return s.encode("ascii", "backslashreplace").decode("ascii")
+
     for name, key, text in flagged:
-        print(f"  {name} [{key}]")
-        print(f"    {text}")
+        print(f"  {safe(name)} [{safe(key)}]")
+        print(f"    {safe(text)}")
     if flagged:
         print()
         print("  These assert a CAUSE.  Each should either cite a proof, or")

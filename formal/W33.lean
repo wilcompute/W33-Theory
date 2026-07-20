@@ -20,3 +20,4 @@ import W33.Pass491HermitianRealDet
 import W33.Pass502HjelmslevGram
 import W33.Pass502RelativeNormSquare
 import W33.Pass508FactorialReduction
+import W33.Pass511OddClassVanishing
