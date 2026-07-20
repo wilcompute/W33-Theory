@@ -14191,6 +14191,10 @@ $v_\lambda(\det D)$ always \emph{even}; $\det D$ rational $\iff p{=}3$ & \textsc
 ``$\det D$ rational is a \emph{nilpotent-ring} feature'' & \textsc{killed} & P491 & self-correction of P490: it is $p{=}3$ \\
 failure law $\min_c v_\lambda = q{+}q/p = p^{n-1}(p{+}1)$ over $\ZZ/p^n$ & \textsc{open} & P491 & this programme ($12,30,36$; 3 points) \\
 ``off the order-$p$ locus there is no second law'' & \textsc{killed} & P491 & self-correction of P490: $\ZZ/27$ revealed it \\
+all $p_m$, $e_k$ real $\Rightarrow$ \emph{every} $v_\lambda$ even & \textsc{thm} & P503 & this programme (extends P491) \\
+parity cannot close the residual ($q$ odd $\Rightarrow q{+}1$ already even) & \textsc{cert} & P503 & this programme (route closed) \\
+$q{+}q/p$ is $\ZZ/p^n$-specific: product ring gives $24\neq108$ & \textsc{cert} & P503 & this programme $+$ their P499 \\
+law confirmed at the \emph{non-chain} $\FF_3[x,y]/(x^2,y^2)$: $8{+}4=12$ & \textsc{cert} & their P501 & third stream; new ring for our law \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -14798,5 +14802,32 @@ fits all three exactly.  It agrees with $v_\lambda(q)=n\,p^{n-1}(p-1)$ (i.e.\
 $12,40,54$) only at $\ZZ/9$ --- which is precisely why two points looked
 structureless, and a standing reminder that two data points cannot distinguish
 a coincidence from a law.
+
+\paragraph{Pass 503 --- parity extended, one route closed, and a non-chain
+confirmation from the other track.}
+Three results.  \emph{(i) Parity, in full.}  The Pass-491 argument applies to
+every coefficient, not just the determinant: $D$ Hermitian $\Rightarrow$ $D^m$
+Hermitian $\Rightarrow$ $p_m=\operatorname{tr}(D^m)$ real, and Newton then
+forces every $e_k$ real, so \textbf{every $v_\lambda(p_m)$ and $v_\lambda(e_k)$
+is even}.  \emph{(ii) A route closed.}  It is tempting to hope parity closes
+the residual --- the law needs $v_\lambda(e_q)\ge q{+}3$ and Newton gives
+$q{+}1$, so rounding an odd bound up would suffice.  \textbf{It cannot}: with
+$q$ odd the bound $q{+}1$ is \emph{already even}, so there is nothing to round.
+Reaching $q{+}3$ still requires $v_\lambda(p_q)\ge2q{+}2$, two further orders in
+$\operatorname{tr}(D^q)$ --- the same gap as Pass 483, unmoved.  Recorded so
+the route is not retried.  Profiling the failure region does locate its
+dominant term: at $\ZZ/9$ the minimisers are $k=3,6$ and at $\ZZ/27$ the
+minimiser is $k=18$, i.e.\ $k=2q/p$ in both, with value $q+q/p$ --- but that is
+two data points, and by this programme's own standing lesson it is an
+observation awaiting a third ring, not a pattern.  \emph{(iii) Scope, and an
+intake.}  The other track's Pass 499 measures the product ring
+$(\ZZ/9)\times\FF_9$ at depth $24$, whereas $q+q/p$ would give $108$: the
+Pass-491 formula is $\ZZ/p^n$-specific and must not be quoted more widely.
+Their Pass 501 is, by contrast, a genuine new confirmation of \emph{our} law at
+a ring we had not tested --- $\FF_3[x,y]/(x^2,y^2)$ has embedding dimension
+$2$, so it is \emph{not} a chain ring, while Pass 489 tested only the chains
+$\FF_p[x]/(x^k)$; with $|R|=81$, character order $3$ and $v_\lambda(81)=8$ our
+law predicts $12$ and their exact parity-block computation attains $12$.
+Credited to their track and cited rather than re-derived.
 
 \end{document}

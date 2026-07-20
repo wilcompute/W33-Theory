@@ -209,6 +209,16 @@ Pass 491 (`analysis/w33_pass491_real_subring_and_third_failure.py`, 16/16 exact)
 4. **Lean:** `formal/W33/Pass491HermitianRealDet.lean` — `star (det M) = det M` for Hermitian M, the algebraic core of the real-subring lemma.
 5. **Standing lesson:** two data points cannot distinguish a coincidence from a law. Both P490 self-corrections trace to inferring from two.
 
+## Pass 503 addendum (python track) — parity extended; a route closed; intake of their 498–502
+
+Pass 503 (`analysis/w33_pass503_dominant_term_and_parity.py`, 8/8 exact):
+
+1. **PARITY, IN FULL.** The Pass-491 argument extends from det D to *every* coefficient: D Hermitian ⇒ D^m Hermitian ⇒ `p_m = tr(D^m)` real, and Newton forces every `e_k` real. So **every `v_λ(p_m)` and `v_λ(e_k)` is even.** Verified at ℤ/9 and ℤ/27.
+2. **A ROUTE CLOSED (honest negative).** Hoping parity closes the residual — the law needs `v_λ(e_q) ≥ q+3`, Newton gives `q+1`, so rounding an odd bound would suffice — **fails**: with q odd, `q+1` is *already even*. Reaching q+3 still needs `v_λ(p_q) ≥ 2q+2`, two further orders in `tr(D^q)` — the same gap as Pass 483. Recorded so it isn't retried.
+3. **Dominant term located (2 points, flagged).** The failure minimum sits at `k = 2q/p`: ℤ/9 minimisers {3,6} at 12; ℤ/27 minimiser 18 at 36 (while k = q/p = 9 gives 54). Value = `q + q/p`. **Two data points — by this programme's own standing lesson (Pass 491) an observation, not a pattern; needs a third ring.**
+4. **SCOPE:** their Pass 499 measures the product ring (ℤ/9)×𝔽₉ at depth **24**, where `q+q/p` would give 108 — so the Pass-491 formula is **ℤ/p^n-specific** and must not be quoted more widely.
+5. **INTAKE of their 498–502 (audit clean, 5 files).** Their **Pass 501 is a genuine new confirmation of OUR law at a ring we never tested**: `𝔽₃[x,y]/(x²,y²)` has embedding dimension 2, so it is **not a chain ring**, while Pass 489 tested only chains `𝔽_p[x]/(x^k)`. With |R|=81, character order 3, `v_λ(81)=8`, our law predicts **12** and their exact parity-block computation attains **12**. Credited to their track, cited not re-derived. Their Pass 499 also sits correctly on the negative side of our trichotomy (character order 9 > p ⇒ no +4).
+
 ## Deferred
 
 - m=6 Coxeter–Todd rung of the QR tower (`data/m6_handoff_k12.json`).
