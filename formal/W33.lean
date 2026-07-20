@@ -17,3 +17,5 @@ import W33.Pass486DetDivisibility
 import W33.Pass487NewtonInduction
 import W33.Pass488FlatBlockQuadratic
 import W33.Pass491HermitianRealDet
+import W33.Pass502HjelmslevGram
+import W33.Pass502RelativeNormSquare

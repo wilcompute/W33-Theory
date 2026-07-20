@@ -1,0 +1,56 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,booktabs,geometry}
+\geometry{margin=1in}
+\title{Arithmetic and Hjelmslev Budgets in Heisenberg--Weyl Determinant Depth}
+\author{Executable note, Passes 498--502}
+\date{July 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We isolate a Fitting-module mechanism for a conjectural arithmetic--geometric
+minimum law, close an exact product-ring discriminator, compile a real-Galois
+phase-cycle reconstruction, and exhibit two nonisomorphic order-$81$ Frobenius
+rings with identical budget data and identical exact determinant depth.
+\end{abstract}
+
+\section{Fitting reduction}
+Let $R$ be a DVR with uniformizer $\lambda$. If a finite cyclic torsion module
+$M$ is a common quotient of $R/(\lambda^a)$ and $R/(\lambda^g)$, then
+\[
+ \operatorname{length}(M)\le \min(a,g).
+\]
+If the final permitted layer survives, equality holds and
+$\operatorname{Fitt}_0(M)=(\lambda^{\min(a,g)})$. This is the correct mechanism
+for a minimum law. Two divisibility lower bounds would instead imply a maximum.
+
+\section{Product-ring witness}
+For $R=(\mathbb Z/9)\times\mathbb F_9$,
+\[
+ v_\lambda(|R|)=24,\qquad |\mathbf P^1(R)|=120.
+\]
+The flat block is $F=81P-I$. A one-pair perturbation decomposes into one fixed
+block and forty parity blocks. The exact witness $b=(0,\tau)$ and $c=(1,0)$ gives
+\[
+ v_\lambda(\det B-\det F)=24.
+\]
+
+\section{Galois phase cycle}
+With $t=\zeta_9+\zeta_9^{-1}$, $t^3-3t+1=0$, and a real gap is
+$A+Bt+Ct^2$. The embeddings indexed by $1,2,4$ reconstruct $(A,B,C)$. The
+relative norm then recovers half the $\lambda$-valuation. Direct analog recovery
+of the exact order-$81$ witness would require approximately $156$ significant
+digits, motivating modular accumulation.
+
+\section{A sharp ring collision}
+The rings
+\[
+ \mathbb F_3[x]/(x^4),\qquad \mathbb F_3[x,y]/(x^2,y^2)
+\]
+have embedding dimensions $1$ and $2$ but share all current budget invariants.
+Exact one-pair determinants give depth $12$ for both.
+
+\section{Boundary}
+The uniform-cover Gram and conjugate-pair norm-square identities are theorem
+backed. The sharp higher-conductor minimum law remains conjectural until the
+determinant-gap module and its quotient maps are constructed.
+\end{document}

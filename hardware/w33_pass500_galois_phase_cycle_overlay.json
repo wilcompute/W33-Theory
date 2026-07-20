@@ -1,0 +1,51 @@
+{
+  "coefficient_basis": "1,t,t^2 with t=zeta_9+zeta_9^-1",
+  "custody_sha256": "fba2bc19f30ba26cae465544e6dd64ddd6cffefcc5d71346bcd70c94530ae476",
+  "minimal_polynomial": "t^3-3t+1",
+  "phase_rows": [
+    {
+      "central_phase_radians": "2*pi*1/9",
+      "fano_page": 6,
+      "galois_representative": 1,
+      "guard_slot": 48,
+      "measurement": "signed determinant-gap embedding",
+      "reference_time_bin": 2035,
+      "reference_word11": "11111110011",
+      "region": "GUARD",
+      "route": "galois_phase_cycle_analyzer",
+      "time_bin": 2032,
+      "trigger": "galois_real_embedding_1",
+      "word11": "11111110000"
+    },
+    {
+      "central_phase_radians": "2*pi*2/9",
+      "fano_page": 6,
+      "galois_representative": 2,
+      "guard_slot": 49,
+      "measurement": "signed determinant-gap embedding",
+      "reference_time_bin": 2036,
+      "reference_word11": "11111110100",
+      "region": "GUARD",
+      "route": "galois_phase_cycle_analyzer",
+      "time_bin": 2033,
+      "trigger": "galois_real_embedding_2",
+      "word11": "11111110001"
+    },
+    {
+      "central_phase_radians": "2*pi*4/9",
+      "fano_page": 6,
+      "galois_representative": 4,
+      "guard_slot": 50,
+      "measurement": "signed determinant-gap embedding",
+      "reference_time_bin": 2037,
+      "reference_word11": "11111110101",
+      "region": "GUARD",
+      "route": "galois_phase_cycle_analyzer",
+      "time_bin": 2034,
+      "trigger": "galois_real_embedding_4",
+      "word11": "11111110010"
+    }
+  ],
+  "reconstruction": "invert three real embeddings, round integer coefficients, compute exact relative norm",
+  "target": "2048-bin time-bin envelope"
+}
