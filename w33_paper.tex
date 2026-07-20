@@ -14203,6 +14203,10 @@ $\rho$ is a homomorphism over $M_2(\FF_3)$ (non-commutative) & \textsc{cert} & P
 $v_\lambda(\tr D^m)$ on the parity bound for $m<q$; jumps by $v_\lambda(q)$ at $m{=}q$ & \textsc{cert} & P505 & this programme (exact profile) \\
 $v_\lambda(\tr D^q)=3q{-}1$, \emph{out-of-sample} confirmed at $q{=}11$ ($32$) & \textsc{cert} & P505 & this programme (predicted then measured) \\
 $\operatorname{coker}(\operatorname{adj}(F)D)$ also not cyclic & \textsc{cert} & P505 & this programme (their P498 needs non-cyclic $M$) \\
+\textbf{the factorial law} $v_\lambda(\tr D^m)=(q{-}1){+}m{+}[m\text{ odd}]{+}v_\lambda(m!)$ & \textsc{cert} & P506 & this programme (12/12 points) \\
+``$3q{-}1$'' is the prime-$q$ shadow of the factorial law & \textsc{cert} & P506 & self-correction of P505's description \\
+excess steps at multiples of the \emph{characteristic}, not the block size & \textsc{cert} & P506 & this programme ($\FF_9$ vs $\FF_3[x]/(x^2)$) \\
+law holds over the noncommutative \emph{local} $\FF_9[\theta]$: depth $12$ & \textsc{cert} & P506 & this programme (noncomm.\ $+$ nilpotent) \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -14891,5 +14895,33 @@ characteristic --- a Frobenius signature, not the pairing that governs $m<q$.
 does \emph{not} restore cyclicity either, so their Pass-498 common-quotient
 model cannot be repaired by changing the map; it needs the non-cyclic
 generalization, arguing through the top Fitting factor.
+
+\paragraph{Pass 506 --- the factorial law, and why $3q{-}1$ was only a shadow.}
+Pass 505 read its own data as ``an extra factor of $q$ appears precisely when
+the exponent equals the characteristic''.  But \emph{every $q$ tested there was
+prime}, and for prime $q$ the block size, the ring order and the characteristic
+are the same number --- so nothing measured could tell those three roles apart.
+$\FF_9$ and $\FF_3[x]/(x^2)$ separate them: both have block size $9$ and
+characteristic $3$.  They give \emph{identical} profiles, and the excess over
+the parity bound is \emph{not} a single jump at $m=|R|=9$ --- it steps at
+$m=3,6,9$, at multiples of the \textbf{characteristic}.  So the attribution to
+the characteristic survives, but the ``one jump at $m=q$'' description was a
+prime-$q$ artefact.  What replaces it is exact:
+\[
+v_\lambda\bigl(\tr D^m\bigr)\;=\;\underbrace{(q-1)+m+[m\text{ odd}]}_{\text{parity bound}}\;+\;v_\lambda(m!),
+\]
+the excess being precisely $v_\lambda(m!)$.  This reproduces all eight
+non-prime values at $|R|=9$ ($2,2,2,4,4,4,8$ for $m=3,\dots,9$) \emph{and} the
+four prime tops $8,14,20,32$ at $q=3,5,7,11$ --- the latter because
+$v_\lambda(q!)=q-1$ for prime $q$, so the formula collapses to exactly the
+$3q-1$ of Pass 505.  Twelve of twelve data points, across prime and non-prime.
+The mechanism is thereby identified rather than named: the factorial is what
+Newton's identities divide by, so the ``Frobenius signature'' is the arithmetic
+of $m!$ inside the Newton recursion.  Separately, the law is confirmed over a
+noncommutative \emph{local} Frobenius ring --- the twisted dual numbers
+$\FF_9[\theta]$, $\theta^2=0$, $\theta a=a^3\theta$ (ring axioms and
+homomorphism property checked first), depth $12=v_\lambda(81)+4$ --- which
+tests noncommutativity together with nilpotency, as the semisimple $M_2(\FF_3)$
+of Pass 505 could not.
 
 \end{document}

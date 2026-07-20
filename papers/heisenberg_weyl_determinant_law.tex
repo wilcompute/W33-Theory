@@ -478,21 +478,26 @@ $\vlam(e_k)\ge2k$ for all $k$, and all but the last case is a theorem.
 Moreover the last case reduces to a single power-sum bound. Newton's chain
 gives $\vlam(e_q)\ge\vlam(p_q)-\vlam(q)=\vlam(p_q)-(q-1)$, so
 $\vlam(p_q)\ge2q+2$ would deliver $\vlam(e_q)\ge q+3$ --- exactly what the
-sharp law needs. The counting-plus-parity argument only gives
-$\vlam(p_q)\ge2q$, but that bound is \emph{not tight}, and the way it fails is
-strikingly clean. For every $m<q$ the profile sits \emph{exactly} on the parity
-bound $(q-1)+m+[m\text{ odd}]$: at $q=7$ the observed valuations for
-$m=2,\dots,6$ are $8,10,10,12,12$, with excess $0$ throughout. At $m=q$ it
-jumps by exactly $q-1=\vlam(q)$:
-\[
-\vlam\bigl(\tr D^q\bigr)\;=\;2q+(q-1)\;=\;3q-1 ,
-\]
-measured at $q=3,5,7$ ($8,14,20$) and confirmed \emph{out of sample} at $q=11$,
-where $32$ was predicted before computing and $32$ observed. Since
-$3q-1\ge2q+2$ for every $q\ge3$, this settles the residual numerically. It also
-localizes what must be proved: an extra factor of $q$ appears precisely when
-the exponent equals the characteristic, the signature of a Frobenius mechanism
-rather than of the pairing that governs $m<q$.
+sharp law needs. The counting-plus-parity argument only gives $\vlam(p_q)\ge2q$, but that bound
+is \emph{not tight}, and the excess has an exact form:
+\begin{equation}\label{eq:factorial}
+\vlam\bigl(\tr D^m\bigr)\;=\;(q-1)+m+[m\text{ odd}]\;+\;\vlam(m!) .
+\end{equation}
+The first three terms are the parity bound; the excess over it is precisely
+$\vlam(m!)$. This was found by separating two readings that prime $q$ cannot
+distinguish. Over $\FF_9$ and $\FF_3[x]/(x^2)$ --- both of block size $9$ and
+characteristic $3$, and giving \emph{identical} profiles --- the excess is not
+a single jump at $m=|R|$; it steps at $m=3,6,9$, at multiples of the
+\emph{characteristic}, with values $2,2,2,4,4,4,8$ for $m=3,\dots,9$, matching
+$\vlam(m!)$ in every case. For prime $q$ the only multiple of $p=q$ in range is
+$m=q$ itself, which is why a single jump at the end is all one sees there; and
+since $\vlam(q!)=q-1$ for prime $q$, \eqref{eq:factorial} collapses to
+$\vlam(\tr D^q)=3q-1$, reproducing $8,14,20,32$ at $q=3,5,7,11$.
+
+Since $3q-1\ge2q+2$ for every $q\ge3$, this settles the residual numerically.
+It also identifies the mechanism: the factorial is exactly what Newton's
+identities divide by, so what looked like a Frobenius signature at prime $q$ is
+the arithmetic of $m!$ inside the Newton recursion.
 
 \begin{theorem}[the eigenvalue bound, off the top]\label{thm:ek2k}
 For every odd prime $q$ and every inverse-closed section,
@@ -677,10 +682,15 @@ $\FF_5[x]/(x^2)$ & $25$ & no & $8$ & $12$ & $12$\\
 Each is checked with a homomorphism-validated representation, the flat-block
 quadratic, and the closed-form flat determinant. Commutativity is not needed
 either: the Heisenberg cocycle is associative over any ring (the six cross
-terms cancel identically) and the centre is central, and over the
-noncommutative Frobenius ring $M_2(\FF_3)$ --- generating character
-$\psi(X)=\zeta_3^{\tr X}$, $|R|=81$, $\vlam(81)=8$ --- the representation is a
-homomorphism and the measured minimum depth is $12=\vlam(|R|)+4$, as predicted. The exponents coincide
+terms cancel identically) and the centre is central, and the law is confirmed
+over two noncommutative Frobenius rings of order $81$ --- the semisimple
+$M_2(\FF_3)$ with $\psi(X)=\zeta_3^{\tr X}$, and the \emph{local} twisted dual
+numbers $\FF_9[\theta]$, $\theta^2=0$, $\theta a=a^3\theta$, with $\psi$ the
+socle character. Both have $\vlam(81)=8$, in both the representation is a
+homomorphism and the flat determinant matches Lemma~\ref{lem:flat}, and both
+attain minimum depth $12=\vlam(|R|)+4$. The second is the more informative:
+being local and nilpotent as well as noncommutative, it tests those features
+together, which the semisimple $M_2(\FF_3)$ cannot. The exponents coincide
 exactly with those of the \emph{fields} of the same size ($\FF_{27}\to10$,
 $\FF_{25}\to12$): \textbf{the law cannot distinguish $\FF_{p^k}$ from
 $\FF_p[x]/(x^k)$.} The measured bound $\vlam(\det D)\ge2|R|$ of

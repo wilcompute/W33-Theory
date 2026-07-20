@@ -237,6 +237,18 @@ Pass 505 (`analysis/w33_pass505_power_sum_profile_and_noncommutative_depth.py`, 
 3. **`v_λ(tr D^q) = 3q−1`, CONFIRMED OUT OF SAMPLE.** Fitted on q=3,5,7 (8,14,20), it **predicted 32 at q=11 before computing; 32 observed.** Since `3q−1 ≥ 2q+2` always, the residual is settled numerically. **What remains to prove is now sharply localized: an extra factor of q appears precisely when the exponent equals the characteristic — a Frobenius signature, not the pairing that governs m < q.**
 4. **Their Pass-498 module, second candidate also fails:** `coker(adj(F)·D)` is **not cyclic either**, so the common-quotient model cannot be repaired by changing the map — it needs the non-cyclic generalization (argue through the top Fitting factor). Reported to their track.
 
+## Pass 506 addendum (python track) — THE FACTORIAL LAW; "3q−1" was a prime-q shadow
+
+Pass 506 (`analysis/w33_pass506_characteristic_vs_blocksize.py`, 8/8 exact):
+
+1. **THE CONFOUND.** Pass 505 read its data as "an extra factor of q appears when the exponent equals the characteristic." But **every q tested there was prime**, where block size = ring order = characteristic. Nothing measured could separate those three roles.
+2. **THE SEPARATING TEST.** 𝔽₉ and 𝔽₃[x]/(x²) both have block size 9, characteristic 3 — and give **identical profiles**. The excess over the parity bound is **not** a single jump at m = |R| = 9; it steps at **m = 3, 6, 9** — multiples of the **characteristic**. So the attribution to the characteristic survives, but "one jump at m = q" was a prime-q artefact.
+3. **THE FACTORIAL LAW (replaces 3q−1):**
+   `v_λ(tr D^m) = (q−1) + m + [m odd] + v_λ(m!)` — the excess is exactly `v_λ(m!)`.
+   Reproduces **all eight** non-prime values at |R|=9 (2,2,2,4,4,4,8 for m=3..9) **and** the four prime tops **8, 14, 20, 32** at q=3,5,7,11 — the latter because `v_λ(q!) = q−1` for prime q, collapsing the formula to exactly 3q−1. **12/12 data points, prime and non-prime.**
+4. **MECHANISM IDENTIFIED, not just named:** the factorial is what Newton's identities divide by, so the "Frobenius signature" is the arithmetic of `m!` inside the Newton recursion.
+5. **Noncommutative + nilpotent together:** the law holds over the **local** noncommutative Frobenius ring 𝔽₉[θ] (θ²=0, θa=a³θ, socle character) — ring axioms and homomorphism property checked first, flat-det formula exact, **depth 12 = v_λ(81)+4**. This tests what the semisimple M₂(𝔽₃) of Pass 505 could not.
+
 ## Deferred
 
 - m=6 Coxeter–Todd rung of the QR tower (`data/m6_handoff_k12.json`).
