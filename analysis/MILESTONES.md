@@ -219,6 +219,15 @@ Pass 503 (`analysis/w33_pass503_dominant_term_and_parity.py`, 8/8 exact):
 4. **SCOPE:** their Pass 499 measures the product ring (ℤ/9)×𝔽₉ at depth **24**, where `q+q/p` would give 108 — so the Pass-491 formula is **ℤ/p^n-specific** and must not be quoted more widely.
 5. **INTAKE of their 498–502 (audit clean, 5 files).** Their **Pass 501 is a genuine new confirmation of OUR law at a ring we never tested**: `𝔽₃[x,y]/(x²,y²)` has embedding dimension 2, so it is **not a chain ring**, while Pass 489 tested only chains `𝔽_p[x]/(x^k)`. With |R|=81, character order 3, `v_λ(81)=8`, our law predicts **12** and their exact parity-block computation attains **12**. Credited to their track, cited not re-derived. Their Pass 499 also sits correctly on the negative side of our trichotomy (character order 9 > p ⇒ no +4).
 
+## Pass 504 addendum (python track) — the residual is ONE lemma away; the postulated module is NOT cyclic
+
+Pass 504 (`analysis/w33_pass504_trDq_fitting_and_noncommutative.py`, 6/6 exact):
+
+1. **THE DECISIVE MEASUREMENT — the parity bound is not tight.** The residual needs `v_λ(e_q) ≥ q+3`; Newton gives `v_λ(e_q) ≥ v_λ(p_q) − (q−1)`, so `v_λ(p_q) ≥ 2q+2` would deliver it exactly. Counting+parity only bounds `v_λ(tr D^q) ≥ 2q`. **Measured minima: 8, 14, 20 at q = 3, 5, 7** against the required **8, 12, 16** — all met, with room to spare at q=5,7. **⇒ THE ENTIRE RESIDUAL IS NOW THE SINGLE BOUND `v_λ(tr D^q) ≥ 2q+2`, measured true.** Proving it closes the determinant law.
+2. **The Fitting module BUILT — and their Pass 498's cyclicity obligation FAILS for it.** `coker(D)` over ℤ[ζ_p] is the natural candidate for their postulated determinant-gap module; its Fitting ideals are computed exactly from minors. At q=3 the elementary-divisor exponents are **[1,1,4]** and **[2,2,2]** (length 6 = 2q), and [2,2,4], [1,1,6] (length 8). **So coker(D) is NOT cyclic** — three nontrivial factors, not one. Their model assumes cyclic M with `Fitt₀(M) = (λ^d)`; coker(D) has that Fitt₀ but not that shape. Either a different module is needed, or the model must argue through the top Fitting factor of a non-cyclic M. **Reported to their track.**
+3. **NON-COMMUTATIVE: the construction extends.** The Heisenberg cocycle is associative over *any* ring (the six cross terms cancel identically) and the centre is central; and **ρ is a homomorphism over M₂(𝔽₃)**, a non-commutative Frobenius ring with generating character `ψ(X) = ζ₃^{tr X}`. So the law's hypothesis is not confined to commutative rings.
+4. **Release note updated:** the stale open item "a determinant congruence at prime powers (λ^(q+3) is a prime phenomenon)" superseded — P484 showed one uniform law in v_λ(q). Open list now reflects the four explicitly-closed routes and the ℤ/p^n-specific failure formula.
+
 ## Deferred
 
 - m=6 Coxeter–Todd rung of the QR tower (`data/m6_handoff_k12.json`).

@@ -474,6 +474,16 @@ $\vlam(\det D)\ge 2q$.
 elementary symmetric functions $e_k=e_k(D)$ the conjecture says exactly
 $\vlam(e_k)\ge2k$ for all $k$, and all but the last case is a theorem.
 
+Moreover the last case reduces to a single power-sum bound. Newton's chain
+gives $\vlam(e_q)\ge\vlam(p_q)-\vlam(q)=\vlam(p_q)-(q-1)$, so
+$\vlam(p_q)\ge2q+2$ would deliver $\vlam(e_q)\ge q+3$ --- exactly what the
+sharp law needs. The counting-plus-parity argument only gives
+$\vlam(p_q)\ge2q$, but that bound is \emph{not tight}: the measured minima of
+$\vlam\bigl(\tr D^q\bigr)$ are $8,14,20$ at $q=3,5,7$, against the required
+$8,12,16$. So the whole residual is the statement
+$\vlam\bigl(\tr D^q\bigr)\ge2q+2$, and it holds with room to spare in every
+case computed.
+
 \begin{theorem}[the eigenvalue bound, off the top]\label{thm:ek2k}
 For every odd prime $q$ and every inverse-closed section,
 $\vlam(e_k)\ge 2k$ for all $1\le k\le q-1$.

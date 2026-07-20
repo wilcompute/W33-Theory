@@ -100,14 +100,22 @@ machine-verified through Pass 481.
    non-unimodular (P480/481); the integral-unitary and monomial/phase-gauge
    cases are closed negatively (P474/479). Needs number-field class-group
    tooling (pari/sage).
-2. **The full `q+3` depth proof.** `T₁ ≥ q+1` is proved (P481); the remaining
-   `+2` to `q+3` is the `T₁/T₂` cancellation, verified (P480) not proved.
-3. **The q=9 depth criterion.** Which section gets which depth is open; two
-   hypotheses are dead — "collinear ⇒ depth 8" (P481: collinear sections are
-   determinantally invisible instead) and "the F₃-subfield indexes the depth"
-   (P482: F₃-valued sections share the generic minimum and spectrum).
-4. **A determinant congruence at prime powers** (the `λ^(q+3)` modulus is a
-   prime-q statement).
+2. **The residual: one coefficient.** `v_λ(e_k) ≥ 2k` is proved for every
+   `k ≤ q−1` (P486), so the whole gap is `e_q = det D`, needing
+   `v_λ(det D) ≥ 2q` (measured with equality everywhere, including off the
+   field locus). The `T₁/T₂` cancellation itself is **proved** (P484). Four
+   routes to the residual are explicitly closed: no second vanishing identity
+   (P487), no parity gain (P503), no Newton improvement (P486), and the
+   top-term hypothesis is free for `f ≥ 2` (P485).
+3. **The q=9 depth criterion.** Which section gets which depth is open; **four**
+   hypotheses are dead — collinearity (P481), the F₃-subfield (P482),
+   `v_λ(S)` (P485), and `argmin_k v_λ(e_k)` (P486).
+4. **The failure region.** Off the character-order-`p` locus the law fails
+   (necessary as well as sufficient, P490); over `ℤ/p^n` the minimum depth
+   appears to be `q + q/p = p^(n−1)(p+1)` (12, 30, 36 — conjecture on three
+   points, P491), and that formula is **ℤ/p^n-specific** (P503).
+   *Superseded: the old item "a determinant congruence at prime powers" —
+   P484 showed there is one uniform law in `v_λ(q)`, not a prime phenomenon.*
 5. **The measured optical run** — gate 5 is software-complete and physically
    blocked (P467/472/478).
 

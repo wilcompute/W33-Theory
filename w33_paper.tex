@@ -14195,6 +14195,10 @@ all $p_m$, $e_k$ real $\Rightarrow$ \emph{every} $v_\lambda$ even & \textsc{thm}
 parity cannot close the residual ($q$ odd $\Rightarrow q{+}1$ already even) & \textsc{cert} & P503 & this programme (route closed) \\
 $q{+}q/p$ is $\ZZ/p^n$-specific: product ring gives $24\neq108$ & \textsc{cert} & P503 & this programme $+$ their P499 \\
 law confirmed at the \emph{non-chain} $\FF_3[x,y]/(x^2,y^2)$: $8{+}4=12$ & \textsc{cert} & their P501 & third stream; new ring for our law \\
+$v_\lambda(\tr D^q)\ge2q{+}2$ measured ($8,14,20$) $\Rightarrow$ residual is one lemma & \textsc{cert} & P504 & this programme (parity bound not tight) \\
+$\operatorname{coker}(D)$ built; Fitting exponents $[1,1,4]$, $[2,2,2]$ at $q{=}3$ & \textsc{cert} & P504 & this programme (their P498 obligation 1) \\
+$\operatorname{coker}(D)$ is \emph{not} cyclic & \textsc{cert} & P504 & this programme (their P498 obligation 2 fails) \\
+$\rho$ is a homomorphism over $M_2(\FF_3)$ (non-commutative) & \textsc{cert} & P504 & this programme (construction extends) \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -14829,5 +14833,36 @@ $2$, so it is \emph{not} a chain ring, while Pass 489 tested only the chains
 $\FF_p[x]/(x^k)$; with $|R|=81$, character order $3$ and $v_\lambda(81)=8$ our
 law predicts $12$ and their exact parity-block computation attains $12$.
 Credited to their track and cited rather than re-derived.
+
+\paragraph{Pass 504 --- the residual is one lemma away, and the postulated
+module is not cyclic.}
+\emph{(i) The decisive measurement.}  Every route to the residual had been
+closed by name except one: the law needs $v_\lambda(e_q)\ge q{+}3$, Newton's
+chain supplies $v_\lambda(e_q)\ge v_\lambda(p_q)-(q{-}1)$, and the counting
+plus parity argument bounds $v_\lambda(p_q)=v_\lambda(\operatorname{tr}D^q)$
+only by $2q$ --- which yields $q{+}1$, two short.  \emph{Is that bound tight?}
+It is not.  The measured minima are $8,14,20$ at $q=3,5,7$, against the parity
+bound $6,10,14$ and against the $2q{+}2=8,12,16$ the law requires: all three
+meet or exceed it, with room to spare at $q=5,7$.  \textbf{So the entire
+residual is now the single power-sum bound
+$v_\lambda(\operatorname{tr}D^q)\ge2q{+}2$}, which is measured true; proving it
+delivers $q{+}3$ immediately.  \emph{(ii) The module, built --- and a negative
+for the other track.}  Their Pass 498 reduces the minimum law to four
+obligations, the first being to construct the determinant-gap torsion module.
+The natural candidate is $\operatorname{coker}(D)$ over $\ZZ[\zeta_p]$, whose
+Fitting ideals we compute exactly from minors; at $q=3$ the elementary-divisor
+exponents are $[1,1,4]$ and $[2,2,2]$ at length $6=2q$, and $[2,2,4]$, $[1,1,6]$
+at length $8$.  \textbf{So $\operatorname{coker}(D)$ is \emph{not} cyclic}, and
+their obligation (2) fails for this candidate: their common-quotient model
+assumes a cyclic $M$ with $\operatorname{Fitt}_0(M)=(\lambda^d)$, and while
+$\operatorname{coker}(D)$ has that $\operatorname{Fitt}_0$ it has three
+nontrivial factors, not one.  Either a different module is needed or the model
+must argue through the top Fitting factor of a non-cyclic $M$.  \emph{(iii)
+Non-commutative.}  The Heisenberg cocycle is associative over any ring (the six
+cross terms cancel identically) and the centre is central, and the Weyl
+representation survives: $\rho$ is a homomorphism over $M_2(\FF_3)$, a
+non-commutative Frobenius ring with generating character
+$\psi(X)=\zeta_3^{\operatorname{tr}X}$.  So the construction --- and with it the
+law's hypothesis --- is not confined to commutative rings.
 
 \end{document}
