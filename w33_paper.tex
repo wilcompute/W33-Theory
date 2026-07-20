@@ -14238,9 +14238,13 @@ odd/even divide $=$ whether $T=\{t\}$ is downward closed & \textsc{thm} & P514 &
 new constraint at even $m$: $3S_3+6S_6=0$ at $m{=}18$, neither alone & \textsc{cert} & P514 & this programme ($\lvert T\rvert{=}2$) \\
 shortcut $q\prod d^{m/d}$ exact on $15{,}616$ orbits; $e{=}25,27$ confirmed & \textsc{cert} & P514 & this programme (validated before use) \\
 sieve rank $=\lvert T\rvert$; $\mathrm{free}(m)=\tau(m)-\#\{u\mid m: u$ odd$, e\mid u\}$ & \textsc{thm} & P515 & this programme (triangular; rank checked over $\mathbf Q$) \\
-$\mathrm{free}(p^j)=1$: the whole tower above increment 1 sits in one class & \textsc{thm} & P515 & this programme (orbit sum owes $0,2,10,36$ at $p{=}3$) \\
+$\mathrm{free}(p^j)=1$: the whole tower above increment 1 sits in one class & \textsc{thm} & P515 & this programme (orbit sum owes $0,2,10,36$ Legendre terms at $p{=}3$) \\
 the sieve survives the failure region ($\ZZ/9,\ZZ/25,\ZZ/27$) & \textsc{cert} & P515 & this programme (its proof never uses the law) \\
 REFUSED: failure depth is \emph{not} a function of the free count & \textsc{cert} & P515 & this programme ($\ZZ/9,\ZZ/25$ share free $2$, depths $12,30$) \\
+sieve is the WHOLE relation space: nullity $=\lvert T\rvert$ in $6/6$ cells & \textsc{cert} & P516 & this programme (constant rational coefficients only) \\
+prime-power tower to $4$ rungs: $8,20,56,164$; $14,54$; $20,104$ & \textsc{cert} & P516 & this programme ($m{=}81$ and $m{=}49$ new) \\
+character order confirmed at $e{=}49$, a new prime & \textsc{cert} & P516 & this programme ($m{=}7,21$ separate $e$ from $p$) \\
+inward audit: $6$ of $11$ claims in P510--P515 are corollaries of one another & \textsc{cert} & P516 & this programme (rediscovery, turned inward) \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -15303,7 +15307,7 @@ $m=p^{j}$ and leaves only the free class $d=m$.  The whole Legendre tower above
 the first increment therefore sits in a single class in which no cancellation
 between classes can occur --- the orbit weight supplies $j$ of the
 $\sum_i\lfloor m/p^i\rfloor$ terms and the orbit sum must supply
-$0,2,10,36$ at $p=3$ for $j=1,2,3,4$.  That is the sharpest form we have of
+$0,2,10,36$ Legendre terms at $p=3$ for $j=1,2,3,4$ (equivalently $0,4,20,72$ orders of $\lambda$).  That is the sharpest form we have of
 what is left to prove.
 
 The sieve also survives where the determinant law fails.  Its proof uses only
@@ -15320,5 +15324,51 @@ no function of the free count alone can produce both.  Recorded as an
 eliminated candidate rather than as a near miss --- this programme has retracted
 two mechanisms that merely fitted, and one that does not even fit should not
 survive a paragraph.  The depths remain unexplained.
+
+\paragraph{Pass 516 --- the sieve appears to be \emph{all} the relations.}
+Pass 515 left open whether some further symmetry supplies relations the sieve
+misses.  That is decidable rather than arguable.  Measure every class across
+many sections, expand each into its $\ZZ$-coordinates, and take the rank of the
+resulting matrix over $\mathbf{Q}$: the nullity is the dimension of the space of
+universally valid linear relations with constant rational coefficients.  It
+equals $\lvert T\rvert$ at $(p,m)=(3,3),(3,6),(3,9),(3,15),(5,5),(7,7)$ ---
+three primes, $m$ even and odd, $m$ a prime power and not.  Within that scope
+the sieve is not one family of relations but the whole space of them.  The
+scope is worth stating plainly: relations whose coefficients vary with the
+section, and nonlinear relations, are \emph{not} excluded, and this is a
+measurement over sampled sections rather than a proof.
+
+The prime-power tower now reaches four rungs.  Measured as minima over sampled
+sections, $v_\lambda(\operatorname{tr}D^m)$ is $8,20,56,164$ at $p=3$ for
+$m=3,9,27,81$; $14,54$ at $p=5$; and $20,104$ at $p=7$ --- every value equal to
+$v_\lambda(q)+m+1+v_\lambda(m!)$, the $m=81$ and $m=49$ rungs for the first
+time.  Since $\mathrm{free}(p^j)=1$, the orbit weight supplies $j$ of the
+$\sum_i\lfloor m/p^i\rfloor$ Legendre terms and the single free class must
+supply the rest: $0,2,10,36$ terms at $p=3$ for $j=1,\dots,4$, equivalently
+$0,4,20,72$ orders of $\lambda$.
+
+The character-order form gains a data point at a new prime: $e=49$, where the
+constant class is measured to vanish at $m=49$ and $m=147$ and \emph{not} at
+$m=7$ or $m=21$ --- both odd multiples of $7$, so ``$p\mid m$'' predicts
+vanishing and the character-order form does not.  The measurement follows $e$.
+
+Two boundaries recorded rather than crossed.  The completeness test needs
+\emph{every} class computed, and the shortcut still enumerates $d$-tuples: at
+$(7,49)$ the class $d=7$ would need $48^{7}$ of them, at $(3,27)$ the class
+$d=9$ needs $8^{9}$.  A first draft listed those cells and had to be killed;
+what survives are the cells where the largest class below $m$ has small period.
+And a fourth data point for the failure depths would need
+$\min_c v_\lambda(\det B_t-\det F)$ over $\ZZ/49$ --- a $49\times49$ determinant
+over $\ZZ[\zeta_{49}]$, degree $42$, per section, minimised over sections.  That
+is out of reach here, and the estimate is recorded so a later pass does not
+re-attempt it blindly.
+
+Finally, an inward audit.  Of eleven claims from Passes 510--515, six are now
+corollaries, restatements or corrections of one another --- the odd-class
+theorem and propagation are two faces of the sieve, not three results --- and
+five remain primitive.  The rows stay in the ledger, which is a historical
+record, but a reader coming to it fresh should be told which is which.  This is
+the rediscovery failure mode turned inward: a corpus can carry two generations
+of one theorem just as easily as two agents can.
 
 \end{document}

@@ -319,6 +319,18 @@ Pass 515 (`analysis/w33_pass515_sieve_rank.py`, 11/11 exact, idempotent):
 4. **CANDIDATE REFUSED: the failure depth is NOT a function of the free count.** At m=q the free counts are **2, 2, 3** at ℤ/9, ℤ/25, ℤ/27 while the depths are **12, 30, 36** — ℤ/9 and ℤ/25 *share* a free count and differ by 18, so no function of the free count alone produces both. Recorded as an **eliminated candidate**, not a near miss. The depths still match `p^{n−1}(p+1)` and remain **unexplained**.
 5. **LEAN:** `formal/W33/Pass514Sieve.lean` formalizes the sieve's *combinatorial* half — a sum whose summand is constant on the fibres of a map equals Σ over fibres of (fibre size)•(value), i.e. exactly "summing over `d|t` sweeps every t-tuple once, each period-d orbit contributing d times". Written against `Finset.sum_fiberwise_of_maps_to` so it needs almost no API. Arithmetic inputs stay hypotheses; **no Lean toolchain here — CI is the kernel check.**
 
+## Pass 516 addendum (python track) — the sieve appears to be ALL the relations, and the tower reaches four rungs
+
+Pass 516 (`analysis/w33_pass516_sieve_is_complete.py`, 11/11 exact, idempotent):
+
+1. **THE SIEVE IS THE WHOLE RELATION SPACE (scoped).** Measure every class across many sections, expand into ℤ-coordinates, take the rank over ℚ: the **nullity** is the dimension of the space of universally valid linear relations with *constant rational coefficients*. It equals **|T| in 6/6 cells** — (3,3),(3,6),(3,9),(3,15),(5,5),(7,7): three primes, m even and odd, m prime-power and not. **Scope matters:** section-dependent coefficients and nonlinear relations are NOT excluded, and this is a measurement over sampled sections, not a proof.
+2. **THE PRIME-POWER TOWER, FOUR RUNGS.** `v_λ(tr D^m)` = **8, 20, 56, 164** at p=3 (m=3,9,27,81); **14, 54** at p=5; **20, 104** at p=7 — all equal to `v_λ(q)+m+1+v_λ(m!)`. **m=81 and m=49 are new.** With `free(p^j)=1`, the weight supplies j Legendre terms and the single free class owes the rest: **0, 2, 10, 36 terms** at p=3 (= **0, 4, 20, 72 orders of λ** — Pass 515 quoted the term count, Pass 516 the λ-orders; both papers now say which).
+3. **CHARACTER ORDER AT e=49 — a new prime.** Constant class vanishes at m=49 and m=147, **not** at m=7 or m=21 — both odd multiples of 7, so "p|m" predicts vanishing and the character-order form does not. Measurement follows **e**.
+4. **LEAN, STANDING ALONE.** `formal/W33/Pass515TriangularRank.lean` — lower-triangular with nonzero diagonal ⇒ nonzero determinant ⇒ full rank. **First module of this arc that assumes no arithmetic input at all.**
+5. **INWARD AUDIT.** Of 11 claims in P510–P515, **6 are now corollaries/restatements/corrections of one another** (odd-class theorem and propagation are two faces of the sieve, not three results); 5 remain primitive. Rows stay in the ledger (historical record) but are now labelled. **This is the rediscovery failure mode turned inward — a corpus can carry two generations of one theorem as easily as two agents can.**
+
+**TWO BOUNDARIES RECORDED, NOT CROSSED.** (a) The completeness test needs *every* class, and the shortcut still enumerates d-tuples: (7,49) at d=7 needs **48⁷**, (3,27) at d=9 needs **8⁹**. A first draft listed those and had to be killed — the surviving cells are those where the largest class below m has small period. (b) A fourth failure-depth point needs `min_c v_λ(det B_t − det F)` over ℤ/49: a **49×49 determinant over ℤ[ζ₄₉] (degree 42) per section, minimised over sections**. Out of reach here; the estimate is recorded so a later pass does not re-attempt it blindly.
+
 ## Deferred
 
 - m=6 Coxeter–Todd rung of the QR tower (`data/m6_handoff_k12.json`).

@@ -22,3 +22,4 @@ import W33.Pass502RelativeNormSquare
 import W33.Pass508FactorialReduction
 import W33.Pass511OddClassVanishing
 import W33.Pass514Sieve
+import W33.Pass515TriangularRank

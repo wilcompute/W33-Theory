@@ -722,13 +722,37 @@ $\tau(m)=(b+1)\tau(s)$.
 \end{proof}
 
 \noindent Checked against the rank of the actual matrix over $\QQ$ for
-$e\in\{3,5,7,9,25,27\}$ and $m\le60$. At a prime power $m=p^{j}$ the count is
+$e\in\{3,5,7,9,25,27\}$ and $m\le60$.
+
+One may ask whether some further symmetry of the summand supplies relations the
+sieve misses. That is decidable rather than arguable: measure the classes
+themselves across many sections, expand each into its $\ZZ$-coordinates, and
+take the rank over $\QQ$. The nullity is then the dimension of the space of
+universally valid linear relations with constant rational coefficients. It
+equals $\lvert T\rvert$ at $(p,m)=(3,3),(3,6),(3,9),(3,15),(5,5),(7,7)$ ---
+three primes, $m$ even and odd, $m$ a prime power and not. So within that scope
+the sieve is not merely a family of relations but all of them. The scope is
+worth stating plainly: relations whose coefficients depend on the section, and
+nonlinear relations, are not excluded, and this is a measurement over sampled
+sections rather than a proof.
+
+At a prime power $m=p^{j}$ the count is
 $\mathrm{free}=1$: the sieve pins $j$ of the $j+1$ classes and leaves only the
 free class $d=m$. So the whole Legendre tower above the first increment sits in
 a single class, in which no cancellation between classes can occur; the orbit
-weight supplies $j$ of the $\sum_i\lfloor m/p^i\rfloor$ terms and the orbit sum
-must supply $0,2,10,36$ at $p=3$ for $j=1,2,3,4$. That is the sharpest form we
-have of what remains unproved.
+weight supplies $j$ of the $\sum_i\lfloor m/p^i\rfloor$ Legendre terms and the
+orbit sum must supply the remaining $\sum_i\lfloor m/p^i\rfloor-j$ of them ---
+that is $0,2,10,36$ terms at $p=3$ for $j=1,2,3,4$, or equivalently
+$(p-1)$ times that, $0,4,20,72$ orders of $\lambda$. That is the sharpest form
+we have of what remains unproved. The tower itself is exact at every rung
+measured, as minima over sampled sections:
+\[
+\begin{array}{lllll}
+p=3: & 8, & 20, & 56, & 164 \quad (m=3,9,27,81);\\
+p=5: & 14, & 54 & & \quad (m=5,25);\\
+p=7: & 20, & 104 & & \quad (m=7,49).
+\end{array}
+\]
 
 The sieve also survives where the determinant law does not. Its proof uses only
 $e\mid(m/d)$, which holds over $\ZZ/p^{n}$ exactly as over a field, and nothing
