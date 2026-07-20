@@ -249,6 +249,16 @@ Pass 506 (`analysis/w33_pass506_characteristic_vs_blocksize.py`, 8/8 exact):
 4. **MECHANISM IDENTIFIED, not just named:** the factorial is what Newton's identities divide by, so the "Frobenius signature" is the arithmetic of `m!` inside the Newton recursion.
 5. **Noncommutative + nilpotent together:** the law holds over the **local** noncommutative Frobenius ring 𝔽₉[θ] (θ²=0, θa=a³θ, socle character) — ring axioms and homomorphism property checked first, flat-det formula exact, **depth 12 = v_λ(81)+4**. This tests what the semisimple M₂(𝔽₃) of Pass 505 could not.
 
+## Pass 507 addendum (python track) — the factorial law IMPLIES the determinant law; survives its sharpest test
+
+Pass 507 (`analysis/w33_pass507_factorial_law_reduction.py`, 8/8 exact):
+
+1. **THE REDUCTION — factorial law ⟹ determinant law.** At m=q the factorial law reads `v_λ(tr D^q) = 2q + v_λ(q!)`; Newton gives `v_λ(e_q) ≥ q+1+v_λ(q!)`; the law needs `q+3`. **So the entire residual is `v_λ(q!) ≥ 2`** — for prime q that is `q−1 ≥ 2`, true for every q ≥ 3. The open problem is no longer about symplectic character sums at one exponent; it is the factorial law itself, a statement about the whole Newton recursion.
+2. **THE NINE-STEP TEST PASSED.** At |R| = 27, over **both** 𝔽₂₇ and 𝔽₃[x]/(x³): **26/26 exponents exact**, all nine `v_λ(m!)` increments including the double steps at m=9,18 and the triple at m=27 (Legendre).
+3. **THE FAILURE REGION SHARES THE CAUSE.** Over ℤ/9 and ℤ/25 the factorial law also fails, and fails **from below** (ℤ/9, m=9: 30 vs predicted 46). So it is *not* more robust than the law it implies — the two break on the same locus.
+4. **CORRECTION to the Pass 506 statement:** the leading term is **`v_λ(q)`, not `q−1`** (equal only for prime q). Both papers corrected.
+5. **NEAR-MISS worth recording:** the first run of this test used `q−1` and appeared to **falsify** the factorial law at |R|=27 — by a *constant* 20 = 26 − v_λ(27). The constancy of the offset gave away that the bug was in the test, not the law. Had I trusted the first run I would have retracted a correct result.
+
 ## Deferred
 
 - m=6 Coxeter–Todd rung of the QR tower (`data/m6_handoff_k12.json`).

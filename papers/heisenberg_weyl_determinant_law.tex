@@ -481,8 +481,11 @@ $\vlam(p_q)\ge2q+2$ would deliver $\vlam(e_q)\ge q+3$ --- exactly what the
 sharp law needs. The counting-plus-parity argument only gives $\vlam(p_q)\ge2q$, but that bound
 is \emph{not tight}, and the excess has an exact form:
 \begin{equation}\label{eq:factorial}
-\vlam\bigl(\tr D^m\bigr)\;=\;(q-1)+m+[m\text{ odd}]\;+\;\vlam(m!) .
+\vlam\bigl(\tr D^m\bigr)\;=\;\vlam(q)+m+[m\text{ odd}]\;+\;\vlam(m!) .
 \end{equation}
+The leading term is $\vlam(q)$, not $q-1$; those agree only when $q$ is prime,
+and writing $q-1$ makes \eqref{eq:factorial} fail by a constant $20$ already at
+$|R|=27$, where $\vlam(27)=6$.
 The first three terms are the parity bound; the excess over it is precisely
 $\vlam(m!)$. This was found by separating two readings that prime $q$ cannot
 distinguish. Over $\FF_9$ and $\FF_3[x]/(x^2)$ --- both of block size $9$ and
@@ -498,6 +501,28 @@ Since $3q-1\ge2q+2$ for every $q\ge3$, this settles the residual numerically.
 It also identifies the mechanism: the factorial is exactly what Newton's
 identities divide by, so what looked like a Frobenius signature at prime $q$ is
 the arithmetic of $m!$ inside the Newton recursion.
+
+Two further facts sharpen this. First, \eqref{eq:factorial} \emph{implies} the
+determinant law. At $m=q$ it reads $\vlam(\tr D^q)=2q+\vlam(q!)$; Newton's
+chain then gives $\vlam(e_q)\ge q+1+\vlam(q!)$, and the law needs
+$\vlam(e_q)\ge q+3$, so the entire residual is the inequality
+\[
+\vlam(q!)\;\ge\;2 ,
+\]
+which for prime $q$ is $q-1\ge2$. \textbf{The open problem is therefore no
+longer a statement about symplectic character sums at the top exponent; it is
+\eqref{eq:factorial} itself}, an identity about the whole Newton recursion.
+Second, \eqref{eq:factorial} has been tested at $|R|=27$ over both $\FF_{27}$
+and $\FF_3[x]/(x^3)$, matching \emph{exactly} at all $26$ exponents and across
+all nine increments of $\vlam(m!)$ --- including the double steps at $m=9,18$
+and the triple at $m=27$ predicted by Legendre's formula.
+
+Finally, \eqref{eq:factorial} fails --- and fails \emph{from below} --- exactly
+where the determinant law fails. Over $\ZZ/9$ and $\ZZ/25$, whose generating
+characters have order $p^2$, the measured power sums lie strictly under the
+right-hand side (at $\ZZ/9$, $m=9$: $30$ against $46$). So the two failures
+share a locus and presumably a cause, and \eqref{eq:factorial} is not a more
+robust statement than the law it implies.
 
 \begin{theorem}[the eigenvalue bound, off the top]\label{thm:ek2k}
 For every odd prime $q$ and every inverse-closed section,

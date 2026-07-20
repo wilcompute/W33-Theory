@@ -14203,10 +14203,14 @@ $\rho$ is a homomorphism over $M_2(\FF_3)$ (non-commutative) & \textsc{cert} & P
 $v_\lambda(\tr D^m)$ on the parity bound for $m<q$; jumps by $v_\lambda(q)$ at $m{=}q$ & \textsc{cert} & P505 & this programme (exact profile) \\
 $v_\lambda(\tr D^q)=3q{-}1$, \emph{out-of-sample} confirmed at $q{=}11$ ($32$) & \textsc{cert} & P505 & this programme (predicted then measured) \\
 $\operatorname{coker}(\operatorname{adj}(F)D)$ also not cyclic & \textsc{cert} & P505 & this programme (their P498 needs non-cyclic $M$) \\
-\textbf{the factorial law} $v_\lambda(\tr D^m)=(q{-}1){+}m{+}[m\text{ odd}]{+}v_\lambda(m!)$ & \textsc{cert} & P506 & this programme (12/12 points) \\
+\textbf{the factorial law} $v_\lambda(\tr D^m)=v_\lambda(q){+}m{+}[m\text{ odd}]{+}v_\lambda(m!)$ & \textsc{cert} & P506 & this programme (12/12 points) \\
 ``$3q{-}1$'' is the prime-$q$ shadow of the factorial law & \textsc{cert} & P506 & self-correction of P505's description \\
 excess steps at multiples of the \emph{characteristic}, not the block size & \textsc{cert} & P506 & this programme ($\FF_9$ vs $\FF_3[x]/(x^2)$) \\
 law holds over the noncommutative \emph{local} $\FF_9[\theta]$: depth $12$ & \textsc{cert} & P506 & this programme (noncomm.\ $+$ nilpotent) \\
+\textbf{factorial law $\Rightarrow$ determinant law}; residual $=v_\lambda(q!)\ge2$ & \textsc{thm} & P507 & this programme (trivial for prime $q$) \\
+factorial law exact at $|R|{=}27$: $26/26$, all nine Legendre steps & \textsc{cert} & P507 & this programme (sharpest test) \\
+factorial law fails \emph{from below} in the failure region & \textsc{cert} & P507 & this programme (same locus, shared cause) \\
+``factorial law falsified at $|R|{=}27$'' & \textsc{killed} & P507 & self-correction: test used $q{-}1$ for $v_\lambda(q)$ \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -14908,7 +14912,7 @@ $m=3,6,9$, at multiples of the \textbf{characteristic}.  So the attribution to
 the characteristic survives, but the ``one jump at $m=q$'' description was a
 prime-$q$ artefact.  What replaces it is exact:
 \[
-v_\lambda\bigl(\tr D^m\bigr)\;=\;\underbrace{(q-1)+m+[m\text{ odd}]}_{\text{parity bound}}\;+\;v_\lambda(m!),
+v_\lambda\bigl(\tr D^m\bigr)\;=\;\underbrace{v_\lambda(q)+m+[m\text{ odd}]}_{\text{parity bound}}\;+\;v_\lambda(m!),
 \]
 the excess being precisely $v_\lambda(m!)$.  This reproduces all eight
 non-prime values at $|R|=9$ ($2,2,2,4,4,4,8$ for $m=3,\dots,9$) \emph{and} the
@@ -14923,5 +14927,27 @@ $\FF_9[\theta]$, $\theta^2=0$, $\theta a=a^3\theta$ (ring axioms and
 homomorphism property checked first), depth $12=v_\lambda(81)+4$ --- which
 tests noncommutativity together with nilpotency, as the semisimple $M_2(\FF_3)$
 of Pass 505 could not.
+
+\paragraph{Pass 507 --- the factorial law implies the determinant law, and
+survives its sharpest test.}
+Three results, and one near-miss worth recording.  \emph{(i) The reduction.}
+At $m=q$ the factorial law reads $v_\lambda(\tr D^q)=2q+v_\lambda(q!)$; Newton's
+chain gives $v_\lambda(e_q)\ge q+1+v_\lambda(q!)$; and the determinant law needs
+$q+3$.  So \textbf{the entire residual is the inequality $v_\lambda(q!)\ge2$},
+which for prime $q$ is $q-1\ge2$ and holds for every $q\ge3$.  The open problem
+is therefore no longer about symplectic character sums at one exponent --- it
+is the factorial law itself, a statement about the whole Newton recursion.
+\emph{(ii) The nine-step test.}  At $|R|=27$ the law predicts an excess
+$v_\lambda(m!)$ stepping at every multiple of $3$, with double steps at $m=9,18$
+and a triple at $m=27$ (Legendre).  Over both $\FF_{27}$ and $\FF_3[x]/(x^3)$
+it matches \emph{exactly at all $26$ exponents}, all nine increments included.
+\emph{(iii) The failure region shares the cause.}  Over $\ZZ/9$ and $\ZZ/25$ the
+factorial law fails too, and fails \emph{from below} (at $\ZZ/9$, $m=9$: $30$
+against a predicted $46$).  So it is not more robust than the law it implies;
+the two break on the same locus.  \emph{The near-miss:} the first run of this
+test wrote the leading term as $q-1$ rather than $v_\lambda(q)$ --- equal only
+for prime $q$ --- and appeared to \emph{falsify} the factorial law at $|R|=27$
+by a constant $20=26-v_\lambda(27)$.  The constancy of the offset gave it away.
+The statement in Pass 506's paragraph above has been corrected accordingly.
 
 \end{document}
