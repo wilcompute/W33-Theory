@@ -431,6 +431,19 @@ Pass 525 (`w33_pass525_infinite_families.py`, 8/8) and Pass 526 (`w33_pass526_tr
 5. **REFORMULATION (not a derivation).** The residue `E(m) = v_λ([T^m]_{0,0}) − m` is now a statement about `tr(T^m)` — a **similarity invariant** of T. Anything computing T's spectrum computes E(m) for **all m at once**, which the cyclic decomposition could never do (its classes aren't similarity invariants). *No spectrum computed; reformulations have gone wrong here before (P520).*
 6. **EDITORIAL CALL MADE (was deferred to the author).** I rejected splitting the paper. **A paper cannot outsource its own errata.** Instead the determinant note gains a **"Status of the results" table on page one** listing every substantive claim as *stands* / *FALSE* / *CORRECTED*, with the methodology pointed to the companion note.
 
+## Passes 527-528 — the deflation, and the image of the section space in charpoly space
+
+Pass 527 (`w33_pass527_spectrum_deflation.py`, 6/6) and Pass 528 (`w33_pass528_charpoly_image.py`, 7/7), both idempotent:
+
+1. **`charpoly(T) = charpoly(D)^q`.** Since `tr(T^m) = q·tr(D^m)` ∀m and power sums determine a multiset of eigenvalues, **T's spectrum is D's with each eigenvalue repeated q times** — exactly q·q = q², filling the matrix, **no zeros**.
+2. **⚠ THIS DEFLATES MY OWN PASS 526 SUGGESTION.** I had closed 526 with "computing T's spectrum gives E(m) for all m at once, which the cyclic decomposition never could". **Withdrawn** — T carries *exactly* D's spectral information, available since P473 and already used by P520–523. **A reformulation that preserves all the information preserves all the difficulty.** The covariance, constant diagonal and trace identity survive — and the trace identity is what *proves* the deflation.
+3. **A FIRST DRAFT GOT IT BACKWARDS:** guessed T had q²−q *zeros*, found `e_k(T) ≠ 0` past k=q, inferred the trace identity must fail, and hunted to m=18 for a failure that doesn't exist. Arithmetic error — q eigenvalues of multiplicity q already fill q²×q². *The refutation reflex fired correctly 3× this week and misfired here.*
+4. **⭐ THE IMAGE AT q=3 IS SIX POLYNOMIALS.** Exhaustively over all 81 sections, exactly **six** charpolys occur, **all with rational integer coefficients**: `x³, x³−9x, x³−18x, x³−27x, x³−27x−27, x³−36x−81`, multiplicities **1, 8, 24, 8, 24, 16**. Their valuation profiles recover P521's four profiles with counts **32 = 8+24, 8, 24, 16** — so the profile invariant is the coarsening that **merges x³−9x with x³−18x**.
+5. **⇒ THE ENTIRE q=3 LAW IS A SIX-ROW LOOKUP TABLE.** The trace vector is a function of charpoly (P527: 160 charpolys at q=5, none mapping to two vectors), and only six charpolys occur — so P521–523's derivations are simply that table's rows computed by hand. The minimum over the six reproduces `2(m+[m odd])`.
+6. **NOT EXTRAPOLATED.** At q=5 the image is **large** (220 samples → 160+ distinct charpolys), so the finite table is a **small-q accident**, same kind as P524's profile finding.
+
+**THE LOCALIZATION.** Every framework in the arc — orbits, sieve, closed form, transfer matrix — collapsed to one question: **given charpoly(D), compute `v_λ(Σ_j ν_j^m)`.** Solved at q=3 (six rows); open at q≥5, where coefficient valuations demonstrably do not suffice.
+
 ## Deferred
 
 - m=6 Coxeter–Todd rung of the QR tower (`data/m6_handoff_k12.json`).

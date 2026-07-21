@@ -1077,10 +1077,24 @@ $\tr(T^m)=q^2[T^m]_{0,0}=q\,\tr(D^m)$ by Theorem~\ref{thm:transfer}.
 \end{proof}
 
 \noindent This explains the factor $q$ in Theorem~\ref{thm:transfer}: it is not
-a normalisation accident but the count of states in a translation orbit. It
-also makes the open residue $E(m)=\vlam([T^m]_{0,0})-m$ a statement about
-$\tr(T^m)$, hence a \emph{similarity invariant} of $T$ --- something the cyclic
-decomposition, whose classes are not similarity invariants, could never see.
+a normalisation accident but the count of states in a translation orbit.
+
+It is tempting to go further and say that $E(m)=\vlam([T^m]_{0,0})-m$ is
+therefore a similarity invariant of $T$, so that computing $T$'s spectrum would
+settle every $m$ at once. \emph{That is false, and Theorem~\ref{thm:cov} is
+what refutes it.} Power sums determine a multiset of eigenvalues, and
+$\tr(T^m)=q\,\tr(D^m)$ for every $m$ forces $T$'s spectrum to be $D$'s with
+each eigenvalue repeated $q$ times --- exactly $q\cdot q=q^2$ of them, filling
+the matrix with no zeros. Equivalently
+\[
+\operatorname{charpoly}(T)=\operatorname{charpoly}(D)^{\,q},
+\]
+verified exactly at $q=3$. So $T$ carries precisely the spectral information
+$D$ carries and no more; computing it computes what was already available from
+$D$, and what \S\ref{sec:transfer} buys is a language for the orbit results ---
+cycle types, necklace counts, the sieve as M\"obius inversion over walks --- not
+a new invariant. A reformulation that preserves all the information preserves
+all the difficulty.
 
 \noindent Everything in this section is a statement about closed walks in this
 weighted graph, grouped by rotation of the base point: the period-$d$ classes
