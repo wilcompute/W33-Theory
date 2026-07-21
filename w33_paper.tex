@@ -14249,6 +14249,9 @@ closed form $d\,S_d=q\sum_{c\mid d}\mu(d/c)\mathrm{Ps}(m/c)^c$; no enumeration &
 the sieve theorem in two lines, by Möbius inversion & \textsc{thm} & P517 & this programme (second proof; says where it comes from) \\
 $\mathrm{free}(m)=1\iff m$ is a power of $p$ & \textsc{thm} & P517 & this programme (resolves the P516 confound by proof) \\
 completeness holds over $\mathbf Q(\zeta_p)$ too, incl.\ $(3,81),(5,25),(7,49)$ & \textsc{cert} & P517 & this programme (informative sections only) \\
+cocycle $\rho(v)\rho(w)=\zeta^{-\omega(v,w)}\rho(v{+}w)$; orbit value carries $\zeta^{-k\Omega}$ & \textsc{thm} & P518 & this programme ($2864$ pairs exact; names the obstruction) \\
+$\operatorname{tr}(D^m)$ is carried by the $d\nmid(m/e)$ classes alone & \textsc{thm} & P518 & this programme (sieve at $t{=}m/e$; a restatement) \\
+the arc reduces to one lemma: $\mathrm{Ps}(k){=}0\iff k$ odd and $e\mid k$ & \textsc{thm} & P518 & this programme (nothing else in P511--517 is primitive) \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -15426,5 +15429,51 @@ contributes nothing to the rank.  Sampling a fixed range of sections drew only
 such sections at $m=15,27,81$ and returned rank $0$ --- which reads as a
 missing relation and is in fact an empty sample.  The figures above count
 \emph{informative} sections, scanning until enough are found.
+
+\paragraph{Pass 518 --- the phase is the obstruction, and the arc reduces to one
+lemma.}
+The closed form holds only where $e\mid(m/d)$, and the top class $d=m$ is always
+outside that range.  What is in the way can be named exactly.  The
+representation satisfies
+\[
+\rho(v)\rho(w)=\zeta^{-\omega(v,w)}\rho(v+w),\qquad
+\omega\bigl((a,b),(a',b')\bigr)=ab'-a'b,
+\]
+verified exactly at $p=3,5,7$ over all $2864$ ordered pairs.  Iterating, a
+period-$d$ representative gives $M=\zeta^{-\Omega}\rho(w)$ with
+$w=\sum_i w_i$ and $\Omega=\sum_{i<j}\omega(w_i,w_j)$; and $\omega(w,w)=0$ gives
+$\rho(w)^k=\rho(kw)$ exactly.  With $k=m/d$ the zero-sum condition is precisely
+$kw=0$, so $\operatorname{tr}(M^k)=q\zeta^{-k\Omega}$ and the orbit's value is
+$q\,\zeta^{-k\Omega}\prod_i d_{w_i}^{\,k}$.  The Pass 514 shortcut is this
+formula with its phase dropped, and the phase is trivial for \emph{every} orbit
+exactly when $e\mid k$ --- which is why the closed form stops at the top class,
+where $k=1$.  Not a gap in the argument: the shape of the object.  Checked on
+six cells including ones where $e\nmid k$.
+
+Taking $t=m/e$ in the sieve gives $\sum_{d\mid m/e}d\,S_d=0$, so
+$\operatorname{tr}(D^m)$ is carried entirely by the classes whose period does
+\emph{not} divide $m/e$ --- at $m=p^{j}$ only $d=m$, at $(3,6)$ the classes
+$d=3$ and $d=6$.  This is a restatement of the sieve rather than a new fact, and
+is verified as such through the closed form: enumerating the carriers at
+$(3,15)$ would need $8^{14}$ tuples.
+
+\emph{And the whole arc reduces to one lemma.}  Writing
+$\mathrm{Ps}(k)=\sum_{v\neq0}d_v^{\,k}$,
+\[
+\mathrm{Ps}(k)=0 \text{ for every inverse-closed section}
+\iff k \text{ odd and } e\mid k,
+\]
+checked at $e\in\{3,5,7,9,25,27\}$ for $k$ up to $3e$.  The odd-class vanishing
+theorem, propagation, the character-order form, the sieve, the rank count and
+the closed form all have this bracket at their centre, and the $d=1$ converse is
+its backward direction.  Nothing else in Passes 511--517 is primitive.
+
+Two artefacts.  \texttt{formal/W33/Pass517ClosedForm.lean} formalizes the
+order-exchange that turns the closed form into the sieve, with the M\"obius
+collapse $\sum_{c\mid d\mid t}\mu(d/c)=[c=t]$ as an explicit hypothesis --- the
+third module of this arc, alongside the fibrewise step and the triangular rank.
+And the standalone note gains a roadmap stating the dependency order above,
+rather than a reordering: its sections still follow the historical route, and
+rearranging a paper of that size is a change best made once, deliberately.
 
 \end{document}

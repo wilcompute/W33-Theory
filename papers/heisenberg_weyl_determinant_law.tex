@@ -180,6 +180,44 @@ certificates are archived in the repository \cite{repo}; the pairing identity
 of Lemma~\ref{lem:pair} is machine-checked in Lean~4 against
 Mathlib \cite{mathlib}.
 
+\subsection{How the results depend on one another}\label{sec:roadmap}
+
+The sections below follow the order in which the results were found, which is
+not the order in which they depend on each other. A reader who wants the
+logical structure should take it as follows.
+
+At the root is a single lemma about one power sum. Writing
+$\mathrm{Ps}(k)=\sum_{v\neq0}d_v^{\,k}$ and letting $e$ be the order of the
+generating character,
+\[
+\mathrm{Ps}(k)=0 \text{ for every inverse-closed section}
+\iff k \text{ is odd and } e\mid k .
+\tag{$\ast$}
+\]
+Inverse closure pairs $v$ with $-v$, so $\mathrm{Ps}(k)$ is a sum of terms
+$2\operatorname{Re}(u-1)^{k}$, and $(u-1)^k$ is purely imaginary exactly under
+those conditions; the one-pair section of Proposition~\ref{prop:converse1}
+supplies the converse.
+
+Everything else descends from $(\ast)$. The closed form
+(Proposition~\ref{prop:closed}) writes each cyclic class $d\,S_d$ in terms of
+$\mathrm{Ps}$ alone; summing it over $d\mid t$ and exchanging the order gives
+the sieve theorem (Theorem~\ref{thm:sieve}), whose right-hand side is
+$q\,\mathrm{Ps}(m/t)^{t}$ and therefore vanishes by $(\ast)$. The sieve in turn
+yields the odd-class vanishing theorem (Theorem~\ref{thm:oddclass}) when its
+index set is downward closed, and a single propagation relation when it is not;
+its system is triangular along divisibility, which gives the rank count
+(Proposition~\ref{prop:rank}) and hence
+$\mathrm{free}(m)=1\iff m$ is a power of $p$ (Proposition~\ref{prop:freeone}).
+The determinant congruence of \S\ref{sec:sharp}, which motivated all of this,
+sits at the other end: it follows from the factorial law, which is an
+assertion about the very power sums $(\ast)$ constrains.
+
+One boundary is worth stating at the outset. The closed form requires
+$e\mid(m/d)$, and the top class $d=m$ never satisfies it; the reason is
+identified in \S\ref{sec:closedform}, and it is a genuine feature of the object
+rather than a defect of the argument.
+
 \section{The flat block}
 
 \begin{lemma}\label{lem:trace}
@@ -825,6 +863,35 @@ sums, each a single loop over the $q^2-1$ vectors, in place of $\lvert
 V\rvert^{d}$ tuples --- so $(7,49)$ at $d=7$, which would have needed $48^{7}$
 tuples, and $(3,27)$ at $d=9$, which would have needed $8^{9}$, become
 immediate.
+
+The hypothesis $e\mid(m/d)$ is not an artefact, and what it excludes can be
+named exactly. The representation satisfies
+\[
+\rho(v)\,\rho(w)=\zeta^{-\omega(v,w)}\rho(v+w),\qquad
+\omega\bigl((a,b),(a',b')\bigr)=ab'-a'b,
+\]
+so a period-$d$ representative gives $M=\rho_{w_1}\cdots\rho_{w_d}
+=\zeta^{-\Omega}\rho(w)$ with $w=\sum_i w_i$ and
+$\Omega=\sum_{i<j}\omega(w_i,w_j)$; and since $\omega(w,w)=0$ one has
+$\rho(w)^{k}=\rho(kw)$ exactly. With $k=m/d$ the zero-sum condition on the
+$m$-tuple is precisely $kw=0$, so $\tr(M^{k})=q\,\zeta^{-k\Omega}$ and the
+orbit's value is
+\[
+q\,\zeta^{-k\Omega}\prod_{i\le d}d_{w_i}^{\,k}.
+\]
+The shortcut above is this formula with its phase dropped, and the phase is
+trivial for \emph{every} orbit exactly when $e\mid k$. That is why the closed
+form stops at the top class, where $k=1$: not a gap in the argument but the
+shape of the object.
+
+A corollary of the sieve is worth recording in this language. Taking $t=m/e$
+gives $\sum_{d\mid m/e}d\,S_d=0$, so
+\[
+\tr(D^m)=\sum_{\substack{d\mid m\\ d\nmid m/e}} d\,S_d :
+\]
+the trace is carried entirely by the classes whose period does \emph{not}
+divide $m/e$. At $m=p^{j}$ the only such class is $d=m$, recovering
+$\tr(D^m)=m\,S_m$; at $(p,m)=(3,6)$ the carriers are $d=3$ and $d=6$.
 
 Proposition~\ref{prop:closed} also settles which $m$ have a single free class.
 

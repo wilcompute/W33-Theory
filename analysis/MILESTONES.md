@@ -344,6 +344,16 @@ Pass 517 (`analysis/w33_pass517_mobius_closed_form.py`):
 5. **COMPLETENESS OVER ℚ(ζ_p), not just ℚ.** Pass 516 excluded only constant *rational* coefficients. Redoing the elimination in the cyclotomic field itself (inverting via the multiplication matrix on the reduced power basis) gives the same answer. Nonlinear and section-dependent relations remain outside the scope.
 6. **The standalone note's abstract now leads with the sieve**, since the sieve — not the determinant congruence — is the paper's centre. Remaining work before submission is editorial judgement for the author, not mathematics.
 
+## Pass 518 addendum (python track) — the phase is the obstruction, and the arc reduces to ONE lemma
+
+Pass 518 (`analysis/w33_pass518_phase_obstruction.py`, 9/9 exact):
+
+1. **THE COCYCLE, EXACTLY.** `ρ(v)ρ(w) = ζ^{−ω(v,w)} ρ(v+w)` with `ω((a,b),(a',b')) = ab' − a'b` — **0 mismatches over 2864 ordered pairs** at p=3,5,7. Iterating: a period-d rep gives `M = ζ^{−Ω} ρ(w)`, `Ω = Σ_{i<j} ω(w_i,w_j)`; and `ω(w,w)=0` ⇒ `ρ(w)^k = ρ(kw)` exactly.
+2. **THE ORBIT VALUE, WITH ITS PHASE.** With k = m/d, the zero-sum condition is exactly `kw = 0`, so `tr(M^k) = q·ζ^{−kΩ}` and **value = `q·ζ^{−kΩ}·∏ d_{w_i}^k`**. The Pass 514 shortcut is this formula **with the phase dropped**, and the phase is trivial for *every* orbit **exactly when `e | k`**. That is why the closed form stops at the top class (k=1) — **not a gap in the argument, the shape of the object.** Verified on 6 cells incl. ones with `e ∤ k`.
+3. **WHAT CARRIES THE TRACE.** Sieve at `t = m/e` ⇒ `Σ_{d | m/e} d·S_d = 0` ⇒ **`tr(D^m) = Σ_{d|m, d ∤ (m/e)} d·S_d`**. At m=p^j only d=m (recovering `tr = m·S_m`); at (3,6) the carriers are d=3,6. A **restatement** of the sieve, verified through the closed form — enumerating carriers at (3,15) would need 8¹⁴ tuples.
+4. **THE WHOLE ARC REDUCES TO ONE LEMMA.** `Ps(k) = Σ_{v≠0} d_v^k = 0` for every inverse-closed section **⟺ k odd and e | k** (checked at e ∈ {3,5,7,9,25,27}, k ≤ 3e). Odd-class vanishing, propagation, character-order form, the sieve, the rank count, the closed form — **all have this bracket at their centre**; the d=1 converse is its backward direction. **Nothing else in P511–517 is primitive.**
+5. **ARTEFACTS.** `formal/W33/Pass517ClosedForm.lean` — the order-exchange turning the closed form into the sieve, with the Möbius collapse `Σ_{c|d|t} μ(d/c) = [c=t]` as an explicit hypothesis (third module of the arc). The standalone note gains **`\subsection{How the results depend on one another}`** — a **roadmap, not a reordering**: sections still follow the historical route, and rearranging a paper that size is a change best made once, deliberately.
+
 ## Deferred
 
 - m=6 Coxeter–Todd rung of the QR tower (`data/m6_handoff_k12.json`).
