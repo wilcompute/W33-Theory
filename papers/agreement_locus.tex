@@ -1,0 +1,169 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{microtype}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\vlam}{v_\lambda}
+
+\title{Confirmation on the agreement locus\\
+{\large three worked examples of a mechanical failure mode}}
+\author{W.~Dahn}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent A conjectured formula is tested, confirmed repeatedly, and believed.
+It is false. Every test happened to lie in the set where the conjecture agrees
+with the truth --- and that set was not chosen adversarially but by
+computational convenience, because the cases that were cheap to compute were
+exactly the cases where the two formulas coincide. We give three examples from
+a single research programme, all found within one week of each other, and
+isolate the structural reason: \emph{the constraint that makes a case
+affordable is often the same constraint that makes the conjecture true there}.
+The third example is the sharpest, because the false statement was not a fit
+but a \emph{theorem} --- correctly proved from a premise that had itself been
+derived only on the agreement locus. We propose a cheap test.
+\end{abstract}
+
+\section{The failure mode}
+
+Let $C$ be a conjecture, $T$ the truth, and $A=\{x: C(x)=T(x)\}$ their agreement
+locus. Confirming $C$ at points of $A$ produces no evidence for $C$: the
+observations are equally consistent with $T$. This is obvious stated abstractly
+and invisible in practice, because $A$ is unknown --- one does not learn what
+$A$ is until $C$ has already failed somewhere.
+
+What makes the failure mode mechanical rather than merely possible is that test
+sets are rarely chosen at random. They are chosen where computation is
+feasible. If feasibility and membership in $A$ are governed by the same
+condition, then every affordable test is uninformative, and no amount of
+confirmation helps. That is what happened three times below.
+
+\section{Example one: a factorial that was not there}
+
+The setting is a family of matrices $D$ over $\ZZ[\zeta_p]$ indexed by a finite
+set of ``sections'', with $\lambda=1-\zeta_p$ and $\vlam$ the corresponding
+valuation. The conjecture, fitted to thirty-eight measured points, was
+\begin{equation}\label{eq:C}
+\vlam\bigl(\operatorname{tr}D^m\bigr)
+=\vlam(q)+m+[m\text{ odd}]+\vlam(m!),
+\end{equation}
+the minimum being over sections. It survived fourteen rounds of testing,
+including a nine-step check against Legendre's formula for $v_p(m!)$ that
+matched at all twenty-six exponents of one case.
+
+At $q=3$ the section space has exactly $81$ elements --- small enough to
+enumerate --- and the minimum is therefore decidable. Enumerating it gives
+\[
+4,\;8,\;8,\;\mathbf{12},\;12,\;\mathbf{16},\;\mathbf{16},\;20,\;20,\;
+\mathbf{24},\;24 \qquad(m=2,\dots,12),
+\]
+against \eqref{eq:C}'s $4,8,8,10,12,14,14,20,20,22,24$. The truth exceeds the
+conjecture by $2$ at $m=5,7,8,11$, and fits
+\[
+T(m)=2\bigl(m+[m\text{ odd}]\bigr)
+\]
+at all nineteen exponents up to $m=20$, where \eqref{eq:C} fails at eleven.
+
+Now the agreement locus. Since $2v_3(m!)=m-s_3(m)$ with $s_3$ the base-$3$
+digit sum, the two expressions differ by $s_3(m)+[m\text{ odd}]-2$, so
+\[
+A=\{\,m:\ s_p(m)+[m\text{ odd}]=2\,\}.
+\]
+Every prime power $m=p^{j}$ has $s_p(m)=1$ and is odd, hence lies in $A$. So
+does $m=q$ for every prime $q=p$. \emph{Every test that had been run was at
+$m=q$, at $m=p^{j}$, or at two composite ring sizes} --- all inside $A$.
+
+Why those? Because the analytic machinery available decomposes
+$\operatorname{tr}D^m$ into classes indexed by the divisors of $m$, and at
+prime powers that decomposition collapses to a single class. Prime powers were
+the cases that could be computed at all. Feasibility and $A$ coincided.
+
+\section{Example two: a completeness claim}
+
+The same programme proved a ``sieve theorem'' giving $|T|$ linear relations
+among $\tau(m)$ classes, and then asked whether those were all of them. The
+test was a rank computation: measure the classes across many sections and read
+off the nullity. Reported: nullity $=|T|$ in ten cells, hence the sieve is the
+whole relation space.
+
+The cells were $(p,m)=(3,3),(3,6),(3,9),(3,15),(3,27),(3,81),(5,5),(5,25),
+(7,7),(7,49)$. Every one satisfies $p\mid m$. Choosing instead cells with
+$|T|=0$ --- where the claim predicts \emph{no} relations, so a stray one cannot
+hide --- gives nullity $1$ at $(3,2)$, $(3,4)$, $(3,10)$, $(5,4)$ and $(5,6)$
+alike. The correct count is
+\[
+\text{nullity}=|T|+[\,p\nmid m\,].
+\]
+The extra relation is elementary once seen: one of the classes is \emph{empty}
+when $p\nmid m$, so its sum vanishes vacuously, and the sieve --- which counts
+relations forced by cancellation --- does not count it.
+
+Again the locus was not chosen adversarially. The computational shortcut that
+made the classes affordable requires a divisibility condition equivalent to
+$p\mid m$. The affordable cells were exactly the cells where the missing
+relation cannot occur.
+
+\section{Example three: a theorem inheriting the blind spot}
+
+The third instance is the one worth the paper. From the (incorrect) count
+$\mathrm{free}(m)=\tau(m)-|T|$, the programme \emph{proved} a characterisation:
+$\mathrm{free}(m)=1$ if and only if $m$ is a power of $p$. The proof is a
+correct divisor computation. But with the corrected count
+$\mathrm{free}(m)=\tau(m)-|T|-[\,p\nmid m\,]$, every prime $\ell\neq p$ has
+$\tau=2$, $|T|=0$ and correction $1$, hence $\mathrm{free}=1$ --- verified at
+$(3,5)$, $(3,7)$, $(5,3)$, $(5,7)$, $(7,3)$, none of which is a power of $p$.
+
+\begin{remark}
+The algebra was sound; the premise was not. A proof inherits the blind spot of
+whatever it starts from, and a formula derived only on an agreement locus
+carries that locus into every theorem built on it. Formalisation would not have
+caught this: the Lean modules in that programme state their arithmetic inputs
+as hypotheses, and the hypothesis here was false.
+\end{remark}
+
+\section{A cheap test}
+
+For a conjecture $C$ predicting a quantity, run it where $C$ predicts something
+\emph{degenerate} --- zero relations, an empty set, a vanishing invariant.
+Degenerate predictions have no room to absorb an error, so a discrepancy shows
+immediately. In example two the entire refutation was five cells with $|T|=0$.
+
+More generally, before trusting a confirmation, ask the two questions:
+
+\begin{enumerate}
+\item \textbf{Was the test set chosen independently of the conjecture?} If the
+cases were selected because they were computable, identify the condition that
+made them computable and check whether it appears in $C$.
+\item \textbf{Can the conjecture be made to predict something degenerate?} If
+so, test there first; those cases are usually cheap for the same reason they
+are informative.
+\end{enumerate}
+
+A useful negative control: in the same programme, several results were
+\emph{not} affected --- exact identities checked against honest enumeration,
+and a determinant congruence proved unconditionally and verified by exhaustion
+at $q=3$. The distinguishing feature is not rigour but provenance: a fitted
+formula tested on convenient cases is exposed; an identity verified against a
+direct computation is not.
+
+\section*{Provenance}
+
+All three examples arise in the author's work on Heisenberg--Weyl determinant
+congruences; the underlying computations and their certificates are archived
+with that work, together with the witness programs that produced both the
+original confirmations and the refutations. The refutations were found in
+passes 519, 522 and 523 of that programme, within a single week, after the
+failure mode was named in pass 521.
+
+\end{document}

@@ -411,6 +411,15 @@ Pass 523 (`analysis/w33_pass523_vacuous_census.py`, 7/7 exact, idempotent):
 4. **⚠⚠ THIRD FIRING: `free(m)=1 ⟺ m = p^j` is FALSE.** P517's proof was *correct given its input*, but the input `free = τ(m) − |T|` omits the vacuous class. Corrected: `free = τ(m) − |T| − [p∤m]` ⇒ **any prime ℓ ≠ p** has τ=2, |T|=0, correction 1 ⇒ **free = 1**. Measured at (3,5),(3,7),(5,3),(5,7),(7,3): free=1 in all five, none a power of p. **Corrected statement: free(m)=1 for m a power of p AND for m a prime other than p.**
 5. **THE TRANSFERABLE LESSON:** *a proof inherits the blind spot of the formula it starts from.* P517's algebra was sound; its premise had been derived only on cells with `p | m`. Three passes, three firings — and this one propagated through a **proof**, not a fit.
 
+## Pass 524 addendum (python track) — status upgraded to THEOREM, free-count repaired, q=5 does NOT transfer, and the note finally written
+
+Pass 524 (`analysis/w33_pass524_status_upgrade.py`, 7/7 exact, idempotent):
+
+1. **THE COMPLETENESS RESULT IS A THEOREM CELL BY CELL, not a measurement.** Lower bound `nullity ≥ |T| + [p∤m]` is **proved** (both families genuine, and `|T|≥1 ⟺ p|m` so they never coexist). Upper bound comes from **exhibiting sections whose class vectors are linearly independent over ℚ(ζ_p)** — and exhibiting independent vectors **PROVES a rank lower bound**, it does not sample one, since the independence is exact arithmetic. Where the bounds meet, **equality is a theorem about that cell** (8 cells). Only the all-m statement stays open — no finite computation can settle it.
+2. **FREE-COUNT REPAIRED.** `free(m) = 1` ⟺ **m is a power of p OR m is a prime ≠ p**; and **`free(1) = 0`**. (If p|m: `free = τ(m) − |T|` = 1 only for `m = p^a`. If p∤m: `free = τ(m) − 1` = 1 ⟺ `τ(m) = 2`.) Verified p ∈ {3,5,7}, m < 200. Supersedes P517's single-branch claim.
+3. **⚠ THE q=3 METHOD DOES NOT TRANSFER.** At q=3 the profile `(v(e₂),v(e₃))` is a **complete invariant** (4 profiles, 4 trace vectors) — that is *why* the q=3 law was derivable. At **q=5 it is not**: 220 sections give **34 profiles carrying 52 distinct trace vectors**. The q=3 derivation was a **small-q phenomenon**. Recorded so a later pass doesn't attempt it expecting the q=3 experience. (Negative conclusion needs no exhaustiveness — one splitting profile suffices.)
+4. **THE STANDALONE NOTE IS WRITTEN:** `papers/agreement_locus.tex` (compiles, 49 KiB PDF) — the agreement-locus failure mode with all three worked examples, the structural diagnosis (*the constraint that makes a case affordable is often the same constraint that makes the conjecture true there*), the observation that **example three propagated through a PROOF**, and a cheap test: **run the conjecture where it predicts something DEGENERATE**, since degenerate predictions have no room to absorb an error. **Proposed and deferred in four consecutive rounds; written this round.**
+
 ## Deferred
 
 - m=6 Coxeter–Todd rung of the QR tower (`data/m6_handoff_k12.json`).
