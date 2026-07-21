@@ -14203,7 +14203,7 @@ $\rho$ is a homomorphism over $M_2(\FF_3)$ (non-commutative) & \textsc{cert} & P
 $v_\lambda(\tr D^m)$ on the parity bound for $m<q$; jumps by $v_\lambda(q)$ at $m{=}q$ & \textsc{cert} & P505 & this programme (exact profile) \\
 $v_\lambda(\tr D^q)=3q{-}1$, \emph{out-of-sample} confirmed at $q{=}11$ ($32$) & \textsc{cert} & P505 & this programme (predicted then measured) \\
 $\operatorname{coker}(\operatorname{adj}(F)D)$ also not cyclic & \textsc{cert} & P505 & this programme (their P498 needs non-cyclic $M$) \\
-\textbf{the factorial law} $v_\lambda(\tr D^m)=v_\lambda(q){+}m{+}[m\text{ odd}]{+}v_\lambda(m!)$ & \textsc{cert} & P506 & this programme (12/12 points) \\
+\textbf{the factorial law} $v_\lambda(\tr D^m)=v_\lambda(q){+}m{+}[m\text{ odd}]{+}v_\lambda(m!)$ & \textsc{cert} & P506 & this programme (12/12 points) --- \textbf{FALSE at $q{=}3$, see P519} \\
 ``$3q{-}1$'' is the prime-$q$ shadow of the factorial law & \textsc{cert} & P506 & self-correction of P505's description \\
 excess steps at multiples of the \emph{characteristic}, not the block size & \textsc{cert} & P506 & this programme ($\FF_9$ vs $\FF_3[x]/(x^2)$) \\
 law holds over the noncommutative \emph{local} $\FF_9[\theta]$: depth $12$ & \textsc{cert} & P506 & this programme (noncomm.\ $+$ nilpotent) \\
@@ -14252,6 +14252,10 @@ completeness holds over $\mathbf Q(\zeta_p)$ too, incl.\ $(3,81),(5,25),(7,49)$ 
 cocycle $\rho(v)\rho(w)=\zeta^{-\omega(v,w)}\rho(v{+}w)$; orbit value carries $\zeta^{-k\Omega}$ & \textsc{thm} & P518 & this programme ($2864$ pairs exact; names the obstruction) \\
 $\operatorname{tr}(D^m)$ is carried by the $d\nmid(m/e)$ classes alone & \textsc{thm} & P518 & this programme (sieve at $t{=}m/e$; a restatement) \\
 the arc reduces to one lemma: $\mathrm{Ps}(k){=}0\iff k$ odd and $e\mid k$ & \textsc{thm} & P518 & this programme (nothing else in P511--517 is primitive) \\
+transfer matrix: $\operatorname{tr}(D^m)=q\,[T^m]_{0,0}$ on $q^2$ walk states & \textsc{thm} & P519 & this programme (exact, $p{=}3,5,7$) \\
+$T\equiv0\bmod\lambda$, so the ``$+m$'' of the factorial law is \emph{free} & \textsc{thm} & P519 & this programme (leaves only the excess) \\
+\textbf{FACTORIAL LAW FALSIFIED AT $q{=}3$}: exhaustive over all $81$ sections & \textsc{killed} & P519 & this programme (fails by $2$ at $m{=}5,7,8,11$) \\
+$q{=}3$ truth: $v_\lambda(\operatorname{tr}D^m)=2(m{+}[m$ odd$])$, $m{=}2..12$ & \textsc{cert} & P519 & this programme (agreement locus $\supseteq$ all $m{=}3^j$) \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -15475,5 +15479,49 @@ third module of this arc, alongside the fibrewise step and the triangular rank.
 And the standalone note gains a roadmap stating the dependency order above,
 rather than a reordering: its sections still follow the historical route, and
 rearranging a paper of that size is a change best made once, deliberately.
+
+\paragraph{Pass 519 --- the transfer matrix, and the factorial law falsified at
+$q=3$.}
+Pass 518's cocycle telescopes.  Writing $P_j=v_1+\dots+v_j$ for the partial
+sums, $\Omega=\sum_{i<j}\omega(v_i,v_j)=\sum_j\omega(P_{j-1},v_j)$, so the
+weight of an $m$-tuple factorises along the walk it traces through $R^{2}$.
+With $T[P+v,P]=d_v\zeta^{-\omega(P,v)}$ on the $q^{2}$ partial-sum states,
+\[
+\operatorname{tr}(D^m)=q\,[T^m]_{0,0}
+\]
+exactly, for every $m$ and every section --- verified at $p=3,5,7$ with the
+valuation gap equal to $v_\lambda(q)$ every time.  Every orbit result of Passes
+510--518 is a statement about closed walks of length $m$ based at $0$, grouped
+by rotation: the period-$d$ classes are cycle types, the sieve is a M\"obius
+inversion over them, the closed form is the necklace count.
+
+Moreover every entry of $T$ is a $\ZZ[\zeta]$-combination of the $d_v$ with
+$v_\lambda(d_v)\ge1$, so $T\equiv0\pmod\lambda$ and
+$v_\lambda([T^m]_{0,0})\ge m$ \emph{for free}.  The factorial law's leading $m$
+is therefore trivial, and its entire remaining content is the excess
+$E(m)=v_\lambda([T^m]_{0,0})-m$.
+
+\emph{And that law is false.}  At $q=3$ there are $(q^2-1)/2=4$ inverse-closed
+pairs with $q=3$ choices each, so the section space has exactly $81$ elements
+and the minimum is decidable by exhaustion.  It gives
+$4,8,8,\mathbf{12},12,\mathbf{16},\mathbf{16},20,20,\mathbf{24},24$ for
+$m=2,\dots,12$, against the law's $4,8,8,10,12,14,14,20,20,22,24$: the true
+minimum exceeds the stated value by $2$ at $m=5,7,8,11$.  All eleven values fit
+$v_\lambda(\operatorname{tr}D^m)=2(m+[m\text{ odd}])$.  Since
+$2v_3(m!)=m-s_3(m)$ with $s_3$ the base-$3$ digit sum, the two expressions
+differ by $s_3(m)+[m\text{ odd}]-2$, which vanishes exactly when
+$s_3(m)+[m\text{ odd}]=2$ --- a set containing every $m=3^{j}$.  \textbf{The
+prime-power tower is precisely the agreement locus}, which is why its four
+confirmed rungs $8,20,56,164$ could not detect this.  Every earlier test of the
+law was either at $m=q$, at $m=p^{j}$, or at $|R|=27,81$ --- never at $q=3$ with
+$m$ off the tower.
+
+The scope of the failure is open and no claim is made: at $p=5$ and $p=7$ the
+sampled minima match the law at every exponent tested.  Whether $q=3$ is special
+--- its section space is the smallest possible --- or the law needs revision for
+all $q$ is unsettled.  What is unaffected is the reduction: the transfer-matrix
+identity and $T\equiv0\pmod\lambda$ are exact regardless, and any statement
+elsewhere in this record that invokes the factorial law should now be read as
+conditional on it.
 
 \end{document}

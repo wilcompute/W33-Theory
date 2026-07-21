@@ -11,6 +11,7 @@
 \theoremstyle{definition}
 \newtheorem{conjecture}[theorem]{Conjecture}
 \newtheorem{remark}[theorem]{Remark}
+\newtheorem{erratum}[theorem]{Erratum}
 
 \newcommand{\FF}{\mathbb F}
 \newcommand{\ZZ}{\mathbb Z}
@@ -540,7 +541,38 @@ is \emph{not tight}, and the excess has an exact form:
 \begin{equation}\label{eq:factorial}
 \vlam\bigl(\tr D^m\bigr)\;=\;\vlam(q)+m+[m\text{ odd}]\;+\;\vlam(m!) .
 \end{equation}
-The leading term is $\vlam(q)$, not $q-1$; those agree only when $q$ is prime,
+
+\begin{erratum}\label{err:factorial}
+\eqref{eq:factorial} is \emph{false at $q=3$}. At $q=3$ there are
+$(q^2-1)/2=4$ inverse-closed pairs with $q=3$ choices each, so the section
+space has exactly $81$ elements and the minimum can be computed by exhaustion.
+Doing so gives
+\[
+\vlam(\tr D^m)=4,8,8,\mathbf{12},12,\mathbf{16},\mathbf{16},20,20,\mathbf{24},24
+\qquad (m=2,\dots,12),
+\]
+whereas \eqref{eq:factorial} predicts $4,8,8,10,12,14,14,20,20,22,24$: the true
+minimum exceeds the stated value by $2$ at $m=5,7,8,11$. All eleven exhaustive
+values fit
+\[
+\vlam(\tr D^m)=2\bigl(m+[m\text{ odd}]\bigr)\qquad (q=3).
+\]
+Since $2v_3(m!)=m-s_3(m)$ with $s_3$ the base-$3$ digit sum, the two
+expressions differ by $s_3(m)+[m\text{ odd}]-2$, which vanishes exactly when
+$s_3(m)+[m\text{ odd}]=2$ --- a set containing every $m=3^{j}$. The
+prime-power tower is therefore precisely the locus on which the two agree,
+which is why its four confirmed rungs $8,20,56,164$ could not detect this.
+
+The scope of the failure is open. At $p=5$ and $p=7$ the sampled minima match
+\eqref{eq:factorial} at every exponent tested, so the failure is not known to
+be universal; whether $q=3$ is special --- its section space is the smallest
+possible --- or \eqref{eq:factorial} needs revision for all $q$ is not settled
+here. Statements below that invoke \eqref{eq:factorial} should be read as
+conditional on it, and the reduction of \S\ref{sec:transfer} is unaffected: the
+transfer-matrix identity and $T\equiv0\pmod\lambda$ are exact regardless.
+\end{erratum}
+
+\noindent The leading term is $\vlam(q)$, not $q-1$; those agree only when $q$ is prime,
 and writing $q-1$ makes \eqref{eq:factorial} fail by a constant $20$ already at
 $|R|=27$, where $\vlam(27)=6$.
 The first three terms are the parity bound; the excess over it is precisely
@@ -883,6 +915,54 @@ The shortcut above is this formula with its phase dropped, and the phase is
 trivial for \emph{every} orbit exactly when $e\mid k$. That is why the closed
 form stops at the top class, where $k=1$: not a gap in the argument but the
 shape of the object.
+
+\subsection{The transfer matrix}\label{sec:transfer}
+
+The phase does more than obstruct: it organises. Writing $P_j=v_1+\dots+v_j$
+for the partial sums, the exponent telescopes,
+\[
+\Omega=\sum_{i<j}\omega(v_i,v_j)=\sum_j \omega(P_{j-1},v_j),
+\]
+because $\sum_{i<j}\omega(v_i,v_j)=\sum_j\omega\bigl(\sum_{i<j}v_i,\,v_j\bigr)$.
+So the weight of an $m$-tuple factorises along the walk it traces through
+$R^{2}$, and the whole trace becomes a single matrix entry.
+
+\begin{theorem}[transfer matrix]\label{thm:transfer}
+Let $T$ be the $q^{2}\times q^{2}$ matrix on partial-sum states given by
+\[
+T[P+v,\;P]=d_v\,\zeta^{-\omega(P,v)}\qquad (v\neq0).
+\]
+Then $\tr(D^m)=q\,[T^m]_{0,0}$ for every $m$ and every section.
+\end{theorem}
+
+\begin{proof}
+$\rho(v_1)\cdots\rho(v_m)=\zeta^{-\Omega}\rho\bigl(\sum_i v_i\bigr)$ by the
+cocycle, and $\tr\rho(x)=q$ for $x=0$ and $0$ otherwise. So $\tr(D^m)$ is $q$
+times the sum, over $m$-tuples with $\sum_i v_i=0$, of
+$\zeta^{-\Omega}\prod_i d_{v_i}$. By the telescoping identity that summand is
+$\prod_j d_{v_j}\zeta^{-\omega(P_{j-1},v_j)}$, the product of the edge weights
+along the walk $0=P_0,P_1,\dots,P_m=0$; summing over closed walks of length $m$
+based at $0$ is $[T^m]_{0,0}$.
+\end{proof}
+
+\noindent Everything in this section is a statement about closed walks in this
+weighted graph, grouped by rotation of the base point: the period-$d$ classes
+are cycle types, Theorem~\ref{thm:sieve} is a M\"obius inversion over them, and
+Proposition~\ref{prop:closed} is the necklace count.
+
+The reformulation removes one summand of \eqref{eq:factorial} outright. Every
+entry of $T$ is a $\ZZ[\zeta]$-combination of the $d_v$, and $\vlam(d_v)\ge1$
+for every $v$; hence $T\equiv0\pmod\lambda$ and
+\[
+\vlam\bigl([T^m]_{0,0}\bigr)\;\ge\;m
+\]
+with no work at all. Since $\tr(D^m)=q[T^m]_{0,0}$ contributes the $\vlam(q)$,
+what remains of \eqref{eq:factorial} is exactly the excess
+\[
+E(m):=\vlam\bigl([T^m]_{0,0}\bigr)-m=[m\text{ odd}]+\vlam(m!) ,
+\]
+a statement about one entry of one matrix. We do not prove it; we record that
+this is now all that is left to prove.
 
 A corollary of the sieve is worth recording in this language. Taking $t=m/e$
 gives $\sum_{d\mid m/e}d\,S_d=0$, so

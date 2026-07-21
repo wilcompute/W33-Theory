@@ -354,6 +354,18 @@ Pass 518 (`analysis/w33_pass518_phase_obstruction.py`, 9/9 exact):
 4. **THE WHOLE ARC REDUCES TO ONE LEMMA.** `Ps(k) = Σ_{v≠0} d_v^k = 0` for every inverse-closed section **⟺ k odd and e | k** (checked at e ∈ {3,5,7,9,25,27}, k ≤ 3e). Odd-class vanishing, propagation, character-order form, the sieve, the rank count, the closed form — **all have this bracket at their centre**; the d=1 converse is its backward direction. **Nothing else in P511–517 is primitive.**
 5. **ARTEFACTS.** `formal/W33/Pass517ClosedForm.lean` — the order-exchange turning the closed form into the sieve, with the Möbius collapse `Σ_{c|d|t} μ(d/c) = [c=t]` as an explicit hypothesis (third module of the arc). The standalone note gains **`\subsection{How the results depend on one another}`** — a **roadmap, not a reordering**: sections still follow the historical route, and rearranging a paper that size is a change best made once, deliberately.
 
+## Pass 519 addendum (python track) — THE TRANSFER MATRIX, and THE FACTORIAL LAW FALSIFIED AT q=3
+
+Pass 519 (`analysis/w33_pass519_transfer_matrix.py`):
+
+1. **THE TRANSFER MATRIX.** Pass 518's cocycle telescopes: with `P_j = v_1+…+v_j`, `Ω = Σ_{i<j} ω(v_i,v_j) = Σ_j ω(P_{j−1}, v_j)`, so an m-tuple's weight factorises along the walk it traces. With **`T[P+v, P] = d_v·ζ^{−ω(P,v)}`** on the q² partial-sum states, **`tr(D^m) = q·[T^m]_{0,0}` EXACTLY** — verified p=3,5,7, valuation gap = v_λ(q) every time. All of P510–518 is closed walks 0→0 grouped by rotation: period-d classes are **cycle types**, the sieve is Möbius over them, the closed form is the **necklace count**.
+2. **THE `+m` IS FREE.** Every entry of T is a ℤ[ζ]-combination of the `d_v` with `v_λ(d_v) ≥ 1`, so **`T ≡ 0 mod λ`** and `v_λ([T^m]_00) ≥ m` with no work. The factorial law's leading m is trivial; its entire remaining content is the excess `E(m) = v_λ([T^m]_00) − m`.
+3. **⚠ THE FACTORIAL LAW IS FALSE AT q=3.** At q=3 the section space is exactly **81 elements** ((q²−1)/2 = 4 pairs × 3 choices), so the minimum is **decidable by exhaustion**. Truth for m=2..12: **4, 8, 8, 12, 12, 16, 16, 20, 20, 24, 24**; the law predicts 4,8,8,**10**,12,**14**,**14**,20,20,**22**,24. **The true minimum exceeds the law by 2 at m = 5, 7, 8, 11.**
+4. **THE q=3 TRUTH FITS `v_λ(tr D^m) = 2(m + [m odd])`** on all eleven exponents. Since `2v_3(m!) = m − s_3(m)` (s_3 = base-3 digit sum), the two differ by **`s_3(m) + [m odd] − 2`**, zero exactly when `s_3(m)+[m odd] = 2` — **a set containing every m = 3^j**. **The prime-power tower IS the agreement locus**, which is why its four confirmed rungs (8, 20, 56, 164) could not detect this. Every earlier test was at m=q, at m=p^j, or at |R|=27/81 — **never at q=3 off the tower**.
+5. **SCOPE OPEN, NO CLAIM MADE.** At p=5 and p=7 the sampled minima match the law at every exponent tested. Whether q=3 is special (smallest possible section space) or the law needs revision for all q is **unsettled**. Unaffected: the transfer-matrix identity and `T ≡ 0 mod λ` are exact regardless. Both papers now carry an **Erratum** and every statement invoking the factorial law is marked conditional.
+
+**METHOD NOTE:** the refutation came from **exhaustion, not sampling** — 60 random sections at p=3 had reported the law as satisfied at some m where all 81 do not. When a parameter space is small enough to enumerate, enumerate it.
+
 ## Deferred
 
 - m=6 Coxeter–Todd rung of the QR tower (`data/m6_handoff_k12.json`).
