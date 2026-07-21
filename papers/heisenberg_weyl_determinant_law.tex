@@ -852,15 +852,42 @@ $e\in\{3,5,7,9,25,27\}$ and $m\le60$.
 
 One may ask whether some further symmetry of the summand supplies relations the
 sieve misses. That is decidable rather than arguable: measure the classes
-themselves across many sections, expand each into its $\ZZ$-coordinates, and
-take the rank over $\QQ$. The nullity is then the dimension of the space of
-universally valid linear relations with constant rational coefficients. It
-equals $\lvert T\rvert$ at $(p,m)=(3,3),(3,6),(3,9),(3,15),(5,5),(7,7)$ ---
-three primes, $m$ even and odd, $m$ a prime power and not. So within that scope
-the sieve is not merely a family of relations but all of them. The scope is
-worth stating plainly: relations whose coefficients depend on the section, and
-nonlinear relations, are not excluded, and this is a measurement over sampled
-sections rather than a proof.
+themselves across many sections, expand each into its coordinates, and take the
+rank. The nullity is then the dimension of the space of universally valid
+linear relations with constant coefficients.
+
+\begin{erratum}\label{err:complete}
+An earlier draft reported that this nullity equals $\lvert T\rvert$ at
+$(p,m)=(3,3),(3,6),(3,9),(3,15),(5,5),(7,7)$ and concluded that the sieve is
+not merely a family of relations but all of them. \emph{The sieve is not
+complete.} Choosing cells where $\lvert T\rvert=0$, so that the sieve predicts
+no relations at all, the measured nullity is $1$ --- at $(3,2)$, $(3,4)$,
+$(3,10)$, $(5,4)$ and $(5,6)$ alike. The missing relation is elementary: the
+period-one class consists of the constant $m$-tuples $(v,\dots,v)$, whose
+zero-sum condition is $mv=0$ with $v\neq0$, solvable exactly when $p\mid m$; so
+for $p\nmid m$ the class is \emph{empty} and $S_1=0$ holds vacuously. The sieve
+counts relations forced by cancellation and does not count vacuous classes. The
+corrected statement is
+\[
+\text{nullity}\;=\;\lvert T\rvert+[\,p\nmid m\,],
+\]
+verified on eleven cells across both regimes.
+
+Every cell used in the earlier draft satisfies $p\mid m$, so the correction term
+vanished in all of them. The cells were not chosen adversarially: the shortcut
+of \S\ref{sec:closedform} requires $e\mid(m/d)$, a condition on $p$ dividing
+$m$, so the affordable cells were exactly the cells where the claim cannot
+fail. Convenience and the blind spot were the same constraint --- the second
+such instance in this paper, after the prime-power tower and
+\eqref{eq:factorial}.
+\end{erratum}
+
+\noindent The scope of what remains is worth stating plainly: relations whose
+coefficients depend on the section, and nonlinear relations, are not excluded,
+and the corrected law is itself a measurement over sampled sections rather than
+a proof. A larger sample can only lower a measured rank and hence raise the
+nullity, so an excess relation found this way cannot be a sampling artefact in
+the direction that matters.
 
 At a prime power $m=p^{j}$ the count is
 $\mathrm{free}=1$: the sieve pins $j$ of the $j+1$ classes and leaves only the
@@ -1031,7 +1058,9 @@ powers and not an accident of the divisor count.
 The closed form also lets the completeness test be redone with coefficients in
 $\QQ(\zeta_p)$ rather than $\QQ$, by carrying out the elimination in the field
 itself --- inverting through the multiplication matrix on the reduced power
-basis. The nullity again equals $\lvert T\rvert$, now at
+basis. The nullity again equals $\lvert T\rvert$ --- every one of these cells has
+$p\mid m$, so by Erratum~\ref{err:complete} the correction term
+$[\,p\nmid m\,]$ vanishes throughout and the agreement is expected --- now at
 $(p,m)=(3,6),(3,9),(3,15),(3,27),(3,81),(5,25),(7,49)$, the last four of which
 only the closed form makes computable. One caution the first run supplied: at
 odd $m$ a large fraction of sections give $\tr(D^m)=0$ identically, so their

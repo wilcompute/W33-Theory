@@ -389,6 +389,18 @@ Pass 521 (`analysis/w33_pass521_profile_derivation.py`, 12/12 exact, idempotent)
 5. **THE BLIND SPOT, NAMED.** A fitted law confirmed only where it agrees with the truth **receives no evidence at all**. Every factorial-law confirmation was at m=q, m=p^j, or |R|=27/81 — and `m=q` satisfies `s_p(p)+[p odd]=2` for **every** prime, while `m=p^j` has `s_p(m)=1`. The test set was chosen for **computational convenience** (prime powers are where the orbit decomposition collapses to one class) and convenience selected **exactly the locus where the formulas cannot be distinguished**. Fourteen passes carried no information.
 6. **THE DETERMINANT LAW SURVIVES INTACT.** Proof for f≥2 never invokes the factorial law; q=3 settled exhaustively in P473 (`det B_t ∈ {−16, 11}`); and the single conditional link (the `e_q` route for prime q) uses the factorial law **only at m=q, which lies in the agreement locus for every prime** — so the input it needs is true even where the general law is false.
 
+## Pass 522 addendum (python track) — the blind-spot test fires AGAIN: the sieve is NOT complete
+
+Pass 522 (`analysis/w33_pass522_completeness_corrected.py`, 6/6 exact, idempotent):
+
+1. **⚠⚠ SIEVE COMPLETENESS RETRACTED.** Pass 521 named the agreement-locus failure mode and pointed at P516/517's completeness claim as the next target. Running the test breaks it. In **all five** cells where the sieve predicts **NO** relations (|T| = 0) — (3,2), (3,4), (3,10), (5,4), (5,6) — the measured **nullity is 1**.
+2. **THE MISSING RELATION, IDENTIFIED (not just measured).** The period-1 class is the constant m-tuples `(v,…,v)`, whose zero-sum condition is `m·v = 0` with `v ≠ 0` — solvable **exactly when p | m**. So when `p ∤ m` the class is **EMPTY** and `S_1 = 0` holds *vacuously*. The sieve counts relations forced by **cancellation**, not vacuous classes.
+3. **CORRECTED LAW: `nullity = |T| + [p ∤ m]`** — verified on **11 cells across both regimes** (5 with |T|=0 and p∤m, 6 with p|m where the correction vanishes).
+4. **THE BLIND SPOT, SECOND INSTANCE IN THREE PASSES.** All ten cells P516/P517 used — (3,3),(3,6),(3,9),(3,15),(3,27),(3,81),(5,5),(5,25),(7,7),(7,49) — have **p | m**, so the correction term was 0 in every one. Not adversarial: the **P514 shortcut requires `e | (m/d)`**, a condition on p dividing m, so **the affordable cells were exactly the cells where the claim cannot fail**. Convenience and the blind spot were the *same constraint*.
+5. **ODD-m AT PROFILE (4,8), DERIVED.** Eigenvalue valuations {4,2,2} with `e_1 = 0` ⇒ `μ_2 = −μ_1 + ε`, `v(ε) = 4`. For odd m, `μ_1^m + μ_2^m` has leading term `m·μ_1^{m−1}·ε` ⇒ **`v = v_λ(m) + 2m + 2`**, reproducing 10, 12, 16, 24 at m=3,5,7,9 — **the jumps at m=3,9 come from the binomial factor m, not the spectrum**. With P521: the odd-m minimum 2(m+1) is attained by (4,8) exactly when `p ∤ m`, by (6,6) when `p | m`. The (6,6) side stays **open**.
+
+**DIRECTIONAL NOTE:** a larger sample can only LOWER a measured rank, hence RAISE nullity — so an excess relation found this way **cannot be a sampling artefact in the direction that matters**. The corrected law itself is measured on 11 cells, not proved.
+
 ## Deferred
 
 - m=6 Coxeter–Todd rung of the QR tower (`data/m6_handoff_k12.json`).
