@@ -1052,8 +1052,20 @@ $\mathrm{free}=(b+1)\tau(s)-\tau(s/e)\ge2\tau(s)-\tau(s/e)>\tau(s)\ge1$, since
 $\tau(s/e)<\tau(s)$ whenever $e>1$ divides $s$. So no even $m$ qualifies.
 \end{proof}
 
-\noindent The single-free-class behaviour is therefore a property of prime
-powers and not an accident of the divisor count.
+\begin{erratum}\label{err:freeone}
+Proposition~\ref{prop:freeone} is \emph{false}. Its proof is correct given its
+input, but that input --- $\mathrm{free}(m)=\tau(m)-\lvert U\rvert$ --- omits
+the vacuous class of Erratum~\ref{err:complete}. With the corrected count
+$\mathrm{free}(m)=\tau(m)-\lvert T\rvert-[\,p\nmid m\,]$, any prime
+$\ell\neq p$ has $\tau=2$, $\lvert T\rvert=0$ and correction $1$, hence
+$\mathrm{free}=1$. Measured at $(p,m)=(3,5),(3,7),(5,3),(5,7),(7,3)$:
+$\mathrm{free}=1$ in every case and none is a power of $p$. The corrected
+statement is that $\mathrm{free}(m)=1$ for $m$ a power of $p$ \emph{and} for
+$m$ a prime other than $p$.
+
+A proof inherits the blind spot of the formula it starts from. This is the
+third instance in this paper.
+\end{erratum}
 
 The closed form also lets the completeness test be redone with coefficients in
 $\QQ(\zeta_p)$ rather than $\QQ$, by carrying out the elimination in the field

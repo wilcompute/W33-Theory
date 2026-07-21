@@ -401,6 +401,16 @@ Pass 522 (`analysis/w33_pass522_completeness_corrected.py`, 6/6 exact, idempoten
 
 **DIRECTIONAL NOTE:** a larger sample can only LOWER a measured rank, hence RAISE nullity — so an excess relation found this way **cannot be a sampling artefact in the direction that matters**. The corrected law itself is measured on 11 cells, not proved.
 
+## Pass 523 addendum (python track) — vacuous class PROVED, the q=3 law CLOSED, and a third retraction
+
+Pass 523 (`analysis/w33_pass523_vacuous_census.py`, 7/7 exact, idempotent):
+
+1. **THE VACUOUS CLASS, PROVED (not measured).** The period-d class consists of d-tuples of minimal period d with `(m/d)·Σwᵢ = 0`. If `p | (m/d)` that's automatic. Otherwise it reads `Σwᵢ = 0`: at **d=1** it is `w=0`, excluded ⇒ **EMPTY**; at **d≥2** it's satisfiable by `(w,−w)` (minimal period 2 since `2w ≠ 0` for odd p) ⇒ non-empty. **So the class is empty iff d=1 and p∤m — exactly one vacuous class, exactly when p∤m.** Pass 522's correction term is *exactly* +1.
+2. **THE TWO FAMILIES ARE COMPLEMENTARY.** `|T| ≥ 1` ⟺ `p | m` (if p|m then u=p works; else no u exists) — which is exactly when the vacuous class does *not* occur. **They never coexist**, so `nullity ≥ |T| + [p∤m]` with both terms accounted for and no overlap. Equality (no *third* source) is still the 11-cell measurement.
+3. **THE q=3 LAW IS NOW COMPLETELY DERIVED.** Last open profile closed: with `e_1 = 0`, Newton gives **`p_m = −e₂p_{m−2} + e₃p_{m−3}`**; expanding in monomials `e₂^a e₃^b` and valuing as `6(a+b) + v_λ(coef)` reproduces **all 10** measured valuations of (6,6) — drops coming from `v_λ` of the integer coefficients (3 at m=3, 15 at m=10). With P521 (e₃=0 profiles) and P522 ((4,8)), **all four profiles are derived** and their minimum is `2(m+[m odd])`.
+4. **⚠⚠ THIRD FIRING: `free(m)=1 ⟺ m = p^j` is FALSE.** P517's proof was *correct given its input*, but the input `free = τ(m) − |T|` omits the vacuous class. Corrected: `free = τ(m) − |T| − [p∤m]` ⇒ **any prime ℓ ≠ p** has τ=2, |T|=0, correction 1 ⇒ **free = 1**. Measured at (3,5),(3,7),(5,3),(5,7),(7,3): free=1 in all five, none a power of p. **Corrected statement: free(m)=1 for m a power of p AND for m a prime other than p.**
+5. **THE TRANSFERABLE LESSON:** *a proof inherits the blind spot of the formula it starts from.* P517's algebra was sound; its premise had been derived only on cells with `p | m`. Three passes, three firings — and this one propagated through a **proof**, not a fit.
+
 ## Deferred
 
 - m=6 Coxeter–Todd rung of the QR tower (`data/m6_handoff_k12.json`).
