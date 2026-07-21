@@ -7,8 +7,9 @@ occur.  This pass replaces it with a derivation, and the derivation is short
 because the data turned out to be rigid.
 
 THE RIGIDITY.  At q = 3 the pair (v(e_2), v(e_3)) takes only four values across
-the whole 81-section space, and each one determines the entire valuation vector
-v(tr D^m) for m = 1..10 -- every section sharing a profile shares the vector.
+the whole 81-section space, and each one determines the valuation vector
+v(tr D^m) for m = 1..10 -- every section sharing a profile shares that measured
+vector.
 
   (4, inf) x 32 : inf, 4, inf,  8, inf, 12, inf, 16, inf, 20
   (4,   8) x 16 : inf, 4,  10,  8,  12, 12,  16, 16,  24, 20
@@ -94,8 +95,7 @@ def part_A_rigidity(checks):
         e2 = tuple(-x // 2 for x in trace(D2, C))
         e3 = det_exact(D, C)
         key = (vl(e2), vl(e3))
-        Dm = [[C.rat(1) if i == j else C.zero() for j in range(q)]
-              for i in range(q)]
+        Dm = [[C.rat(1) if i == j else C.zero() for j in range(q)] for i in range(q)]
         vs = []
         for m in range(1, 11):
             Dm = matmul(Dm, D, C)
@@ -107,19 +107,24 @@ def part_A_rigidity(checks):
     for k, v in tab.items():
         kk = f"e2={'inf' if k[0] >= INF else k[0]},e3={'inf' if k[1] >= INF else k[1]}"
         vec = sorted(v)[0]
-        rows[kk] = {"distinct_vectors": len(v),
-                    "valuations_m1_to_m10": [None if x >= INF else x
-                                             for x in vec]}
-    checks["each_profile_determines_the_whole_vector"] = rigid
-    checks["exactly_four_nondegenerate_profiles"] = len(
-        [k for k in tab if k[0] < INF]) == 4
-    return {"rows": rows,
-            "reading": (
-                "Across the complete 81-section space the pair "
-                "(v(e_2), v(e_3)) takes four non-degenerate values, and each "
-                "one fixes the entire sequence v(tr D^m).  The valuation "
-                "profile is therefore a complete invariant for this data -- "
-                "which is what makes a derivation possible at all.")}
+        rows[kk] = {
+            "distinct_vectors": len(v),
+            "valuations_m1_to_m10": [None if x >= INF else x for x in vec],
+        }
+    checks["each_profile_determines_m1_to_m10_vector"] = rigid
+    checks["exactly_four_nondegenerate_profiles"] = (
+        len([k for k in tab if k[0] < INF]) == 4
+    )
+    return {
+        "rows": rows,
+        "reading": (
+            "Across the complete 81-section space the pair "
+            "(v(e_2), v(e_3)) takes four non-degenerate values, and each "
+            "one fixes the measured vector v(tr D^m) for m = 1..10.  The "
+            "valuation profile is therefore complete for this data window -- "
+            "which is what makes a derivation possible at all."
+        ),
+    }
 
 
 def part_B_derivation(checks):
@@ -140,8 +145,7 @@ def part_B_derivation(checks):
         if not any(e2) or C.vlam(e2) != 4:
             continue
         n += 1
-        Dm = [[C.rat(1) if i == j else C.zero() for j in range(q)]
-              for i in range(q)]
+        Dm = [[C.rat(1) if i == j else C.zero() for j in range(q)] for i in range(q)]
         for m in range(1, 11):
             Dm = matmul(Dm, D, C)
             t = trace(Dm, C)
@@ -154,22 +158,26 @@ def part_B_derivation(checks):
     checks["e3_zero_sections_vanish_at_every_odd_m"] = ok_odd
     checks["e3_zero_sections_give_exactly_2m_at_even_m"] = ok_even
     checks["the_derivation_covers_32_sections"] = n == 32
-    return {"sections_with_e3_zero_and_v_e2_4": n,
-            "proof": (
-                "With e_1 = tr D = 0 (Pass 473) and e_3 = det D = 0, the "
-                "characteristic polynomial is x^3 + e_2 x = x(x^2 + e_2), whose "
-                "roots are 0 and +-mu with mu^2 = -e_2, so v(mu) = v(e_2)/2 = "
-                "2.  Then tr(D^m) = mu^m + (-mu)^m, which is 0 for odd m and "
-                "2 mu^m for even m; since 2 is a unit at p = 3, "
-                "v_lambda(tr D^m) = 2m exactly.  This is the exhaustive even-m "
-                "minimum of Pass 519/520, now DERIVED rather than fitted."),
-            "parity": (
-                "The same sections vanish IDENTICALLY at odd m -- not by one "
-                "extra order of cancellation but exactly.  So odd m is served "
-                "by the other profiles, whose minimum is 2(m+1), attained by "
-                "(6,6) at m = 3, 9 and by (4,8) at m = 5, 7.  The '[m odd]' "
-                "term is not a correction to one formula; it is the switch "
-                "between which profile attains the minimum.")}
+    return {
+        "sections_with_e3_zero_and_v_e2_4": n,
+        "proof": (
+            "With e_1 = tr D = 0 (Pass 473) and e_3 = det D = 0, the "
+            "characteristic polynomial is x^3 + e_2 x = x(x^2 + e_2), whose "
+            "roots are 0 and +-mu with mu^2 = -e_2, so v(mu) = v(e_2)/2 = "
+            "2.  Then tr(D^m) = mu^m + (-mu)^m, which is 0 for odd m and "
+            "2 mu^m for even m; since 2 is a unit at p = 3, "
+            "v_lambda(tr D^m) = 2m exactly.  This is the exhaustive even-m "
+            "minimum of Pass 519/520, now DERIVED rather than fitted."
+        ),
+        "parity": (
+            "The same sections vanish IDENTICALLY at odd m -- not by one "
+            "extra order of cancellation but exactly.  In the measured "
+            "window, odd m is served by the other profiles at 2(m+1), attained by "
+            "(6,6) at m = 3, 9 and by (4,8) at m = 5, 7.  The '[m odd]' "
+            "term is not a correction to one formula; it is the switch "
+            "between which profile attains the minimum."
+        ),
+    }
 
 
 def part_C_q5(checks):
@@ -177,8 +185,7 @@ def part_C_q5(checks):
     best = {}
     for s in range(400):
         R, C, q, D, dcoef, rho = P511.setup(5, 70000 + s)
-        Dm = [[C.rat(1) if i == j else C.zero() for j in range(q)]
-              for i in range(q)]
+        Dm = [[C.rat(1) if i == j else C.zero() for j in range(q)] for i in range(q)]
         for m in range(1, 21):
             Dm = matmul(Dm, D, C)
             t = trace(Dm, C)
@@ -195,18 +202,24 @@ def part_C_q5(checks):
         if g:
             gaps[str(m)] = g
     checks["q5_sampled_min_never_below_the_law"] = all(
-        r["gap"] >= 0 for r in rows.values())
+        r["gap"] >= 0 for r in rows.values()
+    )
     checks["q5_law_fails_at_several_exponents"] = len(gaps) >= 3
     checks["q5_every_gap_is_exactly_2"] = all(g == 2 for g in gaps.values())
-    return {"sections": 400, "rows": rows, "gaps": gaps,
-            "reading": (
-                "Over 400 sampled sections the law is not attained at "
-                "m = 10, 14, 15, 18, 19 -- five of nineteen exponents -- and "
-                "every gap is exactly 2, the same as at q = 3.  These are "
-                "SAMPLED minima, so a larger sample could close them and no "
-                "refutation is claimed at q = 5; the q = 3 gaps, which are "
-                "exhaustive, did not close.  What this removes is the "
-                "remaining support for 'q = 3 is special'.")}
+    return {
+        "sections": 400,
+        "rows": rows,
+        "gaps": gaps,
+        "reading": (
+            "Over 400 sampled sections the law is not attained at "
+            "m = 10, 14, 15, 18, 19 -- five of nineteen exponents -- and "
+            "every gap is exactly 2, the same as at q = 3.  These are "
+            "SAMPLED minima, so a larger sample could close them and no "
+            "refutation is claimed at q = 5; the q = 3 gaps, which are "
+            "exhaustive, did not close.  What this removes is the "
+            "remaining support for 'q = 3 is special'."
+        ),
+    }
 
 
 def part_D_determinant_audit(checks):
@@ -215,7 +228,8 @@ def part_D_determinant_audit(checks):
         "sharp law for f >= 2": (
             "UNCONDITIONAL.  Proved in the note by the argument that every "
             "entry of D is a Z[zeta]-combination of the d_v; it never invokes "
-            "the factorial law."),
+            "the factorial law."
+        ),
         "sharp law for prime q, via e_q": (
             "CONDITIONAL on the factorial law at m = q, which is now known "
             "false at q = 3 for most m.  BUT m = q is inside the agreement "
@@ -223,29 +237,37 @@ def part_D_determinant_audit(checks):
             "actually uses is true there; the route survives at q = 3 and its "
             "status at other prime q depends on whether m = q lies in the "
             "agreement locus, which is s_p(p) + 1 = 2 -- true for EVERY "
-            "prime p."),
+            "prime p."
+        ),
         "q = 3 determinant law itself": (
             "UNCONDITIONAL and exhaustive: Pass 473 enumerated all 81 sections "
             "and found det B_t in {-16, 11}, a complete invariant.  Nothing "
-            "here disturbs it."),
+            "here disturbs it."
+        ),
         "flat block quadratic F^2 + 2F - (q^2-1) = 0": (
-            "UNCONDITIONAL, a symplectic character sum."),
+            "UNCONDITIONAL, a symplectic character sum."
+        ),
         "first-order and sharp cancellation lemmas": (
             "UNCONDITIONAL; they bound power sums from below and are used in "
-            "the direction that survives."),
+            "the direction that survives."
+        ),
     }
     conditional = [k for k, v in chain.items() if v.startswith("CONDITIONAL")]
     checks["determinant_law_audit_complete"] = len(chain) >= 5
     checks["at_most_one_link_is_conditional"] = len(conditional) <= 1
-    return {"chain": chain, "conditional_links": conditional,
-            "verdict": (
-                "The determinant law does not fall.  Its unconditional proof "
-                "for f >= 2 is untouched, q = 3 is settled exhaustively and "
-                "independently, and the one conditional link -- the route "
-                "through e_q for prime q -- uses the factorial law only at "
-                "m = q, which lies in the agreement locus for every prime p "
-                "since s_p(p) + [p odd] = 1 + 1 = 2.  The input it needs is "
-                "therefore true even where the general law is false.")}
+    return {
+        "chain": chain,
+        "conditional_links": conditional,
+        "verdict": (
+            "The determinant law does not fall.  Its unconditional proof "
+            "for f >= 2 is untouched, q = 3 is settled exhaustively and "
+            "independently, and the one conditional link -- the route "
+            "through e_q for prime q -- uses the factorial law only at "
+            "m = q, which lies in the agreement locus for every prime p "
+            "since s_p(p) + [p odd] = 1 + 1 = 2.  The input it needs is "
+            "therefore true even where the general law is false."
+        ),
+    }
 
 
 def part_E_agreement_locus(checks):
@@ -254,37 +276,49 @@ def part_E_agreement_locus(checks):
         "factorial law (P505-P517)": (
             "TESTED ONLY ON ITS AGREEMENT LOCUS.  Every confirmation was at "
             "m = q, at m = p^j, or at |R| = 27 and 81 -- and the prime-power "
-            "tower is exactly where the true q = 3 law and the factorial law "
-            "coincide.  Fourteen passes of confirmation carried no information "
-            "against it."),
+            "tower lies inside the locus where the true q = 3 law and the "
+            "factorial law coincide.  Fourteen passes of confirmation carried no information "
+            "against it."
+        ),
         "3q - 1 at m = q (P505/P506)": (
             "SAME LOCUS.  m = q satisfies s_p(p) + [p odd] = 2, so it lies in "
             "the agreement set for every prime p; the four values 8, 14, 20, "
-            "32 confirm both formulas and distinguish neither."),
+            "32 confirm both formulas and distinguish neither."
+        ),
         "prime-power tower 8, 20, 56, 164 (P512/P516)": (
-            "SAME LOCUS, by construction: m = p^j has s_p(m) = 1."),
+            "SAME LOCUS, by construction: m = p^j has s_p(m) = 1."
+        ),
         "sieve theorem and its corollaries (P511-P517)": (
             "NOT AFFECTED.  These are exact identities verified against honest "
             "enumeration, not fits to a formula, and the completeness test of "
-            "P516/P517 measured a rank rather than checking a prediction."),
+            "P516/P517 measured a rank rather than checking a prediction."
+        ),
         "determinant law (P479-P491)": (
             "NOT AFFECTED.  Proved unconditionally for f >= 2 and verified "
-            "exhaustively at q = 3."),
+            "exhaustively at q = 3."
+        ),
     }
-    affected = [k for k, v in findings.items() if "SAME LOCUS" in v
-                or "ONLY ON ITS AGREEMENT LOCUS" in v]
+    affected = [
+        k
+        for k, v in findings.items()
+        if "SAME LOCUS" in v or "ONLY ON ITS AGREEMENT LOCUS" in v
+    ]
     checks["agreement_locus_sweep_ran"] = len(findings) >= 5
     checks["sweep_identifies_the_affected_claims"] = len(affected) == 3
-    return {"findings": findings, "affected": affected,
-            "lesson": (
-                "A fitted law confirmed only at points where it agrees with "
-                "the truth receives no evidence at all.  The test set must be "
-                "chosen independently of the fit; here it was chosen for "
-                "computational convenience -- prime powers are where the "
-                "orbit decomposition collapses -- and convenience selected "
-                "precisely the blind spot.  This is a mechanical failure mode, "
-                "and the three affected rows are those whose test sets are "
-                "describable in the same terms as the fit.")}
+    return {
+        "findings": findings,
+        "affected": affected,
+        "lesson": (
+            "A fitted law confirmed only at points where it agrees with "
+            "the truth receives no evidence at all.  The test set must be "
+            "chosen independently of the fit; here it was chosen for "
+            "computational convenience -- prime powers are where the "
+            "orbit decomposition collapses -- and convenience selected "
+            "precisely the blind spot.  This is a mechanical failure mode, "
+            "and the three affected rows are those whose test sets are "
+            "describable in the same terms as the fit."
+        ),
+    }
 
 
 def main_payload():
@@ -301,17 +335,19 @@ def main_payload():
         "headline": (
             "THE EVEN-m MINIMUM AT q = 3 IS NOW DERIVED, NOT FITTED.  Across "
             "the complete 81-section space the pair (v(e_2), v(e_3)) takes "
-            "four values and each determines the entire sequence "
-            "v(tr D^m) -- the profile is a complete invariant.  On the 32 "
+            "four values and each determines the measured m = 1..10 vector "
+            "v(tr D^m) -- the profile is complete on that window.  On the 32 "
             "sections with e_3 = 0, the characteristic polynomial is "
             "x(x^2 + e_2) because e_1 = tr D = 0, so the eigenvalues are "
             "0 and +-mu with v(mu) = v(e_2)/2 = 2; hence tr(D^m) vanishes "
             "identically for odd m and equals 2 mu^m for even m, giving "
             "v_lambda(tr D^m) = 2m exactly.  That is the exhaustive even-m "
             "minimum, proved.  The parity term is the same fact seen from the "
-            "other side: those sections vanish at odd m, so odd m is served by "
-            "different profiles at 2(m+1), and '[m odd]' is a switch between "
-            "attaining profiles rather than a correction to one formula."),
+            "other side: those sections vanish at odd m, so in the measured "
+            "window odd m is served by different profiles at 2(m+1), and "
+            "'[m odd]' is a switch between "
+            "attaining profiles rather than a correction to one formula."
+        ),
         "part_A_profile_rigidity": A,
         "part_B_even_m_derivation": B,
         "part_C_q5_to_m20": Cc,
@@ -324,7 +360,8 @@ def main_payload():
             "m = 3, 9 and by (4,8) at m = 5, 7, and why those profiles give "
             "those values is open.  Part C is SAMPLED at 400 sections and "
             "refutes nothing at q = 5.  Parts D and E are audits -- reasoned "
-            "readings of the corpus, not computations."),
+            "readings of the corpus, not computations."
+        ),
         "checks": {k: bool(v) for k, v in checks.items()},
     }
 
@@ -342,9 +379,15 @@ def main():
     else:
         a.output.parent.mkdir(parents=True, exist_ok=True)
         a.output.write_text(text)
-    print(json.dumps({"status": pl["status"],
-                      "checks": sum(pl["checks"].values()),
-                      "total": len(pl["checks"])}))
+    print(
+        json.dumps(
+            {
+                "status": pl["status"],
+                "checks": sum(pl["checks"].values()),
+                "total": len(pl["checks"]),
+            }
+        )
+    )
     return 0 if pl["status"] == "PASS" else 1
 
 

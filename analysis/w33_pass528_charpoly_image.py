@@ -23,11 +23,11 @@ profiles (v(e_2), v(e_3)) are (inf,inf), (4,inf), (4,inf), (6,inf), (6,6),
 counts 32 = 8 + 24, 8, 24, 16 exactly.  So the profile is a coarsening that
 merges x^3 - 9x with x^3 - 18x, and those two happen to share a trace vector.
 
-WHAT THAT SETTLES.  Since the trace vector is a function of the charpoly, and
-only six charpolys occur, the ENTIRE q = 3 law is a six-element lookup table.
-The derivations of Passes 521-523 are the entries of that table computed by
-hand.  Nothing at q = 3 remains open, and nothing at q = 3 requires an
-argument longer than six cases.
+WHAT THAT SETTLES.  Since every power trace is determined recursively by the
+charpoly, only six recurrences occur at q = 3.  The derivations of Passes
+521-523 account for their measured m = 2..12 window.  The all-m minimum is
+therefore reduced to six cases, but the noncancellation/LTE argument for the
+(6,6) recurrence remains open; a finite table cannot close it.
 
 WHY IT DOES NOT IMMEDIATELY GIVE q = 5.  There the section space has 5^12
 elements and the image is not enumerable; 220 sampled sections already produce
@@ -88,27 +88,35 @@ def part_A_image(checks):
         ve2 = INF if not any(e2) else C.vlam(e2)
         ve3 = INF if not any(e3) else C.vlam(e3)
         rows[f"x^3+({e2[0]})x-({e3[0]})"] = {
-            "e2": e2[0], "e3": e3[0], "sections": cnt,
+            "e2": e2[0],
+            "e3": e3[0],
+            "sections": cnt,
             "v_e2": None if ve2 >= INF else ve2,
-            "v_e3": None if ve3 >= INF else ve3}
+            "v_e3": None if ve3 >= INF else ve3,
+        }
     checks["section_space_enumerated"] = nsec == 81
     checks["exactly_six_charpolys_occur"] = len(seen) == 6
     checks["all_coefficients_are_rational_integers"] = rational
     checks["multiplicities_sum_to_81"] = sum(seen.values()) == 81
-    return {"sections": nsec, "distinct_charpolys": len(seen), "rows": rows,
-            "reading": (
-                "Exactly six characteristic polynomials occur at q = 3, all "
-                "with rational integer coefficients: x^3, x^3 - 9x, "
-                "x^3 - 18x, x^3 - 27x, x^3 - 27x - 27, x^3 - 36x - 81, with "
-                "multiplicities 1, 8, 24, 8, 24, 16.  Their valuation profiles "
-                "recover the four non-degenerate profiles of Pass 521 with the "
-                "counts 32 = 8 + 24, 8, 24, 16 -- so the profile invariant is "
-                "a coarsening that merges x^3 - 9x with x^3 - 18x, and those "
-                "two happen to share a trace vector.")}
+    return {
+        "sections": nsec,
+        "distinct_charpolys": len(seen),
+        "rows": rows,
+        "reading": (
+            "Exactly six characteristic polynomials occur at q = 3, all "
+            "with rational integer coefficients: x^3, x^3 - 9x, "
+            "x^3 - 18x, x^3 - 27x, x^3 - 27x - 27, x^3 - 36x - 81, with "
+            "multiplicities 1, 8, 24, 8, 24, 16.  Their valuation profiles "
+            "recover the four non-degenerate profiles of Pass 521 with the "
+            "counts 32 = 8 + 24, 8, 24, 16 -- so the profile invariant is "
+            "a coarsening that merges x^3 - 9x with x^3 - 18x, and those "
+            "two happen to share a trace vector."
+        ),
+    }
 
 
 def part_B_lookup(checks):
-    """Six charpolys x their trace vectors = the whole q = 3 law."""
+    """Six charpolys reproduce the measured m = 2..12 q = 3 window."""
     p_ = 3
     R, C = LF(p_, 1), Cyc(p_, 1)
     H = Heis(R, C)
@@ -121,8 +129,7 @@ def part_B_lookup(checks):
         D2 = matmul(D, D, C)
         e2 = tuple(-x // 2 for x in trace(D2, C))
         e3 = det_exact(D, C)
-        Dm = [[C.rat(1) if i == j else C.zero() for j in range(q)]
-              for i in range(q)]
+        Dm = [[C.rat(1) if i == j else C.zero() for j in range(q)] for i in range(q)]
         vec = []
         for m in range(1, 13):
             Dm = matmul(Dm, D, C)
@@ -140,15 +147,20 @@ def part_B_lookup(checks):
         mins.append(min(col) if col else None)
     fit = [2 * ((i + 1) + ((i + 1) % 2)) for i in range(12)]
     checks["charpoly_determines_the_trace_vector"] = ok
-    checks["minimum_over_the_six_reproduces_the_q3_law"] = mins[1:] == fit[1:]
-    return {"table": table, "minimum_per_m": mins,
-            "law_2m_plus_2odd": fit,
-            "reading": (
-                "Each of the six charpolys determines its trace vector, and "
-                "the minimum over the six reproduces 2(m + [m odd]) for "
-                "m = 2..12.  The entire q = 3 law is therefore a six-row "
-                "lookup table; the derivations of Passes 521-523 are its rows "
-                "computed by hand.")}
+    checks["minimum_over_the_six_reproduces_measured_q3_window"] = mins[1:] == fit[1:]
+    return {
+        "table": table,
+        "minimum_per_m": mins,
+        "law_2m_plus_2odd": fit,
+        "reading": (
+            "Each of the six charpolys determines its trace vector, and "
+            "the minimum over the six reproduces 2(m + [m odd]) for "
+            "m = 2..12.  Thus the measured q = 3 window is a six-row "
+            "table.  For all m these same polynomials give six exact "
+            "recurrences, but proving their valuation minimum still needs "
+            "the open (6,6) noncancellation/LTE argument."
+        ),
+    }
 
 
 def part_C_no_extrapolation(checks):
@@ -156,22 +168,25 @@ def part_C_no_extrapolation(checks):
     seen = set()
     for s in range(220):
         R, C, q, D, dcoef, rho = P511.setup(5, 80000 + s)
-        A = [[C.rat(1) if i == j else C.zero() for j in range(q)]
-             for i in range(q)]
+        A = [[C.rat(1) if i == j else C.zero() for j in range(q)] for i in range(q)]
         tr = []
         for k in range(1, q + 1):
             A = matmul(A, D, C)
             tr.append(tuple(trace(A, C)))
         seen.add(tuple(tr))
     checks["q5_image_is_large"] = len(seen) > 100
-    return {"q5_sections_sampled": 220, "distinct_charpoly_data": len(seen),
-            "reading": (
-                "At q = 5 the section space has 5^12 elements and 220 samples "
-                "already give this many distinct characteristic polynomials, "
-                "so the image is large rather than small.  The q = 3 "
-                "phenomenon -- a tiny image making the law a finite table -- "
-                "is a small-q accident, of the same kind Pass 524 found for "
-                "the profile invariant.  It is recorded, not extrapolated.")}
+    return {
+        "q5_sections_sampled": 220,
+        "distinct_charpoly_data": len(seen),
+        "reading": (
+            "At q = 5 the section space has 5^12 elements and 220 samples "
+            "already give this many distinct characteristic polynomials, "
+            "so the image is large rather than small.  The q = 3 "
+            "phenomenon -- a tiny image making the law a finite table -- "
+            "is a small-q accident, of the same kind Pass 524 found for "
+            "the profile invariant.  It is recorded, not extrapolated."
+        ),
+    }
 
 
 def main_payload():
@@ -189,22 +204,26 @@ def main_payload():
             "x^3 - 27x, x^3 - 27x - 27, x^3 - 36x - 81, with multiplicities "
             "1, 8, 24, 8, 24, 16 over the complete 81-section space.  Since "
             "the trace-valuation vector is a function of charpoly(D) "
-            "(Pass 527), the ENTIRE q = 3 law is a six-row lookup table, and "
-            "the minimum over those six rows reproduces 2(m + [m odd]).  The "
+            "(Pass 527), the measured m = 2..12 q = 3 law is a six-row table, "
+            "whose minimum reproduces 2(m + [m odd]) on that window.  The "
             "profile invariant of Pass 521 is the coarsening that merges "
             "x^3 - 9x with x^3 - 18x.  At q = 5 the image is large -- 220 "
-            "samples give over a hundred distinct charpolys -- so the finite "
-            "table is a small-q accident and is recorded rather than "
-            "extrapolated."),
+            "samples give over a hundred distinct charpolys -- so the "
+            "six-recurrence reduction is a small-q phenomenon and is recorded "
+            "without promoting the finite check to an all-m theorem."
+        ),
         "part_A_the_image": A,
         "part_B_six_row_lookup": B,
         "part_C_not_extrapolated": Cc,
         "boundary": (
-            "Parts A and B are exhaustive over the complete q = 3 section "
-            "space and are decisive there.  Part C samples 220 sections at "
+            "Part A is exhaustive over the complete q = 3 section space.  "
+            "Part B is exact only for m = 1..12; the six charpolys define "
+            "all-m recurrences but do not prove the proposed all-m valuation "
+            "minimum.  Part C samples 220 sections at "
             "q = 5 and establishes only that the image is large, which is all "
             "that is needed to refuse the extrapolation.  Nothing here says "
-            "what governs q = 5."),
+            "what governs q = 5."
+        ),
         "checks": {k: bool(v) for k, v in checks.items()},
     }
 
@@ -222,9 +241,15 @@ def main():
     else:
         a.output.parent.mkdir(parents=True, exist_ok=True)
         a.output.write_text(text)
-    print(json.dumps({"status": pl["status"],
-                      "checks": sum(pl["checks"].values()),
-                      "total": len(pl["checks"])}))
+    print(
+        json.dumps(
+            {
+                "status": pl["status"],
+                "checks": sum(pl["checks"].values()),
+                "total": len(pl["checks"]),
+            }
+        )
+    )
     return 0 if pl["status"] == "PASS" else 1
 
 

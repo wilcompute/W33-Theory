@@ -58,10 +58,26 @@ from check_rediscovery import RE_NAMED, RE_ROOT, compounds  # noqa: E402
 # read the file. Pass 348 blamed the token classes ("A2 is a ubiquitous atom") and
 # was looking at the wrong layer: the corpus definition was wrong. Witnesses ARE
 # results; a tool that indexes only prose indexes only the write-up.
-GLOBS = ["docs/index.html", "*.tex", "analysis/*.md", "analysis/*.py", "analysis/*.g",
-         "passes/*.md", "passes/*.py", "passes/*.g", "exploration/*.py", "exploration/*.g", "scripts/*.py", "scripts/*.g",
-         "PASS*.md", "AUDIT*.md", "BT*.md", "PART*.md", "formal/**/*.lean",
-         "manuscripts/**/*.tex"]
+GLOBS = [
+    "docs/index.html",
+    "*.tex",
+    "analysis/*.md",
+    "analysis/*.py",
+    "analysis/*.g",
+    "passes/*.md",
+    "passes/*.py",
+    "passes/*.g",
+    "exploration/*.py",
+    "exploration/*.g",
+    "scripts/*.py",
+    "scripts/*.g",
+    "PASS*.md",
+    "AUDIT*.md",
+    "BT*.md",
+    "PART*.md",
+    "formal/**/*.lean",
+    "manuscripts/**/*.tex",
+]
 
 # Above this a token is a topic, not a result.
 #
@@ -104,10 +120,14 @@ PINNED_RESULTS = {
     "192/64x3/960/geometry-boundary",
     "48/6/2/14!3^14/minimal-phase-lift",
     "16/48/2+14/external-binding-abi",
-    "48-cycle/16xC3/LOAD-FLIP-LATCH/reversible-logic-switch",
+    "48-cycle/16xC3/LOAD-FLIP-LATCH/reversible-logic-switch",  # pragma: allowlist secret
     "96/16xC6/C6-vs-S3-control-boundary",
     "234360/540/90+360+90/6/22of48/0exact/S6-direction",
     "48/16/8/8/16/96/1/46080/1/2/orbit-anchor",
+    "228100045392509153077600971330057241",
+    "2051277771273019233341050472890368",
+    "2028949923625",
+    "16231599389",
 }
 SKIP_DIRS = {".git", "node_modules", ".venv", "data"}
 
@@ -124,8 +144,22 @@ RE_SEQ = re.compile(r"\b\d+(?:/\d+){2,}\b")
 
 # integers that are noise: years, common dimensions, section numbers
 NOISE = {str(y) for y in range(1900, 2100)} | {
-    "100", "1000", "200", "300", "400", "500", "600", "700", "800", "900",
-    "128", "256", "512", "1024", "2048", "4096",
+    "100",
+    "1000",
+    "200",
+    "300",
+    "400",
+    "500",
+    "600",
+    "700",
+    "800",
+    "900",
+    "128",
+    "256",
+    "512",
+    "1024",
+    "2048",
+    "4096",
 }
 
 
@@ -176,14 +210,22 @@ def main():
             index[c].add(rel)
 
     kept = {
-        t: fs for t, fs in index.items()
+        t: fs
+        for t, fs in index.items()
         if 1 <= len(fs) <= MAX_FILES or t in PINNED_RESULTS
     }
     uniq = {t: fs for t, fs in kept.items() if len(fs) == 1}
 
     def sort_key(t):
-        return (0 if t.startswith("[[") else 1 if t.startswith("[") else
-                2 if "/" in t else 3, -len(t), t)
+        return (
+            (
+                0
+                if t.startswith("[[")
+                else 1 if t.startswith("[") else 2 if "/" in t else 3
+            ),
+            -len(t),
+            t,
+        )
 
     lines = [
         "# RESULTS INDEX — search for the RESULT, not the topic",
@@ -206,6 +248,9 @@ def main():
         "shallow reads caused two retractions) before writing.",
         "This is a presence index, not an endorsement ledger: a hit may be a proof,",
         "a reuse, an obstruction, or an explicit retraction.",
+        "When two files state the same result in different language, consult the",
+        "human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic",
+        "aliases, current status, supersessions, and primary artifacts.",
         "",
         f"Indexed **{len(files)}** files; **{len(kept)}** distinctive results",
         f"(a token in >{MAX_FILES} files identifies a topic and is dropped unless explicitly pinned).",
@@ -222,8 +267,6 @@ def main():
         if len(fs) > 4:
             cell += f" · *(+{len(fs)-4})*"
         lines.append(f"| `{t}` | {cell} |")
-    lines.append("")
-
     OUT.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"wrote {OUT.relative_to(ROOT)}")
     print(f"  files indexed : {len(files)}")

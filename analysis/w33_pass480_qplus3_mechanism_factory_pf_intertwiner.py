@@ -21,13 +21,13 @@ decomposition, q=7 first-order):
     Pass-479 law).  The q+3 = (q+1) + 2 is "base + one order of cancellation."
 
 PART B (the collision-factory structure theorem, n=6).
-The six genuine q=5 cospectral pairs now in hand -- one from Pass 456, five
-from the Pass-479 2000-section census -- are ALL Wedderburn sheet exchanges:
-for each pair (a,b), the square-coset sheet of a equals the nonsquare-coset
-sheet of b and vice versa (spec B_1(a) = spec B_2(b), spec B_2(a) =
-spec B_1(b)), with the two sheets of a genuinely distinct.  All six are also
-Smith-identical (equal critical groups).  So within the sample, "genuine
-collision" == "sheet exchange": no genuine pair is anything more exotic.
+Of the six retained genuine q=5 cospectral pairs -- one from Pass 456, five
+from the Pass-479 2000-section census -- five are Wedderburn sheet exchanges
+and one is the second mechanism later named sheet coincidence.  Each pair is
+Smith-identical internally.  Within these six the coincidence pair has a
+different 5-primary quotient after removing the common (Z/125)^23 tail, but
+Pass 540 later exhibits a sheet coincidence with the exchange-style skeleton;
+Smith shape is therefore not an invariant of mechanism type.
 
 PART C (the determinant law at q=9 -- first prime power).
 The flat-determinant closed form (q-1)^((q+1)/2)(-(q+1))^((q-1)/2) and the
@@ -145,7 +145,7 @@ def det_exact(M, q):
         for pos, c in enumerate(cols):
             entry = rows[r][c]
             if any(entry):
-                sub = rec(r + 1, cols[:pos] + cols[pos + 1:])
+                sub = rec(r + 1, cols[:pos] + cols[pos + 1 :])
                 term = zmul(entry, sub, q)
                 total = zadd(total, term, q) if sign > 0 else zsub(total, term, q)
             sign = -sign
@@ -210,10 +210,7 @@ def order_term(F, D, q, k):
     n = len(F)
     Tk = (0,) * q
     for Sset in itertools.combinations(range(n), k):
-        M = [
-            [D[i][j] if j in Sset else F[i][j] for j in range(n)]
-            for i in range(n)
-        ]
+        M = [[D[i][j] if j in Sset else F[i][j] for j in range(n)] for i in range(n)]
         Tk = zadd(Tk, det_exact(M, q), q)
     return Tk
 
@@ -223,8 +220,7 @@ def first_order_term(F, D, q):
     n = len(F)
     T1 = (0,) * q
     for j in range(n):
-        M = [[D[i][j2] if j2 == j else F[i][j2] for j2 in range(n)]
-             for i in range(n)]
+        M = [[D[i][j2] if j2 == j else F[i][j2] for j2 in range(n)] for i in range(n)]
         T1 = zadd(T1, det_exact(M, q), q)
     return T1
 
@@ -238,8 +234,7 @@ def part_A(checks):
         F = block_exact(cayley_set(pairs, flat, q), q, 1)
         detF = zint(det_exact(F, q), q)
         if mode == "exhaustive":
-            seclist = [tuple(o) for o in itertools.product(range(q),
-                                                           repeat=len(pairs))]
+            seclist = [tuple(o) for o in itertools.product(range(q), repeat=len(pairs))]
         else:
             import random
 
@@ -261,8 +256,11 @@ def part_A(checks):
                 total_vals.append(v_lambda(diff, q))
             if mode != "first_order":
                 prof = tuple(
-                    v_lambda(order_term(F, D, q, k), q)
-                    if any(order_term(F, D, q, k)) else "inf"
+                    (
+                        v_lambda(order_term(F, D, q, k), q)
+                        if any(order_term(F, D, q, k))
+                        else "inf"
+                    )
                     for k in range(len(F) + 1)
                 )
                 profiles.add(prof)
@@ -270,8 +268,9 @@ def part_A(checks):
             "flat_det": detF,
             "min_v_T1": min(t1_vals),
             "min_v_total": min(total_vals),
-            "order_profiles": sorted(map(list, profiles), key=str)
-            if profiles else "first_order_only",
+            "order_profiles": (
+                sorted(map(list, profiles), key=str) if profiles else "first_order_only"
+            ),
         }
         checks[f"q{q}_T1_valuation_at_least_qplus1"] = min(t1_vals) >= q + 1
         checks[f"q{q}_total_is_qplus3_sharp"] = min(total_vals) == q + 3
@@ -306,8 +305,8 @@ def padic_counts(matrix, prime, max_level):
             a[rank, :] = (a[rank, :] * pow(int(a[rank, rank]), -1, modulus)) % modulus
             factors = a[:, rank].copy()
             factors[rank] = 0
-            a = (a - factors[:, None] * a[rank:rank + 1, :]) % modulus
-            a[rank, rank + 1:] = 0
+            a = (a - factors[:, None] * a[rank : rank + 1, :]) % modulus
+            a[rank, rank + 1 :] = 0
             rank += 1
         counts.append(rank)
         rem = a[rank:, rank:]
@@ -328,8 +327,11 @@ def critical_group(offsets, q=5):
     idx = {e: i for i, e in enumerate(elems)}
 
     def hmul(g, h):
-        return ((g[0] + h[0]) % q, (g[1] + h[1]) % q,
-                (g[2] + h[2] - g[0] * h[1] + h[0] * g[1]) % q)
+        return (
+            (g[0] + h[0]) % q,
+            (g[1] + h[1]) % q,
+            (g[2] + h[2] - g[0] * h[1] + h[0] * g[1]) % q,
+        )
 
     S = cayley_set(pairs, offsets, q)
     A = np.zeros((125, 125), dtype=np.int64)
@@ -355,7 +357,7 @@ def critical_group(offsets, q=5):
 
 def sheet_signature(offsets, q=5):
     S = cayley_set(pairs_5, offsets, q)
-    s_sq = spec(block_float(S, q, 1))   # square coset
+    s_sq = spec(block_float(S, q, 1))  # square coset
     s_nsq = spec(block_float(S, q, 2))  # nonsquare coset
     return s_sq, s_nsq
 
@@ -373,12 +375,10 @@ def part_B(checks):
     pairs = []
     for r in a456["collisions"]:
         if not r["affine_aut_equivalent"]:
-            pairs.append((tuple(r["offsets"][0]), tuple(r["offsets"][1]),
-                          "P456"))
+            pairs.append((tuple(r["offsets"][0]), tuple(r["offsets"][1]), "P456"))
     for r in a479["census_B"]["collisions"]:
         if not r["affine_equivalent"]:
-            pairs.append((tuple(r["offsets"][0]), tuple(r["offsets"][1]),
-                          "P479"))
+            pairs.append((tuple(r["offsets"][0]), tuple(r["offsets"][1]), "P479"))
     records = []
     all_smith = True
     n_exchange = n_nonexchange = 0
@@ -386,25 +386,28 @@ def part_B(checks):
         sa_sq, sa_nsq = sheet_signature(a)
         sb_sq, sb_nsq = sheet_signature(b)
         distinct = sa_sq != sa_nsq
-        exchange = (sa_sq == sb_nsq and sa_nsq == sb_sq and distinct)
+        exchange = sa_sq == sb_nsq and sa_nsq == sb_sq and distinct
         cg_a = critical_group(a)
         cg_b = critical_group(b)
         smith_same = cg_a == cg_b
         all_smith &= smith_same
         n_exchange += bool(exchange)
         n_nonexchange += not exchange
-        records.append({
-            "source": src,
-            "sheet_exchange": bool(exchange),
-            "sheets_distinct": bool(distinct),
-            "smith_identical": bool(smith_same),
-            "critical_group": cg_a,
-        })
+        records.append(
+            {
+                "source": src,
+                "sheet_exchange": bool(exchange),
+                "sheets_distinct": bool(distinct),
+                "smith_identical": bool(smith_same),
+                "critical_group": cg_a,
+            }
+        )
     # the conjecture "every genuine collision is a sheet exchange" is REFUTED:
     # five of six are sheet exchanges; the sixth is cospectral,
     # Smith-identical, affine-inequivalent, yet not a sheet exchange -- and it
-    # carries a distinct 5-primary critical-group signature.  A second
-    # mechanism exists.
+    # carries a distinct 5-primary critical-group shape within these six.  A
+    # second mechanism exists, but Pass 540 later proves that this Smith shape
+    # does not classify the mechanism.
     checks["exactly_six_genuine_pairs"] = len(pairs) == 6
     checks["five_of_six_are_sheet_exchanges"] = n_exchange == 5
     checks["one_genuine_pair_is_a_second_mechanism"] = n_nonexchange == 1
@@ -480,8 +483,7 @@ def block9(offsets, t):
     for (a, b), c in fsec.items():
         for xi, x in enumerate(F9):
             phase = f9_tr(
-                f9_mul(t, f9_add(c, f9_add(
-                    f9_mul((2, 0), f9_mul(x, b)), f9_mul(a, b))))
+                f9_mul(t, f9_add(c, f9_add(f9_mul((2, 0), f9_mul(x, b)), f9_mul(a, b))))
             )
             j = IDX9[f9_add(x, a)]
             B[j][xi] = zadd(B[j][xi], z3_from_exp(phase), 3)
@@ -497,16 +499,18 @@ def part_C(checks):
     detf = zint(det_exact(Bf, 3), 3)
     # validate construction against trace laws + flat spectrum
     z = np.exp(2j * np.pi / 3)
-    M = np.array([[sum(c * z**k for k, c in enumerate(Bf[i][j]))
-                   for j in range(9)] for i in range(9)])
+    M = np.array(
+        [
+            [sum(c * z**k for k, c in enumerate(Bf[i][j])) for j in range(9)]
+            for i in range(9)
+        ]
+    )
     herm = np.allclose(M, M.conj().T)
     ev = sorted(int(round(x)) for x in np.linalg.eigvalsh(M))
     trB2 = round(np.trace(M @ M).real)
     flat_formula = (9 - 1) ** ((9 + 1) // 2) * (-(9 + 1)) ** ((9 - 1) // 2)
     checks["q9_block_hermitian"] = bool(herm)
-    checks["q9_flat_spectrum_8pow5_minus10pow4"] = ev == sorted(
-        [8] * 5 + [-10] * 4
-    )
+    checks["q9_flat_spectrum_8pow5_minus10pow4"] = ev == sorted([8] * 5 + [-10] * 4)
     checks["q9_trace_law_trB2_720"] = trB2 == 720
     checks["q9_flat_det_formula_extends"] = detf == flat_formula == 327680000
     # congruence depth (lambda = 1 - zeta_3, ramified prime 3)
@@ -544,12 +548,12 @@ def part_D(checks):
     p474 = importlib.util.module_from_spec(spec_i)
     spec_i.loader.exec_module(p474)
 
-    A = p474.weyl_matrix(p474.PAIR_A, 1)   # B1 = B_1(A)
-    B = p474.weyl_matrix(p474.PAIR_B, 2)   # B2 = B_2(B)
+    A = p474.weyl_matrix(p474.PAIR_A, 1)  # B1 = B_1(A)
+    B = p474.weyl_matrix(p474.PAIR_B, 2)  # B2 = B_2(B)
     UA, _ = p474.cyclic_basis(A)
     UB, _ = p474.cyclic_basis(B)
     UAinv, _ = p474.inverse_matrix(UA)
-    X0 = p474.matrix_multiply(UB, UAinv)   # X0 B1 = B2 X0
+    X0 = p474.matrix_multiply(UB, UAinv)  # X0 B1 = B2 X0
 
     # family X0 * B1^k, k = 0..4 spans the intertwiner space over Q(zeta_5)
     fam = []
@@ -557,25 +561,23 @@ def part_D(checks):
     for k in range(5):
         U = p474.matrix_multiply(X0, Ak)
         # verify intertwining: U B1 = B2 U
-        good = p474.matrix_equal(p474.matrix_multiply(U, A),
-                                 p474.matrix_multiply(B, U))
+        good = p474.matrix_equal(p474.matrix_multiply(U, A), p474.matrix_multiply(B, U))
         _, det = p474.inverse_matrix(U)
         stats = p474.denominator_stats(U)
         nrm = p474.field_norm(det)
-        fam.append({
-            "k": k,
-            "intertwines": bool(good),
-            "integral": stats["nonintegral_entries"] == 0,
-            "determinant_norm": str(nrm),
-            "det_norm_v5": vp(abs(int(nrm)), 5) if nrm == int(nrm) else None,
-        })
+        fam.append(
+            {
+                "k": k,
+                "intertwines": bool(good),
+                "integral": stats["nonintegral_entries"] == 0,
+                "determinant_norm": str(nrm),
+                "det_norm_v5": vp(abs(int(nrm)), 5) if nrm == int(nrm) else None,
+            }
+        )
         Ak = p474.matrix_multiply(Ak, A)
 
-    checks["intertwiner_family_all_intertwine"] = all(f["intertwines"]
-                                                      for f in fam)
-    checks["intertwiner_family_all_nonintegral"] = all(
-        not f["integral"] for f in fam
-    )
+    checks["intertwiner_family_all_intertwine"] = all(f["intertwines"] for f in fam)
+    checks["intertwiner_family_all_nonintegral"] = all(not f["integral"] for f in fam)
     return {
         "family": fam,
         "note": (
@@ -623,12 +625,14 @@ def main_payload():
                 "of b and vice versa, sheets distinct).  The SIXTH is a "
                 "SECOND MECHANISM: cospectral, Smith-identical, "
                 "affine-inequivalent, yet NOT a sheet exchange, and it "
-                "carries a distinct 5-primary critical-group signature "
-                "({25^15,5^6} against the exchanges' {25^5,5^16}).  All six "
+                "has, within these six retained pairs, the distinct 5-primary "
+                "shape {125^23,25^15,5^6} against the exchanges' "
+                "{125^23,25^5,5^16}.  All six "
                 "are Smith-identical within their pair.  The conjecture "
                 "'every genuine collision is a sheet exchange' is REFUTED: "
                 "the register cell hosts at least two distinct cospectrality "
-                "mechanisms at q=5."
+                "mechanisms at q=5.  Pass 540 later shows that Smith shape "
+                "does not classify those mechanisms."
             ),
             "report": B,
         },
@@ -676,9 +680,15 @@ def main():
     else:
         a.output.parent.mkdir(parents=True, exist_ok=True)
         a.output.write_text(text)
-    print(json.dumps({"status": p["status"],
-                      "checks": sum(p["checks"].values()),
-                      "total": len(p["checks"])}))
+    print(
+        json.dumps(
+            {
+                "status": p["status"],
+                "checks": sum(p["checks"].values()),
+                "total": len(p["checks"]),
+            }
+        )
+    )
     return 0 if p["status"] == "PASS" else 1
 
 

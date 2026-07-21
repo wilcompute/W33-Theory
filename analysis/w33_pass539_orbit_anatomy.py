@@ -27,16 +27,16 @@ and no other orbit has full support.  That is a clean characterisation of
 where the coincidence lives, and it was not visible before the orbits were
 listed.
 
-WHAT IT DOES NOT DO.  Support does not SEPARATE the two: both are 8/8, so
-whatever distinguishes them as orbits is finer than support, and the
-characteristic polynomial cannot see it.  Representatives (1,2,1,1) and
-(1,2,1,2) differ in a single pair value.  Naming the finer invariant is left
-open; this pass says where to look, not what to find.
+WHAT THIS PASS DID NOT DO.  Support does not SEPARATE the two: both are 8/8.
+Pass 540 subsequently identifies the finer fixed-frame invariant as
+coordinate-product parity, with the frame-corrected scalar of a Moore-Dickson
+form giving the intrinsic version, and identifies the two fibers with the D4
+half-spin chiralities.
 
 SUPPORT IS NOT A COMPLETE INVARIANT EITHER.  Two orbits have support 6/8 -- one
 of size 8 and one of size 24 -- with different polynomials.  So neither support
-nor orbit size alone classifies; the pair (size, support) happens to separate
-all seven, which is a fact about q = 3 and is not extrapolated.
+nor orbit size alone classifies.  The pair (size, support) gives six fibers and
+separates every orbit except the two full-support chiralities.
 """
 from __future__ import annotations
 
@@ -73,8 +73,14 @@ def part_A_anatomy(checks):
     F = H.block(H.full_sec(tuple(R.zero for _ in H.pairs)))
     els = list(R.elems)
     vecs = [(a, b) for a in range(p) for b in range(p) if (a, b) != (0, 0)]
-    SP = [(a, b, c, d) for a in range(p) for b in range(p)
-          for c in range(p) for d in range(p) if (a * d - b * c) % p == 1]
+    SP = [
+        (a, b, c, d)
+        for a in range(p)
+        for b in range(p)
+        for c in range(p)
+        for d in range(p)
+        if (a * d - b * c) % p == 1
+    ]
     pairs, seen = [], set()
     for v in vecs:
         nv = ((-v[0]) % p, (-v[1]) % p)
@@ -94,8 +100,12 @@ def part_A_anatomy(checks):
     def act(g, sec):
         a, b, c, d = g
         inv = pow((a * d - b * c) % p, -1, p)
-        return {v: sec[(((d * v[0] - b * v[1]) * inv) % p,
-                        ((-c * v[0] + a * v[1]) * inv) % p)] for v in vecs}
+        return {
+            v: sec[
+                (((d * v[0] - b * v[1]) * inv) % p, ((-c * v[0] + a * v[1]) * inv) % p)
+            ]
+            for v in vecs
+        }
 
     def key(sec):
         return tuple(sec[pairs[i][0]] for i in range(len(pairs)))
@@ -104,8 +114,10 @@ def part_A_anatomy(checks):
         fs = {(els[v[0]], els[v[1]]): els[sec[v]] for v in vecs}
         B = H.block(fs)
         D = [[C.sub(B[i][j], F[i][j]) for j in range(q)] for i in range(q)]
-        return (tuple(-x // 2 for x in trace(matmul(D, D, C), C)),
-                tuple(det_exact(D, C)))
+        return (
+            tuple(-x // 2 for x in trace(matmul(D, D, C), C)),
+            tuple(det_exact(D, C)),
+        )
 
     allsec = [tuple(o) for o in itertools.product(range(p), repeat=len(pairs))]
     unseen, rows = set(allsec), []
@@ -116,8 +128,16 @@ def part_A_anatomy(checks):
         stab = sum(1 for g in SP if key(act(g, sec)) == s0)
         supp = sum(1 for v in vecs if sec[v] != 0)
         k = cp(sec)
-        rows.append({"size": len(O), "stabiliser": stab, "support": supp,
-                     "e2": k[0][0], "e3": k[1][0], "rep": list(s0)})
+        rows.append(
+            {
+                "size": len(O),
+                "stabiliser": stab,
+                "support": supp,
+                "e2": k[0][0],
+                "e3": k[1][0],
+                "rep": list(s0),
+            }
+        )
         unseen -= O
     rows.sort(key=lambda r: (r["size"], -r["support"]))
     bycp = {}
@@ -125,33 +145,51 @@ def part_A_anatomy(checks):
         bycp.setdefault((r["e2"], r["e3"]), []).append(r)
     merged = [v for v in bycp.values() if len(v) > 1]
     full = [r for r in rows if r["support"] == 8]
+    by_size_support = {}
+    for r in rows:
+        by_size_support.setdefault((r["size"], r["support"]), []).append(r)
     checks["seven_orbits"] = len(rows) == 7
     checks["orbit_times_stabiliser_is_group_order"] = all(
-        r["size"] * r["stabiliser"] == 24 for r in rows)
+        r["size"] * r["stabiliser"] == 24 for r in rows
+    )
     checks["exactly_one_merged_pair"] = len(merged) == 1
     checks["the_merge_is_exactly_the_full_support_pair"] = (
-        len(merged) == 1 and len(full) == 2
-        and {tuple(r["rep"]) for r in merged[0]}
-        == {tuple(r["rep"]) for r in full})
-    return {"orbits": rows,
-            "merged_pair": merged[0] if merged else None,
-            "full_support_orbits": full,
-            "finding": (
-                "The two orbits sharing a characteristic polynomial are "
-                "exactly the two whose sections have FULL SUPPORT -- every "
-                "c(v) nonzero.  No other pair shares a polynomial and no other "
-                "orbit has full support."),
-            "what_it_does_not_do": (
-                "Support does not SEPARATE the two: both are 8/8, so whatever "
-                "distinguishes them as orbits is finer than support and the "
-                "characteristic polynomial cannot see it.  Their "
-                "representatives differ in a single pair value.  Naming the "
-                "finer invariant is left open."),
-            "support_is_not_complete": (
-                "Two orbits have support 6/8 -- one of size 8, one of size 24 "
-                "-- with different polynomials.  Neither support nor orbit "
-                "size alone classifies; the pair (size, support) separates all "
-                "seven, which is a fact about q = 3 and is not extrapolated.")}
+        len(merged) == 1
+        and len(full) == 2
+        and {tuple(r["rep"]) for r in merged[0]} == {tuple(r["rep"]) for r in full}
+    )
+    checks["size_support_has_six_fibers_and_only_merges_the_chiral_pair"] = len(
+        by_size_support
+    ) == 6 and [key for key, value in by_size_support.items() if len(value) > 1] == [
+        (8, 8)
+    ]
+    return {
+        "orbits": rows,
+        "merged_pair": merged[0] if merged else None,
+        "full_support_orbits": full,
+        "finding": (
+            "The two orbits sharing a characteristic polynomial are "
+            "exactly the two whose sections have FULL SUPPORT -- every "
+            "c(v) nonzero.  No other pair shares a polynomial and no other "
+            "orbit has full support."
+        ),
+        "what_it_does_not_do": (
+            "Support does not SEPARATE the two: both are 8/8, so whatever "
+            "distinguishes them as orbits is finer than support and the "
+            "characteristic polynomial cannot see it.  Their "
+            "representatives differ in a single pair value.  Pass 540 "
+            "subsequently names the fixed-frame invariant as coordinate-product "
+            "parity and its intrinsic correction as the Moore-Dickson bracket "
+            "scalar, equivalently the unordered D4 half-spin split."
+        ),
+        "support_is_not_complete": (
+            "Two orbits have support 6/8 -- one of size 8, one of size 24 "
+            "-- with different polynomials.  Neither support nor orbit "
+            "size alone classifies.  The pair (size, support) has six fibers "
+            "and separates every orbit except the two full-support "
+            "chiralities."
+        ),
+    }
 
 
 def main_payload():
@@ -169,17 +207,17 @@ def main_payload():
             "8, 6, 2, 6, 4.  The two orbits sharing x^3 - 36x - 81 are "
             "precisely the two of FULL support, and no other orbit has full "
             "support.  That locates the coincidence structurally for the first "
-            "time.  It does not resolve it: both are 8/8, so whatever "
-            "separates them as orbits is finer than support and the "
-            "characteristic polynomial cannot see it -- their representatives "
-            "differ in one pair value."),
+            "time.  Pass 540 resolves the remaining separator as "
+            "coordinate-product parity / D4 half-spin chirality."
+        ),
         "part_A_anatomy": A,
         "boundary": (
             "Exhaustive over the complete 81-section space and the full group "
             "at q = 3, so the anatomy is decisive there.  Nothing is claimed "
-            "for q >= 5, where the orbit count is about two million and no "
-            "analogous listing is possible.  The finer invariant separating "
-            "the two full-support orbits is NOT identified."),
+            "here for q >= 5; an exhaustive listing was not attempted.  Pass "
+            "540 supersedes the formerly open separator and carries it into a "
+            "targeted q = 5 full-support search."
+        ),
         "checks": {k: bool(v) for k, v in checks.items()},
     }
 
@@ -197,9 +235,15 @@ def main():
     else:
         a.output.parent.mkdir(parents=True, exist_ok=True)
         a.output.write_text(text)
-    print(json.dumps({"status": pl["status"],
-                      "checks": sum(pl["checks"].values()),
-                      "total": len(pl["checks"])}))
+    print(
+        json.dumps(
+            {
+                "status": pl["status"],
+                "checks": sum(pl["checks"].values()),
+                "total": len(pl["checks"]),
+            }
+        )
+    )
     return 0 if pl["status"] == "PASS" else 1
 
 

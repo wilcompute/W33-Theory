@@ -172,7 +172,7 @@ This manuscript deliberately mixes elementary exposition, exact finite geometry,
 When the paper says ``proves'' without qualification, it means Tier 1 or a directly checked Tier 2 statement. When it says ``bridge,'' ``reading,'' ``proposal,'' or ``frontier,'' it is deliberately not claiming more than the current verification supports.
 
 \begin{statusbox}[title=Read this first: the current map]
-The current exact frontier is unusually useful precisely because it contains both constructions and limits.  The symplectic graph, its finite groups, chain complexes, and code objects are mathematical data.  The newest certificates prove a classical $[240,120,3]_3$ boundary decoder with a $481$-entry radius-one table; four invariant minimal-logical-pair sheets rather than a natural $W(E_6)$ torsor; and a marked $D_8$ comparison with exactly four choices.  Separately, the $27$-point Heisenberg/Clifford bridge is a finite group-action result.  None of these facts selects chirality, identifies a physical phase, supplies a continuum spacetime, or derives a measured particle parameter.  Those remain bridges to build or hypotheses to test.
+The current exact frontier is unusually useful precisely because it contains both constructions and limits.  The symplectic graph, its finite groups, chain complexes, and code objects are mathematical data.  The newest certificate explains one spectral coincidence as the two $D_4$ half-spin chiralities: an exact finite invariant distinguishes them, while the characteristic polynomial does not.  Earlier certificates prove a classical $[240,120,3]_3$ boundary decoder with a $481$-entry radius-one table; four invariant minimal-logical-pair sheets rather than a natural $W(E_6)$ torsor; and a marked $D_8$ comparison with exactly four choices.  Separately, the $27$-point Heisenberg/Clifford bridge is a finite group-action result.  None of these facts selects physical chirality, identifies a physical phase, supplies a continuum spacetime, or derives a measured particle parameter.  Those remain bridges to build or hypotheses to test.
 \end{statusbox}
 
 \section*{The working vocabulary}
@@ -1164,7 +1164,7 @@ Here is what each line means in plain English.
 \item \textbf{Octahedral / codec form.} The first term, $128$, is the local
 carrier package coming from the octahedron spanning-tree count divided by the
 ternary field size. The second term, $9$, is the squared ternary matter gap.
-This is the clearest physical reading: \emph{gauge shell + matter shell = 137}. 
+This is the clearest physical reading: \emph{gauge shell + matter shell = 137}.
 
 \item \textbf{Pure polynomial form.} Once the Master Equation has fixed
 $q = 3$, the same prime is already hiding in the tiny polynomial
@@ -4611,33 +4611,105 @@ $K(d), \rho_d$ & kissing number, packing density in $d$D \\
 \end{tabular}
 \end{center}
 
+\section{A finite chirality switch that the spectrum cannot see}
+
+There is now a particularly small example of why a spectrum can miss real
+structure.  In the $q=3$ Heisenberg section problem, four antipodal pairs each
+receive one nonzero value.  Writing those values as four signs gives all
+$2^4=16$ vertices of a four-dimensional cube.  After fixing an orientation of
+the four antipodal representatives, the product of the four signs splits that
+cube into two sets of eight.  Geometrically they are the two
+demicubes; in $D_4$ language they are the weight sets of the spinor and
+conjugate-spinor representations.
+
+If the four section coordinates in that frame are
+$c_1,\ldots,c_4\in\mathbb F_3^\times$, then
+\[
+ I(c)=\prod_{i=1}^{4}c_i\in\{1,-1\}
+\]
+is constant on each $SL(2,3)$ orbit.  Reversing one frame representative flips
+$I$, so the labels $+/-$ are oriented rather than absolute.  The
+representative-independent quantity is $\chi(c)=\kappa_R I(c)$, where the
+frame factor $\kappa_R$ flips at the same time.  It is the scalar in the
+Moore--Dickson alternating form
+\[
+ F_c(X,Y)=\chi(c)\bigl(X^3Y-XY^3\bigr).
+\]
+In the certificate frame $\kappa_R=1$.  Thus the unordered pair of
+eight-element orbits and the $\chi$ values are intrinsic, even though
+reversing the frame swaps the bare $I=+/-$ coordinate labels.
+Nevertheless both produce the same block-difference characteristic polynomial
+\[
+ x^3-36x-81.
+\]
+A determinant-$-1$ linear symmetry exchanges the two orbits, explaining why
+the polynomial forgets the sign.  This resolves the coincidence; it does not
+choose one hand as physical.
+
+The same Pass~540 GAP calculation reaches two larger regimes.  At $q=5$ it
+counts exactly $139{,}904$ full-support $SL(2,5)$ section orbits.  A fixed,
+reproducible sample of $3{,}000$ of those orbits contains $34$ repeated
+characteristic-polynomial classes: $33$ are explained by the larger
+determinant-twisted linear symmetry, while one gives a further
+affine-inequivalent, nonisomorphic cospectral pair outside the eight explicit
+Pass~456/479/482 affine pairs.  It realizes Pass~481's known sheet-coincidence
+mechanism rather than a new mechanism.  Exact $125\times125$ characteristic polynomials and different local
+common-neighbour profiles certify that pair.  Its faithful degree-ten factor is
+\[
+\begin{aligned}
+ f(x)={}&x^{10}-120x^8-90x^7+4795x^6+6317x^5\\
+       &-69675x^4-108795x^3+277460x^2+383845x+34441,
+\end{aligned}
+\]
+and the full graph polynomial is $(x-24)(x+1)^{24}f(x)^{10}$.
+Both reduced Laplacians also have the same nonunit Smith invariant factors:
+$5$ with multiplicity $16$, $25$ with multiplicity $5$, $125$ with
+multiplicity $13$, and $2028949923625$ with multiplicity $10$.  Thus even the critical group misses
+the distinction that the local profile detects.
+The pair is exact, but the $3{,}000$-orbit search is not an enumeration of all
+$q=5$ spectra.
+
+Finally, over the chain ring $\mathbb Z/9\mathbb Z$, signed-cycle Burnside
+averaging is exact.  It gives
+\[
+228100045392509153077600971330057241
+\]
+orbits on all sections and
+\[
+2051277771273019233341050472890368
+\]
+on full-support sections.  These large integers come from averaging fixed-point
+counts over all $648$ matrices in $SL(2,\mathbb Z/9\mathbb Z)$; they are not
+sampling estimates.  The executable source is
+\path{analysis/w33_pass540_symplectic_separator_chainring.g}, with its exact
+certificate in \path{data/w33_pass540_symplectic_separator_chainring.json}.
+
+Pass~540's $D_4$ selector split is a finite spectral example.  The following
+$D_5/W(E_6)$ half-spin obstruction is a separate carrier: it shares the
+orientation-reversal pattern, but it is not automatically the same physical
+object.
+
 \section{What the machine cannot do --- and why that is a result}
 
-Nature is left-handed: the weak force treats a particle and its mirror image
-differently, and nobody knows why. Our structure turns out to have something
-sharp to say about this --- a genuine theorem, proved in 2026, and it is a
-\emph{limit}.
+The weak interaction distinguishes handedness, while our finite construction
+contains a precise representation-theoretic analogue: two mirror-image
+half-spin carriers exchanged by an internal orientation reversal.  That is a
+theorem about the finite model, not an identification with physical fermions.
+Within the model, any invariant respects the symmetry and therefore cannot
+distinguish the two carriers.  If one separately imports a physical
+left/right interpretation, the construction supplies no invariant internal
+selector for it.  A group built from reflections cannot orient itself, for the
+same reason a coin cannot call its own toss.
 
-The structure contains both hands. It builds the two mirror-image
-``half-spinor'' spaces --- the mathematical homes of left- and right-handed
-matter --- completely and correctly. But its own symmetry group $W(E_6)$
-\emph{contains the mirror}: an element $T$ with $\det T=-1$ that swaps the two
-hands. Anything you compute from the structure respects its symmetry, and no
-quantity that respects a symmetry can tell apart two things the symmetry
-swaps. So the structure can \emph{host} nature's handedness but provably
-cannot \emph{choose} it. A group built from reflections cannot orient itself,
-for the same reason a coin cannot call its own toss.
-
-The same pattern repeats everywhere we looked, with the same shape: whenever
-the structure offers a family of choices (the two hands; three special
-lattices; twenty-seven machine states), the family is a \emph{torsor} --- a
-set that its own symmetry shuffles perfectly, with no distinguished member.
+The same mathematical pattern repeats in several finite families studied here:
+the relevant choices form \emph{torsors} --- sets that their symmetry shuffles
+with no distinguished member.
 A torsor is a strange and lovely thing: it is a group that has forgotten its
-identity element. The structure specifies everything \emph{except which member
-you are standing on}. Whatever physical principle picks the actual vacuum ---
-picks left over right --- must come from outside the structure, and the
-theorem tells you its exact shape: one choice per torsor, of sizes
-$2, 3, 27, 27$.
+identity element. The model specifies everything \emph{except which member is
+selected}. The sizes $2,3,27,27$ therefore describe the shape of additional
+finite selector data that would be needed. They do not prove that a physical
+vacuum is such a selector or that nature chooses among these particular
+torsors.
 
 One last gem, found while chasing this. Work with the Eisenstein integers
 $\mathbb{Z}[\omega]$ (the hexagonal number system built on $\omega$). Over its

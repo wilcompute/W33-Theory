@@ -28,10 +28,10 @@
 \maketitle
 
 \begin{abstract}
-\noindent Let $R$ be a finite Frobenius ring of odd residue characteristic
-whose generating character $\psi$ has order $p$ --- for example a finite field
-$\FF_q$, a truncated polynomial ring $\FF_p[x]/(x^k)$, or the noncommutative
-$M_2(\FF_p)$ --- and write $q=|R|$. Let $H$ be
+\noindent Let $R$ be a finite commutative local Frobenius ring of odd residue
+characteristic whose generating character $\psi$ has order $p$ --- for example
+a finite field $\FF_q$ or a truncated polynomial ring
+$\FF_p[x]/(x^k)$ --- and write $q=|R|$. Let $H$ be
 the Heisenberg group of order $q^3$ over $R$ and $\psi_t$ a nontrivial
 character of its centre. An \emph{inverse-closed section} $c$ assigns to each
 nonzero $v\in R^2$ a central coordinate $c(v)\in R$ with $c(-v)=-c(v)$; the
@@ -64,7 +64,10 @@ of $R$; only the ramification does. Several steps of the argument would fail on
 valuation counting alone, and each is rescued by inverse closure. The law is
 insensitive to whether $R$ is a field: $\FF_{p^k}$ and $\FF_p[x]/(x^k)$ give
 the same exponent, while $\ZZ/p^2$ --- whose generating character has order
-$p^2$ --- does not satisfy the law at all.
+$p^2$ --- does not satisfy the law at all.  Exact certificates also attain the
+same exponent for two noncommutative Frobenius rings of order $81$; those
+computations are evidence beyond the theorem's stated commutative-local scope,
+not a universal noncommutative theorem.
 
 The congruence reduces to an identity about the power sums $\tr(D^m)$, and the
 main structural result of the paper concerns those. Expanding $\tr(D^m)$ over
@@ -80,8 +83,10 @@ index set of relations is downward closed, M\"obius inversion runs, and each
 $S_d$ with $e\mid(m/d)$ vanishes identically; when $m$ is even it is not, and
 the theorem degenerates to a single relation. The sieve system is triangular
 along divisibility, so its rank is the number of relations and the number of
-unconstrained classes is $\tau(m)-\#\{u\mid m: u\text{ odd},\ e\mid u\}$; this
-equals $1$ precisely when $m$ is a power of $p$. Finally $d\,S_d$ has the
+unconstrained classes is $\tau(m)-\#\{u\mid m: u\text{ odd},\ e\mid u\}$,
+reduced by one more when $p\nmid m$ because then the period-one class is empty.
+Consequently $\mathrm{free}(1)=0$, while $\mathrm{free}(m)=1$ precisely when
+$m$ is a positive power of $p$ or a prime different from $p$. Finally $d\,S_d$ has the
 closed form $q\sum_{c\mid d}\mu(d/c)\bigl(\sum_v d_v^{\,m/c}\bigr)^{c}$, from
 which the sieve theorem follows in two lines.
 \end{abstract}
@@ -122,14 +127,16 @@ transfer matrix $\tr(D^m)=q\,[T^m]_{0,0}$; $T\equiv0\bmod\lambda$ &
 \midrule
 factorial law
 $\vlam(\tr D^m)=\vlam(q)+m+[m\text{ odd}]+\vlam(m!)$ &
-  \textbf{FALSE} at $q=3$ (Erratum~\ref{err:factorial}); not attained at
-  $q=5$ for $m=10,14,15,18,19$. \\
+  \textbf{FALSE} at $q=3$ (Erratum~\ref{err:factorial}); not attained among
+  the sampled $q=5$ sections for $m=10,14,15,18,19$, leaving the global
+  minimum undecided. \\
 sieve completeness (``nullity $=\lvert T\rvert$'') &
-  \textbf{CORRECTED} to $\lvert T\rvert+[\,p\nmid m\,]$
-  (Erratum~\ref{err:complete}). \\
+  \textbf{CORRECTED CANDIDATE}: $\lvert T\rvert+[\,p\nmid m\,]$ is proved
+  on the listed cells and two infinite families; the uniform composite-$m$
+  case remains open (Erratum~\ref{err:complete}). \\
 $\mathrm{free}(m)=1\iff m=p^{j}$ &
   \textbf{CORRECTED}: also every prime $\ell\neq p$
-  (Erratum~\ref{err:freeone}). \\
+  (Correction~\ref{err:freeone}). \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -156,6 +163,9 @@ for which the MacWilliams extension theorem holds, and a generating character
 is the standard tool in that theory, so the setting here is the usual one of
 ring-linear coding theory. What our argument additionally requires --- and what
 fails over $\ZZ/p^2$ --- is only that the generating character have order $p$.
+The theorem statements below retain this commutative-local scope.  The two
+noncommutative examples in Section~\ref{sec:pf} are exact computational
+extensions and are labelled as such.
 Set
 \[
 H=\bigl\{(a,b,c):a,b,c\in R\bigr\},\qquad
@@ -260,7 +270,8 @@ yields the odd-class vanishing theorem (Theorem~\ref{thm:oddclass}) when its
 index set is downward closed, and a single propagation relation when it is not;
 its system is triangular along divisibility, which gives the rank count
 (Proposition~\ref{prop:rank}) and hence
-$\mathrm{free}(m)=1\iff m$ is a power of $p$ (Proposition~\ref{prop:freeone}).
+$\mathrm{free}(m)=1\iff m$ is a positive power of $p$ or a prime different
+from $p$, with $\mathrm{free}(1)=0$ (Proposition~\ref{prop:freeone}).
 The determinant congruence of \S\ref{sec:sharp}, which motivated all of this,
 sits at the other end: it follows from the factorial law, which is an
 assertion about the very power sums $(\ast)$ constrains.
@@ -611,7 +622,7 @@ values fit
 Since $2v_3(m!)=m-s_3(m)$ with $s_3$ the base-$3$ digit sum, the two
 expressions differ by $s_3(m)+[m\text{ odd}]-2$, which vanishes exactly when
 $s_3(m)+[m\text{ odd}]=2$ --- a set containing every $m=3^{j}$. The
-prime-power tower is therefore precisely the locus on which the two agree,
+prime-power tower therefore lies inside the locus on which the two agree,
 which is why its four confirmed rungs $8,20,56,164$ could not detect this.
 
 The scope of the failure is open, but the evidence has moved. At $q=5$ the law
@@ -631,8 +642,9 @@ confirmation recorded in this paper is of the cheap kind.
 
 For even $m$ the true $q=3$ value is not merely fitted but derived. Across the
 complete $81$-section space the pair $(\vlam(e_2),\vlam(e_3))$ takes exactly
-four non-degenerate values, and each one determines the whole sequence
-$\vlam(\tr D^m)$; the profile is a complete invariant for this data.
+four non-degenerate values, and each one determines the measured vector
+$\vlam(\tr D^m)$ for $m\le10$; the profile is a complete invariant for that
+finite data window.
 
 \begin{proposition}\label{prop:q3even}
 Let $q=3$ and let $c$ be one of the $32$ sections with $\det D=0$ and
@@ -654,8 +666,11 @@ minimising sections do not cancel by one extra order at odd $m$ --- they vanish
 \emph{identically}. Odd $m$ is therefore served by the other profiles, whose
 minimum is $2(m+1)$, attained by $(6,6)$ at $m=3,9$ and by $(4,8)$ at $m=5,7$.
 So ``$[m\text{ odd}]$'' is not a correction applied to one formula; it is the
-switch between which profile attains the minimum. Why those profiles give
-$2(m+1)$ is open. Statements below that invoke \eqref{eq:factorial} should be read as
+switch between which profile attains the minimum. At the time of Pass~521 the
+odd-profile mechanism was open; Pass~522 derives the $(4,8)$ values, and
+Pass~523's Newton recurrence accounts for the $(6,6)$ values through
+$m=2,\ldots,10$.  An all-$m$ noncancellation/LTE proof for that recurrence
+remains open. Statements below that invoke \eqref{eq:factorial} should be read as
 conditional on it, and the reduction of \S\ref{sec:transfer} is unaffected: the
 transfer-matrix identity and $T\equiv0\pmod\lambda$ are exact regardless.
 \end{erratum}
@@ -934,11 +949,11 @@ such instance in this paper, after the prime-power tower and
 \end{erratum}
 
 \noindent The scope of what remains is worth stating plainly: relations whose
-coefficients depend on the section, and nonlinear relations, are not excluded,
-and the corrected law is itself a measurement over sampled sections rather than
-a proof. A larger sample can only lower a measured rank and hence raise the
-nullity, so an excess relation found this way cannot be a sampling artefact in
-the direction that matters.
+coefficients depend on the section, and nonlinear relations, are not excluded.
+Adding sampled rows can only raise
+rank and lower nullity, so the sampled nullity is an upper bound.  On the
+listed cells the explicit sieve/vacuous relations give the matching lower
+bound, making those equalities exact; a uniform all-cell law is not proved.
 
 At a prime power $m=p^{j}$ the count is
 $\mathrm{free}=1$: the sieve pins $j$ of the $j+1$ classes and leaves only the
@@ -1124,42 +1139,34 @@ the trace is carried entirely by the classes whose period does \emph{not}
 divide $m/e$. At $m=p^{j}$ the only such class is $d=m$, recovering
 $\tr(D^m)=m\,S_m$; at $(p,m)=(3,6)$ the carriers are $d=3$ and $d=6$.
 
-Proposition~\ref{prop:closed} also settles which $m$ have a single free class.
+Proposition~\ref{prop:closed}, together with the vacuous-class correction of
+Erratum~\ref{err:complete}, settles which $m$ have a single free class.
 
 \begin{proposition}\label{prop:freeone}
-$\mathrm{free}(m)=1$ if and only if $m$ is a power of $p$.
+$\mathrm{free}(m)=1$ if and only if $m$ is a positive power of $p$ or a prime
+different from $p$; moreover $\mathrm{free}(1)=0$.
 \end{proposition}
 
 \begin{proof}
-For $m$ odd write $m=p^{a}r$ with $\gcd(r,p)=1$; then
-$\lvert U\rvert=\tau(m/e)=a\,\tau(r)$ and $\tau(m)=(a+1)\tau(r)$, so
-$\mathrm{free}=\tau(r)$, which is $1$ exactly when $r=1$. For $m$ even write
-$m=2^{b}s$ with $b\ge1$ and $s$ odd; then
-$\mathrm{free}=(b+1)\tau(s)-\tau(s/e)\ge2\tau(s)-\tau(s/e)>\tau(s)\ge1$, since
-$\tau(s/e)<\tau(s)$ whenever $e>1$ divides $s$. So no even $m$ qualifies.
+Use the corrected count
+$\mathrm{free}(m)=\tau(m)-\lvert T\rvert-[p\nmid m]$.  If $p\mid m$, the
+last term vanishes and the divisor count gives $\mathrm{free}(m)=1$ exactly
+for $m=p^a$, $a\ge1$.  If $p\nmid m$, then $T$ is empty and
+$\mathrm{free}(m)=\tau(m)-1$; this is $1$ exactly when $m$ is prime, and is
+$0$ at $m=1$.
 \end{proof}
 
-\begin{erratum}\label{err:freeone}
-Proposition~\ref{prop:freeone} is \emph{false}. Its proof is correct given its
-input, but that input --- $\mathrm{free}(m)=\tau(m)-\lvert U\rvert$ --- omits
-the vacuous class of Erratum~\ref{err:complete}. With the corrected count
-$\mathrm{free}(m)=\tau(m)-\lvert T\rvert-[\,p\nmid m\,]$, any prime
-$\ell\neq p$ has $\tau=2$, $\lvert T\rvert=0$ and correction $1$, hence
-$\mathrm{free}=1$. Measured at $(p,m)=(3,5),(3,7),(5,3),(5,7),(7,3)$:
-$\mathrm{free}=1$ in every case and none is a power of $p$. The corrected
-statement is that $\mathrm{free}(m)=1$ for $m$ a power of $p$ \emph{and} for
-$m$ a prime other than $p$.
+\begin{remark}[Historical correction]\label{err:freeone}
+An earlier version of Proposition~\ref{prop:freeone} asserted only the
+positive powers of $p$.  Its input
+$\mathrm{free}(m)=\tau(m)-\lvert U\rvert$ omitted the vacuous period-one class
+of Erratum~\ref{err:complete}.  The extra term $-[p\nmid m]$ supplies the
+second family, the primes $\ell\neq p$.
 
 A proof inherits the blind spot of the formula it starts from. This is the
 third instance in this paper; the failure mode itself, with all three examples,
 is written up separately in \texttt{papers/agreement\_locus.tex}.
-\end{erratum}
-
-\noindent The repaired characterisation is that $\mathrm{free}(m)=1$ exactly
-when $m$ is a power of $p$ \emph{or} a prime different from $p$, with
-$\mathrm{free}(1)=0$: if $p\mid m$ then $\mathrm{free}=\tau(m)-\lvert
-T\rvert$, equal to $1$ only for $m=p^{a}$; if $p\nmid m$ then
-$\mathrm{free}=\tau(m)-1$, equal to $1$ exactly when $\tau(m)=2$.
+\end{remark}
 
 We also record the status of Erratum~\ref{err:complete}'s corrected law more
 precisely than ``measured''. Its lower bound
@@ -1402,9 +1409,10 @@ $\FF_5[x]/(x^2)$ & $25$ & no & $8$ & $12$ & $12$\\
 \end{center}
 Each is checked with a homomorphism-validated representation, the flat-block
 quadratic, and the closed-form flat determinant. Commutativity is not needed
-either: the Heisenberg cocycle is associative over any ring (the six cross
-terms cancel identically) and the centre is central, and the law is confirmed
-over two noncommutative Frobenius rings of order $81$ --- the semisimple
+to define the Heisenberg cocycle: it is associative over any ring (the six
+cross terms cancel identically) and the centre is central.  Beyond the theorem
+scope used above, the law is confirmed exactly over two noncommutative
+Frobenius rings of order $81$ --- the semisimple
 $M_2(\FF_3)$ with $\psi(X)=\zeta_3^{\tr X}$, and the \emph{local} twisted dual
 numbers $\FF_9[\theta]$, $\theta^2=0$, $\theta a=a^3\theta$, with $\psi$ the
 socle character. Both have $\vlam(81)=8$, in both the representation is a
@@ -1462,24 +1470,63 @@ single sentence:
 $\vlam\bigl(\sum_j \nu_j^{\,m}\bigr)$.}
 \end{center}
 
-At $q=3$ it is answered. The $81$ sections map onto exactly six characteristic
+At $q=3$ the section-space image is answered. The $81$ sections map onto exactly six characteristic
 polynomials, all of the form
 \[
 x^3-9a\,x-27b,\qquad
 (a,b)\in\{(0,0),(1,0),(2,0),(3,0),(3,1),(4,3)\},
 \]
-with multiplicities $1,8,24,8,24,16$; the image is six lattice points, and the
-law is the six-row table they index. The valuation profile used in
+with multiplicities $1,8,24,8,24,16$; the image is six lattice points. They
+give six exact recurrences whose minimum matches the proposed law for
+$m=2,\ldots,12$. Proving that minimum for all $m$ still requires the open
+noncancellation/LTE argument for the $(6,6)$ row. The valuation profile used in
 \S\ref{sec:closedform} is the coarsening that merges $x^3-9x$ with $x^3-18x$.
-Why $e_2$ lies in $9\ZZ$ and $e_3$ in $27\ZZ$ is observed exhaustively and not
-proved.
+The lattice containment is now proved: inverse closure makes $D$ Hermitian,
+so its characteristic polynomial is real and hence rational at $p=3$; then
+$\vlam(e_2)\ge4$ and $\vlam(e_3)\ge6$ are exactly $9\mid e_2$ and
+$27\mid e_3$.  What remains unexplained is why precisely these six allowed
+lattice points occur.
 
-At $q\ge5$ it is open, and not for want of machinery: coefficient valuations
-demonstrably do not suffice, since $34$ valuation profiles there carry $52$
-distinct trace vectors, and the image is large rather than small --- $220$
-sampled sections already give more than a hundred distinct characteristic
-polynomials. The finiteness at $q=3$ is a small-$q$ accident and we do not
-extrapolate it.
+The orbit structure sharpens the multiplicities.  The $81$ sections form
+seven $\operatorname{Sp}(2,3)$-orbits of sizes
+$1,8,8,8,8,24,24$.  Exactly two orbits merge spectrally: they are the two
+full-support orbits and share $x^3-36x-81$.  In the certificate's fixed
+oriented antipodal frame, their coordinate products are $1$ and $2$ in
+$\FF_3$; intrinsically the separator is the product corrected by the frame
+factor in the Moore--Dickson coefficient. Reorienting one representative may swap
+the bare labels but not the unordered split. After identifying nonzero coordinates with signs,
+these are the two eight-vertex demicubes, equivalently the two chiral
+$D_4$ half-spin weight sets.  A determinant-$-1$ element of
+$\operatorname{GL}(2,3)$ swaps them together with the two central characters;
+their Galois-conjugate Hermitian polynomials coincide because
+$\QQ(\zeta_3)^+=\QQ$.  Thus the merge is explained rather than
+merely located.
+
+At $q=5$, coefficient valuations still do not determine the trace vector, but
+finite sampling cannot determine the global image size.  Burnside gives
+$2{,}034{,}735$ total symplectic section orbits and, exactly,
+$139{,}904$ full-support orbits.  A deterministic sample of $3{,}000$ distinct
+full-support orbits found $34$ characteristic-polynomial merges: $33$ are
+explained by determinant-twisted linear equivalence, while one pair is
+affine-inequivalent.  Once found, that pair is checked exactly as a further
+full-support pair of cospectral, nonisomorphic Cayley graphs.  It is outside
+the eight explicit affine pairs retained by Passes~456, 479, and~482 and realizes the
+sheet-coincidence mechanism of Pass~481; Pass~482 did not retain every sampled
+representative, so no global ordinal is claimed.  This is an existence
+certificate, not an estimate of the number of characteristic polynomials or
+of collision density.  The two reduced Laplacians also have identical critical
+groups: their nonunit Smith invariant factors are $5$ with multiplicity $16$,
+$25$ with multiplicity $5$, $125$ with multiplicity $13$, and
+$2028949923625$ with multiplicity $10$.  Their unequal local profiles therefore
+separate graphs that both spectrum and critical group fail to distinguish.
+
+The same signed-cycle Burnside argument works over $\ZZ/9$ because $2$ remains
+a unit.  On the $40$ antipodal pairs, the exact
+$\operatorname{SL}(2,\ZZ/9)$ count is
+$228100045392509153077600971330057241$ section orbits, of which
+$2051277771273019233341050472890368$ have full support.  These counts and the
+$q=3$ chirality statement are exhaustive; only the route by which the $q=5$
+witness was located is sampled.
 
 \begin{thebibliography}{9}
 
@@ -1509,10 +1556,13 @@ Proc.\ 9th ACM SIGPLAN Int.\ Conf.\ on Certified Programs and Proofs (CPP 2020),
 
 \bibitem{repo}
 W.~Dahn, \emph{W33-Theory} source repository; witness programs
-\texttt{w33\_pass479}--\texttt{w33\_pass511} (in particular
+\texttt{w33\_pass479}--\texttt{w33\_pass540} (in particular
 \texttt{w33\_pass511\_constant\_orbit\_theorem.py} for
 Theorem~\ref{thm:oddclass}) and the Lean file
-\texttt{formal/W33/Pass481FirstOrderPairing.lean}.
+\texttt{formal/W33/Pass481FirstOrderPairing.lean}.  The closing census is
+owned by \texttt{analysis/w33\_pass540\_symplectic\_separator\_chainring.g},
+its JSON certificate, and
+\texttt{PASS540\_SYMPLECTIC\_CHIRALITY\_CHAINRING.md}.
 
 \end{thebibliography}
 

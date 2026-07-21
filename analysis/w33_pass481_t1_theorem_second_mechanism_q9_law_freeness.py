@@ -34,9 +34,11 @@ The one genuine q=5 pair that is NOT a sheet exchange (Pass 480) is instead
 SHEET-DATA IDENTICAL WITHOUT EXCHANGE: its square-coset and nonsquare-coset
 sheet spectra are individually equal to the partner's (not swapped), so it is
 a same-assignment cospectral pair -- the Pass-473 sheet-data-non-injectivity
-phenomenon occurring between two AFFINE-INEQUIVALENT sections, with the
-distinct 5-primary critical group {25^15, 5^6}.  Sheet exchange (five pairs)
-and sheet-data coincidence (one pair) are the two mechanisms.
+phenomenon occurring between two AFFINE-INEQUIVALENT sections.  Within the six
+retained Pass-480 pairs its 5-primary group {125^23,25^15,5^6} differs from
+the exchanges' {125^23,25^5,5^16}; Pass 540 later shows that Smith shape does
+not classify the mechanism.  Sheet exchange (five pairs) and sheet-data
+coincidence (one pair) exhaust that retained six-pair sample.
 
 RESULT C (the q=9 flat class is invisible; the depth split is finer than
 collinear/generic).  At q=9 the F_9-collinear (trace-linear) sections are the
@@ -150,7 +152,7 @@ def det_exact(M, q):
         for pos, c in enumerate(cols):
             e = rows[r][c]
             if any(e):
-                sub = rec(r + 1, cols[:pos] + cols[pos + 1:])
+                sub = rec(r + 1, cols[:pos] + cols[pos + 1 :])
                 term = zmul(e, sub, q)
                 total = zadd(total, term, q) if sign > 0 else zsub(total, term, q)
             sign = -sign
@@ -165,8 +167,9 @@ def matmul(A, B, q):
     for i in range(n):
         row = []
         for j in range(n):
-            acc = reduce(lambda s, k: zadd(s, zmul(A[i][k], B[k][j], q), q),
-                         range(n), (0,) * q)
+            acc = reduce(
+                lambda s, k: zadd(s, zmul(A[i][k], B[k][j], q), q), range(n), (0,) * q
+            )
             row.append(acc)
         out.append(row)
     return out
@@ -216,8 +219,7 @@ def first_order_T1(F, D, q):
     n = len(F)
     T1 = (0,) * q
     for j in range(n):
-        M = [[D[i][jj] if jj == j else F[i][jj] for jj in range(n)]
-             for i in range(n)]
+        M = [[D[i][jj] if jj == j else F[i][jj] for jj in range(n)] for i in range(n)]
         T1 = zadd(T1, det_exact(M, q), q)
     return T1
 
@@ -322,13 +324,15 @@ def part_B(checks):
     for a, b in genuine:
         sa_sq, sa_nsq = sheets(a)
         sb_sq, sb_nsq = sheets(b)
-        is_exchange = (sa_sq == sb_nsq and sa_nsq == sb_sq and sa_sq != sa_nsq)
-        is_coincidence = (sa_sq == sb_sq and sa_nsq == sb_nsq)
-        (exchange if is_exchange else coincidence).append({
-            "offsets": [list(a), list(b)],
-            "is_exchange": bool(is_exchange),
-            "is_sheet_coincidence": bool(is_coincidence),
-        })
+        is_exchange = sa_sq == sb_nsq and sa_nsq == sb_sq and sa_sq != sa_nsq
+        is_coincidence = sa_sq == sb_sq and sa_nsq == sb_nsq
+        (exchange if is_exchange else coincidence).append(
+            {
+                "offsets": [list(a), list(b)],
+                "is_exchange": bool(is_exchange),
+                "is_sheet_coincidence": bool(is_coincidence),
+            }
+        )
     checks["five_exchanges"] = len(exchange) == 5
     checks["one_non_exchange"] = len(coincidence) == 1
     checks["non_exchange_is_sheet_coincidence"] = (
@@ -389,8 +393,7 @@ def block9(fsec, t):
     for (a, b), c in fsec.items():
         for xi, x in enumerate(F9):
             phase = f9_tr(
-                f9_mul(t, f9_add(c, f9_add(
-                    f9_mul((2, 0), f9_mul(x, b)), f9_mul(a, b))))
+                f9_mul(t, f9_add(c, f9_add(f9_mul((2, 0), f9_mul(x, b)), f9_mul(a, b))))
             )
             j = IDX9[f9_add(x, a)]
             B[j][xi] = zadd(B[j][xi], z3_from_exp(phase), 3)
@@ -514,9 +517,11 @@ def main_payload():
             "The lone non-sheet-exchange genuine pair is a sheet-data "
             "COINCIDENCE (square- and nonsquare-coset sheets individually "
             "equal to the partner's, not swapped) between affine-inequivalent "
-            "sections, carrying the distinct 5-primary critical group "
-            "{25^15,5^6}.  Sheet exchange (5 pairs) and sheet coincidence "
-            "(1 pair) are the two identified q=5 cospectrality mechanisms."
+            "sections.  Within the six retained Pass-480 pairs its 5-primary "
+            "group {125^23,25^15,5^6} differs from the exchanges' "
+            "{125^23,25^5,5^16}.  Sheet exchange (5 pairs) and sheet "
+            "coincidence (1 pair) exhaust that retained sample; Pass 540 "
+            "later shows that Smith shape does not classify the mechanism."
         ),
         "part_B_report": B,
         "result_C_q9_split": (
@@ -554,9 +559,15 @@ def main():
     else:
         a.output.parent.mkdir(parents=True, exist_ok=True)
         a.output.write_text(text)
-    print(json.dumps({"status": p["status"],
-                      "checks": sum(p["checks"].values()),
-                      "total": len(p["checks"])}))
+    print(
+        json.dumps(
+            {
+                "status": p["status"],
+                "checks": sum(p["checks"].values()),
+                "total": len(p["checks"]),
+            }
+        )
+    )
     return 0 if p["status"] == "PASS" else 1
 
 

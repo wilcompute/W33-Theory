@@ -25,7 +25,7 @@ interconnected finite structure—and makes the remaining maps explicit.
 |---|---|
 | understand the project in five minutes | [Live atlas](https://wilcompute.github.io/W33-Theory/) — use the Navigator and Reader Guide |
 | see what the audit says is actually new | [The Selection Layer](analysis/THE_SELECTION_LAYER.md) |
-| inspect the newest exact breakthrough | [Pass 385: the header/stress orbit-anchor obstruction](PASS385_HEADER_STRESS_ORBIT_ANCHOR_OBSTRUCTION.md) |
+| inspect the newest exact breakthrough | [Pass 540: symplectic separator and chain-ring Burnside witness](analysis/w33_pass540_symplectic_separator_chainring.g) |
 | read the mathematical manuscript | [w33_paper.tex](w33_paper.tex) |
 | run the finite-geometry machine | [HOLONET.md](HOLONET.md) |
 | read the photonic program | [photonic_holonet.tex](photonic_holonet.tex) |
@@ -57,7 +57,24 @@ Its full order-`51,840` symmetry is the exceptional Weyl-group-sized shell that 
 equality `240 = |E_8 roots|` is real and useful; an equivariant identification must still be constructed and
 checked rather than inferred from the count alone.
 
-## The current breakthrough: the selection layer
+## The newest exact frontier: chirality, spectral blindness, and chain rings
+
+Pass 540 resolves the unexplained `q=3` full-support spectral merge. The `16` full-support sections are the
+sign words of a four-cube. In a fixed oriented antipodal frame, coordinate product splits them into two
+`8`-vertex demicubes; intrinsically the separator is the frame-corrected Moore–Dickson coefficient. These are
+exactly the two `D_4` half-spin chiralities. Reorienting the frame may swap their labels, not the two-fiber split. Their common
+block-difference polynomial `x^3 - 36x - 81` forgets that chirality, while a determinant-`-1` linear symmetry
+exchanges it. This is an exact explanation of spectral blindness, not a selector for physical handedness.
+
+The same GAP witness counts exactly `139,904` full-support `SL(2,5)` section orbits. In a deterministic sample of
+`3,000` such orbits it finds a further affine-inequivalent, nonisomorphic cospectral Cayley pair outside the eight
+explicit Pass-456/479/482 affine pairs and realizing Pass 481's sheet-coincidence mechanism. The two graphs also have the same exact critical group but different local profiles; the pair itself is checked exactly on both `125`-vertex graphs, but the sample does not enumerate
+all `q=5` spectra. Over `Z/9`, exact signed-cycle Burnside averaging gives
+`228100045392509153077600971330057241` section orbits and
+`2051277771273019233341050472890368` full-support orbits. See the [GAP witness](analysis/w33_pass540_symplectic_separator_chainring.g)
+and [machine-readable certificate](data/w33_pass540_symplectic_separator_chainring.json).
+
+## Selection-layer foundation
 
 The repository's whole rank/code arc was re-audited in Passes 322–329. Several headline results were already
 published or already present elsewhere in this corpus. What survived the audit is sharper:

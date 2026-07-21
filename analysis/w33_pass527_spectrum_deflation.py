@@ -15,13 +15,13 @@ exactly q * q = q^2 of them, with no zeros needed.  Equivalently
 
         charpoly(T) = charpoly(D)^q ,
 
-verified exactly at q = 3 on two sections by comparing coefficient vectors in
+verified exactly at q = 3 on three sections by comparing coefficient vectors in
 Z[zeta_3].
 
 THE DEFLATION.  T therefore carries EXACTLY the spectral information D carries,
 no more.  Computing T's spectrum is computing D's spectrum, which this
 programme has had since Pass 473 and which Passes 520-523 already used to
-derive the whole q = 3 law.  Pass 526's closing suggestion is withdrawn: the
+derive the measured q = 3 window.  Pass 526's closing suggestion is withdrawn: the
 covariance is real and the identities are real, but the reformulation opens no
 door.  A reformulation that preserves all the information also preserves all
 the difficulty.
@@ -79,8 +79,9 @@ def _den(a):
 
 def epoly(C, M, n):
     """Monic characteristic polynomial coefficients e_0..e_n, exactly."""
-    tr_, A = {}, [[C.rat(1) if i == j else C.zero() for j in range(n)]
-                  for i in range(n)]
+    tr_, A = {}, [
+        [C.rat(1) if i == j else C.zero() for j in range(n)] for i in range(n)
+    ]
     for k in range(1, n + 1):
         A = matmul(A, M, C)
         tr_[k] = trace(A, C)
@@ -106,8 +107,7 @@ def polypow(P, k, C, deg):
         for i, a in acc.items():
             for j, b in P.items():
                 da, db = _den(a), _den(b)
-                pr = C.mul(tuple(int(x * da) for x in a),
-                           tuple(int(x * db) for x in b))
+                pr = C.mul(tuple(int(x * da) for x in a), tuple(int(x * db) for x in b))
                 v = tuple(Fraction(y, da * db) for y in pr)
                 cur = R.get(i + j, tuple(Fraction(0) for _ in range(deg)))
                 R[i + j] = tuple(x + y for x, y in zip(cur, v))
@@ -125,54 +125,64 @@ def part_A_charpoly(checks):
             deg = len(C.zero())
             got = polypow({k: ED[k] for k in range(q + 1)}, q, C, deg)
             zero = tuple(Fraction(0) for _ in range(deg))
-            same = all(tuple(got.get(k, zero)) == tuple(ET[k])
-                       for k in range(n + 1))
+            same = all(tuple(got.get(k, zero)) == tuple(ET[k]) for k in range(n + 1))
             if not same:
                 ok = False
-            rows[f"p{p_}_s{seed}"] = {"T_size": n, "D_size": q,
-                                      "charpoly_T_equals_charpoly_D_pow_q":
-                                      same}
+            rows[f"p{p_}_s{seed}"] = {
+                "T_size": n,
+                "D_size": q,
+                "charpoly_T_equals_charpoly_D_pow_q": same,
+            }
     checks["charpoly_identity_holds"] = ok
     checks["charpoly_tested_on_several_sections"] = len(rows) >= 3
-    return {"rows": rows,
-            "theorem": (
-                "tr(T^m) = q tr(D^m) for every m (Pass 526).  Power sums "
-                "determine a multiset of eigenvalues; T is q^2 x q^2 and D is "
-                "q x q, so the identity forces T's spectrum to be D's with "
-                "each eigenvalue repeated q times -- exactly q*q = q^2 of "
-                "them, no zeros required.  Equivalently "
-                "charpoly(T) = charpoly(D)^q."),
-            "correction_of_a_first_draft": (
-                "A first draft of this pass guessed T's spectrum was D's plus "
-                "q^2 - q ZEROS, found e_k(T) nonzero past k = q, inferred that "
-                "tr(T^m) = q tr(D^m) must fail at large m, and searched out to "
-                "m = 18 for a failure that does not exist.  The error was "
-                "arithmetic: q eigenvalues of multiplicity q already fill a "
-                "q^2 x q^2 matrix.")}
+    return {
+        "rows": rows,
+        "theorem": (
+            "tr(T^m) = q tr(D^m) for every m (Pass 526).  Power sums "
+            "determine a multiset of eigenvalues; T is q^2 x q^2 and D is "
+            "q x q, so the identity forces T's spectrum to be D's with "
+            "each eigenvalue repeated q times -- exactly q*q = q^2 of "
+            "them, no zeros required.  Equivalently "
+            "charpoly(T) = charpoly(D)^q."
+        ),
+        "correction_of_a_first_draft": (
+            "A first draft of this pass guessed T's spectrum was D's plus "
+            "q^2 - q ZEROS, found e_k(T) nonzero past k = q, inferred that "
+            "tr(T^m) = q tr(D^m) must fail at large m, and searched out to "
+            "m = 18 for a failure that does not exist.  The error was "
+            "arithmetic: q eigenvalues of multiplicity q already fill a "
+            "q^2 x q^2 matrix."
+        ),
+    }
 
 
 def part_B_deflation(checks):
     checks["deflation_recorded"] = True
     checks["pass526_closing_paragraph_withdrawn"] = True
-    return {"withdrawn": (
-        "Pass 526 closed by suggesting that computing T's spectrum would give "
-        "E(m) for every m at once, 'which the cyclic decomposition never "
-        "could'.  Withdrawn.  By Part A, T's spectrum IS D's spectrum with "
-        "multiplicity q, so computing it computes nothing this programme did "
-        "not have from Pass 473 onward -- and Passes 520-523 already used D's "
-        "spectrum to derive the entire q = 3 law.  A reformulation that "
-        "preserves all the information preserves all the difficulty."),
+    return {
+        "withdrawn": (
+            "Pass 526 closed by suggesting that computing T's spectrum would give "
+            "E(m) for every m at once, 'which the cyclic decomposition never "
+            "could'.  Withdrawn.  By Part A, T's spectrum IS D's spectrum with "
+            "multiplicity q, so computing it computes nothing this programme did "
+            "not have from Pass 473 onward -- and Passes 520-523 already used D's "
+            "spectrum to derive the measured q = 3 window.  A reformulation that "
+            "preserves all the information preserves all the difficulty."
+        ),
         "what_survives": (
             "The covariance U_a T = S_a T S_a^{-1} U_a, the constant diagonal "
             "of T^m, and tr(T^m) = q tr(D^m) are exact and untouched.  Indeed "
             "the last of them is precisely what proves the deflation, so the "
-            "pass refutes its own closing paragraph with its own theorem."),
+            "pass refutes its own closing paragraph with its own theorem."
+        ),
         "residual_value": (
             "A proved reading, not a hope.  The transfer picture is still the "
             "right language for the ORBIT "
             "results -- cycle types, necklace counts, the sieve as Moebius "
             "inversion over walks -- and it explains the factor q.  What it "
-            "does not do is supply new spectral information.")}
+            "does not do is supply new spectral information."
+        ),
+    }
 
 
 def part_C_ring_covariance(checks):
@@ -183,10 +193,11 @@ def part_C_ring_covariance(checks):
     # where the character order exceeds p, and Z/9 settles that.
     rows, ok = {}, True
     for p_, nn in ((3, 2),):
-        e = p_ ** nn
+        e = p_**nn
         st = RingSetup(p_, nn)
         C, q = st.R, st.q
         import random
+
         rng = random.Random(527)
         fsec = st.full_sec(tuple(rng.randrange(q) for _ in st.pairs))
         pts = [(a, b) for a in range(q) for b in range(q)]
@@ -200,8 +211,9 @@ def part_C_ring_covariance(checks):
                 d = C.sub(C.from_exp(fsec[v]), C.rat(1))
                 om = (P[0] * v[1] - v[0] * P[1]) % q
                 tgt = ((P[0] + v[0]) % q, (P[1] + v[1]) % q)
-                T[idx[tgt]][idx[P]] = C.add(T[idx[tgt]][idx[P]],
-                                            C.mul(d, C.from_exp((-om) % q)))
+                T[idx[tgt]][idx[P]] = C.add(
+                    T[idx[tgt]][idx[P]], C.mul(d, C.from_exp((-om) % q))
+                )
         bad = 0
         for a in pts[:12]:
             U = [[C.zero()] * N for _ in range(N)]
@@ -210,23 +222,24 @@ def part_C_ring_covariance(checks):
                 U[idx[P]][idx[P]] = C.from_exp(om)
             S = [[C.zero()] * N for _ in range(N)]
             for P in pts:
-                S[idx[((P[0] + a[0]) % q, (P[1] + a[1]) % q)]][idx[P]] = \
-                    C.rat(1)
+                S[idx[((P[0] + a[0]) % q, (P[1] + a[1]) % q)]][idx[P]] = C.rat(1)
             Si = [[S[j][i] for j in range(N)] for i in range(N)]
             if matmul(U, T, C) != matmul(matmul(S, matmul(T, Si, C), C), U, C):
                 bad += 1
         if bad:
             ok = False
-        rows[f"Z{e}"] = {"states": N, "translations_tested": 12,
-                         "failures": bad}
+        rows[f"Z{e}"] = {"states": N, "translations_tested": 12, "failures": bad}
     checks["covariance_survives_over_Z_p_n"] = ok
-    return {"rows": rows,
-            "reading": (
-                "The covariance proof uses only that omega is bilinear and "
-                "alternating, never that the character has order p.  So it "
-                "should survive over Z/p^n, where the factorial law fails -- "
-                "and over Z/9 it does.  That separates the symmetry, which is "
-                "structural, from the arithmetic, which is not.")}
+    return {
+        "rows": rows,
+        "reading": (
+            "The covariance proof uses only that omega is bilinear and "
+            "alternating, never that the character has order p.  So it "
+            "should survive over Z/p^n, where the factorial law fails -- "
+            "and over Z/9 it does.  That separates the symmetry, which is "
+            "structural, from the arithmetic, which is not."
+        ),
+    }
 
 
 def part_D_witnesses(checks):
@@ -250,18 +263,25 @@ def part_D_witnesses(checks):
                 break
         if len(mat) < need:
             ok = False
-        rows[f"p{p_}_m{m}"] = {"tau": len(divs), "rank_reached": len(mat),
-                               "target": need, "witness_seeds": seeds}
+        rows[f"p{p_}_m{m}"] = {
+            "tau": len(divs),
+            "rank_reached": len(mat),
+            "target": need,
+            "witness_seeds": seeds,
+        }
     checks["independent_witnesses_found_at_composite_m"] = ok
-    return {"rows": rows,
-            "reading": (
-                "Pass 525 named the obstruction to the all-m completeness "
-                "statement: composite m with several surviving classes needs "
-                "INDEPENDENT non-vanishing witnesses, not just one.  Here they "
-                "are exhibited explicitly, by seed, for three composite m -- "
-                "which proves the rank bound for those m.  What is still "
-                "missing is a construction uniform in m; greedily selecting "
-                "seeds is not one.")}
+    return {
+        "rows": rows,
+        "reading": (
+            "Pass 525 named the obstruction to the all-m completeness "
+            "statement: composite m with several surviving classes needs "
+            "INDEPENDENT non-vanishing witnesses, not just one.  Here they "
+            "are exhibited explicitly, by seed, for three composite m -- "
+            "which proves the rank bound for those m.  What is still "
+            "missing is a construction uniform in m; greedily selecting "
+            "seeds is not one."
+        ),
+    }
 
 
 def main_payload():
@@ -283,12 +303,13 @@ def main_payload():
             "closing suggestion that computing T's spectrum would give E(m) "
             "for all m at once: T carries EXACTLY the spectral information D "
             "carries, which this programme has had since Pass 473 and which "
-            "Passes 520-523 already used to derive the whole q = 3 law.  A "
+            "Passes 520-523 already used to derive the measured q = 3 window.  A "
             "reformulation that preserves all the information preserves all "
             "the difficulty.  The covariance, the constant diagonal and the "
             "trace identity are unaffected -- and the trace identity is what "
             "proves the deflation, so the pass refutes its own closing "
-            "paragraph with its own theorem."),
+            "paragraph with its own theorem."
+        ),
         "part_A_charpoly_identity": A,
         "part_B_deflation": B,
         "part_C_covariance_over_rings": Cc,
@@ -297,11 +318,13 @@ def main_payload():
             "Part A is exact at q = 3 on three sections; the argument from "
             "power sums to the multiset is general, but the coefficient "
             "comparison is not run at q = 5 or 7.  Part B is a retraction, not "
-            "a computation.  Part C tests twelve translations per ring at one "
-            "section each over Z/9 and Z/25.  Part D exhibits witnesses by "
+            "a computation.  Part C tests twelve translations at one section "
+            "over Z/9 only; Z/25 was explicitly not run because of its matrix "
+            "cost.  Part D exhibits witnesses by "
             "greedy search and therefore proves the rank bound for the three "
             "listed m only -- it is not a uniform construction, which is what "
-            "the all-m statement still needs."),
+            "the all-m statement still needs."
+        ),
         "checks": {k: bool(v) for k, v in checks.items()},
     }
 
@@ -319,9 +342,15 @@ def main():
     else:
         a.output.parent.mkdir(parents=True, exist_ok=True)
         a.output.write_text(text)
-    print(json.dumps({"status": pl["status"],
-                      "checks": sum(pl["checks"].values()),
-                      "total": len(pl["checks"])}))
+    print(
+        json.dumps(
+            {
+                "status": pl["status"],
+                "checks": sum(pl["checks"].values()),
+                "total": len(pl["checks"]),
+            }
+        )
+    )
     return 0 if pl["status"] == "PASS" else 1
 
 

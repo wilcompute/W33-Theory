@@ -92,33 +92,49 @@ def measure(p_, m, want):
 def part_A_test_fires(checks):
     """Cells where the sieve predicts NO relations."""
     rows, fired = {}, 0
-    for p_, m, ns in ((3, 2, 12), (3, 4, 14), (3, 10, 10), (5, 4, 10),
-                      (5, 6, 10)):
+    for p_, m, ns in ((3, 2, 12), (3, 4, 14), (3, 10, 10), (5, 4, 10), (5, 6, 10)):
         tau, rk, n = measure(p_, m, ns)
         T = len(U_set(m, p_))
         null = tau - rk
         if T == 0 and null > 0:
             fired += 1
-        rows[f"p{p_}_m{m}"] = {"tau": tau, "informative_sections": n,
-                               "nullity": null, "sieve_predicts": T,
-                               "excess_relations": null - T}
+        rows[f"p{p_}_m{m}"] = {
+            "tau": tau,
+            "informative_sections": n,
+            "nullity": null,
+            "sieve_predicts": T,
+            "excess_relations": null - T,
+        }
     checks["all_five_zero_T_cells_have_an_unpredicted_relation"] = fired == 5
     checks["the_sieve_is_not_complete"] = fired > 0
-    return {"rows": rows,
-            "verdict": (
-                "THE SIEVE IS NOT COMPLETE.  In every cell where it predicts "
-                "no relations at all, one relation is present.  Pass 516 and "
-                "Pass 517 reported nullity = |T| and called the sieve the "
-                "whole relation space; that claim is now known to hold only "
-                "where p divides m.")}
+    return {
+        "rows": rows,
+        "verdict": (
+            "THE SIEVE IS NOT COMPLETE.  In every cell where it predicts "
+            "no relations at all, one relation is present.  Pass 516 and "
+            "Pass 517 reported nullity = |T| and called the sieve the "
+            "whole relation space; that claim is now known to hold only "
+            "where p divides m."
+        ),
+    }
 
 
 def part_B_corrected(checks):
     """nullity = |T| + [p does not divide m], both regimes."""
     rows, ok = {}, True
-    plan = ((3, 2, 12), (3, 4, 14), (3, 10, 10), (5, 4, 10), (5, 6, 10),
-            (3, 3, 12), (3, 6, 12), (3, 9, 12), (3, 15, 10), (5, 5, 10),
-            (7, 7, 8))
+    plan = (
+        (3, 2, 12),
+        (3, 4, 14),
+        (3, 10, 10),
+        (5, 4, 10),
+        (5, 6, 10),
+        (3, 3, 12),
+        (3, 6, 12),
+        (3, 9, 12),
+        (3, 15, 10),
+        (5, 5, 10),
+        (7, 7, 8),
+    )
     for p_, m, ns in plan:
         tau, rk, n = measure(p_, m, ns)
         T = len(U_set(m, p_))
@@ -126,49 +142,75 @@ def part_B_corrected(checks):
         null = tau - rk
         if null != T + corr:
             ok = False
-        rows[f"p{p_}_m{m}"] = {"tau": tau, "nullity": null, "T": T,
-                               "correction": corr, "predicted": T + corr,
-                               "agrees": null == T + corr}
+        rows[f"p{p_}_m{m}"] = {
+            "tau": tau,
+            "nullity": null,
+            "T": T,
+            "correction": corr,
+            "predicted": T + corr,
+            "agrees": null == T + corr,
+        }
     checks["corrected_law_holds_on_every_cell"] = ok
-    checks["corrected_law_covers_both_regimes"] = (
-        any(r["correction"] == 1 for r in rows.values())
-        and any(r["correction"] == 0 for r in rows.values()))
-    return {"rows": rows,
-            "law": "nullity = |T| + [p does not divide m]",
-            "why": (
-                "The period-one class consists of the constant m-tuples "
-                "(v,...,v), whose zero-sum condition is m v = 0 with v != 0.  "
-                "That is solvable exactly when p | m; otherwise the class is "
-                "EMPTY and S_1 = 0 holds vacuously.  The sieve counts "
-                "relations forced by cancellation and does not count vacuous "
-                "classes, so it undercounts by exactly one whenever p does not "
-                "divide m.")}
+    checks["corrected_law_covers_both_regimes"] = any(
+        r["correction"] == 1 for r in rows.values()
+    ) and any(r["correction"] == 0 for r in rows.values())
+    return {
+        "rows": rows,
+        "law": "nullity = |T| + [p does not divide m]",
+        "why": (
+            "The period-one class consists of the constant m-tuples "
+            "(v,...,v), whose zero-sum condition is m v = 0 with v != 0.  "
+            "That is solvable exactly when p | m; otherwise the class is "
+            "EMPTY and S_1 = 0 holds vacuously.  The sieve counts "
+            "relations forced by cancellation and does not count vacuous "
+            "classes, so it undercounts by exactly one whenever p does not "
+            "divide m."
+        ),
+    }
 
 
 def part_C_blind_spot(checks):
     """Every cell the completeness claim was tested on had p | m."""
-    old = [(3, 3), (3, 6), (3, 9), (3, 15), (3, 27), (3, 81), (5, 5),
-           (5, 25), (7, 7), (7, 49)]
-    rows = {f"p{p}_m{m}": {"p_divides_m": m % p == 0,
-                           "correction_term": 0 if m % p == 0 else 1}
-            for p, m in old}
+    old = [
+        (3, 3),
+        (3, 6),
+        (3, 9),
+        (3, 15),
+        (3, 27),
+        (3, 81),
+        (5, 5),
+        (5, 25),
+        (7, 7),
+        (7, 49),
+    ]
+    rows = {
+        f"p{p}_m{m}": {
+            "p_divides_m": m % p == 0,
+            "correction_term": 0 if m % p == 0 else 1,
+        }
+        for p, m in old
+    }
     allsame = all(r["correction_term"] == 0 for r in rows.values())
     checks["every_previously_tested_cell_had_p_dividing_m"] = allsame
-    return {"previously_tested": rows,
-            "diagnosis": (
-                "All ten cells used by Passes 516 and 517 satisfy p | m, so "
-                "the correction term was zero in every one and the missing "
-                "relation could not appear.  The cells were not chosen "
-                "adversarially: the Pass 514 shortcut requires e | (m/d), "
-                "which is a condition on p dividing m, so the cells that were "
-                "AFFORDABLE were exactly the cells where the claim cannot "
-                "fail.  Convenience and the blind spot were the same "
-                "constraint -- the second instance in three passes, after the "
-                "factorial law's prime-power tower."),
-            "rule": (
-                "When a claim is tested only on cells selected by a "
-                "computational convenience, check whether that convenience is "
-                "logically related to the claim.  Here it was, twice.")}
+    return {
+        "previously_tested": rows,
+        "diagnosis": (
+            "All ten cells used by Passes 516 and 517 satisfy p | m, so "
+            "the correction term was zero in every one and the missing "
+            "relation could not appear.  The cells were not chosen "
+            "adversarially: the Pass 514 shortcut requires e | (m/d), "
+            "which is a condition on p dividing m, so the cells that were "
+            "AFFORDABLE were exactly the cells where the claim cannot "
+            "fail.  Convenience and the blind spot were the same "
+            "constraint -- the second instance in three passes, after the "
+            "factorial law's prime-power tower."
+        ),
+        "rule": (
+            "When a claim is tested only on cells selected by a "
+            "computational convenience, check whether that convenience is "
+            "logically related to the claim.  Here it was, twice."
+        ),
+    }
 
 
 def part_D_odd_m(checks):
@@ -179,25 +221,28 @@ def part_D_odd_m(checks):
         pred = vlam_int(m, 3) + 2 * m + 2
         if pred != got:
             ok = False
-        rows[str(m)] = {"measured": got, "derived": pred,
-                        "v_lambda_m": vlam_int(m, 3)}
+        rows[str(m)] = {"measured": got, "derived": pred, "v_lambda_m": vlam_int(m, 3)}
     checks["odd_m_formula_at_profile_4_8"] = ok
-    return {"rows": rows,
-            "derivation": (
-                "At the q = 3 profile (v(e_2), v(e_3)) = (4, 8) the eigenvalue "
-                "valuations are {4, 2, 2}.  Since e_1 = tr D = 0 and the third "
-                "eigenvalue has valuation 4 > 2, mu_1 + mu_2 = -mu_3 has "
-                "valuation 4, so mu_2 = -mu_1 + eps with v(eps) = 4.  For odd "
-                "m, mu_1^m + mu_2^m = mu_1^m - (mu_1 - eps)^m has leading term "
-                "m mu_1^{m-1} eps, of valuation v_lambda(m) + 2(m-1) + 4 = "
-                "v_lambda(m) + 2m + 2.  That reproduces 10, 12, 16, 24 at "
-                "m = 3, 5, 7, 9 -- the jumps at m = 3 and 9 coming from the "
-                "binomial factor m, NOT from the spectrum."),
-            "combined": (
-                "With Pass 521: the odd-m minimum 2(m+1) is attained by (4,8) "
-                "exactly when p does not divide m, since then v_lambda(m) = 0, "
-                "and by (6,6) when p | m.  Why (6,6) supplies 2(m+1) is still "
-                "open.")}
+    return {
+        "rows": rows,
+        "derivation": (
+            "At the q = 3 profile (v(e_2), v(e_3)) = (4, 8) the eigenvalue "
+            "valuations are {4, 2, 2}.  Since e_1 = tr D = 0 and the third "
+            "eigenvalue has valuation 4 > 2, mu_1 + mu_2 = -mu_3 has "
+            "valuation 4, so mu_2 = -mu_1 + eps with v(eps) = 4.  For odd "
+            "m, mu_1^m + mu_2^m = mu_1^m - (mu_1 - eps)^m has leading term "
+            "m mu_1^{m-1} eps, of valuation v_lambda(m) + 2(m-1) + 4 = "
+            "v_lambda(m) + 2m + 2.  That reproduces 10, 12, 16, 24 at "
+            "m = 3, 5, 7, 9 -- the jumps at m = 3 and 9 coming from the "
+            "binomial factor m, NOT from the spectrum."
+        ),
+        "combined": (
+            "With Pass 521: the odd-m minimum 2(m+1) is attained by (4,8) "
+            "exactly when p does not divide m, since then v_lambda(m) = 0, "
+            "and by (6,6) when p | m.  Why (6,6) supplies 2(m+1) is still "
+            "open."
+        ),
+    }
 
 
 def main_payload():
@@ -227,7 +272,8 @@ def main_payload():
             "p | m -- because the Pass 514 shortcut needs e | (m/d), so the "
             "affordable cells were exactly the cells where the claim cannot "
             "fail.  Convenience and the blind spot were the same constraint, "
-            "for the second time in three passes."),
+            "for the second time in three passes."
+        ),
         "part_A_the_test_fires": A,
         "part_B_corrected_law": B,
         "part_C_the_blind_spot_again": Cc,
@@ -236,13 +282,15 @@ def main_payload():
             "Parts A and B are rank measurements over 8 to 14 informative "
             "sampled sections per cell, in Q(zeta_p), and test only linear "
             "relations with constant field coefficients -- the same scope as "
-            "the claim they correct.  A larger sample can only LOWER a "
-            "measured rank, hence RAISE the nullity, so the excess relation "
-            "found here cannot be a sampling artefact in the direction that "
-            "matters; but the corrected law itself is measured on eleven cells "
-            "and not proved.  Part C is arithmetic on the previously used "
+            "the claim they correct.  Adding sampled rows can only RAISE rank "
+            "and LOWER nullity, so sampled nullity is an upper bound on the "
+            "true nullity.  The explicit sieve/vacuous relations supply the "
+            "matching lower bound on the eleven listed cells, certifying those "
+            "equalities; a uniform all-cell law is not proved.  Part C is "
+            "arithmetic on the previously used "
             "cells.  Part D derives one profile's odd-m valuation and checks "
-            "it against four measured points; the (6,6) profile is untouched."),
+            "it against four measured points; the (6,6) profile is untouched."
+        ),
         "checks": {k: bool(v) for k, v in checks.items()},
     }
 
@@ -260,9 +308,15 @@ def main():
     else:
         a.output.parent.mkdir(parents=True, exist_ok=True)
         a.output.write_text(text)
-    print(json.dumps({"status": pl["status"],
-                      "checks": sum(pl["checks"].values()),
-                      "total": len(pl["checks"])}))
+    print(
+        json.dumps(
+            {
+                "status": pl["status"],
+                "checks": sum(pl["checks"].values()),
+                "total": len(pl["checks"]),
+            }
+        )
+    )
     return 0 if pl["status"] == "PASS" else 1
 
 

@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""Pass 446: the exp-9 PDS is FLAT in its own group -- the sqrt5 has an exact
-matrix origin -- and Aut(H_5) has 20,592 section orbits at q=5: the action is nearly free.
+"""Pass 446: the exp-9 PDS is section-shaped in its own group, a numerical
+Weil-spectrum match accompanies the exact curved graph factor, and Aut(H_5)
+has 20,592 section orbits at q=5.
 
 Three computations bridging the newest results of both streams (their 443
 curl classification, my 445 companion PDS), plus the Lean and survey artifacts
 shipped alongside.
 
-=== 1. THE CURL<->EXP-9 BRIDGE: THE COMPANION PDS IS SECTION-SHAPED AND FLAT ===
+=== 1. THE CURL<->EXP-9 BRIDGE: THE COMPANION PDS IS SECTION-SHAPED ===
 
 Pass 445 built the PDS D9 in R = 3^{1+2}_- (exponent 9). Question: does 443's
 flat/curved dichotomy see it? First, is D9 even section-shaped in R? Computed:
@@ -15,45 +16,30 @@ flat/curved dichotomy see it? First, is D9 even section-shaped in R? Computed:
     ONCE: D9 = (a section of R/Z) u (Z \\ {1}), the same shape as the
     Heisenberg PDS;
   * choosing the transversal x^a y^b of R (x of order 9, y of order 3), the
-    section's central offsets are computed and the 443-style curl -- the
-    deviation of the offset function from the linear ones c_w(v) = [w,v] --
-    is evaluated: the offsets ARE linear (curl zero):
+    section's central offsets and the decomposition are computed.
 
-    ** THE COMPANION PDS IS THE FLAT SECTION OF ITS OWN GROUP. **
+The earlier draft called this section flat, but it never implemented the
+required offset-linearity/curl equations.  This pass therefore certifies the
+section shape and decomposition only; flatness in the Pass-443 sense remains
+an explicit follow-up calculation.
 
-So both extraspecial groups of order 27 carry the SAME graph as their FLAT
-section-plus-centre Cayley PDS, and 443's dichotomy is uniform across the two
-groups at q=3. (Verified concretely; the exp-9 'linearity' is with respect to
-the commutator form on R/Z, exactly as in H.)
-
-=== 2. THE EXACT ORIGIN OF sqrt(5) ===
+=== 2. AN EXACT GRAPH FACTOR AND A NUMERICAL WEIL-SPECTRUM MATCH ===
 
 Their 443 curved class has characteristic factor (x^2 - x - 11)^6, splitting
 field Q(sqrt45) = Q(sqrt5) -- a real quadratic field inside a q=3 object.
-Computed here: for a curved section c (delta(c) != 0), the Weil-representation
-image M = sum_{v != 0} omega^{c(v)} rho(v) satisfies the EXACT identity
-
-    M M^dagger = 11 I + (M + M^dagger),
-
-equivalently (M - phi_+ I)(M^dagger - ...) -- concretely: M + M^dagger and
-M M^dagger commute and the Hermitian part H = M + M^dagger has minimal
-polynomial dividing x^2 - x - 45/..., with the curved adjacency eigenvalues
-(1 +- 3 sqrt5)/2 arising as eigenvalues of H - I ... The witness computes the
-minimal polynomials exactly (sympy over the cyclotomic field) and certifies:
+Computed here:
 
   * the curved-graph nonrational eigenvalues are exactly the roots of
     x^2 - x - 11 (verified from the built graph);
-  * they equal -1 + (eigenvalues of the Hermitian Weil sum H = M + M^dagger),
-    and H's nontrivial eigenvalues are (3 +- 3 sqrt5)/2: the sqrt5 is the
-    length of the TWISTED GAUSS SUM -- |twisted sum|^2 lands on 5 times a
-    rational square, and the exact per-matrix identity is recorded in the
-    payload from the computation itself (asserted only as computed).
+  * one $3\times3$ complex matrix model passes all 729 multiplication tests
+    numerically, and its sum has real eigenvalues matching the same quadratic
+    roots to the recorded tolerance.
 
-The arithmetic tell, verified: disc(x^2-x-11) = 45 = 9*5, and 5 = q^2 - q + 1
-- ... no numerology is asserted; the certified content is the identity chain
-graph-eigenvalue -> Weil-sum eigenvalue -> quadratic with disc 45.
+The arithmetic statement disc(x^2-x-11) = 45 = 9*5 is exact.  The matrix
+comparison is numerical evidence, not an exact Gauss-sum identity or proof of
+origin; the former exact-origin wording is withdrawn.
 
-=== 3. q=5 SECTION ORBITS: EXACTLY THREE ===
+=== 3. q=5 SECTION ORBITS: EXACTLY 20,592 ===
 
 Their v1.4 gate 4 asks for the q=5 section classification without raw
 5^12-enumeration. Executed here by Burnside on the quotient:
@@ -61,22 +47,18 @@ Their v1.4 gate 4 asks for the q=5 section classification without raw
   * inverse-closed sections of (H_5/Z) \\ {0} = central-offset functions on
     the 12 coset PAIRS: a 12-dimensional F_5 space;
   * inner automorphisms shift offsets by linear functionals (the 2-dim
-    subspace L = {c_w}), so Aut(H_5)-orbits on sections = GL(2,5)-orbits on
-    the 10-dimensional quotient Q;
-  * Burnside over all 480 elements of GL(2,5), with the signed permutation
-    action on the pair space computed exactly:
+    subspace L = {c_w}); the full action is the affine
+    GL(2,5)-by-linear-offset action of order 480*25 = 12,000, including the
+    determinant twist on the centre;
+  * exact affine Burnside averaging gives
 
-        ** number of orbits on Q = 3. **
+        ** number of Aut(H_5)-orbits = 20,592. **
 
-So the q=5 stratification is flat / curved-I / curved-II -- THREE classes,
-not two (the q=3 collapse to two is because GL(2,3) is transitive on the
-nonzero curl values there). Representatives of the two curved classes are
-constructed, their Cayley graphs built, and their characteristic polynomials
-computed and recorded: distinct from each other and from flat -- the
-spectrum separates all three orbits (each poly's irrational factors and
-splitting data recorded in the payload). This DECIDES the shape of their
-gate: a 3-orbit stratification with spectral separation, delivered by
-Burnside + two graph diagonalizations instead of 5^12 enumeration.
+The integer counting floor is ceil(5^12/12,000) = 20,346, so this action is
+nearly free.  This corrects
+the abandoned three-class draft: q=5 does not collapse to flat plus two
+curved classes.  Later passes study the much larger fixed-sheet SL(2,5)
+action separately; the two orbit counts must not be conflated.
 
 === SHIPPED ALONGSIDE ===
 
@@ -139,6 +121,7 @@ def perm_tools(n):
                             return s
             fr = nf
         return s
+
     return ident, comp, inv, order, closure
 
 
@@ -147,12 +130,17 @@ def main():
 
     # ================= 1. the curl<->exp-9 bridge =================
     def hmul(g, h, q=3):
-        return ((g[0] + h[0]) % q, (g[1] + h[1]) % q,
-                (g[2] + h[2] - g[0] * h[1] + h[0] * g[1]) % q)
+        return (
+            (g[0] + h[0]) % q,
+            (g[1] + h[1]) % q,
+            (g[2] + h[2] - g[0] * h[1] + h[0] * g[1]) % q,
+        )
+
     elems = [(a, b, c) for a in range(3) for b in range(3) for c in range(3)]
     eidx = {e: i for i, e in enumerate(elems)}
-    D = [(v0, v1, 0) for v0 in range(3) for v1 in range(3)
-         if (v0, v1) != (0, 0)] + [(0, 0, c) for c in range(1, 3)]
+    D = [(v0, v1, 0) for v0 in range(3) for v1 in range(3) if (v0, v1) != (0, 0)] + [
+        (0, 0, c) for c in range(1, 3)
+    ]
     A = np.zeros((27, 27), np.int8)
     for i, g in enumerate(elems):
         for d in D:
@@ -162,8 +150,9 @@ def main():
     I27, comp, inv, order, closure = perm_tools(27)
     Syl = closure(transL + [up], 90)
     Sl = list(Syl)
-    fg = [comp(comp(a, b), comp(inv(a), inv(b)))
-          for a in Sl[:30] for b in Sl[:30]] + [comp(a, comp(a, a)) for a in Sl]
+    fg = [comp(comp(a, b), comp(inv(a), inv(b))) for a in Sl[:30] for b in Sl[:30]] + [
+        comp(a, comp(a, a)) for a in Sl
+    ]
     Phi = closure([g for g in fg if g != I27] or [I27], 100)
     reps, seen = [], set()
     for a in Sl:
@@ -194,12 +183,16 @@ def main():
     checks["D9_noncentral_8"] = len(noncen) == 8
     checks["D9_hits_8_distinct_cosets"] = len(cosets) == 8
     checks["D9_is_section_plus_centre"] = (
-        len(noncen) == 8 and len(cosets) == 8 and len(D9) == 10)
+        len(noncen) == 8 and len(cosets) == 8 and len(D9) == 10
+    )
     # (b) flatness in R: pick generators x (order 9), y in R, transversal x^a y^b
     xg = next(r for r in R if order(r) == 9)
-    yg = next(r for r in R if order(r) == 3 and tuple(r) not in Zset
-              and comp(r, xg) != comp(xg, r))
-    z_c = comp(comp(xg, yg), comp(inv(xg), inv(yg)))     # commutator, central
+    yg = next(
+        r
+        for r in R
+        if order(r) == 3 and tuple(r) not in Zset and comp(r, xg) != comp(xg, r)
+    )
+    z_c = comp(comp(xg, yg), comp(inv(xg), inv(yg)))  # commutator, central
     checks["commutator_central"] = tuple(z_c) in Zset and z_c != I27
     # transversal: t(a,b) = x^a y^b, a,b in 0..2; central offsets of D9:
     # for each noncentral d in D9, find (a,b,k): d = x^a y^b z^k
@@ -231,24 +224,19 @@ def main():
         if not found:
             ok_decomp = False
     checks["decomposition_ok"] = ok_decomp
-    # linearity test: is there w with offset(v) = [w,v] pattern? Since x^3 = z^j
-    # the offset normalization is subtle; the invariant test: the offsets of a
-    # linear section satisfy c(u+v) = c(u)+c(v)+bilinear-correction. Test all
-    # additive triples on the 8 labels:
-    # practical flatness test: the section T = {noncen} as a set satisfies
-    # T closed under the SAME test 443 uses -- reconstruct via Cay(R,D9) being
-    # isomorphic to the FLAT graph (it IS the flat graph by construction).
-    checks["cay_R_D9_is_the_flat_graph"] = True    # same vertex set + edges
-    checks["COMPANION_PDS_IS_FLAT_IN_ITS_GROUP"] = (
-        checks["D9_is_section_plus_centre"] and ok_decomp)
+    # This verifies section shape and transversal decomposition.  It does not
+    # implement the Pass-443 offset-linearity/curl equations, so no flatness
+    # check is claimed here.
+    checks["D9_section_shape_and_decomposition_verified"] = (
+        checks["D9_is_section_plus_centre"] and ok_decomp
+    )
 
     # ================= 2. the sqrt5 origin =================
     # THEIR conventions (Pass 443): PAIRS ordering + curved rep (0,0,0,1);
     # sections are section-ONLY Cayley sets (8-regular) -- the first draft
     # wrongly added the centre and got a 10-regular graph; caught by the
     # charpoly check.
-    PAIRS = [((0, 1), (0, 2)), ((1, 0), (2, 0)),
-             ((1, 1), (2, 2)), ((1, 2), (2, 1))]
+    PAIRS = [((0, 1), (0, 2)), ((1, 0), (2, 0)), ((1, 1), (2, 2)), ((1, 2), (2, 1))]
     coffs = (0, 0, 0, 1)
     Dc = []
     for (v, nv), c0 in zip(PAIRS, coffs):
@@ -260,25 +248,31 @@ def main():
             Ac[i, eidx[hmul(g, d)]] = 1
     x = sp.Symbol("x")
     cp = sp.factor(sp.Matrix(Ac.tolist()).charpoly(x).as_expr())
-    target = (x - 8) * (x + 1) ** 14 * (x ** 2 - x - 11) ** 6
+    target = (x - 8) * (x + 1) ** 14 * (x**2 - x - 11) ** 6
     checks["curved_charpoly_matches_443"] = sp.expand(cp - target) == 0
     w3 = np.exp(2j * np.pi / 3)
     X = np.roll(np.eye(3), 1, axis=0)
-    Z = np.diag([1, w3, w3 ** 2])
+    Z = np.diag([1, w3, w3**2])
 
     def rho(g, eps=1, gamma=1, kappa=0):
         a, b, c = g
         return (w3 ** (eps * (c + kappa * a * b))) * (
-            np.linalg.matrix_power(X, a)
-            @ np.linalg.matrix_power(Z, (b * gamma) % 3))
+            np.linalg.matrix_power(X, a) @ np.linalg.matrix_power(Z, (b * gamma) % 3)
+        )
+
     model = None
     for eps in (1, 2):
         for gamma in (1, 2):
             for kappa in (0, 1, 2):
-                ok = all(np.allclose(
-                    rho(hmul(g, h), eps, gamma, kappa),
-                    rho(g, eps, gamma, kappa) @ rho(h, eps, gamma, kappa),
-                    atol=1e-9) for g in elems for h in elems)   # ALL 729 pairs
+                ok = all(
+                    np.allclose(
+                        rho(hmul(g, h), eps, gamma, kappa),
+                        rho(g, eps, gamma, kappa) @ rho(h, eps, gamma, kappa),
+                        atol=1e-9,
+                    )
+                    for g in elems
+                    for h in elems
+                )  # ALL 729 pairs
                 if ok:
                     model = (eps, gamma, kappa)
                     break
@@ -286,22 +280,22 @@ def main():
                 break
         if model:
             break
-    checks["weil_model_verified_all_729"] = model is not None
+    checks["weil_model_numerically_verified_all_729"] = model is not None
     M = sum(rho(d, *model) for d in Dc)
     evM = np.linalg.eigvals(M)
-    r1, r2 = sp.solve(x ** 2 - x - 11, x)
+    r1, r2 = sp.solve(x**2 - x - 11, x)
     vals = {round(float(r1), 5), round(float(r2), 5)}
     got = {round(float(v), 5) for v in evM.real}
     checks["weil_sum_eigs_real"] = bool(np.allclose(evM.imag, 0, atol=1e-6))
-    checks["sqrt5_appears_in_weil_sum"] = len(vals & got) == 2
+    checks["sqrt5_numerically_matches_weil_sum"] = len(vals & got) == 2
     checks["third_eigenvalue_minus1"] = any(abs(v + 1) < 1e-6 for v in evM.real)
     checks["disc_45_is_9_times_5"] = 45 == 9 * 5
     weil_eigs = [float(v) for v in np.round(sorted(evM.real), 6)]
 
     # ================= 3. q=5 Burnside: orbits on sections =================
-    # CORRECTED from the first draft (which forgot the det-twist on the centre
-    # and used the wrong quotient formula; Burnside gave 20592, an absurdity
-    # that triggered this rewrite). Aut(H_5)-orbits on inverse-closed sections
+    # CORRECTED from the first draft, which forgot the determinant twist on the
+    # centre and used the wrong quotient derivation.  Aut(H_5)-orbits on
+    # inverse-closed sections
     # = orbits of the AFFINE group GL(2,5) x L (L = linear offsets, from inner
     # automorphisms) on the 12-dim offset space, where g in GL(2,5) acts on
     # offsets with the DET twist (the centre transforms by det g):
@@ -347,8 +341,10 @@ def main():
         return pr
 
     def cw_offsets(wv):
-        return np.array([(wv[0] * p[0][1] - wv[1] * p[0][0]) % 5
-                         for p in pairs5], np.int64)
+        return np.array(
+            [(wv[0] * p[0][1] - wv[1] * p[0][0]) % 5 for p in pairs5], np.int64
+        )
+
     Lb = [cw_offsets((1, 0)), cw_offsets((0, 1))]
     total = 0
     for m in gl25:
@@ -356,8 +352,10 @@ def main():
         Mg = np.zeros((12, 12), np.int64)
         for p in pairs5:
             v = p[0]
-            w = ((m[0][0] * v[0] + m[0][1] * v[1]) % 5,
-                 (m[1][0] * v[0] + m[1][1] * v[1]) % 5)
+            w = (
+                (m[0][0] * v[0] + m[0][1] * v[1]) % 5,
+                (m[1][0] * v[0] + m[1][1] * v[1]) % 5,
+            )
             tgt = tuple(sorted([w, ((-w[0]) % 5, (-w[1]) % 5)]))
             sgn = 1 if w == tgt[0] else -1
             Mg[pidx[tgt], pidx[p]] = (det * sgn) % 5
@@ -365,17 +363,18 @@ def main():
         rk = f5_rank(Delta)
         dim_ker = 12 - rk
         # |im(1-g) cap L|: dim = rk + 2 - dim(im + L)
-        stacked = np.concatenate([Delta.T % 5,
-                                  np.stack(Lb) % 5], axis=0)   # rows span im+L
+        stacked = np.concatenate(
+            [Delta.T % 5, np.stack(Lb) % 5], axis=0
+        )  # rows span im+L
         dim_sum = f5_rank(stacked.T)
         dim_cap = rk + 2 - dim_sum
-        total += (5 ** dim_cap) * (5 ** dim_ker)
+        total += (5**dim_cap) * (5**dim_ker)
     denom = 480 * 25
     checks["burnside_integral"] = total % denom == 0
     n_orbits = total // denom
     q5_orbits = n_orbits
     checks["q5_orbit_count_20592"] = n_orbits == 20592
-    checks["counting_floor_20345"] = (5 ** 12) // 12000 == 20345
+    checks["integer_counting_floor_20346"] = (5**12 + 12000 - 1) // 12000 == 20346
     checks["action_nearly_free"] = n_orbits - 20346 < 300
     # validate the formula on the known q=3 case: 2 orbits
     # (compact inline re-run at q=3)
@@ -390,8 +389,11 @@ def main():
             us3.add(key)
             pr3.append(key)
     pi3 = {p: i for i, p in enumerate(pr3)}
-    gl3 = [((m[0], m[1]), (m[2], m[3])) for m in product(range(3), repeat=4)
-           if (m[0] * m[3] - m[1] * m[2]) % 3]
+    gl3 = [
+        ((m[0], m[1]), (m[2], m[3]))
+        for m in product(range(3), repeat=4)
+        if (m[0] * m[3] - m[1] * m[2]) % 3
+    ]
 
     def rank_q(Mat, qq):
         Mw = Mat.copy() % qq
@@ -413,16 +415,21 @@ def main():
                     Mw[r_] = (Mw[r_] - Mw[r_, c_] * Mw[pr_]) % qq
             pr_ += 1
         return pr_
-    Lb3 = [np.array([(1 * p[0][1] - 0 * p[0][0]) % 3 for p in pr3], np.int64),
-           np.array([(0 * p[0][1] - 1 * p[0][0]) % 3 for p in pr3], np.int64)]
+
+    Lb3 = [
+        np.array([(1 * p[0][1] - 0 * p[0][0]) % 3 for p in pr3], np.int64),
+        np.array([(0 * p[0][1] - 1 * p[0][0]) % 3 for p in pr3], np.int64),
+    ]
     tot3 = 0
     for m in gl3:
         det = (m[0][0] * m[1][1] - m[0][1] * m[1][0]) % 3
         Mg = np.zeros((4, 4), np.int64)
         for p in pr3:
             v = p[0]
-            w = ((m[0][0] * v[0] + m[0][1] * v[1]) % 3,
-                 (m[1][0] * v[0] + m[1][1] * v[1]) % 3)
+            w = (
+                (m[0][0] * v[0] + m[0][1] * v[1]) % 3,
+                (m[1][0] * v[0] + m[1][1] * v[1]) % 3,
+            )
             tgt = tuple(sorted([w, ((-w[0]) % 3, (-w[1]) % 3)]))
             sgn = 1 if w == tgt[0] else -1
             Mg[pi3[tgt], pi3[p]] = (det * sgn) % 3
@@ -431,7 +438,7 @@ def main():
         stacked = np.concatenate([Delta.T % 3, np.stack(Lb3) % 3], axis=0)
         dsum = rank_q(stacked.T, 3)
         dcap = rk + 2 - dsum
-        tot3 += (3 ** dcap) * (3 ** (4 - rk))
+        tot3 += (3**dcap) * (3 ** (4 - rk))
     checks["formula_validates_q3_two_orbits"] = tot3 == 2 * 48 * 9
 
     all_pass = all(v for v in checks.values() if isinstance(v, bool))
@@ -439,21 +446,19 @@ def main():
         "schema": "w33.pass446.curl_bridge_sqrt5_q5_orbits.v1",
         "status": "PASS" if all_pass else "FAIL",
         "HEADLINE": (
-            "THREE results. (1) The exp-9 companion PDS is SECTION-SHAPED AND "
-            "FLAT in its own group: D9's eight noncentral elements hit the "
-            "eight Z(R)-cosets exactly once, so both extraspecial groups of "
-            "order 27 carry the same graph as their flat section-plus-centre "
-            "PDS -- 443's dichotomy is uniform across the two groups. (2) The "
-            "curved class's sqrt5 has an exact Weil origin: the curved "
-            "characteristic factor (x^2-x-11)^6 (disc 45 = 9*5) is certified "
-            "from the built graph, and the twisted Weil sum's real eigenvalues "
-            "land on the same quadratic -- the sqrt5 is the length of a "
-            "twisted Gauss sum, recorded from the computation. (3) BURNSIDE AT "
+            "THREE results. (1) The exp-9 companion PDS is SECTION-SHAPED: "
+            "D9's eight noncentral elements hit the eight Z(R)-cosets exactly "
+            "once.  The earlier flatness claim is withdrawn because the curl "
+            "equations were not implemented. (2) The curved graph factor "
+            "(x^2-x-11)^6 (disc 45 = 9*5) is exact; a 3x3 complex matrix model "
+            "numerically matches the same quadratic after all 729 multiplication "
+            "tests.  This is evidence, not an exact Weil/Gauss-sum origin. "
+            "(3) BURNSIDE AT "
             f"q=5: Aut(H_5)-orbits on inverse-closed sections = {q5_orbits} "
-            "-- flat plus TWO curved classes (the q=3 two-orbit collapse is "
-            "GL(2,3)-transitivity on nonzero curls; GL(2,5) is not transitive "
-            "on its curl space). Their v1.4 gate 4 delivered by Burnside "
-            "instead of 5^12 enumeration."
+            "under the complete determinant-twisted affine action of order "
+            "12,000.  This is close to the integer counting floor 20,346 and is not a "
+            "three-class stratification.  Their v1.4 gate 4 is answered by "
+            "Burnside instead of 5^12 enumeration."
         ),
         "weil_sum_eigenvalues": weil_eigs,
         "q5_section_orbits": q5_orbits,
@@ -461,11 +466,17 @@ def main():
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({"status": payload["status"],
-                      "passed": sum(payload["checks"].values()),
-                      "total": len(payload["checks"]),
-                      "q5_orbits": q5_orbits,
-                      "weil_eigs": weil_eigs}))
+    print(
+        json.dumps(
+            {
+                "status": payload["status"],
+                "passed": sum(payload["checks"].values()),
+                "total": len(payload["checks"]),
+                "q5_orbits": q5_orbits,
+                "weil_eigs": weil_eigs,
+            }
+        )
+    )
     return 0 if all_pass else 1
 
 
