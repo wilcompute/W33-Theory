@@ -90,6 +90,57 @@ which the sieve theorem follows in two lines.
 \textbf{Keywords.} Heisenberg group, Weyl representation, cyclotomic
 valuation, ramification, determinant congruence, Gauss sums.
 
+\section*{Status of the results}
+
+This paper records a programme in which one central conjecture was refuted and
+two statements built on it were corrected. Splitting the surviving mathematics
+from the corrections would make each half read more smoothly and would be
+dishonest: a paper cannot outsource its own errata. Instead, the status of every
+substantive claim is given here, once, before anything is proved.
+
+\begin{center}\small
+\begin{tabular}{@{}p{0.50\textwidth}p{0.42\textwidth}@{}}
+\toprule
+claim & status \\
+\midrule
+determinant congruence
+$\det B_t(c)\equiv\det F \pmod{\lambda^{\vlam(q)+4}}$
+& \textbf{stands.} Unconditional for $f\ge2$; verified exhaustively at $q=3$
+  (Pass 473). \\
+flat block quadratic $F^2+2F-(q^2-1)I=0$ & \textbf{stands.} Symplectic
+  character sum. \\
+first-order and sharp cancellation lemmas & \textbf{stand.} \\
+sieve theorem $\sum_{d\mid t}d\,S_d=q\,\mathrm{Ps}(m/t)^t$ &
+  \textbf{stands.} Two independent proofs; the identity is also confirmed
+  where its right side does \emph{not} vanish. \\
+odd-class vanishing, propagation, character-order form &
+  \textbf{stand}, as corollaries of the sieve. \\
+closed form $d\,S_d=q\sum_{c\mid d}\mu(d/c)\mathrm{Ps}(m/c)^c$ &
+  \textbf{stands.} Checked against honest enumeration. \\
+transfer matrix $\tr(D^m)=q\,[T^m]_{0,0}$; $T\equiv0\bmod\lambda$ &
+  \textbf{stands}, and is now a corollary of translation covariance. \\
+\midrule
+factorial law
+$\vlam(\tr D^m)=\vlam(q)+m+[m\text{ odd}]+\vlam(m!)$ &
+  \textbf{FALSE} at $q=3$ (Erratum~\ref{err:factorial}); not attained at
+  $q=5$ for $m=10,14,15,18,19$. \\
+sieve completeness (``nullity $=\lvert T\rvert$'') &
+  \textbf{CORRECTED} to $\lvert T\rvert+[\,p\nmid m\,]$
+  (Erratum~\ref{err:complete}). \\
+$\mathrm{free}(m)=1\iff m=p^{j}$ &
+  \textbf{CORRECTED}: also every prime $\ell\neq p$
+  (Erratum~\ref{err:freeone}). \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent All three failures share one cause, and it is not carelessness: each
+was confirmed only on cases that were cheap to compute, and cheapness was
+governed by the same condition that made the claim true there. That failure
+mode is analysed separately in the companion note
+\texttt{papers/agreement\_locus.tex}; readers interested in the methodology
+rather than the arithmetic may prefer to start there.
+
 \section{Introduction}
 
 Let $R$ be a finite commutative local Frobenius ring of odd residue
@@ -1008,6 +1059,28 @@ $\prod_j d_{v_j}\zeta^{-\omega(P_{j-1},v_j)}$, the product of the edge weights
 along the walk $0=P_0,P_1,\dots,P_m=0$; summing over closed walks of length $m$
 based at $0$ is $[T^m]_{0,0}$.
 \end{proof}
+
+\begin{theorem}[translation covariance]\label{thm:cov}
+For $a\in R^2$ let $S_a$ permute the states by $P\mapsto P+a$ and let $U_a$ be
+diagonal with entries $\zeta^{\omega(a,P)}$. Then $U_aT=S_aTS_a^{-1}U_a$ for
+every $a$. Consequently $[T^m]_{P,P}=[T^m]_{0,0}$ for every $P$, and
+$\tr(T^m)=q\,\tr(D^m)$.
+\end{theorem}
+
+\begin{proof}
+Both sides send the basis vector at $P$ to a multiple of the one at $P+v$; the
+multipliers are $d_v\zeta^{\omega(a,P+v)-\omega(P,v)}$ and
+$d_v\zeta^{-\omega(P-a,v)+\omega(a,P)}$, equal since $\omega$ is bilinear and
+alternating. Conjugation by $S_aU_a$ therefore carries the $(0,0)$ entry of
+$T^m$ to the $(a,a)$ entry, so the diagonal is constant; summing it gives
+$\tr(T^m)=q^2[T^m]_{0,0}=q\,\tr(D^m)$ by Theorem~\ref{thm:transfer}.
+\end{proof}
+
+\noindent This explains the factor $q$ in Theorem~\ref{thm:transfer}: it is not
+a normalisation accident but the count of states in a translation orbit. It
+also makes the open residue $E(m)=\vlam([T^m]_{0,0})-m$ a statement about
+$\tr(T^m)$, hence a \emph{similarity invariant} of $T$ --- something the cyclic
+decomposition, whose classes are not similarity invariants, could never see.
 
 \noindent Everything in this section is a statement about closed walks in this
 weighted graph, grouped by rotation of the base point: the period-$d$ classes
