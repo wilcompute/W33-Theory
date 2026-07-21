@@ -1446,6 +1446,41 @@ Over $\ZZ/p^{n}$ with $p$ odd, $\min_c\vlam\bigl(\det B_t(c)-\det F\bigr)
 \noindent Three data points; a proof would presumably come from tracking which
 Newton division dominates the recursion.
 
+\section{What is left}\label{sec:closing}
+
+The machinery of the last sections --- a cyclic decomposition, a sieve, a
+closed form, a transfer matrix and its covariance --- all describes one object.
+Theorem~\ref{thm:cov} gives $\operatorname{charpoly}(T)=\operatorname{charpoly}
+(D)^q$, so the transfer matrix carries exactly the spectral information $D$
+carries; and the trace-valuation vector is a function of
+$\operatorname{charpoly}(D)$, verified on $160$ distinct characteristic
+polynomials at $q=5$ with none mapping to two vectors. So the open problem is a
+single sentence:
+
+\begin{center}
+\emph{given $\operatorname{charpoly}(D)$, compute
+$\vlam\bigl(\sum_j \nu_j^{\,m}\bigr)$.}
+\end{center}
+
+At $q=3$ it is answered. The $81$ sections map onto exactly six characteristic
+polynomials, all of the form
+\[
+x^3-9a\,x-27b,\qquad
+(a,b)\in\{(0,0),(1,0),(2,0),(3,0),(3,1),(4,3)\},
+\]
+with multiplicities $1,8,24,8,24,16$; the image is six lattice points, and the
+law is the six-row table they index. The valuation profile used in
+\S\ref{sec:closedform} is the coarsening that merges $x^3-9x$ with $x^3-18x$.
+Why $e_2$ lies in $9\ZZ$ and $e_3$ in $27\ZZ$ is observed exhaustively and not
+proved.
+
+At $q\ge5$ it is open, and not for want of machinery: coefficient valuations
+demonstrably do not suffice, since $34$ valuation profiles there carry $52$
+distinct trace vectors, and the image is large rather than small --- $220$
+sampled sections already give more than a hundred distinct characteristic
+polynomials. The finiteness at $q=3$ is a small-$q$ accident and we do not
+extrapolate it.
+
 \begin{thebibliography}{9}
 
 \bibitem{Ma}
