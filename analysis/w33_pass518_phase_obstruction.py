@@ -262,13 +262,13 @@ def part_E_artifacts(checks):
                      "checked_by": "CI (no Lean toolchain in this container)"},
             "note": {"roadmap_added": "sec:roadmap" in ttxt,
                      "reading": (
-                         "The note's sections still follow the historical "
-                         "route -- determinant law first -- because "
-                         "reordering a paper of this size is a change best "
-                         "made once, deliberately.  What is added is a "
-                         "roadmap stating the logical dependency order, so a "
-                         "reader is not left to infer it from the "
-                         "chronology.")}}
+                         "An editorial judgement, not a result: the note's "
+                         "sections still follow the historical route -- "
+                         "determinant law first -- since reordering a paper of "
+                         "this size is a change best made once, deliberately.  "
+                         "What is added is a roadmap stating the logical "
+                         "dependency order, so a reader is not left to infer "
+                         "it from the chronology.")}}
 
 
 # ------------------------------------------------------------ main
