@@ -576,7 +576,35 @@ The governing asymmetry is worth stating plainly: \emph{confirming}
 \eqref{eq:factorial} at one $(q,m)$ requires only a single attaining section
 together with the never-below check, which is cheap; \emph{refuting} it
 requires the entire section space, which is available only at $q=3$. Every
-confirmation recorded in this paper is of the cheap kind. Statements below that invoke \eqref{eq:factorial} should be read as
+confirmation recorded in this paper is of the cheap kind.
+
+For even $m$ the true $q=3$ value is not merely fitted but derived. Across the
+complete $81$-section space the pair $(\vlam(e_2),\vlam(e_3))$ takes exactly
+four non-degenerate values, and each one determines the whole sequence
+$\vlam(\tr D^m)$; the profile is a complete invariant for this data.
+
+\begin{proposition}\label{prop:q3even}
+Let $q=3$ and let $c$ be one of the $32$ sections with $\det D=0$ and
+$\vlam(e_2)=4$. Then $\tr(D^m)=0$ for every odd $m$, and
+$\vlam(\tr D^m)=2m$ for every even $m$. In particular the exhaustive even-$m$
+minimum is $2m$.
+\end{proposition}
+
+\begin{proof}
+By Pass 473 $e_1=\tr D=0$, and $e_3=\det D=0$ by hypothesis, so the
+characteristic polynomial is $x^3+e_2x=x(x^2+e_2)$. Its roots are $0$ and
+$\pm\mu$ with $\mu^2=-e_2$, whence $\vlam(\mu)=\vlam(e_2)/2=2$. Then
+$\tr(D^m)=\mu^m+(-\mu)^m$, which vanishes for odd $m$ and equals $2\mu^m$ for
+even $m$; as $2$ is a unit at $p=3$, $\vlam(\tr D^m)=m\,\vlam(\mu)=2m$.
+\end{proof}
+
+\noindent The parity term is the same fact seen from the other side. These
+minimising sections do not cancel by one extra order at odd $m$ --- they vanish
+\emph{identically}. Odd $m$ is therefore served by the other profiles, whose
+minimum is $2(m+1)$, attained by $(6,6)$ at $m=3,9$ and by $(4,8)$ at $m=5,7$.
+So ``$[m\text{ odd}]$'' is not a correction applied to one formula; it is the
+switch between which profile attains the minimum. Why those profiles give
+$2(m+1)$ is open. Statements below that invoke \eqref{eq:factorial} should be read as
 conditional on it, and the reduction of \S\ref{sec:transfer} is unaffected: the
 transfer-matrix identity and $T\equiv0\pmod\lambda$ are exact regardless.
 \end{erratum}

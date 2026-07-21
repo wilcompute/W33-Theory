@@ -378,6 +378,17 @@ Pass 520 (`analysis/w33_pass520_newton_polygon.py`, 14/14 exact):
 6. **DEPENDENCY AUDIT.** P507's "factorial ⟹ determinant law" is now **conditional** (its conclusion survives — the determinant law was verified independently and exhaustively at q=3), P516's tower is **reinterpreted** (it is the agreement locus, confirming both formulas and distinguishing neither), P519's excess `E(m)` is **false at q=3** while the transfer-matrix identity and `T ≡ 0 mod λ` are unaffected.
 7. **A CORRECTION OF MY OWN ESTIMATE.** I proposed exhausting ℤ/9's section space "since it has 9⁴ = 6561 elements". Wrong: ℤ/9 has q=9 ⇒ **(q²−1)/2 = 40 pairs ⇒ 9⁴⁰ sections** (39 digits). Enumerability scales as `q^{(q²−1)/2}` and **dies immediately after q=3**.
 
+## Pass 521 addendum (python track) — the even-m minimum DERIVED, and the blind spot named
+
+Pass 521 (`analysis/w33_pass521_profile_derivation.py`, 12/12 exact, idempotent):
+
+1. **THE PROFILE IS A COMPLETE INVARIANT.** Across the full 81-section space at q=3 the pair `(v(e_2), v(e_3))` takes exactly four non-degenerate values — **(4,∞)×32, (4,8)×16, (6,∞)×8, (6,6)×24** — and **each determines the entire sequence `v(tr D^m)`**. Every section sharing a profile shares the vector. That rigidity is what makes a derivation possible.
+2. **EVEN-m MINIMUM DERIVED, NOT FITTED.** On the 32 sections with `det D = 0` and `v(e_2)=4`: `e_1 = tr D = 0` (P473) and `e_3 = 0` ⇒ char poly `x(x²+e_2)` ⇒ eigenvalues **0, ±μ** with `v(μ) = v(e_2)/2 = 2` ⇒ `tr(D^m) = μ^m + (−μ)^m` = **0 for odd m, 2μ^m for even m** ⇒ **`v_λ = 2m` exactly**. Replaces the Newton-polygon story P520 retracted.
+3. **THE PARITY TERM IS A SWITCH, NOT A CORRECTION.** Those minimising sections **vanish identically** at odd m — not "one extra order of cancellation". So odd m is served by *other* profiles at **2(m+1)**: by (6,6) at m=3,9 and by (4,8) at m=5,7. Why those give 2(m+1) is **open**.
+4. **q=5 FAILS AT 5 OF 19 EXPONENTS** (m = 10,14,15,18,19), gap exactly 2 each, over 400 sampled sections. Sampled ⇒ refutes nothing, but "q=3 is special" has **no support left**.
+5. **THE BLIND SPOT, NAMED.** A fitted law confirmed only where it agrees with the truth **receives no evidence at all**. Every factorial-law confirmation was at m=q, m=p^j, or |R|=27/81 — and `m=q` satisfies `s_p(p)+[p odd]=2` for **every** prime, while `m=p^j` has `s_p(m)=1`. The test set was chosen for **computational convenience** (prime powers are where the orbit decomposition collapses to one class) and convenience selected **exactly the locus where the formulas cannot be distinguished**. Fourteen passes carried no information.
+6. **THE DETERMINANT LAW SURVIVES INTACT.** Proof for f≥2 never invokes the factorial law; q=3 settled exhaustively in P473 (`det B_t ∈ {−16, 11}`); and the single conditional link (the `e_q` route for prime q) uses the factorial law **only at m=q, which lies in the agreement locus for every prime** — so the input it needs is true even where the general law is false.
+
 ## Deferred
 
 - m=6 Coxeter–Todd rung of the QR tower (`data/m6_handoff_k12.json`).

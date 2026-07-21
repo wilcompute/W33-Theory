@@ -14256,6 +14256,11 @@ transfer matrix: $\operatorname{tr}(D^m)=q\,[T^m]_{0,0}$ on $q^2$ walk states & 
 $T\equiv0\bmod\lambda$, so the ``$+m$'' of the factorial law is \emph{free} & \textsc{thm} & P519 & this programme (leaves only the excess) \\
 \textbf{FACTORIAL LAW FALSIFIED AT $q{=}3$}: exhaustive over all $81$ sections & \textsc{killed} & P519 & this programme (fails by $2$ at $m{=}5,7,8,11$) \\
 $q{=}3$ truth: $v_\lambda(\operatorname{tr}D^m)=2(m{+}[m$ odd$])$, $m{=}2..12$ & \textsc{cert} & P519 & this programme (agreement locus $\supseteq$ all $m{=}3^j$) \\
+$q{=}3$ profile $(v(e_2),v(e_3))$ is a COMPLETE invariant: 4 values, 4 vectors & \textsc{thm} & P521 & this programme (exhaustive over all 81) \\
+even-$m$ minimum $2m$ DERIVED: $e_1{=}e_3{=}0\Rightarrow$ eigenvalues $0,\pm\mu$, $v(\mu){=}2$ & \textsc{thm} & P521 & this programme (replaces the P520 retraction) \\
+$[m$ odd$]$ is a SWITCH between attaining profiles, not a correction & \textsc{thm} & P521 & this programme (those sections vanish identically) \\
+$q{=}5$ law fails at $m{=}10,14,15,18,19$ (sampled, gap $2$ each) & \textsc{cert} & P521 & this programme (400 sections; refutes nothing) \\
+BLIND SPOT: the law was only ever tested on its own agreement locus & \textsc{cert} & P521 & this programme (14 passes carried no information) \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -15525,5 +15530,49 @@ special is withdrawn as the less likely of the two.  What is unaffected is the r
 identity and $T\equiv0\pmod\lambda$ are exact regardless, and any statement
 elsewhere in this record that invokes the factorial law should now be read as
 conditional on it.
+
+\paragraph{Pass 521 --- the even-$m$ minimum derived, and the blind spot named.}
+Across the complete $81$-section space at $q=3$ the pair
+$(v_\lambda(e_2),v_\lambda(e_3))$ takes exactly four non-degenerate values ---
+$(4,\infty)\times32$, $(4,8)\times16$, $(6,\infty)\times8$, $(6,6)\times24$ ---
+and \emph{each one determines the entire sequence}
+$v_\lambda(\operatorname{tr}D^m)$.  The profile is a complete invariant, which
+is what makes a derivation possible.
+
+On the $32$ sections with $\det D=0$ and $v_\lambda(e_2)=4$: since
+$e_1=\operatorname{tr}D=0$ (Pass 473) and $e_3=0$, the characteristic
+polynomial is $x(x^2+e_2)$, so the eigenvalues are $0$ and $\pm\mu$ with
+$v_\lambda(\mu)=v_\lambda(e_2)/2=2$.  Hence
+$\operatorname{tr}(D^m)=\mu^m+(-\mu)^m$ vanishes for odd $m$ and equals
+$2\mu^m$ for even $m$, giving $v_\lambda=2m$ exactly.  \textbf{That is the
+exhaustive even-$m$ minimum, derived rather than fitted}, and it replaces the
+Newton-polygon story Pass 520 retracted.
+
+The parity term is the same fact from the other side: those sections vanish
+\emph{identically} at odd $m$, so odd $m$ is served by the other profiles at
+$2(m+1)$ --- by $(6,6)$ at $m=3,9$ and by $(4,8)$ at $m=5,7$.  ``$[m$ odd$]$''
+is a switch between attaining profiles, not a correction to one formula.  Why
+those profiles give $2(m+1)$ is open.
+
+At $q=5$, over $400$ sampled sections the law fails at $m=10,14,15,18,19$ ---
+five of nineteen exponents --- always by exactly $2$.  Sampled, so nothing is
+refuted there; but ``$q=3$ is special'' has no support left.
+
+\emph{The blind spot, named.}  A fitted law confirmed only where it agrees with
+the truth receives no evidence at all.  Every confirmation of the factorial law
+was at $m=q$, at $m=p^{j}$, or at $|R|=27,81$ --- and $m=q$ satisfies
+$s_p(p)+[p\text{ odd}]=2$ for \emph{every} prime, while $m=p^{j}$ has
+$s_p(m)=1$.  The test set was chosen for computational convenience, since prime
+powers are exactly where the orbit decomposition collapses to a single class,
+and convenience selected precisely the locus where the two formulas cannot be
+distinguished.  Fourteen passes of confirmation carried no information against
+the law.
+
+The determinant law survives intact.  Its proof for $f\ge2$ never invokes the
+factorial law; $q=3$ was settled exhaustively and independently in Pass 473
+($\det B_t\in\{-16,11\}$); and the one conditional link --- the route through
+$e_q$ for prime $q$ --- uses the factorial law only at $m=q$, which lies in the
+agreement locus for every prime.  The input that route needs is true even where
+the general law is false.
 
 \end{document}
