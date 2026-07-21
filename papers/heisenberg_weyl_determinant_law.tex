@@ -88,7 +88,11 @@ reduced by one more when $p\nmid m$ because then the period-one class is empty.
 Consequently $\mathrm{free}(1)=0$, while $\mathrm{free}(m)=1$ precisely when
 $m$ is a positive power of $p$ or a prime different from $p$. Finally $d\,S_d$ has the
 closed form $q\sum_{c\mid d}\mu(d/c)\bigl(\sum_v d_v^{\,m/c}\bigr)^{c}$, from
-which the sieve theorem follows in two lines.
+which the sieve theorem follows in two lines. At $q=3$, the complete section
+space realizes only six normalized cubic recurrences; their states modulo $9$
+prove
+$\min_c\vlam(\tr D_c^m)=2(m+[m\text{ odd}])$ for every $m\ge2$. This
+$q=3$ theorem does not determine the minimum at $q\ge5$.
 \end{abstract}
 
 \noindent\textbf{2020 MSC.} 11R18, 11T24, 15A15, 20C15, 05B10.\\
@@ -130,6 +134,10 @@ $\vlam(\tr D^m)=\vlam(q)+m+[m\text{ odd}]+\vlam(m!)$ &
   \textbf{FALSE} at $q=3$ (Erratum~\ref{err:factorial}); not attained among
   the sampled $q=5$ sections for $m=10,14,15,18,19$, leaving the global
   minimum undecided. \\
+replacement at $q=3$,
+$\min_c\vlam(\tr D_c^m)=2(m+[m\text{ odd}])$ &
+  \textbf{stands for every $m\ge2$} (Theorem~\ref{thm:q3allm}); $m=1$ is
+  excluded because every section has trace zero. \\
 sieve completeness (``nullity $=\lvert T\rvert$'') &
   \textbf{CORRECTED CANDIDATE}: $\lvert T\rvert+[\,p\nmid m\,]$ is proved
   on the listed cells and two infinite families; the uniform composite-$m$
@@ -614,19 +622,25 @@ Doing so gives
 \qquad (m=2,\dots,12),
 \]
 whereas \eqref{eq:factorial} predicts $4,8,8,10,12,14,14,20,20,22,24$: the true
-minimum exceeds the stated value by $2$ at $m=5,7,8,11$. All eleven exhaustive
-values fit
+minimum exceeds the stated value by $2$ at $m=5,7,8,11$. These eleven
+exhaustive values were the finite-window evidence for
 \[
 \vlam(\tr D^m)=2\bigl(m+[m\text{ odd}]\bigr)\qquad (q=3).
 \]
+Theorem~\ref{thm:q3allm} below proves the corresponding minimum over all $81$
+sections for every $m\ge2$.
 Since $2v_3(m!)=m-s_3(m)$ with $s_3$ the base-$3$ digit sum, the two
 expressions differ by $s_3(m)+[m\text{ odd}]-2$, which vanishes exactly when
-$s_3(m)+[m\text{ odd}]=2$ --- a set containing every $m=3^{j}$. The
-prime-power tower therefore lies inside the locus on which the two agree,
-which is why its four confirmed rungs $8,20,56,164$ could not detect this.
+$s_3(m)+[m\text{ odd}]=2$. For $m\ge2$ this is equivalently
+$m=3^j$ with $j\ge1$, or $m=3^i+3^j$ with $0\le i\le j$. The prime-power
+tower therefore lies inside, but does not exhaust, the locus on which the two
+agree, which is why its four confirmed rungs $8,20,56,164$ could not detect
+this.
 
-The scope of the failure is open, but the evidence has moved. At $q=5$ the law
-is \emph{not attained} at $m=10$ or $m=14$: the sampled minimum sits exactly
+At $q=3$ the scope of the failure is therefore exact: agreement holds if and
+only if $s_3(m)+[m\text{ odd}]=2$ for $m\ge2$. Beyond $q=3$ the question
+remains open. At $q=5$ the law is \emph{not attained} at $m=10$ or $m=14$:
+the sampled minimum sits exactly
 $2$ above it --- the same gap as at $q=3$ --- over $250$ sections, and over
 $600$ in a separate probe, while $m=6,8,12$ attain it. Sampling cannot refute,
 since the true minimum is at most what a sample exhibits and $q=5$ has $5^{12}$
@@ -640,11 +654,12 @@ together with the never-below check, which is cheap; \emph{refuting} it
 requires the entire section space, which is available only at $q=3$. Every
 confirmation recorded in this paper is of the cheap kind.
 
-For even $m$ the true $q=3$ value is not merely fitted but derived. Across the
-complete $81$-section space the pair $(\vlam(e_2),\vlam(e_3))$ takes exactly
-four non-degenerate values, and each one determines the measured vector
-$\vlam(\tr D^m)$ for $m\le10$; the profile is a complete invariant for that
-finite data window.
+For even $m$ the true $q=3$ value already has an elementary derivation. Across
+the complete $81$-section space the pair
+$(\vlam(e_2),\vlam(e_3))$ takes exactly four non-degenerate values. The
+finite computation first showed that each determines the measured vector for
+$m\le10$; Theorem~\ref{thm:q3allm} and its corollary below remove that finite
+qualifier.
 
 \begin{proposition}\label{prop:q3even}
 Let $q=3$ and let $c$ be one of the $32$ sections with $\det D=0$ and
@@ -661,18 +676,91 @@ $\tr(D^m)=\mu^m+(-\mu)^m$, which vanishes for odd $m$ and equals $2\mu^m$ for
 even $m$; as $2$ is a unit at $p=3$, $\vlam(\tr D^m)=m\,\vlam(\mu)=2m$.
 \end{proof}
 
-\noindent The parity term is the same fact seen from the other side. These
-minimising sections do not cancel by one extra order at odd $m$ --- they vanish
-\emph{identically}. Odd $m$ is therefore served by the other profiles, whose
-minimum is $2(m+1)$, attained by $(6,6)$ at $m=3,9$ and by $(4,8)$ at $m=5,7$.
-So ``$[m\text{ odd}]$'' is not a correction applied to one formula; it is the
-switch between which profile attains the minimum. At the time of Pass~521 the
-odd-profile mechanism was open; Pass~522 derives the $(4,8)$ values, and
-Pass~523's Newton recurrence accounts for the $(6,6)$ values through
-$m=2,\ldots,10$.  An all-$m$ noncancellation/LTE proof for that recurrence
-remains open. Statements below that invoke \eqref{eq:factorial} should be read as
-conditional on it, and the reduction of \S\ref{sec:transfer} is unaffected: the
-transfer-matrix identity and $T\equiv0\pmod\lambda$ are exact regardless.
+\begin{theorem}[complete $q=3$ trace-valuation law]\label{thm:q3allm}
+For every integer $m\ge2$, the minimum over the complete $81$-section space is
+\[
+ \min_c\vlam\bigl(\tr D_c^m\bigr)
+   =2\bigl(m+[m\text{ odd}]\bigr).
+\]
+The exponent $m=1$ is excluded because every section has trace zero.
+\end{theorem}
+
+\begin{proof}
+The exhaustive characteristic-polynomial image consists of the six cubics
+\[
+ x^3-9a x-27b,
+ \qquad
+ (a,b)\in\{(0,0),(1,0),(2,0),(3,0),(3,1),(4,3)\}.
+\]
+Put $x=3y$, and let $S_m$ be the $m$th power sum of the roots of
+$y^3-ay-b$. Newton's identities give
+\[
+ S_0=3,\qquad S_1=0,\qquad S_2=2a,\qquad
+ S_m=aS_{m-2}+bS_{m-3}.
+\]
+Consequently
+\[
+ \tr D_c^m=3^mS_m,
+ \qquad
+ \vlam(\tr D_c^m)=2m+2v_3(S_m)
+\]
+whenever the trace is nonzero.
+
+For even $m$, integrality gives the lower bound $2m$.  The row
+$(a,b)=(1,0)$ has $S_m=S_{m-2}$ and $S_2=2$, so $S_m=2$ for every even
+$m\ge2$ and the bound is attained.
+
+For odd $m$, every $b=0$ row vanishes. For the two remaining rows write
+\[
+ \begin{aligned}
+ A_m&=3A_{m-2}+A_{m-3}, &(A_0,A_1,A_2)&=(3,0,6),\\
+ B_m&=4B_{m-2}+3B_{m-3}, &(B_0,B_1,B_2)&=(3,0,8).
+ \end{aligned}
+\]
+Modulo $3$, every odd term of both recurrences is zero, so every finite odd
+trace has valuation at least $2(m+1)$. Modulo $9$, the $A$-sequence is
+periodic from $m=0$ with word
+\[
+ 3,0,6,
+\]
+whereas the $B$-tail from $m=2$ has period six with word
+\[
+ 8,0,5,6,2,3.
+\]
+Thus $A_m$ is $3$ or $6$ modulo $9$ for odd
+$m\equiv3,5\pmod6$, while $B_m\equiv3\pmod9$ for
+$m\equiv1\pmod6$, beginning at $m=7$. These cover every odd $m\ge3$, and in
+each residue class one row has $v_3(S_m)=1$. Hence the odd lower bound is also
+attained. The repeated recurrence states, rather than a finite sweep, prove
+the assertion for all $m$.
+\end{proof}
+
+\noindent The coefficient-valuation profile is consequently a complete
+invariant of the trace-valuation sequence for every $m$ on the realized
+$q=3$ image. Its only repeated fibre is $(a,b)=(1,0),(2,0)$; in both rows the
+odd sums vanish and $S_{2k}=2a^k$ is a $3$-adic unit. The parity term is
+therefore not a correction applied to one minimizing section: the even
+minimum is supplied by the $b=0$ unit row, while the $(6,6)$ and $(4,8)$
+profiles supply the odd residue classes. Combining the theorem with Legendre's
+identity makes the agreement locus with \eqref{eq:factorial} an exact result:
+\[
+ \eqref{eq:factorial}\text{ agrees at }m\ge2
+ \quad\Longleftrightarrow\quad s_3(m)+[m\text{ odd}]=2.
+\]
+Equivalently, the agreement exponents are exactly
+\[
+ m=3^j\ (j\ge1)
+ \qquad\text{or}\qquad
+ m=3^i+3^j\ (0\le i\le j).
+\]
+Indeed $m\equiv s_3(m)\pmod2$: the odd branch forces $s_3(m)=1$, while the
+even branch forces $s_3(m)=2$. A base-$3$ integer of digit sum $2$ has either
+one digit $2$ or two digits $1$, both represented by $3^i+3^j$ when equality
+of $i$ and $j$ is allowed.
+Nothing in this argument determines the minimum at $q\ge5$. Statements below
+that invoke \eqref{eq:factorial} remain conditional there, and the reduction of
+\S\ref{sec:transfer} is unaffected: the transfer-matrix identity and
+$T\equiv0\pmod\lambda$ are exact regardless.
 \end{erratum}
 
 \noindent The leading term is $\vlam(q)$, not $q-1$; those agree only when $q$ is prime,
@@ -710,9 +798,10 @@ $\vlam(e_q)\ge q+3$, so the entire residual is the inequality
 \[
 \vlam(q!)\;\ge\;2 ,
 \]
-which for prime $q$ is $q-1\ge2$. \textbf{The open problem is therefore no
-longer a statement about symplectic character sums at the top exponent; it is
-\eqref{eq:factorial} itself}, an identity about the whole Newton recursion.
+which for prime $q$ is $q-1\ge2$. Outside the now-settled $q=3$ replacement,
+\textbf{the open problem is therefore no longer a statement about symplectic
+character sums at the top exponent; it is \eqref{eq:factorial} itself}, an
+identity about the whole Newton recursion.
 Second, \eqref{eq:factorial} has been tested at $|R|=27$ over both $\FF_{27}$
 and $\FF_3[x]/(x^3)$, matching \emph{exactly} at all $26$ exponents and across
 all nine increments of $\vlam(m!)$ --- including the double steps at $m=9,18$
@@ -1127,8 +1216,10 @@ what remains of \eqref{eq:factorial} is exactly the excess
 \[
 E(m):=\vlam\bigl([T^m]_{0,0}\bigr)-m=[m\text{ odd}]+\vlam(m!) ,
 \]
-a statement about one entry of one matrix. We do not prove it; we record that
-this is now all that is left to prove.
+a statement about one entry of one matrix. Theorem~\ref{thm:q3allm} determines
+the minimum of this entrywise excess at $q=3$, where the factorial expression
+is false. For the unresolved larger-$q$ cases we do not prove the displayed
+identity; this is the remaining spectral-arithmetic step.
 
 A corollary of the sieve is worth recording in this language. Taking $t=m/e$
 gives $\sum_{d\mid m/e}d\,S_d=0$, so
@@ -1462,8 +1553,8 @@ Theorem~\ref{thm:cov} gives $\operatorname{charpoly}(T)=\operatorname{charpoly}
 (D)^q$, so the transfer matrix carries exactly the spectral information $D$
 carries; and the trace-valuation vector is a function of
 $\operatorname{charpoly}(D)$, verified on $160$ distinct characteristic
-polynomials at $q=5$ with none mapping to two vectors. So the open problem is a
-single sentence:
+polynomials at $q=5$ with none mapping to two vectors. Beyond $q=3$ the
+remaining spectral problem is a single sentence:
 
 \begin{center}
 \emph{given $\operatorname{charpoly}(D)$, compute
@@ -1477,10 +1568,14 @@ x^3-9a\,x-27b,\qquad
 (a,b)\in\{(0,0),(1,0),(2,0),(3,0),(3,1),(4,3)\},
 \]
 with multiplicities $1,8,24,8,24,16$; the image is six lattice points. They
-give six exact recurrences whose minimum matches the proposed law for
-$m=2,\ldots,12$. Proving that minimum for all $m$ still requires the open
-noncancellation/LTE argument for the $(6,6)$ row. The valuation profile used in
+give six exact recurrences, and Theorem~\ref{thm:q3allm} computes their minimum
+for every $m\ge2$. After the normalization $x=3y$, the recurrence is
+$S_m=aS_{m-2}+bS_{m-3}$; the unit $b=0$ row attains every even minimum, while
+the modulo-$9$ words $(3,0,6)$ and $(8,0,5,6,2,3)$ cover the three odd residue
+classes modulo $6$. The valuation profile used in
 \S\ref{sec:closedform} is the coarsening that merges $x^3-9x$ with $x^3-18x$.
+Those two rows nevertheless have the same complete valuation sequence, so the
+profile is a complete invariant for all $m$ on the realized $q=3$ image.
 The lattice containment is now proved: inverse closure makes $D$ Hermitian,
 so its characteristic polynomial is real and hence rational at $p=3$; then
 $\vlam(e_2)\ge4$ and $\vlam(e_3)\ge6$ are exactly $9\mid e_2$ and

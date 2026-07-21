@@ -218,8 +218,8 @@ def part_C_profile_66(checks):
             "With Pass 521 for the two e_3 = 0 profiles and Pass 522 for "
             "(4,8), all four q = 3 profiles are accounted for through the "
             "measured m = 2,...,10 window, whose minimum is "
-            "2(m + [m odd]).  An all-m noncancellation/LTE proof for the "
-            "(6,6) recurrence remains open."
+            "2(m + [m odd]).  This witness is finite-window only; Pass 541 "
+            "later supplies the all-m modular-recurrence proof."
         ),
     }
 
@@ -289,7 +289,8 @@ def main_payload():
             "remains measured.  The (6,6) profile at q = 3 follows from "
             "Newton's recursion p_m = -e_2 p_{m-2} + e_3 p_{m-3}, reproducing "
             "the nine finite valuations for m = 2,...,10, which closes the "
-            "measured window but not the all-m noncancellation problem.  And "
+            "measured window; Pass 541 later closes the all-m noncancellation "
+            "problem by a different modular-recurrence proof.  And "
             "the agreement-locus test "
             "fires a THIRD time: Pass 517's 'free(m) = 1 iff m is a power of "
             "p' is FALSE: five prime l != p cells have exact nullity one, "
@@ -307,7 +308,8 @@ def main_payload():
             "third source of relations exists, which is still the eleven-cell "
             "measurement of Pass 522.  Part C is a symbolic computation in the "
             "monomials e_2^a e_3^b checked against nine finite valuations "
-            "for m = 2,...,10 at one profile; it is not an all-m proof.  In "
+            "for m = 2,...,10 at one profile; it is not itself an all-m proof, "
+            "which is supplied later by Pass 541.  In "
             "Part D, sampled nullity is an upper bound because adding rows can "
             "only raise rank.  The proved vacuous relation gives the matching "
             "lower bound on all five listed cells, making those nullities exact."

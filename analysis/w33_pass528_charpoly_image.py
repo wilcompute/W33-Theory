@@ -26,8 +26,8 @@ merges x^3 - 9x with x^3 - 18x, and those two happen to share a trace vector.
 WHAT THAT SETTLES.  Since every power trace is determined recursively by the
 charpoly, only six recurrences occur at q = 3.  The derivations of Passes
 521-523 account for their measured m = 2..12 window.  The all-m minimum is
-therefore reduced to six cases, but the noncancellation/LTE argument for the
-(6,6) recurrence remains open; a finite table cannot close it.
+therefore reduced to six cases.  This witness's finite table cannot close the
+noncancellation step; Pass 541 later does so from recurrence states modulo 9.
 
 WHY IT DOES NOT IMMEDIATELY GIVE q = 5.  There the section space has 5^12
 elements and the image is not enumerable; 220 sampled sections already produce
@@ -157,8 +157,8 @@ def part_B_lookup(checks):
             "the minimum over the six reproduces 2(m + [m odd]) for "
             "m = 2..12.  Thus the measured q = 3 window is a six-row "
             "table.  For all m these same polynomials give six exact "
-            "recurrences, but proving their valuation minimum still needs "
-            "the open (6,6) noncancellation/LTE argument."
+            "recurrences.  This witness does not prove their all-m minimum; "
+            "Pass 541 later closes it by exact modular recurrences."
         ),
     }
 
@@ -209,8 +209,8 @@ def main_payload():
             "profile invariant of Pass 521 is the coarsening that merges "
             "x^3 - 9x with x^3 - 18x.  At q = 5 the image is large -- 220 "
             "samples give over a hundred distinct charpolys -- so the "
-            "six-recurrence reduction is a small-q phenomenon and is recorded "
-            "without promoting the finite check to an all-m theorem."
+            "six-recurrence reduction is a small-q phenomenon.  This finite "
+            "check is not promoted here; Pass 541 later supplies the all-m proof."
         ),
         "part_A_the_image": A,
         "part_B_six_row_lookup": B,
@@ -218,8 +218,8 @@ def main_payload():
         "boundary": (
             "Part A is exhaustive over the complete q = 3 section space.  "
             "Part B is exact only for m = 1..12; the six charpolys define "
-            "all-m recurrences but do not prove the proposed all-m valuation "
-            "minimum.  Part C samples 220 sections at "
+            "all-m recurrences but do not themselves prove the all-m valuation "
+            "minimum; Pass 541 later does.  Part C samples 220 sections at "
             "q = 5 and establishes only that the image is large, which is all "
             "that is needed to refuse the extrapolation.  Nothing here says "
             "what governs q = 5."

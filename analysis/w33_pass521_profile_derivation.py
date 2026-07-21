@@ -37,6 +37,11 @@ q = 5 IS NOT RARE EITHER.  Over 400 sampled sections the factorial law fails at
 m = 10, 14, 15, 18, 19 -- five of nineteen exponents -- always by exactly 2,
 the q = 3 gap.  Sampling cannot refute, so these remain undecided, but "q = 3
 is special" is now doubly unsupported.
+
+PASS 541 UPDATE.  This witness owns the finite profile table and the even-m
+derivation.  Pass 541 later closes the odd all-m minimum by exact recurrences
+modulo 3 and 9; the historical boundary below is retained with that
+supersession stated explicitly.
 """
 from __future__ import annotations
 
@@ -357,10 +362,15 @@ def main_payload():
             "Parts A and B are exhaustive over the complete q = 3 section "
             "space and the derivation is a proof.  The ODD-m minimum 2(m+1) is "
             "NOT derived here: it is observed to be attained by (6,6) at "
-            "m = 3, 9 and by (4,8) at m = 5, 7, and why those profiles give "
-            "those values is open.  Part C is SAMPLED at 400 sections and "
+            "m = 3, 9 and by (4,8) at m = 5, 7.  This witness does not derive "
+            "the all-m odd minimum; Pass 541 later closes it by exact modular "
+            "recurrences.  Part C is SAMPLED at 400 sections and "
             "refutes nothing at q = 5.  Parts D and E are audits -- reasoned "
             "readings of the corpus, not computations."
+        ),
+        "superseded_boundary": (
+            "Pass 541 proves the q=3 minimum 2(m+[m odd]) for every m>=2 and "
+            "upgrades profile completeness from m=1..10 to all m."
         ),
         "checks": {k: bool(v) for k, v in checks.items()},
     }

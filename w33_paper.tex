@@ -14257,7 +14257,8 @@ the arc reduces to one lemma: $\mathrm{Ps}(k){=}0\iff k$ odd and $e\mid k$ & \te
 transfer matrix: $\operatorname{tr}(D^m)=q\,[T^m]_{0,0}$ on $q^2$ walk states & \textsc{thm} & P519 & this programme (exact, $p{=}3,5,7$) \\
 $T\equiv0\bmod\lambda$, so the ``$+m$'' of the factorial law is \emph{free} & \textsc{thm} & P519 & this programme (leaves only the excess) \\
 \textbf{FACTORIAL LAW FALSIFIED AT $q{=}3$}: exhaustive over all $81$ sections & \textsc{killed} & P519 & this programme (fails by $2$ at $m{=}5,7,8,11$) \\
-$q{=}3$ truth: $v_\lambda(\operatorname{tr}D^m)=2(m{+}[m$ odd$])$, $m{=}2..12$ & \textsc{cert} & P519 & this programme (agreement locus $\supseteq$ all $m{=}3^j$) \\
+$q{=}3$ truth: $\min_c v_\lambda(\operatorname{tr}D_c^m)=2(m{+}[m$ odd$])$, $m{=}2..12$ & \textsc{cert} & P519 & this programme (agreement locus $\supseteq$ all $m{=}3^j$) \\
+\textbf{$q{=}3$ truth for every $m\ge2$}: $\min_c v_\lambda(\operatorname{tr}D_c^m)=2(m{+}[m$ odd$])$ & \textsc{thm} & P541 & this programme (six cubics; recurrence states modulo $9$) \\
 $q{=}3$ profile $(v(e_2),v(e_3))$ is complete for $m{=}1..10$: 4 values, 4 vectors & \textsc{cert} & P521 & this programme (exhaustive over all 81) \\
 even-$m$ minimum $2m$ DERIVED: $e_1{=}e_3{=}0\Rightarrow$ eigenvalues $0,\pm\mu$, $v(\mu){=}2$ & \textsc{thm} & P521 & this programme (replaces the P520 retraction) \\
 $[m$ odd$]$ is a SWITCH between attaining profiles, not a correction & \textsc{thm} & P521 & this programme (those sections vanish identically) \\
@@ -14269,7 +14270,7 @@ BLIND SPOT AGAIN: all 10 completeness cells had $p\mid m$ & \textsc{cert} & P522
 odd-$m$ at profile $(4,8)$ derived: $v_\lambda(m){+}2m{+}2$ & \textsc{thm} & P522 & this programme (the jumps come from the factor $m$) \\
 vacuous class PROVED: empty iff $d{=}1$ and $p\nmid m$ --- exactly one & \textsc{thm} & P523 & this programme (correction term is exactly $+1$) \\
 sieve and vacuous relations are COMPLEMENTARY ($\lvert T\rvert{\ge}1\iff p\mid m$) & \textsc{thm} & P523 & this programme (counts add without overlap) \\
-$(6,6)$ recurrence accounts for the 9 finite values $m{=}2..10$ & \textsc{cert} & P523 & this programme (all-$m$ noncancellation/LTE still open) \\
+$(6,6)$ recurrence accounts for the 9 finite values $m{=}2..10$ & \textsc{cert} & P523 & this programme (all-$m$ step open here; closed by P541) \\
 \textbf{$\mathrm{free}(m){=}1\iff m{=}p^j$ RETRACTED}: every prime $\ell\neq p$ too & \textsc{killed} & P523 & this programme (third firing of the blind-spot test) \\
 completeness is a THEOREM cell by cell, not a measurement & \textsc{thm} & P524 & this programme (independent vectors prove a rank bound) \\
 $\mathrm{free}(m){=}1\iff m{=}p^a$ OR $m$ prime $\neq p$; $\mathrm{free}(1){=}0$ & \textsc{thm} & P524 & this programme (repaired characterisation) \\
@@ -15529,17 +15530,19 @@ and the minimum is decidable by exhaustion.  It gives
 $4,8,8,\mathbf{12},12,\mathbf{16},\mathbf{16},20,20,\mathbf{24},24$ for
 $m=2,\dots,12$, against the law's $4,8,8,10,12,14,14,20,20,22,24$: the true
 minimum exceeds the stated value by $2$ at $m=5,7,8,11$.  All eleven values fit
-$v_\lambda(\operatorname{tr}D^m)=2(m+[m\text{ odd}])$.  Since
+$\min_c v_\lambda(\operatorname{tr}D_c^m)=2(m+[m\text{ odd}])$; Pass~541 proves that
+formula for every $m\ge2$ at $q=3$.  Since
 $2v_3(m!)=m-s_3(m)$ with $s_3$ the base-$3$ digit sum, the two expressions
 differ by $s_3(m)+[m\text{ odd}]-2$, which vanishes exactly when
-$s_3(m)+[m\text{ odd}]=2$ --- a set containing every $m=3^{j}$.  \textbf{The
+$s_3(m)+[m\text{ odd}]=2$ --- a locus classified completely in Pass~541.  \textbf{The
 prime-power tower lies inside the agreement locus}, which is why its four
 confirmed rungs $8,20,56,164$ could not detect this.  Every earlier test of the
 law was either at $m=q$, at $m=p^{j}$, or at $|R|=27,81$ --- never at $q=3$ with
 $m$ off the tower.
 
-The scope of the failure is open, and Pass 520 has since moved the evidence: at
-$q=5$ the law is \emph{not attained} at $m=10$ or $m=14$, the sampled minimum
+At Pass~519 the scope beyond this finite $q=3$ window was open.  Pass~541
+closes the $q=3$ problem but does not transfer to $q=5$, where Pass~520 moved
+the evidence: the law is \emph{not attained} at $m=10$ or $m=14$, the sampled minimum
 sitting exactly $2$ above it --- the same gap as at $q=3$ --- over $250$
 sections, and $600$ in a separate probe, while $m=6,8,12$ attain it.  Sampling
 cannot refute, so $q=5$ remains undecided; but the reading that $q=3$ might be
@@ -15572,7 +15575,8 @@ $2(m+1)$ --- by $(6,6)$ at $m=3,9$ and by $(4,8)$ at $m=5,7$.  ``$[m$ odd$]$''
 is a switch between attaining profiles, not a correction to one formula.  At
 Pass~521 the odd-profile mechanism was open; Pass~522 derives the $(4,8)$
 values, and Pass~523's Newton recurrence accounts for the $(6,6)$ values
-through $m=2,\ldots,10$.  An all-$m$ noncancellation/LTE proof remains open.
+through $m=2,\ldots,10$.  That was the remaining $q=3$ all-$m$ gap at this
+stage; Pass~541 closes it by recurrence states modulo $9$.
 
 At $q=5$, over $400$ sampled sections the minimum observed at
 $m=10,14,15,18,19$ does not attain the law --- five of nineteen exponents ---
@@ -15639,5 +15643,66 @@ $\ZZ/9$ statements are exhaustive; only the search that located the $q=5$
 witness is sampled.  The exact closing computation is owned by
 \texttt{analysis/w33\_pass540\_symplectic\_separator\_chainring.g}, its JSON
 certificate, and \texttt{PASS540\_SYMPLECTIC\_CHIRALITY\_CHAINRING.md}.
+
+\paragraph{Pass 541 --- the $q=3$ trace-valuation law for every exponent.}
+Pass~528 reduced the complete $81$-section image to the six characteristic
+polynomials
+\[
+ x^3-9ax-27b,
+ \qquad
+ (a,b)\in\{(0,0),(1,0),(2,0),(3,0),(3,1),(4,3)\}.
+\]
+After writing $x=3y$, let $S_m$ be the $m$th power sum of the roots of
+$y^3-ay-b$.  Newton's identities give the six integral recurrences
+\[
+ S_0=3,\qquad S_1=0,\qquad S_2=2a,\qquad
+ S_m=aS_{m-2}+bS_{m-3},
+\]
+with
+\[
+ \operatorname{tr}(D_c^m)=3^mS_m,
+ \qquad
+ v_\lambda(\operatorname{tr}(D_c^m))=2m+2v_3(S_m)
+\]
+whenever the trace is nonzero.  Thus the infinite question reduces to six
+integer recurrence states.  For even $m$, integrality gives the lower bound
+$2m$, and the row $(a,b)=(1,0)$ has $S_m=2$ for every even $m\ge2$, so it
+attains that bound.
+
+For odd $m$, every $b=0$ row vanishes, while every finite odd term in the two
+$b\ne0$ rows is divisible by $3$.  For $A=(a,b)=(3,1)$ the state modulo $9$
+is periodic from $m=0$ with word $3,0,6$; it attains $v_3(S_m)=1$ for
+$m\equiv3,5\pmod6$.  For $B=(4,3)$ the tail from $m=2$ has period six and
+word $8,0,5,6,2,3$; it attains $v_3(S_m)=1$ for
+$m\equiv1\pmod6$, beginning at $m=7$.  These states cover every odd
+$m\ge3$.  Consequently
+\[
+ \boxed{\min_c v_\lambda\!\left(\operatorname{tr}D_c^m\right)
+ =2\bigl(m+[m\text{ odd}]\bigr)\qquad(m\ge2).}
+\]
+The exponent $m=1$ is excluded because every section has trace zero.  The
+coefficient-valuation profile is therefore a complete invariant of the full
+trace-valuation sequence on the six realized cubics: its only repeated fibre,
+$(1,0)$ and $(2,0)$, has zero odd power sums and $3$-adic-unit even power
+sums.  Finally, Legendre's identity makes the coincidence with the disproved
+factorial expression exact:
+\[
+ \text{the two formulas agree}
+ \quad\Longleftrightarrow\quad
+ s_3(m)+[m\text{ odd}]=2.
+\]
+For $m\ge2$, this is equivalently
+\[
+ m=3^j\ (j\ge1)
+ \qquad\text{or}\qquad
+ m=3^i+3^j\ (0\le i\le j).
+\]
+Indeed $m$ and $s_3(m)$ have the same parity: the odd branch forces ternary
+digit sum $1$, while the even branch forces digit sum $2$.  Thus the
+prime-power tower lies inside this locus but does not exhaust it.  This is
+an all-$m$ theorem only for the realized $q=3$ image; it neither settles the
+sampled $q=5$ minimum nor restores the factorial formula.  The exact recurrence
+certificate is
+\texttt{analysis/w33\_pass541\_q3\_all\_m\_recurrence.g}.
 
 \end{document}

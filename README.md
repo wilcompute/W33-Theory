@@ -25,7 +25,7 @@ interconnected finite structure—and makes the remaining maps explicit.
 |---|---|
 | understand the project in five minutes | [Live atlas](https://wilcompute.github.io/W33-Theory/) — use the Navigator and Reader Guide |
 | see what the audit says is actually new | [The Selection Layer](analysis/THE_SELECTION_LAYER.md) |
-| inspect the newest exact breakthrough | [Pass 540: symplectic separator and chain-ring Burnside witness](analysis/w33_pass540_symplectic_separator_chainring.g) |
+| inspect the newest exact breakthrough | [Pass 541: the all-exponent `q=3` trace-valuation theorem](analysis/w33_pass541_q3_all_m_recurrence.g) |
 | read the mathematical manuscript | [w33_paper.tex](w33_paper.tex) |
 | run the finite-geometry machine | [HOLONET.md](HOLONET.md) |
 | read the photonic program | [photonic_holonet.tex](photonic_holonet.tex) |
@@ -57,9 +57,29 @@ Its full order-`51,840` symmetry is the exceptional Weyl-group-sized shell that 
 equality `240 = |E_8 roots|` is real and useful; an equivariant identification must still be constructed and
 checked rather than inferred from the count alone.
 
-## The newest exact frontier: chirality, spectral blindness, and chain rings
+## The newest exact frontier: an all-exponent theorem, chirality, and chain rings
 
-Pass 540 resolves the unexplained `q=3` full-support spectral merge. The `16` full-support sections are the
+Pass 541 closes the infinite-exponent step that earlier passes had checked only in finite windows. For every
+integer `m >= 2`, over all `81` sections at `q=3`,
+
+```text
+min_c v_lambda(tr(D_c^m)) = 2(m + [m odd]).
+```
+
+The proof is finite without being a cutoff computation. Pass 528 reduces the section image to the six cubics
+`x^3 - 9a x - 27b`, with `(a,b)=(0,0),(1,0),(2,0),(3,0),(3,1),(4,3)`. After scaling `x=3y`, their power sums obey
+`S_m = a S_(m-2) + b S_(m-3)`. The row `(a,b)=(1,0)` attains every even exponent, while the two rows
+`(3,1)` and `(4,3)` have modulo-`9` period words `3,0,6` and `8,0,5,6,2,3`; together they attain all three odd
+residue classes modulo `6`. The case `m=1` is excluded because every trace is zero. The old, disproved factorial
+expression agrees with the true minimum exactly when `s_3(m) + [m odd] = 2`. Equivalently, for `m >= 2`, this
+means `m=3^j` with `j>=1`, or `m=3^i+3^j` with `0<=i<=j`; prime powers are only part of that locus. This theorem
+is specific to `q=3` and does not settle the sampled `q>=5` minima. See the
+[GAP witness](analysis/w33_pass541_q3_all_m_recurrence.g),
+[certificate](data/w33_pass541_q3_all_m_recurrence.json), and
+[proof synthesis](PASS541_Q3_ALL_M_RECURRENCE_THEOREM.md).
+
+Pass 540 supplies the complementary orbit-level frontier by resolving the unexplained `q=3` full-support spectral
+merge. The `16` full-support sections are the
 sign words of a four-cube. In a fixed oriented antipodal frame, coordinate product splits them into two
 `8`-vertex demicubes; intrinsically the separator is the frame-corrected Moore–Dickson coefficient. These are
 exactly the two `D_4` half-spin chiralities. Reorienting the frame may swap their labels, not the two-fiber split. Their common

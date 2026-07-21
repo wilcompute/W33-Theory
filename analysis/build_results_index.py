@@ -128,6 +128,12 @@ PINNED_RESULTS = {
     "2051277771273019233341050472890368",
     "2028949923625",
     "16231599389",
+    # Pass 541: these formulas are structurally distinctive but fall outside
+    # the generic number/code/sequence token grammars.  Pins keep the infinite
+    # q=3 theorem and its exact agreement locus searchable by result.
+    "2(m+[modd])",
+    "s_3(m)+[modd]=2",
+    "m=3^i+3^j",
 }
 SKIP_DIRS = {".git", "node_modules", ".venv", "data"}
 

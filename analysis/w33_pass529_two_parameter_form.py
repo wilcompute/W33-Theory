@@ -31,7 +31,7 @@ Whether the q = 5 image is small once quotiented by Sp(2,F_5) is untested.
 THE CLOSING STATEMENT.  With Pass 527's deflation and Pass 528's image, the
 whole arc reduces to one question -- given charpoly(D), compute
 v_lambda(sum_j nu_j^m).  At q = 3 six lattice points reduce it to six exact
-recurrences, but their all-m valuation minimum is still open; at q >= 5 even
+recurrences.  Pass 541 later closes their all-m valuation minimum; at q >= 5
 the image is large and coefficient valuations do not suffice.  That is the
 sentence the paper should end on, and this pass puts it there.
 """
@@ -117,8 +117,8 @@ def part_B_closing(checks):
         "statement": (
             "Given charpoly(D), compute v_lambda(sum_j nu_j^m).  At q = 3 six "
             "lattice points (a,b) in {(0,0),(1,0),(2,0),(3,0),(3,1),(4,3)} under "
-            "x^3 - 9a x - 27b reduce the problem to six recurrences; the all-m "
-            "valuation minimum remains open.  At q >= 5, coefficient "
+            "x^3 - 9a x - 27b reduce the problem to six recurrences.  Pass 541 "
+            "later proves their all-m valuation minimum.  At q >= 5, coefficient "
             "valuations demonstrably do not suffice -- 34 valuation profiles carry "
             "52 distinct trace vectors."
         ),
@@ -127,9 +127,9 @@ def part_B_closing(checks):
             "form, a transfer matrix and a covariance theorem.  Pass 527 "
             "showed the transfer matrix carries exactly the information the "
             "block already carried, and Pass 528 showed the orbit machinery "
-            "computes a six-row table.  What survives as a QUESTION is one "
-            "sentence, and a reader is better served by it than by the "
-            "machinery that led there."
+            "computes a six-row table.  Pass 541 later answers its q=3 all-m "
+            "question; the corresponding q>=5 problem survives.  A reader is "
+            "better served by that boundary than by the machinery that led there."
         ),
     }
 

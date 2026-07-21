@@ -69,20 +69,38 @@ enumerate --- and the minimum is therefore decidable. Enumerating it gives
 \mathbf{24},\;24 \qquad(m=2,\dots,12),
 \]
 against \eqref{eq:C}'s $4,8,8,10,12,14,14,20,20,22,24$. The truth exceeds the
-conjecture by $2$ at $m=5,7,8,11$, and fits
+conjecture by $2$ at $m=5,7,8,11$.  The finite data first suggested
 \[
 T(m)=2\bigl(m+[m\text{ odd}]\bigr)
 \]
-at all nineteen exponents up to $m=20$, where \eqref{eq:C} fails at eleven.
+and this is now a theorem for every $m\ge2$.  Indeed the $81$ sections have
+only six characteristic polynomials $x^3-9ax-27b$.  After $x=3y$, their power
+sums obey
+\[
+ S_0=3,\quad S_1=0,\quad S_2=2a,\quad
+ S_m=aS_{m-2}+bS_{m-3}.
+\]
+The row $(a,b)=(1,0)$ attains the even minimum.  For odd $m$, the two
+nonzero recurrences have repeating states modulo $9$ with words
+$(3,0,6)$ and $(8,0,5,6,2,3)$, which cover the three odd residue classes
+modulo $6$.  Thus this is an infinite recurrence argument, not an extrapolation
+from the nineteen measured exponents.
 
 Now the agreement locus. Since $2v_3(m!)=m-s_3(m)$ with $s_3$ the base-$3$
-digit sum, the two expressions differ by $s_3(m)+[m\text{ odd}]-2$, so
+digit sum, the two expressions differ by $s_3(m)+[m\text{ odd}]-2$, so for
+$m\ge2$
 \[
-A=\{\,m:\ s_p(m)+[m\text{ odd}]=2\,\}.
+A=\{\,m:\ s_3(m)+[m\text{ odd}]=2\,\}
+ =\{3^j:j\ge1\}\cup
+   \{3^i+3^j:0\le i\le j\}.
 \]
-Every prime power $m=p^{j}$ has $s_p(m)=1$ and is odd, hence lies in $A$. So
-does $m=q$ for every prime $q=p$. \emph{Every test that had been run was at
-$m=q$, at $m=p^{j}$, or at two composite ring sizes} --- all inside $A$.
+The classification is immediate from $m\equiv s_3(m)\pmod2$: the odd branch
+has ternary digit sum one, and the even branch digit sum two.  Every power
+$m=3^j$ used in the exact $q=3$ tower therefore lies in $A$, but it is only
+one branch of $A$.  Across residue characteristics, the celebrated $m=p$ test
+has the same digit-sum-one shape.  The larger-ring runs were attainment tests,
+not exhaustive minimisations, and hence could confirm but could not refute the
+minimum formula.
 
 Why those? Because the analytic machinery available decomposes
 $\operatorname{tr}D^m$ into classes indexed by the divisors of $m$, and at
@@ -164,6 +182,8 @@ congruences; the underlying computations and their certificates are archived
 with that work, together with the witness programs that produced both the
 original confirmations and the refutations. The refutations were found in
 passes 519, 522 and 523 of that programme, within a single week, after the
-failure mode was named in pass 521.
+failure mode was named in pass 521.  Pass 541 later upgraded the first
+example's finite replacement pattern to the all-exponent recurrence theorem
+and classified its agreement locus explicitly.
 
 \end{document}

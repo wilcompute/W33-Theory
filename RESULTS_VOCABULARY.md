@@ -130,13 +130,54 @@ the same factor at arbitrary \(p\) or for nonrational coefficients.
 **Status and boundary:** Pass 487 delimits the character-order/chain-ring
 scope of the sharp determinant congruence. Pass 535 translates the \(q=3\)
 coefficient bounds into the familiar divisibilities \(9\mid e_2\) and
-\(27\mid e_3\). Do not silently replace a \(\lambda\)-adic statement by a
-\(p\)-adic one without first establishing rationality and the ramification
-factor.
+\(27\mid e_3\). Pass 541 uses rationality at \(q=3\) to convert the complete
+power-sum recurrence into an all-exponent \(\lambda\)-valuation theorem. Do
+not silently replace a \(\lambda\)-adic statement by a \(p\)-adic one without
+first establishing rationality and the ramification factor.
 
 **Primary artifacts:** [Pass 483](analysis/w33_pass483_modlambda_qplus1_theorem.py),
-[Pass 487](analysis/w33_pass487_scope_of_the_law_and_det_hunt.py), and
-[Pass 535](analysis/w33_pass535_image_closed.py).
+[Pass 487](analysis/w33_pass487_scope_of_the_law_and_det_hunt.py),
+[Pass 535](analysis/w33_pass535_image_closed.py), and
+[Pass 541](analysis/w33_pass541_q3_all_m_recurrence.g).
+
+## q=3 all-exponent trace-valuation law
+
+**Aliases:** all-\(m\) minimum, all-exponent \(q=3\) law, six-cubic recurrence
+theorem, mod-9 recurrence cover, finite-clock proof, exact factorial-agreement
+locus.
+
+**Canonical object:** over all 81 \(q=3\) sections, for every integer
+\(m\ge2\),
+
+\[
+ \min_c v_\lambda\!\left(\operatorname{tr}D_c^m\right)
+ =2\bigl(m+[m\text{ odd}]\bigr).
+\]
+
+The exponent \(m=1\) is excluded because every section has trace zero. The
+six realized characteristic polynomials are
+\(x^3-9ax-27b\), with
+\((a,b)\in\{(0,0),(1,0),(2,0),(3,0),(3,1),(4,3)\}\). After \(x=3y\), their
+power sums satisfy
+\(S_m=aS_{m-2}+bS_{m-3}\). The row \((1,0)\) attains every even exponent.
+Modulo 9, the \((3,1)\) recurrence has period word `3,0,6`, while the
+\((4,3)\) tail has period word `8,0,5,6,2,3`; together they attain all odd
+residue classes modulo 6. Repetition of these finite recurrence states is the
+infinite proof step; the sweep through \(m=60\) is only regression control.
+
+**Status and boundary:** Pass 541 closes the finite-window noncancellation
+question left open by Passes 521--523 and 528, within the repo's complete
+\(q=3\) six-cubic image. The earlier factorial expression remains false. It
+agrees with the true minimum exactly when
+\(s_3(m)+[m\text{ odd}]=2\), equivalently, for \(m\ge2\), exactly when
+\(m=3^j\) with \(j\ge1\), or \(m=3^i+3^j\) with \(0\le i\le j\). The
+prime-power tower is therefore contained in, but does not exhaust, the
+agreement locus. No \(q\ge5\), chain-ring, or uniform composite-\(m\) cyclic
+relation-space theorem follows from this recurrence calculation.
+
+**Primary artifacts:** [Pass 541](analysis/w33_pass541_q3_all_m_recurrence.g),
+its [certificate](data/w33_pass541_q3_all_m_recurrence.json), and the
+[proof synthesis](PASS541_Q3_ALL_M_RECURRENCE_THEOREM.md).
 
 ## Maximal real cyclotomic subring
 

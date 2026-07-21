@@ -98,8 +98,10 @@ def elementary_from_traces(C, traces, n):
                 term = tuple(-x for x in term)
             acc = C.add(acc, term)
         E[k] = acc
-    return {k: (vl(C, E[k]) - (0 if not any(E[k]) else 0), E[k], fact[k])
-            for k in range(1, n + 1)}
+    return {
+        k: (vl(C, E[k]) - (0 if not any(E[k]) else 0), E[k], fact[k])
+        for k in range(1, n + 1)
+    }
 
 
 def newton_slopes(vals, n):
@@ -117,8 +119,7 @@ def newton_slopes(vals, n):
         hull.append(pt)
     segs = []
     for (x1, y1), (x2, y2) in zip(hull, hull[1:]):
-        segs.append({"length": x2 - x1,
-                     "slope_numer": y1 - y2, "slope_denom": x2 - x1})
+        segs.append({"length": x2 - x1, "slope_numer": y1 - y2, "slope_denom": x2 - x1})
     return segs
 
 
@@ -137,8 +138,7 @@ def part_A_exhaustive(checks):
         nsec += 1
         B = H.block(H.full_sec(offs))
         D = [[C.sub(B[i][j], F[i][j]) for j in range(q)] for i in range(q)]
-        Dm = [[C.rat(1) if i == j else C.zero() for j in range(q)]
-              for i in range(q)]
+        Dm = [[C.rat(1) if i == j else C.zero() for j in range(q)] for i in range(q)]
         for m in range(1, 21):
             Dm = matmul(Dm, D, C)
             t = trace(Dm, C)
@@ -156,19 +156,26 @@ def part_A_exhaustive(checks):
             fit_ok = False
         if got != law:
             law_fails.append(m)
-        rows[str(m)] = {"exhaustive_min": got, "factorial_law": law,
-                        "fit_2m_plus_2odd": fit}
+        rows[str(m)] = {
+            "exhaustive_min": got,
+            "factorial_law": law,
+            "fit_2m_plus_2odd": fit,
+        }
     checks["q3_enumerated_completely"] = nsec == 81
     checks["fit_holds_on_every_exponent_to_20"] = fit_ok
     checks["law_fails_on_a_majority_of_exponents"] = len(law_fails) > 19 // 2
-    return {"sections": nsec, "rows": rows,
-            "law_fails_at": law_fails,
-            "law_holds_at": [m for m in range(2, 21) if m not in law_fails],
-            "reading": (
-                "Extending Pass 519's table to m = 20: the closed fit "
-                "2(m + [m odd]) holds at all 19 exponents, and the factorial "
-                "law fails at 11 of them.  The exponents where the law does "
-                "hold are exactly those with s_3(m) + [m odd] = 2.")}
+    return {
+        "sections": nsec,
+        "rows": rows,
+        "law_fails_at": law_fails,
+        "law_holds_at": [m for m in range(2, 21) if m not in law_fails],
+        "reading": (
+            "Extending Pass 519's table to m = 20: the closed fit "
+            "2(m + [m odd]) holds at all 19 exponents, and the factorial "
+            "law fails at 11 of them.  The exponents where the law does "
+            "hold are exactly those with s_3(m) + [m odd] = 2."
+        ),
+    }
 
 
 # ------------------------------------------------------------ part B
@@ -212,36 +219,42 @@ def part_B_polygon_q3(checks):
             "sections": profile[key],
             "segments": segs,
             "eigenvalue_valuations": sorted(eig),
-            "single_slope": len(segs) == 1}
-    checks["e1_vanishes_on_every_section"] = all(
-        eval(k)[0] >= INF for k in profile)
+            "single_slope": len(segs) == 1,
+        }
+    checks["e1_vanishes_on_every_section"] = all(eval(k)[0] >= INF for k in profile)
     checks["no_section_has_the_profile_a_first_draft_assumed"] = not any(
-        eval(k)[1:] == (4, 6) for k in profile)
+        eval(k)[1:] == (4, 6) for k in profile
+    )
     checks["some_profile_has_an_eigenvalue_of_valuation_2"] = any(
-        2.0 in v["eigenvalue_valuations"] for v in polys.values())
-    return {"profiles": profile,
-            "polygons": polys,
-            "retracted": (
-                "We retract the following, which was not proved.  A first draft "
-                "asserted that the minimising "
-                "profile is "
-                "(v(e_2), v(e_3)) = (4, 6), giving a single slope-2 segment "
-                "and hence 'no factorial is possible'.  That profile DOES NOT "
-                "OCCUR: the four profiles are (4, inf) x 32, (4, 8) x 16, "
-                "(6, inf) x 8 and (6, 6) x 24.  Their polygons are not "
-                "uniformly single-slope -- (4,8) splits into a slope-4 segment "
-                "and a slope-2 segment -- so the explanation is withdrawn."),
-            "what_survives": (
-                "An observation, not a proof: the eigenvalue valuations are CONSTANTS in {2, 3, 4} together "
-                "with zero eigenvalues where det D = 0; none of them depends "
-                "on m.  So tr(D^m) = sum_i mu_i^m has v_lambda >= 2m, and the "
-                "exhaustive truth 2(m + [m odd]) is AFFINE in m plus parity.  "
-                "A v_lambda(m!) term is not affine -- it grows like "
-                "m - s_p(m) -- so producing it would need cancellation that "
-                "increases with m.  None is observed.  This is an observation "
-                "about the measured values, NOT a derivation: no mechanism is "
-                "claimed, and the reason the parity correction is exactly 2 is "
-                "not established here.")}
+        2.0 in v["eigenvalue_valuations"] for v in polys.values()
+    )
+    return {
+        "profiles": profile,
+        "polygons": polys,
+        "retracted": (
+            "We retract the following, which was not proved.  A first draft "
+            "asserted that the minimising "
+            "profile is "
+            "(v(e_2), v(e_3)) = (4, 6), giving a single slope-2 segment "
+            "and hence 'no factorial is possible'.  That profile DOES NOT "
+            "OCCUR: the four profiles are (4, inf) x 32, (4, 8) x 16, "
+            "(6, inf) x 8 and (6, 6) x 24.  Their polygons are not "
+            "uniformly single-slope -- (4,8) splits into a slope-4 segment "
+            "and a slope-2 segment -- so the explanation is withdrawn."
+        ),
+        "what_survives": (
+            "An observation, not a proof: the eigenvalue valuations are CONSTANTS in {2, 3, 4} together "
+            "with zero eigenvalues where det D = 0; none of them depends "
+            "on m.  So tr(D^m) = sum_i mu_i^m has v_lambda >= 2m, and the "
+            "exhaustive truth 2(m + [m odd]) is AFFINE in m plus parity.  "
+            "A v_lambda(m!) term is not affine -- it grows like "
+            "m - s_p(m) -- so producing it would need cancellation that "
+            "increases with m.  None is observed.  This is an observation "
+            "about the measured values, NOT a derivation: no mechanism is "
+            "claimed, and the reason the parity correction is exactly 2 is "
+            "not established here."
+        ),
+    }
 
 
 # ------------------------------------------------------------ part C
@@ -265,22 +278,28 @@ def part_C_larger_q(checks):
                     if v < pred:
                         below = True
                     best = v if best is None else min(best, v)
-            rows[f"p{p_}_m{m}"] = {"law": pred, "sampled_min": best,
-                                   "attained": best == pred}
+            rows[f"p{p_}_m{m}"] = {
+                "law": pred,
+                "sampled_min": best,
+                "attained": best == pred,
+            }
             if best != pred:
                 ok = False
-    notattained = {k: v["sampled_min"] - v["law"]
-                   for k, v in rows.items() if not v["attained"]}
+    notattained = {
+        k: v["sampled_min"] - v["law"] for k, v in rows.items() if not v["attained"]
+    }
     checks["nothing_below_the_law_at_q5_or_q7"] = not below
     checks["non_attainment_recorded_rather_than_asserted_away"] = True
     checks["q5_shows_non_attainment_at_some_exponent"] = bool(
-        [k for k in notattained if k.startswith("p5")])
+        [k for k in notattained if k.startswith("p5")]
+    )
     # polygons at q = 5
     polys = {}
     for s in (52000, 52001, 52002):
         R, C, q, D, dcoef, rho = P511.setup(5, s)
-        traces, Dm = {}, [[C.rat(1) if i == j else C.zero() for j in range(q)]
-                          for i in range(q)]
+        traces, Dm = {}, [
+            [C.rat(1) if i == j else C.zero() for j in range(q)] for i in range(q)
+        ]
         for k in range(1, q + 1):
             Dm = matmul(Dm, D, C)
             traces[k] = trace(Dm, C)
@@ -288,38 +307,44 @@ def part_C_larger_q(checks):
         vals = {q: 0}
         for k in range(1, q + 1):
             ek_v = E[k][0]
-            vals[q - k] = (INF if ek_v >= INF
-                           else ek_v - vlam_factorial_int(E[k][2], 5))
+            vals[q - k] = INF if ek_v >= INF else ek_v - vlam_factorial_int(E[k][2], 5)
         segs = newton_slopes(vals, q)
-        polys[str(s)] = {"coefficient_valuations":
-                         {str(i): (None if vals[i] >= INF else vals[i])
-                          for i in sorted(vals)},
-                         "segments": segs,
-                         "single_slope": len(segs) == 1}
+        polys[str(s)] = {
+            "coefficient_valuations": {
+                str(i): (None if vals[i] >= INF else vals[i]) for i in sorted(vals)
+            },
+            "segments": segs,
+            "single_slope": len(segs) == 1,
+        }
     checks["q5_polygon_computed"] = len(polys) == 3
-    return {"rows": rows, "q5_polygons": polys,
-            "not_attained_gap": notattained,
-            "finding": (
-                "AT q = 5 THE LAW IS NOT ATTAINED AT m = 10 AND m = 14.  With "
-                "250 sampled sections here (and 600 in a separate probe) the "
-                "minimum sits exactly 2 above the law at those exponents, the "
-                "same gap as at q = 3, while m = 6, 8, 12 attain it.  "
-                "Sampling CANNOT refute -- the true minimum is at most what a "
-                "sample shows, and the section space at q = 5 has 5^12 "
-                "elements -- so q = 5 remains undecided.  But the evidence no "
-                "longer supports the reading that q = 3 is special, and that "
-                "reading, offered in Pass 519, is withdrawn as the likelier "
-                "of the two."),
-            "reading": (
-                "Confirming the law at one (q, m) needs only a single "
-                "attaining section plus the never-below check; refuting it "
-                "needs the whole section space.  That asymmetry is why q = 3 "
-                "is decided and q = 5, 7 are not.  Here the law is attained at "
-                "every tested exponent and nothing falls below it, so no "
-                "refutation exists at q = 5 or 7 in this range.  The q = 5 "
-                "polygons are reported as a measurement: whether they carry "
-                "more than one slope is what would allow a factorial term to "
-                "exist at all.")}
+    return {
+        "rows": rows,
+        "q5_polygons": polys,
+        "not_attained_gap": notattained,
+        "finding": (
+            "AT q = 5 THE LAW IS NOT ATTAINED AT m = 10 AND m = 14.  With "
+            "250 sampled sections here (and 600 in a separate probe) the "
+            "minimum sits exactly 2 above the law at those exponents, the "
+            "same gap as at q = 3, while m = 6, 8, 12 attain it.  "
+            "Sampling CANNOT refute -- the true minimum is at most what a "
+            "sample shows, and the section space at q = 5 has 5^12 "
+            "elements -- so q = 5 remains undecided.  But the evidence no "
+            "longer supports the reading that q = 3 is special, and that "
+            "reading, offered in Pass 519, is withdrawn as the likelier "
+            "of the two."
+        ),
+        "reading": (
+            "Confirming the law at one (q, m) needs only a single "
+            "attaining section plus the never-below check; refuting it "
+            "needs the whole section space.  That asymmetry is why q = 3 "
+            "is decided and q = 5, 7 are not.  Here the law is attained at "
+            "every tested exponent and nothing falls below it, so no "
+            "refutation exists at q = 5 or 7 in this range.  The q = 5 "
+            "polygons are reported as a measurement: whether they carry "
+            "more than one slope is what would allow a factorial term to "
+            "exist at all."
+        ),
+    }
 
 
 def vlam_factorial_int(n, p):
@@ -338,38 +363,46 @@ def part_D_audit(checks):
     """Which committed claims depended on the factorial law?"""
     tex = (ROOT / "w33_paper.tex").read_text(encoding="utf-8", errors="ignore")
     note = (ROOT / "papers" / "heisenberg_weyl_determinant_law.tex").read_text(
-        encoding="utf-8", errors="ignore")
+        encoding="utf-8", errors="ignore"
+    )
     dependents = {
         "P507 factorial law => determinant law": (
             "CONDITIONAL.  The reduction is valid, but its input is now known "
             "false at q = 3.  The determinant law itself was verified "
             "independently and exhaustively at q = 3 (Pass 473: d in "
             "{-16, 11}), so the CONCLUSION survives; only this route to it "
-            "does not."),
-        "P507 residual v_lambda(q!) >= 2": (
-            "CONDITIONAL on the same input."),
+            "does not."
+        ),
+        "P507 residual v_lambda(q!) >= 2": ("CONDITIONAL on the same input."),
         "P516 prime-power tower as confirmation": (
-            "REINTERPRETED.  The tower is exactly the agreement locus of the "
+            "REINTERPRETED.  The tower lies inside the agreement locus of the "
             "true q = 3 law and the factorial law, so its four rungs confirm "
-            "both and distinguish neither."),
+            "both and distinguish neither.  Pass 541 later classifies the "
+            "larger locus exactly."
+        ),
         "P519 excess E(m) = [m odd] + v_lambda(m!)": (
             "FALSE at q = 3, by the same exhaustion; the transfer-matrix "
-            "identity and T = 0 mod lambda that surround it are unaffected."),
+            "identity and T = 0 mod lambda that surround it are unaffected."
+        ),
         "P509/P517 factorial-law profile measurements": (
             "SOUND AS MEASUREMENTS.  They report minima over sampled sections "
             "and never claimed exhaustion; what changes is the interpretation, "
-            "not the numbers."),
+            "not the numbers."
+        ),
     }
     checks["erratum_present_in_the_note"] = "erratum" in note.lower()
     checks["ledger_marks_the_law_killed"] = "FALSIFIED AT $q{=}3$" in tex
     checks["audit_lists_every_dependent"] = len(dependents) >= 5
-    return {"dependents": dependents,
-            "reading": (
-                "The determinant law -- the paper's original subject -- does "
-                "not fall.  It was proved for f >= 2 unconditionally, verified "
-                "exhaustively at q = 3, and only ONE route to it (through the "
-                "factorial law at m = q) is now conditional.  What falls is a "
-                "description of the power sums that had been believed exact.")}
+    return {
+        "dependents": dependents,
+        "reading": (
+            "The determinant law -- the paper's original subject -- does "
+            "not fall.  It was proved for f >= 2 unconditionally, verified "
+            "exhaustively at q = 3, and only ONE route to it (through the "
+            "factorial law at m = q) is now conditional.  What falls is a "
+            "description of the power sums that had been believed exact."
+        ),
+    }
 
 
 # ------------------------------------------------------------ part E
@@ -379,23 +412,26 @@ def part_E_correction(checks):
     """A bad estimate of mine, corrected."""
     st = P487.RingSetup(3, 2)
     pairs = len(st.pairs)
-    size = 9 ** pairs
-    checks["z9_section_space_is_not_enumerable"] = size > 10 ** 12
-    return {"claimed_previously": 6561,
-            "actual_pairs": pairs,
-            "actual_size": f"9^{pairs}",
-            "digits": len(str(size)),
-            "correction": (
-                "We retract an arithmetic estimate of our own.  I proposed "
-                "exhausting the "
-                "Z/9 section space on the ground "
-                "that it has 9^4 = 6561 elements.  That is wrong: Z/9 has "
-                "q = 9, hence (q^2-1)/2 = 40 inverse-closed pairs and 9^40 "
-                "sections, a 39-digit number.  The q = 3 exhaustion worked "
-                "because q = 3 gives only 4 pairs.  Enumerability scales as "
-                "q^{(q^2-1)/2} and dies immediately after q = 3; the failure "
-                "depth at Z/9 therefore remains a sampled quantity and the "
-                "Pass 519 lesson does NOT transfer to it.")}
+    size = 9**pairs
+    checks["z9_section_space_is_not_enumerable"] = size > 10**12
+    return {
+        "claimed_previously": 6561,
+        "actual_pairs": pairs,
+        "actual_size": f"9^{pairs}",
+        "digits": len(str(size)),
+        "correction": (
+            "We retract an arithmetic estimate of our own.  I proposed "
+            "exhausting the "
+            "Z/9 section space on the ground "
+            "that it has 9^4 = 6561 elements.  That is wrong: Z/9 has "
+            "q = 9, hence (q^2-1)/2 = 40 inverse-closed pairs and 9^40 "
+            "sections, a 39-digit number.  The q = 3 exhaustion worked "
+            "because q = 3 gives only 4 pairs.  Enumerability scales as "
+            "q^{(q^2-1)/2} and dies immediately after q = 3; the failure "
+            "depth at Z/9 therefore remains a sampled quantity and the "
+            "Pass 519 lesson does NOT transfer to it."
+        ),
+    }
 
 
 # ------------------------------------------------------------ main
@@ -428,7 +464,8 @@ def main_payload():
             "exactly 2 above it as at q = 3, over 250 sections here and 600 in "
             "a separate probe.  Sampling cannot refute, so q = 5 remains "
             "undecided; but Pass 519's suggestion that q = 3 might be special "
-            "is withdrawn as the less likely reading."),
+            "is withdrawn as the less likely reading."
+        ),
         "part_A_exhaustive_to_m20": A,
         "part_B_newton_polygon_q3": B,
         "part_C_larger_q": Cc,
@@ -442,8 +479,11 @@ def main_payload():
             "Part C is SAMPLED: it exhibits attaining sections at q = 5 and 7, "
             "which CONFIRMS the law at those points, but confirmation is not "
             "exhaustion and no refutation at q >= 5 is claimed either way.  "
+            "Pass 541 later proves the q = 3 replacement for every m >= 2; "
+            "that later theorem does not change this pass's larger-q boundary.  "
             "Part D is an editorial audit.  Part E corrects an arithmetic "
-            "error of mine from the previous round."),
+            "error of mine from the previous round."
+        ),
         "checks": {k: bool(v) for k, v in checks.items()},
     }
 
@@ -461,9 +501,15 @@ def main():
     else:
         a.output.parent.mkdir(parents=True, exist_ok=True)
         a.output.write_text(text)
-    print(json.dumps({"status": pl["status"],
-                      "checks": sum(pl["checks"].values()),
-                      "total": len(pl["checks"])}))
+    print(
+        json.dumps(
+            {
+                "status": pl["status"],
+                "checks": sum(pl["checks"].values()),
+                "total": len(pl["checks"]),
+            }
+        )
+    )
     return 0 if pl["status"] == "PASS" else 1
 
 

@@ -80,12 +80,11 @@ def build_T(p_, seed):
     n = len(pts)
     T = [[C.zero() for _ in range(n)] for _ in range(n)]
     for P in pts:
-        for v in dcoef:                       # v != 0
+        for v in dcoef:  # v != 0
             om = R.sub(R.mul(P[0], v[1]), R.mul(v[0], P[1]))
             ph = C.from_exp((-R.chi_exp(om)) % p_)
             tgt = (R.add(P[0], v[0]), R.add(P[1], v[1]))
-            T[idx[tgt]][idx[P]] = C.add(T[idx[tgt]][idx[P]],
-                                        C.mul(dcoef[v], ph))
+            T[idx[tgt]][idx[P]] = C.add(T[idx[tgt]][idx[P]], C.mul(dcoef[v], ph))
     return R, C, q, D, T, idx[(R.zero, R.zero)], n
 
 
@@ -98,10 +97,12 @@ def part_A_identity(checks):
     for p_, mmax in ((3, 10), (5, 8), (7, 6)):
         for seed in (7001, 7005):
             R, C, q, D, T, z, n = build_T(p_, seed)
-            Tm = [[C.rat(1) if i == j else C.zero() for j in range(n)]
-                  for i in range(n)]
-            Dm = [[C.rat(1) if i == j else C.zero() for j in range(q)]
-                  for i in range(q)]
+            Tm = [
+                [C.rat(1) if i == j else C.zero() for j in range(n)] for i in range(n)
+            ]
+            Dm = [
+                [C.rat(1) if i == j else C.zero() for j in range(q)] for i in range(q)
+            ]
             agree, gaps = True, []
             for m in range(1, mmax + 1):
                 Tm = matmul(Tm, T, C)
@@ -117,20 +118,28 @@ def part_A_identity(checks):
             if any(g != (p_ - 1) for g in gaps):
                 gap_ok = False
             rows[f"p{p_}_s{seed}"] = {
-                "states": n, "block": q, "m_up_to": mmax,
+                "states": n,
+                "block": q,
+                "m_up_to": mmax,
                 "identity_exact": agree,
-                "valuation_gap_is_v_lambda_q": sorted(set(gaps))}
+                "valuation_gap_is_v_lambda_q": sorted(set(gaps)),
+            }
     checks["transfer_identity_exact"] = ok
     checks["valuation_gap_equals_v_lambda_q"] = gap_ok
-    return {"rows": rows,
-            "identity": ("tr(D^m) = q [T^m]_{0,0} with "
-                         "T[P+v,P] = d_v zeta^{-omega(P,v)} for v != 0"),
-            "derivation": (
-                "rho(v_1)...rho(v_m) = zeta^{-Omega} rho(sum v_i) with "
-                "Omega = sum_{i<j} omega(v_i,v_j) = sum_j omega(P_{j-1}, v_j) "
-                "for partial sums P_j, so the weight of an m-tuple factorises "
-                "along the walk it traces; the trace picks out walks returning "
-                "to 0, where rho(0) = I contributes q")}
+    return {
+        "rows": rows,
+        "identity": (
+            "tr(D^m) = q [T^m]_{0,0} with "
+            "T[P+v,P] = d_v zeta^{-omega(P,v)} for v != 0"
+        ),
+        "derivation": (
+            "rho(v_1)...rho(v_m) = zeta^{-Omega} rho(sum v_i) with "
+            "Omega = sum_{i<j} omega(v_i,v_j) = sum_j omega(P_{j-1}, v_j) "
+            "for partial sums P_j, so the weight of an m-tuple factorises "
+            "along the walk it traces; the trace picks out walks returning "
+            "to 0, where rho(0) = I contributes q"
+        ),
+    }
 
 
 # ------------------------------------------------------------ part B
@@ -146,18 +155,23 @@ def part_B_free_term(checks):
             mn = min(vs) if vs else None
             if mn is None or mn < 1:
                 ok = False
-            rows[f"p{p_}_s{seed}"] = {"states": n,
-                                      "nonzero_entries": len(vs),
-                                      "min_entry_valuation": mn}
+            rows[f"p{p_}_s{seed}"] = {
+                "states": n,
+                "nonzero_entries": len(vs),
+                "min_entry_valuation": mn,
+            }
     checks["every_entry_of_T_is_divisible_by_lambda"] = ok
-    return {"rows": rows,
-            "consequence": (
-                "T = 0 mod lambda, so every product of m copies has "
-                "v_lambda >= m and in particular "
-                "v_lambda([T^m]_{0,0}) >= m with no work.  The m in the "
-                "factorial law is therefore free, and the law's entire "
-                "remaining content is the excess E(m) = "
-                "v_lambda([T^m]_{0,0}) - m.")}
+    return {
+        "rows": rows,
+        "consequence": (
+            "T = 0 mod lambda, so every product of m copies has "
+            "v_lambda >= m and in particular "
+            "v_lambda([T^m]_{0,0}) >= m with no work.  The m in the "
+            "factorial law is therefore free, and the law's entire "
+            "remaining content is the excess E(m) = "
+            "v_lambda([T^m]_{0,0}) - m."
+        ),
+    }
 
 
 # ------------------------------------------------------------ part C
@@ -171,8 +185,10 @@ def part_C_exhaustive_q3(checks):
     The factorial law is stated as an equality for the MINIMUM over sections,
     so at q = 3 it is decidable.  It fails.
     """
-    R, C = _load("p489", "w33_pass489_frobenius_generality.py").LocalFrobenius(
-        3, 1), None
+    R, C = (
+        _load("p489", "w33_pass489_frobenius_generality.py").LocalFrobenius(3, 1),
+        None,
+    )
     P489 = _load("p489", "w33_pass489_frobenius_generality.py")
     P487b = _load("p487b", "w33_pass487_scope_of_the_law_and_det_hunt.py")
     R, C = P489.LocalFrobenius(3, 1), P487b.Cyc(3, 1)
@@ -180,13 +196,13 @@ def part_C_exhaustive_q3(checks):
     q = H.q
     F = H.block(H.full_sec(tuple(R.zero for _ in H.pairs)))
     import itertools as it
+
     best, nsec = {}, 0
     for offs in it.product(R.elems, repeat=len(H.pairs)):
         nsec += 1
         B = H.block(H.full_sec(offs))
         D = [[C.sub(B[i][j], F[i][j]) for j in range(q)] for i in range(q)]
-        Dm = [[C.rat(1) if i == j else C.zero() for j in range(q)]
-              for i in range(q)]
+        Dm = [[C.rat(1) if i == j else C.zero() for j in range(q)] for i in range(q)]
         for m in range(1, 13):
             Dm = matmul(Dm, D, C)
             t = trace(Dm, C)
@@ -204,35 +220,46 @@ def part_C_exhaustive_q3(checks):
             law_ok = False
         if got != fit:
             fit_ok = False
-        rows[str(m)] = {"exhaustive_min": got, "factorial_law": law,
-                        "closed_fit_2m_plus_2_odd": fit,
-                        "law_agrees": got == law}
+        rows[str(m)] = {
+            "exhaustive_min": got,
+            "factorial_law": law,
+            "closed_fit_2m_plus_2_odd": fit,
+            "law_agrees": got == law,
+        }
     disagree = [m for m in rows if not rows[m]["law_agrees"]]
     checks["q3_section_space_enumerated_completely"] = nsec == 81
     checks["factorial_law_FAILS_somewhere_at_q3"] = not law_ok
     checks["exhaustive_q3_matches_2m_plus_2_odd"] = fit_ok
-    return {"sections_enumerated": nsec, "rows": rows,
-            "exponents_where_the_law_fails": sorted(disagree, key=int),
-            "verdict": (
-                "REFUTATION, BY EXHAUSTION.  At q = 3 the section space has "
-                "exactly 81 elements, so the factorial law -- an equality for "
-                "the minimum over sections -- is decidable, and it is FALSE at "
-                "m = 5, 7, 8, 11, where the true minimum exceeds it by 2.  The "
-                "exhaustive minimum fits v_lambda(tr D^m) = 2(m + [m odd]) at "
-                "all eleven exponents m = 2..12.  Since "
-                "2 v_3(m!) = m - s_3(m) with s_3 the base-3 digit sum, the two "
-                "formulas differ by s_3(m) + [m odd] - 2, which vanishes "
-                "exactly when s_3(m) + [m odd] = 2 -- a set that contains "
-                "every m = 3^j.  The prime-power tower is therefore precisely "
-                "the locus where the two agree, which is why four rungs of "
-                "confirmation (8, 20, 56, 164) could not detect this."),
-            "scope": (
-                "This is q = 3 only.  At p = 5 and p = 7 the sampled minima in "
-                "part D match the factorial law for every exponent tested, so "
-                "the failure is NOT known to be universal.  Whether q = 3 is "
-                "special -- its section space is the smallest possible, 81 "
-                "elements -- or the law needs revision for all q is OPEN, and "
-                "no claim either way is made here.")}
+    return {
+        "sections_enumerated": nsec,
+        "rows": rows,
+        "exponents_where_the_law_fails": sorted(disagree, key=int),
+        "verdict": (
+            "REFUTATION, BY EXHAUSTION.  At q = 3 the section space has "
+            "exactly 81 elements, so the factorial law -- an equality for "
+            "the minimum over sections -- is decidable, and it is FALSE at "
+            "m = 5, 7, 8, 11, where the true minimum exceeds it by 2.  The "
+            "exhaustive minimum fits v_lambda(tr D^m) = 2(m + [m odd]) at "
+            "all eleven exponents m = 2..12.  Since "
+            "2 v_3(m!) = m - s_3(m) with s_3 the base-3 digit sum, the two "
+            "formulas differ by s_3(m) + [m odd] - 2, which vanishes "
+            "exactly when s_3(m) + [m odd] = 2 -- a set that contains "
+            "every m = 3^j.  Thus the prime-power tower lies inside the "
+            "agreement locus, which is why four rungs of confirmation "
+            "(8, 20, 56, 164) could not detect the failure.  Pass 541 "
+            "later proves the q=3 replacement for every m>=2 and "
+            "classifies the whole locus as powers of 3 together with "
+            "sums of two powers of 3."
+        ),
+        "scope": (
+            "This is q = 3 only.  At p = 5 and p = 7 the sampled minima in "
+            "part D match the factorial law for every exponent tested, so "
+            "the failure is NOT known to be universal.  At this pass, "
+            "whether q = 3 was special or the law needed revision for all "
+            "q remained open.  Pass 541 later closes the q=3 all-m problem; "
+            "the global q>=5 minimum remains outside its scope."
+        ),
+    }
 
 
 def part_D_excess(checks):
@@ -246,8 +273,9 @@ def part_D_excess(checks):
     for p_, mmax, nsec in ((5, 9, 30), (7, 5, 8)):
         for s in range(nsec):
             R, C, q, D, T, z, n = build_T(p_, 41000 + s)
-            Tm = [[C.rat(1) if i == j else C.zero() for j in range(n)]
-                  for i in range(n)]
+            Tm = [
+                [C.rat(1) if i == j else C.zero() for j in range(n)] for i in range(n)
+            ]
             # m = 1 is degenerate: tr D = 0 identically (Pass 473,
             # e_1 = 0), so no section is informative there.
             for m in range(1, mmax + 1):
@@ -267,22 +295,29 @@ def part_D_excess(checks):
             got = best.get((p_, m))
             if got != pred:
                 ok = False
-            rows[f"p{p_}_m{m}"] = {"predicted_excess": pred,
-                                   "measured_min_excess": got,
-                                   "sections": nsec}
+            rows[f"p{p_}_m{m}"] = {
+                "predicted_excess": pred,
+                "measured_min_excess": got,
+                "sections": nsec,
+            }
     checks["excess_attains_the_prediction_at_p5_and_p7"] = ok
     checks["excess_never_falls_below_the_prediction"] = never_below
-    return {"rows": rows,
-            "statement": ("E(m) = v_lambda([T^m]_{0,0}) - m = "
-                          "[m odd] + v_lambda(m!), as a minimum over "
-                          "sections"),
-            "reading": (
-                "This is the factorial law with its two trivial pieces "
-                "removed: the v_lambda(q) prefactor and the m that lambda | T "
-                "supplies.  What is left to prove is a statement about the "
-                "excess of one entry of one matrix, and it is strictly "
-                "smaller than the statement this programme has carried since "
-                "Pass 505.  It is still a measurement, not a proof.")}
+    return {
+        "rows": rows,
+        "statement": (
+            "E(m) = v_lambda([T^m]_{0,0}) - m = "
+            "[m odd] + v_lambda(m!), as a minimum over "
+            "sections"
+        ),
+        "reading": (
+            "This is the factorial law with its two trivial pieces "
+            "removed: the v_lambda(q) prefactor and the m that lambda | T "
+            "supplies.  What is left to prove is a statement about the "
+            "excess of one entry of one matrix, and it is strictly "
+            "smaller than the statement this programme has carried since "
+            "Pass 505.  It is still a measurement, not a proof."
+        ),
+    }
 
 
 # ------------------------------------------------------------ part D
@@ -294,8 +329,9 @@ def part_E_reconciliation(checks):
     for p_, m in ((3, 6), (3, 9), (5, 5)):
         for seed in (7001, 7005):
             R, C, q, D, T, z, n = build_T(p_, seed)
-            Tm = [[C.rat(1) if i == j else C.zero() for j in range(n)]
-                  for i in range(n)]
+            Tm = [
+                [C.rat(1) if i == j else C.zero() for j in range(n)] for i in range(n)
+            ]
             for _ in range(m):
                 Tm = matmul(Tm, T, C)
             viaT = C.mul(C.rat(q), Tm[z][z])
@@ -308,16 +344,19 @@ def part_E_reconciliation(checks):
                 ok = False
             rows[f"p{p_}_m{m}_s{seed}"] = {"transfer_equals_block": same}
     checks["transfer_and_block_agree_on_every_cell"] = ok
-    return {"rows": rows,
-            "reading": (
-                "A closed walk of length m from 0 to 0 is exactly a zero-sum "
-                "m-tuple, and the cyclic rotation that generated the orbit "
-                "classes of Passes 510-517 is rotation of the walk's starting "
-                "point.  So the period-d classes are the cycle types of closed "
-                "walks, the sieve is a Moebius inversion over those types, and "
-                "the closed form is the necklace count.  The transfer matrix "
-                "is the object all of those were describing; this part checks "
-                "only that the two computations of the trace agree.")}
+    return {
+        "rows": rows,
+        "reading": (
+            "A closed walk of length m from 0 to 0 is exactly a zero-sum "
+            "m-tuple, and the cyclic rotation that generated the orbit "
+            "classes of Passes 510-517 is rotation of the walk's starting "
+            "point.  So the period-d classes are the cycle types of closed "
+            "walks, the sieve is a Moebius inversion over those types, and "
+            "the closed form is the necklace count.  The transfer matrix "
+            "is the object all of those were describing; this part checks "
+            "only that the two computations of the trace agree."
+        ),
+    }
 
 
 # ------------------------------------------------------------ main
@@ -347,7 +386,8 @@ def main_payload():
             "and v_lambda([T^m]_{0,0}) >= m for free: the factorial law's "
             "leading m is trivial, and the law's entire remaining content is "
             "the excess E(m) = v_lambda([T^m]_{0,0}) - m = "
-            "[m odd] + v_lambda(m!)."),
+            "[m odd] + v_lambda(m!)."
+        ),
         "part_A_transfer_identity": A,
         "part_B_leading_term_is_free": B,
         "part_C_exhaustive_q3_refutation": Cc,
@@ -360,7 +400,8 @@ def main_payload():
             "E(m) = [m odd] + v_lambda(m!) is offered.  What the pass "
             "establishes is that the open problem is now a statement about one "
             "entry of one q^2 x q^2 matrix, with its two trivial summands "
-            "removed."),
+            "removed."
+        ),
         "checks": {k: bool(v) for k, v in checks.items()},
     }
 
@@ -378,9 +419,15 @@ def main():
     else:
         a.output.parent.mkdir(parents=True, exist_ok=True)
         a.output.write_text(text)
-    print(json.dumps({"status": pl["status"],
-                      "checks": sum(pl["checks"].values()),
-                      "total": len(pl["checks"])}))
+    print(
+        json.dumps(
+            {
+                "status": pl["status"],
+                "checks": sum(pl["checks"].values()),
+                "total": len(pl["checks"]),
+            }
+        )
+    )
     return 0 if pl["status"] == "PASS" else 1
 
 

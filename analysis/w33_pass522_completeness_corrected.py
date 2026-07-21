@@ -42,7 +42,8 @@ v_lambda(m) + 2m + 2.  That reproduces the measured 10, 12, 16, 24 at
 m = 3, 5, 7, 9 -- including the jumps at m = 3 and m = 9, which come from the
 factor m and NOT from the spectrum.  Combined with Pass 521, the odd-m minimum
 2(m+1) is attained by (4,8) exactly when p does not divide m, and by (6,6)
-when it does; the (6,6) side remains open.
+when it does.  At this pass the (6,6) side remained open; Pass 541 later
+closes the all-m minimum by exact modular recurrences.
 """
 from __future__ import annotations
 
@@ -239,8 +240,9 @@ def part_D_odd_m(checks):
         "combined": (
             "With Pass 521: the odd-m minimum 2(m+1) is attained by (4,8) "
             "exactly when p does not divide m, since then v_lambda(m) = 0, "
-            "and by (6,6) when p | m.  Why (6,6) supplies 2(m+1) is still "
-            "open."
+            "and by (6,6) when p | m.  This witness did not explain the "
+            "(6,6) side; Pass 541 later closes the all-m minimum by exact "
+            "modular recurrences."
         ),
     }
 
@@ -289,7 +291,8 @@ def main_payload():
             "equalities; a uniform all-cell law is not proved.  Part C is "
             "arithmetic on the previously used "
             "cells.  Part D derives one profile's odd-m valuation and checks "
-            "it against four measured points; the (6,6) profile is untouched."
+            "it against four measured points; the (6,6) profile is untouched "
+            "here and closed later by Pass 541."
         ),
         "checks": {k: bool(v) for k, v in checks.items()},
     }

@@ -1718,6 +1718,7 @@
       <div class="toc-group-title" onclick="this.parentElement.classList.toggle('expanded')">Overview</div>
       <div class="toc-items">
         <a class="toc-item" href="#reader-guide">Reader Guide</a>
+        <a class="toc-item" href="#q3-all-m-theorem">q=3 All-Exponent Theorem</a>
         <a class="toc-item" href="#current-synthesis">Current Synthesis</a>
         <a class="toc-item" href="#hard-computation">Hard Computation Phases</a>
         <a class="toc-item" href="#verified">Verified Results</a>
@@ -1926,6 +1927,9 @@
           <ul class="quick-list">
             <li><a href="#verified">Verified Results</a> &mdash; the concise exact theorem layer.</li>
             <li><a href="#current-synthesis">Current Synthesis</a> &mdash; the present evidence-tiered state.</li>
+            <li><a href="#q3-all-m-theorem">Pass 541</a> &mdash; the exact <code>q=3</code> trace-valuation minimum for
+              every exponent <code>m&ge;2</code>, proved by six cubic recurrences and two finite mod-<code>9</code>
+              clocks.</li>
             <li><a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS540_SYMPLECTIC_CHIRALITY_CHAINRING.md">Pass 540</a> &mdash; the current exact
               chirality separator, full-support <code>q=5</code> witness, and chain-ring Burnside frontier.</li>
             <li><a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/THE_SELECTION_LAYER.md">The Selection Layer</a> &mdash; the audited mathematical
@@ -14496,6 +14500,29 @@
             belongs to the truncated shell; <code>&chi; = -80</code> belongs to the full tetrahedral clique complex. The
             older <code>122</code> zero-mode count is the truncated Dirac-K&auml;hler shell, while the promoted full
             finite package carries <code>82</code> zero modes on the <code>480</code>-dimensional closure.</p>
+        </div>
+        <div class="spotlight" id="q3-all-m-theorem">
+          <p><strong>Exact all-exponent <code>q=3</code> theorem (Pass 541).</strong> For every integer
+            <code>m&ge;2</code>, the minimum over all <code>81</code> sections is</p>
+          <p style="text-align:center;"><strong><code>min<sub>c</sub>
+            v<sub>&lambda;</sub>(tr(D<sub>c</sub><sup>m</sup>)) = 2(m + [m odd])</code>.</strong></p>
+          <p>This is an infinite statement proved by finite recurrence states, not by extending a numerical cutoff.
+            The section image consists of the six cubics <code>x&sup3;&minus;9ax&minus;27b</code> with
+            <code>(a,b)=(0,0),(1,0),(2,0),(3,0),(3,1),(4,3)</code>. After <code>x=3y</code>, their power sums satisfy
+            <code>S<sub>m</sub>=aS<sub>m&minus;2</sub>+bS<sub>m&minus;3</sub></code>. The
+            <code>(a,b)=(1,0)</code> row attains every even exponent. For odd exponents, the
+            <code>(3,1)</code> and <code>(4,3)</code> rows have mod-<code>9</code> period words
+            <code>3,0,6</code> and <code>8,0,5,6,2,3</code>; together they cover all odd residue classes
+            modulo <code>6</code>.</p>
+          <p>The exponent <code>m=1</code> is excluded because every section has trace zero. The old, disproved
+            factorial expression agrees with the true minimum exactly on
+            <code>s<sub>3</sub>(m)+[m odd]=2</code>. Equivalently, for <code>m&ge;2</code>, this means
+            <code>m=3<sup>j</sup></code> with <code>j&ge;1</code>, or
+            <code>m=3<sup>i</sup>+3<sup>j</sup></code> with <code>0&le;i&le;j</code>; prime powers lie inside but do not
+            exhaust that locus. Nothing in this theorem asserts the sampled <code>q&ge;5</code> minima.
+            <a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/w33_pass541_q3_all_m_recurrence.g">Run the GAP witness</a>,
+            <a href="https://github.com/wilcompute/W33-Theory/blob/master/data/w33_pass541_q3_all_m_recurrence.json">inspect the certificate</a>, or
+            <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS541_Q3_ALL_M_RECURRENCE_THEOREM.md">read the proof synthesis</a>.</p>
         </div>
         <div class="spotlight">
           <p><strong>Latest exact section-orbit theorem (Pass 540).</strong> At <code>q=3</code>, the two unexplained

@@ -172,7 +172,27 @@ This manuscript deliberately mixes elementary exposition, exact finite geometry,
 When the paper says ``proves'' without qualification, it means Tier 1 or a directly checked Tier 2 statement. When it says ``bridge,'' ``reading,'' ``proposal,'' or ``frontier,'' it is deliberately not claiming more than the current verification supports.
 
 \begin{statusbox}[title=Read this first: the current map]
-The current exact frontier is unusually useful precisely because it contains both constructions and limits.  The symplectic graph, its finite groups, chain complexes, and code objects are mathematical data.  The newest certificate explains one spectral coincidence as the two $D_4$ half-spin chiralities: an exact finite invariant distinguishes them, while the characteristic polynomial does not.  Earlier certificates prove a classical $[240,120,3]_3$ boundary decoder with a $481$-entry radius-one table; four invariant minimal-logical-pair sheets rather than a natural $W(E_6)$ torsor; and a marked $D_8$ comparison with exactly four choices.  Separately, the $27$-point Heisenberg/Clifford bridge is a finite group-action result.  None of these facts selects physical chirality, identifies a physical phase, supplies a continuum spacetime, or derives a measured particle parameter.  Those remain bridges to build or hypotheses to test.
+The current exact frontier is unusually useful precisely because it contains both constructions and limits.  The symplectic graph, its finite groups, chain complexes, and code objects are mathematical data.  The newest certificate proves the exact minimum of an entire infinite tower of $q=3$ trace valuations; the preceding certificate explains one spectral coincidence as the two $D_4$ half-spin chiralities, distinguished by an exact finite invariant that the characteristic polynomial cannot see.  Earlier certificates prove a classical $[240,120,3]_3$ boundary decoder with a $481$-entry radius-one table; four invariant minimal-logical-pair sheets rather than a natural $W(E_6)$ torsor; and a marked $D_8$ comparison with exactly four choices.  Separately, the $27$-point Heisenberg/Clifford bridge is a finite group-action result.  None of these facts selects physical chirality, identifies a physical phase, supplies a continuum spacetime, or derives a measured particle parameter.  Those remain bridges to build or hypotheses to test.
+\end{statusbox}
+
+\begin{statusbox}[title=The newest exact theorem: a finite clock proves an infinite tower]
+For each section $c$, let $D_c$ be its small spectral block and let $v_\lambda$ count divisibility by the cyclotomic prime $\lambda=1-\zeta_3$.  Pass 541 proves, over all $81$ sections and for every integer $m\geq2$,
+\[
+ \min_c v_\lambda\!\left(\operatorname{tr}D_c^m\right)
+   =2\bigl(m+[m\text{ is odd}]\bigr).
+\]
+Here the bracket is $1$ when $m$ is odd and $0$ otherwise.  This is not a long finite extrapolation.  All $81$ sections reduce to the six cubics $x^3-9ax-27b$, with $(a,b)=(0,0),(1,0),(2,0),(3,0),(3,1),(4,3)$.  After writing $x=3y$, their power sums follow the two-step/three-step rule
+\[
+ S_m=aS_{m-2}+bS_{m-3}.
+\]
+The row $(a,b)=(1,0)$ attains the bound for every even $m$.  Two other rows carry short clocks modulo $9$: their repeating words are
+\[
+ 3,0,6 \qquad\hbox{and}\qquad 8,0,5,6,2,3.
+\]
+Together those clocks attain all three odd residue classes modulo $6$, which is the infinite step in the proof.  The case $m=1$ is excluded because every trace is zero.
+
+An older factorial expression is false in general.  It happens to agree with the theorem exactly when
+$s_3(m)+[m\text{ is odd}]=2$, where $s_3$ is the sum of the base-$3$ digits.  Equivalently, for $m\geq2$, agreement occurs precisely for $m=3^j$ with $j\geq1$, or for $m=3^i+3^j$ with $0\leq i\leq j$.  The theorem is specific to $q=3$; it does not settle the sampled minima at $q\geq5$.
 \end{statusbox}
 
 \section*{The working vocabulary}
