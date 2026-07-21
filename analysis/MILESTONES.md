@@ -366,6 +366,18 @@ Pass 519 (`analysis/w33_pass519_transfer_matrix.py`):
 
 **METHOD NOTE:** the refutation came from **exhaustion, not sampling** — 60 random sections at p=3 had reported the law as satisfied at some m where all 81 do not. When a parameter space is small enough to enumerate, enumerate it.
 
+## Pass 520 addendum (python track) — an explanation RETRACTED before publication, and q=3 is probably NOT special
+
+Pass 520 (`analysis/w33_pass520_newton_polygon.py`, 14/14 exact):
+
+1. **EXHAUSTIVE q=3 EXTENDED TO m=20.** The fit `v_λ(tr D^m) = 2(m + [m odd])` holds at **all 19 exponents**; the factorial law fails at **11 of 19** (m = 5,7,8,11,13,14,15,16,17,19,20). The law holds exactly at m with `s_3(m) + [m odd] = 2`.
+2. **⚠ AN EXPLANATION RETRACTED BEFORE IT REACHED A PAPER.** I asserted the minimising q=3 profile is `(v(e_2), v(e_3)) = (4,6)` ⇒ single slope-2 Newton polygon ⇒ "no factorial possible". **NO SECTION HAS THAT PROFILE.** Exhaustively: **(4,∞)×32, (4,8)×16, (6,∞)×8, (6,6)×24** — and the polygons are *not* uniformly single-slope ((4,8) splits into slope-4 + slope-2). Withdrawn. **Third merely-fitting story this programme has had to drop — and the first caught before publication.**
+3. **WHAT SURVIVES (weaker, true).** Eigenvalue valuations are **constants** (2, 3, 4, plus zero eigenvalues where det D = 0), none depending on m ⇒ `v_λ(tr D^m) ≥ 2m` and the exhaustive truth is **affine in m plus parity**, whereas `v_λ(m!)` is **not affine** (grows like m − s_p(m)). An **observation, not a mechanism**; the parity correction of exactly 2 is not explained.
+4. **⚠⚠ q=3 IS PROBABLY NOT SPECIAL.** At **q=5 the law is NOT attained at m=10 or m=14** — sampled minimum sits **exactly 2 above**, the same gap as q=3 — over **250 sections here and 600 in a separate probe**, while m=6,8,12 attain it. **Sampling cannot refute** (true min ≤ sample min; q=5 has 5¹² sections), so q=5 stays **undecided** — but Pass 519's "q=3 may be special" reading is **withdrawn as the less likely of the two**. Both papers updated.
+5. **THE GOVERNING ASYMMETRY.** *Confirming* the law at one (q,m) needs one attaining section + the never-below check (cheap). *Refuting* it needs the **whole section space** — available only at q=3. Every confirmation in the corpus is of the cheap kind.
+6. **DEPENDENCY AUDIT.** P507's "factorial ⟹ determinant law" is now **conditional** (its conclusion survives — the determinant law was verified independently and exhaustively at q=3), P516's tower is **reinterpreted** (it is the agreement locus, confirming both formulas and distinguishing neither), P519's excess `E(m)` is **false at q=3** while the transfer-matrix identity and `T ≡ 0 mod λ` are unaffected.
+7. **A CORRECTION OF MY OWN ESTIMATE.** I proposed exhausting ℤ/9's section space "since it has 9⁴ = 6561 elements". Wrong: ℤ/9 has q=9 ⇒ **(q²−1)/2 = 40 pairs ⇒ 9⁴⁰ sections** (39 digits). Enumerability scales as `q^{(q²−1)/2}` and **dies immediately after q=3**.
+
 ## Deferred
 
 - m=6 Coxeter–Todd rung of the QR tower (`data/m6_handoff_k12.json`).
