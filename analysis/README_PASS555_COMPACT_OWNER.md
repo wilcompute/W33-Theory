@@ -1,0 +1,1 @@
+The Pass 555 compact-custody owner is published as `analysis/w33_pass555_all_fixed_magnitude_fibres_v2.py` pending the release-lock tree update that replaces the original owner path. The exact generated catalogue digest is `012918418b7d691ea17e14d24bf9e057a4da86008143b213d13b77379482b5c3`.
