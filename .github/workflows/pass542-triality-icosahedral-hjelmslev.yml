@@ -1,0 +1,35 @@
+name: Pass 542 Triality Icosahedral Hjelmslev
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass542_triality_icosahedral_hjelmslev.py'
+      - 'data/w33_pass542_triality_icosahedral_hjelmslev.json'
+      - 'tests/test_w33_pass542_triality_icosahedral_hjelmslev.py'
+      - 'PASS542_TRIALITY_ICOSAHEDRAL_HJELMSLEV_RELEASE.md'
+      - '.github/workflows/pass542-triality-icosahedral-hjelmslev.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  PYTHONHASHSEED: '0'
+
+jobs:
+  exact-certificate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install exact dependencies
+        run: python -m pip install networkx==3.6.1 pytest==9.0.2
+      - name: Verify certificate
+        run: python analysis/w33_pass542_triality_icosahedral_hjelmslev.py --check
+      - name: Focused regressions
+        run: python -m pytest -q tests/test_w33_pass542_triality_icosahedral_hjelmslev.py
