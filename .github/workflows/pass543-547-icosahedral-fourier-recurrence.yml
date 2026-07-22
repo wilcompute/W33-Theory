@@ -1,0 +1,38 @@
+name: Passes 543-547 Icosahedral Fourier Recurrence Release
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass543_547_common.py'
+      - 'analysis/w33_pass543_547_release.py'
+      - 'analysis/w33_pass543_q5_icosahedral_association_image.py'
+      - 'analysis/w33_pass544_binary_switch_spectral_fibre.py'
+      - 'analysis/w33_pass545_triality_antiunitary_lift.py'
+      - 'analysis/w33_pass546_z9_kernel_fourier_image.py'
+      - 'analysis/w33_pass547_q5_recurrence_families.py'
+      - 'data/w33_pass543_547_icosahedral_fourier_recurrence.json'
+      - 'tests/test_w33_pass543_547_icosahedral_fourier_recurrence.py'
+      - 'PASS543_547_ICOSAHEDRAL_FOURIER_RECURRENCE_RELEASE.md'
+      - '.github/workflows/pass543-547-icosahedral-fourier-recurrence.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+permissions:
+  contents: read
+env:
+  PYTHONHASHSEED: '0'
+jobs:
+  exact-certificates:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install dependencies
+        run: python -m pip install networkx==3.6.1 sympy==1.14.0 pytest==9.0.2
+      - name: Verify certificates
+        run: |
+          python analysis/w33_pass543_547_release.py --check
+      - name: Focused regressions
+        run: python -m pytest -q tests/test_w33_pass543_547_icosahedral_fourier_recurrence.py
