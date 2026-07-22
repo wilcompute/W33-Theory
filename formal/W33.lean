@@ -29,3 +29,4 @@ import W33.Pass557ConstantValuation
 import W33.Pass557OddPeriodLift
 import W33.Pass560CyclotomicUniformizer
 import W33.Pass565CyclotomicFiveOrder
+import W33.Pass570CyclotomicResidue
