@@ -1,1 +1,0 @@
-The canonical owner is analysis/w33_pass555_all_fixed_magnitude_fibres.py. Its compact-custody update is applied in the release-lock commit; this marker exists only to make the transition explicit.

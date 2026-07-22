@@ -1,1 +1,0 @@
-Release-lock note: the workflow should invoke `analysis/w33_pass555_all_fixed_magnitude_fibres_v2.py`, which is the compact-custody equivalent of the original owner and regenerates the same 98-fibre catalogue digest.

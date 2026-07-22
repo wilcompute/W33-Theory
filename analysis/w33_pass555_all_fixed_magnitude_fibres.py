@@ -45,7 +45,7 @@ def payload():
         deg=max(m.bit_count() for m in gterms) if gterms else -1
         digest=hashlib.sha256(','.join(hex(x) for x in sorted(gterms)).encode()).hexdigest()
         typ=(len(S),ad,td,len(S)//len(T),deg)
-        row={'id':idx,'charpoly':cpv,'size':len(S),'affine_hull_dimension':ad,'translation_dimension':td,'parallel_cosets':len(S)//len(T),'principal_ideal_generator_degree':deg,'principal_ideal_generator_terms':len(gterms),'principal_ideal_generator_sha256':digest,'is_affine_subspace':len(S)==(1<<ad),'global_complement_closed':all((x^0xfff) in S for x in S),'is_pass540_target':cpv==target,'type':typ}
+        row={'id':idx,'charpoly_sha256':hashlib.sha256(cp_key(cpv).encode()).hexdigest(),'size':len(S),'affine_hull_dimension':ad,'translation_dimension':td,'parallel_cosets':len(S)//len(T),'principal_ideal_generator_degree':deg,'principal_ideal_generator_terms':len(gterms),'principal_ideal_generator_sha256':digest,'is_affine_subspace':len(S)==(1<<ad),'global_complement_closed':all((x^0xfff) in S for x in S),'is_pass540_target':cpv==target,'type':typ}
         catalog.append(row);set_to_idx[S]=idx
     actions=signed_magnitude_actions();unseen=set(set_to_idx);orbits=[]
     while unseen:
@@ -78,7 +78,7 @@ def payload():
       'type_counts':{str(k):v for k,v in sorted(type_counts.items())},
       'orbit_summary':{'signed_stabilizer_order':len(actions),'fibre_orbits':len(orbits),'orbit_size_histogram':dict(sorted(orbit_counts.items())),'type_orbit_counts':{str(k):v for k,v in sorted(type_orbits.items(),key=str)}},
       'five_cube_result':{'count':len(five_cube),'ids':[r['id'] for r in five_cube],'target_id':next(r['id'] for r in catalog if r['is_pass540_target']),'conclusion':'The Pass-540 five-parallel-four-cube geometry is not unique: exactly three of the 98 fibres have this type. The exact signed Clifford stabilizer fixes every characteristic-polynomial fibre setwise.'},
-      'catalog':catalog,
+      'catalog_custody':{'fibre_count':len(catalog),'size_histogram':dict(sorted(Counter(r['size'] for r in catalog).items())),'catalog_sha256':hashlib.sha256(json.dumps(catalog,sort_keys=True,separators=(',',':')).encode()).hexdigest(),'certificate_policy':'The executable owner regenerates all 98 rows; the immutable certificate stores the exact digest and structural census rather than duplicating the full generated table.'},
       'checks':checks,
       'boundary':'This is a complete classification of the 98 fibres inside the fixed Pass-540 magnitude cube. The physical action uses the signed antipodal permutation; dropping its sign cocycle produces a different, non-covariant set action. This is not a classification of all 2,034,735 q=5 section orbits.'
     }
@@ -88,5 +88,5 @@ def main():
     if a.check:
         if not a.output.exists() or a.output.read_text()!=s:raise SystemExit('Pass 555 certificate drift')
     else:a.output.parent.mkdir(parents=True,exist_ok=True);a.output.write_text(s)
-    print(json.dumps({'status':p['status'],'checks':sum(p['checks'].values()),'total':len(p['checks']),'fibres':len(p['catalog'])}));return 0 if p['status']=='PASS' else 1
+    print(json.dumps({'status':p['status'],'checks':sum(p['checks'].values()),'total':len(p['checks']),'fibres':p['catalog_custody']['fibre_count']}));return 0 if p['status']=='PASS' else 1
 if __name__=='__main__':raise SystemExit(main())
