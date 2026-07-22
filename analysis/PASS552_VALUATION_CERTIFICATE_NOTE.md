@@ -1,0 +1,1 @@
+Pass 552's executable owner is authoritative. The compact JSON currently records the theorem-level values needed by downstream tests; the complete residue and period tables are reproduced by running `python analysis/w33_pass552_q5_constant_and_switch_valuations.py`.
