@@ -1,0 +1,56 @@
+name: Passes 563-567 exact certificates
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass563_triality_a8_witting_normalizer.py'
+      - 'analysis/w33_pass564_z9_full_quadratic_irreducibles.py'
+      - 'analysis/w33_pass565_cyclotomic_order_formal.py'
+      - 'analysis/w33_pass566_q5_twisted_walsh_krawtchouk.py'
+      - 'analysis/w33_pass567_joint_bayesian_decoder.py'
+      - 'analysis/w33_pass563_567_release.py'
+      - 'data/w33_pass563_*.json'
+      - 'data/w33_pass564_*.json'
+      - 'data/w33_pass565_*.json'
+      - 'data/w33_pass566_*.json'
+      - 'data/w33_pass567_*.json'
+      - 'hardware/w33_pass567_joint_bayesian_decoder.json'
+      - 'formal/W33/Pass565CyclotomicFiveOrder.lean'
+      - 'formal/W33.lean'
+      - 'tests/test_w33_pass563_567_triality_quadratic_order_walsh_bayesian.py'
+      - 'PASS563_567_TRIALITY_QUADRATIC_ORDER_WALSH_BAYESIAN_RELEASE.md'
+      - '.github/workflows/pass563_567_exact.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+env:
+  PYTHONHASHSEED: '0'
+jobs:
+  python:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install numpy==2.3.5 sympy==1.14.0 pytest==9.0.2
+      - run: python analysis/w33_pass563_triality_a8_witting_normalizer.py --check
+      - run: python analysis/w33_pass564_z9_full_quadratic_irreducibles.py --check
+      - run: python analysis/w33_pass565_cyclotomic_order_formal.py --check
+      - run: python analysis/w33_pass566_q5_twisted_walsh_krawtchouk.py --check
+      - run: python analysis/w33_pass567_joint_bayesian_decoder.py --check
+      - run: python analysis/w33_pass563_567_release.py --check
+      - run: pytest -q tests/test_w33_pass563_567_triality_quadratic_order_walsh_bayesian.py
+  lean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formal
+          build: true
+          test: false
+          lint: false
+          nanoda: true
+          nanoda-allow-sorry: false
