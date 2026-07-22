@@ -1,0 +1,57 @@
+name: Passes 553-557 exact certificates
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass553_*.py'
+      - 'analysis/w33_pass554_*.py'
+      - 'analysis/w33_pass555_*.py'
+      - 'analysis/w33_pass556_*.py'
+      - 'analysis/w33_pass557_*.py'
+      - 'analysis/w33_pass553_557_release.py'
+      - 'data/w33_pass553_*.json'
+      - 'data/w33_pass554_*.json'
+      - 'data/w33_pass555_*.json'
+      - 'data/w33_pass556_*.json'
+      - 'data/w33_pass557_*.json'
+      - 'data/w33_pass553_557_*.json'
+      - 'hardware/w33_pass556_*.json'
+      - 'formal/W33/Pass557*.lean'
+      - 'formal/W33.lean'
+      - 'tests/test_w33_pass553_557_*.py'
+      - 'PASS553_557_*.md'
+      - '.github/workflows/pass553_557_exact.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+env:
+  PYTHONHASHSEED: '0'
+jobs:
+  python-certificates:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install pytest
+      - run: python analysis/w33_pass553_five_point_core_geometry.py --check
+      - run: python analysis/w33_pass554_z9_minimal_memory_automaton.py --check
+      - run: python analysis/w33_pass555_all_fixed_magnitude_fibres.py --check
+      - run: python analysis/w33_pass556_q5_semilinear_control_plane.py --check
+      - run: python analysis/w33_pass557_formal_valuation_support.py --check
+      - run: python analysis/w33_pass553_557_release.py --check
+      - run: python -m pytest -q tests/test_w33_pass553_557_intrinsic_automaton_formal_control.py
+  lean-support:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formal
+          build: true
+          test: false
+          lint: false
+          nanoda: true
+          nanoda-allow-sorry: false
