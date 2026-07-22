@@ -1,0 +1,58 @@
+name: Passes 558-562 triality radial localfield noise tensor
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass558_q5_triality_partition.py'
+      - 'analysis/w33_pass559_z9_radial_quadratic_automaton.py'
+      - 'analysis/w33_pass560_cyclotomic_uniformizer_formal.py'
+      - 'analysis/w33_pass561_noise_aware_orientation_latch.py'
+      - 'analysis/w33_pass562_q5_tensor_type_derivation.py'
+      - 'analysis/w33_pass558_562_release.py'
+      - 'data/w33_pass558_*.json'
+      - 'data/w33_pass559_*.json'
+      - 'data/w33_pass560_*.json'
+      - 'data/w33_pass561_*.json'
+      - 'data/w33_pass562_*.json'
+      - 'data/w33_pass558_562_*.json'
+      - 'hardware/w33_pass561_noise_aware_orientation_latch.json'
+      - 'formal/W33/Pass560CyclotomicUniformizer.lean'
+      - 'formal/W33.lean'
+      - 'tests/test_w33_pass558_562_triality_radial_localfield_noise_tensor.py'
+      - '.github/workflows/pass558_562_exact.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+permissions:
+  contents: read
+env:
+  PYTHONHASHSEED: '0'
+jobs:
+  exact-python:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install numpy==2.3.5 pytest==9.0.2
+      - run: python analysis/w33_pass558_q5_triality_partition.py --check
+      - run: python analysis/w33_pass559_z9_radial_quadratic_automaton.py --workers 4 --check
+      - run: python analysis/w33_pass560_cyclotomic_uniformizer_formal.py --check
+      - run: python analysis/w33_pass561_noise_aware_orientation_latch.py --check
+      - run: python analysis/w33_pass562_q5_tensor_type_derivation.py --check
+      - run: python analysis/w33_pass558_562_release.py --check
+      - run: pytest -q tests/test_w33_pass558_562_triality_radial_localfield_noise_tensor.py
+  lean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formal
+          build: true
+          test: false
+          lint: false
+          nanoda: true
+          nanoda-allow-sorry: false

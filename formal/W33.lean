@@ -27,3 +27,4 @@ import W33.Pass517ClosedForm
 import W33.Pass533HermitianReal
 import W33.Pass557ConstantValuation
 import W33.Pass557OddPeriodLift
+import W33.Pass560CyclotomicUniformizer
