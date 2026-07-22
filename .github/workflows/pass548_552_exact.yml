@@ -1,0 +1,35 @@
+name: Passes 548-552 exact certificates
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass548_q5_invariant_tensor_hierarchy.py'
+      - 'analysis/w33_pass549_quadratic_spectral_fibre.py'
+      - 'analysis/w33_pass550_q5_semilinear_covariance.py'
+      - 'analysis/w33_pass551_z9_fourier_transfer.py'
+      - 'analysis/w33_pass552_q5_constant_and_switch_valuations.py'
+      - 'analysis/w33_pass548_552_release.py'
+      - 'data/w33_pass548_*.json'
+      - 'data/w33_pass549_*.json'
+      - 'data/w33_pass550_*.json'
+      - 'data/w33_pass551_*.json'
+      - 'data/w33_pass552_*.json'
+      - 'tests/test_w33_pass548_552_nonlinear_semilinear_transfer.py'
+      - '.github/workflows/pass548_552_exact.yml'
+  workflow_dispatch:
+jobs:
+  exact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install pytest
+      - run: python analysis/w33_pass548_q5_invariant_tensor_hierarchy.py --check
+      - run: python analysis/w33_pass549_quadratic_spectral_fibre.py --check
+      - run: python analysis/w33_pass550_q5_semilinear_covariance.py --check
+      - run: python analysis/w33_pass551_z9_fourier_transfer.py --check
+      - run: python analysis/w33_pass552_q5_constant_and_switch_valuations.py --check
+      - run: python analysis/w33_pass548_552_release.py --check
+      - run: pytest -q tests/test_w33_pass548_552_nonlinear_semilinear_transfer.py
