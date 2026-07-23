@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "scope": "prime-weight discovery and one-damping W33 tower falsifier",
+  "prime_cocycle_identity": {
+    "sum": "sum Lambda(n)n^(-2a)(n^delta-n^(-delta))^2",
+    "closed_form": "L(2(a-delta))-2L(2a)+L(2(a+delta)), L=-zeta'/zeta",
+    "a": 1.0,
+    "delta": 0.2,
+    "exact_value": "0.372914387313964018371389988018",
+    "partial_sums": {"1000": 0.3484272564681587, "10000": 0.36648315214937033, "100000": 0.37126819946099654},
+    "small_delta_limit": "P(a,delta)/delta^2 -> 4 L''(2a), a positive log-prime-square moment"
+  },
+  "convergence": {
+    "condition": "a-|delta|>1/2",
+    "equivalent_sigma_condition": "sigma>1+|delta| because a=sigma-1/2",
+    "casey_boundary_sigma_1": "fails for every nonzero delta",
+    "boundary_delta_0_1_partial_sums": {"1000": 4.825991378216968, "10000": 12.337377837736037, "100000": 26.474440104951334},
+    "interpretation": "the naive positive prime lift cannot be placed directly on sigma=1; explicit-formula regularization is mandatory"
+  },
+  "single_damping_tower": {
+    "definition": "M_2k(s)=T_2k * d^(2k+2)/ds^(2k+2)[-zeta'(s)/zeta(s)]",
+    "damping_s_matching_classical_quartic_ratio": "2.21800603941733687207715775003",
+    "classical_ratios": {"S4_over_S2_squared": "0.0696323806096908694918244157069", "S6_over_S2_cubed": "0.0116887807041757756361282192757"},
+    "candidate_ratios": {"S4_over_S2_squared": "0.069632380609690881437072376389", "S6_over_S2_cubed": "0.00976766828493838489494584037112"},
+    "sextic_relative_error": "-0.164355245243935504104621848135",
+    "verdict": "prime damping repairs much of the rigid W33 moment mismatch, but one exponent cannot reproduce xi beyond S4"
+  },
+  "claim_boundary": {
+    "proved": ["an exact positive von-Mangoldt second-difference identity in its convergence half-plane", "the sigma=1 naive sum is outside that convergence half-plane", "the one-damping prime tower fails an out-of-sample sextic moment"],
+    "not_proved": ["a regularized prime/zero equality at sigma=1", "a unique classical weighting", "an operator determinant equal to xi"]
+  },
+  "checks": {
+    "prime_second_difference_positive": true,
+    "partial_sum_approaches_exact": true,
+    "boundary_partial_sums_increase": true,
+    "quartic_ratio_matched": true,
+    "sextic_ratio_rejects_one_damping_model": true
+  }
+}
