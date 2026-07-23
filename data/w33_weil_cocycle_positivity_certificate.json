@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "scope": "orbit-level Weil/Laplace positivity for Casey reflection cocycle",
+  "theorem": {
+    "current_energy": "integral_R A(a,delta,y)^2 dy = pi*delta^2/[a(a^2-delta^2)]",
+    "laplace_form": "E/pi = integral_0^inf (exp(-(a-delta)x)-exp(-(a+delta)x))^2 dx",
+    "gram_form": "E/pi = (1,-1) K (1,-1)^T, K_ij=1/(c_i+c_j)",
+    "finite_equivalence": "for nonnegative weights and a finite orbit set, total E=0 iff every delta=0"
+  },
+  "fourier_interpretation": {
+    "transform": "A_hat(omega)=i*pi*sgn(omega)*[exp(-(a-delta)|omega|)-exp(-(a+delta)|omega|)]",
+    "meaning": "the repaired torque is the boundary Fourier image of a positive Laplace-space difference"
+  },
+  "samples": [
+    {"a": 0.5, "delta": 0.0, "closed_energy": 0.0, "current_integral": "0.0", "laplace_integral": "0.0", "gram_energy": 0.0, "gram_determinant": 0.0},
+    {"a": 0.5, "delta": 0.05, "closed_energy": 0.06346651825433926, "current_integral": "0.063466518254339278423909127196", "laplace_integral": "0.0634665182543392892526070700573", "gram_energy": 0.06346651825433966, "gram_determinant": 0.010101010101010166},
+    {"a": 0.7, "delta": -0.12, "closed_energy": 0.13588530040758448, "current_integral": "0.135885300407584427678181270837", "laplace_integral": "0.135885300407584492261583348958", "gram_energy": 0.1358853004075845, "gram_determinant": 0.01544772660956728},
+    {"a": 1.0, "delta": 0.2, "closed_energy": 0.13089969389957473, "current_integral": "0.130899693899574640493057237059", "laplace_integral": "0.130899693899574658851131637289", "gram_energy": 0.13089969389957495, "gram_determinant": 0.010416666666666685}
+  ],
+  "finite_orbit_examples": {"all_on_line": 0.0, "contains_off_line_orbits": 1.6442954192118033, "weighted_contains_off_line_orbit": 2.047091534458297},
+  "claim_boundary": {
+    "proved": "an orbit-level positive quadratic form exactly detects horizontal displacement",
+    "not_proved": "that the full Weil explicit-formula quadratic form equals this orbit sum, or that the classical total vanishes",
+    "next_transfer": "identify an admissible test-function family and convergent zero/prime weighting that turns the classical Weil form into this cocycle norm"
+  },
+  "checks": {
+    "current_parseval_identity": true,
+    "laplace_norm_identity": true,
+    "cauchy_gram_identity": true,
+    "gram_psd": true,
+    "energy_zero_on_line": true,
+    "energy_positive_for_off_line_orbit": true,
+    "positive_weights_preserve_detection": true
+  }
+}
