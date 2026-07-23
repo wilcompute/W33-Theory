@@ -31,3 +31,4 @@ import W33.Pass560CyclotomicUniformizer
 import W33.Pass565CyclotomicFiveOrder
 import W33.Pass570CyclotomicResidue
 import W33.Pass575CyclotomicDVRKernel
+import W33.Pass581CyclotomicCompletion
