@@ -1,0 +1,42 @@
+name: Passes 631-635 release verification
+
+on:
+  pull_request:
+    paths:
+      - 'analysis/w33_pass63*.py'
+      - 'analysis/BT631_635_five_frontier_release.md'
+      - 'data/w33_pass63*.json'
+      - 'tests/test_w33_pass631_635.py'
+      - '.github/workflows/pass631_635_release.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact runtime dependencies
+        run: python -m pip install --disable-pip-version-check numpy sympy pytest
+      - name: Regenerate deterministic certificates
+        run: |
+          python analysis/w33_pass631_mod2_ext_fingerprint.py
+          python analysis/w33_pass632_montes_okutsu_stage0.py
+          python analysis/w33_pass633_minimal_wilson_fibre.py
+          python analysis/w33_pass634_correlated_optical_decoder.py
+          python analysis/w33_pass635_joint_optical_eprocess_design.py
+      - name: Verify certificate reproduction and focused regression
+        run: |
+          python analysis/w33_pass631_mod2_ext_fingerprint.py --check
+          python analysis/w33_pass632_montes_okutsu_stage0.py --check
+          python analysis/w33_pass633_minimal_wilson_fibre.py --check
+          python analysis/w33_pass634_correlated_optical_decoder.py --check
+          python analysis/w33_pass635_joint_optical_eprocess_design.py --check
+          python -m pytest -q tests/test_w33_pass631_635.py
+      - name: Ensure generated ledgers are committed exactly
+        run: git diff --exit-code -- data/w33_pass631_mod2_ext_fingerprint.json data/w33_pass632_montes_okutsu_stage0.json data/w33_pass633_minimal_wilson_fibre.json data/w33_pass634_correlated_optical_decoder.json data/w33_pass635_joint_optical_eprocess_design.json
