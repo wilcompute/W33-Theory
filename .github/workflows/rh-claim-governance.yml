@@ -1,0 +1,35 @@
+name: RH claim governance
+
+on:
+  pull_request:
+    paths:
+      - "**/*.md"
+      - "**/*.tex"
+      - "**/*.py"
+      - "**/*.txt"
+      - "**/*.html"
+      - "scripts/rh_claim_linter.py"
+      - "data/rh_claim_policy.json"
+
+permissions:
+  contents: read
+
+jobs:
+  lint-rh-claims:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Lint changed claims
+        shell: bash
+        run: |
+          mapfile -d '' files < <(git diff --name-only -z "${{ github.event.pull_request.base.sha }}" "${{ github.event.pull_request.head.sha }}")
+          if [ "${#files[@]}" -eq 0 ]; then
+            echo "No changed files to inspect."
+            exit 0
+          fi
+          python scripts/rh_claim_linter.py --strict "${files[@]}"
