@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "schema": "For each coefficient: [laurent_power,a_numerator,a_denominator,b_numerator,b_denominator] represents a+b*sqrt(-d).",
+  "counting_correction": {
+    "restricted_adjacency_slots": 39,
+    "distinct_nontrivial_pole_locations": 4,
+    "total_nontrivial_pole_order": 78,
+    "explanation": "each of the 39 restricted adjacency slots contributes two conjugate Ihara roots; equal eigenvalues coalesce into poles of order 24 or 15"
+  },
+  "ihara_inverse": "(1-u^2)^200(1-u)(1-11u)(1-2u+11u^2)^24(1+4u+11u^2)^15",
+  "checks": {
+    "four_distinct_nontrivial_locations": true,
+    "orders_are_24_24_15_15": true,
+    "total_nontrivial_pole_order_is_78": true,
+    "all_principal_parts_exact": true,
+    "all_coordinate_denominator_norms_11": true
+  },
+  "pole_files": [
+    "data/w33_ihara_principal_part_pole_1.json",
+    "data/w33_ihara_principal_part_pole_2.json",
+    "data/w33_ihara_principal_part_pole_3.json",
+    "data/w33_ihara_principal_part_pole_4.json"
+  ]
+}
