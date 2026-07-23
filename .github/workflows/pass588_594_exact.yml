@@ -1,0 +1,64 @@
+name: Passes 588-594 deep symmetry certificates
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass588_*.py'
+      - 'analysis/w33_pass589_*.py'
+      - 'analysis/w33_pass590_*.py'
+      - 'analysis/w33_pass591_*.py'
+      - 'analysis/w33_pass592_*.py'
+      - 'analysis/w33_pass593_*.py'
+      - 'analysis/w33_pass594_*.py'
+      - 'analysis/w33_pass588_594_*.py'
+      - 'data/w33_pass588_*.json'
+      - 'data/w33_pass589_*.json'
+      - 'data/w33_pass590_*.json'
+      - 'data/w33_pass591_*.json'
+      - 'data/w33_pass592_*.json'
+      - 'data/w33_pass593_*.json'
+      - 'data/w33_pass594_*.json'
+      - 'hardware/w33_pass592_*.json'
+      - 'formal/W33/Pass591CyclotomicDedekindDVR.lean'
+      - 'formal/W33.lean'
+      - 'tests/test_w33_pass588_594_*.py'
+      - 'PASS588_594_DEEP_SYMMETRY_RELEASE.md'
+      - '.github/workflows/pass588_594_exact.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+env:
+  PYTHONHASHSEED: '0'
+  NUMBA_NUM_THREADS: '4'
+jobs:
+  python:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install numpy==2.3.5 numba==0.65.1 scipy==1.17.0 sympy==1.14.0 networkx==3.5 pytest==9.0.2
+      - run: python analysis/w33_pass569_z9_coupled_affine_radial_quadratic.py --check
+      - run: python analysis/w33_pass588_minimal_degree_groupoid.py --check
+      - run: python analysis/w33_pass589_full_linear_symmetry_centralizer.py --check
+      - run: python analysis/w33_pass590_oriented_singer_cover.py --check
+      - run: python analysis/w33_pass591_cyclotomic_dedekind_dvr.py --check
+      - run: python analysis/w33_pass592_aspirational_affinity_correction.py --check
+      - run: python analysis/w33_pass593_icosahedral_singer_fibre.py --check
+      - run: python analysis/w33_pass594_johnson_pentagon_holonomy.py --check
+      - run: python analysis/w33_pass588_594_deep_symmetry_release.py --check
+      - run: pytest -q tests/test_w33_pass588_594_deep_symmetry.py
+  lean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formal
+          build: true
+          test: false
+          lint: false
+          nanoda: true
+          nanoda-allow-sorry: false
