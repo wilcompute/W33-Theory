@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "release": "Casey/W33 RH five-frontier execution",
+  "frontiers": {
+    "global_phase_current": {
+      "file": "data/w33_casey_phase_current_certificate.json",
+      "status": "PASS"
+    },
+    "self_adjoint_operator": {
+      "file": "data/w33_rh_phase_operator_certificate.json",
+      "status": "PASS"
+    },
+    "exact_principal_parts": {
+      "file": "data/w33_ihara_principal_parts_exact.json",
+      "status": "PASS"
+    },
+    "countermodel_classification": {
+      "file": "data/w33_reflection_countermodel_certificate.json",
+      "status": "PASS"
+    },
+    "claim_linter": {
+      "file": "data/rh_claim_lint_self_audit.json",
+      "status": "PASS"
+    }
+  },
+  "tests": {
+    "command": "PYTHONPATH=. pytest -q tests/test_rh_five_frontiers.py",
+    "passed": 7,
+    "failed": 0
+  },
+  "headline": "Casey's phase-torque intuition is repaired as a positive reflection-cocycle energy; W33 realizes zero defect exactly, while the classical transfer remains open."
+}
