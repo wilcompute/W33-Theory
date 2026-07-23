@@ -25,13 +25,16 @@ jobs:
           python-version: '3.12'
       - name: Install exact runtime dependencies
         run: python -m pip install --disable-pip-version-check numpy sympy pytest
-      - name: Regenerate deterministic certificates
-        run: |
-          python analysis/w33_pass636_mod4_bockstein_lift.py
-          python analysis/w33_pass637_local_conductor_graph.py
-          python analysis/w33_pass638_endpoint_parity_fibre.py
-          python analysis/w33_pass639_matrix_covariance_cs.py
-          python analysis/w33_pass640_closed_loop_falsifier.py
+      - name: Generate Pass 636 certificate
+        run: python analysis/w33_pass636_mod4_bockstein_lift.py
+      - name: Generate Pass 637 certificate
+        run: python analysis/w33_pass637_local_conductor_graph.py
+      - name: Generate Pass 638 certificate
+        run: python analysis/w33_pass638_endpoint_parity_fibre.py
+      - name: Generate Pass 639 certificate
+        run: python analysis/w33_pass639_matrix_covariance_cs.py
+      - name: Generate Pass 640 certificate
+        run: python analysis/w33_pass640_closed_loop_falsifier.py
       - name: Verify certificate reproduction and focused regression
         run: |
           python analysis/w33_pass636_mod4_bockstein_lift.py --check
