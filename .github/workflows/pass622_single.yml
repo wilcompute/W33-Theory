@@ -15,43 +15,30 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install PARI/GP
         run: brew install pari
-      - name: Export the seventeen factors
+      - name: Export the seventeen factors without importing dependencies
         run: |
           python3 - <<'PY'
-          import importlib.util
+          import ast
           from pathlib import Path
-          spec=importlib.util.spec_from_file_location('p616','analysis/w33_pass616_arithmetic_core_factorization.py')
-          m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
-          polys=[]
-          for c in m.FACTOR_COEFFS:
-              polys.append('Polrev(['+','.join(map(str,reversed(c)))+'])')
+          tree=ast.parse(Path('analysis/w33_pass616_arithmetic_core_factorization.py').read_text())
+          values={node.targets[0].id:ast.literal_eval(node.value) for node in tree.body if isinstance(node,ast.Assign) and len(node.targets)==1 and isinstance(node.targets[0],ast.Name) and node.targets[0].id in {'FACTOR_COEFFS','CORE_HASH'}}
+          coeffs=values['FACTOR_COEFFS']
+          polys=['Polrev(['+','.join(map(str,reversed(c)))+'])' for c in coeffs]
           Path('fields.gp').write_text('P=['+','.join(polys)+'];\n')
-          print('fields',len(polys),'degrees',[len(c)-1 for c in m.FACTOR_COEFFS])
+          print('fields',len(polys),'degrees',[len(c)-1 for c in coeffs])
           PY
       - name: Compute maximal orders, discriminants and local e-f data
         run: |
           mkdir -p data
-          gp -q > data/w33_pass622_ramification_raw.txt <<'GP'
+          cat > atlas.gp <<'GP'
           default(parisizemax, 16000000000);
           read("fields.gp");
           Q=[2,3,5,7,13];
+          onefield(i)={my(f,pd,nf,D,z,p,dec);f=P[i];pd=poldisc(f);nf=nfinit(f);D=nf.disc;z=sqrtint(abs(pd/D));print("BEGIN_FIELD index=",i," degree=",poldegree(f)," signature=",nf.sign);print("poly_disc=",pd);print("field_disc=",D);print("power_basis_index=",z);print("field_disc_factor=",factor(abs(D)));for(k=1,#Q,p=Q[k];dec=idealprimedec(nf,p);print("LOCAL p=",p," vfield=",valuation(D,p)," vpoly=",valuation(pd,p)," vindex=",valuation(z,p)," ef=",vector(#dec,j,[dec[j][3],dec[j][4]])));print("END_FIELD")};
           print("field_count=",#P);
-          for(i=1,#P,
-            {
-              f=P[i]; pd=poldisc(f); nf=nfinit(f); D=nf.disc; z=sqrtint(abs(pd/D));
-              print("BEGIN_FIELD index=",i," degree=",poldegree(f)," signature=",nf.sign);
-              print("poly_disc=",pd);
-              print("field_disc=",D);
-              print("power_basis_index=",z);
-              print("field_disc_factor=",factor(abs(D)));
-              for(k=1,#Q,
-                p=Q[k]; dec=idealprimedec(nf,p);
-                print("LOCAL p=",p," vfield=",valuation(D,p)," vpoly=",valuation(pd,p)," vindex=",valuation(z,p)," ef=",vector(#dec,j,[dec[j][3],dec[j][4]]));
-              );
-              print("END_FIELD");
-            }
-          );
+          for(i=1,#P,onefield(i));
           GP
+          gp -q atlas.gp > data/w33_pass622_ramification_raw.txt
           cat data/w33_pass622_ramification_raw.txt
       - uses: actions/upload-artifact@v4
         with:
