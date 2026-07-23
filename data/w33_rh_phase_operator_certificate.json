@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "operator": {
+    "definition": "Theta_W = arccos(A_perp/(2*sqrt(11)))",
+    "dimension": 39,
+    "self_adjoint": true,
+    "exact_determinant_identity": "det(I-2*sqrt(11)*u*cos(Theta_W)+11*u^2 I) = (1-2u+11u^2)^24(1+4u+11u^2)^15",
+    "sectors": [
+      {
+        "adjacency_eigenvalue": 2,
+        "multiplicity": 24,
+        "theta": 1.2645189576252271,
+        "cos_theta": 0.30151134457776363,
+        "ihara_roots": [
+          {"real": 0.09090909090909091, "imag": 0.2874797872880345, "modulus": 0.3015113445777637},
+          {"real": 0.09090909090909091, "imag": -0.2874797872880345, "modulus": 0.3015113445777637}
+        ],
+        "first_lifted_ordinates": [-4.713238223929837, -2.092946429515047, 0.5273453648997437, 3.147637159314534, 5.767928953729325]
+      },
+      {
+        "adjacency_eigenvalue": -4,
+        "multiplicity": 15,
+        "theta": 2.2180811748105493,
+        "cos_theta": -0.6030226891555273,
+        "ihara_roots": [
+          {"real": -0.18181818181818185, "imag": 0.24052284646041727, "modulus": 0.3015113445777636},
+          {"real": -0.18181818181818185, "imag": -0.24052284646041727, "modulus": 0.3015113445777636}
+        ],
+        "first_lifted_ordinates": [-4.315571892125235, -1.6952800977104452, 0.9250116967043451, 3.5453034911191357, 6.165595285533926]
+      }
+    ]
+  },
+  "coefficient_comparison": {
+    "classical_xi_log_moments": {
+      "2": "0.0231049931154189707889338104303",
+      "4": "0.0000371725992852696861648662624717",
+      "6": "0.000000144173931400973279695381556095"
+    },
+    "principal_phase_moments": {"2": 18.058156257307978, "4": 10.006333567688927, "6": 5.99624308413394},
+    "full_log_tower_moments_cutoff_5000": {"2": 125.6825930399705, "4": 334.3882370583047, "6": 1140.8391625432128},
+    "scale_free_ratios": {
+      "classical": {"S4_over_S2_squared": 0.06963238060969087, "S6_over_S2_cubed": 0.011688780704175778},
+      "principal_phase": {"S4_over_S2_squared": 0.03068514380754554, "S6_over_S2_cubed": 0.0010182607661386458},
+      "full_log_tower": {"S4_over_S2_squared": 0.02116901871988098, "S6_over_S2_cubed": 0.000574644195369304}
+    },
+    "principal_one_scale_fit": {
+      "scale_matching_S2": 27.95656323977329,
+      "predicted_S4": 1.638097886043004e-05,
+      "target_S4": 3.7172599285269686e-05,
+      "predicted_S6": 1.2559621192407992e-08,
+      "target_S6": 1.441739314009733e-07,
+      "relative_error_S4": 0.5593265153529013,
+      "relative_error_S6": 0.9128856300833093
+    },
+    "tower_one_scale_fit": {
+      "scale_matching_S2": 73.75384129522509,
+      "predicted_S4": 1.1300883917029152e-05,
+      "target_S4": 3.7172599285269686e-05,
+      "predicted_S6": 7.087883236062771e-09,
+      "target_S6": 1.441739314009733e-07,
+      "relative_error_S4": 0.6959888699118403,
+      "relative_error_S6": 0.9508379693389222
+    },
+    "verdict": "the exact W33 phase operator reproduces graph-RH but not the first three classical xi Hadamard coefficients under a single scale"
+  },
+  "transfer_obstruction": {
+    "finite_dimension": "a finite determinant is a polynomial and cannot equal xi, which has infinitely many nontrivial zeros",
+    "log_lift": "the multivalued logarithm creates rigid arithmetic vertical towers; their coefficient ratios still disagree with classical xi",
+    "next_operator_target": "an infinite self-adjoint W33 tower with a trace-class regularized determinant and coefficient equality to xi"
+  },
+  "checks": {
+    "phase_operator_is_self_adjoint": true,
+    "normalized_adjacency_is_contraction": true,
+    "phase_factorization_exact": true,
+    "graph_poles_on_critical_circle": true,
+    "principal_operator_fails_classical_scale_free_ratios": true,
+    "log_tower_fails_classical_scale_free_ratios": true,
+    "finite_matrix_cannot_equal_entire_xi": true
+  }
+}
