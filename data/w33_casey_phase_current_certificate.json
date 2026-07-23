@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "scope": "Casey phase-current reconstruction and W33-compatible defect energy",
+  "rigorous_replacements": {
+    "pole_regularization": "use completed xi; xi(0)=xi(1)=1/2",
+    "phase_torque": "tau(s)=Im[xi'(s)/xi(s)] away from zeros",
+    "global_phase_law": "(2*pi)^-1 contour integral xi'/xi counts zeros",
+    "asymmetry_detector": "reflection-cocycle current from the ratio of reflected zero factors",
+    "no_cancellation_detector": "integrate the square orbit by orbit"
+  },
+  "boundary_phase_current_samples_sigma_1": {
+    "0.1": "0.00461550535961621328364608",
+    "1.0": "0.0462282272283779335801695",
+    "5.0": "0.24096691699541309766899",
+    "10.0": "0.587503654339759804611623",
+    "14.0": "1.07197195777602702421273",
+    "20.0": "1.41299249397627544703753",
+    "30.0": "1.82507400155832667082193"
+  },
+  "log_derivative_decomposition_errors": {
+    "0.1": "1.9341624e-50",
+    "1.0": "1.4131345e-51",
+    "5.0": "2.9233364e-52",
+    "10.0": "1.5034301e-51",
+    "14.0": "5.9764836e-51",
+    "20.0": "4.8183951e-51",
+    "30.0": "9.6367902e-51"
+  },
+  "local_pair_audit": {
+    "delta_zero_product_current": 0.14267515923566879,
+    "delta_zero_cocycle_current": 0.0,
+    "delta": 0.2,
+    "analytic_boundary_energy": 1.1967972013675403,
+    "numeric_boundary_energy": "1.19679720136753975371677",
+    "closed_form_sigma_1": "8*pi*delta^2/(1-4*delta^2)",
+    "energy_zero_iff_delta_zero": true
+  },
+  "argument_principle": {
+    "rectangle": {
+      "left": 0.1,
+      "right": 0.9,
+      "bottom": 10.0,
+      "top": 18.0
+    },
+    "winding_number": 1,
+    "interpretation": "one nontrivial xi zero lies in this rectangle"
+  },
+  "claim_boundary": {
+    "proved": [
+      "the completed xi regularizes the zeta pole",
+      "the phase current and contour winding are rigorous",
+      "the cocycle energy is positive and detects one off-line orbit"
+    ],
+    "not_proved": [
+      "that the total classical cocycle energy vanishes",
+      "that compactification imposes pointwise zero current at sigma=1",
+      "that the W33 graph determinant equals the classical xi determinant"
+    ],
+    "combined_frontier": "derive a classical trace or positivity identity forcing the weighted sum of orbit energies to vanish; W33 supplies the exact finite model"
+  },
+  "checks": {
+    "completed_xi_reflection": true,
+    "log_derivative_decomposition": true,
+    "casey_pointwise_boundary_zero_is_false": true,
+    "natural_product_current_nonzero_at_delta_zero": true,
+    "reflection_cocycle_zero_at_delta_zero": true,
+    "positive_energy_matches_closed_form": true,
+    "argument_principle_counts_first_zero": true
+  }
+}
