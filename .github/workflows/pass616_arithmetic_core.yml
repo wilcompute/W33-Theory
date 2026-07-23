@@ -44,16 +44,9 @@ jobs:
           n=matsize(f)[1];
           print("factor_count=",n);
           print("degree_multiset=",vector(n,i,poldegree(f[i,1])));
-          for(i=1,n,
-            {
-              q=f[i,1];
-              d=poldegree(q);
-              print("BEGIN_FACTOR index=",i," degree=",d," exponent=",f[i,2]," irreducible=",polisirreducible(q));
-              print("factor=",q);
-              if(d<=11,print("galois=",polgalois(q)),print("galois=not_computed_degree_gt_11"));
-              print("END_FACTOR");
-            }
-          );
+          print("factor_matrix=",f);
+          for(i=1,n,print("factor_index=",i," degree=",poldegree(f[i,1])," exponent=",f[i,2]," irreducible=",polisirreducible(f[i,1])));
+          for(i=1,n,if(poldegree(f[i,1])<=11,print("galois_index=",i," result=",polgalois(f[i,1])),print("galois_index=",i," result=not_computed_degree_gt_11")));
           print("product_check=",prod(i=1,n,f[i,1]^f[i,2])==p);
           GP
           cat data/w33_pass616_pari_factor.txt
