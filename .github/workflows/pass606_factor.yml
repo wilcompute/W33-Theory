@@ -1,0 +1,44 @@
+name: Pass 606 residual factorization
+
+on:
+  push:
+    paths:
+      - '.github/workflows/pass606_factor.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  factor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+      - name: Install PARI/GP
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pari-gp
+      - name: Factor residual cofactor and prove primality
+        run: |
+          mkdir -p data
+          gp -q > data/w33_pass606_remote_factor.txt <<'GP'
+          default(parisizemax, 4000000000);
+          n=44120990758090595142167546520529192659268803434675483073693193;
+          f=factor(n);
+          print("cofactor=",n);
+          print("factor_matrix=",f);
+          for(i=1,matsize(f)[1],print("factor=",f[i,1]," exponent=",f[i,2]," isprime=",isprime(f[i,1])));
+          print("product_check=",prod(i=1,matsize(f)[1],f[i,1]^f[i,2])==n);
+          GP
+          cat data/w33_pass606_remote_factor.txt
+      - name: Commit factor witness
+        run: |
+          git config user.name "w33-pass-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/w33_pass606_remote_factor.txt
+          git commit -m "Pass 606: factor residual determinant cofactor"
+          git pull --rebase origin master
+          git push origin HEAD:master
