@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "classification": "finite toy spectral-coordinate embedding",
+  "matrix_shape": [
+    9,
+    9
+  ],
+  "is_self_adjoint": true,
+  "kernel_dim": 3,
+  "eigenvalues": [
+    -4.58348713e-16,
+    4.51393827e-17,
+    4.10893396e-16,
+    0.46684385,
+    1.687234,
+    1.78865261,
+    3.27836178,
+    4.96249005,
+    9.81641771
+  ],
+  "all_nonzero_eigenvalues_above_one_quarter": true,
+  "coordinate_images": [
+    {
+      "lambda": 0.46684385,
+      "rho_real": 0.5,
+      "rho_imag": 0.465665,
+      "status": "critical-line coordinate by definition"
+    },
+    {
+      "lambda": 1.687234,
+      "rho_real": 0.5,
+      "rho_imag": 1.198847,
+      "status": "critical-line coordinate by definition"
+    },
+    {
+      "lambda": 1.78865261,
+      "rho_real": 0.5,
+      "rho_imag": 1.240424,
+      "status": "critical-line coordinate by definition"
+    },
+    {
+      "lambda": 3.27836178,
+      "rho_real": 0.5,
+      "rho_imag": 1.740219,
+      "status": "critical-line coordinate by definition"
+    },
+    {
+      "lambda": 4.96249005,
+      "rho_real": 0.5,
+      "rho_imag": 2.170827,
+      "status": "critical-line coordinate by definition"
+    },
+    {
+      "lambda": 9.81641771,
+      "rho_real": 0.5,
+      "rho_imag": 3.092963,
+      "status": "critical-line coordinate by definition"
+    }
+  ],
+  "heat_trace": {
+    "0.1": 7.339336154909244,
+    "0.5": 4.916017961657128,
+    "1.0": 4.023933865141886,
+    "2.0": 3.456758112290197,
+    "5.0": 3.0972336664498674
+  },
+  "logical_result": {
+    "images_lie_on_re_one_half": true,
+    "reason": "The real part 1/2 is inserted by the coordinate definition.",
+    "hilbert_polya_realized": false,
+    "classical_rh_proved": false
+  },
+  "missing_transfer_requirements": [
+    "Define an infinite-dimensional self-adjoint operator on a rigorous Hilbert space.",
+    "Prove its regularized spectral determinant equals completed xi(s), up to controlled factors.",
+    "Match the complete zeta-zero ordinate multiset and multiplicities.",
+    "Control domains, boundary conditions, trace class/regularization, and continuous spectrum."
+  ]
+}
