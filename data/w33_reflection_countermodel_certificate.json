@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "classification_theorem": {
+    "normal_coordinate": "z=s-1/2",
+    "symmetry_form": "F(1-s)=F(s) and real symmetry imply F(s)=Q(z^2)",
+    "critical_line_criterion": "all zeros of F lie on Re(s)=1/2 iff all zeros of Q are real and non-positive",
+    "finite_hilbert_polya_criterion": "F(s)=C det(z^2 I+H^2) for a finite self-adjoint H iff the finite zero set lies on the critical line"
+  },
+  "casey_quartet_reduction": {
+    "F": "((z-delta)^2+gamma^2)((z+delta)^2+gamma^2)",
+    "Q": "y^2+2(gamma^2-delta^2)y+(gamma^2+delta^2)^2",
+    "discriminant": "-16 gamma^2 delta^2",
+    "conclusion": "for gamma nonzero, the self-adjoint determinant condition holds exactly when delta=0"
+  },
+  "minimal_extra_axiom": {
+    "insufficient": [
+      "functional-equation symmetry",
+      "complex conjugation symmetry",
+      "compactification of infinity",
+      "pairing zeros into reflected quartets"
+    ],
+    "sufficient_finite_version": "an exact determinant identity with a self-adjoint square, not merely a self-adjoint matrix followed by a map that inserts 1/2",
+    "classical_analogue": "a de Branges/Weil/Li-type positive Hermitian form or an exact infinite-dimensional self-adjoint determinant identity"
+  },
+  "examples": [
+    {
+      "delta": 0.0,
+      "gamma": 14.0,
+      "zeros": [{"real": 0.5, "imag": 14.0}, {"real": 0.5, "imag": -14.0}, {"real": 0.5, "imag": 14.0}, {"real": 0.5, "imag": -14.0}],
+      "Q_coefficients": [1.0, 392.0, 38416.0],
+      "Q_discriminant": -0.0,
+      "Q_roots": [{"real": -196.0, "imag": 0.0}, {"real": -196.0, "imag": 0.0}],
+      "reflection_error": 0.0,
+      "conjugation_error": 0.0,
+      "critical_line": true,
+      "finite_self_adjoint_square_determinant_exists": true,
+      "frequencies": [14.0, 14.0],
+      "hp_reconstruction_error": 0.0,
+      "orbit_defect_energy": 0.0
+    },
+    {
+      "delta": 0.05,
+      "gamma": 14.0,
+      "zeros": [{"real": 0.55, "imag": 14.0}, {"real": 0.55, "imag": -14.0}, {"real": 0.45, "imag": 14.0}, {"real": 0.45, "imag": -14.0}],
+      "Q_coefficients": [1.0, 391.995, 38416.98000625],
+      "Q_discriminant": -7.840000000000002,
+      "Q_roots": [{"real": -195.9975, "imag": 1.3999999999996882}, {"real": -195.9975, "imag": -1.3999999999996882}],
+      "reflection_error": 0.0,
+      "conjugation_error": 0.0,
+      "critical_line": false,
+      "finite_self_adjoint_square_determinant_exists": false,
+      "frequencies": null,
+      "hp_reconstruction_error": null,
+      "orbit_defect_energy": 0.06346651825433926
+    },
+    {
+      "delta": 0.2,
+      "gamma": 14.0,
+      "zeros": [{"real": 0.7, "imag": 14.0}, {"real": 0.7, "imag": -14.0}, {"real": 0.3, "imag": 14.0}, {"real": 0.3, "imag": -14.0}],
+      "Q_coefficients": [1.0, 391.92, 38431.681599999996],
+      "Q_discriminant": -125.44000000000003,
+      "Q_roots": [{"real": -195.96, "imag": 5.599999999999402}, {"real": -195.96, "imag": -5.599999999999402}],
+      "reflection_error": 0.0,
+      "conjugation_error": 0.0,
+      "critical_line": false,
+      "finite_self_adjoint_square_determinant_exists": false,
+      "frequencies": null,
+      "hp_reconstruction_error": null,
+      "orbit_defect_energy": 1.1967972013675403
+    },
+    {
+      "delta": 0.4,
+      "gamma": 14.0,
+      "zeros": [{"real": 0.9, "imag": 14.0}, {"real": 0.9, "imag": -14.0}, {"real": 0.09999999999999998, "imag": 14.0}, {"real": 0.09999999999999998, "imag": -14.0}],
+      "Q_coefficients": [1.0, 391.68, 38478.7456],
+      "Q_discriminant": -501.7600000000001,
+      "Q_roots": [{"real": -195.84, "imag": 11.200000000000104}, {"real": -195.84, "imag": -11.200000000000104}],
+      "reflection_error": 0.0,
+      "conjugation_error": 0.0,
+      "critical_line": false,
+      "finite_self_adjoint_square_determinant_exists": false,
+      "frequencies": null,
+      "hp_reconstruction_error": null,
+      "orbit_defect_energy": 11.170107212763714
+    }
+  ],
+  "mixed_orbit_energy": {
+    "deltas": [0.0, 0.05, 0.2],
+    "energy": 1.2602637196218796,
+    "zero_iff_all_deltas_zero": true
+  },
+  "checks": {
+    "all_examples_have_reflection_symmetry": true,
+    "all_examples_have_conjugation_symmetry": true,
+    "symmetry_allows_off_line_quartets": true,
+    "casey_quartic_discriminant_negative_off_line": true,
+    "self_adjoint_square_factorization_exact_on_line": true,
+    "self_adjoint_square_factorization_fails_off_line": true,
+    "defect_energy_positive_if_any_orbit_off_line": true
+  }
+}
