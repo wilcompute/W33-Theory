@@ -1,0 +1,44 @@
+name: Passes 636-640 release verification
+
+on:
+  pull_request:
+    paths:
+      - 'analysis/w33_pass63*.py'
+      - 'analysis/w33_pass640_*.py'
+      - 'analysis/BT636_640_five_frontier_release.md'
+      - 'data/w33_pass63*.json'
+      - 'data/w33_pass640_*.json'
+      - 'tests/test_w33_pass636_640.py'
+      - '.github/workflows/pass636_640_release.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    timeout_minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact runtime dependencies
+        run: python -m pip install --disable-pip-version-check numpy sympy pytest
+      - name: Regenerate deterministic certificates
+        run: |
+          python analysis/w33_pass636_mod4_bockstein_lift.py
+          python analysis/w33_pass637_local_conductor_graph.py
+          python analysis/w33_pass638_endpoint_parity_fibre.py
+          python analysis/w33_pass639_matrix_covariance_cs.py
+          python analysis/w33_pass640_closed_loop_falsifier.py
+      - name: Verify certificate reproduction and focused regression
+        run: |
+          python analysis/w33_pass636_mod4_bockstein_lift.py --check
+          python analysis/w33_pass637_local_conductor_graph.py --check
+          python analysis/w33_pass638_endpoint_parity_fibre.py --check
+          python analysis/w33_pass639_matrix_covariance_cs.py --check
+          python analysis/w33_pass640_closed_loop_falsifier.py --check
+          python -m pytest -q tests/test_w33_pass636_640.py
+      - name: Ensure generated ledgers are committed exactly
+        run: git diff --exit-code -- data/w33_pass636_mod4_bockstein_lift.json data/w33_pass637_local_conductor_graph.json data/w33_pass638_endpoint_parity_fibre.json data/w33_pass639_matrix_covariance_cs.json data/w33_pass640_closed_loop_falsifier.json
