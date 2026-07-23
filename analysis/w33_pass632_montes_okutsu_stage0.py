@@ -28,7 +28,7 @@ def factor_record(poly,p):
  deriv=poly.diff();g=sp.gcd(poly,deriv,modulus=p)
  return {'unit_mod_p':int(unit)%p,'factors':rows,'factor_degree_multiplicity':sorted([[r['degree'],r['multiplicity']] for r in rows]),'derivative_gcd_degree':g.degree(),'squarefree':g.degree()==0}
 
-def payload():
+def payload(include_full=False):
  x=sp.symbols('x');polys=[sp.Poly.from_list(c,x,domain=sp.ZZ) for c in p616.FACTOR_COEFFS];fields=p622.load_fields()
  transcripts=[];clean=0;index_singular=0;ramified=0;wild=0
  for poly,fld in zip(polys,fields):
@@ -65,7 +65,8 @@ def payload():
  global_hash=hashlib.sha256(''.join(r['sha256'] for r in transcripts).encode()).hexdigest()
  return {'schema':'w33.pass632.montes_okutsu_stage0.v1','status':'PASS' if all(checks.values()) else 'FAIL',
   'counts':{'localizations':len(transcripts),'Dedekind_clean':clean,'nonmaximal_power_basis':85-clean,'ramified':ramified,'wild':wild,'index_only_singularities':index_singular},
-  'transcripts':transcripts,
+  'transcript_index':[{'field':r['field'],'degree':r['degree'],'prime':r['prime'],'sha256':r['sha256'],'dedekind_clean':r['dedekind_clean'],'index_only_singularity':r['index_only_singularity'],'ramification_kind':r['p_maximal_order']['ramification_kind'],'factor_degree_multiplicity':r['polynomial_mod_p']['factor_degree_multiplicity'],'prime_ideal_ef':[[q['e'],q['f']] for q in r['p_maximal_order']['prime_ideals']]} for r in transcripts],
+  **({'transcripts':transcripts} if include_full else {}),
   'magma_completion_driver':{'generator':'python analysis/w33_pass632_montes_okutsu_stage0.py --emit-magma analysis/w33_pass632_montes_driver.m','sha256':driver_hash,'purpose':'Run Montes(f,p : Field:=true) for all 85 pairs and archive complete OM representations, higher Newton polygons, residual polynomials, slopes, indices, and local integral bases.'},
   'global_sha256':global_hash,
   'theorem':'All 85 torsion-prime localizations now have exact stage-zero Okutsu/Montes transcripts: complete factorization modulo p, repeated-factor and derivative-gcd data, exact p-maximal prime-ideal e/f profiles, wild/tame labels, and polynomial-versus-field discriminant/index reconciliation. Whenever the power basis is p-maximal, the modular factors agree exactly with the local prime ideals; the remaining rows isolate the precise Dedekind defects that higher Newton polygons must resolve.',
@@ -73,8 +74,9 @@ def payload():
   'boundary':'The embedded transcripts are exact Stage-0 plus certified p-maximal outputs. Complete OM representations, slopes, residual polynomials, and local integral bases require executing the included Magma Montes driver (or an equivalent licensed Montes implementation); they are not fabricated here.'}
 
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');ap.add_argument('--output',type=Path,default=OUT);ap.add_argument('--emit-magma',type=Path);a=ap.parse_args();
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');ap.add_argument('--output',type=Path,default=OUT);ap.add_argument('--emit-magma',type=Path);ap.add_argument('--full-output',type=Path);a=ap.parse_args();
  if a.emit_magma:a.emit_magma.write_text(magma_driver_text())
+ if a.full_output:a.full_output.write_text(json.dumps(payload(include_full=True),sort_keys=True,separators=(',',':'))+'\n')
  p=payload();s=json.dumps(p,sort_keys=True,separators=(',',':'))+'\n'
  if a.check:
   if not a.output.exists() or a.output.read_text()!=s:raise SystemExit('Pass 632 certificate drift')
