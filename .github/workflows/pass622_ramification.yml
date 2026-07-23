@@ -1,0 +1,65 @@
+name: Pass 622 exact ramification atlas
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  field:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    strategy:
+      fail-fast: false
+      matrix:
+        index: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install PARI and Python dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pari-gp python3-sympy
+      - name: Extract factor ${{ matrix.index }}
+        run: |
+          python3 - <<'PY'
+          import ast, importlib.util
+          from pathlib import Path
+          i=${{ matrix.index }}
+          spec=importlib.util.spec_from_file_location('p616','analysis/w33_pass616_arithmetic_core_factorization.py')
+          m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+          c=m.FACTOR_COEFFS[i]
+          Path('factor.gp').write_text('f=Polrev(['+','.join(map(str,reversed(c)))+']);\n')
+          print('index',i+1,'degree',len(c)-1)
+          PY
+      - name: Compute maximal-order discriminant and local decomposition
+        run: |
+          mkdir -p data/pass622
+          gp -q > data/pass622/field_${{ matrix.index }}.txt <<'GP'
+          default(parisizemax, 12000000000);
+          read("factor.gp");
+          n=poldegree(f);
+          print("index=",${{ matrix.index }}+1);
+          print("degree=",n);
+          pd=poldisc(f);
+          print("polynomial_discriminant=",pd);
+          nf=nfinit(f);
+          D=nf.disc;
+          print("field_discriminant=",D);
+          q=abs(pd/D);
+          print("index_square=",q);
+          print("index=",sqrtint(q));
+          print("field_discriminant_factorization=",factor(abs(D)));
+          P=[2,3,5,7,13];
+          for(k=1,#P,
+            p=P[k]; dec=idealprimedec(nf,p);
+            print("LOCAL prime=",p," v_field_disc=",valuation(D,p)," v_poly_disc=",valuation(pd,p)," prime_count=",#dec," ef=",vector(#dec,j,[dec[j][3],dec[j][4]]));
+          );
+          print("signature=",nf.sign);
+          GP
+          cat data/pass622/field_${{ matrix.index }}.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass622-field-${{ matrix.index }}
+          path: data/pass622/field_${{ matrix.index }}.txt
