@@ -4,10 +4,11 @@ on:
   push:
     paths:
       - '.github/workflows/pass606_factor.yml'
+  pull_request:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   factor:
@@ -15,8 +16,6 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: master
       - name: Install PARI/GP
         run: |
           sudo apt-get update
@@ -34,11 +33,7 @@ jobs:
           print("product_check=",prod(i=1,matsize(f)[1],f[i,1]^f[i,2])==n);
           GP
           cat data/w33_pass606_remote_factor.txt
-      - name: Commit factor witness
-        run: |
-          git config user.name "w33-pass-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add data/w33_pass606_remote_factor.txt
-          git commit -m "Pass 606: factor residual determinant cofactor"
-          git pull --rebase origin master
-          git push origin HEAD:master
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass606-factor
+          path: data/w33_pass606_remote_factor.txt
