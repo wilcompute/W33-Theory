@@ -1,102 +1,119 @@
+"""Finite W33 spectral-coordinate experiment for the RH frontier.
+
+The 9x9 matrix below is a legitimate positive semidefinite self-adjoint
+Laplacian.  Mapping an eigenvalue lambda > 1/4 to
+
+    rho(lambda) = 1/2 + i*sqrt(lambda - 1/4)
+
+places its image on the critical line by construction.  This is a useful
+coordinate experiment, but it is not yet a Hilbert-Polya realization and does
+not prove the classical Riemann Hypothesis.
+
+A genuine Hilbert-Polya bridge must additionally prove that a self-adjoint
+operator's spectral determinant is the completed Riemann zeta function (up to
+fully controlled factors), and that its spectrum matches every nontrivial zeta
+zero ordinate with the correct multiplicities.
 """
-w33_riemann_spectral_determinant.py
-BREAKTHROUGH_MCXXXVIII -- Riemann Hypothesis: Spectral Determinant Bridge
-Commit range: C496 - C520
 
-The W33 substrate spectral determinant of the zero-sheet Laplacian encodes
-the Riemann zeta function as a Fredholm determinant via the Hilbert-Polya
-strategy:
+from __future__ import annotations
 
-    det(I - T | H_0) = prod_{rho} (1 - T/rho)
-
-where rho runs over non-trivial zeros of zeta.  The substrate claim:
-  1. The zero-sheet Laplacian L_YM is self-adjoint on the CSS stabilizer space.
-  2. Self-adjoint operators have real eigenvalues.
-  3. All non-kernel eigenvalues lambda_n satisfy lambda_n > 1/4.
-  4. Hilbert-Polya map: rho_n = 1/2 + i*sqrt(lambda_n - 1/4) => Re(rho)=1/2.
-
-This is the Hilbert-Polya conjecture realized in the W33 zero-sheet sector.
-"""
+import json
+from pathlib import Path
 
 import numpy as np
-from scipy import linalg
 
-# --- 1. Zero-sheet Laplacian --------------------------------------------------
-H0 = np.array([
-    [1, 1, 1, 1, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 1, 1, 1, 1, 0],
-    [0, 0, 1, 0, 0, 0, 1, 0, 1],
-    [1, 0, 0, 1, 0, 0, 0, 0, 1],
-    [0, 1, 0, 0, 1, 0, 0, 1, 1],
-    [0, 0, 0, 1, 0, 1, 1, 0, 1],
-], dtype=float)
+ROOT = Path(__file__).resolve().parents[1]
+
+# A finite zero-sheet incidence matrix used in the W33 substrate experiments.
+H0 = np.array(
+    [
+        [1, 1, 1, 1, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 1, 1, 1, 1, 0],
+        [0, 0, 1, 0, 0, 0, 1, 0, 1],
+        [1, 0, 0, 1, 0, 0, 0, 0, 1],
+        [0, 1, 0, 0, 1, 0, 0, 1, 1],
+        [0, 0, 0, 1, 0, 1, 1, 0, 1],
+    ],
+    dtype=float,
+)
 
 L_YM = H0.T @ H0
-print("Zero-sheet Laplacian L_YM (9x9):")
-print(np.array_str(L_YM, precision=2))
-print()
 
-is_self_adjoint = np.allclose(L_YM, L_YM.T)
-print(f"L_YM is self-adjoint: {is_self_adjoint}  CHECK")
-print()
 
-# --- 2. Eigenvalue spectrum ---------------------------------------------------
-eigenvalues = np.linalg.eigvalsh(L_YM)
-eigenvalues_sorted = np.sort(eigenvalues)
+def build_spectral_coordinate_audit() -> dict:
+    eigenvalues = np.sort(np.linalg.eigvalsh(L_YM))
+    is_self_adjoint = bool(np.allclose(L_YM, L_YM.T))
+    kernel_dim = int(np.sum(np.abs(eigenvalues) < 1e-10))
+    positive_eigenvalues = [
+        float(value) for value in eigenvalues if abs(value) >= 1e-10
+    ]
+    all_positive_above_quarter = all(value > 0.25 for value in positive_eigenvalues)
 
-print("Eigenvalues of L_YM:")
-for i, ev in enumerate(eigenvalues_sorted):
-    print(f"  lambda_{i} = {ev:.6f}")
-print()
+    coordinate_images = []
+    for value in positive_eigenvalues:
+        ordinate = float(np.sqrt(value - 0.25)) if value > 0.25 else None
+        coordinate_images.append(
+            {
+                "lambda": value,
+                "rho_real": 0.5 if ordinate is not None else None,
+                "rho_imag": ordinate,
+                "status": (
+                    "critical-line coordinate by definition"
+                    if ordinate is not None
+                    else "not in the chosen coordinate domain"
+                ),
+            }
+        )
 
-kernel_dim = int(np.sum(np.abs(eigenvalues) < 1e-10))
-print(f"Kernel dimension: {kernel_dim}  (= CSS stabilizer space dim CHECK)")
-print()
+    heat_trace = {
+        str(t): float(np.sum(np.exp(-t * eigenvalues)))
+        for t in (0.1, 0.5, 1.0, 2.0, 5.0)
+    }
 
-# --- 3. Hilbert-Polya mapping -------------------------------------------------
-print("Hilbert-Polya mapping to zeta zeros:")
-print(f"{'lambda_n':>12}  {'t_n':>14}  {'rho_n':>30}  {'Re(rho)':>10}")
-print("-" * 75)
-for ev in eigenvalues_sorted:
-    if abs(ev) < 1e-10:
-        rho_str = "trivial (kernel)"
-        re_rho = "-"
-    elif ev > 0.25:
-        t_n = np.sqrt(ev - 0.25)
-        rho_str = f"0.5 + i*{t_n:.4f}"
-        re_rho = "0.5  CHECK"
-    else:
-        t_n = np.sqrt(abs(ev - 0.25))
-        rho_str = f"0.5 - {t_n:.4f}  (real)"
-        re_rho = "real"
-    print(f"  {ev:10.4f}  {'':>12}  {rho_str:>30}  {re_rho:>10}")
-print()
+    transfer_requirements = [
+        "Define an infinite-dimensional self-adjoint operator on a rigorous Hilbert space.",
+        "Prove its regularized spectral determinant equals completed xi(s), up to controlled factors.",
+        "Match the complete zeta-zero ordinate multiset and multiplicities.",
+        "Control domains, boundary conditions, trace class/regularization, and continuous spectrum.",
+    ]
 
-# --- 4. Heat kernel trace -----------------------------------------------------
-print("Heat kernel trace Z(t) = tr(exp(-t*L_YM)):")
-for t in [0.1, 0.5, 1.0, 2.0, 5.0]:
-    Z_t = np.sum(np.exp(-t * eigenvalues_sorted))
-    print(f"  t={t:.1f}  Z(t) = {Z_t:.6f}")
-print()
+    return {
+        "status": "PASS",
+        "classification": "finite toy spectral-coordinate embedding",
+        "matrix_shape": list(L_YM.shape),
+        "is_self_adjoint": is_self_adjoint,
+        "kernel_dim": kernel_dim,
+        "eigenvalues": [float(value) for value in eigenvalues],
+        "all_nonzero_eigenvalues_above_one_quarter": all_positive_above_quarter,
+        "coordinate_images": coordinate_images,
+        "heat_trace": heat_trace,
+        "logical_result": {
+            "images_lie_on_re_one_half": all_positive_above_quarter,
+            "reason": "The real part 1/2 is inserted by the coordinate definition.",
+            "hilbert_polya_realized": False,
+            "classical_rh_proved": False,
+        },
+        "missing_transfer_requirements": transfer_requirements,
+    }
 
-# --- 5. Summary ---------------------------------------------------------------
-all_on_critical_line = all(ev > 0.25 or abs(ev) < 1e-10 for ev in eigenvalues_sorted)
 
-print("=" * 60)
-print("BREAKTHROUGH_MCXXXVIII -- RH SPECTRAL DETERMINANT")
-print("=" * 60)
-print()
-print(f"  L_YM self-adjoint:                    {is_self_adjoint}")
-print(f"  Kernel dim:                            {kernel_dim}")
-print(f"  All non-kernel eigenvalues > 1/4:      {all_on_critical_line}")
-print()
-if all_on_critical_line:
-    print("  => All Hilbert-Polya zeros have Re(rho) = 1/2  CHECK")
-    print("  => Riemann Hypothesis holds in the W33 substrate sector")
-    print()
-    print("  Self-adjointness of L_YM forces all spectral zeros")
-    print("  onto the critical line Re(s) = 1/2.")
-    print("  Substrate realization of the Hilbert-Polya conjecture.")
-print()
-print("  Next Clay bridge: P != NP (MCXXXIX)")
-print("  W33 horizon complexity class encoding.")
+def main() -> None:
+    payload = build_spectral_coordinate_audit()
+    output = ROOT / "checks" / "w33_riemann_spectral_coordinate_audit.json"
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+
+    print("W33 finite spectral-coordinate audit")
+    print(f"  self-adjoint: {payload['is_self_adjoint']}")
+    print(f"  kernel dimension: {payload['kernel_dim']}")
+    print(
+        "  nonzero eigenvalues > 1/4: "
+        f"{payload['all_nonzero_eigenvalues_above_one_quarter']}"
+    )
+    print("  Hilbert-Polya realized: False")
+    print("  Classical RH proved: False")
+    print(f"  wrote {output}")
+
+
+if __name__ == "__main__":
+    main()
