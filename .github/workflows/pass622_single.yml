@@ -9,14 +9,12 @@ permissions:
 
 jobs:
   atlas:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - name: Install PARI/GP
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y pari-gp python3-sympy
+        run: brew install pari
       - name: Export the seventeen factors
         run: |
           python3 - <<'PY'
