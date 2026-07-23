@@ -44,17 +44,18 @@ jobs:
           coeffs=next(ast.literal_eval(node.value) for node in tree.body if isinstance(node,ast.Assign) and len(node.targets)==1 and isinstance(node.targets[0],ast.Name) and node.targets[0].id=='FACTOR_COEFFS')
           inds=[int(x) for x in os.environ['FIELD_INDICES'].split(',')]
           polys=['Polrev(['+','.join(map(str,reversed(coeffs[i])))+'])' for i in inds]
-          Path('fields.gp').write_text('I=['+','.join(str(i+1) for i in inds)+'];P=['+','.join(polys)+'];\n')
+          Path('fields.gp').write_text('IDX=['+','.join(str(i+1) for i in inds)+'];P=['+','.join(polys)+'];\n')
           print('indices',[i+1 for i in inds],'degrees',[len(coeffs[i])-1 for i in inds])
           PY
       - name: Compute exact field atlas
         run: |
+          set -o pipefail
           mkdir -p data
           cat > atlas.gp <<'GP'
           default(parisizemax, 16000000000);
           read("fields.gp");
           Q=[2,3,5,7,13];
-          onefield(k)={my(i,f,pd,nf,D,z,p,dec);i=I[k];f=P[k];pd=poldisc(f);nf=nfinit(f);D=nf.disc;z=sqrtint(abs(pd/D));print("BEGIN_FIELD index=",i," degree=",poldegree(f)," signature=",nf.sign);print("poly_disc=",pd);print("field_disc=",D);print("power_basis_index=",z);print("field_disc_factor=",factor(abs(D)));for(j=1,#Q,p=Q[j];dec=idealprimedec(nf,p);print("LOCAL p=",p," vfield=",valuation(D,p)," vpoly=",valuation(pd,p)," vindex=",valuation(z,p)," ef=",vector(#dec,u,[dec[u][3],dec[u][4]])));print("END_FIELD")};
+          onefield(k)={my(i,f,pd,nf,D,z,p,dec);i=IDX[k];f=P[k];pd=poldisc(f);nf=nfinit(f);D=nf.disc;z=sqrtint(abs(pd/D));print("BEGIN_FIELD index=",i," degree=",poldegree(f)," signature=",nf.sign);print("poly_disc=",pd);print("field_disc=",D);print("power_basis_index=",z);print("field_disc_factor=",factor(abs(D)));for(j=1,#Q,p=Q[j];dec=idealprimedec(nf,p);print("LOCAL p=",p," vfield=",valuation(D,p)," vpoly=",valuation(pd,p)," vindex=",valuation(z,p)," ef=",vector(#dec,u,[dec[u][3],dec[u][4]])));print("END_FIELD")};
           for(k=1,#P,onefield(k));
           GP
           gp -q atlas.gp | tee data/w33_pass622_${{ matrix.name }}.txt
