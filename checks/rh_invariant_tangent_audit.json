@@ -1,0 +1,184 @@
+{
+  "status": "PASS",
+  "scope": "invariant tangent regularization and W33 RH bridge audit",
+  "constants": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "edges": 240,
+    "branch": 11,
+    "nontrivial_eigenvalues": [
+      2,
+      -4
+    ]
+  },
+  "graph_rh": {
+    "ihara_inverse": "(1-u^2)^200 (1-u)(1-11u) (1-2u+11u^2)^24 (1+4u+11u^2)^15",
+    "critical_radius": 0.30151134457776363,
+    "nontrivial_poles": {
+      "2": [
+        {
+          "real": 0.09090909090909091,
+          "imag": 0.2874797872880345,
+          "modulus": 0.3015113445777637
+        },
+        {
+          "real": 0.09090909090909091,
+          "imag": -0.2874797872880345,
+          "modulus": 0.3015113445777637
+        }
+      ],
+      "-4": [
+        {
+          "real": -0.18181818181818182,
+          "imag": 0.24052284646041733,
+          "modulus": 0.30151134457776363
+        },
+        {
+          "real": -0.18181818181818182,
+          "imag": -0.24052284646041733,
+          "modulus": 0.30151134457776363
+        }
+      ]
+    },
+    "re_s_under_u_equals_11_minus_s": 0.5,
+    "re_s_under_u_equals_sqrt11_minus_s": 1.0
+  },
+  "phase_torque_falsifier": {
+    "evaluation_point": {
+      "sigma": 1.0,
+      "t": 0.0,
+      "t0": 14.0
+    },
+    "natural_sum_at_delta_zero": 0.14267515923566879,
+    "antisymmetric_difference_at_delta_zero": 0.0,
+    "antisymmetric_difference_at_delta_0_1": 7.269332853032662e-05
+  },
+  "symmetry_counterexample": {
+    "definition": "F_delta,t0(s)=(((s-1/2)-delta)^2+t0^2)*(((s-1/2)+delta)^2+t0^2)",
+    "delta": 0.2,
+    "t0": 7.0,
+    "roots": [
+      {
+        "real": 0.7,
+        "imag": 7.0
+      },
+      {
+        "real": 0.7,
+        "imag": -7.0
+      },
+      {
+        "real": 0.3,
+        "imag": 7.0
+      },
+      {
+        "real": 0.3,
+        "imag": -7.0
+      }
+    ],
+    "max_reflection_error": 1.4210854715202004e-14,
+    "max_conjugation_error": 0.0,
+    "conclusion": "Functional-equation-style reflection and real conjugation symmetry do not force zeros onto Re(s)=1/2."
+  },
+  "checks": {
+    "w33_ramanujan_bound": true,
+    "w33_ihara_nontrivial_poles_on_circle": true,
+    "correct_u_equals_11_minus_s_maps_to_half": true,
+    "sqrt11_base_maps_to_one_not_half": true,
+    "natural_pair_torque_nonzero_even_at_delta_zero": true,
+    "antisymmetric_difference_zero_at_delta_zero": true,
+    "antisymmetric_difference_nonzero_off_line": true,
+    "quartet_reflection_symmetry": true,
+    "quartet_conjugation_symmetry": true,
+    "quartet_has_off_line_zeros": true,
+    "stereographic_infinity_is_north_pole": true,
+    "stereographic_zero_is_south_pole": true
+  },
+  "claims": [
+    {
+      "id": "G1",
+      "status": "exact",
+      "claim": "W(3,3) is a 12-regular Ramanujan graph.",
+      "reason": "Its nontrivial adjacency eigenvalues 2 and -4 satisfy |lambda| < 2*sqrt(11)."
+    },
+    {
+      "id": "G2",
+      "status": "exact",
+      "claim": "The nontrivial Ihara poles lie on |u|=1/sqrt(11).",
+      "reason": "This follows directly from the two quadratic Ihara factors."
+    },
+    {
+      "id": "G3",
+      "status": "correction",
+      "claim": "The graph critical circle maps to Re(s)=1/2 under u=11^{-s}.",
+      "reason": "Using u=(sqrt(11))^{-s} instead maps the circle to Re(s)=1, not 1/2."
+    },
+    {
+      "id": "Z1",
+      "status": "exact_with_domain_caveat",
+      "claim": "The completed zeta symmetry gives mirror phase relations away from zeros and branch cuts.",
+      "reason": "arg(xi) is multivalued and undefined at the zeros themselves."
+    },
+    {
+      "id": "T1",
+      "status": "unsupported",
+      "claim": "tan(theta)=Im(z)/Re(z)=tan(phi/2) defines an invariant tangent metric.",
+      "reason": "This is an angular coordinate identity, not a Riemannian metric; standard stereographic polar angle depends on |z|, not arg(z)."
+    },
+    {
+      "id": "T2",
+      "status": "unsupported",
+      "claim": "Compactifying the pole at s=1 forces a stationary pi/2 boundary condition.",
+      "reason": "Stereographic compactification sends infinity to a point by convention but does not imply a zero derivative of phase there."
+    },
+    {
+      "id": "T3",
+      "status": "false_for_natural_pair_phase",
+      "claim": "A critical-line zero pair has zero boundary phase torque.",
+      "reason": "For the natural phase of the zero-pair product, the two derivatives add and are generically nonzero even when delta=0."
+    },
+    {
+      "id": "T4",
+      "status": "ad_hoc_if_repaired",
+      "claim": "Changing one sign makes the torque vanish iff delta=0.",
+      "reason": "The antisymmetric difference has that property locally, but it is not the logarithmic phase derivative of the product and is not derived from xi."
+    },
+    {
+      "id": "T5",
+      "status": "fatal_gap",
+      "claim": "A nonzero local pair contribution cannot be cancelled by the rest of the completed zeta product.",
+      "reason": "No sign-definiteness, independence, or global cancellation theorem is proved; gamma, pole/trivial-zero, and all other zero contributions are omitted."
+    },
+    {
+      "id": "T6",
+      "status": "counterexample",
+      "claim": "Reflection symmetry plus compactification forces all zeros to Re(s)=1/2.",
+      "reason": "The explicit even quartet polynomial F(s) has the same reflection and conjugation symmetries but has off-line zeros for every delta>0."
+    },
+    {
+      "id": "H1",
+      "status": "tautological_without_transfer",
+      "claim": "Mapping a positive self-adjoint eigenvalue lambda to 1/2+i*sqrt(lambda-1/4) realizes Hilbert-Polya.",
+      "reason": "The map puts points on Re(s)=1/2 by definition; one must prove the operator's spectral determinant equals the completed zeta function and matches every zero ordinate."
+    },
+    {
+      "id": "C1",
+      "status": "not_proved",
+      "claim": "The classical Riemann Hypothesis follows.",
+      "reason": "The exact W(3,3) graph-RH remains a finite analogue until a rigorous transfer theorem to classical zeta is constructed."
+    }
+  ],
+  "verdict": {
+    "classical_rh_proved": false,
+    "w33_graph_rh_proved": true,
+    "topological_slide_decks_status": "not a valid proof in current form",
+    "salvageable_core": [
+      "W(3,3) Ihara determinant",
+      "W(3,3) Ramanujan bound",
+      "graph-RH critical circle",
+      "completed-zeta reflection symmetry away from zeros",
+      "phase-gradient language as a heuristic visualization"
+    ],
+    "minimum_missing_theorem": "A rigorously defined global operator or determinant whose spectrum/zeros are exactly those of the completed Riemann zeta function, together with a proof that the proposed boundary functional is positive or cannot cancel off the critical line."
+  }
+}
