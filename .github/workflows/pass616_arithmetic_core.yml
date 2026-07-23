@@ -41,16 +41,20 @@ jobs:
           read("data/w33_pass616_core.gp");
           print("degree=",poldegree(p));
           f=factor(p);
-          print("factor_count=",matsize(f)[1]);
-          print("degree_multiset=",vector(matsize(f)[1],i,poldegree(f[i,1])));
-          for(i=1,matsize(f)[1],
-            q=f[i,1]; d=poldegree(q);
-            print("BEGIN_FACTOR index=",i," degree=",d," exponent=",f[i,2]," irreducible=",polisirreducible(q));
-            print("factor=",q);
-            if(d<=11,print("galois=",polgalois(q)),print("galois=not_computed_degree_gt_11"));
-            print("END_FACTOR");
+          n=matsize(f)[1];
+          print("factor_count=",n);
+          print("degree_multiset=",vector(n,i,poldegree(f[i,1])));
+          for(i=1,n,
+            {
+              q=f[i,1];
+              d=poldegree(q);
+              print("BEGIN_FACTOR index=",i," degree=",d," exponent=",f[i,2]," irreducible=",polisirreducible(q));
+              print("factor=",q);
+              if(d<=11,print("galois=",polgalois(q)),print("galois=not_computed_degree_gt_11"));
+              print("END_FACTOR");
+            }
           );
-          print("product_check=",prod(i=1,matsize(f)[1],f[i,1]^f[i,2])==p);
+          print("product_check=",prod(i=1,n,f[i,1]^f[i,2])==p);
           GP
           cat data/w33_pass616_pari_factor.txt
       - uses: actions/upload-artifact@v4
