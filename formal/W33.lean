@@ -33,3 +33,4 @@ import W33.Pass570CyclotomicResidue
 import W33.Pass575CyclotomicDVRKernel
 import W33.Pass581CyclotomicCompletion
 import W33.Pass586CyclotomicLocalizedDVR
+import W33.Pass591CyclotomicDedekindDVR
