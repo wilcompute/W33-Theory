@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "scope": "Riemann-Hypothesis and Hilbert-Polya claim governance",
+  "tiers": {
+    "exact_finite": "W(3,3) Ihara/graph-RH statements with explicit graph scope",
+    "classical_standard": "completed-xi identities, functional equation, argument principle",
+    "equivalent_reformulation": "Li/Weil/de Branges or defect-energy criteria stated as equivalences",
+    "candidate_bridge": "operator, determinant, trace-formula, or limiting constructions without equality",
+    "classical_solution": "permitted only with an explicit transfer theorem and complete proof"
+  },
+  "required_for_classical_solution_claim": [
+    "a globally defined object",
+    "exact equality with the completed xi function or its zero set",
+    "domain and convergence control",
+    "positivity or no-cancellation proof",
+    "independent theorem-scope review"
+  ],
+  "recommended_ci_usage": "python scripts/rh_claim_linter.py --strict $(git diff --name-only BASE...HEAD)"
+}
