@@ -1,0 +1,83 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+import argparse,itertools,json,math
+from collections import Counter,defaultdict
+from fractions import Fraction
+from pathlib import Path
+import numpy as np
+from w33_pass569_z9_coupled_affine_radial_quadratic import projective_params,build_residues,row_view
+from w33_pass573_hjelmslev_c3_600cell_apex import canonical_rows
+ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'data'/'w33_pass589_full_linear_symmetry_centralizer.json'
+U=np.array([[1,0,0,0,0,0,0,0,0,0,0,0,0],[0,1,0,0,0,2,0,0,0,0,1,0,0],[0,0,1,0,0,0,2,0,0,0,0,1,0],[0,0,0,1,0,0,0,1,0,0,0,0,1],[0,0,0,0,1,0,0,0,0,0,0,0,0],[0,0,0,0,0,1,0,0,0,0,1,0,0],[0,0,0,0,0,0,1,0,0,0,0,1,0],[0,0,0,0,0,0,0,1,0,0,0,0,2],[0,0,0,0,0,0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0,0,1,0,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,0,0,0,0,1,0],[0,0,0,0,0,0,0,0,0,0,0,0,1]],dtype=np.int64)
+def rref(A,p=3):
+ A=np.array(A,dtype=np.int64)%p;m,n=A.shape;r=0;piv=[]
+ for c in range(n):
+  z=np.where(A[r:,c]!=0)[0]
+  if not len(z):continue
+  i=r+int(z[0]);A[[r,i]]=A[[i,r]];A[r]=A[r]*pow(int(A[r,c]),-1,p)%p
+  for j in range(m):
+   if j!=r and A[j,c]:A[j]=(A[j]-A[j,c]*A[r])%p
+  piv.append(c);r+=1
+  if r==m:break
+ return A,piv
+def rank(A):return len(rref(A)[1])
+def inv(A):
+ n=len(A);R,piv=rref(np.c_[A,np.eye(n,dtype=np.int64)]);assert piv[:n]==list(range(n));return R[:,n:]%3
+def centralizer_dimension(Up):
+ n=len(Up);A=[]
+ for i in range(n):
+  for j in range(n):
+   row=np.zeros(n*n,dtype=np.int8)
+   for k in range(n):row[i*n+k]=(row[i*n+k]+Up[k,j])%3;row[k*n+j]=(row[k*n+j]-Up[i,k])%3
+   A.append(row)
+ return n*n-rank(np.array(A))
+def centralizer_order():
+ z=Fraction(3**54,1)
+ for _ in range(2):
+  for j in range(1,4):z*=Fraction(3**j-1,3**j)
+ assert z.denominator==1;return z.numerator
+def payload():
+ params=projective_params();res=build_residues(params);rv=row_view(res);_,color,counts=np.unique(rv,return_inverse=True,return_counts=True)
+ classes=defaultdict(list)
+ for i,c in enumerate(color):classes[int(c)].append(i)
+ single=[i for i,c in enumerate(color) if counts[c]==1 and np.any(params[i])];basis=[]
+ for i in single:
+  if rank(params[basis+[i]])>len(basis):basis.append(i)
+ candidates=sorted([i for i in range(1,len(params)) if i not in basis],key=lambda i:(len(classes[int(color[i])]),i))
+ for i in candidates:
+  if rank(params[basis+[i]])>len(basis):basis.append(i)
+  if len(basis)==13:break
+ B=params[basis].T.astype(np.int64)%3;Bi=inv(B);sizes=[len(classes[int(color[i])]) for i in basis]
+ powers=3**np.arange(13,dtype=np.int64);codes=params.astype(np.int64)@powers;ordr=np.argsort(codes);sc=codes[ordr]
+ def indices(X):
+  Z=canonical_rows(np.asarray(X,dtype=np.int8)%3);cc=Z.astype(np.int64)@powers;pos=np.searchsorted(sc,cc);assert np.all(sc[pos]==cc);return ordr[pos]
+ coeff={};dom={};newc={};newdom={}
+ for k in range(1,14):
+  C=np.array([x for x in itertools.product(range(3),repeat=k) if any(x) and next(v for v in x if v)==1],dtype=np.int8);coeff[k]=C
+  dom[k]=color[indices(C.astype(np.int64)@B[:,:k].T%3)];mask=C[:,-1]!=0;newc[k]=C[mask];newdom[k]=dom[k][mask]
+ opts=[]
+ for j,bi in enumerate(basis):
+  ls=[]
+  for ii in classes[int(color[bi])]:
+   for s in ((1,) if j==0 else (1,2)):ls.append(params[ii].astype(np.int64)*s%3)
+  opts.append(ls)
+ nodes=Counter();autos=[]
+ def bt(cols,k=0):
+  if k==13:autos.append(np.stack(cols,axis=1)%3@Bi%3);return
+  for v in opts[k]:
+   nodes[k]+=1
+   if k and rank(np.stack(cols+[v]))<k+1:continue
+   W=np.stack(cols+[v],axis=1)%3;ci=color[indices(newc[k+1].astype(np.int64)@W.T%3)]
+   if np.array_equal(ci,newdom[k+1]):bt(cols+[v],k+1)
+ bt([])
+ known=[np.eye(13,dtype=np.int64)%3,U%3,U@U%3]
+ packet=[0,1,2,3,4,5,6,7,9,10,11,12];Up=U[np.ix_(packet,packet)]
+ checks={'full_projective_space797162':len(params)==797162,'spectral_colors221451':len(counts)==221451,'singleton_nonzero11_rank5':len(single)==11 and rank(params[single])==5,'rare_frame_class_sizes_1x5_3x8':sizes==[1]*5+[3]*8,'frame_is_basis':rank(B)==13,'backtracking_complete':nodes[0]==1 and len(autos)==3,'full_linear_group_exactly_C3':len(autos)==3 and all(any(np.array_equal(a,k) for k in known) for a in autos),'packet_Jordan_partition_3cubed_1cubed':centralizer_dimension(Up)==54,'centralizer_order_formula_integer':centralizer_order()==18935612583143002835272704,'no_linear_involution':all(not np.array_equal(a@a%3,np.eye(13,dtype=np.int64)%3) or np.array_equal(a,np.eye(13,dtype=np.int64)%3) for a in autos),'universal_linear_A4_no_go':len(autos)==3}
+ return {'schema':'w33.pass589.full_linear_symmetry_centralizer.v1','status':'PASS' if all(checks.values()) else 'FAIL','colored_projective_search':{'space':'PG(12,3) plus zero representative','projective_words':len(params),'spectral_colors':len(counts),'chosen_frame_color_class_sizes':sizes,'candidate_projective_frames_before_incidence_pruning':math.prod(sizes)*(2**12),'backtracking_node_counts':dict(sorted(nodes.items())),'automorphism_matrices':[a.tolist() for a in autos],'identification':'C3 generated by the hidden Hjelmslev shear U'},'centralizer_family':{'packet_Jordan_partition':'(3,3,3,1,1,1)','endomorphism_dimension':54,'invertible_centralizer_order':centralizer_order(),'formula':'3^54 product_{j=1}^3(1-3^-j)^2','intertwiner_count':centralizer_order()},'theorem':'The complete projective linear automorphism group of the characteristic-polynomial coloring of PG(12,3) is C3. Therefore no choice among all invertible C3 intertwiners can transport the colored A4 to a linear spectral symmetry: an A4 subgroup would require involutions and order 12.','checks':checks,'boundary':'This is a universal no-go for linear intertwiners and linear spectral symmetries. Nonlinear A4 actions on the parameter function space are not excluded.'}
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');ap.add_argument('--output',type=Path,default=OUT);a=ap.parse_args();p=payload();s=json.dumps(p,sort_keys=True,separators=(',',':'))+'\n'
+ if a.check:
+  if not a.output.exists() or a.output.read_text()!=s:raise SystemExit('drift')
+ else:a.output.parent.mkdir(parents=True,exist_ok=True);a.output.write_text(s)
+ print(json.dumps({'status':p['status'],'checks':sum(p['checks'].values()),'total':len(p['checks']),'group':len(p['colored_projective_search']['automorphism_matrices'])}));return 0 if p['status']=='PASS' else 1
+if __name__=='__main__':raise SystemExit(main())
