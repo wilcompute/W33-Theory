@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "finding_count": 0,
+  "by_severity": {
+    "error": 0,
+    "warning": 0
+  },
+  "findings": [],
+  "policy": {
+    "finite_graph_RH_claims": "allowed when scoped explicitly",
+    "classical_RH_claims": "require transfer/determinant theorem",
+    "default_mode": "report-only",
+    "strict_mode": "nonzero exit on unqualified errors"
+  }
+}
