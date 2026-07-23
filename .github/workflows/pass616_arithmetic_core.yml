@@ -1,0 +1,61 @@
+name: Pass 616 arithmetic core factorization
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  factor-core:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install exact algebra tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pari-gp python3-sympy python3-numpy
+      - name: Build exact degree-256 core polynomial
+        run: |
+          python3 - <<'PY'
+          import importlib.util
+          from pathlib import Path
+          import sympy as sp
+          spec=importlib.util.spec_from_file_location('p611','analysis/w33_pass611_spectral_snf_boundary.py')
+          m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+          L=m.build_laplacian();x=sp.symbols('x')
+          char=sp.Poly(sp.Matrix(L).charpoly(x).as_expr(),x,domain=sp.ZZ)
+          ip=sp.Poly(1,x,domain=sp.ZZ)
+          for a,k in m.INTEGER_EIGENVALUES.items():ip*=sp.Poly((x-a)**k,x,domain=sp.ZZ)
+          core,rem=sp.div(char,ip);assert rem.is_zero and core.degree()==256
+          coeff=list(reversed([int(c) for c in core.all_coeffs()]))
+          Path('data/w33_pass616_core.gp').write_text('p=Polrev(['+','.join(map(str,coeff))+']);\n')
+          print('degree=',core.degree())
+          PY
+      - name: Factor over Q and classify feasible Galois groups
+        run: |
+          gp -q > data/w33_pass616_pari_factor.txt <<'GP'
+          default(parisizemax, 8000000000);
+          read("data/w33_pass616_core.gp");
+          print("degree=",poldegree(p));
+          f=factor(p);
+          print("factor_count=",matsize(f)[1]);
+          print("degree_multiset=",vector(matsize(f)[1],i,poldegree(f[i,1])));
+          for(i=1,matsize(f)[1],
+            q=f[i,1]; d=poldegree(q);
+            print("BEGIN_FACTOR index=",i," degree=",d," exponent=",f[i,2]," irreducible=",polisirreducible(q));
+            print("factor=",q);
+            if(d<=11,print("galois=",polgalois(q)),print("galois=not_computed_degree_gt_11"));
+            print("END_FACTOR");
+          );
+          print("product_check=",prod(i=1,matsize(f)[1],f[i,1]^f[i,2])==p);
+          GP
+          cat data/w33_pass616_pari_factor.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass616-arithmetic-core
+          path: |
+            data/w33_pass616_core.gp
+            data/w33_pass616_pari_factor.txt
