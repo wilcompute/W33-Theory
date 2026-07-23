@@ -1,0 +1,155 @@
+% Casey/W33 RH next-five insertion: orbit positivity, prime obstruction,
+% infinite-operator falsifier, de Branges boundary, and norm-11 elliptic bridge.
+
+\section{The Casey--W33 Reflection Cocycle and the Norm-$11$ Elliptic Packet}
+\label{sec:casey_w33_weil_elliptic}
+
+\subsection{Orbit-level positive quadratic form}
+
+Let
+\[
+ \rho=\frac12+\delta+i\gamma,
+ \qquad
+ \rho^{\star}=1-\overline\rho=\frac12-\delta+i\gamma,
+\]
+and put $\sigma=\frac12+a$ with $a>|\delta|$. The reflection-cocycle
+current is the logarithmic phase current of the ratio
+\[
+ R_\rho(s)=\frac{s-\rho}{s-\rho^{\star}}.
+\]
+After translating $y=t-\gamma$, its squared boundary energy is
+\begin{equation}
+ \mathcal E_{a,\delta}
+ =\int_{\mathbb R}|A_{a,\delta}(y)|^2\,dy
+ =\frac{\pi\delta^2}{a(a^2-\delta^2)}.
+ \label{eq:casey_energy_next5}
+\end{equation}
+It has the exact Laplace-space representation
+\begin{equation}
+ \frac{\mathcal E_{a,\delta}}{\pi}
+ =\int_0^\infty
+ \left(e^{-(a-\delta)x}-e^{-(a+\delta)x}\right)^2\,dx.
+ \label{eq:casey_laplace_norm}
+\end{equation}
+Thus the repaired torque is a positive Cauchy-kernel norm. Any convergent
+nonnegative sum of such orbit energies vanishes if and only if every included
+orbit lies on $\Re(s)=1/2$.
+
+\paragraph{Claim boundary.}
+Equations~\eqref{eq:casey_energy_next5}--\eqref{eq:casey_laplace_norm} give an
+orbit-level RH detector. They do not prove that the corresponding classical
+sum over all zeta-zero orbits converges or vanishes.
+
+\subsection{Prime-power second difference and the boundary obstruction}
+
+Sampling~\eqref{eq:casey_laplace_norm} at $x=\log n$ gives the positive
+von Mangoldt sum
+\begin{equation}
+ \mathcal P(a,\delta)
+ =\sum_{n\ge2}\Lambda(n)n^{-2a}
+       \left(n^\delta-n^{-\delta}\right)^2.
+\end{equation}
+Writing $L(s)=-\zeta'(s)/\zeta(s)$, absolute convergence for
+$a-|\delta|>1/2$ yields
+\begin{equation}
+ \mathcal P(a,\delta)
+ =L(2(a-\delta))-2L(2a)+L(2(a+\delta)).
+ \label{eq:prime_second_difference}
+\end{equation}
+Since $a=\sigma-1/2$, the positive sum converges only for
+$\sigma>1+|\delta|$. In particular, the proposed boundary $\sigma=1$ is
+outside the absolute-convergence region for every nonzero defect. A global
+classical identity must therefore use the regularized Weil explicit formula,
+including its archimedean and endpoint terms; the raw positive prime sum is
+not sufficient.
+
+\subsection{Positive infinite tower and its eighth-moment falsifier}
+
+Let $\theta_j$ be the two self-adjoint W33 phase angles, with multiplicities
+$24$ and $15$. A prime-indexed positive trace model with weight
+$\Lambda(n)(\log n)^2n^{-s}$ and inverse local ordinate
+$\log(n)/\theta_j$ has moments
+\begin{equation}
+ M_{2k}(s)=T_{2k}\frac{d^{2k+2}}{ds^{2k+2}}
+          \left[-\frac{\zeta'(s)}{\zeta(s)}\right],
+ \qquad s>1.
+\end{equation}
+A positive mixture of the $s=2$ and $s=3$ channels, followed by one overall
+scale and trace normalization, can interpolate the first three even Taylor
+moments of $\log\xi(1/2+z)$. This is a three-parameter interpolation. The
+unfitted eighth moment differs from the classical value by
+\[
+ 47.5186498\ldots\%.
+\]
+Hence this two-channel tower is falsified as a classical Hilbert--Polya
+operator.
+
+\subsection{Why generic de Branges positivity is insufficient}
+
+For every $\delta\in\mathbb R$ and $\gamma>0$, the polynomial
+\[
+ E_{\delta,\gamma}(z)=(z+i\gamma)^2-\delta^2
+\]
+is Hermite--Biehler, because for $y>0$,
+\begin{equation}
+ |E_{\delta,\gamma}(x+iy)|^2
+ -|E_{\delta,\gamma}^{\#}(x+iy)|^2
+ =8\gamma y(\delta^2+\gamma^2+x^2+y^2)>0.
+\end{equation}
+This remains true for $\delta\ne0$. Therefore the existence of an
+orbit-adapted de Branges space does not force the critical line. A classical
+proof would need one fixed entire Hermite--Biehler function canonically tied
+to $\xi$, with global kernel positivity and no orbit-dependent retuning.
+
+\subsection{Exact local Hasse--Weil realization at $p=11$}
+
+Consider the elliptic curves over $\mathbb Q$
+\[
+ E_2: y^2=x^3+x-1,
+ \qquad
+ E_{-4}: y^2=x^3+x+2.
+\]
+Both have good reduction at $11$, and direct counting gives
+\[
+ \#E_2(\mathbb F_{11})=10,
+ \qquad
+ \#E_{-4}(\mathbb F_{11})=16.
+\]
+Thus their Frobenius traces are $a_{11}=2$ and $a_{11}=-4$, respectively,
+and their local polynomials are
+\[
+ P_{11}(E_2,u)=1-2u+11u^2,
+ \qquad
+ P_{11}(E_{-4},u)=1+4u+11u^2.
+\]
+Consequently the nontrivial W33 Ihara determinant factors exactly as
+\begin{equation}
+ Z_{W,\mathrm{nt}}(u)^{-1}
+ =P_{11}(E_2,u)^{24}P_{11}(E_{-4},u)^{15}.
+ \label{eq:w33_elliptic_local_factor}
+\end{equation}
+The Frobenius discriminants are $-40$ and $-28$, producing
+$\mathbb Q(\sqrt{-10})$ and $\mathbb Q(\sqrt{-7})$, exactly the two
+quadratic fields of the W33 nontrivial pole coordinates.
+
+If $T_n=\alpha^n+\beta^n$ for either Frobenius pair, then
+\begin{equation}
+ T_0=2,
+ \qquad
+ T_1=a_{11},
+ \qquad
+ T_n=a_{11}T_{n-1}-11T_{n-2}.
+\end{equation}
+This is simultaneously the Hashimoto sector recurrence, while
+\[
+ \#E(\mathbb F_{11^n})=11^n+1-T_n.
+\]
+Therefore the two W33 nonbacktracking sectors are exactly two elliptic
+Frobenius sectors at the local prime $11$, at every extension degree.
+
+\paragraph{Global obstruction.}
+Equation~\eqref{eq:w33_elliptic_local_factor} is an exact local theorem. It
+does not construct an adelic object whose full $L$-function is the completed
+Riemann zeta function. A global transfer must explain the multiplicities
+$24$ and $15$, produce compatible factors at all primes, and match the
+archimedean completed factor.
