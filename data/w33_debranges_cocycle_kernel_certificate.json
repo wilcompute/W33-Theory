@@ -1,0 +1,95 @@
+{
+  "status": "PASS",
+  "scope": "Hardy/de Branges kernel audit for the repaired Casey cocycle",
+  "positive_kernel_result": {
+    "kernel": "K(c,d)=1/(c+d)",
+    "feature_vectors": "exp(-(a-delta)x), exp(-(a+delta)x)",
+    "defect": "pi*(1,-1)G(1,-1)^T = pi*delta^2/[a(a^2-delta^2)]",
+    "meaning": "Casey's repaired imbalance is an exact reproducing-kernel distance"
+  },
+  "hermite_biehler_audit": {
+    "candidate": "E_delta,gamma(z)=(z+i gamma)^2-delta^2",
+    "gap_identity": "|E(x+iy)|^2-|E#(x+iy)|^2=8 gamma y(delta^2+gamma^2+x^2+y^2)>0",
+    "counterlesson": "E is Hermite--Biehler for every delta, so generic de Branges positivity alone does not detect RH"
+  },
+  "gram_cases": [
+    {
+      "delta": 0.0,
+      "gram": [[1.0, 1.0], [1.0, 1.0]],
+      "determinant": 0.0,
+      "kernel_energy": 0.0,
+      "closed_energy": 0.0
+    },
+    {
+      "delta": 0.05,
+      "gram": [[1.1111111111111112, 1.0], [1.0, 0.9090909090909091]],
+      "determinant": 0.010101010101010166,
+      "kernel_energy": 0.06346651825433966,
+      "closed_energy": 0.06346651825433926
+    },
+    {
+      "delta": 0.2,
+      "gram": [[1.6666666666666667, 1.0], [1.0, 0.7142857142857143]],
+      "determinant": 0.19047619047619047,
+      "kernel_energy": 1.19679720136754,
+      "closed_energy": 1.1967972013675403
+    },
+    {
+      "delta": -0.2,
+      "gram": [[0.7142857142857143, 1.0], [1.0, 1.6666666666666667]],
+      "determinant": 0.19047619047619047,
+      "kernel_energy": 1.19679720136754,
+      "closed_energy": 1.1967972013675403
+    }
+  ],
+  "HB_cases": [
+    {
+      "delta": 0.0,
+      "zeros_E": [{"real": 0.0, "imag": -14.0}, {"real": -0.0, "imag": -14.0}],
+      "upper_half_plane_gaps": [2195.7599999999948, 15537.311999999984, 70224.0],
+      "max_gap_formula_error": 1.4551915228366852e-11,
+      "A_B_zeros": {"A_zeros": [-14.0, 14.0], "B_zeros": [0.0]},
+      "interlace": true,
+      "hermite_biehler": true
+    },
+    {
+      "delta": 0.05,
+      "zeros_E": [{"real": 0.05, "imag": -14.0}, {"real": -0.05, "imag": -14.0}],
+      "upper_half_plane_gaps": [2195.7880000000005, 15537.507999999987, 70224.84],
+      "max_gap_formula_error": 1.0913936421275139e-11,
+      "A_B_zeros": {"A_zeros": [-14.000089285429576, 14.000089285429576], "B_zeros": [0.0]},
+      "interlace": true,
+      "hermite_biehler": true
+    },
+    {
+      "delta": 0.2,
+      "zeros_E": [{"real": 0.2, "imag": -14.0}, {"real": -0.2, "imag": -14.0}],
+      "upper_half_plane_gaps": [2196.2079999999987, 15540.447999999986, 70237.44000000002],
+      "max_gap_formula_error": 1.4551915228366852e-11,
+      "A_B_zeros": {"A_zeros": [-14.00142849854971, 14.00142849854971], "B_zeros": [0.0]},
+      "interlace": true,
+      "hermite_biehler": true
+    },
+    {
+      "delta": -0.2,
+      "zeros_E": [{"real": -0.2, "imag": -14.0}, {"real": 0.2, "imag": -14.0}],
+      "upper_half_plane_gaps": [2196.2079999999987, 15540.447999999986, 70237.44000000002],
+      "max_gap_formula_error": 1.4551915228366852e-11,
+      "A_B_zeros": {"A_zeros": [-14.00142849854971, 14.00142849854971], "B_zeros": [0.0]},
+      "interlace": true,
+      "hermite_biehler": true
+    }
+  ],
+  "claim_boundary": {
+    "proved": ["the cocycle defect is a Hardy-kernel norm", "off-line quartets still possess adaptable Hermite--Biehler polynomials"],
+    "missing_for_classical_RH": "one fixed entire E canonically determined by xi, with global kernel positivity and no orbit-dependent retuning"
+  },
+  "checks": {
+    "hardy_kernel_gram_psd": true,
+    "kernel_defect_matches_casey_energy": true,
+    "kernel_defect_zero_iff_delta_zero": true,
+    "HB_gap_formula_exact": true,
+    "off_line_quartets_still_admit_HB_polynomials": true,
+    "A_B_interlace_for_all_delta": true
+  }
+}
