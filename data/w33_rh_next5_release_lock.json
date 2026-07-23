@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "release": "Casey/W33 RH next-five: Weil, prime, infinite operator, de Branges, norm-11 elliptic bridge",
+  "validation": {
+    "py_compile": "PASS",
+    "pytest": "6 passed in 0.06s",
+    "certificate_checks": 35,
+    "hosted_ci": "not observed at lock creation"
+  },
+  "claim_scope": {
+    "exact": [
+      "orbit Hardy/Laplace positivity",
+      "prime second-difference in its absolute-convergence region",
+      "positive prime-indexed tower moment falsifiers",
+      "Hermite--Biehler counterexample audit",
+      "p=11 elliptic local factorization and recurrence equality"
+    ],
+    "not_claimed": [
+      "classical Riemann Hypothesis",
+      "global Hilbert--Polya determinant",
+      "adelic transfer to completed Riemann zeta",
+      "a motivic explanation of multiplicities 24 and 15"
+    ]
+  },
+  "certificates": {
+    "data/w33_weil_cocycle_positivity_certificate.json": 7,
+    "data/w33_prime_weight_discovery_certificate.json": 5,
+    "data/w33_infinite_phase_operator_certificate.json": 8,
+    "data/w33_debranges_cocycle_kernel_certificate.json": 6,
+    "data/w33_norm11_local_global_certificate.json": 9
+  },
+  "executables": [
+    "analysis/w33_weil_cocycle_positivity.py",
+    "analysis/w33_prime_weight_discovery.py",
+    "analysis/w33_infinite_phase_operator.py",
+    "analysis/w33_debranges_cocycle_kernel.py",
+    "analysis/w33_norm11_local_global.py",
+    "scripts/w33_rh_next5_release.py"
+  ],
+  "documentation": [
+    "docs/RH_CASEY_W33_NEXT5_SYNTHESIS.md",
+    "manuscripts/tex/part_casey_w33_weil_elliptic_bridge.tex"
+  ],
+  "regression": "tests/test_rh_next_five_frontiers.py",
+  "headline": "The W33 nontrivial Ihara determinant is exactly P_11(E_2,u)^24 P_11(E_-4,u)^15 for explicit elliptic curves with a_11=2 and -4; the global classical transfer remains open."
+}
