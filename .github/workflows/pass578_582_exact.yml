@@ -1,0 +1,60 @@
+name: Passes 578-582 exact certificates
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass578_*.py'
+      - 'analysis/w33_pass579_*.py'
+      - 'analysis/w33_pass580_*.py'
+      - 'analysis/w33_pass581_*.py'
+      - 'analysis/w33_pass582_*.py'
+      - 'analysis/w33_pass578_582_release.py'
+      - 'data/w33_pass578_*.json'
+      - 'data/w33_pass579_*.json'
+      - 'data/w33_pass580_*.json'
+      - 'data/w33_pass581_*.json'
+      - 'data/w33_pass582_*.json'
+      - 'hardware/w33_pass582_*.json'
+      - 'formal/W33/Pass581CyclotomicCompletion.lean'
+      - 'formal/W33.lean'
+      - 'tests/test_w33_pass578_582_*.py'
+      - 'PASS578_582_RESIDUAL_COLORED_JOHNSON_COMPLETION_CONTINUOUS_RELEASE.md'
+      - '.github/workflows/pass578_582_exact.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+env:
+  PYTHONHASHSEED: '0'
+  NUMBA_NUM_THREADS: '4'
+jobs:
+  python:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install numpy==2.3.5 numba==0.65.1 scipy==1.17.0 sympy==1.14.0 networkx==3.5 pytest==9.0.2
+      # Rebuild the omitted 229 MB finite-field caches from first principles.
+      - run: python analysis/w33_pass569_z9_coupled_affine_radial_quadratic.py --check
+      - run: python analysis/w33_pass578_fixed_locus_monomial_search.py --check
+      - run: python analysis/w33_pass578_residual_collision_symmetry.py --check
+      - run: python analysis/w33_pass579_colored_600cell_module.py --check
+      - run: python analysis/w33_pass580_singer_johnson_fusion.py --check
+      - run: python analysis/w33_pass581_cyclotomic_completion_formal.py --check
+      - run: python analysis/w33_pass582_continuous_bellman_enclosure.py --check
+      - run: python analysis/w33_pass578_582_release.py --check
+      - run: pytest -q tests/test_w33_pass578_582_residual_colored_johnson_completion_continuous.py
+  lean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formal
+          build: true
+          test: false
+          lint: false
+          nanoda: true
+          nanoda-allow-sorry: false
