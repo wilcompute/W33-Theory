@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "scope": "positive prime-indexed infinite W33 phase tower and S8 falsifier",
+  "operator_model": {
+    "local_W33_sectors": "theta_2=acos(1/sqrt(11)) mult 24; theta_-4=acos(-2/sqrt(11)) mult 15",
+    "prime_power_trace_weight": "Lambda(n)(log n)^2 n^(-s)",
+    "local_inverse_ordinate": "log(n)/theta_j",
+    "moment_formula": "M_2k(s)=T_2k d^(2k+2)/ds^(2k+2)[-zeta'(s)/zeta(s)]",
+    "trace_class_region": "s>1 for every fixed even inverse moment"
+  },
+  "two_channel_interpolation": {
+    "damping_exponents": ["2.0", "3.0"],
+    "left_weight": "0.066882494003072332899559991608901779",
+    "right_weight": "0.93311750599692766710044000839109822",
+    "global_operator_scale": "89.53366597571005163104087100824615",
+    "trace_amplitude": "4.4711759265545052718339546067026025",
+    "interpretation": "three positive calibration parameters interpolate S2,S4,S6; this is a controlled fit, not a derivation"
+  },
+  "moments": {
+    "classical_xi": {
+      "2": "0.023104993115418970788933810430339014",
+      "4": "0.000037172599285269686164866262471740578",
+      "6": "0.00000014417393140097327969538155609482091",
+      "8": "0.00000000066303168025299086987327208196135725"
+    },
+    "tower_prediction": {
+      "2": "0.023104993115418970788933810430339014",
+      "4": "0.000037172599285269686164866262471740578",
+      "6": "0.00000014417393140097327969538155609482091",
+      "8": "0.0000000009780953831116337163564397220588096"
+    },
+    "relative_errors": {
+      "2": "1.5557538194652854267860160134450311e-61",
+      "4": "1.5557538194652854267860160134450311e-61",
+      "6": "1.5604881328667730413950529993703219e-38",
+      "8": "0.47518649898964858021828115436474227"
+    }
+  },
+  "out_of_sample_result": {
+    "S8_relative_error": "0.475186498989648580218281154365",
+    "verdict": "the two-damping positive W33 prime tower is rejected as the classical xi operator"
+  },
+  "claim_boundary": {
+    "proved": [
+      "the weighted direct-integral moments are positive and finite for s>1",
+      "a positive two-channel mixture can interpolate the first three xi moments",
+      "the resulting model fails the next moment without refitting"
+    ],
+    "not_proved": [
+      "a regularized determinant identity",
+      "uniqueness of the fitted measure",
+      "classical Hilbert--Polya or RH"
+    ]
+  },
+  "checks": {
+    "positive_mixture": true,
+    "positive_trace_amplitude": true,
+    "positive_operator_scale": true,
+    "S2_interpolated": true,
+    "S4_interpolated": true,
+    "S6_interpolated": true,
+    "S8_out_of_sample_falsifies_two_channel_tower": true,
+    "trace_moments_finite_for_s_gt_1": true
+  }
+}
