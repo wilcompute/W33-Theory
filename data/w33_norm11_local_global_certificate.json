@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "scope": "exact norm-11 elliptic local realization of W33 graph-RH",
+  "local_factorization": {
+    "W33_nontrivial_inverse": "(1-2u+11u^2)^24(1+4u+11u^2)^15",
+    "elliptic_interpretation": "P_11(E_2,u)^24 P_11(E_-4,u)^15",
+    "local_L_factor_form": "L_11(E,u)=1/(1-a_11 u+11u^2)"
+  },
+  "curve_enumeration": {
+    "nonsingular_models": 110,
+    "trace_distribution": {"-6": 5, "-5": 5, "-4": 10, "-3": 10, "-2": 10, "-1": 5, "0": 20, "1": 5, "2": 10, "3": 10, "4": 10, "5": 5, "6": 5}
+  },
+  "splitting_at_11": {
+    "sqrt_minus_10_mod_11": [1, 10],
+    "sqrt_minus_7_mod_11": [2, 9],
+    "meaning": "the norm-11 Ihara denominators are prime-ideal factors above 11 in both quadratic fields"
+  },
+  "sectors": [
+    {
+      "trace": 2,
+      "multiplicity": 24,
+      "local_polynomial": "1-(2)u+11u^2",
+      "frobenius_discriminant": -40,
+      "quadratic_field": "Q(sqrt(-10))",
+      "field_discriminant": -40,
+      "ihara_coordinates": "(1 +/- sqrt(-10))/11",
+      "norm_11_generator": "1 -/+ sqrt(-10)",
+      "global_curve_over_Q": {"a": 1, "b": -1, "equation": "y^2=x^3+x-1"},
+      "global_curve_discriminant": -496,
+      "good_reduction_at_11": true,
+      "points_F_11": 10,
+      "a_11": 2,
+      "recurrence": [
+        {"n": 1, "power_sum": 2, "hashimoto_power_sum": 2, "elliptic_points_F_11n": 10, "hasse_bound_ok": true},
+        {"n": 2, "power_sum": -18, "hashimoto_power_sum": -18, "elliptic_points_F_11n": 140, "hasse_bound_ok": true},
+        {"n": 3, "power_sum": -58, "hashimoto_power_sum": -58, "elliptic_points_F_11n": 1390, "hasse_bound_ok": true},
+        {"n": 4, "power_sum": 82, "hashimoto_power_sum": 82, "elliptic_points_F_11n": 14560, "hasse_bound_ok": true},
+        {"n": 5, "power_sum": 802, "hashimoto_power_sum": 802, "elliptic_points_F_11n": 160250, "hasse_bound_ok": true},
+        {"n": 6, "power_sum": 702, "hashimoto_power_sum": 702, "elliptic_points_F_11n": 1770860, "hasse_bound_ok": true},
+        {"n": 7, "power_sum": -7418, "hashimoto_power_sum": -7418, "elliptic_points_F_11n": 19494590, "hasse_bound_ok": true},
+        {"n": 8, "power_sum": -22558, "hashimoto_power_sum": -22558, "elliptic_points_F_11n": 214381440, "hasse_bound_ok": true},
+        {"n": 9, "power_sum": 36482, "hashimoto_power_sum": 36482, "elliptic_points_F_11n": 2357911210, "hasse_bound_ok": true},
+        {"n": 10, "power_sum": 321102, "hashimoto_power_sum": 321102, "elliptic_points_F_11n": 25937103500, "hasse_bound_ok": true},
+        {"n": 11, "power_sum": 240902, "hashimoto_power_sum": 240902, "elliptic_points_F_11n": 285311429710, "hasse_bound_ok": true},
+        {"n": 12, "power_sum": -3050318, "hashimoto_power_sum": -3050318, "elliptic_points_F_11n": 3138431427040, "hasse_bound_ok": true}
+      ]
+    },
+    {
+      "trace": -4,
+      "multiplicity": 15,
+      "local_polynomial": "1+4u+11u^2",
+      "frobenius_discriminant": -28,
+      "quadratic_field": "Q(sqrt(-7))",
+      "field_discriminant": -7,
+      "ihara_coordinates": "(-2 +/- sqrt(-7))/11",
+      "norm_11_generator": "-2 -/+ sqrt(-7)",
+      "global_curve_over_Q": {"a": 1, "b": 2, "equation": "y^2=x^3+x+2"},
+      "global_curve_discriminant": -1792,
+      "good_reduction_at_11": true,
+      "points_F_11": 16,
+      "a_11": -4,
+      "recurrence": [
+        {"n": 1, "power_sum": -4, "hashimoto_power_sum": -4, "elliptic_points_F_11n": 16, "hasse_bound_ok": true},
+        {"n": 2, "power_sum": -6, "hashimoto_power_sum": -6, "elliptic_points_F_11n": 128, "hasse_bound_ok": true},
+        {"n": 3, "power_sum": 68, "hashimoto_power_sum": 68, "elliptic_points_F_11n": 1264, "hasse_bound_ok": true},
+        {"n": 4, "power_sum": -206, "hashimoto_power_sum": -206, "elliptic_points_F_11n": 14848, "hasse_bound_ok": true},
+        {"n": 5, "power_sum": 76, "hashimoto_power_sum": 76, "elliptic_points_F_11n": 160976, "hasse_bound_ok": true},
+        {"n": 6, "power_sum": 1962, "hashimoto_power_sum": 1962, "elliptic_points_F_11n": 1769600, "hasse_bound_ok": true},
+        {"n": 7, "power_sum": -8684, "hashimoto_power_sum": -8684, "elliptic_points_F_11n": 19495856, "hasse_bound_ok": true},
+        {"n": 8, "power_sum": 13154, "hashimoto_power_sum": 13154, "elliptic_points_F_11n": 214345728, "hasse_bound_ok": true},
+        {"n": 9, "power_sum": 42908, "hashimoto_power_sum": 42908, "elliptic_points_F_11n": 2357904784, "hasse_bound_ok": true},
+        {"n": 10, "power_sum": -316326, "hashimoto_power_sum": -316326, "elliptic_points_F_11n": 25937740928, "hasse_bound_ok": true},
+        {"n": 11, "power_sum": 793316, "hashimoto_power_sum": 793316, "elliptic_points_F_11n": 285310877296, "hasse_bound_ok": true},
+        {"n": 12, "power_sum": 306322, "hashimoto_power_sum": 306322, "elliptic_points_F_11n": 3138428070400, "hasse_bound_ok": true}
+      ]
+    }
+  ],
+  "new_exact_bridge": {
+    "recurrence": "T_n=a_11 T_(n-1)-11 T_(n-2), T_0=2, T_1=a_11",
+    "graph_side": "T_n is the Hashimoto sector root power sum",
+    "elliptic_side": "#E(F_(11^n))=11^n+1-T_n",
+    "interpretation": "W33 nonbacktracking spectral sectors are exactly two elliptic Frobenius sectors at p=11"
+  },
+  "claim_boundary": {
+    "proved": [
+      "exact local elliptic curves with the two W33 factors at p=11",
+      "exact equality of all recurrence-generated loop and Frobenius traces",
+      "quadratic-field and norm-11 denominator agreement"
+    ],
+    "not_proved": [
+      "a global automorphic representation whose full L-function is classical zeta",
+      "an adelic trace formula transferring W33 graph-RH to classical RH",
+      "that the local multiplicities 24 and 15 have a global motivic realization"
+    ]
+  },
+  "checks": {
+    "all_110_short_weierstrass_models_enumerated": true,
+    "trace_2_models_exist": true,
+    "trace_minus4_models_exist": true,
+    "explicit_curves_have_required_traces": true,
+    "explicit_curves_have_good_reduction_at_11": true,
+    "frobenius_fields_match_ihara_fields": true,
+    "11_splits_in_both_quadratic_fields": true,
+    "hashimoto_equals_frobenius_recurrence": true,
+    "all_hasse_bounds_hold_to_n_12": true
+  }
+}
