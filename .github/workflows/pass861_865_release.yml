@@ -1,0 +1,72 @@
+name: Passes 861-865 release verification
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'formal/W33/Pass828CoalescenceArithmetic.lean'
+      - 'analysis/w33_pass861_*.py'
+      - 'analysis/w33_pass862_*.py'
+      - 'analysis/w33_pass863_*.py'
+      - 'analysis/w33_pass864_*.py'
+      - 'analysis/w33_pass865_*.py'
+      - 'analysis/BT861_865_lean_atlas_e8_character_universality.md'
+      - 'data/w33_pass861_*.json'
+      - 'data/w33_pass862_*.json'
+      - 'data/w33_pass863_*.json'
+      - 'data/w33_pass864_*.json'
+      - 'data/w33_pass865_*.json'
+      - 'tests/test_w33_pass861_865.py'
+      - '.github/workflows/pass861_865_release.yml'
+  pull_request:
+    paths:
+      - 'formal/W33/Pass828CoalescenceArithmetic.lean'
+      - 'analysis/w33_pass861_*.py'
+      - 'analysis/w33_pass862_*.py'
+      - 'analysis/w33_pass863_*.py'
+      - 'analysis/w33_pass864_*.py'
+      - 'analysis/w33_pass865_*.py'
+permissions:
+  contents: read
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - pass: '861'
+            script: analysis/w33_pass861_lean_coalescence_compile.py
+            ledger: data/w33_pass861_lean_coalescence_compile.json
+            test: test_pass861_lean_compile
+          - pass: '862'
+            script: analysis/w33_pass862_atlas_generator_conjugacy_execution.py
+            ledger: data/w33_pass862_atlas_generator_conjugacy_execution.json
+            test: test_pass862_atlas_label
+          - pass: '863'
+            script: analysis/w33_pass863_e8_lift_definiteness.py
+            ledger: data/w33_pass863_e8_lift_definiteness.json
+            test: test_pass863_e8_obstruction
+          - pass: '864'
+            script: analysis/w33_pass864_gluing_group_character_table.py
+            ledger: data/w33_pass864_gluing_group_character_table.json
+            test: test_pass864_character_table
+          - pass: '865'
+            script: analysis/w33_pass865_universality_theorem.py
+            ledger: data/w33_pass865_universality_theorem.json
+            test: test_pass865_universality
+    name: Pass ${{ matrix.pass }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check numpy scipy pytest
+      - name: Regenerate and verify certificate
+        run: |
+          python "${{ matrix.script }}"
+          python "${{ matrix.script }}" --check
+      - name: Focused regression
+        run: python -m pytest -q "tests/test_w33_pass861_865.py::${{ matrix.test }}"
+      - name: Ensure ledger is committed exactly
+        run: git diff --exit-code -- "${{ matrix.ledger }}"
