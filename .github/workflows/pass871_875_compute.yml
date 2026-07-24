@@ -1,0 +1,53 @@
+name: Passes 871-875 computation
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass871_*.py'
+      - 'analysis/w33_pass872_*.py'
+      - 'analysis/w33_pass873_*.py'
+      - 'analysis/w33_pass874_*.py'
+      - 'analysis/w33_pass875_*.py'
+      - '.github/workflows/pass871_875_compute.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  compute:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - pass: '871'
+            script: analysis/w33_pass871_atlas_standard_conjugacy.py
+          - pass: '872'
+            script: analysis/w33_pass872_heisenberg_loewy_basis.py
+          - pass: '873'
+            script: analysis/w33_pass873_scalar_schur_factor_set.py
+          - pass: '874'
+            script: analysis/w33_pass874_adaptive_audit_regret_game.py
+          - pass: '875'
+            script: analysis/w33_pass875_hardware_phase_dispatcher.py
+    name: Compute ${{ matrix.pass }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check numpy scipy sympy pytest
+      - name: Execute pass
+        run: |
+          python "${{ matrix.script }}"
+          python "${{ matrix.script }}" --check
+      - name: Upload deterministic outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: pass-${{ matrix.pass }}-outputs
+          if-no-files-found: error
+          path: |
+            data/w33_pass${{ matrix.pass }}_*.json
+            hardware/w33_phase_dispatcher.h
+            hardware/w33_phase_dispatcher.sv
+            hardware/w33_phase_rom.mem
