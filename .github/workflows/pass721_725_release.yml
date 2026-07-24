@@ -1,0 +1,81 @@
+name: Passes 721-725 release verification
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass721_*.py'
+      - 'analysis/w33_pass722_*.py'
+      - 'analysis/w33_pass723_*.py'
+      - 'analysis/w33_pass724_*.py'
+      - 'analysis/w33_pass725_*.py'
+      - 'analysis/BT721_725_five_frontier_release.md'
+      - 'data/w33_pass721_*.json'
+      - 'data/w33_pass722_*.json'
+      - 'data/w33_pass723_*.json'
+      - 'data/w33_pass724_*.json'
+      - 'data/w33_pass725_*.json'
+      - 'tests/test_w33_pass721_725.py'
+      - '.github/workflows/pass721_725_release.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass721_*.py'
+      - 'analysis/w33_pass722_*.py'
+      - 'analysis/w33_pass723_*.py'
+      - 'analysis/w33_pass724_*.py'
+      - 'analysis/w33_pass725_*.py'
+      - 'analysis/BT721_725_five_frontier_release.md'
+      - 'data/w33_pass721_*.json'
+      - 'data/w33_pass722_*.json'
+      - 'data/w33_pass723_*.json'
+      - 'data/w33_pass724_*.json'
+      - 'data/w33_pass725_*.json'
+      - 'tests/test_w33_pass721_725.py'
+      - '.github/workflows/pass721_725_release.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - pass: '721'
+            script: analysis/w33_pass721_formal_rigidity_local_h2_census.py
+            ledger: data/w33_pass721_formal_rigidity_local_h2_census.json
+            test: test_pass721_formal_rigidity_local_h2
+          - pass: '722'
+            script: analysis/w33_pass722_cycle_lattice_two_branch_order.py
+            ledger: data/w33_pass722_cycle_lattice_two_branch_order.json
+            test: test_pass722_cycle_two_branch_order
+          - pass: '723'
+            script: analysis/w33_pass723_self_calibrating_waveform_identifier.py
+            ledger: data/w33_pass723_self_calibrating_waveform_identifier.json
+            test: test_pass723_self_calibrating_waveform
+          - pass: '724'
+            script: analysis/w33_pass724_nonfactorizable_dropout_matrix_cs.py
+            ledger: data/w33_pass724_nonfactorizable_dropout_matrix_cs.json
+            test: test_pass724_nonfactorizable_matrix_cs
+          - pass: '725'
+            script: analysis/w33_pass725_complete_phase_semilinear_compiler.py
+            ledger: data/w33_pass725_complete_phase_semilinear_compiler.json
+            test: test_pass725_complete_phase_compiler
+    name: Pass ${{ matrix.pass }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check numpy sympy scipy pytest
+      - name: Regenerate and verify certificate
+        run: |
+          python "${{ matrix.script }}"
+          python "${{ matrix.script }}" --check
+      - name: Focused regression
+        run: python -m pytest -q "tests/test_w33_pass721_725.py::${{ matrix.test }}"
+      - name: Ensure ledger is committed exactly
+        run: git diff --exit-code -- "${{ matrix.ledger }}"
