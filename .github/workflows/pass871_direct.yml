@@ -1,0 +1,29 @@
+name: Pass 871 direct verification
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass871_atlas_standard_conjugacy.py'
+      - '.github/workflows/pass871_direct.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  pass871:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check numpy scipy sympy pytest
+      - name: Execute exact ATLAS transport
+        run: |
+          python analysis/w33_pass871_atlas_standard_conjugacy.py
+          python analysis/w33_pass871_atlas_standard_conjugacy.py --check
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass-871-direct-output
+          if-no-files-found: error
+          path: data/w33_pass871_atlas_standard_conjugacy.json
