@@ -65,7 +65,7 @@ not `(q²-1)/2` — so the bridge fails at every `n`.
 
 | Result | Statement | Certificate |
 |---|---|---|
-| Burnside formula (Pass 661) | `|Fix_all(g)|=(pⁿ)^{c⁺(g)}` over every odd `Z/pⁿ`; reproduces 7, 2 034 735, both exact `Z/9` integers; new `Z/25, Z/27` | `w33_pass661_...json` |
+| Burnside formula (Pass 661) | `#Fix_all(g) = (pⁿ)^{c⁺(g)}` over every odd `Z/pⁿ`; reproduces 7, 2 034 735, both exact `Z/9` integers; new `Z/25, Z/27` | `w33_pass661_...json` |
 | Abstract order & Ext (Pass 662/663) | `S=F+q+1` sends `F²+2F-(q²-1)=0` to `S²-2qS=0`; abstract order `O_q=Z_p[S]/(S(S-2q))` has Ext quiver `(0, Z/p^{v_p(2q)}, Z/p^{v_p(2q)}, 0)`; at `q=2` this is the S8 commutant with `Ext=Z/4` | `w33_pass662_...`, `w33_pass663_...` |
 | Two-branch gluing theorem (Pass 806) | For integral `S(S-cI)=0` in block form `[[cI,Y],[0,0]]`, gluing `= ⊕_i Z/(c/gcd(d_i,c))`, `d_i=Smith(Y)`; verified 240 random blocks 3 ways; reproduces the K-track's `(Z/4)⁶⁶` from `c=4, Smith(Y)=(1⁶⁶,12)` | `w33_pass806_...json` |
 | Corrected flat-block gluing (Pass 808) | `(Z/2)^{(q-1)²/2}`, pure 2-torsion | `w33_pass808_...json` |
@@ -101,3 +101,64 @@ property of the realization.
 
 Net effect: the paper loses a bridge that was an artifact and gains a clean,
 correct organizing theorem (Pass 806) with three certified realizations.
+
+---
+
+## 4. Concrete repair for `w33_pass682_flatblock_h1_branch_separation.py`
+
+Pass 682's certificate hard-codes two values from the retracted Pass 676 **as
+passing checks**, so it currently returns `PASS` while asserting a withdrawn
+result:
+
+```python
+'pass676_q3_cyclotomic_invariants_locked': cyclotomic_q3 == [6,6,3,3],
+'pass676_q_primary_rank4':                 cyclotomic_qrank == 4,
+```
+
+The corrected values (Pass 808, `data/w33_pass808_flatblock_gluing_correction.json`)
+are `(Z/2)^2` — i.e. invariant factors `[2,2]` — with **three-primary rank 0**.
+Suggested patch (renaming the keys so the provenance is visible):
+
+```python
+'pass808_q3_cyclotomic_invariants_locked': cyclotomic_q3 == [2,2],
+'pass808_q_primary_rank0':                 cyclotomic_qrank == 0,
+```
+
+and the corresponding prose in `flatblock_specialization.pass676_real_cyclotomic_correction`
+and in the `theorem` string, where "gluing factors (Z/6)^2+(Z/3)^2 and 3-primary
+rank four" should read "gluing (Z/2)^2, pure 2-torsion, 3-primary rank zero".
+
+**This strengthens Pass 682's own conclusion rather than weakening it.** Its
+theorem is a *separation* result — that neither the abstract `Z/3` shadow nor the
+cyclotomic interface is realized inside the one-branch `H1` eigenspace. With the
+correction the separation is sharper: there is no three-primary interface to
+realize anywhere, because the flat-block gluing has no `q`-torsion at all. The
+`H1 = M0` branch identification, the `K` spectrum `-6^81, 2^120, 4^24, 10^15`,
+the exact projector and the invertibility argument are all untouched.
+
+I have not edited that file — it is the other track's, and it is under active
+development. Applying the patch there is yours to make.
+
+---
+
+## 5. Later results that supersede parts of this note
+
+Two passes after this note was first written change what the arc's headline
+should be:
+
+- **Pass 826** computes the *full four-branch* gluing of `K` on `Z^240` as
+  `(Z/32)^14 ⊕ (Z/8) ⊕ (Z/4)^66 ⊕ (Z/2)^23 ⊕ (Z/3)^10 ⊕ (Z/5)^23`. The
+  `(Z/4)^66` and `(Z/3)^10` are the cycle- and cut-lattice numbers of Passes
+  722/803, neither used as input — so those two-branch results are *sub-objects
+  of one four-branch structure*, which is a stronger statement than either alone.
+- **Pass 828** explains why: for a prime with `v_p(M)=1`, the `p`-part of a
+  `k`-branch gluing is carried **entirely by the eigenvalues that collide mod
+  `p`**. The recurring three-primary rank `10` is one collision — `{2,-4}` mod 3
+  for the adjacency, `{4,10}` mod 3 for `K` — and the main paper's own `A+I`
+  (in `prop:eigenlattice-obstruction`) is exactly that collision operator, since
+  `A+4I ≡ A+I (mod 3)`. It also explains the flat block's missing `q`-part: its
+  eigenvalues *do* collide mod `q`, but `F ≡ -I (mod q)` (verified `q ≤ 13`)
+  makes the collision operator vanish identically.
+
+A preprint built on this arc should lead with the coalescence theorem and the
+four-branch gluing, not with the withdrawn bridge.
