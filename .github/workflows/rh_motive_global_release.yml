@@ -1,0 +1,40 @@
+name: RH motive-global release verification
+
+on:
+  pull_request:
+    paths:
+      - 'analysis/w33_motivic_24_15_packet.py'
+      - 'analysis/w33_all_prime_frobenius_census.py'
+      - 'analysis/w33_renormalized_boundary_formula.py'
+      - 'analysis/w33_fixed_E_debranges_falsifier.py'
+      - 'analysis/w33_preregistered_higher_moment_search.py'
+      - 'data/w33_*motive*'
+      - 'data/w33_*frobenius*'
+      - 'data/w33_*boundary*'
+      - 'data/w33_*debranges*'
+      - 'data/w33_*higher_moment*'
+      - 'scripts/w33_rh_motive_global_release.py'
+      - 'tests/test_rh_motive_global_release.py'
+      - 'docs/RH_CASEY_W33_MOTIVE_GLOBAL_SYNTHESIS.md'
+      - 'manuscripts/tex/part_casey_w33_motive_global_bridge.tex'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install runtime dependencies
+        run: python -m pip install --disable-pip-version-check mpmath numpy scipy pytest
+      - name: Verify committed certificates and deterministic census replay
+        run: python scripts/w33_rh_motive_global_release.py
+      - name: Compile and run focused regression
+        run: |
+          python -m py_compile analysis/w33_motivic_24_15_packet.py analysis/w33_all_prime_frobenius_census.py analysis/w33_renormalized_boundary_formula.py analysis/w33_fixed_E_debranges_falsifier.py analysis/w33_preregistered_higher_moment_search.py scripts/w33_rh_motive_global_release.py
+          PYTHONPATH=. pytest -q tests/test_rh_motive_global_release.py
