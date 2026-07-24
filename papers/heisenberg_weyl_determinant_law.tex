@@ -427,6 +427,40 @@ two-branch order describes it and the Burnside pair count
 $(p^{2n}-1)/2$ has no matching real flat block for $n>1$.
 \end{remark}
 
+\begin{proposition}[two-branch gluing]\label{prop:two-branch}
+Let $S$ be an integral operator on $\ZZ^n$ with $S(S-cI)=0$, $c>0$. In a
+unimodular basis adapting the saturated $c$-eigenlattice, write
+$S=\left[\begin{smallmatrix}cI_a & Y\\ 0 & 0\end{smallmatrix}\right]$ with $Y$ an
+integer $a\times b$ block, $a$ the rank of the $c$-branch and $b$ that of the
+$0$-branch. Then the gluing of the two saturated eigenlattices is
+\[
+\ZZ^n/(L_c+L_0)\;=\;\operatorname{im}(Y\bmod c)\;\cong\;
+\bigoplus_i \ZZ/\!\bigl(c/\gcd(d_i,c)\bigr),
+\]
+where $d_1,\dots,d_{\min(a,b)}$ are the Smith invariants of $Y$.
+\end{proposition}
+
+\begin{proof}
+Modding out $L_c=\ZZ^a\oplus 0$ collapses the first $a$ coordinates, so
+$\ZZ^n/(L_c+L_0)=\ZZ^b/\pi_y(L_0)$, and $\pi_y(L_0)=\{y:Yy\equiv 0\ (\mathrm{mod}\ c)\}
+=\ker(Y\bmod c)$ because $L_0$ is saturated; hence the quotient is
+$\operatorname{im}(Y\bmod c)$. Writing $Y=UDV$ with $U,V$ unimodular (Smith form),
+$U,V$ stay invertible modulo $c$, so $\operatorname{im}(Y\bmod c)\cong
+\operatorname{im}(D\bmod c)=\bigoplus_i d_i(\ZZ/c\ZZ)
+=\bigoplus_i \ZZ/(c/\gcd(d_i,c))$.
+\end{proof}
+
+Every cyclic factor divides the conductor $c$; the top factor is $c$ exactly
+when some $d_i$ is coprime to $c$, and the number of full-conductor $\ZZ/c$
+summands is $\#\{i:\gcd(d_i,c)=1\}$. Thus the conductor is intrinsic to the
+abstract order while the full-conductor multiplicity is a property of the
+realisation: it is $(q^2-1)/2$ for the cyclotomic flat block above, and, on the
+$W(3,3)$ signed-turn lattices, $66$ for the cycle lattice at $c=4$ (whose
+off-diagonal block has Smith type $(1^{66},12)$, giving $(\ZZ/4)^{66}$) and $10$
+for the cut lattice at $c=6$. The apparent conflict between the flat block's
+rank $4$ and the cut lattice's rank $10$ at $q=3$ is only the choice of $Y$:
+both realise the same gap-$6$ order.
+
 \section{The first-order law}
 
 \begin{lemma}[pairing]\label{lem:pair}
