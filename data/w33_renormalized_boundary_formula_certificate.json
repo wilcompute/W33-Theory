@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "scope": "Hadamard finite-part boundary formula retaining prime and archimedean terms",
+  "constants": {
+    "a0_archimedean": "-0.5541199559354118267922018421759071394202",
+    "H_1_minus_xi_log_derivative": "-0.02309570896612103381431024790649529162193"
+  },
+  "finite_part_theorem": {
+    "prime": "FP_P(d)=L(1-2d)+L(1+2d)+2 EulerGamma",
+    "archimedean": "FP_A(d)=A(1-2d)+A(1+2d)-2a0",
+    "completed": "C_xi(d)=FP_P(d)-FP_A(d)=H(1-2d)-2H(1)+H(1+2d)",
+    "counterterm": "+1/epsilon separately renormalizes both prime and archimedean second differences",
+    "cancellation": "the completed difference requires no counterterm because the two poles cancel"
+  },
+  "epsilon_convergence_delta_0_2": [
+    {"epsilon": "0.01", "prime_plus_counterterm": "-0.267115277344328120073678722368", "arch_plus_counterterm": "-0.267152223051223137221859334564", "completed_no_counterterm": "0.0000369457068950171481806121951345"},
+    {"epsilon": "0.0001", "prime_plus_counterterm": "-0.0192730396886860777441852265303", "arch_plus_counterterm": "-0.0193085878693823759898106622193", "completed_no_counterterm": "0.0000355481806962982456254356890546"},
+    {"epsilon": "1.0e-6", "prime_plus_counterterm": "-0.016800917834394281274400666868", "arch_plus_counterterm": "-0.0168364520343341989432681852728", "completed_no_counterterm": "0.0000355341999399176688675184047988"},
+    {"epsilon": "1.0e-8", "prime_plus_counterterm": "-0.0167761966256882417686417189492", "arch_plus_counterterm": "-0.0168117306858200533029092924396", "completed_no_counterterm": "0.0000355340601318115342675734903465"}
+  ],
+  "grid": {
+    "delta_range": "0.001 through 0.489 in steps of 0.001",
+    "sample_count": 489,
+    "prime_min": "-0.108078588371939346407509824266",
+    "prime_max": "-0.0000004135092010488959399364819966",
+    "arch_min": "-0.108289930046916389740660133682",
+    "arch_max": "-0.000000414398466877629800519676347651",
+    "completed_min": "8.89265828733860583194351051415e-10",
+    "completed_max": "0.000211341674977043333150309416094",
+    "completed_over_delta_squared_min": "0.000883827330000473957328337603531",
+    "completed_over_delta_squared_max": "0.000889265828733860583194351051415"
+  },
+  "samples": {
+    "0.001": {"prime_finite_part": "-0.0000004135092010488959399364819966", "archimedean_finite_part": "-0.000000414398466877629800519676347651", "completed_finite_part": "8.89265828733860583194351051415e-10", "completed_over_delta_squared": "0.000889265828733860583194351051415"},
+    "0.01": {"prime_finite_part": "-0.0000413523535198389045614419407691", "archimedean_finite_part": "-0.0000414412798761713009506371177538", "completed_finite_part": "0.0000000889263563323963891951769847458", "completed_over_delta_squared": "0.000889263563323963891951769847458"},
+    "0.05": {"prime_finite_part": "-0.00103467848035775203265249565094", "archimedean_finite_part": "-0.00103690150197727081543199219727", "completed_finite_part": "0.00000222302161951878277949654632807", "completed_over_delta_squared": "0.000889208647807513111798618531228"},
+    "0.1": {"prime_finite_part": "-0.00414962951359368570088666575487", "archimedean_finite_part": "-0.00415851988439646747136004909479", "completed_finite_part": "0.0000088903708027817704733833399207", "completed_over_delta_squared": "0.00088903708027817704733833399207"},
+    "0.2": {"prime_finite_part": "-0.0167759469165097616474022570129", "archimedean_finite_part": "-0.0168114809752293700346221620156", "completed_finite_part": "0.0000355340587196083872199050026744", "completed_over_delta_squared": "0.00088835146799020968049762506686"},
+    "0.3": {"prime_finite_part": "-0.0384343566274130322899032959094", "archimedean_finite_part": "-0.0385142056277398980282764648046", "completed_finite_part": "0.0000798490003268657383731688952613", "completed_over_delta_squared": "0.000887211114742952648590765502904"},
+    "0.4": {"prime_finite_part": "-0.070133664481561006345366101297", "archimedean_finite_part": "-0.0702753636020850585307682345419", "completed_finite_part": "0.00014169912052405218540213324492", "completed_over_delta_squared": "0.00088561950327532615876333278075"},
+    "0.489": {"prime_finite_part": "-0.108078588371939346407509824266", "archimedean_finite_part": "-0.108289930046916389740660133682", "completed_finite_part": "0.000211341674977043333150309416094", "completed_over_delta_squared": "0.000883827330000473957328337603531"}
+  },
+  "interpretation": {
+    "prime_only": "canonical finite-part continuation is negative and loses the raw Dirichlet-series positivity",
+    "archimedean_role": "gamma and endpoint terms contribute a slightly more negative finite part",
+    "completed_result": "their difference is positive on the full sampled defect interval and behaves quadratically near zero"
+  },
+  "claim_boundary": {
+    "proved": ["the exact finite-part decomposition and pole cancellation", "the raw positive prime series cannot be continued to sigma=1 without renormalization"],
+    "numerically_certified": ["positivity of the completed finite part on 489 sampled defects", "stable quadratic scaling C_xi(delta)/delta^2 on that interval"],
+    "not_proved": ["analytic positivity for every 0<|delta|<1/2", "equality of this one-orbit finite part with a total zero-defect sum", "classical RH"]
+  },
+  "checks": {
+    "finite_part_decomposition_exact": true,
+    "prime_counterterm_converges": true,
+    "arch_counterterm_converges": true,
+    "completed_difference_converges_without_counterterm": true,
+    "prime_finite_part_negative_on_grid": true,
+    "archimedean_finite_part_more_negative_on_grid": true,
+    "completed_finite_part_positive_on_grid": true,
+    "completed_quadratic_ratio_stable_on_grid": true
+  }
+}
