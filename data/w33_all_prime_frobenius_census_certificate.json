@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "scope": "all primes p<=10000 Frobenius census for the two norm-11 elliptic curves",
+  "prime_limit": 10000,
+  "prime_count": 1229,
+  "common_good_prime_count": 1226,
+  "common_bad_primes": [2, 7, 31],
+  "W33_signature": {"target": [2, -4], "matching_primes": [11], "unique_up_to_limit": true},
+  "curve_invariants": {
+    "E_2": {"equation": "y^2=x^3+x-1", "discriminant": -496, "j": "6912/31", "CM": false},
+    "E_-4": {"equation": "y^2=x^3+x+2", "discriminant": -1792, "j": "432/7", "CM": false},
+    "not_Q_isogenous_witness": {"prime": 5, "a_5_E_2": -3, "a_5_E_-4": 2, "reason": "Q-isogenous elliptic curves have equal good-prime Frobenius traces"}
+  },
+  "sato_tate_normalization": "x_p=a_p/sqrt(p), expected non-CM moments 0,1,2,5 for powers 1,2,4,6",
+  "E_2_moments": {"1": -0.012811037482632086, "2": 0.9720873111927886, "4": 1.947671959689004, "6": 4.910879968659723},
+  "E_-4_moments": {"1": 0.010504125605322573, "2": 0.9960933018267814, "4": 1.9822965690072352, "6": 4.929946956028868},
+  "joint_statistics": {
+    "pearson_normalized_trace_correlation": -0.007571399088904442,
+    "mean_normalized_product": -0.007583913361055003,
+    "equal_trace_prime_count": 9,
+    "first_equal_trace_primes": [3, 277, 1523, 1607, 2213, 5351, 6257, 7013, 7759]
+  },
+  "checks": {
+    "all_common_good_Hasse_bounds": true,
+    "p11_is_W33_signature": true,
+    "W33_signature_unique_up_to_10000": true,
+    "curves_non_CM_by_nonintegral_rational_j": true,
+    "curves_not_Q_isogenous_by_a5_mismatch": true,
+    "normalized_cross_correlation_small": true,
+    "E_2_second_moment_near_1": true,
+    "E_-4_second_moment_near_1": true
+  },
+  "data_file": "data/w33_elliptic_frobenius_census_p10000.csv",
+  "claim_boundary": {
+    "proved": ["exact point counts and Frobenius traces for every prime p<=10000", "the W33 trace pair (2,-4) occurs only at p=11 in this finite range", "both curves are non-CM and are not Q-isogenous"],
+    "observed": ["Sato--Tate moments approach the non-CM predictions", "the normalized trace streams have near-zero empirical correlation"],
+    "not_proved": ["uniqueness of p=11 over all primes", "statistical independence of the two Galois representations", "a global automorphic object explaining W33 multiplicities 24 and 15"]
+  }
+}
