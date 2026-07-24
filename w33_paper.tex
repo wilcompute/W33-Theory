@@ -10589,9 +10589,26 @@ blocks $2^6,6^9$ with those of $\operatorname{SNF}(L_2)$; the $2$-parts differ,
 as they may, these being different invariants of the configuration. The
 agreement is not accidental at $p=3$: the rank $10$ is in both cases the
 $\mathbb F_3$ rank of $A+I$ on $\mathbf 1^{\perp}$, which the proof above
-identifies with $\operatorname{rad}(L_2/3L_2)$. The same three-primary rank
-$10$ recurs in the signed-turn operator's four-branch gluing on the $240$ edge
-chains. (Witness: \texttt{analysis/w33\_pass827\_adjacency\_kbranch\_meets\_e8\_boundary.py}.)
+identifies with $\operatorname{rad}(L_2/3L_2)$.
+
+That coincidence has a general explanation, and it is the reason the operator
+$A+I$ appears in the proof at all. Write $N_i=\prod_{j\neq i}(S-c_jI)$ for an
+integral $S$ with distinct integer eigenvalues, $D_i=\prod_{j\neq i}(c_i-c_j)$
+and $M=\operatorname{lcm}(D_i)$. For a prime with $v_p(M)=1$ the $p$-part of the
+gluing is $(\mathbb Z/p)^{r_p}$, where $r_p$ is the $\mathbb F_p$ rank of the
+stack of those $N_i$ with $p\mid D_i$ --- and $p\mid D_i$ holds precisely when
+$c_i\equiv c_j \pmod p$ for some $j\neq i$. So the odd primary structure of the
+gluing is carried \emph{entirely by the eigenvalues that collide modulo $p$};
+an eigenvalue alone in its residue class contributes nothing, and a spectrum
+with no collision mod $p$ has no $p$-part. Here $\{12,2,-4\}$ collides as
+$\{2,-4\}$ mod $3$, and since $A+4I\equiv A+I \pmod 3$ the coalescence operator
+of that class \emph{is} the $A+I$ of the proof; mod $5$ it collides as
+$\{12,2\}$, of rank $1$, giving the $\mathbb Z/5$. The signed-turn operator on
+the $240$ edge chains, with spectrum $\{-6,2,4,10\}$, collides as $\{4,10\}$
+mod $3$ and $\{-6,4\}$ mod $5$, of ranks $10$ and $23$ --- the same three-primary
+rank $10$, from a different collision on a different operator.
+(Witnesses: \texttt{analysis/w33\_pass827\_adjacency\_kbranch\_meets\_e8\_boundary.py},
+\texttt{analysis/w33\_pass828\_coalescence\_theorem.py}.)
 \end{remark}
 
 
