@@ -1,0 +1,50 @@
+name: Passes 651-655 release verification
+
+on:
+  pull_request:
+    paths:
+      - 'analysis/w33_pass651_*.py'
+      - 'analysis/w33_pass652_*.py'
+      - 'analysis/w33_pass653_*.py'
+      - 'analysis/w33_pass654_*.py'
+      - 'analysis/w33_pass655_*.py'
+      - 'analysis/BT651_655_five_frontier_release.md'
+      - 'data/w33_pass651_*.json'
+      - 'data/w33_pass652_*.json'
+      - 'data/w33_pass653_*.json'
+      - 'data/w33_pass654_*.json'
+      - 'data/w33_pass655_*.json'
+      - 'tests/test_w33_pass651_655.py'
+      - '.github/workflows/pass651_655_release.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install runtime dependencies
+        run: python -m pip install --disable-pip-version-check numpy pytest
+      - name: Generate deterministic certificates
+        run: |
+          python analysis/w33_pass651_closed_form_2adic_tree.py
+          python analysis/w33_pass652_d8_descent_defect_signature.py
+          python analysis/w33_pass653_gauge_complete_optical_tomography.py
+          python analysis/w33_pass654_correlated_dropout_matrix_eprocess.py
+          python analysis/w33_pass655_minimax_policy_stability.py
+      - name: Verify ledgers and focused regression
+        run: |
+          python analysis/w33_pass651_closed_form_2adic_tree.py --check
+          python analysis/w33_pass652_d8_descent_defect_signature.py --check
+          python analysis/w33_pass653_gauge_complete_optical_tomography.py --check
+          python analysis/w33_pass654_correlated_dropout_matrix_eprocess.py --check
+          python analysis/w33_pass655_minimax_policy_stability.py --check
+          python -m pytest -q tests/test_w33_pass651_655.py
+      - name: Ensure generated ledgers are committed exactly
+        run: git diff --exit-code -- data/w33_pass651_closed_form_2adic_tree.json data/w33_pass652_d8_descent_defect_signature.json data/w33_pass653_gauge_complete_optical_tomography.json data/w33_pass654_correlated_dropout_matrix_eprocess.json data/w33_pass655_minimax_policy_stability.json
