@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "scope": "five post-motive Casey/W33 RH frontiers",
+  "frontiers": {
+    "canonical_correspondence": {
+      "status": "PASS",
+      "result": "An explicit 78-dimensional correspondence is obtained as (Q^2 tensor V_2) direct_sum (Q^2 tensor V_-4), ranks 48+30. It is canonical at the W33 projector level; a map from the Pass-637 conductor module is still absent because no compatible W33 action on that module has been constructed.",
+      "denominator_clearing": {"120P2_integral": true, "120Pm4_integral": true},
+      "checks": {"graph_40": true, "regular_12": true, "srg_relation": true, "projectors_idempotent": true, "projectors_orthogonal": true, "ranks_1_24_15": true, "cohomological_ranks_48_30": true}
+    },
+    "analytic_completed_defect": {
+      "status": "PASS",
+      "exact_formula": "For a critical-line conjugate pair with ordinate gamma, x=1/2 and h=2 delta, the completed-log-derivative second difference is 4 h^2 x(3 gamma^2+h^2-x^2)/[(gamma^2+x^2)(gamma^2+(x-h)^2)(gamma^2+(x+h)^2)].",
+      "conditional_theorem": "Under RH, and using the known positive lower bound on nontrivial zero ordinates, every pair contribution is positive for 0<|delta|<1/2; hence the completed defect is positive after justified Hadamard summation.",
+      "nonconverse": "A synthetic off-line quartet at beta=0.7, gamma=14 also gives positive samples, so positivity of this single second-difference functional is not sufficient for RH.",
+      "minimum_registered_RH_pair_contribution": "3.908955449465149694816188e-10",
+      "off_line_samples": ["1.2416514738395044514e-7", "0.000012412363625145225455", "0.000071380438107751042553", "0.0002957199581122187634"],
+      "checks": {"conditional_pair_kernel_positive": true, "closed_formula_factor_positive": true, "off_line_quartet_can_remain_positive": true}
+    },
+    "fixed_E_global_audit": {
+      "status": "PASS",
+      "logical_result": "For a real entire F, global Hermite-Biehler status of E=F+i c F' forces the real part F to have only real zeros; with F=Xi this is an RH-level statement. The test is therefore meaningful, not an auxiliary positivity claim.",
+      "finite_audit": {"points": 4, "minimum_normalized_gap": "0.0038541358940083836325"},
+      "limitation": "This small high-precision replay only checks the executable definition. The previously committed 1010-point audit remains the numerical evidence; neither is interval arithmetic.",
+      "checks": {"fixed_before_test": true, "registered_points_positive": true, "candidate_is_RH_equivalent_target": true}
+    },
+    "automorphic_packet": {
+      "status": "PASS",
+      "packet": "L(M_W,s)=L(E_2,s)^24 L(E_-4,s)^15 is an honest degree-78 automorphic L-packet because elliptic curves over Q are modular.",
+      "bad_reduction_support": {"E2": [2,31], "E_minus4": [2,7]},
+      "nonisogeny_witness": "a_5(E2)=-3 while a_5(E_minus4)=2",
+      "census": {"good_primes_through_500": 92, "W33_signature_primes": [11], "normalized_trace_correlation": -0.03444517387179486},
+      "obstruction": "This degree-78 packet has the W33 factor at p=11 but is not the degree-1 Riemann zeta L-function; no functorial collapse to xi is available.",
+      "checks": {"formal_global_L_packet": true, "bad_prime_sets_distinct": true, "signature_unique_through_500": true, "trace_streams_weakly_correlated": true}
+    },
+    "compact_resolvent_replacement": {
+      "status": "PASS",
+      "replacement": "Use the Lambert-W Weyl ladder t_n=2 pi(n-7/8)/W((n-7/8)/e), then attach a bounded W33 internal phase operator without multiplying eigenvalue count. This has t_n to infinity and N(T) in the Riemann-von Mangoldt T log T class.",
+      "first20": {"mean_absolute_relative_error": "0.048830446696122162488", "max_absolute_relative_error": "0.26269427483605325588"},
+      "representation_tradeoff": "Keeping all 24+15 W33 multiplicities at every level multiplies the zero density by 39. A viable compact-resolvent model must use W33 as an internal fiber/interaction, not as 39 independent copies of every ordinate.",
+      "not_a_solution": "The Weyl ladder matches asymptotic counting only; it does not reproduce individual zeros or a determinant equal to xi.",
+      "checks": {"compact_resolvent": true, "finite_counting_function": true, "correct_T_log_T_Weyl_class": true, "mean_first20_relative_error_below_6pct": true}
+    }
+  },
+  "claim_boundary": {"classical_RH_proved": false, "global_HB_proved": false, "adelic_transfer_proved": false}
+}
