@@ -381,51 +381,42 @@ Whether the $S8$ characteristic lattices \emph{are} these branch lattices,
 rather than only sharing their homological invariants, is left open.
 \end{remark}
 
-\begin{remark}[the real gluing over {$\ZZ[\zeta_q]$}, and why $q=2$ is clean]
-\label{rem:real-gluing}
-The Ext quiver of Remark~\ref{rem:commutant} is computed over the
-\emph{abstract} order $O_q$ base-changed to $\ZZ_p$, where it is a rank-one
-$q$-adic invariant $\ZZ/q$. The flat block, however, lives over the full
-cyclotomic ring $\ZZ[\zeta_q]$ in which the section takes its values, and there
-the two \emph{saturated} eigenlattices $L_0=\ker(F+(q+1)I)$ and
-$L_{2q}=\ker(F-(q-1)I)$ glue with a strictly larger torsion. Writing the
-$q\times q$ operator over $\ZZ[\zeta_q]$ as an integer operator of rank
-$q(q-1)$ and taking the Smith normal form of the cokernel of
-$L_0\oplus L_{2q}\hookrightarrow\ZZ[\zeta_q]^{\,q}$, the exact answer at
-$q=3,5,7$ is
+\begin{remark}[the flat block's eigenlattice gluing]\label{rem:real-gluing}
+The Ext quiver of Remark~\ref{rem:commutant} is an invariant of the
+\emph{abstract} order $O_q$; the flat block realises that order on the concrete
+lattice $\ZZ^n$, $n=q(q-1)$, obtained by writing the $q\times q$ operator over
+$\ZZ[\zeta_q]$ as an integer operator, and one may ask how its two
+\emph{saturated} eigenlattices $L_{q-1}=\ker(F-(q-1)I)$ and
+$L_{-(q+1)}=\ker(F+(q+1)I)$ glue inside it. Since the eigenvalue gap is $2q$,
+$P=(F+(q+1)I)/2q$ is the spectral projector onto $L_{q-1}$, and a vector is
+integral in $L_{q-1}\oplus L_{-(q+1)}$ exactly when $Pv$ is, i.e.\ when
+$(F+(q+1)I)v\equiv 0\pmod{2q}$; hence by Proposition~\ref{prop:two-branch}
 \[
-\mathrm{gluing}(q)\;\cong\;(\ZZ/2q)^{\,q-1}\ \oplus\ (\ZZ/q)^{\,(q^2-1)/2-(q-1)},
+\ZZ^n/(L_{q-1}\oplus L_{-(q+1)})\;=\;\operatorname{im}\bigl((F+(q+1)I)\bmod 2q\bigr)
+\;\cong\;(\ZZ/2)^{(q-1)^2/2},
 \]
-i.e.\ $[6,6,3,3]$, $[10^4,5^8]$ and $(\ZZ/14)^6\oplus(\ZZ/7)^{18}$. Its
-$q$-primary part is $(\ZZ/q)^{(q^2-1)/2}$: the exponent is exactly the
-antipodal-pair count $(p^{2n}-1)/2$ of the signed-cycle Burnside law
-at $n=1$, and its $2$-primary part is
-$(\ZZ/2)^{\,q-1}$, the exponent being the ramification index of
-$(q)=(\lambda)^{q-1}$ in $\ZZ[\zeta_q]$, $\lambda=1-\zeta$. The abstract
-$\ZZ/q$ is the rank-one $q$-adic image of this. The single member where the
-two coincide is $q=2$: there $\ZZ[\zeta_2]=\ZZ$ is unramified ($e=1$,
-$\lambda=2$), the antipodal-pair count is $1$, and the gluing is the single
-clean $\ZZ/4$ of the $S8$ deformation --- so the $2$-adic case is special
-precisely as the only unramified fibre of the family.
-
-Localising at $\lambda$, where $O_\lambda/(q)=O_\lambda/\lambda^{q-1}$ is
-$(\ZZ/q)^{q-1}$ as an abelian group, the same torsion is the $O_\lambda$-module
-\[
-\mathrm{gluing}\;\cong\;O_\lambda/(2q)\ \oplus\ \bigl(O_\lambda/(q)\bigr)^{(q-1)/2},
-\]
-a sum of $(q+1)/2$ cyclic blocks --- exactly the multiplicity of the dominant
-eigenvalue $q-1$, so one block sits over each coordinate of the eigenlattice
-$L_{q-1}$, a single block being doubled to $O_\lambda/(2q)$ by the factor $2$ of
-the gap. Base-change to $\ZZ$, using $O_\lambda/(q)\cong(\ZZ/q)^{q-1}$ and
-$O_\lambda/(2q)\cong(\ZZ/2q)^{q-1}$, returns the displayed integer torsion, so
-its $(q^2-1)/2$ invariant factors are $(q+1)/2$ local blocks times the
-ramification length $q-1$; a uniform proof by $\lambda$-adic elementary divisors
-is left open. This structure is genuinely field-specific: over the ring $\ZZ/9$
-the flat block has $q=9$ but fails the quadratic $F^2+2F-(q^2-1)I=0$ in every
-entry and has neither $q-1=8$ nor $-(q+1)=-10$ as an eigenvalue, so no
-two-branch order describes it and the Burnside pair count
-$(p^{2n}-1)/2$ has no matching real flat block for $n>1$.
+pure $2$-torsion, verified exactly at $q=3,5,7$ as $(\ZZ/2)^2,(\ZZ/2)^8,
+(\ZZ/2)^{18}$. The exponent $(q-1)^2/2$ is the $\ZZ$-rank of the smaller
+eigenlattice $L_{-(q+1)}$. The gluing is $2$-torsion because modulo $q$ one has
+$F+(q+1)I\equiv F+I$ with $(F+I)^2\equiv F^2+2F+1\equiv 0$, so every Smith
+invariant of $F+(q+1)I$ is divisible by $q$ and $2q/\gcd(d_i,2q)\in\{1,2\}$; the
+conductor's odd part contributes nothing to a lattice on which $q$ is already
+absorbed. There is no $q$-torsion in the gluing, and in particular no relation to
+the antipodal-pair count. This realisation is field-specific: over the ring
+$\ZZ/9$ the flat block has $q=9$ but fails $F^2+2F-(q^2-1)I=0$ in every entry and
+has neither $q-1=8$ nor $-(q+1)=-10$ as an eigenvalue, so no two-branch order
+describes it for $n>1$.
 \end{remark}
+
+\begin{erratum}\label{err:gluing}
+An earlier version of Remark~\ref{rem:real-gluing} reported the gluing as
+$(\ZZ/2q)^{q-1}\oplus(\ZZ/q)^{(q^2-1)/2-(q-1)}$ with $q$-primary rank
+$(q^2-1)/2$, and inferred a ``deformation--Burnside bridge'' identifying that
+rank with the antipodal-pair count. Both are withdrawn: that computation glued
+the eigenlattice \emph{images} rather than the saturated eigenlattices and used a
+faulty integer Smith routine. The correct gluing is the pure $2$-torsion group
+above, whose rank $(q-1)^2/2$ never equals $(q^2-1)/2$; there is no such bridge.
+\end{erratum}
 
 \begin{proposition}[two-branch gluing]\label{prop:two-branch}
 Let $S$ be an integral operator on $\ZZ^n$ with $S(S-cI)=0$, $c>0$. In a
@@ -453,13 +444,15 @@ $U,V$ stay invertible modulo $c$, so $\operatorname{im}(Y\bmod c)\cong
 Every cyclic factor divides the conductor $c$; the top factor is $c$ exactly
 when some $d_i$ is coprime to $c$, and the number of full-conductor $\ZZ/c$
 summands is $\#\{i:\gcd(d_i,c)=1\}$. Thus the conductor is intrinsic to the
-abstract order while the full-conductor multiplicity is a property of the
-realisation: it is $(q^2-1)/2$ for the cyclotomic flat block above, and, on the
-$W(3,3)$ signed-turn lattices, $66$ for the cycle lattice at $c=4$ (whose
-off-diagonal block has Smith type $(1^{66},12)$, giving $(\ZZ/4)^{66}$) and $10$
-for the cut lattice at $c=6$. The apparent conflict between the flat block's
-rank $4$ and the cut lattice's rank $10$ at $q=3$ is only the choice of $Y$:
-both realise the same gap-$6$ order.
+abstract order while the whole gluing type is a property of the realisation. For
+the cyclotomic flat block at gap $c=2q$ (Remark~\ref{rem:real-gluing}) no $d_i$
+is coprime to $c$: the gluing is the pure $2$-torsion $(\ZZ/2)^{(q-1)^2/2}$, with
+zero full-conductor summands. On the $W(3,3)$ signed-turn lattices, by contrast,
+the cycle lattice at $c=4$ has off-diagonal Smith type $(1^{66},12)$, giving
+$66$ full-conductor summands and gluing $(\ZZ/4)^{66}$, while the cut lattice at
+$c=6$ has $10$. So a single gap-$c$ order supports gluings as different as
+$(\ZZ/2)^{2}$, $(\ZZ/4)^{66}$ and $(\ZZ/2)^5\oplus(\ZZ/6)^{10}$, according to the
+Smith type of $Y$ alone.
 
 \section{The first-order law}
 
