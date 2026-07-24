@@ -3,17 +3,43 @@ on:
   pull_request:
     branches: [master]
     paths:
-      - 'analysis/w33_pass871_*.py'
-      - 'analysis/w33_pass872_*.py'
-      - 'analysis/w33_pass873_*.py'
-      - 'analysis/w33_pass874_*.py'
-      - 'analysis/w33_pass875_*.py'
+      - '.compute/**'
       - '.github/workflows/pass871_875_compute.yml'
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+      - name: Reconstruct exact sources
+        shell: bash
+        run: |
+          set -euo pipefail
+          for stem in \
+            w33_pass871_atlas_standard_conjugacy \
+            w33_pass872_heisenberg_loewy_basis \
+            w33_pass873_scalar_schur_factor_set \
+            w33_pass874_adaptive_audit_regret_game \
+            w33_pass875_hardware_phase_dispatcher
+          do
+            cat .compute/${stem}.part* | base64 -d | gzip -d > analysis/${stem}.py
+          done
+          python -m compileall -q analysis/w33_pass87*.py
+      - name: Commit reconstructed sources
+        shell: bash
+        run: |
+          git config user.name 'w33-compute[bot]'
+          git config user.email 'w33-compute[bot]@users.noreply.github.com'
+          git add analysis/w33_pass871_*.py analysis/w33_pass872_*.py analysis/w33_pass873_*.py analysis/w33_pass874_*.py analysis/w33_pass875_*.py
+          git diff --cached --quiet || git commit -m 'Passes 871-875: materialize exact sources'
+          git push origin HEAD:${{ github.head_ref || github.ref_name }}
   compute:
+    needs: materialize
     runs-on: ubuntu-latest
     timeout-minutes: 50
     strategy:
@@ -33,6 +59,8 @@ jobs:
     name: Compute ${{ matrix.pass }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -51,3 +79,24 @@ jobs:
             hardware/w33_phase_dispatcher.h
             hardware/w33_phase_dispatcher.sv
             hardware/w33_phase_rom.mem
+  collect:
+    needs: compute
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: pass-*-outputs
+          merge-multiple: true
+          path: .
+      - name: Commit verified outputs
+        shell: bash
+        run: |
+          git config user.name 'w33-compute[bot]'
+          git config user.email 'w33-compute[bot]@users.noreply.github.com'
+          git add data/w33_pass871_*.json data/w33_pass872_*.json data/w33_pass873_*.json data/w33_pass874_*.json data/w33_pass875_*.json hardware/w33_phase_dispatcher.h hardware/w33_phase_dispatcher.sv hardware/w33_phase_rom.mem
+          git diff --cached --quiet || git commit -m 'Passes 871-875: commit verified outputs'
+          git push origin HEAD:${{ github.head_ref || github.ref_name }}
