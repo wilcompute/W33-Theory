@@ -1,0 +1,81 @@
+name: Passes 821-825 release verification
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass821_*.py'
+      - 'analysis/w33_pass822_*.py'
+      - 'analysis/w33_pass823_*.py'
+      - 'analysis/w33_pass824_*.py'
+      - 'analysis/w33_pass825_*.py'
+      - 'analysis/BT821_825_five_frontier_release.md'
+      - 'data/w33_pass821_*.json'
+      - 'data/w33_pass822_*.json'
+      - 'data/w33_pass823_*.json'
+      - 'data/w33_pass824_*.json'
+      - 'data/w33_pass825_*.json'
+      - 'tests/test_w33_pass821_825.py'
+      - '.github/workflows/pass821_825_release.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass821_*.py'
+      - 'analysis/w33_pass822_*.py'
+      - 'analysis/w33_pass823_*.py'
+      - 'analysis/w33_pass824_*.py'
+      - 'analysis/w33_pass825_*.py'
+      - 'analysis/BT821_825_five_frontier_release.md'
+      - 'data/w33_pass821_*.json'
+      - 'data/w33_pass822_*.json'
+      - 'data/w33_pass823_*.json'
+      - 'data/w33_pass824_*.json'
+      - 'data/w33_pass825_*.json'
+      - 'tests/test_w33_pass821_825.py'
+      - '.github/workflows/pass821_825_release.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - pass: '821'
+            script: analysis/w33_pass821_gluing66_composition_series.py
+            ledger: data/w33_pass821_gluing66_composition_series.json
+            test: test_pass821_gluing66_composition_series
+          - pass: '822'
+            script: analysis/w33_pass822_cut10_heisenberg_layer_and_flatblock_retraction.py
+            ledger: data/w33_pass822_cut10_heisenberg_layer_and_flatblock_retraction.json
+            test: test_pass822_cut10_heisenberg_layer_and_flatblock_retraction
+          - pass: '823'
+            script: analysis/w33_pass823_integral_deformation_tower.py
+            ledger: data/w33_pass823_integral_deformation_tower.json
+            test: test_pass823_integral_deformation_tower
+          - pass: '824'
+            script: analysis/w33_pass824_minimax_audit_stream_allocator.py
+            ledger: data/w33_pass824_minimax_audit_stream_allocator.json
+            test: test_pass824_minimax_audit_stream_allocator
+          - pass: '825'
+            script: analysis/w33_pass825_facet_pruned_polyhedral_runtime.py
+            ledger: data/w33_pass825_facet_pruned_polyhedral_runtime.json
+            test: test_pass825_facet_pruned_polyhedral_runtime
+    name: Pass ${{ matrix.pass }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check numpy sympy scipy pytest
+      - name: Regenerate and verify certificate
+        run: |
+          python "${{ matrix.script }}"
+          python "${{ matrix.script }}" --check
+      - name: Focused regression
+        run: python -m pytest -q "tests/test_w33_pass821_825.py::${{ matrix.test }}"
+      - name: Ensure ledger is committed exactly
+        run: git diff --exit-code -- "${{ matrix.ledger }}"
