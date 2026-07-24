@@ -10570,6 +10570,31 @@ line pairs through a point, exactly the local-axis endpoints. (Witness:
 \texttt{analysis/w33\_pass157\_eigenlattice\_prime\_collision.py}.)
 \end{proof}
 
+\begin{remark}[the discriminant data as a three-branch gluing]
+\label{rem:e8-kbranch}
+The invariants above are visible from a second direction. Since $A$ has the
+three distinct integer eigenvalues $12,2,-4$ and $(A-12I)(A-2I)(A+4I)=0$
+exactly over $\mathbb Z$, its three \emph{saturated} eigenlattices may be glued
+inside $\mathbb Z^{40}$. Writing $N_i=\prod_{j\neq i}(A-c_jI)$ and
+$D_i=\prod_{j\neq i}(c_i-c_j)$, a vector lies in $\bigoplus_i L_{c_i}$ exactly
+when $N_i x\equiv 0 \pmod{D_i}$ for each $i$, and the resulting quotient is
+\[
+ \mathbb Z^{40}\big/\bigl(L_{12}\oplus L_2\oplus L_{-4}\bigr)
+ \;\cong\;(\mathbb Z/2)^{6}\oplus(\mathbb Z/6)^{9}\oplus\mathbb Z/120 ,
+\]
+with primary parts $(\mathbb Z/2)^{15}\oplus\mathbb Z/8$, $(\mathbb Z/3)^{10}$
+and $\mathbb Z/5$. Its \emph{odd} part $(\mathbb Z/3)^{10}\oplus\mathbb Z/5$
+coincides with the odd part of $L_2^{\#}/L_2$ above, and its leading Smith
+blocks $2^6,6^9$ with those of $\operatorname{SNF}(L_2)$; the $2$-parts differ,
+as they may, these being different invariants of the configuration. The
+agreement is not accidental at $p=3$: the rank $10$ is in both cases the
+$\mathbb F_3$ rank of $A+I$ on $\mathbf 1^{\perp}$, which the proof above
+identifies with $\operatorname{rad}(L_2/3L_2)$. The same three-primary rank
+$10$ recurs in the signed-turn operator's four-branch gluing on the $240$ edge
+chains. (Witness: \texttt{analysis/w33\_pass827\_adjacency\_kbranch\_meets\_e8\_boundary.py}.)
+\end{remark}
+
+
 The definite lift is not fixed by linear-algebraic chain data; the natural
 constraint is the substrate's own symmetry. The full automorphism group acts
 canonically on the homology, and that action is as rigid as possible.
