@@ -1,0 +1,81 @@
+name: Passes 681-685 release verification
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass681_*.py'
+      - 'analysis/w33_pass682_*.py'
+      - 'analysis/w33_pass683_*.py'
+      - 'analysis/w33_pass684_*.py'
+      - 'analysis/w33_pass685_*.py'
+      - 'analysis/BT681_685_five_frontier_release.md'
+      - 'data/w33_pass681_*.json'
+      - 'data/w33_pass682_*.json'
+      - 'data/w33_pass683_*.json'
+      - 'data/w33_pass684_*.json'
+      - 'data/w33_pass685_*.json'
+      - 'tests/test_w33_pass681_685.py'
+      - '.github/workflows/pass681_685_release.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass681_*.py'
+      - 'analysis/w33_pass682_*.py'
+      - 'analysis/w33_pass683_*.py'
+      - 'analysis/w33_pass684_*.py'
+      - 'analysis/w33_pass685_*.py'
+      - 'analysis/BT681_685_five_frontier_release.md'
+      - 'data/w33_pass681_*.json'
+      - 'data/w33_pass682_*.json'
+      - 'data/w33_pass683_*.json'
+      - 'data/w33_pass684_*.json'
+      - 'data/w33_pass685_*.json'
+      - 'tests/test_w33_pass681_685.py'
+      - '.github/workflows/pass681_685_release.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - pass: '681'
+            script: analysis/w33_pass681_h1_cocycle_rigidity_h2_scalar.py
+            ledger: data/w33_pass681_h1_cocycle_rigidity_h2_scalar.json
+            test: test_pass681_h1_rigidity_and_scalar_h2
+          - pass: '682'
+            script: analysis/w33_pass682_flatblock_h1_branch_separation.py
+            ledger: data/w33_pass682_flatblock_h1_branch_separation.json
+            test: test_pass682_one_branch_after_cyclotomic_correction
+          - pass: '683'
+            script: analysis/w33_pass683_waveform_level_optical_memory_falsifier.py
+            ledger: data/w33_pass683_waveform_level_optical_memory_falsifier.json
+            test: test_pass683_waveform_falsifier
+          - pass: '684'
+            script: analysis/w33_pass684_open_ended_propensity_confidence_process.py
+            ledger: data/w33_pass684_open_ended_propensity_confidence_process.json
+            test: test_pass684_open_ended_propensity_process
+          - pass: '685'
+            script: analysis/w33_pass685_hybrid_symbolic_controller_complex.py
+            ledger: data/w33_pass685_hybrid_symbolic_controller_complex.json
+            test: test_pass685_hybrid_symbolic_complex
+    name: Pass ${{ matrix.pass }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check numpy sympy pytest
+      - name: Regenerate and verify certificate
+        run: |
+          python "${{ matrix.script }}"
+          python "${{ matrix.script }}" --check
+      - name: Focused regression
+        run: python -m pytest -q "tests/test_w33_pass681_685.py::${{ matrix.test }}"
+      - name: Ensure ledger is committed exactly
+        run: git diff --exit-code -- "${{ matrix.ledger }}"
