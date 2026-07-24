@@ -1,0 +1,14 @@
+{
+  "theorem": "BT796 global 2160 chart-transversal fibration",
+  "charts": 540,
+  "transversal_slots_per_chart": 4,
+  "slot_count": 2160,
+  "line_multiplicity_profile": {"54": 40},
+  "group_order": 25920,
+  "orbit_count_under_generators": 2160,
+  "is_transitive_G_set": true,
+  "slot_stabilizer_order": 12,
+  "slot_stabilizer_order_profile": {"1": 1, "2": 7, "3": 2, "6": 2},
+  "orbit_stabilizer_check": "25920 = 2160 * 12",
+  "interpretation": "The 2160 chart-transversal slots form a single PSp(4,3) fibration object; every W33 line occurs as transversal in exactly 54 slots."
+}
