@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "scope": "pre-registered three-channel positive W33 moment search with S10/S12 and zero-gap falsifiers",
+  "protocol": {
+    "channels": [2, 3, 4],
+    "new_channel": 4,
+    "training_moments": [2, 4, 6, 8],
+    "reserved_moments": [10, 12],
+    "reserved_spectral_tests": ["existence of a first positive ordinate", "finite zero count below every finite height"],
+    "selection_rule": "no S10, S12, or zero-ordinate information is used during fitting"
+  },
+  "classical_target_moments": {
+    "2": "0.023104993115418970788933810430339013",
+    "4": "0.000037172599285269686164866262471740423",
+    "6": "0.0000001441739314009732796953815560979072",
+    "8": "0.00000000066303168025299086987327201595091168",
+    "10": "3.2136641506166012161034365213505784e-12",
+    "12": "1.5876934514910153493636420292314272e-14"
+  },
+  "signed_exact_interpolation": {
+    "solver_success": true,
+    "weights_s2_s3_s4": [0.0020658500852461887, -0.19125728311934345, 1.1891914330340974],
+    "scale": "116.72435409738921148329422346714769",
+    "amplitude": "860.50240054341336841428720730468068",
+    "moments": {
+      "2": "0.023104993115418970788933810430339038",
+      "4": "0.00003717259928526968616486626247174047",
+      "6": "0.00000014417393140097326192034839445298076",
+      "8": "0.00000000066303168025299090583449426583000522",
+      "10": "4.1279706972964284260963832350687376e-12",
+      "12": "3.4716593510389425596569215483459409e-14"
+    },
+    "relative_errors": {
+      "2": "1.5407439555097886824447823540679419e-33",
+      "4": "1.5407439555097886824447823540679419e-33",
+      "6": "-1.2328881503695287281847695520796231e-16",
+      "8": "5.4237562579449424274107764239713692e-17",
+      "10": "0.28450594207375419118441981959971565",
+      "12": "1.186605574129363628492604399518043"
+    },
+    "verdict": "S2-S8 can be interpolated only by this located branch with a negative s=3 trace weight; the reserved S10/S12 moments then fail"
+  },
+  "positive_constrained_search": {
+    "solver_success": true,
+    "training_log_error_norm": 0.1377705351022925,
+    "weights_s2_s3_s4": [0.9999999930189329, 5.046127062986312e-15, 6.981061815904309e-09],
+    "scale": "100.4302568760122",
+    "amplitude": "0.5453471609104807",
+    "moments": {
+      "2": "0.023405947046987237",
+      "4": "3.861836723322246e-05",
+      "6": "1.2849424082651557e-07",
+      "8": "7.068805074697317e-10",
+      "10": "5.7584459308451264e-12",
+      "12": "6.488337458720291e-14"
+    },
+    "relative_errors": {
+      "2": "0.01302549323710589",
+      "4": "0.03889337780384072",
+      "6": "-0.10875537915970201",
+      "8": "0.06613383420835861",
+      "10": "0.791863013980556",
+      "12": "3.0866437111188203"
+    },
+    "verdict": "the best registered positive fit lies effectively on the s=2 boundary and leaves a nonzero training residual; its reserved moments fail much more strongly"
+  },
+  "signed_spectral_gap_audit": {
+    "ordinate_model": "t_(n,j)=scale*theta_j/log(n)",
+    "sample_min_sector_ordinates": {"2": "212.942016807271199489768499234", "3": "134.351454189220765673580992328", "10": "64.1019343961722599769650209146", "100": "32.0509671980861299884825104573", "10000": "16.0254835990430649942412552287", "1000000000000": "5.34182786634768833141375174288"},
+    "limit_as_n_to_infinity": 0,
+    "actual_first_Riemann_zero": "14.1347251417346946311681676889",
+    "compact_resolvent_failure": "prime-power labels give infinitely many model ordinates below every T>0; there is no first positive ordinate and no finite zero-counting function"
+  },
+  "positive_spectral_gap_audit": {
+    "ordinate_model": "t_(n,j)=scale*theta_j/log(n)",
+    "sample_min_sector_ordinates": {"2": "183.21644709900940909797680244", "3": "115.596707818415974320543463205", "10": "55.1536462757848424533319430159", "100": "27.576823137892421226665971508", "10000": "13.788411568946210613332985754", "1000000000000": "4.59613718964873687111099525133"},
+    "limit_as_n_to_infinity": 0,
+    "actual_first_Riemann_zero": "14.1347251417346946311681676889",
+    "compact_resolvent_failure": "prime-power labels give infinitely many model ordinates below every T>0; there is no first positive ordinate and no finite zero-counting function"
+  },
+  "claim_boundary": {
+    "proved": ["the registered signed interpolation and positive constrained optimization are reproducible", "the located exact interpolation violates positivity", "both fitted models fail untouched higher moments", "the proposed prime-indexed ordinate formula has zero as an accumulation point"],
+    "not_proved": ["global nonexistence of every conceivable positive spectral measure", "that no different operator architecture can reproduce xi", "classical RH"],
+    "next_operator_requirement": "a positive compact-resolvent operator with integer spectral multiplicities, a first ordinate, finite N(T), and pre-registered agreement beyond S12"
+  },
+  "checks": {
+    "training_set_is_only_S2_to_S8": true,
+    "S10_and_S12_reserved": true,
+    "signed_model_interpolates_training_moments": true,
+    "signed_exact_fit_requires_negative_weight": true,
+    "positive_search_uses_nonnegative_weights": true,
+    "positive_search_does_not_exactly_fit_training": true,
+    "signed_model_fails_reserved_S10": true,
+    "signed_model_fails_reserved_S12": true,
+    "positive_model_fails_reserved_S10": true,
+    "positive_model_fails_reserved_S12": true,
+    "ordinate_model_accumulates_at_zero": true
+  }
+}
