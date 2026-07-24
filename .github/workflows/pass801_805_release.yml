@@ -1,0 +1,81 @@
+name: Passes 801-805 release verification
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass801_*.py'
+      - 'analysis/w33_pass802_*.py'
+      - 'analysis/w33_pass803_*.py'
+      - 'analysis/w33_pass804_*.py'
+      - 'analysis/w33_pass805_*.py'
+      - 'analysis/BT801_805_five_frontier_release.md'
+      - 'data/w33_pass801_*.json'
+      - 'data/w33_pass802_*.json'
+      - 'data/w33_pass803_*.json'
+      - 'data/w33_pass804_*.json'
+      - 'data/w33_pass805_*.json'
+      - 'tests/test_w33_pass801_805.py'
+      - '.github/workflows/pass801_805_release.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass801_*.py'
+      - 'analysis/w33_pass802_*.py'
+      - 'analysis/w33_pass803_*.py'
+      - 'analysis/w33_pass804_*.py'
+      - 'analysis/w33_pass805_*.py'
+      - 'analysis/BT801_805_five_frontier_release.md'
+      - 'data/w33_pass801_*.json'
+      - 'data/w33_pass802_*.json'
+      - 'data/w33_pass803_*.json'
+      - 'data/w33_pass804_*.json'
+      - 'data/w33_pass805_*.json'
+      - 'tests/test_w33_pass801_805.py'
+      - '.github/workflows/pass801_805_release.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - pass: '801'
+            script: analysis/w33_pass801_global_h2_stable_elements.py
+            ledger: data/w33_pass801_global_h2_stable_elements.json
+            test: test_pass801_global_h2_stable_elements
+          - pass: '802'
+            script: analysis/w33_pass802_gluing66_extension_geometry.py
+            ledger: data/w33_pass802_gluing66_extension_geometry.json
+            test: test_pass802_gluing66_extension_geometry
+          - pass: '803'
+            script: analysis/w33_pass803_oddq_cut_lattice_companion.py
+            ledger: data/w33_pass803_oddq_cut_lattice_companion.json
+            test: test_pass803_oddq_cut_lattice_companion
+          - pass: '804'
+            script: analysis/w33_pass804_adversarial_calibration_failclosed.py
+            ledger: data/w33_pass804_adversarial_calibration_failclosed.json
+            test: test_pass804_adversarial_calibration_failclosed
+          - pass: '805'
+            script: analysis/w33_pass805_continuous_minplus_circuit.py
+            ledger: data/w33_pass805_continuous_minplus_circuit.json
+            test: test_pass805_continuous_minplus_circuit
+    name: Pass ${{ matrix.pass }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check numpy sympy scipy pytest
+      - name: Regenerate and verify certificate
+        run: |
+          python "${{ matrix.script }}"
+          python "${{ matrix.script }}" --check
+      - name: Focused regression
+        run: python -m pytest -q "tests/test_w33_pass801_805.py::${{ matrix.test }}"
+      - name: Ensure ledger is committed exactly
+        run: git diff --exit-code -- "${{ matrix.ledger }}"
