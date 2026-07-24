@@ -1,0 +1,86 @@
+name: Passes 851-855 release verification
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass682_flatblock_h1_branch_separation.py'
+      - 'analysis/w33_pass851_*.py'
+      - 'analysis/w33_pass852_*.py'
+      - 'analysis/w33_pass853_*.py'
+      - 'analysis/w33_pass854_*.py'
+      - 'analysis/w33_pass855_*.py'
+      - 'analysis/BT851_855_five_frontier_release.md'
+      - 'data/w33_pass682_flatblock_h1_branch_separation.json'
+      - 'data/w33_pass851_*.json'
+      - 'data/w33_pass852_*.json'
+      - 'data/w33_pass853_*.json'
+      - 'data/w33_pass854_*.json'
+      - 'data/w33_pass855_*.json'
+      - 'tests/test_w33_pass851_855.py'
+      - '.github/workflows/pass851_855_release.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass682_flatblock_h1_branch_separation.py'
+      - 'analysis/w33_pass851_*.py'
+      - 'analysis/w33_pass852_*.py'
+      - 'analysis/w33_pass853_*.py'
+      - 'analysis/w33_pass854_*.py'
+      - 'analysis/w33_pass855_*.py'
+      - 'analysis/BT851_855_five_frontier_release.md'
+      - 'data/w33_pass682_flatblock_h1_branch_separation.json'
+      - 'data/w33_pass851_*.json'
+      - 'data/w33_pass852_*.json'
+      - 'data/w33_pass853_*.json'
+      - 'data/w33_pass854_*.json'
+      - 'data/w33_pass855_*.json'
+      - 'tests/test_w33_pass851_855.py'
+      - '.github/workflows/pass851_855_release.yml'
+permissions:
+  contents: read
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - pass: '682v2'
+            script: analysis/w33_pass682_flatblock_h1_branch_separation.py
+            ledger: data/w33_pass682_flatblock_h1_branch_separation.json
+            test: test_pass682_correction
+          - pass: '851'
+            script: analysis/w33_pass851_atlas_factor_compatibility.py
+            ledger: data/w33_pass851_atlas_factor_compatibility.json
+            test: test_pass851_atlas_factor_compatibility
+          - pass: '852'
+            script: analysis/w33_pass852_heisenberg_coalescence_separation.py
+            ledger: data/w33_pass852_heisenberg_coalescence_separation.json
+            test: test_pass852_heisenberg_coalescence_separation
+          - pass: '853'
+            script: analysis/w33_pass853_bockstein_scalar_isolation.py
+            ledger: data/w33_pass853_bockstein_scalar_isolation.json
+            test: test_pass853_bockstein_scalar_isolation
+          - pass: '854'
+            script: analysis/w33_pass854_cost_aware_adaptive_audit.py
+            ledger: data/w33_pass854_cost_aware_adaptive_audit.json
+            test: test_pass854_cost_aware_adaptive_audit
+          - pass: '855'
+            script: analysis/w33_pass855_generic_cell_optimal_decision_trees.py
+            ledger: data/w33_pass855_generic_cell_optimal_decision_trees.json
+            test: test_pass855_generic_cell_optimal_decision_trees
+    name: Pass ${{ matrix.pass }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check numpy scipy pytest
+      - name: Regenerate and verify certificate
+        run: |
+          python "${{ matrix.script }}"
+          python "${{ matrix.script }}" --check
+      - name: Focused regression
+        run: python -m pytest -q "tests/test_w33_pass851_855.py::${{ matrix.test }}"
+      - name: Ensure ledger is committed exactly
+        run: git diff --exit-code -- "${{ matrix.ledger }}"
