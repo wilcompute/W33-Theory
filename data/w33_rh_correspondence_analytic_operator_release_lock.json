@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "release": "Casey/W33 RH correspondence-analytic-operator five-frontier release",
+  "validation": {
+    "py_compile": "PASS",
+    "pytest": "5 passed in 0.39s",
+    "hosted_ci": "not observed at lock creation"
+  },
+  "exact_results": [
+    "explicit W33 projector-level cohomological correspondence of ranks 48+30",
+    "closed critical-line pair formula for the completed boundary second difference",
+    "counterexample showing scalar completed-defect positivity is not sufficient for RH",
+    "fixed E_11 identified as an RH-level Hermite--Biehler target",
+    "degree-78 automorphic elliptic packet with exact W33 local factor at p=11",
+    "compact-resolvent Lambert-W Weyl scaffold with T log T counting"
+  ],
+  "claim_boundary": {
+    "not_claimed": [
+      "classical Riemann Hypothesis",
+      "a canonical map from the Pass-637 conductor module",
+      "global Hermite--Biehler status of E_11",
+      "an adelic collapse from the degree-78 packet to Riemann zeta",
+      "an operator determinant equal to xi"
+    ]
+  },
+  "artifacts": [
+    "analysis/w33_rh_correspondence_analytic_operator.py",
+    "data/w33_rh_correspondence_analytic_operator_certificate.json",
+    "tests/test_rh_correspondence_analytic_operator.py",
+    "docs/RH_CASEY_W33_CORRESPONDENCE_ANALYTIC_OPERATOR_SYNTHESIS.md",
+    "manuscripts/tex/part_casey_w33_correspondence_analytic_operator.tex",
+    ".github/workflows/rh_correspondence_analytic_operator.yml"
+  ],
+  "headline": "The W33 24+15 packets now lift explicitly to a 48+30 cohomological correspondence; Casey's completed defect is pairwise positive under RH but not conversely; the viable operator frontier requires compact resolvent, T log T counting, and W33 as an internal fiber."
+}
