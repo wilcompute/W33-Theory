@@ -229,3 +229,10 @@ SESSION_HANDOFF.md
 !.continuity/.gitattributes
 !.continuity/SESSION_NOTES.md
 !.continuity/INSTRUCTIONS.md
+
+# Lean 4 / Lake build artifacts (mathlib cache is multi-GB - never commit)
+.lake/
+formal/.lake/
+*.olean
+*.ilean
+*.trace
