@@ -406,8 +406,25 @@ $\ZZ/q$ is the rank-one $q$-adic image of this. The single member where the
 two coincide is $q=2$: there $\ZZ[\zeta_2]=\ZZ$ is unramified ($e=1$,
 $\lambda=2$), the antipodal-pair count is $1$, and the gluing is the single
 clean $\ZZ/4$ of the $S8$ deformation --- so the $2$-adic case is special
-precisely as the only unramified fibre of the family. A proof of the displayed
-form for all odd $q$ by $\lambda$-adic length is open.
+precisely as the only unramified fibre of the family.
+
+Localising at $\lambda$, where $O_\lambda/(q)=O_\lambda/\lambda^{q-1}$ is
+$(\ZZ/q)^{q-1}$ as an abelian group, the same torsion is the $O_\lambda$-module
+\[
+\mathrm{gluing}\;\cong\;O_\lambda/(2q)\ \oplus\ \bigl(O_\lambda/(q)\bigr)^{(q-1)/2},
+\]
+a sum of $(q+1)/2$ cyclic blocks --- exactly the multiplicity of the dominant
+eigenvalue $q-1$, so one block sits over each coordinate of the eigenlattice
+$L_{q-1}$, a single block being doubled to $O_\lambda/(2q)$ by the factor $2$ of
+the gap. Base-change to $\ZZ$, using $O_\lambda/(q)\cong(\ZZ/q)^{q-1}$ and
+$O_\lambda/(2q)\cong(\ZZ/2q)^{q-1}$, returns the displayed integer torsion, so
+its $(q^2-1)/2$ invariant factors are $(q+1)/2$ local blocks times the
+ramification length $q-1$; a uniform proof by $\lambda$-adic elementary divisors
+is left open. This structure is genuinely field-specific: over the ring $\ZZ/9$
+the flat block has $q=9$ but fails the quadratic $F^2+2F-(q^2-1)I=0$ in every
+entry and has neither $q-1=8$ nor $-(q+1)=-10$ as an eigenvalue, so no
+two-branch order describes it and the Burnside pair count
+$(p^{2n}-1)/2$ has no matching real flat block for $n>1$.
 \end{remark}
 
 \section{The first-order law}
