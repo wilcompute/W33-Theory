@@ -15,6 +15,7 @@
 
 \newcommand{\FF}{\mathbb F}
 \newcommand{\ZZ}{\mathbb Z}
+\newcommand{\Ext}{\operatorname{Ext}}
 \newcommand{\QQ}{\mathbb Q}
 \newcommand{\adj}{\operatorname{adj}}
 \newcommand{\tr}{\operatorname{tr}}
@@ -351,6 +352,33 @@ Lemma~\ref{lem:flat} also reproves the two ``trace laws''
 $\tr F=0$ and $\tr F^2=q(q^2-1)$; the latter is
 $(q-1)^2\frac{q+1}{2}+(q+1)^2\frac{q-1}{2}=q(q^2-1)$. These hold for every
 section, not only the flat one, and are used below.
+\end{remark}
+
+\begin{remark}[the flat block as a quadratic order]\label{rem:commutant}
+Completing the square in Lemma~\ref{lem:flat} is instructive. Put $S=F+q+1$;
+then $F^2+2F-(q^2-1)=0$ becomes
+\[
+S^2-2qS=0,\qquad S\in\{0,\,2q\},
+\]
+so $\ZZ[F]$ is the quadratic order $O_q=\ZZ[S]/\bigl(S(S-2q)\bigr)$, a node with
+two branches whose root gap is the eigenvalue gap $2q$. Its conductor in the
+normalisation $\ZZ\times\ZZ$ is $2q$, and over $\ZZ_p$ the two branch lattices
+$M_0,M_{2q}$ (with $S$ acting as $0$ and $2q$) have the periodic resolution
+$\cdots\to O_q\xrightarrow{S-2q}O_q\xrightarrow{S}O_q\to M_0$, giving the
+complete Ext quiver
+\[
+\bigl(\Ext^1_{\mathrm{self}},\Ext^1_{\mathrm{cross}},
+      \Ext^2_{\mathrm{self}},\Ext^2_{\mathrm{cross}}\bigr)
+=\bigl(0,\ \ZZ/p^{v_p(2q)},\ \ZZ/p^{v_p(2q)},\ 0\bigr),
+\]
+the kernel entries vanishing over the torsion-free $\ZZ_p$; the quadratic
+Kuranishi obstruction for $M_0\oplus M_{2q}$ is $(x,y)\mapsto(xy,xy)$, with
+unobstructed cone $xy=0$. At $q=2$, where $v_2(2q)=v_2(4)=2$, this is exactly
+the $S8$ two-character commutant $\ZZ_2[S]/(S^2-4S)$ with $\Ext=\ZZ/4$ and cone
+$xy=0$ studied in the companion 2-adic deformation work; the flat block is its
+odd-$q$ family, and the odd-prime members are predicted to have $\Ext=\ZZ/q$.
+Whether the $S8$ characteristic lattices \emph{are} these branch lattices,
+rather than only sharing their homological invariants, is left open.
 \end{remark}
 
 \section{The first-order law}
@@ -1615,13 +1643,22 @@ $25$ with multiplicity $5$, $125$ with multiplicity $13$, and
 $2028949923625$ with multiplicity $10$.  Their unequal local profiles therefore
 separate graphs that both spectrum and critical group fail to distinguish.
 
-The same signed-cycle Burnside argument works over $\ZZ/9$ because $2$ remains
-a unit.  On the $40$ antipodal pairs, the exact
-$\operatorname{SL}(2,\ZZ/9)$ count is
-$228100045392509153077600971330057241$ section orbits, of which
-$2051277771273019233341050472890368$ have full support.  These counts and the
-$q=3$ chirality statement are exhaustive; only the route by which the $q=5$
-witness was located is sampled.
+The signed-cycle Burnside argument uses only that $2$ is a unit, so it holds
+over \emph{every} odd $\ZZ/p^{n}$ as one formula. There $\operatorname{SL}(2,
+\ZZ/p^{n})$, of order $p^{3n-2}(p^2-1)$, permutes the $(p^{2n}-1)/2$ antipodal
+pairs with a sign; a negative cycle forces the section value to zero and a
+positive cycle is free, so $\lvert\operatorname{Fix}_{\mathrm{all}}(g)\rvert
+=(p^{n})^{c_+(g)}$ and $\lvert\operatorname{Fix}_{\mathrm{full}}(g)\rvert
+=(p^{n}-1)^{c_+(g)}$ when $g$ has no negative cycle and $0$ otherwise, with
+$c_+(g)$ the number of positive cycles. The field counts of
+Lemma-scale interest---$7$ and $2{,}034{,}735$ at $\FF_3,\FF_5$ with full-support
+$2$ and $139{,}904$---are the case $n=1$, and $\ZZ/9$ is $(p,n)=(3,2)$, giving
+$228100045392509153077600971330057241$ section orbits and
+$2051277771273019233341050472890368$ full-support orbits; the next rings
+$\ZZ/25$ and $\ZZ/27$ follow at once. These counts and the $q=3$ chirality
+statement are exhaustive; only the route by which the $q=5$ witness was located
+is sampled. The orbit count bounds the number of characteristic polynomials but
+does not equal it, as the $q=5$ full-support cospectral pair shows.
 
 \begin{thebibliography}{9}
 
