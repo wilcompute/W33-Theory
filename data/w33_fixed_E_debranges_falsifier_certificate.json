@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "scope": "fixed completed-xi de Branges candidate at c=1/log(11) and calibrated quartet falsifier",
+  "candidate": {
+    "Xi": "Xi(z)=xi(1/2+i z)",
+    "scale": "c_11=1/log(11)",
+    "E": "E_11(z)=Xi(z)+i c_11 Xi'(z)",
+    "E_sharp": "E_11#(z)=conj(E_11(conj(z)))",
+    "HB_requirement": "|E_11(z)|>|E_11#(z)| for every Im(z)>0"
+  },
+  "finite_grid_audit": {
+    "x_range": "0 through 50 in steps of 0.5",
+    "y_values": ["0.02", "0.05", "0.1", "0.2", "0.4", "0.6", "1", "2", "3", "5"],
+    "point_count": 1010,
+    "minimum_raw_gap": "6.69099971226893174246343079727e-30",
+    "minimum_normalized_gap": "0.000770841832044152920319676721808",
+    "minimum_normalized_gap_point": {"real": "0.0", "imag": "0.02"},
+    "normalized_12x12_kernel_min_eigenvalue": 3.744319396858667e-06,
+    "verdict": "not falsified on the registered finite grid; this is not a global HB proof"
+  },
+  "controlled_falsifier": {
+    "perturbation": "Xi_delta,gamma(z)=Xi(z)[((z-gamma)^2+delta^2)((z+gamma)^2+delta^2)]",
+    "delta": "0.2",
+    "gamma": "14.0",
+    "off_real_zeros": ["14+0.2i", "14-0.2i", "-14+0.2i", "-14-0.2i"],
+    "witness_point": "14+0.15i",
+    "HB_gap": "-0.000383684818694612137342838229884",
+    "kernel_diagonal": "-0.000203551118281883914564240874461",
+    "verdict": "the same fixed-E construction detects the injected off-line quartet"
+  },
+  "claim_boundary": {
+    "proved": ["the numerical test is sensitive to a controlled off-line quartet", "the fixed norm-11 candidate passes the registered gap and kernel tests"],
+    "not_proved": ["that E_11 is Hermite--Biehler on the entire upper half-plane", "that finite kernel minors imply all kernel minors are positive", "classical RH"],
+    "next_exact_target": "replace the finite grid by a global inequality for the fixed E_11, or produce one explicit upper-half-plane counterexample"
+  },
+  "checks": {
+    "fixed_E_gap_positive_on_1010_point_grid": true,
+    "fixed_E_normalized_gap_positive_on_grid": true,
+    "fixed_E_12x12_kernel_matrix_positive": true,
+    "controlled_off_line_quartet_produces_negative_gap": true,
+    "controlled_off_line_quartet_produces_negative_kernel_diagonal": true,
+    "norm11_scale_fixed_before_testing": true
+  }
+}
