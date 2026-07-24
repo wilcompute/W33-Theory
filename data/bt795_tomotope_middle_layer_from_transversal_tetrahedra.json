@@ -1,0 +1,21 @@
+{
+  "theorem": "BT795 tomotope middle layer from transversal tetrahedra",
+  "counts": {
+    "transversal_carriers": 4,
+    "edge_axis_labels": 12,
+    "face_labels": 16,
+    "middle_incidence_blocks": 48
+  },
+  "formulas": {
+    "edge_axes": "4 carriers * 3 opposite-edge axes = 12",
+    "faces": "4 carriers * 4 triangular faces = 16",
+    "incidence": "4 carriers * 4 faces * 3 incident axes = 48"
+  },
+  "checks": {
+    "each_carrier_has_three_edge_axes": true,
+    "each_carrier_has_four_triangular_faces": true,
+    "each_face_contains_one edge from each opposite-edge axis": true,
+    "middle_layer_matches_local_48_packet": true
+  },
+  "interpretation": "The four common transversals supply the local four carrier tetrahedra; their internal face-axis grammar yields the 12-edge, 16-face, 48-block middle packet."
+}
