@@ -461,8 +461,23 @@ $N_i=\prod_{j\neq i}(S-c_jI)$ and $D_i=\prod_{j\neq i}(c_i-c_j)$, gives
 \ZZ^n/\textstyle\bigoplus_i L_i\;=\;\ZZ^n/\bigcap_i\ker\!\bigl(N_i\bmod D_i\bigr),
 \]
 now supported on the several products $D_i$ rather than a single conductor; a
-closed form in the $D_i$ is open. This is the setting for a substrate operator
-with a richer integer spectrum.
+closed form in the $D_i$ is open.
+
+The substrate supplies such an operator. The signed-turn operator
+$K=R^{T}(2T-B)R$ on the $240$ integral edge chains of $W(3,3)$ satisfies
+$(K+6I)(K-2I)(K-4I)(K-10I)=0$ exactly over $\ZZ$, with eigenspace dimensions
+$81,120,24,15$. Its four saturated eigenlattices glue to
+\[
+\ZZ^{240}\big/\textstyle\bigoplus_i L_i\;\cong\;
+(\ZZ/32)^{14}\oplus(\ZZ/8)\oplus(\ZZ/4)^{66}\oplus(\ZZ/2)^{23}
+\oplus(\ZZ/3)^{10}\oplus(\ZZ/5)^{23}.
+\]
+Two summands are visible on the two-branch restrictions computed independently
+elsewhere: the cycle lattice, where $S=(K+6I)/2$ satisfies $S(S-4)=0$ and the
+off-diagonal block has Smith type $(1^{66},12)$, contributes the $(\ZZ/4)^{66}$;
+and the cut lattice, where $S=K-4I$ satisfies $S(S-6)=0$, contributes the
+$(\ZZ/3)^{10}$, whose exponent is $\Phi_4(3)=10$. So the two-branch restrictions
+are sub-objects of a single four-branch gluing.
 
 \section{The first-order law}
 
