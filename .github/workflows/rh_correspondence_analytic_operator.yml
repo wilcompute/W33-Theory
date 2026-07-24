@@ -1,0 +1,31 @@
+name: RH correspondence analytic operator verification
+
+on:
+  pull_request:
+    paths:
+      - 'analysis/w33_rh_correspondence_analytic_operator.py'
+      - 'data/w33_rh_correspondence_analytic_operator_certificate.json'
+      - 'tests/test_rh_correspondence_analytic_operator.py'
+      - 'docs/RH_CASEY_W33_CORRESPONDENCE_ANALYTIC_OPERATOR_SYNTHESIS.md'
+      - '.github/workflows/rh_correspondence_analytic_operator.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check numpy mpmath pytest
+      - name: Regenerate certificate
+        run: python analysis/w33_rh_correspondence_analytic_operator.py
+      - name: Focused regression
+        run: PYTHONPATH=. python -m pytest -q tests/test_rh_correspondence_analytic_operator.py
+      - name: Ensure certificate is committed exactly
+        run: git diff --exit-code -- data/w33_rh_correspondence_analytic_operator_certificate.json
