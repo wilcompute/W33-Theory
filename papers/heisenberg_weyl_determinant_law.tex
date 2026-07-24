@@ -381,6 +381,35 @@ Whether the $S8$ characteristic lattices \emph{are} these branch lattices,
 rather than only sharing their homological invariants, is left open.
 \end{remark}
 
+\begin{remark}[the real gluing over {$\ZZ[\zeta_q]$}, and why $q=2$ is clean]
+\label{rem:real-gluing}
+The Ext quiver of Remark~\ref{rem:commutant} is computed over the
+\emph{abstract} order $O_q$ base-changed to $\ZZ_p$, where it is a rank-one
+$q$-adic invariant $\ZZ/q$. The flat block, however, lives over the full
+cyclotomic ring $\ZZ[\zeta_q]$ in which the section takes its values, and there
+the two \emph{saturated} eigenlattices $L_0=\ker(F+(q+1)I)$ and
+$L_{2q}=\ker(F-(q-1)I)$ glue with a strictly larger torsion. Writing the
+$q\times q$ operator over $\ZZ[\zeta_q]$ as an integer operator of rank
+$q(q-1)$ and taking the Smith normal form of the cokernel of
+$L_0\oplus L_{2q}\hookrightarrow\ZZ[\zeta_q]^{\,q}$, the exact answer at
+$q=3,5,7$ is
+\[
+\mathrm{gluing}(q)\;\cong\;(\ZZ/2q)^{\,q-1}\ \oplus\ (\ZZ/q)^{\,(q^2-1)/2-(q-1)},
+\]
+i.e.\ $[6,6,3,3]$, $[10^4,5^8]$ and $(\ZZ/14)^6\oplus(\ZZ/7)^{18}$. Its
+$q$-primary part is $(\ZZ/q)^{(q^2-1)/2}$: the exponent is exactly the
+antipodal-pair count $(p^{2n}-1)/2$ of the signed-cycle Burnside law
+at $n=1$, and its $2$-primary part is
+$(\ZZ/2)^{\,q-1}$, the exponent being the ramification index of
+$(q)=(\lambda)^{q-1}$ in $\ZZ[\zeta_q]$, $\lambda=1-\zeta$. The abstract
+$\ZZ/q$ is the rank-one $q$-adic image of this. The single member where the
+two coincide is $q=2$: there $\ZZ[\zeta_2]=\ZZ$ is unramified ($e=1$,
+$\lambda=2$), the antipodal-pair count is $1$, and the gluing is the single
+clean $\ZZ/4$ of the $S8$ deformation --- so the $2$-adic case is special
+precisely as the only unramified fibre of the family. A proof of the displayed
+form for all odd $q$ by $\lambda$-adic length is open.
+\end{remark}
+
 \section{The first-order law}
 
 \begin{lemma}[pairing]\label{lem:pair}
