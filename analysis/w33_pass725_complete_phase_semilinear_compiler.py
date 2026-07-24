@@ -108,16 +108,13 @@ def payload():
     for x,p in sorted(grid.items()):atlas_hash.update(repr(((Q,s1,s2)+x,p)).encode());global_phase_cells[phase_key(p)]+=1;all_cell_records[(Q,s1,s2)+x]=p
     maximal=maximal_boxes(grid);cover=irredundant_greedy_cover(grid,maximal);max_total+=len(maximal);cover_total+=len(cover)
     for b in cover:global_phase_boxes[phase_key(b['phase'])]+=1
-    # Exact reconstruction audit.
     reconstructed={x:set() for x in grid}
     for b in cover:
      for x in b['points']:reconstructed[x].add(b['phase'])
     exact=all(reconstructed[x]=={grid[x]} for x in grid)
     chambers.append({'Q':Q,'s1':s1,'s2':s2,'phase_count':len(set(grid.values())),'maximal_monochromatic_boxes':len(maximal),'irredundant_cover_boxes':len(cover),'exact_reconstruction':exact,
       'boxes':[{'phase':[base.FULL[n] for n in b['phase']],'short_phase':list(b['phase']),'bounds':{AXIS_NAMES[j]:list(b['bounds'][j]) for j in range(4)},'cells':len(b['points'])} for b in cover]})
- # Minimal integer t2 credit compiler over the complete atlas. Credit subtracts directly from tagged trace2 cost.
  repair=collections.Counter();repair_examples={};max_credit=8
- # Reuse the batched extended-c2 grids rather than rerunning the dynamic program per credit.
  for Q in range(7,13):
   for s1 in range(5,8):
    for s2 in range(3,6):
@@ -131,7 +128,6 @@ def payload():
        if c2-z>=-2 and extended[(c1,c2-z,o,k)]==PAIR:credit=z;break
      key='unrepairable_within8' if credit is None else str(credit);repair[key]+=1
      if key not in repair_examples:repair_examples[key]={'cell':{'Q':Q,'s1':s1,'s2':s2,'c1':c1,'c2':c2,'o':o,'kappa':k},'original_phase':[base.FULL[n] for n in phase]}
- # Verify controller lookup from the DNF boxes.
  lookup_ok=True;covered=0
  for chamber in chambers:
   Q,s1,s2=chamber['Q'],chamber['s1'],chamber['s2']
@@ -167,14 +163,13 @@ def payload():
   'atlas_hash_locked':True,
   'certificate_hash_locked':True,
  }
- # Direct nominal audit independent of example ordering.
  nomext,_,_=batch_grid(10,6,4);nominal_credit=next(z for z in range(9) if 7-z>=-2 and nomext[(5,7-z,0,1)]==PAIR)
  checks['nominal_kappa1_exact_minimum_credit2']=nominal_credit==2
  checks={k:bool(v) for k,v in checks.items()}
  raw={'atlas':atlas_hash.hexdigest(),'phase_table':phase_table,'compressed_chambers_sha256':compressed_sha,'repair':dict(repair)};digest=hashlib.sha256(json.dumps(raw,sort_keys=True,separators=(',',':')).encode()).hexdigest()
  return {'schema':'w33.pass725.complete_phase_semilinear_compiler.v1','status':'PASS' if all(checks.values()) else 'FAIL',
   'complete_phase_classification':{'integer_domain':{'c1':[4,7],'c2':[6,9],'Q':[7,12],'s1':[5,7],'s2':[3,5],'outcome_overhead':[0,2],'calibration_penalty':[0,2]},'cells':7776,'distinct_phases':22,'phase_table':phase_table,'science_chambers':54,'maximal_monochromatic_boxes':max_total,'irredundant_DNF_boxes':cover_total,'atlas_sha256':atlas_hash.hexdigest()},
-  'compiled_semilinear_controller':{'representation':'For each fixed discrete science chamber (Q,s1,s2), each root phase is represented as a union of closed integer orthotopes in (c1,c2,o,kappa). The bound clauses form an exact finite DNF classifier.','chamber_summaries':chamber_summaries,'full_DNF_encoding':'gzip+base64 canonical JSON','full_DNF_compressed_sha256':compressed_sha,'full_DNF_base64':compressed_b64,'uncompressed_bytes':len(chambers_canonical),'compressed_bytes':len(compressed),'lookup_rule':'decode the chamber array, select the fixed (Q,s1,s2) chamber, then select the unique phase whose one or more box clauses contain the four cost coordinates; overlaps occur only between boxes carrying the same phase'},
+  'compiled_semilinear_controller':{'representation':'For each fixed discrete science chamber (Q,s1,s2), each root phase is represented as a union of closed integer orthotopes in (c1,c2,o,kappa). The bound clauses form an exact finite DNF classifier.','chamber_summaries':chamber_summaries,'full_DNF_encoding':'regenerated canonical JSON; gzip hash locked','full_DNF_compressed_sha256':compressed_sha,'uncompressed_bytes':len(chambers_canonical),'compressed_bytes':len(compressed),'regeneration':'run this verifier to rebuild the exact chamber DNF from the dynamic program','lookup_rule':'decode the chamber array, select the fixed (Q,s1,s2) chamber, then select the unique phase whose one or more box clauses contain the four cost coordinates; overlaps occur only between boxes carrying the same phase'},
   'automatic_calibration_credit':{'action':'subtract the smallest nonnegative integer credit from the covariance-tagged trace2 cost until the unique tagged-pair phase is restored','maximum_credit_searched':max_credit,'distribution':dict(sorted(repair.items(),key=lambda z:(z[0].startswith('u'),int(z[0]) if z[0].isdigit() else 99))),'examples':repair_examples,'nominal_kappa1_minimum_credit':nominal_credit},
   'checks':checks,'certificate_sha256':digest,
   'theorem':'All twenty-two root phases of the declared seven-parameter controller atlas now have exact symbolic finite-domain certificates. The three science coordinates define fifty-four discrete chambers; inside each chamber the four cost coordinates are classified by an irredundant union of integer orthotopes. The resulting finite DNF reconstructs every one of the 7,776 dynamic-programming cells exactly and preserves the 1,308 unique tagged-pair cells. The same compiler computes the smallest integer covariance-calibration credit needed to restore the desired pair policy; at the nominal kappa=1 point the exact minimum is two blocks.',
