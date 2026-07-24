@@ -1,0 +1,49 @@
+name: Passes 671-675 release verification
+
+on:
+  pull_request:
+    paths:
+      - 'analysis/w33_pass671_*.py'
+      - 'analysis/w33_pass672_*.py'
+      - 'analysis/w33_pass673_*.py'
+      - 'analysis/w33_pass674_*.py'
+      - 'analysis/w33_pass675_*.py'
+      - 'analysis/BT671_675_five_frontier_release.md'
+      - 'data/w33_pass671_*.json'
+      - 'data/w33_pass672_*.json'
+      - 'data/w33_pass673_*.json'
+      - 'data/w33_pass674_*.json'
+      - 'data/w33_pass675_*.json'
+      - 'tests/test_w33_pass671_675.py'
+      - '.github/workflows/pass671_675_release.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check numpy sympy pytest
+      - name: Generate deterministic certificates
+        run: |
+          python analysis/w33_pass671_integral_h1_psp_rigidity.py
+          python analysis/w33_pass672_compiled_conductor_gauge_register.py
+          python analysis/w33_pass673_noisy_flat_probe_hardware_falsifier.py
+          python analysis/w33_pass674_per_shot_propensity_martingale.py
+          python analysis/w33_pass675_multidimensional_controller_atlas.py
+      - name: Verify ledgers and focused regression
+        run: |
+          python analysis/w33_pass671_integral_h1_psp_rigidity.py --check
+          python analysis/w33_pass672_compiled_conductor_gauge_register.py --check
+          python analysis/w33_pass673_noisy_flat_probe_hardware_falsifier.py --check
+          python analysis/w33_pass674_per_shot_propensity_martingale.py --check
+          python analysis/w33_pass675_multidimensional_controller_atlas.py --check
+          python -m pytest -q tests/test_w33_pass671_675.py
+      - name: Ensure generated ledgers are committed exactly
+        run: git diff --exit-code -- data/w33_pass671_integral_h1_psp_rigidity.json data/w33_pass672_compiled_conductor_gauge_register.json data/w33_pass673_noisy_flat_probe_hardware_falsifier.json data/w33_pass674_per_shot_propensity_martingale.json data/w33_pass675_multidimensional_controller_atlas.json
