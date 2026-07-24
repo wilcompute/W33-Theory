@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "artifacts": {
+    "w33_motivic_24_15_packet_certificate.json": {"status": "PASS", "check_count": 9},
+    "w33_all_prime_frobenius_census_certificate.json": {"status": "PASS", "check_count": 8},
+    "w33_renormalized_boundary_formula_certificate.json": {"status": "PASS", "check_count": 8},
+    "w33_fixed_E_debranges_falsifier_certificate.json": {"status": "PASS", "check_count": 6},
+    "w33_preregistered_higher_moment_search_certificate.json": {"status": "PASS", "check_count": 11},
+    "frobenius_census_replay": {"status": "PASS", "row_count": 1229, "signature_primes": [11]}
+  }
+}
