@@ -49,5 +49,17 @@ jobs:
           python analysis/w33_pass644_unbounded_matrix_eprocess.py --check
           python analysis/w33_pass645_minimax_controller.py --check
           python -m pytest -q tests/test_w33_pass641_645.py
+      - name: Archive runner-generated ledgers
+        uses: actions/upload-artifact@v4
+        with:
+          name: pass641-645-generated-ledgers
+          path: |
+            data/w33_pass641_higher_2adic_commutant.json
+            data/w33_pass642_conductor_torsion_map.json
+            data/w33_pass643_multiplexed_guard_fibre.json
+            data/w33_pass644_unbounded_matrix_eprocess.json
+            data/w33_pass645_minimax_controller.json
+          if-no-files-found: error
+          retention-days: 1
       - name: Ensure generated ledgers are committed exactly
         run: git diff --exit-code -- data/w33_pass641_higher_2adic_commutant.json data/w33_pass642_conductor_torsion_map.json data/w33_pass643_multiplexed_guard_fibre.json data/w33_pass644_unbounded_matrix_eprocess.json data/w33_pass645_minimax_controller.json
