@@ -213,7 +213,7 @@ def representation_transform(name,A):
  raise ValueError(name)
 
 def find_inner_conjugacy(RA,RB,AA,AB):
- for name in ('direct','transpose','tual'):
+ for name in ('direct','transpose','dual'):
   U=representation_transform(name,AA);V=representation_transform(name,AB)
   basis=intertwiner_basis([RA,RB],[U,V])
   if not basis:continue
@@ -247,5 +247,5 @@ def main():
  if a.check:
   if not a.output.exists() or a.output.read_text()!=s:raise SystemExit('Pass 871 certificate drift')
  else:a.output.parent.mkdir(parents=True,exist_ok=True);a.output.write_text(s)
- print(json.dumps({'status':p['status'],'checks':sum(p['checks'].values()),'total':len(p['checks']),'repository_words':p['generator_conversion']['repository_inner_words'],'outer_group_order':p['generator_conversion']['generated_outer_group_order']}));return 0 if p['status']=='PASS' else 1
+ print(json.dumps({'status':p['status'],'checks':sum(p['checks'].values()),'total':len(p['checks']),'words':p['generator_conversion']['inner_ATLAS_words'],'d':p['generator_conversion']['outer_ATLAS_pair']['d_9A_word_in_repository_generators']}));return 0 if p['status']=='PASS' else 1
 if __name__=='__main__':raise SystemExit(main())
