@@ -1,0 +1,78 @@
+name: Passes 856-860 release verification
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass856_*.py'
+      - 'analysis/w33_pass857_*.py'
+      - 'analysis/w33_pass858_*.py'
+      - 'analysis/w33_pass859_*.py'
+      - 'analysis/w33_pass860_*.py'
+      - 'analysis/BT856_860_h27_lean_discriminant_conjugacy_abstract.md'
+      - 'data/w33_pass856_*.json'
+      - 'data/w33_pass857_*.json'
+      - 'data/w33_pass858_*.json'
+      - 'data/w33_pass859_*.json'
+      - 'data/w33_pass860_*.json'
+      - 'tests/test_w33_pass856_860.py'
+      - '.github/workflows/pass856_860_release.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass856_*.py'
+      - 'analysis/w33_pass857_*.py'
+      - 'analysis/w33_pass858_*.py'
+      - 'analysis/w33_pass859_*.py'
+      - 'analysis/w33_pass860_*.py'
+      - 'analysis/BT856_860_h27_lean_discriminant_conjugacy_abstract.md'
+      - 'data/w33_pass856_*.json'
+      - 'data/w33_pass857_*.json'
+      - 'data/w33_pass858_*.json'
+      - 'data/w33_pass859_*.json'
+      - 'data/w33_pass860_*.json'
+      - 'tests/test_w33_pass856_860.py'
+      - '.github/workflows/pass856_860_release.yml'
+permissions:
+  contents: read
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - pass: '856'
+            script: analysis/w33_pass856_h27_middle_layer_identification.py
+            ledger: data/w33_pass856_h27_middle_layer_identification.json
+            test: test_pass856_h27_middle_layer
+          - pass: '857'
+            script: analysis/w33_pass857_lean_arithmetic_extension.py
+            ledger: data/w33_pass857_lean_arithmetic_extension.json
+            test: test_pass857_lean_blueprint
+          - pass: '858'
+            script: analysis/w33_pass858_discriminant_corollary.py
+            ledger: data/w33_pass858_discriminant_corollary.json
+            test: test_pass858_discriminant_corollary
+          - pass: '859'
+            script: analysis/w33_pass859_standard_generator_conjugacy_protocol.py
+            ledger: data/w33_pass859_standard_generator_conjugacy_protocol.json
+            test: test_pass859_conjugacy_protocol
+          - pass: '860'
+            script: analysis/w33_pass860_arxiv_abstract.py
+            ledger: data/w33_pass860_arxiv_abstract.json
+            test: test_pass860_arxiv_abstract
+    name: Pass ${{ matrix.pass }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check numpy scipy pytest
+      - name: Regenerate and verify certificate
+        run: |
+          python "${{ matrix.script }}"
+          python "${{ matrix.script }}" --check
+      - name: Focused regression
+        run: python -m pytest -q "tests/test_w33_pass856_860.py::${{ matrix.test }}"
+      - name: Ensure ledger is committed exactly
+        run: git diff --exit-code -- "${{ matrix.ledger }}"
