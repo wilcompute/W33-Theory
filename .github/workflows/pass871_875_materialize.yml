@@ -1,0 +1,53 @@
+name: Passes 871-875 atomic materialization
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass871_*.py'
+      - 'analysis/w33_pass872_*.py'
+      - 'analysis/w33_pass873_*.py'
+      - 'analysis/w33_pass874_*.py'
+      - 'analysis/w33_pass875_*.py'
+      - 'analysis/BT871_875_five_frontier_release.md'
+      - 'tests/test_w33_pass871_875.py'
+      - '.github/workflows/pass871_875_materialize.yml'
+permissions:
+  contents: write
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check numpy scipy sympy pytest
+      - name: Regenerate five exact certificates and hardware
+        run: |
+          python analysis/w33_pass871_atlas_standard_conjugacy.py
+          python analysis/w33_pass872_heisenberg_loewy_basis.py
+          python analysis/w33_pass873_scalar_schur_factor_set.py
+          python analysis/w33_pass874_adaptive_audit_regret_game.py
+          python analysis/w33_pass875_hardware_phase_dispatcher.py
+      - name: Verify deterministic drift locks
+        run: |
+          python analysis/w33_pass871_atlas_standard_conjugacy.py --check
+          python analysis/w33_pass872_heisenberg_loewy_basis.py --check
+          python analysis/w33_pass873_scalar_schur_factor_set.py --check
+          python analysis/w33_pass874_adaptive_audit_regret_game.py --check
+          python analysis/w33_pass875_hardware_phase_dispatcher.py --check
+      - name: Regression and compilation
+        run: |
+          python -m compileall -q analysis/w33_pass87*.py
+          python -m pytest -q tests/test_w33_pass871_875.py
+      - name: Commit exact generated outputs to release branch
+        shell: bash
+        run: |
+          git config user.name 'w33-release[bot]'
+          git config user.email 'w33-release[bot]@users.noreply.github.com'
+          git add data/w33_pass871_*.json data/w33_pass872_*.json data/w33_pass873_*.json data/w33_pass874_*.json data/w33_pass875_*.json hardware/w33_phase_dispatcher.h hardware/w33_phase_dispatcher.sv hardware/w33_phase_rom.mem
+          git diff --cached --quiet || git commit -m 'Passes 871-875: commit verified ledgers and hardware'
+          git push origin HEAD:${{ github.head_ref }}
