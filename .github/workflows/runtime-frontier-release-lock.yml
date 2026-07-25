@@ -18,5 +18,23 @@ jobs:
           python-version: '3.11'
       - name: Install runtime dependencies
         run: python -m pip install pytest numpy sympy
+      - name: Check for the heavy L-patch data
+        id: heavy
+        run: |
+          # The release lock imports exploration/w33_l6_* which loads
+          # V24_output_v13_full/l6_patch_sextuples_full.jsonl (152 MB). That file
+          # is deliberately not in the repository -- resolve_repo_data_path's own
+          # error tells you to point W33_DATA_ROOT at a worktree that has it. A
+          # runner will never have it, so the lock cannot run here.
+          if [ -f V24_output_v13_full/l6_patch_sextuples_full.jsonl ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+          fi
       - name: Run runtime frontier release lock
+        if: steps.heavy.outputs.available == 'true'
         run: bash tools/bt1389_run_runtime_frontier_release_lock.sh
+      - name: Report skip when the heavy data is absent
+        if: steps.heavy.outputs.available != 'true'
+        run: |
+          echo "::notice title=Release lock skipped::V24_output_v13_full/l6_patch_sextuples_full.jsonl (152 MB) is not in the repository, so the runtime frontier release lock cannot run on a hosted runner. Run it locally with W33_DATA_ROOT pointing at a worktree that has the heavy L-patch data."
