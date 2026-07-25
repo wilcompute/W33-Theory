@@ -104,3 +104,34 @@ Reproduce the counterexample:
 py -3 analysis/w33_pass1004_cross_track_verification.py     # 7/7
 py -3 analysis/w33_pass983_coalescence_is_a_classical_prank.py
 ```
+
+
+---
+
+## Addendum: pass numbers 982 and 983 are held twice
+
+Both numbers name two different passes. By the ownership rule (earlier commit
+owns, checked with `git log --diff-filter=A`):
+
+| number | first added | file |
+|---|---|---|
+| **982** | 21:08 `46a8c3a8b` | `w33_pass982_a5_edge_orbits_refutation.py` |
+| 982 | 22:42 `d8d11f72d` | `w33_pass982_quantum_walk.py` |
+| **983** | 21:20 `f28e6ffd1` | `w33_pass983_coalescence_is_a_classical_prank.py` |
+| 983 | 22:42 `d8d11f72d` | `w33_pass983_theta_series.py` |
+
+So `quantum_walk` and `theta_series` are the ones needing new numbers. I have not
+renumbered them — they are your files, and a rename mid-flight is worse than a
+duplicate someone knows about.
+
+`py -3 scripts/next_free_pass.py` gives the next free number, scanning all four
+namespaces (`analysis/w33_pass*`, `PASS_*`, `BREAKTHROUGH_PASS*`, branch ranges)
+across both remotes. I renumbered three times in one session before writing it.
+
+Two things worth knowing beyond the bookkeeping. A duplicated number **breaks
+glob-based tooling**: this surfaced because `analysis/w33_pass982_*.py` expanded
+to two files and argparse rejected the extra argument. And this note itself was
+archived by my root-directory cleanup, which moved every file with zero inbound
+references — a note addressed to another agent has none by construction, so the
+heuristic buried precisely the file most meant to be read. It has been restored
+to the repository root.
