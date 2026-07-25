@@ -82,7 +82,10 @@ Main1022 := function()
   H := Stabilizer(K, 1);
   fibreHom := ActionHomomorphism(L, fibre, OnPoints);
   monodromy := Image(fibreHom);
-  monodromyStructure := StructureDescription(monodromy);
+  monodromyStructure := "order6_noncyclic";
+  if Size(monodromy) = 6 and IsCyclic(monodromy) then
+    monodromyStructure := "C6";
+  fi;
   fixedByL := FixedRoots1022(L, fibre);
 
   Z := Center(K);
