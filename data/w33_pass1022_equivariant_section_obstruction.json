@@ -1,0 +1,49 @@
+{
+  "schema": "w33.pass1022.equivariant_section_obstruction.gap.v1",
+  "status": "PASS",
+  "headline": "The principal six-phase E8-root bundle over the 40 W(3,3) points has no Sp(4,3)-equivariant section. The point stabiliser acts regularly as C6 on the fibre, giving 1 -> H_root -> L_point -> C6 -> 1.",
+  "exact_sequence": {
+    "root_stabiliser_order": 216,
+    "point_stabiliser_order": 1296,
+    "quotient_order": 6,
+    "quotient_structure": "C6",
+    "sequence": "1 -> H_root(216) -> L_point(1296) -> C6 -> 1"
+  },
+  "section_obstruction": {
+    "full_group_admits_section": false,
+    "fixed_phases_under_point_stabiliser": 0,
+    "central_kernel": "Z(Sp(4,3)) = C2 acts trivially on the base and antipodally upstairs",
+    "subgroup_criterion": "J admits a J-equivariant section iff every J-orbit representative fibre has a stabiliser fixing at least one root in that fibre"
+  },
+  "witnesses": {
+    "center_C2_admits_section": false,
+    "Sylow5_admits_section": true,
+    "Sylow5_base_orbit_lengths": [5, 5, 5, 5, 5, 5, 5, 5]
+  },
+  "verification": {
+    "gap_workflow_run": 30177569747,
+    "gap_script_step": "success",
+    "note": "The GAP script completed successfully and asserted all eighteen group-theoretic checks. The first CI run failed only in the downstream Python validator; the generated theorem checks themselves passed."
+  },
+  "check_count": 18,
+  "checks": {
+    "root_stabiliser_order_216": true,
+    "point_stabiliser_order_1296": true,
+    "local_index_is_six": true,
+    "root_stabiliser_is_normal_in_point_stabiliser": true,
+    "phase_action_has_order_six": true,
+    "phase_action_is_cyclic": true,
+    "phase_action_is_transitive": true,
+    "phase_action_is_regular": true,
+    "phase_kernel_is_root_stabiliser": true,
+    "point_stabiliser_has_no_fixed_phase": true,
+    "no_full_equivariant_section": true,
+    "base_kernel_is_central_involution": true,
+    "central_involution_is_free_upstairs": true,
+    "center_subgroup_is_obstructed": true,
+    "sylow5_has_order_five": true,
+    "sylow5_is_semiregular_on_base": true,
+    "sylow5_admits_section": true,
+    "unit_group_centralises_K": true
+  }
+}
