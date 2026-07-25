@@ -1,4 +1,5 @@
 # Pass 1022: the principal Z6 bundle has no Sp(4,3)-equivariant section.
+# CI verification branch: this comment intentionally triggers the GAP PR workflow.
 #
 # Pass 1021 proved the deterministic fibration
 #
@@ -67,9 +68,6 @@ Main1022 := function()
         Z, sylow5, sylow5Orbits, sylow5Semiregular,
         checks, names, stream, name;
 
-  ##########################################################################
-  # 1. Rebuild the deterministic Pass-1021 total space and six-fibre system.
-  ##########################################################################
   roots := [];
   for i in [1..8] do
     for j in [i+1..8] do
@@ -124,18 +122,12 @@ Main1022 := function()
   hom40 := ActionHomomorphism(K, fibres, OnSets);
   baseKernel := Kernel(hom40);
 
-  ##########################################################################
-  # 2. Local monodromy over one base point.
-  ##########################################################################
   L := Stabilizer(K, fibre, OnSets);
   H := Stabilizer(K, 1);
   fibreHom := ActionHomomorphism(L, fibre, OnPoints);
   monodromy := Image(fibreHom);
   fixedByL := FixedRoots1022(L, fibre);
 
-  ##########################################################################
-  # 3. Global subgroup criterion and positive/negative witnesses.
-  ##########################################################################
   Z := Center(K);
   sylow5 := SylowSubgroup(K, 5);
   sylow5Orbits := Orbits(sylow5, fibres, OnSets);
@@ -180,9 +172,6 @@ Main1022 := function()
     String(SortedList(List(sylow5Orbits, Length))), "\n"));
   CloseStream(stream);
 
-  ##########################################################################
-  # 4. Machine-readable certificate.
-  ##########################################################################
   stream := OutputTextFile(OUT1022, false);
   SetPrintFormattingStatus(stream, false);
   WriteAll(stream, "{\n");
