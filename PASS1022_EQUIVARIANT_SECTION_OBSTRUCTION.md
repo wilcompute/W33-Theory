@@ -3,10 +3,12 @@
 **Certificate:** `analysis/w33_pass1022_equivariant_section_obstruction.g` →
 `data/w33_pass1022_equivariant_section_obstruction.json`
 
-**CI evidence:** the GAP execution step completed successfully in workflow run
-`30177569747`; the script's internal `Assert1022` firewall certified all 18
-checks. The first run's job-level failure was downstream, in the separately
-maintained Python validator, not in the GAP theorem step.
+**CI evidence:** diagnostic workflow run `30178232660`, artifact `8624845703`,
+returned `PASS` with all \(25/25\) GAP checks true. The two earlier red runs were
+not mathematical failures: `StructureDescription` attempted to use the optional
+Small Groups identification package absent from the minimal Ubuntu GAP install.
+The final certificate replaces that presentation lookup by the sufficient exact
+test `Size(monodromy)=6 and IsCyclic(monodromy)`.
 
 ---
 
