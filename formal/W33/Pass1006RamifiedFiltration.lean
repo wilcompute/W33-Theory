@@ -43,11 +43,11 @@ theorem kappa_succ (a : Multiset ℕ) (j : ℕ) :
         Multiset.countP_cons] at *
       by_cases h : j < x
       · rw [min_eq_right h, min_eq_right (Nat.le_of_lt_succ (Nat.lt_succ_of_lt h))]
-        simp only [h, if_true, decide_true]
+        simp only [h, if_true]
         omega
       · have hx : x ≤ j := by omega
         rw [min_eq_left (Nat.le_succ_of_le hx), min_eq_left hx]
-        simp only [h, if_false, decide_false]
+        simp only [h, if_false]
         omega
 
 /-- The subtractive form used downstream: `Δ (j+1) = #{i | aᵢ > j}`. -/
@@ -67,15 +67,14 @@ theorem countP_eq_add (a : Multiset ℕ) (k : ℕ) :
       simp only [Multiset.countP_cons] at *
       by_cases h : x = k
       · subst h
-        simp only [le_refl, if_true, decide_true, lt_irrefl, if_false,
-          decide_false]
+        simp only [le_refl, if_true, lt_irrefl, if_false]
         omega
       · by_cases h2 : k ≤ x
         · have h3 : k < x := lt_of_le_of_ne h2 (Ne.symm h)
-          simp only [h, h2, h3, if_true, if_false, decide_true, decide_false]
+          simp only [h, h2, h3, if_true, if_false]
           omega
         · have h3 : ¬ k < x := by omega
-          simp only [h, h2, h3, if_false, decide_false]
+          simp only [h, h2, h3, if_false]
           omega
 
 /-- The multiplicity form: `#{i | aᵢ = k} = #{i | aᵢ ≥ k} - #{i | aᵢ > k}`. -/

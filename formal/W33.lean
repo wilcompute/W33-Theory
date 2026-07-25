@@ -34,3 +34,10 @@ import W33.Pass575CyclotomicDVRKernel
 import W33.Pass581CyclotomicCompletion
 import W33.Pass586CyclotomicLocalizedDVR
 import W33.Pass591CyclotomicDedekindDVR
+import W33.Pass806TwoBranchGluing
+-- W33.Pass828CoalescenceArithmetic is deliberately NOT imported: it does not
+-- compile.  Line 91 asks for `Decidable ¬∃ k, gluing_order = k ^ 2`, which Lean
+-- cannot synthesise (unbounded existential over ℕ).  Left out rather than
+-- patched over, so `lake build` stays honest; see Pass 1020's notes.
+import W33.Pass1006RamifiedFiltration
+import W33.Pass1018PencilRigidity
