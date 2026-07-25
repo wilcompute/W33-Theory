@@ -1,0 +1,109 @@
+name: Passes 1023-1027 Obstruction Suite
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'analysis/w33_e8_c6_bundle_common.g'
+      - 'analysis/w33_pass1023_c6_factor_obstruction.g'
+      - 'analysis/w33_pass1024_subgroup_section_phase_diagram.g'
+      - 'analysis/w33_pass1025_explicit_c6_groupoid_cocycle.g'
+      - 'analysis/w33_pass1026_selector_c6_bridge_diagnostic.g'
+      - 'analysis/w33_pass1026_selector_obstruction_crosswalk.py'
+      - 'analysis/w33_pass1027_photonic_c6_holonomy_falsifier.py'
+      - '.github/workflows/pass1023_1027_obstruction_suite.yml'
+  push:
+    branches: [ master ]
+    paths:
+      - 'analysis/w33_e8_c6_bundle_common.g'
+      - 'analysis/w33_pass1023_c6_factor_obstruction.g'
+      - 'analysis/w33_pass1024_subgroup_section_phase_diagram.g'
+      - 'analysis/w33_pass1025_explicit_c6_groupoid_cocycle.g'
+      - 'analysis/w33_pass1026_selector_c6_bridge_diagnostic.g'
+      - 'analysis/w33_pass1026_selector_obstruction_crosswalk.py'
+      - 'analysis/w33_pass1027_photonic_c6_holonomy_falsifier.py'
+      - '.github/workflows/pass1023_1027_obstruction_suite.yml'
+
+jobs:
+  factor-cocycle-selector:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install GAP
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends gap
+          gap --version
+      - name: Run Pass 1023 fail closed
+        env:
+          W33_REPO: ${{ github.workspace }}
+        run: |
+          set -euo pipefail
+          rm -f data/w33_pass1023_c6_factor_obstruction.json
+          gap -q -b --nointeract analysis/w33_pass1023_c6_factor_obstruction.g
+          test -s data/w33_pass1023_c6_factor_obstruction.json
+          python -m json.tool data/w33_pass1023_c6_factor_obstruction.json >/dev/null
+      - name: Run Pass 1025 fail closed
+        env:
+          W33_REPO: ${{ github.workspace }}
+        run: |
+          set -euo pipefail
+          rm -f data/w33_pass1025_explicit_c6_groupoid_cocycle.json
+          gap -q -b --nointeract analysis/w33_pass1025_explicit_c6_groupoid_cocycle.g
+          test -s data/w33_pass1025_explicit_c6_groupoid_cocycle.json
+          python -m json.tool data/w33_pass1025_explicit_c6_groupoid_cocycle.json >/dev/null
+      - name: Run Pass 1026 diagnostic fail closed
+        env:
+          W33_REPO: ${{ github.workspace }}
+        run: |
+          set -euo pipefail
+          rm -f data/w33_pass1026_selector_c6_bridge_diagnostic.json
+          gap -q -b --nointeract analysis/w33_pass1026_selector_c6_bridge_diagnostic.g
+          test -s data/w33_pass1026_selector_c6_bridge_diagnostic.json
+          python -m json.tool data/w33_pass1026_selector_c6_bridge_diagnostic.json >/dev/null
+          cat data/w33_pass1026_selector_c6_bridge_diagnostic.json
+      - name: Upload core certificates
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pass1023-1025-1026-certificates
+          path: |
+            data/w33_pass1023_c6_factor_obstruction.json
+            data/w33_pass1025_explicit_c6_groupoid_cocycle.json
+            data/w33_pass1026_selector_c6_bridge_diagnostic.json
+          if-no-files-found: error
+
+  subgroup-phase-diagram:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install GAP
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends gap
+          gap --version
+      - name: Run Pass 1024 exact search fail closed
+        env:
+          W33_REPO: ${{ github.workspace }}
+        run: |
+          set -euo pipefail
+          rm -f data/w33_pass1024_subgroup_section_phase_diagram.json
+          gap -q -b --nointeract analysis/w33_pass1024_subgroup_section_phase_diagram.g
+          test -s data/w33_pass1024_subgroup_section_phase_diagram.json
+          python -m json.tool data/w33_pass1024_subgroup_section_phase_diagram.json >/dev/null
+          cat data/w33_pass1024_subgroup_section_phase_diagram.json
+      - name: Upload subgroup certificate
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pass1024-subgroup-phase-diagram
+          path: data/w33_pass1024_subgroup_section_phase_diagram.json
+          if-no-files-found: error
