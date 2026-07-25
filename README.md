@@ -295,6 +295,21 @@ tectonic -X compile w33_paper.tex --outdir <dir>
 
 ---
 
+## The recovery packet
+
+A self-contained, independently checkable bundle for the Clifford recovery protocol — the one artifact to
+reach for if you want to verify a single complete result end to end rather than navigate the atlas.
+
+| Artifact | Path |
+|---|---|
+| Landing page and how-to | [`docs/recovery_packet_landing.md`](docs/recovery_packet_landing.md) |
+| Packet index | [`data/bt1279_recovery_packet_index.json`](data/bt1279_recovery_packet_index.json) |
+| Strict polar-path certificate | [`data/bt1275_strict_polar_path_recovery_certificate.json`](data/bt1275_strict_polar_path_recovery_certificate.json) |
+
+```bash
+py -3 tools/bt1291_verify_release_packet.py   # verifies the whole packet
+```
+
 ## Repository map
 
 | Path | Contents |

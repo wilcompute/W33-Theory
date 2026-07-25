@@ -79,4 +79,18 @@ jobs:
           git config user.email 'w33-formula-freeze[bot]@users.noreply.github.com'
           git add -f data/w33_formula_search_universe_v1.json
           git commit -m 'Pass 398: freeze complete formula-search universe'
-          git push origin HEAD:master
+          # Two agents push to master in parallel, so this job routinely finds
+          # master has advanced since checkout. That is a benign race, not a
+          # build failure: rebase and retry, and if master is still moving,
+          # skip quietly -- the next push regenerates the freeze anyway.
+          for attempt in 1 2 3; do
+            if git push origin HEAD:master; then
+              echo "Formula universe frozen (attempt $attempt)."
+              exit 0
+            fi
+            echo "Push rejected on attempt $attempt; rebasing onto origin/master."
+            git fetch origin master || break
+            git rebase origin/master || { git rebase --abort || true; break; }
+          done
+          echo "::notice::Formula freeze skipped: master advanced during this run. The next push will regenerate it."
+          exit 0
