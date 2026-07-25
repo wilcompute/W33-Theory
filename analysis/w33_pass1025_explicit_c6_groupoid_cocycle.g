@@ -1,8 +1,8 @@
 # Pass 1025: construct the explicit C6 action-groupoid cocycle.
 #
 # Choose a phase ordering in every six-root fibre using the central Eisenstein
-# unit u=c^5.  Because u centralizes K=Sp(4,3), every K generator transports an
-# ordered fibre by a pure cyclic shift.  Those shifts are an explicit cocycle
+# unit u=c^5. Because u centralizes K=Sp(4,3), every K generator transports an
+# ordered fibre by a pure cyclic shift. Those shifts are an explicit cocycle
 # alpha(g,x) in Z/6 on the action groupoid K acting on the 40-point base.
 #
 # The certificate verifies the cocycle law, finds shortest closed base loops
@@ -123,7 +123,7 @@ end;;
 
 Main1025 := function()
   local data, K, generators, allGenerators, generatorCount, shifts,
-        inverseShifts, baseIndex, generatorId, g, h, targetBase,
+        inverseShifts, baseIndex, generatorId, g, h,
         cocycleLaw, fibreIndex, startRoot, shortest, phaseWords,
         phaseTargets, phase, defects2, defects3, defects6,
         checks, names, stream, name;
@@ -169,9 +169,8 @@ Main1025 := function()
   checks.shortest_word_search_reaches_all_roots :=
     Number(shortest.parents,x -> x<>0)=240;
   checks.phase_words_close_on_the_base := ForAll([0..5],phase ->
-    BaseImage1025(data,fibreIndex,
-      Product(List(phaseWords[phase+1],label ->
-        (label>0) and generators[label] or generators[-label]^-1))) = fibreIndex);
+    ApplySignedWord1025(startRoot,phaseWords[phase+1],generators)
+      in data.fibres[fibreIndex]);
   checks.phase_words_hit_exact_ordered_targets := ForAll([0..5],phase ->
     ApplySignedWord1025(startRoot,phaseWords[phase+1],generators)=phaseTargets[phase+1]);
   checks.nontrivial_C6_loop_exists := Length(phaseWords[2])>0;
@@ -182,9 +181,9 @@ Main1025 := function()
   checks.mod6_cocycle_is_not_a_coboundary := not defects6.coboundary;
   checks.mod2_defects_generate_C2 := defects2.defects=[1];
   checks.mod3_defects_generate_C3 :=
-    Length(defects3.defects)>0 and Gcd(Concatenation([3],defects3.defects))=1;
+    ForAny(defects3.defects,x -> Gcd(x,3)=1);
   checks.mod6_defects_generate_C6 :=
-    Length(defects6.defects)>0 and Gcd(Concatenation([6],defects6.defects))=1;
+    Gcd(Concatenation([6],defects6.defects))=1;
   checks.CRT_projection_table_is_exact := ForAll([1..generatorCount],generatorId ->
     ForAll([1..40],baseIndex ->
       [shifts[generatorId][baseIndex] mod 2,shifts[generatorId][baseIndex] mod 3]
