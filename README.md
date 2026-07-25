@@ -295,7 +295,7 @@ tectonic -X compile w33_paper.tex --outdir <dir>
 
 ---
 
-## The recovery packet
+## Recovery Packet
 
 A self-contained, independently checkable bundle for the Clifford recovery protocol — the one artifact to
 reach for if you want to verify a single complete result end to end rather than navigate the atlas.
