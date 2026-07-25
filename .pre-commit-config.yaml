@@ -39,6 +39,12 @@ repos:
       language: system
       files: ^(analysis|passes|exploration|papers)/.*\.(py|md|tex)$|^(BREAKTHROUGH_)?PASS.*\.(md|py)$|^README\.md$
       pass_filenames: true
+    - id: sample-degeneracy
+      name: sampling-based claims are not built on degenerate samples
+      entry: python scripts/check_sample_degeneracy.py
+      language: system
+      files: ^(analysis|passes|exploration)/.*\.py$
+      pass_filenames: true
     - id: sigma-gate
       name: experiment comparisons report sigma, not just percent
       entry: python scripts/check_sigma_gate.py
