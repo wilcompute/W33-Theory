@@ -1,0 +1,43 @@
+{
+  "schema": "w33.pass1021.e8_fibration_over_forty.gap.v1",
+  "status": "PASS",
+  "headline": "The 240 E8 roots fiber 6:1 and Sp(4,3)-equivariantly onto 40 points, with fiber the Eisenstein unit group <-1,w> = Z6. The quotient is U4(2) acting with subdegrees [1,12,27], and its valency-12 orbital graph is srg(40,12,2,4). This is the true form of the correspondence the corpus chased as an edge-root bijection, which Pass 1020 refuted.",
+  "fibration": {
+    "tower": "240 roots -> 120 antipodal pairs -> 40 Eisenstein lines",
+    "fiber": "<-1, w> = Z6, the Eisenstein units",
+    "blocks": 40,
+    "quotient_order": 25920,
+    "quotient_kernel": 2,
+    "quotient_subdegrees": [ 1, 12, 27 ],
+    "normaliser_image_order": 51840
+  },
+  "graphs": {
+    "E8_quotient": {"n":40,"k":12,"lambda":2,"mu":4,"strongly_regular":true},
+    "W33_points": {"n":40,"k":12,"lambda":2,"mu":4,"strongly_regular":true},
+    "W33_dual_lines": {"n":40,"k":12,"lambda":2,"mu":4,"strongly_regular":true}
+  },
+  "coxeter": {
+    "order": 30,
+    "c15_is_antipodal": true,
+    "c10_is_regular_order_3": true,
+    "fibre_group": "<c^5> = <-1, c^10> = Z6, the Eisenstein units",
+    "note": "the construction is deterministic: no random search for the order-3 element"
+  },
+  "identification": {
+    "conjugate_to_point_action": true,
+    "conjugate_to_line_action": false,
+    "point_and_line_actions_conjugate": false
+  },
+  "check_count": 9,
+  "checks": {
+    "blocks_of_size_six_are_the_eisenstein_lines": true,
+    "fibration_is_240_equals_40_times_6": true,
+    "quotient_is_U42_of_order_25920": true,
+    "quotient_is_rank_three_1_12_27": true,
+    "quotient_orbital_graph_is_srg_40_12_2_4": true,
+    "normaliser_image_is_WE6_order_51840": true,
+    "point_graph_is_srg_40_12_2_4": true,
+    "line_graph_is_srg_40_12_2_4": true,
+    "E8_quotient_matches_exactly_one_of_the_two": true
+  }
+}
