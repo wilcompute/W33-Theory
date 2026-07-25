@@ -4,6 +4,10 @@ on:
   workflow_dispatch:
   push:
     branches: [ master ]
+    paths:
+      - 'analysis/bt101*'
+      - 'analysis/**k3**'
+      - 'tests/**k3**'
 
 jobs:
   k3-middle-rank-smoke:

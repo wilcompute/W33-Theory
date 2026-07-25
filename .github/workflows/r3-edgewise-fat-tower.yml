@@ -3,6 +3,10 @@ name: R3 Edgewise Fat Tower
 on:
   push:
     branches: [ master ]
+    paths:
+      - 'analysis/bt99*'
+      - 'analysis/**edgewise**'
+      - 'tests/**edgewise**'
   pull_request:
     branches: [ master ]
   workflow_dispatch:

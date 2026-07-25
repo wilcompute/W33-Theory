@@ -3,6 +3,10 @@ name: Pillar 21 smoke
 on:
   push:
     branches: [ main, master ]
+    paths:
+      - 'tools/prepare_w33_analysis_bundle.py'
+      - 'tools/**pillar*'
+      - 'tests/**pillar*'
   pull_request:
     branches: [ main, master ]
 

@@ -4,6 +4,10 @@ on:
   workflow_dispatch: {}
   push:
     branches: [ main, master ]
+    paths:
+      - 'scripts/run_all_sage.sh'
+      - 'scripts/**'
+      - '**/*.sage'
   pull_request:
     types: [opened, synchronize, reopened]
 

@@ -3,6 +3,11 @@ name: JSON serialization check
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'tests/test_json_serialization.py'
+      - 'tests/test_json_safe.py'
+      - 'scripts/**'
+      - 'tools/**'
   pull_request:
     branches: [ main ]
 

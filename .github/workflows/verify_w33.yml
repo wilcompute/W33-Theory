@@ -3,6 +3,10 @@ name: W33 Theoretical Bounds Verification
 on:
   push:
     branches: [ master ]
+    paths:
+      - 'tests/test_w33.py'
+      - 'analysis/**'
+      - 'scripts/**'
   pull_request:
     branches: [ master ]
   schedule:

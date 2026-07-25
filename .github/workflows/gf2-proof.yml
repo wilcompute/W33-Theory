@@ -3,6 +3,11 @@ name: GF(2) parity proof CI
 on:
   push:
     branches:
+    paths:
+      - 'tools/minimal_hitting_sets.py'
+      - 'tools/**gf2**'
+      - 'analysis/**gf2**'
+      - 'tests/**gf2**'
       - master
       - gf2-parity-proof
   pull_request:

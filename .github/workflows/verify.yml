@@ -3,6 +3,10 @@ name: W33-Theory Verification
 on:
   push:
     branches: [ master ]
+    paths:
+      - 'verify_dclii_dclxii.py'
+      - 'analysis/**'
+      - 'tools/**'
   pull_request:
     branches: [ master ]
 

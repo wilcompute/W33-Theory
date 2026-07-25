@@ -3,6 +3,13 @@ name: Recovery Packet
 on:
   push:
     branches: [ main, master ]
+    paths:
+      - 'README.md'
+      - 'docs/recovery_packet*'
+      - 'data/bt127*'
+      - 'data/bt128*'
+      - 'tools/bt129*'
+      - 'tests/test_bt128*'
   pull_request:
     branches: [ main, master ]
 

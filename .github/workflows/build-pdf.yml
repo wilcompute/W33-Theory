@@ -4,6 +4,11 @@ on:
   workflow_dispatch: {}
   push:
     branches: [ master ]
+    paths:
+      - '**/*.tex'
+      - 'compile.sh'
+      - 'manuscripts/**'
+      - 'papers/**'
 
 jobs:
   build:
