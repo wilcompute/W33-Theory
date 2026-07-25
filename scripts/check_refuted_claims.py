@@ -78,6 +78,14 @@ REGISTRY = [
         "five orthogonal rank-8 sublattices span rank 40 > 24 = rank(Leech). "
         "The standard fact is E8^3.",
     ),
+    (
+        "PDG closed forms that do not evaluate to their stated value",
+        re.compile(r"(1/\(q\^?-5\)|12/q!|k\^?2 \+ \(k-1\)\^?2)", re.I),
+        "data/w33_pass1008_constant_table_audit.json",
+        "these closed forms do not evaluate to the values printed beside them: "
+        "q^5 = 243 not 125, 12/q! = 2 not 67, v_EW*sqrt((1-3/13)/2) = 152.56 not "
+        "80.44, k^2+(k-1)^2+lambda = 267 not 137. Re-derive before quoting.",
+    ),
 ]
 
 

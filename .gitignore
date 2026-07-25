@@ -249,3 +249,6 @@ formal/.lake/
 /verify_*.py
 /gap_bt*.g
 /tomotope_aut_gens.g
+
+# Exception: a test asserts this artifact exists at the repo root.
+!/PART_CCCXLIX_eigenmatrix_pq_results.json
