@@ -10764,6 +10764,69 @@ is at the \emph{unramified} prime $3$. Neither channel dominates the other.
 \texttt{...\_pass1015\_gluing\_is\_a\_complementation\_invariant.py},
 \texttt{...\_pass1016\_seidel\_invariant\_and\_unramified\_separation.py}.)
 
+The criterion is sharp enough to settle the substrate family outright, and to
+identify the exceptional locus where it fails as a classical object.
+
+\begin{theorem}[pencil rigidity of $W(q,q)$]
+\label{thm:wqq-pencil-rigid}
+For every integer $q\ge 2$ the gluing of $W(q,q)$ is invariant under
+complementation, and its Seidel gluing equals its adjacency gluing.
+\end{theorem}
+
+\begin{proof}
+$W(q,q)$ has $n=(q+1)(q^2+1)$, $k=q(q+1)$ and restricted eigenvalues $q-1$ and
+$-q-1$. Substituting into Proposition~\ref{prop:complementation}, the two
+thresholds are
+\[
+  k-n = -(q+1)(q^2-q+1) = -(q^3+1),
+  \qquad
+  k-\tfrac n2 = -\tfrac{(q-1)^2(q+1)}{2}.
+\]
+Setting either equal to $q-1$ or to $-q-1$ gives four polynomial equations, none
+of which has an integer root with $q\ge2$. So neither threshold ever meets the
+spectrum, and by Proposition~\ref{prop:complementation} the gluing is unchanged
+along both directions of the pencil.
+\end{proof}
+
+At $q=3$ the thresholds are $-28$ and $-8$ against the spectrum $\{12,2,-4\}$,
+which is the numerical statement already used above. A sweep of sixteen
+small-integer pencil members per graph confirms the criterion in every instance
+and separates the two behaviours cleanly: $W(3,3)$ has critical ratios
+$\beta/\alpha \in \{-\tfrac14,-\tfrac25\}$, which no swept integer pair
+realises, and returns a single gluing throughout; $T(8)$ has critical ratios
+$\{-\tfrac27,-\tfrac12\}$, and $-\tfrac12$ \emph{is} realised, by
+$(\alpha,\beta)=(-2,1)$ --- the Seidel matrix --- so its gluing genuinely moves.
+The rigidity of the substrate family and the fragility of $T(8)$ have the same
+one-line cause.
+
+\begin{proposition}[the collision locus is the regular two-graph condition]
+\label{prop:collision-two-graph}
+The Seidel threshold $k-\tfrac n2$ lies in the spectrum exactly when
+$n = 2(k-s)$. Equivalently $n-1-2k = -1-2s$, which says the Seidel matrix
+$\mathcal S = J-I-2A$ has exactly two distinct eigenvalues --- that is, $G$ lies
+in the switching class of a \emph{regular two-graph}.
+\end{proposition}
+
+The regular two-graph is Seidel's classical notion, and the classification of
+these parameter sets is classical with it; neither is claimed here. What the
+criterion contributes is the bridge: the locus on which the pencil argument
+fails is not a new family but that known one. Solving $n=2(k-s)$ against the
+strongly regular relations gives seventeen admissible parameter sets with
+$n\le 96$ --- among them Petersen $(10,3,0,1)$, Clebsch $(16,5,0,2)$,
+$L_2(4)/\text{Shrikhande}$ $(16,6,2,2)$ and $T(8)/\text{Chang}$ $(28,12,6,4)$ ---
+and every one has a two-eigenvalue Seidel matrix, as the identity requires. Both
+exceptional families that obstructed the earlier arguments sit in this list.
+
+The substrate family provably does not. For $W(q,q)$ one has
+$n=(q+1)(q^2+1)$ while $2(k-s)=2(q+1)^2$, and these agree only if
+$q^2+1 = 2q+2$, i.e.\ $q^2-2q-1=0$, whose roots $1\pm\sqrt2$ are irrational. So
+no $W(q,q)$ is a regular two-graph descendant at any $q$, which is
+Theorem~\ref{thm:wqq-pencil-rigid} again from the other side: the fragile locus
+is a classical object, and the substrate is uniformly outside it.
+(Witnesses:
+\texttt{...\_pass1018\_pencil\_rigidity\_and\_the\_wqq\_family.py},
+\texttt{...\_pass1019\_fragile\_family\_is\_the\_regular\_two\_graph\_condition.py}.)
+
 
 The definite lift is not fixed by linear-algebraic chain data; the natural
 constraint is the substrate's own symmetry. The full automorphism group acts
