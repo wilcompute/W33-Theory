@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pass 875: intake audit of the seven-thread external batch.
+"""Pass 881: intake audit of the seven-thread external batch.
 
 An external contribution ("Pass 872 -- Secrets Unlocked: 7 Perpendicular
 Threads", now in the tree as papers/@Academic @GitHub Keep going, think outside
@@ -81,7 +81,7 @@ import math
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "data" / "w33_pass875_seven_thread_batch_intake_audit.json"
+OUT = ROOT / "data" / "w33_pass881_seven_thread_batch_intake_audit.json"
 PAPER = ROOT / "w33_paper.tex"
 
 K_DEG = 12          # W(3,3) valency
@@ -224,7 +224,7 @@ def main_payload():
     D = part_D_live_item(checks)
     status = "PASS" if all(checks.values()) else "FAIL"
     return {
-        "schema": "w33.pass875.seven_thread_batch_intake_audit.v1",
+        "schema": "w33.pass881.seven_thread_batch_intake_audit.v1",
         "status": status,
         "headline": (
             "INTAKE AUDIT OF THE SEVEN-THREAD BATCH: THE HEADLINE IS "
@@ -260,7 +260,7 @@ def main():
     text = json.dumps(pl, sort_keys=True, separators=(",", ":")) + "\n"
     if a.check:
         if not a.output.exists() or a.output.read_text() != text:
-            raise SystemExit("Pass 875 certificate drift")
+            raise SystemExit("Pass 881 certificate drift")
     else:
         a.output.parent.mkdir(parents=True, exist_ok=True)
         a.output.write_text(text)

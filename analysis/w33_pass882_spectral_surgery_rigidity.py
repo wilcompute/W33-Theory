@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pass 876: spectral-surgery rigidity -- the gluing obstruction cannot be
+"""Pass 882: spectral-surgery rigidity -- the gluing obstruction cannot be
 engineered away.
 
 Pass 828 showed that the p-part of a k-branch eigenlattice gluing is carried by
@@ -61,7 +61,7 @@ from math import gcd
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "data" / "w33_pass876_spectral_surgery_rigidity.json"
+OUT = ROOT / "data" / "w33_pass882_spectral_surgery_rigidity.json"
 
 ADJ_EIGS = [12, 2, -4]
 
@@ -190,7 +190,7 @@ def main_payload():
     D = part_D_boundary(checks)
     status = "PASS" if all(checks.values()) else "FAIL"
     return {
-        "schema": "w33.pass876.spectral_surgery_rigidity.v1",
+        "schema": "w33.pass882.spectral_surgery_rigidity.v1",
         "status": status,
         "headline": (
             "SPECTRAL-SURGERY RIGIDITY: THE GLUING OBSTRUCTION CANNOT BE "
@@ -225,7 +225,7 @@ def main():
     text = json.dumps(pl, sort_keys=True, separators=(",", ":")) + "\n"
     if a.check:
         if not a.output.exists() or a.output.read_text() != text:
-            raise SystemExit("Pass 876 certificate drift")
+            raise SystemExit("Pass 882 certificate drift")
     else:
         a.output.parent.mkdir(parents=True, exist_ok=True)
         a.output.write_text(text)
