@@ -1,7 +1,7 @@
 name: Passes 971-980 audited release
 on:
   pull_request:
-    branches: [master]
+    branches: [agent/pass971-980-verify-base]
     paths:
       - '.github/workflows/pass971_980_release.yml'
 permissions:
