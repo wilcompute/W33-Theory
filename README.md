@@ -2,10 +2,6 @@
 
 ## One finite geometry, 40 points, and an unreasonable number of things that turned out to be the same object
 
-[![Pages](https://img.shields.io/badge/live_atlas-open-blue)](https://wilcompute.github.io/W33-Theory/)
-[![Method](https://img.shields.io/badge/claims-evidence_tiered-6f42c1)](docs/index.html#reader-guide)
-[![Certificates](https://img.shields.io/badge/certificates-2925_JSON-00a878)](data/)
-[![Lean](https://img.shields.io/badge/machine_checked-Lean_4-orange)](formal/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 
 > **One geometry. Thousands of witnesses. Every bridge has to name its map.**
@@ -51,13 +47,10 @@ fails, it gets a retraction pass, not a quiet edit.
 | If you want to… | Open this |
 |---|---|
 | see the whole atlas, interactively | [Live atlas](https://wilcompute.github.io/W33-Theory/) |
-| read the mathematics | [`w33_paper.tex`](w33_paper.tex) (15.7k lines, 1.37 MiB PDF) |
-| read the deformation/lattice track | [`papers/heisenberg_weyl_determinant_law.tex`](papers/heisenberg_weyl_determinant_law.tex) |
+| read the mathematics | **[w33_paper.pdf](docs/pdf/w33_paper.pdf)** (1.37 MiB, opens in browser) &middot; [source](w33_paper.tex) |
+| read the deformation/lattice track | **[heisenberg_weyl_determinant_law.pdf](docs/pdf/heisenberg_weyl_determinant_law.pdf)** (240 KB) &middot; [source](papers/heisenberg_weyl_determinant_law.tex) |
 | read the photonic machine | [`photonic_holonet.tex`](photonic_holonet.tex) · [`HOLONET.md`](HOLONET.md) |
 | **find a result before re-deriving it** | [`RESULTS_INDEX.md`](RESULTS_INDEX.md) — *do this first* |
-| see what the audit says is genuinely new | [`analysis/THE_SELECTION_LAYER.md`](analysis/THE_SELECTION_LAYER.md) |
-| see what we retracted | [Things we got wrong](#things-we-got-wrong-on-purpose-and-in-public) |
-| claim a pass number without colliding | `py -3 scripts/next_free_pass.py` |
 
 The atlas is deliberately too large to read linearly. Navigate by question, then follow each claim to its
 witness.
@@ -181,6 +174,58 @@ object with a physical one is a map that must be built, not inferred from a matc
 The honest summary of this arc: the *decompositions* are exact and the group theory is real. Whether
 `24 = dim adj SU(5)` is physics or coincidence is exactly the kind of claim this repository has learned to
 tier rather than assert.
+
+### Physics constants — every derivation, verified or flagged
+
+The repository contains **50+ constant tables** of varying quality. This one is built by *evaluating every
+closed form* and comparing against PDG-2025 in **experimental σ**, not percent. Two things follow, and both
+matter more than any individual row.
+
+**First: of the 14 closed forms in the most-cited ledger, only 5 evaluate to their own stated value.** The
+numbers may well be right; the formulas as written are not. A reader who checks will find this in minutes, so
+it is recorded here rather than reproduced.
+
+| Observable | Closed form as written | Evaluates to | Claimed | PDG-2025 | σ | Verdict |
+|---|---|---:|---:|---|---:|---|
+| `N_ν` | `q` | **3** | 3 | 3 (exact) | — | ✅ **exact** |
+| `sin²θ₂₃` (PMNS) | `7/13` | **0.53846** | 0.5385 | 0.546 ± 0.021 | 0.4 | ✅ **agrees** |
+| `m_t` (pole) | `v_EW/√2` | **173.948 GeV** | 173.95 | 172.57 ± 0.29 | 4.8 | ⚠️ formula OK, value excluded |
+| `sin²θ_W` (dressed) | `q/(q²+q+1) = 3/13` | **0.230769** | 0.23077 | 0.23122 ± 0.00003 | 15.0 | ⚠️ formula OK, value excluded |
+| `α⁻¹` (integer skeleton) | `k² − (\|r\|+\|s\|+1) = 144−7` | **137** | 137 | 137.035 999 178(8) | — | ✅ integer only; the `.036` is *not* derived |
+| `\|V_us\|` | `√(3/v)·k` | **3.286** | 0.2253 | 0.2245 ± 0.0008 | — | ❌ formula ≠ claim |
+| `m_H` | `1/(q⁻⁵) = q⁵` | **243** | 125.0 | 125.25 ± 0.17 | — | ❌ formula ≠ claim |
+| `m_W` | `v_EW√((1−3/13)/2)` | **152.56** | 80.44 | 80.369 ± 0.013 | — | ❌ formula ≠ claim |
+| `H₀` | `12/q!` | **2.0** | 67.0 | 67.4 ± 0.5 | — | ❌ formula ≠ claim |
+| `n_s` | `1 − 2/(q·q)` | **0.7778** | 0.9667 | 0.965 ± 0.004 | — | ❌ formula ≠ claim |
+| `Ω_Λ` | `1 − 1/(k·Φ₄/10)` | **0.9167** | 0.6833 | 0.685 ± 0.007 | — | ❌ formula ≠ claim |
+| `sin²θ₁₂` (PMNS) | `3/(4·13) = 3/52` | **0.05769** | 0.3077 | 0.307 ± 0.013 | — | ❌ formula ≠ claim |
+| `sin²θ₁₃` (PMNS) | `3/(6·29)` | **0.01724** | 0.02198 | 0.0220 ± 0.0007 | — | ❌ formula ≠ claim |
+| `α⁻¹` (ledger form) | `k² + (k−1)² + λ` | **267** | 137.036 | 137.036 | — | ❌ formula ≠ claim |
+
+**Second: even the formulas that evaluate correctly are mostly excluded by experiment.** `sin²θ_W` is 15σ
+from the measured value and `m_t` is 4.8σ. Exactly two rows survive both tests — `N_ν = q = 3`, and
+`sin²θ₂₃ = 7/13` at 0.4σ. That is the honest state of the constant program: one exact integer count, one
+genuine agreement, and a great deal that needs its formulas re-derived before it can be called a derivation.
+
+The combinatorial identities in the [physics chain](#the-physics-chain--seven-steps-from-a-finite-geometry)
+above are a different matter — those are exact and verified. The gap is between *counting the geometry*,
+which works, and *predicting a dimensionful constant*, which so far does not.
+
+### A verified structural result: E₈ inside W(3,3)
+
+Not a constant, but the strongest physics-adjacent claim that survives checking. The eight vertices
+`[7, 1, 0, 13, 24, 28, 37, 16]` induce a subgraph of `W(3,3)` that **is the E₈ Dynkin diagram**:
+
+| Check | Result |
+|---|---|
+| induced degree sequence | `[1,1,1,2,2,2,2,3]` — E₈ Dynkin exactly |
+| Gram `2I − A_sub` | positive definite |
+| `det(Gram)` | **1** — the E₈ Cartan determinant |
+
+So `E₈`'s Cartan matrix is realised on eight points of the geometry. The honest caveat, recorded in the
+repository's own solver: the edge graph is 22-regular and the root graph 56-regular, so the `240 = 240`
+edge–root correspondence is **not** a graph isomorphism. It is a bijection of sets carrying a group action,
+and an equivariant map still has to be constructed.
 
 ### Codes, groups, lattices
 
