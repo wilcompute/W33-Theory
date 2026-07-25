@@ -33,3 +33,15 @@ repos:
       language: system
       files: ^(w33_paper\.tex|data/w33_pass.*\.json)$
       pass_filenames: false
+    - id: sigma-gate
+      name: experiment comparisons report sigma, not just percent
+      entry: python scripts/check_sigma_gate.py
+      language: system
+      files: ^(analysis|passes|exploration|papers)/.*\.(py|md|tex)$|^(BREAKTHROUGH_)?PASS.*\.(md|py)$
+      pass_filenames: true
+    - id: remotes-sync
+      name: remotes for one repository have not diverged
+      entry: python scripts/check_remotes_sync.py
+      language: system
+      always_run: true
+      pass_filenames: false
