@@ -109,11 +109,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-07-25T16:14:13.349Z (reason: timer)
+- Auto-saved at 2026-07-25T18:18:29.443Z (reason: threshold-commits)
 - Recent commits:
-  - 075510de0 Pass 1007: k-branch beyond three eigenvalues, a computed p-rank table, the last Lean link, and a refuted-claims guard
-  - 105d1f564 Pass 398: freeze complete formula-search universe
-  - 9b2a1b7b5 Pass 1006: the ramified filtration is uniform in p -- proof, Lean, and depth
+  - 4c746d05d cross-track: flag duplicated pass numbers 982/983, and restore this note to the root
+  - 04fc15747 Pass 398: freeze complete formula-search universe
+  - cde4b7ff4 paper: record the edge-root equivariance obstruction in the E8 section
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->
