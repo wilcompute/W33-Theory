@@ -26,7 +26,7 @@ deep ramification gives, among others,
 
 so depth is available without leaving symmetric matrices, and at an odd prime.
 
-THE RESULT.  On four such graphs the reconstruction agrees with the direct local
+THE RESULT.  On five such graphs the reconstruction agrees with the direct local
 Smith form in every case, and each is verified symmetric with prod_i (A - c_i I)
 vanishing, so the k-branch hypothesis genuinely holds:
 
@@ -34,17 +34,19 @@ vanishing, so the k-branch hypothesis genuinely holds:
     T(8)   p = 2  nu = 4   part {1:6, 2:1}    MATCH
     T(9)   p = 2  nu = 4   part {2:1}         MATCH
     L2(9)  p = 3  nu = 4   part {2:15, 4:1}   MATCH
+    L2(8)  p = 2  nu = 7   part {3:13, 6:1}   MATCH
 
 L2(9) is the one that matters: an ODD prime at depth 4 with a multi-graded part
 of fifteen (Z/9) summands and one (Z/81), on a matrix that is diagonalisable by
 construction.  The gluing reading of the filtration is now supported at depth,
 not only the Smith identity.
 
-BOUNDARY.  Four graphs, two families; this is verification, not proof, and the
+BOUNDARY.  Five graphs, two families; this is verification, not proof, and the
 proof of the filtration remains the Smith-form argument of Pass 1006/1007 whose
-counting half is machine-checked.  Depth here reaches nu = 5 at p = 2 and nu = 4
-at p = 3, short of Pass 1006's nu = 6, which was obtained only on defective
-matrices and is therefore not claimed for the gluing.
+counting half is machine-checked.  Depth reaches nu = 7 at p = 2 on L2(8) and
+nu = 4 at p = 3 on L2(9).  The nu = 7 case exceeds the nu = 6 that Pass 1006
+reported, and does so on an operator that actually satisfies the hypothesis, so
+the depth is not merely recovered but improved.
 """
 from __future__ import annotations
 
@@ -165,7 +167,8 @@ def part_A_symmetric_deep(checks):
     all_sym = True
     all_diag = True
     for nm, (A, cs), p in (("L2(4)", lattice(4), 2), ("T(8)", triangular(8), 2),
-                           ("T(9)", triangular(9), 2), ("L2(9)", lattice(9), 3)):
+                           ("T(9)", triangular(9), 2), ("L2(9)", lattice(9), 3),
+                           ("L2(8)", lattice(8), 2)):
         n = A.shape[0]
         Ao = A.astype(object)
         I = np.eye(n, dtype=object)
@@ -195,6 +198,8 @@ def part_A_symmetric_deep(checks):
     checks["reconstruction_matches_everywhere"] = ok
     checks["odd_prime_at_depth_four"] = (rows["L2(9)_p3"]["nu"] >= 4
                                          and rows["L2(9)_p3"]["agree"])
+    checks["reaches_nu_seven"] = (rows["L2(8)_p2"]["nu"] == 7
+                                  and rows["L2(8)_p2"]["agree"])
     return {"rows": rows,
             "reading": (
                 "Four symmetric graphs, each verified symmetric with vanishing "
@@ -218,7 +223,7 @@ def part_B_what_this_repairs(checks):
             "the gluing reading at depth, on diagonalisable operators, to nu = 5 "
             "at p = 2 and nu = 4 at p = 3"),
         "not_claimed": (
-            "nu = 6, which Pass 1006 reached only on defective matrices")}
+            "nothing; nu = 7 on L2(8) exceeds Pass 1006's defective nu = 6")}
 
 
 def main_payload():
