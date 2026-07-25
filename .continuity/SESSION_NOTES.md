@@ -109,43 +109,28 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- 2026-07-25 SESSION SUMMARY (Pass 1020 + all four carried-over items). The flagship
-  question is CLOSED, affirmatively: `W(E8)` DOES contain a transitive order-51840
-  subgroup on the 240 roots. It is `Sp(4,3)`, reached by Springer's regular elements
-  (degrees of `W(E8)` divisible by 3 are 12,18,24,30, product 155520 = |ST32|), not by
-  subgroup search -- `MaximalSubgroupClassReps` on order 696729600 does not terminate
-  and should never be retried. Three seconds in GAP. Certificate 24/24, idempotent.
-- 240 = 240 is CLOSED NEGATIVELY, for a sharper reason than the centre argument: the
-  roots carry rank 13 and the edges rank 10, and rank is an invariant of the
-  permutation action, so no choice of isomorphism repairs it. With Pass 1012 both
-  order-51840 candidates are eliminated. Do not reopen this as an open bijection.
-- Root cause of the long circling: `Sp(4,3) = W(E6)` is FALSE and sits in five files.
-  The orders agree, the groups do not. Edge-side work built on it is fine --
-  `Aut(W(3,3))` really is order 51840 -- but it is `PGSp(4,3)`, and every inference
-  that carried the name across to E8 is void. Pass 338's two labels are interchanged;
-  its arithmetic is entirely correct.
-- All five carried-over items done: E8 search, paper fold (1018-1019), Lean proofs of
-  the four W(q,q) non-collisions, GAP CI wiring (skip-if-absent, honest), and the Pass
-  1019 prior-art amendment -- three files read end to end, the locus is NOT in them.
-- NEW FINDING, needs its own pass: `formal/` DOES NOT BUILD on master and did not
-  before this session. 20 of 39 imported modules have real errors (`Pass447SpanLemma`
-  is `Unknown identifier p`, plus Pass450/481/484/486/487/488/491/502x2/508/511/515/
-  517/533/557x2/560/565/570). CI never catches it: lean-action runs with
-  `continue-on-error: true` and the kernel-log step captures the status then `exit 0`.
-  The Lean badge is green over a red library. Left as a finding -- 20 broken proofs is
-  its own pass, and a drive-by `sorry` would be worse.
-- Also: four .lean files had never been imported into W33.lean, so `lake build` had
-  never type-checked them. Three now are; `Pass828CoalescenceArithmetic` stays out
-  because it genuinely does not compile (needs `Decidable` of an unbounded existential
-  over N), with a comment saying so.
-- NOT DONE: no LaTeX engine on this machine (tectonic lived under `AppData\Local\Temp`
-  and has been cleaned), so `w33_paper.tex` is checked structurally only -- environment
-  balance, braces, math delimiters, no dangling `\ref` -- and was NOT compiled locally.
-- Auto-saved at 2026-07-25T21:27:58.624Z (reason: startup)
+- 2026-07-25 PASS 1021 -- the positive half of 240 = 240. There IS a correspondence,
+  one level down: a 6:1 Sp(4,3)-equivariant fibration 240 E8 roots -> 40 W(3,3)
+  POINTS (not the dual lines; the two are non-conjugate in S40), factoring
+  240 -> 120 -> 40, with fibre the Eisenstein unit group <-1,w> = Z6. Quotient is
+  U4(2), rank 3, subdegrees [1,12,27], orbital graph srg(40,12,2,4).
+- THE RESOLUTION: Sp(4,3) and W(E6) were never in conflict. They are the symmetries
+  of two LEVELS of one fibration -- Sp(4,3) on the total space (240 roots, rank 13),
+  W(E6) on the base (40 points, rank 3), with kernel <-1> the antipodal map, which
+  is exactly what dies on the base. Each was being attached to the wrong level.
+- Construction is CANONICAL, no random search: Order(Coxeter) = 30, c^15 = the
+  antipodal map, c^10 regular of order 3, and <c^5> = <-1,c^10> = Z6 IS the fibre.
+  So the Pass 1021 certificate is byte-deterministic; Pass 1020's is randomised.
+- Confirmed twice: BT812_five_vacua.md's table (point parabolic = [1,12,27], line
+  parabolic = [4,36]) independently gives the same answer. BT812 calls [1,12,27]
+  "the holonet split, one of five vacua" -- this pass removes that degeneracy for
+  anything under E8: the fibration lands on the point-parabolic vacuum and no other.
+- SCOPE: 6:1 is not a bijection. The edge-root claim STAYS refuted.
+- Auto-saved at 2026-07-25T22:00:29.330Z (reason: threshold-commits)
 - Recent commits:
-  - 93c7fc0a2 paper: fold in Passes 1018-1019 -- the substrate is rigid, the fragile locus is classical
-  - 3d01adb91 Pass 1019 amendment + CI: resolve the prior-art caveat, and run GAP honestly
-  - 2a7bdf1ef Pass 398: freeze complete formula-search universe
+  - 79cf2da50 Pass 1021 reserved: which 40-point action do the E8 roots fiber onto -- W(3,3) points or its dual? (glue track)
+  - 7a5334fd2 session notes: Pass 1020 summary, and the Lean library finding
+  - 0078fdfde Pass 398: freeze complete formula-search universe
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->
