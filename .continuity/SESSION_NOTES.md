@@ -109,11 +109,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-07-08T22:16:37.943Z (reason: timer)
+- Auto-saved at 2026-07-25T16:14:13.349Z (reason: timer)
 - Recent commits:
-  - 91847e802 Pass 124: the symplectic capstone -- Sp(8,2) = SRG(255,126,61,63) is the E8/2E8 orthogonality graph; W(3,3)'s two glue graphs are its O+_8(2) subconstituents
-  - 212fac958 Passes 117-123: the exceptional-glue / Hopf track (GO+(8,2) embedding, r=2 lattice quotient, exact 2-adic mass, SRG(120), theta newforms, Hopf boundary, axis-glue E8 lift)
-  - e8e4508b4 Passes 114-116: LMFDB status, Section 4 LaTeX (E6/E8 confluence), SNF completeness
+  - 075510de0 Pass 1007: k-branch beyond three eigenvalues, a computed p-rank table, the last Lean link, and a refuted-claims guard
+  - 105d1f564 Pass 398: freeze complete formula-search universe
+  - 9b2a1b7b5 Pass 1006: the ramified filtration is uniform in p -- proof, Lean, and depth
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->
