@@ -202,6 +202,12 @@ it is recorded here rather than reproduced.
 | `sin²θ₁₃` (PMNS) | `3/(6·29)` | **0.01724** | 0.02198 | 0.0220 ± 0.0007 | — | ❌ formula ≠ claim |
 | `α⁻¹` (ledger form) | `k² + (k−1)² + λ` | **267** | 137.036 | 137.036 | — | ❌ formula ≠ claim |
 
+**And most of the broken rows cannot be repaired.** Searching 7,128 expressions built from eighteen
+W(3,3) atoms, four targets — `m_H`, `Ω_Λ`, `sin²θ₁₃` and `m_W/v_EW` — are reached by *nothing at all*, so
+they should be **withdrawn**, not rewritten. The rest do have hits, but 36 hits for `sin²θ₁₂` is what chance
+gives in a space that size: a hit found by search is a candidate for a derivation, not a derivation.
+([`pass1010`](analysis/w33_pass1010_constant_rederivation_and_rank_bound.py))
+
 **Second: even the formulas that evaluate correctly are mostly excluded by experiment.** `sin²θ_W` is 15σ
 from the measured value and `m_t` is 4.8σ. Exactly two rows survive both tests — `N_ν = q = 3`, and
 `sin²θ₂₃ = 7/13` at 0.4σ. That is the honest state of the constant program: one exact integer count, one
