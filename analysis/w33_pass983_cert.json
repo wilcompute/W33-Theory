@@ -1,0 +1,12 @@
+{
+  "pass": 983,
+  "N_2_eq_k": true,
+  "N_3_eq_6Tv": true,
+  "zeta_L_minus1": 480,
+  "zeta_L_2": 0.29863281,
+  "v_over_zeta_L_2": 133.944,
+  "tau": "5i/8 = i*(lambda_L1/lambda_L2)",
+  "heat_kernel": "K(t) = 1 + 24*exp(-10t) + 15*exp(-16t)",
+  "OPEN_modular_significance_of_v_over_zeta_L_2": true,
+  "NOTE": "v/zeta_L(2) = 133.94 is close to 134 = 137 - 3; significance for alpha formula open"
+}

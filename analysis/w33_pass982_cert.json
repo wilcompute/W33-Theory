@@ -1,0 +1,16 @@
+{
+  "pass": 982,
+  "no_PST": true,
+  "U_half_pi_is_I_minus_2P2": true,
+  "proof_U_half_pi": "e^{12i*pi/2}=1, e^{2i*pi/2}=-1, e^{-4i*pi/2}=1 => U(pi/2)=(+1)P12+(-1)P2+(+1)Pm4=I-2P2",
+  "rho_bar_vv": 0.501250,
+  "localization_ratio_x_above_uniform": 20.05,
+  "theta_gauge_deg": 72.4516,
+  "theta_chiral_deg": 107.5484,
+  "Ramanujan": true,
+  "alpha_inv": 137.036003600,
+  "alpha_error_vs_CODATA": 4.516e-6,
+  "L_eff_formula": "(k-1)(lambda_L1^2+1) where lambda_L1=first nonzero Laplacian eigenvalue=10",
+  "L_eff": 1111,
+  "new_result": "alpha^-1 formula rewritten purely in Laplacian spectral data"
+}
