@@ -20,6 +20,7 @@ on:
     paths:
       - 'analysis/**.g'
       - 'scripts/run_gap.sh'
+      - '.github/workflows/gap-certificates.yml'
 
 jobs:
   gap-certificates:
@@ -89,6 +90,15 @@ jobs:
 
           p1020 = "data/w33_pass1020_e8_transitive_51840.json"
           d1020 = json.load(open(p1020))
+          p1021 = "data/w33_pass1021_e8_fibration_over_forty.json"
+          d1021 = json.load(open(p1021))
+          p1022 = "data/w33_pass1022_equivariant_section_obstruction.json"
+          d1022 = json.load(open(p1022))
+
+          print("PASS1020=", json.dumps(d1020, sort_keys=True))
+          print("PASS1021=", json.dumps(d1021, sort_keys=True))
+          print("PASS1022=", json.dumps(d1022, sort_keys=True))
+
           failed = [k for k, v in d1020["checks"].items() if not v]
           assert d1020["status"] == "PASS", d1020["status"]
           assert not failed, f"Pass 1020 failing checks: {failed}"
@@ -96,8 +106,6 @@ jobs:
           assert d1020["E8_side"]["centraliser_order"] == 155520
           assert d1020["E8_side"]["root_stabiliser_order"] == 216
 
-          p1021 = "data/w33_pass1021_e8_fibration_over_forty.json"
-          d1021 = json.load(open(p1021))
           failed = [k for k, v in d1021["checks"].items() if not v]
           assert d1021["status"] == "PASS", d1021["status"]
           assert not failed, f"Pass 1021 failing checks: {failed}"
@@ -107,8 +115,6 @@ jobs:
           assert d1021["identification"]["conjugate_to_point_action"] is True
           assert d1021["identification"]["conjugate_to_line_action"] is False
 
-          p1022 = "data/w33_pass1022_equivariant_section_obstruction.json"
-          d1022 = json.load(open(p1022))
           failed = [k for k, v in d1022["checks"].items() if not v]
           assert d1022["status"] == "PASS", d1022["status"]
           assert not failed, f"Pass 1022 failing checks: {failed}"
@@ -126,7 +132,7 @@ jobs:
           PY
 
       - name: Upload GAP certificates
-        if: steps.gap.outputs.available == 'true'
+        if: always() && steps.gap.outputs.available == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: gap-certificates
