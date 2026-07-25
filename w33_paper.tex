@@ -10611,6 +10611,30 @@ rank $10$, from a different collision on a different operator.
 \texttt{analysis/w33\_pass828\_coalescence\_theorem.py}.)
 \end{remark}
 
+\begin{proposition}[rigidity of the gluing obstruction]\label{prop:no-surgery}
+The gluing above cannot be removed by replacing $A$ with another integral
+operator built from it. Precisely: for every $f\in\ZZ[x]$ and all integers
+$a,b$ one has $(a-b)\mid\bigl(f(a)-f(b)\bigr)$, so $p\mid c_i-c_j$ implies
+$p\mid f(c_i)-f(c_j)$; mod-$p$ eigenvalue collisions are therefore functorial,
+and the collision set of $f(S)$ contains that of $S$. With
+Remark~\ref{rem:e8-kbranch} the support of the eigenlattice gluing is an
+invariant of the algebra $\ZZ[S]$, not of $S$.
+\end{proposition}
+
+Two saturated eigenlattices are orthogonal direct summands of $\ZZ^n$ exactly
+when their eigenvalue gap is a unit, since only then does no prime divide the
+gap. The adjacency gaps are $|12-2|=10$, $|12+4|=16$ and $|2+4|=6$, so every gap
+of every $f(A)$ is a nonzero multiple of one of these and a unit gap is
+unreachable; an exhaustive scan of all $f$ of degree $\le 3$ with coefficients in
+$[-6,6]$ finds none, and collapsing any two eigenvalues leaves a residual gap
+that is a nonzero multiple of $96$, $60$ or $160$. Hence \emph{no} polynomial in
+$A$ splits $\ZZ^{40}$ orthogonally into its eigenlattices: the obstruction met
+above is intrinsic to the adjacency algebra rather than an artefact of the choice
+of $A$, and escaping it requires leaving $\ZZ[A]$ altogether --- as the
+signed-turn operator on the $240$ edge chains does, at the cost of its own larger
+gluing. This constrains, but does not settle, the definiteness question.
+(Witness: \texttt{analysis/w33\_pass857\_spectral\_surgery\_rigidity.py}.)
+
 
 The definite lift is not fixed by linear-algebraic chain data; the natural
 constraint is the substrate's own symmetry. The full automorphism group acts
