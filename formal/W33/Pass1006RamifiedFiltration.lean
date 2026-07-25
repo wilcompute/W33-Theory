@@ -84,4 +84,33 @@ theorem countP_exact (a : Multiset ℕ) (k : ℕ) :
       = a.countP (fun x => k ≤ x) - a.countP (fun x => k < x) := by
   rw [countP_eq_add a k]; omega
 
+/-!
+## Step one: where the prime actually enters
+
+The remaining link is `ker (p^a : ZMod (p^j)) ≅ ZMod (p^(min a j))`, which is the
+only place the residue characteristic is used.  Its arithmetic core is the
+statement that gcd on prime powers is `min` on exponents: the kernel of
+multiplication by `c` on `ZMod n` has cardinality `gcd c n`, and specialising
+`c = p^a`, `n = p^j` gives `p^(min a j)` — exactly the summand appearing in
+`kappa j = ∑ᵢ min aᵢ j`.
+
+That exponent arithmetic is proved below.  Note it holds for every `p`, prime or
+not: primality is not what makes the filtration work, only the fact that the
+modulus is a power of a single element.
+-/
+
+/-- **Step one, arithmetic core.** `gcd (p^a) (p^j) = p ^ min a j`.  Combined with
+`|ker (c · _ : ZMod n)| = gcd c n`, this is the `p^(min aᵢ j)` factor whose
+logarithm is the summand of `κ`. -/
+theorem gcd_pow_pow (p a j : ℕ) : Nat.gcd (p ^ a) (p ^ j) = p ^ min a j := by
+  rcases Nat.le_total a j with h | h
+  · rw [min_eq_left h, Nat.gcd_eq_left (pow_dvd_pow p h)]
+  · rw [min_eq_right h, Nat.gcd_eq_right (pow_dvd_pow p h)]
+
+/-- The `κ` summand in closed form: the kernel exponent contributed by a Smith
+invariant of valuation `a` at level `j` is `min a j`, for every `p`. -/
+theorem kernel_exponent (p a j : ℕ) (hp : 1 < p) :
+    Nat.log p (Nat.gcd (p ^ a) (p ^ j)) = min a j := by
+  rw [gcd_pow_pow, Nat.log_pow hp]
+
 end W33.Pass1006

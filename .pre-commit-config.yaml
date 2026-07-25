@@ -33,6 +33,12 @@ repos:
       language: system
       files: ^(w33_paper\.tex|data/w33_pass.*\.json)$
       pass_filenames: false
+    - id: refuted-claims
+      name: text does not restate an already-refuted claim
+      entry: python scripts/check_refuted_claims.py
+      language: system
+      files: ^(analysis|passes|exploration|papers)/.*\.(py|md|tex)$|^(BREAKTHROUGH_)?PASS.*\.(md|py)$|^README\.md$
+      pass_filenames: true
     - id: sigma-gate
       name: experiment comparisons report sigma, not just percent
       entry: python scripts/check_sigma_gate.py
