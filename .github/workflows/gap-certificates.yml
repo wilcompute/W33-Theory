@@ -1,13 +1,7 @@
 name: GAP Certificates
 
-# Runs the GAP-produced certificates. GAP is not a Python dependency and is not
-# present on every runner, so this job SKIPS HONESTLY when the interpreter is
-# absent: it reports "skipped, GAP not available" and exits 0, rather than
-# passing silently as though the theorems had been checked.
-#
-# Each GAP script owns its exact group-theoretic assertions. The Python step
-# validates the emitted schema and core arithmetic without duplicating fragile
-# presentation strings such as StructureDescription output.
+# Run the GAP-produced certificates honestly. Generated JSON is deleted before
+# each run, so a stale tracked artifact cannot conceal a GAP batch-mode error.
 
 on:
   workflow_dispatch:
@@ -54,9 +48,7 @@ jobs:
         if: steps.gap.outputs.available != 'true'
         run: |
           echo "::notice title=GAP certificates skipped::GAP is not available on this runner."
-          echo "The GAP certificates were NOT checked in this run. This job is green"
-          echo "because nothing failed, not because the theorems were verified."
-          echo "To verify locally: scripts/run_gap.sh 'C:/path/to/analysis/<file>.g'"
+          echo "The GAP certificates were NOT checked in this run."
 
       - name: Run Pass 1020 -- transitive order-51840 subgroup of W(E8)
         if: steps.gap.outputs.available == 'true'
@@ -65,7 +57,9 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p data
+          rm -f data/w33_pass1020_e8_transitive_51840.json
           gap -q -b --nointeract analysis/w33_pass1020_e8_transitive_51840.g
+          test -f data/w33_pass1020_e8_transitive_51840.json
 
       - name: Run Pass 1021 -- E8 roots fiber over forty W33 points
         if: steps.gap.outputs.available == 'true'
@@ -73,7 +67,9 @@ jobs:
           W33_REPO: ${{ github.workspace }}
         run: |
           set -euo pipefail
+          rm -f data/w33_pass1021_e8_fibration_over_forty.json
           gap -q -b --nointeract analysis/w33_pass1021_e8_fibration_over_forty.g
+          test -f data/w33_pass1021_e8_fibration_over_forty.json
 
       - name: Run Pass 1022 -- equivariant section obstruction
         if: steps.gap.outputs.available == 'true'
@@ -81,7 +77,9 @@ jobs:
           W33_REPO: ${{ github.workspace }}
         run: |
           set -euo pipefail
+          rm -f data/w33_pass1022_equivariant_section_obstruction.json
           gap -q -b --nointeract analysis/w33_pass1022_equivariant_section_obstruction.g
+          test -f data/w33_pass1022_equivariant_section_obstruction.json
 
       - name: Validate Passes 1020-1022
         if: steps.gap.outputs.available == 'true'
@@ -115,10 +113,12 @@ jobs:
 
           p1022 = "data/w33_pass1022_equivariant_section_obstruction.json"
           d1022 = load_pass(p1022)
+          assert d1022["schema"] == "w33.pass1022.equivariant_section_obstruction.gap.v2"
+          assert d1022["check_count"] == 25
           assert d1022["exact_sequence"]["root_stabiliser_order"] == 216
           assert d1022["exact_sequence"]["point_stabiliser_order"] == 1296
           assert d1022["exact_sequence"]["quotient_order"] == 6
-          assert d1022["checks"]["phase_action_is_cyclic"]
+          assert d1022["exact_sequence"]["quotient_structure"] == "C6"
           assert d1022["checks"]["phase_action_is_regular"]
           assert d1022["section_obstruction"]["full_group_admits_section"] is False
           assert d1022["witnesses"]["center_C2_admits_section"] is False
