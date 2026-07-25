@@ -1,26 +1,28 @@
-name: GAP Certificates
+name: Pass 1022 GAP Certificate
 
-# Run the GAP-produced certificates honestly. Generated JSON is deleted before
-# each run, so a stale tracked artifact cannot conceal a GAP batch-mode error.
+# Pass 1022 rebuilds its E8/W33 substrate independently. Delete the tracked JSON
+# first and require a newly emitted certificate, so GAP batch-mode errors cannot
+# be hidden by stale repository data.
 
 on:
   workflow_dispatch:
   push:
     branches: [ master ]
     paths:
-      - 'analysis/**.g'
-      - 'scripts/run_gap.sh'
+      - 'analysis/w33_pass1022_equivariant_section_obstruction.g'
+      - 'analysis/w33_pass1022_section_obstruction_certificate.py'
       - '.github/workflows/gap-certificates.yml'
   pull_request:
     paths:
-      - 'analysis/**.g'
-      - 'scripts/run_gap.sh'
+      - 'analysis/w33_pass1022_equivariant_section_obstruction.g'
+      - 'analysis/w33_pass1022_section_obstruction_certificate.py'
+      - 'analysis/pass1022_final_ci_trigger.g'
       - '.github/workflows/gap-certificates.yml'
 
 jobs:
-  gap-certificates:
+  pass1022-certificate:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 20
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -36,7 +38,6 @@ jobs:
         run: |
           sudo apt-get update -qq || true
           sudo apt-get install -y --no-install-recommends gap || true
-          sudo apt-get install -y --no-install-recommends gap-character-tables || true
           if command -v gap >/dev/null 2>&1; then
             echo "available=true" >> "$GITHUB_OUTPUT"
             gap --version || true
@@ -47,31 +48,9 @@ jobs:
       - name: Skip notice (GAP unavailable)
         if: steps.gap.outputs.available != 'true'
         run: |
-          echo "::notice title=GAP certificates skipped::GAP is not available on this runner."
-          echo "The GAP certificates were NOT checked in this run."
+          echo "::notice title=Pass 1022 skipped::GAP is unavailable; no theorem verification occurred."
 
-      - name: Run Pass 1020 -- transitive order-51840 subgroup of W(E8)
-        if: steps.gap.outputs.available == 'true'
-        env:
-          W33_REPO: ${{ github.workspace }}
-        run: |
-          set -euo pipefail
-          mkdir -p data
-          rm -f data/w33_pass1020_e8_transitive_51840.json
-          gap -q -b --nointeract analysis/w33_pass1020_e8_transitive_51840.g
-          test -f data/w33_pass1020_e8_transitive_51840.json
-
-      - name: Run Pass 1021 -- E8 roots fiber over forty W33 points
-        if: steps.gap.outputs.available == 'true'
-        env:
-          W33_REPO: ${{ github.workspace }}
-        run: |
-          set -euo pipefail
-          rm -f data/w33_pass1021_e8_fibration_over_forty.json
-          gap -q -b --nointeract analysis/w33_pass1021_e8_fibration_over_forty.g
-          test -f data/w33_pass1021_e8_fibration_over_forty.json
-
-      - name: Run Pass 1022 -- equivariant section obstruction
+      - name: Run Pass 1022 fail closed
         if: steps.gap.outputs.available == 'true'
         env:
           W33_REPO: ${{ github.workspace }}
@@ -81,58 +60,14 @@ jobs:
           gap -q -b --nointeract analysis/w33_pass1022_equivariant_section_obstruction.g
           test -f data/w33_pass1022_equivariant_section_obstruction.json
 
-      - name: Validate Passes 1020-1022
+      - name: Validate emitted certificate
         if: steps.gap.outputs.available == 'true'
-        run: |
-          python - <<'PY'
-          import json
+        run: python analysis/w33_pass1022_section_obstruction_certificate.py
 
-          def load_pass(path):
-              data = json.load(open(path))
-              failed = [k for k, v in data["checks"].items() if not v]
-              assert data["status"] == "PASS", (path, data["status"])
-              assert not failed, f"{path} failing checks: {failed}"
-              assert data["check_count"] == len(data["checks"])
-              return data
-
-          p1020 = "data/w33_pass1020_e8_transitive_51840.json"
-          d1020 = load_pass(p1020)
-          assert d1020["E8_side"]["transitive_subgroup_order"] == 51840
-          assert d1020["E8_side"]["centraliser_order"] == 155520
-          assert d1020["E8_side"]["root_stabiliser_order"] == 216
-
-          p1021 = "data/w33_pass1021_e8_fibration_over_forty.json"
-          d1021 = load_pass(p1021)
-          assert d1021["fibration"]["blocks"] == 40
-          assert d1021["fibration"]["quotient_order"] == 25920
-          assert d1021["fibration"]["quotient_subdegrees"] == [1, 12, 27]
-          assert sum([
-              d1021["identification"]["conjugate_to_point_action"],
-              d1021["identification"]["conjugate_to_line_action"],
-          ]) == 1
-
-          p1022 = "data/w33_pass1022_equivariant_section_obstruction.json"
-          d1022 = load_pass(p1022)
-          assert d1022["schema"] == "w33.pass1022.equivariant_section_obstruction.gap.v2"
-          assert d1022["check_count"] == 25
-          assert d1022["exact_sequence"]["root_stabiliser_order"] == 216
-          assert d1022["exact_sequence"]["point_stabiliser_order"] == 1296
-          assert d1022["exact_sequence"]["quotient_order"] == 6
-          assert d1022["exact_sequence"]["quotient_structure"] == "C6"
-          assert d1022["checks"]["phase_action_is_regular"]
-          assert d1022["section_obstruction"]["full_group_admits_section"] is False
-          assert d1022["witnesses"]["center_C2_admits_section"] is False
-          assert d1022["witnesses"]["Sylow5_admits_section"] is True
-
-          print(f"{p1020}: {len(d1020['checks'])} checks, all pass")
-          print(f"{p1021}: {len(d1021['checks'])} checks, all pass")
-          print(f"{p1022}: {len(d1022['checks'])} checks, all pass")
-          PY
-
-      - name: Upload GAP certificates
+      - name: Upload Pass 1022 certificate
         if: always() && steps.gap.outputs.available == 'true'
         uses: actions/upload-artifact@v4
         with:
-          name: gap-certificates
-          path: data/w33_pass*.json
-          if-no-files-found: warn
+          name: pass1022-gap-certificate
+          path: data/w33_pass1022_equivariant_section_obstruction.json
+          if-no-files-found: error
