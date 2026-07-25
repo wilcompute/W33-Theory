@@ -18107,7 +18107,28 @@
           </div>
         </div>
         <div class="spotlight">
-          <h3 style="margin-top:0;">Best starting points</h3>
+          <h3>Where to start</h3>
+<p>Pick the row that matches why you are here. Each says what you actually get, not which
+pass produced it.</p>
+<table>
+  <tr><th>If you want&hellip;</th><th>Go to</th><th>What you get</th></tr>
+  <tr><td><strong>The idea, in order</strong></td><td><a href="#theory">The Theory</a></td>
+      <td>The seven steps from a 40-point geometry to a gauge group and three generations. Start here if you read nothing else.</td></tr>
+  <tr><td><strong>The numbers themselves</strong></td><td><a href="#numbers">Core Numbers</a></td>
+      <td>Every invariant of the graph in one place: 40 points, 240 edges, spectrum 12/2/&minus;4, symmetry order 51,840.</td></tr>
+  <tr><td><strong>Whether to believe it</strong></td><td><a href="#verified">Verified Results</a></td>
+      <td>The claims that survived audit, each with the certificate that backs it. Also the retractions &mdash; results we promoted and then killed.</td></tr>
+  <tr><td><strong>The physics reading</strong></td><td><a href="#physics">Physics Derivations</a></td>
+      <td>How the combinatorics is mapped onto particles and forces &mdash; and where that mapping is still a conjecture rather than a theorem.</td></tr>
+  <tr><td><strong>The mathematics, in depth</strong></td><td><a href="#pillars-main">Mathematical Pillars</a></td>
+      <td>Lattices, codes, zeta functions, representation theory. Self-contained results that stand whatever you think of the physics.</td></tr>
+  <tr><td><strong>To check it yourself</strong></td><td><a href="#hard-computation">Hard Computation</a></td>
+      <td>Runnable commands and machine-checked certificates. Every promoted claim names a file you can execute.</td></tr>
+  <tr><td><strong>The history</strong></td><td><a href="#archive">Historical Archive</a></td>
+      <td>How the program developed, including ideas that were later narrowed or abandoned. Context, not current status.</td></tr>
+</table>
+<details class="spotlight"><summary style="cursor:pointer;font-weight:600">Detailed index &mdash; the original pass-by-pass pointers (preserved verbatim)</summary>
+
           <ul class="quick-list">
             <li><a href="#verified">Verified Results</a> &mdash; the concise exact theorem layer.</li>
             <li><a href="#current-synthesis">Current Synthesis</a> &mdash; the present evidence-tiered state.</li>
@@ -18156,7 +18177,13 @@
             <li><a href="#archive">Historical Archive</a> is preserved context, not automatically promoted status.</li>
           </ul>
         </div>
-        <h3>Physics Memo <span style="font-weight:400;opacity:.7">(historical)</span></h3>
+        
+</details>
+<p><strong>A warning that applies everywhere on this page.</strong> The finite mathematics and the physical
+interpretation are different things. A statement can be an exact theorem about a graph and still be an open
+question about the world. Sections are tiered so you can tell which is which, and the archive is kept
+deliberately &mdash; including the parts that turned out to be wrong.</p>
+<h3>Physics Memo <span style="font-weight:400;opacity:.7">(historical)</span></h3>
 <p>The memo below is kept verbatim because it records how the physics reading developed. By its own statement these are <em>historical hypotheses</em>; the current scope is the audited evidence map above and the frontier card in <a href="#theory">The Theory</a>. It is collapsed only because it is 368,000 characters long &mdash; nothing has been removed.</p>
 <details class="spotlight">
   <summary style="cursor:pointer;font-weight:600">Historical physics memo &mdash; preserved in full, <em>not</em> current audited scope (367,880 characters)</summary>
@@ -22777,728 +22804,7 @@
 </details>
 </section>
 
-      <section id="current-synthesis">
-        <h2><span class="icon">◎</span> Current Synthesis <span class="section-badge">Evidence-Tiered</span></h2>
-
-        <div class="spotlight" style="border-left-color: var(--accent2);">
-          <p><strong>The repo is no longer at a blank-slate stage.</strong> The exact core is already rigid:
-            <code>W(3,3)</code> as the two-qutrit Pauli commutation geometry, the local <code>H27</code> Heisenberg/MUB
-            shell, and the canonical quadratic operator <code>H_can = 12I - A = 16I - BB^T</code> with spectrum
-            <code>{0^1, 10^24, 16^15}</code>.
-          </p>
-          <p><strong>The cleanest reading is now a three-layer reading.</strong> The <strong>exact qutrit
-              kernel</strong> is public and operator-level, and the new <a
-              href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_projective_affine_shell_audit.py">Projective-Affine Shell Audit</a> makes the local
-            shell statement sharper: every point-perp is a 13-point tangent hyperplane <code>PG(2,3)</code>, its
-            complement is the affine cube <code>AG(3,3)</code>, and the familiar nine size-3 fibers are one affine
-            direction class. The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_symplectic_spread_frame_audit.py">Symplectic Spread Frame
-              Audit</a> then closes the exact complete-frame side of that same kernel: the 40 isotropic lines admit
-            exactly 36 spreads, each spread is one memory line plus nine affine measurement lines relative to any
-            anchor, and each of those 36 spreads gives a full two-qutrit stabilizer MUB frame in dimension 9. The new <a
-              href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_witting_deck_control_audit.py">Witting Deck Control Audit</a> makes the older
-            communication picture exact too: the Witting paper's 40 quantum cards live on the same kernel, the 36
-            spreads are exactly 36 full decks partitioning those cards into 10 orthogonal tetrad ranks, and the
-            resulting deck space already carries a rigid control geometry with <code>1/4</code> rank overlaps,
-            <code>216</code> maximal five-deck sweeps, and <code>135</code> maximal four-deck packets. The new <a
-              href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_witting_balanced_packet_shell_audit.py">Balanced Packet Shell Audit</a> then shows
-            that this communication layer folds back onto the local cubic-surface layer rather than floating above it:
-            the <code>27</code> balanced four-sector packets are graph-isomorphic to the honest 8-regular local shell,
-            and exact rank-intersection relations on the same packet set recover the Schläfli graph and its
-            <code>SRG(27,10,1,5)</code> intersection complement. The new <a
-              href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_witting_packet_heisenberg_chart_audit.py">Packet Heisenberg Chart Audit</a> sharpens
-            that one step further: the balanced packet layer itself splits canonically as <code>9</code> fibers of size
-            <code>3</code>, the allowed sector-triangle patterns form an affine plane in <code>F_3^4</code>, and there
-            is a fiber-preserving graph isomorphism from the packet shell to the canonical local
-            <code>H27 = F_3^2 × F_3</code> Heisenberg chart. The new <a
-              href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_witting_packet_tritangent_support_audit.py">Packet Tritangent Support Audit</a>
-            closes the support side too: on the same <code>27</code> balanced packets, the <code>36</code> shell
-            triangles together with the <code>9</code> packet fibers give the full local <code>45 = 36 + 9</code>
-            support package, every packet lies on exactly <code>5</code> support triples, and the
-            rank-intersection-<code>16</code> graph has exactly those same <code>45</code> triangles. The new <a
-              href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_witting_packet_hessian_split_audit.py">Packet Hessian Split Audit</a> refines the
-            affine half of that package all the way to the classical line-family level: the same <code>36</code>
-            non-fiber triples are exactly <code>12 × 3</code> affine lifts in <code>AG(2,3)</code>, grouped into
-            <code>4</code> direction classes of <code>3</code> lines each, and every balanced packet lies on exactly one
-            affine lift in each direction plus its unique fiber. The new <a
-              href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_witting_packet_foliation_incidence_audit.py">Packet Foliation Incidence Audit</a>
-            then exposes the next control layer hidden inside that split: the packet geometry has <code>5</code>
-            canonical triple foliations, every fiber-affine leaf-incidence graph is exactly <code>3K_{3,3}</code>, and
-            every affine-affine leaf-incidence graph is exactly the Pappus graph. The new <a
-              href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_witting_packet_quotient_geometry_audit.py">Packet Quotient Geometry Audit</a> now
-            closes the global finite side of that packet program too: the <code>45</code> packet leaves are exactly the
-            exceptional quotient points, the <code>27</code> packet-induced <code>K5</code> cliques are exactly the
-            quotient lines, and the resulting incidence geometry is the same dual <code>GQ(4,2)</code> /
-            <code>SRG(45,12,3,3)</code> / <code>SRG(27,10,1,5)</code> package already known from the center-quad bridge,
-            reached here from the Witting packet side alone. The <strong>exact local E<sub>6</sub> bridge</strong> lives
-            on the 27-point Schl&auml;fli shell with the local <code>1296 / 648</code> symmetry split, together with the
-            exact 45-tritangent signed-cubic support that closes only in the canonical cocycle gauge. The
-            <strong>continuum-side exact seed</strong> is now narrower too: the toroidal/decimal packet already fixes
-            the live coefficient base <code>8, 56, 320, 2240, 12480</code>, the new <a
-              href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_q3_master_lock_audit.py">Q=3 Master-Lock Audit</a> shows that the same selected point
-            is already overdetermined across the local kernel, its exact Parseval target geometry and shared Naimark
-            shadow, the corrected spectral/Ihara layer, the continuum and electron seed packets, and the transport
-            holonomy reduction, and the new <a href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_normalization_bridge_audit.py">Normalization Bridge
-              Audit</a> shows exactly why the April 2026 lift-normalized q-family agrees with the ordinary graph moments
-            only at <code>q=3</code>: the bridge factor is the nonzero-mode occupancy <code>2/(q-1)</code>, so the
-            apparent <code>M_2</code> uniqueness gap is just the zero-mode fraction in disguise. The new <a
-              href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_temporal_spectral_toroidal_computer_audit.py">Temporal-Spectral Toroidal Computer
-              Audit</a> then turns that exact qutrit/spread/toroidal stack into a conservative hardware dictionary: one
-            photon with temporal and synthetic-frequency qutrits on a discrete <code>3 × 3</code> torus, a
-            <code>13</code>-point projective memory screen plus <code>27</code>-point affine compute bulk,
-            <code>36</code> complete two-qutrit measurement programs, and a remaining two-quartic nonlinear frontier.
-            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCXCVI_PHOTONIC_LIFE_RUNTIME_ARCHITECTURE.md">Photonic Life Runtime
-              Architecture</a>
-            pins the next runtime layer: probabilistic KLM/fusion assembly (<code>1/4</code>, <code>1/2</code>),
-            deterministic <code>81</code>-state Pauli-frame feed-forward, a classical <code>40</code>-trit measurement
-            word, genus-one toric/Csaszar-Szilassi memory, and a bounded H1/E8 operation gate with <code>8347</code>
-            verified Z3 bracket terms. The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCIV_W33_CSS_STEANE_LIFT.md">W33 CSS Steane-Lift</a>
-            closes the next protection layer: <code>[[240,81,3]]</code> concatenated through three
-            <code>[[7,1,3]]</code> Steane lifts gives <code>[[82320,81,&ge;81]]</code>, with correctable weight
-            <code>40 = |V(W(3,3))|</code>. The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCV_PROTECTED_TOE_KERNEL.md">Protected W33/H1/E8
-              TOE Kernel</a> then records the bounded
-            finite architecture as a single executable certificate: the 40-point photonic carrier, <code>H1=Z^81</code>
-            matter memory, <code>8347</code> verified E8 Z3 bracket terms, and protected
-            <code>[[82320,81,&ge;81]]</code> CSS information stack. The new <a
-              href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCVI_PROTECTED_PHOTONIC_RUNTIME_SCHEDULER.md">Protected Photonic Runtime Scheduler</a>
-            closes the compiler handoff as an eight-tick contract: projective carrier, heralded fusion, KLM primitive
-            budget, CSS validation, deterministic MBQC feed-forward, Steane/<code>&Phi;<sub>6</sub></code> protection,
-            64-bit-class selector commit, and the E8 Z3 operation gate; it also reconciles the imported first
-            amplification block <code>[[1680,81,9]]</code> with the level-3 protected tower. The new <a
-              href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXV_DRESSED_Q4_PACKET_LOGICAL_VERIFIER.md">Dressed Q4 Packet Logical Verifier</a> then
-            closes the imported Q4 packet honesty boundary: the native <code>[[1296,81,4]]</code> subsystem packet layer
-            is valid, but the raw weight-<code>12</code> line-star replacement dresses down to weight <code>4</code> in
-            the current Bacon-Shor center. The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXVI_PROTECTION_SELECTION_LEDGER.md">Protection /
-              Selection Ledger</a> assigns roles:
-            Q4 packets remain local routing hardware, the Steane/<code>&Phi;<sub>6</sub></code>
-            <code>[[82320,81,&ge;81]]</code> lift remains active protection, and the classical <code>40</code>-trit
-            selector commits only after protected acceptance. The new <a
-              href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXVIII_PHOTONIC_HARMONIC_TQC_BUS.md">Photonic Harmonic TQC Bus</a> then connects the
-            hardware denominators to the topological oscillator shell: fusion denominator <code>2</code> is
-            <code>&lambda;</code>, toric logical-qubit count, and harmonic frequency squared; KLM denominator
-            <code>4</code>
-            is <code>&mu;</code>, toric ground-state degeneracy, and toric stabilizer weight. The same bus
-            uses the Heawood <code>14=2&Phi;<sub>6</sub></code> rail and middle shell <code>12=6+6</code> while keeping
-            Q4 as local <code>[[1296,81,4]]</code> routing and Steane/<code>&Phi;<sub>6</sub></code>
-            <code>[[82320,81,&ge;81]]</code> as active protection.
-            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXXII_TOROIDAL_PHOTONIC_ALGEBRA_BRIDGE.md">Photonic Harmonic TQC Algebra from 7
-              Toroidal Realizations</a>
-            (Part CCCCXXII) derives the 7-mode photonic harmonic TQC algebra A(7) directly from the
-            coordinate and combinatorial data of all seven toroidal realizations. The 5 Cs&aacute;sz&aacute;r
-            modes form the K<sub>7</sub> hopping input register (spectral gap &Phi;<sub>6</sub>&nbsp;=&nbsp;7,
-            21 bond operators, 7 Fano triple interactions); the 2 Szilassi modes are the KLM Type-II ancilla
-            pair (p&nbsp;=&nbsp;1/&mu;&nbsp;=&nbsp;1/4). C<sub>2</sub> orbital decomposition yields
-            5&times;&mu;&nbsp;=&nbsp;20&nbsp;=&nbsp;V<sub>W33</sub>/2 Cs&aacute;sz&aacute;r orbital modes
-            and 2&times;&Phi;<sub>6</sub>&nbsp;=&nbsp;14&nbsp;=&nbsp;dim(G<sub>2</sub>) Szilassi orbital modes.
-            Volume spectrum: C1&nbsp;=&nbsp;5<sup>3</sup>&nbsp;=&nbsp;(Q+&lambda;)<sup>3</sup>,
-            S1&nbsp;=&nbsp;5226/5 (denom&nbsp;=&nbsp;Q+&lambda;), S2&nbsp;=&nbsp;7976/9
-            (denom&nbsp;=&nbsp;Q<sup>2</sup>);
-            every constant is a polynomial in q&nbsp;=&nbsp;3 (48 checks, 98 tests).
-            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXXIII_A7_REPRESENTATION_CSS_TORIC_BRIDGE.md">A(7) Representation Theory and
-              Cs&aacute;sz&aacute;r K7 CSS Toric Code</a>
-            (Part CCCCXXIII) resolves the algebraic and local-code layer underneath A(7):
-            <code>U(7)=49</code>, <code>SU(7)=48</code>, <code>G<sub>2</sub>=14</code>, K<sub>7</sub> spectral gap
-            <code>7=&Phi;<sub>6</sub></code>, and bond branching <code>21=14+7</code>. On each Cs&aacute;sz&aacute;r
-            K<sub>7</sub> torus, the GF(2) chain complex gives a CSS toric code
-            <code>[[21,2,&ge;3]]</code> with ranks <code>6</code> and <code>13</code>, ground-state degeneracy
-            <code>4=&mu;</code>, and <code>48 checks</code> passing.
-            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXXIV_CSASZAR_THETA_LOGICAL_COMPILER.md">Cs&aacute;sz&aacute;r Theta Logical
-              Compiler</a>
-            (Part CCCCXXIV) then compiles the five Cs&aacute;sz&aacute;r input modes into a direct-product local toric
-            packet <code>[[105,10,&ge;3]]</code>: the ten logical qubits are exactly
-            <code>theta(W33)=10</code>, the local ground-state degeneracy is <code>theta(complement)=4</code>, and
-            <code>10&times;4=40</code> recovers the W33 capacity/vertex count. The two Szilassi modes remain a
-            <code>2&Phi;<sub>6</sub>=14=dim(G<sub>2</sub>)</code> ancilla rail, and the rank handoff
-            <code>105+14+1=120</code> matches the W33 triangle-check rank without asserting a canonical
-            operator isomorphism.
-            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXXV_THETA_U5_STABILIZER_COMPLETION.md">Theta / U(5) Stabilizer Completion</a>
-            (Part CCCCXXV) completes that local compiler to the full W33 CSS rank accounting:
-            five Cs&aacute;sz&aacute;r blocks have check rank <code>95</code>, the input-mode algebra gives
-            <code>U(5)=25</code>, so <code>95+25=120</code>; adding the W33 vertex-star rank gives
-            <code>120+39=159</code>, and the whole edge carrier closes as
-            <code>95+25+39+81=240</code>. The same physical carrier splits as
-            <code>105+135=240</code>, with shares <code>7/16</code> and <code>9/16</code>, and the split is
-            preserved inside the active protected code <code>[[82320,81,&ge;81]]</code>.
-            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXXVI_FUSION_CONTROL_SCHEDULER_SPLICE.md">Fusion-Control Scheduler Splice</a>
-            (Part CCCCXXVI) then welds that completion back into the protected photonic runtime scheduler:
-            <code>105+135=240</code> accepted bonds refine the probabilistic budgets as
-            <code>210+270=480</code> fusion attempts and <code>420+540=960</code> KLM primitives.
-            Its CSS tick is now <code>95+25=120</code> and <code>120+39+81=240</code>, while the
-            deterministic frame remains <code>H1=81</code> and the classical layer remains the
-            <code>40-trit selector</code> inside a 64-bit envelope.
-            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXXVII_PHOTONIC_CURVED_PRODUCT_HANDOFF.md">Photonic Curved Product Handoff</a>
-            (Part CCCCXXVII) then attaches the protected finite runtime to the explicit curved 4D side:
-            <code>CP2_9</code> has Betti profile <code>(1,0,1,0,1)</code> and harmonic total <code>3</code>,
-            while <code>K3_16</code> has <code>(1,0,22,0,1)</code>, harmonic total <code>24</code>, and
-            H<sup>2</sup> signature split <code>(3,19)</code>. The <code>H1=81</code> tail lifts to
-            curved harmonic channels <code>243</code> and <code>1944</code>; product heat traces factorize,
-            barycentric density limits are <code>120/19</code> and <code>860/19</code>, and the native
-            A<sub>2</sub> transport product has positive <code>gap 24</code>. The entry keeps the
-            boundary explicit: this is the finite-to-curved handoff, not yet the final
-            Einstein-Hilbert asymptotic theorem.
-            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXXVIII_PHOTONIC_CURVED_EH_EXTRACTOR.md">Photonic Curved Einstein-Hilbert
-              Extractor</a>
-            (Part CCCCXXVIII) then attaches the exact curved coefficient machinery to that handoff:
-            the barycentric first-moment tower has exact <code>120</code>-, <code>6</code>-, and <code>1</code>-mode
-            projectors, equivalently a residue decomposition
-            <code>A/(1 - 120z) + B/(1 - 6z) + C/(1 - z)</code>. On both <code>CP2_9</code> and
-            <code>K3_16</code>, the <code>6</code>-mode recovers <code>c6=12480</code>, the rank-39
-            normalization gives <code>cEH=320</code>, and the topological channel gives
-            <code>a2=2240</code>. The same three-sample tower reconstructs
-            <code>D_F^2={0^82,4^320,10^48,16^30}</code>, moments <code>(480,2240,17600)</code>,
-            <code>SRG(40,12,2,4)</code>, <code>&Phi;3=13</code>, <code>&Phi;6=7</code>, and
-            <code>x=3/13</code>, while still not yet the final Einstein-Hilbert asymptotic theorem.
-            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXXIX_PHOTONIC_EMPIRICAL_CLOSURE_HANDOFF.md">Photonic Empirical Closure
-              Handoff</a>
-            (Part CCCCXXIX) reconciles that CCCC photonic-curved stream with the newer CCC empirical stream through
-            <code>CCCXXXIII</code>. It records the compatibility handoff:
-            <code>c6/cEH=39=q&Phi;3</code>, <code>a2/cEH=7=&Phi;6</code>, and <code>x=3/13</code>
-            on the exact curved side, while the empirical side carries the Higgs/CKM/top mass-mixing surface,
-            light-quark Yukawas <code>y_d=70/137<sup>3</sup></code> and
-            <code>y_u=32/137<sup>3</sup></code>, and the GUT-Planck <code>24/114</code> hierarchy.
-            The shared atom table is <code>q=3</code>, <code>&lambda;=2</code>, <code>&mu;=4</code>,
-            <code>v=40</code>, <code>&Phi;3=13</code>, <code>&Phi;4=10</code>, <code>&Phi;6=7</code>,
-            <code>alpha_inv=137</code>, and <code>H0=70</code>.
-            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXXX_CYCLIC_CAYLEY_OBSTRUCTION.md">Cyclic Cayley Obstruction and Photonic
-              Ouroboros Guard</a>
-            (Part CCCCXXX) then protects the architecture from a false
-            shortcut: an exhaustive <code>C(19,6)=27132</code> search over symmetric valency-12 connection
-            sets on <code>Z40</code> finds zero cyclic <code>Z40</code> hits for
-            <code>SRG(40,12,2,4)</code>. The promoted cycle is instead the
-            <code>480-state Hashimoto/fusion carrier</code> and the
-            QEC ouroboros preserving <code>H1=81</code>, followed by the
-            Steane/<code>&Phi;6</code> protected closure.
-            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCCXIV_HOLONOMY_SIGNED_TRIAD_A2_PROJECTION_BRIDGE.md">Holonomy Signed-Triad
-              / A2 Projection Bridge</a> (Part DCCXIV) sharpens the local loop alphabet:
-            the <code>12</code> turns split as <code>6+6</code>, with six signed Clifford triad channels
-            <code>&plusmn;B23</code>, <code>&plusmn;B31</code>, <code>&plusmn;B12</code> projecting to the six
-            A<sub>2</sub>/Weyl return roots while the <code>480</code>-state carrier preserves
-            <code>H1=81</code>.
-            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCCXV_PHOTONIC_FUSION_SYNDROME_QEC_BRIDGE.md">Photonic Fusion-Syndrome
-              QEC Bridge</a> (Part DCCXV) then makes the probabilistic side native:
-            <code>p<sub>fusion</sub>=1/2</code> reads as <code>240</code> accepted W33 bond slots plus
-            <code>240</code> heralded return/syndrome slots, refined as
-            <code>(105+135)+(105+135)=210+270=480</code>; the KLM primitive ledger is the doubled
-            <code>420+540=960</code> lift.
-            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCCXVI_AXIS_SYNDROME_SELECTOR_CODEC_BRIDGE.md">Axis-Syndrome Selector
-              Codec Bridge</a> (Part DCCXVI) then explains why the classical record is only
-            <code>40</code> trits: the local alphabet factors as <code>12=3&times;2&times;2</code>,
-            so the selector stores the ternary axis coordinate while the sign and accepted/return
-            choices remain protected frame/syndrome bits; the KLM rail adds the final binary lift to
-            <code>960</code>.
-            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCCLXVII_AXIS_SYNDROME_NILPOTENT_OCTAHEDRAL_BRIDGE.md">Axis-Syndrome
-              Nilpotent / Octahedral Codec Bridge</a> (Part DCCLXVII) locks that codec to the
-            octahedral harmonic tower: the six signed Clifford axes are the six octahedron vertices,
-            the <code>12</code> axis-syndrome slots are six signed axes tensored with the two-state
-            F<sub>3</sub> transport extension, and the KLM rail resolves them into the
-            <code>24</code> directed octahedral turn incidences, so <code>480=40&times;12</code>
-            and <code>960=40&times;24</code>. The same square-zero increment
-            <code>N=[[0,1],[0,0]]</code> tensors with <code>H1=81</code> to give the exact
-            <code>0&rarr;81&rarr;162&rarr;81&rarr;0</code> QEC-tail extension: the snake eats
-            its tail as a nilpotent return-syndrome correction, not as an extra classical selector.
-            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCCLXVIII_NILPOTENT_CHAIN_LIFT_QEC_BRIDGE.md">Nilpotent
-              Chain-Lift / QEC Bridge</a> (Part DCCLXVIII) then upgrades that local tail into
-            the W33 CSS chain complex itself: over F<sub>3</sub>, the oriented 2-skeleton has
-            <code>(C0,C1,C2)=(40,240,160)</code>, ranks <code>(39,120)</code>, and
-            <code>H=(1,81,40)</code>; tensoring with the dual-number extension gives
-            <code>C1&otimes;F3[&epsilon;]/&epsilon;<sup>2</sup>=480</code> and
-            <code>H1=162</code>. The nilpotent commutes with both boundaries and descends to
-            a rank-81 square-zero operator on homology, so the fusion ledger is the nilpotent
-            W33 edge-chain lift rather than a separate bookkeeping layer.
-            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXXI_TOROIDAL_FANO_BRIDGE.md">Seven Toroidal Polyhedra Realizations &harr; Fano
-              Octonion Framework</a>
-            (Part CCCCXXI) proves that the five Cs&aacute;sz&aacute;r and two Szilassi realizations
-            in three-dimensional Euclidean space biject canonically with the seven points and lines of
-            the Fano plane PG(2,&#x1D53D;<sub>2</sub>), with 21 edges = Q&times;&Phi;<sub>6</sub>,
-            14 faces/vertices = dim(G<sub>2</sub>), C<sub>2</sub> orbit duality (4,7)&harr;(7,4)
-            mirroring Fano point&ndash;line duality, the Cs&aacute;sz&aacute;r apex = Higgs singlet,
-            and cyclic number 1/7 encoding the 5+2 split (48 checks, 73 tests).
-            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXX_FANO_OCTONION_SM_ALGEBRA_BRIDGE.md">Fano Plane &rarr; Octonion &rarr;
-              G&sub2; &rarr; SU(3) &rarr; Standard Model</a>
-            (Part CCCCXX) proves the Single Algebraic Object Theorem: every SM parameter
-            &mdash; gauge group dimension <code>k = 2<sup>q</sup>+q+1 = 12</code>, three generations,
-            fermion count <code>MULT<sub>S</sub> = 15</code>, and Weinberg angle
-            <code>sin&sup2;&theta;<sub>W</sub> = q/&Phi;<sub>13</sub> = 3/13</code> &mdash;
-            is uniquely determined by the octonion algebra <strong>O</strong> encoded by the Fano plane,
-            with every constant a polynomial in q&nbsp;=&nbsp;3 alone (27 checks, 133 tests).
-            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXIX_PHOTONIC_HARMONIC_TQC_SYNTHESIS_BRIDGE.md">Photonic Harmonic TQC Geometric
-              Synthesis</a>
-            closes the architecture loop: the Lov&aacute;sz orthonormal labeling dimension
-            <code>dim<sub>min</sub> = q = 3</code> seeds the entire five-layer bus,
-            the complement theta <code>&theta;(G&#x0305;) = &mu; = 4</code> is simultaneously the KLM
-            denominator and toric ground-state degeneracy, and the Shannon capacity identity
-            <code>&theta;(G)&middot;&theta;(G&#x0305;) = 40 = V</code> confirms the architecture wastes no information.
-            The Heawood middle shell <code>2&times;q! = 12 = K</code> and the protected CSS tower
-            <code>[[240,81,3]] &rarr; [[82320,81,&ge;81]]</code> are Lov&aacute;sz-indexed end-to-end.
-            The <strong>promoted global closure</strong> is the later spectral layer that carries the current
-            <code>E8</code>, flavour, curvature, and moonshine package. A compact statement of that theorem boundary is
-            collected on <a href="qutrit_foundation.html">Exact Qutrit Foundation</a>, the local determinant-support
-            boundary is separated by <a href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_local_albert_shadow_audit.py">Local Albert Shadow
-              Audit</a>, the finite <code>1q -&gt; 2q -&gt; 3q -&gt; 6q</code> ladder is collected in <a
-              href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_qutrit_ladder_audit.py">Exact Qutrit Ladder Audit</a>, the exact continuum
-            coefficient seed is packaged in <a href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_toroidal_continuum_seed_audit.py">Toroidal Continuum
-              Seed Audit</a>, the old promoted <code>W33 &lt;-&gt; E8</code> surface is separated by <a
-              href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_e8_correspondence_boundary_audit.py">W33-E8 Boundary Audit</a>, the cross-preset
-            neutrino robustness check is packaged in <a href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_neutrino_preset_audit.py">Neutrino Preset
-              Audit</a>, and the broader repo/doc/script audit is collected on <a href="repo_frontier_audit.html">Repo
-              Frontier Audit</a>.
-            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCCLXXII_FORMULA_REGIME_REGISTRY_BRIDGE.md">Formula-Regime Registry Bridge</a>
-            turns the May 16 consistency audit into an executable claim-hygiene layer: the two alpha expressions remain
-            unresolved variants with exact delta <code>24/5431679</code>, while electroweak values must carry shell
-            labels, <code>3/8</code> for the bare/internal shell and <code>3/13</code> for the dressed/projective live
-            bridge.
-            The companion <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCCLXXIII_TOROIDAL_MARKOV_E6_BURDEN_BRIDGE.md">Toroidal Markov / E6
-              Burden Bridge</a> closes the DC-DCII toroidal Markov modes by the cubic
-            <code>512x^3 - 168x - 7</code>, upgrades them to exact moment and trace recurrences, and connects the
-            E6 branching <code>27 = 16 + 10 + 1</code> to the finite burden certificate
-            <code>81 = 3&times;27</code> with Standard Model anomaly sums kept exact.
-            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCCLXXIV_CLOSURE_TRANSFER_RESOLVENT_EQUIVALENCE_BRIDGE.md">Closure Transfer-Resolvent
-              Equivalence</a>
-            then cleans up the closure-clock operator surface:
-            <code>G=(1/2)S</code>, <code>(G^d)<sub>i,i+d</sub>=2<sup>-d</sup></code>, and
-            <code>K=(I-G)<sup>-1</sup></code> are one finite package, so the canonical DCCXL resolvent absorbs the
-            old transfer-generator face without a second Part DCCXL.
-            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCCLXXV_PHOTONIC_RETRY_CLOSURE_KERNEL_BRIDGE.md">Photonic Retry Closure-Kernel</a>
-            identifies that same power law with the DCCXV fusion ledger: <code>d</code> heralded return updates carry
-            weight <code>2<sup>-d</sup></code>, the six accepted depths plus six return depths give
-            <code>480</code> directed retry attempts, and the KLM rail doubles the finite scheduler to
-            <code>960</code> primitives while <code>39+120+81=240</code> preserves <code>H1=81</code>.
-            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCCCXIV_PHENOMENOLOGY_CLAIM_LEDGER_AUDIT.md">Phenomenology Claim-Ledger Audit</a>
-            turns the new <code>DCCLXXXIV-DCCCXIII</code> GitHub burst into a checked status ledger: it keeps all
-            30 result JSONs and theorem notes visible while flagging that <code>DCCCII</code> claims a 1-sigma top-mass
-            match despite larger sigma residuals, and that <code>DCCXCVIII</code> master verification only covers
-            through Part 797.
-            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCCCLXXI_FRONTIER_RESULT_LEDGER_REPAIR.md">Frontier Result-Ledger Repair</a>
-            then records the live successor state: the older <code>DCCCII</code>/<code>DCCCXI</code> top-mass audit and
-            tension remain historically true, the newer <code>DCCCXIV</code> graviton correction and <code>DCCCXV</code>
-            master update promote the top pole residual to <code>0.93 sigma</code>, and <code>DCCCLXXI</code> surfaces
-            the
-            duplicated <code>DCCCXIV</code> theorem-note numbering as an explicit ledger issue rather than erasing
-            either
-            artifact. It also repairs the <code>DCCCXXIX-DCCCLXX</code> result namespace so the live frontier has a
-            contiguous, machine-readable result JSON surface.
-            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCCCLXXII_W33_FOR_EVERYONE_QEC_OUROBOROS_BRIDGE.md">W33 For Everyone QEC
-              Ouroboros Consistency Bridge</a> now ties the plain-language manuscript to the protected architecture:
-            <code>39+120+81=240</code>, <code>0&rarr;81&rarr;162&rarr;81&rarr;0</code>,
-            <code>480=240+240</code>, <code>12=6+6</code>, and the doubled
-            <code>960</code> KLM rail all stay executable audit facts rather than narrative-only claims.
-            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCMI_SUB_DISTINCTION_BOUNDARY_AUDIT.md">Sub-Distinction Boundary Audit</a>
-            then checks the new <code>DCCCLXXIII-DCM</code> GitHub descent: result JSONs are contiguous after
-            repairing <code>DCCCLXXXII</code> and <code>DCCCXCII</code>, while <code>PG(2,3)</code> is kept as a
-            <code>13</code>-point projective screen and not promoted over the live <code>40</code>-vertex,
-            <code>240</code>-edge <code>W(3,3)</code> substrate.
-            The follow-up <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCMII_PROJECTIVE_SCREEN_BULK_QEC_BRIDGE.md">Projective Screen / Affine
-              Bulk / QEC Tail Bridge</a> gives the positive typed interface:
-            <code>40=13+27=1+12+27</code>, the <code>13</code>-point screen is the existing
-            <code>S=A+I</code> holonomy-screen operator, the <code>27</code> bulk lifts by <code>q=3</code> to
-            <code>H1=81</code>, and the same split recovers the <code>480</code> directed carrier,
-            <code>1296</code> local routing scale, <code>82320</code> protected lift, and projective
-            <code>3/13</code> share.
-            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCMLXXIX_IHARA_PARAMETER_RECONCILIATION.md">Ihara Parameter Reconciliation</a>
-            now cleans up the latest RH/CSS burst: the <code>PG(2,3)</code> Levi graph is
-            <code>4</code>-regular with Bass parameter <code>3</code> and critical radius
-            <code>3<sup>-1/2</sup></code>, while the <code>W(3,3)</code> collinearity graph is
-            <code>12</code>-regular with Bass parameter <code>11</code> and critical radius
-            <code>11<sup>-1/2</sup></code>; finite graph-Ihara RH is proved, but the classical
-            Riemann RH remains an identification/limit bridge.
-            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCMLXXX_Z12_709_IHARA_GENUS_BRIDGE.md">Z12 709 / Ihara / Genus Bridge</a>
-            then audits the new cyclotomic observation: for
-            <code>z=1+2&zeta;<sub>12</sub>+6&zeta;<sub>12</sub><sup>2</sup>+4&zeta;<sub>12</sub><sup>3</sup></code>,
-            the exact algebraic norm is <code>709</code>, the exploratory <code>709<sup>2</sup></code>
-            is a squared-magnitude artifact, the Eisenstein shadow has exact norm <code>13</code>,
-            and the apparent <code>137</code> is a rounded identity-embedding shadow. On the
-            <code>W(3,3)</code> side, <code>709</code> is not a primitive Ihara factor, but it is a
-            unique nonstructural expanded-coefficient resonance modulo <code>709</code> at degree
-            <code>338</code> after removing the exact structural zero coefficients at degrees
-            <code>1</code>, <code>2</code>, and <code>479</code>; the same part also records that
-            <code>n=3+4s</code> preserves the RH imaginary
-            coordinate while mapping the critical line to <code>Re(n)=5</code>, not to the
-            genus axis <code>Re(n)=7/2</code>.
-            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCMLXXXI_HEEGNER_IHARA_GAUSSIAN_AUDIT.md">Heegner / Ihara / Gaussian Audit</a>
-            then checks the May 18 GitHub Heegner note directly: the live W(3,3)
-            Ihara-Bass theorem uses Bass coefficient <code>11</code>, not <code>12</code>, so the
-            actual non-trivial graph-zeta fields are <code>Q(&radic;-10)</code> and
-            <code>Q(&radic;-7)</code> with pole radius <code>11<sup>-1/2</sup></code>. The coefficient
-            <code>12</code> version remains a useful Heegner shadow producing
-            <code>Q(&radic;-11)</code> and <code>Q(&radic;-2)</code>, but it is not the Bass
-            determinant. The same audit runs the requested division:
-            <code>(160+221i)/(4+11i)=(3071-876i)/137</code>, which is not a Gaussian integer,
-            so <code>74441</code> shares the Gaussian sheet with <code>137</code> without containing
-            the Gaussian prime of norm <code>137</code>.
-            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCMLXXXII_IHARA_Z12_CROSS_BRANCH_RESONANCE_AUDIT.md">Ihara/Z12 Cross-Branch Resonance
-              Audit</a>
-            then reconciles those local corrections with the
-            remote-only GitHub <code>main@ec327312</code> notes: Bass-11 remains the live graph zeta,
-            coefficient-12 remains a shadow, <code>709</code> remains an expanded-determinant
-            resonance rather than a primitive Ihara factor, and the branch comparison is exact. The
-            Bass-11 resonance is the unique nonstructural mod-<code>709</code> hit at degree
-            <code>338</code>; the coefficient-12 shadow resonance is the corresponding hit at degree
-            <code>424</code>. The same audit keeps <code>alpha<sup>-1</sup>=137=11<sup>2</sup>+4<sup>2</sup></code>
-            separate from the rounded Z12 identity-sheet shadow and states that classical Riemann RH remains open
-            behind the <code>zeta_W=zeta</code> identification bridge.
-            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCMLXXXIII_BASS_CNUB_ENTROPY_BRANCH_SELECTOR.md">Bass/CnuB Entropy Branch Selector</a>
-            then tests the strongest cross-domain consequence of that decrement: the live Bass-11 branch gives
-            <code>4/11</code>, exactly the standard CnuB/CMB temperature-cube entropy ratio, while the
-            coefficient-12 shadow gives <code>1/3</code>. Thus coefficient 12 is the wrong CnuB entropy denominator
-            for the same reason it is the wrong live graph-zeta coefficient; the remaining target is a functorial
-            entropy-decoupling bridge, not a new classical RH claim.
-            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCMLXXXIV_POST_BURST_FORCING_MOONSHINE_AUDIT.md">Post-Burst Forcing/Moonshine Audit</a>
-            then checks the new DCCLXXVIII-DCCLXXXIII horizon/Moonshine burst before promoting it: <code>640320</code>
-            is <em>not</em> <code>2<sup>7</sup>q<sup>2</sup>5&Phi;<sub>6</sub>B<sub>2</sub></code>, but it is exactly
-            <code>&Phi;<sub>6</sub>!B<sub>2</sub>+|E|=7!&middot;127+240</code> and
-            <code>|E|d<sub>Z</sub>(f-1)(f+&lambda;+q)</code>. The same audit states that W(3,3) is not the Johnson graph
-            <code>J(40,12)</code>; the Johnson/girth pincer is rejected, while the exact Monster level,
-            theta-eta horizon, Leech split, and finite <code>d<sub>X</sub>=q=3</code> code facts remain live.
-            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_BT367_E6_HOLONOMY_BRIDGE.md">BT367 E6 Holonomy / Twisted Phase Phantom</a>
-            (July 2026) identifies the 120-sheet Holonet selector (40 lines * 3 phases)
-            as a holographic representation of the E6 root system. The 51,840-tick supercycle is the Weyl group
-            W(E6), and the 120-dimensional representation decomposes multiplicity-freely into Irreps
-            of dimensions {1, 15, 20, 24, 60}. The 760 conflicts measured in the global holonomy solver
-            are exactly 2 * 380, identifying the 'Twisted Phase Phantom' as the topological obstruction
-            in the E6-to-W33 projection.
-          </p>
-        </div>
-
-        <!-- ─── Grand Unification Banner ─── -->
-        <div class="highlights-banner"
-          style="background: linear-gradient(135deg, rgba(88,166,255,0.12), rgba(210,168,255,0.08)); border: 2px solid var(--accent); margin-bottom: 2rem;">
-          <h3 style="color: var(--accent); font-size: 1.3rem; margin: 0 0 0.75rem;">The Complete Derivation Chain</h3>
-          <p style="margin-bottom: 1rem; font-size: 0.95rem;">
-            <strong>Input: q = 3</strong> (the unique prime satisfying C1&ndash;C7). <strong>Promoted output: the
-              current spectral-closure package.</strong><br>
-            W(3,3) = SRG(40,12,2,4) &xrarr; Aut = PSp(4,3) = W(E<sub>6</sub>) &xrarr; E<sub>6</sub> GUT &xrarr; SM gauge
-            group.<br>
-            27 non-neighbours &xrarr; Payne GQ(2,4) &xrarr; SRG(27,10,1,5) = Schl&auml;fli complement &xrarr;
-            E<sub>6</sub> fundamental.<br>
-            E<sub>6</sub> cubic invariant on 27 &xrarr; Yukawa couplings with Z<sub>3</sub> selection rule &xrarr; CKM
-            (0.26% error) + PMNS (0.6% error).<br>
-            C7 identity s<sup>2</sup> = r<sup>2</sup> + k (unique to q=3) &xrarr; &alpha;<sup>-1</sup> =
-            (k-1)<sup>2</sup> + s<sup>2</sup> = 137.<br>
-            sin<sup>2</sup>&theta;<sub>W</sub> = q/&Phi;<sub>3</sub> = 3/13 (0.19% from experiment). M<sub>GUT</sub> =
-            136<sup>g/2</sup> = 10<sup>16</sup> GeV. &Lambda;<sub>CC</sub> = 10<sup>-122</sup>.
-          </p>
-          <div class="stats-grid" style="margin-bottom: 1rem;">
-            <div class="stat-card" style="border-color: var(--accent);">
-              <div class="stat-num">1000+</div>
-              <div class="stat-label">Tests pass</div>
-            </div>
-            <div class="stat-card" style="border-color: var(--accent2);">
-              <div class="stat-num">7/7</div>
-              <div class="stat-label">Uniqueness conditions (C1&ndash;C7)</div>
-            </div>
-            <div class="stat-card" style="border-color: var(--accent3);">
-              <div class="stat-num">1</div>
-              <div class="stat-label">Free parameter (q=3)</div>
-            </div>
-            <div class="stat-card" style="border-color: var(--gold);">
-              <div class="stat-num">5</div>
-              <div class="stat-label">Falsifiable predictions</div>
-            </div>
-          </div>
-          <div class="card-grid" style="margin: 0;">
-            <div class="card" style="border-left: 4px solid var(--accent);">
-              <div class="label" style="color: var(--accent);">Exceptional Lie Algebras</div>
-              <div class="detail">All five exceptional Lie algebra dimensions from graph parameters:
-                G<sub>2</sub>=2&Phi;<sub>6</sub>=14, F<sub>4</sub>=v+k=52, E<sub>6</sub>=2v&minus;&lambda;=78,
-                E<sub>7</sub>=vq+&Phi;<sub>3</sub>=133, E<sub>8</sub>=E+2&sup3;=248.</div>
-            </div>
-            <div class="card" style="border-left: 4px solid var(--accent2);">
-              <div class="label" style="color: var(--accent2);">String Theory Dimensions</div>
-              <div class="detail">D<sub>bosonic</sub>=f+&lambda;=26, D<sub>super</sub>=&Theta;=k&minus;&lambda;=10,
-                D<sub>M-theory</sub>=k&minus;1=11. All compactification dimensions from graph: 11&rarr;4 via
-                &Phi;<sub>6</sub>=7, 10&rarr;4 via &Theta;&minus;&mu;=6, 26&rarr;10 via &mu;&sup2;=16.</div>
-            </div>
-            <div class="card" style="border-left: 4px solid var(--accent3);">
-              <div class="label" style="color: var(--accent3);">Gaussian Integer Alpha (C7 Derived)</div>
-              <div class="detail">&alpha;<sup>&minus;1</sup> = (k&minus;1)<sup>2</sup> + s<sup>2</sup> = 11<sup>2</sup>
-                + 4<sup>2</sup> = 137. The C7 identity s<sup>2</sup> = r<sup>2</sup> + k holds iff q(q&minus;3)=0, i.e.
-                q=3. This is NOT post-hoc numerology: the Gaussian integer z = (k&minus;1) + |s|i = 11+4i is the
-                Ihara&ndash;gauge vector, and its norm gives &alpha;<sup>&minus;1</sup> only when the C7 eigenvalue
-                identity is satisfied.</div>
-            </div>
-            <div class="card" style="border-left: 4px solid var(--gold);">
-              <div class="label" style="color: var(--gold);">Master Predictions Table</div>
-              <div class="detail">50+ aspects of physics from one equation q!=2q: legacy/boundary
-                &alpha;<sup>&minus;1</sup>&asymp;137.036 (phenomenology tier),
-                sin&sup2;&theta;<sub>W</sub>=481/2080 (0.04%), &alpha;<sub>s</sub>=20/169 (0.38%),
-                m<sub>H</sub>=125.3&nbsp;GeV (0.13%), m<sub>p</sub>/m<sub>e</sub>=v&sup2;+E&minus;&mu;=1836 (0.008%),
-                Koide=&lambda;/q=2/3 (0.001%), m<sub>t</sub>/m<sub>b</sub>=v+1=41 (1%),
-                m<sub>t</sub>/m<sub>c</sub>=(v+1)q+&Phi;<sub>3</sub>=136 (0.1%),
-                m<sub>c</sub>/m<sub>u</sub>=gv&minus;&Phi;<sub>3</sub>+1=588 (exact), n<sub>s</sub>=29/30 (0.3%),
-                &Omega;<sub>&Lambda;</sub>=41/60 (0.2%), &Omega;<sub>DM</sub>/&Omega;<sub>b</sub>=16/3 (0.9%),
-                |V<sub>us</sub>|=9/40 (0.16%), |V<sub>cb</sub>|=1/25 (1.0%), J<sub>CKM</sub>=27/884000 (0.8%),
-                sin&sup2;&theta;<sub>12</sub>=4/13 (exact finite theorem), sin&sup2;&theta;<sub>23</sub>=7/13 (1.4%),
-                sin&sup2;&theta;<sub>13</sub>=2/91 (0.1%), &theta;<sub>QCD</sub>=0. &chi;&sup2;/dof=0.64 (31 precision
-                observables). Legacy sin&sup2;&theta;<sub>12</sub>=3/10 remains a boundary conflict in the Q8 claim
-                ledger. ZERO free parameters. 3004 checks.</div>
-            </div>
-            <div class="card" style="border-left: 4px solid #f1c40f;">
-              <div class="label" style="color: #f1c40f;">Combinatorial Universe</div>
-              <div class="detail"><strong>PRIME COUNTING CHAIN:</strong> &pi;(v)=k, &pi;(k)=&mu;+1, &pi;(&mu;+1)=q,
-                &pi;(q)=&lambda;. <strong>CATALAN CHAIN:</strong> C(&lambda;)=&lambda;, C(q)=&mu;+1,
-                C(&mu;)=&lambda;&Phi;<sub>6</sub>, C(&mu;+1)=v+&lambda;=42. <strong>FIBONACCI-LUCAS DUAL
-                  LADDER:</strong> F(q)=&lambda;, F(&mu;)=q, F(&Phi;<sub>6</sub>)=&Phi;<sub>3</sub>; L(&lambda;)=q,
-                L(q)=&mu;, L(&mu;)=&Phi;<sub>6</sub>; F&sdot;L and L&sdot;F both fix q. <strong>SIGMA CHAIN:</strong>
-                &sigma;(&lambda;)=q&rarr;&mu;&rarr;&Phi;<sub>6</sub>&rarr;q&sup2;&minus;1&rarr;g&rarr;f&rarr;60&rarr;|PSL(2,7)|=168.
-                <strong>ALL 26 SPORADIC GROUPS:</strong> every order graph-parametric:
-                M<sub>11</sub>&ndash;M<sub>24</sub>, J<sub>1</sub>&ndash;J<sub>4</sub>, HS, McL, Suz,
-                Co<sub>1&ndash;3</sub>, ON, Ly, Ru, He, Fi<sub>22&ndash;24</sub>, HN, Th, BM, M. <strong>MODULAR
-                  GROUP:</strong> &psi;(&lambda;)=q, &psi;(q)=&mu;, &psi;(k)=f, dim&nbsp;S<sub>f</sub>=&lambda;.
-                <strong>j-constant 744=(q&sup2;&minus;1)&middot;q&middot;(2g+1)</strong>.
-                &tau;(3)=&mu;q&sup2;&Phi;<sub>6</sub>, &tau;(5)=&lambda;q(&mu;+1)&Phi;<sub>6</sub>(f&minus;1),
-                &tau;(7)=&minus;(q&sup2;&minus;1)&Phi;<sub>6</sub>&Phi;<sub>3</sub>(f&minus;1). <strong>CLASS
-                  NUMBERS:</strong> h(&minus;g)=&lambda;, h(&minus;(f&minus;1))=q, h(&minus;N<sub>eff</sub>)=&mu;,
-                h(&minus;(v+&Phi;<sub>6</sub>))=&mu;+1, h(&minus;(&Phi;<sub>12</sub>&minus;&lambda;))=&Phi;<sub>6</sub>.
-                <strong>FERMAT:</strong> F<sub>0</sub>=q, F<sub>1</sub>=&mu;+1, F<sub>2</sub>=&mu;&sup2;+1;
-                F<sub>0</sub>&middot;F<sub>1</sub>&middot;F<sub>2</sub>=E+g. <strong>WEYL:</strong>
-                |W(E<sub>7</sub>)|=&lambda;<sup>&Theta;</sup>q<sup>4</sup>(&mu;+1)&Phi;<sub>6</sub>,
-                |W(E<sub>8</sub>)|=&lambda;<sup>&lambda;&Phi;<sub>6</sub></sup>q<sup>5</sup>(&mu;+1)&sup2;&Phi;<sub>6</sub>.
-                p-adic: v<sub>p</sub>(f!)=&Theta;,&mu;,q,&lambda;,1 for p=3,5,7,11,13. <strong>GRAPH RIEMANN
-                  HYPOTHESIS:</strong> W(3,3) is Ramanujan; all Ihara zeta poles satisfy |u|=1/&radic;(k&minus;1).
-                <strong>SPANNING TREES:</strong>
-                &tau;=&lambda;<sup>q<sup>&mu;</sup></sup>&middot;(&mu;+1)<sup>f&minus;1</sup>=2<sup>81</sup>&middot;5<sup>23</sup>.
-                <strong>KISSING NUMBERS:</strong> kiss(1,2,3,4,8)=(&lambda;,q!,k,f,E);
-                kiss(f)=&mu;&sup2;q&sup3;(&mu;+1)&Phi;<sub>6</sub>&Phi;<sub>3</sub>=196560. <strong>LEECH
-                  SHELLS:</strong> all graph-parametric. <strong>691=&Theta;&middot;q&middot;(f&minus;1)+1</strong>.
-                <strong>HEAT KERNEL:</strong> a<sub>0</sub>=v, &minus;a<sub>1</sub>=2E,
-                a<sub>2</sub>=E&Phi;<sub>3</sub>. <strong>BELL:</strong> B(q)=&mu;+1, B(&mu;)=g,
-                B(&mu;+1)=&mu;&Phi;<sub>3</sub>. <strong>MAGIC:</strong> M(q)=g. <strong>DIAGONALS:</strong>
-                Diag(f-gon)=&tau;(3)=252. <strong>3004 checks, 0 failures.</strong>
-              </div>
-            </div>
-            <div class="card" style="border-left: 4px solid #e74c3c;">
-              <div class="label" style="color: #e74c3c;">Seven-Fold Selection Principle (C1&ndash;C7)</div>
-              <div class="detail">q=3 uniquely selected by: (C1) r-discriminant = &minus;4&Phi;<sub>4</sub>, (C2)
-                k+g=q<sup>q</sup>=27, (C3) &tau;(2)=&minus;f=&minus;24, (C4) &Phi;<sub>6</sub>=7 Heegner, (C5) Frobenius
-                trace a<sub>11</sub>(E)=s, (C6) 3|g, (C7) s<sup>2</sup>=r<sup>2</sup>+k &hArr; q(q&minus;3)=0. Each
-                condition proved symbolically; together they characterize W(3,3) uniquely.</div>
-            </div>
-            <div class="card" style="border-left: 4px solid var(--fg2);">
-              <div class="label" style="color: var(--fg2);">Atmospheric Sum Rule</div>
-              <div class="detail">sin&sup2;&theta;<sub>23</sub> = sin&sup2;&theta;<sub>W</sub> +
-                sin&sup2;&theta;<sub>12</sub> &rArr; 7/13 = 3/13 + 4/13. This identity requires q(q&minus;3) = 0,
-                uniquely selecting q=3 among all positive integers. A single equation locks three mixing angles to the
-                Weinberg angle.</div>
-            </div>
-          </div>
-        </div>
-        <!-- ─── End Grand Unification Banner ─── -->
-        <div class="spotlight">
-          <p><strong>After rereading the full paper:</strong> the strongest repo-native closure is a <strong>finite
-              spectral-exceptional unification skeleton</strong>. The exact spine is the W(3,3) graph itself, its clique
-            complex, its transport quotients, its Hodge / Dirac packages, and the operator identities that recur across
-            those layers.</p>
-          <p><strong>The cleanest reading is a three-shell reading.</strong> The <strong>bare/local shell</strong>
-            contains raw combinatorial or unification-scale selectors such as <code>&Delta; = 4</code>,
-            <code>N<sub>c</sub> = 3</code>, <code>4 + 8 = 12</code>, and the older internal
-            <code>sin<sup>2</sup>(&theta;<sub>W</sub>) = 1/4</code> or <code>3/8</code> diagnostics. The
-            <strong>projective/dressed shell</strong> contains the promoted electroweak and flavour ratios such as
-            <code>sin<sup>2</sup>(&theta;<sub>W</sub>) = 3/13</code>, <code>&theta;<sub>C</sub> = arctan(3/13)</code>,
-            and the PMNS package over <code>13</code> and <code>91</code>. The <strong>global/spectral shell</strong>
-            contains boundary-layer statements like <code>&alpha;<sup>&minus;1</sup> = 137 + 40/1111</code> (legacy
-            ledger conflict), the
-            <code>40 / 6 / 8</code> exceptional channel dictionary, and shell-dependent Euler / zero-mode counts.
-          </p>
-          <p><strong>That shell split resolves most apparent contradictions on the page.</strong> The promoted finite
-            Dirac package is the full tetrahedral <code>480</code>-dimensional closure with
-            <code>D<sub>F</sub><sup>2</sup> = {0<sup>82</sup>,4<sup>320</sup>,10<sup>48</sup>,16<sup>30</sup>}</code>,
-            while the older <code>122</code> zero-mode count belongs to the truncated
-            <code>C<sup>0</sup> &oplus; C<sup>1</sup> &oplus; C<sup>2</sup></code> shell. Likewise
-            <code>&chi; = -40</code> is the truncated-shell Euler characteristic, while <code>&chi; = -80</code> belongs
-            to the full clique-complex <code>f</code>-vector <code>(40,240,160,40)</code>. More sharply, the promoted
-            package now has a selected-point <code>q = 3</code> cyclotomic master lock: the internal blocks align as
-            <code>81 = q<sup>4</sup></code>, <code>6 = 2q</code>, <code>8 = q<sup>2</sup>-1</code>,
-            <code>86 = q<sup>4</sup> + 2q - 1</code>, and <code>248 = 3q<sup>4</sup> + 2q - 1</code>, while the curved
-            residues align as <code>320 = v(q)(q<sup>2</sup>-1)</code>,
-            <code>2240 = &Phi;<sub>6</sub>(q) &middot; 320</code>, and
-            <code>12480 = q &Phi;<sub>3</sub>(q) &middot; 320</code>. At that selected point the curved Weinberg lock is
-            therefore not separate data but the corollary
-            <code>9c<sub>EH</sub>/c<sub>6</sub> = q/&Phi;<sub>3</sub>(q) = 3/13</code>.
-          </p>
-          <p><strong>The Yukawa frontier is also narrower than an “unknown texture”.</strong> On the replicated diagonal
-            <code>l<sub>6</sub></code> seed the exact bottleneck is <code>9 -&gt; 10</code>, native mixed
-            <code>A<sub>2</sub></code> seeds lift that to <code>11 -&gt; 12</code>, and after the exact <code>V4</code>
-            / Kronecker / Gram reductions the surviving nontrivial packet is just two radical <code>2&times;2</code>
-            blocks on the common <code>240<sup>2</sup></code> shell plus scalar channels <code>169</code>,
-            <code>275</code>, <code>323</code>. More sharply, the finite family packet now has an exact one-versus-two
-            normal form: the six ordered generation-transfer channels are the complete oriented three-generation graph,
-            the current replicated seed activates the four channels touching one distinguished generation and leaves the
-            opposite bidirectional pair dormant, and in the exact basis <code>(1,1,0),(0,0,1),(1,-1,0)</code> the
-            universal generation matrices become upper-unitriangular with common square <code>2E<sub>13</sub></code>.
-            Better still, that same <code>2E<sub>13</sub></code> channel is the first exact quadratic shadow of the
-            active simple-root packet, not an independently added mode. So the remaining Yukawa work is best read as
-            nonlinear internal spectral data, not missing support or another free linear mode.
-          </p>
-          <p><strong>The real bottleneck is no longer finding more finite identities.</strong> It is proving the
-            continuum lift. The exact local product-heat bridge now sharpens that wall four times over: the commuting
-            family spurion is blind at <code>A<sub>0</sub></code> and <code>A<sub>2</sub></code> and first enters at
-            <code>A<sub>4</sub></code> as <code>&Delta;A<sub>4</sub> = 1209 a<sub>0</sub> / 9194</code>; on both curved
-            refinement seeds the corresponding density satisfies
-            <code>&Delta;A<sub>4</sub><sup>(dens)</sup> = &epsilon;<sup>2</sup> A<sub>0</sub><sup>(dens)</sup></code>;
-            the local bridge packet itself is now normalized sharply enough to be exact at the conservative level, with
-            product coefficient
-            <code>A<sub>4</sub>B<sub>0</sub> + A<sub>2</sub>B<sub>2</sub> + A<sub>0</sub>B<sub>4</sub></code>, no
-            <code>A<sub>2</sub></code> / Einstein-Hilbert contamination, repo-native finite multiplier <code>81</code>,
-            and reduced local prefactor <code>27 / (16&pi;<sup>2</sup>)</code> after the isolated rank-2 factor
-            <code>2</code>; and the already-promoted residue dictionary now fixes the external exceptional quanta
-            themselves as <code>Q<sub>curv</sub> = 52</code> and <code>Q<sub>top</sub> = 56</code>. Taken together, the
-            conservative exact package is now a single <strong>q-cyclotomic master lock at <code>q = 3</code></strong>:
-            <code>81 = q<sup>4</sup></code>, <code>6 = 2q</code>, <code>8 = q<sup>2</sup> - 1</code>,
-            <code>c<sub>EH</sub> = v(q)(q<sup>2</sup> - 1) = 320</code>,
-            <code>a<sub>2</sub> = &Phi;<sub>6</sub>(q)c<sub>EH</sub> = 2240</code>,
-            <code>c<sub>6</sub> = q&Phi;<sub>3</sub>(q)c<sub>EH</sub> = 12480</code>, and the promoted Weinberg lock is
-            then forced by <code>9c<sub>EH</sub>/c<sub>6</sub> = q/&Phi;<sub>3</sub>(q) = 3/13</code>. There is now also
-            an exact variational selector on the active <code>2&times;2</code> bridge branch: if
-            <code>tr(C<sup>*</sup>C) = x+y</code>, then the quartic packet satisfies
-            <code>|det C|<sup>2</sup> = xy &le; (x+y)<sup>2</sup>/4</code>, with equality iff the two singular-value
-            squares agree. So whenever the lower-order quadratic branch sector is shape-blind, the bridge packet selects
-            a <strong>balanced rank-2 branch</strong> rather than a generic one. More sharply, the reduced master action
-            <code>V(x,y) = -&mu;(x+y) + u(x+y)<sup>2</sup> - vAxy</code> already forces the only nonzero stationary
-            point to satisfy <code>x=y=&mu;/(4u-vA)</code>, and its Hessian splits exactly into the shape mode
-            <code>&lambda;<sub>shape</sub> = vA</code> and radial mode <code>&lambda;<sub>radial</sub> = 4u-vA</code>.
-            So within the reduced local model, a nonzero bridge vacuum is stable precisely when <code>vA &gt; 0</code>
-            and <code>4u-vA &gt; 0</code>. The explicit external seeds now sharpen the global side too:
-            <code>CP2_9</code> has harmonic <code>H<sup>2</sup></code> dimension <code>1</code> with exact split
-            <code>(b<sub>2</sub><sup>+</sup>, b<sub>2</sub><sup>-</sup>) = (1,0)</code>, while <code>K3_16</code> has
-            harmonic <code>H<sup>2</sup></code> dimension <code>22</code> with exact split <code>(3,19)</code>. So among
-            the explicit seeds already checked in the repo, <code>CP2_9</code> cannot by itself host a genuine rank-2
-            harmonic bridge branch, whereas <code>K3_16</code> is the first exact host that can. Better still, that host
-            theorem now lands directly on the exact qutrit matter sector: tensoring the exact
-            <code>81</code>-dimensional W33 qutrit packet with harmonic <code>H<sup>2</sup></code> gives a middle-degree
-            channel of dimension <code>81</code> on <code>CP2_9</code> and <code>1782</code> on <code>K3_16</code>, with
-            exact K3 sign split <code>243 + 1539 = 81(3+19)</code>. The older total protected-harmonic counts are now
-            degree-resolved too: <code>243 = 81 + 81 + 81</code> on <code>CP2_9</code> and
-            <code>1944 = 81 + 1782 + 81</code> on <code>K3_16</code>, so the endpoint packet
-            <code>162 = 81b<sub>0</sub> + 81b<sub>4</sub></code> is universal and all seed dependence lives in the
-            middle-degree <code>81 x H<sup>2</sup></code> channel. Better still, the explicit chain model now carries
-            the actual <code>H<sup>2</sup></code> cup form: with the propagated fundamental class, the simplicial
-            pairing recovers signature <code>(1,0)</code> on <code>CP2_9</code> and <code>(3,19)</code> on
-            <code>K3_16</code>. On <code>K3_16</code> the lexicographically first harmonic triangle already splits into
-            one positive and one negative line, so the current seed determines a canonical mixed rank-<code>2</code>
-            plane, not just a dimension count. Tensoring that plane with the qutrit packet gives a split external
-            <code>81 + 81</code> package of total size <code>162</code>. That sharpens the transport comparison too: the
-            internal <code>0 &rarr; 81 &rarr; 162 &rarr; 81</code> sector is explicitly non-split, while the canonical
-            mixed <code>K3</code> plane is split by construction, so the current exact relation is a size-shadow match
-            plus an exact split-versus-nonsplit obstruction, not an identification of objects. It also settles the old
-            <code>81</code>-versus-<code>162</code> tension in the local bridge coefficient: <code>162</code> is the
-            total qutrit size of the canonical external branch, while the local <code>A<sub>4</sub></code> packet still
-            counts only the curvature-sensitive internal <code>81</code> and picks up the external plane only through
-            the universal rank-<code>2</code> factor <code>2</code>. The explicit K3 chain complex now goes one step
-            further again: the first barycentric pullback scales the selector-plane restricted cup form by exactly
-            <code>120 = 5!</code>, so the normalized mixed signature survives the first refinement step unchanged; the
-            same simplicial cochain complex also yields an integral <code>H<sup>2</sup>(K3,Z)</code> basis with Smith
-            data <code>0<sup>22</sup>,1<sup>105</sup></code> and an even unimodular intersection form of signature
-            <code>(3,19)</code>, so the explicit seed already realizes the full K3 lattice; and inside that lattice
-            there is a canonical primitive hyperbolic plane with Gram <code>[[0,1],[1,0]]</code>. More sharply, the same
-            explicit integral lattice already contains three pairwise orthogonal primitive hyperbolic planes with block
-            Gram <code>3U</code>, and a unit maximal minor shows that this <code>3U</code> block is primitive in the
-            ambient K3 lattice. So the orthogonal complement is forced to be an even unimodular negative-definite
-            rank-<code>16</code> lattice, and the explicit seed now carries a full hyperbolic core rather than just one
-            isolated rank-<code>2</code> lattice host. Sharper still, the canonical selector plane is not itself one of
-            those primitive <code>U</code> factors: its cup-orthogonal shadow on the <code>3U</code> core is
-            positive-definite, while its residual shadow on the rank-<code>16</code> complement is negative-definite. So
-            the selector really bridges the hyperbolic core and the negative complement rather than sitting wholly on
-            either side. Coupling that oriented primitive plane to the locked local prefactor
-            <code>27/(16&pi;<sup>2</sup>)</code> and the fixed external quantum <code>Q<sub>curv</sub> = 52</code> now
-            fixes the reduced external bridge coefficient to <code>351/(4&pi;<sup>2</sup>)</code>, with raw
-            <code>sd<sup>1</sup></code> mass larger by the same exact factor <code>120</code>. That does <em>not</em>
-            yet identify the primitive lattice plane with the earlier harmonic-selector plane; it means the explicit K3
-            seed now carries both a canonical real mixed selector and a canonical integral rank-<code>2</code> lattice
-            host, now sitting inside a larger exact <code>3U</code> hyperbolic core, with the reduced external
-            coefficient already fixed on the lattice side. Sharper again, the selector-side reduced packet now resolves
-            all the way down to <code>U1 + U2 + U3 + E8_1 + E8_2</code>, each of those five pieces survives first
-            barycentric pullback with exact scale <code>120</code>, and the canonical primitive plane is exactly
-            <code>U1</code>. So the strongest conservative coupling theorem now available is that <code>U1</code> is the
-            minimal canonical external carrier of the first family-sensitive <code>A<sub>4</sub></code> packet, even
-            though the full local selector packet remains distributed across the broader five-factor K3 split and is not
-            yet identified with the internal one-versus-two family flag <code>span(1,1,0) &lt; {x=y}</code>. Sharper
-            again, the current exact <code>U1</code> data are still line-blind inside that carrier: the canonical
-            hyperbolic plane already contains two primitive isotropic lines, and the seed/refined coefficient data are
-            invariant under swapping them, so the external side still does not canonically pick the internal family line
-            itself. The packet is also strongly unevenly distributed: within the hyperbolic core the dominant carrier is
-            <code>U3</code>, not <code>U1</code>, while within the exceptional side the dominant carrier is
-            <code>E8_2</code>. And the transport comparison is best read at the semisimplified-shadow level: the current
-            split K3 packet and the non-split internal <code>162</code>-sector agree exactly on the graded shadow
-            <code>81 ⊕ 81</code>, not on the extension class. The checked local <code>V29</code> stiffness summary is
-            numerically consistent with the isotropic premise behind the balanced selector, and the companion validation
-            file keeps the local finite-difference error small, but this is still observation, not the final smooth
-            continuum theorem. So the first family-sensitive step still does not introduce a third external RG mode, the
-            local nonlinear packet is already an <code>a<sub>4</sub></code>-only object, the external normalization is
-            no longer floating, and the current explicit K3 seed now also fixes the first reduced external sign/count
-            coupling. The honest continuum target is therefore the smooth refined <code>a<sub>4</sub></code> density
-            together with the coupling of that reduced external coefficient to the still-open Yukawa / family closure,
-            not the leading <code>&Lambda;<sup>4</sup></code> or <code>&Lambda;<sup>2</sup></code> coefficients. The
-            remaining physics obligations include specifying and justifying the external symmetry-breaking datum forced
-            by the exact chirality no-go, an observable scale, a rigorous continuum construction, and broader uniqueness
-            beyond the current repo-searched landscape. So the honest
-            claim today is not “accepted TOE”; it is that the finite internal side is unusually rigid and the
-            continuum-dynamical closure remains the live frontier.
-          </p>
-        </div>
-        <div class="card-grid">
-          <div class="card">
-            <div class="label">Exact Finite Spine</div>
-            <div class="detail"><code>SRG(40,12,2,4)</code>, <code>|V| = 40</code>, <code>|E| = 240</code>,
-              <code>|T| = 160</code>, adjacency spectrum <code>{12<sup>1</sup>,2<sup>24</sup>,(-4)<sup>15</sup>}</code>,
-              the Hodge split <code>C<sup>1</sup> = 39 + 81 + 120</code>, the <code>27 + 27 + 27</code> matter
-              decomposition, and the Gaussian-integer integer-part identity
-              <code>&alpha;<sup>&minus;1</sup><sub>int</sub> = (k-1)<sup>2</sup> + &mu;<sup>2</sup> = 137</code> are the
-              strongest exact closures; non-integer refinements stay in the boundary ledger.
-            </div>
-          </div>
-          <div class="card">
-            <div class="label">Conditional Phenomenology</div>
-            <div class="detail">Repeated ratios can motivate electroweak or flavour models, but a shared number is not
-              a derivation. These cards are conditional until a named representation, action, and scale map the finite
-              object to measured observables.</div>
-          </div>
-          <div class="card">
-            <div class="label">Interpretive Boundary</div>
-            <div class="detail">The finite graph, selector, code, and lattice structures are exact. Connecting them to
-              a unique physical model requires additional data and maps: an explicitly justified symmetry-breaking
-              datum because the finite controller provably exchanges the chirality choices, a calibrated observable
-              scale, and a rigorous continuum construction. Earlier cards may describe candidate routes;
-              they are not promoted merely because the finite arithmetic is exact. The sharpest exact local clue
-              is now that the family spurion is invisible at <code>A<sub>0</sub></code> and <code>A<sub>2</sub></code>,
-              first enters at <code>A<sub>4</sub></code>, stays on the same external <code>A<sub>0</sub></code> RG
-              channel, the local nonlinear packet is already fixed as an <code>a<sub>4</sub></code>-only term with
-              reduced prefactor <code>27 / (16&pi;<sup>2</sup>)</code>, the external exceptional quanta are already
-              fixed as <code>52</code> and <code>56</code>, and those same residues now sit inside one selected-point
-              <code>q = 3</code> cyclotomic master package. More sharply, the active <code>2&times;2</code> bridge
-              packet already has an exact balanced-branch selector
-              <code>|det C|<sup>2</sup> &le; tr(C<sup>*</sup>C)<sup>2</sup>/4</code>, and the reduced master-action
-              Hessian splits as <code>&lambda;<sub>shape</sub> = vA</code> and
-              <code>&lambda;<sub>radial</sub> = 4u-vA</code>. Sharper still, the explicit external seeds already
-              separate by host capacity: <code>CP2_9</code> has only one harmonic <code>2</code>-form with split
-              <code>(1,0)</code>, while <code>K3_16</code> has harmonic split <code>(3,19)</code>, so among the current
-              exact seeds the genuine rank-<code>2</code> branch is already forced onto the <code>K3</code> side. More
-              sharply again, that branch now localizes to the exact middle-degree qutrit package
-              <code>81 x H<sup>2</sup></code>: <code>81</code> on <code>CP2_9</code> versus
-              <code>1782 = 243 + 1539</code> on <code>K3_16</code>. The older total protected-harmonic counts then split
-              exactly as universal endpoints plus middle degree: <code>243 = 162 + 81</code> and
-              <code>1944 = 162 + 1782</code>. Sharpest of all, the explicit <code>K3</code> chain model now carries a
-              larger exact hyperbolic host: besides the harmonic-selector plane from the first mixed triangle and the
-              canonical primitive lattice plane, the integral K3 lattice now exhibits a primitive orthogonal
-              <code>3U</code> core with negative-definite rank-<code>16</code> complement. The selector survives
-              barycentric pullback with exact scale <code>120</code>, while the lattice side fixes the reduced external
-              coefficient <code>351/(4&pi;<sup>2</sup>)</code> after coupling to <code>Q<sub>curv</sub> = 52</code>. So
-              these finite identities remain candidate bridge data; a smooth continuum lift and a physical family map
-              have not been established by them.
-            </div>
-          </div>
-          <div class="card">
-            <div class="label">Historical Yukawa Ansatz &mdash; Conditional</div>
-            <div class="detail">The archived program compresses a generic
-              <code>24&times;24</code> ansatz: the diagonal <code>l<sub>6</sub></code> ceiling is
-              <code>9 -&gt; 10</code>, the first native mixed-seed lift is <code>11 -&gt; 12</code>, the reduced packet
-              is now two explicit radical <code>2&times;2</code> blocks on the <code>240<sup>2</sup></code> shell plus
-              the scalar channels <code>169</code>, <code>275</code>, <code>323</code>, and the exact family side
-              already has a one-versus-two normal form with common flag basis
-              <code>(1,1,0),(0,0,1),(1,-1,0)</code> and common square <code>2E<sub>13</sub></code>. This is a finite
-              ansatz ledger, not a derivation of measured Yukawa couplings.
-            </div>
-          </div>
-        </div>
-      </section><section id="archive">
+      <section id="archive">
         <h2><span class="icon">◫</span> Historical Archive</h2>
         <div class="spotlight">
           <p>Everything below this section is preserved historical project material. It contains exact results,
@@ -28302,6 +27608,727 @@
         <p><strong>Foundation:</strong> The exact research core begins with
           <code>W(3,3)=SRG(40,12,2,4)</code>. The repository studies how far its finite geometry, codes, lattices, and
           representations can be carried by explicit maps. Physical interpretations are separately evidence-tiered.</p>
+      </section><section id="current-synthesis">
+        <h2><span class="icon">◎</span> Current Synthesis <span class="section-badge">Evidence-Tiered</span></h2>
+
+        <div class="spotlight" style="border-left-color: var(--accent2);">
+          <p><strong>The repo is no longer at a blank-slate stage.</strong> The exact core is already rigid:
+            <code>W(3,3)</code> as the two-qutrit Pauli commutation geometry, the local <code>H27</code> Heisenberg/MUB
+            shell, and the canonical quadratic operator <code>H_can = 12I - A = 16I - BB^T</code> with spectrum
+            <code>{0^1, 10^24, 16^15}</code>.
+          </p>
+          <p><strong>The cleanest reading is now a three-layer reading.</strong> The <strong>exact qutrit
+              kernel</strong> is public and operator-level, and the new <a
+              href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_projective_affine_shell_audit.py">Projective-Affine Shell Audit</a> makes the local
+            shell statement sharper: every point-perp is a 13-point tangent hyperplane <code>PG(2,3)</code>, its
+            complement is the affine cube <code>AG(3,3)</code>, and the familiar nine size-3 fibers are one affine
+            direction class. The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_symplectic_spread_frame_audit.py">Symplectic Spread Frame
+              Audit</a> then closes the exact complete-frame side of that same kernel: the 40 isotropic lines admit
+            exactly 36 spreads, each spread is one memory line plus nine affine measurement lines relative to any
+            anchor, and each of those 36 spreads gives a full two-qutrit stabilizer MUB frame in dimension 9. The new <a
+              href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_witting_deck_control_audit.py">Witting Deck Control Audit</a> makes the older
+            communication picture exact too: the Witting paper's 40 quantum cards live on the same kernel, the 36
+            spreads are exactly 36 full decks partitioning those cards into 10 orthogonal tetrad ranks, and the
+            resulting deck space already carries a rigid control geometry with <code>1/4</code> rank overlaps,
+            <code>216</code> maximal five-deck sweeps, and <code>135</code> maximal four-deck packets. The new <a
+              href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_witting_balanced_packet_shell_audit.py">Balanced Packet Shell Audit</a> then shows
+            that this communication layer folds back onto the local cubic-surface layer rather than floating above it:
+            the <code>27</code> balanced four-sector packets are graph-isomorphic to the honest 8-regular local shell,
+            and exact rank-intersection relations on the same packet set recover the Schläfli graph and its
+            <code>SRG(27,10,1,5)</code> intersection complement. The new <a
+              href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_witting_packet_heisenberg_chart_audit.py">Packet Heisenberg Chart Audit</a> sharpens
+            that one step further: the balanced packet layer itself splits canonically as <code>9</code> fibers of size
+            <code>3</code>, the allowed sector-triangle patterns form an affine plane in <code>F_3^4</code>, and there
+            is a fiber-preserving graph isomorphism from the packet shell to the canonical local
+            <code>H27 = F_3^2 × F_3</code> Heisenberg chart. The new <a
+              href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_witting_packet_tritangent_support_audit.py">Packet Tritangent Support Audit</a>
+            closes the support side too: on the same <code>27</code> balanced packets, the <code>36</code> shell
+            triangles together with the <code>9</code> packet fibers give the full local <code>45 = 36 + 9</code>
+            support package, every packet lies on exactly <code>5</code> support triples, and the
+            rank-intersection-<code>16</code> graph has exactly those same <code>45</code> triangles. The new <a
+              href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_witting_packet_hessian_split_audit.py">Packet Hessian Split Audit</a> refines the
+            affine half of that package all the way to the classical line-family level: the same <code>36</code>
+            non-fiber triples are exactly <code>12 × 3</code> affine lifts in <code>AG(2,3)</code>, grouped into
+            <code>4</code> direction classes of <code>3</code> lines each, and every balanced packet lies on exactly one
+            affine lift in each direction plus its unique fiber. The new <a
+              href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_witting_packet_foliation_incidence_audit.py">Packet Foliation Incidence Audit</a>
+            then exposes the next control layer hidden inside that split: the packet geometry has <code>5</code>
+            canonical triple foliations, every fiber-affine leaf-incidence graph is exactly <code>3K_{3,3}</code>, and
+            every affine-affine leaf-incidence graph is exactly the Pappus graph. The new <a
+              href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_witting_packet_quotient_geometry_audit.py">Packet Quotient Geometry Audit</a> now
+            closes the global finite side of that packet program too: the <code>45</code> packet leaves are exactly the
+            exceptional quotient points, the <code>27</code> packet-induced <code>K5</code> cliques are exactly the
+            quotient lines, and the resulting incidence geometry is the same dual <code>GQ(4,2)</code> /
+            <code>SRG(45,12,3,3)</code> / <code>SRG(27,10,1,5)</code> package already known from the center-quad bridge,
+            reached here from the Witting packet side alone. The <strong>exact local E<sub>6</sub> bridge</strong> lives
+            on the 27-point Schl&auml;fli shell with the local <code>1296 / 648</code> symmetry split, together with the
+            exact 45-tritangent signed-cubic support that closes only in the canonical cocycle gauge. The
+            <strong>continuum-side exact seed</strong> is now narrower too: the toroidal/decimal packet already fixes
+            the live coefficient base <code>8, 56, 320, 2240, 12480</code>, the new <a
+              href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_q3_master_lock_audit.py">Q=3 Master-Lock Audit</a> shows that the same selected point
+            is already overdetermined across the local kernel, its exact Parseval target geometry and shared Naimark
+            shadow, the corrected spectral/Ihara layer, the continuum and electron seed packets, and the transport
+            holonomy reduction, and the new <a href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_normalization_bridge_audit.py">Normalization Bridge
+              Audit</a> shows exactly why the April 2026 lift-normalized q-family agrees with the ordinary graph moments
+            only at <code>q=3</code>: the bridge factor is the nonzero-mode occupancy <code>2/(q-1)</code>, so the
+            apparent <code>M_2</code> uniqueness gap is just the zero-mode fraction in disguise. The new <a
+              href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_temporal_spectral_toroidal_computer_audit.py">Temporal-Spectral Toroidal Computer
+              Audit</a> then turns that exact qutrit/spread/toroidal stack into a conservative hardware dictionary: one
+            photon with temporal and synthetic-frequency qutrits on a discrete <code>3 × 3</code> torus, a
+            <code>13</code>-point projective memory screen plus <code>27</code>-point affine compute bulk,
+            <code>36</code> complete two-qutrit measurement programs, and a remaining two-quartic nonlinear frontier.
+            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCXCVI_PHOTONIC_LIFE_RUNTIME_ARCHITECTURE.md">Photonic Life Runtime
+              Architecture</a>
+            pins the next runtime layer: probabilistic KLM/fusion assembly (<code>1/4</code>, <code>1/2</code>),
+            deterministic <code>81</code>-state Pauli-frame feed-forward, a classical <code>40</code>-trit measurement
+            word, genus-one toric/Csaszar-Szilassi memory, and a bounded H1/E8 operation gate with <code>8347</code>
+            verified Z3 bracket terms. The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCIV_W33_CSS_STEANE_LIFT.md">W33 CSS Steane-Lift</a>
+            closes the next protection layer: <code>[[240,81,3]]</code> concatenated through three
+            <code>[[7,1,3]]</code> Steane lifts gives <code>[[82320,81,&ge;81]]</code>, with correctable weight
+            <code>40 = |V(W(3,3))|</code>. The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCV_PROTECTED_TOE_KERNEL.md">Protected W33/H1/E8
+              TOE Kernel</a> then records the bounded
+            finite architecture as a single executable certificate: the 40-point photonic carrier, <code>H1=Z^81</code>
+            matter memory, <code>8347</code> verified E8 Z3 bracket terms, and protected
+            <code>[[82320,81,&ge;81]]</code> CSS information stack. The new <a
+              href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCVI_PROTECTED_PHOTONIC_RUNTIME_SCHEDULER.md">Protected Photonic Runtime Scheduler</a>
+            closes the compiler handoff as an eight-tick contract: projective carrier, heralded fusion, KLM primitive
+            budget, CSS validation, deterministic MBQC feed-forward, Steane/<code>&Phi;<sub>6</sub></code> protection,
+            64-bit-class selector commit, and the E8 Z3 operation gate; it also reconciles the imported first
+            amplification block <code>[[1680,81,9]]</code> with the level-3 protected tower. The new <a
+              href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXV_DRESSED_Q4_PACKET_LOGICAL_VERIFIER.md">Dressed Q4 Packet Logical Verifier</a> then
+            closes the imported Q4 packet honesty boundary: the native <code>[[1296,81,4]]</code> subsystem packet layer
+            is valid, but the raw weight-<code>12</code> line-star replacement dresses down to weight <code>4</code> in
+            the current Bacon-Shor center. The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXVI_PROTECTION_SELECTION_LEDGER.md">Protection /
+              Selection Ledger</a> assigns roles:
+            Q4 packets remain local routing hardware, the Steane/<code>&Phi;<sub>6</sub></code>
+            <code>[[82320,81,&ge;81]]</code> lift remains active protection, and the classical <code>40</code>-trit
+            selector commits only after protected acceptance. The new <a
+              href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXVIII_PHOTONIC_HARMONIC_TQC_BUS.md">Photonic Harmonic TQC Bus</a> then connects the
+            hardware denominators to the topological oscillator shell: fusion denominator <code>2</code> is
+            <code>&lambda;</code>, toric logical-qubit count, and harmonic frequency squared; KLM denominator
+            <code>4</code>
+            is <code>&mu;</code>, toric ground-state degeneracy, and toric stabilizer weight. The same bus
+            uses the Heawood <code>14=2&Phi;<sub>6</sub></code> rail and middle shell <code>12=6+6</code> while keeping
+            Q4 as local <code>[[1296,81,4]]</code> routing and Steane/<code>&Phi;<sub>6</sub></code>
+            <code>[[82320,81,&ge;81]]</code> as active protection.
+            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXXII_TOROIDAL_PHOTONIC_ALGEBRA_BRIDGE.md">Photonic Harmonic TQC Algebra from 7
+              Toroidal Realizations</a>
+            (Part CCCCXXII) derives the 7-mode photonic harmonic TQC algebra A(7) directly from the
+            coordinate and combinatorial data of all seven toroidal realizations. The 5 Cs&aacute;sz&aacute;r
+            modes form the K<sub>7</sub> hopping input register (spectral gap &Phi;<sub>6</sub>&nbsp;=&nbsp;7,
+            21 bond operators, 7 Fano triple interactions); the 2 Szilassi modes are the KLM Type-II ancilla
+            pair (p&nbsp;=&nbsp;1/&mu;&nbsp;=&nbsp;1/4). C<sub>2</sub> orbital decomposition yields
+            5&times;&mu;&nbsp;=&nbsp;20&nbsp;=&nbsp;V<sub>W33</sub>/2 Cs&aacute;sz&aacute;r orbital modes
+            and 2&times;&Phi;<sub>6</sub>&nbsp;=&nbsp;14&nbsp;=&nbsp;dim(G<sub>2</sub>) Szilassi orbital modes.
+            Volume spectrum: C1&nbsp;=&nbsp;5<sup>3</sup>&nbsp;=&nbsp;(Q+&lambda;)<sup>3</sup>,
+            S1&nbsp;=&nbsp;5226/5 (denom&nbsp;=&nbsp;Q+&lambda;), S2&nbsp;=&nbsp;7976/9
+            (denom&nbsp;=&nbsp;Q<sup>2</sup>);
+            every constant is a polynomial in q&nbsp;=&nbsp;3 (48 checks, 98 tests).
+            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXXIII_A7_REPRESENTATION_CSS_TORIC_BRIDGE.md">A(7) Representation Theory and
+              Cs&aacute;sz&aacute;r K7 CSS Toric Code</a>
+            (Part CCCCXXIII) resolves the algebraic and local-code layer underneath A(7):
+            <code>U(7)=49</code>, <code>SU(7)=48</code>, <code>G<sub>2</sub>=14</code>, K<sub>7</sub> spectral gap
+            <code>7=&Phi;<sub>6</sub></code>, and bond branching <code>21=14+7</code>. On each Cs&aacute;sz&aacute;r
+            K<sub>7</sub> torus, the GF(2) chain complex gives a CSS toric code
+            <code>[[21,2,&ge;3]]</code> with ranks <code>6</code> and <code>13</code>, ground-state degeneracy
+            <code>4=&mu;</code>, and <code>48 checks</code> passing.
+            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXXIV_CSASZAR_THETA_LOGICAL_COMPILER.md">Cs&aacute;sz&aacute;r Theta Logical
+              Compiler</a>
+            (Part CCCCXXIV) then compiles the five Cs&aacute;sz&aacute;r input modes into a direct-product local toric
+            packet <code>[[105,10,&ge;3]]</code>: the ten logical qubits are exactly
+            <code>theta(W33)=10</code>, the local ground-state degeneracy is <code>theta(complement)=4</code>, and
+            <code>10&times;4=40</code> recovers the W33 capacity/vertex count. The two Szilassi modes remain a
+            <code>2&Phi;<sub>6</sub>=14=dim(G<sub>2</sub>)</code> ancilla rail, and the rank handoff
+            <code>105+14+1=120</code> matches the W33 triangle-check rank without asserting a canonical
+            operator isomorphism.
+            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXXV_THETA_U5_STABILIZER_COMPLETION.md">Theta / U(5) Stabilizer Completion</a>
+            (Part CCCCXXV) completes that local compiler to the full W33 CSS rank accounting:
+            five Cs&aacute;sz&aacute;r blocks have check rank <code>95</code>, the input-mode algebra gives
+            <code>U(5)=25</code>, so <code>95+25=120</code>; adding the W33 vertex-star rank gives
+            <code>120+39=159</code>, and the whole edge carrier closes as
+            <code>95+25+39+81=240</code>. The same physical carrier splits as
+            <code>105+135=240</code>, with shares <code>7/16</code> and <code>9/16</code>, and the split is
+            preserved inside the active protected code <code>[[82320,81,&ge;81]]</code>.
+            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXXVI_FUSION_CONTROL_SCHEDULER_SPLICE.md">Fusion-Control Scheduler Splice</a>
+            (Part CCCCXXVI) then welds that completion back into the protected photonic runtime scheduler:
+            <code>105+135=240</code> accepted bonds refine the probabilistic budgets as
+            <code>210+270=480</code> fusion attempts and <code>420+540=960</code> KLM primitives.
+            Its CSS tick is now <code>95+25=120</code> and <code>120+39+81=240</code>, while the
+            deterministic frame remains <code>H1=81</code> and the classical layer remains the
+            <code>40-trit selector</code> inside a 64-bit envelope.
+            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXXVII_PHOTONIC_CURVED_PRODUCT_HANDOFF.md">Photonic Curved Product Handoff</a>
+            (Part CCCCXXVII) then attaches the protected finite runtime to the explicit curved 4D side:
+            <code>CP2_9</code> has Betti profile <code>(1,0,1,0,1)</code> and harmonic total <code>3</code>,
+            while <code>K3_16</code> has <code>(1,0,22,0,1)</code>, harmonic total <code>24</code>, and
+            H<sup>2</sup> signature split <code>(3,19)</code>. The <code>H1=81</code> tail lifts to
+            curved harmonic channels <code>243</code> and <code>1944</code>; product heat traces factorize,
+            barycentric density limits are <code>120/19</code> and <code>860/19</code>, and the native
+            A<sub>2</sub> transport product has positive <code>gap 24</code>. The entry keeps the
+            boundary explicit: this is the finite-to-curved handoff, not yet the final
+            Einstein-Hilbert asymptotic theorem.
+            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXXVIII_PHOTONIC_CURVED_EH_EXTRACTOR.md">Photonic Curved Einstein-Hilbert
+              Extractor</a>
+            (Part CCCCXXVIII) then attaches the exact curved coefficient machinery to that handoff:
+            the barycentric first-moment tower has exact <code>120</code>-, <code>6</code>-, and <code>1</code>-mode
+            projectors, equivalently a residue decomposition
+            <code>A/(1 - 120z) + B/(1 - 6z) + C/(1 - z)</code>. On both <code>CP2_9</code> and
+            <code>K3_16</code>, the <code>6</code>-mode recovers <code>c6=12480</code>, the rank-39
+            normalization gives <code>cEH=320</code>, and the topological channel gives
+            <code>a2=2240</code>. The same three-sample tower reconstructs
+            <code>D_F^2={0^82,4^320,10^48,16^30}</code>, moments <code>(480,2240,17600)</code>,
+            <code>SRG(40,12,2,4)</code>, <code>&Phi;3=13</code>, <code>&Phi;6=7</code>, and
+            <code>x=3/13</code>, while still not yet the final Einstein-Hilbert asymptotic theorem.
+            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXXIX_PHOTONIC_EMPIRICAL_CLOSURE_HANDOFF.md">Photonic Empirical Closure
+              Handoff</a>
+            (Part CCCCXXIX) reconciles that CCCC photonic-curved stream with the newer CCC empirical stream through
+            <code>CCCXXXIII</code>. It records the compatibility handoff:
+            <code>c6/cEH=39=q&Phi;3</code>, <code>a2/cEH=7=&Phi;6</code>, and <code>x=3/13</code>
+            on the exact curved side, while the empirical side carries the Higgs/CKM/top mass-mixing surface,
+            light-quark Yukawas <code>y_d=70/137<sup>3</sup></code> and
+            <code>y_u=32/137<sup>3</sup></code>, and the GUT-Planck <code>24/114</code> hierarchy.
+            The shared atom table is <code>q=3</code>, <code>&lambda;=2</code>, <code>&mu;=4</code>,
+            <code>v=40</code>, <code>&Phi;3=13</code>, <code>&Phi;4=10</code>, <code>&Phi;6=7</code>,
+            <code>alpha_inv=137</code>, and <code>H0=70</code>.
+            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXXX_CYCLIC_CAYLEY_OBSTRUCTION.md">Cyclic Cayley Obstruction and Photonic
+              Ouroboros Guard</a>
+            (Part CCCCXXX) then protects the architecture from a false
+            shortcut: an exhaustive <code>C(19,6)=27132</code> search over symmetric valency-12 connection
+            sets on <code>Z40</code> finds zero cyclic <code>Z40</code> hits for
+            <code>SRG(40,12,2,4)</code>. The promoted cycle is instead the
+            <code>480-state Hashimoto/fusion carrier</code> and the
+            QEC ouroboros preserving <code>H1=81</code>, followed by the
+            Steane/<code>&Phi;6</code> protected closure.
+            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCCXIV_HOLONOMY_SIGNED_TRIAD_A2_PROJECTION_BRIDGE.md">Holonomy Signed-Triad
+              / A2 Projection Bridge</a> (Part DCCXIV) sharpens the local loop alphabet:
+            the <code>12</code> turns split as <code>6+6</code>, with six signed Clifford triad channels
+            <code>&plusmn;B23</code>, <code>&plusmn;B31</code>, <code>&plusmn;B12</code> projecting to the six
+            A<sub>2</sub>/Weyl return roots while the <code>480</code>-state carrier preserves
+            <code>H1=81</code>.
+            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCCXV_PHOTONIC_FUSION_SYNDROME_QEC_BRIDGE.md">Photonic Fusion-Syndrome
+              QEC Bridge</a> (Part DCCXV) then makes the probabilistic side native:
+            <code>p<sub>fusion</sub>=1/2</code> reads as <code>240</code> accepted W33 bond slots plus
+            <code>240</code> heralded return/syndrome slots, refined as
+            <code>(105+135)+(105+135)=210+270=480</code>; the KLM primitive ledger is the doubled
+            <code>420+540=960</code> lift.
+            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCCXVI_AXIS_SYNDROME_SELECTOR_CODEC_BRIDGE.md">Axis-Syndrome Selector
+              Codec Bridge</a> (Part DCCXVI) then explains why the classical record is only
+            <code>40</code> trits: the local alphabet factors as <code>12=3&times;2&times;2</code>,
+            so the selector stores the ternary axis coordinate while the sign and accepted/return
+            choices remain protected frame/syndrome bits; the KLM rail adds the final binary lift to
+            <code>960</code>.
+            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCCLXVII_AXIS_SYNDROME_NILPOTENT_OCTAHEDRAL_BRIDGE.md">Axis-Syndrome
+              Nilpotent / Octahedral Codec Bridge</a> (Part DCCLXVII) locks that codec to the
+            octahedral harmonic tower: the six signed Clifford axes are the six octahedron vertices,
+            the <code>12</code> axis-syndrome slots are six signed axes tensored with the two-state
+            F<sub>3</sub> transport extension, and the KLM rail resolves them into the
+            <code>24</code> directed octahedral turn incidences, so <code>480=40&times;12</code>
+            and <code>960=40&times;24</code>. The same square-zero increment
+            <code>N=[[0,1],[0,0]]</code> tensors with <code>H1=81</code> to give the exact
+            <code>0&rarr;81&rarr;162&rarr;81&rarr;0</code> QEC-tail extension: the snake eats
+            its tail as a nilpotent return-syndrome correction, not as an extra classical selector.
+            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCCLXVIII_NILPOTENT_CHAIN_LIFT_QEC_BRIDGE.md">Nilpotent
+              Chain-Lift / QEC Bridge</a> (Part DCCLXVIII) then upgrades that local tail into
+            the W33 CSS chain complex itself: over F<sub>3</sub>, the oriented 2-skeleton has
+            <code>(C0,C1,C2)=(40,240,160)</code>, ranks <code>(39,120)</code>, and
+            <code>H=(1,81,40)</code>; tensoring with the dual-number extension gives
+            <code>C1&otimes;F3[&epsilon;]/&epsilon;<sup>2</sup>=480</code> and
+            <code>H1=162</code>. The nilpotent commutes with both boundaries and descends to
+            a rank-81 square-zero operator on homology, so the fusion ledger is the nilpotent
+            W33 edge-chain lift rather than a separate bookkeeping layer.
+            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXXI_TOROIDAL_FANO_BRIDGE.md">Seven Toroidal Polyhedra Realizations &harr; Fano
+              Octonion Framework</a>
+            (Part CCCCXXI) proves that the five Cs&aacute;sz&aacute;r and two Szilassi realizations
+            in three-dimensional Euclidean space biject canonically with the seven points and lines of
+            the Fano plane PG(2,&#x1D53D;<sub>2</sub>), with 21 edges = Q&times;&Phi;<sub>6</sub>,
+            14 faces/vertices = dim(G<sub>2</sub>), C<sub>2</sub> orbit duality (4,7)&harr;(7,4)
+            mirroring Fano point&ndash;line duality, the Cs&aacute;sz&aacute;r apex = Higgs singlet,
+            and cyclic number 1/7 encoding the 5+2 split (48 checks, 73 tests).
+            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXX_FANO_OCTONION_SM_ALGEBRA_BRIDGE.md">Fano Plane &rarr; Octonion &rarr;
+              G&sub2; &rarr; SU(3) &rarr; Standard Model</a>
+            (Part CCCCXX) proves the Single Algebraic Object Theorem: every SM parameter
+            &mdash; gauge group dimension <code>k = 2<sup>q</sup>+q+1 = 12</code>, three generations,
+            fermion count <code>MULT<sub>S</sub> = 15</code>, and Weinberg angle
+            <code>sin&sup2;&theta;<sub>W</sub> = q/&Phi;<sub>13</sub> = 3/13</code> &mdash;
+            is uniquely determined by the octonion algebra <strong>O</strong> encoded by the Fano plane,
+            with every constant a polynomial in q&nbsp;=&nbsp;3 alone (27 checks, 133 tests).
+            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXIX_PHOTONIC_HARMONIC_TQC_SYNTHESIS_BRIDGE.md">Photonic Harmonic TQC Geometric
+              Synthesis</a>
+            closes the architecture loop: the Lov&aacute;sz orthonormal labeling dimension
+            <code>dim<sub>min</sub> = q = 3</code> seeds the entire five-layer bus,
+            the complement theta <code>&theta;(G&#x0305;) = &mu; = 4</code> is simultaneously the KLM
+            denominator and toric ground-state degeneracy, and the Shannon capacity identity
+            <code>&theta;(G)&middot;&theta;(G&#x0305;) = 40 = V</code> confirms the architecture wastes no information.
+            The Heawood middle shell <code>2&times;q! = 12 = K</code> and the protected CSS tower
+            <code>[[240,81,3]] &rarr; [[82320,81,&ge;81]]</code> are Lov&aacute;sz-indexed end-to-end.
+            The <strong>promoted global closure</strong> is the later spectral layer that carries the current
+            <code>E8</code>, flavour, curvature, and moonshine package. A compact statement of that theorem boundary is
+            collected on <a href="qutrit_foundation.html">Exact Qutrit Foundation</a>, the local determinant-support
+            boundary is separated by <a href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_local_albert_shadow_audit.py">Local Albert Shadow
+              Audit</a>, the finite <code>1q -&gt; 2q -&gt; 3q -&gt; 6q</code> ladder is collected in <a
+              href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_qutrit_ladder_audit.py">Exact Qutrit Ladder Audit</a>, the exact continuum
+            coefficient seed is packaged in <a href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_toroidal_continuum_seed_audit.py">Toroidal Continuum
+              Seed Audit</a>, the old promoted <code>W33 &lt;-&gt; E8</code> surface is separated by <a
+              href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_e8_correspondence_boundary_audit.py">W33-E8 Boundary Audit</a>, the cross-preset
+            neutrino robustness check is packaged in <a href="https://github.com/wilcompute/W33-Theory/blob/master/scripts/w33_neutrino_preset_audit.py">Neutrino Preset
+              Audit</a>, and the broader repo/doc/script audit is collected on <a href="repo_frontier_audit.html">Repo
+              Frontier Audit</a>.
+            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCCLXXII_FORMULA_REGIME_REGISTRY_BRIDGE.md">Formula-Regime Registry Bridge</a>
+            turns the May 16 consistency audit into an executable claim-hygiene layer: the two alpha expressions remain
+            unresolved variants with exact delta <code>24/5431679</code>, while electroweak values must carry shell
+            labels, <code>3/8</code> for the bare/internal shell and <code>3/13</code> for the dressed/projective live
+            bridge.
+            The companion <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCCLXXIII_TOROIDAL_MARKOV_E6_BURDEN_BRIDGE.md">Toroidal Markov / E6
+              Burden Bridge</a> closes the DC-DCII toroidal Markov modes by the cubic
+            <code>512x^3 - 168x - 7</code>, upgrades them to exact moment and trace recurrences, and connects the
+            E6 branching <code>27 = 16 + 10 + 1</code> to the finite burden certificate
+            <code>81 = 3&times;27</code> with Standard Model anomaly sums kept exact.
+            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCCLXXIV_CLOSURE_TRANSFER_RESOLVENT_EQUIVALENCE_BRIDGE.md">Closure Transfer-Resolvent
+              Equivalence</a>
+            then cleans up the closure-clock operator surface:
+            <code>G=(1/2)S</code>, <code>(G^d)<sub>i,i+d</sub>=2<sup>-d</sup></code>, and
+            <code>K=(I-G)<sup>-1</sup></code> are one finite package, so the canonical DCCXL resolvent absorbs the
+            old transfer-generator face without a second Part DCCXL.
+            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCCLXXV_PHOTONIC_RETRY_CLOSURE_KERNEL_BRIDGE.md">Photonic Retry Closure-Kernel</a>
+            identifies that same power law with the DCCXV fusion ledger: <code>d</code> heralded return updates carry
+            weight <code>2<sup>-d</sup></code>, the six accepted depths plus six return depths give
+            <code>480</code> directed retry attempts, and the KLM rail doubles the finite scheduler to
+            <code>960</code> primitives while <code>39+120+81=240</code> preserves <code>H1=81</code>.
+            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCCCXIV_PHENOMENOLOGY_CLAIM_LEDGER_AUDIT.md">Phenomenology Claim-Ledger Audit</a>
+            turns the new <code>DCCLXXXIV-DCCCXIII</code> GitHub burst into a checked status ledger: it keeps all
+            30 result JSONs and theorem notes visible while flagging that <code>DCCCII</code> claims a 1-sigma top-mass
+            match despite larger sigma residuals, and that <code>DCCXCVIII</code> master verification only covers
+            through Part 797.
+            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCCCLXXI_FRONTIER_RESULT_LEDGER_REPAIR.md">Frontier Result-Ledger Repair</a>
+            then records the live successor state: the older <code>DCCCII</code>/<code>DCCCXI</code> top-mass audit and
+            tension remain historically true, the newer <code>DCCCXIV</code> graviton correction and <code>DCCCXV</code>
+            master update promote the top pole residual to <code>0.93 sigma</code>, and <code>DCCCLXXI</code> surfaces
+            the
+            duplicated <code>DCCCXIV</code> theorem-note numbering as an explicit ledger issue rather than erasing
+            either
+            artifact. It also repairs the <code>DCCCXXIX-DCCCLXX</code> result namespace so the live frontier has a
+            contiguous, machine-readable result JSON surface.
+            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCCCLXXII_W33_FOR_EVERYONE_QEC_OUROBOROS_BRIDGE.md">W33 For Everyone QEC
+              Ouroboros Consistency Bridge</a> now ties the plain-language manuscript to the protected architecture:
+            <code>39+120+81=240</code>, <code>0&rarr;81&rarr;162&rarr;81&rarr;0</code>,
+            <code>480=240+240</code>, <code>12=6+6</code>, and the doubled
+            <code>960</code> KLM rail all stay executable audit facts rather than narrative-only claims.
+            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCMI_SUB_DISTINCTION_BOUNDARY_AUDIT.md">Sub-Distinction Boundary Audit</a>
+            then checks the new <code>DCCCLXXIII-DCM</code> GitHub descent: result JSONs are contiguous after
+            repairing <code>DCCCLXXXII</code> and <code>DCCCXCII</code>, while <code>PG(2,3)</code> is kept as a
+            <code>13</code>-point projective screen and not promoted over the live <code>40</code>-vertex,
+            <code>240</code>-edge <code>W(3,3)</code> substrate.
+            The follow-up <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCMII_PROJECTIVE_SCREEN_BULK_QEC_BRIDGE.md">Projective Screen / Affine
+              Bulk / QEC Tail Bridge</a> gives the positive typed interface:
+            <code>40=13+27=1+12+27</code>, the <code>13</code>-point screen is the existing
+            <code>S=A+I</code> holonomy-screen operator, the <code>27</code> bulk lifts by <code>q=3</code> to
+            <code>H1=81</code>, and the same split recovers the <code>480</code> directed carrier,
+            <code>1296</code> local routing scale, <code>82320</code> protected lift, and projective
+            <code>3/13</code> share.
+            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCMLXXIX_IHARA_PARAMETER_RECONCILIATION.md">Ihara Parameter Reconciliation</a>
+            now cleans up the latest RH/CSS burst: the <code>PG(2,3)</code> Levi graph is
+            <code>4</code>-regular with Bass parameter <code>3</code> and critical radius
+            <code>3<sup>-1/2</sup></code>, while the <code>W(3,3)</code> collinearity graph is
+            <code>12</code>-regular with Bass parameter <code>11</code> and critical radius
+            <code>11<sup>-1/2</sup></code>; finite graph-Ihara RH is proved, but the classical
+            Riemann RH remains an identification/limit bridge.
+            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCMLXXX_Z12_709_IHARA_GENUS_BRIDGE.md">Z12 709 / Ihara / Genus Bridge</a>
+            then audits the new cyclotomic observation: for
+            <code>z=1+2&zeta;<sub>12</sub>+6&zeta;<sub>12</sub><sup>2</sup>+4&zeta;<sub>12</sub><sup>3</sup></code>,
+            the exact algebraic norm is <code>709</code>, the exploratory <code>709<sup>2</sup></code>
+            is a squared-magnitude artifact, the Eisenstein shadow has exact norm <code>13</code>,
+            and the apparent <code>137</code> is a rounded identity-embedding shadow. On the
+            <code>W(3,3)</code> side, <code>709</code> is not a primitive Ihara factor, but it is a
+            unique nonstructural expanded-coefficient resonance modulo <code>709</code> at degree
+            <code>338</code> after removing the exact structural zero coefficients at degrees
+            <code>1</code>, <code>2</code>, and <code>479</code>; the same part also records that
+            <code>n=3+4s</code> preserves the RH imaginary
+            coordinate while mapping the critical line to <code>Re(n)=5</code>, not to the
+            genus axis <code>Re(n)=7/2</code>.
+            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCMLXXXI_HEEGNER_IHARA_GAUSSIAN_AUDIT.md">Heegner / Ihara / Gaussian Audit</a>
+            then checks the May 18 GitHub Heegner note directly: the live W(3,3)
+            Ihara-Bass theorem uses Bass coefficient <code>11</code>, not <code>12</code>, so the
+            actual non-trivial graph-zeta fields are <code>Q(&radic;-10)</code> and
+            <code>Q(&radic;-7)</code> with pole radius <code>11<sup>-1/2</sup></code>. The coefficient
+            <code>12</code> version remains a useful Heegner shadow producing
+            <code>Q(&radic;-11)</code> and <code>Q(&radic;-2)</code>, but it is not the Bass
+            determinant. The same audit runs the requested division:
+            <code>(160+221i)/(4+11i)=(3071-876i)/137</code>, which is not a Gaussian integer,
+            so <code>74441</code> shares the Gaussian sheet with <code>137</code> without containing
+            the Gaussian prime of norm <code>137</code>.
+            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCMLXXXII_IHARA_Z12_CROSS_BRANCH_RESONANCE_AUDIT.md">Ihara/Z12 Cross-Branch Resonance
+              Audit</a>
+            then reconciles those local corrections with the
+            remote-only GitHub <code>main@ec327312</code> notes: Bass-11 remains the live graph zeta,
+            coefficient-12 remains a shadow, <code>709</code> remains an expanded-determinant
+            resonance rather than a primitive Ihara factor, and the branch comparison is exact. The
+            Bass-11 resonance is the unique nonstructural mod-<code>709</code> hit at degree
+            <code>338</code>; the coefficient-12 shadow resonance is the corresponding hit at degree
+            <code>424</code>. The same audit keeps <code>alpha<sup>-1</sup>=137=11<sup>2</sup>+4<sup>2</sup></code>
+            separate from the rounded Z12 identity-sheet shadow and states that classical Riemann RH remains open
+            behind the <code>zeta_W=zeta</code> identification bridge.
+            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCMLXXXIII_BASS_CNUB_ENTROPY_BRANCH_SELECTOR.md">Bass/CnuB Entropy Branch Selector</a>
+            then tests the strongest cross-domain consequence of that decrement: the live Bass-11 branch gives
+            <code>4/11</code>, exactly the standard CnuB/CMB temperature-cube entropy ratio, while the
+            coefficient-12 shadow gives <code>1/3</code>. Thus coefficient 12 is the wrong CnuB entropy denominator
+            for the same reason it is the wrong live graph-zeta coefficient; the remaining target is a functorial
+            entropy-decoupling bridge, not a new classical RH claim.
+            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_DCMLXXXIV_POST_BURST_FORCING_MOONSHINE_AUDIT.md">Post-Burst Forcing/Moonshine Audit</a>
+            then checks the new DCCLXXVIII-DCCLXXXIII horizon/Moonshine burst before promoting it: <code>640320</code>
+            is <em>not</em> <code>2<sup>7</sup>q<sup>2</sup>5&Phi;<sub>6</sub>B<sub>2</sub></code>, but it is exactly
+            <code>&Phi;<sub>6</sub>!B<sub>2</sub>+|E|=7!&middot;127+240</code> and
+            <code>|E|d<sub>Z</sub>(f-1)(f+&lambda;+q)</code>. The same audit states that W(3,3) is not the Johnson graph
+            <code>J(40,12)</code>; the Johnson/girth pincer is rejected, while the exact Monster level,
+            theta-eta horizon, Leech split, and finite <code>d<sub>X</sub>=q=3</code> code facts remain live.
+            The <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_BT367_E6_HOLONOMY_BRIDGE.md">BT367 E6 Holonomy / Twisted Phase Phantom</a>
+            (July 2026) identifies the 120-sheet Holonet selector (40 lines * 3 phases)
+            as a holographic representation of the E6 root system. The 51,840-tick supercycle is the Weyl group
+            W(E6), and the 120-dimensional representation decomposes multiplicity-freely into Irreps
+            of dimensions {1, 15, 20, 24, 60}. The 760 conflicts measured in the global holonomy solver
+            are exactly 2 * 380, identifying the 'Twisted Phase Phantom' as the topological obstruction
+            in the E6-to-W33 projection.
+          </p>
+        </div>
+
+        <!-- ─── Grand Unification Banner ─── -->
+        <div class="highlights-banner"
+          style="background: linear-gradient(135deg, rgba(88,166,255,0.12), rgba(210,168,255,0.08)); border: 2px solid var(--accent); margin-bottom: 2rem;">
+          <h3 style="color: var(--accent); font-size: 1.3rem; margin: 0 0 0.75rem;">The Complete Derivation Chain</h3>
+          <p style="margin-bottom: 1rem; font-size: 0.95rem;">
+            <strong>Input: q = 3</strong> (the unique prime satisfying C1&ndash;C7). <strong>Promoted output: the
+              current spectral-closure package.</strong><br>
+            W(3,3) = SRG(40,12,2,4) &xrarr; Aut = PSp(4,3) = W(E<sub>6</sub>) &xrarr; E<sub>6</sub> GUT &xrarr; SM gauge
+            group.<br>
+            27 non-neighbours &xrarr; Payne GQ(2,4) &xrarr; SRG(27,10,1,5) = Schl&auml;fli complement &xrarr;
+            E<sub>6</sub> fundamental.<br>
+            E<sub>6</sub> cubic invariant on 27 &xrarr; Yukawa couplings with Z<sub>3</sub> selection rule &xrarr; CKM
+            (0.26% error) + PMNS (0.6% error).<br>
+            C7 identity s<sup>2</sup> = r<sup>2</sup> + k (unique to q=3) &xrarr; &alpha;<sup>-1</sup> =
+            (k-1)<sup>2</sup> + s<sup>2</sup> = 137.<br>
+            sin<sup>2</sup>&theta;<sub>W</sub> = q/&Phi;<sub>3</sub> = 3/13 (0.19% from experiment). M<sub>GUT</sub> =
+            136<sup>g/2</sup> = 10<sup>16</sup> GeV. &Lambda;<sub>CC</sub> = 10<sup>-122</sup>.
+          </p>
+          <div class="stats-grid" style="margin-bottom: 1rem;">
+            <div class="stat-card" style="border-color: var(--accent);">
+              <div class="stat-num">1000+</div>
+              <div class="stat-label">Tests pass</div>
+            </div>
+            <div class="stat-card" style="border-color: var(--accent2);">
+              <div class="stat-num">7/7</div>
+              <div class="stat-label">Uniqueness conditions (C1&ndash;C7)</div>
+            </div>
+            <div class="stat-card" style="border-color: var(--accent3);">
+              <div class="stat-num">1</div>
+              <div class="stat-label">Free parameter (q=3)</div>
+            </div>
+            <div class="stat-card" style="border-color: var(--gold);">
+              <div class="stat-num">5</div>
+              <div class="stat-label">Falsifiable predictions</div>
+            </div>
+          </div>
+          <div class="card-grid" style="margin: 0;">
+            <div class="card" style="border-left: 4px solid var(--accent);">
+              <div class="label" style="color: var(--accent);">Exceptional Lie Algebras</div>
+              <div class="detail">All five exceptional Lie algebra dimensions from graph parameters:
+                G<sub>2</sub>=2&Phi;<sub>6</sub>=14, F<sub>4</sub>=v+k=52, E<sub>6</sub>=2v&minus;&lambda;=78,
+                E<sub>7</sub>=vq+&Phi;<sub>3</sub>=133, E<sub>8</sub>=E+2&sup3;=248.</div>
+            </div>
+            <div class="card" style="border-left: 4px solid var(--accent2);">
+              <div class="label" style="color: var(--accent2);">String Theory Dimensions</div>
+              <div class="detail">D<sub>bosonic</sub>=f+&lambda;=26, D<sub>super</sub>=&Theta;=k&minus;&lambda;=10,
+                D<sub>M-theory</sub>=k&minus;1=11. All compactification dimensions from graph: 11&rarr;4 via
+                &Phi;<sub>6</sub>=7, 10&rarr;4 via &Theta;&minus;&mu;=6, 26&rarr;10 via &mu;&sup2;=16.</div>
+            </div>
+            <div class="card" style="border-left: 4px solid var(--accent3);">
+              <div class="label" style="color: var(--accent3);">Gaussian Integer Alpha (C7 Derived)</div>
+              <div class="detail">&alpha;<sup>&minus;1</sup> = (k&minus;1)<sup>2</sup> + s<sup>2</sup> = 11<sup>2</sup>
+                + 4<sup>2</sup> = 137. The C7 identity s<sup>2</sup> = r<sup>2</sup> + k holds iff q(q&minus;3)=0, i.e.
+                q=3. This is NOT post-hoc numerology: the Gaussian integer z = (k&minus;1) + |s|i = 11+4i is the
+                Ihara&ndash;gauge vector, and its norm gives &alpha;<sup>&minus;1</sup> only when the C7 eigenvalue
+                identity is satisfied.</div>
+            </div>
+            <div class="card" style="border-left: 4px solid var(--gold);">
+              <div class="label" style="color: var(--gold);">Master Predictions Table</div>
+              <div class="detail">50+ aspects of physics from one equation q!=2q: legacy/boundary
+                &alpha;<sup>&minus;1</sup>&asymp;137.036 (phenomenology tier),
+                sin&sup2;&theta;<sub>W</sub>=481/2080 (0.04%), &alpha;<sub>s</sub>=20/169 (0.38%),
+                m<sub>H</sub>=125.3&nbsp;GeV (0.13%), m<sub>p</sub>/m<sub>e</sub>=v&sup2;+E&minus;&mu;=1836 (0.008%),
+                Koide=&lambda;/q=2/3 (0.001%), m<sub>t</sub>/m<sub>b</sub>=v+1=41 (1%),
+                m<sub>t</sub>/m<sub>c</sub>=(v+1)q+&Phi;<sub>3</sub>=136 (0.1%),
+                m<sub>c</sub>/m<sub>u</sub>=gv&minus;&Phi;<sub>3</sub>+1=588 (exact), n<sub>s</sub>=29/30 (0.3%),
+                &Omega;<sub>&Lambda;</sub>=41/60 (0.2%), &Omega;<sub>DM</sub>/&Omega;<sub>b</sub>=16/3 (0.9%),
+                |V<sub>us</sub>|=9/40 (0.16%), |V<sub>cb</sub>|=1/25 (1.0%), J<sub>CKM</sub>=27/884000 (0.8%),
+                sin&sup2;&theta;<sub>12</sub>=4/13 (exact finite theorem), sin&sup2;&theta;<sub>23</sub>=7/13 (1.4%),
+                sin&sup2;&theta;<sub>13</sub>=2/91 (0.1%), &theta;<sub>QCD</sub>=0. &chi;&sup2;/dof=0.64 (31 precision
+                observables). Legacy sin&sup2;&theta;<sub>12</sub>=3/10 remains a boundary conflict in the Q8 claim
+                ledger. ZERO free parameters. 3004 checks.</div>
+            </div>
+            <div class="card" style="border-left: 4px solid #f1c40f;">
+              <div class="label" style="color: #f1c40f;">Combinatorial Universe</div>
+              <div class="detail"><strong>PRIME COUNTING CHAIN:</strong> &pi;(v)=k, &pi;(k)=&mu;+1, &pi;(&mu;+1)=q,
+                &pi;(q)=&lambda;. <strong>CATALAN CHAIN:</strong> C(&lambda;)=&lambda;, C(q)=&mu;+1,
+                C(&mu;)=&lambda;&Phi;<sub>6</sub>, C(&mu;+1)=v+&lambda;=42. <strong>FIBONACCI-LUCAS DUAL
+                  LADDER:</strong> F(q)=&lambda;, F(&mu;)=q, F(&Phi;<sub>6</sub>)=&Phi;<sub>3</sub>; L(&lambda;)=q,
+                L(q)=&mu;, L(&mu;)=&Phi;<sub>6</sub>; F&sdot;L and L&sdot;F both fix q. <strong>SIGMA CHAIN:</strong>
+                &sigma;(&lambda;)=q&rarr;&mu;&rarr;&Phi;<sub>6</sub>&rarr;q&sup2;&minus;1&rarr;g&rarr;f&rarr;60&rarr;|PSL(2,7)|=168.
+                <strong>ALL 26 SPORADIC GROUPS:</strong> every order graph-parametric:
+                M<sub>11</sub>&ndash;M<sub>24</sub>, J<sub>1</sub>&ndash;J<sub>4</sub>, HS, McL, Suz,
+                Co<sub>1&ndash;3</sub>, ON, Ly, Ru, He, Fi<sub>22&ndash;24</sub>, HN, Th, BM, M. <strong>MODULAR
+                  GROUP:</strong> &psi;(&lambda;)=q, &psi;(q)=&mu;, &psi;(k)=f, dim&nbsp;S<sub>f</sub>=&lambda;.
+                <strong>j-constant 744=(q&sup2;&minus;1)&middot;q&middot;(2g+1)</strong>.
+                &tau;(3)=&mu;q&sup2;&Phi;<sub>6</sub>, &tau;(5)=&lambda;q(&mu;+1)&Phi;<sub>6</sub>(f&minus;1),
+                &tau;(7)=&minus;(q&sup2;&minus;1)&Phi;<sub>6</sub>&Phi;<sub>3</sub>(f&minus;1). <strong>CLASS
+                  NUMBERS:</strong> h(&minus;g)=&lambda;, h(&minus;(f&minus;1))=q, h(&minus;N<sub>eff</sub>)=&mu;,
+                h(&minus;(v+&Phi;<sub>6</sub>))=&mu;+1, h(&minus;(&Phi;<sub>12</sub>&minus;&lambda;))=&Phi;<sub>6</sub>.
+                <strong>FERMAT:</strong> F<sub>0</sub>=q, F<sub>1</sub>=&mu;+1, F<sub>2</sub>=&mu;&sup2;+1;
+                F<sub>0</sub>&middot;F<sub>1</sub>&middot;F<sub>2</sub>=E+g. <strong>WEYL:</strong>
+                |W(E<sub>7</sub>)|=&lambda;<sup>&Theta;</sup>q<sup>4</sup>(&mu;+1)&Phi;<sub>6</sub>,
+                |W(E<sub>8</sub>)|=&lambda;<sup>&lambda;&Phi;<sub>6</sub></sup>q<sup>5</sup>(&mu;+1)&sup2;&Phi;<sub>6</sub>.
+                p-adic: v<sub>p</sub>(f!)=&Theta;,&mu;,q,&lambda;,1 for p=3,5,7,11,13. <strong>GRAPH RIEMANN
+                  HYPOTHESIS:</strong> W(3,3) is Ramanujan; all Ihara zeta poles satisfy |u|=1/&radic;(k&minus;1).
+                <strong>SPANNING TREES:</strong>
+                &tau;=&lambda;<sup>q<sup>&mu;</sup></sup>&middot;(&mu;+1)<sup>f&minus;1</sup>=2<sup>81</sup>&middot;5<sup>23</sup>.
+                <strong>KISSING NUMBERS:</strong> kiss(1,2,3,4,8)=(&lambda;,q!,k,f,E);
+                kiss(f)=&mu;&sup2;q&sup3;(&mu;+1)&Phi;<sub>6</sub>&Phi;<sub>3</sub>=196560. <strong>LEECH
+                  SHELLS:</strong> all graph-parametric. <strong>691=&Theta;&middot;q&middot;(f&minus;1)+1</strong>.
+                <strong>HEAT KERNEL:</strong> a<sub>0</sub>=v, &minus;a<sub>1</sub>=2E,
+                a<sub>2</sub>=E&Phi;<sub>3</sub>. <strong>BELL:</strong> B(q)=&mu;+1, B(&mu;)=g,
+                B(&mu;+1)=&mu;&Phi;<sub>3</sub>. <strong>MAGIC:</strong> M(q)=g. <strong>DIAGONALS:</strong>
+                Diag(f-gon)=&tau;(3)=252. <strong>3004 checks, 0 failures.</strong>
+              </div>
+            </div>
+            <div class="card" style="border-left: 4px solid #e74c3c;">
+              <div class="label" style="color: #e74c3c;">Seven-Fold Selection Principle (C1&ndash;C7)</div>
+              <div class="detail">q=3 uniquely selected by: (C1) r-discriminant = &minus;4&Phi;<sub>4</sub>, (C2)
+                k+g=q<sup>q</sup>=27, (C3) &tau;(2)=&minus;f=&minus;24, (C4) &Phi;<sub>6</sub>=7 Heegner, (C5) Frobenius
+                trace a<sub>11</sub>(E)=s, (C6) 3|g, (C7) s<sup>2</sup>=r<sup>2</sup>+k &hArr; q(q&minus;3)=0. Each
+                condition proved symbolically; together they characterize W(3,3) uniquely.</div>
+            </div>
+            <div class="card" style="border-left: 4px solid var(--fg2);">
+              <div class="label" style="color: var(--fg2);">Atmospheric Sum Rule</div>
+              <div class="detail">sin&sup2;&theta;<sub>23</sub> = sin&sup2;&theta;<sub>W</sub> +
+                sin&sup2;&theta;<sub>12</sub> &rArr; 7/13 = 3/13 + 4/13. This identity requires q(q&minus;3) = 0,
+                uniquely selecting q=3 among all positive integers. A single equation locks three mixing angles to the
+                Weinberg angle.</div>
+            </div>
+          </div>
+        </div>
+        <!-- ─── End Grand Unification Banner ─── -->
+        <div class="spotlight">
+          <p><strong>After rereading the full paper:</strong> the strongest repo-native closure is a <strong>finite
+              spectral-exceptional unification skeleton</strong>. The exact spine is the W(3,3) graph itself, its clique
+            complex, its transport quotients, its Hodge / Dirac packages, and the operator identities that recur across
+            those layers.</p>
+          <p><strong>The cleanest reading is a three-shell reading.</strong> The <strong>bare/local shell</strong>
+            contains raw combinatorial or unification-scale selectors such as <code>&Delta; = 4</code>,
+            <code>N<sub>c</sub> = 3</code>, <code>4 + 8 = 12</code>, and the older internal
+            <code>sin<sup>2</sup>(&theta;<sub>W</sub>) = 1/4</code> or <code>3/8</code> diagnostics. The
+            <strong>projective/dressed shell</strong> contains the promoted electroweak and flavour ratios such as
+            <code>sin<sup>2</sup>(&theta;<sub>W</sub>) = 3/13</code>, <code>&theta;<sub>C</sub> = arctan(3/13)</code>,
+            and the PMNS package over <code>13</code> and <code>91</code>. The <strong>global/spectral shell</strong>
+            contains boundary-layer statements like <code>&alpha;<sup>&minus;1</sup> = 137 + 40/1111</code> (legacy
+            ledger conflict), the
+            <code>40 / 6 / 8</code> exceptional channel dictionary, and shell-dependent Euler / zero-mode counts.
+          </p>
+          <p><strong>That shell split resolves most apparent contradictions on the page.</strong> The promoted finite
+            Dirac package is the full tetrahedral <code>480</code>-dimensional closure with
+            <code>D<sub>F</sub><sup>2</sup> = {0<sup>82</sup>,4<sup>320</sup>,10<sup>48</sup>,16<sup>30</sup>}</code>,
+            while the older <code>122</code> zero-mode count belongs to the truncated
+            <code>C<sup>0</sup> &oplus; C<sup>1</sup> &oplus; C<sup>2</sup></code> shell. Likewise
+            <code>&chi; = -40</code> is the truncated-shell Euler characteristic, while <code>&chi; = -80</code> belongs
+            to the full clique-complex <code>f</code>-vector <code>(40,240,160,40)</code>. More sharply, the promoted
+            package now has a selected-point <code>q = 3</code> cyclotomic master lock: the internal blocks align as
+            <code>81 = q<sup>4</sup></code>, <code>6 = 2q</code>, <code>8 = q<sup>2</sup>-1</code>,
+            <code>86 = q<sup>4</sup> + 2q - 1</code>, and <code>248 = 3q<sup>4</sup> + 2q - 1</code>, while the curved
+            residues align as <code>320 = v(q)(q<sup>2</sup>-1)</code>,
+            <code>2240 = &Phi;<sub>6</sub>(q) &middot; 320</code>, and
+            <code>12480 = q &Phi;<sub>3</sub>(q) &middot; 320</code>. At that selected point the curved Weinberg lock is
+            therefore not separate data but the corollary
+            <code>9c<sub>EH</sub>/c<sub>6</sub> = q/&Phi;<sub>3</sub>(q) = 3/13</code>.
+          </p>
+          <p><strong>The Yukawa frontier is also narrower than an “unknown texture”.</strong> On the replicated diagonal
+            <code>l<sub>6</sub></code> seed the exact bottleneck is <code>9 -&gt; 10</code>, native mixed
+            <code>A<sub>2</sub></code> seeds lift that to <code>11 -&gt; 12</code>, and after the exact <code>V4</code>
+            / Kronecker / Gram reductions the surviving nontrivial packet is just two radical <code>2&times;2</code>
+            blocks on the common <code>240<sup>2</sup></code> shell plus scalar channels <code>169</code>,
+            <code>275</code>, <code>323</code>. More sharply, the finite family packet now has an exact one-versus-two
+            normal form: the six ordered generation-transfer channels are the complete oriented three-generation graph,
+            the current replicated seed activates the four channels touching one distinguished generation and leaves the
+            opposite bidirectional pair dormant, and in the exact basis <code>(1,1,0),(0,0,1),(1,-1,0)</code> the
+            universal generation matrices become upper-unitriangular with common square <code>2E<sub>13</sub></code>.
+            Better still, that same <code>2E<sub>13</sub></code> channel is the first exact quadratic shadow of the
+            active simple-root packet, not an independently added mode. So the remaining Yukawa work is best read as
+            nonlinear internal spectral data, not missing support or another free linear mode.
+          </p>
+          <p><strong>The real bottleneck is no longer finding more finite identities.</strong> It is proving the
+            continuum lift. The exact local product-heat bridge now sharpens that wall four times over: the commuting
+            family spurion is blind at <code>A<sub>0</sub></code> and <code>A<sub>2</sub></code> and first enters at
+            <code>A<sub>4</sub></code> as <code>&Delta;A<sub>4</sub> = 1209 a<sub>0</sub> / 9194</code>; on both curved
+            refinement seeds the corresponding density satisfies
+            <code>&Delta;A<sub>4</sub><sup>(dens)</sup> = &epsilon;<sup>2</sup> A<sub>0</sub><sup>(dens)</sup></code>;
+            the local bridge packet itself is now normalized sharply enough to be exact at the conservative level, with
+            product coefficient
+            <code>A<sub>4</sub>B<sub>0</sub> + A<sub>2</sub>B<sub>2</sub> + A<sub>0</sub>B<sub>4</sub></code>, no
+            <code>A<sub>2</sub></code> / Einstein-Hilbert contamination, repo-native finite multiplier <code>81</code>,
+            and reduced local prefactor <code>27 / (16&pi;<sup>2</sup>)</code> after the isolated rank-2 factor
+            <code>2</code>; and the already-promoted residue dictionary now fixes the external exceptional quanta
+            themselves as <code>Q<sub>curv</sub> = 52</code> and <code>Q<sub>top</sub> = 56</code>. Taken together, the
+            conservative exact package is now a single <strong>q-cyclotomic master lock at <code>q = 3</code></strong>:
+            <code>81 = q<sup>4</sup></code>, <code>6 = 2q</code>, <code>8 = q<sup>2</sup> - 1</code>,
+            <code>c<sub>EH</sub> = v(q)(q<sup>2</sup> - 1) = 320</code>,
+            <code>a<sub>2</sub> = &Phi;<sub>6</sub>(q)c<sub>EH</sub> = 2240</code>,
+            <code>c<sub>6</sub> = q&Phi;<sub>3</sub>(q)c<sub>EH</sub> = 12480</code>, and the promoted Weinberg lock is
+            then forced by <code>9c<sub>EH</sub>/c<sub>6</sub> = q/&Phi;<sub>3</sub>(q) = 3/13</code>. There is now also
+            an exact variational selector on the active <code>2&times;2</code> bridge branch: if
+            <code>tr(C<sup>*</sup>C) = x+y</code>, then the quartic packet satisfies
+            <code>|det C|<sup>2</sup> = xy &le; (x+y)<sup>2</sup>/4</code>, with equality iff the two singular-value
+            squares agree. So whenever the lower-order quadratic branch sector is shape-blind, the bridge packet selects
+            a <strong>balanced rank-2 branch</strong> rather than a generic one. More sharply, the reduced master action
+            <code>V(x,y) = -&mu;(x+y) + u(x+y)<sup>2</sup> - vAxy</code> already forces the only nonzero stationary
+            point to satisfy <code>x=y=&mu;/(4u-vA)</code>, and its Hessian splits exactly into the shape mode
+            <code>&lambda;<sub>shape</sub> = vA</code> and radial mode <code>&lambda;<sub>radial</sub> = 4u-vA</code>.
+            So within the reduced local model, a nonzero bridge vacuum is stable precisely when <code>vA &gt; 0</code>
+            and <code>4u-vA &gt; 0</code>. The explicit external seeds now sharpen the global side too:
+            <code>CP2_9</code> has harmonic <code>H<sup>2</sup></code> dimension <code>1</code> with exact split
+            <code>(b<sub>2</sub><sup>+</sup>, b<sub>2</sub><sup>-</sup>) = (1,0)</code>, while <code>K3_16</code> has
+            harmonic <code>H<sup>2</sup></code> dimension <code>22</code> with exact split <code>(3,19)</code>. So among
+            the explicit seeds already checked in the repo, <code>CP2_9</code> cannot by itself host a genuine rank-2
+            harmonic bridge branch, whereas <code>K3_16</code> is the first exact host that can. Better still, that host
+            theorem now lands directly on the exact qutrit matter sector: tensoring the exact
+            <code>81</code>-dimensional W33 qutrit packet with harmonic <code>H<sup>2</sup></code> gives a middle-degree
+            channel of dimension <code>81</code> on <code>CP2_9</code> and <code>1782</code> on <code>K3_16</code>, with
+            exact K3 sign split <code>243 + 1539 = 81(3+19)</code>. The older total protected-harmonic counts are now
+            degree-resolved too: <code>243 = 81 + 81 + 81</code> on <code>CP2_9</code> and
+            <code>1944 = 81 + 1782 + 81</code> on <code>K3_16</code>, so the endpoint packet
+            <code>162 = 81b<sub>0</sub> + 81b<sub>4</sub></code> is universal and all seed dependence lives in the
+            middle-degree <code>81 x H<sup>2</sup></code> channel. Better still, the explicit chain model now carries
+            the actual <code>H<sup>2</sup></code> cup form: with the propagated fundamental class, the simplicial
+            pairing recovers signature <code>(1,0)</code> on <code>CP2_9</code> and <code>(3,19)</code> on
+            <code>K3_16</code>. On <code>K3_16</code> the lexicographically first harmonic triangle already splits into
+            one positive and one negative line, so the current seed determines a canonical mixed rank-<code>2</code>
+            plane, not just a dimension count. Tensoring that plane with the qutrit packet gives a split external
+            <code>81 + 81</code> package of total size <code>162</code>. That sharpens the transport comparison too: the
+            internal <code>0 &rarr; 81 &rarr; 162 &rarr; 81</code> sector is explicitly non-split, while the canonical
+            mixed <code>K3</code> plane is split by construction, so the current exact relation is a size-shadow match
+            plus an exact split-versus-nonsplit obstruction, not an identification of objects. It also settles the old
+            <code>81</code>-versus-<code>162</code> tension in the local bridge coefficient: <code>162</code> is the
+            total qutrit size of the canonical external branch, while the local <code>A<sub>4</sub></code> packet still
+            counts only the curvature-sensitive internal <code>81</code> and picks up the external plane only through
+            the universal rank-<code>2</code> factor <code>2</code>. The explicit K3 chain complex now goes one step
+            further again: the first barycentric pullback scales the selector-plane restricted cup form by exactly
+            <code>120 = 5!</code>, so the normalized mixed signature survives the first refinement step unchanged; the
+            same simplicial cochain complex also yields an integral <code>H<sup>2</sup>(K3,Z)</code> basis with Smith
+            data <code>0<sup>22</sup>,1<sup>105</sup></code> and an even unimodular intersection form of signature
+            <code>(3,19)</code>, so the explicit seed already realizes the full K3 lattice; and inside that lattice
+            there is a canonical primitive hyperbolic plane with Gram <code>[[0,1],[1,0]]</code>. More sharply, the same
+            explicit integral lattice already contains three pairwise orthogonal primitive hyperbolic planes with block
+            Gram <code>3U</code>, and a unit maximal minor shows that this <code>3U</code> block is primitive in the
+            ambient K3 lattice. So the orthogonal complement is forced to be an even unimodular negative-definite
+            rank-<code>16</code> lattice, and the explicit seed now carries a full hyperbolic core rather than just one
+            isolated rank-<code>2</code> lattice host. Sharper still, the canonical selector plane is not itself one of
+            those primitive <code>U</code> factors: its cup-orthogonal shadow on the <code>3U</code> core is
+            positive-definite, while its residual shadow on the rank-<code>16</code> complement is negative-definite. So
+            the selector really bridges the hyperbolic core and the negative complement rather than sitting wholly on
+            either side. Coupling that oriented primitive plane to the locked local prefactor
+            <code>27/(16&pi;<sup>2</sup>)</code> and the fixed external quantum <code>Q<sub>curv</sub> = 52</code> now
+            fixes the reduced external bridge coefficient to <code>351/(4&pi;<sup>2</sup>)</code>, with raw
+            <code>sd<sup>1</sup></code> mass larger by the same exact factor <code>120</code>. That does <em>not</em>
+            yet identify the primitive lattice plane with the earlier harmonic-selector plane; it means the explicit K3
+            seed now carries both a canonical real mixed selector and a canonical integral rank-<code>2</code> lattice
+            host, now sitting inside a larger exact <code>3U</code> hyperbolic core, with the reduced external
+            coefficient already fixed on the lattice side. Sharper again, the selector-side reduced packet now resolves
+            all the way down to <code>U1 + U2 + U3 + E8_1 + E8_2</code>, each of those five pieces survives first
+            barycentric pullback with exact scale <code>120</code>, and the canonical primitive plane is exactly
+            <code>U1</code>. So the strongest conservative coupling theorem now available is that <code>U1</code> is the
+            minimal canonical external carrier of the first family-sensitive <code>A<sub>4</sub></code> packet, even
+            though the full local selector packet remains distributed across the broader five-factor K3 split and is not
+            yet identified with the internal one-versus-two family flag <code>span(1,1,0) &lt; {x=y}</code>. Sharper
+            again, the current exact <code>U1</code> data are still line-blind inside that carrier: the canonical
+            hyperbolic plane already contains two primitive isotropic lines, and the seed/refined coefficient data are
+            invariant under swapping them, so the external side still does not canonically pick the internal family line
+            itself. The packet is also strongly unevenly distributed: within the hyperbolic core the dominant carrier is
+            <code>U3</code>, not <code>U1</code>, while within the exceptional side the dominant carrier is
+            <code>E8_2</code>. And the transport comparison is best read at the semisimplified-shadow level: the current
+            split K3 packet and the non-split internal <code>162</code>-sector agree exactly on the graded shadow
+            <code>81 ⊕ 81</code>, not on the extension class. The checked local <code>V29</code> stiffness summary is
+            numerically consistent with the isotropic premise behind the balanced selector, and the companion validation
+            file keeps the local finite-difference error small, but this is still observation, not the final smooth
+            continuum theorem. So the first family-sensitive step still does not introduce a third external RG mode, the
+            local nonlinear packet is already an <code>a<sub>4</sub></code>-only object, the external normalization is
+            no longer floating, and the current explicit K3 seed now also fixes the first reduced external sign/count
+            coupling. The honest continuum target is therefore the smooth refined <code>a<sub>4</sub></code> density
+            together with the coupling of that reduced external coefficient to the still-open Yukawa / family closure,
+            not the leading <code>&Lambda;<sup>4</sup></code> or <code>&Lambda;<sup>2</sup></code> coefficients. The
+            remaining physics obligations include specifying and justifying the external symmetry-breaking datum forced
+            by the exact chirality no-go, an observable scale, a rigorous continuum construction, and broader uniqueness
+            beyond the current repo-searched landscape. So the honest
+            claim today is not “accepted TOE”; it is that the finite internal side is unusually rigid and the
+            continuum-dynamical closure remains the live frontier.
+          </p>
+        </div>
+        <div class="card-grid">
+          <div class="card">
+            <div class="label">Exact Finite Spine</div>
+            <div class="detail"><code>SRG(40,12,2,4)</code>, <code>|V| = 40</code>, <code>|E| = 240</code>,
+              <code>|T| = 160</code>, adjacency spectrum <code>{12<sup>1</sup>,2<sup>24</sup>,(-4)<sup>15</sup>}</code>,
+              the Hodge split <code>C<sup>1</sup> = 39 + 81 + 120</code>, the <code>27 + 27 + 27</code> matter
+              decomposition, and the Gaussian-integer integer-part identity
+              <code>&alpha;<sup>&minus;1</sup><sub>int</sub> = (k-1)<sup>2</sup> + &mu;<sup>2</sup> = 137</code> are the
+              strongest exact closures; non-integer refinements stay in the boundary ledger.
+            </div>
+          </div>
+          <div class="card">
+            <div class="label">Conditional Phenomenology</div>
+            <div class="detail">Repeated ratios can motivate electroweak or flavour models, but a shared number is not
+              a derivation. These cards are conditional until a named representation, action, and scale map the finite
+              object to measured observables.</div>
+          </div>
+          <div class="card">
+            <div class="label">Interpretive Boundary</div>
+            <div class="detail">The finite graph, selector, code, and lattice structures are exact. Connecting them to
+              a unique physical model requires additional data and maps: an explicitly justified symmetry-breaking
+              datum because the finite controller provably exchanges the chirality choices, a calibrated observable
+              scale, and a rigorous continuum construction. Earlier cards may describe candidate routes;
+              they are not promoted merely because the finite arithmetic is exact. The sharpest exact local clue
+              is now that the family spurion is invisible at <code>A<sub>0</sub></code> and <code>A<sub>2</sub></code>,
+              first enters at <code>A<sub>4</sub></code>, stays on the same external <code>A<sub>0</sub></code> RG
+              channel, the local nonlinear packet is already fixed as an <code>a<sub>4</sub></code>-only term with
+              reduced prefactor <code>27 / (16&pi;<sup>2</sup>)</code>, the external exceptional quanta are already
+              fixed as <code>52</code> and <code>56</code>, and those same residues now sit inside one selected-point
+              <code>q = 3</code> cyclotomic master package. More sharply, the active <code>2&times;2</code> bridge
+              packet already has an exact balanced-branch selector
+              <code>|det C|<sup>2</sup> &le; tr(C<sup>*</sup>C)<sup>2</sup>/4</code>, and the reduced master-action
+              Hessian splits as <code>&lambda;<sub>shape</sub> = vA</code> and
+              <code>&lambda;<sub>radial</sub> = 4u-vA</code>. Sharper still, the explicit external seeds already
+              separate by host capacity: <code>CP2_9</code> has only one harmonic <code>2</code>-form with split
+              <code>(1,0)</code>, while <code>K3_16</code> has harmonic split <code>(3,19)</code>, so among the current
+              exact seeds the genuine rank-<code>2</code> branch is already forced onto the <code>K3</code> side. More
+              sharply again, that branch now localizes to the exact middle-degree qutrit package
+              <code>81 x H<sup>2</sup></code>: <code>81</code> on <code>CP2_9</code> versus
+              <code>1782 = 243 + 1539</code> on <code>K3_16</code>. The older total protected-harmonic counts then split
+              exactly as universal endpoints plus middle degree: <code>243 = 162 + 81</code> and
+              <code>1944 = 162 + 1782</code>. Sharpest of all, the explicit <code>K3</code> chain model now carries a
+              larger exact hyperbolic host: besides the harmonic-selector plane from the first mixed triangle and the
+              canonical primitive lattice plane, the integral K3 lattice now exhibits a primitive orthogonal
+              <code>3U</code> core with negative-definite rank-<code>16</code> complement. The selector survives
+              barycentric pullback with exact scale <code>120</code>, while the lattice side fixes the reduced external
+              coefficient <code>351/(4&pi;<sup>2</sup>)</code> after coupling to <code>Q<sub>curv</sub> = 52</code>. So
+              these finite identities remain candidate bridge data; a smooth continuum lift and a physical family map
+              have not been established by them.
+            </div>
+          </div>
+          <div class="card">
+            <div class="label">Historical Yukawa Ansatz &mdash; Conditional</div>
+            <div class="detail">The archived program compresses a generic
+              <code>24&times;24</code> ansatz: the diagonal <code>l<sub>6</sub></code> ceiling is
+              <code>9 -&gt; 10</code>, the first native mixed-seed lift is <code>11 -&gt; 12</code>, the reduced packet
+              is now two explicit radical <code>2&times;2</code> blocks on the <code>240<sup>2</sup></code> shell plus
+              the scalar channels <code>169</code>, <code>275</code>, <code>323</code>, and the exact family side
+              already has a one-versus-two normal form with common flag basis
+              <code>(1,1,0),(0,0,1),(1,-1,0)</code> and common square <code>2E<sub>13</sub></code>. This is a finite
+              ansatz ledger, not a derivation of measured Yukawa couplings.
+            </div>
+          </div>
+        </div>
       </section>
 
     </div><!-- /container -->
