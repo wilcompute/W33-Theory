@@ -1,16 +1,12 @@
 name: GAP Certificates
 
-# Runs the GAP-produced certificates.  GAP is not a Python dependency and is not
+# Runs the GAP-produced certificates. GAP is not a Python dependency and is not
 # present on every runner, so this job SKIPS HONESTLY when the interpreter is
 # absent: it reports "skipped, GAP not available" and exits 0, rather than
-# passing silently as though the theorems had been checked.  A silent green on
-# an absent prover is worse than a red.
+# passing silently as though the theorems had been checked.
 #
-# The GAP scripts read their repo root from the W33_REPO environment variable
-# (see scripts/run_gap.sh for why: the Windows harness must cd into the GAP
-# install directory, so relative output paths do not land in the repo).  Setting
-# it here is what makes the same script run unmodified on Linux CI and on the
-# Windows workstation.
+# The GAP scripts read their repo root from W33_REPO so the same files run on
+# Linux CI and through the Windows scripts/run_gap.sh harness.
 
 on:
   workflow_dispatch:
@@ -43,7 +39,6 @@ jobs:
         continue-on-error: true
         run: |
           sudo apt-get update -qq || true
-          # separately, so a missing optional package cannot take gap down with it
           sudo apt-get install -y --no-install-recommends gap || true
           sudo apt-get install -y --no-install-recommends gap-character-tables || true
           if command -v gap >/dev/null 2>&1; then
@@ -59,7 +54,7 @@ jobs:
           echo "::notice title=GAP certificates skipped::GAP is not available on this runner."
           echo "The GAP certificates were NOT checked in this run. This job is green"
           echo "because nothing failed, not because the theorems were verified."
-          echo "To verify locally:  scripts/run_gap.sh 'C:/path/to/analysis/<file>.g'"
+          echo "To verify locally: scripts/run_gap.sh 'C:/path/to/analysis/<file>.g'"
 
       - name: Run Pass 1020 -- transitive order-51840 subgroup of W(E8)
         if: steps.gap.outputs.available == 'true'
@@ -70,22 +65,64 @@ jobs:
           mkdir -p data
           gap -q -b --nointeract analysis/w33_pass1020_e8_transitive_51840.g
 
-      - name: Validate the Pass 1020 certificate
+      - name: Run Pass 1021 -- E8 roots fiber over forty W33 points
+        if: steps.gap.outputs.available == 'true'
+        env:
+          W33_REPO: ${{ github.workspace }}
+        run: |
+          set -euo pipefail
+          gap -q -b --nointeract analysis/w33_pass1021_e8_fibration_over_forty.g
+
+      - name: Run Pass 1022 -- equivariant section obstruction
+        if: steps.gap.outputs.available == 'true'
+        env:
+          W33_REPO: ${{ github.workspace }}
+        run: |
+          set -euo pipefail
+          gap -q -b --nointeract analysis/w33_pass1022_equivariant_section_obstruction.g
+
+      - name: Validate Passes 1020-1022
         if: steps.gap.outputs.available == 'true'
         run: |
           python - <<'PY'
-          import json, sys
-          p = "data/w33_pass1020_e8_transitive_51840.json"
-          d = json.load(open(p))
-          failed = [k for k, v in d["checks"].items() if not v]
-          assert d["status"] == "PASS", d["status"]
-          assert not failed, f"failing checks: {failed}"
-          assert d["E8_side"]["transitive_subgroup_order"] == 51840
-          assert d["E8_side"]["centraliser_order"] == 155520
-          assert d["E8_side"]["root_stabiliser_order"] == 216
-          assert d["E8_side"]["subdegrees"] == [1,1,1,1,1,1,27,27,27,27,27,27,72]
-          assert d["W33_edge_side"]["PGSp43_edge_subdegrees"] == [1,1,4,18,18,18,18,27,27,108]
-          print(f"{p}: {len(d['checks'])} checks, all pass")
+          import json
+
+          p1020 = "data/w33_pass1020_e8_transitive_51840.json"
+          d1020 = json.load(open(p1020))
+          failed = [k for k, v in d1020["checks"].items() if not v]
+          assert d1020["status"] == "PASS", d1020["status"]
+          assert not failed, f"Pass 1020 failing checks: {failed}"
+          assert d1020["E8_side"]["transitive_subgroup_order"] == 51840
+          assert d1020["E8_side"]["centraliser_order"] == 155520
+          assert d1020["E8_side"]["root_stabiliser_order"] == 216
+
+          p1021 = "data/w33_pass1021_e8_fibration_over_forty.json"
+          d1021 = json.load(open(p1021))
+          failed = [k for k, v in d1021["checks"].items() if not v]
+          assert d1021["status"] == "PASS", d1021["status"]
+          assert not failed, f"Pass 1021 failing checks: {failed}"
+          assert d1021["fibration"]["blocks"] == 40
+          assert d1021["fibration"]["quotient_order"] == 25920
+          assert d1021["fibration"]["quotient_subdegrees"] == [1, 12, 27]
+          assert d1021["identification"]["conjugate_to_point_action"] is True
+          assert d1021["identification"]["conjugate_to_line_action"] is False
+
+          p1022 = "data/w33_pass1022_equivariant_section_obstruction.json"
+          d1022 = json.load(open(p1022))
+          failed = [k for k, v in d1022["checks"].items() if not v]
+          assert d1022["status"] == "PASS", d1022["status"]
+          assert not failed, f"Pass 1022 failing checks: {failed}"
+          assert d1022["exact_sequence"]["root_stabiliser_order"] == 216
+          assert d1022["exact_sequence"]["point_stabiliser_order"] == 1296
+          assert d1022["exact_sequence"]["quotient_order"] == 6
+          assert d1022["exact_sequence"]["quotient_structure"] == "C6"
+          assert d1022["section_obstruction"]["full_group_admits_section"] is False
+          assert d1022["witnesses"]["center_C2_admits_section"] is False
+          assert d1022["witnesses"]["Sylow5_admits_section"] is True
+
+          print(f"{p1020}: {len(d1020['checks'])} checks, all pass")
+          print(f"{p1021}: {len(d1021['checks'])} checks, all pass")
+          print(f"{p1022}: {len(d1022['checks'])} checks, all pass")
           PY
 
       - name: Upload GAP certificates
