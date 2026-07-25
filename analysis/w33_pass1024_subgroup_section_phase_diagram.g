@@ -1,13 +1,13 @@
 # Pass 1024: exact subgroup phase diagram for equivariant sections.
 #
 # The property "admits an equivariant section" is hereditary under passage to
-# subgroups.  This permits an exact branch-and-bound search down maximal-subgroup
+# subgroups. This permits an exact branch-and-bound search down maximal-subgroup
 # classes: once an admissible group is found, none of its descendants can improve
 # its order; once a queued group is no larger than the current optimum, none of
 # its descendants can improve it either.
 #
 # The search deduplicates by K-conjugacy and terminates only when every possible
-# larger subgroup has been adjudicated.  It therefore returns the exact maximum
+# larger subgroup has been adjudicated. It therefore returns the exact maximum
 # order of an admissible subgroup, not a random sample.
 
 Read("analysis/w33_e8_c6_bundle_common.g");;
@@ -48,9 +48,9 @@ Main1024 := function()
   local data, K, Z, H, pair, triple, fibre, P, T, L, trivial,
         sylow2, sylow3, sylow5, normalizer5, distinguished,
         maximalClasses, maximalRows, group, queue, seen, histogram,
-        bestOrder, bestGroups, initialAdmissible, index, sizes, candidate,
-        admits, containsCenter, children, processed, nodeLimit,
-        checks, names, stream, name, row, groupId;
+        bestOrder, bestGroups, uniqueBest, initialAdmissible, index, sizes,
+        candidate, admits, containsCenter, children, processed, nodeLimit,
+        checks, names, stream, name, row;
 
   data := BuildE8C6Bundle102x();
   K := data.K;
@@ -122,18 +122,17 @@ Main1024 := function()
     fi;
   od;
 
-  # Remove K-conjugate duplicates among the optimal representatives.
-  bestGroups := Filtered([1..Length(bestGroups)],groupId ->
-    not ForAny([1..groupId-1],index ->
-      Size(bestGroups[index])=Size(bestGroups[groupId]) and
-      IsConjugate(K,bestGroups[index],bestGroups[groupId])))
-    ^ bestGroups;
+  uniqueBest := [];
+  for group in bestGroups do
+    if not SeenConjugate1024(K,uniqueBest,group) then Add(uniqueBest,group); fi;
+  od;
+  bestGroups := uniqueBest;
 
   Sort(histogram,function(left,right) return left[1]>right[1]; end);
 
   checks := rec();
   checks.trivial_group_admits_section := AdmitsPointSection102x(trivial,data.fibres);
-  checks.center_C2_is_minimal_obstructed :=
+  checks.center_C2_is_a_minimal_obstruction :=
     not AdmitsPointSection102x(Z,data.fibres) and Size(Z)=2;
   checks.Sylow5_positive_witness_survives :=
     Size(sylow5)=5 and AdmitsPointSection102x(sylow5,data.fibres);
@@ -162,7 +161,7 @@ Main1024 := function()
   WriteAll(stream,"{\n");
   WriteAll(stream,"  \"schema\": \"w33.pass1024.subgroup_section_phase_diagram.gap.v1\",\n");
   WriteAll(stream,"  \"status\": \"PASS\",\n");
-  WriteAll(stream,"  \"headline\": \"An exact maximal-subgroup branch-and-bound search determines the largest Sp(4,3) subgroups that admit a phase section; the central C2 is the unique minimal obstruction mechanism and every center-containing tested class is obstructed.\",\n");
+  WriteAll(stream,"  \"headline\": \"An exact maximal-subgroup branch-and-bound search determines the largest Sp(4,3) subgroups that admit a phase section. The central C2 supplies a minimal obstruction, and every center-containing class in the maximal and distinguished registry is obstructed.\",\n");
   WriteAll(stream,Concatenation("  \"maximal_class_count\": ",String(Length(maximalClasses)),",\n"));
   WriteAll(stream,"  \"maximal_classes\": [\n");
   for index in [1..Length(maximalRows)] do
@@ -196,7 +195,8 @@ Main1024 := function()
   WriteAll(stream,"  },\n");
   WriteAll(stream,Concatenation("  \"order_histogram_rows\": ",String(histogram),",\n"));
   WriteAll(stream,"  \"histogram_columns\": [\"order\",\"classes_processed\",\"admissible\",\"obstructed\",\"contain_center\"],\n");
-  WriteAll(stream,"  \"minimal_obstruction\": {\"order\":2,\"group\":\"Z(Sp(4,3))=C2\",\"reason\":\"trivial on the base and antipodal upstairs\"},\n");
+  WriteAll(stream,"  \"minimal_obstruction_witness\": {\"order\":2,\"group\":\"Z(Sp(4,3))=C2\",\"reason\":\"trivial on the base and antipodal upstairs\"},\n");
+  WriteAll(stream,"  \"boundary\": \"The optimum is exact. The statement that the center is a minimal obstruction does not claim it is the only K-conjugacy class of obstructed involution subgroups.\",\n");
   WriteAll(stream,Concatenation("  \"check_count\": ",String(Length(names)),",\n"));
   WriteAll(stream,"  \"checks\": {\n");
   for name in names do
