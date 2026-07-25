@@ -109,11 +109,43 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-07-25T18:18:29.443Z (reason: threshold-commits)
+- 2026-07-25 SESSION SUMMARY (Pass 1020 + all four carried-over items). The flagship
+  question is CLOSED, affirmatively: `W(E8)` DOES contain a transitive order-51840
+  subgroup on the 240 roots. It is `Sp(4,3)`, reached by Springer's regular elements
+  (degrees of `W(E8)` divisible by 3 are 12,18,24,30, product 155520 = |ST32|), not by
+  subgroup search -- `MaximalSubgroupClassReps` on order 696729600 does not terminate
+  and should never be retried. Three seconds in GAP. Certificate 24/24, idempotent.
+- 240 = 240 is CLOSED NEGATIVELY, for a sharper reason than the centre argument: the
+  roots carry rank 13 and the edges rank 10, and rank is an invariant of the
+  permutation action, so no choice of isomorphism repairs it. With Pass 1012 both
+  order-51840 candidates are eliminated. Do not reopen this as an open bijection.
+- Root cause of the long circling: `Sp(4,3) = W(E6)` is FALSE and sits in five files.
+  The orders agree, the groups do not. Edge-side work built on it is fine --
+  `Aut(W(3,3))` really is order 51840 -- but it is `PGSp(4,3)`, and every inference
+  that carried the name across to E8 is void. Pass 338's two labels are interchanged;
+  its arithmetic is entirely correct.
+- All five carried-over items done: E8 search, paper fold (1018-1019), Lean proofs of
+  the four W(q,q) non-collisions, GAP CI wiring (skip-if-absent, honest), and the Pass
+  1019 prior-art amendment -- three files read end to end, the locus is NOT in them.
+- NEW FINDING, needs its own pass: `formal/` DOES NOT BUILD on master and did not
+  before this session. 20 of 39 imported modules have real errors (`Pass447SpanLemma`
+  is `Unknown identifier p`, plus Pass450/481/484/486/487/488/491/502x2/508/511/515/
+  517/533/557x2/560/565/570). CI never catches it: lean-action runs with
+  `continue-on-error: true` and the kernel-log step captures the status then `exit 0`.
+  The Lean badge is green over a red library. Left as a finding -- 20 broken proofs is
+  its own pass, and a drive-by `sorry` would be worse.
+- Also: four .lean files had never been imported into W33.lean, so `lake build` had
+  never type-checked them. Three now are; `Pass828CoalescenceArithmetic` stays out
+  because it genuinely does not compile (needs `Decidable` of an unbounded existential
+  over N), with a comment saying so.
+- NOT DONE: no LaTeX engine on this machine (tectonic lived under `AppData\Local\Temp`
+  and has been cleaned), so `w33_paper.tex` is checked structurally only -- environment
+  balance, braces, math delimiters, no dangling `\ref` -- and was NOT compiled locally.
+- Auto-saved at 2026-07-25T21:27:58.624Z (reason: startup)
 - Recent commits:
-  - 4c746d05d cross-track: flag duplicated pass numbers 982/983, and restore this note to the root
-  - 04fc15747 Pass 398: freeze complete formula-search universe
-  - cde4b7ff4 paper: record the edge-root equivariance obstruction in the E8 section
+  - 93c7fc0a2 paper: fold in Passes 1018-1019 -- the substrate is rigid, the fragile locus is classical
+  - 3d01adb91 Pass 1019 amendment + CI: resolve the prior-art caveat, and run GAP honestly
+  - 2a7bdf1ef Pass 398: freeze complete formula-search universe
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->
