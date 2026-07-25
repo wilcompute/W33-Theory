@@ -1,0 +1,97 @@
+name: GAP Certificates
+
+# Runs the GAP-produced certificates.  GAP is not a Python dependency and is not
+# present on every runner, so this job SKIPS HONESTLY when the interpreter is
+# absent: it reports "skipped, GAP not available" and exits 0, rather than
+# passing silently as though the theorems had been checked.  A silent green on
+# an absent prover is worse than a red.
+#
+# The GAP scripts read their repo root from the W33_REPO environment variable
+# (see scripts/run_gap.sh for why: the Windows harness must cd into the GAP
+# install directory, so relative output paths do not land in the repo).  Setting
+# it here is what makes the same script run unmodified on Linux CI and on the
+# Windows workstation.
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ master ]
+    paths:
+      - 'analysis/**.g'
+      - 'scripts/run_gap.sh'
+      - '.github/workflows/gap-certificates.yml'
+  pull_request:
+    paths:
+      - 'analysis/**.g'
+      - 'scripts/run_gap.sh'
+
+jobs:
+  gap-certificates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Try to install GAP
+        id: gap
+        continue-on-error: true
+        run: |
+          sudo apt-get update -qq || true
+          # separately, so a missing optional package cannot take gap down with it
+          sudo apt-get install -y --no-install-recommends gap || true
+          sudo apt-get install -y --no-install-recommends gap-character-tables || true
+          if command -v gap >/dev/null 2>&1; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+            gap --version || true
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Skip notice (GAP unavailable)
+        if: steps.gap.outputs.available != 'true'
+        run: |
+          echo "::notice title=GAP certificates skipped::GAP is not available on this runner."
+          echo "The GAP certificates were NOT checked in this run. This job is green"
+          echo "because nothing failed, not because the theorems were verified."
+          echo "To verify locally:  scripts/run_gap.sh 'C:/path/to/analysis/<file>.g'"
+
+      - name: Run Pass 1020 -- transitive order-51840 subgroup of W(E8)
+        if: steps.gap.outputs.available == 'true'
+        env:
+          W33_REPO: ${{ github.workspace }}
+        run: |
+          set -euo pipefail
+          mkdir -p data
+          gap -q -b --nointeract analysis/w33_pass1020_e8_transitive_51840.g
+
+      - name: Validate the Pass 1020 certificate
+        if: steps.gap.outputs.available == 'true'
+        run: |
+          python - <<'PY'
+          import json, sys
+          p = "data/w33_pass1020_e8_transitive_51840.json"
+          d = json.load(open(p))
+          failed = [k for k, v in d["checks"].items() if not v]
+          assert d["status"] == "PASS", d["status"]
+          assert not failed, f"failing checks: {failed}"
+          assert d["E8_side"]["transitive_subgroup_order"] == 51840
+          assert d["E8_side"]["centraliser_order"] == 155520
+          assert d["E8_side"]["root_stabiliser_order"] == 216
+          assert d["E8_side"]["subdegrees"] == [1,1,1,1,1,1,27,27,27,27,27,27,72]
+          assert d["W33_edge_side"]["PGSp43_edge_subdegrees"] == [1,1,4,18,18,18,18,27,27,108]
+          print(f"{p}: {len(d['checks'])} checks, all pass")
+          PY
+
+      - name: Upload GAP certificates
+        if: steps.gap.outputs.available == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: gap-certificates
+          path: data/w33_pass*.json
+          if-no-files-found: warn

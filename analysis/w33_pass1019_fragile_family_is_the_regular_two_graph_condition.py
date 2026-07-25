@@ -164,9 +164,21 @@ def part_B_identification(checks, rows):
                 "exploration/PART_CCCLVII_TWO_GRAPH_BRIDGE.py",
                 "exploration/PART_CCCLXI_TWO_GRAPH_INCIDENCE_OPERATOR.py",
                 "exploration/PART_CCCLXIV_TWO_GRAPH_PRIMITIVE_RESPONSE_OPERATOR.py"],
-            "prior_art_caveat": (
-                "a grep found the topic in these files, not the n = 2(k-s) "
-                "locus; whether they already contain it is NOT established here"),
+            "prior_art_resolution": (
+                "RESOLVED in Pass 1020: all three files were read end to end. "
+                "None states the n = 2(k-s) locus, the regular two-graph "
+                "condition, or the two-eigenvalue Seidel criterion. They build "
+                "the W(3,3) two-graph object itself -- the 4480 odd triples, the "
+                "40 x 4480 vertex-by-odd-triple incidence operator M, and the "
+                "identity M M^T = 320 I + 16 J + 4 A that recovers the adjacency "
+                "from the incidence primitive. Their only '2*(k-...)' terms are "
+                "the pair-counts 2*(K-1-LAM) and 2*(K-MU), which involve lambda "
+                "and mu, not the Seidel eigenvalue s. Moreover W(3,3) is proved "
+                "in part C below to be excluded from the locus, so these files "
+                "concern a graph that provably does not lie in it. The in-repo "
+                "prior art is therefore disjoint from this pass; the classical "
+                "attribution to Seidel above stands unchanged."),
+            "prior_art_resolved_by": "Pass 1020 (commit 8401f04b5)",
             "reading": (
                 "The collision condition is exactly the two-eigenvalue Seidel "
                 "condition, verified on every member of the locus.  The mechanism "
