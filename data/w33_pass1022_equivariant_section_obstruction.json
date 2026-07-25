@@ -1,7 +1,7 @@
 {
-  "schema": "w33.pass1022.equivariant_section_obstruction.gap.v1",
+  "schema": "w33.pass1022.equivariant_section_obstruction.gap.v2",
   "status": "PASS",
-  "headline": "The principal six-phase E8-root bundle over the 40 W(3,3) points has no Sp(4,3)-equivariant section. The point stabiliser acts regularly as C6 on the fibre, giving 1 -> H_root -> L_point -> C6 -> 1.",
+  "headline": "The principal six-phase E8-root bundle over the 40 W(3,3) points has no Sp(4,3)-equivariant section. The point stabiliser acts regularly as C6 on the fibre.",
   "exact_sequence": {
     "root_stabiliser_order": 216,
     "point_stabiliser_order": 1296,
@@ -21,14 +21,22 @@
     "Sylow5_base_orbit_lengths": [5, 5, 5, 5, 5, 5, 5, 5]
   },
   "verification": {
-    "gap_workflow_run": 30177569747,
-    "gap_script_step": "success",
-    "note": "The GAP script completed successfully and asserted all eighteen group-theoretic checks. The first CI run failed only in the downstream Python validator; the generated theorem checks themselves passed."
+    "diagnostic_workflow_run": 30178232660,
+    "diagnostic_artifact_id": 8624845703,
+    "diagnostic_result": "PASS 25/25",
+    "fixed_ci_issue": "StructureDescription required an optional Small Groups identification package; the theorem now uses Size + IsCyclic, which is sufficient to certify C6."
   },
-  "check_count": 18,
+  "check_count": 25,
   "checks": {
+    "root_count_240": true,
+    "WE8_order": true,
+    "coxeter_order_30": true,
+    "K_order_51840": true,
+    "unit_group_order_six": true,
+    "forty_fibres_of_six": true,
     "root_stabiliser_order_216": true,
     "point_stabiliser_order_1296": true,
+    "root_stabiliser_is_subgroup_of_point_stabiliser": true,
     "local_index_is_six": true,
     "root_stabiliser_is_normal_in_point_stabiliser": true,
     "phase_action_has_order_six": true,
