@@ -212,6 +212,42 @@ def part_A_symmetric_deep(checks):
                 "diagonalisable by construction.")}
 
 
+def part_C_depth_closed_form(checks):
+    """Depth in the lattice family is a formula, not a sample."""
+    from math import gcd as _g
+    rows, ok = {}, True
+    for m in (4, 6, 8, 9, 12, 16, 20, 32, 64):
+        cs = [2 * (m - 1), m - 2, -2]
+        if len(set(cs)) < 3:
+            continue
+        Ds = []
+        for c in cs:
+            D = 1
+            for d in cs:
+                if d != c:
+                    D *= (c - d)
+            Ds.append(abs(D))
+        M = 1
+        for D in Ds:
+            M = M * D // _g(M, D)
+        pred = 1 + 2 * vp(m, 2)
+        act = vp(M, 2)
+        good = (M == 2 * m * m) and (pred == act)
+        ok &= good
+        rows[str(m)] = {"conductor": M, "equals_2m^2": M == 2 * m * m,
+                        "nu_predicted": pred, "nu_actual": act, "agree": good}
+    checks["conductor_is_2m_squared"] = ok
+    checks["depth_unbounded_in_family"] = (rows["64"]["nu_actual"] == 13)
+    return {"rows": rows,
+            "derivation": (
+                "L2(m) has spectrum [2(m-1), m-2, -2] with pairwise gaps m, 2m, "
+                "m, so D = 2m^2, -m^2, 2m^2 and M = lcm = 2m^2.  Hence "
+                "nu_2 = 1 + 2 v_2(m), and L2(2^k) gives nu = 2k+1."),
+            "reading": (
+                "The depths 5, 7, 9 seen at m = 4, 8, 16 are this formula, not a "
+                "sample: L2(2^k) reaches nu = 2k+1, so ramification depth is "
+                "unbounded within the lattice family.  m = 64 gives nu = 13.")}
+
 def part_B_what_this_repairs(checks):
     checks["scope_recorded"] = True
     return {"repairs": (
@@ -232,6 +268,7 @@ def part_B_what_this_repairs(checks):
 def main_payload():
     checks = {}
     A = part_A_symmetric_deep(checks)
+    C = part_C_depth_closed_form(checks)
     B = part_B_what_this_repairs(checks)
     status = "PASS" if all(checks.values()) else "FAIL"
     return {
@@ -253,6 +290,7 @@ def main_payload():
             "identity; nu = 6 is not claimed, having been reached only on "
             "defective matrices."),
         "part_A_symmetric_deep": A,
+        "part_C_depth_closed_form": C,
         "part_B_what_this_repairs": B,
         "checks": {k: bool(v) for k, v in checks.items()},
     }
