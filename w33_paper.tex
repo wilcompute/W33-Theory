@@ -10694,13 +10694,40 @@ and likewise $\Gamma(L_2(4))$ and $\Gamma(\text{Shrikhande})$ differ by a single
 $\ZZ/2$. So $\Gamma$ is strictly finer than the parameter set. Two results bound
 it from the other side.
 
-\begin{proposition}[complementation invariance]\label{prop:complementation}
-For a $k$-regular $G$ on $n$ vertices, $A(\overline G) = J - I - A(G)$ shares
-every eigenvector with $A(G)$: the all-ones vector is an eigenvector of both,
-and on its orthogonal complement $J$ acts as zero. Hence
-$L_c(G) = L_{-1-c}(\overline G)$ as \emph{subgroups} of $\ZZ^n$, and
-$\Gamma(G) = \Gamma(\overline G)$.
+\begin{proposition}[stability along the pencil $\alpha A+\beta J+\gamma I$]
+\label{prop:complementation}
+Let $G$ be $k$-regular on $n$ vertices and $B = \alpha A + \beta J + \gamma I$
+with $\alpha\neq 0$. Since $J$ acts as $n$ on the all-ones vector and as zero on
+its orthogonal complement, $B$ shares every eigenvector with $A$, and the induced
+relabelling is $c\mapsto \alpha c+\gamma$ off the line and
+$k\mapsto \alpha k+\beta n+\gamma$ on it. The saturated eigenlattice
+decomposition --- hence the gluing --- is preserved exactly when that relabelling
+stays injective:
+\[
+  \Gamma(B)=\Gamma(A)
+  \iff
+  \operatorname{mult}(k)=1
+  \ \text{ and }\
+  k+\tfrac{\beta n}{\alpha}\ \text{is not an eigenvalue of }A\text{ other than }k.
+\]
+Complementation is $(\alpha,\beta,\gamma)=(-1,1,-1)$, with threshold $k-n$;
+the Seidel matrix is $(-2,1,-1)$, with threshold $k-\tfrac n2$.
 \end{proposition}
+
+Both hypotheses are necessary. If $\operatorname{mult}(k)>1$ --- equivalently
+$G$ disconnected --- the all-ones vector fails to span the $k$-eigenspace and
+that eigenspace \emph{splits}; if the threshold is an eigenvalue, two eigenspaces
+\emph{merge}. A complete census of the $n=6$ regular graphs with integral spectra
+on both sides splits perfectly on the criterion: invariant in $120$ of the $120$
+satisfying it and in none of the other $52$, with $K_{3,3}$ (spectrum
+$[3,0^4,-3]$, $k-n=-3$) the witness for merging. Every graph used here satisfies
+it --- $W(3,3)$ has $k-n=-28$ --- so the applications below are unaffected.
+
+The Seidel threshold explains a discrepancy that would otherwise look accidental:
+$W(3,3)$ has $k-\tfrac n2 = -8$, not an eigenvalue, so its Seidel gluing
+\emph{equals} its adjacency gluing $(\ZZ/2)^6\oplus(\ZZ/6)^9\oplus\ZZ/120$,
+whereas $T(8)$ and $L_2(4)$ both have $k-\tfrac n2=-2$ in their spectra and
+theirs must differ.
 
 The conductor is not invariant --- it moves $480\mapsto 720$ for $W(3,3)$ ---
 so one group is computed from two conductors and the branch machinery must agree
