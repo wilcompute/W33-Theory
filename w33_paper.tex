@@ -10660,6 +10660,83 @@ coincidence should be read as a numerical identity awaiting a map, not as an
 established correspondence. (Witness:
 \texttt{analysis/w33\_pass1012\_edge\_root\_equivariance\_obstruction.py}.)
 
+\subsection*{What the gluing group knows}
+
+The eigenlattice gluing $\Gamma(G) = \ZZ^n/\sum_c L_c$ has been used above as an
+invariant of the substrate. It is worth recording exactly how much of the graph
+it sees, since the answer is bracketed on both sides and the two bounds are
+proved by different mechanisms.
+
+\begin{proposition}[the conductor is a parameter polynomial]
+\label{prop:conductor-parameters}
+For a strongly regular graph with parameters $(n,k,\lambda,\mu)$ and eigenvalues
+$k,r,s$, the relations $r+s = \lambda-\mu$ and $rs = -(k-\mu)$ give
+\[
+  (k-r)(k-s) \;=\; k^2 - k(\lambda-\mu) - (k-\mu),
+  \qquad
+  r-s \;=\; \sqrt{(\lambda-\mu)^2 + 4(k-\mu)},
+\]
+so the conductor $M = \operatorname{lcm}(D_k,D_r,D_s)$ is a function of the
+parameters alone. Consequently the set of primes that can carry gluing is
+determined by $(n,k,\lambda,\mu)$. For $W(3,3)$ this gives $D_k = 160$ and
+$M = 480$.
+\end{proposition}
+
+The order of $\Gamma$ is \emph{not} so determined. $T(8)$ and the three Chang
+graphs share $(28,12,6,4)$ and the full spectrum $\{12,4^7,(-2)^{20}\}$ and are
+pairwise non-isomorphic, yet
+\[
+  \Gamma(T(8)) = (\ZZ/6)^6\oplus\ZZ/84,
+  \qquad
+  \Gamma(\mathrm{Chang}_i) = \ZZ/2\oplus(\ZZ/6)^6\oplus\ZZ/84 ,
+\]
+and likewise $\Gamma(L_2(4))$ and $\Gamma(\text{Shrikhande})$ differ by a single
+$\ZZ/2$. So $\Gamma$ is strictly finer than the parameter set. Two results bound
+it from the other side.
+
+\begin{proposition}[complementation invariance]\label{prop:complementation}
+For a $k$-regular $G$ on $n$ vertices, $A(\overline G) = J - I - A(G)$ shares
+every eigenvector with $A(G)$: the all-ones vector is an eigenvector of both,
+and on its orthogonal complement $J$ acts as zero. Hence
+$L_c(G) = L_{-1-c}(\overline G)$ as \emph{subgroups} of $\ZZ^n$, and
+$\Gamma(G) = \Gamma(\overline G)$.
+\end{proposition}
+
+The conductor is not invariant --- it moves $480\mapsto 720$ for $W(3,3)$ ---
+so one group is computed from two conductors and the branch machinery must agree
+across the change. Two consequences follow: the support bound sharpens to
+$\operatorname{supp}\Gamma \subseteq \operatorname{supp}M_G \cap
+\operatorname{supp}M_{\overline G}$, and whenever $p$ divides one conductor but
+not the other, the coalescence rank on the side where it is defined is
+\emph{forced} to vanish --- a prediction about $\mathbb F_p$ ranks made without
+computing them, confirmed in every available case.
+
+\begin{proposition}[the Seidel gluing is a switching invariant]
+\label{prop:seidel-switching}
+Seidel switching with respect to a vertex set $S$ acts on $\mathcal S = J-I-2A$
+by $\mathcal S \mapsto D\mathcal S D$ with $D$ the diagonal sign matrix of $S$.
+As $D$ is unimodular it is an automorphism of $\ZZ^n$, so the gluing of
+$\mathcal S$ is constant on switching classes.
+\end{proposition}
+
+This identifies the discrepancy above. The four graphs $T(8),\mathrm{Chang}_{1,2,3}$
+form a single switching class and share the Seidel gluing
+$(\ZZ/6)^6\oplus\ZZ/12$; the extra $\ZZ/2$ in the adjacency gluing is exactly the
+record of position \emph{within} that class.
+
+Finally, $\Gamma$ separates through two independent channels. At primes with
+$v_p(M) = 1$ the $p$-part is the classical $p$-rank, and at ramified primes it is
+the kernel-growth filtration, which is not classical. The Chang and Shrikhande
+families exercise only the second, their unramified ranks happening to agree; a
+census of all graphs on six and seven vertices with integral spectrum produces
+five cospectral classes, all five separated by $\Gamma$, and among them a
+counterexample at spectrum $\{2,1,0,-1,-2\}$ with $M = 24$ where the separation
+is at the \emph{unramified} prime $3$. Neither channel dominates the other.
+(Witnesses:
+\texttt{analysis/w33\_pass1014\_ramified\_prime\_separates\_cospectral.py},
+\texttt{...\_pass1015\_gluing\_is\_a\_complementation\_invariant.py},
+\texttt{...\_pass1016\_seidel\_invariant\_and\_unramified\_separation.py}.)
+
 
 The definite lift is not fixed by linear-algebraic chain data; the natural
 constraint is the substrate's own symmetry. The full automorphism group acts
