@@ -10635,6 +10635,31 @@ signed-turn operator on the $240$ edge chains does, at the cost of its own large
 gluing. This constrains, but does not settle, the definiteness question.
 (Witness: \texttt{analysis/w33\_pass882\_spectral\_surgery\_rigidity.py}.)
 
+\begin{proposition}[no equivariant edge--root bijection for $E_6\times A_2$]
+\label{prop:edge-root-obstruction}
+The coincidence $|E(W(3,3))| = |\Phi(E_8)| = 240$ does not lift to a bijection
+equivariant for the embedding suggested by $|\Aut W(3,3)| = 51{,}840 = |W(E_6)|$
+under the subsystem $E_6\times A_2\subset E_8$. Indeed $\Sp(4,3)$ acts on the
+$240$ edges \emph{transitively}, a single orbit with stabiliser of order
+$51{,}840/240 = 216$, whereas the $240$ roots of $E_8$ decompose under
+$E_6\times A_2$ into the four orbits
+\[
+240 \;=\; 72 \;+\; 6 \;+\; 81 \;+\; 81,
+\]
+the $E_6$ roots, the $A_2$ roots, and the two $81$'s of $(27,3)$ and
+$(\overline{27},\overline 3)$. An equivariant bijection carries orbits to orbits
+of equal size, and one orbit of $240$ cannot map onto four.
+\end{proposition}
+
+The obstruction is a property of the \emph{embedding}, not of the group:
+$\Aut W(3,3)$ does admit a transitive action on $240$ points --- it has one, on
+the edges, which is where the stabiliser of order $216$ comes from. What remains
+open is whether some other conjugacy class of subgroups of order $51{,}840$ in
+$W(E_8)$ acts transitively on the roots. Until that is settled the $240=240$
+coincidence should be read as a numerical identity awaiting a map, not as an
+established correspondence. (Witness:
+\texttt{analysis/w33\_pass1012\_edge\_root\_equivariance\_obstruction.py}.)
+
 
 The definite lift is not fixed by linear-algebraic chain data; the natural
 constraint is the substrate's own symmetry. The full automorphism group acts
