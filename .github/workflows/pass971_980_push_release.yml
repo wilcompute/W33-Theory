@@ -1,0 +1,68 @@
+name: Passes 971-980 push-only release
+on:
+  push:
+    branches: [agent/pass971-980-runner]
+    paths:
+      - '.github/workflows/pass971_980_push_release.yml'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/pass971-980-runner
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Import collision-free audited base
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --depth=1 origin agent/pass871-875-compute agent/pass871-875-release
+          python - <<'PY'
+          import subprocess
+          from pathlib import Path
+          pairs=[(871,971,'atlas_standard_conjugacy'),(872,972,'heisenberg_loewy_basis'),(873,973,'scalar_schur_factor_set'),(874,974,'adaptive_audit_regret_game'),(875,975,'hardware_phase_dispatcher')]
+          def show(ref,path): return subprocess.check_output(['git','show',f'{ref}:{path}'],text=True)
+          def renumber(s):
+              for old,new,_ in pairs: s=s.replace(f'pass{old}',f'pass{new}').replace(f'Pass {old}',f'Pass {new}')
+              return s.replace('871-875','971-975').replace('871–875','971–975')
+          for old,new,name in pairs:
+              Path(f'analysis/w33_pass{new}_{name}.py').write_text(renumber(show('origin/agent/pass871-875-compute',f'analysis/w33_pass{old}_{name}.py')))
+          Path('analysis/BT971_975_five_frontier_release.md').write_text(renumber(show('origin/agent/pass871-875-release','analysis/BT871_875_five_frontier_release.md')))
+          Path('tests/test_w33_pass971_975.py').write_text(renumber(show('origin/agent/pass871-875-release','tests/test_w33_pass871_875.py')))
+          PY
+      - run: python -m pip install --disable-pip-version-check numpy scipy sympy pytest
+      - name: Execute audited base and secret fronts
+        run: |
+          for n in 971 972 973 974 975; do python analysis/w33_pass${n}_*.py; done
+          for n in 971 972 973 974 975; do python analysis/w33_pass${n}_*.py --check; done
+          python analysis/w33_pass976_vendor_atlas_matrices.py
+          python analysis/w33_pass976_vendor_atlas_matrices.py --check
+          python analysis/w33_pass977_h27_normalizer_loewy_action.py
+          python analysis/w33_pass977_h27_normalizer_loewy_action.py --check
+          python analysis/w33_pass978_adaptive_game_dynamic_bounds.py
+          python analysis/w33_pass978_adaptive_game_dynamic_bounds.py --check
+          python analysis/w33_pass979_exact_phase_mdd_minimizer.py
+          python analysis/w33_pass979_exact_phase_mdd_minimizer.py --check
+          python analysis/w33_pass980_phase_automaton_order_rigidity.py
+          python analysis/w33_pass980_phase_automaton_order_rigidity.py --check
+          python -m compileall -q analysis/w33_pass97*.py analysis/w33_pass980_*.py
+          python -m pytest -q tests/test_w33_pass971_975.py tests/test_w33_pass976_980.py
+      - name: Assemble exact release
+        run: |
+          mkdir -p _release/analysis _release/data _release/hardware _release/tests _release/vendor/atlas/U42d2
+          cp analysis/w33_pass97*.py analysis/w33_pass980_*.py analysis/BT971_975_five_frontier_release.md analysis/BT976_980_five_secret_release.md _release/analysis/
+          cp data/w33_pass97*.json data/w33_pass980_*.json _release/data/
+          cp hardware/w33_phase_dispatcher.h hardware/w33_phase_dispatcher.sv hardware/w33_phase_rom.mem hardware/w33_phase_mdd.h hardware/w33_phase_mdd.sv hardware/w33_phase_mdd_nodes.mem hardware/w33_phase_mdd_children.mem _release/hardware/
+          cp tests/test_w33_pass971_975.py tests/test_w33_pass976_980.py _release/tests/
+          cp vendor/atlas/U42d2/* _release/vendor/atlas/U42d2/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: passes-971-980-audited-release
+          if-no-files-found: error
+          path: _release/
