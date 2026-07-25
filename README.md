@@ -228,10 +228,26 @@ Not a constant, but the strongest physics-adjacent claim that survives checking.
 | Gram `2I − A_sub` | positive definite |
 | `det(Gram)` | **1** — the E₈ Cartan determinant |
 
-So `E₈`'s Cartan matrix is realised on eight points of the geometry. The honest caveat, recorded in the
-repository's own solver: the edge graph is 22-regular and the root graph 56-regular, so the `240 = 240`
-edge–root correspondence is **not** a graph isomorphism. It is a bijection of sets carrying a group action,
-and an equivariant map still has to be constructed.
+So `E₈`'s Cartan matrix is realised on eight points of the geometry.
+
+**But the `240 = 240` edge–root correspondence is now known to be obstructed.** The repository's own solvers
+recorded that the edge graph is 22-regular and the root graph 56-regular, so no graph isomorphism exists,
+and spent many passes seeking an *equivariant* bijection instead. That map does not exist either, for the
+embedding they assumed:
+
+| | orbits under the 51,840-element group |
+|---|---|
+| 240 W(3,3) edges | **one** orbit (transitive, stabiliser 216) |
+| 240 E₈ roots, under `E₆ × A₂` | **four** orbits: `72 + 6 + 81 + 81` |
+
+An equivariant bijection carries orbits to orbits of equal size, so one orbit cannot map onto four. The
+failed searches were not failing for want of effort.
+([`pass1012`](analysis/w33_pass1012_edge_root_equivariance_obstruction.py))
+
+The obstruction is **embedding-specific, not group-theoretic**: `Aut(W(3,3)) ≅ PSp(4,3):2 ≅ W(E₆)` *does*
+act transitively on 240 things — it does so on the edges. What remains open is whether some other
+conjugacy class of order-51,840 subgroups of `W(E₈)` acts transitively on the roots. That is a GAP
+question, and it is the live form of the E₈ problem.
 
 ### Codes, groups, lattices
 
