@@ -1,0 +1,56 @@
+name: Pass 999-1003 Exact Frontier
+
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass999_a5_double_class_census.py'
+      - 'analysis/w33_pass1000_a5_signed_turn_spectral_fingerprint.py'
+      - 'analysis/w33_pass1001_full_signed_edge_equivariance.py'
+      - 'analysis/w33_pass1002_ramified_kernel_growth_gluing.py'
+      - 'analysis/w33_pass1003_chang_clique_complex_separator.py'
+      - 'data/w33_pass999_a5_double_class_census.json'
+      - 'data/w33_pass1000_a5_signed_turn_spectral_fingerprint.json'
+      - 'data/w33_pass1001_full_signed_edge_equivariance.json'
+      - 'data/w33_pass1002_ramified_kernel_growth_gluing.json'
+      - 'data/w33_pass1003_chang_clique_complex_separator.json'
+      - 'tests/test_w33_pass999_1003.py'
+      - '.github/workflows/pass999-1003-release.yml'
+  workflow_dispatch:
+
+jobs:
+  exact-check:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - pass: 999
+            script: analysis/w33_pass999_a5_double_class_census.py
+            test: test_pass999_a5_double_class_census
+          - pass: 1000
+            script: analysis/w33_pass1000_a5_signed_turn_spectral_fingerprint.py
+            test: test_pass1000_spectral_fingerprint
+          - pass: 1001
+            script: analysis/w33_pass1001_full_signed_edge_equivariance.py
+            test: test_pass1001_full_signed_equivariance
+          - pass: 1002
+            script: analysis/w33_pass1002_ramified_kernel_growth_gluing.py
+            test: test_pass1002_ramified_kernel_growth
+          - pass: 1003
+            script: analysis/w33_pass1003_chang_clique_complex_separator.py
+            test: test_pass1003_clique_complex_separator
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install numpy sympy pytest
+      - name: Regenerate Pass ${{ matrix.pass }} ledger
+        run: python '${{ matrix.script }}'
+      - name: Verify deterministic ledger
+        run: python '${{ matrix.script }}' --check
+      - name: Run focused regression
+        run: pytest -q 'tests/test_w33_pass999_1003.py::${{ matrix.test }}'
+      - name: Check ledger drift
+        run: git diff --exit-code
