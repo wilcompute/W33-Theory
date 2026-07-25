@@ -1,0 +1,82 @@
+{
+  "schema": "w33.pass1020.e8_transitive_51840.gap.v1",
+  "status": "PASS",
+  "headline": "W(E8) does contain a transitive order-51840 subgroup on the 240 roots: Sp(4,3), the derived subgroup of the Shephard-Todd G32 centraliser of a regular order-3 element. It is not isomorphic to W(E6). The 240 roots and the 240 W(3,3) edges carry inequivalent rank-13 and rank-10 actions of the two distinct order-51840 groups, so no equivariant bijection exists.",
+  "method": "Springer regular elements: degrees of W(E8) divisible by 3 are 12,18,24,30 and 12*18*24*30 = 155520 = |G32| = |Z3 x Sp(4,3)|. No subgroup search.",
+  "E8_side": {
+    "order_W_E8": 696729600,
+    "centraliser_order": 155520,
+    "transitive_subgroup_order": 51840,
+    "root_stabiliser_order": 216,
+    "root_stabiliser_structure": "((C3 x C3) : C3) : Q8",
+    "subdegrees": [ 1, 1, 1, 1, 1, 1, 27, 27, 27, 27, 27, 27, 72 ],
+    "block_sizes": [ [ 2, 1 ], [ 3, 1 ], [ 6, 1 ] ],
+    "inner_product_classes": [ [ -8, 1 ], [ -4, 56 ], [ 0, 126 ], [ 4, 56 ], [ 8, 1 ] ],
+    "is_perfect": true,
+    "centre_order": 2,
+    "simple_quotient_order": 25920
+  },
+  "W_E6_reflection_subgroup": {
+    "order": 51840,
+    "orbits_on_240_roots": [ 1, 1, 1, 1, 1, 1, 27, 27, 27, 27, 27, 27, 72 ],
+    "is_perfect": false,
+    "transitive": false
+  },
+  "W33_edge_side": {
+    "points": 40,
+    "edges": 240,
+    "Sp43_point_action_kernel": 2,
+    "PSp43_edge_stabiliser": 108,
+    "PGSp43_order": 51840,
+    "PGSp43_edge_stabiliser": 216,
+    "PGSp43_edge_subdegrees": [ 1, 1, 4, 18, 18, 18, 18, 27, 27, 108 ],
+    "PSp43_edge_subdegrees": [ 1, 1, 4, 18, 18, 18, 18, 27, 27, 108 ],
+    "PGSp43_is_faithful_on_edges": true
+  },
+  "obstruction": {
+    "statement": "No bijection between the 240 W(3,3) edges and the 240 E8 roots is equivariant for any group of order 51840.",
+    "reason_1_different_groups": "the transitive order-51840 subgroup of W(E8) is Sp(4,3) = 2.U4(2), which is perfect with centre of order 2; the faithful transitive order-51840 group on the edges is PGSp(4,3) = U4(2):2 = W(E6), which is not perfect and has trivial centre. Equal order, non-isomorphic.",
+    "reason_2_different_rank": "even granting an abstract isomorphism, the two permutation actions differ: rank 13 with subdegrees [1,1,1,1,1,1,27,27,27,27,27,27,72] on the roots against rank 10 with [1,1,4,18,18,18,18,27,27,108] on the edges. Rank is an invariant of the permutation action, so no relabelling can reconcile them.",
+    "reason_3_the_centre": "Sp(4,3) acts on the roots with its centre realised as the antipodal map, but on the edges the same centre is the projective scalars and acts trivially. The root action is faithful, the edge action is not.",
+    "relation_to_pass_1012": "Pass 1012 ruled out a W(E6)-equivariant edge-root bijection for the E6 x A2 embedding. This pass closes the remaining candidate by exhibiting the only other order-51840 possibility, Sp(4,3), and eliminating it too."
+  },
+  "pass338_adjudication": {
+    "claimed_signed_E8_subdegrees": [1,1,4,54,72,108],
+    "subset_sums_of_4_54_72_108": [ 0, 4, 54, 58, 72, 76, 108, 112, 126, 130, 162, 166, 180, 184, 234, 238 ],
+    "56_is_attainable": false,
+    "verdict": "the two labels in analysis/w33_pass338_selector_frame_240.g are interchanged. (a) The action it calls 'signed E8' cannot be an E8 root action at all: any subgroup of W(E8) containing -1 has suborbits refining the inner-product partition (1,56,126,56,1), and no subset of {4,54,72,108} sums to 56. (b) That profile is instead the W(3,3) EDGE profile fused by the index-2 overgroup, since 4*18 = 72 and 2*27 = 54 carry [1,1,4,18,18,18,18,27,27,108] to [1,1,4,54,72,108]. (c) Conversely the profile it calls the 'selector frame', [1,1,1,1,1,1,27,27,27,27,27,27,72], is exactly the subdegree profile of the genuine E8 root action computed here inside W(E8). Every number Pass 338 reports is correct; the E8 attribution is reversed."
+  },
+  "corrections": {
+    "EXPLICIT_BIJECTION.py:561": "'No proper subgroup of W(E8) acts transitively on 240 roots (this is a well-known fact)' is false. Sp(4,3) of order 51840 and G32 of order 155520 are both proper and both transitive.",
+    "exploration/GROUP_THEORETIC_BIJECTION.py:308 and docs/COMPLETE_SUMMARY.md:729 and exploration/WITTING_W33_S12_SYNTHESIS.py": "'Sp(4,3) = W(E6)' is false. Both have order 51840, but Sp(4,3) is perfect with centre of order 2, and W(E6) = U4(2):2 is not perfect and has trivial centre. This is the root cause of the 240=240 confusion: the two 240-sets belong to two DIFFERENT groups of the same order.",
+    "exploration/WITTING_W33_S12_SYNTHESIS.py orbit count": "'W(E6) has 15 ORBITS on E8 roots' is false; the count is 13, with profile [ 1, 1, 1, 1, 1, 1, 27, 27, 27, 27, 27, 27, 72 ] = one 72, six 27s and six fixed A2 roots. Verified directly on the reflection subgroup.",
+    "exploration/WITTING_W33_S12_SYNTHESIS.py claimed theorem": "the stated 'THEOREM: there exists a W(E6)-equivariant bijection phi: W33 edges -> E8 roots' is refuted, and was already inconsistent with its own Part III item 4, which records that W(E6) is not transitive on the roots. A transitive source cannot map equivariantly onto an intransitive target. The proof strategy given ('pick e0 <-> r0 and extend by group action') fails at exactly that step."
+  },
+  "check_count": 24,
+  "checks": {
+    "centraliser_is_shephard_todd_32": true,
+    "derived_subgroup_has_order_51840": true,
+    "THE_ANSWER_transitive_51840_subgroup_exists": true,
+    "root_stabiliser_has_order_216": true,
+    "K_is_Sp43_not_WE6": true,
+    "WE6_is_not_perfect": true,
+    "K_and_WE6_are_not_isomorphic": true,
+    "antipodal_map_generates_the_centre": true,
+    "WE6_is_intransitive_on_the_roots": true,
+    "inner_product_partition_is_1_56_126_56_1": true,
+    "stabiliser_fixes_the_whole_eisenstein_line": true,
+    "K_subdegrees_refine_the_inner_product_partition": true,
+    "block_system_is_240_over_120_over_40": true,
+    "PSp43_is_edge_transitive_with_stabiliser_108": true,
+    "Sp43_acts_UNFAITHFULLY_on_the_240_edges": true,
+    "PGSp43_is_faithful_transitive_on_edges_stabiliser_216": true,
+    "PGSp43_is_not_perfect_like_WE6": true,
+    "root_and_edge_actions_have_different_rank": true,
+    "the_two_51840_groups_are_not_isomorphic": true,
+    "E8_root_profile_is_the_pass338_selector_frame_profile": true,
+    "edge_profile_is_rank_10_and_index_2_stable": true,
+    "no_Sp43_equivariant_edge_root_bijection": true,
+    "pass338_subdegrees_cannot_be_an_E8_root_action": true,
+    "pass338_signed_profile_is_the_edge_profile_fused": true
+  }
+}
