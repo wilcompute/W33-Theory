@@ -631,9 +631,7 @@
         font-size: 1rem;
       }
 
-      .hero-particles {
-        display: none;
-      }
+      /* hero-particles kept visible down to 640px; see the 640px block */
 
       .sidebar-toc {
         top: var(--current-topnav-height);
@@ -1261,7 +1259,9 @@
       pointer-events: none;
     }
 
-    .hero-particles .p {
+    @media (max-width: 640px) { .hero-particles { display: none; } }
+@media (prefers-reduced-motion: reduce) { .hero-particles .p { animation: none; opacity: 0.25; } }
+.hero-particles .p {
       position: absolute;
       width: 3px;
       height: 3px;
@@ -1611,6 +1611,17 @@
       <div class="p" style="left:85%;animation-duration:19s;animation-delay:4.5s;background:rgba(210,168,255,0.3)">
       </div>
       <div class="p" style="left:92%;animation-duration:11s;animation-delay:1.5s;width:2px;height:2px"></div>
+        <div class="p" style="left:10%;animation-duration:15s;animation-delay:1.2s;width:3px;height:3px;background:rgba(88,166,255,0.34)"></div>
+        <div class="p" style="left:20%;animation-duration:21s;animation-delay:3.4s;width:2px;height:2px;background:rgba(210,168,255,0.3)"></div>
+        <div class="p" style="left:30%;animation-duration:12s;animation-delay:0.8s;width:4px;height:4px;background:rgba(63,185,80,0.26)"></div>
+        <div class="p" style="left:40%;animation-duration:17s;animation-delay:2.2s;width:3px;height:3px;background:rgba(227,179,65,0.28)"></div>
+        <div class="p" style="left:50%;animation-duration:22s;animation-delay:5.5s;width:2px;height:2px;background:rgba(88,166,255,0.32)"></div>
+        <div class="p" style="left:60%;animation-duration:14s;animation-delay:3.8s;width:4px;height:4px;background:rgba(210,168,255,0.24)"></div>
+        <div class="p" style="left:70%;animation-duration:19s;animation-delay:1.6s;width:3px;height:3px;background:rgba(63,185,80,0.28)"></div>
+        <div class="p" style="left:80%;animation-duration:16s;animation-delay:4.2s;width:2px;height:2px;background:rgba(88,166,255,0.3)"></div>
+        <div class="p" style="left:88%;animation-duration:13s;animation-delay:2.8s;width:4px;height:4px;background:rgba(227,179,65,0.26)"></div>
+        <div class="p" style="left:96%;animation-duration:20s;animation-delay:0.4s;width:3px;height:3px;background:rgba(210,168,255,0.28)"></div>
+      
     </div>
     <h1>W(3,3)&ndash;<span>E&#8326;</span> Theory</h1>
     <div class="subtitle">Exact qutrit kernel &middot; Verified finite and integral bridges &middot; Executable certificates
@@ -1873,7 +1884,772 @@
 
       <!-- Old nav removed -->
 
-      <section id="reader-guide" style="padding-top: 2rem; padding-bottom: 1.5rem;">
+      <section id="numbers">
+        <h2><span class="icon">⬡</span> Core Numbers</h2>
+        <p>Exact invariants of W(3,3) and their physical parallels, computationally verified. The live promoted
+          electroweak share is <code>3/13</code>; the older <code>3/8</code> value is kept only as a bare internal /
+          GUT-shell diagnostic. Likewise <code>&chi; = -40</code> belongs to the truncated shell and
+          <code>&chi; = -80</code> to the full tetrahedral clique complex.
+        </p>
+        <div class="card-grid">
+          <div class="card">
+            <div class="num">240</div>
+            <div class="label">Edges = E₈ roots</div>
+            <div class="detail">The collinearity graph of W(3,3) has exactly 240 edges — the same count as the roots of
+              the E₈ exceptional Lie algebra.</div>
+          </div>
+          <div class="card">
+            <div class="num">51,840</div>
+            <div class="label">Aut(W33) &cong; W(E₆)</div>
+            <div class="detail">The full projective group PGSp(4,3) &cong; Aut(PSp(4,3)) has order 51,840 and is
+              isomorphic to W(E₆). The same-order matrix group Sp(4,3)=2.U4(2) is a different central cover.
+            </div>
+          </div>
+          <div class="card">
+            <div class="num">81</div>
+            <div class="label">H₁ = ℤ⁸¹ = 27+27+27</div>
+            <div class="detail">For every order-3 element, H₁&otimes;C has phase eigenspaces
+              27<sub>1</sub>+27<sub>&omega;</sub>+27<sub>&omega;&sup2;</sub>. This exact character statement does not by
+              itself identify three physical generations.</div>
+          </div>
+          <div class="card">
+            <div class="num">3/13</div>
+            <div class="label">sin²θ<sub>W</sub> (promoted)</div>
+            <div class="detail">The promoted electroweak share is <code>q/(q²+q+1) = 3/13</code>. The older
+              <code>3/8</code> value remains an internal unification-shell diagnostic, not the live dressed electroweak
+              number.
+            </div>
+          </div>
+          <div class="card">
+            <div class="num">Δ = 4</div>
+            <div class="label">Spectral Mass Gap</div>
+            <div class="detail">The Hodge Laplacian has a gap of 4 separating massless matter (81) from gauge bosons
+              (120).</div>
+          </div>
+          <div class="card">
+            <div class="num">137.036</div>
+            <div class="label">α⁻¹ from SRG</div>
+            <div class="detail">k²−2μ+1+v/[(k−1)((k−λ)²+1)] = 137.036004 (experiment: 137.035999, diff: 4.5×10⁻⁶).</div>
+          </div>
+          <div class="card">
+            <div class="num" style="color: #ffd700;">2367/2367</div>
+            <div class="label">All Checks Pass ★</div>
+            <div class="detail">The current repo ledger passes its advertised 2367 checks. That count is a
+              hard-computation milestone, but it is not by itself the missing continuum-QFT / GR theorem.</div>
+          </div>
+          <div class="card">
+            <div class="num">E₈ Dynkin</div>
+            <div class="label">Subgraph Found</div>
+            <div class="detail">E₈ Dynkin diagram found at vertices [7,1,0,13,24,28,37,16] with Gram matrix det = 1.
+            </div>
+          </div>
+        </div>
+
+        <table>
+          <tr>
+            <th>W(3,3) Property</th>
+            <th>Exact Value</th>
+            <th>Physical Parallel</th>
+          </tr>
+          <tr>
+            <td>Edges of collinearity graph</td>
+            <td><strong>240</strong></td>
+            <td>Roots of E₈</td>
+          </tr>
+          <tr>
+            <td>Automorphism group</td>
+            <td><strong>PGSp(4,3) &cong; Aut(PSp(4,3)) &cong; W(E₆)</strong></td>
+            <td>Order 51,840; PSp(4,3) is the normal simple subgroup of order 25,920</td>
+          </tr>
+          <tr>
+            <td>First homology H₁(W33; ℤ)</td>
+            <td><strong>ℤ⁸¹</strong></td>
+            <td>dim(g₁) in E₈ ℤ₃-grading</td>
+          </tr>
+          <tr>
+            <td>Hodge eigenvalues / multiplicities</td>
+            <td><strong>0⁸¹ 4¹²⁰ 10²⁴ 16¹⁵</strong></td>
+            <td>Matter / gauge / X-bosons / Y-bosons</td>
+          </tr>
+          <tr>
+            <td>Spectral gap</td>
+            <td><strong>Δ = 4</strong></td>
+            <td>Yang–Mills mass gap</td>
+          </tr>
+          <tr>
+            <td>Order-3 eigenspace split</td>
+            <td><strong>H₁&otimes;C = 27<sub>1</sub>+27<sub>&omega;</sub>+27<sub>&omega;&sup2;</sub></strong> (all 800 elements)</td>
+            <td>Exact phase multiplicities; a generation interpretation needs an additional bridge</td>
+          </tr>
+          <tr>
+            <td>E₆ Hessian tritangents</td>
+            <td><strong>45 = 36 + 9</strong></td>
+            <td>Heisenberg model ∩ fibers</td>
+          </tr>
+          <tr>
+            <td>Weinberg angle</td>
+            <td><strong>3/13 promoted, 3/8 bare-shell</strong></td>
+            <td><code>3/13</code> is the dressed/projective electroweak share; <code>3/8</code> is the internal
+              GUT-shell diagnostic</td>
+          </tr>
+          <tr>
+            <td>QEC parameters</td>
+            <td><strong>[240, 81, d<sub>Z</sub> = 4]</strong> over GF(3)</td>
+            <td>Exact ternary homological code</td>
+          </tr>
+          <tr>
+            <td>Gauge coupling</td>
+            <td><strong>α<sub>GUT</sub> = 1/(8π) ≈ 1/25.1</strong></td>
+            <td>Within 3.6% of MSSM value</td>
+          </tr>
+          <tr>
+            <td>E₈ ℤ₃-grading</td>
+            <td><strong>86 + 81 + 81 = 248</strong></td>
+            <td>Full E₈ Lie algebra decomposition</td>
+          </tr>
+          <tr>
+            <td>Fine structure constant</td>
+            <td><strong>α⁻¹ = 137.036004</strong></td>
+            <td>k²−2μ+1+v/L<sub>eff</sub>; diff 4.5×10⁻⁶ from experiment</td>
+          </tr>
+          <tr>
+            <td>E₈ Dynkin subgraph</td>
+            <td><strong>Found, Gram det = 1</strong></td>
+            <td>At vertices [7,1,0,13,24,28,37,16]; Cartan matrix verified</td>
+          </tr>
+          <tr>
+            <td>240 decomposition</td>
+            <td><strong>240 = 40 × 3 × 2</strong></td>
+            <td>Lines × matchings × edges/matching</td>
+          </tr>
+          <tr>
+            <td>3-coloring</td>
+            <td><strong>3 × 80 edges, each 4-regular</strong></td>
+            <td>Natural GF(3) generation structure</td>
+          </tr>
+          <tr>
+            <td>GF(2) homology</td>
+            <td><strong>dim = 8, A²≡0 mod 2</strong></td>
+            <td>Rank of adjacency mod 2 equals E₈ rank</td>
+          </tr>
+          <tr>
+            <td>Determinant</td>
+            <td><strong>det(A) = −3 × 2⁵⁶</strong></td>
+            <td>Encodes E₈ structure: rank-8 mod-2 kernel</td>
+          </tr>
+          <tr>
+            <td>μ-graph</td>
+            <td><strong>SRG(27,16,...)</strong></td>
+            <td>Common-neighbor-3 subgraph; eigenvalues {−2:20, 4:6, 16:1}</td>
+          </tr>
+          <tr>
+            <td>Cosmological constant</td>
+            <td><strong>Λ exponent = −127</strong></td>
+            <td>−(k²−f+λ) where f=24 (eigenvalue multiplicity)</td>
+          </tr>
+          <tr>
+            <td>Hubble constant</td>
+            <td><strong>H₀ = 67 / 73 km/s/Mpc</strong></td>
+            <td>v+f+1+λ (CMB) vs v+f+1+2λ+μ (local)</td>
+          </tr>
+          <tr>
+            <td>Higgs mass</td>
+            <td><strong>M<sub>H</sub> = 125 GeV</strong></td>
+            <td>s⁴+v+μ where s=3 (field characteristic)</td>
+          </tr>
+          <tr>
+            <td>Vertex decomposition</td>
+            <td><strong>40 = 1 + 24 + 15</strong></td>
+            <td>Vacuum + gauge bosons (SU(5) adj) + fermions/gen</td>
+          </tr>
+          <tr>
+            <td>Dimensions</td>
+            <td><strong>4 + 8 = 12</strong></td>
+            <td>μ (macroscopic) + k−μ (compact) = k (total)</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- ═══════════════════════ THE THEORY ═══════════════════════ -->
+      <section id="theory">
+        <h2><span class="icon">△</span> The Theory</h2>
+        <p>This section states the defensible backbone of the program: exact finite geometry on the internal side, and
+          the current status of the curved <code>4D</code> bridge. Older broad phenomenology remains archive material
+          unless it is promoted explicitly in the verified section above.</p>
+        <div class="spotlight">
+          <p><strong>Shell discipline matters here.</strong> <code>3/8</code> is the old bare/internal unification
+            diagnostic; <code>3/13</code> is the promoted dressed/projective electroweak share. <code>&chi; = -40</code>
+            belongs to the truncated shell; <code>&chi; = -80</code> belongs to the full tetrahedral clique complex. The
+            older <code>122</code> zero-mode count is the truncated Dirac-K&auml;hler shell, while the promoted full
+            finite package carries <code>82</code> zero modes on the <code>480</code>-dimensional closure.</p>
+        </div>
+        <div class="spotlight" id="q3-all-m-theorem">
+          <p><strong>Exact all-exponent <code>q=3</code> theorem (Pass 541).</strong> For every integer
+            <code>m&ge;2</code>, the minimum over all <code>81</code> sections is</p>
+          <p style="text-align:center;"><strong><code>min<sub>c</sub>
+            v<sub>&lambda;</sub>(tr(D<sub>c</sub><sup>m</sup>)) = 2(m + [m odd])</code>.</strong></p>
+          <p>This is an infinite statement proved by finite recurrence states, not by extending a numerical cutoff.
+            The section image consists of the six cubics <code>x&sup3;&minus;9ax&minus;27b</code> with
+            <code>(a,b)=(0,0),(1,0),(2,0),(3,0),(3,1),(4,3)</code>. After <code>x=3y</code>, their power sums satisfy
+            <code>S<sub>m</sub>=aS<sub>m&minus;2</sub>+bS<sub>m&minus;3</sub></code>. The
+            <code>(a,b)=(1,0)</code> row attains every even exponent. For odd exponents, the
+            <code>(3,1)</code> and <code>(4,3)</code> rows have mod-<code>9</code> period words
+            <code>3,0,6</code> and <code>8,0,5,6,2,3</code>; together they cover all odd residue classes
+            modulo <code>6</code>.</p>
+          <p>The exponent <code>m=1</code> is excluded because every section has trace zero. The old, disproved
+            factorial expression agrees with the true minimum exactly on
+            <code>s<sub>3</sub>(m)+[m odd]=2</code>. Equivalently, for <code>m&ge;2</code>, this means
+            <code>m=3<sup>j</sup></code> with <code>j&ge;1</code>, or
+            <code>m=3<sup>i</sup>+3<sup>j</sup></code> with <code>0&le;i&le;j</code>; prime powers lie inside but do not
+            exhaust that locus. Nothing in this theorem asserts the sampled <code>q&ge;5</code> minima.
+            <a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/w33_pass541_q3_all_m_recurrence.g">Run the GAP witness</a>,
+            <a href="https://github.com/wilcompute/W33-Theory/blob/master/data/w33_pass541_q3_all_m_recurrence.json">inspect the certificate</a>, or
+            <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS541_Q3_ALL_M_RECURRENCE_THEOREM.md">read the proof synthesis</a>.</p>
+        </div>
+        <div class="spotlight">
+          <p><strong>Latest exact section-orbit theorem (Pass 540).</strong> At <code>q=3</code>, the two unexplained
+            full-support spectral orbits are now identified with the two <code>D4</code> half-spin chiralities. The
+            fixed-frame coordinate product splits the <code>16</code> sign words into two
+            <code>8</code>-vertex demicubes, although both have block-difference polynomial
+            <code>x&sup3;&minus;36x&minus;81</code>. Intrinsically, the separator is the frame-corrected
+            Moore&ndash;Dickson coefficient; reversing a frame representative may swap the product labels but not
+            the two-fiber split. A determinant-<code>&minus;1</code> linear symmetry exchanges them,
+            so the spectral blindness is explained without selecting a physical hand.</p>
+          <p>At <code>q=5</code>, exact Burnside averaging gives <strong><code>139,904</code></strong> full-support
+            <code>SL(2,5)</code> orbits. A deterministic <code>3,000</code>-orbit sample finds a further
+            affine-inequivalent, nonisomorphic cospectral Cayley pair outside the eight explicit Pass-456/479/482 affine
+            pairs; it realizes Pass 481's sheet-coincidence mechanism rather than a new mechanism. Its exact
+            faithful factor is
+            <code>x^10&minus;120x^8&minus;90x^7+4795x^6+6317x^5&minus;69675x^4&minus;108795x^3+277460x^2+383845x+34441</code>;
+            exact <code>125&times;125</code> characteristic polynomials and different local profiles certify the pair.
+            Their critical groups also agree exactly: the nonunit Smith invariant factors are
+            <code>5 (&times;16), 25 (&times;5), 125 (&times;13), 2028949923625 (&times;10)</code>.
+            The pair is exact; the sample is not an enumeration of every <code>q=5</code> spectrum.</p>
+          <p>Over <code>Z/9</code>, the same signed-cycle calculation is exhaustive: it gives
+            <code>228100045392509153077600971330057241</code> section orbits and
+            <code>2051277771273019233341050472890368</code> full-support orbits.
+            <a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/w33_pass540_symplectic_separator_chainring.g">Run the GAP witness</a>,
+            <a href="https://github.com/wilcompute/W33-Theory/blob/master/data/w33_pass540_symplectic_separator_chainring.json">inspect the certificate</a>, or
+            <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS540_SYMPLECTIC_CHIRALITY_CHAINRING.md">read the synthesis</a>.</p>
+        </div>
+        <div class="spotlight">
+          <p><strong>GitHub-batch integrity audit (Passes 358&ndash;359).</strong> GAP separates the equal-order groups
+            <code>Sp(4,3)=2.U4(2)</code> and <code>W(E6)=PGSp(4,3)=U4(2).2</code>, replaces a stale
+            <code>6+3</code> Weil claim by the exact <code>9=5+4</code> carrier and its real outer envelope
+            <code>18=10+8</code>, and restores the defining-characteristic polynomial
+            <code>x&sup2;&minus;90x+325</code> at <code>p=5</code>. The same packet identifies the length-137 cyclic
+            construction as the binary quadratic-residue CSS code <strong><code>[[137,1,21]]</code></strong>, not
+            <code>[[137,1,3]]</code>. This is an exact coding result, not a derivation of the physical fine-structure
+            constant. <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md">Read the GAP-backed
+              audit and boundary.</a></p>
+        </div>
+        <div class="spotlight">
+          <p><strong>New exact gate theorem (Pass 360).</strong> The corrected <code>[[137,1,21]]</code> code has a
+            certified affine Clifford action, not merely an interesting length. Its pure coordinate symmetries contain
+            <code>C137:C68</code> of order <code>9,316</code>. A nonresidue multiplier exchanges the QR/NQR check
+            spaces; composing it with transversal Hadamard gives an exact logical Hadamard and enlarges the action to
+            <code>AGL(1,137)=C137:C136</code> of order <code>18,632</code>. On the parity-extended 138 coordinates,
+            explicit M&ouml;bius maps generate <code>PSL(2,137)</code> of order <code>1,285,608</code>; the
+            <code>PGL(2,137)</code> envelope of order <code>2,571,216</code> exchanges the two extended QR codes.
+            This is a 37-check GAP theorem about a quantum code, not a coupling-constant claim.
+            <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md">Open the construction and exact
+              scope.</a></p>
+        </div>
+        <div class="spotlight">
+          <p><strong>Exact gate boundary (Pass 361).</strong> The QR/NQR check spaces split the ambient binary space
+            orthogonally as <code>68 + 68 + 1</code>. That forces four of the six uniform one-qubit Clifford label
+            maps to fail: a nonzero <code>Y</code>-support would have to lie in both disjoint check spaces. Only
+            identity and <code>X/Z</code> swap survive, so the simple affine/fold-transversal logical image is exactly
+            <code>&lt;H&gt; &cong; C2</code>. The natural subset-phase escape is closed too: both
+            <code>4,692 &times; 137</code> mask systems have rank <code>137</code> and nullity zero. A logical phase gate
+            therefore needs a different circuit resource; the theorem does not rule out general circuits, ancillas,
+            measurements, or code deformation.
+            <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS361_ALPHA_CODE_CLIFFORD_MAXIMALITY_SYNTHESIS.md">Read the proof and precise no-go
+              boundary.</a></p>
+        </div>
+        <div class="spotlight">
+          <p><strong>Two-block real-Clifford breakthrough (Pass 362).</strong> Two QR-137 blocks give an exact
+            <code>[[274,2,21]]</code> code. Their encoded Hadamards and transversal CNOT preserve the rank-272
+            stabilizer and generate <code>O+(4,2) &cong; (S3 &times; S3):C2</code> of order <code>72</code> on logical
+            Pauli labels. Keeping signs gives one real-Clifford group of order <code>2,304</code> with two different
+            order-<code>1,152</code> shadows: its projective quotient is the centerless
+            <code>Aut(K4,4)=S4 wr C2</code>, while its total-Hadamard-parity kernel is the central
+            <code>W(F4)</code>. The shared number is therefore a quotient/kernel bifurcation, not a group identity.
+            <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS362_ALPHA_CODE_REAL_CLIFFORD_K44_F4_SYNTHESIS.md">Open the 52-check construction and
+              corpus correction.</a></p>
+        </div>
+        <div class="spotlight">
+          <p><strong>Real-Clifford character diamond (Pass 363).</strong> The order-<code>2,304</code> real
+            two-qubit Clifford group has exactly three nonzero <code>C2</code> characters. Their order-<code>1,152</code>
+            kernels are pairwise nonisomorphic: <code>W(F4)</code>, the central product <code>2O o 2O</code>, and a
+            mixed extraspecial kernel. Thus the formal <code>S3=Aut(C2^2)</code> does not lift to kernel triality.
+            Radial normalization makes <code>2O o 2O</code> transitive on the 48-point F4 shell without making it the
+            metric Weyl action. The same witness corrects <code>GL(2,3)</code>: it is
+            <code>SmallGroup(48,29)</code>, not binary octahedral <code>SmallGroup(48,28)</code>.</p>
+        </div>
+        <div class="spotlight">
+          <p><strong>Encoded exceptional refinement tower (Passes 364--366).</strong> Four QR-137 blocks form an exact
+            <code>[[548,4,21]]</code> code whose four encoded Hadamards and twelve transversal CNOTs generate
+            <code>O+(8,2)</code>. The explicit interleaving
+            <code>(x1,x2,x3,x4,z1,z2,z3,z4) -&gt; (x1,z1,x2,z2,x3,z3,x4,z4)</code> realizes the complete Pass-124
+            <code>255 = 135 + 120</code> E8/2E8 graph split. On the three-block <code>[[411,3,21]]</code> code, the minus refinement gives
+            <code>O-(6,2)=W(E6)</code> on the 36 W33 spreads, with a checked <code>PSp(4,3)</code>-equivariant bijection
+            and a named stabilizer-normalizing logical phase rotation. In general the direct sum is
+            <code>[[137m,m,21]]</code>, and <code>[Sp(2m,2):O+(2m,2)] = 2^(m-1)(2^m+1)</code> counts the plus quadratic
+            refinements.</p>
+        </div>
+        <div class="spotlight">
+          <p><strong>Universal parity boundary (Pass 367).</strong> W(E6) sign, outer-Weil parity, QR-137 residue
+            character, and real-Clifford Hadamard parity synchronize in one exact <code>C2</code>-graded fiber product
+            of order <code>28,841,108,255,539,200</code>. It is not one common exchange action: the QR odd coset has
+            element orders only <code>8</code> and <code>136</code>, so the pullback has no odd involution and the
+            extension cannot split. <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md">Open all five GAP
+              witnesses, maps, and scope boundaries.</a></p>
+        </div>
+        <div class="spotlight">
+          <p><strong>Boundary decoder and phase-sheet action (Passes 373&ndash;374).</strong> The oriented triangle
+            boundary image is the exact classical ternary code <code>[240,120,3]&#8323;</code>. Its 240 parity columns
+            are nonzero and projectively distinct, every triangle supplies weight three, and all 480 nonzero
+            single-edge errors have distinct syndromes; the complete radius-one MLUT therefore has
+            <strong>481 entries</strong>. This is separate from the already-owned logical code
+            <code>[[240,81,3]]&#8323;</code> with <code>(d<sub>X</sub>,d<sub>Z</sub>)=(3,4)</code>.
+            On the scalar side, BT571/BT637/BT644 already own the four lifts and deck characters. The new GAP action
+            theorem proves that the 51,840 nonzero minimal logical X/Z vector pairings form four invariant
+            12,960-state orbits under <code>W(E6)</code>, each with stabilizer <code>C2&times;C2</code>. The natural
+            action is four copies of <code>W(E6)/(C2&times;C2)</code>, not a Weyl torsor.
+            <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS373_374_W33_BOUNDARY_MLUT_PHASE_SHEET_SYNTHESIS.md">Open the certificates, ownership
+              reconciliation, and exact scope.</a></p>
+        </div>
+        <div class="spotlight">
+          <p><strong>Phase-character normalizer obstruction (Pass 375).</strong> The scalar deck
+            <code>D=(F3*)&sup2;&cong;V4</code> has abstract automorphism group <code>S3</code>, but the owned pairing
+            character <code>&chi;(a,b)=ab</code> cuts its stabilizer to <code>C2</code>. The order-three automorphism
+            cycles the three binary characters, so the exact phase-compatible normalizer of the four lifts is
+            <strong><code>D8</code></strong>, not <code>A4</code> or <code>S4</code>. The geometric Pass-374 stabilizer
+            independently has normalizer quotient <code>N<sub>W(E6)</sub>(K)/K&cong;D8</code>; these are different
+            objects and no intertwiner is assumed. GAP also embeds the <code>V4</code> point stabilizer in
+            <code>W(E6)&times;V4</code> with index <code>51,840</code> and proves that no regular complement exists,
+            because it would force a nonexistent order-<code>12,960</code> subgroup of <code>W(E6)</code>.
+            <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS375_W33_PHASE_CHARACTER_NORMALIZER_OBSTRUCTION.md">Read the 29-check GAP theorem and
+              ownership audit.</a></p>
+        </div>
+        <div class="spotlight">
+          <p><strong>Marked <code>D8</code> bridge (Pass 376).</strong> The phase-compatible normalizer and
+            <code>N<sub>W(E6)</sub>(K)/K</code> now agree as marked <code>V4:C2</code> extensions.  The scalar
+            deck maps to the canonical geometric deck <code>C<sub>N</sub>(K)/K</code>, their central
+            <code>C2</code> lines correspond, and both quotient actions have the exact orbit fingerprint
+            <code>1+1+2</code>.  There are exactly <strong>four</strong> marked isomorphisms, with residual
+            ambiguity <code>C2&times;C2</code>; this is deliberately not promoted to a preferred
+            scalar-sheet-to-state map or a regular Weyl action.
+            <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS376_MARKED_D8_BRIDGE.md">Read the 20-check GAP certificate and scope boundary.</a></p>
+        </div>
+
+        <h3>Step 1 — The Geometry</h3>
+        <p>W(3,3) is the symplectic polar space W(3, 𝔽₃). Its collinearity graph is a distinguished
+          <strong>SRG(40, 12, 2, 4)</strong> with eigenvalues 12, 2, −4. It has 40 vertices (the projective
+          1-spaces in GF(3)⁴; every 1-space is isotropic for an alternating form) and 240 edges. Each edge is a pair
+          of orthogonal points spanning a unique <em>totally isotropic projective line</em>. A nonedge, not an edge,
+          spans an ordinary hyperbolic projective line. The graph has diameter 2 and is Ramanujan.</p>
+
+        <div class="math-block">
+          <span class="eq">v ~ w</span> ⟺ <span class="eq">v<sup>T</sup> J w ≡ 0 (mod 3)</span><br>
+          where J is the standard symplectic form on GF(3)⁴
+        </div>
+        <p>The parameter tuple does not identify W(3,3): Spence classified exactly
+          <a href="https://doi.org/10.37236/1500">28 nonisomorphic SRG(40,12,2,4) graphs</a>. The object here is fixed
+          by the displayed symplectic construction. Its full geometry/graph automorphism group is
+          <code>Aut(PSp(4,3)) &cong; PGSp(4,3) &cong; W(E6)</code>, order <code>51840</code>, with normal inner group
+          <code>PSp(4,3)</code> of order <code>25920</code>. The same-order matrix group
+          <code>Sp(4,3)=2.U4(2)</code> has center <code>C2</code> and is not that faithful projective extension
+          (<a href="https://cage.ugent.be/~hvm/artikels/246.pdf">finite-geometry reference</a>; GAP Pass 213).</p>
+
+        <h3>Step 2 — Homology Reveals Matter</h3>
+        <p>The simplicial chain complex of the collinearity graph yields:</p>
+        <div class="math-block">
+          <span class="eq">H₁(W33; ℤ) = ℤ⁸¹</span>
+        </div>
+        <p>This is the same dimension as g₁ in the ℤ₃-graded E₈ decomposition
+          <strong>E₈ = g₀(86) ⊕ g₁(81) ⊕ g₂(81)</strong>, where g₀ = E₆ ⊕ A₂.
+        </p>
+
+        <h3>Step 3 — Hodge Theory Classifies Forces</h3>
+        <p>The Hodge Laplacian L₁ on 1-chains has four eigenspaces:</p>
+        <table>
+          <tr>
+            <th>Eigenvalue</th>
+            <th>Multiplicity</th>
+            <th>Physical Role</th>
+          </tr>
+          <tr>
+            <td><strong>0</strong></td>
+            <td>81</td>
+            <td>Massless matter (fermions)</td>
+          </tr>
+          <tr>
+            <td><strong>4</strong></td>
+            <td>120</td>
+            <td>Gauge bosons</td>
+          </tr>
+          <tr>
+            <td><strong>10</strong></td>
+            <td>24</td>
+            <td>Heavy X bosons (SU(5) adjoint)</td>
+          </tr>
+          <tr>
+            <td><strong>16</strong></td>
+            <td>15</td>
+            <td>Heavy Y bosons (SO(6) adjoint)</td>
+          </tr>
+        </table>
+        <p>The spectral gap Δ = 4 is exact and separates massless from massive modes. In the live promoted
+          interpretation these are exact finite sectors first; the full continuum particle interpretation is still tied
+          to the open curved <code>4D</code> bridge theorem.</p>
+        <p>On the full promoted tetrahedral package the corresponding finite Dirac square is
+          <code>D<sub>F</sub><sup>2</sup> = {0<sup>82</sup>,4<sup>320</sup>,10<sup>48</sup>,16<sup>30</sup>}</code>. The
+          older <code>122</code> zero-mode count is not a contradiction; it belongs to the truncated
+          <code>C<sup>0</sup> &oplus; C<sup>1</sup> &oplus; C<sup>2</sup></code> shell.
+        </p>
+
+        <h3>Step 4 — Three Generations</h3>
+        <p>There are four order-3 conjugacy classes in <code>PSp(4,3)</code>, totalling <code>800</code> elements.
+          The 81-dimensional homology character is zero on all four, so over the complex numbers every such element
+          has exact phase multiplicities
+          <strong>H₁&otimes;C = 27<sub>1</sub> &oplus; 27<sub>&omega;</sub> &oplus; 27<sub>&omega;&sup2;</sub></strong>.
+          The element acts by the three phases; it does not cyclically permute these eigenspaces, and no canonical
+          three-summand decomposition over ℤ follows. Connecting the exact <code>27+27+27</code> character fact to
+          physical generations therefore remains a bridge claim, not a consequence of the split alone (GAP Pass 213).
+        </p>
+
+        <h3>Step 5 — Electroweak Shells</h3>
+        <p>Two exact electroweak formulas appear in the project, and they live on different shells:</p>
+        <div class="math-block">
+          <span class="eq">sin²θ<sub>W</sub> = 2q / (q+1)² = 3/8</span> &nbsp; (bare / internal shell)<br>
+          <span class="eq">sin²θ<sub>W</sub> = q / (q²+q+1) = 3/13</span> &nbsp; (dressed / projective shell)
+        </div>
+        <p>No fitting is performed on the finite side: <code>q = 3</code> is fixed by the geometry. The <code>3/8</code>
+          formula is the internal unification-scale diagnostic inherited from the adjacency / generalized-quadrangle
+          shell. The promoted live electroweak value on this page is <code>3/13</code>, which is the dressed/projective
+          share used by the PMNS, Cabibbo, and curved-refinement roundtrip layer.</p>
+
+        <h3>Step 6 — Edge–Root Correspondence</h3>
+        <p>The 240 edges decompose as <strong>240 = 40 × 3 × 2</strong> (lines × matchings × edges/matching).
+          Under E₈ → E₆ × SU(3), this matches the branching <strong>240 = 3 × (24 + 2 + 27 + 27)</strong>.
+          The inner projective group PSp(4,3) already acts <strong>edge-transitively</strong> (single orbit on all 240 edges),
+          but no equivariant bijection to E₈ roots exists — the connection is representation-theoretic, not
+          lattice-geometric.</p>
+        <p>An <strong>E₈ Dynkin subgraph</strong> is found directly in the W(3,3) adjacency graph at vertices
+          [7,1,0,13,24,28,37,16],
+          with Gram matrix 2I − A<sub>sub</sub> having <strong>determinant 1</strong> — reproducing the E₈ Cartan
+          matrix.</p>
+
+        <p>More sharply, the W33 center-quad quotient now gives an exact exceptional incidence bridge: <code>90</code>
+          center-quads pair into <code>45</code> quotient points, the quotient has <code>27</code> lines and
+          <code>135</code> incidences, and its line-intersection graph is exactly <code>SRG(27,10,1,5)</code>, the
+          complement-Schl&auml;fli graph of the <code>27</code> lines on a cubic surface. Its <code>45</code> points are
+          exactly the <code>45</code> triangles of that graph, so the tritangent layer appears as exact quotient
+          geometry rather than only as a count match.
+        </p>
+        <p>On those same <code>45</code> quotient points there is now a second exact layer: the center-quad
+          <code>2</code>-cover induces a separate degree-<code>32</code> quotient transport graph with <code>720</code>
+          edges and a reconstructed <code>Z2</code> voltage. That graph is exactly the complement
+          <code>SRG(45,32,22,24)</code> of the <code>45</code>-point incidence graph, equivalently the disjointness
+          graph on the <code>45</code> triangles of <code>SRG(27,10,1,5)</code>. Each transport edge carries a unique
+          local <code>S3</code> matching between the two incident line triples, but the raw <code>Z2</code> sheet data
+          is finer than that matching permutation. Its quotient-triangle parity still reproduces the archived
+          <code>v14</code> counts exactly, and that parity is now identified exactly with the sign of local
+          <code>S3</code> holonomy around transport triangles. Those same edge matchings also define a canonical
+          <code>135</code>-dimensional connection operator on the local-line bundle over the transport graph; it splits
+          exactly as <code>45 + 90</code>, with trivial block equal to the transport adjacency and standard-sector
+          spectrum <code>8, -1, -16</code>. Better still, that <code>90</code>-sector is the exact <code>A2</code>
+          root-lattice local system over the quotient geometry, with Weyl(<code>A2</code>) edge transport preserving the
+          Cartan form. After reduction mod <code>3</code>, the same transport local system acquires a unique invariant
+          projective line <code>[1,2]</code> and becomes the non-split extension
+          <code>0 -&gt; 1 -&gt; rho -&gt; sgn -&gt; 0</code>. An explicit archived <code>v16</code> edge still shows
+          that a <code>Z2</code>-trivial quotient transport edge can carry an odd <code>S3</code> port permutation. From
+          the Witting packet side this same transport graph is now reconstructed independently as the disjointness graph
+          on the <code>45</code> packet leaves, with the <code>27</code> packet-induced quotient lines becoming exact
+          <code>5</code>-cocliques and each packet transport edge already carrying its own unique local <code>S3</code>
+          packet-line matching. More sharply, those packet-side matchings now recover the same exact
+          <code>135 = 45 + 90</code> connection bundle, the same signed holonomy operator, and the same native
+          <code>A2</code> standard sector. They also recover the same exact path-groupoid shadow: no nonzero real flat
+          section, but a unique invariant line <code>[1,2]</code> over <code>F3</code> with exact binary shadow
+          <code>{1,2}</code>. Tensoring that line with the exact <code>81</code>-qutrit homological sector then selects
+          a canonical transport-stable <code>81</code>-dimensional matter sector, while keeping the full reduced
+          <code>A2</code> fiber gives <code>162</code>, matching the flat internal dimension exactly. Better still, the
+          full packet-side reduced fiber is already the exact non-split extension
+          <code>0 -&gt; 1 -&gt; rho -&gt; sgn -&gt; 0</code>, and in adapted basis the off-diagonal term is a genuine
+          nontrivial twisted cocycle. The fiber shift <code>N=[[0,1],[0,0]]</code> then tensors to a square-zero
+          rank-<code>81</code> operator on the packet-side <code>162</code>-sector itself. What changes with local
+          labeling is only the raw six-permutation edge-count table; the exact content lives in the label-invariant
+          operator, holonomy, mod-3 local-system, and cocycle data. So the old transport package is now anchored
+          directly on the exact exceptional quotient geometry and on the Witting communication layer that feeds it.
+        </p>
+        <p>The W33 clique complex over <code>GF(3)</code> sharpens the matter side in parallel: it is an exact qutrit
+          CSS code with parameters <code>[240,81,d_Z=4]</code>, check ranks <code>39</code> and <code>120</code>, and an
+          explicit nontrivial weight-<code>4</code> logical cycle. Tensoring that exact <code>81</code>-qutrit matter
+          sector with the reduced transport extension forces <code>0 -&gt; 81 -&gt; 162 -&gt; 81 -&gt; 0</code>. Better
+          still, in adapted basis the reduced transport extension is carried by a genuine twisted
+          <code>1</code>-cocycle, and the nilpotent fiber shift <code>N=[[0,1],[0,0]]</code> induces a square-zero
+          rank-<code>81</code> operator on the <code>162</code>-sector with image = kernel = <code>81</code>. So the
+          internal <code>162</code>-sector now has a concrete transport-twisted ternary and operator-theoretic
+          explanation.
+        </p>
+
+        <h3>Step 6b &mdash; The D5 Characteristic Bridge</h3>
+        <p>Passes 331&ndash;332 now separate and reconnect the three modules that earlier prose conflated.
+          The central <code>H8</code> retains an F4 Weil polarization under PSp and splits over F4 as mutually dual
+          <code>4a+4b</code>; the PGSp outer controller acts as Frobenius. The logical
+          <code>H10=C&perp;/C</code>, however, is the nonsplit <code>1|8|1</code> module with dual-number
+          commutant, so no F4 scalar acts inside one chosen H10.
+        </p>
+        <p>The obstruction is a choice of integral polarization, not absence of a characteristic-zero lift.
+          The rational restriction of the ATLAS Eisenstein <code>5a</code> has three index-two stable lattice
+          classes, indexed by <code>P&sup1;(F2)</code>, and every one reduces by an invertible
+          two-generator intertwiner to the incidence H10. Multiplication by <code>&omega;</code> is the Singer
+          3-cycle on those classes. The associated split vector <code>5a+5a*</code> then produces the standard
+          conjugate D5 half-spins <code>1+10a+5b</code> and <code>5a+10b+1</code> by even/odd exterior
+          algebra.
+        </p>
+        <div class="spotlight">
+          <p><strong>Passes 333&ndash;337 resolve the old boundary.</strong> An explicit integral outer reflection
+            now normalizes the standardized 5a image and closes the global <code>S3</code> action. The full stable
+            lattice complex has five classes; its H10 polar form lifts unimodularly and symplectically, but no
+            stable symmetric form is both even and unimodular. Integral half-spin lattices exist as perfect
+            2-adic duals. Finally, the dual-number deck extension is split and is not the nonsplit signed-E8
+            cover. What remains is sharper: the physical selector needs a <em>line-dependent</em> curved
+            <code>S3</code> connection, and neither quadratic refinement nor half-spin chirality is canonically
+            selected or physically identified.</p>
+        </div>
+
+        <h3>Step 7 — The Curved 4D Bridge</h3>
+        <p>The decisive current point is negative as well as positive: one fixed finite spectrum cannot by itself
+          produce a genuine <code>4D</code> Weyl law or the full Einstein-Hilbert term. The coherent route is therefore
+          an almost-commutative product: exact finite internal data paired with a genuine curved external
+          <code>4D</code> refinement family.
+        </p>
+        <div class="math-block">
+          <span class="eq">Δ<sub>ext</sub> ⊗ 1 + 1 ⊗ D<sub>F</sub><sup>2</sup></span>
+        </div>
+        <p>That bridge is now concrete. <code>CP2_9</code> and <code>K3_16</code> are explicit simplicial
+          <code>4</code>-manifold seeds with signatures <code>1</code> and <code>-16</code>, exact Betti profiles
+          <code>(1,0,1,0,1)</code> and <code>(1,0,22,0,1)</code>, full external Hodge / Dirac-K&auml;hler spectra, and
+          exact product heat-trace factorization against the W(3,3) finite Dirac square. Their barycentric refinement
+          towers also satisfy an exact local-density theorem: the only surviving barycentric modes are <code>1</code>,
+          <code>6</code>, and <code>120</code>, so the chain density and first spectral moment per top simplex converge
+          exactly to <code>120/19</code> and <code>860/19</code>.
+        </p>
+        <p>The open problem is now narrow: prove the curved <code>4D</code> spectral-action asymptotics that turn this
+          exact finite-plus-curved package into a genuine Einstein-Hilbert plus matter action. The internal side is no
+          longer only the old finite Dirac block: the native transport <code>A2</code> local system already pairs
+          exactly with the curved external factor through a positive internal Laplacian with gap <code>24</code>, exact
+          product heat-trace factorization, and exact refined product densities.</p>
+
+        <h3 id="selection">The Selection Principle: Why q = 3</h3>
+        <p>One exact combinatorial selection identity is that <strong>q = 3 is uniquely selected</strong> by demanding that the edge count
+          of GQ(q,q) equals the Frobenius count q<sup>5</sup> − q:</p>
+        <div class="math-block">
+          <span class="eq">q<sup>5</sup> − q = q(q+1)²(q²+1)/2</span><br>
+          ⟹ 2(q−1) = q+1<br>
+          ⟹ <strong>q = 3</strong> (unique positive solution)
+        </div>
+        <p>Verification: q<sup>5</sup>−q for q = 2,3,4,5,7,11 gives 30, <strong>240</strong>, 1020, 3120, 16800, 161040.
+          The GQ(q,q) edge counts are 45, <strong>240</strong>, 850, 2340, 11200, 96624.
+          They agree <strong>only at q = 3</strong>.</p>
+        <p>The number 240 = q<sup>5</sup> − q = 3<sup>5</sup> − 3 = |𝔽₂₄₃ \ 𝔽₃| counts the non-base elements
+          of the degree-5 extension of q = 3. This gives five independent selection criteria, all yielding q = 3:</p>
+        <table>
+          <tr>
+            <th>#</th>
+            <th>Condition</th>
+            <th>Result</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>q<sup>5</sup>−q = GQ(q,q) edge count</td>
+            <td>q = 3 (unique)</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>sin²θ<sub>W</sub> = 3/8 at GUT scale</td>
+            <td>3q²−10q+3=0 → q = 3</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>K<sub>q+1</sub> has exactly q perfect matchings</td>
+            <td>Only q = 3: K₄ has 3 matchings</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Non-neighbors = dim(E₆ fundamental)</td>
+            <td>v−k−1 = q³ = 27 → q = 3</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>|PGSp(4,q)| = |W(E₆)| for the classical symplectic quadrangle</td>
+            <td>The order equality selects q = 3; at q=3 the projective extension is W(E₆)</td>
+          </tr>
+        </table>
+        <p><strong>Separate conditional spinor selection.</strong> The identity above is not the new
+          characteristic bridge. The spinor argument says that the D<sub>(q&sup2;+1)/2</sub> half-spin dimension
+          equals one 16-state generation only at q=3. Pass 332 now builds the missing PSp-equivariant integral
+          H10-to-characteristic-zero module lift and the conjugate half-spin pair. Identifying one chirality with
+          a physical generation remains an explicit antecedent, not a consequence of the finite geometry.</p>
+        <p><strong>Euler-characteristic shell split:</strong> <code>40 − 240 + 160 = -40 = -v</code> is the exact
+          truncated-shell Euler characteristic, while the full tetrahedral clique complex <code>(40,240,160,40)</code>
+          carries <code>&chi; = 40 - 240 + 160 - 40 = -80</code>. Both are exact; they refer to different chain
+          packages.</p>
+        <p><strong>Legacy note:</strong> older direct identifications of low-energy observables such as Hubble
+          parameters, Higgs mass formulas, or alternate electroweak formulas remain archive material below unless they
+          are promoted explicitly in the verified section.</p>
+
+        <h2><span class="icon">◈</span> Grand Architecture — Rosetta Stone</h2>
+        <p>Pillar 120 reveals the complete self-referential architecture connecting all structures
+          through a single stabilizer cascade and a remarkable Q₈ → E₆ → Q₈ loop.</p>
+
+        <div class="rosetta">
+          <h3>The Stabilizer Cascade</h3>
+          <p>Starting from the 27 lines on a cubic surface (complement Schläfli graph SRG(27, 10, 1, 5)),
+            the stabilizer chain reads:</p>
+          <div class="cascade">
+            <div class="node">
+              <div class="name">W(E₆)</div>
+              <div class="order">51,840</div>
+            </div>
+            <div class="arrow">→<br><small>÷27</small></div>
+            <div class="node">
+              <div class="name">W(D₅)</div>
+              <div class="order">1,920</div>
+            </div>
+            <div class="arrow">→<br><small>÷(5/3)</small></div>
+            <div class="node">
+              <div class="name">W(F₄)</div>
+              <div class="order">1,152</div>
+            </div>
+            <div class="arrow">→<br><small>÷3</small></div>
+            <div class="node">
+              <div class="name">G₃₈₄</div>
+              <div class="order">384</div>
+            </div>
+            <div class="arrow">→<br><small>÷2</small></div>
+            <div class="node">
+              <div class="name">N</div>
+              <div class="order">192</div>
+            </div>
+          </div>
+
+          <table>
+            <tr>
+              <th>Object</th>
+              <th>Count</th>
+              <th>Source</th>
+            </tr>
+            <tr>
+              <td>Lines on cubic surface</td>
+              <td><strong>27</strong></td>
+              <td>= quotient lines in the exact W33 center-quad bridge = line graph vertices</td>
+            </tr>
+            <tr>
+              <td>Tritangent planes</td>
+              <td><strong>45</strong></td>
+              <td>= quotient points = the 45 triangles of the 27-line intersection graph</td>
+            </tr>
+            <tr>
+              <td>27-line meeting edges</td>
+              <td><strong>135</strong></td>
+              <td>= edges of the exact SRG(27,10,1,5) line graph</td>
+            </tr>
+            <tr>
+              <td>45-point graph edges</td>
+              <td><strong>270</strong></td>
+              <td>= edges of the exact SRG(45,12,3,3) point graph on quotient tritangents</td>
+            </tr>
+            <tr>
+              <td>Stabilizer N</td>
+              <td><strong>192</strong></td>
+              <td>= |Aut(C₂×Q₈)| = |W(D₄)|</td>
+            </tr>
+          </table>
+          <p>The transport refinements now sit on top of this exact table rather than beside it: the same
+            <code>45</code> quotient points also carry a degree-<code>32</code> transport graph with <code>720</code>
+            edges, and that graph is exactly the complement <code>SRG(45,32,22,24)</code> of the <code>270</code>-edge
+            incidence graph above. Each of its edges already carries a unique local <code>S3</code> line-matching, the
+            old <code>v14</code> triangle parity is exactly the sign of the resulting local holonomy, and those
+            matchings assemble into a canonical <code>135</code>-dimensional connection operator with exact
+            <code>45 + 90</code> split. The <code>90</code>-sector of that operator is the exact <code>A2</code> local
+            system on the quotient points, while the old <code>270</code>-edge / <code>54</code>-pocket generator
+            package is a further non-abelian refinement whose raw <code>Z2</code> sheet data is finer than local
+            matching parity.
+          </p>
+
+          <h3>The Self-Referential Loop</h3>
+          <div class="loop">
+            <span class="symbol">Q₈</span> → Cayley-Dickson →
+            <span class="symbol">O</span> (octonions) →
+            <span class="symbol">J₃(O)</span> (exceptional Jordan) →
+            <span class="symbol">E₆</span> →
+            <span class="symbol">W(E₆)</span> →
+            stabilizer cascade →
+            <span class="symbol">N = Aut(C₂ × Q₈)</span> →
+            <span class="symbol">Q₈</span>
+            <br><br>
+            <em>The snake eats its tail.</em>
+            <br><br>
+            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXVII_QEC_OUROBOROS_STABILIZER_LOOP.md">QEC Ouroboros Stabilizer Loop</a>
+            makes this exact on the error-correction side: the stabilizer cascade is a QEC feedback loop on the
+            W33 edge-qubit carrier <code>[[240,81,3]]</code>. Vertex and triangle checks read the same
+            <code>240</code>-edge complex that carries the <code>H1=81</code> logical sector. The
+            line-star tail is the <code>H1=81</code> logical sector modulo vertex checks, so stabilizing it away
+            collapses <code>k</code> to
+            zero; the current Q4 layer remains <code>[[1296,81,4]]</code> routing while the
+            Steane/<code>&Phi;<sub>6</sub></code> <code>[[82320,81,&ge;81]]</code> lift is the protected closure.
+            Part DCCXIV adds the local holonomy alphabet of that loop: the <code>12</code> outgoing
+            turns are not a cyclic <code>Z40</code> shortcut, but <code>6+6</code> signed Clifford and
+            projected A<sub>2</sub>/Weyl channels on the <code>480</code> directed carrier, again
+            preserving <code>H1=81</code>.
+            Part DCCXV identifies the photonic meaning of that return half: the fusion budget is
+            <code>240</code> accepted bonds plus <code>240</code> heralded return/syndrome slots, and the
+            KLM budget is the doubled <code>960</code>-slot primitive lift, so nondeterminism is absorbed
+            as QEC syndrome/frame data rather than as a separate architecture layer.
+            Part DCCXVI completes the codec split: the selector trit chooses one of three Clifford
+            axes, the sign is a quantum frame bit, the accepted/return role is a syndrome bit, and
+            the KLM rail is the optical binary lift.
+          </div>
+
+          <h3>Key Identities</h3>
+          <table>
+            <tr>
+              <td>|W(D₄)| = 192 = |N| = |Aut(C₂ × Q₈)| = |Flags(Tomotope)|</td>
+              <td>D₄ uniquely has triality (S₃ outer auts), and the same order is already the live tomotope flag count
+              </td>
+            </tr>
+            <tr>
+              <td>|Q₈| = 8 = dim(O)</td>
+              <td>Q₈ unit group ↔ octonion multiplication</td>
+            </tr>
+            <tr>
+              <td>|Aut(Q₈)| = 24 = |S₄| = |Roots(D₄)| = |V(24-cell)|</td>
+              <td>8 × 24 = 192 = |N|, and the same 24 is the D₄ / 24-cell root-vertex count</td>
+            </tr>
+            <tr>
+              <td>|C₂ × Q₈| = 16 = dim(S)</td>
+              <td>Cayley–Dickson: R(1)→C(2)→H(4)→O(8)→S(16)</td>
+            </tr>
+            <tr>
+              <td>|W(F₄)| = |W(D₄)| × |Out(D₄)| = 192 × 6 = 12 × 96</td>
+              <td>S₃ = Out(D₄) = triality group inside N, so the full F₄ / 24-cell symmetry is the triality lift of the
+                tomotope package</td>
+            </tr>
+            <tr>
+              <td>135 = |PSp(4,3)| / |N| = singular GF(2)⁸</td>
+              <td>GF(2) mirror of GF(3) geometry</td>
+            </tr>
+          </table>
+          <p>The same count shadow is visible geometrically too: tomotope <code>12</code> edges and <code>16</code>
+            triangles match the classical <code>12</code> points and <code>16</code> lines of the Reye configuration,
+            which also appear as the <code>12</code> axes and <code>16</code> hexagon-shadow pieces of the 24-cell.</p>
+        </div>
+      </section>
+<section id="reader-guide" style="padding-top: 2rem; padding-bottom: 1.5rem;">
         <h2><span class="icon">&#8984;</span> Reader Guide <span class="section-badge">Start Here</span></h2>
         <div class="spotlight navigator-note">
           <p><strong>Navigator required:</strong> this live paper is too large to read linearly. If you care about
@@ -14302,771 +15078,7 @@
       </section>
 
       <!-- ═══════════════════════ CORE NUMBERS ═══════════════════════ -->
-      <section id="numbers">
-        <h2><span class="icon">⬡</span> Core Numbers</h2>
-        <p>Exact invariants of W(3,3) and their physical parallels, computationally verified. The live promoted
-          electroweak share is <code>3/13</code>; the older <code>3/8</code> value is kept only as a bare internal /
-          GUT-shell diagnostic. Likewise <code>&chi; = -40</code> belongs to the truncated shell and
-          <code>&chi; = -80</code> to the full tetrahedral clique complex.
-        </p>
-        <div class="card-grid">
-          <div class="card">
-            <div class="num">240</div>
-            <div class="label">Edges = E₈ roots</div>
-            <div class="detail">The collinearity graph of W(3,3) has exactly 240 edges — the same count as the roots of
-              the E₈ exceptional Lie algebra.</div>
-          </div>
-          <div class="card">
-            <div class="num">51,840</div>
-            <div class="label">Aut(W33) &cong; W(E₆)</div>
-            <div class="detail">The full projective group PGSp(4,3) &cong; Aut(PSp(4,3)) has order 51,840 and is
-              isomorphic to W(E₆). The same-order matrix group Sp(4,3)=2.U4(2) is a different central cover.
-            </div>
-          </div>
-          <div class="card">
-            <div class="num">81</div>
-            <div class="label">H₁ = ℤ⁸¹ = 27+27+27</div>
-            <div class="detail">For every order-3 element, H₁&otimes;C has phase eigenspaces
-              27<sub>1</sub>+27<sub>&omega;</sub>+27<sub>&omega;&sup2;</sub>. This exact character statement does not by
-              itself identify three physical generations.</div>
-          </div>
-          <div class="card">
-            <div class="num">3/13</div>
-            <div class="label">sin²θ<sub>W</sub> (promoted)</div>
-            <div class="detail">The promoted electroweak share is <code>q/(q²+q+1) = 3/13</code>. The older
-              <code>3/8</code> value remains an internal unification-shell diagnostic, not the live dressed electroweak
-              number.
-            </div>
-          </div>
-          <div class="card">
-            <div class="num">Δ = 4</div>
-            <div class="label">Spectral Mass Gap</div>
-            <div class="detail">The Hodge Laplacian has a gap of 4 separating massless matter (81) from gauge bosons
-              (120).</div>
-          </div>
-          <div class="card">
-            <div class="num">137.036</div>
-            <div class="label">α⁻¹ from SRG</div>
-            <div class="detail">k²−2μ+1+v/[(k−1)((k−λ)²+1)] = 137.036004 (experiment: 137.035999, diff: 4.5×10⁻⁶).</div>
-          </div>
-          <div class="card">
-            <div class="num" style="color: #ffd700;">2367/2367</div>
-            <div class="label">All Checks Pass ★</div>
-            <div class="detail">The current repo ledger passes its advertised 2367 checks. That count is a
-              hard-computation milestone, but it is not by itself the missing continuum-QFT / GR theorem.</div>
-          </div>
-          <div class="card">
-            <div class="num">E₈ Dynkin</div>
-            <div class="label">Subgraph Found</div>
-            <div class="detail">E₈ Dynkin diagram found at vertices [7,1,0,13,24,28,37,16] with Gram matrix det = 1.
-            </div>
-          </div>
-        </div>
-
-        <table>
-          <tr>
-            <th>W(3,3) Property</th>
-            <th>Exact Value</th>
-            <th>Physical Parallel</th>
-          </tr>
-          <tr>
-            <td>Edges of collinearity graph</td>
-            <td><strong>240</strong></td>
-            <td>Roots of E₈</td>
-          </tr>
-          <tr>
-            <td>Automorphism group</td>
-            <td><strong>PGSp(4,3) &cong; Aut(PSp(4,3)) &cong; W(E₆)</strong></td>
-            <td>Order 51,840; PSp(4,3) is the normal simple subgroup of order 25,920</td>
-          </tr>
-          <tr>
-            <td>First homology H₁(W33; ℤ)</td>
-            <td><strong>ℤ⁸¹</strong></td>
-            <td>dim(g₁) in E₈ ℤ₃-grading</td>
-          </tr>
-          <tr>
-            <td>Hodge eigenvalues / multiplicities</td>
-            <td><strong>0⁸¹ 4¹²⁰ 10²⁴ 16¹⁵</strong></td>
-            <td>Matter / gauge / X-bosons / Y-bosons</td>
-          </tr>
-          <tr>
-            <td>Spectral gap</td>
-            <td><strong>Δ = 4</strong></td>
-            <td>Yang–Mills mass gap</td>
-          </tr>
-          <tr>
-            <td>Order-3 eigenspace split</td>
-            <td><strong>H₁&otimes;C = 27<sub>1</sub>+27<sub>&omega;</sub>+27<sub>&omega;&sup2;</sub></strong> (all 800 elements)</td>
-            <td>Exact phase multiplicities; a generation interpretation needs an additional bridge</td>
-          </tr>
-          <tr>
-            <td>E₆ Hessian tritangents</td>
-            <td><strong>45 = 36 + 9</strong></td>
-            <td>Heisenberg model ∩ fibers</td>
-          </tr>
-          <tr>
-            <td>Weinberg angle</td>
-            <td><strong>3/13 promoted, 3/8 bare-shell</strong></td>
-            <td><code>3/13</code> is the dressed/projective electroweak share; <code>3/8</code> is the internal
-              GUT-shell diagnostic</td>
-          </tr>
-          <tr>
-            <td>QEC parameters</td>
-            <td><strong>[240, 81, d<sub>Z</sub> = 4]</strong> over GF(3)</td>
-            <td>Exact ternary homological code</td>
-          </tr>
-          <tr>
-            <td>Gauge coupling</td>
-            <td><strong>α<sub>GUT</sub> = 1/(8π) ≈ 1/25.1</strong></td>
-            <td>Within 3.6% of MSSM value</td>
-          </tr>
-          <tr>
-            <td>E₈ ℤ₃-grading</td>
-            <td><strong>86 + 81 + 81 = 248</strong></td>
-            <td>Full E₈ Lie algebra decomposition</td>
-          </tr>
-          <tr>
-            <td>Fine structure constant</td>
-            <td><strong>α⁻¹ = 137.036004</strong></td>
-            <td>k²−2μ+1+v/L<sub>eff</sub>; diff 4.5×10⁻⁶ from experiment</td>
-          </tr>
-          <tr>
-            <td>E₈ Dynkin subgraph</td>
-            <td><strong>Found, Gram det = 1</strong></td>
-            <td>At vertices [7,1,0,13,24,28,37,16]; Cartan matrix verified</td>
-          </tr>
-          <tr>
-            <td>240 decomposition</td>
-            <td><strong>240 = 40 × 3 × 2</strong></td>
-            <td>Lines × matchings × edges/matching</td>
-          </tr>
-          <tr>
-            <td>3-coloring</td>
-            <td><strong>3 × 80 edges, each 4-regular</strong></td>
-            <td>Natural GF(3) generation structure</td>
-          </tr>
-          <tr>
-            <td>GF(2) homology</td>
-            <td><strong>dim = 8, A²≡0 mod 2</strong></td>
-            <td>Rank of adjacency mod 2 equals E₈ rank</td>
-          </tr>
-          <tr>
-            <td>Determinant</td>
-            <td><strong>det(A) = −3 × 2⁵⁶</strong></td>
-            <td>Encodes E₈ structure: rank-8 mod-2 kernel</td>
-          </tr>
-          <tr>
-            <td>μ-graph</td>
-            <td><strong>SRG(27,16,...)</strong></td>
-            <td>Common-neighbor-3 subgraph; eigenvalues {−2:20, 4:6, 16:1}</td>
-          </tr>
-          <tr>
-            <td>Cosmological constant</td>
-            <td><strong>Λ exponent = −127</strong></td>
-            <td>−(k²−f+λ) where f=24 (eigenvalue multiplicity)</td>
-          </tr>
-          <tr>
-            <td>Hubble constant</td>
-            <td><strong>H₀ = 67 / 73 km/s/Mpc</strong></td>
-            <td>v+f+1+λ (CMB) vs v+f+1+2λ+μ (local)</td>
-          </tr>
-          <tr>
-            <td>Higgs mass</td>
-            <td><strong>M<sub>H</sub> = 125 GeV</strong></td>
-            <td>s⁴+v+μ where s=3 (field characteristic)</td>
-          </tr>
-          <tr>
-            <td>Vertex decomposition</td>
-            <td><strong>40 = 1 + 24 + 15</strong></td>
-            <td>Vacuum + gauge bosons (SU(5) adj) + fermions/gen</td>
-          </tr>
-          <tr>
-            <td>Dimensions</td>
-            <td><strong>4 + 8 = 12</strong></td>
-            <td>μ (macroscopic) + k−μ (compact) = k (total)</td>
-          </tr>
-        </table>
-      </section>
-
-      <!-- ═══════════════════════ THE THEORY ═══════════════════════ -->
-      <section id="theory">
-        <h2><span class="icon">△</span> The Theory</h2>
-        <p>This section states the defensible backbone of the program: exact finite geometry on the internal side, and
-          the current status of the curved <code>4D</code> bridge. Older broad phenomenology remains archive material
-          unless it is promoted explicitly in the verified section above.</p>
-        <div class="spotlight">
-          <p><strong>Shell discipline matters here.</strong> <code>3/8</code> is the old bare/internal unification
-            diagnostic; <code>3/13</code> is the promoted dressed/projective electroweak share. <code>&chi; = -40</code>
-            belongs to the truncated shell; <code>&chi; = -80</code> belongs to the full tetrahedral clique complex. The
-            older <code>122</code> zero-mode count is the truncated Dirac-K&auml;hler shell, while the promoted full
-            finite package carries <code>82</code> zero modes on the <code>480</code>-dimensional closure.</p>
-        </div>
-        <div class="spotlight" id="q3-all-m-theorem">
-          <p><strong>Exact all-exponent <code>q=3</code> theorem (Pass 541).</strong> For every integer
-            <code>m&ge;2</code>, the minimum over all <code>81</code> sections is</p>
-          <p style="text-align:center;"><strong><code>min<sub>c</sub>
-            v<sub>&lambda;</sub>(tr(D<sub>c</sub><sup>m</sup>)) = 2(m + [m odd])</code>.</strong></p>
-          <p>This is an infinite statement proved by finite recurrence states, not by extending a numerical cutoff.
-            The section image consists of the six cubics <code>x&sup3;&minus;9ax&minus;27b</code> with
-            <code>(a,b)=(0,0),(1,0),(2,0),(3,0),(3,1),(4,3)</code>. After <code>x=3y</code>, their power sums satisfy
-            <code>S<sub>m</sub>=aS<sub>m&minus;2</sub>+bS<sub>m&minus;3</sub></code>. The
-            <code>(a,b)=(1,0)</code> row attains every even exponent. For odd exponents, the
-            <code>(3,1)</code> and <code>(4,3)</code> rows have mod-<code>9</code> period words
-            <code>3,0,6</code> and <code>8,0,5,6,2,3</code>; together they cover all odd residue classes
-            modulo <code>6</code>.</p>
-          <p>The exponent <code>m=1</code> is excluded because every section has trace zero. The old, disproved
-            factorial expression agrees with the true minimum exactly on
-            <code>s<sub>3</sub>(m)+[m odd]=2</code>. Equivalently, for <code>m&ge;2</code>, this means
-            <code>m=3<sup>j</sup></code> with <code>j&ge;1</code>, or
-            <code>m=3<sup>i</sup>+3<sup>j</sup></code> with <code>0&le;i&le;j</code>; prime powers lie inside but do not
-            exhaust that locus. Nothing in this theorem asserts the sampled <code>q&ge;5</code> minima.
-            <a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/w33_pass541_q3_all_m_recurrence.g">Run the GAP witness</a>,
-            <a href="https://github.com/wilcompute/W33-Theory/blob/master/data/w33_pass541_q3_all_m_recurrence.json">inspect the certificate</a>, or
-            <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS541_Q3_ALL_M_RECURRENCE_THEOREM.md">read the proof synthesis</a>.</p>
-        </div>
-        <div class="spotlight">
-          <p><strong>Latest exact section-orbit theorem (Pass 540).</strong> At <code>q=3</code>, the two unexplained
-            full-support spectral orbits are now identified with the two <code>D4</code> half-spin chiralities. The
-            fixed-frame coordinate product splits the <code>16</code> sign words into two
-            <code>8</code>-vertex demicubes, although both have block-difference polynomial
-            <code>x&sup3;&minus;36x&minus;81</code>. Intrinsically, the separator is the frame-corrected
-            Moore&ndash;Dickson coefficient; reversing a frame representative may swap the product labels but not
-            the two-fiber split. A determinant-<code>&minus;1</code> linear symmetry exchanges them,
-            so the spectral blindness is explained without selecting a physical hand.</p>
-          <p>At <code>q=5</code>, exact Burnside averaging gives <strong><code>139,904</code></strong> full-support
-            <code>SL(2,5)</code> orbits. A deterministic <code>3,000</code>-orbit sample finds a further
-            affine-inequivalent, nonisomorphic cospectral Cayley pair outside the eight explicit Pass-456/479/482 affine
-            pairs; it realizes Pass 481's sheet-coincidence mechanism rather than a new mechanism. Its exact
-            faithful factor is
-            <code>x^10&minus;120x^8&minus;90x^7+4795x^6+6317x^5&minus;69675x^4&minus;108795x^3+277460x^2+383845x+34441</code>;
-            exact <code>125&times;125</code> characteristic polynomials and different local profiles certify the pair.
-            Their critical groups also agree exactly: the nonunit Smith invariant factors are
-            <code>5 (&times;16), 25 (&times;5), 125 (&times;13), 2028949923625 (&times;10)</code>.
-            The pair is exact; the sample is not an enumeration of every <code>q=5</code> spectrum.</p>
-          <p>Over <code>Z/9</code>, the same signed-cycle calculation is exhaustive: it gives
-            <code>228100045392509153077600971330057241</code> section orbits and
-            <code>2051277771273019233341050472890368</code> full-support orbits.
-            <a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/w33_pass540_symplectic_separator_chainring.g">Run the GAP witness</a>,
-            <a href="https://github.com/wilcompute/W33-Theory/blob/master/data/w33_pass540_symplectic_separator_chainring.json">inspect the certificate</a>, or
-            <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS540_SYMPLECTIC_CHIRALITY_CHAINRING.md">read the synthesis</a>.</p>
-        </div>
-        <div class="spotlight">
-          <p><strong>GitHub-batch integrity audit (Passes 358&ndash;359).</strong> GAP separates the equal-order groups
-            <code>Sp(4,3)=2.U4(2)</code> and <code>W(E6)=PGSp(4,3)=U4(2).2</code>, replaces a stale
-            <code>6+3</code> Weil claim by the exact <code>9=5+4</code> carrier and its real outer envelope
-            <code>18=10+8</code>, and restores the defining-characteristic polynomial
-            <code>x&sup2;&minus;90x+325</code> at <code>p=5</code>. The same packet identifies the length-137 cyclic
-            construction as the binary quadratic-residue CSS code <strong><code>[[137,1,21]]</code></strong>, not
-            <code>[[137,1,3]]</code>. This is an exact coding result, not a derivation of the physical fine-structure
-            constant. <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md">Read the GAP-backed
-              audit and boundary.</a></p>
-        </div>
-        <div class="spotlight">
-          <p><strong>New exact gate theorem (Pass 360).</strong> The corrected <code>[[137,1,21]]</code> code has a
-            certified affine Clifford action, not merely an interesting length. Its pure coordinate symmetries contain
-            <code>C137:C68</code> of order <code>9,316</code>. A nonresidue multiplier exchanges the QR/NQR check
-            spaces; composing it with transversal Hadamard gives an exact logical Hadamard and enlarges the action to
-            <code>AGL(1,137)=C137:C136</code> of order <code>18,632</code>. On the parity-extended 138 coordinates,
-            explicit M&ouml;bius maps generate <code>PSL(2,137)</code> of order <code>1,285,608</code>; the
-            <code>PGL(2,137)</code> envelope of order <code>2,571,216</code> exchanges the two extended QR codes.
-            This is a 37-check GAP theorem about a quantum code, not a coupling-constant claim.
-            <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md">Open the construction and exact
-              scope.</a></p>
-        </div>
-        <div class="spotlight">
-          <p><strong>Exact gate boundary (Pass 361).</strong> The QR/NQR check spaces split the ambient binary space
-            orthogonally as <code>68 + 68 + 1</code>. That forces four of the six uniform one-qubit Clifford label
-            maps to fail: a nonzero <code>Y</code>-support would have to lie in both disjoint check spaces. Only
-            identity and <code>X/Z</code> swap survive, so the simple affine/fold-transversal logical image is exactly
-            <code>&lt;H&gt; &cong; C2</code>. The natural subset-phase escape is closed too: both
-            <code>4,692 &times; 137</code> mask systems have rank <code>137</code> and nullity zero. A logical phase gate
-            therefore needs a different circuit resource; the theorem does not rule out general circuits, ancillas,
-            measurements, or code deformation.
-            <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS361_ALPHA_CODE_CLIFFORD_MAXIMALITY_SYNTHESIS.md">Read the proof and precise no-go
-              boundary.</a></p>
-        </div>
-        <div class="spotlight">
-          <p><strong>Two-block real-Clifford breakthrough (Pass 362).</strong> Two QR-137 blocks give an exact
-            <code>[[274,2,21]]</code> code. Their encoded Hadamards and transversal CNOT preserve the rank-272
-            stabilizer and generate <code>O+(4,2) &cong; (S3 &times; S3):C2</code> of order <code>72</code> on logical
-            Pauli labels. Keeping signs gives one real-Clifford group of order <code>2,304</code> with two different
-            order-<code>1,152</code> shadows: its projective quotient is the centerless
-            <code>Aut(K4,4)=S4 wr C2</code>, while its total-Hadamard-parity kernel is the central
-            <code>W(F4)</code>. The shared number is therefore a quotient/kernel bifurcation, not a group identity.
-            <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS362_ALPHA_CODE_REAL_CLIFFORD_K44_F4_SYNTHESIS.md">Open the 52-check construction and
-              corpus correction.</a></p>
-        </div>
-        <div class="spotlight">
-          <p><strong>Real-Clifford character diamond (Pass 363).</strong> The order-<code>2,304</code> real
-            two-qubit Clifford group has exactly three nonzero <code>C2</code> characters. Their order-<code>1,152</code>
-            kernels are pairwise nonisomorphic: <code>W(F4)</code>, the central product <code>2O o 2O</code>, and a
-            mixed extraspecial kernel. Thus the formal <code>S3=Aut(C2^2)</code> does not lift to kernel triality.
-            Radial normalization makes <code>2O o 2O</code> transitive on the 48-point F4 shell without making it the
-            metric Weyl action. The same witness corrects <code>GL(2,3)</code>: it is
-            <code>SmallGroup(48,29)</code>, not binary octahedral <code>SmallGroup(48,28)</code>.</p>
-        </div>
-        <div class="spotlight">
-          <p><strong>Encoded exceptional refinement tower (Passes 364--366).</strong> Four QR-137 blocks form an exact
-            <code>[[548,4,21]]</code> code whose four encoded Hadamards and twelve transversal CNOTs generate
-            <code>O+(8,2)</code>. The explicit interleaving
-            <code>(x1,x2,x3,x4,z1,z2,z3,z4) -&gt; (x1,z1,x2,z2,x3,z3,x4,z4)</code> realizes the complete Pass-124
-            <code>255 = 135 + 120</code> E8/2E8 graph split. On the three-block <code>[[411,3,21]]</code> code, the minus refinement gives
-            <code>O-(6,2)=W(E6)</code> on the 36 W33 spreads, with a checked <code>PSp(4,3)</code>-equivariant bijection
-            and a named stabilizer-normalizing logical phase rotation. In general the direct sum is
-            <code>[[137m,m,21]]</code>, and <code>[Sp(2m,2):O+(2m,2)] = 2^(m-1)(2^m+1)</code> counts the plus quadratic
-            refinements.</p>
-        </div>
-        <div class="spotlight">
-          <p><strong>Universal parity boundary (Pass 367).</strong> W(E6) sign, outer-Weil parity, QR-137 residue
-            character, and real-Clifford Hadamard parity synchronize in one exact <code>C2</code>-graded fiber product
-            of order <code>28,841,108,255,539,200</code>. It is not one common exchange action: the QR odd coset has
-            element orders only <code>8</code> and <code>136</code>, so the pullback has no odd involution and the
-            extension cannot split. <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md">Open all five GAP
-              witnesses, maps, and scope boundaries.</a></p>
-        </div>
-        <div class="spotlight">
-          <p><strong>Boundary decoder and phase-sheet action (Passes 373&ndash;374).</strong> The oriented triangle
-            boundary image is the exact classical ternary code <code>[240,120,3]&#8323;</code>. Its 240 parity columns
-            are nonzero and projectively distinct, every triangle supplies weight three, and all 480 nonzero
-            single-edge errors have distinct syndromes; the complete radius-one MLUT therefore has
-            <strong>481 entries</strong>. This is separate from the already-owned logical code
-            <code>[[240,81,3]]&#8323;</code> with <code>(d<sub>X</sub>,d<sub>Z</sub>)=(3,4)</code>.
-            On the scalar side, BT571/BT637/BT644 already own the four lifts and deck characters. The new GAP action
-            theorem proves that the 51,840 nonzero minimal logical X/Z vector pairings form four invariant
-            12,960-state orbits under <code>W(E6)</code>, each with stabilizer <code>C2&times;C2</code>. The natural
-            action is four copies of <code>W(E6)/(C2&times;C2)</code>, not a Weyl torsor.
-            <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS373_374_W33_BOUNDARY_MLUT_PHASE_SHEET_SYNTHESIS.md">Open the certificates, ownership
-              reconciliation, and exact scope.</a></p>
-        </div>
-        <div class="spotlight">
-          <p><strong>Phase-character normalizer obstruction (Pass 375).</strong> The scalar deck
-            <code>D=(F3*)&sup2;&cong;V4</code> has abstract automorphism group <code>S3</code>, but the owned pairing
-            character <code>&chi;(a,b)=ab</code> cuts its stabilizer to <code>C2</code>. The order-three automorphism
-            cycles the three binary characters, so the exact phase-compatible normalizer of the four lifts is
-            <strong><code>D8</code></strong>, not <code>A4</code> or <code>S4</code>. The geometric Pass-374 stabilizer
-            independently has normalizer quotient <code>N<sub>W(E6)</sub>(K)/K&cong;D8</code>; these are different
-            objects and no intertwiner is assumed. GAP also embeds the <code>V4</code> point stabilizer in
-            <code>W(E6)&times;V4</code> with index <code>51,840</code> and proves that no regular complement exists,
-            because it would force a nonexistent order-<code>12,960</code> subgroup of <code>W(E6)</code>.
-            <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS375_W33_PHASE_CHARACTER_NORMALIZER_OBSTRUCTION.md">Read the 29-check GAP theorem and
-              ownership audit.</a></p>
-        </div>
-        <div class="spotlight">
-          <p><strong>Marked <code>D8</code> bridge (Pass 376).</strong> The phase-compatible normalizer and
-            <code>N<sub>W(E6)</sub>(K)/K</code> now agree as marked <code>V4:C2</code> extensions.  The scalar
-            deck maps to the canonical geometric deck <code>C<sub>N</sub>(K)/K</code>, their central
-            <code>C2</code> lines correspond, and both quotient actions have the exact orbit fingerprint
-            <code>1+1+2</code>.  There are exactly <strong>four</strong> marked isomorphisms, with residual
-            ambiguity <code>C2&times;C2</code>; this is deliberately not promoted to a preferred
-            scalar-sheet-to-state map or a regular Weyl action.
-            <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS376_MARKED_D8_BRIDGE.md">Read the 20-check GAP certificate and scope boundary.</a></p>
-        </div>
-
-        <h3>Step 1 — The Geometry</h3>
-        <p>W(3,3) is the symplectic polar space W(3, 𝔽₃). Its collinearity graph is a distinguished
-          <strong>SRG(40, 12, 2, 4)</strong> with eigenvalues 12, 2, −4. It has 40 vertices (the projective
-          1-spaces in GF(3)⁴; every 1-space is isotropic for an alternating form) and 240 edges. Each edge is a pair
-          of orthogonal points spanning a unique <em>totally isotropic projective line</em>. A nonedge, not an edge,
-          spans an ordinary hyperbolic projective line. The graph has diameter 2 and is Ramanujan.</p>
-
-        <div class="math-block">
-          <span class="eq">v ~ w</span> ⟺ <span class="eq">v<sup>T</sup> J w ≡ 0 (mod 3)</span><br>
-          where J is the standard symplectic form on GF(3)⁴
-        </div>
-        <p>The parameter tuple does not identify W(3,3): Spence classified exactly
-          <a href="https://doi.org/10.37236/1500">28 nonisomorphic SRG(40,12,2,4) graphs</a>. The object here is fixed
-          by the displayed symplectic construction. Its full geometry/graph automorphism group is
-          <code>Aut(PSp(4,3)) &cong; PGSp(4,3) &cong; W(E6)</code>, order <code>51840</code>, with normal inner group
-          <code>PSp(4,3)</code> of order <code>25920</code>. The same-order matrix group
-          <code>Sp(4,3)=2.U4(2)</code> has center <code>C2</code> and is not that faithful projective extension
-          (<a href="https://cage.ugent.be/~hvm/artikels/246.pdf">finite-geometry reference</a>; GAP Pass 213).</p>
-
-        <h3>Step 2 — Homology Reveals Matter</h3>
-        <p>The simplicial chain complex of the collinearity graph yields:</p>
-        <div class="math-block">
-          <span class="eq">H₁(W33; ℤ) = ℤ⁸¹</span>
-        </div>
-        <p>This is the same dimension as g₁ in the ℤ₃-graded E₈ decomposition
-          <strong>E₈ = g₀(86) ⊕ g₁(81) ⊕ g₂(81)</strong>, where g₀ = E₆ ⊕ A₂.
-        </p>
-
-        <h3>Step 3 — Hodge Theory Classifies Forces</h3>
-        <p>The Hodge Laplacian L₁ on 1-chains has four eigenspaces:</p>
-        <table>
-          <tr>
-            <th>Eigenvalue</th>
-            <th>Multiplicity</th>
-            <th>Physical Role</th>
-          </tr>
-          <tr>
-            <td><strong>0</strong></td>
-            <td>81</td>
-            <td>Massless matter (fermions)</td>
-          </tr>
-          <tr>
-            <td><strong>4</strong></td>
-            <td>120</td>
-            <td>Gauge bosons</td>
-          </tr>
-          <tr>
-            <td><strong>10</strong></td>
-            <td>24</td>
-            <td>Heavy X bosons (SU(5) adjoint)</td>
-          </tr>
-          <tr>
-            <td><strong>16</strong></td>
-            <td>15</td>
-            <td>Heavy Y bosons (SO(6) adjoint)</td>
-          </tr>
-        </table>
-        <p>The spectral gap Δ = 4 is exact and separates massless from massive modes. In the live promoted
-          interpretation these are exact finite sectors first; the full continuum particle interpretation is still tied
-          to the open curved <code>4D</code> bridge theorem.</p>
-        <p>On the full promoted tetrahedral package the corresponding finite Dirac square is
-          <code>D<sub>F</sub><sup>2</sup> = {0<sup>82</sup>,4<sup>320</sup>,10<sup>48</sup>,16<sup>30</sup>}</code>. The
-          older <code>122</code> zero-mode count is not a contradiction; it belongs to the truncated
-          <code>C<sup>0</sup> &oplus; C<sup>1</sup> &oplus; C<sup>2</sup></code> shell.
-        </p>
-
-        <h3>Step 4 — Three Generations</h3>
-        <p>There are four order-3 conjugacy classes in <code>PSp(4,3)</code>, totalling <code>800</code> elements.
-          The 81-dimensional homology character is zero on all four, so over the complex numbers every such element
-          has exact phase multiplicities
-          <strong>H₁&otimes;C = 27<sub>1</sub> &oplus; 27<sub>&omega;</sub> &oplus; 27<sub>&omega;&sup2;</sub></strong>.
-          The element acts by the three phases; it does not cyclically permute these eigenspaces, and no canonical
-          three-summand decomposition over ℤ follows. Connecting the exact <code>27+27+27</code> character fact to
-          physical generations therefore remains a bridge claim, not a consequence of the split alone (GAP Pass 213).
-        </p>
-
-        <h3>Step 5 — Electroweak Shells</h3>
-        <p>Two exact electroweak formulas appear in the project, and they live on different shells:</p>
-        <div class="math-block">
-          <span class="eq">sin²θ<sub>W</sub> = 2q / (q+1)² = 3/8</span> &nbsp; (bare / internal shell)<br>
-          <span class="eq">sin²θ<sub>W</sub> = q / (q²+q+1) = 3/13</span> &nbsp; (dressed / projective shell)
-        </div>
-        <p>No fitting is performed on the finite side: <code>q = 3</code> is fixed by the geometry. The <code>3/8</code>
-          formula is the internal unification-scale diagnostic inherited from the adjacency / generalized-quadrangle
-          shell. The promoted live electroweak value on this page is <code>3/13</code>, which is the dressed/projective
-          share used by the PMNS, Cabibbo, and curved-refinement roundtrip layer.</p>
-
-        <h3>Step 6 — Edge–Root Correspondence</h3>
-        <p>The 240 edges decompose as <strong>240 = 40 × 3 × 2</strong> (lines × matchings × edges/matching).
-          Under E₈ → E₆ × SU(3), this matches the branching <strong>240 = 3 × (24 + 2 + 27 + 27)</strong>.
-          The inner projective group PSp(4,3) already acts <strong>edge-transitively</strong> (single orbit on all 240 edges),
-          but no equivariant bijection to E₈ roots exists — the connection is representation-theoretic, not
-          lattice-geometric.</p>
-        <p>An <strong>E₈ Dynkin subgraph</strong> is found directly in the W(3,3) adjacency graph at vertices
-          [7,1,0,13,24,28,37,16],
-          with Gram matrix 2I − A<sub>sub</sub> having <strong>determinant 1</strong> — reproducing the E₈ Cartan
-          matrix.</p>
-
-        <p>More sharply, the W33 center-quad quotient now gives an exact exceptional incidence bridge: <code>90</code>
-          center-quads pair into <code>45</code> quotient points, the quotient has <code>27</code> lines and
-          <code>135</code> incidences, and its line-intersection graph is exactly <code>SRG(27,10,1,5)</code>, the
-          complement-Schl&auml;fli graph of the <code>27</code> lines on a cubic surface. Its <code>45</code> points are
-          exactly the <code>45</code> triangles of that graph, so the tritangent layer appears as exact quotient
-          geometry rather than only as a count match.
-        </p>
-        <p>On those same <code>45</code> quotient points there is now a second exact layer: the center-quad
-          <code>2</code>-cover induces a separate degree-<code>32</code> quotient transport graph with <code>720</code>
-          edges and a reconstructed <code>Z2</code> voltage. That graph is exactly the complement
-          <code>SRG(45,32,22,24)</code> of the <code>45</code>-point incidence graph, equivalently the disjointness
-          graph on the <code>45</code> triangles of <code>SRG(27,10,1,5)</code>. Each transport edge carries a unique
-          local <code>S3</code> matching between the two incident line triples, but the raw <code>Z2</code> sheet data
-          is finer than that matching permutation. Its quotient-triangle parity still reproduces the archived
-          <code>v14</code> counts exactly, and that parity is now identified exactly with the sign of local
-          <code>S3</code> holonomy around transport triangles. Those same edge matchings also define a canonical
-          <code>135</code>-dimensional connection operator on the local-line bundle over the transport graph; it splits
-          exactly as <code>45 + 90</code>, with trivial block equal to the transport adjacency and standard-sector
-          spectrum <code>8, -1, -16</code>. Better still, that <code>90</code>-sector is the exact <code>A2</code>
-          root-lattice local system over the quotient geometry, with Weyl(<code>A2</code>) edge transport preserving the
-          Cartan form. After reduction mod <code>3</code>, the same transport local system acquires a unique invariant
-          projective line <code>[1,2]</code> and becomes the non-split extension
-          <code>0 -&gt; 1 -&gt; rho -&gt; sgn -&gt; 0</code>. An explicit archived <code>v16</code> edge still shows
-          that a <code>Z2</code>-trivial quotient transport edge can carry an odd <code>S3</code> port permutation. From
-          the Witting packet side this same transport graph is now reconstructed independently as the disjointness graph
-          on the <code>45</code> packet leaves, with the <code>27</code> packet-induced quotient lines becoming exact
-          <code>5</code>-cocliques and each packet transport edge already carrying its own unique local <code>S3</code>
-          packet-line matching. More sharply, those packet-side matchings now recover the same exact
-          <code>135 = 45 + 90</code> connection bundle, the same signed holonomy operator, and the same native
-          <code>A2</code> standard sector. They also recover the same exact path-groupoid shadow: no nonzero real flat
-          section, but a unique invariant line <code>[1,2]</code> over <code>F3</code> with exact binary shadow
-          <code>{1,2}</code>. Tensoring that line with the exact <code>81</code>-qutrit homological sector then selects
-          a canonical transport-stable <code>81</code>-dimensional matter sector, while keeping the full reduced
-          <code>A2</code> fiber gives <code>162</code>, matching the flat internal dimension exactly. Better still, the
-          full packet-side reduced fiber is already the exact non-split extension
-          <code>0 -&gt; 1 -&gt; rho -&gt; sgn -&gt; 0</code>, and in adapted basis the off-diagonal term is a genuine
-          nontrivial twisted cocycle. The fiber shift <code>N=[[0,1],[0,0]]</code> then tensors to a square-zero
-          rank-<code>81</code> operator on the packet-side <code>162</code>-sector itself. What changes with local
-          labeling is only the raw six-permutation edge-count table; the exact content lives in the label-invariant
-          operator, holonomy, mod-3 local-system, and cocycle data. So the old transport package is now anchored
-          directly on the exact exceptional quotient geometry and on the Witting communication layer that feeds it.
-        </p>
-        <p>The W33 clique complex over <code>GF(3)</code> sharpens the matter side in parallel: it is an exact qutrit
-          CSS code with parameters <code>[240,81,d_Z=4]</code>, check ranks <code>39</code> and <code>120</code>, and an
-          explicit nontrivial weight-<code>4</code> logical cycle. Tensoring that exact <code>81</code>-qutrit matter
-          sector with the reduced transport extension forces <code>0 -&gt; 81 -&gt; 162 -&gt; 81 -&gt; 0</code>. Better
-          still, in adapted basis the reduced transport extension is carried by a genuine twisted
-          <code>1</code>-cocycle, and the nilpotent fiber shift <code>N=[[0,1],[0,0]]</code> induces a square-zero
-          rank-<code>81</code> operator on the <code>162</code>-sector with image = kernel = <code>81</code>. So the
-          internal <code>162</code>-sector now has a concrete transport-twisted ternary and operator-theoretic
-          explanation.
-        </p>
-
-        <h3>Step 6b &mdash; The D5 Characteristic Bridge</h3>
-        <p>Passes 331&ndash;332 now separate and reconnect the three modules that earlier prose conflated.
-          The central <code>H8</code> retains an F4 Weil polarization under PSp and splits over F4 as mutually dual
-          <code>4a+4b</code>; the PGSp outer controller acts as Frobenius. The logical
-          <code>H10=C&perp;/C</code>, however, is the nonsplit <code>1|8|1</code> module with dual-number
-          commutant, so no F4 scalar acts inside one chosen H10.
-        </p>
-        <p>The obstruction is a choice of integral polarization, not absence of a characteristic-zero lift.
-          The rational restriction of the ATLAS Eisenstein <code>5a</code> has three index-two stable lattice
-          classes, indexed by <code>P&sup1;(F2)</code>, and every one reduces by an invertible
-          two-generator intertwiner to the incidence H10. Multiplication by <code>&omega;</code> is the Singer
-          3-cycle on those classes. The associated split vector <code>5a+5a*</code> then produces the standard
-          conjugate D5 half-spins <code>1+10a+5b</code> and <code>5a+10b+1</code> by even/odd exterior
-          algebra.
-        </p>
-        <div class="spotlight">
-          <p><strong>Passes 333&ndash;337 resolve the old boundary.</strong> An explicit integral outer reflection
-            now normalizes the standardized 5a image and closes the global <code>S3</code> action. The full stable
-            lattice complex has five classes; its H10 polar form lifts unimodularly and symplectically, but no
-            stable symmetric form is both even and unimodular. Integral half-spin lattices exist as perfect
-            2-adic duals. Finally, the dual-number deck extension is split and is not the nonsplit signed-E8
-            cover. What remains is sharper: the physical selector needs a <em>line-dependent</em> curved
-            <code>S3</code> connection, and neither quadratic refinement nor half-spin chirality is canonically
-            selected or physically identified.</p>
-        </div>
-
-        <h3>Step 7 — The Curved 4D Bridge</h3>
-        <p>The decisive current point is negative as well as positive: one fixed finite spectrum cannot by itself
-          produce a genuine <code>4D</code> Weyl law or the full Einstein-Hilbert term. The coherent route is therefore
-          an almost-commutative product: exact finite internal data paired with a genuine curved external
-          <code>4D</code> refinement family.
-        </p>
-        <div class="math-block">
-          <span class="eq">Δ<sub>ext</sub> ⊗ 1 + 1 ⊗ D<sub>F</sub><sup>2</sup></span>
-        </div>
-        <p>That bridge is now concrete. <code>CP2_9</code> and <code>K3_16</code> are explicit simplicial
-          <code>4</code>-manifold seeds with signatures <code>1</code> and <code>-16</code>, exact Betti profiles
-          <code>(1,0,1,0,1)</code> and <code>(1,0,22,0,1)</code>, full external Hodge / Dirac-K&auml;hler spectra, and
-          exact product heat-trace factorization against the W(3,3) finite Dirac square. Their barycentric refinement
-          towers also satisfy an exact local-density theorem: the only surviving barycentric modes are <code>1</code>,
-          <code>6</code>, and <code>120</code>, so the chain density and first spectral moment per top simplex converge
-          exactly to <code>120/19</code> and <code>860/19</code>.
-        </p>
-        <p>The open problem is now narrow: prove the curved <code>4D</code> spectral-action asymptotics that turn this
-          exact finite-plus-curved package into a genuine Einstein-Hilbert plus matter action. The internal side is no
-          longer only the old finite Dirac block: the native transport <code>A2</code> local system already pairs
-          exactly with the curved external factor through a positive internal Laplacian with gap <code>24</code>, exact
-          product heat-trace factorization, and exact refined product densities.</p>
-
-        <h3 id="selection">The Selection Principle: Why q = 3</h3>
-        <p>One exact combinatorial selection identity is that <strong>q = 3 is uniquely selected</strong> by demanding that the edge count
-          of GQ(q,q) equals the Frobenius count q<sup>5</sup> − q:</p>
-        <div class="math-block">
-          <span class="eq">q<sup>5</sup> − q = q(q+1)²(q²+1)/2</span><br>
-          ⟹ 2(q−1) = q+1<br>
-          ⟹ <strong>q = 3</strong> (unique positive solution)
-        </div>
-        <p>Verification: q<sup>5</sup>−q for q = 2,3,4,5,7,11 gives 30, <strong>240</strong>, 1020, 3120, 16800, 161040.
-          The GQ(q,q) edge counts are 45, <strong>240</strong>, 850, 2340, 11200, 96624.
-          They agree <strong>only at q = 3</strong>.</p>
-        <p>The number 240 = q<sup>5</sup> − q = 3<sup>5</sup> − 3 = |𝔽₂₄₃ \ 𝔽₃| counts the non-base elements
-          of the degree-5 extension of q = 3. This gives five independent selection criteria, all yielding q = 3:</p>
-        <table>
-          <tr>
-            <th>#</th>
-            <th>Condition</th>
-            <th>Result</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>q<sup>5</sup>−q = GQ(q,q) edge count</td>
-            <td>q = 3 (unique)</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>sin²θ<sub>W</sub> = 3/8 at GUT scale</td>
-            <td>3q²−10q+3=0 → q = 3</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>K<sub>q+1</sub> has exactly q perfect matchings</td>
-            <td>Only q = 3: K₄ has 3 matchings</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Non-neighbors = dim(E₆ fundamental)</td>
-            <td>v−k−1 = q³ = 27 → q = 3</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>|PGSp(4,q)| = |W(E₆)| for the classical symplectic quadrangle</td>
-            <td>The order equality selects q = 3; at q=3 the projective extension is W(E₆)</td>
-          </tr>
-        </table>
-        <p><strong>Separate conditional spinor selection.</strong> The identity above is not the new
-          characteristic bridge. The spinor argument says that the D<sub>(q&sup2;+1)/2</sub> half-spin dimension
-          equals one 16-state generation only at q=3. Pass 332 now builds the missing PSp-equivariant integral
-          H10-to-characteristic-zero module lift and the conjugate half-spin pair. Identifying one chirality with
-          a physical generation remains an explicit antecedent, not a consequence of the finite geometry.</p>
-        <p><strong>Euler-characteristic shell split:</strong> <code>40 − 240 + 160 = -40 = -v</code> is the exact
-          truncated-shell Euler characteristic, while the full tetrahedral clique complex <code>(40,240,160,40)</code>
-          carries <code>&chi; = 40 - 240 + 160 - 40 = -80</code>. Both are exact; they refer to different chain
-          packages.</p>
-        <p><strong>Legacy note:</strong> older direct identifications of low-energy observables such as Hubble
-          parameters, Higgs mass formulas, or alternate electroweak formulas remain archive material below unless they
-          are promoted explicitly in the verified section.</p>
-
-        <h2><span class="icon">◈</span> Grand Architecture — Rosetta Stone</h2>
-        <p>Pillar 120 reveals the complete self-referential architecture connecting all structures
-          through a single stabilizer cascade and a remarkable Q₈ → E₆ → Q₈ loop.</p>
-
-        <div class="rosetta">
-          <h3>The Stabilizer Cascade</h3>
-          <p>Starting from the 27 lines on a cubic surface (complement Schläfli graph SRG(27, 10, 1, 5)),
-            the stabilizer chain reads:</p>
-          <div class="cascade">
-            <div class="node">
-              <div class="name">W(E₆)</div>
-              <div class="order">51,840</div>
-            </div>
-            <div class="arrow">→<br><small>÷27</small></div>
-            <div class="node">
-              <div class="name">W(D₅)</div>
-              <div class="order">1,920</div>
-            </div>
-            <div class="arrow">→<br><small>÷(5/3)</small></div>
-            <div class="node">
-              <div class="name">W(F₄)</div>
-              <div class="order">1,152</div>
-            </div>
-            <div class="arrow">→<br><small>÷3</small></div>
-            <div class="node">
-              <div class="name">G₃₈₄</div>
-              <div class="order">384</div>
-            </div>
-            <div class="arrow">→<br><small>÷2</small></div>
-            <div class="node">
-              <div class="name">N</div>
-              <div class="order">192</div>
-            </div>
-          </div>
-
-          <table>
-            <tr>
-              <th>Object</th>
-              <th>Count</th>
-              <th>Source</th>
-            </tr>
-            <tr>
-              <td>Lines on cubic surface</td>
-              <td><strong>27</strong></td>
-              <td>= quotient lines in the exact W33 center-quad bridge = line graph vertices</td>
-            </tr>
-            <tr>
-              <td>Tritangent planes</td>
-              <td><strong>45</strong></td>
-              <td>= quotient points = the 45 triangles of the 27-line intersection graph</td>
-            </tr>
-            <tr>
-              <td>27-line meeting edges</td>
-              <td><strong>135</strong></td>
-              <td>= edges of the exact SRG(27,10,1,5) line graph</td>
-            </tr>
-            <tr>
-              <td>45-point graph edges</td>
-              <td><strong>270</strong></td>
-              <td>= edges of the exact SRG(45,12,3,3) point graph on quotient tritangents</td>
-            </tr>
-            <tr>
-              <td>Stabilizer N</td>
-              <td><strong>192</strong></td>
-              <td>= |Aut(C₂×Q₈)| = |W(D₄)|</td>
-            </tr>
-          </table>
-          <p>The transport refinements now sit on top of this exact table rather than beside it: the same
-            <code>45</code> quotient points also carry a degree-<code>32</code> transport graph with <code>720</code>
-            edges, and that graph is exactly the complement <code>SRG(45,32,22,24)</code> of the <code>270</code>-edge
-            incidence graph above. Each of its edges already carries a unique local <code>S3</code> line-matching, the
-            old <code>v14</code> triangle parity is exactly the sign of the resulting local holonomy, and those
-            matchings assemble into a canonical <code>135</code>-dimensional connection operator with exact
-            <code>45 + 90</code> split. The <code>90</code>-sector of that operator is the exact <code>A2</code> local
-            system on the quotient points, while the old <code>270</code>-edge / <code>54</code>-pocket generator
-            package is a further non-abelian refinement whose raw <code>Z2</code> sheet data is finer than local
-            matching parity.
-          </p>
-
-          <h3>The Self-Referential Loop</h3>
-          <div class="loop">
-            <span class="symbol">Q₈</span> → Cayley-Dickson →
-            <span class="symbol">O</span> (octonions) →
-            <span class="symbol">J₃(O)</span> (exceptional Jordan) →
-            <span class="symbol">E₆</span> →
-            <span class="symbol">W(E₆)</span> →
-            stabilizer cascade →
-            <span class="symbol">N = Aut(C₂ × Q₈)</span> →
-            <span class="symbol">Q₈</span>
-            <br><br>
-            <em>The snake eats its tail.</em>
-            <br><br>
-            The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXVII_QEC_OUROBOROS_STABILIZER_LOOP.md">QEC Ouroboros Stabilizer Loop</a>
-            makes this exact on the error-correction side: the stabilizer cascade is a QEC feedback loop on the
-            W33 edge-qubit carrier <code>[[240,81,3]]</code>. Vertex and triangle checks read the same
-            <code>240</code>-edge complex that carries the <code>H1=81</code> logical sector. The
-            line-star tail is the <code>H1=81</code> logical sector modulo vertex checks, so stabilizing it away
-            collapses <code>k</code> to
-            zero; the current Q4 layer remains <code>[[1296,81,4]]</code> routing while the
-            Steane/<code>&Phi;<sub>6</sub></code> <code>[[82320,81,&ge;81]]</code> lift is the protected closure.
-            Part DCCXIV adds the local holonomy alphabet of that loop: the <code>12</code> outgoing
-            turns are not a cyclic <code>Z40</code> shortcut, but <code>6+6</code> signed Clifford and
-            projected A<sub>2</sub>/Weyl channels on the <code>480</code> directed carrier, again
-            preserving <code>H1=81</code>.
-            Part DCCXV identifies the photonic meaning of that return half: the fusion budget is
-            <code>240</code> accepted bonds plus <code>240</code> heralded return/syndrome slots, and the
-            KLM budget is the doubled <code>960</code>-slot primitive lift, so nondeterminism is absorbed
-            as QEC syndrome/frame data rather than as a separate architecture layer.
-            Part DCCXVI completes the codec split: the selector trit chooses one of three Clifford
-            axes, the sign is a quantum frame bit, the accepted/return role is a syndrome bit, and
-            the KLM rail is the optical binary lift.
-          </div>
-
-          <h3>Key Identities</h3>
-          <table>
-            <tr>
-              <td>|W(D₄)| = 192 = |N| = |Aut(C₂ × Q₈)| = |Flags(Tomotope)|</td>
-              <td>D₄ uniquely has triality (S₃ outer auts), and the same order is already the live tomotope flag count
-              </td>
-            </tr>
-            <tr>
-              <td>|Q₈| = 8 = dim(O)</td>
-              <td>Q₈ unit group ↔ octonion multiplication</td>
-            </tr>
-            <tr>
-              <td>|Aut(Q₈)| = 24 = |S₄| = |Roots(D₄)| = |V(24-cell)|</td>
-              <td>8 × 24 = 192 = |N|, and the same 24 is the D₄ / 24-cell root-vertex count</td>
-            </tr>
-            <tr>
-              <td>|C₂ × Q₈| = 16 = dim(S)</td>
-              <td>Cayley–Dickson: R(1)→C(2)→H(4)→O(8)→S(16)</td>
-            </tr>
-            <tr>
-              <td>|W(F₄)| = |W(D₄)| × |Out(D₄)| = 192 × 6 = 12 × 96</td>
-              <td>S₃ = Out(D₄) = triality group inside N, so the full F₄ / 24-cell symmetry is the triality lift of the
-                tomotope package</td>
-            </tr>
-            <tr>
-              <td>135 = |PSp(4,3)| / |N| = singular GF(2)⁸</td>
-              <td>GF(2) mirror of GF(3) geometry</td>
-            </tr>
-          </table>
-          <p>The same count shadow is visible geometrically too: tomotope <code>12</code> edges and <code>16</code>
-            triangles match the classical <code>12</code> points and <code>16</code> lines of the Reye configuration,
-            which also appear as the <code>12</code> axes and <code>16</code> hexagon-shadow pieces of the 24-cell.</p>
-        </div>
-      </section>
+      
 
       <!-- ═══════════════════════ PHYSICS DERIVATIONS ═══════════════════════ -->
       <section id="physics">
