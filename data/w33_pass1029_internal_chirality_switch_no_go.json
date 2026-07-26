@@ -1,0 +1,58 @@
+{
+  "boundary": "This is an exact determinant and commutator-kernel theorem. It does not identify a particular laboratory operation with the outer reflection coset.",
+  "check_count": 16,
+  "checks": {
+    "antipodal_map_has_det_plus_one_in_dimension_eight": true,
+    "commutators_have_trivial_determinant": true,
+    "coxeter_determinant_is_plus_one": true,
+    "coxeter_half_power_is_antipodal": true,
+    "coxeter_has_exact_order_thirty": true,
+    "derived_subgroup_is_killed_by_determinant": true,
+    "determinant_character_is_surjective_on_WE8": true,
+    "eight_simple_reflections_present": true,
+    "every_simple_reflection_has_det_minus_one": true,
+    "every_simple_reflection_is_an_involution": true,
+    "orientation_reversal_exists_only_outside_the_derived_kernel": true,
+    "pass1023_is_certified": true,
+    "sign_half_is_the_antipodal_C2": true,
+    "tracked_source_checks_K_order_51840": true,
+    "tracked_source_defines_K_as_derived_subgroup": true,
+    "whole_group_is_Sp43_order_51840": true
+  },
+  "exact_linear_algebra": {
+    "antipodal_determinant": 1,
+    "coxeter_determinant": 1,
+    "coxeter_half_power": "-I_8",
+    "coxeter_order": 30,
+    "simple_reflection_determinants": [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ]
+  },
+  "group_theoretic_argument": {
+    "K_identification": "Sp(4,3), order 51840",
+    "character": "det: W(E8) -> {+1,-1}",
+    "conclusion": "det(K)=+1; K cannot exchange orientation chiralities",
+    "reason": "every homomorphism to an abelian group kills every commutator",
+    "tracked_definition": "K := DerivedSubgroup(C)"
+  },
+  "headline": "The antipodal C2 fibre is not an ambient orientation reversal: c^15=-I_8 has determinant +1. The determinant character is nontrivial on W(E8) because every simple reflection has determinant -1, but it annihilates K=[C,C]=Sp(4,3). Hence no internal Sp(4,3) element can supply the missing chirality switch; it lives in an outer reflection coset.",
+  "primary_obstruction_reading": {
+    "C2_generator": "antipodal -I_8",
+    "C2_generator_determinant": 1,
+    "verdict": "the sign/chirality section obstruction records an unselectable binary fibre, but that fibre generator is not itself the det=-1 controller"
+  },
+  "schema": "w33.pass1029.internal_chirality_switch_no_go.python.v1",
+  "status": "PASS",
+  "where_the_switch_lives": {
+    "architectural_requirement": "a physical chirality controller must extend the inner substrate by an orientation-reversing outer coset",
+    "inside_Sp43": "nowhere; Sp(4,3) is contained in the determinant kernel",
+    "inside_WE8": "any simple reflection is an explicit det=-1 witness"
+  }
+}
