@@ -1,3 +1,21 @@
+# ============================================================================
+# RETRACTED by Pass 1070 (analysis/w33_pass1070_retract_1043_suborbits_are_not_orbits.g)
+#
+# THIS PASS'S CONCLUSION IS WRONG.  It compared SUBORBITS to ORBITS.
+#
+# `sub120` below is Orbits(Stabilizer(Q120,1), ...) -- the SUBDEGREES of a
+# transitive action -- and it was matched against w33_paper.tex's ORBIT sizes for
+# the Pass 117 embedding.  The two lists agree numerically (1,1,1,27,27,27,36),
+# which is why the error survived, but they are not the same invariant.
+#
+# The tower is transitive on the 120, so its ORBIT list is [120] = the Pass 125
+# CODE embedding fingerprint 256 = 1 + 135 + 120.  The Pass 117 fingerprint has
+# three fixed points and cannot belong to a transitive group.
+#
+# The parallel track's Passes 1063-1069 reached the correct answer independently
+# and are credited with it.  Kept unmodified below as the record of the error.
+# ============================================================================
+
 # Pass 1043: the Springer construction lands on the Pass 117 W(E6) embedding.
 #
 # w33_paper.tex, Theorem thm:two-we6-embeddings, proves there are (at least) two

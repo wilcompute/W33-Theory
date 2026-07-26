@@ -1,0 +1,23 @@
+{
+  "schema": "w33.pass1070.retract_1043.gap.v1",
+  "status": "PASS",
+  "retracts": "Pass 1043 (analysis/w33_pass1043_which_we6_embedding.g and its certificate)",
+  "headline": "Pass 1043 is WITHDRAWN. It compared SUBORBITS to ORBITS. The tower is transitive on the 120 anisotropic classes, so its orbit list is [120] -- the Pass 125 CODE embedding fingerprint 256 = 1+135+120 -- and not the Pass 117 fingerprint, which has three fixed points and cannot belong to a transitive group. The parallel track's Passes 1063-1069 reached the correct answer and are credited with it.",
+  "orbits_on_120": [ 120 ],
+  "suborbits_on_120": [ 1, 1, 1, 27, 27, 27, 36 ],
+  "the_error": "Pass 1043 computed Orbits(Stabilizer(Q120,1), [1..120]) -- the subdegrees of a transitive action -- stored the result in a field named 'anisotropic_orbit_sizes', and matched it against the paper's ORBIT sizes for the Pass 117 embedding. The two lists agree numerically (1,1,1,27,27,27,36), which is why the error survived, but a suborbit profile and an orbit profile are not the same invariant and are not comparable.",
+  "what_survives": "Pass 1041 is unaffected. It matched the SRG(120,63,30,36) axis-pairing graph, built from the orthogonality relation rather than from a group action, and only separately reported the subdegrees. Its identification of the Eisenstein fibre with the paper's axis-glue carrier stands. Only the embedding identification of Pass 1043 is withdrawn.",
+  "method_note": "Third instance of one failure mode wearing a new surface. Sp(4,3) vs W(E6): equal orders, different groups. Pass 338's selector frame: equal subdegrees, different groups. Here: equal numbers attached to DIFFERENT INVARIANTS. The rule that would have caught all three is narrower than 'check the group' -- check that the two quantities being compared are the same kind of quantity before comparing them at all.",
+  "check_count": 9,
+  "checks": {
+    "tower_is_transitive_on_the_120": true,
+    "orbit_list_is_a_single_block_of_120": true,
+    "normaliser_also_transitive": true,
+    "suborbits_are_the_1043_numbers": true,
+    "orbits_and_suborbits_differ": true,
+    "pass117_fingerprint_needs_fixed_points": true,
+    "transitive_action_has_no_fixed_points": true,
+    "pass117_identification_is_refuted": true,
+    "code_embedding_is_the_correct_answer": true
+  }
+}

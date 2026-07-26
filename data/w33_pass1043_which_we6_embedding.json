@@ -1,20 +1,45 @@
 {
-  "schema": "w33.pass1043.which_we6_embedding.gap.v1",
-  "status": "PASS",
-  "headline": "The Springer construction lands on the Pass 117 ordered-pair W(E6) embedding, not the code embedding. Sp(4,3) acting on the 120 anisotropic classes -- which are exactly the E8 root lines, verified as antipodal pairs -- has orbit sizes [1,1,1,27,27,27,36], verbatim the anisotropic fingerprint w33_paper.tex records for Pass 117, and nothing like the code embedding's 1+135+120.",
-  "anisotropic_orbit_sizes": [ 1, 1, 1, 27, 27, 27, 36 ],
-  "normaliser_orbit_sizes": [ 1, 2, 27, 36, 54 ],
-  "paper_pass117_anisotropic": [1,1,1,27,27,27,36],
-  "paper_code_embedding": "256 = 1 + 135 + 120",
-  "decision_rule": "the paper's own: conjugate subgroups have identical orbit-size multisets in the same ambient permutation action, so the fingerprints decide it",
-  "reading": "The paper proves the two embeddings nonconjugate and leaves open which one the E8 side realises, noting only that 'the code embedding exposes the coarse W33 quadratic split, while the ordered-pair embedding exposes the finer E8 -> E6 x A2 branching'. The Springer/Eisenstein tower realises the FINER one. Together with Pass 1021 -- E8 selects the point action rather than the dual line action -- the tower's position in the paper's dichotomy is now fixed on both axes.",
-  "scope": "An orbit-fingerprint identification, using the paper's own decision rule. It does not re-derive the nonconjugacy proof and does not claim there are only two embeddings.",
+  "anisotropic_orbit_sizes": [
+    1,
+    1,
+    1,
+    27,
+    27,
+    27,
+    36
+  ],
   "check_count": 5,
   "checks": {
-    "Sp43_anisotropic_orbits_match_pass117": true,
     "NOT_the_code_embedding_fingerprint": true,
+    "Sp43_anisotropic_orbits_match_pass117": true,
     "base_group_is_WE6_order_51840": true,
-    "the_120_are_the_E8_root_lines": true,
-    "normaliser_fingerprint_recorded": true
-  }
+    "normaliser_fingerprint_recorded": true,
+    "the_120_are_the_E8_root_lines": true
+  },
+  "corrected_field_name": "suborbit_sizes (NOT anisotropic_orbit_sizes)",
+  "decision_rule": "the paper's own: conjugate subgroups have identical orbit-size multisets in the same ambient permutation action, so the fingerprints decide it",
+  "headline": "The Springer construction lands on the Pass 117 ordered-pair W(E6) embedding, not the code embedding. Sp(4,3) acting on the 120 anisotropic classes -- which are exactly the E8 root lines, verified as antipodal pairs -- has orbit sizes [1,1,1,27,27,27,36], verbatim the anisotropic fingerprint w33_paper.tex records for Pass 117, and nothing like the code embedding's 1+135+120.",
+  "normaliser_orbit_sizes": [
+    1,
+    2,
+    27,
+    36,
+    54
+  ],
+  "paper_code_embedding": "256 = 1 + 135 + 120",
+  "paper_pass117_anisotropic": [
+    1,
+    1,
+    1,
+    27,
+    27,
+    27,
+    36
+  ],
+  "reading": "The paper proves the two embeddings nonconjugate and leaves open which one the E8 side realises, noting only that 'the code embedding exposes the coarse W33 quadratic split, while the ordered-pair embedding exposes the finer E8 -> E6 x A2 branching'. The Springer/Eisenstein tower realises the FINER one. Together with Pass 1021 -- E8 selects the point action rather than the dual line action -- the tower's position in the paper's dichotomy is now fixed on both axes.",
+  "retracted_by": "Pass 1070",
+  "retraction_reason": "Compared SUBORBITS to ORBITS. The field named 'anisotropic_orbit_sizes' actually holds Orbits(Stabilizer(Q120,1),...), the subdegrees of a transitive action, and was matched against the paper's ORBIT sizes for Pass 117. The tower is transitive on the 120, so its orbit list is [120] = the Pass 125 CODE embedding. Correct answer reached independently by the parallel track in Passes 1063-1069.",
+  "schema": "w33.pass1043.which_we6_embedding.gap.v1",
+  "scope": "An orbit-fingerprint identification, using the paper's own decision rule. It does not re-derive the nonconjugacy proof and does not claim there are only two embeddings.",
+  "status": "RETRACTED"
 }
