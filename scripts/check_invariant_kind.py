@@ -61,6 +61,46 @@ ORBIT_NAME = re.compile(
 SUBORBIT_NAME = re.compile(r"(?<![a-z_])(sub\w*orbit\w*|subdegree\w*|sub\d*)(?![a-z_])", re.I)
 
 
+def strip_string_literals(line: str) -> tuple[str, str]:
+    """Split a line into (code outside string literals, text inside them).
+
+    WHY THIS IS THE RIGHT DISCRIMINATOR, and not a hack.  The defect being guarded
+    is a suborbit VALUE flowing into a field NAMED for orbits.  The value is an
+    expression; the name is a string.  So the two halves of the evidence live on
+    opposite sides of the quote marks:
+
+        GAP, the real Pass 1043 defect --
+            Concatenation("  \\"anisotropic_orbit_sizes\\": ", String(sub120), ...)
+                          |------------ name, in a string ------|  |-- value, code
+
+        Pass 1070, the RETRACTION, which merely describes it in prose --
+            "... stored the result in a field named 'anisotropic_orbit_sizes' ..."
+                          |------------- all of it is one string -------------|
+
+    Without the split, the guard flags the file that documents the bug, every
+    commit, forever.  That is precisely the "guard nobody reads" failure mode that
+    check_rediscovery.py's own docstring warns about, and it would be self-inflicted
+    here: the retraction is the most carefully written file on the subject.
+
+    Handles backslash escapes, so GAP's \\" inside a string does not end it.
+    """
+    code, text, in_str, esc = [], [], False, False
+    for ch in line:
+        if esc:
+            (text if in_str else code).append(ch)
+            esc = False
+            continue
+        if ch == "\\":
+            esc = True
+            (text if in_str else code).append(ch)
+            continue
+        if ch == '"':
+            in_str = not in_str
+            continue
+        (text if in_str else code).append(ch)
+    return "".join(code), "".join(text)
+
+
 def scan(path: Path) -> list[str]:
     try:
         txt = path.read_text(encoding="utf-8", errors="ignore")
@@ -68,6 +108,9 @@ def scan(path: Path) -> list[str]:
         return []
     findings: list[str] = []
     lines = txt.splitlines()
+    # A file already marked RETRACTED is a settled issue, not an action item; say
+    # so in the message rather than demanding a fix that has already happened.
+    suffix = "  (file is already marked RETRACTED)" if "RETRACTED" in txt else ""
 
     # (a) an assignment whose NAME claims "orbit" but whose RHS is a suborbit
     for n, line in enumerate(lines, 1):
@@ -76,18 +119,24 @@ def scan(path: Path) -> list[str]:
             if ORBIT_NAME.search(lhs) and not SUBORBIT_NAME.search(lhs):
                 findings.append(
                     f"{path.as_posix()}:{n}: name says ORBIT, expression computes "
-                    f"SUBORBITS (Orbits of a Stabilizer)")
+                    f"SUBORBITS (Orbits of a Stabilizer){suffix}")
 
-    # (b) a JSON/report field named *orbit_sizes* fed from a suborbit variable
+    # (b) a JSON/report field named *orbit_sizes* fed from a suborbit variable.
+    #     The field NAME must appear in a string literal and the suborbit VALUE
+    #     must appear as CODE -- see strip_string_literals for why.
     subvars = {m.group(1) for m in SUBORBIT_NAME.finditer(txt)}
     for n, line in enumerate(lines, 1):
-        if "orbit_sizes" in line.lower() and "sub" not in line.lower().split("orbit_sizes")[0][-6:]:
-            for sv in subvars:
-                if re.search(rf"(?<![a-z_]){re.escape(sv)}(?![a-z_])", line):
-                    findings.append(
-                        f"{path.as_posix()}:{n}: field named *orbit_sizes* is being "
-                        f"filled from `{sv}`, which is a suborbit quantity")
-                    break
+        code, text = strip_string_literals(line)
+        named = "orbit_sizes" in text.lower() and (
+            "sub" not in text.lower().split("orbit_sizes")[0][-6:])
+        if not named:
+            continue
+        for sv in subvars:
+            if re.search(rf"(?<![a-z_]){re.escape(sv)}(?![a-z_])", code):
+                findings.append(
+                    f"{path.as_posix()}:{n}: field named *orbit_sizes* is being "
+                    f"filled from `{sv}`, which is a suborbit quantity{suffix}")
+                break
 
     # A third, coarser rule was tried and REMOVED: "file asserts transitivity AND
     # computes suborbits AND mentions orbits".  Measured on this corpus it fired on
@@ -100,7 +149,40 @@ def scan(path: Path) -> list[str]:
     return findings
 
 
+def self_test() -> int:
+    """Both halves of the discriminator, as fixtures taken from the real files.
+
+    A guard whose precision depends on a subtlety needs the subtlety pinned, or
+    the next person to 'simplify' strip_string_literals silently reverts it.
+    """
+    import tempfile
+
+    defect = (
+        '  WriteAll(stream, Concatenation("  \\"anisotropic_orbit_sizes\\": ", '
+        'String(sub120), ",\\n"));\n'
+    )
+    prose = (
+        '  WriteAll(stream, "  \\"the_error\\": \\"Pass 1043 computed the '
+        'subdegrees of a transitive action, stored the result in a field named '
+        "'anisotropic_orbit_sizes', and matched it against the paper ORBIT "
+        'sizes.\\",\\n");\n'
+    )
+    ok = True
+    with tempfile.TemporaryDirectory() as d:
+        for name, body, want in (("defect.g", defect, True), ("prose.g", prose, False)):
+            p = Path(d) / name
+            p.write_text(body, encoding="utf-8")
+            got = bool(scan(p))
+            verdict = "PASS" if got == want else "FAIL"
+            ok &= got == want
+            print(f"  [{verdict}] {name}: flagged={got} expected={want}")
+    print("self-test", "OK" if ok else "FAILED")
+    return 0 if ok else 1
+
+
 def main(argv: list[str]) -> int:
+    if "--self-test" in argv:
+        return self_test()
     files = [Path(a) for a in argv if not a.startswith("-")]
     if not files:
         files = sorted((ROOT / "analysis").glob("*.g")) + \

@@ -1,0 +1,22 @@
+{
+  "schema": "w33.pass1072.identify_spread_and_frame_graphs.gap.v1",
+  "status": "PASS",
+  "headline": "Pass 1071's identification is CHECKED, not inferred. PSp(4,3) acts on the 36 spreads with rank 3 and subdegrees [1,15,20], and the Pass 1071 spread graph is EQUAL as an edge set to the group's valency-15 orbital -- so it really is the U4(2) rank-3 graph, not merely a graph with matching parameters. The frame graph is regular of degree 117 but NOT strongly regular, and PSp(4,3) acts on the 540 frames at rank 32 -- the two sides of the incidence are different in kind.",
+  "spread_subdegrees": [ 1, 15, 20 ],
+  "spread_graph": {"n": 36, "k": 15, "lambda": 6, "mu": 6, "strongly_regular": true},
+  "frame_subdegrees": [ 1, 3, 4, 4, 6, 6, 8, 8, 8, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 24, 24, 24, 24, 24, 24, 24, 24, 24, 48, 48, 48 ],
+  "frame_graph": {"n": 540, "k": 117, "lambda": 53, "mu": 30, "strongly_regular": false},
+  "why_this_needed_checking": "Several strongly regular graphs share the parameter set (36,15,6,6), so the parameters alone do not determine the graph. Pass 1071's commit inferred the identification from the parameters plus the existence of an index-36 maximal S6 in PSp(4,3). This session retracted Pass 1043 for exactly that move, so the inference is verified here by equality of edge sets against the group's own orbital -- a type-correct comparison.",
+  "scope": "Identification of the spread graph with the group orbital, and the frame graph's measured parameters. No catalogue lookup is performed and no claim is made about which named graph in the literature this is beyond its being the PSp(4,3) rank-3 orbital.",
+  "check_count": 8,
+  "checks": {
+    "PSp43_on_36_spreads_is_rank_three": true,
+    "spread_graph_has_srg_36_15_6_6": true,
+    "spread_graph_IS_the_group_orbital": true,
+    "PSp43_transitive_on_spreads": true,
+    "frame_graph_is_regular_degree_117": true,
+    "frame_graph_is_NOT_strongly_regular": true,
+    "frame_action_is_rank_32": true,
+    "PSp43_transitive_on_frames": true
+  }
+}

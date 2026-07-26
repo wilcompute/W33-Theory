@@ -21,12 +21,31 @@ repos:
     - id: detect-secrets
 - repo: local
   hooks:
+    # `.g` was added at Pass 1073.  The filter had been `(py|md)` since the guard
+    # was written, so no GAP source in this repository had EVER been guarded --
+    # including every pass in the 1020-1072 arc, which is almost entirely GAP, and
+    # including w33_pass1043, the pass that had to be retracted.  The first run
+    # against a .g file immediately flagged a real collision (Pass 1072's
+    # [1,15,20] against BT813's double-six ranks).  A guard is only as wide as its
+    # file filter, and this one was silently narrower than the corpus.
     - id: rediscovery-guard
       name: rediscovery guard (results already in the corpus)
       entry: python scripts/check_rediscovery.py
       language: system
-      files: ^(analysis|passes|exploration)/.*\.(py|md)$
+      files: ^(analysis|passes|exploration)/.*\.(py|md|g)$
       pass_filenames: true
+    - id: invariant-kind-guard
+      name: invariant KIND guard (orbits vs suborbits, order vs index)
+      entry: python scripts/check_invariant_kind.py
+      language: system
+      files: ^(analysis|passes|exploration)/.*\.(py|g)$
+      pass_filenames: true
+    - id: pdf-staleness
+      name: README-linked PDFs are not older than their sources
+      entry: python scripts/check_pdf_staleness.py --linked
+      language: system
+      files: ^(.*\.tex|.*\.pdf|README\.md)$
+      pass_filenames: false
     - id: claims-ledger
       name: claims ledger is green (paper claims have PASS certificates)
       entry: python scripts/check_claims_ledger.py

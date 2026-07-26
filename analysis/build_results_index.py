@@ -33,7 +33,7 @@ from __future__ import annotations
 
 import re
 import sys
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -135,7 +135,24 @@ PINNED_RESULTS = {
     "s_3(m)+[modd]=2",
     "m=3^i+3^j",
 }
-SKIP_DIRS = {".git", "node_modules", ".venv", "data"}
+# `.lake` / `lake-packages` hold MATHLIB, not this corpus.
+#
+# MEASURED at Pass 1073, and this was never a perf bug alone. `formal/**/*.lean`
+# reaches into `formal/.lake/packages/`, so the index was reading 9,369 mathlib and
+# batteries source files -- 59% of the 15,890 it globbed. Consequences, both real:
+#
+#   * 1,146 of 6,723 index rows (17%) cited a mathlib file, and 889 of them cited
+#     NOTHING ELSE. Those are the "appears in exactly one file -- the sharpest
+#     signal" rows, and they were doctest literals: `[123,543,1000]` out of
+#     Mathlib/Data/List/Destutter.lean, `[1,50,100]` out of a Batteries test.
+#   * worse, it poisons the CUT. MAX_FILES drops a token as "a topic" once it
+#     exceeds 25 files. Mathlib files counted toward that ceiling, so a result
+#     genuinely unique to this repo could be pushed over it by unrelated third-party
+#     code and silently vanish from the guard -- the exact failure the index exists
+#     to prevent, produced by the index itself.
+#
+# A dependency's source is not a prior claim of this project. Skip it.
+SKIP_DIRS = {".git", "node_modules", ".venv", "data", ".lake", "lake-packages"}
 
 RE_CSS = re.compile(r"\[\[\s*\d+\s*,\s*\d+\s*,\s*\d+\s*\]\]")
 RE_LIN = re.compile(r"\[\s*\d+\s*,\s*\d+\s*,\s*\d+\s*\]")
@@ -186,41 +203,63 @@ def main():
     files = sorted(set(files))
 
     index: dict[str, set[str]] = defaultdict(set)
+
+    # Bound the memory. A token in >MAX_FILES files is dropped below anyway, so
+    # accumulating its full file list only to discard it is pure waste -- and with
+    # compound tokens (a pair of atoms, so quadratically many per file) it was the
+    # source of the MemoryError that left this index stale across ~12 passes.
+    # Storing MAX_FILES+1 is enough to decide the cut exactly; pinned tokens keep
+    # their full list because their file lists are printed.
+    #
+    # `counts` holds the TRUE per-token file count regardless of the cap. Without
+    # it the diagnostic line would report the cap and read as a real measurement --
+    # "51840 -> 26 files" when the truth is 200. A tool that silently reports its
+    # own truncation as data is worse than one that reports nothing.
+    cap = MAX_FILES + 1
+    counts: Counter[str] = Counter()
+
+    def add(tok: str, rel: str) -> None:
+        fs = index[tok]
+        if len(fs) < cap or tok in PINNED_RESULTS:
+            fs.add(rel)
+
     for p in files:
         try:
             txt = p.read_text(encoding="utf-8", errors="ignore")
         except Exception:
             continue
         rel = p.relative_to(ROOT).as_posix()
+        # Gather this file's tokens ONCE, deduplicated, so `counts` is a true
+        # file count and not a count of textual occurrences.
+        toks: set[str] = set()
         for rx in (RE_CSS, RE_LIN, RE_SEQ):
-            for m in rx.findall(txt):
-                index[norm(m)].add(rel)
+            toks.update(norm(m) for m in rx.findall(txt))
         # A pinned result may deliberately fall outside the generic token
         # grammars (for example a four-orbit profile).  Explicit pins are the
         # small, reviewed exception to the noise-calibrated extractors.
         compact = norm(txt)
-        for pinned in PINNED_RESULTS:
-            if pinned in compact:
-                index[pinned].add(rel)
+        toks.update(q for q in PINNED_RESULTS if q in compact)
         for m in RE_INT.findall(txt):
             integer = canonical_integer(m)
             if integer not in NOISE:
-                index[integer].add(rel)
+                toks.add(integer)
         # results-as-NAMES (Pass 348) -- same lexicon the guard uses
-        for m in RE_NAMED.findall(txt):
-            index[m.lower()].add(rel)
-        for m in RE_ROOT.findall(txt):
-            index[m].add(rel)
+        toks.update(m.lower() for m in RE_NAMED.findall(txt))
+        toks.update(RE_ROOT.findall(txt))
         # compounds (Pass 349): a pair of topics is a result
-        for c in compounds(txt):
-            index[c].add(rel)
+        toks.update(compounds(txt))
 
+        counts.update(toks)
+        for t in toks:
+            add(t, rel)
+
+    # Decide the cut on the TRUE count, not on the (capped) stored list.
     kept = {
         t: fs
         for t, fs in index.items()
-        if 1 <= len(fs) <= MAX_FILES or t in PINNED_RESULTS
+        if 1 <= counts[t] <= MAX_FILES or t in PINNED_RESULTS
     }
-    uniq = {t: fs for t, fs in kept.items() if len(fs) == 1}
+    uniq = {t: fs for t, fs in kept.items() if counts[t] == 1}
 
     def sort_key(t):
         return (
@@ -279,9 +318,15 @@ def main():
     print(f"  distinctive   : {len(kept)}")
     print(f"  unique (1 file): {len(uniq)}")
     for probe in ("[[40,10,4]]", "[40,15,8]", "51840", "8353", "25920", "196883"):
-        hits = kept.get(probe) or index.get(probe) or set()
+        n = counts[probe]
         tag = "" if probe in kept else "  (non-distinctive: >%d files)" % MAX_FILES
-        print(f"  probe {probe:12s} -> {len(hits)} files{tag}")
+        print(f"  probe {probe:12s} -> {n} files{tag}")
+    # Regression guard for the Pass 1073 defect: a dependency tree must never be
+    # indexed as this project's prior art again.
+    dep = [p for p in files if ".lake" in p.parts or "lake-packages" in p.parts]
+    if dep:
+        print(f"  WARNING: {len(dep)} dependency files were indexed as corpus "
+              f"(e.g. {dep[0].relative_to(ROOT).as_posix()}) -- check SKIP_DIRS")
     return 0
 
 
