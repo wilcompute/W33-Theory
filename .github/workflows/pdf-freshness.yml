@@ -1,0 +1,51 @@
+name: PDF freshness
+
+# A stale PDF is the quietest lie in this repository.  The README links compiled
+# PDFs as the PRIMARY artifact -- "read the mathematics" points at w33_paper.pdf,
+# not at the source -- so a reader who follows the link gets whatever was last
+# built, with no signal that the source moved on.  Nothing errors; nothing is red.
+#
+# Gate design: FAIL on the PDFs the README links, because those are the ones a
+# reader opens and being wrong there is a correctness problem.  WARN on everything
+# else, because a stale PDF buried in artifacts/build/ is untidy rather than
+# misleading, and failing on it would train people to ignore the job.
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - '**.tex'
+      - '**.pdf'
+      - 'README.md'
+      - 'scripts/check_pdf_staleness.py'
+      - '.github/workflows/pdf-freshness.yml'
+  pull_request:
+    paths:
+      - '**.tex'
+      - '**.pdf'
+      - 'README.md'
+
+jobs:
+  freshness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0     # commit times are the comparison; shallow clones lie
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: README-linked PDFs must not be stale (gate)
+        run: python scripts/check_pdf_staleness.py --linked
+
+      - name: Full sweep (advisory)
+        if: always()
+        run: |
+          python scripts/check_pdf_staleness.py || {
+            echo "::warning title=Stale PDFs outside the README::Some committed PDFs are older than their sources. Not gating, but worth a rebuild."
+            exit 0
+          }
