@@ -1,0 +1,13 @@
+{
+  "schema": "w33.pass1069.synthetic_blinded.v1",
+  "synthetic_fixture_only": true,
+  "artifact_mode": "compact blinded run index; regenerate expanded raw synthetic shot records with PYTHONPATH=analysis python analysis/w33_pass1069_photonic_protocol_compiler.py",
+  "manifest_hash": "36ed10933c062f5743133a457dae739e537fb76f253e38fe809ceef3b6dd6a31",
+  "datasets": [
+    {"run_id": "run_daebfda20913d645", "calibration_profile": "valid_reference", "raw_records": "generated_deterministically"},
+    {"run_id": "run_d1bfd96299868631", "calibration_profile": "valid_reference", "raw_records": "generated_deterministically"},
+    {"run_id": "run_dfab1306eeb045b1", "calibration_profile": "valid_reference", "raw_records": "generated_deterministically"},
+    {"run_id": "run_4f0da418c0a62f46", "calibration_profile": "valid_reference", "raw_records": "generated_deterministically"}
+  ],
+  "blinding_guard": "No scenario label is present in this file. The separate committed key is synthetic-fixture-only and must never be reused for real acquisition."
+}
