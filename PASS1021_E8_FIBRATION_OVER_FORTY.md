@@ -125,6 +125,44 @@ assumed); the quotient identified as rank-3 `U4(2)` with `srg(40,12,2,4)`; the
 **point-versus-line determination**; the normaliser image `W(E6)`; and the
 two-level reading that dissolves the `Sp(4,3)` vs `W(E6)` confusion.
 
+## Corollary (added later) — E8 selects the *contextual* orientation
+
+This is a one-line consequence of joining this pass to **Pass 216**, on the other
+track. It is recorded here only because neither file cites the other; the
+contextuality content below is **entirely prior art** and none of it is claimed.
+
+Prior art, verified independently before citing (exact-cover search over the 40
+points and 40 lines, reproduced here):
+
+```text
+W(3,3) = (36 spreads, 0 ovoids)        Q(4,3) = (0 spreads, 36 ovoids)
+```
+
+- `analysis/w33_ovoid_construct.py` (in CI) — *"W(q) is contextual iff q is odd,
+  because an ovoid — a Kochen–Specker 0/1 assignment satisfying every context —
+  exists iff q is even."* Constructs the ovoid for q = 2, 4 and exhibits the
+  obstruction at q = 3 (max partial ovoid 7 < 10).
+- **Pass 216** (`docs/index.html`) — the spread/ovoid duality count above.
+- Thas' theorem — `W(q)` has ovoids iff `q` is even (cited at `index.html:8406`).
+- `docs/archive/FINAL_TOE_PROOF.md` §1.8 — the Witting 40-ray set is
+  KS-uncolourable and **critical**: removing any single ray makes it colourable.
+
+Under the standard dictionary — points = the 40 Witting rays, lines = orthonormal
+tetrads, collinear = orthogonal — a KS 0/1 colouring is exactly an **ovoid**, of
+the forced size `st + 1 = 10`. So:
+
+> **Corollary.** The 40 + 40 incidence structure is KS-uncolourable read
+> points-as-rays (0 ovoids) and colourable read lines-as-rays (36 ovoids of the
+> dual). This pass showed the E8 fibration lands on the **point** action, not the
+> dual. So the contextuality of the substrate is *forced by E8*, not chosen by
+> convention: the orientation E8 selects is the one with no ovoid.
+
+**Scope.** This adds a link, nothing else. It does not strengthen the
+contextuality result, which is Pass 216's and `w33_ovoid_construct.py`'s. Note
+also that the dual reading is combinatorial, not physical — the lines of W(3,3)
+are not rays in ℂ⁴ — so this says which orientation E8 picks out, not that an
+experiment could have been built on the other one.
+
 ## What this does not say
 
 The fibration is 6:1, so it is **not** a bijection and does **not** resurrect the

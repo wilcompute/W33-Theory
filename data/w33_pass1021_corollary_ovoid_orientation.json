@@ -1,0 +1,23 @@
+{
+  "Q43_dual": {
+    "ovoids": 36,
+    "spreads": 0
+  },
+  "W33": {
+    "lines": 40,
+    "ovoids": 0,
+    "points": 40,
+    "spreads": 36
+  },
+  "forced_ovoid_size": 10,
+  "headline": "W(3,3) = (36 spreads, 0 ovoids) and Q(4,3) = (0 spreads, 36 ovoids), recounted independently. A KS 0/1 colouring is an ovoid of size st+1 = 10, so the point reading is KS-uncolourable and the dual reading is colourable. Pass 1021 showed E8 lands on the point action, so E8 selects the orientation with no ovoid.",
+  "prior_art": [
+    "analysis/w33_ovoid_construct.py -- ovoid = KS colouring, exists iff q even",
+    "Pass 216 (docs/index.html) -- Q(4,3) = (0 spreads, 36 ovoids)",
+    "Thas -- W(q) has ovoids iff q is even (docs/index.html:8406)",
+    "docs/archive/FINAL_TOE_PROOF.md 1.8 -- Witting 40-ray KS-uncolourable, critical"
+  ],
+  "schema": "w33.pass1021.corollary.ovoid_orientation.v1",
+  "scope": "Adds only the link to Pass 1021's point-versus-line determination. The contextuality result is prior art and is not strengthened here. The dual reading is combinatorial, not physical: the lines of W(3,3) are not rays in C^4.",
+  "status": "PASS"
+}
