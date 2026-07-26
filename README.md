@@ -1,4 +1,4 @@
-# W(3,3): The Executable Atlas
+# W(3,3)
 
 ## One finite geometry, 40 points, and an unreasonable number of things that turned out to be the same object
 
