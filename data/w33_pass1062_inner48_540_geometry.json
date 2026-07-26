@@ -1,0 +1,75 @@
+{
+  "schema": "w33.pass1062.inner48_540_geometry.v1",
+  "status": "PASS",
+  "headline": "The 540 carrier is the unique PSp(4,3)-conjugacy class of outer involutions in PGSp(4,3) whose inner centralizer has order 48. That centralizer is C2 x S4; its central quotient is S4. This validates the parallel order-48 denominator, but now with an explicit symplectic subgroup and orbit-stabilizer construction.",
+  "outer_involution_classes": [
+    {
+      "orbit_size": 36,
+      "centralizer_order": 720,
+      "representative_images": [4,13,31,22,0,6,5,14,32,23,15,24,33,1,7,10,19,37,28,16,25,34,3,9,11,20,38,29,18,27,36,2,8,12,21,39,30,17,26,35]
+    },
+    {
+      "orbit_size": 540,
+      "centralizer_order": 48,
+      "representative_images": [0,1,3,2,4,5,6,10,11,12,7,8,9,13,15,14,16,18,17,19,21,20,31,33,32,34,36,35,37,39,38,22,24,23,25,27,26,28,30,29],
+      "invariants": {
+        "order": 48,
+        "center_order": 2,
+        "derived_order": 12,
+        "abelianization_order": 4,
+        "element_order_distribution": {"1":1,"2":19,"3":8,"4":12,"6":8},
+        "normal_subgroup_profiles": [
+          {"multiplicity":1,"order":1,"center":1,"derived":1,"abelian":true},
+          {"multiplicity":1,"order":2,"center":2,"derived":1,"abelian":true},
+          {"multiplicity":1,"order":4,"center":4,"derived":1,"abelian":true},
+          {"multiplicity":1,"order":8,"center":8,"derived":1,"abelian":true},
+          {"multiplicity":1,"order":12,"center":1,"derived":4,"abelian":false},
+          {"multiplicity":2,"order":24,"center":1,"derived":12,"abelian":false},
+          {"multiplicity":1,"order":24,"center":2,"derived":4,"abelian":false}
+        ]
+      }
+    }
+  ],
+  "target": {
+    "class_size": 540,
+    "inner_centralizer": {
+      "order": 48,
+      "center_order": 2,
+      "derived_order": 12,
+      "abelianization_order": 4,
+      "element_order_distribution": {"1":1,"2":19,"3":8,"4":12,"6":8},
+      "normal_subgroup_profiles": [
+        {"multiplicity":1,"order":1,"center":1,"derived":1,"abelian":true},
+        {"multiplicity":1,"order":2,"center":2,"derived":1,"abelian":true},
+        {"multiplicity":1,"order":4,"center":4,"derived":1,"abelian":true},
+        {"multiplicity":1,"order":8,"center":8,"derived":1,"abelian":true},
+        {"multiplicity":1,"order":12,"center":1,"derived":4,"abelian":false},
+        {"multiplicity":2,"order":24,"center":1,"derived":12,"abelian":false},
+        {"multiplicity":1,"order":24,"center":2,"derived":4,"abelian":false}
+      ]
+    },
+    "central_quotient": {
+      "order": 24,
+      "center": 1,
+      "derived": 12,
+      "element_orders": {"1":1,"2":9,"3":8,"4":6}
+    },
+    "isomorphism_type": "C2 x S4",
+    "full_PGSp_centralizer_order": 96,
+    "torsor_identity": "51840 presentation pairs = 540 outer-involution/root-triple fibres x 2 chiralities x 48 (C2 x S4) coordinates",
+    "representative_outer_involution_images": [0,1,3,2,4,5,6,10,11,12,7,8,9,13,15,14,16,18,17,19,21,20,31,33,32,34,36,35,37,39,38,22,24,23,25,27,26,28,30,29]
+  },
+  "classification_boundary": "This exhausts every outer-involution class in the explicit PGSp(4,3) extension and therefore every order-48 subgroup occurring as the BT748 inner centralizer. It does not assert that PSp(4,3) has no unrelated order-48 subgroup classes.",
+  "check_count": 8,
+  "checks": {
+    "PGSp_order_51840": true,
+    "outer_involutions_partitioned_exhaustively": true,
+    "a_unique_outer_involution_class_has_size_540": true,
+    "its_inner_centralizer_has_order_48": true,
+    "inner48_has_C2_times_S4_fingerprint": true,
+    "central_quotient_has_S4_fingerprint": true,
+    "direct_product_C2_times_S4_confirmed": true,
+    "BT748_count_identity_is_orbit_stabilizer": true
+  },
+  "scope": "Exact permutation enumeration of all outer involutions and their PSp conjugacy classes. The 540 geometry is now group-theoretic, with no amplitude interpretation assumed."
+}
