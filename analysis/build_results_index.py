@@ -81,26 +81,35 @@ GLOBS = [
 
 # Above this a token is a topic, not a result.
 #
-# RE-TUNED at Pass 349, because the Pass 328 calibration that produced 10 was run
-# against an index missing two thirds of the corpus (*.py was never globbed). On
-# the real 5,815-file corpus, measured flag rate over the 173 pass witnesses:
+# RE-MEASURED at Pass 1073 with `py -3 scripts/calibrate_index_cut.py`, because
+# the previous calibration table here was VOID: it was run against a corpus that
+# globbed `formal/.lake/packages/`, so most of the files it counted were mathlib.
+# On the corrected 6,530-file corpus, over all 676 pass witnesses, using the
+# GUARD's token grammar (not this file's -- they differ deliberately) and honouring
+# the guard's "already cites the prior art" suppression:
 #
-#     MAX   flag rate   [[40,10,4]] survives?
-#      10      31%        no   <- the flagship catch is DROPPED
-#      20      39%        yes
-#      25      39%        yes
-#      30      43%        yes
-#      60      51%        yes
+#     MAX   kept   flag rate   code probes surviving
+#      10   4871      24.1%     3/6   <- loses 8353 (11 files)
+#      15   5282      28.8%     4/6
+#      20   5556      29.7%     4/6
+#      25   5692      30.9%     4/6   <- current
+#      30   5797      31.4%     4/6
+#      60   5979      35.9%     4/6
+#     100   6054      39.5%     4/6
 #
-# 25 buys back [[40,10,4]] (18 files) at no extra noise over 20, and stays far
-# under the Pass 328 noise line (>90% = a guard nobody reads).
+# THE CURVE IS FLAT.  There is no cliff between 15 and 60 -- seven points of flag
+# rate and no change at all in which probes survive.  The cut is simply not a
+# sensitive parameter any more, and 25 is kept because nothing argues for moving
+# it, not because it was found to be optimal.  Everything is far under the Pass 328
+# noise line (>90% = a guard nobody reads).
 #
-# THE INDEX HAS A HALF-LIFE, and this is what it looks like. [[40,10,4]] lived in
-# 4 files when the index was built and lives in 18 now; [40,15,8] lives in 29 and
-# is a topic at any usable cut. A result the corpus works ON becomes a topic OF
-# the corpus -- so the index loses the power to flag a result exactly as that
-# result becomes central. The cut must be re-measured as the corpus grows; it is
-# not a constant.
+# THE HALF-LIFE HAS FULLY RUN for the code parameters, which is the finding that
+# actually matters.  [[40,10,4]] lived in 4 files when the index was built, 18 at
+# Pass 349, and 34 now; [[240,81,3]] is in 60.  Every code-parameter probe now
+# exceeds the cut at ANY usable value, so they survive purely because they are
+# PINNED below.  The cut no longer protects the index's flagship catches -- the pin
+# set does.  When a new central code object appears, pinning it is not an optional
+# tidy-up; it is the only thing that keeps it searchable.
 MAX_FILES = 25
 # The half-life is now observable, not hypothetical: after the July 15 batch,
 # [[40,10,4]] moved from 18 to 27 files and fell just beyond MAX_FILES.  These

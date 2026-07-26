@@ -1,4 +1,29 @@
 #!/usr/bin/env python3
+# =============================================================================
+# CORRECTED BY PASS 1080 -- analysis/w33_pass1080_contextual_fraction_audit.py
+#
+# The quantity computed below is NOT the contextual fraction, and the
+# falsification criterion stated at the bottom ("any measured CF != 1/10 refutes
+# the W(3,3) substrate") CANNOT STAND AS WRITTEN.
+#
+#   * For the Abramsky-Barbosa contextual fraction, strong contextuality is
+#     equivalent to CF = 1.  The W(3,3) KS ray model is strongly contextual,
+#     because a global section is an ovoid and W(3,3) has none.  So the
+#     contextual fraction of this model is 1, for every state -- Pass 1080
+#     computes it by LP and gets 1, with the doily as a positive control at 0.
+#   * The "three independent routes" are not three.  mu/v = 1/Phi_4(q) is an
+#     ALGEBRAIC IDENTITY for every q, so routes 2 and 3 are the same route.
+#     Route 1, 1 - (q!)^2/v, agrees with them only at q=3 and returns NEGATIVE
+#     values for q >= 4, so it is not a fraction.
+#
+# WHAT SURVIVES: the substrate claim this file is reaching for.  W(3,3) is
+# contextual and W(2,2) is not, so the HWVE condition CF > 0 holds at q=3 and
+# fails at q=2.  Only the numerical value, its NAME, and the corroboration
+# argument are withdrawn.  1/10 may well be a real prediction for some other
+# observable -- note that bt1901_contextual_fraction_estimator.py actually
+# estimates a CLICK RATE -- but that observable has not been derived, and until
+# it is, this file must not be used as a falsifier.
+# =============================================================================
 """
 bt1901_cf_preregistration_audit.py
 

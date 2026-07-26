@@ -1,0 +1,80 @@
+{
+  "checks": {
+    "HWVE_condition_CF_gt_0_still_satisfied_at_q3": true,
+    "all_three_agree_ONLY_at_q3": true,
+    "doily_contextual_fraction_is_ZERO": true,
+    "doily_has_six_ovoids": true,
+    "doily_is_15_points_15_lines": true,
+    "method_separates_the_two_cases": true,
+    "route1_is_not_even_a_fraction_for_q_ge_4": true,
+    "routes_2_and_3_are_identical_for_every_q": true,
+    "w33_contextual_fraction_is_NOT_one_tenth": true,
+    "w33_contextual_fraction_is_ONE": true,
+    "w33_has_zero_ovoids": true,
+    "w33_is_40_points_40_lines": true
+  },
+  "contextual_fraction": {
+    "W33": {
+      "method": "no global sections: strongly contextual",
+      "ovoids": 0,
+      "value": 1.0
+    },
+    "doily": {
+      "method": "LP over global sections",
+      "ovoids": 6,
+      "value": 1.1102230246251565e-16
+    }
+  },
+  "headline": "The preregistered CF = 1/10 is not the contextual fraction. For the Abramsky-Barbosa contextual fraction, strong contextuality is equivalent to CF = 1, and the W(3,3) KS ray model is strongly contextual because a global section is an ovoid and W(3,3) has none. So CF(W(3,3)) = 1 for every state, computed here as the answer of the LP rather than assumed. The doily positive control returns CF = 0, reproducing the preregistration's own null. Separately, the claimed 'three independent routes' to 1/10 are one algebraic identity (mu/v = 1/Phi_4(q) for all q) plus one coincidence that holds only at q=3 and returns negative values for q >= 4.",
+  "prior_art": [
+    "analysis/w33_ovoid_construct.py -- ovoid = KS colouring, exists iff q even",
+    "analysis/w33_pass1021_corollary_ovoid_orientation.py -- 0 ovoids, orientation",
+    "analysis/bt1901_cf_preregistration_audit.py -- the claim audited here",
+    "analysis/bt1901_contextual_fraction_estimator.py -- estimates a click rate",
+    "Abramsky-Barbosa: strong contextuality <=> CF = 1",
+    "Thas (1981): W(q) has ovoids iff q is even"
+  ],
+  "route_table": {
+    "2": {
+      "all_three_agree": false,
+      "route1_1_minus_KSbudget": "11/15",
+      "route1_is_a_fraction": true,
+      "route2_equals_route3": true,
+      "route2_mu_over_v": "1/5",
+      "route3_inv_Phi4": "1/5",
+      "v": 15
+    },
+    "3": {
+      "all_three_agree": true,
+      "route1_1_minus_KSbudget": "1/10",
+      "route1_is_a_fraction": true,
+      "route2_equals_route3": true,
+      "route2_mu_over_v": "1/10",
+      "route3_inv_Phi4": "1/10",
+      "v": 40
+    },
+    "4": {
+      "all_three_agree": false,
+      "route1_1_minus_KSbudget": "-491/85",
+      "route1_is_a_fraction": false,
+      "route2_equals_route3": true,
+      "route2_mu_over_v": "1/17",
+      "route3_inv_Phi4": "1/17",
+      "v": 85
+    },
+    "5": {
+      "all_three_agree": false,
+      "route1_1_minus_KSbudget": "-1187/13",
+      "route1_is_a_fraction": false,
+      "route2_equals_route3": true,
+      "route2_mu_over_v": "1/26",
+      "route3_inv_Phi4": "1/26",
+      "v": 156
+    }
+  },
+  "schema": "w33.pass1080.contextual_fraction_audit.v1",
+  "scope": "An audit of a preregistered number, not an experiment and not a claim about hardware. The contextual fraction is computed for the uniform empirical model; the CF = 1 conclusion is state-independent because it follows from the emptiness of the set of global sections, which no state can enlarge. No claim is made about what observable 1/10 is.",
+  "status": "PASS",
+  "what_must_change": "The falsification criterion 'any measured CF != 1/10 refutes the W(3,3) substrate' cannot stand as written: the Abramsky-Barbosa CF of this model is 1, so a faithful measurement of the contextual fraction would 'refute' the substrate on a labelling error. Note also that bt1901_contextual_fraction_estimator.py estimates signal_clicks / signal_rows -- a click rate, not a contextual fraction. Either derive which observable 1/10 predicts and rename it, or drop the falsifier.",
+  "what_survives": "The substrate claim the preregistration actually needs is unaffected: W(3,3) is contextual and W(2,2) is not, so the HWVE magic-distillation condition CF > 0 holds at q=3 and fails at q=2. Only the numerical value, its name, and the corroboration argument are withdrawn."
+}
