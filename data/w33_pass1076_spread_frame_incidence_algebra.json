@@ -1,0 +1,27 @@
+{
+  "schema": "w33.pass1076.spread_frame.incidence_algebra.v1",
+  "status": "PASS",
+  "headline": "The 36 x 540 spread-frame incidence has an exact three-singular-value algebra on the spread side, but the coarse frame relations defined only by the number of common spreads are not closed under multiplication. Thus the spread side is rank-3, while the frame side genuinely requires the finer rank-32/22 orbital structure found in Passes 1072 and 1075.",
+  "incidence": {"shape":[36,540],"row_degree":45,"column_degree":3,"total":1620},
+  "spread_gram_identity": "B B^T = 45 I + 6 A, where A is the checked PSp(4,3) valency-15 spread orbital.",
+  "spread_graph_spectrum": {"-3":20,"3":15,"15":1},
+  "spread_gram_spectrum": {"27":20,"63":15,"135":1},
+  "frame_gram_spectrum": {"0":504,"27":20,"63":15,"135":1},
+  "bipartite_incidence_spectrum": {"-11.618950039":1,"-7.937253933":15,"-5.196152423":20,"0":504,"5.196152423":20,"7.937253933":15,"11.618950039":1},
+  "squared_singular_values": {"27.0":20,"63.0":15,"135.0":1},
+  "frame_pair_common_spread_profile": {"0":227880,"1":55080,"2":8100},
+  "coarse_relation_values": [0,1,2,3],
+  "coarse_relation_valencies": {"0":[422],"1":[102],"2":[15],"3":[1]},
+  "coarse_relation_algebra_closed": false,
+  "first_nonclosure_witness": {"left":0,"right":0,"coefficients":[321.1753554502,355.8235294118,388.8,422.0],"max_residual":17.175355450236395},
+  "interpretation": {
+    "spread_embedding": "The 36 incidence rows span a 36-dimensional module decomposing as 1 + 15 + 20, with squared singular values 135, 63, and 27.",
+    "frame_kernel": "The 540-dimensional frame carrier has a 504-dimensional incidence kernel.",
+    "association_scheme_boundary": "The common-spread count alone does not define an association scheme on frames; the full group orbitals are essential."
+  },
+  "check_count": 10,
+  "checks": {
+    "objects_are_36_by_540":true,"row_degree45":true,"column_degree3":true,"incidence_total1620":true,"spread_gram_is_45I_plus_6A":true,"spread_graph_spectrum_is_15_3_minus3":true,"incidence_squared_singular_spectrum_is_135_63_27":true,"incidence_rank36":true,"frame_gram_nonzero_spectrum_matches_spread_gram":true,"coarse_common_spread_relations_are_not_closed":true
+  },
+  "scope": "Exact finite incidence and linear algebra. This consumes, rather than reclaims, Pass 1071 tactical regularity and Pass 1072 orbital identification."
+}
