@@ -1,0 +1,22 @@
+{
+  "schema": "w33.pass1078.compact_macro_schedule.v1",
+  "expanded_schedule_sha256": "1e01dc0a5194802b417f591b06e1a75097285240803b4eaf905f753f6c0b253f",
+  "generator": "analysis/w33_pass1078_photonic_hardware_backend.py",
+  "generation_rule": "For each W33 point p, emit vacuum_dark and bright_reference calibration rows, then all 36 contexts not incident with p, then the four point-star contexts incident with p; expand every context into four projector/no-click interrogations.",
+  "gauge_points": 40,
+  "contexts_per_gauge": 40,
+  "calibrations_per_gauge": 2,
+  "projectors_per_context": 4,
+  "elementary_operations": 6480,
+  "resources": {
+    "contexts": 40,
+    "gauge_cycles": 40,
+    "max_mesh_depth": 8,
+    "max_mzi_count": 102,
+    "total_context_mzi_count": 2880,
+    "detector_channels": 4,
+    "time_bin_delay_slots": 40,
+    "switch_control_bits_per_mzi": 2
+  },
+  "scope": "Compact hardware-facing contract. Run the generator to materialize the expanded forty-cycle schedule; the SHA-256 above locks that expanded artifact."
+}
