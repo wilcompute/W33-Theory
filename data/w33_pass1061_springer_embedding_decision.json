@@ -1,0 +1,39 @@
+{
+  "schema": "w33.pass1061.springer_embedding_decision.v1",
+  "status": "PASS",
+  "headline": "The Springer normalizer realizes the W33 code embedding, not the ordered-anisotropic-pair embedding. Its certified point action on the 40 Eisenstein fibres extends functorially to the binary adjacency code; the full PGSp(4,3) action is equivariant on all 120 local axes/root lines and has whole-group quotient orbits 1+120+135.",
+  "decision": "CODE EMBEDDING",
+  "logic_chain": [
+    "Pass1021 identifies the Springer normalizer base action, by explicit S40 conjugacy, with the W33 POINT action and its full image with Aut(W33)=PGSp(4,3).",
+    "C, Cperp, Cperp/C and the 120 local-axis supports are functorial constructions of that 40-point incidence action.",
+    "This witness adds the multiplier-2 outer generator and verifies the axis-to-anisotropic-class map generator-by-generator for the full order-51840 group.",
+    "The 120 anisotropic classes span F2^8, so the linear orthogonal action on them determines the entire 256-class action.",
+    "The resulting matched whole-group orbits are 1+120+135, excluding the ordered-pair fingerprint 27+36+36+36 on the isotropic stratum."
+  ],
+  "orders": {
+    "base_point_action": 51840,
+    "code_quotient_action": 51840,
+    "axis_rootline_action": 51840
+  },
+  "whole_group_orbits": {
+    "all_256": [1, 120, 135],
+    "anisotropic": [120],
+    "nonzero_isotropic": [135]
+  },
+  "matched_class_permutation_characters": [],
+  "anisotropic_span_rank": 8,
+  "check_count": 9,
+  "checks": {
+    "similitude_doubles_PSp_to_PGSp": true,
+    "full_axis_action_order_51840": true,
+    "axis_to_code_map_equivariant_for_all_generators_including_outer": true,
+    "rootline_transport_has_order_51840": true,
+    "whole_256_orbits_are_code_fingerprint": true,
+    "anisotropic_orbit_is_120": true,
+    "isotropic_orbit_is_135": true,
+    "anisotropic_set_spans_F2_8": true,
+    "ordered_pair_fingerprint_is_excluded": true
+  },
+  "supersession": "Pass1043 is now decided in the opposite direction from its original interpretation. Pass1057 correctly reopened it; the matched full-group action selects Pass125 code embedding.",
+  "scope": "The decision uses the exact Pass1021 point-action conjugacy plus an independent full-PGSp functorial equivariance computation. It does not identify the ordered-pair subgroup by generators because its incompatible orbit fingerprint already excludes it."
+}
