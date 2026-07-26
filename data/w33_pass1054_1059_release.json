@@ -1,8 +1,8 @@
 {
-  "schema": "w33.pass1054_1059.release.v2",
+  "schema": "w33.pass1054_1059.release.v3",
   "status": "PASS",
-  "total_checks": 75,
-  "local_pytest": "7 passed in 27.61s",
+  "total_checks": 84,
+  "local_pytest_before_late_companion": "7 passed in 27.61s",
   "passes": {
     "1054": {
       "status": "PASS",
@@ -73,7 +73,24 @@
         "Yang_Mills": "finite graph gap only",
         "Ihara_Weil": "circle match does not prove zeta equality"
       }
+    },
+    "1059b": {
+      "status": "PASS",
+      "schema": "w33.pass1059b.parallel_continue_audit.v1",
+      "check_count": 9,
+      "retained": {
+        "W33_spectrum": "12^1, 2^24, (-4)^15",
+        "nontrivial_Ihara_poles": 78,
+        "arithmetic_90": "C(14,2)-1"
+      },
+      "hard_corrections": {
+        "sum_C11_j_j2_to_9": 2024,
+        "correct_inverse_Ihara": "(1-u^2)^200(1-u)(1-11u)(1-2u+11u^2)^24(1+4u+11u^2)^15",
+        "C2_Coxeter_angle": "135 degrees, cosine -1/sqrt(2), not arccos(-2/3)",
+        "late_Pass575_file": "separate from formal/W33/Pass575CyclotomicDVRKernel.lean and not accompanied by a successful Lake build",
+        "late_amplitude_and_Fisher_claims": "missing subgroup/cell-complex/data-likelihood constructions"
+      }
     }
   },
-  "honest_scope": "Finite group/action/code/fusion/obstruction package. No physical run, continuum Yang-Mills solution, CMB likelihood, amplituhedron map, Weil variety, or moonshine module is claimed."
+  "honest_scope": "Finite group/action/code/fusion/obstruction and exact arithmetic audit package. No physical run, continuum Yang-Mills solution, CMB likelihood, amplituhedron map, Weil variety, or moonshine module is claimed."
 }
