@@ -1,0 +1,10 @@
+{
+  "schema":"w33.pass1067.outer_class_geometry.v1","status":"PASS",
+  "headline":"The two outer-involution classes have exact dual finite-geometric meanings. The 36-class is canonically the 36 spreads; the 540-class is canonically the 540 unordered disjoint-line pairs with four common transversals.",
+  "class36":{"size":36,"inner_centralizer_order":720,"fixed_points_per_element":0,"fixed_lines_per_element":10,"geometry":"fixed lines are a spread","number_of_spreads":36,"bijection":"t -> Fix_lines(t)"},
+  "class540":{"size":540,"inner_centralizer_order":48,"fixed_points_per_element":8,"fixed_lines_per_element":6,"geometry":"two disjoint hub lines plus four pairwise-disjoint common transversals; intersection graph K2,4","number_of_unordered_disjoint_line_pairs":540,"bijection":"t -> the two degree-4 hub lines in Fix_lines(t)"},
+  "bridge":"The 36-spread count and BT748 540-fibre count are the two outer-involution orbits of the same PGSp(4,3) extension, distinguished by centralizers 720 and 48.",
+  "check_count":13,
+  "checks":{"exactly_36_spreads":true,"each_spread_has_10_disjoint_lines_covering_40_points":true,"outer_classes_are_36_and_540":true,"class36_fixed_line_sets_are_spreads":true,"class36_to_spreads_is_bijection":true,"class36_elements_fix_no_points_and_10_lines":true,"exactly_540_unordered_disjoint_line_pairs":true,"every_disjoint_pair_has_four_pairwise_disjoint_common_transversals":true,"class540_fixed_lines_form_K2_4":true,"class540_fixed_points_are_the_eight_intersections":true,"class540_to_disjoint_line_pairs_is_bijection":true,"class540_profile_is_uniform":true,"stabilizer_orders_match_orbit_sizes":true},
+  "scope":"Exact enumeration of all spreads, all disjoint line pairs, and every outer involution. No amplitude or physical interpretation is assumed."
+}
