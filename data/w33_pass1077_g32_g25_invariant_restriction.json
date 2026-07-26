@@ -1,0 +1,25 @@
+{
+  "schema": "w33.pass1077.g32_g25.invariant_restriction.v1",
+  "status": "PASS",
+  "headline": "The parabolic slice x4=0 was computed over the good prime 43. Exact Reynolds-orbit invariants for G32 restrict into the G25 invariant ring, but only through the subring even in the degree-9 generator. The restriction therefore cannot generate the full G25 ring: the degree-6 and sign-sensitive degree-9 invariants are genuinely new parabolic data.",
+  "field_certificate": {"prime":43,"omega_residue":6,"G25_order":648,"G32_order":155520},
+  "G25_generators": {"degrees":[6,9,12],"names":["u6","v9","w12"]},
+  "G25_evaluation_dimensions": {"12":2,"18":3,"24":4,"30":5},
+  "G32_basic_restrictions_mod43": {
+    "F12":{"degree":12,"basis":["u6^0*v9^0*w12^1","u6^2*v9^0*w12^0"],"coefficients_mod43":[4,24]},
+    "F18":{"degree":18,"basis":["u6^0*v9^2*w12^0","u6^1*v9^0*w12^1","u6^3*v9^0*w12^0"],"coefficients_mod43":[37,6,1]},
+    "F24":{"degree":24,"basis":["u6^0*v9^0*w12^2","u6^1*v9^2*w12^0","u6^2*v9^0*w12^1","u6^4*v9^0*w12^0"],"coefficients_mod43":[24,23,40,41]},
+    "F30":{"degree":30,"basis":["u6^0*v9^2*w12^1","u6^1*v9^0*w12^2","u6^2*v9^2*w12^0","u6^3*v9^0*w12^1","u6^5*v9^0*w12^0"],"coefficients_mod43":[14,29,39,29,26]}
+  },
+  "validation_on_independent_points": {"F12":true,"F18":true,"F24":true,"F30":true},
+  "structural_decision": {"restriction_surjective":false,"reason":"All G32 basic degrees are divisible by 6. On the slice, the degree-9 generator v9 occurs only through v9^2; neither u6 nor v9 can be recovered polynomially from the four restricted basic invariants.","image_subring":"contained in F43[u6,w12,v9^2]"},
+  "reflection_arrangement_restriction": {
+    "G25_hyperplanes":12,"G32_hyperplanes":40,"slice_hyperplane_factor_count":1,"distinct_restricted_hyperplanes":21,
+    "multiplicity_profile":{"1":12,"3":9},"total_factors_on_G25_hyperplanes":12,"total_extra_restricted_factors":27,
+    "factor_multiplicities_after_dividing_slice_factor":{"0/0/1":1,"0/1/0":1,"0/1/7":3,"0/1/37":3,"0/1/42":3,"1/0/0":1,"1/0/7":3,"1/0/37":3,"1/0/42":3,"1/1/1":1,"1/1/6":1,"1/1/36":1,"1/6/1":1,"1/6/6":1,"1/6/36":1,"1/7/0":3,"1/36/1":1,"1/36/6":1,"1/36/36":1,"1/37/0":3,"1/42/0":3},
+    "transverse_discriminant_reading":"The full G32 discriminant vanishes on x4=0 because the slice is itself a reflecting hyperplane. After dividing that slice factor, the remaining 39 hyperplanes restrict as the 12 G25 hyperplanes once plus 9 additional hyperplanes with multiplicity three at the hyperplane-product level."
+  },
+  "check_count":8,
+  "checks":{"orders_648_and_155520":true,"g25_invariant_dimensions_2_3_4_5":true,"all_four_restrictions_fit_G25_monomial_bases":true,"degree9_generator_never_occurs_oddly":true,"g25_has_12_reflecting_hyperplanes":true,"g32_has_40_reflecting_hyperplanes":true,"slice_is_itself_one_G32_reflecting_hyperplane":true,"all_g25_hyperplanes_occur_in_restriction":true},
+  "scope":"Exact finite-field invariant and reflection-arrangement computation at a good prime. It proves the restriction pattern and non-surjectivity; it does not claim a characteristic-zero canonical normalization of the basic invariant polynomials."
+}
