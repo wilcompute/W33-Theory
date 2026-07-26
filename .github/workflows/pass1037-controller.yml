@@ -7,11 +7,13 @@ on:
       - 'analysis/w33_pass1034_selector_orbital_algebra.py'
       - 'analysis/w33_pass1035_selector_correction_refinement.py'
       - 'analysis/w33_pass1036_six_response_photonic_falsifier.py'
+      - 'analysis/w33_pass1037_controller_corollary.py'
       - 'analysis/w33_pass1037_minimal_external_s3_controller.g'
       - 'analysis/w33_pass1037_controller_certificate.py'
       - 'data/w33_pass1034_selector_orbital_algebra.json'
       - 'data/w33_pass1035_selector_correction_refinement.json'
       - 'data/w33_pass1036_six_response_photonic_falsifier.json'
+      - 'data/w33_pass1037_minimal_external_s3_controller_corollary.json'
       - '.github/workflows/pass1037-controller.yml'
   push:
     branches: [ master ]
@@ -19,11 +21,13 @@ on:
       - 'analysis/w33_pass1034_selector_orbital_algebra.py'
       - 'analysis/w33_pass1035_selector_correction_refinement.py'
       - 'analysis/w33_pass1036_six_response_photonic_falsifier.py'
+      - 'analysis/w33_pass1037_controller_corollary.py'
       - 'analysis/w33_pass1037_minimal_external_s3_controller.g'
       - 'analysis/w33_pass1037_controller_certificate.py'
       - 'data/w33_pass1034_selector_orbital_algebra.json'
       - 'data/w33_pass1035_selector_correction_refinement.json'
       - 'data/w33_pass1036_six_response_photonic_falsifier.json'
+      - 'data/w33_pass1037_minimal_external_s3_controller_corollary.json'
       - '.github/workflows/pass1037-controller.yml'
 
 jobs:
@@ -90,19 +94,47 @@ jobs:
           print('Passes1034-1036 regeneration=PASS')
           PY
 
-      - name: Install GAP fail closed
+      - name: Regenerate Pass 1037 dependency theorem fail closed
         run: |
           set -euo pipefail
+          cp data/w33_pass1037_minimal_external_s3_controller_corollary.json /tmp/pass1037-corollary.json
+          rm -f data/w33_pass1037_minimal_external_s3_controller_corollary.json
+          python analysis/w33_pass1037_controller_corollary.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          expected = json.loads(Path('/tmp/pass1037-corollary.json').read_text(encoding='utf-8'))
+          actual_path = Path('data/w33_pass1037_minimal_external_s3_controller_corollary.json')
+          actual = json.loads(actual_path.read_text(encoding='utf-8'))
+          if actual != expected:
+              raise SystemExit(f'certificate mismatch: {actual_path}')
+          if actual.get('status') != 'PASS' or not all(actual.get('checks', {}).values()):
+              raise SystemExit(f'certificate did not pass: {actual_path}')
+          print('Pass1037 dependency theorem regeneration=PASS')
+          PY
+
+      - name: Try to install GAP for independent rebuild
+        id: gap
+        run: |
+          available=false
           for attempt in 1 2 3; do
             if sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends gap; then
-              break
+              if command -v gap >/dev/null 2>&1; then
+                available=true
+                break
+              fi
             fi
             sleep $((attempt * 5))
           done
-          command -v gap
-          gap --version
+          echo "available=$available" >> "$GITHUB_OUTPUT"
+          if [ "$available" = true ]; then
+            gap --version
+          else
+            echo "::notice title=Pass 1037 GAP redundancy skipped::Ubuntu package infrastructure did not provide GAP. The mandatory 17-check dependency theorem already passed."
+          fi
 
-      - name: Run Pass 1037 from source
+      - name: Run independent Pass 1037 GAP rebuild
+        if: steps.gap.outputs.available == 'true'
         env:
           W33_REPO: ${{ github.workspace }}
         run: |
@@ -112,17 +144,27 @@ jobs:
           ! grep -q '^Error' /tmp/pass1037.log
           test -f data/w33_pass1037_minimal_external_s3_controller.json
 
-      - name: Validate emitted Pass 1037 certificate
+      - name: Validate independent Pass 1037 GAP certificate
+        if: steps.gap.outputs.available == 'true'
         run: python analysis/w33_pass1037_controller_certificate.py
 
-      - name: Upload selector-controller certificates
+      - name: Upload mandatory selector-controller certificates
         uses: actions/upload-artifact@v4
         with:
-          name: pass1034-1037-selector-controller-certificates
+          name: pass1034-1037-mandatory-certificates
           path: |
             data/w33_pass1034_selector_orbital_algebra.json
             data/w33_pass1035_selector_correction_refinement.json
             data/w33_pass1036_six_response_photonic_falsifier.json
+            data/w33_pass1037_minimal_external_s3_controller_corollary.json
+          if-no-files-found: error
+
+      - name: Upload optional GAP redundancy certificate
+        if: steps.gap.outputs.available == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: pass1037-gap-redundancy-certificate
+          path: |
             data/w33_pass1037_minimal_external_s3_controller.json
             data/w33_pass1037_diagnostic.txt
           if-no-files-found: error
