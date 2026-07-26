@@ -1,0 +1,10 @@
+{
+  "schema": "w33.pass1078.signed_manifest.v1",
+  "mode": "synthetic_validation_only",
+  "schedule_sha256": "1e01dc0a5194802b417f591b06e1a75097285240803b4eaf905f753f6c0b253f",
+  "backend": "40-mode adjacent-MZI rectangular mesh",
+  "real_data_schema": ["block_id","detector","clicks","trials","dark_rate","efficiency","imbalance"],
+  "stopping_rule": {"min_blocks":10,"max_blocks":100,"noncontextual_bound":7.0,"calibration_fail":"inconclusive_no_claim"},
+  "external_key_required_for_real_acquisition": true,
+  "synthetic_signature_hmac_sha256": "d84a0431ebcb40bf18be4d3133a28ec432170781d03c63fb23f995b05c8368d4"
+}
