@@ -113,7 +113,7 @@ Main1026 := function()
   actionsConjugate := IsConjugate(S120,pairGroup,selectorGroup);
   conjugator := fail; transportedFibres := []; transportedEqualsNatural := false;
   if actionsConjugate then
-    conjugator := RepresentativeAction(S120,pairGroup,selectorGroup);
+    conjugator := RepresentativeAction(S120,pairGroup,selectorGroup,OnConjugation);
     if conjugator<>fail then
       transportedFibres := ActBlockSystem1026(e8PairFibres,conjugator);
       transportedEqualsNatural := transportedFibres=naturalFibres;
