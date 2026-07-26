@@ -1,0 +1,73 @@
+name: Passes 1087-1091 exact certificates
+
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1087_canonical_steinberg_parity.py'
+      - 'analysis/w33_pass1088_frame_adjacency_wedderburn.py'
+      - 'analysis/w33_pass1089_dual_hesse_triple_hyperplanes.py'
+      - 'analysis/w33_pass1090_controller_protocol_boundary.py'
+      - 'analysis/w33_pass1090_offline_unblind.py'
+      - 'analysis/w33_pass1091_formal_orbital_intertwiner_lock.py'
+      - 'formal/W33/Pass1091FrameOrbitalIntertwiner.lean'
+      - 'formal/W33.lean'
+      - 'tests/test_w33_pass1087_1091.py'
+      - '.github/workflows/pass1087_1091_exact.yml'
+  workflow_dispatch:
+
+jobs:
+  canonical-steinberg:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy sympy
+      - run: PYTHONPATH=analysis python analysis/w33_pass1083_levi_frame_steinberg_intertwiner.py
+      - run: PYTHONPATH=analysis python analysis/w33_pass1087_canonical_steinberg_parity.py
+
+  adjacency-wedderburn:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy sympy
+      - run: PYTHONPATH=analysis python analysis/w33_pass1082_frame_coherent_configuration.py
+      - run: PYTHONPATH=analysis python analysis/w33_pass1083_levi_frame_steinberg_intertwiner.py
+      - run: PYTHONPATH=analysis python analysis/w33_pass1087_canonical_steinberg_parity.py
+      - run: PYTHONPATH=analysis python analysis/w33_pass1088_frame_adjacency_wedderburn.py
+
+  dual-hesse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy
+      - run: PYTHONPATH=analysis python analysis/w33_pass1089_dual_hesse_triple_hyperplanes.py
+
+  controller-boundary:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy
+      - run: PYTHONPATH=analysis python analysis/w33_pass1090_controller_protocol_boundary.py
+
+  formal-and-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy sympy pytest
+      - run: PYTHONPATH=analysis python analysis/w33_pass1082_frame_coherent_configuration.py
+      - run: PYTHONPATH=analysis python analysis/w33_pass1083_levi_frame_steinberg_intertwiner.py
+      - run: PYTHONPATH=analysis python analysis/w33_pass1087_canonical_steinberg_parity.py
+      - run: PYTHONPATH=analysis python analysis/w33_pass1091_formal_orbital_intertwiner_lock.py
+      - run: PYTHONPATH=analysis pytest -q tests/test_w33_pass1087_1091.py
+      - uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formal
