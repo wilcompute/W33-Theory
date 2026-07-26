@@ -4,6 +4,76 @@
 \clearpage
 \part{\texorpdfstring{The Gaussian Unification: All Couplings from $z=11+4i$}{The Gaussian Unification: All Couplings from z=11+4i}}
 
+\section{\texorpdfstring{Lock~0: The Structural Selection of $q=3$}{Lock 0: The Structural Selection of q=3}}
+\label{sec:lock0}
+
+The selection arguments in this Part are \emph{fits}: they take a measured constant
+and ask which $q$ reproduces it.  They are stated as such.  There is also a
+selection argument that uses no measured quantity at all, and it is placed first
+because it is of a different kind.
+
+\begin{theorem}[The substrate tower has exactly one sibling]
+\label{thm:springer-tower}
+Let $w\in W(E_8)$ be a regular element of order $d$ in Springer's sense.  Then
+$C_{W(E_8)}(w)$ is the complex reflection group whose degrees are the degrees of
+$W(E_8)$ divisible by $d$, so $|C| = \prod\{d_i : d\mid d_i\}$.  Over the degrees
+$2,8,12,14,18,20,24,30$ this gives a whole tower, and \emph{only three values of
+$d$ yield a derived subgroup transitive on the $240$ roots}:
+\[
+\begin{array}{c|c|c|c}
+d & |C| & \text{blocks} & \text{base}\\\hline
+3,\,6 & 155\,520 = 12\cdot18\cdot24\cdot30 & [2,3,6] & 40 = W(3,3)\\
+4 & 46\,080 = 8\cdot12\cdot20\cdot24 & [2,4,16] & 15 = W(2,2)
+\end{array}
+\]
+with $d=3$ and $d=6$ the same tower.  So the Eisenstein construction that produces
+$W(3,3)$ is \textbf{not unique}: there is exactly one sibling, the Gaussian
+$d=4$ tower ($\mathrm{ST}_{31}$), and its base is the doily.
+\end{theorem}
+
+\noindent
+This forbids one argument that might have been tempting --- $q=3$ cannot be
+selected merely by observing that the Eisenstein tower exists.  It also makes the
+selection question precise, because the two towers are now explicitly comparable.
+They differ in exactly two ways, and neither is a fitted quantity.
+
+\begin{theorem}[Contextual selection]
+\label{thm:contextual-selection}
+An ovoid of $\GQ(q,q)$ is precisely a Kochen--Specker $0/1$ colouring of its
+$st{+}1$ contexts, and by Thas' theorem $W(q,q)$ has ovoids if and only if $q$ is
+even.  Counted by exact cover:
+\[
+W(2,2):\ 6\ \text{ovoids},\qquad W(3,3):\ 0\ \text{ovoids}.
+\]
+Hence the Gaussian base admits a global noncontextual value assignment and the
+Eisenstein base does not.  \emph{Of the two towers the construction actually
+produces, only $q=3$ is contextual.}
+\end{theorem}
+
+\begin{theorem}[Shape of the section obstruction]
+\label{thm:obstruction-shape}
+Both towers are obstructed: neither $240\to$ base admits an equivariant section.
+They are obstructed differently.  The Eisenstein fibre is
+$\langle c^5\rangle = \langle -1,\omega\rangle \cong C_6 = C_2\times C_3$, whose
+obstruction splits into two \emph{independent} coordinates --- a sign and a phase,
+separated by the centre of $\Sp(4,3)$.  The Gaussian fibre is $C_4$, which is
+cyclic with a unique subgroup of order two and therefore admits no complement: its
+obstruction is one indecomposable class.  Only the Eisenstein tower carries two
+independent obstruction coordinates.
+\end{theorem}
+
+\begin{remark}
+Theorems~\ref{thm:contextual-selection} and~\ref{thm:obstruction-shape} use no
+measured constant.  They select $q=3$ from a two-element list by structure alone,
+which the Locks below do not do.  The Locks remain what they are --- consistency
+checks against experiment, and evidence that the arithmetic is not accidental ---
+but the structural statement is logically prior and should be read first.
+Witnesses: \texttt{analysis/w33\_pass1039\_springer\_tower.g},
+\texttt{...\_pass1039b\_gaussian\_base.g},
+\texttt{...\_pass1042\_tower\_discriminators.g}.
+\end{remark}
+
+
 \section{\texorpdfstring{Lock~9: $\alpha^{-1}=137$ Uniquely Selects $q=3$}{Lock 9: alpha-inverse equals 137 uniquely selects q=3}}
 
 For $\GQ(q,q)$, $(k{-}1)^2+\mu^2 = q^4+2q^3+2$.

@@ -62,7 +62,7 @@ theorem inv_of_quadratic {A : Type*} [Ring A] [Algebra R A] (F : A) (c : R)
     calc F * (↑u⁻¹ * (F + 2)) = ↑u⁻¹ * (F * (F + 2)) := by ring
       _ = ↑u⁻¹ * (u : A) := by rw [this, hu]
       _ = 1 := by simp
-  · have : (F + 2) * F = algebraMap R A c := by ring_nf; linear_combination hquad
+  · have : (F + 2) * F = algebraMap R A c := by rw [add_mul]; exact hquad
     calc (↑u⁻¹ * (F + 2)) * F = ↑u⁻¹ * ((F + 2) * F) := by ring
       _ = ↑u⁻¹ * (u : A) := by rw [this, hu]
       _ = 1 := by simp

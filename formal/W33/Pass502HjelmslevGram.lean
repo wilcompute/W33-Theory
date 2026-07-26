@@ -30,7 +30,8 @@ theorem uniformCover_gram_apply (i j : β) :
     intro x _
     by_cases hx : x.2 = i
     · have hxj : ¬ (x.2 = j) := by rw [hx]; exact h
-      simp [uniformCoverIncidence, Matrix.transpose_apply, hx, hxj]
+      simp only [uniformCoverIncidence, Matrix.transpose_apply,
+        if_pos hx, if_neg hxj, mul_zero]
     · simp [uniformCoverIncidence, Matrix.transpose_apply, hx]
 
 /-- Matrix form of the Hjelmslev reduction Gram identity. -/

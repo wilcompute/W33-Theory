@@ -42,6 +42,8 @@ theorem shiftedPhiFive_zero_mod_five :
   -- `eval₂ f 0 p = f (p.coeff 0)`, and the constant term is 5, which is 0 mod 5.
   rw [Polynomial.eval₂_at_zero]
   simp [shiftedPhiFive]
+  -- whatever survives is the numeric fact (5 : ZMod 5) = 0
+  all_goals decide
 
 /-- Canonical residue map, sending the uniformizer to zero. -/
 def residueMap : CyclotomicFiveOrder →+* ZMod 5 :=
@@ -75,6 +77,8 @@ theorem five_mem_residueIdeal :
     AdjoinRoot.of shiftedPhiFive 5 ∈ residueIdeal := by
   change residueMap (AdjoinRoot.of shiftedPhiFive 5) = 0
   simp [residueMap]
+  -- what remains is the numeric fact (5 : ZMod 5) = 0
+  all_goals decide
 
 /-- The principal uniformizer ideal is contained in the residue kernel. -/
 theorem lambda_span_le_residueIdeal :

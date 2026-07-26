@@ -1,0 +1,54 @@
+{
+  "checks": {
+    "eisenstein_base_admits_none": true,
+    "gaussian_base_admits_a_noncontextual_model": true,
+    "gaussian_tower_is_falsified_not_merely_different": true,
+    "pass338_frame_is_not_perfect": true,
+    "pass338_identification_closed_negatively": true,
+    "tower_group_is_perfect": true
+  },
+  "falsification": {
+    "W33_eisenstein_base": {
+      "contextual_fraction": "nonzero (no global assignment exists)",
+      "lines": 40,
+      "ovoid_size": 10,
+      "ovoids": 0,
+      "points": 40,
+      "points_per_line": 4
+    },
+    "doily_W22_gaussian_base": {
+      "contextual_fraction": 0,
+      "is_a_cap": true,
+      "lines": 15,
+      "meets_every_context_exactly_once": true,
+      "ovoid_size": 5,
+      "ovoids": 6,
+      "points": 15,
+      "points_per_line": 3,
+      "witness_ovoid": [
+        1,
+        7,
+        10,
+        13,
+        14
+      ]
+    }
+  },
+  "headline": "The Gaussian tower is FALSIFIED as a substrate, not merely different: an explicit 5-point ovoid on the doily is a global noncontextual value assignment meeting every one of the 15 contexts exactly once, so its contextual fraction is 0 and it supports no magic. W(3,3) admits no such assignment at all. Separately, the Pass 338 selector frame is NOT this tower despite three matching subdegree fingerprints, because it is W(E6)-type and non-perfect while the tower's group Sp(4,3) is perfect.",
+  "pass338_closure": {
+    "matching_fingerprints": {
+      "degree_120_quotient": "[1,2,27,36,54]   = Pass 1043 normaliser image",
+      "selector_frame_subdegrees": "[1^6, 27^6, 72]  = Pass 1020 root action",
+      "signed_E8_profile": "[1,1,4,54,72,108] = Pass 1020 fused edge profile"
+    },
+    "selector_frame_group": "image of ATLAS U4(2).2 on 240 cosets = U4(2):2 = W(E6)",
+    "selector_frame_perfect": false,
+    "tower_centre_order": 2,
+    "tower_perfect": true,
+    "tower_total_space_group": "Sp(4,3) = 2.U4(2)",
+    "verdict": "NOT the same object. A perfect group and a non-perfect group of the same order cannot have equivalent permutation actions, so all three fingerprint matches are profile coincidences across non-isomorphic groups -- the trap Pass 1020 named."
+  },
+  "schema": "w33.pass1044.gaussian_falsified_and_pass338_closed.v1",
+  "scope": "The falsification is of the q=2 tower as a CONTEXTUAL substrate; it says nothing about the doily as mathematics, where it remains the other symplectic quadrangle this corpus uses. The Pass 338 closure is structural and follows from perfectness alone.",
+  "status": "PASS"
+}
