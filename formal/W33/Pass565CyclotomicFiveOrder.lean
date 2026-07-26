@@ -13,7 +13,7 @@ open Polynomial
 namespace W33.Pass565
 
 /-- The shifted fifth-cyclotomic polynomial in the uniformizer coordinate. -/
-def shiftedPhiFive : Polynomial ℤ :=
+noncomputable def shiftedPhiFive : Polynomial ℤ :=
   X ^ 4 - C 5 * X ^ 3 + C 10 * X ^ 2 - C 10 * X + C 5
 
 /-- The integral algebraic order `Z[lambda]/(shiftedPhiFive)`. -/
@@ -26,8 +26,8 @@ noncomputable def lambdaBar : CyclotomicFiveOrder :=
 /-- Evaluation of the shifted polynomial agrees with the expected quartic. -/
 theorem shiftedPhiFive_eval (x : ℤ) :
     shiftedPhiFive.eval x = x ^ 4 - 5 * x ^ 3 + 10 * x ^ 2 - 10 * x + 5 := by
+  -- `simp` already closes this; the trailing `ring` had no goals to solve.
   simp [shiftedPhiFive]
-  ring
 
 /-- The translated polynomial is monic of degree four. -/
 theorem shiftedPhiFive_monic : shiftedPhiFive.Monic := by

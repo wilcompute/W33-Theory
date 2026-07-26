@@ -35,9 +35,13 @@ theorem sum_erase_two (f : ι → R) (hzero : ∑ i, f i = 0) {a b : ι}
   have h2 : ∑ i ∈ Finset.univ.erase a, f i = -f a := by
     have := Finset.add_sum_erase Finset.univ f (Finset.mem_univ a)
     rw [hzero] at this
-    linarith [this]
+    -- `this : f a + ∑ … = 0`, goal `∑ … = -f a`.  `R` is only a `CommRing`, so
+    -- `linarith` (which wants an ordered field) never applied here;
+    -- `linear_combination` is the right tactic and needs no lemma name.
+    linear_combination this
   rw [h2] at h1
-  linarith [h1]
+  -- same reason: `-f a = f b + S` against goal `S = -(f a + f b)`.
+  linear_combination -h1
 
 /-- If the two omitted values are both `1`, the restricted sum is `-2`:
 this is the coefficient that produces `-2F`. -/

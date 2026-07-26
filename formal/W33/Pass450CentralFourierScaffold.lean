@@ -24,9 +24,10 @@ theorem convolution_character_eigenvector
 theorem twisted_fixed_scalar_is_zero
     {K : Type*} [Field K]
     (s u : K) (hu : u ≠ 1) (hfixed : s = u * s) : s = 0 := by
+  -- `rw [hfixed]` rewrites `s` into `u * s` on BOTH sides, which does not close
+  -- the goal.  Expand the product and fold `u * s` back to `s` instead.
   have hzero : (1 - u) * s = 0 := by
-    rw [hfixed]
-    ring
+    rw [sub_mul, one_mul, ← hfixed, sub_self]
   rcases mul_eq_zero.mp hzero with hleft | hright
   · exfalso
     apply hu

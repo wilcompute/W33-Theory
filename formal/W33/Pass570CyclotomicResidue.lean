@@ -31,7 +31,10 @@ def lambdaBar : CyclotomicFiveOrder := AdjoinRoot.root shiftedPhiFive
 
 /-- The shifted polynomial is monic. -/
 theorem shiftedPhiFive_monic : shiftedPhiFive.Monic := by
-  simp [shiftedPhiFive]
+  -- `simp` does not compute a leading coefficient; `monicity!` is the tactic for
+  -- exactly this shape (Mathlib.Tactic.ComputeDegree).
+  unfold shiftedPhiFive
+  monicity!
 
 /-- Evaluating the shifted polynomial at zero modulo five vanishes. -/
 theorem shiftedPhiFive_zero_mod_five :

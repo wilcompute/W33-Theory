@@ -20,9 +20,13 @@ theorem uniformCover_gram_apply (i j : β) :
       if i = j then (p : ℤ) else 0 := by
   classical
   by_cases h : i = j
-  · subst j
-    simp [uniformCoverIncidence, Matrix.mul_apply]
-  · simp [uniformCoverIncidence, Matrix.mul_apply, h]
+  · -- Diagonal: the sum runs over `Fin p × β`; split it as an iterated sum so the
+    -- inner `β`-sum collapses by `Finset.sum_ite_eq'`, leaving `∑ _ : Fin p, 1 = p`.
+    subst j
+    simp [uniformCoverIncidence, Matrix.mul_apply, Matrix.transpose_apply,
+      Fintype.sum_prod_type, ite_mul, mul_ite, Finset.sum_ite_eq']
+  · simp [uniformCoverIncidence, Matrix.mul_apply, Matrix.transpose_apply,
+      Fintype.sum_prod_type, ite_mul, mul_ite, h]
 
 /-- Matrix form of the Hjelmslev reduction Gram identity. -/
 theorem uniformCover_gram :
