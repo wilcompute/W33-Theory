@@ -1,0 +1,13 @@
+{
+  "status":"PASS","group_order":25920,"flag_stabilizer_order":162,"cross_orbit_count":10,
+  "cross_orbit_sizes":[27,27,27,27,27,81,81,81,81,81],
+  "relation_rank_profile":[0,81,81,81,81,81,81,0,81,81],
+  "map_span_rank_mod_1000003":2,
+  "pair_image_ranks":{"1,2":162,"1,4":81,"2,5":81,"3,6":81,"4,8":81,"5,6":162},
+  "selected_relation":1,"selected_rank":81,"selected_sha256_int64":"1455f33e219d8464a7fac74ca693f31dfa1cf01548c205c7fa246a4802132213","selected_nnz":69120,"selected_max_abs":1224720,
+  "identities":["B*T=0","T*D^T=0","T*K_Levi=160*T","G-equivariant for all five transvection generators"],
+  "interpretation":"An explicit integer G-intertwiner carries the 81-dimensional Levi cycle/Steinberg module into the 504-dimensional spread-incidence kernel. The ten cross relations span a two-dimensional intertwiner space, giving at least two distinct Steinberg images; some relation pairs have the same 81-image while generic pairs form a direct 162-dimensional sum.",
+  "tensor_sha256":"fae044a2f09b706a66d33caa5c5c046836c711b1413b7727bfaf67ee749c71ee",
+  "check_count":14,
+  "checks":{"group_order25920":true,"flag_stabilizer162":true,"ten_cross_orbits":true,"cross_sizes_27x5_81x5":true,"cycle_kernel_rank81":true,"cycle_projector_identity":true,"selected_rank81":true,"selected_in_spread_kernel":true,"selected_kills_cut":true,"selected_right_cycle_eigen":true,"intertwiner_space_rank2":true,"some_pairs_same_image":true,"generic_pairs_direct_sum162":true,"all_generator_equivariance_checks_passed":true}
+}
