@@ -57,14 +57,29 @@ theorem inv_of_quadratic {A : Type*} [Ring A] [Algebra R A] (F : A) (c : R)
     (hquad : F * F + 2 * F = algebraMap R A c) :
     ∃ G, F * G = 1 ∧ G * F = 1 := by
   obtain ⟨u, hu⟩ := hc
+  -- `A` is only a `Ring`, so `ring`/`linear_combination` (which need
+  -- `CommSemiring A`) are unavailable here.  What makes the proof work is that
+  -- `algebraMap` lands in the CENTRE of `A`, hence `u` and therefore `u⁻¹`
+  -- commute with everything.  That is the only commutativity used.
+  have hcom : ∀ x : A, Commute (↑u⁻¹ : A) x := by
+    intro x
+    have h1 : Commute (↑u : A) x := by rw [hu]; exact Algebra.commutes c x
+    exact h1.units_inv_left
+  have hL : F * (F + 2) = algebraMap R A c := by
+    rw [mul_add, mul_two, ← two_mul]; exact hquad
+  have hR : (F + 2) * F = algebraMap R A c := by
+    rw [add_mul]; exact hquad
   refine ⟨↑u⁻¹ * (F + 2), ?_, ?_⟩
-  · have : F * (F + 2) = algebraMap R A c := by linear_combination hquad
-    calc F * (↑u⁻¹ * (F + 2)) = ↑u⁻¹ * (F * (F + 2)) := by ring
-      _ = ↑u⁻¹ * (u : A) := by rw [this, hu]
+  · calc F * (↑u⁻¹ * (F + 2))
+        = (F * ↑u⁻¹) * (F + 2) := by rw [← mul_assoc]
+      _ = (↑u⁻¹ * F) * (F + 2) := by rw [(hcom F).eq]
+      _ = ↑u⁻¹ * (F * (F + 2)) := by rw [mul_assoc]
+      _ = ↑u⁻¹ * (u : A) := by rw [hL, hu]
       _ = 1 := by simp
-  · have : (F + 2) * F = algebraMap R A c := by rw [add_mul]; exact hquad
-    calc (↑u⁻¹ * (F + 2)) * F = ↑u⁻¹ * ((F + 2) * F) := by ring
-      _ = ↑u⁻¹ * (u : A) := by rw [this, hu]
+  · -- this branch needs only associativity
+    calc (↑u⁻¹ * (F + 2)) * F
+        = ↑u⁻¹ * ((F + 2) * F) := by rw [mul_assoc]
+      _ = ↑u⁻¹ * (u : A) := by rw [hR, hu]
       _ = 1 := by simp
 
 end W33.Pass488

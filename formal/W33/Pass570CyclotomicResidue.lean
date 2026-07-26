@@ -76,9 +76,10 @@ theorem lambda_mem_residueIdeal : lambdaBar ∈ residueIdeal := by
 theorem five_mem_residueIdeal :
     AdjoinRoot.of shiftedPhiFive 5 ∈ residueIdeal := by
   change residueMap (AdjoinRoot.of shiftedPhiFive 5) = 0
-  simp [residueMap]
-  -- what remains is the numeric fact (5 : ZMod 5) = 0
-  all_goals decide
+  -- `lift` must be pushed through `of` FIRST; without `lift_of` the goal is an
+  -- unreduced `lift ... 5` and `decide` gets stuck on its Decidable instance.
+  simp only [residueMap, AdjoinRoot.lift_of]
+  decide
 
 /-- The principal uniformizer ideal is contained in the residue kernel. -/
 theorem lambda_span_le_residueIdeal :

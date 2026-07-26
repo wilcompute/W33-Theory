@@ -1,0 +1,123 @@
+{
+  "checks": {
+    "E8_has_two_distinct_towers": true,
+    "E8_is_the_unique_two_tower_type": true,
+    "E8_towers_are_155520_and_46080": true,
+    "d3_and_d6_are_the_same_E8_tower": true,
+    "every_other_type_has_at_most_one": true
+  },
+  "deciding_experiment": {
+    "outcomes": {
+      "CF = 0": "substrate is the noncontextual doily tower: no magic, the holonet architecture cannot be carried, q=3 program refuted",
+      "CF = 1/10": "Eisenstein tower as predicted",
+      "CF = anything else": "neither tower; the substrate identification is wrong"
+    },
+    "prediction_eisenstein_q3": "1/10",
+    "prediction_gaussian_doily": "0 (explicit noncontextual model, Pass 1044)",
+    "prior_art": "photonic_holonet.tex owns the CF = 1/10 prediction and protocol",
+    "quantity": "contextual fraction (CF), measured by the existing demonstrator",
+    "status": "falsifier, not a fit -- the number is predicted before measurement"
+  },
+  "headline": "E8 is the only reflection group in the compared list carrying TWO competing Springer towers (d=3/6 -> G32 order 155520 over W(3,3); d=4 -> G31 order 46080 over the doily). E7 and E6 have one each; F4, D4, H4 have none. So the q=2 versus q=3 competition is an E8 phenomenon, and the contextual fraction -- 0 for the doily, 1/10 for W(3,3) -- is the experiment that decides it.",
+  "schema": "w33.pass1045.e8_only_two_tower_type.v1",
+  "scope": "A degree-list census plus a framing of an existing prediction. It does not verify transitivity of the derived subgroups outside E8, where that was computed in Pass 1039; for the other types only the rank/order census is done, which is what the two-tower claim needs.",
+  "springer_census": {
+    "D4": {
+      "distinct_towers": 0,
+      "members": [],
+      "tower_groups": []
+    },
+    "E6": {
+      "distinct_towers": 1,
+      "members": [
+        {
+          "d": 3,
+          "order": 648,
+          "rank": 3
+        }
+      ],
+      "tower_groups": [
+        {
+          "d_values": [
+            3
+          ],
+          "order": 648,
+          "rank": 3
+        }
+      ]
+    },
+    "E7": {
+      "distinct_towers": 1,
+      "members": [
+        {
+          "d": 3,
+          "order": 1296,
+          "rank": 3
+        },
+        {
+          "d": 6,
+          "order": 1296,
+          "rank": 3
+        }
+      ],
+      "tower_groups": [
+        {
+          "d_values": [
+            3,
+            6
+          ],
+          "order": 1296,
+          "rank": 3
+        }
+      ]
+    },
+    "E8": {
+      "distinct_towers": 2,
+      "members": [
+        {
+          "d": 3,
+          "order": 155520,
+          "rank": 4
+        },
+        {
+          "d": 4,
+          "order": 46080,
+          "rank": 4
+        },
+        {
+          "d": 6,
+          "order": 155520,
+          "rank": 4
+        }
+      ],
+      "tower_groups": [
+        {
+          "d_values": [
+            4
+          ],
+          "order": 46080,
+          "rank": 4
+        },
+        {
+          "d_values": [
+            3,
+            6
+          ],
+          "order": 155520,
+          "rank": 4
+        }
+      ]
+    },
+    "F4": {
+      "distinct_towers": 0,
+      "members": [],
+      "tower_groups": []
+    },
+    "H4": {
+      "distinct_towers": 0,
+      "members": [],
+      "tower_groups": []
+    }
+  },
+  "status": "PASS"
+}
