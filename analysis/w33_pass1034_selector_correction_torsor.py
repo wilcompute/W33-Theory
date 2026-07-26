@@ -3,16 +3,20 @@
 from __future__ import annotations
 
 import json
+import sys
 from collections import Counter
 from itertools import combinations, product
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
 from analysis.w33_pass1031_dual_120_phase_carriers import (
-    Perm, act_line, act_point_matching, build_w33, compose, generate_psp,
+    act_line, act_point_matching, build_w33, compose, generate_psp,
     perfect_matchings,
 )
 
-ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 OUT = DATA / "w33_pass1034_selector_correction_torsor.json"
 
