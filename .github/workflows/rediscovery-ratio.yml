@@ -1,0 +1,81 @@
+name: Rediscovery ratio
+
+# The corpus health metric this project never had.
+#
+# scripts/rediscovery_sweep.py measures what fraction of the corpus asserts a
+# result that already exists elsewhere, uncited.  Pass 328 measured it by hand
+# once (21% over 173 files); the sweep reproduces it continuously (22.9% over
+# 5708).  The number only means something if it MOVES, so this job records it on
+# every push and fails when it gets worse.
+#
+# Deliberately a RATCHET, not a threshold.  A fixed threshold either sits so high
+# it never fires or blocks unrelated work; a ratchet only ever complains when the
+# corpus duplicates faster than it consolidates, which is exactly the failure
+# being guarded against.  The baseline lives in data/rediscovery_baseline.json and
+# is updated by hand, so lowering the bar is a visible, reviewable act.
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  ratio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Rebuild the results index
+        run: python analysis/build_results_index.py
+
+      - name: Measure the rediscovery ratio
+        run: python scripts/rediscovery_sweep.py
+
+      - name: Compare against the baseline ratchet
+        run: |
+          python - <<'PY'
+          import json, pathlib, sys
+
+          cur = json.loads(pathlib.Path("data/rediscovery_sweep.json").read_text())
+          base_path = pathlib.Path("data/rediscovery_baseline.json")
+          if not base_path.exists():
+              print("no baseline recorded; nothing to ratchet against")
+              sys.exit(0)
+          base = json.loads(base_path.read_text())
+
+          pct_now, pct_base = cur["percent_colliding"], base["percent_colliding"]
+          rows_now, rows_base = cur["merge_list_size"], base["merge_list_size"]
+          tol = base.get("tolerance_points", 0.5)
+
+          print(f"percent colliding : {pct_now}  (baseline {pct_base}, tolerance +{tol})")
+          print(f"merge-list rows   : {rows_now}  (baseline {rows_base})")
+
+          if pct_now > pct_base + tol:
+              print()
+              print(f"::error title=Rediscovery ratio worsened::{pct_now}% of the corpus "
+                    f"now asserts an uncited existing result, up from {pct_base}%. "
+                    f"The corpus is duplicating faster than it consolidates. "
+                    f"Cite the prior art in the new files, or update the baseline "
+                    f"deliberately in data/rediscovery_baseline.json.")
+              sys.exit(1)
+
+          if pct_now < pct_base - tol:
+              print()
+              print(f"::notice title=Rediscovery ratio improved::{pct_now}%, down from "
+                    f"{pct_base}%. Consider lowering the baseline to lock the gain in.")
+          print("\nratchet OK")
+          PY
+
+      - name: Upload the merge list
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rediscovery-merge-list
+          path: data/rediscovery_sweep.json
+          if-no-files-found: error

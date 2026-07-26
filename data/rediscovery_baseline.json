@@ -1,0 +1,9 @@
+{
+  "_comment": "Ratchet baseline for .github/workflows/rediscovery-ratio.yml. Raising these numbers is a deliberate, reviewable act: it means the corpus was allowed to duplicate more. Lower them when the sweep improves, to lock the gain in.",
+  "merge_list_size": 859,
+  "percent_colliding": 22.9,
+  "recorded": "2026-07-25",
+  "scanned_files": 5708,
+  "source": "scripts/rediscovery_sweep.py",
+  "tolerance_points": 0.5
+}
