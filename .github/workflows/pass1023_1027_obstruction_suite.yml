@@ -27,16 +27,23 @@ on:
 jobs:
   factor-cocycle-selector-photonic:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install GAP
+      - name: Install GAP with retries
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y --no-install-recommends gap
+          set -euo pipefail
+          for attempt in 1 2 3; do
+            if sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends gap; then
+              break
+            fi
+            echo "GAP install attempt ${attempt} failed" >&2
+            sleep 10
+          done
+          command -v gap
           gap --version
       - name: Run Pass 1023 fail closed
         env:
@@ -93,16 +100,23 @@ jobs:
 
   subgroup-phase-diagram:
     runs-on: ubuntu-latest
-    timeout-minutes: 50
+    timeout-minutes: 55
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install GAP
+      - name: Install GAP with retries
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y --no-install-recommends gap
+          set -euo pipefail
+          for attempt in 1 2 3; do
+            if sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends gap; then
+              break
+            fi
+            echo "GAP install attempt ${attempt} failed" >&2
+            sleep 10
+          done
+          command -v gap
           gap --version
       - name: Run Pass 1024 exact search fail closed
         env:
