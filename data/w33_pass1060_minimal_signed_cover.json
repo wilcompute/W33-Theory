@@ -1,0 +1,41 @@
+{
+  "schema": "w33.pass1060.minimal_signed_cover.v1",
+  "status": "PASS",
+  "headline": "The smallest symmetry object carrying the signed 240-root action is not an ordinary overgroup of PSp(4,3), but its non-split central double cover 2.PSp(4,3) ~= Sp(4,3), of order 51840.",
+  "orders": {
+    "unsigned_PSp43": 25920,
+    "signed_cover": 51840,
+    "kernel": 2
+  },
+  "extension": "1 -> C2(global root negation) -> Sp(4,3) -> PSp(4,3) -> 1",
+  "candidate_decisions": {
+    "central_double_cover_Sp43": "PASS: exact signed action constructed",
+    "PGSp43": "FAIL as a cure: an ordinary overgroup contains the obstructed PSp43 subgroup, so restriction would give the forbidden section",
+    "W_E6_split_outer_extension": "FAIL as a cure for the same restriction reason",
+    "semilinear_overgroup": "FAIL as a cure for the same restriction reason",
+    "direct_or_semidirect_S3_controller": "can select an external branch operationally, but does not split the internal signed-root extension"
+  },
+  "no_section_certificate": {
+    "rows": [
+      {"variables": [0, 1, 49, 50], "rhs": 0},
+      {"variables": [0, 1, 48, 50], "rhs": 0},
+      {"variables": [0, 49, 50, 60], "rhs": 1},
+      {"variables": [0, 48, 50, 60], "rhs": 0}
+    ],
+    "xor_mask": 0,
+    "xor_rhs": 1
+  },
+  "minimality_proof": "The four-row Pass1055 certificate rules out a section over PSp(4,3), so any lifting group projecting onto it has nontrivial kernel of size at least 2. The constructed group has exactly twice the order, meeting the lower bound.",
+  "generator_lift_sign_weights": [68, 60, 58, 34, 76, 76, 36, 72, 62, 48, 42, 72, 58, 68, 58, 62, 74, 72, 78, 66, 76, 54, 74, 66, 50, 72, 78, 74, 68, 70, 46, 66, 66, 54, 66, 70, 78, 56, 78, 58],
+  "check_count": 7,
+  "checks": {
+    "axis_image_order_25920": true,
+    "signed_lift_order_51840": true,
+    "central_global_negation_in_lift_group": true,
+    "kernel_has_order_two": true,
+    "all_generator_lifts_preserve_E8_inner_products": true,
+    "four_row_no_section_certificate_xors_to_zero_equals_one": true,
+    "minimal_extension_order_lower_bound_met": true
+  },
+  "scope": "Exact finite signed-permutation construction. The identification with the Schur cover is at permutation-group/extension level; no complex reflection matrices are required."
+}
