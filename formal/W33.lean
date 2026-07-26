@@ -42,3 +42,4 @@ import W33.Pass806TwoBranchGluing
 import W33.Pass1006RamifiedFiltration
 import W33.Pass1018PencilRigidity
 import W33.Pass1063SignedLiftObstruction
+import W33.Pass1074SchurCocycleExtension
