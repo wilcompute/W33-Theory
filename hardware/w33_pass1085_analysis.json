@@ -1,0 +1,7 @@
+{
+  "decision": "contextual_positive",
+  "witness_W": 10.03975,
+  "noncontextual_bound": 7,
+  "observable": "state_independent_contextuality_witness_W",
+  "contextual_fraction_claim": null
+}

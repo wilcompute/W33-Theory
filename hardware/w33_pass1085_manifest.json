@@ -1,0 +1,14 @@
+{
+  "schema": "w33.pass1085.acquisition_manifest.v1",
+  "controller_firmware": "mock-mzi-controller/1.0",
+  "schedule_sha256": "c6e505e53c981afebc1d4293f69eea41ea63e4040830cd15b2a643f1e7a25fc5",
+  "command_count": 240,
+  "escrow_key_commitment_sha256": "2d7a7d0a8df59040216de2c920c576c074b79100714c40ae1d413078abbb534c",
+  "key_material_committed": false,
+  "observable": "state_independent_contextuality_witness_W",
+  "noncontextual_bound": 7,
+  "Abramsky_Barbosa_CF_expected": 1,
+  "retired_claim": "CF=1/10",
+  "real_acquisition_requires_external_key": true,
+  "manifest_sha256": "55561f677a27a615b73932853a414d00dc8ffaa9f844997b6834d272138cf0f9"
+}
