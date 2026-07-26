@@ -157,13 +157,21 @@ Main1022 := function()
   WriteAll(stream, "  \"witnesses\": {\n");
   WriteAll(stream, "    \"center_C2_admits_section\": false,\n");
   WriteAll(stream, "    \"Sylow5_admits_section\": true,\n");
+  # GAP's String() pads brackets ("[ 5, 5 ]"); the committed artifact used the
+  # unpadded form, so strip the padding here rather than hand-edit the JSON.
   WriteAll(stream, Concatenation("    \"Sylow5_base_orbit_lengths\": ",
-    String(SortedList(List(sylow5Orbits, Length))), "\n"));
+    ReplacedString(ReplacedString(
+      String(SortedList(List(sylow5Orbits, Length))), "[ ", "["), " ]", "]"),
+    "\n"));
   WriteAll(stream, "  },\n");
   WriteAll(stream, "  \"verification\": {\n");
   WriteAll(stream, "    \"diagnostic_workflow_run\": 30178232660,\n");
   WriteAll(stream, "    \"diagnostic_artifact_id\": 8624845703,\n");
-  WriteAll(stream, "    \"diagnostic_result\": \"PASS 25/25\"\n");
+  WriteAll(stream, "    \"diagnostic_result\": \"PASS 25/25\",\n");
+  # This note was hand-added to the committed JSON but never emitted here, so the
+  # tracked artifact was not byte-reproducible from the tracked source -- in a job
+  # configured to fail closed on stale certificates.  Text preserved verbatim.
+  WriteAll(stream, "    \"fixed_ci_issue\": \"StructureDescription required an optional Small Groups identification package; the theorem now uses Size + IsCyclic, which is sufficient to certify C6.\"\n");
   WriteAll(stream, "  },\n");
   WriteAll(stream, Concatenation("  \"check_count\": ", String(Length(names)), ",\n"));
   WriteAll(stream, "  \"checks\": {\n");
