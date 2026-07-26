@@ -1,5 +1,5 @@
 {
-  "files_with_uncited_collisions": 1311,
+  "files_with_uncited_collisions": 1314,
   "merge_list": [
     {
       "files": [
@@ -119,12 +119,49 @@
     },
     {
       "files": [
+        "PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md",
+        "analysis/2026-07-15_pass352_chirality_boundary_summary.md",
+        "analysis/2026-07-15_pass356_css_distance_lower_bound.md",
+        "analysis/2026-07-15_pass357_three_threads_synthesis.md",
+        "analysis/2026-07-15_pass76_k6_matchings_codewords.md",
+        "analysis/2026-07-15_pass77_monster_2b_css_code.md",
+        "analysis/2026-07-15_pass78_stabilizer_rank_census.md",
+        "analysis/2026-07-15_pass79_leech_kneser_css.md",
+        "analysis/CANON_240_81_3.md",
+        "analysis/CANON_40_10_4.md",
+        "analysis/CANON_40_15_8.md",
+        "analysis/THE_SELECTION_LAYER.md",
+        "analysis/W33_HONEST_SYNTHESIS.md",
+        "analysis/build_results_index.py",
+        "analysis/w33_pass204_transversal_clifford.py",
+        "analysis/w33_pass206_subsystem_claim_withdrawal.g",
+        "analysis/w33_pass211_pgsp_controller_clifford.g",
+        "analysis/w33_pass224_shadow_code_tower.py",
+        "analysis/w33_pass229_css_code_family.py",
+        "analysis/w33_pass234_photonic_device_spec.py",
+        "analysis/w33_pass237_magic_distillation.py",
+        "analysis/w33_pass253_proton_decay.py",
+        "analysis/w33_pass323_the_css_family_audit.py",
+        "analysis/w33_pass325_what_the_program_is_for.py",
+        "analysis/w33_pass326_the_last_survivors.py",
+        "analysis/w33_pass327_building_the_map.py",
+        "analysis/w33_pass328_the_census_broke_the_guard.py",
+        "analysis/w33_pass331_weil_chirality_lift_obstruction.g",
+        "analysis/w33_pass353_the_index_never_read_the_code.py",
+        "passes/README_passes_240_249.md",
+        "passes/pass_240_249_shadow_tower_unification.py"
+      ],
+      "result": "[[40,10,4]]"
+    },
+    {
+      "files": [
         "PASS173_INCIDENCE_TRANSCEIVER_ROUTE_DARK_LATTICE.md",
         "PASS176_INCIDENCE_FIXED_LINE_E8_BRIDGE.md",
         "PASS177_ADDRESS_ROUTE_DUAL_THETA_SPLIT.md",
         "PASS179_SENTINEL_CONTEXT_POISSON_PAIR.md",
         "analysis/2026-07-10_levi_next5_v2.md",
         "analysis/CANON_240_81_3.md",
+        "analysis/CANON_40_15_8.md",
         "analysis/PART_2026_07_10_LEVI_NEXT5_V2_insert.tex",
         "analysis/PART_2026_07_10_LEVI_NEXT5_V3_insert.tex",
         "analysis/THE_SELECTION_LAYER.md",
@@ -150,40 +187,6 @@
         "analysis/w33_pass353_the_index_never_read_the_code.py"
       ],
       "result": "[40,15,8]"
-    },
-    {
-      "files": [
-        "PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md",
-        "analysis/2026-07-15_pass352_chirality_boundary_summary.md",
-        "analysis/2026-07-15_pass356_css_distance_lower_bound.md",
-        "analysis/2026-07-15_pass357_three_threads_synthesis.md",
-        "analysis/2026-07-15_pass76_k6_matchings_codewords.md",
-        "analysis/2026-07-15_pass77_monster_2b_css_code.md",
-        "analysis/2026-07-15_pass78_stabilizer_rank_census.md",
-        "analysis/2026-07-15_pass79_leech_kneser_css.md",
-        "analysis/CANON_240_81_3.md",
-        "analysis/THE_SELECTION_LAYER.md",
-        "analysis/W33_HONEST_SYNTHESIS.md",
-        "analysis/build_results_index.py",
-        "analysis/w33_pass204_transversal_clifford.py",
-        "analysis/w33_pass206_subsystem_claim_withdrawal.g",
-        "analysis/w33_pass211_pgsp_controller_clifford.g",
-        "analysis/w33_pass224_shadow_code_tower.py",
-        "analysis/w33_pass229_css_code_family.py",
-        "analysis/w33_pass234_photonic_device_spec.py",
-        "analysis/w33_pass237_magic_distillation.py",
-        "analysis/w33_pass253_proton_decay.py",
-        "analysis/w33_pass323_the_css_family_audit.py",
-        "analysis/w33_pass325_what_the_program_is_for.py",
-        "analysis/w33_pass326_the_last_survivors.py",
-        "analysis/w33_pass327_building_the_map.py",
-        "analysis/w33_pass328_the_census_broke_the_guard.py",
-        "analysis/w33_pass331_weil_chirality_lift_obstruction.g",
-        "analysis/w33_pass353_the_index_never_read_the_code.py",
-        "passes/README_passes_240_249.md",
-        "passes/pass_240_249_shadow_tower_unification.py"
-      ],
-      "result": "[[40,10,4]]"
     },
     {
       "files": [
@@ -271,6 +274,32 @@
         "exploration/w33_niemeier_lattices.py"
       ],
       "result": "a_2+e_8"
+    },
+    {
+      "files": [
+        "PASS1021_E8_FIBRATION_OVER_FORTY.md",
+        "PASS1031_DUAL_120_PHASE_CARRIERS.md",
+        "analysis/BT812_five_vacua.md",
+        "analysis/BT813_vacuum_transition_matrix.md",
+        "analysis/bt812_five_vacua.py",
+        "analysis/bt813_vacuum_transition_matrix.py",
+        "analysis/bt859_bell_compass_parabolic_router.py",
+        "analysis/w33_hashimoto_weinberg_transport_correction.py",
+        "analysis/w33_pass1021_e8_fibration_over_forty.g",
+        "analysis/w33_pass1031_dual_120_phase_carriers.py",
+        "analysis/w33_pass332_integral_halfspin_lift.g",
+        "analysis/w33_pass338_selector_frame_240.g",
+        "analysis/w33_weinberg_eq52_structural_correction.py",
+        "exploration/PART_CCCLIII_EIGENSPACE_PROJECTORS_BRIDGE.py",
+        "exploration/PART_CCCXI_BOSE_MESNER_BRIDGE.py",
+        "exploration/PART_CCCXLIX_EIGENMATRIX_PQ_BRIDGE.py",
+        "exploration/PART_CCCXLVI_Q_MATRIX_WEINBERG_BRIDGE.py",
+        "exploration/PART_CCCX_KREIN_BRIDGE.py",
+        "exploration/PART_CCLXXXVII_KREIN_ARRAY_BRIDGE.py",
+        "exploration/PART_CCLXXXVI_KREIN_QPOLY_BRIDGE.py",
+        "exploration/PART_CCXCIX_KREIN_PARAMETERS_BRIDGE.py"
+      ],
+      "result": "[1,12,27]"
     },
     {
       "files": [
@@ -549,30 +578,6 @@
         "exploration/w33_yukawa_unipotent_reduction_bridge.py"
       ],
       "result": "[0,0,1]"
-    },
-    {
-      "files": [
-        "PASS1021_E8_FIBRATION_OVER_FORTY.md",
-        "analysis/BT812_five_vacua.md",
-        "analysis/BT813_vacuum_transition_matrix.md",
-        "analysis/bt812_five_vacua.py",
-        "analysis/bt813_vacuum_transition_matrix.py",
-        "analysis/bt859_bell_compass_parabolic_router.py",
-        "analysis/w33_hashimoto_weinberg_transport_correction.py",
-        "analysis/w33_pass1021_e8_fibration_over_forty.g",
-        "analysis/w33_pass332_integral_halfspin_lift.g",
-        "analysis/w33_pass338_selector_frame_240.g",
-        "analysis/w33_weinberg_eq52_structural_correction.py",
-        "exploration/PART_CCCLIII_EIGENSPACE_PROJECTORS_BRIDGE.py",
-        "exploration/PART_CCCXI_BOSE_MESNER_BRIDGE.py",
-        "exploration/PART_CCCXLIX_EIGENMATRIX_PQ_BRIDGE.py",
-        "exploration/PART_CCCXLVI_Q_MATRIX_WEINBERG_BRIDGE.py",
-        "exploration/PART_CCCX_KREIN_BRIDGE.py",
-        "exploration/PART_CCLXXXVII_KREIN_ARRAY_BRIDGE.py",
-        "exploration/PART_CCLXXXVI_KREIN_QPOLY_BRIDGE.py",
-        "exploration/PART_CCXCIX_KREIN_PARAMETERS_BRIDGE.py"
-      ],
-      "result": "[1,12,27]"
     },
     {
       "files": [
@@ -3720,9 +3725,9 @@
     }
   ],
   "merge_list_size": 859,
-  "percent_colliding": 22.9,
+  "percent_colliding": 23.0,
   "reading": "A row is a CANDIDATE, not a verdict: the same integer recurs legitimately. The value of the list is that it is finite and ranked, so the corpus can be de-duplicated top-down rather than one accidental collision at a time.",
-  "scanned_files": 5713,
+  "scanned_files": 5717,
   "schema": "w33.rediscovery_sweep.v1",
   "top_files": [
     {
@@ -3848,20 +3853,20 @@
   ],
   "top_results": [
     {
-      "result": "[[240,81,3]]",
-      "uncited_files": 49
-    },
-    {
       "result": "[240,81,3]",
       "uncited_files": 49
     },
     {
+      "result": "[[240,81,3]]",
+      "uncited_files": 49
+    },
+    {
       "result": "[[40,10,4]]",
-      "uncited_files": 28
+      "uncited_files": 30
     },
     {
       "result": "[40,15,8]",
-      "uncited_files": 25
+      "uncited_files": 26
     },
     {
       "result": "d4+szilassi",
@@ -3920,6 +3925,10 @@
       "uncited_files": 19
     },
     {
+      "result": "[1,12,27]",
+      "uncited_files": 19
+    },
+    {
       "result": "cabibbo+koide",
       "uncited_files": 19
     },
@@ -3945,10 +3954,6 @@
     },
     {
       "result": "gkp+hesse",
-      "uncited_files": 18
-    },
-    {
-      "result": "[1,12,27]",
       "uncited_files": 18
     },
     {
