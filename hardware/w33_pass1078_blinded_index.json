@@ -1,0 +1,10 @@
+{
+  "index": [
+    {"label":"contextual_hessian","blind_id":"e7bf69ae989583f8a8a4"},
+    {"label":"noncontextual_hessian","blind_id":"4937a302bb7110d67741"},
+    {"label":"contextual_dual","blind_id":"b2d6fd8636d29f8170d5"},
+    {"label":"noncontextual_dual","blind_id":"47a5d910909942b44cca"}
+  ],
+  "synthetic_signature_hmac_sha256": "a62486ee448cfcdd0df73440d20940562566ba179196284bcbba70f088014778",
+  "warning": "synthetic fixture only; do not use this key for real acquisition"
+}
