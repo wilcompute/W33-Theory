@@ -1,0 +1,62 @@
+{
+  "E8_point_phase_scheme": {
+    "local_controller": "C3",
+    "rank": 7,
+    "reading": "three individually oriented phase states over the base point, three separate 27 transport orbitals, and one 36 orbital",
+    "subdegrees": [1, 1, 1, 27, 27, 27, 36]
+  },
+  "check_count": 19,
+  "checks": {
+    "C3_to_S3_fusion_values_match_selector": true,
+    "both_actions_have_degree_120": true,
+    "diagonal_overlap_108_has_valency_one": true,
+    "fusion_blocks_partition_point_subdegrees": true,
+    "intersecting_line_overlap_12_has_valency_36": true,
+    "line_phase_action_has_rank_five": true,
+    "line_phase_subdegrees_are_1_2_27_36_54": true,
+    "pass1031_nonconjugacy_remains_in_force": true,
+    "point_phase_action_has_rank_seven": true,
+    "point_phase_subdegrees_are_1_1_1_27_27_27_36": true,
+    "remaining_1_27_36_are_preserved": true,
+    "same_fibre_two_singletons_fuse_to_two": true,
+    "same_line_overlap_54_has_valency_two": true,
+    "selector_intersection_profile_is_exact": true,
+    "selector_valencies_equal_line_phase_subdegrees": true,
+    "skew_matched_overlap_4_has_valency_27": true,
+    "skew_unmatched_overlap_2_has_valency_54": true,
+    "source_certificates_pass": true,
+    "two_27_transport_orbits_fuse_to_54": true
+  },
+  "consequence": "BT360's predicted hidden association scheme is now identified exactly. A correcting character twist must respect the rank-five orbital algebra and its S3 phase inversion, rather than treating the 120 sheets as an unstructured orbit.",
+  "fusion_shadow": {
+    "blocks": [[1], [1, 1], [27], [36], [27, 27]],
+    "controller_upgrade": "C3 oriented phase -> S3 phase with inversion",
+    "formula": "[1] + [1+1] + [27] + [36] + [27+27] = [1,2,27,36,54]",
+    "interpretation": "phase inversion merges the two nonidentity fibre directions and pairs two of the three 27-dimensional transport classes",
+    "source_subdegrees": [1, 1, 1, 27, 27, 27, 36],
+    "target_subdegrees": [1, 2, 27, 36, 54]
+  },
+  "headline": "The hidden 120-sheet selector association scheme is the rank-five orbital scheme of the line-phase PSp(4,3) action, with valencies [1,2,27,36,54] exactly matching overlaps 108^1,54^2,4^27,12^36,2^54. The dual E8 point-phase action has rank seven and subdegrees [1,1,1,27,27,27,36]. The selector pattern is the C3-to-S3 subdegree-fusion shadow 1+1->2 and 27+27->54.",
+  "important_boundary": "Because Pass 1031 proves the two 120-sets are nonisomorphic, this is a dual subdegree-fusion law and local controller explanation, not a literal Bose-Mesner fusion on one common vertex set.",
+  "schema": "w33.pass1032.selector_orbital_fusion_shadow.python.v1",
+  "selector_line_phase_scheme": {
+    "geometric_reading": {
+      "108": "the sheet itself",
+      "12": "3 phases over each of 12 intersecting lines",
+      "2": "two phase-unmatched sheets over each of 27 skew lines",
+      "4": "one phase-matched sheet over each of 27 skew lines",
+      "54": "the other two phases over the same line"
+    },
+    "local_controller": "S3",
+    "overlap_to_valency": {
+      "108": 1,
+      "12": 36,
+      "2": 54,
+      "4": 27,
+      "54": 2
+    },
+    "rank": 5,
+    "subdegrees": [1, 2, 27, 36, 54]
+  },
+  "status": "PASS"
+}
