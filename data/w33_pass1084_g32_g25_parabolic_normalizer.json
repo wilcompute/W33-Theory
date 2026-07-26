@@ -1,0 +1,8 @@
+{
+  "status":"PASS",
+  "normalizer":{"setwise_slice_stabilizer_order":3888,"pointwise_G25_order":648,"quotient":"C6; its action on the basic invariant ring factors through C2","outer_word_zero_based":[3,2,1,0,0,1,2,3],"outer_word_one_based":[4,3,2,1,1,2,3,4],"exact_matrix":[["-w","0","0","0"],["0","-w","0","0"],["0","0","-w","0"],["0","0","0","1+1w"]],"mod43_slice_matrix":[[37,0,0],[0,37,0],[0,0,37]],"invariant_action_mod43":{"u6":1,"v9":42,"w12":1}},
+  "exact_arrangement":{"G32_hyperplanes":40,"slice_factor":1,"G25_hyperplanes":12,"restricted_distinct":21,"multiplicity_profile":{"1":12,"3":9},"extra_triple_hyperplanes":9},
+  "theorem":"The setwise stabilizer of the parabolic slice has order 3888 = 648*6; modulo pointwise G25 it is C6, and its action on the basic invariant ring factors through parity C2. Its nontrivial quotient fixes u6 and w12 and negates v9. The characteristic-zero reflecting arrangement restricts as one slice factor, twelve parabolic factors once, and nine extra factors cubed.",
+  "check_count":12,
+  "checks":{"G25_order648":true,"G32_order155520":true,"slice_stabilizer3888":true,"pointwise_G25_648":true,"quotient_order6":true,"exact_word_lifts":true,"exact_matrix_preserves_slice":true,"u6_fixed":true,"v9_negated":true,"w12_fixed":true,"exact_arrangement_profile_12_once_9_triple":true,"slice_factor_unique":true}
+}
