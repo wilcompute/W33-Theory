@@ -1,0 +1,28 @@
+{
+  "schema": "w33.pass1042.tower_discriminators.gap.v1",
+  "status": "PASS",
+  "headline": "Two things separate the Eisenstein tower from its Gaussian sibling, and neither is size. The base: the doily has 6 ovoids and W(3,3) has 0, so the Gaussian base is Kochen-Specker COLOURABLE and the Eisenstein base is not. The fibre: Z6 = Z2 x Z3 splits into two independent obstruction halves, while the Gaussian Z4 is cyclic with a unique order-two subgroup and therefore cannot split at all -- one indecomposable class instead of two coordinates.",
+  "discriminator_a_contextuality": {
+    "doily_ovoids": 6, "W33_ovoids": 0,
+    "reading": "an ovoid is a KS 0/1 colouring, so the Gaussian base admits a noncontextual value assignment and the Eisenstein base does not",
+    "prior_art": "analysis/w33_ovoid_construct.py; Thas: W(q) has ovoids iff q even"
+  },
+  "discriminator_b_obstruction_shape": {
+    "eisenstein_fibre": "Z6 = Z2 x Z3, splits into independent halves (Pass 1023)",
+    "gaussian_fibre": "Z4, cyclic, unique order-2 subgroup, no complement, cannot split",
+    "gaussian_monodromy": 4,
+    "both_obstructed": true
+  },
+  "reading": "This supplies what Pass 1039 showed was missing. The Springer construction does not single out q = 3, but the two towers it produces are not interchangeable: only the Eisenstein base is contextual, and only the Eisenstein fibre carries two independent obstruction coordinates. The 'minimal magic / contextuality' leg that photonic_holonet.tex lists among its three q = 3 forcing arguments is the one that survives as a STRUCTURAL statement about the tower rather than a numerical coincidence.",
+  "scope": "Two differences, verified. It does not prove they are the only ones, and it does not revive any numerical q = 3 argument -- Lock 9, Lock 10 and the 7/7 observable table in w33_paper.tex remain fits, not derivations.",
+  "check_count": 7,
+  "checks": {
+    "gaussian_fibre_is_cyclic_Z4": true,
+    "gaussian_Z4_has_a_unique_order_two_subgroup": true,
+    "gaussian_monodromy_on_the_60_is_full_Z4": true,
+    "gaussian_admits_no_section": true,
+    "eisenstein_fibre_splits_into_independent_halves": true,
+    "gaussian_has_no_independent_halves": true,
+    "both_towers_are_obstructed": true
+  }
+}
