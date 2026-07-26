@@ -1,0 +1,17 @@
+{
+  "schema": "w33.pass1078.photonic_hardware_backend.v1",
+  "status": "PASS",
+  "headline": "The preregistered W33 protocol now has a deterministic 40-mode adjacent-MZI backend, exact resource accounting, HMAC-signed manifests, strict real-data CSV ingestion, sequential stopping rules, and a separate signature-checked offline unblinding path.",
+  "resources": {"contexts":40,"gauge_cycles":40,"elementary_operations":6480,"max_mesh_depth":8,"max_mzi_count":102,"total_context_mzi_count":2880,"detector_channels":4,"time_bin_delay_slots":40,"switch_control_bits_per_mzi":2},
+  "schedule_sha256": "1e01dc0a5194802b417f591b06e1a75097285240803b4eaf905f753f6c0b253f",
+  "manifest_signature": "d84a0431ebcb40bf18be4d3133a28ec432170781d03c63fb23f995b05c8368d4",
+  "synthetic_fixtures": {
+    "positive":{"decision":"contextual_positive","stop_block":10,"reason":"lower_CI_above_bound"},
+    "negative":{"decision":"noncontextual_negative","stop_block":10,"reason":"upper_CI_below_bound"},
+    "bad_calibration":{"decision":"inconclusive_no_claim","stop_block":5,"reason":"calibration_gate"}
+  },
+  "check_count": 11,
+  "checks": {"forty_contexts_compiled":true,"all_contexts_route_to_ports_0_1_2_3":true,"all_meshes_reconstruct_exact_permutations":true,"forty_gauge_cycles":true,"elementary_operation_count_is_6480":true,"manifest_signature_verifies":true,"offline_unblinding_verifies_signature":true,"positive_fixture_stops_positive":true,"negative_fixture_stops_negative":true,"bad_calibration_fails_closed":true,"real_csv_schema_ingests_four_detector_rows":true},
+  "hardware_artifacts": ["hardware/w33_pass1078_mesh_manifest.json","hardware/w33_pass1078_macro_schedule.json","hardware/w33_pass1078_blinded_index.json","hardware/w33_pass1078_real_data_fixture.csv"],
+  "scope": "Executable control-plane backend and synthetic validation. No physical optical mesh, detector calibration, acquisition duration, or experimental statistical power is claimed."
+}
