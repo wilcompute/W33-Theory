@@ -58,7 +58,7 @@ theorem inv_of_quadratic {A : Type*} [Ring A] [Algebra R A] (F : A) (c : R)
     ∃ G, F * G = 1 ∧ G * F = 1 := by
   obtain ⟨u, hu⟩ := hc
   refine ⟨↑u⁻¹ * (F + 2), ?_, ?_⟩
-  · have : F * (F + 2) = algebraMap R A c := by ring_nf; linear_combination hquad
+  · have : F * (F + 2) = algebraMap R A c := by linear_combination hquad
     calc F * (↑u⁻¹ * (F + 2)) = ↑u⁻¹ * (F * (F + 2)) := by ring
       _ = ↑u⁻¹ * (u : A) := by rw [this, hu]
       _ = 1 := by simp

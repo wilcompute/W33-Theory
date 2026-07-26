@@ -31,7 +31,8 @@ theorem shiftedPhiFive_eval (x : ℤ) :
 
 /-- The translated polynomial is monic of degree four. -/
 theorem shiftedPhiFive_monic : shiftedPhiFive.Monic := by
-  simp [shiftedPhiFive]
+  unfold shiftedPhiFive
+  monicity!
 
 /-- The native order is inhabited. -/
 theorem cyclotomicFiveOrder_nonempty : Nonempty CyclotomicFiveOrder := by

@@ -39,7 +39,9 @@ theorem shiftedPhiFive_monic : shiftedPhiFive.Monic := by
 /-- Evaluating the shifted polynomial at zero modulo five vanishes. -/
 theorem shiftedPhiFive_zero_mod_five :
     Polynomial.eval₂ (Int.castRingHom (ZMod 5)) 0 shiftedPhiFive = 0 := by
-  norm_num [shiftedPhiFive]
+  -- `eval₂ f 0 p = f (p.coeff 0)`, and the constant term is 5, which is 0 mod 5.
+  rw [Polynomial.eval₂_at_zero]
+  simp [shiftedPhiFive]
 
 /-- Canonical residue map, sending the uniformizer to zero. -/
 def residueMap : CyclotomicFiveOrder →+* ZMod 5 :=
