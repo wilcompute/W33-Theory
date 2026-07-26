@@ -1,0 +1,8 @@
+{
+  "status":"PASS","check_count":7,
+  "checks":{"pass1080_w33_CF_is_one":true,"pass1080_doily_CF_is_zero":true,"no_hardware_manifest_claims_CF_one_tenth":true,"legacy_estimator_has_correction_banner":true,"legacy_output_uses_click_rate_name":true,"legacy_output_does_not_emit_corrected_contextual_fraction":true,"legacy_target_name_is_click_rate":true},
+  "retired_claim":"Abramsky-Barbosa contextual fraction = 1/10",
+  "correct_CF":{"W33":1.0,"doily":0.0},
+  "one_tenth_status":"unidentified demonstrator click-rate target; not a contextual fraction and not a valid substrate falsifier until independently derived",
+  "scope":"Claim-label firewall. Historical research files may retain the number with explicit correction banners; executable acquisition and analysis surfaces may not label 1/10 as contextual fraction."
+}
