@@ -15,8 +15,8 @@ symplectic generalized quadrangle **W(3,3)**: 40 points, 40 lines, 4 points per 
 No free parameters, no tuning, nothing to fit.
 
 What came out of it is this repository: **10,693 commits since 2026-01-16**, 19,767 tracked files, 2,925
-machine-checked JSON certificates, 3,021 tests, 94 GAP witnesses, and 49 Lean files — of which **19 do not
-compile**, see [Lean build status](#lean-build-status-read-this-before-trusting-any-proved-tier). The finite mathematics is
+machine-checked JSON certificates, 3,021 tests, 94 GAP witnesses, and 49 Lean files, whose build status is
+**not what an earlier version of this README claimed** — see [Lean build status](#lean-build-status-read-this-before-trusting-any-proved-tier). The finite mathematics is
 exact. The physics program is ambitious and, in places, **wrong** — and this README will tell you exactly
 where, because the retractions are the most valuable thing here.
 
@@ -50,7 +50,7 @@ fails, it gets a retraction pass, not a quiet edit.
 | see the whole atlas, interactively | [Live atlas](https://wilcompute.github.io/W33-Theory/) |
 | read the mathematics | **[w33_paper.pdf](docs/pdf/w33_paper.pdf)** (1.37 MiB, opens in browser) &middot; [source](w33_paper.tex) |
 | read the deformation/lattice track | **[heisenberg_weyl_determinant_law.pdf](docs/pdf/heisenberg_weyl_determinant_law.pdf)** (240 KB) &middot; [source](papers/heisenberg_weyl_determinant_law.tex) |
-| read the photonic machine | [`photonic_holonet.tex`](photonic_holonet.tex) · [`HOLONET.md`](HOLONET.md) |
+| read the photonic machine | **[photonic_holonet.pdf](docs/pdf/photonic_holonet.pdf)** (933 KB, opens in browser) &middot; [source](photonic_holonet.tex) &middot; [`HOLONET.md`](HOLONET.md) |
 | **find a result before re-deriving it** | [`RESULTS_INDEX.md`](RESULTS_INDEX.md) — *do this first* |
 
 The atlas is deliberately too large to read linearly. Navigate by question, then follow each claim to its
@@ -343,22 +343,40 @@ A certificate is idempotent: rerun it with `--check` and it must reproduce byte-
 
 ## Lean build status (read this before trusting any PROVED tier)
 
-**`lake build` in `formal/` fails. It has failed for a long time. There is no Lean badge in this
-README because there is nothing green to advertise.**
+**A whole-repository `lake build` in `formal/` does not currently complete on the machine it was
+measured on. There is no Lean badge in this README because nothing green has been demonstrated.**
 
-Measured 2026-07-25 with `leanprover/lean4:v4.32.0-rc1` and a prebuilt mathlib:
+**How many modules are actually broken is NOT established, and an earlier version of this section
+said otherwise.** That claim — "20 modules with real compile errors", later "19" — was wrong, and the
+correction is recorded here rather than quietly edited away.
+
+What happened: a whole-library build reported ~20 failures, and they were taken at face value. On
+re-measurement almost every one was `failed to read file …/Mathlib/….olean` **at line 1, column 0** —
+the import line — with a *different* mathlib file named on each run. A genuinely corrupt artifact
+fails identically every time; varying targets mean transient I/O, and the builds had been running
+concurrently. `lake exe cache get` reports the cache complete and the named files exist on disk.
+
+Measured 2026-07-25, `leanprover/lean4:v4.32.0-rc1`, prebuilt mathlib:
 
 | | |
 |---|---|
 | `.lean` files under `formal/W33/` | 40 |
 | imported by `formal/W33.lean` (so reachable by `lake build`) | 39 |
-| **of those, modules with real compile errors** | **19** (was 20; `Pass447SpanLemma` fixed) |
+| **demonstrated real compile error** | **1** — `Pass447SpanLemma`, since **fixed** and verified building |
+| build individually when run **serialised**, one at a time | `Pass457`, `Pass481`, `Pass484`, `Pass486`, `Pass515`, `Pass447` — all exit 0 |
+| status unresolved (fail under contention, not yet cleanly re-tested) | `Pass450`, `Pass488`, `Pass491`, `Pass502`×2, `Pass508`, `Pass511`, `Pass517`, `Pass533`, `Pass557`×2, `Pass560`, `Pass565`, `Pass570` |
 | never imported at all, so never type-checked by anything | 4 (now 3 imported, 1 left out — see below) |
 
-Broken modules: `Pass450`, `Pass481`, `Pass484`, `Pass486`,
-`Pass487`, `Pass488`, `Pass491`, `Pass502HjelmslevGram`, `Pass502RelativeNormSquare`, `Pass508`,
-`Pass511`, `Pass515`, `Pass517`, `Pass533`, `Pass557ConstantValuation`, `Pass557OddPeriodLift`,
-`Pass560`, `Pass565`, `Pass570`.
+The one real bug found so far was **mathlib drift, not bad mathematics**: in
+`rintro v (rfl | rfl)` the second disjunct `v = p` makes `subst` eliminate `p`, so later `have`s
+mentioning `p` fail with `Unknown identifier p`. Establishing them before the `rintro` fixes it.
+
+**To settle a module, build it alone** — a whole-library build on this machine is not a reliable
+measurement:
+
+```bash
+cd formal && lake build W33.<TheModule>   # exit 0, run with nothing else building
+```
 
 `Pass828CoalescenceArithmetic` is deliberately **not** imported: it cannot compile, because line 91 asks
 Lean to synthesise `Decidable (¬∃ k, gluing_order = k^2)`, an unbounded existential over `ℕ`. It is left
@@ -433,7 +451,7 @@ py -3 tools/bt1291_verify_release_packet.py   # verifies the whole packet
 | `data/` | 2,925 JSON certificates — gitignored, `git add -f` to commit |
 | `tests/` | 3,021 pytest files |
 | `scripts/` | 809 tools, including the guards |
-| `formal/` | Lean 4 + mathlib, 49 files — **`lake build` fails; 20 of 39 imported modules have real errors** |
+| `formal/` | Lean 4 + mathlib, 49 files — **whole-library `lake build` unreliable here; build modules individually** |
 | `papers/` | 55 manuscripts; main is `w33_paper.tex` at repo root |
 | `docs/` | 545 files; the live atlas is `docs/index.html` |
 | `PASS_*`, `BREAKTHROUGH_*`, `PART_*` | 551 root-level synthesis documents |
