@@ -15,7 +15,7 @@ symplectic generalized quadrangle **W(3,3)**: 40 points, 40 lines, 4 points per 
 No free parameters, no tuning, nothing to fit.
 
 What came out of it is this repository: **10,693 commits since 2026-01-16**, 19,767 tracked files, 2,925
-machine-checked JSON certificates, 3,021 tests, 94 GAP witnesses, and 49 Lean files — of which **20 do not
+machine-checked JSON certificates, 3,021 tests, 94 GAP witnesses, and 49 Lean files — of which **19 do not
 compile**, see [Lean build status](#lean-build-status-read-this-before-trusting-any-proved-tier). The finite mathematics is
 exact. The physics program is ambitious and, in places, **wrong** — and this README will tell you exactly
 where, because the retractions are the most valuable thing here.
@@ -352,10 +352,10 @@ Measured 2026-07-25 with `leanprover/lean4:v4.32.0-rc1` and a prebuilt mathlib:
 |---|---|
 | `.lean` files under `formal/W33/` | 40 |
 | imported by `formal/W33.lean` (so reachable by `lake build`) | 39 |
-| **of those, modules with real compile errors** | **20** |
+| **of those, modules with real compile errors** | **19** (was 20; `Pass447SpanLemma` fixed) |
 | never imported at all, so never type-checked by anything | 4 (now 3 imported, 1 left out — see below) |
 
-Broken modules: `Pass447SpanLemma` (`Unknown identifier p`), `Pass450`, `Pass481`, `Pass484`, `Pass486`,
+Broken modules: `Pass450`, `Pass481`, `Pass484`, `Pass486`,
 `Pass487`, `Pass488`, `Pass491`, `Pass502HjelmslevGram`, `Pass502RelativeNormSquare`, `Pass508`,
 `Pass511`, `Pass515`, `Pass517`, `Pass533`, `Pass557ConstantValuation`, `Pass557OddPeriodLift`,
 `Pass560`, `Pass565`, `Pass570`.

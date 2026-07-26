@@ -23,17 +23,22 @@ theorem span_pair_shift (c : K) (hc : c ≠ 0) (x p : V) :
         (Submodule.subset_span (Or.inl rfl))
         (Submodule.smul_mem _ c (Submodule.subset_span (Or.inr rfl)))
   · rw [Submodule.span_le]
-    rintro v (rfl | rfl)
-    · exact Submodule.subset_span (Or.inl rfl)
-    · have hx : x ∈ Submodule.span K {x, x + c • p} :=
-        Submodule.subset_span (Or.inl rfl)
-      have hxc : x + c • p ∈ Submodule.span K {x, x + c • p} :=
-        Submodule.subset_span (Or.inr rfl)
-      have hcp : c • p ∈ Submodule.span K {x, x + c • p} := by
-        have := Submodule.sub_mem _ hxc hx
-        simpa using this
-      have : c⁻¹ • (c • p) ∈ Submodule.span K {x, x + c • p} :=
+    -- These must be established BEFORE the `rintro ... rfl`: substituting the
+    -- second disjunct `v = p` eliminates `p` from the context, so any `have`
+    -- mentioning `p` afterwards fails with "Unknown identifier `p`".
+    have hx : x ∈ Submodule.span K {x, x + c • p} :=
+      Submodule.subset_span (Or.inl rfl)
+    have hxc : x + c • p ∈ Submodule.span K {x, x + c • p} :=
+      Submodule.subset_span (Or.inr rfl)
+    have hcp : c • p ∈ Submodule.span K {x, x + c • p} := by
+      have h := Submodule.sub_mem _ hxc hx
+      simpa using h
+    have hp : p ∈ Submodule.span K {x, x + c • p} := by
+      have h : c⁻¹ • (c • p) ∈ Submodule.span K {x, x + c • p} :=
         Submodule.smul_mem _ c⁻¹ hcp
-      simpa [smul_smul, inv_mul_cancel₀ hc] using this
+      simpa [smul_smul, inv_mul_cancel₀ hc] using h
+    rintro v (rfl | rfl)
+    · exact hx
+    · exact hp
 
 end W33.Pass447
