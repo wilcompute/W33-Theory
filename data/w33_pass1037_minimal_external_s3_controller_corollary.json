@@ -1,0 +1,43 @@
+{
+  "schema": "w33.pass1037.minimal_external_s3_controller.corollary.python.v1",
+  "status": "PASS",
+  "headline": "The already certified centralizer, normalizer, phase character, and base chirality character force the minimal external controller N/Sp(4,3) to be nonabelian S3. Its normal C3 is the complex-determinant phase detector and its quotient C2 acts by inversion. The internal six-root fibre is instead cyclic C6.",
+  "dependencies": {
+    "Pass1021": "internal Eisenstein-unit fibre C6",
+    "Pass1029": "normalizer order 311040 and total-space chirality blindness",
+    "Pass1031": "centralizer order 155520, kernel Sp(4,3) order 51840, quotient C3",
+    "Pass1033": "unique base chirality character C2"
+  },
+  "orders": {
+    "Sp43_kernel": 51840,
+    "centralizer": 155520,
+    "normalizer": 311040,
+    "phase_quotient": 3,
+    "chirality_quotient": 2,
+    "controller": 6
+  },
+  "exact_sequence": "1 -> C3 -> S3 -> C2 -> 1",
+  "action": "the nontrivial C2 element acts on C3 by inversion",
+  "proof": "N/C has order two and C/K has order three. An element t in N\\C normalizes <w> but cannot centralize w, because C is the centralizer. Thus t induces the unique nonidentity automorphism of C3, namely inversion. Consequently N/K is the nontrivial semidirect product C3:C2 = S3 rather than C6.",
+  "boundary": "This is a dependency-level theorem certificate built from previously verified GAP certificates. The companion Pass 1037 GAP script independently rebuilds W(E8) and computes the quotient objectwise when a GAP runner is available.",
+  "check_count": 17,
+  "checks": {
+    "all_input_certificates_pass": true,
+    "kernel_is_Sp43_order_51840": true,
+    "centralizer_order_assertion_is_present": true,
+    "normalizer_order_assertion_is_present": true,
+    "phase_detector_image_is_C3": true,
+    "base_chirality_image_is_C2": true,
+    "centralizer_over_kernel_is_three": true,
+    "normalizer_over_centralizer_is_two": true,
+    "normalizer_over_kernel_is_six": true,
+    "Aut_C3_has_order_two": true,
+    "outside_centralizer_action_is_nontrivial": true,
+    "external_involution_acts_by_inversion": true,
+    "controller_quotient_is_nonabelian": true,
+    "controller_quotient_is_S3": true,
+    "internal_fibre_is_cyclic_C6": true,
+    "external_S3_is_not_internal_C6": true,
+    "order_six_is_minimal": true
+  }
+}

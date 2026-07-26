@@ -1,0 +1,63 @@
+{
+  "schema": "w33.pass1036.six_response_photonic_falsifier.python.v1",
+  "status": "PASS",
+  "headline": "A six-response optical controller must realize S3, not a commuting C6 scalar clock. In the faithful two-mode representation, the ternary pulse r is a 120-degree rotation, the binary pulse s is a reflection, and srs=r^{-1}. All six responses are distinct and closed, while the false scalar C6 model fails the inversion echo.",
+  "compiler_labels": [
+    {"phase":0,"chirality":0,"label":"phase0_chirality0"},
+    {"phase":1,"chirality":0,"label":"phase1_chirality0"},
+    {"phase":2,"chirality":0,"label":"phase2_chirality0"},
+    {"phase":0,"chirality":1,"label":"phase0_chirality1"},
+    {"phase":1,"chirality":1,"label":"phase1_chirality1"},
+    {"phase":2,"chirality":1,"label":"phase2_chirality1"}
+  ],
+  "ideal_transfer_matrices": {
+    "phase0_chirality0":[[1.0,0.0],[0.0,1.0]],
+    "phase1_chirality0":[[-0.5,-0.866025403784],[0.866025403784,-0.5]],
+    "phase2_chirality0":[[-0.5,0.866025403784],[-0.866025403784,-0.5]],
+    "phase0_chirality1":[[1.0,0.0],[0.0,-1.0]],
+    "phase1_chirality1":[[-0.5,0.866025403784],[0.866025403784,0.5]],
+    "phase2_chirality1":[[-0.5,-0.866025403784],[-0.866025403784,0.5]]
+  },
+  "phase_orientation_readout": {"0":[1.0,0.0],"1":[-0.5,0.866025403784],"2":[-0.5,-0.866025403784]},
+  "chirality_readout": {
+    "phase0_chirality0":1,"phase1_chirality0":1,"phase2_chirality0":1,
+    "phase0_chirality1":-1,"phase1_chirality1":-1,"phase2_chirality1":-1
+  },
+  "falsifier_sequence": [
+    "calibrate r and verify r^3=I",
+    "calibrate s and verify s^2=I",
+    "measure the inversion echo s r s = r^{-1}",
+    "verify sr and rs are distinguishable",
+    "resolve all six phase/chirality transfer matrices"
+  ],
+  "ideal_residuals": {
+    "r_cubed":9.235218158431266e-16,
+    "s_squared":0.0,
+    "sr_squared":1.6118110483519546e-16,
+    "inversion_echo":1.3597399555105182e-16,
+    "noncommutativity":2.4494897427831783
+  },
+  "minimum_pairwise_frobenius_separation":1.9999999999999998,
+  "false_c6_control": {
+    "commutator_residual":0.0,
+    "inversion_echo_residual":1.7320508075688772,
+    "verdict":"fails: scalar sign and phase commute, so the binary pulse cannot invert the ternary phase"
+  },
+  "acceptance_rule":"A device realizes the full controller only if it resolves six transfer responses, passes r^3=s^2=(sr)^2=I, passes srs=r^{-1}, and rejects the commuting C6 model. Observing only a three-cycle certifies the residual C3 carrier, not the full controller.",
+  "boundary":"This is a transfer-matrix compiler and falsifier. It does not claim that a particular optical layout has achieved the required calibration or noise tolerance.",
+  "check_count":12,
+  "checks": {
+    "six_transfer_matrices_are_distinct":true,
+    "six_responses_are_closed_under_composition":true,
+    "phase_pulse_has_order_three":true,
+    "chirality_pulse_has_order_two":true,
+    "mixed_pulse_has_order_two":true,
+    "chirality_conjugates_phase_to_inverse":true,
+    "controller_is_noncommutative":true,
+    "response_separation_is_nonzero":true,
+    "three_even_responses_have_positive_determinant":true,
+    "three_odd_responses_have_negative_determinant":true,
+    "false_scalar_c6_model_commutes":true,
+    "false_scalar_c6_model_fails_inversion_echo":true
+  }
+}
