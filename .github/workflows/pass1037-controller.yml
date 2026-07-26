@@ -1,0 +1,55 @@
+name: Pass 1037 Minimal S3 Controller
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'analysis/w33_pass1037_minimal_external_s3_controller.g'
+      - 'analysis/w33_pass1037_controller_certificate.py'
+      - '.github/workflows/pass1037-controller.yml'
+  push:
+    branches: [ master ]
+    paths:
+      - 'analysis/w33_pass1037_minimal_external_s3_controller.g'
+      - 'analysis/w33_pass1037_controller_certificate.py'
+      - '.github/workflows/pass1037-controller.yml'
+
+jobs:
+  pass1037-certificate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install GAP fail closed
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3; do
+            if sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends gap; then
+              break
+            fi
+            sleep $((attempt * 5))
+          done
+          command -v gap
+          gap --version
+      - name: Run Pass 1037 from source
+        env:
+          W33_REPO: ${{ github.workspace }}
+        run: |
+          set -euo pipefail
+          rm -f data/w33_pass1037_minimal_external_s3_controller.json
+          gap -q -b --nointeract analysis/w33_pass1037_minimal_external_s3_controller.g 2>&1 | tee /tmp/pass1037.log
+          ! grep -q '^Error' /tmp/pass1037.log
+          test -f data/w33_pass1037_minimal_external_s3_controller.json
+      - name: Validate emitted certificate
+        run: python analysis/w33_pass1037_controller_certificate.py
+      - name: Upload certificate
+        uses: actions/upload-artifact@v4
+        with:
+          name: pass1037-minimal-s3-controller
+          path: |
+            data/w33_pass1037_minimal_external_s3_controller.json
+            data/w33_pass1037_diagnostic.txt
+          if-no-files-found: error
