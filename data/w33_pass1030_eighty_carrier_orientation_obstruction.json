@@ -1,0 +1,74 @@
+{
+  "action_obstruction": {
+    "E8_carrier": {
+      "group": "Sp(4,3)",
+      "group_order": 51840,
+      "orbit_partition": [80],
+      "stabilizer_order": 648,
+      "transitive": true
+    },
+    "Levi_vertex_carrier": {
+      "natural_group": "PSp(4,3) incidence action",
+      "orbit_partition": [40, 40],
+      "point_line_actions_conjugate": false,
+      "transitive_on_union": false
+    },
+    "conclusion": "no natural equivariant bijection under the verified actions",
+    "decisive_invariant": "orbit partition [80] versus [40,40]"
+  },
+  "boundary": "The dual line reading is combinatorial, not a second physical Witting-ray realization. This theorem rules out the natural internal identification; it does not construct the required external controller.",
+  "check_count": 14,
+  "checks": {
+    "E8_quotient_selects_points_not_lines": true,
+    "Sp43_order_is_51840": true,
+    "all_source_certificates_pass": true,
+    "dual_line_orientation_has_36_ovoids": true,
+    "levi_natural_orbits_are_forty_plus_forty": true,
+    "levi_vertex_count_is_eighty": true,
+    "orbit_partitions_disagree": true,
+    "orbit_stabilizer_gives_transitive_eighty": true,
+    "pass1028_marks_C2_as_distinct_eighty_carrier": true,
+    "pass1029_forbids_internal_orientation_reversal": true,
+    "phase_block_stabilizer_is_648": true,
+    "phase_quotient_is_eighty": true,
+    "point_and_line_actions_are_nonconjugate": true,
+    "point_orientation_has_zero_ovoids": true
+  },
+  "combined_no_go": {
+    "architectural_consequence": "a chirality controller must be an external extension acting above the incidence geometry; it cannot be identified with the raw point-versus-line label",
+    "pass1029": "Sp(4,3) contains no determinant-minus-one chirality switch",
+    "pass1030": "the raw 80-vertex Levi carrier has the wrong orbit structure"
+  },
+  "contextuality_asymmetry": {
+    "conclusion": "the two Levi halves are not interchangeable even combinatorially; their exact-cover invariants differ",
+    "forced_ovoid_size": 10,
+    "line_dual_orientation": {
+      "ovoids": 36,
+      "reading": "combinatorially colourable dual",
+      "spreads": 0
+    },
+    "point_orientation": {
+      "ovoids": 0,
+      "reading": "E8-selected, KS-uncolourable",
+      "spreads": 36
+    }
+  },
+  "count_coincidence": {
+    "E8_phase_quotient": "240/C3 = 80 omega triples",
+    "Levi_vertices": "40 points + 40 lines = 80",
+    "verdict": "equal cardinality only"
+  },
+  "experimental_falsifier": {
+    "automatic_failure": "a mere duplication into two 40-state banks, or a relabelling with no cross-orbit symmetry, does not realize the E8 chirality carrier",
+    "claim_under_test": "the binary chirality bit is implemented by swapping W33 points and lines",
+    "required_evidence": [
+      "a physical involution acting on one 80-state carrier",
+      "transitivity across the proposed point and line halves",
+      "explicit transport of incidence and phase labels",
+      "a measured distinction compatible with the 0-versus-36 ovoid boundary"
+    ]
+  },
+  "headline": "Although 240/C3=80 and the Levi graph has 40+40=80 vertices, the two natural Sp(4,3)-sets are inequivalent: the E8 omega-triple carrier is one transitive 80-orbit, whereas Levi vertices split into nonconjugate point and line 40-orbits with ovoid counts 0 and 36. Binary chirality is therefore not an internal point-line switch.",
+  "schema": "w33.pass1030.eighty_carrier_orientation_obstruction.python.v1",
+  "status": "PASS"
+}
