@@ -11,7 +11,7 @@ MODULES = [
     ("w33_pass1056_two_648_class_fusions", 12),
     ("w33_pass1057_action_semantics_firewall", 8),
     ("w33_pass1058_central_c3_discriminator", 7),
-    ("w33_pass1059_parallel_claim_audit", 20),
+    ("w33_pass1059_parallel_claim_audit", 24),
 ]
 
 
@@ -25,4 +25,4 @@ def test_pass(module_name: str, expected_checks: int) -> None:
 
 
 def test_total_check_count() -> None:
-    assert sum(expected for _, expected in MODULES) == 71
+    assert sum(expected for _, expected in MODULES) == 75
