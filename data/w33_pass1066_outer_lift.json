@@ -1,0 +1,14 @@
+{
+  "schema":"w33.pass1066.outer_lift.v1","status":"PASS",
+  "headline":"The outer W(E6) involution lifts to a split order-103680 extension Sp(4,3) semidirect C2, but its two unsigned outer-involution classes lift differently: the 36-class becomes order 4 with square equal to global root negation, while the 540-class has genuine involutory lifts.",
+  "signed_cover_order":51840,"full_extension_order":103680,
+  "abstract_extension":"Sp(4,3) semidirect C2 (split over the outer quotient, witnessed by a 540-class involutory lift)",
+  "outer_class_lifts":{
+    "36":{"unsigned_class_size":36,"inner_centralizer_order":720,"lift_order":4,"lift_square":"global_negation","signed_cycle_profile":{"4":60},"signed_conjugacy_class_size_under_Sp43":72,"negative_lift_in_same_signed_class":true,"extension_order":103680,"extension_center_order":2,"extension_derived_order":51840,"normalizes_signed_cover":true,"fixed_signed_roots":0},
+    "540":{"unsigned_class_size":540,"inner_centralizer_order":48,"lift_order":2,"lift_square":"identity","signed_cycle_profile":{"1":8,"2":116},"signed_conjugacy_class_size_under_Sp43":1080,"negative_lift_in_same_signed_class":true,"extension_order":103680,"extension_center_order":2,"extension_derived_order":51840,"normalizes_signed_cover":true,"fixed_signed_roots":8}
+  },
+  "structural_decision":{"globally_split":true,"splitting_witness":"any signed lift of a 540-class outer involution","localized_pin_like_behavior":"the 36-class has no involutory lift; both preimages have order 4 and square to the central antipode","same_group_from_either_class":true},
+  "check_count":14,
+  "checks":{"signed_cover_order_51840":true,"unsigned_outer_involution_classes_are_36_and_540":true,"class36_lifts_have_order4_and_square_to_center":true,"class540_lifts_are_involutions":true,"both_lifts_normalize_signed_cover":true,"both_generate_order103680_extension":true,"both_generate_the_same_extension":true,"extension_center_is_global_C2":true,"extension_derived_subgroup_is_Sp43":true,"extension_splits_over_outer_C2_via_540_lift":true,"class36_signed_preimage_is_72_order4_elements":true,"class540_signed_preimage_is_1080_involutions":true,"class36_has_no_fixed_roots":true,"class540_has_eight_fixed_roots":true},
+  "scope":"Exact signed permutations on the 240 E8 roots. The result fingerprints the explicit extension without assigning an unverified ATLAS suffix to the double cover."
+}
