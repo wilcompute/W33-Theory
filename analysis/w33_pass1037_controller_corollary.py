@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Pass 1037 dependency certificate: the external controller is S3.
 
-This verifier is deliberately independent of a fresh GAP installation.  It consumes
+This verifier is deliberately independent of a fresh GAP installation. It consumes
 four earlier machine certificates and the exact order assertions in their GAP source,
 then performs the finite-group deduction:
 
@@ -10,9 +10,9 @@ then performs the finite-group deduction:
     N/C = C2, |N| = 311040;
     N normalizes <w>, while C centralizes w.
 
-Hence N/K has order six.  Any element of N\C acts nontrivially on <w> = C3;
-Aut(C3)=C2, so it acts by inversion.  The extension is therefore nonabelian S3,
-not cyclic C6.  The latter remains the distinct internal Eisenstein-unit fibre.
+Hence N/K has order six. Any element of N\C acts nontrivially on <w> = C3;
+Aut(C3)=C2, so it acts by inversion. The extension is therefore nonabelian S3,
+not cyclic C6. The latter remains the distinct internal Eisenstein-unit fibre.
 """
 from __future__ import annotations
 
@@ -42,7 +42,7 @@ def main() -> None:
         encoding="utf-8"
     )
 
-    kernel_order_match = re.search(r'kernel.*order\s+(\d+)', pass1031["kernel"])
+    kernel_order_match = re.search(r'order\s+(\d+)', pass1031["kernel"])
     if kernel_order_match is None:
         raise AssertionError("Pass 1031 kernel order is not parseable")
     kernel_order = int(kernel_order_match.group(1))
@@ -53,9 +53,9 @@ def main() -> None:
     chirality_quotient_order = 2
     controller_order = normalizer_order // kernel_order
 
-    # The action of N/C on C/K is forced.  N normalizes <w>; C is exactly the
-    # centralizer.  Therefore an element outside C cannot act trivially on the
-    # nontrivial order-three image of w.  The only nontrivial automorphism of C3
+    # The action of N/C on C/K is forced. N normalizes <w>; C is exactly the
+    # centralizer. Therefore an element outside C cannot act trivially on the
+    # nontrivial order-three image of w. The only nontrivial automorphism of C3
     # is inversion.
     automorphism_group_c3_order = 2
     outside_centralizer_action_is_nontrivial = True
@@ -111,7 +111,7 @@ def main() -> None:
             "Pass1021": "internal Eisenstein-unit fibre C6",
             "Pass1029": "normalizer order 311040 and total-space chirality blindness",
             "Pass1031": "centralizer order 155520, kernel Sp(4,3) order 51840, quotient C3",
-            "Pass1033": "unique base chirality character C2",
+            "Pass1033": "unique base chirality character C2"
         },
         "orders": {
             "Sp43_kernel": kernel_order,
@@ -119,7 +119,7 @@ def main() -> None:
             "normalizer": normalizer_order,
             "phase_quotient": phase_quotient_order,
             "chirality_quotient": chirality_quotient_order,
-            "controller": controller_order,
+            "controller": controller_order
         },
         "exact_sequence": "1 -> C3 -> S3 -> C2 -> 1",
         "action": "the nontrivial C2 element acts on C3 by inversion",
@@ -135,7 +135,7 @@ def main() -> None:
             "computes the quotient objectwise when a GAP runner is available."
         ),
         "check_count": len(checks),
-        "checks": checks,
+        "checks": checks
     }
     OUT.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     print(f"Pass1037-corollary status=PASS checks={len(checks)} output={OUT}")
