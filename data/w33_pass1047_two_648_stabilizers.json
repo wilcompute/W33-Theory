@@ -1,0 +1,49 @@
+{
+  "schema": "w33.pass1047.two_648_stabilizers.v1",
+  "status": "PASS",
+  "headline": "PSp(4,3) has two nonconjugate degree-40 stabilizer classes of order 648. The W(3,3) point stabilizer has center C3, derived subgroup 216, and abelianization C3, while the dual line stabilizer has trivial center, derived subgroup 324, and abelianization C2. The Pass-1046 Springer/G25 fingerprint therefore selects the W(3,3) point action and excludes the dual action.",
+  "geometry": {
+    "points": 40,
+    "lines": 40,
+    "points_per_line": 4,
+    "lines_per_point": 4
+  },
+  "group_order": 25920,
+  "point_stabilizer": {
+    "order": 648,
+    "center_order": 3,
+    "derived_order": 216,
+    "abelianization_order": 3
+  },
+  "line_stabilizer": {
+    "order": 648,
+    "center_order": 1,
+    "derived_order": 324,
+    "abelianization_order": 2
+  },
+  "conclusion": {
+    "matching_class": "W(3,3) point stabilizer; ATLAS structure 3^(1+2)+:2A4",
+    "excluded_class": "dual Q(4,3) point / W(3,3) line stabilizer; ATLAS structure 3^3:S4",
+    "strengthening": "Pass 1046's invariant-level G25 identification is now also a side-selection theorem: the Eisenstein/Springer tower lands on the symplectic point action, not its non-self-dual orthogonal dual."
+  },
+  "check_count": 16,
+  "checks": {
+    "projective_points_40": true,
+    "isotropic_lines_40": true,
+    "four_points_per_line": true,
+    "four_lines_per_point": true,
+    "PSp43_point_action_order_25920": true,
+    "PSp43_line_action_order_25920": true,
+    "point_stabilizer_order_648": true,
+    "line_stabilizer_order_648": true,
+    "point_center_C3": true,
+    "point_derived_216": true,
+    "point_abelianization_C3": true,
+    "line_center_trivial": true,
+    "line_derived_324": true,
+    "line_abelianization_C2": true,
+    "stabilizers_nonisomorphic": true,
+    "Springer_G25_fingerprint_selects_point_side": true
+  },
+  "scope": "Exact finite permutation-group computation. It distinguishes the two order-648 classes and matches the Pass-1046 fingerprint. It does not replace the explicit complex reflection representation of G25 or construct a matrix-level conjugacy."
+}
