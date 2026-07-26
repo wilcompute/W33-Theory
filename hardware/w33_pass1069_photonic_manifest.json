@@ -1,0 +1,57 @@
+{
+  "schema": "w33.pass1069.photonic_protocol_manifest.v1",
+  "status": "PASS",
+  "artifact_mode": "compact committed control surface; analysis/w33_pass1069_photonic_protocol_compiler.py regenerates the expanded manifest, exact candidate banks, sequence maps, and raw synthetic shot records",
+  "generated_by": "analysis/w33_pass1069_photonic_protocol_compiler.py",
+  "manifest_hash": "36ed10933c062f5743133a457dae739e537fb76f253e38fe809ceef3b6dd6a31",
+  "geometry": {
+    "points": 40,
+    "contexts": 40,
+    "context_size": 4,
+    "contexts_per_point": 4,
+    "movable_point_stars": 40
+  },
+  "hardware_abstraction": {
+    "source": ["heralded_single_photon", "vacuum_dark_control", "bright_reference_control"],
+    "routing": ["calibrated_40_mode_mesh", "EOM_swap_network", "context_analyzer"],
+    "detection": ["binary_projector_yes", "explicit_no_click", "time_tag"],
+    "required_calibrations": ["dark_rate", "projector_efficiency", "detector_imbalance"]
+  },
+  "contextuality_schedule": {
+    "gauge_cycles": 40,
+    "macro_rows": 40,
+    "compiled_rows": 1680,
+    "elementary_operations": 6480,
+    "rule": "cycle p interrogates all 36 nonstar contexts before the four contexts in the movable point-star at p; each context expands to four binary projectors",
+    "arithmetic": "40 x (2 calibration blocks + 40 x 4 projector blocks) = 6480",
+    "warning": "The equality with any other repository count 6480 is arithmetic only and is not promoted as a structural identification."
+  },
+  "central_C3_schedule": {
+    "primary_point_candidate_ids": [8, 17],
+    "primary_sequence_names": ["c_after_a", "a_after_c", "c_after_b", "b_after_c"],
+    "primary_sequence_rows": 8,
+    "point_candidate_bank_size": 98,
+    "dual_control_bank_size": 98,
+    "point_exact_zero_score_candidates": 2,
+    "dual_exact_minimum_score": 27,
+    "point_bank_hash": "9fc545d08ab944ca3bff00304b56b68f90df681c57f45a335c593c89758b021f",
+    "dual_control_bank_hash": "0c47ffd67abf72435ba20381b8ce7eb4628a3b9a05302e4417c6b2145d5160d7"
+  },
+  "analysis_freeze": {
+    "contextuality_bound": 7,
+    "bootstrap_replicates": 800,
+    "bootstrap_seed": 1069,
+    "contextual_positive": "95% bootstrap lower endpoint > 7",
+    "contextual_negative": "95% bootstrap upper endpoint <= 7",
+    "otherwise": "inconclusive",
+    "C3_point": "at least two order-3 candidates score <= 9",
+    "C3_dual": "minimum candidate score >= 18",
+    "C3_gray_zone": "otherwise inconclusive",
+    "calibration_gates": {
+      "max_dark_rate": 0.02,
+      "min_projector_efficiency": 0.80,
+      "max_detector_imbalance": 0.10
+    }
+  },
+  "real_run_guard": "Real acquisition must supply hardware calibration IDs and an external blinding key. The committed key is synthetic-fixture-only."
+}
