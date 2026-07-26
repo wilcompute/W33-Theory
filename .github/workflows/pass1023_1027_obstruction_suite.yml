@@ -73,7 +73,8 @@ jobs:
         run: |
           set -euo pipefail
           rm -f data/bt360_120sheet_design_for_gap.txt
-          python analysis/w33_pass1026_export_selector_gap_data.py
+          python analysis/w33_pass1026_export_selector_gap_data.py >data/w33_pass1026_export_runtime.log 2>&1 || true
+          cat data/w33_pass1026_export_runtime.log
           test -s data/bt360_120sheet_design_for_gap.txt
       - name: Run Pass 1026 bridge fail closed
         env:
@@ -111,6 +112,7 @@ jobs:
             data/w33_pass1027_photonic_c6_holonomy_falsifier.json
             data/w33_pass1023_runtime.log
             data/w33_pass1025_runtime.log
+            data/w33_pass1026_export_runtime.log
             data/w33_pass1026_runtime.log
           if-no-files-found: error
 
@@ -124,12 +126,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install GAP with Small Groups library
+      - name: Install GAP subgroup libraries
         run: |
           set -euo pipefail
           sudo add-apt-repository -y universe >/tmp/gap-apt.log 2>&1 || true
           sudo apt-get update -qq >>/tmp/gap-apt.log 2>&1
-          sudo apt-get install -y --no-install-recommends gap-core gap-libs gap-smallgrp >>/tmp/gap-apt.log 2>&1
+          sudo apt-get install -y --no-install-recommends gap-core gap-libs gap-smallgrp gap-primgrp gap-transgrp >>/tmp/gap-apt.log 2>&1
           command -v gap
           gap -q -c 'Print(GAPInfo.Version, "\n"); QUIT;'
       - name: Run Pass 1024 exact search fail closed
