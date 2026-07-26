@@ -22,9 +22,9 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **15830** files; **6717** distinctive results
+Indexed **15831** files; **6717** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
-**2941** appear in exactly one file — the sharpest signal.
+**2940** appear in exactly one file — the sharpest signal.
 
 ## Index
 
@@ -144,7 +144,7 @@ Indexed **15830** files; **6717** distinctive results
 | `[89,144,233]` | `exploration/PASCAL_CONSTANTS_BRIDGE.py` |
 | `[0,120,240]` | `analysis/w33_frequency_bin_hashimoto_compiler.py` · `analysis/w33_frequency_bin_lab_packet.py` |
 | `[1,120,135]` | `analysis/w33_pass174_dual_discriminant_fixed_rail.py` · `analysis/w33_pass364_qr548_e8_phase_space.g` · `analysis/w33_pass366_qr137m_real_clifford_refinement_tower.g` |
-| `[1,135,120]` | `analysis/w33_pass174_dual_discriminant_fixed_rail.py` |
+| `[1,135,120]` | `analysis/w33_pass1043_which_we6_embedding.g` · `analysis/w33_pass174_dual_discriminant_fixed_rail.py` |
 | `[10,50,298]` | `analysis/w33_pass232_even_q_sister_tower.py` |
 | `[12,24,108]` | `exploration/PART_CCCXII_EQUITABLE_PARTITION_BRIDGE.py` |
 | `[127,120,3]` | `analysis/w33_BREAKTHROUGH_299_hamming_code_substrate.py` |
@@ -1004,7 +1004,7 @@ Indexed **15830** files; **6717** distinctive results
 | `e8+trinification` | `analysis/BT1745_BT1748_execution_summary.md` · `analysis/BT1745_June24_25_commit_audit.md` · `analysis/THE_SELECTION_LAYER.md` · `analysis/w33_exceptional_tower_synthesis.py` · *(+10)* |
 | `e_6+extraspecial` | `scripts/check_rediscovery.py` · `w33_paper.tex` · `w33_paper_v2.tex` |
 | `e_8+extraspecial` | `scripts/check_rediscovery.py` · `w33_paper.tex` · `w33_paper_v2.tex` |
-| `eisenstein tower` | `PASS1030_EIGHTY_CARRIER_ORIENTATION_OBSTRUCTION.md` · `analysis/BT1745_June24_25_commit_audit.md` · `analysis/w33_complex_leech_suzuki_chain.py` · `analysis/w33_eisenstein_grand_synthesis.py` · *(+12)* |
+| `eisenstein tower` | `PASS1030_EIGHTY_CARRIER_ORIENTATION_OBSTRUCTION.md` · `analysis/BT1745_June24_25_commit_audit.md` · `analysis/w33_complex_leech_suzuki_chain.py` · `analysis/w33_eisenstein_grand_synthesis.py` · *(+13)* |
 | `eisenstein+golay` | `W33_FOR_EVERYONE.tex` · `analysis/2026-07-15_pass79_leech_kneser_css.md` · `analysis/BT1745_June24_25_commit_audit.md` · `analysis/w33_BREAKTHROUGH_314_atiyah_singer_substrate.py` · *(+13)* |
 | `eisenstein+hesse` | `analysis/BT1707_BT1709_qubit_contextuality_hesse_bridge.md` · `analysis/BT1741_BT1744_execution_summary.md` · `analysis/BT1745_BT1748_execution_summary.md` · `analysis/BT1745_June24_25_commit_audit.md` · *(+9)* |
 | `eisenstein+koide` | `analysis/w33_BREAKTHROUGH_132_chain_companion_narrative.py` · `docs/index.html` · `scripts/check_rediscovery.py` · `w33_paper.tex` |
@@ -1147,7 +1147,7 @@ Indexed **15830** files; **6717** distinctive results
 | `tetracode+weil` | `analysis/w33_pass348_every_multiplicity_is_a_torsor.py` · `docs/index.html` · `scripts/check_rediscovery.py` |
 | `torsor+witting` | `W33_FOR_EVERYONE.tex` · `analysis/BT1789_BT1791_holonet_h27_execution.md` · `analysis/w33_pass348_every_multiplicity_is_a_torsor.py` · `docs/index.html` · *(+3)* |
 | `2028949923625` | `PASS540_SYMPLECTIC_CHIRALITY_CHAINRING.md` · `W33_FOR_EVERYONE.tex` · `analysis/MILESTONES.md` · `analysis/build_results_index.py` · *(+3)* |
-| `a2+eisenstein` | `PASS1020_E8_TRANSITIVE_51840.md` · `W33_FOR_EVERYONE.tex` · `analysis/2026-07-15_pass350_eisenstein_trace_form.md` · `analysis/THE_27_FOLD_WAY.md` · *(+16)* |
+| `a2+eisenstein` | `PASS1020_E8_TRANSITIVE_51840.md` · `W33_FOR_EVERYONE.tex` · `analysis/2026-07-15_pass350_eisenstein_trace_form.md` · `analysis/THE_27_FOLD_WAY.md` · *(+17)* |
 | `a_2+bockstein` | `scripts/check_rediscovery.py` · `w33_paper.tex` |
 | `a_2+hexagonal` | `W33_FOR_EVERYONE.tex` · `analysis/w33_BREAKTHROUGH_309_sphere_packing_substrate.py` · `analysis/w33_BREAKTHROUGH_440_substrate_lattice_ladder.py` · `photonic_holonet.tex` · *(+1)* |
 | `a_2+moonshine` | `W33_FOR_EVERYONE.tex` · `W36_PAPER.tex` · `analysis/w33_MDCCCCXXIII_MDCCCCXXXII_ADE_Hopf_Hurwitz_chain.py` · `analysis/w33_reliability_threshold.py` · *(+6)* |
@@ -2189,7 +2189,7 @@ Indexed **15830** files; **6717** distinctive results
 | `1108925` | `formal/.lake/packages/mathlib/Mathlib/Analysis/Real/Pi/Bounds.lean` |
 | `1120135` | `analysis/w33_pass364_qr548_e8_phase_space.g` · `analysis/w33_pass366_qr137m_real_clifford_refinement_tower.g` |
 | `1126800` | `exploration/w33_continuum_k3_tail_exactness_criterion_bridge.py` |
-| `1135120` | `passes/pass_249_five_uniqueness_proofs.py` · `w33_paper.tex` |
+| `1135120` | `analysis/w33_pass1043_which_we6_embedding.g` · `passes/pass_249_five_uniqueness_proofs.py` · `w33_paper.tex` |
 | `1138992` | `formal/.lake/packages/mathlib/Mathlib/NumberTheory/LucasLehmer.lean` |
 | `1140000` | `scripts/w33_leech_monster.py` · `scripts/w33_monster_centralizer_cofactor_groups.py` · `scripts/w33_monster_permrep_suborbit_signatures.py` · `scripts/w33_permrep_association.py` |
 | `1142505` | `exploration/w33_continuum_tail_operator_normal_form_bridge.py` |
@@ -2853,7 +2853,7 @@ Indexed **15830** files; **6717** distinctive results
 | `299696` | `formal/.lake/packages/mathlib/Archive/ZagierTwoSquares.lean` |
 | `300996` | `analysis/BT993_edgewise_density_recurrences.md` |
 | `302880` | `analysis/w33_prime_cycle_counts.py` |
-| `311040` | `PASS1031_COMPLEX_DETERMINANT.md` · `PASS1034_1037_SELECTOR_CONTROLLER_SYNTHESIS.md` · `analysis/w33_pass1029_no_orientation_switch_inside.g` · `analysis/w33_pass1031_complex_determinant_phase_detector.g` · *(+6)* |
+| `311040` | `PASS1031_COMPLEX_DETERMINANT.md` · `PASS1034_1037_SELECTOR_CONTROLLER_SYNTHESIS.md` · `analysis/w33_pass1029_no_orientation_switch_inside.g` · `analysis/w33_pass1031_complex_determinant_phase_detector.g` · *(+7)* |
 | `311045` | `analysis/w33_pass641_higher_2adic_commutant.py` |
 | `311362` | `formal/.lake/packages/mathlib/Mathlib/LinearAlgebra/Matrix/Charpoly/Basic.lean` |
 | `311627` | `formal/.lake/packages/mathlib/Mathlib/NumberTheory/Padics/PadicNumbers.lean` |
@@ -4221,9 +4221,9 @@ Indexed **15830** files; **6717** distinctive results
 | `1038` | `analysis/BT1038_af_representation_candidate.md` · `analysis/BT1039_commutator_span_harness.md` · `analysis/BT1040_higgs_trace_ledger.md` · `analysis/BT1041_real_chiral_dirac_candidate.md` · *(+17)* |
 | `1039` | `analysis/BT1038_af_representation_candidate.md` · `analysis/BT1039_commutator_span_harness.md` · `analysis/BT1040_higgs_trace_ledger.md` · `analysis/BT1055_bridge_fragment_B.md` · *(+8)* |
 | `1040` | `analysis/BT1040_higgs_trace_ledger.md` · `analysis/BT1048_scalar_coefficients.md` · `analysis/bt1040_higgs_trace_ledger.py` · `analysis/bt1048_higgs_spectral_coefficients.py` · *(+5)* |
-| `1041` | `analysis/BT1041_real_chiral_dirac_candidate.md` · `analysis/BT1042_first_order_condition_verifier.md` · `analysis/BT1045_ko_sign_verifier.md` · `analysis/bt1041_real_chiral_dirac_candidate.py` · *(+5)* |
+| `1041` | `analysis/BT1041_real_chiral_dirac_candidate.md` · `analysis/BT1042_first_order_condition_verifier.md` · `analysis/BT1045_ko_sign_verifier.md` · `analysis/bt1041_real_chiral_dirac_candidate.py` · *(+6)* |
 | `1042` | `analysis/BT1041_real_chiral_dirac_candidate.md` · `analysis/BT1042_first_order_condition_verifier.md` · `analysis/BT1044_higgs_sweep_summary.md` · `analysis/BT1055_bridge_fragment_B.md` · *(+5)* |
-| `1043` | `analysis/BT1043_phi_240_extension.md` · `analysis/BT1046_heavy_sector_phi_ansatz.md` · `analysis/bt1043_phi_240_extension.py` · `analysis/bt1046_heavy_sector_phi_ansatz.py` |
+| `1043` | `analysis/BT1043_phi_240_extension.md` · `analysis/BT1046_heavy_sector_phi_ansatz.md` · `analysis/bt1043_phi_240_extension.py` · `analysis/bt1046_heavy_sector_phi_ansatz.py` · *(+1)* |
 | `1044` | `analysis/BT1044_higgs_sweep_summary.md` · `analysis/BT1055_bridge_fragment_B.md` · `analysis/bt1044_higgs_sweep_summary.py` · `docs/index.html` |
 | `1045` | `analysis/BT1045_ko_sign_verifier.md` · `analysis/bt1045_ko_sign_verifier.py` |
 | `1046` | `analysis/BT1046_heavy_sector_phi_ansatz.md` · `analysis/BT1047_generation_fiber_symmetry.md` · `analysis/BT1048_scalar_coefficients.md` · `analysis/BT1054_amplitude_protocol.md` · *(+4)* |
