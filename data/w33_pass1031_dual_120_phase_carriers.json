@@ -1,0 +1,73 @@
+{
+  "boundary": "This identifies the natural finite group actions. It does not supply an outer duality operator; for q=3 no incidence-preserving point-line duality exists inside the verified substrate.",
+  "check_count": 23,
+  "checks": {
+    "E8_pair_carrier_is_point_based": true,
+    "E8_residual_phase_is_regular_C3": true,
+    "all_source_certificates_pass": true,
+    "both_coset_actions_have_degree_120": true,
+    "degree120_coset_actions_are_not_isomorphic": true,
+    "four_lines_through_base_point": true,
+    "four_points_on_base_line": true,
+    "line_local_phase_image_is_full_S3": true,
+    "line_phase_fixes_one_line_and_no_point": true,
+    "line_phase_orbit_profiles_are_dual": true,
+    "line_stabilizer_derived_subgroup_has_order_324": true,
+    "phase_stabilizers_are_not_conjugate": true,
+    "point_and_line_phase_stabilizers_have_order_216": true,
+    "point_and_line_stabilizers_have_order_648": true,
+    "point_local_phase_image_is_regular_C3": true,
+    "point_phase_fixes_one_point_and_no_line": true,
+    "point_phase_orbit_profiles_are_1_12_27_and_4_36": true,
+    "point_stabilizer_abelianization_has_order_three": true,
+    "psp_order_is_25920": true,
+    "selector_carrier_is_line_based_with_three_phases": true,
+    "selector_local_quotient_is_S3": true,
+    "three_matchings_on_each_local_four_set": true,
+    "w33_has_40_points_and_40_lines": true
+  },
+  "consequence_for_pass1026": "The pending degree-120 conjugacy diagnostic should return false. The correct crosswalk is duality with nonconjugate block orientation, not a shared PSp G-set.",
+  "group": {
+    "construction": "40 projective symplectic transvections on W(3,3)",
+    "name": "PSp(4,3)",
+    "order": 25920
+  },
+  "headline": "The E8 antipodal-pair carrier and golden-selector sheet carrier are dual but inequivalent degree-120 PSp(4,3)-sets. Their stabilizers both have order 216, yet the point-phase stabilizer has orbit profiles points [1,12,27], lines [4,36], while the line-phase stabilizer has the reverse. Hence the stabilizers are nonconjugate and the transitive coset actions are not isomorphic.",
+  "line_phase_carrier": {
+    "base_stabilizer_order": 648,
+    "degree": 120,
+    "derived_subgroup_order_of_base_stabilizer": 324,
+    "fixed_lines": [0],
+    "fixed_points": [],
+    "interpretation": "golden selector = 3 phases over each W33 line",
+    "line_orbits": [1, 12, 27],
+    "local_phase_image": "S3",
+    "phase_stabilizer_order": 216,
+    "point_orbits": [4, 36]
+  },
+  "new_structural_reading": {
+    "different": "E8 has a normal C3 phase quotient over a point; the selector has an S3 local controller over a line",
+    "shared": "degree 120, fibre size 3, stabilizer order 216",
+    "verdict": "the carriers form a point/line-dual pair separated by the same non-self-duality already visible at degree 40"
+  },
+  "nonconjugacy_certificate": {
+    "conclusion": "the order-216 stabilizers are not conjugate in PSp(4,3); therefore G/H_point and G/H_line are nonisomorphic transitive 120-sets",
+    "invariant": "orbit profile on the canonical 40-point action",
+    "line_phase_profile": [4, 36],
+    "point_phase_profile": [1, 12, 27]
+  },
+  "point_phase_carrier": {
+    "base_stabilizer_order": 648,
+    "degree": 120,
+    "derived_subgroup_order_of_base_stabilizer": 216,
+    "fixed_lines": [],
+    "fixed_points": [0],
+    "interpretation": "E8 antipodal pairs = 3 phases over each W33 point",
+    "line_orbits": [4, 36],
+    "local_phase_image": "C3 regular",
+    "phase_stabilizer_order": 216,
+    "point_orbits": [1, 12, 27]
+  },
+  "schema": "w33.pass1031.dual_120_phase_carriers.python.v1",
+  "status": "PASS"
+}
