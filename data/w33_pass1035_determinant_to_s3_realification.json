@@ -1,5 +1,5 @@
 {
-  "boundary": "This identifies the local representation-theoretic completion. It does not identify the selector correction-exchange character of Pass 1034 with chirality or with any global determinant character.",
+  "boundary": "This does not identify the Pass-1034 correction-exchange character with chirality or any global determinant character.",
   "check_count": 16,
   "checks": {
     "C3_is_normal_order_three": true,
@@ -24,15 +24,19 @@
     "kernel": "Sp(4,3)",
     "sign_blind": true,
     "source": "det_C on Z3 x Sp(4,3)",
-    "values": ["1", "omega", "omega^2"]
+    "values": [
+      "1",
+      "omega",
+      "omega^2"
+    ]
   },
-  "experimental_consequence": "A scalar intensity measurement cannot retain the determinant phase under S3 inversion. The detector must preserve two real quadratures, or equivalently the conjugate pair (chi, chi-bar).",
+  "experimental_consequence": "A scalar intensity measurement cannot retain determinant phase under S3 inversion. The detector must preserve two real quadratures.",
   "fusion_interpretation": {
-    "preserved_relations": "the diagonal, one 27-orbital, and the 36-orbital remain real",
+    "preserved_relations": "diagonal, one 27-orbital, and the 36-orbital",
     "same_fibre": "omega and omega^2 directions fuse: 1+1=2",
     "skew_transport": "two conjugate 27-orbitals fuse: 27+27=54"
   },
-  "headline": "The complex determinant is the oriented C3 phase character. Under the selector's S3 inversion it is exchanged with its complex conjugate and cannot remain a scalar character. Its unique S3 completion is the irreducible two-dimensional standard representation, exactly explaining the 1+1->2 and 27+27->54 fusion shadow.",
+  "headline": "The complex determinant is the oriented C3 phase character. Under selector S3 inversion it is exchanged with its conjugate and cannot remain scalar. Its unique S3 completion is the irreducible two-dimensional standard representation, explaining 1+1->2 and 27+27->54.",
   "s3_completion": {
     "induced_character_by_class": {
       "identity": "(2)+(0)*omega",
