@@ -41,3 +41,4 @@ import W33.Pass806TwoBranchGluing
 -- patched over, so `lake build` stays honest; see Pass 1020's notes.
 import W33.Pass1006RamifiedFiltration
 import W33.Pass1018PencilRigidity
+import W33.Pass1063SignedLiftObstruction
