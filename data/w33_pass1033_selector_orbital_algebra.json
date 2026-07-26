@@ -1,0 +1,66 @@
+{
+  "boundary": "This is the exact finite orbital algebra. It does not by itself choose a flat selector correction; any correction must be tested as a cochain against the quadrangle boundary operator.",
+  "check_count": 19,
+  "checks": {
+    "PQ_equals_120I": true,
+    "all_relations_are_symmetric": true,
+    "degree_is_120": true,
+    "diagonal_relation_is_identity": true,
+    "eigenmatrix_is_nonsingular": true,
+    "first_orthogonality_relation": true,
+    "group_order_is_25920": true,
+    "intersection_numbers_close_exactly": true,
+    "krein_parameters_are_nonnegative": true,
+    "krein_parameters_are_rational": true,
+    "multiplicities_are_positive_integers": true,
+    "multiplicities_sum_to_120": true,
+    "overlap_profile_matches_relations": true,
+    "phase_stabilizer_order_is_216": true,
+    "relations_partition_square": true,
+    "scheme_is_commutative": true,
+    "second_orthogonality_relation": true,
+    "source_certificates_pass": true,
+    "valencies_are_1_2_27_36_54": true
+  },
+  "first_eigenmatrix_P": [[1,2,27,36,54],[1,-1,-3,0,3],[1,-1,9,0,-9],[1,2,-3,6,-6],[1,2,3,-12,6]],
+  "headline": "The 120-sheet golden-selector design is a symmetric rank-five association scheme. Its five overlap relations are exactly the five orbitals, and its complete Bose--Mesner algebra, eigenmatrices, primitive-idempotent multiplicities, and Krein parameters are determined exactly.",
+  "intersection_numbers": [
+    [[[1,0,0,0,0],[0,1,0,0,0],[0,0,1,0,0],[0,0,0,1,0],[0,0,0,0,1]],
+     [[0,1,0,0,0],[2,1,0,0,0],[0,0,0,0,1],[0,0,0,2,0],[0,0,2,0,1]],
+     [[0,0,1,0,0],[0,0,0,0,1],[27,0,10,6,4],[0,0,8,9,8],[0,27,8,12,14]],
+     [[0,0,0,1,0],[0,0,0,2,0],[0,0,8,9,8],[36,36,12,6,12],[0,0,16,18,16]],
+     [[0,0,0,0,1],[0,0,2,0,1],[0,27,8,12,14],[0,0,16,18,16],[54,27,28,24,22]]]
+  ],
+  "krein_parameters": [
+    [[[1,0,0,0,0],[0,1,0,0,0],[0,0,1,0,0],[0,0,0,1,0],[0,0,0,0,1]],
+     [[0,1,0,0,0],[60,"65/3",25,"130/3","140/3"],[0,"25/3",5,"50/3","40/3"],[0,"52/3",20,0,0],[0,"35/3",10,0,0]],
+     [[0,0,1,0,0],[0,"25/3",5,"50/3","40/3"],[20,"5/3",5,"10/3","20/3"],[0,"20/3",4,0,0],[0,"10/3",5,0,0]],
+     [[0,0,0,1,0],[0,"52/3",20,0,0],[0,"20/3",4,0,0],[24,0,0,"44/3","40/3"],[0,0,0,"25/3","32/3"]],
+     [[0,0,0,0,1],[0,"35/3",10,0,0],[0,"10/3",5,0,0],[0,0,0,"25/3","32/3"],[15,0,0,"20/3","10/3"]]]
+  ],
+  "left_multiplication_matrices": [
+    [[1,0,0,0,0],[0,1,0,0,0],[0,0,1,0,0],[0,0,0,1,0],[0,0,0,0,1]],
+    [[0,1,0,0,0],[2,1,0,0,0],[0,0,0,0,1],[0,0,0,2,0],[0,0,2,0,1]],
+    [[0,0,1,0,0],[0,0,0,0,1],[27,0,10,6,4],[0,0,8,9,8],[0,27,8,12,14]],
+    [[0,0,0,1,0],[0,0,0,2,0],[0,0,8,9,8],[36,36,12,6,12],[0,0,16,18,16]],
+    [[0,0,0,0,1],[0,0,2,0,1],[0,27,8,12,14],[0,0,16,18,16],[54,27,28,24,22]]
+  ],
+  "multiplicities": [1,60,20,24,15],
+  "primitive_idempotents": [
+    {"coefficients_in_A_basis":["1/120","1/120","1/120","1/120","1/120"],"index":0,"rank":1},
+    {"coefficients_in_A_basis":["1/2","-1/4","-1/18",0,"1/36"],"index":1,"rank":60},
+    {"coefficients_in_A_basis":["1/6","-1/12","1/18",0,"-1/36"],"index":2,"rank":20},
+    {"coefficients_in_A_basis":["1/5","1/5","-1/45","1/30","-1/45"],"index":3,"rank":24},
+    {"coefficients_in_A_basis":["1/8","1/8","1/72","-1/24","1/72"],"index":4,"rank":15}
+  ],
+  "relation_order": [
+    {"index":0,"overlap":108,"valency":1},
+    {"index":1,"overlap":54,"valency":2},
+    {"index":2,"overlap":4,"valency":27},
+    {"index":3,"overlap":12,"valency":36},
+    {"index":4,"overlap":2,"valency":54}
+  ],
+  "schema": "w33.pass1033.selector_orbital_algebra.python.v1",
+  "second_eigenmatrix_Q": [[1,60,20,24,15],[1,-30,-10,24,15],[1,"-20/3","20/3","-8/3","5/3"],[1,0,0,4,-5],[1,"10/3","-10/3","-8/3","5/3"]],
+  "status": "PASS"
+}
