@@ -1,0 +1,15 @@
+{
+  "schema":"w33.pass1068.chevie_g25_g32_matrices.v1","status":"PASS",
+  "headline":"The CHEVIE G25 and G32 models admit an explicit generator-level parabolic inclusion. The first three G32 reflections fix e4 pointwise and their upper-left 3x3 blocks are exactly the G25 generators.",
+  "field":"Q(omega), omega^2+omega+1=0",
+  "reflection_formula":"R_v = I + (omega-1) v v*/<v,v>",
+  "G25":{"degrees":[6,9,12],"order":648},
+  "G32":{"degrees":[12,18,24,30],"order":155520},
+  "inclusion_matrix_J_4x3":[["1","0","0"],["0","1","0"],["0","0","1"],["0","0","0"]],
+  "conjugator":"Identity in the standard CHEVIE basis: R_i J = J r_i for i=1,2,3. Equivalently diag(r_i,1)=R_i.",
+  "parabolic_statement":"<R1,R2,R3> = Stab_G32(e4) pointwise and is the embedded Shephard-Todd G25.",
+  "finite_field_certificate":{"prime":7,"omega_residue":2,"G25_order":648,"G32_order":155520,"e4_pointwise_stabilizer_order":648},
+  "check_count":15,
+  "checks":{"all_G32_generators_have_order3":true,"all_G25_generators_have_order3":true,"G32_adjacent_braid_relations":true,"G32_nonadjacent_generators_commute":true,"G25_chain_braid_relations":true,"G25_end_generators_commute":true,"each_G32_generator_is_rank1_reflection":true,"each_G25_generator_is_rank1_reflection":true,"first_three_G32_generators_are_block_G25":true,"G25_mod7_order_is_648":true,"G32_mod7_order_is_155520":true,"degree_products_match_orders":true,"pointwise_e4_stabilizer_has_order648":true,"pointwise_e4_stabilizer_equals_embedded_G25":true,"explicit_inclusion_intertwines_generators":true},
+  "scope":"Exact Q(omega) relation checks plus faithful good-prime reduction modulo 7 for finite enumeration. The matrices are the CHEVIE standard reflection model; no numerical fitting is involved."
+}
