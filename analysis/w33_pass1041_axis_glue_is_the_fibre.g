@@ -142,7 +142,15 @@ Main := function()
   # Sp(4,3) is rank 7 on the 120, and its subdegrees are exactly the anisotropic
   # orbit sizes the paper records for the Pass 117 W(E6) embedding.
   checks.Sp43_is_rank_seven_on_the_120 := sub120 = [1,1,1,27,27,27,36];
-  checks.matches_paper_pass117_anisotropic_orbits := sub120 = [1,1,1,27,27,27,36];
+  # WITHDRAWN (Pass 1070).  A check named `matches_paper_pass117_anisotropic_orbits`
+  # used to sit here comparing THESE SUBDEGREES to the paper's Pass 117 ORBIT
+  # sizes.  Same category error as Pass 1043: suborbits are not orbits.  The tower
+  # is TRANSITIVE on the 120, so its orbit list is [120] and the embedding is the
+  # Pass 125 code one.  Recorded here rather than silently deleted.
+  checks.tower_is_transitive_so_orbits_are_not_suborbits :=
+    IsTransitive(Q120, [1..120]) and
+    SortedList(List(Orbits(Q120, [1..120]), Length)) = [120] and
+    sub120 <> [120];
   checks.axis_pairing_graph_is_srg_120_63_30_36 :=
     srg120.ok and srg120.k = 63 and srg120.lambda = 30 and srg120.mu = 36;
 
@@ -181,7 +189,7 @@ Main := function()
   WriteAll(stream, "{\n");
   WriteAll(stream, "  \"schema\": \"w33.pass1041.axis_glue_is_the_fibre.gap.v1\",\n");
   WriteAll(stream, "  \"status\": \"PASS\",\n");
-  WriteAll(stream, "  \"headline\": \"The Springer/Eisenstein fibration of Pass 1021 and the paper's axis-glue carrier are the same object. The 120-block quotient of the Sp(4,3) root action is rank 3 with subdegrees [1,56,63] and its valency-63 orbital graph is SRG(120,63,30,36) -- exactly the axis-pairing graph of thm:axis-glue-e8-lift. The block systems reproduce the paper's factorisation 40 points x 3 axes x 2 endpoints = 240 directly.\",\n");
+  WriteAll(stream, "  \"headline\": \"The Springer/Eisenstein fibration of Pass 1021 and the paper's axis-glue carrier are the same object. On the 120 antipodal blocks the root-line ORTHOGONALITY graph is SRG(120,63,30,36), exactly the axis-pairing graph of thm:axis-glue-e8-lift, and the block systems reproduce the paper's 40 points x 3 axes x 2 endpoints = 240 factorisation directly. Sp(4,3) is TRANSITIVE on the 120 (orbits [120]) with subdegrees [1,1,1,27,27,27,36]; those subdegrees must NOT be compared to the paper's Pass 117 orbit sizes -- see Pass 1070.\",\n");
   WriteAll(stream, "  \"geometric_reading_of_the_fibre\": {\n");
   WriteAll(stream, "    \"Z3\": \"the three local pencil-octahedron axes at a point\",\n");
   WriteAll(stream, "    \"Z2\": \"the two endpoints of an axis\",\n");

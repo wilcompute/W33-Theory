@@ -1,0 +1,53 @@
+{
+  "checks": {
+    "each_frame_in_exactly_3_spreads": true,
+    "each_spread_holds_45_frames": true,
+    "five_hundred_forty_frames": true,
+    "forty_points_forty_lines": true,
+    "frame_graph_is_regular": true,
+    "incidence_count_balances": true,
+    "spread_graph_is_regular": true,
+    "spread_graph_is_strongly_regular": true,
+    "spread_size_is_ten": true,
+    "thirty_six_spreads": true
+  },
+  "frame_graph_degree": [
+    117
+  ],
+  "headline": "The two outer-involution classes of PGSp(4,3) carry a tactical configuration: 36 spreads, 540 disjoint-line frames, every spread holding exactly 45 frames and every frame lying in exactly 3 spreads, for 36*45 = 540*3 = 1620 incidences. The induced spread graph is regular; its strong regularity and the frame graph's degree are reported as computed.",
+  "incidence": {
+    "balance": "36*45 = 540*3 = 1620",
+    "frames_per_spread": [
+      45
+    ],
+    "spreads_per_frame": [
+      3
+    ],
+    "total_incidences": 1620
+  },
+  "objects": {
+    "frames": 540,
+    "lines": 40,
+    "points": 40,
+    "spreads": 36
+  },
+  "prior_art": [
+    "Pass 1067 (parallel track) owns the class-to-geometry identifications",
+    "Pass 1044 -- 36 spreads, 0 ovoids, recounted independently here"
+  ],
+  "reading": "Pass 1067 identified the 36-class with spreads and the 540-class with disjoint-line frames but left them as two separate counts. They are the two sides of one 2-regular tactical configuration, and the replication number 3 is forced by 36*45 = 540*3 rather than chosen.",
+  "schema": "w33.pass1071.spread_frame_incidence.v1",
+  "scope": "An exact incidence computation. The arithmetic 36*45 = 540*3 is forced and proves nothing by itself; the content is the regularity of the induced graphs, which is reported as measured. No association-scheme claim is made beyond what the printed parameters support.",
+  "spread_graph": {
+    "k": 15,
+    "lambda": 6,
+    "mu": 6,
+    "n": 36,
+    "strongly_regular": true
+  },
+  "spread_shared_frame_profile": {
+    "0": 720,
+    "6": 540
+  },
+  "status": "PASS"
+}

@@ -1,7 +1,7 @@
 {
   "schema": "w33.pass1041.axis_glue_is_the_fibre.gap.v1",
   "status": "PASS",
-  "headline": "The Springer/Eisenstein fibration of Pass 1021 and the paper's axis-glue carrier are the same object. The 120-block quotient of the Sp(4,3) root action is rank 3 with subdegrees [1,56,63] and its valency-63 orbital graph is SRG(120,63,30,36) -- exactly the axis-pairing graph of thm:axis-glue-e8-lift. The block systems reproduce the paper's factorisation 40 points x 3 axes x 2 endpoints = 240 directly.",
+  "headline": "The Springer/Eisenstein fibration of Pass 1021 and the paper's axis-glue carrier are the same object. On the 120 antipodal blocks the root-line ORTHOGONALITY graph is SRG(120,63,30,36), exactly the axis-pairing graph of thm:axis-glue-e8-lift, and the block systems reproduce the paper's 40 points x 3 axes x 2 endpoints = 240 factorisation directly. Sp(4,3) is TRANSITIVE on the 120 (orbits [120]) with subdegrees [1,1,1,27,27,27,36]; those subdegrees must NOT be compared to the paper's Pass 117 orbit sizes -- see Pass 1070.",
   "geometric_reading_of_the_fibre": {
     "Z3": "the three local pencil-octahedron axes at a point",
     "Z2": "the two endpoints of an axis",
@@ -14,7 +14,7 @@
   "check_count": 7,
   "checks": {
     "Sp43_is_rank_seven_on_the_120": true,
-    "matches_paper_pass117_anisotropic_orbits": true,
+    "tower_is_transitive_so_orbits_are_not_suborbits": true,
     "axis_pairing_graph_is_srg_120_63_30_36": true,
     "each_point_carries_exactly_three_axes": true,
     "each_axis_has_exactly_two_endpoints": true,
