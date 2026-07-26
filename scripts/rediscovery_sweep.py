@@ -92,11 +92,31 @@ def main() -> int:
     colliding = len(per_file)
     pct = (100.0 * colliding / scanned) if scanned else 0.0
 
-    # rank the merge list by how many mutually-unciting files share the token
+    # Rank by token CLASS first, then by count.  Learned from the [[240,81,4]] row:
+    # a genuine certified-value contradiction sat BELOW compound rows like
+    # "d4+szilassi", which are co-occurrences of two named objects and recur far
+    # more legitimately than a parameter triple does.  Mixing the two classes in one
+    # ranking buries the actionable rows under the noisy ones.
+    def token_class(t: str) -> str:
+        if t.startswith("[["):
+            return "code_parameter"       # [[n,k,d]] -- a claim about a quantum code
+        if t.startswith("["):
+            return "linear_parameter"     # [n,k,d]   -- a classical code or a profile
+        if "+" in t:
+            return "compound"             # named-object co-occurrence: noisiest class
+        if "/" in t:
+            return "sequence"
+        return "integer"
+
+    CLASS_ORDER = {"code_parameter": 0, "linear_parameter": 1,
+                   "sequence": 2, "integer": 3, "compound": 4}
+
     ranked = sorted(
-        ({"result": t, "files": sorted(f)} for t, f in merge.items() if len(f) > 1),
-        key=lambda r: (-len(r["files"]), r["result"]),
+        ({"result": t, "class": token_class(t), "files": sorted(f)}
+         for t, f in merge.items() if len(f) > 1),
+        key=lambda r: (CLASS_ORDER[r["class"]], -len(r["files"]), r["result"]),
     )
+    by_class = Counter(r["class"] for r in ranked)
 
     payload = {
         "schema": "w33.rediscovery_sweep.v1",
@@ -107,6 +127,7 @@ def main() -> int:
         "top_results": [{"result": t, "uncited_files": n}
                         for t, n in per_token.most_common(30)],
         "merge_list_size": len(ranked),
+        "merge_list_by_class": dict(by_class),
         "merge_list": ranked[:200],
         "reading": (
             "A row is a CANDIDATE, not a verdict: the same integer recurs "
@@ -121,6 +142,10 @@ def main() -> int:
     print(f"scanned                {scanned}")
     print(f"with uncited collisions {colliding}  ({pct:.1f}%)")
     print(f"merge-list rows         {len(ranked)}")
+    print("  by token class (actionable first):")
+    for cls in ("code_parameter", "linear_parameter", "sequence", "integer", "compound"):
+        if by_class.get(cls):
+            print(f"    {cls:18s} {by_class[cls]}")
     print("\ntop colliding files:")
     for f, n in per_file.most_common(12):
         print(f"  {n:4d}  {f}")
