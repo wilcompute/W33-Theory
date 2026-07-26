@@ -15,7 +15,8 @@ symplectic generalized quadrangle **W(3,3)**: 40 points, 40 lines, 4 points per 
 No free parameters, no tuning, nothing to fit.
 
 What came out of it is this repository: **10,693 commits since 2026-01-16**, 19,767 tracked files, 2,925
-machine-checked JSON certificates, 3,021 tests, 94 GAP witnesses, and 49 Lean files. The finite mathematics is
+machine-checked JSON certificates, 3,021 tests, 94 GAP witnesses, and 49 Lean files — of which **20 do not
+compile**, see [Lean build status](#lean-build-status-read-this-before-trusting-any-proved-tier). The finite mathematics is
 exact. The physics program is ambitious and, in places, **wrong** — and this README will tell you exactly
 where, because the retractions are the most valuable thing here.
 
@@ -330,13 +331,60 @@ self-checked, because novelty is a property of the corpus, not of the claim. It 
 
 | Tier | Means |
 |---|---|
-| `PROVED` | Machine-checked (Lean/GAP) or proved in the manuscript |
+| `PROVED` | Machine-checked (Lean/GAP) or proved in the manuscript. **For Lean, verify the specific module builds — see [Lean build status](#lean-build-status-read-this-before-trusting-any-proved-tier); most do not.** |
 | `CERTIFIED` | Exact computation with an idempotent JSON certificate under `data/` |
 | `CONDITIONAL` | Sound mathematics, physical interpretation not established |
 | `OPEN` | Stated precisely, not settled |
 | `RETRACTED` | Was promoted, then refuted — kept visible on purpose |
 
 A certificate is idempotent: rerun it with `--check` and it must reproduce byte-identically, or it fails.
+
+---
+
+## Lean build status (read this before trusting any PROVED tier)
+
+**`lake build` in `formal/` fails. It has failed for a long time. There is no Lean badge in this
+README because there is nothing green to advertise.**
+
+Measured 2026-07-25 with `leanprover/lean4:v4.32.0-rc1` and a prebuilt mathlib:
+
+| | |
+|---|---|
+| `.lean` files under `formal/W33/` | 40 |
+| imported by `formal/W33.lean` (so reachable by `lake build`) | 39 |
+| **of those, modules with real compile errors** | **20** |
+| never imported at all, so never type-checked by anything | 4 (now 3 imported, 1 left out — see below) |
+
+Broken modules: `Pass447SpanLemma` (`Unknown identifier p`), `Pass450`, `Pass481`, `Pass484`, `Pass486`,
+`Pass487`, `Pass488`, `Pass491`, `Pass502HjelmslevGram`, `Pass502RelativeNormSquare`, `Pass508`,
+`Pass511`, `Pass515`, `Pass517`, `Pass533`, `Pass557ConstantValuation`, `Pass557OddPeriodLift`,
+`Pass560`, `Pass565`, `Pass570`.
+
+`Pass828CoalescenceArithmetic` is deliberately **not** imported: it cannot compile, because line 91 asks
+Lean to synthesise `Decidable (¬∃ k, gluing_order = k^2)`, an unbounded existential over `ℕ`. It is left
+out with a comment rather than patched over or `sorry`-ed.
+
+**Why this was not visible.** Not because CI lied — because two thirds of the Lean CI was aimed at nothing.
+
+- `.github/workflows/lean-formal.yml` targets `formal/` and **does** enforce: its "Enforce kernel success"
+  step fails the job unless `lake build --wfail` returned 0, and a second job rejects any `sorry`/`admit`.
+  It is correct, and it must have been failing. It only triggers on `formal/**`, and no badge surfaced it,
+  so its redness sat where nobody looked.
+- `.github/workflows/lean4.yml` and `lean4-weekly-verify.yml` ran with `working-directory: proofs/lean` —
+  **a directory that does not exist in this repository.** Both degraded to no-ops by design
+  (`lake build || echo "...continuing"`, `|| true`, and an explicit "skipping Lean build" branch). They have
+  been deleted; a workflow that cannot verify anything is worse than no workflow, because it looks like one.
+
+**What this does and does not invalidate.** It does not touch the GAP certificates or the pytest suite,
+which are independent. It does mean a `PROVED` tier justified by "Lean" is only as good as the specific
+module, so check it:
+
+```bash
+cd formal && lake build W33.<TheModule>     # exit 0 means that module really is checked
+```
+
+Modules verified to build at that measurement: `Pass806TwoBranchGluing`, `Pass1006RamifiedFiltration`,
+`Pass1018PencilRigidity`, and the 18 other imported modules not on the broken list above.
 
 ---
 
@@ -385,7 +433,7 @@ py -3 tools/bt1291_verify_release_packet.py   # verifies the whole packet
 | `data/` | 2,925 JSON certificates — gitignored, `git add -f` to commit |
 | `tests/` | 3,021 pytest files |
 | `scripts/` | 809 tools, including the guards |
-| `formal/` | Lean 4 + mathlib, 49 files |
+| `formal/` | Lean 4 + mathlib, 49 files — **`lake build` fails; 20 of 39 imported modules have real errors** |
 | `papers/` | 55 manuscripts; main is `w33_paper.tex` at repo root |
 | `docs/` | 545 files; the live atlas is `docs/index.html` |
 | `PASS_*`, `BREAKTHROUGH_*`, `PART_*` | 551 root-level synthesis documents |
