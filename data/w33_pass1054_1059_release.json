@@ -1,8 +1,8 @@
 {
-  "schema": "w33.pass1054_1059.release.v1",
+  "schema": "w33.pass1054_1059.release.v2",
   "status": "PASS",
-  "total_checks": 71,
-  "local_pytest": "7 passed in 27.32s",
+  "total_checks": 75,
+  "local_pytest": "7 passed in 27.61s",
   "passes": {
     "1054": {
       "status": "PASS",
@@ -46,7 +46,18 @@
     },
     "1059": {
       "status": "PASS",
-      "check_count": 20,
+      "schema": "w33.pass1059.parallel_claim_audit.v3",
+      "check_count": 24,
+      "retained": {
+        "W33_spectrum": "12^1, 2^24, (-4)^15",
+        "Euler_identity": "1-81+40=-40",
+        "Leech_identity": "6*mu*q^2*Phi3*Phi4*Phi6=196560",
+        "McKay_gap": "196884=196560+18^2",
+        "Grassmannian_source_dimension": 40,
+        "BC_gap_count": 2,
+        "finite_graph_gap": 10,
+        "Ihara_radius": "1/sqrt(11)"
+      },
       "hard_corrections": {
         "parallel_CF_formula_at_q3": "2/5, not 1/10",
         "H2_dimension_preserving_symmetry": "C2, not a 3-cycle on 5+5+30",
@@ -55,9 +66,10 @@
         "S4_order": 24,
         "PSp43_over_S4": 1080,
         "order48_index": 540,
+        "Pass5_S4_dictionary": "does not construct a symplectic S4 or S4xZ2 subgroup",
         "BC_gap_ratio": 1.5740226837691902,
-        "CMB_chi2": "not computed by the parallel script",
-        "Pass575": "no Lean source change or build artifact",
+        "CMB_chi2": "not computed by the parallel scripts",
+        "Pass575": "proposal file only; actual formal module not modified or compiled",
         "Yang_Mills": "finite graph gap only",
         "Ihara_Weil": "circle match does not prove zeta equality"
       }
