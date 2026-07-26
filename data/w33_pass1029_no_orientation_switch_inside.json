@@ -1,0 +1,29 @@
+{
+  "schema": "w33.pass1029.no_orientation_switch_inside.gap.v1",
+  "status": "PASS",
+  "headline": "No orientation switch exists inside Sp(4,3). It is perfect, so the determinant character kills it and every element has det +1; and the antipodal map generating the 2-primary class is -I on R^8, also det +1. So the chirality obstruction (which needs det = -1) and the 2-primary section obstruction are different C2s: a quotient character versus a central subgroup inside its kernel. Chirality is a BASE-level datum, carried by W(E6), not by the total-space group.",
+  "determinant_character": {
+    "method": "explicit: matrix of g in the simple-root basis, S^-1 * S_g, then Determinant",
+    "reflection": -1,
+    "antipodal_map": 1,
+    "Sp43_generators": [ 1 ],
+    "normaliser_generators": [ 1 ]
+  },
+  "closes": "Pass 1028's open candidate: the missing binary chirality coordinate cannot be an equivariant orientation-switch datum internal to Sp(4,3), because no element of a perfect group has det -1. The proof is one line and needs no search over elements.",
+  "separation": "chirality C2 = the determinant character, a QUOTIENT of the group; 2-primary C2 = the antipodal map, a CENTRAL SUBGROUP lying inside ker(det). A quotient C2 and a central sub-C2 are not the same class and must not be merged.",
+  "two_level_reading": "Consistent with Pass 1021: Sp(4,3) is the total-space group and is entirely orientation-preserving; W(E6) = PGSp(4,3) is the base group and is not perfect, so det = -1 lives there. Chirality is a base phenomenon; the sign obstruction is a total-space phenomenon.",
+  "scope": "This is a negative result about internal realisability. It does not construct any external orientation datum, and it does not touch the 3-primary phase side.",
+  "check_count": 10,
+  "checks": {
+    "Sp43_is_perfect": true,
+    "Sp43_generators_all_have_det_plus_one": true,
+    "no_orientation_switch_inside_Sp43": true,
+    "antipodal_map_has_det_plus_one": true,
+    "antipodal_map_is_central_in_K": true,
+    "chirality_C2_is_not_the_2primary_C2": true,
+    "det_minus_one_exists_in_WE8": true,
+    "whole_normaliser_is_orientation_preserving": true,
+    "orientation_reversal_is_outside_the_eisenstein_tower": true,
+    "K_is_proper_in_normaliser": true
+  }
+}
