@@ -24,6 +24,10 @@ on:
       - 'analysis/w33_pass1027_photonic_c6_holonomy_falsifier.py'
       - '.github/workflows/pass1023_1027_obstruction_suite.yml'
 
+concurrency:
+  group: pass1023-1027-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   factor-cocycle-selector-photonic:
     runs-on: ubuntu-latest
