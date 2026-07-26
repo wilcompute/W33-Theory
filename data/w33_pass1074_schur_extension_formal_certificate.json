@@ -1,0 +1,28 @@
+{
+  "schema": "w33.pass1074.schur_extension.formal_certificate.v1",
+  "status": "PASS",
+  "headline": "The canonical C2 cocycle is verified as normalized and associative on 648000 generator-complete triples. The pair multiplication on PSp(4,3) x C2 reconstructs all 51840 matrices of Sp(4,3), while the four-row certificate blocks a splitting section.",
+  "orders": {
+    "base": 25920,
+    "extension": 51840,
+    "kernel": 2
+  },
+  "cocycle_identity_checks": 648000,
+  "shortest_detected_minusI_word": [1,1,2,4,5,3,3,5,4,2],
+  "lean_module": "formal/W33/Pass1074SchurCocycleExtension.lean",
+  "formal_content": ["normalized cocycle structure","extension multiplication associativity","identity laws","central kernel","projection compatibility","section/coboundary criterion","Pass1063 nonsplitting lock"],
+  "check_count": 10,
+  "checks": {
+    "Sp43_order_51840": true,
+    "PSp43_order_25920": true,
+    "normalized_left": true,
+    "normalized_right": true,
+    "cocycle_identity_648000_checks": true,
+    "extension_pair_carrier_reconstructs_all_Sp43": true,
+    "kernel_is_exactly_plus_minus_identity": true,
+    "nontrivial_relator_lifts_to_minus_identity": true,
+    "four_row_variables_cancel": true,
+    "four_row_rhs_is_one": true
+  },
+  "scope": "Exact F3 matrix arithmetic. Local Lean compilation is unavailable in this environment; the module is wired into the umbrella build and a dedicated workflow is supplied."
+}
