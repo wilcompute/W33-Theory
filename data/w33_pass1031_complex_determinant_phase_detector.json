@@ -1,0 +1,28 @@
+{
+  "schema": "w33.pass1031.complex_determinant_phase_detector.gap.v1",
+  "status": "PASS",
+  "headline": "The complex determinant separates the two primary classes. det_C on C = Z3 x Sp(4,3) is onto mu_3 with kernel exactly the derived subgroup Sp(4,3); omega lies outside that kernel and generates the image, while the antipodal map lies inside it. So det_C DETECTS the 3-primary phase class and is BLIND to the 2-primary sign class. The real determinant, by Pass 1029, detects neither.",
+  "identification": "det_C is a homomorphism from a finite group to C^*, so it kills every commutator and factors through C^ab. Here C^ab = Z3 and det_C is onto mu_3, so det_C IS the abelianisation map up to an isomorphism of Z3, and ker(det_C) = [C,C] = Sp(4,3). Membership is therefore decidable group-theoretically, which is what is computed.",
+  "detector_table": {
+    "det_R_on_normaliser": {"image": "trivial", "detects_sign": false, "detects_phase": false},
+    "det_C_on_centraliser": {"image": "mu_3", "detects_sign": false, "detects_phase": true}
+  },
+  "abelian_invariants_of_C": [ 3 ],
+  "kernel": "Sp(4,3), order 51840",
+  "fibre_intersection": "<c^5> cap ker(det_C) has order 2 and contains the antipodal map: the C6 fibre meets the kernel exactly in its sign part, so det_C restricted to the fibre is precisely the projection C6 -> C3.",
+  "reading": "Pass 1023 separated the halves by how subgroups behave; Pass 1028 and 1030 raised firewalls against merging them. This supplies the invariant those firewalls were separating the halves without: a single character whose kernel contains one primary class and not the other. The phase half is a determinant; the sign half is not a determinant of anything.",
+  "scope": "Separation invariant only. It does not identify either class with any named corpus obstruction, and it says nothing about conjugate-linear elements, on which det_C is not a homomorphism to mu_3.",
+  "check_count": 10,
+  "checks": {
+    "derived_subgroup_is_Sp43": true,
+    "abelianisation_is_Z3": true,
+    "det_C_is_onto_mu3": true,
+    "omega_is_outside_the_kernel": true,
+    "omega_generates_the_image": true,
+    "antipodal_map_is_inside_the_kernel": true,
+    "antipodal_image_is_trivial": true,
+    "det_C_separates_phase_from_sign": true,
+    "det_R_separates_neither": true,
+    "fibre_C6_meets_kernel_in_the_sign_part": true
+  }
+}
