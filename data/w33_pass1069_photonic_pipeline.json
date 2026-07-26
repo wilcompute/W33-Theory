@@ -1,0 +1,16 @@
+{
+  "schema":"w33.pass1069.photonic_pipeline.v1","status":"PASS",
+  "headline":"The Pass1064 preregistration is compiled into a defect-aware 40-context control schedule, exact permutation-to-EOM swap networks, calibration gates, four blinded synthetic fixtures, bootstrap contextuality analysis, central-C3 process analysis, and a fail-closed joint report.",
+  "artifacts":["hardware/w33_pass1069_photonic_manifest.json","hardware/w33_pass1069_control_schedule.csv","hardware/w33_pass1069_synthetic_blinded.json","hardware/w33_pass1069_synthetic_key.json"],
+  "schedule_rows":48,
+  "analyses":[
+    {"run_id":"run_daebfda20913d645","calibration_pass":true,"contextuality":{"W":10.026111111111112,"CI95":[9.89052777777778,10.151111111111112],"decision":"positive"},"central_C3":{"min_score":0,"n_scores_le9":2,"decision":"point"},"joint_verdict":"supports_W33_contextual_point_Hessian_tower"},
+    {"run_id":"run_d1bfd96299868631","calibration_pass":true,"contextuality":{"W":6.032777777777779,"CI95":[5.928874999999999,6.137305555555556],"decision":"negative"},"central_C3":{"min_score":0,"n_scores_le9":2,"decision":"point"},"joint_verdict":"local_Hessian_present_contextual_substrate_rejected"},
+    {"run_id":"run_dfab1306eeb045b1","calibration_pass":true,"contextuality":{"W":9.990000000000004,"CI95":[9.85161111111111,10.11513888888889],"decision":"positive"},"central_C3":{"min_score":27,"n_scores_le9":0,"decision":"dual"},"joint_verdict":"contextuality_present_selected_tower_rejected"},
+    {"run_id":"run_4f0da418c0a62f46","calibration_pass":true,"contextuality":{"W":6.034444444444444,"CI95":[5.932194444444445,6.137777777777777],"decision":"negative"},"central_C3":{"min_score":27,"n_scores_le9":0,"decision":"dual"},"joint_verdict":"joint_rejection"}
+  ],
+  "invalid_calibration_test":{"run_id":"run_daebfda20913d645","calibration_pass":false,"contextuality":{"W":8.915000000000001,"CI95":[8.779416666666666,9.04],"decision":"inconclusive"},"central_C3":{"min_score":0,"n_scores_le9":2,"decision":"inconclusive"},"joint_verdict":"inconclusive_no_claim"},
+  "check_count":13,
+  "checks":{"forty_contexts_compiled":true,"contextual_macro_schedule_has_40_gauge_rows":true,"macro_expansion_has_1680_compiled_rows":true,"contextual_schedule_expands_to_6480_elementary_operations":true,"primary_C3_schedule_has_eight_rows":true,"all_permutation_swap_networks_reconstruct":true,"point_bank_has_two_exact_central_candidates":true,"dual_bank_exact_minimum_is_27":true,"four_blinded_scenarios_hit_all_joint_branches":true,"calibration_failure_forces_inconclusive":true,"manifest_hash_is_self_consistent":true,"candidate_bank_hashes_are_reproducible":true,"no_physical_duration_or_uncalibrated_angles_claimed":true},
+  "scope":"Executable abstract control and analysis software. Hardware-specific unitary decompositions, efficiencies, clock rates, and physical data remain calibration inputs and are not claimed."
+}
