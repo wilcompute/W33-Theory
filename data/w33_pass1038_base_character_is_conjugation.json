@@ -1,0 +1,23 @@
+{
+  "schema": "w33.pass1038.base_character_is_conjugation.gap.v1",
+  "status": "PASS",
+  "headline": "The base chirality character is exactly conjugate-linearity, and it is NOT the 2-primary section class. Sp(4,3) maps onto U4(2) on the 40 blocks, and U4(2) is precisely the character's kernel, so the character pulls back trivially to the total-space group while the 2-primary section obstruction there is nontrivial. What carries the character is the outer half N \\ C, the conjugate-linear elements.",
+  "separation": "base character and 2-primary class have disjoint domains of sensitivity: the character vanishes identically on Sp(4,3), where the section obstruction lives. They cannot be the same invariant.",
+  "image_of_Sp43_on_base": 25920,
+  "image_of_centraliser_on_base": 25920,
+  "character_kernel": 25920,
+  "identification": "base character(g) = -1 <=> g is conjugate-linear. C is the C-linear part and maps into the kernel; N \\ C is complex conjugation on C^4 and supplies the whole outer half.",
+  "reading": "Combined with Pass 1029 -- conjugation on C^4 = R^8 has det_R = (-1)^4 = +1 -- the operation that reverses orientation ON THE BASE preserves it on the total space. The reversal exists, it is complex conjugation, and it is invisible in the representation the substrate acts by. That is the sharpest form of 'chirality is unselectable from inside' this arc has reached.",
+  "scope": "A separation and an identification of the character. It does not construct an equivariant orientation datum -- Pass 1029 shows none exists inside the tower -- and the conjugate-linearity correspondence is verified on a 400-element sample plus the exact kernel equality, not by enumerating 311040 elements.",
+  "check_count": 8,
+  "checks": {
+    "image_of_Sp43_on_the_base_is_U42": true,
+    "that_image_is_exactly_the_character_kernel": true,
+    "base_character_pulls_back_trivially_to_Sp43": true,
+    "two_primary_obstruction_is_nontrivial": true,
+    "base_character_is_not_the_two_primary_class": true,
+    "C_linear_part_maps_into_the_kernel": true,
+    "character_is_exactly_conjugate_linearity": true,
+    "outer_half_exists_and_has_index_two": true
+  }
+}
