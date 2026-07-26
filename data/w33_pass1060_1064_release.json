@@ -1,0 +1,19 @@
+{
+  "schema": "w33.pass1060_1064.release.v1",
+  "status": "PASS_LOCAL_FORMAL_PENDING_CI",
+  "python_check_count": 37,
+  "local_pytest": "6 passed in 29.39s",
+  "results": {
+    "1060": "minimal signed symmetry is the non-split central double cover Sp(4,3), order 51840",
+    "1061": "Springer normalizer selects the W33 code embedding with orbits 1+120+135",
+    "1062": "the 540 class has inner centralizer C2 x S4 of order 48",
+    "1063": "four-row ZMod 2 obstruction formalized; actual Pass575 certificate imported as build lock",
+    "1064": "40-context contextuality and central-C3 tomography combined in a fail-closed preregistration"
+  },
+  "formal": {
+    "source": "formal/W33/Pass1063SignedLiftObstruction.lean",
+    "umbrella_import": "formal/W33.lean",
+    "workflow": ".github/workflows/pass1060_1064_exact.yml",
+    "full_lake_build": "pending push-triggered GitHub Actions result"
+  }
+}
