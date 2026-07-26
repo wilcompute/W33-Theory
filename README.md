@@ -364,20 +364,22 @@ get` reports the cache complete and the named files are present on disk.
 |---|---|
 | `.lean` files under `formal/W33/` | 40 |
 | imported by `formal/W33.lean` (so reachable by `lake build`) | 39 |
-| **genuinely failing today** | **5** |
-| fixed this session | 2 — `Pass447SpanLemma`, `Pass491HermitianRealDet` |
+| **genuinely failing today** | **3** — `Pass488`, `Pass502HjelmslevGram`, `Pass570` |
+| fixed | 4 — `Pass447SpanLemma`, `Pass491HermitianRealDet`, `Pass450CentralFourierScaffold`, `Pass565CyclotomicFiveOrder` |
 | falsely accused by the contended build, and fine | 12 |
 | never imported at all, so never type-checked by anything | 4 (now 3 imported, 1 left out — see below) |
 
 The 5 that genuinely fail, with the actual error:
 
-| module | error |
+| module | current error |
 |---|---|
-| `Pass450CentralFourierScaffold` | `unsolved goals` (27:34) |
-| `Pass488FlatBlockQuadratic` | `linarith failed to find a contradiction` (38:4) |
-| `Pass502HjelmslevGram` | `unsolved goals` (23:2) |
-| `Pass565CyclotomicFiveOrder` | `failed to compile definition` (16:4) |
-| `Pass570CyclotomicResidue` | `unsolved goals` (33:55) |
+| `Pass488FlatBlockQuadratic` | `failed to synthesize` (61:48) |
+| `Pass502HjelmslevGram` | `unsolved goals` (32:4) |
+| `Pass570CyclotomicResidue` | `unsolved goals` (41:72) |
+
+**None of the seven has turned out to be bad mathematics.** Every one so far was a tactic or a
+lemma name that moved underneath the file — mathlib drift, not a wrong proof. `Pass491` was even
+re-proving an upstream `@[simp]` lemma.
 
 **Both fixed modules were mathlib drift, not bad mathematics**, and that is the likely character of
 the rest. `Pass447` assumed a `subst` direction: in `rintro v (rfl | rfl)` the disjunct `v = p`
