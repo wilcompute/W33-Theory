@@ -48,7 +48,7 @@ fails, it gets a retraction pass, not a quiet edit.
 | If you want to… | Open this |
 |---|---|
 | see the whole atlas, interactively | [Live atlas](https://wilcompute.github.io/W33-Theory/) |
-| read the mathematics | **[w33_paper.pdf](docs/pdf/w33_paper.pdf)** (1.37 MiB, opens in browser) &middot; [source](w33_paper.tex) |
+| read the mathematics | **[w33_paper.pdf](docs/pdf/w33_paper.pdf)** (1.39 MiB, opens in browser) &middot; [source](w33_paper.tex) |
 | read the deformation/lattice track | **[heisenberg_weyl_determinant_law.pdf](docs/pdf/heisenberg_weyl_determinant_law.pdf)** (240 KB) &middot; [source](papers/heisenberg_weyl_determinant_law.tex) |
 | read the photonic machine | **[photonic_holonet.pdf](docs/pdf/photonic_holonet.pdf)** (954 KB, opens in browser) &middot; [source](photonic_holonet.tex) &middot; [`HOLONET.md`](HOLONET.md) |
 | read what the machine would mean in practice | **[holonet_practical_implications.pdf](docs/pdf/holonet_practical_implications.pdf)** (215 KB, opens in browser) &middot; [source](holonet_practical_implications.tex) |
