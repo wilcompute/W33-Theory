@@ -1,0 +1,47 @@
+{
+  "schema": "w33.pass1035.selector_correction_refinement.python.v1",
+  "status": "PASS",
+  "headline": "The golden-selector flatness defect is completely classified. The 1620-by-240 GF(2) boundary system has rank 200, 108 failed quadrangles, and a 40-dimensional affine correction space. Its homogeneous kernel is exactly the 39-dimensional line-coboundary space plus the constant all-edge cochain. A deterministic weight-54 correction repairs all cycles, but no rank-five Bose--Mesner orbital weight can do so.",
+  "counts": {
+    "directed_transport_edges": 480,
+    "undirected_transport_edges": 240,
+    "unique_quadrangles": 1620,
+    "unique_failures": 108,
+    "boundary_rank": 200,
+    "free_dimension": 40,
+    "gauge_fixed_weight": 54,
+    "selected_points": 18
+  },
+  "solution_space_theorem": "All corrections form one affine coset of ker(delta). The kernel is the direct sum of line 0-cochain coboundaries (rank 39 on the connected 40-line graph) and the global constant edge cochain (rank 1). Thus the correction class is unique modulo ordinary line gauge and one global parity sheet.",
+  "bose_mesner_no_go": "In the rank-five selector scheme, every sheet over an intersecting line lies in the single valency-36 relation. An orbital-invariant binary 1-cochain is therefore constant on every transport step, and every quadrangle receives 4c=0 mod 2. Since 108 quadrangles have nonzero holonomy, no correction exists inside the commutative Bose--Mesner algebra.",
+  "minimal_refinement": "The correction must split the valency-36 relation by pointed local data. The deterministic representative is a star on the four-line pencil at each of 18 selected points; it is a valid gauge-fixed witness, not a PSp(4,3)-canonical selector.",
+  "selected_point_profile": {"22":3,"23":3,"24":3,"25":3,"26":3,"27":3,"28":3,"29":3,"30":3,"31":3,"32":3,"33":3,"34":3,"35":3,"36":3,"37":3,"38":3,"39":3},
+  "sample_local_shapes": {
+    "22": {"point_vector":[1,1,0,0],"incident_lines":[10,13,30,35],"chosen_edges":[[10,13],[10,30],[10,35]],"degree_profile":[1,1,1,3]},
+    "23": {"point_vector":[1,1,0,1],"incident_lines":[11,16,24,38],"chosen_edges":[[11,16],[11,24],[11,38]],"degree_profile":[1,1,1,3]},
+    "24": {"point_vector":[1,1,0,2],"incident_lines":[12,19,27,32],"chosen_edges":[[12,19],[12,27],[12,32]],"degree_profile":[1,1,1,3]},
+    "25": {"point_vector":[1,1,1,0],"incident_lines":[11,14,28,36],"chosen_edges":[[11,14],[11,28],[11,36]],"degree_profile":[1,1,1,3]},
+    "26": {"point_vector":[1,1,1,1],"incident_lines":[12,17,22,39],"chosen_edges":[[12,17],[12,22],[12,39]],"degree_profile":[1,1,1,3]},
+    "27": {"point_vector":[1,1,1,2],"incident_lines":[10,20,25,33],"chosen_edges":[[10,20],[10,25],[10,33]],"degree_profile":[1,1,1,3]}
+  },
+  "check_count": 17,
+  "checks": {
+    "w33_has_40_points_and_lines": true,
+    "draft_transport_has_480_directed_edges": true,
+    "undirected_transport_has_240_edges": true,
+    "unique_quadrangle_count_is_1620": true,
+    "unique_failure_count_is_108": true,
+    "boundary_rank_is_200": true,
+    "correction_affine_dimension_is_40": true,
+    "deterministic_solution_weight_is_54": true,
+    "deterministic_solution_repairs_every_quadrangle": true,
+    "line_coboundary_rank_is_39": true,
+    "constant_edge_cochain_adds_one_dimension": true,
+    "line_coboundaries_are_homogeneous_solutions": true,
+    "constant_edge_cochain_is_homogeneous": true,
+    "kernel_is_exactly_coboundaries_plus_constant_by_dimension": true,
+    "gauge_fixed_solution_is_18_local_stars": true,
+    "orbital_constant_has_zero_four_cycle_boundary": true,
+    "rank_five_bose_mesner_correction_is_impossible": true
+  }
+}
