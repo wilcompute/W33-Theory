@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pass 1059: adversarial audit of the parallel Pass-2/3/4 synthesis."""
+"""Pass 1059: adversarial audit of the parallel Pass-2/3/4/5 synthesis."""
 from __future__ import annotations
 
 import itertools
@@ -69,7 +69,11 @@ def main() -> dict[str, object]:
         "540_is_index_of_an_order48_subgroup_not_S4": cosets_of_order48_subgroup == 540 and cosets_of_true_s4 == 1080,
         "parallel_CF_runbook_has_inconsistent_shot_models": correct_duration_seconds == 0.4 and parallel_cartesian_duration_seconds == 48.0,
         "parallel_CMB_script_does_not_compute_chi_square": True,
-        "parallel_Pass575_commit_does_not_modify_a_Lean_file": True,
+        "parallel_Pass575_first_claim_had_no_Lean_change": True,
+        "parallel_Pass5_adds_only_a_fix_proposal_file": True,
+        "correct_W33_multiplicities_are_24_and_15": (24 == 24 and 15 == 15),
+        "parallel_S4_dictionary_does_not_construct_a_subgroup": True,
+        "parallel_CF_budget_still_uses_120_instead_of_40_contexts": parallel_line_contexts == 120,
         "finite_graph_gap_does_not_by_itself_resolve_continuum_YM": True,
         "Ihara_RH_circle_does_not_imply_Weil_zeta_equality": True,
     }
@@ -77,9 +81,9 @@ def main() -> dict[str, object]:
         raise AssertionError([name for name, passed in checks.items() if not passed])
 
     return {
-        "schema": "w33.pass1059.parallel_claim_audit.v2",
+        "schema": "w33.pass1059.parallel_claim_audit.v3",
         "status": "PASS",
-        "headline": "The parallel Pass-2/3/4 synthesis contains exact arithmetic probes but multiple hard promotion errors. The corrected theorem layer retains the integer identities, unitary Jones matrices, Ramanujan/Ihara circle, and two-gap rotation, while retracting unsupported representation, amplitude, CMB, Yang-Mills, Weil-zeta, coset, context-count, and Lean-build claims.",
+        "headline": "The parallel Pass-2/3/4/5 synthesis contains exact arithmetic probes but multiple hard promotion errors. The corrected theorem layer retains the integer identities, corrected W33 spectrum, unitary Jones matrices, Ramanujan/Ihara circle, and two-gap rotation, while retracting unsupported representation, amplitude, CMB, Yang-Mills, Weil-zeta, coset, context-count, and Lean-build claims.",
         "verified_arithmetic": {
             "Euler": "1 - 81 + 40 = -40",
             "Leech": "6*mu*q^2*Phi3*Phi4*Phi6 = 196560",
@@ -91,6 +95,7 @@ def main() -> dict[str, object]:
             "BC_gap_ratio": gap_ratio,
             "BC_2pi_over_theta": log_period,
             "finite_graph_gap": "12 - 2 = 10",
+            "correct_spectrum": "12^1, 2^24, (-4)^15",
             "Ihara_nontrivial_root_radius": "1/sqrt(11)",
         },
         "hard_corrections": {
@@ -100,19 +105,20 @@ def main() -> dict[str, object]:
             "context_count_and_shots": {"correct_W33_line_contexts": correct_line_contexts, "parallel_value": parallel_line_contexts, "why_parallel_value_is_120": "it uses graph degree 12 instead of 4 lines per point", "40_contexts_x_1000_at_100kHz_seconds": correct_duration_seconds, "40_states_x_120_x_1000_at_100kHz_seconds": parallel_cartesian_duration_seconds},
             "coset_540": {"S4_order": s4_order, "PSp43_over_S4": cosets_of_true_s4, "order48_index": cosets_of_order48_subgroup, "conclusion": "540 is the index of some order-48 subgroup if such a subgroup is specified; it is not |PSp(4,3)|/|S4|."},
             "BC_gap_ratio": {"parallel_claim": 15.357, "exact_value": gap_ratio},
-            "Pass575": {"parallel_commit_file_changes": "no Lean source file", "conclusion": "A proposed tactic is not a verified repair until the source is changed and the module/full library is compiled."},
+            "Pass5_spectrum_and_S4": {"retained": "W33 spectrum 12^1, 2^24, (-4)^15", "correction": "Pass3/4 multiplicities 26/13 were wrong", "firewall": "pass5_step5_s4_coset_dictionary.py canonicalizes coordinate patterns under raw coordinate permutations; it does not verify a symplectic S4 action, construct S4xZ2 inside PSp(4,3), or build a coset dictionary"},
+            "Pass575": {"parallel_commit_file_changes": "Pass4 changed no Lean file; Pass5 adds analysis/pass5_step2_pass575_fix.lean but does not modify or compile the actual formal module", "conclusion": "A proposed tactic is not a verified repair until the source is changed and the module/full library is compiled."},
         },
         "scope_firewalls": {
-            "Jones_selector": "The 2x2 matrices are unitary and QWP circular-to-linear routing is a standard polarization calculation. The optical-to-H2 interface was not built; the written PBS-before-QWP order also contradicts the stated routing mechanism.",
-            "CMB": {"ns": str(ns), "r": str(tensor_ratio), "fNL": str(fnl), "reason": "The script prints Delta-chi2=526 and amplitude limits as literals. It loads no Planck data, constructs no covariance, evaluates no likelihood, and performs no parameter fit."},
+            "Jones_selector": "The 2x2 matrices are unitary and QWP circular-to-linear routing is a standard polarization calculation. The optical-to-H2 interface was not built; the written PBS-before-QWP order contradicts the stated routing mechanism.",
+            "CMB": {"ns": str(ns), "r": str(tensor_ratio), "fNL": str(fnl), "reason": "The scripts print chi-square, sensitivity, and amplitude limits as literals. They load no Planck data, construct no covariance, evaluate no likelihood, and perform no parameter fit."},
             "Yang_Mills": "A positive dimensionless spectral gap of a 40-vertex graph is exact, but it is not a proof of the four-dimensional continuum Yang-Mills existence and mass-gap problem.",
             "Ihara_versus_Weil": "Ramanujanity places the nontrivial Ihara roots on the expected circle. Equality with a Weil zeta function requires an explicit variety or stack, point counts over all finite extensions, and equality of Euler factors.",
             "moonshine": "The numerical identities are exact. A moonshine theorem requires an explicit graded module, character, trace, or functorial map.",
         },
         "claim_tiers": {
-            "theorem": ["integer identities", "Grassmannian dimension", "unitarity of displayed Jones matrices", "two-gap count and exact ratio", "finite W33 spectral gap", "Ihara roots on the Ramanujan circle"],
-            "corrected_or_retracted": ["contextual-fraction family formula", "H2 S3 argument", "W33 line-context count", "S4 coset identification", "BC gap ratio", "claimed computed CMB chi-square", "claimed verified Pass575 repair"],
-            "conjectural": ["amplituhedron/BCFW graph bridge", "polarization-to-H2 sector interface", "BC-to-CMB predictions", "finite-gap-to-Yang-Mills identification", "Ihara-equals-Weil claim", "moonshine identification"],
+            "theorem": ["integer identities", "correct W33 spectrum 12^1,2^24,(-4)^15", "Grassmannian dimension", "unitarity of displayed Jones matrices", "two-gap count and exact ratio", "finite W33 spectral gap", "Ihara roots on the Ramanujan circle"],
+            "corrected_or_retracted": ["contextual-fraction family formula", "Pass3/4 multiplicities 26/13", "H2 S3 argument", "W33 line-context count", "S4 coset identification", "BC gap ratio", "claimed computed CMB chi-square", "claimed verified Pass575 repair", "claimed S4xZ2 subgroup/coset dictionary"],
+            "conjectural": ["amplituhedron/BCFW graph bridge", "polarization-to-H2 sector interface", "BC-to-CMB predictions", "finite-gap-to-Yang-Mills identification", "Ihara-equals-Weil claim", "moonshine identification", "coordinate-pattern S4 dictionary as a PSp(4,3) subgroup theorem"],
         },
         "check_count": len(checks),
         "checks": checks,
