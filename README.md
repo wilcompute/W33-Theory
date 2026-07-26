@@ -364,22 +364,23 @@ get` reports the cache complete and the named files are present on disk.
 |---|---|
 | `.lean` files under `formal/W33/` | 40 |
 | imported by `formal/W33.lean` (so reachable by `lake build`) | 39 |
-| **genuinely failing today** | **3** — `Pass488`, `Pass502HjelmslevGram`, `Pass570` |
-| fixed | 4 — `Pass447SpanLemma`, `Pass491HermitianRealDet`, `Pass450CentralFourierScaffold`, `Pass565CyclotomicFiveOrder` |
+| **all seven originally-broken modules** | **FIXED** — `Pass447`, `Pass491`, `Pass450`, `Pass565`, `Pass502`, `Pass488`, `Pass570` |
+| newly revealed once they built | **1** — `Pass575CyclotomicDVRKernel`, which had never been compiled because it imports `Pass570` |
 | falsely accused by the contended build, and fine | 12 |
 | never imported at all, so never type-checked by anything | 4 (now 3 imported, 1 left out — see below) |
 
-The 5 that genuinely fail, with the actual error:
+**Every one of the seven was mathlib drift, not bad mathematics.** A renamed constant, a
+tactic that moved, a missing `noncomputable`, or a lemma absorbed upstream. Two were instructive:
+`Pass491` was re-proving `Matrix.det_conjTranspose`, a `@[simp]` lemma mathlib already had; and
+`Pass488` resisted three tactic swaps because its ring `A` is only `[Ring A]` — possibly
+**noncommutative** — so `ring`, `ring_nf` and `linear_combination` were never applicable. What
+makes that theorem true is that `algebraMap` lands in the *centre*, which is now what the proof uses.
 
-| module | current error |
-|---|---|
-| `Pass488FlatBlockQuadratic` | `failed to synthesize` (61:48) |
-| `Pass502HjelmslevGram` | `unsolved goals` (32:4) |
-| `Pass570CyclotomicResidue` | `unsolved goals` (41:72) |
-
-**None of the seven has turned out to be bad mathematics.** Every one so far was a tactic or a
-lemma name that moved underneath the file — mathlib drift, not a wrong proof. `Pass491` was even
-re-proving an upstream `@[simp]` lemma.
+**A caution the count itself teaches.** Fixing the seven did not make `lake build` green: it
+exposed `Pass575CyclotomicDVRKernel`, which imports `Pass570` and had therefore never been
+compiled at all. **A failing module masks everything downstream of it, so any count taken from a
+failing build is a lower bound.** The honest statement is that seven are fixed and one is newly
+visible.
 
 **Both fixed modules were mathlib drift, not bad mathematics**, and that is the likely character of
 the rest. `Pass447` assumed a `subst` direction: in `rintro v (rfl | rfl)` the disjunct `v = p`
