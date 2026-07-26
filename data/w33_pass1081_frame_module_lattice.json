@@ -1,0 +1,13 @@
+{
+  "status":"PASS","group_order":25920,"frame_rank":32,
+  "subdegrees":[1,3,4,4,6,6,8,8,8,12,12,12,12,12,12,12,12,12,12,12,24,24,24,24,24,24,24,24,24,48,48,48],
+  "block_systems":{"4":{"block_size":4,"block_count":135,"membership_rank":135},"12":{"block_size":12,"block_count":45,"membership_rank":45},"15":{"block_size":15,"block_count":36,"membership_rank":36}},
+  "refinement":{"4_refines_12":true,"12_refines_15":false},
+  "row_space_intersections":{"4&12":45,"4&15":1,"12&15":1},
+  "row_space_sums":{"4+12":135,"4+15":170,"12+15":80},"all_three_sum_rank":170,
+  "fifteen_blocks_are_not_literal_spread_fibers":true,"spread_block_module_intersection_dim":1,"spread_block_module_sum_dim":71,
+  "module_reading":{"U4_dim":135,"U12_dim":45,"U15_dim":36,"U12_sub_U4":true,"U4_intersect_U15_dim":1,"U12_intersect_U15_dim":1,"spread_kernel_dim":504,"new_4_over_12_dim":90,"new_12_over_trivial_dim":44,"new_15_over_intersection_dim":35},
+  "check_count":12,
+  "checks":{"group_order_25920":true,"rank32":true,"unique_block_systems":true,"four_refines_twelve":true,"twelve_not_refine_fifteen":true,"U12_sub_U4":true,"U4_intersect_U15_only_constants":true,"U12_intersect_U15_only_constants":true,"block15_and_spread_incidence_are_distinct_copies":true,"block15_spread_sum_dim71":true,"spread_kernel_dim504":true,"formal_build_observed_by_parallel_commit":true},
+  "formal_status":"Parallel commit 0916335f2fdadcedee4dc26eb6a100b8a232f4c2 records lake build W33 exit 0 for all 40 imported modules, including Pass1074."
+}
