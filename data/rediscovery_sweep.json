@@ -1,5 +1,5 @@
 {
-  "files_with_uncited_collisions": 1308,
+  "files_with_uncited_collisions": 1311,
   "merge_list": [
     {
       "files": [
@@ -15,6 +15,7 @@
         "analysis/BT1416_BT1418_css_optical_quartic_frontier.md",
         "analysis/BT1422_BT1424_fano_native_shear_frontier.md",
         "analysis/BT1422_BT1424_holonet_insert.tex",
+        "analysis/CANON_240_81_3.md",
         "analysis/build_results_index.py",
         "analysis/w33_BREAKTHROUGH_354_355_css_hamiltonian_spacetime_bridge.py",
         "analysis/w33_BREAKTHROUGH_356_cross_layer_61_sense_core.py",
@@ -72,6 +73,7 @@
         "analysis/BT1416_BT1418_css_optical_quartic_frontier.md",
         "analysis/BT1422_BT1424_fano_native_shear_frontier.md",
         "analysis/BT1422_BT1424_holonet_insert.tex",
+        "analysis/CANON_240_81_3.md",
         "analysis/build_results_index.py",
         "analysis/w33_BREAKTHROUGH_354_355_css_hamiltonian_spacetime_bridge.py",
         "analysis/w33_BREAKTHROUGH_356_cross_layer_61_sense_core.py",
@@ -122,6 +124,7 @@
         "PASS177_ADDRESS_ROUTE_DUAL_THETA_SPLIT.md",
         "PASS179_SENTINEL_CONTEXT_POISSON_PAIR.md",
         "analysis/2026-07-10_levi_next5_v2.md",
+        "analysis/CANON_240_81_3.md",
         "analysis/PART_2026_07_10_LEVI_NEXT5_V2_insert.tex",
         "analysis/PART_2026_07_10_LEVI_NEXT5_V3_insert.tex",
         "analysis/THE_SELECTION_LAYER.md",
@@ -158,6 +161,7 @@
         "analysis/2026-07-15_pass77_monster_2b_css_code.md",
         "analysis/2026-07-15_pass78_stabilizer_rank_census.md",
         "analysis/2026-07-15_pass79_leech_kneser_css.md",
+        "analysis/CANON_240_81_3.md",
         "analysis/THE_SELECTION_LAYER.md",
         "analysis/W33_HONEST_SYNTHESIS.md",
         "analysis/build_results_index.py",
@@ -1529,6 +1533,26 @@
     },
     {
       "files": [
+        "PART_MMCCCLXXIII_GOLDEN_ORDERED_D4_TORSOR.md",
+        "analysis/BT1416_BT1418_css_optical_quartic_frontier.md",
+        "analysis/BT745_presentation_torsor_chirality.md",
+        "analysis/BT746_absolute_chirality_z12.md",
+        "analysis/BT752_selector_program_continuity.md",
+        "analysis/MILESTONES.md",
+        "analysis/bt746_weyl_e6_torsor_fusion.py",
+        "analysis/w33_BREAKTHROUGH_359_selector_obstruction_zmin_stabilizer.py",
+        "analysis/w33_BREAKTHROUGH_360_selector_zmin_sheet_design.py",
+        "analysis/w33_BREAKTHROUGH_363_golden_failure_single_phase_sheet.py",
+        "analysis/w33_golden_d4_weyl_bridge.py",
+        "analysis/w33_golden_ordered_d4_torsor.py",
+        "analysis/w33_pass1028_primary_obstruction_syndrome.py",
+        "analysis/w33_pass348_every_multiplicity_is_a_torsor.py",
+        "exploration/w33_refinement_bridge_synthesis.py"
+      ],
+      "result": "d4+torsor"
+    },
+    {
+      "files": [
         "analysis/BT1601_BT1603_physical_fano_universal_closure.md",
         "analysis/BT1602_fano_witting_detector_bin_synthesis.md",
         "analysis/BT1697_holonet_typed_packet_abi.md",
@@ -1708,25 +1732,6 @@
     },
     {
       "files": [
-        "PART_MMCCCLXXIII_GOLDEN_ORDERED_D4_TORSOR.md",
-        "analysis/BT1416_BT1418_css_optical_quartic_frontier.md",
-        "analysis/BT745_presentation_torsor_chirality.md",
-        "analysis/BT746_absolute_chirality_z12.md",
-        "analysis/BT752_selector_program_continuity.md",
-        "analysis/MILESTONES.md",
-        "analysis/bt746_weyl_e6_torsor_fusion.py",
-        "analysis/w33_BREAKTHROUGH_359_selector_obstruction_zmin_stabilizer.py",
-        "analysis/w33_BREAKTHROUGH_360_selector_zmin_sheet_design.py",
-        "analysis/w33_BREAKTHROUGH_363_golden_failure_single_phase_sheet.py",
-        "analysis/w33_golden_d4_weyl_bridge.py",
-        "analysis/w33_golden_ordered_d4_torsor.py",
-        "analysis/w33_pass348_every_multiplicity_is_a_torsor.py",
-        "exploration/w33_refinement_bridge_synthesis.py"
-      ],
-      "result": "d4+torsor"
-    },
-    {
-      "files": [
         "PAPER_SECTION5_MODULAR.tex",
         "W33_FOR_EVERYONE.tex",
         "W36_PAPER.tex",
@@ -1822,6 +1827,24 @@
     },
     {
       "files": [
+        "PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md",
+        "PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md",
+        "analysis/2026-07-08_pass76_QEC_codes_alpha_code.md",
+        "analysis/2026-07-15_pass77_alpha_code_exact_distance.md",
+        "analysis/2026-07-15_pass82_grand_synthesis.md",
+        "analysis/2026-07-15_pass86_alpha_running_correction.md",
+        "analysis/2026-07-15_pass87_w33_master_theorem.md",
+        "analysis/2026-07-15_pass91_alpha_feynman_logical_operator.md",
+        "analysis/BATCH_415_429_INTAKE_FINDINGS.md",
+        "analysis/CANON_240_81_3.md",
+        "analysis/w33_pass359_alpha_code_qr_css.g",
+        "analysis/w33_pass431_pds_and_critical_group_anatomy.py",
+        "analysis/w33_pass432_genuinely_nonabelian_pds.py"
+      ],
+      "result": "[137,1,3]"
+    },
+    {
+      "files": [
         "PART_MMCCCLXXI_BRIDGE_LINE_AFFINE_CAYLEY_CUBE.md",
         "analysis/2026-07-08_pass72_deep_structure.md",
         "analysis/MILESTONES.md",
@@ -1855,6 +1878,24 @@
         "analysis/bt1362_symmetric_q4_gauge_quotient.py"
       ],
       "result": "[32,4,4]"
+    },
+    {
+      "files": [
+        "PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md",
+        "PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md",
+        "analysis/2026-07-08_pass76_QEC_codes_alpha_code.md",
+        "analysis/2026-07-15_pass77_alpha_code_exact_distance.md",
+        "analysis/2026-07-15_pass82_grand_synthesis.md",
+        "analysis/2026-07-15_pass86_alpha_running_correction.md",
+        "analysis/2026-07-15_pass87_w33_master_theorem.md",
+        "analysis/2026-07-15_pass91_alpha_feynman_logical_operator.md",
+        "analysis/BATCH_415_429_INTAKE_FINDINGS.md",
+        "analysis/CANON_240_81_3.md",
+        "analysis/w33_pass359_alpha_code_qr_css.g",
+        "analysis/w33_pass431_pds_and_critical_group_anatomy.py",
+        "analysis/w33_pass432_genuinely_nonabelian_pds.py"
+      ],
+      "result": "[[137,1,3]]"
     },
     {
       "files": [
@@ -2219,18 +2260,18 @@
       "files": [
         "PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md",
         "PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md",
-        "analysis/2026-07-08_pass76_QEC_codes_alpha_code.md",
-        "analysis/2026-07-15_pass77_alpha_code_exact_distance.md",
-        "analysis/2026-07-15_pass82_grand_synthesis.md",
-        "analysis/2026-07-15_pass86_alpha_running_correction.md",
-        "analysis/2026-07-15_pass87_w33_master_theorem.md",
-        "analysis/2026-07-15_pass91_alpha_feynman_logical_operator.md",
-        "analysis/BATCH_415_429_INTAKE_FINDINGS.md",
+        "PASS361_ALPHA_CODE_CLIFFORD_MAXIMALITY_SYNTHESIS.md",
+        "PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md",
+        "analysis/CANON_240_81_3.md",
+        "analysis/THE_SELECTION_LAYER.md",
         "analysis/w33_pass359_alpha_code_qr_css.g",
-        "analysis/w33_pass431_pds_and_critical_group_anatomy.py",
-        "analysis/w33_pass432_genuinely_nonabelian_pds.py"
+        "analysis/w33_pass360_alpha_code_logical_hadamard.g",
+        "analysis/w33_pass361_alpha_code_clifford_maximality.g",
+        "analysis/w33_pass362_alpha_code_real_clifford_k44.g",
+        "analysis/w33_pass364_qr548_e8_phase_space.g",
+        "analysis/w33_pass366_qr137m_real_clifford_refinement_tower.g"
       ],
-      "result": "[137,1,3]"
+      "result": "[137,1,21]"
     },
     {
       "files": [
@@ -2253,18 +2294,18 @@
       "files": [
         "PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md",
         "PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md",
-        "analysis/2026-07-08_pass76_QEC_codes_alpha_code.md",
-        "analysis/2026-07-15_pass77_alpha_code_exact_distance.md",
-        "analysis/2026-07-15_pass82_grand_synthesis.md",
-        "analysis/2026-07-15_pass86_alpha_running_correction.md",
-        "analysis/2026-07-15_pass87_w33_master_theorem.md",
-        "analysis/2026-07-15_pass91_alpha_feynman_logical_operator.md",
-        "analysis/BATCH_415_429_INTAKE_FINDINGS.md",
+        "PASS361_ALPHA_CODE_CLIFFORD_MAXIMALITY_SYNTHESIS.md",
+        "PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md",
+        "analysis/CANON_240_81_3.md",
+        "analysis/THE_SELECTION_LAYER.md",
         "analysis/w33_pass359_alpha_code_qr_css.g",
-        "analysis/w33_pass431_pds_and_critical_group_anatomy.py",
-        "analysis/w33_pass432_genuinely_nonabelian_pds.py"
+        "analysis/w33_pass360_alpha_code_logical_hadamard.g",
+        "analysis/w33_pass361_alpha_code_clifford_maximality.g",
+        "analysis/w33_pass362_alpha_code_real_clifford_k44.g",
+        "analysis/w33_pass364_qr548_e8_phase_space.g",
+        "analysis/w33_pass366_qr137m_real_clifford_refinement_tower.g"
       ],
-      "result": "[[137,1,3]]"
+      "result": "[[137,1,21]]"
     },
     {
       "files": [
@@ -2522,22 +2563,6 @@
     },
     {
       "files": [
-        "PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md",
-        "PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md",
-        "PASS361_ALPHA_CODE_CLIFFORD_MAXIMALITY_SYNTHESIS.md",
-        "PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md",
-        "analysis/THE_SELECTION_LAYER.md",
-        "analysis/w33_pass359_alpha_code_qr_css.g",
-        "analysis/w33_pass360_alpha_code_logical_hadamard.g",
-        "analysis/w33_pass361_alpha_code_clifford_maximality.g",
-        "analysis/w33_pass362_alpha_code_real_clifford_k44.g",
-        "analysis/w33_pass364_qr548_e8_phase_space.g",
-        "analysis/w33_pass366_qr137m_real_clifford_refinement_tower.g"
-      ],
-      "result": "[137,1,21]"
-    },
-    {
-      "files": [
         "PASS415_419_FIVE_FRONTIERS_RELEASE.md",
         "analysis/holonet_cli.py",
         "analysis/holonet_ft_threshold.py",
@@ -2551,22 +2576,6 @@
         "analysis/w33_pass421_qutrit_phase_portrait.py"
       ],
       "result": "[5,1,3]"
-    },
-    {
-      "files": [
-        "PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md",
-        "PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md",
-        "PASS361_ALPHA_CODE_CLIFFORD_MAXIMALITY_SYNTHESIS.md",
-        "PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md",
-        "analysis/THE_SELECTION_LAYER.md",
-        "analysis/w33_pass359_alpha_code_qr_css.g",
-        "analysis/w33_pass360_alpha_code_logical_hadamard.g",
-        "analysis/w33_pass361_alpha_code_clifford_maximality.g",
-        "analysis/w33_pass362_alpha_code_real_clifford_k44.g",
-        "analysis/w33_pass364_qr548_e8_phase_space.g",
-        "analysis/w33_pass366_qr137m_real_clifford_refinement_tower.g"
-      ],
-      "result": "[[137,1,21]]"
     },
     {
       "files": [
@@ -2960,6 +2969,21 @@
     },
     {
       "files": [
+        "PASS1028_PRIMARY_OBSTRUCTION_SYNDROME.md",
+        "PASS214_218_SOURCE_TORSOR_DUAL_OVOID_WEIL_SYNTHESIS.md",
+        "W33_FOR_EVERYONE.tex",
+        "analysis/THE_27_FOLD_WAY.md",
+        "analysis/THE_SELECTION_LAYER.md",
+        "analysis/w33_pass1028_primary_obstruction_syndrome.py",
+        "analysis/w33_pass348_every_multiplicity_is_a_torsor.py",
+        "analysis/w33_pass354_the_substrate_is_made_of_torsors.py",
+        "analysis/w33_pass366_qr137m_real_clifford_refinement_tower.g",
+        "exploration/w33_refinement_bridge_synthesis.py"
+      ],
+      "result": "e8+torsor"
+    },
+    {
+      "files": [
         "analysis/2026-07-10_levi_duality_defect.md",
         "analysis/2026-07-10_levi_next5_v3.md",
         "analysis/2026-07-10_levi_next5_v4.md",
@@ -3017,6 +3041,21 @@
         "analysis/w33_toroidal_metric_generating_function.py"
       ],
       "result": "eisenstein+szilassi"
+    },
+    {
+      "files": [
+        "PASS1028_PRIMARY_OBSTRUCTION_SYNDROME.md",
+        "PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md",
+        "W33_FOR_EVERYONE.tex",
+        "analysis/A_REFLECTION_GROUP_CANNOT_ORIENT_ITSELF.md",
+        "analysis/THE_27_FOLD_WAY.md",
+        "analysis/THE_SELECTION_LAYER.md",
+        "analysis/w33_pass333_outer_s3_lift.g",
+        "analysis/w33_pass348_every_multiplicity_is_a_torsor.py",
+        "analysis/w33_pass354_the_substrate_is_made_of_torsors.py",
+        "analysis/w33_pass369_the_27_is_a_heisenberg_torsor.py"
+      ],
+      "result": "eisenstein+torsor"
     },
     {
       "files": [
@@ -3343,20 +3382,6 @@
         "analysis/w33_hurwitz_tower_qubit_crossover.py"
       ],
       "result": "eisenstein+hesse"
-    },
-    {
-      "files": [
-        "PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md",
-        "W33_FOR_EVERYONE.tex",
-        "analysis/A_REFLECTION_GROUP_CANNOT_ORIENT_ITSELF.md",
-        "analysis/THE_27_FOLD_WAY.md",
-        "analysis/THE_SELECTION_LAYER.md",
-        "analysis/w33_pass333_outer_s3_lift.g",
-        "analysis/w33_pass348_every_multiplicity_is_a_torsor.py",
-        "analysis/w33_pass354_the_substrate_is_made_of_torsors.py",
-        "analysis/w33_pass369_the_27_is_a_heisenberg_torsor.py"
-      ],
-      "result": "eisenstein+torsor"
     },
     {
       "files": [
@@ -3692,25 +3717,12 @@
         "passes/pass_249_five_uniqueness_proofs.py"
       ],
       "result": "cabibbo+e8"
-    },
-    {
-      "files": [
-        "W33_FOR_EVERYONE.tex",
-        "W36_PAPER.tex",
-        "analysis/w33_BREAKTHROUGH_82_theory_edge_anti_substrate.py",
-        "analysis/w33_BREAKTHROUGH_90_quark_ratios_polish.py",
-        "analysis/w33_MCCCLXXX_final_unified_toe.py",
-        "exploration/w33_deepest_layer.py",
-        "exploration/w33_refinement_bridge_synthesis.py",
-        "passes/pass_240_249_shadow_tower_unification.py"
-      ],
-      "result": "cabibbo+qutrit"
     }
   ],
   "merge_list_size": 859,
   "percent_colliding": 22.9,
   "reading": "A row is a CANDIDATE, not a verdict: the same integer recurs legitimately. The value of the list is that it is finite and ranked, so the corpus can be de-duplicated top-down rather than one accidental collision at a time.",
-  "scanned_files": 5708,
+  "scanned_files": 5713,
   "schema": "w33.rediscovery_sweep.v1",
   "top_files": [
     {
@@ -3837,23 +3849,23 @@
   "top_results": [
     {
       "result": "[[240,81,3]]",
-      "uncited_files": 48
+      "uncited_files": 49
     },
     {
       "result": "[240,81,3]",
-      "uncited_files": 48
+      "uncited_files": 49
     },
     {
       "result": "[[40,10,4]]",
-      "uncited_files": 27
+      "uncited_files": 28
+    },
+    {
+      "result": "[40,15,8]",
+      "uncited_files": 25
     },
     {
       "result": "d4+szilassi",
       "uncited_files": 25
-    },
-    {
-      "result": "[40,15,8]",
-      "uncited_files": 24
     },
     {
       "result": "e8+heawood",

@@ -22,9 +22,9 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **15838** files; **6709** distinctive results
+Indexed **15839** files; **6710** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
-**2922** appear in exactly one file — the sharpest signal.
+**2923** appear in exactly one file — the sharpest signal.
 
 ## Index
 
@@ -41,9 +41,9 @@ Indexed **15838** files; **6709** distinctive results
 | `[[10,20,90]]` | `analysis/w33_pass220_local120_selector_mackey_boundary.g` |
 | `[[105,10,3]]` | `analysis/w33_photon_runtime_to_bsd_bridge.py` |
 | `[[120,20,4]]` | `manuscripts/tex/part30_quantum_error_correction.tex` · `part30_quantum_error_correction.tex` · `supplement_q_experimental_roadmap.tex` |
-| `[[137,1,21]]` | `PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md` · `PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md` · `PASS361_ALPHA_CODE_CLIFFORD_MAXIMALITY_SYNTHESIS.md` · `PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md` · *(+9)* |
+| `[[137,1,21]]` | `PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md` · `PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md` · `PASS361_ALPHA_CODE_CLIFFORD_MAXIMALITY_SYNTHESIS.md` · `PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md` · *(+10)* |
 | `[[156,26,6]]` | `analysis/w33_pass229_css_code_family.py` · `analysis/w33_pass323_the_css_family_audit.py` · `passes/README_passes_240_249.md` · `w33_paper.tex` |
-| `[[240,81,3]]` | `PART_CCCCVI_PROTECTED_PHOTONIC_RUNTIME_SCHEDULER.md` · `PART_CCCCXVIII_PHOTONIC_HARMONIC_TQC_BUS.md` · `PART_CCCCXVII_QEC_OUROBOROS_STABILIZER_LOOP.md` · `PASS373_374_W33_BOUNDARY_MLUT_PHASE_SHEET_SYNTHESIS.md` · *(+53)* |
+| `[[240,81,3]]` | `PART_CCCCVI_PROTECTED_PHOTONIC_RUNTIME_SCHEDULER.md` · `PART_CCCCXVIII_PHOTONIC_HARMONIC_TQC_BUS.md` · `PART_CCCCXVII_QEC_OUROBOROS_STABILIZER_LOOP.md` · `PASS373_374_W33_BOUNDARY_MLUT_PHASE_SHEET_SYNTHESIS.md` · *(+54)* |
 | `[[240,81,4]]` | `BT1295_BT1296_BT1297_breakthrough_report.md` · `analysis/BATCH_415_429_INTAKE_FINDINGS.md` · `analysis/BT1204_holonet_milestone_dashboard.md` · `analysis/BT1211_encoded_lambda_lock_invariance.md` · *(+16)* |
 | `[[240,81,6]]` | `scripts/w33_chains_39_to_48.py` |
 | `[[274,2,21]]` | `PASS362_ALPHA_CODE_REAL_CLIFFORD_K44_F4_SYNTHESIS.md` · `PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md` · `analysis/w33_pass366_qr137m_real_clifford_refinement_tower.g` · `docs/index.html` · *(+1)* |
@@ -53,10 +53,10 @@ Indexed **15838** files; **6709** distinctive results
 | `[[411,3,21]]` | `PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md` · `analysis/THE_SELECTION_LAYER.md` · `analysis/w33_pass365_qr411_e6_minus_polar_lift.g` · `analysis/w33_pass366_qr137m_real_clifford_refinement_tower.g` · *(+2)* |
 | `[[548,4,21]]` | `PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md` · `analysis/THE_SELECTION_LAYER.md` · `analysis/w33_pass364_qr548_e8_phase_space.g` · `analysis/w33_pass366_qr137m_real_clifford_refinement_tower.g` · *(+2)* |
 | `[[822,6,21]]` | `analysis/w33_pass368_eisenstein_rank_parity_law.py` · `analysis/w33_pass369_the_27_is_a_heisenberg_torsor.py` · `w33_paper.tex` |
-| `[[137,1,3]]` | `PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md` · `PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md` · `analysis/2026-07-08_pass76_QEC_codes_alpha_code.md` · `analysis/2026-07-15_pass77_alpha_code_exact_distance.md` · *(+13)* |
+| `[[137,1,3]]` | `PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md` · `PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md` · `analysis/2026-07-08_pass76_QEC_codes_alpha_code.md` · `analysis/2026-07-15_pass77_alpha_code_exact_distance.md` · *(+14)* |
 | `[[360,9,1]]` | `analysis/w33_pass345_pass70_spectral_code_retraction.g` · `docs/index.html` |
 | `[[360,9,9]]` | `analysis/w33_pass345_pass70_spectral_code_retraction.g` · `docs/index.html` |
-| `[[40,10,4]]` | `PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md` · `analysis/2026-07-15_pass352_chirality_boundary_summary.md` · `analysis/2026-07-15_pass356_css_distance_lower_bound.md` · `analysis/2026-07-15_pass357_three_threads_synthesis.md` · *(+26)* |
+| `[[40,10,4]]` | `PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md` · `analysis/2026-07-15_pass352_chirality_boundary_summary.md` · `analysis/2026-07-15_pass356_css_distance_lower_bound.md` · `analysis/2026-07-15_pass357_three_threads_synthesis.md` · *(+27)* |
 | `[[40,12,3]]` | `analysis/w33_MDCLXXXV_MDCXCIV_E8_leech_edge_synthesis.py` |
 | `[[40,12,4]]` | `analysis/w33_fractal_nested_dyson_spheres.py` · `docs/index.html` · `exploration/PART_CCXXIII_QUANTUM_ERROR_CORRECTION_BRIDGE.py` |
 | `[[63,1,11]]` | `analysis/2026-06-19_bt1327_bt1330_summary.md` · `analysis/2026-06-19_validation_thread_summary.md` |
@@ -195,7 +195,7 @@ Indexed **15838** files; **6709** distinctive results
 | `[13,14,15]` | `analysis/w33_MDCCCIII_MDCCCXII_string_M_theory_substrate.py` |
 | `[13,22,31]` | `scripts/count_subgraph_edges.py` |
 | `[13,84,85]` | `analysis/w33_pythagorean_triple_package.py` |
-| `[137,1,21]` | `PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md` · `PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md` · `PASS361_ALPHA_CODE_CLIFFORD_MAXIMALITY_SYNTHESIS.md` · `PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md` · *(+9)* |
+| `[137,1,21]` | `PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md` · `PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md` · `PASS361_ALPHA_CODE_CLIFFORD_MAXIMALITY_SYNTHESIS.md` · `PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md` · *(+10)* |
 | `[14,24,14]` | `analysis/w33_richter_radial_dual_polar_cube.py` |
 | `[14,28,57]` | `exploration/w33_142857_deep_dig.py` |
 | `[15,16,17]` | `exploration/w33_current_k3_mixed_plane_inert_fan_failure_bridge.py` · `exploration/w33_k3_mixed_plane_fan_shell_split_bridge.py` · `exploration/w33_k3_mixed_plane_inert_fan_geometry_bridge.py` |
@@ -213,7 +213,7 @@ Indexed **15838** files; **6709** distinctive results
 | `[22,24,23]` | `analysis/BT1077_augmented_BT876_blocks.md` · `analysis/BT1080_true_P22_linear_projector.md` |
 | `[24,10,12]` | `analysis/w33_BREAKTHROUGH_45_klein_quartic_ag_codes.py` |
 | `[24,12,12]` | `PASS384_Q6_Q3_FOLD_OBSTRUCTION.md` · `analysis/w33_pass377_binary_q3_switch_header.g` · `analysis/w33_pass384_q6_q3_fold_obstruction.g` |
-| `[240,81,3]` | `PART_CCCCVI_PROTECTED_PHOTONIC_RUNTIME_SCHEDULER.md` · `PART_CCCCXVIII_PHOTONIC_HARMONIC_TQC_BUS.md` · `PART_CCCCXVII_QEC_OUROBOROS_STABILIZER_LOOP.md` · `PASS373_374_W33_BOUNDARY_MLUT_PHASE_SHEET_SYNTHESIS.md` · *(+53)* |
+| `[240,81,3]` | `PART_CCCCVI_PROTECTED_PHOTONIC_RUNTIME_SCHEDULER.md` · `PART_CCCCXVIII_PHOTONIC_HARMONIC_TQC_BUS.md` · `PART_CCCCXVII_QEC_OUROBOROS_STABILIZER_LOOP.md` · `PASS373_374_W33_BOUNDARY_MLUT_PHASE_SHEET_SYNTHESIS.md` · *(+54)* |
 | `[240,81,4]` | `BT1295_BT1296_BT1297_breakthrough_report.md` · `PASS373_374_W33_BOUNDARY_MLUT_PHASE_SHEET_SYNTHESIS.md` · `analysis/BATCH_415_429_INTAKE_FINDINGS.md` · `analysis/BT1204_holonet_milestone_dashboard.md` · *(+17)* |
 | `[240,81,6]` | `scripts/w33_chains_39_to_48.py` |
 | `[25,27,26]` | `analysis/BT1077_augmented_BT876_blocks.md` · `analysis/BT1080_true_P22_linear_projector.md` |
@@ -289,7 +289,7 @@ Indexed **15838** files; **6709** distinctive results
 | `[12,4,18]` | `analysis/w33_pass542_z9_hjelmslev_lift.g` |
 | `[13,10,3]` | `exploration/PART_CCLXXXI_TERNARY_CODES_BRIDGE.py` · `scripts/w33_biological_code.py` |
 | `[13,10,7]` | `analysis/w33_machine_is_world.py` |
-| `[137,1,3]` | `PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md` · `PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md` · `analysis/2026-07-08_pass76_QEC_codes_alpha_code.md` · `analysis/2026-07-15_pass77_alpha_code_exact_distance.md` · *(+13)* |
+| `[137,1,3]` | `PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md` · `PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md` · `analysis/2026-07-08_pass76_QEC_codes_alpha_code.md` · `analysis/2026-07-15_pass77_alpha_code_exact_distance.md` · *(+14)* |
 | `[15,10,3]` | `analysis/2026-07-08_pass72_cumulative_bijection.md` · `analysis/2026-07-08_pass72_deep_structure.md` · `analysis/2026-07-08_pass73_kneser_css_moonshine.md` · `analysis/w33_pass165_doily_trade_fusion.py` |
 | `[15,11,3]` | `analysis/2026-07-08_pass76_QEC_codes_alpha_code.md` · `analysis/w33_BREAKTHROUGH_299_hamming_code_substrate.py` |
 | `[15,20,1]` | `exploration/w33_line_spread_intertwiner_bridge.py` |
@@ -332,7 +332,7 @@ Indexed **15838** files; **6709** distinctive results
 | `[40,1,14]` | `analysis/w33_pass631_mod2_ext_fingerprint.py` |
 | `[40,12,3]` | `analysis/w33_MDCLXXXV_MDCXCIV_E8_leech_edge_synthesis.py` |
 | `[40,12,4]` | `analysis/w33_fractal_nested_dyson_spheres.py` · `docs/index.html` · `exploration/PART_CCXXIII_QUANTUM_ERROR_CORRECTION_BRIDGE.py` |
-| `[40,15,8]` | `PASS173_INCIDENCE_TRANSCEIVER_ROUTE_DARK_LATTICE.md` · `PASS176_INCIDENCE_FIXED_LINE_E8_BRIDGE.md` · `PASS177_ADDRESS_ROUTE_DUAL_THETA_SPLIT.md` · `PASS179_SENTINEL_CONTEXT_POISSON_PAIR.md` · *(+27)* |
+| `[40,15,8]` | `PASS173_INCIDENCE_TRANSCEIVER_ROUTE_DARK_LATTICE.md` · `PASS176_INCIDENCE_FIXED_LINE_E8_BRIDGE.md` · `PASS177_ADDRESS_ROUTE_DUAL_THETA_SPLIT.md` · `PASS179_SENTINEL_CONTEXT_POISSON_PAIR.md` · *(+28)* |
 | `[40,16,8]` | `AUDIT_PASS126_156_SUBMISSION_PACKET.md` · `PAPER_SECTION4_E6E8.tex` · `W36_PAPER.tex` · `analysis/w33_BREAKTHROUGH_65_codes_spin_twistor_cosmo_quarks.py` · *(+2)* |
 | `[40,20,4]` | `AUDIT_PASS126_156_SUBMISSION_PACKET.md` · `PAPER_SECTION5_MODULAR.tex` · `w33_submission.tex` |
 | `[40,24,6]` | `W36_PAPER.tex` · `docs/index.html` · `w33_paper.tex` |
@@ -5581,6 +5581,7 @@ Indexed **15838** files; **6709** distinctive results
 | `5220` | `analysis/w33_pass260_odd_law_q13.py` · `w33_paper.tex` |
 | `5226` | `analysis/BT803_seven_realizations_census.md` · `analysis/bt803_seven_realizations_census.py` · `analysis/w33_MDCCCCIII_MDCCCCXII_oscillator_time_crystal_origami.py` · `analysis/w33_MDCCCXCIII_MDCCCCII_toroidal_polyhedra_deep_dive.py` · *(+5)* |
 | `5227` | `analysis/w33_pass642_conductor_torsion_map.py` |
+| `5256` | `analysis/CANON_240_81_3.md` |
 | `5268` | `PASS573_577_C3_600CELL_SCHEME_DVR_IDEMPOTENT_DP_RELEASE.md` |
 | `5280` | `analysis/bt1000_k3_level2_feasibility_gate.py` · `analysis/bt1185_raw_voltage_2cover_invariants.py` · `analysis/bt994_edgewise_hodge_laplacians.py` · `analysis/w33_BREAKTHROUGH_36_heegner_cascade.py` · *(+19)* |
 | `5288` | `analysis/w33_doily_e15_packet_spectrum.py` |
@@ -6180,8 +6181,8 @@ Indexed **15838** files; **6709** distinctive results
 | `355` | `PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md` · `analysis/2026-07-15_pass355_sp43_frobenius_schur.md` · `analysis/2026-07-15_pass355_transfer_tower_full_table.md` · `analysis/2026-07-15_pass357_master_forcing_table.md` · *(+10)* |
 | `356` | `analysis/2026-07-15_pass354_factor17_correction.md` · `analysis/2026-07-15_pass356_css_distance_lower_bound.md` · `analysis/2026-07-15_pass356_delta_spectral.md` · `analysis/2026-07-15_pass357_master_forcing_table.md` · *(+9)* |
 | `357` | `PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md` · `analysis/2026-07-15_pass357_master_forcing_table.md` · `analysis/2026-07-15_pass357_three_threads_synthesis.md` · `analysis/check_32_group.py` · *(+19)* |
-| `358` | `PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md` · `PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md` · `PASS361_ALPHA_CODE_CLIFFORD_MAXIMALITY_SYNTHESIS.md` · `analysis/BT1867_rule110_glider_diagnostics.md` · *(+10)* |
-| `359` | `PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md` · `PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md` · `PASS361_ALPHA_CODE_CLIFFORD_MAXIMALITY_SYNTHESIS.md` · `PASS362_ALPHA_CODE_REAL_CLIFFORD_K44_F4_SYNTHESIS.md` · *(+13)* |
+| `358` | `PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md` · `PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md` · `PASS361_ALPHA_CODE_CLIFFORD_MAXIMALITY_SYNTHESIS.md` · `analysis/BT1867_rule110_glider_diagnostics.md` · *(+11)* |
+| `359` | `PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md` · `PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md` · `PASS361_ALPHA_CODE_CLIFFORD_MAXIMALITY_SYNTHESIS.md` · `PASS362_ALPHA_CODE_REAL_CLIFFORD_K44_F4_SYNTHESIS.md` · *(+14)* |
 | `362` | `PASS362_ALPHA_CODE_REAL_CLIFFORD_K44_F4_SYNTHESIS.md` · `PASS399_BULK_RAMANUJAN_QUANTUM_RELEASE.md` · `analysis/THE_SELECTION_LAYER.md` · `analysis/search_selector_quadrangle_invariant.py` · *(+9)* |
 | `363` | `PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md` · `W33_FOR_EVERYONE.tex` · `analysis/THE_27_FOLD_WAY.md` · `analysis/THE_SELECTION_LAYER.md` · *(+17)* |
 | `366` | `PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md` · `analysis/2026-07-10_levi_next5.md` · `analysis/MILESTONES.md` · `analysis/THE_SELECTION_LAYER.md` · *(+19)* |
