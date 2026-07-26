@@ -1,0 +1,30 @@
+name: Passes 1081-1086 exact package
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1081_1086_core.py'
+      - 'analysis/w33_pass1081_frame_module_lattice.py'
+      - 'analysis/w33_pass1082_frame_coherent_configuration.py'
+      - 'analysis/w33_pass1083_levi_frame_steinberg_intertwiner.py'
+      - 'analysis/w33_pass1084_g32_g25_parabolic_normalizer.py'
+      - 'analysis/w33_pass1085_hardware_in_loop_rehearsal.py'
+      - 'analysis/w33_pass1086_contextuality_claim_firewall.py'
+      - 'analysis/bt1901_contextual_fraction_estimator.py'
+      - 'tests/test_w33_pass1081_1086.py'
+      - '.github/workflows/pass1081_1086_exact.yml'
+  workflow_dispatch:
+jobs:
+  exact:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.13'}
+      - run: pip install numpy pytest
+      - run: PYTHONPATH=analysis python analysis/w33_pass1081_frame_module_lattice.py
+      - run: PYTHONPATH=analysis python analysis/w33_pass1082_frame_coherent_configuration.py
+      - run: PYTHONPATH=analysis python analysis/w33_pass1083_levi_frame_steinberg_intertwiner.py
+      - run: PYTHONPATH=analysis python analysis/w33_pass1084_g32_g25_parabolic_normalizer.py
+      - run: PYTHONPATH=analysis python analysis/w33_pass1085_hardware_in_loop_rehearsal.py
+      - run: PYTHONPATH=analysis python analysis/w33_pass1086_contextuality_claim_firewall.py .
+      - run: PYTHONPATH=analysis pytest -q tests/test_w33_pass1081_1086.py
