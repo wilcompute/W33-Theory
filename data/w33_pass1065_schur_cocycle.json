@@ -1,0 +1,38 @@
+{
+  "schema": "w33.pass1065.schur_cocycle.v1",
+  "status": "PASS",
+  "headline": "A normalized C2-valued cocycle for PSp(4,3) is extracted from the canonical projective-matrix section.  It is nontrivial, matches the signed E8-root extension generator-by-generator, and therefore represents the unique nonzero Schur-multiplier class.",
+  "section_rule": "Represent a projective class by the lexicographically smaller of M and -M in Sp(4,3).  Set c(g,h)=0 when s(g)s(h)=s(gh), and 1 when s(g)s(h)=-s(gh).",
+  "orders": {"PSp43": 25920, "Sp43": 51840, "kernel": 2},
+  "generator_point_indices": [0, 1, 4, 5, 13],
+  "generator_cocycle_table": [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,1,1,0]],
+  "shortest_detected_nontrivial_relator": {
+    "word_left_multiplication_labels": [1,1,2,4,5,3,3,5,4,2],
+    "length": 10,
+    "matrix_lift": "-I4",
+    "root_lift": "global antipodal permutation on 240 roots"
+  },
+  "cohomology_decision": {
+    "class_nonzero": true,
+    "schur_multiplier_order": 2,
+    "conclusion": "The class generates H^2(PSp(4,3),C2).",
+    "primary_external_anchor": "ATLAS U4(2): order 25920, multiplier 2, outer automorphism order 2."
+  },
+  "maslov_metaplectic_comparison": "The matrix cocycle is the central sign cocycle of Sp(4,3)->PSp(4,3). The lockstep E8-root action gives an explicit isomorphism of extensions. Since the Schur multiplier is C2, this is the same cohomology class as every nontrivial finite metaplectic/Maslov realization, although normalized cocycle representatives may differ by a coboundary.",
+  "cocycle_identity_checks": 648000,
+  "cayley_transition_checks": 259200,
+  "check_count": 10,
+  "checks": {
+    "Sp43_matrix_group_order_51840": true,
+    "PSp43_projective_quotient_order_25920": true,
+    "kernel_minusI_maps_to_global_root_negation": true,
+    "normalized_on_identity": true,
+    "cocycle_identity_generator_complete_check": true,
+    "matrix_and_signed_root_extensions_match_on_full_Cayley_graph": true,
+    "short_relator_projects_to_identity": true,
+    "short_relator_lifts_to_minusI": true,
+    "same_relator_lifts_to_global_root_negation": true,
+    "base_group_is_perfect": true
+  },
+  "scope": "Exact finite arithmetic over F3 plus exact signed permutations on 240 roots. The comparison is at cohomology-class/extension level; it does not claim literal equality with a convention-dependent analytic Maslov formula."
+}
