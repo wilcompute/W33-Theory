@@ -1,7 +1,7 @@
 # Pass 1028 — Primary obstruction syndrome and residual-carrier theorem
 
 **Certificate:** `analysis/w33_pass1028_primary_obstruction_syndrome.py` →
-`data/w33_pass1028_primary_obstruction_syndrome.json` (`14/14`, deterministic,
+`data/w33_pass1028_primary_obstruction_syndrome.json` (`18/18`, deterministic,
 standard-library Python).
 
 ## The theorem
@@ -67,6 +67,38 @@ Therefore it has the correct **carrier signature** for the residual ternary phas
 bundle, not for the binary chirality bundle. This is a type-level compatibility
 statement, not yet a permutation-action isomorphism.
 
+## Contextuality-orientation firewall
+
+The newest Pass-1021 corollary fixes an additional invariant:
+
+\[
+W(3,3)=(36\text{ spreads},0\text{ ovoids}),
+\]
+
+while the dual orientation satisfies
+
+\[
+Q(4,3)=(0\text{ spreads},36\text{ ovoids}).
+\]
+
+E8 lands on the point action, so its residual \(C_3\) carrier lies over the
+zero-ovoid, KS-uncolourable orientation. The golden selector is anchored on the
+40 lines, so its natural quotient lies on the dual, 36-ovoid orientation.
+
+Thus the two objects share
+
+\[
+120=40\cdot3
+\]
+
+and the same residual prime, but their natural 40-object quotients have opposite
+exact-cover/contextuality invariants. Any genuine bridge must explicitly transport
+the point/line block system. Equal degree and equal fibre size are not enough.
+
+The independent binary chirality coordinate missing from the ternary selector is
+a natural candidate for an orientation-switch datum, but this pass does not claim
+or construct such an equivariant switch.
+
 ## Selector layering
 
 The existing failure data now separates cleanly into levels:
@@ -103,7 +135,8 @@ without an explicit transgression.
 
 ## Boundary
 
-This pass proves the complete restriction-syndrome decoder and the residual-carrier
-type of the 120-sheet selector. It does **not** prove that the E8 antipodal-pair
-120-set and the golden-selector 120-set are conjugate permutation actions. That
-remains the separate objectwise degree-120 diagnostic.
+This pass proves the complete restriction-syndrome decoder, the residual-carrier
+type of the 120-sheet selector, and the exact ovoid-count orientation firewall. It
+does **not** prove that the E8 antipodal-pair 120-set and the golden-selector 120-set
+are conjugate permutation actions. That remains the separate objectwise degree-120
+diagnostic.
