@@ -24,12 +24,17 @@ variable {R : Type*} [CommRing R] [StarRing R]
 
 /-- Entrywise star of a matrix, then determinant, equals star of the
 determinant: `star` is a ring homomorphism `R →+* Rᵐᵒᵖ`-free here because `R`
-is commutative, so it commutes with `det`. -/
+is commutative, so it commutes with `det`.
+
+This is `Matrix.det_conjTranspose` in mathlib (a `@[simp]` lemma, stated
+identically). The hand proof that used to be here rewrote with
+`Matrix.det_transpose_eq_det_map`, which no longer exists — the file was
+reinventing an upstream lemma against a constant that had since been renamed.
+Kept as a named alias so the two uses below and any external reference still
+resolve. -/
 theorem det_conjTranspose_eq_star_det (M : Matrix n n R) :
-    (Mᴴ).det = star M.det := by
-  rw [Matrix.conjTranspose, Matrix.det_transpose_eq_det_map]
-  · simp [Matrix.det_map]
-  all_goals simp
+    (Mᴴ).det = star M.det :=
+  Matrix.det_conjTranspose M
 
 /-- **The lemma.** If `M` is self-adjoint (Hermitian) then its determinant is
 fixed by `star`, hence lies in the real subring. -/

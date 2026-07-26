@@ -347,30 +347,45 @@ A certificate is idempotent: rerun it with `--check` and it must reproduce byte-
 **A whole-repository `lake build` in `formal/` does not currently complete on the machine it was
 measured on. There is no Lean badge in this README because nothing green has been demonstrated.**
 
-**How many modules are actually broken is NOT established, and an earlier version of this section
-said otherwise.** That claim — "20 modules with real compile errors", later "19" — was wrong, and the
-correction is recorded here rather than quietly edited away.
+**An earlier version of this section said "20 modules with real compile errors", then "19". Both
+were wrong by roughly a factor of three.** The correction is recorded here rather than quietly
+edited away.
 
-What happened: a whole-library build reported ~20 failures, and they were taken at face value. On
-re-measurement almost every one was `failed to read file …/Mathlib/….olean` **at line 1, column 0** —
-the import line — with a *different* mathlib file named on each run. A genuinely corrupt artifact
-fails identically every time; varying targets mean transient I/O, and the builds had been running
-concurrently. `lake exe cache get` reports the cache complete and the named files exist on disk.
+What happened: a whole-library build reported ~20 failures and they were taken at face value. Nearly
+all were `failed to read file …/Mathlib/….olean` **at line 1, column 0** — the import line — naming a
+*different* mathlib file on each run. A genuinely corrupt artifact fails identically every time;
+varying targets mean transient I/O, and the builds had been running concurrently. `lake exe cache
+get` reports the cache complete and the named files are present on disk.
 
-Measured 2026-07-25, `leanprover/lean4:v4.32.0-rc1`, prebuilt mathlib:
+**Settled 2026-07-25 by building every suspect module one at a time, with nothing else running**
+(`leanprover/lean4:v4.32.0-rc1`, prebuilt mathlib):
 
 | | |
 |---|---|
 | `.lean` files under `formal/W33/` | 40 |
 | imported by `formal/W33.lean` (so reachable by `lake build`) | 39 |
-| **demonstrated real compile error** | **1** — `Pass447SpanLemma`, since **fixed** and verified building |
-| build individually when run **serialised**, one at a time | `Pass457`, `Pass481`, `Pass484`, `Pass486`, `Pass515`, `Pass447` — all exit 0 |
-| status unresolved (fail under contention, not yet cleanly re-tested) | `Pass450`, `Pass488`, `Pass491`, `Pass502`×2, `Pass508`, `Pass511`, `Pass517`, `Pass533`, `Pass557`×2, `Pass560`, `Pass565`, `Pass570` |
+| **genuinely failing today** | **5** |
+| fixed this session | 2 — `Pass447SpanLemma`, `Pass491HermitianRealDet` |
+| falsely accused by the contended build, and fine | 12 |
 | never imported at all, so never type-checked by anything | 4 (now 3 imported, 1 left out — see below) |
 
-The one real bug found so far was **mathlib drift, not bad mathematics**: in
-`rintro v (rfl | rfl)` the second disjunct `v = p` makes `subst` eliminate `p`, so later `have`s
-mentioning `p` fail with `Unknown identifier p`. Establishing them before the `rintro` fixes it.
+The 5 that genuinely fail, with the actual error:
+
+| module | error |
+|---|---|
+| `Pass450CentralFourierScaffold` | `unsolved goals` (27:34) |
+| `Pass488FlatBlockQuadratic` | `linarith failed to find a contradiction` (38:4) |
+| `Pass502HjelmslevGram` | `unsolved goals` (23:2) |
+| `Pass565CyclotomicFiveOrder` | `failed to compile definition` (16:4) |
+| `Pass570CyclotomicResidue` | `unsolved goals` (33:55) |
+
+**Both fixed modules were mathlib drift, not bad mathematics**, and that is the likely character of
+the rest. `Pass447` assumed a `subst` direction: in `rintro v (rfl | rfl)` the disjunct `v = p`
+eliminates `p`, so later `have`s mentioning `p` fail with `Unknown identifier p` — establishing them
+before the `rintro` fixes it. `Pass491` was **reinventing an upstream lemma**: it hand-proved
+`(Mᴴ).det = star M.det` via `Matrix.det_transpose_eq_det_map`, a constant that no longer exists,
+while mathlib has had `Matrix.det_conjTranspose` as a `@[simp]` lemma with exactly that statement.
+Deleting the proof in favour of the upstream name fixed it in 20 seconds.
 
 **To settle a module, build it alone** — a whole-library build on this machine is not a reliable
 measurement:
