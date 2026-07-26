@@ -1,0 +1,61 @@
+{
+  "schema": "w33.pass1034.selector_orbital_algebra.python.v1",
+  "status": "PASS",
+  "headline": "The 120 golden-selector sheets carry a symmetric rank-five association scheme. Its valencies are [1,2,36,27,54], its primitive multiplicities are [1,15,60,20,24], and its exact P/Q eigenmatrices and nonnegative Krein tensor are certified from the PSp(4,3) action.",
+  "relation_order": [
+    "same sheet",
+    "other phases over the same line",
+    "phases over intersecting lines",
+    "matched phase over a skew line",
+    "unmatched phase over a skew line"
+  ],
+  "overlap_to_relation": {"108": 0, "54": 1, "12": 2, "4": 3, "2": 4},
+  "valencies": [1, 2, 36, 27, 54],
+  "multiplicities": [1, 15, 60, 20, 24],
+  "P": [
+    [1, 2, 36, 27, 54],
+    [1, 2, -12, 3, 6],
+    [1, -1, 0, -3, 3],
+    [1, -1, 0, 9, -9],
+    [1, 2, 6, -3, -6]
+  ],
+  "Q": [
+    [1, 15, 60, 20, 24],
+    [1, 15, -30, -10, 24],
+    [1, -5, 0, 0, 4],
+    [1, "5/3", "-20/3", "20/3", "-8/3"],
+    [1, "5/3", "10/3", "-10/3", "-8/3"]
+  ],
+  "intersection_numbers_p_ij_k": [
+    [[1,0,0,0,0],[0,1,0,0,0],[0,0,1,0,0],[0,0,0,1,0],[0,0,0,0,1]],
+    [[0,1,0,0,0],[2,1,0,0,0],[0,0,2,0,0],[0,0,0,0,1],[0,0,0,2,1]],
+    [[0,0,1,0,0],[0,0,2,0,0],[36,36,6,12,12],[0,0,9,8,8],[0,0,18,16,16]],
+    [[0,0,0,1,0],[0,0,0,0,1],[0,0,9,8,8],[27,0,6,10,4],[0,27,12,8,14]],
+    [[0,0,0,0,1],[0,0,0,2,1],[0,0,18,16,16],[0,27,12,8,14],[54,27,24,28,22]]
+  ],
+  "krein_parameters_q_ij_k": [
+    [[1,0,0,0,0],[0,1,0,0,0],[0,0,1,0,0],[0,0,0,1,0],[0,0,0,0,1]],
+    [[0,1,0,0,0],[15,"10/3",0,0,"20/3"],[0,0,"35/3",10,0],[0,0,"10/3",5,0],[0,"32/3",0,0,"25/3"]],
+    [[0,0,1,0,0],[0,0,"35/3",10,0],[60,"140/3","65/3",25,"130/3"],[0,"40/3","25/3",5,"50/3"],[0,0,"52/3",20,0]],
+    [[0,0,0,1,0],[0,0,"10/3",5,0],[0,"40/3","25/3",5,"50/3"],[20,"20/3","5/3",5,"10/3"],[0,0,"20/3",4,0]],
+    [[0,0,0,0,1],[0,"32/3",0,0,"25/3"],[0,0,"52/3",20,0],[0,0,"20/3",4,0],[24,"40/3",0,0,"44/3"]]
+  ],
+  "consequence": "The selector correction problem must now be formulated relative to this five-relation algebra or to a proved refinement of it; overlap counts alone are no longer an adequate specification.",
+  "check_count": 14,
+  "checks": {
+    "w33_has_40_points_and_40_lines": true,
+    "psp_order_is_25920": true,
+    "line_phase_action_has_degree_120": true,
+    "phase_stabilizer_order_is_216": true,
+    "scheme_rank_is_five": true,
+    "valencies_are_1_2_36_27_54": true,
+    "relations_are_symmetric": true,
+    "intersection_tensor_is_exact": true,
+    "intersection_algebra_is_commutative": true,
+    "p_matrix_characters_multiply_correctly": true,
+    "multiplicities_sum_to_120": true,
+    "pq_equals_120_identity": true,
+    "krein_parameters_are_nonnegative": true,
+    "selector_overlap_valencies_match": true
+  }
+}
