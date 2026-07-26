@@ -8,6 +8,7 @@ on:
       - 'analysis/w33_pass1023_c6_factor_obstruction.g'
       - 'analysis/w33_pass1024_subgroup_section_phase_diagram.g'
       - 'analysis/w33_pass1025_explicit_c6_groupoid_cocycle.g'
+      - 'analysis/w33_pass1026_export_selector_gap_data.py'
       - 'analysis/w33_pass1026_selector_c6_bridge.g'
       - 'analysis/w33_pass1026_selector_obstruction_crosswalk.py'
       - 'analysis/w33_pass1027_photonic_c6_holonomy_falsifier.py'
@@ -19,6 +20,7 @@ on:
       - 'analysis/w33_pass1023_c6_factor_obstruction.g'
       - 'analysis/w33_pass1024_subgroup_section_phase_diagram.g'
       - 'analysis/w33_pass1025_explicit_c6_groupoid_cocycle.g'
+      - 'analysis/w33_pass1026_export_selector_gap_data.py'
       - 'analysis/w33_pass1026_selector_c6_bridge.g'
       - 'analysis/w33_pass1026_selector_obstruction_crosswalk.py'
       - 'analysis/w33_pass1027_photonic_c6_holonomy_falsifier.py'
@@ -31,7 +33,7 @@ concurrency:
 jobs:
   factor-cocycle-selector-photonic:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 50
     steps:
       - uses: actions/checkout@v4
         with:
@@ -67,6 +69,12 @@ jobs:
           cat data/w33_pass1025_runtime.log
           test -s data/w33_pass1025_explicit_c6_groupoid_cocycle.json
           python -m json.tool data/w33_pass1025_explicit_c6_groupoid_cocycle.json >/dev/null
+      - name: Rebuild selector GAP input
+        run: |
+          set -euo pipefail
+          rm -f data/bt360_120sheet_design_for_gap.txt
+          python analysis/w33_pass1026_export_selector_gap_data.py
+          test -s data/bt360_120sheet_design_for_gap.txt
       - name: Run Pass 1026 bridge fail closed
         env:
           W33_REPO: ${{ github.workspace }}
@@ -108,7 +116,7 @@ jobs:
 
   subgroup-phase-diagram:
     runs-on: ubuntu-latest
-    timeout-minutes: 55
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
         with:
@@ -116,12 +124,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install minimal GAP runtime
+      - name: Install GAP with Small Groups library
         run: |
           set -euo pipefail
           sudo add-apt-repository -y universe >/tmp/gap-apt.log 2>&1 || true
           sudo apt-get update -qq >>/tmp/gap-apt.log 2>&1
-          sudo apt-get install -y --no-install-recommends gap-core gap-libs >>/tmp/gap-apt.log 2>&1
+          sudo apt-get install -y --no-install-recommends gap-core gap-libs gap-smallgrp >>/tmp/gap-apt.log 2>&1
           command -v gap
           gap -q -c 'Print(GAPInfo.Version, "\n"); QUIT;'
       - name: Run Pass 1024 exact search fail closed
