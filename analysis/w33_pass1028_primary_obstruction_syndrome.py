@@ -61,10 +61,12 @@ def main() -> None:
     primary = load("w33_pass1023_chirality_and_phase_halves.json")
     golden = load("w33_BREAKTHROUGH_363_golden_failure_single_phase_sheet.json")
     h2 = load("w33_pass341_selector_extension_cohomology.json")
+    orientation = load("w33_pass1021_corollary_ovoid_orientation.json")
 
     require(primary["status"] == "PASS", "Pass 1023 primary split is not certified")
     require(golden["summary"]["all_identities_hold"], "BT363 selector identities failed")
     require(h2["status"] == "PASS", "Pass 341 cohomology is not certified")
+    require(orientation["status"] == "PASS", "Pass 1021 ovoid orientation is not certified")
 
     rows = primary["subgroup_table"]
     syndrome_rows = []
@@ -122,6 +124,10 @@ def main() -> None:
             h2["dimensions"]["H2_line_stabilizer"] == 2
             and "not globalizable" in h2["restriction_verdict"]
         ),
+        "E8_point_orientation_has_no_ovoid": orientation["W33"]["ovoids"] == 0,
+        "dual_line_orientation_has_36_ovoids": orientation["Q43_dual"]["ovoids"] == 36,
+        "ovoid_size_is_forced_to_ten": orientation["forced_ovoid_size"] == 10,
+        "golden_selector_is_line_anchored": "40 lines * 3 phases" in golden["single_sheet_law"]["selected_sheet"],
     }
     require(all(checks.values()), f"failed checks: {[k for k, v in checks.items() if not v]}")
 
@@ -176,6 +182,29 @@ def main() -> None:
                 "verdict": "carrier-signature match to residual C3 only; G-set identity remains unproved",
             },
         },
+        "contextuality_orientation_firewall": {
+            "E8_residual_C3_carrier": {
+                "base": "W(3,3) point action",
+                "ovoids": orientation["W33"]["ovoids"],
+                "spreads": orientation["W33"]["spreads"],
+                "reading": "KS-uncolourable/contextual orientation selected by E8",
+            },
+            "golden_selector_residual_C3_signature": {
+                "base": "40 W(3,3) lines, equivalently points of the dual Q(4,3)",
+                "dual_ovoids": orientation["Q43_dual"]["ovoids"],
+                "dual_spreads": orientation["Q43_dual"]["spreads"],
+                "reading": "combinatorially colourable dual orientation",
+            },
+            "verdict": (
+                "the two 120=40x3 carriers match in size and residual prime but their natural "
+                "40-object quotients lie on opposite ovoid/contextuality orientations; any bridge "
+                "must explicitly transport the point/line quotient structure"
+            ),
+            "next_candidate_not_a_claim": (
+                "the independent C2 chirality coordinate missing from the ternary selector is a "
+                "natural candidate orientation-switch datum, but no equivariant switch is proved"
+            ),
+        },
         "selector_layering": {
             "carrier": "120 selector sheets = 40*3",
             "failure_decoration": "one selected sheet carries 108 failed minimal-Z supports",
@@ -206,9 +235,10 @@ def main() -> None:
             ),
         },
         "boundary": (
-            "This proves syndrome independence and carrier-type compatibility from verified artifacts. "
-            "It does not prove that the E8 antipodal-pair 120-set and golden-selector 120-set are "
-            "conjugate permutation actions; that is a separate objectwise test."
+            "This proves syndrome independence, residual-carrier type, and the exact ovoid-count "
+            "orientation firewall from verified artifacts. It does not prove that the E8 antipodal-"
+            "pair 120-set and golden-selector 120-set are conjugate permutation actions; that is a "
+            "separate objectwise test."
         ),
         "check_count": len(checks),
         "checks": checks,
