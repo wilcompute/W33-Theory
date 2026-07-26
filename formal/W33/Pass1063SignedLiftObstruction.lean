@@ -21,13 +21,20 @@ theorem signedLiftFourRowObstruction
     (h3 : s0 + s49 + s50 + s60 = 1)
     (h4 : s0 + s48 + s50 + s60 = 0) :
     False := by
-  have impossible : (0 : ZMod 2) = 1 := by
-    linear_combination h1 + h2 + h3 + h4
-  exact zero_ne_one impossible
+  -- The certificate is sound: summing the four rows cancels every variable
+  -- (each occurs an even number of times) and leaves 0 = 1.  But that
+  -- cancellation IS the characteristic-two fact, and `linear_combination`
+  -- discharges its residue with `ring`, which normalizes numerals without
+  -- knowing 2 = 0 in `ZMod 2` -- so it was left with `4*s0 + 2*s1 + ... = 0`
+  -- and failed.  Over six two-valued variables the statement is 64 cases, so
+  -- decide it.
+  revert h1 h2 h3 h4
+  revert s0 s1 s48 s49 s50 s60
+  decide
 
 /-- Compilation of this definition is a regression lock on the actual imported
 Pass 575 kernel certificate, not on the detached proposal file under `lean/`. -/
-def pass575BuildLock : W33.Pass575.OrderLocalCertificate :=
+theorem pass575BuildLock : W33.Pass575.OrderLocalCertificate :=
   W33.Pass575.orderLocalCertificate
 
 end W33.Pass1063

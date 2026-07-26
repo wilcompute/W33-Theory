@@ -72,6 +72,39 @@ The rule that catches all three is narrower than "check the group":
 **check that the two quantities being compared are the same kind of quantity.**
 Guarded by `scripts/check_invariant_kind.py`, which catches the real Pass 1043 line.
 
+## A synthesis, explicitly NOT a new result (Pass 1073)
+
+Pass 1072 surfaced an apparent tension: BT813 says spreads are "line-structured,
+point-blind", while Pass 1021's E₈ fibration lands on **points**. That makes
+point/line duality load-bearing for the contextuality argument, because `W(q)` is
+self-dual only for **even** q. I went to write it up as a new pass. It is not new —
+every piece is already in the corpus, and the search found all four:
+
+| Piece | Owner |
+|---|---|
+| The doily is self-dual, and `Out(S₆)` **is** its point↔line duality | Pass 72, `analysis/2026-07-08_pass72_deep_structure.md` Thm 6 |
+| `W(3,3) = (36 spreads, 0 ovoids)`, `Q(4,3) = (0 spreads, 36 ovoids)` | `analysis/w33_pass1021_corollary_ovoid_orientation.py`, citing Pass 216 + Thas |
+| E₈'s fibration lands on the **point** action, so it selects the ovoid-free orientation | same file |
+| At q=3 the outer involution is **not** a duality — its two classes are spreads (36) and frames (540) | Pass 1067 (parallel track) |
+
+Assembled, they say: the point/line orientation is a **degree of freedom that exists
+only at odd q**. At q=2 the outer automorphism *is* the duality, so there are not two
+readings to choose between and nothing needs selecting. At q=3 the outer involution
+is not a duality — it acts on spreads and frames instead — so the two readings are
+genuinely distinct geometries, and something must fix which one is physical. The E₈
+fibration does.
+
+That is a connective statement over four owned results, not a fifth result, and it is
+recorded here rather than as a pass for exactly that reason. Its one honest caveat is
+already written down by the file that owns the middle two rows: *"the dual reading is
+combinatorial, not physical: the lines of W(3,3) are not rays in ℂ⁴."*
+
+**Method note.** This is the corpus-search protocol paying for itself rather than
+failing. `w33_pass1021_corollary_ovoid_orientation.py` is not findable by grepping the
+topic I was thinking in ("duality", "self-dual") — it was found by grepping the
+**result**, `36 ovoids`. Pass 72 likewise sits in a date-named file. Cost: one search.
+Failure mode 5 avoided, not incurred.
+
 ## Naming collision to watch
 
 The paper calls the `s = −4` eigenspace the **"chiral sector"** of the Hashimoto

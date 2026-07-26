@@ -21,6 +21,12 @@ abbrev V4 := W33.Pass462.V4
 /-- Two opposite-chart points lie in the same central-elation fiber. -/
 def SameFiber (x y : V4) : Prop := ∃ t : F3, y = zact t x
 
+-- Same cause as the Pass 462 instances: a Prop-valued `def` is opaque to instance
+-- search, so the existential over the Fintype F3 is not seen as decidable and both
+-- `Finset.filter` and `native_decide` fail. Unfold once, then Fintype.decidableExistsFintype.
+instance (x : V4) : DecidablePred (SameFiber x) :=
+  fun y => by unfold SameFiber; infer_instance
+
 /-- Common neighbors split by the fixed rim/bulk chart. -/
 def pairCommonRimSet (x y : V4) : Finset V4 :=
   points.filter fun w => Common x y w ∧ symp p0 w = 0
@@ -35,6 +41,9 @@ def bulkNeighborSet (x : V4) : Finset V4 :=
 /-- A length-two path staying inside the bulk chart. -/
 def BulkDistanceTwo (x y : V4) : Prop :=
   ∃ u : V4, Opposite u ∧ u ≠ x ∧ u ≠ y ∧ symp x u = 0 ∧ symp u y = 0
+
+instance (x : V4) : DecidablePred (BulkDistanceTwo x) :=
+  fun y => by unfold BulkDistanceTwo; infer_instance
 
 /-- The three members of one central-elation fiber. -/
 def fiberSet (x : V4) : Finset V4 :=

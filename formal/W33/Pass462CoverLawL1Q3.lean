@@ -1,5 +1,11 @@
 import W33.Pass457PerpMonotonicity
-import Mathlib.Data.Matrix.Notation
+-- `![a, b, c, d]` is vector notation (Matrix.vecCons), whose home is
+-- Mathlib.Data.Fin.VecNotation. This used to import Mathlib.Data.Matrix.Notation,
+-- which no longer exists at toolchain v4.32.0-rc1 -- the matrix `!![ ]` notation
+-- moved to Mathlib.LinearAlgebra.Matrix.Notation. The missing file made this
+-- module, and Pass465 and Pass477 downstream of it, fail to build at all, which
+-- masked the genuine errors below.
+import Mathlib.Data.Fin.VecNotation
 
 namespace W33.Pass462
 
@@ -27,11 +33,21 @@ def Canonical (v : V4) : Prop :=
   (v 0 = 0 ∧ v 1 = 0 ∧ v 2 = 1) ∨
   (v 0 = 0 ∧ v 1 = 0 ∧ v 2 = 0 ∧ v 3 = 1)
 
+-- `Canonical`, `Opposite`, `Rim` and `Common` are Prop-valued `def`s, so instance
+-- search cannot see through them to decide membership; every `Finset.filter` and
+-- `native_decide` below failed with "failed to synthesize". Unfolding once and
+-- deferring to the underlying DecidableEq (ZMod 3) is all that is needed.
+instance : DecidablePred Canonical := fun v => by unfold Canonical; infer_instance
+
 def points : Finset V4 := Finset.univ.filter Canonical
 
 def Opposite (x : V4) : Prop := Canonical x ∧ symp p0 x ≠ 0
 
+instance : DecidablePred Opposite := fun v => by unfold Opposite; infer_instance
+
 def Rim (x : V4) : Prop := Canonical x ∧ symp p0 x = 0
+
+instance : DecidablePred Rim := fun v => by unfold Rim; infer_instance
 
 /-- The vector representative of the central-elation translate used in Pass 394.
 Only the last projective coordinate changes, so canonical representatives stay
@@ -41,6 +57,9 @@ def zact (t : F3) (x : V4) : V4 :=
 
 def Common (x y w : V4) : Prop :=
   Canonical w ∧ w ≠ x ∧ w ≠ y ∧ symp w x = 0 ∧ symp w y = 0
+
+instance (x y : V4) : DecidablePred (Common x y) :=
+  fun w => by unfold Common; infer_instance
 
 def commonSet (x : V4) (t : F3) : Finset V4 :=
   points.filter fun w => Common x (zact t x) w

@@ -34,7 +34,10 @@ noncomputable def residueQuotientEquiv :
 @[simp]
 theorem residueQuotientEquiv_mk (x : CyclotomicFiveOrder) :
     residueQuotientEquiv ((Ideal.Quotient.mk uniformizerIdeal) x) = residueMap x := by
-  simp [residueQuotientEquiv, uniformizerIdeal]
+  -- The composite is definitionally `residueMap x`: `quotEquivOfEq` and
+  -- `kerLift` both reduce on `Ideal.Quotient.mk`.  The previous
+  -- `simp [residueQuotientEquiv, uniformizerIdeal]` stalled one step short.
+  rfl
 
 /-- The native λ-adic completion of the fifth-cyclotomic integral order. -/
 abbrev CyclotomicFiveAdicCompletion :=
