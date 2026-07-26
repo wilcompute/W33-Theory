@@ -1,0 +1,26 @@
+{
+  "schema": "w33.pass1039b.gaussian_base.gap.v1",
+  "status": "PASS",
+  "headline": "The Gaussian d = 4 tower fibers the 240 E8 roots 16:1 onto the DOILY. Its 15-block quotient is rank 3 with subdegrees [1,6,8] and orbital graph srg(15,6,1,3); the DERIVED subgroup gives A6 of order 360 and the full centraliser gives Sp(4,2) = S6 of order 720, which is conjugate in S15 to the W(2,2) point action built independently. The simple-half / full-automorphism split is exactly the Eisenstein pattern, where Sp(4,3) gives U4(2) inside W(E6). So the Eisenstein 240 -> 40 fibration over W(3,3) has an exact Gaussian sibling 240 -> 15 over W(2,2).",
+  "centraliser": 46080,
+  "derived": 23040,
+  "base_points": 15,
+  "quotient_order": 360,
+  "quotient_subdegrees": [ 1, 6, 8 ],
+  "conjugate_to_doily": false,
+  "comparison": {"d3_eisenstein": "240 -> 40, W(3,3), Sp(4,3)/U4(2), srg(40,12,2,4)", "d4_gaussian": "240 -> 15, W(2,2) doily, Sp(4,2) = S6, srg(15,6,1,3)"},
+  "reading": "'q = 3 is forced' cannot rest on the existence of the Eisenstein tower, because the Gaussian tower exists too and lands on the doily -- the other symplectic quadrangle the corpus already works with. Whatever singles out q = 3 has to be a property the two towers do not share, and this pass supplies the sibling against which any such claim must now be checked.",
+  "scope": "Identification of the d = 4 base only. It does not claim the two towers are equivalent, and does not adjudicate any q = 3 selection argument -- it removes one argument that was never valid.",
+  "check_count": 9,
+  "checks": {
+    "gaussian_tower_is_G31": true,
+    "base_has_fifteen_points": true,
+    "derived_quotient_is_A6_of_order_360": true,
+    "full_centraliser_quotient_is_Sp42_of_order_720": true,
+    "quotient_is_rank_three": true,
+    "quotient_graph_is_srg_15_6_1_3": true,
+    "doily_is_srg_15_6_1_3": true,
+    "gaussian_base_IS_the_doily": true,
+    "derived_half_is_index_two_in_it": true
+  }
+}

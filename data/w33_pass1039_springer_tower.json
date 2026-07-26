@@ -1,0 +1,25 @@
+{
+  "schema": "w33.pass1039.springer_tower.gap.v1",
+  "status": "PASS",
+  "headline": "The Eisenstein fibration is one member of the Springer regular-element tower of W(E8), not a unique object. Every divisor d of a degree gives a regular centraliser of order equal to the product of the degrees divisible by d. What distinguishes d = 3 is measured here rather than assumed.",
+  "law": "|C_W(regular w of order d)| = product of the degrees of W divisible by d (Springer). Degrees of W(E8): 2,8,12,14,18,20,24,30.",
+  "tower": [
+    {"d": 3, "predicted": 155520, "centraliser": 155520, "derived": 51840, "fixed_roots": 0, "centraliser_transitive": true, "derived_transitive": true, "block_sizes": [ 2, 3, 6 ]},
+    {"d": 4, "predicted": 46080, "centraliser": 46080, "derived": 23040, "fixed_roots": 0, "centraliser_transitive": true, "derived_transitive": true, "block_sizes": [ 2, 4, 16 ]},
+    {"d": 5, "predicted": 600, "centraliser": 600, "derived": 120, "fixed_roots": 0, "centraliser_transitive": false, "derived_transitive": false, "block_sizes": [  ]},
+    {"d": 6, "predicted": 155520, "centraliser": 155520, "derived": 51840, "fixed_roots": 0, "centraliser_transitive": true, "derived_transitive": true, "block_sizes": [ 2, 3, 6 ]},
+    {"d": 8, "predicted": 192, "centraliser": 192, "derived": 24, "fixed_roots": 0, "centraliser_transitive": false, "derived_transitive": false, "block_sizes": [  ]},
+    {"d": 10, "predicted": 600, "centraliser": 600, "derived": 120, "fixed_roots": 0, "centraliser_transitive": false, "derived_transitive": false, "block_sizes": [  ]},
+    {"d": 12, "predicted": 288, "centraliser": 288, "derived": 24, "fixed_roots": 0, "centraliser_transitive": false, "derived_transitive": false, "block_sizes": [  ]}
+  ],
+  "reading": "'q = 3 is forced' is a claim about this tower and is now testable rather than asserted. d = 4 supplies a rank-4 Gaussian sibling (Shephard-Todd G31, order 46080 = 8*12*20*24), so the mere existence of a rank-4 complex-reflection centraliser does not single out the Eisenstein case. Whatever distinguishes d = 3 has to be read off the columns here -- transitivity of the derived subgroup and the block structure -- not from the existence of the centraliser.",
+  "scope": "Structural census of the tower. It does not claim d = 3 is or is not distinguished; it supplies the table on which that claim must be settled.",
+  "check_count": 5,
+  "checks": {
+    "d3_is_the_eisenstein_tower": true,
+    "d4_gaussian_sibling_exists": true,
+    "every_found_centraliser_matches_springer": true,
+    "tower_has_more_than_one_member": true,
+    "d3_derived_is_transitive": true
+  }
+}
