@@ -1,0 +1,6 @@
+{
+  "schema":"w33.pass1081_1086.release.v1","status":"PASS","total_exact_checks":74,"pytest":"7 passed in 0.05s",
+  "passes":{"1081":"frame imprimitivity module lattice and observed Lean build closure","1082":"corrected 32-orbital coherent configuration and 22-orbital GSp fusion","1083":"two-dimensional Levi-to-frame Steinberg intertwiner space","1084":"exact G32/G25 slice normalizer and characteristic-zero arrangement restriction","1085":"hash-chained hardware-in-the-loop rehearsal with offline unblinding","1086":"contextual-fraction claim-label firewall and legacy estimator repair"},
+  "critical_correction":"Pass1079's all-self-paired assertion is retracted: 12 inner orbitals are self-paired and 20 form 10 transpose pairs.",
+  "authoritative_report":"PASS1081_1086_PARALLEL_HINTS_EXECUTION.md"
+}
