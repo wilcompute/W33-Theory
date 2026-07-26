@@ -1,0 +1,71 @@
+name: Passes 1065-1069 exact certificates
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass1065_*.py'
+      - 'analysis/w33_pass1066_*.py'
+      - 'analysis/w33_pass1067_*.py'
+      - 'analysis/w33_pass1068_*.py'
+      - 'analysis/w33_pass1069_*.py'
+      - 'data/w33_pass1065_*.json'
+      - 'data/w33_pass1066_*.json'
+      - 'data/w33_pass1067_*.json'
+      - 'data/w33_pass1068_*.json'
+      - 'data/w33_pass1069_*.json'
+      - 'hardware/w33_pass1069_*'
+      - 'tests/test_w33_pass1065_1069.py'
+      - 'PASS1065_1069_FIVE_STREAM_RELEASE.md'
+      - '.github/workflows/pass1065_1069_exact.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+env:
+  PYTHONHASHSEED: '0'
+jobs:
+  pass1065:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.13'}
+      - run: python -m pip install numpy==2.3.5 sympy==1.14.0
+      - run: PYTHONPATH=analysis python analysis/w33_pass1065_schur_cocycle.py
+  pass1066:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.13'}
+      - run: python -m pip install numpy==2.3.5 sympy==1.14.0
+      - run: PYTHONPATH=analysis python analysis/w33_pass1066_outer_lift.py
+  pass1067:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.13'}
+      - run: python -m pip install numpy==2.3.5 sympy==1.14.0
+      - run: PYTHONPATH=analysis python analysis/w33_pass1067_outer_class_geometry.py
+  pass1068:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.13'}
+      - run: python -m pip install numpy==2.3.5 sympy==1.14.0
+      - run: PYTHONPATH=analysis python analysis/w33_pass1068_chevie_g25_g32_matrices.py
+  pass1069:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.13'}
+      - run: python -m pip install numpy==2.3.5 sympy==1.14.0 pytest==9.0.2
+      - run: PYTHONPATH=analysis python analysis/w33_pass1069_photonic_protocol_compiler.py
+      - run: PYTHONPATH=analysis pytest -q tests/test_w33_pass1065_1069.py
