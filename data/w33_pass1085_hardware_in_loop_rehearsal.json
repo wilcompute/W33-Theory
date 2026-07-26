@@ -1,0 +1,9 @@
+{
+  "status":"PASS","check_count":15,
+  "checks":{"schedule_has_240_commands":true,"forty_calibrations":true,"one_hundred_sixty_routes":true,"forty_acquisitions":true,"hash_chain_verifies":true,"telemetry_signature_verifies":true,"analysis_is_contextual_positive":true,"witness_near_10":true,"analysis_never_labels_click_rate_as_contextual_fraction":true,"offline_unblind_succeeds":true,"wrong_key_fails":true,"public_manifest_contains_only_commitment":true,"all_calibration_ids_bound_to_acquisitions":true,"immutable_manifest_hash_present":true,"external_real_key_required":true},
+  "manifest":{"schema":"w33.pass1085.acquisition_manifest.v1","controller_firmware":"mock-mzi-controller/1.0","schedule_sha256":"c6e505e53c981afebc1d4293f69eea41ea63e4040830cd15b2a643f1e7a25fc5","command_count":240,"escrow_key_commitment_sha256":"2d7a7d0a8df59040216de2c920c576c074b79100714c40ae1d413078abbb534c","key_material_committed":false,"observable":"state_independent_contextuality_witness_W","noncontextual_bound":7,"Abramsky_Barbosa_CF_expected":1,"retired_claim":"CF=1/10","real_acquisition_requires_external_key":true,"manifest_sha256":"55561f677a27a615b73932853a414d00dc8ffaa9f844997b6834d272138cf0f9"},
+  "analysis":{"decision":"contextual_positive","witness_W":10.03975,"noncontextual_bound":7,"observable":"state_independent_contextuality_witness_W","contextual_fraction_claim":null},
+  "telemetry_event_count":240,"chain_root":"1916b7db529f52d4c0867f9c0548aaba2d72d3d5555d52d7a759bd13bd3567c4",
+  "generated_artifacts":["hardware/w33_pass1085_telemetry.json","hardware/w33_pass1085_unblinding_receipt.json","hardware/w33_pass1085_analysis.json","hardware/w33_pass1085_manifest.json"],
+  "scope":"Mock-controller hardware-in-the-loop rehearsal. No physical device was connected and no real key material is committed. The executable regenerates the full 240-event telemetry artifact."
+}
