@@ -1,0 +1,15 @@
+{
+  "schema": "w33.pass1074_1078.release.v1",
+  "status": "PASS",
+  "passes": {
+    "1074": {"checks":10,"result":"normalized Schur cocycle extension and Lean algebra source"},
+    "1075": {"checks":11,"result":"GSp(4,3), 38 conjugacy classes, frame-rank fusion 32 to 22"},
+    "1076": {"checks":10,"result":"36 x 540 incidence singular algebra and frame coarse-scheme obstruction"},
+    "1077": {"checks":8,"result":"G32 basics restrict into the v9-even G25 subring; transverse arrangement factorization"},
+    "1078": {"checks":11,"result":"signed fail-closed 40-mode MZI hardware backend"}
+  },
+  "total_exact_checks": 50,
+  "pytest": "7 passed in 0.05s",
+  "formal_boundary": "Lean source is wired for CI; no local Lean executable is available in this environment.",
+  "authoritative_report": "PASS1074_1078_FIVE_STREAM_RELEASE.md"
+}
