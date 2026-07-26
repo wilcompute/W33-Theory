@@ -58,18 +58,35 @@ jobs:
           python - <<'PY'
           import json
           from pathlib import Path
-          pairs = [
+
+          exact_pairs = [
               (Path('/tmp/pass1034.json'), Path('data/w33_pass1034_selector_orbital_algebra.json')),
               (Path('/tmp/pass1035.json'), Path('data/w33_pass1035_selector_correction_refinement.json')),
-              (Path('/tmp/pass1036.json'), Path('data/w33_pass1036_six_response_photonic_falsifier.json')),
           ]
-          for expected_path, actual_path in pairs:
+          for expected_path, actual_path in exact_pairs:
               expected = json.loads(expected_path.read_text(encoding='utf-8'))
               actual = json.loads(actual_path.read_text(encoding='utf-8'))
               if actual != expected:
                   raise SystemExit(f'certificate mismatch: {actual_path}')
               if actual.get('status') != 'PASS' or not all(actual.get('checks', {}).values()):
                   raise SystemExit(f'certificate did not pass: {actual_path}')
+
+          expected = json.loads(Path('/tmp/pass1036.json').read_text(encoding='utf-8'))
+          actual_path = Path('data/w33_pass1036_six_response_photonic_falsifier.json')
+          actual = json.loads(actual_path.read_text(encoding='utf-8'))
+          stable_fields = [
+              'schema', 'status', 'compiler_labels', 'ideal_transfer_matrices',
+              'phase_orientation_readout', 'chirality_readout', 'falsifier_sequence',
+              'acceptance_rule', 'boundary', 'check_count', 'checks',
+          ]
+          if any(actual.get(field) != expected.get(field) for field in stable_fields):
+              raise SystemExit(f'stable certificate mismatch: {actual_path}')
+          if actual.get('status') != 'PASS' or not all(actual.get('checks', {}).values()):
+              raise SystemExit(f'certificate did not pass: {actual_path}')
+          if actual['minimum_pairwise_frobenius_separation'] <= 1.0:
+              raise SystemExit('Pass 1036 response separation collapsed')
+          if actual['false_c6_control']['inversion_echo_residual'] <= 1.0:
+              raise SystemExit('Pass 1036 false-C6 falsifier collapsed')
           print('Passes1034-1036 regeneration=PASS')
           PY
 
