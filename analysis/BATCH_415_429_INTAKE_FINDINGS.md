@@ -30,8 +30,16 @@ This is a repair path, not a rejection.*
 - [ ] Run `py -3 scripts/audit_batch.py --archive <file> --sha256 <hex>
       --size <bytes>` and include its output in the reservation/merge commit
       message (protocol step 5).
-- [ ] Disambiguate `[[240,81,4]]`: either correct to `[[240,81,3]]`, or write
-      `d_Z=4` explicitly, or name the superseded certificate.
+- [x] **Disambiguate `[[240,81,4]]` — RESOLVED.** The `d` versus `d_Z` conflation
+      hypothesised above is correct, and the owner file settles it:
+      `exploration/PART_CCCCIII_W33_CSS_DISTANCE.py` computes and asserts
+      `d_X = 3`, `d_Z = 4`, `d = min(d_X,d_Z) = 3` as three separate checks.
+      So `[[240,81,3]]` is the code and `[[240,81,4]]` is `d_Z` promoted into the
+      distance slot. Write `d_Z = 4`, never as the third entry of `[[n,k,d]]`.
+      Full record in `analysis/CANON_240_81_3.md`. **Downstream:**
+      `analysis/BT1204_holonet_milestone_dashboard.md` milestone F4 grades on
+      "logical-error suppression consistent with distance 4" — mis-specified,
+      since the code corrects to distance 3.
 - [ ] Certificate vocabulary: every batch JSON either uses witness `PASS`/
       `FAIL` or is named `*attestation*`/`*release_manifest*` so the ledger
       checker classifies it correctly.
