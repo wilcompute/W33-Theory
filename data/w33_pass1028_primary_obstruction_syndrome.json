@@ -1,14 +1,18 @@
 {
-  "boundary": "This proves syndrome independence and carrier-type compatibility from verified artifacts. It does not prove that the E8 antipodal-pair 120-set and golden-selector 120-set are conjugate permutation actions; that is a separate objectwise test.",
-  "check_count": 14,
+  "boundary": "This proves syndrome independence, residual-carrier type, and the exact ovoid-count orientation firewall from verified artifacts. It does not prove that the E8 antipodal-pair 120-set and golden-selector 120-set are conjugate permutation actions; that is a separate objectwise test.",
+  "check_count": 18,
   "checks": {
+    "E8_point_orientation_has_no_ovoid": true,
     "all_four_primary_syndromes_are_realized": true,
     "center_is_chirality_only_probe": true,
     "decoder_has_rank_two_over_F2": true,
+    "dual_line_orientation_has_36_ovoids": true,
     "full_section_is_boolean_and_of_primary_sections": true,
     "golden_selector_does_not_have_residual_C2_carrier_size": true,
     "golden_selector_has_residual_C3_carrier_signature": true,
+    "golden_selector_is_line_anchored": true,
     "ordered_failure_is_D4_decoration": true,
+    "ovoid_size_is_forced_to_ten": true,
     "phase_quotient_is_80_with_residual_C2": true,
     "selector_sign_Bockstein_is_local_H2_not_global_H1": true,
     "sign_quotient_is_120_with_residual_C3": true,
@@ -21,6 +25,22 @@
     "global_primary_phase_target": "action-groupoid H1 with C3 coefficients",
     "local_selector_sign_class": "Pass341 H2(K,F2) Bockstein",
     "verdict": "different coefficient prime, different cohomological degree, and non-globalizable; no identity claim is permitted without an explicit transgression"
+  },
+  "contextuality_orientation_firewall": {
+    "E8_residual_C3_carrier": {
+      "base": "W(3,3) point action",
+      "ovoids": 0,
+      "reading": "KS-uncolourable/contextual orientation selected by E8",
+      "spreads": 36
+    },
+    "golden_selector_residual_C3_signature": {
+      "base": "40 W(3,3) lines, equivalently points of the dual Q(4,3)",
+      "dual_ovoids": 36,
+      "dual_spreads": 0,
+      "reading": "combinatorially colourable dual orientation"
+    },
+    "next_candidate_not_a_claim": "the independent C2 chirality coordinate missing from the ternary selector is a natural candidate orientation-switch datum, but no equivariant switch is proved",
+    "verdict": "the two 120=40x3 carriers match in size and residual prime but their natural 40-object quotients lie on opposite ovoid/contextuality orientations; any bridge must explicitly transport the point/line quotient structure"
   },
   "experimental_falsifier": {
     "claim_under_test": "a 120-sheet selector realizes the full C6 holonomy",
