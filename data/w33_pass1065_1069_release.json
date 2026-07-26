@@ -1,0 +1,16 @@
+{
+  "schema": "w33.pass1065_1069.release.v1",
+  "status": "PASS",
+  "passes": {
+    "1065": {"checks": 10, "result": "nonzero generator of H^2(PSp(4,3),C2)"},
+    "1066": {"checks": 14, "result": "split order-103680 outer extension with class-dependent lift orders 4 and 2"},
+    "1067": {"checks": 13, "result": "36 spreads and 540 disjoint-line transversal frames"},
+    "1068": {"checks": 15, "result": "explicit CHEVIE G25 pointwise-e4 stabilizer inside G32"},
+    "1069": {"checks": 13, "result": "executable fail-closed photonic compiler and blinded analysis"}
+  },
+  "total_exact_checks": 65,
+  "pytest": "7 passed in 0.03s",
+  "execution_note": "Each heavyweight certificate was executed successfully in isolation; pytest validates frozen outputs and cross-pass invariants without redundant group enumeration.",
+  "remote_ci_observation": "pending connector-visible run; do not infer remote success from this ledger",
+  "authoritative_report": "PASS1065_1069_FIVE_STREAM_RELEASE.md"
+}
