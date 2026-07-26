@@ -1,0 +1,40 @@
+{
+  "schema": "w33.pass1023.chirality_and_phase_halves.gap.v1",
+  "status": "PASS",
+  "headline": "The Pass 1022 C6 section obstruction FACTORS. C6 = C2 x C3 gives a sign/chirality half (240 -> 120, fibre <-1>) and an Eisenstein phase half (240 -> 80, fibre <w>). Each is separately and fully obstructed for Sp(4,3), a C6 section exists exactly when both halves admit one, and the two halves are independent: the centre Z(G) is phase-clean but chirality-obstructed.",
+  "halves": {
+    "sign": {"tower": "240 -> 120", "fibre": "<-1> = <c^15>", "block_stabiliser": 432, "monodromy_order": 2, "section": false},
+    "phase": {"tower": "240 -> 80", "fibre": "<w> = <c^10>", "block_stabiliser": 648, "monodromy_order": 3, "section": false},
+    "product": {"tower": "240 -> 40", "fibre": "<c^5> = C6", "block_stabiliser": 1296, "monodromy_order": 6, "section": false}
+  },
+  "product_law": "a J-equivariant C6 transversal exists if and only if J admits one in BOTH halves; verified on every subgroup in the table",
+  "subgroup_table": [
+    {"name": "Z(G) = C2", "order": 2, "sign_section": false, "phase_section": true, "full_section": false},
+    {"name": "Sylow 5", "order": 5, "sign_section": true, "phase_section": true, "full_section": true},
+    {"name": "Sylow 3", "order": 81, "sign_section": true, "phase_section": false, "full_section": false},
+    {"name": "Sylow 2", "order": 128, "sign_section": false, "phase_section": true, "full_section": false},
+    {"name": "root stabiliser H", "order": 216, "sign_section": false, "phase_section": false, "full_section": false},
+    {"name": "whole group Sp(4,3)", "order": 51840, "sign_section": false, "phase_section": false, "full_section": false},
+    {"name": "maximal 1 (order 1920)", "order": 1920, "sign_section": false, "phase_section": false, "full_section": false},
+    {"name": "maximal 2 (order 1440)", "order": 1440, "sign_section": false, "phase_section": false, "full_section": false},
+    {"name": "maximal 3 (order 1296)", "order": 1296, "sign_section": false, "phase_section": false, "full_section": false},
+    {"name": "maximal 4 (order 1296)", "order": 1296, "sign_section": false, "phase_section": false, "full_section": false},
+    {"name": "maximal 5 (order 1152)", "order": 1152, "sign_section": false, "phase_section": false, "full_section": false}
+  ],
+  "reading": "Pass 1022 showed the substrate cannot choose a phase convention equivariantly. This pass shows the failure has two independent causes that no single C6 statement separates: it cannot choose a SIGN (chirality) and it cannot choose an EISENSTEIN PHASE, and a subgroup can be clean in one and dirty in the other. Z(G) is the witness: it is phase-clean and chirality-obstructed. So corpus claims about chirality and corpus claims about ternary phase are NOT the same obstruction and must not be merged; they are the 2-primary and 3-primary parts of one class.",
+  "scope": "This identifies the 2-primary and 3-primary parts of the Pass 1022 class. It does NOT prove that any particular earlier corpus obstruction equals either part; that comparison now has two named targets instead of one, which is the prerequisite, not the conclusion.",
+  "check_count": 11,
+  "checks": {
+    "reproduces_pass1022_C6_monodromy": true,
+    "reproduces_pass1022_no_equivariant_section": true,
+    "reproduces_pass1022_centre_obstructed": true,
+    "reproduces_pass1022_sylow5_clean": true,
+    "sign_half_monodromy_is_full_C2": true,
+    "phase_half_monodromy_is_full_C3": true,
+    "neither_half_admits_a_section": true,
+    "centre_is_phase_clean_but_chirality_obstructed": true,
+    "sylow5_is_clean_in_both_halves": true,
+    "C6_section_iff_both_halves": true,
+    "both_mixed_types_are_realised": true
+  }
+}
