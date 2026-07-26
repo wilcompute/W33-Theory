@@ -1,0 +1,88 @@
+name: Passes 1033-1037 Five Frontiers
+
+on:
+  pull_request:
+    paths:
+      - 'analysis/w33_pass1033_selector_orbital_algebra.py'
+      - 'analysis/w33_pass1034_selector_correction_torsor.py'
+      - 'analysis/w33_pass1035_determinant_to_s3_realification.py'
+      - 'analysis/w33_pass1036_six_response_photonic_falsifier.py'
+      - 'analysis/w33_pass1037_minimal_external_controller.g'
+      - '.github/workflows/pass1033_1037_five_frontiers.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  python-certificates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy sympy
+      - name: Clear generated certificates
+        run: rm -f data/w33_pass103{3,4,5,6}_*.json pass103{3,4,5,6}.log
+      - name: Rebuild Pass 1033
+        run: set -o pipefail; python analysis/w33_pass1033_selector_orbital_algebra.py 2>&1 | tee pass1033.log
+      - name: Rebuild Pass 1034
+        run: set -o pipefail; python analysis/w33_pass1034_selector_correction_torsor.py 2>&1 | tee pass1034.log
+      - name: Rebuild Pass 1035
+        run: set -o pipefail; python analysis/w33_pass1035_determinant_to_s3_realification.py 2>&1 | tee pass1035.log
+      - name: Rebuild Pass 1036
+        run: set -o pipefail; python analysis/w33_pass1036_six_response_photonic_falsifier.py 2>&1 | tee pass1036.log
+      - name: Validate Python certificates
+        run: |
+          python - <<'PY'
+          import glob, json
+          paths=sorted(glob.glob('data/w33_pass103[3-6]_*.json'))
+          assert len(paths)==4, paths
+          for path in paths:
+              obj=json.load(open(path))
+              assert obj['status']=='PASS', path
+              assert all(obj['checks'].values()), path
+              print(path,obj['check_count'])
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pass1033-1036-certificates
+          path: |
+            data/w33_pass103[3-6]_*.json
+            pass103*.log
+          if-no-files-found: warn
+
+  gap-controller-certificate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install GAP
+        run: sudo apt-get update && sudo apt-get install -y gap
+      - name: Run Pass 1037 fail closed
+        env:
+          W33_REPO: ${{ github.workspace }}
+        run: |
+          set -euo pipefail
+          rm -f data/w33_pass1037_minimal_external_controller.json
+          gap -q analysis/w33_pass1037_minimal_external_controller.g 2>&1 | tee pass1037.log
+          ! grep -q '^Error' pass1037.log
+          test -s data/w33_pass1037_minimal_external_controller.json
+          python - <<'PY'
+          import json
+          p='data/w33_pass1037_minimal_external_controller.json'
+          obj=json.load(open(p))
+          assert obj['status']=='PASS'
+          assert obj['check_count']==11
+          assert all(obj['checks'].values())
+          print(obj['headline'])
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pass1037-controller-certificate
+          path: |
+            data/w33_pass1037_minimal_external_controller.json
+            pass1037.log
+          if-no-files-found: warn

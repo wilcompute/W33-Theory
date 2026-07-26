@@ -1,0 +1,54 @@
+{
+  "boundary": "This does not identify the Pass-1034 correction-exchange character with chirality or any global determinant character.",
+  "check_count": 16,
+  "checks": {
+    "C3_is_normal_order_three": true,
+    "S3_has_order_six": true,
+    "determinant_character_is_nontrivial_C3_character": true,
+    "induced_character_equals_standard_character": true,
+    "induced_character_is_irreducible": true,
+    "induced_character_values_are_2_0_minus1": true,
+    "inversion_exchanges_chi_and_conjugate": true,
+    "nontrivial_C3_character_has_no_1d_S3_extension": true,
+    "omega_satisfies_cyclotomic_relation": true,
+    "same_fibre_fusion_is_conjugate_pair": true,
+    "selector_scheme_has_rank_five": true,
+    "source_determinant_certificate_passes": true,
+    "source_fusion_certificate_passes": true,
+    "source_orbital_algebra_passes": true,
+    "standard_restricts_to_chi_plus_conjugate": true,
+    "transport_fusion_is_conjugate_pair": true
+  },
+  "complex_phase_character": {
+    "group": "C3",
+    "kernel": "Sp(4,3)",
+    "sign_blind": true,
+    "source": "det_C on Z3 x Sp(4,3)",
+    "values": [
+      "1",
+      "omega",
+      "omega^2"
+    ]
+  },
+  "experimental_consequence": "A scalar intensity measurement cannot retain determinant phase under S3 inversion. The detector must preserve two real quadratures.",
+  "fusion_interpretation": {
+    "preserved_relations": "diagonal, one 27-orbital, and the 36-orbital",
+    "same_fibre": "omega and omega^2 directions fuse: 1+1=2",
+    "skew_transport": "two conjugate 27-orbitals fuse: 27+27=54"
+  },
+  "headline": "The complex determinant is the oriented C3 phase character. Under selector S3 inversion it is exchanged with its conjugate and cannot remain scalar. Its unique S3 completion is the irreducible two-dimensional standard representation, explaining 1+1->2 and 27+27->54.",
+  "s3_completion": {
+    "induced_character_by_class": {
+      "identity": "(2)+(0)*omega",
+      "three_cycle": "(-1)+(0)*omega",
+      "transposition": "0"
+    },
+    "irreducible_dimension": 2,
+    "one_dimensional_extension_exists": false,
+    "reason": "S3_ab = C2, so every scalar character is trivial on C3",
+    "representation": "standard real/quadrature representation of S3",
+    "restriction": "standard|C3 = chi + conjugate(chi)"
+  },
+  "schema": "w33.pass1035.determinant_to_s3_realification.python.v1",
+  "status": "PASS"
+}
