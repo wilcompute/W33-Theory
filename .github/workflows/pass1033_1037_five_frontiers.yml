@@ -74,7 +74,7 @@ jobs:
           p='data/w33_pass1037_minimal_external_controller.json'
           obj=json.load(open(p))
           assert obj['status']=='PASS'
-          assert obj['check_count']==10
+          assert obj['check_count']==11
           assert all(obj['checks'].values())
           print(obj['headline'])
           PY
