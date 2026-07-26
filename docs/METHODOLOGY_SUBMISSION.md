@@ -78,14 +78,20 @@ checked. Mitigation: all of it is re-runnable by a third party from a public rep
 and the retraction list is deliberately included so the failure rate is visible
 rather than inferred.
 
-## What the author must decide before anything is sent
+## Author decisions — RESOLVED
 
-- Whether to submit at all, and under whose name — the work is co-authored with an
-  AI agent and every venue above has a different disclosure policy.
-- Whether the repository is made public at the time of submission; claims 1–6 are
-  unverifiable otherwise.
-- Whether the physics framing is included or excised. Recommendation: **excise it.**
-  It is orthogonal to the method, it is the weakest material, and it invites a
-  referee to litigate E₈ numerology instead of the measurement.
+| question | decision |
+|---|---|
+| repository access | **already public** — claims 1–6 are checkable today; pinned at commit `c013cf09a` |
+| authorship | **sole author, AI disclosed in methods** — keeps arXiv and AITP available, which explicit AI co-authorship would have ruled out |
+| physics framing | **excised** — see [`METHODOLOGY_STANDALONE.md`](METHODOLOGY_STANDALONE.md) |
 
-No action has been taken on any of these.
+The standalone draft is the submittable artifact. It carries its own abstract,
+contributions statement, AI-disclosure paragraph and limitations section, and it
+describes the subject matter only where "the subject is exhausted" is load-bearing
+— that exhaustion is the mechanism behind the anti-correlation, so it cannot be
+dropped entirely, but no E₈ claim is made or needed. A referee can litigate the
+measurement without being drawn into the mathematics.
+
+**Still not submitted.** Nothing has been sent and no venue contacted; that remains
+an outward-facing action for the author to take.
