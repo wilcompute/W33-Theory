@@ -1,0 +1,66 @@
+name: Passes 1074-1078 exact certificates
+
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1074_schur_extension_formal_certificate.py'
+      - 'analysis/w33_pass1075_gsp43_character_fingerprint.py'
+      - 'analysis/w33_pass1075_gsp43_character_table.g'
+      - 'analysis/w33_pass1076_spread_frame_incidence_algebra.py'
+      - 'analysis/w33_pass1077_g32_g25_invariant_restriction.py'
+      - 'analysis/w33_pass1078_photonic_hardware_backend.py'
+      - 'formal/W33/Pass1074SchurCocycleExtension.lean'
+      - 'formal/W33.lean'
+      - 'tests/test_w33_pass1074_1078.py'
+      - '.github/workflows/pass1074_1078_exact.yml'
+  workflow_dispatch:
+
+jobs:
+  pass1074:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy sympy pytest
+      - run: PYTHONPATH=analysis python analysis/w33_pass1074_schur_extension_formal_certificate.py
+      - uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formal
+
+  pass1075:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy sympy
+      - run: PYTHONPATH=analysis python analysis/w33_pass1075_gsp43_character_fingerprint.py
+
+  pass1076:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy sympy
+      - run: PYTHONPATH=analysis python analysis/w33_pass1076_spread_frame_incidence_algebra.py
+
+  pass1077:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy
+      - run: PYTHONPATH=analysis python analysis/w33_pass1077_g32_g25_invariant_restriction.py
+
+  pass1078-and-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy sympy pytest
+      - run: PYTHONPATH=analysis python analysis/w33_pass1078_photonic_hardware_backend.py
+      - run: PYTHONPATH=analysis pytest -q tests/test_w33_pass1074_1078.py
