@@ -1,0 +1,11 @@
+{
+  "schema": "w33.pass1069.synthetic_blinding_key.v1",
+  "synthetic_fixture_only": true,
+  "mapping": {
+    "run_daebfda20913d645": "contextual_point",
+    "run_d1bfd96299868631": "noncontextual_point",
+    "run_dfab1306eeb045b1": "contextual_dual",
+    "run_4f0da418c0a62f46": "noncontextual_dual"
+  },
+  "guard": "Never use this committed synthetic key for physical acquisition. Generate and escrow a fresh external key before any real run."
+}
