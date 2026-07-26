@@ -1,28 +1,78 @@
-name: Pass 1037 Minimal S3 Controller
+name: Passes 1034-1037 Selector Controller Suite
 
 on:
   workflow_dispatch:
   pull_request:
     paths:
+      - 'analysis/w33_pass1034_selector_orbital_algebra.py'
+      - 'analysis/w33_pass1035_selector_correction_refinement.py'
+      - 'analysis/w33_pass1036_six_response_photonic_falsifier.py'
       - 'analysis/w33_pass1037_minimal_external_s3_controller.g'
       - 'analysis/w33_pass1037_controller_certificate.py'
+      - 'data/w33_pass1034_selector_orbital_algebra.json'
+      - 'data/w33_pass1035_selector_correction_refinement.json'
+      - 'data/w33_pass1036_six_response_photonic_falsifier.json'
       - '.github/workflows/pass1037-controller.yml'
   push:
     branches: [ master ]
     paths:
+      - 'analysis/w33_pass1034_selector_orbital_algebra.py'
+      - 'analysis/w33_pass1035_selector_correction_refinement.py'
+      - 'analysis/w33_pass1036_six_response_photonic_falsifier.py'
       - 'analysis/w33_pass1037_minimal_external_s3_controller.g'
       - 'analysis/w33_pass1037_controller_certificate.py'
+      - 'data/w33_pass1034_selector_orbital_algebra.json'
+      - 'data/w33_pass1035_selector_correction_refinement.json'
+      - 'data/w33_pass1036_six_response_photonic_falsifier.json'
       - '.github/workflows/pass1037-controller.yml'
 
 jobs:
-  pass1037-certificate:
+  selector-controller-certificates:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+
+      - name: Install Python dependency
+        run: python -m pip install --disable-pip-version-check numpy
+
+      - name: Regenerate Passes 1034-1036 fail closed
+        run: |
+          set -euo pipefail
+          cp data/w33_pass1034_selector_orbital_algebra.json /tmp/pass1034.json
+          cp data/w33_pass1035_selector_correction_refinement.json /tmp/pass1035.json
+          cp data/w33_pass1036_six_response_photonic_falsifier.json /tmp/pass1036.json
+          rm -f \
+            data/w33_pass1034_selector_orbital_algebra.json \
+            data/w33_pass1035_selector_correction_refinement.json \
+            data/w33_pass1036_six_response_photonic_falsifier.json
+          python analysis/w33_pass1034_selector_orbital_algebra.py
+          python analysis/w33_pass1035_selector_correction_refinement.py
+          python analysis/w33_pass1036_six_response_photonic_falsifier.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          pairs = [
+              (Path('/tmp/pass1034.json'), Path('data/w33_pass1034_selector_orbital_algebra.json')),
+              (Path('/tmp/pass1035.json'), Path('data/w33_pass1035_selector_correction_refinement.json')),
+              (Path('/tmp/pass1036.json'), Path('data/w33_pass1036_six_response_photonic_falsifier.json')),
+          ]
+          for expected_path, actual_path in pairs:
+              expected = json.loads(expected_path.read_text(encoding='utf-8'))
+              actual = json.loads(actual_path.read_text(encoding='utf-8'))
+              if actual != expected:
+                  raise SystemExit(f'certificate mismatch: {actual_path}')
+              if actual.get('status') != 'PASS' or not all(actual.get('checks', {}).values()):
+                  raise SystemExit(f'certificate did not pass: {actual_path}')
+          print('Passes1034-1036 regeneration=PASS')
+          PY
+
       - name: Install GAP fail closed
         run: |
           set -euo pipefail
@@ -34,6 +84,7 @@ jobs:
           done
           command -v gap
           gap --version
+
       - name: Run Pass 1037 from source
         env:
           W33_REPO: ${{ github.workspace }}
@@ -43,13 +94,18 @@ jobs:
           gap -q -b --nointeract analysis/w33_pass1037_minimal_external_s3_controller.g 2>&1 | tee /tmp/pass1037.log
           ! grep -q '^Error' /tmp/pass1037.log
           test -f data/w33_pass1037_minimal_external_s3_controller.json
-      - name: Validate emitted certificate
+
+      - name: Validate emitted Pass 1037 certificate
         run: python analysis/w33_pass1037_controller_certificate.py
-      - name: Upload certificate
+
+      - name: Upload selector-controller certificates
         uses: actions/upload-artifact@v4
         with:
-          name: pass1037-minimal-s3-controller
+          name: pass1034-1037-selector-controller-certificates
           path: |
+            data/w33_pass1034_selector_orbital_algebra.json
+            data/w33_pass1035_selector_correction_refinement.json
+            data/w33_pass1036_six_response_photonic_falsifier.json
             data/w33_pass1037_minimal_external_s3_controller.json
             data/w33_pass1037_diagnostic.txt
           if-no-files-found: error
