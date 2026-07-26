@@ -1,5 +1,5 @@
 {
-  "boundary": "The pair is canonical as the orbit of the deterministic gauge-fixed correction. This pass does not claim that these are the only weight-54 solutions in the full 2^40-element affine solution space.",
+  "boundary": "The pair is canonical as the orbit of the deterministic gauge-fixed correction. This does not claim these are the only weight-54 solutions in the full 2^40-element affine solution space.",
   "check_count": 20,
   "checks": {
     "both_corrections_flatten_all_quadrangles": true,
@@ -31,8 +31,14 @@
     "variables": 240
   },
   "correction_torsor": {
-    "corrected_failure_counts": [0, 0],
-    "correction_weights": [54, 54],
+    "corrected_failure_counts": [
+      0,
+      0
+    ],
+    "correction_weights": [
+      54,
+      54
+    ],
     "difference_is_homogeneous": true,
     "difference_weight": 108,
     "orbit_size": 2,
@@ -41,7 +47,12 @@
   "headline": "The golden-selector flatness correction cannot be chosen invariantly under the order-216 sheet stabilizer. The deterministic 54-edge correction instead belongs to an exact two-element torsor; its exchange character is independent of the local S3 phase-inversion character, yielding a C2 x C2 quotient with kernel order 54.",
   "schema": "w33.pass1034.selector_correction_torsor.python.v1",
   "sheet_stabilizer": {
-    "edge_orbit_sizes": [12, 12, 108, 108],
+    "edge_orbit_sizes": [
+      12,
+      12,
+      108,
+      108
+    ],
     "invariant_solution_count": 0,
     "invariant_variable_count": 4,
     "order": 216
@@ -49,10 +60,15 @@
   "status": "PASS",
   "two_binary_characters": {
     "correction_exchange_kernel_order": 108,
-    "interpretation": "The correction orientation and the residual S3 inversion are independent bits. A flat implementation therefore needs a separate correction-frame choice; local phase inversion alone cannot select it.",
+    "interpretation": "The correction orientation and residual S3 inversion are independent bits. A flat implementation needs a separate correction-frame choice.",
     "joint_image": "C2 x C2",
     "joint_kernel_order": 54,
-    "joint_profile": {"00": 54, "01": 54, "10": 54, "11": 54},
+    "joint_profile": {
+      "00": 54,
+      "01": 54,
+      "10": 54,
+      "11": 54
+    },
     "local_phase_inversion_kernel_order": 108
   }
 }
