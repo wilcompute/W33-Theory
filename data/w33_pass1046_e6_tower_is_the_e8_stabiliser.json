@@ -1,0 +1,28 @@
+{
+  "schema": "w33.pass1046.e6_tower_is_the_e8_stabiliser.gap.v1",
+  "status": "PASS",
+  "headline": "The E6 Eisenstein tower is the point stabiliser of the E8 one. E6's only Springer tower has degrees {6,9,12} and order 648 -- Shephard-Todd G25, the Hessian group -- and the stabiliser of a root inside the E8 tower G32 is a group of order 648 with abelianisation C3, derived subgroup of order 216, centre of order 3, and a normal extraspecial subgroup of order 27. Those are the Hessian group's invariants, not merely its order. So the two Eisenstein structures are one object at two levels rather than two coincidences at the same prime.",
+  "point_stabiliser_order": 648,
+  "Sp43_part": 216,
+  "abelianisation": [ 3 ],
+  "derived_order": 216,
+  "centre_order": 3,
+  "E6_tower": {"d": 3, "degrees": [6,9,12], "order": 648, "group": "Shephard-Todd G25, the Hessian group"},
+  "E8_tower": {"d": 3, "degrees": [12,18,24,30], "order": 155520, "group": "Shephard-Todd G32"},
+  "nesting": "|G32| / 240 roots = 648 = |G25|. The rank-3 parabolic of the rank-4 Eisenstein tower is the rank-3 Eisenstein tower.",
+  "reading": "Pass 1045 found E6 and E8 each carry an Eisenstein tower and read them as separate entries in a census. They are not separate: the E6 one sits over a point of the E8 one. The corpus's repeated 648 -- the Hessian group, the point stabiliser of PSp(4,3) on the 40 points, the det-1 subgroup 216 -- is one object appearing at the level where it belongs.",
+  "scope": "Invariant-level identification: order, abelianisation, derived subgroup, centre, and a normal extraspecial 27. It does not construct an explicit isomorphism to G25 and does not claim the E6 root system embeds in E8 by this map.",
+  "check_count": 10,
+  "checks": {
+    "E8_tower_is_transitive": true,
+    "point_stabiliser_has_order_648": true,
+    "that_is_the_E6_tower_order": true,
+    "Sp43_part_is_216": true,
+    "index_three_inside_the_stabiliser": true,
+    "abelianisation_is_C3": true,
+    "derived_subgroup_has_order_216": true,
+    "derived_subgroup_is_the_Sp43_part": true,
+    "centre_has_order_three": true,
+    "has_normal_extraspecial_27": true
+  }
+}
