@@ -12,7 +12,7 @@ The fault-tolerant machine is the concatenated continuous-variable stack
 240\text{ squeezed modes}
 \to 120D_4\text{ GKP pairs}
 \to 240\text{ GKP qutrits}
-\to [[240,81,4]]_3
+\to [[240,81,3]]_3
 \to 81\text{ logical qutrits}.
 \]
 
@@ -33,7 +33,7 @@ The fault-tolerant machine is the concatenated continuous-variable stack
 | F1 | Threshold squeezed light | Protocol-dependent approximately 7--20 dB, eased by \(D_4/E_8\) coding gains. | Mode-resolved squeezing, loss budget, and qutrit decoder noise model. |
 | F2 | Qutrit GKP state generation | Finite-squeezing qutrit GKP states in the \(D_4\) two-mode lattice. | State tomography or decoder-level evidence of qutrit displacement-error correction. |
 | F3 | \(D_4\) inner analog-to-digital code | 120 \(D_4\) GKP pairs yielding 240 discrete qutrit error channels. | Closest-lattice-point syndrome decoding and measured coding gain. |
-| F4 | Steinberg outer code | \([[240,81,4]]_3\) on the W(3,3) 240-edge carrier. | Syndrome extraction and logical-error suppression consistent with distance 4. |
+| F4 | Steinberg outer code | \([[240,81,3]]_3\) on the W(3,3) 240-edge carrier, with \(d_X=3\), \(d_Z=4\). | Syndrome extraction and logical-error suppression consistent with **distance 3**, i.e. correcting 1 error. A \(d_Z\)-only test may target 4; the code's distance is \(\min(d_X,d_Z)=3\). |
 | F5 | Cubic non-Gaussian resource | Degree-3 \(E_6\) matter-shell magic. | Cubic-phase or magic-state certification compatible with the encoded Clifford layer. |
 | F6 | Encoded \(\mathrm{Sp}(4,3)\) Clifford network | Programmable beamsplitter/phase/squeeze/modulator network on encoded qutrits. | Encoded gate tomography and closure under \(\mathrm{Sp}(4,3)\) modulo Pauli/frame conventions. |
 | F7 | Homodyne and qutrit syndrome readout | Stable inner GKP and outer Steinberg syndrome readout. | Repeated syndrome extraction with tracked logical frame and below-threshold residual displacement noise. |
