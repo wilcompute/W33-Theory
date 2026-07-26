@@ -1,0 +1,29 @@
+{
+  "schema": "w33.pass1033.base_chirality_character.gap.v1",
+  "status": "PASS",
+  "headline": "The binary chirality character exists on the BASE and nowhere else. Sp(4,3) is perfect, so the total-space group has no nontrivial character to any abelian group and cannot host a binary invariant even in principle. W(E6) = U4(2):2 has abelianisation C2 with simple kernel U4(2). A witness element has base character -1 while its ambient det_R is +1, so the two are different characters, not one character seen twice.",
+  "detector_table": {
+    "det_R_on_normaliser": {"image": "trivial", "detects_sign": false, "detects_phase": false},
+    "det_C_on_centraliser": {"image": "mu_3", "detects_sign": false, "detects_phase": true},
+    "sign_character_on_base": {"image": "C2", "detects_sign": true, "detects_phase": false}
+  },
+  "abelianisation_total_space": [  ],
+  "abelianisation_base": [ 2 ],
+  "base_character_kernel": 25920,
+  "witness_ambient_det": 1,
+  "reading": "W(E6) is a reflection group in its OWN 6-dimensional representation, where reflections have determinant -1 and the sign character IS that determinant. Pulled back to the ambient 8-dimensional E8 representation the same elements have det_R = +1. One group, two representations, two different determinants -- and the corpus's chirality datum lives in the smaller one. That is the precise sense in which chirality is real but unselectable from inside the tower: it is not absent, it is invisible in the representation the substrate actually acts by.",
+  "closes": "Pass 1029 left the sign half with no detector anywhere. It has exactly one, on the base, and the total space provably cannot carry it because Sp(4,3) is perfect.",
+  "scope": "Existence and distinctness of the character. It does NOT prove the base character equals the 2-primary section class of Pass 1023, and does not construct an equivariant orientation datum -- Pass 1029 shows none exists inside the tower.",
+  "check_count": 9,
+  "checks": {
+    "total_space_group_is_perfect": true,
+    "perfect_means_no_binary_character": true,
+    "base_is_not_perfect": true,
+    "base_abelianisation_is_C2": true,
+    "base_character_kernel_is_simple_U42": true,
+    "witness_has_base_character_minus_one": true,
+    "witness_has_ambient_det_plus_one": true,
+    "two_characters_are_genuinely_different": true,
+    "det_R_trivial_on_normaliser": true
+  }
+}
