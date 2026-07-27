@@ -1,0 +1,54 @@
+name: Materialize Pass 1142-1146 on PR head
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'PASS1142_1146_MATERIALIZE.trigger'
+      - '.github/workflows/pass1142_1146_pr_materialize.yml'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact runtime
+        run: python -m pip install numpy pytest reportlab
+      - name: Recompute exact release
+        run: |
+          python analysis/w33_pass1142_1146_exact.py
+          python analysis/w33_pass1142_1146_intertwiner.py
+          python analysis/w33_pass1142_1146_release_compiler.py
+          pytest -q tests/test_w33_pass1142_1146.py
+      - name: Apply semantic corpus migration
+        run: python scripts/migrate_shifted_adjacency_descendants.py --apply
+      - name: Build and enforce complete 540 registry
+        run: |
+          python scripts/build_540_occurrence_registry.py --root .
+          python scripts/tag_540_disambiguation.py --root . --json-out data/BT1634_540_audit_results.json --strict
+      - name: Re-run descendant gate
+        run: python scripts/check_shifted_adjacency_descendants.py --root . --write-report data/w33_shifted_adjacency_descendant_audit.json
+      - name: Generate release PDF
+        run: python scripts/build_pass1142_1146_pdf.py
+      - name: Commit generated artifacts to PR head
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then
+            echo 'No generated changes.'
+            exit 0
+          fi
+          git commit -m 'Passes 1142-1146: materialize exact corpus release'
+          git push origin HEAD:${{ github.head_ref }}
