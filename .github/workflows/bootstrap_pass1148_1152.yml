@@ -1,0 +1,45 @@
+name: Bootstrap Passes 1148-1152 exact crossed-bridge release
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'data/pass1148_1152_source_bundle.b64'
+      - '.github/workflows/bootstrap_pass1148_1152.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install focused test runtime
+        run: python -m pip install pytest
+      - name: Extract reviewed source packet
+        run: |
+          base64 --decode data/pass1148_1152_source_bundle.b64 | tar -xz
+          rm data/pass1148_1152_source_bundle.b64
+          rm .github/workflows/bootstrap_pass1148_1152.yml
+      - name: Verify exact packet
+        run: |
+          python analysis/w33_pass1148_hecke_geometric_filtration.py
+          python analysis/w33_pass1149_fourier_steinberg_kernel_bridge.py
+          python analysis/w33_pass1151_degree540_taxonomy_lock.py
+          python analysis/w33_pass1152_crossed_c3_commutant.py
+          pytest -q tests/test_w33_pass1148_1152.py tests/test_w33_pass1150_migration.py
+      - name: Commit direct source release
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Passes 1148-1152: install exact crossed-bridge release'
+          git pull --rebase origin master
+          git push origin master
