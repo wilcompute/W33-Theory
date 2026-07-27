@@ -1,0 +1,73 @@
+{
+  "W33": {
+    "contexts_satisfied": 28,
+    "contexts_unsatisfiable": 12,
+    "full_ovoid_size_st_plus_1": 10,
+    "is_a_full_ovoid": false,
+    "lines_contexts": 40,
+    "lines_per_point": 4,
+    "max_partial_ovoid": 7,
+    "points": 40,
+    "q": 3,
+    "unsatisfiable_fraction": "3/10",
+    "unsatisfiable_fraction_float": 0.3,
+    "witness_partial_ovoid": [
+      0,
+      4,
+      5,
+      9,
+      24,
+      27,
+      30
+    ]
+  },
+  "checks": {
+    "doily_has_15_points_and_15_contexts": true,
+    "doily_reaches_a_full_ovoid": true,
+    "doily_unsatisfiable_fraction_is_zero": true,
+    "max_partial_ovoid_is_NOT_9": true,
+    "one_tenth_would_require_max_partial_ovoid_9": true,
+    "unsatisfiable_fraction_is_NOT_one_tenth": true,
+    "w33_has_40_points_and_40_contexts": true,
+    "w33_has_no_full_ovoid": true
+  },
+  "doily_control": {
+    "contexts_satisfied": 15,
+    "contexts_unsatisfiable": 0,
+    "full_ovoid_size_st_plus_1": 5,
+    "is_a_full_ovoid": true,
+    "lines_contexts": 15,
+    "lines_per_point": 3,
+    "max_partial_ovoid": 5,
+    "points": 15,
+    "q": 2,
+    "unsatisfiable_fraction": "0",
+    "unsatisfiable_fraction_float": 0.0,
+    "witness_partial_ovoid": [
+      0,
+      3,
+      6,
+      12,
+      14
+    ]
+  },
+  "headline": "In the one reading that gives 1/10 geometric content -- the fraction of measurement contexts that no classical assignment can satisfy -- the answer is 3/10, not 1/10. A partial ovoid of size m satisfies exactly 4m of the 40 contexts, so 1/10 would require a maximum partial ovoid of 9. The exact maximum is 7, giving 28 contexts satisfied and 12 unsatisfiable. The preregistration's '36 satisfiable contexts' is (q!)^2, which counts nothing in this geometry. The doily control reaches a full ovoid and returns 0, as it must for even q.",
+  "prior_art": [
+    "analysis/w33_pass1080_contextual_fraction_audit.py -- CF = 1",
+    "data/w33_pass1086_contextuality_claim_firewall.json -- label retired",
+    "analysis/bt1901_cf_preregistration_audit.py -- source of 36/40",
+    "analysis/w33_ovoid_construct.py -- owns the contextuality statement",
+    "Thas (1981) -- W(q) has ovoids iff q is even"
+  ],
+  "reading": "This does not restore 1/10 and does not rescue the falsifier. It closes the question the firewall left open -- 'unidentified click-rate target' -- by showing that the most natural identification, the one the retracted derivation itself gestured at, yields a different number. Any surviving claim for 1/10 must now name a different observable entirely, because this one is computed and it is not 1/10.",
+  "schema": "w33.pass1098.what_one_tenth_measures.v1",
+  "scope": "Exact combinatorics on W(3,3) and W(2,2): a maximum independent set in the collinearity graph, computed by branch and bound with no heuristic and no assumed bound. It fixes the value of one specific observable. It is not a statement about what the demonstrator hardware measures, and it does not derive any replacement target.",
+  "status": "PASS",
+  "the_arithmetic": {
+    "actual_max_partial_ovoid": 7,
+    "actual_unsatisfiable_fraction": "3/10",
+    "contexts_satisfied_by_partial_ovoid_of_size_m": "4 * m",
+    "one_tenth_requires": "4m = 36, i.e. m = 9",
+    "preregistered_value": "1/10"
+  }
+}
