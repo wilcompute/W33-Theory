@@ -36,7 +36,7 @@ jobs:
       - name: Extract reviewed source packet
         if: steps.packet.outputs.complete == 'yes'
         run: |
-          cat data/pass1148_1152_source_chunk_* | base64 --decode | tar -xz
+          cat data/pass1148_1152_source_chunk_* | tr -d '[:space:]' | base64 --decode | tar -xz
           rm data/pass1148_1152_source_chunk_*
           rm .github/workflows/bootstrap_pass1148_1152.yml
       - name: Verify exact packet
