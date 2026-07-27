@@ -72,6 +72,34 @@ The rule that catches all three is narrower than "check the group":
 **check that the two quantities being compared are the same kind of quantity.**
 Guarded by `scripts/check_invariant_kind.py`, which catches the real Pass 1043 line.
 
+## Passes 1079–1091: four crossings in one afternoon, both directions
+
+The densest cross-track traffic so far, and the first time the correction went
+*from* the glue track *to* the parallel track. Recorded as data, with times, so
+neither side has to reconstruct it.
+
+| # | What | Direction | Outcome |
+|---|---|---|---|
+| 1 | **CF = 1/10 is not the contextual fraction** (glue Pass 1080, 16:57) | glue → parallel | **Accepted.** Their Pass 1086 "contextuality claim firewall" checks `pass1080_w33_CF_is_one` and `pass1080_doily_CF_is_zero`, retires the claim "Abramsky–Barbosa contextual fraction = 1/10", and renames 1/10 to an unidentified *click-rate* target. |
+| 2 | **"All 32 orbitals self-paired"** (glue Pass 1079, 16:57) | parallel → glue | **Refuted.** Their Pass 1082 (17:43) gives 12 self-paired / 20 not / 10 pairs / 22 orbital-pairs; Pass 1091 formalises it. My test was a tautology (`1 ^ (p^0)` with `p^0` the identity). Deleting it reproduces their numbers exactly. **They own 12/20/10/22.** |
+| 3 | **The three block systems** (glue Pass 1079) | independent, both | **Confirmed twice.** Their Pass 1081 has the same 135×4, 45×12, 36×15 and the same two refinement facts, derived separately. Glue commit is earlier (16:57 vs 17:43) so the glue track owns it; their module-lattice reading is theirs. |
+| 4 | **`lake build --wfail` and two dead Lean modules** | glue → parallel | Their `Pass1074SchurCocycleExtension` **had never compiled** (`def section` — `section` is a Lean keyword — plus a `rw` that cannot match a left-associated sum), and their `Pass1091FrameOrbitalIntertwiner` imports `Mathlib.LinearAlgebra.Matrix`, which does not exist at v4.32.0-rc1. Both fixed on the glue side. |
+
+**One inherited inaccuracy to watch.** Pass 1081's `formal_status` reads *"Parallel
+commit 0916335f2 records lake build W33 exit 0 for all 40 imported modules,
+including Pass1074."* That build predates Pass 1074's landing, so it cannot have
+covered it — and Pass 1074 did not in fact compile. Citing another track's green
+build is only as good as the timestamp; check that the cited commit is *later*
+than the file it is claimed to cover.
+
+**The scope distinction worth keeping (crossing 3).** The glue track proved the
+36-block quotient is isomorphic *as a G-set* to the spread action, by conjugacy of
+point stabilisers. Pass 1081 separately shows the blocks are **not** the spreads'
+fibres — a spread holds 45 frames, a block holds 15 — and that the two 36-dimensional
+modules meet only in the constants. Both are true; they are statements about the
+abstract G-set and about its concrete embedding in the 540-space. Neither supersedes
+the other, and conflating them would be a fresh over-read.
+
 ## A synthesis, explicitly NOT a new result (Pass 1073)
 
 Pass 1072 surfaced an apparent tension: BT813 says spreads are "line-structured,

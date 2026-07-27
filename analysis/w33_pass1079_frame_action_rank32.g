@@ -48,12 +48,22 @@
 #
 #     540 -> 135 (blocks of 4,  stabiliser order 192, not maximal)
 #          -> 45  (blocks of 12, stabiliser order 576, MAXIMAL)
-#     540 -> 36  (blocks of 15, stabiliser S6)  = THE SPREADS
+#     540 -> 36  (blocks of 15, stabiliser S6)  ~= the spread G-set
 #
 # The 4-blocks refine the 12-blocks, so these are two independent chains rather
-# than three unrelated quotients.  The 36-block quotient is proved to BE the spread
-# action by conjugacy of point stabilisers -- not by matching 36 to 36, which is
-# the move Pass 1043 was retracted for.  The 45-block quotient is forced: index 45
+# than three unrelated quotients.  The 36-block quotient is proved ISOMORPHIC AS A
+# G-SET to the spread action, by conjugacy of point stabilisers -- not by matching
+# 36 to 36, which is the move Pass 1043 was retracted for.
+#
+# SCOPE OF THAT CLAIM, sharpened after reading the parallel track's Pass 1081
+# (data/w33_pass1081_frame_module_lattice.json).  "Isomorphic as a G-set" does NOT
+# mean the blocks are the spreads' fibres, and they are not: a spread contains 45
+# frames, a block contains 15.  Pass 1081 records the same three block systems and
+# the same two refinement facts independently, and adds that the block-15 module
+# and the spread-incidence module meet only in the constants
+# (spread_block_module_intersection_dim = 1), so they are distinct copies of the
+# same abstract G-set inside the 540-space.  Both statements hold; this one is
+# about the abstract G-set, theirs about the concrete embedding.  The 45-block quotient is forced: index 45
 # is a maximal-subgroup class of PSp(4,3) and there is only one, so no separate
 # identification argument is needed.
 #
