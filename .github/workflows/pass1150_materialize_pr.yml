@@ -38,7 +38,20 @@ jobs:
           assert d['schema'].endswith('v4')
           PY
       - name: Re-run strict descendant audit
-        run: python scripts/check_shifted_adjacency_descendants.py --root . --write-report data/w33_shifted_adjacency_descendant_audit.json
+        run: |
+          set +e
+          python scripts/check_shifted_adjacency_descendants.py --root . --write-report data/w33_shifted_adjacency_descendant_audit.json
+          rc=$?
+          python - <<'PY'
+          import json
+          p='data/w33_shifted_adjacency_descendant_audit.json'
+          d=json.load(open(p,encoding='utf-8'))
+          print(json.dumps({
+            'summary': d.get('summary'),
+            'violations': d.get('violations', []),
+          }, indent=2))
+          PY
+          exit $rc
       - name: Run focused regressions
         run: pytest -q tests/test_w33_pass1150_migration.py tests/test_pass1140_shifted_adjacency_publication_repair.py tests/test_w33_pass1148_1152.py
       - name: Commit generated migration delta
