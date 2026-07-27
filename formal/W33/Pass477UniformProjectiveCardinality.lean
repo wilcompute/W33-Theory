@@ -21,36 +21,45 @@ abbrev LineRep := Sum K PUnit
 abbrev RimRep := Sum (K × K) (Sum K PUnit)
 abbrev PG3Rep := Sum (BulkRep K) (RimRep K)
 
+omit [Field K] in
 theorem card_bulk : Fintype.card (BulkRep K) = (q K)^3 := by
   simp [BulkRep, q, pow_succ, Nat.mul_assoc]
 
+omit [Field K] in
 theorem card_projective_line : Fintype.card (LineRep K) = q K + 1 := by
   simp [LineRep, q]
 
+omit [Field K] in
 theorem card_rim : Fintype.card (RimRep K) = (q K)^2 + q K + 1 := by
   simp [RimRep, q, pow_two]
-  <;> ring
+  ring
 
+omit [Field K] in
 theorem card_pg3 : Fintype.card (PG3Rep K) = (q K + 1) * ((q K)^2 + 1) := by
   simp [PG3Rep, BulkRep, RimRep, q, pow_two]
-  <;> ring
+  ring
 
+omit [Field K] in
 theorem card_bulk_rim_split :
     Fintype.card (PG3Rep K) = (q K)^3 + ((q K)^2 + q K + 1) := by
-  simp [PG3Rep, BulkRep, RimRep, q, pow_two, pow_succ, Nat.mul_assoc]
-  <;> ring
+  simp [PG3Rep, BulkRep, RimRep, q, pow_succ, Nat.mul_assoc]
+  ring
 
 def bulkFiberEquiv : BulkRep K ≃ (K × K) × K := Equiv.refl _
 
+omit [Field K] in
 theorem card_fiber_base : Fintype.card (K × K) = (q K)^2 := by
   simp [q, pow_two]
 
+omit [Field K] in
 theorem card_each_fiber : Fintype.card K = q K := rfl
 
+omit [Field K] in
 theorem card_bulk_as_fibers :
     Fintype.card (BulkRep K) = Fintype.card (K × K) * Fintype.card K := by
   simp [BulkRep]
 
+omit [Field K] in
 theorem cover_shell_total_uniform :
     1 + ((q K : ℤ)^2 - 1) + ((q K : ℤ)^2 - 1) * ((q K : ℤ) - 1) +
       ((q K : ℤ) - 1) = (q K : ℤ)^3 := by

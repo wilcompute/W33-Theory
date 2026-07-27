@@ -24,7 +24,7 @@ theorem uniformCover_gram_apply (i j : β) :
     -- inner `β`-sum collapses by `Finset.sum_ite_eq'`, leaving `∑ _ : Fin p, 1 = p`.
     subst j
     simp [uniformCoverIncidence, Matrix.mul_apply, Matrix.transpose_apply,
-      Fintype.sum_prod_type, ite_mul, mul_ite, Finset.sum_ite_eq']
+      Fintype.sum_prod_type, mul_ite, Finset.sum_ite_eq']
   · rw [if_neg h, Matrix.mul_apply]
     apply Finset.sum_eq_zero
     intro x _

@@ -40,7 +40,7 @@ theorem constantOddBase_period :
 /-- The lookup depends only on the residue modulo 20. -/
 theorem constantOddBase_mod (m : Nat) :
     constantOddBase (m % 20) = constantOddBase m := by
-  simp [constantOddBase, Nat.mod_mod]
+  simp [constantOddBase]
 
 /-- Interface for the local-field part of the constant-family theorem. -/
 structure ConstantValuationCertificate where

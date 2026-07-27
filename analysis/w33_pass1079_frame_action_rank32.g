@@ -20,8 +20,8 @@
 #       ones?  That is the honest content of "degree 117": not the integer, but the
 #       named suborbits whose sizes add to it.
 #   (3) Which orbitals are self-paired?  A non-self-paired orbital means the
-#       natural relation is directed, which constrains what the frame side can
-#       carry.
+#       natural relation is DIRECTED, which constrains what the frame side can
+#       carry.  20 of the 32 are directed -- see the correction note below.
 #
 # PRIOR ART -- cited, not reclaimed:
 #   * Pass 1072 OWNS the rank-32 measurement and the degree-117 non-strong-regular
@@ -63,8 +63,25 @@
 # size and nothing here tests whether their stabilisers are conjugate.
 #
 # And the degree-117 frame graph is an exact union of SEVEN named orbitals,
-# 117 = 3 + 6 + 12 + 12 + 12 + 24 + 48, with every one of the 32 orbitals
-# self-paired, so every invariant relation on frames is undirected.
+# 117 = 3 + 6 + 12 + 12 + 12 + 24 + 48.
+#
+# CORRECTION (same day).  This pass first claimed "all 32 orbitals are self-paired,
+# so every invariant relation on frames is undirected".  That was WRONG and is
+# withdrawn.  The test was a tautology (`1 ^ (p^0)` with `p^0` the identity), so it
+# could only ever return "self-paired".  The truth is 12 self-paired and 20 not,
+# forming 10 transposed pairs and 22 orbital-pairs in all -- so most invariant
+# relations on frames ARE directed, the opposite of what was claimed.
+#
+# The parallel track's Pass 1082 (data/w33_pass1082_frame_coherent_configuration.json,
+# committed 46 minutes after this pass) reports exactly 12/20/10 and OWNS that
+# result; Pass 1091 formalises it in Lean as `innerSelfPaired_card = 12` and
+# `innerNonSelfPaired_card = 20`.  Removing the tautology here reproduces their
+# numbers to the digit, which is the cross-check.
+#
+# What both tracks agree on independently: rank 32, the subdegree list, and the
+# seven-orbital decomposition of the degree-117 graph -- their
+# `frame_graph_relation_valencies` is [3,6,12,12,12,24,48], identical to this
+# pass's.  The block systems and imprimitivity below are not in their certificate.
 
 REPO := GAPInfo.SystemEnvironment.W33_REPO;;
 OUT := Concatenation(REPO, "/data/w33_pass1079_frame_action_rank32.json");;
@@ -194,25 +211,24 @@ Main := function()
   degCheck := Sum(coveredSizes) = 117;
 
   # ---- (3) pairing ------------------------------------------------------
-  # orbital o is self-paired iff (1,x) and (x,1) lie in the same orbital, i.e.
-  # 1 lies in the stab-orbit of x under the point stabiliser of x.
+  # CORRECTED.  The first version of this loop tested
+  #     `1 in Orbit(Stabilizer(FR, rep), 1 ^ (p^0))`
+  # in which `p^0` is the IDENTITY permutation, so the condition read "is 1 in the
+  # orbit of 1?" -- true for every rep.  It was a TAUTOLOGY, it counted all 32
+  # orbitals as self-paired, and the correct test sat unreached in the else branch.
+  # The parallel track's Pass 1082 reported 12 self-paired and 20 not; they are
+  # right, and removing the tautology reproduces their numbers exactly.
+  #
+  # The only correct test: the orbital through (1, rep) is self-paired iff some
+  # group element carries the ORDERED pair (1, rep) to (rep, 1).
   selfPaired := 0; nonSelfPaired := 0;
   for k in [1..Length(subs)] do
     rep := subs[k][1];
-    if rep = 1 then
+    if rep = 1 or
+       RepresentativeAction(FR, [1, rep], [rep, 1], OnTuples) <> fail then
       selfPaired := selfPaired + 1;
     else
-      p := RepresentativeAction(FR, 1, rep);
-      if p <> fail and 1 in Orbit(Stabilizer(FR, rep), 1 ^ (p^0)) then
-        selfPaired := selfPaired + 1;
-      else
-        # symmetric test: the relation {(1,x)} is self-paired iff some g swaps them
-        if RepresentativeAction(FR, [1, rep], [rep, 1], OnTuples) <> fail then
-          selfPaired := selfPaired + 1;
-        else
-          nonSelfPaired := nonSelfPaired + 1;
-        fi;
-      fi;
+      nonSelfPaired := nonSelfPaired + 1;
     fi;
   od;
 
@@ -227,7 +243,11 @@ Main := function()
   checks.union_sizes_sum_to_117 := degCheck;
   checks.every_orbital_is_in_or_out :=
     ForAll(subs, o -> IsSubset(nbrs1, Set(o)) or IsEmpty(Intersection(nbrs1, Set(o))));
-  checks.all_orbitals_self_paired := nonSelfPaired = 0;
+  # was `all_orbitals_self_paired := nonSelfPaired = 0`, which the tautology above
+  # made true.  The real split, agreeing with Pass 1082 to the number:
+  checks.twelve_orbitals_self_paired := selfPaired = 12;
+  checks.twenty_orbitals_NOT_self_paired := nonSelfPaired = 20;
+  checks.orbital_pair_count_is_22 := selfPaired + nonSelfPaired / 2 = 22;
   # THE EXPLANATION for rank 32: the action is imprimitive, with three systems
   checks.action_is_IMPRIMITIVE := not isPrim;
   checks.three_block_systems_4_12_15 := blockSizes = [4, 12, 15];
@@ -281,7 +301,7 @@ Main := function()
   WriteAll(stream, "{\n");
   WriteAll(stream, "  \"schema\": \"w33.pass1079.frame_action_rank32.gap.v1\",\n");
   WriteAll(stream, "  \"status\": \"PASS\",\n");
-  WriteAll(stream, "  \"headline\": \"Rank 32 on the 540 frames is explained by IMPRIMITIVITY, not by 32 unrelated suborbits. PSp(4,3) has three block systems on the frames -- 135 blocks of 4 (stabiliser order 192, not maximal), 45 of 12 (order 576, maximal), 36 of 15 (S6) -- and the 4-blocks refine the 12-blocks, so there are two independent chains 540->135->45 and 540->36. The 36-block quotient IS the spread action, proved by conjugacy of point stabilisers rather than by matching 36 to 36. Two of the three quotients (36 and 45) are vacua in BT813's transition matrix. The degree-117 frame graph is an exact union of seven named orbitals, 117 = 3+6+12+12+12+24+48, and all 32 orbitals are self-paired, so every invariant relation on frames is undirected.\",\n");
+  WriteAll(stream, "  \"headline\": \"Rank 32 on the 540 frames is explained by IMPRIMITIVITY, not by 32 unrelated suborbits. PSp(4,3) has three block systems on the frames -- 135 blocks of 4 (stabiliser order 192, not maximal), 45 of 12 (order 576, maximal), 36 of 15 (S6) -- and the 4-blocks refine the 12-blocks, so there are two independent chains 540->135->45 and 540->36. The 36-block quotient IS the spread action, proved by conjugacy of point stabilisers rather than by matching 36 to 36. Two of the three quotients (36 and 45) are vacua in BT813's transition matrix. The degree-117 frame graph is an exact union of seven named orbitals, 117 = 3+6+12+12+12+24+48. CORRECTED: this pass first claimed all 32 orbitals were self-paired, on a test that was a tautology; the truth is 12 self-paired and 20 not (10 transposed pairs, 22 orbital-pairs), so most invariant relations on frames are DIRECTED. The parallel track's Pass 1082 owns those numbers and this pass now reproduces them.\",\n");
   WriteAll(stream, Concatenation("  \"frame_stabiliser\": \"", stabDesc, "\",\n"));
   WriteAll(stream, Concatenation("  \"subdegrees\": ", String(subLens), ",\n"));
   WriteAll(stream, Concatenation("  \"orbitals_composing_the_frame_graph\": ",

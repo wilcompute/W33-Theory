@@ -1,0 +1,7 @@
+rank = 32
+self-paired = 12
+non-self-paired = 20
+pairs among non-self-paired = 10
+orbital-pair count = 22
+self-paired sizes = [ 1, 3, 6, 6, 8, 12, 12, 12, 12, 12, 24, 48 ]
+non-self-paired sizes = [ 4, 4, 8, 8, 12, 12, 12, 12, 12, 12, 24, 24, 24, 24, 24, 24, 24, 24, 48, 48 ]

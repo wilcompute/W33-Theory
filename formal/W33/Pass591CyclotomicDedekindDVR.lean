@@ -20,8 +20,10 @@ open W33.Pass570 W33.Pass575 W33.Pass581 W33.Pass586
 noncomputable section
 
 /-- Mathlib's Dedekind localization theorem supplies the desired DVR instance. -/
-noncomputable def localizedCyclotomicFiveOrderIsDVR
-    [IsDomain CyclotomicFiveOrder]
+-- `IsDedekindDomain` already implies `IsDomain`'s content (Nontrivial and both
+-- cancel-mul-zero classes), so carrying both is a redundant instance parameter.
+-- And the result is a Prop, so it is a theorem, not a def of class type.
+theorem localizedCyclotomicFiveOrderIsDVR
     [IsDedekindDomain CyclotomicFiveOrder]
     [uniformizerIdeal.IsPrime]
     -- `hλ` is not a legal identifier: Lean 4 reserves `λ` as the lambda token.

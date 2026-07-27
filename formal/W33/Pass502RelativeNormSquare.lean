@@ -19,7 +19,9 @@ theorem pairedStarProduct_eq_sq (f : ι → R)
 
 /-- The same statement in an integral domain, matching the cyclotomic use. -/
 theorem pairedStarProduct_eq_sq_domain
-    {K : Type*} [Fintype ι] [CommRing K] [NoZeroDivisors K] [StarRing K]
+    -- `[Fintype ι]` comes from the section variable; repeating it here
+    -- shadowed it, so the section copy was reported unused AND duplicated.
+    {K : Type*} [CommRing K] [NoZeroDivisors K] [StarRing K]
     (f : ι → K) (hfixed : ∀ i, star (f i) = f i) :
     (∏ i, f i * star (f i)) = (∏ i, f i) ^ 2 :=
   pairedStarProduct_eq_sq f hfixed

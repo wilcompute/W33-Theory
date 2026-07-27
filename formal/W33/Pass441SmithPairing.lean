@@ -28,19 +28,19 @@ theorem leftWitness_involutive (q : ℤ) :
     leftWitness q * leftWitness q = 1 := by
   ext i j
   fin_cases i <;> fin_cases j <;>
-    simp [Matrix.mul_apply, leftWitness] <;> ring
+    simp [Matrix.mul_apply, leftWitness]
 
 theorem rightWitness_rightInverse (q : ℤ) :
     rightWitness q * rightInverse q = 1 := by
   ext i j
   fin_cases i <;> fin_cases j <;>
-    simp [Matrix.mul_apply, rightWitness, rightInverse] <;> ring
+    simp [Matrix.mul_apply, rightWitness, rightInverse]
 
 theorem rightInverse_rightWitness (q : ℤ) :
     rightInverse q * rightWitness q = 1 := by
   ext i j
   fin_cases i <;> fin_cases j <;>
-    simp [Matrix.mul_apply, rightWitness, rightInverse] <;> ring
+    simp [Matrix.mul_apply, rightWitness, rightInverse]
 
 /-- Constructive integral equivalence of the paired block to its Smith diagonal. -/
 theorem pairedBlock_reduction (q : ℤ) :
@@ -48,7 +48,8 @@ theorem pairedBlock_reduction (q : ℤ) :
   ext i j
   fin_cases i <;> fin_cases j <;>
     simp [Matrix.mul_apply, pairedBlock, leftWitness, rightWitness,
-      smithDiagonal] <;> ring
+      smithDiagonal]
+  ring
 
 /-- Polynomial factorization underlying the nontrivial Smith divisor. -/
 theorem paired_divisor_factorization (q : ℤ) :

@@ -34,9 +34,13 @@ theorem extensionMul_assoc (c : NormalizedCocycle G)
   rcases z with ⟨k, d⟩
   apply Prod.ext
   · simp [extensionMul, mul_assoc]
-  · simp only [extensionMul, Prod.fst, Prod.snd]
-    rw [c.cocycle g h k]
-    abel
+  · -- `rw [c.cocycle g h k]` cannot fire here: the sum is left-associated, so
+    -- `c g h + c (g*h) k` never appears as a contiguous subterm to match.
+    -- `linear_combination` uses the cocycle law as a relation instead of a
+    -- rewrite, which needs no pattern match.  (`Prod.fst`/`Prod.snd` were also
+    -- flagged unused in the simp set.)
+    simp only [extensionMul]
+    linear_combination c.cocycle g h k
 
 theorem extensionMul_one (c : NormalizedCocycle G) (x : Extension G) :
     extensionMul G c x (1, 0) = x := by
@@ -60,13 +64,15 @@ theorem projection_mul (c : NormalizedCocycle G)
     (x y : Extension G) :
     (extensionMul G c x y).1 = x.1 * y.1 := rfl
 
-def section (b : G → ZMod 2) (g : G) : Extension G := (g, b g)
+-- `section` is a Lean 4 keyword, so it cannot name a definition; this module
+-- did not parse past this line.  Renamed to `sect`, meaning unchanged.
+def sect (b : G → ZMod 2) (g : G) : Extension G := (g, b g)
 
 theorem section_mul_iff (c : NormalizedCocycle G) (b : G → ZMod 2)
     (g h : G) :
-    extensionMul G c (section G b g) (section G b h) = section G b (g * h) ↔
+    extensionMul G c (sect G b g) (sect G b h) = sect G b (g * h) ↔
       b g + b h + c.c g h = b (g * h) := by
-  simp [extensionMul, section]
+  simp [extensionMul, sect]
 
 theorem w33SignedSectionObstruction
     (s0 s1 s48 s49 s50 s60 : ZMod 2)

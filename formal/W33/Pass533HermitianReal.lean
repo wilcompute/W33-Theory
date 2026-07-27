@@ -36,6 +36,7 @@ theorem det_isSelfAdjoint_of_isHermitian {M : Matrix n n R} (h : M.IsHermitian) 
     star M.det = M.det := by
   rw [← Matrix.det_conjTranspose, h]
 
+omit [Fintype n] [DecidableEq n] in
 /-- **A principal submatrix of a Hermitian matrix is Hermitian.**  Taking the
 same index map on rows and columns is what makes this work; a general submatrix
 of a Hermitian matrix need not be Hermitian. -/
@@ -45,12 +46,14 @@ theorem isHermitian_submatrix {M : Matrix n n R} (h : M.IsHermitian)
   unfold Matrix.IsHermitian at *
   rw [Matrix.conjTranspose_submatrix, h]
 
+omit [Fintype n] [DecidableEq n] in
 /-- Hence every principal minor of a Hermitian matrix is self-adjoint. -/
 theorem principal_minor_isSelfAdjoint {M : Matrix n n R} (h : M.IsHermitian)
     [Fintype m] [DecidableEq m] (f : m → n) :
     star (M.submatrix f f).det = (M.submatrix f f).det :=
   det_isSelfAdjoint_of_isHermitian (isHermitian_submatrix h f)
 
+omit [Fintype n] [DecidableEq n] in
 /-- **The characteristic polynomial is self-adjoint coefficientwise.**  Given
 the expansion of a coefficient as a sum of principal minors — supplied here as
 the hypothesis `hexp`, since that expansion is the arithmetic input — every

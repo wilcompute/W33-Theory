@@ -36,7 +36,7 @@ theorem determinant_law_of_factorial_law
 /-- The residual condition is not merely sufficient here: with the factorial
 law and the Newton bound sharp, `v_λ(q!) ≥ 2` is exactly what `q + 3` needs. -/
 theorem residual_is_exactly_two
-    (q vqfact : ℕ) (hq : 3 ≤ q) :
+    (q vqfact : ℕ) (_hq : 3 ≤ q) :
     (q + 3 ≤ q + 1 + vqfact) ↔ 2 ≤ vqfact := by
   omega
 

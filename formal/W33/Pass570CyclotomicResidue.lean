@@ -62,7 +62,7 @@ theorem residueMap_integer (n : ℤ) :
 theorem residueMap_surjective : Function.Surjective residueMap := by
   intro y
   refine ⟨AdjoinRoot.of shiftedPhiFive (y.val : ℤ), ?_⟩
-  simpa [residueMap] using (ZMod.natCast_zmod_val y)
+  simp [residueMap]
 
 /-- The exact residue-kernel ideal. -/
 def residueIdeal : Ideal CyclotomicFiveOrder := RingHom.ker residueMap
