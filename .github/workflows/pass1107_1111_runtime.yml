@@ -1,0 +1,142 @@
+name: Passes 1107-1111 Qontrol, A2 carrier, cubic phase, formal, runtime closure
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass1107_*'
+      - 'analysis/w33_pass1108_*'
+      - 'analysis/w33_pass1109_*'
+      - 'analysis/w33_pass1110_*'
+      - 'analysis/w33_pass1111_*'
+      - 'formal/W33/Pass1110A2PhaseQontrolClosure.lean'
+      - 'formal/W33.lean'
+      - 'tests/test_w33_pass1107_1111.py'
+      - '.github/workflows/pass1107_1111_runtime.yml'
+  push:
+    branches: ['agent/pass1107-1111-qontrol-a2-runtime']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy pytest
+      - run: |
+          python analysis/w33_pass1107_qontrol_q8iv_transport.py
+          python analysis/w33_pass1108_e8_a2_triple_carrier_extension.py
+          python analysis/w33_pass1109_full_cubic_central_phase_extension.py
+          python analysis/w33_pass1110_formal_a2_phase_qontrol_lock.py
+          python analysis/w33_pass1111_runtime_closure.py
+          pytest -q tests/test_w33_pass1107_1111.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass1107-1111-python-certificates
+          path: |
+            data/w33_pass1107_qontrol_q8iv_transport.json
+            data/w33_pass1108_e8_a2_triple_carrier_extension.json
+            data/w33_pass1109_full_cubic_central_phase_extension.json
+            data/w33_pass1110_formal_a2_phase_qontrol_lock.json
+            data/w33_pass1111_runtime_closure.json
+            hardware/w33_pass1107_qontrol_q8iv_receipt.json
+
+  ctbllib-observed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y gap gap-ctbllib
+      - run: |
+          mkdir -p runtime-observations
+          gap -q analysis/w33_pass1102_ctbllib_rows.g | tee runtime-observations/ctbllib_rows.json
+          python - <<'PY'
+          import json
+          p='runtime-observations/ctbllib_rows.json'
+          x=json.load(open(p))
+          assert x['table']=='U4(2).2'
+          assert len(x['rows'])==10
+          assert all(isinstance(r['row'],int) and r['row']>0 for r in x['rows'])
+          print(json.dumps(x,sort_keys=True))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass1111-ctbllib-observation
+          path: runtime-observations/ctbllib_rows.json
+
+  canonical-sign-observed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy
+      - run: |
+          mkdir -p runtime-observations
+          python tools/solve_canonical_su3_gauge_and_cubic.py
+          python tools/verify_canonical_su3_gauge_and_cubic.py
+          python analysis/w33_pass1109_full_cubic_central_phase_extension.py
+          python - <<'PY'
+          import json
+          x=json.load(open('artifacts/canonical_su3_gauge_and_cubic.json'))
+          assert x['counts']['solvable']
+          rows=x['solution']['d_triples']
+          assert len(rows)==45
+          dist=x['solution']['d_sign_distribution']
+          out={'status':'PASS','solvable':True,'triads':45,'sign_distribution':dist}
+          open('runtime-observations/canonical_sign.json','w').write(json.dumps(out,sort_keys=True)+'\n')
+          print(json.dumps(out,sort_keys=True))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass1111-canonical-sign-observation
+          path: |
+            runtime-observations/canonical_sign.json
+            artifacts/canonical_su3_gauge_and_cubic.json
+            artifacts/verify_canonical_su3_gauge_and_cubic.json
+            data/w33_pass1109_full_cubic_central_phase_extension.json
+
+  strict-lean-observed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formal
+          auto-config: false
+          build: true
+          build-args: '--quiet'
+          test: false
+          lint: false
+          leanchecker: false
+          nanoda: false
+          use-github-cache: false
+      - name: Strict serial build
+        shell: bash
+        run: |
+          mkdir -p runtime-observations
+          cd formal
+          lake update
+          : > ../runtime-observations/lean-strict.log
+          failed=0
+          total=0
+          for m in $(grep -oE '^import (W33\.\S+)' W33.lean | sed 's/import //'); do
+            total=$((total+1))
+            if ! lake build --wfail "$m" >> ../runtime-observations/lean-strict.log 2>&1; then
+              echo "FAILED: $m" >> ../runtime-observations/lean-strict.log
+              failed=$((failed+1))
+            fi
+          done
+          phantom=$(grep -c 'failed to read file' ../runtime-observations/lean-strict.log || true)
+          printf '{"status":"%s","modules":%s,"failed":%s,"phantom_olean_errors":%s}\n' \
+            "$([ "$failed" -eq 0 ] && echo PASS || echo FAIL)" "$total" "$failed" "$phantom" \
+            | tee ../runtime-observations/lean-summary.json
+          test "$failed" -eq 0
+          test "$phantom" -eq 0
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass1111-lean-observation
+          path: |
+            runtime-observations/lean-summary.json
+            runtime-observations/lean-strict.log
