@@ -1,0 +1,7 @@
+{
+  "schema":"w33.pass1096.formal_character_hesse_e8_lock.v1","status":"PASS",
+  "headline":"Compact formal locks now freeze the official-class 81_plus/minus characters, their outer-sign twist, the four exact zero multiplicities in the E8 root and root-line modules, the rank/dimension decompositions, and the two Steinberg tensor hashes. The dual-Hesse/fiber equivalence and vendor adapter remain executable external certificates.",
+  "lean_module":"formal/W33/Pass1096CharacterHesseE8Lock.lean","lean_sha256":"248b6953b8d3498d02fbfd3526d6942823f2d749659a802182c3adf872bbbe0e",
+  "check_count":17,"checks":{"twentyfive_ATLAS_classes":true,"81_minus_is_sign_twist":true,"root_81plus_numerator_zero":true,"root_81minus_numerator_zero":true,"line_81plus_numerator_zero":true,"line_81minus_numerator_zero":true,"restriction_81plus_to_inner81":true,"restriction_81minus_to_inner81":true,"induction_inner81_is_plus_minus":true,"dual_hesse_fiber_equivalence_passed":true,"vendor_adapter_passed":true,"lean_defines_character_vectors":true,"lean_locks_four_zero_inner_products":true,"lean_locks_sign_twist":true,"lean_locks_dimension_sums":true,"tensor_hashes_locked":true,"formal_import_target":true},
+  "scope":"Python recheck plus Lean source generation. Local Lean is unavailable; compilation is delegated to CI."
+}
