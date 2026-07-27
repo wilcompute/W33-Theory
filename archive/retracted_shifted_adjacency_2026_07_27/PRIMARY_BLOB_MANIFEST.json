@@ -1,0 +1,29 @@
+{
+  "schema": "w33.retracted_shifted_adjacency.primary_blob_manifest.v1",
+  "status": "RETRACTED",
+  "entries": [
+    {
+      "path": "analysis/w33_BREAKTHROUGH_58_master_cubic_Z_anomaly.py",
+      "historical_blob_sha": "957d0d2134cf1a057d165c199a91644d2ff5b5a5",
+      "active_stub_commit": "c2841e113a742df9f53b5144893695c7c20aef99"
+    },
+    {
+      "path": "data/w33_BREAKTHROUGH_58_master_cubic_Z_anomaly.json",
+      "historical_blob_sha": "491ac720fefc6373e66c8d881cc10f44b58dd6d5",
+      "active_stub_commit": "b6457bd7b1d045285d5f60561b0a68205e175e53"
+    },
+    {
+      "path": "analysis/w33_MLXXI_MLXXX_w33_paper_spectral_dirac.py",
+      "historical_blob_sha": "0412d1344d92eb0a92b030ff8ed8bf94a1d5ab35",
+      "active_stub_commit": "3802405be30db4eb2a65bc904dcb5ceb0bf7a845"
+    },
+    {
+      "path": "data/w33_MLXXI_MLXXX_w33_paper_spectral_dirac.json",
+      "historical_blob_sha": "4e009f802be2daa875c2850652bc4171913c2007",
+      "active_stub_commit": "f80c8202f7eb787549f6421731fc33ba755d1736"
+    }
+  ],
+  "correction": "analysis/2026-07-27_shifted_adjacency_spectral_erratum.md",
+  "verifier": "analysis/w33_shifted_adjacency_spectral_audit.py",
+  "note": "Git blob hashes preserve the exact original bytes; active paths are fail-closed retraction records."
+}
