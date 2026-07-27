@@ -1,0 +1,66 @@
+name: Stale boundaries
+
+# ADVISORY, never blocking.
+#
+# Every analysis file ends with a Boundary/Open section, and nothing in this
+# project's workflow edits one when a later pass closes it. On 2026-07-27 that
+# cost two passes: BT810's Boundary listed two open identifications that BT811 --
+# the very next file -- had already settled, and Passes 1111 and 1118 re-answered
+# them from scratch before being withdrawn.
+#
+# This job puts the candidate pairs in the build log so the next pass sees them
+# before spending itself. It does not gate: a shared token is a candidate, not a
+# verdict, and blocking on candidates trains people to ignore the signal (the
+# failure mode scripts/check_rediscovery.py documents in its own docstring).
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/**.md'
+      - 'scripts/check_stale_boundaries.py'
+      - 'scripts/check_rediscovery.py'
+      - '.github/workflows/stale-boundaries.yml'
+  pull_request:
+    paths:
+      - 'analysis/**.md'
+  schedule:
+    - cron: '23 6 * * 2'
+
+permissions:
+  contents: read
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0        # the self-test recovers BT810's ORIGINAL boundary
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # The self-test IS gated. It pins the BT810/BT811 case at exactly two shared
+      # tokens; if the threshold is raised or the noun-number grammar narrowed,
+      # that case goes silent again and this must fail rather than pass quietly.
+      - name: Self-test (gated)
+        run: python scripts/check_stale_boundaries.py --self-test
+
+      - name: Sweep (advisory)
+        if: always()
+        run: |
+          python scripts/check_stale_boundaries.py --limit=60 | tee "$RUNNER_TEMP/stale.txt"
+          n=$(grep -cE '^\s+\S+\.md$' "$RUNNER_TEMP/stale.txt" || true)
+          echo "::notice title=Stale-boundary candidates::${n} boundary sections have a later file sharing >=2 result tokens. Read the later file before re-answering the question."
+
+      - name: Upload the candidate list
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: stale-boundary-candidates
+          path: ${{ runner.temp }}/stale.txt
+          if-no-files-found: warn

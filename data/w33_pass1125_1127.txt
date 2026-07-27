@@ -1,0 +1,10 @@
+tree-quotient classes = 23
+MINIMAL tree-quotient classes = 8
+   |H|=32 index=810  (C2 x C2 x C2) : (C2 x C2)  SmallGroup[ 32, 49 ]
+   |H|=96 index=270  (A4 : C4) : C2  SmallGroup[ 96, 195 ]
+   |H|=108 index=240  (C3 x C3 x C3) : (C2 x C2)  SmallGroup[ 108, 40 ]
+   |H|=108 index=240  (C3 x C3 x C3) : C4  SmallGroup[ 108, 37 ]
+   |H|=120 index=216  S5  SmallGroup[ 120, 34 ]
+   |H|=160 index=162  ((C2 x C2 x C2 x C2) : C5) : C2  SmallGroup[ 160, 234 ]
+   |H|=216 index=120  ((C3 x C3) : C3) : Q8  SmallGroup[ 216, 88 ]
+   |H|=360 index=72  A6  SmallGroup[ 360, 118 ]

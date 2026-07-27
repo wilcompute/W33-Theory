@@ -19,6 +19,12 @@ carry the stated group, carrier, and scope into the new claim.
 lines** of W(3,3). A line is disjoint from exactly q³ = 27 others, so there are
 40·27/2 = 540. Stabiliser **C₂ × S₄ = O_h**, order 48, and 51840 = 540 × 2 × 48.
 
+**THE FACTORIZATION IDENTIFIES NEITHER (Pass 1128).** `51840 = 540 x 2 x 48` is
+true of **both** 540s, because both stabilisers have order 96 in PGSp(4,3). Any file
+citing only that identity is under-determined — this is not sloppy writing, it is an
+identity that cannot distinguish. **Cite the object, never the factorization.**
+A sixth alias is in circulation: `bt1205` calls its 540 `root_triples`.
+
 **THE HAZARD — `540 nonedges` is ambiguous and the two readings are different
 G-sets.** W(3,3) is not self-dual, so "nonedge" of the *point* graph and
 "nonedge" of the *line* graph are distinct objects that happen to share every
