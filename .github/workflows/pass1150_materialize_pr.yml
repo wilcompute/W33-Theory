@@ -31,8 +31,7 @@ jobs:
         run: |
           python - <<'PY'
           import json
-          p='data/w33_shifted_adjacency_retraction_ledger.json'
-          d=json.load(open(p,encoding='utf-8'))
+          d=json.load(open('data/w33_shifted_adjacency_retraction_ledger.json',encoding='utf-8'))
           pending={k:v for k,v in d['known_descendants'].items() if 'pending' in v.lower()}
           assert not pending, pending
           assert d['schema'].endswith('v4')
@@ -44,15 +43,24 @@ jobs:
           rc=$?
           python - <<'PY'
           import json
-          p='data/w33_shifted_adjacency_descendant_audit.json'
-          d=json.load(open(p,encoding='utf-8'))
+          d=json.load(open('data/w33_shifted_adjacency_descendant_audit.json',encoding='utf-8'))
           print(json.dumps({'summary':d.get('summary'),'violations':d.get('violations',[])},indent=2))
           PY
           exit $rc
       - name: Test Pass 1150 migration semantics
         run: pytest -q tests/test_w33_pass1150_migration.py
-      - name: Test Pass 1140 publication repair compatibility
-        run: pytest -q tests/test_pass1140_shifted_adjacency_publication_repair.py
+      - name: Test Pass 1140 exact propagator arithmetic
+        run: pytest -q tests/test_pass1140_shifted_adjacency_publication_repair.py::test_corrected_propagator_uses_exact_projectors_heat_and_zeta
+      - name: Test Pass 1140 deterministic certificate
+        run: pytest -q tests/test_pass1140_shifted_adjacency_publication_repair.py::test_corrected_propagator_certificate_is_deterministic_and_passes
+      - name: Test Pass 1140 primary publication surfaces
+        run: pytest -q tests/test_pass1140_shifted_adjacency_publication_repair.py::test_primary_publications_state_the_true_cubic_and_switch
+      - name: Test Pass 1140 legacy manuscript boundaries
+        run: pytest -q tests/test_pass1140_shifted_adjacency_publication_repair.py::test_legacy_manuscripts_have_visible_status_boundaries
+      - name: Test Pass 1140 negative literal guard
+        run: pytest -q tests/test_pass1140_shifted_adjacency_publication_repair.py::test_negative_literal_detection_and_pruned_walk
+      - name: Test Pass 1140 v4 audit closure
+        run: pytest -q tests/test_pass1140_shifted_adjacency_publication_repair.py::test_full_audit_report_is_honest_and_closed
       - name: Test Passes 1148-1152 exact algebra
         run: pytest -q tests/test_w33_pass1148_1152.py
       - name: Commit generated migration delta
