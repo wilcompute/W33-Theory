@@ -1,0 +1,16 @@
+{
+  "schema":"w33.pass1107_1111.release.v1",
+  "status":"PASS_LOCAL_RUNTIME_PENDING",
+  "passes":{
+    "1107":{"checks":16,"result":"Qontrol Q8iv/BP8 second-vendor serial boundary"},
+    "1108":{"checks":14,"result":"A2 root triples improve the E8-derived 81_minus carrier minimum to 2240"},
+    "1109":{"checks":20,"result":"all 45 E6 cubic supports and central phases transported; fiber signs 2 plus / 7 minus"},
+    "1110":{"checks":10,"result":"Lean source locks A2 multiplicities, phase histogram, and Qontrol arithmetic"},
+    "1111":{"checks":12,"result":"PR-visible GAP, canonical-sign, and strict-Lean runtime closure"}
+  },
+  "local_exact_checks":72,
+  "pytest":"8 passed in 0.03s",
+  "runtime_boundary":"GAP/CTblLib rows, full canonical sign regeneration, and strict Lean are pending PR workflow observation.",
+  "hardware_boundary":"Qontrol reference serial double only; no physical controller, detector, or optical hardware connected.",
+  "authoritative_report":"PASS1107_1111_QONTROL_A2_PHASE_RUNTIME_RELEASE.md"
+}
