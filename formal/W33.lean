@@ -35,13 +35,8 @@ import W33.Pass581CyclotomicCompletion
 import W33.Pass586CyclotomicLocalizedDVR
 import W33.Pass591CyclotomicDedekindDVR
 import W33.Pass806TwoBranchGluing
--- Pass828 is now imported.  It used to be excluded because
--- `gluing_order_not_perfect_square` was proved by `native_decide`, which cannot
--- work on `¬ ∃ k : ℕ, ...` -- an unbounded existential has no Decidable instance.
--- The docstring already stated the real argument (a square has even valuation at
--- every prime, and v_5 = 1 is odd), so the theorem is now proved that way from the
--- module's own `v5_gluing_order`.  Excluding it had kept the whole module
--- unchecked, not just that one line.
+-- Pass828 is now imported. Its unbounded native_decide argument was replaced
+-- by the valuation proof recorded in the module.
 import W33.Pass828CoalescenceArithmetic
 import W33.Pass1006RamifiedFiltration
 import W33.Pass1018PencilRigidity
@@ -50,3 +45,4 @@ import W33.Pass1074SchurCocycleExtension
 import W33.Pass1091FrameOrbitalIntertwiner
 import W33.Pass1096CharacterHesseE8Lock
 import W33.Pass1106CliffordFirewallCarrier
+import W33.Pass1115A2PhaseQontrolClosure
