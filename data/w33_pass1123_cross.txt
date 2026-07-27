@@ -1,0 +1,6 @@
+cross-transversals (meet both L and Lperp) = 16   (BT811 says 16)
+lines used by the block's 12 frames = 24
+block lines EQUAL the cross-transversals : false
+block lines SUBSET of them : false
+intersection size = 0
+complement orbit size = 24   (BT811 says 24)

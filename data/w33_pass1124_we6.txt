@@ -1,0 +1,8 @@
+A2 root triples = 2240
+|pointwise stabiliser of one A2 triple| = 51840   (|W(E6)| = 51840 : true)
+number of degree-81 irreducibles = 2   (U4(2):2 has TWO; Sp(4,3) has ONE)
+irreducible degrees = [ 1, 1, 6, 6, 10, 15, 15, 15, 15, 20, 20, 20, 24, 24, 30, 30, 60, 60, 60, 64, 64, 80, 81, 81, 90 ]
+W(E6) transitive on the 2240 : false
+orbit sizes = [ 1, 1, 27, 27, 27, 27, 27, 27, 240, 270, 270, 432, 432, 432 ]
+degree-81 multiplicities in the 2240 character = [ 3, 0 ]
+rank on the 2240 = 1193

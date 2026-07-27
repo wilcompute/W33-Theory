@@ -1,0 +1,27 @@
+conjugacy classes of subgroups of PSp(4,3) = 116
+TREE quotients (b1=0) : 23    non-tree (b1>0) : 93
+
+the tree-quotient classes (index, |H|, structure):
+  index=1  |H|=25920  O(5,3)
+  index=27  |H|=960  (C2 x C2 x C2 x C2) : A5
+  index=36  |H|=720  S6
+  index=40  |H|=648  (((C3 x C3 x C3) : (C2 x C2)) : C3) : C2
+  index=40  |H|=648  (((C3 x C3) : C3) : Q8) : C3
+  index=45  |H|=576  ((((C2 x C2 x C2) : (C2 x C2)) : C3) : C2) : C3
+  index=72  |H|=360  A6
+  index=80  |H|=324  ((C3 x C3 x C3) : (C2 x C2)) : C3
+  index=90  |H|=288  ((C2 x C2 x C2) : (C2 x C2)) : (C3 x C3)
+  index=120  |H|=216  ((C3 x C3) : C3) : Q8
+  index=120  |H|=216  (C3 x C3 x C3) : D8
+  index=135  |H|=192  (((C2 x C2 x C2 x C2) : C2) : C2) : C3
+  index=135  |H|=192  (((C2 x C2 x C2) : (C2 x C2)) : C3) : C2
+  index=162  |H|=160  ((C2 x C2 x C2 x C2) : C5) : C2
+  index=216  |H|=120  S5
+  index=240  |H|=108  (C3 x C3 x C3) : (C2 x C2)
+  index=240  |H|=108  (C3 x C3 x C3) : C4
+  index=270  |H|=96  ((C2 x C2 x C2) : (C2 x C2)) : C3
+  index=270  |H|=96  ((C2 x C2 x C2) : (C2 x C2)) : C3
+  index=270  |H|=96  ((C2 x C2 x C2) : (C2 x C2)) : C3
+  index=270  |H|=96  (A4 : C4) : C2
+  index=405  |H|=64  ((C2 x C2 x C2) : (C2 x C2)) : C2
+  index=810  |H|=32  (C2 x C2 x C2) : (C2 x C2)
