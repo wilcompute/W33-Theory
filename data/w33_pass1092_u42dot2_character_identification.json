@@ -1,0 +1,32 @@
+{
+  "schema":"w33.pass1092.u42dot2.character_identification.v1","status":"PASS",
+  "headline":"The ten irreducible constituents of the 540-frame action are identified by exact ATLAS-class character vectors for U4(2):2. Official standard generators c in 2C and d in 9A were found inside the matrix-derived action, all 25 ATLAS class words matched their published orders and centralizers, and primitive-idempotent traces produced orthonormal integral characters reconstructing the frame permutation character.",
+  "group":{"ATLAS_name":"U4(2):2","GAP_identifier":"U4(2).2","order":51840,"inner":"U4(2)","inner_order":25920,"class_count":25},
+  "standard_generators":{"c_class":"2C","d_class":"9A","order_cd":10},
+  "atlas_class_names":["1A","2A","2B","3A","3C","3D","4A","4B","5A","6A","6C","6E","6F","9A","12A","2C","2D","4C","4D","6G","6H","6I","8A","10A","12C"],
+  "class_sizes":[1,45,270,80,240,480,540,3240,5184,720,1440,1440,2160,5760,4320,36,540,540,1620,1440,1440,4320,6480,5184,4320],
+  "characters":{
+    "15a":{"degree":15,"multiplicity":2,"values":[15,7,3,-3,0,3,-1,1,0,1,-2,1,0,0,-1,5,1,3,-1,2,-1,1,-1,0,0]},
+    "60a":{"degree":60,"multiplicity":1,"values":[60,-4,4,6,-3,-3,0,0,0,2,-1,-1,1,0,0,10,2,-2,-2,1,1,-1,0,0,1]},
+    "20":{"degree":20,"multiplicity":2,"values":[20,4,4,2,5,-1,0,0,0,-2,1,1,1,-1,0,10,2,2,2,1,1,-1,0,0,-1]},
+    "81_minus":{"degree":81,"multiplicity":1,"values":[81,9,-3,0,0,0,-3,-1,1,0,0,0,0,0,0,9,-3,3,-1,0,0,0,1,-1,0]},
+    "60b":{"degree":60,"multiplicity":2,"values":[60,12,4,-3,-6,0,4,0,0,-3,0,0,-2,0,1,0,0,0,0,0,0,0,0,0,0]},
+    "24":{"degree":24,"multiplicity":2,"values":[24,8,0,6,0,3,0,0,-1,2,2,-1,0,0,0,4,4,0,0,-2,1,1,0,-1,0]},
+    "64":{"degree":64,"multiplicity":1,"values":[64,0,0,-8,4,-2,0,0,-1,0,0,0,0,1,0,16,0,0,0,-2,-2,0,0,1,0]},
+    "15b":{"degree":15,"multiplicity":1,"values":[15,7,3,-3,0,3,-1,1,0,1,-2,1,0,0,-1,-5,-1,-3,1,-2,1,-1,1,0,0]},
+    "81_plus":{"degree":81,"multiplicity":1,"values":[81,9,-3,0,0,0,-3,-1,1,0,0,0,0,0,0,-9,3,-3,1,0,0,0,-1,1,0]},
+    "1":{"degree":1,"multiplicity":1,"values":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}
+  },
+  "frame_permutation_character":[540,84,24,0,0,9,0,2,0,0,0,3,0,0,0,60,16,6,2,0,3,1,0,0,0],
+  "documented_CTBLIB_unipotent_15_vector":[15,7,3,-3,0,3,-1,1,0,1,-2,1,0,0,-1,5,1,3,-1,2,-1,1,-1,0,0],
+  "documented_vector_matches_component":"15a",
+  "outer_sign_character":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],
+  "sign_twist_pairs":{"15a":"15b","60a":null,"20":null,"81_minus":"81_plus","60b":"60b","24":null,"64":null,"15b":"15a","81_plus":"81_minus","1":null},
+  "inner_irreducible_degrees":{"1":1,"15":15,"20":20,"24":24,"30a":30,"30b":30,"60":60,"64":64,"81":81},
+  "restriction_U42dot2_to_U42":{"1":{"1":1},"15a":{"15":1},"15b":{"15":1},"20":{"20":1},"24":{"24":1},"60a":{"60":1},"60b":{"30a":1,"30b":1},"64":{"64":1},"81_plus":{"81":1},"81_minus":{"81":1}},
+  "induction_U42_to_U42dot2":{"1":{"1":1,"epsilon":1},"15":{"15a":1,"15b":1},"20":{"20":1,"20_sign":1},"24":{"24":1,"24_sign":1},"30a":{"60b":1},"30b":{"60b":1},"60":{"60a":1,"60a_sign":1},"64":{"64":1,"64_sign":1},"81":{"81_minus":1,"81_plus":1}},
+  "gap_companion":"analysis/w33_pass1092_u42dot2_character_match.g","complete_output_generated_by":"analysis/w33_pass1092_u42dot2_character_identification.py",
+  "check_count":19,
+  "checks":{"U42_order25920":true,"U42dot2_order51840":true,"twentyfive_conjugacy_classes":true,"standard_c_is_ATLAS_2C":true,"standard_d_is_ATLAS_9A":true,"cd_has_order10":true,"c_d_generate_full_group":true,"all_ATLAS_words_hit_distinct_classes":true,"all_ATLAS_orders_and_centralizers_match":true,"ten_frame_irreducibles_orthonormal":true,"permutation_character_reconstructed":true,"CTblLib_documented_unipotent_15_matched_uniquely":true,"Steinberg_sign_twist_pair_present":true,"inner_U42_twenty_classes":true,"inner_standard_a_b_found":true,"restriction_dimensions_close":true,"induction_dimensions_close":true,"Steinberg_restriction_and_induction":true,"degrees_with_multiplicity_sum540":true},
+  "scope":"Exact character fingerprints in official ATLAS class order. The companion GAP script maps these vectors to CTblLib row indices when GAP/CTblLib is available; no unexecuted row-index output is claimed. The executable regenerates the complete class and restricted-character records."
+}
