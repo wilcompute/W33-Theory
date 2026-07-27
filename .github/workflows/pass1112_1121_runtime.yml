@@ -23,6 +23,7 @@ jobs:
           python analysis/w33_pass1113_e8_a2_triple_carrier_extension.py
           python analysis/w33_pass1114_full_cubic_central_phase_extension.py
           python analysis/w33_pass1115_formal_a2_phase_qontrol_lock.py
+          python analysis/w33_pass1120_we6_class_algebra_decomposition.py 2>&1 | tee data/w33_pass1120_execution.log
           python analysis/w33_pass1121_e8_a2_cubic_incidence.py 2>&1 | tee data/w33_pass1121_execution.log
           python analysis/w33_pass1116_runtime_closure.py
           pytest -q tests/test_w33_pass1112_1121.py
@@ -36,7 +37,9 @@ jobs:
             data/w33_pass1114_full_cubic_central_phase_extension.json
             data/w33_pass1115_formal_a2_phase_qontrol_lock.json
             data/w33_pass1116_runtime_closure.json
+            data/w33_pass1120_we6_class_algebra_decomposition.json
             data/w33_pass1121_e8_a2_cubic_incidence.json
+            data/w33_pass1120_execution.log
             data/w33_pass1121_execution.log
             hardware/w33_pass1112_qontrol_q8iv_receipt.json
             artifacts/canonical_su3_gauge_and_cubic.json
@@ -45,7 +48,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: sudo apt-get update && sudo apt-get install -y gap gap-character-tables
-      - name: Observe rows and complete decomposition
+      - name: Observe rows and compare complete decomposition
         shell: bash
         run: |
           set -o pipefail
@@ -56,8 +59,12 @@ jobs:
           from pathlib import Path
           rows=json.loads(Path('data/w33_pass1102_ctbllib_rows_observed.json').read_text())
           dec=json.loads(Path('data/w33_pass1120_a2_ctbllib_decomposition_observed.json').read_text())
+          exact=json.loads(Path('data/w33_pass1120_we6_class_algebra_decomposition.json').read_text())
           assert rows['table']=='U4(2).2'
           assert dec['status']=='PASS' and dec['degree_reconstruction']==2240
+          observed={(tuple(r['values']),r['multiplicity']) for r in dec['nonzero']}
+          expected={(tuple(r['character']),r['multiplicity']) for r in exact['irreducible_rows'] if r['multiplicity']}
+          assert observed==expected
           PY
       - uses: actions/upload-artifact@v4
         with:
@@ -145,6 +152,7 @@ jobs:
       - name: Assemble fail-closed ledger
         run: |
           cp observed/python/data/w33_pass111{2,3,4,5}_*.json data/
+          cp observed/python/data/w33_pass1120_we6_class_algebra_decomposition.json data/
           cp observed/python/data/w33_pass1121_e8_a2_cubic_incidence.json data/
           python - <<'PY'
           import json
