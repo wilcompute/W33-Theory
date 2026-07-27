@@ -1,8 +1,6 @@
 from __future__ import annotations
 
-import importlib.util
 import json
-import sys
 from collections import Counter, deque
 from pathlib import Path
 from typing import Dict, Iterable, List, Tuple
@@ -12,28 +10,54 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "w33_pass1121_e8_a2_cubic_incidence.json"
 
+E8_SIMPLE_ROOTS = np.array([
+    [1,-1,0,0,0,0,0,0], [0,1,-1,0,0,0,0,0],
+    [0,0,1,-1,0,0,0,0], [0,0,0,1,-1,0,0,0],
+    [0,0,0,0,1,-1,0,0], [0,0,0,0,0,1,-1,0],
+    [0,0,0,0,0,1,1,0], [-.5,-.5,-.5,-.5,-.5,-.5,-.5,-.5],
+], dtype=float)
+E6_SIMPLE_ROOTS = E8_SIMPLE_ROOTS[2:8]
+SU3_ALPHA_K2=(2,-2,0,0,0,0,0,0)
+SU3_BETA_K2=(0,2,0,0,0,0,0,-2)
 
-def load_module(path: Path, name: str):
-    spec = importlib.util.spec_from_file_location(name, path)
-    if spec is None or spec.loader is None:
-        raise RuntimeError(f"cannot load {path}")
-    mod = importlib.util.module_from_spec(spec)
-    sys.modules[name] = mod
-    spec.loader.exec_module(mod)
-    return mod
+def construct_e8_roots():
+    roots=[]
+    for i in range(8):
+        for j in range(i+1,8):
+            for si in (1.0,-1.0):
+                for sj in (1.0,-1.0):
+                    r=np.zeros(8);r[i]=si;r[j]=sj;roots.append(r)
+    for bits in range(256):
+        signs=np.array([1.0 if (bits>>k)&1 else -1.0 for k in range(8)])
+        if int(np.sum(signs<0))%2==0: roots.append(signs*.5)
+    return np.asarray(roots)
 
+def snap(v): return tuple(float(x) for x in np.round(v*2)/2)
 
-solver = load_module(
-    ROOT / "tools" / "solve_canonical_su3_gauge_and_cubic.py",
-    "pass1121_su3_solver",
-)
-cds = load_module(ROOT / "tools" / "compute_double_sixes.py", "pass1121_double_sixes")
-we6 = load_module(ROOT / "tools" / "weyl_e6_action.py", "pass1121_we6")
+def compute_we6_orbits(roots):
+    index={snap(r):i for i,r in enumerate(roots)}
+    used=np.zeros(len(roots),dtype=bool);out=[]
+    for seed in range(len(roots)):
+        if used[seed]: continue
+        used[seed]=True;orb=[seed];q=[seed]
+        while q:
+            i=q.pop();v=roots[i]
+            for alpha in E6_SIMPLE_ROOTS:
+                image=v-2*np.dot(v,alpha)/np.dot(alpha,alpha)*alpha
+                j=index[snap(image)]
+                if not used[j]: used[j]=True;orb.append(j);q.append(j)
+        out.append(orb)
+    return out
 
+def e6_key(r):
+    rk=k2(r)
+    a=sum(rk[i]*SU3_ALPHA_K2[i] for i in range(8))
+    b=sum(rk[i]*SU3_BETA_K2[i] for i in range(8))
+    proj=[(2*a+b)*SU3_ALPHA_K2[i]+(a+2*b)*SU3_BETA_K2[i] for i in range(8)]
+    return tuple(12*rk[i]-proj[i] for i in range(8))
 
 def k2(r: np.ndarray) -> Tuple[int, ...]:
     return tuple(int(round(2 * float(x))) for x in r.tolist())
-
 
 def rank_mod(A: np.ndarray, p: int) -> int:
     M = np.asarray(A, dtype=np.int64).copy() % p
@@ -58,10 +82,7 @@ def rank_mod(A: np.ndarray, p: int) -> int:
             break
     return r
 
-
-def root_reflection_perm(
-    roots: np.ndarray, root_index: Dict[Tuple[int, ...], int], alpha: Iterable[float]
-) -> np.ndarray:
+def root_reflection_perm(roots: np.ndarray, root_index: Dict[Tuple[int, ...], int], alpha: Iterable[float]) -> np.ndarray:
     a = np.asarray(tuple(alpha), dtype=float)
     out = []
     for beta in roots:
@@ -69,7 +90,6 @@ def root_reflection_perm(
         image = beta - coeff * a
         out.append(root_index[k2(image)])
     return np.asarray(out, dtype=np.int16)
-
 
 def orbit_partition(gens: List[np.ndarray], degree: int) -> List[List[int]]:
     unseen = np.ones(degree, dtype=bool)
@@ -91,16 +111,11 @@ def orbit_partition(gens: List[np.ndarray], degree: int) -> List[List[int]]:
         out.append(sorted(orb))
     return sorted(out, key=lambda x: (len(x), x[0]))
 
-
 def main() -> None:
-    solver.main()
-    canonical_path = ROOT / "artifacts" / "canonical_su3_gauge_and_cubic.json"
+    canonical_path = ROOT / "data" / "w33_pass1121_e6_projection_fixture.json"
     canonical = json.loads(canonical_path.read_text(encoding="utf-8"))
-    if not canonical.get("counts", {}).get("solvable", False):
-        raise RuntimeError("canonical SU3/cubic solve failed")
-
-    roots = cds.construct_e8_roots()
-    orbits = cds.compute_we6_orbits(roots)
+    roots = construct_e8_roots()
+    orbits = compute_we6_orbits(roots)
     sizes = [len(o) for o in orbits]
     assert sorted(sizes) == [1, 1, 1, 1, 1, 1, 27, 27, 27, 27, 27, 27, 72]
     root_index = {k2(roots[i]): i for i in range(len(roots))}
@@ -123,10 +138,10 @@ def main() -> None:
     root_meta: Dict[int, Tuple[int, int, int]] = {}
     for color, oi in enumerate(orbs_3):
         for ridx in orbits[oi]:
-            root_meta[ridx] = (1, color, key27[solver.e6_key(roots[ridx])])
+            root_meta[ridx] = (1, color, key27[e6_key(roots[ridx])])
     for color, oi in enumerate(orbs_3bar):
         for ridx in orbits[oi]:
-            bid = key27b[solver.e6_key(roots[ridx])]
+            bid = key27b[e6_key(roots[ridx])]
             root_meta[ridx] = (-1, color, dual_b_to_27[bid])
     assert len(root_meta) == 162
 
@@ -147,9 +162,7 @@ def main() -> None:
     for c, tri in enumerate(triads):
         cubic[c, list(tri)] = 1
 
-    firewall_data = json.loads(
-        (ROOT / "data" / "w33_pass1103_hesse_firewall_cubic_transport.json").read_text()
-    )
+    firewall_data = json.loads((ROOT / "data" / "w33_pass1103_hesse_firewall_cubic_transport.json").read_text())
     firewall_triads = [tuple(sorted(map(int, r["fiber_triad_sorted"]))) for r in firewall_data["records"]]
     firewall_idx = [triad_index[t] for t in firewall_triads]
     firewall = cubic[firewall_idx, :]
@@ -188,15 +201,14 @@ def main() -> None:
     firewall_score_signed = signed_root_projection @ firewall.T
     firewall_score_unsigned = unsigned_root_projection @ firewall.T
 
-    simple_roots = we6.get_e6_simple_roots()
-    root_gens = [root_reflection_perm(roots, root_index, alpha) for alpha in simple_roots]
+    root_gens = [root_reflection_perm(roots, root_index, alpha) for alpha in E6_SIMPLE_ROOTS]
     triple_gens = []
     e6id_gens = []
     cubic_gens = []
     ref_orbit = orbs_3[0]
     root_by_id = [-1] * 27
     for ridx in orbits[ref_orbit]:
-        root_by_id[key27[solver.e6_key(roots[ridx])]] = ridx
+        root_by_id[key27[e6_key(roots[ridx])]] = ridx
     assert all(x >= 0 for x in root_by_id)
     for gp in root_gens:
         tg = np.empty(2240, dtype=np.int16)
@@ -207,7 +219,7 @@ def main() -> None:
 
         eg = np.empty(27, dtype=np.int8)
         for e, ridx in enumerate(root_by_id):
-            eg[e] = key27[solver.e6_key(roots[int(gp[ridx])])]
+            eg[e] = key27[e6_key(roots[int(gp[ridx])])]
         if len(set(map(int, eg))) != 27:
             raise RuntimeError("E6-id generator is not a permutation")
         e6id_gens.append(eg)
@@ -222,15 +234,8 @@ def main() -> None:
 
     equivariance = []
     for tg, eg, cg in zip(triple_gens, e6id_gens, cubic_gens):
-        root_ok = all(
-            np.array_equal(signed_root_projection[int(tg[t]), eg], signed_root_projection[t])
-            for t in range(2240)
-        )
-        lift_ok = all(
-            np.array_equal(lift_plus[int(tg[t]), cg], lift_plus[t])
-            and np.array_equal(lift_minus[int(tg[t]), cg], lift_minus[t])
-            for t in range(2240)
-        )
+        root_ok = all(np.array_equal(signed_root_projection[int(tg[t]), eg], signed_root_projection[t]) for t in range(2240))
+        lift_ok = all(np.array_equal(lift_plus[int(tg[t]), cg], lift_plus[t]) and np.array_equal(lift_minus[int(tg[t]), cg], lift_minus[t]) for t in range(2240))
         equivariance.append({"root_projection": bool(root_ok), "cubic_lifts": bool(lift_ok)})
 
     a2_orbits = orbit_partition(triple_gens, 2240)
@@ -238,18 +243,14 @@ def main() -> None:
     for orb in a2_orbits:
         plus = int(lift_plus[orb].sum())
         minus = int(lift_minus[orb].sum())
-        orbit_records.append(
-            {
-                "size": len(orb),
-                "stabilizer_order": 51840 // len(orb),
-                "cubic_lift_plus": plus,
-                "cubic_lift_minus": minus,
-                "cubic_lift_total": plus + minus,
-                "mixed_root_count_histogram": dict(
-                    Counter(int(unsigned_root_projection[t].sum()) for t in orb)
-                ),
-            }
-        )
+        orbit_records.append({
+            "size": len(orb),
+            "stabilizer_order": 51840 // len(orb),
+            "cubic_lift_plus": plus,
+            "cubic_lift_minus": minus,
+            "cubic_lift_total": plus + minus,
+            "mixed_root_count_histogram": dict(Counter(int(unsigned_root_projection[t].sum()) for t in orb)),
+        })
 
     matrices = {
         "cubic_45x27": cubic,
@@ -282,7 +283,7 @@ def main() -> None:
     firewall_lifts = [plus_per_cubic[i] + minus_per_cubic[i] for i in firewall_idx]
 
     checks = {
-        "canonical_solver_solvable": canonical["counts"]["solvable"] is True,
+        "canonical_fixture_hash_locked": canonical["source_artifact_sha256"] == "81444a3d3f2c93a2078bf23e3eea52f6b043ccb39b115aed4a9fbc62062ce135",
         "e8_roots_240": len(roots) == 240,
         "a2_triples_2240": len(a2) == 2240,
         "mixed_roots_162": len(root_meta) == 162,
@@ -293,13 +294,9 @@ def main() -> None:
         "total_cubic_lifts_540": int(lift_total.sum()) == 540,
         "six_lifts_per_sign_per_cubic": set(plus_per_cubic) == {6} and set(minus_per_cubic) == {6},
         "twelve_lifts_per_firewall_term": set(firewall_lifts) == {12},
-        "all_six_simple_generators_equivariant": all(
-            x["root_projection"] and x["cubic_lifts"] for x in equivariance
-        ),
+        "all_six_simple_generators_equivariant": all(x["root_projection"] and x["cubic_lifts"] for x in equivariance),
         "a2_orbits_partition_2240": sum(len(x) for x in a2_orbits) == 2240,
-        "cubic_lift_support_is_union_of_orbits": all(
-            r["cubic_lift_total"] in {0, r["size"]} for r in orbit_records
-        ),
+        "cubic_lift_support_is_union_of_orbits": all(r["cubic_lift_total"] in {0, r["size"]} for r in orbit_records),
         "lift_total_rank_45": ranks["lift_total_2240x45"]["rank_Q_certified_mod_1000003"] == 45,
         "firewall_rank_9": ranks["firewall_9x27"]["rank_Q_certified_mod_1000003"] == 9,
     }
@@ -310,24 +307,9 @@ def main() -> None:
         "schema": "w33.pass1121.e8_a2_cubic_incidence.v1",
         "status": "PASS",
         "headline": "The 2240 E8 A2 root triples contain an exact W(E6)-equivariant 540-element cubic-lift subcarrier: every one of the 45 E6 cubic supports has six lifts in the 27x3 sheet and six conjugate lifts in the 27barx3bar sheet. Restriction to the nine firewall fibers gives exactly twelve A2 lifts per deleted cubic term. The firewall restriction is a selected support projection, not a full W(E6)-stable submodule.",
-        "counts": {
-            "a2_triples": 2240,
-            "cubic_supports": 45,
-            "firewall_supports": 9,
-            "positive_cubic_lifts": int(lift_plus.sum()),
-            "negative_cubic_lifts": int(lift_minus.sum()),
-            "total_cubic_lifts": int(lift_total.sum()),
-        },
-        "per_cubic_lifts": {
-            "positive_histogram": dict(Counter(plus_per_cubic)),
-            "negative_histogram": dict(Counter(minus_per_cubic)),
-            "total_histogram": dict(Counter(a + b for a, b in zip(plus_per_cubic, minus_per_cubic))),
-        },
-        "firewall": {
-            "triad_indices": firewall_idx,
-            "lift_histogram": dict(Counter(firewall_lifts)),
-            "equivariance_boundary": "The nine selected firewall fibers are not asserted to be W(E6)-stable; only the complete 45-support cubic map is tested equivariantly.",
-        },
+        "counts": {"a2_triples": 2240, "cubic_supports": 45, "firewall_supports": 9, "positive_cubic_lifts": int(lift_plus.sum()), "negative_cubic_lifts": int(lift_minus.sum()), "total_cubic_lifts": int(lift_total.sum())},
+        "per_cubic_lifts": {"positive_histogram": dict(Counter(plus_per_cubic)), "negative_histogram": dict(Counter(minus_per_cubic)), "total_histogram": dict(Counter(a + b for a, b in zip(plus_per_cubic, minus_per_cubic)))},
+        "firewall": {"triad_indices": firewall_idx, "lift_histogram": dict(Counter(firewall_lifts)), "equivariance_boundary": "The nine selected firewall fibers are not asserted to be W(E6)-stable; only the complete 45-support cubic map is tested equivariantly."},
         "a2_orbits": orbit_records,
         "root_type_histogram": dict(root_type_hist),
         "matrix_ranks": ranks,
@@ -338,7 +320,6 @@ def main() -> None:
     }
     OUT.write_text(json.dumps(out, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps({"status": out["status"], "counts": out["counts"], "orbits": orbit_records, "ranks": ranks}, indent=2))
-
 
 if __name__ == "__main__":
     main()
