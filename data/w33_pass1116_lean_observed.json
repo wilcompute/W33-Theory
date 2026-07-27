@@ -1,0 +1,13 @@
+{
+  "schema": "w33.pass1116.lean_observed.v1",
+  "status": "PASS",
+  "workflow_run_id": 30284488023,
+  "workflow_job_id": 90038776035,
+  "observed_head_sha": "7b110d6e1a29b0563f3abe4188d1ade6accce881",
+  "command": "serial lake build --wfail over every import in formal/W33.lean",
+  "total_modules": 46,
+  "failed_modules": 0,
+  "phantom_olean_errors": 0,
+  "new_module": "W33.Pass1115A2PhaseQontrolClosure",
+  "scope": "Observed GitHub Actions kernel build. This receipt applies while formal/W33.lean and formal/W33/Pass1115A2PhaseQontrolClosure.lean remain unchanged from the observed head."
+}
