@@ -59,6 +59,13 @@ homology, St ≅ H̃₁(Δ). That is directly visible:
 b₁(Δ) = E − V + 1 = 160 − 80 + 1 = 81 = dim St     ✓
 ```
 
+> **PRIOR ART (added Pass 1119).** That cycle-rank computation is **BT586's**, not
+> this pass's: `analysis/BT586_fiber_vs_levi_homology_separation_note.md` states
+> β₁(L) = 160 − 80 + 1 = 81 and calls it "the protected W33 homology sector,
+> H₁ = 81". It was not cited here originally. BT586 does **not** identify that 81
+> with the Steinberg module and computes **no** quotients, so the identification
+> and everything below remain this pass's — but the number is BT586's.
+
 Over ℚ, invariants commute with taking the quotient graph, so
 **dim(St^H) = b₁(Δ/H)**. Computing both sides independently:
 

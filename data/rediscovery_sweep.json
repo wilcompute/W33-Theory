@@ -1,5 +1,5 @@
 {
-  "files_with_uncited_collisions": 1342,
+  "files_with_uncited_collisions": 1528,
   "merge_list": [
     {
       "class": "code_parameter",
@@ -2511,14 +2511,14 @@
   "merge_list_by_class": {
     "code_parameter": 37,
     "compound": 552,
-    "integer": 2,
+    "integer": 138,
     "linear_parameter": 235,
     "sequence": 37
   },
-  "merge_list_size": 863,
-  "percent_colliding": 23.1,
+  "merge_list_size": 999,
+  "percent_colliding": 26.3,
   "reading": "A row is a CANDIDATE, not a verdict: the same integer recurs legitimately. The value of the list is that it is finite and ranked, so the corpus can be de-duplicated top-down rather than one accidental collision at a time.",
-  "scanned_files": 5816,
+  "scanned_files": 5820,
   "schema": "w33.rediscovery_sweep.v1",
   "top_files": [
     {
@@ -2526,7 +2526,7 @@
       "file": "analysis/w33_pass348_every_multiplicity_is_a_torsor.py"
     },
     {
-      "collisions": 88,
+      "collisions": 89,
       "file": "exploration/w33_refinement_bridge_synthesis.py"
     },
     {
@@ -2534,7 +2534,7 @@
       "file": "analysis/THE_SELECTION_LAYER.md"
     },
     {
-      "collisions": 48,
+      "collisions": 49,
       "file": "analysis/w33_BREAKTHROUGH_81_master_synthesis_v4.py"
     },
     {
@@ -2558,12 +2558,16 @@
       "file": "analysis/w33_BREAKTHROUGH_40_master_synthesis.py"
     },
     {
-      "collisions": 24,
-      "file": "analysis/BT1745_June24_25_commit_audit.md"
+      "collisions": 26,
+      "file": "analysis/w33_BREAKTHROUGH_268_master_synthesis_v23.py"
     },
     {
       "collisions": 24,
-      "file": "analysis/w33_BREAKTHROUGH_268_master_synthesis_v23.py"
+      "file": "analysis/BT1720_BT1723_repo_mining_execution.md"
+    },
+    {
+      "collisions": 24,
+      "file": "analysis/BT1745_June24_25_commit_audit.md"
     },
     {
       "collisions": 24,
@@ -2576,10 +2580,6 @@
     {
       "collisions": 23,
       "file": "exploration/w33_niemeier_lattices.py"
-    },
-    {
-      "collisions": 22,
-      "file": "analysis/BT1720_BT1723_repo_mining_execution.md"
     },
     {
       "collisions": 22,
@@ -2600,6 +2600,10 @@
     {
       "collisions": 20,
       "file": "analysis/w33_BREAKTHROUGH_537_F4_G2_dual_pair_5level_heawood.py"
+    },
+    {
+      "collisions": 19,
+      "file": "analysis/BT813_vacuum_transition_matrix.md"
     },
     {
       "collisions": 19,
@@ -2631,15 +2635,11 @@
     },
     {
       "collisions": 17,
+      "file": "analysis/bt813_vacuum_transition_matrix.py"
+    },
+    {
+      "collisions": 17,
       "file": "analysis/w33_tower_figure_svg.py"
-    },
-    {
-      "collisions": 16,
-      "file": "analysis/w33_substrate_periodic_table.py"
-    },
-    {
-      "collisions": 15,
-      "file": "analysis/2026-07-15_pass77_monster_2b_css_code.md"
     }
   ],
   "top_results": [
@@ -2664,6 +2664,10 @@
       "uncited_files": 25
     },
     {
+      "result": "heptad@4",
+      "uncited_files": 24
+    },
+    {
       "result": "e8+heawood",
       "uncited_files": 20
     },
@@ -2685,6 +2689,10 @@
     },
     {
       "result": "clifford+szilassi",
+      "uncited_files": 19
+    },
+    {
+      "result": "spread@20",
       "uncited_files": 19
     },
     {
@@ -2724,6 +2732,14 @@
       "uncited_files": 19
     },
     {
+      "result": "double-six@36",
+      "uncited_files": 19
+    },
+    {
+      "result": "double-six@6",
+      "uncited_files": 19
+    },
+    {
       "result": "[1,12,27]",
       "uncited_files": 19
     },
@@ -2740,28 +2756,12 @@
       "uncited_files": 18
     },
     {
-      "result": "e6+szilassi",
+      "result": "spread@7",
       "uncited_files": 18
     },
     {
-      "result": "g2+szilassi",
+      "result": "tritangent@3",
       "uncited_files": 18
-    },
-    {
-      "result": "gkp+hesse",
-      "uncited_files": 18
-    },
-    {
-      "result": "monster+witting",
-      "uncited_files": 18
-    },
-    {
-      "result": "d4+e7",
-      "uncited_files": 18
-    },
-    {
-      "result": "[66,13,3]",
-      "uncited_files": 17
     }
   ]
 }

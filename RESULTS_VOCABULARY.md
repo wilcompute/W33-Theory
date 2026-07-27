@@ -10,6 +10,102 @@ Use the exact-result index first. If it misses, search the aliases here, then
 read the listed primary artifacts end to end before claiming novelty. Always
 carry the stated group, carrier, and scope into the new claim.
 
+## The 540 — and the trap that there are TWO of them
+
+**Aliases:** `540 frames`, `540 skew pairs`, `540 cubes`, `540 nonedges`,
+`540-class`, `3A1 involutions`, `Q3 charts`, disjoint line pairs.
+
+**Canonical object:** the unordered pairs of **DISJOINT totally isotropic
+lines** of W(3,3). A line is disjoint from exactly q³ = 27 others, so there are
+40·27/2 = 540. Stabiliser **C₂ × S₄ = O_h**, order 48, and 51840 = 540 × 2 × 48.
+
+**THE HAZARD — `540 nonedges` is ambiguous and the two readings are different
+G-sets.** W(3,3) is not self-dual, so "nonedge" of the *point* graph and
+"nonedge" of the *line* graph are distinct objects that happen to share every
+crude invariant:
+
+| | count | stabiliser order | stabiliser |
+|---|---|---|---|
+| line-nonedges (= frames, skew pairs, cubes) | 540 | 48 | `C₂ × S₄` |
+| point-nonedges (non-collinear point pairs) | 540 | 48 | `((C₄ × C₂):C₂):C₃` |
+
+The two stabilisers are **not conjugate**, so the two 540-sets are **not
+isomorphic as G-sets** (Pass 1117). Same cardinality, same stabiliser order,
+different objects. Matching on either number is exactly the move Pass 1043 was
+retracted for. Always say *point*-nonedge or *line*-nonedge.
+
+**Status and boundary:** the line-nonedge 540 is the one carrying the rank-32
+imprimitive action and the three block systems. Nothing here says the
+point-nonedge 540 lacks structure — it has simply never been analysed.
+
+**Primary artifacts:** [BT773](analysis/BT773_involution_cube_theorem.md) (cubes,
+one per 3A₁ involution), [BT810](analysis/BT810_completed_geography_schlafli.md)
+(skew-pair chart, order-48 group), [Pass 1067](data/w33_pass1067_outer_class_geometry.json)
+(outer-involution class), [Pass 1079](analysis/w33_pass1079_frame_action_rank32.g)
+(frames, block systems).
+
+## The 36 — spreads
+
+**Aliases:** `36 spreads`, `36 regular spreads`, `36 double-sixes`,
+`M36 vacuum`, `36-class`, index-36 maximal, 15-block system.
+
+**Canonical object:** the spreads of W(3,3) — sets of 10 pairwise disjoint
+totally isotropic lines covering all 40 points. Stabiliser **S₆**, index 36.
+Classically the 36 double-sixes of the 27 lines on a cubic surface.
+
+**Status and boundary:** the frame action's 15-block system is isomorphic to this
+**as a G-set** (Pass 1097, by stabiliser conjugacy) but the blocks are **not**
+the spreads' fibres — a spread holds 45 frames, a block holds 15, and the two
+36-dimensional modules meet only in the constants (Pass 1081). Do not conflate
+the abstract G-set with the concrete embedding.
+
+**Primary artifacts:** [BT810](analysis/BT810_completed_geography_schlafli.md),
+[BT813](analysis/BT813_vacuum_transition_matrix.md),
+[Pass 1079](analysis/w33_pass1079_frame_action_rank32.g),
+[Pass 1081](data/w33_pass1081_frame_module_lattice.json).
+
+## The 45 — polar pairs
+
+**Aliases:** `45 polar pairs`, `45 hyperbolic polar pairs`,
+`45 tritangent planes`, `M45 vacuum`, index-45 maximal, 12-block system.
+
+**Canonical object:** PG(3,3) has 130 lines, 40 totally isotropic and 90
+hyperbolic; the symplectic polarity L ↦ L^⊥ is fixed-point-free on the
+hyperbolic lines, giving exactly 45 pairs {L, L^⊥}. Stabiliser
+`(SL(2,3) × SL(2,3)):C₂` of order 1152 in PGSp(4,3) (576 in PSp), because the
+pair splits 𝔽₃⁴ into two orthogonal symplectic planes each carrying
+Sp(2,3) = SL(2,3) = 2T, swapped by the polarity.
+
+**Status and boundary:** its point orbits on the 40 are **[8, 32]** — the pair's
+own 8 points in one orbit, the rest in another (Pass 1117, closing BT810's open
+question; BT810 had guessed "9+9" and "4 + 4 + 16", both wrong).
+
+**Primary artifacts:** [BT810](analysis/BT810_completed_geography_schlafli.md)
+(owns the identification), [BT813](analysis/BT813_vacuum_transition_matrix.md),
+[Pass 1097](analysis/w33_pass1097_name_the_frame_quotients.g) (the block-system
+bijection only).
+
+## The 135 — maximal partial spreads
+
+**Aliases:** `135 maximal partial spreads`, `unextendable partial spreads of
+size 8`, 4-block system, and — dually — `maximal partial ovoids of size q²−1 of
+Q(4,q)`; structurally `sharply transitive subsets of SL(2,3)`.
+
+**Canonical object:** the 8 pairwise disjoint totally isotropic lines covering
+32 of the 40 points whose 8 missed points contain no line, so the partial spread
+extends by nothing. Census: 1755 size-8 partial spreads = 1620 extendable
+(= 36 spreads × C(10,2)) + **135** maximal. Equal to 45 polar pairs × 3 cosets
+of Q₈ in SL(2,3), with SL(2,3)/Q₈ = C₃ the orientation on each triple.
+
+**Status and boundary:** **PUBLISHED, not new** — this is a studied family
+(Penttila; Cimráková–Fack 2005). Any q-general count is refuted: the family is
+reported empty for q = pʰ with p odd and h > 1, so the fit q³(q²+1)/2 (correct
+at q = 2 and 3) does **not** generalise.
+
+**Primary artifacts:** [Pass 1100](analysis/w33_pass1100_name_the_135.g),
+[Pass 1107](analysis/w33_pass1107_partial_spread_census.md),
+[Pass 1109/1110](analysis/w33_pass1109_1110_sl23_and_steinberg.md).
+
 ## Inverse-closed Heisenberg section
 
 **Aliases:** `section`, `section function`, `central-offset function`, `odd

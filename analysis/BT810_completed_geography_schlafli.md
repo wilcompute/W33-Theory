@@ -64,16 +64,25 @@ Open: the explicit double-six <-> spread bijection (which 6+6 of what?);
 the 2T x 2T action on the 9+9 points off the polar pair
 (40 = 4 + 4 + 16... compute the point orbits of the index-45 maximal).
 
-> **RESOLVED (Pass 1111): the order-48 chart group is O_h, not 2O.**
-> Settled exactly as this file proposed, by element orders. The skew-pair (frame)
-> stabiliser has order distribution `[1:1, 2:19, 3:8, 4:12, 6:8]` — **19
-> involutions**, where the binary octahedral group 2O has exactly one (its centre,
-> being a double cover). GAP confirms both directions directly:
-> `IsomorphismGroups(H, C2 x S4) <> fail` is **true** and
-> `IsomorphismGroups(H, SmallGroup(48,28) = 2O)` is **fail**. So
-> `H = C2 x S4 = O_h`, the full octahedral group.
+> **ALREADY RESOLVED — by BT811, not by Pass 1111.**
 >
-> This also means the "platonic ladder" line above should read O_h at the chart
-> atlas, not a binary polyhedral group: 2T and 2I are binary (they are double
-> covers), O_h is not, so the ladder is not uniformly binary. The 24-cell and
-> 600-cell entries are unaffected.
+> Both questions this Boundary lists were settled in
+> [BT811](analysis/BT811_platonic_fine_print.md), the immediately following file,
+> whose first line reads "Settles the two open identifications from BT810 by
+> direct computation":
+>
+> * **the order-48 chart group is O_h, not 2O** — element orders
+>   `{1:1, 2:19, 3:8, 4:12, 6:8}` with no order-8 elements, which excludes the
+>   binary octahedral group (BT811 T1);
+> * **the index-45 maximal has point orbits 40 = 8 + 32** — the polar pair's 4+4
+>   fused by the polarity swap — and line orbits `40 = 16 + 24`, the 16 being the
+>   cross-transversals meeting both L and L^⊥ (BT811 T2/T3).
+>
+> This Boundary section was simply never updated, and stayed stale from BT811
+> until 2026-07-27. Pass 1111 and Pass 1118 both re-answered these from scratch
+> because they trusted the list; both are withdrawn in favour of BT811. The only
+> thing added is this pointer.
+>
+> Still genuinely open from the list above: the explicit double-six ↔ spread
+> bijection, and (from BT811's own Boundary) the 16 = μ² cross-transversal orbit
+> as a structure, and the icosahedral maximal's orbit anatomy.

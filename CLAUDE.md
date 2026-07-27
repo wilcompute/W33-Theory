@@ -176,6 +176,28 @@ follow-up.** Before asserting that an object or a count is new:
 The cost of the check is one query. The cost of skipping it, measured twice in one
 day, is a pass plus a retraction.
 
+### The seventh failure mode: a STALE "Open:" list (added 2026-07-27)
+
+Most files here end with a Boundary or Open section. **Those record what was open
+when that file was written, and nothing in this workflow updates them when a later
+pass closes them.**
+
+BT810's Boundary lists two open identifications. BT811 — the very next file, by the
+same author, titled "Platonic Fine Print: O_h Confirmed, and the Polar-Pair
+Anatomy" — opens with "Settles the two open identifications from BT810 by direct
+computation" and answers both. BT810 was never edited. Two separate passes
+(1111 and 1118) then re-answered them from scratch, each trusting the list.
+
+So: **an open question is a claim about the corpus, and claims about the corpus get
+searched, not trusted.** Before answering a stated open question:
+
+1. Read the **adjacent** files first — BT*n+1*, the next pass number, the same
+   BT-series. A follow-up that closes a question usually sits right next to it.
+2. Grep for the question's *answer shape*, not its prose: `8 + 32`, `O_h`, `2O` —
+   the same result-not-topic rule that governs novelty claims.
+3. When you do close one, **edit the original file's Boundary**. Leaving it stale
+   is what created this failure; not repeating it costs one edit.
+
 ### The operational prior
 
 Trust spectral / algebraic / representation-theoretic claims by default; treat

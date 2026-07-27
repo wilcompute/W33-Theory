@@ -1,0 +1,7 @@
+|K| = 51840
+A2 root triples (a+b+c=0) = 2240
+K transitive on the triples : false   orbits = [ 80, 2160 ]
+K irreducible degrees = [ 1, 4, 4, 5, 5, 6, 10, 10, 15, 15, 20, 20, 20, 20, 20, 20, 24, 30, 30, 30, 36, 36, 40, 40, 45, 45, 60, 60, 60, 60, 64, 64, 80, 81 ]
+degree-81 multiplicities in the 2240-triple character = [ 3 ]
+rank of K on the triples = 146
+full decomposition (deg:mult) = [ [ 1, 2 ], [ 6, 2 ], [ 10, 1 ], [ 10, 1 ], [ 15, 3 ], [ 20, 2 ], [ 20, 3 ], [ 20, 3 ], [ 20, 3 ], [ 24, 3 ], [ 30, 1 ], [ 30, 1 ], [ 30, 1 ], [ 36, 2 ], [ 36, 2 ], [ 40, 1 ], [ 40, 1 ], [ 45, 2 ], [ 45, 2 ], [ 60, 1 ], [ 60, 2 ], [ 60, 2 ], [ 64, 4 ], [ 64, 4 ], [ 80, 4 ], [ 81, 3 ] ]

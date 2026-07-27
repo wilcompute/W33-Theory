@@ -1,0 +1,12 @@
+line-nonedges (frames) = 540   point-nonedges = 540
+frame stabiliser = C2 x S4   point-nonedge stabiliser = ((C4 x C2) : C2) : C3
+the two 540-sets are ISOMORPHIC as G-sets : false
+index-45 maximal |H|=576  point orbits on the 40 = [ 8, 32 ]
+   the polar pair itself covers 8 points
+maximal idx 27 |H|=960  b1(Delta/H)=0   St multiplicity=0   agree=true
+maximal idx 36 |H|=720  b1(Delta/H)=0   St multiplicity=0   agree=true
+maximal idx 40 |H|=648  b1(Delta/H)=0   St multiplicity=0   agree=true
+maximal idx 40 |H|=648  b1(Delta/H)=0   St multiplicity=0   agree=true
+maximal idx 45 |H|=576  b1(Delta/H)=0   St multiplicity=0   agree=true
+Borel (idx 160) |H|=162  b1(Delta/H)=1   St multiplicity=1   agree=true
+frame stabiliser (idx 540) |H|=48  b1(Delta/H)=2   St multiplicity=2   agree=true
