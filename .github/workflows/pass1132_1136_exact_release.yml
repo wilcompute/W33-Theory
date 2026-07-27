@@ -33,9 +33,9 @@ jobs:
           python analysis/w33_pass1133_true_spectral_functional_calculus.py
           python analysis/w33_pass1134_we6_432_stabilizers.py
           python analysis/w33_pass1135_cubic_kernel_decomposition.py
-      - name: Full descendant and 540 corpus reports
+      - name: Generate full corpus reports
         run: |
-          python scripts/check_shifted_adjacency_descendants.py --root . --write-report data/w33_shifted_adjacency_descendant_audit.json
+          python scripts/check_shifted_adjacency_descendants.py --root . --write-report data/w33_shifted_adjacency_descendant_audit.json || true
           python scripts/tag_540_disambiguation.py --root . --json-out data/BT1634_540_audit_results.json
       - name: Focused tests
         run: pytest -q tests/test_w33_pass1132_1136.py
@@ -43,10 +43,23 @@ jobs:
         run: |
           if [ -z "$(git status --porcelain -- data/w33_shifted_adjacency_descendant_audit.json data/BT1634_540_audit_results.json)" ]; then
             echo 'Generated reports unchanged.'
-            exit 0
+          else
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add data/w33_shifted_adjacency_descendant_audit.json data/BT1634_540_audit_results.json
+            git commit -m 'Pass 1136: refresh full corpus identity reports'
+            git push
           fi
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/w33_shifted_adjacency_descendant_audit.json data/BT1634_540_audit_results.json
-          git commit -m 'Pass 1136: refresh full corpus identity reports'
-          git push
+      - name: Enforce descendant gate after publishing diagnostics
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          report=json.loads(Path('data/w33_shifted_adjacency_descendant_audit.json').read_text())
+          violations=report.get('violations', [])
+          if violations:
+              for item in violations:
+                  print('UNREGISTERED:', item['path'], item['patterns'])
+              raise SystemExit(f'{len(violations)} unregistered active shifted-adjacency descendant(s)')
+          print('No unregistered shifted-adjacency descendants.')
+          PY
