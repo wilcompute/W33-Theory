@@ -6,6 +6,11 @@ from pathlib import Path
 from typing import Iterable
 ROOT=Path(__file__).resolve().parents[1]
 MARKER="PASS1150_SHIFTED_ADJACENCY_RETRACTION"
+SELF_REGISTRATIONS={
+    "PASS1148_1152_EXACT_CROSSED_BRIDGE_RELEASE.md":"corrected_release_surface_with_historical_signature:PASS1150",
+    "analysis/w33_pass1150_finalize_shifted_adjacency_migration.py":"audit_or_erratum:PASS1150",
+    "data/w33_pass1150_shifted_adjacency_completion.json":"canonical_audit_certificate:PASS1150",
+}
 PY_GUARD=f'''\n# {MARKER}\nimport os as _w33_retraction_os\nif _w33_retraction_os.environ.get("W33_ALLOW_RETRACTED_SHIFTED_ADJACENCY") != "1":\n    raise RuntimeError("This legacy module depends on the retracted D=A-I spectrum {{-7^6,-1^16,5^10}}. Use the canonical spectrum {{11^1,1^24,-5^15}} and analysis/w33_shifted_adjacency_spectral_audit.py instead. Set W33_ALLOW_RETRACTED_SHIFTED_ADJACENCY=1 only for historical archaeology.")\n'''
 PYTEST_SKIP=f'''\n# {MARKER}\nimport pytest as _w33_retraction_pytest\npytestmark=_w33_retraction_pytest.mark.skip(reason="Legacy test depends on the retracted shifted-adjacency spectrum; Pass 1150 quarantine.")\n'''
 MD_NOTICE=f'''> **Spectral erratum — {MARKER}.** This historical file contains a descendant of the retracted claim that `D=A-I` has spectrum `{{-7^6,-1^16,5^10}}`. The exact spectrum is `{{11^1,1^24,-5^15}}`. The historical formulas are retained only for provenance and are not active evidence.\n\n'''
@@ -42,8 +47,9 @@ def run(root:Path=ROOT,apply:bool=False)->dict:
             actions.append({"path":rel,"changed":changed,"stable_status":status})
         except Exception as exc: errors.append({"path":rel,"error":f"{type(exc).__name__}: {exc}"})
     if apply and not errors:
-        ledger["schema"]="w33.shifted_adjacency.retraction_ledger.v4"; ledger["pass1150_completion"]={"pending_before":len(pending),"pending_after":0,"report":"data/w33_pass1150_shifted_adjacency_completion.json"}; ledger_path.write_text(json.dumps(ledger,indent=2)+"\n",encoding="utf-8")
-    report={"schema":"w33.pass1150.shifted_adjacency_completion.v1","status":"PASS" if not errors else "FAIL","mode":"apply" if apply else "check","pending_before":len(pending),"pending_after":0 if apply and not errors else len(pending),"actions":actions,"errors":errors,"canonical_spectrum":{"11":1,"1":24,"-5":15},"historical_spectrum":{"-7":6,"-1":16,"5":10}}
+        descendants.update(SELF_REGISTRATIONS)
+        ledger["schema"]="w33.shifted_adjacency.retraction_ledger.v4"; ledger["pass1150_completion"]={"pending_before":len(pending),"pending_after":0,"report":"data/w33_pass1150_shifted_adjacency_completion.json","self_registrations":SELF_REGISTRATIONS}; ledger_path.write_text(json.dumps(ledger,indent=2)+"\n",encoding="utf-8")
+    report={"schema":"w33.pass1150.shifted_adjacency_completion.v1","status":"PASS" if not errors else "FAIL","mode":"apply" if apply else "check","pending_before":len(pending),"pending_after":0 if apply and not errors else len(pending),"actions":actions,"errors":errors,"self_registrations":SELF_REGISTRATIONS,"canonical_spectrum":{"11":1,"1":24,"-5":15},"historical_spectrum":{"-7":6,"-1":16,"5":10}}
     if apply: (root/"data/w33_pass1150_shifted_adjacency_completion.json").write_text(json.dumps(report,indent=2)+"\n",encoding="utf-8")
     if errors: raise RuntimeError(json.dumps(errors,indent=2))
     print(f"PASS 1150 mode={report['mode']} pending={len(pending)}"); return report
