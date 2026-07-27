@@ -152,6 +152,21 @@ if __name__ == '__main__':
 
 ## Prior Art and Intuition
 
+> **CORRECTION (Pass 1107).** The two partial-spread claims below are FALSE and are
+> withdrawn: "a partial spread of mutually skew totally isotropic lines has size at
+> most 5" and "the maximum totally-isotropic skew partial spread has size 4 or 5".
+>
+> W(3,3) **has spreads** — 36 of them, each 10 pairwise disjoint totally isotropic
+> lines covering all 40 points. So the maximum is 10, not 4 or 5. Pass 1100
+> exhaustively enumerated the size-8 partial spreads and found 1755 of them
+> (1620 extendable to a spread, 135 maximal), which is impossible if the maximum
+> were 5. The surrounding sentence about PG(3,q) is also garbled: a spread of
+> PG(3,q) has q²+1 lines, not q+1.
+>
+> Nothing else in this file is affected by the correction; only these size claims
+> are withdrawn. Found by `scripts/check_rediscovery.py` on the first run after
+> Pass 1107 taught it noun-number tokens (`partial-spread@4`).
+
 In PG(3,q) for prime-power q, the maximum size of a set of mutually skew lines (a "partial spread") is q+1 when q is odd (since a spread has size q²+1 and decomposes into spreads of certain sizes). For q=3: a maximum spread has 10 lines, a partial spread of mutually skew totally isotropic lines has size at most 5 (since each line meets at most 12 others symplectically, and the symplectic constraint tightens the count).
 
 **Initial expectation**: the maximum clique in the totally-isotropic skew-pair graph is **4 or 5**, not 7. This would mean the Csáászár embedding does NOT exist — the torus is external.

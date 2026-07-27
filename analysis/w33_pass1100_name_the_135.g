@@ -45,6 +45,21 @@
 #     systems.  File: data/w33_pass1081_frame_module_lattice.json
 #   * BT813 OWNS the five-vacuum transition matrix.
 #     File: analysis/BT813_vacuum_transition_matrix.md
+#
+# EXTERNAL PRIOR ART -- added after Pass 1107's literature check, and it matters.
+# The OBJECT identified here is PUBLISHED, not new.  W(q) is the dual of Q(4,q),
+# so a maximal partial spread of W(q) is a maximal partial ovoid of Q(4,q), and
+# maximal partial ovoids of size q^2-1 of Q(4,q) are a studied family: they are
+# described in the literature as SHARPLY TRANSITIVE SUBSETS OF SL(2,q).  Penttila
+# exhibited them for q in {5,7,11}; Cimrakova and Fack confirmed by computer
+# search ("On the smallest maximal partial ovoids and spreads of the generalized
+# quadrangles W(q) and Q(4,q)", European J. Combin. 2005); see also
+# arXiv:1201.5967, "The known maximal partial ovoids of size q^2-1 of Q(4,q)".
+#
+# So this pass should be read as: the 135-block quotient of the frame action IS
+# that known family at q=3, and the CORRESPONDENCE with the block system -- plus
+# the exact census 1755 = 1620 + 135 -- is what is contributed here.  The family
+# itself is cited, not claimed.
 
 REPO := GAPInfo.SystemEnvironment.W33_REPO;;
 OUT := Concatenation(REPO, "/data/w33_pass1100_name_the_135.json");;

@@ -1,0 +1,8 @@
+{
+  "schema": "w33.pass1108.steinberg_identification.gap.v1",
+  "status": "PASS",
+  "headline": "The degree-81 constituent of the frame module is the STEINBERG module of Sp(4,3) in defining characteristic 3, verified three ways from the group: PSp(4,3) has exactly one irreducible of degree 81, the order of a Sylow 3-subgroup is 81, and the character vanishes on every 3-singular class. The two 81s of U4(2):2 are its extensions to the outer group, differing by the sign character. Read through Frobenius reciprocity, Pass 1101's multiplicities say the Steinberg has a one-dimensional fixed space under the frame stabiliser C2 x S4 and no fixed vector under any block stabiliser. The name Steinberg is the parallel track's (Passes 1092/1094) and is cited, not claimed; the verification is what is added.",
+  "checks": {"unique_degree81_irreducible": true, "sylow3_order_is_81": true, "vanishes_on_3_singular_classes": true, "doily_block_correspondence_holds": true},
+  "check_count": 4,
+  "scope": "Character-theoretic identification computed from the group, plus the q=2 control for the block/partial-spread correspondence. No explanation is offered for why the fixed space exists under the frame stabiliser and not the block stabilisers."
+}

@@ -1,0 +1,8 @@
+PSp(4,3) degree-81 irreducibles = 1
+|Sylow_3(PSp(4,3))| = 81   equals 81 : true
+  chi_81[1] vanishes on all 3-singular classes : true
+doily: points=15 t.i. lines=15
+doily frames = 60
+doily frame-action block sizes = [ 3, 4, 6, 10 ]
+blocks of size 3 = 20   (predicted q^3(q^2+1)/2 = 20)
+each block uses 3 distinct lines (predicted q^2-1 = 3)

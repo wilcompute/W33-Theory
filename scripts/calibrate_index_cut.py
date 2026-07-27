@@ -36,7 +36,8 @@ sys.path.insert(0, str(ROOT / "analysis"))
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import build_results_index as B  # noqa: E402
-from check_rediscovery import RE_NAMED, RE_ROOT, compounds, results_in  # noqa: E402
+from check_rediscovery import (  # noqa: E402
+    RE_NAMED, RE_ROOT, compounds, noun_number_pairs, results_in)
 
 # THE FLAG RATE MUST USE THE GUARD'S OWN EXTRACTOR, NOT THE INDEX'S.
 #
@@ -70,6 +71,7 @@ def tokens_of(txt: str) -> set[str]:
     toks.update(m.lower() for m in RE_NAMED.findall(txt))
     toks.update(RE_ROOT.findall(txt))
     toks.update(compounds(txt))
+    toks.update(noun_number_pairs(txt))
     return toks
 
 

@@ -1,5 +1,5 @@
 {
-  "files_with_uncited_collisions": 1316,
+  "files_with_uncited_collisions": 1342,
   "merge_list": [
     {
       "class": "code_parameter",
@@ -103,7 +103,6 @@
       "files": [
         "BT1295_BT1296_BT1297_breakthrough_report.md",
         "analysis/BATCH_415_429_INTAKE_FINDINGS.md",
-        "analysis/BT1204_holonet_milestone_dashboard.md",
         "analysis/BT1211_encoded_lambda_lock_invariance.md",
         "analysis/BT1214_encoded_clifford_tomography_invariance.md",
         "analysis/BT1893_BT1895_summary.md",
@@ -181,12 +180,32 @@
         "analysis/2026-07-15_pass87_w33_master_theorem.md",
         "analysis/2026-07-15_pass91_alpha_feynman_logical_operator.md",
         "analysis/BATCH_415_429_INTAKE_FINDINGS.md",
+        "analysis/CANON_137_1_21.md",
         "analysis/CANON_240_81_3.md",
         "analysis/w33_pass359_alpha_code_qr_css.g",
         "analysis/w33_pass431_pds_and_critical_group_anatomy.py",
         "analysis/w33_pass432_genuinely_nonabelian_pds.py"
       ],
       "result": "[[137,1,3]]"
+    },
+    {
+      "class": "code_parameter",
+      "files": [
+        "PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md",
+        "PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md",
+        "PASS361_ALPHA_CODE_CLIFFORD_MAXIMALITY_SYNTHESIS.md",
+        "PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md",
+        "analysis/CANON_137_1_21.md",
+        "analysis/CANON_240_81_3.md",
+        "analysis/THE_SELECTION_LAYER.md",
+        "analysis/w33_pass359_alpha_code_qr_css.g",
+        "analysis/w33_pass360_alpha_code_logical_hadamard.g",
+        "analysis/w33_pass361_alpha_code_clifford_maximality.g",
+        "analysis/w33_pass362_alpha_code_real_clifford_k44.g",
+        "analysis/w33_pass364_qr548_e8_phase_space.g",
+        "analysis/w33_pass366_qr137m_real_clifford_refinement_tower.g"
+      ],
+      "result": "[[137,1,21]]"
     },
     {
       "class": "code_parameter",
@@ -224,24 +243,6 @@
         "exploration/PART_CCCCXXX_CYCLIC_CAYLEY_OBSTRUCTION.py"
       ],
       "result": "[[1296,81,4]]"
-    },
-    {
-      "class": "code_parameter",
-      "files": [
-        "PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md",
-        "PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md",
-        "PASS361_ALPHA_CODE_CLIFFORD_MAXIMALITY_SYNTHESIS.md",
-        "PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md",
-        "analysis/CANON_240_81_3.md",
-        "analysis/THE_SELECTION_LAYER.md",
-        "analysis/w33_pass359_alpha_code_qr_css.g",
-        "analysis/w33_pass360_alpha_code_logical_hadamard.g",
-        "analysis/w33_pass361_alpha_code_clifford_maximality.g",
-        "analysis/w33_pass362_alpha_code_real_clifford_k44.g",
-        "analysis/w33_pass364_qr548_e8_phase_space.g",
-        "analysis/w33_pass366_qr137m_real_clifford_refinement_tower.g"
-      ],
-      "result": "[[137,1,21]]"
     },
     {
       "class": "code_parameter",
@@ -634,10 +635,36 @@
     {
       "class": "linear_parameter",
       "files": [
+        "PASS1021_E8_FIBRATION_OVER_FORTY.md",
+        "PASS1031_DUAL_120_PHASE_CARRIERS.md",
+        "analysis/BT812_five_vacua.md",
+        "analysis/BT813_vacuum_transition_matrix.md",
+        "analysis/bt812_five_vacua.py",
+        "analysis/bt813_vacuum_transition_matrix.py",
+        "analysis/bt859_bell_compass_parabolic_router.py",
+        "analysis/w33_hashimoto_weinberg_transport_correction.py",
+        "analysis/w33_pass1021_e8_fibration_over_forty.g",
+        "analysis/w33_pass1031_dual_120_phase_carriers.py",
+        "analysis/w33_pass332_integral_halfspin_lift.g",
+        "analysis/w33_pass338_selector_frame_240.g",
+        "analysis/w33_weinberg_eq52_structural_correction.py",
+        "exploration/PART_CCCLIII_EIGENSPACE_PROJECTORS_BRIDGE.py",
+        "exploration/PART_CCCXI_BOSE_MESNER_BRIDGE.py",
+        "exploration/PART_CCCXLIX_EIGENMATRIX_PQ_BRIDGE.py",
+        "exploration/PART_CCCXLVI_Q_MATRIX_WEINBERG_BRIDGE.py",
+        "exploration/PART_CCCX_KREIN_BRIDGE.py",
+        "exploration/PART_CCLXXXVII_KREIN_ARRAY_BRIDGE.py",
+        "exploration/PART_CCLXXXVI_KREIN_QPOLY_BRIDGE.py",
+        "exploration/PART_CCXCIX_KREIN_PARAMETERS_BRIDGE.py"
+      ],
+      "result": "[1,12,27]"
+    },
+    {
+      "class": "linear_parameter",
+      "files": [
         "BT1295_BT1296_BT1297_breakthrough_report.md",
         "PASS373_374_W33_BOUNDARY_MLUT_PHASE_SHEET_SYNTHESIS.md",
         "analysis/BATCH_415_429_INTAKE_FINDINGS.md",
-        "analysis/BT1204_holonet_milestone_dashboard.md",
         "analysis/BT1211_encoded_lambda_lock_invariance.md",
         "analysis/BT1214_encoded_clifford_tomography_invariance.md",
         "analysis/BT1893_BT1895_summary.md",
@@ -662,29 +689,28 @@
     {
       "class": "linear_parameter",
       "files": [
-        "PASS1021_E8_FIBRATION_OVER_FORTY.md",
-        "PASS1031_DUAL_120_PHASE_CARRIERS.md",
-        "analysis/BT812_five_vacua.md",
-        "analysis/BT813_vacuum_transition_matrix.md",
-        "analysis/bt812_five_vacua.py",
-        "analysis/bt813_vacuum_transition_matrix.py",
-        "analysis/bt859_bell_compass_parabolic_router.py",
-        "analysis/w33_hashimoto_weinberg_transport_correction.py",
-        "analysis/w33_pass1021_e8_fibration_over_forty.g",
-        "analysis/w33_pass1031_dual_120_phase_carriers.py",
-        "analysis/w33_pass332_integral_halfspin_lift.g",
-        "analysis/w33_pass338_selector_frame_240.g",
-        "analysis/w33_weinberg_eq52_structural_correction.py",
-        "exploration/PART_CCCLIII_EIGENSPACE_PROJECTORS_BRIDGE.py",
-        "exploration/PART_CCCXI_BOSE_MESNER_BRIDGE.py",
-        "exploration/PART_CCCXLIX_EIGENMATRIX_PQ_BRIDGE.py",
-        "exploration/PART_CCCXLVI_Q_MATRIX_WEINBERG_BRIDGE.py",
-        "exploration/PART_CCCX_KREIN_BRIDGE.py",
-        "exploration/PART_CCLXXXVII_KREIN_ARRAY_BRIDGE.py",
-        "exploration/PART_CCLXXXVI_KREIN_QPOLY_BRIDGE.py",
-        "exploration/PART_CCXCIX_KREIN_PARAMETERS_BRIDGE.py"
+        "analysis/bt1716_q2025_domain_chart_extractor.py",
+        "analysis/bt1720_q2025_connected_domain_triples.py",
+        "analysis/w33_near_term_falsification_test.py",
+        "analysis/w33_pass1077_g32_g25_invariant_restriction.py",
+        "analysis/w33_pass259_mu_tau_atmospheric.py",
+        "analysis/w33_pass369_the_27_is_a_heisenberg_torsor.py",
+        "analysis/w33_phase_bundle_hilbert_transport_kernel.g",
+        "exploration/w33_balanced_triplet_background.py",
+        "exploration/w33_bundle_spectral_seed.py",
+        "exploration/w33_l4_quark_self_energy.py",
+        "exploration/w33_mass_hierarchy_derivation.py",
+        "exploration/w33_mode_major_color_triplet_bridge.py",
+        "exploration/w33_pathspace_internal_algebra.py",
+        "exploration/w33_payne_algebra_breakthrough.py",
+        "exploration/w33_quark_firewall_obstruction.py",
+        "exploration/w33_yukawa_family_normal_form_bridge.py",
+        "exploration/w33_yukawa_kronecker_reduction_bridge.py",
+        "exploration/w33_yukawa_point_defect_bridge.py",
+        "exploration/w33_yukawa_qutrit_collapse_bridge.py",
+        "exploration/w33_yukawa_unipotent_reduction_bridge.py"
       ],
-      "result": "[1,12,27]"
+      "result": "[0,0,1]"
     },
     {
       "class": "linear_parameter",
@@ -715,27 +741,25 @@
     {
       "class": "linear_parameter",
       "files": [
-        "analysis/bt1716_q2025_domain_chart_extractor.py",
-        "analysis/bt1720_q2025_connected_domain_triples.py",
-        "analysis/w33_near_term_falsification_test.py",
-        "analysis/w33_pass259_mu_tau_atmospheric.py",
-        "analysis/w33_pass369_the_27_is_a_heisenberg_torsor.py",
-        "analysis/w33_phase_bundle_hilbert_transport_kernel.g",
-        "exploration/w33_balanced_triplet_background.py",
-        "exploration/w33_bundle_spectral_seed.py",
-        "exploration/w33_l4_quark_self_energy.py",
-        "exploration/w33_mass_hierarchy_derivation.py",
-        "exploration/w33_mode_major_color_triplet_bridge.py",
-        "exploration/w33_pathspace_internal_algebra.py",
-        "exploration/w33_payne_algebra_breakthrough.py",
-        "exploration/w33_quark_firewall_obstruction.py",
-        "exploration/w33_yukawa_family_normal_form_bridge.py",
-        "exploration/w33_yukawa_kronecker_reduction_bridge.py",
-        "exploration/w33_yukawa_point_defect_bridge.py",
-        "exploration/w33_yukawa_qutrit_collapse_bridge.py",
-        "exploration/w33_yukawa_unipotent_reduction_bridge.py"
+        "PART_MMCCCLXXI_BRIDGE_LINE_AFFINE_CAYLEY_CUBE.md",
+        "analysis/BT1570_BT1572_holonet_insert.tex",
+        "analysis/BT1570_BT1572_internal_clifford_lens_protocol.md",
+        "analysis/BT1571_lens_phase_calibration_model.md",
+        "analysis/BT1573_BT1576_holonet_insert.tex",
+        "analysis/BT1573_BT1576_oam_protocol_literature.md",
+        "analysis/BT1574_exact_s_f3_optical_calibration_pair.md",
+        "analysis/BT1574_exact_s_f3_optical_calibration_pair.tex",
+        "analysis/w33_demonstrator_measures_substrate.py",
+        "analysis/w33_pass1077_g32_g25_invariant_restriction.py",
+        "analysis/w33_pass406_nonabelian_clifford_compiler.py",
+        "analysis/w33_pass640_closed_loop_falsifier.py",
+        "analysis/w33_qutrit_topological_pump.py",
+        "exploration/w33_anchor_phase_gauge_reduction_bridge.py",
+        "exploration/w33_minimal_cp_anchor_phase_bridge.py",
+        "exploration/w33_observed_cp_target_bridge.py",
+        "exploration/w33_payne_algebra_breakthrough.py"
       ],
-      "result": "[0,0,1]"
+      "result": "[1,0,1]"
     },
     {
       "class": "linear_parameter",
@@ -782,28 +806,6 @@
         "analysis/w33_machine_world_bridge.py"
       ],
       "result": "[66,13,3]"
-    },
-    {
-      "class": "linear_parameter",
-      "files": [
-        "PART_MMCCCLXXI_BRIDGE_LINE_AFFINE_CAYLEY_CUBE.md",
-        "analysis/BT1570_BT1572_holonet_insert.tex",
-        "analysis/BT1570_BT1572_internal_clifford_lens_protocol.md",
-        "analysis/BT1571_lens_phase_calibration_model.md",
-        "analysis/BT1573_BT1576_holonet_insert.tex",
-        "analysis/BT1573_BT1576_oam_protocol_literature.md",
-        "analysis/BT1574_exact_s_f3_optical_calibration_pair.md",
-        "analysis/BT1574_exact_s_f3_optical_calibration_pair.tex",
-        "analysis/w33_demonstrator_measures_substrate.py",
-        "analysis/w33_pass406_nonabelian_clifford_compiler.py",
-        "analysis/w33_pass640_closed_loop_falsifier.py",
-        "analysis/w33_qutrit_topological_pump.py",
-        "exploration/w33_anchor_phase_gauge_reduction_bridge.py",
-        "exploration/w33_minimal_cp_anchor_phase_bridge.py",
-        "exploration/w33_observed_cp_target_bridge.py",
-        "exploration/w33_payne_algebra_breakthrough.py"
-      ],
-      "result": "[1,0,1]"
     },
     {
       "class": "linear_parameter",
@@ -859,12 +861,32 @@
         "analysis/2026-07-15_pass87_w33_master_theorem.md",
         "analysis/2026-07-15_pass91_alpha_feynman_logical_operator.md",
         "analysis/BATCH_415_429_INTAKE_FINDINGS.md",
+        "analysis/CANON_137_1_21.md",
         "analysis/CANON_240_81_3.md",
         "analysis/w33_pass359_alpha_code_qr_css.g",
         "analysis/w33_pass431_pds_and_critical_group_anatomy.py",
         "analysis/w33_pass432_genuinely_nonabelian_pds.py"
       ],
       "result": "[137,1,3]"
+    },
+    {
+      "class": "linear_parameter",
+      "files": [
+        "PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md",
+        "PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md",
+        "PASS361_ALPHA_CODE_CLIFFORD_MAXIMALITY_SYNTHESIS.md",
+        "PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md",
+        "analysis/CANON_137_1_21.md",
+        "analysis/CANON_240_81_3.md",
+        "analysis/THE_SELECTION_LAYER.md",
+        "analysis/w33_pass359_alpha_code_qr_css.g",
+        "analysis/w33_pass360_alpha_code_logical_hadamard.g",
+        "analysis/w33_pass361_alpha_code_clifford_maximality.g",
+        "analysis/w33_pass362_alpha_code_real_clifford_k44.g",
+        "analysis/w33_pass364_qr548_e8_phase_space.g",
+        "analysis/w33_pass366_qr137m_real_clifford_refinement_tower.g"
+      ],
+      "result": "[137,1,21]"
     },
     {
       "class": "linear_parameter",
@@ -925,24 +947,6 @@
     {
       "class": "linear_parameter",
       "files": [
-        "PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md",
-        "PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md",
-        "PASS361_ALPHA_CODE_CLIFFORD_MAXIMALITY_SYNTHESIS.md",
-        "PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md",
-        "analysis/CANON_240_81_3.md",
-        "analysis/THE_SELECTION_LAYER.md",
-        "analysis/w33_pass359_alpha_code_qr_css.g",
-        "analysis/w33_pass360_alpha_code_logical_hadamard.g",
-        "analysis/w33_pass361_alpha_code_clifford_maximality.g",
-        "analysis/w33_pass362_alpha_code_real_clifford_k44.g",
-        "analysis/w33_pass364_qr548_e8_phase_space.g",
-        "analysis/w33_pass366_qr137m_real_clifford_refinement_tower.g"
-      ],
-      "result": "[137,1,21]"
-    },
-    {
-      "class": "linear_parameter",
-      "files": [
         "PASS415_419_FIVE_FRONTIERS_RELEASE.md",
         "analysis/holonet_cli.py",
         "analysis/holonet_ft_threshold.py",
@@ -972,6 +976,22 @@
         "exploration/w33_trace_tower_complete.py"
       ],
       "result": "[10,16,6]"
+    },
+    {
+      "class": "linear_parameter",
+      "files": [
+        "analysis/w33_bisplit_37_horizon.py",
+        "analysis/w33_pass1077_g32_g25_invariant_restriction.py",
+        "analysis/w33_pass143_universal_computation.py",
+        "analysis/w33_pass286_sqrt21_found_retraction.py",
+        "analysis/w33_pass294_paths_in_the_dual.py",
+        "analysis/w33_pass301_is_the_4cycle_canonical.py",
+        "analysis/w33_pass305_aut_csaszar_is_AGL_1_7.py",
+        "analysis/w33_pass502_formal_support.py",
+        "analysis/w33_substrate_periodic_table.py",
+        "analysis/w33_superbeat_prime_horizon.py"
+      ],
+      "result": "[2,3,5]"
     },
     {
       "class": "linear_parameter",
@@ -1019,21 +1039,6 @@
         "analysis/w33_pass471_uniform_cover_prime_power_witness.py"
       ],
       "result": "[1,3,8]"
-    },
-    {
-      "class": "linear_parameter",
-      "files": [
-        "analysis/w33_bisplit_37_horizon.py",
-        "analysis/w33_pass143_universal_computation.py",
-        "analysis/w33_pass286_sqrt21_found_retraction.py",
-        "analysis/w33_pass294_paths_in_the_dual.py",
-        "analysis/w33_pass301_is_the_4cycle_canonical.py",
-        "analysis/w33_pass305_aut_csaszar_is_AGL_1_7.py",
-        "analysis/w33_pass502_formal_support.py",
-        "analysis/w33_substrate_periodic_table.py",
-        "analysis/w33_superbeat_prime_horizon.py"
-      ],
-      "result": "[2,3,5]"
     },
     {
       "class": "linear_parameter",
@@ -1236,6 +1241,32 @@
     {
       "class": "linear_parameter",
       "files": [
+        "analysis/bt1716_q2025_domain_chart_extractor.py",
+        "analysis/bt1720_q2025_connected_domain_triples.py",
+        "analysis/w33_pass1077_g32_g25_invariant_restriction.py",
+        "exploration/w33_u1_isotropic_line_obstruction_bridge.py",
+        "exploration/w33_yukawa_family_normal_form_bridge.py",
+        "exploration/w33_yukawa_kronecker_reduction_bridge.py",
+        "exploration/w33_yukawa_point_defect_bridge.py"
+      ],
+      "result": "[1,1,0]"
+    },
+    {
+      "class": "linear_parameter",
+      "files": [
+        "analysis/BT813_vacuum_transition_matrix.md",
+        "analysis/bt813_vacuum_transition_matrix.py",
+        "analysis/bt835_schedule_overlap_theorem.py",
+        "analysis/w33_pass1072_identify_spread_and_frame_graphs.g",
+        "analysis/w33_pass1101_eightyone_location.g",
+        "analysis/w33_pass197_double_six_syzygy.py",
+        "analysis/w33_pass365_qr411_e6_minus_polar_lift.g"
+      ],
+      "result": "[1,15,20]"
+    },
+    {
+      "class": "linear_parameter",
+      "files": [
         "analysis/bt1717_split_cayley_incidence_obstruction.py",
         "analysis/w33_pass332_integral_halfspin_lift.g",
         "analysis/w33_pass336_integral_halfspin_lattices.g",
@@ -1313,24 +1344,24 @@
       "files": [
         "analysis/bt1716_q2025_domain_chart_extractor.py",
         "analysis/bt1720_q2025_connected_domain_triples.py",
-        "exploration/w33_u1_isotropic_line_obstruction_bridge.py",
-        "exploration/w33_yukawa_family_normal_form_bridge.py",
-        "exploration/w33_yukawa_kronecker_reduction_bridge.py",
-        "exploration/w33_yukawa_point_defect_bridge.py"
-      ],
-      "result": "[1,1,0]"
-    },
-    {
-      "class": "linear_parameter",
-      "files": [
-        "analysis/bt1716_q2025_domain_chart_extractor.py",
-        "analysis/bt1720_q2025_connected_domain_triples.py",
         "analysis/w33_pass212_4320_carrier_equivariant_bijection.g",
         "analysis/w33_pass341_selector_extension_cohomology.g",
         "analysis/w33_pass366_qr137m_real_clifford_refinement_tower.g",
         "analysis/w33_pass376_marked_d8_bridge.g"
       ],
       "result": "[1,1,2]"
+    },
+    {
+      "class": "linear_parameter",
+      "files": [
+        "analysis/w33_pass1055_unsigned_equivariant_signed_obstruction.py",
+        "analysis/w33_pass1057_action_semantics_firewall.py",
+        "analysis/w33_pass1061_springer_embedding_decision.py",
+        "analysis/w33_pass174_dual_discriminant_fixed_rail.py",
+        "analysis/w33_pass364_qr548_e8_phase_space.g",
+        "analysis/w33_pass366_qr137m_real_clifford_refinement_tower.g"
+      ],
+      "result": "[1,120,135]"
     },
     {
       "class": "linear_parameter",
@@ -1431,6 +1462,17 @@
     {
       "class": "linear_parameter",
       "files": [
+        "PART_MMCCCLXXI_BRIDGE_LINE_AFFINE_CAYLEY_CUBE.md",
+        "analysis/bt1716_q2025_domain_chart_extractor.py",
+        "analysis/bt1720_q2025_connected_domain_triples.py",
+        "analysis/w33_pass1077_g32_g25_invariant_restriction.py",
+        "exploration/w33_yukawa_kronecker_reduction_bridge.py"
+      ],
+      "result": "[0,1,1]"
+    },
+    {
+      "class": "linear_parameter",
+      "files": [
         "analysis/BT1758_BT1760_execution_summary.md",
         "analysis/BT1761_BT1763_execution_summary.md",
         "analysis/bt1760_hesse_fano_target_line_selector.py",
@@ -1471,17 +1513,6 @@
         "analysis/w33_pass219_duad_syntheme_v4_tritangent_boundary.g"
       ],
       "result": "[1,12,32]"
-    },
-    {
-      "class": "linear_parameter",
-      "files": [
-        "analysis/BT813_vacuum_transition_matrix.md",
-        "analysis/bt813_vacuum_transition_matrix.py",
-        "analysis/bt835_schedule_overlap_theorem.py",
-        "analysis/w33_pass197_double_six_syzygy.py",
-        "analysis/w33_pass365_qr411_e6_minus_polar_lift.g"
-      ],
-      "result": "[1,15,20]"
     },
     {
       "class": "linear_parameter",
@@ -1640,6 +1671,17 @@
     {
       "class": "linear_parameter",
       "files": [
+        "analysis/w33_pass1046_e6_tower_is_the_e8_stabiliser.g",
+        "analysis/w33_pass1047_eisenstein_parabolic_ladder.g",
+        "analysis/w33_pass1068_chevie_g25_g32_matrices.py",
+        "analysis/w33_pass1077_g32_g25_invariant_restriction.py",
+        "exploration/PART_CCLXXXI_TERNARY_CODES_BRIDGE.py"
+      ],
+      "result": "[6,9,12]"
+    },
+    {
+      "class": "linear_parameter",
+      "files": [
         "analysis/2026-05-18_fano_hamming_horizon_code_bridge.md",
         "analysis/w33_BREAKTHROUGH_42_grassmann_ag_codes_substrate.py",
         "analysis/w33_BREAKTHROUGH_43_full_grassmann_family.py",
@@ -1651,32 +1693,12 @@
     {
       "class": "linear_parameter",
       "files": [
-        "PART_MMCCCLXXI_BRIDGE_LINE_AFFINE_CAYLEY_CUBE.md",
-        "analysis/bt1716_q2025_domain_chart_extractor.py",
-        "analysis/bt1720_q2025_connected_domain_triples.py",
-        "exploration/w33_yukawa_kronecker_reduction_bridge.py"
-      ],
-      "result": "[0,1,1]"
-    },
-    {
-      "class": "linear_parameter",
-      "files": [
         "analysis/w33_equitable_partition.py",
         "exploration/PART_CCCXII_EQUITABLE_PARTITION_BRIDGE.py",
         "exploration/PART_CCXCVIII_EQUITABLE_PARTITION_BRIDGE.py",
         "scripts/deep_session_jul10_theorems_O_FF.py"
       ],
       "result": "[0,12,0]"
-    },
-    {
-      "class": "linear_parameter",
-      "files": [
-        "analysis/w33_pass332_integral_halfspin_lift.g",
-        "analysis/w33_pass336_integral_halfspin_lattices.g",
-        "analysis/w33_pass340_halfspin_discriminant_module.g",
-        "formal/.lake/packages/mathlib/Mathlib/Tactic/CategoryTheory/Coherence/Basic.lean"
-      ],
-      "result": "[0,2,4]"
     },
     {
       "class": "linear_parameter",
@@ -1727,16 +1749,6 @@
         "w33_paper.tex"
       ],
       "result": "[1,1,6]"
-    },
-    {
-      "class": "linear_parameter",
-      "files": [
-        "analysis/bt1720_q2025_connected_domain_triples.py",
-        "formal/.lake/packages/mathlib/Mathlib/MeasureTheory/Measure/Haar/MulEquivHaarChar.lean",
-        "formal/.lake/packages/mathlib/Mathlib/NumberTheory/ModularForms/QExpansion.lean",
-        "formal/.lake/packages/mathlib/Mathlib/Probability/Kernel/IonescuTulcea/Traj.lean"
-      ],
-      "result": "[1,2,2]"
     },
     {
       "class": "linear_parameter",
@@ -1861,36 +1873,6 @@
     {
       "class": "linear_parameter",
       "files": [
-        "analysis/bt1716_q2025_domain_chart_extractor.py",
-        "analysis/bt1720_q2025_connected_domain_triples.py",
-        "formal/.lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Complex/Arctan.lean",
-        "formal/.lake/packages/mathlib/Mathlib/FieldTheory/RatFunc/Luroth.lean"
-      ],
-      "result": "[2,1,2]"
-    },
-    {
-      "class": "linear_parameter",
-      "files": [
-        "analysis/bt1716_q2025_domain_chart_extractor.py",
-        "analysis/bt1720_q2025_connected_domain_triples.py",
-        "analysis/w33_pass333_outer_s3_lift.g",
-        "formal/.lake/packages/batteries/Batteries/Data/List/Basic.lean"
-      ],
-      "result": "[2,1,3]"
-    },
-    {
-      "class": "linear_parameter",
-      "files": [
-        "analysis/bt1716_q2025_domain_chart_extractor.py",
-        "analysis/bt1720_q2025_connected_domain_triples.py",
-        "formal/.lake/packages/mathlib/Mathlib/Data/List/Defs.lean",
-        "formal/.lake/packages/mathlib/Mathlib/Data/List/Permutation.lean"
-      ],
-      "result": "[2,3,1]"
-    },
-    {
-      "class": "linear_parameter",
-      "files": [
         "analysis/w33_pass286_sqrt21_found_retraction.py",
         "analysis/w33_pass294_paths_in_the_dual.py",
         "analysis/w33_pass301_is_the_4cycle_canonical.py",
@@ -1961,10 +1943,20 @@
     {
       "class": "linear_parameter",
       "files": [
+        "analysis/w33_pass1079_frame_action_rank32.g",
+        "analysis/w33_pass1081_frame_module_lattice.py",
+        "analysis/w33_pass1088_frame_adjacency_wedderburn.py",
+        "analysis/w33_pass1097_name_the_frame_quotients.g"
+      ],
+      "result": "[4,12,15]"
+    },
+    {
+      "class": "linear_parameter",
+      "files": [
         "analysis/BT790_csaszar_embedding.md",
         "analysis/w33_pass606_complete_twisted_snf.py",
         "exploration/w33_cyclic_142857_torus.py",
-        "formal/.lake/packages/batteries/Batteries/Data/List/Basic.lean"
+        "scripts/tomotope_toroidal_directional_split_bridge.py"
       ],
       "result": "[4,5,6]"
     },
@@ -2121,20 +2113,11 @@
     {
       "class": "linear_parameter",
       "files": [
-        "exploration/w33_yukawa_family_normal_form_bridge.py",
-        "formal/.lake/packages/mathlib/Mathlib/Data/Fin/Tuple/NatAntidiagonal.lean",
-        "scripts/w33_golay_lie_algebra.py"
+        "analysis/w33_pass332_integral_halfspin_lift.g",
+        "analysis/w33_pass336_integral_halfspin_lattices.g",
+        "analysis/w33_pass340_halfspin_discriminant_module.g"
       ],
-      "result": "[0,0,2]"
-    },
-    {
-      "class": "linear_parameter",
-      "files": [
-        "analysis/bt1716_q2025_domain_chart_extractor.py",
-        "analysis/bt1720_q2025_connected_domain_triples.py",
-        "formal/.lake/packages/mathlib/Mathlib/Data/List/Lattice.lean"
-      ],
-      "result": "[0,0,3]"
+      "result": "[0,2,4]"
     },
     {
       "class": "linear_parameter",
@@ -2144,15 +2127,6 @@
         "analysis/bt816_cubic_surface_flags_reconstructed.py"
       ],
       "result": "[1,10,16]"
-    },
-    {
-      "class": "linear_parameter",
-      "files": [
-        "analysis/w33_pass174_dual_discriminant_fixed_rail.py",
-        "analysis/w33_pass364_qr548_e8_phase_space.g",
-        "analysis/w33_pass366_qr137m_real_clifford_refinement_tower.g"
-      ],
-      "result": "[1,120,135]"
     },
     {
       "class": "linear_parameter",
@@ -2204,18 +2178,9 @@
       "files": [
         "analysis/bt1716_q2025_domain_chart_extractor.py",
         "analysis/bt1720_q2025_connected_domain_triples.py",
-        "formal/.lake/packages/mathlib/Mathlib/AlgebraicGeometry/AffineScheme.lean"
+        "analysis/w33_pass333_outer_s3_lift.g"
       ],
-      "result": "[2,2,1]"
-    },
-    {
-      "class": "linear_parameter",
-      "files": [
-        "analysis/bt1716_q2025_domain_chart_extractor.py",
-        "analysis/bt1720_q2025_connected_domain_triples.py",
-        "formal/.lake/packages/mathlib/MathlibTest/factors.lean"
-      ],
-      "result": "[2,2,3]"
+      "result": "[2,1,3]"
     },
     {
       "class": "linear_parameter",
@@ -2229,20 +2194,11 @@
     {
       "class": "linear_parameter",
       "files": [
-        "analysis/bt1716_q2025_domain_chart_extractor.py",
-        "analysis/bt1720_q2025_connected_domain_triples.py",
-        "formal/.lake/packages/mathlib/Mathlib/Data/List/Destutter.lean"
+        "analysis/bt1717_split_cayley_incidence_obstruction.py",
+        "analysis/w33_pass1039b_gaussian_base.g",
+        "manuscripts/tex/part17_gaussian_unification.tex"
       ],
-      "result": "[2,3,2]"
-    },
-    {
-      "class": "linear_parameter",
-      "files": [
-        "analysis/bt1716_q2025_domain_chart_extractor.py",
-        "analysis/bt1720_q2025_connected_domain_triples.py",
-        "formal/.lake/packages/mathlib/Mathlib/Data/List/Defs.lean"
-      ],
-      "result": "[2,3,3]"
+      "result": "[2,3,6]"
     },
     {
       "class": "linear_parameter",
@@ -2426,6 +2382,22 @@
     {
       "class": "linear_parameter",
       "files": [
+        "exploration/w33_yukawa_family_normal_form_bridge.py",
+        "scripts/w33_golay_lie_algebra.py"
+      ],
+      "result": "[0,0,2]"
+    },
+    {
+      "class": "linear_parameter",
+      "files": [
+        "analysis/bt1716_q2025_domain_chart_extractor.py",
+        "analysis/bt1720_q2025_connected_domain_triples.py"
+      ],
+      "result": "[0,0,3]"
+    },
+    {
+      "class": "linear_parameter",
+      "files": [
         "analysis/w33_frequency_bin_hashimoto_compiler.py",
         "analysis/w33_frequency_bin_lab_packet.py"
       ],
@@ -2482,6 +2454,14 @@
     {
       "class": "linear_parameter",
       "files": [
+        "analysis/w33_pass1043_which_we6_embedding.g",
+        "analysis/w33_pass174_dual_discriminant_fixed_rail.py"
+      ],
+      "result": "[1,135,120]"
+    },
+    {
+      "class": "linear_parameter",
+      "files": [
         "analysis/bt866_h2_oriented_irreducible_decomposition.py",
         "analysis/w33_pass163_two480s_character_decomposition.py"
       ],
@@ -2502,19 +2482,43 @@
         "analysis/w33_pass368_eisenstein_rank_parity_law.py"
       ],
       "result": "[1,27,36]"
+    },
+    {
+      "class": "linear_parameter",
+      "files": [
+        "analysis/bt1716_q2025_domain_chart_extractor.py",
+        "analysis/bt1720_q2025_connected_domain_triples.py"
+      ],
+      "result": "[1,3,0]"
+    },
+    {
+      "class": "linear_parameter",
+      "files": [
+        "analysis/bt1716_q2025_domain_chart_extractor.py",
+        "analysis/bt1720_q2025_connected_domain_triples.py"
+      ],
+      "result": "[1,3,1]"
+    },
+    {
+      "class": "linear_parameter",
+      "files": [
+        "analysis/bt1232_r3_evidence_gate.py",
+        "analysis/w33_pass828_coalescence_theorem.py"
+      ],
+      "result": "[1,4,9]"
     }
   ],
   "merge_list_by_class": {
     "code_parameter": 37,
-    "compound": 549,
+    "compound": 552,
     "integer": 2,
     "linear_parameter": 235,
     "sequence": 37
   },
-  "merge_list_size": 860,
-  "percent_colliding": 23.0,
+  "merge_list_size": 863,
+  "percent_colliding": 23.1,
   "reading": "A row is a CANDIDATE, not a verdict: the same integer recurs legitimately. The value of the list is that it is finite and ranked, so the corpus can be de-duplicated top-down rather than one accidental collision at a time.",
-  "scanned_files": 5724,
+  "scanned_files": 5816,
   "schema": "w33.rediscovery_sweep.v1",
   "top_files": [
     {
@@ -2534,12 +2538,12 @@
       "file": "analysis/w33_BREAKTHROUGH_81_master_synthesis_v4.py"
     },
     {
-      "collisions": 44,
-      "file": "analysis/bt1720_q2025_connected_domain_triples.py"
+      "collisions": 43,
+      "file": "analysis/bt1716_q2025_domain_chart_extractor.py"
     },
     {
       "collisions": 43,
-      "file": "analysis/bt1716_q2025_domain_chart_extractor.py"
+      "file": "analysis/bt1720_q2025_connected_domain_triples.py"
     },
     {
       "collisions": 40,
@@ -2622,6 +2626,10 @@
       "file": "analysis/w33_gkp_voa_bridge.py"
     },
     {
+      "collisions": 18,
+      "file": "analysis/w33_pass1045_e8_is_the_only_two_tower_type.py"
+    },
+    {
       "collisions": 17,
       "file": "analysis/w33_tower_figure_svg.py"
     },
@@ -2632,10 +2640,6 @@
     {
       "collisions": 15,
       "file": "analysis/2026-07-15_pass77_monster_2b_css_code.md"
-    },
-    {
-      "collisions": 15,
-      "file": "analysis/BT1204_holonet_milestone_dashboard.md"
     }
   ],
   "top_results": [
@@ -2672,6 +2676,14 @@
       "uncited_files": 20
     },
     {
+      "result": "[0,0,1]",
+      "uncited_files": 20
+    },
+    {
+      "result": "e7+witting",
+      "uncited_files": 20
+    },
+    {
       "result": "clifford+szilassi",
       "uncited_files": 19
     },
@@ -2696,19 +2708,19 @@
       "uncited_files": 19
     },
     {
-      "result": "[240,81,4]",
-      "uncited_files": 19
-    },
-    {
       "result": "[[240,81,4]]",
       "uncited_files": 19
     },
     {
-      "result": "[0,0,1]",
+      "result": "[240,81,4]",
       "uncited_files": 19
     },
     {
-      "result": "e7+witting",
+      "result": "e7+eisenstein",
+      "uncited_files": 19
+    },
+    {
+      "result": "leech+witting",
       "uncited_files": 19
     },
     {
@@ -2736,27 +2748,19 @@
       "uncited_files": 18
     },
     {
-      "result": "leech+witting",
-      "uncited_files": 18
-    },
-    {
       "result": "gkp+hesse",
       "uncited_files": 18
     },
     {
-      "result": "e7+eisenstein",
-      "uncited_files": 17
+      "result": "monster+witting",
+      "uncited_files": 18
     },
     {
-      "result": "[[66,13,3]]",
-      "uncited_files": 17
+      "result": "d4+e7",
+      "uncited_files": 18
     },
     {
       "result": "[66,13,3]",
-      "uncited_files": 17
-    },
-    {
-      "result": "monster+witting",
       "uncited_files": 17
     }
   ]

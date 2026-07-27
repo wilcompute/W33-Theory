@@ -45,7 +45,8 @@ OUT = ROOT / "RESULTS_INDEX.md"
 # staged file and then looked up in an index that had never heard of it. A guard
 # and an index that disagree are worse than either alone.
 sys.path.insert(0, str(ROOT / "scripts"))
-from check_rediscovery import RE_NAMED, RE_ROOT, compounds  # noqa: E402
+from check_rediscovery import (  # noqa: E402
+    RE_NAMED, RE_ROOT, compounds, noun_number_pairs)
 
 # corpus: the places results actually live (Pass 322 learned analysis/*.md and
 # AUDIT_*.md the hard way -- they were NOT in the old "index.html + .tex" rule).
@@ -257,6 +258,9 @@ def main():
         toks.update(RE_ROOT.findall(txt))
         # compounds (Pass 349): a pair of topics is a result
         toks.update(compounds(txt))
+        # noun-number pairs (Pass 1107): 1-2 digit integers are invisible to
+        # RE_INT, so a result like "maximum partial ovoid is 7" was unindexable.
+        toks.update(noun_number_pairs(txt))
 
         counts.update(toks)
         for t in toks:

@@ -88,6 +88,61 @@ RE_ATOM = re.compile(r"\b(?:" + "|".join(re.escape(a) for a in ATOMS) + r")\b",
                      re.IGNORECASE)
 
 
+
+# ---------------------------------------------------------------------------
+# NOUN-NUMBER PAIRS (Pass 1107).  Added after a real miss.
+#
+# Pass 1098 rediscovered two results BT818 already owned -- the maximum partial
+# ovoid of W(3,3) is 7, and 36 of the 40 contexts are simultaneously satisfiable.
+# The guard could not see either, and neither could the index, for a reason
+# sharper than "bare integers are noisy": RESULTS_INDEX's integer pattern is
+# `\d{3,9}`, so ONE- AND TWO-DIGIT INTEGERS ARE NEVER INDEXED AT ALL.  Pinning
+# `7` as a bare token would not help either, since it occurs in most files.
+#
+# What is distinctive is not the number but the number ATTACHED TO ITS NOUN.
+# "partial ovoid ... 7" and "36 ... contexts" are rare; "7" and "36" are not.
+# So a small vocabulary of geometry nouns is paired with any 1-3 digit integer
+# occurring within a short window, giving tokens like `ovoid@7`.
+#
+# Calibrated the same way as every other class here: the flag rate over the pass
+# witnesses is measured before this is enabled, not assumed.  See
+# scripts/calibrate_index_cut.py.
+GEOM_NOUNS = (
+    # DELIBERATELY NARROW.  The first version also included the generic nouns
+    # frame / block / context / orbital / suborbit / eigenvalue / valency.  Those
+    # words appear in nearly every file here, so pairing them with any nearby
+    # small integer pushed the measured flag rate from 30.9% to 39.9% -- nine
+    # points of noise for tokens that are not distinctive.  The nouns kept below
+    # name specific finite-geometry objects, and `ovoid@7` (the token that would
+    # have caught the Pass 1098 / BT818 collision) survives the narrowing.
+    "ovoid", "heptad", "tritangent", "double-six", "polar pair",
+    "partial spread", "hyperbolic line", "totally isotropic", "spread",
+)
+RE_NOUN = re.compile(r"(?i)\b(" + "|".join(re.escape(n) for n in GEOM_NOUNS) + r")\b")
+RE_SMALL = re.compile(r"(?<![\d.\w])(\d{1,3})(?!\d)(?!\.\d)")
+
+
+def noun_number_pairs(text: str) -> set[str]:
+    """Tokens `noun@n` for a geometry noun and every small integer near it.
+
+    A window is scanned around each noun occurrence rather than taking the first
+    number after it: regex alternation is non-overlapping, so a single pattern
+    silently drops the second and later numbers attached to the same noun, which
+    is exactly where the interesting one usually sits ("maximum partial ovoid has
+    size 7" -- the 7 is last, not first).
+    """
+    out: set[str] = set()
+    for m in RE_NOUN.finditer(text):
+        noun = m.group(1).lower().replace(" ", "-")
+        lo = max(0, m.start() - 30)
+        hi = min(len(text), m.end() + 30)
+        for d in RE_SMALL.finditer(text[lo:hi]):
+            n = int(d.group(1))
+            if n >= 2:                       # 0 and 1 carry no signal
+                out.add(f"{noun}@{n}")
+    return out
+
+
 def compounds(text: str) -> set[str]:
     """Co-occurring pairs of central objects, as sorted 'x+y' tokens."""
     from itertools import combinations
@@ -142,6 +197,8 @@ def results_in(text: str) -> set[str]:
     got |= {m for m in RE_ROOT.findall(text)}
     # compounds (Pass 349): a pair of topics is a result
     got |= compounds(text)
+    # noun-number pairs (Pass 1107): the number attached to its noun
+    got |= noun_number_pairs(text)
     return got - SKIP
 
 
