@@ -1,0 +1,92 @@
+{
+  "version": "2026-07-27",
+  "note": "Canonical alias registry for W33-Theory. Every named object must have exactly one entry here. QUARANTINED objects must not be used as axioms in new derivations.",
+  "objects": [
+    {
+      "canonical": "W33_point_carrier_D_eigenspace_11",
+      "aliases": ["trivial_mode", "constant_mode", "all-ones_eigenspace", "E_11"],
+      "dimension": 1,
+      "eigenvalue": 11,
+      "status": "confirmed",
+      "source_commit": "9fb912f6",
+      "projector": "P_11 = (D-I)(D+5I)/160"
+    },
+    {
+      "canonical": "W33_point_carrier_D_eigenspace_1",
+      "aliases": ["middle_mode", "24_dim_eigenspace", "E_1"],
+      "dimension": 24,
+      "eigenvalue": 1,
+      "status": "confirmed",
+      "source_commit": "9fb912f6",
+      "projector": "P_1 = -(D-11I)(D+5I)/60"
+    },
+    {
+      "canonical": "W33_point_carrier_D_eigenspace_minus5",
+      "aliases": ["conic_mode", "15_dim_eigenspace", "hyperbolic_mode", "E_minus5"],
+      "dimension": 15,
+      "eigenvalue": -5,
+      "status": "confirmed",
+      "source_commit": "9fb912f6",
+      "projector": "P_-5 = (D-11I)(D-I)/96"
+    },
+    {
+      "canonical": "W33_point_carrier_A_eigenspace_12",
+      "aliases": ["Perron_mode", "k-regular_eigenvalue", "A_12"],
+      "dimension": 1,
+      "eigenvalue": 12,
+      "status": "confirmed",
+      "note": "Adjacency matrix A eigenvalue; D = A - I so eigenvalue 12 -> D eigenvalue 11"
+    },
+    {
+      "canonical": "W33_point_carrier_A_eigenspace_2",
+      "aliases": ["A_2"],
+      "dimension": 24,
+      "eigenvalue": 2,
+      "status": "confirmed"
+    },
+    {
+      "canonical": "W33_point_carrier_A_eigenspace_minus4",
+      "aliases": ["A_minus4"],
+      "dimension": 15,
+      "eigenvalue": -4,
+      "status": "confirmed"
+    },
+    {
+      "canonical": "W33_false_cubic_eigenvalue_set",
+      "aliases": ["{-7,-1,5}_spectrum", "old_master_cubic_roots", "historical_eigenvalues"],
+      "dimension": "INVALID",
+      "eigenvalue": "INVALID",
+      "status": "QUARANTINED",
+      "source_commit": "9fb912f6",
+      "note": "p_old(t)=(t+1)((t+1)^2-36). p_old(D) has rank 40 — annihilates no eigenspace of D. Multiplicities {16,10,6} sum to 32 not 40."
+    },
+    {
+      "canonical": "W33_false_multiplicity_packet_32",
+      "aliases": ["32dim_packet", "16+10+6"],
+      "dimension": "INVALID",
+      "status": "QUARANTINED",
+      "note": "Historical fiction. No 32-dimensional eigenspace of D exists."
+    },
+    {
+      "canonical": "W33_Sp43_Steinberg_module",
+      "aliases": ["St_81", "Steinberg_81"],
+      "dimension": 81,
+      "status": "confirmed",
+      "note": "Steinberg module for Sp(4,3), dim = 3^4 = 81. Appears 3 times in cubic-map kernel."
+    },
+    {
+      "canonical": "W33_cubic_map_kernel",
+      "aliases": ["K_2195", "cubic_support_kernel"],
+      "dimension": 2195,
+      "status": "under_analysis",
+      "note": "Kernel of the 2240->45 cubic-support map. Contains St^{oplus 3} (243 dims). Residual 1952 dims under analysis."
+    },
+    {
+      "canonical": "W33_432_orbit",
+      "aliases": ["Steinberg_432_orbit"],
+      "size": 432,
+      "status": "under_analysis",
+      "note": "Three 432-orbits under Sp(4,3) carrying Steinberg-bearing structures. Stabilizer order = 25920/432 = 60. GAP IdGroup computation pending."
+    }
+  ]
+}
