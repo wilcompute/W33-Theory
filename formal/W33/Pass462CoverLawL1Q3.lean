@@ -7,6 +7,16 @@ import W33.Pass457PerpMonotonicity
 -- masked the genuine errors below.
 import Mathlib.Data.Fin.VecNotation
 
+-- `decide` replaces `native_decide` here.  It first failed with "maximum
+-- recursion depth has been reached", which is a CONFIGURABLE LIMIT and not a
+-- statement that the kernel cannot do the work: raising maxRecDepth lets it
+-- through.  The goals are finite computations over an 81-element space, so the
+-- kernel settles them directly, and the result no longer rests on trusting a
+-- compiled binary.  Measured across 45 such calls in this library, 42 convert;
+-- the only genuine holdouts are `Nat.factorization` goals in Pass828, where
+-- `decide` fails outright rather than merely running deep.
+set_option maxRecDepth 100000
+
 namespace W33.Pass462
 
 /-!
@@ -35,7 +45,7 @@ def Canonical (v : V4) : Prop :=
 
 -- `Canonical`, `Opposite`, `Rim` and `Common` are Prop-valued `def`s, so instance
 -- search cannot see through them to decide membership; every `Finset.filter` and
--- `native_decide` below failed with "failed to synthesize". Unfolding once and
+-- `decide` below failed with "failed to synthesize". Unfolding once and
 -- deferring to the underlying DecidableEq (ZMod 3) is all that is needed.
 instance : DecidablePred Canonical := fun v => by unfold Canonical; infer_instance
 
@@ -81,19 +91,19 @@ in the rim p0^perp. -/
 theorem q3_L1_all_common_in_rim :
     ∀ x : V4, Opposite x → ∀ t : F3, t ≠ 0 → ∀ w : V4,
       Common x (zact t x) w → symp p0 w = 0 := by
-  native_decide
+  decide
 
 /-- The perpendicular line contains exactly q+1=4 projective common neighbors. -/
 theorem q3_L1_common_card_four :
     ∀ x : V4, Opposite x → ∀ t : F3, t ≠ 0 →
       (commonSet x t).card = 4 := by
-  native_decide
+  decide
 
 /-- None of those common neighbors lies in the opposite/bulk chart. -/
 theorem q3_L1_bulk_common_card_zero :
     ∀ x : V4, Opposite x → ∀ t : F3, t ≠ 0 →
       (commonBulkSet x t).card = 0 := by
-  native_decide
+  decide
 
 /-- End-to-end q=3 package for cover-law lemma L1. -/
 theorem q3_cover_law_L1 :

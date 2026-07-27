@@ -35,19 +35,19 @@ def weightedTriple : List Int → List Int → List Int → Int
 
 theorem minus_is_sign_twist :
     List.zipWith (fun a b : Int => a*b) outerSign chi81Plus = chi81Minus := by
-  native_decide
+  decide
 
 theorem no_81Plus_in_E8_roots :
-    weightedTriple classSizes chi81Plus e8RootCharacter = 0 := by native_decide
+    weightedTriple classSizes chi81Plus e8RootCharacter = 0 := by decide
 
 theorem no_81Minus_in_E8_roots :
-    weightedTriple classSizes chi81Minus e8RootCharacter = 0 := by native_decide
+    weightedTriple classSizes chi81Minus e8RootCharacter = 0 := by decide
 
 theorem no_81Plus_in_E8_root_lines :
-    weightedTriple classSizes chi81Plus e8RootLineCharacter = 0 := by native_decide
+    weightedTriple classSizes chi81Plus e8RootLineCharacter = 0 := by decide
 
 theorem no_81Minus_in_E8_root_lines :
-    weightedTriple classSizes chi81Minus e8RootLineCharacter = 0 := by native_decide
+    weightedTriple classSizes chi81Minus e8RootLineCharacter = 0 := by decide
 
 theorem inner_frame_dimension :
     1 + 3*15 + 2*20 + 2*24 + 2*30 + 2*30 + 60 + 64 + 2*81 = 540 := by norm_num
@@ -66,6 +66,6 @@ theorem steinberg_induction_dimension : 81 + 81 = 2*81 := by norm_num
 def steinbergPlusHash : String := "1455f33e219d8464a7fac74ca693f31dfa1cf01548c205c7fa246a4802132213"
 def steinbergMinusHash : String := "66476d71e75e52b3e06c3ed4b5594e63a095681d14cd3847d88f334fe225b052"
 
-theorem hashes_are_distinct : steinbergPlusHash ≠ steinbergMinusHash := by native_decide
+theorem hashes_are_distinct : steinbergPlusHash ≠ steinbergMinusHash := by decide
 
 end W33.Pass1096

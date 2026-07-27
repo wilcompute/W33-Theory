@@ -35,7 +35,7 @@ theorem constantOddBase_period :
      constantOddBase 13, constantOddBase 15, constantOddBase 17,
      constantOddBase 19]
       = [6, 2, 4, 2, 4, 2, 4, 2, 4, 2] := by
-  native_decide
+  decide
 
 /-- The lookup depends only on the residue modulo 20. -/
 theorem constantOddBase_mod (m : Nat) :

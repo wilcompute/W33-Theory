@@ -28,14 +28,14 @@ theorem oddPeriod_first_seven :
     [oddPeriod 1, oddPeriod 2, oddPeriod 3, oddPeriod 4,
      oddPeriod 5, oddPeriod 6, oddPeriod 7]
       = [312, 1560, 1560, 7800, 7800, 39000, 39000] := by
-  native_decide
+  decide
 
 /-- The recurrence is equivalent to the closed natural-number exponent form
 on the checked precision range. This finite theorem is deliberately separate
 from the local-field order-lifting hypothesis. -/
 theorem oddPeriod_closed_first_seven :
     ∀ k ∈ Finset.Icc 1 7, oddPeriod k = 312 * 5 ^ (k / 2) := by
-  native_decide
+  decide
 
 /-- Explicit interface for the companion-matrix order theorem. -/
 structure OddPeriodLiftCertificate where

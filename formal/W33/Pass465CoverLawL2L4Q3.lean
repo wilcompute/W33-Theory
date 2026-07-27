@@ -1,5 +1,15 @@
 import W33.Pass462CoverLawL1Q3
 
+-- `decide` replaces `native_decide` here.  It first failed with "maximum
+-- recursion depth has been reached", which is a CONFIGURABLE LIMIT and not a
+-- statement that the kernel cannot do the work: raising maxRecDepth lets it
+-- through.  The goals are finite computations over an 81-element space, so the
+-- kernel settles them directly, and the result no longer rests on trusting a
+-- compiled binary.  Measured across 45 such calls in this library, 42 convert;
+-- the only genuine holdouts are `Nat.factorization` goals in Pass828, where
+-- `decide` fails outright rather than merely running deep.
+set_option maxRecDepth 100000
+
 namespace W33.Pass465
 
 /-!
@@ -23,7 +33,7 @@ def SameFiber (x y : V4) : Prop := ∃ t : F3, y = zact t x
 
 -- Same cause as the Pass 462 instances: a Prop-valued `def` is opaque to instance
 -- search, so the existential over the Fintype F3 is not seen as decidable and both
--- `Finset.filter` and `native_decide` fail. Unfold once, then Fintype.decidableExistsFintype.
+-- `Finset.filter` and `decide` fail. Unfold once, then Fintype.decidableExistsFintype.
 instance (x : V4) : DecidablePred (SameFiber x) :=
   fun y => by unfold SameFiber; infer_instance
 
@@ -56,7 +66,7 @@ theorem q3_L2_common_split_one_three :
       symp x y ≠ 0 → ¬ SameFiber x y →
       (pairCommonRimSet x y).card = 1 ∧
       (pairCommonBulkSet x y).card = 3 := by
-  native_decide
+  decide
 
 /-- L3 at q=3: a collinear bulk pair has one rim and one bulk common neighbor,
 so the induced bulk parameter is lambda=q-2=1. -/
@@ -65,7 +75,7 @@ theorem q3_L3_collinear_split_one_one :
       symp x y = 0 →
       (pairCommonRimSet x y).card = 1 ∧
       (pairCommonBulkSet x y).card = 1 := by
-  native_decide
+  decide
 
 /-- Every q=3 central-elation fiber has q=3 points and is independent in the
 bulk collinearity graph. -/
@@ -73,7 +83,7 @@ theorem q3_fiber_card_three_independent :
     ∀ x : V4, Opposite x →
       (fiberSet x).card = 3 ∧
       ∀ y ∈ fiberSet x, ∀ z ∈ fiberSet x, y ≠ z → symp y z ≠ 0 := by
-  native_decide
+  decide
 
 /-- L4 at q=3: a nontrivial fiber mate has exactly q^2-1=8 bulk neighbors;
 every one is nonadjacent to the original point, lies outside its fiber, and is
@@ -83,7 +93,7 @@ theorem q3_L4_c3_eight_a3_zero :
       (bulkNeighborSet (zact t x)).card = 8 ∧
       ∀ w ∈ bulkNeighborSet (zact t x),
         symp x w ≠ 0 ∧ ¬ SameFiber x w ∧ BulkDistanceTwo x w := by
-  native_decide
+  decide
 
 /-- End-to-end q=3 package extending Pass 462 from L1 through L4. -/
 theorem q3_cover_law_L1_L4 :
