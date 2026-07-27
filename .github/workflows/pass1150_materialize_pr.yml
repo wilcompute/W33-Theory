@@ -46,14 +46,15 @@ jobs:
           import json
           p='data/w33_shifted_adjacency_descendant_audit.json'
           d=json.load(open(p,encoding='utf-8'))
-          print(json.dumps({
-            'summary': d.get('summary'),
-            'violations': d.get('violations', []),
-          }, indent=2))
+          print(json.dumps({'summary':d.get('summary'),'violations':d.get('violations',[])},indent=2))
           PY
           exit $rc
-      - name: Run focused regressions
-        run: pytest -q tests/test_w33_pass1150_migration.py tests/test_pass1140_shifted_adjacency_publication_repair.py tests/test_w33_pass1148_1152.py
+      - name: Test Pass 1150 migration semantics
+        run: pytest -q tests/test_w33_pass1150_migration.py
+      - name: Test Pass 1140 publication repair compatibility
+        run: pytest -q tests/test_pass1140_shifted_adjacency_publication_repair.py
+      - name: Test Passes 1148-1152 exact algebra
+        run: pytest -q tests/test_w33_pass1148_1152.py
       - name: Commit generated migration delta
         run: |
           git config user.name 'github-actions[bot]'
