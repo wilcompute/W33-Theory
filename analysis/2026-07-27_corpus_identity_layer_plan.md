@@ -1,123 +1,58 @@
-# Step 5 — Corpus Identity Layer: 540-Classifier, Alias Registry, Pass Renumbering
+# Step 5 — Corpus Identity Layer: Executed
 
 **Date:** 2026-07-27  
-**Problem:** The repository's primary bottleneck is information architecture.
-Three specific issues:
-1. The 540-object classifier has not been run to completion; its ambiguity
-   report is uncommitted.
-2. The canonical alias registry is not frozen — duplicate names obscure
-   which theorems and definitions are actually distinct.
-3. Pass artifacts 1120–1131 have colliding names; they must be renumbered.
+**Status:** ACTIVE AND ENFORCED
 
-## The 540 objects
+## The two 540-object sets
 
-The 540 objects likely correspond to one or more of:
-- 540 = `|W(3,3)|` isotropic points counted with some multiplicity
-- 540 = the number of flags (incident point-line pairs) in W(3,3)
-  (40 points × 12 lines through each point / 2 = 240? — recheck)
-- 540 = `|Sp(4,3)| / 48 = 540` (a specific orbit)
-- 540 = the total in another combinatorial structure related to the project
+There are two distinct 540-element sets because both the point and line
+collinearity graphs have 40 vertices of non-neighbor degree 27:
 
-**Clarification task:** The first action of the corpus layer is to commit
-a one-line definition of what the 540 objects are, with a pointer to the
-computation that produces them.
+- `{540:point-nonedge}`: `40*27/2=540` unordered noncollinear point pairs;
+- `{540:line-nonedge}`: `40*27/2=540` unordered disjoint/skew line pairs.
 
-## Alias registry specification
+The identity `51840=540*96` applies to both and identifies neither. An explicit
+`{540:both}` tag declares that a local passage deliberately compares them.
 
-The canonical alias registry lives at `data/ALIAS_REGISTRY.json`.
-Every named object in the repository must have exactly one canonical name
-and a list of known aliases. Format:
+## Occurrence-level classifier
 
-```json
-{
-  "version": "2026-07-27",
-  "objects": [
-    {
-      "canonical": "W33_point_carrier_D_eigenspace_11",
-      "aliases": ["trivial_mode", "constant_mode", "all-ones_eigenspace"],
-      "dimension": 1,
-      "eigenvalue": 11,
-      "status": "confirmed",
-      "source_commit": "9fb912f6"
-    },
-    {
-      "canonical": "W33_point_carrier_D_eigenspace_1",
-      "aliases": ["middle_mode", "24_dim_eigenspace"],
-      "dimension": 24,
-      "eigenvalue": 1,
-      "status": "confirmed",
-      "source_commit": "9fb912f6"
-    },
-    {
-      "canonical": "W33_point_carrier_D_eigenspace_minus5",
-      "aliases": ["conic_mode", "15_dim_eigenspace", "hyperbolic_mode"],
-      "dimension": 15,
-      "eigenvalue": -5,
-      "status": "confirmed",
-      "source_commit": "9fb912f6"
-    },
-    {
-      "canonical": "W33_false_cubic_eigenspace_set",
-      "aliases": ["{-7,-1,5}_spectrum", "old_master_cubic_roots", "32dim_packet"],
-      "dimension": "INVALID",
-      "eigenvalue": "INVALID",
-      "status": "QUARANTINED",
-      "source_commit": "9fb912f6",
-      "note": "Historical fiction. p_old(D) has rank 40; annihilates no eigenspace."
-    }
-  ]
-}
-```
+`scripts/tag_540_disambiguation.py` classifies each literal occurrence rather than
+assigning one majority label to an entire file. It:
 
-## Pass 1120–1131 renumbering plan
+1. ignores the `540` embedded inside the tag syntax itself;
+2. uses line-local explicit tags and vocabulary;
+3. reports files containing both objects as `mixed-explicit`;
+4. exits nonzero in strict mode for a new unresolved occurrence.
 
-The collision among Pass artifacts 1120–1131 must be resolved before any
-new theorem can safely cite a Pass number. Resolution protocol:
+The line / point / mixed regression fixture passes with zero ambiguity. GitHub
+Actions runs the classifier over the complete live corpus and writes
+`data/BT1634_540_audit_results.json`.
 
-1. List all artifacts currently labeled Pass 1120–1131:
-   ```
-   grep -r 'Pass 11[2-3][0-9]' . --include='*.tex' --include='*.md' -l
-   ```
-2. For each duplicate canonical content, determine which version is primary
-   (earlier commit date wins if content is identical; mathematical priority
-   wins if content differs).
-3. Renumber colliding artifacts to Pass 1132+ (next available block).
-4. Update all back-references in `w33_paper.tex` and `photonic_holonet.tex`.
-5. Commit the renumbering map to `data/PASS_RENUMBER_MAP.json`.
+## Namespace registry
 
-## 540-classifier run specification
+`data/w33_pass_namespace_registry_v2.json` establishes:
 
-```python
-# Script: analysis/w33_540_classifier.py (to be written next)
-# Input:  the 540 objects (source to be confirmed — see above)
-# Output: data/CLASSIFIER_2026_07_27_540_ambiguity_report.json
-# Steps:
-#   1. Load the 540 objects from their canonical source
-#   2. Classify each by:
-#      a. Which W(3,3) eigenspace it projects into (via P_11, P_1, P_-5)
-#      b. Whether it appears in the quarantine scanner output
-#      c. Whether its Pass label is in the collision range 1120-1131
-#   3. Flag all ambiguous objects (projections disagree with stored label)
-#   4. Freeze canonical labels for unambiguous objects
-#   5. Write ambiguity report
-```
+- Passes 1120–1124: canonical merged glue track;
+- Passes 1125–1128: canonical merged filter/carrier track;
+- Passes 1132–1136: this exact execution release.
 
-## Priority ordering
+Draft PR #162's branch-local 1120/1121 labels are provisional and noncanonical.
+Its exact class-algebra and cubic-incidence content is imported into Pass 1135
+without importing the collided numbers.
 
-| Priority | Task | Blocking what |
-|---|---|---|
-| 1 | Define the 540 objects precisely | All of Step 5 |
-| 2 | Freeze ALIAS_REGISTRY.json | Prevents new alias drift |
-| 3 | Run quarantine scanner, commit JSON | Step 1 output |
-| 4 | Renumber Pass 1120–1131 | Future theorem citations |
-| 5 | Run 540-classifier, commit ambiguity report | Final corpus audit |
+## Alias registry
 
-## Status
+`data/ALIAS_REGISTRY.json` now records the corrected three eigenspaces, the
+retracted cubic packet, the two distinct 540 objects, the S5 stabilizer class, the
+45-support image `1+20+24`, and the complete 2195-dimensional kernel.
 
-- [x] Alias registry format specified (this document)
-- [x] Pass renumbering protocol specified
-- [x] 540-classifier specification written
-- [ ] 540-object source confirmed
-- [ ] ALIAS_REGISTRY.json frozen and committed
-- [ ] 540-classifier executed
-- [ ] Pass 1120–1131 renumbered
+## Enforcement
+
+Pre-commit now fails on:
+
+- a new unregistered descendant of the false shifted-adjacency cubic;
+- a changed file with an ambiguous 540 occurrence;
+- the known incorrect `S_min` formula.
+
+Legacy full-corpus ambiguity remains visible in the generated report but does not
+block unrelated changes; changed files are held to the strict rule.
