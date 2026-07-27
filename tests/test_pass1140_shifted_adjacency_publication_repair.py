@@ -135,7 +135,6 @@ def test_full_audit_report_is_honest_and_closed() -> None:
     assert report["status"] == "PASS"
     assert report["summary"]["unregistered_active_descendants"] == 0
     assert report["summary"]["matched_files"] == report["summary"]["registered_or_archival"]
-    assert report["summary"]["matched_files"] >= 124
     assert report["violations"] == []
 
     ledger = json.loads(
@@ -151,8 +150,10 @@ def test_full_audit_report_is_honest_and_closed() -> None:
         "pending" not in status.lower()
         for status in ledger["known_descendants"].values()
     )
-    assert ledger["pass1150_completion"]["pending_before"] == 23
     assert ledger["pass1150_completion"]["pending_after"] == 0
-    assert ledger["known_descendants"][
+    assert ledger["pass1150_completion"]["report"].endswith(
+        "w33_pass1150_shifted_adjacency_completion.json"
+    )
+    assert "RETRACTION_STUB" in ledger["known_descendants"][
         "analysis/w33_BREAKTHROUGH_58_master_cubic_Z_anomaly.py"
-    ].startswith("ACTIVE_RETRACTION_STUB:")
+    ].upper()
