@@ -1,160 +1,193 @@
 #!/usr/bin/env python3
-"""tag_540_disambiguation.py
+"""Pass 1136 exact occurrence-level disambiguation for the two 540-object sets.
 
-Automated tagger and checker for the two 540s of W(3,3).
-
-Usage:
-  # Classify all corpus files and print report:
-  python scripts/tag_540_disambiguation.py
-
-  # Check a specific file for missing tags (pre-commit mode):
-  python scripts/tag_540_disambiguation.py --check-only file1.md file2.tex
-
-  # Tag a specific file in-place (adds {540:line-nonedge} or {540:point-nonedge}):
-  python scripts/tag_540_disambiguation.py --tag-inplace file1.md
+Unlike the v1 whole-file score, v2 classifies each occurrence inside a bounded
+window. A file that discusses both objects is therefore reported as mixed rather
+than accidentally assigned to whichever vocabulary dominates globally.
 """
-import re, sys, os, argparse
+from __future__ import annotations
+
+import argparse
+from collections import Counter
+import json
+import os
 from pathlib import Path
+import re
 
-# ── Classification signals ─────────────────────────────────────────────────────
-LINE_NONEDGE_SIGNALS = [
-    r'\bframe\b', r'\bcube\b', r'skew.pair', r'skew pair',
-    r'BT773', r'540.cube', r'frame.module', r'pi_540',
-    r'3A1', r'C2.*S4', r'O_h', r'frame.action', r'frame.stabiliser',
-    r'frame stabilizer', r'540:line-nonedge',
-    r'\bframes\b',  # plural
-]
-POINT_NONEDGE_SIGNALS = [
-    r'noncollinear.point', r'point.pair', r'mu=4', r'\bmu\b.*4',
-    r'SRG\(40,12,2,4\)', r'bt1203', r'mu_distribution',
-    r'non-adjacent.point', r'540:point-nonedge',
-    r'point.non.edge',
-]
+ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_OUT = ROOT / "data" / "BT1634_540_audit_results.json"
+EXTENSIONS = {".md", ".tex", ".py", ".json", ".txt", ".csv", ".jsonl"}
+WINDOW = 180
 
-# ── Known explicit aliases (from corpus audit, Pass 1128) ──────────────────────
+LINE_SIGNALS = {
+    "frame": r"\bframes?\b", "cube": r"\bcubes?\b", "skew": r"skew[-_ ]?(?:pair|line)",
+    "line_nonedge": r"line[-_ ]?nonedge", "three_A1": r"3A1", "Oh": r"O_h|O\\_h",
+    "chart": r"\bchart\b", "line_stabilizer": r"line.{0,30}stabili[sz]er",
+    "BT773": r"BT773", "root_triples_alias": r"root[_ -]?triples",
+}
+POINT_SIGNALS = {
+    "noncollinear_point": r"noncollinear.{0,20}point", "point_pair": r"point[-_ ]?pair",
+    "point_nonedge": r"point[-_ ]?nonedge|point.{0,12}non[- -]?edge", "mu4": r"(?:mu|\\mu)\s*[=:]\s*4",
+    "srg": r"SRG\s*\(\s*40\s*,\s*12\s*,\s*2\s*,\s*4\s*\)",
+    "mu_distribution": r"mu[_ -]?distribution", "BT1203": r"BT1203|bt1203",
+}
+TAGS = {
+    "line-nonedge": "{540:line-nonedge}",
+    "point-nonedge": "{540:point-nonedge}",
+    "both": "{540:both}",
+}
 ALIAS_MAP = {
-    'BT773':  'line-nonedge',   # "540 cubes, one per 3A1 involution"
-    'bt1203': 'point-nonedge',  # mu_distribution {4: 540}
-    'bt1205': 'line-nonedge',   # "root_triples" — sixth alias, confirmed Pass 1128
+    "bt773": "line-nonedge",
+    "bt1203": "point-nonedge",
+    "bt1205": "line-nonedge",
 }
 
-def score_file(path: str) -> tuple:
-    """Returns (line_score, point_score, tag_present, existing_tag) for a file."""
-    try:
-        text = Path(path).read_text(errors='replace').lower()
-    except Exception:
-        return 0, 0, False, None
 
-    # Check if already tagged
-    if '540:line-nonedge' in text:
-        return 99, 0, True, 'line-nonedge'
-    if '540:point-nonedge' in text:
-        return 0, 99, True, 'point-nonedge'
+def signal_hits(window: str, signals: dict[str, str]) -> list[str]:
+    return [name for name, pattern in signals.items() if re.search(pattern, window, re.I | re.S)]
 
-    # Check if this file is a known alias source
+
+def classify_occurrence(text: str, start: int, end: int, path: str) -> dict:
+    line_start = text.rfind("\n", 0, start) + 1
+    line_end = text.find("\n", end)
+    if line_end < 0:
+        line_end = len(text)
+    local_line = text[line_start:line_end]
+    lo, hi = max(0, start - WINDOW), min(len(text), end + WINDOW)
+    window = text[lo:hi]
+
+    explicit = [name for name, tag in TAGS.items() if tag.lower() in local_line.lower()]
+    signal_window = local_line if local_line.strip() else window
+    line_hits = signal_hits(signal_window, LINE_SIGNALS)
+    point_hits = signal_hits(signal_window, POINT_SIGNALS)
     basename = os.path.basename(path).lower()
-    for key, tag in ALIAS_MAP.items():
-        if key.lower() in basename or key.lower() in text[:200]:
-            return (10, 0) if tag == 'line-nonedge' else (0, 10), True, tag
+    alias = next((value for key, value in ALIAS_MAP.items() if key in basename), None)
 
-    line_score  = sum(1 for sig in LINE_NONEDGE_SIGNALS  if re.search(sig, text, re.I))
-    point_score = sum(1 for sig in POINT_NONEDGE_SIGNALS if re.search(sig, text, re.I))
-    return line_score, point_score, False, None
+    if "both" in explicit or ("line-nonedge" in explicit and "point-nonedge" in explicit):
+        category = "both"
+        reason = "explicit_tag"
+    elif "line-nonedge" in explicit:
+        category, reason = "line-nonedge", "explicit_tag"
+    elif "point-nonedge" in explicit:
+        category, reason = "point-nonedge", "explicit_tag"
+    elif alias:
+        category, reason = alias, "canonical_alias"
+    elif line_hits and not point_hits:
+        category, reason = "line-nonedge", "local_vocabulary"
+    elif point_hits and not line_hits:
+        category, reason = "point-nonedge", "local_vocabulary"
+    elif line_hits and point_hits:
+        category, reason = "ambiguous", "conflicting_local_vocabulary"
+    else:
+        category, reason = "ambiguous", "no_local_object_vocabulary"
+    line_number = text.count("\n", 0, start) + 1
+    return {
+        "line": line_number,
+        "category": category,
+        "reason": reason,
+        "line_signals": line_hits,
+        "point_signals": point_hits,
+        "snippet": re.sub(r"\s+", " ", text[max(0, start-90):min(len(text), end+90)]).strip(),
+    }
 
-def classify(path: str) -> str:
-    """Returns 'line-nonedge', 'point-nonedge', 'ambiguous', or 'no-540'."""
+
+def audit_file(path: Path, root: Path) -> dict | None:
     try:
-        text = Path(path).read_text(errors='replace')
-    except Exception:
-        return 'no-540'
-    if '540' not in text:
-        return 'no-540'
-    line_score, point_score, tagged, existing = score_file(path)
-    if tagged:
-        return existing
-    if line_score > 0 and point_score == 0:
-        return 'line-nonedge'
-    if point_score > 0 and line_score == 0:
-        return 'point-nonedge'
-    if line_score == 0 and point_score == 0:
-        return 'ambiguous'  # mentions 540 but no distinguishing context
-    if line_score >= 2 * point_score:
-        return 'line-nonedge'  # strong majority
-    if point_score >= 2 * line_score:
-        return 'point-nonedge'
-    return 'ambiguous'
+        text = path.read_text(errors="replace")
+    except OSError:
+        return None
+    tag_spans = [m.span() for m in re.finditer(r"\{540:(?:line-nonedge|point-nonedge|both)\}", text, re.I)]
+    occurrences = []
+    for match in re.finditer(r"(?<!\d)540(?!\d)", text):
+        if any(lo <= match.start() < hi for lo, hi in tag_spans):
+            continue
+        occurrences.append(classify_occurrence(text, match.start(), match.end(), path.as_posix()))
+    if not occurrences:
+        return None
+    cats = {x["category"] for x in occurrences}
+    if "ambiguous" in cats:
+        file_category = "ambiguous"
+    elif cats == {"line-nonedge"}:
+        file_category = "line-nonedge"
+    elif cats == {"point-nonedge"}:
+        file_category = "point-nonedge"
+    else:
+        file_category = "mixed-explicit"
+    return {
+        "path": path.resolve().relative_to(root.resolve()).as_posix(),
+        "category": file_category,
+        "occurrence_count": len(occurrences),
+        "occurrences": occurrences,
+    }
 
-def check_only_mode(files):
-    """Pre-commit mode: warn if any file mentions 540 without a disambiguation tag."""
-    untagged = []
-    for f in files:
-        if not os.path.isfile(f):
-            continue
-        try:
-            text = Path(f).read_text(errors='replace')
-        except Exception:
-            continue
-        if '540' not in text:
-            continue
-        if '540:line-nonedge' in text or '540:point-nonedge' in text:
-            continue
-        # Find line numbers mentioning 540
-        lines = [(i+1, l) for i, l in enumerate(text.splitlines()) if '540' in l]
-        untagged.append((f, lines))
-    if untagged:
-        print("WARNING: Files mention '540' without disambiguation tag:")
-        for f, lns in untagged:
-            print(f"  {f}:")
-            for lineno, line in lns[:3]:
-                print(f"    line {lineno}: {line.strip()[:80]}")
-        print("  Add {{540:line-nonedge}} or {{540:point-nonedge}} near each mention.")
-        print("  See BT1628_540_disambiguation.py for the canonical vocabulary.")
-        # Warning only, not fatal (--check-only is advisory)
-    return len(untagged)
 
-def main():
+def iter_files(root: Path):
+    for path in sorted(root.rglob("*")):
+        if not path.is_file() or path.suffix.lower() not in EXTENSIONS:
+            continue
+        if any(part in {".git", ".pytest_cache", "__pycache__"} for part in path.parts):
+            continue
+        yield path
+
+
+def audit(root: Path, selected: list[Path] | None = None) -> dict:
+    files = selected if selected is not None else list(iter_files(root))
+    records = []
+    for path in files:
+        rec = audit_file(path, root)
+        if rec is not None:
+            records.append(rec)
+    counts = Counter(r["category"] for r in records)
+    occurrence_counts = Counter(o["category"] for r in records for o in r["occurrences"])
+    total = len(records)
+    ambiguous = counts["ambiguous"]
+    return {
+        "schema": "w33.540_occurrence_audit.v2",
+        "status": "PASS" if ambiguous == 0 else "NEEDS_TAGGING",
+        "object_definitions": {
+            "line-nonedge": "540 unordered disjoint/skew line pairs; frame/cube chart carrier",
+            "point-nonedge": "540 unordered noncollinear point pairs in SRG(40,12,2,4)",
+        },
+        "file_counts": dict(sorted(counts.items())),
+        "occurrence_counts": dict(sorted(occurrence_counts.items())),
+        "files_mentioning_540": total,
+        "ambiguity_rate_percent": 0.0 if total == 0 else round(100.0 * ambiguous / total, 6),
+        "target_below_10_percent": total > 0 and 100.0 * ambiguous / total < 10.0,
+        "records": records,
+    }
+
+
+def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument('files', nargs='*', help='Files to check (pre-commit mode)')
-    parser.add_argument('--check-only', action='store_true')
-    parser.add_argument('--tag-inplace', action='store_true')
-    parser.add_argument('--corpus-dir', default='.', help='Root directory for corpus scan')
+    parser.add_argument("files", nargs="*")
+    parser.add_argument("--root", default=str(ROOT))
+    parser.add_argument("--json-out", nargs="?", const=str(DEFAULT_OUT))
+    parser.add_argument("--check-only", action="store_true")
+    parser.add_argument("--strict", action="store_true", help="exit 1 when any occurrence is ambiguous")
     args = parser.parse_args()
+    root = Path(args.root)
+    selected = [Path(x) for x in args.files] if args.files else None
+    result = audit(root, selected)
+    if args.json_out:
+        out = Path(args.json_out)
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    ambiguous_records = [r for r in result["records"] if r["category"] == "ambiguous"]
+    for record in ambiguous_records:
+        print(f"ERROR: {record['path']} has ambiguous 540 occurrence(s)")
+        for occurrence in record["occurrences"]:
+            if occurrence["category"] == "ambiguous":
+                print(f"  line {occurrence['line']}: {occurrence['snippet'][:180]}")
+        print("  Add {540:line-nonedge}, {540:point-nonedge}, or {540:both} in the local paragraph.")
+    if not args.check_only:
+        print(json.dumps({
+            "status": result["status"],
+            "file_counts": result["file_counts"],
+            "ambiguity_rate_percent": result["ambiguity_rate_percent"],
+        }, indent=2))
+    if args.strict and ambiguous_records:
+        raise SystemExit(1)
 
-    if args.check_only and args.files:
-        n = check_only_mode(args.files)
-        sys.exit(0)  # Advisory: always exit 0
 
-    # Full corpus scan mode
-    root = Path(args.corpus_dir)
-    results = {'line-nonedge': [], 'point-nonedge': [], 'ambiguous': [], 'no-540': []}
-    extensions = {'.md', '.tex', '.py', '.json', '.txt'}
-
-    for p in sorted(root.rglob('*')):
-        if p.suffix not in extensions:
-            continue
-        if any(part.startswith('.') for part in p.parts):
-            continue
-        cat = classify(str(p))
-        results[cat].append(str(p.relative_to(root)))
-
-    print(f"\n── 540 Disambiguation Corpus Audit ──")
-    print(f"Line-nonedge {'{540:line-nonedge}'}: {len(results['line-nonedge'])} files")
-    print(f"Point-nonedge {'{540:point-nonedge}'}: {len(results['point-nonedge'])} files")
-    print(f"Ambiguous (need manual tag): {len(results['ambiguous'])} files")
-    print(f"No 540 mention: {len(results['no-540'])} files")
-
-    if results['ambiguous']:
-        print(f"\nAmbiguous files requiring manual tagging:")
-        for f in results['ambiguous'][:20]:
-            print(f"  {f}")
-        if len(results['ambiguous']) > 20:
-            print(f"  ... and {len(results['ambiguous'])-20} more")
-
-    total_540 = len(results['line-nonedge']) + len(results['point-nonedge']) + len(results['ambiguous'])
-    if total_540 > 0:
-        pct_ambiguous = 100 * len(results['ambiguous']) / total_540
-        print(f"\nAmbiguity rate: {pct_ambiguous:.1f}% of files mentioning 540")
-        print(f"Target: <10% (currently {'✓ GOOD' if pct_ambiguous < 10 else '✗ NEEDS WORK'})")
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
