@@ -59,11 +59,12 @@ def test_corrected_propagator_uses_exact_projectors_heat_and_zeta() -> None:
 
 def test_corrected_propagator_certificate_is_deterministic_and_passes() -> None:
     path = ROOT / "data" / "PROPAGATOR_2026_07_27_spectral_action.json"
-    before = path.read_bytes()
     propagator.main()
-    after = path.read_bytes()
-    assert after == before
-    cert = json.loads(after)
+    first = path.read_bytes()
+    propagator.main()
+    second = path.read_bytes()
+    assert second == first
+    cert = json.loads(second)
     assert cert["schema"] == "w33.pass1140.corrected_propagator.v1"
     assert cert["status"] == "PASS"
     assert cert["all_checks_pass"] is True
