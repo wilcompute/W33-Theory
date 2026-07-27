@@ -44,3 +44,4 @@ import W33.Pass1018PencilRigidity
 import W33.Pass1063SignedLiftObstruction
 import W33.Pass1074SchurCocycleExtension
 import W33.Pass1091FrameOrbitalIntertwiner
+import W33.Pass1096CharacterHesseE8Lock
