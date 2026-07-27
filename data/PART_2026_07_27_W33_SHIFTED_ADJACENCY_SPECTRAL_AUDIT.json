@@ -1,0 +1,112 @@
+{
+  "adjacency_spectrum": {
+    "-4": 15,
+    "12": 1,
+    "2": 24
+  },
+  "characteristic_polynomial": "(t-11)(t-1)^24(t+5)^15",
+  "construction": "projective points of F_3^4 with symplectic orthogonality",
+  "corrected_minimal_polynomial": "(t-11)(t-1)(t+5)=t^3-7t^2-49t+55",
+  "determinant_D": -335693359375,
+  "determinant_generating_polynomial": "det(I-xD)=(1-11x)(1-x)^24(1+5x)^15",
+  "historical_claim_audit": {
+    "annihilates_D": false,
+    "failure_reasons": [
+      "the proposed multiplicities sum to 32, not the matrix dimension 40",
+      "the proposed roots are not the shifted adjacency eigenvalues",
+      "the proposed polynomial is nonzero on all three true eigenspaces",
+      "determinant/Taylor/anomaly inferences built from that polynomial do not describe D=A-I"
+    ],
+    "matrix_residual_rank": 40,
+    "multiplicity_packets": {
+      "packet_A": {
+        "dimension": 32,
+        "eigenvalues": [
+          -1,
+          5,
+          -7
+        ],
+        "multiplicities": [
+          16,
+          10,
+          6
+        ],
+        "trace": -8,
+        "trace_D2": 560
+      },
+      "packet_B": {
+        "dimension": 32,
+        "eigenvalues": [
+          5,
+          -1,
+          -7
+        ],
+        "multiplicities": [
+          10,
+          16,
+          6
+        ],
+        "trace": -8,
+        "trace_D2": 560
+      }
+    },
+    "polynomial": "(t+1)((t+1)^2-36)=t^3+3t^2-33t-35",
+    "values_on_true_shifted_eigenvalues": {
+      "-5": 80,
+      "1": -64,
+      "11": 1296
+    }
+  },
+  "moment_closed_form": "Tr(D^n)=11^n+24+15(-5)^n",
+  "moment_recurrence": "m_(n+3)=7m_(n+2)+49m_(n+1)-55m_n",
+  "moments_0_to_10": {
+    "0": 40,
+    "1": -40,
+    "10": 26083909000,
+    "2": 520,
+    "3": -520,
+    "4": 24040,
+    "5": 114200,
+    "6": 2005960,
+    "7": 18315320,
+    "8": 220218280,
+    "9": 2328650840
+  },
+  "object": "W(3,3) collinearity graph",
+  "projector_ranks": {
+    "-5": 15,
+    "1": 24,
+    "11": 1
+  },
+  "projectors": {
+    "-5": "(D-11I)(D-I)/96",
+    "1": "-(D-11I)(D+5I)/60",
+    "11": "(D-I)(D+5I)/160"
+  },
+  "scope_boundary": "Exact finite spectral identities only; no anomaly, octonion, E8, particle-content, or dynamical inference is licensed by determinant coefficients.",
+  "shifted_operator": "D=A-I",
+  "shifted_spectrum": {
+    "-5": 15,
+    "1": 24,
+    "11": 1
+  },
+  "srg": {
+    "adjacent_common_neighbors": {
+      "2": 240
+    },
+    "degree_histogram": {
+      "12": 40
+    },
+    "matrix_identity": "A^2=8I-2A+4J",
+    "nonadjacent_common_neighbors": {
+      "4": 540
+    },
+    "parameters": [
+      40,
+      12,
+      2,
+      4
+    ]
+  },
+  "status": "PASS"
+}
