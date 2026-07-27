@@ -1,0 +1,11 @@
+{
+  "schema": "w33.hardware.qontrol_q8iv.receipt.pass1107.v1",
+  "physical_hardware_connected": false,
+  "controller_profile": "Qontrol Q8iv on BP8",
+  "dry_run_default": true,
+  "reference_chain_root": "4c06b49e0b5a04ed74eb9c9a00560ea39706b4ab64d77ceeaa287727670dcddf",
+  "external_arm_commitment": "4a3fab84c1e3a77e12637d869a206a0d672f3f62c1566c718569f4eaff9aa236",
+  "commands_exercised": 240,
+  "all_ports_zeroed": true,
+  "detector_triggered": false
+}
