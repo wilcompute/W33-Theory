@@ -1,0 +1,22 @@
+{
+  "schema": "w33.pass1093.dual_hesse.firewall_fiber_equivalence.v1",
+  "status": "PASS",
+  "headline": "The nine dual-Hesse hyperplanes and the nine E6/Heisenberg firewall fibers are the same Hessian 9-point G-set. The unique fixed-point-free conjugacy class of size 8, together with the identity, is a regular normal C3 x C3 translation subgroup; choosing two generators gives an explicit affine coordinate bijection to u in F3^2. The projective G25 action becomes exactly ASL(2,3)=3^2:SL(2,3) of order 216.",
+  "group_reading": {"projective_group":"ASL(2,3) = 3^2:SL(2,3), Hessian group","order":216,"translation_subgroup":"C3 x C3","translation_order":9,"linear_quotient":"SL(2,3)","linear_order":24},
+  "explicit_equivariant_mapping": [
+    {"extra_hyperplane_normal_mod43":[0,1,7],"firewall_fiber_u":[0,0],"fiber_vertices":[{"u":[0,0],"z":0},{"u":[0,0],"z":1},{"u":[0,0],"z":2}]},
+    {"extra_hyperplane_normal_mod43":[0,1,37],"firewall_fiber_u":[1,0],"fiber_vertices":[{"u":[1,0],"z":0},{"u":[1,0],"z":1},{"u":[1,0],"z":2}]},
+    {"extra_hyperplane_normal_mod43":[0,1,42],"firewall_fiber_u":[2,0],"fiber_vertices":[{"u":[2,0],"z":0},{"u":[2,0],"z":1},{"u":[2,0],"z":2}]},
+    {"extra_hyperplane_normal_mod43":[1,0,7],"firewall_fiber_u":[0,1],"fiber_vertices":[{"u":[0,1],"z":0},{"u":[0,1],"z":1},{"u":[0,1],"z":2}]},
+    {"extra_hyperplane_normal_mod43":[1,0,37],"firewall_fiber_u":[2,1],"fiber_vertices":[{"u":[2,1],"z":0},{"u":[2,1],"z":1},{"u":[2,1],"z":2}]},
+    {"extra_hyperplane_normal_mod43":[1,0,42],"firewall_fiber_u":[1,1],"fiber_vertices":[{"u":[1,1],"z":0},{"u":[1,1],"z":1},{"u":[1,1],"z":2}]},
+    {"extra_hyperplane_normal_mod43":[1,7,0],"firewall_fiber_u":[1,2],"fiber_vertices":[{"u":[1,2],"z":0},{"u":[1,2],"z":1},{"u":[1,2],"z":2}]},
+    {"extra_hyperplane_normal_mod43":[1,37,0],"firewall_fiber_u":[2,2],"fiber_vertices":[{"u":[2,2],"z":0},{"u":[2,2],"z":1},{"u":[2,2],"z":2}]},
+    {"extra_hyperplane_normal_mod43":[1,42,0],"firewall_fiber_u":[0,2],"fiber_vertices":[{"u":[0,2],"z":0},{"u":[0,2],"z":1},{"u":[0,2],"z":2}]}
+  ],
+  "generator_affine_actions":[{"A":[[1,0],[0,1]],"b":[0,0]},{"A":[[1,2],[0,1]],"b":[0,0]},{"A":[[1,1],[0,1]],"b":[0,0]}],
+  "fiber_definition":"For each u in F3^2, the repository firewall fiber is {(u,z): z in F3}; the nine hyperplanes map equivariantly to the nine u values.",
+  "check_count":12,
+  "checks":{"extra_hyperplanes9":true,"G25_order648":true,"projective_Hessian_order216":true,"unique_translation_class_size8":true,"translation_group_C3xC3_order9":true,"translation_group_abelian":true,"translation_group_regular":true,"explicit_bijection_to_F3_squared":true,"all_actions_are_affine":true,"linear_image_is_SL2_3_order24":true,"translation_vectors_all9":true,"fiber_expansion_is_9_times3":true},
+  "scope":"Exact projective G25 action reduced modulo 43 and exact affine action over F3. The affine coordinate choice is unique only up to ASL(2,3), as expected."
+}
