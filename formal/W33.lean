@@ -35,10 +35,14 @@ import W33.Pass581CyclotomicCompletion
 import W33.Pass586CyclotomicLocalizedDVR
 import W33.Pass591CyclotomicDedekindDVR
 import W33.Pass806TwoBranchGluing
--- W33.Pass828CoalescenceArithmetic is deliberately NOT imported: it does not
--- compile. Line 91 asks for `Decidable ¬∃ k, gluing_order = k ^ 2`, which Lean
--- cannot synthesise (unbounded existential over ℕ). Left out rather than
--- patched over, so `lake build` stays honest; see Pass 1020's notes.
+-- Pass828 is now imported.  It used to be excluded because
+-- `gluing_order_not_perfect_square` was proved by `native_decide`, which cannot
+-- work on `¬ ∃ k : ℕ, ...` -- an unbounded existential has no Decidable instance.
+-- The docstring already stated the real argument (a square has even valuation at
+-- every prime, and v_5 = 1 is odd), so the theorem is now proved that way from the
+-- module's own `v5_gluing_order`.  Excluding it had kept the whole module
+-- unchecked, not just that one line.
+import W33.Pass828CoalescenceArithmetic
 import W33.Pass1006RamifiedFiltration
 import W33.Pass1018PencilRigidity
 import W33.Pass1063SignedLiftObstruction

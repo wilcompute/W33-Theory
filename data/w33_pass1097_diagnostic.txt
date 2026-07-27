@@ -1,0 +1,13 @@
+ninety_hyperbolic_lines = true
+fortyfive_polar_pairs = true
+transitive_on_polar_pairs = true
+block_and_polar_stabilisers_both_576 = true
+each_block_stabiliser_fixes_exactly_one_polar_pair = true
+map_blocks_to_polar_pairs_is_a_bijection = true
+map_is_equivariant = true
+each_polar_pair_carries_exactly_three_4blocks = true
+induced_action_on_the_three_is_order_3_or_6 = true
+12-block stabiliser = (((C2 x C2 x C2) : (C2 x C2)) : (C3 x C3)) : C2
+4-block stabiliser  = (((C2 x C2 x C2) : (C2 x C2)) : C3) : C2
+induced action on the 3 sub-blocks = C3 order 3
+map (first 10 blocks -> polar pairs) = [ 25, 26, 27, 22, 23, 24, 19, 20, 21, 34 ]

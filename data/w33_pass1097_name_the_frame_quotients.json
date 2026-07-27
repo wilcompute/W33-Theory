@@ -1,0 +1,25 @@
+{
+  "schema": "w33.pass1097.name_the_frame_quotients.gap.v1",
+  "status": "PASS",
+  "headline": "The 45-block quotient of the 540-frame action IS the set of 45 POLAR PAIRS of hyperbolic lines -- the 90 non-totally-isotropic lines of PG(3,3) paired by the polarity, which is BT813's M45 vacuum. This is established by an explicit canonical map, not by matching 45 to 45: each block's stabiliser fixes exactly one polar pair, that assignment is a bijection, and it is equivariant. The 135-block quotient is NOT named; what is shown is that each polar pair carries exactly three 4-blocks and the induced action on those three is recorded.",
+  "hyperbolic_lines": 90,
+  "polar_pairs": 45,
+  "block12_stabiliser": "(((C2 x C2 x C2) : (C2 x C2)) : (C3 x C3)) : C2",
+  "block4_stabiliser": "(((C2 x C2 x C2) : (C2 x C2)) : C3) : C2",
+  "induced_action_on_three_subblocks": "C3",
+  "block_to_polar_pair_map": [ 25, 26, 27, 22, 23, 24, 19, 20, 21, 34, 35, 36, 31, 32, 33, 28, 29, 30, 43, 44, 45, 40, 41, 42, 37, 38, 39, 16, 17, 18, 10, 11, 12, 13, 14, 15, 4, 5, 6, 7, 9, 8, 1, 2, 3 ],
+  "the_135_is_open": "Each polar pair carries exactly three 4-blocks, so the 135 fibres 3:1 over the 45. No name is claimed for it. In particular NO map is asserted to the 135 isotropic classes of C-perp/C in Pass 1061, which is a different G-set of the same size until someone checks stabiliser conjugacy.",
+  "scope": "Identification of one block system with a named geometric object, by an explicit equivariant bijection. The 36-block identification is Pass 1079's and is not repeated. No physical reading is attached to any of the three quotients.",
+  "check_count": 9,
+  "checks": {
+    "ninety_hyperbolic_lines": true,
+    "fortyfive_polar_pairs": true,
+    "transitive_on_polar_pairs": true,
+    "block_and_polar_stabilisers_both_576": true,
+    "each_block_stabiliser_fixes_exactly_one_polar_pair": true,
+    "map_blocks_to_polar_pairs_is_a_bijection": true,
+    "map_is_equivariant": true,
+    "each_polar_pair_carries_exactly_three_4blocks": true,
+    "induced_action_on_the_three_is_order_3_or_6": true
+  }
+}

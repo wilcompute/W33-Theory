@@ -41,11 +41,11 @@ def gluing_order : ℕ := 2^18 * 3^10 * 5
 /-- The 3-primary part of the W33 K-operator eigenlattice gluing group has rank 10.
     This is the Coalescence Theorem at p=3: rank = rank_{F_3}(N_coal). -/
 theorem coalesce_rank_3_eq_ten : coalescence_rank_3 = 10 := by
-  native_decide
+  decide
 
 /-- The 5-primary part has rank 1 (single Z/5 summand). -/
 theorem coalesce_rank_5_eq_one : coalescence_rank_5 = 1 := by
-  native_decide
+  decide
 
 /-! ### Theorem 2: Discriminant product identity -/
 
@@ -53,9 +53,18 @@ theorem coalesce_rank_5_eq_one : coalescence_rank_5 = 1 := by
     This is the discriminant product identity of Pass 829, verified by norm_num. -/
 theorem discriminant_product_eq_gluing_sq :
     det_L12 * det_L2 * det_Lneg4 = gluing_order ^ 2 := by
-  native_decide
+  decide
 
 /-! ### Theorem 3: Flat-block 3-primary rank is zero -/
+
+/-! MEASURED: `Nat.factorization` is the one place here that still needs
+`native_decide`.  The other six goals in this module reduce fine in the kernel and
+were switched to `decide`, but `Nat.factorization` is defined by well-founded
+recursion over `Nat.primeFactorsList`, which the kernel will not unfold at these
+sizes -- `decide` fails outright rather than merely being slow.  So the rule is not
+"never use native_decide": it is that finite maps and plain arithmetic should use
+`decide`, and number-theoretic functions defined by well-founded recursion may
+genuinely require the compiler. -/
 
 /-- The 3-adic valuation of gluing_order is 10. -/
 theorem v3_gluing_order : (gluing_order).factorization 3 = 10 := by
@@ -79,8 +88,8 @@ theorem flat_block_3primary_rank_zero :
     -- not in L_{H1} = L_{-6}, whose gluing is pure 2-primary.
     (2 : ℕ) ∣ (gluing_order / 3^10) ∧ ¬ (3 : ℕ) ∣ (gluing_order / 3^10) := by
   constructor
-  · native_decide
-  · native_decide
+  · decide
+  · decide
 
 /-! ### Corollary: gluing order is not a perfect square -/
 
@@ -88,6 +97,18 @@ theorem flat_block_3primary_rank_zero :
     because v_5 = 1 is odd. -/
 theorem gluing_order_not_perfect_square :
     ¬ ∃ k : ℕ, gluing_order = k ^ 2 := by
-  native_decide
+  -- `decide` cannot be used here and never could: the goal quantifies over
+  -- ALL of ℕ, so there is no `Decidable` instance to evaluate.  That single
+  -- unprovable line is why this module was left out of `W33.lean` entirely and
+  -- had therefore never been checked at all.
+  --
+  -- The docstring already states the real argument, so prove that instead: a
+  -- square has even valuation at every prime, and v_5(gluing_order) = 1 is odd.
+  rintro ⟨k, hk⟩
+  have h5 : 2 * k.factorization 5 = 1 := by
+    have h := v5_gluing_order
+    rw [hk, Nat.factorization_pow, Finsupp.smul_apply, smul_eq_mul] at h
+    exact h
+  omega
 
 end W33.Pass828

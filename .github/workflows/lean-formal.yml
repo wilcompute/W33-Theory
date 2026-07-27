@@ -12,6 +12,12 @@ on:
       - "formal/**"
       - ".github/workflows/lean-formal.yml"
   workflow_dispatch:
+  # The path filter above means this job only runs when formal/ changes, so the
+  # library can rot for weeks behind a green badge while mathlib moves under it.
+  # Two of the breakages found on 2026-07-26 were exactly that: a mathlib module
+  # that had been renamed upstream, and one that no longer existed at all.
+  schedule:
+    - cron: '17 5 * * 1'
 
 permissions:
   contents: read
@@ -38,14 +44,41 @@ jobs:
       - name: Capture kernel build logs
         id: kernel
         shell: bash
+        # BUILD ONE MODULE AT A TIME.  A single `lake build --wfail` at default
+        # parallelism produced ~14 spurious `failed to read file *.olean` errors,
+        # each naming a DIFFERENT mathlib file at line 1:0 -- file-handle
+        # contention, not breakage.  Building the modules serially produced ZERO.
+        # Those phantom errors are indistinguishable from real ones in a log, so
+        # a parallel build cannot be used to decide whether the library is sound.
+        #
+        # The loop is driven by W33.lean's own import list, so a module that is
+        # never imported is never built -- which is the intended behaviour
+        # (Pass828CoalescenceArithmetic is deliberately excluded), but it means
+        # the count below is of IMPORTED modules, not of files on disk.
         run: |
           set +e
           cd formal
           lake update > "$RUNNER_TEMP/lake-update.log" 2>&1
           update_status=$?
           if [ "$update_status" -eq 0 ]; then
-            lake build --wfail > "$RUNNER_TEMP/lean-build.log" 2>&1
-            build_status=$?
+            : > "$RUNNER_TEMP/lean-build.log"
+            build_status=0
+            failed=0
+            total=0
+            for m in $(grep -oE '^import (W33\.\S+)' W33.lean | sed 's/import //'); do
+              total=$((total + 1))
+              if ! lake build --wfail "$m" >> "$RUNNER_TEMP/lean-build.log" 2>&1; then
+                printf 'FAILED: %s\n' "$m" >> "$RUNNER_TEMP/lean-build.log"
+                failed=$((failed + 1))
+                build_status=1
+              fi
+            done
+            printf '\n%s of %s imported modules failed --wfail\n' \
+              "$failed" "$total" >> "$RUNNER_TEMP/lean-build.log"
+            # a phantom-olean count > 0 means the serial guarantee was violated
+            phantom=$(grep -c 'failed to read file' "$RUNNER_TEMP/lean-build.log")
+            printf 'phantom olean errors: %s (expected 0 when serial)\n' \
+              "$phantom" >> "$RUNNER_TEMP/lean-build.log"
           else
             printf 'lake update failed; build not run\n' > "$RUNNER_TEMP/lean-build.log"
             build_status=99
@@ -102,8 +135,12 @@ jobs:
           lake update > "$RUNNER_TEMP/checker-update.log" 2>&1
           update_status=$?
           if [ "$update_status" -eq 0 ]; then
-            lake build --quiet > "$RUNNER_TEMP/checker-build.log" 2>&1
-            build_status=$?
+            # serial for the same reason as the kernel job above
+            : > "$RUNNER_TEMP/checker-build.log"
+            build_status=0
+            for m in $(grep -oE '^import (W33\.\S+)' W33.lean | sed 's/import //'); do
+              lake build --quiet "$m" >> "$RUNNER_TEMP/checker-build.log" 2>&1 || build_status=1
+            done
           else
             printf 'lake update failed; build not run\n' > "$RUNNER_TEMP/checker-build.log"
             build_status=99
