@@ -1,0 +1,24 @@
+{
+  "schema":"w33.pass1109.full_cubic_central_phase_extension.v1","status":"PASS_WITH_EXPLICIT_SIGN_BOUNDARY",
+  "headline":"Extending Pass 1103 from its nine signed firewall fibers to the complete cubic support, all 45 E6 triads are transported through the Heisenberg coordinates: 36 affine-line lifts and nine vertical central-C3 fibers. Their central phase sums have exact histogram 0^25, 1^10, 2^10. The nine fiber signs remain exactly 2 positive and 7 negative. A complete 45-term Chevalley sign table is included only when the canonical solver artifact is actually regenerated.",
+  "upstream_pass1103":"data/w33_pass1103_hesse_firewall_cubic_transport.json",
+  "hyperplane_fiber_transport":[
+    {"dual_hesse_normal_mod43":[0,1,7],"u":[0,0],"e6id_fiber":[0,21,22],"oriented_z_order":[0,1,2],"canonical_cubic_sign":-1,"l3_jacobiator_support":true},
+    {"dual_hesse_normal_mod43":[0,1,37],"u":[1,0],"e6id_fiber":[17,14,11],"oriented_z_order":[0,1,2],"canonical_cubic_sign":-1,"l3_jacobiator_support":true},
+    {"dual_hesse_normal_mod43":[0,1,42],"u":[2,0],"e6id_fiber":[26,6,3],"oriented_z_order":[0,1,2],"canonical_cubic_sign":-1,"l3_jacobiator_support":true},
+    {"dual_hesse_normal_mod43":[1,0,7],"u":[0,1],"e6id_fiber":[20,16,2],"oriented_z_order":[0,1,2],"canonical_cubic_sign":-1,"l3_jacobiator_support":true},
+    {"dual_hesse_normal_mod43":[1,0,37],"u":[2,1],"e6id_fiber":[24,10,5],"oriented_z_order":[0,1,2],"canonical_cubic_sign":-1,"l3_jacobiator_support":true},
+    {"dual_hesse_normal_mod43":[1,0,42],"u":[1,1],"e6id_fiber":[18,8,13],"oriented_z_order":[0,1,2],"canonical_cubic_sign":-1,"l3_jacobiator_support":true},
+    {"dual_hesse_normal_mod43":[1,7,0],"u":[1,2],"e6id_fiber":[19,12,7],"oriented_z_order":[0,1,2],"canonical_cubic_sign":1,"l3_jacobiator_support":true},
+    {"dual_hesse_normal_mod43":[1,37,0],"u":[2,2],"e6id_fiber":[25,4,9],"oriented_z_order":[0,1,2],"canonical_cubic_sign":-1,"l3_jacobiator_support":true},
+    {"dual_hesse_normal_mod43":[1,42,0],"u":[0,2],"e6id_fiber":[23,15,1],"oriented_z_order":[0,1,2],"canonical_cubic_sign":1,"l3_jacobiator_support":true}
+  ],
+  "cubic_summary":{"total":45,"affine":36,"fiber":9},
+  "central_phase_histogram":{"0":25,"1":10,"2":10},
+  "jacobiator_support":{"deleted_fiber_e6ids":[[0,21,22],[1,15,23],[2,16,20],[3,6,26],[4,9,25],[5,10,24],[7,12,19],[8,13,18],[11,14,17]],"support_size":9,"structural_identity":"36 affine l2 triads + 9 l3 repair fibers = 45 cubic triads; 2*36 + 9 = 81"},
+  "canonical_sign_boundary":{"known_repo_result":"the canonical solver supplies a complete 45-term sign gauge; Pass 1103 freezes the exact 2-plus/7-minus distribution on the nine fiber terms","per_triad_sign_transport_status":"not regenerated in this runtime because the generated canonical_su3_gauge_and_cubic.json is not committed","sign_distribution":null,"sign_rows":null,"what_is_exact_here":"all 27 e6id coordinates, all 45 cubic supports, all central-C3 phases, all nine dual-Hesse/fiber identifications, and exact l3/Jacobiator support","no_overclaim":true},
+  "checks":{"e6ids27":true,"nine_fibers_size3":true,"all_z_complete":true,"dual_hesse_map_bijective":true,"fiber_triads_exact":true,"affine_lines12":true,"affine_triads36":true,"cubic_triads45":true,"all_affine_u_collinear":true,"fiber_u_constant":true,"firewall_bad9_equals_fibers":true,"l3_support_is_exactly_nine_fibers":true,"central_phase_defined_all45":true,"central_phase_histogram_25_10_10":true,"upstream_pass1103_passed":true,"fiber_signs_match_upstream":true,"fiber_sign_distribution_2plus_7minus":true,"canonical_sign_boundary_locked":true,"canonical_sign_solver_if_present_matches45":true,"canonical_sign_distribution_if_present":true},
+  "check_count":20,
+  "certificate_sha256":"8d8ad7f8a9278e7d0e102595dde8938d78581400b02ec75284de0b91cbeca012",
+  "scope":"The executable regenerates all 45 per-triad records. The committed certificate keeps the complete nine-fiber transport, central-phase histogram, and support/sign boundaries compact."
+}
