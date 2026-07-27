@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass1112.qontrol_q8iv.transport.v1",
+  "status": "PASS_REFERENCE_TRANSPORT",
+  "headline": "A concrete Qontrol Q8iv/BP8 serial transport implements the W33 control schedule through the documented 115200-8-N-1 interface and raw ID?, vmax[], v[], and vipall? commands. Dry-run opens no serial device; armed mode requires an external SHA-256 commitment, binds a Q8iv identity, enforces 40-port and voltage limits, hash-chains all commands, and zeros all ports on emergency stop. The 240-command schedule passes against a serial reference double; no physical Qontrol hardware was connected.",
+  "vendor_profile": {"vendor":"Qontrol","controller":"Q8iv","backplane":"BP8","channels_used":40,"modules_implied":5,"serial":{"baud":115200,"data_bits":8,"parity":"none","stop_bits":1,"flow_control":"none"},"commands":["ID?","vmax[port]=value","v[port]=value","vipall?"]},
+  "schedule": {"total":240,"voltage_limit_commands":40,"routing_voltage_commands":160,"telemetry_queries":40},
+  "reference_run": {"identity":"Q8IV-SIM-5MODULE-40CH","transcript_events":243,"chain_root":"3fc59828d20d161efe779b1ba7f2596112dc470f3478f05b52d39975a8032ae5","arm_commitment":"1c56b50a3fb500661e1de0bc18d7328af908242250e67025f58d579cf254cc83","serial_write_count":281,"emergency_zero_ports":40},
+  "fail_closed": {"unarmed":"not_armed","bad_token":"arm_commitment_mismatch","bad_identity":"unapproved_qontrol_identity","overvoltage":"voltage_limit"},
+  "checks": {"schedule240":true,"dry_run_opens_no_serial":true,"dry_run_has240_commands":true,"q8iv_identity_bound":true,"armed_schedule240":true,"emergency_zero40":true,"external_commitment_only":true,"unarmed_fails":true,"bad_token_fails":true,"bad_identity_fails":true,"overvoltage_fails":true,"hash_chain_nonempty":true,"physical_hardware_not_claimed":true,"official_serial_profile_115200_8N1":true,"documented_raw_commands_only":true,"detector_acquisition_boundary_separate":true},
+  "check_count": 16,
+  "scope": "Concrete vendor protocol implementation and reference-double conformance. No serial port, Qontrol device, detector, or optical hardware was connected; detector acquisition remains a separate adapter boundary."
+}
