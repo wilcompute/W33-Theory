@@ -1,0 +1,17 @@
+{
+  "module": "BT1608_self_calibrating_feedback",
+  "status": "COMPLETE",
+  "generated_by": "Perplexity AI Pass 3, 2026-07-27",
+  "N_bins": 168,
+  "alpha": 0.761905,
+  "alpha_formula": "1 - Stab_Fano/Stab_SNSPD = 1 - 40/168",
+  "S_min_bits": 2.070389,
+  "convergence": {
+    "cycles_to_5pct_error": 2,
+    "cycles_to_1pct_error": 3,
+    "hours_to_5pct_at_45min_per_cycle": 1.5,
+    "hours_to_1pct_at_45min_per_cycle": 2.25
+  },
+  "bench_spec_reference": "BT1614",
+  "detector_reference": "BT1602"
+}

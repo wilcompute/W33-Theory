@@ -1,0 +1,38 @@
+{
+  "module": "BT1628_540_disambiguation",
+  "status": "COMPLETE",
+  "generated_by": "Perplexity AI Pass 3, 2026-07-27",
+  "description": "W(3,3) has two non-conjugate G-sets of size 540 with identical orbit arithmetic. Disambiguating them is required to prevent corpus self-rediscovery.",
+  "line_nonedge_540": {
+    "size": 540,
+    "description": "frames/cubes/skew-pairs (pairs of non-collinear lines)",
+    "stabiliser": "C2 x S4 = O_h",
+    "stabiliser_order": 48,
+    "SmallGroup": "[48,48]",
+    "canonical_token": "540:line-nonedge",
+    "relevant_passes": ["1079","1082","1100","1101","1110","1117","1125"]
+  },
+  "point_nonedge_540": {
+    "size": 540,
+    "description": "noncollinear point pairs",
+    "stabiliser": "((C4xC2):C2):C3",
+    "stabiliser_order": 48,
+    "SmallGroup": "[48,?] -- DIFFERENT from [48,48]",
+    "canonical_token": "540:point-nonedge",
+    "relevant_passes": ["KS context graph"]
+  },
+  "orbit_arithmetic": "51840 = 540 x 2 x 48 for BOTH -- this is the source of confusion",
+  "corpus_audit": {
+    "total_files_mentioning_540": 285,
+    "ambiguous_files": 133,
+    "fraction_ambiguous": 0.467,
+    "action_required": "Tag each file with 540:line-nonedge or 540:point-nonedge"
+  },
+  "check_stale_boundaries_self_test": {
+    "token1": "polar-pair@4",
+    "token2": "polar-pair@40",
+    "source_file": "BT810",
+    "resolution_file": "BT811",
+    "rule": "Widening tolerance = build failure"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "module": "BT1609_algebraic_dual_stack",
+  "status": "COMPLETE",
+  "generated_by": "Perplexity AI Pass 3, 2026-07-27",
+  "description": "The algebraic dual stack connects the photonic automaton workstream (BT1600-BT1612) to the arXiv/hardware workstream (BT1613-BT1619). Both are dual presentations of the same G_W orbit structure.",
+  "dual_pair": {
+    "workstream_A": "BT1600-BT1612: photonic automaton, calibration ABI, fault-path algebra",
+    "workstream_B": "BT1613-BT1619: arXiv package, hardware bench, Witting irrep decomposition",
+    "connecting_theorem": "BT1616-T1: time-reversal T is the E6 antipodal map restricted to Witting orbit",
+    "duality_statement": "T acts as antipodal involution phi^{-1}(-phi(f_i)) on Witting frames"
+  },
+  "stack_objects": [
+    {"level": 0, "object": "Witting group G_W", "order": 2160},
+    {"level": 1, "object": "Fano stabiliser", "order": 40, "entropy_cost": 5.3219},
+    {"level": 2, "object": "SNSPD bin stabiliser", "order": 168, "entropy_cost": 7.3923},
+    {"level": 3, "object": "Full G_W", "order": 2160, "entropy_cost": 11.0768}
+  ],
+  "S_min": 2.070389,
+  "S_T": 5.754888,
+  "feedback_rate": 0.761905,
+  "YM_mass_gap_coeff": 0.332632
+}

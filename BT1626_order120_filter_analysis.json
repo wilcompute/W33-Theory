@@ -1,0 +1,25 @@
+{
+  "module": "BT1626_order120_filter_analysis",
+  "status": "ANALYSIS_COMPLETE_GAP_VERIFICATION_PENDING",
+  "generated_by": "Perplexity AI Pass 3, 2026-07-27",
+  "orbit_size": 432,
+  "W_E6_order": 51840,
+  "stab_order": 120,
+  "stab_order_formula": "51840/432 = 120",
+  "filter_minimal_orders": [32, 96, 108, 108, 120, 160, 216, 360],
+  "frame_stab_order": 48,
+  "frame_stab_contains_filter_generator": false,
+  "reason": "C2xS4 has Sylow-2 order 16 < 32; all other filter generators have order > 48. Filter forces frame module nontrivial. Not a numerical coincidence.",
+  "open_question": {
+    "question": "Is the 432-orbit stabiliser isomorphic to S5 (one of the 8 filter minimal generators)?",
+    "significance": "If yes: major structural connection within filter theory. If no: order coincidence is irrelevant.",
+    "GAP_command": "IdGroup(Stabilizer(PSp(4,3), orb432[1], OnPoints))",
+    "candidate_groups": ["S5=[120,34]", "A5xC2=[120,35]", "SL(2,5)=[120,5]"]
+  },
+  "carrier_hierarchy": {
+    "432": "transitive, carries one 81-dim irrep",
+    "2240": "intransitive, previous best carrier",
+    "3360": "larger orbit",
+    "15120": "largest orbit"
+  }
+}

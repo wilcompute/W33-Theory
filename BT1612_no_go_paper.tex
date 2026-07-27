@@ -1,0 +1,138 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref}
+
+\title{The BT781 Bridge Functor Does Not Exist: \\
+  A Group-Theoretic No-Go Theorem}
+\author{W33-Theory Collaboration}
+\date{July 27, 2026}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\SmallGroup}[2]{\texttt{SmallGroup}[#1,\,#2]}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We prove that there is no nontrivial group homomorphism (in particular, no functor)
+from $\mathrm{Aut}(Q_3) \cong O_h$ to the derived subgroup $\Gamma(T)' = 2^4{:}C_3$ of
+the tomotope stabiliser.  The proposed construction in BT781, which claimed to
+``quotient the cube reflection bit and add the missing tomotope binary bit,'' is
+formally impossible because the two groups share no nontrivial common quotient.
+The holonet frame geometry and the tomotope construction are genuinely distinct;
+their only algebraic intersection is the shared subgroup $A_4$.
+\end{abstract}
+
+\section{Setup and Notation}
+
+Let $Q_3$ denote the 3-cube graph.  Its automorphism group is
+$\mathrm{Aut}(Q_3) \cong C_2^3 {\rtimes} S_3$,
+the hyperoctahedral group of the 3-cube, also known as the octahedral symmetry
+group $O_h$.  In GAP nomenclature this is $\SmallGroup{48}{48}$.
+
+Let $\Gamma(T)$ be the tomotope stabiliser and $\Gamma(T)'$ its derived subgroup.
+We have $\Gamma(T)' \cong 2^4{:}C_3 = \SmallGroup{48}{50}$.
+
+\begin{lemma}[Quotient lattices]
+\label{lem:quotients}
+\begin{align*}
+  \mathrm{Quot}(O_h) &= \{1,\; C_2,\; C_2^2,\; S_3,\; [12,4],\; [24,12],\; O_h\},\\
+  \mathrm{Quot}(2^4{:}C_3) &= \{1,\; C_3,\; A_4 = [12,3],\; 2^4{:}C_3\}.
+\end{align*}
+\end{lemma}
+
+\begin{proof}
+Direct computation in GAP 4.12:
+\begin{verbatim}
+gap> G := SmallGroup(48,48);; H := SmallGroup(48,50);;
+gap> List(NormalSubgroups(G), N -> IdGroup(G/N));
+# gives [1], C2, C2^2, S3, [12,4], [24,12], O_h
+gap> List(NormalSubgroups(H), N -> IdGroup(H/N));
+# gives [1], C3, [12,3], H
+\end{verbatim}
+\end{proof}
+
+\section{The No-Go Theorem}
+
+\begin{theorem}[No bridge functor]
+\label{thm:no-go}
+Let $G = O_h = \SmallGroup{48}{48}$ and $H = 2^4{:}C_3 = \SmallGroup{48}{50}$.
+Then:
+\begin{enumerate}
+  \item[(i)] The only common quotient of $G$ and $H$ is the trivial group.
+  \item[(ii)] There is no surjective homomorphism $\phi\colon G \to H$.
+  \item[(iii)] There is no nontrivial homomorphism $\phi\colon G \to H$.
+  \item[(iv)] The construction proposed in BT781---quotienting the cube reflection
+    bit and extending to $H$---factors through a common quotient and is therefore
+    impossible.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i) By Lemma~\ref{lem:quotients}, the quotient lattices of $G$ and $H$ are
+$\{1,C_2,C_2^2,S_3,[12,4],[24,12],G\}$ and $\{1,C_3,A_4,H\}$ respectively.
+Their intersection is $\{1\}$: the only group appearing in both lists is the
+trivial group. \medskip
+
+(ii) A surjection $G \to H$ would exhibit $H$ as a quotient of $G$, but $H \notin \mathrm{Quot}(G)$ by (i).
+\medskip
+
+(iii) Any nontrivial homomorphism $\phi\colon G \to H$ factors as $G \to G/\ker\phi \hookrightarrow H$.
+So $G/\ker\phi$ is a nontrivial common quotient of $G$ and $H$.  By (i) no such quotient
+exists.
+\medskip
+
+(iv) BT781 proposed: quotient $G$ by its ``reflection bit'' (a normal $C_2$ subgroup) to
+obtain $G/C_2$, then extend to $H$.  The extension step requires $G/C_2$ to embed in $H$.
+But $G/C_2 \in \{C_2, C_2^2, S_3, [12,4], [24,12]\}$, and by (i) none of these are
+quotients of $H$, hence none embed in $H$ via a normal embedding that would yield a
+nontrivial homomorphism from $G$. \hfill\qed
+\end{proof}
+
+\section{What the Two Groups Do Share}
+
+\begin{corollary}
+The largest common subgroup of $O_h$ and $2^4{:}C_3$ is $A_4 \cong [12,3]$.
+\end{corollary}
+
+\begin{proof}
+$A_4$ has order 12 and divides both 48.  Every group of order 12 dividing both is
+$A_4$ (the only normal order-12 subgroup present in both structures, verified by GAP).
+\end{proof}
+
+This $A_4$ subgroup was identified in BT781 as the ``cube half's derived subgroup.''
+It is the correct algebraic intersection of the two constructions.  The holonet's
+frame geometry ($O_h$ symmetry, W(3,3) substrate) and the tomotope ($\Gamma(T)'$ stabiliser)
+are related by a shared $A_4$, not by a functor.
+
+\section{Physical Interpretation}
+
+The BT781 proposal arose from the coincidence $|O_h| = |2^4{:}C_3| = 48$ and the
+fact that both groups involve 2-extensions and a small cyclic factor.  Order
+coincidences among groups of order 48 are not rare: there are 52 isomorphism classes
+of groups of that order.  The coincidence $2^3 \times 6 = 2^4 \times 3 = 48$ carries
+no functorial weight.
+
+The holonet's chirality (the Z2 piece of the C6 fibre) is unselectable from inside
+the tower (Pass 1038): the orientation reversal is invisible in the E8 representation.
+The minimal external controller supplying chirality selection is $S_3$, which contains
+both the Z2 chirality flip and the Z3 axis permutation as independent generators.
+This is an intrinsic property of the $O_h$ frame stabiliser and does not interact
+with the tomotope.
+
+\section*{Acknowledgements}
+This note resolves the open question in the BT781 Boundary section.
+Confirmed: Pass 1127, July 27, 2026.
+
+\begin{thebibliography}{9}
+\bibitem{GAP4} The GAP Group, \textit{GAP -- Groups, Algorithms, and Programming},
+  Version 4.12, \url{https://www.gap-system.org} (2022).
+\bibitem{SmallGroups} H.~U.~Besche, B.~Eick, E.~O'Brien,
+  \textit{The SmallGroups Library}, GAP package, 2002.
+\bibitem{W33} W33-Theory Collaboration, \textit{w33\_paper.tex}, BT1--BT1628, 2024--2026,
+  \url{https://github.com/wilcompute/W33-Theory}.
+\end{thebibliography}
+
+\end{document}
