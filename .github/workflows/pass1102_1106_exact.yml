@@ -1,0 +1,44 @@
+name: Passes 1102-1106 Clifford, firewall, E8 carrier, Keysight, and formal locks
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1102_*'
+      - 'analysis/w33_pass1103_*'
+      - 'analysis/w33_pass1104_*'
+      - 'analysis/w33_pass1105_*'
+      - 'analysis/w33_pass1106_*'
+      - 'formal/W33/Pass1106CliffordFirewallCarrier.lean'
+      - 'formal/W33.lean'
+      - 'tests/test_w33_pass1102_1106.py'
+      - '.github/workflows/pass1102_1106_exact.yml'
+  workflow_dispatch:
+jobs:
+  exact-python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy pytest
+      - run: |
+          python analysis/w33_pass1102_ctbllib_clifford_naming.py
+          python analysis/w33_pass1103_hesse_firewall_cubic_transport.py
+          python analysis/w33_pass1104_e8_pair_carrier_census.py
+          python analysis/w33_pass1105_keysight_n7731a_transport.py
+          python analysis/w33_pass1106_formal_clifford_firewall_carrier.py
+          pytest -q tests/test_w33_pass1102_1106.py
+  ctbllib-rows:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y gap gap-ctbllib
+      - run: gap -q analysis/w33_pass1102_ctbllib_rows.g | tee data/w33_pass1102_ctbllib_rows_observed.json
+  strict-lean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formal
+      - working-directory: formal
+        run: lake build --wfail
