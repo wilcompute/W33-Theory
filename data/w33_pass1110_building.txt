@@ -1,0 +1,5 @@
+building graph: V=80 E=160  b1 = E-V+1 = 81   (Steinberg dimension 81 : true)
+frame stabiliser |H|=48  quotient V=9 E=10 comps=1  b1 = 2
+4-block stab |H|=192  quotient V=6 E=5 comps=1  b1 = 0
+12-block stab |H|=576  quotient V=4 E=3 comps=1  b1 = 0
+15-block stab |H|=720  quotient V=3 E=2 comps=1  b1 = 0

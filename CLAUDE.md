@@ -10,51 +10,61 @@
 This file contains project context and decisions. AI assistants should read this file for context. MCP tools are an optional enhancement for richer interaction when connected.
 
 ## Project Context
-- **Total Decisions:** 4466
+- **Total Decisions:** 4475
 - **Known Topics:** needs-review, auto-draft, why, w33, testing, toe, architecture, holonet, docs, photonic, audit, qec, github, selector, tomotope
 
 ## Current State
 **Repository:** Theory of Everything
 **Project Type:** Python Project | Python
 **Branch:** master
+**Tracking:** ahead 0, behind 1
 
 **Recent Commits:**
-- `2f0c961 ci: fix both failing checks so master goes green`
-- `5f48ae9 Pass 398: freeze complete formula-search universe`
-- `1c05e8c docs: collapse the content walls, keeping every byte`
-- `c588dc6 docs: mathematics first, status last; refresh stale headlines`
-- `f7807cd docs: lead with the theory, and restore the hero particle animation`
+- `6565429 Pass 1072-1073: check the identification; the novelty index was reading mathlib`
+- `007a4c1 Pass 1072-1073 reserved: check the spread-graph identification; fix the index corpus (glue track)`
+- `6f0b5c8 Pass 398: freeze complete formula-search universe`
+- `46f78a0 Guard the invariant KIND, record cross-track ownership, refresh the stale index`
+- `8b6e2a8 Audit Pass 1041 for the 1070 error (it had it), and build the 36 x 540 geometry`
 
 **Working Tree:**
-- M .continuity/SESSION_NOTES.md
 - M .cursorrules
 - M .github/copilot-instructions.md
 - M AGENTS.md
 - M CLAUDE.md
 - M GEMINI.md
-- M docs/index.html
+- M formal/W33/Pass462CoverLawL1Q3.lean
 - ?? .continuity/.gitattributes
 - ?? .continuity/decisions.json
 - ?? .continuity/decisions.jsonl
-- ?? BT359_twist_results.json
-- ?? E8
 - ?? PART_BT367_E6_HOLONOMY_BRIDGE.md
-- ?? PART_CCLIX_susy_results.json
-- ?? PART_CCLVIII_qcd_results.json
+- ?? PASS542_Z9_HJELMSLEV_LIFT.md
+- ?? "docs/@Academic @GitHub Continue.docx"
+- ?? docs/holonet_claim_tier_dashboard.html
+- ?? docs/holonet_contextuality_tax_queue_simulator.html
+- ?? docs/holonet_contextuality_tax_scheduler.html
+
+## Session Context
+**Goals:**
+- 2026-06-05 current goal: refresh origin/master, absorb the BT285-BT317 remote batch, and continue the selector/hypercube theory with a scoped verified packet.
+- 2026-06-30 current work: read `w33_paper.tex`, `holonet_practical_implications.tex` (the repo file corresponding to the requested `practical_holonet.tex`), and `photonic_holonet.tex` top-to-bottom; promote a scoped Holonet/W33 packet breakthrough into runnable code, JSON, CI, and `docs/index.html`.
+- 2026-06-30 current work extension: searched the repo and external primary-source surfaces for loosely related quantum-walk/frequency-bin ideas, then promoted the most promising new physical/compiler interface: a frequency-bin lowering of the Hashimoto packet phase bridge.
+- 2026-07-01 current work: update the existing Holonet practical presentation package for an investor-facing talk by folding in the practical paper, machine paper, photonic Pass 48-55 chain, W33 Hashimoto/frequency-bin bridge, current origin/master state, and current market-context sources.
+- 2026-07-02 current work: absorb the latest BT367/BT982 commits and continue the Holonet practical investor presentation by adding an executable selector E6/E8 runtime bridge that ties the 120-sheet selector, 240 signed-sheet/E8 budget, frequency-bin probes, and 51,840-tick runtime into one certificate.
+
 
 ## Decision Freshness
-**0 stale decisions** · 21 need review · 1106 superseded ready to archive · Oldest unreviewed: 2026-04-20
+**0 stale decisions** · 58 need review · 1125 superseded ready to archive · Oldest unreviewed: 2026-04-20
 
 Stale decisions requiring attention:
-1. **1777318403162-biaewx** (score 48) — "Why: Add remaining arithmetic and trace-structure material?" — 14 weeks old, status: outdated, never reviewed
-2. **1777318403161-e7wo55** (score 47) — "Why: Integrate Cycle Clock Theory crosswalk?" — 13 weeks old, status: outdated, never reviewed
-3. **1777318403161-ga2u8l** (score 47) — "Why: Add W33 internal H4 matching shadow?" — 13 weeks old, status: outdated, never reviewed
-4. **1777318403161-xbitkl** (score 47) — "Why: Add QGR E8 H4 emergence supplements?" — 13 weeks old, status: outdated, never reviewed
-5. **1777318403161-s5j46a** (score 47) — "Why: theory: add Witting packet ternary extension bridge?" — 13 weeks old, status: outdated, never reviewed
+1. **1777318403162-biaewx** (score 49) — "Why: Add remaining arithmetic and trace-structure material?" — 14 weeks old, status: outdated, never reviewed
+2. **1777318403161-8dkkdk** (score 48) — "Why: theory: add Witting packet tritangent support bridge?" — 13 weeks old, status: outdated, never reviewed
+3. **1777318403161-wwusgh** (score 48) — "Why: theory: add Witting packet Heisenberg chart?" — 13 weeks old, status: outdated, never reviewed
+4. **1777318403161-vfxeky** (score 48) — "Why: theory: add Witting deck-control audit?" — 13 weeks old, status: outdated, never reviewed
+5. **1777318403161-4mgrce** (score 48) — "Why: paper: add main.tex, references.bib, and all three figure scripts (Issue #1" — 14 weeks old, status: outdated, never reviewed
 
 When referencing these decisions, note their staleness. Verify they still reflect current project state before recommending based on them.
 
-1106 decisions are eligible for Dream consolidation. Suggest running the Dream tool to archive stale decisions, merge duplicates, and resolve contradictions.
+1125 decisions are eligible for Dream consolidation. Suggest running the Dream tool to archive stale decisions, merge duplicates, and resolve contradictions.
 
 ## Operating Contract
 1. **Load context, then search before you change.** MCP-capable agents: call `get_quick_context` at session start, then `search_decisions` before proposing changes. Shell/CLI-only agents (e.g. Copilot): run `continuity context`, then `continuity search "<topic>"` (`grep -i "<topic>" .continuity/decisions.jsonl` if the CLI is unavailable). Name any conflict with a prior decision and let the user choose. **When a prior decision informs your answer, cite it inline — "per decision-abc123, we chose X because Y" — so the user can see the memory being used, not just trust that it was.** `search_decisions` returns a `sourceTag` per result; use it.
@@ -133,6 +143,38 @@ Ordered by how hard they are to catch. Each was found the expensive way.
    start. See `analysis/w33_pass322_the_rank_law_was_already_ours.py`: ~15 passes
    re-derived a rank law the repo had already proved and formalized in Lean, and
    whose two halves are published (Sastry–Sin; Chandler–Sin–Xiang) and cited here.
+
+### The sixth failure mode: EXTERNAL rediscovery (added 2026-07-27)
+
+Failure mode 5 is rediscovering something **this corpus** already has, and the
+index and guard now cover it well. On 2026-07-27 two novelty claims failed a
+different way, and no internal tool could have caught either:
+
+* Pass 1100 identified the 135-block quotient as the maximal partial spreads of
+  size 8 of W(3,3). Correct, exhaustively verified, and **published** — dual to the
+  maximal partial ovoids of size q²−1 of Q(4,q), a studied family described as
+  sharply transitive subsets of SL(2,q) (Penttila; Cimráková–Fack 2005).
+* A closed form q³(q²+1)/2 fitted both computable orders and was structurally
+  derived, and is still **false**: the literature reports the family is empty for
+  q = pʰ with p odd and h > 1.
+
+The corpus genuinely did not contain either fact, so grepping it could not help.
+**A literature check is therefore part of claiming novelty, not an optional
+follow-up.** Before asserting that an object or a count is new:
+
+1. Search for the object under its **standard name**, not the repo's name for it —
+   "maximal partial spread of W(q)" found it instantly; "135-block quotient" never
+   would. If the object lives in a classical geometry, it almost certainly has a
+   standard name and a dual description; look for both (W(q) ↔ Q(4,q)).
+2. Never publish a closed form fitted to **two** data points. Two points fit
+   everything. Either derive it, or find a third order, or state it as a fit and
+   say so.
+3. Record the search that was run, including a negative result — a documented
+   "searched for X, found nothing" is worth as much to the next pass as a hit, and
+   nobody can tell from a certificate whether a search happened.
+
+The cost of the check is one query. The cost of skipping it, measured twice in one
+day, is a pass plus a retraction.
 
 ### The operational prior
 
@@ -216,30 +258,30 @@ after commit:
 ---
 
 ## Recent Decisions
-1. **decision-b6f8c717** (7/5/2026) [why, ci]
-   - Q: Why add a pytest harness for the GAP Pass 63 certificate?
-   - A: Added tests/test_pass63_gap_hilbert_transport.py so CI can run gap -q analysis/w33_phase_bundle_hilbert_transport_kernel.g, parse data/w33_phase_bundle_hilbert_transport_kernel.json, and assert the GAP features used, PSp(4,3) orbit/stabilizer facts, 360 exact Hilbert rows, scheduler-to-audit coordinate transform, Pass 62 gluing spectrum, and scheduler transport distribution {1:7,2:9,3:9,4:8}.
+1. **decision-17848982** (7/23/2026) [auto-draft, needs-review]
+   - Q: Why: Add RH correspondence analytic operator certificate?
+   - A: (Auto-drafted from commit a481e8b on 2026-07-23.) Please review and expand with actual reasoning.
 
-2. **decision-115b6b28** (7/5/2026) [why, holonet]
-   - Q: Why add an Emit/WriteAll helper to the Pass 63 GAP certificate?
-   - A: GAP 4.12.1 Print(stream, ...) prints the stream object to stdout rather than writing file contents, so the OutputTextFile rewrite needed the actual stream primitive. Added a variadic Emit helper in analysis/w33_phase_bundle_hilbert_transport_kernel.g that concatenates arguments and calls WriteAll(stream, text). Re-ran GAP successfully; data/w33_phase_bundle_hilbert_transport_kernel.json is valid JSON, 197026 bytes, all_pass true, with 360 Hilbert rows and scheduler overlap distribution {1:7,2:9,3:9,4:8}.
+2. **decision-17848982** (7/23/2026) [auto-draft, needs-review]
+   - Q: Why: BT796: add global 2160 fibration data?
+   - A: (Auto-drafted from commit 9d8491c on 2026-07-23.) Please review and expand with actual reasoning.
 
-3. **decision-4af922da** (7/5/2026) [why, holonet]
-   - Q: Why switch the Pass 63 GAP JSON writer to one output stream?
-   - A: The line-safe AppendTo JSON writer was correct in principle but too slow on the workspace filesystem because it reopened the output file for thousands of small Hilbert-vector fragments. Reworked analysis/w33_phase_bundle_hilbert_transport_kernel.g to use one GAP OutputTextFile stream with formatting disabled and short Print(stream, ...) emissions, while keeping the full 360-row exact Hilbert dictionary GAP-generated.
+3. **decision-17848982** (7/23/2026) [auto-draft, needs-review]
+   - Q: Why: Add all-prime Frobenius census certificate?
+   - A: (Auto-drafted from commit 98fdd02 on 2026-07-23.) Please review and expand with actual reasoning.
 
-4. **decision-960acb24** (7/5/2026) [why, holonet]
-   - Q: Why rewrite the Pass 63 GAP JSON emitter?
-   - A: The first successful GAP theorem run wrote an invalid JSON artifact because GAP's formatted AppendTo output inserted backslash-newline continuations into long JSON lines. Reworked analysis/w33_phase_bundle_hilbert_transport_kernel.g to emit short line-oriented JSON properties, multiline vectors, multiline counters, and shorter feature strings so GAP remains the producer while downstream JSON parsers can validate the certificate.
+4. **decision-17848982** (7/23/2026) [auto-draft, needs-review]
+   - Q: Why: Add all-prime elliptic Frobenius census?
+   - A: (Auto-drafted from commit 7491866 on 2026-07-23.) Please review and expand with actual reasoning.
 
-5. **decision-eac7a2ac** (7/5/2026) [why, holonet]
-   - Q: Why rename the Pass 63 GAP Hilbert loop variable?
-   - A: GAP treats local as reserved syntax, so the first Hilbert-row loop in analysis/w33_phase_bundle_hilbert_transport_kernel.g could not use local as an identifier. Renamed it to phaseLabel so GAP can parse the exact E(3) eigenspace construction.
+5. **decision-17848982** (7/23/2026) [auto-draft, needs-review]
+   - Q: Why: Add Casey W33 Weil-elliptic theorem insertion?
+   - A: (Auto-drafted from commit cb55f9a on 2026-07-23.) Please review and expand with actual reasoning.
 
-*1708 unreviewed drafts from auto-capture pending review — `continuity log` the real rationale or update_decision to expand them.*
+*1661 unreviewed drafts from auto-capture pending review — `continuity log` the real rationale or update_decision to expand them.*
 
 ---
 
-*Auto-generated by Continuity | Updated: 2026-07-25*
+*Auto-generated by Continuity | Updated: 2026-07-26*
 
 <!-- END CONTINUITY AUTO-GENERATED CONTENT -->

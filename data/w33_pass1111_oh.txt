@@ -1,0 +1,6 @@
+skew-pair (frame) stabiliser order = 48
+structure = C2 x S4
+element order distribution = [ [ 1, 1 ], [ 2, 19 ], [ 3, 8 ], [ 4, 12 ], [ 6, 8 ] ]
+isomorphic to C2 x S4 (= O_h) : true
+isomorphic to 2O (binary octahedral) : false
+involutions in H = 19   (2O has exactly 1) 

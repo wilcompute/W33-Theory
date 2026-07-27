@@ -29,6 +29,13 @@
 #     File: analysis/w33_pass1072_identify_spread_and_frame_graphs.g
 #   * Pass 1067 (parallel track) OWNS the 540-class <-> frame identification and the
 #     centraliser order 48.
+#   * BT773 OWNS the 540 objects and their order-48 stabiliser, under a third name:
+#     "there are 540 cubes in W(3,3), one per 3A1 involution", with the count
+#     identity 51840 = 540 x 2 x 48.  BT810 then calls the same group "the order-48
+#     cube group = skew-pair chart stabilizer".  So the 540-with-stabiliser-48 was
+#     already in the corpus twice before Pass 1067, under the names CUBE and
+#     SKEW PAIR rather than FRAME.  Files: analysis/BT773_involution_cube_theorem.md,
+#     analysis/BT810_completed_geography_schlafli.md
 #   * Pass 1071 OWNS the 36 x 540 incidence (45 frames per spread, 3 spreads per
 #     frame).  File: analysis/w33_pass1071_spread_frame_incidence.py
 #   * BT813 OWNS the spread-side subdegrees [1,15,20] (the double-six ranks) and the

@@ -38,9 +38,24 @@
 #     File: data/w33_pass1081_frame_module_lattice.json
 #   * BT813 OWNS the five-vacuum transition matrix and the name "polar pairs" for
 #     the 45.  File: analysis/BT813_vacuum_transition_matrix.md
+#
 #   * Pass 1082 (parallel track) OWNS the coherent configuration and the
 #     12/20 orbital pairing.
 #     File: data/w33_pass1082_frame_coherent_configuration.json
+#
+# OWNERSHIP CORRECTION (Pass 1111, found by the guard's new noun-number tokens).
+# BT810 OWNS the identification of the 45 with the polar pairs outright, and states
+# it more completely than this pass does: the polarity L -> L^perp is fixed-point-
+# free on the 90 hyperbolic lines, giving exactly 45 pairs, with
+#     Stab{L, L^perp} = (SL(2,3) x SL(2,3)) : C2,  order 1152, index 45,
+# and the mechanism -- the pair splits F3^4 into two orthogonal symplectic planes,
+# each carrying Sp(2,3) = SL(2,3) = 2T, the binary tetrahedral group, swapped by the
+# polarity.  BT810 also places it in the Schlafli dictionary as the 45 tritangent
+# planes.  File: analysis/BT810_completed_geography_schlafli.md
+#
+# WHAT THIS PASS ACTUALLY ADDS, then, is narrower than its headline suggested: the
+# equivariant bijection from the 12-BLOCK SYSTEM of the frame action to that
+# already-named set of polar pairs.  The polar pairs themselves are BT810's.
 
 REPO := GAPInfo.SystemEnvironment.W33_REPO;;
 OUT := Concatenation(REPO, "/data/w33_pass1097_name_the_frame_quotients.json");;
