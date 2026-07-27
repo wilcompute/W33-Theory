@@ -1,14 +1,22 @@
 import Mathlib.Data.Fin.VecNotation
-import Mathlib.LinearAlgebra.Matrix
+-- `Mathlib.LinearAlgebra.Matrix` does not exist at toolchain v4.32.0-rc1; the
+-- lemmas this file uses (Matrix.mul_apply, Matrix.mulVec) live in Data.Matrix.Mul.
+import Mathlib.Data.Matrix.Basic
+import Mathlib.Data.Matrix.Mul
 
 /-!
 # Pass 1091: frame-orbital transpose and intertwiner regression lock
 
 The finite maps below are copied from the exact Pass-1082 certificate. The
-`native_decide` theorems lock the corrected pairing counts. The generic matrix
+`decide` theorems lock the corrected pairing counts. The generic matrix
 lemmas record the algebraic meaning of the Pass-1083/1087 identities.
 -/
 
+-- `native_decide` replaced by `decide` throughout.  These are all facts about
+-- 32- and 22-element maps, which the kernel evaluates directly; `native_decide`
+-- instead compiles this module -- and the whole matrix import surface it pulls in
+-- -- to native code, which took over an hour here and produced the same theorems
+-- with a strictly weaker trust story.
 namespace W33.Pass1091
 
 def innerTranspose : Fin 32 → Fin 32 :=
@@ -36,28 +44,37 @@ def fusionFixed : Finset (Fin 32) :=
   Finset.univ.filter fun i => outerFusion i = i
 
 theorem innerTranspose_involutive : Function.Involutive innerTranspose := by
-  native_decide
+  -- `Function.Involutive` is a `def`, so `decide` cannot synthesize a
+  -- `Decidable` instance for it; unfold to the decidable forall first.
+  unfold Function.Involutive
+  decide
 
 theorem innerSelfPaired_card : innerSelfPaired.card = 12 := by
-  native_decide
+  decide
 
 theorem innerNonSelfPaired_card : innerNonSelfPaired.card = 20 := by
-  native_decide
+  decide
 
 theorem innerTransposePair_card : innerNonSelfPaired.card / 2 = 10 := by
-  native_decide
+  decide
 
 theorem outerFusion_involutive : Function.Involutive outerFusion := by
-  native_decide
+  -- `Function.Involutive` is a `def`, so `decide` cannot synthesize a
+  -- `Decidable` instance for it; unfold to the decidable forall first.
+  unfold Function.Involutive
+  decide
 
 theorem outerFusionOrbit_card : fusionFixed.card + (32 - fusionFixed.card) / 2 = 22 := by
-  native_decide
+  decide
 
 theorem outerTranspose_involutive : Function.Involutive outerTranspose := by
-  native_decide
+  -- `Function.Involutive` is a `def`, so `decide` cannot synthesize a
+  -- `Decidable` instance for it; unfold to the decidable forall first.
+  unfold Function.Involutive
+  decide
 
 theorem outerSelfPaired_card : outerSelfPaired.card = 14 := by
-  native_decide
+  decide
 
 /-- A column of `T` belongs to the left kernel of `B` whenever `B*T=0`. -/
 theorem column_mem_leftKernel
@@ -68,7 +85,7 @@ theorem column_mem_leftKernel
     B.mulVec (fun i => T i j) = 0 := by
   funext i
   have hij := congrArg (fun M => M i j) h
-  simpa [Matrix.mul_apply, Matrix.mulVec] using hij
+  simpa [Matrix.mul_apply, Matrix.mulVec, dotProduct] using hij
 
 /-- The projector relation `T*K=cT` is valid on every matrix entry. -/
 theorem cycleEigen_entry
