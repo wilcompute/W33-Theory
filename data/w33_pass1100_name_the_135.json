@@ -1,0 +1,28 @@
+{
+  "schema": "w33.pass1100.name_the_135.gap.v1",
+  "status": "PASS",
+  "headline": "The 135-block quotient of the 540-frame action IS the set of MAXIMAL PARTIAL SPREADS of size 8 in W(3,3). A 4-block's four frames use eight pairwise disjoint totally isotropic lines covering 32 of the 40 points, and the eight missed points contain no line, so the partial spread admits no extension. The identification is canonical rather than orbit-wise: the full census gives 1755 = 1620 + 135, where 1620 = 36 spreads x C(10,2) are the extendable ones, and the 135 unextendable ones are EXACTLY the 4-blocks' line sets, checked as an equality of sets. Separately, the full outer group PGSp(4,3) preserves all three block systems, so the three quotients belong to the whole automorphism group and not only to the inner PSp(4,3); the outer rank on the 540 is 22, agreeing with Pass 1082.",
+  "size8_partial_spreads_total": 1755,
+  "extendable": 1620,
+  "unextendable": 135,
+  "extendable_equals_36_times_C_10_2": true,
+  "outer_preserves_all_three_block_systems": true,
+  "not_claimed": "The inner-to-outer ORBITAL fusion (32 suborbits to 22, twelve fixed and ten transposed) is Pass 1082's and is cited only. This pass establishes the BLOCK-level statement, which that certificate does not contain. No physical reading is attached to any quotient.",
+  "scope": "Exhaustive enumeration of the size-8 partial spreads and an equality of sets against the block system, plus a generator-wise check that the outer group preserves each system. No claim about q other than 3.",
+  "check_count": 13,
+  "checks": {
+    "each_4block_is_eight_distinct_lines": true,
+    "those_eight_lines_are_pairwise_disjoint": true,
+    "so_a_4block_IS_a_partial_spread_of_size_8": true,
+    "every_such_partial_spread_is_UNEXTENDABLE": true,
+    "census_of_size8_partial_spreads_is_1755": true,
+    "extendable_count_is_36_times_45": true,
+    "unextendable_count_is_135": true,
+    "the_135_blocks_ARE_exactly_the_unextendable_ones": true,
+    "block_to_partial_spread_is_injective": true,
+    "outer_preserves_the_4_block_system": true,
+    "outer_preserves_the_12_block_system": true,
+    "outer_preserves_the_15_block_system": true,
+    "outer_rank_on_540_is_22": true
+  }
+}

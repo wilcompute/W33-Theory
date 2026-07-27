@@ -1,4 +1,27 @@
 #!/usr/bin/env python3
+# =============================================================================
+# RETRACTED by Pass 1099 -- analysis/w33_pass1099_exact_ks_maximum.py
+#
+# THE CONCLUSION BELOW (defect = 3/10) IS WRONG.  The maximum partial ovoid of
+# W(3,3) really is 7, but "partial ovoid" is the wrong model of a classical
+# assignment.  A context is SATISFIED when it holds exactly one mark; a partial
+# ovoid wins every context it touches but can only touch 4m of them, whereas a
+# larger marking may sacrifice a few contexts to two marks and win many more.
+#
+# BT818 T2 had already exhibited a marking of size 13 satisfying 36 of the 40
+# contexts, and had already noted 36 = (q!)^2.  Pass 1098 did not cite it.  Pass
+# 1099 then closed BT818's open bracket by exact integer programming:
+#
+#     the maximum is EXACTLY 36, so the defect is 4/40 = 1/10, not 3/10.
+#
+# So the demonstrator's preregistered 1/10 is the right number for this
+# observable after all.  Pass 1080 is unaffected and still correct: 1/10 is not
+# the Abramsky-Barbosa contextual fraction, which is 1.
+#
+# The file is kept for the record.  Its maximum-partial-ovoid computation is
+# sound and reproduces BT818's alpha = 7; only its identification of that number
+# with the KS satisfiability bound is withdrawn.
+# =============================================================================
 """Pass 1098: what the demonstrator's 1/10 target would have to be, and whether
 the geometry supplies it.
 

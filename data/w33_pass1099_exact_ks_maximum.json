@@ -1,0 +1,48 @@
+{
+  "checks": {
+    "at_least_36_as_BT818_found": true,
+    "at_most_39_as_BT818_bounded": true,
+    "defect_is_one_tenth": true,
+    "exact_maximum_is_36": true,
+    "forty_points_forty_contexts": true,
+    "objective_matches_independent_recount": true,
+    "pass1098_partial_ovoid_model_is_beaten": true,
+    "so_defect_is_NOT_three_tenths": true,
+    "solver_proved_optimality": true
+  },
+  "defect": "1/10",
+  "derivation_still_not_rehabilitated": "The preregistration reached 1/10 as 1 - (q!)^2/v, asserting (q!)^2 = 36 to be the satisfiable count. That was numerology and BT818 had already flagged 36 = (q!)^2 as a coincidence rather than a derivation. The value is now confirmed by exact optimisation; the route to it is not.",
+  "exact_maximum_satisfiable_contexts": 36,
+  "guard_note": "The rediscovery guard could not have caught Pass 1098's collision with BT818: the shared results are the bare integers 7 and 36, and bare integers are excluded from the guard's token classes by deliberate calibration (Pass 328 measured that they flag 78% of files). This is a real instance of that known blind spot, and it cost one pass.",
+  "headline": "The exact Kochen-Specker maximum for W(3,3) is 36 of 40 contexts, certified optimal by integer programming. This closes BT818's open bracket [36,39]. The defect is therefore 1/10, so the demonstrator's preregistered 1/10 is the right number for this observable -- while Pass 1080 remains correct that 1/10 is not the Abramsky-Barbosa contextual fraction, which is 1. Pass 1098's 3/10 is withdrawn.",
+  "prior_art": [
+    "analysis/BT818_ovoid_nogo_theta_gap.md -- OWNS alpha=7, the >=36 marking, the [36,39] bracket, 40 impossible, and 36=(q!)^2",
+    "analysis/w33_pass1098_what_one_tenth_measures.py -- retracted here",
+    "analysis/w33_pass1080_contextual_fraction_audit.py -- CF=1, unaffected",
+    "data/w33_pass1086_contextuality_claim_firewall.json -- retired the label"
+  ],
+  "retracts": "analysis/w33_pass1098_what_one_tenth_measures.py -- its 3/10 came from restricting classical assignments to partial ovoids, which is not the right optimisation. A marking may place two marks on a context, losing it, while hitting many more exactly once.",
+  "schema": "w33.pass1099.exact_ks_maximum.v1",
+  "scope": "Exact integer programming over the 40 rays and 40 contexts of W(3,3), with the exactly-once condition encoded by two tight linear inequalities per context. The optimum is certified by the solver and independently recounted from the returned marking. No claim is made about q != 3 and none about what the hardware measures.",
+  "status": "PASS",
+  "total_contexts": 40,
+  "two_quantities_that_coexist": {
+    "abramsky_barbosa_contextual_fraction": 1,
+    "ks_satisfiability_defect": "1/10",
+    "why_both": "CF = 1 because no global section exists at all (W(3,3) has no ovoid), which is a statement about exact colourings. The KS defect asks instead how CLOSE one can get, and the answer is 36/40. A model can be maximally contextual in the sheaf sense and still admit a marking that misses only four contexts."
+  },
+  "witness_marking": [
+    0,
+    2,
+    4,
+    9,
+    11,
+    23,
+    24,
+    26,
+    27,
+    29,
+    30
+  ],
+  "witness_marking_size": 11
+}

@@ -1,0 +1,10 @@
+|OG| = 51840 irreducibles = 25
+degrees = [ 1, 1, 6, 6, 10, 15, 15, 15, 15, 20, 20, 20, 24, 24, 30, 30, 60, 60, 60, 64, 64, 80, 81, 81, 90 ]
+pi_540 rank=22  multiplicities of degree-81 irreducibles = [ 1, 1 ]
+   full decomposition (deg:mult) = [ [ 1, 1 ], [ 15, 1 ], [ 15, 2 ], [ 20, 2 ], [ 24, 2 ], [ 60, 1 ], [ 60, 2 ], [ 64, 1 ], [ 81, 1 ], [ 81, 1 ] ]
+pi_135 rank=6  multiplicities of degree-81 irreducibles = [ 0, 0 ]
+   full decomposition (deg:mult) = [ [ 1, 1 ], [ 15, 1 ], [ 15, 1 ], [ 20, 1 ], [ 24, 1 ], [ 60, 1 ] ]
+pi_45 rank=3  multiplicities of degree-81 irreducibles = [ 0, 0 ]
+   full decomposition (deg:mult) = [ [ 1, 1 ], [ 20, 1 ], [ 24, 1 ] ]
+pi_36 rank=3  multiplicities of degree-81 irreducibles = [ 0, 0 ]
+   full decomposition (deg:mult) = [ [ 1, 1 ], [ 15, 1 ], [ 20, 1 ] ]

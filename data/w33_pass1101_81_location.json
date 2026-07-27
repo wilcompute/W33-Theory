@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass1101.eightyone_location.gap.v1",
+  "status": "PASS",
+  "headline": "Both 81-dimensional constituents occur in the 540-frame permutation module of PGSp(4,3) with multiplicity one, and with multiplicity ZERO in all three block quotients (135, 45, 36). They therefore lie in the intersection of the kernels of the three quotient maps. Together with the parallel track's Pass 1094, which shows 81_plus and 81_minus embed in neither the 240 E8 root module nor the 120 root-line module, the 81s are visible in the frame module and in none of the other natural modules on either side. Consistency: pi_36 = 1+15+20 reproduces BT813's double-six ranks from characters rather than orbit counting, and pi_540 has rank 22 as in Pass 1082.",
+  "multiplicity_of_81_in": {"pi_540": 1, "pi_135": 0, "pi_45": 0, "pi_36": 0},
+  "ranks": {"pi_540": 22, "pi_135": 6, "pi_45": 3, "pi_36": 3},
+  "decompositions": {"pi_540": "1 + 15a + 2.15b + 2.20 + 2.24 + 60a + 2.60b + 64 + 81_+ + 81_-", "pi_135": "1 + 15a + 15b + 20 + 24 + 60", "pi_45": "1 + 20 + 24", "pi_36": "1 + 15 + 20"},
+  "not_claimed": "No map is asserted between these 81s and anything on the E8 side; Pass 1094 shows there is none to assert. Nothing here identifies what the 81s are.",
+  "scope": "Exact character-theoretic decomposition of four permutation characters of the order-51840 outer group, computed from the group itself rather than from a table lookup.",
+  "check_count": 4,
+  "checks": {"eightyone_in_pi540": true, "eightyone_absent_from_all_three_quotients": true, "pi36_is_1_15_20": true, "pi540_rank_22": true}
+}

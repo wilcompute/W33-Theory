@@ -1,0 +1,15 @@
+each_4block_is_eight_distinct_lines = true
+those_eight_lines_are_pairwise_disjoint = true
+so_a_4block_IS_a_partial_spread_of_size_8 = true
+every_such_partial_spread_is_UNEXTENDABLE = true
+census_of_size8_partial_spreads_is_1755 = true
+extendable_count_is_36_times_45 = true
+unextendable_count_is_135 = true
+the_135_blocks_ARE_exactly_the_unextendable_ones = true
+block_to_partial_spread_is_injective = true
+outer_preserves_the_4_block_system = true
+outer_preserves_the_12_block_system = true
+outer_preserves_the_15_block_system = true
+outer_rank_on_540_is_22 = true
+size-8 partial spreads = 1755 = 1620 extendable + 135 unextendable
+36 * C(10,2) = 1620
