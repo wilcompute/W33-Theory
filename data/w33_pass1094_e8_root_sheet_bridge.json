@@ -1,0 +1,10 @@
+{
+  "schema":"w33.pass1094.e8_root_sheet_bridge.v1","status":"PASS",
+  "headline":"The proposed bridge from the frame-kernel Steinberg modules 81_plus and 81_minus to the signed E8 root sheets is obstructed exactly. The faithful W(E6)=U4(2):2 action on the 240 E8 roots and on the 120 antipodal root lines contains neither 81_plus nor 81_minus: both character inner products are zero. Therefore every U4(2):2-equivariant linear map from either Steinberg copy to these root permutation modules is zero.",
+  "root_action":{"degree":240,"orbit_profile":[1,1,1,1,1,1,27,27,27,27,27,27,72],"character_ATLAS_order":[240,24,60,6,72,12,24,14,20,6,24,6,12,6,6,126,26,12,40,30,6,8,12,6,12],"known_pass1020_profile":[1,1,1,1,1,1,27,27,27,27,27,27,72]},
+  "antipodal_root_line_action":{"degree":120,"character_ATLAS_order":[120,24,32,3,36,6,12,8,10,3,12,6,8,3,3,64,16,12,20,16,4,4,6,4,6]},
+  "constituent_inner_products":{"roots240":{"15a":1,"60a":0,"20":7,"81_minus":0,"60b":0,"24":0,"64":0,"15b":0,"81_plus":0,"1":13},"root_lines120":{"15a":1,"60a":0,"20":4,"81_minus":0,"60b":0,"24":0,"64":0,"15b":0,"81_plus":0,"1":7}},
+  "decision":{"equivariant_bridge_exists":false,"reason":"Hom_G(81_plus,C[roots])=Hom_G(81_minus,C[roots])=0, and likewise for antipodal root lines.","important_group_boundary":"The transitive signed-root action belongs to Sp(4,3)=2.U4(2), whereas 81_plus/minus are modules of U4(2):2=W(E6). The faithful W(E6) restriction is intransitive and still has zero Steinberg multiplicity."},
+  "check_count":12,"checks":{"E8_roots240":true,"WE6_order51840":true,"twentyfive_classes":true,"ATLAS_standard_pair_found":true,"all_ATLAS_classes_identified":true,"WE6_root_orbits_match_pass1020":true,"root_character_degree240":true,"root_line_character_degree120":true,"St_plus_absent_from_roots":true,"St_minus_absent_from_roots":true,"St_plus_absent_from_root_lines":true,"St_minus_absent_from_root_lines":true},
+  "scope":"Exact E8 root permutations from six Bourbaki E6 reflections, exact ATLAS class identification, and exact character inner products."
+}
