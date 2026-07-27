@@ -1,0 +1,9 @@
+{
+  "schema": "w33.pass1148_1152.exact_crossed_bridge.v1",
+  "status": "PASS",
+  "pass1148": {"status":"PASS","carrier_degree":432,"hecke_rank":26,"mass_identity":"2*1+6*5+4*10+9*20+4*30+1*60=432","center_dimension":9,"commutator_dimension":17},
+  "pass1149": {"status":"PASS","module":"81_minus tensor C[C3]","dimension":243,"rational_ranks":[81,162],"complex_fourier_ranks":[81,81,81],"aligned_bridge_rank":243,"hom_to_color_extended_target":3,"hom_to_uncolored_target":1,"killed_432_basis_columns":1296,"kernel_remainder":1952},
+  "pass1151": {"status":"PASS","canonical_species":["point-nonedge","double-six-nonincident","gq42-arc","outer-4c","line-nonedge"],"joint_rank_determinant":83712,"policy":"Cardinality 540 and abstract stabilizer type never identify a carrier."},
+  "pass1152": {"status":"PASS","ambient_three_copy_commutant":234,"color_centralizer_dimension":3,"crossed_commutant_dimension":78,"center_dimension":27,"commutator_dimension":51,"algebra":"H(S5\\W(E6)/S5) tensor C[C3]"},
+  "scope":"Exact finite permutation algebra and corpus governance; no continuum or hardware claim."
+}
