@@ -1,0 +1,8 @@
+{
+  "schema":"w33.pass1092_1096.release.v1","status":"PASS",
+  "passes":{"1092":{"checks":19,"result":"exact U4(2):2 ATLAS characters and Clifford restriction/induction"},"1093":{"checks":12,"result":"dual-Hesse nine lines equivariantly equal the nine Heisenberg firewall fibers"},"1094":{"checks":12,"result":"exact zero-Hom obstruction from 81_plus/minus to E8 roots and root lines"},"1095":{"checks":15,"result":"vendor-neutral armed/dry-run controller adapter"},"1096":{"checks":17,"result":"formal character, Hessian, and E8 obstruction locks"}},
+  "total_exact_checks":75,"pytest":"7 passed in 0.06s",
+  "formal_boundary":"Lean source is umbrella-ready; no local Lean executable is available.",
+  "hardware_boundary":"Reference vendor adapter only; no physical controller or optical hardware connected.",
+  "authoritative_report":"PASS1092_1096_CHARACTER_HESSE_E8_VENDOR_FORMAL_RELEASE.md"
+}
