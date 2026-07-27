@@ -1,0 +1,11 @@
+{
+  "schema": "w33.pass1110.formal_a2_phase_qontrol_lock.v1",
+  "status": "PASS_SOURCE_READY_STRICT_BUILD_PENDING",
+  "headline": "A compact Lean extension now freezes the A2-triple multiplicities 0 for 81_plus and 3 for 81_minus, the complete cubic central-phase histogram 25/10/10, the signed firewall split 2/7, the 240-command Qontrol schedule arithmetic, and the strict inequality by which the 2240 A2 carrier improves the Pass-1104 pair minimum. It imports the parallel Pass-1106 formal package and awaits observed strict PR compilation.",
+  "lean_module": "formal/W33/Pass1110A2PhaseQontrolClosure.lean",
+  "lean_sha256": "e7df2a0aaa0881b8f31c1c5d14b39efe78733610ef38213969ac3c99dc05de44",
+  "parallel_strict_baseline": {"commit":"1dfc7f99274fb1e14419722c2dc0ecc2481edee4","modules":44,"command":"lake build --wfail","status":"observed PASS"},
+  "new_module_build_status": "pending pull-request CI",
+  "check_count": 10,
+  "checks": {"lean_source_exists":true,"imports_parallel_pass1106":true,"all_extension_theorems_present":true,"a2_character_25_classes":true,"a2_multiplicity3_locked":true,"central_phase_25_10_10_locked":true,"firewall_sign_2_7_locked":true,"qontrol_40_160_40_locked":true,"kernel_tactics_only":true,"strict_parallel_baseline_recorded":true}
+}
