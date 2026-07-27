@@ -96,6 +96,20 @@ The W(3,3) Geometric Framework}}
 
 \maketitle
 
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{
+\textbf{Status: superseded historical synthesis.}
+This draft preserves the development history of the programme, but its
+physics conclusions are not the current evidence-tiered position.  In
+particular, the former shifted-adjacency cubic and its degree-$32$
+determinant have been withdrawn.  The maintained mathematical account is
+\texttt{w33\_paper.tex}; the reader-facing account is
+\texttt{W33\_FOR\_EVERYONE.tex}.  Exact finite theorems below remain usable
+only where their stated witnesses establish them.
+}}
+\end{center}
+% {shifted-adjacency:retracted}
+
 %% ---------------------------------------------------------------
 \begin{abstract}
 We present a unified physical framework --- the \textbf{W(3,3) theory} ---
@@ -122,9 +136,11 @@ distinct integers alone we recover:
   \item eight falsifiable experimental predictions testable at JUNO,
         KATRIN, DUNE, Hyper-Kamiokande, LEGEND-1000, and LISA.
 \end{enumerate}
-The uniqueness of $\SRG(40,12,2,4)$ eliminates all tunable moduli.
-The framework constitutes the most constrained purely spectral derivation
-of SM parameters to date.
+There are $28$ non-isomorphic strongly regular graphs with these parameters;
+the symplectic construction, not the parameter tuple, selects $W(3,3)$.
+The finite geometry and its exact certificates are the established content.
+The physical identifications listed above are historical hypotheses and are
+not claimed here as derivations of Standard-Model parameters.
 \end{abstract}
 
 \tableofcontents
@@ -153,7 +169,8 @@ This work takes a different approach. We prove that the symplectic polar
 space $\W$---the incidence geometry of totally isotropic subspaces of
 $\mathrm{PG}(3,\mathbb{F}_3)$ with respect to a non-degenerate alternating
 bilinear form---encodes the complete structure of fundamental physics.
-The collinearity graph of $\W$ is the unique strongly regular graph
+The collinearity graph of $\W$ is the symplectic member of the
+$28$ non-isomorphic strongly regular graphs with parameters
 $\SRG(40,12,2,4)$ \cite{Seidel1973,GoethalsSeidel1970}.
 More concretely, $\W$ is simultaneously the projective commutation geometry of
 the $40$ non-identity two-qutrit Pauli observables, and each local shell around
@@ -280,28 +297,28 @@ to
 \]
 \end{remark}
 
-\subsection{The One-Line Theory}
+\subsection{The One-Line Finite Operator}
 
-The broader spectral closure studied in this paper is encapsulated in one
-formula:
+The exact shifted point-carrier operator is
 \begin{equation}\label{eq:oneline}
-  \boxed{Z(x) \;=\; (1-5x)^{10}\,(1+x)^{16}\,(1+7x)^{6}.}
+  D=A-I,\qquad
+  \boxed{\det(I-xD)=(1-11x)(1-x)^{24}(1+5x)^{15}.}
 \end{equation}
-This degree-32 polynomial is the \textbf{spectral determinant} of the Dirac
-operator on $\mathrm{GQ}(3,3)$. The three factors correspond to the three
-sectors of the Standard Model:
-\begin{itemize}
-  \item \textbf{Gauge:} $(1-5x)^{q^2+1}=(1-5x)^{10}$, with $\Theta=q^2+1=10$ modes
-        at eigenvalue~$5$;
-  \item \textbf{Matter:} $(1+x)^{2^{q+1}}=(1+x)^{16}$, with $16$ matter modes
-        at eigenvalue~$-1$;
-  \item \textbf{Broken/Higgs:} $(1+\Phi_6 x)^{2q}=(1+7x)^6$, with $2q=6$ modes
-        at eigenvalue~$-7$.
-\end{itemize}
-Total degree: $10+16+6 = 32 = 2^{q+\lambda} = \dim\mathrm{Spin}(10)$.
-Its Taylor expansion $Z(x)=1+8x-248x^2+\cdots$ yields $\dim\mathbb{O}=8$ and
-$\dim E_8=248$; its zero $Z(-1)=0$ implements anomaly cancellation; its value
-$Z(1)=2^{54}$ counts spinor degeneracies.
+It acts on all $40$ points and has the three multiplicity-free channels
+$1+24+15$.  Its positive square is especially simple:
+\[
+  D^2=13I+4\overline A,
+  \qquad \overline A=J-I-A.
+\]
+Thus $D$ is supported off the diagonal on the $240$ collinear pairs,
+whereas $D^2$ is supported off the diagonal on the $540$ noncollinear % {540:point-nonedge}
+pairs.  The switch is reversible:
+\[
+  288D=(D^2)^2-98D^2+385I.
+\]
+These are exact finite identities.  Assigning the three channels to
+physical sectors requires an additional map and is not a consequence of
+the determinant alone.
 
 \subsection{Strategy and the Logical Chain}
 
@@ -340,14 +357,15 @@ questions. Section~\ref{sec:conclusion} concludes.
 \subsection{Definition and Parameters}
 
 \begin{definition}
-The \textbf{W(3,3) graph} is the unique strongly regular graph with
-parameters
+The \textbf{W(3,3) graph} is the collinearity graph constructed from
+symplectic orthogonality on $\mathrm{PG}(3,\mathbb F_3)$.  It has parameters
 \[
   \SRG(\nv,\,k,\,\lambda,\,\mu)
   \;=\;
   \SRG(40,\;12,\;2,\;4).
 \]
 \end{definition}
+The parameters alone do not define the graph up to isomorphism.
 
 The six spectral parameters and their physical interpretation are
 listed in Table~\ref{tab:params}.
@@ -1238,7 +1256,8 @@ any graph with triangles is non-bipartite.
 The graph $\W(3,3)$ is \emph{distance-regular} and has highly uniform metric structure:
 \begin{itemize}
   \item \textbf{All pairwise distances}: Exactly two distance classes: distance 1 (240 pairs, 30.8\%)
-        and distance 2 (540 pairs, 69.2\%). No vertices at distance $> 2$.
+        and distance 2 (540 pairs, 69.2\%). % {540:point-nonedge}
+        No vertices at distance $> 2$.
   \item \textbf{Distance-uniform neighborhoods}: For each distance $d$, every vertex has
         exactly the same number of vertices at distance $d$:
         \begin{align}
@@ -1279,7 +1298,7 @@ For $W(3,3)$, this uniform distance property has immediate consequences:
 
 The mean distance $\mu = 1.69$ is computed as the average over all vertex pairs:
 \[
-  \mu = \frac{\sum_{u,v} d(u,v)}{n(n-1)/2} = \frac{240 \cdot 1 + 540 \cdot 2}{780} = \frac{1320}{780} = 1.69
+  \mu = \frac{\sum_{u,v} d(u,v)}{n(n-1)/2} = \frac{240 \cdot 1 + 540 \cdot 2}{780} = \frac{1320}{780} = 1.69 % {540:point-nonedge}
 \]
 This value is consistent with a graph of moderate ``compactness'' for 40 vertices.
 \end{proof}
@@ -1304,8 +1323,8 @@ is itself strongly regular with complementary parameters:
         \]
         yields $27(27-18-1) = 27 \cdot 8 = 216$ and $18(40-27-1) = 18 \cdot 12 = 216$, confirming the constraint.
   \item \textbf{Connected complement}: $\bar{\W}$ is connected with diameter $\mathrm{diam}(\bar{\W}) = 2$.
-        The 540 edges of $\bar{\W}$ (plus 240 edges of $\W$) partition the complete graph $K_{40}$:
-        $E(\W) + E(\bar{\W}) = 240 + 540 = 780 = \binom{40}{2}$.
+        The 540 edges of $\bar{\W}$ (plus 240 edges of $\W$) partition the complete graph $K_{40}$: % {540:point-nonedge}
+        $E(\W) + E(\bar{\W}) = 240 + 540 = 780 = \binom{40}{2}$. % {540:point-nonedge}
   \item \textbf{Mutual SRG duality}: Both $\W$ and $\bar{\W}$ are SRGs with identical diameter 2.
         This ``SRG self-complementary'' structure is extremely rare.
 \end{itemize}
@@ -1476,7 +1495,7 @@ $E_2$ (15-dimensional, $\mu=16$), yields $\Omega_1 = 13/80$ and $\Omega_2 = 7/40
 zero variance across all vertex pairs in each class.
 
 The Kirchhoff index follows: $\mathrm{Kf} = \binom{n}{2}\bar\Omega
-= 240\cdot(13/80) + 540\cdot(7/40) = 39 + 94.5 = 267/2$.
+= 240\cdot(13/80) + 540\cdot(7/40) = 39 + 94.5 = 267/2$. % {540:point-nonedge}
 
 The commute time formula $\mathcal{C}(u,v) = 2|E|\,\Omega(u,v)$ is a standard result in
 random walk theory, giving $\mathcal{C}_1 = 480\cdot 13/80 = 78$ and
@@ -1631,7 +1650,7 @@ sets with remarkable arithmetic structure:
 
 \begin{proof}
 The independence polynomial $I(G,x) = \sum_{k=0}^{\alpha} i_k x^k$ is computed by exhaustive
-enumeration.  Here $i_0 = 1$, $i_1 = n = 40$, $i_2 = \binom{n}{2} - |E| = 780 - 240 = 540$,
+enumeration.  Here $i_0 = 1$, $i_1 = n = 40$, $i_2 = \binom{n}{2} - |E| = 780 - 240 = 540$, % {540:point-nonedge}
 and higher coefficients are obtained by counting all independent sets of each size via backtracking
 with non-neighbor pruning.
 
@@ -1989,7 +2008,7 @@ $\mathrm{GQ}(3,3)$.
         $\{u,v\}^{\!\perp}$ is a coclique of size~$4$.
   \item \textbf{Line incidence}:  Each line meets exactly $12$ others
         (concurrent pairs $= 240$) and is parallel to $27$
-        (disjoint pairs $= 540$).
+        (disjoint pairs $= 540$). % {540:line-nonedge}
   \item \textbf{Complement graph}:
         $\overline{\W} = \mathrm{SRG}(40, 27, 18, 18)$ with
         $\bar\lambda = \bar\mu = 18$ and balanced spectrum
@@ -2023,7 +2042,7 @@ with~$v$, yet both $p$ and $q$ qualify---a contradiction.
 
 (iv) Each of $4$ points on a line lies on $3$ other lines, giving
 $4 \cdot 3 = 12$ concurrent lines.
-The $\binom{40}{2} = 780$ line pairs split as $240 + 540$.
+The $\binom{40}{2} = 780$ line pairs split as $240 + 540$. % {540:line-nonedge}
 
 (v) The complement parameters follow from
 $\bar k = n{-}1{-}k = 27$,
@@ -2361,130 +2380,85 @@ $\mathrm{SU}(5)$ (one SM generation plus a sterile neutrino).
 \label{sec:spectraldet}
 %% ===============================================================
 
-\subsection{The Master Cubic}
+\subsection{The Exact Shifted Cubic}
 
-\begin{theorem}[Master Cubic]\label{thm:mastercubic}
-The characteristic polynomial of the Dirac operator on each connected sector of
-$\mathrm{GQ}(3,3)$ satisfies:
+\begin{theorem}[Full-carrier shifted cubic]\label{thm:mastercubic}
+For $D=A-I$ on the $40$-point carrier,
 \begin{equation}\label{eq:mastercubic}
-  \boxed{(t+1)\bigl[(t+1)^2 - (2q)^2\bigr] \;=\; 0,}
+  \boxed{(D-11I)(D-I)(D+5I)=0,}
 \end{equation}
-giving roots $t=-1$, $t=-1+2q=5$, $t=-1-2q=-7$.
-One equation, three eigenvalues, all of physics.
-\end{theorem}
-
-The Dirac eigenvalues $\{5,\,-1,\,-7\}$ with multiplicities
-$\{\Theta=10,\;2^{q+1}=16,\;2q=6\}$ are the shifted SRG eigenvalues.
-The total degree $10+16+6=32=2^{q+\lambda}=\dim\mathrm{Spin}(10)$.
-
-\begin{theorem}[Spectral Democracy --- unique to $q=3$]
-\label{thm:specdem}
-The three Dirac eigenvalues $\{5,-1,-7\}$ form an arithmetic sequence
-with common difference $-q!=-6$. This occurs \emph{only} for $q=3$.
+and the spectrum is $11^1\oplus1^{24}\oplus(-5)^{15}$.
 \end{theorem}
 
 \begin{proof}
-The eigenvalues $\{-1+2q,\,-1,\,-1-2q\}$ have common difference $2q$.
-Simultaneously $q!=6=2q$ uniquely at $q=3$. For any other prime power
-the ratio $2q/q!$ is not an integer, destroying the arithmetic pattern.\qed
+Subtracting $I$ from the adjacency operator shifts
+$12^1\oplus2^{24}\oplus(-4)^{15}$ to the displayed spectrum.  The three
+values are distinct, so the displayed polynomial is minimal.
 \end{proof}
 
-\subsection{Taylor Expansion and Lie Algebras}
+\begin{theorem}[Lossless complement switch]\label{thm:specdem}
+Writing $H=D^2$ and $\overline A=J-I-A$,
+\[
+  \boxed{H=13I+4\overline A,\qquad
+  288D=H^2-98H+385I.}
+\]
+Hence $\mathbb Q[D^2]=\mathbb Q[D]$: the positive even generator retains
+all three signed spectral channels.
+\end{theorem}
 
-\begin{theorem}[Taylor coefficients encode $\mathbb{O}$ and $\Eone$]
-\label{thm:taylor}
-The spectral determinant $Z(x)=(1-5x)^{10}(1+x)^{16}(1+7x)^6$ has expansion
-\begin{equation}\label{eq:taylor}
-  Z(x) \;=\; 1 + 8x - 248x^2 - 1880x^3 + \cdots
+\begin{proof}
+The SRG identity gives
+$D^2=9I-4A+4J=13I+4\overline A$.  The eigenvalues of $H$ are
+$121,1,25$ with multiplicities $1,24,15$.  Polynomial interpolation on
+these three values gives the recovery identity.
+\end{proof}
+
+\subsection{Determinant, Trace Tower, Heat, and Zeta}
+
+The exact determinant is
+\[
+  Z_D(x)=\det(I-xD)=(1-11x)(1-x)^{24}(1+5x)^{15}.
+\]
+Its logarithmic derivative gives
+\begin{equation}\label{eq:trace-tower-gen}
+  -x\frac{d}{dx}\log Z_D(x)
+  =\sum_{n=1}^{\infty}\mathrm{tr}(D^n)x^n,
 \end{equation}
 with
-\begin{align}
-  Z'(0) &= -50 + 16 + 42 = 8 = \dim\mathbb{O},\label{eq:Zp0}\\
-  \tfrac{1}{2}Z''(0) &= -248 = -\dim\Eone.\label{eq:Zpp0}
-\end{align}
-The leading Taylor coefficients are the dimensions of the octonion algebra and the
-$\Eone$ Lie algebra.
-\end{theorem}
-
-\subsection{Special Values and Anomaly Cancellation}
-
-\begin{proposition}[Special values of $Z$]\label{prop:Zspecial}
-\begin{align}
-  Z(0) &= 1,\label{eq:Z0}\\
-  Z(-1) &= 0 \quad\text{(anomaly cancellation)},\label{eq:Zanomaly}\\
-  Z(1) &= 2^{54} = 2^{2q^3}.\label{eq:Z1}
-\end{align}
-\end{proposition}
-
-\begin{proof}
-$Z(0)=1$ is immediate. $Z(-1) = (1+5)^{10}\cdot 0^{16}\cdot(1-7)^6 = 0$
-since $(1+x)^{16}$ vanishes at $x=-1$.
-For $Z(1)$: $(-4)^{10}\cdot 2^{16}\cdot 8^6 = 2^{20}\cdot 2^{16}\cdot 2^{18}=2^{54}$;
-and $2^{54}=2^{2\cdot 27}=2^{2q^3}$.\qed
-\end{proof}
-
-The vanishing $Z(-1)=0$ is the spectral analogue of anomaly cancellation:
-all gauge, matter, and gravitational anomalies cancel simultaneously at the
-spectral parameter $x=-1$.
-
-\begin{proposition}[$Z''(0)=-496$ and the third perfect number]
-$-Z''(0) = 496 = 2^{q+1}(2^{q+\lambda}-1) = 16\cdot 31$,
-where $16=2^{q+1}$ is the matter-sector multiplicity and $31=M_5$ is the
-fifth Mersenne prime.
-\end{proposition}
-
-\subsection{The Trace Tower}
-
-\begin{theorem}[Trace tower of the Dirac operator]\label{thm:trace-tower}
-The logarithmic derivative of the spectral determinant generates all Dirac
-power traces:
-\begin{equation}\label{eq:trace-tower-gen}
-  -x\frac{d}{dx}\log Z(x)
-  \;=
-  \sum_{n=1}^{\infty} \mathrm{tr}(D^n)\,x^n.
-\end{equation}
-Since the Dirac eigenvalues are $\{5,-1,-7\}$ with multiplicities
-$\{10,16,6\}$, one obtains the closed formula
 \begin{equation}\label{eq:trace-tower-formula}
-  \mathrm{tr}(D^n) = 10\cdot 5^n + 16\cdot(-1)^n + 6\cdot(-7)^n.
+  \boxed{\mathrm{tr}(D^n)=11^n+24+15(-5)^n.}
 \end{equation}
-The first three nontrivial traces are
-\begin{align}
-  \mathrm{tr}(D) &= -8,\label{eq:trace-D1}\\
-  \mathrm{tr}(D^2) &= 560,\label{eq:trace-D2}\\
-  \mathrm{tr}(D^3) &= -824.\label{eq:trace-D3}
-\end{align}
-\end{theorem}
-
-\begin{proof}
-For a factorized determinant $Z(x)=\prod_i (1-\lambda_i x)^{m_i}$,
+Thus
 \[
-  -x\frac{d}{dx}\log Z(x)
-  = \sum_i \frac{m_i\lambda_i x}{1-\lambda_i x}
-  = \sum_{n\ge 1}\!\left(\sum_i m_i\lambda_i^n\right)x^n,
+  \mathrm{tr}(D)=-40,\qquad
+  \mathrm{tr}(D^2)=520,\qquad
+  \mathrm{tr}(D^3)=-520.
 \]
-which is exactly the power-series generating function for
-$\mathrm{tr}(D^n)$. Substituting $(\lambda_i,m_i)=(5,10),(-1,16),(-7,6)$
-gives \eqref{eq:trace-tower-formula}. The special values follow directly:
-$50-16-42=-8$, $250+16+294=560$, and $1250-16-2058=-824$.
-\end{proof}
 
-The shifted value
+The standard positive heat operator is $H=D^2$:
 \[
-  840 = \mathrm{tr}(D^2) + 7\cdot 40 = 560 + 280
+  \mathrm{tr}(e^{-tH})=e^{-121t}+24e^{-t}+15e^{-25t},
+  \qquad
+  e^{-tH}=e^{-13t}e^{-4t\overline A}.
 \]
-reappears in Section~\ref{sec:numbertheory} as the central arithmetic closure
-integer of the $q=3$ theory.
+For zeta data without a spectral-cut choice one may use
+\[
+  \zeta_{|D|}(s)=11^{-s}+24+15\,5^{-s},\qquad
+  \zeta_H(s)=121^{-s}+24+15\,25^{-s}.
+\]
+These exact spectral identities do not by themselves imply anomaly
+cancellation, particle assignments, or Lie-algebra dimensions.
 
 \subsection{The Ihara Zeta and Fermionic Partition Function}
 
 Matsuura and Ohta (2025) proved that on any graph, the fermionic
 partition function equals the inverse Ihara zeta:
 $Z_F = \det(\not{D}+\mathcal{M}) = \zeta_\Gamma^{-1}$.
-The spectral determinant $Z(x) = \det(I - xM_{32})$ provides the
-\emph{reduced} fermionic content: projecting out the $\dim\mathbb{O}=8$
-octonion directions from the 40-point $\mathrm{GQ}(3,3)$ yields the
-32-dimensional spinor space of $\mathrm{SO}(10)$ on which $Z(x)$ acts.
+No canonical $32$-dimensional invariant restriction of the point carrier
+exists: its multiplicity-free invariant dimensions are sums of
+$1$, $24$, and $15$.  Any proposed fermionic reduction must therefore
+construct a different carrier and an explicit intertwining map rather than
+projecting eight unnamed directions out of the point module.
 
 The quadratic factor discriminants of the Ihara zeta function encode~$\W$:
 $\Delta(r\text{-sector}) = 4-44 = -40 = -v$ and
@@ -5907,47 +5881,41 @@ SRG(40,12,2,4) via a spectral action principle.
 \begin{center}
 \fboxsep=10pt
 \fbox{\parbox{0.92\textwidth}{
-\textbf{The Final Theorem.}
-\begin{theorem}[The $\W$ theory of everything]\label{thm:final}
-The Diophantine equation $q!=2q$ has a unique positive-integer solution $q=3$,
-which determines the symplectic polar space $\W = \SRG(40,12,2,4)$ with
-automorphism group $\mathrm{Sp}(4,3)\cong W(E_6)$ of order $51\,840$.
-From this single finite geometry, with zero free parameters, one derives
-all dimensionless constants of the Standard Model and cosmology, verified
-by $>3091$ independent mathematical checks across 39 phases with zero failures.
+\textbf{Audited finite conclusion.}
+\begin{theorem}[Exact $W(3,3)$ kernel]\label{thm:final}
+The symplectic polar-space construction over $\mathbb F_3$ determines a
+specific $\SRG(40,12,2,4)$ with adjacency spectrum
+$12^1\oplus2^{24}\oplus(-4)^{15}$ and full automorphism-group order
+$51\,840$.  For $D=A-I$, the identities
+\[
+ D^2=13I+4\overline A,\qquad
+ 288D=(D^2)^2-98D^2+385I
+\]
+hold exactly.
 \end{theorem}
 }}
 \end{center}
 
 \medskip
 
-We have presented a unified physical framework in which the spectral
-data of the unique strongly regular graph $\W = \SRG(40,12,2,4)$
-encodes:
+The durable content of this historical draft is the finite programme:
 \begin{enumerate}
-  \item All four fundamental forces and $\mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm{U}(1)$;
-  \item $\alpha^{-1} = 137.036$ (four independent derivations, $0.23\sigma$);
-  \item $\sin^2\theta_W = 3/13$, $\alpha_s = 20/169$, $m_H = 125$\,GeV;
-  \item Complete fermion mass spectrum, CKM, PMNS with CP violation;
-  \item $\Omega_\Lambda = 41/60$, $\Omega_{\mathrm{DM}}/\Omega_b = 16/3$,
-        $H_0=67$, $n_s=29/30$;
-  \item All five exceptional Lie algebra dimensions;
-  \item The Planck--electroweak hierarchy
-        $\ln(M_{\mathrm{Pl}}/v_{\mathrm{EW}})=16\ln 10$;
-  \item $\chi^2/\mathrm{dof}=0.64$ across 31 precision observables.
+  \item an explicit symplectic construction selecting $W(3,3)$ among the
+        $28$ graphs with the same SRG parameters;
+  \item exact incidence, spectrum, automorphism, code, lattice, and
+        representation-theoretic invariants;
+  \item a reproducible witness-and-certificate workflow that also records
+        refutations and superseded claims;
+  \item conditional physics questions whose missing maps are now stated
+        rather than inferred from numerical agreement.
 \end{enumerate}
-
-The most important near-term tests are $\sin^2\theta_{12}^{\mathrm{PMNS}}=4/13$
-at JUNO (2029) and $\delta_{\mathrm{CP}}\approx -138.5^\circ$ at Hyper-K (2028--2030).
 
 \medskip
 \noindent
-\textit{The theory in one sentence:} The Diophantine equation $q!=2q$, uniquely
-solved by $q=3$, determines the symplectic polar space $\W$ and its spectral
-determinant $Z(x)=(1-5x)^{10}(1+x)^{16}(1+7x)^6$; from this single object,
-with zero free parameters, all coupling constants, masses, mixing angles,
-and cosmological parameters of the Standard Model are derived to better
-than 2\% accuracy.
+\textit{The current position in one sentence:} $W(3,3)$ supports an unusually
+rich exact finite theory; turning that theory into particle physics requires
+explicit carrier maps, dynamics, dimensional scales, and experimental
+validation that this draft does not supply.
 
 %% ===============================================================
 \section*{Data Availability}

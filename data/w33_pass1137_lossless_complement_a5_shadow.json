@@ -1,0 +1,49 @@
+{
+  "schema":"w33.pass1137.lossless_complement_a5_shadow.v1",
+  "status":"PASS",
+  "gap":{"version":"4.12.1","check_count":38},
+  "finite_spectral_switch":{
+    "object":"W(3,3) collinearity graph",
+    "srg_parameters":[40,12,2,4],
+    "srg_identity":"A^2=8I-2A+4J",
+    "general_half_intersection_identity":"For SRG(v,k,lambda,mu), (A-lambda*I/2)^2=(k+lambda^2/4)I+mu*Abar",
+    "operator":"D=A-I",
+    "positive_generator":"H=D^2",
+    "complement":"Abar=J-I-A",
+    "w33_specialization":"H=13I+4Abar",
+    "D_off_diagonal_support":240,
+    "H_off_diagonal_support":540,
+    "H_off_diagonal_entry_values":[0,4],
+    "support_tags":{"D":"240 collinear point pairs","H":"{540:point-nonedge}"},
+    "lossless_recovery":"288D=H^2-98H+385I",
+    "algebra_identity":"Q[D^2]=Q[D]",
+    "D_projector_ranks":{"11":1,"1":24,"-5":15},
+    "H_nullities":{"121":1,"1":24,"25":15},
+    "projector_denominators":{"11":160,"1":60,"-5":96},
+    "checks_pass":true
+  },
+  "group_shadow":{
+    "e8_root_count":240,
+    "a2_triple_count":2240,
+    "fixed_a2_triple":[1,7,32],
+    "e6_root_count":72,
+    "we6_order":51840,
+    "we6_identification":"W(E6)=U4(2):2",
+    "derived_order":25920,
+    "derived_index":2,
+    "derived_structure_description":"O(5,3)",
+    "derived_identification":"W(E6)^+=PSp(4,3)=U4(2)",
+    "a2_orbit_sizes":[1,1,27,27,27,27,27,27,240,270,270,432,432,432],
+    "orbits_432":[
+      {"orbit_number":1,"representative_a2_triple":[2,116,238],"orbit_size":432,"stabilizer_order":120,"stabilizer_id_group":[120,34],"stabilizer_identification":"S5","element_order_distribution":{"1":1,"2":25,"3":20,"4":30,"5":24,"6":20},"derived_intersection_order":60,"derived_intersection_id_group":[60,5],"derived_intersection_identification":"A5","intersection_equals_stabilizer_derived":true,"derived_orbit_size":432,"we6_coset_degree":432,"psp_coset_degree":432,"join_order":51840},
+      {"orbit_number":2,"representative_a2_triple":[5,113,238],"orbit_size":432,"stabilizer_order":120,"stabilizer_id_group":[120,34],"stabilizer_identification":"S5","element_order_distribution":{"1":1,"2":25,"3":20,"4":30,"5":24,"6":20},"derived_intersection_order":60,"derived_intersection_id_group":[60,5],"derived_intersection_identification":"A5","intersection_equals_stabilizer_derived":true,"derived_orbit_size":432,"we6_coset_degree":432,"psp_coset_degree":432,"join_order":51840},
+      {"orbit_number":3,"representative_a2_triple":[9,15,76],"orbit_size":432,"stabilizer_order":120,"stabilizer_id_group":[120,34],"stabilizer_identification":"S5","element_order_distribution":{"1":1,"2":25,"3":20,"4":30,"5":24,"6":20},"derived_intersection_order":60,"derived_intersection_id_group":[60,5],"derived_intersection_identification":"A5","intersection_equals_stabilizer_derived":true,"derived_orbit_size":432,"we6_coset_degree":432,"psp_coset_degree":432,"join_order":51840}
+    ],
+    "pairwise_conjugate":[true,true,true],
+    "carrier_identity":"Res_{PSp(4,3)}^{W(E6)} W(E6)/S5 = PSp(4,3)/A5",
+    "carrier_degree":432,
+    "checks_pass":true
+  },
+  "all_checks_pass":true,
+  "scope":"Exact finite association-scheme and permutation-group theorem; no continuum, Hamiltonian, or hardware claim."
+}

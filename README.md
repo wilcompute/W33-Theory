@@ -31,8 +31,9 @@ section most physics repositories do not have and arguably should.
 
 ## The 60-second version
 
-`W(3,3)`'s collinearity graph is `SRG(40,12,2,4)` — the *unique* strongly regular graph with those
-parameters. It has 240 edges. `E_8` has 240 roots. Its automorphism group has order 51,840. The Weyl group
+`W(3,3)`'s collinearity graph is a distinguished `SRG(40,12,2,4)` selected by its
+symplectic polar-space construction; there are 28 non-isomorphic graphs with
+those parameters. It has 240 edges. `E_8` has 240 roots. Its automorphism group has order 51,840. The Weyl group
 `W(E_6)` has order 51,840. Its clique complex has `H_1 = Z^81`. There are 81 sections at `q=3`.
 
 Any one of those is a coincidence. All of them, plus the fact that the same graph is the commutation geometry
@@ -74,8 +75,9 @@ witness.
 | integral Smith form of `A` | `diag(1^16, 2^8, 8^15, 24^1)` |
 | signed-turn operator `K` spectrum | `(−6)^81, 2^120, 4^24, 10^15` |
 
-`SRG(40,12,2,4)` is unique up to isomorphism. That uniqueness is doing more work in this program than any
-single "coincidence" — it means the object cannot be tuned, only discovered.
+The four SRG parameters do not identify the graph: there are 28 isomorphism
+classes.  What removes the ambiguity here is the explicit construction from
+symplectic orthogonality on `PG(3,3)`, not a uniqueness claim.
 
 ---
 

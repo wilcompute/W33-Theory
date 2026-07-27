@@ -55,12 +55,18 @@ not part of the decomposition theorem.
 
 ## 5. Corpus identity layer — executed
 
-The 540 classifier is now occurrence-level and supports
-`{540:line-nonedge}`, `{540:point-nonedge}`, and `{540:both}`. It ignores the
-number inside tag literals, uses line-local evidence, reports genuinely mixed
-files as mixed, and is fatal on new ambiguous occurrences. A synthetic line / point
-/ mixed regression suite has ambiguity rate 0%; CI runs the full live corpus and
-commits the generated report.
+The 540 classifier is occurrence-level. Pass 1139 subsequently completed its
+ontology: the five transitive degree-540 `PSp(4,3)`-sets are TOM positions
+77–81 with ranks `25,28,27,21,32`, tagged respectively as
+`{540:point-nonedge}`, `{540:double-six-nonincident}`, `{540:gq42-arc}`,
+`{540:outer-4c}`, and `{540:line-nonedge}`. `{540:both}` and `{540:mixed}`
+remain compatibility tags for a genuinely mixed single occurrence.
+
+The guard ignores the number inside tag literals, binds each explicit tag to
+one nearest same-line occurrence, reports genuinely multi-species files as
+mixed, prunes metadata/cache/build trees, and is fatal on new ambiguous
+occurrences. The five-species and same-line regression suite has ambiguity rate
+0%; CI runs the full live corpus and commits the generated report.
 
 `data/w33_pass_namespace_registry_v2.json` makes Passes 1120–1128 canonical for
 the merged glue track and reserves Passes 1132–1136 for this exact release. Draft

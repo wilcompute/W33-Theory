@@ -21,6 +21,7 @@ Usage:
 """
 import re
 import json
+import os
 import pathlib
 from datetime import datetime
 
@@ -29,9 +30,9 @@ REPO_ROOT = pathlib.Path(__file__).parent.parent
 # Patterns that indicate the false cubic or its direct descendants
 FALSE_PATTERNS = [
     # Old eigenvalue triple (any ordering)
-    (r'\b-7\b.*\b-1\b.*\b5\b', 'old_eigenvalue_triple_ordered'),
-    (r'\b\{\s*-7\s*,\s*-1\s*,\s*5\s*\}', 'old_eigenvalue_set'),
-    (r'\b\{\s*5\s*,\s*-1\s*,\s*-7\s*\}', 'old_eigenvalue_set_alt'),
+    (r'(?<!\w)-7(?!\w).*(?<!\w)-1(?!\w).*(?<!\w)5(?!\w)', 'old_eigenvalue_triple_ordered'),
+    (r'\{\s*-7\s*,\s*-1\s*,\s*5\s*\}', 'old_eigenvalue_set'),
+    (r'\{\s*5\s*,\s*-1\s*,\s*-7\s*\}', 'old_eigenvalue_set_alt'),
     # Old multiplicities (16, 10, 6) — sum 32
     (r'multiplicit\w+.*\b16\b.*\b10\b.*\b6\b', 'old_multiplicities_1610_6'),
     (r'\b16\b.*\b10\b.*\b6\b.*multiplicit', 'old_multiplicities_6_10_16'),
@@ -60,6 +61,43 @@ EXCLUDE_PATHS = {
 }
 
 SUFFIXES = {'.py', '.tex', '.md', '.json', '.txt'}
+PRUNED_DIRS = {
+    '.git',
+    '.mypy_cache',
+    '.pytest_cache',
+    '.ruff_cache',
+    '.tox',
+    '.venv',
+    '__pycache__',
+    'node_modules',
+}
+ACTIVE_CORPUS_DIRS = {
+    'analysis',
+    'code',
+    'data',
+    'docs',
+    'exploration',
+    'formal',
+    'hardware',
+    'lean',
+    'lib',
+    'manuscripts',
+    'notebooks',
+    'paper',
+    'papers',
+    'passes',
+    'proofs',
+    'reports',
+    'scripts',
+    'src',
+    'submission',
+    'tests',
+    'tex',
+    'theorems',
+    'theory',
+    'tools',
+    'w33',
+}
 
 
 def classify_hit(content: str, path_str: str) -> str:
@@ -96,14 +134,38 @@ def scan_file(fpath: pathlib.Path) -> list:
     return hits
 
 
+def iter_source_files():
+    """Yield corpus files without traversing Git objects or tool caches."""
+    paths = [
+        path
+        for path in REPO_ROOT.iterdir()
+        if path.is_file() and path.suffix.lower() in SUFFIXES
+    ]
+    scan_roots = [
+        REPO_ROOT / name
+        for name in sorted(ACTIVE_CORPUS_DIRS)
+        if (REPO_ROOT / name).is_dir()
+    ]
+    for scan_root in scan_roots:
+        for dirpath, dirnames, filenames in os.walk(scan_root):
+            dirnames[:] = sorted(
+                name
+                for name in dirnames
+                if name not in PRUNED_DIRS and not name.startswith('.')
+            )
+            base = pathlib.Path(dirpath)
+            paths.extend(
+                base / name
+                for name in filenames
+                if pathlib.Path(name).suffix.lower() in SUFFIXES
+            )
+    yield from sorted(paths)
+
+
 def main():
     all_hits = []
     scanned = 0
-    for fpath in REPO_ROOT.rglob('*'):
-        if not fpath.is_file():
-            continue
-        if fpath.suffix not in SUFFIXES:
-            continue
+    for fpath in iter_source_files():
         rel = str(fpath.relative_to(REPO_ROOT))
         if any(rel.startswith(e) or rel == e for e in EXCLUDE_PATHS):
             continue

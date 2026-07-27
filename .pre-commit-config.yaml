@@ -30,8 +30,11 @@ repos:
         files: '\.(md|tex|py|json|txt|csv|jsonl)$'
         stages: [pre-commit]
         description: >
-          Classifies each occurrence locally and rejects unresolved uses. Use
-          {540:line-nonedge}, {540:point-nonedge}, or {540:both}.
+          Binds each tag to one local occurrence and rejects unresolved uses.
+          Canonical species: {540:point-nonedge},
+          {540:double-six-nonincident}, {540:gq42-arc}, {540:outer-4c},
+          and {540:line-nonedge}; {540:both}/{540:mixed} are compatibility
+          tags for a genuinely mixed occurrence.
 
       - id: s-min-formula-guard
         name: Guard S_min formula correctness

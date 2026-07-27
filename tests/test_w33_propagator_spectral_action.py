@@ -1,13 +1,23 @@
 #!/usr/bin/env python3
-"""
-Tests for Step 2: propagator rebuild from corrected W(3,3) spectrum.
+"""Tests for the exact Pass 1140 W(3,3) propagator rebuild.
 
 All checks use exact integer / rational arithmetic — no floating-point.
 """
-from fractions import Fraction
+from __future__ import annotations
 
-# Corrected spectrum
-EIGENVALUES = {11: 1, 1: 24, -5: 15}
+from fractions import Fraction
+import importlib.util
+import math
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+SCRIPT = ROOT / "analysis" / "w33_propagator_spectral_action.py"
+SPEC = importlib.util.spec_from_file_location("w33_propagator", SCRIPT)
+assert SPEC is not None and SPEC.loader is not None
+propagator = importlib.util.module_from_spec(SPEC)
+SPEC.loader.exec_module(propagator)
+
+EIGENVALUES = propagator.EIGENVALUES
 
 
 def trace_power(n):
@@ -42,7 +52,7 @@ def test_projector_ranks():
     # Tr(P_1) = -Tr((D-11I)(D+5I)/60) = -(Tr D^2 - 6*Tr D - 55*Tr I)/60
     rank_P1 = Fraction(-(trD2 - 6*trD - 55*trI), 60)
     # Tr(P_-5) = Tr((D-11I)(D-I)/96) = (Tr D^2 - 12*Tr D - 11*Tr I)/96  
-    rank_Pm5 = Fraction(trD2 - 12*trD - 11*trI, 96)
+    rank_Pm5 = Fraction(trD2 - 12*trD + 11*trI, 96)
     assert rank_P11 == 1, f"rank P_11 should be 1, got {rank_P11}"
     assert rank_P1 == 24, f"rank P_1 should be 24, got {rank_P1}"
     assert rank_Pm5 == 15, f"rank P_-5 should be 15, got {rank_Pm5}"
@@ -55,7 +65,7 @@ def test_completeness():
     trD2 = trace_power(2)
     rank_P11 = Fraction(trD2 + 4*trD - 5*trI, 160)
     rank_P1 = Fraction(-(trD2 - 6*trD - 55*trI), 60)
-    rank_Pm5 = Fraction(trD2 - 12*trD - 11*trI, 96)
+    rank_Pm5 = Fraction(trD2 - 12*trD + 11*trI, 96)
     assert rank_P11 + rank_P1 + rank_Pm5 == 40
 
 
@@ -78,9 +88,7 @@ def test_false_spectrum_wrong_trace():
 
 def test_determinant_constant_term():
     """det(I - xD)|_{x=0} = 1."""
-    # The constant term of det(I-xD) = (1-11x)(1-x)^24(1+5x)^15 is 1
-    # because each factor equals 1 at x=0
-    assert True  # Trivially satisfied by construction
+    assert propagator.functional_det_coeffs(40)[0] == "1"
 
 
 def test_determinant_linear_term():
@@ -88,6 +96,33 @@ def test_determinant_linear_term():
     # d/dx det(I-xD)|_{x=0} = -Tr(D)
     coeff_x = -trace_power(1)
     assert coeff_x == 40
+    assert propagator.functional_det_coeffs(1) == ["1", "40"]
+
+
+def test_positive_heat_is_not_the_signed_semigroup():
+    beta = 0.5
+    expected_heat = (
+        math.exp(-121 * beta)
+        + 24 * math.exp(-beta)
+        + 15 * math.exp(-25 * beta)
+    )
+    expected_signed = (
+        math.exp(-11 * beta)
+        + 24 * math.exp(-beta)
+        + 15 * math.exp(5 * beta)
+    )
+    assert math.isclose(propagator.positive_heat_trace(beta), expected_heat)
+    assert math.isclose(propagator.signed_semigroup_trace(beta), expected_signed)
+    assert propagator.signed_semigroup_trace(beta) > propagator.positive_heat_trace(beta)
+
+
+def test_zeta_semantics_are_explicit():
+    assert propagator.absolute_zeta(0) == 40
+    assert propagator.squared_zeta(0) == 40
+    assert propagator.absolute_zeta(2) == (
+        Fraction(1, 121) + 24 + Fraction(15, 25)
+    )
+    assert propagator.squared_zeta(1) == propagator.absolute_zeta(2)
 
 
 if __name__ == '__main__':

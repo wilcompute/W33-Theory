@@ -1,6 +1,7 @@
 {
-  "version": "2026-07-27-pass1136",
-  "note": "Canonical identity registry. QUARANTINED objects cannot be premises of new derivations; provisional branch pass numbers are not canonical.",
+  "version": "2026-07-27-pass1139",
+  "note": "Canonical identity registry. QUARANTINED objects cannot be premises of new derivations; provisional branch pass numbers are not canonical; a bare cardinality 540 does not identify a carrier.",
+  "compatibility_tags": ["{540:both}", "{540:mixed}"],
   "objects": [
     {
       "canonical": "W33_point_carrier_D_eigenspace_11",
@@ -33,17 +34,52 @@
       "note": "(t+1)((t+1)^2-36) does not annihilate D=A-I; its residual has rank 40."
     },
     {
-      "canonical": "W33_line_nonedge_540",
-      "aliases": ["540_skew_line_pairs", "540_disjoint_line_pairs", "540_cube_frames"],
-      "size": 540,
-      "tag": "{540:line-nonedge}",
+      "canonical": "W33_point_nonedge_540",
+      "aliases": ["540_noncollinear_point_pairs", "540_point_nonedges", "mu4_pairs"],
+      "size": 540, "tag": "{540:point-nonedge}",
+      "psp_tom_position": 77,
+      "stabilizer_id_group": [48, 33],
+      "coset_rank": 25,
+      "we6_class": "4A",
       "status": "confirmed"
     },
     {
-      "canonical": "W33_point_nonedge_540",
-      "aliases": ["540_noncollinear_point_pairs", "540_point_nonedges", "mu4_pairs"],
-      "size": 540,
-      "tag": "{540:point-nonedge}",
+      "canonical": "E6_double_six_nonincident_540",
+      "aliases": ["540_double_six_line_complements", "540_nonincident_cubic_flags", "rank_28_540"],
+      "size": 540, "tag": "{540:double-six-nonincident}",
+      "psp_tom_position": 78,
+      "stabilizer_id_group": [48, 48],
+      "coset_rank": 28,
+      "status": "confirmed",
+      "note": "The complementary half of 36*27=36*12+36*15=432+540; the 432 incident flags have A5 stabilizer."
+    },
+    {
+      "canonical": "GQ42_Hashimoto_arc_540",
+      "aliases": ["540_support_geometry_arcs", "540_GQ42_arcs", "45_times_12_arcs"],
+      "size": 540, "tag": "{540:gq42-arc}",
+      "psp_tom_position": 79,
+      "stabilizer_id_group": [48, 49],
+      "coset_rank": 27,
+      "status": "confirmed"
+    },
+    {
+      "canonical": "WE6_outer_4C_540",
+      "aliases": ["540_outer_quartics", "WE6_class_4C", "rank_21_540"],
+      "size": 540, "tag": "{540:outer-4c}",
+      "psp_tom_position": 80,
+      "stabilizer_id_group": [48, 30],
+      "coset_rank": 21,
+      "we6_class": "4C",
+      "status": "confirmed"
+    },
+    {
+      "canonical": "W33_line_nonedge_540",
+      "aliases": ["540_skew_line_pairs", "540_disjoint_line_pairs", "540_cube_frames"],
+      "size": 540, "tag": "{540:line-nonedge}",
+      "psp_tom_position": 81,
+      "stabilizer_id_group": [48, 48],
+      "coset_rank": 32,
+      "we6_class": "2D",
       "status": "confirmed"
     },
     {

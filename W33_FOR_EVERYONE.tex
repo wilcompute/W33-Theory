@@ -675,117 +675,140 @@ k \;=\; 12, \qquad f \;=\; 24, \qquad g \;=\; 15.
 
 These three numbers do a lot of work in what follows.
 
-\section{The master cubic: one equation, three eigenvalues, all of physics}
+\section{The shifted cubic as a reversible logic switch}
 \label{sec:master-cubic}
 
-It turns out there is an even cleaner way to package the three numbers
-$\{12, +2, -4\}$ above. Shift every eigenvalue down by $1$ --- think of this
-as picking a different ``zero point'' for the operator --- and let
+There is a clean way to package the three numbers
+$\{12,+2,-4\}$ above.  Shift every eigenvalue down by $1$---think of this
+as choosing a new zero point---and let
 \[
 D \;=\; A - I.
 \]
-The operator $D$ is sometimes called the \emph{Dirac operator on the graph},
-because in physics it plays the same role as the Dirac operator on a
-manifold: it acts as a square root of the Laplacian.
+Nothing mysterious happens to the carrier when we do this: subtracting
+$I$ subtracts $1$ from every eigenvalue and preserves every multiplicity.
 
-The eigenvalues of $D$ are
+\begin{theorem}[The exact shifted cubic]\label{thm:master-cubic}
+On all $40$ points of $W(3,3)$, the spectrum of $D=A-I$ is
 \[
-12-1 = 11? \quad\text{No --- the eigenvalues of }A\text{ shift to }
-\{12-1,\; 2-1,\; -4-1\} = \{11, 1, -5\},
+\boxed{
+\begin{array}{c|ccc}
+\text{eigenvalue} & 11 & 1 & -5\\
+\hline
+\text{multiplicity} & 1 & 24 & 15
+\end{array}}
 \]
-\textbf{but only $A$ has degree $k=12$ counted with multiplicity $1$.}
-The right thing to look at is the \textbf{restriction of $D$ to the
-sectors that connect the $W(3,3)$ carrier to physical $32$-dim spinor
-space} (this restriction is forced by the geometry of $\mathrm{GQ}(3,3)$).
-On the restricted carrier, $D$ has only three distinct eigenvalues
+and therefore
 \[
-\boxed{\;\{-7,\; -1,\; +5\}\;}
+\boxed{(D-11I)(D-I)(D+5I)=0.}
 \]
-with multiplicities $\{6,\;16,\;10\}$. These three numbers are
-\emph{evenly spaced}: each pair differs by $6 = q!$.
-
-\begin{theorem}[The master cubic]\label{thm:master-cubic}
-On the $32$-dim restricted carrier, the Dirac operator $D = A - I$ of
-$W(3,3)$ satisfies the cubic equation
-\[
-(D+1)\!\bigl[(D+1)^2 - (2q)^2\bigr] \;=\; 0,
-\]
-whose three roots $\{-1, \; -1+2q, \; -1-2q\} = \{-1, 5, -7\}$ at $q=3$
-are the only spectral values $D$ can take.
 \end{theorem}
 
-\paragraph{Why is this called ``master''?}
-Because almost every other major identity of the theory drops out of this
-one cubic equation.
+The dimensions $1$, $24$, and $15$ add to $40$.  They are the three
+actual spectral channels of the point carrier.  There is no
+$32$-dimensional invariant piece hidden inside this decomposition: the
+only invariant dimensions are sums of $1$, $24$, and $15$.
 
-\begin{theorem}[Spectral democracy]\label{thm:spec-dem}
-The three eigenvalues $\{-7, -1, 5\}$ form an \emph{arithmetic
-progression} with common difference exactly $-q! = -6$.
-This evenly-spaced spectrum occurs \emph{only at $q=3$}, because the
-Master Equation $q! = 2q$ already pins $q$ uniquely there.
+\paragraph{The surprising part happens when we square.}
+Let
+\[
+H=D^2
+\]
+and let $\overline A$ be the adjacency matrix of the \emph{complement}
+graph: two distinct points are joined by $\overline A$ exactly when they
+are not joined by $A$.
+
+\begin{theorem}[The reversible complement switch]\label{thm:spec-dem}
+\[
+\boxed{H=13I+4\overline A}
+\qquad\text{and}\qquad
+\boxed{288D=H^2-98H+385I.}
+\]
 \end{theorem}
 
-So $q=3$ is forced \emph{again}, this time by the demand that the three
-Dirac eigenvalues sit on an evenly spaced ladder.
+The first identity says that the even operation $D^2$ erases the edge
+shell and exposes precisely the non-edge shell.  Off the diagonal,
+$D$ marks the $240$ collinear pairs, while $D^2$ places the value $4$ on
+the $540$ noncollinear pairs. % {540:point-nonedge}
+The second identity says that this switch
+is \emph{lossless}: from the even operator $H$ alone we can reconstruct
+the signed operator $D$ exactly.
 
-\paragraph{The spectral determinant $Z(x)$.}
-Encode the three eigenvalues, with their multiplicities, into a single
-polynomial:
-\[
-Z(x) \;=\; (1 - 5x)^{10}\,(1+x)^{16}\,(1+7x)^{6}.
-\]
-This is just shorthand: each factor $(1 - \lambda x)^m$ records ``one
-eigenvalue $\lambda$ with multiplicity $m$''. The total degree is
-$10 + 16 + 6 = 32 = \dim\,\mathrm{Spin}(10)$, the spinor representation
-of the GUT group $\mathrm{Spin}(10)$.
+\begin{mathnote}
+\textbf{As a computing primitive.}
+Think of the $240$ edge positions as one logical state and the $540$ % {540:point-nonedge}
+non-edge positions as its complementary state.  Squaring flips from the
+edge description to the complement description; the degree-two recovery
+polynomial flips back.  This is not an analogy imposed on the graph---it
+is an exact identity between integer matrices.
+\end{mathnote}
 
-Now look at the Taylor expansion of $Z(x)$ around $x=0$:
+\paragraph{The true spectral determinant and trace tower.}
+The determinant which records the full shifted spectrum is
 \[
-Z(x) \;=\; 1 \;+\; 8\,x \;-\; 248\,x^2 \;-\; 1880\,x^3 \;+\; \cdots
+Z_D(x)=\det(I-xD)=(1-11x)(1-x)^{24}(1+5x)^{15}.
 \]
-The numbers $8$ and $248$ are not random. They are
-\begin{align*}
-Z'(0) &= 8 \;=\; \dim\,\mathbb{O} \quad\text{(dimension of the octonions),} \\
-\tfrac{1}{2}Z''(0) &= -248 \;=\; -\dim\,E_8.
-\end{align*}
-So the first nontrivial derivative of $Z$ reproduces the dimension of
-the largest normed division algebra, and the second nontrivial derivative
-reproduces the dimension of the largest exceptional Lie algebra $E_8$.
-\textbf{One cubic encodes both $\mathbb{O}$ and $E_8$ in its derivatives.}
+Its logarithmic derivative gives
+\[
+-x\,\frac{d}{dx}\log Z_D(x)
+=\sum_{n\ge1}\mathrm{Tr}(D^n)x^n,
+\qquad
+\boxed{\mathrm{Tr}(D^n)=11^n+24+15(-5)^n.}
+\]
+For example,
+\[
+\mathrm{Tr}(D)=-40,\qquad
+\mathrm{Tr}(D^2)=520,\qquad
+\mathrm{Tr}(D^3)=-520.
+\]
 
-\paragraph{Special values of $Z$.} Three more numbers:
-\begin{align*}
-Z(0) &= 1
-&& \text{(the trivial value),} \\
-Z(-1) &= 0
-&& \text{(\emph{anomaly cancellation}),} \\
-Z(1) &= 2^{54} \;=\; 2^{2q^3}.
-&&
-\end{align*}
-The middle line is what particle physicists call \emph{anomaly
-cancellation}: at the spectral parameter $x = -1$, every gauge, matter,
-and gravitational anomaly cancels simultaneously, and the cancellation
-shows up here as the polynomial vanishing at $x = -1$.
+\paragraph{Heat flow uses the positive operator.}
+Because $D$ has a negative eigenvalue, the standard positive heat
+operator is $H=D^2$.  Its heat trace is
+\[
+\mathrm{Tr}(e^{-tH})
+=e^{-121t}+24e^{-t}+15e^{-25t},
+\]
+and the matrix identity itself gives
+\[
+e^{-tH}=e^{-13t}e^{-4t\overline A}.
+\]
+Thus heat flow on the squared shifted operator is exactly a rescaled
+walk on the complement graph, with no appeal to an unbuilt physical
+restriction.
 
-\paragraph{The trace tower.}
-The logarithmic derivative of $Z$ generates all higher traces of the
-Dirac operator at once:
+\begin{mathnote}
+\textbf{A formerly missing map is now explicit.}
+There are $2240$ unordered zero-sum $A_2$ triangles among the $240$
+$E_8$ roots.  Exact root orthogonality defines a concrete
+$45\times2240$ zero-one matrix from those triangles to $45$ cubic
+supports.  It has rank $45$: exactly $240$ columns are live and the
+other $2000$ are zero.  Passing through the $45$ intrinsic
+$K_{4,4}$ octets of $W(3,3)$ then gives a concrete map
 \[
--x\,\frac{d}{dx}\log Z(x) \;=\; \sum_{n\ge 1} \mathrm{Tr}(D^n)\, x^n,
+\mathbb Q^{2240}\longrightarrow\mathbb Q^{45}
+\longrightarrow\mathbb Q^{40}.
 \]
-and a one-line computation gives the closed formula
-\[
-\boxed{\;\mathrm{Tr}(D^n) \;=\; 10\cdot 5^n \;+\; 16\cdot(-1)^n \;+\; 6\cdot(-7)^n.\;}
-\]
-The first three traces are
-\[
-\mathrm{Tr}(D) = -8, \qquad
-\mathrm{Tr}(D^2) = 560, \qquad
-\mathrm{Tr}(D^3) = -824.
-\]
-The single cubic $(D+1)[(D+1)^2 - 36] = 0$ therefore packages, in one shot:
-the Dirac spectrum, the octonion and $E_8$ dimensions, the anomaly
-cancellation locus, and an infinite tower of higher traces.
+On the live columns, the answer is especially simple: every column is
+the all-ones vector plus twice the incidence vector of one $W(3,3)$
+line.  Every one of the $40$ lines occurs exactly six times.  So the
+large exceptional-root calculation lands on the original geometry as a
+sixfold line-incidence fibration, not merely as a match of dimensions.
+The six sheets have not been assigned a physical meaning.
+\end{mathnote}
+
+\begin{mathnote}
+\textbf{A warning about the number $540$.} % {540:mixed}
+The symmetry group has not two or three but exactly \emph{five}
+non-isomorphic transitive sets of size $540$. % {540:mixed}
+They are: noncollinear
+point pairs (rank $25$), nonincident double-six/cubic-line flags
+(rank $28$), directed arcs of the $45$-point quadrangle (rank $27$),
+an outer order-$4$ class (rank $21$), and skew line pairs (rank $32$).
+Their stabilizers all have order $48$, and two stabilizers are even
+abstractly isomorphic, so neither the number nor the stabilizer order
+identifies the object.  The rule is simple: whenever $540$ appears, name % {540:mixed}
+the carrier.
+\end{mathnote}
 
 \section{The Riemann zeta dictionary}
 \label{sec:zeta-dict}

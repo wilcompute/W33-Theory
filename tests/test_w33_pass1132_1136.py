@@ -24,6 +24,7 @@ def test_committed_exact_certificates():
         "w33_pass1135_cubic_kernel_decomposition.json",
         "w33_shifted_adjacency_descendant_audit.json",
         "BT1634_540_audit_results.synthetic.json",
+        "w33_pass1139_complete_degree540_species.json",
     ]
     for filename in filenames:
         data = json.loads((ROOT / "data" / filename).read_text(encoding="utf-8"))
@@ -59,11 +60,27 @@ def test_stabilizer_and_kernel_theorems():
 
 def test_occurrence_level_540_classifier():
     mod = load_module("tag540", ROOT / "scripts" / "tag_540_disambiguation.py")
-    line_text = "The 540 skew line pairs form cube frames. {540:line-nonedge}"
-    point_text = "The 540 noncollinear point pairs have mu=4. {540:point-nonedge}"
-    line_match = next(__import__("re").finditer(r"(?<!\d)540(?!\d)", line_text))
-    point_match = next(__import__("re").finditer(r"(?<!\d)540(?!\d)", point_text))
-    line_result = mod.classify_occurrence(line_text, line_match.start(), line_match.end(), "line.md")
-    point_result = mod.classify_occurrence(point_text, point_match.start(), point_match.end(), "point.md")
-    assert line_result["category"] == "line-nonedge"
-    assert point_result["category"] == "point-nonedge"
+    text = (
+        "The 540 {540:point-nonedge} noncollinear point pairs differ from "
+        "the 540 {540:line-nonedge} skew line pairs."
+    )
+    matches = mod._number_matches(text)
+    results = [
+        mod.classify_occurrence(text, match.start(), match.end(), "same-line.md")
+        for match in matches
+    ]
+    assert [result["category"] for result in results] == [
+        "point-nonedge",
+        "line-nonedge",
+    ]
+
+    for category in mod.CANONICAL_SPECIES:
+        tagged = f"The 540 {{540:{category}}} carrier is explicit."
+        match = mod._number_matches(tagged)[0]
+        result = mod.classify_occurrence(
+            tagged,
+            match.start(),
+            match.end(),
+            f"{category}.md",
+        )
+        assert result["category"] == category

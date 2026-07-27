@@ -714,7 +714,7 @@ On the typed space
 the supplied orientation-preserving branch switch commutes with phase and
 therefore gives $C_2\times C_3\cong C_6$.  An $S_3$ action needs an extra
 phase-reflecting involution; the binding table does not manufacture one.
-Separately, GAP enumerates all $540$ strict surjective coordinate folds
+Separately, GAP enumerates all $540$ strict surjective coordinate folds % {540:unrelated}
 $\mathbb F_2^6\to\mathbb F_2^3$.  None intertwines the live BT1371 direction
 table with the Pass-377 header axes on all $48$ flags.  The six folds that
 match the live $[3,2,2,3,4,2]\to[8,4,4]$ usage profile form one candidate
@@ -999,94 +999,108 @@ i.e., $24\times 10 = 15\times 16 = 240$.
 This identity holds for \emph{no other} strongly regular graph.
 \end{theorem}
 
-\subsection{The Master Cubic and the Spectral Determinant $Z(x)$}
+\subsection{The Exact Shifted Cubic and the Reversible Complement Switch}
 \label{sec:mastercubic}
 
-The shifted adjacency operator $D := A - I$ acts as a Dirac-type
-operator on the $\W$ carrier and admits a remarkable cubic minimal
-polynomial.
+The shifted adjacency operator
+\[
+   D:=A-I
+\]
+is canonical for a strongly regular graph with $\lambda=2$: it is the
+half-intersection shift $A-\lambda I/2$, the unique scalar shift for which
+the edge term disappears after squaring.
 
-\begin{theorem}[Master Cubic]\label{thm:mastercubic}
-The Dirac operator $D = A - I$ on $\W$ satisfies the minimal polynomial
+\begin{theorem}[Exact shifted cubic]\label{thm:mastercubic}
+On the full $40$-point carrier, $D=A-I$ has spectrum
+\[
+  11^{\,1}\oplus 1^{\,24}\oplus(-5)^{\,15}
+\]
+and minimal polynomial
 \begin{equation}\label{eq:mastercubic}
-\boxed{(t+1)\bigl[(t+1)^2 - (2q)^2\bigr] \;=\; 0,}
+  \boxed{(t-11)(t-1)(t+5)=0.}
 \end{equation}
-with roots $t = -1$, $t = -1 + 2q = 5$, and $t = -1 - 2q = -7$.
-The corresponding multiplicities are $\{\Theta=10,\;2^{q+1}=16,\;2q=6\}$
-respectively, and they sum to $10+16+6 = 32 = 2^{q+\lambda} = \dim\mathrm{Spin}(10)$.
+Consequently every $D$-equivariant subspace is a sum of the
+$1$-, $24$-, and $15$-dimensional eigenspaces.  In particular, there is no
+$32$-dimensional $D$-invariant restriction of the point carrier.
 \end{theorem}
 
-\begin{theorem}[Spectral Democracy --- Unique to $q=3$]
-\label{thm:specdem}
-The three Dirac eigenvalues $\{-7,\,-1,\,5\}$ form an arithmetic
-progression with common difference $-q! = -6 = -2q$. This identity
-holds \emph{only} at $q=3$, because $q! = 2q$ uniquely at $q=3$
-(Master Equation).
+\begin{proof}
+The spectrum is obtained from the adjacency spectrum
+$12^1\oplus2^{24}\oplus(-4)^{15}$ by subtracting $1$.  The three
+eigenvalues are distinct, so the displayed product is the minimal
+polynomial.  Since the point representation is multiplicity-free, its
+invariant subspaces are direct sums of these three eigenspaces.
+\end{proof}
+
+\begin{theorem}[Lossless even/complement switch]\label{thm:specdem}
+Let $H:=D^2$ and let $\overline A:=J-I-A$ be the complement adjacency.
+Then
+\begin{equation}\label{eq:lossless-complement-switch}
+  \boxed{H=13I+4\overline A,\qquad
+  288D=H^2-98H+385I.}
+\end{equation}
+Thus the off-diagonal support of $D$ is the $240$ unordered collinear
+point pairs, while the off-diagonal support of $H$ is the
+$540$ unordered noncollinear point pairs
+\texttt{\{540:point-nonedge\}}.  Squaring loses no spectral channel:
+\[
+  \mathbb Q[D^2]=\mathbb Q[D].
+\]
 \end{theorem}
 
-\begin{definition}[Spectral Determinant]
-The spectral determinant of $D$ is the polynomial
+\begin{proof}
+Substituting $A=D+I$ into $A^2=8I-2A+4J$ gives
+$D^2=9I-4A+4J=13I+4\overline A$.  On the three eigenspaces of $D$,
+$H$ has distinct eigenvalues $121,1,25$.  Interpolation at these three
+values gives
+\[
+  D=\frac{H^2-98H+385I}{288},
+\]
+which proves both recovery and equality of the generated algebras.
+\end{proof}
+
+\begin{definition}[Exact spectral determinant]
+The characteristic spectral determinant of the full shifted carrier is
 \begin{equation}\label{eq:Zdef}
-Z(x) \;=\; (1-5x)^{10}\,(1+x)^{16}\,(1+7x)^{6}.
+  Z_D(x):=\det(I-xD)=(1-11x)(1-x)^{24}(1+5x)^{15}.
 \end{equation}
 \end{definition}
 
-\begin{theorem}[Taylor coefficients encode octonions and $E_8$]
-\label{thm:Ztaylor}
-The Taylor expansion of $Z(x)$ about $x=0$ begins
-\begin{equation}
-Z(x) = 1 + 8 x - 248 x^2 - 1880 x^3 + \cdots,
-\end{equation}
-with
-\begin{equation}
-Z'(0) = -50 + 16 + 42 = 8 = \dim\mathbb{O},\qquad
-\tfrac12 Z''(0) = -248 = -\dim E_8 .
-\end{equation}
-The first nontrivial Taylor coefficients are the dimensions of the
-octonion algebra and of the exceptional Lie algebra $E_8$.
-\end{theorem}
-
-\begin{proposition}[Special values of $Z$]
-\label{prop:Zspecial}
-\begin{equation}
-Z(0) = 1,\qquad
-Z(-1) = 0,\qquad
-Z(1) = 2^{54} = 2^{2q^3}.
-\end{equation}
-The vanishing $Z(-1) = 0$ is the spectral analogue of \emph{anomaly
-cancellation}: gauge, matter, and gravitational anomalies cancel
-simultaneously at the spectral parameter $x = -1$.
-\end{proposition}
-
-\begin{proof}
-$Z(0)=1$ is immediate. $Z(-1)$ vanishes because $(1+x)^{16}$ does. For
-$Z(1)$: $(-4)^{10}\cdot 2^{16}\cdot 8^{6} = 2^{20}\cdot 2^{16}\cdot 2^{18}
-= 2^{54}$, and $54 = 2\cdot 27 = 2 q^3 = 2 q^q$ at $q=3$.
-\end{proof}
-
-\begin{theorem}[Trace tower of the Dirac operator]
-\label{thm:trace-tower}
-The logarithmic derivative of $Z(x)$ generates all Dirac power-traces:
+\begin{theorem}[True trace tower]\label{thm:trace-tower}
+The logarithmic derivative of $Z_D$ generates the power traces:
 \begin{equation}\label{eq:trace-gen}
--x\,\frac{d}{dx}\log Z(x) \;=\; \sum_{n\ge 1} \Tr(D^n)\,x^n.
+  -x\,\frac{d}{dx}\log Z_D(x)
+  =\sum_{n\ge1}\Tr(D^n)x^n,
 \end{equation}
-Since the Dirac eigenvalues are $\{5,-1,-7\}$ with multiplicities
-$\{10,16,6\}$,
+where
 \begin{equation}\label{eq:trace-formula}
-\Tr(D^n) \;=\; 10\cdot 5^n + 16\cdot(-1)^n + 6\cdot(-7)^n.
+  \boxed{\Tr(D^n)=11^n+24+15(-5)^n.}
 \end{equation}
-The first three nontrivial traces are
-$\Tr(D) = -8$, $\Tr(D^2) = 560$, $\Tr(D^3) = -824$.
+In particular,
+\[
+  \Tr(D)=-40,\quad
+  \Tr(D^2)=520,\quad
+  \Tr(D^3)=-520,\quad
+  \Tr(D^4)=24040.
+\]
 \end{theorem}
 
-\begin{remark}
-The shifted second-trace value $\Tr(D^2) + \Phi_6 \cdot v = 560 + 280
-= 840 = q^q + |E|\cdot(\text{Phi}_6/q)$ -- as well as the special value
-$Z(1) = 2^{2q^q}$ -- already reproduces the principal arithmetic
-closure integer of the $q=3$ theory. The spectral determinant
-$Z(x)$ thus packages \emph{simultaneously} the Dirac spectrum, the
-octonion and $E_8$ dimensions, the anomaly cancellation point, and
-the higher trace tower into a single cubic identity.
+\begin{remark}[Positive heat and zeta data]
+The positive operator is $H=D^2$, not the indefinite operator $D$.
+Its heat trace and two unambiguous zeta functions are
+\[
+\Tr(e^{-tH})=e^{-121t}+24e^{-t}+15e^{-25t},
+\]
+\[
+\zeta_{|D|}(s)=11^{-s}+24+15\,5^{-s},\qquad
+\zeta_H(s)=121^{-s}+24+15\,25^{-s}.
+\]
+Moreover
+\[
+e^{-tH}=e^{-13t}e^{-4t\overline A},
+\]
+so positive heat propagation is exactly complement-graph propagation,
+while \eqref{eq:lossless-complement-switch} recovers the signed operator.
 \end{remark}
 
 
@@ -5213,7 +5227,7 @@ $\eta$-function.
 The McKay--Thompson series $T_{3B}$ for the $3B$ conjugacy class of
 $\mathbb{M}$ begins
 \[
-T_{3B}(\tau) \;=\; \tfrac{1}{q} \;-\; 12 \;+\; 54\,q \;-\; 88\,q^2 \;-\; 99\,q^3 \;+\; 540\,q^4 \;-\; 1188\,q^5 \;+\; \cdots,
+T_{3B}(\tau) \;=\; \tfrac{1}{q} \;-\; 12 \;+\; 54\,q \;-\; 88\,q^2 \;-\; 99\,q^3 \;+\; 540\,q^4 \;-\; 1188\,q^5 \;+\; \cdots, % {540:unrelated}
 \]
 so the first two non-polar coefficients already land on substrate integers:
 \[
@@ -7909,9 +7923,10 @@ dynamical lift.  The finite $q=3$ lock itself is now overdetermined.
 A first global branch model has now also been tested directly.  If one
 demands quadrangle-consistency, then a finite branch choice would have
 to be an exact cover of the $4320$ ordered nonlocal $2$-paths by
-$540$ nonlocal quadrangles, eight ordered paths per quadrangle.  The
+$540$ nonlocal quadrangles, eight ordered paths per quadrangle. % {540:unrelated}
+The
 repository now searches that exact-cover problem explicitly and finds no
-solution.  So the missing finite selector is not a bare $540$-quadrangle
+solution.  So the missing finite selector is not a bare $540$-quadrangle % {540:unrelated}
 packet; it already requires genuine transport cocycle data.
 
 \section*{Executable Certificate}
@@ -8015,7 +8030,7 @@ and cover size admit the group-order decompositions
 4320 \;=\; \frac{2\,|W(E_{6})|}{|W(A_{3})|}
         \;=\; \frac{2\cdot 51840}{24},
 \qquad
-540 \;=\; \binom{v}{2}-|E(\Gamma)| \;=\; \frac{v(v-k-1)}{2},
+540 \;=\; \binom{v}{2}-|E(\Gamma)| \;=\; \frac{v(v-k-1)}{2}, % {540:point-nonedge}
 \label{eq:4320-540}
 \end{equation}
 so the failed quadrangle cover exhausts precisely the non-adjacent
@@ -11318,6 +11333,66 @@ chiral ground shell of $W(3,3)$ thus rebuilds a generalized quadrangle one
 level up the $E_6$ ladder.
 \end{theorem}
 
+\begin{theorem}[Explicit $2240\to45\to40$ cubic-incidence bridge]
+\label{thm:explicit-cubic-incidence-bridge}
+In doubled integral coordinates for the $240$ roots of $E_8$, fix an
+$A_2$ root triple and let $W(E_6)$ act through the $72$ roots orthogonal
+to it.  Let $\mathcal T$ be the $2240$ unordered zero-sum $A_2$ triples
+and let $\mathcal S$ be the $45$ constant-sum cubic supports in a
+$27$-root shell.  The incidence matrix
+\[
+ M_{s,t}=1
+ \quad\Longleftrightarrow\quad
+ \langle r,u\rangle=0
+ \text{ for all }r\in s,\ u\in t
+\]
+is an explicit $W(E_6)$-equivariant map
+\[
+ M:\mathbb Q^{2240}\longrightarrow\mathbb Q^{45}
+\]
+of rank $45$.  Its row sums are $32$, while its column sums are
+$0^{2000},6^{240}$.  The $240$ live columns are exactly the unique
+$240$-orbit; all three $432$-orbits are killed basis vector by basis
+vector.  With $A_{45}$ the disjointness graph on the supports,
+\[
+ \boxed{MM^{\mathsf T}=24I_{45}-6A_{45}+8J_{45}},
+ \qquad
+ \operatorname{spec}(MM^{\mathsf T})
+ =192^1\oplus48^{20}\oplus12^{24}.
+\]
+The live module is
+\[
+ 1\oplus15_a\oplus20\oplus24\oplus30\oplus60_a\oplus90,
+\]
+so the kernel inside that orbit is
+$15_a\oplus30\oplus60_a\oplus90$ of dimension $195$; with the
+$2000$ dead coordinate vectors this gives the full kernel dimension
+$2195$.
+
+Moreover the $45$ supports are equivariantly bijective, after choosing a
+group isomorphism and stabilizer conjugator, with the $45$ intrinsic
+$K_{4,4}$ octets of $W(3,3)$.  If $N$ is point--octet incidence and
+$C=NM$, then
+\[
+ \operatorname{rank}C=25,\qquad
+ \boxed{CC^{\mathsf T}=96I_{40}+24A+336J_{40}},
+\]
+with spectrum $13824^1\oplus144^{24}\oplus0^{15}$.  Every live column of
+$C$ equals the all-ones column plus twice the incidence column of a
+$W(3,3)$ line; all $40$ lines occur exactly six times.  Thus
+\[
+ C_{\mathrm{live}}=J_{40\times240}+2R
+\]
+for the pullback of point--line incidence along an equivariant sixfold
+map from the live $A_2$ triples to the $40$ isotropic lines.
+\end{theorem}
+
+\noindent
+The theorem constructs the map missing from a character-only subtraction.
+The six sheets are not thereby identified with qutrit phases, physical
+polarizations, or particles.  The exact GAP certificate is
+\texttt{analysis/w33\_pass1138\_explicit\_cubic\_incidence\_bridge.g}.
+
 \begin{theorem}[The two 480s]
 \label{thm:two-480s}
 The $480$ Hashimoto arcs (directed edges, the carrier of the Ihara zeta
@@ -11458,8 +11533,9 @@ the substrate. The critical norm $\sqrt{11}$ is a tower invariant.
 
 \begin{theorem}[The three 540s]
 \label{thm:three-540s}
-The $540$ skew line pairs (the hypercube-chart atlas), the $540$ hyperbolic
-point pairs (the minimal-trade seeds), and the $540$ Hashimoto arcs of the
+The $540$ skew line pairs (the hypercube-chart atlas), % {540:line-nonedge}
+the $540$ hyperbolic point pairs (the minimal-trade seeds), % {540:point-nonedge}
+and the $540$ Hashimoto arcs of the % {540:gq42-arc}
 support geometry are all transitive $\PSp(4,3)$-sets with stabilizers of
 order $48$ --- and pairwise \emph{non-isomorphic}: no stabilizer fixes a
 point of another carrier, and the orbital ranks separate them,
@@ -11472,6 +11548,64 @@ Together with the two 480s, ``one count, many $G$-sets'' is a systematic
 substrate phenomenon. (Witness:
 \texttt{analysis/w33\_pass161\_gq42\_ihara\_inheritance.py}, $20$ checks.)
 \end{theorem}
+
+\begin{theorem}[Complete census of the five degree-$540$ species] % {540:mixed}
+\label{thm:five-540s}
+Let $G=\PSp(4,3)\cong U_4(2)$, of order $25920$.  The table of marks of
+$G$ has exactly five conjugacy classes of subgroups of order $48$, at
+positions $77,\ldots,81$.  Therefore there are exactly five
+non-isomorphic transitive $G$-sets of degree $540$. % {540:mixed}
+In TOM order their
+stabilizer structures and orbital ranks are
+\[
+\begin{array}{c|c|c|l}
+77&((C_4\times C_2):C_2):C_3&25&
+  \text{noncollinear point pairs}\\
+78&C_2\times S_4&28&
+  \text{nonincident double-six/cubic-line flags}\\
+79&C_2^2\times A_4&27&
+  \text{ordered Hashimoto arcs of }\GQ(4,2)\\
+80&A_4:C_4&21&
+  \text{the restricted }W(E_6)\text{ class }4C\\
+81&C_2\times S_4&32&
+  \text{skew line pairs}
+\end{array}
+\]
+and their complete joint-rank matrix is
+\[
+\boxed{
+\begin{pmatrix}
+25&16&15&15&16\\
+16&28&25&20&25\\
+15&25&27&20&25\\
+15&20&20&21&19\\
+16&25&25&19&32
+\end{pmatrix}}.
+\]
+The two abstractly isomorphic $C_2\times S_4$ stabilizers are
+nonconjugate: their ranks are $28$ and $32$ and their normalizer orders
+are $96$ and $48$.
+\end{theorem}
+
+\begin{corollary}[The cubic $432+540$ complement] % {540:double-six-nonincident}
+\label{cor:double-six-432-540}
+The unique $S_6$ subgroup of index $36$ acts on the $27$ cubic-surface
+lines with orbits $12+15$.  Consequently its full flag table splits
+\[
+\boxed{36\cdot27=36\cdot12+36\cdot15=432+540.} % {540:double-six-nonincident}
+\]
+The $432$ incident flags have stabilizer $A_5$ and are the projective
+$A_5$ carrier of Pass~1137.  The $540$ nonincident flags have stabilizer % {540:double-six-nonincident}
+$C_2\times S_4$ and form TOM species $78$, the formerly unnamed rank-$28$
+carrier.  Thus the two carriers are complementary halves of one
+double-six/cubic-line incidence object.
+\end{corollary}
+
+\noindent
+In the full outer group $W(E_6)=U_4(2):2$, the three element classes of
+size $540$ are $4A,2D,4C$; restricting their centralizers to $G$ gives % {540:mixed}
+TOM positions $77,81,80$, respectively.  The exact GAP certificate is
+\texttt{analysis/w33\_pass1139\_complete\_degree540\_species.g}.
 
 \subsection{Pass 162 --- the mod-8 anomaly ledger}
 \label{ssec:pass162}

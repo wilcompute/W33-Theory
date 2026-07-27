@@ -8,7 +8,9 @@ outside the explicit retraction ledger or without an inline retraction tag.
 from __future__ import annotations
 
 import argparse
+from concurrent.futures import ThreadPoolExecutor
 import json
+import os
 from pathlib import Path
 import re
 from typing import Iterable
@@ -17,6 +19,43 @@ ROOT = Path(__file__).resolve().parents[1]
 LEDGER_PATH = ROOT / "data" / "w33_shifted_adjacency_retraction_ledger.json"
 DEFAULT_REPORT = ROOT / "data" / "w33_shifted_adjacency_descendant_audit.json"
 EXTENSIONS = {".py", ".md", ".tex", ".json", ".txt", ".csv", ".jsonl"}
+PRUNED_DIRS = {
+    ".git",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".tox",
+    ".venv",
+    "__pycache__",
+    "node_modules",
+}
+ACTIVE_CORPUS_DIRS = {
+    "analysis",
+    "code",
+    "data",
+    "docs",
+    "exploration",
+    "formal",
+    "hardware",
+    "lean",
+    "lib",
+    "manuscripts",
+    "notebooks",
+    "paper",
+    "papers",
+    "passes",
+    "proofs",
+    "reports",
+    "scripts",
+    "src",
+    "submission",
+    "tests",
+    "tex",
+    "theorems",
+    "theory",
+    "tools",
+    "w33",
+}
 INLINE_RETRACTION = "{shifted-adjacency:retracted}"
 INLINE_CORRECTED = "{shifted-adjacency:corrected}"
 
@@ -67,35 +106,78 @@ def classify_path(path: Path, text: str, matches: list[str], ledger: dict) -> st
 
 
 def iter_files(root: Path) -> Iterable[Path]:
-    for path in sorted(root.rglob("*")):
-        if not path.is_file() or path.suffix.lower() not in EXTENSIONS:
-            continue
-        if any(part in {".git", ".pytest_cache", "__pycache__"} for part in path.parts):
-            continue
-        yield path
+    """Walk only corpus directories; never descend into Git or tool caches.
+
+    ``Path.rglob`` has to enumerate and stat the entire ``.git`` object store
+    before this script can reject those paths.  On the Windows/WSL checkout
+    that turned a small pre-commit check into a multi-minute operation.
+    Pruning at the directory boundary keeps the full audit deterministic while
+    avoiding files that could never be part of the result.
+    """
+    paths = [
+        path
+        for path in root.iterdir()
+        if path.is_file() and path.suffix.lower() in EXTENSIONS
+    ]
+    scan_roots = [root / name for name in sorted(ACTIVE_CORPUS_DIRS) if (root / name).is_dir()]
+    for scan_root in scan_roots:
+        for dirpath, dirnames, filenames in os.walk(scan_root):
+            dirnames[:] = sorted(
+                name
+                for name in dirnames
+                if name not in PRUNED_DIRS and not name.startswith(".")
+            )
+            base = Path(dirpath)
+            paths.extend(
+                base / name
+                for name in filenames
+                if Path(name).suffix.lower() in EXTENSIONS
+            )
+    yield from sorted(paths)
 
 
 def audit(root: Path, selected: list[Path] | None = None) -> dict:
     ledger = load_ledger()
-    records = []
-    files = selected if selected is not None else list(iter_files(root))
-    for path in files:
-        if not path.exists() or not path.is_file():
-            continue
+    full_scan = selected is None
+    files = selected if selected is not None else iter_files(root)
+
+    def scan_path(path: Path) -> dict | None:
+        # ``iter_files`` already yields regular files.  Re-statting every one
+        # of ~18k paths over the Windows/WSL boundary cost more than the walk
+        # itself; explicit pre-commit paths still need the defensive check.
+        if not full_scan and (not path.exists() or not path.is_file()):
+            return None
         try:
             text = path.read_text(errors="replace")
         except OSError:
-            continue
+            return None
         matches = scan_text(text)
         if not matches:
-            continue
-        try:
-            rel = path.resolve().relative_to(root.resolve()).as_posix()
-            rel_path = Path(rel)
-        except ValueError:
+            return None
+        if path.is_absolute():
+            try:
+                rel_path = path.relative_to(root)
+            except ValueError:
+                rel_path = path
+        else:
             rel_path = path
         status = classify_path(rel_path, text, matches, ledger)
-        records.append({"path": rel_path.as_posix(), "patterns": matches, "status": status})
+        return {
+            "path": rel_path.as_posix(),
+            "patterns": matches,
+            "status": status,
+        }
+
+    if full_scan:
+        # File opens dominate this audit on a Windows-mounted checkout.
+        # ``map`` preserves the sorted input order, so parallel I/O does not
+        # sacrifice deterministic reports.
+        workers = min(32, max(4, (os.cpu_count() or 1) * 4))
+        with ThreadPoolExecutor(max_workers=workers) as pool:
+            records = [record for record in pool.map(scan_path, files) if record]
+    else:
+        records = [record for path in files if (record := scan_path(path))]
+
     violations = [r for r in records if r["status"] == "UNREGISTERED_ACTIVE_DESCENDANT"]
     return {
         "schema": "w33.shifted_adjacency.descendant_audit.v1",

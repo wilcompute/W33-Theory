@@ -3,16 +3,23 @@
 **Date:** 2026-07-27  
 **Status:** ACTIVE AND ENFORCED
 
-## The two 540-object sets
+## The five degree-540 object species
 
-There are two distinct 540-element sets because both the point and line
-collinearity graphs have 40 vertices of non-neighbor degree 27:
+Pass 1139 supersedes the original two-object inventory. A transitive
+`PSp(4,3)`-set of degree 540 <!-- {540:mixed} --> has an order-48 stabilizer, and the `U4(2)` table
+of marks has exactly five conjugacy classes of those subgroups:
 
-- `{540:point-nonedge}`: `40*27/2=540` unordered noncollinear point pairs;
-- `{540:line-nonedge}`: `40*27/2=540` unordered disjoint/skew line pairs.
+- `{540:point-nonedge}`: TOM 77, rank 25, unordered noncollinear point pairs;
+- `{540:double-six-nonincident}`: TOM 78, rank 28, `36*15` cubic
+  nonincidence flags;
+- `{540:gq42-arc}`: TOM 79, rank 27, `45*12` ordered support-geometry arcs;
+- `{540:outer-4c}`: TOM 80, rank 21, restricted `W(E6)` class `4C`;
+- `{540:line-nonedge}`: TOM 81, rank 32, unordered disjoint/skew line pairs.
 
-The identity `51840=540*96` applies to both and identifies neither. An explicit
-`{540:both}` tag declares that a local passage deliberately compares them.
+The identity `51840=540*96` applies to several of these and identifies none.
+Even the abstract stabilizer `C2 x S4` occurs twice, at ranks 28 and 32. The
+compatibility tags `{540:both}` and `{540:mixed}` are reserved for a genuinely
+mixed single occurrence.
 
 ## Occurrence-level classifier
 
@@ -20,12 +27,15 @@ The identity `51840=540*96` applies to both and identifies neither. An explicit
 assigning one majority label to an entire file. It:
 
 1. ignores the `540` embedded inside the tag syntax itself;
-2. uses line-local explicit tags and vocabulary;
-3. reports files containing both objects as `mixed-explicit`;
-4. exits nonzero in strict mode for a new unresolved occurrence.
+2. binds a tag to one nearest numeric occurrence on the same line;
+3. recognizes all five TOM species and reports multi-species files as
+   `mixed-explicit`;
+4. prunes repository metadata, caches, environments, and build trees;
+5. exits nonzero in strict mode for a new unresolved occurrence.
 
-The line / point / mixed regression fixture passes with zero ambiguity. GitHub
-Actions runs the classifier over the complete live corpus and writes
+The same-line multi-occurrence and five-species regression fixtures pass with
+zero ambiguity. GitHub Actions runs the classifier over the complete live
+corpus and writes
 `data/BT1634_540_audit_results.json`.
 
 ## Namespace registry
@@ -43,8 +53,9 @@ without importing the collided numbers.
 ## Alias registry
 
 `data/ALIAS_REGISTRY.json` now records the corrected three eigenspaces, the
-retracted cubic packet, the two distinct 540 objects, the S5 stabilizer class, the
-45-support image `1+20+24`, and the complete 2195-dimensional kernel.
+retracted cubic packet, all five degree-540 objects with their TOM positions and
+ranks, the S5 stabilizer class, the 45-support image `1+20+24`, and the complete
+2195-dimensional kernel.
 
 ## Enforcement
 

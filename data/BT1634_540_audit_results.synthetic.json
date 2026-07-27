@@ -1,1 +1,238 @@
-{"schema":"w33.540_occurrence_audit.v2","status":"PASS","object_definitions":{"line-nonedge":"540 unordered disjoint/skew line pairs; frame/cube chart carrier","point-nonedge":"540 unordered noncollinear point pairs in SRG(40,12,2,4)"},"file_counts":{"line-nonedge":1,"mixed-explicit":1,"point-nonedge":1},"occurrence_counts":{"both":2,"line-nonedge":1,"point-nonedge":1},"files_mentioning_540":3,"ambiguity_rate_percent":0.0,"target_below_10_percent":true,"records":[{"path":"both.md","category":"mixed-explicit","occurrence_count":2,"occurrences":[{"line":1,"category":"both","reason":"explicit_tag","line_signals":["skew","line_nonedge"],"point_signals":["noncollinear_point","point_pair","point_nonedge"],"snippet":"The 540 {540:line-nonedge} skew line pairs are distinct from the 540 {540:point-nonedge} noncolli"},{"line":1,"category":"both","reason":"explicit_tag","line_signals":["skew","line_nonedge"],"point_signals":["noncollinear_point","point_pair","point_nonedge"],"snippet":"The 540 {540:line-nonedge} skew line pairs are distinct from the 540 {540:point-nonedge} noncollinear point pairs."}]},{"path":"line.md","category":"line-nonedge","occurrence_count":1,"occurrences":[{"line":1,"category":"line-nonedge","reason":"explicit_tag","line_signals":["frame","cube","skew","line_nonedge"],"point_signals":[],"snippet":"The 540 {540:line-nonedge} skew line pairs form the frame/cube carrier."}]},{"path":"point.md","category":"point-nonedge","occurrence_count":1,"occurrences":[{"line":1,"category":"point-nonedge","reason":"explicit_tag","line_signals":[],"point_signals":["noncollinear_point","point_pair","point_nonedge","mu4"],"snippet":"The 540 {540:point-nonedge} noncollinear point pairs have mu=4."}]}]}
+{
+  "schema": "w33.540_occurrence_audit.v3",
+  "status": "PASS",
+  "object_definitions": {
+    "point-nonedge": "540 unordered noncollinear point pairs; TOM 77, rank 25",
+    "double-six-nonincident": "540 nonincident double-six/cubic-line flags; TOM 78, rank 28",
+    "gq42-arc": "540 ordered Hashimoto arcs of GQ(4,2); TOM 79, rank 27",
+    "outer-4c": "540 elements of W(E6) class 4C restricted to PSp; TOM 80, rank 21",
+    "line-nonedge": "540 unordered disjoint/skew line pairs; TOM 81, rank 32"
+  },
+  "compatibility_tags": [
+    "both",
+    "mixed"
+  ],
+  "file_counts": {
+    "double-six-nonincident": 1,
+    "gq42-arc": 1,
+    "line-nonedge": 1,
+    "mixed-explicit": 1,
+    "outer-4c": 1,
+    "point-nonedge": 1
+  },
+  "occurrence_counts": {
+    "double-six-nonincident": 1,
+    "gq42-arc": 1,
+    "line-nonedge": 2,
+    "outer-4c": 1,
+    "point-nonedge": 2
+  },
+  "files_mentioning_540": 6,
+  "literal_occurrences": 7,
+  "ambiguous_occurrences": 0,
+  "ambiguity_rate_percent": 0.0,
+  "target_below_10_percent": true,
+  "pruned_directories": [
+    ".continuity",
+    ".git",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".tox",
+    ".venv",
+    "__pycache__",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv"
+  ],
+  "records": [
+    {
+      "path": "point.md",
+      "category": "point-nonedge",
+      "occurrence_count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "category": "point-nonedge",
+          "reason": "explicit_tag",
+          "explicit_tags": [
+            "point-nonedge"
+          ],
+          "species_signals": {
+            "point-nonedge": [
+              "noncollinear_point",
+              "point_pair",
+              "point_nonedge"
+            ]
+          },
+          "line_signals": [],
+          "point_signals": [
+            "noncollinear_point",
+            "point_pair",
+            "point_nonedge"
+          ],
+          "snippet": "The 540 {540:point-nonedge} noncollinear point pairs are explicit."
+        }
+      ]
+    },
+    {
+      "path": "double.md",
+      "category": "double-six-nonincident",
+      "occurrence_count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "category": "double-six-nonincident",
+          "reason": "explicit_tag",
+          "explicit_tags": [
+            "double-six-nonincident"
+          ],
+          "species_signals": {
+            "double-six-nonincident": [
+              "double_six_nonincident"
+            ]
+          },
+          "line_signals": [],
+          "point_signals": [],
+          "snippet": "The 540 {540:double-six-nonincident} nonincident double-six flags are explicit."
+        }
+      ]
+    },
+    {
+      "path": "arc.md",
+      "category": "gq42-arc",
+      "occurrence_count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "category": "gq42-arc",
+          "reason": "explicit_tag",
+          "explicit_tags": [
+            "gq42-arc"
+          ],
+          "species_signals": {
+            "gq42-arc": [
+              "hashimoto_arc"
+            ]
+          },
+          "line_signals": [],
+          "point_signals": [],
+          "snippet": "The 540 {540:gq42-arc} Hashimoto arcs are explicit."
+        }
+      ]
+    },
+    {
+      "path": "outer.md",
+      "category": "outer-4c",
+      "occurrence_count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "category": "outer-4c",
+          "reason": "explicit_tag",
+          "explicit_tags": [
+            "outer-4c"
+          ],
+          "species_signals": {
+            "outer-4c": [
+              "outer4c"
+            ]
+          },
+          "line_signals": [],
+          "point_signals": [],
+          "snippet": "The 540 {540:outer-4c} W(E6) class 4C elements are explicit."
+        }
+      ]
+    },
+    {
+      "path": "line.md",
+      "category": "line-nonedge",
+      "occurrence_count": 1,
+      "occurrences": [
+        {
+          "line": 1,
+          "category": "line-nonedge",
+          "reason": "explicit_tag",
+          "explicit_tags": [
+            "line-nonedge"
+          ],
+          "species_signals": {
+            "line-nonedge": [
+              "skew",
+              "line_nonedge"
+            ]
+          },
+          "line_signals": [
+            "skew",
+            "line_nonedge"
+          ],
+          "point_signals": [],
+          "snippet": "The 540 {540:line-nonedge} skew line pairs are explicit."
+        }
+      ]
+    },
+    {
+      "path": "same-line.md",
+      "category": "mixed-explicit",
+      "occurrence_count": 2,
+      "occurrences": [
+        {
+          "line": 1,
+          "category": "point-nonedge",
+          "reason": "explicit_tag",
+          "explicit_tags": [
+            "point-nonedge"
+          ],
+          "species_signals": {
+            "point-nonedge": [
+              "point_pair",
+              "point_nonedge"
+            ],
+            "line-nonedge": [
+              "skew",
+              "line_nonedge"
+            ]
+          },
+          "line_signals": [
+            "skew",
+            "line_nonedge"
+          ],
+          "point_signals": [
+            "point_pair",
+            "point_nonedge"
+          ],
+          "snippet": "The 540 {540:point-nonedge} point pairs differ from the 540 {540:line-nonedge} skew line pairs."
+        },
+        {
+          "line": 1,
+          "category": "line-nonedge",
+          "reason": "explicit_tag",
+          "explicit_tags": [
+            "line-nonedge"
+          ],
+          "species_signals": {
+            "point-nonedge": [
+              "point_pair",
+              "point_nonedge"
+            ],
+            "line-nonedge": [
+              "skew",
+              "line_nonedge"
+            ]
+          },
+          "line_signals": [
+            "skew",
+            "line_nonedge"
+          ],
+          "point_signals": [
+            "point_pair",
+            "point_nonedge"
+          ],
+          "snippet": "The 540 {540:point-nonedge} point pairs differ from the 540 {540:line-nonedge} skew line pairs."
+        }
+      ]
+    }
+  ]
+}

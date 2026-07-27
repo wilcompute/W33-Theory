@@ -10,45 +10,63 @@ Use the exact-result index first. If it misses, search the aliases here, then
 read the listed primary artifacts end to end before claiming novelty. Always
 carry the stated group, carrier, and scope into the new claim.
 
-## The 540 — and the trap that there are TWO of them
+## The 540 — and the trap that there are FIVE transitive species
 
 **Aliases:** `540 frames`, `540 skew pairs`, `540 cubes`, `540 nonedges`,
-`540-class`, `3A1 involutions`, `Q3 charts`, disjoint line pairs.
+`540-class`, `3A1 involutions`, `Q3 charts`, disjoint line pairs,
+noncollinear point pairs, `GQ(4,2)` arcs, outer quartics, and cubic
+nonincidence flags.
 
-**Canonical object:** the unordered pairs of **DISJOINT totally isotropic
-lines** of W(3,3). A line is disjoint from exactly q³ = 27 others, so there are
-40·27/2 = 540. Stabiliser **C₂ × S₄ = O_h**, order 48, and 51840 = 540 × 2 × 48.
+**Complete classification (Pass 1139):** for
+\(G=\operatorname{PSp}(4,3)\cong U_4(2)\), a transitive degree-540 set is
+\(G/H\) with \(|H|=48\). The table of marks has exactly five conjugacy
+classes of order-48 subgroups:
 
-**THE FACTORIZATION IDENTIFIES NEITHER (Pass 1128).** `51840 = 540 x 2 x 48` is
-true of **both** 540s, because both stabilisers have order 96 in PGSp(4,3). Any file
-citing only that identity is under-determined — this is not sloppy writing, it is an
-identity that cannot distinguish. **Cite the object, never the factorization.**
-A sixth alias is in circulation: `bt1205` calls its 540 `root_triples`.
+| TOM | canonical tag | stabiliser | rank | carrier |
+|---:|---|---|---:|---|
+| 77 | `{540:point-nonedge}` | `((C4 × C2):C2):C3` | 25 | noncollinear W(3,3) point pairs / `4A` |
+| 78 | `{540:double-six-nonincident}` | `C2 × S4` | 28 | nonincident double-six/cubic-line flags |
+| 79 | `{540:gq42-arc}` | `C2² × A4` | 27 | ordered Hashimoto arcs of `GQ(4,2)` |
+| 80 | `{540:outer-4c}` | `A4:C4` | 21 | restricted W(E6) class `4C` |
+| 81 | `{540:line-nonedge}` | `C2 × S4` | 32 | disjoint line pairs / skew frames / `2D` |
 
-**THE HAZARD — `540 nonedges` is ambiguous and the two readings are different
-G-sets.** W(3,3) is not self-dual, so "nonedge" of the *point* graph and
-"nonedge" of the *line* graph are distinct objects that happen to share every
-crude invariant:
+**THE FACTORIZATION IDENTIFIES NOTHING.** `25920 = 540 × 48` is true of all
+five actions. Even the abstract stabiliser does not suffice: TOM 78 and 81
+both have stabiliser `C2 × S4`, but the subgroups are nonconjugate, their
+normalizers have orders 96 and 48, and their action ranks are 28 and 32.
+The full-Weyl identity `51840 = 540 × 96` likewise applies to its three
+size-540 element classes `4A`, `2D`, and `4C`. **Cite the object, never the
+factorization.** The legacy alias `bt1205` calls one 540 `root_triples` and
+must be resolved from its actual construction.
 
-| | count | stabiliser order | stabiliser |
-|---|---|---|---|
-| line-nonedges (= frames, skew pairs, cubes) | 540 | 48 | `C₂ × S₄` |
-| point-nonedges (non-collinear point pairs) | 540 | 48 | `((C₄ × C₂):C₂):C₃` |
+**THE NONEDGE HAZARD REMAINS.** W(3,3) is not self-dual, so "nonedge" of
+the point graph (TOM 77) and "nonedge" of the line graph (TOM 81) are
+nonisomorphic \(G\)-sets. Always say *point*-nonedge or *line*-nonedge.
+That two-way warning was correct but was not a complete census.
 
-The two stabilisers are **not conjugate**, so the two 540-sets are **not
-isomorphic as G-sets** (Pass 1117). Same cardinality, same stabiliser order,
-different objects. Matching on either number is exactly the move Pass 1043 was
-retracted for. Always say *point*-nonedge or *line*-nonedge.
+**The cubic bridge:** the unique \(S_6\) double-six stabilizer has line
+orbits \(12+15\), so
+\[
+36\cdot27=36\cdot12+36\cdot15=432+540.
+\]
+The incident flags have \(A_5\) stabilizer and give Pass 1137's projective
+432-carrier; the complementary flags are TOM 78, the rank-28 species.
 
-**Status and boundary:** the line-nonedge 540 is the one carrying the rank-32
-imprimitive action and the three block systems. Nothing here says the
-point-nonedge 540 lacks structure — it has simply never been analysed.
+**Status and boundary:** the line-nonedge action owns the rank-32
+imprimitivity and three block systems; Pass 161 already analyzed the
+point-nonedge and `GQ(4,2)` arc actions at ranks 25 and 27. Pass 1139 adds
+the exhaustive census, TOM 78 and 80, and the complete joint-rank matrix.
+No map between two species follows from a shared count, rank entry, or
+abstract subgroup type.
 
-**Primary artifacts:** [BT773](analysis/BT773_involution_cube_theorem.md) (cubes,
-one per 3A₁ involution), [BT810](analysis/BT810_completed_geography_schlafli.md)
-(skew-pair chart, order-48 group), [Pass 1067](data/w33_pass1067_outer_class_geometry.json)
-(outer-involution class), [Pass 1079](analysis/w33_pass1079_frame_action_rank32.g)
-(frames, block systems).
+**Primary artifacts:** [Pass 1139](PASS1139_COMPLETE_DEGREE540_SPECIES_CENSUS.md)
+(complete TOM census and cubic complement),
+[Pass 161](analysis/w33_pass161_gq42_ihara_inheritance.py) (the first three
+natural carriers), [BT773](analysis/BT773_involution_cube_theorem.md)
+(cubes, one per 3A₁ involution),
+[Pass 1067](data/w33_pass1067_outer_class_geometry.json) (`2D`/frame class),
+and [Pass 1079](analysis/w33_pass1079_frame_action_rank32.g) (frame block
+systems).
 
 ## The 36 — spreads
 

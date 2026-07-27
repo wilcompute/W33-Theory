@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-"""Pass 1136 exact occurrence-level disambiguation for the two 540-object sets.
+"""Occurrence-local identity guard for the five degree-540 PSp(4,3) sets.
 
-Unlike the v1 whole-file score, v2 classifies each occurrence inside a bounded
-window. A file that discusses both objects is therefore reported as mixed rather
-than accidentally assigned to whichever vocabulary dominates globally.
+Pass 1136 introduced a binary point/line classifier. Pass 1139 proves that
+PSp(4,3) has five transitive degree-540 coset actions, so this guard now uses
+the complete canonical species list. Explicit tags bind to the nearest literal
+``540`` on the same line; a tag beside one occurrence can never classify a
+second occurrence merely because both appear on that line.
 """
 from __future__ import annotations
 
@@ -13,146 +15,390 @@ import json
 import os
 from pathlib import Path
 import re
+from typing import Iterable
 
 ROOT = Path(__file__).resolve().parents[1]
+SELF_PATH = Path(__file__).resolve()
 DEFAULT_OUT = ROOT / "data" / "BT1634_540_audit_results.json"
 EXTENSIONS = {".md", ".tex", ".py", ".json", ".txt", ".csv", ".jsonl"}
 WINDOW = 180
+PRUNED_DIRS = {
+    ".continuity",
+    ".git",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".tox",
+    ".venv",
+    "__pycache__",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+}
 
-LINE_SIGNALS = {
-    "frame": r"\bframes?\b", "cube": r"\bcubes?\b", "skew": r"skew[-_ ]?(?:pair|line)",
-    "line_nonedge": r"line[-_ ]?nonedge", "three_A1": r"3A1", "Oh": r"O_h|O\\_h",
-    "chart": r"\bchart\b", "line_stabilizer": r"line.{0,30}stabili[sz]er",
-    "BT773": r"BT773", "root_triples_alias": r"root[_ -]?triples",
-}
-POINT_SIGNALS = {
-    "noncollinear_point": r"noncollinear.{0,20}point", "point_pair": r"point[-_ ]?pair",
-    "point_nonedge": r"point[-_ ]?nonedge|point.{0,12}non[- -]?edge", "mu4": r"(?:mu|\\mu)\s*[=:]\s*4",
-    "srg": r"SRG\s*\(\s*40\s*,\s*12\s*,\s*2\s*,\s*4\s*\)",
-    "mu_distribution": r"mu[_ -]?distribution", "BT1203": r"BT1203|bt1203",
-}
+CANONICAL_SPECIES = (
+    "point-nonedge",
+    "double-six-nonincident",
+    "gq42-arc",
+    "outer-4c",
+    "line-nonedge",
+)
+COMPATIBILITY_TAGS = ("both", "mixed", "unrelated")
 TAGS = {
-    "line-nonedge": "{540:line-nonedge}",
-    "point-nonedge": "{540:point-nonedge}",
-    "both": "{540:both}",
+    category: f"{{540:{category}}}"
+    for category in (*CANONICAL_SPECIES, *COMPATIBILITY_TAGS)
 }
-ALIAS_MAP = {
-    "bt773": "line-nonedge",
-    "bt1203": "point-nonedge",
-    "bt1205": "line-nonedge",
+TAG_PATTERN = re.compile(
+    r"\{540:(?P<category>"
+    + "|".join(re.escape(category) for category in TAGS)
+    + r")\}",
+    re.I,
+)
+NUMBER_PATTERN = re.compile(r"(?<![A-Za-z0-9_])540(?![A-Za-z0-9_])")
+
+MIXED_SIGNALS = {
+    "degree_species_census": (
+        r"(?:degree.{0,8}540|540[- ](?:element|object|species)|"
+        r"transitive.{0,24}540).{0,100}"
+        r"(?:species|census|coset|actions?|sets?|class(?:es)?)|"
+        r"transitive.{0,60}degree.{0,8}540"
+    ),
+    "complete_or_five": (
+        r"(?:complete|five|all five|exactly five).{0,80}(?:540|species)"
+    ),
+    "multiple_we6_classes": (
+        r"(?:three|multiple).{0,50}(?:classes|carriers).{0,30}540|"
+        r"classes.{0,60}540|class_sizes.{0,30}540|"
+        r"we6Class[A-Za-z]+.{0,30}540"
+    ),
+    "aggregate_field": (
+        r"(?:coset_degrees|class_sizes|subgroup_class_lengths|"
+        r"expectedClassLengths).{0,100}540|"
+        r"540.{0,100}(?:coset_degrees|class_sizes)"
+    ),
+    "factorization_warning": (
+        r"(?:factorization|factorisation|identif(?:y|ies|ied)|shared "
+        r"(?:number|cardinality)).{0,100}540|"
+        r"540.{0,80}identif(?:y|ies|ied)|(?:25920|51840)\s*=\s*540"
+    ),
+    "identity_tooling": (
+        r"540.{0,30}(?:classifier|guard|tag|occurrence|audit)|"
+        r"(?:classifier|guard|tag|occurrence|audit).{0,30}540"
+    ),
+    "alias_inventory": r"(?:aliases|vocabulary).{0,100}540",
+    "both_carriers": r"(?:both|several).{0,60}(?:carrier|action|class).{0,30}540",
+}
+
+SPECIES_SIGNALS = {
+    "point-nonedge": {
+        "noncollinear_point": r"noncollinear.{0,20}point",
+        "point_pair": r"point[-_ ]?pairs?",
+        "point_nonedge": r"point[-_ ]?nonedge|point.{0,12}non[-_ ]?edge",
+        "mu4": r"(?:mu|\\mu)\s*[=:]\s*4",
+        "srg": r"SRG\s*\(\s*40\s*,\s*12\s*,\s*2\s*,\s*4\s*\)",
+        "mu_distribution": r"mu[_ -]?distribution",
+        "tom77": r"TOM.{0,12}(?:position.{0,4})?77",
+        "class4a": r"(?:class|WE6|W\(E_6\)).{0,16}4A",
+    },
+    "double-six-nonincident": {
+        "double_six_nonincident": r"(?:non[- ]?incident.{0,30}double[- ]six|double[- ]six.{0,30}non[- ]?incident)",
+        "cubic_line_complement": r"(?:cubic[- ]line|27[- ]line).{0,35}(?:complement|non[- ]?incident)",
+        "36x15": r"36\s*(?:\*|\\cdot|x|times)\s*15",
+        "rank28": r"rank[-_ ]?28",
+        "tom78": r"TOM.{0,12}(?:position.{0,4})?78",
+        "nonincident_flags": r"nonincident[_ -]?flags?",
+    },
+    "gq42-arc": {
+        "hashimoto_arc": r"Hashimoto.{0,16}arcs?",
+        "gq42_arc": r"(?:GQ|\\GQ)\s*\(\s*4\s*,\s*2\s*\).{0,24}arcs?",
+        "support_geometry_arc": r"support[-_ ]geometry.{0,24}arcs?",
+        "45x12": r"45\s*(?:\*|\\cdot|x|times)\s*12",
+        "rank27": r"rank[-_ ]?27",
+        "tom79": r"TOM.{0,12}(?:position.{0,4})?79",
+    },
+    "outer-4c": {
+        "outer4c": r"(?:outer|class|WE6|W\(E_6\)).{0,20}4C",
+        "a4_c4": r"A4\s*[:x]\s*C4|A_4\s*[:x]\s*C_4",
+        "c4_s4": r"C4\s*x\s*S4|C_4\s*\\times\s*S_4",
+        "rank21": r"rank[-_ ]?21",
+        "tom80": r"TOM.{0,12}(?:position.{0,4})?80",
+    },
+    "line-nonedge": {
+        "frame": r"\bframes?\b",
+        "cube": r"\bcubes?\b",
+        "skew": r"skew[-_ ]?(?:pair|line)",
+        "line_nonedge": r"line[-_ ]?nonedge",
+        "three_A1": r"3A1",
+        "Oh": r"O_h|O\\_h",
+        "chart": r"\bchart\b",
+        "line_stabilizer": r"line.{0,30}stabili[sz]er",
+        "root_triples_alias": r"root[_ -]?triples",
+        "class2d": r"(?:class|WE6|W\(E_6\)).{0,16}2D",
+        "tom81": r"TOM.{0,12}(?:position.{0,4})?81",
+    },
 }
 
 
 def signal_hits(window: str, signals: dict[str, str]) -> list[str]:
-    return [name for name, pattern in signals.items() if re.search(pattern, window, re.I | re.S)]
+    return [
+        name
+        for name, pattern in signals.items()
+        if re.search(pattern, window, re.I | re.S)
+    ]
 
 
-def classify_occurrence(text: str, start: int, end: int, path: str) -> dict:
+def _span_gap(left: tuple[int, int], right: tuple[int, int]) -> int:
+    if left[1] <= right[0]:
+        return right[0] - left[1]
+    if right[1] <= left[0]:
+        return left[0] - right[1]
+    return 0
+
+
+def _tag_spans(text: str) -> list[tuple[int, int]]:
+    return [match.span() for match in TAG_PATTERN.finditer(text)]
+
+
+def _number_matches(
+    text: str,
+    start: int = 0,
+    end: int | None = None,
+) -> list[re.Match[str]]:
+    limit = len(text) if end is None else end
+    tag_spans = _tag_spans(text)
+    matches = []
+    for match in NUMBER_PATTERN.finditer(text, start, limit):
+        if any(lo <= match.start() < hi for lo, hi in tag_spans):
+            continue
+        prefix = text[max(start, match.start() - 24):match.start()]
+        suffix = text[match.end():min(limit, match.end() + 2)]
+        if re.search(
+            r"(?:Pass(?:es)?|BT|PART)[~\s-]*$|"
+            r"Pass(?:es)?\s+\d+\s*[-–—]+\s*$",
+            prefix,
+            re.I,
+        ):
+            continue
+        if prefix.endswith(("{", "{{")) and suffix.startswith(":"):
+            continue
+        line_start = text.rfind("\n", start, match.start()) + 1
+        line_prefix = text[line_start:match.start()]
+        if re.search(r"[\"']passed_checks[\"']\s*:", line_prefix):
+            continue
+        if re.search(
+            r"\\(?:label|ref|eqref|autoref|path|texttt)\{[^}]*$",
+            line_prefix,
+        ):
+            continue
+        matches.append(match)
+    return matches
+
+
+def bound_explicit_tags(text: str, start: int, end: int) -> list[str]:
+    """Bind each same-line tag to exactly one nearest numeric occurrence.
+
+    A tie deliberately binds nothing: the passage then needs a less ambiguous
+    placement. Compatibility tags ``both`` and ``mixed`` normalize to ``both``.
+    """
+
     line_start = text.rfind("\n", 0, start) + 1
     line_end = text.find("\n", end)
     if line_end < 0:
         line_end = len(text)
-    local_line = text[line_start:line_end]
-    lo, hi = max(0, start - WINDOW), min(len(text), end + WINDOW)
-    window = text[lo:hi]
+    numbers = _number_matches(text, line_start, line_end)
+    tags = list(TAG_PATTERN.finditer(text, line_start, line_end))
+    assigned: list[str] = []
+    target_span = (start, end)
+    for tag in tags:
+        distances = [
+            (_span_gap(tag.span(), number.span()), number)
+            for number in numbers
+        ]
+        if not distances:
+            continue
+        minimum = min(distance for distance, _ in distances)
+        nearest = [
+            number for distance, number in distances if distance == minimum
+        ]
+        if len(nearest) != 1 or nearest[0].span() != target_span:
+            continue
+        category = tag.group("category").lower()
+        assigned.append("both" if category == "mixed" else category)
+    return sorted(set(assigned))
 
-    explicit = [name for name, tag in TAGS.items() if tag.lower() in local_line.lower()]
-    signal_window = local_line if local_line.strip() else window
-    line_hits = signal_hits(signal_window, LINE_SIGNALS)
-    point_hits = signal_hits(signal_window, POINT_SIGNALS)
-    basename = os.path.basename(path).lower()
-    alias = next((value for key, value in ALIAS_MAP.items() if key in basename), None)
 
-    if "both" in explicit or ("line-nonedge" in explicit and "point-nonedge" in explicit):
-        category = "both"
-        reason = "explicit_tag"
-    elif "line-nonedge" in explicit:
-        category, reason = "line-nonedge", "explicit_tag"
-    elif "point-nonedge" in explicit:
-        category, reason = "point-nonedge", "explicit_tag"
-    elif alias:
-        category, reason = alias, "canonical_alias"
-    elif line_hits and not point_hits:
-        category, reason = "line-nonedge", "local_vocabulary"
-    elif point_hits and not line_hits:
-        category, reason = "point-nonedge", "local_vocabulary"
-    elif line_hits and point_hits:
+def _bounded_context(text: str, start: int, end: int) -> str:
+    line_start = text.rfind("\n", 0, start) + 1
+    line_end = text.find("\n", end)
+    if line_end < 0:
+        line_end = len(text)
+    return text[line_start:line_end]
+
+
+def classify_occurrence(text: str, start: int, end: int, path: str) -> dict:
+    explicit = bound_explicit_tags(text, start, end)
+    context = _bounded_context(text, start, end)
+    species_hits = {
+        category: signal_hits(context, SPECIES_SIGNALS[category])
+        for category in CANONICAL_SPECIES
+    }
+    mixed_hits = signal_hits(context, MIXED_SIGNALS)
+    signalled = [
+        category for category, hits in species_hits.items() if hits
+    ]
+
+    explicit_species = [
+        category for category in explicit if category in CANONICAL_SPECIES
+    ]
+    if "unrelated" in explicit:
+        category, reason = "unrelated", "explicit_unrelated_tag"
+    elif "both" in explicit or len(explicit_species) > 1:
+        category, reason = "both", "explicit_mixed_tag"
+    elif len(explicit_species) == 1:
+        category, reason = explicit_species[0], "explicit_tag"
+    elif mixed_hits:
+        category, reason = "both", "mixed_census_vocabulary"
+    elif len(signalled) == 1:
+        category, reason = signalled[0], "local_vocabulary"
+    elif len(signalled) > 1:
         category, reason = "ambiguous", "conflicting_local_vocabulary"
     else:
         category, reason = "ambiguous", "no_local_object_vocabulary"
+
     line_number = text.count("\n", 0, start) + 1
     return {
         "line": line_number,
         "category": category,
         "reason": reason,
-        "line_signals": line_hits,
-        "point_signals": point_hits,
-        "snippet": re.sub(r"\s+", " ", text[max(0, start-90):min(len(text), end+90)]).strip(),
+        "explicit_tags": explicit,
+        "species_signals": {
+            name: hits for name, hits in species_hits.items() if hits
+        },
+        "mixed_signals": mixed_hits,
+        # Compatibility fields retained for downstream Pass 1136 consumers.
+        "line_signals": species_hits["line-nonedge"],
+        "point_signals": species_hits["point-nonedge"],
+        "snippet": re.sub(
+            r"\s+",
+            " ",
+            text[max(0, start - 90):min(len(text), end + 90)],
+        ).strip(),
     }
 
 
 def audit_file(path: Path, root: Path) -> dict | None:
+    if path.resolve() == SELF_PATH:
+        return None
     try:
         text = path.read_text(errors="replace")
     except OSError:
         return None
-    tag_spans = [m.span() for m in re.finditer(r"\{540:(?:line-nonedge|point-nonedge|both)\}", text, re.I)]
-    occurrences = []
-    for match in re.finditer(r"(?<!\d)540(?!\d)", text):
-        if any(lo <= match.start() < hi for lo, hi in tag_spans):
-            continue
-        occurrences.append(classify_occurrence(text, match.start(), match.end(), path.as_posix()))
+    occurrences = [
+        classify_occurrence(
+            text,
+            match.start(),
+            match.end(),
+            path.as_posix(),
+        )
+        for match in _number_matches(text)
+    ]
     if not occurrences:
         return None
-    cats = {x["category"] for x in occurrences}
-    if "ambiguous" in cats:
+    categories = {occurrence["category"] for occurrence in occurrences}
+    if "ambiguous" in categories:
         file_category = "ambiguous"
-    elif cats == {"line-nonedge"}:
-        file_category = "line-nonedge"
-    elif cats == {"point-nonedge"}:
-        file_category = "point-nonedge"
+    elif len(categories) == 1 and (
+        next(iter(categories)) in CANONICAL_SPECIES
+        or next(iter(categories)) == "unrelated"
+    ):
+        file_category = next(iter(categories))
     else:
         file_category = "mixed-explicit"
+    resolved = path.resolve()
+    try:
+        display_path = resolved.relative_to(root.resolve()).as_posix()
+    except ValueError:
+        display_path = resolved.as_posix()
     return {
-        "path": path.resolve().relative_to(root.resolve()).as_posix(),
+        "path": display_path,
         "category": file_category,
         "occurrence_count": len(occurrences),
         "occurrences": occurrences,
     }
 
 
-def iter_files(root: Path):
-    for path in sorted(root.rglob("*")):
-        if not path.is_file() or path.suffix.lower() not in EXTENSIONS:
-            continue
-        if any(part in {".git", ".pytest_cache", "__pycache__"} for part in path.parts):
-            continue
-        yield path
+def iter_files(root: Path) -> Iterable[Path]:
+    """Walk deterministically while pruning repositories, caches, and builds."""
+
+    for directory, dirnames, filenames in os.walk(root, topdown=True):
+        dirnames[:] = sorted(
+            name for name in dirnames if name not in PRUNED_DIRS
+        )
+        base = Path(directory)
+        for filename in sorted(filenames):
+            path = base / filename
+            if path.suffix.lower() in EXTENSIONS:
+                yield path
 
 
 def audit(root: Path, selected: list[Path] | None = None) -> dict:
-    files = selected if selected is not None else list(iter_files(root))
+    files: Iterable[Path] = selected if selected is not None else iter_files(root)
     records = []
     for path in files:
-        rec = audit_file(path, root)
-        if rec is not None:
-            records.append(rec)
-    counts = Counter(r["category"] for r in records)
-    occurrence_counts = Counter(o["category"] for r in records for o in r["occurrences"])
-    total = len(records)
-    ambiguous = counts["ambiguous"]
+        record = audit_file(path, root)
+        if record is not None:
+            records.append(record)
+    counts = Counter(record["category"] for record in records)
+    occurrence_counts = Counter(
+        occurrence["category"]
+        for record in records
+        for occurrence in record["occurrences"]
+    )
+    ambiguous_occurrences = occurrence_counts["ambiguous"]
+    total_occurrences = sum(occurrence_counts.values())
     return {
-        "schema": "w33.540_occurrence_audit.v2",
-        "status": "PASS" if ambiguous == 0 else "NEEDS_TAGGING",
+        "schema": "w33.540_occurrence_audit.v3",
+        "status": "PASS" if ambiguous_occurrences == 0 else "NEEDS_TAGGING",
         "object_definitions": {
-            "line-nonedge": "540 unordered disjoint/skew line pairs; frame/cube chart carrier",
-            "point-nonedge": "540 unordered noncollinear point pairs in SRG(40,12,2,4)",
+            "point-nonedge": (
+                "540 unordered noncollinear point pairs; TOM 77, rank 25"
+            ),
+            "double-six-nonincident": (
+                "540 nonincident double-six/cubic-line flags; TOM 78, rank 28"
+            ),
+            "gq42-arc": (
+                "540 ordered Hashimoto arcs of GQ(4,2); TOM 79, rank 27"
+            ),
+            "outer-4c": (
+                "540 elements of W(E6) class 4C restricted to PSp; "
+                "TOM 80, rank 21"
+            ),
+            "line-nonedge": (
+                "540 unordered disjoint/skew line pairs; TOM 81, rank 32"
+            ),
+            "unrelated": (
+                "a literal 540 that is explicitly not one of the five "
+                "transitive degree-540 PSp(4,3) carriers"
+            ),
         },
+        "compatibility_tags": list(COMPATIBILITY_TAGS),
         "file_counts": dict(sorted(counts.items())),
         "occurrence_counts": dict(sorted(occurrence_counts.items())),
-        "files_mentioning_540": total,
-        "ambiguity_rate_percent": 0.0 if total == 0 else round(100.0 * ambiguous / total, 6),
-        "target_below_10_percent": total > 0 and 100.0 * ambiguous / total < 10.0,
+        "files_mentioning_540": len(records),
+        "literal_occurrences": total_occurrences,
+        "ambiguous_occurrences": ambiguous_occurrences,
+        "ambiguity_rate_percent": (
+            0.0
+            if total_occurrences == 0
+            else round(100.0 * ambiguous_occurrences / total_occurrences, 6)
+        ),
+        "target_below_10_percent": (
+            total_occurrences > 0
+            and 100.0 * ambiguous_occurrences / total_occurrences < 10.0
+        ),
+        "pruned_directories": sorted(PRUNED_DIRS),
         "records": records,
     }
 
@@ -163,26 +409,46 @@ def main() -> None:
     parser.add_argument("--root", default=str(ROOT))
     parser.add_argument("--json-out", nargs="?", const=str(DEFAULT_OUT))
     parser.add_argument("--check-only", action="store_true")
-    parser.add_argument("--strict", action="store_true", help="exit 1 when any occurrence is ambiguous")
+    parser.add_argument(
+        "--strict",
+        action="store_true",
+        help="exit 1 when any occurrence is ambiguous",
+    )
     args = parser.parse_args()
     root = Path(args.root)
-    selected = [Path(x) for x in args.files] if args.files else None
+    selected = [Path(filename) for filename in args.files] if args.files else None
     result = audit(root, selected)
     if args.json_out:
         out = Path(args.json_out)
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
-    ambiguous_records = [r for r in result["records"] if r["category"] == "ambiguous"]
+        out.write_text(
+            json.dumps(result, indent=2) + "\n",
+            encoding="utf-8",
+        )
+    ambiguous_records = [
+        record for record in result["records"]
+        if record["category"] == "ambiguous"
+    ]
     for record in ambiguous_records:
         print(f"ERROR: {record['path']} has ambiguous 540 occurrence(s)")
         for occurrence in record["occurrences"]:
             if occurrence["category"] == "ambiguous":
-                print(f"  line {occurrence['line']}: {occurrence['snippet'][:180]}")
-        print("  Add {540:line-nonedge}, {540:point-nonedge}, or {540:both} in the local paragraph.")
+                print(
+                    f"  line {occurrence['line']}: "
+                    f"{occurrence['snippet'][:180]}"
+                )
+        print(
+            "  Add an occurrence-local canonical tag: "
+            + ", ".join(TAGS[name] for name in CANONICAL_SPECIES)
+            + "; use {540:both} or {540:mixed} only for a genuinely mixed "
+              "single occurrence, and {540:unrelated} only when the literal "
+              "is not one of the five degree-540 carriers."
+        )
     if not args.check_only:
         print(json.dumps({
             "status": result["status"],
             "file_counts": result["file_counts"],
+            "occurrence_counts": result["occurrence_counts"],
             "ambiguity_rate_percent": result["ambiguity_rate_percent"],
         }, indent=2))
     if args.strict and ambiguous_records:

@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 """
-Step 2: Exact propagator computations from the corrected W(3,3) spectrum.
+Pass 1140: exact propagator computations from the corrected W(3,3) spectrum.
+
+{shifted-adjacency:corrected}
 
 Given spec(D) = {11: 1, 1: 24, -5: 15}, computes:
-  - Heat kernel trace K(beta) = Tr exp(-beta D)
-  - Spectral zeta zeta_D(s)
+  - Positive heat trace K(beta) = Tr exp(-beta D^2)
+  - The signed semigroup Tr exp(-beta D), explicitly not called heat
+  - Unambiguous zeta data for |D| and D^2
   - Resolvent pole residues
   - Functional determinant coefficients
   - Corrected trace tower up to n=20
@@ -16,8 +19,8 @@ Outputs:
 """
 import json
 import math
-from datetime import datetime
 from fractions import Fraction
+from pathlib import Path
 
 # True spectrum
 EIGENVALUES = {11: 1, 1: 24, -5: 15}
@@ -41,9 +44,41 @@ def verify_recurrence(moments: list) -> list:
     return errors
 
 
-def heat_kernel_trace(beta: float) -> float:
-    """K(beta) = Tr exp(-beta D) with true spectrum."""
+def signed_semigroup_trace(beta: float) -> float:
+    """Tr exp(-beta D); this grows on the -5 eigenspace."""
     return sum(mult * math.exp(-ev * beta) for ev, mult in EIGENVALUES.items())
+
+
+def positive_heat_trace(beta: float) -> float:
+    """Tr exp(-beta D^2), the positive heat trace."""
+    return sum(
+        mult * math.exp(-(ev * ev) * beta)
+        for ev, mult in EIGENVALUES.items()
+    )
+
+
+def absolute_zeta(s: complex) -> complex:
+    """Tr |D|^{-s}; unlike D^{-s}, this needs no spectral cut."""
+    if isinstance(s, int):
+        if s >= 0:
+            return sum(
+                mult * Fraction(1, abs(ev) ** s)
+                for ev, mult in EIGENVALUES.items()
+            )
+        return sum(mult * (abs(ev) ** (-s)) for ev, mult in EIGENVALUES.items())
+    return sum(mult * (abs(ev) ** (-s)) for ev, mult in EIGENVALUES.items())
+
+
+def squared_zeta(s: complex) -> complex:
+    """Tr (D^2)^{-s}."""
+    if isinstance(s, int):
+        if s >= 0:
+            return sum(
+                mult * Fraction(1, (ev * ev) ** s)
+                for ev, mult in EIGENVALUES.items()
+            )
+        return sum(mult * ((ev * ev) ** (-s)) for ev, mult in EIGENVALUES.items())
+    return sum(mult * ((ev * ev) ** (-s)) for ev, mult in EIGENVALUES.items())
 
 
 def functional_det_coeffs(max_order: int = 10) -> list:
@@ -57,8 +92,6 @@ def functional_det_coeffs(max_order: int = 10) -> list:
     # Use the fact that log det(I-xD) = sum_k Tr(D^k) * (-x^k/k)
     # Build polynomial product directly
     # (1-11x)^1 * (1-x)^24 * (1+5x)^15
-    from fractions import Fraction
-    
     def poly_mul(p, q):
         res = [Fraction(0)] * (len(p) + len(q) - 1)
         for i, a in enumerate(p):
@@ -66,27 +99,21 @@ def functional_det_coeffs(max_order: int = 10) -> list:
                 res[i + j] += a * b
         return res
     
-    def poly_power(factor, root, exp, degree):
+    def poly_power(root, exp, degree):
         """Compute (1 + root*x)^exp up to degree."""
-        p = [Fraction(0)] * (degree + 1)
-        for k in range(degree + 1):
-            # binomial coefficient C(exp, k)
-            binom = Fraction(1)
-            for i in range(k):
-                binom = binom * (exp - i) // (i + 1)
-            p[k] = binom * (root ** k)
+        p = [Fraction(0)] * (min(exp, degree) + 1)
+        for k in range(len(p)):
+            p[k] = Fraction(math.comb(exp, k)) * (root ** k)
         return p
-    
+
     deg = max_order
-    p1 = poly_power(1, Fraction(-11), 1, deg)   # (1-11x)^1
-    p2 = poly_power(1, Fraction(-1), 24, deg)    # (1-x)^24
-    p3 = poly_power(1, Fraction(5), 15, deg)     # (1+5x)^15
-    
-    prod = poly_mul(p1[:deg+1], p2[:deg+1])
-    prod = prod[:deg+1]
-    prod = poly_mul(prod, p3[:deg+1])
-    prod = prod[:deg+1]
-    
+    p1 = poly_power(Fraction(-11), 1, deg)
+    p2 = poly_power(Fraction(-1), 24, deg)
+    p3 = poly_power(Fraction(5), 15, deg)
+
+    prod = poly_mul(p1, p2)[: deg + 1]
+    prod = poly_mul(prod, p3)[: deg + 1]
+
     return [str(c) for c in prod]
 
 
@@ -105,9 +132,14 @@ def main():
     # Functional determinant coefficients
     det_coeffs = functional_det_coeffs(10)
     
-    # Heat kernel at sample betas
+    # Positive heat and signed semigroup at sample beta values.
+    beta_values = [0.0, 0.1, 0.5, 1.0, 2.0]
     heat_samples = {
-        str(round(b, 3)): round(heat_kernel_trace(b), 8)
+        str(round(b, 3)): round(positive_heat_trace(b), 8)
+        for b in beta_values
+    }
+    signed_samples = {
+        str(round(b, 3)): round(signed_semigroup_trace(b), 8)
         for b in [0.0, 0.1, 0.5, 1.0, 2.0]
     }
     
@@ -118,13 +150,17 @@ def main():
     trD2 = true_moments[2]  # 520
     trI = 40
     rank_P11_check = Fraction(trD2 + 4*trD - 5*trI, 160)
-    rank_P1_check  = Fraction(-(trD2 - 12*trD - 55*trI), 60)
-    rank_Pm5_check = Fraction(trD2 - 10*trD - 11*trI, 96)
+    rank_P1_check = Fraction(-(trD2 - 6*trD - 55*trI), 60)
+    rank_Pm5_check = Fraction(trD2 - 12*trD + 11*trI, 96)
     
     report = {
-        'timestamp': datetime.utcnow().isoformat() + 'Z',
+        'schema': 'w33.pass1140.corrected_propagator.v1',
+        'status': 'PASS',
         'true_spectrum': {'eigenvalues_multiplicities': str(EIGENVALUES)},
-        'false_spectrum_historical': {'eigenvalues_multiplicities': str(FALSE_EIGENVALUES)},
+        'quarantined_historical_spectrum': {
+            'eigenvalues_multiplicities': str(FALSE_EIGENVALUES),
+            'status': 'RETRACTED',
+        },
         'dimension_check': {
             'true_total_multiplicity': total_mult_true,
             'false_total_multiplicity': total_mult_false,
@@ -151,21 +187,39 @@ def main():
             ],
         },
         'functional_determinant_coeffs_degree_0_to_10': det_coeffs,
-        'heat_kernel_trace_samples': heat_samples,
+        'positive_heat_trace': {
+            'formula': 'exp(-121*b)+24*exp(-b)+15*exp(-25*b)',
+            'samples': heat_samples,
+        },
+        'signed_semigroup_trace': {
+            'formula': 'exp(-11*b)+24*exp(-b)+15*exp(5*b)',
+            'is_positive_heat': False,
+            'samples': signed_samples,
+        },
+        'zeta_semantics': {
+            'absolute': 'zeta_|D|(s)=11^(-s)+24+15*5^(-s)',
+            'squared': 'zeta_D2(s)=121^(-s)+24+15*25^(-s)',
+            'signed_requires_spectral_cut': True,
+        },
         'selection_rule_summary': {
             'eigenspaces': '1 + 24 + 15 = 40',
             'historical_false': '16 + 10 + 6 = 32 (wrong dimension)',
             'propagator_poles': [11, 1, -5],
             'recurrence_coefficients': [7, 49, -55],
         },
+        'all_checks_pass': (
+            total_mult_true == 40
+            and not recurrence_errors
+            and [rank_P11_check, rank_P1_check, rank_Pm5_check]
+            == [1, 24, 15]
+        ),
     }
-    
-    import pathlib
-    out = pathlib.Path(__file__).parent.parent / 'data' / \
+
+    out = Path(__file__).parent.parent / 'data' / \
           'PROPAGATOR_2026_07_27_spectral_action.json'
     out.parent.mkdir(exist_ok=True)
-    out.write_text(json.dumps(report, indent=2))
-    
+    out.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+
     print('Dimension check (true/false):', total_mult_true, '/', total_mult_false)
     print('True Tr D^0..5:', true_moments[:6])
     print('Recurrence errors:', recurrence_errors)

@@ -1,0 +1,52 @@
+{
+  "schema":"w33.pass1139.complete_degree540_species.gap.v1",
+  "status":"PASS",
+  "producer":"GAP 4.12.1",
+  "headline":"PSp(4,3) has exactly five transitive degree-540 coset actions; the missing rank-28 species is the double-six/cubic-line nonincidence carrier.",
+  "group":{"name":"PSp(4,3)=U4(2)","order":25920,"tom_subgroup_class_count":116},
+  "order48_tom_census":{
+    "positions":[77,78,79,80,81],
+    "small_group_ids":[[48,33],[48,48],[48,49],[48,30],[48,48]],
+    "structures":["((C4 x C2) : C2) : C3","C2 x S4","C2 x C2 x A4","A4 : C4","C2 x S4"],
+    "normalizer_orders":[96,96,96,96,48],
+    "subgroup_class_lengths":[270,270,270,270,540],
+    "coset_degrees":[540,540,540,540,540],
+    "ranks":[25,28,27,21,32],
+    "joint_rank_matrix":[[25,16,15,15,16],[16,28,25,20,25],[15,25,27,20,25],[15,20,20,21,19],[16,25,25,19,32]]
+  },
+  "species":[
+    {"tom_position":77,"tag":"{540:point-nonedge}","object":"unordered noncollinear W(3,3) point pairs","construction":"TOM 112 index-40 point action, unordered valency-27 complement orbital","rank":25,"stabilizer_id":[48,33],"we6_class":"4A"},
+    {"tom_position":78,"tag":"{540:double-six-nonincident}","object":"nonincident double-six/cubic-line flags","construction":"36 double-sixes times the complementary 15-line S6 orbit","rank":28,"stabilizer_id":[48,48],"we6_class":null},
+    {"tom_position":79,"tag":"{540:gq42-arc}","object":"ordered Hashimoto arcs of GQ(4,2)","construction":"45 vertices times valency 12 in the TOM 111 action","rank":27,"stabilizer_id":[48,49],"we6_class":null},
+    {"tom_position":80,"tag":"{540:outer-4c}","object":"W(E6) conjugacy class 4C restricted to PSp(4,3)","construction":"centralizer intersection of the W(E6) 4C class","rank":21,"stabilizer_id":[48,30],"we6_class":"4C"},
+    {"tom_position":81,"tag":"{540:line-nonedge}","object":"unordered disjoint W(3,3) line pairs / skew frames","construction":"TOM 113 index-40 line action, unordered valency-27 complement orbital","rank":32,"stabilizer_id":[48,48],"we6_class":"2D"}
+  ],
+  "cubic_incidence_bridge":{
+    "double_six_tom_position":114,
+    "double_six_count":36,
+    "cubic_line_count":27,
+    "s6_line_orbit_sizes":[12,15],
+    "incident_flags":432,
+    "incident_stabilizer":{"order":60,"id":[60,5],"name":"A5","tom_position":85},
+    "nonincident_flags":540,
+    "nonincident_stabilizer":{"order":48,"id":[48,48],"name":"C2 x S4","tom_position":78},
+    "partition_identity":"36*27=36*12+36*15=432+540"
+  },
+  "we6_class_bridge":{
+    "group":"W(E6)=U4(2):2",
+    "order":51840,
+    "class_names":["4a","2d","4c"],
+    "class_sizes":[540,540,540],
+    "element_orders":[4,2,4],
+    "centralizer_orders":[96,96,96],
+    "derived_intersection_ids":[[48,33],[48,48],[48,30]],
+    "derived_intersection_structures":["((C4 x C2) : C2) : C3","C2 x S4","A4 : C4"],
+    "derived_intersection_normalizer_orders":[96,48,96],
+    "psp_tom_positions":[77,81,80]
+  },
+  "compatibility_tags":["{540:both}","{540:mixed}"],
+  "check_count":46,
+  "passed_checks":["TomLib is available","CTblLib is available","AtlasRep is available","GAP version is 4.12.1","U4(2) TOM has 116 subgroup classes","TOM ambient group is PSp(4,3) of order 25920","exactly five order-48 subgroup classes","five SmallGroup identifiers","five subgroup structures","normalizer orders distinguish the two C2 x S4 classes","subgroup conjugacy-class lengths","five coset-action ranks","complete joint-rank matrix","nonedge carrier maps to one TOM class","nonedge carrier maps to one TOM class","there are two non-self-dual index-40 parabolics","both W33 actions have subdegrees 1,12,27","both nonedge carriers have size 540 {540:mixed}","point nonedges are TOM 77 rank 25","line nonedges are TOM 81 rank 32","unique index-45 GQ(4,2) action is TOM 111","GQ(4,2) subdegrees are 1,12,32","GQ(4,2) ordered arc count is 45 times 12 equals 540","Hashimoto arc stabilizer is SmallGroup(48,49)","Hashimoto arcs are TOM 79 rank 27","unique double-six stabilizer is S6 at TOM 114","S6 splits the 27 cubic lines as 12 plus 15","incident flag stabilizer is A5 at TOM 85","nonincident flag stabilizer is C2 x S4 at TOM 78","cubic incidence and complement counts are 432 and 540 {540:double-six-nonincident}","double-six nonincident carrier is rank 28","ATLAS W(E6) group order","ATLAS W(E6) derived subgroup order","ATLAS class order alignment","ATLAS class size alignment","W(E6) class intersection maps to one TOM class","W(E6) class intersection maps to one TOM class","W(E6) class intersection maps to one TOM class","W(E6) degree-540 class names are 4A,2D,4C","W(E6) degree-540 class element orders are 4,2,4","all W(E6) degree-540 centralizers have order 96","W(E6) 4A,2D,4C restrict to TOM 77,81,80","W(E6) 4A intersection identifies point nonedges","W(E6) 2D intersection identifies skew-line nonedges","W(E6) 4C intersection is TOM 80","the five named species exhaust TOM positions 77 through 81"],
+  "all_checks_pass":true,
+  "scope":"Exact finite permutation groups, tables of marks, coset actions, and cubic-surface incidence. No physical or continuum claim follows from the shared cardinality 540."
+}

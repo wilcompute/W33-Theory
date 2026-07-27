@@ -66,19 +66,34 @@ packet `1+24+20` geometrically.
 ## Pass 1136 — corpus identity layer
 
 The 540 classifier now works occurrence-by-occurrence rather than assigning one
-majority label to an entire file. It recognizes the line-nonedge and
-point-nonedge objects independently and permits an explicit mixed file with both
-tags. Strict mode is fatal on any unresolved occurrence.
+majority label to an entire file. Pass 1139 subsequently proved that the
+point/line distinction was only the first layer: `PSp(4,3)` has exactly five
+transitive degree-540 coset actions, one for each order-48 subgroup class at TOM
+positions 77–81. The classifier and alias registry now use that complete
+five-species census. Each explicit tag binds to one nearest literal occurrence,
+so a tag beside one `540` cannot classify another occurrence on the same line.
+Strict mode is fatal on any unresolved occurrence.
 
 Canonical objects:
 
-- `{540:line-nonedge}`: 540 disjoint/skew line pairs, cube/frame vocabulary;
-- `{540:point-nonedge}`: 540 noncollinear point pairs, SRG `mu=4` vocabulary;
-- `{540:both}`: declaration that a passage deliberately compares the two.
+- `{540:point-nonedge}`: TOM 77, rank 25, noncollinear point pairs / `4A`;
+- `{540:double-six-nonincident}`: TOM 78, rank 28, the `36*15` cubic
+  nonincidence flags;
+- `{540:gq42-arc}`: TOM 79, rank 27, ordered Hashimoto arcs of `GQ(4,2)`;
+- `{540:outer-4c}`: TOM 80, rank 21, the restricted `W(E6)` class `4C`;
+- `{540:line-nonedge}`: TOM 81, rank 32, disjoint/skew line pairs / `2D`;
+- `{540:both}` and `{540:mixed}`: compatibility declarations for a genuinely
+  mixed single occurrence.
+
+The prior warning is strengthened, not withdrawn: neither the integer `540` <!-- {540:mixed} -->,
+the factorization `51840=540*96` <!-- {540:mixed} -->, nor the abstract stabilizer type identifies a
+carrier. The two TOM classes 78 and 81 even have the same abstract stabilizer
+`C2 x S4` while defining nonisomorphic ranks 28 and 32.
 
 The pass registry now reserves 1120–1128 for the already-merged glue track and
 1132–1136 for this exact release. Draft PR #162's branch-local 1120/1121 labels
 are explicitly noncanonical; its usable mathematics is imported under Pass 1135.
+Pass 1139 is the exact extension of the Pass 1136 identity layer.
 
 ## Verification
 
