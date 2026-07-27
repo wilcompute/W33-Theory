@@ -1,0 +1,8 @@
+{
+  "schema":"w33.pass1095.vendor_controller_adapter.v1","status":"PASS",
+  "headline":"A vendor-neutral controller adapter now sits above the W33 protocol with a hard dry-run interlock, firmware identity allowlisting, manifest and sequence locks, explicit arming for acquisition, calibration expiry, replay rejection, and emergency-stop support. The full 240-command schedule crossed the reference TCP adapter only when armed; dry-run opened no socket and triggered no acquisition.",
+  "receipt":{"schema":"w33.pass1095.vendor_adapter_receipt.v1","firmware":"W33-REF-MZI/2.1.0","manifest_sha256":"b43b5c51e7ee6c2c5742a675231c8fdac6580a1861225ef258eb407c03858844","command_count":240,"ACK_count":240,"acquisitions":40,"dry_run_verified":true,"reference_endpoint":"127.0.0.1:41235","physical_hardware_connected":false},
+  "negative_probes":{"unarmed":{"ack":false,"code":"NOT_ARMED","data":{},"seq":0},"bad_firmware":true},
+  "check_count":15,"checks":{"schedule240":true,"dry_run_never_opens_socket":true,"dry_run_never_acquires":true,"real_TCP_adapter_boundary":true,"firmware_allowlist_passed":true,"all_commands_ACKed":true,"forty_acquisitions_only_when_armed":true,"unarmed_acquisition_fails_closed":true,"bad_firmware_fails_closed":true,"manifest_locked":true,"arm_token_not_in_manifest":true,"explicit_reference_controller_only":true,"vendor_adapter_is_transport_separated":true,"physical_hardware_not_claimed":true,"emergency_stop_supported":true},
+  "scope":"Production-shaped adapter and reference-controller conformance test. No vendor device or physical optical hardware was connected."
+}
