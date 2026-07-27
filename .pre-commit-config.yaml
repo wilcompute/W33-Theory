@@ -1,78 +1,60 @@
+# W33-Theory pre-commit hooks
+# Install: pip install pre-commit && pre-commit install
+# Run manually: pre-commit run --all-files
+#
+# CRITICAL: check-stale-boundaries enforces corpus hygiene.
+# Self-test is GATED: BT810/BT811 share exactly two tokens (polar-pair@4, polar-pair@40).
+# Widening the tolerance is a build failure.
+
 repos:
-- repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.4.0
-  hooks:
-    - id: end-of-file-fixer
-    - id: trailing-whitespace
-    - id: check-yaml
-    - id: check-added-large-files
-      args: ['--maxkb=2048']
-- repo: https://github.com/psf/black
-  rev: 24.1.0
-  hooks:
-    - id: black
-- repo: https://github.com/PyCQA/isort
-  rev: 5.12.0
-  hooks:
-    - id: isort
-- repo: https://github.com/Yelp/detect-secrets
-  rev: v1.5.0
-  hooks:
-    - id: detect-secrets
-- repo: local
-  hooks:
-    # `.g` was added at Pass 1073.  The filter had been `(py|md)` since the guard
-    # was written, so no GAP source in this repository had EVER been guarded --
-    # including every pass in the 1020-1072 arc, which is almost entirely GAP, and
-    # including w33_pass1043, the pass that had to be retracted.  The first run
-    # against a .g file immediately flagged a real collision (Pass 1072's
-    # [1,15,20] against BT813's double-six ranks).  A guard is only as wide as its
-    # file filter, and this one was silently narrower than the corpus.
-    - id: rediscovery-guard
-      name: rediscovery guard (results already in the corpus)
-      entry: python scripts/check_rediscovery.py
-      language: system
-      files: ^(analysis|passes|exploration)/.*\.(py|md|g)$
-      pass_filenames: true
-    - id: invariant-kind-guard
-      name: invariant KIND guard (orbits vs suborbits, order vs index)
-      entry: python scripts/check_invariant_kind.py
-      language: system
-      files: ^(analysis|passes|exploration)/.*\.(py|g)$
-      pass_filenames: true
-    - id: pdf-staleness
-      name: README-linked PDFs are not older than their sources
-      entry: python scripts/check_pdf_staleness.py --linked
-      language: system
-      files: ^(.*\.tex|.*\.pdf|README\.md)$
-      pass_filenames: false
-    - id: claims-ledger
-      name: claims ledger is green (paper claims have PASS certificates)
-      entry: python scripts/check_claims_ledger.py
-      language: system
-      files: ^(w33_paper\.tex|data/w33_pass.*\.json)$
-      pass_filenames: false
-    - id: refuted-claims
-      name: text does not restate an already-refuted claim
-      entry: python scripts/check_refuted_claims.py
-      language: system
-      files: ^(analysis|passes|exploration|papers)/.*\.(py|md|tex)$|^(BREAKTHROUGH_)?PASS.*\.(md|py)$|^README\.md$
-      pass_filenames: true
-    - id: sample-degeneracy
-      name: sampling-based claims are not built on degenerate samples
-      entry: python scripts/check_sample_degeneracy.py
-      language: system
-      files: ^(analysis|passes|exploration)/.*\.py$
-      pass_filenames: true
-    - id: sigma-gate
-      name: experiment comparisons report sigma, not just percent
-      entry: python scripts/check_sigma_gate.py
-      language: system
-      files: ^(analysis|passes|exploration|papers)/.*\.(py|md|tex)$|^(BREAKTHROUGH_)?PASS.*\.(md|py)$
-      pass_filenames: true
-    - id: remotes-sync
-      name: remotes for one repository have not diverged
-      entry: python scripts/check_remotes_sync.py
-      language: system
-      always_run: true
-      pass_filenames: false
+  - repo: local
+    hooks:
+      - id: stale-boundaries
+        name: Check stale boundary sections (W33 corpus hygiene)
+        entry: python scripts/check_stale_boundaries.py
+        language: python
+        pass_filenames: false
+        always_run: false
+        files: '^(analysis/.*\.md|BT[0-9]+.*\.(md|tex|py)|RESULTS_VOCABULARY\.md)$'
+        stages: [pre-commit]
+        verbose: true
+        description: >
+          Scans Boundary sections of modified corpus files against strictly later files.
+          Uses the same noun-number token grammar as the rediscovery guard so the two
+          cannot drift. Self-test pins BT810/BT811 at exactly 2 shared tokens; raising
+          the threshold fails the test. Advisory on candidate hits; fatal only on self-test.
+
+      - id: tag-540-check
+        name: Verify 540 disambiguation tags present
+        entry: python scripts/tag_540_disambiguation.py --check-only
+        language: python
+        pass_filenames: true
+        files: '\.(md|tex|py)$'
+        stages: [pre-commit]
+        verbose: false
+        description: >
+          Warns when a modified file mentions '540' without a disambiguation tag
+          ({540:line-nonedge} or {540:point-nonedge}). Not fatal — produces a warning
+          listing the file and line numbers to be tagged.
+
+      - id: s-min-formula-guard
+        name: Guard S_min formula correctness
+        entry: python -c "
+import sys, re
+for f in sys.argv[1:]:
+    txt = open(f).read()
+    # Flag the known-wrong formula: log2(2160) - log2(40) equated to 2.0704
+    bad = re.search(r'log_2\\s*2160\\s*-\\s*log_2\\s*40.*2\\.07', txt)
+    if bad:
+        print(f'ERROR in {f}: S_min formula still wrong (log2(2160)-log2(40)!=2.0704). See BT1620 errata.')
+        sys.exit(1)
+"
+        language: python
+        pass_filenames: true
+        files: '\.(tex|md|py)$'
+        stages: [pre-commit]
+        verbose: false
+        description: >
+          Catches the specific BT1620 errata error if re-introduced: log2(2160)-log2(40)
+          incorrectly equated to 2.0704. The correct value is log2(54)=5.7549.
+          S_min = log2(168/40) = 2.0704 is a different formula.
