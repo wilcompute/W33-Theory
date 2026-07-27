@@ -1,7 +1,8 @@
 {
-  "schema": "w33.shifted_adjacency.retraction_ledger.v2",
+  "schema": "w33.shifted_adjacency.retraction_ledger.v3",
   "canonical_correction": "analysis/2026-07-27_shifted_adjacency_spectral_erratum.md",
   "canonical_verifier": "analysis/w33_shifted_adjacency_spectral_audit.py",
+  "primary_blob_manifest": "archive/retracted_shifted_adjacency_2026_07_27/PRIMARY_BLOB_MANIFEST.json",
   "correct_spectrum": {"11": 1, "1": 24, "-5": 15},
   "historical_signature": {
     "spectrum": {"-7": 6, "-1": 16, "5": 10},
@@ -9,26 +10,26 @@
     "determinant": "(1-5x)^10(1+x)^16(1+7x)^6"
   },
   "known_descendants": {
-    "analysis/w33_BREAKTHROUGH_58_master_cubic_Z_anomaly.py": "retracted_primary_source",
-    "data/w33_BREAKTHROUGH_58_master_cubic_Z_anomaly.json": "retracted_generated_certificate",
-    "analysis/w33_BREAKTHROUGH_75_master_synthesis_v3.py": "retracted_synthesis_descendant",
-    "analysis/w33_MLXXI_MLXXX_w33_paper_spectral_dirac.py": "retracted_descendant",
-    "data/w33_MLXXI_MLXXX_w33_paper_spectral_dirac.json": "retracted_generated_descendant",
+    "analysis/w33_BREAKTHROUGH_58_master_cubic_Z_anomaly.py": "ACTIVE_RETRACTION_STUB:c2841e113a742df9f53b5144893695c7c20aef99",
+    "data/w33_BREAKTHROUGH_58_master_cubic_Z_anomaly.json": "ACTIVE_RETRACTION_RECORD:b6457bd7b1d045285d5f60561b0a68205e175e53",
+    "analysis/w33_BREAKTHROUGH_75_master_synthesis_v3.py": "retracted_synthesis_descendant_pending_stub",
+    "analysis/w33_MLXXI_MLXXX_w33_paper_spectral_dirac.py": "ACTIVE_RETRACTION_STUB:3802405be30db4eb2a65bc904dcb5ceb0bf7a845",
+    "data/w33_MLXXI_MLXXX_w33_paper_spectral_dirac.json": "ACTIVE_RETRACTION_RECORD:f80c8202f7eb787549f6421731fc33ba755d1736",
     "analysis/w33_BREAKTHROUGH_476_hesse_uniqueness_potts_configurations.py": "legacy_cross_reference_pending_patch",
-    "exploration/PART_CCCXII_DIRAC_DETERMINANT_OPERATOR_COMPILER.py": "retracted_descendant",
-    "exploration/PART_CCCXXV_CANONICAL_ACTION_KERNEL.py": "retracted_descendant",
-    "exploration/w33_partition_function_deep.py": "retracted_descendant",
+    "exploration/PART_CCCXII_DIRAC_DETERMINANT_OPERATOR_COMPILER.py": "retracted_descendant_pending_stub",
+    "exploration/PART_CCCXXV_CANONICAL_ACTION_KERNEL.py": "retracted_descendant_pending_stub",
+    "exploration/w33_partition_function_deep.py": "retracted_descendant_pending_stub",
     "exploration/w33_complete_sm_derivation.py": "legacy_derivation_pending_patch",
     "exploration/w33_octic_spectral_geometry.py": "legacy_derivation_pending_patch",
     "exploration/w33_ckm_from_resolvent.py": "legacy_derivation_pending_patch",
     "exploration/w33_trace_tower_complete.py": "legacy_derivation_pending_patch",
     "exploration/w33_mass_matrix_from_taylor.py": "legacy_derivation_pending_patch",
     "exploration/w33_d5_isomorphism_test.py": "legacy_cross_reference_pending_patch",
-    "tests/test_deep_structure_and_predictions.py": "legacy_test_quarantined",
-    "tests/test_anomaly_polynomial.py": "legacy_test_quarantined",
-    "tests/test_grand_unified_closure.py": "legacy_test_quarantined",
-    "tests/test_w33_refinement_bridge_synthesis.py": "legacy_test_quarantined",
-    "tests/test_tower_generation_rules.py": "legacy_test_quarantined",
+    "tests/test_deep_structure_and_predictions.py": "legacy_test_quarantined_pending_marker",
+    "tests/test_anomaly_polynomial.py": "legacy_test_quarantined_pending_marker",
+    "tests/test_grand_unified_closure.py": "legacy_test_quarantined_pending_marker",
+    "tests/test_w33_refinement_bridge_synthesis.py": "legacy_test_quarantined_pending_marker",
+    "tests/test_tower_generation_rules.py": "legacy_test_quarantined_pending_marker",
     "OPEN_FRONTIERS.md": "historical_summary_pending_patch",
     "docs/COMPLETE_SUMMARY.md": "historical_summary_pending_patch",
     "docs/new_connections_research.md": "historical_research_note_pending_patch",
@@ -145,5 +146,5 @@
     "w33_closure_package_v2/previous_bundle_contents/",
     "w33_closure_package_v2/w33_closure_package_v2/previous_bundle_contents/"
   ],
-  "policy": "Registration quarantines a known historical descendant; it does not validate or promote its claims. New files with the signatures remain fatal unless explicitly tagged corrected/retracted."
+  "policy": "Registration quarantines a known historical descendant; it does not validate or promote its claims. New files with the signatures remain fatal unless explicitly tagged corrected/retracted. ACTIVE_RETRACTION_STUB and ACTIVE_RETRACTION_RECORD entries are fail-closed on master; pending entries are owned by the Pass-1144 corpus materializer."
 }

@@ -1,0 +1,87 @@
+{
+  "schema": "w33.pass1142_1146.exact_release.v1",
+  "status": "PASS",
+  "headline": "The three 432 carriers form a central A2 C3 torsor; their rank-26 S5 Hecke algebra is noncommutative; Lambda^2(Aug26) supplies the first explicit rank-81 Steinberg bridge.",
+  "group_order": 51840,
+  "hecke": {
+    "rank": 26,
+    "subdegrees": [1,1,5,5,5,5,5,5,10,10,10,10,20,20,20,20,20,20,20,20,20,30,30,30,30,60],
+    "commutative": false,
+    "decomposition": [
+      {"name":"1","degree":1,"multiplicity":1,"sha256":"a87036047d7df5c2137979cefb1cbfa13effe1be3396485fe78dc7ec233a405d"},
+      {"name":"6_2","degree":6,"multiplicity":2,"sha256":"7c207ca41c2f7cef38a3d725b0f77ff9cd18ddb0c3ae992b539c9d213c8c18db"},
+      {"name":"15_2","degree":15,"multiplicity":1,"sha256":"078930c78d3cc8d91b5038628bbe896f4b725caff34111446c463cdffc7b08cc"},
+      {"name":"15_4","degree":15,"multiplicity":1,"sha256":"f05cea010fd4358226fb1a900b67bec8fc9b611ab63de7fe6506790feaed0baf"},
+      {"name":"20_3","degree":20,"multiplicity":3,"sha256":"9961e219265484e7ca6e9acb1a587d6d8666810d0064425a526fb8be1a2755a0"},
+      {"name":"30_2","degree":30,"multiplicity":2,"sha256":"a3d6b563edcaaacc4000b737433685fb9f9f85995808dc0a609e12a65000bde1"},
+      {"name":"60_2","degree":60,"multiplicity":1,"sha256":"0e202eae7f0e24dc96b918cb1660f206c68d0d8cace82a1c5c2ec9267f97637f"},
+      {"name":"64_2","degree":64,"multiplicity":2,"sha256":"32d14ae5d98fabd23e6c58880f0b2189fdc5ff9b5bf7953e130312b29d261c18"},
+      {"name":"81_minus","degree":81,"multiplicity":1,"sha256":"7e0458f7935217901abb1a50a79916c7379b8f115824b57f3ba6b19089ab6550"}
+    ],
+    "wedderburn": [
+      {"matrix_size":1,"irrep":"1","degree":1},{"matrix_size":2,"irrep":"6_2","degree":6},
+      {"matrix_size":1,"irrep":"15_2","degree":15},{"matrix_size":1,"irrep":"15_4","degree":15},
+      {"matrix_size":3,"irrep":"20_3","degree":20},{"matrix_size":2,"irrep":"30_2","degree":30},
+      {"matrix_size":1,"irrep":"60_2","degree":60},{"matrix_size":2,"irrep":"64_2","degree":64},
+      {"matrix_size":1,"irrep":"81_minus","degree":81}
+    ],
+    "structure_constants_sha256": "ec245fe621c8c42a82567fd51f4ceef25f3a39b8971c632503b5300c691b9acb",
+    "three_relation_matrix_hashes": ["6eaa6c03ded7303e6d9e9e5f0569f2499663b419f7993b88af796136e9cbb94b","bf14c1eac06d8db153e13cb4f48c3e1dc6445539f4c9732e509b657ccdbba670","da4452256209c6f2c57a0c3d33d749e0658ad5b757f7f8197931fa5b36678fc5"],
+    "inter_orbit_hom_rank_matrix": [[26,26,26],[26,26,26],[26,26,26]],
+    "full_three_copy_commutant_dimension": 234
+  },
+  "bridge_search": {
+    "first_viable": [325,"Lambda2_26",1],
+    "viable_by_dimension": [[325,"Lambda2_26",1],[351,"Lambda2_27",1],[676,"Tensor26x26",1],[702,"Tensor26x27",1],[2600,"Lambda3_26",7],[2925,"Lambda3_27",8],[3276,"Sym3_26",6],[3654,"Sym3_27",6]],
+    "permutation_27_decomposition": [
+      {"name":"1","degree":1,"multiplicity":1,"sha256":"a87036047d7df5c2137979cefb1cbfa13effe1be3396485fe78dc7ec233a405d"},
+      {"name":"6_2","degree":6,"multiplicity":1,"sha256":"7c207ca41c2f7cef38a3d725b0f77ff9cd18ddb0c3ae992b539c9d213c8c18db"},
+      {"name":"20_3","degree":20,"multiplicity":1,"sha256":"9961e219265484e7ca6e9acb1a587d6d8666810d0064425a526fb8be1a2755a0"}
+    ],
+    "lambda2_aug26_decomposition": [
+      {"name":"6_2","degree":6,"multiplicity":1,"sha256":"7c207ca41c2f7cef38a3d725b0f77ff9cd18ddb0c3ae992b539c9d213c8c18db"},
+      {"name":"15_2","degree":15,"multiplicity":2,"sha256":"078930c78d3cc8d91b5038628bbe896f4b725caff34111446c463cdffc7b08cc"},
+      {"name":"20_3","degree":20,"multiplicity":1,"sha256":"9961e219265484e7ca6e9acb1a587d6d8666810d0064425a526fb8be1a2755a0"},
+      {"name":"30_2","degree":30,"multiplicity":2,"sha256":"a3d6b563edcaaacc4000b737433685fb9f9f85995808dc0a609e12a65000bde1"},
+      {"name":"64_2","degree":64,"multiplicity":2,"sha256":"32d14ae5d98fabd23e6c58880f0b2189fdc5ff9b5bf7953e130312b29d261c18"},
+      {"name":"81_minus","degree":81,"multiplicity":1,"sha256":"7e0458f7935217901abb1a50a79916c7379b8f115824b57f3ba6b19089ab6550"}
+    ]
+  },
+  "explicit_bridge": {
+    "class_sum": "K_2C=sum_{g in 2C} Lambda^2(Aug26)(g)",
+    "class_size": 36,
+    "eigenvalues_on_Lambda2Aug26": {"6":24,"15":12,"20":18,"30":12,"64":9,"81_minus":4},
+    "projector": "P_81=((K-24I)(K-18I)(K-12I)(K-9I))/11200",
+    "scaled_projector_rank": 81,
+    "scaled_projector_identity": "Q^2=11200 Q",
+    "seed_pair": [0,1],
+    "h_fixed_vector_sha256": "ac215e387eed125999922420d0eb5a2089449f90f1f72d15af8d715d01dd2878",
+    "h_fixed_vector_gcd": 6720,
+    "intertwiner_shape": [325,432],
+    "intertwiner_rank_mod_1000003": 81,
+    "intertwiner_sha256": "d1b19bf8320565c479fc5ef173edcb14428c32a049f48a1fd9993f37fba42f4a",
+    "generator_equivariance": [true,true,true,true,true,true],
+    "hom_81_to_Lambda2Aug26_dimension": 1,
+    "hom_kernel_3x81_to_Lambda2Aug26_dimension": 3,
+    "theorem": "Lambda^2(Aug(C[27])) is the smallest tested natural 27-label Schur functor containing 81_minus, and the explicit rank-81 equivariant matrix realizes the bridge."
+  },
+  "a2_color_torsor": {
+    "order": 3,
+    "commutes_with_WE6": true,
+    "orbit_map": {"0":0,"1":1,"2":3,"3":5,"4":7,"5":2,"6":4,"7":6,"8":8,"9":9,"10":10,"11":12,"12":13,"13":11},
+    "orbit432_cycle": [11,12,13],
+    "color_cycle": {"0":2,"1":0,"2":1},
+    "theorem": "The three 432 carriers are the three A2-shell colors and form a free C3 torsor under the A2 Coxeter element centralizing W(E6)."
+  },
+  "geometric_432_signatures": [
+    {"orbit_index":11,"size":432,"root_type_histogram":{"(-1, 0, 1)":432},"mixed_signature_histogram":{"(0, False, False)":432}},
+    {"orbit_index":12,"size":432,"root_type_histogram":{"(-1, 0, 1)":432},"mixed_signature_histogram":{"(0, False, False)":432}},
+    {"orbit_index":13,"size":432,"root_type_histogram":{"(-1, 0, 1)":432},"mixed_signature_histogram":{"(0, False, False)":432}}
+  ],
+  "parallel_audit": {
+    "pr162": "Valid exact A2/cubic incidence and class-algebra inputs were imported under collision-free numbering.",
+    "pr160": "The proposed 40-ray qutrit SIC/defect-ray verifier is rejected: a d=3 SIC has 9 rays, the script generates at most a heuristic orbit, and fallback indices [0,1,2,3] are not an invariant identification."
+  },
+  "checks": {"three_432_orbits":true,"all_hecke_rank_26":true,"hom_matrix_all_26":true,"all_have_one_81_minus":true,"bridge_found":true,"a2_c3_torsor":true,"explicit_bridge_rank_81":true,"explicit_bridge_equivariant":true},
+  "scope": "Exact finite E8/W(E6) permutation algebra and exact integer intertwiners. No physical defect or experimental claim follows from these representation-theoretic identities alone."
+}

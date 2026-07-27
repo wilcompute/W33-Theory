@@ -1,0 +1,40 @@
+name: Bootstrap Pass 1142-1146 exact source release
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - 'data/pass1142_1146_source_bundle.b64'
+      - '.github/workflows/bootstrap_pass1137_1141.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  install-source-release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Remove superseded transport names and extract source package
+        run: |
+          rm -f data/pass1137_1141_source_bundle.b64
+          rm -f .github/workflows/pass1137_1141_exact_release.yml
+          rm -f PASS1137_1141_EXACT_RELEASE.md
+          rm -f analysis/2026-07-27_pass1141_parallel_audit.md
+          rm -f analysis/w33_pass1137_1141_exact.py analysis/w33_pass1137_1141_intertwiner.py analysis/w33_pass1137_1141_release_compiler.py
+          rm -f data/w33_pass1137_1141_exact_release.json data/w33_pass1137_1141_exact_full.json data/w33_pass1137_1141_exact_extended.json
+          rm -f scripts/build_pass1137_1141_pdf.py tests/test_w33_pass1137_1141.py papers/PASS1137_1141_EXACT_RELEASE.pdf
+          base64 --decode data/pass1142_1146_source_bundle.b64 | tar -xz
+          rm data/pass1142_1146_source_bundle.b64
+      - name: Commit collision-free sources
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Passes 1142-1146: install exact source release'
+          git pull --rebase origin master
+          git push

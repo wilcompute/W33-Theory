@@ -133,8 +133,22 @@ def test_full_audit_report_is_honest_and_closed() -> None:
     )
     assert report["status"] == "PASS"
     assert report["summary"] == {
-        "matched_files": 123,
-        "registered_or_archival": 123,
+        "matched_files": 124,
+        "registered_or_archival": 124,
         "unregistered_active_descendants": 0,
     }
     assert report["violations"] == []
+
+    ledger = json.loads(
+        (
+            ROOT / "data" / "w33_shifted_adjacency_retraction_ledger.json"
+        ).read_text(encoding="utf-8")
+    )
+    assert ledger["schema"] == "w33.shifted_adjacency.retraction_ledger.v3"
+    assert ledger["primary_blob_manifest"].endswith(
+        "PRIMARY_BLOB_MANIFEST.json"
+    )
+    assert len(ledger["known_descendants"]) == 129
+    assert ledger["known_descendants"][
+        "analysis/w33_BREAKTHROUGH_58_master_cubic_Z_anomaly.py"
+    ].startswith("ACTIVE_RETRACTION_STUB:")

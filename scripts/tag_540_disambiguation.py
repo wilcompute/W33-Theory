@@ -21,6 +21,12 @@ ROOT = Path(__file__).resolve().parents[1]
 SELF_PATH = Path(__file__).resolve()
 DEFAULT_OUT = ROOT / "data" / "BT1634_540_audit_results.json"
 EXTENSIONS = {".md", ".tex", ".py", ".json", ".txt", ".csv", ".jsonl"}
+EXCLUDED_RELATIVE_PATHS = {
+    "data/BT1634_540_audit_results.json",
+    "data/BT1634_540_audit_results.synthetic.json",
+    "data/w33_540_occurrence_registry_v1.json",
+    "data/w33_formula_search_universe_v1.json",
+}
 WINDOW = 180
 PRUNED_DIRS = {
     ".continuity",
@@ -291,6 +297,13 @@ def classify_occurrence(text: str, start: int, end: int, path: str) -> dict:
 def audit_file(path: Path, root: Path) -> dict | None:
     if path.resolve() == SELF_PATH:
         return None
+    resolved = path.resolve()
+    try:
+        relative = resolved.relative_to(root.resolve()).as_posix()
+    except ValueError:
+        relative = resolved.as_posix()
+    if relative in EXCLUDED_RELATIVE_PATHS:
+        return None
     try:
         text = path.read_text(errors="replace")
     except OSError:
@@ -316,13 +329,8 @@ def audit_file(path: Path, root: Path) -> dict | None:
         file_category = next(iter(categories))
     else:
         file_category = "mixed-explicit"
-    resolved = path.resolve()
-    try:
-        display_path = resolved.relative_to(root.resolve()).as_posix()
-    except ValueError:
-        display_path = resolved.as_posix()
     return {
-        "path": display_path,
+        "path": relative,
         "category": file_category,
         "occurrence_count": len(occurrences),
         "occurrences": occurrences,
@@ -399,6 +407,7 @@ def audit(root: Path, selected: list[Path] | None = None) -> dict:
             and 100.0 * ambiguous_occurrences / total_occurrences < 10.0
         ),
         "pruned_directories": sorted(PRUNED_DIRS),
+        "excluded_relative_paths": sorted(EXCLUDED_RELATIVE_PATHS),
         "records": records,
     }
 

@@ -224,6 +224,18 @@ def test_classifier_prunes_repository_metadata_and_build_trees(
     assert audit["occurrence_counts"] == {"gq42-arc": 1}
 
 
+def test_classifier_excludes_generated_meta_indexes(tmp_path: Path) -> None:
+    classifier = _load_module("pass1139_tag540_meta", CLASSIFIER)
+    data = tmp_path / "data"
+    data.mkdir()
+    meta = data / "w33_formula_search_universe_v1.json"
+    meta.write_text(
+        '{"quoted_corpus_text":"an intentionally ambiguous 540"}\n',
+        encoding="utf-8",
+    )
+    assert classifier.audit_file(meta, tmp_path) is None
+
+
 def test_alias_registry_and_release_surfaces_use_the_five_species() -> None:
     registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
     records = {

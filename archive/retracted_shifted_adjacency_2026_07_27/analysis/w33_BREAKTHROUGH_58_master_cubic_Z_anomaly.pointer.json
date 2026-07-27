@@ -1,0 +1,10 @@
+{
+  "schema": "w33.retracted_blob_pointer.v1",
+  "status": "RETRACTED",
+  "active_path": "analysis/w33_BREAKTHROUGH_58_master_cubic_Z_anomaly.py",
+  "historical_blob_sha": "957d0d2134cf1a057d165c199a91644d2ff5b5a5",
+  "retraction_commit": "c2841e113a742df9f53b5144893695c7c20aef99",
+  "correction": "analysis/2026-07-27_shifted_adjacency_spectral_erratum.md",
+  "verifier": "analysis/w33_shifted_adjacency_spectral_audit.py",
+  "note": "The exact original bytes remain addressable in Git by historical_blob_sha; the active path is a fail-closed stub."
+}

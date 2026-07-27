@@ -89,8 +89,8 @@ The previous committed report listed only five files.  The rebuilt full
 active-corpus audit finds
 
 \[
-\boxed{123\ \text{matches}
-=123\ \text{explicitly classified}
+\boxed{124\ \text{matches}
+=124\ \text{explicitly classified}
 +0\ \text{unregistered descendants}}.
 \]
 
@@ -109,8 +109,15 @@ The guard now:
 - parallelizes only full-release I/O while preserving sorted report order;
 - keeps changed-file pre-commit checks sequential and minimal.
 
-The honest full run fell from \(8\) minutes \(58\) seconds to \(26.4\)
-seconds on the same checkout.
+The honest pre-merge full run fell from \(8\) minutes \(58\) seconds to
+\(26.4\) seconds on the same checkout.
+
+Pass 1144 subsequently supplied four fail-closed primary retraction
+records and a four-entry Git-blob manifest.  The merged v3 ledger preserves
+the full 129-path classification while adding those exact commit/blob
+provenances and honest pending markers.  The mixed MLXXI--MLXXX executable
+is labeled `RETRACTED_IN_PART`, matching its certificate: only
+MLXXII--MLXXV and MLXXX are retracted by this audit.
 
 ## Reproducibility
 
@@ -127,7 +134,8 @@ Verified results:
 
 - corrected propagator regression: `11 passed`;
 - Pass 1140 publication/guard regression: `6 passed`;
-- full descendant audit: `PASS`, summary `123/123/0`.
+- full descendant audit after the Pass 1144 merge: `PASS`, summary
+  `124/124/0`.
 
 ## Scope
 
