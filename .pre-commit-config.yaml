@@ -1,60 +1,49 @@
-# W33-Theory pre-commit hooks
-# Install: pip install pre-commit && pre-commit install
-# Run manually: pre-commit run --all-files
-#
-# CRITICAL: check-stale-boundaries enforces corpus hygiene.
-# Self-test is GATED: BT810/BT811 share exactly two tokens (polar-pair@4, polar-pair@40).
-# Widening the tolerance is a build failure.
-
+# W33-Theory local integrity hooks
 repos:
   - repo: local
     hooks:
       - id: stale-boundaries
-        name: Check stale boundary sections (W33 corpus hygiene)
+        name: Check stale boundary sections
         entry: python scripts/check_stale_boundaries.py
         language: python
         pass_filenames: false
-        always_run: false
         files: '^(analysis/.*\.md|BT[0-9]+.*\.(md|tex|py)|RESULTS_VOCABULARY\.md)$'
         stages: [pre-commit]
         verbose: true
-        description: >
-          Scans Boundary sections of modified corpus files against strictly later files.
-          Uses the same noun-number token grammar as the rediscovery guard so the two
-          cannot drift. Self-test pins BT810/BT811 at exactly 2 shared tokens; raising
-          the threshold fails the test. Advisory on candidate hits; fatal only on self-test.
 
-      - id: tag-540-check
-        name: Verify 540 disambiguation tags present
-        entry: python scripts/tag_540_disambiguation.py --check-only
+      - id: shifted-adjacency-descendants
+        name: Reject unregistered descendants of the false D=A-I cubic
+        entry: python scripts/check_shifted_adjacency_descendants.py --check-only
         language: python
         pass_filenames: true
-        files: '\.(md|tex|py)$'
+        files: '\.(md|tex|py|json|txt|csv|jsonl)$'
         stages: [pre-commit]
-        verbose: false
         description: >
-          Warns when a modified file mentions '540' without a disambiguation tag
-          ({540:line-nonedge} or {540:point-nonedge}). Not fatal — produces a warning
-          listing the file and line numbers to be tagged.
+          Fatal on historical {-7,-1,5}/old-Z signatures unless the file is in the
+          explicit retraction ledger or carries a corrected/retracted audit tag.
+
+      - id: tag-540-check
+        name: Require unambiguous 540 object tags in changed files
+        entry: python scripts/tag_540_disambiguation.py --check-only --strict
+        language: python
+        pass_filenames: true
+        files: '\.(md|tex|py|json|txt|csv|jsonl)$'
+        stages: [pre-commit]
+        description: >
+          Classifies each occurrence locally and rejects unresolved uses. Use
+          {540:line-nonedge}, {540:point-nonedge}, or {540:both}.
 
       - id: s-min-formula-guard
         name: Guard S_min formula correctness
         entry: python -c "
 import sys, re
 for f in sys.argv[1:]:
-    txt = open(f).read()
-    # Flag the known-wrong formula: log2(2160) - log2(40) equated to 2.0704
-    bad = re.search(r'log_2\\s*2160\\s*-\\s*log_2\\s*40.*2\\.07', txt)
-    if bad:
-        print(f'ERROR in {f}: S_min formula still wrong (log2(2160)-log2(40)!=2.0704). See BT1620 errata.')
-        sys.exit(1)
+    txt = open(f, errors='replace').read()
+    if re.search(r'log_2\\s*2160\\s*-\\s*log_2\\s*40.*2\\.07', txt):
+        print(f'ERROR in {f}: log2(2160)-log2(40)=log2(54), not 2.0704')
+        raise SystemExit(1)
 "
         language: python
         pass_filenames: true
         files: '\.(tex|md|py)$'
         stages: [pre-commit]
-        verbose: false
-        description: >
-          Catches the specific BT1620 errata error if re-introduced: log2(2160)-log2(40)
-          incorrectly equated to 2.0704. The correct value is log2(54)=5.7549.
-          S_min = log2(168/40) = 2.0704 is a different formula.
