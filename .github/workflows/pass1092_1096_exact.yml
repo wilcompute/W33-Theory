@@ -1,0 +1,71 @@
+name: Passes 1092-1096 exact character, Hesse, E8, vendor, and Lean locks
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1092_*'
+      - 'analysis/w33_pass1093_*'
+      - 'analysis/w33_pass1094_*'
+      - 'analysis/w33_pass1095_*'
+      - 'analysis/w33_pass1096_*'
+      - 'formal/W33/Pass1096CharacterHesseE8Lock.lean'
+      - 'formal/W33.lean'
+      - 'tests/test_w33_pass1092_1096.py'
+      - '.github/workflows/pass1092_1096_exact.yml'
+  workflow_dispatch:
+
+jobs:
+  character-table:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy sympy
+      - run: |
+          PYTHONPATH=analysis python analysis/w33_pass1082_frame_coherent_configuration.py
+          PYTHONPATH=analysis python analysis/w33_pass1083_levi_frame_steinberg_intertwiner.py
+          PYTHONPATH=analysis python analysis/w33_pass1087_canonical_steinberg_parity.py
+          PYTHONPATH=analysis python analysis/w33_pass1088_frame_adjacency_wedderburn.py
+          PYTHONPATH=analysis python analysis/w33_pass1092_u42dot2_character_identification.py
+      - run: sudo apt-get update && sudo apt-get install -y gap gap-ctbllib
+      - run: gap -q analysis/w33_pass1092_u42dot2_character_match.g
+
+  hesse-fibers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy
+      - run: PYTHONPATH=analysis python analysis/w33_pass1093_dual_hesse_firewall_fiber_equivalence.py
+
+  e8-obstruction:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy
+      - run: PYTHONPATH=analysis python analysis/w33_pass1094_e8_root_sheet_bridge.py
+
+  vendor-adapter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy
+      - run: PYTHONPATH=analysis python analysis/w33_pass1095_vendor_controller_adapter.py
+
+  formal-and-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy pytest
+      - run: PYTHONPATH=analysis python analysis/w33_pass1096_formal_character_hesse_e8_lock.py
+      - run: PYTHONPATH=analysis pytest -q tests/test_w33_pass1092_1096.py
+      - uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formal
