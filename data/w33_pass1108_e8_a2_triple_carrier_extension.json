@@ -1,0 +1,11 @@
+{
+  "schema":"w33.pass1108.e8_a2_triple_carrier_extension.v1","status":"PASS",
+  "headline":"Extending the Pass-1104 pair-carrier census by the canonical A2 root triples reveals a smaller E8-derived Steinberg carrier: the 2240 unordered triples of roots summing to zero contain exactly three copies of 81_minus and no 81_plus. This strictly improves the 3360 pair-carrier minimum while leaving the first tested 81_plus occurrence at the 15120 orthogonal-root-pair carrier.",
+  "upstream_pass1104":{"path":"data/w33_pass1104_e8_pair_carrier_census.json","pair_universe_minimum":{"family":"unordered_antipodal_root_line_pairs","relation":"absdot=4","degree":3360,"multiplicity_81_plus":0,"multiplicity_81_minus":4},"first_81_plus":{"family":"unordered_root_pairs","relation":"dot=0","degree":15120,"multiplicity_81_plus":1,"multiplicity_81_minus":26}},
+  "a2_triple_carrier":{"degree":2240,"fixed_character":[2240,32,160,26,242,8,32,12,20,2,32,2,10,2,2,672,40,8,80,42,6,4,8,2,8],"frame_visible_inner_products":{"15a":4,"60a":4,"20":22,"81_minus":3,"60b":0,"24":3,"64":10,"15b":0,"81_plus":0,"1":14},"contains_81_plus":false,"contains_81_minus":true},
+  "positive_carriers_sorted":[[2240,"A2_root_triples_sum_zero",0,3],[3360,"root_line_pairs_absdot_4",0,4],[3780,"root_line_pairs_absdot_0",0,6],[6720,"root_pairs_dot_-4",0,10],[6720,"root_pairs_dot_4",0,7],[15120,"root_pairs_dot_0",1,26]],
+  "first_positive_after_extension":{"degree":2240,"carrier":"A2_root_triples_sum_zero","multiplicity_81_plus":0,"multiplicity_81_minus":3},
+  "checks":{"roots240":true,"group51840":true,"classes25":true,"A2_triples2240":true,"root_lines120":true,"carrier_characters_integral":true,"positive_81_carrier_found":true,"A2_character_exact":true,"A2_has_no_81plus":true,"A2_has_three_81minus":true,"upstream_pair_census_passed":true,"upstream_pair_minimum3360":true,"A2_strictly_smaller_than_pair_minimum":true,"first_plus_still_orthogonal_pairs15120":true},
+  "check_count":14,
+  "scope":"Exact W(E6) permutations on doubled-coordinate E8 roots. The executable regenerates the complete pair/triple cross-check records. Minimality is only over the union of the explicit Pass-1104 pair universe and the A2 triple carrier added here; no claim is made over every E8-derived G-set."
+}
