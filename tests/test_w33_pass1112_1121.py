@@ -63,7 +63,7 @@ def test_pass1121_ranks_and_firewall():
 def test_pass1116_runtime_state_is_fail_closed():
     x = load('data/w33_pass1116_runtime_closure.json')
     assert x['status'] in {'PASS_LOCAL_RUNTIME_PENDING','PASS_OBSERVED_RUNTIME_CLOSURE'}
-    assert x['check_count'] == 12 and all(x['checks'].values())
+    assert x['check_count'] == 13 and all(x['checks'].values())
 
 def test_local_check_total_before_observed_runtime():
     paths = [
@@ -74,4 +74,4 @@ def test_local_check_total_before_observed_runtime():
         'data/w33_pass1116_runtime_closure.json',
         'data/w33_pass1121_e8_a2_cubic_incidence.json',
     ]
-    assert sum(load(p)['check_count'] for p in paths) == 88
+    assert sum(load(p)['check_count'] for p in paths) == 89
