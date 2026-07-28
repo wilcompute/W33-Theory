@@ -1,0 +1,55 @@
+name: Materialize Pass 1188-1192 exact correction
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'PASS1192_MATERIALIZE.trigger'
+      - '.github/workflows/pass1192_materialize_pr.yml'
+      - '.correction/pass1192_chunk_*.b64'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Decode and extract reviewed payload
+        run: |
+          cat .correction/pass1192_chunk_*.b64 | tr -d '\n\r\t ' | base64 -d > /tmp/pass1188_1192.tar.gz
+          echo "c0b8ad3a4ee7d3b51175d1361d92a97db577354f3bdbbe4a6756a65491aea44a  /tmp/pass1188_1192.tar.gz" | sha256sum -c -
+          tar -xzf /tmp/pass1188_1192.tar.gz
+          rm -rf .correction PASS1192_MATERIALIZE.trigger .github/workflows/pass1192_materialize_pr.yml
+      - name: Compile corrected sources
+        run: python -m compileall -q analysis tests
+      - name: Install test runner
+        run: python -m pip install pytest
+      - name: Run focused regression chain
+        run: |
+          PYTHONPATH=. pytest -q \
+            tests/test_w33_pass1158_1162.py \
+            tests/test_w33_pass1163_1167.py \
+            tests/test_w33_pass1168_1172.py \
+            tests/test_w33_pass1173_1177.py \
+            tests/test_w33_pass1178_1182.py \
+            tests/test_w33_pass1183_1187.py \
+            tests/test_w33_pass1188_1192.py
+      - name: Run corpus-wide synthesis guard
+        run: PYTHONPATH=. python analysis/w33_pass1192_parallel_synthesis_guard.py
+      - name: Commit clean source release
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Passes 1188-1192: exact parallel correction release'
+          git push origin HEAD:${{ github.head_ref }}
