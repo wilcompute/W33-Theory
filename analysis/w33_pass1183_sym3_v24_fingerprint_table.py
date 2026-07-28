@@ -1,46 +1,12 @@
 #!/usr/bin/env python3
-"""
-Pass 1183: Sym^3(V24) candidate fingerprint table.
-
-Takes the arithmetic candidates from Pass 1178 and computes compact fingerprints
-(term count, total multiplicity, heavy-mass share) to prioritize later exact
-character-table elimination.
-"""
+"""Pass 1183 v2: arithmetic fingerprints only; no plethysm ranking claim."""
 import json
 from pathlib import Path
-from datetime import datetime
-
-SRC = Path('data/SYM3_V24_PLETHYSM_SEARCH_2026_07_27.json')
-
-
+DEGREES=[1,1,6,6,10,15,15,15,15,20,20,20,24,24,30,30,60,60,60,64,64,80,81,81,90]
 def main():
-    data = json.loads(SRC.read_text()) if SRC.exists() else {'best_candidates': []}
-    fps = []
-    for i, cand in enumerate(data.get('best_candidates', []), start=1):
-        total_terms = sum(cand.values())
-        distinct = len(cand)
-        heavy = sum(int(k)*v for k,v in cand.items() if int(k) >= 160)
-        total = sum(int(k)*v for k,v in cand.items())
-        fps.append({
-            'candidate_index': i,
-            'distinct_irreps': distinct,
-            'total_terms': total_terms,
-            'heavy_mass': heavy,
-            'heavy_mass_share': heavy / total if total else 0.0,
-            'candidate': cand,
-        })
-    result = {
-        'timestamp': datetime.utcnow().isoformat()+'Z',
-        'schema': 'w33.pass1183.sym3_v24_fingerprint_table.v1',
-        'status': 'PASS',
-        'source': str(SRC),
-        'fingerprints': fps,
-        'selection_rule': 'Prefer low term count, low distinct irrep count, and high heavy-mass share for early character-trace testing.'
-    }
-    Path('data').mkdir(exist_ok=True)
-    Path('data/SYM3_V24_FINGERPRINTS_2026_07_27.json').write_text(json.dumps(result, indent=2))
-    print('PASS 1183 complete:', len(fps), 'fingerprints written')
-    return result
-
-if __name__ == '__main__':
-    main()
+ r={'schema':'w33.pass1183.sym3_v24_fingerprint.v2','status':'PASS','target':2600,'exact_degrees':DEGREES,
+    'sum_of_squares':sum(d*d for d in DEGREES),'fingerprints_are_character_free':True,
+    'scope_barrier':'Arithmetic fingerprints cannot prioritize an exact plethysm without character traces.'}
+ assert r['sum_of_squares']==51840
+ Path('data/SYM3_V24_FINGERPRINT_TABLE_2026_07_27.json').write_text(json.dumps(r,indent=2)+'\n');return r
+if __name__=='__main__':main()
