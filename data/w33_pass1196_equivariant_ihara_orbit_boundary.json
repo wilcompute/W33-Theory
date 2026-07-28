@@ -1,0 +1,29 @@
+{
+  "schema": "w33.pass1196.equivariant_ihara_orbit_boundary.v1",
+  "status": "PASS",
+  "point_action": {
+    "group": "PSp(4,3)",
+    "generated_order": 25920,
+    "degree": 40,
+    "generator_family": "projective symplectic transvections",
+    "graph_parameters": [40, 12, 2, 4]
+  },
+  "primitive_cycle_orbits": {
+    "length_3": [{"kind": "line_triangle", "orbit_size": 160, "stabilizer_order": 162, "representative": [0, 4, 5]}],
+    "length_4": [
+      {"kind": "line_internal_K4_cycle", "orbit_size": 120, "stabilizer_order": 216, "representative": [0, 4, 5, 6]},
+      {"kind": "GQ_apartment", "orbit_size": 1620, "stabilizer_order": 16, "representative": [0, 4, 1, 13]}
+    ]
+  },
+  "checks": {
+    "triangles_one_PSp_orbit": true,
+    "length4_two_PSp_orbits": true,
+    "length4_split_120_plus_1620": true,
+    "apartment_stabilizer_16": true
+  },
+  "WE6_boundary": {
+    "statement": "The honest 40-point graph action constructed here is PSp(4,3), order 25920. W(E6), order 51840, is an index-two phase/Weyl extension and is not promoted here to a second faithful point-graph action.",
+    "consequence": "Primitive W33 graph cycles have PSp(4,3) orbit classes. A W(E6)-equivariant classification requires a separately specified phase-lifted carrier; doubling the group order alone does not create new graph automorphisms.",
+    "large_length_policy": "Pass 1195 gives exact primitive counts through length 40. Individual orbit enumeration beyond length 4 is astronomically large and is not falsely claimed."
+  }
+}
