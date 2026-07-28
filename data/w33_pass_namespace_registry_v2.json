@@ -35,6 +35,14 @@
         "1275": "7 provisional species restriction feasibility decompositions",
         "1276": "400 species-20 matrix units produced, zero spot-check violations",
         "1277": "Theorem ledger v7 (13 EXACT / 6 PROVISIONAL / 3 OPEN)"
+      }},
+    {"range": "1300-1304", "owner": "exact-triality-matrix-cycle-track", "status": "COMPLETE",
+      "artifacts": {
+        "1300": "Hashimoto 81_plus to Levi E4 intertwiners and sign-twist boundary",
+        "1301": "Geometrically anchored M3 Steinberg and M21 species-20 matrix units",
+        "1302": "Exact equality of A5 and S5 orbital/Hecke partitions on the 432 carrier",
+        "1303": "Literal primitive-cycle orbit classification through lengths 7 and 8",
+        "1304": "A2 normalizer S3 triality: C3 torsor on three 432 carriers and regular S3 torsor on six 27 carriers"
       }}
   ],
   "rule": "A pass number is canonical only when registered here."
