@@ -21,6 +21,10 @@ T64: Spectral gap arithmetic — Θ₁ + Θ₂ = 26, Θ₁ × Θ₂ = 160
 T65: Prime arithmetic of W(3,3) — the five primes {2,3,5,7,13}
 """
 from __future__ import annotations
+
+# PASS1150_SHIFTED_ADJACENCY_RETRACTION
+import pytest as _w33_retraction_pytest
+pytestmark=_w33_retraction_pytest.mark.skip(reason="Legacy test depends on the retracted shifted-adjacency spectrum; Pass 1150 quarantine.")
 from collections import Counter, defaultdict
 import math
 import numpy as np

@@ -1,3 +1,5 @@
+> **Spectral erratum — PASS1150_SHIFTED_ADJACENCY_RETRACTION.** This historical file contains a descendant of the retracted claim that `D=A-I` has spectrum `{-7^6,-1^16,5^10}`. The exact spectrum is `{11^1,1^24,-5^15}`. The historical formulas are retained only for provenance and are not active evidence.
+
 # THEORY OF EVERYTHING: COMPLETE SUMMARY
 
 > Snapshot note: this summary preserves an older project snapshot. For the live public status surface, use `docs/index.html#current-synthesis`, `docs/index.html#verified`, and `docs/march_2026_frontier_note.md`.

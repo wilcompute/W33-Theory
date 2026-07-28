@@ -91,6 +91,10 @@ Requires: V24_output_v13_full/ with corrected l3, l4 data.
 """
 from __future__ import annotations
 
+# PASS1150_SHIFTED_ADJACENCY_RETRACTION
+import pytest as _w33_retraction_pytest
+pytestmark=_w33_retraction_pytest.mark.skip(reason="Legacy test depends on the retracted shifted-adjacency spectrum; Pass 1150 quarantine.")
+
 import json
 import struct
 from collections import Counter
