@@ -13,97 +13,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  diagnose:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.head_ref }}
-          fetch-depth: 0
-          show-progress: false
-          sparse-checkout: |
-            .correction
-          sparse-checkout-cone-mode: false
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Build transport diagnostic
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          import base64, hashlib, json, subprocess
-
-          names = [
-              'pass1192_chunk_00.b64', 'pass1192_chunk_01.b64',
-              'pass1192_chunk_02.b64', 'pass1192_chunk_03.b64',
-              'pass1192_chunk_04a.b64', 'pass1192_chunk_04b.b64',
-              'pass1192_chunk_05a.b64', 'pass1192_chunk_05b.b64',
-              'pass1192_chunk_06.b64',
-          ]
-          root = Path('.correction')
-          def clean_text(path):
-              return ''.join(Path(path).read_text().split())
-          def old_blob(path):
-              raw = subprocess.check_output([
-                  'git', 'show',
-                  '4b1ff68b84268dca2944e568b8f700e7f4f8ded7:' + path,
-              ], text=True)
-              return ''.join(raw.split())
-          def one_deletion(old, new):
-              if len(old) != len(new) + 1:
-                  return {'compatible': False, 'old_len': len(old), 'new_len': len(new)}
-              i = 0
-              while i < len(new) and old[i] == new[i]:
-                  i += 1
-              compatible = old[:i] + old[i+1:] == new
-              return {
-                  'compatible': compatible,
-                  'missing_index': i if compatible else None,
-                  'missing_character': old[i] if compatible else None,
-                  'old_len': len(old),
-                  'new_len': len(new),
-              }
-
-          records, pieces = [], []
-          for name in names:
-              raw = clean_text(root / name)
-              records.append({'name': name, 'chars': len(raw), 'sha256': hashlib.sha256(raw.encode()).hexdigest()})
-              pieces.append(raw)
-          joined = ''.join(pieces)
-          old04 = old_blob('.correction/pass1192_chunk_04.b64')
-          old05 = old_blob('.correction/pass1192_chunk_05.b64')
-          new04 = clean_text(root / 'pass1192_chunk_04a.b64') + clean_text(root / 'pass1192_chunk_04b.b64')
-          new05 = clean_text(root / 'pass1192_chunk_05a.b64') + clean_text(root / 'pass1192_chunk_05b.b64')
-          result = {
-              'segments': records,
-              'joined_chars': len(joined),
-              'joined_mod4': len(joined) % 4,
-              'joined_sha256': hashlib.sha256(joined.encode()).hexdigest(),
-              'expected_archive_sha256': 'c0b8ad3a4ee7d3b51175d1361d92a97db577354f3bdbbe4a6756a65491aea44a',
-              'old04_vs_new04': one_deletion(old04, new04),
-              'old05_equals_new05': old05 == new05,
-              'old05_len': len(old05),
-              'new05_len': len(new05),
-          }
-          try:
-              archive = base64.b64decode(joined, validate=True)
-              result['decoded_bytes'] = len(archive)
-              result['archive_sha256'] = hashlib.sha256(archive).hexdigest()
-              result['matches_expected'] = result['archive_sha256'] == result['expected_archive_sha256']
-          except Exception as exc:
-              result['decode_error'] = repr(exc)
-              result['matches_expected'] = False
-          Path('/tmp/pass1192_transport_diagnostic.json').write_text(json.dumps(result, indent=2) + '\n')
-          print(json.dumps(result, indent=2))
-          PY
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: pass1192-transport-diagnostic
-          path: /tmp/pass1192_transport_diagnostic.json
-
   materialize:
-    needs: diagnose
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -115,30 +25,77 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Decode and extract reviewed payload
+      - name: Recover, decode, and extract reviewed payload
         run: |
           python - <<'PY'
           from pathlib import Path
-          import base64, hashlib
-          names = [
+          import base64, hashlib, json, string
+
+          root = Path('.correction')
+          clean = lambda name: ''.join((root / name).read_text().split())
+          prefix_names = [
               'pass1192_chunk_00.b64', 'pass1192_chunk_01.b64',
               'pass1192_chunk_02.b64', 'pass1192_chunk_03.b64',
-              'pass1192_chunk_04a.b64', 'pass1192_chunk_04b.b64',
+              'pass1192_chunk_04a.b64',
+          ]
+          suffix_names = [
               'pass1192_chunk_05a.b64', 'pass1192_chunk_05b.b64',
               'pass1192_chunk_06.b64',
           ]
-          root = Path('.correction')
-          assert not (root / 'pass1192_chunk_04.b64').exists()
-          assert not (root / 'pass1192_chunk_05.b64').exists()
-          joined = ''.join(''.join((root / name).read_text().split()) for name in names)
-          archive = base64.b64decode(joined, validate=True)
-          actual = hashlib.sha256(archive).hexdigest()
+          prefix = ''.join(clean(name) for name in prefix_names)
+          broken = clean('pass1192_chunk_04b.b64')
+          suffix = ''.join(clean(name) for name in suffix_names)
           expected = 'c0b8ad3a4ee7d3b51175d1361d92a97db577354f3bdbbe4a6756a65491aea44a'
-          assert actual == expected, (actual, expected)
+          alphabet = string.ascii_uppercase + string.ascii_lowercase + string.digits + '+/'
+
+          def decode_if_match(joined):
+              try:
+                  archive = base64.b64decode(joined, validate=True)
+              except Exception:
+                  return None
+              return archive if hashlib.sha256(archive).hexdigest() == expected else None
+
+          joined = prefix + broken + suffix
+          archive = decode_if_match(joined)
+          recovery = {'direct_match': archive is not None, 'broken_chars': len(broken)}
+          if archive is None:
+              found = None
+              for index in range(len(broken) + 1):
+                  left, right = broken[:index], broken[index:]
+                  for character in alphabet:
+                      candidate = prefix + left + character + right + suffix
+                      archive = decode_if_match(candidate)
+                      if archive is not None:
+                          found = (index, character, archive)
+                          break
+                  if found is not None:
+                      break
+              assert found is not None, 'No single-character recovery matched the reviewed archive SHA256'
+              index, character, archive = found
+              recovery.update({
+                  'recovered': True,
+                  'missing_index_in_04b': index,
+                  'missing_character': character,
+                  'corrected_04b_chars': len(broken) + 1,
+              })
+          else:
+              recovery['recovered'] = False
+
+          recovery.update({
+              'archive_bytes': len(archive),
+              'archive_sha256': hashlib.sha256(archive).hexdigest(),
+              'expected_archive_sha256': expected,
+          })
+          Path('/tmp/pass1192_recovery.json').write_text(json.dumps(recovery, indent=2) + '\n')
           Path('/tmp/pass1188_1192.tar.gz').write_bytes(archive)
+          print(json.dumps(recovery, indent=2))
           PY
           tar -xzf /tmp/pass1188_1192.tar.gz
           rm -rf .correction PASS1192_MATERIALIZE.trigger .github/workflows/pass1192_materialize_pr.yml
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass1192-transport-recovery
+          path: /tmp/pass1192_recovery.json
       - name: Compile corrected sources
         run: python -m compileall -q analysis tests
       - name: Install test runner
