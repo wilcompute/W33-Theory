@@ -9,18 +9,16 @@
     {"range": "1137-1140", "owner": "parallel-codex-track", "status": "COMPLETE", "primary": "PASS1137_1140_EXACT_CUBIC_PUBLICATION_RELEASE.md"},
     {"range": "1142-1146", "owner": "exact-bridge-corpus-track", "status": "COMPLETE", "primary": "PASS1142_1146_EXACT_RELEASE.md"},
     {"range": "1147", "owner": "parallel-codex-track", "status": "RESERVED", "primary": "PASS1147_RESERVED.md"},
-    {"range": "1148-1152", "owner": "exact-crossed-bridge-track", "status": "COMPLETE",
-      "primary": "PASS1148_1152_EXACT_CROSSED_BRIDGE_RELEASE.md",
+    {"range": "1148-1152", "owner": "exact-crossed-bridge-track", "status": "COMPLETE", "primary": "PASS1148_1152_EXACT_CROSSED_BRIDGE_RELEASE.md",
       "artifacts": {"1148": "S5 Hecke filtration", "1149": "C3-Fourier Steinberg bridge", "1150": "shifted-adjacency migration", "1151": "five-species degree-540 taxonomy", "1152": "78-dim crossed C3 commutant"}},
-    {"range": "1153-1157", "owner": "continuation-audit-track", "status": "COMPLETE",
-      "primary": "PASS1153_1157_CONTINUATION_RELEASE.md",
+    {"range": "1153-1157", "owner": "continuation-audit-track", "status": "COMPLETE", "primary": "PASS1153_1157_CONTINUATION_RELEASE.md",
       "artifacts": {"1153": "manuscript 432-carrier sweep", "1154": "colored bridge rank checker", "1155": "separator registry wire", "1156": "27-central-channel encoder", "1157": "Sp(4,3) stabilizer + GAP script"}},
-    {"range": "1158-1162", "owner": "breakthrough-track", "status": "COMPLETE",
-      "primary": "PASS1158_1162_BREAKTHROUGH_RELEASE.md",
-      "artifacts": {"1158": "1952 prime obstruction 2^5*61", "1159": "Hecke structure constants", "1160": "W(E6) character bridge", "1161": "propagator determinant + Ihara", "1162": "corpus sync 22 invariants"}},
-    {"range": "1163-1167", "owner": "execution-track", "status": "COMPLETE",
-      "primary": "PASS1163_1167_EXECUTION_RELEASE.md",
-      "artifacts": {"1163": "Sp(4,3) 432-orbit is NOT a pair-orbit on PG(3,3)", "1164": "1920 module: not coset space, uniform splits 24x80/8x240/12x160", "1165": "manuscript tagging: 7 TYPED, 1 NEEDS_TAG", "1166": "Ihara zeta degree 10, 160 triangles confirmed", "1167": "C[Omega_40] = 1+24+15 multiplicity-free, Sym^3 dim=11480"}}
+    {"range": "1158-1162", "owner": "breakthrough-track", "status": "COMPLETE", "primary": "PASS1158_1162_BREAKTHROUGH_RELEASE.md",
+      "artifacts": {"1158": "1952 prime obstruction 2^5*61", "1159": "Hecke structure constants", "1160": "W(E6) character bridge", "1161": "propagator det + Ihara", "1162": "corpus sync 22 invariants"}},
+    {"range": "1163-1167", "owner": "execution-track", "status": "COMPLETE", "primary": "PASS1163_1167_EXECUTION_RELEASE.md",
+      "artifacts": {"1163": "Sp(4,3) 432-orbit is NOT pair-orbit on PG(3,3)", "1164": "1920 not coset space; uniform splits 24x80", "1165": "manuscript tagging 7 TYPED 1 NEEDS_TAG", "1166": "Ihara zeta deg 10, 160 triangles", "1167": "C[Omega_40]=1+24+15, Sym^3 dim=11480"}},
+    {"range": "1168-1172", "owner": "execution-track-2", "status": "COMPLETE", "primary": "PASS1168_1172_EXECUTION_RELEASE.md",
+      "artifacts": {"1168": "Sym^3(1+V24+V15)=11480, rank(M)=45=dim(so(10))", "1169": "|W(E6)|=51840=2*|Sp(4,3)|; W(E6)/S5=Sp(4,3)/A5=432 via 2:1 map", "1170": "MeatAxe plan: p=7, sum_sq=51840 corrected", "1171": "ERR-1158-RESIDUAL erratum filed, all 3 tags present", "1172": "Ihara deg 20, Ramanujan confirmed |lambda|<=2*sqrt(11)"}}
   ],
   "rule": "A pass number is canonical only when registered here with a primary master artifact or explicit reservation."
 }
