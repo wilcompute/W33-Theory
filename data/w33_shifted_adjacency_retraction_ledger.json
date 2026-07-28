@@ -159,8 +159,9 @@
   ],
   "policy": "Registration quarantines a known historical descendant; it does not validate or promote its claims. New files with the signatures remain fatal unless explicitly tagged corrected/retracted. ACTIVE_RETRACTION_STUB and ACTIVE_RETRACTION_RECORD entries are fail-closed on master; pending entries are owned by the Pass-1144 corpus materializer.",
   "pass1150_completion": {
-    "pending_before": 0,
+    "pending_before": 23,
     "pending_after": 0,
+    "last_run_pending_before": 0,
     "report": "data/w33_pass1150_shifted_adjacency_completion.json",
     "self_registrations": {
       "PASS1148_1152_EXACT_CROSSED_BRIDGE_RELEASE.md": "corrected_release_surface_with_historical_signature:PASS1150",
