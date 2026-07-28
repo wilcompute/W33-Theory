@@ -1,0 +1,23 @@
+{
+  "schema": "w33.pass1193.a5_intersection_bridge.v1",
+  "status": "PASS",
+  "groups": {
+    "WE6_order": 51840,
+    "even_reflection_kernel_order": 25920,
+    "even_kernel_identification": "PSp(4,3)",
+    "S5_stabilizer_order": 120,
+    "intersection_order": 60,
+    "intersection_identification": "A5",
+    "intersection_element_orders": {"1": 1, "2": 15, "3": 20, "5": 24}
+  },
+  "indices": {"WE6_over_S5": 432, "PSp43_over_A5": 432, "S5_over_A5": 2, "WE6_over_PSp43": 2},
+  "bridge": {
+    "statement": "The inclusion PSp(4,3) -> W(E6) induces a bijection PSp(4,3)/A5 -> W(E6)/S5 on each 432-point orbit.",
+    "same_degree_432": true,
+    "intersection_normal_in_S5": true,
+    "quotient_is_C2": true,
+    "parity_split_inside_stabilizer": {"even": 60, "odd": 60}
+  },
+  "representative_a2_triple": [1, 176, 207],
+  "scope": "Exact finite permutation computation on the 240 E8 roots. The index-two kernel is the even-reflection-word subgroup."
+}
