@@ -46,13 +46,16 @@ def run(root:Path=ROOT,apply:bool=False)->dict:
             if apply: descendants[rel]=status
             actions.append({"path":rel,"changed":changed,"stable_status":status})
         except Exception as exc: errors.append({"path":rel,"error":f"{type(exc).__name__}: {exc}"})
+    previous_completion=ledger.get("pass1150_completion",{})
+    migrated_count=sum(1 for path,status in descendants.items() if path not in SELF_REGISTRATIONS and status.endswith(":PASS1150"))
+    original_pending_before=max(len(pending),int(previous_completion.get("pending_before",0)),migrated_count)
     if apply and not errors:
         descendants.update(SELF_REGISTRATIONS)
-        ledger["schema"]="w33.shifted_adjacency.retraction_ledger.v4"; ledger["pass1150_completion"]={"pending_before":len(pending),"pending_after":0,"report":"data/w33_pass1150_shifted_adjacency_completion.json","self_registrations":SELF_REGISTRATIONS}; ledger_path.write_text(json.dumps(ledger,indent=2)+"\n",encoding="utf-8")
-    report={"schema":"w33.pass1150.shifted_adjacency_completion.v1","status":"PASS" if not errors else "FAIL","mode":"apply" if apply else "check","pending_before":len(pending),"pending_after":0 if apply and not errors else len(pending),"actions":actions,"errors":errors,"self_registrations":SELF_REGISTRATIONS,"canonical_spectrum":{"11":1,"1":24,"-5":15},"historical_spectrum":{"-7":6,"-1":16,"5":10}}
+        ledger["schema"]="w33.shifted_adjacency.retraction_ledger.v4"; ledger["pass1150_completion"]={"pending_before":original_pending_before,"pending_after":0,"last_run_pending_before":len(pending),"report":"data/w33_pass1150_shifted_adjacency_completion.json","self_registrations":SELF_REGISTRATIONS}; ledger_path.write_text(json.dumps(ledger,indent=2)+"\n",encoding="utf-8")
+    report={"schema":"w33.pass1150.shifted_adjacency_completion.v1","status":"PASS" if not errors else "FAIL","mode":"apply" if apply else "check","pending_before":original_pending_before,"current_run_pending_before":len(pending),"pending_after":0 if apply and not errors else len(pending),"actions":actions,"errors":errors,"self_registrations":SELF_REGISTRATIONS,"canonical_spectrum":{"11":1,"1":24,"-5":15},"historical_spectrum":{"-7":6,"-1":16,"5":10}}
     if apply: (root/"data/w33_pass1150_shifted_adjacency_completion.json").write_text(json.dumps(report,indent=2)+"\n",encoding="utf-8")
     if errors: raise RuntimeError(json.dumps(errors,indent=2))
-    print(f"PASS 1150 mode={report['mode']} pending={len(pending)}"); return report
+    print(f"PASS 1150 mode={report['mode']} current_pending={len(pending)} original_pending={original_pending_before}"); return report
 def main(argv:Iterable[str]|None=None)->int:
     p=argparse.ArgumentParser(); p.add_argument("--root",type=Path,default=ROOT); p.add_argument("--apply",action="store_true"); a=p.parse_args(argv); run(a.root.resolve(),a.apply); return 0
 if __name__=="__main__": raise SystemExit(main())
