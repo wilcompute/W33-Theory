@@ -21,7 +21,9 @@
     {"range": "1188-1192", "owner": "exact-parallel-correction-track", "status": "COMPLETE",
       "artifacts": {"1188": "exact 1952 residual and Wedderburn commutants", "1189": "group-extension and character-degree correction", "1190": "exact Ihara degree-40 and primitive cycles", "1191": "exact rank-three 40-point module", "1192": "corpus-wide parallel synthesis guard"}},
     {"range": "1193-1197", "owner": "exact-equivariant-release-track", "status": "COMPLETE",
-      "artifacts": {"1193": "S5/A5 432-carrier coset bridge", "1194": "explicit residual central idempotents", "1195": "W(E6)-equivariant Hashimoto spectral packets", "1196": "primitive PSp/W(E6) cycle orbits and degree-40 continuation", "1197": "parallel namespace collision and mandatory synthesis guard"}}
+      "artifacts": {"1193": "S5/A5 432-carrier coset bridge", "1194": "explicit residual central idempotents", "1195": "W(E6)-equivariant Hashimoto spectral packets", "1196": "primitive PSp/W(E6) cycle orbits and degree-40 continuation", "1197": "parallel namespace collision and mandatory synthesis guard"}},
+    {"range": "1198-1202", "owner": "exact-triality-matrix-cycle-track", "status": "RESERVED",
+      "artifacts": {"1198": "81-plus/81-minus physical-sector intertwiner", "1199": "gauge-fixed Wedderburn matrix units for M3 and M21", "1200": "A5/PSp and S5/W(E6) Hecke algebra comparison", "1201": "literal primitive cycle orbits at lengths seven and eight", "1202": "A2 normalizer triality and signed S3 torsor test"}}
   ],
   "rule": "A pass number is canonical only when registered here."
 }
