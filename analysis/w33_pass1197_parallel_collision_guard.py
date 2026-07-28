@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "w33_pass1197_parallel_collision_guard.json"
 REGISTRY = ROOT / "data" / "w33_pass_namespace_registry_v2.json"
 CURRENT_RANGE = range(1193, 1198)
-CURRENT_RESULTS = [ROOT / "data" / f"w33_pass{number}_" for number in CURRENT_RANGE]
+MINIMUM_BASELINE_REGISTERED = 74
 FORBIDDEN_TRANSPORT = [
     ROOT / ".correction",
     ROOT / "PASS1192_MATERIALIZE.trigger",
@@ -45,7 +45,10 @@ def main() -> dict:
             seen[number] = block
     assert not collisions, collisions
 
-    current_block = next(block for block in registry["canonical_blocks"] if parse_range(block["range"]) == set(CURRENT_RANGE))
+    current_block = next(
+        block for block in registry["canonical_blocks"]
+        if parse_range(block["range"]) == set(CURRENT_RANGE)
+    )
     assert current_block["status"] == "COMPLETE"
     assert set(map(int, current_block["artifacts"])) == set(CURRENT_RANGE)
 
@@ -87,11 +90,12 @@ def main() -> dict:
         "transport_scaffold_absent": all(not path.exists() for path in FORBIDDEN_TRANSPORT),
         "current_block_complete": current_block["status"] == "COMPLETE",
         "current_artifacts_complete": set(map(int, current_block["artifacts"])) == set(CURRENT_RANGE),
+        "registry_monotonic_from_original_baseline": len(seen) >= MINIMUM_BASELINE_REGISTERED,
     }
     assert all(gate_checks.values()), gate_checks
 
     result = {
-        "schema": "w33.pass1197.parallel_collision_guard.v1",
+        "schema": "w33.pass1197.parallel_collision_guard.v2",
         "status": "PASS",
         "headline": "Pass-number ownership, exact certificates, legacy synthesis, and transport cleanup are enforced as mandatory parallel-development gates.",
         "registry": {
@@ -99,6 +103,7 @@ def main() -> dict:
             "registered_pass_count": len(seen),
             "minimum_registered": min(seen),
             "maximum_registered": max(seen),
+            "minimum_baseline_registered": MINIMUM_BASELINE_REGISTERED,
             "collisions": collisions,
             "unregistered_modern_files": unregistered,
         },
@@ -107,17 +112,17 @@ def main() -> dict:
         "gate_checks": gate_checks,
         "checks": {
             "registry_has_no_overlap": not collisions,
-            "registered_pass_count_74": len(seen) == 74,
+            "registered_pass_count_at_least_original_74": len(seen) >= MINIMUM_BASELINE_REGISTERED,
             "no_unregistered_modern_files": not unregistered,
             "passes_1193_1197_all_pass": len(certificates) == 5,
             "mandatory_gates_installed": all(gate_checks.values()),
         },
-        "policy": "Parallel agents must reserve a disjoint range before publication; the range, artifacts, exact certificates, synthesis guard, and cleanup gate must all agree before merge.",
+        "policy": "Parallel agents must reserve a disjoint range before publication; the range, artifacts, exact certificates, synthesis guard, and cleanup gate must all agree before merge. The registry count is monotonic rather than frozen at its original 74-pass baseline.",
     }
     assert all(result["checks"].values())
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
-    print("PASS 1197 namespace/certificate/synthesis gates clean")
+    print(f"PASS 1197 namespace/certificate/synthesis gates clean ({len(seen)} registered passes)")
     return result
 
 

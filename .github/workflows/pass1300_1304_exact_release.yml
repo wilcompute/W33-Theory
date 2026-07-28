@@ -1,0 +1,51 @@
+name: Passes 1300-1304 Exact Triality Matrix Cycle Release
+
+on:
+  pull_request:
+    paths:
+      - 'analysis/w33_pass1300_1304_exact_core.py'
+      - 'analysis/w33_pass1300_81_sign_twist_intertwiner.py'
+      - 'analysis/w33_pass1301_m3_m21_matrix_units.py'
+      - 'analysis/w33_pass1302_a5_s5_hecke_equality.py'
+      - 'analysis/w33_pass1303_literal_cycle_orbits_7_8.py'
+      - 'analysis/w33_pass1304_a2_normalizer_triality.py'
+      - 'data/w33_pass1300_81_sign_twist_intertwiner.json'
+      - 'data/w33_pass1301_m3_m21_matrix_units.json'
+      - 'data/w33_pass1302_a5_s5_hecke_equality.json'
+      - 'data/w33_pass1303_literal_cycle_orbits_7_8.json'
+      - 'data/w33_pass1304_a2_normalizer_triality.json'
+      - 'tests/test_w33_pass1300_1304.py'
+      - 'data/w33_pass_namespace_registry_v2.json'
+      - '.github/workflows/pass1300_1304_exact_release.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact runtime
+        run: python -m pip install --disable-pip-version-check numpy pytest
+      - name: Recompute Pass 1300 sign-twist bridge
+        run: PYTHONPATH=analysis python analysis/w33_pass1300_81_sign_twist_intertwiner.py
+      - name: Recompute Pass 1301 matrix units
+        run: PYTHONPATH=analysis python analysis/w33_pass1301_m3_m21_matrix_units.py
+      - name: Recompute Pass 1302 Hecke equality
+        run: PYTHONPATH=analysis python analysis/w33_pass1302_a5_s5_hecke_equality.py
+      - name: Recompute Pass 1303 literal cycle frontier
+        run: PYTHONPATH=analysis python analysis/w33_pass1303_literal_cycle_orbits_7_8.py
+      - name: Recompute Pass 1304 normalizer triality
+        run: PYTHONPATH=analysis python analysis/w33_pass1304_a2_normalizer_triality.py
+      - name: Focused tests
+        run: pytest -q tests/test_w33_pass1300_1304.py
+      - name: Prior synthesis guard
+        run: PYTHONPATH=analysis python analysis/w33_pass1192_parallel_synthesis_guard.py
+      - name: Namespace collision guard
+        run: PYTHONPATH=analysis python analysis/w33_pass1197_parallel_collision_guard.py --check-only

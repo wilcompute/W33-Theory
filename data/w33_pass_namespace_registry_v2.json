@@ -14,7 +14,15 @@
     {"range": "1163-1172", "owner": "execution-tracks-1-2", "status": "COMPLETE"},
     {"range": "1173-1182", "owner": "execution-tracks-3-4", "status": "COMPLETE"},
     {"range": "1183-1192", "owner": "execution-tracks-5-correction", "status": "COMPLETE"},
-    {"range": "1193-1202", "owner": "bridge-breakthrough-tracks", "status": "COMPLETE"},
+    {"range": "1193-1197", "owner": "exact-equivariant-release-track", "status": "COMPLETE",
+      "artifacts": {
+        "1193": "S5/A5 432-carrier coset bridge",
+        "1194": "explicit residual central idempotents",
+        "1195": "W(E6)-equivariant Hashimoto spectral packets",
+        "1196": "primitive PSp/W(E6) cycle orbits and degree-40 continuation",
+        "1197": "parallel namespace collision and mandatory synthesis guard"
+      }},
+    {"range": "1198-1202", "owner": "breakthrough-continuation-track", "status": "COMPLETE"},
     {"range": "1203-1212", "owner": "frontier-tracks", "status": "COMPLETE"},
     {"range": "1213-1222", "owner": "synthesis-outside-box-tracks", "status": "COMPLETE"},
     {"range": "1223-1232", "owner": "absorption-conversion-tracks", "status": "COMPLETE"},
@@ -35,7 +43,16 @@
         "1275": "7 provisional species restriction feasibility decompositions",
         "1276": "400 species-20 matrix units produced, zero spot-check violations",
         "1277": "Theorem ledger v7 (13 EXACT / 6 PROVISIONAL / 3 OPEN)"
-      }}
+      }},
+    {"range": "1300-1304", "owner": "exact-triality-matrix-cycle-track", "status": "COMPLETE",
+      "artifacts": {
+        "1300": "Hashimoto 81_plus to Levi E4 intertwiners and sign-twist boundary",
+        "1301": "Geometrically anchored M3 Steinberg and M21 species-20 matrix units",
+        "1302": "Exact equality of A5 and S5 orbital/Hecke partitions on the 432 carrier",
+        "1303": "Literal primitive-cycle orbit classification through lengths 7 and 8",
+        "1304": "A2 normalizer S3 triality: C3 torsor on three 432 carriers and regular S3 torsor on six 27 carriers"
+      }},
+    {"range": "1310-1314", "owner": "literal-a5-correction-track", "status": "COMPLETE"}
   ],
   "rule": "A pass number is canonical only when registered here."
 }

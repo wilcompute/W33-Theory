@@ -57,7 +57,8 @@ def test_pass1196_primitive_cycle_orbits() -> None:
 
 def test_pass1197_parallel_collision_guard() -> None:
     data = load(1197)
-    assert data["registry"]["registered_pass_count"] == 74
+    assert data["registry"]["registered_pass_count"] >= 74
+    assert data["registry"]["minimum_baseline_registered"] == 74
     assert data["registry"]["collisions"] == []
     assert data["registry"]["unregistered_modern_files"] == []
     assert data["current_block"]["range"] == "1193-1197"
