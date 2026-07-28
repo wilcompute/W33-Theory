@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
-          fetch-depth: 1
+          fetch-depth: 0
           show-progress: false
           sparse-checkout: |
             .correction
@@ -31,33 +31,59 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
-          import base64, hashlib, json
+          import base64, hashlib, json, subprocess
 
           names = [
-              'pass1192_chunk_00.b64',
-              'pass1192_chunk_01.b64',
-              'pass1192_chunk_02.b64',
-              'pass1192_chunk_03.b64',
-              'pass1192_chunk_04a.b64',
-              'pass1192_chunk_04b.b64',
-              'pass1192_chunk_05a.b64',
-              'pass1192_chunk_05b.b64',
+              'pass1192_chunk_00.b64', 'pass1192_chunk_01.b64',
+              'pass1192_chunk_02.b64', 'pass1192_chunk_03.b64',
+              'pass1192_chunk_04a.b64', 'pass1192_chunk_04b.b64',
+              'pass1192_chunk_05a.b64', 'pass1192_chunk_05b.b64',
               'pass1192_chunk_06.b64',
           ]
           root = Path('.correction')
-          records = []
-          pieces = []
+          def clean_text(path):
+              return ''.join(Path(path).read_text().split())
+          def old_blob(path):
+              raw = subprocess.check_output([
+                  'git', 'show',
+                  '4b1ff68b84268dca2944e568b8f700e7f4f8ded7:' + path,
+              ], text=True)
+              return ''.join(raw.split())
+          def one_deletion(old, new):
+              if len(old) != len(new) + 1:
+                  return {'compatible': False, 'old_len': len(old), 'new_len': len(new)}
+              i = 0
+              while i < len(new) and old[i] == new[i]:
+                  i += 1
+              compatible = old[:i] + old[i+1:] == new
+              return {
+                  'compatible': compatible,
+                  'missing_index': i if compatible else None,
+                  'missing_character': old[i] if compatible else None,
+                  'old_len': len(old),
+                  'new_len': len(new),
+              }
+
+          records, pieces = [], []
           for name in names:
-              raw = ''.join((root / name).read_text().split())
+              raw = clean_text(root / name)
               records.append({'name': name, 'chars': len(raw), 'sha256': hashlib.sha256(raw.encode()).hexdigest()})
               pieces.append(raw)
           joined = ''.join(pieces)
+          old04 = old_blob('.correction/pass1192_chunk_04.b64')
+          old05 = old_blob('.correction/pass1192_chunk_05.b64')
+          new04 = clean_text(root / 'pass1192_chunk_04a.b64') + clean_text(root / 'pass1192_chunk_04b.b64')
+          new05 = clean_text(root / 'pass1192_chunk_05a.b64') + clean_text(root / 'pass1192_chunk_05b.b64')
           result = {
               'segments': records,
               'joined_chars': len(joined),
               'joined_mod4': len(joined) % 4,
               'joined_sha256': hashlib.sha256(joined.encode()).hexdigest(),
               'expected_archive_sha256': 'c0b8ad3a4ee7d3b51175d1361d92a97db577354f3bdbbe4a6756a65491aea44a',
+              'old04_vs_new04': one_deletion(old04, new04),
+              'old05_equals_new05': old05 == new05,
+              'old05_len': len(old05),
+              'new05_len': len(new05),
           }
           try:
               archive = base64.b64decode(joined, validate=True)
@@ -94,16 +120,11 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           import base64, hashlib
-
           names = [
-              'pass1192_chunk_00.b64',
-              'pass1192_chunk_01.b64',
-              'pass1192_chunk_02.b64',
-              'pass1192_chunk_03.b64',
-              'pass1192_chunk_04a.b64',
-              'pass1192_chunk_04b.b64',
-              'pass1192_chunk_05a.b64',
-              'pass1192_chunk_05b.b64',
+              'pass1192_chunk_00.b64', 'pass1192_chunk_01.b64',
+              'pass1192_chunk_02.b64', 'pass1192_chunk_03.b64',
+              'pass1192_chunk_04a.b64', 'pass1192_chunk_04b.b64',
+              'pass1192_chunk_05a.b64', 'pass1192_chunk_05b.b64',
               'pass1192_chunk_06.b64',
           ]
           root = Path('.correction')
