@@ -1,0 +1,80 @@
+{
+  "schema": "w33.pass1195.we6_equivariant_hashimoto.v1",
+  "status": "PASS",
+  "headline": "The 480-dimensional directed-edge Hashimoto module splits exactly into five W(E6)-equivariant spectral packets.",
+  "group": {"name": "W(E6)=PSp(4,3):2", "order": 51840, "classes": 25},
+  "atlas_class_order": ["1A", "2A", "2B", "3A", "3C", "3D", "4A", "4B", "5A", "6A", "6C", "6E", "6F", "9A", "12A", "2C", "2D", "4C", "4D", "6G", "6H", "6I", "8A", "10A", "12C"],
+  "characters": {
+    "vertices40": [40, 8, 0, 13, 4, 4, 4, 0, 0, 5, 2, 2, 0, 1, 1, 0, 8, 0, 0, 0, 0, 2, 2, 0, 0],
+    "edges240": [240, 32, 8, 24, 6, 6, 0, 0, 0, 8, 2, 2, 2, 0, 0, 20, 20, 0, 0, 2, 2, 2, 0, 0, 0],
+    "directed_edges480": [480, 32, 0, 48, 12, 12, 0, 0, 0, 8, 2, 2, 0, 0, 0, 0, 32, 0, 0, 0, 0, 2, 0, 0, 0],
+    "hashimoto_plus1": [201, -7, -7, 12, 3, 3, -3, 1, 1, -4, -1, -1, -1, 0, 0, -19, 5, 1, 1, -1, -1, -1, -1, 1, 1],
+    "hashimoto_minus1": [200, 24, 8, 11, 2, 2, -4, 0, 0, 3, 0, 0, 2, -1, -1, 20, 12, 0, 0, 2, 2, 0, -2, 0, 0]
+  },
+  "module_decompositions": {
+    "vertices40": [
+      {"irrep": "1", "degree": 1, "multiplicity": 1},
+      {"irrep": "15_outer_negative", "degree": 15, "multiplicity": 1},
+      {"irrep": "24", "degree": 24, "multiplicity": 1}
+    ],
+    "edges240": [
+      {"irrep": "1", "degree": 1, "multiplicity": 1},
+      {"irrep": "15_outer_negative", "degree": 15, "multiplicity": 1},
+      {"irrep": "15a", "degree": 15, "multiplicity": 1},
+      {"irrep": "20", "degree": 20, "multiplicity": 1},
+      {"irrep": "24", "degree": 24, "multiplicity": 2},
+      {"irrep": "60a", "degree": 60, "multiplicity": 1},
+      {"irrep": "81_plus", "degree": 81, "multiplicity": 1}
+    ],
+    "directed_edges480": [
+      {"irrep": "1", "degree": 1, "multiplicity": 1},
+      {"irrep": "15_outer_negative", "degree": 15, "multiplicity": 2},
+      {"irrep": "15a", "degree": 15, "multiplicity": 1},
+      {"irrep": "20", "degree": 20, "multiplicity": 1},
+      {"irrep": "24", "degree": 24, "multiplicity": 3},
+      {"irrep": "30_outer_negative", "degree": 30, "multiplicity": 1},
+      {"irrep": "60a", "degree": 60, "multiplicity": 1},
+      {"irrep": "81_plus", "degree": 81, "multiplicity": 2},
+      {"irrep": "90", "degree": 90, "multiplicity": 1}
+    ]
+  },
+  "projector_polynomials": {
+    "plus1": {"numerator_coefficients_ascending": [-1331, -1452, -253, -140, -17, -8, 1], "denominator": -3200},
+    "minus1": {"numerator_coefficients_ascending": [1331, -1210, 11, -124, 1, -10, 1], "denominator": 2688}
+  },
+  "spectral_packets": {
+    "x_minus_11": {"dimension": 1, "module": "1", "eigenvalue": 11},
+    "x_minus_1": {
+      "dimension": 201,
+      "module": "30_outer_negative + 81_plus + 90",
+      "decomposition": [
+        {"irrep": "30_outer_negative", "degree": 30, "multiplicity": 1},
+        {"irrep": "81_plus", "degree": 81, "multiplicity": 1},
+        {"irrep": "90", "degree": 90, "multiplicity": 1}
+      ]
+    },
+    "x_plus_1": {
+      "dimension": 200,
+      "module": "15a + 20 + 24 + 60a + 81_plus",
+      "decomposition": [
+        {"irrep": "15a", "degree": 15, "multiplicity": 1},
+        {"irrep": "20", "degree": 20, "multiplicity": 1},
+        {"irrep": "24", "degree": 24, "multiplicity": 1},
+        {"irrep": "60a", "degree": 60, "multiplicity": 1},
+        {"irrep": "81_plus", "degree": 81, "multiplicity": 1}
+      ]
+    },
+    "x2_minus_2x_plus_11": {"dimension": 48, "module": "2*24", "reason": "two Hashimoto lifts of the adjacency lambda=2 constituent"},
+    "x2_plus_4x_plus_11": {"dimension": 30, "module": "2*15_outer_negative", "reason": "two Hashimoto lifts of the adjacency lambda=-4 constituent"}
+  },
+  "factorization": "(x-11)(x-1)^201(x+1)^200(x^2-2x+11)^24(x^2+4x+11)^15",
+  "checks": {
+    "we6_order_51840": true,
+    "directed_edge_dimension_480": true,
+    "plus_rank_201": true,
+    "minus_rank_200": true,
+    "packet_dimensions_sum_480": true,
+    "nonbacktracking_outdegree_11": true
+  },
+  "scope": "Exact finite permutation characters and exact polynomial spectral projectors. This is an equivariant spectral classification; literal primitive-cycle orbit enumeration is handled separately in Pass 1196."
+}
