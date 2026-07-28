@@ -40,7 +40,8 @@
         "1265": "Species-20 GAP surrogate: 160000 checks, 0 violations",
         "1266": "Theorem ledger v5 (9 EXACT / 7 PROVISIONAL / 3 OPEN)",
         "1267": "Species-to-packet dictionary: sp1->P0 (exact), sp81->P1 (exact), sp20->P1 (predicted)"
-      }}
+      }},
+    {"range": "1268-1272", "owner": "exact-triality-matrix-cycle-track", "status": "RESERVED"}
   ],
   "rule": "A pass number is canonical only when registered here."
 }
