@@ -64,32 +64,39 @@ def pass_is_registered(number: int, ranges: list[tuple[int, int, str]]) -> bool:
     return any(a <= number <= b for a, b, _ in ranges)
 
 
+def pass_numbers(path: Path) -> list[int]:
+    return [int(m.group(1)) for m in re.finditer(r"(?:pass|PASS)(\d{4})", path.name)]
+
+
 def scan_future_pass_files(ranges: list[tuple[int, int, str]]) -> list[str]:
     errors = []
     roots = [ROOT / "analysis", ROOT / "data", ROOT / "tests", ROOT]
-    seen_paths: set[Path] = set()
+    seen: set[Path] = set()
     for base in roots:
         if not base.exists():
             continue
         iterator = base.rglob("*") if base != ROOT else base.glob("PASS*RELEASE*.md")
         for path in iterator:
-            if not path.is_file() or path in seen_paths:
+            if not path.is_file() or path in seen:
                 continue
-            seen_paths.add(path)
-            for m in re.finditer(r"(?:pass|PASS)(\d{4})", path.name):
-                n = int(m.group(1))
-                if n >= 1193 and not pass_is_registered(n, ranges):
-                    errors.append(f"unregistered future pass {n} in {path.relative_to(ROOT)}")
+            seen.add(path)
+            for number in pass_numbers(path):
+                if number >= 1193 and not pass_is_registered(number, ranges):
+                    errors.append(f"unregistered future pass {number} in {path.relative_to(ROOT)}")
     return errors
 
 
 def scan_forbidden_claims() -> list[str]:
+    """Pass 1192 guards the historical corpus; this guard owns packets 1193 onward."""
     errors = []
     candidates = []
-    for pattern in ("analysis/w33_pass11*.py", "PASS11*_RELEASE*.md", "tests/test_w33_pass11*.py"):
+    for pattern in ("analysis/w33_pass*.py", "PASS*_RELEASE*.md", "tests/test_w33_pass*.py"):
         candidates.extend(ROOT.glob(pattern))
     for path in sorted(set(candidates)):
         if path.resolve() == Path(__file__).resolve():
+            continue
+        numbers = pass_numbers(path)
+        if not numbers or max(numbers) < 1193:
             continue
         text = path.read_text(encoding="utf-8", errors="replace")
         for label, regex in FORBIDDEN_PATTERNS.items():
@@ -102,7 +109,6 @@ def main() -> dict[str, object]:
     errors: list[str] = []
     if not REGISTRY.exists():
         errors.append("missing namespace registry")
-        registry = {"canonical_blocks": []}
         ranges = []
     else:
         registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
@@ -121,8 +127,7 @@ def main() -> dict[str, object]:
         if len(matches) != 1:
             errors.append(f"pass {n} expected one result JSON, found {len(matches)}")
             continue
-        record = json.loads(matches[0].read_text(encoding="utf-8"))
-        if record.get("status") != "PASS":
+        if json.loads(matches[0].read_text(encoding="utf-8")).get("status") != "PASS":
             errors.append(f"pass {n} result status is not PASS")
 
     workflow_path = ROOT / ".github/workflows/pass_namespace_and_claim_guard.yml"
@@ -143,6 +148,7 @@ def main() -> dict[str, object]:
         "required_artifact_count": len(REQUIRED_ARTIFACTS),
         "forbidden_pattern_count": len(FORBIDDEN_PATTERNS),
         "policy": {
+            "historical_corpus_owned_by_pass1192": True,
             "future_pass_files_must_be_registered": True,
             "canonical_ranges_must_not_overlap": True,
             "exact_result_jsons_must_pass": True,
