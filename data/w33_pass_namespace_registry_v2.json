@@ -9,7 +9,7 @@
     {"range":"1137-1140","owner":"parallel-codex-track","status":"COMPLETE","primary":"PASS1137_1140_EXACT_CUBIC_PUBLICATION_RELEASE.md"},
     {"range":"1142-1146","owner":"exact-bridge-corpus-track","status":"COMPLETE","primary":"PASS1142_1146_EXACT_RELEASE.md"},
     {"range":"1147","owner":"parallel-codex-track","status":"RESERVED","primary":"PASS1147_RESERVED.md"},
-    {"range":"1148-1152","owner":"exact-crossed-bridge-track","status":"COMPLETE_SOURCE_PENDING_CORPUS_MIGRATION","primary":"PASS1148_1152_EXACT_CROSSED_BRIDGE_RELEASE.md","artifacts":{"1148":"exact S5 Hecke stabilizer-intersection filtration","1149":"C3-Fourier Steinberg bridge inside cubic kernel","1150":"transactional completion of shifted-adjacency pending dispositions","1151":"canonical five-species degree-540 taxonomy lock","1152":"78-dimensional crossed C3 commutant"}}
+    {"range":"1148-1152","owner":"exact-crossed-bridge-track","status":"COMPLETE","primary":"PASS1148_1152_EXACT_CROSSED_BRIDGE_RELEASE.md","completion_merge":"78334932943e11b1394811bfb56bb1fee8827192","artifacts":{"1148":"exact S5 Hecke stabilizer-intersection filtration","1149":"C3-Fourier Steinberg bridge inside cubic kernel","1150":"transactional completion of shifted-adjacency pending dispositions","1151":"canonical five-species degree-540 taxonomy lock","1152":"78-dimensional crossed C3 commutant"}}
   ],
   "rule":"A pass number is canonical only when registered here with a primary master artifact or explicit reservation."
 }
