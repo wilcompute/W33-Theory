@@ -1,0 +1,78 @@
+name: Materialize Passes 1198-1202 exact release
+
+on:
+  push:
+    branches:
+      - agent/pass1198-1202-triality-matrix-cycles
+    paths:
+      - '.release/**'
+      - '.github/workflows/pass1202_materialize_pr.yml'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: pass1198-1202-materialize
+  cancel-in-progress: false
+
+jobs:
+  materialize:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/pass1198-1202-triality-matrix-cycles
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Decode reviewed release
+        run: |
+          cat \
+            .release/pass1202_chunk_00.b64 \
+            .release/pass1202_chunk_01.b64 \
+            .release/pass1202_chunk_02.b64 \
+            .release/pass1202_chunk_03.b64 \
+            .release/pass1202_chunk_04.b64 \
+            .release/pass1202_chunk_05.b64 \
+            .release/pass1202_chunk_06.b64 \
+            | tr -d '\n\r\t ' \
+            | base64 -d > /tmp/pass1198_1202_release.tgz
+          echo 'd396a4fd349a928b67631c6eb2326f9ad071e86c5f364975f17b32b9bc2fe16c  /tmp/pass1198_1202_release.tgz' | sha256sum -c -
+          tar -xzf /tmp/pass1198_1202_release.tgz
+          rm -rf .release .github/workflows/pass1202_materialize_pr.yml
+      - name: Install exact runtime
+        run: python -m pip install --disable-pip-version-check numpy pytest
+      - name: Compile exact sources
+        run: |
+          python -m py_compile \
+            analysis/w33_pass1198_81_sign_twist_intertwiner.py \
+            analysis/w33_pass1199_m3_m21_matrix_units.py \
+            analysis/w33_pass1200_a5_s5_hecke_equality.py \
+            analysis/w33_pass1201_literal_cycle_orbits_7_8.py \
+            analysis/w33_pass1202_a2_normalizer_triality.py
+      - name: Recompute Pass 1198
+        run: PYTHONPATH=analysis python analysis/w33_pass1198_81_sign_twist_intertwiner.py
+      - name: Recompute Pass 1199
+        run: PYTHONPATH=analysis python analysis/w33_pass1199_m3_m21_matrix_units.py
+      - name: Recompute Pass 1200
+        run: PYTHONPATH=analysis python analysis/w33_pass1200_a5_s5_hecke_equality.py
+      - name: Recompute Pass 1201
+        run: PYTHONPATH=analysis python analysis/w33_pass1201_literal_cycle_orbits_7_8.py --full-output /tmp/w33_pass1201_full.json
+      - name: Recompute Pass 1202
+        run: PYTHONPATH=analysis python analysis/w33_pass1202_a2_normalizer_triality.py
+      - name: Run focused release tests
+        run: PYTHONPATH=. pytest -q tests/test_w33_pass1198_1202.py
+      - name: Run synthesis and namespace firewalls
+        run: |
+          PYTHONPATH=analysis python analysis/w33_pass1192_parallel_synthesis_guard.py
+          PYTHONPATH=analysis python analysis/w33_pass1197_parallel_collision_guard.py --check-only
+      - name: Commit clean direct release
+        run: |
+          git config user.name 'w33-exact-release[bot]'
+          git config user.email 'w33-exact-release[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Passes 1198-1202: exact sign bridge, matrix units, cycles, and triality'
+          git push origin HEAD:agent/pass1198-1202-triality-matrix-cycles
