@@ -21,12 +21,16 @@ on:
       - '.pre-commit-config.yaml'
       - '.github/workflows/pass_namespace_and_claim_guard.yml'
 
+permissions:
+  contents: write
+
 jobs:
   guard:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.head_ref || github.ref_name }}
           show-progress: false
       - uses: actions/setup-python@v5
         with:
@@ -42,5 +46,15 @@ jobs:
         run: PYTHONPATH=. pytest -q tests/test_w33_pass1193_1197.py
       - name: Namespace and claim guard
         run: PYTHONPATH=. python analysis/w33_pass1197_namespace_claim_guard.py
+      - name: Publish deterministic certificates on pull requests
+        if: github.event_name == 'pull_request'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/w33_pass1193_a5_intersection_bridge.json data/w33_pass1194_residual_wedderburn_idempotents.json data/w33_pass1195_ihara_primitive_cycle_census.json data/w33_pass1196_equivariant_ihara_orbit_boundary.json data/w33_pass1197_namespace_claim_guard.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Passes 1193-1197: publish exact certificates'
+            git push origin HEAD:${{ github.head_ref }}
+          fi
       - name: Determinism check
         run: git diff --exit-code -- data/w33_pass1193_a5_intersection_bridge.json data/w33_pass1194_residual_wedderburn_idempotents.json data/w33_pass1195_ihara_primitive_cycle_census.json data/w33_pass1196_equivariant_ihara_orbit_boundary.json data/w33_pass1197_namespace_claim_guard.json
