@@ -1,0 +1,17 @@
+{
+  "schema": "w33.pass1223.81_sign_twist_intertwiner.v1",
+  "status": "PASS",
+  "headline": "Both Hashimoto 81_plus copies map isomorphically onto the Levi E4 cycle sector over PSp(4,3); the W(E6) extension is 81_minus = 81_plus tensor sign.",
+  "rank_plus_to_E4": 81,
+  "rank_minus_to_E4": 81,
+  "target_scalar_plus": "2",
+  "target_scalar_minus": "1",
+  "plus_projector": {"coefficients": [-1331,-1452,-253,-140,-17,-8,1],"denominator": -3200},
+  "minus_projector": {"coefficients": [1331,-1210,11,-124,1,-10,1],"denominator": 2688},
+  "character_twist": {"81_minus_equals_81_plus_tensor_sign": true,"Hom_W_untwisted": 0,"Hom_W_twisted": 1,"Hom_PSp_restriction": 1},
+  "hashes": {
+    "Mp": "91fd0e27b6c9b1237ea0abf481fac86b52c3d634a4945e15676df49ab402f187",
+    "Mm": "8efe13c97b5ebe2177cc29d6ec7cc736b73e8481664b9c36470282c0cee25c9b",
+    "K": "12743b204bf84397ac71f54d069fe05b063caae0e8ccba75fa69716b19539f03"
+  }
+}
