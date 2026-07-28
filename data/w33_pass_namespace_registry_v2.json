@@ -21,8 +21,9 @@
     {"range": "1193-1197", "owner": "exact-bridge-track", "status": "COMPLETE"},
     {"range": "1198-1202", "owner": "breakthrough-continuation-track", "status": "COMPLETE"},
     {"range": "1203-1207", "owner": "breakthrough-execution-track", "status": "COMPLETE"},
-    {"range": "1208-1212", "owner": "independent-frontier-track", "status": "COMPLETE",
-      "artifacts": {"1208": "81-sector bridge workbench", "1209": "Matrix-unit refinement plan", "1210": "Hecke comparison launch memo", "1211": "Literal orbit extension engine plan", "1212": "External S3 triality test plan"}}
+    {"range": "1208-1212", "owner": "independent-frontier-track", "status": "COMPLETE"},
+    {"range": "1213-1217", "owner": "outside-the-box-track", "status": "COMPLETE",
+      "artifacts": {"1213": "Residual commutant geometry memo", "1214": "Residual species prioritization table", "1215": "Projector fingerprint atlas", "1216": "Exact closure scoreboard", "1217": "Breakthrough map"}}
   ],
   "rule": "A pass number is canonical only when registered here."
 }
