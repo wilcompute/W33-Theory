@@ -1,0 +1,61 @@
+{
+  "schema": "w33.pass1244.m3_m21_matrix_units.v1",
+  "status": "PASS",
+  "headline": "Carrier-level M3 Steinberg units and orbit-anchored M21 residual units are explicit and satisfy the Wedderburn laws.",
+  "certificate_mode": "compact; executable source regenerates the complete boundary samples",
+  "M3": {
+    "carrier_dimension": 1296,
+    "irrep_dimension": 81,
+    "multiplicity": 3,
+    "projector_denominator": 716800,
+    "projector_polynomial": "(K-36I)(K-24I)(K-18I)(K-12I)(K-9I)(K-6I)",
+    "2C_class_size": 36,
+    "projector_hashes": [
+      "41cc1b1c4b67cf5a05afefbba0e6b6c6e4bebc0ddbcc1a491096bda6051ff7f6",
+      "1f1542e111f6bd99f164a325d6c813996c4413b63ab94c84035ab3f62fdc915e",
+      "8924ea42dbe59c5a062d585a30e5709f210cec371adbc2c6b7a5acc04e52d086"
+    ],
+    "color_orbits": [11, 12, 13],
+    "tau_order": 3,
+    "matrix_unit_factorization": "E_ij = (1/716800) * Tau_(j->i) * N_j",
+    "matrix_unit_laws_verified": true
+  },
+  "M21": {
+    "irrep": "20",
+    "multiplicity": 21,
+    "block": "M_21(Q)",
+    "domain_multiplicity_22": 22,
+    "cubic_image_copy": "orbit_08_size_240_20copy_1",
+    "kernel_copy_labels": [
+      "orbit_02_size_27_20copy_1",
+      "orbit_03_size_27_20copy_1",
+      "orbit_04_size_27_20copy_1",
+      "orbit_05_size_27_20copy_1",
+      "orbit_06_size_27_20copy_1",
+      "orbit_07_size_27_20copy_1",
+      "orbit_09_size_270_20copy_1",
+      "orbit_09_size_270_20copy_2",
+      "orbit_09_size_270_20copy_3",
+      "orbit_10_size_270_20copy_1",
+      "orbit_10_size_270_20copy_2",
+      "orbit_10_size_270_20copy_3",
+      "orbit_11_size_432_20copy_1",
+      "orbit_11_size_432_20copy_2",
+      "orbit_11_size_432_20copy_3",
+      "orbit_12_size_432_20copy_1",
+      "orbit_12_size_432_20copy_2",
+      "orbit_12_size_432_20copy_3",
+      "orbit_13_size_432_20copy_1",
+      "orbit_13_size_432_20copy_2",
+      "orbit_13_size_432_20copy_3"
+    ],
+    "matrix_units": {
+      "count": 441,
+      "sha256": "1c733affab714f307e909bee6e4778ec8b010205e14e2431f1b058580b7663dd",
+      "multiplication_law": "E_ij E_kl = delta_(j,k) E_il"
+    },
+    "matrix_unit_laws_verified": true,
+    "gauge_boundary": "Orbit blocks are geometric. Copy indices inside multiplicity-3 transitive carriers are a deterministic Wedderburn gauge, not additional canonical geometry.",
+    "cubic_column_sums": {"0": 2000, "6": 240}
+  }
+}
