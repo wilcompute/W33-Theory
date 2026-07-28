@@ -26,7 +26,20 @@ jobs:
           python-version: '3.12'
       - name: Decode and extract reviewed payload
         run: |
-          cat .correction/pass1192_chunk_*.b64 | tr -d '\n\r\t ' | base64 -d > /tmp/pass1188_1192.tar.gz
+          test ! -e .correction/pass1192_chunk_04.b64
+          test ! -e .correction/pass1192_chunk_05.b64
+          cat \
+            .correction/pass1192_chunk_00.b64 \
+            .correction/pass1192_chunk_01.b64 \
+            .correction/pass1192_chunk_02.b64 \
+            .correction/pass1192_chunk_03.b64 \
+            .correction/pass1192_chunk_04a.b64 \
+            .correction/pass1192_chunk_04b.b64 \
+            .correction/pass1192_chunk_05a.b64 \
+            .correction/pass1192_chunk_05b.b64 \
+            .correction/pass1192_chunk_06.b64 \
+            | tr -d '\n\r\t ' \
+            | base64 -d > /tmp/pass1188_1192.tar.gz
           echo "c0b8ad3a4ee7d3b51175d1361d92a97db577354f3bdbbe4a6756a65491aea44a  /tmp/pass1188_1192.tar.gz" | sha256sum -c -
           tar -xzf /tmp/pass1188_1192.tar.gz
           rm -rf .correction PASS1192_MATERIALIZE.trigger .github/workflows/pass1192_materialize_pr.yml
