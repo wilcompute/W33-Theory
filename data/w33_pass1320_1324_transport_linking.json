@@ -1,0 +1,23 @@
+{
+  "schema": "w33.pass1320_1324.transport_linking.v1",
+  "status": "PASS",
+  "scope": "Exact finite permutation representations, rational association algebras, and equivariant linking operators only.",
+  "components": {
+    "pass1320_six_channel_diagonalization": "w33_pass1320_six_channel_diagonalization.json",
+    "pass1322_species20_hashimoto_dynamics": "w33_pass1322_species20_hashimoto_dynamics.json",
+    "pass1324_manuscript_ledger_promotion": "w33_pass1324_manuscript_ledger_promotion.json",
+    "pass1321_full_hecke_matrix_units": "w33_pass1321_full_hecke_matrix_units.json",
+    "pass1323_transport_composition_and_morita_context": "w33_pass1323_transport_composition_and_morita_context.json"
+  },
+  "headline": "Six exact transports close to M2(C)+M2(C)+M4(C)+M2(C); the full rational Hecke matrix units are explicit and Hashimoto is -I on species 20.",
+  "checks": {
+    "six_transport_channels": true,
+    "species_split_1_1_3_1": true,
+    "full_26_matrix_unit_basis": true,
+    "species20_hashimoto_is_minus_identity": true,
+    "hashimoto_does_not_select_copy": true,
+    "linking_algebra_dimension_28": true,
+    "morita_context_full": true,
+    "manuscript_ledgers_written": true
+  }
+}

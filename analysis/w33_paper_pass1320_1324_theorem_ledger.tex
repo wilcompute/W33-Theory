@@ -1,0 +1,55 @@
+% Passes 1320--1324 exact theorem-ledger insertion.
+\subsection{The six-channel linking algebra between the coset and Hashimoto carriers}
+\begin{theorem}[Exact transport/linking theorem]
+Let $X=\mathbb C[W(E_6)/S_5]$ be the $432$-dimensional coset carrier and let
+$Y=\mathbb C[E_{\rm dir}]$ be the $480$-dimensional directed-edge carrier.
+Then
+\[
+ \dim\operatorname{Hom}_{W(E_6)}(Y,X)=6.
+\]
+The six-dimensional transport space splits by irreducible species as
+\[
+ \operatorname{Hom}_{W(E_6)}(Y,X)
+ \cong \mathbb C_{\mathbf1}\oplus\mathbb C_{\mathbf{15}_a}
+ \oplus\mathbb C^3_{\mathbf{20}}\oplus\mathbb C_{\mathbf{60}_a}.
+\]
+The complete common-support linking algebra is
+\[
+ M_2(\mathbb C)\oplus M_2(\mathbb C)\oplus M_4(\mathbb C)
+ \oplus M_2(\mathbb C),
+\]
+of dimension $28$.  In particular, the species-$20$ sector realizes the full
+Morita context $M_3(\mathbb C)\dashv\mathbb C$ through three independent
+transport channels.
+\end{theorem}
+\begin{proof}[Exact computational proof]
+The literal diagonal action on $X\times Y$ has six orbits.  Their indicator
+matrices give a basis of the Hom-space.  Character projectors split that basis
+with ranks $1,1,3,1$.  The $26$ coset relations are decomposed into complete
+matrix units, and every product $T_iT_j^*$ and $T_i^*T_j$ is expanded in those
+matrix units and in the species-refined Hashimoto projector basis.  The left
+and right products have spans $12$ and $4$, respectively, while the two Hom
+corners each have dimension $6$; hence the linking dimension is
+$12+4+6+6=28$.  All associativity and matrix-unit identities are checked over
+$\mathbb Q$ by
+\texttt{analysis/w33\_pass1320\_1324\_transport\_linking.py}.
+\end{proof}
+\begin{remark}[Hashimoto does not choose a preferred species-$20$ copy]
+On the literal species-$20$ image in $Y$, the Hashimoto operator is exactly
+$-I_{20}$, with minimal polynomial $x+1$.  It therefore transports with the
+same eigenvalue through all three species-$20$ channels and cannot select one
+of the three copies in $X$.  A copy choice requires a Hecke-gauge primitive
+idempotent, not Hashimoto dynamics alone.
+\end{remark}
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Historical claim & Active status & Exact replacement\\
+\midrule
+Nine coset orbitals & Retracted & Twenty-six literal orbitals\\
+Coordinate-surrogate matrix units & Retracted & Carrier-level rational units\\
+Preferred species-$20$ Hashimoto channel & False & Threefold scalar degeneracy\\
+Carrier identification $432=480$ & False & Six-dimensional equivariant bridge\\
+\bottomrule
+\end{tabular}
+\end{center}
