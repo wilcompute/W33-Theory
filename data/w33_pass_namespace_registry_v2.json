@@ -1,7 +1,7 @@
 {
   "schema": "w33.pass_namespace_registry.v2",
   "status": "ACTIVE",
-  "date": "2026-07-27",
+  "date": "2026-07-28",
   "canonical_blocks": [
     {"range": "1120-1124", "owner": "glue-track"},
     {"range": "1125-1128", "owner": "glue-track"},
@@ -19,7 +19,9 @@
     {"range": "1183-1187", "owner": "execution-track-5", "status": "COMPLETE",
       "artifacts": {"1183": "Sym^3(V24) fingerprint table for candidate prioritization", "1184": "Canonical D5 image verdict: 30+15", "1185": "Unified MeatAxe handoff bundle index", "1186": "Manuscript patch queue with Pass 1158 HIGH priority", "1187": "Ihara degree-40 actionable worklist"}},
     {"range": "1188-1192", "owner": "exact-parallel-correction-track", "status": "COMPLETE",
-      "artifacts": {"1188": "exact 1952 residual and Wedderburn commutants", "1189": "group-extension and character-degree correction", "1190": "exact Ihara degree-40 and primitive cycles", "1191": "exact rank-three 40-point module", "1192": "corpus-wide parallel synthesis guard"}}
+      "artifacts": {"1188": "exact 1952 residual and Wedderburn commutants", "1189": "group-extension and character-degree correction", "1190": "exact Ihara degree-40 and primitive cycles", "1191": "exact rank-three 40-point module", "1192": "corpus-wide parallel synthesis guard"}},
+    {"range": "1193-1197", "owner": "exact-equivariant-release-track", "status": "COMPLETE",
+      "artifacts": {"1193": "S5/A5 432-carrier coset bridge", "1194": "explicit residual central idempotents", "1195": "W(E6)-equivariant Hashimoto spectral packets", "1196": "primitive PSp/W(E6) cycle orbits and degree-40 continuation", "1197": "parallel namespace collision and mandatory synthesis guard"}}
   ],
   "rule": "A pass number is canonical only when registered here."
 }

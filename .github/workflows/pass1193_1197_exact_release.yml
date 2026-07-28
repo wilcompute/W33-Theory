@@ -1,0 +1,50 @@
+name: Passes 1193-1197 Exact Equivariant Release
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass119[3-7]_*.py'
+      - 'data/w33_pass119[3-7]_*.json'
+      - 'tests/test_w33_pass1193_1197.py'
+      - 'data/w33_pass_namespace_registry_v2.json'
+      - '.pre-commit-config.yaml'
+      - '.github/workflows/pass1193_1197_exact_release.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass119[3-7]_*.py'
+      - 'data/w33_pass119[3-7]_*.json'
+      - 'tests/test_w33_pass1193_1197.py'
+      - 'data/w33_pass_namespace_registry_v2.json'
+      - '.pre-commit-config.yaml'
+      - '.github/workflows/pass1193_1197_exact_release.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  exact-equivariant-release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact runtime
+        run: python -m pip install --upgrade numpy pytest
+      - name: Recompute Pass 1193 S5/A5 bridge
+        run: PYTHONPATH=analysis python analysis/w33_pass1193_s5_a5_coset_bridge.py
+      - name: Recompute Pass 1194 residual idempotents
+        run: PYTHONPATH=analysis python analysis/w33_pass1194_residual_central_idempotents.py
+      - name: Recompute Pass 1195 Hashimoto packets
+        run: PYTHONPATH=analysis python analysis/w33_pass1195_we6_equivariant_hashimoto.py
+      - name: Recompute Pass 1196 primitive cycle orbits
+        run: PYTHONPATH=analysis python analysis/w33_pass1196_primitive_cycle_orbits.py
+      - name: Run focused release tests
+        run: PYTHONPATH=. pytest -q tests/test_w33_pass1193_1197.py
+      - name: Run prior exact synthesis firewall
+        run: PYTHONPATH=analysis python analysis/w33_pass1192_parallel_synthesis_guard.py
+      - name: Run namespace and collision firewall
+        run: PYTHONPATH=analysis python analysis/w33_pass1197_parallel_collision_guard.py --check-only

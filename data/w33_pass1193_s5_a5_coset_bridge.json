@@ -1,0 +1,104 @@
+{
+  "schema": "w33.pass1193.s5_a5_coset_bridge.v1",
+  "status": "PASS",
+  "headline": "Each 432-point W(E6)/S5 carrier restricts transitively to PSp(4,3)/A5, with S5 intersect PSp(4,3)=A5.",
+  "orders": {
+    "W(E6)": 51840,
+    "PSp(4,3)": 25920,
+    "S5": 120,
+    "A5": 60
+  },
+  "normal_subgroup": {
+    "definition": "kernel of reflection-length parity",
+    "order": 25920,
+    "identification": "PSp(4,3)"
+  },
+  "records": [
+    {
+      "orbit_number": 0,
+      "orbit_size": 432,
+      "representative_a2_triple": [0, 18, 43],
+      "we6_stabilizer": {
+        "order": 120,
+        "identification": "S5 = SmallGroup(120,34)",
+        "even_elements": 60,
+        "odd_elements": 60
+      },
+      "psp43_intersection": {
+        "order": 60,
+        "center_order": 1,
+        "derived_order": 60,
+        "abelianization_order": 1,
+        "element_order_distribution": {"1": 1, "2": 15, "3": 20, "5": 24},
+        "identification": "A5 = SmallGroup(60,5)"
+      },
+      "coset_models": {
+        "we6_over_s5_index": 432,
+        "psp43_over_a5_index": 432,
+        "same_432_carrier": true
+      }
+    },
+    {
+      "orbit_number": 1,
+      "orbit_size": 432,
+      "representative_a2_triple": [0, 22, 47],
+      "we6_stabilizer": {
+        "order": 120,
+        "identification": "S5 = SmallGroup(120,34)",
+        "even_elements": 60,
+        "odd_elements": 60
+      },
+      "psp43_intersection": {
+        "order": 60,
+        "center_order": 1,
+        "derived_order": 60,
+        "abelianization_order": 1,
+        "element_order_distribution": {"1": 1, "2": 15, "3": 20, "5": 24},
+        "identification": "A5 = SmallGroup(60,5)"
+      },
+      "coset_models": {
+        "we6_over_s5_index": 432,
+        "psp43_over_a5_index": 432,
+        "same_432_carrier": true
+      }
+    },
+    {
+      "orbit_number": 2,
+      "orbit_size": 432,
+      "representative_a2_triple": [0, 26, 51],
+      "we6_stabilizer": {
+        "order": 120,
+        "identification": "S5 = SmallGroup(120,34)",
+        "even_elements": 60,
+        "odd_elements": 60
+      },
+      "psp43_intersection": {
+        "order": 60,
+        "center_order": 1,
+        "derived_order": 60,
+        "abelianization_order": 1,
+        "element_order_distribution": {"1": 1, "2": 15, "3": 20, "5": 24},
+        "identification": "A5 = SmallGroup(60,5)"
+      },
+      "coset_models": {
+        "we6_over_s5_index": 432,
+        "psp43_over_a5_index": 432,
+        "same_432_carrier": true
+      }
+    }
+  ],
+  "theorem": {
+    "intersection": "S5 ∩ PSp(4,3) = A5",
+    "coset_equivalence": "W(E6)/S5 ≅ PSp(4,3)/A5 as PSp(4,3)-sets",
+    "index_identity": "51840/120 = 25920/60 = 432",
+    "three_copies": 3
+  },
+  "checks": {
+    "we6_order_51840": true,
+    "parity_kernel_order_25920": true,
+    "three_432_orbits": true,
+    "all_intersections_a5": true,
+    "all_indices_432": true
+  },
+  "scope": "Exact finite permutation computation on the 240 E8 roots; the A5 identification uses order, perfectness, trivial center, and the A5 element-order census."
+}

@@ -36,6 +36,17 @@ repos:
           and {540:line-nonedge}; {540:both}/{540:mixed} are compatibility
           tags for a genuinely mixed occurrence.
 
+      - id: pass-namespace-collision-guard
+        name: Reject unregistered or colliding parallel pass releases
+        entry: python analysis/w33_pass1197_parallel_collision_guard.py --check-only
+        language: python
+        pass_filenames: false
+        stages: [pre-commit]
+        description: >
+          Fail closed unless modern pass-numbered artifacts have one registered owner,
+          the current exact certificates pass, prior synthesis remains clean, and
+          obsolete transport scaffolds are absent.
+
       - id: s-min-formula-guard
         name: Guard S_min formula correctness
         entry: python -c "
