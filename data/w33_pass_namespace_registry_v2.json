@@ -30,13 +30,15 @@
     {"range": "1238-1242", "owner": "five-frontier-execution-track", "status": "COMPLETE"},
     {"range": "1243-1247", "owner": "bridge-materialization-track", "status": "COMPLETE"},
     {"range": "1248-1252", "owner": "full-execution-track", "status": "COMPLETE"},
-    {"range": "1253-1257", "owner": "consolidation-breakthrough-track", "status": "COMPLETE",
+    {"range": "1253-1257", "owner": "consolidation-breakthrough-track", "status": "COMPLETE"},
+    {"range": "1258-1262", "owner": "universal-theorem-track", "status": "COMPLETE",
+      "new_exact_theorem": "EXACT-9: universal shifted-adjacency non-isomorphism for all nonzero integer delta",
       "artifacts": {
-        "1253": "P1-projected 27-line rank dichotomy {0,27}",
-        "1254": "Dim-20 exact matrix-unit scale-up (sampled exact checks, zero violations)",
-        "1255": "A5 orbit-enumeration stub with Burnside class equations on the 432-point carrier",
-        "1256": "Shifted-adjacency theorem exact for tested deltas {-2,-1,1,2}",
-        "1257": "Theorem ledger v4 (8 EXACT / 7 PROVISIONAL / 4 OPEN)"
+        "1258": "27-line embedding construction protocol (5 steps, PSp(4,3) restriction prediction)",
+        "1259": "Species-20 AtlasRep GAP scaffold (400 matrix units, output schema)",
+        "1260": "A5 Burnside fixed-point candidate k=9 (verified)",
+        "1261": "Hecke spherical dim=9 candidate from pair-orbit Burnside",
+        "1262": "EXACT-9: universal shifted-adjacency non-isomorphism theorem proven"
       }}
   ],
   "rule": "A pass number is canonical only when registered here."
