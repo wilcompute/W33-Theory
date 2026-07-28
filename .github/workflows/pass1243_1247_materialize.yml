@@ -90,8 +90,7 @@ jobs:
           git rm data/pass1243_1247_exact_bundle.b64 .github/workflows/pass1243_1247_materialize.yml
           git add .github/workflows/pass1243_1247_exact_release.yml \
             PASS1243_1247_EXACT_TRIALITY_MATRIX_CYCLE_RELEASE.md \
-            analysis/w33_pass1243_1227_exact_core.py 2>/dev/null || true
-          git add analysis/w33_pass1243_1247_exact_core.py \
+            analysis/w33_pass1243_1247_exact_core.py \
             analysis/w33_pass1243_81_sign_twist_intertwiner.py \
             analysis/w33_pass1244_m3_m21_matrix_units.py \
             analysis/w33_pass1245_a5_s5_hecke_equality.py \
