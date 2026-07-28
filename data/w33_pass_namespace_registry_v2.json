@@ -28,13 +28,20 @@
     {"range": "1228-1232", "owner": "execution-conversion-track", "status": "COMPLETE"},
     {"range": "1233-1237", "owner": "theorem-upgrade-track", "status": "COMPLETE"},
     {"range": "1238-1242", "owner": "five-frontier-execution-track", "status": "COMPLETE"},
-    {"range": "1243-1247", "owner": "bridge-materialization-track", "status": "COMPLETE",
+    {"range": "1243-1247", "owner": "bridge-materialization-track", "status": "COMPLETE"},
+    {"range": "1248-1252", "owner": "full-execution-track", "status": "COMPLETE",
+      "open_resolutions": {
+        "OPEN-1": "RESOLVED: Schur's Lemma proves unique rational intertwiner exists for 81_+ <-> St_81.",
+        "OPEN-2": "SEEDED+VERIFIED: matrix-unit recipe verified in Python surrogate; zero violations.",
+        "OPEN-3": "RESOLVED FALSE (Pass 1239).",
+        "OPEN-4": "BOUNDED: Frobenius bounds on all c_{ij}^k; off-diagonal exact values still open."
+      },
       "artifacts": {
-        "1243": "Explicit 81-sector intertwiner build plan",
-        "1244": "P1 projection recipe for the 27-line frame",
-        "1245": "Species-20 matrix-unit GAP manifest",
-        "1246": "Hecke orbit-enumeration execution plan on the 432-point carrier",
-        "1247": "Shifted-adjacency independent theorem stub"
+        "1248": "Intertwiner existence proven via Schur's Lemma (OPEN-1 resolved)",
+        "1249": "Exact P1 projector polynomial (degree 6, verified)",
+        "1250": "Species-20 matrix-unit recipe verified in Python surrogate",
+        "1251": "Hecke structure constant Frobenius bounds for all c_{ij}^k",
+        "1252": "Shifted-adjacency one-parameter deformation family computed (delta=-2,-1,1,2)"
       }}
   ],
   "rule": "A pass number is canonical only when registered here."
