@@ -1,0 +1,48 @@
+{
+  "schema": "w33.pass1197.parallel_collision_guard.v1",
+  "status": "PASS",
+  "headline": "Pass-number ownership, exact certificates, legacy synthesis, and transport cleanup are enforced as mandatory parallel-development gates.",
+  "registry": {
+    "schema": "w33.pass_namespace_registry.v2",
+    "registered_pass_count": 74,
+    "minimum_registered": 1120,
+    "maximum_registered": 1197,
+    "collisions": [],
+    "unregistered_modern_files": []
+  },
+  "current_block": {
+    "range": "1193-1197",
+    "owner": "exact-equivariant-release-track",
+    "status": "COMPLETE",
+    "artifacts": {
+      "1193": "S5/A5 432-carrier coset bridge",
+      "1194": "explicit residual central idempotents",
+      "1195": "W(E6)-equivariant Hashimoto spectral packets",
+      "1196": "primitive PSp/W(E6) cycle orbits and degree-40 continuation",
+      "1197": "parallel namespace collision and mandatory synthesis guard"
+    }
+  },
+  "certificates": [
+    {"pass": 1193, "path": "data/w33_pass1193_s5_a5_coset_bridge.json", "schema": "w33.pass1193.s5_a5_coset_bridge.v1", "checks": 5},
+    {"pass": 1194, "path": "data/w33_pass1194_residual_central_idempotents.json", "schema": "w33.pass1194.residual_central_idempotents.v1", "checks": 4},
+    {"pass": 1195, "path": "data/w33_pass1195_we6_equivariant_hashimoto.json", "schema": "w33.pass1195.we6_equivariant_hashimoto.v1", "checks": 6},
+    {"pass": 1196, "path": "data/w33_pass1196_primitive_cycle_orbits.json", "schema": "w33.pass1196.primitive_cycle_orbits.v1", "checks": 4},
+    {"pass": 1197, "path": "data/w33_pass1197_parallel_collision_guard.json", "schema": "w33.pass1197.parallel_collision_guard.v1", "checks": 5}
+  ],
+  "gate_checks": {
+    "precommit_namespace_guard_installed": true,
+    "workflow_runs_pass1197_guard": true,
+    "workflow_runs_pass1192_guard": true,
+    "transport_scaffold_absent": true,
+    "current_block_complete": true,
+    "current_artifacts_complete": true
+  },
+  "checks": {
+    "registry_has_no_overlap": true,
+    "registered_pass_count_74": true,
+    "no_unregistered_modern_files": true,
+    "passes_1193_1197_all_pass": true,
+    "mandatory_gates_installed": true
+  },
+  "policy": "Parallel agents must reserve a disjoint range before publication; the range, artifacts, exact certificates, synthesis guard, and cleanup gate must all agree before merge."
+}
