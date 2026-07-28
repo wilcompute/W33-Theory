@@ -15,9 +15,9 @@
     {"range": "1163-1167", "owner": "execution-track", "status": "COMPLETE"},
     {"range": "1168-1172", "owner": "execution-track-2", "status": "COMPLETE"},
     {"range": "1173-1177", "owner": "execution-track-3", "status": "COMPLETE"},
-    {"range": "1178-1182", "owner": "execution-track-4", "status": "COMPLETE",
-      "artifacts": {"1178": "Sym^3(V24) arithmetic plethysm candidates for 2600", "1179": "All W(E6)-splits of 45; preferred 30+15", "1180": "Exact GF(7) MeatAxe manifest for 2195 kernel", "1181": "Inline patch plan for Pass 1158 amendment", "1182": "Ihara degree-40 scaffold with dominance checkpoints"}},
-    {"range": "1183-1187", "owner": "exact-parallel-correction-track", "status": "RESERVED"}
+    {"range": "1178-1182", "owner": "execution-track-4", "status": "COMPLETE"},
+    {"range": "1183-1187", "owner": "execution-track-5", "status": "COMPLETE",
+      "artifacts": {"1183": "Sym^3(V24) fingerprint table for candidate prioritization", "1184": "Canonical D5 image verdict: 30+15", "1185": "Unified MeatAxe handoff bundle index", "1186": "Manuscript patch queue with Pass 1158 HIGH priority", "1187": "Ihara degree-40 actionable worklist"}}
   ],
   "rule": "A pass number is canonical only when registered here."
 }
