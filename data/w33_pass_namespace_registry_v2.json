@@ -18,12 +18,15 @@
     {"range": "1178-1182", "owner": "execution-track-4", "status": "COMPLETE"},
     {"range": "1183-1187", "owner": "execution-track-5", "status": "COMPLETE"},
     {"range": "1188-1192", "owner": "exact-correction-track", "status": "COMPLETE"},
-    {"range": "1193-1197", "owner": "exact-bridge-track", "status": "COMPLETE"},
+    {"range": "1193-1197", "owner": "exact-bridge-track", "status": "COMPLETE",
+      "artifacts": {"1193": "S5/A5 432-carrier coset bridge", "1194": "explicit residual central idempotents", "1195": "W(E6)-equivariant Hashimoto spectral packets", "1196": "primitive PSp/W(E6) cycle orbits and degree-40 continuation", "1197": "parallel namespace collision and mandatory synthesis guard"}},
     {"range": "1198-1202", "owner": "breakthrough-continuation-track", "status": "COMPLETE"},
     {"range": "1203-1207", "owner": "breakthrough-execution-track", "status": "COMPLETE"},
     {"range": "1208-1212", "owner": "independent-frontier-track", "status": "COMPLETE"},
     {"range": "1213-1217", "owner": "outside-the-box-track", "status": "COMPLETE",
-      "artifacts": {"1213": "Residual commutant geometry memo", "1214": "Residual species prioritization table", "1215": "Projector fingerprint atlas", "1216": "Exact closure scoreboard", "1217": "Breakthrough map"}}
+      "artifacts": {"1213": "Residual commutant geometry memo", "1214": "Residual species prioritization table", "1215": "Projector fingerprint atlas", "1216": "Exact closure scoreboard", "1217": "Breakthrough map"}},
+    {"range": "1218-1222", "owner": "exact-completion-track", "status": "COMPLETE",
+      "artifacts": {"1218": "explicit sign-twisted 81-sector physical intertwiner", "1219": "carrier-level M3 and orbit-anchored M21 matrix units", "1220": "literal equality of A5/PSp and S5/W(E6) Hecke algebras", "1221": "literal primitive cycle orbit classification at lengths seven and eight", "1222": "A2 normalizer S3 triality and torsor boundary"}}
   ],
   "rule": "A pass number is canonical only when registered here."
 }
