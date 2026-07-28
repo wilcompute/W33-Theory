@@ -36,7 +36,9 @@
       },
       "new_findings": {
         "1242": "H is full-rank on 480-edge space; 27-module targets P1 eigenspace (dim 201)."
-      }}
+      }},
+    {"range": "1243-1247", "owner": "exact-completion-track", "status": "RESERVED",
+      "artifacts": {"1243": "explicit sign-twisted 81-sector physical intertwiner", "1244": "carrier-level M3 and orbit-anchored M21 matrix units", "1245": "literal equality of A5/PSp and S5/W(E6) Hecke algebras", "1246": "literal primitive cycle orbit classification at lengths seven and eight", "1247": "A2 normalizer S3 triality and torsor boundary"}}
   ],
   "rule": "A pass number is canonical only when registered here."
 }
