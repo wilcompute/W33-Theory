@@ -23,7 +23,9 @@
     {"range": "1203-1207", "owner": "breakthrough-execution-track", "status": "COMPLETE"},
     {"range": "1208-1212", "owner": "independent-frontier-track", "status": "COMPLETE"},
     {"range": "1213-1217", "owner": "outside-the-box-track", "status": "COMPLETE",
-      "artifacts": {"1213": "Residual commutant geometry memo", "1214": "Residual species prioritization table", "1215": "Projector fingerprint atlas", "1216": "Exact closure scoreboard", "1217": "Breakthrough map"}}
+      "artifacts": {"1213": "Residual commutant geometry memo", "1214": "Residual species prioritization table", "1215": "Projector fingerprint atlas", "1216": "Exact closure scoreboard", "1217": "Breakthrough map"}},
+    {"range": "1218-1222", "owner": "exact-completion-track", "status": "COMPLETE",
+      "artifacts": {"1218": "explicit sign-twisted 81-sector physical intertwiner", "1219": "carrier-level M3 and orbit-anchored M21 matrix units", "1220": "literal equality of A5/PSp and S5/W(E6) Hecke algebras", "1221": "literal primitive cycle orbit classification at lengths seven and eight", "1222": "A2 normalizer S3 triality and torsor boundary"}}
   ],
   "rule": "A pass number is canonical only when registered here."
 }
