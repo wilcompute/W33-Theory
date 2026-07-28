@@ -1,0 +1,14 @@
+{
+  "schema": "w33.pass1245.a5_s5_hecke_equality.v1",
+  "status": "PASS",
+  "headline": "The A5 and S5 stabilizers have exactly the same 26 orbitals on the 432 carrier, hence identical noncommutative Hecke algebras.",
+  "structure_constants_sha256": "46f42fdb10b985e01ca523d6027886c6c2fec3f7687fa5c686c6e8b590eb53e6",
+  "relation_matrix_sha256": "6eaa6c03ded7303e6d9e9e5f0569f2499663b419f7993b88af796136e9cbb94b",
+  "noncommutativity_witness": {"i": 1, "j": 2, "k": 3, "p_ij_k": 0, "p_ji_k": 1},
+  "rank_W_S5": 26,
+  "rank_PSp_A5": 26,
+  "same_orbitals": true,
+  "subdegrees": [1,1,5,5,5,5,5,5,10,10,10,10,20,20,20,20,20,20,20,20,20,30,30,30,30,60],
+  "structure_sum": 11232,
+  "structure_square_sum": 80576
+}
