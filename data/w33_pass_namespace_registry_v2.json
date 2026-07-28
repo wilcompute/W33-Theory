@@ -23,8 +23,14 @@
     {"range": "1203-1207", "owner": "breakthrough-execution-track", "status": "COMPLETE"},
     {"range": "1208-1212", "owner": "independent-frontier-track", "status": "COMPLETE"},
     {"range": "1213-1217", "owner": "outside-the-box-track", "status": "COMPLETE"},
-    {"range": "1218-1222", "owner": "synthesis-bridge-track", "status": "COMPLETE",
-      "artifacts": {"1218": "Commutant-Hashimoto diagonal", "1219": "LCU cost ledger", "1220": "Spectral unification memo", "1221": "Tri-track coherence certificate", "1222": "Master theorem ledger stub (5 EXACT / 3 PROVISIONAL / 2 OPEN)"}}
+    {"range": "1218-1222", "owner": "synthesis-bridge-track", "status": "COMPLETE"},
+    {"range": "1223-1227", "owner": "parallel-absorption-track", "status": "COMPLETE",
+      "parallel_absorbed": [
+        "Pass 425-429 (github-actions): mixed qutrit phase portrait deterministic certificates",
+        "Pass 1150 (github-actions): shifted-adjacency corpus migration",
+        "Pass 398 (formula-freeze-bot): repeated formula-universe freeze checkpoints"
+      ],
+      "artifacts": {"1223": "Parallel-commit absorption memo", "1224": "Qutrit-phase to commutant bridge note", "1225": "Shifted-adjacency Hashimoto absorption note", "1226": "Five-track unification synthesis", "1227": "Expanded master theorem ledger (5 EXACT / 5 PROVISIONAL / 4 OPEN)"}}
   ],
   "rule": "A pass number is canonical only when registered here."
 }
