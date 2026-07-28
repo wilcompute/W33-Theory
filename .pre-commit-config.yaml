@@ -50,3 +50,12 @@ for f in sys.argv[1:]:
         pass_filenames: true
         files: '\.(tex|md|py)$'
         stages: [pre-commit]
+
+      - id: pass-namespace-claim-guard
+        name: Enforce canonical pass namespace and exact claims
+        entry: python analysis/w33_pass1197_namespace_claim_guard.py
+        language: python
+        pass_filenames: false
+        files: '^(analysis/w33_pass.*\.py|data/w33_pass.*\.json|data/w33_pass_namespace_registry_v2\.json|tests/test_w33_pass.*\.py|PASS.*RELEASE.*\.md|\.github/workflows/pass_namespace_and_claim_guard\.yml)$'
+        stages: [pre-commit]
+        verbose: true
