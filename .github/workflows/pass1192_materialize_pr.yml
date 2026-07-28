@@ -21,26 +21,44 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
           fetch-depth: 1
+          show-progress: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Decode and extract reviewed payload
         run: |
-          test ! -e .correction/pass1192_chunk_04.b64
-          test ! -e .correction/pass1192_chunk_05.b64
-          cat \
-            .correction/pass1192_chunk_00.b64 \
-            .correction/pass1192_chunk_01.b64 \
-            .correction/pass1192_chunk_02.b64 \
-            .correction/pass1192_chunk_03.b64 \
-            .correction/pass1192_chunk_04a.b64 \
-            .correction/pass1192_chunk_04b.b64 \
-            .correction/pass1192_chunk_05a.b64 \
-            .correction/pass1192_chunk_05b.b64 \
-            .correction/pass1192_chunk_06.b64 \
-            | tr -d '\n\r\t ' \
-            | base64 -d > /tmp/pass1188_1192.tar.gz
-          echo "c0b8ad3a4ee7d3b51175d1361d92a97db577354f3bdbbe4a6756a65491aea44a  /tmp/pass1188_1192.tar.gz" | sha256sum -c -
+          python - <<'PY'
+          from pathlib import Path
+          import base64, hashlib
+
+          names = [
+              'pass1192_chunk_00.b64',
+              'pass1192_chunk_01.b64',
+              'pass1192_chunk_02.b64',
+              'pass1192_chunk_03.b64',
+              'pass1192_chunk_04a.b64',
+              'pass1192_chunk_04b.b64',
+              'pass1192_chunk_05a.b64',
+              'pass1192_chunk_05b.b64',
+              'pass1192_chunk_06.b64',
+          ]
+          root = Path('.correction')
+          assert not (root / 'pass1192_chunk_04.b64').exists()
+          assert not (root / 'pass1192_chunk_05.b64').exists()
+          pieces = []
+          for name in names:
+              raw = ''.join((root / name).read_text().split())
+              print(name, 'chars=', len(raw), 'sha256=', hashlib.sha256(raw.encode()).hexdigest())
+              pieces.append(raw)
+          joined = ''.join(pieces)
+          print('joined_chars=', len(joined), 'joined_mod4=', len(joined) % 4, 'joined_sha256=', hashlib.sha256(joined.encode()).hexdigest())
+          archive = base64.b64decode(joined, validate=True)
+          actual = hashlib.sha256(archive).hexdigest()
+          expected = 'c0b8ad3a4ee7d3b51175d1361d92a97db577354f3bdbbe4a6756a65491aea44a'
+          print('decoded_bytes=', len(archive), 'archive_sha256=', actual, 'expected=', expected)
+          assert actual == expected, (actual, expected)
+          Path('/tmp/pass1188_1192.tar.gz').write_bytes(archive)
+          PY
           tar -xzf /tmp/pass1188_1192.tar.gz
           rm -rf .correction PASS1192_MATERIALIZE.trigger .github/workflows/pass1192_materialize_pr.yml
       - name: Compile corrected sources
