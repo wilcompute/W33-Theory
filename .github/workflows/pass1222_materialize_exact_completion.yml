@@ -1,0 +1,86 @@
+name: Materialize Passes 1218-1222 Exact Completion
+
+on:
+  push:
+    branches:
+      - agent/pass1218-1222-exact-completion
+    paths:
+      - 'analysis/w33_pass1218_81_sign_twist_intertwiner.py'
+      - 'analysis/w33_pass1219_m3_m21_matrix_units.py'
+      - 'analysis/w33_pass1220_a5_s5_hecke_equality.py'
+      - 'analysis/w33_pass1221_literal_cycle_orbits_7_8.py'
+      - 'analysis/w33_pass1222_a2_normalizer_triality.py'
+      - 'analysis/w33_pass1197_parallel_collision_guard.py'
+      - 'tests/test_w33_pass1218_1222.py'
+      - 'data/w33_pass_namespace_registry_v2.json'
+      - 'PASS1218_1222_EXACT_TRIALITY_MATRIX_CYCLE_RELEASE.md'
+      - '.github/workflows/pass1222_materialize_exact_completion.yml'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: pass1218-1222-exact-materializer
+  cancel-in-progress: false
+
+jobs:
+  materialize:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/pass1218-1222-exact-completion
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact runtime
+        run: python -m pip install --disable-pip-version-check numpy pytest
+      - name: Compile exact sources
+        run: |
+          python -m py_compile \
+            analysis/w33_pass1218_81_sign_twist_intertwiner.py \
+            analysis/w33_pass1219_m3_m21_matrix_units.py \
+            analysis/w33_pass1220_a5_s5_hecke_equality.py \
+            analysis/w33_pass1221_literal_cycle_orbits_7_8.py \
+            analysis/w33_pass1222_a2_normalizer_triality.py \
+            analysis/w33_pass1197_parallel_collision_guard.py
+      - name: Recompute Pass 1218 sign-twist bridge
+        run: PYTHONPATH=analysis python analysis/w33_pass1218_81_sign_twist_intertwiner.py
+      - name: Recompute Pass 1219 matrix units
+        run: PYTHONPATH=analysis python analysis/w33_pass1219_m3_m21_matrix_units.py
+      - name: Recompute Pass 1220 Hecke equality
+        run: PYTHONPATH=analysis python analysis/w33_pass1220_a5_s5_hecke_equality.py
+      - name: Recompute Pass 1221 literal cycle frontier
+        run: PYTHONPATH=analysis python analysis/w33_pass1221_literal_cycle_orbits_7_8.py --full-output /tmp/w33_pass1221_full.json
+      - name: Recompute Pass 1222 normalizer triality
+        run: PYTHONPATH=analysis python analysis/w33_pass1222_a2_normalizer_triality.py
+      - name: Complete namespace registration
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          path = Path('data/w33_pass_namespace_registry_v2.json')
+          data = json.loads(path.read_text())
+          block = next(x for x in data['canonical_blocks'] if x['range'] == '1218-1222')
+          block['status'] = 'COMPLETE'
+          expected = {'1218','1219','1220','1221','1222'}
+          assert set(block['artifacts']) == expected
+          path.write_text(json.dumps(data, indent=2) + '\n')
+          PY
+      - name: Run focused exact tests
+        run: pytest -q tests/test_w33_pass1218_1222.py
+      - name: Run prior synthesis firewall
+        run: PYTHONPATH=analysis python analysis/w33_pass1192_parallel_synthesis_guard.py
+      - name: Run monotone namespace firewall
+        run: PYTHONPATH=analysis python analysis/w33_pass1197_parallel_collision_guard.py --check-only
+      - name: Remove one-shot transport and commit clean release
+        run: |
+          rm -rf .release .github/workflows/pass1222_materialize_exact_completion.yml
+          git config user.name 'w33-exact-release[bot]'
+          git config user.email 'w33-exact-release[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Passes 1218-1222: exact completion of five frontier plans'
+          git push origin HEAD:agent/pass1218-1222-exact-completion
