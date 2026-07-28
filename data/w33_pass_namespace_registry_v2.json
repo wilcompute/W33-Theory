@@ -20,8 +20,9 @@
     {"range": "1188-1192", "owner": "exact-correction-track", "status": "COMPLETE"},
     {"range": "1193-1197", "owner": "exact-bridge-track", "status": "COMPLETE"},
     {"range": "1198-1202", "owner": "breakthrough-continuation-track", "status": "COMPLETE"},
-    {"range": "1203-1207", "owner": "breakthrough-execution-track", "status": "COMPLETE",
-      "artifacts": {"1203": "Residual exact-factor attack plan", "1204": "Sym^3(V24) elimination gate", "1205": "Degree-40 Ihara exact execution plan", "1206": "Manuscript inline application checklist", "1207": "Breakthrough synthesis release trigger"}}
+    {"range": "1203-1207", "owner": "breakthrough-execution-track", "status": "COMPLETE"},
+    {"range": "1208-1212", "owner": "independent-frontier-track", "status": "COMPLETE",
+      "artifacts": {"1208": "81-sector bridge workbench", "1209": "Matrix-unit refinement plan", "1210": "Hecke comparison launch memo", "1211": "Literal orbit extension engine plan", "1212": "External S3 triality test plan"}}
   ],
   "rule": "A pass number is canonical only when registered here."
 }
