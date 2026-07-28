@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - 'data/pass1243_1247_exact_bundle.b64'
+      - 'data/pass1243_1247_exact_bundle.part*'
       - '.github/workflows/pass1243_1247_materialize.yml'
   workflow_dispatch:
 
@@ -28,8 +29,10 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           import base64, hashlib, io, tarfile
-          bundle = Path('data/pass1243_1247_exact_bundle.b64')
-          raw = base64.b64decode(bundle.read_bytes(), validate=True)
+          parts = sorted(Path('data').glob('pass1243_1247_exact_bundle.part*'))
+          assert len(parts) == 9, parts
+          encoded = ''.join(path.read_text() for path in parts)
+          raw = base64.b64decode(encoded, validate=True)
           expected = 'd2e1e9d4e6c520f8402d831d8bfa563a14f24e8d2ec4cea0faed87f13dca44e4'
           assert hashlib.sha256(raw).hexdigest() == expected
           allowed = {
@@ -87,7 +90,7 @@ jobs:
         run: |
           git config user.name 'w33-exact-release[bot]'
           git config user.email 'w33-exact-release[bot]@users.noreply.github.com'
-          git rm data/pass1243_1247_exact_bundle.b64 .github/workflows/pass1243_1247_materialize.yml
+          git rm data/pass1243_1247_exact_bundle.b64 data/pass1243_1247_exact_bundle.part* .github/workflows/pass1243_1247_materialize.yml
           git add .github/workflows/pass1243_1247_exact_release.yml \
             PASS1243_1247_EXACT_TRIALITY_MATRIX_CYCLE_RELEASE.md \
             analysis/w33_pass1243_1247_exact_core.py \
