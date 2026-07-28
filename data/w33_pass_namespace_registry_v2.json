@@ -11,13 +11,16 @@
     {"range": "1147", "owner": "parallel-codex-track", "status": "RESERVED", "primary": "PASS1147_RESERVED.md"},
     {"range": "1148-1152", "owner": "exact-crossed-bridge-track", "status": "COMPLETE",
       "primary": "PASS1148_1152_EXACT_CROSSED_BRIDGE_RELEASE.md",
-      "artifacts": {"1148": "exact S5 Hecke stabilizer-intersection filtration", "1149": "C3-Fourier Steinberg bridge", "1150": "shifted-adjacency migration closure", "1151": "five-species degree-540 taxonomy lock", "1152": "78-dim crossed C3 commutant"}},
+      "artifacts": {"1148": "S5 Hecke filtration", "1149": "C3-Fourier Steinberg bridge", "1150": "shifted-adjacency migration", "1151": "five-species degree-540 taxonomy", "1152": "78-dim crossed C3 commutant"}},
     {"range": "1153-1157", "owner": "continuation-audit-track", "status": "COMPLETE",
       "primary": "PASS1153_1157_CONTINUATION_RELEASE.md",
-      "artifacts": {"1153": "manuscript 432-carrier sweep", "1154": "colored bridge rank checker", "1155": "separator wired into registry", "1156": "27-central-channel encoder", "1157": "Sp(4,3) stabilizer algebraic analysis + GAP script"}},
+      "artifacts": {"1153": "manuscript 432-carrier sweep", "1154": "colored bridge rank checker", "1155": "separator registry wire", "1156": "27-central-channel encoder", "1157": "Sp(4,3) stabilizer + GAP script"}},
     {"range": "1158-1162", "owner": "breakthrough-track", "status": "COMPLETE",
       "primary": "PASS1158_1162_BREAKTHROUGH_RELEASE.md",
-      "artifacts": {"1158": "1952-dim residual prime obstruction and split analysis", "1159": "Hecke structure constants verification", "1160": "W(E6) character table bridge", "1161": "exact propagator determinant product + Ihara zeta", "1162": "full corpus synchronization, 22 invariants all pass"}}
+      "artifacts": {"1158": "1952 prime obstruction 2^5*61", "1159": "Hecke structure constants", "1160": "W(E6) character bridge", "1161": "propagator determinant + Ihara", "1162": "corpus sync 22 invariants"}},
+    {"range": "1163-1167", "owner": "execution-track", "status": "COMPLETE",
+      "primary": "PASS1163_1167_EXECUTION_RELEASE.md",
+      "artifacts": {"1163": "Sp(4,3) 432-orbit is NOT a pair-orbit on PG(3,3)", "1164": "1920 module: not coset space, uniform splits 24x80/8x240/12x160", "1165": "manuscript tagging: 7 TYPED, 1 NEEDS_TAG", "1166": "Ihara zeta degree 10, 160 triangles confirmed", "1167": "C[Omega_40] = 1+24+15 multiplicity-free, Sym^3 dim=11480"}}
   ],
   "rule": "A pass number is canonical only when registered here with a primary master artifact or explicit reservation."
 }
