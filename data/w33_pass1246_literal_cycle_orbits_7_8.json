@@ -1,0 +1,44 @@
+{
+  "schema": "w33.pass1246.literal_cycle_orbits_7_8.v1",
+  "status": "PASS",
+  "headline": "Literal primitive tailless nonbacktracking cycle orbits are classified at lengths seven and eight.",
+  "boundary": "Checked-in certificate is compact. --full-output deterministically emits every representative and fusion record.",
+  "encoding": "hex packs vertex_i in bits [6i,6i+5]",
+  "records_sha256": "132eb1cfc8437540761b893094794f2b2986aa1c4af7669436db55c316a4b0ac",
+  "lengths": {
+    "7": {
+      "primitive_oriented_rotation_classes": 2739840,
+      "rooted_at_canonical_directed_edge": 39956,
+      "fusion_distribution": {"1": 6, "2": 51},
+      "PSp(4,3)": {
+        "orbit_count": 108,
+        "record_count": 108,
+        "orbit_size_distribution": {"960": 1, "8640": 2, "25920": 105},
+        "stabilizer_order_distribution": {"1": 105, "3": 2, "27": 1}
+      },
+      "W(E6)": {
+        "orbit_count": 57,
+        "record_count": 57,
+        "orbit_size_distribution": {"960": 1, "17280": 1, "25920": 5, "51840": 50},
+        "stabilizer_order_distribution": {"1": 50, "2": 5, "3": 1, "54": 1}
+      }
+    },
+    "8": {
+      "primitive_oriented_rotation_classes": 26750160,
+      "rooted_at_canonical_directed_edge": 445836,
+      "fusion_distribution": {"1": 64, "2": 501},
+      "PSp(4,3)": {
+        "orbit_count": 1066,
+        "record_count": 1066,
+        "orbit_size_distribution": {"240": 1, "480": 1, "6480": 10, "8640": 3, "12960": 45, "25920": 1006},
+        "stabilizer_order_distribution": {"1": 1006, "2": 45, "3": 3, "4": 10, "54": 1, "108": 1}
+      },
+      "W(E6)": {
+        "orbit_count": 565,
+        "record_count": 565,
+        "orbit_size_distribution": {"240": 1, "480": 1, "6480": 4, "8640": 1, "12960": 14, "17280": 1, "25920": 63, "51840": 480},
+        "stabilizer_order_distribution": {"1": 480, "2": 63, "3": 1, "4": 14, "6": 1, "8": 4, "108": 1, "216": 1}
+      }
+    }
+  }
+}
