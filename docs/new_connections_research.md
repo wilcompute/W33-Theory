@@ -1,3 +1,5 @@
+> **Spectral erratum — PASS1150_SHIFTED_ADJACENCY_RETRACTION.** This historical file contains a descendant of the retracted claim that `D=A-I` has spectrum `{-7^6,-1^16,5^10}`. The exact spectrum is `{11^1,1^24,-5^15}`. The historical formulas are retained only for provenance and are not active evidence.
+
 # New Theoretical Connections to W(3,3) Theory
 
 **Research Date:** March 30, 2026  

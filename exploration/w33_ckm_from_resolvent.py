@@ -17,6 +17,11 @@ Since both are evaluated using the SAME octic, the misalignment
 comes from the GEOMETRY of how the octic connects to the cubic.
 """
 
+# PASS1150_SHIFTED_ADJACENCY_RETRACTION
+import os as _w33_retraction_os
+if _w33_retraction_os.environ.get("W33_ALLOW_RETRACTED_SHIFTED_ADJACENCY") != "1":
+    raise RuntimeError("This legacy module depends on the retracted D=A-I spectrum {-7^6,-1^16,5^10}. Use the canonical spectrum {11^1,1^24,-5^15} and analysis/w33_shifted_adjacency_spectral_audit.py instead. Set W33_ALLOW_RETRACTED_SHIFTED_ADJACENCY=1 only for historical archaeology.")
+
 import numpy as np
 from fractions import Fraction
 import json

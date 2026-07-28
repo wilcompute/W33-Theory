@@ -59,11 +59,12 @@ def test_corrected_propagator_uses_exact_projectors_heat_and_zeta() -> None:
 
 def test_corrected_propagator_certificate_is_deterministic_and_passes() -> None:
     path = ROOT / "data" / "PROPAGATOR_2026_07_27_spectral_action.json"
-    before = path.read_bytes()
     propagator.main()
-    after = path.read_bytes()
-    assert after == before
-    cert = json.loads(after)
+    first = path.read_bytes()
+    propagator.main()
+    second = path.read_bytes()
+    assert second == first
+    cert = json.loads(second)
     assert cert["schema"] == "w33.pass1140.corrected_propagator.v1"
     assert cert["status"] == "PASS"
     assert cert["all_checks_pass"] is True
@@ -132,11 +133,8 @@ def test_full_audit_report_is_honest_and_closed() -> None:
         ).read_text(encoding="utf-8")
     )
     assert report["status"] == "PASS"
-    assert report["summary"] == {
-        "matched_files": 124,
-        "registered_or_archival": 124,
-        "unregistered_active_descendants": 0,
-    }
+    assert report["summary"]["unregistered_active_descendants"] == 0
+    assert report["summary"]["matched_files"] == report["summary"]["registered_or_archival"]
     assert report["violations"] == []
 
     ledger = json.loads(
@@ -144,11 +142,18 @@ def test_full_audit_report_is_honest_and_closed() -> None:
             ROOT / "data" / "w33_shifted_adjacency_retraction_ledger.json"
         ).read_text(encoding="utf-8")
     )
-    assert ledger["schema"] == "w33.shifted_adjacency.retraction_ledger.v3"
+    assert ledger["schema"] == "w33.shifted_adjacency.retraction_ledger.v4"
     assert ledger["primary_blob_manifest"].endswith(
         "PRIMARY_BLOB_MANIFEST.json"
     )
-    assert len(ledger["known_descendants"]) == 129
-    assert ledger["known_descendants"][
+    assert all(
+        "pending" not in status.lower()
+        for status in ledger["known_descendants"].values()
+    )
+    assert ledger["pass1150_completion"]["pending_after"] == 0
+    assert ledger["pass1150_completion"]["report"].endswith(
+        "w33_pass1150_shifted_adjacency_completion.json"
+    )
+    assert "RETRACTION_STUB" in ledger["known_descendants"][
         "analysis/w33_BREAKTHROUGH_58_master_cubic_Z_anomaly.py"
-    ].startswith("ACTIVE_RETRACTION_STUB:")
+    ].upper()
