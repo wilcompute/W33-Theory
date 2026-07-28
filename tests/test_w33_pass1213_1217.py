@@ -6,7 +6,7 @@ from analysis.w33_pass1213_residual_commutant_geometry_memo import main as p1213
 from analysis.w33_pass1214_residual_species_prioritization_table import main as p1214
 from analysis.w33_pass1215_projector_fingerprint_atlas import main as p1215
 from analysis.w33_pass1216_exact_closure_scoreboard import main as p1216
-from analysis.w33_pass1217.breakthrough_map import main as p1217
+from analysis.w33_pass1217_breakthrough_map import main as p1217
 
 
 def test_1213_status():
