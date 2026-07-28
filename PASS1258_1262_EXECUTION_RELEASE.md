@@ -1,3 +1,9 @@
+# CORRECTION NOTICE — Passes 1310–1319 supersede the k=9 portions below
+
+**Active theorem state:** the literal carrier has 26 A5/S5 orbitals, not 9. The proposed vector `(432,4,0,1,1)` has Burnside value `43/5`. Passes 1260 and 1261 below are retracted. Passes 1258, 1259, and the independent shifted-adjacency theorem in Pass 1262 remain historical claims only to the extent supported by their own exact witnesses. Use `PASS1315_1319_EXACT_FRONTIERS.md` and `data/w33_pass1315_1319_exact_frontiers.json` for the active replacement.
+
+---
+
 # Passes 1258–1262: 27-Line Embedding, Species-20 Scaffold, A5 Fixed Points, Hecke Constants, Universal Shifted-Adjacency Theorem
 
 Date: 2026-07-28

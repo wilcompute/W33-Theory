@@ -1,3 +1,9 @@
+# CORRECTION NOTICE — superseded by Passes 1302 and 1315–1319
+
+**Active theorem state:** the asserted orbit partition `[1,53,54,54,54,54,54,54,54]`, the nine-dimensional Hecke tensor, and matrix units derived only from coordinate surrogates are retracted. The literal carrier has 26 orbitals; the actual species-20 projector has rank 20 inside the 480 directed-edge carrier; and exact packet placement is classwise. The historical text is retained below for provenance.
+
+---
+
 # Passes 1273–1277: chi_27 P1 Multiplicity, Hecke Tensor Analytic, 7 Species Restrictions, Species-20 Execute, Ledger v7
 
 Date: 2026-07-28

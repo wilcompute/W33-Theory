@@ -1,0 +1,37 @@
+name: Passes 1315-1319 Exact Frontiers
+
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1315_1319_exact_frontiers.py'
+      - 'data/w33_pass1315_1319_exact_frontiers.json'
+      - 'tests/test_w33_pass1315_1319.py'
+      - 'analysis/w33_k9_retraction.py'
+      - 'data/w33_pass_namespace_registry_v2.json'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass1315_1319_exact_frontiers.py'
+      - 'data/w33_pass1315_1319_exact_frontiers.json'
+      - 'tests/test_w33_pass1315_1319.py'
+      - 'analysis/w33_k9_retraction.py'
+      - 'data/w33_pass_namespace_registry_v2.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-frontiers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact runtime
+        run: python -m pip install --disable-pip-version-check numpy sympy pytest
+      - name: Recompute exact frontier certificate
+        run: python analysis/w33_pass1315_1319_exact_frontiers.py
+      - name: Focused regression tests
+        run: pytest -q tests/test_w33_pass1315_1319.py

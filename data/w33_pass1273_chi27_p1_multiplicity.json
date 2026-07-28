@@ -1,0 +1,11 @@
+{
+  "schema": "w33.k9_retraction.v1",
+  "status": "RETRACTED",
+  "reason": "The proposed fixed-point vector (432,4,0,1,1) has Burnside value 43/5, not 9. The literal A5/S5 orbital count is 26.",
+  "replacement": {
+    "orbit_count": 26,
+    "script": "analysis/w33_pass1315_1319_exact_frontiers.py",
+    "certificate": "data/w33_pass1315_1319_exact_frontiers.json",
+    "exact_hecke_release": "analysis/w33_pass1302_a5_s5_hecke_equality.py"
+  }
+}

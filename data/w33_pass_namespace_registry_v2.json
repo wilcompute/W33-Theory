@@ -29,21 +29,10 @@
     {"range": "1233-1242", "owner": "upgrade-frontier-tracks", "status": "COMPLETE"},
     {"range": "1243-1252", "owner": "materialization-execution-tracks", "status": "COMPLETE"},
     {"range": "1253-1262", "owner": "consolidation-universal-tracks", "status": "COMPLETE"},
-    {"range": "1263-1272", "owner": "dictionary-ledger-v6-tracks", "status": "COMPLETE"},
-    {"range": "1273-1277", "owner": "chi27-ledger-v7-track", "status": "COMPLETE",
-      "ledger_state": "13 EXACT / 6 PROVISIONAL / 3 OPEN",
-      "new_exact_theorems": [
-        "EXACT-11: 27-line perm module = chi_1 + chi_6 + chi_20; P1-component = chi_20",
-        "EXACT-12: Hecke tensor analytic constraints (k=9, orbit partition [1,53,54x7])",
-        "EXACT-13: 400 species-20 matrix unit descriptors, zero violations"
-      ],
-      "artifacts": {
-        "1273": "chi_27 P1 multiplicity: 27-line module is perm rep chi_1+chi_6+chi_20",
-        "1274": "Hecke tensor analytic: orbit partition sum=432, 9+81 constraint equations",
-        "1275": "7 provisional species restriction feasibility decompositions",
-        "1276": "400 species-20 matrix units produced, zero spot-check violations",
-        "1277": "Theorem ledger v7 (13 EXACT / 6 PROVISIONAL / 3 OPEN)"
-      }},
+    {"range": "1263-1272", "owner": "dictionary-ledger-v6-tracks", "status": "RETRACTED_BY_1318",
+      "reason": "The k=9 A5/Hecke chain was based on fixed-point vector (432,4,0,1,1), whose Burnside value is 43/5."},
+    {"range": "1273-1277", "owner": "chi27-ledger-v7-track", "status": "RETRACTED_BY_1318",
+      "reason": "EXACT-12 and dependent packet/dimension-fit claims were superseded by the literal 26-orbital and character-projector calculations."},
     {"range": "1300-1304", "owner": "exact-triality-matrix-cycle-track", "status": "COMPLETE",
       "artifacts": {
         "1300": "Hashimoto 81_plus to Levi E4 intertwiners and sign-twist boundary",
@@ -52,7 +41,15 @@
         "1303": "Literal primitive-cycle orbit classification through lengths 7 and 8",
         "1304": "A2 normalizer S3 triality: C3 torsor on three 432 carriers and regular S3 torsor on six 27 carriers"
       }},
-    {"range": "1310-1314", "owner": "literal-a5-correction-track", "status": "COMPLETE"}
+    {"range": "1310-1314", "owner": "literal-a5-correction-track", "status": "COMPLETE"},
+    {"range": "1315-1319", "owner": "exact-hecke-hashimoto-bridge-track", "status": "COMPLETE",
+      "artifacts": {
+        "1315": "26-dimensional Hecke Wedderburn decomposition and nine primitive central idempotents",
+        "1316": "classwise re-execution of the exact 480-dimensional Hashimoto decomposition",
+        "1317": "literal rank-20 species projector and carrier-level matrix units",
+        "1318": "fail-closed migration of the false k=9 auxiliary release chain",
+        "1319": "six-dimensional exact Hom space between the 432 and 480 carriers"
+      }}
   ],
-  "rule": "A pass number is canonical only when registered here."
+  "rule": "A pass number is canonical only when registered here. Retracted blocks remain registered for provenance but cannot contribute active theorem claims."
 }
