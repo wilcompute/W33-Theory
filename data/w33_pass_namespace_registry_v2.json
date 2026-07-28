@@ -19,8 +19,9 @@
     {"range": "1183-1187", "owner": "execution-track-5", "status": "COMPLETE"},
     {"range": "1188-1192", "owner": "exact-correction-track", "status": "COMPLETE"},
     {"range": "1193-1197", "owner": "exact-bridge-track", "status": "COMPLETE"},
-    {"range": "1198-1202", "owner": "breakthrough-continuation-track", "status": "COMPLETE",
-      "artifacts": {"1198": "Exact bridge synthesis memo", "1199": "Residual factor target register", "1200": "Degree-40 Ihara launch pad", "1201": "Manuscript consolidation queue", "1202": "Continuation stub for bundle 1203-1207"}}
+    {"range": "1198-1202", "owner": "breakthrough-continuation-track", "status": "COMPLETE"},
+    {"range": "1203-1207", "owner": "breakthrough-execution-track", "status": "COMPLETE",
+      "artifacts": {"1203": "Residual exact-factor attack plan", "1204": "Sym^3(V24) elimination gate", "1205": "Degree-40 Ihara exact execution plan", "1206": "Manuscript inline application checklist", "1207": "Breakthrough synthesis release trigger"}}
   ],
   "rule": "A pass number is canonical only when registered here."
 }
