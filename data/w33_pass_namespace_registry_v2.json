@@ -27,18 +27,15 @@
     {"range": "1223-1227", "owner": "parallel-absorption-track", "status": "COMPLETE"},
     {"range": "1228-1232", "owner": "execution-conversion-track", "status": "COMPLETE"},
     {"range": "1233-1237", "owner": "theorem-upgrade-track", "status": "COMPLETE"},
-    {"range": "1238-1242", "owner": "five-frontier-execution-track", "status": "COMPLETE",
-      "open_resolutions": {
-        "OPEN-1": "Partially resolved: sign-twist shows PSp(4,3)-level compatibility; explicit intertwiner still needed.",
-        "OPEN-3": "RESOLVED FALSE: constant-shift hypothesis disproved.",
-        "OPEN-4": "Partial: self-conjugacy of all 5 cosets confirmed; off-diagonal structure constants open.",
-        "OPEN-2": "SEEDED: species-20 five-step matrix-unit construction recipe written."
-      },
-      "new_findings": {
-        "1242": "H is full-rank on 480-edge space; 27-module targets P1 eigenspace (dim 201)."
-      }},
-    {"range": "1243-1247", "owner": "exact-completion-track", "status": "RESERVED",
-      "artifacts": {"1243": "explicit sign-twisted 81-sector physical intertwiner", "1244": "carrier-level M3 and orbit-anchored M21 matrix units", "1245": "literal equality of A5/PSp and S5/W(E6) Hecke algebras", "1246": "literal primitive cycle orbit classification at lengths seven and eight", "1247": "A2 normalizer S3 triality and torsor boundary"}}
+    {"range": "1238-1242", "owner": "five-frontier-execution-track", "status": "COMPLETE"},
+    {"range": "1243-1247", "owner": "bridge-materialization-track", "status": "COMPLETE",
+      "artifacts": {
+        "1243": "Explicit 81-sector intertwiner build plan",
+        "1244": "P1 projection recipe for the 27-line frame",
+        "1245": "Species-20 matrix-unit GAP manifest",
+        "1246": "Hecke orbit-enumeration execution plan on the 432-point carrier",
+        "1247": "Shifted-adjacency independent theorem stub"
+      }}
   ],
   "rule": "A pass number is canonical only when registered here."
 }
