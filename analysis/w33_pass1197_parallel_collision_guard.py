@@ -90,8 +90,9 @@ def main() -> dict:
     }
     assert all(gate_checks.values()), gate_checks
 
+    baseline_registered_pass_count = 74
     result = {
-        "schema": "w33.pass1197.parallel_collision_guard.v1",
+        "schema": "w33.pass1197.parallel_collision_guard.v2",
         "status": "PASS",
         "headline": "Pass-number ownership, exact certificates, legacy synthesis, and transport cleanup are enforced as mandatory parallel-development gates.",
         "registry": {
@@ -99,6 +100,7 @@ def main() -> dict:
             "registered_pass_count": len(seen),
             "minimum_registered": min(seen),
             "maximum_registered": max(seen),
+            "baseline_registered_pass_count": baseline_registered_pass_count,
             "collisions": collisions,
             "unregistered_modern_files": unregistered,
         },
@@ -107,12 +109,12 @@ def main() -> dict:
         "gate_checks": gate_checks,
         "checks": {
             "registry_has_no_overlap": not collisions,
-            "registered_pass_count_74": len(seen) == 74,
+            "registered_pass_count_is_monotone": len(seen) >= baseline_registered_pass_count,
             "no_unregistered_modern_files": not unregistered,
             "passes_1193_1197_all_pass": len(certificates) == 5,
             "mandatory_gates_installed": all(gate_checks.values()),
         },
-        "policy": "Parallel agents must reserve a disjoint range before publication; the range, artifacts, exact certificates, synthesis guard, and cleanup gate must all agree before merge.",
+        "policy": "Parallel agents must reserve a disjoint range before publication; the range, artifacts, exact certificates, synthesis guard, and cleanup gate must all agree before merge. Registry growth is monotone and is not pinned to one historical count.",
     }
     assert all(result["checks"].values())
     OUT.parent.mkdir(parents=True, exist_ok=True)
