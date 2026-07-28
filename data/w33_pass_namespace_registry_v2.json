@@ -1,16 +1,23 @@
 {
-  "schema":"w33.pass_namespace_registry.v2",
-  "status":"ACTIVE",
-  "date":"2026-07-27",
-  "canonical_blocks":[
-    {"range":"1120-1124","owner":"glue-track","primary":"analysis/w33_pass1120_1124_boundaries_aliases_trees.md"},
-    {"range":"1125-1128","owner":"glue-track","primary":"analysis/w33_pass1125_1128_filter_carrier_bridge.md"},
-    {"range":"1132-1136","owner":"exact-audit-track","primary":"PASS1132_1136_EXACT_EXECUTION_RELEASE.md"},
-    {"range":"1137-1140","owner":"parallel-codex-track","status":"COMPLETE","primary":"PASS1137_1140_EXACT_CUBIC_PUBLICATION_RELEASE.md"},
-    {"range":"1142-1146","owner":"exact-bridge-corpus-track","status":"COMPLETE","primary":"PASS1142_1146_EXACT_RELEASE.md"},
-    {"range":"1147","owner":"parallel-codex-track","status":"RESERVED","primary":"PASS1147_RESERVED.md"},
-    {"range":"1148-1152","owner":"exact-crossed-bridge-track","status":"COMPLETE","primary":"PASS1148_1152_EXACT_CROSSED_BRIDGE_RELEASE.md","completion_merge":"78334932943e11b1394811bfb56bb1fee8827192","artifacts":{"1148":"exact S5 Hecke stabilizer-intersection filtration","1149":"C3-Fourier Steinberg bridge inside cubic kernel","1150":"transactional completion of shifted-adjacency pending dispositions","1151":"canonical five-species degree-540 taxonomy lock","1152":"78-dimensional crossed C3 commutant"}},
-    {"range":"1153-1157","owner":"parallel-codex-track","status":"COMPLETE","primary":"PASS1153_1157_EXACT_SYNTHESIS_RELEASE.md","commit":"e80b44e62c72b962c29b4f04bcb89baaf786bf4b","artifacts":{"1153":"Fourier selection audit","1154":"collision-free degree-540 separator","1155":"crossed-commutant center lock","1156":"typed 432-carrier distinction","1157":"publication synchronization rule"}}
+  "schema": "w33.pass_namespace_registry.v2",
+  "status": "ACTIVE",
+  "date": "2026-07-27",
+  "canonical_blocks": [
+    {"range": "1120-1124", "owner": "glue-track", "primary": "analysis/w33_pass1120_1124_boundaries_aliases_trees.md"},
+    {"range": "1125-1128", "owner": "glue-track", "primary": "analysis/w33_pass1125_1128_filter_carrier_bridge.md"},
+    {"range": "1132-1136", "owner": "exact-audit-track", "primary": "PASS1132_1136_EXACT_EXECUTION_RELEASE.md"},
+    {"range": "1137-1140", "owner": "parallel-codex-track", "status": "COMPLETE", "primary": "PASS1137_1140_EXACT_CUBIC_PUBLICATION_RELEASE.md"},
+    {"range": "1142-1146", "owner": "exact-bridge-corpus-track", "status": "COMPLETE", "primary": "PASS1142_1146_EXACT_RELEASE.md"},
+    {"range": "1147", "owner": "parallel-codex-track", "status": "RESERVED", "primary": "PASS1147_RESERVED.md"},
+    {"range": "1148-1152", "owner": "exact-crossed-bridge-track", "status": "COMPLETE",
+      "primary": "PASS1148_1152_EXACT_CROSSED_BRIDGE_RELEASE.md",
+      "artifacts": {"1148": "exact S5 Hecke stabilizer-intersection filtration", "1149": "C3-Fourier Steinberg bridge", "1150": "shifted-adjacency migration closure", "1151": "five-species degree-540 taxonomy lock", "1152": "78-dim crossed C3 commutant"}},
+    {"range": "1153-1157", "owner": "continuation-audit-track", "status": "COMPLETE",
+      "primary": "PASS1153_1157_CONTINUATION_RELEASE.md",
+      "artifacts": {"1153": "manuscript 432-carrier sweep", "1154": "colored bridge rank checker", "1155": "separator wired into registry", "1156": "27-central-channel encoder", "1157": "Sp(4,3) stabilizer algebraic analysis + GAP script"}},
+    {"range": "1158-1162", "owner": "breakthrough-track", "status": "COMPLETE",
+      "primary": "PASS1158_1162_BREAKTHROUGH_RELEASE.md",
+      "artifacts": {"1158": "1952-dim residual prime obstruction and split analysis", "1159": "Hecke structure constants verification", "1160": "W(E6) character table bridge", "1161": "exact propagator determinant product + Ihara zeta", "1162": "full corpus synchronization, 22 invariants all pass"}}
   ],
-  "rule":"A pass number is canonical only when registered here with a primary master artifact or explicit reservation."
+  "rule": "A pass number is canonical only when registered here with a primary master artifact or explicit reservation."
 }
