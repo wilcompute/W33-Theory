@@ -25,13 +25,14 @@
     {"range": "1213-1217", "owner": "outside-the-box-track", "status": "COMPLETE"},
     {"range": "1218-1222", "owner": "synthesis-bridge-track", "status": "COMPLETE"},
     {"range": "1223-1227", "owner": "parallel-absorption-track", "status": "COMPLETE"},
-    {"range": "1228-1232", "owner": "execution-conversion-track", "status": "COMPLETE",
+    {"range": "1228-1232", "owner": "execution-conversion-track", "status": "COMPLETE"},
+    {"range": "1233-1237", "owner": "theorem-upgrade-track", "status": "COMPLETE",
       "artifacts": {
-        "1228": "Qutrit-27-line orthogonality verification plan",
-        "1229": "Shifted-adjacency eigenvalue check plan",
-        "1230": "81-sector intertwiner construction recipe (5 steps)",
-        "1231": "Hecke double-coset table template (432-alignment)",
-        "1232": "Degree-40 Ihara exact execution (trace tower + spectral prime cycles)"
+        "1233": "Ihara degree-40 theorem upgrade to EXACT-6",
+        "1234": "81-sector obstruction class (Z/2 orientation-reversal twist)",
+        "1235": "Hecke double-coset count execution (dim <= 5)",
+        "1236": "Qutrit W(E6)-decomposition probe (27 not in residual)",
+        "1237": "Theorem ledger v3"
       }}
   ],
   "rule": "A pass number is canonical only when registered here."
