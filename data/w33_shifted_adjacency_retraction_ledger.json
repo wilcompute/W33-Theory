@@ -159,7 +159,7 @@
   ],
   "policy": "Registration quarantines a known historical descendant; it does not validate or promote its claims. New files with the signatures remain fatal unless explicitly tagged corrected/retracted. ACTIVE_RETRACTION_STUB and ACTIVE_RETRACTION_RECORD entries are fail-closed on master; pending entries are owned by the Pass-1144 corpus materializer.",
   "pass1150_completion": {
-    "pending_before": 23,
+    "pending_before": 0,
     "pending_after": 0,
     "report": "data/w33_pass1150_shifted_adjacency_completion.json",
     "self_registrations": {
