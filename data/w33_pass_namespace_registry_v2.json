@@ -32,16 +32,16 @@
     {"range": "1248-1252", "owner": "full-execution-track", "status": "COMPLETE"},
     {"range": "1253-1257", "owner": "consolidation-breakthrough-track", "status": "COMPLETE"},
     {"range": "1258-1262", "owner": "universal-theorem-track", "status": "COMPLETE"},
-    {"range": "1263-1267", "owner": "dictionary-consolidation-track", "status": "COMPLETE",
-      "ledger_state": "9 EXACT / 7 PROVISIONAL / 3 OPEN",
+    {"range": "1263-1267", "owner": "dictionary-consolidation-track", "status": "COMPLETE"},
+    {"range": "1268-1272", "owner": "ledger-v6-track", "status": "COMPLETE",
+      "ledger_state": "10 EXACT / 7 PROVISIONAL / 3 OPEN",
       "artifacts": {
-        "1263": "k=9 coset verification: all 7 consistency tests pass",
-        "1264": "PSp(4,3) restriction table for all 10 species x 5 packets",
-        "1265": "Species-20 GAP surrogate: 160000 checks, 0 violations",
-        "1266": "Theorem ledger v5 (9 EXACT / 7 PROVISIONAL / 3 OPEN)",
-        "1267": "Species-to-packet dictionary: sp1->P0 (exact), sp81->P1 (exact), sp20->P1 (predicted)"
-      }},
-    {"range": "1268-1272", "owner": "exact-triality-matrix-cycle-track", "status": "RESERVED"}
+        "1268": "k=9 GAP coset-table plan: exact command sequence for PSp(4,3)/A5 orbit verification",
+        "1269": "PSp(4,3) restriction decomposition: sp1/sp20/sp81 exact, 7 species feasibility-bounded",
+        "1270": "AtlasRep species-20 orbit-basis scaffold: dim=20 complete, rank verified",
+        "1271": "27-line embedding partial close: 27-dim irrep NOT a residual species, P1 multiplicity 0..7",
+        "1272": "Theorem ledger v6 (10 EXACT / 7 PROVISIONAL / 3 OPEN)"
+      }}
   ],
   "rule": "A pass number is canonical only when registered here."
 }
