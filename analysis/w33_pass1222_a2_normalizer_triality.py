@@ -1,11 +1,17 @@
-import sys,json,hashlib
+import json,hashlib
 from pathlib import Path
 import numpy as np
 import w33_we6_exact_core as c
-triples=c.a2_triples();orbits=c.a2_orbits();orbit_of={x:i for i,o in enumerate(orbits) for x in o}
-a,b,_=c.base_data()['a2_triple'];sa=c.reflection_permutation(a);sb=c.reflection_permutation(b)
+triples=c.a2_triples(); tri_idx={t:i for i,t in enumerate(triples)}
+orbits=c.a2_orbits(); orbit_of={x:i for i,o in enumerate(orbits) for x in o}
+a,b,_=c.base_data()['a2_triple']; sa=c.reflection_permutation(a); sb=c.reflection_permutation(b)
+def induced_triple_action(root_perm):
+ out=np.empty(len(triples),dtype=np.int16)
+ for i,t in enumerate(triples):
+  out[i]=tri_idx[tuple(sorted(int(root_perm[x]) for x in t))]
+ return out
 def orbit_perm(root_perm):
- act=c.induced_triple_action(root_perm);p=[]
+ act=induced_triple_action(root_perm);p=[]
  for o in orbits:
   im={orbit_of[int(act[x])] for x in o};assert len(im)==1;p.append(next(iter(im)))
  return tuple(p)
