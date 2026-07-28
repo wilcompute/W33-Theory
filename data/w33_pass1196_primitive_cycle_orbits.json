@@ -1,0 +1,88 @@
+{
+  "schema": "w33.pass1196.primitive_cycle_orbits.v1",
+  "status": "PASS",
+  "headline": "Primitive reduced cycles are classified literally under PSp(4,3) and W(E6) through length six, with an exact equivariant spectral continuation through length forty.",
+  "literal_orbit_frontier": {
+    "maximum_length": 6,
+    "data": {
+      "3": {
+        "primitive_oriented_rotation_classes": 320,
+        "PSp(4,3)": {"orbit_count": 1, "orbit_size_distribution": {"320": 1}, "stabilizer_order_distribution": {"81": 1}},
+        "W(E6)": {"orbit_count": 1, "orbit_size_distribution": {"320": 1}, "stabilizer_order_distribution": {"162": 1}}
+      },
+      "4": {
+        "primitive_oriented_rotation_classes": 3480,
+        "PSp(4,3)": {"orbit_count": 2, "orbit_size_distribution": {"240": 1, "3240": 1}, "stabilizer_order_distribution": {"8": 1, "108": 1}},
+        "W(E6)": {"orbit_count": 2, "orbit_size_distribution": {"240": 1, "3240": 1}, "stabilizer_order_distribution": {"16": 1, "216": 1}}
+      },
+      "5": {
+        "primitive_oriented_rotation_classes": 36288,
+        "PSp(4,3)": {"orbit_count": 3, "orbit_size_distribution": {"5184": 2, "25920": 1}, "stabilizer_order_distribution": {"1": 1, "5": 2}},
+        "W(E6)": {"orbit_count": 2, "orbit_size_distribution": {"10368": 1, "25920": 1}, "stabilizer_order_distribution": {"2": 1, "5": 1}}
+      },
+      "6": {
+        "primitive_oriented_rotation_classes": 302880,
+        "PSp(4,3)": {"orbit_count": 18, "orbit_size_distribution": {"480": 1, "2160": 2, "4320": 1, "8640": 1, "12960": 4, "25920": 9}, "stabilizer_order_distribution": {"1": 9, "2": 4, "3": 1, "6": 1, "12": 2, "54": 1}},
+        "W(E6)": {"orbit_count": 13, "orbit_size_distribution": {"480": 1, "4320": 2, "8640": 1, "12960": 2, "25920": 4, "51840": 3}, "stabilizer_order_distribution": {"1": 3, "2": 4, "4": 2, "6": 1, "12": 2, "108": 1}}
+      }
+    }
+  },
+  "degree40_continuation": {
+    "maximum_length": 40,
+    "primitive_total": {
+      "1": 0,
+      "2": 0,
+      "3": 320,
+      "4": 3480,
+      "5": 36288,
+      "6": 302880,
+      "7": 2739840,
+      "8": 26750160,
+      "9": 262162880,
+      "10": 2594020512,
+      "11": 25939032000,
+      "12": 261529827680,
+      "13": 2655565604160,
+      "14": 27125053301760,
+      "15": 278483380379008,
+      "16": 2871857983606320,
+      "17": 29732177634512640,
+      "18": 308884288153885920,
+      "19": 3218899502855937600,
+      "20": 33637499842949421504,
+      "21": 352392854412461504640,
+      "22": 3700124971596963007200,
+      "23": 38931749706290017368960,
+      "24": 410405528157682881779360,
+      "25": 4333882377380650565929920,
+      "26": 45839140529742959501084640,
+      "27": 485555340425612376257522240,
+      "28": 5150354860946261910054201120,
+      "29": 54700320592121577714432705600,
+      "30": 581646742296216416557282623552,
+      "31": 6191723385733900538117125593600,
+      "32": 65980552329226649698049149209840,
+      "33": 703792558178418207015695095993600,
+      "34": 7514020547610762280771866874988160,
+      "35": 80292676708754995185681393636412032,
+      "36": 858685570357518683205490617363436640,
+      "37": 9190256374637226991057953531036027840,
+      "38": 98432482749403983829411932618333847200,
+      "39": 1054994302288483725241718682743893676160,
+      "40": 11314813892043987952589222211358740216768
+    },
+    "trace_identity": "Tr(B^n)=11^n+201+200(-1)^n+24*s_n(2)+15*s_n(-4)",
+    "quadratic_recurrence": "s_0=2, s_1=lambda, s_n=lambda*s_{n-1}-11*s_{n-2}"
+  },
+  "notable_mergers": {
+    "length5": "Three PSp(4,3) orbits of sizes 5184,5184,25920 fuse to two W(E6) orbits of sizes 10368,25920.",
+    "length6": "Eighteen PSp(4,3) orbits fuse to thirteen W(E6) orbits."
+  },
+  "checks": {
+    "literal_counts_match_ihara": true,
+    "triangle_transitive_we6": true,
+    "length6_orbit_counts": true,
+    "degree40_integral_nonnegative_totals": true
+  },
+  "boundary": "Literal orbit enumeration is completed through length six. Lengths seven through forty are certified by exact W(E6)-equivariant Hashimoto spectral packets and Möbius inversion, but are not mislabeled as literal group-orbit partitions."
+}
