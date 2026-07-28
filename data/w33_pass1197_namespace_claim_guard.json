@@ -1,0 +1,32 @@
+{
+  "schema": "w33.pass1197.namespace_claim_guard.v1",
+  "status": "PASS",
+  "errors": [],
+  "registered_ranges": [
+    {"start": 1120, "stop": 1124, "owner": "glue-track"},
+    {"start": 1125, "stop": 1128, "owner": "glue-track"},
+    {"start": 1132, "stop": 1136, "owner": "exact-audit-track"},
+    {"start": 1137, "stop": 1140, "owner": "parallel-codex-track"},
+    {"start": 1142, "stop": 1146, "owner": "exact-bridge-corpus-track"},
+    {"start": 1147, "stop": 1147, "owner": "parallel-codex-track"},
+    {"start": 1148, "stop": 1152, "owner": "exact-crossed-bridge-track"},
+    {"start": 1153, "stop": 1157, "owner": "continuation-audit-track"},
+    {"start": 1158, "stop": 1162, "owner": "breakthrough-track"},
+    {"start": 1163, "stop": 1167, "owner": "execution-track"},
+    {"start": 1168, "stop": 1172, "owner": "execution-track-2"},
+    {"start": 1173, "stop": 1177, "owner": "execution-track-3"},
+    {"start": 1178, "stop": 1182, "owner": "execution-track-4"},
+    {"start": 1183, "stop": 1187, "owner": "execution-track-5"},
+    {"start": 1188, "stop": 1192, "owner": "exact-parallel-correction-track"},
+    {"start": 1193, "stop": 1197, "owner": "a5-wedderburn-ihara-ci-track"}
+  ],
+  "required_artifact_count": 11,
+  "forbidden_pattern_count": 4,
+  "policy": {
+    "future_pass_files_must_be_registered": true,
+    "canonical_ranges_must_not_overlap": true,
+    "exact_result_jsons_must_pass": true,
+    "pull_request_gate_mandatory": true,
+    "precommit_gate_mandatory": true
+  }
+}
