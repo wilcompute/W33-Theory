@@ -1,0 +1,79 @@
+{
+  "schema": "w33.pass1310_1314.literal_a5_coset_correction.v1",
+  "status": "PASS",
+  "scope": "Exact finite permutation-group and character-theory certificate; no physics claim.",
+  "construction": {
+    "e8_roots": 240,
+    "a2_triples": 2240,
+    "we6_order": 51840,
+    "psp43_order": 25920,
+    "we6_a2_orbit_sizes": [1, 1, 27, 27, 27, 27, 27, 27, 240, 270, 270, 432, 432, 432],
+    "number_of_432_carriers": 3
+  },
+  "literal_432_carrier_theorem": {
+    "all_three_carriers_agree": true,
+    "records": [
+      {
+        "carrier_index": 1,
+        "carrier_size": 432,
+        "s5_stabilizer_order": 120,
+        "a5_intersection_order": 60,
+        "a5_fixed_points": {"1A": 432, "2A": 24, "3A": 36, "5A": 2, "5B": 2},
+        "a5_orbit_count": 26,
+        "a5_orbit_sizes": [1, 1, 5, 5, 5, 5, 5, 5, 10, 10, 10, 10, 20, 20, 20, 20, 20, 20, 20, 20, 20, 30, 30, 30, 30, 60],
+        "a5_permutation_character_multiplicities": {"1": 26, "3": 16, "3prime": 16, "4": 40, "5": 30},
+        "restriction_commutant_dimension": 3688
+      },
+      {
+        "carrier_index": 2,
+        "carrier_size": 432,
+        "s5_stabilizer_order": 120,
+        "a5_intersection_order": 60,
+        "a5_fixed_points": {"1A": 432, "2A": 24, "3A": 36, "5A": 2, "5B": 2},
+        "a5_orbit_count": 26,
+        "a5_orbit_sizes": [1, 1, 5, 5, 5, 5, 5, 5, 10, 10, 10, 10, 20, 20, 20, 20, 20, 20, 20, 20, 20, 30, 30, 30, 30, 60],
+        "a5_permutation_character_multiplicities": {"1": 26, "3": 16, "3prime": 16, "4": 40, "5": 30},
+        "restriction_commutant_dimension": 3688
+      },
+      {
+        "carrier_index": 3,
+        "carrier_size": 432,
+        "s5_stabilizer_order": 120,
+        "a5_intersection_order": 60,
+        "a5_fixed_points": {"1A": 432, "2A": 24, "3A": 36, "5A": 2, "5B": 2},
+        "a5_orbit_count": 26,
+        "a5_orbit_sizes": [1, 1, 5, 5, 5, 5, 5, 5, 10, 10, 10, 10, 20, 20, 20, 20, 20, 20, 20, 20, 20, 30, 30, 30, 30, 60],
+        "a5_permutation_character_multiplicities": {"1": 26, "3": 16, "3prime": 16, "4": 40, "5": 30},
+        "restriction_commutant_dimension": 3688
+      }
+    ],
+    "exact_fixed_point_vector": [432, 24, 36, 2, 2],
+    "exact_hecke_dimension": 26,
+    "exact_restriction": "26*1 + 16*3 + 16*3' + 40*4 + 30*5"
+  },
+  "corrections": {
+    "pass1260_1263_fixed_vector": {"1A": 432, "2A": 4, "3A": 0, "5A": 1, "5B": 1},
+    "pass1260_1263_burnside_value": "43/5",
+    "pass1260_1263_claimed_value": 9,
+    "pass1260_1263_verdict": "FALSE: 43/5 is not an integer and is not 9.",
+    "carrier_firewall": {
+      "coset_carrier_dimension": 432,
+      "hashimoto_packet_dimensions": [1, 201, 200, 48, 30],
+      "hashimoto_packet_sum": 480,
+      "verdict": "The 480-dimensional Hashimoto packet decomposition cannot be used as a decomposition of the 432-point coset carrier."
+    },
+    "pass1264_verdict": "PROVISIONAL CAPACITY TABLE, not an exact restriction table: divisibility/floor bounds do not compute character inner products.",
+    "pass1265_verdict": "SCAFFOLD: coordinate matrix units verify M_20 identities tautologically but do not yet include a W(E6) action or AtlasRep basis.",
+    "pass1273_1277_verdict": "PROVISIONAL where packet assignments are inferred from dimension fits; exactness requires literal character/projector computation."
+  },
+  "checks": {
+    "we6_order_51840": true,
+    "psp_order_25920": true,
+    "three_432_carriers": true,
+    "literal_fixed_vector": true,
+    "literal_orbit_count_26": true,
+    "character_dimension_432": true,
+    "old_candidate_rejected": true,
+    "carrier_dimensions_separated": true
+  }
+}
