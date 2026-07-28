@@ -1,0 +1,52 @@
+{
+  "boundary": "Checked-in certificate is compact. --full-output deterministically emits every representative and fusion record.",
+  "encoding": "hex packs vertex_i in bits [6i,6i+5]",
+  "headline": "Literal primitive tailless nonbacktracking cycle orbits are classified at lengths seven and eight.",
+  "lengths": {
+    "7": {
+      "PSp(4,3)": {
+        "orbit_count": 108,
+        "orbit_size_distribution": {"960":1,"8640":2,"25920":105},
+        "record_count": 108,
+        "sample_first": [["3081002040",960,27,0,"2221"],["d101002040",25920,1,0,"22111"],["d583002040",25920,1,0,"211111"]],
+        "sample_last": [["15698344040",25920,1,1,"1111111"],["1185b584040",25920,1,1,"1111111"],["1581d584040",25920,1,1,"1111111"]],
+        "stabilizer_order_distribution": {"1":105,"3":2,"27":1}
+      },
+      "W(E6)": {
+        "orbit_count": 57,
+        "orbit_size_distribution": {"960":1,"17280":1,"25920":5,"51840":50},
+        "record_count": 57,
+        "sample_first": [["3081002040",960,54,0,"2221",1,[0]],["d101002040",25920,2,0,"22111",1,[1]],["d583002040",25920,2,0,"211111",1,[2]]],
+        "sample_last": [["15317344040",51840,1,1,"1111111",2,[102,103]],["11797344040",51840,1,1,"1111111",2,[104,105]],["1185b584040",51840,1,1,"1111111",2,[106,107]]],
+        "stabilizer_order_distribution": {"1":50,"2":5,"3":1,"54":1}
+      },
+      "fusion_distribution": {"1":6,"2":51},
+      "primitive_oriented_rotation_classes": 2739840,
+      "rooted_at_canonical_directed_edge": 39956
+    },
+    "8": {
+      "PSp(4,3)": {
+        "orbit_count": 1066,
+        "orbit_size_distribution": {"240":1,"480":1,"6480":10,"8640":3,"12960":45,"25920":1006},
+        "record_count": 1066,
+        "sample_first": [["35f081002040",25920,1,0,"22211"],["3560c1002040",25920,1,0,"221111"],["387101002040",25920,1,0,"221111"]],
+        "sample_last": [["3de5d4584040",25920,1,1,"11111111"],["4615d4584040",25920,1,1,"11111111"],["460614584040",12960,2,1,"11111111"]],
+        "stabilizer_order_distribution": {"1":1006,"2":45,"3":3,"4":10,"54":1,"108":1}
+      },
+      "W(E6)": {
+        "orbit_count": 565,
+        "orbit_size_distribution": {"240":1,"480":1,"6480":4,"8640":1,"12960":14,"17280":1,"25920":63,"51840":480},
+        "record_count": 565,
+        "sample_first": [["35f081002040",25920,2,0,"22211",1,[0]],["3560c1002040",25920,2,0,"221111",1,[1]],["387101002040",51840,1,0,"221111",2,[2,3]]],
+        "sample_last": [["39a612584040",51840,1,1,"11111111",2,[1058,1063]],["55a612584040",25920,2,1,"11111111",1,[1059]],["3dc612584040",12960,4,1,"11111111",2,[1060,1062]]],
+        "stabilizer_order_distribution": {"1":480,"2":63,"3":1,"4":14,"6":1,"8":4,"108":1,"216":1}
+      },
+      "fusion_distribution": {"1":64,"2":501},
+      "primitive_oriented_rotation_classes": 26750160,
+      "rooted_at_canonical_directed_edge": 445836
+    }
+  },
+  "records_sha256": "c6fd966ea9f99bd6b69ffdd64864d7cc3f55f13aeff94c28103bdbe6459f052d",
+  "schema": "w33.pass1226.literal_cycle_orbits_7_8.v1",
+  "status": "PASS"
+}
