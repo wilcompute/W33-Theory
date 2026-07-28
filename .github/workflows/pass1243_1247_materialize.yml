@@ -1,0 +1,108 @@
+name: Materialize Passes 1243-1247 Exact Release
+
+on:
+  pull_request:
+    paths:
+      - 'data/pass1243_1247_exact_bundle.b64'
+      - '.github/workflows/pass1243_1247_materialize.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  materialize-and-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+          fetch-depth: 1
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Decode reviewed exact bundle
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64, hashlib, io, tarfile
+          bundle = Path('data/pass1243_1247_exact_bundle.b64')
+          raw = base64.b64decode(bundle.read_bytes(), validate=True)
+          expected = 'd2e1e9d4e6c520f8402d831d8bfa563a14f24e8d2ec4cea0faed87f13dca44e4'
+          assert hashlib.sha256(raw).hexdigest() == expected
+          allowed = {
+              '.github/workflows/pass1243_1247_exact_release.yml',
+              'PASS1243_1247_EXACT_TRIALITY_MATRIX_CYCLE_RELEASE.md',
+              'analysis/w33_pass1243_1247_exact_core.py',
+              'analysis/w33_pass1243_81_sign_twist_intertwiner.py',
+              'analysis/w33_pass1244_m3_m21_matrix_units.py',
+              'analysis/w33_pass1245_a5_s5_hecke_equality.py',
+              'analysis/w33_pass1246_literal_cycle_orbits_7_8.py',
+              'analysis/w33_pass1247_a2_normalizer_triality.py',
+              'data/w33_pass1243_81_sign_twist_intertwiner.json',
+              'data/w33_pass1244_m3_m21_matrix_units.json',
+              'data/w33_pass1245_a5_s5_hecke_equality.json',
+              'data/w33_pass1246_literal_cycle_orbits_7_8.json',
+              'data/w33_pass1247_a2_normalizer_triality.json',
+              'tests/test_w33_pass1243_1247.py',
+          }
+          with tarfile.open(fileobj=io.BytesIO(raw), mode='r:gz') as archive:
+              names = {m.name.removeprefix('./') for m in archive.getmembers() if m.isfile()}
+              assert names == allowed, (names - allowed, allowed - names)
+              for member in archive.getmembers():
+                  name = member.name.removeprefix('./')
+                  assert not name.startswith('/') and '..' not in Path(name).parts
+              archive.extractall('.')
+          PY
+      - name: Install exact runtime
+        run: python -m pip install --disable-pip-version-check numpy pytest
+      - name: Recompute all five exact passes
+        run: |
+          PYTHONPATH=analysis python analysis/w33_pass1243_81_sign_twist_intertwiner.py
+          PYTHONPATH=analysis python analysis/w33_pass1244_m3_m21_matrix_units.py
+          PYTHONPATH=analysis python analysis/w33_pass1245_a5_s5_hecke_equality.py
+          PYTHONPATH=analysis python analysis/w33_pass1246_literal_cycle_orbits_7_8.py
+          PYTHONPATH=analysis python analysis/w33_pass1247_a2_normalizer_triality.py
+      - name: Focused regressions and repository guards
+        run: |
+          pytest -q tests/test_w33_pass1243_1247.py
+          PYTHONPATH=analysis python analysis/w33_pass1192_parallel_synthesis_guard.py
+          PYTHONPATH=analysis python analysis/w33_pass1197_parallel_collision_guard.py --check-only
+      - name: Complete namespace entry
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          path = Path('data/w33_pass_namespace_registry_v2.json')
+          data = json.loads(path.read_text())
+          row = next(x for x in data['canonical_blocks'] if x['range'] == '1243-1247')
+          assert row['owner'] == 'exact-completion-track'
+          assert row['status'] == 'RESERVED'
+          row['status'] = 'COMPLETE'
+          path.write_text(json.dumps(data, indent=2) + '\n')
+          PY
+      - name: Commit materialized exact release
+        run: |
+          git config user.name 'w33-exact-release[bot]'
+          git config user.email 'w33-exact-release[bot]@users.noreply.github.com'
+          git rm data/pass1243_1247_exact_bundle.b64 .github/workflows/pass1243_1247_materialize.yml
+          git add .github/workflows/pass1243_1247_exact_release.yml \
+            PASS1243_1247_EXACT_TRIALITY_MATRIX_CYCLE_RELEASE.md \
+            analysis/w33_pass1243_1227_exact_core.py 2>/dev/null || true
+          git add analysis/w33_pass1243_1247_exact_core.py \
+            analysis/w33_pass1243_81_sign_twist_intertwiner.py \
+            analysis/w33_pass1244_m3_m21_matrix_units.py \
+            analysis/w33_pass1245_a5_s5_hecke_equality.py \
+            analysis/w33_pass1246_literal_cycle_orbits_7_8.py \
+            analysis/w33_pass1247_a2_normalizer_triality.py \
+            data/w33_pass1243_81_sign_twist_intertwiner.json \
+            data/w33_pass1244_m3_m21_matrix_units.json \
+            data/w33_pass1245_a5_s5_hecke_equality.json \
+            data/w33_pass1246_literal_cycle_orbits_7_8.json \
+            data/w33_pass1247_a2_normalizer_triality.json \
+            data/w33_pass_namespace_registry_v2.json \
+            tests/test_w33_pass1243_1247.py
+          git commit -m 'Passes 1243-1247: exact triality, matrix units, and cycle orbits'
+          git push
