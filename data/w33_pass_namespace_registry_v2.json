@@ -22,21 +22,21 @@
     {"range": "1253-1262", "owner": "consolidation-universal-tracks", "status": "COMPLETE"},
     {"range": "1263-1272", "owner": "dictionary-ledger-v6-tracks", "status": "COMPLETE"},
     {"range": "1273-1277", "owner": "chi27-ledger-v7-track", "status": "COMPLETE"},
-    {"range": "1278-1282", "owner": "parallel-absorption-ledger-v8-track", "status": "COMPLETE",
-      "ledger_state": "17 EXACT / 4 PROVISIONAL / 3 OPEN",
-      "absorbed_from": "Parallel passes 1320-1323",
+    {"range": "1278-1282", "owner": "parallel-absorption-ledger-v8-track", "status": "COMPLETE"},
+    {"range": "1283-1287", "owner": "m3-m4-levi-ledger-v9-track", "status": "COMPLETE",
+      "ledger_state": "20 EXACT / 4 PROVISIONAL / 3 OPEN",
+      "parallel_hints_used": "levi_closure.md, levi_five_frontiers.md, levi_next5_v1-v5 (2026-07-10/11)",
       "new_exact_theorems": [
-        "EXACT-14: Hom_{W(E6)}(C^480,C^432) = 1+15_a+3*20+60_a, Hashimoto spectrum 11^1+(-1)^5",
-        "EXACT-15: End_{W(E6)}(Q^480) has 26 rational units, Wedderburn Q^5+M_2+M_3+M_2+M_2",
-        "EXACT-16: B|_{sp20} = -I_20 for all 3 copies; copy selection is a Hecke gauge choice",
-        "EXACT-17: 28-dim linking algebra, Wedderburn M_2+M_2+M_4+M_2; sp20 sector = Morita M_3-|C"
+        "EXACT-18: M_3(Q)_20 primitive idempotents E_ii=P_i(S) for spectrum {-6,2,10}, sum=identity",
+        "EXACT-19: M_4(C) block = [[M_3(C),C^3],[C^3*,C]], sp20 linking sector, dim=16=9+3+3+1",
+        "EXACT-20: Levi graph PG(3,3) has 80 vertices, spectrum {+/-sqrt(24)^1,+/-sqrt(14)^9,+/-sqrt(8)^30}"
       ],
       "artifacts": {
-        "1278": "Six transport channels: coefficient vectors + singular scales + Hom Hashimoto spectrum",
-        "1279": "26 rational Hecke units: 5 central + M_2+M_3+M_2+M_2 noncomm blocks, all E_{ij}E_{kl} verified",
-        "1280": "Hashimoto sp20: B=-I_20 all 3 copies, copy selection = Hecke gauge",
-        "1281": "28-dim linking algebra: Wedderburn M_2+M_2+M_4+M_2, sp20 = Morita context M_3-|C via C^3",
-        "1282": "Theorem ledger v8 (17 EXACT / 4 PROVISIONAL / 3 OPEN)"
+        "1283": "M_3(Q)_20 three primitive idempotents via Lagrange interpolation on {-6,2,10}",
+        "1284": "M_4(C) Wedderburn block basis: sp20 linking sector 9+3+3+1=16",
+        "1285": "Morita C^3 is Z_2-module: trivial+sign+trivial, NOT a PSp(4,3) module",
+        "1286": "Levi graph PG(3,3) absorbed: 80 verts, deg 13, spectrum sum=80, Hashimoto connection",
+        "1287": "Theorem ledger v9 (20 EXACT / 4 PROVISIONAL / 3 OPEN)"
       }}
   ],
   "rule": "A pass number is canonical only when registered here."
