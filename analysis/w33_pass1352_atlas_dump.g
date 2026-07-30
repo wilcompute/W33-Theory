@@ -1,0 +1,22 @@
+# Pass 1352: dump the genuine Repsn degree-20 standard-generator matrices.
+LoadPackage("atlasrep");
+LoadPackage("ctbllib");
+LoadPackage("repsn");
+G := AtlasGroup("U4(2).2");;
+if G=fail or Size(G)<>51840 then Error("Atlas group unavailable"); fi;
+I := Irr(G);;
+if Length(I)<11 or I[11][1]<>20 then Error("observed degree-20 character position 11 changed"); fi;
+rho := IrreducibleAffordingRepresentation(I[11]);;
+if not IsAffordingRepresentation(I[11],rho) then Error("Repsn failed to afford character 11"); fi;
+gens := GeneratorsOfGroup(G);;
+M := List(gens, g -> Image(rho,g));;
+if List(M,DimensionsMat)<>[[20,20],[20,20]] then Error("wrong matrix dimensions"); fi;
+if List(M,Order)<>[2,9] then Error("wrong standard generator orders"); fi;
+if List(M,TraceMat)<>[10,-1] then Error("wrong character row: expected traces 10,-1"); fi;
+Encode := mat -> List(mat, row -> List(row, x -> [NumeratorRat(x),DenominatorRat(x)]));;
+out := OutputTextFile("data/w33_pass1352_repsn_degree20_matrices.json",false);;
+SetPrintFormattingStatus(out,false);;
+AppendTo(out,"{\"schema\":\"w33.pass1352.repsn.degree20.v1\",\"status\":\"PASS\",\"group\":\"U4(2).2\",\"group_order\":51840,\"character_position\":11,\"generator_orders\":[2,9],\"generator_traces\":[10,-1],\"matrices\":{\"c\":",String(Encode(M[1])),",\"d\":",String(Encode(M[2])),"}}");
+CloseStream(out);
+Print("PASS 1352: wrote genuine Repsn degree-20 matrices\n");
+QUIT_GAP(0);
