@@ -17,8 +17,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: sudo apt-get update && sudo apt-get install -y gap gap-character-tables
-      - run: gap -q analysis/w33_pass1350_brauer_tree.g
+      - name: Execute genuine Brauer-table census
+        shell: bash
+        run: |
+          set -euo pipefail
+          gap -q analysis/w33_pass1350_brauer_tree.g | tee pass1350_brauer.log
+          grep -q 'PASS 1350:' pass1350_brauer.log
+          test -s data/w33_pass1350_u42d2_char5_blocks.json
+          python -m json.tool data/w33_pass1350_u42d2_char5_blocks.json >/dev/null
       - uses: actions/upload-artifact@v4
         with:
           name: pass1350-brauer-tree
-          path: data/w33_pass1350_u42d2_char5_blocks.json
+          path: |
+            data/w33_pass1350_u42d2_char5_blocks.json
+            pass1350_brauer.log
