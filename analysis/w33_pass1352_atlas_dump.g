@@ -10,7 +10,7 @@ if List(M,DimensionsMat)<>[[20,20],[20,20]] then Error("wrong matrix dimensions"
 if List(M,Order)<>[2,9] or Order(M[1]*M[2])<>10 then Error("wrong standard generator order triple"); fi;
 if List(M,TraceMat)<>[10,-1] then Error("wrong character row: expected traces 10,-1"); fi;
 if Size(Image(rho))<>51840 then Error("degree-20 representation is not faithful"); fi;
-if not ForAll(Flat(M), IsRat) then Error("Repsn model is not rational entrywise"); fi;
+if not ForAll(M, mat -> ForAll(mat, row -> ForAll(row, IsRat))) then Error("Repsn model is not rational entrywise"); fi;
 EncodeMatrix1352 := mat -> List(mat, row -> List(row, x -> [NumeratorRat(x),DenominatorRat(x)]));;
 out := OutputTextFile("data/w33_pass1352_repsn_degree20_matrices.json",false);;
 SetPrintFormattingStatus(out,false);;
