@@ -1,4 +1,4 @@
-name: Pass 1330-1334 modular triality Atlas
+name: Passes 1330-1334 Modular Triality Atlas
 
 on:
   push:
@@ -7,71 +7,43 @@ on:
   pull_request:
     branches:
       - master
+  workflow_dispatch:
 
 permissions:
-  contents: write
-  pull-requests: read
+  contents: read
 
 jobs:
-  release:
-    if: github.event_name == 'pull_request' || (github.event_name == 'push' && !contains(github.event.head_commit.message, 'materialize exact release'))
+  exact-python:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.head_ref || github.ref_name }}
-          fetch-depth: 0
-      - name: Decode and verify exact payload
-        shell: bash
-        run: |
-          set -euo pipefail
-          cat .release/pass1330_1334_payload.part* > /tmp/pass1330_1334_payload.b64
-          base64 -d /tmp/pass1330_1334_payload.b64 > /tmp/pass1330_1334_payload.tar.gz
-          echo '96328244b13c9bebcd8e71c717b308e158cbb215368c7d976451d56cba9ca946  /tmp/pass1330_1334_payload.tar.gz' | sha256sum -c -
-          tar -xzf /tmp/pass1330_1334_payload.tar.gz
-          rm -f .release/pass1330_1334_payload.tar.gz.b64 .release/pass1330_1334_payload.part*
-          rmdir .release || true
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Regenerate exact certificate and run focused tests
-        shell: bash
-        run: |
-          set -euo pipefail
-          python -m pip install --upgrade pip numpy sympy pytest
-          python analysis/w33_pass1330_1334_modular_triality_cycle_atlas.py
-          pytest -q tests/test_w33_pass1330_1334.py
-      - name: Install GAP, AtlasRep, CTblLib, TomLib, and Repsn
-        shell: bash
-        run: |
-          set -euo pipefail
-          sudo apt-get update
-          sudo apt-get install -y gap gap-atlasrep gap-character-tables gap-table-of-marks git
-          mkdir -p "$HOME/.gap/pkg"
-          git clone --depth 1 --branch v3.1.2 https://github.com/gap-packages/repsn.git "$HOME/.gap/pkg/repsn"
-      - name: Execute genuine AtlasRep/Repsn certificate
-        run: gap -q analysis/w33_pass1333_atlasrep_species20.g
-      - name: Install TeX
-        run: |
-          sudo apt-get install -y latexmk texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-science
-      - name: Integrate theorem insert idempotently
-        shell: bash
-        run: |
-          set -euo pipefail
-          python tools/integrate_pass1330_1334.py
-          python tools/integrate_pass1330_1334.py
-          test "$(grep -c '\\input{analysis/BT1330_BT1334_modular_triality_cycle_atlas}' w33_paper.tex)" -eq 1
-          test "$(grep -c '\\input{analysis/BT1330_BT1334_modular_triality_cycle_atlas}' photonic_holonet.tex)" -eq 1
-      - name: Compile W33 paper
-        run: latexmk -pdf -interaction=nonstopmode -halt-on-error w33_paper.tex
-      - name: Compile Photonic Holonet
-        run: latexmk -pdf -interaction=nonstopmode -halt-on-error photonic_holonet.tex
-      - name: Commit verified materialized release
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A
-          git commit -m 'Passes 1330-1334: materialize exact release'
-          git push origin HEAD:${{ github.head_ref || github.ref_name }}
+      - run: python -m pip install --disable-pip-version-check numpy sympy pytest
+      - run: python analysis/w33_pass1330_1334_modular_triality_cycle_atlas.py
+      - run: pytest -q tests/test_w33_pass1330_1334.py
+
+  atlasrep-gap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update
+      - run: sudo apt-get install -y gap gap-atlasrep gap-character-tables gap-table-of-marks git
+      - run: mkdir -p "$HOME/.gap/pkg" && git clone --depth 1 --branch v3.1.2 https://github.com/gap-packages/repsn.git "$HOME/.gap/pkg/repsn"
+      - run: gap -q analysis/w33_pass1333_atlasrep_species20.g
+
+  manuscripts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y latexmk texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-science
+      - run: python tools/integrate_pass1330_1334.py
+      - run: python tools/integrate_pass1330_1334.py
+      - run: test "$(grep -c '\\input{analysis/BT1330_BT1334_modular_triality_cycle_atlas}' w33_paper.tex)" -eq 1
+      - run: test "$(grep -c '\\input{analysis/BT1330_BT1334_modular_triality_cycle_atlas}' photonic_holonet.tex)" -eq 1
+      - run: latexmk -pdf -interaction=nonstopmode -halt-on-error w33_paper.tex
+      - run: latexmk -pdf -interaction=nonstopmode -halt-on-error photonic_holonet.tex
