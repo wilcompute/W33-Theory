@@ -1,8 +1,8 @@
 {
-  "schema": "w33.pass_namespace_registry.v2",
-  "status": "ACTIVE",
-  "date": "2026-07-30",
-  "canonical_blocks": [
+  "schema":"w33.pass_namespace_registry.v2",
+  "status":"ACTIVE",
+  "date":"2026-07-30",
+  "canonical_blocks":[
     {"range":"1120-1128","owner":"glue-track","status":"COMPLETE"},
     {"range":"1132-1136","owner":"exact-audit-track","status":"COMPLETE"},
     {"range":"1137-1140","owner":"parallel-codex-track","status":"COMPLETE"},
@@ -33,7 +33,9 @@
     {"range":"1315-1319","owner":"exact-hecke-hashimoto-bridge-track","status":"COMPLETE","artifacts":{"1315":"26-dimensional Hecke Wedderburn decomposition and nine primitive central idempotents","1316":"exact 480-dimensional Hashimoto character decomposition","1317":"literal rank-20 species projector and carrier-level matrix units","1318":"fail-closed migration of false k=9 artifacts","1319":"six-dimensional exact Hom space between 432 and 480 carriers"}},
     {"range":"1320-1324","owner":"transport-linking-morita-track","status":"COMPLETE","artifacts":{"1320":"six-channel species decomposition and singular scales","1321":"all 26 rational Hecke matrix units","1322":"species-20 Hashimoto restriction B=-I20","1323":"28-dimensional linking algebra and full M3-C Morita context","1324":"formal theorem/proof/retraction ledgers"}},
     {"range":"1325-1329","owner":"triality-integral-gauge-track","status":"COMPLETE","artifacts":{"1325":"three-carrier triality globalization: dimensions 234,52,148,40","1326":"transport and 26-unit Hecke Smith forms; bad primes 2,3,5","1327":"species-20 normalizer, 3x3 gauge grid, and Pass1305 correction","1328":"length-7/8 and invariant primitive-cycle nonselection theorem","1329":"independent stdlib/SymPy reconstruction and GAP certificate"}},
-    {"range":"1330-1334","owner":"modular-triality-cycle-atlas-manuscript-track","status":"COMPLETE_WITH_RUNTIME_BOUNDARIES","artifacts":{"1330":"exact Jacobson radicals and Loewy layers modulo 2,3,5","1331":"literal nine-axis S3 x S3 triality association scheme","1332":"literal length-7/8 cycle stabilizers and copy-selector obstruction","1333":"genuine AtlasRep/TomLib/Repsn execution program and CI job","1334":"idempotent dual-manuscript integrator and compile workflow"},"runtime_boundary":"Python exact computation and minimal TeX compile passed locally; GAP and full historical-manuscript builds are CI surfaces and may not be claimed without observed runs."}
+    {"range":"1330-1334","owner":"modular-triality-cycle-atlas-manuscript-track","status":"COMPLETE_WITH_RUNTIME_BOUNDARIES","artifacts":{"1330":"exact Jacobson radicals and Loewy layers modulo 2,3,5","1331":"literal nine-axis S3 x S3 triality association scheme","1332":"literal length-7/8 cycle stabilizers and copy-selector obstruction","1333":"genuine AtlasRep/TomLib/Repsn execution program and CI job","1334":"idempotent dual-manuscript integrator and compile workflow"},"runtime_boundary":"Python exact computation and minimal TeX compile passed locally; GAP and full historical-manuscript builds are CI surfaces and may not be claimed without observed runs."},
+    {"range":"1335","owner":"parallel-brauer-tree-reservation","status":"RESERVED","artifact":"PASS1335_RESERVED.md","boundary":"Must distinguish the 81-dimensional group module from its Hecke corner and certified nonzero extensions from full Ext^1 dimensions."},
+    {"range":"1340-1344","owner":"cartan-atlas-selector-padic-manuscript-track","status":"COMPLETE_WITH_RUNTIME_BOUNDARIES","artifacts":{"1340":"modular decomposition matrices, Cartan matrices, PIM dimensions, and block fusion for p=2,3,5","1341":"faithful exact rational 20-dimensional Atlas-standard-generator model and GAP comparison surface","1342":"literal cycle census and minimum cycle-plus-copy selector orbit 360","1343":"complete p-adic primitive-idempotent lifts through p^6 and Smith/Loewy separation","1344":"dual-manuscript theorem integrator, full compile CI, and PDF artifact gate"},"runtime_boundary":"Exact Python verifiers, 8/8 focused tests, 16/16 cross-release tests, and minimal TeX compile pass locally. GAP/AtlasRep equivalence and full historical-manuscript PDFs remain observable CI surfaces until completed."}
   ],
-  "rule": "A pass number is canonical only when registered here. Retracted or scope-corrected blocks remain registered for provenance but cannot contribute active theorem claims outside their stated scope."
+  "rule":"A pass number is canonical only when registered here. Retracted or scope-corrected blocks remain registered for provenance but cannot contribute active theorem claims outside their stated scope."
 }
