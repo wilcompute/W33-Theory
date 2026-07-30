@@ -21,7 +21,7 @@ env:
 jobs:
   brauer-core:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
         with:
@@ -38,6 +38,8 @@ jobs:
           gap -q analysis/w33_pass1350_brauer_tree.g | tee pass1350_brauer.log
           grep -q 'PASS 1350:' pass1350_brauer.log
           python -m json.tool data/w33_pass1350_u42d2_char5_blocks.json >/dev/null
+      - name: Compute literal basic-algebra projective resolutions
+        run: python analysis/w33_pass1351_projective_resolutions.py
       - name: Recompute selector geometry and static exact tests
         run: |
           python analysis/w33_pass1353_selector_geometry.py
@@ -46,6 +48,7 @@ jobs:
         run: |
           mkdir -p runtime1350
           cp data/w33_pass1350_u42d2_char5_blocks.json runtime1350/
+          cp data/w33_pass1351_projective_resolutions.json runtime1350/
           cp data/w33_pass1353_selector_geometry.json runtime1350/
           cp pass1350_brauer.log runtime1350/
       - uses: actions/upload-artifact@v4
@@ -164,6 +167,7 @@ jobs:
         run: |
           set -euo pipefail
           cp runtime1350/w33_pass1350_u42d2_char5_blocks.json data/
+          cp runtime1350/w33_pass1351_projective_resolutions.json data/
           cp runtime1350/w33_pass1353_selector_geometry.json data/
           cp runtime1352/w33_pass1352_repsn_degree20_matrices.json data/
           cp runtime1352/w33_pass1352_atlas_carrier_conjugacy.json data/
@@ -191,11 +195,12 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/w33_pass1350_u42d2_char5_blocks.json data/w33_pass1352_repsn_degree20_matrices.json \
-            data/w33_pass1352_atlas_carrier_conjugacy.json data/w33_pass1353_selector_geometry.json \
-            data/w33_pass1350_1354_exact_release.json data/w33_pass1354_manuscript_build_observation.json \
-            data/w33_pass1354_pdf_manifest.json manuscripts/tex/part22_fano_synthesis.tex \
-            w33_paper.tex photonic_holonet.tex w33_paper.pdf photonic_holonet.pdf
+          git add data/w33_pass1350_u42d2_char5_blocks.json data/w33_pass1351_projective_resolutions.json \
+            data/w33_pass1352_repsn_degree20_matrices.json data/w33_pass1352_atlas_carrier_conjugacy.json \
+            data/w33_pass1353_selector_geometry.json data/w33_pass1350_1354_exact_release.json \
+            data/w33_pass1354_manuscript_build_observation.json data/w33_pass1354_pdf_manifest.json \
+            manuscripts/tex/part22_fano_synthesis.tex w33_paper.tex photonic_holonet.tex \
+            w33_paper.pdf photonic_holonet.pdf
           if git diff --cached --quiet; then echo 'Materialized release already current.'; else
             git commit -m 'Passes 1350-1354: materialize exact release'
             git push origin HEAD:${{ github.head_ref || github.ref_name }}
@@ -205,6 +210,7 @@ jobs:
           name: pass1350-1354-exact-release
           path: |
             data/w33_pass1350_1354_exact_release.json
+            data/w33_pass1351_projective_resolutions.json
             data/w33_pass1354_manuscript_build_observation.json
             data/w33_pass1354_pdf_manifest.json
             w33_paper.pdf
