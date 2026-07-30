@@ -3,6 +3,30 @@ name: Passes 1350-1354 Exact Release
 on:
   pull_request:
     branches: [master]
+    paths:
+      - '.github/workflows/pass1350_1354_exact_release.yml'
+      - 'analysis/BT1350_BT1354_brauer_basic_atlas_geometry_pdf.tex'
+      - 'analysis/w33_pass1350_1354_verify.py'
+      - 'analysis/w33_pass1350_brauer_tree.g'
+      - 'analysis/w33_pass1351_projective_resolutions.py'
+      - 'analysis/w33_pass1352_atlas_dump.g'
+      - 'analysis/w33_pass1352_conjugacy.py'
+      - 'analysis/w33_pass1353_selector_geometry.py'
+      - 'tests/test_w33_pass1350_1354.py'
+      - 'tools/integrate_pass1350_1354.py'
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/pass1350_1354_exact_release.yml'
+      - 'analysis/BT1350_BT1354_brauer_basic_atlas_geometry_pdf.tex'
+      - 'analysis/w33_pass1350_1354_verify.py'
+      - 'analysis/w33_pass1350_brauer_tree.g'
+      - 'analysis/w33_pass1351_projective_resolutions.py'
+      - 'analysis/w33_pass1352_atlas_dump.g'
+      - 'analysis/w33_pass1352_conjugacy.py'
+      - 'analysis/w33_pass1353_selector_geometry.py'
+      - 'tests/test_w33_pass1350_1354.py'
+      - 'tools/integrate_pass1350_1354.py'
   workflow_dispatch:
 
 permissions:
@@ -200,7 +224,7 @@ jobs:
             manuscripts/tex/part22_fano_synthesis.tex w33_paper.tex photonic_holonet.tex \
             w33_paper.pdf photonic_holonet.pdf
           if git diff --cached --quiet; then echo 'Materialized release already current.'; else
-            git commit -m 'Passes 1350-1354: materialize exact release'
+            git commit -m 'Passes 1350-1354: materialize exact release [skip ci]'
             git push origin HEAD:${{ github.head_ref || github.ref_name }}
           fi
       - uses: actions/upload-artifact@v4
