@@ -51,7 +51,10 @@ def split_generated_payloads():
     full_selector=json.loads(SELECTOR_OUT.read_text())
     record_files={}
     for length,record in full_selector["records"].items():
-        component={"schema":"w33.pass1347.cycle_copy_observables.record.v1","status":"PASS","length":int(length),"record":record}
+        compact=json.loads(json.dumps(record))
+        for observable in ("shift","occupation","cosine_quadrature"):
+            compact[observable].pop("coordinate_compression",None)
+        component={"schema":"w33.pass1347.cycle_copy_observables.record.v1","status":"PASS","length":int(length),"record":compact}
         path=SELECTOR_RECORDS[int(length)]
         path.write_text(json.dumps(component,sort_keys=True,separators=(",",":"))+"\n")
         record_files[length]={"path":str(path.relative_to(ROOT)),"sha256":support.sha_json(component)}
