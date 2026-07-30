@@ -25,11 +25,11 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          test -f .release/pass1330_1334_payload.tar.gz.b64
-          base64 -d .release/pass1330_1334_payload.tar.gz.b64 > /tmp/pass1330_1334_payload.tar.gz
+          cat .release/pass1330_1334_payload.part* > /tmp/pass1330_1334_payload.b64
+          base64 -d /tmp/pass1330_1334_payload.b64 > /tmp/pass1330_1334_payload.tar.gz
           echo '96328244b13c9bebcd8e71c717b308e158cbb215368c7d976451d56cba9ca946  /tmp/pass1330_1334_payload.tar.gz' | sha256sum -c -
           tar -xzf /tmp/pass1330_1334_payload.tar.gz
-          rm .release/pass1330_1334_payload.tar.gz.b64
+          rm -f .release/pass1330_1334_payload.tar.gz.b64 .release/pass1330_1334_payload.part*
           rmdir .release || true
       - uses: actions/setup-python@v5
         with:
