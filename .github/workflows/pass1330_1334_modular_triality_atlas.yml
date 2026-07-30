@@ -1,16 +1,14 @@
 name: Passes 1330-1334 Modular Triality Atlas
 
 on:
-  push:
-    branches:
-      - agent/pass1330-1334-modular-triality-atlas
   pull_request:
     branches:
       - master
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
+  pull-requests: read
 
 jobs:
   exact-python:
@@ -47,3 +45,32 @@ jobs:
       - run: test "$(grep -c '\\input{analysis/BT1330_BT1334_modular_triality_cycle_atlas}' photonic_holonet.tex)" -eq 1
       - run: latexmk -pdf -interaction=nonstopmode -halt-on-error w33_paper.tex
       - run: latexmk -pdf -interaction=nonstopmode -halt-on-error photonic_holonet.tex
+
+  finalize:
+    needs: [exact-python, atlasrep-gap, manuscripts]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - name: Integrate manuscripts and remove staging files
+        run: |
+          set -euo pipefail
+          rm -rf .release
+          python tools/integrate_pass1330_1334.py
+          python tools/integrate_pass1330_1334.py
+          test "$(grep -c '\\input{analysis/BT1330_BT1334_modular_triality_cycle_atlas}' w33_paper.tex)" -eq 1
+          test "$(grep -c '\\input{analysis/BT1330_BT1334_modular_triality_cycle_atlas}' photonic_holonet.tex)" -eq 1
+      - name: Commit verified release state
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then
+            echo 'No release-state changes to commit.'
+          else
+            git commit -m 'Passes 1330-1334: integrate manuscripts and clean staging'
+            git push origin HEAD:${{ github.head_ref }}
+          fi
