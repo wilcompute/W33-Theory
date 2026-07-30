@@ -17,7 +17,7 @@ def primitive_integer(M):
  if next(x for x in ints if x)<0:ints=[-x for x in ints]
  return sp.Matrix(M.rows,M.cols,ints),sp.Rational(g,den)
 def main(write=True):
- rep=json.loads(IN.read_text());fr=json.loads(FROZEN.read_text());A=pair_matrix(rep['matrices']['c']);B=pair_matrix(rep['matrices']['d']);C=sp.Matrix([[sp.Rational(x) for x in row] for row in fr['matrices']['c']]);D=sp.Matrix([[sp.Rational(x) for x in row] for row in fr['matrices']['d'])
+ rep=json.loads(IN.read_text());fr=json.loads(FROZEN.read_text());A=pair_matrix(rep['matrices']['c']);B=pair_matrix(rep['matrices']['d']);C=sp.Matrix([[sp.Rational(x) for x in row] for row in fr['matrices']['c']]);D=sp.Matrix([[sp.Rational(x) for x in row] for row in fr['matrices']['d']])
  X,dim=solve_intertwiner(A,B,C,D);Xi,scale=primitive_integer(X);assert A*Xi==Xi*C and B*Xi==Xi*D and Xi.det()!=0
  raw=';'.join(','.join(str(Xi[i,j]) for j in range(20)) for i in range(20)).encode();result={'schema':'w33.pass1352.atlas_carrier_conjugacy.v1','status':'PASS','group':'U4(2).2','repsn_character_position':11,'generator_traces':[10,-1],'hom_space_dimension':dim,'convention':'A_repsn X = X A_carrier for both standard generators c,d','integer_intertwiner':str_matrix(Xi),'integer_intertwiner_determinant':str(Xi.det()),'rational_normalization_scale_X_equals_scale_times_integer':str(1/scale),'integer_intertwiner_sha256':hashlib.sha256(raw).hexdigest(),'checks':{'c_intertwines':True,'d_intertwines':True,'invertible':True,'hom_dimension_one':True}}
  if write:OUT.write_text(json.dumps(result,indent=2,sort_keys=True)+'\n')
