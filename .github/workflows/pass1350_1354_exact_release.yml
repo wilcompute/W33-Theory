@@ -26,7 +26,7 @@ jobs:
       - name: Install exact runtimes
         run: |
           sudo apt-get update
-          sudo apt-get install -y gap gap-atlasrep gap-character-tables gap-table-of-marks git latexmk texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-science
+          sudo apt-get install -y gap gap-atlasrep gap-character-tables gap-table-of-marks git latexmk poppler-utils texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-science
           mkdir -p "$HOME/.gap/pkg"
           git clone --depth 1 --branch v3.1.2 https://github.com/gap-packages/repsn.git "$HOME/.gap/pkg/repsn"
       - uses: actions/setup-python@v5
@@ -48,7 +48,7 @@ jobs:
           grep -q 'PASS 1352:' pass1352_gap.log
           python -m json.tool data/w33_pass1352_repsn_degree20_matrices.json >/dev/null
           python analysis/w33_pass1352_conjugacy.py | tee pass1352_conjugacy.log
-      - name: Recompute selector geometry and combined certificate
+      - name: Recompute geometry, combined certificate, and tests
         run: |
           python analysis/w33_pass1353_selector_geometry.py
           python analysis/w33_pass1350_1354_verify.py
@@ -59,23 +59,25 @@ jobs:
           set -euo pipefail
           python tools/integrate_pass1350_1354.py
           python tools/integrate_pass1350_1354.py
-          test "$(grep -c '\\input{analysis/BT1340_BT1344_cartan_atlas_selector_padic}' w33_paper.tex)" -eq 1
-          test "$(grep -c '\\input{analysis/BT1350_BT1354_brauer_basic_atlas_geometry_pdf}' w33_paper.tex)" -eq 1
-          test "$(grep -c '\\input{analysis/BT1340_BT1344_cartan_atlas_selector_padic}' photonic_holonet.tex)" -eq 1
-          test "$(grep -c '\\input{analysis/BT1350_BT1354_brauer_basic_atlas_geometry_pdf}' photonic_holonet.tex)" -eq 1
-      - name: Compile complete W33 paper
-        run: latexmk -pdf -interaction=nonstopmode -halt-on-error w33_paper.tex
-      - name: Compile complete Photonic Holonet
-        run: latexmk -pdf -interaction=nonstopmode -halt-on-error photonic_holonet.tex
-      - name: Freeze source and PDF hashes
+          for f in w33_paper.tex photonic_holonet.tex; do
+            test "$(grep -c '\\input{analysis/BT1340_BT1344_cartan_atlas_selector_padic}' "$f")" -eq 1
+            test "$(grep -c '\\input{analysis/BT1345_BT1349_basic_mixed_selector_runtime_fusion}' "$f")" -eq 1
+            test "$(grep -c '\\input{analysis/BT1350_BT1354_brauer_basic_atlas_geometry_pdf}' "$f")" -eq 1
+          done
+      - name: Compile both historical manuscripts fail-closed
+        run: python tools/w33_pass1348_compile_historical_manuscripts.py --require-all --output data/w33_pass1354_manuscript_build_observation.json
+      - name: Materialize PDFs and freeze hashes
         run: |
+          cp build/pass1348_historical_manuscripts/w33_paper/w33_paper.pdf w33_paper.pdf
+          cp build/pass1348_historical_manuscripts/photonic_holonet/photonic_holonet.pdf photonic_holonet.pdf
           python - <<'PY'
           from pathlib import Path
           import hashlib,json
+          observation=json.loads(Path('data/w33_pass1354_manuscript_build_observation.json').read_text())
           files=['w33_paper.tex','photonic_holonet.tex','w33_paper.pdf','photonic_holonet.pdf','analysis/BT1350_BT1354_brauer_basic_atlas_geometry_pdf.tex']
-          out={'schema':'w33.pass1354.pdf_manifest.v1','status':'PASS','files':{}}
+          out={'schema':'w33.pass1354.pdf_manifest.v1','status':'PASS_WITH_TYPED_BUILD_ONLY_STUBS','build_observation':observation,'files':{}}
           for name in files:
-              raw=Path(name).read_bytes(); out['files'][name]={'bytes':len(raw),'sha256':hashlib.sha256(raw).hexdigest()}
+              raw=Path(name).read_bytes();out['files'][name]={'bytes':len(raw),'sha256':hashlib.sha256(raw).hexdigest()}
           Path('data/w33_pass1354_pdf_manifest.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
           PY
       - name: Commit materialized exact release
@@ -86,12 +88,10 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data/w33_pass1350_u42d2_char5_blocks.json data/w33_pass1352_repsn_degree20_matrices.json \
             data/w33_pass1352_atlas_carrier_conjugacy.json data/w33_pass1353_selector_geometry.json \
-            data/w33_pass1350_1354_exact_release.json data/w33_pass1354_pdf_manifest.json \
-            manuscripts/tex/part22_fano_synthesis.tex w33_paper.tex photonic_holonet.tex \
-            w33_paper.pdf photonic_holonet.pdf
-          if git diff --cached --quiet; then
-            echo 'Materialized release already current.'
-          else
+            data/w33_pass1350_1354_exact_release.json data/w33_pass1354_manuscript_build_observation.json \
+            data/w33_pass1354_pdf_manifest.json manuscripts/tex/part22_fano_synthesis.tex \
+            w33_paper.tex photonic_holonet.tex w33_paper.pdf photonic_holonet.pdf
+          if git diff --cached --quiet; then echo 'Materialized release already current.'; else
             git commit -m 'Passes 1350-1354: materialize exact release'
             git push origin HEAD:${{ github.head_ref || github.ref_name }}
           fi
@@ -100,6 +100,7 @@ jobs:
           name: pass1350-1354-exact-release
           path: |
             data/w33_pass1350_1354_exact_release.json
+            data/w33_pass1354_manuscript_build_observation.json
             data/w33_pass1354_pdf_manifest.json
             w33_paper.pdf
             photonic_holonet.pdf
