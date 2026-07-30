@@ -1,0 +1,42 @@
+name: Pass 1352 Atlas Carrier Conjugacy
+
+on:
+  push:
+    branches: [agent/pass1350-1354-brauer-basic-atlas-geometry-pdfs]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  atlas-conjugacy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y gap gap-atlasrep gap-character-tables git
+      - run: mkdir -p "$HOME/.gap/pkg" && git clone --depth 1 --branch v3.1.2 https://github.com/gap-packages/repsn.git "$HOME/.gap/pkg/repsn"
+      - name: Dump genuine Repsn matrices
+        shell: bash
+        run: |
+          set -euo pipefail
+          gap -q analysis/w33_pass1352_atlas_dump.g | tee pass1352_gap.log
+          grep -q 'PASS 1352:' pass1352_gap.log
+          test -s data/w33_pass1352_repsn_degree20_matrices.json
+          python -m json.tool data/w33_pass1352_repsn_degree20_matrices.json >/dev/null
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check sympy
+      - name: Solve exact rational intertwiner
+        run: python analysis/w33_pass1352_conjugacy.py | tee pass1352_conjugacy.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass1352-atlas-carrier-conjugacy
+          path: |
+            data/w33_pass1352_repsn_degree20_matrices.json
+            data/w33_pass1352_atlas_carrier_conjugacy.json
+            pass1352_gap.log
+            pass1352_conjugacy.log
