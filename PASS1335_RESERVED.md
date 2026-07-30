@@ -10,3 +10,6 @@ The promoted result must distinguish:
 - a certified nonzero extension from the dimension of the full
   \(\operatorname{Ext}^1\) space;
 - ordinary-character vertices from modular simple edges in the Brauer tree.
+
+The reservation is fulfilled by
+[`PASS1335_BRAUER_TREE_HECKE_CORNER.md`](PASS1335_BRAUER_TREE_HECKE_CORNER.md).

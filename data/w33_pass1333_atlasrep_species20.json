@@ -1,0 +1,41 @@
+{
+  "schema": "w33.pass1333.atlasrep_species20.v1",
+  "status": "PASS",
+  "gap_version": "4.12.1",
+  "repsn_version": "3.1.2",
+  "group": "U4(2).2",
+  "group_order": 51840,
+  "degree20_character_positions": [ 10, 11, 12 ],
+  "degree20_representation_records": [
+    {"character_position": 10, "image_size": 51840, "generator_count": 2, "matrix_dimensions": [ [ 20, 20 ], [ 20, 20 ] ]},
+    {"character_position": 11, "image_size": 51840, "generator_count": 2, "matrix_dimensions": [ [ 20, 20 ], [ 20, 20 ] ]},
+    {"character_position": 12, "image_size": 51840, "generator_count": 2, "matrix_dimensions": [ [ 20, 20 ], [ 20, 20 ] ]}
+  ],
+  "tom_432_records": [
+    {"tom_position": 291, "degree": 432, "degree20_multiplicities": [ 0, 1, 1 ]},
+    {"tom_position": 292, "degree": 432, "degree20_multiplicities": [ 0, 1, 0 ]},
+    {"tom_position": 293, "degree": 432, "degree20_multiplicities": [ 0, 2, 1 ]},
+    {"tom_position": 294, "degree": 432, "degree20_multiplicities": [ 0, 1, 0 ]},
+    {"tom_position": 295, "degree": 432, "degree20_multiplicities": [ 0, 3, 0 ]},
+    {"tom_position": 296, "degree": 432, "degree20_multiplicities": [ 0, 2, 2 ]}
+  ],
+  "tom_480_records": [
+    {"tom_position": 280, "degree": 480, "degree20_multiplicities": [ 0, 2, 2 ]},
+    {"tom_position": 281, "degree": 480, "degree20_multiplicities": [ 0, 1, 1 ]},
+    {"tom_position": 282, "degree": 480, "degree20_multiplicities": [ 0, 1, 1 ]},
+    {"tom_position": 283, "degree": 480, "degree20_multiplicities": [ 2, 0, 0 ]},
+    {"tom_position": 284, "degree": 480, "degree20_multiplicities": [ 0, 1, 1 ]},
+    {"tom_position": 285, "degree": 480, "degree20_multiplicities": [ 0, 2, 0 ]},
+    {"tom_position": 286, "degree": 480, "degree20_multiplicities": [ 0, 2, 0 ]},
+    {"tom_position": 287, "degree": 480, "degree20_multiplicities": [ 0, 1, 1 ]},
+    {"tom_position": 288, "degree": 480, "degree20_multiplicities": [ 0, 1, 0 ]},
+    {"tom_position": 289, "degree": 480, "degree20_multiplicities": [ 1, 0, 0 ]},
+    {"tom_position": 290, "degree": 480, "degree20_multiplicities": [ 0, 1, 0 ]}
+  ],
+  "checks": {
+    "three_faithful_degree20_representations": true,
+    "tom_432_has_triple_copy": true,
+    "tom_480_has_single_copy": true
+  },
+  "failed_checks": []
+}

@@ -1,13 +1,16 @@
 name: Passes 1330-1334 Modular Triality Atlas
 
 on:
+  push:
+    branches:
+      - master
   pull_request:
     branches:
       - master
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pull-requests: read
 
 jobs:
@@ -20,7 +23,13 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install --disable-pip-version-check numpy sympy pytest
-      - run: python analysis/w33_pass1330_1334_modular_triality_cycle_atlas.py
+      - name: Rebuild and compare the frozen combined certificate
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp data/w33_pass1330_1334_modular_triality_cycle_atlas.json /tmp/pass1330_1334.expected.json
+          python analysis/w33_pass1330_1334_modular_triality_cycle_atlas.py
+          cmp /tmp/pass1330_1334.expected.json data/w33_pass1330_1334_modular_triality_cycle_atlas.json
       - run: pytest -q tests/test_w33_pass1330_1334.py
 
   atlasrep-gap:
@@ -29,9 +38,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: sudo apt-get update
-      - run: sudo apt-get install -y gap gap-atlasrep gap-character-tables gap-table-of-marks git
-      - run: mkdir -p "$HOME/.gap/pkg" && git clone --depth 1 --branch v3.1.2 https://github.com/gap-packages/repsn.git "$HOME/.gap/pkg/repsn"
-      - run: gap -q analysis/w33_pass1333_atlasrep_species20.g
+      - run: sudo apt-get install -y gap gap-atlasrep gap-character-tables gap-table-of-marks
+      - name: Install frozen Repsn 3.1.2 release
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$HOME/.gap/pkg/repsn"
+          curl -LfsS https://github.com/gap-packages/repsn/archive/refs/tags/v3.1.2.tar.gz |
+            tar -xz -C "$HOME/.gap/pkg/repsn" --strip-components=1
+      - name: Run GAP/AtlasRep certificate and require completion marker
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp data/w33_pass1333_atlasrep_species20.json /tmp/pass1333.expected.json
+          gap -q analysis/w33_pass1333_atlasrep_species20.g | tee /tmp/pass1333-gap.log
+          grep -qx 'PASS 1333 COMPLETE' /tmp/pass1333-gap.log
+          python3 -m json.tool data/w33_pass1333_atlasrep_species20.json >/dev/null
+          cmp /tmp/pass1333.expected.json data/w33_pass1333_atlasrep_species20.json
 
   manuscripts:
     runs-on: ubuntu-latest
@@ -39,38 +62,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: sudo apt-get update && sudo apt-get install -y latexmk texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-science
-      - run: python tools/integrate_pass1330_1334.py
-      - run: python tools/integrate_pass1330_1334.py
+      - name: Require checked-in manuscript integration to be idempotent
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp w33_paper.tex /tmp/w33_paper.expected.tex
+          cp photonic_holonet.tex /tmp/photonic_holonet.expected.tex
+          python tools/integrate_pass1330_1334.py
+          python tools/integrate_pass1330_1334.py
+          cmp /tmp/w33_paper.expected.tex w33_paper.tex
+          cmp /tmp/photonic_holonet.expected.tex photonic_holonet.tex
       - run: test "$(grep -c '\\input{analysis/BT1330_BT1334_modular_triality_cycle_atlas}' w33_paper.tex)" -eq 1
       - run: test "$(grep -c '\\input{analysis/BT1330_BT1334_modular_triality_cycle_atlas}' photonic_holonet.tex)" -eq 1
       - run: latexmk -pdf -interaction=nonstopmode -halt-on-error w33_paper.tex
       - run: latexmk -pdf -interaction=nonstopmode -halt-on-error photonic_holonet.tex
-
-  finalize:
-    needs: [exact-python, atlasrep-gap, manuscripts]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.head_ref }}
-          fetch-depth: 0
-      - name: Integrate manuscripts and remove staging files
-        run: |
-          set -euo pipefail
-          rm -rf .release
-          python tools/integrate_pass1330_1334.py
-          python tools/integrate_pass1330_1334.py
-          test "$(grep -c '\\input{analysis/BT1330_BT1334_modular_triality_cycle_atlas}' w33_paper.tex)" -eq 1
-          test "$(grep -c '\\input{analysis/BT1330_BT1334_modular_triality_cycle_atlas}' photonic_holonet.tex)" -eq 1
-      - name: Commit verified release state
-        run: |
-          set -euo pipefail
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A
-          if git diff --cached --quiet; then
-            echo 'No release-state changes to commit.'
-          else
-            git commit -m 'Passes 1330-1334: integrate manuscripts and clean staging'
-            git push origin HEAD:${{ github.head_ref }}
-          fi

@@ -4,20 +4,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>W(3,3)-E8 Live Paper -- Exact Closure and Finite-Geometry Program</title>
+  <title>W(3,3) Exceptional Geometry -- Exact E6/E8 Bridges</title>
   <meta name="description"
     content="Evidence-tiered live paper for the W(3,3) program: exact two-qutrit geometry, verified finite and integral bridges, executable certificates, and clearly separated conditional interpretations.">
   <meta name="theme-color" content="#0d1117">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="canonical" href="https://wilcompute.github.io/W33-Theory/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="W(3,3)-E8 Live Paper">
+  <meta property="og:title" content="W(3,3) Exceptional Geometry">
   <meta property="og:description"
     content="Evidence-tiered live paper for the W(3,3) program: exact qutrit kernel first, promoted spectral closure after that.">
   <meta property="og:url" content="https://wilcompute.github.io/W33-Theory/">
   <meta property="og:image" content="https://wilcompute.github.io/W33-Theory/assets/w33-social-preview.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="W(3,3)-E8 Live Paper">
+  <meta name="twitter:title" content="W(3,3) Exceptional Geometry">
   <meta name="twitter:description"
     content="Evidence-tiered live paper for the W(3,3) program: exact qutrit kernel first, promoted spectral closure after that.">
   <meta name="twitter:image" content="https://wilcompute.github.io/W33-Theory/assets/w33-social-preview.png">
@@ -1562,32 +1562,13 @@
     </button>
     <div class="nav-quick">
       <a href="#reader-guide">Reader Guide</a>
-      <a href="#current-synthesis">Current Synthesis</a>
-      <a href="#hard-computation">Hard Computation</a>
-      <a href="#verified">Verified Results</a>
-      <a href="#bridge-2026">Refinement Bridge</a>
+      <a href="#theory">The Theory</a>
       <a href="#numbers">Core Numbers</a>
-      <a href="#breakthroughs-2026">Breakthroughs</a>
-      <a href="#toe-capstone" style="color: var(--gold); font-weight: 700;">Theory Synthesis</a>
-      <a href="#gauge-hierarchy">Gauge-Hierarchy Ansatz</a>
-      <a href="#weinberg-resolved">Weinberg-Angle Model</a>
-      <a href="#ncg-gravity-lift">NCG Gravity</a>
-      <a href="#qca-info-oscillator">QCA &amp; Oscillators</a>
-      <a href="#frontier-connections">Frontier (2024&ndash;26)</a>
-      <a href="#ckm-matrix">CKM Ansatz</a>
-      <a href="#inflation-r">Inflation Ansatz</a>
-      <a href="#exp-scorecard-2026">Exp. Scorecard</a>
-      <a href="#langlands-w33">Langlands</a>
-      <a href="#monster-decomposition" style="color: var(--gold);">Monster 196883</a>
-      <a href="#ultimate-theorem" style="color: var(--gold); font-weight: 700;">Uniqueness Studies</a>
-      <a href="#neutrino-splitting">Neutrino Ratio</a>
-      <a href="#independent-verification">Verification</a>
-      <a href="#dashboard">Dashboard</a>
-      <a href="#open">Open Problems</a>
-      <a href="#about">About</a>
-      <a href="#other-links">Other links</a>
-      <a href="BT1737_master_16_cell_atlas.html">Master 16-Cell Atlas</a>
-      <a href="BT1740_master_atlas_backlinks.md">Atlas Backlinks</a>
+      <a href="#current-synthesis">Current Synthesis</a>
+      <a href="#hard-computation">Reproduce</a>
+      <a href="#physics">Physics <span aria-label="conditional">(Conditional)</span></a>
+      <a href="#open">Boundaries</a>
+      <a href="#archive">Archive</a>
     </div>
   </nav>
 
@@ -1623,9 +1604,9 @@
         <div class="p" style="left:96%;animation-duration:20s;animation-delay:0.4s;width:3px;height:3px;background:rgba(210,168,255,0.28)"></div>
       
     </div>
-    <h1>W(3,3)&ndash;<span>E&#8326;</span> Theory</h1>
-    <div class="subtitle">Exact qutrit kernel &middot; Verified finite and integral bridges &middot; Executable certificates
-      &middot; Interpretations tiered separately</div>
+    <h1>W(3,3) <span>Exceptional Geometry</span></h1>
+    <div class="subtitle">Exact qutrit kernel &middot; Local E&#8326; shell &middot; Certified E&#8328; local-axis lift
+      &middot; Executable finite and integral bridges</div>
     <div style="margin:0.6em 0;font-size:0.85em;opacity:0.85;">
       <a href="#independent-verification">Executable verification</a>
       &mdash; finite-geometry witnesses, regression tests, and <code>holonet verify</code>
@@ -1937,7 +1918,14 @@
             <div class="num">58 | 23</div>
             <div class="label">Nonsplit Mod-5 Module</div>
             <div class="detail">The saturated 81-space has unique proper submodule 58 and sign-twisted W33 sandpile
-              head 23; it is nonsplit over W(E₆) and PSp(4,3).</div>
+              head 23. Its two directed cross-Ext spaces are one-dimensional, so the nonsplit type is unique up to
+              endpoint rescaling over both W(E₆) and PSp(4,3).</div>
+          </div>
+          <div class="card">
+            <div class="num">21 → 17 → 13 → 7 → 2 → 0</div>
+            <div class="label">H<sub>26</sub> Radical at p=2</div>
+            <div class="detail">The literal 26-dimensional Hecke algebra has an exact six-layer radical-power
+              profile; its semisimple quotient is <code>M2(F2) &oplus; F2</code>.</div>
           </div>
           <div class="card">
             <div class="num">E₈ Dynkin</div>
@@ -2070,7 +2058,7 @@
           the theorem is a finite integral reconstruction, not an E<sub>8</sub> or physical identification.</p>
       </div>
       <div class="spotlight" id="theory-exceptional-bridge">
-        <p><strong>Current exact exceptional/integral bridge (Pass 1147; Passes 1325&ndash;1329).</strong>
+        <p><strong>Current exact exceptional/integral bridge (Pass 1147; Passes 1325&ndash;1335).</strong>
           The three <code>432</code>-element A<sub>2</sub>-colour carriers are three copies of the directed
           Schl&auml;fli edges. The explicit odd edge transform has rank <code>81</code> and produces
           <code>216</code> antipodal tight-frame lines. Its integral Smith profile is
@@ -2085,12 +2073,26 @@
           <code>81</code>-space is the nonsplit length-two module
           <code>0 &rarr; I58 &rarr; S5 &rarr; K(W33)<sub>(5)</sub>&otimes;sgn &rarr; 0</code>
           over both <code>W(E6)</code> and <code>PSp(4,3)</code>; its only submodule dimensions are
-          <code>0,58,81</code>. This certifies a nonzero displayed extension class, not the dimension of the full
-          <code>Ext<sup>1</sup></code> space. These are statements about named finite
+          <code>0,58,81</code>. Pass 1335 computes each relevant cyclic-defect Brauer tree with ordinary-vertex path
+          <code>1&mdash;24&mdash;81&mdash;64&mdash;6</code> and simple-edge dimensions
+          <code>1,23,58,6</code>, and proves
+          <code>dim Ext<sup>1</sup>(23,58)=dim Ext<sup>1</sup>(58,23)=1</code> over both groups. Thus the
+          Pass-1147 class spans its full Ext space. Separately, the literal 26-dimensional Hecke algebra has exact
+          Jacobson-radical power dimensions
+          <code>21,17,13,7,2,0</code> at <code>p=2</code>,
+          <code>22,16,10,4,0</code> at <code>p=3</code>, and
+          <code>6,2,0</code> at <code>p=5</code>. Its semisimple quotients are
+          <code>M2(F2)&oplus;F2</code>, <code>F3<sup>4</sup></code>, and
+          <code>M3(F5)&oplus;M2(F5)&oplus;F5<sup>7</sup></code>, respectively. Its exceptional
+          nine-dimensional block has a doubled-<code>A3</code> scalar Ext quiver. This is a condensation shadow of
+          the group block, not an identification with the Loewy filtration of the 81-dimensional frame module. These are
+          statements about named finite
           modules and integral maps; they do not identify particles, generations, or hardware modes.
           <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md">Read the Pass 1147 construction</a>
           and
           <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS1325_1329_TRIALITY_INTEGRAL_GAUGE_RELEASE.md">the Passes 1325&ndash;1329 release</a>.</p>
+          <p><a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS1330_1334_MODULAR_TRIALITY_ATLAS_RELEASE.md">Open the modular Hecke, nine-axis, and literal-cycle release</a>.</p>
+          <p><a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS1335_BRAUER_TREE_HECKE_CORNER.md">Read the Brauer-tree Ext completion and its condensation boundary</a>.</p>
       </div>
 
         <div class="spotlight">
@@ -13921,19 +13923,16 @@
 
       <!-- ═══════════════════════ VERIFIED FRONTIER ═══════════════════════ -->
       <section id="verified">
-        <h2><span class="icon">↻</span> Verified Results — April 2026</h2>
-<details class="spotlight"><summary style="cursor:pointer;font-weight:600">Expand &mdash; ↻ Verified Results — April 2026 (146,799 characters, preserved in full)</summary>
+        <h2><span class="icon">↻</span> Historical Verified Snapshot — April 2026 <span class="section-badge">Superseded</span></h2>
+<details class="spotlight"><summary style="cursor:pointer;font-weight:600">Expand historical April 2026 snapshot (146,799 characters, preserved in full; not current status)</summary>
 
         <div class="spotlight">
-          <p>This top section is the live promoted layer of a much larger exact body preserved below. The archive is not
-            throwaway context; it is the accumulated result set. The only items treated as residual gaps are the few
-            that are named explicitly here. Monospace file references below now open the corresponding GitHub files
-            directly.</p>
-          <p><strong>Reading rule:</strong> if two formulas disagree elsewhere on the page, default to the shell map in
-            <a href="#current-synthesis">Current Synthesis</a> and to the promoted values here. The most common live
-            split is <code>3/13</code> dressed versus <code>3/8</code> bare-shell, and full <code>480</code>-package
-            versus truncated <code>122</code>-shell.
-          </p>
+          <p><strong>Superseded snapshot:</strong> this block preserves what the project called verified in April 2026.
+            Later exact audits withdrew or narrowed several formula claims in it. It is evidence of the correction
+            history, not the current promoted layer. For current status use <a href="#theory">The Theory</a>,
+            <a href="#numbers">Core Numbers</a>, the <a href="#reader-guide">Reader Guide</a>, and named certificates.</p>
+          <p><strong>Reading rule:</strong> if this snapshot conflicts with the current theorem spine or correction
+            ledger, the current evidence-tiered surface controls.</p>
           <p><strong>Alternate view:</strong> <a href="w33_complete_theory.html">the Complete Theory page</a> is a
             compact dashboard snapshot. It is useful as a quick visual cross-check, but this page and <a
               href="#current-synthesis">Current Synthesis</a> remain the live authoritative status layer.</p>
@@ -18071,10 +18070,11 @@
 <h2><span class="icon">&#8984;</span> Reader Guide <span class="section-badge">Start Here</span></h2>
         <div class="spotlight navigator-note">
           <p><strong>Navigator required:</strong> this live paper is too large to read linearly. If you care about
-            particle physics first, start at <a href="#verified">Verified Results</a>. If you care about the gravity
-            program first, start at <a href="#bridge-2026">Refinement Bridge</a>. If you want raw proof ledgers, start
-            at <a href="#hard-computation">Hard Computation Phases</a>. The page is meant to be navigated by question,
-            not read straight through.</p>
+            the exact mathematics first, start at <a href="#theory">The Theory</a> or
+            <a href="#numbers">Core Numbers</a>. If you care about the physical program, start at
+            <a href="#physics">Physics Derivations</a>, where conditional identifications are marked explicitly.
+            For raw proof ledgers, start at <a href="#hard-computation">Hard Computation Phases</a>.
+            The page is meant to be navigated by question, not read straight through.</p>
         </div>
         <div class="spotlight" style="border-left-color: var(--accent2);">
           <h3 style="margin-top:0;">Current audited scope</h3>
@@ -18088,30 +18088,29 @@
             research hypotheses unless an explicit map and theorem establish them. Numerical agreement or a shared
             dimension is never promoted by itself.</p>
         </div>
-        <h3>Evidence levels used on this site</h3>
+        <h3>Canonical status labels used on this site</h3>
         <div class="card-grid plain-english-grid">
           <div class="card">
-            <div class="label">E &mdash; Exact</div>
-            <div class="detail">A named finite or algebraic object is constructed, its map is explicit, and a witness
-              checks the stated invariant. This is the strongest internal tier.</div>
+            <div class="label">PROVED</div>
+            <div class="detail">A theorem or exact derivation establishes the claim for the named object.</div>
           </div>
           <div class="card">
-            <div class="label">S &mdash; Software / Simulation</div>
-            <div class="detail">Executable engineering behavior is demonstrated in code or simulation. Hardware and
-              experimental performance are not implied.</div>
+            <div class="label">CERTIFIED</div>
+            <div class="detail">An exact executable witness and deterministic certificate establish the stated finite
+              computation. A simulation is an artifact type, not an upgrade to a physical claim.</div>
           </div>
           <div class="card">
-            <div class="label">P &mdash; Proposed Experiment</div>
-            <div class="detail">A falsifiable measurement or implementation path is specified, but no result is
-              claimed until data exist.</div>
+            <div class="label">CONDITIONAL</div>
+            <div class="detail">The conclusion depends on a named physical identification or modeling assumption and is
+              not part of the exact finite theorem.</div>
           </div>
           <div class="card">
-            <div class="label">C &mdash; Conditional Interpretation</div>
-            <div class="detail">The conclusion follows only after a clearly stated physical identification or
-              modeling assumption. It is not part of the exact finite theorem.</div>
+            <div class="label">OPEN</div>
+            <div class="detail">The object or map is stated precisely but has not been settled. Proposed experiments
+              stay open until data exist.</div>
           </div>
           <div class="card">
-            <div class="label">F &mdash; Failed or Superseded</div>
+            <div class="label">RETRACTED</div>
             <div class="detail">A historical idea was refuted, narrowed, or replaced. It remains useful as an audit
               trail, not as current status.</div>
           </div>
@@ -18126,8 +18125,8 @@ pass produced it.</p>
       <td>The exact finite backbone, its current integral/representation frontiers, and clearly separated conditional interpretations. Start here if you read nothing else.</td></tr>
   <tr><td><strong>The numbers themselves</strong></td><td><a href="#numbers">Core Numbers</a></td>
       <td>Canonical graph, homology, lattice, code, and Schl&auml;fli-module invariants, without physics formulas mixed into the theorem layer.</td></tr>
-  <tr><td><strong>Whether to believe it</strong></td><td><a href="#verified">Verified Results</a></td>
-      <td>The claims that survived audit, each with the certificate that backs it. Also the retractions &mdash; results we promoted and then killed.</td></tr>
+  <tr><td><strong>Whether to believe it</strong></td><td><a href="#independent-verification">Independent Verification</a></td>
+      <td>Executable witnesses, regression tests, named certificates, and the correction trail. The April “verified” block is retained only as a superseded historical snapshot.</td></tr>
   <tr><td><strong>The physics reading</strong></td><td><a href="#physics">Physics Derivations</a></td>
       <td>How the combinatorics is mapped onto particles and forces &mdash; and where that mapping is still a conjecture rather than a theorem.</td></tr>
   <tr><td><strong>The mathematics, in depth</strong></td><td><a href="#pillars-main">Mathematical Pillars</a></td>
@@ -18140,7 +18139,7 @@ pass produced it.</p>
 <details class="spotlight"><summary style="cursor:pointer;font-weight:600">Detailed index &mdash; the original pass-by-pass pointers (preserved verbatim)</summary>
 
           <ul class="quick-list">
-            <li><a href="#verified">Verified Results</a> &mdash; the concise exact theorem layer.</li>
+            <li><a href="#theory">The Theory</a> &mdash; the current concise exact theorem layer.</li>
             <li><a href="#current-synthesis">Current Synthesis</a> &mdash; the present evidence-tiered state.</li>
             <li><a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md">Pass 1147</a>
               &mdash; the object-level directed-Schl&auml;fli map, 216-line frame, integral Smith profile, and
@@ -18148,6 +18147,13 @@ pass produced it.</p>
             <li><a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS1325_1329_TRIALITY_INTEGRAL_GAUGE_RELEASE.md">Passes 1325&ndash;1329</a>
               &mdash; the three-carrier triality reduction, six-channel and Hecke Smith forms, and cycle
               nonselection theorem.</li>
+            <li><a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS1330_1334_MODULAR_TRIALITY_ATLAS_RELEASE.md">Passes 1330&ndash;1334</a>
+              &mdash; the modular Jacobson/Loewy atlas of <code>H26</code>, the nine-axis product scheme, and two
+              selected length-7/8 cyclic words with the copy-selection boundary kept explicit.</li>
+            <li><a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS1335_BRAUER_TREE_HECKE_CORNER.md">Pass 1335</a>
+              &mdash; the cyclic-defect Brauer tree, one-dimensional <code>23&harr;58</code> Ext spaces, the
+              doubled-<code>A3</code> Hecke condensation shadow, and semisimple color transport at
+              characteristic five.</li>
             <li><a href="#q3-all-m-theorem">Pass 541</a> &mdash; the exact <code>q=3</code> trace-valuation minimum for
               every exponent <code>m&ge;2</code>, proved by six cubic recurrences and two finite mod-<code>9</code>
               clocks.</li>
@@ -18169,6 +18175,7 @@ pass produced it.</p>
               <a href="#archive">Historical Archive</a> &mdash; the development record.</li>
           </ul>
         </details>
+        </div>
         <details class="reader-history" hidden aria-hidden="true">
           <summary style="cursor:pointer;color:var(--fg2);">Historical development and detailed claim ledger</summary>
           <div class="spotlight" style="margin-top:0.8rem;border-left-color:var(--fg2);">
@@ -18187,7 +18194,7 @@ pass produced it.</p>
             matter counts, transport channels, and curvature instead of treating those numbers as isolated coincidences.
           </p>
           <ul class="quick-list">
-            <li><a href="#verified">Verified Results</a> is the live theorem layer.</li>
+            <li><a href="#theory">The Theory</a> is the live theorem layer.</li>
             <li><a href="#bridge-2026">Refinement Bridge</a> is the current internal-to-4D bridge program.</li>
             <li><a href="#hard-computation">Hard Computation Phases</a> is the proof engine and phase ledger.</li>
             <li><a href="#archive">Historical Archive</a> is preserved context, not automatically promoted status.</li>
@@ -22817,7 +22824,6 @@ deliberately &mdash; including the parts that turned out to be wrong.</p>
         </div>
         </details>
       
-</details>
 </section>
 
       <section id="archive">
@@ -28375,7 +28381,7 @@ deliberately &mdash; including the parts that turned out to be wrong.</p>
 
 
   <footer>
-    <p><strong>W(3,3)&ndash;E&#8328; Theory</strong> &middot; Wil Dahn &amp; Claude &middot; 2026</p>
+    <p><strong>W(3,3) Exceptional Geometry</strong> &middot; Wil Dahn &amp; Claude &middot; 2026</p>
     <p style="margin-top: 0.5rem;">
       <a href="https://github.com/wilcompute/W33-Theory">GitHub</a> &middot;
       <a href="https://doi.org/10.5281/zenodo.18652825">DOI</a> &middot;

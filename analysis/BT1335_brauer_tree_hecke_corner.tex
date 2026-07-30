@@ -1,0 +1,65 @@
+% Pass 1335: Brauer-tree completion of the 58|23 bridge.
+\section{Brauer-tree completion of the five-primary frame extension}
+\label{sec:pass1335-brauer-tree}
+
+Let \(k=\mathbf F_5\), let \(G=W(E_6)\cong U_4(2).2\), and let
+\(G'=PSp(4,3)\cong U_4(2)\). GAP/CTblLib gives cyclic Sylow \(5\)-subgroups
+of order \(5\). For both groups, the defect-one block containing the
+ordinary \(81\)-character has the following shape; for the outer group there
+are two sign-twist-related \(81\)-blocks, and GAP checks both:
+\[
+  1\;-\;23\;-\;58\;-\;6,
+\]
+where the four entries are the dimensions of the simple edge modules, not the
+ordinary vertices.
+Equivalently, the ordinary vertices have degrees
+\[
+  1\;-\;24\;-\;81\;-\;64\;-\;6,
+\]
+and the \(23\)- and \(58\)-edges meet at the ordinary \(81\)-vertex. The
+exceptional multiplicity is one. Brauer-tree algebra theory therefore gives
+\[
+ \dim_k\operatorname{Ext}^1_G(23,58)
+ =\dim_k\operatorname{Ext}^1_G(58,23)=1,
+\]
+with the same equalities for \(G'\).
+
+Pass~1147 already constructs a nonsplit sequence
+\[
+ 0\longrightarrow I_{58}\longrightarrow S_{81}
+ \longrightarrow Q_{23}\longrightarrow0
+\]
+over both groups. Its class consequently spans the full
+\(\operatorname{Ext}^1_G(Q_{23},I_{58})\) and
+\(\operatorname{Ext}^1_{G'}(Q_{23},I_{58})\): the nonsplit middle-module
+type is unique up to rescaling its two simple endpoints.
+
+The literal \(432\)-character contributes \(2\cdot6+2\cdot64+81\) in this
+defect block, so the corresponding rational Hecke-commutant contribution has
+dimension \(2^2+2^2+1^2=9\). This is the nonsemisimple nine-dimensional
+central block of Pass~1330. The other nine-dimensional block is the
+defect-zero species-\(20\) contribution \(M_3(\mathbf F_5)\). A direct GAP
+derivation calculation on the certified \(26^3\) multiplication tensor gives
+the scalar-simple Ext quiver
+\[
+ h_6\rightleftarrows h_5\rightleftarrows h_7,
+\]
+each displayed Ext space being one-dimensional. Its radical powers have
+dimensions \(6,2,0\). Here \(h_i\) is the \(i\)-th one-dimensional simple
+\(\mathcal H_{26,\mathbf F_5}\)-module in the frozen seven-character order;
+the subscripts are Hecke-character indices, not module dimensions.
+
+This Hecke block is a condensation shadow of the same cyclic-defect group
+block, not the literal \(58|23\) middle module. The full group Brauer tree,
+not the Hecke quiver alone, proves the Ext theorem.
+
+Finally,
+\[
+ \mathbf F_5[C_3]\cong\mathbf F_5\times\mathbf F_{25}.
+\]
+Since characteristic \(5\) divides neither \(|C_3|\) nor \(|S_3|\), color
+triality is semisimple and cross-color Ext vanishes. The colored middle
+space splits as \(81+162\) over \(\mathbf F_5\), and as three independent
+\(81\)-extensions after scalar extension to \(\mathbf F_{25}\). Triality
+transports the unique class; it neither creates it nor selects a physical
+copy.

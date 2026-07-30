@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import shutil
 import subprocess
+import sys
 from functools import lru_cache
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -48,15 +49,17 @@ def test_nine_axis_scheme():
 
 
 def test_literal_cycles():
-    cycles = payload()["pass1332_symmetry_breaking_cycle_selectors"]["cycles"]
+    cycles = payload()["pass1332_selected_cycle_representatives"]["cycles"]
     assert cycles["7"]["dihedral_stabilizer_order"] == 2
     assert cycles["7"]["dihedral_orbit_size"] == 25920
+    assert cycles["7"]["support_set_stabilizer_order"] == 12
+    assert cycles["7"]["support_chord_count"] == 5
     assert cycles["8"]["dihedral_stabilizer_order"] == 1
     assert cycles["8"]["dihedral_orbit_size"] == 51840
 
 
 def test_copy_selector_boundary():
-    record = payload()["pass1332_symmetry_breaking_cycle_selectors"]
+    record = payload()["pass1332_selected_cycle_representatives"]
     assert record["species20_copy_idempotent_orbit_size"] == 3
     assert record["combined_W_E6_times_S3"]["length7_cycle_plus_copy_orbit"] == 77760
     assert record["combined_W_E6_times_S3"]["length8_cycle_plus_copy_orbit"] == 155520
@@ -65,6 +68,34 @@ def test_copy_selector_boundary():
 def test_json_certificate_matches_execution():
     frozen = json.loads((ROOT / "data" / "w33_pass1330_1334_modular_triality_cycle_atlas.json").read_text())
     assert frozen == payload()
+
+
+def test_central_blocks_are_executably_reconstructed():
+    records = payload()["pass1330_modular_jacobson_radicals"]["records"]
+    assert records["2"]["central_block_dimensions"] == [4, 22]
+    assert records["3"]["central_block_dimensions"] == [1, 25]
+    assert records["5"]["central_block_dimensions"] == [1, 1, 1, 1, 4, 9, 9]
+    assert records["2"]["primitive_central_idempotent_count"] == 2
+    assert records["3"]["primitive_central_idempotent_count"] == 2
+    assert records["5"]["primitive_central_idempotent_count"] == 7
+
+
+def test_gap_atlasrep_certificate():
+    certificate = json.loads(
+        (ROOT / "data" / "w33_pass1333_atlasrep_species20.json").read_text()
+    )
+    assert certificate["status"] == "PASS"
+    assert certificate["group_order"] == 51840
+    assert [record["image_size"] for record in
+            certificate["degree20_representation_records"]] == [51840] * 3
+    assert any(
+        sorted(record["degree20_multiplicities"]) == [0, 0, 3]
+        for record in certificate["tom_432_records"]
+    )
+    assert any(
+        sorted(record["degree20_multiplicities"]) == [0, 0, 1]
+        for record in certificate["tom_480_records"]
+    )
 
 
 def test_integrator_is_idempotent(tmp_path):
@@ -76,8 +107,8 @@ def test_integrator_is_idempotent(tmp_path):
     shutil.copy(ROOT / "tools" / "integrate_pass1330_1334.py", tools / "integrate_pass1330_1334.py")
     for name in ("w33_paper.tex", "photonic_holonet.tex"):
         (tmp_path / name).write_text("\\documentclass{article}\n\\begin{document}\nX\n\\end{document}\n")
-    subprocess.run(["python", str(tools / "integrate_pass1330_1334.py")], cwd=tmp_path, check=True)
-    subprocess.run(["python", str(tools / "integrate_pass1330_1334.py")], cwd=tmp_path, check=True)
+    subprocess.run([sys.executable, str(tools / "integrate_pass1330_1334.py")], cwd=tmp_path, check=True)
+    subprocess.run([sys.executable, str(tools / "integrate_pass1330_1334.py")], cwd=tmp_path, check=True)
     for name in ("w33_paper.tex", "photonic_holonet.tex"):
         text = (tmp_path / name).read_text()
         assert text.count(r"\input{analysis/BT1330_BT1334_modular_triality_cycle_atlas}") == 1

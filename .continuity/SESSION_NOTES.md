@@ -577,3 +577,37 @@
 - Regenerated `RESULTS_INDEX.md` over 6,846 files (6,136 distinctive results), added explicit prior-art/literature boundaries, and repaired two integration regressions: a Pass-1321 shifted-spectrum scanner false positive and a displaced paper selector-boundary tag.
 - Verification to this point: direct GAP 84/84; deterministic Pass-1147 pytest; 27/29 broad focused tests initially passed, then both integration failures were repaired and their focused reruns passed; JSON, README links, HTML parsing/unique IDs/anchors, and TeX braces/environments pass. No TeX compiler is installed, so no PDF build is claimed.
 - Remote advanced to Passes 1330-1334 during validation. Local publication is intentionally pending reconciliation of that adjacent modular-radical/triality packet through GitKraken.
+
+## 2026-07-30 continuation - Pass 1335 Brauer-tree closure and atlas repair
+
+- Fetched and reconciled the remote Passes 1330-1334 packet through GitKraken,
+  reserved Pass 1335, and audited the modular algebra, selected cycles,
+  AtlasRep execution, manuscript integration, README, and live site against
+  their exact certificates.
+- Pass 1335 closes the Pass-1147 five-primary extension boundary. GAP/CTblLib
+  computes the cyclic-defect trees for `U4(2)` and both outer `U4(2).2`
+  81-blocks, proves `Ext^1(23,58)=Ext^1(58,23)=1`, and verifies that the two
+  outer 81-characters are exchanged by the nontrivial linear character. The
+  Pass-1147 nonsplit class therefore spans the full directed Ext group.
+- The literal 432 carrier contributes a nonsemisimple nine-dimensional
+  characteristic-5 Hecke corner with scalar quiver
+  `h6 <-> h5 <-> h7`; the other nine-dimensional block is the defect-zero
+  species-20 `M3(F5)` block. This is certified as a condensation shadow, not
+  identified with the literal 81-dimensional middle module.
+- Rebuilt the canonical front doors again after a hostile surface audit:
+  corrected the `243+45=288` rank ledger, separated the obstructed global
+  edge/root map from the completed local-axis E8 lift, added Passes 1330-1335
+  reproduction routes, expanded the modular release, added a seven-object
+  alias backbone, and redirected website trust navigation away from a
+  superseded April formula snapshot. HTML nesting and E6/E8 branding were
+  repaired.
+- CI now snapshots and byte-compares all frozen Passes 1330-1335 certificates,
+  the exported GAP tensor, and both manuscript integrations. Pass 1333 asserts
+  all three degree-20 AtlasRep images have order 51840 and installs Repsn 3.1.2
+  from its release tarball.
+- Verification: Pass 1330-1334 `10/10`, Pass 1335 `3/3`, Pass 1147 `2/2`,
+  dependency stack `22/22`; Pass 1333 and Pass 1335 exact GAP completion
+  markers; 236 claim-ledger rows against 273 certificates; 134/134 shifted
+  descendants registered or archival; JSON/YAML/README/HTML/TeX static checks
+  all pass. Full local PDF compilation remains unclaimed because no TeX engine
+  is installed; CI retains the build gate.

@@ -10,6 +10,22 @@ Use the exact-result index first. If it misses, search the aliases here, then
 read the listed primary artifacts end to end before claiming novelty. Always
 carry the stated group, carrier, and scope into the new claim.
 
+## Canonical backbone — the shortest alias resolver
+
+Use this table before opening a date-named analysis file. It names the object,
+the strongest compact result surface, and the collision that has caused the
+most rediscovery.
+
+| Search words and aliases | Canonical object/result | Start here | Do not confuse it with |
+|---|---|---|---|
+| `W33`, `W(3,3)`, `40 qutrit Paulis`, `SRG(40,12,2,4)` | projective commutation graph of the 40 nonidentity two-qutrit Pauli classes; spectrum \(12^1,2^{24},(-4)^{15}\) | [Theory navigator](docs/index.html#theory), [master paper](w33_paper.tex) | a physical spacetime or particle model |
+| `81 homology`, `H1 carrier`, `qutrit CSS` | clique-complex \(H_1\cong\mathbb Z^{81}\) and the certified \([[240,81,3]]_3\) sector | [Passes 373–374](PASS373_374_W33_BOUNDARY_MLUT_PHASE_SHEET_SYNTHESIS.md) | the distinct \(81_-\) Schläfli-frame module |
+| `adjacency SNF`, `signed turn`, `K operator`, `four-branch gluing` | integral adjacency and directed-edge lattices, including \(\operatorname{SNF}(A)=1^{16},2^8,8^{15},24\) and \(\operatorname{spec}(K)=(-6)^{81},2^{120},4^{24},10^{15}\) | [Pass 827 witness](analysis/w33_pass827_adjacency_kbranch_meets_e8_boundary.py), [Pass 826 witness](analysis/w33_pass826_k_operator_four_branch_gluing.py) | equality of spectra or dimensions without an integral map |
+| `120 axes`, `240 roots`, `axis glue`, `E8 lift` | intrinsic \(120\)-axis map to anisotropic \(E_8/2E_8\) lines and explicit chamber-gauged lift to all 240 signed roots | [local-axis lift](PASS123_W33_AXIS_GLUE_E8_LIFT.md) | the obstructed global bijection from the 240 W33 graph edges |
+| `432`, `216 frame lines`, `Steinberg bridge`, `58|23` | directed Schläfli carrier, rank-81 integral frame, and unique nonsplit characteristic-5 extension | [Pass 1147](PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md), [Pass 1335](PASS1335_BRAUER_TREE_HECKE_CORNER.md) | the 26-dimensional Hecke algebra or a physical generation |
+| `H26`, `26 Hecke units`, `modular radical`, `Loewy` | literal \(S_5\)-coset Hecke algebra with exact \(p=2,3,5\) radical and block profiles | [Passes 1330–1334](PASS1330_1334_MODULAR_TRIALITY_ATLAS_RELEASE.md) | the literal \(81\)-dimensional frame module; the Hecke block is a corner shadow |
+| `137 QR`, `quadratic residue CSS`, `[[137,1,d]]` | corrected binary quantum code \([[137,1,21]]\) | [Passes 363–367](PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md) | the retracted unsupported \([[137,1,3]]\) intake claim |
+
 ## The 540 — and the trap that there are FIVE transitive species
 
 **Aliases:** `540 frames`, `540 skew pairs`, `540 cubes`, `540 nonedges`,
@@ -127,7 +143,11 @@ Moreover, the saturated \(81\)-module is the nonsplit exact sequence
 \]
 Its complete submodule dimension profile is \(0,58,81\), even after
 restriction to \(PSp(4,3)\); `58+23` is therefore a composition-factor
-ledger, not a direct-sum decomposition.
+ledger, not a direct-sum decomposition. Pass 1335 computes the cyclic-defect
+Brauer tree and proves
+\(\dim\operatorname{Ext}^1(23,58)=
+\dim\operatorname{Ext}^1(58,23)=1\) for both groups. The Pass-1147 nonsplit
+class therefore spans the full directed Ext group.
 Aliases include `five-primary sandpile bridge`, `rank-23 sign-twist`, and
 `Pass 1147 critical-group module`, `nonsplit 58-23 extension`, and
 `saturated frame mod 5`. A displayed matrix is basis-dependent; no canonical
@@ -144,8 +164,43 @@ Do not identify the 135-dimensional oriented-edge kernel with another
 135-carrier merely from the shared count.
 
 **Primary artifacts:** [Pass 1147](PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md),
-[Pass 1138](PASS1138_EXPLICIT_CUBIC_INCIDENCE_BRIDGE.md), and
-[Passes 1142–1146](PASS1142_1146_EXACT_RELEASE.md).
+[Pass 1138](PASS1138_EXPLICIT_CUBIC_INCIDENCE_BRIDGE.md),
+[Passes 1142–1146](PASS1142_1146_EXACT_RELEASE.md), and
+[Pass 1335](PASS1335_BRAUER_TREE_HECKE_CORNER.md).
+
+### The modular `H26` algebra
+
+**Aliases:** `26-dimensional Hecke algebra`, `S5 coset Hecke algebra`,
+`Pass 1330 modular radicals`, `H26 Loewy series`.
+
+**Canonical object:** \(H_{26}=\operatorname{End}_{W(E_6)}
+(\mathbb Q[W(E_6)/S_5])\), equipped with the exact integral multiplication
+table in its literal orbital basis. This is an algebra acting on the
+\(432\)-point permutation carrier; it is not the \(81\)-dimensional saturated
+frame module.
+
+**Exact modular result:** its Jacobson-radical power dimensions are
+\[
+\begin{array}{c|c|c}
+p&(\dim J,\dim J^2,\ldots,0)&H_{26,\mathbb F_p}/J\\ \hline
+2&(21,17,13,7,2,0)&M_2(\mathbb F_2)\oplus\mathbb F_2,\\
+3&(22,16,10,4,0)&\mathbb F_3^4,\\
+5&(6,2,0)&M_3(\mathbb F_5)\oplus M_2(\mathbb F_5)\oplus\mathbb F_5^7.
+\end{array}
+\]
+
+**Boundary:** Pass 1335 proves that the \(p=5\) algebra radical is a
+condensation shadow of the same cyclic-defect group block and computes its
+scalar Ext quiver \(h_6\rightleftarrows h_5\rightleftarrows h_7\). It does
+not identify that Hecke filtration with the literal \(58|23\) middle module:
+the full group Brauer tree proves Ext uniqueness. No claim about the exact
+fixed-space behavior of the \(23\)-head is promoted here without a separate
+certificate.
+
+**Primary artifacts:** [Passes 1330–1334](PASS1330_1334_MODULAR_TRIALITY_ATLAS_RELEASE.md),
+[`analysis/w33_pass1330_1334_modular_triality_cycle_atlas.py`](analysis/w33_pass1330_1334_modular_triality_cycle_atlas.py),
+[`data/w33_pass1330_1334_modular_triality_cycle_atlas.json`](data/w33_pass1330_1334_modular_triality_cycle_atlas.json),
+and [Pass 1335](PASS1335_BRAUER_TREE_HECKE_CORNER.md).
 
 ## The 36 — spreads
 

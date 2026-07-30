@@ -1,4 +1,4 @@
-# CORRECTION NOTICE — superseded by the literal 26-orbital release
+# CORRECTION NOTICE — RETRACTED and superseded by the literal 26-orbital release
 
 **Active theorem state:** the k=9 coset plan and any restriction inferred from dimension fits are not exact results. The literal action has 26 orbitals, and exact packet/species placement requires classwise character projectors. Passes 1310–1319 provide the replacement certificates. The historical text is retained below for provenance, not citation as active theorem state.
 

@@ -1,4 +1,4 @@
-# CORRECTION NOTICE — the k=9 verification and dependent ledger are retracted
+# CORRECTION NOTICE — RETRACTED k=9 verification and dependent ledger
 
 The Pass 1263 fixed-point vector `(432,4,0,1,1)` gives Burnside value `43/5`, not `9`; its script also wrote `PASS` without fail-closing on that contradiction. Dimension-divisibility tables and coordinate matrix units are not character restrictions or embedded carrier units. Use Passes 1302 and 1315–1319 for the active 26-orbital algebra, exact classwise restrictions, and literal species-20 projector. Historical text follows for provenance.
 

@@ -12,9 +12,13 @@ def integrate(path: Path) -> bool:
     text = path.read_text()
     if INPUT in text:
         return False
-    needle = r"\end{document}"
+    # Keep theorem sections in the document body.  The photonic manuscript
+    # carries its bibliography before \end{document}; appending a section after
+    # that bibliography compiles but produces the wrong publication order.
+    bibliography = r"\begin{thebibliography}"
+    needle = bibliography if bibliography in text else r"\end{document}"
     if needle not in text:
-        raise RuntimeError(f"{path} has no \\end{{document}}")
+        raise RuntimeError(f"{path} has no insertion boundary")
     replacement = f"\n{MARKER}\n{INPUT}\n\n{needle}"
     path.write_text(text.replace(needle, replacement, 1))
     return True

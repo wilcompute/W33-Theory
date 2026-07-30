@@ -1,0 +1,39 @@
+name: Pass 1335 Brauer Tree and Hecke Corner
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-gap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check numpy sympy pytest
+      - run: sudo apt-get update
+      - run: sudo apt-get install -y gap gap-character-tables
+      - name: Export certified tensor and run GAP witness
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp data/w33_pass1335_hecke_ext_input.g /tmp/pass1335.expected.input.g
+          cp data/w33_pass1335_brauer_tree_hecke_corner.json /tmp/pass1335.expected.json
+          python analysis/w33_pass1335_export_hecke_gap_input.py
+          gap -q analysis/w33_pass1335_brauer_tree_hecke_corner.g | tee /tmp/pass1335-gap.log
+          grep -qx 'PASS 1335 COMPLETE' /tmp/pass1335-gap.log
+          python -m json.tool data/w33_pass1335_brauer_tree_hecke_corner.json >/dev/null
+          cmp /tmp/pass1335.expected.input.g data/w33_pass1335_hecke_ext_input.g
+          cmp /tmp/pass1335.expected.json data/w33_pass1335_brauer_tree_hecke_corner.json
+      - run: python -m pytest -q tests/test_w33_pass1335_brauer_tree_hecke_corner.py

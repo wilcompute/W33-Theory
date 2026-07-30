@@ -284,8 +284,10 @@ Consequently the exact sequence
 \]
 is nonsplit over both groups. Thus the saturated reduction is a length-two
 module with unique proper nonzero submodule, not \(58\oplus23\). This proves
-that this displayed extension class is nonzero; it does not determine the
-dimension of the full \(\operatorname{Ext}^1\) space.
+that this displayed extension class is nonzero. Pass 1335 subsequently
+computes the cyclic-defect Brauer tree and proves that the relevant directed
+\(\operatorname{Ext}^1\) space has dimension one over both groups, so this
+class spans it.
 
 The module isomorphism class is intrinsic, but any displayed intertwiner matrix
 depends on the chosen \(W(E_6)\cong PGSp(4,3)\) identification and quotient

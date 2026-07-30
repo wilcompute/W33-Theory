@@ -1,13 +1,20 @@
 {
   "schema": "w33.pass1330_1334.build_manifest.v1",
-  "status": "LOCAL_PASS_WITH_REMOTE_RUNTIME_PENDING",
+  "status": "LOCAL_EXACT_AND_GAP_PASS_WITH_TEX_BUILD_BOUNDARY",
   "local": {
     "exact_python": "PASS",
-    "pytest": "8/8 PASS",
-    "minimal_insert_pdflatex": "PASS",
+    "pytest": "10/10 PASS",
+    "minimal_insert_pdflatex": "UNAVAILABLE_NO_TEX_ENGINE",
     "integrator_idempotence": "PASS",
-    "gap_available": false,
-    "atlasrep_executed": false
+    "gap_available": true,
+    "gap_version": "4.12.1",
+    "repsn_version": "3.1.2",
+    "atlasrep_executed": true,
+    "atlasrep_certificate": "data/w33_pass1333_atlasrep_species20.json",
+    "manuscript_input_counts": {
+      "w33_paper.tex": 1,
+      "photonic_holonet.tex": 1
+    }
   },
   "isolated_uploaded_holonet_probe": {
     "status": "BLOCKED_BY_PREEXISTING_MISSING_INPUT",
@@ -18,6 +25,6 @@
   "remote_ci": {
     "workflow": ".github/workflows/pass1330_1334_modular_triality_atlas.yml",
     "expected_jobs": ["exact-python", "atlasrep-gap", "manuscripts"],
-    "observed_status": "PENDING_PUBLICATION"
+    "observed_status": "PENDING_POST_PUSH_RUN"
   }
 }

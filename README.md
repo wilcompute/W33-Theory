@@ -77,6 +77,8 @@ flowchart TD
     T --> I["integral bad primes {2,5}"]
     X --> H["H₂₆ and three-carrier triality"]
     H --> J["234 → 78 → 52; Hecke bad primes {2,3,5}"]
+    J --> R["modular radicals: 21→17→13→7→2→0 at p=2"]
+    R --> B["p=5 Brauer tree: Ext¹(23,58)=Ext¹(58,23)=1"]
 ```
 
 | Mathematical object | Strongest current result | Tier | Canonical entry |
@@ -86,10 +88,11 @@ flowchart TD
 | Integral adjacency | `SNF(A)=diag(1^16,2^8,8^15,24)`; saturated gluing `(Z/2)^6⊕(Z/6)^9⊕Z/120` | `CERTIFIED` | [`pass827`](analysis/w33_pass827_adjacency_kbranch_meets_e8_boundary.py) |
 | Ramified gluing | Kernel growth `40,80,119,158,182` reconstructs `Z/8⊕(Z/2)^15` at `p=2` | `CERTIFIED` | [Pass 1002 release](analysis/BT999_1003_five_frontier_release.md) |
 | Signed directed edges | `spec(K)=(−6)^81,2^120,4^24,10^15`; exact four-branch gluing | `CERTIFIED` | [`pass826`](analysis/w33_pass826_k_operator_four_branch_gluing.py) |
-| Schläfli/E₆ carrier | `X₄₃₂` maps with rank 81 to 216 antipodal tight-frame lines; three colours weld to rank 288 with residual 1952 | `CERTIFIED` | [Pass 1147](PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md) |
+| Schläfli/E₆ carrier | `X₄₃₂` maps with rank 81 to 216 antipodal tight-frame lines; three colours give rank 243, and adjoining the disjoint rank-45 cubic block gives rank 288 with residual 1952 | `CERTIFIED` | [Pass 1147](PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md) |
 | Integral Schläfli frame | Smith profile `1^15,2^6,4^8,8^29,40^23`; internal bad primes `{2,5}`; colour split index `3^81` | `CERTIFIED` | [Pass 1147](PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md) |
-| Saturated frame mod 5 | Nonsplit `0→I₅₈→S₅→K(W33)₍₅₎⊗sgn→0` over both `W(E6)` and `PSp(4,3)`; submodule dimensions only `0,58,81` | `CERTIFIED` | [Pass 1147](PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md) |
+| Saturated frame mod 5 | Nonsplit `0→I₅₈→S₅→K(W33)₍₅₎⊗sgn→0`; `Ext¹(23,58)=Ext¹(58,23)=1` over both groups, so this is the unique nonzero extension type up to endpoint rescaling | `CERTIFIED` | [Pass 1147](PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md) · [Pass 1335](PASS1335_BRAUER_TREE_HECKE_CORNER.md) |
 | Three-carrier Hecke/triality | Commutants `234 → 78 → 52`; six-channel SNF `1,1,1,12,12,24`; Hecke bad primes `{2,3,5}`; invariant cycles do not select a copy | `CERTIFIED` | [Passes 1325–1329](PASS1325_1329_TRIALITY_INTEGRAL_GAUGE_RELEASE.md) |
+| Modular `H₂₆` | Radical powers at `p=2,3,5` are `21,17,13,7,2,0`; `22,16,10,4,0`; `6,2,0`; the exceptional `p=5` scalar Ext quiver is doubled `A₃`, a condensation shadow of the same cyclic-defect block | `CERTIFIED` | [Passes 1330–1334](PASS1330_1334_MODULAR_TRIALITY_ATLAS_RELEASE.md) · [Pass 1335](PASS1335_BRAUER_TREE_HECKE_CORNER.md) |
 | Binary quadratic-residue code | Corrected code `[[137,1,21]]`; exact affine/real-Clifford towers and explicit parity boundaries | `CERTIFIED` | [Passes 358–367](PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md) |
 | Section trace tower | For every `m≥2`, `min_c v_λ(tr(D_c^m)) = 2(m+[m odd])` at `q=3` | `CERTIFIED` | [Pass 541](PASS541_Q3_ALL_M_RECURRENCE_THEOREM.md) |
 
@@ -103,6 +106,10 @@ its 432 vectors form 216 antipodal lines with `G²=3200G` and angles
 `3^81`. Modulo 5, the saturated 81-space is not `58⊕23`: it is the nonsplit
 length-two module
 `0→I₅₈→S₅→K(W33)₍₅₎⊗sgn→0`, with a unique proper nonzero submodule.
+Pass 1335 identifies the cyclic-defect Brauer tree and proves both directed
+cross-`Ext¹` spaces have dimension one, so this nonsplit module exhausts the
+previously open extension class. The Hecke radical records a condensed
+doubled-`A₃` shadow; it is not the module itself.
 This is an exact theorem about named `W(E6)` modules and integral lattices. It
 does not identify generations, Yukawa couplings, particles, or optical modes.
 
@@ -123,7 +130,10 @@ Matching dimensions or group orders are evidence to investigate, not maps.
 
 ## The derivations, symbolically
 
-Everything below is derived from `(q, k, λ, μ) = (3, 12, 2, 4)` and the graph itself. **Status** is honest:
+The finite-geometry tables immediately below are derived from
+`(q, k, λ, μ) = (3, 12, 2, 4)` and the graph itself. Later sections explicitly
+name any additional representation-theory, coding-theory, experimental, or
+interpretive input. **Status** is honest:
 `PROVED` = machine-checked or proved in the paper; `CERTIFIED` = exact computation with an idempotent JSON
 certificate; `OPEN` = stated, not settled; `RETRACTED` = we published it, then killed it.
 
@@ -209,7 +219,7 @@ object with a physical one is a map that must be built, not inferred from a matc
 | ⤷ forced identity | `2q = λ + μ` (`6 = 2+4`) holds automatically for `W(q,q)` | the split is not chosen | PROVED |
 | **6. Matter sector** | `v − 1 − k = 40 − 1 − 12 = 27` | fix a vacuum vertex: `27` non-neighbours carry `E_6` fundamental, since `\|Aut\| = 51,840 = \|W(E_6)\|` | CERTIFIED / CONDITIONAL |
 | ⤷ branching | `27 = 16 + 10 + 1` under `E_6 ⊃ SO(10) ⊃ SU(5)` | one generation + Higgs + singlet | PROVED (rep theory) |
-| **6b. Edge–root** | `240 = \|Φ(E_8)\|` | *count only* — an equivariant map must still be constructed | OPEN |
+| **6b. E₈ boundary** | `240 = \|Φ(E_8)\|` | The global W33-edge map is obstructed; the distinct `40×3×2` local-axis endpoint carrier has an explicit integral lift onto all 240 signed roots; a different transitive subgroup embedding remains open | CERTIFIED / OPEN ([local-axis lift](PASS123_W33_AXIS_GLUE_E8_LIFT.md)) |
 | **7. Curved 4D** | `KO-dim = 6 = 2q` (Connes–Barrett) | 4D spacetime as a derived quantity | CONDITIONAL |
 | **α (fine structure)** | Hashimoto operator `B` on `480 = 2×240` directed edges | a spectral identity on the non-backtracking carrier, not a fit | CONDITIONAL |
 | **Koide / flavour** | residual packet `98 · 17 · 208`, `208 = 4·dim(F_4) = 4·52` | factor arithmetic closed; physical identification open | OPEN |
@@ -488,6 +498,16 @@ py -3 analysis/w33_pass1325_1329_triality_integral_gauge.py
 py -3 analysis/w33_pass1329_independent_checker.py
 py -3 -m pytest -q tests/test_w33_pass1325_1329.py
 
+# modular H26 radicals, central blocks, selected cycles, and AtlasRep carriers
+py -3 analysis/w33_pass1330_1334_modular_triality_cycle_atlas.py
+gap -q analysis/w33_pass1333_atlasrep_species20.g
+py -3 -m pytest -q tests/test_w33_pass1330_1334.py
+
+# cyclic-defect Brauer tree and the complete 23↔58 extension calculation
+py -3 analysis/w33_pass1335_export_hecke_gap_input.py
+gap -q analysis/w33_pass1335_brauer_tree_hecke_corner.g
+py -3 -m pytest -q tests/test_w33_pass1335_brauer_tree_hecke_corner.py
+
 # ramified p=2 reconstruction and coalescence theorem
 py -3 analysis/w33_pass1002_ramified_kernel_growth_gluing.py --check
 py -3 analysis/w33_pass828_coalescence_theorem.py --check
@@ -545,10 +565,12 @@ The former headline problem, ramified `p=2` coalescence, is closed by Pass 1002:
 the kernel-growth sequence `40,80,119,158,182` reconstructs
 `Z/8 ⊕ (Z/2)^15`. The live questions start one layer deeper:
 
-1. **Complete the modular extension theory.** Modulo `5`, Pass 1147 now proves
-   the nonsplit `58|23` length-two module and its unique proper submodule.
-   Determine the full `Ext¹` space and the corresponding characteristic-`2`
-   radical/Loewy structure behind the `1⊕14` image.
+1. **Complete the characteristic-2 frame module.** Pass 1335 closes the
+   characteristic-5 `Ext¹` question and identifies the Hecke radical as a
+   condensation shadow, not the literal middle module. The sharp remaining
+   modular problem is the Loewy series and extension quiver of the specific
+   81-dimensional frame reduction behind its `1⊕14` image at `p=2`, together
+   with the exact condensation functor to the `p=2` `H₂₆` radical.
 2. **Build the single integral pushout.** Combine the one-colour Smith profile,
    the colour index `3^81`, the six-channel Smith form, and the 26-unit Hecke
    lattice into one explicit linking lattice and compute its complete SNF.
@@ -564,7 +586,9 @@ the kernel-growth sequence `40,80,119,158,182` reconstructs
 
 ## Citation, provenance, license
 
-MIT. Every promoted claim carries a witness path and a certificate hash. If you find an error, the correct
+MIT. Every promoted claim must name a proof or witness path; executable packets
+also carry deterministic certificates, and current release notes publish their
+SHA-256 digests. If you find an error, the correct
 response is a retraction pass with a certificate — that is how the entries in
 [Things we got wrong](#things-we-got-wrong-on-purpose-and-in-public) got there, and several of them were
 found by the authors auditing their own work.

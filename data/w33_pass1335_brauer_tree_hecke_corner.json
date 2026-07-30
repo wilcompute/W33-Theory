@@ -1,0 +1,92 @@
+{
+  "schema": "w33.pass1335.brauer_tree_hecke_corner.v2",
+  "status": "PASS",
+  "scope": "finite group blocks, Brauer-tree Ext, Hecke condensation, and color semisimplicity",
+  "group_block_records": [
+    {
+      "group": "U4(2)",
+      "ordinary_position_81": 20,
+      "block_number": 1,
+      "ordinary_positions": [ 1, 4, 10, 19, 20 ],
+      "ordinary_degrees": [ 1, 6, 24, 64, 81 ],
+      "brauer_positions": [ 1, 4, 10, 18 ],
+      "brauer_degrees": [ 1, 6, 23, 58 ],
+      "decomposition_matrix": [ [ 1, 0, 0, 0 ], [ 0, 1, 0, 0 ], [ 1, 0, 1, 0 ], [ 0, 1, 0, 1 ], [ 0, 0, 1, 1 ] ],
+      "brauer_tree_edges": [ [ 1, 3 ], [ 2, 4 ], [ 3, 5 ], [ 4, 5 ] ],
+      "shared_23_58_vertex": 5,
+      "shared_vertex_ordinary_degree": 81,
+      "sylow_5_order": 5,
+      "exceptional_multiplicity": 1,
+      "ext_23_58_dimension": 1,
+      "ext_58_23_dimension": 1
+    },
+    {
+      "group": "U4(2).2",
+      "ordinary_position_81": 24,
+      "block_number": 2,
+      "ordinary_positions": [ 2, 4, 14, 22, 24 ],
+      "ordinary_degrees": [ 1, 6, 24, 64, 81 ],
+      "brauer_positions": [ 2, 4, 14, 20 ],
+      "brauer_degrees": [ 1, 6, 23, 58 ],
+      "decomposition_matrix": [ [ 1, 0, 0, 0 ], [ 0, 1, 0, 0 ], [ 1, 0, 1, 0 ], [ 0, 1, 0, 1 ], [ 0, 0, 1, 1 ] ],
+      "brauer_tree_edges": [ [ 1, 3 ], [ 2, 4 ], [ 3, 5 ], [ 4, 5 ] ],
+      "shared_23_58_vertex": 5,
+      "shared_vertex_ordinary_degree": 81,
+      "sylow_5_order": 5,
+      "exceptional_multiplicity": 1,
+      "ext_23_58_dimension": 1,
+      "ext_58_23_dimension": 1
+    },
+    {
+      "group": "U4(2).2",
+      "ordinary_position_81": 25,
+      "block_number": 1,
+      "ordinary_positions": [ 1, 5, 13, 23, 25 ],
+      "ordinary_degrees": [ 1, 6, 24, 64, 81 ],
+      "brauer_positions": [ 1, 5, 13, 21 ],
+      "brauer_degrees": [ 1, 6, 23, 58 ],
+      "decomposition_matrix": [ [ 1, 0, 0, 0 ], [ 0, 1, 0, 0 ], [ 1, 0, 1, 0 ], [ 0, 1, 0, 1 ], [ 0, 0, 1, 1 ] ],
+      "brauer_tree_edges": [ [ 1, 3 ], [ 2, 4 ], [ 3, 5 ], [ 4, 5 ] ],
+      "shared_23_58_vertex": 5,
+      "shared_vertex_ordinary_degree": 81,
+      "sylow_5_order": 5,
+      "exceptional_multiplicity": 1,
+      "ext_23_58_dimension": 1,
+      "ext_58_23_dimension": 1
+    }
+  ],
+  "outer_81_relation": {
+    "ordinary_positions": [ 24, 25 ],
+    "nontrivial_linear_character_position": 2,
+    "relation": "exchanged by tensoring with the nontrivial linear character"
+  },
+  "literal_432_character": {
+    "ordinary_multiplicities": [ 1, 0, 0, 2, 0, 0, 1, 0, 1, 0, 3, 0, 0, 0, 2, 0, 0, 0, 0, 1, 0, 2, 0, 1, 0 ],
+    "hecke_rank": 26,
+    "cyclic_defect_block_number": 2,
+    "cyclic_defect_contributors": [ [ 4, 6, 2 ], [ 22, 64, 2 ], [ 24, 81, 1 ] ],
+    "cyclic_defect_corner_dimension": 9,
+    "species20_block_number": 9,
+    "species20_corner_dimension": 9,
+    "species20_block_defect": 0
+  },
+  "hecke_scalar_ext": {
+    "field": 5,
+    "label_definition": "h_i is the i-th one-dimensional simple in the frozen CH1335 seven-character order",
+    "matrix": [ [ 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 1 ], [ 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0 ] ],
+    "nonzero_entries": [[5,6,1],[5,7,1],[6,5,1],[7,5,1]],
+    "quiver": "h6 <-> h5 <-> h7",
+    "boundary": "This is a condensation shadow; it does not by itself identify the literal 58|23 middle module."
+  },
+  "color_characteristic_5": {
+    "x3_minus_1_factor_degrees": [ 1, 2 ],
+    "nontrivial_cube_root_in_F5": false,
+    "C3_algebra": "F5 x F25",
+    "middle_dimensions_over_F5": [81,162],
+    "middle_dimensions_over_F25": [81,81,81],
+    "cross_color_ext": 0
+  },
+  "theorem_boundary": "The full group Brauer tree proves Ext uniqueness. The H26 radical is a condensed corner of the same cyclic-defect block, not the Pass-1147 module itself.",
+  "check_count": 32,
+  "failed_checks": []
+}
