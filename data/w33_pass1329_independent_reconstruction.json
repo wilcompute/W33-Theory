@@ -1,0 +1,20 @@
+{
+  "gap_certificate": "analysis/w33_pass1329_triality_integral_check.g",
+  "gap_runtime_available_locally": false,
+  "gap_status": "generated and CI-wired; local execution performed only when GAP is installed",
+  "parallel_scope_corrections": {
+    "pass1298": "Its 9-class object is the tensor square of the rank-3 W33 scheme, not the literal 26-dimensional W(E6)/S5 coset Hecke algebra.",
+    "pass1305": "Generic coordinate swaps in M3 are not an AtlasRep computation; its 480/432 multiplicities are reversed relative to the literal modules."
+  },
+  "stdlib_character_arithmetic": {
+    "equivariant_linking_dimension_40": true,
+    "global_linking_dimension_148": true,
+    "hecke_dimension_26": true,
+    "hom_dimension_6": true,
+    "triality_end_dimension_234": true,
+    "triality_fixed_dimension_52": true,
+    "x_dimension_432": true,
+    "y_dimension_480": true
+  },
+  "sympy_exact_matrix_engine": "PASS"
+}
