@@ -1,0 +1,64 @@
+\section{Characteristic-five Brauer tree, modular basic algebras, and Atlas conjugacy}
+\label{sec:bt1350-bt1354-brauer-basic-atlas}
+
+\begin{theorem}[Exact modular representation closure]
+Let $G=W(E_6)\cong U_4(2){:}2$, and let $\mathcal H_{\mathbb Z}$ be the primitive
+integral form of the literal $26$-dimensional $G/S_5$ Hecke algebra.
+Then the following statements hold.
+\begin{enumerate}
+\item In characteristic five, $G$ has two defect-one blocks with identical
+Brauer tree
+\[
+1\;---\;24\;---\;81\;---\;64\;---\;6,
+\]
+whose modular edges have dimensions $1,23,58,6$, respectively.  The exceptional
+multiplicity is one.  In particular, the $23$- and $58$-dimensional modular
+simples are adjacent and meet at the ordinary $81$-dimensional vertex.
+\item The basic algebras of $\mathcal H_{\mathbb F_p}$ for $p=2,3,5$ have
+radical-power dimensions
+\[
+(21,17,13,7,2,0),\qquad(22,16,10,4,0),\qquad(6,2,0).
+\]
+Their exact Gabriel quivers, homogeneous associated-graded defining relations,
+projective radical and socle layers, and minimal projective-resolution prefixes
+are frozen in the accompanying certificates.
+\item The Repsn-afforded degree-$20$ representation with standard-generator
+traces $(10,-1)$ is rationally conjugate to the literal rank-$20$ carrier model.
+The intertwiner space is one-dimensional, and the committed matrix $X$ satisfies
+\[
+C_{\rm Repsn}X=XC_{\rm carrier},\qquad
+D_{\rm Repsn}X=XD_{\rm carrier},\qquad \det X\ne0.
+\]
+\item The $120$-element length-four selector orbit has the intrinsic polar-space
+factorization
+\[
+120=40\times3:
+\]
+one totally isotropic line of $W(3,3)$, together with one of the three perfect
+matchings of its four points.  The line stabilizer has order $1296=54\cdot24$,
+and the cycle stabilizer is the preimage of $D_8<S_4$, of order
+$432=54\cdot8$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+The first assertion is read from the genuine CTblLib ordinary and
+characteristic-five Brauer tables for $U_4(2){:}2$: both defect-one blocks have
+decomposition matrix equal to the incidence matrix of the displayed tree.  The
+second assertion follows by reducing the literal Hecke multiplication tensor,
+constructing primitive idempotents, and computing $e_iJ^ke_j$, annihilator
+socle filtrations, and path-algebra kernels.  For the third assertion, Repsn
+affords the observed degree-$20$ character and exact rational nullspace
+calculation gives a one-dimensional simultaneous intertwiner space.  Finally,
+the fourth assertion follows by enumerating the $40$ totally isotropic lines,
+identifying the induced line action as $S_4$, and observing that an unoriented
+Hamiltonian cycle on four points is equivalent to one of three opposite-point
+matchings.
+\end{proof}
+
+\paragraph{Carrier firewall.}
+The ambient group Brauer tree and the characteristic-five Hecke basic algebra
+are different objects.  The former is a four-edge defect-one tree for the group
+algebra; the latter is the explicitly certified three-vertex exceptional corner
+inside the $26$-dimensional Hecke reduction.  No identification between them is
+made beyond the stated representation-theoretic transport.
