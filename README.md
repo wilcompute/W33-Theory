@@ -79,6 +79,26 @@ The four SRG parameters do not identify the graph: there are 28 isomorphism
 classes.  What removes the ambiguity here is the explicit construction from
 symplectic orthogonality on `PG(3,3)`, not a uniqueness claim.
 
+### Latest exact bridge: the dark 432s have names
+
+The `2240 → 45` E₈ cubic-incidence map kills three orbits of size 432. They
+are now identified object by object: each is one A₂ color copy of the
+`27 × 16 = 432` directed edges of the Schläfli graph
+`SRG(27,16,10,8)`.
+
+An explicit GAP transform sends an oriented edge `i→j` to the
+`81_minus` constituent of `Λ²(Aug(Q^27))`. It is odd under edge reversal,
+has rank 81, and its 432 integer outputs form 216 antipodal projective lines
+with tight-frame identity `G² = 3200G` and angles `0, 1/15, 1/5`.
+The three A₂ colors contribute rank `3×81 = 243`; adjoining the disjoint
+rank-45 cubic block gives a literal `1020×2240` integer map of rank 288 and
+kernel dimension 1952.
+
+That closes a real gap in the finite theory. It does **not** turn the exact
+three-color Fourier grading into a derivation of particle generations or
+Yukawa couplings. See
+[Pass 1147](PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md).
+
 ---
 
 ## The derivations, symbolically

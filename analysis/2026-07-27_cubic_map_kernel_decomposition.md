@@ -33,8 +33,17 @@ The degree reconstruction is 2195 exactly. In particular,
 Thus the direct Steinberg-to-unsigned-cubic-support bridge is representation-
 theoretically obstructed, not merely absent from the current construction.
 
-The previous heuristic `1952=7*276+20` does not describe the irreducible kernel and
-is superseded.
+The previous heuristic `1952=7*276+20` does not describe the irreducible
+kernel and is superseded. Pass 1147 now gives the number `1952` its correct
+object-level meaning: augment the cubic map by the three explicit rank-81
+Schläfli-edge/Steinberg transforms on the three A2-color fibres. The resulting
+rank is `45+3*81=288`, so its kernel is `2240-288=1952`, with exact
+decomposition obtained by deleting `3*81_minus` from the display above:
+
+`13*1 + 16*6 + 5*15 + 4*15a + 21*20 + 2*24 + 9*30 + 4*60a + 10*64 + 1*90`.
+
+This is not a realization of `7*Lambda^2(24)+20`; it is a different, explicit
+equivariant kernel.
 
 ## Certificate
 

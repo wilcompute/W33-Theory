@@ -62,13 +62,17 @@ otherwise unresolved occurrences; they never override explicit identities.
 
 ## Pass 1146 - the three 432 copies are an A2 color torsor
 
-Each 432 orbit consists of mixed A2 triples whose positive and negative roots lie in the same one of the three 27-shell colors and have distinct E6 labels. The three colors distinguish the three orbits exactly.
+Each 432 orbit consists of mixed A2 triples whose positive and negative roots lie in the same one of the three opposite 27-shell pairs. The three colors distinguish the three orbits exactly. Pass 1147 strengthens this: after negating the root in the opposite shell, every color fibre is equivariantly the 432 directed edges of the Schläfli graph `SRG(27,16,10,8)`.
 
 The order-three A2 Coxeter element commutes with W(E6), cycles the colors, and cycles the 432 orbits. Therefore the carrier is canonically
 
-`Omega_432 x C3`
+an unbased free `C3` torsor over `Omega_432`
 
-as a `W(E6) x C3` object. The missing label is A2 shell color, not an abstract S5 subgroup type.
+as a `W(E6) x C3` object. A labeled product
+`Omega_432 x C3` additionally chooses an origin color and a Coxeter
+generator; replacing the generator by its inverse reverses the two nontrivial
+Fourier labels. The missing intrinsic coordinate is A2 shell color, not an
+abstract S5 subgroup type.
 
 ## Parallel-agent audit
 

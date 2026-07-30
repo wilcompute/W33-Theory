@@ -27611,6 +27611,28 @@ deliberately &mdash; including the parts that turned out to be wrong.</p>
       </section><section id="current-synthesis">
         <h2><span class="icon">◎</span> Current Synthesis <span class="section-badge">Evidence-Tiered</span></h2>
 
+        <div class="spotlight" style="border-left-color: var(--gold);">
+          <h3 style="margin-top:0;">New exact closure: the three dark 432s are directed Schläfli edges</h3>
+          <p>The explicit <code>2240 → 45</code> cubic map had three
+            <code>432</code>-element orbits in its kernel. Pass 1147 now identifies every object in them:
+            relative to the fixed <code>A2</code>, the six 27-root shells pair into three colors, and each color fibre
+            is equivariantly the <code>27 × 16 = 432</code> directed edges of
+            <code>SRG(27,16,10,8)</code>.</p>
+          <p>The natural reversal-odd transform
+            <code>T(i→j) = primitive((K−24)(K−18)(K−12)(K−9)(eᵢ∧eⱼ))</code>
+            has exact rank <code>81</code>. Its 432 integer vectors form 216 antipodal projective lines in
+            <code>R^81</code>, with tight-frame identity <code>G² = 3200G</code> and absolute angles
+            <code>0, 1/15, 1/5</code>. Three <code>A2</code> colors give a rank-<code>243</code>
+            <code>W(E6) × C3</code> Fourier packet.</p>
+          <p>Welding those three blocks to the disjoint rank-<code>45</code> cubic block constructs a literal
+            <code>1020 × 2240</code> integer map of rank <code>288</code> and kernel dimension
+            <code>1952</code>. This replaces the old unbuilt
+            <code>1952 = 7·dim Λ²(24) + 20</code> mnemonic with an exact residual representation. It is a finite
+            representation theorem, not by itself a particle-generation or Yukawa claim.
+            <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md">Read the theorem and executable-artifact map.</a>
+          </p>
+        </div>
+
         <div class="spotlight" style="border-left-color: var(--accent2);">
           <p><strong>The repo is no longer at a blank-slate stage.</strong> The exact core is already rigid:
             <code>W(3,3)</code> as the two-qutrit Pauli commutation geometry, the local <code>H27</code> Heisenberg/MUB

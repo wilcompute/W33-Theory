@@ -1,6 +1,6 @@
 {
-  "version": "2026-07-27-pass1139",
-  "note": "Canonical identity registry. QUARANTINED objects cannot be premises of new derivations; provisional branch pass numbers are not canonical; a bare cardinality 540 does not identify a carrier.",
+  "version": "2026-07-27-pass1147",
+  "note": "Canonical identity registry. QUARANTINED objects cannot be premises of new derivations; provisional branch pass numbers are not canonical; a bare cardinality 540 or 432 does not identify a carrier.",
   "compatibility_tags": ["{540:both}", "{540:mixed}"],
   "objects": [
     {
@@ -84,10 +84,10 @@
     },
     {
       "canonical": "WE6_S5_432_stabilizer_class",
-      "aliases": ["Steinberg_432_stabilizer", "SmallGroup_120_34"],
+      "aliases": ["Steinberg_432_stabilizer", "SmallGroup_120_34", "TOM_295_stabilizer", "directed_Schlaefli_edge_stabilizer"],
       "order": 120,
       "status": "confirmed",
-      "note": "All three stabilizers are pairwise conjugate S5 subgroups in W(E6)."
+      "note": "All three A2-color stabilizers are pairwise conjugate S5 subgroups in W(E6); their transitive action is TOM 295 and is equivariantly the directed-edge action of SRG(27,16,10,8)."
     },
     {
       "canonical": "WE6_cubic_support_module_45",
@@ -109,6 +109,38 @@
       "dimension": 81,
       "status": "confirmed",
       "note": "Multiplicity three in the 2240 A2 carrier and multiplicity three in the cubic-map kernel."
+    },
+    {
+      "canonical": "WE6_A2_color_directed_Schlaefli_432",
+      "aliases": ["three_dark_432s", "mixed_A2_color_fibres", "directed_Schlaefli_arcs", "TOM_295_carrier"],
+      "size_per_color": 432,
+      "color_count": 3,
+      "stabilizer_id_group": [120, 34],
+      "coset_rank": 26,
+      "status": "confirmed",
+      "note": "Each color is the 27*16 directed edges of SRG(27,16,10,8); the three colors form an unbased C3 torsor relative to the fixed A2."
+    },
+    {
+      "canonical": "WE6_Schlaefli_Steinberg_transform_81",
+      "aliases": ["rank_81_edge_to_cycle_transform", "Q_2C_oriented_edge_projector", "216_line_R81_frame"],
+      "source_size": 432,
+      "rank": 81,
+      "projector": "Q=(K-24)(K-18)(K-12)(K-9)",
+      "tight_frame_identity": "G^2=3200G",
+      "projective_line_count": 216,
+      "absolute_angles": ["0", "1/15", "1/5"],
+      "status": "confirmed",
+      "note": "Natural reversal-odd map T(i->j)=primitive(Q(e_i wedge e_j)); it projects the oriented-edge module 6+15+20+30+64+81_minus onto 81_minus."
+    },
+    {
+      "canonical": "WE6_enhanced_cubic_Steinberg_kernel_1952",
+      "aliases": ["Pass1147_residual", "rank_288_enhanced_2240_map", "cubic_plus_three_Steinberg_blocks"],
+      "domain_dimension": 2240,
+      "rank": 288,
+      "kernel_dimension": 1952,
+      "decomposition": "13*1+16*6+5*15+4*15a+21*20+2*24+9*30+4*60a+10*64+1*90",
+      "status": "confirmed",
+      "note": "Kernel of M plus the three colored rank-81 transforms. This supersedes, and is not a realization of, the unbuilt mnemonic 1952=7*dim Lambda2(24)+20."
     }
   ]
 }

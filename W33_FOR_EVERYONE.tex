@@ -797,6 +797,41 @@ The six sheets have not been assigned a physical meaning.
 \end{mathnote}
 
 \begin{mathnote}
+\textbf{The $2000$ dark columns are no longer all anonymous.}
+The cubic map above deliberately ignores three orbits of size $432$.
+Each one has now been identified exactly: it is the set of \emph{directed
+edges} of the 27-vertex Schl\"afli graph.  The reason for $432$ is simply
+\[
+27\text{ vertices}\times16\text{ outgoing edges}=432.
+\]
+The three copies are the three opposite-shell colors made by the fixed
+$A_2$ inside $E_8$, and an order-three $A_2$ rotation cycles them.
+
+There is also a natural logic transform on a directed edge.  Write the
+edge as the antisymmetric symbol $e_i\wedge e_j$, apply one exact
+polynomial in the sum of the 36 $E_6$ reflections, and divide out the
+common integer factor.  The resulting transform has rank $81$, reverses
+sign when the edge is reversed, and lands in an 81-dimensional
+Steinberg channel.  Its 432 outputs are 216 opposite pairs forming a
+tight three-angle code in $\mathbb R^{81}$.
+
+Running the transform on all three colors recovers $3\times81=243$
+independent directions that the cubic map could not see.  Putting the
+two switches side by side gives an explicit map of rank
+\[
+45+243=288
+\]
+from the original 2240 triangles, leaving an exact kernel of
+\[
+2240-288=1952.
+\]
+So the old number 1952 is now the kernel of a named, executable map,
+not a suggestive factorization.  The three-way Fourier split is an exact
+finite control/logic grading; calling its three channels particle
+generations would require an additional physical identification.
+\end{mathnote}
+
+\begin{mathnote}
 \textbf{A warning about the number $540$.} % {540:mixed}
 The symmetry group has not two or three but exactly \emph{five}
 non-isomorphic transitive sets of size $540$. % {540:mixed}

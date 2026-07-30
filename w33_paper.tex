@@ -11393,6 +11393,103 @@ The six sheets are not thereby identified with qutrit phases, physical
 polarizations, or particles.  The exact GAP certificate is
 \texttt{analysis/w33\_pass1138\_explicit\_cubic\_incidence\_bridge.g}.
 
+\begin{theorem}[Schl\"afli--Steinberg Fourier bridge]
+\label{thm:schlaefli-steinberg-fourier-bridge}
+The three $432$-orbits killed by $M$ have a common object-level
+description.  The six $27$-root shells relative to the fixed $A_2$ pair by
+negation into three colors.  In a color, every mixed $A_2$ triple contains
+one $E_6$ root and one root in each opposite shell, and
+\[
+ \{x,y,z\}\longmapsto(x,-y)
+\]
+is a $W(E_6)$-equivariant bijection onto the directed edges of the
+Schl\"afli graph $\operatorname{SRG}(27,16,10,8)$.  Thus
+$27\cdot16=432$, and the directed-edge stabilizer is $S_5$.
+
+Let $K$ be the sum of the $36$ reflections in class $2C$ on
+$\Lambda^2(\operatorname{Aug}\mathbb Q^{27})$, and put
+\[
+ Q=(K-24)(K-18)(K-12)(K-9).
+\]
+The natural oriented-edge transform
+\[
+ T(i\to j)=\operatorname{primitive}\!\bigl(Q(e_i\wedge e_j)\bigr)
+\]
+is integral, equivariant, reversal-odd, and has rank $81$.  It satisfies
+\[
+ KT=4T,\qquad QT=11200T,\qquad T(j\to i)=-T(i\to j).
+\]
+The antisymmetric $216$-edge module is multiplicity-free,
+\[
+ 6\oplus15\oplus20\oplus30\oplus64\oplus81_-,
+\]
+and $T$ is precisely the projection onto $81_-$.  Hence its
+$135$-dimensional kernel is
+$6\oplus15\oplus20\oplus30\oplus64$.
+
+The $432$ primitive columns have norm squared $600$ and Gram matrix $G_T$
+with
+\[
+ \boxed{G_T^2=3200G_T}.
+\]
+They form $216$ antipodal pairs, giving a transitive tight three-angle
+projective code in $\mathbb R^{81}$ with absolute normalized inner
+products
+\[
+ 0,\qquad \frac1{15},\qquad \frac15
+\]
+and respective valencies $120,60,35$.  These three relations do not form
+a three-class association scheme.
+
+The $A_2$ Coxeter element centralizes $W(E_6)$ and transports the transform
+through the three colors.  Consequently their rank-$243$ image is
+\[
+ 81_-\boxtimes\mathbb Q[C_3].
+\]
+After adjoining $\omega=e^{2\pi i/3}$, finite Fourier transform splits it
+as
+\[
+ (81_-\boxtimes1)\oplus
+ (81_-\boxtimes\omega)\oplus
+ (81_-\boxtimes\omega^2).
+\]
+The torsor is intrinsic relative to the fixed $A_2$; ordering these three
+summands chooses an origin color and a Coxeter generator.
+
+Extending the three transforms by zero and adjoining them to the cubic
+map gives the explicit integer map
+\[
+ \Phi=M\oplus T_0\oplus T_1\oplus T_2:
+ \mathbb Q^{2240}\longrightarrow
+ \mathbb Q^{45}\oplus
+ \bigoplus_{c\in C_3}
+ \Lambda^2(\operatorname{Aug}\mathbb Q^{27}_c).
+\]
+Its literal matrix has shape $1020\times2240$ and
+\[
+ \boxed{\operatorname{rank}\Phi=45+3\cdot81=288},
+ \qquad
+ \boxed{\dim\ker\Phi=1952}.
+\]
+The $240$ cubic-live columns and $1296$ color columns are disjoint; the
+remaining $704$ basis triples are killed by both maps.  Combining this
+with the exact character decomposition of $\ker M$ gives
+\[
+\ker\Phi=
+13\cdot1+16\cdot6+5\cdot15+4\cdot15_a+21\cdot20+2\cdot24+
+9\cdot30+4\cdot60_a+10\cdot64+90.
+\]
+\end{theorem}
+
+\noindent
+This theorem gives the earlier residual number $1952$ an explicit
+equivariant meaning.  The dimensional mnemonic
+$1952=7\dim\Lambda^2(\mathbb Q^{24})+20$ is not the decomposition above
+and names no such map.  Likewise, the exact $C_3$ Fourier grading alone
+does not identify physical generations, masses, or Yukawa couplings.
+The GAP witness is
+\texttt{analysis/w33\_pass1147\_schlaefli\_steinberg\_fourier\_bridge.g}.
+
 \begin{theorem}[The two 480s]
 \label{thm:two-480s}
 The $480$ Hashimoto arcs (directed edges, the carrier of the Ihara zeta

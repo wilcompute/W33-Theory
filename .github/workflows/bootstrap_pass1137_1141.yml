@@ -1,4 +1,4 @@
-name: Bootstrap Pass 1142-1146 exact source release
+name: Quarantine legacy Pass 1142-1146 source transport
 
 on:
   workflow_dispatch:
@@ -6,35 +6,20 @@ on:
     branches: [master]
     paths:
       - 'data/pass1142_1146_source_bundle.b64'
+      - 'scripts/pass1142_1146_bundle_runtime.py'
       - '.github/workflows/bootstrap_pass1137_1141.yml'
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  install-source-release:
+  quarantine-audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
-          fetch-depth: 0
-      - name: Remove superseded transport names and extract source package
-        run: |
-          rm -f data/pass1137_1141_source_bundle.b64
-          rm -f .github/workflows/pass1137_1141_exact_release.yml
-          rm -f PASS1137_1141_EXACT_RELEASE.md
-          rm -f analysis/2026-07-27_pass1141_parallel_audit.md
-          rm -f analysis/w33_pass1137_1141_exact.py analysis/w33_pass1137_1141_intertwiner.py analysis/w33_pass1137_1141_release_compiler.py
-          rm -f data/w33_pass1137_1141_exact_release.json data/w33_pass1137_1141_exact_full.json data/w33_pass1137_1141_exact_extended.json
-          rm -f scripts/build_pass1137_1141_pdf.py tests/test_w33_pass1137_1141.py papers/PASS1137_1141_EXACT_RELEASE.pdf
-          base64 --decode data/pass1142_1146_source_bundle.b64 | tar -xz
-          rm data/pass1142_1146_source_bundle.b64
-      - name: Commit collision-free sources
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A
-          git commit -m 'Passes 1142-1146: install exact source release'
-          git pull --rebase origin master
-          git push
+          python-version: '3.12'
+      - name: Assert exact known-corrupt fingerprint without extraction
+        run: python scripts/pass1142_1146_bundle_runtime.py --assert-known-corrupt

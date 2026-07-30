@@ -68,6 +68,41 @@ natural carriers), [BT773](analysis/BT773_involution_cube_theorem.md)
 and [Pass 1079](analysis/w33_pass1079_frame_action_rank32.g) (frame block
 systems).
 
+## The three 432s — directed Schläfli edges in A2 colors
+
+**Aliases:** `three 432 orbits`, `A2 color fibres`, `mixed A2 triples`,
+`S5 carrier`, directed Schläfli edges, Schläfli arcs, `TOM 295`,
+`81_minus bridge`, and the formerly dark cubic-kernel blocks.
+
+**Canonical objects:** after fixing \(A_2<E_8\), the six \(27\)-root shells
+pair by negation into three colors. In each color, the map from a mixed
+\(A_2\) triple to its ordered opposite-shell pair is an equivariant bijection
+onto the \(27\cdot16=432\) directed edges of
+\(\operatorname{SRG}(27,16,10,8)\). The directed-edge stabilizer is \(S_5\);
+this is the rank-26 TOM-295 action, not an arbitrary index-432 \(S_5\) action.
+
+**The Steinberg transform:** the natural reversal-odd class-projector map
+\[
+T(i\to j)=\operatorname{primitive}
+\bigl((K-24)(K-18)(K-12)(K-9)(e_i\wedge e_j)\bigr)
+\]
+has rank \(81\) and projects the oriented-edge module onto \(81_-\). Its
+432 columns form 216 antipodal lines with \(G^2=3200G\) and absolute angles
+\(0,1/15,1/5\). The three color copies have total rank \(243\) and carry
+\(81_-\boxtimes\mathbb Q[C_3]\).
+
+**Status and boundary:** adjoining these blocks to the disjoint rank-45 cubic
+map gives a rank-288 map on the 2240 \(A_2\) triples and an exact
+1952-dimensional residual. The color torsor is intrinsic but a labeled
+`Omega_432 x C3` chart chooses an origin and generator. The Fourier split is
+finite representation theory, not a physical generation or Yukawa theorem.
+Do not identify the 135-dimensional oriented-edge kernel with another
+135-carrier merely from the shared count.
+
+**Primary artifacts:** [Pass 1147](PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md),
+[Pass 1138](PASS1138_EXPLICIT_CUBIC_INCIDENCE_BRIDGE.md), and
+[Passes 1142–1146](PASS1142_1146_EXACT_RELEASE.md).
+
 ## The 36 — spreads
 
 **Aliases:** `36 spreads`, `36 regular spreads`, `36 double-sixes`,
