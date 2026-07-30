@@ -1,0 +1,23 @@
+{
+  "schema": "w33.pass1330_1334.build_manifest.v1",
+  "status": "LOCAL_PASS_WITH_REMOTE_RUNTIME_PENDING",
+  "local": {
+    "exact_python": "PASS",
+    "pytest": "8/8 PASS",
+    "minimal_insert_pdflatex": "PASS",
+    "integrator_idempotence": "PASS",
+    "gap_available": false,
+    "atlasrep_executed": false
+  },
+  "isolated_uploaded_holonet_probe": {
+    "status": "BLOCKED_BY_PREEXISTING_MISSING_INPUT",
+    "missing_file": "analysis/BT1480_BT1482_holonet_insert.tex",
+    "release_insert_reached": false,
+    "interpretation": "The isolated uploaded manuscript does not contain the repository's historical input closure; this is not counted as a Pass-1334 compile failure or success."
+  },
+  "remote_ci": {
+    "workflow": ".github/workflows/pass1330_1334_modular_triality_atlas.yml",
+    "expected_jobs": ["exact-python", "atlasrep-gap", "manuscripts"],
+    "observed_status": "PENDING_PUBLICATION"
+  }
+}
