@@ -3,6 +3,8 @@ name: Passes 1350-1354 Exact Release
 on:
   push:
     branches: [agent/pass1350-1354-brauer-basic-atlas-geometry-pdfs]
+  pull_request:
+    branches: [master]
   workflow_dispatch:
 
 permissions:
@@ -10,7 +12,7 @@ permissions:
 
 jobs:
   materialize:
-    if: github.event_name == 'workflow_dispatch' || !contains(github.event.head_commit.message, 'materialize exact release')
+    if: github.event_name != 'push' || !contains(github.event.head_commit.message, 'materialize exact release')
     runs-on: ubuntu-latest
     timeout-minutes: 60
     env:
@@ -19,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref_name }}
+          ref: ${{ github.head_ref || github.ref_name }}
           fetch-depth: 0
       - name: Install exact runtimes
         run: |
@@ -81,8 +83,7 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add analysis/w33_pass1350_1354_verify.py analysis/w33_pass1353_selector_geometry.py \
-            data/w33_pass1350_u42d2_char5_blocks.json data/w33_pass1352_repsn_degree20_matrices.json \
+          git add data/w33_pass1350_u42d2_char5_blocks.json data/w33_pass1352_repsn_degree20_matrices.json \
             data/w33_pass1352_atlas_carrier_conjugacy.json data/w33_pass1353_selector_geometry.json \
             data/w33_pass1350_1354_exact_release.json data/w33_pass1354_pdf_manifest.json \
             manuscripts/tex/part22_fano_synthesis.tex w33_paper.tex photonic_holonet.tex \
@@ -91,7 +92,7 @@ jobs:
             echo 'Materialized release already current.'
           else
             git commit -m 'Passes 1350-1354: materialize exact release'
-            git push origin HEAD:${{ github.ref_name }}
+            git push origin HEAD:${{ github.head_ref || github.ref_name }}
           fi
       - uses: actions/upload-artifact@v4
         with:
