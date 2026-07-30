@@ -21,12 +21,15 @@ def test_literal_projective_resolutions_when_materialized():
  d=json.loads(p.read_text());assert d['status']=='PASS' and all(d['checks'].values())
  old=load('w33_pass1351_projective_layers.json')['records']
  for prime in ('2','3','5'):
-  r=d['records'][prime];assert r['resolution_depth']==10
+  r=d['records'][prime];assert r['requested_resolution_depth']==10 and r['max_cover_dimension']==768
   assert r['radical_layers']==old[prime]['radical_layers'];assert r['socle_layers']==old[prime]['socle_layers']
   assert len(r['minimal_projective_resolution_prefixes'])==len(r['vertices'])
+  assert r['computed_resolution_depths']==[len(x)-1 for x in r['minimal_projective_resolution_prefixes']]
   for resolution in r['minimal_projective_resolution_prefixes']:
    assert resolution[0]['syzygy']==0 and resolution[0]['module_dimension']==1
    assert all(step['syzygy']==i for i,step in enumerate(resolution))
+   for step in resolution:
+    if 'kernel_not_materialized' in step:assert step['cover_dimension']>step['dimension_ceiling']
 def test_characteristic_five_hecke_corner_firewall():
  q=load('w33_pass1345_modular_basic_algebras.json')['records']['5']['quiver_and_associated_graded_relations']
  assert {(a['source'],a['target']) for a in q['arrows']}=={('F_5','F_4'),('F_6','F_4'),('F_4','F_5'),('F_4','F_6')}
