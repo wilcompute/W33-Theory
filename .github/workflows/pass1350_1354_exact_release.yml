@@ -1,8 +1,6 @@
 name: Passes 1350-1354 Exact Release
 
 on:
-  push:
-    branches: [agent/pass1350-1354-final]
   pull_request:
     branches: [master]
   workflow_dispatch:
@@ -11,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: pass1350-1354-${{ github.ref }}
+  group: pass1350-1354-${{ github.event.pull_request.number || github.ref_name }}
   cancel-in-progress: true
 
 env:
