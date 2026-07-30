@@ -10,14 +10,16 @@ on:
 
 permissions:
   contents: write
+  pull-requests: read
 
 jobs:
-  materialize:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/agent/pass1330-1334-modular-triality-atlas' && !contains(github.event.head_commit.message, 'materialize exact release')
+  release:
+    if: github.event_name == 'pull_request' || (github.event_name == 'push' && !contains(github.event.head_commit.message, 'materialize exact release'))
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.head_ref || github.ref_name }}
           fetch-depth: 0
       - name: Decode and verify exact payload
         shell: bash
@@ -29,35 +31,16 @@ jobs:
           tar -xzf /tmp/pass1330_1334_payload.tar.gz
           rm .release/pass1330_1334_payload.tar.gz.b64
           rmdir .release || true
-      - name: Commit materialized release
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A
-          git commit -m 'Passes 1330-1334: materialize exact release'
-          git push origin HEAD:${GITHUB_REF_NAME}
-
-  exact-python:
-    if: github.event_name == 'pull_request' || contains(github.event.head_commit.message, 'materialize exact release')
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m pip install --upgrade pip numpy sympy pytest
-      - name: Regenerate exact certificate
-        run: python analysis/w33_pass1330_1334_modular_triality_cycle_atlas.py
-      - name: Focused regression suite
-        run: pytest -q tests/test_w33_pass1330_1334.py
-
-  atlasrep-gap:
-    if: github.event_name == 'pull_request' || contains(github.event.head_commit.message, 'materialize exact release')
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+      - name: Regenerate exact certificate and run focused tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --upgrade pip numpy sympy pytest
+          python analysis/w33_pass1330_1334_modular_triality_cycle_atlas.py
+          pytest -q tests/test_w33_pass1330_1334.py
       - name: Install GAP, AtlasRep, CTblLib, TomLib, and Repsn
         shell: bash
         run: |
@@ -68,21 +51,13 @@ jobs:
           git clone --depth 1 --branch v3.1.2 https://github.com/gap-packages/repsn.git "$HOME/.gap/pkg/repsn"
       - name: Execute genuine AtlasRep/Repsn certificate
         run: gap -q analysis/w33_pass1333_atlasrep_species20.g
-
-  manuscripts:
-    if: github.event_name == 'pull_request' || contains(github.event.head_commit.message, 'materialize exact release')
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
       - name: Install TeX
         run: |
-          sudo apt-get update
           sudo apt-get install -y latexmk texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-science
       - name: Integrate theorem insert idempotently
+        shell: bash
         run: |
+          set -euo pipefail
           python tools/integrate_pass1330_1334.py
           python tools/integrate_pass1330_1334.py
           test "$(grep -c '\\input{analysis/BT1330_BT1334_modular_triality_cycle_atlas}' w33_paper.tex)" -eq 1
@@ -91,3 +66,12 @@ jobs:
         run: latexmk -pdf -interaction=nonstopmode -halt-on-error w33_paper.tex
       - name: Compile Photonic Holonet
         run: latexmk -pdf -interaction=nonstopmode -halt-on-error photonic_holonet.tex
+      - name: Commit verified materialized release
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Passes 1330-1334: materialize exact release'
+          git push origin HEAD:${{ github.head_ref || github.ref_name }}
