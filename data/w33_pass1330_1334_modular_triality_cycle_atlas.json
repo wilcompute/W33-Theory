@@ -1,0 +1,125 @@
+{
+  "checks": {
+    "all_three_radicals_nilpotent": true,
+    "atlasrep_boundary_explicit": true,
+    "length7_and_length8_stabilizers_literal": true,
+    "literal_hecke_tensor_reconstructed": true,
+    "manuscript_boundary_explicit": true,
+    "nine_axis_scheme_exact": true
+  },
+  "pass1330_modular_jacobson_radicals": {
+    "bad_characteristics": [2,3,5],
+    "good_prime_boundary": "At primes outside 2,3,5 the primitive integral matrix remains full rank; this pass explicitly classifies the radicals only at 2,3,5.",
+    "hecke_dimension": 26,
+    "records": {
+      "2": {
+        "center_dimension": 9,
+        "center_nilradical_dimension": 7,
+        "central_block_dimensions": [4,22],
+        "jacobson_radical_dimension": 21,
+        "loewy_power_dimensions": [21,17,13,7,2,0],
+        "prime": 2,
+        "radical_basis_sha256": "58d7222273e0e4ccb7c048a6e044fa1cb4fcf4b249b4edef6bd3896a753b4207",
+        "reduced_center_dimension": 2,
+        "semisimple_quotient": "M_2(F_2) + F_2",
+        "semisimple_quotient_dimension": 5
+      },
+      "3": {
+        "center_dimension": 9,
+        "center_nilradical_dimension": 7,
+        "central_block_dimensions": [1,25],
+        "jacobson_radical_dimension": 22,
+        "loewy_power_dimensions": [22,16,10,4,0],
+        "prime": 3,
+        "radical_basis_sha256": "0486d5369bb32fdc0a6c7634ab48ee2c155d57084e9e9a86e8d5304171a4a4cc",
+        "reduced_center_dimension": 2,
+        "semisimple_quotient": "F_3^4",
+        "semisimple_quotient_dimension": 4
+      },
+      "5": {
+        "center_dimension": 9,
+        "center_nilradical_dimension": 2,
+        "central_block_dimensions": [1,1,1,1,4,9,9],
+        "exceptional_block_characters": [[1,1,4,2,2,2,2,2,2],[1,4,0,0,0,0,0,0,0],[1,4,4,1,4,1,4,3,2]],
+        "jacobson_radical_dimension": 6,
+        "loewy_power_dimensions": [6,2,0],
+        "prime": 5,
+        "radical_basis_sha256": "97eed9ad9f0808ae8365bf9d3c1815a5d537d0bbf46bd5177dbea272c984c62a",
+        "reduced_center_dimension": 7,
+        "semisimple_quotient": "M_3(F_5) + M_2(F_5) + F_5^7",
+        "semisimple_quotient_dimension": 20
+      }
+    },
+    "structure_tensor_sha256": "3c41297ebbdd709f2bec32d25edde1b6b94d545d99ff50acdb4c376c639148e5"
+  },
+  "pass1331_nine_axis_triality_scheme": {
+    "bose_mesner_dimension": 4,
+    "coordinate_swap_fusion": {
+      "bose_mesner_dimension": 3,
+      "primitive_idempotent_ranks": [1,4,4],
+      "relation_valencies": [1,4,4],
+      "scheme": "H(2,3)"
+    },
+    "eigenmatrix": [[1,2,2,4],[1,-1,2,-2],[1,2,-1,-2],[1,-1,-1,1]],
+    "group": "S3_internal x S3_triality",
+    "group_order": 36,
+    "interpretation": "tensor product of the rank-2 K3 scheme with itself",
+    "orbitals": 4,
+    "points": [[0,0],[0,1],[0,2],[1,0],[1,1],[1,2],[2,0],[2,1],[2,2]],
+    "primitive_idempotent_common_denominator": 9,
+    "primitive_idempotent_ranks": [1,2,2,4],
+    "primitive_idempotent_relation_coefficients_numerator": [[1,1,1,1],[2,-1,2,-1],[2,2,-1,-1],[4,-2,-2,1]],
+    "relation_valencies": [1,2,2,4],
+    "row_or_column_orbit_size": 3,
+    "row_or_column_stabilizer_order": 12,
+    "single_axis_orbit_size": 9,
+    "single_axis_stabilizer_order": 4
+  },
+  "pass1332_symmetry_breaking_cycle_selectors": {
+    "boundary": "The literal cycles break W(E6) symmetry, but neither cycle alone labels the three multiplicity coordinates. Copy selection is an additional S3 gauge choice.",
+    "combined_W_E6_times_S3": {
+      "group_order": 311040,
+      "length7_cycle_plus_copy_orbit": 77760,
+      "length7_cycle_plus_copy_stabilizer": 4,
+      "length8_cycle_plus_copy_orbit": 155520,
+      "length8_cycle_plus_copy_stabilizer": 2
+    },
+    "copy_selection_theorem": "A Y-side cycle operator acts on the three transported X-side species-20 copies as C tensor I_3. A primitive copy idempotent is required to select one copy.",
+    "cycles": {
+      "7": {
+        "cycle": [0,1,2,3,22,4,13],
+        "dihedral_orbit_size": 25920,
+        "dihedral_stabilizer_order": 2,
+        "oriented_orbit_size": 25920,
+        "oriented_stabilizer_order": 2,
+        "simple_and_primitive_reduced": true
+      },
+      "8": {
+        "cycle": [0,1,2,3,22,4,7,14],
+        "dihedral_orbit_size": 51840,
+        "dihedral_stabilizer_order": 1,
+        "oriented_orbit_size": 51840,
+        "oriented_stabilizer_order": 1,
+        "simple_and_primitive_reduced": true
+      }
+    },
+    "species20_copy_idempotent_orbit_size": 3,
+    "species20_copy_idempotent_stabilizer_in_internal_S3": 2
+  },
+  "pass1333_genuine_atlasrep_attempt": {
+    "claim": "genuine AtlasRep execution attempt is CI-wired; no local GAP result is claimed",
+    "local_gap_available": false,
+    "script": "analysis/w33_pass1333_atlasrep_species20.g",
+    "workflow": ".github/workflows/pass1330_1334_modular_triality_atlas.yml"
+  },
+  "pass1334_manuscript_integration": {
+    "full_repository_compile": "CI-wired and reported separately",
+    "insert": "analysis/BT1330_BT1334_modular_triality_cycle_atlas.tex",
+    "integrator": "tools/integrate_pass1330_1334.py",
+    "local_insert_compile": "PASS",
+    "targets": ["w33_paper.tex","photonic_holonet.tex"]
+  },
+  "schema": "w33.pass1330_1334.modular_triality_cycle_atlas.v1",
+  "scope": "exact finite-dimensional algebra and finite permutation computations",
+  "status": "PASS"
+}
