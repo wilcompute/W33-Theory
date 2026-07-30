@@ -9,17 +9,19 @@ jobs:
   exact-components:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - run: python -m pip install --disable-pip-version-check numpy sympy pytest
-      - run: python analysis/w33_pass1340_1344_cartan_atlas_selector_padic.py --component padic
-      - run: python analysis/w33_pass1340_1344_cartan_atlas_selector_padic.py --component cycle
-      - run: python analysis/w33_pass1340_1344_cartan_atlas_selector_padic.py --component cartan
-      - run: python analysis/w33_pass1340_1344_cartan_atlas_selector_padic.py --component atlas
-      - run: python analysis/w33_pass1340_1344_cartan_atlas_selector_padic.py
+      - run: python analysis/w33_pass1340_1344_cartan_atlas_selector_padic.py cartan
+      - run: python analysis/w33_pass1340_1344_cartan_atlas_selector_padic.py atlas
+      - run: python analysis/w33_pass1340_1344_cartan_atlas_selector_padic.py cycles
+      - run: python analysis/w33_pass1343_padic_lifting.py
       - run: pytest -q tests/test_w33_pass1340_1344.py
 
   atlasrep-gap:
