@@ -1,0 +1,22 @@
+name: Pass 1350 Brauer Tree Probe
+
+on:
+  push:
+    branches: [agent/pass1350-1354-brauer-basic-atlas-geometry-pdfs]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  brauer-tree:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y gap gap-character-tables
+      - run: gap -q analysis/w33_pass1350_brauer_tree.g
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass1350-brauer-tree
+          path: data/w33_pass1350_u42d2_char5_blocks.json
