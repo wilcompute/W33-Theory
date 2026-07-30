@@ -8,7 +8,7 @@ M := BrauerTable(T, 5);;
 if M = fail then Error("5-modular Brauer table U4(2).2 unavailable"); fi;
 BI := BlocksInfo(M);;
 ORD := Irr(T);;
-MOD := IBr(M);;
+BRAUER_IRR := IBr(M);;
 
 out := OutputTextFile("data/w33_pass1350_u42d2_char5_blocks.json", false);;
 SetPrintFormattingStatus(out, false);;
@@ -22,7 +22,7 @@ for i in [1..Length(BI)] do
   AppendTo(out, ",\"ordinary_positions\":", String(b.ordchars));
   AppendTo(out, ",\"ordinary_degrees\":", String(List(b.ordchars, j -> ORD[j][1])));
   AppendTo(out, ",\"brauer_positions\":", String(b.modchars));
-  AppendTo(out, ",\"brauer_degrees\":", String(List(b.modchars, j -> MOD[j][1])));
+  AppendTo(out, ",\"brauer_degrees\":", String(List(b.modchars, j -> BRAUER_IRR[j][1])));
   AppendTo(out, ",\"decomposition_matrix\":", String(D));
   if IsBound(b.brauertree) then
     AppendTo(out, ",\"brauer_tree\":", String(b.brauertree));
