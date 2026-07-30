@@ -1,0 +1,42 @@
+name: Passes 1325-1329 Triality Integral Release
+
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1325_1329_triality_integral_gauge.py'
+      - 'analysis/w33_pass1329_independent_checker.py'
+      - 'analysis/w33_pass1329_triality_integral_check.g'
+      - 'data/w33_pass1321_hecke_block_*.json'
+      - 'tests/test_w33_pass1325_1329.py'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass1325_1329_triality_integral_gauge.py'
+      - 'analysis/w33_pass1329_independent_checker.py'
+      - 'analysis/w33_pass1329_triality_integral_check.g'
+      - 'tests/test_w33_pass1325_1329.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-python:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check sympy pytest
+      - run: python analysis/w33_pass1325_1329_triality_integral_gauge.py
+      - run: python analysis/w33_pass1329_independent_checker.py
+      - run: pytest -q tests/test_w33_pass1325_1329.py
+
+  gap-certificate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y gap-core
+      - run: gap -q analysis/w33_pass1329_triality_integral_check.g
