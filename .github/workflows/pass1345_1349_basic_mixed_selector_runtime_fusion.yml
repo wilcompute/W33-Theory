@@ -1,0 +1,43 @@
+name: Passes 1345-1349 Basic Mixed Selector Runtime Fusion
+
+on:
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-python:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check numpy sympy pytest
+      - run: python analysis/w33_pass1345_1349_basic_mixed_selector_runtime_fusion.py verify
+      - run: pytest -q tests/test_w33_pass1345_1349.py
+
+  atlasrep-gap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update
+      - run: sudo apt-get install -y gap gap-atlasrep gap-character-tables gap-table-of-marks git
+      - run: mkdir -p "$HOME/.gap/pkg" && git clone --depth 1 --branch v3.1.2 https://github.com/gap-packages/repsn.git "$HOME/.gap/pkg/repsn"
+      - run: gap -q analysis/w33_pass1341_atlasrep_compare.g
+
+  manuscripts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y latexmk poppler-utils texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-science
+      - run: python tools/w33_pass1348_compile_historical_manuscripts.py --require-all
