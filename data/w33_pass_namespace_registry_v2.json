@@ -7,6 +7,7 @@
     {"range":"1132-1136","owner":"exact-audit-track","status":"COMPLETE"},
     {"range":"1137-1140","owner":"parallel-codex-track","status":"COMPLETE"},
     {"range":"1142-1146","owner":"exact-bridge-corpus-track","status":"COMPLETE"},
+    {"range":"1147","owner":"codex-schlaefli-steinberg-track","status":"COMPLETE","artifacts":{"1147":"object-level directed Schlaefli carrier, rank-81 edge-to-cycle transform, 216-line tight frame, rank-288 weld, exact 1952 residual, integral Smith/color split, and the nonsplit sign-twisted 58|23 critical-group extension"}},
     {"range":"1148-1152","owner":"exact-crossed-bridge-track","status":"COMPLETE"},
     {"range":"1153-1157","owner":"continuation-audit-track","status":"COMPLETE"},
     {"range":"1158-1162","owner":"breakthrough-track","status":"COMPLETE"},

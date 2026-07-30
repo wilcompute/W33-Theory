@@ -24,6 +24,7 @@ REQUIRED_SECTIONS = (
     "a2_color_torsor",
     "enhanced_map",
     "residual_representation",
+    "integral_edge_lattice",
 )
 
 

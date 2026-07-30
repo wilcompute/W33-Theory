@@ -91,6 +91,50 @@ has rank \(81\) and projects the oriented-edge module onto \(81_-\). Its
 \(0,1/15,1/5\). The three color copies have total rank \(243\) and carry
 \(81_-\boxtimes\mathbb Q[C_3]\).
 
+**Integral identity:** in the integral \(325\)-coordinate contraction-zero
+chart, the nonzero Smith factors of \(T\) are
+\[
+1^{15},2^6,4^8,8^{29},40^{23}.
+\]
+Thus the image-saturation quotient has order \(2^{178}5^{23}\), with rank
+drops \(81\to15\) modulo \(2\) and \(81\to58\) modulo \(5\), but no drop
+modulo \(3\). Separating the three colors into trivial and augmentation
+sectors has color Smith form \((1,1,3)\), hence index \(3^{81}\) on the
+rank-\(81\) packet. Do not merge these two facts: \(2,5\) are internal
+edge-lattice primes; \(3\) is the integral color-Fourier prime.
+
+**Projector normalization:** the natural edge image has
+\(\operatorname{content}Q(e_i\wedge e_j)=280\), while the selected
+projector scale is \(11200\). Thus \(T=Q/280=40P_4\) on this carrier.
+Every Smith invariant divides \(40\). Prime \(7\) divides both \(11200\)
+and \(280\), so it cancels before the primitive lattice and causes no
+rank drop.
+
+**Five-primary critical-group bridge:** the reduced W33 Laplacian has Smith
+profile \(1^{16},10^8,40,160^{14}\), so its \(5\)-primary critical group is
+\((\mathbb Z/5)^{23}\). This is not merely equinumerous with the
+\(5\)-primary edge-lattice saturation quotient. As literal
+\(\mathbb F_5W(E_6)\)-modules,
+\[
+(\overline L_T/L_T)_{(5)}\otimes\mathrm{sgn}
+ \cong K(W_{3,3})_{(5)}
+\]
+uniquely up to \(\mathbb F_5^\times\). The untwisted Hom dimension is zero;
+the sign-twisted and \(PSp(4,3)\)-restricted Hom dimensions are each one.
+Moreover, the saturated \(81\)-module is the nonsplit exact sequence
+\[
+0\to58\to81\to K(W_{3,3})_{(5)}\otimes\mathrm{sgn}\to0.
+\]
+Its complete submodule dimension profile is \(0,58,81\), even after
+restriction to \(PSp(4,3)\); `58+23` is therefore a composition-factor
+ledger, not a direct-sum decomposition.
+Aliases include `five-primary sandpile bridge`, `rank-23 sign-twist`, and
+`Pass 1147 critical-group module`, `nonsplit 58-23 extension`, and
+`saturated frame mod 5`. A displayed matrix is basis-dependent; no canonical
+integral lift is part of the vocabulary entry. The bare \(5^{23}\) and
+\((\mathbb Z/5)^{23}\) counts predate Pass 1147; use the module/Hom/extension
+data when citing this result as new.
+
 **Status and boundary:** adjoining these blocks to the disjoint rank-45 cubic
 map gives a rank-288 map on the 2240 \(A_2\) triples and an exact
 1952-dimensional residual. The color torsor is intrinsic but a labeled

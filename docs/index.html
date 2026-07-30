@@ -1886,17 +1886,21 @@
 
       <section id="numbers">
         <h2><span class="icon">⬡</span> Core Numbers</h2>
-        <p>Exact invariants of W(3,3) and their physical parallels, computationally verified. The live promoted
-          electroweak share is <code>3/13</code>; the older <code>3/8</code> value is kept only as a bare internal /
-          GUT-shell diagnostic. Likewise <code>&chi; = -40</code> belongs to the truncated shell and
-          <code>&chi; = -80</code> to the full tetrahedral clique complex.
-        </p>
+        <p>Canonical finite invariants only. Equal dimensions or counts may motivate a comparison, but they do not
+          identify particles, couplings, cosmological observables, or hardware channels. Those readings are
+          <strong>CONDITIONAL</strong> until an explicit map is built.</p>
         <div class="card-grid">
           <div class="card">
+            <div class="num">40 / 40</div>
+            <div class="label">Points / Lines</div>
+            <div class="detail">W(3,3) is the symplectic generalized quadrangle with four points on every line and
+              four lines through every point.</div>
+          </div>
+          <div class="card">
             <div class="num">240</div>
-            <div class="label">Edges = E₈ roots</div>
-            <div class="detail">The collinearity graph of W(3,3) has exactly 240 edges — the same count as the roots of
-              the E₈ exceptional Lie algebra.</div>
+            <div class="label">Graph Edges</div>
+            <div class="detail">The exact edge count equals the number of E₈ roots, but the natural edge and root
+              actions have incompatible orbit decompositions; the count is not an equivariant bijection.</div>
           </div>
           <div class="card">
             <div class="num">51,840</div>
@@ -1907,165 +1911,97 @@
           </div>
           <div class="card">
             <div class="num">81</div>
-            <div class="label">H₁ = ℤ⁸¹ = 27+27+27</div>
-            <div class="detail">For every order-3 element, H₁&otimes;C has phase eigenspaces
-              27<sub>1</sub>+27<sub>&omega;</sub>+27<sub>&omega;&sup2;</sub>. This exact character statement does not by
-              itself identify three physical generations.</div>
+            <div class="label">H₁ = ℤ⁸¹</div>
+            <div class="detail">The clique complex has first homology of rank 81. Order-three elements give exact
+              complex phase multiplicities 27+27+27, without selecting physical generations.</div>
           </div>
           <div class="card">
-            <div class="num">3/13</div>
-            <div class="label">sin²θ<sub>W</sub> (promoted)</div>
-            <div class="detail">The promoted electroweak share is <code>q/(q²+q+1) = 3/13</code>. The older
-              <code>3/8</code> value remains an internal unification-shell diagnostic, not the live dressed electroweak
-              number.
-            </div>
+            <div class="num">12, 2, −4</div>
+            <div class="label">Adjacency Spectrum</div>
+            <div class="detail"><code>12<sup>1</sup>,2<sup>24</sup>,(−4)<sup>15</sup></code> for the distinguished
+              symplectic graph, not a uniqueness statement for the SRG parameter tuple.</div>
           </div>
           <div class="card">
-            <div class="num">Δ = 4</div>
-            <div class="label">Spectral Mass Gap</div>
-            <div class="detail">The Hodge Laplacian has a gap of 4 separating massless matter (81) from gauge bosons
-              (120).</div>
+            <div class="num">0, 4, 10, 16</div>
+            <div class="label">Finite Hodge Sectors</div>
+            <div class="detail">Multiplicities <code>81,120,24,15</code>. The gap 4 is a finite Laplacian gap, not a
+              Yang&ndash;Mills mass-gap theorem.</div>
           </div>
           <div class="card">
-            <div class="num">137.036</div>
-            <div class="label">α⁻¹ from SRG</div>
-            <div class="detail">k²−2μ+1+v/[(k−1)((k−λ)²+1)] = 137.036004 (experiment: 137.035999, diff: 4.5×10⁻⁶).</div>
+            <div class="num">432 → 81 → 216</div>
+            <div class="label">Schl&auml;fli Frame</div>
+            <div class="detail">Directed Schl&auml;fli edges map equivariantly to a rank-81 constituent and 216
+              antipodal tight-frame lines.</div>
           </div>
           <div class="card">
-            <div class="num" style="color: #ffd700;">2367/2367</div>
-            <div class="label">All Checks Pass ★</div>
-            <div class="detail">The current repo ledger passes its advertised 2367 checks. That count is a
-              hard-computation milestone, but it is not by itself the missing continuum-QFT / GR theorem.</div>
+            <div class="num">58 | 23</div>
+            <div class="label">Nonsplit Mod-5 Module</div>
+            <div class="detail">The saturated 81-space has unique proper submodule 58 and sign-twisted W33 sandpile
+              head 23; it is nonsplit over W(E₆) and PSp(4,3).</div>
           </div>
           <div class="card">
             <div class="num">E₈ Dynkin</div>
-            <div class="label">Subgraph Found</div>
-            <div class="detail">E₈ Dynkin diagram found at vertices [7,1,0,13,24,28,37,16] with Gram matrix det = 1.
-            </div>
+            <div class="label">Induced Subgraph</div>
+            <div class="detail">Eight named W33 vertices induce the E₈ Dynkin tree and give
+              <code>det(2I−A)=1</code>. This is a Cartan subgraph theorem, not the obstructed 240-edge/root map.</div>
           </div>
         </div>
 
         <table>
           <tr>
-            <th>W(3,3) Property</th>
+            <th>Finite object</th>
             <th>Exact Value</th>
-            <th>Physical Parallel</th>
+            <th>Scope</th>
           </tr>
           <tr>
-            <td>Edges of collinearity graph</td>
-            <td><strong>240</strong></td>
-            <td>Roots of E₈</td>
+            <td>Symplectic construction</td>
+            <td><strong>40 points, 40 lines, 4 per incidence fibre</strong></td>
+            <td>Defines the distinguished W(3,3) object</td>
           </tr>
           <tr>
-            <td>Automorphism group</td>
-            <td><strong>PGSp(4,3) &cong; Aut(PSp(4,3)) &cong; W(E₆)</strong></td>
-            <td>Order 51,840; PSp(4,3) is the normal simple subgroup of order 25,920</td>
+            <td>Collinearity graph</td>
+            <td><strong>SRG(40,12,2,4)</strong>, 240 edges</td>
+            <td>Explicit symplectic graph; 28 graphs share the parameter tuple</td>
           </tr>
           <tr>
-            <td>First homology H₁(W33; ℤ)</td>
-            <td><strong>ℤ⁸¹</strong></td>
-            <td>dim(g₁) in E₈ ℤ₃-grading</td>
+            <td>Projective symmetry</td>
+            <td><strong>PSp(4,3) ◁ PGSp(4,3) &cong; W(E₆)</strong></td>
+            <td>Orders 25,920 and 51,840; Sp(4,3) is a different central cover</td>
           </tr>
           <tr>
-            <td>Hodge eigenvalues / multiplicities</td>
+            <td>First homology</td>
+            <td><strong>H₁(W33;ℤ) &cong; ℤ⁸¹</strong></td>
+            <td>Exact topological sector; no particle identification</td>
+          </tr>
+          <tr>
+            <td>Hodge spectrum on 1-chains</td>
             <td><strong>0⁸¹ 4¹²⁰ 10²⁴ 16¹⁵</strong></td>
-            <td>Matter / gauge / X-bosons / Y-bosons</td>
+            <td>Finite eigenspaces; gap 4 is not a continuum mass</td>
           </tr>
           <tr>
-            <td>Spectral gap</td>
-            <td><strong>Δ = 4</strong></td>
-            <td>Yang–Mills mass gap</td>
+            <td>Adjacency Smith form</td>
+            <td><strong>1¹⁶ 2⁸ 8¹⁵ 24</strong></td>
+            <td>Integral lattice invariant</td>
           </tr>
           <tr>
-            <td>Order-3 eigenspace split</td>
-            <td><strong>H₁&otimes;C = 27<sub>1</sub>+27<sub>&omega;</sub>+27<sub>&omega;&sup2;</sub></strong> (all 800 elements)</td>
-            <td>Exact phase multiplicities; a generation interpretation needs an additional bridge</td>
+            <td>Signed-turn operator</td>
+            <td><strong>(−6)⁸¹ 2¹²⁰ 4²⁴ 10¹⁵</strong></td>
+            <td>Exact spectrum on the 480 directed edges</td>
           </tr>
           <tr>
-            <td>E₆ Hessian tritangents</td>
-            <td><strong>45 = 36 + 9</strong></td>
-            <td>Heisenberg model ∩ fibers</td>
-          </tr>
-          <tr>
-            <td>Weinberg angle</td>
-            <td><strong>3/13 promoted, 3/8 bare-shell</strong></td>
-            <td><code>3/13</code> is the dressed/projective electroweak share; <code>3/8</code> is the internal
-              GUT-shell diagnostic</td>
+            <td>Schl&auml;fli carrier</td>
+            <td><strong>W(E₆)/S5</strong>, size 432</td>
+            <td>Directed Schl&auml;fli edges; explicit rank-81 transform</td>
           </tr>
           <tr>
             <td>QEC parameters</td>
-            <td><strong>[240, 81, d<sub>Z</sub> = 4]</strong> over GF(3)</td>
-            <td>Exact ternary homological code</td>
-          </tr>
-          <tr>
-            <td>Gauge coupling</td>
-            <td><strong>α<sub>GUT</sub> = 1/(8π) ≈ 1/25.1</strong></td>
-            <td>Within 3.6% of MSSM value</td>
-          </tr>
-          <tr>
-            <td>E₈ ℤ₃-grading</td>
-            <td><strong>86 + 81 + 81 = 248</strong></td>
-            <td>Full E₈ Lie algebra decomposition</td>
-          </tr>
-          <tr>
-            <td>Fine structure constant</td>
-            <td><strong>α⁻¹ = 137.036004</strong></td>
-            <td>k²−2μ+1+v/L<sub>eff</sub>; diff 4.5×10⁻⁶ from experiment</td>
+            <td><strong>[[240,81,3]]<sub>3</sub></strong>, <code>(d<sub>X</sub>,d<sub>Z</sub>)=(3,4)</code></td>
+            <td>Exact ternary homological code; separate from the boundary code [240,120,3]</td>
           </tr>
           <tr>
             <td>E₈ Dynkin subgraph</td>
             <td><strong>Found, Gram det = 1</strong></td>
-            <td>At vertices [7,1,0,13,24,28,37,16]; Cartan matrix verified</td>
-          </tr>
-          <tr>
-            <td>240 decomposition</td>
-            <td><strong>240 = 40 × 3 × 2</strong></td>
-            <td>Lines × matchings × edges/matching</td>
-          </tr>
-          <tr>
-            <td>3-coloring</td>
-            <td><strong>3 × 80 edges, each 4-regular</strong></td>
-            <td>Natural GF(3) generation structure</td>
-          </tr>
-          <tr>
-            <td>GF(2) homology</td>
-            <td><strong>dim = 8, A²≡0 mod 2</strong></td>
-            <td>Rank of adjacency mod 2 equals E₈ rank</td>
-          </tr>
-          <tr>
-            <td>Determinant</td>
-            <td><strong>det(A) = −3 × 2⁵⁶</strong></td>
-            <td>Encodes E₈ structure: rank-8 mod-2 kernel</td>
-          </tr>
-          <tr>
-            <td>μ-graph</td>
-            <td><strong>SRG(27,16,...)</strong></td>
-            <td>Common-neighbor-3 subgraph; eigenvalues {−2:20, 4:6, 16:1}</td>
-          </tr>
-          <tr>
-            <td>Cosmological constant</td>
-            <td><strong>Λ exponent = −127</strong></td>
-            <td>−(k²−f+λ) where f=24 (eigenvalue multiplicity)</td>
-          </tr>
-          <tr>
-            <td>Hubble constant</td>
-            <td><strong>H₀ = 67 / 73 km/s/Mpc</strong></td>
-            <td>v+f+1+λ (CMB) vs v+f+1+2λ+μ (local)</td>
-          </tr>
-          <tr>
-            <td>Higgs mass</td>
-            <td><strong>M<sub>H</sub> = 125 GeV</strong></td>
-            <td>s⁴+v+μ where s=3 (field characteristic)</td>
-          </tr>
-          <tr>
-            <td>Vertex decomposition</td>
-            <td><strong>40 = 1 + 24 + 15</strong></td>
-            <td>Vacuum + gauge bosons (SU(5) adj) + fermions/gen</td>
-          </tr>
-          <tr>
-            <td>Dimensions</td>
-            <td><strong>4 + 8 = 12</strong></td>
-            <td>μ (macroscopic) + k−μ (compact) = k (total)</td>
+            <td>Named induced subgraph; not a 240-edge/root correspondence</td>
           </tr>
         </table>
       </section>
@@ -2076,8 +2012,85 @@
         <p>This section states the defensible backbone of the program: exact finite geometry on the internal side, and
           the current status of the curved <code>4D</code> bridge. Older broad phenomenology remains archive material
           unless it is promoted explicitly in the verified-results section further down this page.</p>
-      <div class="spotlight">
-        <p><strong>Where the frontier is, July 2026.</strong> The newest arc is lattice-theoretic. Every integral operator on this geometry has <em>saturated eigenlattices</em>, and how they glue is now a theorem: the <code>p</code>-part of the gluing is carried entirely by the eigenvalues that <em>collide modulo p</em>. For the adjacency operator that gluing is <code>(Z/2)^6 &oplus; (Z/6)^9 &oplus; Z/120</code>, whose odd part reproduces the discriminant group of the <code>+2</code>-eigenlattice in the E<sub>8</sub> section, and the identity <code>&prod;<sub>i</sub> det(L<sub>i</sub>) = |gluing|&sup2;</code> ties the two computations together exactly. Two consequences with teeth: the obstruction is <em>intrinsic</em> &mdash; no polynomial in <code>A</code> can remove it, because eigenvalue collisions are functorial &mdash; and the gluing separates cospectral graphs, so it sees strictly more than the spectrum. The open problem is the ramified <code>p = 2</code> case, which is exactly where W(3,3)&rsquo;s E<sub>8</sub> shadow lives.</p>
+      <div class="spotlight" id="theory-navigator">
+        <h3>Canonical Results Navigator</h3>
+        <p>Navigate by mathematical object, not by pass number. <strong>PROVED</strong> means a theorem;
+          <strong>CERTIFIED</strong> means an exact reproducible computation; <strong>CONDITIONAL</strong> marks a
+          missing interpretation or implementation map; <strong>RETRACTED</strong> claims remain visible in the audit
+          ledger.</p>
+        <table>
+          <tr>
+            <th>Object</th>
+            <th>Canonical result</th>
+            <th>Go to</th>
+          </tr>
+          <tr>
+            <td>W(3,3)</td>
+            <td><code>SRG(40,12,2,4)</code>, symplectic construction, exact projective symmetry</td>
+            <td><a href="#theory-geometry">Geometry</a></td>
+          </tr>
+          <tr>
+            <td>Clique complex</td>
+            <td><code>H1 = Z<sup>81</sup></code> and the finite Hodge sectors</td>
+            <td><a href="#theory-homology">Homology</a> &middot; <a href="#theory-hodge">Hodge</a></td>
+          </tr>
+          <tr>
+            <td>Integral operators</td>
+            <td>Smith forms, ramified kernel growth, and prime-by-prime gluing</td>
+            <td><a href="#theory-integral-frontier">Integral frontier</a></td>
+          </tr>
+          <tr>
+            <td>Schl&auml;fli/E<sub>6</sub> carrier</td>
+            <td><code>432 &rarr; 81 &rarr; 216</code> frame, integral profile, nonsplit mod-5 extension,
+              triality/Hecke reduction</td>
+            <td><a href="#theory-exceptional-bridge">Exceptional bridge</a></td>
+          </tr>
+          <tr>
+            <td>Exceptional quotients</td>
+            <td>Exact orbit/stabilizer quotients; no impossible D<sub>5</sub>&rarr;F<sub>4</sub> cascade</td>
+            <td><a href="#theory-exceptional-quotients">Quotients</a></td>
+          </tr>
+          <tr>
+            <td>Curved external factor</td>
+            <td>Explicit finite seeds; continuum spectral-action asymptotics remain open</td>
+            <td><a href="#theory-curved-4d">4D boundary</a></td>
+          </tr>
+        </table>
+        <p><a href="https://github.com/wilcompute/W33-Theory/blob/master/RESULTS_INDEX.md">Search the result index</a>
+          before re-deriving a formula, and use the
+          <a href="https://github.com/wilcompute/W33-Theory/blob/master/RESULTS_VOCABULARY.md">canonical vocabulary</a>
+          to resolve aliases, retractions, and object scope.</p>
+      </div>
+      <div class="spotlight" id="theory-integral-frontier">
+        <p><strong>The ramified boundary is closed (Pass 1002).</strong> The <code>2</code>-primary gluing is recovered
+          from the kernel-growth filtration modulo <code>2,4,...,2<sup>&nu;</sup></code>. For W(3,3), the exact
+          sequence <code>40,80,119,158,182</code> reconstructs
+          <code>Z/8 &oplus; (Z/2)<sup>15</sup></code>. The same filtration separates the cospectral
+          <code>T(8)</code>/Chang family by one final growth bit. Thus <code>p=2</code> is no longer an open item;
+          the theorem is a finite integral reconstruction, not an E<sub>8</sub> or physical identification.</p>
+      </div>
+      <div class="spotlight" id="theory-exceptional-bridge">
+        <p><strong>Current exact exceptional/integral bridge (Pass 1147; Passes 1325&ndash;1329).</strong>
+          The three <code>432</code>-element A<sub>2</sub>-colour carriers are three copies of the directed
+          Schl&auml;fli edges. The explicit odd edge transform has rank <code>81</code> and produces
+          <code>216</code> antipodal tight-frame lines. Its integral Smith profile is
+          <code>1<sup>15</sup>, 2<sup>6</sup>, 4<sup>8</sup>, 8<sup>29</sup>, 40<sup>23</sup></code>,
+          so its internal bad primes are exactly <code>{2,5}</code>; the three-colour Fourier split adds the
+          independent index <code>3<sup>81</sup></code>. The literal three-carrier Hecke commutant then reduces
+          <code>234 &rarr; 78 &rarr; 52</code> under no colour symmetry, <code>C3</code>, and full
+          <code>S3</code>. The primitive six-channel coefficient matrix has Smith diagonal
+          <code>1,1,1,12,12,24</code>, while the 26-unit Hecke lattice has exact bad primes
+          <code>{2,3,5}</code>. Triality gives the precise copy-permutation symmetry, but invariant primitive-cycle
+          operators act scalarly and cannot select one species-20 copy. Modulo <code>5</code>, the saturated
+          <code>81</code>-space is the nonsplit length-two module
+          <code>0 &rarr; I58 &rarr; S5 &rarr; K(W33)<sub>(5)</sub>&otimes;sgn &rarr; 0</code>
+          over both <code>W(E6)</code> and <code>PSp(4,3)</code>; its only submodule dimensions are
+          <code>0,58,81</code>. This certifies a nonzero displayed extension class, not the dimension of the full
+          <code>Ext<sup>1</sup></code> space. These are statements about named finite
+          modules and integral maps; they do not identify particles, generations, or hardware modes.
+          <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md">Read the Pass 1147 construction</a>
+          and
+          <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS1325_1329_TRIALITY_INTEGRAL_GAUGE_RELEASE.md">the Passes 1325&ndash;1329 release</a>.</p>
       </div>
 
         <div class="spotlight">
@@ -2248,7 +2261,7 @@
             <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS376_MARKED_D8_BRIDGE.md">Read the 20-check GAP certificate and scope boundary.</a></p>
         </div>
 
-        <h3>Step 1 — The Geometry</h3>
+        <h3 id="theory-geometry">Step 1 — The Geometry</h3>
         <p>W(3,3) is the symplectic polar space W(3, 𝔽₃). Its collinearity graph is a distinguished
           <strong>SRG(40, 12, 2, 4)</strong> with eigenvalues 12, 2, −4. It has 40 vertices (the projective
           1-spaces in GF(3)⁴; every 1-space is isotropic for an alternating form) and 240 edges. Each edge is a pair
@@ -2267,7 +2280,7 @@
           <code>Sp(4,3)=2.U4(2)</code> has center <code>C2</code> and is not that faithful projective extension
           (<a href="https://cage.ugent.be/~hvm/artikels/246.pdf">finite-geometry reference</a>; GAP Pass 213).</p>
 
-        <h3>Step 2 — Homology Reveals Matter</h3>
+        <h3 id="theory-homology">Step 2 — Homology Gives an Exact 81-Sector</h3>
         <p>The simplicial chain complex of the collinearity graph yields:</p>
         <div class="math-block">
           <span class="eq">H₁(W33; ℤ) = ℤ⁸¹</span>
@@ -2276,38 +2289,38 @@
           <strong>E₈ = g₀(86) ⊕ g₁(81) ⊕ g₂(81)</strong>, where g₀ = E₆ ⊕ A₂.
         </p>
 
-        <h3>Step 3 — Hodge Theory Classifies Forces</h3>
+        <h3 id="theory-hodge">Step 3 — Hodge Theory Splits Finite Sectors</h3>
         <p>The Hodge Laplacian L₁ on 1-chains has four eigenspaces:</p>
         <table>
           <tr>
             <th>Eigenvalue</th>
             <th>Multiplicity</th>
-            <th>Physical Role</th>
+            <th>Finite-sector description</th>
           </tr>
           <tr>
             <td><strong>0</strong></td>
             <td>81</td>
-            <td>Massless matter (fermions)</td>
+            <td>Harmonic 1-chain sector, representing H₁</td>
           </tr>
           <tr>
             <td><strong>4</strong></td>
             <td>120</td>
-            <td>Gauge bosons</td>
+            <td>Finite eigenvalue-4 sector</td>
           </tr>
           <tr>
             <td><strong>10</strong></td>
             <td>24</td>
-            <td>Heavy X bosons (SU(5) adjoint)</td>
+            <td>Finite eigenvalue-10 sector</td>
           </tr>
           <tr>
             <td><strong>16</strong></td>
             <td>15</td>
-            <td>Heavy Y bosons (SO(6) adjoint)</td>
+            <td>Finite eigenvalue-16 sector</td>
           </tr>
         </table>
-        <p>The spectral gap Δ = 4 is exact and separates massless from massive modes. In the live promoted
-          interpretation these are exact finite sectors first; the full continuum particle interpretation is still tied
-          to the open curved <code>4D</code> bridge theorem.</p>
+        <p>The spectral gap <code>&Delta; = 4</code> is exact and separates the harmonic sector from the nonzero
+          finite sectors. It is not, by itself, a particle mass or a continuum Yang&ndash;Mills gap; either reading
+          requires the still-open curved <code>4D</code> bridge and an explicit field-identification map.</p>
         <p>On the full promoted tetrahedral package the corresponding finite Dirac square is
           <code>D<sub>F</sub><sup>2</sup> = {0<sup>82</sup>,4<sup>320</sup>,10<sup>48</sup>,16<sup>30</sup>}</code>. The
           older <code>122</code> zero-mode count is not a contradiction; it belongs to the truncated
@@ -2425,7 +2438,7 @@
             selected or physically identified.</p>
         </div>
 
-        <h3>Step 7 — The Curved 4D Bridge</h3>
+        <h3 id="theory-curved-4d">Step 7 — The Curved 4D Bridge</h3>
         <p>The decisive current point is negative as well as positive: one fixed finite spectrum cannot by itself
           produce a genuine <code>4D</code> Weyl law or the full Einstein-Hilbert term. The coherent route is therefore
           an almost-commutative product: exact finite internal data paired with a genuine curved external
@@ -2506,40 +2519,37 @@
           parameters, Higgs mass formulas, or alternate electroweak formulas remain archive material below unless they
           are promoted explicitly in the verified section.</p>
 
-        <h2><span class="icon">◈</span> Grand Architecture — Rosetta Stone</h2>
-        <p>Pillar 120 reveals the complete self-referential architecture connecting all structures
-          through a single stabilizer cascade and a remarkable Q₈ → E₆ → Q₈ loop.</p>
+        <h2 id="theory-exceptional-quotients"><span class="icon">◈</span> Grand Architecture — Exceptional Quotients</h2>
+        <p>The exceptional carriers are related by several exact orbit/stabilizer quotients and triality extensions.
+          They do not form one nested subgroup cascade.</p>
 
         <div class="rosetta">
-          <h3>The Stabilizer Cascade</h3>
-          <p>Starting from the 27 lines on a cubic surface (complement Schläfli graph SRG(27, 10, 1, 5)),
-            the stabilizer chain reads:</p>
-          <div class="cascade">
-            <div class="node">
-              <div class="name">W(E₆)</div>
-              <div class="order">51,840</div>
-            </div>
-            <div class="arrow">→<br><small>÷27</small></div>
-            <div class="node">
-              <div class="name">W(D₅)</div>
-              <div class="order">1,920</div>
-            </div>
-            <div class="arrow">→<br><small>÷(5/3)</small></div>
-            <div class="node">
-              <div class="name">W(F₄)</div>
-              <div class="order">1,152</div>
-            </div>
-            <div class="arrow">→<br><small>÷3</small></div>
-            <div class="node">
-              <div class="name">G₃₈₄</div>
-              <div class="order">384</div>
-            </div>
-            <div class="arrow">→<br><small>÷2</small></div>
-            <div class="node">
-              <div class="name">N</div>
-              <div class="order">192</div>
-            </div>
-          </div>
+          <h3>Exact Orbit/Stabilizer Quotients</h3>
+          <p>The former display incorrectly put <code>W(F4)</code> below <code>W(D5)</code>; the order ratio
+            <code>1920/1152=5/3</code> proves that this cannot be a subgroup step. The certified relationships are
+            separate:</p>
+          <table>
+            <tr>
+              <th>Carrier</th>
+              <th>Exact quotient</th>
+              <th>Meaning</th>
+            </tr>
+            <tr>
+              <td>27 cubic-surface lines</td>
+              <td><code>W(E6)/W(D5)</code></td>
+              <td><code>51840/1920=27</code></td>
+            </tr>
+            <tr>
+              <td>432 directed Schl&auml;fli edges</td>
+              <td><code>W(E6)/S5</code></td>
+              <td><code>51840/120=432</code></td>
+            </tr>
+            <tr>
+              <td>D<sub>4</sub> triality extension</td>
+              <td><code>W(F4)=W(D4):S3</code></td>
+              <td><code>1152=192&middot;6</code>; separate from the D<sub>5</sub> stabilizer</td>
+            </tr>
+          </table>
 
           <table>
             <tr>
@@ -2592,14 +2602,14 @@
             <span class="symbol">J₃(O)</span> (exceptional Jordan) →
             <span class="symbol">E₆</span> →
             <span class="symbol">W(E₆)</span> →
-            stabilizer cascade →
+            separate D<sub>4</sub> normalizer/triality extension →
             <span class="symbol">N = Aut(C₂ × Q₈)</span> →
             <span class="symbol">Q₈</span>
             <br><br>
             <em>The snake eats its tail.</em>
             <br><br>
             The new <a href="https://github.com/wilcompute/W33-Theory/blob/master/PART_CCCCXVII_QEC_OUROBOROS_STABILIZER_LOOP.md">QEC Ouroboros Stabilizer Loop</a>
-            makes this exact on the error-correction side: the stabilizer cascade is a QEC feedback loop on the
+            links these carriers on the error-correction side as a QEC feedback diagram, not a subgroup chain, on the
             W33 edge-qubit carrier <code>[[240,81,3]]</code>. Vertex and triangle checks read the same
             <code>240</code>-edge complex that carries the <code>H1=81</code> logical sector. The
             line-star tail is the <code>H1=81</code> logical sector modulo vertex checks, so stabilizing it away
@@ -2640,8 +2650,8 @@
             </tr>
             <tr>
               <td>|W(F₄)| = |W(D₄)| × |Out(D₄)| = 192 × 6 = 12 × 96</td>
-              <td>S₃ = Out(D₄) = triality group inside N, so the full F₄ / 24-cell symmetry is the triality lift of the
-                tomotope package</td>
+              <td>S₃ = Out(D₄), and adjoining this outer action gives the separate extension
+                W(F₄) = W(D₄):S₃</td>
             </tr>
             <tr>
               <td>135 = |PSp(4,3)| / |N| = singular GF(2)⁸</td>
@@ -18113,9 +18123,9 @@ pass produced it.</p>
 <table>
   <tr><th>If you want&hellip;</th><th>Go to</th><th>What you get</th></tr>
   <tr><td><strong>The idea, in order</strong></td><td><a href="#theory">The Theory</a></td>
-      <td>The seven steps from a 40-point geometry to a gauge group and three generations. Start here if you read nothing else.</td></tr>
+      <td>The exact finite backbone, its current integral/representation frontiers, and clearly separated conditional interpretations. Start here if you read nothing else.</td></tr>
   <tr><td><strong>The numbers themselves</strong></td><td><a href="#numbers">Core Numbers</a></td>
-      <td>Every invariant of the graph in one place: 40 points, 240 edges, spectrum 12/2/&minus;4, symmetry order 51,840.</td></tr>
+      <td>Canonical graph, homology, lattice, code, and Schl&auml;fli-module invariants, without physics formulas mixed into the theorem layer.</td></tr>
   <tr><td><strong>Whether to believe it</strong></td><td><a href="#verified">Verified Results</a></td>
       <td>The claims that survived audit, each with the certificate that backs it. Also the retractions &mdash; results we promoted and then killed.</td></tr>
   <tr><td><strong>The physics reading</strong></td><td><a href="#physics">Physics Derivations</a></td>
@@ -18132,6 +18142,12 @@ pass produced it.</p>
           <ul class="quick-list">
             <li><a href="#verified">Verified Results</a> &mdash; the concise exact theorem layer.</li>
             <li><a href="#current-synthesis">Current Synthesis</a> &mdash; the present evidence-tiered state.</li>
+            <li><a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md">Pass 1147</a>
+              &mdash; the object-level directed-Schl&auml;fli map, 216-line frame, integral Smith profile, and
+              nonsplit mod-5 <code>58|23</code> extension.</li>
+            <li><a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS1325_1329_TRIALITY_INTEGRAL_GAUGE_RELEASE.md">Passes 1325&ndash;1329</a>
+              &mdash; the three-carrier triality reduction, six-channel and Hecke Smith forms, and cycle
+              nonselection theorem.</li>
             <li><a href="#q3-all-m-theorem">Pass 541</a> &mdash; the exact <code>q=3</code> trace-valuation minimum for
               every exponent <code>m&ge;2</code>, proved by six cubic recurrences and two finite mod-<code>9</code>
               clocks.</li>
@@ -18152,7 +18168,7 @@ pass produced it.</p>
             <li><a href="#independent-verification">Independent Verification</a> &mdash; commands and certificates;
               <a href="#archive">Historical Archive</a> &mdash; the development record.</li>
           </ul>
-        </div>
+        </details>
         <details class="reader-history" hidden aria-hidden="true">
           <summary style="cursor:pointer;color:var(--fg2);">Historical development and detailed claim ledger</summary>
           <div class="spotlight" style="margin-top:0.8rem;border-left-color:var(--fg2);">

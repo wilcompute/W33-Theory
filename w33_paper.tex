@@ -1305,7 +1305,7 @@ whose 27 vertices correspond to the \textbf{27 lines on a cubic surface}---a
 central object in algebraic geometry tied to $E_6$.
 
 
-\subsection{Spreads, Ovoids, and String Theory}
+\subsection{Spreads and the Odd-Characteristic Ovoid Obstruction}
 
 \begin{definition}
 A \textbf{spread} of $\GQ(s,t)$ is a set of $st+1$ pairwise
@@ -1314,24 +1314,29 @@ An \textbf{ovoid} is a set of $st+1$ points, no two collinear.
 \end{definition}
 
 \begin{theorem}
-For $W(3,3)$:
+For $W(3,3)$, every spread has
 \begin{equation}
-|\text{spread}| = |\text{ovoid}| = q^2+1 = \Theta = 10.
+|\text{spread}|=q^2+1=\Theta=10.
 \end{equation}
-A spread partitions all $v=40$ points into $\Theta=10$ groups of
-$\mu=4$.  The identity
+It partitions all $v=40$ points into $\Theta=10$ groups of
+$\mu=4$, so
 \begin{equation}
 \text{spread}\times(\text{pts/line}) = \Theta\times\mu = 10\times 4 = 40 = v
 \end{equation}
-is a perfect partition.
-Under duality, spreads and ovoids interchange.
+is a perfect partition.  In contrast, the symplectic quadrangle
+$W(3,3)$ has no ovoids: its point graph has independence number
+$\alpha=7<10$.  Incidence duality sends a spread of $W(3,3)$ to an
+ovoid of the dual quadrangle $Q(4,3)$; it does not produce an ovoid
+inside $W(3,3)$ itself.
 \end{theorem}
 
-\begin{corollary}[String-Theory Dimension from GQ Geometry]
-\begin{equation}
-D_{\text{string}} = |\text{spread}| = |\text{ovoid}| = \Theta = 10.
-\end{equation}
-\end{corollary}
+\begin{remark}
+The exact finite-geometric datum here is the spread size $10$ and the
+duality-odd distinction
+$\alpha(W(3,3))=7<10=\alpha(Q(4,3))$.  Assigning the number $10$ to a
+continuum spacetime or string-theory dimension is an additional physical
+dictionary, not a consequence of the generalized-quadrangle theorem.
+\end{remark}
 
 
 \subsection{Collineation Group and Stabilisers}
@@ -1365,21 +1370,23 @@ Key substructures of $W(3,3)$:
 \begin{array}{lcl}
 |p^\perp| = 1+k = 13 = \Phithree
 &\quad&\text{(perp-hyperplane)}\\[3pt]
-\text{ovoid size} = \Theta = 10
-&\quad&\text{(ovoid hyperplane)}\\[3pt]
+\text{maximum partial ovoid size} = \alpha = 7
+&\quad&\text{(no ovoid in odd characteristic)}\\[3pt]
 \text{sub-}\GQ(q,1)\text{ grid} = (q+1)^2 = 16 = 2^\mu
 &\quad&\text{(grid hyperplane)}
 \end{array}
 \end{equation}
 \end{proposition}
 
-\begin{theorem}[Hoffman Bound]
-The maximum independent set (= ovoid) has size
+\begin{theorem}[Hoffman Bound and the Strict Ovoid Obstruction]
+The Hoffman ratio bound gives
 \begin{equation}
-\alpha(\Gamma) = \frac{v|s|}{k+|s|} = \frac{40\times 4}{16} = 10 = \Theta.
+\alpha(\Gamma)\le \frac{v|s|}{k+|s|}
+= \frac{40\times 4}{16}=10.
 \end{equation}
-This equals the Lov\'asz theta function and the Shannon capacity of $\Gamma$.
-The maximum clique (= a GQ line) has size $q+1=\mu=4$.
+Exact enumeration sharpens this non-tight spectral bound to
+$\alpha(\Gamma)=7$, so no $10$-point ovoid exists in $W(3,3)$.
+The maximum clique (a GQ line) has size $q+1=\mu=4$.
 \end{theorem}
 
 
@@ -2136,7 +2143,18 @@ QEC analogy; the code calculation alone does not derive the continuum
 Bekenstein--Hawking law.
 
 \subsection{Discrete AdS/CFT and the Conformal Group}
-Holographic duality (AdS/CFT) relates a negatively curved hyperbolic bulk to a conformal boundary. The $W(3,3)$ graph Laplacian possesses a single negative eigenvalue ($-4$), denoting its intrinsic hyperbolic curvature limit. The multiplicity of this negative eigenvalue is exactly $g = 15$. Astonishingly, $15$ is precisely the geometric dimension of the $4$D minimal conformal group $SO(4,2)$. The $15$ negative-curvature modes of the discrete bulk perfectly match and generate the $15$ generators of the conformal boundary, realizing exact discrete AdS/CFT mapping without continuum strings.
+Holographic duality (AdS/CFT) relates a negatively curved hyperbolic bulk to
+a conformal boundary.  For the $W(3,3)$ point graph, $-4$ is an
+\emph{adjacency} eigenvalue of multiplicity $15$; the combinatorial
+Laplacian $L=12I-A$ instead has spectrum
+\[
+ 0^1,\qquad 10^{24},\qquad 16^{15}.
+\]
+The numerical equality $15=\dim SO(4,2)$ is therefore a finite spectral
+comparison, not a negative-curvature Laplacian mode and not by itself an
+AdS/CFT construction.  Establishing such a construction would require an
+explicit bulk--boundary map and a continuum or scaling theorem beyond the
+graph spectrum.
 
 
 % ═══════════════════════════════════════════════════════════════
@@ -2148,12 +2166,13 @@ Holographic duality (AdS/CFT) relates a negatively curved hyperbolic bulk to a c
 \section{String Theory Dimensions}
 \label{sec:string}
 
-Every critical dimension of string theory is a graph parameter or
-simple function thereof:
+The following are numerical comparisons between familiar critical
+dimensions and graph parameters; the equalities on the right do not
+derive a string compactification:
 \begin{equation}
 \renewcommand{\arraystretch}{1.3}
 \begin{array}{rclcl}
-D_{\text{Type II}} &=& \Theta = 10 &=& |\text{spread}| = |\text{ovoid}| \\
+D_{\text{Type II}} &=& \Theta = 10 &=& |\text{spread in }W(3,3)| \\
 D_{\text{M-theory}} &=& k-1 = 11 && \\
 D_{\text{F-theory}} &=& k = 12 && \\
 D_{\text{bosonic}} &=& \lambda\Phithree = 26 && \\
@@ -3346,7 +3365,7 @@ $E$ & edge count $=vk/2$ & $240$
 $T$ & triangle count $=vk\lambda/6$ & $160$
 & total incidences (flags) \\
 $\Theta$ & $q^2+1$ & $10$
-& spread/ovoid size, $D_{\text{string}}$ \\
+& spread size (and dual-$Q(4,3)$ ovoid size) \\
 $\Phithree$ & $q^2+q+1$ & $13$
 & total lines/point in $\PG(3,3)$ \\
 $\Phisix$ & $q^2-q+1$ & $7$
@@ -3792,7 +3811,7 @@ v=40,\ k=12,\ \lambda=2,\ \mu=4,\ q=3,\ f=24,\ g=15,\ r=2,\ s=-4,\ E=240.
 380 & Connes spectral triple, $\mathrm{KO\text{-}dim}=k/2=6$ & 17 \\
 381 & Axion / strong CP, $\theta_{QCD}=0$ from $\ZZ_q$ & 14 \\
 382 & Genetic code: $64=\mu^q$ codons, $20=E/k$ AAs & 26 \\
-383 & Universal computation: $\Sp(4,3)$ = 2-qutrit Clifford & 31 \\
+383 & Finite computation: $\Sp(4,3)$ symplectic Clifford-label quotient & 31 \\
 384 & Music, vision, perception: 12-tet$=k$, $40$ Hz $\gamma=v$ & 37 \\
 385 & Economics \& networks: Pareto $80/20=\mu$, Dunbar $5,15$ & 26 \\
 386 & ML / AI: BERT $12=k$, GPT-3 $96=\mu f$, $20=E/k$ tok/par & 32 \\
@@ -3841,11 +3860,13 @@ N_e=\dfrac{vq}{\lambda}=60,\ \ n_s = 1-\dfrac{2}{N_e} = \dfrac{29}{30} = 0.9667,
 \)
 ($137$ is prime; equivalently $E/\lambda + \Phi_6+\Phi_4$.)
 
-\paragraph{5.\ Universal compute.}
-$\Sp(4,\FF_3)$, the automorphism group of $W_{3,3}$, is \emph{exactly}
-the two-qutrit Clifford group of order
-$|W|=51840=\lambda^{\Phi_6}q^{\mu}(\mu+1)$. The smallest known
-universal Turing machine is $(2,3)=(\lambda,q)$.
+\paragraph{5.\ Finite symplectic computation.}
+$\Sp(4,\FF_3)$, of order
+$51840=\lambda^{\Phi_6}q^{\mu}(\mu+1)$, is the linear symplectic
+quotient of the two-qutrit Clifford action on Pauli labels.  This is an
+exact finite gate-label symmetry, not a universal gate set.  Universality
+would require a specified non-Clifford resource and an explicit synthesis
+or density theorem.
 
 \paragraph{6.\ Exceptional Lie algebras.}
 \[
@@ -3856,28 +3877,29 @@ $(14,52,78,133,248)$ --- the entire exceptional series in five
 $W_{3,3}$ expressions.
 
 \section{Master Equation}
-The strongly-regular axiom itself fixes \emph{all} of the above:
+The strongly-regular axiom organizes the finite graph parameters:
 \[
 \boxed{\;k(k-\lambda-1)\;=\;(v-k-1)\,\mu\;}\qquad
 (12\cdot 9 = 27\cdot 4 = 108).
 \]
 
 \section{The Bigger Computational Picture}
-Phases CCCLXXXIII, CCCXCIV, and CCCXCV together argue that $W_{3,3}$ is
-not merely a place where physics happens to live but is the
-\emph{minimal universal computer} compatible with the standard model.
-The native argument has four legs; read against Klee Irwin's
+Phases CCCLXXXIII, CCCXCIV, and CCCXCV compare the exact finite
+$W_{3,3}$ carrier with several languages of computation.  They do not
+prove that it is a minimal universal computer or that it is selected by
+the Standard Model.  Read against Klee Irwin's
 \href{https://www.altpropulsion.com/wp-content/uploads/2025/01/Klee-Irwin-Clock-Cycle-Theory-Jan2025.pdf}{Cycle Clock Theory axioms}
 and the QGR
 \href{https://quantumgravityresearch.org/cycle-clock-theory-overview/}{Cycle Clock Theory overview},
 it also supplies a source-cited fifth bridge.
 
-\paragraph{(a) Hardware.}
-$|\Aut(W_{3,3})|=|\Sp(4,\FF_3)|=51840$ is exactly the two-qutrit
-Clifford group. Adjoining the $\ZZ_q$ ($q=3$) magic state from the
-cubic invariant on $\FF_3^{1+2}$ promotes Clifford to a fully universal
-quantum gate set (Bravyi--Kitaev). The graph is vertex-, edge-, and
-arc-transitive: every gate is interchangeable.
+\paragraph{(a) Hardware boundary.}
+$|\Aut(W_{3,3})|=|\Sp(4,\FF_3)|=51840$ gives the linear symplectic
+action on two-qutrit Pauli labels.  The graph is vertex-, edge-, and
+arc-transitive, but its arcs are not thereby physical gates.  A cubic
+invariant is not by itself a prepared magic state, and no universal
+hardware gate set follows without an encoding, an implemented
+non-Clifford operation, and a synthesis theorem.
 
 \paragraph{(b) Software.}
 The smallest known universal Turing machine is $(2,3)=(\lambda,q)$
@@ -3885,18 +3907,21 @@ The smallest known universal Turing machine is $(2,3)=(\lambda,q)$
 $\lambda q^2 = 18 \le 2k$ symbols.
 
 \paragraph{(c) Description length.}
-\(
-K(W_{3,3}) \le \underbrace{24}_{(v,k,\lambda,\mu)} +
-\underbrace{5}_{\text{Spence index of }28} +
-\underbrace{8}_{\text{format tag}} < 64\ \text{bits}.
-\)
-Vs $K(\mathrm{SM})\gtrsim 260$ bits --- \textbf{$6.5\times$} compression.
-The full adjacency matrix is $E=240$ bits $=30$ bytes.
+A labelled $40\times40$ adjacency matrix uses $1600$ bits.  Symmetry and
+the zero diagonal reduce the independent upper triangle to
+\[
+ \binom{40}{2}=780\ \text{bits}=97.5\ \text{bytes}.
+\]
+The number $E=240$ is the Hamming weight of that upper triangle, not
+its encoding length.  A symplectic construction gives a much shorter
+program relative to a fixed decoder, but no decoder-independent
+Kolmogorov bound or compression ratio against the Standard Model is
+proved here.
 
-\paragraph{(d) Operations budget.}
-Lloyd's bound gives $\sim 10^{120}$ ops in the observable universe,
-exponent $120 = E/2$ --- the same number controlling the cosmological
-constant hierarchy ($122 = E/2+\lambda$).
+\paragraph{(d) Operations-count comparison.}
+The numerical appearance of $120=E/2$ beside exponents in cosmological
+operations estimates is a comparison of counts.  The graph does not
+derive Lloyd's physical assumptions or a cosmological operations bound.
 
 \paragraph{(e) Cycle-clock/code-theoretic reading.}
 Cycle Clock Theory is not used here as an unproved premise.  The
@@ -4204,16 +4229,16 @@ tension hypothesis at $H_0=\Phi_6\Phi_4=70$.
 Steiner system of $M_{24}$: $S(\mu+1,\lambda^q,f)=S(5,8,24)$. Leech
 lattice: $\dim=f=24$.
 
-\subsection*{FT5 --- Computation}
-$\Sp(4,\FF_3)$ is \emph{exactly} the two-qutrit Clifford group; the
-smallest known universal Turing machine is $(\lambda,q)=(2,3)$. With
-the $\ZZ_q$-magic state from the cubic invariant, Clifford is promoted
-to a universal quantum gate set. Kolmogorov complexity of the theory:
-\[
-K(W_{3,3})\le 24+5+8<64\ \text{bits}\qquad\text{vs.}\qquad K(\mathrm{SM})\gtrsim 260\ \text{bits},
-\]
-a \textbf{$6.5\times$} compression. The adjacency matrix is $E=240$
-bits $=30$ bytes. Lloyd's operations bound exponent $120=E/2$.
+\subsection*{FT5 --- Finite computation boundary}
+$\Sp(4,\FF_3)$ is the exact linear symplectic quotient of the
+two-qutrit Clifford action.  It supplies a finite reversible label
+action but, being finite, is not by itself universal.  The raw labelled
+graph requires $780$ independent adjacency bits (or $1600$ bits as a
+full matrix); $E=240$ records its edges.  Shorter algebraic
+descriptions depend on a declared decoder.  No magic-state
+implementation, universal synthesis, Standard-Model Kolmogorov
+comparison, or cosmological operations bound is claimed by this
+finite-group statement.
 
 \subsection*{Closure}
 \[
@@ -4376,12 +4401,15 @@ $q^4(q^4-1)(q^2-1)=51840$.
 \emph{minimal} non-degenerate $\GQ(q,q)$.
 \item[\textbf{A4.}] Complement carries the $E_6$ fundamental rep of
 dimension $q^q=27$.
-\item[\textbf{A5.}] Automorphism group equals the two-qutrit Clifford
-group; admits universal quantum computation.
+\item[\textbf{A5.}] Automorphism group supplies the linear symplectic
+quotient of the two-qutrit Clifford label action.
 \item[\textbf{A6.}] Strict Ramanujan: $|s|=4 < 2\sqrt{k-1}=2\sqrt{11}$;
 Ihara-RH holds.
 \end{itemize}
-Therefore: FT1--FT5 $\wedge$ A1--A6 $\Rightarrow$ $G=W_{3,3}$.
+Therefore, within this stipulated finite list,
+FT1--FT5 $\wedge$ A1--A6 selects $G=W_{3,3}$.  This is a conditional
+graph discriminator; the theorem does not prove that A1--A6 are
+necessary conditions for observers or for the physical universe.
 \end{theorem}
 
 \section*{The Minimal-$q$ Identity}
@@ -4389,11 +4417,11 @@ Therefore: FT1--FT5 $\wedge$ A1--A6 $\Rightarrow$ $G=W_{3,3}$.
 \boxed{\ v = (q+1)(q^2+1)\ }\qquad
 \begin{cases}q=2:\ v=15\ (\text{too small})\\ q=3:\ v=40=W_{3,3}\\ q=4:\ v=85\ (\text{not prime power of 2-generation})\end{cases}
 \]
-The choice $q=3$ is the \emph{smallest prime power} for which
-$(q+1)(q^2+1)$ yields an SRG whose automorphism group contains the
-three-generation fermion spectrum and whose Clifford subgroup
-supports universal quantum computation. Q.E.D. (of anthropic
-minimality).
+The choice $q=3$ is the smallest odd prime rung used by the present
+qutrit construction.  The displayed vertex counts alone do not select
+it: symplectic quadrangles also exist at other prime powers.  Claims
+about fermion generations, universal computation, or anthropic
+minimality require additional hypotheses beyond this count.
 
 \section*{Six Independent Observer Requirements}
 Each of A1--A6 is independently required for an observer:
@@ -4406,19 +4434,21 @@ motion.
 other closures.
 \item \textbf{A4 ($E_6$ rep):} matter content with three generations
 and CP-violating Z$_3$ phase.
-\item \textbf{A5 (Clifford universal):} computation; the universe must
-be able to simulate itself.
+\item \textbf{A5 (finite symplectic action):} an exact reversible
+action on Pauli labels; universality is not inferred.
 \item \textbf{A6 (Ramanujan):} spectral coherence; essential for
 quantum memory and wavefunction stability over cosmological time.
 \end{enumerate}
-Six conditions, six clusters of constants, one graph.
+Six stipulated filters, six clusters of constants, one selected graph;
+their physical necessity remains a separate question.
 
-\section*{Observer Consistency Lemma}
-The observer needs: (i) universal computation ($\Aut=$ Clifford) ---
-\textbf{A2, A5}; (ii) quantum coherence (Ramanujan gap) --- \textbf{A6};
-(iii) finite Kolmogorov description --- \textbf{A3} with $K\le 64$ bits;
-(iv) $3+1$ spacetime --- $q+1=\mu$ --- \textbf{A1}. All four reduce to the
-same $W_{3,3}$.
+\section*{Observer-Dictionary Boundary}
+The four proposed readings---computation, coherence, finite
+description, and $3+1$ spacetime---reuse the A1--A6 integers, but they
+do not form a proved observer-consistency lemma.  In particular,
+$\Aut(W_{3,3})$ is finite rather than universal, Supplement~U
+withdraws the $K\le64$ claim, and $q+1=4$ is a dimension-count
+comparison rather than a spacetime derivation.
 
 \section*{The Full Tower: FT $\cup$ M $\cup$ A}
 \[
@@ -4465,7 +4495,9 @@ outside the stated precision window falsifies the corresponding cluster.
 \multicolumn{5}{l}{\textbf{Flavour / quark-lepton (F1--F5)}}\\[2pt]
 F1 & $\sin^2\theta_{12}^{\rm PMNS}$ & $\mu/\Phi_3=4/13\approx 0.3077$ (legacy $q/(k-\lambda)=3/10$ boundary packet) & $0.307\pm0.013$ & JUNO $\pm$0.003 \\
 F2 & $\sin^2\theta_{23}^{\rm PMNS}$ & $\Phi_6/\Phi_3=7/13=0.5385$ & $0.573\pm 0.018$ & DUNE $\pm$0.01 \\
-F3 & $\sin^2\theta_{13}^{\rm PMNS}$ & $\lambda/(\Phi_3\Phi_6)=2/91$ & $0.0861\pm 0.0017$ (from $\sin^2 2\theta$) & Daya Bay II \\
+F3 & $\sin^2\theta_{13}^{\rm PMNS}$ &
+$2/91\approx0.02198$ (equiv.\ $\sin^2 2\theta=712/8281\approx0.08598$) &
+$\sin^2 2\theta=0.0861\pm0.0017$ & Daya Bay II \\
 F4 & $\varepsilon_{CP}^{\rm CKM}$ & $q/(v\Phi_3)=3/520$ & $J_{CP}\sim 3.1\times10^{-5}$ & LHCb \\
 F5 & $\lambda_H$ & $\Phi_6/(2q^3)=7/54\approx 0.1296$ & $\approx 0.129$ & HL-LHC/FCC \\
 \midrule
@@ -5973,9 +6005,16 @@ the symmetry-breaking step required to reach the $600$-cell.
 Supplement~N supplies the matching code-theoretic arithmetic on the
 $W_{3,3}$ side.
 
-\subsection*{N.1 \quad Three-class scheme spectrum}
-The Bose--Mesner algebra of $W_{3,3}$ is a 3-class association scheme
-with primitive idempotents $\{I,\ A,\ J-I-A\}$. The adjacency
+\subsection*{N.1 \quad Rank-three scheme spectrum}
+The Bose--Mesner algebra of $W_{3,3}$ has adjacency basis
+$\{I,\ A,\ J-I-A\}$.  These are its three relation matrices, not its
+primitive idempotents.  The latter are the spectral projectors
+\[
+ E_{12}=\frac{J}{40},\qquad
+ E_{2}=\frac{A+4I-\frac25J}{6},\qquad
+ E_{-4}=\frac{2I-A+\frac14J}{6}.
+\]
+The adjacency
 eigenvalue triple is
 \[
 \boxed{\;(k,r,s) = (12,\,2,\,-4)\;}
@@ -6016,8 +6055,9 @@ which is the standard Steiner system on a $\GQ(3,3)$ point set.
 \subsection*{N.5 \quad First-distinction (qutrit) alphabet}
 Distances in $W_{3,3}$ take three values $\{0,1,2\}$ — same vertex,
 adjacent edge, non-edge. With $q=3$ symbols, the graph realises a
-``first-distinction'' code in the QGR sense: every pair of vertices
-contributes a single ternary digit to the global self-simulating string.
+``first-distinction'' alphabet in the QGR vocabulary.  This is a
+three-symbol encoding of pair relations; it is not a constructed
+self-simulating string or transition system.
 
 \section*{Emergence Arithmetic Table}
 
@@ -6632,113 +6672,69 @@ plus the seven Higgs / fermion-mass / CP scalars ($q + \mu = 7 = \Phi_6$)
 \hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
 
 % ═══════════════════════════════════════════════════════════════
-%  SUPPLEMENT U --- THE SELF-SIMULATING UNIVERSE THEOREM
+%  SUPPLEMENT U --- FINITE DESCRIPTION AUDIT
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement U --- The Self-Simulating Universe Theorem}
-\addcontentsline{toc}{part}{Supplement U --- Self-Simulating Universe}
+\part*{Supplement U --- Finite Description Audit}
+\addcontentsline{toc}{part}{Supplement U --- Finite Description Audit}
 
-\section*{The Self-Simulation Property}
+\section*{The Raw Encoding Boundary}
 
 A central thesis of QGR's Emergence Theory is that the universe is
-\emph{self-simulating}: it contains, internally, enough information
-to reproduce its own dynamics. We supply the precise information-
-theoretic statement on the $W_{3,3}$ side.
+\emph{self-simulating}.  The finite graph does not prove that thesis,
+but its exact storage counts can be audited without a physical
+interpretation.
 
-\begin{theorem}[Self-Simulating Universe Theorem]
+\begin{proposition}[Raw adjacency budget]
 \label{thm:self-sim}
-The total Kolmogorov complexity of $W_{3,3}$, its full automorphism
-group $\Aut(W_{3,3}) = \Sp(4,\FF_3)$, and its Spence index is bounded
-above by $2E = 480$ bits, where $E = 240$ is the edge count.
-Concretely:
+For a fixed labelling, the simple graph $W_{3,3}$ is specified by the
+upper triangle of its adjacency matrix, using exactly
 \[
-K(\text{adjacency}) + K(\Aut) + K(\text{Spence index}) + K(\text{parameter header}) \;\le\; 2E.
+\binom{40}{2}=780\text{ bits}.
 \]
-\end{theorem}
+The full symmetric $40\times40$ binary matrix uses $1600$ bits.  Its
+edge count $E=240$ is the Hamming weight of the upper-triangular
+word, not the word length.
+\end{proposition}
 
-\begin{proof}[Proof / explicit budget]
-\begin{itemize}[leftmargin=2em]
-\item $K(\text{adjacency}) = E = 240$ bits (one bit per edge)
-\item $K(\Aut) \le \log_2 51840 \approx 15.66 < \lambda^{\mu} = 16$ bits
-\item $K(\text{Spence index of 28}) \le \log_2 28 < 5 = \mu+1$ bits
-\item $K(\text{parameters }(v,k,\lambda,\mu)) \le 4\cdot 6 = 24 = f$ bits
-\end{itemize}
-Total:
-\[
-K_{\rm total} \;\le\; E + \lambda^{\mu} + (\mu+1) + f
-\;=\; 240 + 16 + 5 + 24 \;=\; 285 \text{ bits}.
-\]
-This is below the Bekenstein-bound capacity for a region storing the
-$\{0,1\}$-valued adjacency state of $W_{3,3}$:
-\[
-\text{capacity} = \lambda \cdot E = 480 \text{ bits}.
-\]
-Therefore $K_{\rm total} = 285 \le 480 = 2E$. \qedhere
+\begin{proof}
+There is one independent binary choice for every unordered pair of
+distinct vertices.  Symmetry supplies the lower triangle and the
+diagonal is zero.  The actual $W_{3,3}$ word has $240$ ones among
+these $780$ positions.
 \end{proof}
 
-\section*{Compression Factor}
+\section*{Why This Is Not a Self-Simulation Theorem}
 
-The compression ratio between Bekenstein capacity and Kolmogorov self-
-description is
+The earlier budget replaced the $780$ adjacency positions by the $240$
+occupied positions and obtained $285$ bits.  With the same auxiliary
+integer fields but the corrected raw adjacency word, that bookkeeping
+would instead read
 \[
-\frac{2E}{K_{\rm total}} \;=\; \frac{480}{285} \;\approx\; 1.68,
+\underbrace{780}_{\text{adjacency word}}+
+\underbrace{16}_{\text{order field}}+
+\underbrace{5}_{\text{Spence index}}+
+\underbrace{24}_{\text{parameter fields}}
+=825\text{ bits}.
 \]
-leaving $\sim 195$ bits of unused informational ``headroom'' for
-dynamics, simulation overhead, or higher-level structure.
+This is a raw field count, not Kolmogorov complexity: a short algebraic
+program can generate the graph only relative to a fixed language and
+decoder.  Nor is $2E=480$ a Bekenstein capacity.  Applying a Bekenstein
+bound requires a physical system with specified energy, size, units, and
+an encoding map; the edge number supplies none of those data.  Finally,
+encoding a static graph does not encode a transition rule capable of
+simulating that encoder.
 
-\section*{Comparison with the Standard Model}
+\section*{What Survives}
 
-\[
-\begin{aligned}
-K(\text{Standard Model}) &\sim 260 \text{ bits (free parameters)},\\
-K(W_{3,3}) &\sim 40 \text{ bits (algebraic specification)}.
-\end{aligned}
-\]
-for a compression factor $\sim 6.5\times$ on the same physical content
-(Supp.~B FT5).
-
-\section*{Why W$_{3,3}$ is the Smallest Self-Simulator}
-
-The total budget of 285 bits is achievable because:
-\begin{itemize}[leftmargin=2em]
-\item The graph is \emph{small} ($v=40$).
-\item The automorphism group is \emph{large} ($|Aut|=51840$): it
-compresses 480-bit raw permutations to 16 bits.
-\item The Spence enumeration is \emph{tight}: only 28 candidates
-($\log_2 28 < 5$ bits).
-\end{itemize}
-A smaller SRG with the same property does not exist: $\GQ(2,2)$ has
-$v=15$ but the rank of its automorphism group $\Sp(4,\FF_2) = 720$
-falls short of admitting a universal Clifford gate set. $\GQ(4,4)$
-($q=4$) is too large to give $K\le 2E$ self-simulation. The choice
-$q=3$ is exactly the lowest prime for which both the size and the
-symmetry budget land below the Bekenstein bound. (See Supp.~F for
-the formal $\Omega$-uniqueness proof.)
-
-\section*{The Self-Simulation Identity}
-
-\[
-\boxed{\;K(W_{3,3}) + K(\Aut) + K(\text{universe label}) + K(\text{header})
-\;\le\; 2E \;=\; 480 \text{ bits}.\;}
-\]
-The 40-vertex graph contains its own complete description in less
-information than its native Bekenstein capacity. This is the precise
-sense in which $W_{3,3}$ is \emph{self-simulating}.
-
-\section*{Implications}
-
-If the universe is implemented on a $W_{3,3}$ substrate, then:
-\begin{enumerate}[leftmargin=2em]
-\item The complete laws of physics fit in 30 bytes (the adjacency).
-\item The complete symmetry group fits in 2 bytes (the Spence + Aut spec).
-\item The total ``firmware'' is under 36 bytes.
-\item There is significant headroom for the dynamics overhead, the
-holographic boundary mapping, and the observer-frame computations.
-\end{enumerate}
-
-This is a precise, falsifiable, integer-counted version of the
-``it from bit'' principle (Wheeler) at the QGR-aligned $W_{3,3}$
-substrate.
+The graph has a concise, reproducible algebraic construction from the
+symplectic form on $\mathbb F_3^4$, and the repository provides an
+executable construction and exact checks.  That is a genuine finite
+description theorem.  A self-simulation result would additionally need
+a named universal machine, an encoding of its states and transition
+rule into the graph, and a simulation theorem.  No ``complete laws in
+30 bytes'', ``firmware under 36 bytes'', Bekenstein headroom, or
+decoder-independent Standard-Model compression is claimed.
 
 \hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
 
@@ -7032,11 +7028,11 @@ structure constant 137 (Supp.~E G2), the Hubble fixed point 70
 spin-network (Supp.~O), the QGR emergence pathway $W_{3,3}\to E_8\to H_4$
 (Supps.\ J--M, K), the Monster moonshine bridge (Supp.~I), the Graph
 Riemann Hypothesis (Supp.~G), the constructive 40$\times$40 adjacency
-matrix (Supp.~H), the self-simulating universe theorem (Supp.~U), and
-the cosmic neutrino background ratio 4/11 (Supp.~Q) — all of these
-are corollaries of the master equation.
-
-This is the sense in which the W(3,3) programme is closed.
+matrix (Supp.~H), the finite-description audit (Supp.~U), and
+the cosmic neutrino background ratio 4/11 (Supp.~Q) are all catalogued
+in the paper.  Their evidential status varies: the master equation
+supplies recurring finite integers, but does not make every physical
+dictionary a mathematical corollary.
 
 \section*{The Cleanest Possible Statement}
 
@@ -7158,71 +7154,38 @@ departure.
 \part*{Supplement Z --- The Closure Theorem}
 \addcontentsline{toc}{part}{Supplement Z --- The Closure Theorem}
 
-\section*{The Final Equivalence}
+\section*{The Proved Closure and Its Boundary}
 
-We now state the program's formal closure theorem: a single circle
-of equivalences over the positive primes $q$, all collapsing to
-$q=3$.
-
-\begin{theorem}[Closure Theorem]\label{thm:closure}
-For a positive prime $q$, the following seven statements are
-equivalent:
-\begin{enumerate}[label=(\arabic*),leftmargin=2.6em]
-\item \textbf{Master equation.} $q^q = q^3.$
-\item \textbf{SRG existence.} There exists $v$ with $v=(q+1)(q^2+1)$
-and $v-q(q+1)-1 = q^q$ — the strongly regular graph $\GQ(q,q)$ exists
-with the $E_6$ rep dimension as its complement degree.
-\item \textbf{Clifford symmetry.} $\Sp(4,\FF_q)$ has the right order
-to act as the two-qutrit Clifford group on $\FF_q^4$.
-\item \textbf{Multiverse closure.} The Spence enumeration produces
-exactly $q^q+1$ non-isomorphic SRGs of the type, with one symplectic
-representative.
-\item \textbf{Parameter closure.} The 19 free parameters of the
-Standard Model all reduce to closed-form rationals in
-$(v,k,\lambda,\mu) = (q^q+q+\lambda+1, q(q+1), q-1, q+1)$.
-\item \textbf{Self-simulation closure.}
-$K(\text{adjacency}) + K(\Aut) + K(\text{index}) + K(\text{header}) \le 2vk/2 = 2E.$
-\item $q = 3.$
-\end{enumerate}
+\begin{theorem}[Arithmetic closure]\label{thm:closure}
+For a positive prime $q$,
+\[
+ q^q=q^3\quad\Longleftrightarrow\quad q=3.
+\]
+At this value the symplectic quadrangle $W(3,3)$ exists with parameters
+$\operatorname{SRG}(40,12,2,4)$, and its linear symplectic group has
+order
+\[
+ |\Sp(4,3)|=3^4(3^4-1)(3^2-1)=51840.
+\]
 \end{theorem}
 
-\begin{proof}[Proof sketch]
-$(7)\Rightarrow$ all others is the verification at $q=3$ of every
-preceding Supplement.
-$(1)\Leftrightarrow(7)$ is the analytic argument of Supp.~X
-($q^q=q^3$ has unique prime solution $q=3$).
-$(1)\Rightarrow(2)$ is the sum-of-cubes algebra of Supp.~X.
-$(1)\Rightarrow(3)$ requires
-$|\Sp(4,\FF_q)| = q^4(q^4-1)(q^2-1) = q^4(q-1)(q+1)(q^2+1)(q^2+q+1)(q^2-q+1)$,
-which equals $51840$ exactly at $q=3$ — the correct order for the
-two-qutrit Clifford group.
-$(1)\Rightarrow(4)$ is the count $1 + q^q = 28$ (Spence; Supp.~S).
-$(1)\Rightarrow(5)$ is the catalogue of Supp.~T (each parameter is a
-polynomial in the $W_{3,3}$ constants).
-$(1)\Rightarrow(6)$ follows from $E = q(q+1)^2(q^2+1)/2$ and the bit
-budget of Supp.~U.
-The reverse implications all force $q=3$ via the integrality of the
-defining equations. \qedhere
+\begin{proof}
+Since $q>1$, division by $q^3$ gives $q^{q-3}=1$, hence $q=3$.
+The graph parameters and group order follow from the standard
+symplectic-quadrangle formulas.
 \end{proof}
 
-\section*{The Seven-Way Equivalence at a Glance}
-
-\begin{center}
-\renewcommand{\arraystretch}{1.3}
-\begin{tabular}{cl}
-\toprule
-\# & Equivalent statement \\
-\midrule
-(1) & Master equation: $q^q = q^3$ \\
-(2) & SRG existence: $\GQ(q,q)$ has 27 = $q^q$ \\
-(3) & Clifford structure: $\Sp(4,\FF_q)$ = two-qutrit Clifford \\
-(4) & Multiverse: 28 = $q^q+1$ Spence variants \\
-(5) & SM closure: 19 parameters all in $(v,k,\lambda,\mu)$ \\
-(6) & Self-simulation: $K_{\rm total} \le 2E$ \\
-(7) & $q = 3$ \\
-\bottomrule
-\end{tabular}
-\end{center}
+\begin{remark}[Withdrawn seven-way equivalence]
+An earlier version called seven statements equivalent.  They are not.
+Generalized quadrangles $W(3,q)$ exist beyond $q=3$; the Spence count
+$28$ concerns only the parameter set $(40,12,2,4)$; the symplectic
+group is a finite Clifford label quotient rather than a universal gate
+set; a catalogue of rational identities is not a derivation of the
+Standard Model; and Supplement~U now shows that the asserted
+self-simulation/Bekenstein inequality was not established.  These may
+be studied as separate dictionaries or hypotheses, but they are not
+reverse implications of $q^q=q^3$.
+\end{remark}
 
 \section*{Reader's Map of the Paper}
 
@@ -7253,7 +7216,7 @@ defining equations. \qedhere
 \textbf{Supp.\ R} & Quark Mass Hierarchy: 5-step ratio chain \\
 \textbf{Supp.\ S} & 28 Parallel Universes (Spence) \\
 \textbf{Supp.\ T} & All 19 Standard Model Parameters \\
-\textbf{Supp.\ U} & Self-Simulating Universe Theorem \\
+\textbf{Supp.\ U} & Finite Description Audit \\
 \textbf{Supp.\ V} & Koide $Q = (q-1)/q = 2/3$ \\
 \textbf{Supp.\ W} & Supplementary Hubble hypothesis $H_0 = \Phi_6\Phi_4 = 70$ \\
 \textbf{Supp.\ X} & \textbf{Prime corollary surface $q^q = q^3$} \\
@@ -7802,11 +7765,11 @@ mathematical step.
                & \multicolumn{2}{@{}p{0.70\linewidth}@{}}{\quad\(\Big\downarrow\) physics dictionary} \\
 \textsc{PHYS}  & $\alpha^{-1}=137$, $\lambda_H=7/54$, $\sin^2\theta_W=3/13$, $n_s=29/30$, $H_0=70$, $Q_K=2/3$ & Supps.~B,T,V,W \\
                & \multicolumn{2}{@{}p{0.70\linewidth}@{}}{\quad\(\Big\downarrow\) finite enumeration} \\
-\textsc{MULTI} & $q^q+1=28$ variants in the Spence multiverse        & Supp.~S \\
-               & \multicolumn{2}{@{}p{0.70\linewidth}@{}}{\quad\(\Big\downarrow\) self-simulation budget} \\
-\textsc{COMPUTE}& $K_{\rm total} \le 2E = 480$ bits; firmware $\le 36$ bytes & Supp.~U \\
-               & \multicolumn{2}{@{}p{0.70\linewidth}@{}}{\quad\(\Big\downarrow\) the universe is the graph} \\
-\textsc{END}   & $W_{3,3}$ is the universe; the W$_{3,3}$-E$_8$ programme is closed. & --- \\
+\textsc{MULTI} & $q^q+1=28$ variants in the Spence enumeration        & Supp.~S \\
+               & \multicolumn{2}{@{}p{0.70\linewidth}@{}}{\quad\(\Big\downarrow\) exact encoding audit} \\
+\textsc{COMPUTE}& labelled upper triangle $=780$ bits; shorter algebraic programs require a decoder & Supp.~U \\
+               & \multicolumn{2}{@{}p{0.70\linewidth}@{}}{\quad\(\Big\downarrow\) evidence boundary} \\
+\textsc{END}   & exact finite carrier and witnesses; physical identification remains a hypothesis & --- \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -7823,25 +7786,21 @@ has eigenvalues $\{12, +2, -4\}$ with multiplicities $\{1, 24, 15\}$,
 and these multiplicities are simultaneously the dimension of $\SU(5)$
 adjoint, the dimension of $\SU(4)$ R-symmetry, and the size of the
 Bose-Mesner block of the natural permutation representation.
-Every closed-form Standard Model parameter, every cosmological
-fixed point, every Clay Millennium-problem surface, every emergent
-$E_8 \to H_4$ pathway, every Monster-moonshine integer, every
-member of the discrete-twistor space, every face of $27$, every
-face of $24$, and every layer of the universal hierarchy, follows
-from the single Diophantine seed $q!=2q$. Supplement~X records the
-prime-only corollary $q^q=q^3$ as one derived shadow of the same
-selection. The total information content
-of the universe -- the adjacency matrix, the automorphism group, the
-Spence index, and the parameter header -- fits in 285 bits, well
-under the Bekenstein capacity of $2E = 480$ bits of the graph itself,
-making $W_{3,3}$ the smallest finite structure capable of self-
-simulation consistent with the Standard Model.
+The Diophantine seed $q!=2q$ selects $q=3$, after which the graph,
+its spectrum, and its finite symmetry package are exact.  The later
+Standard-Model, cosmological, moonshine, and $E_8/H_4$ entries range
+from certified finite bridges to proposed physical dictionaries; they
+do not all follow from the Diophantine equation alone.  Supplement~X
+records the prime-only corollary $q^q=q^3$, and Supplement~U records
+the corrected $780$-bit raw adjacency encoding.  No Bekenstein
+capacity or self-simulation theorem is inferred from the edge count.
 \end{quote}
 
 \section*{Closing Equation}
 
 \[
-\boxed{\;q!=2q \;\Longrightarrow\; q = 3 \;\Longrightarrow\; W_{3,3} \;\Longrightarrow\; \text{everything}.\;}
+\boxed{\;q!=2q \;\Longrightarrow\; q = 3
+\;\Longrightarrow\; W_{3,3}\text{ as an exact finite carrier}.\;}
 \]
 
 \section*{End}
@@ -7923,11 +7882,13 @@ dynamical lift.  The finite $q=3$ lock itself is now overdetermined.
 A first global branch model has now also been tested directly.  If one
 demands quadrangle-consistency, then a finite branch choice would have
 to be an exact cover of the $4320$ ordered nonlocal $2$-paths by
-$540$ nonlocal quadrangles, eight ordered paths per quadrangle. % {540:unrelated}
+$540$ nonlocal quadrangles, eight ordered paths per quadrangle.
+% {540:unrelated}
 The
 repository now searches that exact-cover problem explicitly and finds no
-solution.  So the missing finite selector is not a bare $540$-quadrangle % {540:unrelated}
+solution.  So the missing finite selector is not a bare $540$-quadrangle
 packet; it already requires genuine transport cocycle data.
+% {540:unrelated}
 
 \section*{Executable Certificate}
 
@@ -9343,9 +9304,9 @@ its eigenstructure inherits from the Bose-Mesner spectrum of $A$.
 \[
 \boxed{\;\dim\mathcal{H}_{\rm walk} \;=\; 2E \;=\; vk \;=\; 480.\;}
 \]
-Same as the Bekenstein bound (Supp.~U) $K_{\rm total}\le 2E$. The
-quantum-walk Hilbert space saturates the W$_{3,3}$ informational
-capacity exactly.
+This is the directed-edge carrier count.  Its numerical equality with
+$2E$ is tautological and supplies neither a Bekenstein bound nor an
+information-capacity saturation statement.
 
 \subsection*{$\upsilon$.2 \quad Walk eigenvalues}
 For each adjacency eigenvalue $\lambda_i\in\{12,2,-4\}$, the walk has a pair $e^{\pm i\theta_i}$ with $\cos\theta_i = \lambda_i/k$:
@@ -11441,6 +11402,62 @@ products
 and respective valencies $120,60,35$.  These three relations do not form
 a three-class association scheme.
 
+The integral edge frame has a sharper arithmetic fingerprint.  If $L_T$
+is the lattice generated by the columns of $T$ and
+$L_T^{\mathrm{sat}}=(L_T\otimes\mathbb Q)\cap\mathbb Z^{325}$, then
+\[
+ \operatorname{SNF}(T)
+   =1^{15},\,2^6,\,4^8,\,8^{29},\,40^{23}
+\]
+on its rank-$81$ image, and hence
+\[
+ L_T^{\mathrm{sat}}/L_T\cong
+ (\mathbb Z/2)^6\oplus(\mathbb Z/4)^8\oplus
+ (\mathbb Z/8)^{29}\oplus(\mathbb Z/40)^{23}.
+\]
+Its order is
+\[
+ [L_T^{\mathrm{sat}}:L_T]=2^{178}5^{23}
+ =4567192616659071619386515102238384436424789196800000000000000000000000.
+\]
+The modular ranks are $15$ in characteristic $2$, $58$ in
+characteristic $5$, and $81$ in characteristics $3,7,11$; thus the
+internal edge lattice has exactly the bad primes $\{2,5\}$.  MeatAxe
+composition factors identify the selected modular images more precisely:
+the characteristic-$2$ image is $\mathbf1\oplus\mathbf{14}$, while the
+characteristic-$5$ image is an irreducible $\mathbf{58}$.
+
+The characteristic-$5$ result is a nonsplit module statement, not merely
+the dimension equation $81=58+23$.  Put
+\[
+ S_5=L_T^{\mathrm{sat}}/5L_T^{\mathrm{sat}},\qquad
+ Q_T=(L_T^{\mathrm{sat}}/L_T)_{(5)},\qquad
+ K_5=K(W_{3,3})_{(5)}.
+\]
+The older spanning-tree calculation already owns
+$\tau(W_{3,3})=2^{81}5^{23}$, the critical-group factor
+$K_5\cong(\mathbb Z/5)^{23}$, and the bare arithmetic $81-23=58$.
+The additional object-level statement is
+\[
+ Q_T\otimes\operatorname{sgn}\cong K_5
+\]
+as $\mathbb F_5W(E_6)$-modules, uniquely up to a nonzero scalar, and
+\[
+ \boxed{0\longrightarrow I_{58}\longrightarrow S_5
+ \longrightarrow K_5\otimes\operatorname{sgn}\longrightarrow0.}
+\]
+Here $I_{58}$ is the irreducible edge image.  The complete submodule
+dimension profile of $S_5$ is $0,58,81$, both for $W(E_6)$ and after
+restriction to $PSp(4,3)$, and
+\[
+ \operatorname{Hom}_{W(E_6)}
+   (K_5\otimes\operatorname{sgn},S_5)=0.
+\]
+Thus the sequence is nonsplit over both groups: the saturated reduction
+is not $\mathbf{58}\oplus\mathbf{23}$.  This proves that the displayed
+extension class is nonzero; it does not compute the dimension of the
+full $\operatorname{Ext}^1$ space.
+
 The $A_2$ Coxeter element centralizes $W(E_6)$ and transports the transform
 through the three colors.  Consequently their rank-$243$ image is
 \[
@@ -11455,6 +11472,15 @@ as
 \]
 The torsor is intrinsic relative to the fixed $A_2$; ordering these three
 summands chooses an origin color and a Coxeter generator.
+Integrally, the color change-of-basis has Smith diagonal $(1,1,3)$.
+Tensoring it with the rank-$81$ frame gives index
+\[
+ 3^{81}=443426488243037769948249630619149892803
+\]
+for the integral trivial-plus-augmentation color coordinates.  This
+$3$-primary color obstruction is separate from the $\{2,5\}$-primary
+non-saturation of the edge frame.  Their combined integral support is
+$\{2,3,5\}$, but the roles of the three primes are not interchangeable.
 
 Extending the three transforms by zero and adjoining them to the cubic
 map gives the explicit integer map
@@ -11489,6 +11515,71 @@ and names no such map.  Likewise, the exact $C_3$ Fourier grading alone
 does not identify physical generations, masses, or Yukawa couplings.
 The GAP witness is
 \texttt{analysis/w33\_pass1147\_schlaefli\_steinberg\_fourier\_bridge.g}.
+
+\begin{theorem}[Triality, integral transport, and nonselection
+  (Passes 1325--1329)]
+\label{thm:triality-integral-nonselection}
+Let $X$ be one $432$-dimensional $W(E_6)/S_5$ carrier,
+$H_{26}=\operatorname{End}_{W(E_6)}(X)$, and let
+$X^{(3)}=X\otimes\mathbb C^3_{\rm perm}$ carry the commuting color
+triality.  Successively imposing no color symmetry, the cyclic color
+shift, and full $S_3$ triality gives the exact commutant hierarchy
+\[
+\begin{array}{ccl}
+\operatorname{End}_{W(E_6)}(X^{(3)})
+ &\cong&H_{26}\otimes M_3(\mathbb C),\qquad \dim=234,\\
+\operatorname{End}_{W(E_6)\times C_3}(X^{(3)})
+ &\cong&H_{26}\otimes\mathbb C[C_3],\qquad \dim=78,\\
+\operatorname{End}_{W(E_6)\times S_3}(X^{(3)})
+ &\cong&H_{26}\oplus H_{26},\qquad \dim=52.
+\end{array}
+\]
+Thus $234\to78\to52$ records two different symmetry constraints, not
+three competing decompositions.
+
+For the six $X$--to--$480$ orbital channels, the primitive coefficient
+matrix has
+\[
+ \operatorname{SNF}=\operatorname{diag}(1,1,1,12,12,24),
+\]
+so this transport lattice has bad primes $\{2,3\}$.  The larger primitive
+lattice of all $26$ Hecke matrix units has bad primes
+$\{2,3,5\}$.  This second set is again a different object from both the
+$\{2,5\}$ internal edge-frame obstruction and the color index $3^{81}$
+in Theorem~\ref{thm:schlaefli-steinberg-fourier-bridge}.
+
+On the threefold species-$20$ multiplicity space, the orthogonal
+idempotent normalizer is
+\[
+ C_2^3\rtimes S_3=W(B_3),\qquad |W(B_3)|=48,
+\]
+with orientation-preserving subgroup $W(B_3)^+\cong S_4$ of order $24$.
+This normalizer is not the independent three-row gauge
+\[
+ S_3\wr S_3=S_3^3\rtimes S_3,\qquad |S_3\wr S_3|=1296.
+\]
+Moreover, on the aligned species-$20$ transport block,
+\[
+ B^7=-I_3,\qquad B^8=+I_3.
+\]
+Every $W(E_6)$-averaged primitive-cycle operator is scalar on the
+multiplicity-one species-$20$ copy of the directed-edge carrier, so no
+such length-$7$ or length-$8$ operator canonically selects one of the
+three $432$-side copies.
+
+Finally, the three $432$ carriers form the transitive $S_3$-set
+$S_3/S_2$, not a regular $S_3$ torsor.  Its orientation-preserving
+$C_3$ subgroup acts freely and transitively.  The genuine regular
+$S_3$ torsor is instead the six signed $27$-carrier refinement.  These
+statements fix the scope of ``triality'', ``color torsor'', and
+``sixfold torsor'' without assigning any of them a physical gauge role.
+\end{theorem}
+
+\noindent
+The exact matrices and independent reconstruction are recorded in
+\texttt{analysis/BT1325\_BT1329\_triality\_integral\_gauge.md},
+\texttt{analysis/w33\_pass1329\_independent\_checker.py}, and the
+corresponding GAP certificate.
 
 \begin{theorem}[The two 480s]
 \label{thm:two-480s}
@@ -13349,7 +13440,8 @@ algebra (\texttt{analysis/w33\_pass224\_shadow\_code\_tower.py},
   Hence a CSS code $\mathrm{CSS}(C^{\perp},C^{\perp})$ exists for the entire
   family---$q=3$ is not special.
 \item \textbf{The logical count is $q^2+1$, not $q^2-1$.} The CSS register has
-  $k=n-2\dim C^{\perp}=q^2+1$ logical qubits: the \emph{ovoid/spread number} of
+  $k=n-2\dim C^{\perp}=q^2+1$ logical qubits: the polar parameter that is
+  the spread size at $q=3$, exceeding
   $W(3,q)$, exceeding the central quadratic-shadow layer $q^2-1$ of the odd-$q$
   ladder (Pass 202) by exactly two. The shadow orthogonal group is therefore
   $\mathrm{SO}(q^2+1,2)$, and $q=3$ realises the physical $\mathrm{SO}(10)$;
@@ -13364,7 +13456,8 @@ respectively (certified by explicit random codewords; both $\equiv 0 \bmod 4$).
 This is a statement about stabiliser-code \emph{parameters} only; no
 subsystem/gauge distance-boost is claimed (that $q=3$ framing was withdrawn in
 Pass 206). The tower reading is that the substrate's quantum register is a
-family invariant of the symplectic quadrangle keyed to its ovoid number, with
+family invariant of the symplectic quadrangle keyed to the polar parameter
+$q^2+1$ (the spread number at $q=3$), with
 the standard-model $\mathrm{SO}(10)$ sitting at the smallest odd rung.
 
 
@@ -13451,21 +13544,20 @@ previously printed $[[156,26,6]]$ and $[[400,50,8]]$ distances were upper bounds
 not proved equalities.
 
 
-\section{Deep Dive: magic is mass, three generations, the even-$q$ sister, the modular lattice, and the photonic device (Passes 230--234)}
+\section{Deep Dive: cubic carrier, three generations, the even-$q$ sister, the modular lattice, and the photonic proposal (Passes 230--234)}
 
 Five witnesses drive the shadow tower into physics and hardware.
 
-\paragraph{Pass 230 --- magic is mass.} The E$_6$ cubic that supplies the
-register's non-Clifford magic (Pass 227) decomposes under $\mathrm{SO}(10)\times
+\paragraph{Pass 230 --- cubic/Yukawa overlap.} The E$_6$ cubic decomposes under $\mathrm{SO}(10)\times
 \mathrm U(1)$, where $\mathbf{27}=\mathbf{16}_{+1}+\mathbf{10}_{-2}+\mathbf1_{+4}$,
 into exactly the charge-zero cubics: $\mathbf1\cdot\mathbf{10}\cdot\mathbf{10}$
 and $\mathbf{16}\cdot\mathbf{16}\cdot\mathbf{10}$. The first is the vector mass
-term (level-2, Clifford); the second is the grand-unified Yukawa coupling
-(level-3 of the Clifford hierarchy, magic). We build the explicit Freudenthal
+term and the second is the grand-unified Yukawa tensor. We build the explicit Freudenthal
 cubic $\det J_3(\mathbb O)=abc-aN(X)-bN(Y)-cN(Z)+2\,\mathrm{Re}\,X(YZ)$ over a
 Cayley--Dickson octonion algebra (composition norm verified) as its carrier.
-\emph{The resource that makes the substrate a universal quantum computer is the
-coupling that gives the fermions their mass: magic $=$ mass.}
+This exact polynomial overlap does not construct a physical cubic-phase
+gate or identify a Yukawa coupling with a prepared magic state; ``magic
+$=$ mass'' is therefore a proposed interface, not a theorem.
 
 \paragraph{Pass 231 --- three generations.} The same E$_8$ that centres the
 odd-$q$ ladder branches as $E_8\to E_6\times\mathrm{SU}(3)$ with
@@ -13492,15 +13584,15 @@ weight-$20$ modular form for $\Gamma_0(4)$. The $80$ roots are precisely the
 ``$80$'' of the Pass 168 context theta $1+80t^2+\cdots$: code, dual, lattice and
 modular form are one object.
 
-\paragraph{Pass 234 --- the photonic device.} The $[[40,10,4]]$ register is
-specified as buildable hardware: $40$ OAM/GKP modes, $30$ multi-mode parity
+\paragraph{Pass 234 --- the photonic proposal.} The $[[40,10,4]]$ register has
+the finite specification: $40$ modes, $30$ parity
 checks (weight $8$ after reduction), $10$ logical qubits, distance $4$ carried by
-the weight-$4$ isotropic lines; the $25920$ $\mathrm{PGSp}(4,3)$ automorphisms
-are a passive mode-permutation interferometer realising the full logical Clifford
-group $\mathrm O^+(10,2)$, and a single cubic-phase nonlinearity---the
-$\mathbf{16}\cdot\mathbf{16}\cdot\mathbf{10}$ Yukawa of Pass 230---supplies magic.
-Every CSS condition is verified exactly: a fault-tolerant photonic register whose
-gauge content is the Standard Model.
+the weight-$4$ isotropic lines.  The $\PSp(4,3)$ subgroup has order
+$25920$ and acts by coordinate permutations; Pass~211 identifies its
+finite logical symplectic lift.  A passive interferometer realizing all
+those permutations, a fault-tolerance analysis, and a physical
+cubic-phase/Yukawa implementation remain engineering tasks.  The exact
+CSS conditions do not establish Standard-Model gauge content.
 
 
 \section{Relentless Deep Dive: Yukawa texture, family mixing, magic distillation, the rank law, and qLDPC bounds (Passes 235--239)}
@@ -13522,8 +13614,9 @@ lies on the conservation curve), with $k\sim n^{2/3}$ logicals and $d\sim
 n^{1/3}$ distance (verified least-squares exponents $0.667,0.333$). It obeys the
 quantum Singleton bound with slack, requires embedding dimension $D\ge3$ by the
 Bravyi--Poulin--Terhal locality bound, and is \emph{not} asymptotically good --
-its value is the transversal Clifford $+$ cubic-magic gate set, not the raw
-parameters.
+its proposed value is the finite automorphism action plus a candidate
+cubic-magic interface; no universal or fault-tolerant gate set is
+deduced from the parameters.
 
 \paragraph{Pass 235 --- Yukawa texture.} $\mathbf{16}\otimes\mathbf{16}=
 \mathbf{10}_s+\mathbf{120}_a+\mathbf{126}_s$ makes the $\mathbf{10}$-channel

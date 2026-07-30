@@ -1,103 +1,123 @@
-# W(3,3)
+# W(3,3): an executable atlas of finite geometry
 
-## One finite geometry, 40 points, and an unreasonable number of things that turned out to be the same object
-
+[![Live Atlas](https://img.shields.io/badge/live-atlas-2563eb)](https://wilcompute.github.io/W33-Theory/)
+![GAP and JSON](https://img.shields.io/badge/witnesses-GAP%20%2B%20JSON-0f766e)
+![Evidence tiered](https://img.shields.io/badge/claims-evidence--tiered-7c3aed)
 [![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 
-> **One geometry. Thousands of witnesses. Every bridge has to name its map.**
+> **One finite geometry. Named maps. Reproducible certificates. Public corrections.**
 
----
+Start with the symplectic space `F_3^4`. Its totally isotropic points and lines
+form `W(3,3)`: 40 points, 40 lines, 240 incident point-pairs, and a distinguished
+collinearity graph `SRG(40,12,2,4)`. From that one object this repository builds
+exact homology, integral lattices, group representations, error-correcting codes,
+Schläfli/E₆ carriers, Hecke algebras, and executable transport systems.
 
-## What this actually is
+The strongest result is not a numerical coincidence. It is an object-level
+bridge: three 432-state carriers are explicitly identified with directed
+Schläfli edges, mapped equivariantly into an 81-dimensional constituent, and
+resolved integrally by exact Smith forms and modular representations.
 
-Take `V = F_3^4` with a nondegenerate alternating form. Its totally isotropic points and lines form the
-symplectic generalized quadrangle **W(3,3)**: 40 points, 40 lines, 4 points per line. That's the whole input.
-No free parameters, no tuning, nothing to fit.
+This repository **does not** prove a theory of everything or derive the Standard
+Model. Physics and hardware readings remain `CONDITIONAL` until they supply the
+missing encoding, dynamics, decoder, and continuum maps.
 
-What came out of it is this repository: **10,693 commits since 2026-01-16**, 19,767 tracked files, 2,925
-machine-checked JSON certificates, 3,021 tests, 94 GAP witnesses, and 49 Lean files, whose build status is
-**not what an earlier version of this README claimed** — see [Lean build status](#lean-build-status-read-this-before-trusting-any-proved-tier). The finite mathematics is
-exact. The physics program is ambitious and, in places, **wrong** — and this README will tell you exactly
-where, because the retractions are the most valuable thing here.
+## Choose your route
 
-**What this repository does establish:** a deep, unusually interconnected finite structure, worked out to a
-level of detail that keeps producing genuine theorems.
+| Reader | Start here | Then go deeper |
+|---|---|---|
+| General reader | [Live atlas](https://wilcompute.github.io/W33-Theory/) · [W33 for Everyone](W33_FOR_EVERYONE.tex) | [Practical implications](docs/pdf/holonet_practical_implications.pdf) |
+| Mathematician / researcher | [Master paper](docs/pdf/w33_paper.pdf) · [source](w33_paper.tex) | [Result index](RESULTS_INDEX.md) · [canonical vocabulary](RESULTS_VOCABULARY.md) |
+| Reproducer / reviewer | [Reproduction commands](#reproduce-the-flagship-results) | [certificates](data/) · [tests](tests/) · [correction ledger](#things-we-got-wrong-on-purpose-and-in-public) |
+| Lattice / deformation researcher | [Determinant-law paper](docs/pdf/heisenberg_weyl_determinant_law.pdf) | [eigenlattice table](#eigenlattices-gluing-and-the-e₈-boundary--the-2026-07-arc) |
+| Photonic / systems reader | [Photonic Holonet](docs/pdf/photonic_holonet.pdf) · [source](photonic_holonet.tex) | [`HOLONET.md`](HOLONET.md); treat implementation claims as conditional |
 
-**What it does not establish:** a complete theory of everything, or a parameter-free derivation of the
-Standard Model. Several attempts at the latter are documented below under "Things we got wrong," which is a
-section most physics repositories do not have and arguably should.
+The corpus is too large to navigate by filenames. Search the **result itself**
+in [`RESULTS_INDEX.md`](RESULTS_INDEX.md) before re-deriving it.
 
----
+## Evidence tiers
 
-## The 60-second version
-
-`W(3,3)`'s collinearity graph is a distinguished `SRG(40,12,2,4)` selected by its
-symplectic polar-space construction; there are 28 non-isomorphic graphs with
-those parameters. It has 240 edges. `E_8` has 240 roots. Its automorphism group has order 51,840. The Weyl group
-`W(E_6)` has order 51,840. Its clique complex has `H_1 = Z^81`. There are 81 sections at `q=3`.
-
-Any one of those is a coincidence. All of them, plus the fact that the same graph is the commutation geometry
-of the 40 non-identity two-qutrit Pauli classes, is a research program.
-
-The program's discipline: **every promoted claim names a witness, a certificate, and a test.** When a claim
-fails, it gets a retraction pass, not a quiet edit.
-
----
-
-## Start here
-
-| If you want to… | Open this |
+| Tier | What it means |
 |---|---|
-| see the whole atlas, interactively | [Live atlas](https://wilcompute.github.io/W33-Theory/) |
-| read the mathematics | **[w33_paper.pdf](docs/pdf/w33_paper.pdf)** (1.39 MiB, opens in browser) &middot; [source](w33_paper.tex) |
-| read the deformation/lattice track | **[heisenberg_weyl_determinant_law.pdf](docs/pdf/heisenberg_weyl_determinant_law.pdf)** (240 KB) &middot; [source](papers/heisenberg_weyl_determinant_law.tex) |
-| read the photonic machine | **[photonic_holonet.pdf](docs/pdf/photonic_holonet.pdf)** (954 KB, opens in browser) &middot; [source](photonic_holonet.tex) &middot; [`HOLONET.md`](HOLONET.md) |
-| read what the machine would mean in practice | **[holonet_practical_implications.pdf](docs/pdf/holonet_practical_implications.pdf)** (215 KB, opens in browser) &middot; [source](holonet_practical_implications.tex) |
-| **find a result before re-deriving it** | [`RESULTS_INDEX.md`](RESULTS_INDEX.md) — *do this first* |
+| `PROVED` | A mathematical proof or named formal theorem. If Lean-owned, build the specific module; do not infer a green library from a file's existence. |
+| `CERTIFIED` | Exact computation with a deterministic witness, certificate, and focused test. |
+| `CONDITIONAL` | The finite mathematics is sound; an interpretation or implementation map is still missing. |
+| `OPEN` | A precise question with no completed witness. |
+| `RETRACTED` | Previously promoted, then refuted; retained with the failure certificate. |
 
-The atlas is deliberately too large to read linearly. Navigate by question, then follow each claim to its
-witness.
+## Canonical objects: names that must not be conflated
 
----
+| Name | Canonical meaning |
+|---|---|
+| `Γ = W33` | The graph obtained from symplectic orthogonality on `PG(3,3)`, not an arbitrary `SRG(40,12,2,4)`; 28 graphs share the parameters. |
+| `G₀` | `PSp(4,3)`, order `25,920`, the inner projective symmetry. |
+| `G = Aut(Γ)` | `PGSp(4,3) ≅ W(E6)`, order `51,840`. The same-order group `Sp(4,3)` is a central double cover, not this faithful projective action. |
+| `H₁(Γ)` | `Z^81`, the first homology of the clique complex. |
+| `Y₄₈₀` | The 480 directed edges of `W33`, carrying the signed-turn operator `K`. |
+| `X₄₃₂` | `W(E6)/S5`, equivalently the directed edges of the Schläfli graph. |
+| `81₋` | The Pass-1147 constituent in `Λ²(Aug(Q^27))`; it is not silently identified with `H₁(Γ)`. |
+| `H₂₆` | `End_G(X₄₃₂)`, the literal 26-dimensional coset Hecke algebra. |
 
-## The exact kernel
+For aliases, superseded names, and pass ownership, use
+[`RESULTS_VOCABULARY.md`](RESULTS_VOCABULARY.md),
+[`data/ALIAS_REGISTRY.json`](data/ALIAS_REGISTRY.json), and
+[`data/w33_pass_namespace_registry_v2.json`](data/w33_pass_namespace_registry_v2.json).
 
-| Invariant | Exact value |
-|---|---:|
-| points / lines | `40 / 40` |
-| points per line / lines per point | `4 / 4` |
-| strongly regular parameters | `SRG(40, 12, 2, 4)` |
-| adjacency spectrum | `12^1, 2^24, (−4)^15` |
-| edges | `240` |
-| full graph-symmetry order | `51,840` |
-| derived projective symmetry | `PSp(4,3)`, order `25,920` |
-| clique-complex first homology | `H_1 ≅ Z^81` |
-| integral Smith form of `A` | `diag(1^16, 2^8, 8^15, 24^1)` |
-| signed-turn operator `K` spectrum | `(−6)^81, 2^120, 4^24, 10^15` |
+## Certified finite backbone
 
-The four SRG parameters do not identify the graph: there are 28 isomorphism
-classes.  What removes the ambiguity here is the explicit construction from
-symplectic orthogonality on `PG(3,3)`, not a uniqueness claim.
+```mermaid
+flowchart TD
+    V["(F₃⁴, alternating form)"] --> W["W(3,3): 40 points, 240 edges"]
+    W --> C["clique complex: H₁ ≅ Z⁸¹"]
+    W --> A["adjacency and signed-turn lattices"]
+    A --> L["Smith forms and prime-by-prime gluing"]
+    W --> Y["Y₄₈₀ directed-edge carrier"]
+    S["Schläfli graph on 27 lines"] --> X["X₄₃₂ = W(E₆)/S₅"]
+    X --> T["rank-81 odd transform; 216 tight-frame lines"]
+    T --> I["integral bad primes {2,5}"]
+    X --> H["H₂₆ and three-carrier triality"]
+    H --> J["234 → 78 → 52; Hecke bad primes {2,3,5}"]
+```
 
-### Latest exact bridge: the dark 432s have names
+| Mathematical object | Strongest current result | Tier | Canonical entry |
+|---|---|---|---|
+| Symplectic quadrangle | `SRG(40,12,2,4)`, spectrum `12^1,2^24,(−4)^15`, `Aut ≅ W(E6)` | `PROVED` | [master paper](w33_paper.tex) |
+| Clique complex | `H₁ ≅ Z^81`; qutrit CSS sector `[[240,81,3]]₃` with `(d_X,d_Z)=(3,4)` | `CERTIFIED` | [Passes 373–374](PASS373_374_W33_BOUNDARY_MLUT_PHASE_SHEET_SYNTHESIS.md) |
+| Integral adjacency | `SNF(A)=diag(1^16,2^8,8^15,24)`; saturated gluing `(Z/2)^6⊕(Z/6)^9⊕Z/120` | `CERTIFIED` | [`pass827`](analysis/w33_pass827_adjacency_kbranch_meets_e8_boundary.py) |
+| Ramified gluing | Kernel growth `40,80,119,158,182` reconstructs `Z/8⊕(Z/2)^15` at `p=2` | `CERTIFIED` | [Pass 1002 release](analysis/BT999_1003_five_frontier_release.md) |
+| Signed directed edges | `spec(K)=(−6)^81,2^120,4^24,10^15`; exact four-branch gluing | `CERTIFIED` | [`pass826`](analysis/w33_pass826_k_operator_four_branch_gluing.py) |
+| Schläfli/E₆ carrier | `X₄₃₂` maps with rank 81 to 216 antipodal tight-frame lines; three colours weld to rank 288 with residual 1952 | `CERTIFIED` | [Pass 1147](PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md) |
+| Integral Schläfli frame | Smith profile `1^15,2^6,4^8,8^29,40^23`; internal bad primes `{2,5}`; colour split index `3^81` | `CERTIFIED` | [Pass 1147](PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md) |
+| Saturated frame mod 5 | Nonsplit `0→I₅₈→S₅→K(W33)₍₅₎⊗sgn→0` over both `W(E6)` and `PSp(4,3)`; submodule dimensions only `0,58,81` | `CERTIFIED` | [Pass 1147](PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md) |
+| Three-carrier Hecke/triality | Commutants `234 → 78 → 52`; six-channel SNF `1,1,1,12,12,24`; Hecke bad primes `{2,3,5}`; invariant cycles do not select a copy | `CERTIFIED` | [Passes 1325–1329](PASS1325_1329_TRIALITY_INTEGRAL_GAUGE_RELEASE.md) |
+| Binary quadratic-residue code | Corrected code `[[137,1,21]]`; exact affine/real-Clifford towers and explicit parity boundaries | `CERTIFIED` | [Passes 358–367](PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md) |
+| Section trace tower | For every `m≥2`, `min_c v_λ(tr(D_c^m)) = 2(m+[m odd])` at `q=3` | `CERTIFIED` | [Pass 541](PASS541_Q3_ALL_M_RECURRENCE_THEOREM.md) |
 
-The `2240 → 45` E₈ cubic-incidence map kills three orbits of size 432. They
-are now identified object by object: each is one A₂ color copy of the
-`27 × 16 = 432` directed edges of the Schläfli graph
-`SRG(27,16,10,8)`.
+### The flagship bridge, in one paragraph
 
-An explicit GAP transform sends an oriented edge `i→j` to the
-`81_minus` constituent of `Λ²(Aug(Q^27))`. It is odd under edge reversal,
-has rank 81, and its 432 integer outputs form 216 antipodal projective lines
-with tight-frame identity `G² = 3200G` and angles `0, 1/15, 1/5`.
-The three A₂ colors contribute rank `3×81 = 243`; adjoining the disjoint
-rank-45 cubic block gives a literal `1020×2240` integer map of rank 288 and
-kernel dimension 1952.
+Each of the three 432-state A₂ colours is the directed-edge set of
+`SRG(27,16,10,8)`. GAP constructs the explicit odd transform into `81₋`;
+its 432 vectors form 216 antipodal lines with `G²=3200G` and angles
+`0,1/15,1/5`. One colour has Smith profile
+`1^15,2^6,4^8,8^29,40^23`; the three-colour Fourier split adds index
+`3^81`. Modulo 5, the saturated 81-space is not `58⊕23`: it is the nonsplit
+length-two module
+`0→I₅₈→S₅→K(W33)₍₅₎⊗sgn→0`, with a unique proper nonzero submodule.
+This is an exact theorem about named `W(E6)` modules and integral lattices. It
+does not identify generations, Yukawa couplings, particles, or optical modes.
 
-That closes a real gap in the finite theory. It does **not** turn the exact
-three-color Fourier grading into a derivation of particle generations or
-Yukawa couplings. See
-[Pass 1147](PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md).
+## Find the canonical result, not the newest filename
+
+1. Search a formula, integer sequence, or code parameter in
+   [`RESULTS_INDEX.md`](RESULTS_INDEX.md).
+2. Resolve aliases and retractions in
+   [`RESULTS_VOCABULARY.md`](RESULTS_VOCABULARY.md) and
+   [`data/ALIAS_REGISTRY.json`](data/ALIAS_REGISTRY.json).
+3. Open the owning synthesis, then the executable witness and JSON certificate.
+4. Run the focused test. A later pass that repeats the number is not a new owner.
+
+Every promoted bridge should name its source object, target object, and map.
+Matching dimensions or group orders are evidence to investigate, not maps.
 
 ---
 
@@ -350,17 +370,12 @@ self-checked, because novelty is a property of the corpus, not of the claim. It 
 
 ---
 
-## Evidence tiers
+## Certificate contract
 
-| Tier | Means |
-|---|---|
-| `PROVED` | Machine-checked (Lean/GAP) or proved in the manuscript. **For Lean, verify the specific module builds — see [Lean build status](#lean-build-status-read-this-before-trusting-any-proved-tier); most do not.** |
-| `CERTIFIED` | Exact computation with an idempotent JSON certificate under `data/` |
-| `CONDITIONAL` | Sound mathematics, physical interpretation not established |
-| `OPEN` | Stated precisely, not settled |
-| `RETRACTED` | Was promoted, then refuted — kept visible on purpose |
-
-A certificate is idempotent: rerun it with `--check` and it must reproduce byte-identically, or it fails.
+The [evidence tiers](#evidence-tiers) apply repository-wide. A certificate is
+idempotent: rerun its producer with `--check` and it must reproduce
+byte-identically, or it fails. `CERTIFIED` describes the named finite
+computation only; it never upgrades an attached physical interpretation.
 
 ---
 
@@ -368,6 +383,15 @@ A certificate is idempotent: rerun it with `--check` and it must reproduce byte-
 
 **A whole-repository `lake build` in `formal/` does not currently complete on the machine it was
 measured on. There is no Lean badge in this README because nothing green has been demonstrated.**
+
+Verify a Lean-owned claim by building its named module alone:
+
+```bash
+cd formal && lake build W33.<TheModule>
+```
+
+<details>
+<summary>Open the historical build autopsy and repaired-module ledger</summary>
 
 **An earlier version of this section said "20 modules with real compile errors", then "19". Both
 were wrong by roughly a factor of three.** The correction is recorded here rather than quietly
@@ -445,15 +469,31 @@ cd formal && lake build W33.<TheModule>     # exit 0 means that module really is
 Modules verified to build at that measurement: `Pass806TwoBranchGluing`, `Pass1006RamifiedFiltration`,
 `Pass1018PencilRigidity`, and the 18 other imported modules not on the broken list above.
 
+</details>
+
 ---
 
-## Reproduce it
+## Reproduce the flagship results
+
+Commands below use the Windows launcher; replace `py -3` with `python3` on
+Unix-like systems.
 
 ```bash
-# any certificate, verified idempotent
+# Schläfli–Steinberg object map, integral frame, and focused contract
+gap -q analysis/w33_pass1147_schlaefli_steinberg_fourier_bridge.g
+py -3 -m pytest -q tests/test_pass1147_gap_schlaefli_steinberg_fourier_bridge.py
+
+# three-carrier triality, transport/Hecke Smith forms, independent reconstruction
+py -3 analysis/w33_pass1325_1329_triality_integral_gauge.py
+py -3 analysis/w33_pass1329_independent_checker.py
+py -3 -m pytest -q tests/test_w33_pass1325_1329.py
+
+# ramified p=2 reconstruction and coalescence theorem
+py -3 analysis/w33_pass1002_ramified_kernel_growth_gluing.py --check
 py -3 analysis/w33_pass828_coalescence_theorem.py --check
 
-# the guards (all advisory, never blocking — blocking trains --no-verify)
+# corpus and claim guards
+py -3 analysis/build_results_index.py
 py -3 scripts/next_free_pass.py --report      # claim a pass number safely
 py -3 scripts/check_rediscovery.py <files>    # is this result already ours?
 py -3 scripts/check_sigma_gate.py <files>     # percent vs experimental sigma
@@ -488,27 +528,37 @@ py -3 tools/bt1291_verify_release_packet.py   # verifies the whole packet
 
 | Path | Contents |
 |---|---|
-| `analysis/` | 4,178 pass witnesses (`w33_passNNN_*.py`, `*.g`) |
-| `data/` | 2,925 JSON certificates — gitignored, `git add -f` to commit |
-| `tests/` | 3,021 pytest files |
-| `scripts/` | 809 tools, including the guards |
-| `formal/` | Lean 4 + mathlib, 49 files — **whole-library `lake build` unreliable here; build modules individually** |
-| `papers/` | 55 manuscripts; main is `w33_paper.tex` at repo root |
-| `docs/` | 545 files; the live atlas is `docs/index.html` |
-| `PASS_*`, `BREAKTHROUGH_*`, `PART_*` | 551 root-level synthesis documents |
+| `analysis/` | Executable Python and GAP witnesses (`w33_passNNN_*`) |
+| `data/` | Deterministic JSON certificates; many are intentionally gitignored unless promoted |
+| `tests/` | Focused pytest contracts tying prose, witnesses, and certificates together |
+| `scripts/` | Corpus, rediscovery, namespace, sigma, and mechanism guards |
+| `formal/` | Lean 4 + mathlib; **build named modules individually** |
+| `papers/` | Specialist manuscripts; the master source is `w33_paper.tex` at the root |
+| `docs/` | The live atlas, PDFs, demonstrators, and reader-facing artifacts |
+| `PASS_*`, `BREAKTHROUGH_*`, `PART_*` | Synthesis and historical release documents; use the result index to find the owner |
 
 ---
 
 ## The current frontier
 
-1. **The ramified `p=2` coalescence theorem.** The odd primes are spectrally determined; `p=2` is where
-   cospectral graphs separate and where W(3,3)'s E₈ shadow lives. This is the open theorem that matters.
-2. **The integral E₈ lift.** `L₂` is even, positive-definite, rank 24, `det = 2¹⁶·3¹⁰·5`, minimum 6, with 480
-   minimal vectors whose 240 projective rays are the E₈ root directions. Definiteness of the lift is unsettled
-   — and by Pass 876, no polynomial in `A` can remove the obstruction.
-3. **A₅ conjugacy in `Aut(W(3,3))`.** Eight sampled subgroups, identical profiles, no proof. GAP settles it.
-4. **Importing the p-rank literature** rather than recomputing it, now that the coalescence rank is identified
-   as one.
+The former headline problem, ramified `p=2` coalescence, is closed by Pass 1002:
+the kernel-growth sequence `40,80,119,158,182` reconstructs
+`Z/8 ⊕ (Z/2)^15`. The live questions start one layer deeper:
+
+1. **Complete the modular extension theory.** Modulo `5`, Pass 1147 now proves
+   the nonsplit `58|23` length-two module and its unique proper submodule.
+   Determine the full `Ext¹` space and the corresponding characteristic-`2`
+   radical/Loewy structure behind the `1⊕14` image.
+2. **Build the single integral pushout.** Combine the one-colour Smith profile,
+   the colour index `3^81`, the six-channel Smith form, and the 26-unit Hecke
+   lattice into one explicit linking lattice and compute its complete SNF.
+3. **Classify the 216-line geometry.** The tight frame has angles
+   `0,1/15,1/5`; construct its full orbital coherent configuration and compute
+   its exact automorphism group rather than inferring either from the angle set.
+4. **Keep the physical compiler boundary explicit.** A photonic claim now
+   requires a named encoding, state preparation/injection map, decoder, and
+   threshold. The exact finite modules are inputs to that construction, not a
+   substitute for it.
 
 ---
 

@@ -1,6 +1,6 @@
 # Pass 1147: Schläfli–Steinberg Fourier Bridge
 
-Date: 2026-07-27
+Date: 2026-07-27; integral completion 2026-07-30
 
 ## Headline
 
@@ -20,6 +20,23 @@ onto the directed edges of the Schläfli graph
 Thus each color fibre has \(27\cdot16=432\) objects and directed-edge
 stabilizer \(S_5\). The three formerly anonymous \(432\)-orbits are exactly
 three colored copies of one directed Schläfli-edge carrier.
+
+## Corpus ownership after the three-day reconciliation
+
+The Schläfli graph and its \(216\) undirected edges already occur in the
+paper's earlier \(E_6\) geometry. Pass 1149 already owns the abstract
+module-level statement
+\(81_-\otimes\mathbb C[C_3]\) and its rank-\(243\) Fourier split. Pass 1301
+later supplies different carrier-level \(M_3\) matrix units, and Passes
+1315--1329 supply the literal rank-\(26\) Hecke algebra, the six-channel
+\(432\leftrightarrow480\) transport, triality globalization, and their Smith
+forms.
+
+Pass 1147's distinct ownership is object-level: it identifies each actual
+\(432\)-orbit with directed Schläfli edges, writes the natural
+edge-to-cycle transform, constructs the \(216\)-line frame, welds the three
+transforms to the literal \(2240\)-object cubic map, and now determines the
+integral image lattice of that transform.
 
 ## The natural edge-to-cycle transform
 
@@ -125,6 +142,156 @@ A displayed ordering of its three Fourier modes chooses an origin color and
 a Coxeter generator; using the inverse generator exchanges
 \(\omega\) and \(\omega^2\).
 
+## Integral completion: where the primes \(2,3,5\) enter
+
+Use contraction zero to delete the \(26\) wedge coordinates incident with
+one chosen vertex. This is an integral chart, not a rational minor: the
+deleted coordinates are recovered as integral sums of the retained
+coordinates. In this chart \(T\) is a \(432\times325\) integer matrix of
+rank \(81\). GAP computes its nonzero Smith factors as
+
+\[
+\boxed{1^{15},\;2^6,\;4^8,\;8^{29},\;40^{23}}.
+\]
+
+If \(L_T\) is the image lattice and \(\overline L_T\) its saturation, then
+
+\[
+\overline L_T/L_T\cong
+(\mathbb Z/2)^6\oplus(\mathbb Z/4)^8\oplus
+(\mathbb Z/8)^{29}\oplus(\mathbb Z/40)^{23},
+\]
+
+with
+
+\[
+[\overline L_T:L_T]=2^{178}5^{23}.
+\]
+
+The rank falls from \(81\) to \(15\) modulo \(2\), and to \(58\) modulo
+\(5\); it remains \(81\) modulo \(3,7,11\). Thus the within-color frame
+lattice has exact bad-prime set
+
+\[
+\boxed{\{2,5\}}.
+\]
+
+The normalization itself explains the upper Smith scale. On a natural
+Schläfli edge, \(Q(e_i\wedge e_j)\) has content \(280\), while \(Q\) acts
+on the selected \(K=4\) space by \(11200\). Therefore, on this literal edge
+carrier,
+
+\[
+\boxed{T=Q/280=40P_4},
+\qquad P_4=Q/11200.
+\]
+
+Every nonzero Smith invariant consequently divides \(40\), as GAP checks
+directly. The prime \(7\) in \(11200=2^6\cdot5^2\cdot7\) also divides the
+edge content \(280=2^3\cdot5\cdot7\); it cancels from the primitive
+multiplier \(40\), the Smith index, and the modular rank drop. This is a
+statement about this constructed edge lattice, not a general theorem about
+integral spectral projectors.
+
+The integral basis separating the color permutation lattice into its
+trivial and augmentation parts has Smith form
+
+\[
+\operatorname{SNF}
+\begin{pmatrix}
+1&1&0\\
+1&-1&1\\
+1&0&-1
+\end{pmatrix}
+=\operatorname{diag}(1,1,3).
+\]
+
+Tensoring with the rank-\(81\) image therefore makes the rational
+\(81\oplus162\) color split a sublattice of index \(3^{81}\). This cleanly
+separates the arithmetic roles:
+
+- primes \(2,5\) belong to the integral Schläfli--Steinberg image;
+- prime \(3\) enters when the three colors are integrally Fourier-separated;
+- Pass 1326's six-channel transport has bad primes \(2,3\), while its full
+  Hecke-unit lattice has bad primes \(2,3,5\).
+
+This is an integral representation boundary, not a hardware threshold or a
+particle-family derivation.
+
+### The \(5\)-primary quotient is the sign-twisted W33 sandpile module
+
+**Ownership boundary.** The spanning-tree factor
+\(\tau(W_{3,3})=2^{81}5^{23}\) and the bare arithmetic
+\(81-23=58\) already belong to
+`analysis/w33_BREAKTHROUGH_spanning_trees.py`; `w33_paper.tex` already
+records \(K(W_{3,3})_{(5)}\cong(\mathbb Z/5)^{23}\). Pass 1147 does not
+reclaim those counts. Its new content is the literal \(\mathbb F_5\) module
+quotient, the outer-sign Hom calculation and isomorphism, and the nonsplit
+extension class below.
+
+GAP rebuilds the reduced W33 Laplacian and obtains
+
+\[
+\operatorname{SNF}(L_{\mathrm{red}})
+ =1^{16},10^8,40,160^{14},
+\qquad K(W_{3,3})_{(5)}\cong(\mathbb Z/5)^{23}.
+\]
+
+It then constructs two literal \(\mathbb F_5W(E_6)\)-modules from the same
+displayed \(W(E_6)\) generators:
+
+1. the \(23\)-dimensional quotient
+   \((\overline L_T/L_T)_{(5)}\);
+2. the \(23\)-dimensional W33 sandpile primary part
+   \(K(W_{3,3})_{(5)}\), transported through
+   \(W(E_6)\cong PGSp(4,3)\).
+
+Both are irreducible. Solving the full simultaneous intertwiner equations
+gives
+
+\[
+\dim\operatorname{Hom}_{W(E_6)}(Q_T,K_5)=0,\qquad
+\dim\operatorname{Hom}_{W(E_6)}(Q_T\otimes\mathrm{sgn},K_5)=1,
+\]
+
+and restriction to \(W(E_6)'=PSp(4,3)\) also gives Hom dimension \(1\).
+All four nonzero scalars in that one-dimensional \(\mathbb F_5\) Hom space
+are invertible. Hence
+
+\[
+\boxed{Q_T\otimes\mathrm{sgn}\cong K(W_{3,3})_{(5)}}
+\]
+
+uniquely up to \(\mathbb F_5^\times\). The untwisted Hom-space zero is an
+important part of the theorem: the outer sign cannot be discarded.
+
+There is a further integral consequence. Put
+\(S_5=\overline L_T/5\overline L_T\). The edge image is its irreducible
+\(58\)-dimensional submodule, and GAP finds that the complete submodule
+dimension profile of \(S_5\) is just \(0,58,81\), both for \(W(E_6)\) and
+after restriction to \(PSp(4,3)\). Equivalently,
+\[
+\operatorname{Hom}_{W(E_6)}(Q_T,S_5)=
+\operatorname{Hom}_{PSp(4,3)}(Q_T,S_5)=0.
+\]
+Consequently the exact sequence
+\[
+\boxed{
+0\longrightarrow I_{58}\longrightarrow S_5
+\longrightarrow K(W_{3,3})_{(5)}\otimes\mathrm{sgn}
+\longrightarrow0
+}
+\]
+is nonsplit over both groups. Thus the saturated reduction is a length-two
+module with unique proper nonzero submodule, not \(58\oplus23\). This proves
+that this displayed extension class is nonzero; it does not determine the
+dimension of the full \(\operatorname{Ext}^1\) space.
+
+The module isomorphism class is intrinsic, but any displayed intertwiner matrix
+depends on the chosen \(W(E_6)\cong PGSp(4,3)\) identification and quotient
+bases. No canonical integral lift, sandpile-to-edge map over \(\mathbb Z\),
+or physical channel identification is asserted.
+
 ## The enhanced \(2240\)-carrier map
 
 Let
@@ -173,6 +340,27 @@ The old mnemonic
 \(1952=7\dim\Lambda^2(\mathbb Q^{24})+20\) is not the decomposition of this
 kernel. It named no map and is superseded by the explicit formula above.
 
+## External comparison and novelty boundary
+
+The classical carrier is not new. Lee's treatment of the Gosset polytope
+\(2_{21}\) records \(27\) vertices and \(216\) unoriented edges, with
+\([E_6:A_1\times A_4]=216\)
+([Canadian Journal of Mathematics 64 (2012), 123--150](https://doi.org/10.4153/CJM-2011-063-6)).
+The ATLAS records \(U_4(2)\cong PSp(4,3)\) of order \(25920\), outer
+automorphism group of order \(2\), the \(27\)-point action, and an integral
+\(81\)-dimensional representation of \(U_4(2):2\)
+([ATLAS of Finite Group Representations](https://brauer.maths.qmul.ac.uk/Atlas/clas/U42/)).
+General arithmetic criteria for critical groups of strongly regular graphs
+are also established in Ducey--Duncan--Engelbrecht--Madan--Piato--Shatford--
+Vichitbandha
+([JCTA 180 (2021), 105424](https://doi.org/10.1016/j.jcta.2021.105424)).
+
+Those sources provide comparison and prior ownership; they do not by
+themselves construct the displayed Schläfli-edge transform, its Smith
+profile, or the sign-twisted nonsplit \(58|23\) module. Targeted searches for
+those exact objects found no published match. That is a bounded literature
+search, not a claim that no equivalent construction exists anywhere.
+
 ## Reproducibility and scope
 
 - GAP witness:
@@ -187,4 +375,3 @@ intertwiners, a tight projective code, and a \(C_3\) representation grading.
 It does not by itself identify the three Fourier modes with Standard Model
 generations, masses, Yukawa couplings, physical polarizations, or measured
 hardware channels.
-

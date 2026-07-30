@@ -1080,6 +1080,481 @@ Print("C3_Fourier status=PASS eigenvalues=[1,E(3),E(3)^2]",
   " complex_sector_ranks=",fourierSectorRanks1147,
   " rational_sector_ranks=[81,162]\n");;
 
+# ============================================ integral edge-to-cycle lattice
+# Deleting the 26 wedge coordinates incident with vertex 27 is an integral
+# coordinate chart on Lambda^2(Aug Z^27): contraction zero recovers each
+# deleted coordinate as an integral sum of the retained coordinates.  The
+# Smith form below therefore measures the actual image lattice of T, not a
+# rationally selected minor.
+Print("integral_edge_lattice computing Smith form of 432x325 matrix...\n");;
+projectorScale1147Z := 11200;;
+primitiveProjectorMultiplier1147Z :=
+  projectorScale1147Z/naturalContent1147I;;
+edgeSmithAll1147 := ElementaryDivisorsMat(columns3251147I);;
+edgeSmith1147 := Filtered(List(edgeSmithAll1147,AbsInt),
+  value1147 -> value1147<>0);;
+edgeSmithProfile1147 := Collected(edgeSmith1147);;
+edgeSmithProduct1147 := Product(edgeSmith1147);;
+edgeModularPrimes1147 := [2,3,5,7,11];;
+edgeRanksModPrimes1147 := List(edgeModularPrimes1147,p1147 ->
+  RankMat(List(columns3251147I,row1147 ->
+    List(row1147,x1147 ->
+      (x1147 mod p1147)*One(GF(p1147))))));;
+colorIntegralBasis1147 := [[1,1,0],[1,-1,1],[1,0,-1]];;
+colorIntegralSmith1147 :=
+  ElementaryDivisorsMat(colorIntegralBasis1147);;
+colorIntegralIndex1147 := AbsInt(DeterminantMat(colorIntegralBasis1147));;
+colorRank81SplitIndex1147 := colorIntegralIndex1147^81;;
+
+ModularImage1147 := function(p1147)
+  local field1147,one1147,rows1147,basisRows1147,basis1147,
+        matrices1147,generator1147,pointPermutation1147,
+        transportedRows1147,module1147,factors1147;
+  field1147 := GF(p1147);
+  one1147 := One(field1147);
+  rows1147 := List(columns3511147I,vector1147 ->
+    List(vector1147,x1147 -> (x1147 mod p1147)*one1147));
+  basisRows1147 := BaseMat(rows1147);
+  basis1147 := Basis(VectorSpace(field1147,basisRows1147),
+    basisRows1147);
+  matrices1147 := [];
+  for generator1147 in smallGenerators1147 do
+    pointPermutation1147 := Image(hom271147I,generator1147);
+    transportedRows1147 := List(basisRows1147,vector1147 ->
+      WedgeImage1147I(vector1147,pointPermutation1147));
+    Add(matrices1147,List(transportedRows1147,vector1147 ->
+      Coefficients(basis1147,vector1147)));
+  od;
+  module1147 := GModuleByMats(matrices1147,field1147);
+  factors1147 := MTX.CompositionFactors(module1147);
+  return rec(
+    rank := Length(basisRows1147),
+    factorDimensions := List(factors1147,factor1147 ->
+      factor1147.dimension),
+    factorsIrreducible := ForAll(factors1147,factor1147 ->
+      factor1147.IsIrreducible)
+  );
+end;;
+mod2Image1147 := ModularImage1147(2);;
+mod5Image1147 := ModularImage1147(5);;
+
+characterTable1147Z := CharacterTable("W(E6)");;
+ordinary81Positions1147Z := Filtered(
+  [1..Length(Irr(characterTable1147Z))],position1147 ->
+    Degree(Irr(characterTable1147Z)[position1147])=81);;
+BrauerReductionProfile1147 := function(p1147,position1147)
+  local brauerTable1147,brauerIrr1147,restricted1147,
+        decomposition1147;
+  brauerTable1147 := BrauerTable(characterTable1147Z,p1147);
+  brauerIrr1147 := Irr(brauerTable1147);
+  restricted1147 := RestrictedClassFunction(
+    Irr(characterTable1147Z)[position1147],brauerTable1147);
+  decomposition1147 := Decomposition(
+    List(brauerIrr1147,ValuesOfClassFunction),
+    [ValuesOfClassFunction(restricted1147)],"nonnegative")[1];
+  return Filtered(
+    List([1..Length(decomposition1147)],index1147 ->
+      [Degree(brauerIrr1147[index1147]),
+       decomposition1147[index1147]]),
+    pair1147 -> pair1147[2]<>0);
+end;;
+ordinary81Brauer2Profiles1147 := List(ordinary81Positions1147Z,
+  position1147 -> BrauerReductionProfile1147(2,position1147));;
+ordinary81Brauer5Profiles1147 := List(ordinary81Positions1147Z,
+  position1147 -> BrauerReductionProfile1147(5,position1147));;
+
+# ==================================== five-primary critical-group bridge
+# The Smith calculation leaves an irreducible 23-dimensional quotient at
+# p=5.  Build it literally from the W(E6) wedge action, then compare it with
+# the 5-primary critical group of W(3,3), using the same W(E6) generators
+# transported through W(E6) ~= PGSp(4,3).
+field51147P := GF(5);;
+one51147P := One(field51147P);;
+zero51147P := Zero(field51147P);;
+
+Mod5Mat1147P := function(matrix1147P)
+  return List(matrix1147P,row1147P ->
+    List(row1147P,value1147P ->
+      (value1147P mod 5)*one51147P));
+end;;
+
+QuotientAction1147P := function(
+    spaceDimension1147P,subspaceCoords1147P,ambientAction1147P)
+  local steinitz1147P,fullBasis1147P,offset1147P,
+        quotientBasis1147P,rows1147P,vector1147P,image1147P,
+        coordinates1147P;
+  steinitz1147P := BaseSteinitzVectors(
+    IdentityMat(spaceDimension1147P,field51147P),
+    subspaceCoords1147P);
+  fullBasis1147P := Concatenation(
+    steinitz1147P.subspace,steinitz1147P.factorspace);
+  offset1147P := Length(steinitz1147P.subspace);
+  quotientBasis1147P := steinitz1147P.factorspace;
+  rows1147P := [];
+  for vector1147P in quotientBasis1147P do
+    image1147P := vector1147P*ambientAction1147P;
+    coordinates1147P := SolutionMat(fullBasis1147P,image1147P);
+    Add(rows1147P,coordinates1147P{
+      [offset1147P+1..Length(fullBasis1147P)]});
+  od;
+  return rows1147P;
+end;;
+
+HomBasis1147P := function(leftMatrices1147P,rightMatrices1147P)
+  local dimension1147P,equations1147P,left1147P,right1147P,
+        i1147P,j1147P,k1147P,row1147P,index1147P;
+  dimension1147P := Length(leftMatrices1147P[1]);
+  equations1147P := [];
+  for index1147P in [1..Length(leftMatrices1147P)] do
+    left1147P := leftMatrices1147P[index1147P];
+    right1147P := rightMatrices1147P[index1147P];
+    for i1147P in [1..dimension1147P] do
+      for j1147P in [1..dimension1147P] do
+        row1147P := ListWithIdenticalEntries(
+          dimension1147P^2,zero51147P);
+        for k1147P in [1..dimension1147P] do
+          row1147P[(k1147P-1)*dimension1147P+j1147P] :=
+            row1147P[(k1147P-1)*dimension1147P+j1147P]
+            +left1147P[i1147P][k1147P];
+          row1147P[(i1147P-1)*dimension1147P+k1147P] :=
+            row1147P[(i1147P-1)*dimension1147P+k1147P]
+            -right1147P[k1147P][j1147P];
+        od;
+        Add(equations1147P,row1147P);
+      od;
+    od;
+  od;
+  return NullspaceMat(TransposedMat(equations1147P));
+end;;
+
+VectorToSquareMat1147P := function(vector1147P,dimension1147P)
+  return List([1..dimension1147P],i1147P ->
+    vector1147P{
+      [(i1147P-1)*dimension1147P+1..i1147P*dimension1147P]});
+end;;
+
+InvertibleHomCount1147P := function(homBasis1147P,dimension1147P)
+  local count1147P,vector1147P;
+  if Length(homBasis1147P)=0 then return 0; fi;
+  if Length(homBasis1147P)>5 then return -1; fi;
+  count1147P := 0;
+  for vector1147P in VectorSpace(field51147P,homBasis1147P) do
+    if vector1147P<>Zero(vector1147P) and
+        RankMat(VectorToSquareMat1147P(
+          vector1147P,dimension1147P))=dimension1147P then
+      count1147P := count1147P+1;
+    fi;
+  od;
+  return count1147P;
+end;;
+
+# Integral equations for the rational 81-space give its saturated reduction
+# modulo five.  The actual edge image is the invariant 58-submodule.
+edgeBaseZ1147P := BaseIntMat(columns3511147I);;
+edgeOrthogonalZ1147P :=
+  NullspaceIntMat(TransposedMat(edgeBaseZ1147P));;
+edgeSaturation51147P := NullspaceMat(TransposedMat(
+  Mod5Mat1147P(edgeOrthogonalZ1147P)));;
+edgeImage51147P := BaseMat(Mod5Mat1147P(columns3511147I));;
+edgeImageCoords51147P := List(edgeImage51147P,row1147P ->
+  SolutionMat(edgeSaturation51147P,row1147P));;
+
+FrameQuotientMats1147P := function(generators1147P)
+  local matrices1147P,generator1147P,permutation271147P,
+        saturationAction1147P;
+  matrices1147P := [];
+  for generator1147P in generators1147P do
+    permutation271147P := Image(hom271147I,generator1147P);
+    saturationAction1147P := List(edgeSaturation51147P,row1147P ->
+      SolutionMat(edgeSaturation51147P,
+        WedgeImage1147I(row1147P,permutation271147P)));
+    Add(matrices1147P,QuotientAction1147P(
+      81,edgeImageCoords51147P,saturationAction1147P));
+  od;
+  return matrices1147P;
+end;;
+
+FrameSaturationMats1147P := function(generators1147P)
+  local matrices1147P,generator1147P,permutation271147P;
+  matrices1147P := [];
+  for generator1147P in generators1147P do
+    permutation271147P := Image(hom271147I,generator1147P);
+    Add(matrices1147P,List(edgeSaturation51147P,row1147P ->
+      SolutionMat(edgeSaturation51147P,
+        WedgeImage1147I(row1147P,permutation271147P))));
+  od;
+  return matrices1147P;
+end;;
+
+# Canonical forty-point symplectic model of W(3,3).
+Canon401147P := function(vector1147P)
+  local position1147P,inverse1147P;
+  vector1147P := List(vector1147P,value1147P -> value1147P mod 3);
+  position1147P := PositionProperty(
+    vector1147P,value1147P -> value1147P<>0);
+  if position1147P=fail then return fail; fi;
+  if vector1147P[position1147P]=1 then inverse1147P := 1;
+  else inverse1147P := 2; fi;
+  return List(vector1147P,value1147P ->
+    (inverse1147P*value1147P) mod 3);
+end;;
+
+Symplectic401147P := function(left1147P,right1147P)
+  return (left1147P[1]*right1147P[3]
+    -left1147P[3]*right1147P[1]
+    +left1147P[2]*right1147P[4]
+    -left1147P[4]*right1147P[2]) mod 3;
+end;;
+
+points401147P := Set(Filtered(
+  Cartesian([0..2],[0..2],[0..2],[0..2]),
+  vector1147P -> vector1147P<>[0,0,0,0]),Canon401147P);;
+
+Transvection401147P := function(vector1147P)
+  local images1147P;
+  images1147P := List(points401147P,left1147P ->
+    Canon401147P(List([1..4],i1147P ->
+      left1147P[i1147P]
+      +Symplectic401147P(left1147P,vector1147P)
+       *vector1147P[i1147P])));
+  return PermList(List(images1147P,image1147P ->
+    Position(points401147P,image1147P)));
+end;;
+
+PSp401147P := Group(List(points401147P,Transvection401147P));;
+outer401147P := PermList(List(points401147P,vector1147P ->
+  Position(points401147P,Canon401147P(
+    [2*vector1147P[1],2*vector1147P[2],
+     vector1147P[3],vector1147P[4]]))));;
+PGSp401147P := Group(Concatenation(
+  SmallGeneratingSet(PSp401147P),[outer401147P]));;
+isomorphismWE6PGSp1147P :=
+  IsomorphismGroups(WE61147,PGSp401147P);;
+
+adjacency401147P := List([1..40],i1147P ->
+  List([1..40],j1147P ->
+    Bit1147(i1147P<>j1147P and
+      Symplectic401147P(
+        points401147P[i1147P],points401147P[j1147P])=0)));;
+laplacian401147P := 12*IdentityMat(40)-adjacency401147P;;
+reducedLaplacian401147P :=
+  laplacian401147P{[1..39]}{[1..39]};;
+w33Smith1147P :=
+  List(ElementaryDivisorsMat(reducedLaplacian401147P),AbsInt);;
+w33SmithProfile1147P := Collected(w33Smith1147P);;
+
+# Degree-zero divisors modulo five, modulo the Laplacian image.
+degreeBasis51147P := List([1..39],i1147P ->
+  List([1..40],j1147P ->
+    (Bit1147(i1147P=j1147P)-Bit1147(j1147P=40))*one51147P));;
+laplacianCoords51147P := List(
+  Mod5Mat1147P(laplacian401147P),row1147P ->
+    SolutionMat(degreeBasis51147P,row1147P));;
+laplacianImageCoords51147P := BaseMat(laplacianCoords51147P);;
+
+PointImage51147P := function(vector1147P,permutation1147P)
+  local out1147P,i1147P;
+  out1147P := ListWithIdenticalEntries(40,zero51147P);
+  for i1147P in [1..40] do
+    out1147P[i1147P^permutation1147P] :=
+      out1147P[i1147P^permutation1147P]+vector1147P[i1147P];
+  od;
+  return out1147P;
+end;;
+
+SandpileQuotientMats1147P := function(generators1147P)
+  local matrices1147P,generator1147P,pointPermutation1147P,
+        degreeAction1147P;
+  matrices1147P := [];
+  for generator1147P in generators1147P do
+    pointPermutation1147P := Image(
+      isomorphismWE6PGSp1147P,generator1147P);
+    degreeAction1147P := List(degreeBasis51147P,row1147P ->
+      SolutionMat(degreeBasis51147P,
+        PointImage51147P(row1147P,pointPermutation1147P)));
+    Add(matrices1147P,QuotientAction1147P(
+      39,laplacianImageCoords51147P,degreeAction1147P));
+  od;
+  return matrices1147P;
+end;;
+
+literalWE6Generators1147P := smallGenerators1147;;
+derivedWE61147P := DerivedSubgroup(WE61147);;
+derivedGenerators1147P := SmallGeneratingSet(derivedWE61147P);;
+literalGeneratorOrders1147P :=
+  List(literalWE6Generators1147P,Order);;
+outerSignValues1147P := List(literalWE6Generators1147P,
+  generator1147P ->
+    2*Bit1147(generator1147P in derivedWE61147P)-1);;
+
+frameFullMats1147P :=
+  FrameQuotientMats1147P(literalWE6Generators1147P);;
+sandpileFullMats1147P :=
+  SandpileQuotientMats1147P(literalWE6Generators1147P);;
+frameDerivedMats1147P :=
+  FrameQuotientMats1147P(derivedGenerators1147P);;
+sandpileDerivedMats1147P :=
+  SandpileQuotientMats1147P(derivedGenerators1147P);;
+frameSaturationFullMats1147P :=
+  FrameSaturationMats1147P(literalWE6Generators1147P);;
+frameSaturationDerivedMats1147P :=
+  FrameSaturationMats1147P(derivedGenerators1147P);;
+frameSignTwistedMats1147P := List(
+  [1..Length(frameFullMats1147P)],i1147P ->
+    outerSignValues1147P[i1147P]*frameFullMats1147P[i1147P]);;
+
+frameQuotientModule1147P :=
+  GModuleByMats(frameFullMats1147P,field51147P);;
+sandpileQuotientModule1147P :=
+  GModuleByMats(sandpileFullMats1147P,field51147P);;
+frameSaturationModule1147P :=
+  GModuleByMats(frameSaturationFullMats1147P,field51147P);;
+frameDerivedQuotientModule1147P :=
+  GModuleByMats(frameDerivedMats1147P,field51147P);;
+frameDerivedSaturationModule1147P :=
+  GModuleByMats(frameSaturationDerivedMats1147P,field51147P);;
+frameQuotientFactors1147P :=
+  MTX.CompositionFactors(frameQuotientModule1147P);;
+sandpileQuotientFactors1147P :=
+  MTX.CompositionFactors(sandpileQuotientModule1147P);;
+homUntwisted1147P :=
+  HomBasis1147P(frameFullMats1147P,sandpileFullMats1147P);;
+homSignTwisted1147P :=
+  HomBasis1147P(frameSignTwistedMats1147P,sandpileFullMats1147P);;
+homDerived1147P :=
+  HomBasis1147P(frameDerivedMats1147P,sandpileDerivedMats1147P);;
+invertibleUntwisted1147P :=
+  InvertibleHomCount1147P(homUntwisted1147P,23);;
+invertibleSignTwisted1147P :=
+  InvertibleHomCount1147P(homSignTwisted1147P,23);;
+invertibleDerived1147P :=
+  InvertibleHomCount1147P(homDerived1147P,23);;
+splitHomFull1147P := MTX.BasisModuleHomomorphisms(
+  frameQuotientModule1147P,frameSaturationModule1147P);;
+splitHomDerived1147P := MTX.BasisModuleHomomorphisms(
+  frameDerivedQuotientModule1147P,
+  frameDerivedSaturationModule1147P);;
+frameSaturationSubmoduleProfile1147P := Collected(List(
+  MTX.BasesSubmodules(frameSaturationModule1147P),Length));;
+frameDerivedSaturationSubmoduleProfile1147P := Collected(List(
+  MTX.BasesSubmodules(frameDerivedSaturationModule1147P),Length));;
+edgeImageInvariant1147P := ForAll(
+  frameSaturationFullMats1147P,matrix1147P ->
+    ForAll(edgeImageCoords51147P,row1147P ->
+      SolutionMat(edgeImageCoords51147P,row1147P*matrix1147P)<>fail));;
+
+checks1147Z := rec();;
+checks1147Z.edge_lattice_smith_profile_is_exact :=
+  edgeSmithProfile1147=
+    [[1,15],[2,6],[4,8],[8,29],[40,23]];;
+checks1147Z.edge_lattice_saturation_index_is_2pow178_5pow23 :=
+  edgeSmithProduct1147=2^178*5^23;;
+checks1147Z.primitive_transform_is_40_times_the_rational_projector :=
+  naturalContent1147I=280 and
+  projectorScale1147Z=11200 and
+  primitiveProjectorMultiplier1147Z=40 and
+  naturalBaseQ1147I=
+    naturalContent1147I*naturalBasePrimitive1147I and
+  ApplyQ1147I(naturalBasePrimitive1147I)=
+    projectorScale1147Z*naturalBasePrimitive1147I;;
+checks1147Z.all_Smith_invariants_divide_the_projector_multiplier :=
+  ForAll(edgeSmith1147,invariant1147 ->
+    primitiveProjectorMultiplier1147Z mod invariant1147=0);;
+checks1147Z.prime7_cancels_in_the_primitive_normalization :=
+  Valuation(projectorScale1147Z,7)=1 and
+  Valuation(naturalContent1147I,7)=1 and
+  Valuation(primitiveProjectorMultiplier1147Z,7)=0 and
+  edgeRanksModPrimes1147[Position(edgeModularPrimes1147,7)]=81 and
+  edgeSmithProduct1147 mod 7<>0;;
+checks1147Z.edge_lattice_bad_primes_are_exactly_2_and_5 :=
+  edgeRanksModPrimes1147=[15,81,58,81,81];;
+checks1147Z.integral_color_split_has_smith_1_1_3 :=
+  DeterminantMat(colorIntegralBasis1147)=3 and
+  colorIntegralSmith1147=[1,1,3];;
+checks1147Z.rank81_color_split_has_index_3pow81 :=
+  colorRank81SplitIndex1147=3^81;;
+checks1147Z.mod2_image_is_the_1_plus14_layer :=
+  mod2Image1147.rank=15 and
+  SortedList(mod2Image1147.factorDimensions)=[1,14] and
+  mod2Image1147.factorsIrreducible;;
+checks1147Z.mod5_image_is_irreducible_dimension58 :=
+  mod5Image1147.rank=58 and
+  mod5Image1147.factorDimensions=[58] and
+  mod5Image1147.factorsIrreducible;;
+checks1147Z.ordinary_81_mod2_has_1_8_3x6_14_40_factors :=
+  Length(ordinary81Positions1147Z)=2 and
+  ForAll(ordinary81Brauer2Profiles1147,profile1147 ->
+    SortedList(profile1147)=
+      [[1,1],[6,3],[8,1],[14,1],[40,1]]);;
+checks1147Z.ordinary_81_mod5_has_23_plus58_factors :=
+  ForAll(ordinary81Brauer5Profiles1147,profile1147 ->
+    SortedList(profile1147)=[[23,1],[58,1]]);;
+checks1147Z.W33_reduced_laplacian_smith_profile_is_exact :=
+  w33SmithProfile1147P=[[1,16],[10,8],[40,1],[160,14]];;
+checks1147Z.five_primary_modules_are_both_irreducible_23 :=
+  Length(edgeOrthogonalZ1147P)=270 and
+  Length(edgeSaturation51147P)=81 and
+  Length(edgeImage51147P)=58 and
+  Length(laplacianImageCoords51147P)=16 and
+  List(frameQuotientFactors1147P,
+    factor1147P -> factor1147P.dimension)=[23] and
+  List(sandpileQuotientFactors1147P,
+    factor1147P -> factor1147P.dimension)=[23] and
+  ForAll(Concatenation(
+      frameQuotientFactors1147P,sandpileQuotientFactors1147P),
+    factor1147P -> factor1147P.IsIrreducible);;
+checks1147Z.literal_WE6_generators_act_on_both_23_modules :=
+  Size(WE61147)=51840 and
+  Size(PGSp401147P)=51840 and
+  Size(derivedWE61147P)=25920 and
+  Size(PSp401147P)=25920 and
+  isomorphismWE6PGSp1147P<>fail and
+  Image(isomorphismWE6PGSp1147P,derivedWE61147P)=PSp401147P and
+  ForAll(Concatenation(
+      frameFullMats1147P,sandpileFullMats1147P),
+    matrix1147P ->
+      Length(matrix1147P)=23 and RankMat(matrix1147P)=23);;
+checks1147Z.five_primary_Hom_dimensions_are_0_1_1 :=
+  Length(homUntwisted1147P)=0 and
+  Length(homSignTwisted1147P)=1 and
+  Length(homDerived1147P)=1;;
+checks1147Z.every_nonzero_scalar_intertwiner_is_invertible :=
+  invertibleUntwisted1147P=0 and
+  invertibleSignTwisted1147P=4 and
+  invertibleDerived1147P=4;;
+checks1147Z.five_primary_saturation_sequence_is_nonsplit :=
+  edgeImageInvariant1147P and
+  Length(splitHomFull1147P)=0 and
+  Length(splitHomDerived1147P)=0 and
+  frameSaturationSubmoduleProfile1147P=[[0,1],[58,1],[81,1]] and
+  frameDerivedSaturationSubmoduleProfile1147P=
+    [[0,1],[58,1],[81,1]];;
+
+failedChecks1147Z := Filtered(RecNames(checks1147Z),name1147 ->
+  not checks1147Z.(name1147));;
+Assert1147(Concatenation("integral edge/color lattice; failed=",
+  String(failedChecks1147Z)),IsEmpty(failedChecks1147Z));;
+Print("integral_edge_lattice Smith_profile=",edgeSmithProfile1147,
+  " nonzero=",Length(edgeSmith1147),
+  " product=",edgeSmithProduct1147,
+  " primes=",edgeModularPrimes1147,
+  " ranks=",edgeRanksModPrimes1147,
+  " color_smith=",colorIntegralSmith1147,
+  " rank81_color_index=",colorRank81SplitIndex1147,
+  " mod2_factors=",mod2Image1147.factorDimensions,
+  " mod5_factors=",mod5Image1147.factorDimensions,"\n");;
+Print("five_primary_critical_group_bridge W33_Smith=",
+  w33SmithProfile1147P,
+  " quotient_dimensions=[23,23]",
+  " Hom_dimensions=[",Length(homUntwisted1147P),",",
+  Length(homSignTwisted1147P),",",Length(homDerived1147P),"]",
+  " invertible_nonzero=[",invertibleUntwisted1147P,",",
+  invertibleSignTwisted1147P,",",invertibleDerived1147P,"]\n");;
+Print("five_primary_saturated_extension split_Hom_dimensions=[",
+  Length(splitHomFull1147P),",",Length(splitHomDerived1147P),"]",
+  " submodule_profiles=[",frameSaturationSubmoduleProfile1147P,",",
+  frameDerivedSaturationSubmoduleProfile1147P,"]\n");;
+
 # =========================================== deterministic JSON certificate
 allCheckCount1147 :=
   Length(RecNames(checks1147))
@@ -1087,14 +1562,16 @@ allCheckCount1147 :=
   +Length(RecNames(checks1147C3))
   +Length(RecNames(checks1147W))
   +Length(RecNames(checks1147R))
-  +Length(RecNames(checks1147F));;
+  +Length(RecNames(checks1147F))
+  +Length(RecNames(checks1147Z));;
 allFailedChecks1147 := Concatenation(
   failedChecks1147,
   failedChecks1147I,
   failedChecks1147C3,
   failedChecks1147W,
   failedChecks1147R,
-  failedChecks1147F);;
+  failedChecks1147F,
+  failedChecks1147Z);;
 
 stream1147 := OutputTextFile(OUT1147,false);;
 SetPrintFormattingStatus(stream1147,false);;
@@ -1187,6 +1664,61 @@ Emit1147("    \"lambda2_of_24_degree_multiplicities\":",
     [row1147[2],row1147[3]])),",\n");
 Emit1147("    \"removed_constituents\":\"three copies of 81_minus\",\n");
 Emit1147("    \"supersedes\":\"1952=7*dim(Lambda^2(24))+20 dimension mnemonic\"\n");
+Emit1147("  },\n");
+Emit1147("  \"integral_edge_lattice\":{\n");
+Emit1147("    \"matrix_shape\":[432,325],\n");
+Emit1147("    \"rational_rank\":81,\n");
+Emit1147("    \"integral_chart\":\"delete the 26 vertex-27 wedge coordinates and recover them integrally from contraction zero\",\n");
+Emit1147("    \"structural_normalization\":{\"natural_Q_edge_content\":",
+  naturalContent1147I,",\"projector_scale\":",projectorScale1147Z,
+  ",\"primitive_projector_multiplier\":",
+  primitiveProjectorMultiplier1147Z,
+  ",\"identity\":\"T=Q/280=40*P_4\",\"all_smith_invariants_divide_40\":true,\"prime7_cancellation\":\"7 divides both Q's eigenvalue scale 11200 and every Schlaefli-edge Q-image content 280; it is absent from the primitive multiplier 40, the Smith product, and the rank drop\"},\n");
+Emit1147("    \"smith_diagonal_profile\":{\"1\":15,\"2\":6,\"4\":8,\"8\":29,\"40\":23},\n");
+Emit1147("    \"saturation_quotient\":\"(Z/2)^6 + (Z/4)^8 + (Z/8)^29 + (Z/40)^23\",\n");
+Emit1147("    \"primary_quotient\":{\"2\":\"(Z/2)^6 + (Z/4)^8 + (Z/8)^52\",\"5\":\"(Z/5)^23\"},\n");
+Emit1147("    \"saturation_index_factorization\":{\"2\":178,\"5\":23},\n");
+Emit1147("    \"saturation_index_decimal\":\"",
+  String(edgeSmithProduct1147),"\",\n");
+Emit1147("    \"rank_mod_prime\":{\"2\":15,\"3\":81,\"5\":58,\"7\":81,\"11\":81},\n");
+Emit1147("    \"bad_primes\":[2,5],\n");
+Emit1147("    \"modular_image_composition\":{\n");
+Emit1147("      \"2\":{\"rank\":15,\"irreducible_factor_dimensions\":[1,14],\"ambient_81_Brauer_profile\":{\"1\":1,\"6\":3,\"8\":1,\"14\":1,\"40\":1}},\n");
+Emit1147("      \"5\":{\"rank\":58,\"irreducible_factor_dimensions\":[58],\"ambient_81_Brauer_profile\":{\"23\":1,\"58\":1}}\n");
+Emit1147("    },\n");
+Emit1147("    \"integral_color_fourier_split\":{\n");
+Emit1147("      \"basis_matrix\":",String(colorIntegralBasis1147),",\n");
+Emit1147("      \"smith_diagonal\":",String(colorIntegralSmith1147),",\n");
+Emit1147("      \"one_color_index\":3,\n");
+Emit1147("      \"rank81_index_factorization\":{\"3\":81},\n");
+Emit1147("      \"rank81_index_decimal\":\"",
+  String(colorRank81SplitIndex1147),"\"\n");
+Emit1147("    },\n");
+Emit1147("    \"five_primary_critical_group_bridge\":{\n");
+Emit1147("      \"W33_reduced_laplacian_smith_profile\":{\"1\":16,\"10\":8,\"40\":1,\"160\":14},\n");
+Emit1147("      \"literal_action\":{\"group\":\"W(E6)=PGSp(4,3)\",\"order\":51840,\"derived_group\":\"PSp(4,3)\",\"derived_order\":25920,\"generator_orders\":",
+  String(literalGeneratorOrders1147P),",\"outer_sign_values\":",
+  String(outerSignValues1147P),"},\n");
+Emit1147("      \"frame_saturation_quotient\":{\"prime\":5,\"dimension\":23,\"module\":\"irreducible 23-dimensional F5 W(E6)-module\"},\n");
+Emit1147("      \"W33_sandpile_primary\":{\"prime\":5,\"group\":\"(Z/5)^23\",\"dimension\":23,\"module\":\"irreducible 23-dimensional F5 W(E6)-module\"},\n");
+Emit1147("      \"Hom_dimensions\":{\"untwisted_W(E6)\":",
+  Length(homUntwisted1147P),",\"outer_sign_twisted_W(E6)\":",
+  Length(homSignTwisted1147P),",\"restricted_PSp(4,3)\":",
+  Length(homDerived1147P),"},\n");
+Emit1147("      \"nonzero_scalar_intertwiners\":{\"untwisted\":",
+  invertibleUntwisted1147P,",\"outer_sign_twisted\":",
+  invertibleSignTwisted1147P,",\"restricted_PSp(4,3)\":",
+  invertibleDerived1147P,"},\n");
+Emit1147("      \"all_nonzero_scalar_intertwiners_invertible\":true,\n");
+Emit1147("      \"module_isomorphism\":\"(saturation quotient at 5) tensor outer_sign ~= K(W33)_5\",\n");
+Emit1147("      \"saturated_frame_exact_sequence\":{\"sequence\":\"0 -> irreducible_58 -> saturated_frame_mod5_81 -> K(W33)_5 tensor outer_sign -> 0\",\"splits_over_W(E6)\":false,\"splits_over_PSp(4,3)\":false,\"Hom_quotient_to_saturation\":{\"W(E6)\":",
+  Length(splitHomFull1147P),",\"PSp(4,3)\":",
+  Length(splitHomDerived1147P),
+  "},\"submodule_dimension_profiles\":{\"W(E6)\":{\"0\":1,\"58\":1,\"81\":1},\"PSp(4,3)\":{\"0\":1,\"58\":1,\"81\":1}},\"structure\":\"the image 58 is the unique proper nonzero submodule; the saturated reduction is a nonsplit length-two module\",\"extension_scope\":\"this certifies that the displayed extension class is nonzero; it does not compute the dimension of the full Ext^1 space\"},\n");
+Emit1147("      \"uniqueness\":\"unique up to F5^x; exactly four nonzero scalar isomorphisms\",\n");
+Emit1147("      \"scope\":\"module isomorphism class is intrinsic; a displayed matrix depends on the chosen W(E6)~=PGSp(4,3) isomorphism and quotient bases; no canonical integral lift or physical channel is asserted\"\n");
+Emit1147("    },\n");
+Emit1147("    \"arithmetic_factorization\":\"the within-color Schlaefli-Steinberg lattice has bad primes 2 and 5; integral separation into trivial and augmentation color sectors contributes prime 3, yielding the full set 2,3,5\"\n");
 Emit1147("  },\n");
 Emit1147("  \"scope\":\"exact finite E8/W(E6) geometry and representation theory; no identification with generations, masses, Yukawa couplings, polarizations, or measured hardware channels\"\n");
 Emit1147("}\n");

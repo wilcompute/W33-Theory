@@ -1098,16 +1098,22 @@ complete two-qutrit Clifford group modulo Paulis and phases.
 \emph{Witness: \path{bt825_universality_theorem.py}.}
 \end{theorem}
 
-\begin{theorem}[Universality]
-Clifford completeness, together with the machine's intrinsic magic
-supply (\S\ref{sec:fuel}) and the strict positivity of its contextual
-fraction ($1/10$, exact), implies universal quantum computation by
-magic-state injection; for qutrits, contextuality is necessary and
-sufficient for magic distillation (Howard--Wallman--Veitch--Emerson)
-\cite{howard}.
-One self-entangled photon on the $\W$ mesh is a universal quantum
-computer whose transport is its gate action.
+\begin{theorem}[Conditional universality criterion]
+Clifford completeness, together with a fault-tolerant preparation and
+injection of a distillable qutrit magic state, gives a universal gate set.
+The finite substrate certifies the Clifford closure and a nonclassical
+contextuality obstruction.  It does not, from those facts alone, certify that
+the thirty-six distinguished rays are physically preparable magic states or
+that a single photon supplies a protected injection circuit.
 \end{theorem}
+
+\paragraph{Evidence boundary.}
+Contextuality is a resource diagnostic, not a compiled optical protocol.
+Promoting the conditional criterion to a hardware universality theorem
+requires an explicit state preparation, injection gadget, decoder, and noise
+threshold for the chosen photonic encoding.  Accordingly, later ``matter
+equals magic'' and unit-premium statements are architectural hypotheses unless
+they name those missing maps; the exact finite results do not establish them.
 
 %======================================================================
 \section{Fractal scaling: the computer is the network}
@@ -1467,26 +1473,18 @@ the combinatorial face of Kochen--Specker.
 \emph{Witnesses: \texttt{bt818}, \texttt{bt823}.}
 \end{theorem}
 
-\begin{theorem}[No distillation factory: the fuel is the code]
-In every standard fault-tolerant architecture the dominant cost is \emph{magic-state
-distillation} --- a separate factory producing $10^3$--$10^6$ raw magic states per
-logical non-Clifford gate, feeding a Clifford error-correction layer. Here that cost is
-not paid twice: \emph{matter $=$ magic}. The $36$ magic rays $=(q!)^2$, graded
-$8{+}24{+}4=\{2^q,f,\mu\}$, \emph{are} the matter shell --- the same $D_4$/GKP code
-register (the $[[240,81,3]]_3$ Steinberg module of \S\ref{sec:memory}, equivalently
-$[[240,81,4,3]]_3$ in the explicitly ordered convention $[[n,k,d_Z,d_X]]_3$) that protects
-the logical data. The fuel is therefore structural, and it is genuine magic: the qutrit
-Strange state $\lvert S\rangle=(\lvert1\rangle-\lvert2\rangle)/\sqrt2$ has mana
-$\log(5/3)$, the single-qutrit maximum (computed from the discrete Wigner function;
-stabilizer states have mana $0$). Its standing density is the contextual fraction
-$1/\Phi_4=1/10$, replenished by the same cycle that maintains the code; the
-Kochen--Specker deficit $\vartheta-\alpha=10-7=q=3$ is the magic per round; and because
-$\W$ has no ovoid the magic can never be gauged away. So the dominant cost of fault
-tolerance is reorganised into the matter$=$magic identity. \emph{And the fuel gauge is a
-cosmological constant}: the $\Phi_4=10$ that meters the magic density is the same
-$\Phi_4=q^2+1$ that factors the de Sitter selection cubic (\S\ref{sec:five-faces},
-Face~1) and the demonstrator readout (Face~6). The machine's computational fuel and the
-world's vacuum selection are one substrate constant.
+\begin{theorem}[Conditional matter-equals-magic architecture]
+The exact finite inputs are the $36=(q!)^2$ distinguished rays, their
+$8+24+4=\{2^q,f,\mu\}$ grading, the contextual fraction
+$1/\Phi_4=1/10$, and the qutrit Strange state's mana $\log(5/3)$
+(stabilizer states have mana $0$).  Separately, the homological register is
+the $[[240,81,3]]_3$ Steinberg code, equivalently
+$[[240,81,4,3]]_3$ in the ordered convention $[[n,k,d_Z,d_X]]_3$.
+If a protected encoding and injection map identifies prepared copies of the
+distillable state with the distinguished-ray sector of that register, then
+one hardware layer could serve both error correction and non-Clifford
+injection.  The counts and contextuality witness do not construct that map,
+prove replenishment, or remove a distillation factory.
 \emph{Witness: \path{analysis/w33_magic_economy.py}.}
 \end{theorem}
 
@@ -1504,32 +1502,27 @@ remove magic-state distillation.  Doing so requires an explicit protected
 resource-state preparation/injection circuit, decoder, and noise-threshold
 analysis for the chosen physical branch.
 
-\paragraph{The resource accounting.} Matter $=$ magic has a measurable payoff. Define
+\paragraph{The conditional resource accounting.} Define
 the non-Clifford premium $P=\mathrm{cost}(\text{non-Clifford})/\mathrm{cost}(\text{Clifford})$.
 In the surface-code baseline a non-Clifford gate needs a distilled magic state, so
 $P\sim O(d^3)$ (the distillation factory, $\sim10^3$--$10^4$ qubit-rounds at useful code
 distances $d$, occupying $30$--$90\%$ of the device --- the dominant cost of fault
-tolerance). On this substrate $P=1$: a non-Clifford gate is a magic injection from the
-matter shell the code already maintains, costing one error-correction cycle, exactly
-like a Clifford gate. The distillation factory and its $O(d^3)$ premium are absent; the
-saving scales as $d^3$, and the non-Clifford gate rate equals the Clifford rate (magic
-per round $=\vartheta-\alpha=q=3$). Non-Clifford gates are as cheap as Clifford gates
-because the fuel \emph{is} the code. (Witness:
+tolerance).  In the proposed shared-layer implementation, $P=1$ is a design
+target: it would require a protected injection to cost one correction cycle.
+Neither the equality nor an $O(d^3)$ saving follows until that injection,
+decoder, and threshold are supplied. (Witness:
 \path{analysis/w33_magic_resource_accounting.py}.)
 
-\paragraph{The clock renews the magic.} What keeps the structural magic from precessing
-into a Clifford frame is the clock's aperiodicity. The Boerdijk--Coxeter twist
+\paragraph{What the irrational clock does and does not prove.} The Boerdijk--Coxeter twist
 $\theta=\arccos(-2/3)$ --- the $q=3$ simplex angle, $-2/3=-(q-1)/q$ --- has $\theta/\pi$
 \emph{irrational} (Niven, since $\cos\theta=-2/3\notin\{0,\pm\tfrac12,\pm1\}$), so the
 stroboscopic phases $\{n\theta\bmod2\pi\}$ never repeat, are Weyl-equidistributed (star
 discrepancy $\to0$), obey the Steinhaus three-gap law, and never land exactly on a
-stabilizer angle $2\pi k/q$. A drive is Clifford-trackable only if it closes a finite
-cycle ($\theta$ a rational multiple of $2\pi$); the irrational $q$-simplex angle never
-closes, so each tick injects a fresh cubic (non-Clifford) rotation --- the magic is
-continuously replenished. This is the \emph{temporal} partner of the spatial no-ovoid
-result: the same $q=3$ forbids gauging the magic away in space (no ovoid,
-$\alpha=7=\Phi_6<\vartheta=10=\Phi_4$) and in time (no recurrence). The time quasicrystal
-does not merely clock the machine; it fuels it. (Witness:
+stabilizer angle $2\pi k/q$.  This proves aperiodicity, not gate type:
+an irrational phase sequence need not implement a cubic Hamiltonian, a
+distillable state, or a protected non-Clifford injection.  Establishing
+replenishment requires an explicit driven Hamiltonian/control map and a
+classification of its logical action. (Witness:
 \path{analysis/w33_clock_magic_renewal.py}.)
 
 \paragraph{And the code is holographic.} The matter shell is not just a code but a
@@ -1548,50 +1541,36 @@ logical representative are the proposed holographic signature:
 the ``holo'' in holonet is earned. (Witness:
 \path{analysis/w33_holographic_code.py}.)
 
-\begin{theorem}[The architecture is a self-fueling holographic memory]
-The three properties above are one object. The matter shell is simultaneously the
-holographic code (it stores the $81$ logical qutrits of the Steinberg module against
-the combinatorial screening multiplicity $\mu=4$, while its CSS distances are
-$d_X=3$, $d_Z=4$, and $d=3$), the magic fuel (its $36=(q!)^2$
-rays are the non-Clifford resource, so the non-Clifford premium is $P=1$ --- no
-distillation factory), and the system the irrational Boerdijk--Coxeter clock keeps
-non-Clifford ($\theta=\arccos(-2/3)$, $\theta/\pi$ irrational). So the machine needs no
-distillation factory (the fuel is the code), no separate fuel store (the magic is the
-error-correction redundancy), and never recurs (the irrational clock refreshes the
-magic): a holographic quantum memory whose error-correction \emph{is} its magic supply,
-kept alive by an irrational clock --- all controlled by $q=3$ ($\mu=4$,
-$d_X=3$, $d_Z=4$,
-$1/\Phi_4=1/10$, $\cos\theta=-(q-1)/q$). Moreover the entanglement is geometric: a
-discrete Ryu--Takayanagi law holds, the entropy of a boundary region being the minimal
-graph cut, with a single ray's RT area the degree $k=12$, the proposed one-bulk-qutrit
-RT cut having size $\mu=4$, equal to the one-sided $Z$-distance rather than the full
-distance $d=3$, the gauge$\,|\,$matter cut $108=\mu\cdot27$, and an
-area law (sub-volume). (Witnesses: \path{analysis/w33_self_fueling_memory.py},
+\begin{theorem}[Conditional self-fueling holographic-memory proposal]
+The exact finite inputs are the Steinberg-code dimensions and distances
+$(k,d_X,d_Z)=(81,3,4)$, screening multiplicity $\mu=4$, the
+$36$-ray contextual sector, the fraction $1/10$, the irrational angle
+$\arccos(-2/3)$, and the graph-cut counts $12$, $4$, and
+$108=4\cdot27$.  Calling these one self-fueling holographic memory requires
+three additional maps: a bulk--boundary recovery channel, a protected
+resource-state injection, and a logical clock action that actually produces
+that resource.  The current witnesses certify the finite inputs, not those
+identifications; in particular they do not prove $P=1$ or eliminate
+distillation. (Witnesses: \path{analysis/w33_self_fueling_memory.py},
 \path{analysis/w33_holographic_rt.py}.)
 \end{theorem}
 
-\begin{theorem}[The memory is the de Sitter spacetime --- and its honest price]
-The loop closes: the holographic memory's bulk \emph{is} the de Sitter spacetime it
-runs in. The collinearity graph $\W$ has \emph{positive} Ollivier--Ricci curvature ---
+\begin{theorem}[Finite-curvature/de Sitter analogy and conditional cost model]
+The collinearity graph $\W$ has positive Ollivier--Ricci curvature ---
 computed by optimal transport, $\kappa=1-W_1(m_x,m_y)=1/6=2/k$ --- the discrete
-signature of de Sitter / a positive cosmological constant, and it satisfies the
-Gibbons--Hawking/Gauss--Bonnet closure $E\,\kappa=240\cdot\tfrac16=40=v$ (Face~1). So the
-same positively-curved $\W$ is the holographic memory, the RT horizons are the de Sitter
-horizons, the Boerdijk--Coxeter clock is de Sitter time, and inflation is the expansion:
-computation and spacetime are one geometry, the machine computing itself because its
-memory is the de Sitter universe it inhabits. (Witness:
+finite identity $E\,\kappa=240\cdot\tfrac16=40=v$ (Face~1). These exact
+facts motivate a de Sitter analogy; they do not identify the graph with
+spacetime, its cuts with horizons, or its clock with cosmological time.
+(Witness:
 \path{analysis/w33_memory_is_desitter.py}.)
 
-\emph{The honest price.} Self-fueling is not a free lunch but a space-for-rate trade.
-Removing the distillation factory saves $\sim d^3$ qubits ($30$--$90\%$ of a standard
-device), but the magic is replenished only at the contextual-fraction rate
-$1/\Phi_4=1/10$ per cycle, so the non-Clifford throughput is capped: a circuit whose
-non-Clifford fraction $f\le1/\Phi_4=1/10$ runs with no factory and no slowdown (a pure
-win), while $f>1/10$ is throttled by $\Phi_4 f=10f$ (or needs $10f$ times more cores).
-The remaining costs are routine matter-shell error correction (paid anyway), the clock
-renewal bandwidth, and the $q=3$ fresh-magic-per-round deficit. The advantage is real
-and bounded: the $d^3$ distillation \emph{space} is traded for a non-Clifford \emph{rate}
-cap at $1/\Phi_4$. (Witness: \path{analysis/w33_self_fueling_cost.py}.)
+\emph{Conditional cost model.} If the missing protected injection consumes
+resource states at the contextual-fraction rate $1/\Phi_4=1/10$ per cycle,
+then a circuit with non-Clifford fraction $f\le1/10$ would avoid rate
+throttling, while $f>1/10$ would require the model factor $10f$ in time or
+parallel cores.  The finite fraction is exact; the replenishment law, factory
+removal, and claimed hardware saving remain conditional on the unbuilt
+compiler and threshold. (Witness: \path{analysis/w33_self_fueling_cost.py}.)
 \end{theorem}
 
 %======================================================================
@@ -3555,22 +3534,20 @@ numerically; the local field strength is $su(2)$ per edge while the global
 holonomy group is $\mathrm{Sp}(4,3)$.)} (Witness:
 \texttt{analysis/w33\_lattice\_to\_continuum\_ym.py}.)
 
-And the discrete theory is already \emph{gapped}, exactly: a gauge theory on a
-finite graph has the graph Laplacian as its kinetic operator, so its mass gap is
-the algebraic connectivity of the matter graph. Since $Q=\mathrm{SRG}(40,27,18,18)$
+The finite graph is spectrally \emph{gapped}, exactly. Since
+$Q=\mathrm{SRG}(40,27,18,18)$
 is an expander, that gap is large and substrate-fixed --- the adjacency spectrum
 is $\{27^1,3^{15},(-3)^{24}\}$, so the Laplacian $L_Q=27I-A_Q$ has spectrum
 $\{0^1,24^{15},30^{24}\}$ and
 \[
-  \text{mass gap}=24=f,
+  \text{finite Laplacian gap}=24,
 \]
-the smallest nonzero eigenvalue, at multiplicity $g=15$ (the gauge-sector
-dimension), with the top eigenvalue $30$ at multiplicity $f=24$ (the matter
-dimension). The Laplacian multiplicities are the Standard-Model sector sizes and
-the gap is the matter count; confinement is structural, forced by the expander
-geometry of $Q$, with no continuum limit needed to certify that the gap is
-nonzero. \emph{(This is the gap of the exact finite theory --- the substrate's
-shadow of the Yang--Mills mass gap, not a continuum proof.)} (Witness:
+the smallest nonzero eigenvalue, at multiplicity $15$, with top eigenvalue
+$30$ at multiplicity $24$.  These are exact finite spectral sectors.
+They are not a Yang--Mills mass-gap theorem: no continuum Hilbert space,
+Hamiltonian, confinement estimate, or uniform positive gap along a
+continuum-limit family has been constructed here.  In particular the
+multiplicities are not particle identifications. (Witness:
 \texttt{analysis/w33\_mass\_gap\_from\_matter\_graph.py}.)
 
 \subsection{Why ``holo-net'': the network is a holographic code}
@@ -3584,12 +3561,13 @@ edge-cut, and the Bekenstein--Hawking law $S_{\mathrm{BH}}=A/4$ has its universa
 $\tfrac14$ \emph{equal to} the code's distance bound $1/d_Z$: the $W(3,3)$ CSS
 code has $d_Z=4=\mu$, so $S_{\mathrm{BH}}=A/d_Z=A/\mu$. This finite dictionary
 uses the one-sided $Z$-distance; the full CSS distance remains $d=3$.
-\emph{(ii) Discrete AdS/CFT.} A holographic duality maps a negatively curved bulk
-to a conformal boundary. The collinearity graph has adjacency spectrum
+\emph{(ii) A finite spectral analogy, not AdS/CFT.} The collinearity graph has adjacency spectrum
 $\{12,2^{24},(-4)^{15}\}$; its single \emph{negative} (hyperbolic) eigenvalue
 $-4$ has multiplicity $g=15=\dim\mathrm{SO}(4,2)$, the $4$-dimensional conformal
-group. The $15$ negative-curvature bulk modes match the $15$ conformal-boundary
-generators exactly --- discrete AdS/CFT with no continuum strings. (Dually, the
+group. This is an equality of dimensions, not a bulk--boundary map.  No boundary
+operator algebra, reconstruction channel, state dictionary, or equality of
+correlators has been built, so it does not establish a discrete AdS/CFT
+duality. (Dually, the
 matter graph's Laplacian $\{0,24^{15},30^{24}\}$ puts the same $g/f$
 multiplicities on the gauge mass-gap spectrum.)
 \emph{(iii) The fractal is the holographic principle.} The nested-shell fractal
@@ -3602,15 +3580,15 @@ boundary, and bulk--boundary map are all substrate arithmetic --- which is the
 literal content of ``holo-net''. (Witness:
 \texttt{analysis/w33\_holographic\_architecture.py}.)
 
-\subsection{The boundary central charge is $f=24$: the Monster CFT is the
-holonet's holographic dual}
+\subsection{Rank $24$: the finite moonshine/CFT comparison}
 \label{sec:central-charge}
 
-The holographic boundary even has a definite central charge, and it is the
-substrate's master invariant. The code lattices climb the moonshine ladder
+The finite lattice tower has a distinguished rank $24$, which can be compared
+with central-charge-$24$ constructions without identifying a holographic
+boundary. The code lattices climb the moonshine ladder
 established above --- $A_2$ at $c=2$, $D_4$ at $c=4$, $E_8$ at $c=8$,
 then Leech and the Monster module $V^{\natural}$ at $c=24$ --- and the top rung
-fixes the boundary:
+supplies the arithmetic comparison:
 \[
   c \;=\; 24 \;=\; f \;=\; \chi(K3) \;=\; \mathrm{rank}(\Lambda_{24})
     \;=\; 2k \;=\; q^q-q ,
@@ -3625,12 +3603,12 @@ $\mathrm{AdS}_3$ gravity \cite{witten3d}, so its graded dimensions count the
 $\mathrm{AdS}_3$ black-hole microstates --- and those dimensions are exactly the
 quintic moonshine data of the substrate (e.g.\ $\dim V_5=333\,202\,640\,600$ from
 the master manuscript). Finally, Almheiri--Dong--Harlow showed that AdS/CFT
-\emph{is} a quantum error-correcting code \cite{adh}; the holonet is that code,
-with bulk $W(3,3)$ and boundary the Monster CFT. So one substrate number,
-$c=f=24$, ties the holographic boundary, the moonshine module, the matter sector,
-and pure $3$D gravity into a single object: the holonet is the quantum
-error-correcting code that AdS/CFT always was, and its boundary is monstrous
-moonshine. (Witness:
+\emph{is} a quantum error-correcting code \cite{adh}; that general observation
+does not identify this finite code with a bulk $W(3,3)$ theory or the Monster
+module with its boundary.  Such an identification would require an explicit
+encoding map and matching operator/correlator data.  Thus $c=f=24$ is retained
+here as a precise arithmetic and representation-theoretic parallel, not a
+proved gravity dual. (Witness:
 \texttt{analysis/w33\_holographic\_central\_charge.py}.)
 
 Two consequences sharpen this. First, the entropy is a microstate count: the
@@ -9372,6 +9350,40 @@ inputs.
 \input{analysis/BT1601_BT1603_holonet_insert.tex}
 \input{analysis/BT1648_BT1650_holonet_insert.tex}
 % BT1586 OPERATOR_OAM_FULL_APPENDIX END
+
+\subsection{Exact Schl\"afli--W33 transport capsule (Pass 1147)}
+\label{sec:schlaefli-w33-exact-capsule}
+
+\begin{theorem}[Integral Schl\"afli--Steinberg bridge]
+The three $432$-element $A_2$-colour carriers are three copies of the
+directed edges of the Schl\"afli graph
+$\operatorname{SRG}(27,16,10,8)$.  The explicit equivariant transform from
+one directed-edge carrier to the $81_-$ constituent has rank $81$, is odd
+under edge reversal, and sends its $432$ vectors to $216$ antipodal lines
+forming a tight frame.  On the integral contraction-zero chart its Smith
+profile is
+\[
+  1^{15},\quad 2^6,\quad 4^8,\quad 8^{29},\quad 40^{23};
+\]
+hence its internal bad primes are exactly $2$ and $5$.  Modulo $5$, its
+saturated $81$-space $S_5$ lies in the nonsplit exact sequence
+\[
+  0\longrightarrow I_{58}\longrightarrow S_5
+  \longrightarrow K(W_{3,3})_{(5)}\otimes\mathrm{sgn}
+  \longrightarrow0
+\]
+over both $W(E_6)$ and $PSp(4,3)$, and $I_{58}$ is its unique proper
+nonzero submodule.  Splitting the three colour copies into the trivial and
+augmentation Fourier sectors contributes the independent index $3^{81}$.
+Adjoining the disjoint rank-$45$ cubic block to the three rank-$81$ colour
+blocks gives an explicit rank-$288$ map with kernel dimension $1952$.
+\end{theorem}
+
+\paragraph{Scope.}
+This theorem concerns specified integral $W(E_6)$-modules, maps, lattices,
+and projective frame lines.  It neither identifies the three colour copies
+with particle generations nor supplies an optical state encoding, gate,
+decoder, or hardware performance claim.
 
 \begin{thebibliography}{99}
 \bibitem{w33paper} W.~Dahn, \emph{The $W(3,3)$ Substrate: Master
