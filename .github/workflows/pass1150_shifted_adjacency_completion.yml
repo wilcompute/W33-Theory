@@ -1,0 +1,36 @@
+name: Pass 1150 complete shifted-adjacency migration
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass1150_finalize_shifted_adjacency_migration.py'
+      - '.github/workflows/pass1150_shifted_adjacency_completion.yml'
+permissions:
+  contents: write
+jobs:
+  complete-migration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install pytest
+      - name: Apply all pending dispositions
+        run: python analysis/w33_pass1150_finalize_shifted_adjacency_migration.py --apply
+      - name: Re-run strict descendant audit
+        run: python scripts/check_shifted_adjacency_descendants.py --root . --write-report data/w33_shifted_adjacency_descendant_audit.json
+      - name: Run focused regressions
+        run: pytest -q tests/test_w33_pass1150_migration.py tests/test_pass1140_shifted_adjacency_publication_repair.py
+      - name: Commit completion delta
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Pass 1150: complete shifted-adjacency corpus migration'
+          git pull --rebase origin master
+          git push origin master

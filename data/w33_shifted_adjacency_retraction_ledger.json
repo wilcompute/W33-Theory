@@ -1,44 +1,52 @@
 {
-  "schema": "w33.shifted_adjacency.retraction_ledger.v3",
+  "schema": "w33.shifted_adjacency.retraction_ledger.v4",
   "canonical_correction": "analysis/2026-07-27_shifted_adjacency_spectral_erratum.md",
   "canonical_verifier": "analysis/w33_shifted_adjacency_spectral_audit.py",
   "primary_blob_manifest": "archive/retracted_shifted_adjacency_2026_07_27/PRIMARY_BLOB_MANIFEST.json",
-  "correct_spectrum": {"11": 1, "1": 24, "-5": 15},
+  "correct_spectrum": {
+    "11": 1,
+    "1": 24,
+    "-5": 15
+  },
   "historical_signature": {
-    "spectrum": {"-7": 6, "-1": 16, "5": 10},
+    "spectrum": {
+      "-7": 6,
+      "-1": 16,
+      "5": 10
+    },
     "cubic": "(t+1)((t+1)^2-36)",
     "determinant": "(1-5x)^10(1+x)^16(1+7x)^6"
   },
   "known_descendants": {
     "analysis/w33_BREAKTHROUGH_58_master_cubic_Z_anomaly.py": "ACTIVE_RETRACTION_STUB:c2841e113a742df9f53b5144893695c7c20aef99",
     "data/w33_BREAKTHROUGH_58_master_cubic_Z_anomaly.json": "ACTIVE_RETRACTION_RECORD:b6457bd7b1d045285d5f60561b0a68205e175e53",
-    "analysis/w33_BREAKTHROUGH_75_master_synthesis_v3.py": "retracted_synthesis_descendant_pending_stub",
+    "analysis/w33_BREAKTHROUGH_75_master_synthesis_v3.py": "ACTIVE_FAIL_CLOSED_RETRACTION_GUARD:PASS1150",
     "analysis/w33_MLXXI_MLXXX_w33_paper_spectral_dirac.py": "ACTIVE_RETRACTION_STUB:3802405be30db4eb2a65bc904dcb5ceb0bf7a845",
     "data/w33_MLXXI_MLXXX_w33_paper_spectral_dirac.json": "ACTIVE_RETRACTION_RECORD:f80c8202f7eb787549f6421731fc33ba755d1736",
-    "analysis/w33_BREAKTHROUGH_476_hesse_uniqueness_potts_configurations.py": "legacy_cross_reference_pending_patch",
-    "exploration/PART_CCCXII_DIRAC_DETERMINANT_OPERATOR_COMPILER.py": "retracted_descendant_pending_stub",
-    "exploration/PART_CCCXXV_CANONICAL_ACTION_KERNEL.py": "retracted_descendant_pending_stub",
-    "exploration/w33_partition_function_deep.py": "retracted_descendant_pending_stub",
-    "exploration/w33_complete_sm_derivation.py": "legacy_derivation_pending_patch",
-    "exploration/w33_octic_spectral_geometry.py": "legacy_derivation_pending_patch",
-    "exploration/w33_ckm_from_resolvent.py": "legacy_derivation_pending_patch",
-    "exploration/w33_trace_tower_complete.py": "legacy_derivation_pending_patch",
-    "exploration/w33_mass_matrix_from_taylor.py": "legacy_derivation_pending_patch",
-    "exploration/w33_d5_isomorphism_test.py": "legacy_cross_reference_pending_patch",
-    "tests/test_deep_structure_and_predictions.py": "legacy_test_quarantined_pending_marker",
-    "tests/test_anomaly_polynomial.py": "legacy_test_quarantined_pending_marker",
-    "tests/test_grand_unified_closure.py": "legacy_test_quarantined_pending_marker",
-    "tests/test_w33_refinement_bridge_synthesis.py": "legacy_test_quarantined_pending_marker",
-    "tests/test_tower_generation_rules.py": "legacy_test_quarantined_pending_marker",
-    "OPEN_FRONTIERS.md": "historical_summary_pending_patch",
-    "docs/COMPLETE_SUMMARY.md": "historical_summary_pending_patch",
-    "docs/new_connections_research.md": "historical_research_note_pending_patch",
-    "docs/README_LIVING_PAPER_2026_02_11.md": "historical_reader_note_pending_patch",
-    "manuscripts/tex/part22_fano_synthesis.tex": "historical_manuscript_fragment_pending_patch",
-    "tools/toe_unified_derivation.py": "legacy_derivation_pending_patch",
+    "analysis/w33_BREAKTHROUGH_476_hesse_uniqueness_potts_configurations.py": "ACTIVE_FAIL_CLOSED_RETRACTION_GUARD:PASS1150",
+    "exploration/PART_CCCXII_DIRAC_DETERMINANT_OPERATOR_COMPILER.py": "ACTIVE_FAIL_CLOSED_RETRACTION_GUARD:PASS1150",
+    "exploration/PART_CCCXXV_CANONICAL_ACTION_KERNEL.py": "ACTIVE_FAIL_CLOSED_RETRACTION_GUARD:PASS1150",
+    "exploration/w33_partition_function_deep.py": "ACTIVE_FAIL_CLOSED_RETRACTION_GUARD:PASS1150",
+    "exploration/w33_complete_sm_derivation.py": "ACTIVE_FAIL_CLOSED_RETRACTION_GUARD:PASS1150",
+    "exploration/w33_octic_spectral_geometry.py": "ACTIVE_FAIL_CLOSED_RETRACTION_GUARD:PASS1150",
+    "exploration/w33_ckm_from_resolvent.py": "ACTIVE_FAIL_CLOSED_RETRACTION_GUARD:PASS1150",
+    "exploration/w33_trace_tower_complete.py": "ACTIVE_FAIL_CLOSED_RETRACTION_GUARD:PASS1150",
+    "exploration/w33_mass_matrix_from_taylor.py": "ACTIVE_FAIL_CLOSED_RETRACTION_GUARD:PASS1150",
+    "exploration/w33_d5_isomorphism_test.py": "ACTIVE_FAIL_CLOSED_RETRACTION_GUARD:PASS1150",
+    "tests/test_deep_structure_and_predictions.py": "LEGACY_TEST_SKIP_MARKER:PASS1150",
+    "tests/test_anomaly_polynomial.py": "LEGACY_TEST_SKIP_MARKER:PASS1150",
+    "tests/test_grand_unified_closure.py": "LEGACY_TEST_SKIP_MARKER:PASS1150",
+    "tests/test_w33_refinement_bridge_synthesis.py": "LEGACY_TEST_SKIP_MARKER:PASS1150",
+    "tests/test_tower_generation_rules.py": "LEGACY_TEST_SKIP_MARKER:PASS1150",
+    "OPEN_FRONTIERS.md": "VISIBLE_ERRATUM_NOTICE:PASS1150",
+    "docs/COMPLETE_SUMMARY.md": "VISIBLE_ERRATUM_NOTICE:PASS1150",
+    "docs/new_connections_research.md": "VISIBLE_ERRATUM_NOTICE:PASS1150",
+    "docs/README_LIVING_PAPER_2026_02_11.md": "VISIBLE_ERRATUM_NOTICE:PASS1150",
+    "manuscripts/tex/part22_fano_synthesis.tex": "VISIBLE_ERRATUM_NOTICE:PASS1150",
+    "tools/toe_unified_derivation.py": "ACTIVE_FAIL_CLOSED_RETRACTION_GUARD:PASS1150",
     "w33_paper.tex": "corrected_primary_surface",
     "w33_paper_v2.tex": "superseded_with_visible_retraction",
-    "single_photon_universal_computation.tex": "superseded_historical_prose_pending_inline_patch",
+    "single_photon_universal_computation.tex": "VISIBLE_ERRATUM_NOTICE:PASS1150",
     "W36_PAPER.tex": "superseded_with_visible_retraction_and_corrected_spectral_chapter",
     "W33_FOR_EVERYONE.tex": "corrected_reader_surface",
     "out.txt": "historical_console_capture",
@@ -138,7 +146,10 @@
     "tests/test_toe_architecture_compiler_cccxxiv.py": "legacy_test_quarantined",
     "tests/test_unified_internal_action_cccxliii.py": "legacy_test_quarantined",
     "tests/test_w33_propagator_spectral_action.py": "corrected_regression_with_historical_comparison",
-    "tests/test_w33_z_master_polynomial.py": "legacy_test_quarantined"
+    "tests/test_w33_z_master_polynomial.py": "legacy_test_quarantined",
+    "PASS1148_1152_EXACT_CROSSED_BRIDGE_RELEASE.md": "corrected_release_surface_with_historical_signature:PASS1150",
+    "analysis/w33_pass1150_finalize_shifted_adjacency_migration.py": "audit_or_erratum:PASS1150",
+    "data/w33_pass1150_shifted_adjacency_completion.json": "canonical_audit_certificate:PASS1150"
   },
   "excluded_archival_prefixes": [
     "archive/",
@@ -146,5 +157,16 @@
     "w33_closure_package_v2/previous_bundle_contents/",
     "w33_closure_package_v2/w33_closure_package_v2/previous_bundle_contents/"
   ],
-  "policy": "Registration quarantines a known historical descendant; it does not validate or promote its claims. New files with the signatures remain fatal unless explicitly tagged corrected/retracted. ACTIVE_RETRACTION_STUB and ACTIVE_RETRACTION_RECORD entries are fail-closed on master; pending entries are owned by the Pass-1144 corpus materializer."
+  "policy": "Registration quarantines a known historical descendant; it does not validate or promote its claims. New files with the signatures remain fatal unless explicitly tagged corrected/retracted. ACTIVE_RETRACTION_STUB and ACTIVE_RETRACTION_RECORD entries are fail-closed on master; pending entries are owned by the Pass-1144 corpus materializer.",
+  "pass1150_completion": {
+    "pending_before": 23,
+    "pending_after": 0,
+    "last_run_pending_before": 0,
+    "report": "data/w33_pass1150_shifted_adjacency_completion.json",
+    "self_registrations": {
+      "PASS1148_1152_EXACT_CROSSED_BRIDGE_RELEASE.md": "corrected_release_surface_with_historical_signature:PASS1150",
+      "analysis/w33_pass1150_finalize_shifted_adjacency_migration.py": "audit_or_erratum:PASS1150",
+      "data/w33_pass1150_shifted_adjacency_completion.json": "canonical_audit_certificate:PASS1150"
+    }
+  }
 }

@@ -1,0 +1,49 @@
+name: Passes 1320-1324 Transport Linking Release
+
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1320_1324_common.py'
+      - 'analysis/w33_pass1320_1324_hecke.py'
+      - 'analysis/w33_pass1320_1324_transport_core.py'
+      - 'analysis/w33_pass1320_1324_linking.py'
+      - 'analysis/w33_pass1320_1324_transport_linking.py'
+      - 'analysis/BT1320_BT1324_transport_linking_theorem.tex'
+      - 'analysis/w33_paper_pass1320_1324_theorem_ledger.tex'
+      - 'analysis/photonic_holonet_pass1320_1324_theorem_ledger.tex'
+      - 'data/w33_pass1320_1324_transport_linking.json'
+      - 'tests/test_w33_pass1320_1324.py'
+      - 'data/w33_pass_namespace_registry_v2.json'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass1320_1324_common.py'
+      - 'analysis/w33_pass1320_1324_hecke.py'
+      - 'analysis/w33_pass1320_1324_transport_core.py'
+      - 'analysis/w33_pass1320_1324_linking.py'
+      - 'analysis/w33_pass1320_1324_transport_linking.py'
+      - 'analysis/BT1320_BT1324_transport_linking_theorem.tex'
+      - 'analysis/w33_paper_pass1320_1324_theorem_ledger.tex'
+      - 'analysis/photonic_holonet_pass1320_1324_theorem_ledger.tex'
+      - 'data/w33_pass1320_1324_transport_linking.json'
+      - 'tests/test_w33_pass1320_1324.py'
+      - 'data/w33_pass_namespace_registry_v2.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  transport-linking:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact runtime
+        run: python -m pip install --disable-pip-version-check numpy sympy pytest
+      - name: Recompute exact transport/linking certificate
+        run: python analysis/w33_pass1320_1324_transport_linking.py
+      - name: Focused regression tests
+        run: pytest -q tests/test_w33_pass1320_1324.py

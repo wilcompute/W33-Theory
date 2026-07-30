@@ -1,0 +1,25 @@
+{
+  "schema": "w33.pass1321.full_hecke_matrix_units.v1",
+  "status": "PASS",
+  "pass1321_full_hecke_matrix_units": {
+    "wedderburn_dimension": 26,
+    "noncommutative_blocks": [
+      "6",
+      "20",
+      "30",
+      "64"
+    ],
+    "all_matrix_unit_laws_verified": true,
+    "block_files": {
+      "1": "w33_pass1321_hecke_block_1.json",
+      "6": "w33_pass1321_hecke_block_6.json",
+      "15": "w33_pass1321_hecke_block_15.json",
+      "15a": "w33_pass1321_hecke_block_15a.json",
+      "20": "w33_pass1321_hecke_block_20.json",
+      "30": "w33_pass1321_hecke_block_30.json",
+      "60a": "w33_pass1321_hecke_block_60a.json",
+      "64": "w33_pass1321_hecke_block_64.json",
+      "81_minus": "w33_pass1321_hecke_block_81-minus.json"
+    }
+  }
+}

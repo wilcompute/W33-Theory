@@ -1,0 +1,37 @@
+{
+  "classification": "matrix amplification, not a wreath-product identification",
+  "common_support_triality_equivariant": {
+    "blocks": {
+      "1": "M_2(C) + M_1(C)",
+      "15a": "M_2(C) + M_1(C)",
+      "20": "M_4(C) + M_3(C)",
+      "60a": "M_2(C) + M_1(C)"
+    },
+    "dimension": 40,
+    "wedderburn": "3*(M_2(C)+C) + (M_4(C)+M_3(C))"
+  },
+  "common_support_unsymmetrized": {
+    "blocks": {
+      "1": "M_4(C)",
+      "15a": "M_4(C)",
+      "20": "M_10(C)",
+      "60a": "M_4(C)"
+    },
+    "dimension": 148
+  },
+  "end_G_three_carriers": {
+    "dimension": 234,
+    "structure": "H_26 tensor M_3(C)"
+  },
+  "hom_Y_to_one_X": 6,
+  "hom_Y_to_three_X": 18,
+  "hom_triality_character": "6*(trivial + standard)",
+  "single_carrier_dimension": 432,
+  "single_hecke_dimension": 26,
+  "three_carrier_dimension": 1296,
+  "triality_fixed_endomorphisms": {
+    "dimension": 52,
+    "structure": "H_26 tensor (C + C) = H_26 + H_26"
+  },
+  "triality_invariant_hom": 6
+}

@@ -1,0 +1,153 @@
+{
+  "checks": {
+    "cycle_copy_nonselection_proved": true,
+    "dual_engine_agreement": true,
+    "hecke_26_smith_exact": true,
+    "modular_bad_primes_classified": true,
+    "species20_normalizer_exact": true,
+    "three_carrier_triality_globalized": true,
+    "transport_smith_exact": true
+  },
+  "pass1325": {
+    "classification": "matrix amplification, not a wreath-product identification",
+    "common_support_triality_equivariant": {
+      "blocks": {
+        "1": "M_2(C) + M_1(C)",
+        "15a": "M_2(C) + M_1(C)",
+        "20": "M_4(C) + M_3(C)",
+        "60a": "M_2(C) + M_1(C)"
+      },
+      "dimension": 40,
+      "wedderburn": "3*(M_2(C)+C) + (M_4(C)+M_3(C))"
+    },
+    "common_support_unsymmetrized": {
+      "blocks": {"1":"M_4(C)","15a":"M_4(C)","20":"M_10(C)","60a":"M_4(C)"},
+      "dimension": 148
+    },
+    "end_G_three_carriers": {"dimension":234,"structure":"H_26 tensor M_3(C)"},
+    "hom_Y_to_one_X": 6,
+    "hom_Y_to_three_X": 18,
+    "hom_triality_character": "6*(trivial + standard)",
+    "single_carrier_dimension": 432,
+    "single_hecke_dimension": 26,
+    "three_carrier_dimension": 1296,
+    "triality_fixed_endomorphisms": {"dimension":52,"structure":"H_26 tensor (C + C) = H_26 + H_26"},
+    "triality_invariant_hom": 6
+  },
+  "pass1326": {
+    "hecke_matrix_unit_lattice": {
+      "bad_primes": [2,3,5],
+      "block_denominator_lcm": {"1":432,"15":144,"15a":144,"20":6912,"30":144,"6":720,"60a":72,"64":540,"81_minus":80},
+      "determinant_factorization": {"2":57,"3":21,"5":2},
+      "p_primary_exponents": {
+        "2": [0,0,0,0,0,1,1,1,1,1,1,1,2,2,2,2,2,3,3,3,4,4,5,5,5,8],
+        "3": [0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,2,2,3,3,3],
+        "5": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1]
+      },
+      "primitive_column_records": [
+        {"primitive_scale":432,"species":"1","unit":"0,0"},
+        {"primitive_scale":144,"species":"6","unit":"0,0"},
+        {"primitive_scale":720,"species":"6","unit":"0,1"},
+        {"primitive_scale":48,"species":"6","unit":"1,0"},
+        {"primitive_scale":720,"species":"6","unit":"1,1"},
+        {"primitive_scale":144,"species":"15","unit":"0,0"},
+        {"primitive_scale":144,"species":"15a","unit":"0,0"},
+        {"primitive_scale":864,"species":"20","unit":"0,0"},
+        {"primitive_scale":108,"species":"20","unit":"0,1"},
+        {"primitive_scale":108,"species":"20","unit":"0,2"},
+        {"primitive_scale":1152,"species":"20","unit":"1,0"},
+        {"primitive_scale":432,"species":"20","unit":"1,1"},
+        {"primitive_scale":144,"species":"20","unit":"1,2"},
+        {"primitive_scale":768,"species":"20","unit":"2,0"},
+        {"primitive_scale":96,"species":"20","unit":"2,1"},
+        {"primitive_scale":864,"species":"20","unit":"2,2"},
+        {"primitive_scale":144,"species":"30","unit":"0,0"},
+        {"primitive_scale":144,"species":"30","unit":"0,1"},
+        {"primitive_scale":48,"species":"30","unit":"1,0"},
+        {"primitive_scale":144,"species":"30","unit":"1,1"},
+        {"primitive_scale":72,"species":"60a","unit":"0,0"},
+        {"primitive_scale":270,"species":"64","unit":"0,0"},
+        {"primitive_scale":135,"species":"64","unit":"0,1"},
+        {"primitive_scale":36,"species":"64","unit":"1,0"},
+        {"primitive_scale":270,"species":"64","unit":"1,1"},
+        {"primitive_scale":80,"species":"81_minus","unit":"0,0"}
+      ],
+      "primitive_matrix_sha256": "d5deacc0bb178a6deb8bd8631cd4b73135979986e8c5cd1f3fee21f46ca7a207",
+      "rank_mod_prime": {"11":26,"2":5,"3":13,"5":24,"7":26},
+      "smith_diagonal": [1,1,1,1,1,2,2,2,2,2,2,2,4,12,12,12,12,24,24,24,48,144,288,864,4320,34560],
+      "uniform_denominator_lcm": 34560
+    },
+    "modular_verdict": {
+      "characteristic_2":"transport 6->3; Hecke 26->5",
+      "characteristic_3":"transport 6->3; Hecke 26->13",
+      "characteristic_5":"transport remains 6; Hecke 26->24",
+      "other_primes":"both lattices retain full rank"
+    },
+    "transport_lattice": {
+      "bad_primes":[2,3],
+      "determinant":3456,
+      "determinant_factorization":{"2":7,"3":3},
+      "primitive_matrix":[[1,1,1,1,1,1],[1,1,1,-3,-3,-3],[1,-1,0,-3,0,3],[1,-2,1,3,-3,0],[1,1,-2,1,-2,1],[2,-1,-1,0,3,-3]],
+      "rank_mod_prime":{"2":3,"3":3,"5":6,"7":6},
+      "smith_diagonal":[1,1,1,12,12,24]
+    }
+  },
+  "pass1327": {
+    "correction":"Pass 1305 did not run AtlasRep and placed multiplicity three on the wrong carrier; the literal 432 carrier has multiplicity three, while the 480 carrier has multiplicity one.",
+    "invariant_ring":"R[x0,x1,x2]^S3 = R[e1,e2,e3]",
+    "partial_isometry_normalization":{"gram":"I_3","stabilizer":"full S3","verdict":"2:3:2 anisotropy is an integral normalization effect, not dynamical copy selection"},
+    "primitive_integral_invariants":{"discriminant":0,"e1":7,"e2":16,"e3":12,"stabilizer_order":2},
+    "primitive_integral_scale_ratio":[2,3,2],
+    "single_carrier_species20": {
+      "commutant":"M_3(R)",
+      "idempotent_permutation_quotient":"S3",
+      "orientation_preserving_order":24,
+      "orientation_preserving_subgroup":"W(B3)^+ isomorphic S4",
+      "orthogonal_normalizer":"C2^3 semidirect S3 = W(B3)",
+      "orthogonal_normalizer_order":48,
+      "projective_orthogonal_quotient_order":24,
+      "setwise_normalizer_in_GL3":"monomial group (R^x)^3 semidirect S3"
+    },
+    "three_carrier_grid": {
+      "axes":9,
+      "coherent_grid_orbitals":4,
+      "coherent_grid_scheme":"Hamming grid H(2,3) without coordinate swap",
+      "coherent_normalizer":"S3_internal x S3_triality",
+      "coherent_order":36,
+      "independent_row_gauge":"S3 wr S3 = S3^3 semidirect S3",
+      "independent_row_gauge_order":1296
+    }
+  },
+  "pass1328": {
+    "aligned_hom_hashimoto_action":[11,-1,-1,-1,-1,-1],
+    "boundary":"A single non-averaged cycle may break symmetry and select coordinates, but that is an external gauge choice, not a canonical W(E6)-equivariant selector.",
+    "distinguishes_species20_copies":false,
+    "length_7_power_action":[19487171,-1,-1,-1,-1,-1],
+    "length_8_power_action":[214358881,1,1,1,1,1],
+    "orbit_sum_theorem":"Every W(E6)-averaged primitive-cycle operator C on Y is scalar on the multiplicity-one Y_20 irrep; hence T_i C = lambda_C T_i for i=0,1,2.",
+    "species20_length_7_block":"-I_3",
+    "species20_length_8_block":"+I_3"
+  },
+  "pass1329": {
+    "gap_certificate":"analysis/w33_pass1329_triality_integral_check.g",
+    "gap_runtime_available_locally":false,
+    "gap_status":"generated and CI-wired; local execution performed only when GAP is installed",
+    "parallel_scope_corrections": {
+      "pass1298":"Its 9-class object is the tensor square of the rank-3 W33 scheme, not the literal 26-dimensional W(E6)/S5 coset Hecke algebra.",
+      "pass1305":"Generic coordinate swaps in M3 are not an AtlasRep computation; its 480/432 multiplicities are reversed relative to the literal modules."
+    },
+    "stdlib_character_arithmetic": {
+      "equivariant_linking_dimension_40":true,
+      "global_linking_dimension_148":true,
+      "hecke_dimension_26":true,
+      "hom_dimension_6":true,
+      "triality_end_dimension_234":true,
+      "triality_fixed_dimension_52":true,
+      "x_dimension_432":true,
+      "y_dimension_480":true
+    },
+    "sympy_exact_matrix_engine":"PASS"
+  },
+  "schema":"w33.pass1325_1329.triality_integral_gauge.v1",
+  "status":"PASS"
+}

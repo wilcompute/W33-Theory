@@ -1,0 +1,14 @@
+{
+  "schema": "w33.pass1324_manuscript_ledger_promotion.v1",
+  "status": "PASS",
+  "scope": "Exact finite permutation representations, rational association algebras, and equivariant linking operators only.",
+  "pass1324_manuscript_ledger_promotion": {
+    "shared_insert": "analysis/BT1320_BT1324_transport_linking_theorem.tex",
+    "w33_paper_ledger": "analysis/w33_paper_pass1320_1324_theorem_ledger.tex",
+    "photonic_holonet_ledger": "analysis/photonic_holonet_pass1320_1324_theorem_ledger.tex",
+    "contains_formal_theorem": true,
+    "contains_exact_proof": true,
+    "contains_retraction_table": true,
+    "main_source_integration_policy": "Companion current-claims ledgers are canonical and compile-ready; chronological manuscript bodies remain unmutated to preserve their explicit historical-record policy."
+  }
+}

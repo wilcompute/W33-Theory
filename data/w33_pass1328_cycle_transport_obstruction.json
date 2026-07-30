@@ -1,0 +1,10 @@
+{
+  "aligned_hom_hashimoto_action": [11,-1,-1,-1,-1,-1],
+  "boundary": "A single non-averaged cycle may break symmetry and select coordinates, but that is an external gauge choice, not a canonical W(E6)-equivariant selector.",
+  "distinguishes_species20_copies": false,
+  "length_7_power_action": [19487171,-1,-1,-1,-1,-1],
+  "length_8_power_action": [214358881,1,1,1,1,1],
+  "orbit_sum_theorem": "Every W(E6)-averaged primitive-cycle operator C on Y is scalar on the multiplicity-one Y_20 irrep; hence T_i C = lambda_C T_i for i=0,1,2.",
+  "species20_length_7_block": "-I_3",
+  "species20_length_8_block": "+I_3"
+}

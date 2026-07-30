@@ -1,0 +1,388 @@
+{
+  "schema": "w33.pass1320_six_channel_diagonalization.v1",
+  "status": "PASS",
+  "scope": "Exact finite permutation representations, rational association algebras, and equivariant linking operators only.",
+  "pass1320_six_channel_diagonalization": {
+    "transport_orbital_sizes": [
+      51840,
+      51840,
+      51840,
+      17280,
+      17280,
+      17280
+    ],
+    "transport_label_sha256": "cfd5228e39ac5e13309735841ca17968e0d71821f6c44e9900dd777638dd6a0a",
+    "species_projection_matrices": {
+      "1": [
+        [
+          "1/4",
+          "1/4",
+          "1/4",
+          "1/4",
+          "1/4",
+          "1/4"
+        ],
+        [
+          "1/4",
+          "1/4",
+          "1/4",
+          "1/4",
+          "1/4",
+          "1/4"
+        ],
+        [
+          "1/4",
+          "1/4",
+          "1/4",
+          "1/4",
+          "1/4",
+          "1/4"
+        ],
+        [
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12"
+        ],
+        [
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12"
+        ],
+        [
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12"
+        ]
+      ],
+      "15a": [
+        [
+          "1/12",
+          "1/12",
+          "1/12",
+          "-1/4",
+          "-1/4",
+          "-1/4"
+        ],
+        [
+          "1/12",
+          "1/12",
+          "1/12",
+          "-1/4",
+          "-1/4",
+          "-1/4"
+        ],
+        [
+          "1/12",
+          "1/12",
+          "1/12",
+          "-1/4",
+          "-1/4",
+          "-1/4"
+        ],
+        [
+          "-1/12",
+          "-1/12",
+          "-1/12",
+          "1/4",
+          "1/4",
+          "1/4"
+        ],
+        [
+          "-1/12",
+          "-1/12",
+          "-1/12",
+          "1/4",
+          "1/4",
+          "1/4"
+        ],
+        [
+          "-1/12",
+          "-1/12",
+          "-1/12",
+          "1/4",
+          "1/4",
+          "1/4"
+        ]
+      ],
+      "20": [
+        [
+          "1/3",
+          "-1/6",
+          "-1/6",
+          "0",
+          "-1/2",
+          "1/2"
+        ],
+        [
+          "-1/6",
+          "7/12",
+          "-5/12",
+          "0",
+          "1/4",
+          "-1/4"
+        ],
+        [
+          "-1/6",
+          "-5/12",
+          "7/12",
+          "0",
+          "1/4",
+          "-1/4"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "2/3",
+          "-1/3",
+          "-1/3"
+        ],
+        [
+          "-1/6",
+          "1/12",
+          "1/12",
+          "-1/3",
+          "5/12",
+          "-1/12"
+        ],
+        [
+          "1/6",
+          "-1/12",
+          "-1/12",
+          "-1/3",
+          "-1/12",
+          "5/12"
+        ]
+      ],
+      "60a": [
+        [
+          "1/3",
+          "-1/6",
+          "-1/6",
+          "0",
+          "1/2",
+          "-1/2"
+        ],
+        [
+          "-1/6",
+          "1/12",
+          "1/12",
+          "0",
+          "-1/4",
+          "1/4"
+        ],
+        [
+          "-1/6",
+          "1/12",
+          "1/12",
+          "0",
+          "-1/4",
+          "1/4"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1/6",
+          "-1/12",
+          "-1/12",
+          "0",
+          "1/4",
+          "-1/4"
+        ],
+        [
+          "-1/6",
+          "1/12",
+          "1/12",
+          "0",
+          "-1/4",
+          "1/4"
+        ]
+      ]
+    },
+    "projection_ranks": {
+      "1": 1,
+      "15a": 1,
+      "20": 3,
+      "60a": 1
+    },
+    "aligned_channels": [
+      {
+        "species": "1",
+        "copy": 0,
+        "source_seed": 0,
+        "orbital_coefficients": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "degree": 1,
+        "squared_singular_scale": "207360",
+        "singular_value": "sqrt(207360)",
+        "singular_value_multiplicity": 1,
+        "hashimoto_eigenvalue": 11
+      },
+      {
+        "species": "15a",
+        "copy": 0,
+        "source_seed": 0,
+        "orbital_coefficients": [
+          "1",
+          "1",
+          "1",
+          "-3",
+          "-3",
+          "-3"
+        ],
+        "degree": 15,
+        "squared_singular_scale": "41472",
+        "singular_value": "sqrt(41472)",
+        "singular_value_multiplicity": 15,
+        "hashimoto_eigenvalue": -1
+      },
+      {
+        "species": "20",
+        "copy": 0,
+        "source_seed": 0,
+        "orbital_coefficients": [
+          "1",
+          "-1",
+          "0",
+          "-3",
+          "0",
+          "3"
+        ],
+        "degree": 20,
+        "squared_singular_scale": "20736",
+        "singular_value": "sqrt(20736)",
+        "singular_value_multiplicity": 20,
+        "hashimoto_eigenvalue": -1
+      },
+      {
+        "species": "20",
+        "copy": 1,
+        "source_seed": 0,
+        "orbital_coefficients": [
+          "1",
+          "-2",
+          "1",
+          "3",
+          "-3",
+          "0"
+        ],
+        "degree": 20,
+        "squared_singular_scale": "31104",
+        "singular_value": "sqrt(31104)",
+        "singular_value_multiplicity": 20,
+        "hashimoto_eigenvalue": -1
+      },
+      {
+        "species": "20",
+        "copy": 2,
+        "source_seed": 0,
+        "orbital_coefficients": [
+          "1",
+          "1",
+          "-2",
+          "1",
+          "-2",
+          "1"
+        ],
+        "degree": 20,
+        "squared_singular_scale": "20736",
+        "singular_value": "sqrt(20736)",
+        "singular_value_multiplicity": 20,
+        "hashimoto_eigenvalue": -1
+      },
+      {
+        "species": "60a",
+        "copy": 0,
+        "source_seed": 0,
+        "orbital_coefficients": [
+          "2",
+          "-1",
+          "-1",
+          "0",
+          "3",
+          "-3"
+        ],
+        "degree": 60,
+        "squared_singular_scale": "10368",
+        "singular_value": "sqrt(10368)",
+        "singular_value_multiplicity": 60,
+        "hashimoto_eigenvalue": -1
+      }
+    ],
+    "hashimoto_action_on_transport_basis": [
+      [
+        2,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      [
+        3,
+        2,
+        3,
+        3,
+        3,
+        3
+      ],
+      [
+        3,
+        3,
+        2,
+        3,
+        3,
+        3
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ]
+    ],
+    "hashimoto_eigenvalue_multiplicities_on_hom": {
+      "11": 1,
+      "-1": 5
+    }
+  }
+}

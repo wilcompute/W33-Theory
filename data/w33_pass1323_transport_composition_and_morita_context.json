@@ -1,0 +1,56 @@
+{
+  "schema": "w33.pass1323.transport_composition_and_morita_context.v1",
+  "status": "PASS",
+  "pass1323_transport_composition_and_morita_context": {
+    "x_side_relation_tensor_sha256": "590ebbda81403b97bea212f7acf7c3760d8e26c222c0b5f5005b7648ff74b3b0",
+    "x_side_product_span_dimension": 12,
+    "y_side_product_span_dimension": 4,
+    "aligned_channel_partial_isometries": [
+      {
+        "species": "1",
+        "copy": 0,
+        "T_Tstar": "207360 * E_1[0,0]",
+        "Tstar_T": "207360 * P_1^Y"
+      },
+      {
+        "species": "15a",
+        "copy": 0,
+        "T_Tstar": "41472 * E_15a[0,0]",
+        "Tstar_T": "41472 * P_15a^Y"
+      },
+      {
+        "species": "20",
+        "copy": 0,
+        "T_Tstar": "20736 * E_20[0,0]",
+        "Tstar_T": "20736 * P_20^Y"
+      },
+      {
+        "species": "20",
+        "copy": 1,
+        "T_Tstar": "31104 * E_20[1,1]",
+        "Tstar_T": "31104 * P_20^Y"
+      },
+      {
+        "species": "20",
+        "copy": 2,
+        "T_Tstar": "20736 * E_20[2,2]",
+        "Tstar_T": "20736 * P_20^Y"
+      },
+      {
+        "species": "60a",
+        "copy": 0,
+        "T_Tstar": "10368 * E_60a[0,0]",
+        "Tstar_T": "10368 * P_60a^Y"
+      }
+    ],
+    "linking_associativity_verified": true,
+    "common_support_left_algebra": "C + C + M_3(C) + C",
+    "common_support_right_algebra": "C^4",
+    "hom_bimodule": "C + C + C^3 + C",
+    "linking_algebra": "M_2(C) + M_2(C) + M_4(C) + M_2(C)",
+    "linking_algebra_dimension": 28,
+    "species20_morita_context": "M_3(C) -- C^3 -- C is full; the three channels generate both support algebras.",
+    "x_side_table": "w33_pass1323_x_side_compositions.json",
+    "y_side_table": "w33_pass1323_y_side_compositions.json"
+  }
+}

@@ -1,17 +1,37 @@
 {
   "schema": "w33.pass_namespace_registry.v2",
   "status": "ACTIVE",
-  "date": "2026-07-27",
+  "date": "2026-07-30",
   "canonical_blocks": [
-    {"range":"1120-1124","owner":"glue-track","primary":"analysis/w33_pass1120_1124_boundaries_aliases_trees.md","commit":"ffea3eb56b484e263a039dd7945148b5aa89fb99"},
-    {"range":"1125-1128","owner":"glue-track","primary":"analysis/w33_pass1125_1128_filter_carrier_bridge.md","commit":"ac1fe8b030cec02d4864502a5cc64b22a6049259"},
-    {"range":"1132-1136","owner":"exact-audit-track","primary":"PASS1132_1136_EXACT_EXECUTION_RELEASE.md","artifacts":{"1132":"shifted-adjacency descendant quarantine and fatal guard","1133":"true three-projector functional calculus","1134":"three 432-orbit S5 stabilizers and conjugacy","1135":"complete 2195-dimensional cubic-kernel decomposition","1136":"occurrence-level 540 identity layer"}},
-    {"range":"1137-1140","owner":"parallel-codex-track","status":"RESERVED","artifacts":{"1137":"lossless complement switch and A5 shadow","1138":"explicit cubic incidence bridge","1139":"complete degree-540 species census","1140":"shifted-adjacency publication repair"},"reservation_commits":{"1137":"c80616d53501bc3a24477cc13052171972baf2c9","1138":"28b401148a4a73e64412e3e4618a4848afbc3118","1139":"ce664fd47327502eeac91ceac0551995a1b7f75d","1140":"e3a5a191962384619234f67709eeb34c7d6c6000"}},
-    {"range":"1142-1146","owner":"exact-bridge-corpus-track","primary":"PASS1142_1146_EXACT_RELEASE.md","artifacts":{"1142":"rank-26 noncommutative S5 Hecke algebra and 26-dimensional inter-orbit Hom spaces","1143":"explicit rank-81 Lambda^2(Aug26) Steinberg bridge","1144":"semantic shifted-adjacency descendant migration and erratum PDF","1145":"content-hashed zero-ambiguity 540 occurrence registry","1146":"A2-shell C3 torsor distinguishing the three 432 carriers and parallel-claim audit"}}
+    {"range":"1120-1128","owner":"glue-track","status":"COMPLETE"},
+    {"range":"1132-1136","owner":"exact-audit-track","status":"COMPLETE"},
+    {"range":"1137-1140","owner":"parallel-codex-track","status":"COMPLETE"},
+    {"range":"1142-1146","owner":"exact-bridge-corpus-track","status":"COMPLETE"},
+    {"range":"1148-1152","owner":"exact-crossed-bridge-track","status":"COMPLETE"},
+    {"range":"1153-1157","owner":"continuation-audit-track","status":"COMPLETE"},
+    {"range":"1158-1162","owner":"breakthrough-track","status":"COMPLETE"},
+    {"range":"1163-1172","owner":"execution-tracks-1-2","status":"COMPLETE"},
+    {"range":"1173-1182","owner":"execution-tracks-3-4","status":"COMPLETE"},
+    {"range":"1183-1192","owner":"execution-tracks-5-correction","status":"COMPLETE"},
+    {"range":"1193-1202","owner":"bridge-breakthrough-tracks","status":"COMPLETE"},
+    {"range":"1203-1212","owner":"frontier-tracks","status":"COMPLETE"},
+    {"range":"1213-1222","owner":"synthesis-outside-box-tracks","status":"COMPLETE"},
+    {"range":"1223-1232","owner":"absorption-conversion-tracks","status":"COMPLETE"},
+    {"range":"1233-1242","owner":"upgrade-frontier-tracks","status":"COMPLETE"},
+    {"range":"1243-1252","owner":"materialization-execution-tracks","status":"COMPLETE"},
+    {"range":"1253-1262","owner":"consolidation-universal-tracks","status":"COMPLETE"},
+    {"range":"1263-1272","owner":"dictionary-ledger-v6-tracks","status":"RETRACTED_BY_1318","reason":"The k=9 A5/Hecke chain used fixed-point vector (432,4,0,1,1), whose Burnside value is 43/5 rather than 9."},
+    {"range":"1273-1277","owner":"chi27-ledger-v7-track","status":"RETRACTED_BY_1318","reason":"Dimension-fit species assignments and coordinate-surrogate units were superseded by the literal 26-orbital and carrier-projector calculations."},
+    {"range":"1278-1282","owner":"parallel-absorption-ledger-v8-track","status":"COMPLETE_WITH_SCOPE"},
+    {"range":"1283-1287","owner":"m3-m4-levi-ledger-v9-track","status":"COMPLETE_WITH_SCOPE"},
+    {"range":"1288-1292","owner":"parallel-levi-gap-track","status":"COMPLETE_WITH_SCOPE"},
+    {"range":"1293-1297","owner":"parallel-jordan-integral-track","status":"AUXILIARY_SCOPE"},
+    {"range":"1298-1302","owner":"parallel-product-scheme-track","status":"SCOPE_CORRECTED_BY_1329","reason":"Pass 1298 constructs the tensor square of the rank-3 W33 scheme; it is not the literal 26-dimensional W(E6)/S5 coset Hecke algebra. Other claims in the block require their own claim-tier review."},
+    {"range":"1303-1307","owner":"parallel-lattice-gauge-track","status":"PARTIALLY_RETRACTED_BY_1327_1329","reason":"Pass 1305 did not execute AtlasRep and reversed the 432/480 species-20 multiplicities. The remaining claims are auxiliary until separately audited."},
+    {"range":"1310-1314","owner":"literal-a5-correction-track","status":"COMPLETE","artifacts":{"1310":"literal W(E6)/A5 coset action","1311":"A5 fixed-point census (432,24,36,2,2)","1312":"26 A5 orbits and exact orbit-size census","1313":"restricted A5 character and commutant dimension 3688","1314":"regression/correction firewall"}},
+    {"range":"1315-1319","owner":"exact-hecke-hashimoto-bridge-track","status":"COMPLETE","artifacts":{"1315":"26-dimensional Hecke Wedderburn decomposition and nine primitive central idempotents","1316":"exact 480-dimensional Hashimoto character decomposition","1317":"literal rank-20 species projector and carrier-level matrix units","1318":"fail-closed migration of false k=9 artifacts","1319":"six-dimensional exact Hom space between 432 and 480 carriers"}},
+    {"range":"1320-1324","owner":"transport-linking-morita-track","status":"COMPLETE","artifacts":{"1320":"six-channel species decomposition and singular scales","1321":"all 26 rational Hecke matrix units","1322":"species-20 Hashimoto restriction B=-I20","1323":"28-dimensional linking algebra and full M3-C Morita context","1324":"formal theorem/proof/retraction ledgers"}},
+    {"range":"1325-1329","owner":"triality-integral-gauge-track","status":"COMPLETE","artifacts":{"1325":"three-carrier triality globalization: dimensions 234,52,148,40","1326":"transport and 26-unit Hecke Smith forms; bad primes 2,3,5","1327":"species-20 normalizer, 3x3 gauge grid, and Pass1305 correction","1328":"length-7/8 and invariant primitive-cycle nonselection theorem","1329":"independent stdlib/SymPy reconstruction and GAP certificate"}}
   ],
-  "noncanonical_collisions": [
-    {"location":"pull/162","branch":"agent/pass1112-1116-qontrol-a2-runtime","colliding_labels":[1120,1121],"resolution":"mathematical content may be imported, but those pass labels are noncanonical; exact carrier/kernel results are reissued as Pass 1135"},
-    {"location":"transport commits b119001f/fd40676e","colliding_labels":[1137,1138,1139,1140],"resolution":"transport-only source package was renumbered to 1142-1146 immediately after parallel reservations appeared; no 1137-1140 theorem claim from this track is canonical"}
-  ],
-  "rule": "A pass number is canonical only when registered here with a primary master artifact or an explicit reservation. Branch-local and draft-PR pass labels are provisional."
+  "rule": "A pass number is canonical only when registered here. Retracted or scope-corrected blocks remain registered for provenance but cannot contribute active theorem claims outside their stated scope."
 }
