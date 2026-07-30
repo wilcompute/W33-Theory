@@ -1,0 +1,36 @@
+{
+  "correction": "Pass 1305 did not run AtlasRep and placed multiplicity three on the wrong carrier; the literal 432 carrier has multiplicity three, while the 480 carrier has multiplicity one.",
+  "invariant_ring": "R[x0,x1,x2]^S3 = R[e1,e2,e3]",
+  "partial_isometry_normalization": {
+    "gram": "I_3",
+    "stabilizer": "full S3",
+    "verdict": "2:3:2 anisotropy is an integral normalization effect, not dynamical copy selection"
+  },
+  "primitive_integral_invariants": {
+    "discriminant": 0,
+    "e1": 7,
+    "e2": 16,
+    "e3": 12,
+    "stabilizer_order": 2
+  },
+  "primitive_integral_scale_ratio": [2,3,2],
+  "single_carrier_species20": {
+    "commutant": "M_3(R)",
+    "idempotent_permutation_quotient": "S3",
+    "orientation_preserving_order": 24,
+    "orientation_preserving_subgroup": "W(B3)^+ isomorphic S4",
+    "orthogonal_normalizer": "C2^3 semidirect S3 = W(B3)",
+    "orthogonal_normalizer_order": 48,
+    "projective_orthogonal_quotient_order": 24,
+    "setwise_normalizer_in_GL3": "monomial group (R^x)^3 semidirect S3"
+  },
+  "three_carrier_grid": {
+    "axes": 9,
+    "coherent_grid_orbitals": 4,
+    "coherent_grid_scheme": "Hamming grid H(2,3) without coordinate swap",
+    "coherent_normalizer": "S3_internal x S3_triality",
+    "coherent_order": 36,
+    "independent_row_gauge": "S3 wr S3 = S3^3 semidirect S3",
+    "independent_row_gauge_order": 1296
+  }
+}
