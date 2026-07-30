@@ -3,6 +3,8 @@ name: Pass 1350 Brauer Tree Probe
 on:
   push:
     branches: [agent/pass1350-1354-brauer-basic-atlas-geometry-pdfs]
+  pull_request:
+    branches: [master]
   workflow_dispatch:
 
 permissions:
