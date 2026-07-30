@@ -1,0 +1,59 @@
+% Passes 1330--1334: current-claims insert.
+% This file is designed to be included before \end{document} in either main manuscript.
+\section{Modular Hecke degeneration, triality gauge geometry, and cycle selectors}
+\label{sec:pass1330-1334}
+
+Let $\mathcal H_{26}$ denote the literal rational Hecke algebra of the
+$432$-point carrier $W(E_6)/S_5$.  Reducing the exact integral
+multiplication table modulo the three bad primes gives
+\[
+\begin{array}{c|c|c|c}
+p&\dim J_p&\dim(\mathcal H_{26,p}/J_p)&
+\mathcal H_{26,p}/J_p\\ \hline
+2&21&5&M_2(\mathbf F_2)\oplus\mathbf F_2\\
+3&22&4&\mathbf F_3^4\\
+5&6&20&M_3(\mathbf F_5)\oplus M_2(\mathbf F_5)\oplus\mathbf F_5^7.
+\end{array}
+\]
+The exact Loewy power dimensions are respectively
+\[
+(21,17,13,7,2,0),\qquad (22,16,10,4,0),\qquad (6,2,0).
+\]
+Thus characteristics $2$ and $3$ produce deep non-semisimple collapse,
+whereas characteristic $5$ produces only a two-step radical.
+
+The three internal species-$20$ copies on each of the three triality
+carriers form a $3\times3$ grid.  Under
+$S_3^{\rm int}\times S_3^{\rm tri}$ its ordered-pair orbitals have
+valencies
+\[
+1,2,2,4
+\]
+and first eigenmatrix
+\[
+\left(\begin{array}{rrrr}
+1&2&2&4\\
+1&-1&2&-2\\
+1&2&-1&-2\\
+1&-1&-1&1
+\end{array}\right).
+\]
+The four primitive ranks are $1,2,2,4$.  Adjoining the coordinate swap
+fuses the two middle relations and yields the ordinary Hamming scheme
+$H(2,3)$ with valencies $1,4,4$.
+
+Literal primitive reduced cycles were also selected in the W33 graph.
+A deterministic length-$7$ cycle has $W(E_6)$ stabilizer of order $2$
+and orbit $25920$, while a deterministic length-$8$ cycle has trivial
+stabilizer and orbit $51840$.  These cycles break $W(E_6)$ symmetry, but
+they do not by themselves choose one of the three species-$20$
+multiplicity coordinates: on the transported multiplicity space a
+Y-side cycle operator has the form $C\otimes I_3$.  A primitive
+copy-idempotent is an additional $S_3$ gauge choice.  The combined
+cycle--copy selector orbits under $W(E_6)\times S_3$ therefore have sizes
+$77760$ and $155520$ for the chosen lengths $7$ and $8$.
+
+The GAP/AtlasRep certificate and the manuscript build are separate
+runtime checks.  Their status must be read from the release workflow;
+the finite-algebra theorem above does not depend on treating a missing
+runtime as a successful execution.
