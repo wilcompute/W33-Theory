@@ -1,0 +1,58 @@
+name: Passes 1340-1344 Cartan Atlas Selector Padic
+
+on:
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  exact-components:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check numpy sympy pytest
+      - run: python analysis/w33_pass1340_1344_cartan_atlas_selector_padic.py cartan
+      - run: python analysis/w33_pass1340_1344_cartan_atlas_selector_padic.py atlas
+      - run: python analysis/w33_pass1340_1344_cartan_atlas_selector_padic.py cycles
+      - run: python analysis/w33_pass1343_padic_lifting.py
+      - run: pytest -q tests/test_w33_pass1340_1344.py
+
+  atlasrep-gap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update
+      - run: sudo apt-get install -y gap gap-atlasrep gap-character-tables gap-table-of-marks git
+      - run: mkdir -p "$HOME/.gap/pkg" && git clone --depth 1 --branch v3.1.2 https://github.com/gap-packages/repsn.git "$HOME/.gap/pkg/repsn"
+      - run: gap -q analysis/w33_pass1341_atlasrep_compare.g | tee pass1341_atlasrep.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass1341-atlasrep-log
+          path: pass1341_atlasrep.log
+
+  manuscripts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y latexmk texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-science
+      - run: python tools/integrate_pass1340_1344.py
+      - run: python tools/integrate_pass1340_1344.py
+      - run: test "$(grep -c '\\input{analysis/BT1340_BT1344_cartan_atlas_selector_padic}' w33_paper.tex)" -eq 1
+      - run: test "$(grep -c '\\input{analysis/BT1340_BT1344_cartan_atlas_selector_padic}' photonic_holonet.tex)" -eq 1
+      - run: latexmk -pdf -interaction=nonstopmode -halt-on-error w33_paper.tex
+      - run: latexmk -pdf -interaction=nonstopmode -halt-on-error photonic_holonet.tex
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass1344-compiled-manuscripts
+          path: |
+            w33_paper.pdf
+            photonic_holonet.pdf
