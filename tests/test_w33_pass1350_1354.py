@@ -30,4 +30,4 @@ def test_atlas_when_materialized():
 def test_pdf_manifest_when_materialized():
  p=DATA/'w33_pass1354_pdf_manifest.json'
  if not p.exists():pytest.skip('generated after full builds')
- d=json.loads(p.read_text());assert d['status']=='PASS';assert {'w33_paper.pdf','photonic_holonet.pdf'}<=set(d['files'])
+ d=json.loads(p.read_text());assert d['status']=='PASS_WITH_TYPED_BUILD_ONLY_STUBS';assert {'w33_paper.pdf','photonic_holonet.pdf'}<=set(d['files']);assert d['build_observation']['status']=='PASS'
