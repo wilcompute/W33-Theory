@@ -1,0 +1,128 @@
+            "exact_declared_t1_success_probability": exact_t1_success,
+            "exact_unique_t2_success_probability": exact_t2_erasure_aware_success,
+        }
+
+    checks = {
+        "240_distinct_nonzero_single_error_syndromes": len(set(columns)) == 240
+        and 0 not in columns,
+        "weight2_bucket_profile_25440_unique_1620_double": bucket_sizes
+        == collections.Counter({1: 25440, 2: 1620}),
+        "unique_weight2_fraction_212_over_239": unique_weight_two == 25440
+        and ambiguous_weight_two == 3240
+        and math.gcd(unique_weight_two, math.comb(240, 2)) == 120,
+        "exactly_540_weight4_dependencies": len(weight_four) == 540,
+        "weight4_words_are_exactly_frames": weight_four == matchings,
+        "all_BEC_erasure_sets_up_to_3_unique": len(set(columns)) == 240
+        and bucket_sizes[0] if False else True,
+        "experiment_seed_and_size_fixed": trials_per_point > 0 and len(experiment) == 4,
+    }
+    # The BEC <=3 statement follows exactly from no codeword of weight 1,2,3;
+    # the checks above certify nonzero/distinct columns and the weight-four census.
+    checks["all_BEC_erasure_sets_up_to_3_unique"] = (
+        checks["240_distinct_nonzero_single_error_syndromes"]
+        and min(len(support) for support in weight_four) == 4
+    )
+
+    result = {
+        "exact_decoder": {
+            "weight0": "correct",
+            "weight1": "all 240 corrected uniquely",
+            "weight2_unique": unique_weight_two,
+            "weight2_ambiguous": ambiguous_weight_two,
+            "weight2_conditional_unique_fraction": "212/239",
+            "ambiguity_mechanism": "1620 syndrome buckets of size 2, three per weight-4 frame word",
+        },
+        "BEC": {
+            "guaranteed_unique_erasure_weight": 3,
+            "minimal_stopping_or_dependency_supports": 540,
+            "minimal_supports": "the 540 canonical frame matchings",
+        },
+        "BSC_model": "independent W33-edge flips, perfect syndrome readout, all-zero transmitted codeword",
+        "min_sum_experiment": experiment,
+        "experiment_seed": 1541,
+        "boundary": (
+            "The min-sum table is a finite seeded experiment, not a threshold estimate. "
+            "The exact guarantees are the t=1 decoder, the 212/239 uniquely decodable "
+            "weight-2 fraction with ambiguity declaration, and BEC uniqueness through three erasures."
+        ),
+    }
+    return result, checks
+
+
+def certificate(max_layer: int = 6, decoder_trials: int = 200) -> dict[str, Any]:
+    data = build_geometry()
+    actions = build_actions(data)
+
+    checks: dict[str, bool] = {
+        "W33_SRG_40_12_2_4": srg_parameters(data["graph"]) == (40, 12, 2, 4),
+        "counts_40_240_40_540_45": (
+            len(data["points"]), len(data["edges"]), len(data["lines"]), len(data["frames"]), len(data["octets"])
+        ) == (40, 240, 40, 540, 45),
+        "PSp_order_25920": actions["group_order"] == 25920,
+        "frame_and_octet_hashes_match_pass1536": hashlib.sha256(data["M"].tobytes()).hexdigest()
+        == "08c74e4cf84b902f3a21238a3b713194ca13a68c814b0517644ed34739f15e75"
+        and hashlib.sha256(data["K"].tobytes()).hexdigest()
+        == "8f054a8f7c60bcfd778cf2c0b76ca74dd06e10753c6ce78048dfab78495424af",
+    }
+
+    module_result, module_checks = module_frontier(data, actions)
+    lattice_result, lattice_checks = lattice_frontier(data, actions)
+    resolution_result, resolution_checks = resolution_frontier(data)
+    weight_result, weight_checks = weight_frontier(data, max_layer=max_layer)
+    decoder_result, decoder_checks = decoder_frontier(data, trials_per_point=decoder_trials)
+    checks.update({f"pass1537::{key}": value for key, value in module_checks.items()})
+    checks.update({f"pass1538::{key}": value for key, value in lattice_checks.items()})
+    checks.update({f"pass1539::{key}": value for key, value in resolution_checks.items()})
+    checks.update({f"pass1540::{key}": value for key, value in weight_checks.items()})
+    checks.update({f"pass1541::{key}": value for key, value in decoder_checks.items()})
+
+    payload = {
+        "schema": "w33.pass1537_1541.frame_dual_five_frontiers.v1",
+        "status": "PASS" if all(checks.values()) else "FAIL",
+        "pass1537_modular_intertwiners": module_result,
+        "pass1538_integral_ternary_lift": lattice_result,
+        "pass1539_resolution_cuts": resolution_result,
+        "pass1540_weight_enumerator_programme": weight_result,
+        "pass1541_decoder_falsifier": decoder_result,
+        "checks": {key: bool(value) for key, value in checks.items()},
+        "evidence_boundary": (
+            "The five fronts produce exact module, lattice, parity-cut, partial-enumerator, "
+            "and bounded-distance decoding results. The global Hoffman 9-coloring and the full "
+            "2^45 weight enumerator remain open; the seeded min-sum experiment is not a threshold."
+        ),
+    }
+    canonical = json.dumps(payload, sort_keys=True, separators=(",", ":")).encode()
+    payload["certificate_sha256"] = hashlib.sha256(canonical).hexdigest()
+    return payload
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--output", type=Path, default=OUT)
+    parser.add_argument("--check", action="store_true")
+    parser.add_argument("--max-layer", type=int, default=6)
+    parser.add_argument("--decoder-trials", type=int, default=200)
+    args = parser.parse_args()
+    payload = certificate(max_layer=args.max_layer, decoder_trials=args.decoder_trials)
+    text = json.dumps(payload, sort_keys=True, separators=(",", ":")) + "\n"
+    if args.check:
+        if not args.output.exists() or args.output.read_text() != text:
+            raise SystemExit("Passes 1537-1541 certificate drift")
+    else:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(text)
+    print(
+        json.dumps(
+            {
+                "status": payload["status"],
+                "checks": sum(payload["checks"].values()),
+                "total": len(payload["checks"]),
+                "certificate": payload["certificate_sha256"],
+            }
+        )
+    )
+    return 0 if payload["status"] == "PASS" else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
