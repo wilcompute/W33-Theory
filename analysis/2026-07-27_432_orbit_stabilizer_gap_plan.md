@@ -1,3 +1,24 @@
+> **REFUTED AND REPLACED (Pass 1375, 2026-07-31).** Both premises of this file
+> are wrong. `|Sp(4,3)| = 51840`, not 25920 -- 25920 is `|PSp(4,3)| = |U4(2)|`,
+> and `Sp(4,3) = 2.U4(2)` is its double cover. And the group acting on the 2240
+> A2 root triples is neither of those: it is `W(E6) = U4(2):2`, also of order
+> 51840 but NOT isomorphic to `Sp(4,3)` (25 irreducibles and two degree-81s, vs
+> 34 and one). So the stabiliser order is `51840/432 = 120`.
+>
+> The computation this file planned has now been run, and it answers the
+> question it set out to ask: the stabiliser **is `S5 = SmallGroup[120,34]`**,
+> and all three 432-orbits are **conjugate** in `W(E6)`. The 60 asserted here is
+> not meaningless -- it is `|S5 n PSp(4,3)| = |A5|` -- but it was reached by
+> dividing the order of a group that is not acting, so it names that A5 only by
+> coincidence.
+>
+> This file also mislocates the object: its script searches for 432-orbits among
+> the 780 point-PAIRS of `W(3,3)`, where the orbits are `240 + 540` and no orbit
+> of size 432 exists at all. The 432s live on the 2240 A2 root triples in E8.
+>
+> Certificate: `data/w33_pass1375_432_stabiliser.txt`.
+> Script: `analysis/w33_pass1375_432_stabiliser_identification.g`.
+
 # Step 3 — 432-Orbit Stabilizers: Executed Classification
 
 **Date:** 2026-07-27  

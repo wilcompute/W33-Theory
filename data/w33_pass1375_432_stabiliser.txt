@@ -1,0 +1,59 @@
+Pass 1129: the 432-orbit stabiliser
+
+|Sp(4,3)|   = 51840
+|PSp(4,3)|  = 25920
+|Sp| = 2*|PSp| ? true
+
+degree-40 image of Sp(4,3) has order 25920  (= PSp(4,3) = 25920? true)
+orbits of PSp(4,3) on the 780 point-pairs: [ 240, 540 ]
+any orbit of size 432 there? false   <- the disputed script's search
+
+E8 roots: 240   all norm 8: true
+|W(E8)| = 696729600
+A2 triples (alpha+beta+gamma = 0): 2240
+|pointwise stab of an A2 triple| = 51840   (= |W(E6)| = 51840? true)
+K is U4(2):2 not Sp(4,3)?  #Irr = 25  (25 = U4(2):2, 34 = Sp(4,3))
+
+W(E6) orbits on the 2240: [ 1, 1, 27, 27, 27, 27, 27, 27, 240, 270, 270, 432, \
+432, 432 ]
+sum = 2240
+
+=== the three 432-orbits ===
+  orbit 432  |stab| = 120   51840/432 = 120
+    IdGroup            = [ 120, 34 ]
+    StructureDescription= S5
+    element orders      = [ [ 1, 1 ], [ 2, 2 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], \
+[ 6, 1 ] ]
+    abelianisation      = [ 2 ]
+    isomorphic to S5?   = true
+    isomorphic to SL(2,5)? = false
+    isomorphic to C2xA5?   = false
+  orbit 432  |stab| = 120   51840/432 = 120
+    IdGroup            = [ 120, 34 ]
+    StructureDescription= S5
+    element orders      = [ [ 1, 1 ], [ 2, 2 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], \
+[ 6, 1 ] ]
+    abelianisation      = [ 2 ]
+    isomorphic to S5?   = true
+    isomorphic to SL(2,5)? = false
+    isomorphic to C2xA5?   = false
+  orbit 432  |stab| = 120   51840/432 = 120
+    IdGroup            = [ 120, 34 ]
+    StructureDescription= S5
+    element orders      = [ [ 1, 1 ], [ 2, 2 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], \
+[ 6, 1 ] ]
+    abelianisation      = [ 2 ]
+    isomorphic to S5?   = true
+    isomorphic to SL(2,5)? = false
+    isomorphic to C2xA5?   = false
+
+  stab1 ~conj~ stab2 in W(E6)? true
+  stab1 ~conj~ stab3 in W(E6)? true
+  stab2 ~conj~ stab3 in W(E6)? true
+
+=== does the 432 stabiliser lie in the derived subgroup? ===
+  |W(E6)'| = 25920  (25920 = PSp(4,3)? true)
+  |stab n W(E6)'| = 60
+  IdGroup of that = [ 60, 5 ]
+
+DONE

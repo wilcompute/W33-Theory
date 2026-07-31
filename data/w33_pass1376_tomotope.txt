@@ -1,0 +1,56 @@
+Pass 1130: the tomotope from published generators
+
+=== Q1: the published generators ===
+|Gamma(T)|          = 96   (literature: 96 -> true)
+IdGroup             = [ 96, 227 ]
+StructureDescription= ((C2 x C2 x C2 x C2) : C3) : C2
+transitive on 12?   = true
+orbits on 12        = [ 12 ]
+all rho_i involutions? true
+
+=== Q2: the derived subgroup ===
+|Gamma(T)'|         = 48
+IdGroup             = [ 48, 50 ]   (BT781/BT783 say 2^4:C3 = [48,50] -> true)
+StructureDescription= (C2 x C2 x C2 x C2) : C3
+centre order        = 1   (BT783 says 1 -> true)
+abelianisation      = [ 3 ]   (BT783 says order 3)
+has index-2 subgroup? false   (BT783 says none)
+
+Schlafli type {p,q,r} = {3,3,2}
+string relations (rho_i rho_j)^2=1 for |i-j|>=2:
+   (r0 r2)^2 = 1 ? true
+   (r0 r3)^2 = 1 ? true
+   (r1 r3)^2 = 1 ? false
+
+=== Q3: the INTERSECTION CONDITION ===
+  tested 256 pairs (I,J);  FAILURES = 0
+  intersection condition HOLDS? true   (literature: FAILS, which is why the to\
+motope is not a polytope)
+
+=== Q4: Gamma(T) vs the 540-frame stabiliser in PGSp(4,3), both order 96 ===
+degree-40 image order = 25920
+totally isotropic lines found: 40  all of size 4? true
+frames (disjoint line pairs) = 540
+frame stabiliser in PSp(4,3): |H| = 48  IdGroup = [ 48, 48 ]  = C2 x S4
+  is it O_h = C2 x S4 = [48,48]? true
+  Gamma(T)' = [48,50];  equal? false
+|Aut(W(3,3)) on lines| = 51840
+frame stabiliser in PGSp(4,3): |H| = 96  IdGroup = [ 96, 226 ]  = C2 x C2 x S4
+  ISOMORPHIC TO Gamma(T) (both order 96)? false
+  Gamma(T) IdGroup = [ 96, 227 ] vs frame-96 IdGroup = [ 96, 226 ]
+  derived subgroup of the frame-96 = [ 12, 3 ] = A4
+
+=== Q5: do the 540 frames form the facets of a rank-4 polytope? ===
+Frame stabiliser O_h = Aut(cube) is the string C-group {4,3}.  If PSp(4,3)
+admits rho3 with (rho0 rho3)^2 = (rho1 rho3)^2 = 1, <all> = PSp(4,3), and
+the intersection condition, then the 540 cosets of O_h are the FACETS of a
+rank-4 abstract regular polytope of type {4,3,r} with 25920 flags.
+(Existence of SOME rank-4 polytope for U4(2) is published -- Leemans &
+ Vauthier, atlas of abstract regular polytopes for small groups, 2006.
+ The question here is whether the FRAME stabiliser is one of the facets.)
+
+string C-group {4,3} generating triples in O_h: 48
+candidate rho3 (involutions centralising rho0,rho1): 3
+  RANK-4 STRING C-GROUP ON THE FRAME CUBE EXISTS? false
+
+DONE

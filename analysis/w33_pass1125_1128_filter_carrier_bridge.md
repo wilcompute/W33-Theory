@@ -80,6 +80,29 @@ this corpus has been burned by.
 
 ## Pass 1127 — BT781's bridge functor cannot exist
 
+> **PRIOR ART, FOUND LATE (2026-07-31). BT783 owns this obstruction.** BT781's
+> "Next experiment" was answered by the two adjacent files: `BT782` writes the
+> bridge as the exact sequence `1 -> C2_chiral -> Gamma(T)' -> Aut+(Q3) -> 1`,
+> and `BT783` refutes it — "centre order 1, abelianization order 3, normal C2
+> subgroup none, index-2 subgroup none, order-24 quotient none". Everything
+> below was computed without citing them, so the *headline* of this pass is a
+> rediscovery and is withdrawn as a first result.
+>
+> What survives is strictly stronger and is not in BT783: BT783 refutes ONE
+> route (the central-C2 extension). The quotient-lattice computation below shows
+> there is **no nontrivial common quotient of any kind**, so *every* bridge
+> factoring through a quotient fails, not just that one — and it identifies the
+> largest common subgroup, `A4`, which BT783 does not compute. Pass 1376 then
+> shows that `A4` is the derived subgroup of the frame stabiliser itself.
+>
+> This is the seventh failure mode firing on its own author, one batch after
+> being written down. The cause was measured rather than guessed: the guard's
+> token grammar extracted **zero** tokens from BT781's boundary, because it had
+> no rule for group notation like `2^3:S3`. `group_tokens()` in
+> `scripts/check_rediscovery.py` fixes that; it now yields four shared tokens
+> between BT781's boundary and BT782.
+
+
 BT781 ends with a proposed next experiment:
 
 > BT782 should build the explicit bridge functor `Aut(Q3)=2³:S₃ → Γ(T)′=2⁴:C₃`

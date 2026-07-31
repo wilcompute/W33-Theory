@@ -111,6 +111,16 @@ cube-web transport layer and the tomotope flag layer.
 
 ## Next experiment
 
+> **ALREADY RESOLVED -- read BT782 and BT783 before acting on this.**
+> The experiment proposed below was carried out immediately: `BT782` states the
+> bridge as an exact sequence `1 -> C2_chiral -> Gamma(T)' -> Aut+(Q3) -> 1`, and
+> `BT783` executes the test and refutes it (`Gamma(T)'` has trivial centre, no
+> normal C2, no index-2 subgroup, so it cannot be that extension). Pass 1127
+> re-derived BT783's obstruction from scratch because this section still read as
+> open; that pass is now narrowed to cite BT783. Pass 1376 confirms both files
+> against the PUBLISHED generators of `Gamma(T)` for the first time.
+
+
 BT782 should build the explicit bridge functor:
 
 ```text

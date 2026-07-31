@@ -1,146 +1,240 @@
 {
-  "version": "2026-07-27-pass1147",
-  "note": "Canonical identity registry. QUARANTINED objects cannot be premises of new derivations; provisional branch pass numbers are not canonical; a bare cardinality 540 or 432 does not identify a carrier.",
-  "compatibility_tags": ["{540:both}", "{540:mixed}"],
-  "objects": [
-    {
-      "canonical": "W33_point_carrier_D_eigenspace_11",
-      "aliases": ["trivial_mode", "constant_mode", "all-ones_eigenspace", "E_11"],
-      "dimension": 1,
-      "eigenvalue": 11,
-      "status": "confirmed",
-      "projector": "(D-I)(D+5I)/160"
-    },
-    {
-      "canonical": "W33_point_carrier_D_eigenspace_1",
-      "aliases": ["middle_mode", "24_dim_eigenspace", "E_1"],
-      "dimension": 24,
-      "eigenvalue": 1,
-      "status": "confirmed",
-      "projector": "-(D-11I)(D+5I)/60"
-    },
-    {
-      "canonical": "W33_point_carrier_D_eigenspace_minus5",
-      "aliases": ["15_dim_eigenspace", "E_minus5"],
-      "dimension": 15,
-      "eigenvalue": -5,
-      "status": "confirmed",
-      "projector": "(D-11I)(D-I)/96"
-    },
-    {
-      "canonical": "W33_false_shifted_adjacency_cubic",
-      "aliases": ["old_master_cubic", "{-7,-1,5}_spectrum", "16+10+6_packet", "old_Z_polynomial"],
-      "status": "QUARANTINED",
-      "note": "(t+1)((t+1)^2-36) does not annihilate D=A-I; its residual has rank 40."
-    },
-    {
-      "canonical": "W33_point_nonedge_540",
-      "aliases": ["540_noncollinear_point_pairs", "540_point_nonedges", "mu4_pairs"],
-      "size": 540, "tag": "{540:point-nonedge}",
-      "psp_tom_position": 77,
-      "stabilizer_id_group": [48, 33],
-      "coset_rank": 25,
-      "we6_class": "4A",
-      "status": "confirmed"
-    },
-    {
-      "canonical": "E6_double_six_nonincident_540",
-      "aliases": ["540_double_six_line_complements", "540_nonincident_cubic_flags", "rank_28_540"],
-      "size": 540, "tag": "{540:double-six-nonincident}",
-      "psp_tom_position": 78,
-      "stabilizer_id_group": [48, 48],
-      "coset_rank": 28,
-      "status": "confirmed",
-      "note": "The complementary half of 36*27=36*12+36*15=432+540; the 432 incident flags have A5 stabilizer."
-    },
-    {
-      "canonical": "GQ42_Hashimoto_arc_540",
-      "aliases": ["540_support_geometry_arcs", "540_GQ42_arcs", "45_times_12_arcs"],
-      "size": 540, "tag": "{540:gq42-arc}",
-      "psp_tom_position": 79,
-      "stabilizer_id_group": [48, 49],
-      "coset_rank": 27,
-      "status": "confirmed"
-    },
-    {
-      "canonical": "WE6_outer_4C_540",
-      "aliases": ["540_outer_quartics", "WE6_class_4C", "rank_21_540"],
-      "size": 540, "tag": "{540:outer-4c}",
-      "psp_tom_position": 80,
-      "stabilizer_id_group": [48, 30],
-      "coset_rank": 21,
-      "we6_class": "4C",
-      "status": "confirmed"
-    },
-    {
-      "canonical": "W33_line_nonedge_540",
-      "aliases": ["540_skew_line_pairs", "540_disjoint_line_pairs", "540_cube_frames"],
-      "size": 540, "tag": "{540:line-nonedge}",
-      "psp_tom_position": 81,
-      "stabilizer_id_group": [48, 48],
-      "coset_rank": 32,
-      "we6_class": "2D",
-      "status": "confirmed"
-    },
-    {
-      "canonical": "WE6_S5_432_stabilizer_class",
-      "aliases": ["Steinberg_432_stabilizer", "SmallGroup_120_34", "TOM_295_stabilizer", "directed_Schlaefli_edge_stabilizer"],
-      "order": 120,
-      "status": "confirmed",
-      "note": "All three A2-color stabilizers are pairwise conjugate S5 subgroups in W(E6); their transitive action is TOM 295 and is equivariantly the directed-edge action of SRG(27,16,10,8)."
-    },
-    {
-      "canonical": "WE6_cubic_support_module_45",
-      "aliases": ["cubic_image", "45_support_module"],
-      "dimension": 45,
-      "decomposition": "1+20+24",
-      "status": "confirmed"
-    },
-    {
-      "canonical": "WE6_cubic_lift_kernel_2195",
-      "aliases": ["K_2195", "cubic_support_kernel"],
-      "dimension": 2195,
-      "decomposition": "13*1+16*6+5*15+4*15a+21*20+2*24+9*30+4*60a+10*64+3*81_minus+1*90",
-      "status": "confirmed"
-    },
-    {
-      "canonical": "WE6_Steinberg_81_minus",
-      "aliases": ["St_81", "81_minus"],
-      "dimension": 81,
-      "status": "confirmed",
-      "note": "Multiplicity three in the 2240 A2 carrier and multiplicity three in the cubic-map kernel."
-    },
-    {
-      "canonical": "WE6_A2_color_directed_Schlaefli_432",
-      "aliases": ["three_dark_432s", "mixed_A2_color_fibres", "directed_Schlaefli_arcs", "TOM_295_carrier"],
-      "size_per_color": 432,
-      "color_count": 3,
-      "stabilizer_id_group": [120, 34],
-      "coset_rank": 26,
-      "status": "confirmed",
-      "note": "Each color is the 27*16 directed edges of SRG(27,16,10,8); the three colors form an unbased C3 torsor relative to the fixed A2."
-    },
-    {
-      "canonical": "WE6_Schlaefli_Steinberg_transform_81",
-      "aliases": ["rank_81_edge_to_cycle_transform", "Q_2C_oriented_edge_projector", "216_line_R81_frame"],
-      "source_size": 432,
-      "rank": 81,
-      "projector": "Q=(K-24)(K-18)(K-12)(K-9)",
-      "tight_frame_identity": "G^2=3200G",
-      "projective_line_count": 216,
-      "absolute_angles": ["0", "1/15", "1/5"],
-      "status": "confirmed",
-      "note": "Natural reversal-odd map T(i->j)=primitive(Q(e_i wedge e_j)); it projects the oriented-edge module 6+15+20+30+64+81_minus onto 81_minus."
-    },
-    {
-      "canonical": "WE6_enhanced_cubic_Steinberg_kernel_1952",
-      "aliases": ["Pass1147_residual", "rank_288_enhanced_2240_map", "cubic_plus_three_Steinberg_blocks"],
-      "domain_dimension": 2240,
-      "rank": 288,
-      "kernel_dimension": 1952,
-      "decomposition": "13*1+16*6+5*15+4*15a+21*20+2*24+9*30+4*60a+10*64+1*90",
-      "status": "confirmed",
-      "note": "Kernel of M plus the three colored rank-81 transforms. This supersedes, and is not a realization of, the unbuilt mnemonic 1952=7*dim Lambda2(24)+20."
-    }
-  ]
+ "version": "2026-07-27-pass1147",
+ "note": "Canonical identity registry. QUARANTINED objects cannot be premises of new derivations; provisional branch pass numbers are not canonical; a bare cardinality 540 or 432 does not identify a carrier.",
+ "compatibility_tags": [
+  "{540:both}",
+  "{540:mixed}"
+ ],
+ "objects": [
+  {
+   "canonical": "W33_point_carrier_D_eigenspace_11",
+   "aliases": [
+    "trivial_mode",
+    "constant_mode",
+    "all-ones_eigenspace",
+    "E_11"
+   ],
+   "dimension": 1,
+   "eigenvalue": 11,
+   "status": "confirmed",
+   "projector": "(D-I)(D+5I)/160"
+  },
+  {
+   "canonical": "W33_point_carrier_D_eigenspace_1",
+   "aliases": [
+    "middle_mode",
+    "24_dim_eigenspace",
+    "E_1"
+   ],
+   "dimension": 24,
+   "eigenvalue": 1,
+   "status": "confirmed",
+   "projector": "-(D-11I)(D+5I)/60"
+  },
+  {
+   "canonical": "W33_point_carrier_D_eigenspace_minus5",
+   "aliases": [
+    "15_dim_eigenspace",
+    "E_minus5"
+   ],
+   "dimension": 15,
+   "eigenvalue": -5,
+   "status": "confirmed",
+   "projector": "(D-11I)(D-I)/96"
+  },
+  {
+   "canonical": "W33_false_shifted_adjacency_cubic",
+   "aliases": [
+    "old_master_cubic",
+    "{-7,-1,5}_spectrum",
+    "16+10+6_packet",
+    "old_Z_polynomial"
+   ],
+   "status": "QUARANTINED",
+   "note": "(t+1)((t+1)^2-36) does not annihilate D=A-I; its residual has rank 40."
+  },
+  {
+   "canonical": "W33_point_nonedge_540",
+   "aliases": [
+    "540_noncollinear_point_pairs",
+    "540_point_nonedges",
+    "mu4_pairs"
+   ],
+   "size": 540,
+   "tag": "{540:point-nonedge}",
+   "psp_tom_position": 77,
+   "stabilizer_id_group": [
+    48,
+    33
+   ],
+   "coset_rank": 25,
+   "we6_class": "4A",
+   "status": "confirmed"
+  },
+  {
+   "canonical": "E6_double_six_nonincident_540",
+   "aliases": [
+    "540_double_six_line_complements",
+    "540_nonincident_cubic_flags",
+    "rank_28_540"
+   ],
+   "size": 540,
+   "tag": "{540:double-six-nonincident}",
+   "psp_tom_position": 78,
+   "stabilizer_id_group": [
+    48,
+    48
+   ],
+   "coset_rank": 28,
+   "status": "confirmed",
+   "note": "The complementary half of 36*27=36*12+36*15=432+540; the 432 incident flags have A5 stabilizer."
+  },
+  {
+   "canonical": "GQ42_Hashimoto_arc_540",
+   "aliases": [
+    "540_support_geometry_arcs",
+    "540_GQ42_arcs",
+    "45_times_12_arcs"
+   ],
+   "size": 540,
+   "tag": "{540:gq42-arc}",
+   "psp_tom_position": 79,
+   "stabilizer_id_group": [
+    48,
+    49
+   ],
+   "coset_rank": 27,
+   "status": "confirmed"
+  },
+  {
+   "canonical": "WE6_outer_4C_540",
+   "aliases": [
+    "540_outer_quartics",
+    "WE6_class_4C",
+    "rank_21_540"
+   ],
+   "size": 540,
+   "tag": "{540:outer-4c}",
+   "psp_tom_position": 80,
+   "stabilizer_id_group": [
+    48,
+    30
+   ],
+   "coset_rank": 21,
+   "we6_class": "4C",
+   "status": "confirmed"
+  },
+  {
+   "canonical": "W33_line_nonedge_540",
+   "aliases": [
+    "540_skew_line_pairs",
+    "540_disjoint_line_pairs",
+    "540_cube_frames"
+   ],
+   "size": 540,
+   "tag": "{540:line-nonedge}",
+   "psp_tom_position": 81,
+   "stabilizer_id_group": [
+    48,
+    48
+   ],
+   "coset_rank": 32,
+   "we6_class": "2D",
+   "status": "confirmed"
+  },
+  {
+   "canonical": "WE6_S5_432_stabilizer_class",
+   "aliases": [
+    "Steinberg_432_stabilizer",
+    "SmallGroup_120_34",
+    "TOM_295_stabilizer",
+    "directed_Schlaefli_edge_stabilizer"
+   ],
+   "order": 120,
+   "status": "confirmed",
+   "note": "All three A2-color stabilizers are pairwise conjugate S5 subgroups in W(E6); their transitive action is TOM 295 and is equivariantly the directed-edge action of SRG(27,16,10,8)."
+  },
+  {
+   "canonical": "WE6_cubic_support_module_45",
+   "aliases": [
+    "cubic_image",
+    "45_support_module"
+   ],
+   "dimension": 45,
+   "decomposition": "1+20+24",
+   "status": "confirmed"
+  },
+  {
+   "canonical": "WE6_cubic_lift_kernel_2195",
+   "aliases": [
+    "K_2195",
+    "cubic_support_kernel"
+   ],
+   "dimension": 2195,
+   "decomposition": "13*1+16*6+5*15+4*15a+21*20+2*24+9*30+4*60a+10*64+3*81_minus+1*90",
+   "status": "confirmed"
+  },
+  {
+   "canonical": "WE6_Steinberg_81_minus",
+   "aliases": [
+    "St_81",
+    "81_minus"
+   ],
+   "dimension": 81,
+   "status": "confirmed",
+   "note": "Multiplicity three in the 2240 A2 carrier and multiplicity three in the cubic-map kernel."
+  },
+  {
+   "canonical": "WE6_A2_color_directed_Schlaefli_432",
+   "aliases": [
+    "three_dark_432s",
+    "mixed_A2_color_fibres",
+    "directed_Schlaefli_arcs",
+    "TOM_295_carrier"
+   ],
+   "size_per_color": 432,
+   "color_count": 3,
+   "stabilizer_id_group": [
+    120,
+    34
+   ],
+   "coset_rank": 26,
+   "status": "confirmed",
+   "note": "Each color is the 27*16 directed edges of SRG(27,16,10,8); the three colors form an unbased C3 torsor relative to the fixed A2."
+  },
+  {
+   "canonical": "WE6_Schlaefli_Steinberg_transform_81",
+   "aliases": [
+    "rank_81_edge_to_cycle_transform",
+    "Q_2C_oriented_edge_projector",
+    "216_line_R81_frame"
+   ],
+   "source_size": 432,
+   "rank": 81,
+   "projector": "Q=(K-24)(K-18)(K-12)(K-9)",
+   "tight_frame_identity": "G^2=3200G",
+   "projective_line_count": 216,
+   "absolute_angles": [
+    "0",
+    "1/15",
+    "1/5"
+   ],
+   "status": "confirmed",
+   "note": "Natural reversal-odd map T(i->j)=primitive(Q(e_i wedge e_j)); it projects the oriented-edge module 6+15+20+30+64+81_minus onto 81_minus."
+  },
+  {
+   "canonical": "WE6_enhanced_cubic_Steinberg_kernel_1952",
+   "aliases": [
+    "Pass1147_residual",
+    "rank_288_enhanced_2240_map",
+    "cubic_plus_three_Steinberg_blocks"
+   ],
+   "domain_dimension": 2240,
+   "rank": 288,
+   "kernel_dimension": 1952,
+   "decomposition": "13*1+16*6+5*15+4*15a+21*20+2*24+9*30+4*60a+10*64+1*90",
+   "status": "confirmed",
+   "note": "Kernel of M plus the three colored rank-81 transforms. This supersedes, and is not a realization of, the unbuilt mnemonic 1952=7*dim Lambda2(24)+20."
+  }
+ ]
 }

@@ -40,7 +40,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from check_rediscovery import noun_number_pairs, results_in  # noqa: E402
+from check_rediscovery import (group_tokens, noun_number_pairs,  # noqa: E402
+                               results_in)
 
 # the headings this corpus actually uses to mean "not done yet"
 RE_BOUNDARY = re.compile(
@@ -99,10 +100,10 @@ def self_test() -> int:
     old = subprocess.run(["git", "show", f"{log[-1]}:analysis/BT810_completed_geography_schlafli.md"],
                          capture_output=True, text=True, cwd=ROOT).stdout
     b = boundary_text(old)
-    bt = (results_in(b) | noun_number_pairs(b)) if b else set()
+    bt = (results_in(b) | noun_number_pairs(b) | group_tokens(b)) if b else set()
     t811 = (ROOT / "analysis" / "BT811_platonic_fine_print.md").read_text(
         encoding="utf-8", errors="ignore")
-    shared = bt & (results_in(t811) | noun_number_pairs(t811))
+    shared = bt & (results_in(t811) | noun_number_pairs(t811) | group_tokens(t811))
     ok = len(shared) >= 2
     print(f"  [{'PASS' if ok else 'FAIL'}] BT810 boundary vs BT811: "
           f"{len(shared)} shared tokens {sorted(shared)[:4]}")
@@ -131,7 +132,7 @@ def main(argv: list[str]) -> int:
             continue
         body[p.name] = t
         keys[p.name] = order_key(p)
-        tokens[p.name] = results_in(t) | noun_number_pairs(t)
+        tokens[p.name] = results_in(t) | noun_number_pairs(t) | group_tokens(t)
 
     hits = []
     for p in files:
@@ -141,7 +142,7 @@ def main(argv: list[str]) -> int:
         b = boundary_text(t)
         if not b or len(b) < 40:
             continue
-        btok = (results_in(b) | noun_number_pairs(b)) - {""}
+        btok = (results_in(b) | noun_number_pairs(b) | group_tokens(b)) - {""}
         if not btok:
             continue
         k = keys[p.name]

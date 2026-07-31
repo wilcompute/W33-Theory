@@ -1,41 +1,239 @@
 {
-  "schema":"w33.pass_namespace_registry.v2",
-  "status":"ACTIVE",
-  "date":"2026-07-30",
-  "canonical_blocks":[
-    {"range":"1120-1128","owner":"glue-track","status":"COMPLETE"},
-    {"range":"1132-1136","owner":"exact-audit-track","status":"COMPLETE"},
-    {"range":"1137-1140","owner":"parallel-codex-track","status":"COMPLETE"},
-    {"range":"1142-1146","owner":"exact-bridge-corpus-track","status":"COMPLETE"},
-    {"range":"1147","owner":"codex-schlaefli-steinberg-track","status":"COMPLETE","artifacts":{"1147":"object-level directed Schlaefli carrier, rank-81 edge-to-cycle transform, 216-line tight frame, rank-288 weld, exact 1952 residual, integral Smith/color split, and the nonsplit sign-twisted 58|23 critical-group extension"}},
-    {"range":"1148-1152","owner":"exact-crossed-bridge-track","status":"COMPLETE"},
-    {"range":"1153-1157","owner":"continuation-audit-track","status":"COMPLETE"},
-    {"range":"1158-1162","owner":"breakthrough-track","status":"COMPLETE"},
-    {"range":"1163-1172","owner":"execution-tracks-1-2","status":"COMPLETE"},
-    {"range":"1173-1182","owner":"execution-tracks-3-4","status":"COMPLETE"},
-    {"range":"1183-1192","owner":"execution-tracks-5-correction","status":"COMPLETE"},
-    {"range":"1193-1202","owner":"bridge-breakthrough-tracks","status":"COMPLETE"},
-    {"range":"1203-1212","owner":"frontier-tracks","status":"COMPLETE"},
-    {"range":"1213-1222","owner":"synthesis-outside-box-tracks","status":"COMPLETE"},
-    {"range":"1223-1232","owner":"absorption-conversion-tracks","status":"COMPLETE"},
-    {"range":"1233-1242","owner":"upgrade-frontier-tracks","status":"COMPLETE"},
-    {"range":"1243-1252","owner":"materialization-execution-tracks","status":"COMPLETE"},
-    {"range":"1253-1262","owner":"consolidation-universal-tracks","status":"COMPLETE"},
-    {"range":"1263-1272","owner":"dictionary-ledger-v6-tracks","status":"RETRACTED_BY_1318","reason":"The k=9 A5/Hecke chain used fixed-point vector (432,4,0,1,1), whose Burnside value is 43/5 rather than 9."},
-    {"range":"1273-1277","owner":"chi27-ledger-v7-track","status":"RETRACTED_BY_1318","reason":"Dimension-fit species assignments and coordinate-surrogate units were superseded by the literal 26-orbital and carrier-projector calculations."},
-    {"range":"1278-1282","owner":"parallel-absorption-ledger-v8-track","status":"COMPLETE_WITH_SCOPE"},
-    {"range":"1283-1287","owner":"m3-m4-levi-ledger-v9-track","status":"COMPLETE_WITH_SCOPE"},
-    {"range":"1288-1292","owner":"parallel-levi-gap-track","status":"COMPLETE_WITH_SCOPE"},
-    {"range":"1293-1297","owner":"parallel-jordan-integral-track","status":"AUXILIARY_SCOPE"},
-    {"range":"1298-1302","owner":"parallel-product-scheme-track","status":"SCOPE_CORRECTED_BY_1329","reason":"Pass 1298 constructs the tensor square of the rank-3 W33 scheme; it is not the literal 26-dimensional W(E6)/S5 coset Hecke algebra. Other claims in the block require their own claim-tier review."},
-    {"range":"1303-1307","owner":"parallel-lattice-gauge-track","status":"PARTIALLY_RETRACTED_BY_1327_1329","reason":"Pass 1305 did not execute AtlasRep and reversed the 432/480 species-20 multiplicities. The remaining claims are auxiliary until separately audited."},
-    {"range":"1310-1314","owner":"literal-a5-correction-track","status":"COMPLETE","artifacts":{"1310":"literal W(E6)/A5 coset action","1311":"A5 fixed-point census (432,24,36,2,2)","1312":"26 A5 orbits and exact orbit-size census","1313":"restricted A5 character and commutant dimension 3688","1314":"regression/correction firewall"}},
-    {"range":"1315-1319","owner":"exact-hecke-hashimoto-bridge-track","status":"COMPLETE","artifacts":{"1315":"26-dimensional Hecke Wedderburn decomposition and nine primitive central idempotents","1316":"exact 480-dimensional Hashimoto character decomposition","1317":"literal rank-20 species projector and carrier-level matrix units","1318":"fail-closed migration of false k=9 artifacts","1319":"six-dimensional exact Hom space between 432 and 480 carriers"}},
-    {"range":"1320-1324","owner":"transport-linking-morita-track","status":"COMPLETE","artifacts":{"1320":"six-channel species decomposition and singular scales","1321":"all 26 rational Hecke matrix units","1322":"species-20 Hashimoto restriction B=-I20","1323":"28-dimensional linking algebra and full M3-C Morita context","1324":"formal theorem/proof/retraction ledgers"}},
-    {"range":"1325-1329","owner":"triality-integral-gauge-track","status":"COMPLETE","artifacts":{"1325":"three-carrier triality globalization: dimensions 234,52,148,40","1326":"transport and 26-unit Hecke Smith forms; bad primes 2,3,5","1327":"species-20 normalizer, 3x3 gauge grid, and Pass1305 correction","1328":"length-7/8 and invariant primitive-cycle nonselection theorem","1329":"independent stdlib/SymPy reconstruction and GAP certificate"}},
-    {"range":"1330-1334","owner":"modular-triality-cycle-atlas-manuscript-track","status":"COMPLETE_WITH_TEX_BUILD_BOUNDARY","artifacts":{"1330":"exact radical, quotient, Loewy, center, and central-block profiles modulo 2,3,5","1331":"eigenmatrix/idempotent completion of the Pass-1327 nine-axis grid","1332":"two selected length-7/8 cyclic words and their ordered/dihedral stabilizers; copy nonselection remains Pass 1328","1333":"GAP/AtlasRep/TomLib/Repsn certificate for three faithful degree-20 representations and TOM multiplicities","1334":"checked-in dual-manuscript inputs, idempotent integrator, and compile workflow"},"runtime_boundary":"Python and GAP 4.12.1/Repsn 3.1.2 passed locally; both source inputs are checked in once. Full manuscript PDF builds remain a CI surface because no local TeX engine is installed."},
-    {"range":"1335","owner":"brauer-tree-hecke-corner-track","status":"COMPLETE","artifacts":{"1335":"cyclic-defect Brauer tree; one-dimensional 23<->58 Ext groups; doubled-A3 H26 condensation shadow; semisimple color transport"}},
-    {"range":"1340-1344","owner":"cartan-atlas-selector-padic-manuscript-track","status":"COMPLETE_WITH_PDF_BUILD_BOUNDARY","artifacts":{"1340":"direct Cartan matrices, PIM dimensions, and block dimensions for p=2,3,5; displayed D factorizations are not promoted as uniquely derived","1341":"faithful exact rational 20-dimensional standard-generator model and local GAP/AtlasRep character-row match; literal-480 derivation remains provenance","1342":"literal cycle census through length 6 plus GAP path-stabilizer proof of the global simple-cycle orbit minimum 120 and cycle-plus-copy minimum 360","1343":"complete primitive-idempotent lifts through p^6 and cross-certificate Smith/Loewy separation","1344":"checked-in dual-manuscript theorem inputs, idempotent integrator, full compile CI, and PDF artifact gate"},"runtime_boundary":"Exact Python and GAP witnesses pass locally, including the global selector certificate and AtlasRep character-level comparison. Full historical-manuscript PDF builds remain an observable CI surface because no local TeX engine is installed."}
-  ],
-  "rule":"A pass number is canonical only when registered here. Retracted or scope-corrected blocks remain registered for provenance but cannot contribute active theorem claims outside their stated scope."
+ "schema": "w33.pass_namespace_registry.v2",
+ "status": "ACTIVE",
+ "date": "2026-07-30",
+ "canonical_blocks": [
+  {
+   "range": "1120-1128",
+   "owner": "glue-track",
+   "status": "COMPLETE"
+  },
+  {
+   "range": "1132-1136",
+   "owner": "exact-audit-track",
+   "status": "COMPLETE"
+  },
+  {
+   "range": "1137-1140",
+   "owner": "parallel-codex-track",
+   "status": "COMPLETE"
+  },
+  {
+   "range": "1142-1146",
+   "owner": "exact-bridge-corpus-track",
+   "status": "COMPLETE"
+  },
+  {
+   "range": "1147",
+   "owner": "codex-schlaefli-steinberg-track",
+   "status": "COMPLETE",
+   "artifacts": {
+    "1147": "object-level directed Schlaefli carrier, rank-81 edge-to-cycle transform, 216-line tight frame, rank-288 weld, exact 1952 residual, integral Smith/color split, and the nonsplit sign-twisted 58|23 critical-group extension"
+   }
+  },
+  {
+   "range": "1148-1152",
+   "owner": "exact-crossed-bridge-track",
+   "status": "COMPLETE"
+  },
+  {
+   "range": "1153-1157",
+   "owner": "continuation-audit-track",
+   "status": "COMPLETE"
+  },
+  {
+   "range": "1158-1162",
+   "owner": "breakthrough-track",
+   "status": "COMPLETE"
+  },
+  {
+   "range": "1163-1172",
+   "owner": "execution-tracks-1-2",
+   "status": "COMPLETE"
+  },
+  {
+   "range": "1173-1182",
+   "owner": "execution-tracks-3-4",
+   "status": "COMPLETE"
+  },
+  {
+   "range": "1183-1192",
+   "owner": "execution-tracks-5-correction",
+   "status": "COMPLETE"
+  },
+  {
+   "range": "1193-1202",
+   "owner": "bridge-breakthrough-tracks",
+   "status": "COMPLETE"
+  },
+  {
+   "range": "1203-1212",
+   "owner": "frontier-tracks",
+   "status": "COMPLETE"
+  },
+  {
+   "range": "1213-1222",
+   "owner": "synthesis-outside-box-tracks",
+   "status": "COMPLETE"
+  },
+  {
+   "range": "1223-1232",
+   "owner": "absorption-conversion-tracks",
+   "status": "COMPLETE"
+  },
+  {
+   "range": "1233-1242",
+   "owner": "upgrade-frontier-tracks",
+   "status": "COMPLETE"
+  },
+  {
+   "range": "1243-1252",
+   "owner": "materialization-execution-tracks",
+   "status": "COMPLETE"
+  },
+  {
+   "range": "1253-1262",
+   "owner": "consolidation-universal-tracks",
+   "status": "COMPLETE"
+  },
+  {
+   "range": "1263-1272",
+   "owner": "dictionary-ledger-v6-tracks",
+   "status": "RETRACTED_BY_1318",
+   "reason": "The k=9 A5/Hecke chain used fixed-point vector (432,4,0,1,1), whose Burnside value is 43/5 rather than 9."
+  },
+  {
+   "range": "1273-1277",
+   "owner": "chi27-ledger-v7-track",
+   "status": "RETRACTED_BY_1318",
+   "reason": "Dimension-fit species assignments and coordinate-surrogate units were superseded by the literal 26-orbital and carrier-projector calculations."
+  },
+  {
+   "range": "1278-1282",
+   "owner": "parallel-absorption-ledger-v8-track",
+   "status": "COMPLETE_WITH_SCOPE"
+  },
+  {
+   "range": "1283-1287",
+   "owner": "m3-m4-levi-ledger-v9-track",
+   "status": "COMPLETE_WITH_SCOPE"
+  },
+  {
+   "range": "1288-1292",
+   "owner": "parallel-levi-gap-track",
+   "status": "COMPLETE_WITH_SCOPE"
+  },
+  {
+   "range": "1293-1297",
+   "owner": "parallel-jordan-integral-track",
+   "status": "AUXILIARY_SCOPE"
+  },
+  {
+   "range": "1298-1302",
+   "owner": "parallel-product-scheme-track",
+   "status": "SCOPE_CORRECTED_BY_1329",
+   "reason": "Pass 1298 constructs the tensor square of the rank-3 W33 scheme; it is not the literal 26-dimensional W(E6)/S5 coset Hecke algebra. Other claims in the block require their own claim-tier review."
+  },
+  {
+   "range": "1303-1307",
+   "owner": "parallel-lattice-gauge-track",
+   "status": "PARTIALLY_RETRACTED_BY_1327_1329",
+   "reason": "Pass 1305 did not execute AtlasRep and reversed the 432/480 species-20 multiplicities. The remaining claims are auxiliary until separately audited."
+  },
+  {
+   "range": "1310-1314",
+   "owner": "literal-a5-correction-track",
+   "status": "COMPLETE",
+   "artifacts": {
+    "1310": "literal W(E6)/A5 coset action",
+    "1311": "A5 fixed-point census (432,24,36,2,2)",
+    "1312": "26 A5 orbits and exact orbit-size census",
+    "1313": "restricted A5 character and commutant dimension 3688",
+    "1314": "regression/correction firewall"
+   }
+  },
+  {
+   "range": "1315-1319",
+   "owner": "exact-hecke-hashimoto-bridge-track",
+   "status": "COMPLETE",
+   "artifacts": {
+    "1315": "26-dimensional Hecke Wedderburn decomposition and nine primitive central idempotents",
+    "1316": "exact 480-dimensional Hashimoto character decomposition",
+    "1317": "literal rank-20 species projector and carrier-level matrix units",
+    "1318": "fail-closed migration of false k=9 artifacts",
+    "1319": "six-dimensional exact Hom space between 432 and 480 carriers"
+   }
+  },
+  {
+   "range": "1320-1324",
+   "owner": "transport-linking-morita-track",
+   "status": "COMPLETE",
+   "artifacts": {
+    "1320": "six-channel species decomposition and singular scales",
+    "1321": "all 26 rational Hecke matrix units",
+    "1322": "species-20 Hashimoto restriction B=-I20",
+    "1323": "28-dimensional linking algebra and full M3-C Morita context",
+    "1324": "formal theorem/proof/retraction ledgers"
+   }
+  },
+  {
+   "range": "1325-1329",
+   "owner": "triality-integral-gauge-track",
+   "status": "COMPLETE",
+   "artifacts": {
+    "1325": "three-carrier triality globalization: dimensions 234,52,148,40",
+    "1326": "transport and 26-unit Hecke Smith forms; bad primes 2,3,5",
+    "1327": "species-20 normalizer, 3x3 gauge grid, and Pass1305 correction",
+    "1328": "length-7/8 and invariant primitive-cycle nonselection theorem",
+    "1329": "independent stdlib/SymPy reconstruction and GAP certificate"
+   }
+  },
+  {
+   "range": "1330-1334",
+   "owner": "modular-triality-cycle-atlas-manuscript-track",
+   "status": "COMPLETE_WITH_TEX_BUILD_BOUNDARY",
+   "artifacts": {
+    "1330": "exact radical, quotient, Loewy, center, and central-block profiles modulo 2,3,5",
+    "1331": "eigenmatrix/idempotent completion of the Pass-1327 nine-axis grid",
+    "1332": "two selected length-7/8 cyclic words and their ordered/dihedral stabilizers; copy nonselection remains Pass 1328",
+    "1333": "GAP/AtlasRep/TomLib/Repsn certificate for three faithful degree-20 representations and TOM multiplicities",
+    "1334": "checked-in dual-manuscript inputs, idempotent integrator, and compile workflow"
+   },
+   "runtime_boundary": "Python and GAP 4.12.1/Repsn 3.1.2 passed locally; both source inputs are checked in once. Full manuscript PDF builds remain a CI surface because no local TeX engine is installed."
+  },
+  {
+   "range": "1335",
+   "owner": "brauer-tree-hecke-corner-track",
+   "status": "COMPLETE",
+   "artifacts": {
+    "1335": "cyclic-defect Brauer tree; one-dimensional 23<->58 Ext groups; doubled-A3 H26 condensation shadow; semisimple color transport"
+   }
+  },
+  {
+   "range": "1340-1344",
+   "owner": "cartan-atlas-selector-padic-manuscript-track",
+   "status": "COMPLETE_WITH_PDF_BUILD_BOUNDARY",
+   "artifacts": {
+    "1340": "direct Cartan matrices, PIM dimensions, and block dimensions for p=2,3,5; displayed D factorizations are not promoted as uniquely derived",
+    "1341": "faithful exact rational 20-dimensional standard-generator model and local GAP/AtlasRep character-row match; literal-480 derivation remains provenance",
+    "1342": "literal cycle census through length 6 plus GAP path-stabilizer proof of the global simple-cycle orbit minimum 120 and cycle-plus-copy minimum 360",
+    "1343": "complete primitive-idempotent lifts through p^6 and cross-certificate Smith/Loewy separation",
+    "1344": "checked-in dual-manuscript theorem inputs, idempotent integrator, full compile CI, and PDF artifact gate"
+   },
+   "runtime_boundary": "Exact Python and GAP witnesses pass locally, including the global selector certificate and AtlasRep character-level comparison. Full historical-manuscript PDF builds remain an observable CI surface because no local TeX engine is installed."
+  },
+  {
+   "range": "1375-1378",
+   "owner": "glue-track-selector-tomotope-guard",
+   "status": "COMPLETE",
+   "artifacts": {
+    "1375": "432-orbit stabiliser identified as S5=[120,34], all three orbits conjugate; refutes the order-60 correction frozen in ALIAS_REGISTRY.json",
+    "1376": "tomotope Gamma(T) built from the PUBLISHED Monson-Pellicer-Williams generators; BT781/BT783 confirmed; Aut(T) satisfies the intersection condition (Mon(T) is what fails)",
+    "1377": "A4 is the derived subgroup of the frame stabiliser at both PSp and PGSp level; the 540 frames are NOT facets of a rank-4 polytope",
+    "1378": "guard grammar was blind to group notation (zero tokens from BT781's boundary); group_tokens() added"
+   },
+   "runtime_boundary": "All four are exact GAP computations, run locally and certified in data/w33_pass1375_*.txt and data/w33_pass1376_*.txt. No CI-observed claim."
+  }
+ ],
+ "rule": "A pass number is canonical only when registered here. Retracted or scope-corrected blocks remain registered for provenance but cannot contribute active theorem claims outside their stated scope."
 }

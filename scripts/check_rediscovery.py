@@ -143,6 +143,61 @@ def noun_number_pairs(text: str) -> set[str]:
     return out
 
 
+RE_SMALLGROUP = re.compile(r"(?i)\b(?:small|id)group\s*[\[(]\s*(\d+)\s*,\s*(\d+)\s*[\])]")
+RE_CLASSICAL = re.compile(
+    r"\b(PGSp|PSp|PGL|PSL|PSU|GL|SL|SU|Sp|Sz|U|O)\s*\(?\s*(\d+)\s*,\s*(\d+)\s*\)?")
+RE_ATOMIC = re.compile(r"\b([AS])_?(\d{1,2})\b|\b([QD])_?(\d{1,2})\b|\bO_h\b|\b2([TOI])\b")
+# a semidirect/direct product written any of the half-dozen ways this repo writes it
+RE_PRODUCT = re.compile(
+    r"\(?\s*[CZ]?(\d+)\s*(?:\^\s*(\d+))?\s*\)?"
+    r"((?:\s*[x×]\s*\(?\s*[CZ]?\d+\s*(?:\^\s*\d+)?\s*\)?)*)"
+    r"\s*[:⋊]\s*"
+    r"\(?\s*([CZAS]?)(\d+)\s*\)?")
+
+
+def _pow_of(base: str, extra: str) -> str:
+    """`C2 x C2 x C2` and `2^3` are the same group; write both as `2^3`."""
+    n = 1 + len(re.findall(r"[x×]", extra or ""))
+    return f"{base}^{n}" if n > 1 else base
+
+
+def group_tokens(text: str) -> set[str]:
+    """Canonical tokens for GROUP-THEORETIC results.
+
+    WHY THIS EXISTS (measured, 2026-07-31).  BT781's boundary section reads
+
+        BT782 should build the explicit bridge functor
+        Aut(Q3)=2^3:S3 --> Gamma(T)'=2^4:C3
+
+    and BT782/BT783 answer it directly.  Running the boundary sweep on it
+    extracted **zero** tokens, so the sweep could not possibly fire, and Pass
+    1127 re-derived BT783's obstruction from scratch.  The cause is not the
+    threshold: it is that the entire grammar -- code parameters, slash
+    sequences, noun@number -- is blind to `2^3:S3`, which is the single most
+    common way a result is stated in this corpus.
+
+    The normalisation matters as much as the matching.  This repo writes one
+    group five ways -- `2^3:S3`, `C2^3 : S3`, `(C2 x C2 x C2):S3`,
+    `SmallGroup[48,48]`, `C2 x S4` -- so the tokens below collapse cyclic
+    factor lists to powers and drop the C/Z prefix, letting a file that says
+    `C2^4 : C3` match one that says `2^4:C3`.
+    """
+    out: set[str] = set()
+    for n, k in RE_SMALLGROUP.findall(text):
+        out.add(f"grp:{n}.{k}")
+    for fam, d, q in RE_CLASSICAL.findall(text):
+        out.add(f"grp:{fam.lower()}({d},{q})")
+    for m in RE_PRODUCT.finditer(text):
+        base, exp, extra, kind, deg = m.groups()
+        left = f"{base}^{exp}" if exp else _pow_of(base, extra)
+        out.add(f"grp:{left}:{(kind or '').upper()}{deg}".replace("C", ""))
+    for m in RE_ATOMIC.finditer(text):
+        g = m.group(0).replace("_", "").strip()
+        if g:
+            out.add(f"grp:{g}")
+    return out
+
+
 def compounds(text: str) -> set[str]:
     """Co-occurring pairs of central objects, as sorted 'x+y' tokens."""
     from itertools import combinations
