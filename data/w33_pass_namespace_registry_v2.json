@@ -496,6 +496,20 @@
     "1484": "resolution SAT launched detached: 4,860 vars, 99,909 clauses, encoding 0.1s, still running. Undecided, reported as running not as a result"
    },
    "runtime_boundary": "Exact GAP character theory. The SAT run is in progress and no result is claimed from it; the degree-90 origin remains open."
+  },
+  {
+   "range": "1485-1490",
+   "owner": "glue-track-spreads-and-guard-calibration",
+   "status": "COMPLETE",
+   "artifacts": {
+    "1485": "PHYSICS: the size-36 OUTER involution class is in bijection with the 36 SPREADS -- centraliser order 1440 = |PGSp|/36 = the spread stabiliser order, fixes 0 points and 10 lines (a spread is exactly 10 disjoint lines covering 40 points). Both sign-detecting classes are geometric: 540 involutions = frames (BT773) at -+3, and 36 involutions = spreads at -+9, the maximum",
+    "1486": "the degree-90 occurs in NO primitive permutation module of PGSp: multiplicity 0 for all six maximals (indices 2,27,36,40,40,45)",
+    "1487": "PREDICTION CONFIRMED: coexact over PGSp = 30 + 90. Complete picture -- the signed 240-edge module over PGSp is 15+24 | 81 | 30+90, FIVE irreducibles multiplicity-free, versus SIX over PSp. The 45+45 -> 90 fusion is the only change. This EXPLAINS Pass 1486: the 90 lives in the orientation-SIGNED module, and a permutation module cannot see a sign",
+    "1488": "MY OWN GUARD IS NOISE: group_tokens (added Pass 1378, credited with catching BT781->BT782) flags 81.5% of the 27 pass witnesses, against Pass 328 calibration of ~78% noise / ~20% signal. One real catch demonstrated nothing about its rate",
+    "1489": "calibrated rarity cut: 25 is the MINIMUM cut keeping the pinned BT781->BT782 case alive (grp:2^4:3 occurs in 25 files, so cut 20 kills it) and it lands at 22.2%, in the signal band. Self-test 5/5 and back to its ORIGINAL polar-pair tokens; sweep candidates 17 -> 9",
+    "1490": "resolution SAT still running, undecided"
+   },
+   "runtime_boundary": "Exact GAP character theory and permutation-character computations; flag rates measured over 27 pass witnesses. The SAT run is in progress and no result is claimed."
   }
  ],
  "rule": "A pass number is canonical only when registered here. Retracted or scope-corrected blocks remain registered for provenance but cannot contribute active theorem claims outside their stated scope."

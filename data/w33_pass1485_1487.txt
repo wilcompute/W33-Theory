@@ -1,0 +1,24 @@
+Passes 1485-1487: the 36 class, the 90's origin, block correlation
+
+=== Pass 1485: the size-36 outer involution class ===
+  size-36 involution: centraliser order = 1440
+    |PGSp|/36 = 1440
+    fixes 0 of the 40 points
+    fixes 10 of the 40 lines
+    is it INNER? false
+  W(3,3) has 36 spreads; spread stabiliser order = 1440
+
+=== Pass 1486: hunting the degree-90 ===
+  maximal index 2 (order 25920): 90-multiplicity = 0
+  maximal index 27 (order 1920): 90-multiplicity = 0
+  maximal index 36 (order 1440): 90-multiplicity = 0
+  maximal index 40 (order 1296): 90-multiplicity = 0
+  maximal index 40 (order 1296): 90-multiplicity = 0
+  maximal index 45 (order 1152): 90-multiplicity = 0
+
+=== Pass 1487: the coexact block over PGSp (predict 30 + 90) ===
+  dim coexact = 120
+  COEXACT over PGSp: [ [ 15, 30, 1 ], [ 25, 90, 1 ] ]
+  is it 30 + 90 as predicted? true
+
+DONE

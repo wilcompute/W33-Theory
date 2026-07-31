@@ -116,6 +116,56 @@ def is_live_question(b: str) -> bool:
     return q > 0 and q > d
 
 
+
+# GROUP-TOKEN RARITY CUT (calibrated, Pass 1489).
+#
+# Pass 1378 added `group_tokens` and it caught BT781 -> BT782, the case that had
+# cost a rediscovery.  Re-measuring the flag rate over the 27 pass witnesses
+# (Pass 1488) showed the class had drifted into NOISE by this project's own
+# standard: 81.5%, against Pass 328's calibration of ~78% for bare integers
+# (noise) and ~20% for code parameters (signal).  Group notation is ubiquitous
+# here -- every pass names groups -- so the class flags nearly everything.
+#
+# The fix is a rarity cut, and the threshold is CALIBRATED rather than chosen:
+#
+#     cut   flag rate   BT781->BT782 shared tokens
+#      20     22.2%        1   MISSES the motivating case
+#      25     22.2%        2   FIRES        <-- the minimum cut that works
+#      40     37.0%        2   FIRES
+#    none     81.5%        3   FIRES        <-- noise
+#
+# 25 is the smallest cut that keeps the pinned case alive, and it lands exactly
+# in the signal band.  Frequencies come from the persistent corpus index; if it
+# is absent the cut is skipped rather than guessed.
+GRP_RARITY_CUT = 25
+
+
+def _grp_freq() -> dict[str, int]:
+    import sqlite3
+    db = ROOT / "data" / "corpus_index.sqlite"
+    if not db.exists():
+        return {}
+    try:
+        con = sqlite3.connect(f"file:{db}?mode=ro", uri=True)
+        f = {r[0]: r[1] for r in con.execute(
+            "SELECT token, COUNT(*) FROM tok WHERE token LIKE 'grp:%' GROUP BY token")}
+        con.close()
+        return f
+    except Exception:
+        return {}
+
+
+_GRPF = _grp_freq()
+
+
+def rare_group_tokens(text: str) -> set[str]:
+    """group_tokens, minus the ones so common they are topics not results."""
+    t = group_tokens(text)
+    if not _GRPF:
+        return t
+    return {x for x in t if _GRPF.get(x, 1) <= GRP_RARITY_CUT}
+
+
 def order_key(p: Path):
     """Sortable position in the corpus: BT number, pass number, or ISO date."""
     n = p.name
@@ -163,10 +213,10 @@ def self_test() -> int:
     old = subprocess.run(["git", "show", f"{log[-1]}:analysis/BT810_completed_geography_schlafli.md"],
                          capture_output=True, text=True, cwd=ROOT).stdout
     b = boundary_text(old)
-    bt = (results_in(b) | noun_number_pairs(b) | group_tokens(b)) if b else set()
+    bt = (results_in(b) | noun_number_pairs(b) | rare_group_tokens(b)) if b else set()
     t811 = (ROOT / "analysis" / "BT811_platonic_fine_print.md").read_text(
         encoding="utf-8", errors="ignore")
-    shared = bt & (results_in(t811) | noun_number_pairs(t811) | group_tokens(t811))
+    shared = bt & (results_in(t811) | noun_number_pairs(t811) | rare_group_tokens(t811))
     ok = len(shared) >= 2
     print(f"  [{'PASS' if ok else 'FAIL'}] BT810 boundary vs BT811: "
           f"{len(shared)} shared tokens {sorted(shared)[:4]}")
@@ -243,7 +293,7 @@ def main(argv: list[str]) -> int:
             continue
         body[p.name] = t
         keys[p.name] = order_key(p)
-        tokens[p.name] = results_in(t) | noun_number_pairs(t) | group_tokens(t)
+        tokens[p.name] = results_in(t) | noun_number_pairs(t) | rare_group_tokens(t)
 
     # INVERTED INDEX, not a double loop.  The pairwise version is O(files^2) set
     # intersections -- about 1.5M of them over 1230 files -- and once Pass 1378's
@@ -266,7 +316,7 @@ def main(argv: list[str]) -> int:
             continue
         if not is_live_question(b):          # scope disclaimer, not a question
             continue
-        btok = (results_in(b) | noun_number_pairs(b) | group_tokens(b)) - {""}
+        btok = (results_in(b) | noun_number_pairs(b) | rare_group_tokens(b)) - {""}
         if not btok:
             continue
         k = keys[p.name]
