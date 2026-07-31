@@ -1,0 +1,20 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.supplement",
+  "status": "ACTIVE",
+  "canonical_blocks": [
+    {
+      "range": "1416-1420",
+      "owner": "frame-signed-turn-cover-torsion-manuscript-track",
+      "status": "COMPLETE_WITH_LOCAL_EXACT_VERIFICATION",
+      "artifacts": {
+        "1416": "explicit integral incidence intertwiner from the frame cross-matching cokernel to the signed-turn 10-eigenspace",
+        "1417": "exact-cover orbit frontier with five stabilizer types and certified lower bound 226800",
+        "1418": "mod-2 nilpotent bridge flag separating the two isomorphic degree-14 factors geometrically",
+        "1419": "cross-manuscript claim audit against operational contextuality and linear-optical computation definitions",
+        "1420": "shared TeX theorem insert, dual-manuscript integrator, focused tests, and fail-closed CI"
+      },
+      "namespace_note": "This block closes the Pass 1412 degree-15 character question by constructing a natural incidence intertwiner, not by dimension counting. It also corrects the sampled-only diagonal-cover observation and preserves the exact-cover total as an open problem.",
+      "runtime_boundary": "Local exact verification completed with 24/24, 16/16, and 15/15 checks; 3/3 focused tests; idempotent integrator test; and an independent minimal LaTeX compile. Remote Actions are a regression surface and are not claimed as observed until the workflow completes. The physical claims audited in Pass 1419 remain conditional."
+    }
+  ]
+}
