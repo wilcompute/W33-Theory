@@ -3,11 +3,9 @@
         "characteristic5_split_wedderburn": "F5^7 + M2(F5)^2 + M3(F5)^3 + M4(F5) + M5(F5)",
         "characteristic5_regular_factor_census": expected_f5,
         "conclusion": (
-            "All fourteen rational Mackey projectors are integral at 5 and none is integral at 2 or 3. "
-            "Thus the characteristic-5 reduction preserves the split fourteen-block Wedderburn algebra exactly, "
-            "whereas the two group primes force total central-projector collapse before the independently verified "
-            "Loewy towers of lengths 3 and 6 appear.  The tower lengths require extension data and are not inferred "
-            "from characteristic-zero orbit sizes alone."
+            "The exact denominator profile records which characteristic-zero Mackey projectors survive in the orbital lattice at each prime. "
+            "Independently, characteristic 5 has zero radical and the full split fourteen-block factor census, while characteristics 2 and 3 have Loewy lengths 3 and 6. "
+            "Thus semisimple persistence is certified by the modular regular module even when a chosen characteristic-zero projector is not integral in the orbital basis."
         ),
         "boundary": "This proves localization/persistence and exact Loewy comparison; it does not claim that little-group orbit sizes alone determine modular extensions.",
     }
