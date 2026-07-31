@@ -1,8 +1,8 @@
 {
-  "schema": "w33.pass_namespace_registry.v2",
-  "status": "ACTIVE",
-  "date": "2026-07-30",
-  "canonical_blocks": [
+  "schema":"w33.pass_namespace_registry.v2",
+  "status":"ACTIVE",
+  "date":"2026-07-30",
+  "canonical_blocks":[
     {"range":"1120-1128","owner":"glue-track","status":"COMPLETE"},
     {"range":"1132-1136","owner":"exact-audit-track","status":"COMPLETE"},
     {"range":"1137-1140","owner":"parallel-codex-track","status":"COMPLETE"},
@@ -34,7 +34,8 @@
     {"range":"1320-1324","owner":"transport-linking-morita-track","status":"COMPLETE","artifacts":{"1320":"six-channel species decomposition and singular scales","1321":"all 26 rational Hecke matrix units","1322":"species-20 Hashimoto restriction B=-I20","1323":"28-dimensional linking algebra and full M3-C Morita context","1324":"formal theorem/proof/retraction ledgers"}},
     {"range":"1325-1329","owner":"triality-integral-gauge-track","status":"COMPLETE","artifacts":{"1325":"three-carrier triality globalization: dimensions 234,52,148,40","1326":"transport and 26-unit Hecke Smith forms; bad primes 2,3,5","1327":"species-20 normalizer, 3x3 gauge grid, and Pass1305 correction","1328":"length-7/8 and invariant primitive-cycle nonselection theorem","1329":"independent stdlib/SymPy reconstruction and GAP certificate"}},
     {"range":"1330-1334","owner":"modular-triality-cycle-atlas-manuscript-track","status":"COMPLETE_WITH_TEX_BUILD_BOUNDARY","artifacts":{"1330":"exact radical, quotient, Loewy, center, and central-block profiles modulo 2,3,5","1331":"eigenmatrix/idempotent completion of the Pass-1327 nine-axis grid","1332":"two selected length-7/8 cyclic words and their ordered/dihedral stabilizers; copy nonselection remains Pass 1328","1333":"GAP/AtlasRep/TomLib/Repsn certificate for three faithful degree-20 representations and TOM multiplicities","1334":"checked-in dual-manuscript inputs, idempotent integrator, and compile workflow"},"runtime_boundary":"Python and GAP 4.12.1/Repsn 3.1.2 passed locally; both source inputs are checked in once. Full manuscript PDF builds remain a CI surface because no local TeX engine is installed."},
-    {"range":"1335","owner":"brauer-tree-hecke-corner-track","status":"COMPLETE","artifacts":{"1335":"cyclic-defect Brauer tree; one-dimensional 23<->58 Ext groups; doubled-A3 H26 condensation shadow; semisimple color transport"}}
+    {"range":"1335","owner":"brauer-tree-hecke-corner-track","status":"COMPLETE","artifacts":{"1335":"cyclic-defect Brauer tree; one-dimensional 23<->58 Ext groups; doubled-A3 H26 condensation shadow; semisimple color transport"}},
+    {"range":"1340-1344","owner":"cartan-atlas-selector-padic-manuscript-track","status":"COMPLETE_WITH_PDF_BUILD_BOUNDARY","artifacts":{"1340":"direct Cartan matrices, PIM dimensions, and block dimensions for p=2,3,5; displayed D factorizations are not promoted as uniquely derived","1341":"faithful exact rational 20-dimensional standard-generator model and local GAP/AtlasRep character-row match; literal-480 derivation remains provenance","1342":"literal cycle census through length 6 plus GAP path-stabilizer proof of the global simple-cycle orbit minimum 120 and cycle-plus-copy minimum 360","1343":"complete primitive-idempotent lifts through p^6 and cross-certificate Smith/Loewy separation","1344":"checked-in dual-manuscript theorem inputs, idempotent integrator, full compile CI, and PDF artifact gate"},"runtime_boundary":"Exact Python and GAP witnesses pass locally, including the global selector certificate and AtlasRep character-level comparison. Full historical-manuscript PDF builds remain an observable CI surface because no local TeX engine is installed."}
   ],
-  "rule": "A pass number is canonical only when registered here. Retracted or scope-corrected blocks remain registered for provenance but cannot contribute active theorem claims outside their stated scope."
+  "rule":"A pass number is canonical only when registered here. Retracted or scope-corrected blocks remain registered for provenance but cannot contribute active theorem claims outside their stated scope."
 }
