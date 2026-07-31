@@ -1,0 +1,145 @@
+#!/usr/bin/env python3
+"""Passes 1537-1541: five exact continuations of the W33 frame-dual code.
+
+The verifier rebuilds W(3,3), the canonical 540x240 frame/edge matrix M,
+and the 45x240 intrinsic K4,4 octet matrix K.  It then certifies:
+
+1537  modular octet-Gram modules and the literal Pass-1416 mod-2 bridge;
+1538  the integral/ternary octet lattice and the oriented coexact 30-lift;
+1539  octet-derived exact-8/XOR cuts for the Hoffman resolution system;
+1540  an exact low-layer weight enumerator and a falsifier for an SRG-only shortcut;
+1541  exact bounded-distance syndrome decoding plus an explicit min-sum BSC falsifier.
+
+Every promoted statement is finite and exact except the explicitly labelled,
+seeded decoder experiment.  The global nine-cover resolution and full 2^45
+weight enumerator remain open.
+"""
+from __future__ import annotations
+
+import argparse
+import collections
+import hashlib
+import itertools
+import json
+import math
+from collections import deque
+from pathlib import Path
+from typing import Any, Iterable
+
+import networkx as nx
+import numpy as np
+
+Q = 3
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "data" / "w33_pass1537_1541_frame_dual_five_frontiers.json"
+OMEGA = np.array(
+    [[0, 1, 0, 0], [-1, 0, 0, 0], [0, 0, 0, 1], [0, 0, -1, 0]],
+    dtype=np.int64,
+) % Q
+BIG_PRIME = 1_000_003
+
+
+def norm(v: Iterable[int]) -> tuple[int, ...]:
+    v = tuple(int(x) % Q for x in v)
+    for x in v:
+        if x:
+            inv = 1 if x == 1 else 2
+            return tuple((inv * y) % Q for y in v)
+    raise ValueError("zero vector")
+
+
+def symp(a: tuple[int, ...], b: tuple[int, ...]) -> int:
+    return int(np.array(a, dtype=np.int64) @ OMEGA @ np.array(b, dtype=np.int64) % Q)
+
+
+def rank_mod(matrix: np.ndarray, prime: int) -> int:
+    a = np.array(matrix, dtype=np.int64) % prime
+    rows, cols = a.shape
+    rank = 0
+    for col in range(cols):
+        pivots = np.flatnonzero(a[rank:, col])
+        if not len(pivots):
+            continue
+        pivot = rank + int(pivots[0])
+        if pivot != rank:
+            a[[rank, pivot]] = a[[pivot, rank]]
+        a[rank] = a[rank] * pow(int(a[rank, col]), -1, prime) % prime
+        active = np.flatnonzero(a[:, col])
+        active = active[active != rank]
+        if len(active):
+            a[active] = (a[active] - a[active, col, None] * a[rank]) % prime
+        rank += 1
+        if rank == rows:
+            break
+    return rank
+
+
+def pivot_columns_mod(matrix: np.ndarray, prime: int) -> list[int]:
+    a = np.array(matrix, dtype=np.int64) % prime
+    rows, cols = a.shape
+    rank = 0
+    pivots: list[int] = []
+    for col in range(cols):
+        active = np.flatnonzero(a[rank:, col])
+        if not len(active):
+            continue
+        pivot = rank + int(active[0])
+        if pivot != rank:
+            a[[rank, pivot]] = a[[pivot, rank]]
+        a[rank] = a[rank] * pow(int(a[rank, col]), -1, prime) % prime
+        nonzero = np.flatnonzero(a[:, col])
+        nonzero = nonzero[nonzero != rank]
+        if len(nonzero):
+            a[nonzero] = (a[nonzero] - a[nonzero, col, None] * a[rank]) % prime
+        pivots.append(col)
+        rank += 1
+        if rank == rows:
+            break
+    return pivots
+
+
+def nullspace_mod(matrix: np.ndarray, prime: int) -> np.ndarray:
+    a = np.array(matrix, dtype=np.int64) % prime
+    rows, cols = a.shape
+    rank = 0
+    pivots: list[int] = []
+    for col in range(cols):
+        active = np.flatnonzero(a[rank:, col])
+        if not len(active):
+            continue
+        pivot = rank + int(active[0])
+        if pivot != rank:
+            a[[rank, pivot]] = a[[pivot, rank]]
+        a[rank] = a[rank] * pow(int(a[rank, col]), -1, prime) % prime
+        nonzero = np.flatnonzero(a[:, col])
+        nonzero = nonzero[nonzero != rank]
+        if len(nonzero):
+            a[nonzero] = (a[nonzero] - a[nonzero, col, None] * a[rank]) % prime
+        pivots.append(col)
+        rank += 1
+        if rank == rows:
+            break
+    free = [col for col in range(cols) if col not in pivots]
+    basis = []
+    for free_col in free:
+        vector = np.zeros(cols, dtype=np.int64)
+        vector[free_col] = 1
+        for row in range(rank - 1, -1, -1):
+            pivot_col = pivots[row]
+            vector[pivot_col] = (-int(np.dot(a[row], vector))) % prime
+        basis.append(vector)
+    return np.array(basis, dtype=np.int64)
+
+
+def column_basis_mod(matrix: np.ndarray, prime: int) -> np.ndarray:
+    pivots = pivot_columns_mod(matrix, prime)
+    return np.array(matrix, dtype=np.int64)[:, pivots] % prime
+
+
+def inverse_mod(matrix: np.ndarray, prime: int) -> np.ndarray:
+    a = np.array(matrix, dtype=np.int64) % prime
+    n = a.shape[0]
+    augmented = np.hstack([a, np.eye(n, dtype=np.int64)])
+    for col in range(n):
+        active = np.flatnonzero(augmented[col:, col])
+        if not len(active):
