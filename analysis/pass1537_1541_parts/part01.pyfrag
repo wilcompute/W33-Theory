@@ -1,0 +1,145 @@
+            raise ValueError("singular matrix")
+        pivot = col + int(active[0])
+        if pivot != col:
+            augmented[[col, pivot]] = augmented[[pivot, col]]
+        augmented[col] = augmented[col] * pow(int(augmented[col, col]), -1, prime) % prime
+        for row in range(n):
+            if row != col and augmented[row, col]:
+                augmented[row] = (augmented[row] - augmented[row, col] * augmented[col]) % prime
+    return augmented[:, n:]
+
+
+def left_inverse_mod(basis: np.ndarray, prime: int) -> np.ndarray:
+    """Return L with L*basis=I for a full-column-rank matrix."""
+    pivot_rows = pivot_columns_mod(basis.T, prime)
+    square = basis[pivot_rows, :] % prime
+    inv = inverse_mod(square, prime)
+    left = np.zeros((basis.shape[1], basis.shape[0]), dtype=np.int64)
+    left[:, pivot_rows] = inv
+    if not np.array_equal((left @ basis) % prime, np.eye(basis.shape[1], dtype=np.int64) % prime):
+        raise AssertionError("left inverse failed")
+    return left
+
+
+def extend_basis(vectors: list[np.ndarray], candidates: list[np.ndarray], prime: int) -> np.ndarray:
+    columns: list[np.ndarray] = []
+    for vector in vectors + candidates:
+        vector = np.array(vector, dtype=np.int64) % prime
+        trial = np.column_stack(columns + [vector]) if columns else vector.reshape(-1, 1)
+        if rank_mod(trial, prime) > len(columns):
+            columns.append(vector)
+    return np.column_stack(columns)
+
+
+def add_span_vector(
+    basis: list[np.ndarray], pivots: list[int], vector: np.ndarray, prime: int
+) -> bool:
+    vector = np.array(vector, dtype=np.int64).ravel() % prime
+    for row, pivot in zip(basis, pivots):
+        if vector[pivot]:
+            vector = (vector - vector[pivot] * row) % prime
+    nonzero = np.flatnonzero(vector)
+    if not len(nonzero):
+        return False
+    pivot = int(nonzero[0])
+    vector = vector * pow(int(vector[pivot]), -1, prime) % prime
+    for index, row in enumerate(basis):
+        if row[pivot]:
+            basis[index] = (row - row[pivot] * vector) % prime
+    insert = int(np.searchsorted(pivots, pivot))
+    pivots.insert(insert, pivot)
+    basis.insert(insert, vector)
+    return True
+
+
+def algebra_dimension(generators: list[np.ndarray], prime: int) -> int:
+    n = generators[0].shape[0]
+    basis: list[np.ndarray] = []
+    pivots: list[int] = []
+    identity = np.eye(n, dtype=np.int64)
+    add_span_vector(basis, pivots, identity, prime)
+    queue: deque[np.ndarray] = deque([identity])
+    while queue:
+        current = queue.popleft()
+        for generator in generators:
+            product = current @ generator % prime
+            if add_span_vector(basis, pivots, product, prime):
+                queue.append(product)
+                if len(basis) == n * n:
+                    return len(basis)
+    return len(basis)
+
+
+def bareiss_det(matrix: np.ndarray) -> int:
+    """Exact fraction-free determinant for a square integer matrix."""
+    a = [[int(x) for x in row] for row in np.array(matrix, dtype=object).tolist()]
+    n = len(a)
+    sign = 1
+    previous = 1
+    for k in range(n - 1):
+        if a[k][k] == 0:
+            swap = next((row for row in range(k + 1, n) if a[row][k] != 0), None)
+            if swap is None:
+                return 0
+            a[k], a[swap] = a[swap], a[k]
+            sign *= -1
+        pivot = a[k][k]
+        for i in range(k + 1, n):
+            for j in range(k + 1, n):
+                a[i][j] = (a[i][j] * pivot - a[i][k] * a[k][j]) // previous
+        for i in range(k + 1, n):
+            a[i][k] = 0
+        previous = pivot
+    return sign * a[n - 1][n - 1]
+
+
+def compose(left: tuple[int, ...], right: tuple[int, ...]) -> tuple[int, ...]:
+    return tuple(left[right[index]] for index in range(len(right)))
+
+
+def inverse_permutation(permutation: tuple[int, ...]) -> tuple[int, ...]:
+    inverse = [0] * len(permutation)
+    for index, image in enumerate(permutation):
+        inverse[image] = index
+    return tuple(inverse)
+
+
+def generated_group(generators: list[tuple[int, ...]]) -> list[tuple[int, ...]]:
+    identity = tuple(range(len(generators[0])))
+    generating_set = generators + [inverse_permutation(generator) for generator in generators]
+    seen = {identity}
+    queue: deque[tuple[int, ...]] = deque([identity])
+    while queue:
+        current = queue.popleft()
+        for generator in generating_set:
+            product = compose(generator, current)
+            if product not in seen:
+                seen.add(product)
+                queue.append(product)
+    return sorted(seen)
+
+
+def permutation_matrix(permutation: tuple[int, ...]) -> np.ndarray:
+    matrix = np.zeros((len(permutation), len(permutation)), dtype=np.int64)
+    for index, image in enumerate(permutation):
+        matrix[image, index] = 1
+    return matrix
+
+
+def srg_parameters(graph: nx.Graph) -> tuple[int, int, int, int] | None:
+    degrees = set(dict(graph.degree()).values())
+    if len(degrees) != 1:
+        return None
+    adjacent: set[int] = set()
+    nonadjacent: set[int] = set()
+    for left, right in itertools.combinations(graph.nodes(), 2):
+        common = len(set(graph[left]) & set(graph[right]))
+        (adjacent if graph.has_edge(left, right) else nonadjacent).add(common)
+    if len(adjacent) != 1 or len(nonadjacent) != 1:
+        return None
+    return graph.number_of_nodes(), next(iter(degrees)), next(iter(adjacent)), next(iter(nonadjacent))
+
+
+def build_geometry() -> dict[str, Any]:
+    points = sorted({norm(v) for v in itertools.product(range(Q), repeat=4) if any(v)})
+    point_index = {point: index for index, point in enumerate(points)}
