@@ -1,0 +1,37 @@
+% Shared host-independent insert for Passes 1511--1515.
+\providecommand{\PSp}{\mathrm{PSp}}
+\subsection*{Disjoint exact covers and a residual integrality gap}
+
+The deterministic cover prefixes used above fix one frame before recursion.
+Consequently every sampled cover contains that frame, so pairwise intersection
+inside those prefixes is forced by the symmetry break and cannot establish that
+the global exact-cover family is intersecting.  Direct exact search gives two
+$60$-frame covers with empty intersection, each covering all $240$ edge columns
+exactly once.
+
+Fix one canonical cover.  Acting on the frozen $327$ cover-orbit
+representatives by $\PSp(4,3)$ produces $13648$ distinct covers disjoint from it,
+and every frozen orbit type contributes.  Their disjointness graph has
+\[
+ |V|=13648,\qquad |E|=188338,\qquad \#K_3=494,\qquad \#K_4=0.
+\]
+Thus its clique number is three, and adjoining the fixed cover yields an
+explicit four-cover packing inside the certified frontier.
+
+The involution classes in $\PSp(4,3)$ have sizes $45$ and $270$.  All $228$
+frozen cover orbits with stabilizer $C_2$ use the class-$45$ involution; it fixes
+$84$ of the $540$ frames globally and exactly $12$ frames of the stabilized
+cover.
+
+Removing the selected four covers leaves a $300\times240$ incidence system that
+is $4$-uniform by rows and $5$-regular by columns.  Hence the constant weight
+$x_r=1/5$ is a fractional exact cover of total weight $60$.  Nevertheless,
+exhaustive Algorithm~X proves that the residual system has no integral exact
+cover.  The selected four-packing therefore admits a fractional fifth layer but
+no integral fifth layer.
+
+\paragraph{Boundary.}
+The no-fifth-layer result applies to the displayed four-packing.  The clique
+calculation is exhaustive inside the frozen $327$-orbit frontier.  Neither claim
+settles the global packing number over as-yet undiscovered cover orbits or over
+all possible four-packings.
