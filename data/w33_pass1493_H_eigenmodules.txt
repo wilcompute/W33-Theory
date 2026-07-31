@@ -1,0 +1,27 @@
+Pass 1493: the eigenspaces of the frame graph H as G-modules
+
+frames 540, |G on frames| = 25920
+540-frame permutation module: [ [ 1, 1 ], [ 15, 3 ], [ 20, 2 ], [ 24, 2 ], [ 3\
+0, 2 ], [ 30, 2 ], [ 60, 1 ], [ 64, 1 ], [ 81, 2 ] ]
+  sum = 540
+
+H spectrum was 32^1, 14^44, 8^15, 4^81, 2^84, (-4)^315
+  the multiplicities must be sums of the degrees above:
+    degree 1 x 1
+    degree 15 x 3
+    degree 20 x 2
+    degree 24 x 2
+    degree 30 x 2
+    degree 30 x 2
+    degree 60 x 1
+    degree 64 x 1
+    degree 81 x 2
+
+  a multiplicity of 81 is achievable only if a degree-81 constituent is
+  present; if it is, the 4-eigenspace is very likely the Steinberg, and the
+  check is whether 81 appears in the list above.
+  degree-81 present in the 540-module? true
+  degree-15 present? true   degree-44/84 constituents? (44 and 84 are not PSp \
+degrees)
+
+DONE

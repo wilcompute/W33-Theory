@@ -510,6 +510,19 @@
     "1490": "resolution SAT still running, undecided"
    },
    "runtime_boundary": "Exact GAP character theory and permutation-character computations; flag rates measured over 27 pass witnesses. The SAT run is in progress and no result is claimed."
+  },
+  {
+   "range": "1491-1495",
+   "owner": "glue-track-hoffman-tight",
+   "status": "COMPLETE",
+   "artifacts": {
+    "1491": "BOTH Hoffman bounds TIGHT: chi(H) >= 1-32/(-4) = 9 and alpha(H) <= 540*4/36 = 60, exactly the resolution requirements. Maximum independent sets of H ARE the exact covers. Every cover centred indicator lies in the (-4)-eigenspace to 1.5e-14 -- a linear condition the SAT encoding does not know",
+    "1492": "PHYSICS, PROVED: H 81-dimensional 4-eigenspace IS the Steinberg. The 540-frame module is 1+15x3+20x2+24x2+30x4+60+64+81x2 and, excluding the trivial (Perron vector), there are ZERO ways to write 81 from the other degrees. Third independent route to the same 81",
+    "1493": "the parallel track Pass 1521 CNF and mine agree to the clause: 99,900 predicted, 99,909 mine (9 symmetry-break units)",
+    "1494": "results_in at 63% is a BUNDLE of which Pass 328 calibrated only the code-parameter part at 20%; a blanket rarity cut would penalise the correct component. SPLIT BEFORE CUTTING -- recommended, not applied",
+    "1495": "BT1408 carries the sign-geometry proposition (540 frames -+3, 36 spreads -+9) and the full-group decomposition; both manuscripts compile clean"
+   },
+   "runtime_boundary": "Exact linear algebra, exact GAP character theory, an integer-partition argument, and two observed local builds. The SAT run remains undecided."
   }
  ],
  "rule": "A pass number is canonical only when registered here. Retracted or scope-corrected blocks remain registered for provenance but cannot contribute active theorem claims outside their stated scope."

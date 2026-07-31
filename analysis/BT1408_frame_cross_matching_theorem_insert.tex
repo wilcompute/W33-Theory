@@ -173,7 +173,33 @@ So the gauge and physical blocks are \emph{split} by the outer element --- each
 constituent survives and acquires a sign --- while the two halves of the
 constraint block are \emph{exchanged} by it. The chirality of the constraint
 sector is of a different kind from that of the physical sector, not merely of a
-different magnitude.
+different magnitude. Over $\PGSp(4,3)$ the module reads
+\[
+  \underbrace{15\oplus24}_{39}\;\oplus\;\underbrace{81}_{81}\;\oplus\;
+  \underbrace{30\oplus90}_{120},
+\]
+five irreducibles rather than six, the fusion $45\oplus45\to90$ being the only
+change; the harmonic block carries one definite extension of the Steinberg.
+
+\begin{proposition}[The sign is read by frames and spreads]
+\label{prop:signgeometry}
+The two degree-$81$ extensions agree on $\PSp(4,3)$ and differ on exactly six
+outer classes. Two of those are involution classes, and both are geometric:
+\[
+\begin{array}{lccl}
+\text{class} & \text{size} & \text{object} & \text{separation}\\\hline
+\text{involutions} & 540 & \text{frames} & \chi=\mp3\\
+\text{involutions} & 36 & \text{spreads} & \chi=\mp9 \ (\text{maximal})
+\end{array}
+\]
+The size-$36$ class has centraliser of order $1440=|\PGSp(4,3)|/36$, fixes no
+point and exactly ten lines, and a spread of $W(3,3)$ is precisely ten pairwise
+disjoint lines covering all forty points.
+\end{proposition}
+
+The physical sector's chirality is therefore detected by two of the substrate's
+own combinatorial families, most strongly by the spreads --- not by an auxiliary
+construction.
 
 \begin{remark}[No Hodge star, and where one must come from]\label{rem:nostar}
 A Hodge star requires $C_k\cong C_{3-k}$. Here $C_0=C_3=40$ but
