@@ -1,0 +1,27 @@
+name: Passes 1410-1414 API Introspection
+
+on:
+  push:
+    branches:
+      - 'agent/pass1410-1414-*'
+    paths:
+      - 'analysis/pass1410_1414_introspect.py'
+      - '.github/workflows/pass1410_1414_introspect.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install --disable-pip-version-check numpy sympy networkx pytest
+      - run: python -m py_compile analysis/pass1410_1414_introspect.py
+      - run: python analysis/pass1410_1414_introspect.py
