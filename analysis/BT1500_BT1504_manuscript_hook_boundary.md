@@ -1,0 +1,1 @@
+Boundary: this publication hook does not convert local exact execution into remote CI evidence. The Passes 1500–1504 registry remains `COMPLETE_LOCAL_EXACT_REMOTE_PENDING` until successful exact-worker workflow conclusions are observed.
