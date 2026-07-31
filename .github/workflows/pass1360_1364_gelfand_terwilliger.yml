@@ -1,0 +1,58 @@
+name: Passes 1360-1364 Gelfand Terwilliger
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - '.github/workflows/pass1360_1364_gelfand_terwilliger.yml'
+      - 'analysis/BT1360_BT1364_gelfand_terwilliger.md'
+      - 'analysis/BT1360_BT1364_gelfand_terwilliger.tex'
+      - 'analysis/w33_pass1360_1364_gelfand_terwilliger.py'
+      - 'data/w33_pass1360_1364_gelfand_terwilliger.json'
+      - 'tests/test_w33_pass1360_1364_gelfand_terwilliger.py'
+      - 'tools/integrate_pass1360_1364.py'
+      - 'data/w33_pass_namespace_registry_v2.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check numpy sympy pytest
+      - run: python analysis/w33_pass1360_1364_gelfand_terwilliger.py --check
+      - run: pytest -q tests/test_w33_pass1360_1364_gelfand_terwilliger.py
+      - run: python analysis/w33_pass1197_parallel_collision_guard.py
+
+  manuscript:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-science
+      - run: python tools/integrate_pass1360_1364.py
+      - run: python tools/integrate_pass1360_1364.py
+      - run: python tools/integrate_pass1360_1364.py --check
+      - run: |
+          test "$(grep -c '\\input{analysis/BT1360_BT1364_gelfand_terwilliger}' w33_paper.tex)" -eq 1
+          test "$(grep -c '\\input{analysis/BT1360_BT1364_gelfand_terwilliger}' photonic_holonet.tex)" -eq 1
+      - run: |
+          cat > /tmp/pass1360.tex <<'EOF'
+          \documentclass{article}
+          \usepackage{amsmath,amssymb,amsthm}
+          \newtheorem{theorem}{Theorem}
+          \begin{document}
+          \input{analysis/BT1360_BT1364_gelfand_terwilliger}
+          \end{document}
+          EOF
+          TEXINPUTS=.: pdflatex -interaction=nonstopmode -halt-on-error -output-directory=/tmp /tmp/pass1360.tex
