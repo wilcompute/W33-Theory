@@ -8,6 +8,7 @@ on:
       - 'analysis/BT1365_BT1369_rational_schur_completion.md'
       - 'analysis/BT1365_BT1369_rational_schur_completion.tex'
       - 'analysis/w33_pass1365_1369_rational_schur_completion.py'
+      - 'analysis/w33_pass1365_1369_rational_schur_completion.src/**'
       - 'analysis/w33_pass1360_1364_gelfand_terwilliger.py'
       - 'data/w33_pass1365_1369_rational_schur_completion.json'
       - 'tests/test_w33_pass1365_1369_rational_schur_completion.py'
