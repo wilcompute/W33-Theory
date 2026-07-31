@@ -71,7 +71,7 @@ That does **not** exclude an emergent abstract graph on 57 derived bridge object
 
 A positive hit would be meaningful: the resulting \(\operatorname{PSL}(2,19)\) would be an emergent automorphism group of the derived bridge relation, not a subgroup of the W33 automorphism group.
 
-A negative hit has an equally sharp boundary: it excludes Perkel only for the listed exact intrinsic pair invariants and small unions of their value classes. It does not prove that no more elaborate relation on the 57 bridges can be Perkel.
+A negative hit has an equally sharp boundary: it excludes Perkel only for the listed exact intrinsic pair invariants and small unions of their value classes. The search is **not exhaustive** over all conceivable relations on the 57 bridges and does not prove that no more elaborate relation can be Perkel.
 
 ## Existing local 57-cell bridge
 
