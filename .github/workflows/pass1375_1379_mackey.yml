@@ -6,11 +6,15 @@ on:
       - agent/pass1375-1379-mackey
     paths:
       - 'analysis/w33_pass1375_1379_mackey_selector_decomposition.py'
+      - 'analysis/w33_pass1375_1379_mackey_compact.py'
       - 'analysis/pass1370_1374/**'
+      - 'data/w33_pass1375_1379_mackey_selector_decomposition.json'
+      - 'tests/test_w33_pass1375_1379_mackey_selector_decomposition.py'
       - '.github/workflows/pass1375_1379_mackey.yml'
   pull_request:
     paths:
       - 'analysis/w33_pass1375_1379_mackey_selector_decomposition.py'
+      - 'analysis/w33_pass1375_1379_mackey_compact.py'
       - 'analysis/pass1370_1374/**'
       - 'data/w33_pass1375_1379_mackey_selector_decomposition.json'
       - 'tests/test_w33_pass1375_1379_mackey_selector_decomposition.py'
@@ -29,19 +33,12 @@ jobs:
           cache: pip
       - name: Install exact dependencies
         run: python -m pip install --upgrade pip numpy sympy pytest
-      - name: Reconstruct exact certificate
+      - name: Verify detailed reconstruction and frozen certificate
+        run: python analysis/w33_pass1375_1379_mackey_compact.py --check
+      - name: Focused regressions
+        run: pytest -q tests/test_w33_pass1375_1379_mackey_selector_decomposition.py
+      - name: Verify manuscript integrator source
         run: |
-          python analysis/w33_pass1375_1379_mackey_selector_decomposition.py \
-            --output /tmp/w33_pass1375_1379.json
-      - name: Upload exact certificate
-        uses: actions/upload-artifact@v4
-        with:
-          name: w33-pass1375-1379-certificate
-          path: /tmp/w33_pass1375_1379.json
-          if-no-files-found: error
-      - name: Validate focused regressions when frozen data exists
-        run: |
-          if [ -f data/w33_pass1375_1379_mackey_selector_decomposition.json ]; then
-            python analysis/w33_pass1375_1379_mackey_selector_decomposition.py --check
-            pytest -q tests/test_w33_pass1375_1379_mackey_selector_decomposition.py
-          fi
+          python -m py_compile tools/integrate_pass1375_1379.py
+          python -m py_compile analysis/w33_pass1375_1379_mackey_selector_decomposition.py
+          python -m py_compile analysis/w33_pass1375_1379_mackey_compact.py
