@@ -1,0 +1,160 @@
+#!/usr/bin/env python3
+"""Passes 1365--1369: rational Wedderburn closure and geometric Schur completion.
+
+This exact finite computation continues Passes 1360--1364 on the 120 selectors
+(isotropic line, perfect matching) of W(3,3).  It proves the characteristic-zero
+Wedderburn decomposition of the 79-dimensional selector Terwilliger algebra,
+constructs one geometric splitter whose ordinary algebra closure is the complete
+83-dimensional selector-stabilizer orbital algebra, and resolves the four-dimensional
+Schur defect as a rational refinement of exactly three scalar Terwilliger sectors.
+
+No physical interpretation or literature-priority claim is made.
+"""
+from __future__ import annotations
+
+import argparse
+import collections
+import hashlib
+import itertools
+import json
+import math
+import sys
+from pathlib import Path
+
+import numpy as np
+import sympy as sp
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parent
+sys.path.insert(0, str(HERE))
+try:
+    import w33_pass1360_1364_gelfand_terwilliger as previous
+except ImportError:
+    sys.path.insert(0, str(ROOT / "analysis"))
+    import w33_pass1360_1364_gelfand_terwilliger as previous
+
+DEFAULT_OUT = ROOT / "data" / "w33_pass1365_1369_rational_schur_completion.json"
+PRIMES = (1000003, 1000033)
+
+
+def rational_mod(value: sp.Expr, prime: int) -> int:
+    value = sp.Rational(value)
+    return int((value.p * pow(int(value.q), -1, prime)) % prime)
+
+
+class OrbitalContext:
+    def __init__(self, geometry):
+        self.geometry = geometry
+        self.representatives = geometry["representatives"]
+        self.orbits = geometry["pair_orbits"]
+        self.n_orbitals = len(self.orbits)
+        assert self.n_orbitals == 83
+
+        self.label = np.empty((120, 120), dtype=np.int16)
+        for relation, orbit in enumerate(self.orbits):
+            for encoded in orbit:
+                i, j = divmod(encoded, 120)
+                self.label[i, j] = relation
+
+        self.structure = []
+        self.sparse_tensor = []
+        self.tensor = np.zeros((83, 83, 83), dtype=np.int64)
+        for c, (x, y) in enumerate(self.representatives):
+            counts = collections.Counter(
+                (int(self.label[x, z]), int(self.label[z, y])) for z in range(120)
+            )
+            triples = [(a, b, count) for (a, b), count in sorted(counts.items())]
+            self.structure.append(triples)
+            for a, b, count in triples:
+                self.tensor[c, a, b] = count
+            self.sparse_tensor.extend([[c, a, b, count] for a, b, count in triples])
+
+        self.transpose = [
+            int(self.label[j, i]) for i, j in self.representatives
+        ]
+        self.identity = sp.Matrix([
+            1 if i == j else 0 for i, j in self.representatives
+        ])
+        self.identity_mod = {
+            prime: np.array(self.identity, dtype=np.int64).reshape(-1) % prime
+            for prime in PRIMES
+        }
+
+        relations = geometry["relations"]
+        self.shell_of_point = [
+            next(shell for shell, matrix in enumerate(relations) if matrix[0, point])
+            for point in range(120)
+        ]
+        self.shell_diagonals = []
+        for shell in range(5):
+            self.shell_diagonals.append(sp.Matrix([
+                1 if i == j and self.shell_of_point[i] == shell else 0
+                for i, j in self.representatives
+            ]))
+
+    def mul_q(self, left, right):
+        return sp.Matrix([
+            sum(count * left[a] * right[b] for a, b, count in triples)
+            for triples in self.structure
+        ])
+
+    def mul_mod(self, left, right, prime):
+        out = np.zeros(self.n_orbitals, dtype=np.int64)
+        for c, triples in enumerate(self.structure):
+            total = 0
+            for a, b, count in triples:
+                total = (total + count * int(left[a]) * int(right[b])) % prime
+            out[c] = total
+        return out
+
+    def vector_mod(self, vector, prime):
+        return np.array([rational_mod(value, prime) for value in vector], dtype=np.int64)
+
+    def trace_q(self, vector):
+        return sp.cancel(sum(vector[int(self.label[i, i])] for i in range(120)))
+
+    def shell_trace_q(self, vector, shell):
+        return sp.cancel(sum(
+            vector[int(self.label[i, i])]
+            for i in range(120)
+            if self.shell_of_point[i] == shell
+        ))
+
+    def unit(self, orbital):
+        vector = sp.zeros(self.n_orbitals, 1)
+        vector[orbital] = 1
+        return vector
+
+
+def independent_coordinate_rows(matrix: sp.Matrix, prime: int):
+    modular = np.array([
+        [rational_mod(value, prime) for value in row]
+        for row in matrix.tolist()
+    ], dtype=np.int64)
+    _, pivots = previous.rref_mod_rows(modular.T, prime, matrix.rows)
+    return pivots
+
+
+def eval_polynomial(matrix: sp.Matrix, polynomial: sp.Poly):
+    result = sp.zeros(matrix.rows)
+    identity = sp.eye(matrix.rows)
+    for coefficient in polynomial.all_coeffs():
+        result = result * matrix + coefficient * identity
+    return result
+
+
+def central_projectors_terwilliger(context, terwilliger):
+    prime = PRIMES[0]
+    exact_words = terwilliger["exact_words"]
+    representatives = context.representatives
+    evaluations = sp.Matrix([
+        [int(matrix[i, j]) for matrix in exact_words]
+        for i, j in representatives
+    ])
+
+    commutators = sp.Matrix([
+        [int(terwilliger["commutator_rows"][i, j]) for j in range(79)]
+        for i in range(166)
+    ])
+    center_vectors = commutators.nullspace()
+    assert len(center_vectors) == 10
