@@ -1,0 +1,20 @@
+Passes 1466-1468: the 30+45+45 block, outer swap, and the C2
+
+=== Pass 1466: degrees present in PSp(4,3) ===
+  all irreducible degrees: [ 1, 5, 5, 6, 10, 10, 15, 15, 20, 24, 30, 30, 30, 4\
+0, 40, 45, 45, 60, 64, 81 ]
+  degree-45 irreducibles: 2   degree-30: 3
+
+=== Pass 1467: outer automorphism on the two degree-45 irreducibles ===
+  |PSp| = 25920   |PGSp| = 51840
+  PGSp irreducible degrees: [ 1, 1, 6, 6, 10, 15, 15, 15, 15, 20, 20, 20, 24, \
+24, 30, 30, 60, 60, 60, 64, 64, 80, 81, 81, 90 ]
+  a degree-90 irreducible in PGSp? true
+  (two PSp-45s FUSED by the outer element would appear as one 90 in PGSp;
+   two separate 45s in PGSp would mean each extends and they are NOT swapped)
+  number of degree-45 irreducibles in PGSp: 0
+
+=== Pass 1468: the cover-stabilising involution vs the degree-45 chars ===
+  class-45 involution: chi values on it = [ -3, -3 ]
+
+DONE

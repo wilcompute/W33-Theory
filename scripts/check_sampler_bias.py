@@ -91,6 +91,31 @@ RE_DISTRIBUTION = re.compile(
     r"(?i)(stabili[sz]er|orbit)[^.]{0,80}(type|distribution|profile|all|every)"
     r"|sampled[^.]{0,60}(stabili[sz]er|orbit|cover)")
 
+# THE ACTUAL CONDITION (Pass 1469).  Three claims of mine were refuted, all from
+# ONE unrandomised depth-first enumeration:
+#
+#   * "no two exact covers are disjoint, minimum intersection 4"   (Pass 1456)
+#   * cover-type PROPORTIONS presented as a distribution           (Pass 1439)
+#   * "cover stabilisers are diagonal"                             (Pass 1426)
+#
+# and every *existence* claim from the same pool survived.  So the rule is not
+# about wording, it is about what the enumeration is used FOR:
+#
+#   an enumeration may support an EXISTENCE claim however it was ordered;
+#   it may support a FREQUENCY or a UNIVERSAL only if it is exhaustive
+#   or randomised.
+#
+# A file is flagged when it (a) enumerates, (b) truncates, (c) does not
+# randomise, AND (d) states a frequency or a universal.  Exhaustiveness is
+# credited: a search that reports completion, proves infeasibility, or bounds its
+# own node count is making an exhaustive claim, not a sampled one.
+RE_EXHAUSTIVE = re.compile(
+    r"(?i)\b(exhaustiv|infeasib|complete search|all solutions|nodes explored"
+    r"|proved|no solution exists|search finished)\b")
+RE_FREQUENCY = re.compile(
+    r"(?i)\b(\d+\s*%|proportion|frequency|fraction of|distribution|typical"
+    r"|on average|most |majority)\b")
+
 
 def scan(paths: list[Path]) -> list[tuple[Path, bool]]:
     out = []
@@ -105,7 +130,10 @@ def scan(paths: list[Path]) -> list[tuple[Path, bool]]:
             # claim does not
             if RE_BOUND_CLAIM.search(t):
                 generalises = False
-            if not RE_DISTRIBUTION.search(t):
+            if not (RE_DISTRIBUTION.search(t) or RE_FREQUENCY.search(t)):
+                generalises = False
+            # an exhaustive search is not a sample, however it was ordered
+            if RE_EXHAUSTIVE.search(t):
                 generalises = False
             out.append((p, generalises))
     return out

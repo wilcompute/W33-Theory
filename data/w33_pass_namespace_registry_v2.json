@@ -444,6 +444,19 @@
     "1464": "BT1408 now carries the Hodge-block theorem and the no-star remark in BOTH manuscripts; w33_paper 1,513,702 bytes and photonic_holonet 1,006,317 bytes, 0 errors each"
    },
    "runtime_boundary": "Exact GAP signed-character computation; two observed local tectonic builds. The resolution and the 12 are explicitly open."
+  },
+  {
+   "range": "1465-1469",
+   "owner": "glue-track-chiral-constraint-block",
+   "status": "COMPLETE",
+   "artifacts": {
+    "1465": "RESOLUTION REFORMULATED as a proper 9-colouring of H (540 frames, adjacent iff sharing an edge). H is 32-regular and is the union of 240 K9s. omega(H) = 9 EXACTLY -- no edge-K9 extends to K10 -- so the clique obstruction is ABSENT and chi(H)=9 remains possible. Open as a colouring problem, not a search",
+    "1466": "PSp(4,3) has exactly two degree-45 irreducibles and three degree-30, so the coexact block 30+45+45 uses the WHOLE 45-isotypic part of the group",
+    "1467": "PHYSICS: the two degree-45s are FUSED by the outer automorphism -- PGSp(4,3) has NO degree-45 irreducible and DOES have a degree-90. So the gauge block (15+24) and physical block (81) extend to PGSp but the constraint block does not: THE CONSTRAINT SECTOR IS CHIRAL, the gauge and physical sectors are not",
+    "1468": "the cover-stabilising class-45 involution has character value -3 on BOTH degree-45s -- it cannot distinguish them, consistent with an outer swap. The representation-theoretic route to explaining the 12 is therefore closed; the 12 stays open with one more avenue eliminated",
+    "1469": "sampler guard now encodes the MEASURED rule: an enumeration supports an EXISTENCE claim however ordered, but a FREQUENCY or UNIVERSAL only if exhaustive or randomised. Exhaustiveness credited. 135 samplers -> 19 flagged; the parallel track Pass 1417 census correctly NOT flagged"
+   },
+   "runtime_boundary": "Exact GAP character theory and an exhaustive clique check over all 240 edge-cliques. The resolution and the 12 remain open and are stated so."
   }
  ],
  "rule": "A pass number is canonical only when registered here. Retracted or scope-corrected blocks remain registered for provenance but cannot contribute active theorem claims outside their stated scope."
