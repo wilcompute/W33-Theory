@@ -53,6 +53,33 @@ RE_BOUNDARY = re.compile(
 # was already answered) register as having that boundary itself, and it
 # surfaced as a false positive in the first precision measurement.
 RE_INLINE_OPEN = re.compile(r"^[ 	]*Open:", re.I | re.M)
+# PROSE open questions (Pass 1427).  My own Pass 1412 wrote "So the question
+# stays open, and it is now sharp: ..." in running text, under no heading at
+# all.  boundary_text() returned None, so the file was never scanned and the
+# sweep could not have flagged BT1420 against it no matter what tokens
+# matched.  A sentence that declares something open IS a boundary.
+RE_PROSE_OPEN = re.compile(
+    r"^.{0,200}?\b(question|problem|it)\s+(stays|remains|is still|is)\s+open\b.*$",
+    re.I | re.M)
+
+# A COMPILED PATTERN MUST NOT CONTAIN CONTROL CHARACTERS (Pass 1427).
+#
+# THREE times in one session a regex written through a shell heredoc had its
+# `\b` word-boundary escapes consumed into literal BACKSPACE bytes (0x08).  The
+# pattern still compiles, still reads correctly in the source, and silently
+# matches nothing.  Twice it disabled a filter I then reported as working, and
+# restoring them here fixed FIVE occurrences across this one file -- including
+# patterns from Pass 1395 that had been broken since they were written.
+# This makes the failure loud at import instead of invisible at runtime.
+def _assert_no_control_chars() -> None:
+    bad = [n for n, v in list(globals().items())
+           if n.startswith("RE_") and hasattr(v, "pattern")
+           and any(ord(c) < 9 or 13 < ord(c) < 32 for c in v.pattern)]
+    if bad:
+        raise AssertionError(
+            f"regex(es) {bad} contain control characters -- a shell heredoc "
+            f"almost certainly ate a backslash escape; edit the file directly")
+
 
 # already-corrected files: their boundary carries a pointer now
 RESOLVED_MARKERS = ("ALREADY RESOLVED", "RESOLVED (Pass", "CORRECTION AND RESOLUTION")
@@ -71,12 +98,15 @@ RESOLVED_MARKERS = ("ALREADY RESOLVED", "RESOLVED (Pass", "CORRECTION AND RESOLU
 # A boundary is treated as a live question only if it contains an interrogative
 # or a forward commitment; a section that is purely disclaimer is skipped.
 RE_QUESTION = re.compile(
-    r"\?|(open|unknown|unsettled|not (?:yet )?(?:known|settled|determined)|"
+    r"\?|\b(open|unknown|unsettled|not (?:yet )?(?:known|settled|determined)|"
     r"remains? open|to be determined|next (?:experiment|step)|should (?:build|compute|test)|"
     r"we do not know|undecided|conjectur)", re.I)
 RE_DISCLAIMER = re.compile(
-    r"(do(?:es)? not claim|do not claim|is not claimed|no claim is made|"
-    r"should not be read|does not turn|does not produce)", re.I)
+    r"\b(do(?:es)? not claim|do not claim|is not claimed|no claim is made|"
+    r"should not be read|does not turn|does not produce)\b", re.I)
+
+
+_assert_no_control_chars()
 
 
 def is_live_question(b: str) -> bool:
@@ -107,7 +137,7 @@ def boundary_text(txt: str) -> str | None:
     for m in RE_BOUNDARY.finditer(txt):
         pass                                    # take the LAST such heading
     if m is None:
-        m2 = RE_INLINE_OPEN.search(txt)
+        m2 = RE_INLINE_OPEN.search(txt) or RE_PROSE_OPEN.search(txt)
         if m2 is None:
             return None
         return txt[m2.start():]
@@ -153,7 +183,13 @@ def main(argv: list[str]) -> int:
             limit = int(a.split("=")[1]) if "=" in a else limit
 
     files = sorted(
-        [p for p in (ROOT / "analysis").glob("*.md") if p.is_file()],
+        [p for p in (ROOT / "analysis").glob("*.md") if p.is_file()]
+        # .tex TOO (Pass 1427).  BT1420_frame_signed_turn_bridge_insert.tex
+        # closed a question I had left open, and the sweep could never have
+        # said so: it globbed *.md only, while the parallel track publishes
+        # its theorems as manuscript inserts in .tex.  Half the corpus was
+        # outside the file set.
+        + [p for p in (ROOT / "analysis").glob("*.tex") if p.is_file()],
         key=order_key)
 
     # index: token -> list of (order_key, filename) for EVERY file

@@ -349,6 +349,19 @@
     "1415": "BT1408 compiles to a 43.5 KB PDF against the paper's own macros; updated to carry the 1410/1411/1412 results"
    },
    "runtime_boundary": "Exact GAP character theory and MeatAxe; stabiliser data from six sampled covers; a local tectonic compile. The K-eigenspace character is explicitly NOT computed."
+  },
+  {
+   "range": "1426-1430",
+   "owner": "glue-track-self-audit",
+   "status": "COMPLETE",
+   "artifacts": {
+    "1426": "eigenspace-comparison audit: Pass 1397 is SAFE (it compares two characters directly); Pass 1412 was invalid (it used a multiplicity inside a presumed ambient module the object was not in)",
+    "1427": "the boundary sweep could not have caught BT1420 for TWO reasons -- my files state open questions in prose under no heading, and the sweep globbed *.md while BT1420 is .tex. Both fixed; scope 1258 -> 1482 files, candidates 7 -> 16. A THIRD defect found: five \b escapes had been eaten into backspace bytes, some since Pass 1395",
+    "1428": "edge_action_tokens() distinguishes the signed and unsigned 240-edge modules; scripts/check_sampler_bias.py flags 133 deterministic-order samplers of which 92 generalise in prose",
+    "1429": "the refactor dropped NOTHING (BT1340_BT1344 was never committed into a manuscript), but 189 of 217 manuscript inserts (87%) are orphaned; scripts/check_orphan_inserts.py added",
+    "1430": "no new mathematics -- this is the audit the previous batch earned"
+   },
+   "runtime_boundary": "Static analysis, regex/token measurement, and git history queries. The only mathematical content is the Pass 1426 audit, which re-reads existing certificates rather than computing anything new."
   }
  ],
  "rule": "A pass number is canonical only when registered here. Retracted or scope-corrected blocks remain registered for provenance but cannot contribute active theorem claims outside their stated scope."

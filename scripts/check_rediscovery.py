@@ -124,6 +124,44 @@ GEOM_NOUNS = (
 RE_NOUN = re.compile(r"(?i)\b(" + "|".join(re.escape(n) for n in GEOM_NOUNS) + r")\b")
 RE_SMALL = re.compile(r"(?<![\d.\w])(\d{1,3})(?!\d)(?!\.\d)")
 
+# ---------------------------------------------------------------------------
+# SIGNED vs UNSIGNED EDGE ACTION (Pass 1428).  Added after a full pass was spent
+# on a category error.
+#
+# This corpus carries TWO different 240-dimensional edge modules:
+#
+#   * the UNSIGNED permutation module, where Aut permutes the 240 edges;
+#   * the orientation-SIGNED module, where Aut acts by signed permutations and
+#     the signed-turn operator K lives.
+#
+# Both are written "240", "edge module", "Q^240".  Pass 1412 decomposed the
+# unsigned one and compared multiplicities against ker(K-10I), which is not a
+# submodule of it at all -- so a true statement about the permutation module was
+# applied to the wrong object, and the conclusion ("not forced") was void.
+# Passes 1416-1420 then closed the question with an explicit intertwiner.
+#
+# `edge240:signed` and `edge240:unsigned` make the two distinguishable to every
+# tool that consumes this grammar, so a file asserting one can collide with a
+# file asserting the other instead of looking identical.
+RE_SIGNED = re.compile(
+    r"(?i)\b(signed[- ]turn|oriented edge|orientation[- ]signed|signed permutation"
+    r"|directed edge|edge chain|\\partial|Y_?480)\b")
+RE_UNSIGNED = re.compile(
+    r"(?i)\b(edge permutation|unsigned (?:edge|incidence)|permutation module"
+    r"|OnSets|edge set)\b")
+
+
+def edge_action_tokens(text: str) -> set[str]:
+    """Tag which 240-edge action a file is talking about, when it says 240."""
+    if not re.search(r"(?<![\d.])240(?![\d.])", text):
+        return set()
+    out = set()
+    if RE_SIGNED.search(text):
+        out.add("edge240:signed")
+    if RE_UNSIGNED.search(text):
+        out.add("edge240:unsigned")
+    return out
+
 
 def noun_number_pairs(text: str) -> set[str]:
     """Tokens `noun@n` for a geometry noun and every small integer near it.
@@ -298,6 +336,7 @@ def results_in(text: str) -> set[str]:
     got |= compounds(text)
     # noun-number pairs (Pass 1107): the number attached to its noun
     got |= noun_number_pairs(text)
+    got |= edge_action_tokens(text)
     return got - SKIP
 
 
