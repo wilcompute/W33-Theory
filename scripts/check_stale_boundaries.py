@@ -170,8 +170,50 @@ def self_test() -> int:
     ok = len(shared) >= 2
     print(f"  [{'PASS' if ok else 'FAIL'}] BT810 boundary vs BT811: "
           f"{len(shared)} shared tokens {sorted(shared)[:4]}")
-    print("self-test", "OK" if ok else "FAILED")
-    return 0 if ok else 1
+    results = [ok]
+
+    # ONE PINNED CASE PER BLIND SPOT THIS TOOL HAS ACTUALLY HAD (Pass 1431).
+    #
+    # Three distinct blind spots have been found and fixed, and one of them --
+    # the Pass 1395 scope filter -- silently REOPENED when a shell heredoc ate
+    # its `\b` escapes, going unnoticed for a whole session. A fix with no
+    # pinned case is a fix that lasts until the next edit.
+    cases: list[tuple[str, bool]] = []
+
+    # (a) blockquoted "Open:" is someone ELSE's question, not this file's
+    cases.append((
+        "blockquoted Open: is NOT a boundary",
+        boundary_text("# F\n\n> Open: is the group 2O or O_h?\n") is None))
+
+    # (b) a scope disclaimer asks nothing and can never be resolved
+    cases.append((
+        "scope disclaimer is NOT a live question",
+        not is_live_question(
+            "## Boundary\n\nThis theorem does not claim W(G2) acts on the "
+            "original 160 Levi flags. It does not produce a flag-level action.")))
+
+    # (c) a PROSE open question, under no heading, still counts -- this is the
+    #     one that made BT1420 uncatchable against my own Pass 1412 file
+    cases.append((
+        "prose 'the question stays open' IS a boundary",
+        boundary_text(
+            "# F\n\nSome text.\n\n**So the question stays open, and it is now "
+            "sharp**: determine which of the two characters it affords.\n"
+        ) is not None))
+
+    # (d) .tex is in scope -- the parallel track publishes theorems as inserts
+    cases.append((
+        ".tex files are scanned",
+        any(p.suffix == ".tex" for p in (ROOT / "analysis").glob("*.tex"))
+        and "*.tex" in Path(__file__).read_text(encoding="utf-8")))
+
+    for name, good in cases:
+        print(f"  [{'PASS' if good else 'FAIL'}] {name}")
+        results.append(good)
+
+    allok = all(results)
+    print("self-test", "OK" if allok else "FAILED")
+    return 0 if allok else 1
 
 
 def main(argv: list[str]) -> int:

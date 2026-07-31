@@ -362,6 +362,19 @@
     "1430": "no new mathematics -- this is the audit the previous batch earned"
    },
    "runtime_boundary": "Static analysis, regex/token measurement, and git history queries. The only mathematical content is the Pass 1426 audit, which re-reads existing certificates rather than computing anything new."
+  },
+  {
+   "range": "1431-1435",
+   "owner": "glue-track-promotion-and-selftests",
+   "status": "COMPLETE",
+   "artifacts": {
+    "1431": "BT1408 promoted into both manuscripts via the Pass 1420 wrapper; the master manuscript BUILDS AGAIN (1.43 MiB PDF) after a one-line fix to an unescaped identifier in manuscripts/tex/part22_fano_synthesis.tex (verified pre-existing by stash-and-recompile)",
+    "1432": "a mistake, recorded: my first fix was a regex sweep that wrapped 2,129 legitimate math-mode subscripts across 32 files and broke w33_paper_body.tex. Reverted uncommitted. A rewriting transformation must be proven on the single known-bad case before being widened",
+    "1433": "the boundary sweep now has one pinned self-test per historical blind spot: BT810/BT811, blockquoted Open:, scope disclaimer, prose open-question, .tex in scope",
+    "1434": "check_sampler_bias FALSE POSITIVE on the parallel Pass 1417, correctly: a lower bound from exhibited verified-distinct orbits survives a biased sample; a universal property does not. Guard now downgrades bound/existence claims, 92 -> 73. Their 226800 arithmetic verified and 4 of their 5 stabiliser types independently corroborated",
+    "1435": "index rebuilt after the regex repair: 21,268 files, 2,689 tokens, 356 collision pairs -- unchanged, because the dead patterns were in the sweep not the index grammar"
+   },
+   "runtime_boundary": "One observed local tectonic build of w33_paper.tex; static analysis and regex measurement otherwise. The 226800 bound is the parallel track’s, corroborated not reproduced."
   }
  ],
  "rule": "A pass number is canonical only when registered here. Retracted or scope-corrected blocks remain registered for provenance but cannot contribute active theorem claims outside their stated scope."
