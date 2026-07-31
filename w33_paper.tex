@@ -1,5 +1,5 @@
-% Pass 1420 wrapper: preserve the complete historical manuscript body verbatim
-% while injecting the shared exact bridge immediately after the table of contents.
+% Pass 1420/1425/1408/1509 wrapper: preserve the complete historical manuscript body verbatim
+% while injecting the certified theorem inserts immediately after the contents.
 \AtBeginDocument{%
   \let\BTorigtableofcontents\tableofcontents
   \renewcommand{\tableofcontents}{%
@@ -7,6 +7,7 @@
     \input{analysis/BT1420_frame_signed_turn_bridge_insert}%
     \input{analysis/BT1425_full_weyl_integral_cover_addendum}%
     \input{analysis/BT1408_frame_cross_matching_theorem_insert}%
+    \input{analysis/BT1509_census_morita_m20_insert}%
   }%
 }
 \input{w33_paper_body.tex}

@@ -1,0 +1,99 @@
+name: W33 Passes 1505-1509
+
+on:
+  push:
+    paths:
+      - 'analysis/cpp/w33_pass1505_exact_cover_prefix.cpp'
+      - 'analysis/cpp/w33_pass1505_orbit_reduce.cpp'
+      - 'analysis/w33_pass1505_exact_cover_census_frontier.py'
+      - 'analysis/w33_pass1506_bridge_local_arithmetic.py'
+      - 'analysis/w33_pass1507_joint_algebra_morita.py'
+      - 'analysis/w33_pass1508_contextual_fraction_falsifier.py'
+      - 'analysis/w33_pass1509_qutrit_hamming_m20_chart.py'
+      - 'analysis/BT1509_census_morita_m20_insert.tex'
+      - 'analysis/w33_pass1505_1509_five_frontier_release.md'
+      - 'data/w33_pass1505_exact_cover_census_frontier.json'
+      - 'data/w33_pass1506_bridge_local_arithmetic.json'
+      - 'data/w33_pass1507_joint_algebra_morita.json'
+      - 'data/w33_pass1508_contextuality_protocol.json'
+      - 'data/w33_contextuality_empirical_model_template.json'
+      - 'data/w33_pass1509_qutrit_hamming_m20_chart.json'
+      - 'tests/test_w33_pass1505_1509_release.py'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - '.github/workflows/w33-pass1505-1509.yml'
+  pull_request:
+    paths:
+      - 'analysis/cpp/w33_pass1505_exact_cover_prefix.cpp'
+      - 'analysis/cpp/w33_pass1505_orbit_reduce.cpp'
+      - 'analysis/w33_pass1505_exact_cover_census_frontier.py'
+      - 'analysis/w33_pass1506_bridge_local_arithmetic.py'
+      - 'analysis/w33_pass1507_joint_algebra_morita.py'
+      - 'analysis/w33_pass1508_contextual_fraction_falsifier.py'
+      - 'analysis/w33_pass1509_qutrit_hamming_m20_chart.py'
+      - 'analysis/BT1509_census_morita_m20_insert.tex'
+      - 'tests/test_w33_pass1505_1509_release.py'
+
+jobs:
+  cover-census:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy
+      - run: python analysis/w33_pass1505_exact_cover_census_frontier.py --check
+
+  integral-algebra:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy sympy
+      - run: |
+          python analysis/w33_pass1506_bridge_local_arithmetic.py --check
+          python analysis/w33_pass1507_joint_algebra_morita.py --check
+
+  contextuality-geometry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy scipy
+      - run: |
+          python analysis/w33_pass1508_contextual_fraction_falsifier.py --check
+          python analysis/w33_pass1509_qutrit_hamming_m20_chart.py --check
+
+  release-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy scipy sympy pytest
+      - run: pytest -q tests/test_w33_pass1505_1509_release.py
+      - name: Compile shared insert independently
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq texlive-latex-base texlive-latex-recommended texlive-fonts-recommended
+          d=$(mktemp -d)
+          cp analysis/BT1509_census_morita_m20_insert.tex "$d/insert.tex"
+          cat > "$d/minimal.tex" <<'TEX'
+          \documentclass{article}
+          \usepackage{amsmath,amssymb}
+          \newcommand{\PSp}{\mathrm{PSp}}
+          \begin{document}
+          \input{insert}
+          \end{document}
+          TEX
+          (cd "$d" && pdflatex -interaction=nonstopmode -halt-on-error minimal.tex)
