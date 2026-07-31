@@ -1,0 +1,77 @@
+% Shared manuscript insert for Passes 1416--1420.
+\subsection*{Exact frame-to-signed-turn bridge and current evidence boundary}
+
+Let $M\in\mathbb Z^{540\times240}$ be the canonical frame
+cross-matching matrix: each of the $540$ pairs of disjoint isotropic lines
+contributes its unique stabilizer-invariant four-edge matching.  Every edge of
+$W(3,3)$ occurs in exactly nine rows, and
+\[
+ \operatorname{rank}_{\mathbb Q}M=225,
+ \qquad
+ \operatorname{coker}M\cong\mathbb Z^{15}\oplus(\mathbb Z/2)^{30}.
+\]
+
+Write $N$ for the unsigned point--edge incidence matrix, $\partial$ for the
+oriented incidence matrix, $A$ for the point adjacency matrix, and $K$ for the
+signed-turn operator on the $240$ oriented edge chains.  In one common edge
+ordering the exact identity is
+\[
+ K\partial^{\mathsf T}=\partial^{\mathsf T}(6I-A).
+\]
+Consequently the $(-4)$ point eigenspace is carried to the $10$-eigenspace of
+$K$.  More precisely, with
+\[
+ P=(A-12I)(A-2I)=96E_{-4},
+ \qquad
+ F=\frac1{16}\,\partial^{\mathsf T}PN,
+\]
+the matrix $F$ is integral and satisfies
+\[
+ FM^{\mathsf T}=0,
+ \qquad
+ (K-10I)F=0,
+ \qquad
+ \operatorname{rank}_{\mathbb Q}F=15.
+\]
+Thus $F$ induces an explicit equivariant isomorphism
+\[
+ \operatorname{coker}(M)\otimes\mathbb Q
+ \;\xrightarrow{\;\sim\;}\;
+ \ker(K-10I).
+\]
+The earlier dimension-only shortcut failed because it compared the unsigned
+edge permutation action with the orientation-signed edge action.  The natural
+incidence operator above supplies the missing twist and closes the module
+question without identifying the two coordinate subspaces literally.
+
+Modulo $2$, the bridge has rank $14$ and square zero.  It yields an intrinsic
+nilpotent flag
+\[
+ \operatorname{im}F\subset\operatorname{im}C
+ \subset\operatorname{im}M^{\mathsf T}\subset\ker F,
+ \qquad
+ \dim=(14,15,195,226),
+\]
+where $C=N^{\mathsf T}PN/16$.  This separates the two abstractly isomorphic
+$14$-dimensional factors: the bridge selects the nontrivial reduction of the
+rational $15$, while the second copy remains in the $31$-dimensional
+torsion-side kernel.
+
+The exact-cover frontier is also larger than the original sample indicated.
+Certified covers occur with stabilizers
+\[
+ C_2,\quad C_4,\quad C_2\times C_2,\quad D_8,\quad C_4\times C_2,
+\]
+and sixteen deterministic $C_2$ orbits together with four further stabilizer
+types certify at least $226800$ distinct covers.  In particular, a
+$C_2$-stabilized cover fixes twelve selected frames, so cover stabilizers are
+not universally diagonal.
+
+\paragraph{Evidence boundary.}
+Everything above is an exact theorem about finite matrices, lattices, and group
+actions.  It does not by itself establish a physically complete one-photon
+computer, an experimental contextual fraction, a measured pump Chern number,
+Standard-Model descent, particle parameters, spacetime dynamics, or cosmology.
+Those statements require additional physical assumptions and, where relevant,
+an operational probability model and experimental protocol.  They remain
+conditional research hypotheses unless separately demonstrated.
