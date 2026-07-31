@@ -23,6 +23,23 @@ moment someone writes "sampled ... therefore".
 
 The sharpest sub-signal is (d): a generalising word near the truncation.
 
+MEASURED PRECISION, AND IT IS LOW (Pass 1437).  The four highest-ranked hits were
+read in full and ALL FOUR are false positives:
+
+    bt1363_q4_clock_tomotope_medial_descent   "hits all 16 face labels exactly
+                                               once" -- exhaustive over 16
+    w33_heawood_toroidal_orbit_correction     "transitive on all eight" -- a
+                                               proven transitivity, not a sample
+    w33_spread_contextual_microkernel_bridge  "covering every chosen line" -- a
+                                               docstring describing the SEARCH
+    w33_pass613_equivariant_groupoid_laplacian  no generalising claim at all
+
+The reason is linguistic: in this corpus "all"/"every" almost always introduces
+an EXHAUSTIVE CHECK over a small finite set, not an inference from a sample.
+So treat this as a weak filter and a prompt, not a queue of likely errors.  The
+one real instance it is modelled on -- Pass 1411, which sampled six covers and
+asserted a property of all covers -- remains the only confirmed case.
+
 Run:  py -3 scripts/check_sampler_bias.py [files...]   (default: analysis/, scripts/)
 """
 

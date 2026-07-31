@@ -375,6 +375,19 @@
     "1435": "index rebuilt after the regex repair: 21,268 files, 2,689 tokens, 356 collision pairs -- unchanged, because the dead patterns were in the sweep not the index grammar"
    },
    "runtime_boundary": "One observed local tectonic build of w33_paper.tex; static analysis and regex measurement otherwise. The 226800 bound is the parallel track’s, corroborated not reproduced."
+  },
+  {
+   "range": "1436-1440",
+   "owner": "glue-track-portability-and-precision",
+   "status": "COMPLETE",
+   "artifacts": {
+    "1436": "my BT1408 promotion BROKE the Holonet build (lemma undefined, then \\Aut undefined); fixed with a host-independent guarded preamble. BOTH manuscripts now compile: w33_paper 1.43 MiB, photonic_holonet 973 KiB",
+    "1437": "check_orphan_inserts --portability: 25 of 189 orphaned inserts use host-only macros without a guard and would break a bare host. Reported, not applied -- they are the parallel track’s",
+    "1438": "check_sampler_bias precision MEASURED and LOW: the four highest-ranked hits are all false positives, because in this corpus all/every introduces an exhaustive check not a sample inference. Docstring updated to say so; Pass 1411 remains the only confirmed instance",
+    "1439": "reconciled my cover sample against their Pass 1505 census (327 orbits, 3,547,800 covers, arithmetic verified). Their census implies C2 = 83% of covers; my sample gave 8%. My randomised-order DFS is NOT a uniform sampler and its proportions estimate nothing; the EXISTENCE of four stabiliser types survives",
+    "1440": "CLAUDE.md: heredoc escape-eating (4 occurrences) and untested rewriting transformations (2,129 bad edits) written up as project rules"
+   },
+   "runtime_boundary": "Two observed local tectonic builds; static analysis otherwise. The 3,547,800 census is the parallel track’s, arithmetically verified but not reproduced."
   }
  ],
  "rule": "A pass number is canonical only when registered here. Retracted or scope-corrected blocks remain registered for provenance but cannot contribute active theorem claims outside their stated scope."

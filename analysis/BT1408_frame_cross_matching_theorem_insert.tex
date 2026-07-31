@@ -10,8 +10,23 @@
 % NOT included on purpose: any E_8 reading of the 240.  Pass 1012 owns the
 % obstruction, and the 240 here is the edge set of W(3,3).
 
-\subsection{The frame cross-matching and the \texorpdfstring{$(-4)$}{(-4)}-eigenspace}
-\label{sec:framecrossmatching}
+% HOST-INDEPENDENT PREAMBLE.  This insert is \input by BOTH root manuscripts and
+% they do not define the same theorem environments: w33_paper.tex has
+% lemma/proposition/remark, photonic_holonet.tex does not, so promoting this file
+% into the Holonet broke that build with "Environment lemma undefined".  Define
+% only what the host is missing, so the insert is portable either way.
+\makeatletter
+\@ifundefined{theorem}{\newtheorem{theorem}{Theorem}}{}
+\@ifundefined{lemma}{\newtheorem{lemma}[theorem]{Lemma}}{}
+\@ifundefined{proposition}{\newtheorem{proposition}[theorem]{Proposition}}{}
+\@ifundefined{remark}{\newtheorem{remark}[theorem]{Remark}}{}
+\makeatother
+% ...and the operator macros, for the same reason: \PSp and \Aut are defined in
+% w33_paper.tex only.
+\providecommand{\PSp}{\mathrm{PSp}}
+\providecommand{\Aut}{\mathrm{Aut}}
+
+\subsection*{The frame cross-matching and the \texorpdfstring{$(-4)$}{(-4)}-eigenspace}
 
 Call a \emph{frame} an unordered pair $\{L,L'\}$ of disjoint totally isotropic
 lines of $W(3,3)$; there are $540$ of them, and the stabiliser of a frame in
@@ -113,11 +128,20 @@ remains in the torsion-side kernel.
 \end{remark}
 
 \begin{proposition}[Resolutions of the edge set]\label{prop:crosscover}
-There exist sets of $60$ frames whose cross-matchings partition $E$; at least
-$226800$ distinct such covers are certified. No cover is $\Aut$-invariant, since
-$\Aut$ is transitive on the $540$ frames and a cover uses $60$. Cover stabilisers
-have order $2$, $4$ or $8$ (types $C_2$, $C_4$, $C_2\times C_2$, $C_4\times C_2$,
-$D_8$), so a cover is close to rigid --- but the residual symmetry is \emph{not}
-uniformly diagonal: a $C_2$-stabilised cover fixes twelve of its sixty frames
-(orbit profile $1^{12}2^{24}$), whereas the $C_4$ covers fix none.
+There exist sets of $60$ frames whose cross-matchings partition $E$. No cover is
+$\Aut$-invariant, since $\Aut$ is transitive on the $540$ frames and a cover uses
+$60$. Cover stabilisers have order $2$, $4$ or $8$ (types $C_2$, $C_4$,
+$C_2\times C_2$, $C_4\times C_2$, $D_8$), so a cover is close to rigid --- but the
+residual symmetry is \emph{not} uniformly diagonal: a $C_2$-stabilised cover fixes
+twelve of its sixty frames (orbit profile $1^{12}2^{24}$), whereas the $C_4$
+covers fix none. A compiled census (Pass 1505) exhibits $327$ pairwise disjoint
+complete $\PSp(4,3)$-orbits, certifying at least
+\[
+  228\cdot 12960+75\cdot 6480+9\cdot 6480+9\cdot 3240+6\cdot 3240=3\,547\,800
+\]
+covers; this is a lower bound and no exhaustive count is claimed. Note that the
+orbit census is heavily $C_2$-weighted --- about $83\%$ of covers lie in $C_2$
+orbits --- so a small sample drawn by a depth-first search, however its branch
+order is permuted, is \emph{not} a uniform sample and its observed proportions
+estimate nothing.
 \end{proposition}

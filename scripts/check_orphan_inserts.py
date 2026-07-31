@@ -65,11 +65,63 @@ def recently_added(days: int = 14) -> set[str]:
     return {Path(l).stem for l in out.split() if l.endswith(".tex")}
 
 
+def portability(paths: list[Path], limit: int = 40) -> int:
+    r"""Would this insert COMPILE if promoted into a manuscript that lacks the
+    w33_paper preamble?
+
+    WHY (Pass 1436).  Promoting BT1408 into both manuscripts broke the Holonet
+    build twice in a row: first "Environment lemma undefined", then "Undefined
+    control sequence" for \Aut.  w33_paper.tex defines lemma/proposition/remark
+    and \PSp/\Aut; photonic_holonet.tex defines none of them.  An insert that
+    compiles in one host silently breaks the other, and the failure only appears
+    at promotion time.
+
+    So rather than promote the 15 recent orphans blind -- which would repeat that
+    bug 15 times -- this reports which of them are PORTABLE.  The fix, when one
+    is not, is the guarded preamble BT1408 now carries:
+
+        \makeatletter \@ifundefined{lemma}{\newtheorem{lemma}...}{} \makeatother
+        \providecommand{\PSp}{\mathrm{PSp}}
+    """
+    # macros/environments w33_paper.tex provides and photonic_holonet.tex does not
+    HOST_ONLY = ["lemma", "proposition", "remark", "corollary", "definition",
+                 "PSp", "Aut", "spec", "FF", "W"]
+    RE_ENV = re.compile(r"\\begin\{(" + "|".join(HOST_ONLY) + r")\}")
+    RE_MAC = re.compile(r"\\(" + "|".join(HOST_ONLY) + r")\\b")
+    RE_GUARD = re.compile(r"@ifundefined|providecommand|newtheorem")
+    bad = []
+    for q in paths:
+        try:
+            t = q.read_text(encoding="utf-8", errors="ignore")
+        except OSError:
+            continue
+        used = set(RE_ENV.findall(t)) | set(RE_MAC.findall(t))
+        if used and not RE_GUARD.search(t):
+            bad.append((q, sorted(used)))
+    print("=" * 74)
+    print("[insert portability] would this compile in a host without the")
+    print("                     w33_paper preamble?")
+    print("=" * 74)
+    print(f"checked {len(paths)} inserts")
+    print(f"  use host-only macros WITHOUT a guard : {len(bad)}  <- would break")
+    for q, used in bad[:limit]:
+        print(f"    {q.relative_to(ROOT)}")
+        print(f"       needs: {', '.join(used[:6])}")
+    print("\n  Fix pattern (as used in BT1408):")
+    print(r"    \makeatletter \@ifundefined{lemma}{\newtheorem{lemma}...}{} \makeatother")
+    print(r"    \providecommand{\PSp}{\mathrm{PSp}}")
+    print()
+    return 0
+
+
 def main(argv: list[str]) -> int:
     limit = 40
     for a in argv:
         if a.startswith("--limit"):
             limit = int(a.split("=")[1]) if "=" in a else limit
+    if "--portability" in argv:
+        return portability([p for p in insert_files()
+                            if p.stem not in manuscript_inputs()], limit)
     included = manuscript_inputs()
     files = insert_files()
     orphans = [p for p in files if p.stem not in included]

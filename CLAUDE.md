@@ -43,15 +43,6 @@ This file contains project context and decisions. AI assistants should read this
 - M analysis/2026-07-27_cubic_map_kernel_decomposition.md
 - M analysis/w33_pass1142_1146_exact.py
 
-## Session Context
-**Goals:**
-- 2026-06-05 current goal: refresh origin/master, absorb the BT285-BT317 remote batch, and continue the selector/hypercube theory with a scoped verified packet.
-- 2026-06-30 current work: read `w33_paper.tex`, `holonet_practical_implications.tex` (the repo file corresponding to the requested `practical_holonet.tex`), and `photonic_holonet.tex` top-to-bottom; promote a scoped Holonet/W33 packet breakthrough into runnable code, JSON, CI, and `docs/index.html`.
-- 2026-06-30 current work extension: searched the repo and external primary-source surfaces for loosely related quantum-walk/frequency-bin ideas, then promoted the most promising new physical/compiler interface: a frequency-bin lowering of the Hashimoto packet phase bridge.
-- 2026-07-01 current work: update the existing Holonet practical presentation package for an investor-facing talk by folding in the practical paper, machine paper, photonic Pass 48-55 chain, W33 Hashimoto/frequency-bin bridge, current origin/master state, and current market-context sources.
-- 2026-07-02 current work: absorb the latest BT367/BT982 commits and continue the Holonet practical investor presentation by adding an executable selector E6/E8 runtime bridge that ties the 120-sheet selector, 240 signed-sheet/E8 budget, frequency-bin probes, and 51,840-tick runtime into one certificate.
-
-
 ## Decision Freshness
 **0 stale decisions** · 61 need review · 1125 superseded ready to archive · Oldest unreviewed: 2026-04-20
 
@@ -84,6 +75,41 @@ When referencing these decisions, note their staleness. Verify they still reflec
 # Project Instructions
 
 How this repository prefers to work with AI assistants.
+
+## Two ways an edit silently succeeds while doing nothing (measured 2026-07-31)
+
+Both cost real passes in one session. Both are invisible: the code compiles, the
+output looks right, and the thing simply does not happen.
+
+**1. A shell heredoc eats backslash escapes.** Writing a regex through
+`py -3 - <<'PY'` or `py -3 -c "..."` turns `\b` into a literal **backspace byte**
+(`0x08`). The pattern still compiles, still reads correctly in the source, and
+matches *nothing*. This happened **four times**, and one occurrence disabled the
+Pass 1395 scope filter for a whole session before anyone noticed.
+
+- **Use the Edit/Write tools for any file containing regexes or escapes.** Never
+  a heredoc.
+- When a filter suddenly matches nothing, `print(repr(pattern))` before believing
+  it.
+- `scripts/check_stale_boundaries.py` now runs `_assert_no_control_chars()` at
+  import and raises. Copy that guard into any new file that compiles patterns.
+
+**2. A rewriting transformation is run before it is tested.** A regex sweep meant
+to escape one identifier in one file "fixed" **2,129** legitimate math-mode
+subscripts (`E_8`, `A_2`, `C_2`) across 32 manuscript files and broke the build.
+The real defect was one line.
+
+- **Prove a rewriting transformation on the single known-bad case first**, then
+  widen. The guards here already apply that discipline to *detection*; apply it
+  to *modification* too.
+- Report a dry-run count before writing. If a fix for one line touches thousands,
+  it is not that fix.
+
+Related: a manuscript insert that compiles in `w33_paper.tex` can break
+`photonic_holonet.tex`, which defines neither the theorem environments nor
+`\PSp`/`\Aut`. Guard the preamble (`\@ifundefined`, `\providecommand`) and check
+with `py -3 scripts/check_orphan_inserts.py --portability` — 25 existing inserts
+would currently break a bare host.
 
 ## Git operations: use GitKraken (all agents)
 
