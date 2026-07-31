@@ -1,0 +1,16 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.supplement",
+  "status": "ACTIVE",
+  "canonical_blocks": [
+    {
+      "range": "1516-1520",
+      "title": "Relations, coordinate-free Fourier form, apartment D4 obstruction, maximal-order arithmetic, and equivariant Morita closure",
+      "source": "analysis/w33_pass1516_1520_five_frontiers.py",
+      "certificate": "data/w33_pass1516_1520_five_frontiers.json",
+      "compact_certificate_sha256": "603380fbc9370b97b08273a67785b43f9c52960610d84661f99228bbe020ab48",
+      "report": "analysis/BT1516_BT1520_five_frontiers.md",
+      "manuscript_insert": "paper/sections/sec_bt1516_bt1520_five_frontiers.tex",
+      "evidence_boundary": "Exact derived consequences of the frozen Passes 1370-1374 and 1500-1504 certificates. The expensive base workers are hash-locked but not rerun by this packet. Higher Yoneda generators and the residual-label transport cocycle remain open."
+    }
+  ]
+}
