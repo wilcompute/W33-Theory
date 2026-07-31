@@ -111,10 +111,10 @@ The corrected remote exact workflow completed successfully. The exhaustive imple
 dbcf6881622b3e1cdd694d1e345eadce309eae0550e23e348ba446ca603bee74
 ```
 
-and the frozen compact certificate digest is
+and the collision-safe canonical compact certificate digest is
 
 ```text
-f3c9a0dab62ad8afc6c2c05bb909b789b0278eff1a6654c2d2f36ae80dcbae6b
+0ec8be0272896594c7013691a1f2516d08bdcc08cf97049297b69e594f953152
 ```
 
 This is finite rational representation theory reconstructed from the literal permutation group. No database character table, floating eigensolver, particle identification, hardware claim, or laboratory claim is used.
