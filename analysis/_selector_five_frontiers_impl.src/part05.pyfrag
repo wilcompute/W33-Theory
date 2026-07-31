@@ -1,0 +1,80 @@
+            })
+        transformed[name] = {"off_block_zero": True, "blocks": block_data, "sha256": matrix_stats(F)["sha256"]}
+
+    result = {
+        "theorem": "Pass 1392 Exact Selector Mackey Fourier Transform",
+        "ordering": "fourteen Mackey isotypic projectors ordered by orbital block index; within each image, original pivot columns are used",
+        "block_dimensions": dims,
+        "blocks": blocks,
+        "forward_basis_U": matrix_stats(U),
+        "inverse_transform_Uinv": matrix_stats(Uinv),
+        "exact_inverse_verified": True,
+        "operators": transformed,
+        "conclusion": "A deterministic rational change of basis splits Q^120 into all fourteen Mackey isotypic sectors and block-diagonalizes A, D, and the minimum geometric splitter exactly.",
+        "boundary": "This is an exact isotypic Fourier transform. Bases inside repeated irreducible copies remain a rational gauge and are not claimed canonical at the tensor-factor level.",
+    }
+    result["sha256"] = sha(result)
+    return result
+
+
+def perfect_matchings4(line):
+    a, b, c, d = tuple(line)
+    return tuple(sorted([
+        tuple(sorted((tuple(sorted((a, b))), tuple(sorted((c, d)))))),
+        tuple(sorted((tuple(sorted((a, c))), tuple(sorted((b, d)))))),
+        tuple(sorted((tuple(sorted((a, d))), tuple(sorted((b, c)))))),
+    ]))
+
+
+def matching_for_pair(matchings, pair):
+    pair = tuple(sorted(pair))
+    hits = [i for i, M in enumerate(matchings) if pair in M]
+    assert len(hits) == 1
+    return hits[0]
+
+
+def dense_row(sparse, n=160):
+    row = np.zeros(n, dtype=np.int64)
+    for c, v in sparse:
+        row[c] = v
+    return row
+
+
+def build_hinge_sheet_and_bridges(mask=(1, 1, 1, 0), residual=0):
+    adj, lines, through, edge_line, centers, flag_index = sheet713.build()
+    line_matchings = [perfect_matchings4(line) for line in lines]
+    selected_rows = []
+    rectangle_records = []
+    for c in range(40):
+        for li, lj in itertools.combinations(through[c], 2):
+            A = tuple(sorted(set(lines[li]) - {c}))
+            B = tuple(sorted(set(lines[lj]) - {c}))
+            for aa in itertools.combinations(A, 2):
+                for bb in itertools.combinations(B, 2):
+                    rect_edges = [tuple(sorted(e)) for e in [
+                        (aa[0], bb[0]), (aa[1], bb[0]), (aa[1], bb[1]), (aa[0], bb[1]),
+                    ]]
+                    per_mask = collections.defaultdict(list)
+                    for gauges in itertools.product(*(centers[e] for e in rect_edges)):
+                        paths = [sheet713.path_edges(x, y, q, edge_line) for (x, y), q in zip(rect_edges, gauges)]
+                        cycle = sheet713.xor_path_edges(paths)
+                        if sheet713.is_simple_levi_8_cycle(cycle):
+                            m = tuple(1 if q == c else 0 for q in gauges)
+                            row = sheet713.oriented_sparse_row(cycle, flag_index)
+                            per_mask[m].append((tuple(sorted(cycle)), row))
+                    vals = sorted(per_mask[mask], key=lambda t: t[0])
+                    assert len(vals) == 3
+                    row = vals[residual][1]
+                    selected_rows.append(row)
+                    mi = matching_for_pair(line_matchings[li], aa)
+                    mj = matching_for_pair(line_matchings[lj], bb)
+                    edge_i = line_matchings[li][mi].index(tuple(sorted(aa)))
+                    edge_j = line_matchings[lj][mj].index(tuple(sorted(bb)))
+                    rectangle_records.append((3 * li + mi, 3 * lj + mj, edge_i, edge_j))
+    assert len(selected_rows) == len(rectangle_records) == 2160
+    return selected_rows, rectangle_records, flag_index
+
+
+def levi_boundary(flag_index):
+    D = np.zeros((80, 160), dtype=np.int64)
+    for (p, li), j in flag_index.items():

@@ -1,0 +1,87 @@
+    start = 0
+    for block in blocks:
+        E = block["E"]
+        local = [E[i][j] for i in range(len(E)) for j in range(len(E))]
+        cols.extend(local)
+        block_slices.append((start, start + len(local), int(block["n"])))
+        start += len(local)
+    assert start == 83
+    return sp.Matrix.hstack(*cols), block_slices
+
+
+def worker_1394():
+    public, cap = capture_mackey()
+    g = cap["g"]
+    blocks = core.matrix_units_full(g, cap["full_records"])
+    C, slices = flatten_matrix_units(blocks)
+    assert C.shape == (83, 83) and C.det() != 0
+    B = C.inv()
+
+    d = 1
+    for x in B:
+        d = math.lcm(d, int(sp.Rational(x).q))
+    A = (d * B).applyfunc(lambda x: int(x))
+    S = smith_normal_form(A, domain=ZZ)
+    raw_smith = [abs(int(S[i, i])) for i in range(83)]
+    assert all(x > 0 for x in raw_smith)
+    fractions = []
+    numerators = []
+    denominators = []
+    for si in raw_smith:
+        g0 = math.gcd(si, d)
+        a, b = si // g0, d // g0
+        fractions.append([a, b])
+        numerators.append(a)
+        denominators.append(b)
+
+    index_M_over_intersection = math.prod(numerators)
+    index_O_over_intersection = math.prod(denominators)
+    index_sum_over_O = index_M_over_intersection
+    index_sum_over_M = index_O_over_intersection
+
+    Gm = sp.zeros(83)
+    cursor = 0
+    for _start, _stop, n in slices:
+        for i in range(n):
+            for j in range(n):
+                Gm[cursor + i*n + j, cursor + j*n + i] = 1
+        cursor += n*n
+    GramO = B.T * Gm * B
+    assert all(sp.Rational(x).q == 1 for x in GramO)
+    disc_O = abs(int(GramO.det(method="domain-ge")))
+    assert disc_O > 0
+    detB = sp.Rational(B.det())
+    assert sp.Rational(disc_O) == detB * detB
+
+    level_O_to_M = denominator_lcm(B)
+    level_M_to_O = denominator_lcm(C)
+    block_levels = []
+    for bi, (start, stop, n) in enumerate(slices):
+        level = 1
+        for j in range(start, stop):
+            level = math.lcm(level, denominator_lcm(C[:, j]))
+        block_levels.append({"block": bi, "matrix_size": n, "M_to_O_level": level, "factorization": factor_dict(level)})
+
+    smith_fraction_census = {f"{a}/{b}": v for (a,b),v in sorted(collections.Counter(map(tuple, fractions)).items())}
+    result = {
+        "theorem": "Pass 1394 Integral Orbital Order Commensurability and Discriminant",
+        "orbital_order": "O = Z-span of the 83 stabilizer orbitals",
+        "selected_split_order": "M = Z^7 + M2(Z)^2 + M3(Z)^3 + M4(Z) + M5(Z), from the frozen rational matrix units",
+        "O_contained_in_selected_M": all(b == 1 for b in denominators),
+        "selected_M_contained_in_O": all(a == 1 for a in numerators),
+        "common_denominator_for_O_in_M_coordinates": d,
+        "smith_rational_factor_census": smith_fraction_census,
+        "index_M_over_intersection": str(index_M_over_intersection),
+        "index_O_over_intersection": str(index_O_over_intersection),
+        "index_sum_over_O": str(index_sum_over_O),
+        "index_sum_over_M": str(index_sum_over_M),
+        "level_O_to_M": level_O_to_M,
+        "level_M_to_O": level_M_to_O,
+        "blockwise_M_to_O_levels": block_levels,
+        "orbital_reduced_trace_discriminant": str(disc_O),
+        "discriminant_factorization": factor_dict(disc_O),
+        "determinant_transition_B": rational_pair(detB),
+        "local_discriminant_maximality_test": {str(p): disc_O % p != 0 for p in (2,3,5)},
+        "conclusion": "The orbital order and the matrix-unit split maximal order are commensurable but neither containment is assumed. Their exact intersection/sum indices, bidirectional integral levels, rational Smith factors, and the orbital reduced-trace discriminant are frozen. The discriminant identifies the primes where the orbital order cannot be maximal.",
+        "boundary": "This selected matrix-unit maximal order need not contain O. The result is a commensurability theorem, not a conductor theorem for a nonexistent inclusion; constructing a conjugate maximal overorder containing O remains open.",
+    }

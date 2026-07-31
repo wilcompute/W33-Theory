@@ -1,0 +1,50 @@
+name: Passes 1400-1404 Serial Exact Fallback
+
+on:
+  push:
+    branches:
+      - agent/pass1400-1404-five-frontiers
+    paths:
+      - '.github/workflows/pass1400_1404_serial.yml'
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/_selector_five_frontiers_impl.py'
+      - 'analysis/_selector_five_frontiers_impl.src/**'
+      - 'analysis/w33_pass1400_1404_five_frontiers.py'
+      - 'data/w33_pass1400_1404_five_frontiers.json'
+      - 'tests/test_w33_pass1400_1404_five_frontiers.py'
+      - '.github/workflows/pass1400_1404_serial.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  OPENBLAS_NUM_THREADS: '1'
+  OMP_NUM_THREADS: '1'
+
+jobs:
+  serial-exact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install --upgrade pip numpy sympy networkx pytest
+      - run: python -m py_compile analysis/_selector_five_frontiers_impl.py analysis/w33_pass1400_1404_five_frontiers.py
+      - name: Run five exact frontiers
+        run: |
+          mkdir -p /tmp/pass1400-1404
+          for worker in 1400 1401 1402 1403 1404; do
+            python analysis/w33_pass1400_1404_five_frontiers.py --worker "$worker" --output "/tmp/pass1400-1404/$worker.json"
+          done
+          pytest -q tests/test_w33_pass1400_1404_five_frontiers.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass1400-1404-results
+          path: /tmp/pass1400-1404/*.json
+          if-no-files-found: error
