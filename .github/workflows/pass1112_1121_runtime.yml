@@ -1,0 +1,173 @@
+name: Passes 1112-1121 Qontrol, A2 carrier, cubic incidence, and runtime closure
+on:
+  push:
+    branches: [master, "agent/**"]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install numpy pytest
+      - name: Regenerate exact certificates
+        shell: bash
+        run: |
+          set -o pipefail
+          python analysis/w33_pass1112_qontrol_q8iv_transport.py
+          python analysis/w33_pass1113_e8_a2_triple_carrier_extension.py
+          python analysis/w33_pass1114_full_cubic_central_phase_extension.py
+          python analysis/w33_pass1115_formal_a2_phase_qontrol_lock.py
+          python analysis/w33_pass1120_we6_class_algebra_decomposition.py 2>&1 | tee data/w33_pass1120_execution.log
+          python analysis/w33_pass1121_e8_a2_cubic_incidence.py 2>&1 | tee data/w33_pass1121_execution.log
+          python analysis/w33_pass1116_runtime_closure.py
+          pytest -q tests/test_w33_pass1112_1121.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pass1112-1121-exact-python
+          path: |
+            data/w33_pass1112_qontrol_q8iv_transport.json
+            data/w33_pass1113_e8_a2_triple_carrier_extension.json
+            data/w33_pass1114_full_cubic_central_phase_extension.json
+            data/w33_pass1115_formal_a2_phase_qontrol_lock.json
+            data/w33_pass1116_runtime_closure.json
+            data/w33_pass1120_we6_class_algebra_decomposition.json
+            data/w33_pass1121_e8_a2_cubic_incidence.json
+            data/w33_pass1120_execution.log
+            data/w33_pass1121_execution.log
+            hardware/w33_pass1112_qontrol_q8iv_receipt.json
+            artifacts/canonical_su3_gauge_and_cubic.json
+  ctbllib-observed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y gap gap-character-tables
+      - name: Observe rows and compare complete decomposition
+        shell: bash
+        run: |
+          set -o pipefail
+          gap -q analysis/w33_pass1102_ctbllib_rows.g | tee data/w33_pass1102_ctbllib_rows_observed.json
+          gap -q analysis/w33_pass1120_a2_ctbllib_decomposition.g | tee data/w33_pass1120_a2_ctbllib_decomposition_observed.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          rows=json.loads(Path('data/w33_pass1102_ctbllib_rows_observed.json').read_text())
+          dec=json.loads(Path('data/w33_pass1120_a2_ctbllib_decomposition_observed.json').read_text())
+          exact=json.loads(Path('data/w33_pass1120_we6_class_algebra_decomposition.json').read_text())
+          assert rows['table']=='U4(2).2'
+          assert dec['status']=='PASS' and dec['degree_reconstruction']==2240
+          observed={(tuple(r['values']),r['multiplicity']) for r in dec['nonzero']}
+          expected={(tuple(r['character']),r['multiplicity']) for r in exact['irreducible_rows'] if r['multiplicity']}
+          assert observed==expected
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass1120-ctbllib-observed
+          path: data/w33_pass11*ctbllib*observed.json
+  canonical-sign-observed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install numpy
+      - name: Regenerate complete sign gauge
+        run: |
+          python tools/solve_canonical_su3_gauge_and_cubic.py
+          python tools/verify_canonical_su3_gauge_and_cubic.py
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          p=Path('artifacts/canonical_su3_gauge_and_cubic.json');x=json.loads(p.read_text())
+          assert x['counts']['solvable'] and len(x['triads'])==45
+          out={'status':'PASS','solvable':True,'triads':45,'sign_distribution':x['solution']['d_sign_distribution'],'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
+          Path('data/w33_pass1116_canonical_sign_observed.json').write_text(json.dumps(out,indent=2)+'\n')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass1116-canonical-sign-observed
+          path: |
+            artifacts/canonical_su3_gauge_and_cubic.json
+            data/w33_pass1116_canonical_sign_observed.json
+  strict-lean-observed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Lean
+        continue-on-error: true
+        uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formal
+          auto-config: false
+          build: false
+          test: false
+          lint: false
+          leanchecker: false
+          nanoda: false
+          use-github-cache: false
+      - name: Serial strict build
+        shell: bash
+        run: |
+          cd formal
+          lake update
+          : > "$RUNNER_TEMP/pass1112-1121-lean.log"
+          failed=0; total=0
+          for m in $(grep -oE '^import (W33\.\S+)' W33.lean | sed 's/import //'); do
+            total=$((total+1))
+            lake build --wfail "$m" >> "$RUNNER_TEMP/pass1112-1121-lean.log" 2>&1 || { echo "FAILED: $m" >> "$RUNNER_TEMP/pass1112-1121-lean.log"; failed=$((failed+1)); }
+          done
+          phantom=$(grep -c 'failed to read file' "$RUNNER_TEMP/pass1112-1121-lean.log" || true)
+          status=FAIL; [ "$failed" -eq 0 ] && [ "$phantom" -eq 0 ] && status=PASS
+          printf '{"status":"%s","total_modules":%s,"failed_modules":%s,"phantom_olean_errors":%s}\n' "$status" "$total" "$failed" "$phantom" > ../data/w33_pass1116_lean_observed.json
+          cat ../data/w33_pass1116_lean_observed.json
+          test "$status" = PASS
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pass1116-strict-lean-observed
+          path: |
+            data/w33_pass1116_lean_observed.json
+            ${{ runner.temp }}/pass1112-1121-lean.log
+  runtime-closure:
+    runs-on: ubuntu-latest
+    needs: [exact-python, ctbllib-observed, canonical-sign-observed, strict-lean-observed]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - uses: actions/download-artifact@v4
+        with: {name: pass1112-1121-exact-python, path: observed/python}
+      - uses: actions/download-artifact@v4
+        with: {name: pass1120-ctbllib-observed, path: observed/ctbllib}
+      - uses: actions/download-artifact@v4
+        with: {name: pass1116-canonical-sign-observed, path: observed/sign}
+      - uses: actions/download-artifact@v4
+        with: {name: pass1116-strict-lean-observed, path: observed/lean}
+      - name: Assemble fail-closed ledger
+        run: |
+          cp observed/python/data/w33_pass111{2,3,4,5}_*.json data/
+          cp observed/python/data/w33_pass1120_we6_class_algebra_decomposition.json data/
+          cp observed/python/data/w33_pass1121_e8_a2_cubic_incidence.json data/
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          rows=json.loads(next(Path('observed/ctbllib').rglob('w33_pass1102_ctbllib_rows_observed.json')).read_text())
+          dec=json.loads(next(Path('observed/ctbllib').rglob('w33_pass1120_a2_ctbllib_decomposition_observed.json')).read_text())
+          sign=json.loads(next(Path('observed/sign').rglob('w33_pass1116_canonical_sign_observed.json')).read_text())
+          lean=json.loads(next(Path('observed/lean').rglob('w33_pass1116_lean_observed.json')).read_text())
+          out={'ctbllib':{'status':'PASS','rows':rows,'a2_decomposition':dec},'canonical_sign':sign,'lean':lean}
+          Path('data/w33_pass1116_runtime_observations.json').write_text(json.dumps(out,indent=2)+'\n')
+          PY
+          python analysis/w33_pass1116_runtime_closure.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass1116-observed-runtime-closure
+          path: |
+            data/w33_pass1116_runtime_observations.json
+            data/w33_pass1116_runtime_closure.json

@@ -1,0 +1,17 @@
+{
+  "schema": "w33.pass1116.canonical_sign_observed.v1",
+  "status": "PASS",
+  "workflow_run_id": 30284488023,
+  "workflow_job_id": 90038776082,
+  "observed_head_sha": "7b110d6e1a29b0563f3abe4188d1ade6accce881",
+  "variables": 231,
+  "equations": 1951,
+  "rank": 196,
+  "solvable": true,
+  "couplings": 1620,
+  "triads": 45,
+  "ladder_edges": 324,
+  "sign_distribution": {"-1": 23, "1": 22},
+  "artifact_sha256": "81444a3d3f2c93a2078bf23e3eea52f6b043ccb39b115aed4a9fbc62062ce135",
+  "scope": "Observed canonical SU(3) gauge and complete 45-term cubic sign solve. The full generated artifact remains a workflow artifact; this compact receipt records the exact solve statistics and content hash."
+}

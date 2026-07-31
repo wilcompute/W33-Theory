@@ -1,0 +1,11 @@
+{
+  "schema": "w33.pass1116.runtime_closure.v1",
+  "status": "PASS_LOCAL_RUNTIME_PENDING",
+  "headline": "All local exact certificates pass and a PR-visible workflow is wired to observe GAP/CTblLib rows, the full canonical cubic sign solve, and a strict serial Lean build. Those runtime observations remain pending until the workflow artifacts are inspected.",
+  "local_exact_checks": {"pass1112":16,"pass1113":14,"pass1114":20,"pass1115":10,"pass1116":12,"total":72},
+  "runtime_observations": null,
+  "workflow": ".github/workflows/pass1112_1116_runtime.yml",
+  "check_count": 12,
+  "checks": {"qontrol_reference_passed":true,"a2_extension_passed":true,"all45_phase_extension_passed":true,"formal_source_certificate_passed":true,"workflow_has_python_gap_sign_lean_jobs":true,"workflow_is_pull_request_visible":true,"umbrella_imports_pass1115":true,"pair_and_triple_minima_separated":true,"central_phase_histogram_exact":true,"second_vendor_boundary_is_explicit":true,"runtime_state_explicit":true,"no_physical_hardware_claim":true},
+  "scope": "Runtime closure records only observed artifacts. Missing GAP, canonical-sign, or Lean evidence leaves status explicitly pending rather than inferred."
+}
