@@ -1,0 +1,41 @@
+name: Passes 1375-1379 Mackey selector decomposition
+
+on:
+  push:
+    branches:
+      - agent/pass1375-1379-mackey
+    paths:
+      - 'analysis/w33_pass1375_1379_mackey_selector_decomposition.py'
+      - 'analysis/pass1370_1374/**'
+      - '.github/workflows/pass1375_1379_mackey.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass1375_1379_mackey_selector_decomposition.py'
+      - 'analysis/pass1370_1374/**'
+      - 'data/w33_pass1375_1379_mackey_selector_decomposition.json'
+      - 'tests/test_w33_pass1375_1379_mackey_selector_decomposition.py'
+      - '.github/workflows/pass1375_1379_mackey.yml'
+  workflow_dispatch:
+
+jobs:
+  exact-mackey:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install exact dependencies
+        run: python -m pip install --upgrade pip numpy sympy pytest
+      - name: Reconstruct exact certificate
+        run: |
+          python analysis/w33_pass1375_1379_mackey_selector_decomposition.py \
+            --output /tmp/w33_pass1375_1379.json
+      - name: Validate focused regressions when frozen data exists
+        run: |
+          if [ -f data/w33_pass1375_1379_mackey_selector_decomposition.json ]; then
+            python analysis/w33_pass1375_1379_mackey_selector_decomposition.py --check
+            pytest -q tests/test_w33_pass1375_1379_mackey_selector_decomposition.py
+          fi
