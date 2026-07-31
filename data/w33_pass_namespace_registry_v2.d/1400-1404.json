@@ -1,0 +1,19 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.supplement",
+  "status": "ACTIVE",
+  "canonical_blocks": [
+    {
+      "range": "1400-1404",
+      "owner": "selector-mackey-modular-fourier-apartment-integral-order-track",
+      "status": "COMPLETE_WITH_LOCAL_EXACT_VERIFICATION_REMOTE_PENDING",
+      "artifacts": {
+        "1400": "modular Mackey localization, characteristic-5 persistence, and exact Loewy boundary",
+        "1401": "intrinsic hinge-charge and square-norm classification of the six dual orbits",
+        "1402": "deterministic exact rational selector isotypic Fourier transform",
+        "1403": "rank-complete hinge-selected selector/apartment bridge to Levi Steinberg-81",
+        "1404": "integral orbital-order commensurability, Smith arithmetic, and reduced-trace discriminant"
+      },
+      "runtime_boundary": "All five exact workers completed locally with canonical SHA-256 values 1400=a2b1eddd8138a0b82727b4bc27b16cc941489a5303c3dc07dd8e61c1e57277c1, 1401=77ff0ff1d33fa707708bcff4eb1877cb7601843eb5e4dce6e7b2c3baa8db7608, 1402=571cd277756f57fe2e65a1094b4eefdd8dd8a4f60645de65e1184d0fbf1f0dfc, 1403=dfc0416ebce38756bb4b2bb23f2a774932a33ef71bb01e0bceb35459b1fc915f, 1404=63fb80a5d16b0d0301811b9ac3012753077a1237b55c0a02b0b75c135736235c. Focused regressions pass 5/5. Dedicated remote Actions are a second witness and remain pending until observed. The packet was developed under provisional internal worker labels 1390-1394, then canonically moved because a parallel release reached master first."
+    }
+  ]
+}
