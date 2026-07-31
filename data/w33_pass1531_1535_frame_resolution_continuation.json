@@ -1,0 +1,55 @@
+{
+  "pass1531_resolution_cnf": {
+    "bytes": 1437956,
+    "clause_breakdown": {"S9_symmetry_units":9,"edge_color_exactly_one":79920,"frame_exactly_one":19980},
+    "clauses": 99909,
+    "schema": "w33.pass1531.resolution_cnf.v1",
+    "sha256": "226ea85993ff629207980d8b9f090ff860b298a54c12372277e5d635493a88ab",
+    "solve_boundary": "A local HiGHS branch-and-bound run and the parallel CaDiCaL run remained undecided. No SAT or UNSAT claim is made.",
+    "status": "FORMULATED_OPEN",
+    "symmetry_break_edge": 0,
+    "symmetry_break_frames": [27,28,29,54,55,56,81,82,83],
+    "variables": 4860
+  },
+  "pass1532_module_fingerprint": {
+    "boundary": "The action, orbitals, rectangular zero maps, and dimensions are independently rebuilt. The displayed isotypic labels use stable commutant numerics matched to the ATLAS degree list; a GAP character inner-product certificate remains desirable.",
+    "interpretation": {
+      "pgsp_minus4": "64 + 81 + 20 + 2*60 + 15_other^+ + 15_other^-; the outer element separates the two 15 extensions while the 60 remains multiplicity two.",
+      "plus4": "A single 81 block for both groups; Pass 1535 identifies it with the harmonic Steinberg extension.",
+      "psp_minus4": "64 + 81 + 20 + 2*60 + 2*15_other; the two 60 and two 15 blocks are separately mixed by PSp orbitals.",
+      "sp_inflation": "The projective action inflates to Sp(4,3) with the central -I acting trivially."
+    },
+    "pgsp": {"equal_block_mixing":{"15":1.9226408596118432e-14,"60":41.77018310357036},"frame_stabilizer_order":96,"group_order":51840,"minus4_block_multiplicities":[64,81,60,15,20,60,15],"permutation_rank":22,"plus4_block_multiplicities":[81]},
+    "point_module_comparison": {"N_times_Pminus4_zero":true,"conclusion":"All three equivariant frame-to-point orbital maps vanish on E_-4, so the repeated 15 is the other rational 15, not the constituent of the 40-point permutation module.","frame_stabilizer_point_orbit_sizes":[8,8,24],"rectangular_orbital_ranks_on_Eminus4":[0,0,0]},
+    "psp": {"equal_block_mixing":{"15":40.24922359499621,"60":47.02896609874181},"frame_stabilizer_order":48,"group_order":25920,"minus4_block_multiplicities":[64,60,81,15,20,60,15],"permutation_rank":32,"plus4_block_multiplicities":[81]},
+    "schema": "w33.pass1532.frame_module_fingerprint.v1",
+    "status": "PASS"
+  },
+  "pass1533_cover_frontier_audit": {
+    "boundary": "The 327 orbit frontier is saturation evidence and a certified lower bound, not a global completeness theorem.",
+    "frozen_frontier": {"canonical_link_clique_number":3,"certified_cover_lower_bound":3547800,"disjoint_partners_of_canonical_cover":13648,"orbit_types":327,"psp_order":25920,"stabilizer_order_histogram":{"2":228,"4":84,"8":15}},
+    "schema": "w33.pass1533.cover_orbit_frontier_audit.v1",
+    "status": "PASS"
+  },
+  "pass1534_four_packing_simplex": {
+    "boundary": "This blocks this four-packing only; it does not prove every four-packing is blocked.",
+    "integral_shell": {"algorithm_x_nodes":2332,"exists":false,"formula":"y5=y_frac+z","trace_sha256":"b37badad4c4a27a65da531e571b442a797eea8b39cfab829dd28d913f6ace81d","z_coordinates":"4/5 on 60 selected residual frames; -1/5 on the other 240","z_norm_squared":48},
+    "projection": {"coordinates":"-1/9 on 240 used frames; 4/45 on 300 residual frames","formula":"y_frac=-(1/5)(y1+y2+y3+y4)","norm_squared":"16/3"},
+    "scaled_centered_gram_by_81": [[4320,-540,-540,-540],[-540,4320,-540,-540],[-540,-540,4320,-540],[-540,-540,-540,4320]],
+    "schema": "w33.pass1534.four_packing_simplex.v1",
+    "status": "PASS"
+  },
+  "pass1535_frame_harmonic_bridge": {
+    "boundary": "An exact finite-module identification only; no Hodge star, action functional, or continuum dynamics is inferred.",
+    "checks": {"P4_eigenidentity":true,"P4_rank_81":true,"betti_h1_81":true,"bridge_closed":true,"bridge_coclosed":true,"bridge_domain_eigenvalue_4":true,"bridge_rank_81":true,"chain_complex":true,"equivariant_generator_1":true,"equivariant_generator_2":true,"equivariant_generator_3":true,"equivariant_generator_4":true,"group_order_25920":true,"projected_equivariant_generator_1":true,"projected_equivariant_generator_2":true,"projected_equivariant_generator_3":true,"projected_equivariant_generator_4":true,"rank_d1_39":true,"rank_d2_120":true},
+    "construction": {"B_shape":[240,540],"T_shape":[240,540],"projector_polynomial":"(H-32I)(H-14I)(H-8I)(H-2I)(H+4I)","projector_scalar_on_E4":-17920,"seed_edge":4,"seed_frame":0},
+    "hashes": {"B_int64_sha256":"02c63b9a3d00eaee1e758e336d6d3f9a20824b0b1d46a01ee0110ada68879f90","P4_int64_sha256":"7f020aaf0da40f0cf589f2610fc7542d7f5815c46b96a65f00e78739f8fe41db","T_int64_sha256":"5ba0d667317317c4b45897192b6bd28efde5317916d41fcc92e90474775eb874"},
+    "integer_ranges": {"B":[-32256,32256],"T":[-3,3]},
+    "ranks": {"P4":81,"bridge":81,"d1":39,"d2":120,"harmonic":81},
+    "schema": "w33.pass1535.frame_harmonic_bridge.v1",
+    "status": "PASS"
+  },
+  "release_boundary": "Passes 1532, 1534, and 1535 add new structural results. Pass 1531 formulates but does not decide chi(H)=9. Pass 1533 preserves the non-completeness boundary of the 327-orbit frontier.",
+  "schema": "w33.pass1531_1535.frame_resolution_continuation.v1",
+  "status": "PASS_WITH_OPEN_RESOLUTION"
+}
