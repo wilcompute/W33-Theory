@@ -1,0 +1,13 @@
+{
+  "schema": "w33.pass1500_1504.manuscript_hook.v1",
+  "status": "PASS",
+  "original_section_blob": "e248c7a3a7a8e545892845e7ba85ef6141968175",
+  "wrapper_blob": "9ae094267f63cdc426471ae513087d2bc5bfade4",
+  "insert_blob": "befd50cb47e7b627a8b1f2421b84b15fb529353d",
+  "properties": {
+    "original_preserved_byte_for_byte": true,
+    "wrapper_inputs_original_once": true,
+    "wrapper_inputs_pass1500_1504_once": true,
+    "mathematical_release_unchanged": true
+  }
+}

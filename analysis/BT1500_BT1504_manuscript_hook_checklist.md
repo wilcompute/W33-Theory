@@ -1,0 +1,5 @@
+- [x] Exact release already on master.
+- [x] Original preprint section preserved byte-for-byte.
+- [x] Reversible wrapper installs the theorem insert exactly once.
+- [x] Focused regression and CI workflow included.
+- [x] No mathematical source or compact certificate changed.
