@@ -1,0 +1,19 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.supplement",
+  "status": "ACTIVE",
+  "canonical_blocks": [
+    {
+      "range": "1360-1364",
+      "owner": "selector-gelfand-terwilliger-schur-track",
+      "status": "COMPLETE_WITH_RUNTIME_BOUNDARIES",
+      "artifacts": {
+        "1360": "exact Gelfand pair (PGSp(4,3), H432), five double cosets, spherical functions, and multiplicity-free degrees",
+        "1361": "exact 79-dimensional selector Terwilliger algebra, 10-dimensional center, and word-length-six closure",
+        "1362": "83-dimensional stabilizer orbital algebra, full Schur closure, and four-dimensional 2+2 shell-localized defect",
+        "1363": "stable split Wedderburn fingerprint modulo 1000003 and 1000033",
+        "1364": "dual-manuscript theorem integrator, focused regressions, dedicated CI, and literature/physics boundaries"
+      },
+      "runtime_boundary": "Exact characteristic-zero closure and center calculations, 5/5 focused tests, integrator idempotence, and minimal theorem compilation pass locally. The split block profile is promoted only as an exact two-prime finite-field fingerprint; no rational splitting-field, literature-priority, or physical-realization claim is made."
+    }
+  ]
+}
