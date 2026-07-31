@@ -1,0 +1,11 @@
+Pass 1477: which degree-81 extension the harmonic sector carries
+
+dim harmonic = 81
+|Aut on points| = 51840   (expect 51840)
+harmonic invariant under the FULL group? true
+full-group harmonic character computable: true
+  decomposition over PGSp: [ [ 81, 1 ] ]
+  a SINGLE degree-81 extension? true
+  which one: irreducible #24 of the PGSp table
+
+DONE

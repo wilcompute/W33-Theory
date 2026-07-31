@@ -470,6 +470,19 @@
     "1474": "THIRD insert-portability break of the Holonet, second one mine: the new Proposition uses \\PGSp which the guarded preamble did not provide. PGSp added to the preamble, the fixer block, and the checker HOST_ONLY list"
    },
    "runtime_boundary": "Exact GAP character theory and divisibility; two observed local tectonic builds. The degree-90 identification and chi(H)=9 are explicitly open."
+  },
+  {
+   "range": "1475-1479",
+   "owner": "glue-track-which-81-and-obstruction-location",
+   "status": "COMPLETE",
+   "artifacts": {
+    "1475": "resolution encoded as SAT (540x9 vars; per-frame exactly-one; per-edge-per-class exactly-one, which IS the exact-cover condition and forces class size 60). CaDiCaL did not decide in 10 min -- the instance is small and genuinely hard. OPEN, but now in a form a solver can be pointed at",
+    "1476": "REFUTED MY OWN GUESS: the degree-90 is NOT the 90 hyperbolic lines. They form a transitive PSp-set decomposing as 1+15+20+24+30 -- no 45, no 90. 90=90 was a matching integer; the degree-90 remains unidentified",
+    "1477": "PHYSICS: the harmonic sector is invariant under the FULL group PGSp(4,3) and carries exactly ONE of the two degree-81 extensions (irreducible #24), not both and not a mixture. Closes the question Pass 1470 opened",
+    "1478": "located where the hemicell obstruction bites: BOTH polytope skeletons fail before divisibility is reached. 11-cell skeleton K11 needs an 11-clique but W(3,3) has clique number 4; 57-cell skeleton (Perkel) needs 57 vertices but W(3,3) has 40. Three-level answer: cell INSIDE (BT836), skeleton fails, polytope fails",
+    "1479": "the host-only macro list COMPUTED not hand-written: w33_paper defines 45, holonet 11, shared 8, so 37 are w33_paper-only. My hand list covered 9 of 37. Both tools now load data/w33_pass1479_host_only_macros.json, regenerable via scripts/compute_host_only_macros.py"
+   },
+   "runtime_boundary": "Exact GAP character theory; one exhaustive clique computation; a SAT encoding that did not terminate. The resolution and the degree-90 identification are explicitly open."
   }
  ],
  "rule": "A pass number is canonical only when registered here. Retracted or scope-corrected blocks remain registered for provenance but cannot contribute active theorem claims outside their stated scope."

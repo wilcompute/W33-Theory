@@ -65,6 +65,26 @@ def recently_added(days: int = 14) -> set[str]:
     return {Path(l).stem for l in out.split() if l.endswith(".tex")}
 
 
+
+def _host_only():
+    """The COMPLETE list, computed (Pass 1479), not hand-written.
+
+    Three Holonet breaks came from a nine-entry hand list. Diffing the two
+    manuscript bodies gives 37 macros/environments defined only in w33_paper --
+    the real risk surface was four times the guarded one. Regenerate with
+    scripts/compute_host_only_macros.py.
+    """
+    import json as _j
+    f = ROOT / "data" / "w33_pass1479_host_only_macros.json"
+    if f.exists():
+        try:
+            return _j.loads(f.read_text(encoding="utf-8"))["w33_paper_only"]
+        except Exception:
+            pass
+    return ["lemma", "proposition", "remark", "corollary", "definition",
+            "PSp", "PGSp", "Aut", "spec"]
+
+
 def portability(paths: list[Path], limit: int = 40) -> int:
     r"""Would this insert COMPILE if promoted into a manuscript that lacks the
     w33_paper preamble?
@@ -84,8 +104,7 @@ def portability(paths: list[Path], limit: int = 40) -> int:
         \providecommand{\PSp}{\mathrm{PSp}}
     """
     # macros/environments w33_paper.tex provides and photonic_holonet.tex does not
-    HOST_ONLY = ["lemma", "proposition", "remark", "corollary", "definition",
-                 "PSp", "PGSp", "Aut", "spec", "FF", "W"]
+    HOST_ONLY = _host_only()
     RE_ENV = re.compile(r"\\begin\{(" + "|".join(HOST_ONLY) + r")\}")
     RE_MAC = re.compile(r"\\(" + "|".join(HOST_ONLY) + r")\\b")
     RE_GUARD = re.compile(r"@ifundefined|providecommand|newtheorem")

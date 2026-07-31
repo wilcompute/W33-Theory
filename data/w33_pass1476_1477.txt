@@ -1,0 +1,6 @@
+Passes 1476-1477: the 90, and which 81
+
+hyperbolic lines (nondegenerate 2-spaces): 90   (expect 90)
+  transitive on the 90? true   |image| = 25920
+  90-point permutation character over PSp: [ [ 1, 1 ], [ 15, 1 ], [ 20, 1 ], [\
+ 24, 1 ], [ 30, 1 ] ]

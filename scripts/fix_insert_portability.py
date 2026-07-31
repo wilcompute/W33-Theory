@@ -57,8 +57,8 @@ MARKER = "HOST-INDEPENDENT PREAMBLE"
 
 def targets() -> list[tuple[Path, list[str]]]:
     from check_orphan_inserts import insert_files, manuscript_inputs
-    HOST_ONLY = ["lemma", "proposition", "remark", "corollary", "definition",
-                 "PSp", "PGSp", "Aut", "spec"]
+    from check_orphan_inserts import _host_only
+    HOST_ONLY = _host_only()
     re_env = re.compile(r"\\begin\{(" + "|".join(HOST_ONLY) + r")\}")
     re_mac = re.compile(r"\\(" + "|".join(HOST_ONLY) + r")\b")
     re_guard = re.compile(r"@ifundefined|providecommand|newtheorem")
