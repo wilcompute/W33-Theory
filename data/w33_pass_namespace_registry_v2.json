@@ -335,6 +335,20 @@
     "1409": "the 6,579 cover count is a time-capped LOWER BOUND, restated as such; structurally at least one full G-orbit of 6480 exists"
    },
    "runtime_boundary": "Exact GAP MeatAxe, exact modular ranks, and stabiliser computations on six sampled covers. The cover total is explicitly NOT computed. No CI-observed claim."
+  },
+  {
+   "range": "1410-1415",
+   "owner": "glue-track-fourteens-diagonal-shortcut",
+   "status": "COMPLETE",
+   "artifacts": {
+    "1410": "the two mod-2 degree-14 composition factors ARE isomorphic: the (Z/2)^30 torsion carries a SECOND copy of the reduction, not an unrelated module",
+    "1411": "cover stabilisers are DIAGONAL: no sampled cover's stabiliser fixes any frame; every orbit on the 60 has size >= 2",
+    "1412": "FAILED SHORTCUT (recorded as such): the 240-edge module has TWO non-isomorphic degree-15 irreducibles, each mult 1, isotypic dim 30 -- so dimension does NOT force coker(M) = ker(K-10I). Question stays open; settling it needs the two degree-15 characters compared. Also noted: the edge module contains an 81 with multiplicity 1",
+    "1413": "fifth collision noise class (same pass in two formats); the Pass 1407 grammar fix cut tokens 23,594 -> 2,689 and pairs 2,066 -> 356. BREAKTHROUGH_309 vs 440 read in full: cite-across candidate, NOT a rediscovery (packing density vs kissing numbers)",
+    "1414": "clean negative: the other three token classes are NOT mis-calibrated on .json (means 1.2/0.1/0.8/0.4 vs 2.4/0.1/1.4/0.3 on .md)",
+    "1415": "BT1408 compiles to a 43.5 KB PDF against the paper's own macros; updated to carry the 1410/1411/1412 results"
+   },
+   "runtime_boundary": "Exact GAP character theory and MeatAxe; stabiliser data from six sampled covers; a local tectonic compile. The K-eigenspace character is explicitly NOT computed."
   }
  ],
  "rule": "A pass number is canonical only when registered here. Retracted or scope-corrected blocks remain registered for provenance but cannot contribute active theorem claims outside their stated scope."

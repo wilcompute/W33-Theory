@@ -1,0 +1,37 @@
+Passes 1410-1412
+
+=== Pass 1412: multiplicity of the degree-15 irreducible in Q^240 ===
+  240-edge module decomposition (degree, mult): [ [ 1, 1 ], [ 15, 1 ], [ 15, 1\
+ ], [ 20, 1 ], [ 24, 2 ], [ 60, 1 ], [ 81, 1 ] ]
+  degree-15 constituents: 2   multiplicities [ 1, 1 ]
+  TOTAL degree-15 isotypic dimension: 30
+  IS THE 15-ISOTYPIC COMPONENT UNIQUE AND 15-DIMENSIONAL? false
+  If true: every 15-dim G-submodule of Q^240 is THAT one, so the Pass 1397
+  cokernel and K's 10-eigenspace are forced to be the same G-module, with
+  no edge-labelling alignment required.
+
+=== Pass 1410: are the two mod-2 14s isomorphic? ===
+  quotient dim = 45
+  composition factor dims: [ 1, 1, 1, 6, 8, 14, 14 ]
+  number of 14-dimensional factors: 2
+  ARE THE TWO 14s ISOMORPHIC? true
+  (isomorphic => the torsion carries a SECOND copy of the reduction;
+   non-isomorphic => the torsion is a genuinely different module)
+
+=== Pass 1411: does a cover's stabiliser sit inside ONE frame stabiliser? ===
+  |Stab| = 4 (C4)  frames FIXED by it: 0  orbit sizes on the 60: [ [ 2, 6 ], [\
+ 4, 12 ] ]
+  |Stab| = 4 (C4)  frames FIXED by it: 0  orbit sizes on the 60: [ [ 2, 6 ], [\
+ 4, 12 ] ]
+  |Stab| = 4 (C4)  frames FIXED by it: 0  orbit sizes on the 60: [ [ 2, 6 ], [\
+ 4, 12 ] ]
+  |Stab| = 4 (C4)  frames FIXED by it: 0  orbit sizes on the 60: [ [ 2, 6 ], [\
+ 4, 12 ] ]
+  |Stab| = 8 (C4 x C2)  frames FIXED by it: 0  orbit sizes on the 60: [ [ 2, 4\
+ ], [ 4, 1 ], [ 8, 6 ] ]
+  |Stab| = 4 (C2 x C2)  frames FIXED by it: 0  orbit sizes on the 60: [ [ 2, 1\
+0 ], [ 4, 10 ] ]
+  A stabiliser fixing at least one frame sits inside that frame's
+  stabiliser; fixing none means it is diagonal across the cover.
+
+DONE
