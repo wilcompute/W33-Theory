@@ -12,12 +12,43 @@ Passes 1405-1406: the 2-torsion module, and cover stabilisers
 
 === Pass 1406: stabilisers of exact covers ===
   G transitive on the 540 frames: true  -> no cover is G-invariant (Pass 1398)
-  cover samples read: 6
-    cover of size 60: |Stab| = 4   orbit length 6480   type C4
-    cover of size 60: |Stab| = 4   orbit length 6480   type C4
-    cover of size 60: |Stab| = 4   orbit length 6480   type C4
-    cover of size 60: |Stab| = 4   orbit length 6480   type C4
-    cover of size 60: |Stab| = 8   orbit length 3240   type C4 x C2
-    cover of size 60: |Stab| = 4   orbit length 6480   type C2 x C2
+  cover samples read: 24
+    |Stab| = 4 (C2 x C2)  frames FIXED: 0   orbit sizes: [ [ 2, 12 ], [ 4, 9 ]\
+ ]
+    |Stab| = 4 (C2 x C2)  frames FIXED: 4   orbit sizes: [ [ 1, 4 ], [ 2, 12 ]\
+, [ 4, 8 ] ]
+    |Stab| = 4 (C4)  frames FIXED: 0   orbit sizes: [ [ 2, 6 ], [ 4, 12 ] ]
+    |Stab| = 4 (C2 x C2)  frames FIXED: 0   orbit sizes: [ [ 2, 12 ], [ 4, 9 ]\
+ ]
+    |Stab| = 4 (C4)  frames FIXED: 0   orbit sizes: [ [ 2, 6 ], [ 4, 12 ] ]
+    |Stab| = 4 (C4)  frames FIXED: 0   orbit sizes: [ [ 2, 6 ], [ 4, 12 ] ]
+    |Stab| = 8 (C4 x C2)  frames FIXED: 0   orbit sizes: [ [ 2, 4 ], [ 4, 1 ],\
+ [ 8, 6 ] ]
+    |Stab| = 4 (C4)  frames FIXED: 0   orbit sizes: [ [ 2, 6 ], [ 4, 12 ] ]
+    |Stab| = 4 (C2 x C2)  frames FIXED: 4   orbit sizes: [ [ 1, 4 ], [ 2, 12 ]\
+, [ 4, 8 ] ]
+    |Stab| = 2 (C2)  frames FIXED: 12   orbit sizes: [ [ 1, 12 ], [ 2, 24 ] ]
+    |Stab| = 4 (C2 x C2)  frames FIXED: 0   orbit sizes: [ [ 2, 12 ], [ 4, 9 ]\
+ ]
+    |Stab| = 2 (C2)  frames FIXED: 12   orbit sizes: [ [ 1, 12 ], [ 2, 24 ] ]
+    |Stab| = 4 (C4)  frames FIXED: 0   orbit sizes: [ [ 2, 6 ], [ 4, 12 ] ]
+    |Stab| = 4 (C2 x C2)  frames FIXED: 4   orbit sizes: [ [ 1, 4 ], [ 2, 12 ]\
+, [ 4, 8 ] ]
+    |Stab| = 4 (C4)  frames FIXED: 0   orbit sizes: [ [ 2, 6 ], [ 4, 12 ] ]
+    |Stab| = 4 (C4)  frames FIXED: 0   orbit sizes: [ [ 2, 6 ], [ 4, 12 ] ]
+    |Stab| = 8 (C4 x C2)  frames FIXED: 0   orbit sizes: [ [ 2, 4 ], [ 4, 1 ],\
+ [ 8, 6 ] ]
+    |Stab| = 4 (C2 x C2)  frames FIXED: 0   orbit sizes: [ [ 2, 12 ], [ 4, 9 ]\
+ ]
+    |Stab| = 8 (C4 x C2)  frames FIXED: 2   orbit sizes: [ [ 1, 2 ], [ 2, 5 ],\
+ [ 8, 6 ] ]
+    |Stab| = 8 (C4 x C2)  frames FIXED: 0   orbit sizes: [ [ 2, 4 ], [ 4, 1 ],\
+ [ 8, 6 ] ]
+    |Stab| = 4 (C2 x C2)  frames FIXED: 4   orbit sizes: [ [ 1, 4 ], [ 2, 12 ]\
+, [ 4, 8 ] ]
+    |Stab| = 4 (C4)  frames FIXED: 0   orbit sizes: [ [ 2, 6 ], [ 4, 12 ] ]
+    |Stab| = 4 (C4)  frames FIXED: 0   orbit sizes: [ [ 2, 6 ], [ 4, 12 ] ]
+    |Stab| = 4 (C2 x C2)  frames FIXED: 0   orbit sizes: [ [ 2, 12 ], [ 4, 9 ]\
+ ]
 
 DONE

@@ -1,5 +1,48 @@
 # Passes 1410–1415 — the two 14s are the same, covers are diagonal, and a shortcut I wanted to work does not
 
+> **CORRECTED 2026-07-31 by the parallel track's Passes 1416–1420
+> ([`BT1420_frame_signed_turn_bridge_insert.tex`](analysis/BT1420_frame_signed_turn_bridge_insert.tex)).
+> Three items below are superseded, and one of them is REFUTED. Read this first.**
+>
+> 1. **Pass 1412's open question is CLOSED, and my reasoning had a specific
+>    error.** BT1416 exhibits the intertwiner `F = ∂ᵀ(A−12I)(A−2I)N / 16`, which
+>    is integral, satisfies `FMᵀ = 0`, `(K−10I)F = 0`, `rank F = 15`, and induces
+>    an equivariant isomorphism `coker(M) ⊗ Q ≅ ker(K−10I)`. So the two 15s **are**
+>    the same module. My shortcut failed for a diagnosable reason they name
+>    exactly: I compared the **unsigned** 240-edge permutation module against an
+>    operator that acts on the **orientation-signed** edge action. `ker(K−10I)` was
+>    never a submodule of the module I decomposed, so "two degree-15 constituents"
+>    — though true of the permutation module — was never the relevant fact. This
+>    is a category error, not a near miss.
+> 2. **Pass 1411 is REFUTED, and I have reproduced the refutation.** I claimed
+>    cover stabilisers are "diagonal" on the evidence that no sampled stabiliser
+>    fixed a frame. That sample was six covers from a single depth-first order and
+>    drew only the fixed-point-free types. Re-sampling 24 distinct covers across
+>    12 randomised orders:
+>
+>    ```text
+>    C4        frames fixed  0    (9 covers)
+>    C2 x C2   frames fixed  0    (5)      and  4  (4 covers)
+>    C4 x C2   frames fixed  0    (3)      and  2  (1)
+>    C2        frames fixed 12    (2)      orbits [1^12, 2^24]
+>    ```
+>
+>    `C₂`-stabilised covers fix **twelve** frames — exactly BT1420's number,
+>    reproduced independently here. Cover stabilisers are **not** universally
+>    diagonal. What survives is the narrower statement I did scope correctly at
+>    the time: *the six covers in that sample* had fixed-point-free stabilisers.
+> 3. **Pass 1409's bound is superseded.** My time-capped `6579` is replaced by a
+>    certified `226800` from sixteen deterministic `C₂` orbits plus four further
+>    stabiliser types.
+> 4. **Pass 1410 stands but is sharpened.** The two mod-2 `14`s are abstractly
+>    isomorphic (this pass), *and* BT1420 shows the bridge geometrically
+>    **separates** them: mod 2 it has rank 14 and square zero, selecting the
+>    nontrivial reduction of the rational 15 while the second copy stays in the
+>    31-dimensional torsion-side kernel.
+>
+> The section below is left as written, so the failure keeps its provenance.
+
+
 Six results. The one I was most interested in came out **negative**, and that is
 the most useful thing in the batch: it kills a plausible argument and names
 exactly what would replace it.

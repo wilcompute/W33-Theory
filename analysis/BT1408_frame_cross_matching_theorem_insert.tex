@@ -93,20 +93,31 @@ reduction rather than an unrelated module. This is
 consistent with the coalescence theorem: $\operatorname{spec}(A)=\{12,2,-4\}$
 collapses completely modulo $2$, while modulo $3$ and $5$ it does not.
 
-The corresponding question for the signed-turn operator is \emph{open}. Its
-spectrum on the same $240$ edge chains is
-$(-6)^{81},2^{120},4^{24},10^{15}$, so $\ker(K-10I)$ is also a
-$15$-dimensional $\Aut$-submodule of $\mathbb{Q}^{240}$; but the $240$-edge
-permutation module contains \emph{two} non-isomorphic degree-$15$
-constituents, each once, so dimension alone does not identify
-$\ker(K-10I)$ with $\operatorname{coker}(M)\otimes\mathbb{Q}$. Deciding it
-requires comparing the two degree-$15$ characters.
+The corresponding statement for the signed-turn operator is a \emph{theorem},
+established in Passes 1416--1420 and not here. With $N$ the unsigned point--edge
+incidence and $\partial$ the oriented one,
+\[
+  F=\tfrac{1}{16}\,\partial^{\mathsf T}(A-12I)(A-2I)N
+\]
+is integral and satisfies $FM^{\mathsf T}=0$, $(K-10I)F=0$ and
+$\operatorname{rank}_{\mathbb{Q}}F=15$, so it induces an equivariant isomorphism
+$\operatorname{coker}(M)\otimes\mathbb{Q}\cong\ker(K-10I)$. A dimension-only
+argument does \emph{not} suffice, and the reason is worth recording: the
+$240$-edge \emph{permutation} module contains two non-isomorphic degree-$15$
+constituents, but $K$ acts on the orientation-\emph{signed} edge action, so
+$\ker(K-10I)$ is not a submodule of that permutation module at all. The
+intertwiner supplies the missing twist. Modulo $2$ the same map has rank $14$ and
+square zero, and it separates the two abstractly isomorphic degree-$14$ factors:
+it selects the nontrivial reduction of the rational $15$, while the second copy
+remains in the torsion-side kernel.
 \end{remark}
 
 \begin{proposition}[Resolutions of the edge set]\label{prop:crosscover}
 There exist sets of $60$ frames whose cross-matchings partition $E$; at least
-$6579$ distinct such covers exist. No cover is $\Aut$-invariant, since $\Aut$ is
-transitive on the $540$ frames and a cover uses $60$. Sampled covers have
-stabilisers of order $4$ or $8$ (types $C_4$, $C_2\times C_2$, $C_4\times C_2$),
-so a cover is close to rigid.
+$226800$ distinct such covers are certified. No cover is $\Aut$-invariant, since
+$\Aut$ is transitive on the $540$ frames and a cover uses $60$. Cover stabilisers
+have order $2$, $4$ or $8$ (types $C_2$, $C_4$, $C_2\times C_2$, $C_4\times C_2$,
+$D_8$), so a cover is close to rigid --- but the residual symmetry is \emph{not}
+uniformly diagonal: a $C_2$-stabilised cover fixes twelve of its sixty frames
+(orbit profile $1^{12}2^{24}$), whereas the $C_4$ covers fix none.
 \end{proposition}

@@ -125,10 +125,11 @@ frAct := ActionHomomorphism(GLin, frames, OnSets);
 GF540 := Image(frAct);
 for c in covers do
   S := Stabilizer(GF540, Set(c), OnSets);
-  A(Concatenation("    cover of size ", String(Length(c)),
-     ": |Stab| = ", String(Size(S)),
-     "   orbit length ", String(Size(GF540)/Size(S)),
-     "   type ", StructureDescription(S), "\n"));
+  A(Concatenation("    |Stab| = ", String(Size(S)),
+     " (", StructureDescription(S), ")  frames FIXED: ",
+     String(Number(Orbits(S, Set(c)), o -> Length(o) = 1)),
+     "   orbit sizes: ", String(Collected(List(Orbits(S, Set(c)), Length))),
+     "\n"));
 od;
 
 A("\nDONE\n");
