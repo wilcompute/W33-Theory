@@ -14,7 +14,7 @@
         "1384": "collision-safe report, manuscript insert, dual-paper integrator, focused regressions, CI, and explicit mathematical/physical boundaries"
       },
       "namespace_note": "This packet was developed provisionally as 1375-1379. A parallel release claimed 1375-1378 before merge, so the canonical public namespace was moved to 1380-1384 without altering the exact implementation or invariants.",
-      "runtime_boundary": "Corrected remote exact workflow run 30636866425 completed successfully, reconstructing the full character/projector chain with detailed SHA-256 dbcf6881622b3e1cdd694d1e345eadce309eae0550e23e348ba446ca603bee74. The compact invariant payload is unchanged under canonical relabeling. No database-character-table, literature-priority, or physical-realization claim is made."
+      "runtime_boundary": "Corrected remote exact workflow run 30636866425 completed successfully, reconstructing the full character/projector chain with detailed SHA-256 dbcf6881622b3e1cdd694d1e345eadce309eae0550e23e348ba446ca603bee74. The collision-safe compact certificate is frozen at SHA-256 0ec8be0272896594c7013691a1f2516d08bdcc08cf97049297b69e594f953152. No database-character-table, literature-priority, or physical-realization claim is made."
     }
   ]
 }
