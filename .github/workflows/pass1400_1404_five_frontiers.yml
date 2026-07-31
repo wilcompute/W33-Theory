@@ -3,19 +3,23 @@ name: Passes 1400-1404 Five Frontiers
 on:
   push:
     branches:
-      - agent/pass1400-1404-five-frontiers
+      - 'agent/pass1400-1404-*'
     paths:
       - 'analysis/_selector_five_frontiers_impl.py'
       - 'analysis/_selector_five_frontiers_impl.src/**'
       - 'analysis/w33_pass1400_1404_five_frontiers.py'
+      - 'data/w33_pass1400_1404_five_frontiers.json'
+      - 'tools/check_pass1400_1404_worker.py'
       - '.github/workflows/pass1400_1404_five_frontiers.yml'
   pull_request:
+    branches: [master]
     paths:
       - 'analysis/_selector_five_frontiers_impl.py'
       - 'analysis/_selector_five_frontiers_impl.src/**'
       - 'analysis/w33_pass1400_1404_five_frontiers.py'
       - 'data/w33_pass1400_1404_five_frontiers.json'
       - 'tests/test_w33_pass1400_1404_five_frontiers.py'
+      - 'tools/check_pass1400_1404_worker.py'
       - '.github/workflows/pass1400_1404_five_frontiers.yml'
   workflow_dispatch:
 
@@ -33,18 +37,30 @@ jobs:
       matrix:
         worker: ['1400', '1401', '1402', '1403', '1404']
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
           cache: pip
-      - run: python -m pip install --upgrade pip numpy sympy networkx pytest
-      - run: python -m py_compile analysis/_selector_five_frontiers_impl.py analysis/w33_pass1400_1404_five_frontiers.py
+      - run: python -m pip install --disable-pip-version-check numpy sympy networkx pytest
+      - run: python -m py_compile analysis/_selector_five_frontiers_impl.py analysis/w33_pass1400_1404_five_frontiers.py tools/check_pass1400_1404_worker.py
       - run: python analysis/w33_pass1400_1404_five_frontiers.py --worker '${{ matrix.worker }}' --output '/tmp/pass-${{ matrix.worker }}.json'
+      - run: python tools/check_pass1400_1404_worker.py '${{ matrix.worker }}' '/tmp/pass-${{ matrix.worker }}.json'
       - uses: actions/upload-artifact@v4
         with:
           name: pass-${{ matrix.worker }}
           path: /tmp/pass-${{ matrix.worker }}.json
           if-no-files-found: error
+
+  frozen-certificate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check pytest
+      - run: python analysis/w33_pass1400_1404_five_frontiers.py --check
+      - run: pytest -q tests/test_w33_pass1400_1404_five_frontiers.py
