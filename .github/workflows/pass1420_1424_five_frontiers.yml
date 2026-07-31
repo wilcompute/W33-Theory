@@ -9,7 +9,7 @@ on:
       - 'analysis/w33_pass1420_1424_five_frontiers.py'
       - '.github/workflows/pass1420_1424_five_frontiers.yml'
   pull_request:
-    branches: [master]
+    branches: [agent/pass1420-1424-ci-base]
     paths:
       - 'analysis/pass1410_1414/**'
       - 'analysis/w33_pass1420_1424_five_frontiers.py'
