@@ -1,0 +1,34 @@
+m
+  raise AssertionError
+
+def matrix_units_full_fast(g,frecs):
+  t=time.time(); units=[[Fraction(int(i==k)) for i in range(83)] for k in range(83)];zero=[Fraction(0)]*83;blocks=[]
+  for bi,r in enumerate(frecs):
+    n,m=r['n'],r['m'];z=toF(r['z'])
+    if n==1:E=[[z]]
+    else:
+      sd=toF(shell_diag(g,r['primitive_shell']));e=mulF(g,z,sd);assert mulF(g,e,e)==e
+      U=indepF([mulF(g,a,e) for a in units]);V=indepF([mulF(g,e,a) for a in units]);assert len(U)==len(V)==n
+      def first(L):
+        R=[e]
+        for v in L:
+          if len(indepF(R+[v]))>len(R):R.append(v)
+          if len(R)==n:break
+        return R
+      U=first(U);V=first(V)
+      B=sp.Matrix([[sp.Rational(scalarF(mulF(g,V[i],U[j]),e).numerator,scalarF(mulF(g,V[i],U[j]),e).denominator) for j in range(n)] for i in range(n)])
+      C=B.inv();W=[]
+      for b in range(n):
+        w=zero[:]
+        for j in range(n):
+          c=Fraction(int(C[b,j].p),int(C[b,j].q));w=addF(w,scaleF(c,V[j]))
+        W.append(w)
+      for b in range(n):
+        for c in range(n):assert mulF(g,W[b],U[c])==(e if b==c else zero)
+      E=[[mulF(g,U[a],W[b]) for b in range(n)] for a in range(n)]
+      diag=zero[:]
+      for a in range(n):diag=addF(diag,E[a][a])
+      assert diag==z
+    payload=[[[[x.numerator,x.denominator] for x in v] for v in row] for row in E]
+    raw=json.dumps(payload,separators=(',',':'))
+    blocks.append(dict(block=bi,n=n,m=m,isotypic=r['iso'],matrix_units=n*n,sha256=hashlib.sha256(raw.encode()).hexdigest(),ma

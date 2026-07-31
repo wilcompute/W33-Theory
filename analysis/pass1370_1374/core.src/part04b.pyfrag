@@ -1,0 +1,14 @@
+ange(n)] for a in range(n)]
+      diag=zero[:]
+      for a in range(n): diag=addF(diag,E[a][a])
+      assert diag==z
+    payload=[[[[x.numerator,x.denominator] for x in v] for v in row] for row in E]
+    raw=json.dumps(payload,separators=(',',':'))
+    metadata.append(dict(block=bi,n=n,m=m,isotypic=r['iso'],matrix_units=n*n,
+      sha256=hashlib.sha256(raw.encode()).hexdigest(),
+      max_abs_numerator=max(abs(x.numerator) for row in E for v in row for x in v),
+      max_denominator=max(x.denominator for row in E for v in row for x in v)))
+    print('MATRIX-UNIT block',bi,n,m,metadata[-1]['sha256'][:12],flush=True)
+    del E,payload
+  assert sum(b['matrix_units'] for b in metadata)==83
+  return metadata

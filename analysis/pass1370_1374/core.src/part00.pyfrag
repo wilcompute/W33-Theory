@@ -1,0 +1,127 @@
+#!/usr/bin/env python3
+"""Exact core for Passes 1370--1374 on the 120 selector algebra."""
+import itertools, collections, math, json, hashlib, time
+from fractions import Fraction
+import numpy as np
+import sympy as sp
+
+Q=3
+PGOOD=1000003
+
+def canon(v):
+    for x in v:
+        x%=Q
+        if x:
+            inv=1 if x==1 else 2
+            return tuple((inv*y)%Q for y in v)
+    raise ValueError
+
+def symp(x,y):
+    return (x[0]*y[2]+x[1]*y[3]-x[2]*y[0]-x[3]*y[1])%Q
+
+def compose(p,q): return tuple(p[q[i]] for i in range(len(p)))
+
+def perfect_matchings4(line):
+    a,b,c,d=line
+    return tuple(sorted([
+      tuple(sorted((tuple(sorted((a,b))),tuple(sorted((c,d)))))),
+      tuple(sorted((tuple(sorted((a,c))),tuple(sorted((b,d)))))),
+      tuple(sorted((tuple(sorted((a,d))),tuple(sorted((b,c))))))]))
+
+def perm_group_closure(gens):
+    idt=tuple(range(len(gens[0])))
+    G={idt}; dq=collections.deque([idt])
+    while dq:
+      h=dq.popleft()
+      for g in gens:
+        gh=compose(g,h)
+        if gh not in G: G.add(gh); dq.append(gh)
+    return list(G)
+
+def rref_mod_rows(rows,p,ncols=None):
+    if ncols is None: ncols=rows.shape[1]
+    piv={}
+    for row in rows:
+      v=np.array(row,dtype=np.int64)%p
+      for j in sorted(piv):
+        c=int(v[j]);
+        if c: v=(v-c*piv[j])%p
+      nz=np.flatnonzero(v)
+      if not len(nz): continue
+      j=int(nz[0]); v=v*pow(int(v[j]),-1,p)%p
+      for q,old in list(piv.items()):
+        c=int(old[j]);
+        if c: piv[q]=(old-c*v)%p
+      piv[j]=v
+    order=sorted(piv)
+    return (np.stack([piv[j] for j in order]) if order else np.zeros((0,ncols),dtype=np.int64)),order
+
+def rank_mod(M,p):
+    return len(rref_mod_rows(np.asarray(M),p,np.asarray(M).shape[1])[1])
+
+def independent_indices(rows,p):
+    piv={}; inds=[]
+    for idx,row in enumerate(rows):
+      v=np.array(row,dtype=np.int64)%p
+      for j in sorted(piv):
+        c=int(v[j]);
+        if c:v=(v-c*piv[j])%p
+      nz=np.flatnonzero(v)
+      if not len(nz):continue
+      j=int(nz[0]);v=v*pow(int(v[j]),-1,p)%p
+      for q,old in list(piv.items()):
+        c=int(old[j]);
+        if c:piv[q]=(old-c*v)%p
+      piv[j]=v;inds.append(idx)
+    return inds
+
+def build():
+  t=time.time()
+  pts=sorted({canon(v) for v in itertools.product(range(3),repeat=4) if any(v)})
+  pidx={x:i for i,x in enumerate(pts)}
+  adj=np.zeros((40,40),dtype=np.int8)
+  for i,x in enumerate(pts):
+    for j,y in enumerate(pts):
+      if i!=j and symp(x,y)==0:adj[i,j]=1
+  lines=[l for l in itertools.combinations(range(40),4) if all(adj[i,j] for i,j in itertools.combinations(l,2))]
+  lsets=[set(l) for l in lines]; lidx={frozenset(l):i for i,l in enumerate(lines)}
+  mats=[perfect_matchings4(l) for l in lines]; midx=[{m:i for i,m in enumerate(ms)} for ms in mats]
+  selectors=[(l,m) for l in range(40) for m in range(3)]
+  transports={}
+  for a in range(40):
+    for b in range(40):
+      if a!=b and lsets[a].isdisjoint(lsets[b]):
+        mp={x:[y for y in lines[b] if adj[x,y]][0] for x in lines[a]}
+        transports[a,b]=tuple(mats[b].index(tuple(sorted(tuple(sorted((mp[x],mp[y]))) for x,y in M))) for M in mats[a])
+  rel=[np.zeros((120,120),dtype=np.int8) for _ in range(5)]
+  for i,(li,mi) in enumerate(selectors):
+    for j,(lj,mj) in enumerate(selectors):
+      if i==j:r=0
+      elif li==lj:r=1
+      elif lsets[li]&lsets[lj]:r=2
+      else:r=3 if transports[li,lj][mi]==mj else 4
+      rel[r][i,j]=1
+  J=np.array([[0,0,1,0],[0,0,0,1],[-1,0,0,0],[0,-1,0,0]],dtype=int)%3
+  def transvection(v):
+    c=np.array(v,dtype=int).reshape(4,1)%3
+    return (np.eye(4,dtype=int)+c@(J@c).T)%3
+  def pointperm(M):
+    return tuple(pidx[canon(tuple(int(x) for x in (M@np.array(v,dtype=int))%3))] for v in pts)
+  pgens=[pointperm(transvection(v)) for v in pts]
+  pgens.append(pointperm(np.diag([1,1,2,2])%3))
+  def selectorperm(pp):
+    out=[None]*120
+    for li,line in enumerate(lines):
+      tl=lidx[frozenset(pp[x] for x in line)]
+      for mi,M in enumerate(mats[li]):
+        tm=tuple(sorted(tuple(sorted((pp[a],pp[b]))) for a,b in M))
+        out[3*li+mi]=3*tl+midx[tl][tm]
+    return tuple(out)
+  sgens=[selectorperm(g) for g in pgens]
+  Gs=perm_group_closure(sgens)
+  H=[g for g in Gs if g[0]==0]
+  print('geometry',len(pts),len(lines),'G',len(Gs),'H',len(H),'time',time.time()-t)
+  # flags and induced generator/group synchronized from point perms rather than reconstruct all pairs
+  flags=[(p,l) for l,line in enumerate(lines) for p in line]
+  fidx={f:i for i,f in enumerate(flags)}
+  def flagperm(

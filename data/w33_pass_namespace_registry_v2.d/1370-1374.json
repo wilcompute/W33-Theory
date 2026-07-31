@@ -1,0 +1,19 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.supplement",
+  "status": "ACTIVE",
+  "canonical_blocks": [
+    {
+      "range": "1370-1374",
+      "owner": "selector-matrix-unit-modular-morita-track",
+      "status": "COMPLETE_WITH_RUNTIME_BOUNDARIES",
+      "artifacts": {
+        "1370": "all 83 exact rational matrix units for the 14 blocks of the selector stabilizer orbital algebra",
+        "1371": "exact selector stabilizer structure C3^3 : (D8 x C2) with faithful 1+2 action over F3",
+        "1372": "exhaustive support-minimal splitter classification and the unique minimum sibling",
+        "1373": "Jacobson radicals and Loewy towers for word-generated Terwilliger reductions and the full orbital algebra at p=2,3,5",
+        "1374": "four-channel selector-Levi cross-orbital bimodule and exact Steinberg-81 Morita obstruction"
+      },
+      "runtime_boundary": "All ten isolated exact workers were observed locally. Dedicated remote Actions remain an observable regression surface and are not promoted until completed. No literature-priority or physical-realization claim is made."
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+assert len(inds)==10
+  inv=Z[inds,:].inv()
+  left=[]
+  for a in range(10):
+    cols=[]
+    for b in range(10):
+      p=mul_q(g,Z[:,a],Z[:,b]);co=inv*sp.Matrix([p[i] for i in inds]);assert Z*co==p;cols.append(co)
+    left.append(sp.Matrix.hstack(*cols))
+  pref=(-2,-2,0,0,-2,0,0,0,0,0)
+  G=sum((pref[i]*left[i] for i in range(10)),start=sp.zeros(10))
+  x=sp.symbols('x');char=sp.Poly(G.charpoly(x).as_expr(),x,domain=sp.QQ);facs=sp.factor_list(char.as_expr())[1]
+  assert len(facs)==10 and all(e==1 and sp.degree(f)==1 for f,e in facs)
+  idv=orbital_identity(g);idco=inv*sp.Matrix([idv[i] for i in inds]);assert Z*idco==idv
+  projs=[]
+  def evalpoly(M,poly):
+    R=sp.zeros(M.rows);I=sp.eye(M.rows)
+    for c in poly.all_coeffs():R=R*M+c*I
+    return R
+  for f,e in facs:
+    fp=sp.Poly(f,x,domain=sp.QQ);q=char.exquo(fp);crt=sp.rem(q*sp.invert(q,fp),char)
+    P=evalpoly(G,crt);v=Z*(P*idco);assert mul_q(g,v,v)==v;projs.append(v)
+  # classify component dims via left mult on T evals mod p
+  records=[]
+  E=np.array(g['T_evals'].tolist(),dtype=object)
+  for z in projs:
+    zm=np.array([rational_mod(x,PGOOD) for x in z],dtype=np.int64)
+    cols=np.stack([mul_mod(g,zm,np.array([int(E[k,j])%PGOOD for k in range(83)],dtype=np.int64),PGOOD) for j in range(79)])
+    dim=rank_mod(cols,PGOOD);n=math.isqrt(dim);m=int(trace_q(g,z))//n
+    sr=[int(shell_trace_q(g,z,s)) for s in range(5)]
+    ps=[s for s,r in enumerate(sr) if r==m and r>0][0]
+    records.append(dict(n=n,m=m,iso=int(trace_q(g,z)),dim=dim,shell_ranks=sr,primitive_shell=ps,z=z))
+  records.sort(key=lambda r:(r['n'],r['m'],r['iso'],r['shell_ranks']))
+  print('T center',[(r['n'],r['m'],r['iso']) for r in records],time.time()-t)
+  return records
+
+def splitters(g):
+  lines=g['lines'];lsets=g['lsets'];mats=g['matchings'];adj=g['adj'];trans=g['transports'];base=lsets[0];bm=mats[0][0]
+  baseTrans={}
+  for l in range(40):
+    if l!=0 and base.isdisjoint(lsets[l]):
+      baseTrans[l]={x:[y for y in lines[l] if adj[x,y]][0] for x in lines[0]}
+  shellof=[next(s for s,R in enumerate(g['relations']) if R[0,i]) for i in range(120)]
+  def partner(M,p):
+    for a,b in M:
+      if a==p:return b
+      if b==p:return a
+  def matched(a,b):return any(set(e)=={a,b} for e in bm)
+  def s2(i,j):
+    if shellof[i]!=2 or shellof[j]!=2:return False
+    li,mi=divmod(i,3);lj,mj=divmod(j,3)
+    if not lsets[li].isdisjoint(lsets[lj]):return False
+    pi=next(iter(lsets[li]&base));pj=next(iter(lsets[lj]&base))
+    return matched(pi,pj) and trans[li,lj][mi]==mj
+  def s4(i,j):
+    if shellof[i]!=4 or shellof[j]!=4:return False
+    li,mi=divmod(i,3);lj,mj=divmod(j,3);inter=lsets[li]&lsets[lj]
+    if len(inter)!=1:return False
+    p=next(iter(inter));invi={v:k for k,v in baseTrans[li].items()};invj={v:k for k,v in baseTrans[lj].items()}
+    return invi[partner(mats[li][mi],p)]==invj[partner(mats[lj][mj],p)]
+  O2=[k for k,(i,j) in enumerate(g['reps']) if s2(i,j)];O4=[k for k,(i,j) in enumerate(g['reps']) if s4(i,j)]
+  assert O2==[18] and O4==[63]
+  return unit83(18),unit83(63)
+
+def refine_full(g,trecs,S):
+  scalar={r['iso']:r for r in trecs if r['n']==1};zero=sp.zeros(83,1);out=[]
+  z3=scalar[3]['z'];b=mul_q(g,z3,S);out += [(b+3*z3)/6, (3*z3-b)/6]
+  z12=scalar[12]['z'];b=mul_q(g,z12,S);out += [-b/3,z12+b/3]
+  z14=scalar[14]['z'];b=mul_q(g,z14,S);out += [mul_q(g,b-2*z14,b+z14)/18,mul_q(g,b+4*z14,b+z14)/18,-mul_q(g,b+4*z14,b-2*z14)/9]
+  rec=[]
+  for z in out:rec.append(dict(n=1,m=int(trace_q(g,z)),iso=int(trace_q(g,z)),dim=1,z=z))
+  rec += [dict(r) for r in trecs if r['n']>1]
+  rec.sort(key=lambda r:(r['n'],r['m'],r['iso']))
+  assert len(rec)==14
+  return rec
+
+if __name__=='__main__':
+  trecs=center_T(g);s2,s4=splitters(g);frecs=refine_full(g,trecs,s2+s4)
+  print('full',[(r['n'],r['m'],r['iso']) for r in frecs])
+
+def indep_vectors_q(vectors,p=PGOOD):
+  rows=np.array([[rational_mod(x,p) for x in v] for v in vectors],dtype=np.int64)
+  inds=independent_indices(rows,p)
+  return [vectors[i] for i in inds]
+
+def scalar_multiple_of(v,e):
+  nz=[i for i,x in enumerate(e) if x!=0]
+  assert nz
+  lam=sp.cancel(v[nz[0]]/e[nz[0]])
+  assert v==lam*e
+  return lam
+
+def matrix_units_full(g,frecs):
+  t=time.time(); units=[unit83(k) for k in range(83)]; allblocks=[]
+  for bi,r in enumerate(frecs):
+    n,m,z=r['n'],r['m'],r['z']
+    if n==1:
+      E=[[z]]
+    else:
+      ps=r['primitive_shell']; e=mul_q(g,z,shell_diag(g,ps))
+      assert mul_q(g,e,e)==e and trace_q(g,e)==m
+      U=indep_vectors_q([mul_q(g,a,e) for a in units]);V=indep_vectors_
