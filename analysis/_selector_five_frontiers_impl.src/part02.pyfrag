@@ -1,0 +1,78 @@
+        "localization": localization,
+        "full_orbital_modular_profiles": profiles,
+        "characteristic5_split_wedderburn": "F5^7 + M2(F5)^2 + M3(F5)^3 + M4(F5) + M5(F5)",
+        "characteristic5_regular_factor_census": expected_f5,
+        "conclusion": (
+            "The exact denominator profile records which characteristic-zero Mackey projectors survive in the orbital lattice at each prime. "
+            "Independently, characteristic 5 has zero radical and the full split fourteen-block factor census, while characteristics 2 and 3 have Loewy lengths 3 and 6. "
+            "Thus semisimple persistence is certified by the modular regular module even when a chosen characteristic-zero projector is not integral in the orbital basis."
+        ),
+        "boundary": "This proves localization/persistence and exact Loewy comparison; it does not claim that little-group orbit sizes alone determine modular extensions.",
+    }
+    result["sha256"] = sha(result)
+    return result
+
+
+def canon_line(v, p=3):
+    v = tuple(int(x) % p for x in v)
+    for x in v:
+        if x:
+            inv = pow(x, -1, p)
+            return tuple(inv * y % p for y in v)
+    raise ValueError("zero vector")
+
+
+def all_projective_lines_3():
+    return sorted({canon_line(v) for v in itertools.product(range(3), repeat=3) if any(v)})
+
+
+def all_planes_3():
+    # A plane is the kernel of a nonzero normal covector; normals are projective.
+    return [
+        frozenset(v for v in itertools.product(range(3), repeat=3) if sum(n[i] * v[i] for i in range(3)) % 3 == 0)
+        for n in all_projective_lines_3()
+    ]
+
+
+def inv_mod_matrix(M, p=3):
+    return np.array(sp.Matrix(np.array(M, dtype=int).tolist()).inv_mod(p).tolist(), dtype=np.int64) % p
+
+
+def worker_1391():
+    public, cap = capture_mackey()
+    K = cap["K"]
+    matrices = cap["matrices"]
+    dual_action = cap["dual_action"]
+    dual_orbits = cap["dual_orbits"]
+
+    lines = all_projective_lines_3()
+    invariant_lines = []
+    for line in lines:
+        projective = {line, tuple((-x) % 3 for x in line)}
+        if all(tuple(dual_action(k, line)) in projective for k in K):
+            invariant_lines.append(line)
+    assert len(invariant_lines) == 1
+    axis = invariant_lines[0]
+
+    invariant_planes = []
+    for plane in all_planes_3():
+        if all(frozenset(dual_action(k, v) for v in plane) == plane for k in K):
+            invariant_planes.append(plane)
+    assert len(invariant_planes) == 1
+    plane = invariant_planes[0]
+    assert tuple([0, 0, 0]) in plane and axis not in plane
+
+    pvecs = sorted(v for v in plane if any(v))
+    p1 = pvecs[0]
+    p2 = next(v for v in pvecs[1:] if canon_line(v) != canon_line(p1))
+    basis = np.array([axis, p1, p2], dtype=np.int64).T % 3
+    Binv = inv_mod_matrix(basis, 3)
+
+    restrictions = []
+    for k in K:
+        M = np.array([[int(x) for x in dual_action(k, tuple(1 if j == i else 0 for j in range(3)))] for i in range(3)], dtype=np.int64).T % 3
+        C = Binv @ M @ basis % 3
+        assert not np.any(C[1:, 0]) and not np.any(C[0, 1:])
+        restrictions.append(C[1:, 1:])
+
+    forms = []

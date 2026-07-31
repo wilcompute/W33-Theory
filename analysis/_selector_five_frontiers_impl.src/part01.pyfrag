@@ -1,0 +1,77 @@
+def capture_mackey():
+    global _CAPTURE
+    if _CAPTURE is not None:
+        return _CAPTURE
+    locals_at_return = {}
+    target = mackey_impl.analyze.__code__
+    previous = sys.gettrace()
+
+    def tracer(frame, event, arg):
+        if frame.f_code is target and event == "return":
+            locals_at_return.update(frame.f_locals)
+        return tracer
+
+    sys.settrace(tracer)
+    try:
+        public = mackey_impl.analyze()
+    finally:
+        sys.settrace(previous)
+    required = {
+        "g", "H", "N", "K", "matrices", "dual_orbits", "dual_action",
+        "character_projectors", "full_records", "t_records", "fusion", "splitter",
+    }
+    missing = sorted(required - set(locals_at_return))
+    if missing:
+        raise RuntimeError(f"Mackey trace missing locals: {missing}")
+    _CAPTURE = (public, locals_at_return)
+    return _CAPTURE
+
+
+def orbital_matrix(g, v):
+    label = g["label"]
+    return sp.Matrix(120, 120, lambda i, j: v[int(label[i, j])])
+
+
+def orbital_matrix_mod(g, v, p=GOOD):
+    vals = np.array([rational_mod(x, p) for x in v], dtype=np.int64)
+    return vals[g["label"]] % p
+
+
+def denominator_lcm(v):
+    out = 1
+    for x in v:
+        out = math.lcm(out, int(sp.Rational(x).q))
+    return out
+
+
+def factor_dict(n):
+    return {str(int(p)): int(e) for p, e in sp.factorint(abs(int(n))).items()}
+
+
+def worker_1390():
+    public, cap = capture_mackey()
+    g = cap["g"]
+    records = cap["full_records"]
+    denoms = [denominator_lcm(r["z"]) for r in records]
+    localization = {
+        str(p): {
+            "localizable_projectors": sum(d % p != 0 for d in denoms),
+            "collapsed_projectors": sum(d % p == 0 for d in denoms),
+        }
+        for p in (2, 3, 5)
+    }
+
+    profiles = {str(p): modular_radicals.analyze_one(g, core, "full", p) for p in (2, 3, 5)}
+    expected_f5 = {1: 7, 2: 4, 3: 9, 4: 4, 5: 5}
+    observed_f5 = {int(k): int(v) for k, v in profiles["5"]["regular_composition_factor_dimension_census"].items()}
+    assert observed_f5 == expected_f5
+    assert profiles["5"]["jacobson_radical_dimension"] == 0
+    assert profiles["2"]["radical_power_dimensions"] == [45, 16, 0]
+    assert profiles["3"]["radical_power_dimensions"] == [72, 49, 27, 14, 4, 0]
+
+    result = {
+        "theorem": "Pass 1390 Modular Mackey Localization and Loewy Boundary",
+        "group_order": 432,
+        "group_bad_primes": [2, 3],
+        "projector_denominator_lcms": denoms,
+        "projector_denominator_prime_support": sorted({p for d in denoms for p in sp.factorint(d)}),

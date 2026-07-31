@@ -1,0 +1,31 @@
+    result["sha256"] = sha(result)
+    return result
+
+
+def run_worker(worker):
+    return globals()[f"worker_{worker}"]()
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--worker", choices=WORKERS)
+    parser.add_argument("--output", type=Path, default=DEFAULT_OUT)
+    parser.add_argument("--check", action="store_true")
+    args = parser.parse_args()
+    if args.worker:
+        result = run_worker(args.worker)
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
+        print(f"PASS {args.worker} sha256={result['sha256']}")
+        return
+    if args.check:
+        frozen = json.loads(args.output.read_text())
+        assert frozen["schema"] == "w33.pass1390_1394.five_frontiers.v1"
+        assert frozen["status"] == "PASS"
+        print("PASS 1390-1394 frozen certificate", hashlib.sha256(args.output.read_bytes()).hexdigest())
+        return
+    raise SystemExit("Use --worker or --check")
+
+
+if __name__ == "__main__":
+    main()

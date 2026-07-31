@@ -1,0 +1,80 @@
+        q = sp.Rational(x)
+        if q:
+            nnz += 1
+            maxnum = max(maxnum, abs(int(q.p)))
+            maxden = max(maxden, int(q.q))
+        payload.append([int(q.p), int(q.q)])
+    return {
+        "shape": [M.rows, M.cols],
+        "nonzero": nnz,
+        "max_abs_numerator": maxnum,
+        "max_denominator": maxden,
+        "sha256": sha(payload),
+    }
+
+
+def block_offdiag_zero(M, dims):
+    starts = [0]
+    for d in dims:
+        starts.append(starts[-1] + d)
+    for a in range(len(dims)):
+        for b in range(len(dims)):
+            if a == b:
+                continue
+            if M[starts[a]:starts[a+1], starts[b]:starts[b+1]] != sp.zeros(dims[a], dims[b]):
+                return False
+    return True
+
+
+def worker_1392():
+    public, cap = capture_mackey()
+    g = cap["g"]
+    projectors = sorted(cap["character_projectors"], key=lambda x: x["block_index"])
+    bases = []
+    blocks = []
+    dims = []
+    for item in projectors:
+        P = orbital_matrix(g, item["projector"])
+        assert P * P == P
+        pivots = P.rref()[1]
+        rank = len(pivots)
+        expected = int(item["record"]["degree"] * item["record"]["multiplicity"])
+        assert rank == expected
+        B = P[:, list(pivots)]
+        bases.append(B)
+        dims.append(rank)
+        blocks.append({
+            "block_index": int(item["block_index"]),
+            "character_index": int(item["character_index"]),
+            "degree": int(item["record"]["degree"]),
+            "multiplicity": int(item["record"]["multiplicity"]),
+            "isotypic_dimension": rank,
+            "pivot_columns": list(map(int, pivots)),
+        })
+    assert sum(dims) == 120
+    U = sp.Matrix.hstack(*bases)
+    assert U.rank() == 120
+    Uinv = U.inv()
+    assert Uinv * U == sp.eye(120)
+
+    s2, s4 = core.splitters(g)
+    operators = {
+        "A": sp.Matrix(g["A"]),
+        "D": sp.Matrix(g["D"]),
+        "S": orbital_matrix(g, s2 + s4),
+    }
+    transformed = {}
+    for name, M in operators.items():
+        F = (Uinv * M * U).applyfunc(sp.cancel)
+        assert block_offdiag_zero(F, dims)
+        starts = np.cumsum([0] + dims).tolist()
+        block_data = []
+        for i, d in enumerate(dims):
+            B = F[starts[i]:starts[i+1], starts[i]:starts[i+1]]
+            block_data.append({
+                "block_index": i,
+                "dimension": d,
+                "rank": int(B.rank()),
+                "trace": rational_pair(sp.trace(B)),
+                "characteristic_polynomial": str(sp.factor(B.charpoly().as_expr())),
+                "sha256": matrix_stats(B)["sha256"],
