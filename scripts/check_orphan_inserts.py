@@ -85,7 +85,7 @@ def portability(paths: list[Path], limit: int = 40) -> int:
     """
     # macros/environments w33_paper.tex provides and photonic_holonet.tex does not
     HOST_ONLY = ["lemma", "proposition", "remark", "corollary", "definition",
-                 "PSp", "Aut", "spec", "FF", "W"]
+                 "PSp", "PGSp", "Aut", "spec", "FF", "W"]
     RE_ENV = re.compile(r"\\begin\{(" + "|".join(HOST_ONLY) + r")\}")
     RE_MAC = re.compile(r"\\(" + "|".join(HOST_ONLY) + r")\\b")
     RE_GUARD = re.compile(r"@ifundefined|providecommand|newtheorem")

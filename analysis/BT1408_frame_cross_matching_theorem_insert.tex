@@ -24,6 +24,7 @@
 % ...and the operator macros, for the same reason: \PSp and \Aut are defined in
 % w33_paper.tex only.
 \providecommand{\PSp}{\mathrm{PSp}}
+\providecommand{\PGSp}{\mathrm{PGSp}}
 \providecommand{\Aut}{\mathrm{Aut}}
 
 \subsection*{The frame cross-matching and the \texorpdfstring{$(-4)$}{(-4)}-eigenspace}
@@ -154,6 +155,25 @@ of $A$.
 In gauge-theoretic language this is the pure-gauge / physical / constraint split,
 with the Gauss-law count $39=40-1$ realised representation-theoretically and a
 physical sector that is a single irreducible.
+
+\begin{proposition}[The blocks behave oppositely under the outer automorphism]
+\label{prop:blockchirality}
+$\PSp(4,3)$ has index two in $\PGSp(4,3)\cong W(E_6)$. Under that extension:
+\[
+15,\;24,\;81 \;\longmapsto\; \text{two extensions each (a sign character)},
+\qquad
+45\oplus45 \;\longmapsto\; \text{a single irreducible of degree } 90 .
+\]
+Concretely, $\PGSp(4,3)$ has four degree-$15$, two degree-$24$ and two
+degree-$81$ irreducibles, and \emph{no} degree-$45$ irreducible but one of degree
+$90$.
+\end{proposition}
+
+So the gauge and physical blocks are \emph{split} by the outer element --- each
+constituent survives and acquires a sign --- while the two halves of the
+constraint block are \emph{exchanged} by it. The chirality of the constraint
+sector is of a different kind from that of the physical sector, not merely of a
+different magnitude.
 
 \begin{remark}[No Hodge star, and where one must come from]\label{rem:nostar}
 A Hodge star requires $C_k\cong C_{3-k}$. Here $C_0=C_3=40$ but

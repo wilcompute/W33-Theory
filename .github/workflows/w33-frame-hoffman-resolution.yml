@@ -1,0 +1,55 @@
+name: W33 Frame Hoffman Resolution
+
+on:
+  push:
+    paths:
+      - 'analysis/w33_frame_hoffman_resolution_theorem.py'
+      - 'analysis/2026-07-31_frame_hoffman_resolution_theorem.md'
+      - 'analysis/frame_hoffman_resolution_insert.tex'
+      - 'data/w33_frame_hoffman_resolution_theorem.json'
+      - 'tests/test_w33_frame_hoffman_resolution_theorem.py'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - '.github/workflows/w33-frame-hoffman-resolution.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_frame_hoffman_resolution_theorem.py'
+      - 'analysis/2026-07-31_frame_hoffman_resolution_theorem.md'
+      - 'analysis/frame_hoffman_resolution_insert.tex'
+      - 'data/w33_frame_hoffman_resolution_theorem.json'
+      - 'tests/test_w33_frame_hoffman_resolution_theorem.py'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+
+jobs:
+  exact-frame-spectrum:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy pytest
+      - run: python analysis/w33_frame_hoffman_resolution_theorem.py --output /tmp/frame-hoffman.json --check
+      - run: diff -u data/w33_frame_hoffman_resolution_theorem.json /tmp/frame-hoffman.json
+      - run: pytest -q tests/test_w33_frame_hoffman_resolution_theorem.py
+
+  insert-portability:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq texlive-latex-base texlive-latex-recommended
+          d=$(mktemp -d)
+          cp analysis/frame_hoffman_resolution_insert.tex "$d/insert.tex"
+          cat > "$d/minimal.tex" <<'TEX'
+          \documentclass{article}
+          \usepackage{amsmath,amssymb}
+          \begin{document}
+          \input{insert}
+          \end{document}
+          TEX
+          (cd "$d" && pdflatex -interaction=nonstopmode -halt-on-error minimal.tex)

@@ -1,0 +1,47 @@
+% Host-independent insert: W33 frame-graph Hoffman resolution theorem.
+\providecommand{\spec}{\operatorname{spec}}
+\subsection*{The frame-resolution problem is a Hoffman-colouring problem}
+Let $M\in\{0,1\}^{540\times240}$ be the canonical frame--edge incidence
+matrix: each row is the four-edge cross-matching carried by a pair of disjoint
+isotropic lines, and each W33 edge occurs in nine rows.  Let $H$ be the graph on
+the $540$ frames, adjacent when their matchings share an edge.  Direct
+construction from $W(3,3)$ gives
+\[
+ H+4I_{540}=MM^{\mathsf T},\qquad \deg(H)=32,
+\]
+and the exact spectrum
+\[
+ \spec(H)=32^1\oplus14^{44}\oplus8^{15}\oplus4^{81}
+ \oplus2^{84}\oplus(-4)^{315}.
+\]
+Hence Hoffman's bounds give
+\[
+ \chi(H)\ge9,\qquad \alpha(H)\le60.
+\]
+A $60$-vertex independent set is exactly an exact cover of the $240$ W33
+edges by $60$ frame matchings, and every exact cover attains equality.  Thus
+\[
+ \boxed{\text{nine-cover resolution}\iff\text{Hoffman $9$-colouring of }H.}
+\]
+Every exact-cover indicator $x$ satisfies
+\[
+ Hx=4(\mathbf1-x),
+\]
+so each outside frame meets the cover in exactly four neighbours.  If
+$X=[x_1|\cdots|x_9]$ is a resolution, then its forced quotient matrix is
+\[
+ HX=X\,4(J_9-I_9).
+\]
+The centred vectors $y_i=x_i-\mathbf1/9$ lie in
+$\ker(M^{\mathsf T})=E_{-4}(H)$ and obey
+\[
+ \langle y_i,y_i\rangle=\frac{160}{3},\qquad
+ \langle y_i,y_j\rangle=-\frac{20}{3}\quad(i\ne j),
+\]
+so a resolution is a regular $8$-simplex of binary affine-fibre points in the
+$315$-dimensional $(-4)$-eigenspace.
+
+\paragraph{Boundary.}
+The theorem does not assert that $\chi(H)=9$.  It converts the still-open global
+resolution question into the equality case of the Hoffman bound, with a forced
+equitable quotient and simplex certificate.
