@@ -1,0 +1,19 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.supplement",
+  "status": "ACTIVE",
+  "canonical_blocks": [
+    {
+      "range": "1505-1509",
+      "owner": "cover-census-local-arithmetic-contextual-falsifier-hamming-m20-track",
+      "status": "COMPLETE",
+      "artifacts": {
+        "1505": "compiled 100000-cover prefix and exact PSp(4,3) orbit reduction",
+        "1506": "Smith forms and bad-prime localization of the frame/signed-turn bridge",
+        "1507": "explicit rational Morita context and joint-algebra dimension lower bound",
+        "1508": "operational contextual-fraction LP with empirical W33 acquisition template",
+        "1509": "exact H(5,3) cover chart and M20 setwise stabilizer"
+      },
+      "runtime_boundary": "The cover census is an exact orbit-reduced prefix, not a complete enumeration; the joint algebra dimension is a certified lower bound; contextual fraction requires empirical probabilities; the H(5,3)/M20 chart is finite mathematics."
+    }
+  ]
+}
