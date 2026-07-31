@@ -1,0 +1,14 @@
+{
+  "schema": "w33.pass_namespace_registry_v2.shard.v1",
+  "range": "1606-1610",
+  "owner": "torsion-xor-chiral-lattice-coherent-continuation",
+  "passes": {
+    "1606": "full modular filtration of the 30-dimensional Bockstein torsion",
+    "1607": "independent exact-8 XOR compiler for the global resolution instance",
+    "1608": "chiral four-packing orbit and torsion-signature classification",
+    "1609": "saturated free-15 unsigned-to-oriented lattice bridge",
+    "1610": "complete frame/octet two-fiber coherent configuration"
+  },
+  "status": "released",
+  "boundary": "No global nine-cover verdict, exhaustive four-packing census, physical threshold, or continuum interpretation is claimed."
+}
