@@ -1563,7 +1563,8 @@
     <div class="nav-quick">
       <a href="#reader-guide">Reader Guide</a>
       <a href="#theory">The Theory</a>
-      <a href="#numbers">Core Numbers</a>
+      <a href="#latest">Latest results</a>
+          <a href="#numbers">Core Numbers</a>
       <a href="#current-synthesis">Current Synthesis</a>
       <a href="#hard-computation">Reproduce</a>
       <a href="#physics">Physics <span aria-label="conditional">(Conditional)</span></a>
@@ -1865,6 +1866,76 @@
 
       <!-- Old nav removed -->
 
+      <section id="latest">
+        <h2><span class="icon">&#9733;</span> Latest exact results</h2>
+        <p>The newest certified results, newest first. Everything here is an exact
+          computation with a committed witness and certificate. Nothing on this page
+          upgrades a finite result into a physical one &mdash; that boundary is
+          unchanged and is stated in <a href="#numbers">Core Numbers</a>.</p>
+        <div class="card-grid">
+          <div class="card">
+            <div class="num">540 &rarr; 240</div>
+            <div class="label">The frame cross-matching</div>
+            <div class="detail">Each of the 540 frames (pairs of disjoint totally
+              isotropic lines) carries a <strong>unique</strong> A&#8324;-equivariant
+              bijection between its two lines, invariant under the full order-48
+              stabiliser. All 240 resulting cross-pairs are <strong>edges</strong>,
+              covering the edge set exactly <strong>9-to-1</strong>. Cokernel of the
+              incidence: <code>Z&#185;&#8309; &oplus; (Z/2)&#179;&#8304;</code>.
+              <em>Passes 1390, 1392.</em></div>
+          </div>
+          <div class="card">
+            <div class="num">60 &times; 4</div>
+            <div class="label">An exact cover of the edges</div>
+            <div class="detail">Sixty frames whose canonical cross-matchings
+              <strong>partition</strong> all 240 edges, each exactly once. One cover is
+              exhibited; the count of covers and whether any is G-invariant remain
+              open. <em>Pass 1394.</em></div>
+          </div>
+          <div class="card">
+            <div class="num">S&#8325;</div>
+            <div class="label">The Steinberg carrier's stabiliser</div>
+            <div class="detail">The three 432-orbits carrying the 3&times;81 are
+              <strong>conjugate</strong>, with point stabiliser
+              <code>S&#8325; = SmallGroup[120,34]</code>. Since
+              <code>S&#8325; &cap; PSp(4,3) = A&#8325;</code>, the carrier's stabiliser
+              does <em>not</em> lie in the simple group. <em>Pass 1375.</em></div>
+          </div>
+          <div class="card">
+            <div class="num">2-closed</div>
+            <div class="label">The 216-line tight frame</div>
+            <div class="detail">Its automorphism group was previously <em>inferred</em>
+              from the angle set <code>{0, 1/15, 1/5}</code>. Computed: the orbital
+              configuration has rank 10 with suborbits
+              <code>[5,10,10,20,20,20,30,40,60]</code> and
+              <code>|Aut| = 51,840</code>, so W(E&#8326;) is 2-closed and the inference
+              was safe. Three angle values but nine orbital classes &mdash; the angles
+              merge orbitals and could never have settled it either way.
+              <em>Pass 1393.</em></div>
+          </div>
+          <div class="card">
+            <div class="num">11&#185; 1&#178;&#8308; (&minus;5)&#185;&#8309;</div>
+            <div class="label">Shifted adjacency, corrected</div>
+            <div class="detail">The historical &ldquo;master cubic&rdquo;
+              <code>(t+1)[(t+1)&#178;&minus;36]</code> annihilates <strong>no</strong>
+              eigenspace of <code>D = A &minus; I</code>
+              (<code>rank p_old(D) = 40</code>). The true minimal polynomial is
+              <code>(t&minus;11)(t&minus;1)(t+5)</code>. Both manuscripts are verified
+              free of the retracted form. <em>Passes 1383, 1389.</em></div>
+          </div>
+          <div class="card">
+            <div class="num">A&#8324;</div>
+            <div class="label">A coincidence, resolved as one</div>
+            <div class="detail">A&#8324; is the derived subgroup of the frame stabiliser
+              <em>and</em> sits inside the tomotope's &Gamma;(T)&prime;. It is
+              <strong>not</strong> a bridge: on the frame side A&#8324; acts faithfully
+              on a line's 4 points; in &Gamma;(T)&prime; all five A&#8324; classes have
+              orbits [6,6] or [12] and <em>no</em> invariant 4-set. Same group,
+              incompatible actions. <em>Pass 1385.</em></div>
+          </div>
+        </div>
+      </section>
+
       <section id="numbers">
         <h2><span class="icon">⬡</span> Core Numbers</h2>
         <p>Canonical finite invariants only. Equal dimensions or counts may motivate a comparison, but they do not
@@ -1928,6 +1999,18 @@
               profile; its semisimple quotient is <code>M2(F2) &oplus; F2</code>.</div>
           </div>
           <div class="card">
+            <div class="num">C<sub>2</sub>, C<sub>3</sub>, C<sub>5</sub></div>
+            <div class="label">H<sub>26</sub> Cartan/PIM Closure</div>
+            <div class="detail">Direct primitive corners determine every bad-prime Cartan matrix and projective
+              dimension; complete primitive systems are verified through <code>p<sup>6</sup></code>.</div>
+          </div>
+          <div class="card">
+            <div class="num">120 → 360</div>
+            <div class="label">Global Cycle/Copy Minimum</div>
+            <div class="detail">GAP proves 120 is the smallest simple-cycle orbit over all lengths 3&hellip;40.
+              A separate primitive copy-idempotent choice multiplies it by 3; it is not a canonical selector.</div>
+          </div>
+          <div class="card">
             <div class="num">E₈ Dynkin</div>
             <div class="label">Induced Subgraph</div>
             <div class="detail">Eight named W33 vertices induce the E₈ Dynkin tree and give
@@ -1980,6 +2063,16 @@
             <td>Schl&auml;fli carrier</td>
             <td><strong>W(E₆)/S5</strong>, size 432</td>
             <td>Directed Schl&auml;fli edges; explicit rank-81 transform</td>
+          </tr>
+          <tr>
+            <td>H<sub>26</sub> Cartan/PIM data</td>
+            <td><strong>C<sub>2</sub>, C<sub>3</sub>, C<sub>5</sub> exact; primitive lifts through p<sup>6</sup></strong></td>
+            <td>Finite bad-prime algebra; Smith and Loewy filtrations are distinct</td>
+          </tr>
+          <tr>
+            <td>Global simple-cycle/copy orbit</td>
+            <td><strong>120; then 360 after a copy-idempotent choice</strong></td>
+            <td>Exact orbit minimum, not a canonical internal copy selection</td>
           </tr>
           <tr>
             <td>QEC parameters</td>
@@ -2058,7 +2151,7 @@
           the theorem is a finite integral reconstruction, not an E<sub>8</sub> or physical identification.</p>
       </div>
       <div class="spotlight" id="theory-exceptional-bridge">
-        <p><strong>Current exact exceptional/integral bridge (Pass 1147; Passes 1325&ndash;1335).</strong>
+        <p><strong>Current exact exceptional/integral bridge (Pass 1147; Passes 1325&ndash;1344).</strong>
           The three <code>432</code>-element A<sub>2</sub>-colour carriers are three copies of the directed
           Schl&auml;fli edges. The explicit odd edge transform has rank <code>81</code> and produces
           <code>216</code> antipodal tight-frame lines. Its integral Smith profile is
@@ -2085,14 +2178,33 @@
           <code>M2(F2)&oplus;F2</code>, <code>F3<sup>4</sup></code>, and
           <code>M3(F5)&oplus;M2(F5)&oplus;F5<sup>7</sup></code>, respectively. Its exceptional
           nine-dimensional block has a doubled-<code>A3</code> scalar Ext quiver. This is a condensation shadow of
-          the group block, not an identification with the Loewy filtration of the 81-dimensional frame module. These are
-          statements about named finite
+          the group block, not an identification with the Loewy filtration of the 81-dimensional frame module.</p>
+          <p><strong>The Cartan, projective, finite p-adic, and selector layers are now exact.</strong>
+          Direct primitive-corner calculations give
+          <code>C2=diag(1,22)</code>,
+          <code>C3=[[5,1,3,0],[1,3,2,0],[3,2,5,0],[0,0,0,1]]</code>, and
+          <code>C5=I6&oplus;[[2,1,1],[1,1,0],[1,0,2]]</code>, with projective dimensions
+          <code>(2,22)</code>, <code>(9,6,10,1)</code>, and
+          <code>(3,2,1,1,1,1,4,2,3)</code>. Complete orthogonal primitive systems are verified through
+          <code>2<sup>6</sup>,3<sup>6</sup>,5<sup>6</sup></code>; cross-certificate checks show that the Smith
+          saturation and Loewy filtrations are different. Separately, GAP classifies the small cycle orbits and the
+          ordered-path stabilizers: the length-4 simple-cycle orbit of size <code>120</code> is globally minimal over
+          every possible length <code>3&hellip;40</code>. Choosing an additional primitive copy idempotent gives the
+          global <code>W(E6)&times;S3</code> orbit minimum <code>360</code> with stabilizer <code>864</code>.
+          This quantifies the least symmetry cost of a copy choice; cycles alone still act as
+          <code>C&otimes;I3</code>, so it is not a canonical internal selector. The displayed
+          <code>C=D<sup>T</sup>D</code> factorizations are certified, but a unique trace-congruence derivation of
+          <code>D</code> is not claimed.</p>
+          <p>These are statements about named finite
           modules and integral maps; they do not identify particles, generations, or hardware modes.
           <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md">Read the Pass 1147 construction</a>
           and
           <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS1325_1329_TRIALITY_INTEGRAL_GAUGE_RELEASE.md">the Passes 1325&ndash;1329 release</a>.</p>
           <p><a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS1330_1334_MODULAR_TRIALITY_ATLAS_RELEASE.md">Open the modular Hecke, nine-axis, and literal-cycle release</a>.</p>
           <p><a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS1335_BRAUER_TREE_HECKE_CORNER.md">Read the Brauer-tree Ext completion and its condensation boundary</a>.</p>
+          <p><a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS1340_1344_CARTAN_ATLAS_SELECTOR_PADIC_RELEASE.md">Open the Cartan, Atlas-character, global-selector, and finite p-adic release</a>
+          &middot; <a href="https://github.com/wilcompute/W33-Theory/blob/master/data/w33_pass1340_1344_cartan_atlas_selector_padic.json">combined certificate</a>
+          &middot; <a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/w33_pass1342_global_cycle_selector_bound.g">global GAP witness</a>.</p>
       </div>
 
         <div class="spotlight">
@@ -18154,6 +18266,11 @@ pass produced it.</p>
               &mdash; the cyclic-defect Brauer tree, one-dimensional <code>23&harr;58</code> Ext spaces, the
               doubled-<code>A3</code> Hecke condensation shadow, and semisimple color transport at
               characteristic five.</li>
+            <li><a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS1340_1344_CARTAN_ATLAS_SELECTOR_PADIC_RELEASE.md">Passes 1340&ndash;1344</a>
+              &mdash; direct <code>H26</code> Cartan/PIM data at <code>2,3,5</code>, the faithful rational
+              degree-20 character model, primitive systems through <code>p<sup>6</sup></code>, Smith/Loewy
+              separation, and the GAP theorem that upgrades <code>120&rarr;360</code> to a global
+              simple-cycle-plus-copy orbit minimum without inventing a canonical copy.</li>
             <li><a href="#q3-all-m-theorem">Pass 541</a> &mdash; the exact <code>q=3</code> trace-valuation minimum for
               every exponent <code>m&ge;2</code>, proved by six cubic recurrences and two finite mod-<code>9</code>
               clocks.</li>
