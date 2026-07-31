@@ -1,0 +1,20 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.supplement",
+  "status": "ACTIVE",
+  "canonical_blocks": [
+    {
+      "range": "1421-1425",
+      "owner": "full-weyl-integral-bridge-cover-extension-track",
+      "status": "COMPLETE_WITH_LOCAL_EXACT_VERIFICATION",
+      "artifacts": {
+        "1421": "full PGSp(4,3) ~= W(E6) equivariance of the frame-cokernel/signed-turn bridge",
+        "1422": "complete 51840-element character fingerprint and outer-coset trace distribution",
+        "1423": "integral Smith obstruction with invariants 1^10, 3^4, 6 and index 486",
+        "1424": "six new disjoint exact-cover orbits and improved lower bound 298080",
+        "1425": "shared dual-manuscript addendum, focused regression, and fail-closed CI"
+      },
+      "namespace_note": "This block extends the Pass-1416 rational PSp bridge to the full Weyl group, identifies the exact integral lattice defect, and strictly enlarges the Pass-1417 exact-cover frontier without claiming exhaustive enumeration.",
+      "runtime_boundary": "Combined local verifier completed 24/24 checks; frozen certificate, focused regression, and independent minimal TeX compile pass. Remote Actions remain a regression surface and are not claimed as observed until completion."
+    }
+  ]
+}
