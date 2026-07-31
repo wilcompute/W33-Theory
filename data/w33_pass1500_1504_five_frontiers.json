@@ -1,0 +1,453 @@
+{
+  "boundaries": {
+    "1500": "The certificate gives Ext^1 and Loewy dimensions. Higher quiver relations require Ext^2/Yoneda products.",
+    "1501": "The pivot rule is canonical relative to frozen matrix units and selector coordinate order.",
+    "1502": "D4 acts intrinsically on local mask positions, but the globally ordered rectangle atlas is not D4-invariant: members of one local mask orbit can have different global ranks. Residual labels are deterministic cycle orderings; no unverified S3 action is asserted.",
+    "1503": "The previously selected frozen matrix-unit order is commensurable with O but need not contain it. The present order is a different conjugate maximal order constructed from O-stable lattices, so containment is objectwise verified rather than inferred from discriminants.",
+    "1504": "The finite-field certificates use the good prime 1000003. Their nonzero determinant and rank minors promote the full corner and bimodule dimensions to characteristic zero. This is a gauge-generated linking algebra, not a natural full-G equivariant Morita equivalence."
+  },
+  "pass1500_modular_ext_quivers": {
+    "all_simple_endomorphism_fields_split": {
+      "2": true,
+      "3": true
+    },
+    "p2_arrow_dimension_sum": 15,
+    "p2_ext1_matrix": [
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "p2_loewy_layers": [
+      38,
+      29,
+      16
+    ],
+    "p2_radical_power_dimensions": [
+      45,
+      16,
+      0
+    ],
+    "p2_vertex_count": 13,
+    "p3_arrow_dimension_sum": 14,
+    "p3_ext1_matrix": [
+      [
+        2,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        3,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        1
+      ]
+    ],
+    "p3_loewy_layers": [
+      11,
+      23,
+      22,
+      13,
+      10,
+      4
+    ],
+    "p3_radical_power_dimensions": [
+      72,
+      49,
+      27,
+      14,
+      4,
+      0
+    ],
+    "p3_vertex_count": 5
+  },
+  "pass1501_tensor_fourier": {
+    "all_83_actions_sha256": "b67642630b54d504564ce3cd15c8acbfc7f03ab90f5e90a0f04186f00ff26816",
+    "block_dimensions": [
+      1,
+      2,
+      2,
+      4,
+      4,
+      8,
+      8,
+      2,
+      4,
+      12,
+      12,
+      24,
+      32,
+      5
+    ],
+    "exact_inverse_verified": true,
+    "inverse_constructed_blockwise": true,
+    "multiplicity_irreducible_pairs": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        5,
+        1
+      ]
+    ],
+    "tensor_basis_U": {
+      "max_abs_numerator": 10,
+      "max_denominator": 54,
+      "nonzero": 4406,
+      "sha256": "58b5c1cdc2aefd67a4efde0221f4a708b8e1267b5eb4bad8e1a586bf02ff84b7",
+      "shape": [
+        120,
+        120
+      ]
+    },
+    "tensor_inverse_Uinv": {
+      "max_abs_numerator": 5,
+      "max_denominator": 54,
+      "nonzero": 3276,
+      "sha256": "bb75dd295832c7a76fd0a72268ac328fbd437676670bef6ecc64cb1fb12fc160",
+      "shape": [
+        120,
+        120
+      ]
+    }
+  },
+  "pass1502_bridge_classification": {
+    "all_rank81_sheets_equal_steinberg": true,
+    "bridge_rank_distribution": {
+      "70": 16,
+      "76": 4,
+      "81": 76
+    },
+    "family_size": 96,
+    "rank81_bridge_count": 76,
+    "rank81_full_on_all_14_sources": 57,
+    "rank81_sheet_count": 19,
+    "rank81_terminal_dimension_loss": 19,
+    "sheet_rank_distribution": {
+      "70": 4,
+      "76": 1,
+      "81": 19
+    },
+    "sign_characters_preserve_rank": true
+  },
+  "pass1503_maximal_overorder": {
+    "discriminant_index_identity_verified": true,
+    "global_index": "56465298353599514565459914148042866857053267066089785123802185728",
+    "global_index_factorization": {
+      "2": 36,
+      "3": 113
+    },
+    "local_indices": {
+      "2": "68719476736",
+      "3": "821678234986022501332043817791314604358242170799200323"
+    },
+    "maximal_basis_sha256": "02cd75f9f692bdcd5d3bcc82ab6f565ea106361539c40ebba9d093ee0116f98a",
+    "maximal_discriminant": "1",
+    "orbital_coordinates_sha256": "8ad8bfb511080daf8c94933b47d114dbfeb7a9796b84579fd5c69148cf07a5ec",
+    "orbital_discriminant": "3188329918161008050220685819776211165919950305474185781428294225123024400679387968295717084208018073556691441914158151030206889984",
+    "orbital_order_contained": true,
+    "p_maximal_at_2_and_3": true
+  },
+  "pass1504_linking_algebra": {
+    "bridge_bimodule_dimension": 9720,
+    "collective_cycle_detection_rank": 81,
+    "collective_selector_image_rank": 120,
+    "full_M201_dimension": 40401,
+    "independent_bridge_dimension": 75,
+    "left_common_commutant_dimension": 1,
+    "left_corner_dimension": 14400,
+    "linking_envelope_dimension": 40401,
+    "rank81_gauge_bridges": 76,
+    "relation_dimension": 1,
+    "relation_exact_over_Z": true,
+    "relation_sha256": "7ff113b46ddd2f0c8d89bc28e0fae19cfbea2ec6dbfd4dbe571d5379f9fc08e1",
+    "relation_support": 12,
+    "right_common_commutant_dimension": 1,
+    "right_corner_dimension": 6561,
+    "strict_morita_context": true
+  },
+  "range": "1500-1504",
+  "schema": "w33.pass1500_1504.five_frontiers.v1",
+  "source_sha256": {
+    "analysis/pass1500_1504/__init__.py": "f9d078b9f0ce445c7d8de74608d4a727c9e435aecc4f2cd35c9839f485b85e56",
+    "analysis/pass1500_1504/bridge_classification.py": "8772853465182088ee83598f0a0dd6729931c861c757e4840241d1e1ca798f0d",
+    "analysis/pass1500_1504/common.py": "5ac036058fe176a595aeee0f5468eaee777feb3bda5c45d5f0bff403a03b7608",
+    "analysis/pass1500_1504/linking_algebra.py": "6c1cfded4df07ec5b34cfafde668831cfd1641361a0e99557d241d5c5315758b",
+    "analysis/pass1500_1504/local_overorders.py": "52b4effedbea22cc8d9c4248392f6d13f8e5ae9c0a7d1c70c003396f883a91c4",
+    "analysis/pass1500_1504/modular_ext.py": "6369321bc0653a7643ae21f493fc8a4732619772120c079622f879053d28aa89",
+    "analysis/pass1500_1504/tensor_fourier.py": "1a4cf93697f8f29bd9589188c7a7a6ba2aac15326fa424f870ebbe8184c0df0c",
+    "analysis/w33_pass1500_1504_five_frontiers.py": "f1be8b39e421b38716ab55c83773ac3b0f815c671775cadf6f186454e7911cce"
+  },
+  "status": "PASS",
+  "worker_sha256": {
+    "1500": "ccdc1e773121897bf87c03d7eaf40dd46b9daf0272f45b779c76fba643f6f3e6",
+    "1501": "45ffc89206d187b1d6ed8bf6d74f19580ec6aaf8e89fe76d2145b1e53bd4add2",
+    "1502": "cf30ef9d35441f22a1cb39380fb3bcdd00ae73cf592d2b7b337a0d4823b1b564",
+    "1503": "c96cd9f52681256db4795e1c17fc8352951fa11f02a0d354d2b0efe52611328d",
+    "1504": "60105b7a9d3b73cc714d5b828c5a9a6296af0fa383247884ba109ee60c137956"
+  }
+}
