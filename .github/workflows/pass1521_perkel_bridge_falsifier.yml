@@ -1,0 +1,45 @@
+name: Pass 1521 Perkel Bridge Falsifier
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass1521_perkel_bridge_falsifier.py'
+      - 'analysis/BT1521_perkel_shadow_bridge_falsifier.md'
+      - 'tests/test_w33_pass1521_perkel_bridge_falsifier.py'
+      - '.github/workflows/pass1521_perkel_bridge_falsifier.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  static-and-reference:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install --disable-pip-version-check numpy networkx sympy pytest
+      - run: python -m py_compile analysis/w33_pass1521_perkel_bridge_falsifier.py
+      - run: pytest -q tests/test_w33_pass1521_perkel_bridge_falsifier.py
+
+  exact-bridge-search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install --disable-pip-version-check numpy networkx sympy
+      - run: python analysis/w33_pass1521_perkel_bridge_falsifier.py --output /tmp/pass1521_perkel_bridge_falsifier.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass1521-perkel-bridge-falsifier
+          path: /tmp/pass1521_perkel_bridge_falsifier.json
+          if-no-files-found: error
