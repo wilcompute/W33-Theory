@@ -46,3 +46,10 @@ def test_qutrit_hamming_m20_chart():
 def test_compiled_census_sources_present():
  assert (ROOT/'analysis'/'cpp'/'w33_pass1505_exact_cover_prefix.cpp').exists()
  assert (ROOT/'analysis'/'cpp'/'w33_pass1505_orbit_reduce.cpp').exists()
+
+def test_release_manifest_and_independent_cover_audit():
+ p=cert('w33_pass1505_1509_release_manifest.json')
+ assert p['status']=='PASS'
+ assert p['validation']=={'certificate_checks':59,'cpp_sources_compile':True,'latex_insert_compiles':True,'pytest_tests':7}
+ assert p['independent_cover_audit']['normalized_prefix_covers']==100000
+ assert p['independent_cover_audit']['all_exact_partitions'] is True

@@ -1,0 +1,107 @@
+{
+  "boundaries": {
+    "contextual_fraction": "requires empirical probabilities and compatibility checks",
+    "cover_census": "exact orbit-reduced prefix, not exhaustive",
+    "joint_algebra": "dimension 301 is a certified lower bound",
+    "m20_chart": "exact finite geometry, not a hardware claim",
+    "remote_ci": "not claimed until an Actions run is observed"
+  },
+  "files": {
+    ".github/workflows/w33-pass1505-1509.yml": {
+      "bytes": 3837,
+      "sha256": "f23a66aa51e76ede4b0ac0405b4b26a84fcba66cda7d290c07bc3f6959f0c3a5"
+    },
+    "analysis/BT1509_census_morita_m20_insert.tex": {
+      "bytes": 2844,
+      "sha256": "e1555387d0e8abd32ec1c3953239e88236935e8dd7e522a33f9b70d70d16bada"
+    },
+    "analysis/cpp/w33_pass1505_exact_cover_prefix.cpp": {
+      "bytes": 2750,
+      "sha256": "783272677661e607a7a54e5bdc1d5471854ab8df027b7201b4457a4fa01536ce"
+    },
+    "analysis/cpp/w33_pass1505_orbit_reduce.cpp": {
+      "bytes": 2715,
+      "sha256": "a72b21a5e0656eab9e2b0a3e5eec035da254f8a629b987bce66cef476037e5ec"
+    },
+    "analysis/w33_pass1505_1509_five_frontier_release.md": {
+      "bytes": 6327,
+      "sha256": "531be64851252e662f77cce65bd86ae10811028836f634d7d6cbdd07a21778bd"
+    },
+    "analysis/w33_pass1505_exact_cover_census_frontier.py": {
+      "bytes": 6432,
+      "sha256": "18af8ffba3b4fe0fea2c6d6c597cf5bfb1eb0410a00724f9776470d8819e9cac"
+    },
+    "analysis/w33_pass1506_bridge_local_arithmetic.py": {
+      "bytes": 4700,
+      "sha256": "84c58f3f32349b5b3b5321233196634616e07aa380b7e1b585dcd61e814b9d47"
+    },
+    "analysis/w33_pass1507_joint_algebra_morita.py": {
+      "bytes": 4607,
+      "sha256": "8e029006820206b46ceb5386bb946fc611b8a9c065112ad2223972f6eb44e62e"
+    },
+    "analysis/w33_pass1508_contextual_fraction_falsifier.py": {
+      "bytes": 9226,
+      "sha256": "2e644a6f7afc86e625773c6f434933fa52756ed7f085ee0fbdfcc1cfcd468c83"
+    },
+    "analysis/w33_pass1509_qutrit_hamming_m20_chart.py": {
+      "bytes": 8536,
+      "sha256": "46e9b8d7e918a84ccb103dd0dae57a7670cfc9dbe228ce4a998e01ebaa8a2c04"
+    },
+    "data/w33_contextuality_empirical_model_template.json": {
+      "bytes": 9352,
+      "sha256": "9cb6bc165dc9882926508ebd54aca31a8cf7acc2f78b8395cce32877e0d877fb"
+    },
+    "data/w33_pass1505_exact_cover_census_frontier.json": {
+      "bytes": 2031,
+      "sha256": "93e0a5770ce36ce09d072a287aea992c1072f54708b5bef344a9791e09fc7ae1"
+    },
+    "data/w33_pass1506_bridge_local_arithmetic.json": {
+      "bytes": 2330,
+      "sha256": "637e4a26e4519ce999297c98cc2e256c0eb7abc7db2b6f0e0165d357827c5483"
+    },
+    "data/w33_pass1507_joint_algebra_morita.json": {
+      "bytes": 5917,
+      "sha256": "6e44597172a62e0e762f29d95d6ced3311845f67a1b03c737aa4308c155b48e5"
+    },
+    "data/w33_pass1508_contextuality_protocol.json": {
+      "bytes": 2588,
+      "sha256": "70a534c24c9f2fbbdb91731bc5a164c9784a1a1e73754c2be761f093a06c4714"
+    },
+    "data/w33_pass1509_qutrit_hamming_m20_chart.json": {
+      "bytes": 2494,
+      "sha256": "15dd69e8657c275181e176f2975ed36447b1765b51f4320182f638047b0ed53e"
+    },
+    "data/w33_pass_namespace_registry_v2.d/1505-1509.json": {
+      "bytes": 986,
+      "sha256": "6878997742a8058901281e2567ecff2af6b81f4962e7841dab4ea64ce6d1cea5"
+    },
+    "photonic_holonet.tex": {
+      "bytes": 585,
+      "sha256": "ba2067a175d2c62a6d81e6df35afc52a7a55b250c8a07c501e9d9e0345222391"
+    },
+    "tests/test_w33_pass1505_1509_release.py": {
+      "bytes": 2679,
+      "sha256": "0675bd7267f0b557c592028c665d68babee93dc2e28b4d412624716053c1fa01"
+    },
+    "w33_paper.tex": {
+      "bytes": 578,
+      "sha256": "9d57140d29afd908952f5af80a5e3239d57516f80f907a5e273edd69c692226c"
+    }
+  },
+  "independent_cover_audit": {
+    "all_exact_partitions": true,
+    "cover_bitset_sha256": "ee6a429279fece6c4cd917acf2a07fdec2e9f8b66ebe9f7aa0db328ee6ed0172",
+    "normalized_prefix_covers": 100000,
+    "orbit_records_sha256": "102df5707a6aadd05e59655a886b50559fcc6a208800bd7e74bfd201f1b5ccb8",
+    "orbit_reduction_json_sha256": "afd50f9d81085dfff8e9f65bc5c10fe0541f27243405dae042772bc7c66104a3"
+  },
+  "release": "Passes 1505-1509",
+  "schema": "w33.pass1505_1509.release_manifest.v2",
+  "status": "PASS",
+  "validation": {
+    "certificate_checks": 59,
+    "cpp_sources_compile": true,
+    "latex_insert_compiles": true,
+    "pytest_tests": 7
+  }
+}
