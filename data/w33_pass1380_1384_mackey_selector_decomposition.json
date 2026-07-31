@@ -1,22 +1,78 @@
 {
   "pass1380_little_group_character_table": {
     "all_character_values_rational_integers": true,
-    "dual_orbit_sizes": [1, 2, 4, 4, 8, 8],
+    "dual_orbit_sizes": [
+      1,
+      2,
+      4,
+      4,
+      8,
+      8
+    ],
     "group": "C3^3 : (D8 x C2)",
     "group_order": 432,
     "irreducible_count": 27,
-    "irreducible_degree_census": {"1": 8, "2": 6, "4": 9, "8": 4},
-    "little_group_orders": [16, 8, 4, 4, 2, 2],
-    "little_group_types": ["D8xC2", "D8", "V4", "V4", "C2", "C2"],
+    "irreducible_degree_census": {
+      "1": 8,
+      "2": 6,
+      "4": 9,
+      "8": 4
+    },
+    "little_group_orders": [
+      16,
+      8,
+      4,
+      4,
+      2,
+      2
+    ],
+    "little_group_types": [
+      "D8xC2",
+      "D8",
+      "V4",
+      "V4",
+      "C2",
+      "C2"
+    ],
     "rational_group_algebra": "Q^8 + M2(Q)^6 + M4(Q)^9 + M8(Q)^4",
     "sum_squared_degrees": 432
   },
   "pass1381_selector_permutation_character": {
     "commutant_dimension_from_multiplicities": 83,
-    "constituent_degree_profile": [1, 1, 1, 2, 2, 2, 4, 4, 4, 4, 8, 8, 8, 8],
+    "constituent_degree_profile": [
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      4,
+      4,
+      4,
+      4,
+      8,
+      8,
+      8,
+      8
+    ],
     "degree": 120,
     "dimension_check": 120,
-    "multiplicity_profile": [1, 1, 1, 1, 1, 1, 1, 2, 2, 3, 3, 3, 4, 5],
+    "multiplicity_profile": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      3,
+      3,
+      3,
+      4,
+      5
+    ],
     "nonzero_constituents": 14
   },
   "pass1382_mackey_wedderburn_identification": {
@@ -27,10 +83,39 @@
     "wedderburn": "Q^7 + M2(Q)^2 + M3(Q)^3 + M4(Q) + M5(Q)"
   },
   "pass1383_terwilliger_fusion_explanation": {
-    "fusion_group_sizes": [1, 1, 1, 1, 1, 1, 1, 2, 2, 3],
+    "fusion_group_sizes": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      3
+    ],
     "orbital_center_dimension": 14,
-    "scalar_packet_sizes": [2, 2, 3],
-    "scalar_splitter_eigenvalue_packets": [[-4, -1, 2], [-3, 0], [-3, 3]],
+    "scalar_packet_sizes": [
+      2,
+      2,
+      3
+    ],
+    "scalar_splitter_eigenvalue_packets": [
+      [
+        -4,
+        -1,
+        2
+      ],
+      [
+        -3,
+        0
+      ],
+      [
+        -3,
+        3
+      ]
+    ],
     "schur_defect": 4,
     "terwilliger_center_dimension": 10
   },
