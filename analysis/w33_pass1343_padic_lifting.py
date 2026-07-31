@@ -7,6 +7,8 @@ ROOT=Path(__file__).resolve().parents[1];DATA=ROOT/'data';sys.path.insert(0,str(
 import w33_pass1330_1334_modular_triality_cycle_atlas as a
 P=a.P;ONE=[1]+[0]*25;BASIS=[[int(i==j) for i in range(26)] for j in range(26)]
 FROZEN=json.loads((DATA/'w33_pass1340_1344_cartan_atlas_selector_padic.json').read_text())['pass1343_padic_lifting']['records']
+SMITH=json.loads((DATA/'w33_pass1326_integral_smith_modular.json').read_text())['hecke_matrix_unit_lattice']['p_primary_exponents']
+LOEWY=json.loads((DATA/'w33_pass1330_1334_modular_triality_cycle_atlas.json').read_text())['pass1330_modular_jacobson_radicals']['records']
 def mul(x,y,m):
  z=[0]*26
  for i,u in enumerate(x):
@@ -60,6 +62,8 @@ def modular_system(p):
   x=solve(list(map(list,zip(*images))),target,p);x=mul(mul(rem,x,p),rem,p);x,s=lift(x,p);out.append((label,x,component,s));rem=sub(rem,x,p)
  assert not any(rem);return out
 def sha(obj):return hashlib.sha256(json.dumps(obj,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+def smith_cumulative(exponents):
+ return [sum(e<level for e in exponents) for level in range(1,max(exponents)+2)]
 def main():
  for p in (2,3,5):
   m=p**6;rem=ONE[:];out=[]
@@ -70,5 +74,8 @@ def main():
   assert not any(rem)
   serial=[{'label':lab,'component':c,'newton_steps':s,'coordinates':e} for lab,e,c,s in out]
   rec=FROZEN[str(p)];assert len(out)==rec['primitive_idempotent_count'];assert [x[3] for x in out]==rec['newton_steps'];assert sha(serial)==rec['lift_sha256']
+  assert SMITH[str(p)]==rec['smith_p_primary_exponents']
+  assert smith_cumulative(SMITH[str(p)])==rec['smith_cumulative_ranks']
+  assert [26-d for d in LOEWY[str(p)]['loewy_power_dimensions']]==rec['loewy_quotient_dimensions']
  print('PASS 1343 p-adic lifting verifier')
 if __name__=='__main__':main()

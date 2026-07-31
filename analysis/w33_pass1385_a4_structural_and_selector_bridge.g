@@ -1,4 +1,4 @@
-# Passes 1379-1380 -- is the A4 structural or numerical, and is the parallel
+# Passes 1385-1386 -- is the A4 structural or numerical, and is the parallel
 # track's Hom = 0 obstruction absolute?
 #
 # Pass 1377 found that A4 is the derived subgroup of the 540-frame stabiliser at
@@ -23,7 +23,7 @@
 # rotation group on both sides.  If either is unfaithful or has no invariant
 # 4-set, the A4 is an order coincidence and gets written down as one.
 #
-# Q3 (Pass 1380) tests the parallel track's Pass 1374 obstruction.  It reports
+# Q3 (Pass 1386) tests the parallel track's Pass 1374 obstruction.  It reports
 # Hom_G(Q^120, E4 Q^160) = 0 -- the natural selector/flag bimodule annihilates
 # the Steinberg sector, max rank 40.  Pass 1375 found the Steinberg carrier's
 # stabiliser is an S5 that does NOT lie in PSp(4,3).  If the order-432 selector
@@ -31,8 +31,8 @@
 # contains both, and the failure is not "wrong intertwiner" but structural.
 
 LogTo();
-out := "C:/Repos/Theory of Everything/data/w33_pass1379_1380_a4_selector.txt";
-PrintTo(out, "Passes 1379-1380: is the A4 structural, and is Hom=0 absolute?\n\n");
+out := "C:/Repos/Theory of Everything/data/w33_pass1385_1386_a4_selector.txt";
+PrintTo(out, "Passes 1385-1386: is the A4 structural, and is Hom=0 absolute?\n\n");
 A := function(s) AppendTo(out, s); end;
 
 # ===================================================== build W(3,3) once
@@ -137,7 +137,7 @@ A(Concatenation("nontrivial block reps of Gamma(T) on 12 pts: ",
    String(List(AllBlocks(T), Length)), "\n"));
 
 # =============================================== Q3  the selector obstruction
-A("\n=== Q3 (Pass 1380): is the selector/Steinberg obstruction absolute? ===\n");
+A("\n=== Q3 (Pass 1386): is the selector/Steinberg obstruction absolute? ===\n");
 # rebuild W(E6) and the two subgroups
 roots := [];
 for i in [1..8] do for j in [i+1..8] do

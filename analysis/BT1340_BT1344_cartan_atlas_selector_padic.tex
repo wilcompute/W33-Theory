@@ -13,34 +13,39 @@ C_3=\begin{pmatrix}5&1&3&0\\1&3&2&0\\3&2&5&0\\0&0&0&1\end{pmatrix},
 \[
 C_5=I_6\oplus\begin{pmatrix}2&1&1\\1&1&0\\1&0&2\end{pmatrix};
 \]
-\item the literal directed-edge carrier affords a faithful rational
-$20$-dimensional Atlas-standard-generator model with generator orders
-$(2,9,10)$;
-\item the minimal combined literal cycle/copy selector in the length-three
-through length-eight frontier has orbit size $360$ and stabilizer order $864$;
+\item the frozen rational $20$-dimensional standard-generator model is faithful,
+has generator orders $(2,9,10)$, and matches a unique CTblLib character row;
+\item the global minimum combined literal simple-cycle/copy selector has orbit
+size $360$ and stabilizer order $864$;
 \item complete primitive idempotent systems lift to $2^6$, $3^6$, and $5^6$,
 while the Smith and Loewy filtrations remain distinct invariants.
 \end{enumerate}
 \end{theorem}
 
 \begin{proof}
-The decomposition matrices are the unique nonnegative row solutions of the
-ordinary-to-modular trace congruences with the required simple dimensions.
-Direct Newton lifting of quotient primitive idempotents inside
+The displayed dimension-compatible matrices factor the Cartan matrices as
+$D_p^{\mathsf T}D_p$; their trace-congruence derivation and uniqueness are not
+claimed here. Direct Newton lifting of quotient primitive idempotents inside
 $\mathcal H_{\mathbb F_p}$ gives projective corners whose dimensions equal
 $D_p^{\mathsf T}D_p$, independently proving the displayed Cartan matrices.
-The rank-$20$ central character projector in the $480$-edge carrier yields
-exact rational matrices $C,D$ satisfying $C^2=D^9=(CD)^{10}=I$ and the frozen
-$25$-class trace row.  Literal cycle enumeration gives a smallest cycle orbit
-of size $120$ at length four; a primitive multiplicity idempotent has internal
-$S_3$ orbit size three, so the combined minimum is $3\cdot120=360$.
+The exact frozen rational matrices $C,D$ satisfy
+$C^2=D^9=(CD)^{10}=I$ and the frozen $25$-class trace row. GAP/AtlasRep
+independently matches that row to one faithful degree-$20$ character. Literal
+cycle enumeration gives the size-$120$
+length-four orbit. The GAP path-orbit witness gives pointwise-stabilizer maxima
+$6$ and $3$ on five- and six-vertex paths. Since a cyclic-order stabilizer
+maps into $D_{2n}$, all simple cycles of lengths $5$ through $40$ have orbit
+strictly larger than $120$. A primitive multiplicity idempotent has internal
+$S_3$ orbit size three, so the global combined minimum is $3\cdot120=360$.
 Finally, Newton--Hensel iteration gives complete orthogonal idempotent systems
 at precision $p^6$ for $p=2,3,5$, while direct dimension comparison separates
 the Smith saturation and radical-power filtrations.  All calculations are
-recomputed by the accompanying exact certificate and regression tests.
+recomputed or explicitly cross-checked by the named exact witnesses and
+regression tests, subject to the boundary below.
 \end{proof}
 
 \paragraph{Claim boundary.}
 These are exact finite-dimensional algebra and finite permutation results.
-The independent GAP/AtlasRep comparison and full historical-manuscript builds
-remain runtime checks and are not promoted to completed results until observed.
+The literal-$480$ matrix provenance and full historical-manuscript PDF builds
+remain separate runtime checks. The $p$-adic assertion is executed through
+precision $p^6$, not promoted as an infinite computation.

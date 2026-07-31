@@ -123,11 +123,13 @@ def verify_cycles():
   for j,y in enumerate(pts):
    if i!=j and old.symp(x,y)==0:adj[i].append(j)
  for n,total,count in zip(range(3,7),[160,1740,18144,146880],[1,2,2,11]):
-  unseen=cycles(adj,n);assert len(unseen)==total;k=0
+  unseen=cycles(adj,n);assert len(unseen)==total;sizes=[]
   while unseen:
-   c=min(unseen);o={canon(tuple(g[x] for x in c)) for g in G};unseen-=o;k+=1
-  assert k==count
- assert CERT['pass1342_minimal_cycle_idempotent_selector']['minimal_combined_selector']['combined_orbit_size']==360
+   c=min(unseen);o={canon(tuple(g[x] for x in c)) for g in G};unseen-=o;sizes.append(len(o))
+  assert len(sizes)==count
+  frozen=CERT['pass1342_minimal_cycle_idempotent_selector']['cycle_orbits'][str(n)]
+  assert sorted(sizes)==sorted(row['orbit_size'] for row in frozen['orbits'])
+  assert sorted(51840//size for size in sizes)==sorted(row['stabilizer_order'] for row in frozen['orbits'])
 def main():
  section=sys.argv[1] if len(sys.argv)>1 else None
  table={'cartan':verify_cartan,'atlas':verify_atlas,'cycles':verify_cycles}

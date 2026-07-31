@@ -1,4 +1,4 @@
-# Passes 1379–1383 — the A₄ is a coincidence, the sweep's first measured precision, and both manuscripts are clean
+# Passes 1385–1389 — the A₄ is a coincidence, the sweep's first measured precision, and both manuscripts are clean
 
 Five results. Three are negatives, and two of those refute predictions I made in
 the previous batch. That is the point: every claim below was checked rather than
@@ -6,7 +6,7 @@ carried forward.
 
 ---
 
-## Pass 1379 — the A₄ is NOT structural, and the discriminator is the action
+## Pass 1385 — the A₄ is NOT structural, and the discriminator is the action
 
 Pass 1377 found A₄ appearing three times: as the derived subgroup of the frame
 stabiliser in `PSp(4,3)`, again as the derived subgroup at the `PGSp(4,3)` level,
@@ -52,7 +52,7 @@ only a group of **order 4** on it — not `A₄`, not `S₄`.
 
 ---
 
-## Pass 1380 — the selector/Steinberg obstruction is structural, not a bad intertwiner
+## Pass 1386 — the selector/Steinberg obstruction is structural, not a bad intertwiner
 
 The parallel track's Pass 1374 reports `Hom_G(ℚ¹²⁰, E₄ℚ¹⁶⁰) = 0`: the natural
 selector–flag bimodule annihilates the protected Steinberg sector, with maximum
@@ -82,7 +82,7 @@ further.
 
 ---
 
-## Pass 1381 — the boundary sweep's first measured precision: 2 of 5
+## Pass 1387 — the boundary sweep's first measured precision: 2 of 5
 
 I built the sweep, wired it into CI, and never validated one candidate — the same
 unfalsifiability the tool exists to prevent. Adjudicating the top five by reading
@@ -122,7 +122,7 @@ alternative is removed; the sweep drops from 34 candidates to 32.
 
 ---
 
-## Pass 1382 — the group grammar's retrospective rate is 8.4%, *lower* than I predicted
+## Pass 1388 — the group grammar's retrospective rate is 8.4%, *lower* than I predicted
 
 I predicted the uncited-duplication rate for group results would be "plausibly
 higher" than the 21% Pass 328 measured for code parameters, on the reasoning that
@@ -147,7 +147,7 @@ it is what catches BT781 → BT782 — but it is a scalpel, not the main vein.
 
 ---
 
-## Pass 1383 — both manuscripts are clean, and the erratum's target was real
+## Pass 1389 — both manuscripts are clean, and the erratum's target was real
 
 The false-cubic quarantine had never been pointed at the two manuscripts, where
 84 `theorem` environments live. Scanning `w33_paper.tex` (16,298 lines) and

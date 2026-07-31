@@ -274,17 +274,18 @@
    "runtime_boundary": "All four are exact GAP computations, run locally and certified in data/w33_pass1375_*.txt and data/w33_pass1376_*.txt. No CI-observed claim."
   },
   {
-   "range": "1379-1383",
+   "range": "1385-1389",
    "owner": "glue-track-negatives-and-measurement",
    "status": "COMPLETE",
+   "note": "RENUMBERED from 1379-1383: the parallel track pushed 1380-1384 to origin first, so it owns that range (earlier commit owns it, per CLAUDE.md).",
    "artifacts": {
-    "1379": "A4 coincidence REFUTED: frame A4 acts faithfully as A4 on a line's 4 points; all five A4 classes in Gamma(T)' have orbits [6,6] or [12] and no invariant 4-set",
-    "1380": "no maximal subgroup of W(E6) large enough to hold a 432-selector stabiliser contains the Steinberg-carrier S5; sharpens Pass 1374's Hom=0 to lattice level",
-    "1381": "first measured precision of the boundary sweep: 2/5 on the top five; BT808->BT809 confirmed stale; blockquoted-Open tool defect fixed",
-    "1382": "retrospective group-token duplication rate = 8.4%, LOWER than the 21% for code parameters, refuting the prediction",
-    "1383": "both manuscripts verified free of the false cubic (0/8 signatures); erratum target confirmed real from git history; repaired by 3efbd4a68"
+    "1385": "A4 coincidence REFUTED: frame A4 acts faithfully on a line's 4 points; all five A4 classes in Gamma(T)' have orbits [6,6] or [12], no invariant 4-set",
+    "1386": "no maximal subgroup of W(E6) able to hold a 432-selector stabiliser contains the Steinberg-carrier S5; sharpens Pass 1374's Hom=0 to lattice level",
+    "1387": "first measured precision of the boundary sweep: 2/5; BT808->BT809 confirmed stale; blockquoted-Open defect fixed",
+    "1388": "retrospective group-token duplication rate 8.4%, LOWER than 21% for code parameters, refuting the prediction",
+    "1389": "both manuscripts verified free of the false cubic (0/8 signatures); erratum target confirmed real from git history"
    },
-   "runtime_boundary": "Exact GAP and exact text scans run locally; certificates in data/w33_pass1379_1380_a4_selector.txt. No CI-observed claim."
+   "runtime_boundary": "Exact GAP and text scans run locally; certificate data/w33_pass1385_1386_a4_selector.txt. No CI-observed claim."
   }
  ],
  "rule": "A pass number is canonical only when registered here. Retracted or scope-corrected blocks remain registered for provenance but cannot contribute active theorem claims outside their stated scope."
