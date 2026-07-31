@@ -1,0 +1,67 @@
+% Portable shared insert for Passes 1537--1541.
+\begingroup
+\section*{Exact frame-dual continuation: modular lifts, parity cuts, and decoding}
+Let $M\in\{0,1\}^{540\times240}$ be the canonical frame--edge matrix and
+$K\in\{0,1\}^{45\times240}$ the intrinsic $K_{4,4}$ octet matrix.  The exact
+continuation of the frame-dual theorem gives
+\[
+ \operatorname{SNF}(K)=\operatorname{diag}(1^{44},3),\qquad
+ \operatorname{sat}(\operatorname{row}_{\mathbb Z}K)/
+ \operatorname{row}_{\mathbb Z}K\cong\mathbb Z/3.
+\]
+The saturation is obtained by adjoining the all-ones edge vector, since the sum
+of the forty-five octet rows is three times that vector.
+
+Writing $G_K=KK^{\mathsf T}$, one has
+\[
+ \operatorname{rank}_{2}G_K=14,\qquad
+ \operatorname{rank}_{3}G_K=15,\qquad
+ G_K^2=0\pmod 2,\pmod 3.
+\]
+The characteristic-two image is an absolutely irreducible $14$ and maps
+literally onto the Pass-1416 signed-turn image.  In characteristic three the
+rank-$15$ image is not irreducible: it splits canonically as
+$\mathbf1\oplus V_{14}$.
+
+The signed bipartition incidence of the octets yields an integral map
+$V=4U+Sd$ satisfying
+\[
+ dV^{\mathsf T}=0,\qquad L_1V^{\mathsf T}=4V^{\mathsf T},
+ \qquad\operatorname{rank}_{\mathbb Q}V=30.
+\]
+Thus the natural oriented $K_{4,4}$ lift realizes the coexact irreducible
+$30$, not either of the two degree-$45$ constituents fused into the full-Weyl
+$90$.
+
+For the unresolved nine-cover problem, every octet and every color obey the
+exact cardinality law
+\[
+ \sum_{f:\,|f\cap o|=2}x_{fc}=8.
+\]
+The $405$ equations are rational combinations of the edge equations, but modulo
+two they add $240$ independent global XOR directions: the parity rank rises
+from $2100$ to $2340$ (and from $2109$ to $2349$ after the standard $K_9$
+symmetry fixing).  This strengthens propagation without deciding existence.
+
+For a subset $X$ of octets, codeword weight is
+\[
+ w(X)=16|X|-2e(X)+4t(X),
+\]
+where $e(X)$ counts induced edges in the $45$-point overlap graph and $t(X)$
+counts distinguished edge-signature triples.  Ordinary and distinguished
+triangles have the same $|X|=3$ and $e(X)=3$ but weights $42$ and $46$, so the
+ordinary strongly regular association algebra alone cannot determine the full
+weight enumerator.
+
+Finally, the parity-check matrix $K$ gives exact finite decoding data: every
+single-edge error has a unique syndrome; among all $\binom{240}{2}$ double errors,
+$25440$ are uniquely identifiable and $3240$ are ambiguity-declared.  The
+conditional unique fraction is $212/239$.  The $540$ first weight-four
+dependencies are exactly the canonical frame matchings.  Seeded min-sum trials
+are retained only as a falsifier of naive threshold claims.
+
+\paragraph{Boundary.}
+These are finite module, lattice, parity, partial-enumerator, and decoder
+results.  The global Hoffman $9$-coloring and complete $2^{45}$ weight census
+remain open; no physical or quantum-code threshold is asserted.
+\endgroup
