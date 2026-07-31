@@ -1,0 +1,37 @@
+% Pass 1536 portable theorem insert.
+\section*{Pass 1536: the frame dual is the intrinsic $K_{4,4}$ code}
+Let $M\in\{0,1\}^{540\times240}$ be the canonical incidence matrix whose rows
+are the four-edge matchings attached to disjoint W33 line pairs. Over
+$\mathbb F_2$, the exact frame code and dual code are
+\[
+ \operatorname{row}(M)=[240,195,4]_2,
+ \qquad
+ \ker(M)=[240,45,16]_2.
+\]
+The dual has a canonical geometric parity-check basis. W33 contains exactly
+$45$ induced $K_{4,4}$ octets. If $K\in\{0,1\}^{45\times240}$ records their
+edge supports, then
+\[
+ MK^{\mathsf T}=0\pmod2,
+ \qquad
+ \operatorname{rank}_{2}K=45,
+ \qquad
+ \operatorname{row}_{\mathbb F_2}(K)=\ker_{\mathbb F_2}(M).
+\]
+An exhaustive exact parity optimization proves that the minimum dual weight is
+$16$ and that the $45$ rows of $K$ are exactly all minimum words. Thus the
+minimum words themselves form a basis of the complete modular frame cokernel.
+The parity-check realization is $(3,16)$-regular with Tanner girth six. Its
+minimum-word overlap and disjointness graphs are respectively
+$\operatorname{SRG}(45,32,22,24)$ and $\operatorname{SRG}(45,12,3,3)$, while
+\[
+ \operatorname{spec}(KK^{\mathsf T})=48^1\oplus12^{20}\oplus18^{24},
+ \qquad
+ \operatorname{rank}_{2}(KK^{\mathsf T})=14,
+ \qquad
+ \operatorname{rank}_{3}(KK^{\mathsf T})=15.
+\]
+BT766 owns the intrinsic octet census and overlap geometry; Pass 1416 owns the
+binary frame rank. The new result is their exact code-theoretic identification,
+including the exhaustive minimum-word theorem. This is a finite binary-code
+statement, not a decoding-threshold or physical-noise claim.
