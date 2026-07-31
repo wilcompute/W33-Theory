@@ -1,8 +1,5 @@
 from __future__ import annotations
 
-import collections
-import itertools
-
 import numpy as np
 
 from pass1370_1374 import core, modular_radicals
@@ -103,10 +100,15 @@ def ext_dimension(tensor, Fi, Fj, p):
 
 
 def analyze_prime(g, p):
-    tensor, factors, simples = simple_classes(g, p)
+    tensor, _factors, simples = simple_classes(g, p)
     profile = modular_radicals.analyze_one(g, core, "full", p)
-    split_dimension = sum(r["degree"] ** 2 for r in simples)
-    assert split_dimension == profile["semisimple_quotient_dimension"]
+    for rec in simples:
+        rec["endomorphism_field_dimension"] = hom_dimension(rec["factor"], rec["factor"], p)
+        numerator = rec["degree"] ** 2
+        assert numerator % rec["endomorphism_field_dimension"] == 0
+        rec["semisimple_component_dimension"] = numerator // rec["endomorphism_field_dimension"]
+    semisimple_dimension = sum(r["semisimple_component_dimension"] for r in simples)
+    assert semisimple_dimension == profile["semisimple_quotient_dimension"]
 
     ext = []
     matrix = []
@@ -123,7 +125,9 @@ def analyze_prime(g, p):
     for rec in simples:
         vertices.append({
             "index": rec["index"],
-            "simple_degree": rec["degree"],
+            "simple_degree_over_base_field": rec["degree"],
+            "endomorphism_field_dimension": rec["endomorphism_field_dimension"],
+            "semisimple_component_dimension": rec["semisimple_component_dimension"],
             "regular_composition_multiplicity": rec["regular_composition_multiplicity"],
             "annihilator_codimension": 83 - len(rec["kernel_key"]),
             "annihilator_sha256": sha(rec["kernel_key"]),
@@ -133,7 +137,8 @@ def analyze_prime(g, p):
         "prime": p,
         "vertices": vertices,
         "vertex_count": len(vertices),
-        "split_semisimple_dimension": split_dimension,
+        "semisimple_quotient_dimension_reconstructed": semisimple_dimension,
+        "all_simple_endomorphism_fields_split": all(x["endomorphism_field_dimension"] == 1 for x in vertices),
         "ext1_matrix_source_rows_target_columns": matrix,
         "arrows": arrows,
         "arrow_dimension_sum": sum(x["ext1_dimension"] for x in arrows),
@@ -153,6 +158,7 @@ def analyze():
         "convention": "matrix entry (i,j) is dim Ext^1(S_i,S_j), hence arrows i -> j",
         "method": (
             "Simple modules are deduplicated by their exact annihilator kernels in the modular regular module. "
+            "Their endomorphism fields reconstruct the semisimple quotient without assuming splitness. "
             "For every ordered pair, Ext^1 is computed as algebra derivations A -> Hom(S_i,S_j) modulo inner derivations, "
             "using all 83 basis products and sparse finite-field elimination."
         ),
