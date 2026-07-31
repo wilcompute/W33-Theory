@@ -33,8 +33,14 @@ def test_geometric_single_splitter():
     record = result["pass1366_geometric_defect_splitter"]
     assert record["intersecting_shell_splitter"]["ordered_pairs"] == 108
     assert record["misaligned_shell_splitter"]["ordered_pairs"] == 432
+    expected = {
+        "T": 79,
+        "T_plus_S2": 81,
+        "T_plus_S4": 81,
+        "T_plus_S2_plus_S4_as_one_generator": 83,
+    }
     for profile in record["closure_dimensions_mod_good_primes"].values():
-        assert list(profile.values()) == [79, 81, 81, 83]
+        assert profile == expected
 
 
 def test_rational_orbital_refinement():
