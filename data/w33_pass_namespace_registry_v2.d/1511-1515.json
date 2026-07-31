@@ -1,0 +1,14 @@
+{
+  "schema": "w33.pass_namespace_registry.fragment.v2",
+  "status": "COMPLETE",
+  "range": "1511-1515",
+  "owner": "exact-cover-resolution-correction-track",
+  "artifacts": {
+    "1511": "explicit disjoint exact-cover pair and diagnosis of the frame-0-conditioned sampling artifact",
+    "1512": "all 327 frozen cover orbit types have disjoint partners; 13648 distinct partners",
+    "1513": "exact disjointness graph, clique number three, and explicit four-cover packing",
+    "1514": "all 228 C2 cover orbits use the class-45 involution with fixed-frame profile 84/12",
+    "1515": "300x240 residual 5-regular fractional exact cover with exhaustive no-integral-fifth-layer certificate"
+  },
+  "boundary": "The selected four-packing has no fifth cover; the global packing number over all possible or undiscovered cover orbits remains open."
+}
