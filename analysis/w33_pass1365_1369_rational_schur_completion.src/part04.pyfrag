@@ -1,0 +1,147 @@
+            "T": 79,
+            "T_plus_S2": closure_dimension(context, terwilliger, splitters["two"], prime),
+            "T_plus_S4": closure_dimension(context, terwilliger, splitters["four"], prime),
+            "T_plus_S2_plus_S4_as_one_generator": closure_dimension(
+                context, terwilliger, splitters["combined"], prime
+            ),
+        }
+        assert closure[str(prime)] == {
+            "T": 79,
+            "T_plus_S2": 81,
+            "T_plus_S4": 81,
+            "T_plus_S2_plus_S4_as_one_generator": 83,
+        }
+
+    orbital_center_dimension = exact_center_dimension_orbital(context)
+    refinement = refine_scalar_sectors(
+        context, t_profile["records"], splitters["combined"]
+    )
+    assert orbital_center_dimension == len(refinement["full_records"]) == 14
+
+    tensor_payload = json.dumps(
+        context.sparse_tensor, separators=(",", ":")
+    ) + "\n"
+    tensor_hash = hashlib.sha256(tensor_payload.encode()).hexdigest()
+
+    relations = geometry["relations"]
+    block_counts = [[0] * 5 for _ in range(5)]
+    for i, j in context.representatives:
+        block_counts[context.shell_of_point[i]][context.shell_of_point[j]] += 1
+    assert block_counts == [
+        [1, 1, 1, 1, 1],
+        [1, 2, 1, 1, 2],
+        [1, 1, 8, 4, 5],
+        [1, 1, 4, 6, 8],
+        [1, 2, 5, 8, 16],
+    ]
+
+    t_records_public = [
+        {key: value for key, value in record.items() if key != "projector"}
+        for record in t_profile["records"]
+    ]
+
+    result = {
+        "schema": "w33.pass1365_1369.rational_schur_completion.v1",
+        "status": "PASS",
+        "pass1365_rational_terwilliger_wedderburn": {
+            "center_dimension_over_Q": 10,
+            "generic_center_coefficients": t_profile["generic_coefficients"],
+            "generic_center_characteristic_polynomial": "ten distinct rational linear factors",
+            "generic_center_characteristic_polynomial_sha256": t_profile[
+                "generic_characteristic_polynomial_sha256"
+            ],
+            "rational_wedderburn": "Q^3 + M2(Q)^2 + M3(Q)^3 + M4(Q) + M5(Q)",
+            "blocks": t_records_public,
+            "split_proof": (
+                "Each rational central component contains z E_s^* of module rank equal "
+                "to the split multiplicity; this forces division degree one."
+            ),
+        },
+        "pass1366_geometric_defect_splitter": {
+            "intersecting_shell_splitter": {
+                "orbital": splitters["orbital_two"],
+                "ordered_pairs": splitters["two_orbit_size"],
+                "definition": (
+                    "Two shell-2 selectors have disjoint carrier lines; their two base-line "
+                    "intersection points are paired by the base matching; and transversal "
+                    "transport carries the first matching to the second."
+                ),
+            },
+            "misaligned_shell_splitter": {
+                "orbital": splitters["orbital_four"],
+                "ordered_pairs": splitters["four_orbit_size"],
+                "definition": (
+                    "Two shell-4 carrier lines meet in q; after pulling the partners of q "
+                    "back to the base line through the two unique transversals, the pulled "
+                    "partners are equal."
+                ),
+            },
+            "single_splitter": "S = S2 + S4",
+            "closure_dimensions_mod_good_primes": closure,
+            "exact_conclusion": "Alg_Q(A,D,S) is the full 83-dimensional H-orbital algebra.",
+        },
+        "pass1367_rational_orbital_wedderburn": {
+            "center_dimension_over_Q": orbital_center_dimension,
+            "rational_wedderburn": "Q^7 + M2(Q)^2 + M3(Q)^3 + M4(Q) + M5(Q)",
+            "blocks": refinement["full_records"],
+            "scalar_refinement": refinement["refinement"],
+            "rational_projector_formulas": refinement["projector_formulas"],
+            "defect_explanation": (
+                "The four added algebra dimensions are exactly the center increase 14-10. "
+                "All seven non-scalar Terwilliger blocks remain unchanged; the three scalar "
+                "blocks split into 2, 2, and 3 rational scalar blocks."
+            ),
+        },
+        "pass1368_coherent_configuration": {
+            "fibers": 5,
+            "fiber_sizes": [1, 2, 36, 27, 54],
+            "orbitals": 83,
+            "symmetric_orbitals": sum(
+                index == transpose for index, transpose in enumerate(context.transpose)
+            ),
+            "transpose_pairs": sum(
+                index != transpose for index, transpose in enumerate(context.transpose)
+            ) // 2,
+            "shell_block_orbital_counts": block_counts,
+            "nonzero_intersection_constants": len(context.sparse_tensor),
+            "sparse_intersection_tensor_sha256": tensor_hash,
+            "ordinary_generators": ["A", "D", "S"],
+        },
+        "pass1369_boundary": {
+            "literature": (
+                "Hanaki--Yoshikawa compare Terwilliger and base-stabilizer centralizer "
+                "algebras in general. The nearby 2024 flag scheme concerns 160 incident "
+                "point-line flags, not this 120 line-matching selector bundle. No priority "
+                "claim is made."
+            ),
+            "physics": (
+                "This is a finite rational matrix-algebra and coherent-configuration theorem. "
+                "It does not choose a preferred matching, create H4/600-cell adjacency, or "
+                "validate cosmological, Standard-Model, or hardware claims."
+            ),
+        },
+    }
+    return result
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--output", type=Path, default=DEFAULT_OUT)
+    parser.add_argument("--check", action="store_true")
+    parser.add_argument("--verify-only", action="store_true")
+    args = parser.parse_args()
+
+    result = build()
+    encoded = json.dumps(result, indent=2, sort_keys=True) + "\n"
+    digest = hashlib.sha256(encoded.encode()).hexdigest()
+    if args.check:
+        if not args.output.exists() or args.output.read_text() != encoded:
+            raise SystemExit(f"certificate drift: {args.output}")
+    elif not args.verify_only:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(encoded)
+    print(f"PASS 1365-1369: rational Schur completion sha256={digest}")
+
+
+if __name__ == "__main__":
+    main()

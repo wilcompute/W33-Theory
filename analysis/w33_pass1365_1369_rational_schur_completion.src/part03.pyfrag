@@ -1,0 +1,160 @@
+        queue = collections.deque([basis.vectors[-1]])
+    else:
+        queue = collections.deque()
+
+    while queue:
+        vector = queue.popleft()
+        for generator in generators:
+            for product in (
+                context.mul_mod(vector, generator, prime),
+                context.mul_mod(generator, vector, prime),
+            ):
+                if basis.add(product):
+                    queue.append(basis.vectors[-1])
+    return len(basis.vectors)
+
+
+def exact_center_dimension_orbital(context):
+    equations = []
+    for right in range(83):
+        for output in range(83):
+            row = context.tensor[output, :, right] - context.tensor[output, right, :]
+            if np.any(row):
+                equations.append([int(value) for value in row])
+    matrix = sp.Matrix(equations)
+    rank = matrix.rank()
+    assert rank == 69
+    assert 83 - rank == 14
+    return 14
+
+
+def refine_scalar_sectors(context, t_records, splitter):
+    zero = sp.zeros(83, 1)
+    scalar = {
+        record["isotypic_dimension"]: record
+        for record in t_records
+        if record["simple_block_size"] == 1
+    }
+    assert set(scalar) == {3, 12, 14}
+
+    for record in t_records:
+        projector = record["projector"]
+        assert context.mul_q(projector, splitter) == context.mul_q(splitter, projector)
+
+    refined = []
+
+    z3 = scalar[3]["projector"]
+    b3 = context.mul_q(z3, splitter)
+    assert context.mul_q(b3 - 3 * z3, b3 + 3 * z3) == zero
+    p1 = (b3 + 3 * z3) / 6
+    p2a = (3 * z3 - b3) / 6
+    refined.extend([(p1, 1, 3), (p2a, 2, -3)])
+
+    z12 = scalar[12]["projector"]
+    b12 = context.mul_q(z12, splitter)
+    assert context.mul_q(b12, b12 + 3 * z12) == zero
+    p4a = -b12 / 3
+    p8a = z12 + b12 / 3
+    refined.extend([(p4a, 4, -3), (p8a, 8, 0)])
+
+    z14 = scalar[14]["projector"]
+    b14 = context.mul_q(z14, splitter)
+    assert context.mul_q(
+        context.mul_q(b14 + 4 * z14, b14 - 2 * z14),
+        b14 + z14,
+    ) == zero
+    p2b = context.mul_q(b14 - 2 * z14, b14 + z14) / 18
+    p4b = context.mul_q(b14 + 4 * z14, b14 + z14) / 18
+    p8b = -context.mul_q(b14 + 4 * z14, b14 - 2 * z14) / 9
+    refined.extend([(p2b, 2, -4), (p4b, 4, 2), (p8b, 8, -1)])
+
+    refined_projectors = []
+    for projector, expected_rank, eigenvalue in refined:
+        assert context.mul_q(projector, projector) == projector
+        assert context.trace_q(projector) == expected_rank
+        assert context.mul_q(projector, splitter) == eigenvalue * projector
+        refined_projectors.append(projector)
+    for i, left in enumerate(refined_projectors):
+        for j, right in enumerate(refined_projectors):
+            assert context.mul_q(left, right) == (left if i == j else zero)
+
+    non_scalar = [record for record in t_records if record["simple_block_size"] > 1]
+    full_records = [
+        {
+            "simple_block_size": 1,
+            "module_multiplicity": rank,
+            "isotypic_dimension": rank,
+            "algebra_component_dimension": 1,
+            "splitter_eigenvalue": eigenvalue,
+        }
+        for _projector, rank, eigenvalue in refined
+    ] + [
+        {
+            "simple_block_size": record["simple_block_size"],
+            "module_multiplicity": record["module_multiplicity"],
+            "isotypic_dimension": record["isotypic_dimension"],
+            "algebra_component_dimension": record["algebra_component_dimension"],
+            "splitter_eigenvalue": None,
+        }
+        for record in non_scalar
+    ]
+    full_records.sort(key=lambda record: (
+        record["simple_block_size"],
+        record["module_multiplicity"],
+        record["isotypic_dimension"],
+        record["splitter_eigenvalue"] if record["splitter_eigenvalue"] is not None else 999,
+    ))
+    expected = [
+        (1, 1, 1), (1, 2, 2), (1, 2, 2),
+        (1, 4, 4), (1, 4, 4), (1, 8, 8), (1, 8, 8),
+        (2, 1, 2), (2, 2, 4),
+        (3, 4, 12), (3, 4, 12), (3, 8, 24),
+        (4, 8, 32), (5, 1, 5),
+    ]
+    assert [
+        (record["simple_block_size"], record["module_multiplicity"], record["isotypic_dimension"])
+        for record in full_records
+    ] == expected
+    assert sum(record["algebra_component_dimension"] for record in full_records) == 83
+    assert sum(record["isotypic_dimension"] for record in full_records) == 120
+
+    return {
+        "full_records": full_records,
+        "refinement": {
+            "T_scalar_rank_3": [
+                {"orbital_rank": 1, "splitter_eigenvalue": 3},
+                {"orbital_rank": 2, "splitter_eigenvalue": -3},
+            ],
+            "T_scalar_rank_12": [
+                {"orbital_rank": 4, "splitter_eigenvalue": -3},
+                {"orbital_rank": 8, "splitter_eigenvalue": 0},
+            ],
+            "T_scalar_rank_14": [
+                {"orbital_rank": 2, "splitter_eigenvalue": -4},
+                {"orbital_rank": 4, "splitter_eigenvalue": 2},
+                {"orbital_rank": 8, "splitter_eigenvalue": -1},
+            ],
+        },
+        "projector_formulas": {
+            "rank_3": ["z3(S+3)/6", "z3(3-S)/6"],
+            "rank_12": ["-z12 S/3", "z12(1+S/3)"],
+            "rank_14": [
+                "z14(S-2)(S+1)/18",
+                "z14(S+4)(S+1)/18",
+                "-z14(S+4)(S-2)/9",
+            ],
+        },
+    }
+
+
+def build():
+    geometry = previous.build_geometry()
+    terwilliger = previous.build_terwilliger(geometry)
+    context = OrbitalContext(geometry)
+
+    t_profile = central_projectors_terwilliger(context, terwilliger)
+    splitters = geometric_splitters(context, geometry)
+
+    closure = {}
+    for prime in PRIMES:
+        closure[str(prime)] = {

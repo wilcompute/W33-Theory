@@ -1,0 +1,160 @@
+        "records": records,
+        "generic_coefficients": list(coefficients),
+        "generic_characteristic_polynomial_sha256": characteristic_hash,
+        "center_dimension": 10,
+        "evaluations": evaluations,
+    }
+
+
+def reconstruct_selector_geometry(geometry):
+    lines = geometry["lines"]
+    adjacency = geometry["adjacency"]
+    line_sets = [set(line) for line in lines]
+    matchings = [previous.perfect_matchings4(line) for line in lines]
+
+    def transversal_map(source, target):
+        mapping = {}
+        for point in lines[source]:
+            neighbors = [other for other in lines[target] if adjacency[point, other]]
+            assert len(neighbors) == 1
+            mapping[point] = neighbors[0]
+        return mapping
+
+    transports = {}
+    base_transversals = {}
+    for source in range(40):
+        for target in range(40):
+            if source != target and line_sets[source].isdisjoint(line_sets[target]):
+                mapping = transversal_map(source, target)
+                transports[(source, target)] = tuple(
+                    matchings[target].index(tuple(sorted(
+                        tuple(sorted((mapping[a], mapping[b]))) for a, b in matching
+                    )))
+                    for matching in matchings[source]
+                )
+                if source == 0:
+                    base_transversals[target] = mapping
+
+    return lines, line_sets, matchings, transports, base_transversals
+
+
+def geometric_splitters(context, geometry):
+    lines, line_sets, matchings, transports, base_transversals = reconstruct_selector_geometry(geometry)
+    relations = geometry["relations"]
+    base_line = line_sets[0]
+    base_matching = matchings[0][0]
+
+    def shell(selector):
+        return next(shell for shell, matrix in enumerate(relations) if matrix[0, selector])
+
+    def matching_partner(matching, point):
+        for a, b in matching:
+            if a == point:
+                return b
+            if b == point:
+                return a
+        raise AssertionError("point absent from matching")
+
+    def base_matched(a, b):
+        return any(set(edge) == {a, b} for edge in base_matching)
+
+    def splitter_two(i, j):
+        if shell(i) != 2 or shell(j) != 2:
+            return False
+        li, mi = divmod(i, 3)
+        lj, mj = divmod(j, 3)
+        if not line_sets[li].isdisjoint(line_sets[lj]):
+            return False
+        pi = next(iter(line_sets[li] & base_line))
+        pj = next(iter(line_sets[lj] & base_line))
+        return base_matched(pi, pj) and transports[(li, lj)][mi] == mj
+
+    def splitter_four(i, j):
+        if shell(i) != 4 or shell(j) != 4:
+            return False
+        li, mi = divmod(i, 3)
+        lj, mj = divmod(j, 3)
+        intersection = line_sets[li] & line_sets[lj]
+        if len(intersection) != 1:
+            return False
+        point = next(iter(intersection))
+        inv_i = {value: key for key, value in base_transversals[li].items()}
+        inv_j = {value: key for key, value in base_transversals[lj].items()}
+        partner_i = matching_partner(matchings[li][mi], point)
+        partner_j = matching_partner(matchings[lj][mj], point)
+        return inv_i[partner_i] == inv_j[partner_j]
+
+    splitter_two_orbitals = [
+        orbital for orbital, (i, j) in enumerate(context.representatives)
+        if splitter_two(i, j)
+    ]
+    splitter_four_orbitals = [
+        orbital for orbital, (i, j) in enumerate(context.representatives)
+        if splitter_four(i, j)
+    ]
+    assert splitter_two_orbitals == [18]
+    assert splitter_four_orbitals == [63]
+
+    orbital_two = splitter_two_orbitals[0]
+    orbital_four = splitter_four_orbitals[0]
+    assert context.transpose[orbital_two] == orbital_two
+    assert context.transpose[orbital_four] == orbital_four
+    two = context.unit(orbital_two)
+    four = context.unit(orbital_four)
+    combined = two + four
+    return {
+        "orbital_two": orbital_two,
+        "orbital_four": orbital_four,
+        "two": two,
+        "four": four,
+        "combined": combined,
+        "two_orbit_size": len(context.orbits[orbital_two]),
+        "four_orbit_size": len(context.orbits[orbital_four]),
+    }
+
+
+class ModularBasis:
+    def __init__(self, prime, dimension):
+        self.prime = prime
+        self.dimension = dimension
+        self.pivots = {}
+        self.vectors = []
+
+    def add(self, vector):
+        p = self.prime
+        vector = np.array(vector, dtype=np.int64) % p
+        for pivot in sorted(self.pivots):
+            coefficient = int(vector[pivot])
+            if coefficient:
+                vector = (vector - coefficient * self.pivots[pivot]) % p
+        nonzero = np.flatnonzero(vector)
+        if not len(nonzero):
+            return False
+        pivot = int(nonzero[0])
+        vector = vector * pow(int(vector[pivot]), -1, p) % p
+        for old_pivot, old in list(self.pivots.items()):
+            coefficient = int(old[pivot])
+            if coefficient:
+                self.pivots[old_pivot] = (old - coefficient * vector) % p
+        self.pivots[pivot] = vector
+        self.vectors.append(vector)
+        return True
+
+
+def closure_dimension(context, terwilliger, extra, prime):
+    evaluations = np.array([
+        [int(matrix[i, j]) % prime for i, j in context.representatives]
+        for matrix in terwilliger["exact_words"]
+    ], dtype=np.int64)
+    basis = ModularBasis(prime, 83)
+    for vector in evaluations:
+        basis.add(vector)
+    assert len(basis.vectors) == 79
+
+    generators = [
+        np.array([int(matrix[i, j]) % prime for i, j in context.representatives], dtype=np.int64)
+        for matrix in (terwilliger["A"], terwilliger["D"])
+    ]
+    extra_mod = context.vector_mod(extra, prime)
+    generators.append(extra_mod)
+    if basis.add(extra_mod):
