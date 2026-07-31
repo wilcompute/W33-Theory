@@ -1,0 +1,420 @@
+{
+  "base_certificates": {
+    "1370_1374_sha256": "284d9d7f9462a83f0709734d48a3ccf3284da2cb6b5ede159da5c719b84332b9",
+    "1500_1504_sha256": "757b01bacbfc157484851ec76cc3322204116c3aeb9cdf81851a2dbee1a56b3e"
+  },
+  "pass1516_radical_graded_relations": {
+    "headline": "The quadratic multiplication kernels have dimensions 29 at p=2 and 70 at p=3. Characteristic 3 has the substantially denser relation ideal already in degree two.",
+    "p2": {
+      "associated_graded_radical_layer_dimensions": [
+        38,
+        29,
+        16,
+        0
+      ],
+      "boundary": "These are relation spaces in the radical-associated graded algebra. They do not by themselves separate minimal higher-degree generators from consequences of lower-degree relations, and they do not yet give the complete Ext^2/Yoneda multiplication table.",
+      "connected_components": [
+        {
+          "radical_head_dimension": 4,
+          "semisimple_dimension": 3,
+          "simple_degrees": [
+            1,
+            1,
+            1
+          ],
+          "vertices": [
+            0,
+            3,
+            6
+          ]
+        },
+        {
+          "radical_head_dimension": 4,
+          "semisimple_dimension": 5,
+          "simple_degrees": [
+            1,
+            2
+          ],
+          "vertices": [
+            1,
+            9
+          ]
+        },
+        {
+          "radical_head_dimension": 2,
+          "semisimple_dimension": 2,
+          "simple_degrees": [
+            1,
+            1
+          ],
+          "vertices": [
+            2,
+            4
+          ]
+        },
+        {
+          "radical_head_dimension": 6,
+          "semisimple_dimension": 10,
+          "simple_degrees": [
+            1,
+            3
+          ],
+          "vertices": [
+            5,
+            12
+          ]
+        },
+        {
+          "radical_head_dimension": 13,
+          "semisimple_dimension": 9,
+          "simple_degrees": [
+            1,
+            2,
+            2
+          ],
+          "vertices": [
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "radical_head_dimension": 0,
+          "semisimple_dimension": 9,
+          "simple_degrees": [
+            3
+          ],
+          "vertices": [
+            11
+          ]
+        }
+      ],
+      "interpretation": "For S=A/J and B=J/J^2, the canonical tensor-algebra map T_S(B) -> gr_J(A) is surjective. The listed kernel dimensions are therefore exact homogeneous relation-space dimensions.",
+      "quadratic_path_dimension": 45,
+      "quadratic_radical_layer_dimension": 16,
+      "quadratic_relation_dimension": 29,
+      "relation_kernel_dimensions": [
+        0,
+        0,
+        29,
+        59
+      ],
+      "simple_degrees": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        3
+      ],
+      "tensor_path_dimensions_degrees_0_through_loewy": [
+        38,
+        29,
+        45,
+        59
+      ]
+    },
+    "p3": {
+      "associated_graded_radical_layer_dimensions": [
+        11,
+        23,
+        22,
+        13,
+        10,
+        4,
+        0
+      ],
+      "boundary": "These are relation spaces in the radical-associated graded algebra. They do not by themselves separate minimal higher-degree generators from consequences of lower-degree relations, and they do not yet give the complete Ext^2/Yoneda multiplication table.",
+      "connected_components": [
+        {
+          "radical_head_dimension": 23,
+          "semisimple_dimension": 11,
+          "simple_degrees": [
+            1,
+            1,
+            1,
+            2,
+            2
+          ],
+          "vertices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "interpretation": "For S=A/J and B=J/J^2, the canonical tensor-algebra map T_S(B) -> gr_J(A) is surjective. The listed kernel dimensions are therefore exact homogeneous relation-space dimensions.",
+      "quadratic_path_dimension": 92,
+      "quadratic_radical_layer_dimension": 22,
+      "quadratic_relation_dimension": 70,
+      "relation_kernel_dimensions": [
+        0,
+        0,
+        70,
+        320,
+        1221,
+        4556,
+        16952
+      ],
+      "simple_degrees": [
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "tensor_path_dimensions_degrees_0_through_loewy": [
+        11,
+        23,
+        92,
+        333,
+        1231,
+        4560,
+        16952
+      ]
+    },
+    "theorem": "Exact tensor-algebra relation defects in characteristics 2 and 3"
+  },
+  "pass1517_coordinate_free_fourier": {
+    "boundary": "The frozen U and U^{-1} hashes certify one deterministic trivialization, not an invariant under arbitrary changes of models for the irreducibles.",
+    "canonical_evaluation_map": "direct_sum Hom_H(W_chi,V) tensor W_chi -> V",
+    "canonical_isotypic_ranks": [
+      1,
+      2,
+      2,
+      4,
+      4,
+      8,
+      8,
+      2,
+      4,
+      12,
+      12,
+      24,
+      32,
+      5
+    ],
+    "coordinate_free_content": "The fourteen central isotypic summands and the evaluation isomorphism are canonical. A Fourier matrix is only a choice of bases in the two factors of each summand.",
+    "dual_image_dimension_sum_d_squared": 335,
+    "isotypic_count": 14,
+    "module_dimension_sum_m_times_d": 120,
+    "multiplicity_irreducible_pairs": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        5,
+        1
+      ]
+    ],
+    "selector_commutant_dimension_sum_m_squared": 83,
+    "tensor_factorization_gauge_group_dimension": 404,
+    "theorem": "Basis-free double-centralizer form of the selector Fourier decomposition"
+  },
+  "pass1518_apartment_d4_obstruction": {
+    "boundary": "The cardinality argument proves nonexistence of a global rank-preserving lift. It does not compute the full rectangle-by-rectangle S3 residual cocycle.",
+    "bridge_census_alone_has_cardinality_obstruction": false,
+    "correct_symmetry_object": "Local D4 transport must be chart-dependent (an action groupoid with a residual-label cocycle), or it must leave the frozen 24-sheet family.",
+    "global_rank_preserving_d4_lift_exists": false,
+    "local_mask_orbit_sizes": [
+      4,
+      4
+    ],
+    "local_mask_orbits": [
+      [
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ]
+      ]
+    ],
+    "proof": "Every orbit of any D4-action on the 24 sheets that projects to the standard action on masks must project onto a four-element mask orbit, so each invariant rank level must have cardinality divisible by four. The unique rank-76 sheet violates this necessary condition.",
+    "sheet_rank_count_mod_4": {
+      "70": 0,
+      "76": 1,
+      "81": 3
+    },
+    "sheet_rank_distribution": {
+      "70": 4,
+      "76": 1,
+      "81": 19
+    },
+    "sign_extended_bridge_distribution": {
+      "70": 16,
+      "76": 4,
+      "81": 76
+    },
+    "theorem": "Cardinality obstruction to a global rank-preserving D4 lift"
+  },
+  "pass1519_maximal_order_arithmetic": {
+    "annihilator_bound": "(56465298353599514565459914148042866857053267066089785123802185728) M_O is contained in the conductor f=(O:M_O)",
+    "boundary": "The index and discriminant determine prime support and total local lengths, but not the blockwise conductor exponents, Bass/Eichler status, or the Smith invariants of M_O/O. Those require the frozen transition matrix itself.",
+    "componentwise_labeled_locally_free_class_group": "trivial",
+    "componentwise_reason": "Each labeled block M_n(Z) is Morita equivalent to Z, whose ideal class group is trivial.",
+    "conductor_support_subset": [
+      2,
+      3
+    ],
+    "good_local_primes": "all primes other than 2 and 3",
+    "index": "56465298353599514565459914148042866857053267066089785123802185728",
+    "local_defect_lengths": {
+      "2": 36,
+      "3": 113
+    },
+    "local_equality_away_from_2_3": true,
+    "maximal_order_block_sizes": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      3,
+      3,
+      3,
+      4,
+      5
+    ],
+    "orbital_discriminant_valuations": {
+      "2": 72,
+      "3": 226
+    },
+    "theorem": "Prime support, conductor bound, and componentwise class triviality",
+    "unlabeled_equal_block_permutation_group_order": 60480,
+    "z_rank": 83
+  },
+  "pass1520_equivariant_morita": {
+    "G_action": "g.x = rho_V(g) x rho_W(g)^(-1), and similarly on Y",
+    "G_fixed_cross_map_present": false,
+    "apartment_generator_span_dimension": 75,
+    "boundary": "This does not make any individual apartment bridge G-invariant, nor does it supply a preferred G-fixed identification between V and W (their dimensions differ).",
+    "equivalence_bimodule": "X = Hom_Q(W,V)",
+    "equivalence_bimodule_dimension": 9720,
+    "equivariant_Brauer_obstruction": "zero",
+    "fixed_cross_map_interpretation": "Hom_G(W,V)=0 forbids a G-fixed bridge element. It does not forbid the full Hom(W,V) space from being a G-equivariant equivalence bimodule.",
+    "inverse_bimodule": "Y = Hom_Q(V,W)",
+    "left_algebra": "End_Q(V) = M_120(Q)",
+    "pairing_witnesses": {
+      "End_V_matrix_unit": "E_ij = x_i0 y_0j",
+      "End_W_matrix_unit": "F_ab = y_a0 x_0b"
+    },
+    "pairings_G_equivariant": true,
+    "right_algebra": "End_Q(W) = M_81(Q)",
+    "saturated_bimodule_dimension": 9720,
+    "selector_dimension": 120,
+    "signed_steinberg_dimension": 81,
+    "strict_G_equivariant_Morita_context": true,
+    "theorem": "The saturated full-matrix Morita context is G-equivariant; the fixed-bridge obstruction is not a Morita obstruction",
+    "upgrade": "Pass 1504's 75 gauge bridges are a generating frame, not an invariant bimodule. Their corner saturation is the full Hom(W,V), which is canonically G-stable and supplies the equivariant Morita equivalence."
+  },
+  "schema": "w33.pass1516_1520.five_frontiers.v1",
+  "sha256": "c946554a7e2af52440636263f85e8f8f75e02c6f4fadc8211d4481ea67256f91",
+  "status": "PASS"
+}

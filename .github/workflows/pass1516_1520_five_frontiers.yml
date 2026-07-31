@@ -1,0 +1,60 @@
+name: Passes 1516-1520 Five Derived Frontiers
+
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1516_1520_five_frontiers.py'
+      - 'analysis/BT1516_BT1520_five_frontiers.md'
+      - 'data/w33_pass1516_1520_five_frontiers.json'
+      - 'data/w33_pass_namespace_registry_v2.d/1516-1520.json'
+      - 'paper/sections/sec_bt1516_bt1520_five_frontiers.tex'
+      - 'paper/sections/sec_complement_duality.tex'
+      - 'tests/test_w33_pass1516_1520_five_frontiers.py'
+      - '.github/workflows/pass1516_1520_five_frontiers.yml'
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass1516_1520_five_frontiers.py'
+      - 'analysis/BT1516_BT1520_five_frontiers.md'
+      - 'data/w33_pass1516_1520_five_frontiers.json'
+      - 'data/w33_pass_namespace_registry_v2.d/1516-1520.json'
+      - 'paper/sections/sec_bt1516_bt1520_five_frontiers.tex'
+      - 'paper/sections/sec_complement_duality.tex'
+      - 'tests/test_w33_pass1516_1520_five_frontiers.py'
+      - '.github/workflows/pass1516_1520_five_frontiers.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-derived-certificate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m py_compile analysis/w33_pass1516_1520_five_frontiers.py
+      - run: python analysis/w33_pass1516_1520_five_frontiers.py --check
+      - run: python -m pip install --disable-pip-version-check pytest
+      - run: pytest -q tests/test_w33_pass1516_1520_five_frontiers.py
+
+  insert-portability:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq texlive-latex-base texlive-latex-recommended
+      - run: |
+          d=$(mktemp -d)
+          cp paper/sections/sec_bt1516_bt1520_five_frontiers.tex "$d/insert.tex"
+          cat > "$d/minimal.tex" <<'TEX'
+          \documentclass{article}
+          \usepackage{amsmath,amssymb}
+          \begin{document}
+          \input{insert}
+          \end{document}
+          TEX
+          (cd "$d" && pdflatex -interaction=nonstopmode -halt-on-error minimal.tex)
