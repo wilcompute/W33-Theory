@@ -1,0 +1,29 @@
+name: W33 Passes 1421-1425 exact regression
+
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1421_1424_outer_integral_cover_extension.py'
+      - 'data/w33_pass1421_1424_outer_integral_cover_extension.json'
+      - 'tests/test_w33_pass1421_1424_outer_integral_cover_extension.py'
+      - 'analysis/BT1425_full_weyl_integral_cover_addendum.tex'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass1421_1424_outer_integral_cover_extension.py'
+      - 'data/w33_pass1421_1424_outer_integral_cover_extension.json'
+      - 'tests/test_w33_pass1421_1424_outer_integral_cover_extension.py'
+
+jobs:
+  exact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy sympy pytest
+      - run: python analysis/w33_pass1421_1424_outer_integral_cover_extension.py --check
+      - run: pytest -q tests/test_w33_pass1421_1424_outer_integral_cover_extension.py
