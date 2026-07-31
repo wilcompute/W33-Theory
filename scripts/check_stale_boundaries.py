@@ -57,6 +57,34 @@ RE_INLINE_OPEN = re.compile(r"^[ 	]*Open:", re.I | re.M)
 # already-corrected files: their boundary carries a pointer now
 RESOLVED_MARKERS = ("ALREADY RESOLVED", "RESOLVED (Pass", "CORRECTION AND RESOLUTION")
 
+# SCOPE DISCLAIMERS ARE NOT OPEN QUESTIONS (measured, Pass 1395).
+#
+# Adjudicating the first twelve candidates by hand showed that four of them --
+# BT663, BT665, BT666, BT669 -- were flagged on boundary sections that ask
+# nothing at all.  They read "This theorem does not claim W(G2) acts on the
+# original 160 Levi flags" or "Do not claim that the raw complement is Q4":
+# they FENCE a result rather than leave one open.  A later file in the same
+# programme naturally repeats their vocabulary, so they flag every time and can
+# never be resolved, because there is nothing to resolve.
+#
+# That was a third of the sample and the single largest false-positive source.
+# A boundary is treated as a live question only if it contains an interrogative
+# or a forward commitment; a section that is purely disclaimer is skipped.
+RE_QUESTION = re.compile(
+    r"\?|(open|unknown|unsettled|not (?:yet )?(?:known|settled|determined)|"
+    r"remains? open|to be determined|next (?:experiment|step)|should (?:build|compute|test)|"
+    r"we do not know|undecided|conjectur)", re.I)
+RE_DISCLAIMER = re.compile(
+    r"(do(?:es)? not claim|do not claim|is not claimed|no claim is made|"
+    r"should not be read|does not turn|does not produce)", re.I)
+
+
+def is_live_question(b: str) -> bool:
+    """A boundary that only fences scope is not an open question."""
+    q = len(RE_QUESTION.findall(b))
+    d = len(RE_DISCLAIMER.findall(b))
+    return q > 0 and q > d
+
 
 def order_key(p: Path):
     """Sortable position in the corpus: BT number, pass number, or ISO date."""
@@ -157,6 +185,8 @@ def main(argv: list[str]) -> int:
             continue
         b = boundary_text(t)
         if not b or len(b) < 40:
+            continue
+        if not is_live_question(b):          # scope disclaimer, not a question
             continue
         btok = (results_in(b) | noun_number_pairs(b) | group_tokens(b)) - {""}
         if not btok:

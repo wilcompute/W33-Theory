@@ -1,0 +1,26 @@
+Passes 1392-1393
+
+frames 540, edges 240
+
+=== Pass 1392: the 540 x 240 incidence matrix ===
+  frames with a canonical matching: 540   failures: 0
+  every entry a valid edge index? true
+  all rows distinct (map injective)? true
+  edge coverage multiset: [ 9 ]  (expect [9])
+  wrote data/w33_pass1392_frame_edge_incidence.json
+
+=== Pass 1393: is W(E6) 2-closed on the 216 Schlaefli edges? ===
+  primitive groups of degree 27 with order 51840: [ 13 ]
+  |W(E6)| = 51840
+  suborbit lengths from a point: [ 10, 16 ]  (expect [6,20] or [10,16])
+  Schlaefli edge orbit size: 216   (expect 216)
+  image on the 216: order 51840  faithful? true
+  transitive on the 216? true
+  RANK on the 216 (orbitals incl. diagonal): 10
+  suborbit lengths: [ 5, 10, 10, 20, 20, 20, 30, 40, 60 ]
+  building the orbital graphs and their common automorphism group...
+  |Aut(orbital configuration)| = 51840
+  |W(E6) image|                = 51840
+  IS W(E6) 2-CLOSED ON THE 216? true
+
+DONE

@@ -175,6 +175,7 @@ data/*
 !data/w33_pass1333_atlasrep_species20.json
 !data/w33_pass1335_hecke_ext_input.g
 !data/w33_pass1335_brauer_tree_hecke_corner.json
+!data/w33_pass1342_global_cycle_selector_bound.json
 
 # Small vendored test fixtures needed for offline/CI collection
 !artifacts/
@@ -255,3 +256,5 @@ formal/.lake/
 
 # Exception: a test asserts this artifact exists at the repo root.
 !/PART_CCCXLIX_eigenmatrix_pq_results.json
+
+data/corpus_index.sqlite

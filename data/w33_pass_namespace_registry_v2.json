@@ -296,6 +296,19 @@
     "1391": "scope: 240 here is the EDGE set, not the E8 roots (Pass 1012 obstruction); 2160 is an incidence count with multiplicity, not an object"
    },
    "runtime_boundary": "Exact GAP over all 540 frames; certificate data/w33_pass1390_frame_cross_matching.txt. No CI-observed claim."
+  },
+  {
+   "range": "1392-1396",
+   "owner": "glue-track-lattice-cover-closure-index",
+   "status": "COMPLETE",
+   "artifacts": {
+    "1392": "Smith form of the 540x240 frame-edge incidence: rank 225, invariant factors 1^195 2^30, coker = Z^15 + (Z/2)^30",
+    "1393": "W(E6) IS 2-closed on the 216 Schlaefli edges: |Aut(orbital configuration)| = 51840; rank 10, suborbits [5,10,10,20,20,20,30,40,60]",
+    "1394": "exact cover EXISTS: 60 frames whose canonical cross-matchings partition all 240 edges, each exactly once",
+    "1395": "scope disclaimers are not open questions: the largest false-positive class in the boundary sweep; filter cuts candidates 32 -> 11 with both known true positives retained",
+    "1396": "scripts/corpus_index.py: persistent incremental SQLite index over 44,076 files INCLUDING data/*.json certificates, 23,594 distinct tokens"
+   },
+   "runtime_boundary": "Exact GAP + exact integer SNF + exhaustive Algorithm X, all run locally; certificates in data/w33_pass1392_*.json and data/w33_pass1394_exact_cover.json. No CI-observed claim."
   }
  ],
  "rule": "A pass number is canonical only when registered here. Retracted or scope-corrected blocks remain registered for provenance but cannot contribute active theorem claims outside their stated scope."
