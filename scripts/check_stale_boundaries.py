@@ -134,6 +134,17 @@ def main(argv: list[str]) -> int:
         keys[p.name] = order_key(p)
         tokens[p.name] = results_in(t) | noun_number_pairs(t) | group_tokens(t)
 
+    # INVERTED INDEX, not a double loop.  The pairwise version is O(files^2) set
+    # intersections -- about 1.5M of them over 1230 files -- and once Pass 1378's
+    # group tokens enlarged every token set it stopped finishing inside the CI
+    # timeout.  Since a candidate needs a SHARED token, only files sharing at
+    # least one token can ever qualify, and the postings list finds exactly those.
+    from collections import Counter, defaultdict
+    postings: dict[str, list[str]] = defaultdict(list)
+    for name, tk in tokens.items():
+        for tok in tk:
+            postings[tok].append(name)
+
     hits = []
     for p in files:
         t = body.get(p.name)
@@ -146,13 +157,16 @@ def main(argv: list[str]) -> int:
         if not btok:
             continue
         k = keys[p.name]
-        # which strictly-later files share a boundary token?
-        for q in files:
-            if keys[q.name] <= k or q.name == p.name:
-                continue
-            shared = btok & tokens[q.name]
-            if len(shared) >= 2:                # >=2 to cut single-token noise
-                hits.append((len(shared), p.name, q.name, sorted(shared)[:4]))
+        # count shared tokens per candidate, visiting only files that share one
+        tally: Counter[str] = Counter()
+        for tok in btok:
+            for q in postings.get(tok, ()):
+                if q != p.name and keys[q] > k:
+                    tally[q] += 1
+        for qname, n in tally.items():
+            if n >= 2:                          # >=2 to cut single-token noise
+                shared = sorted(btok & tokens[qname])[:4]
+                hits.append((n, p.name, qname, shared))
 
     hits.sort(key=lambda x: -x[0])
     # keep the strongest later-file candidate per boundary file

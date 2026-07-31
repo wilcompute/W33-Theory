@@ -147,12 +147,20 @@ RE_SMALLGROUP = re.compile(r"(?i)\b(?:small|id)group\s*[\[(]\s*(\d+)\s*,\s*(\d+)
 RE_CLASSICAL = re.compile(
     r"\b(PGSp|PSp|PGL|PSL|PSU|GL|SL|SU|Sp|Sz|U|O)\s*\(?\s*(\d+)\s*,\s*(\d+)\s*\)?")
 RE_ATOMIC = re.compile(r"\b([AS])_?(\d{1,2})\b|\b([QD])_?(\d{1,2})\b|\bO_h\b|\b2([TOI])\b")
-# a semidirect/direct product written any of the half-dozen ways this repo writes it
-RE_PRODUCT = re.compile(
-    r"\(?\s*[CZ]?(\d+)\s*(?:\^\s*(\d+))?\s*\)?"
-    r"((?:\s*[x×]\s*\(?\s*[CZ]?\d+\s*(?:\^\s*\d+)?\s*\)?)*)"
-    r"\s*[:⋊]\s*"
-    r"\(?\s*([CZAS]?)(\d+)\s*\)?")
+# A semidirect/direct product, written any of the half-dozen ways this repo does.
+#
+# ANCHORED AND BOUNDED ON PURPOSE.  The first version matched the whole product
+# in one pattern, with a `(?:\s*[x×]\s*...)*` group between two optional-space
+# runs.  On `analysis/2026-07-15_pass81_monster_sp43_boundary.md` that backtracks
+# catastrophically -- it did not finish in 200 s on a 4 KB file, which silently
+# hung the whole boundary sweep (and would have hung the CI hook).  So instead:
+# find the separator first, then match each side inside a SHORT window with the
+# repetition bounded, which makes the worst case per separator constant.
+RE_SEP = re.compile(r"[:⋊]")
+RE_LEFT = re.compile(
+    r"\(?[CZ]?(\d+)(?:\^(\d+))?\)?"
+    r"((?:\s?[x×]\s?\(?[CZ]?\d+(?:\^\d+)?\)?){0,6})\s?$")
+RE_RIGHT = re.compile(r"^\s?\(?([CZAS]?)(\d+)")
 
 
 def _pow_of(base: str, extra: str) -> str:
@@ -187,13 +195,29 @@ def group_tokens(text: str) -> set[str]:
         out.add(f"grp:{n}.{k}")
     for fam, d, q in RE_CLASSICAL.findall(text):
         out.add(f"grp:{fam.lower()}({d},{q})")
-    for m in RE_PRODUCT.finditer(text):
-        base, exp, extra, kind, deg = m.groups()
+    for sep in RE_SEP.finditer(text):
+        i = sep.start()
+        lm = RE_LEFT.search(text[max(0, i - 32):i])      # short window, anchored
+        rm = RE_RIGHT.match(text[i + 1:i + 10])
+        if not (lm and rm):
+            continue
+        base, exp, extra = lm.groups()
+        kind, deg = rm.groups()
+        # A bare `n:m` is far more often a dict entry or a ratio than a group.
+        # `{1:1, 2:19, 3:8}` (an element-order census) produced tokens like
+        # `grp:2:19` in the first sweep. Require SOME group syntax: an exponent,
+        # a product, or a C/Z/S/A letter on one side.
+        if not (exp or extra.strip() or kind):
+            continue
         left = f"{base}^{exp}" if exp else _pow_of(base, extra)
         out.add(f"grp:{left}:{(kind or '').upper()}{deg}".replace("C", ""))
     for m in RE_ATOMIC.finditer(text):
         g = m.group(0).replace("_", "").strip()
-        if g:
+        # S0/S1/S2 and A0..A3 are state labels far more often than groups here
+        # (BT1856 produced grp:S0..grp:S3 from tape-state names), and the small
+        # symmetric/alternating groups carry no signal anyway.
+        d = re.search(r"(\d+)", g)
+        if g and not (g[0] in "SA" and d and int(d.group(1)) < 4):
             out.add(f"grp:{g}")
     return out
 
