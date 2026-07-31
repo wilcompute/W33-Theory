@@ -1,0 +1,80 @@
+        D[p, j] = 1
+        D[40 + li, j] = -1
+    return D
+
+
+def worker_1393():
+    public, cap = capture_mackey()
+    g = cap["g"]
+    rows, rectangles, flag_index = build_hinge_sheet_and_bridges()
+    S = np.stack([dense_row(r) for r in rows], axis=0)
+    assert rank_mod(S) == 81
+    Dlevi = levi_boundary(flag_index)
+    assert not np.any(Dlevi @ S.T)
+
+    bridge_profiles = {}
+    candidates = {}
+    # Characters of side and matching-edge parity.  Each rectangle contributes to its two incident selectors.
+    for side_char, edge_char in itertools.product((0, 1), repeat=2):
+        B = np.zeros((120, 160), dtype=np.int64)
+        for row, (si, sj, ei, ej) in zip(S, rectangles):
+            wi = -1 if edge_char and ei else 1
+            wj = -1 if side_char else 1
+            if edge_char and ej:
+                wj *= -1
+            B[si] += wi * row
+            B[sj] += wj * row
+        key = f"side{side_char}_edge{edge_char}"
+        candidates[key] = B
+        bridge_profiles[key] = {
+            "rank": rank_mod(B),
+            "nonzero": int(np.count_nonzero(B)),
+            "max_abs_entry": int(np.max(np.abs(B))),
+            "sha256": hashlib.sha256(B.astype(np.int64).tobytes()).hexdigest(),
+            "boundaryless": bool(not np.any(Dlevi @ B.T)),
+        }
+    best_key = max(candidates, key=lambda k: (bridge_profiles[k]["rank"], k))
+    B = candidates[best_key]
+    best_rank = bridge_profiles[best_key]["rank"]
+    assert not np.any(Dlevi @ B.T)
+
+    # Mackey-sector source profile over a large good prime.
+    sector_ranks = []
+    for item in sorted(cap["character_projectors"], key=lambda x: x["block_index"]):
+        P = orbital_matrix_mod(g, item["projector"], GOOD)
+        PB = P @ (B % GOOD) % GOOD
+        sector_ranks.append({
+            "block_index": int(item["block_index"]),
+            "degree": int(item["record"]["degree"]),
+            "multiplicity": int(item["record"]["multiplicity"]),
+            "source_isotypic_dimension": int(item["record"]["degree"] * item["record"]["multiplicity"]),
+            "bridge_rank": rank_mod(PB),
+        })
+
+    result = {
+        "theorem": "Pass 1393 Hinge-Selected Selector/Apartment Steinberg Bridge",
+        "selected_sheet": {"mask": "1110", "residual_channel": 0},
+        "apartment_rows": 2160,
+        "levi_flag_columns": 160,
+        "sheet_rank": 81,
+        "sheet_boundaryless": True,
+        "selector_rectangle_incidence": "Each centered rectangle is incident with the unique matching selector on each of its two carrier lines; degree 2 per rectangle and 36 per selector.",
+        "bridge_scan": bridge_profiles,
+        "best_bridge": best_key,
+        "best_bridge_rank": best_rank,
+        "best_bridge_boundaryless": True,
+        "mackey_sector_bridge_ranks": sector_ranks,
+        "conclusion": (
+            "The hinge-selected 2160-apartment sheet is the full Levi cycle space.  Composing it with the natural "
+            "selector/rectangle incidence gives explicit gauge-fixed selector-to-Steinberg maps; their exact ranks "
+            "measure how much of E4 survives the selector incidence."
+        ),
+        "boundary": "The hinge and side/edge characters break full G-equivariance, so this construction does not contradict Hom_G(Q^120,E4 Q^160)=0. A rank below 81 is reported as an obstruction rather than promoted to a Morita equivalence.",
+    }
+    result["sha256"] = sha(result)
+    return result
+
+
+def flatten_matrix_units(blocks):
+    cols = []
+    block_slices = []

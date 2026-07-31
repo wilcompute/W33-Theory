@@ -1,0 +1,80 @@
+#!/usr/bin/env python3
+"""Passes 1390--1394: five exact continuations of the selector Mackey release.
+
+Workers:
+  1390  modular Mackey/localization boundary and exact Loewy comparison
+  1391  intrinsic 1+2 / square-norm classification of the six dual orbits
+  1392  exact rational selector isotypic Fourier transform
+  1393  hinge-selected apartment bridge from selectors to Levi Steinberg-81
+  1394  integral orbital order, maximal matrix-unit order, discriminant/conductor
+
+The script imports only already-frozen exact repository machinery.  The Mackey
+implementation is observed through Python's return trace so its exact internal
+projectors can be reused without changing the verified Pass-1380--1384 source.
+"""
+from __future__ import annotations
+
+import argparse
+import collections
+import hashlib
+import itertools
+import json
+import math
+import os
+import sys
+from pathlib import Path
+
+import numpy as np
+import sympy as sp
+from sympy.matrices.normalforms import smith_normal_form
+from sympy.polys.domains import ZZ
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parent
+sys.path.insert(0, str(HERE))
+
+from pass1370_1374 import core, modular_radicals
+import _mackey_selector_decomposition_impl as mackey_impl
+import bt713_selector_sheet_rank_filter as sheet713
+
+GOOD = 1_000_003
+DEFAULT_OUT = ROOT / "data" / "w33_pass1390_1394_five_frontiers.json"
+WORKERS = ("1390", "1391", "1392", "1393", "1394")
+
+_CAPTURE = None
+
+
+def sha(payload) -> str:
+    return hashlib.sha256(json.dumps(payload, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+
+
+def rational_pair(x):
+    q = sp.Rational(x)
+    return [int(q.p), int(q.q)]
+
+
+def rational_mod(x, p=GOOD):
+    q = sp.Rational(x)
+    return int(q.p) * pow(int(q.q), -1, p) % p
+
+
+def rank_mod(A, p=GOOD):
+    A = np.array(A, dtype=np.int64) % p
+    m, n = A.shape
+    row = 0
+    for col in range(n):
+        nz = np.flatnonzero(A[row:, col])
+        if not len(nz):
+            continue
+        k = row + int(nz[0])
+        A[[row, k]] = A[[k, row]]
+        A[row] = A[row] * pow(int(A[row, col]), -1, p) % p
+        for i in range(m):
+            if i != row and A[i, col]:
+                A[i] = (A[i] - int(A[i, col]) * A[row]) % p
+        row += 1
+        if row == m:
+            break
+    return row
+
+
