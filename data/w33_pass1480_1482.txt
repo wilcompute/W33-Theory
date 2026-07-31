@@ -1,0 +1,24 @@
+Passes 1480-1482: the 90's carrier, the sign, and the gauge block
+
+|PSp| = 25920   |PGSp| = 51840
+
+=== Pass 1480: subgroups of index 90 (order 576) in PGSp ===
+  maximal subgroup orders: [ 1152, 1296, 1296, 1440, 1920, 25920 ]
+  MAXIMAL subgroups of order 576: 0
+
+=== Pass 1481: the class that distinguishes the two degree-81s ===
+  degree-81 positions: [ 23, 24 ]
+  classes where they differ: [ 5, 12, 18, 21, 22, 25 ]
+    class 5: order 4, size 540, chi = 3 vs -3, INNER? false
+    class 12: order 2, size 36, chi = 9 vs -9, INNER? false
+    class 18: order 2, size 540, chi = -3 vs 3, INNER? false
+    class 21: order 10, size 5184, chi = -1 vs 1, INNER? false
+    class 22: order 8, size 6480, chi = 1 vs -1, INNER? false
+    class 25: order 4, size 1620, chi = -1 vs 1, INNER? false
+
+=== Pass 1482: the exact (gauge) block over the full group ===
+  dim exact = 39
+  exact block invariant under the FULL group? true
+  GAUGE block over PGSp: [ [ 6, 15, 1 ], [ 14, 24, 1 ] ]
+
+DONE

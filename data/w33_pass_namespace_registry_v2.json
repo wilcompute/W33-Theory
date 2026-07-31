@@ -483,6 +483,19 @@
     "1479": "the host-only macro list COMPUTED not hand-written: w33_paper defines 45, holonet 11, shared 8, so 37 are w33_paper-only. My hand list covered 9 of 37. Both tools now load data/w33_pass1479_host_only_macros.json, regenerable via scripts/compute_host_only_macros.py"
    },
    "runtime_boundary": "Exact GAP character theory; one exhaustive clique computation; a SAT encoding that did not terminate. The resolution and the degree-90 identification are explicitly open."
+  },
+  {
+   "range": "1480-1484",
+   "owner": "glue-track-the-sign-on-the-540",
+   "status": "COMPLETE",
+   "artifacts": {
+    "1480": "the degree-90 has NO transitive carrier: PGSp has no maximal subgroup of order 576, so no primitive degree-90 action; and a transitive 90-point module contains the trivial character, leaving 89, so it cannot contain a degree-90 irreducible. Not a constituent of any transitive 90-set. Origin still open",
+    "1481": "PHYSICS: the two degree-81 extensions differ on exactly 6 classes, ALL OUTER -- and one of them is the involution class of SIZE 540, BT773s frame-indexing class, with chi = -3 vs +3. The sign distinguishing the two Steinberg extensions is detected precisely on the involutions that index the 540 frames",
+    "1482": "the exact (gauge) block is also FULL-GROUP invariant and picks specific extensions: [15 (#6), 24 (#14)], one each. All three Hodge blocks are PGSp-natural with a definite choice in every block",
+    "1483": "guard vocabularies measured against RESULTS_VOCABULARY.md: 52 guarded entries vs 105 canonical names, 93 unguarded. REPORTED NOT APPLIED, deliberately -- the hand lists are CALIBRATED (Pass 328 flag rates; Pass 1107 narrowed GEOM_NOUNS from 39.9% to 30.9% by REMOVING generic nouns). Opposite conclusion to Pass 1479 for a stated reason: a missing LaTeX macro is a build failure (exact requirement), an extra token is noise (tuned signal)",
+    "1484": "resolution SAT launched detached: 4,860 vars, 99,909 clauses, encoding 0.1s, still running. Undecided, reported as running not as a result"
+   },
+   "runtime_boundary": "Exact GAP character theory. The SAT run is in progress and no result is claimed from it; the degree-90 origin remains open."
   }
  ],
  "rule": "A pass number is canonical only when registered here. Retracted or scope-corrected blocks remain registered for provenance but cannot contribute active theorem claims outside their stated scope."
