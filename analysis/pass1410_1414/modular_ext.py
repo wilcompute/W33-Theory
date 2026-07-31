@@ -4,7 +4,7 @@ import numpy as np
 
 from pass1370_1374 import core, modular_radicals
 
-from .common import SparseRank, capture, factor_kernel_key, sha
+from .common import capture, factor_kernel_key, sha
 
 
 def simple_classes(g, p):
@@ -13,15 +13,13 @@ def simple_classes(g, p):
     factors = modular_radicals.composition_factors(left, p)
     grouped = {}
     for F in factors:
-        key = factor_kernel_key(F, p)
-        grouped.setdefault(key, []).append(F)
+        grouped.setdefault(factor_kernel_key(F, p), []).append(F)
     records = []
     for key, copies in grouped.items():
-        F = copies[0]
         records.append({
-            "degree": int(F[0].shape[0]),
+            "degree": int(copies[0][0].shape[0]),
             "regular_composition_multiplicity": len(copies),
-            "factor": F,
+            "factor": copies[0],
             "kernel_key": key,
         })
     records.sort(key=lambda r: (r["degree"], r["kernel_key"]))
@@ -43,64 +41,92 @@ def hom_dimension(Fi, Fj, p):
                 for l in range(di):
                     row[u * di + l] -= int(Fi[a][l, v])
                 rows.append(row % p)
-    rank = modular_radicals.rank(np.asarray(rows, dtype=np.int64), p)
-    return di * dj - rank
+    return di * dj - modular_radicals.rank(np.asarray(rows, dtype=np.int64), p)
 
 
-def ext_dimension(tensor, Fi, Fj, p):
-    """Compute Ext^1(S_i,S_j) as derivations modulo inner derivations."""
+def multiplication_support(tensor):
+    out = {}
+    for a in range(83):
+        for b in range(83):
+            nz = np.flatnonzero(tensor[:, a, b])
+            out[a, b] = [(int(c), int(tensor[c, a, b])) for c in nz]
+    return out
+
+
+def rank_derivation_rows_p2(row_iter):
+    pivots = {}
+    for terms in row_iter:
+        bits = 0
+        for index, coefficient in terms:
+            if coefficient & 1:
+                bits ^= 1 << index
+        while bits:
+            column = (bits & -bits).bit_length() - 1
+            pivot = pivots.get(column)
+            if pivot is None:
+                pivots[column] = bits
+                break
+            bits ^= pivot
+    return len(pivots)
+
+
+def rank_derivation_rows_p3(row_iter, nvars):
+    pivots = {}
+    for terms in row_iter:
+        row = np.zeros(nvars, dtype=np.int8)
+        for index, coefficient in terms:
+            row[index] = (int(row[index]) + coefficient) % 3
+        while np.any(row):
+            column = int(np.flatnonzero(row)[0])
+            pivot = pivots.get(column)
+            if pivot is None:
+                if row[column] == 2:
+                    row = (-row) % 3
+                pivots[column] = row
+                break
+            row = (row - int(row[column]) * pivot) % 3
+    return len(pivots)
+
+
+def ext_dimension(tensor, support, Fi, Fj, p):
     di = Fi[0].shape[0]
     dj = Fj[0].shape[0]
     block = di * dj
     nvars = 83 * block
-    ranker = SparseRank(p)
 
     def var(a, u, v):
         return a * block + u * di + v
 
-    nz_products = {}
-    for a in range(83):
-        for b in range(83):
-            nz = np.flatnonzero(tensor[:, a, b])
-            nz_products[(a, b)] = [(int(c), int(tensor[c, a, b])) for c in nz]
+    def rows():
+        for a in range(83):
+            left = Fj[a]
+            for b in range(83):
+                right = Fi[b]
+                product = support[a, b]
+                for u in range(dj):
+                    for v in range(di):
+                        terms = [(var(c, u, v), coefficient) for c, coefficient in product]
+                        terms.extend((var(b, k, v), -int(left[u, k])) for k in range(dj) if left[u, k])
+                        terms.extend((var(a, u, l), -int(right[l, v])) for l in range(di) if right[l, v])
+                        yield terms
 
-    for a in range(83):
-        Ra = Fj[a]
-        for b in range(83):
-            Rb = Fi[b]
-            prod = nz_products[(a, b)]
-            for u in range(dj):
-                for v in range(di):
-                    row = {}
-                    for c, coeff in prod:
-                        idx = var(c, u, v)
-                        row[idx] = (row.get(idx, 0) + coeff) % p
-                    for k in range(dj):
-                        coeff = -int(Ra[u, k])
-                        if coeff:
-                            idx = var(b, k, v)
-                            row[idx] = (row.get(idx, 0) + coeff) % p
-                    for l in range(di):
-                        coeff = -int(Rb[l, v])
-                        if coeff:
-                            idx = var(a, u, l)
-                            row[idx] = (row.get(idx, 0) + coeff) % p
-                    ranker.add(row)
-    cocycle_dim = nvars - ranker.rank
-    hom_dim = hom_dimension(Fi, Fj, p)
-    inner_dim = di * dj - hom_dim
-    ext_dim = cocycle_dim - inner_dim
-    assert ext_dim >= 0
+    rank = rank_derivation_rows_p2(rows()) if p == 2 else rank_derivation_rows_p3(rows(), nvars)
+    cocycle_dimension = nvars - rank
+    hom = hom_dimension(Fi, Fj, p)
+    inner_dimension = di * dj - hom
+    ext1_dimension = cocycle_dimension - inner_dimension
+    assert ext1_dimension >= 0
     return {
-        "cocycle_dimension": cocycle_dim,
-        "inner_dimension": inner_dim,
-        "hom_dimension": hom_dim,
-        "ext1_dimension": ext_dim,
+        "cocycle_dimension": cocycle_dimension,
+        "inner_dimension": inner_dimension,
+        "hom_dimension": hom,
+        "ext1_dimension": ext1_dimension,
     }
 
 
 def analyze_prime(g, p):
     tensor, _factors, simples = simple_classes(g, p)
+    support = multiplication_support(tensor)
     profile = modular_radicals.analyze_one(g, core, "full", p)
     for rec in simples:
         rec["endomorphism_field_dimension"] = hom_dimension(rec["factor"], rec["factor"], p)
@@ -112,13 +138,13 @@ def analyze_prime(g, p):
 
     ext = []
     matrix = []
-    for i, si in enumerate(simples):
+    for i, source in enumerate(simples):
         row = []
-        for j, sj in enumerate(simples):
-            rec = ext_dimension(tensor, si["factor"], sj["factor"], p)
-            rec.update({"source": i, "target": j})
-            ext.append(rec)
-            row.append(rec["ext1_dimension"])
+        for j, target in enumerate(simples):
+            record = ext_dimension(tensor, support, source["factor"], target["factor"], p)
+            record.update({"source": i, "target": j})
+            ext.append(record)
+            row.append(record["ext1_dimension"])
         matrix.append(row)
 
     vertices = []
@@ -132,7 +158,7 @@ def analyze_prime(g, p):
             "annihilator_codimension": 83 - len(rec["kernel_key"]),
             "annihilator_sha256": sha(rec["kernel_key"]),
         })
-    arrows = [x for x in ext if x["ext1_dimension"]]
+    arrows = [record for record in ext if record["ext1_dimension"]]
     return {
         "prime": p,
         "vertices": vertices,
@@ -157,13 +183,12 @@ def analyze():
         "algebra": "83-dimensional selector orbital algebra",
         "convention": "matrix entry (i,j) is dim Ext^1(S_i,S_j), hence arrows i -> j",
         "method": (
-            "Simple modules are deduplicated by their exact annihilator kernels in the modular regular module. "
-            "Their endomorphism fields reconstruct the semisimple quotient without assuming splitness. "
-            "For every ordered pair, Ext^1 is computed as algebra derivations A -> Hom(S_i,S_j) modulo inner derivations, "
-            "using all 83 basis products and sparse finite-field elimination."
+            "Simple modules are deduplicated by exact annihilator kernels and their endomorphism fields reconstruct the semisimple quotient without a splitness assumption. "
+            "Every Ext^1 space is computed as derivations modulo inner derivations using all 83 basis products. "
+            "GF(2) elimination is bit-packed and GF(3) elimination is vectorized."
         ),
         "primes": primes,
-        "boundary": "The certificate gives the exact Gabriel Ext^1 quiver and Loewy dimensions. Higher quiver relations require Ext^2/Yoneda-product computation and are not inferred from Ext^1 alone.",
+        "boundary": "The certificate gives the exact Gabriel Ext^1 quiver and Loewy dimensions. Higher quiver relations require Ext^2/Yoneda products.",
     }
     result["sha256"] = sha(result)
     return result
