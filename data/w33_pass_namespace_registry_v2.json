@@ -403,6 +403,21 @@
     "1447": "a bug of mine caught by a number disagreeing with one I trusted: OnSets(frames[f],g) applies g to line-index sets, but g permutes FRAME indices; f^g=f is correct"
    },
    "runtime_boundary": "Exact GAP for the involution and subgroup facts; the intersecting-family result is EMPIRICAL over 1,262 covers from a known-biased sampler and is explicitly not a proof."
+  },
+  {
+   "range": "1448-1454",
+   "owner": "glue-track-hodge-maxwell-physics",
+   "status": "COMPLETE",
+   "artifacts": {
+    "1448": "PHYSICS: full clique-complex Hodge structure. Each t.i. line is a 4-clique so the complex is 3-dim: C=(40,240,160,40), chi=-80, Betti (1,81,0,0) -- a bouquet of 81 circles. Maxwell split 39 exact + 81 harmonic + 120 coexact = 240 exactly. But Poincare duality FAILS: C1=240 vs C2=160, by exactly |chi|=80; and b2=0 so the physical 81 has NO Hodge dual. No star => no F^*F action => kinematics without dynamics. Bose-Mesner identity A^2+2A-8I=4J verified exact, k-mu=8=2^q",
+    "1449": "PHYSICS: harmonic dim 81 confirmed independently, but its character is NOT computable with the unsigned permutation action -- the harmonic sector is an orientation-SIGNED object, the same reason Pass 1412 failed on ker(K-10I). harmonic=Steinberg left OPEN, not asserted",
+    "1450": "BT773 VINDICATED and its group named: PGSp(4,3) has involution classes 36,45,270,540 -- a class of exactly 540 exists there; PSp(4,3) has only 315 involutions total",
+    "1451": "the C2 involution fixes 84 of 540 frames (15.6%) but 12 of a stabilised cover 60 (20.0%) -- a 1.29x enrichment, unexplained",
+    "1452": "BT1509 was compiling ONLY because BT1408 precedes it in the wrapper and supplies \\PSp; my portability sweep missed it because it scans orphans and BT1509 is promoted. Guard added; it now compiles standalone",
+    "1453": "STATED OPEN: re-attacking the intersecting family from the C2-heavy region (designed, not run), and why the intersection floor is exactly 4 (no counting argument)",
+    "1454": "summary: kinematics yes, dynamics no, and the missing object is named exactly"
+   },
+   "runtime_boundary": "Exact integer/rational linear algebra and exact GAP. The physics content is a decomposition theorem plus an obstruction; no physical claim is made beyond naming what is absent."
   }
  ],
  "rule": "A pass number is canonical only when registered here. Retracted or scope-corrected blocks remain registered for provenance but cannot contribute active theorem claims outside their stated scope."

@@ -1,0 +1,17 @@
+Passes 1448-1449: the harmonic sector, and BT773's 540
+
+C0=40  C1=240  C2=160
+rank d1 = 39   rank d2 = 120
+dim cycles = 201   dim cocycles = 120   dim HARMONIC = 81   (expect 81)
+
+harmonic character computable: false
+
+=== Pass 1449: where do BT773's 540 involutions live? ===
+|PSp(4,3)| = 25920   |PGSp(4,3)| = 51840
+  in the group of order 25920: involution class sizes [ 45, 270 ]   total 315
+     a class of size exactly 540? false
+  in the group of order 51840: involution class sizes [ 36, 45, 270, 540 ]   t\
+otal 891
+     a class of size exactly 540? true
+
+DONE
