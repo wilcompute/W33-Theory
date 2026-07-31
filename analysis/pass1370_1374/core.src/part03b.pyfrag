@@ -1,0 +1,36 @@
+     for x in v:
+          q=sp.Rational(x);maxnum=max(maxnum,abs(int(q.p)));maxden=max(maxden,int(q.q));pv.append([int(q.p),int(q.q)])
+        prow.append(pv)
+      payload.append(prow)
+    raw=json.dumps(payload,separators=(',',':'))
+    allblocks.append(dict(block=bi,n=n,m=m,isotypic=r['iso'],matrix_units=n*n,sha256=hashlib.sha256(raw.encode()).hexdigest(),max_abs_numerator=maxnum,max_denominator=maxden,E=E))
+    print('matrix units block',bi,n,m,'hash',allblocks[-1]['sha256'][:12])
+  # cross block annihilation and global count
+  for i,a in enumerate(allblocks):
+    for j,b in enumerate(allblocks):
+      if i>=j:continue
+      assert mul_q(g,a['E'][0][0],b['E'][0][0])==sp.zeros(83,1)
+  assert sum(x['matrix_units'] for x in allblocks)==83
+  print('matrix units done',time.time()-t)
+  return allblocks
+
+if __name__=='__main__':
+  blocks=matrix_units_full(g,frecs)
+
+def toF(v):
+  return [Fraction(int(sp.Rational(x).p),int(sp.Rational(x).q)) for x in v]
+def addF(a,b):return [x+y for x,y in zip(a,b)]
+def scaleF(c,a):return [c*x for x in a]
+def mulF(g,l,r):
+  return [sum((Fraction(n)*l[a]*r[b] for a,b,n in tr),Fraction(0)) for tr in g['struct']]
+def eqF(a,b):return a==b
+
+def indepF(vectors,p=PGOOD):
+  rows=[]
+  for v in vectors:
+    rows.append([x.numerator*pow(x.denominator,-1,p)%p for x in v])
+  return [vectors[i] for i in independent_indices(np.array(rows,dtype=np.int64),p)]
+def scalarF(v,e):
+  for i,x in enumerate(e):
+    if x:
+      lam=v[i]/x;assert v==scaleF(lam,e);return la

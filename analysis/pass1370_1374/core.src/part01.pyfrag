@@ -1,0 +1,121 @@
+pp):
+    out=[]
+    for p,l in flags:
+      tl=lidx[frozenset(pp[x] for x in lines[l])]
+      out.append(fidx[(pp[p],tl)])
+    return tuple(out)
+  fgens=[flagperm(g) for g in pgens]
+  # synchronized group elements by BFS generator words
+  sid=tuple(range(120)); fid=tuple(range(160))
+  seen={sid:(fid,tuple(range(40)))}; dq=collections.deque([sid])
+  while dq:
+    s=dq.popleft(); f,pp=seen[s]
+    for sg,fg,pg in zip(sgens,fgens,pgens):
+      ns=compose(sg,s)
+      if ns not in seen:
+        seen[ns]=(compose(fg,f),compose(pg,pp));dq.append(ns)
+  assert len(seen)==51840
+  return dict(points=pts,adj=adj,lines=lines,lsets=lsets,matchings=mats,selectors=selectors,relations=rel,sgens=sgens,fgens=fgens,pgens=pgens,Gs=Gs,H=H,flags=flags,seen=seen,transports=transports)
+
+if __name__=='__main__':
+  g=build()
+  print([int(R.sum(axis=1)[0]) for R in g['relations']])
+
+def add_orbital_and_T(g):
+  H=g['H']; rel=g['relations']
+  t=time.time()
+  unseen=set(range(120*120)); orbits=[]
+  while unseen:
+    z=min(unseen); i,j=divmod(z,120)
+    orb={h[i]*120+h[j] for h in H}
+    orbits.append(orb); unseen-=orb
+  reps=[divmod(min(o),120) for o in orbits]
+  label=np.empty((120,120),dtype=np.int16)
+  for k,o in enumerate(orbits):
+    for z in o:
+      i,j=divmod(z,120);label[i,j]=k
+  tensor=np.zeros((83,83,83),dtype=np.int16)
+  struct=[]
+  for c,(x,y) in enumerate(reps):
+    cnt=collections.Counter((int(label[x,z]),int(label[z,y])) for z in range(120))
+    triples=[(a,b,n) for (a,b),n in sorted(cnt.items())]
+    struct.append(triples)
+    for a,b,n in triples:tensor[c,a,b]=n
+  print('orbitals',len(orbits),'tensor nnz',np.count_nonzero(tensor),'time',time.time()-t)
+  # shells and T
+  weights=range(5)
+  A=sum(i*rel[i].astype(np.int64) for i in range(5))
+  shells=[np.where(rel[i][0]!=0)[0] for i in range(5)]
+  D=np.zeros((120,120),dtype=np.int64)
+  for i,sh in enumerate(shells): D[sh,sh]=i
+  class Basis:
+    def __init__(self):self.piv={};self.words=[];self.mats=[]
+    def add(self,M,w):
+      v=M.reshape(-1).astype(np.int64)%PGOOD
+      for j in sorted(self.piv):
+        c=int(v[j]);
+        if c:v=(v-c*self.piv[j])%PGOOD
+      nz=np.flatnonzero(v)
+      if not len(nz):return False
+      j=int(nz[0]);v=v*pow(int(v[j]),-1,PGOOD)%PGOOD
+      for q,old in list(self.piv.items()):
+        c=int(old[j]);
+        if c:self.piv[q]=(old-c*v)%PGOOD
+      self.piv[j]=v;self.words.append(w);self.mats.append(M%PGOOD);return True
+  B=Basis();I=np.eye(120,dtype=np.int64);B.add(I,'');dq=collections.deque([(I,'')])
+  while dq:
+    M,w=dq.popleft()
+    for X,ch in ((A%PGOOD,'A'),(D%PGOOD,'D')):
+      N=M@X%PGOOD
+      if B.add(N,w+ch):dq.append((N,w+ch))
+  exact=[]
+  for w in B.words:
+    M=np.eye(120,dtype=np.int64)
+    for ch in w:M=M@(A if ch=='A' else D)
+    exact.append(M)
+  evals=sp.Matrix([[int(M[i,j]) for M in exact] for i,j in reps])
+  # independent rows via mod
+  inds=independent_indices(np.array(evals.tolist(),dtype=np.int64),PGOOD)
+  assert len(inds)==79
+  print('T dim',len(exact),'maxword',max(map(len,B.words)))
+  g.update(orbits=orbits,reps=reps,label=label,tensor=tensor,struct=struct,A=A,D=D,shells=shells,T_words=B.words,T_mats=exact,T_evals=evals,T_ind_rows=inds)
+  return g
+
+if __name__=='__main__':
+  g=add_orbital_and_T(g)
+
+def mul_q(g,l,r):
+  return sp.Matrix([sum(n*l[a]*r[b] for a,b,n in tr) for tr in g['struct']])
+def mul_mod(g,l,r,p):
+  out=np.zeros(83,dtype=np.int64)
+  for c,tr in enumerate(g['struct']):
+    s=0
+    for a,b,n in tr:s=(s+n*int(l[a])*int(r[b]))%p
+    out[c]=s
+  return out
+
+def trace_q(g,v):
+  return sp.cancel(sum(v[int(g['label'][i,i])] for i in range(120)))
+def shell_trace_q(g,v,s):
+  shset=set(g['shells'][s]);return sp.cancel(sum(v[int(g['label'][i,i])] for i in shset))
+
+def orbital_identity(g):return sp.Matrix([1 if i==j else 0 for i,j in g['reps']])
+def shell_diag(g,s):
+  sh=set(g['shells'][s]);return sp.Matrix([1 if i==j and i in sh else 0 for i,j in g['reps']])
+def unit83(k):
+  v=sp.zeros(83,1);v[k]=1;return v
+
+def rational_mod(x,p):
+  x=sp.Rational(x);return int(x.p*pow(int(x.q),-1,p)%p)
+
+def center_T(g):
+  t=time.time(); exact=g['T_mats'];reps=g['reps'];A=g['A'];D=g['D']
+  rows=[]
+  for M in exact:
+    ca=M@A-A@M;cd=M@D-D@M
+    rows.append([int(ca[i,j]) for i,j in reps]+[int(cd[i,j]) for i,j in reps])
+  C=sp.Matrix(rows).T
+  Zc=C.nullspace();assert len(Zc)==10
+  Z=g['T_evals']*sp.Matrix.hstack(*Zc)
+  inds=independent_indices(np.array([[rational_mod(x,PGOOD) for x in row] for row in Z.tolist()],dtype=np.int64),PGOOD)
+  

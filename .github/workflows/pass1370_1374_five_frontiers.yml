@@ -1,0 +1,82 @@
+name: Passes 1370-1374 Five Frontiers
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - '.github/workflows/pass1370_1374_five_frontiers.yml'
+      - 'analysis/BT1370_BT1374_five_frontiers.*'
+      - 'analysis/w33_pass1370_1374_five_frontiers.py'
+      - 'analysis/pass1370_1374/**'
+      - 'data/w33_pass1370_1374_five_frontiers.json'
+      - 'data/w33_pass_namespace_registry_v2.d/1370-1374.json'
+      - 'tests/test_w33_pass1370_1374_five_frontiers.py'
+      - 'tools/check_pass1370_1374_worker.py'
+      - 'tools/integrate_pass1370_1374.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  OPENBLAS_NUM_THREADS: '1'
+  OMP_NUM_THREADS: '1'
+
+jobs:
+  exact-workers:
+    strategy:
+      fail-fast: false
+      matrix:
+        worker:
+          - '1370'
+          - '1371'
+          - '1372'
+          - '1374'
+          - '1373-full-2'
+          - '1373-full-3'
+          - '1373-full-5'
+          - '1373-terwilliger-2'
+          - '1373-terwilliger-3'
+          - '1373-terwilliger-5'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check numpy sympy pytest
+      - run: python analysis/w33_pass1370_1374_five_frontiers.py --worker '${{ matrix.worker }}' --output '/tmp/${{ matrix.worker }}.json'
+      - run: python tools/check_pass1370_1374_worker.py '${{ matrix.worker }}' '/tmp/${{ matrix.worker }}.json'
+
+  certificate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check pytest
+      - run: python analysis/w33_pass1370_1374_five_frontiers.py --check
+      - run: pytest -q tests/test_w33_pass1370_1374_five_frontiers.py
+      - run: python analysis/w33_pass1197_parallel_collision_guard.py
+
+  manuscript:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-science
+      - run: python tools/integrate_pass1370_1374.py
+      - run: python tools/integrate_pass1370_1374.py
+      - run: python tools/integrate_pass1370_1374.py --check
+      - run: |
+          cat >/tmp/pass1370.tex <<'EOF'
+          \documentclass{article}
+          \usepackage{amsmath,amssymb,amsthm}
+          \newtheorem{theorem}{Theorem}
+          \begin{document}
+          \input{analysis/BT1370_BT1374_five_frontiers}
+          \end{document}
+          EOF
+          TEXINPUTS=.: pdflatex -interaction=nonstopmode -halt-on-error -output-directory=/tmp /tmp/pass1370.tex

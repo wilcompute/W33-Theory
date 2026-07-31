@@ -1,0 +1,32 @@
+x_abs_numerator=max(abs(x.numerator) for row in E for v in row for x in v),max_denominator=max(x.denominator for row in E for v in row for x in v),E=E))
+    print('FAST block',bi,n,m,blocks[-1]['sha256'][:12],'t',time.time()-t,flush=True)
+  assert sum(b['matrix_units'] for b in blocks)==83
+  return blocks
+
+def matrix_unit_metadata_fast(g,frecs):
+  """Construct and verify all blocks, retaining only compact hashes/size metadata."""
+  units=[[Fraction(int(i==k)) for i in range(83)] for k in range(83)]
+  zero=[Fraction(0)]*83; metadata=[]
+  for bi,r in enumerate(frecs):
+    n,m=r['n'],r['m']; z=toF(r['z'])
+    if n==1: E=[[z]]
+    else:
+      sd=toF(shell_diag(g,r['primitive_shell'])); e=mulF(g,z,sd); assert mulF(g,e,e)==e
+      U=indepF([mulF(g,a,e) for a in units]); V=indepF([mulF(g,e,a) for a in units]); assert len(U)==len(V)==n
+      def first(L):
+        R=[e]
+        for v in L:
+          if len(indepF(R+[v]))>len(R): R.append(v)
+          if len(R)==n: break
+        return R
+      U=first(U); V=first(V)
+      B=sp.Matrix([[sp.Rational(scalarF(mulF(g,V[i],U[j]),e).numerator,scalarF(mulF(g,V[i],U[j]),e).denominator) for j in range(n)] for i in range(n)])
+      C=B.inv(); W=[]
+      for b in range(n):
+        w=zero[:]
+        for j in range(n):
+          c=Fraction(int(C[b,j].p),int(C[b,j].q)); w=addF(w,scaleF(c,V[j]))
+        W.append(w)
+      for b in range(n):
+        for c in range(n): assert mulF(g,W[b],U[c])==(e if b==c else zero)
+      E=[[mulF(g,U[a],W[b]) for b in r
