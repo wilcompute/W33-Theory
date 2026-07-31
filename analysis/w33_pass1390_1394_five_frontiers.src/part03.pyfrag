@@ -1,0 +1,80 @@
+    for a, b, c in itertools.product(range(3), repeat=3):
+        Q = np.array([[a, b], [b, c]], dtype=np.int64) % 3
+        if not np.any(Q):
+            continue
+        if int(round(np.linalg.det(Q))) % 3 == 0:
+            continue
+        if all(np.array_equal(R.T @ Q @ R % 3, Q) for R in restrictions):
+            forms.append(Q)
+    # Scalar multiples represent the same quadratic form; choose canonical first nonzero coefficient 1.
+    canonical_forms = {}
+    for Q in forms:
+        flat = tuple(int(x) for x in Q.reshape(-1))
+        canonical_forms[canon_line(flat, 3)] = Q
+    assert len(canonical_forms) == 1
+    Q = next(iter(canonical_forms.values()))
+
+    def signature(v):
+        coord = Binv @ np.array(v, dtype=np.int64) % 3
+        alpha = int(coord[0])
+        w = coord[1:]
+        if not np.any(w):
+            return "zero" if alpha == 0 else "hinge_charge"
+        q = int(w.T @ Q @ w % 3)
+        assert q in (1, 2)
+        return ("neutral_axis" if q == 1 else "neutral_diagonal") if alpha == 0 else ("charged_axis" if q == 1 else "charged_diagonal")
+
+    orbit_rows = []
+    expected = [
+        (1, "zero", "D8xC2"),
+        (2, "hinge_charge", "D8"),
+        (4, "neutral_axis", "V4"),
+        (4, "neutral_diagonal", "V4"),
+        (8, "charged_axis", "C2"),
+        (8, "charged_diagonal", "C2"),
+    ]
+    observed = []
+    public_orbits = public["pass1375_little_group_character_table"]["dual_orbits"]
+    public_by_rep = {tuple(x["representative"]): x for x in public_orbits}
+    for representative, orbit in dual_orbits:
+        sigs = {signature(v) for v in orbit}
+        assert len(sigs) == 1
+        sig = next(iter(sigs))
+        row = public_by_rep[tuple(representative)]
+        observed.append((len(orbit), sig, row["stabilizer_type"]))
+        orbit_rows.append({
+            "representative": list(representative),
+            "size": len(orbit),
+            "signature": sig,
+            "stabilizer_type": row["stabilizer_type"],
+            "coordinates": [list((Binv @ np.array(v, dtype=np.int64) % 3).astype(int)) for v in sorted(orbit)],
+        })
+    assert sorted(observed) == sorted(expected)
+
+    result = {
+        "theorem": "Pass 1391 Hinge-Charge / Square-Norm Dual-Orbit Geometry",
+        "invariant_dual_axis": list(axis),
+        "invariant_dual_plane_basis": [list(p1), list(p2)],
+        "basis_matrix_columns_axis_plane": basis.astype(int).tolist(),
+        "plane_quadratic_form": Q.astype(int).tolist(),
+        "orbit_classification": orbit_rows,
+        "orbit_sizes": [1, 2, 4, 4, 8, 8],
+        "geometric_dictionary": {
+            "axis_coordinate": "two nonzero hinge-charge states on the invariant one-dimensional channel",
+            "plane_norm_1": "four square-axis states",
+            "plane_norm_2": "four square-diagonal states",
+            "mixed": "hinge charge coupled to the two square-norm classes",
+        },
+        "conclusion": "The six little-group families are exactly 1 + 2 + 4 + 4 + 8 + 8 from the invariant 1+2 decomposition: zero, pure hinge charge, two neutral square-norm classes, and their two charged lifts.",
+        "boundary": "The axis/plane/square classification is intrinsic to the exact complement action. The names hinge, axis, and diagonal describe the verified D8 square chart and do not assert a laboratory degree of freedom.",
+    }
+    result["sha256"] = sha(result)
+    return result
+
+
+def matrix_stats(M):
+    maxnum = 0
+    maxden = 1
+    nnz = 0
+    payload = []
+    for x in M:
