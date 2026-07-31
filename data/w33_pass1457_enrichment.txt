@@ -1,0 +1,10 @@
+Pass 1457: is the 12-of-60 enrichment forced? (corrected actions)
+
+points 40  edges 240  lines 40  frames 540
+
+class size 45: fixes 8 points, 32 edges, 16 lines, 84 frames
+   fixed edges divisible by 4? true   fe/4 = 8
+class size 270: fixes 0 points, 8 edges, 4 lines, 24 frames
+   fixed edges divisible by 4? true   fe/4 = 2
+
+DONE

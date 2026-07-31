@@ -120,8 +120,12 @@ def main(argv: list[str]) -> int:
         if a.startswith("--limit"):
             limit = int(a.split("=")[1]) if "=" in a else limit
     if "--portability" in argv:
-        return portability([p for p in insert_files()
-                            if p.stem not in manuscript_inputs()], limit)
+        # ALL inserts, not just orphans (Pass 1458). BT1509 is PROMOTED and uses
+        # \PSp with no guard; it compiled only because BT1408 precedes it in the
+        # wrapper and happens to provide the macro. A promoted insert that breaks
+        # a host is strictly worse than an orphan that does -- it is in a live
+        # build -- so scanning only orphans had the scope exactly backwards.
+        return portability(insert_files(), limit)
     included = manuscript_inputs()
     files = insert_files()
     orphans = [p for p in files if p.stem not in included]

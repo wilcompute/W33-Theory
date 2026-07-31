@@ -418,6 +418,19 @@
     "1454": "summary: kinematics yes, dynamics no, and the missing object is named exactly"
    },
    "runtime_boundary": "Exact integer/rational linear algebra and exact GAP. The physics content is a decomposition theorem plus an obstruction; no physical claim is made beyond naming what is absent."
+  },
+  {
+   "range": "1455-1459",
+   "owner": "glue-track-steinberg-physics-and-self-refutation",
+   "status": "COMPLETE",
+   "artifacts": {
+    "1455": "PHYSICS THEOREM: the harmonic (physical) sector of the lattice gauge theory on W(3,3) is IRREDUCIBLE of degree 81 = the Steinberg module. Obtained by building the orientation-SIGNED edge action (verified chain map, harmonic space signed-invariant). Kinematics and representation theory meet in one named object: 240 = 39 gauge + 81 Steinberg + 120 constraint",
+    "1456": "SELF-REFUTATION: Pass 1441 claimed the covers form an intersecting family (795,691 pairs, zero disjoint). A targeted exhaustive search finds a cover DISJOINT from a fixed cover A in 16s / 148,548 nodes. The claim is WITHDRAWN; the minimum-intersection-4 was a sampler artefact, exactly as its caveat allowed. Resolution question REOPENED",
+    "1457": "the C2 enrichment is REAL and the obvious explanation FAILS: class-45 involution fixes 8 points/32 edges/16 lines/84 frames, so 4f=32 would force f=8 but the measured value is 12, and 4f+8p=240 holds identically for every f. Unexplained, recorded as such",
+    "1458": "portability scan had its scope backwards -- it checked orphans only, while BT1509 was PROMOTED and unguarded. Widened to all 220 inserts; 0 now break",
+    "1459": "where the star must come from: in M^4 x F the metric/volume/variational structure lives on the continuum factor; the finite side supplies the algebra and the module (Steinberg 81, now named). The absence is by computation (b2=0), not oversight"
+   },
+   "runtime_boundary": "Exact GAP character theory over the signed action; one exhaustive Python search (16s, complete). The resolution search exceeded its budget and is stated open."
   }
  ],
  "rule": "A pass number is canonical only when registered here. Retracted or scope-corrected blocks remain registered for provenance but cannot contribute active theorem claims outside their stated scope."

@@ -1,0 +1,18 @@
+Pass 1455: the harmonic character under the SIGNED action
+
+C0=40  C1=240  C2=160
+dim HARMONIC = 81   (expect 81)
+
+signed action is a chain map (d1 S = P d1)? true
+harmonic space is SIGNED-invariant? true
+
+signed harmonic character computable: true
+  degree = 81
+  HARMONIC decomposition (degree, mult): [ [ 81, 1 ] ]
+  IRREDUCIBLE of degree 81? true
+
+  If true: the physical (harmonic) sector of a lattice gauge theory on
+  W(3,3) IS the Steinberg module.  Kinematics and representation theory
+  meet in one object, by a map rather than by a matching integer.
+
+DONE
