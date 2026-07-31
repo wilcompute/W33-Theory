@@ -1,0 +1,51 @@
+name: Promote Passes 1505-1509 v2
+
+on:
+  push:
+    paths:
+      - '.github/pass1505-1509.trigger'
+
+permissions:
+  contents: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Reconcile current master
+        run: git pull --rebase origin master
+      - name: Extract and verify frozen payload
+        shell: bash
+        run: |
+          awk "/<<'PAYLOAD'/{flag=1;next}/^PAYLOAD$/{flag=0}flag" .github/workflows/promote-pass1505-1509.yml > /tmp/pass1505_1509_release.b64
+          base64 -d /tmp/pass1505_1509_release.b64 > /tmp/pass1505_1509_release.tar.gz
+          echo 'e98c1802c80c30c08d09c9999e99c4efbdb2b85a178fc0f82eb7fd3d5e16b5a3  /tmp/pass1505_1509_release.tar.gz' | sha256sum -c -
+          tar -xzf /tmp/pass1505_1509_release.tar.gz -C .
+          rm -f .github/workflows/promote-pass1505-1509.yml
+          rm -f .github/workflows/promote-pass1505-1509-v2.yml
+          rm -f .github/pass1505-1509.trigger
+      - name: Validate exact release
+        run: |
+          pip install numpy scipy sympy pytest
+          python analysis/w33_pass1506_bridge_local_arithmetic.py --check
+          python analysis/w33_pass1507_joint_algebra_morita.py --check
+          python analysis/w33_pass1508_contextual_fraction_falsifier.py --check
+          python analysis/w33_pass1509_qutrit_hamming_m20_chart.py --check
+          pytest -q tests/test_w33_pass1505_1509_release.py
+          g++ -O3 -std=c++20 analysis/cpp/w33_pass1505_exact_cover_prefix.cpp -o /tmp/pass1505-prefix
+          g++ -O3 -std=c++20 analysis/cpp/w33_pass1505_orbit_reduce.cpp -o /tmp/pass1505-reduce
+      - name: Commit atomic release
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Passes 1505-1509: cover census, local bridge, falsifier, and M20 chart'
+          git pull --rebase origin master
+          git push origin HEAD:master
