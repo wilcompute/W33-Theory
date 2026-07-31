@@ -124,7 +124,12 @@ For a 2-cell embedding of K(6,2) on an orientable surface:
 
 ---
 
-## Open Questions for Pass 74
+## Open Questions
+
+> **ALREADY RESOLVED -- see [2026-07-08_pass74_stabilizers_w33_parent](analysis/2026-07-08_pass74_stabilizers_w33_parent.md).**
+> Pass 74 is titled "Explicit Stabilizers" and carries "THEOREM 13: Complete Pauli Stabilizer Table", which is exactly question 1. This pointer was added at Pass 1400 after the boundary sweep
+> flagged the pair; a stale boundary is what cost Passes 1111 and 1118.
+ for Pass 74
 1. Compute the explicit stabilizer generators as Pauli operators for the [[15,5,3]] code
 2. Identify the Monster subgroup that acts on the 5 logical qubits of [[15,5,3]]
 3. T_{6C}(0) = -2: is this the Euler characteristic of W(2,2) viewed as a simplicial complex?

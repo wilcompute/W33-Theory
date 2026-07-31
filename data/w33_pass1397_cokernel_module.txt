@@ -1,0 +1,26 @@
+Pass 1397: the free cokernel as a G-module
+
+frames 540  edges 240
+dim image (rank) = 225   dim cokernel = 15
+
+edge perm character degree  = 240
+point perm character degree = 40
+image character computable  = true
+QUOTIENT degree = 15
+
+COKERNEL constituents (degree, mult): [ [ 15, 1 ] ]
+  irreducible? true
+
+40-POINT constituents (degree, mult): [ [ 1, 1 ], [ 15, 1 ], [ 24, 1 ] ]
+
+SHARED constituents: [ 7 ]
+  as (degree, multQ, multP): [ [ 15, 1, 1 ] ]
+VERDICT -- are the two 15s the same G-module? true
+
+=== cover invariance, structurally ===
+G transitive on the 540 frames? true
+Hence the only G-invariant sets of frames are {} and all 540; a cover uses
+60, so NO exact cover can be G-invariant. The live quantity is a cover's
+STABILISER, computed in the Python stage.
+
+DONE

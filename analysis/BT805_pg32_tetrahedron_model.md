@@ -69,6 +69,11 @@ the bridge, with its 35 = e+14 census naming the lines.
 
 ## Boundary
 
+> **ALREADY RESOLVED -- see [BT806_a7_ladder_antiflag](analysis/BT806_a7_ladder_antiflag.md).**
+> BT806 opens "Closes the BT805 boundary: the canonical home of the Csaszar census inside PG(3,2)". This pointer was added at Pass 1400 after the boundary sweep
+> flagged the pair; a stale boundary is what cost Passes 1111 and 1118.
+
+
 Open: the A7 < A8 = GL(4,2) transfer making "triples of 7 <-> lines of
 PG(3,2)" canonical (then the double-Fano = a distinguished 14-line family
 in PG(3,2) — which family?); and the W33 lift: W(3,3)'s 40 = PG(3,3)

@@ -57,7 +57,17 @@ from check_rediscovery import (group_tokens, noun_number_pairs,  # noqa: E402
 # GAP witnesses and the manuscripts are where results actually live.
 EXTS = {".md", ".py", ".g", ".tex", ".json", ".txt", ".lean", ".yml"}
 SKIP_DIRS = {".git", ".lake", "lake-packages", "node_modules", "__pycache__",
-             ".venv", "venv", ".mypy_cache", ".pytest_cache", "build", "dist"}
+             ".venv", "venv", ".mypy_cache", ".pytest_cache", "build", "dist",
+             # MEASURED, Pass 1399. The first corpus-wide collision run returned
+             # 2,066 pairs and the entire head of the list was the SAME FILE in
+             # two places: `.claude/worktrees/agent-*/x` vs `archive/.../x`,
+             # `archive/dirs/...` vs `committed_artifacts/...`. Those are copies,
+             # not rediscoveries, and they drown the signal completely. Worktrees
+             # and archives are excluded, and identical content is suppressed by
+             # sha1 below -- the two filters are independent because a near-copy
+             # (regenerated JSON, one field changed) defeats the hash but not the
+             # directory rule.
+             ".claude", "archive", "committed_artifacts", "artifacts"}
 MAX_BYTES = 2_000_000          # a 700 KB manuscript is fine; a 50 MB blob is not
 
 
@@ -171,20 +181,64 @@ def rare(max_files: int) -> int:
     return 0
 
 
+# A COLLISION NEEDS A CLAIM-BEARING FILE (measured, Pass 1399).
+#
+# The second corpus-wide run, after excluding worktrees/archives and
+# byte-identical copies, was STILL dominated by things that cannot rediscover
+# anything:
+#
+#   2758 shared | data/w33_pass212_*.json  vs  data/w33_pass216_*.json
+#    160 shared | pytest_run_output.txt     vs  tail.txt
+#    109 shared | scripts/check_rediscovery.py vs w33_paper.tex
+#
+# Three distinct pathologies, and each needs its own rule:
+#   * DATA DUMPS share thousands of tokens because they enumerate a carrier, not
+#     because either asserts the other's result. Token count is the tell.
+#   * LOGS and test fixtures are transcripts of runs, not claims.
+#   * THE GUARD ITSELF contains the whole token vocabulary (NAMED, ATOMS,
+#     GEOM_NOUNS), so it collides with every file in the corpus by construction.
+#
+# So a pair is reported only when BOTH sides look like claims: bounded token
+# count, not a log/fixture/bundle, not the guard machinery. Ranking is by the
+# RAREST shared token, not the count -- one token in three files is far stronger
+# evidence than four hundred tokens in two data dumps.
+NOT_A_CLAIM = ("tests/fixtures/", "_bundle/", "pytest", "tail.txt",
+               "scripts/check_rediscovery.py", "scripts/corpus_index.py",
+               "scripts/check_stale_boundaries.py", "RESULTS_INDEX.md",
+               "rediscovery_sweep", "SESSION_NOTES", "_output.txt", ".log")
+MAX_TOKENS_FOR_A_CLAIM = 150
+
+
 def collisions(max_files: int = 8, limit: int = 40) -> int:
     """Files sharing >=2 usable result tokens without citing each other."""
     con = connect()
     usable = [r[0] for r in con.execute(
         "SELECT token FROM tok GROUP BY token HAVING COUNT(*) BETWEEN 2 AND ?",
         (max_files,))]
+    sha = {r[0]: r[1] for r in con.execute("SELECT path, sha1 FROM files")}
+    ntok = {r[0]: r[1] for r in con.execute(
+        "SELECT path, COUNT(*) FROM tok GROUP BY path")}
+
+    def claimlike(p: str) -> bool:
+        return (ntok.get(p, 0) <= MAX_TOKENS_FOR_A_CLAIM
+                and not any(k in p for k in NOT_A_CLAIM))
+
     pair: dict[tuple[str, str], int] = {}
+    rarest: dict[tuple[str, str], tuple[int, str]] = {}
     for t in usable:
         fs = sorted(r[0] for r in con.execute(
             "SELECT path FROM tok WHERE token=?", (t,)))
+        fs = [f for f in fs if claimlike(f)]
         for i in range(len(fs)):
             for j in range(i + 1, len(fs)):
-                pair[(fs[i], fs[j])] = pair.get((fs[i], fs[j]), 0) + 1
-    hits = sorted(((n, a, b) for (a, b), n in pair.items() if n >= 2), reverse=True)
+                k = (fs[i], fs[j])
+                pair[k] = pair.get(k, 0) + 1
+                cur = rarest.get(k)
+                if cur is None or len(fs) < cur[0]:
+                    rarest[k] = (len(fs), t)
+    # rank by RAREST shared token first, then by how many are shared
+    hits = sorted(((n, a, b) for (a, b), n in pair.items() if n >= 2),
+                  key=lambda x: (rarest[(x[1], x[2])][0], -x[0]))
     print(f"{len(hits)} file pairs share >=2 usable result tokens")
     shown = 0
     for n, a, b in hits:
@@ -195,6 +249,8 @@ def collisions(max_files: int = 8, limit: int = 40) -> int:
             continue
         if Path(b).stem in ta or Path(a).stem in tb:
             continue                                # they cite each other: fine
+        if sha.get(a) and sha.get(a) == sha.get(b):
+            continue                                # byte-identical copy
         print(f"  {n:3d} shared | {a}\n            | {b}")
         shown += 1
         if shown >= limit:

@@ -47,6 +47,11 @@ end to end: objects, stabilizers, vacua, and transitions.
 
 ## Boundary
 
+> **ALREADY RESOLVED -- see [BT816_cubic_surface_flags_reconstructed](analysis/BT816_cubic_surface_flags_reconstructed.md).**
+> BT816 opens "Executes the BT813 boundary (the F5 pentad / q triad structure)". This pointer was added at Pass 1400 after the boundary sweep
+> flagged the pair; a stale boundary is what cost Passes 1111 and 1118.
+
+
 Open: the [5,40] icosa-tritangent pentad (which five? an A5-orbit of
 polar pairs = a pentagonal structure on the register); the [3,24]
 triad's relation to the q = 3 generations; and lifting the transition

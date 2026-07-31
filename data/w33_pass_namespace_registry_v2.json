@@ -309,6 +309,19 @@
     "1396": "scripts/corpus_index.py: persistent incremental SQLite index over 44,076 files INCLUDING data/*.json certificates, 23,594 distinct tokens"
    },
    "runtime_boundary": "Exact GAP + exact integer SNF + exhaustive Algorithm X, all run locally; certificates in data/w33_pass1392_*.json and data/w33_pass1394_exact_cover.json. No CI-observed claim."
+  },
+  {
+   "range": "1397-1401",
+   "owner": "glue-track-cokernel-theorem-and-tooling",
+   "status": "COMPLETE",
+   "artifacts": {
+    "1397": "THE FLAGGED COINCIDENCE IS A THEOREM: coker(Z^540->Z^240) tensor Q is IRREDUCIBLE of degree 15 and equals the degree-15 constituent of the 40-point module, i.e. the (-4)-eigenspace of A. Rational statement only; the (Z/2)^30 torsion is not addressed.",
+    "1398": "at least 6,579 distinct exact covers (time-capped lower bound), all size 60; NO cover is G-invariant, proved structurally from transitivity on the 540 frames",
+    "1399": "corpus-wide collision detection made usable: 2066 -> 1491 -> 620 pairs via dir/sha1/claim-bearing filters, ranked by rarest shared token",
+    "1400": "boundary sweep adjudicated to exhaustion: 5 confirmed of 11, four newly marked (BT805->BT806, BT813->BT816, pass73->pass74, BT819->BT843); pool now 7",
+    "1401": "formal/W33/Pass1390FrameCrossMatching.lean builds clean, no sorry: equivariant bijections on a transitive set are determined by one point, and they transport stabilisers"
+   },
+   "runtime_boundary": "Exact GAP character theory, exact integer SNF, capped Algorithm X enumeration, and a locally observed clean lake build. No CI-observed claim."
   }
  ],
  "rule": "A pass number is canonical only when registered here. Retracted or scope-corrected blocks remain registered for provenance but cannot contribute active theorem claims outside their stated scope."

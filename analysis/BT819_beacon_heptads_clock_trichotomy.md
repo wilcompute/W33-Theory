@@ -56,6 +56,11 @@ timekeeping into gauge time and reference time.
 
 ## Boundary
 
+> **ALREADY RESOLVED -- see [BT843_icosahedral_compass](analysis/BT843_icosahedral_compass.md).**
+> BT843 is "Two A5 Classes, Two 216-Sets, One D5 Flag Stabilizer" and settles the 216-set question. This pointer was added at Pass 1400 after the boundary sweep
+> flagged the pair; a stale boundary is what cost Passes 1111 and 1118.
+
+
 Open: the stabilizer-9 structure (Z9 or Z3xZ3? which 3-group);
 2880 = 2 x 1440 = 2 x |Stab_Sp(spread)| - a heptad/spread duality?;
 the (5 +- sqrt13)/2 spectrum vs the Singer orbits; and the heptad as a
