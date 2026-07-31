@@ -1,0 +1,14 @@
+{
+  "schema": "w33.pass_namespace_registry_v2.shard.v1",
+  "range": "1611-1615",
+  "owner": "torsion-xor-lattice-octet-five-frontier",
+  "passes": {
+    "1611": "binary frame-cokernel torsion composition series",
+    "1612": "solver-ready independent Bockstein XOR export",
+    "1613": "four-packing torsion-signature blindness theorem",
+    "1614": "saturated free-15 bridge and determinant-two defect",
+    "1615": "octet-frame rank-three association bridge"
+  },
+  "status": "reserved",
+  "boundary": "No global nine-cover SAT/UNSAT verdict, physical threshold, or novelty priority is claimed before exact verification."
+}
