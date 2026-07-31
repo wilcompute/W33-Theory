@@ -1,0 +1,18 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.supplement",
+  "status": "ACTIVE",
+  "canonical_blocks": [
+    {
+      "range": "1500-1504-manuscript-hook",
+      "owner": "selector-five-frontiers-publication-track",
+      "status": "READY_FOR_MERGE",
+      "depends_on": "1500-1504",
+      "artifacts": {
+        "wrapper": "paper/sections/sec_complement_duality.tex",
+        "preserved_body": "paper/sections/sec_complement_duality_body.tex",
+        "insert": "paper/sections/sec_bt1500_bt1504_five_frontiers.tex"
+      },
+      "runtime_boundary": "This hook changes manuscript reachability only. It does not alter any exact worker, certificate, theorem boundary, or mathematical result."
+    }
+  ]
+}
