@@ -1,0 +1,67 @@
+{
+  "boundaries": {
+    "orbit_frontier": "The disjointness graph is exhaustive only over the frozen 327-orbit frontier.",
+    "packing": "The selected four-packing has no fifth layer; the global packing number remains open.",
+    "remote_ci": "Not claimed until an Actions run is observed.",
+    "sample_correction": "The prior fixed-frame DFS pool was pairwise intersecting by construction."
+  },
+  "files": {
+    ".github/workflows/w33-pass1511-1515.yml": {
+      "bytes": 2351,
+      "sha256": "4e216cdc4e4d7fee3e1d64c98bfbcb22c1a5c6e789b82ca05632a3a39f63142f"
+    },
+    "analysis/BT1515_cover_resolution_frontiers.md": {
+      "bytes": 4046,
+      "sha256": "e285e2d1878abb2b0fc2f7bb7d3f3dd14691bfdadd4b5757717b6cf945d69cce"
+    },
+    "analysis/BT1515_cover_resolution_insert.tex": {
+      "bytes": 1933,
+      "sha256": "c60f39fde2a90a9747fb7690d1b42b7dd74163455e77e81acd95da0a4cee1710"
+    },
+    "analysis/cpp/w33_pass1513_disjoint_cover_graph.cpp": {
+      "bytes": 3926,
+      "sha256": "22b5ca3b460b189524ac6d6e6de33a1c5b166304562ee637c8f817cfc9ec2988"
+    },
+    "analysis/cpp/w33_pass1515_residual_exact_cover.cpp": {
+      "bytes": 3952,
+      "sha256": "53fd5eba2754d5add28b44242fce548b367ba61047d9a294fbf93a2d110eeb9f"
+    },
+    "analysis/w33_pass1511_1515_cover_resolution_frontiers.py": {
+      "bytes": 18958,
+      "sha256": "d693e72cfbfaa409de33089e0418e3f475208bd506aeca72856dd4f003d1cfc4"
+    },
+    "data/w33_pass1511_1515_cover_resolution_frontiers.json": {
+      "bytes": 6599,
+      "sha256": "fe3fdc789a75683e8d4e5c7e24556b737a061a2fb42206b2e9f29aa319cabc93"
+    },
+    "data/w33_pass1511_cover_orbit_representatives.json.gz.b64": {
+      "bytes": 15229,
+      "sha256": "c6864212aec955575abfc42a904fcd75c7fae718d0a9f9b704047318e40467b8"
+    },
+    "data/w33_pass_namespace_registry_v2.d/1511-1515.json": {
+      "bytes": 845,
+      "sha256": "129beddb9a3d4cd52a0ee1cfdf6fe62f438b6320d0b5debea49026bd56666910"
+    },
+    "photonic_holonet.tex": {
+      "bytes": 720,
+      "sha256": "fc898ff24593ff833629587de81f21d2bd2311de23b41813003c72501be68893"
+    },
+    "tests/test_w33_pass1511_1515_cover_resolution.py": {
+      "bytes": 3165,
+      "sha256": "4f0cbace66e936a4736bb7ebf42c72b4f2cf2e25e07364b5f536335ce4725003"
+    },
+    "w33_paper.tex": {
+      "bytes": 713,
+      "sha256": "0d87803579f27f65145e61821a80db5675fd3a32bed67f95b2d695f54119e576"
+    }
+  },
+  "release": "Passes 1511-1515",
+  "schema": "w33.pass1511_1515.release_manifest.v1",
+  "status": "PASS",
+  "validation": {
+    "certificate_checks": 17,
+    "cpp_sources_compile": true,
+    "latex_insert_compiles": true,
+    "pytest_tests": 7
+  }
+}
