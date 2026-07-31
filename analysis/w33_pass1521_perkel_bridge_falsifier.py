@@ -87,7 +87,10 @@ def dense_bridge_family() -> list[dict[str, Any]]:
                 matrix = bc.bridge(sheet, rectangles, side_character, edge_character)
                 bridge_rank = bc.rank_mod(matrix)
                 assert bridge_rank == 81
-                sector_ranks = [bc.rank_mod(projector @ (matrix % GOOD) % GOOD) for _item, projector in projectors]
+                sector_ranks = [
+                    bc.rank_mod(projector @ (matrix % GOOD) % GOOD)
+                    for _item, projector in projectors
+                ]
                 assert sector_ranks[-1] in (4, 5)
                 output.append(
                     {
@@ -182,12 +185,21 @@ def search_relation_unions(
     target_edges: int,
     predicate,
     max_union_size: int = 3,
+    union_class_cap: int = 64,
 ) -> list[dict[str, Any]]:
+    """Search relation classes exactly, while avoiding cubic explosion in huge signatures.
+
+    Every individual relation class is tested. Unions of two or three classes are
+    tested only when the family has at most ``union_class_cap`` values. Scalar
+    invariant families are small; the cap primarily protects the full-signature
+    refinement from an accidental near-discrete partition.
+    """
     hits: list[dict[str, Any]] = []
     for family_name, family in sorted(classes.items()):
         candidates = [(value, edges) for value, edges in family.items() if len(edges) <= target_edges]
         candidates.sort(key=lambda item: (len(item[1]), repr(item[0])))
-        for size in range(1, min(max_union_size, len(candidates)) + 1):
+        effective_max = 1 if len(candidates) > union_class_cap else max_union_size
+        for size in range(1, min(effective_max, len(candidates)) + 1):
             for chosen in itertools.combinations(candidates, size):
                 if sum(len(edges) for _value, edges in chosen) != target_edges:
                     continue
@@ -214,13 +226,18 @@ def analyze() -> dict[str, Any]:
     defective = [item for item in bridges if not item["robust"]]
 
     by_sheet: dict[str, dict[str, Any]] = {}
-    for sheet, members in itertools.groupby(sorted(bridges, key=lambda item: item["sheet"]), key=lambda item: item["sheet"]):
+    grouped = itertools.groupby(
+        sorted(bridges, key=lambda item: item["sheet"]), key=lambda item: item["sheet"]
+    )
+    for sheet, members in grouped:
         group = list(members)
         by_sheet[sheet] = {
             "robust": sum(item["robust"] for item in group),
             "defective": sum(not item["robust"] for item in group),
             "defect_characters": [
-                [item["side_character"], item["edge_character"]] for item in group if not item["robust"]
+                [item["side_character"], item["edge_character"]]
+                for item in group
+                if not item["robust"]
             ],
         }
 
@@ -275,13 +292,18 @@ def analyze() -> dict[str, Any]:
             "factorization": "76 = 19*4 and 57+19 = 19*(3+1)",
             "uniform_three_robust_one_defect_per_sheet": uniform_three_plus_one,
             "defect_character_census": {
-                f"{side}{edge}": count for (side, edge), count in sorted(defect_character_census.items())
+                f"{side}{edge}": count
+                for (side, edge), count in sorted(defect_character_census.items())
             },
             "sheet_records": by_sheet,
         },
         "intrinsic_relation_search": {
             "pair_invariant_families": sorted(robust_classes),
+            "relation_class_counts": {
+                name: len(values) for name, values in sorted(robust_classes.items())
+            },
             "tested_unions_up_to_size": 3,
+            "large_family_union_class_cap": 64,
             "perkel_hits_on_57_robust_bridges": perkel_hits,
             "cycle19_hits_on_19_defective_bridges": cycle19_hits,
             "perkel_found": bool(perkel_hits),
@@ -291,12 +313,13 @@ def analyze() -> dict[str, Any]:
             "A Perkel graph was found among the tested exact pair-invariant relations. "
             "Its PSL(2,19) symmetry is emergent and does not lift to the W33 acting group."
             if perkel_hits
-            else "No Perkel graph occurs among the tested exact pair-invariant relation classes or unions of up to three classes. "
+            else "No Perkel graph occurs among the tested exact pair-invariant relation classes or permitted small unions. "
             "The equality 57=3*19 remains a cardinality shadow unless a different intrinsic relation is supplied."
         ),
         "boundary": (
             "The divisibility argument excludes inherited PSL(2,19) symmetry but not accidental automorphisms of a derived 57-object graph. "
-            "The relation search is exact for the listed matrix/support/descriptor invariants and unions of up to three value classes; it is not exhaustive over all conceivable relations on the 57 robust bridges."
+            "Every individual value class is tested. Unions of up to three classes are tested for families with at most 64 values; larger refinements are tested only classwise. "
+            "This is not exhaustive over all conceivable relations on the 57 robust bridges."
         ),
     }
     canonical = json.dumps(result, sort_keys=True, separators=(",", ":")).encode("utf-8")
