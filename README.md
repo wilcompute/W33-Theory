@@ -1,26 +1,75 @@
-# W(3,3): an executable atlas of finite geometry
+# W(3,3): the executable exceptional-geometry atlas
 
 [![Live Atlas](https://img.shields.io/badge/live-atlas-2563eb)](https://wilcompute.github.io/W33-Theory/)
 ![GAP and JSON](https://img.shields.io/badge/witnesses-GAP%20%2B%20JSON-0f766e)
 ![Evidence tiered](https://img.shields.io/badge/claims-evidence--tiered-7c3aed)
 [![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 
-> **One finite geometry. Named maps. Reproducible certificates. Public corrections.**
+> **One finite geometry. Thousands of exact artifacts. Named maps. Reproducible certificates. Public corrections.**
 
 Start with the symplectic space `F_3^4`. Its totally isotropic points and lines
-form `W(3,3)`: 40 points, 40 lines, 240 incident point-pairs, and a distinguished
-collinearity graph `SRG(40,12,2,4)`. From that one object this repository builds
-exact homology, integral lattices, group representations, error-correcting codes,
-Schläfli/E₆ carriers, Hecke algebras, and executable transport systems.
+form `W(3,3)`: 40 points, 40 lines, 240 incident point-pairs, and the
+collinearity graph `SRG(40,12,2,4)`. This repository is the executable atlas
+grown from that object: exact homology, integral lattices, modular
+representations, error-correcting codes, Schläfli/E₆ carriers, Hecke algebras,
+cycle and selector geometry, and finite transport systems.
 
-The strongest result is not a numerical coincidence. It is an object-level
-bridge: three 432-state carriers are explicitly identified with directed
-Schläfli edges, mapped equivariantly into an 81-dimensional constituent, and
-resolved integrally by exact Smith forms and modular representations.
+This is not a pile of numerology organized by pass number. Its strongest line is
+an object-level bridge: three 432-state carriers are explicitly identified with
+directed Schläfli edges, mapped equivariantly into an 81-dimensional
+constituent, resolved integrally by exact Smith forms, and followed through
+their bad-characteristic extensions and Hecke corners. The corpus also keeps
+the failed versions, so a correction has an executable owner instead of being
+silently overwritten.
 
-This repository **does not** prove a theory of everything or derive the Standard
-Model. Physics and hardware readings remain `CONDITIONAL` until they supply the
-missing encoding, dynamics, decoder, and continuum maps.
+## What this is, stated positively
+
+One finite object, pushed as far as exact computation goes. The mathematics below
+is not conditional on anything:
+
+- **Named theorems with machine-checkable witnesses** — the two-branch and
+  k-branch gluing laws, the coalescence theorem, pencil rigidity, the all-`m`
+  trace-valuation theorem at `q=3`, and one Smith-form theorem that unified two
+  agents' independently built towers.
+- **A complete modular picture of a 26-dimensional Hecke algebra** — decomposition
+  and Cartan matrices at `p = 2,3,5`, projective indecomposable dimensions, Loewy
+  and radical series, the cyclic-defect Brauer tree `1−24−81−64−6` at `p=5`, 83
+  explicit rational matrix units, and primitive idempotent systems lifted through
+  `p⁶`.
+- **Exact integral arithmetic of every eigenlattice** — Smith forms, discriminant
+  identities, prime-by-prime gluing, and a rigidity theorem showing the gluing
+  support is an invariant of the ring `Z[S]`, not of the matrix.
+- **Canonical named maps, not matching integers** — every one of the 540 frames
+  carries a *unique* `A₄`-equivariant cross-matching, and the 540 of them cover
+  the 240 edges exactly 9-to-1.
+- **A correction ledger with executable owners.** Refuted claims keep their
+  failure certificates instead of being silently overwritten, and several were
+  found by the authors auditing themselves.
+
+**Where the boundary falls.** The finite mathematics is exact. The *physical*
+readings — which combinatorial object is a generation, a coupling, an optical mode
+— are `CONDITIONAL`, because identifying a combinatorial object with a physical one
+is a map that must be built, not inferred from a matching integer. Two of fourteen
+published constant formulas survive σ-testing, and the
+[table showing which twelve fail](#physics-constants--every-derivation-verified-or-flagged)
+is in this README rather than in a drawer. That is the standard the whole corpus is
+held to, and it is the reason to trust the rest.
+
+## What is already in hand
+
+| Result family | Best current result | Canonical owner |
+|---|---|---|
+| Geometry, topology, and code | The canonical `W(3,3)` model, `H₁ ≅ Z^81`, and the ternary `[[240,81,3]]₃` sector | [master paper](w33_paper.tex) · [Passes 373–374](PASS373_374_W33_BOUNDARY_MLUT_PHASE_SHEET_SYNTHESIS.md) |
+| Integral spectral arithmetic | Exact adjacency and signed-turn Smith forms, prime-by-prime gluing, ramified kernel growth, and the coalescence theorem | [integral frontier](#eigenlattices-gluing-and-the-e₈-boundary--the-2026-07-arc) |
+| Exceptional carrier bridge | `432 → 81 → 216`, one-colour Smith profile `1^15,2^6,4^8,8^29,40^23`, colour index `3^81` | [Pass 1147](PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md) |
+| Modular representation closure | The nonsplit `58\|23` frame extension, one-dimensional directed `Ext¹` spaces, exact `H₂₆` radicals, Cartan matrices, PIM dimensions, and lifts through `p^6` | [Pass 1335](PASS1335_BRAUER_TREE_HECKE_CORNER.md) · [Passes 1340–1344](PASS1340_1344_CARTAN_ATLAS_SELECTOR_PADIC_RELEASE.md) |
+| Global selector geometry | The length-4 simple-cycle orbit of size `120` is globally minimal over all lengths `3…40`; adding a primitive copy idempotent gives the global orbit minimum `360` | [GAP witness](analysis/w33_pass1342_global_cycle_selector_bound.g) |
+| Steinberg carrier, named | The three 432-orbits carrying the `3×81` are **conjugate**, stabiliser `S₅`; `S₅ ∩ PSp(4,3) = A₅`, so the carrier's stabiliser is not inside the simple group | [Pass 1375](analysis/w33_pass1375_1378_s5_tomotope_a4_guard.md) |
+| Frame cross-matching | Every frame has a **unique** `A₄`-equivariant matching between its two lines; the 540 cover the 240 edges **9-to-1** | [Pass 1390](analysis/w33_pass1390_1391_frame_cross_matching.md) |
+
+Those are the compact front doors. The larger [certified backbone](#certified-finite-backbone)
+below gives exact statements, tiers, and owning artifacts without forcing a
+reader to guess which of several historical versions is strongest.
 
 ## Choose your route
 
@@ -67,19 +116,31 @@ For aliases, superseded names, and pass ownership, use
 
 ```mermaid
 flowchart TD
-    V["(F₃⁴, alternating form)"] --> W["W(3,3): 40 points, 240 edges"]
+    V["(F₃⁴, alternating form)"] --> W["W(3,3): 40 points, 40 lines, 240 edges"]
     W --> C["clique complex: H₁ ≅ Z⁸¹"]
+    W --> SP["spec(A)=12¹,2²⁴,(−4)¹⁵<br/>spec(A−I)=11¹,1²⁴,(−5)¹⁵"]
     W --> A["adjacency and signed-turn lattices"]
     A --> L["Smith forms and prime-by-prime gluing"]
+    L --> CO["coalescence: the p-part is carried<br/>by eigenvalues colliding mod p"]
     W --> Y["Y₄₈₀ directed-edge carrier"]
+    W --> F["540 frames = disjoint line pairs<br/>stabiliser C₂×S₄ = O_h"]
+    F --> FA["derived subgroup A₄ acts faithfully<br/>on each line's 4 points"]
+    FA --> FM["canonical 4-edge cross-matching<br/>540 frames → 240 edges, 9-to-1"]
     S["Schläfli graph on 27 lines"] --> X["X₄₃₂ = W(E₆)/S₅"]
     X --> T["rank-81 odd transform; 216 tight-frame lines"]
     T --> I["integral bad primes {2,5}"]
-    X --> H["H₂₆ and three-carrier triality"]
+    X --> ST["3×81 Steinberg carrier:<br/>three conjugate 432-orbits, stabiliser S₅"]
+    ST --> STP["S₅ ⊄ PSp(4,3); S₅ ∩ PSp(4,3) = A₅"]
+    X --> H["H₂₆ = End_G(X₄₃₂), three-carrier triality"]
     H --> J["234 → 78 → 52; Hecke bad primes {2,3,5}"]
     J --> R["modular radicals: 21→17→13→7→2→0 at p=2"]
-    R --> B["p=5 Brauer tree: Ext¹(23,58)=Ext¹(58,23)=1"]
+    R --> B["p=5 Brauer tree 1−24−81−64−6<br/>Ext¹(23,58)=Ext¹(58,23)=1"]
+    R --> P["Cartan/PIM at p=2,3,5; idempotents through p⁶"]
+    H --> MU["83 rational matrix units:<br/>Q⁷⊕M₂(Q)²⊕M₃(Q)³⊕M₄(Q)⊕M₅(Q)"]
+    H --> Q["global cycle orbit 120 = 40 lines × 3 matchings<br/>cycle + copy orbit 360"]
+    Q --> QO["no maximal subgroup holding a 432-selector<br/>stabiliser contains the S₅"]
 ```
+
 
 | Mathematical object | Strongest current result | Tier | Canonical entry |
 |---|---|---|---|
@@ -95,6 +156,13 @@ flowchart TD
 | Modular `H₂₆` | Radical powers at `p=2,3,5` are `21,17,13,7,2,0`; `22,16,10,4,0`; `6,2,0`; the exceptional `p=5` scalar Ext quiver is doubled `A₃`, a condensation shadow of the same cyclic-defect block | `CERTIFIED` | [Passes 1330–1334](PASS1330_1334_MODULAR_TRIALITY_ATLAS_RELEASE.md) · [Pass 1335](PASS1335_BRAUER_TREE_HECKE_CORNER.md) |
 | Binary quadratic-residue code | Corrected code `[[137,1,21]]`; exact affine/real-Clifford towers and explicit parity boundaries | `CERTIFIED` | [Passes 358–367](PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md) |
 | Section trace tower | For every `m≥2`, `min_c v_λ(tr(D_c^m)) = 2(m+[m odd])` at `q=3` | `CERTIFIED` | [Pass 541](PASS541_Q3_ALL_M_RECURRENCE_THEOREM.md) |
+| `H₂₆` Cartan/PIM and p-adic refinement | `C₂=diag(1,22)`, `C₃`, `C₅=I₆⊕[[2,1,1],[1,1,0],[1,0,2]]`; PIM dimensions `(2,22)`, `(9,6,10,1)`, `(3,2,1,1,1,1,4,2,3)`; primitive systems verified through `p⁶`; Smith and Loewy filtrations differ | `CERTIFIED` | [Passes 1340–1344](PASS1340_1344_CARTAN_ATLAS_SELECTOR_PADIC_RELEASE.md) |
+| Global cycle/copy selector bound | Exact GAP path-stabilizer proof: global simple-cycle orbit minimum `120` at length 4; a primitive copy idempotent gives `360`; cycles alone act as `C⊗I₃` | `CERTIFIED` | [GAP witness](analysis/w33_pass1342_global_cycle_selector_bound.g) |
+| Shifted adjacency | `spec(A−I) = 11¹,1²⁴,(−5)¹⁵`, `m_D(t)=(t−11)(t−1)(t+5)`; the historical cubic `(t+1)[(t+1)²−36]` annihilates **no** eigenspace (`rank p_old(D)=40`) | `CERTIFIED` | [erratum](analysis/2026-07-27_shifted_adjacency_spectral_erratum.md) |
+| Steinberg carrier stabiliser | Three **conjugate** 432-orbits, stabiliser `S₅ = SmallGroup[120,34]`, `S₅ ∩ PSp(4,3) = A₅`; no maximal subgroup able to hold a 432-selector stabiliser contains the `S₅` | `CERTIFIED` | [Pass 1375](analysis/w33_pass1375_1378_s5_tomotope_a4_guard.md) |
+| Tomotope, from its own paper | `Γ(T)=[96,227]=2⁴:S₃`, `Γ(T)′=[48,50]=2⁴:C₃`, built from the **published** generators. `Aut(T)` *satisfies* the intersection condition — `Mon(T)` is what fails | `CERTIFIED` | [Pass 1376](analysis/w33_pass1375_1378_s5_tomotope_a4_guard.md) |
+| Frame cross-matching | Unique `A₄`-equivariant bijection per frame, invariant under the full stabiliser; all 240 cross-pairs are **edges**, covered 9-to-1 | `CERTIFIED` | [Pass 1390](analysis/w33_pass1390_1391_frame_cross_matching.md) |
+| Frames are not polytope facets | `O_h` is a string C-group `{4,3}`, but no rank-4 string C-group extends it in `PSp(4,3)` | `CERTIFIED` | [Pass 1377](analysis/w33_pass1375_1378_s5_tomotope_a4_guard.md) |
 
 ### The flagship bridge, in one paragraph
 
@@ -556,31 +624,6 @@ py -3 tools/bt1291_verify_release_packet.py   # verifies the whole packet
 | `papers/` | Specialist manuscripts; the master source is `w33_paper.tex` at the root |
 | `docs/` | The live atlas, PDFs, demonstrators, and reader-facing artifacts |
 | `PASS_*`, `BREAKTHROUGH_*`, `PART_*` | Synthesis and historical release documents; use the result index to find the owner |
-
----
-
-## The current frontier
-
-The former headline problem, ramified `p=2` coalescence, is closed by Pass 1002:
-the kernel-growth sequence `40,80,119,158,182` reconstructs
-`Z/8 ⊕ (Z/2)^15`. The live questions start one layer deeper:
-
-1. **Complete the characteristic-2 frame module.** Pass 1335 closes the
-   characteristic-5 `Ext¹` question and identifies the Hecke radical as a
-   condensation shadow, not the literal middle module. The sharp remaining
-   modular problem is the Loewy series and extension quiver of the specific
-   81-dimensional frame reduction behind its `1⊕14` image at `p=2`, together
-   with the exact condensation functor to the `p=2` `H₂₆` radical.
-2. **Build the single integral pushout.** Combine the one-colour Smith profile,
-   the colour index `3^81`, the six-channel Smith form, and the 26-unit Hecke
-   lattice into one explicit linking lattice and compute its complete SNF.
-3. **Classify the 216-line geometry.** The tight frame has angles
-   `0,1/15,1/5`; construct its full orbital coherent configuration and compute
-   its exact automorphism group rather than inferring either from the angle set.
-4. **Keep the physical compiler boundary explicit.** A photonic claim now
-   requires a named encoding, state preparation/injection map, decoder, and
-   threshold. The exact finite modules are inputs to that construction, not a
-   substitute for it.
 
 ---
 

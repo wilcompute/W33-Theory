@@ -286,6 +286,16 @@
     "1389": "both manuscripts verified free of the false cubic (0/8 signatures); erratum target confirmed real from git history"
    },
    "runtime_boundary": "Exact GAP and text scans run locally; certificate data/w33_pass1385_1386_a4_selector.txt. No CI-observed claim."
+  },
+  {
+   "range": "1390-1391",
+   "owner": "glue-track-frame-cross-matching",
+   "status": "COMPLETE",
+   "artifacts": {
+    "1390": "canonical A4-equivariant cross-matching of every frame: exactly one per frame (all 540), invariant under the full order-48 stabiliser; all 240 distinct cross-pairs are EDGES of W(3,3), single G-orbit, stabiliser 108 = C3xS3xS3, covering 9-to-1",
+    "1391": "scope: 240 here is the EDGE set, not the E8 roots (Pass 1012 obstruction); 2160 is an incidence count with multiplicity, not an object"
+   },
+   "runtime_boundary": "Exact GAP over all 540 frames; certificate data/w33_pass1390_frame_cross_matching.txt. No CI-observed claim."
   }
  ],
  "rule": "A pass number is canonical only when registered here. Retracted or scope-corrected blocks remain registered for provenance but cannot contribute active theorem claims outside their stated scope."

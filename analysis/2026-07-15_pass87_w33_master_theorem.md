@@ -1,4 +1,14 @@
 # W33-Theory: Pass 87 — The W33 Master Theorem
+
+> **RETRACTED VALUE — the code is `[[137,1,21]]`, not `[[137,1,3]]`.**
+> The distance-3 reading was refuted at Passes 358–359 and the exact binary
+> quadratic-residue CSS code is `[[137,1,21]]`; see
+> [`analysis/CANON_137_1_21.md`](analysis/CANON_137_1_21.md), which owns the
+> correction. This pointer was added at Pass 1391 after the boundary sweep
+> found the dead value still propagating in seven files. The surrounding text
+> is left as written so the failure keeps its provenance.
+
+
 ## Date: 2026-07-15
 
 ---

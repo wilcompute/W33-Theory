@@ -1,0 +1,29 @@
+Pass 1390: the frame cross-matching
+
+lines 40, frames 540
+
+=== Q1: A4-equivariant bijections L -> L' for one frame ===
+  L  = [ 1, 2, 3, 40 ]
+  L' = [ 4, 6, 22, 34 ]
+  |frame stabiliser| = 48   |A4| = 12
+  equivariant bijections found: 1
+     [ 4, 1, 2, 3 ]  ->  matching [ [ 1, 34 ], [ 2, 4 ], [ 3, 6 ], [ 40, 22 ] \
+]
+  CANONICAL (exactly one)? true
+
+  over all 540 frames, #equivariant bijections = [ [ 1, 540 ] ]
+
+=== Q2: is the cross-matching invariant under the FULL frame stabiliser? ===
+  matching M = [ [ 1, 34 ], [ 2, 4 ], [ 3, 6 ], [ 22, 40 ] ]
+  |full stabiliser on points| = 48
+  M invariant under the FULL stabiliser? true
+  M invariant under the A4 only? true
+
+=== Q3: the total cross-pair count, and whether it is BT796's 2160 ===
+  distinct cross-pairs over all frames: 240   (540*4 = 2160 with multiplicity)
+  G-orbits on them: [ 240 ]
+  point stabiliser order 108 = C3 x S3 x S3
+  is a cross-pair an EDGE (collinear) of W(3,3)? true
+  how many cross-pairs are edges: 240 of 240
+
+DONE

@@ -1,3 +1,6 @@
+# RETRACTED VALUE: the exact code is [[137,1,21]], not [[137,1,3]].
+# Refuted at Passes 358-359; analysis/CANON_137_1_21.md owns the correction.
+# Marked at Pass 1391 after the boundary sweep found the dead value still live.
 #!/usr/bin/env python3
 """
 Pass 76: QEC code inventory and the [[137,1,3]] Alpha Code
