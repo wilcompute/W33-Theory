@@ -2,18 +2,21 @@ name: Passes 1390-1394 Serial Exact Fallback
 
 on:
   push:
-    branches:
-      - agent/pass1390-1394-five-frontiers
+    branches: [agent/pass1390-1394-five-frontiers]
     paths:
       - '.github/workflows/pass1390_1394_serial.yml'
-  pull_request:
-    branches: [master]
-    paths:
       - 'analysis/w33_pass1390_1394_five_frontiers.py'
       - 'analysis/w33_pass1390_1394_five_frontiers.src/**'
       - 'data/w33_pass1390_1394_five_frontiers.json'
-      - 'tests/test_w33_pass1390_1394_five_frontiers.py'
+      - 'tools/check_pass1390_1394_worker.py'
+  pull_request:
+    branches: [master]
+    paths:
       - '.github/workflows/pass1390_1394_serial.yml'
+      - 'analysis/w33_pass1390_1394_five_frontiers.py'
+      - 'analysis/w33_pass1390_1394_five_frontiers.src/**'
+      - 'data/w33_pass1390_1394_five_frontiers.json'
+      - 'tools/check_pass1390_1394_worker.py'
   workflow_dispatch:
 
 permissions:
@@ -33,16 +36,16 @@ jobs:
         with:
           python-version: '3.12'
           cache: pip
-      - run: python -m pip install --upgrade pip numpy sympy networkx pytest
+      - run: python -m pip install --disable-pip-version-check numpy sympy networkx
       - run: python -m py_compile analysis/w33_pass1390_1394_five_frontiers.py
-      - name: Run five exact frontiers
-        run: |
+      - run: |
           mkdir -p /tmp/pass1390-1394
           for worker in 1390 1391 1392 1393 1394; do
             python analysis/w33_pass1390_1394_five_frontiers.py --worker "$worker" --output "/tmp/pass1390-1394/$worker.json"
+            python tools/check_pass1390_1394_worker.py "$worker" "/tmp/pass1390-1394/$worker.json"
           done
       - uses: actions/upload-artifact@v4
         with:
-          name: pass1390-1394-results
+          name: pass1390-1394-serial
           path: /tmp/pass1390-1394/*.json
           if-no-files-found: error
