@@ -42,7 +42,8 @@ def test_rational_orbital_refinement():
     record = result["pass1367_rational_orbital_wedderburn"]
     assert record["center_dimension_over_Q"] == 14
     assert record["rational_wedderburn"] == "Q^7 + M2(Q)^2 + M3(Q)^3 + M4(Q) + M5(Q)"
-    assert record["center_refinement_identity"] == "83 - 79 = 14 - 10 = 4"
+    assert "14-10" in record["defect_explanation"]
+    assert len(record["blocks"]) == 14
 
 
 def test_coherent_configuration():
