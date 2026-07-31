@@ -1,0 +1,34 @@
+name: Promote BT1420 into both manuscripts
+
+on:
+  push:
+    paths:
+      - '.github/workflows/promote-bt1420.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Reconcile current master
+        run: git pull --rebase origin master
+      - name: Integrate shared exact bridge
+        run: python tools/integrate_bt1420_frame_signed_turn_bridge.py
+      - name: Commit only the two root manuscripts
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add w33_paper.tex photonic_holonet.tex
+          if git diff --cached --quiet; then
+            echo 'Pass 1420 already integrated.'
+          else
+            git commit -m 'Pass 1420: promote shared bridge into both manuscripts'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
