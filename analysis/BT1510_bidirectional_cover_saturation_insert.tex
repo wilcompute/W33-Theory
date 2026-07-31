@@ -1,0 +1,28 @@
+\subsection*{Bidirectional exact-cover saturation}
+
+A second deterministic exact-cover search was performed by reversing the
+candidate-frame order at every depth of the Pass-1505 search.  The forward and
+reverse prefixes each contain $100000$ covers through the fixed canonical frame,
+and they are disjoint as raw solution sets.  Exact orbit traversal nevertheless
+shows that each prefix meets the identical $327$ complete
+$\mathrm{PSp}(4,3)$-orbits.  Their common certified cover lower bound remains
+\[
+3547800,
+\]
+with stabilizer-order census
+\[
+2^{228},\qquad 4^{84},\qquad 8^{15}.
+\]
+Canonical orbit representatives agree objectwise, not merely numerically.
+
+The two DFS orders are not uniform samplers.  If $f_i$ and $r_i$ denote their
+hits in the $i$th orbit, only seven of $327$ hit counts agree, while
+\[
+\sum_i|f_i-r_i|=10244,
+\qquad
+\sum_i(f_i-r_i)^2=463520.
+\]
+Their Pearson correlation is $0.9280509607335599$.  Thus deterministic DFS is
+valid for exhibited-orbit lower bounds but not for frequency inference.
+Agreement of the two prefixes is a saturation certificate for the observed
+frontier, not a proof that the global exact-cover orbit census is complete.

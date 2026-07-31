@@ -1,0 +1,15 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.supplement",
+  "status": "ACTIVE",
+  "canonical_blocks": [
+    {
+      "range": "1510",
+      "owner": "bidirectional-exact-cover-saturation-track",
+      "status": "COMPLETE",
+      "artifacts": {
+        "1510": "opposite-order 100000+100000 exact-cover prefixes, canonical 327-orbit equality, and sampler-bias certificate"
+      },
+      "runtime_boundary": "Routine CI validates the frozen long-run certificate and a 100+100 executable smoke sample. The full reverse 100000-prefix rerun remains opt-in because its runtime is substantially longer."
+    }
+  ]
+}

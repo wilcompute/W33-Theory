@@ -1,0 +1,67 @@
+name: W33 Pass 1510 Bidirectional Cover Saturation
+
+on:
+  push:
+    paths:
+      - 'analysis/cpp/w33_pass1505_exact_cover_prefix.cpp'
+      - 'analysis/cpp/w33_pass1510_exact_cover_reverse_prefix.cpp'
+      - 'analysis/cpp/w33_pass1510_bidirectional_orbit_saturation.cpp'
+      - 'analysis/w33_pass1510_bidirectional_cover_saturation.py'
+      - 'analysis/BT1510_bidirectional_cover_saturation.md'
+      - 'analysis/BT1510_bidirectional_cover_saturation_insert.tex'
+      - 'data/w33_pass1510_bidirectional_cover_saturation.json'
+      - 'data/w33_pass_namespace_registry_v2.d/1510.json'
+      - 'tests/test_w33_pass1510_bidirectional_cover_saturation.py'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - '.github/workflows/w33-pass1510-bidirectional-cover-saturation.yml'
+  pull_request:
+    paths:
+      - 'analysis/cpp/w33_pass1510_exact_cover_reverse_prefix.cpp'
+      - 'analysis/cpp/w33_pass1510_bidirectional_orbit_saturation.cpp'
+      - 'analysis/w33_pass1510_bidirectional_cover_saturation.py'
+      - 'data/w33_pass1510_bidirectional_cover_saturation.json'
+      - 'tests/test_w33_pass1510_bidirectional_cover_saturation.py'
+
+jobs:
+  frozen-certificate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy pytest
+      - run: python analysis/w33_pass1510_bidirectional_cover_saturation.py --check
+      - run: pytest -q tests/test_w33_pass1510_bidirectional_cover_saturation.py
+
+  executable-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy
+      - run: python analysis/w33_pass1510_bidirectional_cover_saturation.py --smoke --sample-size 100
+
+  insert-portability:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq texlive-latex-base texlive-latex-recommended texlive-fonts-recommended
+          d=$(mktemp -d)
+          cp analysis/BT1510_bidirectional_cover_saturation_insert.tex "$d/insert.tex"
+          cat > "$d/minimal.tex" <<'TEX'
+          \documentclass{article}
+          \usepackage{amsmath,amssymb}
+          \begin{document}
+          \input{insert}
+          \end{document}
+          TEX
+          (cd "$d" && pdflatex -interaction=nonstopmode -halt-on-error minimal.tex)
