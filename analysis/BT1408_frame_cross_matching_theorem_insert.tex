@@ -127,6 +127,51 @@ it selects the nontrivial reduction of the rational $15$, while the second copy
 remains in the torsion-side kernel.
 \end{remark}
 
+\subsection*{The Hodge decomposition of the edge module, and what it does not
+contain}
+\label{sec:hodgeblocks}
+
+The clique complex of $W(3,3)$ is three-dimensional: every totally isotropic line
+is a $4$-clique, hence a tetrahedron, giving
+$(C_0,C_1,C_2,C_3)=(40,240,160,40)$ with $\chi=-80$ and Betti numbers
+$(b_0,b_1,b_2,b_3)=(1,81,0,0)$ --- the complex is homotopy equivalent to a
+bouquet of $81$ circles.
+
+\begin{theorem}[Hodge blocks of the signed edge module]\label{thm:hodgeblocks}
+Under the orientation-signed action of $\Aut$ on the $240$ edge $1$-chains, the
+Hodge decomposition is multiplicity-free and splits into six irreducibles:
+\[
+\underbrace{15\oplus 24}_{\text{exact, }39}\;\oplus\;
+\underbrace{81}_{\text{harmonic}}\;\oplus\;
+\underbrace{30\oplus 45\oplus 45}_{\text{coexact, }120}\;=\;240 .
+\]
+The harmonic block is \emph{irreducible} of degree $81$ and is the Steinberg
+module. The exact block $15\oplus24$ is precisely the $40$-point permutation
+module modulo its trivial constituent, i.e.\ the $(-4)$- and $(+2)$-eigenspaces
+of $A$.
+\end{theorem}
+
+In gauge-theoretic language this is the pure-gauge / physical / constraint split,
+with the Gauss-law count $39=40-1$ realised representation-theoretically and a
+physical sector that is a single irreducible.
+
+\begin{remark}[No Hodge star, and where one must come from]\label{rem:nostar}
+A Hodge star requires $C_k\cong C_{3-k}$. Here $C_0=C_3=40$ but
+$C_1=240\neq160=C_2$, the discrepancy being exactly $|\chi|$; and on the physical
+sector $\star$ would map $H^1\to H^2$ with $b_2=0$. So the $81$ physical modes
+admit no dual, there is no $F\wedge\star F$, and no variational dynamics can be
+written on this complex. The finite geometry supplies the \emph{kinematics} and
+withholds the \emph{dynamics}.
+
+In an almost-commutative geometry $M^4\times F$ the volume form, the star and the
+variational principle belong to the continuum factor; the finite factor
+contributes an algebra and a module. That division is now explicit: the finite
+side supplies $\langle I,A,J\rangle$ and the Steinberg module of
+Theorem~\ref{thm:hodgeblocks}, and the star must be supplied by $M^4$. The
+absence is established by computation ($b_2=0$), not by omission, and cannot be
+repaired internally.
+\end{remark}
+
 \begin{proposition}[Resolutions of the edge set]\label{prop:crosscover}
 There exist sets of $60$ frames whose cross-matchings partition $E$. No cover is
 $\Aut$-invariant, since $\Aut$ is transitive on the $540$ frames and a cover uses

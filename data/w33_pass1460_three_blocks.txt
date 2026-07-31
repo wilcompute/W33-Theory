@@ -1,0 +1,9 @@
+Pass 1460: signed characters of exact / harmonic / coexact
+
+dims: exact=39  harmonic=81  coexact=120   sum=240
+
+EXACT    (dim 39): [ [ 15, 1 ], [ 24, 1 ] ]   irreducible? false
+HARMONIC (dim 81): [ [ 81, 1 ] ]   irreducible? true
+COEXACT  (dim 120): [ [ 30, 1 ], [ 45, 1 ], [ 45, 1 ] ]   irreducible? false
+
+DONE

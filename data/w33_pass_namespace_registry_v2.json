@@ -431,6 +431,19 @@
     "1459": "where the star must come from: in M^4 x F the metric/volume/variational structure lives on the continuum factor; the finite side supplies the algebra and the module (Steinberg 81, now named). The absence is by computation (b2=0), not oversight"
    },
    "runtime_boundary": "Exact GAP character theory over the signed action; one exhaustive Python search (16s, complete). The resolution search exceeded its budget and is stated open."
+  },
+  {
+   "range": "1460-1464",
+   "owner": "glue-track-complete-hodge-decomposition",
+   "status": "COMPLETE",
+   "artifacts": {
+    "1460": "PHYSICS: the signed 240-edge module decomposes MULTIPLICITY-FREE into six irreducibles aligned with the Hodge blocks: exact 39 = 15+24, harmonic 81 = Steinberg (irreducible), coexact 120 = 30+45+45. The gauge sector 15+24 IS the 40-point module modulo its trivial constituent, i.e. the (-4) and (+2) eigenspaces of A -- Gauss law stated representation-theoretically",
+    "1461": "resolution search: three methods (random DFS, ban-and-recurse frozensets, ban-and-recurse bitsets) all exceeded budget. OPEN, not excluded. Pass 1456 proves the method is sound at depth 1 (16s), so this is a performance wall",
+    "1462": "AUDIT of every claim from the DFS-sampled pool: 3 REFUTED (intersecting family, cover-type proportions, diagonal stabilisers), 3 stand (all existence claims). The sampler is fine for exhibiting objects, worthless for frequencies or universals",
+    "1463": "the 12 remains unexplained: edge counting killed in 1457, and the enumeration follow-up hit the same performance wall. Measured fact, no explanation, no counterexample",
+    "1464": "BT1408 now carries the Hodge-block theorem and the no-star remark in BOTH manuscripts; w33_paper 1,513,702 bytes and photonic_holonet 1,006,317 bytes, 0 errors each"
+   },
+   "runtime_boundary": "Exact GAP signed-character computation; two observed local tectonic builds. The resolution and the 12 are explicitly open."
   }
  ],
  "rule": "A pass number is canonical only when registered here. Retracted or scope-corrected blocks remain registered for provenance but cannot contribute active theorem claims outside their stated scope."
