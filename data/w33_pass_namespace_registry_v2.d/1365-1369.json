@@ -1,0 +1,19 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.supplement",
+  "status": "ACTIVE",
+  "canonical_blocks": [
+    {
+      "range": "1365-1369",
+      "owner": "rational-wedderburn-geometric-schur-completion-track",
+      "status": "COMPLETE_WITH_RUNTIME_BOUNDARIES",
+      "artifacts": {
+        "1365": "exact rational Wedderburn decomposition of the 79-dimensional selector Terwilliger algebra",
+        "1366": "intrinsic shell-2 and shell-4 orbital splitters and one-generator ordinary completion to dimension 83",
+        "1367": "exact rational Wedderburn decomposition of the full stabilizer orbital algebra and scalar-sector refinement",
+        "1368": "five-fiber 83-relation coherent configuration, exact sparse intersection tensor, and A-D-S generation",
+        "1369": "dual-manuscript theorem integrator, focused regressions, dedicated CI, and literature/physics boundaries"
+      },
+      "runtime_boundary": "Exact characteristic-zero central idempotents, rational splitting witnesses, geometric splitter identities, and coherent-configuration counts pass locally. Closure dimensions are independently reproduced modulo 1000003 and 1000033 and promoted to characteristic zero using the exact 83-dimensional orbital upper bound. No literature-priority or physical-realization claim is made."
+    }
+  ]
+}
