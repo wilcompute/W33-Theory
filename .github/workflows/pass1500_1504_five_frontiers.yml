@@ -1,0 +1,59 @@
+name: Passes 1500-1504 Five Exact Frontiers
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/pass1500_1504/**'
+      - 'analysis/w33_pass1500_1504_five_frontiers.py'
+      - 'analysis/BT1500_BT1504_five_frontiers.*'
+      - 'data/w33_pass1500_1504_five_frontiers.json'
+      - 'tests/test_w33_pass1500_1504_five_frontiers.py'
+      - 'tools/check_pass1500_1504_worker.py'
+      - 'tools/assemble_pass1500_1504_certificate.py'
+      - '.github/workflows/pass1500_1504_five_frontiers.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  OPENBLAS_NUM_THREADS: '1'
+  OMP_NUM_THREADS: '1'
+
+jobs:
+  static-certificate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install --disable-pip-version-check pytest numpy sympy networkx
+      - run: python -m py_compile analysis/pass1500_1504/*.py analysis/w33_pass1500_1504_five_frontiers.py tools/check_pass1500_1504_worker.py tools/assemble_pass1500_1504_certificate.py
+      - run: pytest -q tests/test_w33_pass1500_1504_five_frontiers.py
+      - run: python analysis/w33_pass1500_1504_five_frontiers.py --check
+
+  exact-worker:
+    strategy:
+      fail-fast: false
+      matrix:
+        worker: ['1500', '1501', '1502', '1503', '1504']
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install --disable-pip-version-check numpy sympy networkx pytest
+      - run: python analysis/w33_pass1500_1504_five_frontiers.py --worker '${{ matrix.worker }}' --output '/tmp/pass${{ matrix.worker }}.json'
+      - run: python tools/check_pass1500_1504_worker.py '${{ matrix.worker }}' '/tmp/pass${{ matrix.worker }}.json' data/w33_pass1500_1504_five_frontiers.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass-${{ matrix.worker }}
+          path: /tmp/pass${{ matrix.worker }}.json
+          if-no-files-found: error
