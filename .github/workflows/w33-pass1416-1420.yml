@@ -1,0 +1,57 @@
+name: W33 Passes 1416-1420
+
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1416_cokernel_signed_turn_intertwiner.py'
+      - 'analysis/w33_pass1417_exact_cover_orbit_frontier.py'
+      - 'analysis/w33_pass1418_mod2_bridge_loewy_flag.py'
+      - 'analysis/w33_pass1419_manuscript_claim_audit.md'
+      - 'analysis/BT1420_frame_signed_turn_bridge_insert.tex'
+      - 'analysis/w33_pass1416_1420_five_frontier_release.md'
+      - 'data/w33_pass1416_cokernel_signed_turn_intertwiner.json'
+      - 'data/w33_pass1417_exact_cover_orbit_frontier.json'
+      - 'data/w33_pass1418_mod2_bridge_loewy_flag.json'
+      - 'data/w33_pass1419_manuscript_claim_audit.json'
+      - 'tests/test_w33_pass1416_1420_release.py'
+      - 'tools/integrate_bt1420_frame_signed_turn_bridge.py'
+      - '.github/workflows/w33-pass1416-1420.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass1416_cokernel_signed_turn_intertwiner.py'
+      - 'analysis/w33_pass1417_exact_cover_orbit_frontier.py'
+      - 'analysis/w33_pass1418_mod2_bridge_loewy_flag.py'
+      - 'analysis/BT1420_frame_signed_turn_bridge_insert.tex'
+      - 'tests/test_w33_pass1416_1420_release.py'
+
+jobs:
+  exact-release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy pytest
+      - name: Verify frozen certificates
+        run: |
+          python analysis/w33_pass1416_cokernel_signed_turn_intertwiner.py --check
+          python analysis/w33_pass1417_exact_cover_orbit_frontier.py --check
+          python analysis/w33_pass1418_mod2_bridge_loewy_flag.py --check
+      - name: Focused regression suite
+        run: pytest -q tests/test_w33_pass1416_1420_release.py
+      - name: Compile shared insert independently
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq texlive-latex-base texlive-latex-recommended texlive-fonts-recommended
+          d=$(mktemp -d)
+          cp analysis/BT1420_frame_signed_turn_bridge_insert.tex "$d/insert.tex"
+          cat > "$d/minimal.tex" <<'TEX'
+          \documentclass{article}
+          \usepackage{amsmath,amssymb}
+          \begin{document}
+          \input{insert}
+          \end{document}
+          TEX
+          (cd "$d" && pdflatex -interaction=nonstopmode -halt-on-error minimal.tex)
