@@ -14,13 +14,20 @@ WORKERS = ("1420", "1421", "1422", "1423", "1424")
 
 
 def run_worker(worker):
-    return {
+    result = {
         "1420": modular_ext.analyze,
         "1421": tensor_fourier.analyze,
         "1422": bridge_classification.analyze,
         "1423": local_overorders.analyze,
         "1424": linking_algebra.analyze,
     }[worker]()
+    words = result["theorem"].split(" ", 2)
+    result["theorem"] = f"Pass {worker} {words[2]}"
+    # Re-freeze the public worker hash after collision-safe renumbering.
+    raw = dict(result)
+    raw.pop("sha256", None)
+    result["sha256"] = hashlib.sha256(json.dumps(raw, sort_keys=True, separators=(",", ":"), default=str).encode()).hexdigest()
+    return result
 
 
 def main():
