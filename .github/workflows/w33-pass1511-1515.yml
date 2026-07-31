@@ -1,0 +1,60 @@
+name: W33 Passes 1511-1515
+
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1511_1515_cover_resolution_frontiers.py'
+      - 'analysis/cpp/w33_pass1513_disjoint_cover_graph.cpp'
+      - 'analysis/cpp/w33_pass1515_residual_exact_cover.cpp'
+      - 'analysis/BT1515_cover_resolution_frontiers.md'
+      - 'analysis/BT1515_cover_resolution_insert.tex'
+      - 'data/w33_pass1511_cover_orbit_representatives.json.gz.b64'
+      - 'data/w33_pass1511_1515_cover_resolution_frontiers.json'
+      - 'data/w33_pass1511_1515_release_manifest.json'
+      - 'data/w33_pass_namespace_registry_v2.d/1511-1515.json'
+      - 'tests/test_w33_pass1511_1515_cover_resolution.py'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - '.github/workflows/w33-pass1511-1515.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass1511_1515_cover_resolution_frontiers.py'
+      - 'analysis/cpp/w33_pass1513_disjoint_cover_graph.cpp'
+      - 'analysis/cpp/w33_pass1515_residual_exact_cover.cpp'
+      - 'data/w33_pass1511_cover_orbit_representatives.json.gz.b64'
+      - 'data/w33_pass1511_1515_cover_resolution_frontiers.json'
+      - 'data/w33_pass1511_1515_release_manifest.json'
+      - 'tests/test_w33_pass1511_1515_cover_resolution.py'
+
+jobs:
+  exact-cover-resolution:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy pytest
+      - run: python analysis/w33_pass1511_1515_cover_resolution_frontiers.py --check
+      - run: pytest -q tests/test_w33_pass1511_1515_cover_resolution.py
+
+  insert-portability:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile shared insert independently
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq texlive-latex-base texlive-latex-recommended texlive-fonts-recommended
+          d=$(mktemp -d)
+          cp analysis/BT1515_cover_resolution_insert.tex "$d/insert.tex"
+          cat > "$d/minimal.tex" <<'TEX'
+          \documentclass{article}
+          \usepackage{amsmath,amssymb}
+          \begin{document}
+          \input{insert}
+          \end{document}
+          TEX
+          (cd "$d" && pdflatex -interaction=nonstopmode -halt-on-error minimal.tex)
