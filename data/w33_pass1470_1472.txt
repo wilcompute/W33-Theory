@@ -1,0 +1,29 @@
+Passes 1470-1472: the 90, the two 81s, and the GC obstruction
+
+=== Pass 1470: the degree-90, and the 90 hyperbolic lines ===
+  noncollinear point pairs: 540
+  degree-90 irreducibles in PGSp: 1
+  |PGSp|/90 = 576
+  45 polar pairs x 2 = 90; |PGSp|/45 = 1152
+
+=== Pass 1471: does the Steinberg 81 extend to PGSp in TWO ways? ===
+  degree-81 irreducibles in PGSp: 2
+  degree-81 irreducibles in PSp : 1
+  => the single PSp Steinberg EXTENDS to PGSp in two ways, differing by
+     the sign character of PGSp/PSp.  The physical sector therefore does
+     acquire a sign over the full group -- it is not chirality-free there,
+     it is chirality-SPLIT (two extensions), unlike the fused 45s.
+
+=== Pass 1472: the 11-cell / 57-cell obstruction ===
+  |PSp(4,3)| = 25920 = [ [ 2, 6 ], [ 3, 4 ], [ 5, 1 ] ]
+  |PGSp(4,3)|= 51840 = [ [ 2, 7 ], [ 3, 4 ], [ 5, 1 ] ]
+  |PSL(2,11)|=   660 = [ [ 2, 2 ], [ 3, 1 ], [ 5, 1 ], [ 11, 1 ] ]
+  |PSL(2,19)|=  3420 = [ [ 2, 2 ], [ 3, 2 ], [ 5, 1 ], [ 19, 1 ] ]
+  11 | 51840 ? false     19 | 51840 ? false
+  A5 (order 60) inside PSp(4,3)? true
+  => the CELLS are hostable (hemi-icosahedron and hemi-dodecahedron both
+     have rotation group A5, which IS in PSp(4,3) -- BT836's result), but the
+     POLYTOPES are not: 11 and 19 divide neither group order, so no
+     PSL(2,11) or PSL(2,19) can act on W(3,3) or any carrier built from it.
+
+DONE

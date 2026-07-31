@@ -46,6 +46,7 @@ BLOCK = r"""% HOST-INDEPENDENT PREAMBLE (added by scripts/fix_insert_portability
 \@ifundefined{definition}{\newtheorem{definition}[theorem]{Definition}}{}
 \makeatother
 \providecommand{\PSp}{\mathrm{PSp}}
+\providecommand{\PGSp}{\mathrm{PGSp}}
 \providecommand{\Aut}{\mathrm{Aut}}
 \providecommand{\spec}{\operatorname{spec}}
 
@@ -57,7 +58,7 @@ MARKER = "HOST-INDEPENDENT PREAMBLE"
 def targets() -> list[tuple[Path, list[str]]]:
     from check_orphan_inserts import insert_files, manuscript_inputs
     HOST_ONLY = ["lemma", "proposition", "remark", "corollary", "definition",
-                 "PSp", "Aut", "spec"]
+                 "PSp", "PGSp", "Aut", "spec"]
     re_env = re.compile(r"\\begin\{(" + "|".join(HOST_ONLY) + r")\}")
     re_mac = re.compile(r"\\(" + "|".join(HOST_ONLY) + r")\b")
     re_guard = re.compile(r"@ifundefined|providecommand|newtheorem")

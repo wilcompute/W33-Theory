@@ -457,6 +457,19 @@
     "1469": "sampler guard now encodes the MEASURED rule: an enumeration supports an EXISTENCE claim however ordered, but a FREQUENCY or UNIVERSAL only if exhaustive or randomised. Exhaustiveness credited. 135 samplers -> 19 flagged; the parallel track Pass 1417 census correctly NOT flagged"
    },
    "runtime_boundary": "Exact GAP character theory and an exhaustive clique check over all 240 edge-cliques. The resolution and the 12 remain open and are stated so."
+  },
+  {
+   "range": "1470-1474",
+   "owner": "glue-track-fusion-vs-splitting",
+   "status": "COMPLETE",
+   "artifacts": {
+    "1470": "CORRECTS Pass 1467: the blocks are chiral in OPPOSITE ways, not chiral-vs-not. 15, 24, 81 each SPLIT (two extensions to PGSp, differing by the sign character); 45+45 FUSE into one degree-90. The physical Steinberg is chirality-SPLIT, not chirality-free",
+    "1471": "the degree-90 is NOT identified: my script computed the 540 noncollinear point pairs, not the 90 hyperbolic lines. Open, recorded as open rather than asserted from a matching integer",
+    "1472": "11-cell / 57-cell: 11 and 19 divide NEITHER 25920 nor 51840, so no PSL(2,11) or PSL(2,19) can act on W(3,3) or any carrier from it; but A5 -- the rotation group of BOTH the hemi-icosahedron and the hemi-dodecahedron -- IS inside PSp(4,3). CELLS hostable, POLYTOPES not, which sharpens BT836. The proposed 57=76-19 <-> PSL(2,19) reading of the parallel bridge census is REFUTED by divisibility",
+    "1473": "guards re-measured after five grammar changes: index 21,380 files / 2,696 tokens; sweep 1,502 files / 17 candidates; portability 221 inserts / 0 break. chi(H)=9 still open",
+    "1474": "THIRD insert-portability break of the Holonet, second one mine: the new Proposition uses \\PGSp which the guarded preamble did not provide. PGSp added to the preamble, the fixer block, and the checker HOST_ONLY list"
+   },
+   "runtime_boundary": "Exact GAP character theory and divisibility; two observed local tectonic builds. The degree-90 identification and chi(H)=9 are explicitly open."
   }
  ],
  "rule": "A pass number is canonical only when registered here. Retracted or scope-corrected blocks remain registered for provenance but cannot contribute active theorem claims outside their stated scope."
