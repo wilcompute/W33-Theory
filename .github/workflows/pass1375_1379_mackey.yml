@@ -33,6 +33,12 @@ jobs:
         run: |
           python analysis/w33_pass1375_1379_mackey_selector_decomposition.py \
             --output /tmp/w33_pass1375_1379.json
+      - name: Upload exact certificate
+        uses: actions/upload-artifact@v4
+        with:
+          name: w33-pass1375-1379-certificate
+          path: /tmp/w33_pass1375_1379.json
+          if-no-files-found: error
       - name: Validate focused regressions when frozen data exists
         run: |
           if [ -f data/w33_pass1375_1379_mackey_selector_decomposition.json ]; then
