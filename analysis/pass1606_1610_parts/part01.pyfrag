@@ -1,0 +1,112 @@
+    seen = {identity}
+    todo = collections.deque([identity])
+    while todo:
+        h = todo.popleft()
+        for g in gens:
+            x = compose(g, h)
+            if x not in seen:
+                seen.add(x)
+                todo.append(x)
+    return sorted(seen)
+
+
+def build_geometry():
+    points = sorted({normalize(v) for v in itertools.product(range(Q), repeat=4) if any(v)})
+    pidx = {p: i for i, p in enumerate(points)}
+    edges = [(i, j) for i, j in itertools.combinations(range(40), 2) if symplectic(points[i], points[j]) == 0]
+    eidx = {e: i for i, e in enumerate(edges)}
+
+    def span_line(i, j):
+        p, r = points[i], points[j]
+        ans = set()
+        for a, b in itertools.product(range(Q), repeat=2):
+            if a or b:
+                y = tuple((a * p[k] + b * r[k]) % Q for k in range(4))
+                ans.add(pidx[normalize(y)])
+        return frozenset(ans)
+
+    lines = sorted({span_line(i, j) for i, j in edges}, key=lambda s: tuple(sorted(s)))
+    lidx = {L: i for i, L in enumerate(lines)}
+    frames = [(i, j) for i, j in itertools.combinations(range(40), 2) if lines[i].isdisjoint(lines[j])]
+    fidx = {f: i for i, f in enumerate(frames)}
+
+    def transvection(v):
+        vv = np.array(v, dtype=np.int64)
+        out = []
+        for x in points:
+            y = (np.array(x, dtype=np.int64) + symplectic(x, v) * vv) % Q
+            out.append(pidx[normalize(tuple(y))])
+        return tuple(out)
+
+    gen_vecs = [(1,1,0,2), (1,2,1,1), (1,2,2,0), (0,1,0,1)]
+    gens = [transvection(v) for v in gen_vecs]
+    group = generated_group(gens)
+    assert len(group) == 25920
+
+    def line_perm(g):
+        return tuple(lidx[frozenset(g[i] for i in L)] for L in lines)
+
+    line_actions = [line_perm(g) for g in group]
+    base = frames[0]
+    left, right = sorted(lines[base[0]]), sorted(lines[base[1]])
+    stab = [(g, lp) for g, lp in zip(group, line_actions) if {lp[base[0]], lp[base[1]]} == set(base)]
+    assert len(stab) == 48
+    invariant = []
+    for q in itertools.permutations(right):
+        matching = frozenset(tuple(sorted((left[i], q[i]))) for i in range(4))
+        if all(frozenset(tuple(sorted((g[a], g[b]))) for a, b in matching) == matching for g, _ in stab):
+            invariant.append(matching)
+    assert len(invariant) == 1
+    base_matching = invariant[0]
+    matchings = [None] * 540
+    for g, lp in zip(group, line_actions):
+        fr = tuple(sorted((lp[base[0]], lp[base[1]])))
+        image = frozenset(tuple(sorted((g[a], g[b]))) for a, b in base_matching)
+        k = fidx[fr]
+        if matchings[k] is None:
+            matchings[k] = image
+        else:
+            assert matchings[k] == image
+    assert all(x is not None for x in matchings)
+
+    M = np.zeros((540, 240), dtype=np.int64)
+    for r, matching in enumerate(matchings):
+        for e in matching:
+            M[r, eidx[e]] = 1
+    H = M @ M.T
+    np.fill_diagonal(H, 0)
+    A = np.zeros((40, 40), dtype=np.int64)
+    N = np.zeros((40, 240), dtype=np.int64)
+    d = np.zeros((40, 240), dtype=np.int64)
+    for j, (a, b) in enumerate(edges):
+        A[a, b] = A[b, a] = 1
+        N[a, j] = N[b, j] = 1
+        d[a, j] = -1
+        d[b, j] = 1
+
+    # Intrinsic induced K4,4 octets.
+    octets = []
+    seen = set()
+    for L in itertools.combinations(range(40), 4):
+        if any(A[i, j] for i, j in itertools.combinations(L, 2)):
+            continue
+        R = tuple(i for i in range(40) if all(A[i, j] for j in L))
+        if len(R) != 4 or any(A[i, j] for i, j in itertools.combinations(R, 2)):
+            continue
+        key = tuple(sorted((tuple(L), tuple(R))))
+        if key not in seen:
+            seen.add(key)
+            octets.append((tuple(L), tuple(R)))
+    assert len(octets) == 45
+    K = np.zeros((45, 240), dtype=np.int64)
+    for r, (L, R) in enumerate(octets):
+        for a in L:
+            for b in R:
+                K[r, eidx[tuple(sorted((a, b)))]] = 1
+    assert not np.any((M @ K.T) % 2)
+    J = (M @ K.T) // 2
+    assert set(J.ravel()) == {0, 1}
+
+    return points, edges, lines, frames, group, gens, M, H, A, N, d, K, J, octets
+
+
