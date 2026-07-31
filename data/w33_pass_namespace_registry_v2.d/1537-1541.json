@@ -1,0 +1,16 @@
+{
+  "schema": "w33.pass_namespace_registry_v2.shard.v1",
+  "range": "1537-1541",
+  "owner": "frame-dual-five-frontier-continuation",
+  "passes": {
+    "1537": "equivariant modular 14/15 octet-Gram certificate",
+    "1538": "integral and ternary octet lattice lift",
+    "1539": "octet-derived Hoffman-resolution cuts",
+    "1540": "frame-code weight enumerator programme",
+    "1541": "decoder and explicit noise-model falsifier"
+  },
+  "status": "merged-candidate",
+  "certificate_sha256": "ee4904ad4c7ac627f7d51aad2e9a38ebe9faffa9bfec541442460281b053f320",
+  "parallel_reconciliation": "Passes 1601-1605 own the integral frame cokernel, Bockstein sequence, and uncolored half-incidence matrix; this packet owns the equivariant modular identifications, colored XOR lift, three-body enumerator, and decoder falsifier.",
+  "boundary": "The global Hoffman 9-coloring, complete 2^45 weight enumerator, and any decoder or physical threshold remain open."
+}

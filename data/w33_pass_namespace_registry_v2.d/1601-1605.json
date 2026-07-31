@@ -1,0 +1,14 @@
+{
+  "schema": "w33.pass_namespace_registry_v2.shard.v1",
+  "range": "1601-1605",
+  "owner": "integral-frame-cokernel-bockstein",
+  "passes": {
+    "1601": "integral frame-cokernel Smith theorem",
+    "1602": "K4,4 Bockstein torsion theorem",
+    "1603": "half-incidence design and bridge-lattice Smith theorem",
+    "1604": "integral bridge torsion-kernel theorem",
+    "1605": "resolution boundary and solver guidance"
+  },
+  "status": "complete",
+  "boundary": "No global nine-cover SAT/UNSAT verdict or irreducible modular representation label is claimed."
+}

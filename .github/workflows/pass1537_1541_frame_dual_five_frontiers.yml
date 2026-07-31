@@ -1,0 +1,32 @@
+name: Passes 1537-1541 Frame-Dual Five Frontiers
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass1537_1541_frame_dual_five_frontiers.py'
+      - 'analysis/pass1537_1541_parts/**'
+      - 'analysis/BT1537_1541_frame_dual_five_frontiers.md'
+      - 'analysis/BT1541_frame_dual_five_frontiers_insert.tex'
+      - 'data/w33_pass1537_1541_frame_dual_five_frontiers.json'
+      - 'tests/test_w33_pass1537_1541_frame_dual_five_frontiers.py'
+      - '.github/workflows/pass1537_1541_frame_dual_five_frontiers.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-five-frontier-certificate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install --disable-pip-version-check numpy networkx pytest
+      - run: python -m py_compile analysis/w33_pass1537_1541_frame_dual_five_frontiers.py
+      - run: python analysis/w33_pass1537_1541_frame_dual_five_frontiers.py --check
+      - run: pytest -q tests/test_w33_pass1537_1541_frame_dual_five_frontiers.py

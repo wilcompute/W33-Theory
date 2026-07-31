@@ -1,0 +1,145 @@
+
+    graph = nx.Graph()
+    graph.add_nodes_from(range(40))
+    for left, right in itertools.combinations(range(40), 2):
+        if symp(points[left], points[right]) == 0:
+            graph.add_edge(left, right)
+    edges = sorted(tuple(sorted(edge)) for edge in graph.edges())
+    edge_index = {edge: index for index, edge in enumerate(edges)}
+
+    lines: set[tuple[int, ...]] = set()
+    for left, right in edges:
+        a = np.array(points[left], dtype=np.int64)
+        b = np.array(points[right], dtype=np.int64)
+        span = {
+            norm(tuple((u * a + v * b) % Q))
+            for u, v in itertools.product(range(Q), repeat=2)
+            if u or v
+        }
+        lines.add(tuple(sorted(point_index[point] for point in span)))
+    ordered_lines = sorted(lines)
+
+    frames: list[tuple[int, int]] = []
+    matchings: list[tuple[int, ...]] = []
+    for left, right in itertools.combinations(range(40), 2):
+        line_left = ordered_lines[left]
+        line_right = ordered_lines[right]
+        if set(line_left) & set(line_right):
+            continue
+        matching = []
+        for point in line_left:
+            partners = [candidate for candidate in line_right if graph.has_edge(point, candidate)]
+            if len(partners) != 1:
+                raise AssertionError("non-unique generalized-quadrangle matching")
+            matching.append(edge_index[tuple(sorted((point, partners[0])))])
+        frames.append((left, right))
+        matchings.append(tuple(sorted(matching)))
+
+    frame_matrix = np.zeros((540, 240), dtype=np.int8)
+    for row, matching in enumerate(matchings):
+        frame_matrix[row, list(matching)] = 1
+
+    independent_fours = [
+        subset
+        for subset in itertools.combinations(range(40), 4)
+        if graph.subgraph(subset).number_of_edges() == 0
+    ]
+    octets: set[tuple[tuple[int, ...], tuple[int, ...]]] = set()
+    for left in independent_fours:
+        common = set(range(40)) - set(left)
+        for point in left:
+            common &= set(graph[point])
+        if len(common) != 4:
+            continue
+        right = tuple(sorted(common))
+        if graph.subgraph(right).number_of_edges() != 0:
+            continue
+        octets.add(tuple(sorted((tuple(left), right))))
+    ordered_octets = sorted(octets)
+
+    octet_matrix = np.zeros((45, 240), dtype=np.int8)
+    point_incidence = np.zeros((45, 40), dtype=np.int8)
+    signed_point_incidence = np.zeros((45, 40), dtype=np.int64)
+    oriented_octet_edges = np.zeros((45, 240), dtype=np.int64)
+    for row, (left, right) in enumerate(ordered_octets):
+        point_incidence[row, list(left) + list(right)] = 1
+        signed_point_incidence[row, list(left)] = 1
+        signed_point_incidence[row, list(right)] = -1
+        for a in left:
+            for b in right:
+                edge = tuple(sorted((a, b)))
+                column = edge_index[edge]
+                octet_matrix[row, column] = 1
+                oriented_octet_edges[row, column] = 1 if (a, b) == edge else -1
+
+    point_adjacency = nx.to_numpy_array(graph, nodelist=range(40), dtype=np.int64)
+    unsigned_incidence = np.zeros((40, 240), dtype=np.int64)
+    oriented_incidence = np.zeros((40, 240), dtype=np.int64)
+    for column, (left, right) in enumerate(edges):
+        unsigned_incidence[left, column] = unsigned_incidence[right, column] = 1
+        oriented_incidence[left, column] = -1
+        oriented_incidence[right, column] = 1
+
+    triangles = sorted(
+        {tuple(sorted(triangle)) for line in ordered_lines for triangle in itertools.combinations(line, 3)}
+    )
+    boundary_2 = np.zeros((240, 160), dtype=np.int64)
+    for column, (a, b, c) in enumerate(triangles):
+        boundary_2[edge_index[(b, c)], column] = 1
+        boundary_2[edge_index[(a, c)], column] = -1
+        boundary_2[edge_index[(a, b)], column] = 1
+
+    return {
+        "points": points,
+        "graph": graph,
+        "edges": edges,
+        "edge_index": edge_index,
+        "lines": ordered_lines,
+        "frames": frames,
+        "matchings": matchings,
+        "M": frame_matrix,
+        "octets": ordered_octets,
+        "K": octet_matrix,
+        "P": point_incidence,
+        "S": signed_point_incidence,
+        "U": oriented_octet_edges,
+        "A": point_adjacency,
+        "N": unsigned_incidence,
+        "d": oriented_incidence,
+        "d2": boundary_2,
+    }
+
+
+def build_actions(data: dict[str, Any]) -> dict[str, Any]:
+    points = data["points"]
+    point_index = {point: index for index, point in enumerate(points)}
+    edges = data["edges"]
+    edge_index = data["edge_index"]
+    octets = data["octets"]
+    octet_index = {octet: index for index, octet in enumerate(octets)}
+
+    def transvection(vector: tuple[int, ...]) -> tuple[int, ...]:
+        v = np.array(vector, dtype=np.int64)
+        output = []
+        for point in points:
+            image = (np.array(point, dtype=np.int64) + symp(point, vector) * v) % Q
+            output.append(point_index[norm(tuple(image))])
+        return tuple(output)
+
+    generator_vectors = [(1, 0, 0, 0), (0, 1, 0, 0), (1, 0, 1, 0), (0, 1, 0, 1)]
+    point_generators = [transvection(vector) for vector in generator_vectors]
+    group = generated_group(point_generators)
+
+    octet_generators: list[np.ndarray] = []
+    signed_octet_generators: list[np.ndarray] = []
+    edge_generators: list[np.ndarray] = []
+    signed_edge_generators: list[np.ndarray] = []
+    for generator in point_generators:
+        octet_permutation = []
+        signed_octet = np.zeros((45, 45), dtype=np.int64)
+        for index, (left, right) in enumerate(octets):
+            image_left = tuple(sorted(generator[point] for point in left))
+            image_right = tuple(sorted(generator[point] for point in right))
+            target = tuple(sorted((image_left, image_right)))
+            image_index = octet_index[target]
+            octet_permutation.append(image_index)

@@ -1,0 +1,145 @@
+            "Pass 1603 owns the uncolored half-incidence matrix J=(1/2)MK^T and its "
+            "30-dimensional Bockstein quotient. Pass 1539 is the colored lift and exact "
+            "global XOR-rank calculation."
+        ),
+        "boundary": (
+            "The cuts add 240 independent XOR directions but are rationally redundant. "
+            "They strengthen parity propagation; they do not decide SAT versus UNSAT."
+        ),
+    }
+    return result, checks
+
+
+def row_bitsets(matrix: np.ndarray) -> list[int]:
+    output = []
+    for row in matrix:
+        bits = 0
+        for column in np.flatnonzero(row):
+            bits |= 1 << int(column)
+        output.append(bits)
+    return output
+
+
+def layer_histogram(bits: list[int], size: int) -> collections.Counter[int]:
+    histogram: collections.Counter[int] = collections.Counter()
+    for subset in itertools.combinations(range(len(bits)), size):
+        word = 0
+        for index in subset:
+            word ^= bits[index]
+        histogram[word.bit_count()] += 1
+    return histogram
+
+
+
+def prefix_shard_histogram(bits: list[int], prefix: str) -> collections.Counter[int]:
+    """Enumerate one exact message-prefix shard using a Gray-code suffix walk."""
+    if any(bit not in "01" for bit in prefix) or len(prefix) > len(bits):
+        raise ValueError("prefix must be a binary string of length at most 45")
+    word = 0
+    for index, bit in enumerate(prefix):
+        if bit == "1":
+            word ^= bits[index]
+    histogram: collections.Counter[int] = collections.Counter({word.bit_count(): 1})
+    suffix = bits[len(prefix):]
+    previous_gray = 0
+    for counter in range(1, 1 << len(suffix)):
+        gray = counter ^ (counter >> 1)
+        changed = gray ^ previous_gray
+        position = changed.bit_length() - 1
+        word ^= suffix[position]
+        histogram[word.bit_count()] += 1
+        previous_gray = gray
+    return histogram
+
+
+def weight_frontier(data: dict[str, Any], max_layer: int = 6) -> tuple[dict[str, Any], dict[str, bool]]:
+    K = data["K"].astype(np.int64)
+    gram = K @ K.T
+    overlap = nx.Graph()
+    overlap.add_nodes_from(range(45))
+    for left, right in itertools.combinations(range(45), 2):
+        if gram[left, right] == 1:
+            overlap.add_edge(left, right)
+
+    signatures = [tuple(map(int, np.flatnonzero(K[:, column]))) for column in range(240)]
+    distinguished = {tuple(sorted(signature)) for signature in signatures}
+    triangles = {
+        tuple(sorted((a, b, c)))
+        for a in range(45)
+        for b in overlap[a]
+        if a < b
+        for c in set(overlap[a]) & set(overlap[b])
+        if b < c
+    }
+    ordinary_triangles = triangles - distinguished
+
+    row_bits = row_bitsets(K)
+    layer_data: dict[str, dict[str, int]] = {}
+    for size in range(max_layer + 1):
+        histogram = layer_histogram(row_bits, size)
+        layer_data[str(size)] = {str(weight): int(count) for weight, count in sorted(histogram.items())}
+    complement_data = {
+        str(45 - int(size)): {str(240 - int(weight)): count for weight, count in histogram.items()}
+        for size, histogram in layer_data.items()
+    }
+
+    example_distinguished = next(iter(sorted(distinguished)))
+    example_ordinary = next(iter(sorted(ordinary_triangles)))
+    def subset_weight(subset: tuple[int, ...]) -> int:
+        word = 0
+        for index in subset:
+            word ^= row_bits[index]
+        return word.bit_count()
+
+    distinguished_weight = subset_weight(example_distinguished)
+    ordinary_weight = subset_weight(example_ordinary)
+    all_rows_word = 0
+    for row in row_bits:
+        all_rows_word ^= row
+
+    # Exact first frontier coefficients. Since the generator rows are independent,
+    # subset size 1 and 2 give distinct words.
+    first_coefficients = {
+        "0": 1,
+        "16": 45,
+        "30": overlap.number_of_edges(),
+        "32": math.comb(45, 2) - overlap.number_of_edges(),
+        "208": math.comb(45, 2) - overlap.number_of_edges(),
+        "210": overlap.number_of_edges(),
+        "224": 45,
+        "240": 1,
+    }
+    canonical_prefix = "0" * 25
+    canonical_shard = prefix_shard_histogram(row_bits, canonical_prefix)
+    canonical_shard_payload = {str(weight): int(count) for weight, count in sorted(canonical_shard.items())}
+    canonical_shard_hash = hashlib.sha256(
+        json.dumps(canonical_shard_payload, sort_keys=True, separators=(",", ":")).encode()
+    ).hexdigest()
+
+    checks = {
+        "all_ones_codeword": all_rows_word == (1 << 240) - 1,
+        "weight_symmetry_layer_contract": all(
+            sum(layer_data[str(size)].values()) == math.comb(45, size)
+            for size in range(max_layer + 1)
+        ),
+        "distinguished_triple_count_240": len(distinguished) == 240,
+        "overlap_triangle_count_5280": len(triangles) == 5280,
+        "ordinary_triangle_exists": bool(ordinary_triangles),
+        "SRG_only_shortcut_refuted": distinguished_weight != ordinary_weight
+        and distinguished_weight == 46
+        and ordinary_weight == 42,
+        "weight_formula_verified_all_subsets_up_to_4": all(
+            subset_weight(subset)
+            == 16 * len(subset)
+            - 2 * overlap.subgraph(subset).number_of_edges()
+            + 4 * sum(1 for triple in distinguished if set(triple) <= set(subset))
+            for size in range(5)
+            for subset in itertools.combinations(range(45), size)
+        ),
+        "global_coefficients_0_16_224_240": first_coefficients["0"] == 1
+        and first_coefficients["16"] == 45
+        and first_coefficients["224"] == 45
+        and first_coefficients["240"] == 1,
+        "layer2_contributions_30_32": first_coefficients["30"] == 720
+        and first_coefficients["32"] == 270,
+        "canonical_prefix_shard_has_2pow20_words": sum(canonical_shard.values()) == 2**20,

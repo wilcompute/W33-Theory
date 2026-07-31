@@ -1,0 +1,64 @@
+\subsection{Integral frame cokernel and the \texorpdfstring{$15\to45\to30$}{15 to 45 to 30} Bockstein chain}
+
+Let $M\in\{0,1\}^{540\times240}$ be the canonical frame--edge
+incidence matrix.  Exact $2$-adic elimination, together with a literal
+$225\times225$ minor of determinant $2^{30}$, gives
+\[
+ \operatorname{SNF}(M^{\mathsf T})
+ =1^{195}\oplus2^{30}\oplus0^{15}.
+\]
+Hence
+\[
+ \operatorname{coker}(M^{\mathsf T})
+ \cong \mathbb Z^{15}\oplus(\mathbb Z/2\mathbb Z)^{30}.
+\]
+
+The forty-five intrinsic induced $K_{4,4}$ octets form a basis of
+$\ker_{\mathbb F_2}M$.  If $K$ is their $45\times240$ edge-incidence
+matrix, then the integral half-incidence matrix
+\[
+ J=\frac12 MK^{\mathsf T}\in\{0,1\}^{540\times45}
+\]
+is well defined.  It has row degree $6$, column degree $72$, and
+\[
+ J^{\mathsf T}J=66I+3A_{45}+6\mathbf J,
+\]
+where $A_{45}$ is the octet-overlap graph
+$\operatorname{SRG}(45,32,22,24)$.  Thus
+\[
+ \operatorname{spec}(J^{\mathsf T}J)
+ =432^1\oplus72^{24}\oplus54^{20}.
+\]
+
+The associated Bockstein sequence is
+\[
+0\longrightarrow
+\ker_{\mathbb Z}M/2\ker_{\mathbb Z}M
+\longrightarrow
+\ker_{\mathbb F_2}M
+\xrightarrow{\ \beta\ }
+\operatorname{Tor}_2(\operatorname{coker}M)
+\longrightarrow0,
+\qquad
+\beta(y)=\frac{M\widetilde y}{2}\bmod\operatorname{im}M.
+\]
+Its dimensions are exactly
+\[
+ 15\longrightarrow45\longrightarrow30.
+\]
+
+For the integral rational-cokernel projector $C$ and the oriented bridge $F$
+from the signed-turn construction, the nonzero Smith forms refine to
+\[
+ \operatorname{SNF}(C)=1^{10}\oplus3^5,
+ \qquad
+ \operatorname{SNF}(F)=1^{10}\oplus3^4\oplus6.
+\]
+Consequently the old $31$-dimensional ambient mod-$2$ bridge kernel splits
+arithmetically as $30+1$: thirty dimensions are genuine elementary
+cokernel torsion, while the final dimension is the parity defect of the
+single even invariant factor in the embedded bridge lattice.
+
+This is an exact finite lattice theorem.  The torsion modes may be used as
+certified XOR preprocessing, but they do not by themselves decide the open
+global nine-cover resolution.

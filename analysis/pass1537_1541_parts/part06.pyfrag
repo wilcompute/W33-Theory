@@ -1,0 +1,145 @@
+    }
+    result = {
+        "exact_weight_identity": "w(X)=16|X|-2e(X)+4t(X)",
+        "e_definition": "edges induced by X in SRG(45,32,22,24)",
+        "t_definition": "the 240 distinguished edge-signature triples contained in X",
+        "association_algebra_falsifier": {
+            "same_subset_size": 3,
+            "same_induced_edges": 3,
+            "distinguished_weight": distinguished_weight,
+            "ordinary_triangle_weight": ordinary_weight,
+            "conclusion": "the ordinary SRG association algebra alone does not determine the code weight",
+        },
+        "exact_layers_0_through_%d" % max_layer: layer_data,
+        "complement_layers_%d_through_45" % (45 - max_layer): complement_data,
+        "global_exact_coefficients": {
+            "0": 1,
+            "16": 45,
+            "224": 45,
+            "240": 1,
+        },
+        "certified_layer2_contributions": {
+            "30": 720,
+            "32": 270,
+            "208": 270,
+            "210": 720,
+        },
+        "canonical_prefix_shard": {
+            "prefix": canonical_prefix,
+            "suffix_dimension": 20,
+            "word_count": 2**20,
+            "histogram": canonical_shard_payload,
+            "sha256": canonical_shard_hash,
+        },
+        "full_enumerator_status": (
+            "open: the exact layer and prefix-shard engines are implemented, but no 2^45 census is claimed"
+        ),
+        "boundary": (
+            "Pass 1540 executes and falsifies the proposed SRG-only shortcut, proves the exact "
+            "three-body weight formula, and freezes low message-weight layers. It does not call "
+            "that partial result the complete Hamming weight enumerator."
+        ),
+    }
+    return result, checks
+
+
+def syndrome_int(column: np.ndarray) -> int:
+    value = 0
+    for row in np.flatnonzero(column):
+        value |= 1 << int(row)
+    return value
+
+
+def min_sum_decode(
+    K: np.ndarray,
+    received: np.ndarray,
+    crossover: float,
+    iterations: int = 30,
+    normalization: float = 0.8,
+) -> tuple[np.ndarray, bool, int]:
+    checks, variables = K.shape
+    check_neighbors = [np.flatnonzero(K[row]).astype(int) for row in range(checks)]
+    variable_neighbors = [np.flatnonzero(K[:, column]).astype(int) for column in range(variables)]
+    llr0 = math.log((1.0 - crossover) / crossover)
+    channel = np.where(received == 0, llr0, -llr0).astype(float)
+    v_to_c = {(int(v), int(c)): channel[v] for v in range(variables) for c in variable_neighbors[v]}
+    c_to_v: dict[tuple[int, int], float] = {}
+
+    for iteration in range(1, iterations + 1):
+        for check in range(checks):
+            neighbors = check_neighbors[check]
+            incoming = np.array([v_to_c[(int(v), check)] for v in neighbors])
+            signs = np.where(incoming >= 0, 1.0, -1.0)
+            magnitudes = np.abs(incoming)
+            min_index = int(np.argmin(magnitudes))
+            min1 = float(magnitudes[min_index])
+            min2 = float(np.partition(magnitudes, 1)[1])
+            total_sign = float(np.prod(signs))
+            for local, variable in enumerate(neighbors):
+                magnitude = min2 if local == min_index else min1
+                sign = total_sign * signs[local]
+                c_to_v[(check, int(variable))] = normalization * sign * magnitude
+
+        posterior = channel.copy()
+        for variable in range(variables):
+            posterior[variable] += sum(c_to_v[(int(check), variable)] for check in variable_neighbors[variable])
+        hard = (posterior < 0).astype(np.int8)
+        if not np.any(K @ hard % 2):
+            return hard, True, iteration
+
+        for variable in range(variables):
+            total = channel[variable] + sum(
+                c_to_v[(int(check), variable)] for check in variable_neighbors[variable]
+            )
+            for check in variable_neighbors[variable]:
+                v_to_c[(variable, int(check))] = total - c_to_v[(int(check), variable)]
+    return hard, False, iterations
+
+
+def decoder_frontier(
+    data: dict[str, Any], trials_per_point: int = 200
+) -> tuple[dict[str, Any], dict[str, bool]]:
+    K = data["K"].astype(np.int64)
+    matchings = {tuple(sorted(matching)) for matching in data["matchings"]}
+    columns = [syndrome_int(K[:, column]) for column in range(240)]
+    pair_buckets: dict[int, list[tuple[int, int]]] = collections.defaultdict(list)
+    for left, right in itertools.combinations(range(240), 2):
+        pair_buckets[columns[left] ^ columns[right]].append((left, right))
+    bucket_sizes = collections.Counter(len(bucket) for bucket in pair_buckets.values())
+
+    weight_four: set[tuple[int, ...]] = set()
+    for bucket in pair_buckets.values():
+        if len(bucket) < 2:
+            continue
+        for first, second in itertools.combinations(bucket, 2):
+            support = tuple(sorted(set(first) | set(second)))
+            if len(support) == 4:
+                weight_four.add(support)
+
+    unique_weight_two = sum(len(bucket) for bucket in pair_buckets.values() if len(bucket) == 1)
+    ambiguous_weight_two = sum(len(bucket) for bucket in pair_buckets.values() if len(bucket) > 1)
+
+    crossover_points = [0.002, 0.005, 0.01, 0.02]
+    rng = np.random.default_rng(1541)
+    experiment: dict[str, Any] = {}
+    for crossover in crossover_points:
+        successes = 0
+        convergence = 0
+        iterations = []
+        for _ in range(trials_per_point):
+            error = (rng.random(240) < crossover).astype(np.int8)
+            decoded, converged, used = min_sum_decode(K, error, crossover)
+            convergence += int(converged)
+            successes += int(np.array_equal(decoded, error))
+            iterations.append(used)
+        exact_t1_success = (1 - crossover) ** 240 + 240 * crossover * (1 - crossover) ** 239
+        exact_t2_erasure_aware_success = exact_t1_success + (
+            unique_weight_two
+            * crossover**2
+            * (1 - crossover) ** 238
+        )
+        experiment[f"{crossover:.3f}"] = {
+            "trials": trials_per_point,
+            "min_sum_word_successes": successes,
+            "min_sum_syndrome_convergences": convergence,
+            "mean_iterations": float(sum(iterations) / len(iterations)),
