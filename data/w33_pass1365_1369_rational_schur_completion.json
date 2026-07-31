@@ -1,0 +1,70 @@
+{
+  "pass1365_rational_terwilliger_wedderburn": {
+    "blocks": [
+      {"algebra_component_dimension": 1, "isotypic_dimension": 3, "module_multiplicity": 3, "primitive_shell": 2, "shell_ranks": [0,0,3,0,0], "simple_block_size": 1},
+      {"algebra_component_dimension": 1, "isotypic_dimension": 12, "module_multiplicity": 12, "primitive_shell": 2, "shell_ranks": [0,0,12,0,0], "simple_block_size": 1},
+      {"algebra_component_dimension": 1, "isotypic_dimension": 14, "module_multiplicity": 14, "primitive_shell": 4, "shell_ranks": [0,0,0,0,14], "simple_block_size": 1},
+      {"algebra_component_dimension": 4, "isotypic_dimension": 2, "module_multiplicity": 1, "primitive_shell": 1, "shell_ranks": [0,1,0,0,1], "simple_block_size": 2},
+      {"algebra_component_dimension": 4, "isotypic_dimension": 4, "module_multiplicity": 2, "primitive_shell": 3, "shell_ranks": [0,0,0,2,2], "simple_block_size": 2},
+      {"algebra_component_dimension": 9, "isotypic_dimension": 12, "module_multiplicity": 4, "primitive_shell": 3, "shell_ranks": [0,0,0,4,8], "simple_block_size": 3},
+      {"algebra_component_dimension": 9, "isotypic_dimension": 12, "module_multiplicity": 4, "primitive_shell": 2, "shell_ranks": [0,0,4,4,4], "simple_block_size": 3},
+      {"algebra_component_dimension": 9, "isotypic_dimension": 24, "module_multiplicity": 8, "primitive_shell": 2, "shell_ranks": [0,0,8,8,8], "simple_block_size": 3},
+      {"algebra_component_dimension": 16, "isotypic_dimension": 32, "module_multiplicity": 8, "primitive_shell": 2, "shell_ranks": [0,0,8,8,16], "simple_block_size": 4},
+      {"algebra_component_dimension": 25, "isotypic_dimension": 5, "module_multiplicity": 1, "primitive_shell": 0, "shell_ranks": [1,1,1,1,1], "simple_block_size": 5}
+    ],
+    "center_dimension_over_Q": 10,
+    "generic_center_characteristic_polynomial": "ten distinct rational linear factors",
+    "generic_center_characteristic_polynomial_sha256": "54e1fd51e1cac0b4cf8905f6f3fa60f6c2fc81786b7746ac053f959fc74ab55a",
+    "generic_center_coefficients": [-2,-2,0,0,-2,0,0,0,0,0],
+    "rational_wedderburn": "Q^3 + M2(Q)^2 + M3(Q)^3 + M4(Q) + M5(Q)",
+    "split_proof": "Each rational central component contains z E_s^* of module rank equal to the split multiplicity; this forces division degree one."
+  },
+  "pass1366_geometric_defect_splitter": {
+    "closure_dimensions_mod_good_primes": {
+      "1000003": {"T":79,"T_plus_S2":81,"T_plus_S2_plus_S4_as_one_generator":83,"T_plus_S4":81},
+      "1000033": {"T":79,"T_plus_S2":81,"T_plus_S2_plus_S4_as_one_generator":83,"T_plus_S4":81}
+    },
+    "exact_conclusion": "Alg_Q(A,D,S) is the full 83-dimensional H-orbital algebra.",
+    "intersecting_shell_splitter": {"definition":"Two shell-2 selectors have disjoint carrier lines; their two base-line intersection points are paired by the base matching; and transversal transport carries the first matching to the second.","orbital":18,"ordered_pairs":108},
+    "misaligned_shell_splitter": {"definition":"Two shell-4 carrier lines meet in q; after pulling the partners of q back to the base line through the two unique transversals, the pulled partners are equal.","orbital":63,"ordered_pairs":432},
+    "single_splitter": "S = S2 + S4"
+  },
+  "pass1367_rational_orbital_wedderburn": {
+    "blocks": [
+      {"algebra_component_dimension":1,"isotypic_dimension":1,"module_multiplicity":1,"simple_block_size":1,"splitter_eigenvalue":3},
+      {"algebra_component_dimension":1,"isotypic_dimension":2,"module_multiplicity":2,"simple_block_size":1,"splitter_eigenvalue":-4},
+      {"algebra_component_dimension":1,"isotypic_dimension":2,"module_multiplicity":2,"simple_block_size":1,"splitter_eigenvalue":-3},
+      {"algebra_component_dimension":1,"isotypic_dimension":4,"module_multiplicity":4,"simple_block_size":1,"splitter_eigenvalue":-3},
+      {"algebra_component_dimension":1,"isotypic_dimension":4,"module_multiplicity":4,"simple_block_size":1,"splitter_eigenvalue":2},
+      {"algebra_component_dimension":1,"isotypic_dimension":8,"module_multiplicity":8,"simple_block_size":1,"splitter_eigenvalue":-1},
+      {"algebra_component_dimension":1,"isotypic_dimension":8,"module_multiplicity":8,"simple_block_size":1,"splitter_eigenvalue":0},
+      {"algebra_component_dimension":4,"isotypic_dimension":2,"module_multiplicity":1,"simple_block_size":2,"splitter_eigenvalue":null},
+      {"algebra_component_dimension":4,"isotypic_dimension":4,"module_multiplicity":2,"simple_block_size":2,"splitter_eigenvalue":null},
+      {"algebra_component_dimension":9,"isotypic_dimension":12,"module_multiplicity":4,"simple_block_size":3,"splitter_eigenvalue":null},
+      {"algebra_component_dimension":9,"isotypic_dimension":12,"module_multiplicity":4,"simple_block_size":3,"splitter_eigenvalue":null},
+      {"algebra_component_dimension":9,"isotypic_dimension":24,"module_multiplicity":8,"simple_block_size":3,"splitter_eigenvalue":null},
+      {"algebra_component_dimension":16,"isotypic_dimension":32,"module_multiplicity":8,"simple_block_size":4,"splitter_eigenvalue":null},
+      {"algebra_component_dimension":25,"isotypic_dimension":5,"module_multiplicity":1,"simple_block_size":5,"splitter_eigenvalue":null}
+    ],
+    "center_dimension_over_Q": 14,
+    "defect_explanation": "The four added algebra dimensions are exactly the center increase 14-10. All seven non-scalar Terwilliger blocks remain unchanged; the three scalar blocks split into 2, 2, and 3 rational scalar blocks.",
+    "rational_projector_formulas": {"rank_12":["-z12 S/3","z12(1+S/3)"],"rank_14":["z14(S-2)(S+1)/18","z14(S+4)(S+1)/18","-z14(S+4)(S-2)/9"],"rank_3":["z3(S+3)/6","z3(3-S)/6"]},
+    "rational_wedderburn": "Q^7 + M2(Q)^2 + M3(Q)^3 + M4(Q) + M5(Q)",
+    "scalar_refinement": {
+      "T_scalar_rank_12":[{"orbital_rank":4,"splitter_eigenvalue":-3},{"orbital_rank":8,"splitter_eigenvalue":0}],
+      "T_scalar_rank_14":[{"orbital_rank":2,"splitter_eigenvalue":-4},{"orbital_rank":4,"splitter_eigenvalue":2},{"orbital_rank":8,"splitter_eigenvalue":-1}],
+      "T_scalar_rank_3":[{"orbital_rank":1,"splitter_eigenvalue":3},{"orbital_rank":2,"splitter_eigenvalue":-3}]
+    }
+  },
+  "pass1368_coherent_configuration": {
+    "fiber_sizes":[1,2,36,27,54],"fibers":5,"nonzero_intersection_constants":4277,"orbitals":83,"ordinary_generators":["A","D","S"],
+    "shell_block_orbital_counts":[[1,1,1,1,1],[1,2,1,1,2],[1,1,8,4,5],[1,1,4,6,8],[1,2,5,8,16]],
+    "sparse_intersection_tensor_sha256":"0473ae71069dbb62d63456f0cb3fea55e25c9e2286ac43b6f420b31feb526c34","symmetric_orbitals":29,"transpose_pairs":27
+  },
+  "pass1369_boundary": {
+    "literature":"Hanaki--Yoshikawa compare Terwilliger and base-stabilizer centralizer algebras in general. The nearby 2024 flag scheme concerns 160 incident point-line flags, not this 120 line-matching selector bundle. No priority claim is made.",
+    "physics":"This is a finite rational matrix-algebra and coherent-configuration theorem. It does not choose a preferred matching, create H4/600-cell adjacency, or validate cosmological, Standard-Model, or hardware claims."
+  },
+  "schema":"w33.pass1365_1369.rational_schur_completion.v1",
+  "status":"PASS"
+}
