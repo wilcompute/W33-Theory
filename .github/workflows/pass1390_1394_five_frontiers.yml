@@ -2,18 +2,27 @@ name: Passes 1390-1394 Five Frontiers
 
 on:
   push:
-    branches:
-      - agent/pass1390-1394-five-frontiers
+    branches: [agent/pass1390-1394-five-frontiers]
     paths:
       - 'analysis/w33_pass1390_1394_five_frontiers.py'
       - 'analysis/w33_pass1390_1394_five_frontiers.src/**'
-      - '.github/workflows/pass1390_1394_five_frontiers.yml'
-  pull_request:
-    paths:
-      - 'analysis/w33_pass1390_1394_five_frontiers.py'
-      - 'analysis/w33_pass1390_1394_five_frontiers.src/**'
+      - 'analysis/BT1390_BT1394_five_frontiers.*'
       - 'data/w33_pass1390_1394_five_frontiers.json'
       - 'tests/test_w33_pass1390_1394_five_frontiers.py'
+      - 'tools/check_pass1390_1394_worker.py'
+      - 'tools/integrate_pass1390_1394.py'
+      - '.github/workflows/pass1390_1394_five_frontiers.yml'
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass1390_1394_five_frontiers.py'
+      - 'analysis/w33_pass1390_1394_five_frontiers.src/**'
+      - 'analysis/BT1390_BT1394_five_frontiers.*'
+      - 'data/w33_pass1390_1394_five_frontiers.json'
+      - 'data/w33_pass_namespace_registry_v2.d/1390-1394.json'
+      - 'tests/test_w33_pass1390_1394_five_frontiers.py'
+      - 'tools/check_pass1390_1394_worker.py'
+      - 'tools/integrate_pass1390_1394.py'
       - '.github/workflows/pass1390_1394_five_frontiers.yml'
   workflow_dispatch:
 
@@ -29,23 +38,53 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        worker: ['1390', '1391', '1392', '1393', '1394']
+        worker: ['1390','1391','1392','1393','1394']
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
           cache: pip
-      - name: Install exact dependencies
-        run: python -m pip install --upgrade pip numpy sympy networkx pytest
-      - name: Compile transparent verifier
-        run: python -m py_compile analysis/w33_pass1390_1394_five_frontiers.py
-      - name: Run exact frontier
-        run: python analysis/w33_pass1390_1394_five_frontiers.py --worker '${{ matrix.worker }}' --output '/tmp/pass-${{ matrix.worker }}.json'
+      - run: python -m pip install --disable-pip-version-check numpy sympy networkx pytest
+      - run: python -m py_compile analysis/w33_pass1390_1394_five_frontiers.py
+      - run: python analysis/w33_pass1390_1394_five_frontiers.py --worker '${{ matrix.worker }}' --output '/tmp/${{ matrix.worker }}.json'
+      - run: python tools/check_pass1390_1394_worker.py '${{ matrix.worker }}' '/tmp/${{ matrix.worker }}.json'
       - uses: actions/upload-artifact@v4
         with:
-          name: pass-${{ matrix.worker }}
-          path: /tmp/pass-${{ matrix.worker }}.json
+          name: pass1390-1394-${{ matrix.worker }}
+          path: /tmp/${{ matrix.worker }}.json
           if-no-files-found: error
+
+  frozen-certificate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check pytest
+      - run: python analysis/w33_pass1390_1394_five_frontiers.py --check
+      - run: pytest -q tests/test_w33_pass1390_1394_five_frontiers.py
+      - run: python analysis/w33_pass1197_parallel_collision_guard.py
+
+  manuscript:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-science
+      - run: python tools/integrate_pass1390_1394.py
+      - run: python tools/integrate_pass1390_1394.py
+      - run: python tools/integrate_pass1390_1394.py --check
+      - run: |
+          cat >/tmp/pass1390.tex <<'EOF'
+          \documentclass{article}
+          \usepackage{amsmath,amssymb,amsthm}
+          \newtheorem{theorem}{Theorem}
+          \begin{document}
+          \input{analysis/BT1390_BT1394_five_frontiers}
+          \end{document}
+          EOF
+          TEXINPUTS=.: pdflatex -interaction=nonstopmode -halt-on-error -output-directory=/tmp /tmp/pass1390.tex
