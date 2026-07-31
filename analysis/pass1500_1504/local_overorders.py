@@ -20,7 +20,6 @@ def flatten_units(blocks):
 def matrix_from_coeff(coeff,start,n):return sp.Matrix(n,n,lambda i,j:sp.cancel(coeff[start+i*n+j]))
 def analyze():
  _public,cap=capture();g=cap['g'];blocks=core.matrix_units_full(g,cap['full_records']);C,slices=flatten_units(blocks);assert C.det()!=0;B=C.inv()
- # Multiplication matrices of every orbital basis element in every Wedderburn block.
  reps=[]
  for start,stop,n in slices:
   reps.append([matrix_from_coeff(B[:,k],start,n) for k in range(83)])
@@ -37,12 +36,11 @@ def analyze():
   Tb=sp.Matrix.hstack(*local_cols);T[start:stop,start:stop]=Tb
   block_data.append({'block_index':bi,'matrix_size':n,'minimal_left_lattice_basis':matrix_stats(P),'standard_to_stable_lattice_determinant':[int(sp.Rational(P.det()).p),int(sp.Rational(P.det()).q)],'maximal_order_basis_transform':matrix_stats(Tb),'all_83_orbital_actions_integral_on_lattice':True,'orbital_action_hashes':[matrix_stats(Z)['sha256'] for Z in integral]})
  assert T.det()!=0
- D=(C*T).applyfunc(sp.cancel) # maximal-overorder basis in orbital coordinates
+ D=(C*T).applyfunc(sp.cancel)
  Dinv=D.inv().applyfunc(sp.cancel)
- assert all(sp.Rational(x).q==1 for x in Dinv) # O subset Mmax
+ assert all(sp.Rational(x).q==1 for x in Dinv)
  index=abs(int(Dinv.det()));index_factors=rational_factor(index)
  assert index_factors=={'2':36,'3':113}
- # Reduced trace discriminant of conjugate matrix units is one.
  Gm=sp.zeros(83);cur=0
  for _start,_stop,n in slices:
   for i in range(n):
