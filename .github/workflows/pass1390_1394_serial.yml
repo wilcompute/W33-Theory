@@ -1,0 +1,40 @@
+name: Passes 1390-1394 Serial Exact Fallback
+
+on:
+  push:
+    branches:
+      - agent/pass1390-1394-five-frontiers
+    paths:
+      - '.github/workflows/pass1390_1394_serial.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  OPENBLAS_NUM_THREADS: '1'
+  OMP_NUM_THREADS: '1'
+
+jobs:
+  serial-exact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install --upgrade pip numpy sympy networkx pytest
+      - run: python -m py_compile analysis/w33_pass1390_1394_five_frontiers.py
+      - name: Run five exact frontiers
+        run: |
+          mkdir -p /tmp/pass1390-1394
+          for worker in 1390 1391 1392 1393 1394; do
+            python analysis/w33_pass1390_1394_five_frontiers.py --worker "$worker" --output "/tmp/pass1390-1394/$worker.json"
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass1390-1394-results
+          path: /tmp/pass1390-1394/*.json
+          if-no-files-found: error
