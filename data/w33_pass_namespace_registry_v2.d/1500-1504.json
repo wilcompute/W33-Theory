@@ -1,0 +1,19 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.supplement",
+  "status": "ACTIVE",
+  "canonical_blocks": [
+    {
+      "range": "1500-1504",
+      "owner": "selector-modular-ext-tensor-fourier-apartment-linking-maximal-overorder-track",
+      "status": "RESERVED_IN_PROGRESS",
+      "artifacts": {
+        "1500": "exact modular Gabriel Ext^1 quivers and radical-head reconstruction at p=2,3",
+        "1501": "deterministic tensor-factor selector Fourier transform and all multiplicity-space actions",
+        "1502": "complete 96-member apartment-bridge gauge classification",
+        "1503": "explicit conjugate split maximal overorder containing the orbital order",
+        "1504": "full 2160-apartment linking algebra and strict gauge-fixed Morita context test"
+      },
+      "runtime_boundary": "The five exact implementations completed locally under provisional internal labels before this collision-safe reservation. Public artifacts, frozen hashes, tests, CI, and manuscript inserts must use only Passes 1500-1504. No queued remote job is treated as evidence until observed."
+    }
+  ]
+}
