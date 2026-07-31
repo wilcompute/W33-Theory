@@ -6,6 +6,14 @@ on:
       - agent/pass1390-1394-five-frontiers
     paths:
       - '.github/workflows/pass1390_1394_serial.yml'
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass1390_1394_five_frontiers.py'
+      - 'analysis/w33_pass1390_1394_five_frontiers.src/**'
+      - 'data/w33_pass1390_1394_five_frontiers.json'
+      - 'tests/test_w33_pass1390_1394_five_frontiers.py'
+      - '.github/workflows/pass1390_1394_serial.yml'
   workflow_dispatch:
 
 permissions:
