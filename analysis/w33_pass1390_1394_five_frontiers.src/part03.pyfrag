@@ -47,7 +47,7 @@
             "size": len(orbit),
             "signature": sig,
             "stabilizer_type": row["stabilizer_type"],
-            "coordinates": [list((Binv @ np.array(v, dtype=np.int64) % 3).astype(int)) for v in sorted(orbit)],
+            "coordinates": [[int(x) for x in (Binv @ np.array(v, dtype=np.int64) % 3)] for v in sorted(orbit)],
         })
     assert sorted(observed) == sorted(expected)
 
