@@ -1,0 +1,19 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.supplement",
+  "status": "ACTIVE",
+  "canonical_blocks": [
+    {
+      "range": "1390-1394",
+      "owner": "selector-mackey-modular-fourier-apartment-integral-order-track",
+      "status": "RUNNING_EXACT_WORKERS",
+      "artifacts": {
+        "1390": "modular Mackey localization, characteristic-5 persistence, and exact Loewy boundary",
+        "1391": "intrinsic hinge-charge and square-norm classification of the six dual orbits",
+        "1392": "deterministic exact rational selector isotypic Fourier transform",
+        "1393": "hinge-selected selector/apartment bridge to the Levi cycle sector, with measured rank",
+        "1394": "integral orbital order, matrix-unit maximal order, Smith quotient, discriminant, and conductor"
+      },
+      "runtime_boundary": "Five isolated exact workers are running on draft PR #182. Claims remain provisional until worker artifacts are inspected and frozen. Negative ranks or inclusion failures will be retained as obstructions rather than rewritten as positive theorems."
+    }
+  ]
+}
