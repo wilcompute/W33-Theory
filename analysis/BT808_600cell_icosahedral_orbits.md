@@ -82,6 +82,15 @@ defect IS the substrate's action functional.
 
 ## Boundary
 
+> **ALREADY RESOLVED -- see [BT809](analysis/BT809_register_f4_regular_spread.md).**
+> BT809's opening line is "Closes the three BT808 boundary questions, all
+> GAP-confirmed": the icosahedral register is the natural F4-module for
+> A5 = SL(2,4) acting irreducibly on the elementary abelian 2^4, and the 36
+> regular spreads are identified. This pointer was added at Pass 1381 after the
+> boundary sweep flagged the pair; leaving it stale is the failure that cost
+> Passes 1111 and 1118.
+
+
 Open: the spread's type (regular/aregular; W33 spreads correspond to
 ovoids of Q(4,3) under duality); the two point-20-orbits vs the spread
 fibers (2+2 split per fiber?); the 2^4:A5 action on the BT741 flat

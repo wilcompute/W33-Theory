@@ -47,7 +47,12 @@ from check_rediscovery import (group_tokens, noun_number_pairs,  # noqa: E402
 RE_BOUNDARY = re.compile(
     r"^\s{0,3}#{1,4}\s*(Boundary|Open (?:Problems|Questions)|Next experiment|"
     r"Open)\b.*$", re.I | re.M)
-RE_INLINE_OPEN = re.compile(r"^\s*(?:>\s*)?Open:", re.I | re.M)
+# NOT `(?:>\s*)?` -- a BLOCKQUOTED "Open:" is almost always someone ELSE's
+# open question being quoted for discussion.  Allowing it made
+# w33_pass1117_1119 (which quotes BT810's list verbatim in order to say it
+# was already answered) register as having that boundary itself, and it
+# surfaced as a false positive in the first precision measurement.
+RE_INLINE_OPEN = re.compile(r"^[ 	]*Open:", re.I | re.M)
 
 # already-corrected files: their boundary carries a pointer now
 RESOLVED_MARKERS = ("ALREADY RESOLVED", "RESOLVED (Pass", "CORRECTION AND RESOLUTION")
