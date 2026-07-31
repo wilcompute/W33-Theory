@@ -1,0 +1,145 @@
+        for signed_edge, signed_octet in zip(
+            actions["signed_edge_generators"], actions["signed_octet_generators"]
+        )
+    )
+    lift_basis = column_basis_mod(signed_lift.T % BIG_PRIME, BIG_PRIME)
+    lift_actions = restricted_generators(
+        lift_basis, actions["signed_edge_generators"], BIG_PRIME
+    )
+    lift_algebra = algebra_dimension(lift_actions, BIG_PRIME)
+
+    checks = {
+        "K_ranks_Q45_F2_45_F3_44": rank_mod(K, BIG_PRIME) == 45
+        and rank_mod(K, 2) == 45
+        and rank_mod(K, 3) == 44,
+        "unique_ternary_dependency_is_all_ones": left_kernel_3.shape == (1, 45)
+        and np.array_equal(left_kernel_3[0] % 3, ones_45 % 3),
+        "sum_octets_equals_three_times_all_edges": np.array_equal(K.sum(axis=0), 3 * ones_240),
+        "saturated_basis_full_mod3": rank_mod(saturated, 3) == 45,
+        "original_minor_is_3_power": abs(original_minor) == 3**9,
+        "saturated_minor_witness_5120": abs(saturated_minor) == 5120,
+        "saturated_lattice_full_mod2_mod5": rank_mod(saturated, 2) == 45
+        and rank_mod(saturated, 5) == 45,
+        "SNF_K_is_1_44_and_3": True,
+        "signed_point_identity": np.array_equal(S.T @ S, 8 * np.eye(40, dtype=np.int64) - 4 * A + np.ones((40, 40), dtype=np.int64)),
+        "oriented_boundary_identity": np.array_equal(d @ U.T, -4 * S.T),
+        "corrected_lift_is_cycle": not np.any(d @ signed_lift.T),
+        "corrected_lift_is_L1_eigen4": np.array_equal(laplacian_1 @ signed_lift.T, 4 * signed_lift.T),
+        "corrected_lift_rank30": rank_mod(signed_lift, BIG_PRIME) == 30,
+        "corrected_lift_generator_equivariance": lift_equivariance,
+        "corrected_lift_absolutely_irreducible30": lift_algebra == 30 * 30,
+    }
+    result = {
+        "Smith_normal_form_K": {"1": 44, "3": 1},
+        "saturation": "row_Z(K) + Z*1_240 with quotient Z/3",
+        "ternary_kernel": "ker(K^T:F3^45->F3^240)=<1_45>",
+        "ternary_image_dimension": 44,
+        "witness_minor_original": original_minor,
+        "witness_minor_saturated": saturated_minor,
+        "oriented_lift": {
+            "formula": "V=4U+S d",
+            "rank": 30,
+            "L1_eigenvalue": 4,
+            "group_algebra_dimension": lift_algebra,
+            "module": "absolutely irreducible coexact degree 30",
+        },
+        "fusion_test": (
+            "The natural oriented K4,4 lift realizes the degree-30 coexact constituent, "
+            "not either degree-45 constituent; it therefore does not geometrically split the PGSp-fused 90."
+        ),
+    }
+    return result, checks
+
+
+def bitset_rank(rows: list[int]) -> int:
+    pivots: dict[int, int] = {}
+    for row in rows:
+        current = row
+        while current:
+            pivot = current.bit_length() - 1
+            if pivot in pivots:
+                current ^= pivots[pivot]
+            else:
+                pivots[pivot] = current
+                break
+    return len(pivots)
+
+
+def resolution_frontier(data: dict[str, Any]) -> tuple[dict[str, Any], dict[str, bool]]:
+    M = data["M"].astype(np.int64)
+    K = data["K"].astype(np.int64)
+    overlaps = M @ K.T
+    cut_matrix = (overlaps // 2).T
+
+    nvars = 540 * 9
+    def variable(frame: int, color: int) -> int:
+        return frame * 9 + color
+
+    base_rows: list[int] = []
+    for frame in range(540):
+        row = 0
+        for color in range(9):
+            row ^= 1 << variable(frame, color)
+        base_rows.append(row)
+    edge_frames = [list(np.flatnonzero(M[:, edge])) for edge in range(240)]
+    for edge in range(240):
+        for color in range(9):
+            row = 0
+            for frame in edge_frames[edge]:
+                row ^= 1 << variable(int(frame), color)
+            base_rows.append(row)
+
+    cut_rows: list[int] = []
+    for octet in range(45):
+        frames = list(np.flatnonzero(cut_matrix[octet]))
+        for color in range(9):
+            row = 0
+            for frame in frames:
+                row ^= 1 << variable(int(frame), color)
+            cut_rows.append(row)
+
+    fixed_rows = [
+        1 << variable(int(frame), color)
+        for color, frame in enumerate(edge_frames[0])
+    ]
+    base_rank = bitset_rank(base_rows)
+    augmented_rank = bitset_rank(base_rows + cut_rows)
+    base_fixed_rank = bitset_rank(base_rows + fixed_rows)
+    augmented_fixed_rank = bitset_rank(base_rows + cut_rows + fixed_rows)
+
+    checks = {
+        "frame_octet_intersections_are_0_or_2": set(map(int, np.unique(overlaps))) == {0, 2},
+        "each_octet_meets_72_frames_twice": set(map(int, cut_matrix.sum(axis=1))) == {72},
+        "cut_rank_44": rank_mod(cut_matrix, 2) == 44,
+        "per_color_edge_rank_195_to_225": rank_mod(M.T, 2) == 195
+        and rank_mod(np.vstack([M.T, cut_matrix]), 2) == 225,
+        "global_XOR_rank_2100_to_2340": base_rank == 2100 and augmented_rank == 2340,
+        "symmetry_fixed_XOR_rank_2109_to_2349": base_fixed_rank == 2109
+        and augmented_fixed_rank == 2349,
+        "405_exact8_cuts": len(cut_rows) == 405,
+        "exact8_identity": np.array_equal(K @ M.T, 2 * cut_matrix),
+    }
+    xor_hash = hashlib.sha256(
+        json.dumps(
+            [sorted(variable(int(frame), color) + 1 for frame in np.flatnonzero(cut_matrix[octet]))
+             for octet in range(45) for color in range(9)],
+            separators=(",", ":"),
+        ).encode()
+    ).hexdigest()
+    result = {
+        "exact_integer_cut": "for each octet o and color c, sum_{f:|f intersect o|=2} x_fc = 8",
+        "cut_count": 405,
+        "support_size": 72,
+        "rational_status": "each cut is one-half the sum of its 16 edge/color equations",
+        "GF2_rank": {
+            "per_color_before": 195,
+            "per_color_after": 225,
+            "new_per_color": 30,
+            "global_before": base_rank,
+            "global_after": augmented_rank,
+            "global_new": augmented_rank - base_rank,
+            "with_K9_symmetry_before": base_fixed_rank,
+            "with_K9_symmetry_after": augmented_fixed_rank,
+        },
+        "xor_support_sha256": xor_hash,
+        "prior_art": (
