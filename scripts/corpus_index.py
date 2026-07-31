@@ -86,7 +86,15 @@ def tokenise(text: str) -> set[str]:
 
 def connect() -> sqlite3.Connection:
     DB.parent.mkdir(parents=True, exist_ok=True)
-    con = sqlite3.connect(DB)
+    con = sqlite3.connect(DB, timeout=30.0)
+    # WAL so a query does not fail while a rebuild is running.  Measured: a
+    # `--full` rebuild holds a write transaction for minutes, and in rollback
+    # mode every concurrent `find`/`stats`/`collisions` dies with
+    # "database is locked" -- which makes the index unusable exactly when it is
+    # being refreshed.  WAL lets readers proceed against the last committed
+    # snapshot; the 30 s busy timeout covers the brief checkpoint windows.
+    con.execute("PRAGMA journal_mode=WAL")
+    con.execute("PRAGMA busy_timeout=30000")
     con.executescript("""
         CREATE TABLE IF NOT EXISTS files(
             path TEXT PRIMARY KEY, size INTEGER, mtime REAL, sha1 TEXT);
