@@ -1,0 +1,14 @@
+{
+  "schema": "w33.pass_namespace_registry_v2.shard.v1",
+  "range": "1537-1541",
+  "owner": "frame-dual-five-frontier-continuation",
+  "passes": {
+    "1537": "equivariant modular 14/15 octet-Gram certificate",
+    "1538": "integral and ternary octet lattice lift",
+    "1539": "octet-derived Hoffman-resolution cuts",
+    "1540": "frame-code weight enumerator programme",
+    "1541": "decoder and explicit noise-model falsifier"
+  },
+  "status": "reserved",
+  "boundary": "No representation label, global resolution verdict, complete enumerator, or decoder threshold is claimed before exact verification."
+}
