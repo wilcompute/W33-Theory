@@ -1,0 +1,160 @@
+    center_coefficients = sp.Matrix.hstack(*center_vectors)
+    center_orbitals = evaluations * center_coefficients
+    center_rows = independent_coordinate_rows(center_orbitals, prime)
+    assert len(center_rows) == 10
+    center_inverse = center_orbitals[center_rows, :].inv()
+
+    center_left = []
+    for a in range(10):
+        columns = []
+        for b in range(10):
+            product = context.mul_q(center_orbitals[:, a], center_orbitals[:, b])
+            coordinates = center_inverse * sp.Matrix([product[row] for row in center_rows])
+            assert center_orbitals * coordinates == product
+            columns.append(coordinates)
+        center_left.append(sp.Matrix.hstack(*columns))
+
+    # Deterministic sparse generic central element.  If a future SymPy nullspace
+    # basis changes, fall back to a short deterministic search.
+    preferred = (-2, -2, 0, 0, -2, 0, 0, 0, 0, 0)
+
+    def candidate(coefficients):
+        matrix = sum(
+            (coefficients[i] * center_left[i] for i in range(10)),
+            start=sp.zeros(10),
+        )
+        x = sp.symbols("x")
+        factors = sp.factor_list(matrix.charpoly(x).as_expr())[1]
+        split = len(factors) == 10 and all(
+            exponent == 1 and sp.degree(factor) == 1
+            for factor, exponent in factors
+        )
+        return matrix, factors, split
+
+    generic, factors, split = candidate(preferred)
+    coefficients = preferred
+    if not split:
+        found = None
+        for support in range(1, 4):
+            for indices in itertools.combinations(range(10), support):
+                for values in itertools.product((-2, -1, 1, 2), repeat=support):
+                    trial = [0] * 10
+                    for index, value in zip(indices, values):
+                        trial[index] = value
+                    matrix, trial_factors, ok = candidate(tuple(trial))
+                    if ok:
+                        found = (tuple(trial), matrix, trial_factors)
+                        break
+                if found:
+                    break
+            if found:
+                break
+        assert found is not None
+        coefficients, generic, factors = found
+
+    x = sp.symbols("x")
+    characteristic = sp.Poly(generic.charpoly(x).as_expr(), x, domain=sp.QQ)
+    characteristic_payload = json.dumps(
+        [str(coefficient) for coefficient in characteristic.all_coeffs()],
+        separators=(",", ":"),
+    )
+    characteristic_hash = hashlib.sha256(characteristic_payload.encode()).hexdigest()
+
+    identity_coordinates = center_inverse * sp.Matrix([
+        context.identity[row] for row in center_rows
+    ])
+    assert center_orbitals * identity_coordinates == context.identity
+
+    projectors = []
+    for factor, exponent in factors:
+        assert exponent == 1
+        factor = sp.Poly(factor, x, domain=sp.QQ)
+        quotient = characteristic.exquo(factor)
+        crt_polynomial = sp.rem(quotient * sp.invert(quotient, factor), characteristic)
+        projector_on_center = eval_polynomial(generic, crt_polynomial)
+        assert projector_on_center * projector_on_center == projector_on_center
+        orbital_projector = center_orbitals * (projector_on_center * identity_coordinates)
+        assert context.mul_q(orbital_projector, orbital_projector) == orbital_projector
+        projectors.append(orbital_projector)
+
+    # Orthogonal complete rational central system.
+    assert sum(projectors, start=sp.zeros(83, 1)) == context.identity
+    for i, left in enumerate(projectors):
+        for j, right in enumerate(projectors):
+            product = context.mul_q(left, right)
+            assert product == (left if i == j else sp.zeros(83, 1))
+
+    eval_mod = {
+        prime: np.array(evaluations.tolist(), dtype=np.int64) % prime
+        for prime in PRIMES
+    }
+    records = []
+    for projector in projectors:
+        component_dimensions = []
+        for good_prime in PRIMES:
+            projector_mod = context.vector_mod(projector, good_prime)
+            columns = np.stack([
+                context.mul_mod(projector_mod, eval_mod[good_prime][:, column], good_prime)
+                for column in range(79)
+            ])
+            component_dimensions.append(previous.rank_mod(columns, good_prime))
+        assert component_dimensions[0] == component_dimensions[1]
+        component_dimension = component_dimensions[0]
+        degree = math.isqrt(component_dimension)
+        assert degree * degree == component_dimension
+
+        isotypic_dimension = context.trace_q(projector)
+        assert isotypic_dimension.q == 1
+        isotypic_dimension = int(isotypic_dimension)
+        assert isotypic_dimension % degree == 0
+        module_multiplicity = isotypic_dimension // degree
+
+        shell_ranks = []
+        for shell in range(5):
+            rank = context.shell_trace_q(projector, shell)
+            assert rank.q == 1
+            shell_ranks.append(int(rank))
+        assert sum(shell_ranks) == isotypic_dimension
+
+        primitive_shells = [
+            shell for shell, rank in enumerate(shell_ranks)
+            if rank == module_multiplicity and rank > 0
+        ]
+        assert primitive_shells
+        primitive_shell = primitive_shells[0]
+        shell_idempotent = context.shell_diagonals[primitive_shell]
+        primitive = context.mul_q(projector, shell_idempotent)
+        assert primitive == context.mul_q(shell_idempotent, projector)
+        assert context.mul_q(primitive, primitive) == primitive
+        assert context.trace_q(primitive) == module_multiplicity
+
+        records.append({
+            "simple_block_size": degree,
+            "module_multiplicity": module_multiplicity,
+            "isotypic_dimension": isotypic_dimension,
+            "algebra_component_dimension": component_dimension,
+            "shell_ranks": shell_ranks,
+            "primitive_shell": primitive_shell,
+            "projector": projector,
+        })
+
+    records.sort(key=lambda record: (
+        record["simple_block_size"],
+        record["module_multiplicity"],
+        record["isotypic_dimension"],
+        record["shell_ranks"],
+    ))
+    expected = [
+        (1, 3, 3), (1, 12, 12), (1, 14, 14),
+        (2, 1, 2), (2, 2, 4),
+        (3, 4, 12), (3, 4, 12), (3, 8, 24),
+        (4, 8, 32), (5, 1, 5),
+    ]
+    assert [
+        (record["simple_block_size"], record["module_multiplicity"], record["isotypic_dimension"])
+        for record in records
+    ] == expected
+    assert sum(record["algebra_component_dimension"] for record in records) == 79
+    assert sum(record["isotypic_dimension"] for record in records) == 120
+
+    return {
