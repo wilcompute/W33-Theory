@@ -82,6 +82,16 @@ RE_BOUND_CLAIM = re.compile(
     r"|orbit size|G_orbit|>=)\b")
 
 
+# NARROWED (Pass 1445).  Measured precision was 0/4 -- "all"/"every" in this
+# corpus nearly always introduces an exhaustive check, not a sample inference.
+# The one real instance (Pass 1411) had a specific shape: it reported a
+# DISTRIBUTION over stabiliser/orbit types drawn from sampled solutions. Require
+# that shape, or the guard is noise.
+RE_DISTRIBUTION = re.compile(
+    r"(?i)(stabili[sz]er|orbit)[^.]{0,80}(type|distribution|profile|all|every)"
+    r"|sampled[^.]{0,60}(stabili[sz]er|orbit|cover)")
+
+
 def scan(paths: list[Path]) -> list[tuple[Path, bool]]:
     out = []
     for p in paths:
@@ -94,6 +104,8 @@ def scan(paths: list[Path]) -> list[tuple[Path, bool]]:
             # a bound / existence claim survives a biased sample; a universal
             # claim does not
             if RE_BOUND_CLAIM.search(t):
+                generalises = False
+            if not RE_DISTRIBUTION.search(t):
                 generalises = False
             out.append((p, generalises))
     return out

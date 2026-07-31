@@ -388,6 +388,21 @@
     "1440": "CLAUDE.md: heredoc escape-eating (4 occurrences) and untested rewriting transformations (2,129 bad edits) written up as project rules"
    },
    "runtime_boundary": "Two observed local tectonic builds; static analysis otherwise. The 3,547,800 census is the parallel track’s, arithmetically verified but not reproduced."
+  },
+  {
+   "range": "1441-1447",
+   "owner": "glue-track-intersecting-family",
+   "status": "COMPLETE",
+   "artifacts": {
+    "1441": "BREAKTHROUGH: the exact covers form an INTERSECTING FAMILY. 795,691 pairs from 1,262 distinct covers: ZERO disjoint, minimum intersection 4. So the 9-class resolution suggested by 540=9x60 with edge-multiplicity 9 almost certainly does NOT exist. Caveat named: the pool is DFS-generated and known non-uniform, so this is strong evidence not proof",
+    "1442": "BREAKTHROUGH: the involution stabilising a C2 cover is a CLASS-45 element (PSp(4,3) has only 315 involutions, classes 270 and 45). It fixes 84 of the 540 frames and exactly 12 of the cover 60 -- reproducing BT1420 independently. Scope correction: BT773 540 3A1 involutions cannot be in PSp(4,3); they must be counted in PGSp(4,3)",
+    "1443": "M20 corroborated: exactly ONE class of order-960 subgroups in PSp(4,3), (C2)^4:A5, IdGroup [960,11358], index 27",
+    "1444": "scripts/fix_insert_portability.py -- 29 inserts made portable, proven on BT1134 alone first per the Pass 1440 rule; portability 29 -> 0",
+    "1445": "sampler guard narrowed after its 0/4 measured precision: now requires a distribution-over-stabiliser-types claim; 73 -> 9 files",
+    "1446": "the sweep .tex scope measured: 1258 -> 1482 files, but NO .tex pair clears the threshold today",
+    "1447": "a bug of mine caught by a number disagreeing with one I trusted: OnSets(frames[f],g) applies g to line-index sets, but g permutes FRAME indices; f^g=f is correct"
+   },
+   "runtime_boundary": "Exact GAP for the involution and subgroup facts; the intersecting-family result is EMPIRICAL over 1,262 covers from a known-biased sampler and is explicitly not a proof."
   }
  ],
  "rule": "A pass number is canonical only when registered here. Retracted or scope-corrected blocks remain registered for provenance but cannot contribute active theorem claims outside their stated scope."

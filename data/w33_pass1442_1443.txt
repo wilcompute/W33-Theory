@@ -1,0 +1,26 @@
+Passes 1442-1443: the C2 involution, and the M20 arithmetic
+
+frames: 540
+|G on frames| = 25920
+
+=== BT773 check: are there 540 involutions matching the 540 frames? ===
+  involution classes in PSp(4,3): [ 45, 270 ]
+  classes of size exactly 540: 0   (BT773 predicts one)
+
+=== Pass 1442: the involution stabilising a C2 cover ===
+  cover samples: 24
+    C2 cover: its involution fixes 84 of the 540 frames, 12 of the cover's 60
+      involution class size in PSp(4,3): 45
+      IS IT A 3A1 (class size 540)? false
+    C2 cover: its involution fixes 84 of the 540 frames, 12 of the cover's 60
+      involution class size in PSp(4,3): 45
+      IS IT A 3A1 (class size 540)? false
+
+=== Pass 1443: their M20 = 2^4:A5 chart, arithmetic only ===
+  subgroups of order 960 in PSp(4,3) (up to conj): 1
+    (C2 x C2 x C2 x C2) : A5  IdGroup [ 960, 11358 ]   index 27
+      is 2^4:A5? false   |2^4:A5| = 16*60 = 960
+  243 = 3^5 ? true
+  (the 243-cover H(5,3) chart itself is their computation, not reproduced)
+
+DONE

@@ -1,5 +1,23 @@
 % BT1204 labelled 2160 carrier and pocket-shell insert.
 
+% HOST-INDEPENDENT PREAMBLE (added by scripts/fix_insert_portability.py).
+% This insert may be \input by either root manuscript, and they do not define the
+% same environments or macros: w33_paper.tex has lemma/proposition/remark and
+% \PSp/\Aut, photonic_holonet.tex has none of them. Define only what is missing,
+% so the file is portable and re-running this is a no-op.
+\makeatletter
+\@ifundefined{theorem}{\newtheorem{theorem}{Theorem}}{}
+\@ifundefined{lemma}{\newtheorem{lemma}[theorem]{Lemma}}{}
+\@ifundefined{proposition}{\newtheorem{proposition}[theorem]{Proposition}}{}
+\@ifundefined{remark}{\newtheorem{remark}[theorem]{Remark}}{}
+\@ifundefined{corollary}{\newtheorem{corollary}[theorem]{Corollary}}{}
+\@ifundefined{definition}{\newtheorem{definition}[theorem]{Definition}}{}
+\makeatother
+\providecommand{\PSp}{\mathrm{PSp}}
+\providecommand{\Aut}{\mathrm{Aut}}
+\providecommand{\spec}{\operatorname{spec}}
+
+
 \begin{corollary}[Labelled $2160$ carrier and the $54$ pocket shells]
 \label{cor:labelled-2160-pocket-shells}
 The abstract codec of Proposition~\ref{prop:universal-2160-projection-codec} now

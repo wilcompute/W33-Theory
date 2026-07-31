@@ -1,5 +1,23 @@
 % BT1149 orientation convention insert.
 
+% HOST-INDEPENDENT PREAMBLE (added by scripts/fix_insert_portability.py).
+% This insert may be \input by either root manuscript, and they do not define the
+% same environments or macros: w33_paper.tex has lemma/proposition/remark and
+% \PSp/\Aut, photonic_holonet.tex has none of them. Define only what is missing,
+% so the file is portable and re-running this is a no-op.
+\makeatletter
+\@ifundefined{theorem}{\newtheorem{theorem}{Theorem}}{}
+\@ifundefined{lemma}{\newtheorem{lemma}[theorem]{Lemma}}{}
+\@ifundefined{proposition}{\newtheorem{proposition}[theorem]{Proposition}}{}
+\@ifundefined{remark}{\newtheorem{remark}[theorem]{Remark}}{}
+\@ifundefined{corollary}{\newtheorem{corollary}[theorem]{Corollary}}{}
+\@ifundefined{definition}{\newtheorem{definition}[theorem]{Definition}}{}
+\makeatother
+\providecommand{\PSp}{\mathrm{PSp}}
+\providecommand{\Aut}{\mathrm{Aut}}
+\providecommand{\spec}{\operatorname{spec}}
+
+
 \begin{remark}[Global $K3$ orientation convention]
 \label{rem:k3-global-orientation}
 The paper uses the complex/hyperkahler orientation of Ricci-flat $K3$.  In this
