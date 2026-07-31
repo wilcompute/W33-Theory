@@ -136,12 +136,14 @@ def certificate() -> dict:
         FA = np.array([frame_perm(line_perm(g)) for g in G], dtype=np.uint16)
         reps = [np.array(r["representative"], dtype=np.int64) for r in records]
 
+        # Pass 1511: explicit counterexample to the sampled intersecting-family conjecture.
         c0 = tuple(map(int, reps[0]))
         c1 = tuple(PAIR_PARTNER)
         pair_orbit = 29
         pair_images = np.sort(FA[:, reps[pair_orbit]], axis=1)
         pair_membership = bool(np.any(np.all(pair_images == np.array(c1, dtype=np.uint16), axis=1)))
 
+        # Pass 1512: enumerate all distinct disjoint covers in every frozen orbit.
         c0_mask = np.zeros(540, dtype=np.uint8)
         c0_mask[list(c0)] = 1
         all_disjoint: dict[tuple[int, ...], int] = {}
@@ -171,6 +173,7 @@ def certificate() -> dict:
         graph = json.loads(subprocess.check_output([str(graph_exe), str(binary)], text=True))
         disjoint_binary_sha256 = sha(binary)
 
+        # Verify the selected four-packing and identify its orbit/stabilizer data.
         packing = [tuple(c) for c in PACKING]
         packing_exact = all(exact_cover(M, c) for c in packing)
         packing_pairwise_disjoint = all(not (set(packing[i]) & set(packing[j])) for i in range(4) for j in range(i + 1, 4))
@@ -191,9 +194,10 @@ def certificate() -> dict:
                 "group_indices": stab,
             })
 
+        # Pass 1514: classify the two involution classes and every C2 cover stabilizer.
         group_index = {g: i for i, g in enumerate(G)}
         identity = G[0]
-        involutions = [i for i, g in enumerate(G) if i and base.compose(g, g) == identity]
+        involutions = [i for i, g in enumerate(G)  if i and base.compose(g, g) == identity]
         remaining = set(involutions)
         involution_class: dict[int, int] = {}
         while remaining:
@@ -210,7 +214,7 @@ def certificate() -> dict:
 
         c2_class_counts = Counter()
         c2_profile_counts = Counter()
-        for record, cover in zip(records, reps):
+        for orbit_index, (record, cover) in enumerate(zip(records, reps)):
             if int(record["stabilizer_order"]) != 2:
                 continue
             mask = np.zeros(540, dtype=bool)
@@ -220,7 +224,7 @@ def certificate() -> dict:
             h = next(i for i in stab if i != 0)
             cls = involution_class[h]
             global_fixed = int(np.sum(FA[h] == np.arange(540)))
-            cover_fixed = int(np.sum(mask & (FA[h] == np.arange(540))))
+            cover_fixed = int(np.sum(mask & (FA[h] == np.arange(540)))
             c2_class_counts[cls] += 1
             c2_profile_counts[(cls, global_fixed, cover_fixed)] += 1
 
@@ -235,10 +239,11 @@ def certificate() -> dict:
                 involution_profiles.append({
                     "class_size": involution_class[h],
                     "global_fixed_frames": int(np.sum(FA[h] == np.arange(540))),
-                    "fixed_frames_in_cover": int(np.sum(mask & (FA[h] == np.arange(540)))),
+                    "fixed_frames_in_cover": int(np.sum(mask & (FA[h] == np.arange(540))),
                 })
             packing_record["involution_profiles"] = sorted(involution_profiles, key=lambda x: (x["class_size"], x["global_fixed_frames"]))
 
+        # Pass 1515: exact residual no-fifth-cover certificate and fractional layer.
         forbidden = td / "forbidden.txt"
         flat_packing = [r for cover in packing for r in cover]
         forbidden.write_text(str(len(flat_packing)) + "\n" + " ".join(map(str, flat_packing)) + "\n")
@@ -341,7 +346,7 @@ def certificate() -> dict:
             "integral_search": residual,
         },
         "source_sha256": {
-            str(SCRIPT.relative_to(ROOT)): sha(SCRIPT),
+            str(ScRIPT.relative_to(ROOT)): sha(SCRIPT),
             str(REPS.relative_to(ROOT)): sha(REPS),
             str(CPP_GRAPH.relative_to(ROOT)): sha(CPP_GRAPH),
             str(CPP_RESIDUAL.relative_to(ROOT)): sha(CPP_RESIDUAL),
@@ -372,7 +377,7 @@ def main() -> int:
         "packing_size": len(payload["pass1513_disjointness_graph_and_four_packing"]["packing"]),
         "fifth_cover": payload["pass1515_residual_integrality_gap"]["integral_search"]["found"],
     }, sort_keys=True))
-    return 0 if payload["status"] == "PASS" else 1
+    return 0  if payload["status"] == "PASS" else 1
 
 
 if __name__ == "__main__":
