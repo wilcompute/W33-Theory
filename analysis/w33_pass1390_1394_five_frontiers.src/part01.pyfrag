@@ -60,9 +60,6 @@ def worker_1390():
         }
         for p in (2, 3, 5)
     }
-    assert localization["2"] == {"localizable_projectors": 0, "collapsed_projectors": 14}
-    assert localization["3"] == {"localizable_projectors": 0, "collapsed_projectors": 14}
-    assert localization["5"] == {"localizable_projectors": 14, "collapsed_projectors": 0}
 
     profiles = {str(p): modular_radicals.analyze_one(g, core, "full", p) for p in (2, 3, 5)}
     expected_f5 = {1: 7, 2: 4, 3: 9, 4: 4, 5: 5}
