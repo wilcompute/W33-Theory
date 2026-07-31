@@ -1,0 +1,66 @@
+name: W33 Passes 1521-1525
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analysis/w33_pass1521_resolution_cnf.py'
+      - 'analysis/w33_pass1522_frame_module_fingerprint.py'
+      - 'analysis/w33_pass1523_cover_orbit_frontier_audit.py'
+      - 'analysis/w33_pass1524_four_packing_simplex.py'
+      - 'analysis/w33_pass1525_frame_harmonic_bridge.py'
+      - 'analysis/BT1521_1525_frame_resolution_continuation.md'
+      - 'analysis/BT1525_frame_resolution_continuation_insert.tex'
+      - 'data/w33_pass1521_1525_frame_resolution_continuation.json'
+      - 'tests/test_w33_pass1521_1525_frame_resolution_continuation.py'
+jobs:
+  frozen-certificate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy pytest
+      - run: pytest -q tests/test_w33_pass1521_1525_frame_resolution_continuation.py
+      - run: python analysis/w33_pass1521_resolution_cnf.py --output /tmp/resolution.cnf --json /tmp/resolution.json --check
+      - run: python analysis/w33_pass1523_cover_orbit_frontier_audit.py --output /tmp/orbits.json --check
+      - run: python analysis/w33_pass1524_four_packing_simplex.py --output /tmp/simplex.json --check
+  exact-harmonic-bridge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy
+      - run: python analysis/w33_pass1525_frame_harmonic_bridge.py --output /tmp/bridge.json --check
+      - run: |
+          python - <<'PY'
+          import json
+          frozen=json.load(open('data/w33_pass1521_1525_frame_resolution_continuation.json'))['pass1525_frame_harmonic_bridge']
+          fresh=json.load(open('/tmp/bridge.json'))
+          assert fresh['hashes']==frozen['hashes']
+          assert fresh['checks']==frozen['checks']
+          PY
+  module-fingerprint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy
+      - run: python analysis/w33_pass1522_frame_module_fingerprint.py --output /tmp/module.json --check
+      - run: |
+          python - <<'PY'
+          import json
+          frozen=json.load(open('data/w33_pass1521_1525_frame_resolution_continuation.json'))['pass1522_module_fingerprint']
+          fresh=json.load(open('/tmp/module.json'))
+          for group in ('psp','pgsp'):
+              got=[b['multiplicity'] for b in fresh[group]['eigenspaces']['-4']['blocks']]
+              assert got==frozen[group]['minus4_block_multiplicities']
+          assert fresh['checks']['psp_order'] and fresh['checks']['pgsp_order']
+          PY

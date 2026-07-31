@@ -1,0 +1,14 @@
+{
+  "schema": "w33.pass_namespace_registry_v2.shard.v1",
+  "range": "1531-1535",
+  "owner": "frame-resolution-continuation",
+  "passes": {
+    "1531": "exact 4860-variable/99909-clause Hoffman 9-coloring CNF",
+    "1532": "PSp/PGSp frame eigenspace commutant fingerprints",
+    "1533": "maximum-coclique orbit-frontier quantifier audit",
+    "1534": "four-cover affine projection and norm-48 shell",
+    "1535": "integral frame +4 to harmonic Steinberg bridge"
+  },
+  "status": "merged-candidate",
+  "boundary": "The global nine-cover resolution remains open."
+}
