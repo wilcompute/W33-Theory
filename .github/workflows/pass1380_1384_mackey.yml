@@ -1,0 +1,47 @@
+name: Passes 1380-1384 Mackey selector decomposition
+
+on:
+  push:
+    branches:
+      - agent/pass1375-1379-mackey
+    paths:
+      - 'analysis/_mackey_selector_decomposition_impl.py'
+      - 'analysis/w33_pass1380_1384_mackey_selector_decomposition.py'
+      - 'analysis/w33_pass1380_1384_mackey_compact.py'
+      - 'analysis/pass1370_1374/**'
+      - 'data/w33_pass1380_1384_mackey_selector_decomposition.json'
+      - 'tests/test_w33_pass1380_1384_mackey_selector_decomposition.py'
+      - '.github/workflows/pass1380_1384_mackey.yml'
+  pull_request:
+    paths:
+      - 'analysis/_mackey_selector_decomposition_impl.py'
+      - 'analysis/w33_pass1380_1384_mackey_selector_decomposition.py'
+      - 'analysis/w33_pass1380_1384_mackey_compact.py'
+      - 'analysis/pass1370_1374/**'
+      - 'data/w33_pass1380_1384_mackey_selector_decomposition.json'
+      - 'tests/test_w33_pass1380_1384_mackey_selector_decomposition.py'
+      - '.github/workflows/pass1380_1384_mackey.yml'
+  workflow_dispatch:
+
+jobs:
+  exact-mackey:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install exact dependencies
+        run: python -m pip install --upgrade pip numpy sympy pytest
+      - name: Verify detailed reconstruction and frozen certificate
+        run: python analysis/w33_pass1380_1384_mackey_compact.py --check
+      - name: Focused regressions
+        run: pytest -q tests/test_w33_pass1380_1384_mackey_selector_decomposition.py
+      - name: Verify manuscript integrator source
+        run: |
+          python -m py_compile tools/integrate_pass1380_1384.py
+          python -m py_compile analysis/_mackey_selector_decomposition_impl.py
+          python -m py_compile analysis/w33_pass1380_1384_mackey_selector_decomposition.py
+          python -m py_compile analysis/w33_pass1380_1384_mackey_compact.py

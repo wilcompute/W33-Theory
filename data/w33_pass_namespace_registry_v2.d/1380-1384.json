@@ -1,0 +1,20 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.supplement",
+  "status": "ACTIVE",
+  "canonical_blocks": [
+    {
+      "range": "1380-1384",
+      "owner": "selector-mackey-character-fusion-track",
+      "status": "COMPLETE_WITH_REMOTE_EXACT_VERIFICATION",
+      "artifacts": {
+        "1380": "exact little-group construction of all 27 irreducible characters of C3^3 : (D8 x C2) from six dual orbits",
+        "1381": "exact decomposition of the 120-selector permutation character into fourteen nonzero rational constituents",
+        "1382": "literal equality of Mackey character projectors with all fourteen orbital central projectors and derivation of the 83-dimensional Wedderburn algebra",
+        "1383": "exact 14-to-10 Terwilliger-center fusion with scalar packet sizes 2,2,3 and four-dimensional Schur defect",
+        "1384": "collision-safe report, manuscript insert, dual-paper integrator, focused regressions, CI, and explicit mathematical/physical boundaries"
+      },
+      "namespace_note": "This packet was developed provisionally as 1375-1379. A parallel release claimed 1375-1378 before merge, so the canonical public namespace was moved to 1380-1384 without altering the exact implementation or invariants.",
+      "runtime_boundary": "Corrected remote exact workflow run 30636866425 completed successfully, reconstructing the full character/projector chain with detailed SHA-256 dbcf6881622b3e1cdd694d1e345eadce309eae0550e23e348ba446ca603bee74. The collision-safe compact certificate is frozen at SHA-256 0ec8be0272896594c7013691a1f2516d08bdcc08cf97049297b69e594f953152. No database-character-table, literature-priority, or physical-realization claim is made."
+    }
+  ]
+}
