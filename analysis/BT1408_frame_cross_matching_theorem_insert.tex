@@ -1,0 +1,101 @@
+% BT1408 -- manuscript insert: the frame cross-matching and its cokernel.
+%
+% Promotion candidate for w33_paper.tex, to sit beside the existing spectral
+% material on the 1 + 24 + 15 split.  Every numeric claim below has a GAP
+% certificate (data/w33_pass1390_frame_cross_matching.txt,
+% data/w33_pass1392_incidence_snf.json, data/w33_pass1397_cokernel_module.txt,
+% data/w33_pass1405_1406.txt) and the uniqueness lemma has a Lean module
+% (formal/W33/Pass1390FrameCrossMatching.lean).
+%
+% NOT included on purpose: any E_8 reading of the 240.  Pass 1012 owns the
+% obstruction, and the 240 here is the edge set of W(3,3).
+
+\subsection{The frame cross-matching and the \texorpdfstring{$(-4)$}{(-4)}-eigenspace}
+\label{sec:framecrossmatching}
+
+Call a \emph{frame} an unordered pair $\{L,L'\}$ of disjoint totally isotropic
+lines of $W(3,3)$; there are $540$ of them, and the stabiliser of a frame in
+$\PSp(4,3)$ is $C_2\times S_4\cong O_h$ of order $48$.
+
+\begin{lemma}[Faithful tetrahedral action]\label{lem:frameA4}
+Let $H$ be the stabiliser of a frame $\{L,L'\}$ and $A_4=H'$ its derived
+subgroup. Then $A_4$ acts faithfully, as the natural degree-four alternating
+group, on the four points of $L$ and on the four points of $L'$, with orbits
+$[4,4]$ on the eight points of the frame.
+\end{lemma}
+
+\begin{proposition}[Canonical cross-matching]\label{prop:crossmatching}
+For every frame there is exactly one $A_4$-equivariant bijection $L\to L'$, and
+it is invariant under the full stabiliser $H$, not merely under $A_4$.
+\end{proposition}
+
+\begin{proof}
+A faithful action on both four-element sets embeds $A_4$ into
+$\operatorname{Sym}(L)\times\operatorname{Sym}(L')$ with both projections onto,
+so its image is the graph of an isomorphism and an equivariant bijection exists.
+Uniqueness is general: on a transitive $A$-set an equivariant bijection is
+determined by the image of one point, since
+$f(a\cdot x_0)=a\cdot f(x_0)$ for all $a$. Invariance under $H$ then follows
+because $H$ permutes the set of $A_4$-equivariant bijections, which is a
+singleton. Exhaustive verification over all $540$ frames is recorded in the
+certificate.
+\end{proof}
+
+Write $\mu(\{L,L'\})\subseteq E$ for the resulting set of four \emph{cross-pairs}.
+
+\begin{theorem}[The matching lands on edges, $9$ to $1$]\label{thm:crossedges}
+Every cross-pair is an edge of $W(3,3)$; the $540$ matchings use exactly the
+$240$ edges, each edge lying in exactly nine of them; and $\mu$ is injective.
+\end{theorem}
+
+\begin{proof}
+The $240$ cross-pairs form a single $\Aut$-orbit with point stabiliser of order
+$108=C_3\times S_3\times S_3$, and $|\PSp(4,3)|/240=108$; uniformity of the
+multiplicity follows, and $540\cdot 4/240=9$. Injectivity holds because the
+endpoints of the four cross-pairs are exactly $L\cup L'$ and each line is a
+maximal clique of the collinearity graph, so the eight points recover the frame.
+That every cross-pair is collinear is not forced by the construction --- $L$ and
+$L'$ are disjoint --- and is verified.
+\end{proof}
+
+Let $M\colon \mathbb{Z}^{540}\to\mathbb{Z}^{240}$ send a frame to the sum of its
+four cross-pairs.
+
+\begin{theorem}[Cokernel]\label{thm:crosscoker}
+$\operatorname{rank} M=225$, the invariant factors are $1^{195},2^{30}$, and
+\[
+  \operatorname{coker}(M)\;\cong\;\mathbb{Z}^{15}\oplus(\mathbb{Z}/2)^{30}.
+\]
+Moreover $\operatorname{coker}(M)\otimes\mathbb{Q}$ is \emph{irreducible} of
+degree $15$, and it is the same constituent that occurs in the $40$-point
+permutation module. Equivalently,
+\[
+  \operatorname{coker}(M)\otimes\mathbb{Q}\;\cong\;\ker(A+4I),
+\]
+the $(-4)$-eigenspace of the adjacency operator.
+\end{theorem}
+
+The last identification is the point. The $40$-point module splits as
+$1+15+24$, matching the eigenvalue multiplicities of $12,-4,2$; among those three
+blocks it is the $(-4)$-block alone that the frame geometry reproduces, and it
+does so through an explicitly named equivariant map rather than through an
+equality of dimensions.
+
+\begin{remark}[What is \emph{not} claimed]\label{rem:crossscope}
+Theorem~\ref{thm:crosscoker} is rational. Integrally the situation differs: $2$
+is the only bad prime ($\operatorname{rank}_{\mathbb{F}_2}M=195$ while
+$\operatorname{rank}_{\mathbb{F}_3}M=\operatorname{rank}_{\mathbb{F}_5}M=225$),
+and the mod-$2$ quotient is \emph{not} irreducible --- its composition factors
+have dimensions $1,1,1,6,8,14,14$. So the degree-$15$ rational constituent
+reduces to $1+14$ modulo $2$, and the torsion contributes $1,1,6,8,14$. This is
+consistent with the coalescence theorem: $\operatorname{spec}(A)=\{12,2,-4\}$
+collapses completely modulo $2$, while modulo $3$ and $5$ it does not.
+\end{remark}
+
+\begin{proposition}[Resolutions of the edge set]\label{prop:crosscover}
+There exist sets of $60$ frames whose cross-matchings partition $E$; at least
+$6579$ distinct such covers exist. No cover is $\Aut$-invariant, since $\Aut$ is
+transitive on the $540$ frames and a cover uses $60$. Sampled covers have
+stabilisers of order $4$ or $8$ (types $C_4$, $C_2\times C_2$, $C_4\times C_2$),
+so a cover is close to rigid.
+\end{proposition}

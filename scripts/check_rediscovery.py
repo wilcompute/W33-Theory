@@ -37,6 +37,9 @@ RE_ROW = re.compile(r"^\|\s*`([^`]+)`\s*\|\s*(.+?)\s*\|$")
 RE_FILE = re.compile(r"`([^`]+)`")
 RE_CSS = re.compile(r"\[\[\s*\d+\s*,\s*\d+\s*,\s*\d+\s*\]\]")
 RE_LIN = re.compile(r"\[\s*\d+\s*,\s*\d+\s*,\s*\d+\s*\]")
+# vocabulary that makes a single-bracket triple a CODE parameter (Pass 1407)
+RE_CODEWORD = re.compile(
+    r"(?i)\b(code|CSS|stabili[sz]er|qubit|qutrit|distance|parameters|self-dual|quantum|linear|BCH|quadratic residue|minimum weight)\b")
 RE_INT = re.compile(r"(?<![\d.\-])(\d{3,7})(?![\d.])")
 RE_SEQ = re.compile(r"\b\d+(?:/\d+){2,}\b")
 
@@ -269,8 +272,25 @@ def results_in(text: str) -> set[str]:
     still look at.
     """
     got: set[str] = set()
-    for rx in (RE_CSS, RE_LIN, RE_SEQ):
+    # `[[n,k,d]]` is unambiguous -- nothing else is written with double brackets.
+    for rx in (RE_CSS, RE_SEQ):
         got |= {re.sub(r"\s+", "", m) for m in rx.findall(text)}
+    # `[n,k,d]` IS ambiguous, and measurably so (Pass 1407).  The first
+    # corpus-wide collision run put these at the head of the list:
+    #
+    #   data/w33_packet_vm.json vs w33_python_bytecode_packet_lifter.json,
+    #     37 shared tokens: [102,103,104] [105,106,107] [108,109,110] ...
+    #
+    # Those are not code parameters, they are consecutive array rows in a JSON
+    # data file.  The pattern matches ANY three-integer list, and this corpus is
+    # full of them -- coordinate triples, index blocks, orbit tables.  So a
+    # single-bracket triple only counts when the surrounding text says it is a
+    # code, exactly the contextual rule already used for noun-number tokens.
+    for m in RE_LIN.finditer(text):
+        lo = max(0, m.start() - 60)
+        hi = min(len(text), m.end() + 60)
+        if RE_CODEWORD.search(text[lo:hi]):
+            got.add(re.sub(r"\s+", "", m.group(0)))
     # named objects (Pass 348): results-as-NAMES, invisible to the numeric classes
     got |= {m.lower() for m in RE_NAMED.findall(text)}
     got |= {m for m in RE_ROOT.findall(text)}

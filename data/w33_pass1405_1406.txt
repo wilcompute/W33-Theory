@@ -1,0 +1,23 @@
+Passes 1405-1406: the 2-torsion module, and cover stabilisers
+
+=== Pass 1405: the 30-dimensional 2-torsion as an F2[G]-module ===
+  rank over F2  = 195   (Q rank 225, so the drop is 30)
+  240-dim F2 permutation module irreducible? false
+  composition factor dimensions of F2^240: [ 1, 1, 1, 1, 1, 1, 1, 1, 6, 6, 6, \
+6, 6, 6, 8, 8, 8, 8, 14, 14, 14, 14, 14, 14, 40, 40 ]
+  submodule (image) dim = 195
+  QUOTIENT dim = 45
+  quotient composition factors: [ 1, 1, 1, 6, 8, 14, 14 ]
+  quotient irreducible? false
+
+=== Pass 1406: stabilisers of exact covers ===
+  G transitive on the 540 frames: true  -> no cover is G-invariant (Pass 1398)
+  cover samples read: 6
+    cover of size 60: |Stab| = 4   orbit length 6480   type C4
+    cover of size 60: |Stab| = 4   orbit length 6480   type C4
+    cover of size 60: |Stab| = 4   orbit length 6480   type C4
+    cover of size 60: |Stab| = 4   orbit length 6480   type C4
+    cover of size 60: |Stab| = 8   orbit length 3240   type C4 x C2
+    cover of size 60: |Stab| = 4   orbit length 6480   type C2 x C2
+
+DONE

@@ -322,6 +322,19 @@
     "1401": "formal/W33/Pass1390FrameCrossMatching.lean builds clean, no sorry: equivariant bijections on a transitive set are determined by one point, and they transport stabilisers"
    },
    "runtime_boundary": "Exact GAP character theory, exact integer SNF, capped Algorithm X enumeration, and a locally observed clean lake build. No CI-observed claim."
+  },
+  {
+   "range": "1405-1409",
+   "owner": "glue-track-torsion-rigidity-context",
+   "status": "COMPLETE",
+   "artifacts": {
+    "1405": "the 2-torsion is NOT the free part's analogue: 2 is the only bad prime (rank_F2=195 vs rank_F3=rank_F5=225), and the mod-2 quotient is REDUCIBLE with composition factors [1,1,1,6,8,14,14]; the rational degree-15 irreducible reduces to 1+14 mod 2",
+    "1406": "exact covers are near-rigid: sampled stabilisers have order 4 or 8 (C4, C2xC2, C4xC2) out of |G|=25920, orbit lengths 6480 or 3240",
+    "1407": "fourth collision noise class, in the GRAMMAR not the filters: [n,k,d] matches any 3-integer list and JSON data is full of them; now requires code vocabulary within 60 chars. Also: a shell heredoc turned the regex's \b escapes into literal backspace bytes, silently disabling the rule",
+    "1408": "analysis/BT1408_frame_cross_matching_theorem_insert.tex -- manuscript-ready statement of the cross-matching arc; a promotion CANDIDATE, not a promotion",
+    "1409": "the 6,579 cover count is a time-capped LOWER BOUND, restated as such; structurally at least one full G-orbit of 6480 exists"
+   },
+   "runtime_boundary": "Exact GAP MeatAxe, exact modular ranks, and stabiliser computations on six sampled covers. The cover total is explicitly NOT computed. No CI-observed claim."
   }
  ],
  "rule": "A pass number is canonical only when registered here. Retracted or scope-corrected blocks remain registered for provenance but cannot contribute active theorem claims outside their stated scope."
