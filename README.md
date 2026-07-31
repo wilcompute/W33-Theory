@@ -154,6 +154,7 @@ flowchart TD
 | Saturated frame mod 5 | Nonsplit `0→I₅₈→S₅→K(W33)₍₅₎⊗sgn→0`; `Ext¹(23,58)=Ext¹(58,23)=1` over both groups, so this is the unique nonzero extension type up to endpoint rescaling | `CERTIFIED` | [Pass 1147](PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md) · [Pass 1335](PASS1335_BRAUER_TREE_HECKE_CORNER.md) |
 | Three-carrier Hecke/triality | Commutants `234 → 78 → 52`; six-channel SNF `1,1,1,12,12,24`; Hecke bad primes `{2,3,5}`; invariant cycles do not select a copy | `CERTIFIED` | [Passes 1325–1329](PASS1325_1329_TRIALITY_INTEGRAL_GAUGE_RELEASE.md) |
 | Modular `H₂₆` | Radical powers at `p=2,3,5` are `21,17,13,7,2,0`; `22,16,10,4,0`; `6,2,0`; the exceptional `p=5` scalar Ext quiver is doubled `A₃`, a condensation shadow of the same cyclic-defect block | `CERTIFIED` | [Passes 1330–1334](PASS1330_1334_MODULAR_TRIALITY_ATLAS_RELEASE.md) · [Pass 1335](PASS1335_BRAUER_TREE_HECKE_CORNER.md) |
+| Rational degree-20 model | Exact `20×20` rational standard generators satisfy `C²=D⁹=(CD)¹⁰=I`; GAP affords faithful images of order `51,840` and uniquely matches CTblLib row 11. The reported literal-480 derivation remains provenance, not rebuilt here. | `CERTIFIED` | [Pass 1341 analysis](analysis/BT1340_BT1344_cartan_atlas_selector_padic.md) |
 | Binary quadratic-residue code | Corrected code `[[137,1,21]]`; exact affine/real-Clifford towers and explicit parity boundaries | `CERTIFIED` | [Passes 358–367](PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md) |
 | Section trace tower | For every `m≥2`, `min_c v_λ(tr(D_c^m)) = 2(m+[m odd])` at `q=3` | `CERTIFIED` | [Pass 541](PASS541_Q3_ALL_M_RECURRENCE_THEOREM.md) |
 | `H₂₆` Cartan/PIM and p-adic refinement | `C₂=diag(1,22)`, `C₃`, `C₅=I₆⊕[[2,1,1],[1,1,0],[1,0,2]]`; PIM dimensions `(2,22)`, `(9,6,10,1)`, `(3,2,1,1,1,1,4,2,3)`; primitive systems verified through `p⁶`; Smith and Loewy filtrations differ | `CERTIFIED` | [Passes 1340–1344](PASS1340_1344_CARTAN_ATLAS_SELECTOR_PADIC_RELEASE.md) |
@@ -178,6 +179,13 @@ Pass 1335 identifies the cyclic-defect Brauer tree and proves both directed
 cross-`Ext¹` spaces have dimension one, so this nonsplit module exhausts the
 previously open extension class. The Hecke radical records a condensed
 doubled-`A₃` shadow; it is not the module itself.
+The next algebra layer is explicit as well: Pass 1340 computes the Cartan and
+projective-indecomposable data at `2,3,5`, while Pass 1343 lifts complete
+primitive systems through `p^6` and proves that the Smith and Loewy filtrations
+are genuinely different. Separately, GAP proves that the `120`-element
+length-4 cycle orbit is globally minimal, so selecting one of the three
+species-20 copies costs a minimum orbit `360`; this quantifies a gauge choice
+without pretending the choice is canonical.
 This is an exact theorem about named `W(E6)` modules and integral lattices. It
 does not identify generations, Yukawa couplings, particles, or optical modes.
 
