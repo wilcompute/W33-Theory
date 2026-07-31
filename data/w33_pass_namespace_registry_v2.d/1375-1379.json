@@ -5,15 +5,15 @@
     {
       "range": "1375-1379",
       "owner": "selector-mackey-character-fusion-track",
-      "status": "COMPLETE_PENDING_FROZEN_CERTIFICATE",
+      "status": "COMPLETE_WITH_REMOTE_EXACT_VERIFICATION",
       "artifacts": {
         "1375": "exact little-group construction of all 27 irreducible characters of C3^3 : (D8 x C2) from six dual orbits",
         "1376": "exact decomposition of the 120-selector permutation character into fourteen nonzero rational constituents",
         "1377": "literal equality of Mackey character projectors with all fourteen orbital central projectors and derivation of the 83-dimensional Wedderburn algebra",
         "1378": "exact 14-to-10 Terwilliger-center fusion with scalar packet sizes 2,2,3 and four-dimensional Schur defect",
-        "1379": "reviewer-safe manuscript insert, dual-paper integrator, tests, CI, and explicit mathematical/physical boundaries"
+        "1379": "reviewer-safe manuscript insert, dual-paper integrator, focused regressions, CI, and explicit mathematical/physical boundaries"
       },
-      "runtime_boundary": "The first remote exact run observed the entire character/projector chain and failed only on an overstrong splitter-scalar assertion. The corrected run and frozen certificate must complete before merge. No database-character-table, literature-priority, or physical-realization claim is made."
+      "runtime_boundary": "Corrected remote exact workflow run 30636866425 completed successfully, reconstructing the full character/projector chain with detailed SHA-256 dbcf6881622b3e1cdd694d1e345eadce309eae0550e23e348ba446ca603bee74. The compact invariant certificate is frozen at SHA-256 f3c9a0dab62ad8afc6c2c05bb909b789b0278eff1a6654c2d2f36ae80dcbae6b. No database-character-table, literature-priority, or physical-realization claim is made."
     }
   ]
 }
