@@ -1,1 +1,9 @@
-{"status":"PR_READY","exact_release_commit":"0547db3f33e47ce76f7f10eab22dbcee724b0f9d","mathematical_release_changed":false}
+{
+  "status": "MERGED",
+  "exact_release_commit": "0547db3f33e47ce76f7f10eab22dbcee724b0f9d",
+  "manuscript_hook_merge_commit": "e1a583a107526478e1516d2acbd1d7d4aa034cbc",
+  "metadata_finalization_commit": "41aa5a97027da2be3a6a76ae1a11bc598078fa32",
+  "pull_request": 187,
+  "mathematical_release_changed": false,
+  "remote_exact_worker_status": "PENDING_UNOBSERVED"
+}
