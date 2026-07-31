@@ -1,0 +1,61 @@
+name: Passes 1355-1359 Selector Scheme
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - '.github/workflows/pass1355_1359_selector_scheme.yml'
+      - 'analysis/BT1355_BT1359_selector_matching_scheme.*'
+      - 'analysis/w33_pass1355_1359_selector_matching_scheme.py'
+      - 'data/w33_pass1355_1359_selector_matching_scheme.json'
+      - 'tests/test_w33_pass1355_1359_selector_matching_scheme.py'
+      - 'tools/integrate_pass1355_1359.py'
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/pass1355_1359_selector_scheme.yml'
+      - 'analysis/BT1355_BT1359_selector_matching_scheme.*'
+      - 'analysis/w33_pass1355_1359_selector_matching_scheme.py'
+      - 'data/w33_pass1355_1359_selector_matching_scheme.json'
+      - 'tests/test_w33_pass1355_1359_selector_matching_scheme.py'
+      - 'tools/integrate_pass1355_1359.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-selector-scheme:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check numpy sympy pytest
+      - name: Recompute frozen certificate
+        run: python analysis/w33_pass1355_1359_selector_matching_scheme.py --check
+      - name: Run focused tests
+        run: pytest -q tests/test_w33_pass1355_1359_selector_matching_scheme.py
+      - name: Verify theorem insert compiles
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-base texlive-latex-recommended
+          cat > /tmp/pass1355.tex <<'TEX'
+          \documentclass{article}
+          \usepackage{amsmath,amssymb,amsthm}
+          \newtheorem{theorem}{Theorem}[section]
+          \newtheorem{corollary}[theorem]{Corollary}
+          \begin{document}
+          \input{analysis/BT1355_BT1359_selector_matching_scheme}
+          \end{document}
+          TEX
+          pdflatex -halt-on-error -interaction=nonstopmode -output-directory=/tmp /tmp/pass1355.tex
+      - name: Verify idempotent integration on disposable manuscripts
+        run: |
+          mkdir -p /tmp/pass1355-fixture
+          cp w33_paper.tex photonic_holonet.tex /tmp/pass1355-fixture/
+          python tools/integrate_pass1355_1359.py --root /tmp/pass1355-fixture
+          python tools/integrate_pass1355_1359.py --root /tmp/pass1355-fixture
+          python tools/integrate_pass1355_1359.py --root /tmp/pass1355-fixture --check

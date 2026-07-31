@@ -10,6 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "w33_pass1197_parallel_collision_guard.json"
 REGISTRY = ROOT / "data" / "w33_pass_namespace_registry_v2.json"
+REGISTRY_SUPPLEMENTS = ROOT / "data" / "w33_pass_namespace_registry_v2.d"
 CURRENT_RANGE = range(1193, 1198)
 MINIMUM_BASELINE_REGISTERED = 74
 FORBIDDEN_TRANSPORT = [
@@ -34,11 +35,26 @@ def load_result_for_pass(number: int) -> tuple[Path, dict]:
     return candidates[0], json.loads(candidates[0].read_text(encoding="utf-8"))
 
 
-def main() -> dict:
+def load_registry_blocks() -> tuple[dict, list[dict], list[str]]:
     registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
+    blocks = list(registry["canonical_blocks"])
+    supplements = []
+    if REGISTRY_SUPPLEMENTS.exists():
+        for path in sorted(REGISTRY_SUPPLEMENTS.glob("*.json")):
+            supplement = json.loads(path.read_text(encoding="utf-8"))
+            assert supplement.get("schema") == "w33.pass_namespace_registry.v2.supplement", path
+            assert supplement.get("status") == "ACTIVE", path
+            assert supplement.get("canonical_blocks"), path
+            blocks.extend(supplement["canonical_blocks"])
+            supplements.append(str(path.relative_to(ROOT)))
+    return registry, blocks, supplements
+
+
+def main() -> dict:
+    registry, registry_blocks, supplements = load_registry_blocks()
     seen: dict[int, dict] = {}
     collisions = []
-    for block in registry["canonical_blocks"]:
+    for block in registry_blocks:
         for number in parse_range(block["range"]):
             if number in seen:
                 collisions.append({"pass": number, "owners": [seen[number]["owner"], block["owner"]]})
@@ -46,7 +62,7 @@ def main() -> dict:
     assert not collisions, collisions
 
     current_block = next(
-        block for block in registry["canonical_blocks"]
+        block for block in registry_blocks
         if parse_range(block["range"]) == set(CURRENT_RANGE)
     )
     assert current_block["status"] == "COMPLETE"
@@ -91,15 +107,17 @@ def main() -> dict:
         "current_block_complete": current_block["status"] == "COMPLETE",
         "current_artifacts_complete": set(map(int, current_block["artifacts"])) == set(CURRENT_RANGE),
         "registry_monotonic_from_original_baseline": len(seen) >= MINIMUM_BASELINE_REGISTERED,
+        "registry_supplements_typed": all(path.endswith(".json") for path in supplements),
     }
     assert all(gate_checks.values()), gate_checks
 
     result = {
-        "schema": "w33.pass1197.parallel_collision_guard.v2",
+        "schema": "w33.pass1197.parallel_collision_guard.v3",
         "status": "PASS",
-        "headline": "Pass-number ownership, exact certificates, legacy synthesis, and transport cleanup are enforced as mandatory parallel-development gates.",
+        "headline": "Pass-number ownership, exact certificates, legacy synthesis, transport cleanup, and typed registry supplements are enforced as mandatory parallel-development gates.",
         "registry": {
             "schema": registry["schema"],
+            "supplements": supplements,
             "registered_pass_count": len(seen),
             "minimum_registered": min(seen),
             "maximum_registered": max(seen),
@@ -117,7 +135,7 @@ def main() -> dict:
             "passes_1193_1197_all_pass": len(certificates) == 5,
             "mandatory_gates_installed": all(gate_checks.values()),
         },
-        "policy": "Parallel agents must reserve a disjoint range before publication; the range, artifacts, exact certificates, synthesis guard, and cleanup gate must all agree before merge. The registry count is monotonic rather than frozen at its original 74-pass baseline.",
+        "policy": "Parallel agents must reserve a disjoint range before publication. Canonical blocks may live in the base v2 registry or typed v2 supplements; all blocks are merged before overlap and unregistered-artifact checks. The registry count is monotonic rather than frozen at its original 74-pass baseline.",
     }
     assert all(result["checks"].values())
     OUT.parent.mkdir(parents=True, exist_ok=True)

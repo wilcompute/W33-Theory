@@ -223,6 +223,45 @@
    "runtime_boundary": "Exact Python and GAP witnesses pass locally, including the global selector certificate and AtlasRep character-level comparison. Full historical-manuscript PDF builds remain an observable CI surface because no local TeX engine is installed."
   },
   {
+   "range": "1345-1349",
+   "owner": "modular-basic-mixed-selector-runtime-fusion-track",
+   "status": "COMPLETE_WITH_RUNTIME_BOUNDARIES",
+   "artifacts": {
+    "1345": "modular basic algebras, Ext quivers, and associated-graded relations at p=2,3,5",
+    "1346": "literal 26x4x18 mixed Hecke/triality constants and 18-dimensional coherent closure",
+    "1347": "literal 480-carrier cycle observables and one-hot primitive-copy signatures",
+    "1348": "fail-closed runtime ledger and temporary-overlay historical manuscript compiler",
+    "1349": "modular triality fusion distinguishing p=2 non-descent from p=3 radical collapse"
+   },
+   "runtime_boundary": "Frozen exact certificate audit and 10/10 focused tests pass locally. AtlasRep/Repsn and complete current-repository manuscript builds remain observable CI surfaces until completed."
+  },
+  {
+   "range": "1350-1354",
+   "owner": "ambient-brauer-basic-atlas-geometry-pdf-track",
+   "status": "COMPLETE_WITH_RUNTIME_BOUNDARIES",
+   "artifacts": {
+    "1350": "genuine CTblLib characteristic-five Brauer trees for U4(2).2 and literal 58|23 adjacency at the ordinary degree-81 vertex",
+    "1351": "actual basic-algebra reconstruction, exact projective radical/socle layers, and bounded deterministic minimal projective-resolution prefixes",
+    "1352": "genuine Repsn matrix dump and fraction-free exact rational conjugacy solver against the literal carrier model",
+    "1353": "polar-space derivation 120=40 isotropic lines times 3 perfect matchings, with stabilizers 1296 and 432",
+    "1354": "Part XXII repair, idempotent integration, complete PDF builds, and source/PDF hash gate"
+   },
+   "runtime_boundary": "Pass1350 CTblLib, the prior Pass1341 Atlas character census, and Pass1353 geometry are observed. Pass1351 literal resolution-prefix materialization, Pass1352 exact conjugacy, and Pass1354 complete PDFs remain fail-closed until their independent jobs and final materialization complete."
+  },
+  {
+   "range": "1355-1359",
+   "owner": "selector-matching-association-scheme-track",
+   "status": "COMPLETE_WITH_RUNTIME_BOUNDARIES",
+   "artifacts": {
+    "1355": "exact four-class association scheme on 120 isotropic-line perfect-matching selectors",
+    "1356": "exact P and Q eigenmatrices with primitive multiplicities 1,15,24,20,60",
+    "1357": "40x3 imprimitivity, W33 SRG quotient, complete fusion census, and P/Q-polynomial obstructions",
+    "1358": "full S3 transversal holonomy, trivial fiber kernel, and exact automorphism group 51840",
+    "1359": "reviewer-safe theorem insert, dual-manuscript integrator, regression tests, and literature boundary"
+   },
+   "runtime_boundary": "Independent exact recomputation, byte-frozen JSON check, 4/4 focused tests, integrator idempotence, and minimal theorem compilation pass locally. GitHub Actions remains an observable remote regression surface; no literature-priority or physical-realization claim is made."
+  },
+  {
    "range": "1375-1378",
    "owner": "glue-track-selector-tomotope-guard",
    "status": "COMPLETE",

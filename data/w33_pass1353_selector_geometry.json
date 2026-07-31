@@ -1,0 +1,7 @@
+{
+  "certificate_sha256":"04de6266aac7dd8879d182ee515674c98ad360e572d1904586d8384131c8a035",
+  "checks":{"all_lines_isotropic":true,"cycle_stabilizer_is_D8_preimage":true,"group_transitive_on_cycles":true,"induced_line_action_is_S4":true,"three_cycles_per_line":true},
+  "cycle_induced_stabilizer":"D8","cycle_induced_stabilizer_order":8,"cycle_orbit_size":120,"cycle_stabilizer_order":432,"cyclic_orders_per_line":3,
+  "factorizations":{"120":"40 isotropic lines x 3 perfect matchings","1296":"54 pointwise-line kernel x 24 full S4 action","432":"54 pointwise-line kernel x 8 dihedral stabilizer","51840":"40 x 1296 = 120 x 432"},
+  "group":"W(E6)=U4(2).2","group_order":51840,"isotropic_line_count":40,"line_induced_group":"S4","line_induced_group_order":24,"line_pointwise_kernel_order":54,"line_stabilizer_order":1296,"point_count":40,"points_per_line":4,"polar_space":"W(3,3)","representative_cycle":[0,1,2,3],"representative_line_point_indices":[0,1,2,3],"schema":"w33.pass1353.selector_geometry.v1","selector_count":120,"selector_object":"totally isotropic line plus an unoriented cyclic order; equivalently a perfect matching of opposite points","status":"PASS"
+}

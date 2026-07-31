@@ -1,0 +1,39 @@
+q([mul_q(g,e,a) for a in units])
+      assert len(U)==len(V)==n
+      # force e as first basis vector if not already, for deterministic output
+      def with_first(L):
+        R=[e];
+        for v in L:
+          if len(indep_vectors_q(R+[v]))>len(R):R.append(v)
+          if len(R)==n:break
+        return R
+      U=with_first(U);V=with_first(V)
+      B=sp.Matrix(n,n,lambda i,j: scalar_multiple_of(mul_q(g,V[i],U[j]),e))
+      assert B.det()!=0
+      C=B.inv()
+      W=[]
+      for b in range(n):
+        w=sum((C[b,j]*V[j] for j in range(n)),start=sp.zeros(83,1));W.append(w)
+      zero=sp.zeros(83,1)
+      for b in range(n):
+        for c in range(n):
+          assert mul_q(g,W[b],U[c])==(e if b==c else zero)
+      E=[[mul_q(g,U[a],W[b]) for b in range(n)] for a in range(n)]
+      assert sum((E[a][a] for a in range(n)),start=zero)==z
+      # Matrix-unit law follows exactly from W_b U_c = delta_bc e; sample all products modulo two primes.
+      for prime in (1000003,1000033):
+        Em=[[np.array([rational_mod(x,prime) for x in E[a][b]],dtype=np.int64) for b in range(n)] for a in range(n)]
+        for a in range(n):
+          for b in range(n):
+            for c in range(n):
+              for d in range(n):
+                lhs=mul_mod(g,Em[a][b],Em[c][d],prime)
+                rhs=Em[a][d] if b==c else np.zeros(83,dtype=np.int64)
+                assert np.array_equal(lhs,rhs)
+    payload=[]
+    maxnum=maxden=0
+    for row in E:
+      prow=[]
+      for v in row:
+        pv=[]
+   

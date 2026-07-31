@@ -1,0 +1,61 @@
+name: Passes 1365-1369 Rational Schur Completion
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - '.github/workflows/pass1365_1369_rational_schur_completion.yml'
+      - 'analysis/BT1365_BT1369_rational_schur_completion.md'
+      - 'analysis/BT1365_BT1369_rational_schur_completion.tex'
+      - 'analysis/w33_pass1365_1369_rational_schur_completion.py'
+      - 'analysis/w33_pass1365_1369_rational_schur_completion.src/**'
+      - 'analysis/w33_pass1360_1364_gelfand_terwilliger.py'
+      - 'data/w33_pass1365_1369_rational_schur_completion.json'
+      - 'tests/test_w33_pass1365_1369_rational_schur_completion.py'
+      - 'tools/integrate_pass1365_1369.py'
+      - 'data/w33_pass_namespace_registry_v2.d/1365-1369.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  OPENBLAS_NUM_THREADS: '1'
+  OMP_NUM_THREADS: '1'
+
+jobs:
+  exact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check numpy sympy pytest
+      - run: python analysis/w33_pass1365_1369_rational_schur_completion.py --check
+      - run: pytest -q tests/test_w33_pass1365_1369_rational_schur_completion.py
+      - run: python analysis/w33_pass1197_parallel_collision_guard.py
+
+  manuscript:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-science
+      - run: python tools/integrate_pass1365_1369.py
+      - run: python tools/integrate_pass1365_1369.py
+      - run: python tools/integrate_pass1365_1369.py --check
+      - run: |
+          test "$(grep -c '\\input{analysis/BT1365_BT1369_rational_schur_completion}' w33_paper.tex)" -eq 1
+          test "$(grep -c '\\input{analysis/BT1365_BT1369_rational_schur_completion}' photonic_holonet.tex)" -eq 1
+      - run: |
+          cat > /tmp/pass1365.tex <<'EOF'
+          \documentclass{article}
+          \usepackage{amsmath,amssymb,amsthm}
+          \newtheorem{theorem}{Theorem}
+          \begin{document}
+          \input{analysis/BT1365_BT1369_rational_schur_completion}
+          \end{document}
+          EOF
+          TEXINPUTS=.: pdflatex -interaction=nonstopmode -halt-on-error -output-directory=/tmp /tmp/pass1365.tex

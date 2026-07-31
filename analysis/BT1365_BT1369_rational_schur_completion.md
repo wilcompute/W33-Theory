@@ -1,0 +1,212 @@
+# Passes 1365–1369 — Rational Wedderburn Closure and Geometric Schur Completion
+
+## Scope
+
+Passes 1355–1364 constructed the 120 selectors
+
+\[
+X=\{(L,M):L\text{ a totally isotropic line of }W(3,3),\ M\text{ a perfect matching of }L\},
+\]
+
+proved their four-class association scheme, and computed at a base selector \(x\):
+
+\[
+\dim T(x)=79,\qquad \dim Z(T(x))=10,
+\]
+
+while the full orbital algebra of the order-432 stabilizer \(H=G_x\) has dimension 83. The previous packet localized the defect as \(2+2\) in shell blocks \((2,2)\) and \((4,4)\), but stopped at a two-prime Wedderburn fingerprint.
+
+This packet closes both boundaries in characteristic zero.
+
+## Pass 1365 — Exact rational Wedderburn decomposition
+
+A deterministic rational basis of \(Z(T(x))\) is multiplied using the exact 83-orbital intersection tensor. A sparse central element has ten distinct rational eigenvalues, yielding ten mutually orthogonal rational primitive central idempotents.
+
+The exact decomposition is
+
+\[
+\boxed{
+T(x)\cong
+\mathbb Q^3\oplus M_2(\mathbb Q)^2\oplus M_3(\mathbb Q)^3
+\oplus M_4(\mathbb Q)\oplus M_5(\mathbb Q).
+}
+\]
+
+The standard 120-dimensional module has the following exact block data.
+
+| simple size \(n\) | multiplicity \(m\) | isotypic dimension \(nm\) | shell ranks \((0,1,2,3,4)\) | primitive shell |
+|---:|---:|---:|---|---:|
+|1|3|3|\((0,0,3,0,0)\)|2|
+|1|12|12|\((0,0,12,0,0)\)|2|
+|1|14|14|\((0,0,0,0,14)\)|4|
+|2|1|2|\((0,1,0,0,1)\)|1|
+|2|2|4|\((0,0,0,2,2)\)|3|
+|3|4|12|\((0,0,0,4,8)\)|3|
+|3|4|12|\((0,0,4,4,4)\)|2|
+|3|8|24|\((0,0,8,8,8)\)|2|
+|4|8|32|\((0,0,8,8,16)\)|2|
+|5|1|5|\((1,1,1,1,1)\)|0|
+
+The split claim is not inferred from modular factorization. For every rational central component \(z\), some shell idempotent \(E_s^*\) gives an idempotent \(zE_s^*\) whose rank on the standard module is exactly \(m\). If a central simple component were \(M_r(D)\) with division degree \(d>1\), every nonzero idempotent would have rank divisible by \(md\). Hence \(d=1\), proving that every component is a full matrix algebra over \(\mathbb Q\).
+
+## Pass 1366 — One geometric defect splitter
+
+Let the base selector be \(x=(L_0,M_0)\).
+
+### Intersecting-shell splitter \(S_2\)
+
+For two shell-2 selectors \((L,M)\) and \((L',M')\), set \(S_2=1\) exactly when:
+
+1. \(L\) and \(L'\) are disjoint;
+2. the points \(L\cap L_0\) and \(L'\cap L_0\) form an edge of \(M_0\);
+3. the unique generalized-quadrangle transversal \(L\to L'\) carries \(M\) to \(M'\).
+
+This is one stabilizer orbital, containing 108 ordered pairs.
+
+### Misaligned-shell splitter \(S_4\)
+
+For two shell-4 selectors \((L,M)\) and \((L',M')\) whose carrier lines meet at \(q\), pull the partners of \(q\) in \(M\) and \(M'\) back to \(L_0\) through the unique transversals \(L_0\to L\) and \(L_0\to L'\). Set \(S_4=1\) exactly when the two pulled-back partners coincide.
+
+This is one stabilizer orbital, containing 432 ordered pairs.
+
+Both matrices are symmetric. With
+
+\[
+\boxed{S=S_2+S_4},
+\]
+
+exact closure gives
+
+\[
+\dim\langle T,S_2\rangle=81,
+\qquad
+\dim\langle T,S_4\rangle=81,
+\]
+
+but
+
+\[
+\boxed{
+\dim\langle T,S\rangle=83
+=\dim\operatorname{End}_H(\mathbb QX).
+}
+\]
+
+Thus one explicitly defined \(0\)-\(1\) splitter repairs the entire Schur defect under ordinary multiplication.
+
+## Pass 1367 — Exact rational orbital-algebra decomposition
+
+The full orbital algebra has exact center dimension 14 and rational Wedderburn decomposition
+
+\[
+\boxed{
+\operatorname{End}_H(\mathbb QX)
+\cong
+\mathbb Q^7\oplus M_2(\mathbb Q)^2\oplus M_3(\mathbb Q)^3
+\oplus M_4(\mathbb Q)\oplus M_5(\mathbb Q).
+}
+\]
+
+The seven non-scalar Terwilliger components are unchanged. The complete difference is the splitting of the three scalar Terwilliger sectors:
+
+\[
+\boxed{3=1+2},
+\qquad
+\boxed{12=4+8},
+\qquad
+\boxed{14=2+4+8}.
+\]
+
+The splitter eigenvalues are
+
+\[
+3\longmapsto 3^1\oplus(-3)^2,
+\]
+
+\[
+12\longmapsto (-3)^4\oplus0^8,
+\]
+
+\[
+14\longmapsto (-4)^2\oplus2^4\oplus(-1)^8.
+\]
+
+If \(z_3,z_{12},z_{14}\) are the three scalar central idempotents of \(T\), the seven refined rational central idempotents are
+
+\[
+\frac{z_3(S+3)}6,
+\qquad
+\frac{z_3(3-S)}6,
+\]
+
+\[
+-\frac{z_{12}S}{3},
+\qquad
+z_{12}\left(1+\frac S3\right),
+\]
+
+and
+
+\[
+\frac{z_{14}(S-2)(S+1)}{18},
+\qquad
+\frac{z_{14}(S+4)(S+1)}{18},
+\qquad
+-\frac{z_{14}(S+4)(S-2)}9.
+\]
+
+Therefore the earlier codimension identity has a precise representation-theoretic meaning:
+
+\[
+\boxed{83-79=14-10=4.}
+\]
+
+The Schur defect is exactly a center-refinement defect.
+
+## Pass 1368 — Five-fiber coherent configuration
+
+The 83 stabilizer orbitals form a coherent configuration with five fibers of sizes
+
+\[
+\boxed{1,2,36,27,54}.
+\]
+
+Its shell-block relation-count matrix is
+
+\[
+\begin{pmatrix}
+1&1&1&1&1\\
+1&2&1&1&2\\
+1&1&8&4&5\\
+1&1&4&6&8\\
+1&2&5&8&16
+\end{pmatrix}.
+\]
+
+There are 29 symmetric orbitals and 27 transpose pairs. The exact sparse intersection tensor has 4,277 nonzero entries and is frozen by SHA-256. The ordinary adjacency algebra is generated by the three matrices
+
+\[
+\boxed{A,\ D,\ S}.
+\]
+
+## Pass 1369 — Literature and claim boundary
+
+Hanaki and Yoshikawa explicitly compare Terwilliger algebras with the centralizer algebra of a base-point stabilizer and exhibit that these layers need not coincide (arXiv:2110.07109; *Discrete Mathematics* 346 (2023), 113509). Terwilliger and Žitnik likewise emphasize that natural semisimple subalgebras associated with a base vertex can differ (arXiv:1710.06011).
+
+The nearby Colangelo–Monzillo–Siciliano construction (arXiv:2406.03942; *Discrete Mathematics* 347 (2024), 114054) concerns the 160 incident point-line flags of a generalized quadrangle. It is not the present 120-object bundle of three perfect matchings over each isotropic line.
+
+This packet claims a repository-new exact calculation, not literature priority. It is a finite rational matrix-algebra theorem only. It does not choose a preferred matching, manufacture an \(H_4\)/600-cell adjacency, or validate cosmological, Standard-Model, or hardware claims.
+
+## Reproducibility
+
+```bash
+python analysis/w33_pass1365_1369_rational_schur_completion.py --check
+pytest -q tests/test_w33_pass1365_1369_rational_schur_completion.py
+python tools/integrate_pass1365_1369.py --check
+```
+
+Frozen certificate SHA-256:
+
+```text
+0e6e4d5c7d9cd7981496e179e116f8280cc08dae2d1fc2c34d5f2020e84fe7aa
+```
