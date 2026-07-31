@@ -1,0 +1,31 @@
+name: W33 Passes 1601-1605 Integral Frame Cokernel
+
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1601_1605_integral_frame_cokernel.py'
+      - 'analysis/BT1601_1605_integral_frame_cokernel.md'
+      - 'analysis/BT1605_integral_frame_cokernel_insert.tex'
+      - 'data/w33_pass1601_1605_integral_frame_cokernel.json'
+      - 'tests/test_w33_pass1601_1605_integral_frame_cokernel.py'
+      - '.github/workflows/w33-pass1601-1605-integral-frame-cokernel.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass1601_1605_integral_frame_cokernel.py'
+      - 'analysis/BT1601_1605_integral_frame_cokernel.md'
+      - 'analysis/BT1605_integral_frame_cokernel_insert.tex'
+      - 'data/w33_pass1601_1605_integral_frame_cokernel.json'
+      - 'tests/test_w33_pass1601_1605_integral_frame_cokernel.py'
+      - '.github/workflows/w33-pass1601-1605-integral-frame-cokernel.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --upgrade pip numpy pytest
+      - run: python analysis/w33_pass1601_1605_integral_frame_cokernel.py --output /tmp/w33_pass1601_1605_integral_frame_cokernel.json
+      - run: pytest -q tests/test_w33_pass1601_1605_integral_frame_cokernel.py
