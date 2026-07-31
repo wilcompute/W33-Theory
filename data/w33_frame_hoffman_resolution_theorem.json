@@ -1,0 +1,92 @@
+{
+  "boundary": {
+    "chromatic_number": "not determined; chi(H)=9 is equivalent to the still-open global resolution",
+    "new_result": "the open resolution is now an equality-case Hoffman-coloring/simplex problem, not an unconstrained cover search"
+  },
+  "checks": {
+    "annihilator_exact": true,
+    "distinct_frames_share_at_most_one_edge": true,
+    "edge_columns_9": true,
+    "frame_graph_32_regular": true,
+    "frame_graph_identity": true,
+    "frame_rows_4": true,
+    "frames_540": true,
+    "hoffman_chromatic_lower_bound_9": true,
+    "hoffman_independence_upper_bound_60": true,
+    "incidence_rank_225": true,
+    "isotropic_lines_40": true,
+    "minus4_eigenspace_315": true,
+    "point_degree_12": true,
+    "points_40": true,
+    "resolution_quotient_spectrum": true,
+    "simplex_inner_product_scaled": true,
+    "simplex_norm_squared": true,
+    "spectrum_multiplicities_exact": true,
+    "w33_edges_240": true
+  },
+  "construction": {
+    "frames": 540,
+    "frames_per_w33_edge": 9,
+    "isotropic_lines": 40,
+    "matching_edges_per_frame": 4,
+    "points": 40,
+    "w33_edges": 240
+  },
+  "frame_graph": {
+    "annihilator_coefficients_descending": [
+      1,
+      -56,
+      908,
+      -4320,
+      -7616,
+      83456,
+      -114688
+    ],
+    "degree": 32,
+    "edges": 8640,
+    "spectrum": {
+      "-4": 315,
+      "14": 44,
+      "2": 84,
+      "32": 1,
+      "4": 81,
+      "8": 15
+    },
+    "trace_moments_0_through_5": [
+      540,
+      0,
+      17280,
+      146880,
+      2903040,
+      57473280
+    ],
+    "vertices": 540
+  },
+  "hoffman": {
+    "chromatic_lower_bound": 9,
+    "exact_covers_are_maximum_independent_sets": true,
+    "forced_quotient_matrix": "4(J_9-I_9)",
+    "independence_upper_bound": 60,
+    "outside_neighbors_into_each_cover": 4,
+    "resolution_equivalence": "nine-cover resolution iff H has a Hoffman 9-coloring"
+  },
+  "incidence": {
+    "identity": "H + 4 I_540 = M M^T",
+    "kernel_dimension": 315,
+    "minus_four_space": "E_{-4}(H) = ker(M^T)",
+    "rank_Q": 225,
+    "shape": [
+      540,
+      240
+    ]
+  },
+  "simplex": {
+    "ambient_space": "ker(M^T) = E_{-4}(H)",
+    "centered_cover_vector": "y_i = x_i - (1/9)1",
+    "dimension": 8,
+    "norm_squared": "160/3",
+    "normalized_pair_inner_product": "-1/8",
+    "pair_inner_product": "-20/3"
+  },
+  "theorem": "W33 frame-graph Hoffman resolution theorem"
+}
