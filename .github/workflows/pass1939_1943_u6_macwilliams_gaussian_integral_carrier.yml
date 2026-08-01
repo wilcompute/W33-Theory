@@ -78,3 +78,4 @@ jobs:
           assert a['full_transform']['words']==2**195
           print('heavy exact rebuild: PASS')
           PY
+# Final merged-state trigger: namespaces and both manuscript wrappers include Pass 1943.
