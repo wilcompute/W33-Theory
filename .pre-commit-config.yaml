@@ -61,3 +61,11 @@ for f in sys.argv[1:]:
         pass_filenames: true
         files: '\.(tex|md|py)$'
         stages: [pre-commit]
+  - repo: local
+    hooks:
+      - id: topical-aliases
+        name: topical alias index is current
+        entry: py -3 scripts/build_topical_aliases.py --check
+        language: system
+        pass_filenames: false
+        files: ^(analysis|docs|manuscripts)/.*\.(md|tex|html)$

@@ -46,8 +46,22 @@ RE_CODE = re.compile(r"\[\[?\s*\d+\s*,\s*\d+\s*,\s*[0-9<=q+]+\s*\]?\]")
 # congruence conditions, the exact shape of the Pass 1907 rediscovery
 RE_CONG = re.compile(r"q\s*(?:≡|=|==)\s*\d\s*\(?\s*mod\s*\d\)?", re.I)
 
+# Eponymous OBJECT names.  Added after dogfooding found the index scored
+# "Eisenstein: 0" -- the Pass 350 prior art that motivated this file would not
+# have been caught, because `named:` only fires before theorem/indicator/bound.
+# A curated list, not a regex over capitalised words: Passes 1107/1483 measured
+# that widening a token vocabulary without calibration is how these guards turn
+# to noise.  The <=12-file cut in render() is the calibration.
+EPONYMS = (r"Eisenstein|Weil|Steinberg|Hodge|Leech|Klein|Petersen|Hoffman|"
+           r"Tutte|Coxeter|Desarguesian|Hermitian|Bockstein|Mackey|Brauer|"
+           r"Frobenius|Schur|Hashimoto|Ihara|Macwilliams|MacWilliams|Smith|"
+           r"Gauss|Galois|Noether|Dynkin|Levi|Borel|Cartan|Hamming|Golay|"
+           r"Moonshine|McKay|Thompson|Norton|Monster|Conway|Mathieu|Suzuki|"
+           r"Landauer|Clifford|Majorana|Yukawa|Kasteleyn|Perron|Ramanujan")
+RE_EPON = re.compile(r"\b(" + EPONYMS + r")\b")
+
 CLASSES = [("cite", RE_CITE), ("named", RE_NAMED), ("group", RE_GROUP),
-           ("code", RE_CODE), ("congruence", RE_CONG)]
+           ("code", RE_CODE), ("congruence", RE_CONG), ("object", RE_EPON)]
 
 STOP = {"The", "This", "That", "Pass", "Note", "See", "From", "For", "And",
         "But", "Table", "Figure", "Section", "Both", "Each", "Every", "One",
@@ -122,6 +136,19 @@ def render(idx, nfiles):
     ]
     for t in sorted(idx):
         fs = sorted(idx[t])
+        if t.startswith("object:"):
+            # Eponyms are common by nature, so the <=12 rule filtered every one
+            # of them -- which would have re-hidden the Pass 350 Eisenstein prior
+            # art this index exists to surface.  For these, keep the token but
+            # list ONLY the topically opaque files, since those are exactly the
+            # ones no topic search can reach.  Bounded, and targeted at the
+            # failure mode rather than at coverage.
+            fs = [f for f in fs if opaque.search(f)]
+            if not fs or len(fs) > 40:
+                continue
+            lines.append(f"- `{t}` ⚠ (opaque-named only) — "
+                         + ", ".join(f"[{os.path.basename(f)}]({f})" for f in fs))
+            continue
         if len(fs) > 12:
             continue                      # ubiquitous: no discriminating power
         flag = " ⚠" if all(opaque.search(f) for f in fs) else ""
