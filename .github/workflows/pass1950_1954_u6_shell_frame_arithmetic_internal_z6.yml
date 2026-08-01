@@ -44,3 +44,4 @@ jobs:
       - name: Optional colour-free probe
         if: github.event_name == 'workflow_dispatch' && inputs.run_colourfree_probe
         run: python analysis/w33_pass1952_colourfree_milp.py --seconds 120
+# Final merged-state trigger: stable round-trip hashes, finalized namespaces, and both manuscript wrappers include Pass 1954.
