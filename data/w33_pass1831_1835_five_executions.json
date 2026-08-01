@@ -1,0 +1,21 @@
+{
+  "boundary": "The general nine-cover resolution remains open. The pair layer is complete, but higher packing orbits are not; the no-lift certificate applies to one 2,880-element signature-resolution orbit.",
+  "checks": {
+    "anchor_S3_derivation": true,
+    "complete_327x327_pair_layer": true,
+    "outer_327_orbit_fusion": true,
+    "signature_orbit_no_lift": true,
+    "signature_resolution_exists": true
+  },
+  "headline": "The nonlinear signature polytope is nonempty at nine layers, but its first exact PSp orbit does not lift. The complete 327-by-327 disjoint-pair layer, anchor-S3 derivation, and canonical outer fusion are exact.",
+  "passes": {
+    "1831": {"schema": "w33.pass1831.signature_resolution_polytope.v1","status": "PASS","witness_orbit_size": 2880},
+    "1832": {"ordered_compatible_cells": 106761,"ordered_pair_total": 46552553280,"schema": "w33.pass1832.complete_cover_orbit_pair_classification.v1","status": "PASS"},
+    "1833": {"schema": "w33.pass1833.anchor_s3_representation_derivation.v1","signature_orbits": [270,135,270,45],"status": "PASS"},
+    "1834": {"fixed_cover_orbits": 5,"schema": "w33.pass1834.outer_signature_cover_fusion.v1","status": "PASS","transposed_cover_orbit_pairs": 161},
+    "1835": {"nodes": 4421,"schema": "w33.pass1835.proof_producing_signature_lift.v1","signature_orbit_size": 2880,"status": "PASS"}
+  },
+  "schema": "w33.pass1831_1835.five_executions.v1",
+  "sha256": "021828cf2a9c2f03eea4de8ced0513c8fea63744242a2ec656ab5f71224a53fa",
+  "status": "PASS"
+}
