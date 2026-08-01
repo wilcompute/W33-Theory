@@ -1,5 +1,14 @@
 # Passes 1612–1616 — the frame kernel is the Hoffman eigenspace, and the substrate picks a hand
 
+> **Number-label warning.** These five numbers are used by two packets. This one
+> is the glue track (`analysis/w33_pass1612_*`, `w33_pass1615_1616_*`,
+> `w33_pass1616_*`); the parallel track's `analysis/BT1611_1615_*` and
+> `w33_pass1611_1615_torsion_xor_lattice_octet.*` cover torsion/XOR/lattice/
+> coherent-configuration and share no result with this file. The filenames, not
+> the numbers, are the identifiers — cite those. This block was computed as
+> 1606–1610, renumbered once, and collided again; `scripts/next_pass_number.py`
+> exists because of it.
+
 Five items. Two of them close a loop with the parallel track's octet work; two
 answer a question about chirality that this repo has asked in three different
 forms; one is a geometric restatement of the resolution problem.
