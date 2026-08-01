@@ -68,4 +68,4 @@ jobs:
           b=json.load(open('data/w33_pass1909_complete_s6_subgroup_phase_poset.json')); assert b['subgroup_class_count']==56
           print('heavy exact rebuild: PASS')
           PY
-# Final merged-state trigger: namespaces and both manuscript wrappers include Pass 1911.
+# Final merged-state trigger: namespaces, manuscripts, and Pass-353/355 provenance are current.
