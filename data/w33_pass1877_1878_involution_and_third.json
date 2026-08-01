@@ -1,0 +1,97 @@
+{
+  "pass1877": {
+    "2": {
+      "q": 2,
+      "points": 15,
+      "spread_lines": 5,
+      "line_size": 3,
+      "candidates": 0,
+      "touched": 0,
+      "touched_per_spread_line": [
+        0
+      ],
+      "predicted_(q+1)/2": 1.5,
+      "perfect_matching_within_each_line": false,
+      "q_odd_so_line_size_even": false
+    },
+    "3": {
+      "q": 3,
+      "points": 40,
+      "spread_lines": 10,
+      "line_size": 4,
+      "candidates": 15,
+      "touched": 20,
+      "touched_per_spread_line": [
+        2
+      ],
+      "predicted_(q+1)/2": 2.0,
+      "perfect_matching_within_each_line": true,
+      "q_odd_so_line_size_even": true
+    },
+    "5": {
+      "q": 5,
+      "points": 156,
+      "spread_lines": 26,
+      "line_size": 6,
+      "candidates": 65,
+      "touched": 78,
+      "touched_per_spread_line": [
+        3
+      ],
+      "predicted_(q+1)/2": 3.0,
+      "perfect_matching_within_each_line": true,
+      "q_odd_so_line_size_even": true
+    },
+    "7": {
+      "q": 7,
+      "points": 400,
+      "spread_lines": 50,
+      "line_size": 8,
+      "candidates": 175,
+      "touched": 200,
+      "touched_per_spread_line": [
+        4
+      ],
+      "predicted_(q+1)/2": 4.0,
+      "perfect_matching_within_each_line": true,
+      "q_odd_so_line_size_even": true
+    }
+  },
+  "pass1878": {
+    "pairs_tested": 6,
+    "third_found": 2,
+    "exhaustive": 2,
+    "detail": [
+      {
+        "third_found": true,
+        "nodes": 585731,
+        "timed_out": false
+      },
+      {
+        "third_found": false,
+        "nodes": 852256,
+        "timed_out": true
+      },
+      {
+        "third_found": false,
+        "nodes": 875251,
+        "timed_out": true
+      },
+      {
+        "third_found": true,
+        "nodes": 60436,
+        "timed_out": false
+      },
+      {
+        "third_found": false,
+        "nodes": 878691,
+        "timed_out": true
+      },
+      {
+        "third_found": false,
+        "nodes": 869451,
+        "timed_out": true
+      }
+    ]
+  }
+}
