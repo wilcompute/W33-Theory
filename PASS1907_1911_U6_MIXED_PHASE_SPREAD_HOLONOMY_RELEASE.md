@@ -8,7 +8,7 @@ Frozen verification: **48/48** assertions.
 
 Aggregate SHA-256:
 
-`9a96ed1b6de1987d085d2387a88cd0870b9bb77d684f2b64751706bc97f8408e`
+`7d2ddba245bf2cf9912b33f3cb1e67751c50b5dda06c9fa88af255dc130f1111`
 
 ## Delivered
 
@@ -18,7 +18,9 @@ Aggregate SHA-256:
 - **1910:** proved unsigned `KG(6,2)` minimal-line incidence is phase-blind and derived exact conjugation-odd linear cuts on the `C4`-oriented 60-vector lift. The false `K10 <= 5` bound is excluded.
 - **1911:** reconstructed stabilizer-weighted primitive holonomy and separated the shared `36`-dimensional `V9` channel from the `54`-dimensional Hashimoto complement.
 
-## Parallel integration
+## Provenance and parallel integration
+
+Passes 353/355 already own the general Weil-chirality and Frobenius–Schur frame through Gow (1985) and Vinroot (2010). Pass 1909 newly contributes the complete 56-class exceptional-S6 phase poset and the A6 `so(3)` reconciliation.
 
 At q=3 the outer `W(E6)/PSp(4,3)` involution is complex conjugation on complex-type irreducibles; q=5 refutes a general-q extrapolation. The phase also requires the signed oriented-edge module. `sigma_S` is an outer symplectic similitude, not a symplectic element. The spread value `5` is only the exact average `45/9`; `13` is attained and the `>=14` decision remains `UNKNOWN`.
 
