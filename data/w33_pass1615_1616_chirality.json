@@ -1,0 +1,14 @@
+{
+  "group_order": 51840,
+  "derived_order": 25920,
+  "aut_order": 51840,
+  "is_complete": true,
+  "dim_signed_edge_module": 240,
+  "constituents": [{"irr": 6, "degree": 15, "eps_stable": false}, {"irr": 14, "degree": 24, "eps_stable": false}, {"irr": 15, "degree": 30, "eps_stable": false}, {"irr": 24, "degree": 81, "eps_stable": false}, {"irr": 25, "degree": 90, "eps_stable": true}],
+  "V_is_chiral": true,
+  "separating_classes": [{"class": 12, "element_order": 2, "size": 36, "chi": -20, "inner": false}, {"class": 13, "element_order": 6, "size": 1440, "chi": -2, "inner": false}, {"class": 15, "element_order": 6, "size": 1440, "chi": -2, "inner": false}, {"class": 16, "element_order": 2, "size": 540, "chi": 12, "inner": false}],
+  "cancelling_classes": [ 4, 6, 17, 21, 23, 25 ],
+  "n_separating": 4, "n_cancelling": 6,
+  "psp_degree30_irrs": [ 11, 12, 13 ],
+  "degree30_and_60_restrictions": [{"irr": 15, "degree": 30, "psp30_constituents": [ 11 ], "eps_stable": false}, {"irr": 16, "degree": 30, "psp30_constituents": [ 11 ], "eps_stable": false}, {"irr": 17, "degree": 60, "psp30_constituents": [  ], "eps_stable": false}, {"irr": 18, "degree": 60, "psp30_constituents": [  ], "eps_stable": false}, {"irr": 19, "degree": 60, "psp30_constituents": [ 12, 13 ], "eps_stable": true}]
+}

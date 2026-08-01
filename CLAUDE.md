@@ -222,6 +222,23 @@ force-of-habit rebase race, and (measured once) a silently wrong ledger row.
 Work may follow in the same session or later; an unused reservation is released
 by a follow-up empty commit "Pass NNN released".
 
+**Do not hand-roll the scan — run `py -3 scripts/next_pass_number.py`.** Two
+mechanical failures, both measured 2026-07-31, both invisible to a careful
+reader:
+
+1. **The range form is unscannable.** A reservation written
+   `"Passes 1606-1610 reserved: ..."` does NOT match `Pass ([0-9]+)`, because
+   "Passes" has no space after "Pass". On 2026-07-31 a reservation pushed at
+   19:44 was already an ancestor of the other track's 20:00 commit and *still*
+   lost the numbers. Use the singular form, **one empty commit per number**, so
+   every scan sees every number. `--claim N` emits exactly that.
+2. **`Pass` and `BT` are SEPARATE counters and have diverged** (Pass 1616,
+   BT 1907 on that date). They coincide sometimes — Pass 1536 produced
+   `BT1536_frame_dual_k44_code.md` — so conflating them reads ~300 too high,
+   while ignoring BT lets a new `BT1613_*` land on the existing
+   `BT1613_BT1620_decoder_fault_sm_bridge.md`. The script reports both and warns
+   before you name a Pass-N artefact `BTN`.
+
 ## Batch intake (remote/GitHub batches — run the guard BEFORE accepting claims)
 
 A third contribution stream now submits batched claims. The July 15 batch

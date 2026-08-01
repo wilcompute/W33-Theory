@@ -1,0 +1,52 @@
+{
+  "pass1612": {
+    "max_shared_edges": 1,
+    "MMT_is_4I_plus_AH": true,
+    "spec_H": {
+      "32": 1,
+      "14": 44,
+      "8": 15,
+      "4": 81,
+      "2": 84,
+      "-4": 315
+    },
+    "rank_Q_M": 225,
+    "rank_F2_M": 195,
+    "rank_F3_M": 225,
+    "dim_E_minus4": 315,
+    "colM_equals_Eperp": true,
+    "mod2_deficiency": 30
+  },
+  "pass1613": {
+    "n_octets": 45,
+    "octet_weights": [
+      16
+    ],
+    "edge_multiplicity": [
+      3
+    ],
+    "frame_octet_intersections": [
+      0,
+      2
+    ],
+    "frames_meeting_octet_twice": [
+      72
+    ],
+    "max_proj_octet_nbhd_on_Eminus4": 4.6871557410824404e-15,
+    "max_proj_M_columns_on_Eminus4": 1.824929096727601e-15,
+    "free_constraint_space_dim": 225
+  },
+  "pass1614": {
+    "centred_norm_sq": [
+      160,
+      3
+    ],
+    "pairwise_inner_product": [
+      -20,
+      3
+    ],
+    "is_regular_simplex": true,
+    "ambient_dim": 315,
+    "simplex_dim": 8
+  }
+}
