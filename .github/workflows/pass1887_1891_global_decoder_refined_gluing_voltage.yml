@@ -1,0 +1,59 @@
+name: Passes 1887-1891 exact continuations
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1887_1891**'
+      - 'analysis/w33_pass1888**'
+      - 'analysis/w33_pass1889_1891**'
+      - 'analysis/cpp/w33_pass1887**'
+      - 'analysis/cpp/w33_pass1888**'
+      - 'analysis/BT1887_1891**'
+      - 'analysis/BT1891**'
+      - 'data/w33_pass1887**'
+      - 'data/w33_pass1888**'
+      - 'data/w33_pass1889**'
+      - 'data/w33_pass1890**'
+      - 'data/w33_pass1891**'
+      - 'tests/test_w33_pass1887_1891_five_frontiers.py'
+      - '.github/workflows/pass1887_1891_global_decoder_refined_gluing_voltage.yml'
+  workflow_dispatch:
+    inputs:
+      run_heavy:
+        description: 'Rebuild exact global U5 and the 2^30 fiber enumerator'
+        required: false
+        default: false
+        type: boolean
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy sympy networkx pytest
+      - name: Verify frozen certificates
+        run: python analysis/w33_pass1887_1891_verify_frozen.py
+      - name: Reconstruct algebra and voltage objects
+        run: python analysis/w33_pass1889_1891_algebra_voltage_verify.py
+      - name: Rebuild residual S6 refined enumerator
+        run: python analysis/w33_pass1888_residual_s6_refined_enumerator.py
+      - name: Focused regression
+        run: pytest -q tests/test_w33_pass1887_1891_five_frontiers.py
+      - name: Compile exhaustive workers
+        run: |
+          g++ -O3 -std=c++20 analysis/cpp/w33_pass1887_weight10_degree.cpp -o /tmp/pass1887_degree
+          g++ -O3 -std=c++20 analysis/cpp/w33_pass1887_exact_global_weight5.cpp -o /tmp/pass1887_u5
+          g++ -O3 -fopenmp -std=c++20 analysis/cpp/w33_pass1888_fiber_bivariate.cpp -o /tmp/pass1888_fiber
+      - name: Optional heavy exact rebuild
+        if: github.event_name == 'workflow_dispatch' && inputs.run_heavy
+        run: |
+          /tmp/pass1887_degree data/w33_pass1848_syndrome_columns.txt /tmp/pass1887_degree.bin /tmp/pass1887_degree.json
+          /tmp/pass1887_u5 data/w33_pass1848_syndrome_columns.txt /tmp/pass1887_degree.bin /tmp/pass1887_u5.json
+          OMP_NUM_THREADS=2 /tmp/pass1888_fiber data/w33_pass1876_rows45_hex.txt /tmp/pass1888_fiber.json
+          python - <<'PY'
+          import json
+          assert json.load(open('/tmp/pass1887_u5.json'))['global_unique'] == 1531165872
+          assert json.load(open('/tmp/pass1888_fiber.json'))['bins'] == 563
+          print('heavy exact rebuild: PASS')
+          PY
