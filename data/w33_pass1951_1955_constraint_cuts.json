@@ -1,0 +1,13 @@
+{
+  "pass1951": {
+    "detects_vacuous": true,
+    "detects_real": true
+  },
+  "pass1955": {
+    "generators": 40,
+    "lex_cuts": true,
+    "solutions_before": 19355,
+    "solutions_after": 16145,
+    "status": "UNKNOWN"
+  }
+}
