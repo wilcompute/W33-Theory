@@ -1,0 +1,55 @@
+name: Passes 1801-1805 Brauer XOR Orbit Decoder Outer
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass1801_1805_common.py'
+      - 'analysis/w33_pass1801_1805_five_frontiers.py'
+      - 'analysis/w33_pass1801_1805_component.py'
+      - 'analysis/w33_pass1802_xor_milp_falsifier.py'
+      - 'analysis/BT1801_1805_brauer_xor_orbit_decoder_outer.md'
+      - 'analysis/BT1805_brauer_xor_orbit_decoder_outer_insert.tex'
+      - 'data/w33_pass1801_1805_five_frontiers.json'
+      - 'data/w33_pass180*_component.json'
+      - 'data/w33_pass1802_xor_milp_falsifier.json'
+      - 'data/w33_pass_namespace_registry_v2.d/1801-1805.json'
+      - 'tests/test_w33_pass1801_1805_five_frontiers.py'
+      - '.github/workflows/pass1801_1805_brauer_xor_orbit_decoder_outer.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-component:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        pass: [1801, 1802, 1803, 1804, 1805]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install --disable-pip-version-check numpy networkx sympy scipy
+      - run: python -m py_compile analysis/w33_pass1801_1805_common.py analysis/w33_pass1801_1805_five_frontiers.py analysis/w33_pass1801_1805_component.py
+      - run: python analysis/w33_pass1801_1805_component.py ${{ matrix.pass }} --check
+
+  aggregate-certificate:
+    runs-on: ubuntu-latest
+    needs: exact-component
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install --disable-pip-version-check numpy networkx sympy scipy pytest
+      - run: python analysis/w33_pass1801_1805_five_frontiers.py --check
+      - run: python analysis/w33_pass1802_xor_milp_falsifier.py --check-structure
+      - run: pytest -q tests/test_w33_pass1801_1805_five_frontiers.py
