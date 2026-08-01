@@ -1,0 +1,132 @@
+{
+  "results": [
+    {
+      "order": 3,
+      "orbits": 180,
+      "orbit_sizes": [
+        3
+      ],
+      "clique_clash": true,
+      "status": "REJECTED (a clique repeats an orbit)"
+    },
+    {
+      "order": 9,
+      "orbits": 60,
+      "orbit_sizes": [
+        9
+      ],
+      "clique_clash": true,
+      "status": "REJECTED (a clique repeats an orbit)"
+    },
+    {
+      "order": 9,
+      "orbits": 60,
+      "orbit_sizes": [
+        9
+      ],
+      "clique_clash": true,
+      "status": "REJECTED (a clique repeats an orbit)"
+    },
+    {
+      "order": 9,
+      "orbits": 60,
+      "orbit_sizes": [
+        9
+      ],
+      "clique_clash": true,
+      "status": "REJECTED (a clique repeats an orbit)"
+    },
+    {
+      "order": 3,
+      "orbits": 186,
+      "orbit_sizes": [
+        1,
+        3
+      ],
+      "clique_clash": true,
+      "status": "REJECTED (a clique repeats an orbit)"
+    },
+    {
+      "order": 9,
+      "orbits": 60,
+      "orbit_sizes": [
+        9
+      ],
+      "clique_clash": true,
+      "status": "REJECTED (a clique repeats an orbit)"
+    },
+    {
+      "order": 9,
+      "orbits": 60,
+      "orbit_sizes": [
+        9
+      ],
+      "clique_clash": true,
+      "status": "REJECTED (a clique repeats an orbit)"
+    },
+    {
+      "order": 9,
+      "orbits": 60,
+      "orbit_sizes": [
+        9
+      ],
+      "clique_clash": true,
+      "status": "REJECTED (a clique repeats an orbit)"
+    },
+    {
+      "order": 9,
+      "orbits": 60,
+      "orbit_sizes": [
+        9
+      ],
+      "clique_clash": true,
+      "status": "REJECTED (a clique repeats an orbit)"
+    },
+    {
+      "order": 9,
+      "orbits": 60,
+      "orbit_sizes": [
+        9
+      ],
+      "clique_clash": true,
+      "status": "REJECTED (a clique repeats an orbit)"
+    },
+    {
+      "order": 9,
+      "orbits": 60,
+      "orbit_sizes": [
+        9
+      ],
+      "clique_clash": true,
+      "status": "REJECTED (a clique repeats an orbit)"
+    },
+    {
+      "order": 9,
+      "orbits": 60,
+      "orbit_sizes": [
+        9
+      ],
+      "clique_clash": true,
+      "status": "REJECTED (a clique repeats an orbit)"
+    },
+    {
+      "order": 9,
+      "orbits": 60,
+      "orbit_sizes": [
+        9
+      ],
+      "clique_clash": true,
+      "status": "REJECTED (a clique repeats an orbit)"
+    },
+    {
+      "order": 9,
+      "orbits": 60,
+      "orbit_sizes": [
+        9
+      ],
+      "clique_clash": true,
+      "status": "REJECTED (a clique repeats an orbit)"
+    }
+  ],
+  "resolution_found": false
+}
