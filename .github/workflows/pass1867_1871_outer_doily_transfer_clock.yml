@@ -1,0 +1,22 @@
+name: Passes 1867-1871 outer doily transfer clock
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1867_1871_outer_doily_transfer_clock.py'
+      - 'analysis/w33_pass1861_1865_outer_doily_transfer_clock.py'
+      - 'analysis/BT1867_1871_outer_doily_transfer_clock.md'
+      - 'analysis/BT1871_outer_doily_transfer_clock_insert.tex'
+      - 'data/w33_pass1867_1871_outer_doily_transfer_clock.json'
+      - 'tests/test_w33_pass1867_1871_outer_doily_transfer_clock.py'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install sympy pytest
+      - run: python analysis/w33_pass1867_1871_outer_doily_transfer_clock.py
+      - run: pytest -q tests/test_w33_pass1867_1871_outer_doily_transfer_clock.py
