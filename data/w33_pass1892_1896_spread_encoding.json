@@ -1,0 +1,19 @@
+{
+  "pass1896": {
+    "covers_sampled": 60,
+    "min": 10,
+    "max": 13,
+    "asserted_bound_5_holds": false
+  },
+  "pass1893": {
+    "spreads": 36,
+    "rejected": 36,
+    "accepted": 0
+  },
+  "pass1892": {
+    "status": "UNKNOWN",
+    "seconds": 600.1,
+    "branches": 60909,
+    "conflicts": 1040
+  }
+}
