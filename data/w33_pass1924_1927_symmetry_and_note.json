@@ -1,0 +1,11 @@
+{
+  "pass1927": {
+    "checks_failed": [],
+    "all_pass": true
+  },
+  "pass1924": {
+    "generators": 40,
+    "sound_generators": 0,
+    "verdict": "incompatible with the colour fixing"
+  }
+}

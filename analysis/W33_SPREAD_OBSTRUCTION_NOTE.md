@@ -118,8 +118,9 @@ to 270 inner involutions, and index the 270 ordered incident line-pairs of the
 > yields the 27-lines geometry and the spread geometry.
 
 *Prior-art caution:* the vocabulary here (symplectic spreads, Desarguesian
-spreads, `GSp` multipliers, a fixed non-square `ξ`) is entirely standard, so this
-correspondence should be treated as **likely known** pending a proper reference,
+spreads, `GSp` multipliers, a fixed non-square `ξ`) is entirely standard. A
+literature search (Pass 1923) found the framework everywhere and **no reference
+for this specific split**. Treat it as **likely known, reference not found** —
 not as new.
 
 **Connection.** At `q = 3`, `σ_S` fixes 0 points and 10 lines — precisely the
