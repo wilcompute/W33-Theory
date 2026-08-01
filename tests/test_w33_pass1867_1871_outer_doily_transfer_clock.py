@@ -16,6 +16,7 @@ def load_module():
 
 
 def test_outer_doily_transfer_clock(tmp_path):
+    # Rebuilding the certificate is part of the test: no frozen-data-only pass.
     module = load_module()
     result = module.main(tmp_path / "certificate.json")
     assert result["status"] == "PASS"
