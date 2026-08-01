@@ -155,6 +155,29 @@ V = 15 ⊕ 24  |  81  |  30 ⊕ 90
 The last two points are the part of the chirality arc that is about *this module*
 rather than about `Sp(4,q)`, and they survive the Pass 1917 boundary.
 
+### The phase, and what it is not
+
+The 90's character field is `ℚ(ω)` — it is the **only** non-rational block, the
+other four and the 90-over-the-full-group all being rational. Its integral units
+are `ℤ₆`, so the substrate has exactly one internal phase and it is sixfold.
+`End_PSp(V) = ℝ⁴ × ℂ`, whose finite unit group `{±1}⁴ × ℤ₆` of order 96 is the
+substrate's complete internal symmetry group; all of its non-sign content is that
+one `ℤ₆`.
+
+**Two physical readings of that `ℤ₆` were proposed in this arc and both are
+refuted. They are recorded here so the note cannot be read as still holding them.**
+
+| reading | refuted by |
+|---|---|
+| `ℤ₆` is electric charge (Gauss-law sector) | the phase sits in the **coexact** block, not the exact one — Pass 1934, and independently the parallel track's Pass 1943 |
+| `ℤ₆` is a flux quantum (Dirac duality) | the clique complex is **torsion-free at every prime** (`d₁, d₂, d₃` have equal rank over `ℚ, F₂, F₃, F₅`), so there is no `ℤ/3` or `ℤ/6` for a flux quantum to be — Pass 1944 |
+
+What stands is the representation theory: one non-rational block, field `ℚ(ω)`,
+internal units `ℤ₆`, acted on by the outer involution by inversion, touching only
+the coexact sector — so the physical sector 81 is both neutral (parity, Pass 1880)
+and colourless (the endomorphism split, Pass 1945). No physical identification of
+the `ℤ₆` is currently supported.
+
 ---
 
 ## 6. Open
