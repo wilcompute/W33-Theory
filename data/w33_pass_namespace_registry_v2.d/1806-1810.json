@@ -1,0 +1,15 @@
+{
+  "schema": "w33.pass_namespace_registry_v2.shard.v1",
+  "range": "1806-1810",
+  "owner": "torsion-xor-lattice-octet-reconciliation-addenda",
+  "passes": {
+    "1806": "composition-series reconciliation and factor fingerprints",
+    "1807": "symmetric-270 versus minimal-240 XOR dependency theorem",
+    "1808": "universal exact-cover Bockstein-signature blindness",
+    "1809": "primitive representative of the determinant-two parity coset",
+    "1810": "coarse Gram nonclosure and modular rank collapse"
+  },
+  "status": "reserved",
+  "primary_parallel_packet": "1701-1705",
+  "boundary": "This range records complementary exact addenda only; primary ownership of the overlapping five frontiers remains with Passes 1701-1705. No global nine-cover verdict or physical threshold is claimed."
+}
