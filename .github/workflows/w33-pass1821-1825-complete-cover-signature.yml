@@ -1,0 +1,26 @@
+name: W33 Passes 1821-1825 complete cover signature
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1821_1825_complete_cover_signature.py'
+      - 'analysis/pass1821_1825_parts/source.py.gz.b64'
+      - 'analysis/cpp/w33_pass1821_all_covers.cpp'
+      - 'analysis/cpp/w33_pass1822_orbit_reduce.cpp'
+      - 'analysis/cpp/w33_pass1823_signature_mitm.cpp'
+      - 'data/w33_pass1821_1825_complete_cover_signature.json'
+      - 'data/w33_pass1825_signatures720.json.gz.b64'
+      - 'tests/test_w33_pass1821_1825_complete_cover_signature.py'
+      - '.github/workflows/w33-pass1821-1825-complete-cover-signature.yml'
+  workflow_dispatch:
+jobs:
+  exact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy sympy pytest
+      - run: python analysis/w33_pass1821_1825_complete_cover_signature.py --check
+      - run: pytest -q tests/test_w33_pass1821_1825_complete_cover_signature.py
