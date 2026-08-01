@@ -1,0 +1,27 @@
+name: Passes 1846-1850 exact frontiers
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1846*'
+      - 'analysis/w33_pass1848*'
+      - 'analysis/w33_pass1849*'
+      - 'analysis/w33_pass1850*'
+      - 'analysis/cpp/w33_pass1847*'
+      - 'data/w33_pass1846*'
+      - 'data/w33_pass1847*'
+      - 'data/w33_pass1848*'
+      - 'data/w33_pass1849*'
+      - 'data/w33_pass1850*'
+      - 'tests/test_w33_pass1846_1850_five_frontiers.py'
+      - '.github/workflows/pass1846_1850_orbit_decoder_separator_probe_atlas.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install pytest
+      - run: python analysis/w33_pass1846_1850_verify_frozen.py --run-workers
+      - run: pytest -q tests/test_w33_pass1846_1850_five_frontiers.py
