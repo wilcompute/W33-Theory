@@ -1,0 +1,25 @@
+\makeatletter
+\@ifundefined{theorem}{\newtheorem{theorem}{Theorem}}{}
+\makeatother
+\providecommand{\PSp}{\operatorname{PSp}}
+\providecommand{\GF}{\mathbb F}
+
+\subsection{Outer-class fusion, XOR separation, and the weight-four decoder}
+
+\begin{theorem}[Passes 1826--1830]
+For the canonical multiplier-minus-one similitude of the W33 carrier:
+\begin{enumerate}
+\item its class in $\PSp(4,3){:}2\cong U_4(2){:}2$ is the outer involution class $2D$; its traces on the chiral constituents of degrees $15,24,30,81$ are $(3,4,2,3)$;
+\item the symmetry-fixed resolution XOR system has $4860$ variables, rank $2349$, and affine solution dimension $2511$, but its canonical exact parity witness is not an integer Hoffman resolution;
+\item the code-weight layers $0$ through $10$ and $35$ through $45$ are exact, while the full subset action has $1{,}358{,}719{,}936$ orbits, so the complete $2^{45}$ enumerator remains open;
+\item among the $\binom{240}{4}=134{,}810{,}340$ weight-four errors, exactly $63{,}416{,}280$ have a unique minimum-weight syndrome representative;
+\item after imposing the complete set of $720$ globally realizable nonlinear cover signatures, the certified four-cover packing has no five-signature completion, despite consistency of the linear XOR relaxation.
+\end{enumerate}
+\end{theorem}
+
+The resulting binary-symmetric-channel success contribution through weight four is
+\[
+(1-p)^{240}+240p(1-p)^{239}+25440p^2(1-p)^{238}
++1576000p^3(1-p)^{237}+63416280p^4(1-p)^{236}.
+\]
+The nonlinear obstruction is packing-specific and does not settle the existence of an unrelated nine-cover resolution.
