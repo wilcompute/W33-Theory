@@ -1,0 +1,62 @@
+name: Passes 1836-1840 exact release
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1836_*'
+      - 'analysis/w33_pass1837_*'
+      - 'analysis/w33_pass1838_*'
+      - 'analysis/w33_pass1839_*'
+      - 'analysis/w33_pass1840_*'
+      - 'data/w33_pass1836*'
+      - 'data/w33_pass1837*'
+      - 'data/w33_pass1838*'
+      - 'data/w33_pass1839*'
+      - 'data/w33_pass1840*'
+      - 'tests/test_w33_pass1836_1840_five_frontiers.py'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass1836_*'
+      - 'analysis/w33_pass1837_*'
+      - 'analysis/w33_pass1838_*'
+      - 'analysis/w33_pass1839_*'
+      - 'analysis/w33_pass1840_*'
+      - 'data/w33_pass1836*'
+      - 'data/w33_pass1837*'
+      - 'data/w33_pass1838*'
+      - 'data/w33_pass1839*'
+      - 'data/w33_pass1840*'
+  workflow_dispatch:
+jobs:
+  frozen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install pytest
+      - run: python analysis/w33_pass1836_1840_verify_frozen.py
+      - run: pytest -q tests/test_w33_pass1836_1840_five_frontiers.py
+  exact-light:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install numpy scipy networkx sympy
+      - run: python analysis/w33_pass1836_signature_resolution_witness.py
+      - run: python analysis/w33_pass1837_middle_layer_compression.py
+      - run: python analysis/w33_pass1839_geometric_four_bit_chirality.py
+      - run: python analysis/w33_pass1840_atlas_standard_word.py
+  exact-weight-six:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install numpy
+      - run: python analysis/w33_pass1838_prepare_inputs.py
+      - run: g++ -O3 -std=c++20 analysis/w33_pass1838_weight5_frontier.cpp -o /tmp/pass1838
+      - run: /tmp/pass1838 data/w33_pass1838_syndromes240.txt data/w33_pass1838_frames540.txt > /tmp/pass1838.json
+      - run: grep -q '"weight6_codewords":9600' /tmp/pass1838.json
