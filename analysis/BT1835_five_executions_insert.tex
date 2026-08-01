@@ -1,0 +1,55 @@
+\subsection{Complete cover-pair layer and nonlinear nine-signature separation}
+\label{sec:complete-cover-pair-signature-separation}
+
+The complete exact-cover census contains $3{,}547{,}800$ covers in $327$
+$\operatorname{PSp}(4,3)$-orbits.  We now classify the complete disjoint-pair
+layer.  If $C_i$ is a representative of orbit $\mathcal O_i$, define
+\[
+ D_{ij}=\#\{C\in\mathcal O_j:C\cap C_i=\varnothing\}.
+\]
+All $327^2$ entries are reconstructed exactly and satisfy
+\[
+ |\mathcal O_i|D_{ij}=|\mathcal O_j|D_{ji}.
+\]
+Of the $106{,}929$ ordered orbit-type cells, $106{,}761$ are compatible and
+$168$ are incompatible.  There are $23{,}276{,}276{,}640$ unordered disjoint
+cover pairs globally.  Ten orbit types are not self-compatible, but every orbit
+type has a disjoint partner.
+
+The nonlinear octet signatures admit exact nine-layer integer solutions.  For
+the complete set $\mathcal T$ of $720$ realizable signatures, the equations
+\[
+ \sum_{t\in\mathcal T}y_t=9,
+ \qquad
+ \sum_{t\in\mathcal T}y_t t=12\mathbf 1,
+ \qquad y_t\in\mathbb Z_{\ge0}
+\]
+have a witness consisting of six signatures of norm $128$ and three of norm
+$96$.  Its setwise stabilizer has order $9$, so its inner orbit has size
+$2880$.
+
+The four signature classes have an intrinsic representation-theoretic
+explanation.  The stabilizer of an anchor octet has order $576$ and acts on the
+three $K_{4,4,4}$ non-neighbour cells through a quotient $S_3$ with kernel of
+order $96$.  The four local patterns
+\[
+ (0,2,4),\quad(0,3,3),\quad(1,2,3),\quad(2,2,2)
+\]
+have local orbit sizes $6,3,6,1$, yielding the global orbit sizes
+$270,135,270,45$ and stabilizer orders $96,192,96,576$.
+
+The canonical outer involution preserves these four classes but acts
+nontrivially inside them.  It fixes $28$ of the $720$ signatures.  On the $327$
+inner cover orbits it fixes only five and exchanges $161$ pairs; the complete
+disjointness matrix is invariant under this outer action.
+
+Finally, the displayed nine-signature witness does not lift to nine disjoint
+exact covers.  The nine candidate fibres have sizes
+\[
+ 11664,11664,2808,11664,2808,2808,11664,11664,11664.
+\]
+A deterministic exhaustive nine-partite search closes after $4421$ nodes and
+$4188$ dead ends with no lift.  This proves non-liftability for one
+$2880$-element signature-resolution orbit.  It does \emph{not} decide the
+existence of a different nine-cover resolution arising from another nonlinear
+signature orbit.
