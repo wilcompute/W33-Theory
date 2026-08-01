@@ -1,0 +1,17 @@
+{
+  "affine_signature_module": {"dimension": 20,"equation": "(A45+4I)t=48*1","translation": "t-(4/3)1 lies in E_{-4}"},
+  "anchor_stabilizer": {"anchor": 0,"cell_action_image_order": 6,"cell_action_kernel_order": 96,"cell_system": "K4,4,4 nonneighbor cells","order": 576,"quotient": "S3"},
+  "boundary": "This derives the four nonlinear signature orbits from the anchor stabilizer and the 20-dimensional affine module. It does not identify each exact-cover orbit inside a signature fiber without the complete cover census.",
+  "checks": {"45_anchors_16_each": true,"affine_dimension20": true,"anchor_stabilizer_576": true,"cell_quotient_S3": true,"four_local_patterns": true,"global_orbit_sum720": true},
+  "derivation": "The 16 signatures over one anchor are exactly the S3 permutations of four cell patterns. Induction over the 45 anchors gives orbit sizes 45*(6,3,6,1)=(270,135,270,45), while the kernel-96 cell action gives stabilizers 96,192,96,576.",
+  "local_signature_model": [
+    {"cell_pattern": [0,2,4],"global_signature_orbit_size": 270,"global_stabilizer_order": 96,"local_orbit_size": 6,"s3_stabilizer_order": 1},
+    {"cell_pattern": [0,3,3],"global_signature_orbit_size": 135,"global_stabilizer_order": 192,"local_orbit_size": 3,"s3_stabilizer_order": 2},
+    {"cell_pattern": [1,2,3],"global_signature_orbit_size": 270,"global_stabilizer_order": 96,"local_orbit_size": 6,"s3_stabilizer_order": 1},
+    {"cell_pattern": [2,2,2],"global_signature_orbit_size": 45,"global_stabilizer_order": 576,"local_orbit_size": 1,"s3_stabilizer_order": 6}
+  ],
+  "octet_graph": {"parameters": [45,32,22,24],"rank_A_plus_4I": 25,"spectrum": {"-4": 20,"2": 24,"32": 1}},
+  "schema": "w33.pass1833.anchor_s3_representation_derivation.v1",
+  "signature_sha256": "5c3e60271e6108b8df1537b59416b008f3cd4d40cf7a14a5f1b1d90150cc3304",
+  "status": "PASS"
+}
