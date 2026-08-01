@@ -1,0 +1,30 @@
+name: W33 Passes 1831-1835 Five Executions
+
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1831_1835_five_executions.py'
+      - 'analysis/cpp/w33_pass1832_cover_orbit_pair_matrix.cpp'
+      - 'analysis/cpp/w33_pass1834_outer_cover_orbit_map.cpp'
+      - 'analysis/cpp/w33_pass1835_signature_lift.cpp'
+      - 'data/w33_pass1831*'
+      - 'data/w33_pass1832*'
+      - 'data/w33_pass1833*'
+      - 'data/w33_pass1834*'
+      - 'data/w33_pass1835*'
+      - 'tests/test_w33_pass1831_1835_five_executions.py'
+      - '.github/workflows/w33-pass1831-1835-five-executions.yml'
+  workflow_dispatch:
+
+jobs:
+  exact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --upgrade pip numpy networkx pytest
+      - run: python analysis/w33_pass1831_1835_five_executions.py
+      - run: pytest -q tests/test_w33_pass1831_1835_five_executions.py
