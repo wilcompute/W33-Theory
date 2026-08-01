@@ -1,0 +1,80 @@
+name: Passes 1939-1943 U6 MacWilliams Gaussian integral carrier
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1939**'
+      - 'analysis/w33_pass1940**'
+      - 'analysis/w33_pass1941**'
+      - 'analysis/w33_pass1942**'
+      - 'analysis/w33_pass1943**'
+      - 'analysis/cpp/w33_pass1939**'
+      - 'analysis/cpp/w33_pass1940**'
+      - 'analysis/BT1939_1943**'
+      - 'analysis/BT1943**'
+      - 'data/w33_pass1939**'
+      - 'data/w33_pass1940**'
+      - 'data/w33_pass1941**'
+      - 'data/w33_pass1942**'
+      - 'data/w33_pass1943**'
+      - 'data/w33_pass_namespace_registry_v2.d/1939.json'
+      - 'data/w33_pass_namespace_registry_v2.d/194[0-3].json'
+      - 'tests/test_w33_pass1939_1943_five_frontiers.py'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - '.github/workflows/pass1939_1943_u6_macwilliams_gaussian_integral_carrier.yml'
+  workflow_dispatch:
+    inputs:
+      run_heavy_exact:
+        description: 'Rebuild the 58M U6 super-shard and complete split MacWilliams transform'
+        required: false
+        default: false
+        type: boolean
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install sympy pytest
+      - name: Verify frozen packet
+        run: python analysis/w33_pass1939_1943_verify_frozen.py
+      - name: Rebuild light exact certificates
+        run: |
+          python analysis/w33_pass1939_u6_supershard.py
+          python analysis/w33_pass1941_gaussian_solver_transport.py
+          python analysis/w33_pass1942_integral_phase_order.py
+          python analysis/w33_pass1943_hodge_eisenstein_carrier_separator.py
+      - name: Focused regression
+        run: pytest -q tests/test_w33_pass1939_1943_five_frontiers.py
+      - name: Compile exact workers
+        run: |
+          g++ -O3 -std=c++20 analysis/cpp/w33_pass1939_u6_supershard.cpp -o /tmp/u6super
+          g++ -O3 -std=c++20 analysis/cpp/w33_pass1939_u6_pair_stats.cpp -o /tmp/u6pairs
+          g++ -O3 -std=c++20 analysis/cpp/w33_pass1940_split_macwilliams.cpp -o /tmp/mac
+      - name: Optional heavy exact rebuild
+        if: github.event_name == 'workflow_dispatch' && inputs.run_heavy_exact
+        run: |
+          /tmp/u6super data/w33_pass1848_syndrome_columns.txt 8
+          /tmp/u6pairs data/w33_pass1848_syndrome_columns.txt 8
+          mkdir -p /tmp/mixed_shards
+          g++ -O3 -fopenmp -std=c++20 analysis/cpp/w33_pass1908_mixed_dense_shard.cpp -o /tmp/mixed
+          OMP_NUM_THREADS=2 /tmp/mixed data/w33_pass1876_rows45_hex.txt data/w33_pass1876_residual_orbits.txt /tmp/mixed_shards/000_156.bin /tmp/mixed_shards/000_156.json 0 156
+          python analysis/w33_pass1908_merge_mixed_trivariate.py /tmp/mixed_shards --output /tmp/mixed.json
+          python - <<'PY'
+          import json
+          d=json.load(open('/tmp/mixed.json'))
+          with open('/tmp/dual_sparse.txt','w') as f:
+              for r,p,h,a in d['sparse_histogram']:
+                  f.write(f'{r} {p} {h} {a}\n')
+          PY
+          /tmp/mac /tmp/dual_sparse.txt /tmp/primal_sparse.txt
+          python analysis/w33_pass1940_split_macwilliams.py /tmp/primal_sparse.txt --output /tmp/pass1940.json
+          python - <<'PY'
+          import json
+          a=json.load(open('/tmp/pass1940.json'))
+          assert a['full_transform']['nonzero_bins']==39081
+          assert a['full_transform']['words']==2**195
+          print('heavy exact rebuild: PASS')
+          PY
