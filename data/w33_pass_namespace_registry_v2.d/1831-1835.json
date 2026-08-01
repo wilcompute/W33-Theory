@@ -1,13 +1,14 @@
 {
   "schema": "w33.pass_namespace_registry.v2",
   "range": "1831-1835",
-  "status": "RESERVED",
+  "status": "COMPLETE",
   "track": "packing orbit classification, signature resolution polytope, representation derivation, outer fusion audit, proof-producing resolution",
   "passes": {
-    "1831": "complete signature-level nine-resolution polytope and exact witness",
-    "1832": "packing compatibility and orbit-type frontier",
-    "1833": "representation-theoretic anchor/cell derivation",
-    "1834": "outer-fusion and chirality action on signature classes",
-    "1835": "proof-producing combined nonlinear/XOR resolution export and manuscript promotion"
-  }
+    "1831": "exact nine-signature polytope witness; 2,880-element inner orbit",
+    "1832": "complete 327-by-327 disjoint cover-orbit pair classification",
+    "1833": "anchor-S3 representation derivation of four signature classes",
+    "1834": "canonical outer fusion on 720 signatures and 327 cover orbits",
+    "1835": "proof-producing no-lift certificate for the displayed signature orbit"
+  },
+  "evidence_boundary": "The global nine-cover resolution problem remains open. Pass 1835 excludes one 2,880-element signature-resolution orbit; Pass 1832 closes pairs but not all triple or quadruple packing orbits."
 }
