@@ -38,3 +38,4 @@ jobs:
         run: |
           grep -q '\\section{Ownership, prior art, and novelty boundary}' analysis/W33_SPREAD_OBSTRUCTION_REFEREE_DRAFT.tex
           grep -q 'The chromatic decision' analysis/W33_SPREAD_OBSTRUCTION_REFEREE_DRAFT.tex
+# Final merged-state trigger: 37/37 canonical checks, finalized namespaces, aligned rebuild sources, and both manuscript wrappers include Pass 1970.
