@@ -1,0 +1,81 @@
+{
+  "pass1861": {
+    "covers_found": 0,
+    "complete": false,
+    "nodes": 7031990,
+    "max_overlap_with_trap": null
+  },
+  "pass1862": {
+    "histogram": {
+      "38": 12,
+      "39": 114,
+      "40": 286,
+      "41": 679,
+      "42": 923,
+      "43": 924,
+      "44": 653,
+      "45": 292,
+      "46": 87,
+      "47": 28,
+      "48": 1,
+      "49": 1
+    },
+    "runs": 4000
+  },
+  "pass1865": {
+    "2": {
+      "q": 2,
+      "points": 15,
+      "lines": 15,
+      "edges": 45,
+      "spread_lines": 5,
+      "frames": 60,
+      "spread_frames": 10,
+      "covered": 30,
+      "own_edges": 15,
+      "remainder_is_own_lines": true,
+      "candidates": 0,
+      "needed": 5,
+      "arithmetic_exact": false,
+      "completions": 0,
+      "edges_touched_by_candidates": 0,
+      "uncoverable": 15
+    },
+    "3": {
+      "q": 3,
+      "points": 40,
+      "lines": 40,
+      "edges": 240,
+      "spread_lines": 10,
+      "frames": 540,
+      "spread_frames": 45,
+      "covered": 180,
+      "own_edges": 60,
+      "remainder_is_own_lines": true,
+      "candidates": 15,
+      "needed": 15,
+      "arithmetic_exact": true,
+      "completions": 0,
+      "edges_touched_by_candidates": 20,
+      "uncoverable": 40
+    },
+    "5": {
+      "q": 5,
+      "points": 156,
+      "lines": 156,
+      "edges": 2340,
+      "spread_lines": 26,
+      "frames": 9750,
+      "spread_frames": 325,
+      "covered": 1950,
+      "own_edges": 390,
+      "remainder_is_own_lines": true,
+      "candidates": 65,
+      "needed": 65,
+      "arithmetic_exact": true,
+      "completions": 0,
+      "edges_touched_by_candidates": 78,
+      "uncoverable": 312
+    }
+  }
+}
