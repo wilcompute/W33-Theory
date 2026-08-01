@@ -1,6 +1,6 @@
 # Passes 1966–1970 — combined spread symmetry, all forty cuts, the intrinsic phase role, constraint audit, and referee draft
 
-The five requested fronts are complete with **35/35** frozen checks.
+The five requested fronts are complete with **37/37** frozen checks.
 
 ## 1966 — combined spread-signature geometry
 
