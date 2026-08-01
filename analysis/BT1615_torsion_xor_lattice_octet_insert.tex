@@ -1,0 +1,63 @@
+\section{Binary torsion filtration and the frame--octet coherent bridge}
+\label{sec:bt1611-1615}
+
+Let $M\in\{0,1\}^{540\times240}$ be the canonical frame--edge matrix,
+$K\in\{0,1\}^{45\times240}$ the intrinsic $K_{4,4}$ octet matrix, and
+\[
+J=\frac12MK^{\mathsf T}\in\{0,1\}^{540\times45}.
+\]
+The elementary two-torsion of the frame cokernel is a $30$-dimensional
+$\mathbb F_2PSp(4,3)$-module.  Exact orbit-span tests give the composition
+series
+\[
+0<V_1<V_9<V_{10}<V_{16}<V_{30},
+\]
+with successive factor dimensions
+\[
+\boxed{1,8,1,6,14}.
+\]
+The $8$-factor has endomorphism field $\mathbb F_4$; the $6$- and $14$-factors
+have scalar endomorphism field $\mathbb F_2$.
+
+The exact-cover equations imply a useful limitation.  For every exact-cover
+indicator $x$,
+\[
+M^{\mathsf T}x=\mathbf1
+\quad\Longrightarrow\quad
+J^{\mathsf T}x=8\mathbf1_{45}.
+\]
+Thus every four-packing has signature $32\mathbf1$, while the complementary
+$300$-frame carrier has signature $40\mathbf1$.  The Bockstein signature is
+therefore orbit-blind and cannot decide packing extendibility.
+
+For the integral free-$15$ bridges, saturated coordinates give
+\[
+\operatorname{SNF}(C)=1^{10}\oplus3^5,
+\qquad
+\operatorname{SNF}(F)=1^{10}\oplus3^4\oplus6.
+\]
+The unique saturated map $Q$ satisfying $QR_C=R_F$ is integral with
+\[
+\boxed{|\det Q|=2}.
+\]
+Hence the signed orientation bridge differs from the unsigned bridge by one
+and only one parity coset.
+
+Finally, the octet action is the rank-three scheme
+$\operatorname{SRG}(45,32,22,24)$ and
+\[
+J^{\mathsf T}J=66I+3A_{45}+6\mathbf J,
+\qquad
+\operatorname{spec}(J^{\mathsf T}J)=432^1\oplus72^{24}\oplus54^{20}.
+\]
+The two-fiber frame/octet coherent configuration has
+\[
+\boxed{32+3+5+5=45}
+\]
+relations.  The incidence $J_{fo}=1$ is one cross orbital of valencies $6$ and
+$72$.  The coarse five-valued partition of $JJ^{\mathsf T}$ is not closed under
+matrix multiplication; the full frame orbital algebra is required.
+
+A reduced solver sidecar contains $270$ native XOR equations, thirty per color,
+and reproduces the exact global rank increase $2100\to2340$.  These equations
+strengthen the unresolved Hoffman nine-coloring instance but do not decide it.
