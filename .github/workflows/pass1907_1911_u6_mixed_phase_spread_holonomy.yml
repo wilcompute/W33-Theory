@@ -1,0 +1,70 @@
+name: Passes 1907-1911 U6 mixed phase spread holonomy
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1907**'
+      - 'analysis/w33_pass1908**'
+      - 'analysis/w33_pass1909**'
+      - 'analysis/w33_pass1910**'
+      - 'analysis/w33_pass1911**'
+      - 'analysis/cpp/w33_pass1907**'
+      - 'analysis/cpp/w33_pass1908**'
+      - 'analysis/BT1907_1911**'
+      - 'analysis/BT1911**'
+      - 'data/w33_pass1907**'
+      - 'data/w33_pass1908**'
+      - 'data/w33_pass1909**'
+      - 'data/w33_pass1910**'
+      - 'data/w33_pass1911**'
+      - 'data/w33_pass_namespace_registry_v2.d/190[7-9].json'
+      - 'data/w33_pass_namespace_registry_v2.d/191[0-1].json'
+      - 'tests/test_w33_pass1907_1911_five_frontiers.py'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - '.github/workflows/pass1907_1911_u6_mixed_phase_spread_holonomy.yml'
+  workflow_dispatch:
+    inputs:
+      run_heavy_exact:
+        description: 'Rebuild the full mixed enumerator, full S6 subgroup poset, and U6 pilot shard'
+        required: false
+        default: false
+        type: boolean
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy sympy networkx pytest
+      - name: Verify frozen packet
+        run: python analysis/w33_pass1907_1911_verify_frozen_v2.py
+      - name: Rebuild light exact certificates
+        run: |
+          python analysis/w33_pass1907_u6_exact_shard_and_resource.py
+          python analysis/w33_pass1910_gaussian_lines_sigma_phase_cuts.py
+          python analysis/w33_pass1911_stabilizer_weighted_primitive_holonomy.py
+      - name: Focused regression
+        run: pytest -q tests/test_w33_pass1907_1911_five_frontiers.py
+      - name: Compile exact workers
+        run: |
+          g++ -O3 -std=c++20 analysis/cpp/w33_pass1907_u6_chart_pilot.cpp -o /tmp/u6pilot
+          g++ -O3 -std=c++20 analysis/cpp/w33_pass1907_u6_pilot_lower.cpp -o /tmp/u6lower
+          g++ -O3 -fopenmp -std=c++20 analysis/cpp/w33_pass1908_mixed_dense_shard.cpp -o /tmp/mixed
+      - name: Optional heavy exact rebuild
+        if: github.event_name == 'workflow_dispatch' && inputs.run_heavy_exact
+        run: |
+          mkdir -p /tmp/mixed_shards
+          OMP_NUM_THREADS=2 /tmp/mixed data/w33_pass1876_rows45_hex.txt data/w33_pass1876_residual_orbits.txt /tmp/mixed_shards/000_156.bin /tmp/mixed_shards/000_156.json 0 156
+          python analysis/w33_pass1908_merge_mixed_trivariate.py /tmp/mixed_shards --output /tmp/mixed.json
+          python analysis/w33_pass1909_enumerate_s6_subgroups.py
+          python analysis/w33_pass1909_complete_s6_phase_poset.py
+          /tmp/u6pilot data/w33_pass1848_syndrome_columns.txt /tmp/u6.bin
+          /tmp/u6lower data/w33_pass1848_syndrome_columns.txt /tmp/u6.bin
+          python - <<'PY'
+          import json
+          a=json.load(open('/tmp/mixed.json')); assert a['nonzero_bins']==7355 and a['words']==2**45
+          b=json.load(open('data/w33_pass1909_complete_s6_subgroup_phase_poset.json')); assert b['subgroup_class_count']==56
+          print('heavy exact rebuild: PASS')
+          PY
