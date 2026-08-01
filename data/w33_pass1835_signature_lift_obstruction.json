@@ -1,0 +1,12 @@
+{
+  "boundary": "This is an exact no-lift certificate for one PSp orbit of 2,880 nonlinear signature resolutions. It is not a global UNSAT certificate for the nine-cover resolution problem.",
+  "candidate_binary_sha256": "36742beb39510a916578e20aa50dd089b7f6d5231856e3658562efb354a17387",
+  "candidate_counts": [11664,11664,2808,11664,2808,2808,11664,11664,11664],
+  "candidate_total": 78408,
+  "checks": {"candidate_counts_exact": true,"candidate_export_reproducible": true,"deterministic_trace": true,"exhaustive_no_lift": true,"signature_polytope_witness_exact": true},
+  "schema": "w33.pass1835.proof_producing_signature_lift.v1",
+  "search": {"dead_ends": 4188,"nodes": 4421,"status": "UNSAT","trace_fnv64": "c9cb284a87c2191d"},
+  "signature_resolution_orbit": {"inner_orbit_size": 2880,"inner_setwise_stabilizer_order": 9,"outer_image_in_same_inner_orbit": true},
+  "status": "PASS",
+  "theorem": "The displayed exact nine-signature solution has no lift to nine pairwise-disjoint exact frame covers. The exhaustive nine-partite cover search uses the complete 327-orbit cover census and closes after 4,421 nodes."
+}
