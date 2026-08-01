@@ -1,0 +1,83 @@
+{
+  "pass1817": {
+    "octet nbhd (|f cap o|=2)": {
+      "count": 45,
+      "sizes": [
+        72
+      ],
+      "max_proj": 4.6871557410824404e-15,
+      "free": true,
+      "size_div_9": true
+    },
+    "edge (f's matching ni e)": {
+      "count": 240,
+      "sizes": [
+        9
+      ],
+      "max_proj": 2.853204729566929e-15,
+      "free": true,
+      "size_div_9": true
+    },
+    "line (L in the frame)": {
+      "count": 40,
+      "sizes": [
+        27
+      ],
+      "max_proj": 2.1213203435596433,
+      "free": false,
+      "size_div_9": true
+    },
+    "point (some line ni p)": {
+      "count": 40,
+      "sizes": [
+        108
+      ],
+      "max_proj": 8.76227699628076e-15,
+      "free": true,
+      "size_div_9": true
+    },
+    "spread (both lines in S)": {
+      "count": 36,
+      "sizes": [
+        45
+      ],
+      "max_proj": 6.123724356957948,
+      "free": false,
+      "size_div_9": true
+    },
+    "spread (some line in S)": {
+      "count": 36,
+      "sizes": [
+        225
+      ],
+      "max_proj": 6.123724356957948,
+      "free": false,
+      "size_div_9": true
+    },
+    "H-neighbourhood of a frame": {
+      "count": 15,
+      "sizes": [
+        32
+      ],
+      "max_proj": 3.0550504633038944,
+      "free": false,
+      "size_div_9": false
+    },
+    "_rank_note": {
+      "rank_Q_colM": 225,
+      "edge_columns_span_it": true,
+      "so_rational_export_is_vacuous": true
+    }
+  },
+  "pass1818": {
+    "relative_minus4_mass": {
+      "octet nbhd (|f cap o|=2)": 5.336851199735657e-16,
+      "edge (f's matching ni e)": 6.580461230600619e-16,
+      "line (L in the frame)": 0.41885390829169555,
+      "point (some line ni p)": 7.296269015357834e-16,
+      "spread (both lines in S)": 0.9534625892455922,
+      "spread (some line in S)": 0.5345224838248489,
+      "H-neighbourhood of a frame": 0.5568117905349528
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "group_order": 51840,
+  "frame_stab_order": 96, "frame_stab_sees_sign": true,
+  "spread_stab_order": 1440, "spread_stab_sees_sign": true,
+  "control_frame_stab_in_PSp_order": 48, "control_sees_sign": false,
+  "chiral_block_degrees": [ 15, 24, 30, 81 ],
+  "handedness_bits": 4,
+  "size540_classes": [{"class": 5, "order": 4, "inner": true, "fixed_points": 4, "fixed_lines": 0, "fixed_frames": 0, "centraliser": 96, "square_class_size": 45}, {"class": 12, "order": 4, "inner": false, "fixed_points": 0, "fixed_lines": 4, "fixed_frames": 6, "centraliser": 96, "square_class_size": 270}, {"class": 18, "order": 2, "inner": false, "fixed_points": 8, "fixed_lines": 6, "fixed_frames": 16, "centraliser": 96, "square_class_size": 1}]
+}
