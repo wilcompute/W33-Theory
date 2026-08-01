@@ -1,0 +1,40 @@
+name: Passes 1872-1876 exact five frontiers
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1872_1876_five_frontiers.py'
+      - 'analysis/w33_pass1876_prepare_exact_dual_inputs.py'
+      - 'analysis/w33_pass1876_merge_dual_histograms.py'
+      - 'analysis/cpp/w33_pass1876_exact_dual_weight_enumerator.cpp'
+      - 'data/w33_pass1876_*'
+      - 'data/w33_pass1872_1876_five_frontiers.json'
+      - 'tests/test_w33_pass1872_1876_five_frontiers.py'
+  workflow_dispatch:
+    inputs:
+      rebuild_full_enumerator:
+        description: 'Run the full 2^45 exact dual enumeration'
+        required: false
+        default: false
+        type: boolean
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy networkx sympy pytest
+      - name: Rebuild deterministic inputs
+        run: |
+          python analysis/w33_pass1876_prepare_exact_dual_inputs.py
+          git diff --exit-code -- data/w33_pass1876_rows45_hex.txt data/w33_pass1876_residual_orbits.txt data/w33_pass1876_input_summary.json
+      - run: python analysis/w33_pass1872_1876_five_frontiers.py
+      - run: pytest -q tests/test_w33_pass1872_1876_five_frontiers.py
+      - name: Compile proof-producing enumerator
+        run: g++ -O3 -std=c++20 -fopenmp analysis/cpp/w33_pass1876_exact_dual_weight_enumerator.cpp -o /tmp/pass1876
+      - name: Optional full exhaustive rebuild
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.rebuild_full_enumerator }}
+        run: |
+          /tmp/pass1876 data/w33_pass1876_rows45_hex.txt data/w33_pass1876_residual_orbits.txt /tmp/pass1876_full.hist 0 156
+          python analysis/w33_pass1876_merge_dual_histograms.py /tmp/pass1876_full.hist --output /tmp/pass1876_full.json
+          cmp /tmp/pass1876_full.json data/w33_pass1876_exact_dual_weight_enumerator.json

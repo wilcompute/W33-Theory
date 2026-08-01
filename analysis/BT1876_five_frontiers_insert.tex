@@ -1,0 +1,53 @@
+\subsection{Cyclotomic boundary, Tutte--Coxeter lift, and exact weight-twelve closure}
+Let $T=P^{\mathsf T}D$ be the exceptional-$S_6$ outer-doily transfer operator
+of Passes~1867--1871 and let
+$\Lambda=\operatorname{im}_{\mathbb Z}(T)\cap\mathbf1^\perp$.
+The integral clock lattice has rank $9$, discriminant
+\[
+ \det(\Lambda^{\mathsf T}\Lambda)=2560=2^9\cdot5,
+\]
+and characteristic polynomial
+\[
+ (x-2)(x+2)^2(x^2+4)(x^4+16).
+\]
+The normalized action $T/2$ does not preserve $\Lambda$; indeed
+\[
+ \Lambda/(T+2I)\Lambda\cong\mathbb Z^2\oplus(\mathbb Z/4)^3.
+\]
+Thus the regular eight-phase packet is a rational, or $2$-local, decomposition
+and not a global integral $\mathbb Z[\zeta_8]$ splitting.
+
+The bipartite lift
+\[
+ A_{\rm TC}=\begin{pmatrix}0&D^{\mathsf T}\\D&0\end{pmatrix}
+\]
+is the Tutte--Coxeter graph, with intersection array
+$\{3,2,2,2;1,1,1,3\}$. The exceptional fold has off-diagonal blocks
+$T^{\mathsf T},T$. The rank-nine separator projector is
+\[
+ E_9=\frac{G(9I-G)}{20},\qquad G=T^{\mathsf T}T,
+\]
+so $\mathbb Q^{15}=\mathbf1\oplus V_5\oplus V_9$ and $V_9$ occurs once.
+The exact $W(E_6)$ character degrees contain no $9$, hence this module is an
+$S_6$ separator constituent and not a full-$W(E_6)$ irreducible sector.
+
+A correction to Passes~1867--1871 is also exact:
+\[
+ TT^{\mathsf T}=T^{\mathsf T}T.
+\]
+Therefore $T$ is normal but nonsymmetric, and $T/2$ is orthogonal on the
+balanced nine-space. The directed graph has automorphism group $C_4$.
+Moreover the twisted Hom-space is two-dimensional, and the only row-sum-three
+solutions with the same Gram matrix are $T$ and $2J/5-T$; consequently $T$ is
+the unique integral, and unique $0/1$, solution.
+
+Finally, exhaustive enumeration of all $2^{45}$ dual words and exact
+MacWilliams transform gives
+\[
+ \boxed{A_{12}=891{,}792{,}940},
+ \qquad
+ \boxed{E_6=1{,}724{,}138{,}884{,}380}.
+\]
+Here $E_6$ is the total weight-six equal-syndrome pair count. The sixth-order
+unique-minimum decoder coefficient remains open because collision incidences
+must still be deduplicated by syndrome orbit and lower shadow.
