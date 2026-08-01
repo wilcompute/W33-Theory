@@ -1,0 +1,31 @@
+name: W33 Passes 1611-1615 Torsion XOR Lattice Octet
+
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1611_1615_torsion_xor_lattice_octet.py'
+      - 'analysis/BT1611_1615_torsion_xor_lattice_octet.md'
+      - 'analysis/BT1615_torsion_xor_lattice_octet_insert.tex'
+      - 'data/w33_pass1611_1615_torsion_xor_lattice_octet.json'
+      - 'tests/test_w33_pass1611_1615_torsion_xor_lattice_octet.py'
+      - '.github/workflows/w33-pass1611-1615-torsion-xor-lattice-octet.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass1611_1615_torsion_xor_lattice_octet.py'
+      - 'analysis/BT1611_1615_torsion_xor_lattice_octet.md'
+      - 'analysis/BT1615_torsion_xor_lattice_octet_insert.tex'
+      - 'data/w33_pass1611_1615_torsion_xor_lattice_octet.json'
+      - 'tests/test_w33_pass1611_1615_torsion_xor_lattice_octet.py'
+      - '.github/workflows/w33-pass1611-1615-torsion-xor-lattice-octet.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --upgrade pip numpy sympy pytest
+      - run: python analysis/w33_pass1611_1615_torsion_xor_lattice_octet.py --no-xor --output /tmp/pass1611_1615.json
+      - run: pytest -q tests/test_w33_pass1611_1615_torsion_xor_lattice_octet.py
