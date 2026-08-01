@@ -1,0 +1,14 @@
+{
+  "schema": "w33.pass_namespace_registry_v2.shard.v1",
+  "range": "1801-1805",
+  "owner": "bockstein-xor-orbit-decoder-outer-continuation",
+  "passes": {
+    "1801": "Bockstein module Loewy filtration and Brauer-factor certificate",
+    "1802": "XOR-native Hoffman-resolution rank attack and bounded MILP falsifier",
+    "1803": "three-body octet orbit-transfer algebra",
+    "1804": "optimal ambiguity-declaring decoder through syndrome weight three",
+    "1805": "canonical full-Weyl extension of the coexact degree-30 carrier"
+  },
+  "status": "reserved",
+  "boundary": "No global resolution verdict, unrestricted maximum-likelihood theorem, complete weight enumerator, or ATLAS class label is claimed without a separate exact certificate."
+}
