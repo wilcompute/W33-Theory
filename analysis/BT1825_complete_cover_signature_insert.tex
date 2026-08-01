@@ -1,0 +1,66 @@
+\subsection{Complete cover census and nonlinear octet-signature obstruction}
+\label{sec:complete-cover-signature}
+
+Let $\mathcal C$ denote the exact covers of the canonical $540\times240$
+frame--edge incidence matrix.  A complete Algorithm-X enumeration through one
+fixed frame gives
+\[
+ |\mathcal C_{f_0}|=394200.
+\]
+Since $PSp(4,3)$ is transitive on the $540$ frames and every cover has $60$
+frames,
+\[
+ 60|\mathcal C|=540|\mathcal C_{f_0}|,
+ \qquad
+ \boxed{|\mathcal C|=3547800}.
+\]
+The complete family consists of exactly $327$ projective-group orbits, with
+stabilizer-order census $2^{228},4^{84},8^{15}$.
+
+The rank-$45$ frame/octet coherent configuration contains a unique cross
+orbital of frame degree one and octet degree twelve.  For a cover $x$, let
+$t_o(x)$ count the selected frames assigned to octet $o$ by this orbital.  The
+five cross-orbital signatures are then
+\[
+ \boxed{(8\mathbf1,32\mathbf1,16\mathbf1-4t,4\mathbf1+3t,t)}.
+\]
+If $A_{45}$ is the adjacency matrix of $\operatorname{SRG}(45,32,22,24)$,
+then
+\[
+ (A_{45}+4I)t=48\mathbf1,
+ \qquad
+ t-\frac43\mathbf1\in E_{-4}(A_{45}).
+\]
+Each signature has a unique anchor octet whose $32$ neighbors all have value
+one.  The anchor's $12$ nonneighbors induce $K_{4,4,4}$, with three canonical
+four-cells.  Their value patterns are
+\[
+(2,2,2),\quad(0,3,3),\quad(1,2,3),\quad(0,2,4),
+\]
+so the total is $45(1+3+6+6)=720$.
+
+Exactly $720$ signature vectors occur globally, in four orbits:
+\[
+\begin{array}{c|c|c|c|c|c}
+\text{type}&\text{coordinate histogram}&\|t\|^2&|PSp\cdot t|&
+\#\text{ cover orbits}&\#\text{ covers}\\ \hline
+T_{128}&0^4 1^{32}2^4 4^5&128&270&270&3149280\\
+T_{120}&0^4 1^{32}3^8 4&120&135&6&38880\\
+T_{104}&1^{36}2^4 3^4 4&104&270&24&233280\\
+T_{96}&1^{32}2^{12}4&96&45&27&126360
+\end{array}
+\]
+
+For the certified four-cover packing, the type sequence is
+$T_{128},T_{96},T_{104},T_{128}$.  Five additional covers would have to sum to
+its residual capacity $c=12\mathbf1-\sum_{i=1}^4t_i$.  Although $632$ of the
+$720$ single-cover signatures satisfy $t\leq c$, an exact meet-in-the-middle
+search over $117548$ unique admissible pair sums and $305488$ admissible triple
+sums finds no complement.  Hence
+\[
+ \boxed{\nexists\;u_1,\ldots,u_5\in\mathcal T:
+ u_1+\cdots+u_5=c},
+\]
+where $\mathcal T$ is the complete global signature set.  Thus this four-packing
+is nonextendible already in the $45$-coordinate nonlinear quotient.  This does
+not decide whether an unrelated nine-cover resolution exists.
