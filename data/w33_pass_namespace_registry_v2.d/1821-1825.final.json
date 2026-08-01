@@ -1,0 +1,13 @@
+{
+  "schema": "w33.pass_namespace_registry_v2.final.v1",
+  "range": "1821-1825",
+  "status": "complete",
+  "certificate_sha256": "0dc832c0a6cc363b05b58cef31870d6464447bba3167c7a93a5009b218871bf2",
+  "local_exact_checks": 20,
+  "fixed_frame_covers": 394200,
+  "global_covers": 3547800,
+  "cover_orbits": 327,
+  "global_signatures": 720,
+  "selected_four_packing_completion": false,
+  "boundary": "The selected four-packing is blocked at the nonlinear signature level; existence of an unrelated nine-cover resolution remains open."
+}
