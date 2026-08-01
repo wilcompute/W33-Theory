@@ -1,0 +1,70 @@
+{
+  "pass1872": {
+    "3": {
+      "q": 3,
+      "points": 40,
+      "lines": 40,
+      "edges": 240,
+      "spread_lines": 10,
+      "spread_frames": 45,
+      "covered": 180,
+      "own_edges": 60,
+      "remainder_is_own_lines": true,
+      "candidates": 15,
+      "needed": 15,
+      "candidates_equal_needed": true,
+      "touched": 20,
+      "own": 60,
+      "touched_fraction": 0.3333333333333333,
+      "one_over_q": 0.3333333333333333,
+      "law_holds": true,
+      "seconds": 0.0
+    },
+    "5": {
+      "q": 5,
+      "points": 156,
+      "lines": 156,
+      "edges": 2340,
+      "spread_lines": 26,
+      "spread_frames": 325,
+      "covered": 1950,
+      "own_edges": 390,
+      "remainder_is_own_lines": true,
+      "candidates": 65,
+      "needed": 65,
+      "candidates_equal_needed": true,
+      "touched": 78,
+      "own": 390,
+      "touched_fraction": 0.2,
+      "one_over_q": 0.2,
+      "law_holds": true,
+      "seconds": 0.3
+    },
+    "7": {
+      "q": 7,
+      "points": 400,
+      "lines": 400,
+      "edges": 11200,
+      "spread_lines": 50,
+      "spread_frames": 1225,
+      "covered": 9800,
+      "own_edges": 1400,
+      "remainder_is_own_lines": true,
+      "candidates": 175,
+      "needed": 175,
+      "candidates_equal_needed": true,
+      "touched": 200,
+      "own": 1400,
+      "touched_fraction": 0.14285714285714285,
+      "one_over_q": 0.14285714285714285,
+      "law_holds": true,
+      "seconds": 2.8
+    }
+  },
+  "pass1873": {
+    "covers_generated": 25,
+    "trials": 31,
+    "best_classes": 2,
+    "resolution_found": false
+  }
+}
