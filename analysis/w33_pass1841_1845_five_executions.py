@@ -29,16 +29,38 @@ def norm3(v):
     raise ValueError('zero projective vector')
 
 def build_signature_action():
-    p1836=load_module(ANALYSIS/'w33_pass1836_signature_resolution_witness.py','p1836')
-    _,S,labels,_,_=p1836.build();S=S.astype(np.int16);idx={bytes(v.astype(np.int8)):i for i,v in enumerate(S)}
     p1821=load_module(ANALYSIS/'w33_pass1821_1825_complete_cover_signature.py','p1821')
     base=p1821.load_base();geo=base.build_geometry();actions=p1821.build_actions(base,geo)
+    octets=geo[-1];A=np.zeros((45,45),dtype=np.int8)
+    for i in range(45):
+        si=set(octets[i][0])|set(octets[i][1])
+        for j in range(i+1,45):
+            sj=set(octets[j][0])|set(octets[j][1])
+            if len(si&sj)==2:A[i,j]=A[j,i]=1
+    assert np.all(A.sum(1)==32)
+    patterns=[('T128',(0,2,4)),('T120',(0,3,3)),('T104',(1,2,3)),('T96',(2,2,2))]
+    sig=[];labels=[]
+    for a in range(45):
+        non=[j for j in range(45) if j!=a and not A[a,j]];remaining=set(non);cells=[]
+        while remaining:
+            seed=min(remaining);stack=[seed];remaining.remove(seed);cell=[]
+            while stack:
+                u=stack.pop();cell.append(u)
+                for v in list(remaining):
+                    if not A[u,v]:remaining.remove(v);stack.append(v)
+            cells.append(sorted(cell))
+        cells=sorted(cells);assert list(map(len,cells))==[4,4,4]
+        for name,pat in patterns:
+            for vals in sorted(set(itertools.permutations(pat))):
+                t=np.ones(45,dtype=np.int8);t[a]=4
+                for c,v in zip(cells,vals):t[c]=v
+                sig.append(t);labels.append(name)
+    S=np.array(sig,dtype=np.int16);assert S.shape==(720,45) and len({tuple(x) for x in S})==720
+    idx={bytes(v.astype(np.int8)):i for i,v in enumerate(S)}
     R1=actions['R1'].astype(np.int8);FG=actions['frame_group'].astype(np.int64)
     frame_label=np.argmax(R1,axis=1);OP=np.empty((len(FG),45),dtype=np.uint8)
     reps=[int(np.flatnonzero(frame_label==o)[0]) for o in range(45)]
     for g in range(len(FG)):OP[g]=frame_label[FG[g,reps]]
-    P=np.empty((len(OP),720),dtype=np.uint16)
-    for g,p in enumerate(OP):P[g]=[idx[bytes(v[p].astype(np.int8))] for v in S]
     points,edges,lines,frames,group,gens,M,H,A,N,d,K,J,octets=geo
     pidx={tuple(x):i for i,x in enumerate(points)}
     pp=tuple(pidx[norm3(tuple(s*x[i] for i,s in enumerate((1,1,2,2))))] for x in points)
@@ -46,7 +68,7 @@ def build_signature_action():
     op=np.array([oidx[frozenset(pp[x] for x in (tuple(L)+tuple(R)))] for L,R in octets],dtype=np.int64)
     outer=np.array([idx[bytes(v[op].astype(np.int8))] for v in S],dtype=np.uint16)
     assert np.all(outer[outer]==np.arange(720))
-    return S,np.array(labels),P,outer,actions,geo
+    return S,np.array(labels),OP,outer,actions,geo,idx
 
 def frozen_checks():
     p1=load_json('w33_pass1841_signature_solution_orbit_frontier.json');p2=load_json('w33_pass1842_higher_packing_orbits.json');p3=load_json('w33_pass1843_second_orbit_no_lift.json');p4=load_json('w33_pass1844_c3xc3_witness_geometry.json');p5=load_json('w33_pass1845_outer_resolution_quotient.json');agg=load_json('w33_pass1841_1845_five_executions.json')
@@ -54,10 +76,11 @@ def frozen_checks():
     for n,p in enumerate((p1,p2,p3,p4,p5),1841):checks[f'{n}_self_hash']=self_hash(p)==p['certificate_sha256']
     checks['aggregate_self_hash']=self_hash(agg)==agg['certificate_sha256']
     checks['all_status_pass']=all(p['status']=='PASS' and all(p['checks'].values()) for p in (p1,p2,p3,p4,p5)) and agg['status']=='PASS' and all(agg['checks'].values())
-    S,labels,P,outer,actions,geo=build_signature_action()
+    S,labels,OP,outer,actions,geo,idx=build_signature_action()
     recs=p1['certified_binary_distinct_orbits'];Ws=[]
     for i,r in enumerate(recs):
-        W=np.array(r['representative_indices'],dtype=np.int64);Ws.append(W);O={tuple(sorted(map(int,row[W]))) for row in P}
+        W=np.array(r['representative_indices'],dtype=np.int64);Ws.append(W)
+        O={tuple(sorted(idx[bytes(S[i][p].astype(np.int8))] for i in W)) for p in OP}
         checks[f'1841_orbit_{i}_capacity']=len(W)==9 and len(set(map(int,W)))==9 and bool(np.all(S[W].sum(0)==12))
         checks[f'1841_orbit_{i}_size']=len(O)==r['inner_orbit_size'] and 25920//len(O)==r['setwise_stabilizer_order']
         checks[f'1841_orbit_{i}_outer']=tuple(sorted(map(int,outer[W]))) in O
@@ -70,8 +93,8 @@ def frozen_checks():
         sec=p2['subpacking_orbits'][str(k)]
         checks[f'1842_k{k}']=len(sec['orbits'])==len(got) and all(x==25920 for x in got) and sec['total_distinct_packings']==25920*len(got)
     W=Ws[0];G=S[W]@S[W].T;pos={int(x):i for i,x in enumerate(W)};st=[]
-    for row in P:
-        im=list(map(int,row[W]))
+    for p in OP:
+        im=[idx[bytes(S[i][p].astype(np.int8))] for i in W]
         if set(im)==set(map(int,W)):st.append(tuple(pos[x] for x in im))
     orders=collections.Counter(perm_order(q) for q in st)
     checks['1844_group']=len(st)==9 and orders==collections.Counter({3:8,1:1}) and p4['stabilizer_isomorphism']=='C3 x C3'
