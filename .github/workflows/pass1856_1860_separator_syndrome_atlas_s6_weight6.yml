@@ -1,0 +1,36 @@
+name: Passes 1856-1860 exact frontiers
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1856**'
+      - 'analysis/w33_pass1857**'
+      - 'analysis/w33_pass1858**'
+      - 'analysis/w33_pass1859**'
+      - 'analysis/w33_pass1860**'
+      - 'analysis/cpp/w33_pass1860**'
+      - 'data/w33_pass1856**'
+      - 'data/w33_pass1857**'
+      - 'data/w33_pass1858**'
+      - 'data/w33_pass1859**'
+      - 'data/w33_pass1860**'
+      - 'tests/test_w33_pass1856_1860_five_frontiers.py'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy networkx pytest
+      - run: python analysis/w33_pass1856_1860_verify_frozen.py
+      - run: pytest -q tests/test_w33_pass1856_1860_five_frontiers.py
+      - name: Rebuild light exact workers
+        run: |
+          python analysis/w33_pass1856_duad_syntheme_contraction_frontier.py > /tmp/p1856.json
+          python analysis/w33_pass1859_s6_duad_syntheme_intertwiner.py > /tmp/p1859.json
+      - name: Optional heavy weight-twelve frontier
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          g++ -O3 -std=c++20 analysis/cpp/w33_pass1860_weight12_frontier.cpp -o /tmp/w12
+          /tmp/w12 data/w33_pass1848_syndrome_columns.txt /tmp/w12.json
