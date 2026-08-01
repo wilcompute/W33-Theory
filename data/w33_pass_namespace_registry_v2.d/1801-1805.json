@@ -3,12 +3,12 @@
   "range": "1801-1805",
   "owner": "bockstein-xor-orbit-decoder-outer-continuation",
   "passes": {
-    "1801": "Bockstein module Loewy filtration and Brauer-factor certificate",
-    "1802": "XOR-native Hoffman-resolution rank attack and bounded MILP falsifier",
+    "1801": "Brauer-factor refinement and outer Frobenius action on the binary Bockstein module",
+    "1802": "XOR-native resolution ranks and reproducible bounded HiGHS falsifier",
     "1803": "three-body octet orbit-transfer algebra",
-    "1804": "optimal ambiguity-declaring decoder through syndrome weight three",
+    "1804": "optimal ambiguity-declaring syndrome decoder through weight three",
     "1805": "canonical full-Weyl extension of the coexact degree-30 carrier"
   },
-  "status": "reserved",
-  "boundary": "No global resolution verdict, unrestricted maximum-likelihood theorem, complete weight enumerator, or ATLAS class label is claimed without a separate exact certificate."
+  "status": "released",
+  "boundary": "No global resolution verdict, unrestricted maximum-likelihood theorem, complete weight enumerator, physical threshold, or ATLAS class label is claimed without a separate exact certificate."
 }
