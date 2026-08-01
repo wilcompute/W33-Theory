@@ -1,0 +1,129 @@
+\section*{Exact Brauer, XOR, orbit-transfer, decoder, and outer-extension continuation}
+\addcontentsline{toc}{section}{Exact Brauer, XOR, orbit-transfer, decoder, and outer-extension continuation}
+
+Let $M\in\{0,1\}^{540\times240}$ be the canonical frame--edge incidence
+matrix and let $K\in\{0,1\}^{45\times240}$ be the incidence matrix of the
+intrinsic induced $K_{4,4}$ octets.  The following statements are rebuilt from
+projective coordinates by the Passes 1801--1805 verifier.
+
+\paragraph{Brauer refinement of the Bockstein module.}
+The Bockstein quotient has dimension $30$ over $\mathbb F_2$, and
+\[
+ \ker\beta
+ =\langle\mathbf 1_{45}\rangle
+  \oplus\operatorname{im}(KK^{\mathsf T}\bmod2),
+ \qquad \dim\ker\beta=15.
+\]
+A compatible invariant filtration has dimensions
+\[
+ 1<9<10<16<30
+\]
+and successive factors
+\[
+ 1,\quad 8_{\mathbb F_2},\quad 1,\quad 6,\quad 14.
+\]
+The generated algebras of the $6$- and $14$-factors are respectively
+$M_6(\mathbb F_2)$ and $M_{14}(\mathbb F_2)$.  The $8$-factor has
+endomorphism field $\mathbb F_4$: a non-scalar endomorphism $z$ satisfies
+$z^2+z+I=0$.  Over an algebraic closure it is the unordered pair of
+four-dimensional Brauer factors $\{4a,4b\}$, and the canonical outer
+similitude acts by
+\[
+ szs^{-1}=z^2,
+\]
+therefore exchanging $4a$ and $4b$.  The factor labels use the published
+characteristic-two decomposition matrix of $U_4(2)$; no uncomputed Brauer
+character values are asserted.
+
+\paragraph{XOR-native resolution attack.}
+For every octet $o$ and color $c$, a resolution must satisfy
+\[
+ \sum_{f:J_{fo}=1}x_{fc}=8,
+ \qquad J=\frac12MK^{\mathsf T}.
+\]
+The exact binary ranks are
+\[
+ 2100\longrightarrow2340,
+ \qquad
+ 2109\longrightarrow2349
+\]
+after adding the octet equations, before and after the standard symmetry
+fixing respectively.  Thus the cuts add exactly $240$ global XOR directions.
+A separate reproducible HiGHS model contains $4860$ binary variables, $3105$
+equality constraints, and all $405$ exact-eight equations.  Its frozen
+$20$-second run ended without an incumbent; this is a bounded computational
+falsifier and is not a SAT or UNSAT certificate.
+
+\paragraph{Three-body orbit-transfer algebra.}
+For an octet subset $X$, codeword weight obeys
+\[
+ w(X)=16|X|-2e(X)+4t(X),
+\]
+where $t(X)$ counts distinguished W33 edge-signature triples.  There are
+exactly six $PSp(4,3)$-orbits on three-subsets and twenty on four-subsets.
+If $U$ and $D$ are the exact upward and downward orbit-incidence matrices and
+$n_3,n_4$ are the orbit-size vectors, then
+\[
+ \operatorname{diag}(n_3)U
+ =\bigl(\operatorname{diag}(n_4)D\bigr)^{\mathsf T}.
+\]
+This is the first transfer layer retaining the essential three-body invariant
+that is invisible to the ordinary rank-three octet association scheme.
+
+\paragraph{Exact ambiguity-declaring decoding through weight three.}
+Using $K$ as a parity-check matrix for the $[240,195,4]_2$ frame code, the
+numbers of errors having a unique minimum-weight syndrome representative are
+\[
+ N_0=1,
+ \qquad N_1=240,
+ \qquad N_2=25440,
+ \qquad N_3=1576000.
+\]
+Hence the exact BSC success contribution through weight three is
+\[
+ (1-p)^{240}
+ +240p(1-p)^{239}
+ +25440p^2(1-p)^{238}
+ +1576000p^3(1-p)^{237}.
+\]
+Among the $\binom{240}{3}=2275280$ weight-three errors, $697120$ are
+ambiguous at minimum weight and $2160$ are shadowed by a weight-one syndrome.
+The weight-three syndrome buckets form exactly $110$ inner-group orbits.
+This does not claim unrestricted maximum-likelihood decoding or a threshold.
+
+\paragraph{Canonical outer extension of the coexact degree-$30$ carrier.}
+With signed point incidence $S$, oriented octet incidence $U$, and edge
+boundary $d$, define
+\[
+ V=4U+Sd.
+\]
+Then
+\[
+ dV^{\mathsf T}=0,
+ \qquad
+ L_1V^{\mathsf T}=4V^{\mathsf T},
+ \qquad
+ \operatorname{rank}_{\mathbb Q}V=30.
+\]
+For the canonical multiplier-minus-one similitude
+$s=\operatorname{diag}(1,-1,1,-1)$, the induced operator on this coexact
+carrier satisfies
+\[
+ s^2=I,
+ \qquad
+ \operatorname{tr}(s)=2,
+ \qquad
+ \dim E_+(s)=16,
+ \qquad
+ \dim E_-(s)=14,
+ \qquad
+ \det(s)=1.
+\]
+The sign-twisted extension has trace $-2$.  No ATLAS class label is attached
+without a separate standard-generator fusion certificate.
+
+\paragraph{Boundary.}
+The module, rank, orbit-transfer, syndrome, and outer-extension statements are
+exact finite certificates.  The global Hoffman nine-cover resolution, the
+complete $2^{45}$ weight enumerator, and physical decoding thresholds remain
+open.
