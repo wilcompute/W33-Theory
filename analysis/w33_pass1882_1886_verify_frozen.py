@@ -36,3 +36,4 @@ def main():
  out={'status':'PASS_WITH_CORRECTION_AND_PROOF_BOUNDARY','n_verified':n,'n_checks':n,'certificates':EXPECTED,'aggregate_sha256':'4a9611b3cd9463307efd12678be2792fd63da77b750e1dd4755bf9bad6fc8f1c'}
  print(json.dumps(out,indent=2));return out
 if __name__=='__main__':main()
+# CI trigger after namespace and manuscript finalization.
