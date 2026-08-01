@@ -1,0 +1,32 @@
+name: Passes 1826-1830 exact frontiers
+on:
+  pull_request:
+    paths:
+      - 'analysis/w33_pass1826*'
+      - 'analysis/w33_pass1827*'
+      - 'analysis/w33_pass1828*'
+      - 'analysis/w33_pass1829*'
+      - 'analysis/BT1826_1830*'
+      - 'analysis/BT1830*'
+      - 'analysis/cpp/w33_pass1828*'
+      - 'analysis/cpp/w33_pass1829*'
+      - 'data/w33_pass1826*'
+      - 'data/w33_pass1827*'
+      - 'data/w33_pass1828*'
+      - 'data/w33_pass1829*'
+      - 'data/w33_pass1830*'
+      - 'tests/test_w33_pass1826_1830_five_frontiers.py'
+      - '.github/workflows/pass1826_1830_five_frontiers.yml'
+  workflow_dispatch:
+jobs:
+  frozen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy pytest
+      - run: python analysis/w33_pass1826_1830_verify_frozen.py
+      - run: pytest -q tests/test_w33_pass1826_1830_five_frontiers.py
+      - run: g++ -O3 -std=c++20 -fopenmp analysis/cpp/w33_pass1828_layer_frontier.cpp -o /tmp/pass1828
+      - run: g++ -O3 -std=c++20 analysis/cpp/w33_pass1829_weight4_decoder.cpp -o /tmp/pass1829
