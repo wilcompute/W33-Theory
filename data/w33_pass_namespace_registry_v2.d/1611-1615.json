@@ -9,6 +9,8 @@
     "1614": "saturated free-15 bridge and determinant-two defect",
     "1615": "octet-frame rank-three association bridge"
   },
-  "status": "reserved",
-  "boundary": "No global nine-cover SAT/UNSAT verdict, physical threshold, or novelty priority is claimed before exact verification."
+  "status": "merged-candidate",
+  "certificate_sha256": "575c47fac9ad8163da04c8516177fa05ad4a6e9eceac7f3ae44f9f2045f000f4",
+  "parallel_reconciliation": "Passes 1537-1541 own the complete 405 exact-8 cut family and decoder/code frontiers; Passes 1601-1605 own the integral frame cokernel and Bockstein sequence; Passes 1611-1615 own the torsion composition series, reduced native-XOR basis, packing-signature blindness theorem, determinant-two saturated bridge, and rank-45 frame/octet coherent configuration.",
+  "boundary": "No global nine-cover SAT/UNSAT verdict, physical threshold, Brauer-character label, or novelty priority is claimed."
 }
