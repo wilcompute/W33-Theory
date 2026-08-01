@@ -1,0 +1,39 @@
+name: W33 Passes 1841-1845 Five Executions
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1841_1845_five_executions.py'
+      - 'analysis/cpp/w33_pass1835_signature_lift.cpp'
+      - 'analysis/w33_pass1836_signature_resolution_witness.py'
+      - 'analysis/w33_pass1821_1825_complete_cover_signature.py'
+      - 'analysis/w33_pass1606_1610.py'
+      - 'data/w33_pass1841_*.json'
+      - 'data/w33_pass1842_*.json'
+      - 'data/w33_pass1843_*.json'
+      - 'data/w33_pass1844_*.json'
+      - 'data/w33_pass1845_*.json'
+      - 'data/w33_pass1841_1845_five_executions.json'
+      - 'tests/test_w33_pass1841_1845_five_executions.py'
+      - '.github/workflows/w33-pass1841-1845-five-executions.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass1841_1845_five_executions.py'
+      - 'data/w33_pass1841_*.json'
+      - 'data/w33_pass1842_*.json'
+      - 'data/w33_pass1843_*.json'
+      - 'data/w33_pass1844_*.json'
+      - 'data/w33_pass1845_*.json'
+      - 'data/w33_pass1841_1845_five_executions.json'
+      - 'tests/test_w33_pass1841_1845_five_executions.py'
+jobs:
+  exact-five-fronts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy scipy sympy pytest
+      - run: python analysis/w33_pass1841_1845_five_executions.py
+      - run: pytest -q tests/test_w33_pass1841_1845_five_executions.py
