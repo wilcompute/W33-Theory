@@ -15,7 +15,10 @@ on:
       - 'data/w33_pass1904**'
       - 'data/w33_pass1905**'
       - 'data/w33_pass1906**'
+      - 'data/w33_pass_namespace_registry_v2.d/190*.json'
       - 'tests/test_w33_pass1902_1906_five_frontiers.py'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
       - '.github/workflows/pass1902_1906_u6_mixed_gaussian_phase_zeta.yml'
   workflow_dispatch:
     inputs:
