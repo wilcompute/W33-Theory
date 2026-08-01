@@ -1,0 +1,112 @@
+#!/usr/bin/env python3
+"""Passes 1701--1705: five exact continuations of the integral frame cokernel.
+
+1701  Full F2 module filtration of the 30-dimensional Bockstein torsion.
+1702  Solver-neutral exact-8 / XOR export and independent-rank certificate.
+1703  Chiral four-packing orbit and torsion-signature classification.
+1704  Saturated unsigned-to-oriented free-15 lattice bridge.
+1705  Two-fiber frame/octet coherent configuration and H-cyclic closure.
+
+All statements are finite exact computations.  The script does not decide the
+open global nine-cover resolution problem.
+"""
+from __future__ import annotations
+
+import argparse
+import collections
+import hashlib
+import itertools
+import json
+from functools import reduce
+from math import gcd, lcm
+from pathlib import Path
+from typing import Iterable
+
+import numpy as np
+import sympy as sp
+from sympy.matrices.normalforms import smith_normal_form
+
+Q = 3
+OMEGA = np.array(
+    [[0, 0, 1, 0], [0, 0, 0, 1], [-1, 0, 0, 0], [0, -1, 0, 0]],
+    dtype=np.int64,
+) % Q
+ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_OUTPUT = ROOT / "data" / "w33_pass1701_1705_five_continuations.json"
+
+PACKING = [
+    [0,16,24,32,47,52,66,69,76,81,89,95,117,126,136,145,152,156,165,173,
+     184,186,201,209,216,230,240,248,256,267,274,289,296,304,312,320,325,
+     327,334,341,357,362,367,385,392,402,417,440,462,463,467,470,481,483,
+     487,508,510,521,536,539],
+    [1,13,19,34,39,49,55,59,70,94,98,106,114,119,125,135,155,157,168,177,
+     185,194,198,210,218,222,226,259,262,278,279,283,285,299,302,323,331,
+     345,359,368,371,380,386,393,401,410,420,432,448,454,469,491,492,494,
+     497,504,511,512,522,529],
+    [5,11,20,40,44,48,63,71,75,82,86,88,111,123,131,133,142,163,172,178,
+     188,192,202,204,231,233,237,257,260,273,280,288,293,298,303,335,346,
+     349,353,365,373,374,378,382,390,405,407,414,430,439,444,449,457,466,
+     489,503,506,516,534,538],
+    [4,15,22,31,33,54,68,74,80,90,101,102,108,112,120,141,144,153,164,176,
+     187,191,199,215,224,225,232,254,265,269,277,286,291,308,315,329,338,
+     347,352,361,372,377,391,396,397,399,416,423,425,431,450,453,458,475,
+     488,499,507,518,526,535],
+]
+
+
+
+
+class BitBasis:
+    """Incremental exact GF(2) row basis using Python integers."""
+    def __init__(self):
+        self.pivots = {}
+    def add_indices(self, indices):
+        x = 0
+        for i in indices:
+            x ^= 1 << int(i)
+        return self.add_int(x)
+    def add_array(self, row):
+        nz = np.flatnonzero(np.asarray(row, dtype=np.uint8) & 1)
+        return self.add_indices(nz)
+    def add_int(self, x):
+        while x:
+            p = x.bit_length() - 1
+            if p in self.pivots:
+                x ^= self.pivots[p]
+            else:
+                self.pivots[p] = x
+                return True
+        return False
+    @property
+    def rank(self):
+        return len(self.pivots)
+
+
+def normalize(v: Iterable[int]):
+    v = tuple(int(x) % Q for x in v)
+    if not any(v):
+        return None
+    for x in v:
+        if x:
+            inv = 1 if x == 1 else 2
+            return tuple((inv * y) % Q for y in v)
+
+
+def symplectic(u, v) -> int:
+    return int((np.array(u, dtype=np.int64) @ OMEGA @ np.array(v, dtype=np.int64)) % Q)
+
+
+def compose(p, q):
+    return tuple(p[q[i]] for i in range(len(p)))
+
+
+def invperm(p):
+    out = [0] * len(p)
+    for i, j in enumerate(p):
+        out[j] = i
+    return tuple(out)
+
+
+def generated_group(gens):
+    identity = tuple(range(len(gens[0])))
+    gens = list(gens) + [invperm(g) for g in gens]
