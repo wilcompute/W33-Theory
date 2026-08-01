@@ -4,11 +4,11 @@
 
 `PASS_WITH_CHROMATIC_AND_TWO_LEGACY_AUDIT_BOUNDARIES`
 
-Frozen verification: **35/35** certificate checks.
+Frozen verification: **37/37** certificate checks.
 
 Aggregate SHA-256:
 
-`022ebdfa6cbd3a5ce9dfb87bc261cc57239ac226754c4a82fdfdc7ac84e2723a`
+`ff183c710d516cf8b2f9d94b0c319cc54ca8732fee5f31bf617caa05480442e7`
 
 ## Delivered
 
