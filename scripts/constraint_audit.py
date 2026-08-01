@@ -51,8 +51,13 @@ def _count(build, add, cap):
                 self.stop_search()
 
     c = C()
-    s.solve(m, c)
-    return c.n, c.n >= cap
+    st = s.solve(m, c)
+    # Truncation can come from the CAP or from the TIME LIMIT.  Version 3 of this
+    # function checked only the cap, so a time-limited enumeration silently
+    # returned a partial count -- and a *constraint* then appeared to INCREASE
+    # the number of solutions, which is impossible.  Both are reported.
+    truncated = c.n >= cap or st not in (cp_model.OPTIMAL, cp_model.INFEASIBLE)
+    return c.n, truncated
 
 
 def assert_cuts(build_base, add_constraint, label="constraint", cap=200_000,
@@ -63,11 +68,20 @@ def assert_cuts(build_base, add_constraint, label="constraint", cap=200_000,
     saturates `cap`, because a saturated comparison is exactly how version 1 of
     this function reported a vacuous constraint as real.
     """
-    a, sat_a = _count(build_base, None, cap)
-    b, sat_b = _count(build_base, add_constraint, cap)
-    if sat_a or sat_b:
+    a, trunc_a = _count(build_base, None, cap)
+    b, trunc_b = _count(build_base, add_constraint, cap)
+    if trunc_a or trunc_b:
         if verbose:
-            print(f"  UNKNOWN {label:<46} counts saturated at {cap}")
+            print(f"  UNKNOWN {label:<46} enumeration truncated "
+                  f"(cap or time limit)")
+        return None, a, b
+    if b > a:
+        # A constraint cannot ADD solutions.  If this fires the measurement is
+        # invalid, not the constraint -- this invariant is what exposed the
+        # time-limit truncation that version 3 missed.
+        if verbose:
+            print(f"  INVALID {label:<46} {a} -> {b}: a constraint cannot "
+                  f"increase the count")
         return None, a, b
     ok = b < a
     if verbose:
