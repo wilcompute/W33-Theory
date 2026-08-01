@@ -1,0 +1,47 @@
+name: Passes 1950-1954 U6 shell frame arithmetic internal Z6
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass195[0-4]**'
+      - 'analysis/cpp/w33_pass1950**'
+      - 'analysis/BT1950_1954**'
+      - 'analysis/BT1954**'
+      - 'data/w33_pass195[0-4]**'
+      - 'data/w33_pass_namespace_registry_v2.d/195[0-4].json'
+      - 'tests/test_w33_pass1950_1954_five_frontiers.py'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - '.github/workflows/pass1950_1954_u6_shell_frame_arithmetic_internal_z6.yml'
+  workflow_dispatch:
+    inputs:
+      run_colourfree_probe:
+        description: 'Run the bounded genuinely unpinned nine-colour MILP'
+        required: false
+        default: false
+        type: boolean
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy sympy networkx scipy pytest
+      - name: Verify frozen packet
+        run: python analysis/w33_pass1950_1954_verify_frozen.py
+      - name: Rebuild exact certificates
+        run: |
+          python analysis/w33_pass1950_u6_collision_graph_compression.py
+          python analysis/w33_pass1951_minimum_shell_s6_orbits.py
+          python analysis/w33_pass1952_frame_chart_abi_sound_lex.py
+          python analysis/w33_pass1953_arithmetic_group_sl3z.py
+          python analysis/w33_pass1954_internal_z6_cross_track_audit.py
+      - name: Focused regression
+        run: pytest -q tests/test_w33_pass1950_1954_five_frontiers.py
+      - name: Compile U6 collision worker
+        run: g++ -O3 -std=c++20 analysis/cpp/w33_pass1950_u6_collision_graph.cpp -o /tmp/u6graph
+      - name: Optional colour-free probe
+        if: github.event_name == 'workflow_dispatch' && inputs.run_colourfree_probe
+        run: python analysis/w33_pass1952_colourfree_milp.py --seconds 120
+# Final merged-state trigger: stable round-trip hashes, finalized namespaces, and both manuscript wrappers include Pass 1954.
