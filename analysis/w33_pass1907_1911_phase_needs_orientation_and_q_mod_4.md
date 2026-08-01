@@ -126,10 +126,17 @@ Recorded so the two tracks do not later merge them by name-matching.
 
 ## Pass 1910 — the exact `K₁₀` maximum
 
-Pass 1898 attained `|cover ∩ K₁₀| = 13` without proving optimality. The clean
-decision — is `≥ 14` feasible? — is running; result reported when it returns
-rather than guessed. Pass 1896's lesson is precisely not to fill this gap with an
-assumption.
+Pass 1898 attained `|cover ∩ K₁₀| = 13` without proving optimality. Posing the
+clean decision — is `≥ 14` feasible? — returns:
+
+```text
+can a cover meet the K10 in >= 14 frames?  UNKNOWN  [840 s, 45,373 conflicts]
+```
+
+**Undecided.** So 13 is attained and 14 is neither exhibited nor excluded. The
+sound statement is still just "13 is attained"; there is no proved maximum.
+Reported as undecided rather than rounded up to a bound — which is exactly the
+Pass 1896 error, and I am not repeating it two batches later.
 
 ---
 
