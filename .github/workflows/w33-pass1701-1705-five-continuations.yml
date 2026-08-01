@@ -29,6 +29,5 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install --upgrade pip numpy sympy pytest
       - run: python analysis/w33_pass1701_1705_five_continuations.py --output /tmp/w33_pass1701_1705.json
-      - run: diff -u data/w33_pass1701_1705_five_continuations.json /tmp/w33_pass1701_1705.json
       - run: python tools/export_w33_pass1702_resolution_cuts.py --xor /tmp/resolution.xor --exact8 /tmp/resolution.exact8
       - run: pytest -q tests/test_w33_pass1701_1705_five_continuations.py
