@@ -1,0 +1,39 @@
+\makeatletter
+\@ifundefined{PSp}{\providecommand{\PSp}{\operatorname{PSp}}}{}
+\makeatother
+\section*{Exact signature, duad-compression, decoder, and outer-class continuation}
+The complete set of 720 nonlinear cover signatures admits an exact nine-vector capacity witness,
+\[
+ t_1+\cdots+t_9=12\mathbf 1,
+ \qquad
+ \{\text{types}\}=6T128+3T96.
+\]
+Thus the nonlinear signature quotient is feasible.  The parallel Pass 1835 exact lift worker proves that this specific $6T128+3T96$ signature orbit has no frame-level lift, sharply separating signature feasibility from exact-cover realizability.
+
+The proposed $9\times5$ middle-layer spread does not exist.  In the complement of $\operatorname{SRG}(45,32,22,24)$, the maximum number of mutually disjoint five-cliques is six.  There are 72 maximum partial spreads, and the residual fifteen vertices induce
+\[
+ \operatorname{SRG}(15,6,1,3)\cong KG(6,2).
+\]
+Hence the exact separator is $45=6\cdot5+15$, with a canonical duad residual.
+
+For the binary $[240,195,4]_2$ frame code, equal-syndrome triple pairing gives exactly
+\[
+ A_6=9600
+\]
+weight-six codewords.  Exactly $185040$ weight-five errors are shadowed by a unique singleton error.  The complete weight-five decoder coefficient remains conditional on the weight-eight and weight-ten dependency atlas.
+
+The four chiral modules of degrees $15,24,30,81$ are separated by four geometrically fingerprinted outer probes with trace matrix
+\[
+\begin{pmatrix}
+3&4&2&3\\
+-1&0&4&-3\\
+-2&1&-1&0\\
+1&0&0&-1
+\end{pmatrix},
+\qquad \det=80.
+\]
+Finally, an ATLAS-standard pair $(c,d)$ satisfies $c\in2C$, $|d|=9$, $|cd|=10$, and generates $\PSp(4,3){:}2$.  If $D=d^{-1}$, the canonical $2D$ similitude is
+\[
+ s=c d c D^2 c d c d^2 c D c D^2 c D^2.
+\]
+All statements are frozen in the Passes 1836--1840 exact certificates.  No frame-cover resolution, complete middle-layer enumerator, or weight-five threshold is inferred.
