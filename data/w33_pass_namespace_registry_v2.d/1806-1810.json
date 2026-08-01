@@ -9,7 +9,9 @@
     "1809": "primitive representative of the determinant-two parity coset",
     "1810": "coarse Gram nonclosure and modular rank collapse"
   },
-  "status": "reserved",
+  "status": "merged-candidate",
+  "certificate_sha256": "8a37fe8dae053881c045e089ff822cef39bfc1505fea0fe7cb8d3ef17e6fb24a",
   "primary_parallel_packet": "1701-1705",
-  "boundary": "This range records complementary exact addenda only; primary ownership of the overlapping five frontiers remains with Passes 1701-1705. No global nine-cover verdict or physical threshold is claimed."
+  "collision_worker": "analysis/w33_pass1611_1615_torsion_xor_lattice_octet.py",
+  "boundary": "This range records complementary exact addenda only; primary ownership of the overlapping five frontiers remains with Passes 1701-1705. No global nine-cover verdict, physical threshold, or unverified modular character label is claimed."
 }
