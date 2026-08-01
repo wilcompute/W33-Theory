@@ -1,16 +1,11 @@
 {
   "schema": "w33.pass_namespace_registry_v2.shard.v1",
   "range": "1611-1615",
-  "owner": "torsion-xor-lattice-octet-five-frontier",
-  "passes": {
-    "1611": "binary frame-cokernel torsion composition series",
-    "1612": "solver-ready independent Bockstein XOR export",
-    "1613": "four-packing torsion-signature blindness theorem",
-    "1614": "saturated free-15 bridge and determinant-two defect",
-    "1615": "octet-frame rank-three association bridge"
-  },
-  "status": "merged-candidate",
-  "certificate_sha256": "575c47fac9ad8163da04c8516177fa05ad4a6e9eceac7f3ae44f9f2045f000f4",
-  "parallel_reconciliation": "Passes 1537-1541 own the complete 405 exact-8 cut family and decoder/code frontiers; Passes 1601-1605 own the integral frame cokernel and Bockstein sequence; Passes 1611-1615 own the torsion composition series, reduced native-XOR basis, packing-signature blindness theorem, determinant-two saturated bridge, and rank-45 frame/octet coherent configuration.",
-  "boundary": "No global nine-cover SAT/UNSAT verdict, physical threshold, Brauer-character label, or novelty priority is claimed."
+  "owner": "namespace-collision-record",
+  "status": "superseded",
+  "superseded_by": "1806-1810",
+  "primary_parallel_ranges": ["1612-1616", "1701-1705"],
+  "retained_worker": "analysis/w33_pass1611_1615_torsion_xor_lattice_octet.py",
+  "reason": "A late parallel glue packet renumbered into 1612-1616 and a second packet completed the primary five frontiers as 1701-1705. The historical verifier remains as a deterministic worker, while all surviving nonduplicative claims are published under 1806-1810.",
+  "boundary": "This shard no longer claims theorem ownership for Passes 1611-1615."
 }
