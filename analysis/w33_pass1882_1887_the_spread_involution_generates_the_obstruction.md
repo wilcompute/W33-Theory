@@ -145,7 +145,9 @@ orbit, which no rainbow colouring can tolerate. 14 of 14 rejected.
 
 **Attempt 3, add the free cuts.** Passes 1613/1817/1827/1828 proved exact
 identities every class must satisfy — 60 frames per class, exactly 8 per octet
-family, exactly 12 per point family, at most 5 per spread `K₁₀`. Adding all of
+family, exactly 12 per point family, at most 5 per spread `K₁₀`. (**That last
+is FALSE — see Pass 1896; the true range is at least 1..13 and this model was
+unsound.**) Adding all of
 them:
 
 ```text
