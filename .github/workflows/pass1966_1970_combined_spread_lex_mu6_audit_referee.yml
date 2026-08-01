@@ -1,0 +1,40 @@
+name: Passes 1966-1970 combined spread lex mu6 audit referee
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass196[6-9]**'
+      - 'analysis/W33_SPREAD_OBSTRUCTION_REFEREE_DRAFT.tex'
+      - 'analysis/BT1966_1970**'
+      - 'analysis/BT1970**'
+      - 'data/w33_pass196[6-9]**'
+      - 'data/w33_pass1970**'
+      - 'data/w33_pass_namespace_registry_v2.d/19[6-7][0-9].json'
+      - 'tests/test_w33_pass1966_1970_five_frontiers.py'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - '.github/workflows/pass1966_1970_combined_spread_lex_mu6_audit_referee.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy networkx pytest
+      - name: Verify frozen packet
+        run: python analysis/w33_pass1966_1970_verify_frozen.py
+      - name: Rebuild exact certificates
+        run: |
+          python analysis/w33_pass1966_1967_spread_signature_cuts.py
+          python analysis/w33_pass1968_internal_mu6_structural_role.py
+          python analysis/w33_pass1969_backward_constraint_audit.py
+      - name: Reverify after rebuild
+        run: python analysis/w33_pass1966_1970_verify_frozen.py
+      - name: Focused regression
+        run: pytest -q tests/test_w33_pass1966_1970_five_frontiers.py
+      - name: Check draft structure
+        run: |
+          grep -q '\\section{Ownership, prior art, and novelty boundary}' analysis/W33_SPREAD_OBSTRUCTION_REFEREE_DRAFT.tex
+          grep -q 'The chromatic decision' analysis/W33_SPREAD_OBSTRUCTION_REFEREE_DRAFT.tex
