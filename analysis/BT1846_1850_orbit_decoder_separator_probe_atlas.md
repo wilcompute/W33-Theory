@@ -1,4 +1,6 @@
-# Passes 1846–1850 — two signature no-lift orbits, exact weight-five decoding, the duad–syntheme transfer algebra, probe fusion, and the official-tuple boundary
+# Passes 1846–1850 — two signature no-lift orbits, the weight-five decoder chart, the duad–syntheme transfer algebra, probe fusion, and the official-tuple boundary
+
+> **Pass-1882 correction.** The fixed-coordinate syndrome sort below is exact as a chart computation, but its singleton count cannot be globalized by multiplying by $240/5$. Equal-syndrome weight-five errors differing by a weight-$w$ codeword coappear in only $5-w/2$ coordinate charts; all $2{,}207{,}943{,}360$ weight-ten collision pairs are disjoint and appear in none. Therefore $2{,}993{,}248{,}416$ is a certified upper bound, not an exact fifth-order unique-minimum coefficient. The exact global coefficient remains open. See `analysis/BT1882_1886_decoder_order_carrier_clock.md`.
 
 ## Executive result
 
@@ -7,10 +9,10 @@ The five continuation fronts are closed to their exact evidence boundaries.
 1. The independently owned Passes 1841–1845 packet is reconciled: two distinct inner signature-resolution orbits of sizes 2,880 and 25,920 are certified, and both have exact frame-level no-lift proofs. Thus at least 28,800 signature resolutions exist, but neither certified orbit produces a nine-cover resolution. The binary orbit census remains incomplete.
 2. The low-weight binary frame-code enumerator is exact through weight ten:
    \[A_4=540,\quad A_6=9,600,\quad A_8=424,170,\quad A_{10}=17,523,360.\]
-   Sorting all fixed-coordinate weight-five syndromes gives the exact global partition
-   \[6,363,048,048=84,201,264+2,993,248,416+3,285,598,368,\]
-   into lower-shadowed, unique-minimum, and ambiguous-minimum errors. The fifth-order BSC success term is
-   \[\boxed{2,993,248,416\,p^5(1-p)^{235}}.\]
+   Sorting all fixed-coordinate weight-five syndromes gives the exact chart partition
+   \[132,563,501=1,754,193+62,359,342+68,449,966.\]
+   Pass 1882 supersedes the former globalization of the chart singleton count. The exact global lower-shadow population is $84,201,264$, the exact minimum-weight-five population is $6,278,846,784$, and the global unique-minimum count satisfies
+   \[U_5\le2,993,248,416.\]
 3. The six-fiber plus duad separator carries the exact check algebra
    \[\boxed{240=20+15\cdot12+20\cdot2}.\]
    The residual checks are the 20 triangles of \(K_6\), the 15 fiber pairs map bijectively to the 15 synthemes, and the 20 fiber triples each carry two phase checks. This is the classical duad–syntheme model of the exceptional outer automorphism of \(S_6\).
@@ -32,9 +34,9 @@ It certifies two inner solution orbits:
 
 The first witness has three 3-point stabilizer orbits and an intrinsic \(2K_3/K_{3,3}\) Gram geometry. The second orbit is free. The canonical outer involution stabilizes both known inner orbits. This is a rigorous lower bound of 28,800 signature-level solutions, not a complete census and not global nine-cover UNSAT.
 
-## Pass 1847 — exact low-weight enumerator and decoder coefficient
+## Pass 1847 — exact low-weight enumerator and fixed-coordinate decoder chart
 
-A parity-guided DFS on the 45-check hypergraph fixes one coordinate and uses coordinate transitivity. It reconstructs
+A parity-guided DFS on the 45-check hypergraph fixes one coordinate and uses coordinate transitivity for the codeword enumerator. It reconstructs
 
 \[
 A_4=540,\quad A_6=9600,\quad A_8=424170,\quad A_{10}=17523360.
@@ -60,29 +62,31 @@ All
 \binom{239}{4}=132,563,501
 \]
 
-weight-five errors containing coordinate zero are enumerated and sorted by syndrome. Since every check column has odd weight, syndrome parity equals error parity; only weights one and three can undercut weight five. The fixed-coordinate partition is
+weight-five errors containing coordinate zero are enumerated and sorted by syndrome. Since every check column has odd weight, syndrome parity equals error parity; only weights one and three can undercut weight five. The exact fixed-coordinate partition is
 
 \[
 132,563,501=1,754,193+62,359,342+68,449,966.
 \]
 
-Globalizing by \(240/5=48\) gives
+Pass 1882 proves that the chart singleton count cannot be globalized directly: disjoint same-syndrome partners are absent from every common coordinate chart. The exact global lower-shadow count is
 
 \[
-\boxed{6,363,048,048=84,201,264+2,993,248,416+3,285,598,368}.
+84,201,264,
 \]
 
-The exact success polynomial through weight five is
+and the exact global minimum-weight-five population is
 
 \[
-\begin{aligned}
-&(1-p)^{240}+240p(1-p)^{239}+25440p^2(1-p)^{238}\\
-&\quad+1576000p^3(1-p)^{237}+63416280p^4(1-p)^{236}\\
-&\quad+2993248416p^5(1-p)^{235}.
-\end{aligned}
+6,278,846,784.
 \]
 
-No asymptotic threshold is inferred from this truncated polynomial.
+The global unique-minimum count is presently bounded by
+
+\[
+\boxed{U_5\le2,993,248,416}.
+\]
+
+No exact fifth-order BSC coefficient or asymptotic threshold is inferred.
 
 ## Pass 1848 — the duad–syntheme transfer algebra
 
@@ -123,4 +127,4 @@ During this execution the primary-source payload endpoints returned cache misses
 
 ## Verification
 
-The aggregate certificate is fail-closed. Focused local regression passes 2/2. The exact fixed-coordinate syndrome sorter reruns in approximately twelve seconds and uses about one gigabyte of memory. The heavier low-weight DFS also reproduced all four enumerator coefficients locally; CI keeps that worker available behind the explicit heavy-worker flag.
+The original aggregate certificate remains a certificate for the fixed-coordinate chart and the other four fronts. Pass 1882 is the authoritative correction for chart-to-global multiplicity. Focused local regression passes 2/2. The exact fixed-coordinate syndrome sorter reruns in approximately twelve seconds and uses about one gigabyte of memory. The heavier low-weight DFS also reproduced all four enumerator coefficients locally; CI keeps that worker available behind the explicit heavy-worker flag.

@@ -1,0 +1,40 @@
+name: Passes 1882-1886 exact frontiers
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1882**'
+      - 'analysis/w33_pass1883**'
+      - 'analysis/w33_pass1884**'
+      - 'analysis/w33_pass1885**'
+      - 'analysis/w33_pass1886**'
+      - 'analysis/BT1882_1886**'
+      - 'analysis/BT1886_decoder_order_carrier_clock_insert.tex'
+      - 'data/w33_pass1882**'
+      - 'data/w33_pass1883**'
+      - 'data/w33_pass1884**'
+      - 'data/w33_pass1885**'
+      - 'data/w33_pass1886**'
+      - 'tests/test_w33_pass1882_1886_five_frontiers.py'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy networkx sympy pytest
+      - run: python analysis/w33_pass1882_1886_verify_frozen.py
+      - run: pytest -q tests/test_w33_pass1882_1886_five_frontiers.py
+      - name: Rebuild light exact frontiers
+        run: |
+          python analysis/w33_pass1882_decoder_chart_to_global_obstruction.py
+          python analysis/w33_pass1883_full_primal_weight_enumerator.py
+          python analysis/w33_pass1884_two_adic_maximal_order.py
+          python analysis/w33_pass1886_geometric_c4_clock_model.py
+          python analysis/w33_pass1882_1886_verify_frozen.py
+      - name: Optional full exceptional-S6 branching rebuild
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          python analysis/w33_pass1885_exceptional_s6_carrier_intertwiners.py
+          python analysis/w33_pass1882_1886_verify_frozen.py

@@ -10,7 +10,7 @@ Define
 T=P^{\mathsf T}D\in\{0,1\}^{15\times15}.
 \]
 
-It is a doubly 3-regular, nonnormal, outer-twisted \(S_6\)-equivariant operator. The exact verifier proves all 24 checks.
+It is a doubly 3-regular, normal but nonsymmetric, outer-twisted \(S_6\)-equivariant operator. The original exact verifier proves all 24 checks; Pass 1875 additionally proves the normality identity and corrects the earlier word “nonnormal.”
 
 ## Pass 1867 — saturated integral transfer
 
@@ -79,7 +79,13 @@ so the singular spectrum remains
 9^1+4^9+0^5.
 \]
 
-Moreover \(T^{\mathsf T}T-3I\) is the \(\operatorname{SRG}(15,6,1,3)\) point graph of \(W(2)\). The fold changes directed phase transport without changing the symmetric doily metric.
+Pass 1875 further proves
+
+\[
+\boxed{TT^{\mathsf T}=T^{\mathsf T}T},
+\]
+
+so \(T/2\) is orthogonal on the balanced nine-dimensional image. Moreover \(T^{\mathsf T}T-3I\) is the \(\operatorname{SRG}(15,6,1,3)\) point graph of \(W(2)\). The fold changes directed phase transport without changing the symmetric doily metric.
 
 ## Pass 1871 — evidence boundary
 
