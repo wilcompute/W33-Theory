@@ -1,3 +1,4 @@
+# Finalized Passes 1887-1891; this commit targets the complete merged release.
 name: Passes 1887-1891 exact continuations
 on:
   push:
