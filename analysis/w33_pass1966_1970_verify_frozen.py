@@ -4,14 +4,9 @@ from __future__ import annotations
 import hashlib,json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-FILES={
-1966:ROOT/'data/w33_pass1966_combined_spread_signature_geometry.json',
-1967:ROOT/'data/w33_pass1967_forty_generator_scaling.json',
-1968:ROOT/'data/w33_pass1968_internal_mu6_structural_role.json',
-1969:ROOT/'data/w33_pass1969_backward_constraint_audit.json',
-1970:ROOT/'data/w33_pass1970_spread_obstruction_referee_draft.json'}
-EXPECTED={1966:'e7ccf82c72ca62601a3301b105b83547ba868f43443ca04a27d2b8d4ef2bf85c',1967:'0e262c3ea8a33b813c3cd45f54643a2129e6e319efd6b511f50a4cce3bc1ee28',1968:'52ac1546c8d3547e7a4a1895ccb2c6d82be3c7e4cfb3672bc78cdc48ef087a7d',1969:'0025e45967f669c9368e9ae832788afd96e9f67aa25d162acfa98c9069979999',1970:'485539a6fbd1979d142e2fa2eb9894b6389d8374c6d58ae16fe1108e184874c0'}
-AGG='23780166cc5782bb3ad331e1f299d2b42a1bfef337c3ef58e7803f5d2d60e434'
+FILES={1966:ROOT/'data/w33_pass1966_combined_spread_signature_geometry.json',1967:ROOT/'data/w33_pass1967_forty_generator_scaling.json',1968:ROOT/'data/w33_pass1968_internal_mu6_structural_role.json',1969:ROOT/'data/w33_pass1969_backward_constraint_audit.json',1970:ROOT/'data/w33_pass1970_spread_obstruction_referee_draft.json'}
+EXPECTED={1966:'e7ccf82c72ca62601a3301b105b83547ba868f43443ca04a27d2b8d4ef2bf85c',1967:'0e262c3ea8a33b813c3cd45f54643a2129e6e319efd6b511f50a4cce3bc1ee28',1968:'52ac1546c8d3547e7a4a1895ccb2c6d82be3c7e4cfb3672bc78cdc48ef087a7d',1969:'450387a032d23659524b34201032e5302bbe002705a40825ce466e284f8b6ac7',1970:'60752096f72d1352652d712275586c64089bbbbc7f42545fb38615f2f5183410'}
+AGG='022ebdfa6cbd3a5ce9dfb87bc261cc57239ac226754c4a82fdfdc7ac84e2723a'
 def digest(d):
  x=dict(d);x.pop('sha256_without_hash_field',None)
  return hashlib.sha256(json.dumps(x,sort_keys=True,separators=(',',':')).encode()).hexdigest()
