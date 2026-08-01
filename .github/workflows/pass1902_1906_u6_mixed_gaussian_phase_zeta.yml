@@ -1,0 +1,54 @@
+name: Passes 1902-1906 U6 mixed Gaussian phase zeta
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1902_1906**'
+      - 'analysis/w33_pass1902_1903**'
+      - 'analysis/w33_pass1904_1906**'
+      - 'analysis/w33_pass1905**'
+      - 'analysis/cpp/w33_pass1902**'
+      - 'analysis/cpp/w33_pass1903**'
+      - 'analysis/BT1902_1906**'
+      - 'analysis/BT1906**'
+      - 'data/w33_pass1902**'
+      - 'data/w33_pass1903**'
+      - 'data/w33_pass1904**'
+      - 'data/w33_pass1905**'
+      - 'data/w33_pass1906**'
+      - 'data/w33_pass_namespace_registry_v2.d/190*.json'
+      - 'tests/test_w33_pass1902_1906_five_frontiers.py'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - '.github/workflows/pass1902_1906_u6_mixed_gaussian_phase_zeta.yml'
+  workflow_dispatch:
+    inputs:
+      run_mixed_chunk:
+        description: 'Run one exact 2^30 mixed-enumerator residual-orbit chunk'
+        required: false
+        default: false
+        type: boolean
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy sympy networkx pytest
+      - name: Rebuild exact light certificates
+        run: |
+          python analysis/w33_pass1902_1903_decoder_mixed_reduction.py
+          python analysis/w33_pass1904_1906_gaussian_phase_zeta.py
+          python analysis/w33_pass1902_1906_verify_frozen.py
+      - name: Focused regression
+        run: pytest -q tests/test_w33_pass1902_1906_five_frontiers.py
+      - name: Compile heavy workers
+        run: |
+          g++ -O3 -std=c++20 analysis/cpp/w33_pass1902_u6_external_memory.cpp -o /tmp/pass1902_u6
+          g++ -O3 -fopenmp -std=c++20 analysis/cpp/w33_pass1903_mixed_trivariate.cpp -o /tmp/pass1903_mixed
+      - name: Optional exact mixed chunk
+        if: github.event_name == 'workflow_dispatch' && inputs.run_mixed_chunk
+        run: |
+          OMP_NUM_THREADS=2 /tmp/pass1903_mixed data/w33_pass1876_rows45_hex.txt data/w33_pass1876_residual_orbits.txt /tmp/mixed.json 0 1
+          python -c "import json; d=json.load(open('/tmp/mixed.json')); assert d['status']=='PASS' and d['weighted_words']==2**30"
