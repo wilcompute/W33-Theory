@@ -97,6 +97,8 @@ The sign is trivial on `A6`, so `B` and `C` become equivalent. The exceptional-S
 
 on the real multiplicity space `R^3`. They neither coincide nor form a quaternionic pair.
 
+**Provenance boundary.** The general Weil-chirality and Frobenius--Schur frame is not new here: it is owned by repository Passes 353/355, which cite Gow (1985) and Vinroot (2010). The new result of Pass 1909 is the complete 56-class exceptional-$S_6$ phase poset and the explicit $A_6$ $\mathfrak{so}(3)$ reconciliation of the two carrier complex structures.
+
 This dovetails with the q=3 parallel theorem: the outer `Z/2` of `W(E6)` acts as complex conjugation on every complex-type `PSp(4,3)` irreducible. This is not a general `PSp(4,q)` rule: q=5 has no complex-type irreducibles although outer fusion still occurs. Finite tables at q=3,4,5,7,9 support complex type precisely for q=3 mod 4. The signed oriented-edge module realizes the degree-45 pair; permutation modules are real, so orientation is necessary for the substrate phase.
 
 ## Pass 1910 — projective KG blindness and sound phase-aware spread cuts
