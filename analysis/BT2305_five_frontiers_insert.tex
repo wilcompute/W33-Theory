@@ -1,0 +1,32 @@
+% Passes 2300--2305: five-frontier exact continuation.
+\section*{Divisible ovoid codes, complete quadratic maps, and Weil inversion}
+\addcontentsline{toc}{section}{Divisible ovoid codes, complete quadratic maps, and Weil inversion}
+
+The complete q=27 Ree--Tits hyperplane spectrum is
+\[
+1^{730},\quad 10^{4563},\quad 19^{96174},\quad
+28^{408294},\quad 37^{36504},\quad 46^{4914},\quad 55^{702}.
+\]
+All section sizes are $1\bmod 9$. Equivalently, the homogeneous coordinates generate an exactly $9$-divisible projective $[730,5]_{27}$ code. Complete censuses for the regular, Kantor, Thas--Payne and Ree--Tits q=27 families give pairwise distinct weight enumerators. The regular elliptic section gives a $27$-divisible $[730,4]_{27}$ code, whereas the three nonregular examples give exactly $9$-divisible $[730,5]_{27}$ codes.
+
+The full $PSp(4,3)$-equivariant quadratic map dimensions from the canonical $90$ are
+\[
+\begin{array}{c|rrrr}
+ &15&24&30&81\\ \hline
+\operatorname{Sym}^{2}(90)&3&6&5&12\\
+\Lambda^{2}(90)&3&4&5&12 .
+\end{array}
+\]
+Thus the complete quadratic space has dimension $26+24=50$. The outer similitude splits it into two equal $25$-dimensional sectors. The outer-even half is exactly the earlier target-identified PGSp table; the outer-odd half supplies the missing PSp-equivariant maps. Explicit signed-orbit representatives form complete bases, and every nonzero basis map is surjective onto its irreducible target.
+
+For $q=7$ and $q=11$, the canonical Schr\"odinger Weil representations on functions on $\mathbb F_q^2$ split into parity dimensions
+\[
+(25,24)\quad\hbox{and}\quad(61,60).
+\]
+The nonsquare similitude $h=\operatorname{diag}(I_2,-I_2)$ is implemented by entrywise complex conjugation. On realification, complex multiplication $J$ and conjugation $K$ obey
+\[
+J^2=-I,\qquad K^2=I,\qquad KJK=-J,
+\]
+and generate $D_4$. This is an objectwise theorem for the canonical Weil family and is not a dimension-based identification with the q=3 signed-edge $90$.
+
+A packed SystemVerilog implementation, exhaustive simulation, Yosys SAT properties for $A^2=9I+6J$ and the faithful $D_{24}$ action, and iCE40/ECP5 synthesis scripts are included. Tool results are engineering evidence for the specified RTL only; no fabricated-device timing, power, physical coupling or particle assignment is claimed.
