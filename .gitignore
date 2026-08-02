@@ -128,6 +128,8 @@ scripts/inspect_*.py
 # Vendored small ATLAS matrix-rep snapshots (kept in-repo for offline verification)
 !data/
 data/*
+!data/w33_pass_namespace_registry_v2.d/
+!data/w33_pass_namespace_registry_v2.d/*.json
 !data/atlas/
 !data/atlas/**
 !data/w33_e8_mapping.json
