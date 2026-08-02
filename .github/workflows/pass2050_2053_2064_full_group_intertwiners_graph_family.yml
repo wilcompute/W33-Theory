@@ -1,0 +1,50 @@
+name: Passes 2050-2053 and 2064 full group intertwiners graph family
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass205[0-3]**'
+      - 'analysis/w33_pass2064**'
+      - 'analysis/BT2050_2053_2064**'
+      - 'analysis/BT2064**'
+      - 'data/w33_pass205[0-3]**'
+      - 'data/w33_pass2064**'
+      - 'data/w33_pass_namespace_registry_v2.d/205[0-4].json'
+      - 'data/w33_pass_namespace_registry_v2.d/2064.json'
+      - 'tests/test_w33_pass2050_2053_2064_five_frontiers.py'
+      - 'PASS2050_2053_2064_FULL_GROUP_INTERTWINERS_GRAPH_FAMILY_RELEASE.md'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - '.github/workflows/pass2050_2053_2064_full_group_intertwiners_graph_family.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy sympy networkx pytest
+      - name: Compile all new Python sources
+        run: python -m py_compile analysis/w33_pass2050_full_group_orbit_cover_fusion.py analysis/w33_pass2051_explicit_quadratic_intertwiners.py analysis/w33_pass2052_integrated_geometry_hardware_prototype.py analysis/w33_pass2053_identify_spread_graph.py analysis/w33_pass2064_regular_spread_rank3_family.py analysis/w33_pass2050_2053_2064_verify_frozen.py
+      - name: Verify frozen certificates
+        run: python analysis/w33_pass2050_2053_2064_verify_frozen.py
+      - name: Replay full-group fusion table
+        run: python analysis/w33_pass2050_full_group_orbit_cover_fusion.py
+      - name: Execute integrated reference prototype
+        run: python analysis/w33_pass2052_integrated_geometry_hardware_prototype.py
+      - name: Rebuild and identify the spread graph
+        run: python analysis/w33_pass2053_identify_spread_graph.py
+      - name: Replay q=3,5,7 family certificate
+        run: python analysis/w33_pass2064_regular_spread_rank3_family.py
+      - name: Focused regression
+        run: pytest -q tests/test_w33_pass2050_2053_2064_five_frontiers.py
+      - name: Check scientific and engineering boundaries
+        run: |
+          grep -q '14 full-group subgroup conjugacy types' analysis/w33_pass2050_2053_2064_exact_methods.md
+          grep -q 'Seven bilinear maps' analysis/w33_pass2050_2053_2064_exact_methods.md
+          grep -q 'Kneser graph K(6,2)' analysis/w33_pass2050_2053_2064_exact_methods.md
+          grep -q 'conjectural family' analysis/w33_pass2050_2053_2064_exact_methods.md
+          grep -q 'not synthesized hardware' PASS2050_2053_2064_FULL_GROUP_INTERTWINERS_GRAPH_FAMILY_RELEASE.md
+          grep -q 'BT2064_full_group_intertwiners_graph_family_insert' w33_paper.tex
+          grep -q 'BT2064_full_group_intertwiners_graph_family_insert' photonic_holonet.tex
