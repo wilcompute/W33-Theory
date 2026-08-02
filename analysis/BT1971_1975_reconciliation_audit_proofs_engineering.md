@@ -4,12 +4,17 @@ The five fronts close with **45/45** frozen checks.
 
 ## 1971 — the two treatments reconciled
 
-The standalone note and referee draft agree after one explicit withdrawal. The
+The standalone note and referee draft agree after an explicit withdrawal. The
 45 spread-pair frames are independent but **not maximal independent**: fifteen
 residual candidate frames are individually nonadjacent to the seed. The exact
 obstruction is support deficiency—those candidates collectively meet only 20 of
 60 residual edges, so 40 residual edges cannot be covered and no 60-frame exact
 cover extends the seed.
+
+A second scope correction separates what the linewise involution proves from the
+candidate-orbit converse. The involution generates a canonical candidate
+subfamily; exhaustiveness is separately verified at `q=3,5,7` and open
+uniformly.
 
 The exact `25,920 -> 807` group-orbit reduction is retained, while the inference
 to solver performance is withdrawn. The actual combined fixed-search trees have
@@ -45,17 +50,21 @@ and retain spread-first branching inside each canonical cube.
 Uniformly, spread pairs form an independent seed and leave
 `(q^2+1)q(q+1)/2` internal spread-line edges.
 
-For any spread carrying a fixed-point-free linewise involution `sigma`, residual
-candidates are exactly `{A,sigma(A)}`. Therefore:
+For a spread carrying a fixed-point-free linewise involution `sigma`, the line
+orbits `{A,sigma(A)}` supply a residual-candidate subfamily with:
 
 - candidates: `q(q^2+1)/2`;
 - supported residual edges: `(q^2+1)(q+1)/2`;
-- support fraction: `1/q`;
+- support fraction relative to the residual set: `1/q`;
 - multiplicity: `q`.
 
-A nonsquare similitude `g^2=mu I` constructs the involution for the associated
-Desarguesian symplectic spread for every odd `q`. Existence and uniqueness for
-every arbitrary symplectic spread remain open; uniqueness is exact at `q=3`.
+The assertion that these are **all** residual candidates is the candidate-orbit
+property. It is verified by literal enumeration for `q=3,5,7`; a uniform proof
+or counterexample beyond those cases remains open. A nonsquare similitude
+`g^2=mu I` constructs the involution for the associated Desarguesian symplectic
+spread for every odd `q`, but does not by itself prove that converse. Existence
+and uniqueness for arbitrary symplectic spreads remain open; uniqueness is exact
+at `q=3`.
 
 ## 1975 — claim ledger and engineering implications
 
