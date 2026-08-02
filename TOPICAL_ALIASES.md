@@ -10,7 +10,7 @@ to guess: `grep -i gow TOPICAL_ALIASES.md` reaches
 `2026-07-15_pass355_sp43_frobenius_schur.md`, which no search for
 "phase" or "complex structure" ever would.
 
-Files scanned: **3187** · distinct tokens: **616**
+Files scanned: **3188** · distinct tokens: **616**
 
 Tokens marked ⚠ appear ONLY in topically opaque filenames (dated or
 numbered), so they are invisible to any topic search — read those first.
@@ -374,7 +374,7 @@ numbered), so they are invisible to any topic search — read those first.
 - `group:W(6,6)` ⚠ — [w33_pass2017_2021_the_genus_ladder_was_already_ours.md](analysis/w33_pass2017_2021_the_genus_ladder_was_already_ours.md)
 - `group:W(7,2)` ⚠ — [BT1707_BT1709_qubit_contextuality_hesse_bridge.md](analysis/BT1707_BT1709_qubit_contextuality_hesse_bridge.md)
 - `group:W(9,2)` ⚠ — [BT1707_BT1709_qubit_contextuality_hesse_bridge.md](analysis/BT1707_BT1709_qubit_contextuality_hesse_bridge.md)
-- `group:W(E7)` — [COMPLETE_M_THEORY_SYNTHESIS.md](docs/archive/COMPLETE_M_THEORY_SYNTHESIS.md), [DEFINITIVE_W33_E8_ANALYSIS.md](docs/archive/DEFINITIVE_W33_E8_ANALYSIS.md)
+- `group:W(E7)` — [w33_pass2093_2098_the_substrate_is_cubic_and_its_mean_is_supergolden.md](analysis/w33_pass2093_2098_the_substrate_is_cubic_and_its_mean_is_supergolden.md), [COMPLETE_M_THEORY_SYNTHESIS.md](docs/archive/COMPLETE_M_THEORY_SYNTHESIS.md), [DEFINITIVE_W33_E8_ANALYSIS.md](docs/archive/DEFINITIVE_W33_E8_ANALYSIS.md)
 - `group:W33,2` — [PART_CCCXIV_PHOTONIC_CLIFFORD_ORBIT_COMPILER.md](manuscripts/parts/PART_CCCXIV_PHOTONIC_CLIFFORD_ORBIT_COMPILER.md)
 - `group:W33,p` — [PART_DCXXXVIII_WILSON_CONTINUUM_LIMIT.md](manuscripts/parts/PART_DCXXXVIII_WILSON_CONTINUUM_LIMIT.md)
 - `named:Absolute` — [PART_CCCXLVIII_ABSOLUTE_BOUND_BRIDGE.md](manuscripts/parts/PART_CCCXLVIII_ABSOLUTE_BOUND_BRIDGE.md), [PART_CCCXV_ABSOLUTE_BOUND_BRIDGE.md](manuscripts/parts/PART_CCCXV_ABSOLUTE_BOUND_BRIDGE.md), [PART_CCLXXXVII_KREIN_ARRAY_BRIDGE.md](manuscripts/parts/PART_CCLXXXVII_KREIN_ARRAY_BRIDGE.md)
