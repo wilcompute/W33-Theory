@@ -168,6 +168,28 @@ force-of-habit rebase race, and (measured once) a silently wrong ledger row.
 Work may follow in the same session or later; an unused reservation is released
 by a follow-up empty commit "Pass NNN released".
 
+## Certificates: hash the ROUND-TRIPPED object, never the live dict
+
+Added Pass 2482 after a certificate was found that could **never** reproduce its own
+digest — not stale, unverifiable from birth, and it passed every `checks` block while
+doing so.
+
+```python
+# WRONG -- hashes the live Python dict
+canonical = json.dumps(result, indent=2, sort_keys=True) + "\n"
+
+# RIGHT -- hashes what will actually be on disk
+canonical = json.dumps(json.loads(json.dumps(result)), indent=2, sort_keys=True) + "\n"
+```
+
+The trap: a nested dict with **integer keys**. `sort_keys=True` orders ints numerically
+(`1, 2, …, 10`); after a JSON round-trip those keys are strings and order
+lexicographically (`1, 10, 11, …, 2`). Different bytes, permanently.
+
+Two serialisations are both in use here and both are fine — compact separators, and
+`indent=2` plus a trailing newline. `py -3 scripts/check_certificates.py` tries both and
+warns (never blocks). Run it after writing any certificate.
+
 ## Batch intake (remote/GitHub batches — run the guard BEFORE accepting claims)
 
 A third contribution stream now submits batched claims. The July 15 batch
