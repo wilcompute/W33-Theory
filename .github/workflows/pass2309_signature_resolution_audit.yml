@@ -1,0 +1,35 @@
+name: Pass 2309 signature resolution audit
+on:
+  pull_request:
+    paths:
+      - 'analysis/w33_pass2309_signature_resolution_audit.py'
+      - 'data/w33_pass1825_signatures720.json.gz.b64'
+      - 'data/w33_pass1821_1825_complete_cover_signature.json'
+      - '.github/workflows/pass2309_signature_resolution_audit.yml'
+  workflow_dispatch:
+jobs:
+  solve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install ortools
+      - name: Solve exact nonlinear signature quotient
+        run: python analysis/w33_pass2309_signature_resolution_audit.py
+      - name: Print compact result
+        run: python - <<'PY'
+          import json
+          d=json.load(open('data/w33_pass2309_signature_resolution_audit.json'))
+          print('PASS2309_STATUS='+d['status'])
+          print('SELECTED='+','.join(f"{x['signature_index']}x{x['multiplicity']}" for x in d['selected_multiset']))
+          print('SHA256='+d['sha256_without_hash_field'])
+          print('BRANCHES='+str(d['solver']['branches']))
+          print('CONFLICTS='+str(d['solver']['conflicts']))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass2309-signature-resolution-audit
+          path: data/w33_pass2309_signature_resolution_audit.json
