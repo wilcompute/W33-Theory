@@ -8,11 +8,11 @@ Frozen verification: **45/45** certificate checks.
 
 Aggregate SHA-256:
 
-`7d7b59cf717729b3e117c2d1e14bf595286fcb5ea8b2ef8da4d5edf388f53ac4`
+`a956435d286edcedb71c63a1a82ccd97d64d7c778d9e2cbc0197b9d313e28158`
 
 ## Delivered
 
-- **1971:** reconciled the standalone note and referee draft. Withdrew the false claim that the 45 spread frames are maximal independent. The exact replacement is a support-deficiency theorem: 15 residual candidates touch only 20 of 60 residual edges. Also separated the linewise-involution subfamily from the additional candidate-orbit converse.
+- **1971:** reconciled the standalone note and referee draft across 16 claims. Withdrew the false claim that the 45 spread frames are maximal independent. The exact replacement is a support-deficiency theorem: 15 residual candidates touch only 20 of 60 residual edges. Also separated the linewise-involution subfamily from the additional candidate-orbit converse.
 - **1972:** replaced full-scale truncated enumeration with named-witness, finite-orbit, complete-small-model, and model-growth audits.
 - **1973:** characterised the stalled solver. Spread branching remains best at 60,909 branches; combined 8- and 40-generator searches require 451,460 and 512,714 branches. The diagnosis is a propagation-horizon mismatch.
 - **1974:** proved that a linewise fixed-point-free involution supplies `q(q^2+1)/2` orbit candidates with support fraction `1/q` and multiplicity `q`. Exhaustiveness is the candidate-orbit property, verified for `q=3,5,7` but open uniformly. The nonsquare-similitude construction gives the associated Desarguesian involution.
