@@ -1,0 +1,12 @@
+{
+  "boundaries": [
+    "No HDL compiler or FPGA synthesis tool was available locally.",
+    "The Python verifier checks the literal RTL masks and arithmetic semantics, not timing, area, power, or fabrication."
+  ],
+  "checks": {"36_masks_parsed": true, "A2_equals_9I_plus_6J": true, "degree_15": true, "phase_image_C12": true, "phase_kernel_C2": true, "signed_W_plus_4_bound": true, "spectrum_15_3_minus3": true, "symmetric_zero_diagonal": true, "two_hop_datapath_identity": true},
+  "mixer": {"degree": 15, "identity": "A^2=9I+6J", "input_width": 16, "lanes": 36, "maximum_tested_absolute_sum": 268749, "output_width": 20, "spectrum": {"-3": 20, "15": 1, "3": 15}},
+  "phase_controller": {"dihedral_image_order": 24, "kernel": [[0,0],[2,3]], "rotation_states": 12},
+  "schema": "w33.pass2206.rtl_reference.v1",
+  "sha256_without_hash_field": "a20a186134409abe976b84312785435fe5906a72dc38b6071251810fa657180d",
+  "status": "PASS_ALGEBRAIC_RTL_REFERENCE"
+}
