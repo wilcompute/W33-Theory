@@ -34,7 +34,7 @@ def main():
         'counterexample':'15 residual candidate frames are individually nonadjacent to all 45 spread frames',
         'replacement':'the 45-frame seed has a residual support-deficiency obstruction: the 15 candidates touch only 20 of 60 residual edges'},
       'solver_reconciliation':{'orbit_before':25920,'orbit_after_40_cuts':807,'spread_only_branches':60909,'combined_8_branches':451460,'combined_40_branches':512714,'conclusion':'orbit-volume reduction and search-tree reduction are distinct observables'},
-      'scope':{'one_over_q':'uniform for spreads carrying the certified linewise fixed-point-free involution; q=3,5,7 finite cases otherwise','sigma':'proved for the associated Desarguesian symplectic spread; uniqueness exact only at q=3','chi':'open'},
+      'scope':{'one_over_q':'exact under the candidate-orbit property; the property is verified for q=3,5,7, while a linewise involution alone certifies only the orbit-generated subfamily','sigma':'proved for the associated Desarguesian symplectic spread; uniqueness exact only at q=3','chi':'open'},
       'checks':checks,
       'theorem':'The two spread-obstruction treatments agree after one explicit withdrawal: the spread 45-set is independent but not maximal. The exact obstruction is that its 15 residual candidates cover only 20 of 60 residual edges, so no 60-frame exact cover extends the seed.',
       'boundary':'The concordance does not decide chi(H), does not classify arbitrary symplectic spreads, and does not turn orbit reduction into a performance claim.'}
