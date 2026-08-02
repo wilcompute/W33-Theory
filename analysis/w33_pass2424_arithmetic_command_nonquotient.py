@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Pass 2424: minimal identity-word obstruction to the arithmetic command quotient."""
+"""Pass 2424: minimal and full identity-word obstruction to arithmetic phase descent."""
 from __future__ import annotations
 
 import hashlib
-import itertools
 import json
+from collections import defaultdict
 from pathlib import Path
 
 import sympy as sp
@@ -18,6 +18,7 @@ EXPECTED = "TO_BE_FROZEN"
 R = ((0, -1, 0), (1, 0, 0), (0, 0, 1))
 U = ((1, 0, 0), (0, 0, 1), (0, -1, 1))
 I = ((1, 0, 0), (0, 1, 0), (0, 0, 1))
+INVERSE = {"R": "r", "r": "R", "U": "u", "u": "U"}
 
 
 def mm(a, b):
@@ -45,13 +46,12 @@ def digest(d):
 
 def reduced_words(n):
     alphabet = "RrUu"
-    inverse = {"R": "r", "r": "R", "U": "u", "u": "U"}
     def rec(prefix):
         if len(prefix) == n:
             yield prefix
             return
         for c in alphabet:
-            if prefix and inverse[prefix[-1]] == c:
+            if prefix and INVERSE[prefix[-1]] == c:
                 continue
             yield from rec(prefix + c)
     yield from rec("")
@@ -68,8 +68,17 @@ def evaluate(word):
 
 
 def inverse_word(word):
-    inverse = {"R": "r", "r": "R", "U": "u", "u": "U"}
-    return "".join(inverse[c] for c in reversed(word))
+    return "".join(INVERSE[c] for c in reversed(word))
+
+
+def free_reduce(word):
+    stack = []
+    for c in word:
+        if stack and INVERSE[stack[-1]] == c:
+            stack.pop()
+        else:
+            stack.append(c)
+    return "".join(stack)
 
 
 def dihedral_word_orbits(words):
@@ -84,6 +93,20 @@ def dihedral_word_orbits(words):
         orbits.append(orbit)
         universe -= set(orbit)
     return orbits
+
+
+def half_ball(max_length):
+    """Map exact matrices to shortest words by command phase through max_length."""
+    reps = defaultdict(dict)
+    matrix, phase = evaluate("")
+    reps[matrix][phase] = ""
+    for n in range(1, max_length + 1):
+        for word in reduced_words(n):
+            matrix, phase = evaluate(word)
+            old = reps[matrix].get(phase)
+            if old is None or (len(word), word) < (len(old), old):
+                reps[matrix][phase] = word
+    return reps
 
 
 def build():
@@ -112,6 +135,19 @@ def build():
     shortest_phases = sorted({p for _, p in shortest})
     word_orbits = dihedral_word_orbits(shortest_words)
 
+    # Meet in the middle: any identity word of length <=16 splits into two
+    # words of length <=8 representing the same matrix.  Phase differences in
+    # this table therefore exhaust all identity phases through length 16.
+    halves = half_ball(8)
+    phase_differences = set()
+    for by_phase in halves.values():
+        phases = list(by_phase)
+        phase_differences.update((a - b) % 12 for a in phases for b in phases)
+    phase_differences.discard(0)
+
+    phase_one_word = "RRUruRuRuruRuRurU"
+    phase_one_matrix, phase_one_value = evaluate(phase_one_word)
+
     x = sp.symbols("x")
     Rs, Us = sp.Matrix(R), sp.Matrix(U)
     charpolys = {
@@ -130,6 +166,9 @@ def build():
         "exactly_32_shortest_defects": defect_counts["8"] == 32,
         "all_shortest_defects_phase_6": shortest_phases == [6],
         "three_cyclic_inverse_word_shapes": len(word_orbits) == 3 and sorted(map(len, word_orbits)) == [8, 8, 16],
+        "phase_one_absent_through_length_16": 1 not in phase_differences,
+        "phase_one_identity_at_length_17": len(phase_one_word) == 17 and phase_one_matrix == I and phase_one_value == 1,
+        "full_C12_identity_holonomy": math_gcd(phase_one_value, 12) == 1,
         "short_word_polynomials": charpolys == {"R4_U6_squared_plastic": "x**3 - x - 1", "R4_U6_supergolden": "x**3 - x**2 - 1", "R4_squared_U6_golden": "(x + 1)*(x**2 - x - 1)"},
         "hardware_kernel_matches_single_J": hw["phase_controller"]["delta_kernel"] == [[0, 0], [2, 3]],
     }
@@ -137,14 +176,14 @@ def build():
 
     d = {
         "schema": "w33.pass2424.arithmetic_command_nonquotient.v1",
-        "status": "PASS_MINIMAL_IDENTITY_WORD_DEFECT_WITH_FINITE_INTERFACE_BOUNDARY",
+        "status": "PASS_MINIMAL_DEFECT_AND_FULL_C12_IDENTITY_HOLONOMY",
         "sources": {
             "controller_trichotomy": {"path": str(TRICHOTOMY.relative_to(ROOT)), "sha256_without_hash_field": tri["sha256_without_hash_field"]},
             "hardware_contract": {"path": str(HARDWARE.relative_to(ROOT)), "sha256_without_hash_field": hw["sha256_without_hash_field"]},
         },
         "arithmetic_generators": {"R4": [list(r) for r in R], "U6": [list(r) for r in U], "generated_group": "SL3(Z) by Passes 1942/1953"},
         "finite_command_label": {"R4_increment": 3, "U6_increment": 2, "phase_modulus": 12, "abstract_map": "(a,b)->3a+2b mod 12", "single_J_kernel": [[0, 0], [2, 3]]},
-        "exact_relation": {"matrix_equation": "U6^3 R4 = R4^-1 U6^3", "identity_word": obstruction_word, "identity_word_matrix": "I3", "hardware_phase": obstruction_phase},
+        "first_exact_relation": {"matrix_equation": "U6^3 R4 = R4^-1 U6^3", "identity_word": obstruction_word, "identity_word_matrix": "I3", "hardware_phase": obstruction_phase},
         "minimality_search": {
             "alphabet": ["R", "R^-1", "U", "U^-1"],
             "freely_reduced_word_counts_checked_through_length": 8,
@@ -155,14 +194,29 @@ def build():
             "cyclic_inverse_orbits": word_orbits,
             "cyclic_inverse_orbit_sizes": sorted(map(len, word_orbits)),
         },
+        "full_holonomy_witness": {
+            "meet_in_middle_identity_phase_support_through_length_16": sorted(phase_differences),
+            "phase_one_absent_through_length": 16,
+            "phase_one_word": phase_one_word,
+            "phase_one_word_length": len(phase_one_word),
+            "phase_one_word_matrix": "I3",
+            "phase_one_word_phase": phase_one_value,
+            "consequence": "Concatenating this identity word realizes every element of C12 as path holonomy while leaving the arithmetic matrix unchanged.",
+        },
         "short_word_characteristic_polynomials": charpolys,
         "checks": checks,
-        "theorem": "The canonical exponent-sum phase map R4->3, U6->2 mod 12 does not descend from the arithmetic group <R4,U6>=SL3(Z). Its shortest failure occurs at reduced word length eight: exactly 32 matrix-identity words carry the nonzero central half-turn phase 6, in three cyclic/inverse word-shape classes.",
-        "interpretation": "The phase is path/word holonomy for the overlapping arithmetic carrier, not a function of the resulting SL3(Z) matrix. The finite single-J controller remains a valid quotient of the independent commuting-clock controller, but not of the overlapping arithmetic group under these labels.",
-        "boundary": "No hardware semantic contract is refuted. The result forbids only relation-blind compilation from arithmetic words by exponent totals and any claim that the current D24 interface is a quotient representation of SL3(Z).",
+        "theorem": "The exponent-sum phase map R4->3, U6->2 mod 12 does not descend from <R4,U6>=SL3(Z). The shortest failure has length eight and phase 6; the first phase-1 identity has length seventeen, proving that matrix-identity words realize the full C12 phase group.",
+        "interpretation": "The phase is path/word holonomy for the overlapping arithmetic carrier, not a function of the resulting SL3(Z) matrix. A single duo bit captures the first defect but cannot globally repair relation-blind compilation; the full C12 holonomy or the original word path must be retained.",
+        "boundary": "No finite hardware semantic contract is refuted. The result forbids only matrix-only rewriting followed by exponent-total phase emission and any identification of the current single-J image as a quotient representation of the overlapping arithmetic group.",
     }
     d["sha256_without_hash_field"] = digest(d)
     return d
+
+
+def math_gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return abs(a)
 
 
 def main():
@@ -170,7 +224,7 @@ def main():
     if EXPECTED != "TO_BE_FROZEN":
         assert d["sha256_without_hash_field"] == EXPECTED
         assert d == json.loads(OUT.read_text())
-    print(json.dumps({"status": d["status"], "certificate": d["sha256_without_hash_field"], "shortest_length": 8, "shortest_words": 32}, sort_keys=True))
+    print(json.dumps({"status": d["status"], "certificate": d["sha256_without_hash_field"], "shortest_defect": 8, "phase_one_length": 17}, sort_keys=True))
 
 
 if __name__ == "__main__":
