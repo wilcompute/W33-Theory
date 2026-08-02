@@ -26,13 +26,16 @@ module w33_spread_mixer36_packed #(
     integer i,j;
     reg signed [OW-1:0] acc;
     reg signed [W-1:0] xj;
+    reg [35:0] rowmask;
     always @* begin
         y_flat={36*OW{1'b0}};
+        rowmask=0;
         for(i=0;i<36;i=i+1) begin
             acc={OW{1'b0}};
+            rowmask=mask(i);
             for(j=0;j<36;j=j+1) begin
                 xj=x_flat[j*W +: W];
-                if(mask(i)[j]) acc=acc+{{(OW-W){xj[W-1]}},xj};
+                if(rowmask[j]) acc=acc+{{(OW-W){xj[W-1]}},xj};
             end
             y_flat[i*OW +: OW]=acc;
         end
