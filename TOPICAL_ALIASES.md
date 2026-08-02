@@ -10,7 +10,7 @@ to guess: `grep -i gow TOPICAL_ALIASES.md` reaches
 `2026-07-15_pass355_sp43_frobenius_schur.md`, which no search for
 "phase" or "complex structure" ever would.
 
-Files scanned: **3178** · distinct tokens: **614**
+Files scanned: **3179** · distinct tokens: **615**
 
 Tokens marked ⚠ appear ONLY in topically opaque filenames (dated or
 numbered), so they are invisible to any topic search — read those first.
@@ -224,7 +224,7 @@ numbered), so they are invisible to any topic search — read those first.
 - `code:[9,10,11]` — [PAYNE_HESSE_PACKET_DICTIONARY.md](docs/PAYNE_HESSE_PACKET_DICTIONARY.md)
 - `code:[9,10,11]]` — [W33_NEIGHBOR_ACTION_AGL23_2026_02_11.md](docs/W33_NEIGHBOR_ACTION_AGL23_2026_02_11.md)
 - `code:[9,16,17]` — [gf2_parity_proof.md](docs/gf2_parity_proof.md)
-- `code:[9,4,4]` ⚠ — [2026-07-08_pass76_QEC_codes_alpha_code.md](analysis/2026-07-08_pass76_QEC_codes_alpha_code.md), [BT692_parallel_commit_correction_note.md](analysis/BT692_parallel_commit_correction_note.md), [BT695_fibonacci_register_correction_theorem.md](analysis/BT695_fibonacci_register_correction_theorem.md)
+- `code:[9,4,4]` ⚠ — [2026-07-08_pass76_QEC_codes_alpha_code.md](analysis/2026-07-08_pass76_QEC_codes_alpha_code.md), [BT692_parallel_commit_correction_note.md](analysis/BT692_parallel_commit_correction_note.md), [BT695_fibonacci_register_correction_theorem.md](analysis/BT695_fibonacci_register_correction_theorem.md), [w33_pass2065_2070_the_containment_is_a_theorem.md](analysis/w33_pass2065_2070_the_containment_is_a_theorem.md)
 - `code:[9,9,9]` — [S12_SL27_Z3_BRIDGE_2026_02_11.md](docs/S12_SL27_Z3_BRIDGE_2026_02_11.md)
 - `code:[[0,1,2]` — [W33_NEIGHBOR_ACTION_AGL23_2026_02_11.md](docs/W33_NEIGHBOR_ACTION_AGL23_2026_02_11.md)
 - `code:[[0,4,0]` ⚠ — [BT1761_BT1763_execution_summary.md](analysis/BT1761_BT1763_execution_summary.md)
@@ -272,10 +272,11 @@ numbered), so they are invisible to any topic search — read those first.
 - `congruence:q=2(mod1` ⚠ — [w33_pass2023_2028_the_converse_reduces_to_a_regulus.md](analysis/w33_pass2023_2028_the_converse_reduces_to_a_regulus.md)
 - `congruence:q=3(mod1` ⚠ — [w33_pass2023_2028_the_converse_reduces_to_a_regulus.md](analysis/w33_pass2023_2028_the_converse_reduces_to_a_regulus.md)
 - `congruence:q=3mod4` ⚠ — [BT1907_1911_u6_mixed_phase_spread_holonomy.md](analysis/BT1907_1911_u6_mixed_phase_spread_holonomy.md)
-- `congruence:q≡1(mod4)` ⚠ — [2026-07-15_pass353_weil_chirality_theorem.md](analysis/2026-07-15_pass353_weil_chirality_theorem.md), [w33_pass1907_1911_phase_needs_orientation_and_q_mod_4.md](analysis/w33_pass1907_1911_phase_needs_orientation_and_q_mod_4.md), [w33_pass1912_1916_a_rediscovery_caught_and_one_equation_two_geometries.md](analysis/w33_pass1912_1916_a_rediscovery_caught_and_one_equation_two_geometries.md)
+- `congruence:q≡1(mod3)` ⚠ — [w33_pass2065_2070_the_containment_is_a_theorem.md](analysis/w33_pass2065_2070_the_containment_is_a_theorem.md)
+- `congruence:q≡1(mod4)` ⚠ — [2026-07-15_pass353_weil_chirality_theorem.md](analysis/2026-07-15_pass353_weil_chirality_theorem.md), [w33_pass1907_1911_phase_needs_orientation_and_q_mod_4.md](analysis/w33_pass1907_1911_phase_needs_orientation_and_q_mod_4.md), [w33_pass1912_1916_a_rediscovery_caught_and_one_equation_two_geometries.md](analysis/w33_pass1912_1916_a_rediscovery_caught_and_one_equation_two_geometries.md), [w33_pass2065_2070_the_containment_is_a_theorem.md](analysis/w33_pass2065_2070_the_containment_is_a_theorem.md)
 - `congruence:q≡1mod4` ⚠ — [2026-07-15_pass348_weil_q3_anatomy.md](analysis/2026-07-15_pass348_weil_q3_anatomy.md)
-- `congruence:q≡2(mod3)` — [PART_CDLVI_PRIME5_FIBONACCI.md](docs/PART_CDLVI_PRIME5_FIBONACCI.md)
-- `congruence:q≡3(mod4)` — [2026-07-15_pass353_weil_chirality_theorem.md](analysis/2026-07-15_pass353_weil_chirality_theorem.md), [2026-07-15_pass355_sp43_frobenius_schur.md](analysis/2026-07-15_pass355_sp43_frobenius_schur.md), [CROSS_TRACK_NOTICE_pass355_collision.md](analysis/CROSS_TRACK_NOTICE_pass355_collision.md), [w33_pass1907_1911_phase_needs_orientation_and_q_mod_4.md](analysis/w33_pass1907_1911_phase_needs_orientation_and_q_mod_4.md), [w33_pass1912_1916_a_rediscovery_caught_and_one_equation_two_geometries.md](analysis/w33_pass1912_1916_a_rediscovery_caught_and_one_equation_two_geometries.md), [w33_pass1972_1977_it_is_a_resolvable_design_question.md](analysis/w33_pass1972_1977_it_is_a_resolvable_design_question.md)
+- `congruence:q≡2(mod3)` — [w33_pass2065_2070_the_containment_is_a_theorem.md](analysis/w33_pass2065_2070_the_containment_is_a_theorem.md), [PART_CDLVI_PRIME5_FIBONACCI.md](docs/PART_CDLVI_PRIME5_FIBONACCI.md)
+- `congruence:q≡3(mod4)` — [2026-07-15_pass353_weil_chirality_theorem.md](analysis/2026-07-15_pass353_weil_chirality_theorem.md), [2026-07-15_pass355_sp43_frobenius_schur.md](analysis/2026-07-15_pass355_sp43_frobenius_schur.md), [CROSS_TRACK_NOTICE_pass355_collision.md](analysis/CROSS_TRACK_NOTICE_pass355_collision.md), [w33_pass1907_1911_phase_needs_orientation_and_q_mod_4.md](analysis/w33_pass1907_1911_phase_needs_orientation_and_q_mod_4.md), [w33_pass1912_1916_a_rediscovery_caught_and_one_equation_two_geometries.md](analysis/w33_pass1912_1916_a_rediscovery_caught_and_one_equation_two_geometries.md), [w33_pass1972_1977_it_is_a_resolvable_design_question.md](analysis/w33_pass1972_1977_it_is_a_resolvable_design_question.md), [w33_pass2065_2070_the_containment_is_a_theorem.md](analysis/w33_pass2065_2070_the_containment_is_a_theorem.md)
 - `congruence:q≡3mod4` ⚠ — [2026-07-15_pass348_weil_q3_anatomy.md](analysis/2026-07-15_pass348_weil_q3_anatomy.md), [2026-07-15_pass352_chirality_boundary_summary.md](analysis/2026-07-15_pass352_chirality_boundary_summary.md), [2026-07-15_pass353_weil_chirality_theorem.md](analysis/2026-07-15_pass353_weil_chirality_theorem.md), [2026-07-15_pass354_gap_weil_q3_script.md](analysis/2026-07-15_pass354_gap_weil_q3_script.md), [2026-07-15_pass355_sp43_frobenius_schur.md](analysis/2026-07-15_pass355_sp43_frobenius_schur.md), [2026-07-15_pass357_master_forcing_table.md](analysis/2026-07-15_pass357_master_forcing_table.md), [w33_pass1907_1911_phase_needs_orientation_and_q_mod_4.md](analysis/w33_pass1907_1911_phase_needs_orientation_and_q_mod_4.md)
 - `congruence:q≡5mod8)` ⚠ — [2026-07-15_pass92_wrq_landscape.md](analysis/2026-07-15_pass92_wrq_landscape.md)
 - `group:A(6,2` ⚠ — [2026-07-08_pass70_15vector_doily_attack.md](analysis/2026-07-08_pass70_15vector_doily_attack.md)
