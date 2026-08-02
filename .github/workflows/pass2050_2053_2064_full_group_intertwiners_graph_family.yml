@@ -48,3 +48,4 @@ jobs:
           grep -q 'not synthesized hardware' PASS2050_2053_2064_FULL_GROUP_INTERTWINERS_GRAPH_FAMILY_RELEASE.md
           grep -q 'BT2064_full_group_intertwiners_graph_family_insert' w33_paper.tex
           grep -q 'BT2064_full_group_intertwiners_graph_family_insert' photonic_holonet.tex
+# Final merged-state trigger: 77/77 canonical checks, seven explicit maps, literal D8 reference prototype, exact NO_6^-(2) identification, complete q=3,5,7 regular-spread censuses, finalized 2050-2053 and 2064 namespaces, and both manuscript wrappers include Pass 2064.
