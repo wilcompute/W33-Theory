@@ -1,0 +1,71 @@
+name: Passes 2309-2315 execution
+on:
+  pull_request:
+    paths:
+      - 'analysis/w33_pass2309_signature_resolution_solver.py'
+      - 'analysis/w33_pass2310_quadratic_hom_locality.py'
+      - 'analysis/w33_pass2311_regular_spread_parameter_closure.py'
+      - 'analysis/w33_pass2312_regular_ree_tits_comparison.py'
+      - 'analysis/w33_pass2313_command_oracle.py'
+      - 'analysis/w33_pass2314_cubic_controller_nonquotient.py'
+      - 'analysis/w33_pass2315_verify_execution.py'
+      - 'formal/w33_pass2313_command_formal.sv'
+      - 'tests/rtl/w33_pass2313_tb.sv'
+      - '.github/workflows/pass2309_2315_execution.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact computation dependencies
+        run: python -m pip install --disable-pip-version-check numpy sympy ortools
+      - name: Execute structural and symbolic fronts
+        run: |
+          set -o pipefail
+          mkdir -p execution_artifacts logs
+          python analysis/w33_pass2310_quadratic_hom_locality.py --write-json execution_artifacts/pass2310.json | tee logs/pass2310.log
+          python analysis/w33_pass2311_regular_spread_parameter_closure.py --write-json execution_artifacts/pass2311.json | tee logs/pass2311.log
+          python analysis/w33_pass2312_regular_ree_tits_comparison.py --write-json execution_artifacts/pass2312.json | tee logs/pass2312.log
+          python analysis/w33_pass2313_command_oracle.py --write-json execution_artifacts/pass2313.json --write-vectors execution_artifacts/pass2313_vectors.csv | tee logs/pass2313_oracle.log
+          python analysis/w33_pass2314_cubic_controller_nonquotient.py --write-json execution_artifacts/pass2314.json | tee logs/pass2314.log
+      - name: Solve complete 720-signature quotient
+        run: |
+          set -o pipefail
+          python analysis/w33_pass2309_signature_resolution_solver.py --time-limit 600 --write-json execution_artifacts/pass2309.json | tee logs/pass2309.log
+      - uses: YosysHQ/setup-oss-cad-suite@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          version: '2026-07-06'
+      - name: Compile and exhaustively simulate theorem-derived command vectors
+        run: |
+          set -o pipefail
+          iverilog -g2012 -Wall -s w33_pass2313_tb -o /tmp/w33_pass2313_tb \
+            rtl/w33_pass2303_packed_toolchain.sv tests/rtl/w33_pass2313_tb.sv \
+            2>&1 | tee logs/pass2313_compile.log
+          vvp /tmp/w33_pass2313_tb 2>&1 | tee logs/pass2313_simulation.log
+      - name: Prove command quotient and duo invariance
+        run: |
+          set -o pipefail
+          yosys -p 'read_verilog -formal -sv rtl/w33_pass2303_packed_toolchain.sv formal/w33_pass2313_command_formal.sv; prep -top w33_pass2313_command_formal; flatten; opt; sat -verify -prove-asserts -set-assumes -timeout 180' \
+            2>&1 | tee logs/pass2313_formal.log
+      - name: Aggregate fail-closed certificate
+        run: |
+          python analysis/w33_pass2315_verify_execution.py \
+            --artifact-dir execution_artifacts \
+            --simulation-log logs/pass2313_simulation.log \
+            --formal-log logs/pass2313_formal.log \
+            --write-json execution_artifacts/pass2315.json | tee logs/pass2315.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pass2309-2315-execution
+          path: |
+            execution_artifacts
+            logs
