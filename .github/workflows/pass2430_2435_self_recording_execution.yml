@@ -1,0 +1,80 @@
+name: Passes 2430-2435 self-recording execution
+on:
+  push:
+    paths:
+      - '.github/pass2430_2435_dispatch.trigger'
+permissions:
+  contents: write
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: pass2430-2435-execution
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact dependencies
+        id: deps
+        continue-on-error: true
+        run: |
+          python -m pip install --disable-pip-version-check numpy scipy sympy networkx ortools
+          sudo apt-get update
+          sudo apt-get install -y gap gap-character-tables
+      - name: Execute Pass 2430 probes
+        id: p2430
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          mkdir -p execution_logs execution_artifacts
+          python analysis/w33_pass2430_tomotope_label_probe.py 2>&1 | tee execution_artifacts/pass2430_probe.json | tee execution_logs/pass2430_probe.log
+          python analysis/w33_pass2430_hidden_wd4_symmetry_search.py 2>&1 | tee execution_artifacts/pass2430_hidden.json | tee execution_logs/pass2430_hidden.log
+      - name: Execute Pass 2431 identifiability theorem
+        id: p2431
+        continue-on-error: true
+        run: python analysis/w33_pass2431_u6_singleton_identifiability.py --write-json execution_artifacts/pass2431.json 2>&1 | tee execution_logs/pass2431.log
+      - name: Execute Pass 2433 fusion search
+        id: p2433
+        continue-on-error: true
+        run: python analysis/w33_pass2433_commutative_fusion_search.py 2>&1 | tee execution_artifacts/pass2433.json | tee execution_logs/pass2433.log
+      - name: Execute Pass 2434 C5 restriction
+        id: p2434
+        continue-on-error: true
+        run: gap -q analysis/gap/w33_pass2434_c5_split_hom_probe.g 2>&1 | tee execution_artifacts/pass2434_gap.json | tee execution_logs/pass2434.log
+      - name: Execute Pass 2432 literal nine-signature lift
+        id: p2432
+        continue-on-error: true
+        run: python analysis/w33_pass2432_signature_lift_cpsat.py --time-limit 3000 --workers 8 --write-json execution_artifacts/pass2432.json 2>&1 | tee execution_logs/pass2432.log
+      - name: Persist observable execution record
+        if: always()
+        env:
+          RUN_ID: ${{ github.run_id }}
+          RUN_ATTEMPT: ${{ github.run_attempt }}
+          DEPS: ${{ steps.deps.outcome }}
+          P2430: ${{ steps.p2430.outcome }}
+          P2431: ${{ steps.p2431.outcome }}
+          P2432: ${{ steps.p2432.outcome }}
+          P2433: ${{ steps.p2433.outcome }}
+          P2434: ${{ steps.p2434.outcome }}
+        run: |
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          r={'schema':'w33.pass2430_2435.observable_execution.v1','run_id':int(os.environ['RUN_ID']),'run_attempt':int(os.environ['RUN_ATTEMPT']),'branch':'pass2430-2435-execution','outcomes':{k.lower():os.environ[k] for k in ('DEPS','P2430','P2431','P2432','P2433','P2434')}}
+          Path('execution_artifacts/pass2435_run_record.json').write_text(json.dumps(r,indent=2,sort_keys=True)+'\n')
+          PY
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add execution_artifacts execution_logs
+          git commit -m "Passes 2430-2435 observable execution run ${RUN_ID}" || true
+          git push origin HEAD:pass2430-2435-execution
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pass2430-2435-observable-execution
+          path: |
+            execution_artifacts
+            execution_logs
