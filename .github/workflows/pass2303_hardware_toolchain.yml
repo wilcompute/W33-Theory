@@ -1,0 +1,72 @@
+name: Pass 2303 hardware toolchain
+on:
+  pull_request:
+    paths:
+      - 'rtl/w33_pass2303_packed_toolchain.sv'
+      - 'formal/w33_pass2303_formal.sv'
+      - 'tests/rtl/w33_pass2303_tb.sv'
+      - 'tests/test_w33_pass2300_2305.py'
+      - 'analysis/w33_pass230*.py'
+      - 'data/w33_pass230*.json'
+      - '.github/workflows/pass2303_hardware_toolchain.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  open-source-hdl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install mathematical and HDL toolchains
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys
+          python -m pip install --disable-pip-version-check numpy pytest
+          mkdir -p hardware_logs
+          iverilog -V 2>&1 | tee hardware_logs/iverilog_version.txt
+          yosys -V 2>&1 | tee hardware_logs/yosys_version.txt
+      - name: Verify mathematical certificates
+        run: |
+          python analysis/w33_pass2300_ree_tits_divisible_code.py --verify-frozen
+          python analysis/w33_pass2301_complete_quadratic_hom_bases.py --verify-frozen
+          python analysis/w33_pass2302_q7_q11_weil_outer_inversion.py --verify-frozen
+          python analysis/w33_pass2304_known_q27_spread_spectra.py --verify-frozen
+          pytest -q tests/test_w33_pass2300_2305.py
+      - name: Compile and simulate
+        run: |
+          set -o pipefail
+          iverilog -g2012 -Wall -s w33_pass2303_tb -o /tmp/w33_tb \
+            rtl/w33_pass2303_packed_toolchain.sv tests/rtl/w33_pass2303_tb.sv \
+            2>&1 | tee hardware_logs/iverilog_compile.log
+          vvp /tmp/w33_tb 2>&1 | tee hardware_logs/iverilog_simulation.log
+      - name: Lint and generic synthesis W4
+        run: |
+          set -o pipefail
+          yosys -p 'read_verilog -sv rtl/w33_pass2303_packed_toolchain.sv; hierarchy -check -top w33_spread_mixer36_packed; chparam -set W 4 -set OW 8 w33_spread_mixer36_packed; proc; opt; check; stat' \
+            2>&1 | tee hardware_logs/yosys_generic.log
+      - name: Prove mixer identity
+        run: |
+          set -o pipefail
+          yosys -p 'read_verilog -formal -sv rtl/w33_pass2303_packed_toolchain.sv formal/w33_pass2303_formal.sv; prep -top w33_mixer_formal; flatten; opt; sat -verify -prove-asserts -timeout 300' \
+            2>&1 | tee hardware_logs/yosys_formal_mixer.log
+      - name: Prove D24 associativity and kernel
+        run: |
+          set -o pipefail
+          yosys -p 'read_verilog -formal -sv rtl/w33_pass2303_packed_toolchain.sv formal/w33_pass2303_formal.sv; prep -top w33_phase_formal; flatten; opt; sat -verify -prove-asserts -set-assumes -timeout 120' \
+            2>&1 | tee hardware_logs/yosys_formal_phase.log
+      - name: iCE40 synthesis W4
+        run: |
+          set -o pipefail
+          yosys -p 'read_verilog -sv rtl/w33_pass2303_packed_toolchain.sv; hierarchy -top w33_spread_mixer36_packed; chparam -set W 4 -set OW 8 w33_spread_mixer36_packed; synth_ice40 -top w33_spread_mixer36_packed -json hardware_logs/mixer_ice40.json; stat' \
+            2>&1 | tee hardware_logs/yosys_ice40.log
+      - name: ECP5 synthesis W4
+        run: |
+          set -o pipefail
+          yosys -p 'read_verilog -sv rtl/w33_pass2303_packed_toolchain.sv; hierarchy -top w33_spread_mixer36_packed; chparam -set W 4 -set OW 8 w33_spread_mixer36_packed; synth_ecp5 -top w33_spread_mixer36_packed -json hardware_logs/mixer_ecp5.json; stat' \
+            2>&1 | tee hardware_logs/yosys_ecp5.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pass2303-hardware-logs
+          path: hardware_logs
