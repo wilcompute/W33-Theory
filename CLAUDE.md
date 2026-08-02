@@ -10,52 +10,33 @@
 This file contains project context and decisions. AI assistants should read this file for context. MCP tools are an optional enhancement for richer interaction when connected.
 
 ## Project Context
-- **Total Decisions:** 4481
-- **Known Topics:** needs-review, auto-draft, why, w33, testing, toe, architecture, holonet, docs, photonic, audit, qec, github, selector, tomotope
+- **Total Decisions:** 34
+- **Known Topics:** auto-draft, needs-review, architectural
 
 ## Current State
 **Repository:** Theory of Everything
 **Project Type:** Python Project | Python
 **Branch:** master
-**Tracking:** ahead 0, behind 1
+**Tracking:** ahead 0, behind 114
 
 **Recent Commits:**
-- `9114f66 Pass 1147 reserved: transparent runtime and bridge synthesis (Codex track)`
-- `36b2f63 Merge branch 'master' of https://github.com/wilcompute/W33-Theory`
-- `af56315 Merge origin/master and reconcile Passes 1137-1146`
-- `926bb79 Pass 1144: add transactional migration diagnostics`
-- `3efbd4a Passes 1137-1140: exact cubic carriers and publication repair`
+- `eb0276c Pass 1840 reserved: ATLAS standard-word outer-class certificate`
+- `5242ff0 Pass 1839 reserved: geometric four-bit chirality observables`
+- `7990d0c Pass 1838 reserved: weight-five syndrome decoder geometry`
+- `0e5a332 Pass 1837 reserved: middle-layer weight-enumerator compression`
+- `8e047e1 Pass 1836 reserved: global 720-signature nine-resolution solver`
 
 **Working Tree:**
 - M .continuity/SESSION_NOTES.md
 - M .cursorrules
 - M .github/copilot-instructions.md
-- M .github/workflows/bootstrap_pass1137_1141.yml
-- M .github/workflows/pass1142_1146_exact_release.yml
-- M .github/workflows/pass1142_1146_pr_materialize.yml
 - M AGENTS.md
 - M CLAUDE.md
 - M GEMINI.md
-- M PASS1142_1146_EXACT_RELEASE.md
-- M README.md
-- M RESULTS_VOCABULARY.md
-- M W33_FOR_EVERYONE.tex
-- M analysis/2026-07-27_cubic_map_kernel_decomposition.md
-- M analysis/w33_pass1142_1146_exact.py
-
-## Decision Freshness
-**0 stale decisions** · 61 need review · 1125 superseded ready to archive · Oldest unreviewed: 2026-04-20
-
-Stale decisions requiring attention:
-1. **1777318403162-biaewx** (score 50) — "Why: Add remaining arithmetic and trace-structure material?" — 14 weeks old, status: outdated, never reviewed
-2. **1777318403161-e7wo55** (score 49) — "Why: Integrate Cycle Clock Theory crosswalk?" — 14 weeks old, status: outdated, never reviewed
-3. **1777318403161-ga2u8l** (score 49) — "Why: Add W33 internal H4 matching shadow?" — 14 weeks old, status: outdated, never reviewed
-4. **1777318403161-xbitkl** (score 49) — "Why: Add QGR E8 H4 emergence supplements?" — 14 weeks old, status: outdated, never reviewed
-5. **1777318403161-s5j46a** (score 49) — "Why: theory: add Witting packet ternary extension bridge?" — 14 weeks old, status: outdated, never reviewed
-
-When referencing these decisions, note their staleness. Verify they still reflect current project state before recommending based on them.
-
-1126 decisions are eligible for Dream consolidation. Suggest running the Dream tool to archive stale decisions, merge duplicates, and resolve contradictions.
+- ?? .continuity/.gitattributes
+- ?? .continuity/decisions.json
+- ?? .continuity/decisions.jsonl
+- ?? .mcp.json
 
 ## Operating Contract
 1. **Load context, then search before you change.** MCP-capable agents: call `get_quick_context` at session start, then `search_decisions` before proposing changes. Shell/CLI-only agents (e.g. Copilot): run `continuity context`, then `continuity search "<topic>"` (`grep -i "<topic>" .continuity/decisions.jsonl` if the CLI is unavailable). Name any conflict with a prior decision and let the user choose. **When a prior decision informs your answer, cite it inline — "per decision-abc123, we chose X because Y" — so the user can see the memory being used, not just trust that it was.** `search_decisions` returns a `sourceTag` per result; use it.
@@ -75,41 +56,6 @@ When referencing these decisions, note their staleness. Verify they still reflec
 # Project Instructions
 
 How this repository prefers to work with AI assistants.
-
-## Two ways an edit silently succeeds while doing nothing (measured 2026-07-31)
-
-Both cost real passes in one session. Both are invisible: the code compiles, the
-output looks right, and the thing simply does not happen.
-
-**1. A shell heredoc eats backslash escapes.** Writing a regex through
-`py -3 - <<'PY'` or `py -3 -c "..."` turns `\b` into a literal **backspace byte**
-(`0x08`). The pattern still compiles, still reads correctly in the source, and
-matches *nothing*. This happened **four times**, and one occurrence disabled the
-Pass 1395 scope filter for a whole session before anyone noticed.
-
-- **Use the Edit/Write tools for any file containing regexes or escapes.** Never
-  a heredoc.
-- When a filter suddenly matches nothing, `print(repr(pattern))` before believing
-  it.
-- `scripts/check_stale_boundaries.py` now runs `_assert_no_control_chars()` at
-  import and raises. Copy that guard into any new file that compiles patterns.
-
-**2. A rewriting transformation is run before it is tested.** A regex sweep meant
-to escape one identifier in one file "fixed" **2,129** legitimate math-mode
-subscripts (`E_8`, `A_2`, `C_2`) across 32 manuscript files and broke the build.
-The real defect was one line.
-
-- **Prove a rewriting transformation on the single known-bad case first**, then
-  widen. The guards here already apply that discipline to *detection*; apply it
-  to *modification* too.
-- Report a dry-run count before writing. If a fix for one line touches thousands,
-  it is not that fix.
-
-Related: a manuscript insert that compiles in `w33_paper.tex` can break
-`photonic_holonet.tex`, which defines neither the theorem environments nor
-`\PSp`/`\Aut`. Guard the preamble (`\@ifundefined`, `\providecommand`) and check
-with `py -3 scripts/check_orphan_inserts.py --portability` — 25 existing inserts
-would currently break a bare host.
 
 ## Git operations: use GitKraken (all agents)
 
@@ -222,23 +168,6 @@ force-of-habit rebase race, and (measured once) a silently wrong ledger row.
 Work may follow in the same session or later; an unused reservation is released
 by a follow-up empty commit "Pass NNN released".
 
-**Do not hand-roll the scan — run `py -3 scripts/next_pass_number.py`.** Two
-mechanical failures, both measured 2026-07-31, both invisible to a careful
-reader:
-
-1. **The range form is unscannable.** A reservation written
-   `"Passes 1606-1610 reserved: ..."` does NOT match `Pass ([0-9]+)`, because
-   "Passes" has no space after "Pass". On 2026-07-31 a reservation pushed at
-   19:44 was already an ancestor of the other track's 20:00 commit and *still*
-   lost the numbers. Use the singular form, **one empty commit per number**, so
-   every scan sees every number. `--claim N` emits exactly that.
-2. **`Pass` and `BT` are SEPARATE counters and have diverged** (Pass 1616,
-   BT 1907 on that date). They coincide sometimes — Pass 1536 produced
-   `BT1536_frame_dual_k44_code.md` — so conflating them reads ~300 too high,
-   while ignoring BT lets a new `BT1613_*` land on the existing
-   `BT1613_BT1620_decoder_fault_sm_bridge.md`. The script reports both and warns
-   before you name a Pass-N artefact `BTN`.
-
 ## Batch intake (remote/GitHub batches — run the guard BEFORE accepting claims)
 
 A third contribution stream now submits batched claims. The July 15 batch
@@ -265,34 +194,33 @@ after commit:
    have regressed master and one certified-value contradiction — before merge,
    not after.
 
+## Three tools, each built from a failure that cost multiple passes
+
+Reach for these **before** claiming, not after. Each exists because the same
+mistake was made three or more times.
+
+| before you claim… | run | it exists because |
+|---|---|---|
+| "this is new" | `py -3 scripts/build_topical_aliases.py` then grep `TOPICAL_ALIASES.md` | Passes 1912/1917 rediscovered results already in-repo under **date-named files** no topic search reaches. 160 result tokens are visible only in such files. |
+| "this constraint helps" | `from constraint_audit import assert_cuts, assert_added` | Six constraints in one arc restricted nothing (vacuous inequalities, an average used as a bound, a symmetry break reused outside its regime, and one *verified* cut never added to the model). |
+| "these two objects correspond" | `py -3 scripts/gset_audit.py --emit` | Three claims matched **counts** and were called correspondences. Two were false. Two transitive `G`-sets of equal size are isomorphic iff their **permutation characters** agree — compare characters, never sizes. |
+
+**The generalisation, which is the part worth remembering:** every one of these
+failures was a claim verified in the direction that would confirm it and never in
+the direction that would break it. Before recording a result, ask what single
+computation would falsify it, and run *that* one. `maximal`, `unique`, `only`,
+`exactly`, `is` — each of those words has a cheap negation.
+
 
 ---
 
 ## Recent Decisions
-1. **decision-17848982** (7/23/2026) [auto-draft, needs-review]
-   - Q: Why: Add RH correspondence analytic operator certificate?
-   - A: (Auto-drafted from commit a481e8b on 2026-07-23.) Please review and expand with actual reasoning.
+*No decisions logged yet. Start logging architectural decisions!*
 
-2. **decision-17848982** (7/23/2026) [auto-draft, needs-review]
-   - Q: Why: BT796: add global 2160 fibration data?
-   - A: (Auto-drafted from commit 9d8491c on 2026-07-23.) Please review and expand with actual reasoning.
-
-3. **decision-17848982** (7/23/2026) [auto-draft, needs-review]
-   - Q: Why: Add all-prime Frobenius census certificate?
-   - A: (Auto-drafted from commit 98fdd02 on 2026-07-23.) Please review and expand with actual reasoning.
-
-4. **decision-17848982** (7/23/2026) [auto-draft, needs-review]
-   - Q: Why: Add all-prime elliptic Frobenius census?
-   - A: (Auto-drafted from commit 7491866 on 2026-07-23.) Please review and expand with actual reasoning.
-
-5. **decision-17848982** (7/23/2026) [auto-draft, needs-review]
-   - Q: Why: Add Casey W33 Weil-elliptic theorem insertion?
-   - A: (Auto-drafted from commit cb55f9a on 2026-07-23.) Please review and expand with actual reasoning.
-
-*1664 unreviewed drafts from auto-capture pending review — `continuity log` the real rationale or update_decision to expand them.*
+*34 unreviewed drafts from auto-capture pending review — `continuity log` the real rationale or update_decision to expand them.*
 
 ---
 
-*Auto-generated by Continuity | Updated: 2026-07-30*
+*Auto-generated by Continuity | Updated: 2026-08-01*
 
 <!-- END CONTINUITY AUTO-GENERATED CONTENT -->
