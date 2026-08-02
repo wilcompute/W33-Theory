@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Pass 2309: solve the nine-cover problem in the complete 720-signature quotient.
+"""Pass 2309: independently re-execute and refine the 720-signature quotient.
 
-This is an exact integer feasibility problem on the frozen Pass-1825 nonlinear
-signatures.  A feasible answer is only a signature-level witness; frame-level
-pairwise disjointness remains a separate condition.  An INFEASIBLE answer from
-CP-SAT closes the quotient but is still reported as a computational certificate,
-not as a handwritten proof.
+Pass 1831 already proved that the complete nonlinear signature polytope contains
+a nine-distinct-vector solution. Pass 1835 proved that the full PSp orbit of
+that displayed solution has no lift to nine pairwise-disjoint exact covers.
+This pass does not reclaim those results. It verifies the frozen witness against
+the compressed 720-row export, then solves the exact integer model while
+minimizing signature support. Any new witness is explicitly separated from the
+frame-level lifting problem.
 """
 from __future__ import annotations
 
@@ -14,13 +16,14 @@ import base64
 import gzip
 import hashlib
 import json
-from math import gcd
 from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 SIG_B64 = ROOT / "data" / "w33_pass1825_signatures720.json.gz.b64"
 CERT = ROOT / "data" / "w33_pass1821_1825_complete_cover_signature.json"
+KNOWN = ROOT / "data" / "w33_pass1831_signature_resolution.json"
+NO_LIFT = ROOT / "data" / "w33_pass1835_signature_lift_obstruction.json"
 
 
 def canonical_hash(obj: Any) -> str:
@@ -61,7 +64,34 @@ def derive_target(cert: dict[str, Any]) -> list[int]:
     return target
 
 
-def solve(vectors: list[list[int]], target: list[int], time_limit: float) -> dict[str, Any]:
+def verify_known(vectors: list[list[int]], target: list[int]) -> dict[str, Any]:
+    known = json.loads(KNOWN.read_text())
+    no_lift = json.loads(NO_LIFT.read_text())
+    witness = known["integer_witness"]
+    indices = [int(i) for i in witness["support_indices"]]
+    rows = witness["vectors"]
+    assert len(indices) == len(rows) == 9
+    assert all(vectors[i] == row for i, row in zip(indices, rows))
+    assert [sum(row[j] for row in rows) for j in range(45)] == target
+    assert no_lift["search"]["status"] == "UNSAT"
+    assert no_lift["signature_resolution_orbit"]["inner_setwise_stabilizer_order"] == witness["setwise_stabilizer_order"]
+    return {
+        "support_indices": indices,
+        "vectors": rows,
+        "class_composition": witness["class_composition"],
+        "witness_sha256": known["witness_sha256"],
+        "setwise_stabilizer_order": witness["setwise_stabilizer_order"],
+        "inner_orbit_size": no_lift["signature_resolution_orbit"]["inner_orbit_size"],
+        "cover_level_lift": {
+            "status": no_lift["search"]["status"],
+            "nodes": no_lift["search"]["nodes"],
+            "dead_ends": no_lift["search"]["dead_ends"],
+            "trace_fnv64": no_lift["search"]["trace_fnv64"],
+        },
+    }
+
+
+def solve(vectors: list[list[int]], target: list[int], known_indices: list[int], time_limit: float) -> dict[str, Any]:
     from ortools.sat.python import cp_model
 
     model = cp_model.CpModel()
@@ -70,13 +100,18 @@ def solve(vectors: list[list[int]], target: list[int], time_limit: float) -> dic
     for j in range(45):
         model.Add(sum(vectors[i][j] * x[i] for i in range(len(vectors))) == target[j])
 
-    # Prefer a compressed witness.  This does not change feasibility and makes
-    # any positive certificate easier to inspect and lift to frame level.
+    # Multiplicity is allowed because two different exact covers may have the
+    # same nonlinear signature. Minimize the number of signature types used.
     used = [model.NewBoolVar(f"u_{i}") for i in range(len(vectors))]
     for xi, ui in zip(x, used):
         model.Add(xi <= 9 * ui)
         model.Add(xi >= ui)
     model.Minimize(sum(used))
+
+    known_set = set(known_indices)
+    for i in range(len(vectors)):
+        model.AddHint(x[i], 1 if i in known_set else 0)
+        model.AddHint(used[i], 1 if i in known_set else 0)
 
     solver = cp_model.CpSolver()
     solver.parameters.max_time_in_seconds = time_limit
@@ -91,14 +126,15 @@ def solve(vectors: list[list[int]], target: list[int], time_limit: float) -> dic
         "wall_time_seconds": solver.WallTime(),
         "branches": solver.NumBranches(),
         "conflicts": solver.NumConflicts(),
-        "objective_is_support_size": True,
+        "objective": "minimize number of used signature types",
+        "objective_bound": solver.BestObjectiveBound() if status_name != "UNKNOWN" else None,
     }
     if status in (cp_model.OPTIMAL, cp_model.FEASIBLE):
         selected = [(i, solver.Value(x[i])) for i in range(len(x)) if solver.Value(x[i])]
         total = [sum(mult * vectors[i][j] for i, mult in selected) for j in range(45)]
         assert sum(mult for _, mult in selected) == 9
         assert total == target
-        norms = {96: 0, 104: 0, 120: 0, 128: 0}
+        norms: dict[int, int] = {}
         for i, mult in selected:
             n2 = sum(z * z for z in vectors[i])
             norms[n2] = norms.get(n2, 0) + mult
@@ -106,6 +142,7 @@ def solve(vectors: list[list[int]], target: list[int], time_limit: float) -> dic
             {
                 "feasible": True,
                 "support_size": len(selected),
+                "support_minimal_proved": status_name == "OPTIMAL",
                 "selected": [
                     {
                         "index": i,
@@ -115,17 +152,19 @@ def solve(vectors: list[list[int]], target: list[int], time_limit: float) -> dic
                     }
                     for i, mult in selected
                 ],
-                "weighted_signature_class_counts": {str(k): v for k, v in sorted(norms.items()) if v},
+                "weighted_signature_class_counts_by_norm2": {str(k): v for k, v in sorted(norms.items())},
                 "exact_sum": total,
                 "witness_sha256": canonical_hash(selected),
-                "boundary": "This is a nine-signature multiset summing to the universal capacity. It is not yet nine pairwise frame-disjoint exact covers.",
+                "same_support_as_pass1831": selected == [(i, 1) for i in known_indices],
+                "boundary": "This is a nine-signature multiset summing to the universal capacity. A new support still requires complete cover-orbit lifting; the known Pass-1831 orbit is already no-lift by Pass 1835.",
             }
         )
     else:
         out.update(
             {
-                "feasible": False if status_name == "INFEASIBLE" else None,
-                "boundary": "INFEASIBLE closes the complete nonlinear signature quotient computationally. UNKNOWN does not decide it.",
+                "feasible": None,
+                "support_minimal_proved": False,
+                "boundary": "UNKNOWN does not alter the known Pass-1831 feasible witness or its Pass-1835 no-lift certificate.",
             }
         )
     return out
@@ -140,19 +179,25 @@ def main() -> None:
     cert = json.loads(CERT.read_text())
     vectors = load_vectors()
     target = derive_target(cert)
-    result = solve(vectors, target, args.time_limit)
+    known = verify_known(vectors, target)
+    result = solve(vectors, target, known["support_indices"], args.time_limit)
     result.update(
         {
             "schema": "w33.pass2309.signature_resolution_quotient.v1",
+            "status_scope": "independent support-minimization re-execution",
             "signature_count": len(vectors),
             "signature_shape": [len(vectors), 45],
             "target": target,
             "target_sum": sum(target),
             "source_signature_sha256": cert["pass1825_solver_export"]["signature_sha256"],
+            "prior_artifact_reconciliation": known,
             "checks": {
                 "720_unique_signatures": True,
                 "all_signatures_sum_60": True,
                 "target_is_12_times_one": True,
+                "pass1831_support_indices_match_blob": True,
+                "pass1831_witness_exact": True,
+                "pass1835_known_orbit_no_lift": known["cover_level_lift"]["status"] == "UNSAT",
                 "selected_witness_exact_if_present": result.get("feasible") is not True or result.get("exact_sum") == target,
             },
         }
