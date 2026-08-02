@@ -1,0 +1,39 @@
+name: Pass 2309 nonlinear signature resolution
+
+on:
+  pull_request:
+    paths:
+      - 'analysis/w33_pass2309_signature_resolution_solver.py'
+      - 'data/w33_pass1825_signatures720.json.gz.b64'
+      - 'data/w33_pass1821_1825_complete_cover_signature.json'
+      - '.github/workflows/pass2309_signature_resolution.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  signature-resolution:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+      - name: Install exact solver
+        run: python -m pip install --upgrade pip 'ortools==9.14.6206'
+      - name: Solve complete 720-signature quotient
+        run: |
+          python analysis/w33_pass2309_signature_resolution_solver.py \
+            --seconds 600 \
+            --output data/w33_pass2309_signature_resolution_solver.json
+          python -m json.tool data/w33_pass2309_signature_resolution_solver.json >/dev/null
+          cat data/w33_pass2309_signature_resolution_solver.json
+      - name: Upload frozen solver result
+        uses: actions/upload-artifact@v4
+        with:
+          name: pass2309-signature-resolution
+          path: data/w33_pass2309_signature_resolution_solver.json
+          if-no-files-found: error
