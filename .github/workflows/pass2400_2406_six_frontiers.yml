@@ -1,0 +1,38 @@
+name: Passes 2400-2406 six frontiers
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass2400*'
+      - 'analysis/w33_pass2401*'
+      - 'analysis/w33_pass2402*'
+      - 'analysis/w33_pass2403*'
+      - 'analysis/w33_pass2404*'
+      - 'analysis/w33_pass2405*'
+      - 'analysis/BT2400_BT2406_six_frontiers.md'
+      - 'analysis/BT2406_six_frontiers_insert.tex'
+      - 'data/w33_pass240*.json'
+      - 'tests/test_w33_pass2400_2406.py'
+      - '.github/workflows/pass2400_2406_six_frontiers.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  frozen-certificates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check numpy networkx sympy pytest
+      - run: python analysis/w33_pass2400_verify_external_merge.py --verify-frozen
+      - run: python analysis/w33_pass2401_five_orbit_shell_algebra.py --verify-frozen
+      - run: python analysis/w33_pass2402_duad_first_coloring_base.py --verify-frozen
+      - run: python analysis/w33_pass2403_sl3_shell_parabolic_bridge.py --verify-frozen
+      - run: python analysis/w33_pass2404_e8_coexact_hom_obstruction.py
+      - run: python analysis/w33_pass2405_tomotope_192_curved_duad_atlas.py --verify-frozen
+      - run: python analysis/w33_pass2400_2406_verify_frozen.py
+      - run: pytest -q tests/test_w33_pass2400_2406.py
+      - name: Compile and reproduce B=8 external merge
+        run: python analysis/w33_pass2400_verify_external_merge.py --run-b8
