@@ -1,0 +1,38 @@
+{
+  "boundaries": [
+    "The theorem concerns the regular/Desarguesian symplectic-spread orbit.",
+    "Non-Desarguesian symplectic spreads are not included.",
+    "The graph is a rank-three association-scheme fusion, not a claim that every full group action has rank three.",
+    "The orthogonal/field-reduction description and standard polar-space spectra retain literature ownership."
+  ],
+  "checks": {
+    "incidence_gram_eigenvalues_verified": true,
+    "q11_prediction_verified": true,
+    "q35711_parameter_rows_verified": true,
+    "q357_matches_frozen_orbit_sizes": true,
+    "q3_full_pair_census": true
+  },
+  "finite_checks": [
+    {"common_adjacent": 6, "common_nonadjacent": 6, "degree_one": 20, "degree_qplus1": 15, "exhaustive_pair_histogram": {"1": 360, "q+1": 270}, "formula": {"k": 15, "lambda": 6, "mu": 6, "multiplicity_r": 15, "multiplicity_s": 20, "one_line_degree": 20, "r": 3, "s": -3, "v": 36}, "minus_points": 36, "q": 3},
+    {"common_adjacent": 130, "common_nonadjacent": 120, "degree_one": 104, "degree_qplus1": 195, "exhaustive_pair_histogram": null, "formula": {"k": 195, "lambda": 130, "mu": 120, "multiplicity_r": 65, "multiplicity_s": 234, "one_line_degree": 104, "r": 15, "s": -5, "v": 300}, "minus_points": 300, "q": 5},
+    {"common_adjacent": 658, "common_nonadjacent": 630, "degree_one": 300, "degree_qplus1": 875, "exhaustive_pair_histogram": null, "formula": {"k": 875, "lambda": 658, "mu": 630, "multiplicity_r": 175, "multiplicity_s": 1000, "one_line_degree": 300, "r": 35, "s": -7, "v": 1176}, "minus_points": 1176, "q": 7},
+    {"common_adjacent": 5038, "common_nonadjacent": 4950, "degree_one": 1220, "degree_qplus1": 6039, "exhaustive_pair_histogram": null, "formula": {"k": 6039, "lambda": 5038, "mu": 4950, "multiplicity_r": 671, "multiplicity_s": 6588, "one_line_degree": 1220, "r": 99, "s": -11, "v": 7260}, "minus_points": 7260, "q": 11}
+  ],
+  "incidence_proof_checks": [
+    {"BBtranspose": "q^2 I + J + q A", "BtransposeB": "d I + b (J-I-A_Q)", "elliptic_sections_through_noncollinear_pair": 3, "elliptic_sections_through_point": 9, "positive_eigenvalue_from_minus_q_minus_1_space": 18, "singular_points": 40, "zero_eigenvalue_from_q_minus_1_space": 0},
+    {"BBtranspose": "q^2 I + J + q A", "BtransposeB": "d I + b (J-I-A_Q)", "elliptic_sections_through_noncollinear_pair": 10, "elliptic_sections_through_point": 50, "positive_eigenvalue_from_minus_q_minus_1_space": 100, "singular_points": 156, "zero_eigenvalue_from_q_minus_1_space": 0},
+    {"BBtranspose": "q^2 I + J + q A", "BtransposeB": "d I + b (J-I-A_Q)", "elliptic_sections_through_noncollinear_pair": 21, "elliptic_sections_through_point": 147, "positive_eigenvalue_from_minus_q_minus_1_space": 294, "singular_points": 400, "zero_eigenvalue_from_q_minus_1_space": 0},
+    {"BBtranspose": "q^2 I + J + q A", "BtransposeB": "d I + b (J-I-A_Q)", "elliptic_sections_through_noncollinear_pair": 55, "elliptic_sections_through_point": 605, "positive_eigenvalue_from_minus_q_minus_1_space": 1210, "singular_points": 1464, "zero_eigenvalue_from_q_minus_1_space": 0}
+  ],
+  "schema": "w33.pass2201_2202.all_q_regular_spread_scheme.v1",
+  "sha256_without_hash_field": "4b8b08837e00d7f440950fa29049d49409986355568ed5cf9bb860aa4220b939",
+  "status": "PASS_ALL_ODD_Q_REGULAR_SPREAD_SRG_THEOREM",
+  "theorem": {
+    "intersection_rule": "Delta=0 gives 1 common line; Delta nonzero gives q+1 common lines",
+    "objects": "regular symplectic spreads, equivalently elliptic hyperplane sections of Q(4,q)",
+    "pair_invariant": "Delta(x,y)=4Q(x)Q(y)-B(x,y)^2",
+    "qplus1_relation": {"eigenvalues": ["q(q-2)", "-q"], "k": "q(q-2)(q^2+1)/2", "lambda": "q(q^3-4q^2+7q-8)/2", "mu": "q(q-2)(q-1)^2/2", "multiplicities": ["q(q^2+1)/2", "(q-2)(q+1)(q^2+1)/2"]},
+    "scope": "two-class strongly regular fusion; the full PGSp action need not have rank three for q>3",
+    "vertices": "q^2(q^2-1)/2"
+  }
+}
