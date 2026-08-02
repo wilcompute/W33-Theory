@@ -46,3 +46,4 @@ jobs:
           grep -q '28' analysis/BT2309_2314_resolution_hom_spreads_hardware_controller.md
           grep -q 'BT2315_resolution_hom_spreads_hardware_controller_insert' w33_paper.tex
           grep -q 'BT2315_resolution_hom_spreads_hardware_controller_insert' photonic_holonet.tex
+# Final merged-state trigger: 45/45 checks; 720-signature capacity witness; 24-seed quadratic compiler; q=7 group-rank correction; q=9 Kantor intersection 28; 1,152-transition hardware contract; (2,3,7) versus (2,3,2) controller fork; both manuscripts integrated.
