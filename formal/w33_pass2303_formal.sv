@@ -31,11 +31,15 @@ module w33_phase_formal;
     w33_d24_action a2(.phase_in(p1),.conjugated_in(e1),.step12(v),.reflect(fv),.phase_out(p2),.conjugated_out(e2));
     w33_d24_action ac(.phase_in(phase0),.conjugated_in(conj0),.step12(uv),.reflect(fu^fv),.phase_out(pc),.conjugated_out(ec));
     wire [3:0] pk;wire ek;
-    w33_single_j_action24 kernel(.phase_in(phase0),.conjugated_in(conj0),.step4(2),.step6(3),.reflect(0),.phase_out(pk),.conjugated_out(ek));
+    w33_single_j_action24 kernel(.phase_in(phase0),.conjugated_in(conj0),.step4(2'd2),.step6(3'd3),.reflect(1'b0),.phase_out(pk),.conjugated_out(ek));
     always @* begin
-        assume(phase0<12);assume(u<12);assume(v<12);
-        if(!fu) begin tmp=u+v;uv=(tmp>=12)?tmp-12:tmp[3:0];end
-        else uv=(u>=v)?u-v:u+12-v;
+        assume(phase0<4'd12);assume(u<4'd12);assume(v<4'd12);
+        if(!fu) begin
+            tmp={1'b0,u}+{1'b0,v};
+            uv=(tmp>=5'd12)?tmp-5'd12:tmp[3:0];
+        end else begin
+            uv=(u>=v)?u-v:u+4'd12-v;
+        end
         assert(p2==pc);assert(e2==ec);
         assert(pk==phase0);assert(ek==conj0);
     end
