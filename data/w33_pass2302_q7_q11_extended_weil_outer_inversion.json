@@ -1,0 +1,46 @@
+{
+  "boundaries": [
+    "This closes the q=7 and q=11 question for the canonical Weil family, not for every complex representation of PSp(4,q).",
+    "The q=3 signed-edge 90 is a different representation; no dimension-based identification with these Weil constituents is made.",
+    "The Weil and extended-Weil constructions retain literature ownership."
+  ],
+  "checks": {
+    "D4_relations_exact_on_realification": true,
+    "all_generator_errors_below_2e_12": true,
+    "outer_reverses_complex_structure": true,
+    "q11_minus_one_nonsquare": true,
+    "q11_parity_dimensions_61_60": true,
+    "q7_minus_one_nonsquare": true,
+    "q7_parity_dimensions_25_24": true
+  },
+  "finite_results": [
+    {
+      "complex_parity_dimensions": {"even": 25,"odd": 24},
+      "generator_errors": {"conj_chirp_minus":0.0,"conj_fourier_inverse":1.996012211284114e-14,"fourier_unitary":5.591369958193732e-15,"levi_real":0.0,"parity_chirp":0.0,"parity_fourier":0.0,"parity_levi":0.0},
+      "maximum_generator_identity_error": 1.996012211284114e-14,
+      "minus_one_nonsquare": true,
+      "q": 7,
+      "realified_dimensions": {"even":50,"odd":48}
+    },
+    {
+      "complex_parity_dimensions": {"even":61,"odd":60},
+      "generator_errors": {"conj_chirp_minus":0.0,"conj_fourier_inverse":1.0322280611990122e-13,"fourier_unitary":9.142388117375048e-15,"levi_real":0.0,"parity_chirp":0.0,"parity_fourier":0.0,"parity_levi":0.0},
+      "maximum_generator_identity_error": 1.0322280611990122e-13,
+      "minus_one_nonsquare": true,
+      "q": 11,
+      "realified_dimensions": {"even":122,"odd":120}
+    }
+  ],
+  "generator_action": {
+    "levi": "entrywise conjugation fixes the real determinant-one Levi permutation",
+    "upper_unipotent": "entrywise conjugation sends chirp B to chirp -B",
+    "weyl": "entrywise conjugation sends the normalized Fourier operator to its inverse"
+  },
+  "model": "Schrodinger Weil representation on functions F_q^2 -> C, split by parity",
+  "outer_similitude": "h=diag(I_2,-I_2), multiplier -1",
+  "realification": {"J":"complex multiplication","K":"entrywise complex conjugation","generated_group":"D4 of order 8 on each parity constituent","relations":["J^2=-I","K^2=I","K J K=-J"]},
+  "schema": "w33.pass2302.q7_q11_extended_weil_outer_inversion.v1",
+  "sha256_without_hash_field": "d850de3ddaad56765d692fcdba838e2e05bd13340da0194f56c7996807b651a7",
+  "status": "PASS_CANONICAL_WEIL_OUTER_INVERSION_Q7_Q11",
+  "theorem": "For q=7 and q=11, the canonical even and odd Weil constituents admit the nonsquare similitude h through entrywise complex conjugation. On realification, the geometric outer action K reverses the representation complex structure J and <J,K> is D4. Thus the two-i incompatibility holds objectwise for this canonical Weil family."
+}
