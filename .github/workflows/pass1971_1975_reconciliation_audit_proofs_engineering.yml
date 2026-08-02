@@ -42,6 +42,8 @@ jobs:
         run: |
           grep -q 'not maximal independent' analysis/W33_SPREAD_OBSTRUCTION_NOTE.md
           grep -q 'not maximal independent' analysis/W33_SPREAD_OBSTRUCTION_REFEREE_DRAFT.tex
+          grep -q 'candidate-orbit property' analysis/W33_SPREAD_OBSTRUCTION_NOTE.md
+          grep -q 'candidate-orbit property' analysis/W33_SPREAD_OBSTRUCTION_REFEREE_DRAFT.tex
           grep -q 'propagation-horizon mismatch' analysis/W33_SPREAD_OBSTRUCTION_REFEREE_DRAFT.tex
           grep -q 'electric charge' analysis/W33_CLAIM_STATUS_LEDGER.md
-# Final merged-state trigger: 45/45 canonical checks, finalized namespaces, corrected maximality theorem, aligned rebuild sources, and both manuscript wrappers include Pass 1975.
+# Final merged-state trigger: 45/45 canonical checks, 16-claim concordance, candidate-orbit scope corrected, finalized namespaces, and both manuscript wrappers include Pass 1975.
