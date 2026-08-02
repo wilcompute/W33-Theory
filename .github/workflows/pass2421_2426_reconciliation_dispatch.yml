@@ -1,0 +1,114 @@
+name: Passes 2421-2426 reconciliation execution
+on:
+  push:
+    paths:
+      - '.github/pass2421_2426_dispatch.trigger'
+permissions:
+  contents: write
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: pass2421-2426-reconciliation
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact dependencies
+        run: python -m pip install --disable-pip-version-check numpy sympy pytest
+      - name: Execute and write Passes 2421-2425 certificates
+        id: compute
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          mkdir -p execution_logs
+          PYTHONPATH=analysis python - <<'PY' 2>&1 | tee execution_logs/pass2421_2425_compute.log
+          import json
+          from pathlib import Path
+          from w33_pass2421_quadratic_seed_motif_quotient import build as b2421
+          from w33_pass2422_regular_spread_srg_algebra_closure import build as b2422
+          from w33_pass2423_symplectic_spread_intersection_hierarchy import build as b2423
+          from w33_pass2424_arithmetic_command_nonquotient import build as b2424
+          from w33_pass2425_relation_aware_controller_compiler import build as b2425
+          jobs = [
+              (2421, b2421, Path('data/w33_pass2421_quadratic_seed_motif_quotient.json')),
+              (2422, b2422, Path('data/w33_pass2422_regular_spread_srg_algebra_closure.json')),
+              (2423, b2423, Path('data/w33_pass2423_symplectic_spread_intersection_hierarchy.json')),
+              (2424, b2424, Path('data/w33_pass2424_arithmetic_command_nonquotient.json')),
+              (2425, b2425, Path('data/w33_pass2425_relation_aware_controller_compiler.json')),
+          ]
+          for number, builder, path in jobs:
+              value = builder()
+              path.write_text(json.dumps(value, indent=2, sort_keys=True) + '\n')
+              print(f'PASS{number} certificate={value["sha256_without_hash_field"]} status={value["status"]}')
+          PY
+      - uses: YosysHQ/setup-oss-cad-suite@v4
+        id: cad
+        continue-on-error: true
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          version: '2026-07-06'
+      - name: Compile and simulate exhaustive holonomy commit
+        id: simulation
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          mkdir -p execution_logs
+          iverilog -g2012 -Wall -s w33_pass2425_holonomy_commit_tb -o /tmp/pass2425_tb \
+            rtl/w33_pass2425_holonomy_commit.sv tests/rtl/w33_pass2425_holonomy_commit_tb.sv \
+            2>&1 | tee execution_logs/pass2425_iverilog_compile.log
+          vvp /tmp/pass2425_tb 2>&1 | tee execution_logs/pass2425_iverilog_simulation.log
+      - name: Prove fail-closed holonomy commit contract
+        id: formal
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          mkdir -p execution_logs
+          yosys -p 'read_verilog -formal -sv rtl/w33_pass2425_holonomy_commit.sv formal/w33_pass2425_holonomy_commit_formal.sv; prep -top w33_pass2425_holonomy_commit_formal; flatten; opt; sat -verify -prove-asserts -timeout 180' \
+            2>&1 | tee execution_logs/pass2425_yosys_formal.log
+      - name: Generic synthesis and structural check
+        id: synthesis
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          mkdir -p execution_logs
+          yosys -p 'read_verilog -sv rtl/w33_pass2425_holonomy_commit.sv; hierarchy -check -top w33_pass2425_holonomy_commit; proc; opt; check; stat' \
+            2>&1 | tee execution_logs/pass2425_yosys_synthesis.log
+      - name: Persist observable execution record
+        if: always()
+        env:
+          RUN_ID: ${{ github.run_id }}
+          RUN_ATTEMPT: ${{ github.run_attempt }}
+          COMPUTE_OUTCOME: ${{ steps.compute.outcome }}
+          CAD_OUTCOME: ${{ steps.cad.outcome }}
+          SIMULATION_OUTCOME: ${{ steps.simulation.outcome }}
+          FORMAL_OUTCOME: ${{ steps.formal.outcome }}
+          SYNTHESIS_OUTCOME: ${{ steps.synthesis.outcome }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          record = {
+              'schema': 'w33.pass2421_2426.observable_execution.v1',
+              'run_id': int(os.environ['RUN_ID']),
+              'run_attempt': int(os.environ['RUN_ATTEMPT']),
+              'branch': 'pass2421-2426-reconciliation',
+              'outcomes': {
+                  'compute': os.environ['COMPUTE_OUTCOME'],
+                  'cad_setup': os.environ['CAD_OUTCOME'],
+                  'simulation': os.environ['SIMULATION_OUTCOME'],
+                  'formal': os.environ['FORMAL_OUTCOME'],
+                  'synthesis': os.environ['SYNTHESIS_OUTCOME'],
+              },
+          }
+          Path('execution_logs').mkdir(exist_ok=True)
+          Path('execution_logs/pass2421_2426_run_record.json').write_text(json.dumps(record, indent=2, sort_keys=True) + '\n')
+          PY
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/w33_pass2421_*.json data/w33_pass2422_*.json data/w33_pass2423_*.json data/w33_pass2424_*.json data/w33_pass2425_*.json execution_logs
+          git commit -m "Passes 2421-2425 observable execution run ${RUN_ID}" || true
+          git push origin HEAD:pass2421-2426-reconciliation
