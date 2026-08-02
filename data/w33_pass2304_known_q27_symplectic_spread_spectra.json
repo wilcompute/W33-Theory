@@ -1,0 +1,244 @@
+{
+  "boundaries": [
+    "This is an exhaustive classification within four named coordinate families at q=27, not a classification of all symplectic spreads.",
+    "The universal ovoid theorem supplies only the weaker 1 modulo 3 congruence; the common 1 modulo 9 property of these four families is recorded as a finite theorem and a broader conjectural direction.",
+    "The regular, Kantor, Thas--Payne and Ree--Tits constructions retain literature ownership."
+  ],
+  "checks": {
+    "all_code_sizes_27_power_5": true,
+    "every_complete_spectrum_one_mod_9": true,
+    "every_family_has_730_ovoid_points": true,
+    "every_typed_spectrum_sums_551881": true,
+    "four_weight_enumerators_distinct": true,
+    "regular_27_divisible": true,
+    "three_nonregular_exactly_9_divisible": true
+  },
+  "comparison": {
+    "all_four_hyperplane_sections_one_mod_9": true,
+    "known_base_intersections": {
+      "kantor_ree_tits": 28,
+      "regular_kantor": 82,
+      "regular_ree_tits": 28,
+      "regular_thas_payne": 28,
+      "thas_payne_ree_tits": 244
+    },
+    "nonregular_code_exact_divisibility": {
+      "kantor": 9,
+      "ree_tits": 9,
+      "thas_payne": 9
+    },
+    "numbers_of_regular_intersection_values": {
+      "kantor": 5,
+      "ree_tits": 6,
+      "regular": 3,
+      "thas_payne": 7
+    },
+    "regular_code_exact_divisibility": 27
+  },
+  "complete_results": {
+    "kantor": {
+      "complete_hyperplane_spectrum": {
+        "1": 964,
+        "19": 113724,
+        "28": 380214,
+        "37": 56862,
+        "82": 117
+      },
+      "projective_code": {
+        "divisibility": "9-divisible",
+        "nonzero_weight_enumerator": {
+          "648": 3042,
+          "693": 1478412,
+          "702": 9885564,
+          "711": 2956824,
+          "729": 25064
+        },
+        "parameters": "[730,5]_27",
+        "weight_gcd": 9
+      },
+      "regular_spread_intersection_spectrum": {
+        "1": 234,
+        "19": 113724,
+        "28": 94419,
+        "37": 56862,
+        "82": 117
+      },
+      "typed_hyperplane_spectrum": {
+        "nonsquare_anisotropic_regular_sections": {
+          "1": 234,
+          "19": 113724,
+          "28": 94419,
+          "37": 56862,
+          "82": 117
+        },
+        "singular": {
+          "1": 730,
+          "28": 19710
+        },
+        "square_anisotropic": {
+          "28": 266085
+        }
+      }
+    },
+    "ree_tits": {
+      "complete_hyperplane_spectrum": {
+        "1": 730,
+        "10": 4563,
+        "19": 96174,
+        "28": 408294,
+        "37": 36504,
+        "46": 4914,
+        "55": 702
+      },
+      "projective_code": {
+        "divisibility": "9-divisible",
+        "nonzero_weight_enumerator": {
+          "675": 18252,
+          "684": 127764,
+          "693": 949104,
+          "702": 10615644,
+          "711": 2500524,
+          "720": 118638,
+          "729": 18980
+        },
+        "parameters": "[730,5]_27",
+        "weight_gcd": 9
+      },
+      "regular_spread_intersection_spectrum": {
+        "10": 4563,
+        "19": 96174,
+        "28": 122499,
+        "37": 36504,
+        "46": 4914,
+        "55": 702
+      },
+      "typed_hyperplane_spectrum": {
+        "nonsquare_anisotropic_regular_sections": {
+          "10": 4563,
+          "19": 96174,
+          "28": 122499,
+          "37": 36504,
+          "46": 4914,
+          "55": 702
+        },
+        "singular": {
+          "1": 730,
+          "28": 19710
+        },
+        "square_anisotropic": {
+          "28": 266085
+        }
+      }
+    },
+    "regular": {
+      "complete_hyperplane_spectrum": {
+        "1": 19710,
+        "28": 532170,
+        "730": 1
+      },
+      "projective_code": {
+        "divisibility": "27-divisible",
+        "nonzero_weight_enumerator": {
+          "0": 26,
+          "702": 13836420,
+          "729": 512460
+        },
+        "parameters": "[730,5]_27",
+        "weight_gcd": 27
+      },
+      "regular_spread_intersection_spectrum": {
+        "1": 18980,
+        "28": 246375,
+        "730": 1
+      },
+      "typed_hyperplane_spectrum": {
+        "nonsquare_anisotropic_regular_sections": {
+          "1": 18980,
+          "28": 246375,
+          "730": 1
+        },
+        "singular": {
+          "1": 730,
+          "28": 19710
+        },
+        "square_anisotropic": {
+          "28": 266085
+        }
+      }
+    },
+    "thas_payne": {
+      "complete_hyperplane_spectrum": {
+        "1": 964,
+        "10": 6561,
+        "19": 87480,
+        "28": 419580,
+        "37": 30618,
+        "46": 6561,
+        "82": 117
+      },
+      "projective_code": {
+        "divisibility": "9-divisible",
+        "nonzero_weight_enumerator": {
+          "648": 3042,
+          "684": 170586,
+          "693": 796068,
+          "702": 10909080,
+          "711": 2274480,
+          "720": 170586,
+          "729": 25064
+        },
+        "parameters": "[730,5]_27",
+        "weight_gcd": 9
+      },
+      "regular_spread_intersection_spectrum": {
+        "1": 234,
+        "10": 6561,
+        "19": 87480,
+        "28": 133785,
+        "37": 30618,
+        "46": 6561,
+        "82": 117
+      },
+      "typed_hyperplane_spectrum": {
+        "nonsquare_anisotropic_regular_sections": {
+          "1": 234,
+          "10": 6561,
+          "19": 87480,
+          "28": 133785,
+          "37": 30618,
+          "46": 6561,
+          "82": 117
+        },
+        "singular": {
+          "1": 730,
+          "28": 19710
+        },
+        "square_anisotropic": {
+          "28": 266085
+        }
+      }
+    }
+  },
+  "families": {
+    "kantor": {
+      "formula": "g(x,y)=-n x^3",
+      "n": "t, a nonsquare"
+    },
+    "ree_tits": {
+      "formula": "g(x,y)=-x^21-y^9"
+    },
+    "regular": {
+      "formula": "g(x,y)=-n x",
+      "n": "t, a nonsquare"
+    },
+    "thas_payne": {
+      "formula": "g(x,y)=-n x-(n^{-1}x)^3-y^9",
+      "n": "t, a nonsquare"
+    }
+  },
+  "field": "GF(27)=F3[t]/(t^3+2t+1)",
+  "schema": "w33.pass2304.known_q27_symplectic_spread_spectra.v1",
+  "sha256_without_hash_field": "27d0514393ed069dcd4b8cd3aa5df85a41a5d1f1022160f9c294210414e41e9b",
+  "status": "PASS_COMPLETE_KNOWN_Q27_FAMILY_SPECTRA",
+  "theorem": "For the four standard q=27 symplectic-spread coordinate families regular, Kantor, Thas--Payne and Ree--Tits, every hyperplane section is 1 modulo 9, but their complete spectra and projective weight enumerators are pairwise distinct. The regular code is 27-divisible; the three nonregular codes are exactly 9-divisible."
+}
