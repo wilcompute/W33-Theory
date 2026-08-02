@@ -1,0 +1,1 @@
+{"schema":"w33.pass2421_2426.dispatch.v1","branch":"pass2421-2426-reconciliation","requested_at":"2026-08-02T20:02:00-04:00","purpose":"write exact Pass2421-2425 certificates, execute exhaustive RTL simulation, formal proof, and synthesis, and persist all results back to the branch"}
