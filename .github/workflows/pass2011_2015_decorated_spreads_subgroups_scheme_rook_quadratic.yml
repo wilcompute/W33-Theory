@@ -28,8 +28,9 @@ jobs:
         run: pytest -q tests/test_w33_pass2011_2015_five_frontiers.py
       - name: Check theorem and engineering boundaries
         run: |
-          grep -q '33.*H-conjugacy classes' analysis/w33_pass2011_2015_exact_methods.md
-          grep -q 'A\^2 = 9I + 6J' analysis/w33_pass2011_2015_exact_methods.md
+          grep -q '33.*H.*conjugacy classes' analysis/w33_pass2011_2015_exact_methods.md
+          grep -q 'A\^2 = 9 I + 6 J' analysis/w33_pass2011_2015_exact_methods.md
           grep -q 'no equivariant map' analysis/w33_pass2011_2015_exact_methods.md
           grep -q 'quadratic channels' analysis/w33_pass2015_physics_computer_engineering_architectures.md
           grep -q 'All hardware items are proposals' data/w33_pass2015_degree_safety_quadratic_physics_engineering.json
+# Final merged-state trigger: 53/53 canonical checks, literal D8 exact-cover witness, finalized 2011-2015 namespaces, retired collision shards, and both manuscript wrappers include Pass 2015.
