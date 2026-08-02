@@ -10,7 +10,7 @@ to guess: `grep -i gow TOPICAL_ALIASES.md` reaches
 `2026-07-15_pass355_sp43_frobenius_schur.md`, which no search for
 "phase" or "complex structure" ever would.
 
-Files scanned: **3166** · distinct tokens: **611**
+Files scanned: **3167** · distinct tokens: **613**
 
 Tokens marked ⚠ appear ONLY in topically opaque filenames (dated or
 numbered), so they are invisible to any topic search — read those first.
@@ -98,7 +98,7 @@ numbered), so they are invisible to any topic search — read those first.
 - `cite:Wilson(1985)` — [PART_CCXL_FISCHER_GROUPS_BRIDGE.md](manuscripts/parts/PART_CCXL_FISCHER_GROUPS_BRIDGE.md), [PART_CCXXXIX_CONWAY_GROUPS_BRIDGE.md](manuscripts/parts/PART_CCXXXIX_CONWAY_GROUPS_BRIDGE.md)
 - `cite:Wilson(1991)` — [VOGEL_SYNTHESIS_COMPLETE.md](docs/archive/VOGEL_SYNTHESIS_COMPLETE.md)
 - `cite:Wilson(2009)` — [monster_connection.md](docs/monster_connection.md)
-- `cite:Youngs(1968)` — [PART_MCCXVI_MCCXXI_CYCLOTOMIC.md](manuscripts/parts/PART_MCCXVI_MCCXXI_CYCLOTOMIC.md)
+- `cite:Youngs(1968)` — [w33_pass2023_2028_the_converse_reduces_to_a_regulus.md](analysis/w33_pass2023_2028_the_converse_reduces_to_a_regulus.md), [PART_MCCXVI_MCCXXI_CYCLOTOMIC.md](manuscripts/parts/PART_MCCXVI_MCCXXI_CYCLOTOMIC.md)
 - `cite:Zauner(1999)` — [QUANTUM_INFORMATION_EXTENSION.md](docs/archive/QUANTUM_INFORMATION_EXTENSION.md)
 - `code:[0,0,0]` ⚠ — [BT1685_qsp_phase_angle_synthesis.md](analysis/BT1685_qsp_phase_angle_synthesis.md), [BT1690_projector_hardware_falsifier_update.md](analysis/BT1690_projector_hardware_falsifier_update.md)
 - `code:[0,0,1]]` — [march_2026_frontier_note.md](docs/march_2026_frontier_note.md)
@@ -268,6 +268,8 @@ numbered), so they are invisible to any topic search — read those first.
 - `code:[[9,1,3]]` ⚠ — [BT1251_arxiv_abstract_v2.md](analysis/BT1251_arxiv_abstract_v2.md), [BT1252_jun17_session_roadmap.md](analysis/BT1252_jun17_session_roadmap.md), [BT1257_section_stubs_clean_compile.md](analysis/BT1257_section_stubs_clean_compile.md)
 - `code:[[9,4,4]]` ⚠ — [BT692_parallel_commit_correction_note.md](analysis/BT692_parallel_commit_correction_note.md), [BT695_fibonacci_register_correction_theorem.md](analysis/BT695_fibonacci_register_correction_theorem.md)
 - `code:[[90,36,3]]` ⚠ — [2026-07-08_pass76_QEC_codes_alpha_code.md](analysis/2026-07-08_pass76_QEC_codes_alpha_code.md), [2026-07-15_pass81_monster_sp43_boundary.md](analysis/2026-07-15_pass81_monster_sp43_boundary.md), [2026-07-15_pass82_grand_synthesis.md](analysis/2026-07-15_pass82_grand_synthesis.md), [2026-07-15_pass84_e6_w33_explicit_iso.md](analysis/2026-07-15_pass84_e6_w33_explicit_iso.md), [2026-07-15_pass85_sm_fermion_36_mapping.md](analysis/2026-07-15_pass85_sm_fermion_36_mapping.md), [2026-07-15_pass87_w33_master_theorem.md](analysis/2026-07-15_pass87_w33_master_theorem.md), [2026-07-15_pass88_weak_mixing_angle.md](analysis/2026-07-15_pass88_weak_mixing_angle.md), [2026-07-15_pass90_e6_triality_3generations.md](analysis/2026-07-15_pass90_e6_triality_3generations.md)
+- `congruence:q=2(mod1` ⚠ — [w33_pass2023_2028_the_converse_reduces_to_a_regulus.md](analysis/w33_pass2023_2028_the_converse_reduces_to_a_regulus.md)
+- `congruence:q=3(mod1` ⚠ — [w33_pass2023_2028_the_converse_reduces_to_a_regulus.md](analysis/w33_pass2023_2028_the_converse_reduces_to_a_regulus.md)
 - `congruence:q=3mod4` ⚠ — [BT1907_1911_u6_mixed_phase_spread_holonomy.md](analysis/BT1907_1911_u6_mixed_phase_spread_holonomy.md)
 - `congruence:q≡1(mod4)` ⚠ — [2026-07-15_pass353_weil_chirality_theorem.md](analysis/2026-07-15_pass353_weil_chirality_theorem.md), [w33_pass1907_1911_phase_needs_orientation_and_q_mod_4.md](analysis/w33_pass1907_1911_phase_needs_orientation_and_q_mod_4.md), [w33_pass1912_1916_a_rediscovery_caught_and_one_equation_two_geometries.md](analysis/w33_pass1912_1916_a_rediscovery_caught_and_one_equation_two_geometries.md)
 - `congruence:q≡1mod4` ⚠ — [2026-07-15_pass348_weil_q3_anatomy.md](analysis/2026-07-15_pass348_weil_q3_anatomy.md)
