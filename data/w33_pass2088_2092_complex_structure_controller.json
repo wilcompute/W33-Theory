@@ -1,0 +1,121 @@
+{
+  "boundaries": [
+    "Non-Desarguesian symplectic spreads are not classified.",
+    "The all-q rank-three intersection graph parameters remain separate.",
+    "The order-48 controller assumes independent mu4 and mu6 clocks.",
+    "No finite result is promoted to a physical coupling or particle label."
+  ],
+  "checks": {
+    "all_tested_orbit_formulas": true,
+    "controller_checks": true,
+    "field_reduction_checks": true,
+    "observed_q357_orbits_recovered": true,
+    "q3_full_stabilizer_structure_order_C2_x_S6": true,
+    "q3_inner_route_stabilizer_order_720": true,
+    "q3_local_Kneser_quotient_order_S6": true,
+    "q3_spread_orbit_order_36": true,
+    "q3_spread_stabilizer_order_1440": true
+  },
+  "field_reduction_q3": {
+    "checks": {
+      "J_multiplier_is_mu": true,
+      "J_squared_is_mu": true,
+      "beta_nondegenerate": true,
+      "spread_partitions_pg3": true,
+      "spread_totally_isotropic": true,
+      "unique_projective_involution_in_field_torus": true
+    },
+    "gram_matrix": [
+      [0, 0, 0, 1],
+      [0, 0, 1, 0],
+      [0, 2, 0, 0],
+      [2, 0, 0, 0]
+    ],
+    "nonsquare_mu": 2,
+    "points_per_line": [4],
+    "projective_points": 40,
+    "q": 3,
+    "spread_lines": 10
+  },
+  "orbit_formula_rows": [
+    {
+      "PGSp4_order": 51840,
+      "closed_formula": 36,
+      "q": 3,
+      "quadratic_structure_centralizer_order": 1440,
+      "regular_spread_orbit_size": 36
+    },
+    {
+      "PGSp4_order": 9360000,
+      "closed_formula": 300,
+      "q": 5,
+      "quadratic_structure_centralizer_order": 31200,
+      "regular_spread_orbit_size": 300
+    },
+    {
+      "PGSp4_order": 276595200,
+      "closed_formula": 1176,
+      "q": 7,
+      "quadratic_structure_centralizer_order": 235200,
+      "regular_spread_orbit_size": 1176
+    },
+    {
+      "PGSp4_order": 25721308800,
+      "closed_formula": 7260,
+      "q": 11,
+      "quadratic_structure_centralizer_order": 3542880,
+      "regular_spread_orbit_size": 7260
+    }
+  ],
+  "phase_controller": {
+    "D12_order": 12,
+    "D4_intersection_D12_order": 2,
+    "D4_order": 8,
+    "abelianization_order": 8,
+    "center": [
+      [0, 0, 0],
+      [0, 3, 0],
+      [2, 0, 0],
+      [2, 3, 0]
+    ],
+    "checks": {
+      "abelianization_order_8": true,
+      "associativity": true,
+      "center_order_4": true,
+      "closure": true,
+      "controller_not_C2_x_S4": true,
+      "controller_order_48": true,
+      "derived_order_6": true,
+      "frame_stabilizer_center_order_2": true,
+      "frame_stabilizer_derived_order_12": true,
+      "inverses": true,
+      "mu4_subgroup_is_D4_order_8": true,
+      "mu6_subgroup_is_D12_order_12": true,
+      "phase_subgroups_generate_controller": true,
+      "phase_subgroups_share_only_inverter": true
+    },
+    "comparison_C2_x_S4": {
+      "center_order": 2,
+      "derived_order": 12,
+      "order": 48
+    },
+    "derived_subgroup": [
+      [0, 0, 0],
+      [0, 2, 0],
+      [0, 4, 0],
+      [2, 0, 0],
+      [2, 2, 0],
+      [2, 4, 0]
+    ],
+    "order": 48,
+    "presentation": "(C4 x C6) : C2, with the C2 acting by inversion"
+  },
+  "schema": "w33.pass2088_2092.complex_structure_controller.v1",
+  "status": "PASS",
+  "theorems": {
+    "centralizer": "Its projective centralizer is C2 x PSigmaL(2,q^2), of order 2 q^2 (q^4-1), and the orbit has size q^2(q^2-1)/2.",
+    "phase_controller": "If the mu4 and mu6 clocks are independent apart from their common outer inversion, they generate (C4 x C6):C2 of order 48.",
+    "q3_stabilizer": "At q=3 the stabilizer is C2 x S6 of order 1440; its central C2 is invisible on the Kneser K(6,2) local graph, leaving S6.",
+    "regular_spread_orbit": "For odd q, the canonical regular symplectic spreads form the PGSp(4,q)-conjugacy class of the unique projective quadratic-structure involution attached to field reduction."
+  }
+}
