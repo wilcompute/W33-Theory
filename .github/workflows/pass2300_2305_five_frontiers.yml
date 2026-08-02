@@ -1,0 +1,46 @@
+name: Passes 2300-2305 five frontiers
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass230*.py'
+      - 'analysis/BT2300_BT2305**'
+      - 'analysis/BT2305**'
+      - 'data/w33_pass230*.json'
+      - 'data/w33_pass_namespace_registry_v2.d/230*.json'
+      - 'rtl/w33_pass2303_packed_toolchain.sv'
+      - 'formal/w33_pass2303_formal.sv'
+      - 'tests/test_w33_pass2300_2305.py'
+      - 'tests/rtl/w33_pass2303_tb.sv'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'PASS2300_2305_FIVE_FRONTIERS_RELEASE.md'
+      - '.github/workflows/pass2300_2305_five_frontiers.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-certificates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check numpy pytest
+      - name: Verify frozen certificates and semantic hashes
+        run: |
+          python analysis/w33_pass2300_ree_tits_divisible_code.py --verify-frozen
+          python analysis/w33_pass2301_complete_quadratic_hom_bases.py --verify-frozen
+          python analysis/w33_pass2302_q7_q11_weil_outer_inversion.py --verify-frozen
+          python analysis/w33_pass2304_known_q27_spread_spectra.py --verify-frozen
+          python analysis/w33_pass2300_2305_verify_frozen.py
+      - name: Focused regression
+        run: pytest -q tests/test_w33_pass2300_2305.py
+      - name: Manuscript and evidence boundaries
+        run: |
+          grep -F '\input{analysis/BT2305_five_frontiers_insert}' w33_paper.tex
+          grep -F '\input{analysis/BT2305_five_frontiers_insert}' photonic_holonet.tex
+          grep -F 'not a classification of all symplectic spreads' analysis/BT2300_BT2305_five_frontiers.md
+          grep -F 'not physical coupling constants' analysis/BT2300_BT2305_five_frontiers.md
+          grep -F 'deterministic Icarus simulation' analysis/BT2300_BT2305_five_frontiers.md
