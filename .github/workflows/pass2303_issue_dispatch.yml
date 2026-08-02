@@ -7,17 +7,17 @@ permissions:
   issues: write
 jobs:
   open-source-hdl:
-    if: github.event.issue.title == '[pass2303-hardware-dispatch]'
+    if: github.event.issue.title == '[pass2303-hardware-dispatch-v2]'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+      - uses: YosysHQ/setup-oss-cad-suite@v4
         with:
-          ref: agent/pass2303-hardware-toolchain
-      - name: Install mathematical and HDL toolchains
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          version: '2026-07-06'
+      - name: Install Python checks and record tool versions
         run: |
-          sudo apt-get update
-          sudo apt-get install -y iverilog yosys
           python -m pip install --disable-pip-version-check numpy pytest
           mkdir -p hardware_logs
           iverilog -V 2>&1 | tee hardware_logs/iverilog_version.txt
@@ -28,6 +28,7 @@ jobs:
           python analysis/w33_pass2301_complete_quadratic_hom_bases.py --verify-frozen
           python analysis/w33_pass2302_q7_q11_weil_outer_inversion.py --verify-frozen
           python analysis/w33_pass2304_known_q27_spread_spectra.py --verify-frozen
+          python analysis/w33_pass2300_2305_verify_frozen.py
           pytest -q tests/test_w33_pass2300_2305.py
       - name: Compile and simulate
         run: |
