@@ -1,0 +1,85 @@
+\section*{Regular spreads as projective quadratic structures}
+\addcontentsline{toc}{section}{Regular spreads as projective quadratic structures}
+
+Let $q$ be odd, let $\mu\in\mathbb F_q^\times$ be nonsquare, and write
+$K=\mathbb F_{q^2}=\mathbb F_q[t]/(t^2-\mu)$.  Regard $V=K^2$ as a
+four-dimensional $\mathbb F_q$-space.  If
+\[
+\Omega(x,y)=x_1y_2-x_2y_1
+\]
+and $\beta(x,y)$ is the $t$-coefficient of $\Omega(x,y)$, then $\beta$ is a
+nondegenerate alternating $\mathbb F_q$-form.  The one-dimensional
+$K$-subspaces of $K^2$ are totally isotropic two-dimensional
+$\mathbb F_q$-subspaces and form a regular symplectic spread.
+
+Multiplication by $t$ defines $J$ with
+\[
+J^2=\mu I,
+\qquad
+\beta(Jx,Jy)=\mu\beta(x,y).
+\]
+Thus $\sigma=[J]\in PGSp(4,q)$ is a projective involution.  The spread is
+exactly the set of $J$-invariant projective lines.  Since
+$K^\times/\mathbb F_q^\times\cong C_{q+1}$ has a unique involution, each
+regular field-reduction spread carries a unique projective quadratic structure.
+For $q\equiv3\pmod4$ one may take $\mu=-1$, recovering the geometric $i$;
+for $q\equiv1\pmod4$ a different nonsquare is required.
+
+Restricting the classical Desarguesian-spread stabilizer to symplectic
+similitudes gives
+\[
+C_{PGSp(4,q)}(\sigma)
+\cong C_2\times P\Sigma L_2(q^2),
+\qquad
+\left|C_{PGSp(4,q)}(\sigma)\right|=2q^2(q^4-1).
+\]
+Therefore the canonical regular-spread orbit has size
+\[
+\boxed{
+\frac{|PGSp(4,q)|}{|C_{PGSp(4,q)}(\sigma)|}
+=\frac{q^2(q^2-1)}2.
+}
+\]
+This proves the orbit-size formula for every odd $q$ and recovers the complete
+computational values
+\[
+36,\quad300,\quad1176
+\]
+at $q=3,5,7$.  It does not promote the all-$q$ rank-three intersection graph,
+and it does not classify non-Desarguesian symplectic spreads.
+
+At $q=3$, the established inner spread stabilizer is $S_6$ of order $720$,
+so the full stabilizer is
+\[
+\boxed{C_{PGSp(4,3)}(\sigma)\cong C_2\times S_6.}
+\]
+The central $C_2=\langle\sigma\rangle$ is silent on the local spread graph;
+the visible quotient $S_6$ is the automorphism group of the Kneser local graph
+$K(6,2)$ and its Johnson second subconstituent $J(6,3)$.
+
+\subsection*{The shared phase-inversion controller}
+The geometric/representation clock has presentation $C_4:C_2\cong D_4$,
+while the earlier $\mu_6$ clock has presentation $C_6:C_2\cong D_{12}$.
+If the clocks are independent apart from their common outer inverter, their
+combined controller is
+\[
+\Gamma=(C_4\times C_6):C_2,
+\qquad |\Gamma|=48,
+\]
+where the last factor acts by simultaneous inversion.  Exact enumeration gives
+\[
+Z(\Gamma)\cong C_2^2,
+\qquad
+[\Gamma,\Gamma]\cong C_6,
+\qquad
+\Gamma_{\rm ab}\cong C_2^3.
+\]
+The subgroups $D_4$ and $D_{12}$ intersect in their common inverter and generate
+$\Gamma$.  Although $|\Gamma|=48$, it is not the frame stabilizer
+$C_2\times S_4$: their center and derived-subgroup orders are respectively
+$(4,6)$ and $(2,12)$.
+
+All statements in this insert are finite-geometric or group-theoretic.  The
+order-$48$ synthesis assumes clock independence, is not a physical coupling,
+and restores none of the withdrawn charge, colour, generation, flux, or
+particle identifications.
