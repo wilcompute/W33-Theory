@@ -1,0 +1,34 @@
+{
+  "boundaries": [
+    "The historical Pass-2015 JSON is preserved for provenance but its 24/81 multiplicities are superseded by the corrected target-identified table.",
+    "The order-48 controller remains a valid abstract independent-clock model; it is not faithful on the canonical single-J 90-sector.",
+    "At q=7 and q=11 the geometric i exists because -1 is nonsquare; this packet does not claim the representation-theoretic inversion theorem at q=11.",
+    "No controller group is identified with a measured coupling, particle label, or fabricated circuit."
+  ],
+  "checks": {"abstract_D8_D12_intersection_order_2": true, "abstract_controller_center_order_4": true, "abstract_controller_derived_order_6": true, "abstract_controller_order_48": true, "corrected_gauge_antisymmetric_channels_zero": true, "image_is_D24": true, "q7_q11_geometric_i_exists": true, "represented_D8_D12_intersection_order_4": true, "single_J_image_order_24": true, "single_J_kernel_order_2": true},
+  "controller": {
+    "abstract_center": [[0,0,0],[0,3,0],[2,0,0],[2,3,0]],
+    "abstract_derived_subgroup": [[0,0,0],[0,2,0],[0,4,0],[2,0,0],[2,2,0],[2,4,0]],
+    "abstract_group": "(C4 x C6):C2, inversion action, order 48",
+    "abstract_phase_subgroup_intersection_order": 2,
+    "image": "D24=C12:C2 of order 24",
+    "interpretation": "the canonical 90-sector supplies one complex phase circle; faithful order 48 needs two independent complex phase registers",
+    "kernel": [[0,0,0],[2,3,0]],
+    "represented_phase_subgroup_intersection_order": 4,
+    "single_J_representation": "(a,b,e) maps to (3a+2b mod 12,e) in C12:C2"
+  },
+  "q7_q11_two_i_audit": [
+    {"D4_two_i_incompatibility": "open in this packet", "geometric_i_exists": true, "minus_one_nonsquare": true, "q": 7, "q_mod_4": 3, "representation_phase_evidence": "18 non-real irreducibles observed in the existing CTblLib q=7 audit"},
+    {"D4_two_i_incompatibility": "open in this packet", "geometric_i_exists": true, "minus_one_nonsquare": true, "q": 11, "q_mod_4": 3, "representation_phase_evidence": "not recomputed in this packet"}
+  ],
+  "quadratic_Hom_correction": {
+    "canonical_map_boundary": "The seven Pass-2051 tensors are explicit surjective generators, not complete Hom-space bases.",
+    "changed_entries": {"Lambda2_90": {"24": {"corrected": 0, "historical": 4}, "81": {"corrected": 5, "historical": 7}}, "Sym2_90": {"24": {"corrected": 5, "historical": 1}, "81": {"corrected": 7, "historical": 5}}},
+    "corrected_actual_signed_edge_targets": {"Lambda2_90": {"15": 0, "24": 0, "30": 2, "81": 5}, "Sym2_90": {"15": 3, "24": 5, "30": 3, "81": 7}},
+    "historical_target_ambiguous_table": {"Lambda2_90": {"15": 0, "24": 4, "30": 2, "81": 7}, "Sym2_90": {"15": 3, "24": 1, "30": 3, "81": 5}},
+    "selection_rule": "Both gauge blocks 15 and 24 are absent from Lambda^2(90), while Sym^2(90) reaches both."
+  },
+  "schema": "w33.pass2200_2204_2205.quadratic_controller_audit.v1",
+  "sha256_without_hash_field": "f385072260077f141cb89ad75c1657b5d238ec7646ea3c0ef7862c647955fece",
+  "status": "PASS_WITH_Q11_REPRESENTATION_BOUNDARY"
+}
