@@ -28,7 +28,7 @@ The universal theorem for arbitrary ovoids of `Q(4,p^h)` supplies only the weake
 
 ## Pass 2301 — the full quadratic algebra has dimension 50
 
-The literal signed 240-edge representation and its target-identified projectors were reconstructed over `GF(101)`. Signed orbits of edge triples give compressed integral tensors. Exact output-span and independence tests produce complete bases
+The literal signed 240-edge representation and its target-identified projectors were reconstructed modulo 101, a semisimple test characteristic not dividing the group order. The tensors themselves are integral signed-orbit tensors; exact modular full-rank tests certify their characteristic-zero independence and surjectivity, while the Hom dimensions are independently fixed by the character calculation. Exact output-span and independence tests produce complete bases
 
 | target | `Sym^2(90)` | `Lambda^2(90)` |
 |---:|---:|---:|
@@ -97,11 +97,11 @@ The tool-friendly RTL consists of
 - a packed 36-lane signed spread mixer;
 - the faithful `D24=C12:C2` phase action;
 - a wrapper implementing the shared C4/C6 command map;
-- exhaustive Icarus simulation;
-- Yosys SAT properties for `A^2=9I+6J`, D24 associativity, and the `(step4,step6)=(2,3)` kernel;
-- generic, iCE40 and ECP5 synthesis commands.
+- deterministic Icarus simulation of the mixer and exhaustive simulation of all phase-state/command combinations;
+- Yosys SAT properties proving `A^2=9I+6J` for every 4-bit 36-lane input, D24 associativity, and the `(step4,step6)=(2,3)` kernel;
+- generic, iCE40 and ECP5 synthesis of an explicit `W=4, OW=8` mixer instance.
 
-The observable pull-request workflow is `Pass 2303 hardware toolchain`. Tool versions, proof logs, synthesis logs and JSON netlists are retained as a workflow artifact. Exact cell counts and conclusions are frozen only after the workflow completes; no fabricated-device timing, power or area is inferred from generic synthesis.
+The observable pull-request workflow is `Pass 2303 hardware toolchain`. Tool versions, proof logs, synthesis logs and JSON netlists are retained as workflow artifacts. Exact cell counts and conclusions are frozen only after the workflow completes; no fabricated-device timing, power or area is inferred from generic synthesis.
 
 ## Pass 2304 — four q=27 spread families have distinct spectra
 
