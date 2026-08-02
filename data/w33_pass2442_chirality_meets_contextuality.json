@@ -1,0 +1,33 @@
+{
+  "checks": {
+    "chiral_side_is_the_contextual_one": true,
+    "q43_has_36_ovoids": true,
+    "q43_is_srg_40_12_2_4": true,
+    "w33_has_no_ovoid": true,
+    "w33_is_srg_40_12_2_4": true,
+    "w33_max_partial_ovoid_is_7": true
+  },
+  "chiral_side_is_ovoid_free": true,
+  "pass": 2442,
+  "prior_art": [
+    "analysis/w33_pass1021_corollary_ovoid_orientation.py -- the (36,0)/(0,36) spread/ovoid duality count and the contextuality reading",
+    "Thas -- W(q) has ovoids iff q is even",
+    "analysis/w33_pass2436_2441_the_chiral_tower_and_the_achiral_one.md -- the C6/S3 fibre split this pass aligns against"
+  ],
+  "q43_max_partial_ovoid": 10,
+  "q43_ovoids": 36,
+  "q43_srg": [
+    40,
+    12,
+    2,
+    4
+  ],
+  "w33_max_partial_ovoid": 7,
+  "w33_ovoids": 0,
+  "w33_srg": [
+    40,
+    12,
+    2,
+    4
+  ]
+}
