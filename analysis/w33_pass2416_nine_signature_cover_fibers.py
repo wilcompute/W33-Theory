@@ -87,62 +87,63 @@ def pair_orbits(fgens,ogens):
         unseen-=O;out.append(O)
     return sorted(out,key=len)
 
-SIGNATURES=[[0,1,1,1,1,2,1,1,4,1,4,1,1,1,2,1,1,0,2,4,1,1,1,1,1,1,1,1,1,1,1,1,4,2,1,1,1,0,1,1,1,4,0,1,1],[0,1,1,1,1,2,1,1,4,1,4,1,1,1,2,1,1,0,2,4,1,1,1,1,1,1,1,1,1,1,1,1,4,2,1,1,1,0,1,1,1,4,0,1,1],[1,1,1,1,1,1,1,1,4,1,2,3,1,1,1,1,1,1,1,2,3,1,1,1,1,3,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,2,1,1,3],[0,1,1,1,1,2,1,1,4,1,4,1,1,1,2,1,1,0,2,4,1,1,1,1,1,1,1,1,1,1,1,1,4,2,1,1,1,0,1,1,1,4,0,1,1],[1,1,1,1,1,1,1,1,4,2,2,2,1,1,1,1,1,1,1,2,2,1,1,1,1,2,2,1,1,1,1,2,2,1,1,1,1,1,2,1,1,2,1,1,2],[0,1,1,1,1,3,1,1,3,1,3,1,1,1,3,1,1,0,3,3,1,1,1,1,1,1,1,1,1,1,1,1,3,3,1,1,1,0,1,1,1,4,0,1,1],[1,1,1,1,1,1,1,1,4,2,2,2,1,1,1,1,1,1,1,2,2,1,1,1,1,2,2,1,1,1,1,2,2,1,1,1,1,1,2,1,1,2,1,1,2],[1,1,1,1,1,1,1,1,4,1,2,3,1,1,1,1,1,1,1,2,3,1,1,1,1,3,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,2,1,1,3],[0,1,1,1,1,3,1,1,3,1,3,1,1,1,3,1,1,0,3,3,1,1,1,1,1,1,1,1,1,1,1,1,3,3,1,1,1,0,1,1,1,4,0,1,1]]
+SIGNATURE_STRINGS=['111111141024111111111240111402111111111111024','111111402141111111112011141110411121114211101','111113121211311111113112111121131111111111411','111141111111024111111402111111111024240111111','112211121211112211211112112141111111112211211','113110113311110131141111111113011311311113110','141111111111111222111222111111222111111222111','211311111111311211111111411113111121111131112','311113101101131113311011113110113311111111141']
+COVER_MASK_HEX=['402800000404200800022000140850104000000412c1400000004a1020088020020201200000001002800080902020009000000100240011000a004000000052010c200','10100800008000100200080211000888010160000484000004410a000400822020040c00002000a02080004001080024202800100400800009040048104400000001240','200021010004020200101080020850000004002020064002200024800002228000002300200101104014000200000950028001040000401800022004040002041002004','200040500200020022140011000190000040800400000680000820040c40085000008000114800000004402208005401880000000110300400000211000001112880000','20000c140800000480042a002080800000002002100000800400101002002448020000810800000a2020010148014000001024528000082000004080214100808000404','0810100000080010440840100800006009004201402020140800001008008001080500028002500800111000002000010180100110800040a0108000400808010020208','008001201002200240000210002400a04000022001062000204050800000400000104510204480000000000512222000022000000222288000000248000000891240000','802200120003000200010184040000008046000528004802004804000128000414000008040082008004400008080000000408408801400021040900000001020501001','008801000803000300001008140080a40600010880400000c0001000000440000c030000808100500640008000012202020100000208880200020004048200040000284']
 CLASS_LABELS=[0,0,2,0,3,1,3,2,1]
-COVERS=[[9,14,15,20,29,32,34,66,77,79,92,96,110,113,124,152,155,169,177,184,187,195,211,213,224,257,260,269,277,289,299,303,313,320,325,327,330,362,364,370,371,373,376,382,410,416,424,426,431,438,440,457,461,479,489,494,502,527,529,538],[6,9,12,46,50,56,63,66,78,84,87,107,118,128,143,145,153,158,161,175,180,194,211,217,225,227,241,262,263,270,281,289,293,299,310,325,327,332,338,342,366,371,374,393,394,396,404,415,419,423,436,440,445,455,469,480,499,519,528,536],[2,13,24,30,37,54,62,73,77,95,96,106,126,132,147,149,160,162,164,167,189,206,208,218,224,228,236,249,260,261,265,291,293,297,301,323,326,329,345,349,362,365,366,377,385,398,424,426,431,437,451,456,464,477,485,494,508,516,521,537],[19,23,25,28,32,36,60,64,69,94,104,105,112,116,151,155,156,166,168,170,183,189,193,202,206,239,242,244,248,267,288,290,295,306,310,311,318,329,335,355,357,358,382,395,402,424,427,428,444,448,462,464,469,473,485,501,512,514,522,537],[2,10,27,35,44,50,52,57,67,74,97,103,123,125,128,130,134,137,144,170,172,183,186,188,196,209,217,221,223,247,252,259,277,287,290,294,297,309,320,328,342,355,376,381,393,427,435,441,453,455,457,462,475,478,503,510,512,518,519,537],[3,9,17,28,39,47,58,75,80,89,91,98,115,120,124,136,147,148,156,177,200,204,208,223,232,234,237,251,253,268,270,279,284,299,311,320,343,350,352,361,369,378,380,389,394,404,407,417,418,439,448,458,463,470,474,480,495,520,528,535],[18,21,24,28,31,35,63,66,69,99,103,105,109,113,117,145,149,169,173,177,181,184,188,190,235,238,242,249,256,260,262,266,272,298,323,328,330,338,345,361,365,366,372,385,389,410,417,419,430,433,448,453,474,477,481,494,505,514,520,536],[0,7,22,26,36,42,46,54,71,78,85,92,104,112,116,124,136,140,158,167,174,177,187,197,202,209,218,228,238,248,250,253,258,268,280,291,303,315,323,331,342,350,359,369,376,384,391,404,420,431,438,447,458,466,477,486,498,507,520,537],[4,8,15,20,33,43,54,57,68,72,86,94,101,111,121,127,137,139,156,167,176,184,193,201,210,218,226,239,248,251,258,269,278,287,296,307,316,325,334,343,352,361,370,379,388,397,406,415,424,433,442,451,460,469,478,487,496,505,514,523]]
 CLASS_GLOBAL_COVERS={0:3149280,1:38880,2:233280,3:126360}
 CLASS_SIGNATURE_ORBITS={0:270,1:135,2:270,3:45}
-EXPECTED='22ad017b9bc29e99d5c1baac68197777473327267769aba2039deadd6ccd34c3'
+EXPECTED='2408fdd9a60f285907b1d33b7d66b29a4454ffe90260cf9a077585a561bac4ea'
 OUT=Path(__file__).resolve().parents[1]/'data'/'w33_pass2416_nine_signature_cover_fibers.json'
 
-def csha(x):
-    return hashlib.sha256(json.dumps(x,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+def csha(x): return hashlib.sha256(json.dumps(x,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+def decode_signature(s): assert len(s)==45; return [int(x) for x in s]
+def decode_cover(h):
+    m=int(h,16);return [i for i in range(540) if (m>>i)&1]
 
 def certificate():
+    signatures=[decode_signature(s) for s in SIGNATURE_STRINGS];covers=[decode_cover(h) for h in COVER_MASK_HEX]
     points,pidx,A,lines,lidx,edges,eidx,frames,fidx,M,octets,oidx=build_geom()
     pgens=[trans(points,pidx,v) for v in ((1,0,0,0),(0,1,0,0),(0,0,0,1),(1,0,1,0))]
     fgens=[];ogens=[]
     for p in pgens:
         f,o=perms_for_point_perm(p,lines,lidx,frames,fidx,octets,oidx);fgens.append(f);ogens.append(o)
-    pair_orbit_list=pair_orbits(fgens,ogens)
-    degree_one=next(O for O in pair_orbit_list if len(O)==540)
+    po=pair_orbits(fgens,ogens);degree_one=next(O for O in po if len(O)==540)
     R=np.zeros((540,45),dtype=np.int64)
     for z in degree_one:R[z//45,z%45]=1
-    fiber_sizes=[CLASS_GLOBAL_COVERS[c]//CLASS_SIGNATURE_ORBITS[c] for c in CLASS_LABELS]
-    records=[]
-    for i,(sig,cov,cl,fs) in enumerate(zip(SIGNATURES,COVERS,CLASS_LABELS,fiber_sizes)):
-        rec={'fiber_index':i,'class_label':cl,'exact_fiber_cardinality':fs,'cover_frames':cov,
-             'cover_sha256':csha(cov),'signature':sig,'signature_sha256':csha(sig),
-             'checks':{'sixty_distinct_frames':len(cov)==len(set(cov))==60,
-                       'edge_exact_cover':np.array_equal(M[cov].sum(axis=0),np.ones(240,dtype=np.int64)),
-                       'signature_exact':np.array_equal(R[cov].sum(axis=0),np.array(sig,dtype=np.int64))}}
-        records.append(rec)
-    overlap=[[len(set(COVERS[i])&set(COVERS[j])) for j in range(9)] for i in range(9)]
-    checks={'w33_counts':M.shape==(540,240),'frame_rows_4':set(map(int,M.sum(axis=1)))=={4},
-            'edge_columns_9':set(map(int,M.sum(axis=0)))=={9},
-            'pair_orbit_sizes':list(map(len,pair_orbit_list))==[540,3240,3240,4320,12960],
-            'degree_one_relation':set(map(int,R.sum(axis=1)))=={1} and set(map(int,R.sum(axis=0)))=={12},
-            'nine_signatures_sum_uniformly':np.array_equal(np.sum(np.array(SIGNATURES),axis=0),np.full(45,12)),
-            'all_nine_fibers_nonempty':all(all(z['checks'].values()) for z in records),
+    fs=[CLASS_GLOBAL_COVERS[c]//CLASS_SIGNATURE_ORBITS[c] for c in CLASS_LABELS]
+    fibers=[]
+    for i,(ss,h,sig,cov,cl,n) in enumerate(zip(SIGNATURE_STRINGS,COVER_MASK_HEX,signatures,covers,CLASS_LABELS,fs)):
+        fibers.append({'fiber_index':i,'class_label':cl,'exact_fiber_cardinality':n,'signature_string':ss,
+                       'cover_mask_hex':h,'cover_frame_count':len(cov),'cover_sha256':csha(cov),
+                       'checks':{'sixty_distinct_frames':len(cov)==len(set(cov))==60,
+                                 'edge_exact_cover':np.array_equal(M[cov].sum(0),np.ones(240,dtype=np.int64)),
+                                 'signature_exact':np.array_equal(R[cov].sum(0),np.array(sig,dtype=np.int64))}})
+    overlap=[[len(set(covers[i])&set(covers[j])) for j in range(9)] for i in range(9)]
+    checks={'w33_counts':M.shape==(540,240),'frame_rows_4':set(map(int,M.sum(1)))=={4},
+            'edge_columns_9':set(map(int,M.sum(0)))=={9},
+            'pair_orbit_sizes':list(map(len,po))==[540,3240,3240,4320,12960],
+            'degree_one_relation':set(map(int,R.sum(1)))=={1} and set(map(int,R.sum(0)))=={12},
+            'nine_signatures_sum_uniformly':np.array_equal(np.sum(np.array(signatures),axis=0),np.full(45,12)),
+            'all_nine_fibers_nonempty':all(all(x['checks'].values()) for x in fibers),
             'fiber_sizes_integral':all(CLASS_GLOBAL_COVERS[c]%CLASS_SIGNATURE_ORBITS[c]==0 for c in CLASS_LABELS),
-            'selected_fiber_universe_42912':sum(fiber_sizes)==42912,
+            'selected_fiber_universe_42912':sum(fs)==42912,
             'independent_witnesses_not_disjoint':any(overlap[i][j]>0 for i in range(9) for j in range(i))}
-    d={'schema':'w33.pass2416.nine_signature_cover_fibers.v1','status':'PASS_NINE_FIBERS_NONEMPTY_WITH_EXACT_CARDINALITIES',
+    d={'schema':'w33.pass2416.nine_signature_cover_fibers.v2','status':'PASS_NINE_FIBERS_NONEMPTY_WITH_EXACT_CARDINALITIES',
        'sources':{'complete_cover_certificate':'data/w33_pass1821_1825_complete_cover_signature.json',
                   'signature_capacity_certificate':'data/w33_pass2309_signature_capacity_feasibility.json',
                   'geometry_reconstruction':'literal PG(3,3), isotropic lines, frames, octets, and PSp transvections'},
-       'relation':{'shape':[540,45],'pair_orbit_sizes':list(map(len,pair_orbit_list)),'frame_degree':1,'octet_degree':12,
+       'relation':{'shape':[540,45],'pair_orbit_sizes':list(map(len,po)),'frame_degree':1,'octet_degree':12,
                    'sha256':hashlib.sha256(R.astype(np.uint8).tobytes()).hexdigest()},
-       'class_arithmetic':{str(c):{'global_covers':CLASS_GLOBAL_COVERS[c],'signature_orbit_size':CLASS_SIGNATURE_ORBITS[c],
+       'class_arithmetic':{str(c):{'global_covers':CLASS_GLOBAL_COVERS[c],
+                                   'signature_orbit_size':CLASS_SIGNATURE_ORBITS[c],
                                    'covers_per_signature':CLASS_GLOBAL_COVERS[c]//CLASS_SIGNATURE_ORBITS[c]}
                            for c in sorted(CLASS_GLOBAL_COVERS)},
-       'selected_fiber_count':9,'selected_fiber_total_cardinality':sum(fiber_sizes),'fibers':records,
+       'selected_fiber_count':9,'selected_fiber_total_cardinality':sum(fs),'fibers':fibers,
        'independent_witness_overlap_matrix':overlap,'checks':checks,
        'theorem':'Each of the nine capacity-compatible signature types has a nonempty exact-cover fiber. By transitivity and the complete cover census, their exact cardinalities are 11,664, 864, 2,808, or 288 according to signature class; the selected nine fibers contain 42,912 covers in total.',
        'boundary':'The nine displayed cover witnesses are verified individually but overlap. Nonempty fibers and exact cardinalities do not imply a frame-disjoint nine-way transversal or chi(H)=9.'}
-    assert all(checks.values()) and all(all(z['checks'].values()) for z in records)
-    d['sha256_without_hash_field']=csha(d)
-    return d
+    assert all(checks.values()) and all(all(x['checks'].values()) for x in fibers)
+    d['sha256_without_hash_field']=csha(d);return d
 
 def main():
     d=certificate();assert d['sha256_without_hash_field']==EXPECTED
