@@ -1,0 +1,49 @@
+name: Passes 2430-2434 isolated structural execution v3
+on:
+  issues:
+    types: [opened]
+permissions:
+  contents: read
+  issues: write
+jobs:
+  execute:
+    if: github.event.issue.title == '[pass2430-2434-structural-execution-v3]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: |
+          python -m pip install --disable-pip-version-check numpy scipy sympy networkx
+          sudo apt-get update
+          sudo apt-get install -y gap gap-character-tables
+      - name: Execute structural fronts
+        run: |
+          set -o pipefail
+          mkdir -p execution_artifacts logs
+          python analysis/w33_pass2430_tomotope_label_probe.py | tee execution_artifacts/pass2430_probe.json | tee logs/pass2430_probe.log
+          python analysis/w33_pass2430_hidden_wd4_symmetry_search.py | tee execution_artifacts/pass2430_hidden.json | tee logs/pass2430_hidden.log
+          python analysis/w33_pass2431_u6_singleton_identifiability.py --write-json execution_artifacts/pass2431.json | tee logs/pass2431.log
+          python analysis/w33_pass2433_commutative_fusion_search.py | tee execution_artifacts/pass2433.json | tee logs/pass2433.log
+          gap -q analysis/gap/w33_pass2434_c5_split_hom_probe.g | tee execution_artifacts/pass2434_gap.json | tee logs/pass2434.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pass2430-2434-structural-execution-v3
+          path: |
+            execution_artifacts
+            logs
+      - name: Report compact results
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs=require('fs');
+            let body=`Passes 2430-2434 structural run **${context.runId}** finished with status **${{ job.status }}**.`;
+            for (const f of ['pass2430_probe.json','pass2430_hidden.json','pass2431.json','pass2433.json','pass2434_gap.json']) {
+              try { let s=fs.readFileSync(`execution_artifacts/${f}`,'utf8'); body += `\n\n### ${f}\n\`\`\`json\n${s.slice(0,20000)}\n\`\`\``; } catch(e) { body += `\n\n${f}: unavailable (${e})`; }
+            }
+            await github.rest.issues.createComment({owner:context.repo.owner,repo:context.repo.repo,issue_number:context.issue.number,body});
