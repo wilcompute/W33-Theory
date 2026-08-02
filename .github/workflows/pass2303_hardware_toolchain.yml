@@ -5,6 +5,9 @@ on:
       - 'rtl/w33_pass2303_packed_toolchain.sv'
       - 'formal/w33_pass2303_formal.sv'
       - 'tests/rtl/w33_pass2303_tb.sv'
+      - 'tests/test_w33_pass2300_2305.py'
+      - 'analysis/w33_pass230*.py'
+      - 'data/w33_pass230*.json'
       - '.github/workflows/pass2303_hardware_toolchain.yml'
   workflow_dispatch:
 permissions:
@@ -15,13 +18,21 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
-      - name: Install Icarus and Yosys
+      - name: Install mathematical and HDL toolchains
         run: |
           sudo apt-get update
           sudo apt-get install -y iverilog yosys
+          python -m pip install --disable-pip-version-check numpy pytest
           mkdir -p hardware_logs
           iverilog -V 2>&1 | tee hardware_logs/iverilog_version.txt
           yosys -V 2>&1 | tee hardware_logs/yosys_version.txt
+      - name: Verify mathematical certificates
+        run: |
+          python analysis/w33_pass2300_ree_tits_divisible_code.py --verify-frozen
+          python analysis/w33_pass2301_complete_quadratic_hom_bases.py --verify-frozen
+          python analysis/w33_pass2302_q7_q11_weil_outer_inversion.py --verify-frozen
+          python analysis/w33_pass2304_known_q27_spread_spectra.py --verify-frozen
+          pytest -q tests/test_w33_pass2300_2305.py
       - name: Compile and simulate
         run: |
           set -o pipefail
