@@ -22,9 +22,9 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **7163** files; **7149** distinctive results
+Indexed **7164** files; **7150** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
-**3036** appear in exactly one file — the sharpest signal.
+**3037** appear in exactly one file — the sharpest signal.
 
 ## Index
 
@@ -695,6 +695,7 @@ Indexed **7163** files; **7149** distinctive results
 | `1938/1946/1955` | `analysis/w33_pass1956_1960_the_cut_compounds_with_generators.md` |
 | `1951/1955/1958` | `analysis/w33_pass1961_1965_combining_hurts_and_the_checker_fails_again.md` |
 | `1954/1963/1968` | `analysis/W33_CLAIM_STATUS_LEDGER.md` |
+| `2042/2047/2054` | `analysis/w33_pass2059_2063_why_q_plus_one_is_four.md` |
 | `27/36/40/40/45` | `analysis/BT812_five_vacua.md` · `analysis/BT823_the_closure.md` |
 | `320/2240/12480` | `exploration/w33_q_cyclotomic_master_bridge.py` |
 | `81/82/84/87/90` | `PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md` |
@@ -6502,7 +6503,7 @@ Indexed **7163** files; **7149** distinctive results
 | `094` | `analysis/2026-07-10_levi_next5_v3.md` |
 | `102` | `PASS1074_1078_FIVE_STREAM_RELEASE.md` · `PASS125_TWO_WE6_EMBEDDINGS.md` · `analysis/BT741_selector_glued_global_register.md` · `analysis/w33_BREAKTHROUGH_102_interpretive_descent_prelogical.py` · *(+16)* |
 | `103` | `analysis/BT1668_gauge_twirl_bridge.md` · `analysis/BT1840_BT1842_summary.md` · `analysis/BT1842_covariance_aware_SPRT.md` · `analysis/BT1843_multivariate_covariance_SPRT.md` · *(+15)* |
-| `107` | `PASS415_419_FIVE_FRONTIERS_RELEASE.md` · `analysis/BT1839_adaptive_stopping_decoder.md` · `analysis/bt1358_heptad_period_closure_audit.py` · `analysis/w33_BREAKTHROUGH_107_master_synthesis_v10.py` · *(+15)* |
+| `107` | `PASS415_419_FIVE_FRONTIERS_RELEASE.md` · `analysis/BT1839_adaptive_stopping_decoder.md` · `analysis/bt1358_heptad_period_closure_audit.py` · `analysis/w33_BREAKTHROUGH_107_master_synthesis_v10.py` · *(+16)* |
 | `131` | `analysis/2026-07-15_pass92_wrq_landscape.md` · `analysis/BT1345_BT1349_basic_mixed_selector_runtime_fusion.md` · `analysis/BT1839_adaptive_stopping_decoder.md` · `analysis/w33_BREAKTHROUGH_131_theorem_index.py` · *(+16)* |
 | `139` | `PASS362_ALPHA_CODE_REAL_CLIFFORD_K44_F4_SYNTHESIS.md` · `analysis/w33_BREAKTHROUGH_145_master_synthesis_v17.py` · `analysis/w33_BREAKTHROUGH_146_remote_BT136_141_integration.py` · `analysis/w33_BREAKTHROUGH_23_partition_boundary_predictions.py` · *(+11)* |
 | `141` | `AUDIT_PASS126_156_SUBMISSION_PACKET.md` · `PASS425_429_FIVE_FRONTIERS_RELEASE.md` · `analysis/w33_BREAKTHROUGH_116_spectral_trace_tower_remote.py` · `analysis/w33_BREAKTHROUGH_119_master_synthesis_v12.py` · *(+19)* |
@@ -6516,7 +6517,7 @@ Indexed **7163** files; **7149** distinctive results
 | `154` | `AUDIT_PASS126_156_SUBMISSION_PACKET.md` · `analysis/BT1801_1805_brauer_xor_orbit_decoder_outer.md` · `analysis/BT631_635_five_frontier_release.md` · `analysis/BT732_selector_sibling_exports_certificate.md` · *(+10)* |
 | `155` | `W36_PRL_LETTER.tex` · `analysis/2026-07-15_pass92_wrq_landscape.md` · `analysis/BT1068_P22_projector_template.md` · `analysis/BT1212_materialized_z2_s3_summary.md` · *(+16)* |
 | `166` | `analysis/bt1755_fixed_rotation_backtracking_plateau.py` · `analysis/bt1758_plateau_quotient_algebra.py` · `analysis/w33_BREAKTHROUGH_166_optimal_macro_e6_trace1_receipt.py` · `analysis/w33_moonshine_heegner_bridge.py` · *(+4)* |
-| `167` | `PASS179_SENTINEL_CONTEXT_POISSON_PAIR.md` · `analysis/BT1003_ci_status_probe.md` · `analysis/bt1003_ci_status_probe.py` · `analysis/bt1755_fixed_rotation_backtracking_plateau.py` · *(+17)* |
+| `167` | `PASS179_SENTINEL_CONTEXT_POISSON_PAIR.md` · `analysis/BT1003_ci_status_probe.md` · `analysis/bt1003_ci_status_probe.py` · `analysis/bt1755_fixed_rotation_backtracking_plateau.py` · *(+18)* |
 | `171` | `PASS178_EVEN_Q_INCIDENCE_RANK_TRANSFER.md` · `analysis/2026-07-10_levi_next5.md` · `analysis/BT1521_perkel_shadow_bridge_falsifier.md` · `analysis/BT1537_1541_frame_dual_five_frontiers.md` · *(+17)* |
 | `177` | `PASS177_ADDRESS_ROUTE_DUAL_THETA_SPLIT.md` · `W33_FOR_EVERYONE.tex` · `W36_PAPER.tex` · `W36_PAPER_arxiv.tex` · *(+18)* |
 | `179` | `PASS179_SENTINEL_CONTEXT_POISSON_PAIR.md` · `analysis/BT1084_incidence_ladder_weight_ledger.md` · `analysis/BT1365_BT1369_rational_schur_completion.md` · `analysis/BT924_integral_e8_lift.md` · *(+16)* |
