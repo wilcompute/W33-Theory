@@ -24,6 +24,10 @@
 4. Exhausting all 65,535 binary symmetric seeds of the rank-22 shell algebra gives 15 commutative fusions and a unique finest rank-nine scheme.
 5. On a distinguished split `C5`, the E8 and coexact carriers have a 144-dimensional equivariant Hom space in each direction.
 
+## Parallel-track reconciliation
+
+Passes 2450 and 2455 independently show that a nine-colouring, if one exists, cannot be full-group-equivariant and is not ruled out by cover-count divisibility. This is consistent with Pass 2432: the selected symmetric capacity witness fails, while the unresolved search must be genuinely asymmetric. Pass 2458 identifies the Weil even/odd split with the inflated/faithful central-character split for odd `q`, matching the carrier distinction used in Pass 2434.
+
 ## Boundaries
 
 No global U6 singleton coefficient is claimed. The chromatic decision `chi(H)=9` remains open outside the refuted signature tuple. The rank-nine scheme is an exact fusion, not a physical channel model. The `C5` Hom space proves existence but supplies no canonical map or coupling.
