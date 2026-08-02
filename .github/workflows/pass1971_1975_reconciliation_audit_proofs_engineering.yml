@@ -1,0 +1,46 @@
+name: Passes 1971-1975 reconciliation audit proofs engineering
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass197[1-5]**'
+      - 'analysis/W33_SPREAD_OBSTRUCTION_NOTE.md'
+      - 'analysis/W33_SPREAD_OBSTRUCTION_REFEREE_DRAFT.tex'
+      - 'analysis/W33_CLAIM_STATUS_LEDGER.md'
+      - 'analysis/BT1971_1975**'
+      - 'analysis/BT1975**'
+      - 'scripts/constraint_audit.py'
+      - 'data/w33_pass197[1-5]**'
+      - 'data/w33_pass_namespace_registry_v2.d/197[1-5].json'
+      - 'tests/test_w33_pass1971_1975_five_frontiers.py'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - '.github/workflows/pass1971_1975_reconciliation_audit_proofs_engineering.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install ortools pytest
+      - name: Verify frozen packet
+        run: python analysis/w33_pass1971_1975_verify_frozen.py
+      - name: Rebuild certificates
+        run: |
+          python analysis/w33_pass1971_spread_treatments_concordance.py
+          python analysis/w33_pass1972_scalable_constraint_audit.py
+          python analysis/w33_pass1973_solver_stagnation_diagnosis.py
+          python analysis/w33_pass1974_uniform_spread_proofs.py
+          python analysis/w33_pass1975_claim_ledger_physics_engineering.py
+      - name: Reverify after rebuild
+        run: python analysis/w33_pass1971_1975_verify_frozen.py
+      - name: Focused regression
+        run: pytest -q tests/test_w33_pass1971_1975_five_frontiers.py
+      - name: Check correction and boundaries
+        run: |
+          grep -q 'not maximal independent' analysis/W33_SPREAD_OBSTRUCTION_NOTE.md
+          grep -q 'not maximal independent' analysis/W33_SPREAD_OBSTRUCTION_REFEREE_DRAFT.tex
+          grep -q 'propagation-horizon mismatch' analysis/W33_SPREAD_OBSTRUCTION_REFEREE_DRAFT.tex
+          grep -q 'electric charge' analysis/W33_CLAIM_STATUS_LEDGER.md
