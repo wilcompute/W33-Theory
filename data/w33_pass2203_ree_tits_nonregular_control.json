@@ -1,0 +1,30 @@
+{
+  "ball_zieve_permutation_cases": 729,
+  "base_intersection": 28,
+  "boundaries": [
+    "This is an exact counterexample to an unchanged regular-scheme extension, not a classification of non-Desarguesian spreads.",
+    "The Ree--Tits and Ball--Zieve coordinate constructions retain literature ownership.",
+    "The observed congruence of all intersection values modulo 9 is recorded only as a future question."
+  ],
+  "checks": {
+    "ball_zieve_permutation_cases_729": true,
+    "base_pair_meets_in_qplus1": true,
+    "both_spreads_have_730_lines": true,
+    "closed_144_spread_suborbit": true,
+    "gf27_nonzero_inverses": true,
+    "regular_two_intersection_extension_refuted": true
+  },
+  "field": "GF(27)=F3[t]/(t^3+2t+1)",
+  "intersection_values_outside_regular_scheme": [19, 37, 46, 55],
+  "ree_tits_slice": "g(x,y)=-x^21-y^9",
+  "regular_control": "g(x,y)=-t x",
+  "schema": "w33.pass2203.ree_tits_nonregular_control.v1",
+  "sha256_without_hash_field": "7e1eaac9fec07d0dcb821855c12722177485cdc524df49f6c1448f17b30a03db",
+  "status": "PASS_NONREGULAR_CONTROL_REFUTES_UNIFORM_TWO_INTERSECTION_EXTENSION",
+  "subgroup_orbits": {
+    "mixed_three_vector": {"intersection_histogram": {"19": 34, "28": 45, "37": 24, "46": 5}, "orbit_size": 108},
+    "rank_two_control": {"intersection_histogram": {"19": 4, "28": 6, "37": 2}, "orbit_size": 12},
+    "two_coordinate_planes": {"intersection_histogram": {"19": 34, "28": 76, "37": 28, "46": 4, "55": 2}, "orbit_size": 144}
+  },
+  "theorem": "The regular-spread {1,q+1} intersection scheme does not extend unchanged to the q=27 Ree--Tits symplectic spread: an exact closed 144-spread suborbit already exhibits intersections 19,28,37,46,55."
+}
