@@ -7,7 +7,7 @@ import json
 from collections import Counter
 from pathlib import Path
 
-from w33_pass2424_arithmetic_command_nonquotient import I, build as build_obstruction, evaluate, half_ball
+from w33_pass2424_arithmetic_command_nonquotient import build as build_obstruction, evaluate, half_ball
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "w33_pass2425_relation_aware_controller_compiler.json"
@@ -43,7 +43,10 @@ def build():
     obstruction = build_obstruction()
     assert obstruction["schema"] == "w33.pass2424.arithmetic_command_nonquotient.v1"
 
-    ball = half_ball(8)
+    radius = 8
+    exact_word_count = 1 + sum(4 * 3 ** (n - 1) for n in range(1, radius + 1))
+    ball = half_ball(radius)
+    enumerated_representatives = sum(len(by_phase) for by_phase in ball.values())
     phase_sets = Counter()
     ambiguous = 0
     for by_phase in ball.values():
@@ -65,7 +68,8 @@ def build():
     truth_hash = hashlib.sha256("\n".join(",".join(map(str, row)) for row in truth).encode()).hexdigest()
 
     checks = {
-        "radius8_words_13121": sum(len(v) if False else 0 for v in []) == 0 or True,
+        "radius8_words_13121": exact_word_count == 13121,
+        "enumerated_matrix_phase_representatives_do_not_exceed_words": enumerated_representatives <= exact_word_count,
         "radius8_distinct_matrices_2800": len(ball) == 2800,
         "radius8_ambiguous_matrices_1174": ambiguous == 1174,
         "radius8_phase_pairs_are_half_turns": all(len(k) == 1 or (len(k) == 2 and (k[1] - k[0]) % 12 == 6) for k in phase_sets),
@@ -85,8 +89,9 @@ def build():
         "status": "PASS_FAIL_CLOSED_MATRIX_REWRITE_WITH_FULL_C12_HOLONOMY_TOKEN",
         "source_obstruction": {"producer": "analysis/w33_pass2424_arithmetic_command_nonquotient.py", "sha256_without_hash_field": obstruction["sha256_without_hash_field"]},
         "bounded_exact_audit": {
-            "freely_reduced_word_radius": 8,
-            "word_count": 13121,
+            "freely_reduced_word_radius": radius,
+            "word_count": exact_word_count,
+            "matrix_phase_representatives_retained": enumerated_representatives,
             "distinct_arithmetic_matrices": len(ball),
             "unambiguous_matrices": len(ball) - ambiguous,
             "ambiguous_matrices": ambiguous,
