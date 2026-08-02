@@ -5,8 +5,8 @@ import hashlib,json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 FILES={1971:ROOT/'data/w33_pass1971_spread_treatments_concordance.json',1972:ROOT/'data/w33_pass1972_scalable_constraint_audit.json',1973:ROOT/'data/w33_pass1973_solver_stagnation_diagnosis.json',1974:ROOT/'data/w33_pass1974_uniform_spread_proofs.json',1975:ROOT/'data/w33_pass1975_claim_ledger_physics_engineering.json'}
-EXPECTED={1971:'39b7a8e2511571f9c58e0e8201384d0f13584117de338aad02a40a1dacf25bd6',1972:'e054590de94e710938076b27e64177407a9688529281a5b9628c579fa2094f71',1973:'0fe7146080cdf4216416b0a1da8dee00ef2d4a409214c5fdf0d073f9682fa693',1974:'b606868b0c0a5f0edf43b23bf60f028975cd3cab2011e7d9955e2b9c0e112c0f',1975:'c500a54f8de1bcedf782098872d6b174ba7d2ec3b89b646e9b6885ce3d15dbd1'}
-AGG='7d7b59cf717729b3e117c2d1e14bf595286fcb5ea8b2ef8da4d5edf388f53ac4'
+EXPECTED={1971:'6b6098dc6b005196e31bd14ebf72ce3496952f33c3d05d047129923b34148014',1972:'e054590de94e710938076b27e64177407a9688529281a5b9628c579fa2094f71',1973:'0fe7146080cdf4216416b0a1da8dee00ef2d4a409214c5fdf0d073f9682fa693',1974:'b606868b0c0a5f0edf43b23bf60f028975cd3cab2011e7d9955e2b9c0e112c0f',1975:'c500a54f8de1bcedf782098872d6b174ba7d2ec3b89b646e9b6885ce3d15dbd1'}
+AGG='a956435d286edcedb71c63a1a82ccd97d64d7c778d9e2cbc0197b9d313e28158'
 
 def digest(d):
  x=dict(d);x.pop('sha256_without_hash_field',None)
@@ -17,6 +17,7 @@ def main():
  for p,z in d.items():
   assert z['sha256_without_hash_field']==EXPECTED[p]==digest(z),p
   assert all(z['checks'].values()),p
+ assert d[1971]['claims_compared']==16
  assert d[1971]['corrections']['false_claim'].endswith('maximal independent set')
  assert 'candidate-orbit property' in d[1971]['scope']['one_over_q']
  assert d[1971]['solver_reconciliation']['combined_40_branches']==512714
