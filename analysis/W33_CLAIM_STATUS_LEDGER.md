@@ -1,8 +1,8 @@
 # W33 spread/chirality arc — consolidated claim-status ledger
 
 This ledger is the current source of truth for the Passes-1612--1975 spread,
-frame-colouring, and signed-edge-module arc.  “Retracted” means the claim should
-not be repeated.  “Narrowed” preserves only the stated scope.
+frame-colouring, and signed-edge-module arc. “Retracted” means the claim should
+not be repeated. “Narrowed” preserves only the stated scope.
 
 | claim | originating pass/file | current status | reason / controlling artifact |
 |---|---|---|---|
@@ -12,7 +12,7 @@ not be repeated.  “Narrowed” preserves only the stated scope.
 | the spread 45-set is maximal independent | 1828, note, Pass-1970 draft | **retracted: false** | 15 residual candidate frames are nonadjacent to the seed; Pass 1971 |
 | the spread seed cannot complete to a 60-frame exact cover | 1865 | **stands, exact q=3** | candidates touch only 20 of 60 residual edges |
 | completion failure is caused by maximality | 1828/1861 wording | **retracted** | correct mechanism is residual support deficiency |
-| candidate count is `q(q^2+1)/2` and support fraction is `1/q` | 1865/1877 | **proved conditionally; finite-case otherwise** | Pass 1974 for spreads carrying `sigma`; q=3,5,7 verified |
+| candidate count is `q(q^2+1)/2` and support fraction is `1/q` | 1865/1877 | **exact under candidate-orbit property; q=3,5,7 verified** | a linewise involution proves the orbit-generated subfamily, not exhaustiveness; Pass 1974 v2 |
 | every arbitrary symplectic spread carries `sigma_S` | 1882 wording | **not established** | existence proved for associated Desarguesian spread; exhaustive q=3 only |
 | `sigma_S` is fixed-point-free and linewise on its spread | 1882/1899 | **stands** | nonsquare similitude construction; q=3 uniqueness exact |
 | exact q=3 `36/270` multiplier split | 1899 | **stands as finite computation; novelty open** | no located literature reference |
