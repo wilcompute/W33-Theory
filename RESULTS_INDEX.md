@@ -22,7 +22,7 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **7162** files; **7148** distinctive results
+Indexed **7163** files; **7149** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
 **3036** appear in exactly one file — the sharpest signal.
 
@@ -3010,6 +3010,7 @@ Indexed **7162** files; **7148** distinctive results
 | `010101` | `PASS379_HEADER_Q6_GEOMETRY_BOUNDARY.md` |
 | `010110` | `analysis/BT1405_continuous_q6_path_router.md` |
 | `010111` | `PASS379_HEADER_Q6_GEOMETRY_BOUNDARY.md` · `analysis/BT1405_continuous_q6_path_router.md` · `analysis/BT1406_tomotope_body_edge_pulse_scheduler.md` · `photonic_holonet_body.tex` · *(+1)* |
+| `010212` | `analysis/w33_pass2054_2058_one_principle_not_two.md` |
 | `010315` | `analysis/w33_d4_gkp_error_curve.py` · `analysis/w33_holonet_ft_threshold_budget.py` |
 | `010501` | `single_photon_universal_computation.tex` |
 | `011001` | `photonic_holonet_body.tex` |
@@ -3145,7 +3146,7 @@ Indexed **7162** files; **7148** distinctive results
 | `140400` | `analysis/w33_theta_E8_eisenstein_E4.py` · `exploration/w33_affine_e8_eighth_mode_bridge.py` |
 | `140601` | `photonic_holonet_body.tex` |
 | `141120` | `W36_PAPER.tex` |
-| `142857` | `W33_FOR_EVERYONE.tex` · `analysis/BT1441_BT1443_otto_closure_fano_heptad.md` · `analysis/bt1714_toroidal_heawood_embedding.py` · `analysis/bt774_decimal_shadow_clock.py` · *(+18)* |
+| `142857` | `W33_FOR_EVERYONE.tex` · `analysis/BT1441_BT1443_otto_closure_fano_heptad.md` · `analysis/bt1714_toroidal_heawood_embedding.py` · `analysis/bt774_decimal_shadow_clock.py` · *(+19)* |
 | `142992` | `exploration/w33_continuum_k3_tail_exactness_criterion_bridge.py` |
 | `143654` | `analysis/w33_pass148_k3_transport_witness.py` · `docs/index.html` · `exploration/w33_continuum_k3_tail_exactness_criterion_bridge.py` · `exploration/w33_continuum_tail_operator_normal_form_bridge.py` · *(+13)* |
 | `144000` | `analysis/BT1845_BT1849_execution_summary.md` · `analysis/BT1850_BT1854_execution_summary.md` · `analysis/bt1847_shot_protocol_compression.py` · `analysis/bt1852_compressed_shot_artifact_manifest.py` |
@@ -5691,7 +5692,7 @@ Indexed **7162** files; **7148** distinctive results
 | `2973` | `analysis/w33_pass1907_1911_verify_frozen.py` · `analysis/w33_pass1907_1911_verify_frozen_v2.py` |
 | `2977` | `analysis/PASS437_FULL_SMITH_WELD.md` |
 | `3003` | `analysis/w33_MDCCLXXXIII_MDCCXCII_pascal14_weierstrass.py` · `exploration/RIGOROUS_VERIFICATION.py` |
-| `3004` | `docs/index.html` |
+| `3004` | `analysis/w33_pass2054_2058_one_principle_not_two.md` · `docs/index.html` |
 | `3010` | `scripts/w33_novel_chain25_partitions.py` |
 | `3024` | `analysis/w33_toroidal_heptad_markov_spectrum.py` · `analysis/w33_toroidal_heptad_mutation_k5_bridge.py` |
 | `3025` | `analysis/2026-07-15_pass92_wrq_landscape.md` · `exploration/M12_REPRESENTATION_ANALYSIS.py` |

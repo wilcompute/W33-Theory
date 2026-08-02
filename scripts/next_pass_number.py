@@ -95,6 +95,20 @@ def numbers_from_filenames() -> dict[str, set[int]]:
     return out
 
 
+def range_is_free(lo: int, hi: int, used: set[int]) -> tuple[bool, list[int]]:
+    """Is [lo, hi] unused?  Call this BEFORE renumbering into a range.
+
+    Added after a real collision (2026-08-02). The claim path checks the highest
+    number in use and pushes reservations, but a batch that RENUMBERS after the
+    fact bypasses that check entirely and can land on a range another track has
+    already published. Passes 2011-2015 were claimed and published by one track
+    at 09:18 and renumbered into by the other at 09:41 -- collisions were handled
+    at claim time and not at renumber time. This closes that gap.
+    """
+    clash = sorted(n for n in range(lo, hi + 1) if n in used)
+    return (not clash), clash
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--remote", default="origin-https/master",
@@ -106,6 +120,9 @@ def main() -> int:
     ap.add_argument("--run", action="store_true",
                     help="actually create and push the reservation commits")
     ap.add_argument("--fetch", action="store_true", help="git fetch first")
+    ap.add_argument("--check-range", default="",
+                    help="LO-HI: verify a range is unused BEFORE renumbering "
+                         "into it (the gap that caused the 2011-2015 clash)")
     args = ap.parse_args()
 
     if args.fetch:
