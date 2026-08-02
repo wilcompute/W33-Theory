@@ -1,0 +1,46 @@
+\section*{Passes 2011--2015: decorated spread pairs, subgroup schedules, and quadratic readout}
+The 270 unordered spread pairs meeting in four lines carry stabilizer
+$S_4\times D_8$ of order $192$.  Two order-four conjugacy-class carriers are
+literal decoration bundles over these pairs: the size-$540$ class chooses one of
+two inverse coherent linewise quarter-turns, while the size-$1620$ class chooses
+one of six cyclic orders of the four common lines.  Their stabilizers have orders
+$96$ and $32$, respectively; the identifications use the induced local actions
+and stabilizer conjugacy, not cardinality alone.
+
+Complete enumeration of the $1026$ subgroups of one such pair stabilizer gives
+$234$ stabilizer-conjugacy classes.  Exactly $33$ classes construct a
+$60$-frame exact cover from whole frame orbits.  Every successful subgroup has
+order $2$, $4$, or $8$, and no subgroup of order at least $12$ succeeds.  A
+literal $D_8$ witness uses twelve orbits of sizes
+$2,2,4,4,4,4,4,4,8,8,8,8$ and covers each of the $240$ edges once.
+
+The $36$ spreads form a rank-three association scheme.  The four-line relation
+is $\operatorname{SRG}(36,15,6,6)$ and its adjacency matrix satisfies
+\[
+ A^2=9I+6J.
+\]
+Since every line belongs to nine spreads, a fixed spread has total intersection
+$80$ with the other spreads.  Its fifteen four-line neighbours account for
+$60$, forcing each of the remaining twenty spreads to meet it in exactly one
+line.  Thus distinct spreads meet in one or four lines, with no other value.
+
+The $360$ one-line spread pairs do not form an eightfold bundle over the $45$
+octets: their stabilizer has octet orbits of lengths $6,9,12,18$ and fixes no
+octet.  Removing the common line instead reveals the bipartite double cover of
+the $3\times3$ rook graph on the two banks of nine noncommon lines.  This local
+graph has automorphism group order $144$, exactly the spread-pair stabilizer.
+
+The degree-safety audit must mark degrees $240$ and $540$ unsafe for count-only
+identification.  At degree $240$ two order-$216$ stabilizers are nonconjugate;
+at degree $540$ the three order-$96$ class centralizers are pairwise
+nonconjugate.  The Eisenstein $90$ remains linearly confined, but its quadratic
+channels are nontrivial: $\operatorname{Sym}^2(90)$ contains all four rational
+blocks, whereas $\Lambda^2(90)$ contains no copy of the gauge $15$.  This yields
+a precise symmetric-versus-antisymmetric readout selection rule without
+restoring any withdrawn charge or flux interpretation.
+
+The computer-engineering consequences are proposals: a $36$-lane rank-three
+mixer, a two-bank rook-double crossbar, a $D_8$ orbit-compressed scheduler, a
+quadratic phase-readout stage, and stabilizer-aware group-set interfaces.  The
+chromatic decision remains open, the subgroup census is scoped to one fixed
+$S_4\times D_8$ stabilizer, and no device or particle identification is claimed.
