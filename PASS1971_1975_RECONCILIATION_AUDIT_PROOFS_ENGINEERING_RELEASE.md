@@ -8,7 +8,7 @@ Frozen verification: **45/45** certificate checks.
 
 Aggregate SHA-256:
 
-`3007bb79757e068263b4062645089d87b1483117a00b4ed41d3e8d86aeb9d89c`
+`7d7b59cf717729b3e117c2d1e14bf595286fcb5ea8b2ef8da4d5edf388f53ac4`
 
 ## Delivered
 
