@@ -22,7 +22,7 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **7160** files; **7146** distinctive results
+Indexed **7161** files; **7146** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
 **3035** appear in exactly one file — the sharpest signal.
 
