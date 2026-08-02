@@ -33,6 +33,14 @@ def digest(d):
     x=dict(d);x.pop('sha256_without_hash_field',None)
     return hashlib.sha256(json.dumps(x,sort_keys=True,separators=(',',':')).encode()).hexdigest()
 
+def matpow_mod(A,n,p=P):
+    A=np.array(A,dtype=np.int64)%p
+    R=np.eye(A.shape[0],dtype=np.int64)
+    while n:
+        if n&1:R=(R@A)%p
+        A=(A@A)%p;n//=2
+    return R
+
 def rank_mod(A,p=P):
     A=np.array(A,dtype=np.int64)%p;m,n=A.shape;r=0
     for c in range(n):
@@ -146,7 +154,7 @@ def build_full():
     Q,D=projectors(w,edges,ei);perms,signs=all_actions(w,edges,ei)
     outer=matrix_perm(w,np.diag([1,2,1,2]));op,os=signed_action(outer,edges,ei)
     U=(pow(2,-1,P)*Q['90']+pow(16,-1,P)*D)%P
-    assert np.array_equal(np.linalg.matrix_power(U,6)%P,Q['90'])
+    assert np.array_equal(matpow_mod(U,6),Q['90'])
     rows={};outer_even={};outer_odd={};phase={};compressed={};surj=True
     for kind in ('Sym','Lambda'):
         rows[kind]={};outer_even[kind]={};outer_odd[kind]={};phase[kind]={};compressed[kind]={}
@@ -170,9 +178,9 @@ def build_full():
             for T in tensors:
                 v=fingerprint(T,Q['90'],Pt,kind,U).ravel()%P
                 cols.append(solve_square(S,v[piv])[:,0])
-            R=np.stack(cols,axis=1)%P;assert np.array_equal(np.linalg.matrix_power(R,3)%P,np.eye(m,dtype=np.int64)%P)
+            R=np.stack(cols,axis=1)%P;assert np.array_equal(matpow_mod(R,3),np.eye(m,dtype=np.int64)%P)
             fixed=nullity((R-np.eye(m,dtype=np.int64))%P);assert (m-fixed)%2==0
-            assert np.array_equal((Aout@R@Aout)%P,np.linalg.matrix_power(R,2)%P)
+            assert np.array_equal((Aout@R@Aout)%P,matpow_mod(R,2))
             rows[kind][target]=m;outer_even[kind][target]=ep;outer_odd[kind][target]=em
             phase[kind][target]={'fixed':fixed,'rotation_pairs':(m-fixed)//2};compressed[kind][target]=meta
     assert rows==EXPECTED_DIMS
