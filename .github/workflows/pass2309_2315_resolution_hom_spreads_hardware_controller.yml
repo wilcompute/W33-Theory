@@ -1,0 +1,48 @@
+name: Passes 2309-2315 resolution hom spreads hardware controller
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass2309**'
+      - 'analysis/w33_pass231[0-4]**'
+      - 'analysis/w33_pass2309_2314_verify_frozen.py'
+      - 'analysis/BT2309_2314**'
+      - 'analysis/BT2315**'
+      - 'data/w33_pass2309**'
+      - 'data/w33_pass231[0-4]**'
+      - 'data/w33_pass2309_2314_six_frontiers.json'
+      - 'tests/test_w33_pass2309_2314_six_frontiers.py'
+      - 'PASS2309_2315_RESOLUTION_HOM_SPREADS_HARDWARE_CONTROLLER_RELEASE.md'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - '.github/workflows/pass2309_2315_resolution_hom_spreads_hardware_controller.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy pytest
+      - name: Compile new Python sources
+        run: python -m py_compile analysis/w33_pass2309_signature_capacity_feasibility.py analysis/w33_pass2310_quadratic_hom_orbit_seed_compression.py analysis/w33_pass2311_regular_spread_rank_three_obstruction.py analysis/w33_pass2312_kantor_q9_symplectic_spread.py analysis/w33_pass2313_theorem_hardware_contract.py analysis/w33_pass2314_triangle_controller_bifurcation.py analysis/w33_pass2309_2314_verify_frozen.py
+      - name: Replay exact component certificates
+        run: |
+          python analysis/w33_pass2309_signature_capacity_feasibility.py
+          python analysis/w33_pass2310_quadratic_hom_orbit_seed_compression.py
+          python analysis/w33_pass2311_regular_spread_rank_three_obstruction.py
+          python analysis/w33_pass2312_kantor_q9_symplectic_spread.py
+          python analysis/w33_pass2313_theorem_hardware_contract.py
+          python analysis/w33_pass2314_triangle_controller_bifurcation.py
+      - name: Verify aggregate
+        run: python analysis/w33_pass2309_2314_verify_frozen.py
+      - name: Focused regression
+        run: pytest -q tests/test_w33_pass2309_2314_six_frontiers.py
+      - name: Check boundaries and manuscript hooks
+        run: |
+          grep -q 'chi(H)=9 remains open' PASS2309_2315_RESOLUTION_HOM_SPREADS_HARDWARE_CONTROLLER_RELEASE.md
+          grep -q 'not a rank-three' analysis/BT2309_2314_resolution_hom_spreads_hardware_controller.md
+          grep -q '28' analysis/BT2309_2314_resolution_hom_spreads_hardware_controller.md
+          grep -q 'BT2315_resolution_hom_spreads_hardware_controller_insert' w33_paper.tex
+          grep -q 'BT2315_resolution_hom_spreads_hardware_controller_insert' photonic_holonet.tex
