@@ -22,7 +22,7 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **7178** files; **7176** distinctive results
+Indexed **7179** files; **7176** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
 **3037** appear in exactly one file — the sharpest signal.
 
@@ -880,7 +880,7 @@ Indexed **7178** files; **7176** distinctive results
 | `shephard-todd+witting` | `PASS1020_E8_TRANSITIVE_51840.md` · `analysis/w33_BREAKTHROUGH_341_witting_polytope_SQNA.py` · `analysis/w33_BREAKTHROUGH_343_witting_SQNA_protocol.py` · `analysis/w33_eisenstein_forcing.py` · *(+6)* |
 | `smith group+tetracode` | `analysis/w33_pass348_every_multiplicity_is_a_torsor.py` · `scripts/check_rediscovery.py` |
 | `steiner+trinification` | `docs/index.html` · `photonic_holonet_body.tex` · `scripts/check_rediscovery.py` · `w33_paper_v2.tex` |
-| `totally-isotropic@130` | `analysis/2026-05-29_pg33_symplectic_gq_anchor_graph.md` · `analysis/w33_pass1097_name_the_frame_quotients.g` · `exploration/w33_grassmannian_bridge.py` |
+| `totally-isotropic@130` | `analysis/2026-05-29_pg33_symplectic_gq_anchor_graph.md` · `analysis/w33_pass1097_name_the_frame_quotients.g` · `analysis/w33_pass2082_2087_the_substrate_is_one_rank_below_phi.md` · `exploration/w33_grassmannian_bridge.py` |
 | `totally-isotropic@160` | `PASS1163_1167_EXECUTION_RELEASE.md` |
 | `totally-isotropic@240` | `analysis/BT1536_frame_dual_k44_code.md` · `analysis/w33_pass2011_2015_exact_methods.md` · `analysis/w33_pass2050_2053_2064_exact_methods.md` · `w33_paper_body.tex` |
 | `totally-isotropic@315` | `analysis/w33_macbeath_hexagon_functor.py` |
@@ -5476,7 +5476,7 @@ Indexed **7178** files; **7176** distinctive results
 | `1881` | `analysis/BT1880_BT1884_execution_summary.md` · `analysis/BT1881_BT1883_summary.md` · `analysis/BT1881_repeated_syndrome_decoder.md` · `analysis/BT1884_detector_time_decoder_graph.md` · *(+3)* |
 | `1883` | `PASS1882_1886_DECODER_ORDER_CARRIER_CLOCK_RELEASE.md` · `analysis/BT1880_BT1884_execution_summary.md` · `analysis/BT1881_BT1883_summary.md` · `analysis/BT1882_1886_decoder_order_carrier_clock.md` · *(+9)* |
 | `1884` | `PASS1882_1886_DECODER_ORDER_CARRIER_CLOCK_RELEASE.md` · `analysis/BT1880_BT1884_execution_summary.md` · `analysis/BT1882_1886_decoder_order_carrier_clock.md` · `analysis/BT1884_BT1886_summary.md` · *(+7)* |
-| `1885` | `PASS1882_1886_DECODER_ORDER_CARRIER_CLOCK_RELEASE.md` · `analysis/BT1882_1886_decoder_order_carrier_clock.md` · `analysis/BT1884_BT1886_summary.md` · `analysis/BT1885_BT1889_execution_summary.md` · *(+17)* |
+| `1885` | `PASS1882_1886_DECODER_ORDER_CARRIER_CLOCK_RELEASE.md` · `analysis/BT1882_1886_decoder_order_carrier_clock.md` · `analysis/BT1884_BT1886_summary.md` · `analysis/BT1885_BT1889_execution_summary.md` · *(+18)* |
 | `1886` | `PASS1882_1886_DECODER_ORDER_CARRIER_CLOCK_RELEASE.md` · `analysis/BT1846_1850_orbit_decoder_separator_probe_atlas.md` · `analysis/BT1882_1886_decoder_order_carrier_clock.md` · `analysis/BT1884_BT1886_summary.md` · *(+11)* |
 | `1887` | `PASS1887_1891_GLOBAL_DECODER_REFINED_GLUING_VOLTAGE_RELEASE.md` · `W33_FOR_EVERYONE.tex` · `analysis/BT1885_BT1889_execution_summary.md` · `analysis/BT1887_1891_global_decoder_refined_gluing_voltage.md` · *(+18)* |
 | `1888` | `PASS1887_1891_GLOBAL_DECODER_REFINED_GLUING_VOLTAGE_RELEASE.md` · `analysis/BT1885_BT1889_execution_summary.md` · `analysis/BT1887_1891_global_decoder_refined_gluing_voltage.md` · `analysis/BT1887_BT1889_summary.md` · *(+5)* |

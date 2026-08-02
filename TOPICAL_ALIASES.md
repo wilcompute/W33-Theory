@@ -10,7 +10,7 @@ to guess: `grep -i gow TOPICAL_ALIASES.md` reaches
 `2026-07-15_pass355_sp43_frobenius_schur.md`, which no search for
 "phase" or "complex structure" ever would.
 
-Files scanned: **3186** · distinct tokens: **615**
+Files scanned: **3187** · distinct tokens: **616**
 
 Tokens marked ⚠ appear ONLY in topically opaque filenames (dated or
 numbered), so they are invisible to any topic search — read those first.
@@ -345,6 +345,7 @@ numbered), so they are invisible to any topic search — read those first.
 - `group:Sp(4,2)` — [2026-07-08_pass70_15vector_doily_attack.md](analysis/2026-07-08_pass70_15vector_doily_attack.md), [2026-07-08_pass72_cumulative_bijection.md](analysis/2026-07-08_pass72_cumulative_bijection.md), [2026-07-08_pass72_deep_structure.md](analysis/2026-07-08_pass72_deep_structure.md), [2026-07-08_pass74_stabilizers_w33_parent.md](analysis/2026-07-08_pass74_stabilizers_w33_parent.md), [2026-07-15_pass75_doily_canonical_embedding.md](analysis/2026-07-15_pass75_doily_canonical_embedding.md), [2026-07-15_pass77_monster_2b_css_code.md](analysis/2026-07-15_pass77_monster_2b_css_code.md), [2026-07-15_pass79_leech_kneser_css.md](analysis/2026-07-15_pass79_leech_kneser_css.md), [BT1175_w33_paper_triple45_bridge_insert.tex](analysis/BT1175_w33_paper_triple45_bridge_insert.tex), [S12_PG32_GRAND_SYNTHESIS.md](docs/archive/S12_PG32_GRAND_SYNTHESIS.md)
 - `group:Sp(4,q)` — [2026-07-15_pass353_factor17_rep_theory.md](analysis/2026-07-15_pass353_factor17_rep_theory.md), [2026-07-15_pass354_gap_weil_q3_script.md](analysis/2026-07-15_pass354_gap_weil_q3_script.md), [2026-07-15_pass357_master_forcing_table.md](analysis/2026-07-15_pass357_master_forcing_table.md), [2026-07-15_pass92_wrq_landscape.md](analysis/2026-07-15_pass92_wrq_landscape.md), [w33_pass1907_1911_phase_needs_orientation_and_q_mod_4.md](analysis/w33_pass1907_1911_phase_needs_orientation_and_q_mod_4.md), [index.html](docs/index.html), [PART_CDIV_DELTA_C_14105_WITNESS_ACTIVATION.md](manuscripts/parts/PART_CDIV_DELTA_C_14105_WITNESS_ACTIVATION.md), [PART_MCCCCLXXXI_MCCCCXC_five_questions.md](manuscripts/parts/PART_MCCCCLXXXI_MCCCCXC_five_questions.md)
 - `group:Sp(6,2)` ⚠ — [BT890_matter_cone_and_e7.md](analysis/BT890_matter_cone_and_e7.md)
+- `group:Sp(8,2)` ⚠ — [w33_pass2082_2087_the_substrate_is_one_rank_below_phi.md](analysis/w33_pass2082_2087_the_substrate_is_one_rank_below_phi.md)
 - `group:U(3,3)` — [PART_CCLXXX_FINITE_GEOMETRY_BRIDGE.md](manuscripts/parts/PART_CCLXXX_FINITE_GEOMETRY_BRIDGE.md)
 - `group:W(1,2)` ⚠ — [2026-07-15_pass92_wrq_landscape.md](analysis/2026-07-15_pass92_wrq_landscape.md), [BT1707_BT1709_qubit_contextuality_hesse_bridge.md](analysis/BT1707_BT1709_qubit_contextuality_hesse_bridge.md)
 - `group:W(1,3)` ⚠ — [2026-07-15_pass357_three_threads_synthesis.md](analysis/2026-07-15_pass357_three_threads_synthesis.md), [2026-07-15_pass75_doily_canonical_embedding.md](analysis/2026-07-15_pass75_doily_canonical_embedding.md), [2026-07-15_pass92_wrq_landscape.md](analysis/2026-07-15_pass92_wrq_landscape.md)
