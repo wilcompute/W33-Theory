@@ -44,8 +44,8 @@ def digest(d):
     x=dict(d);x.pop('sha256_without_hash_field',None)
     return hashlib.sha256(json.dumps(x,sort_keys=True,separators=(',',':')).encode()).hexdigest()
 
-def moments(weight_enum):
-    q,k,n=27,5,730;A={int(w):int(c) for w,c in weight_enum.items()}
+def moments(weight_enum,k):
+    q,n=27,730;A={int(w):int(c) for w,c in weight_enum.items()}
     m=[sum(math.prod(range(w-j+1,w+1))*c for w,c in A.items()) for j in (1,2,3)]
     rhs=[(q-1)**j*q**(k-j)*math.prod(range(n-j+1,n+1)) for j in (1,2,3)]
     return m,rhs
@@ -63,13 +63,16 @@ def census(P,H,chunk=4096):
             qv=qpolar(a)
             typ='singular' if qv==0 else ('square_anisotropic' if qv in squares else 'nonsquare_anisotropic_regular_sections')
             typed[typ][int(s)]+=1
-    weight={str(730-s):26*c for s,c in spectrum.items()}
+    kernel_projective=spectrum.get(730,0)
+    dim=4 if kernel_projective else 5
+    divisor=27 if kernel_projective else 1
+    weight={str(730-s):26*c//divisor for s,c in spectrum.items() if s!=730}
     weight=dict(sorted(weight.items(),key=lambda x:int(x[0])))
     return {
       'typed_hyperplane_spectrum':{t:{str(k):v for k,v in sorted(h.items())} for t,h in sorted(typed.items())},
       'complete_hyperplane_spectrum':{str(k):v for k,v in sorted(spectrum.items())},
       'regular_spread_intersection_spectrum':{str(k):v for k,v in sorted(typed['nonsquare_anisotropic_regular_sections'].items())},
-      'projective_code':{'parameters':'[730,5]_27','nonzero_weight_enumerator':weight,
+      'projective_code':{'parameters':f'[730,{dim}]_27','dimension':dim,'nonzero_weight_enumerator':weight,
         'weight_gcd':math.gcd(*(int(w) for w in weight)),
         'divisibility':f"{math.gcd(*(int(w) for w in weight))}-divisible"}}
 
@@ -80,7 +83,7 @@ def build_full():
       'every_family_has_730_ovoid_points':all(len(ovoid(g))==730 for g in functions().values()),
       'every_typed_spectrum_sums_551881':all(sum(sum(h.values()) for h in r['typed_hyperplane_spectrum'].values())==551881 for r in rows.values()),
       'every_complete_spectrum_one_mod_9':all(all(int(s)%9==1 for s in r['complete_hyperplane_spectrum']) for r in rows.values()),
-      'all_code_sizes_27_power_5':all(1+sum(r['projective_code']['nonzero_weight_enumerator'].values())==27**5 for r in rows.values()),
+      'all_code_sizes_match_dimensions':all(1+sum(r['projective_code']['nonzero_weight_enumerator'].values())==27**r['projective_code']['dimension'] for r in rows.values()),
       'four_weight_enumerators_distinct':len({json.dumps(r['projective_code']['nonzero_weight_enumerator'],sort_keys=True) for r in rows.values()})==4,
       'regular_27_divisible':rows['regular']['projective_code']['weight_gcd']==27,
       'three_nonregular_exactly_9_divisible':all(rows[x]['projective_code']['weight_gcd']==9 for x in ('kantor','thas_payne','ree_tits'))}
@@ -99,7 +102,7 @@ def build_full():
         'numbers_of_regular_intersection_values':{x:len(r['regular_spread_intersection_spectrum']) for x,r in rows.items()},
         'known_base_intersections':{'regular_kantor':82,'regular_thas_payne':28,'regular_ree_tits':28,'kantor_ree_tits':28,'thas_payne_ree_tits':244}},
       'checks':checks,
-      'theorem':'For the four standard q=27 symplectic-spread coordinate families regular, Kantor, Thas--Payne and Ree--Tits, every hyperplane section is 1 modulo 9, but their complete spectra and projective weight enumerators are pairwise distinct. The regular code is 27-divisible; the three nonregular codes are exactly 9-divisible.',
+      'theorem':'For the four standard q=27 symplectic-spread coordinate families regular, Kantor, Thas--Payne and Ree--Tits, every hyperplane section is 1 modulo 9, but their complete spectra and projective weight enumerators are pairwise distinct. The regular elliptic section spans a hyperplane and gives a 27-divisible [730,4]_27 code; the three nonregular ovoids span PG(4,27) and give exactly 9-divisible [730,5]_27 codes.',
       'boundaries':['This is an exhaustive classification within four named coordinate families at q=27, not a classification of all symplectic spreads.',
         'The universal ovoid theorem supplies only the weaker 1 modulo 3 congruence; the common 1 modulo 9 property of these four families is recorded as a finite theorem and a broader conjectural direction.',
         'The regular, Kantor, Thas--Payne and Ree--Tits constructions retain literature ownership.']}
@@ -110,7 +113,7 @@ def verify_frozen(d):
     for r in d['complete_results'].values():
         assert sum(r['complete_hyperplane_spectrum'].values())==551881
         assert all(int(s)%9==1 for s in r['complete_hyperplane_spectrum'])
-        m,rhs=moments(r['projective_code']['nonzero_weight_enumerator']);assert m==rhs
+        m,rhs=moments(r['projective_code']['nonzero_weight_enumerator'],r['projective_code']['dimension']);assert m==rhs
     return d
 
 def main():
