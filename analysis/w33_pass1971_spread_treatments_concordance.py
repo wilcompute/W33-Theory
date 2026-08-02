@@ -28,7 +28,7 @@ def main():
     d={
       'schema':'w33.pass1971.spread_treatments_concordance.v1',
       'status':'PASS_WITH_FALSE_MAXIMALITY_WITHDRAWN',
-      'claims_compared':13,
+      'claims_compared':16,
       'corrections':{
         'false_claim':'the 45 spread frames form a maximal independent set',
         'counterexample':'15 residual candidate frames are individually nonadjacent to all 45 spread frames',
