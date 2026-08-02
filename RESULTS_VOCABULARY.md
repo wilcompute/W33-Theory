@@ -23,7 +23,12 @@ most rediscovery.
 | `adjacency SNF`, `signed turn`, `K operator`, `four-branch gluing` | integral adjacency and directed-edge lattices, including \(\operatorname{SNF}(A)=1^{16},2^8,8^{15},24\) and \(\operatorname{spec}(K)=(-6)^{81},2^{120},4^{24},10^{15}\) | [Pass 827 witness](analysis/w33_pass827_adjacency_kbranch_meets_e8_boundary.py), [Pass 826 witness](analysis/w33_pass826_k_operator_four_branch_gluing.py) | equality of spectra or dimensions without an integral map |
 | `120 axes`, `240 roots`, `axis glue`, `E8 lift` | intrinsic \(120\)-axis map to anisotropic \(E_8/2E_8\) lines and explicit chamber-gauged lift to all 240 signed roots | [local-axis lift](PASS123_W33_AXIS_GLUE_E8_LIFT.md) | the obstructed global bijection from the 240 W33 graph edges |
 | `432`, `216 frame lines`, `Steinberg bridge`, `58|23` | directed Schläfli carrier, rank-81 integral frame, and unique nonsplit characteristic-5 extension | [Pass 1147](PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md), [Pass 1335](PASS1335_BRAUER_TREE_HECKE_CORNER.md) | the 26-dimensional Hecke algebra or a physical generation |
-| `H26`, `26 Hecke units`, `modular radical`, `Loewy` | literal \(S_5\)-coset Hecke algebra with exact \(p=2,3,5\) radical and block profiles | [Passes 1330–1334](PASS1330_1334_MODULAR_TRIALITY_ATLAS_RELEASE.md) | the literal \(81\)-dimensional frame module; the Hecke block is a corner shadow |
+| `H26`, `26-dimensional Hecke algebra`, `modular radical`, `Loewy` | literal \(S_5\)-coset Hecke algebra with exact \(p=2,3,5\) radical and block profiles | [Passes 1330–1334](PASS1330_1334_MODULAR_TRIALITY_ATLAS_RELEASE.md) | the literal \(81\)-dimensional frame module, the ambient group Brauer block, or the 83-dimensional selector orbital algebra |
+| `83 units`, `selector orbital algebra`, `End_H(Q^120)` | 120-selector action with 83 orbitals and rational Wedderburn algebra \(\mathbb Q^7\oplus M_2(\mathbb Q)^2\oplus M_3(\mathbb Q)^3\oplus M_4(\mathbb Q)\oplus M_5(\mathbb Q)\) | [Passes 1355–1384](analysis/BT1355_BT1359_selector_matching_scheme.md) | `H26`; the number 83 belongs to a different algebra |
+| `all-q spread graph`, `regular spread SRG`, `elliptic sections` | for every odd prime power, the regular-spread \(q+1\) relation is an explicit SRG with nontrivial eigenvalues \(q(q-2),-q\) | [Passes 2200–2206](PASS2200_2206_ALL_Q_SPREADS_NONREGULAR_CONTROLLER_RTL_RELEASE.md) | arbitrary non-Desarguesian spreads; the q=27 Ree–Tits control is nonregular |
+| `q27 spectrum`, `1 mod 9`, `Ree-Tits code`, `[730,5]_27` | complete hyperplane spectra and projective divisible codes for the regular, Kantor, Thas–Payne, and Ree–Tits coordinate families | [Pass 2300](analysis/w33_pass2300_ree_tits_divisible_code.py), [Pass 2304](analysis/w33_pass2304_known_q27_spread_spectra.py) | a classification of every q=27 symplectic spread; only four named families are complete here |
+| `50 quadratic maps`, `Hom bases`, `25+25`, `32+18`, `quadratic S3` | all quadratic maps from the signed-edge 90, with combined phase/outer module \(16\mathbf1\oplus16\mathrm{sgn}\oplus9\mathrm{std}\) | [Pass 2301 bases](analysis/w33_pass2301_complete_quadratic_hom_bases.py), [Pass 2307 character](PASS2307_QUADRATIC_HOM_S3_DECOMPOSITION.md) | the Pass-2200 outer-even half, or physical coupling constants |
+| `controller 48`, `single-J 24`, `R4 U6`, `golden word`, `common inverter` | three distinct objects: abstract \((C_4\times C_6):C_2\), canonical \(C_{12}:C_2\) quotient, and overlapping \(SL_3(\mathbb Z)\) carrier | [Pass 2306](PASS2306_CONTROLLER_REPRESENTATION_TRICHOTOMY.md) | a single group in three coordinate systems, or a selected physical observable |
 | `137 QR`, `quadratic residue CSS`, `[[137,1,d]]` | corrected binary quantum code \([[137,1,21]]\) | [Passes 363–367](PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md) | the retracted unsupported \([[137,1,3]]\) intake claim |
 
 ## The 540 — and the trap that there are FIVE transitive species
@@ -201,6 +206,73 @@ certificate.
 [`analysis/w33_pass1330_1334_modular_triality_cycle_atlas.py`](analysis/w33_pass1330_1334_modular_triality_cycle_atlas.py),
 [`data/w33_pass1330_1334_modular_triality_cycle_atlas.json`](data/w33_pass1330_1334_modular_triality_cycle_atlas.json),
 and [Pass 1335](PASS1335_BRAUER_TREE_HECKE_CORNER.md).
+
+## The controllers — 48, 24, and infinity
+
+**Aliases:** `independent clocks`, `phase controller`, `C4 x C6`, `single J`,
+`D24`, `R4/U6`, `SL3Z carrier`, `golden word`, and `common inverter`.
+
+**Canonical separation:** the abstract common-inverter controller is
+\(\Gamma=(C_4\times C_6):C_2\), order 48.  It has minimal faithful rational
+degree four.  The canonical single-complex-structure action is the quotient
+\[
+(a,b,e)\longmapsto(3a+2b\bmod12,e),
+\]
+with image \(C_{12}:C_2\) of order 24 and kernel
+\(\{(0,0,0),(2,3,0)\}\).
+
+The overlapping three-coordinate matrices from Passes 1942/1953 are not a
+smaller realization of either finite group.  They do not commute, they generate
+\(SL_3(\mathbb Z)\), and the simultaneous rational common-inverter equations
+have rank 9 and nullity 0.  The syntactically matched finite word
+\(A_4^2B_6\) has order 6 and spectral radius 1, whereas \(R_4^2U_6\) has infinite
+order and spectral radius \(\varphi\).
+
+**Boundary:** \(\varphi\) is therefore located in the infinite arithmetic
+lattice action, not in the finite controller.  No physical observable is
+selected until an operational map singles out that arithmetic word.
+
+**Primary artifacts:** [Pass 2306](PASS2306_CONTROLLER_REPRESENTATION_TRICHOTOMY.md),
+the [GAP witness](analysis/w33_pass2306_controller_representation_trichotomy.g),
+and the [certificate](data/w33_pass2306_controller_representation_trichotomy.json).
+
+## The fifty quadratic maps — full Hom space and its \(S_3\) character
+
+**Aliases:** `quadratic Hom`, `50 tensors`, `outer-even 25`, `outer-odd 25`,
+`phase fixed 32`, `phase rotating 18`, `quadratic S3`, and `16-16-9`.
+
+**Canonical object:** the direct sum over targets \(15,24,30,81\) of the
+\(PSp(4,3)\)-equivariant symmetric and alternating quadratic maps from the
+canonical signed-edge \(90\).  Pass 2301 constructs every basis map as an
+explicit signed-orbit tensor.  The full dimensions are
+\[
+\mathrm{Sym}^2:(3,6,5,12),\qquad
+\Lambda^2:(3,4,5,12),
+\]
+for totals \(26+24=50\).  The earlier Pass-2200 rows are exactly the
+outer-even, \(PGSp(4,3)\)-extendible half, not the full \(PSp\) Hom table.
+
+**Canonical symmetry:** simultaneous phase and outer inversion act as
+\(C_3:C_2\cong S_3\), and GAP decomposes the space as
+\[
+\mathrm{Sym}=13\mathbf1\oplus3\mathrm{sgn}\oplus5\mathrm{std},
+\]
+\[
+\Lambda=3\mathbf1\oplus13\mathrm{sgn}\oplus4\mathrm{std},
+\]
+so the combined space is
+\[
+16\mathbf1\oplus16\mathrm{sgn}\oplus9\mathrm{std}.
+\]
+This forces the outer split \(25+25\) and phase split \(32+18\).
+
+**Boundary:** these are maps and representation multiplicities, not physical
+couplings.  The integers 16 and 9 are not identified with other W33 carriers
+without a named intertwiner.
+
+**Primary artifacts:** [Pass 2301 witness](analysis/w33_pass2301_complete_quadratic_hom_bases.py),
+[Pass 2307](PASS2307_QUADRATIC_HOM_S3_DECOMPOSITION.md), and the
+[GAP character witness](analysis/w33_pass2307_quadratic_hom_s3_decomposition.g).
 
 ## The 36 — spreads
 

@@ -1,0 +1,53 @@
+% Pass 2306: exact distinction among the finite and arithmetic controllers.
+\section*{Controller representation trichotomy: orders $48$, $24$, and infinity}
+\addcontentsline{toc}{section}{Controller representation trichotomy: orders 48, 24, and infinity}
+
+There are three controller objects in the preceding construction, not one.
+The abstract common-inverter group
+\[
+ \Gamma=(C_4\times C_6):C_2
+\]
+has order $48$.  It has the faithful integral four-dimensional realization
+\[
+A_4=\begin{pmatrix}0&-1&0&0\\1&0&0&0\\0&0&1&0\\0&0&0&1\end{pmatrix},
+\quad
+B_6=\begin{pmatrix}1&0&0&0\\0&1&0&0\\0&0&0&1\\0&0&-1&1\end{pmatrix},
+\]
+\[
+S=\begin{pmatrix}0&1&0&0\\1&0&0&0\\0&0&0&1\\0&0&1&0\end{pmatrix},
+\]
+for which $[A_4,B_6]=1$, $SA_4S=A_4^{-1}$, and
+$SB_6S=B_6^{-1}$.  Exact rational-character and cyclotomic checks show that its
+minimal faithful rational degree is $4$.
+
+The canonical single-complex-structure action is instead the quotient
+\[
+ (a,b,e)\longmapsto(3a+2b\bmod 12,e),
+ \qquad \operatorname{im}\cong C_{12}:C_2,
+\]
+of order $24$, with kernel
+$\{(0,0,0),(2,3,0)\}$.  Thus the full order-$48$ group requires two independent
+two-dimensional phase registers.
+
+The rank-three matrices $R_4,U_6$ from the integral multiplicity carrier form a
+third object.  Their phase planes overlap, so they do not commute and generate
+$SL_3(\mathbb Z)$.  More strongly, the simultaneous common-inverter equations
+\[
+ XR_4=R_4^{-1}X,\qquad XU_6=U_6^{-1}X
+\]
+have coefficient-matrix rank $9$ and nullity $0$ over $\mathbb Q$.  Hence no
+nonzero rational common inverter exists.
+
+The same generator word exposes the change of dynamics:
+\[
+ \chi_{A_4^2B_6}(t)=(t+1)^2(t^2-t+1),\qquad |A_4^2B_6|=6,
+\]
+whereas
+\[
+ \chi_{R_4^2U_6}(t)=(t+1)(t^2-t-1),\qquad |R_4^2U_6|=\infty.
+\]
+The latter has spectral radius $\varphi$.  Therefore the golden ratio belongs
+to the infinite arithmetic lattice action, not to the finite controller or its
+canonical single-$J$ quotient.  It is not a selected physical observable
+without an additional operational map.
+

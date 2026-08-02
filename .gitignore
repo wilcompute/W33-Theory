@@ -130,6 +130,8 @@ scripts/inspect_*.py
 data/*
 !data/w33_pass_namespace_registry_v2.d/
 !data/w33_pass_namespace_registry_v2.d/*.json
+!data/w33_pass2306_controller_representation_trichotomy.json
+!data/w33_pass2307_quadratic_hom_s3_decomposition.json
 !data/atlas/
 !data/atlas/**
 !data/w33_e8_mapping.json

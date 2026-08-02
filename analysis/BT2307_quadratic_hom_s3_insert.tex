@@ -1,0 +1,46 @@
+% Pass 2307: exact S3-character decomposition of all quadratic Hom maps.
+\section*{The complete quadratic map space as an $S_3$-module}
+\addcontentsline{toc}{section}{The complete quadratic map space as an S3-module}
+
+The complete Pass-2301 basis of fifty $PSp(4,3)$-equivariant quadratic maps
+from the signed-edge $90$ carries a simultaneous phase action $r$ and outer
+involution $s$ satisfying
+\[
+r^3=s^2=1,\qquad srs=r^{-1}.
+\]
+Thus the multiplicity spaces form a module for $C_3:C_2\cong S_3$.  Exact GAP
+character decomposition gives
+\[
+\mathcal H_{\mathrm{Sym}}
+ \cong13\,\mathbf1\oplus3\,\mathrm{sgn}\oplus5\,\mathrm{std},
+\]
+\[
+\mathcal H_{\Lambda}
+ \cong3\,\mathbf1\oplus13\,\mathrm{sgn}\oplus4\,\mathrm{std},
+\]
+and hence
+\[
+\mathcal H_{\mathrm{quad}}
+ \cong16\,\mathbf1\oplus16\,\mathrm{sgn}\oplus9\,\mathrm{std}.
+\]
+The associated characters on $(1),(123),(12)$ are
+$(26,11,10)$, $(24,12,-10)$, and $(50,23,0)$.
+
+This one decomposition explains both frozen dimension ledgers.  A reflection
+has one eigenvalue of each sign on every standard copy, so
+\[
+\dim\mathcal H_+=16+9=25,
+\qquad
+\dim\mathcal H_-=16+9=25.
+\]
+The one-dimensional representations are fixed by $C_3$, while the nine
+standard copies give eighteen rotating dimensions, so
+\[
+50=32_{C_3\text{-fixed}}+18_{C_3\text{-rotating}}.
+\]
+
+The order-six phase on the $90$ reduces to order three on bilinear inputs
+because its central sign acts twice.  This is an exact representation-theoretic
+logic reduction.  The fifty maps are not physical couplings, and the
+multiplicities $16$ and $9$ are not identified with unrelated W33 counts.
+

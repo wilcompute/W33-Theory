@@ -1,0 +1,70 @@
+{
+  "schema": "w33.pass2306.controller_representation_trichotomy.gap.v1",
+  "status": "PASS",
+  "producer": "GAP 4.12.1",
+  "abstract_controller": {
+    "presentation": "(C4 x C6):C2 with one simultaneous inverter",
+    "order": 48,
+    "structure": "C2 x D24",
+    "minimal_faithful_rational_degree": 4,
+    "minimal_faithful_irreducible_pairs": [[9, 11], [9, 12], [10, 11], [10, 12]],
+    "natural_character_irreducibles": [10, 12],
+    "faithful_integral_generators": {
+      "C4": [[0, -1, 0, 0], [1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]],
+      "C6": [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 0, 1], [0, 0, -1, 1]],
+      "inverter": [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0]]
+    },
+    "matched_word": {
+      "word": "A4^2 B6",
+      "order": 6,
+      "characteristic_polynomial_coefficients_constant_first": [1, 1, 0, 1, 1],
+      "factorization": "(t+1)^2(t^2-t+1)",
+      "spectral_radius": 1
+    }
+  },
+  "canonical_single_J_quotient": {
+    "map": "(a,b,e) -> (3a+2b mod 12,e)",
+    "image": "C12:C2",
+    "image_order": 24,
+    "kernel": [[0, 0, 0], [2, 3, 0]],
+    "fiber_size": 2
+  },
+  "overlapping_arithmetic_carrier": {
+    "dimension": 3,
+    "group": "<R4,U6>=SL3(Z), owned by Pass 1953 and rechecked via its six elementary words",
+    "R4": [[0, -1, 0], [1, 0, 0], [0, 0, 1]],
+    "U6": [[1, 0, 0], [0, 0, 1], [0, -1, 1]],
+    "generators_commute": false,
+    "commutator_order": 4,
+    "common_inverter_equation_rank": 9,
+    "common_inverter_nullity": 0,
+    "golden_word": "R4^2 U6",
+    "golden_word_order": "infinity",
+    "golden_word_characteristic_polynomial_coefficients_constant_first": [-1, -2, 0, 1],
+    "golden_word_factorization": "(t+1)(t^2-t-1)",
+    "golden_word_spectral_radius": "phi"
+  },
+  "theorem": "The finite common-inverter controller, its canonical single-J quotient, and the overlapping rank-three arithmetic carrier are three distinct objects. A faithful rational controller needs two independent two-dimensional phase registers. Overlapping those registers in dimension three destroys commutativity and the common inverter, generates the Pass-1953 SL3(Z) carrier, and permits the hyperbolic golden word.",
+  "boundary": "The golden ratio is an exact spectral radius in the infinite arithmetic lattice action. It is not selected by the finite W(3,3) geometry, not represented by the canonical single-J controller, and not a physical observable without an additional operational map.",
+  "checks": {
+    "abstract_order_48": true,
+    "canonical_map_homomorphism": true,
+    "canonical_image_order_24": true,
+    "canonical_kernel_two": true,
+    "canonical_fibers_two": true,
+    "faithful_integral_group_order_48": true,
+    "faithful_integral_structure": true,
+    "independent_clocks_commute": true,
+    "common_inverter_relations": true,
+    "generator_orders_4_6_2": true,
+    "minimal_faithful_rational_degree_4": true,
+    "natural_character_is_faithful_pair": true,
+    "finite_matched_word_is_elliptic": true,
+    "arithmetic_generator_orders_4_6": true,
+    "arithmetic_generators_do_not_commute": true,
+    "arithmetic_commutator_order_4": true,
+    "no_rational_common_inverter": true,
+    "golden_word_is_hyperbolic": true,
+    "pass1953_elementary_words_rechecked": true
+  }
+}

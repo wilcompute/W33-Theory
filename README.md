@@ -31,17 +31,32 @@ is not conditional on anything:
   k-branch gluing laws, the coalescence theorem, pencil rigidity, the all-`m`
   trace-valuation theorem at `q=3`, and one Smith-form theorem that unified two
   agents' independently built towers.
-- **A complete modular picture of a 26-dimensional Hecke algebra** — decomposition
-  and Cartan matrices at `p = 2,3,5`, projective indecomposable dimensions, Loewy
-  and radical series, the cyclic-defect Brauer tree `1−24−81−64−6` at `p=5`, 83
-  explicit rational matrix units, and primitive idempotent systems lifted through
-  `p⁶`.
+- **A complete modular picture of the literal 26-dimensional Hecke algebra** —
+  decomposition and Cartan matrices at `p = 2,3,5`, projective indecomposable
+  dimensions, Loewy and radical series, and primitive idempotent systems lifted
+  through `p⁶`. The ambient group block has the cyclic-defect Brauer tree
+  `1−24−81−64−6`; it is related to, but not identical with, the Hecke radical.
+- **A separate, explicit selector orbital algebra** — the 120-selector action has
+  83 orbitals and rational Wedderburn algebra
+  `Q⁷ ⊕ M₂(Q)² ⊕ M₃(Q)³ ⊕ M₄(Q) ⊕ M₅(Q)`, realized by 83 exact matrix units.
 - **Exact integral arithmetic of every eigenlattice** — Smith forms, discriminant
   identities, prime-by-prime gluing, and a rigidity theorem showing the gluing
   support is an invariant of the ring `Z[S]`, not of the matrix.
 - **Canonical named maps, not matching integers** — every one of the 540 frames
   carries a *unique* `A₄`-equivariant cross-matching, and the 540 of them cover
   the 240 edges exactly 9-to-1.
+- **An all-odd-`q` strongly regular family** — regular symplectic spreads form an
+  exact two-intersection scheme with closed parameters and eigenvalues; the
+  `q=27` Ree–Tits spread supplies a complete seven-weight, exactly 9-divisible
+  `[730,5]₂₇` code, and four named `q=27` families have distinct complete spectra.
+- **Three controller objects, finally separated** — the abstract controller has
+  order 48 and minimal faithful rational degree 4, its canonical single-`J`
+  image has order 24, and the overlapping rank-three carrier is the infinite
+  arithmetic group `SL₃(Z)` with no rational common inverter.
+- **Every quadratic intertwiner, then its symmetry type** — all 50 quadratic
+  Hom maps from the signed-edge 90 are explicit and surjective. Their phase/outer
+  action is exactly `16·1 ⊕ 16·sgn ⊕ 9·std` for `S₃`, which explains both the
+  balanced `25+25` outer split and the `32+18` phase split.
 - **A correction ledger with executable owners.** Refuted claims keep their
   failure certificates instead of being silently overwritten, and several were
   found by the authors auditing themselves.
@@ -64,8 +79,15 @@ held to, and it is the reason to trust the rest.
 | Exceptional carrier bridge | `432 → 81 → 216`, one-colour Smith profile `1^15,2^6,4^8,8^29,40^23`, colour index `3^81` | [Pass 1147](PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md) |
 | Modular representation closure | The nonsplit `58\|23` frame extension, one-dimensional directed `Ext¹` spaces, exact `H₂₆` radicals, Cartan matrices, PIM dimensions, and lifts through `p^6` | [Pass 1335](PASS1335_BRAUER_TREE_HECKE_CORNER.md) · [Passes 1340–1344](PASS1340_1344_CARTAN_ATLAS_SELECTOR_PADIC_RELEASE.md) |
 | Global selector geometry | The length-4 simple-cycle orbit of size `120` is globally minimal over all lengths `3…40`; adding a primitive copy idempotent gives the global orbit minimum `360` | [GAP witness](analysis/w33_pass1342_global_cycle_selector_bound.g) |
-| Steinberg carrier, named | The three 432-orbits carrying the `3×81` are **conjugate**, stabiliser `S₅`; `S₅ ∩ PSp(4,3) = A₅`, so the carrier's stabiliser is not inside the simple group | [Pass 1375](analysis/w33_pass1375_1378_s5_tomotope_a4_guard.md) |
-| Frame cross-matching | Every frame has a **unique** `A₄`-equivariant matching between its two lines; the 540 cover the 240 edges **9-to-1** | [Pass 1390](analysis/w33_pass1390_1391_frame_cross_matching.md) |
+| Selector orbital algebra | The 120-selector action has 83 orbitals, a 79-dimensional Terwilliger algebra, and 83 explicit rational Wedderburn matrix units | [Passes 1355–1384](analysis/BT1355_BT1359_selector_matching_scheme.md) |
+| Steinberg carrier, named | The three 432-orbits carrying the `3×81` are **conjugate**, stabiliser `S₅`; the later refinement gives `S₅ ∩ PSp(4,3) = A₅` | [Pass 1134 owner](analysis/w33_pass1134_we6_432_stabilizers.py) · [Pass 1375 refinement](analysis/w33_pass1375_1378_s5_tomotope_a4_guard.md) |
+| Frame cross-matching | Every frame has a unique collinearity transversal; independently it is the unique `A₄`-equivariant matching, and all 540 cover the 240 edges 9-to-1 | [Pass 1355 owner](analysis/BT1355_BT1359_selector_matching_scheme.md) · [Pass 1390 refinement](analysis/w33_pass1390_1391_frame_cross_matching.md) |
+| Exact cover frontier | Two disjoint 100,000-cover searches hit the same 327 complete `PSp(4,3)` orbits, containing `3,547,800` covers in total; this is a certified lower bound, not a global completeness claim | [Pass 1510 audit](analysis/BT1510_bidirectional_cover_saturation.md) |
+| Regular-spread family | For every odd prime power, the `q+1` intersection relation is an explicit SRG with eigenvalues `q(q−2),−q`; a `q=27` Ree–Tits slice already has five nonregular intersection sizes | [Passes 2200–2206](PASS2200_2206_ALL_Q_SPREADS_NONREGULAR_CONTROLLER_RTL_RELEASE.md) |
+| Complete `q=27` spread spectra and codes | Ree–Tits has complete spectrum `1⁷³⁰,10⁴⁵⁶³,19⁹⁶¹⁷⁴,28⁴⁰⁸²⁹⁴,37³⁶⁵⁰⁴,46⁴⁹¹⁴,55⁷⁰²` and an exactly 9-divisible `[730,5]₂₇` code; regular/Kantor/Thas–Payne/Ree–Tits spectra are pairwise distinct | [Pass 2300](analysis/w33_pass2300_ree_tits_divisible_code.py) · [Pass 2304](analysis/w33_pass2304_known_q27_spread_spectra.py) |
+| Controller representations | Abstract `(C₄×C₆):C₂` has order 48 and minimal faithful rational degree 4; the single-`J` image has order 24; the overlapping 3D carrier is `SL₃(Z)` and has no common inverter | [Pass 2306](PASS2306_CONTROLLER_REPRESENTATION_TRICHOTOMY.md) |
+| Complete quadratic map module | Full `PSp(4,3)` Hom dimensions are `Sym=(3,6,5,12)`, `Λ=(3,4,5,12)` on targets `(15,24,30,81)`; the combined `S₃` module is `16·1⊕16·sgn⊕9·std` | [Pass 2301 bases](analysis/w33_pass2301_complete_quadratic_hom_bases.py) · [Pass 2307 character theorem](PASS2307_QUADRATIC_HOM_S3_DECOMPOSITION.md) |
+| Canonical Weil outer action | At `q=7,11`, complex conjugation realizes the nonsquare outer similitude on both parity constituents and reverses the realified complex structure, giving exact `D₄` relations | [Pass 2302](analysis/w33_pass2302_q7_q11_weil_outer_inversion.py) |
 
 Those are the compact front doors. The larger [certified backbone](#certified-finite-backbone)
 below gives exact statements, tiers, and owning artifacts without forcing a
@@ -106,6 +128,10 @@ in [`RESULTS_INDEX.md`](RESULTS_INDEX.md) before re-deriving it.
 | `X₄₃₂` | `W(E6)/S5`, equivalently the directed edges of the Schläfli graph. |
 | `81₋` | The Pass-1147 constituent in `Λ²(Aug(Q^27))`; it is not silently identified with `H₁(Γ)`. |
 | `H₂₆` | `End_G(X₄₃₂)`, the literal 26-dimensional coset Hecke algebra. |
+| Selector orbital algebra | `End_H(Q^120)`, dimension 83; its 83 rational matrix units do **not** belong to `H₂₆`. |
+| `Γctrl` | The abstract independent-clock group `(C₄×C₆):C₂`, order 48, requiring two complex phase registers for faithfulness over `Q`. |
+| `ΓJ` | The canonical single-`J` quotient `C₁₂:C₂`, order 24; kernel `⟨(2,3,0)⟩`. |
+| Arithmetic phase carrier | The overlapping three-coordinate action `⟨R₄,U₆⟩=SL₃(Z)`; infinite and not a smaller representation of `Γctrl`. |
 
 For aliases, superseded names, and pass ownership, use
 [`RESULTS_VOCABULARY.md`](RESULTS_VOCABULARY.md),
@@ -123,7 +149,7 @@ flowchart TD
     A --> L["Smith forms and prime-by-prime gluing"]
     L --> CO["coalescence: the p-part is carried<br/>by eigenvalues colliding mod p"]
     W --> Y["Y₄₈₀ directed-edge carrier"]
-    W --> F["540 frames = disjoint line pairs<br/>stabiliser C₂×S₄ = O_h"]
+    W --> F["540 frames = disjoint line pairs<br/>stab in PSp: C₂×S₄ (order 48)<br/>stab in PGSp: C₂²×S₄ (order 96)"]
     F --> FA["derived subgroup A₄ acts faithfully<br/>on each line's 4 points"]
     FA --> FM["canonical 4-edge cross-matching<br/>540 frames → 240 edges, 9-to-1"]
     S["Schläfli graph on 27 lines"] --> X["X₄₃₂ = W(E₆)/S₅"]
@@ -134,11 +160,17 @@ flowchart TD
     X --> H["H₂₆ = End_G(X₄₃₂), three-carrier triality"]
     H --> J["234 → 78 → 52; Hecke bad primes {2,3,5}"]
     J --> R["modular radicals: 21→17→13→7→2→0 at p=2"]
-    R --> B["p=5 Brauer tree 1−24−81−64−6<br/>Ext¹(23,58)=Ext¹(58,23)=1"]
+    X --> B["ambient p=5 group block:<br/>Brauer tree 1−24−81−64−6<br/>Ext¹(23,58)=Ext¹(58,23)=1"]
     R --> P["Cartan/PIM at p=2,3,5; idempotents through p⁶"]
-    H --> MU["83 rational matrix units:<br/>Q⁷⊕M₂(Q)²⊕M₃(Q)³⊕M₄(Q)⊕M₅(Q)"]
     H --> Q["global cycle orbit 120 = 40 lines × 3 matchings<br/>cycle + copy orbit 360"]
+    Q --> SA["120-selector orbital algebra, dimension 83"]
+    SA --> MU["83 rational matrix units:<br/>Q⁷⊕M₂(Q)²⊕M₃(Q)³⊕M₄(Q)⊕M₅(Q)"]
     Q --> QO["no maximal subgroup holding a 432-selector<br/>stabiliser contains the S₅"]
+    W --> RS["regular spreads for every odd q:<br/>closed SRG parameters"]
+    RS --> RT["q=27 Ree–Tits control:<br/>five nonregular intersection sizes"]
+    CTRL["abstract controller, order 48<br/>minimal faithful Q-degree 4"] --> CJ["single-J image, order 24"]
+    CTRL --> AR["overlap phase planes in rank 3"]
+    AR --> SL["SL₃(Z); no rational common inverter<br/>R₄²U₆ has spectral radius φ"]
 ```
 
 
@@ -160,10 +192,16 @@ flowchart TD
 | `H₂₆` Cartan/PIM and p-adic refinement | `C₂=diag(1,22)`, `C₃`, `C₅=I₆⊕[[2,1,1],[1,1,0],[1,0,2]]`; PIM dimensions `(2,22)`, `(9,6,10,1)`, `(3,2,1,1,1,1,4,2,3)`; primitive systems verified through `p⁶`; Smith and Loewy filtrations differ | `CERTIFIED` | [Passes 1340–1344](PASS1340_1344_CARTAN_ATLAS_SELECTOR_PADIC_RELEASE.md) |
 | Global cycle/copy selector bound | Exact GAP path-stabilizer proof: global simple-cycle orbit minimum `120` at length 4; a primitive copy idempotent gives `360`; cycles alone act as `C⊗I₃` | `CERTIFIED` | [GAP witness](analysis/w33_pass1342_global_cycle_selector_bound.g) |
 | Shifted adjacency | `spec(A−I) = 11¹,1²⁴,(−5)¹⁵`, `m_D(t)=(t−11)(t−1)(t+5)`; the historical cubic `(t+1)[(t+1)²−36]` annihilates **no** eigenspace (`rank p_old(D)=40`) | `CERTIFIED` | [erratum](analysis/2026-07-27_shifted_adjacency_spectral_erratum.md) |
-| Steinberg carrier stabiliser | Three **conjugate** 432-orbits, stabiliser `S₅ = SmallGroup[120,34]`, `S₅ ∩ PSp(4,3) = A₅`; no maximal subgroup able to hold a 432-selector stabiliser contains the `S₅` | `CERTIFIED` | [Pass 1375](analysis/w33_pass1375_1378_s5_tomotope_a4_guard.md) |
+| Steinberg carrier stabiliser | Three **conjugate** 432-orbits, stabiliser `S₅ = SmallGroup[120,34]`; the later refinement gives `S₅ ∩ PSp(4,3) = A₅` and the maximal-subgroup obstruction | `CERTIFIED` | [Pass 1134 owner](analysis/w33_pass1134_we6_432_stabilizers.py) · [Pass 1375 refinement](analysis/w33_pass1375_1378_s5_tomotope_a4_guard.md) |
 | Tomotope, from its own paper | `Γ(T)=[96,227]=2⁴:S₃`, `Γ(T)′=[48,50]=2⁴:C₃`, built from the **published** generators. `Aut(T)` *satisfies* the intersection condition — `Mon(T)` is what fails | `CERTIFIED` | [Pass 1376](analysis/w33_pass1375_1378_s5_tomotope_a4_guard.md) |
-| Frame cross-matching | Unique `A₄`-equivariant bijection per frame, invariant under the full stabiliser; all 240 cross-pairs are **edges**, covered 9-to-1 | `CERTIFIED` | [Pass 1390](analysis/w33_pass1390_1391_frame_cross_matching.md) |
+| Frame cross-matching | Pass 1355 owns the unique collinearity transversal; Pass 1390 independently characterizes it as the unique `A₄`-equivariant bijection and proves uniform 9-to-1 coverage | `CERTIFIED` | [Pass 1355 owner](analysis/BT1355_BT1359_selector_matching_scheme.md) · [Pass 1390 refinement](analysis/w33_pass1390_1391_frame_cross_matching.md) |
 | Frames are not polytope facets | `O_h` is a string C-group `{4,3}`, but no rank-4 string C-group extends it in `PSp(4,3)` | `CERTIFIED` | [Pass 1377](analysis/w33_pass1375_1378_s5_tomotope_a4_guard.md) |
+| Exact-cover orbit frontier | Two disjoint deterministic prefixes independently hit the same 327 complete `PSp(4,3)` orbits, whose sizes sum to `3,547,800`; global completeness remains open | `CERTIFIED` | [Pass 1510 audit](analysis/BT1510_bidirectional_cover_saturation.md) |
+| All-odd-`q` regular-spread graph | `v=q²(q²−1)/2`, `k=q(q−2)(q²+1)/2`, `λ=q(q³−4q²+7q−8)/2`, `μ=q(q−2)(q−1)²/2`; nontrivial eigenvalues `q(q−2),−q` | `PROVED / CERTIFIED` | [Passes 2200–2206](PASS2200_2206_ALL_Q_SPREADS_NONREGULAR_CONTROLLER_RTL_RELEASE.md) |
+| Controller representation trichotomy | Finite abstract order 48 / canonical order 24 / infinite `SL₃(Z)` are distinct; minimal faithful rational degree 4 and common-inverter nullity 0 | `CERTIFIED` | [Pass 2306](PASS2306_CONTROLLER_REPRESENTATION_TRICHOTOMY.md) |
+| Complete `q=27` named-family codes | All four standard coordinate families have hyperplane sections `1 mod 9`; the regular code is 27-divisible `[730,4]₂₇`, while three nonregular codes are exactly 9-divisible `[730,5]₂₇` | `CERTIFIED` | [Pass 2304](analysis/w33_pass2304_known_q27_spread_spectra.py) |
+| Complete quadratic Hom bases | Every nonzero basis map is target-surjective; full dimensions total `26` symmetric and `24` alternating, with outer-even and outer-odd halves both dimension 25 | `CERTIFIED` | [Pass 2301](analysis/w33_pass2301_complete_quadratic_hom_bases.py) |
+| Quadratic Hom `S₃` character | `Sym=13·1⊕3·sgn⊕5·std`, `Λ=3·1⊕13·sgn⊕4·std`, combined `16·1⊕16·sgn⊕9·std`; explains `25+25` and `32+18` | `CERTIFIED` | [Pass 2307](PASS2307_QUADRATIC_HOM_S3_DECOMPOSITION.md) |
 
 ### The flagship bridge, in one paragraph
 
@@ -406,6 +444,10 @@ question, and it is the live form of the E₈ problem.
 | **Deformation arc** | 641–830 | 2-adic tower, Ext quivers, the two-branch and k-branch gluing theorems, coalescence |
 | **Cross-track** | 806–828 | Two agents' independent constructions unified by one Smith-form theorem |
 | **Audit again** | 856–984 | Three external batches audited at intake; several headline claims refuted |
+| **Exceptional/modular closure** | 1002–1391 | Ramified reconstruction; `432→81→216`; Brauer/Cartan/PIM closure; selector orbital and frame-matching algebras |
+| **Cover-resolution atlas** | 1408–1975 | Certified 327-orbit cover frontier, signature compression, decoders, arithmetic multiplicity order, and `SL₃(Z)` phase carrier |
+| **Spread and controller frontier** | 1976–2206 | Regular-spread classification for every odd prime power, Ree–Tits control, exact outer-even Hom multiplicities, and the canonical order-24 controller |
+| **Complete spectra and representations** | 2300–2307 | Complete q=27 named-family spectra/codes, all quadratic Hom bases, q=7/11 Weil inversion, controller trichotomy, and the induced quadratic-map `S₃` character |
 
 Two agents work this repository in parallel. Neither reads the other's filenames. That is a *structural*
 cause of rediscovery, not a discipline problem — hence `RESULTS_INDEX.md`, the guards, and the pass-number
@@ -430,7 +472,7 @@ claim's.
 | **Photonics** | dual-rail single-photon runtime, interference-phase predictions at `72.45°/127.09°`, lab packets | CONDITIONAL |
 | **Selector / tomotope** | selector frames, braid registers, Reye/Q4 configurations, orientation quotients | CERTIFIED / CONDITIONAL |
 | **Physics program** | masses, Yukawas, CKM/PMNS, `α`, neutrinos, cosmology, RG running | CONDITIONAL / several RETRACTED |
-| **Tooling & audit** | 809 scripts, five guards, `RESULTS_INDEX.md`, pass-reservation protocol, intake harness | — |
+| **Tooling & audit** | Thousands of witnesses and certificates, executable guards, `RESULTS_INDEX.md`, pass-reservation protocol, and batch-intake harness | — |
 
 ---
 
@@ -587,6 +629,23 @@ py -3 -m pytest -q tests/test_w33_pass1335_brauer_tree_hecke_corner.py
 # ramified p=2 reconstruction and coalescence theorem
 py -3 analysis/w33_pass1002_ramified_kernel_growth_gluing.py --check
 py -3 analysis/w33_pass828_coalescence_theorem.py --check
+
+# all-odd-q spread theorem, q=27 nonregular control, and corrected controller
+py -3 analysis/w33_pass2201_all_q_regular_spread_scheme.py --verify-frozen
+py -3 analysis/w33_pass2203_ree_tits_nonregular_control.py --verify-frozen
+py -3 -m pytest -q tests/test_w33_pass2200_2206.py
+
+# controller representation trichotomy (GAP is the owning computation)
+gap -q analysis/w33_pass2306_controller_representation_trichotomy.g
+py -3 -m pytest -q tests/test_w33_pass2306_controller_representation_trichotomy.py
+
+# current complete spectra, Hom bases, Weil inversion, and S3 character layer
+py -3 analysis/w33_pass2300_ree_tits_divisible_code.py --verify-frozen
+py -3 analysis/w33_pass2301_complete_quadratic_hom_bases.py --verify-frozen
+py -3 analysis/w33_pass2302_q7_q11_weil_outer_inversion.py --verify-frozen
+py -3 analysis/w33_pass2304_known_q27_spread_spectra.py --verify-frozen
+gap -q analysis/w33_pass2307_quadratic_hom_s3_decomposition.g
+py -3 -m pytest -q tests/test_w33_pass2307_quadratic_hom_s3_decomposition.py
 
 # corpus and claim guards
 py -3 analysis/build_results_index.py

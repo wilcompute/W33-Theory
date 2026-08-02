@@ -1,0 +1,68 @@
+{
+  "schema": "w33.pass2307.quadratic_hom_s3_decomposition.gap.v1",
+  "status": "PASS",
+  "producer": "GAP 4.12.1",
+  "source": {
+    "certificate": "data/w33_pass2301_complete_quadratic_hom_bases.json",
+    "sha256_without_hash_field": "26eab93605eeb603e3a899c2ecda2a39e268c65e3286b86dce9449f0540b8c43",
+    "owned_input": "For each target: total dimension, C3-fixed dimension, and outer-involution even/odd dimensions"
+  },
+  "acting_group": {
+    "structure": "C3:C2 = S3",
+    "phase_generator_order": 3,
+    "outer_generator_order": 2,
+    "relation": "outer * phase * outer = phase^-1",
+    "irreducible_order": ["trivial", "sign", "standard"]
+  },
+  "target_order": [15, 24, 30, 81],
+  "symmetric": {
+    "per_target_multiplicities": {
+      "15": [3, 0, 0],
+      "24": [4, 0, 1],
+      "30": [2, 1, 1],
+      "81": [4, 2, 3]
+    },
+    "total_multiplicities": [13, 3, 5],
+    "character_on_classes_identity_3cycle_reflection": [26, 11, 10]
+  },
+  "alternating": {
+    "per_target_multiplicities": {
+      "15": [0, 3, 0],
+      "24": [0, 4, 0],
+      "30": [1, 2, 1],
+      "81": [2, 4, 3]
+    },
+    "total_multiplicities": [3, 13, 4],
+    "character_on_classes_identity_3cycle_reflection": [24, 12, -10]
+  },
+  "combined": {
+    "total_multiplicities": [16, 16, 9],
+    "character_on_classes_identity_3cycle_reflection": [50, 23, 0],
+    "outer_even_odd_dimensions": [25, 25],
+    "phase_fixed_rotating_dimensions": [32, 18],
+    "symmetric_minus_alternating_in_representation_ring": [10, -10, 1]
+  },
+  "theorem": "The complete 50-dimensional PSp(4,3)-equivariant quadratic Hom space from the signed-edge 90 carries the phase-outer S3 action 16*trivial + 16*sign + 9*standard. Its symmetric part is 13*trivial + 3*sign + 5*standard, while its alternating part is 3*trivial + 13*sign + 4*standard. The equality of trivial and sign multiplicities forces the outer split 25+25; the nine standard copies give the 18-dimensional rotating phase sector.",
+  "boundary": "This is an exact representation-theoretic decomposition of equivariant quadratic maps. It does not make the 50 basis maps physical couplings, identify the multiplicities 16 or 9 with unrelated W33 counts, or select a physical family or chirality.",
+  "checks": {
+    "target_labels_are_15_24_30_81": true,
+    "every_sym_row_reconstructs_dimension": true,
+    "every_lambda_row_reconstructs_dimension": true,
+    "every_row_reconstructs_phase_fixed": true,
+    "every_row_reconstructs_outer_split": true,
+    "symmetric_decomposition_13_3_5": true,
+    "alternating_decomposition_3_13_4": true,
+    "combined_decomposition_16_16_9": true,
+    "symmetric_character_26_11_10": true,
+    "alternating_character_24_12_minus10": true,
+    "combined_character_50_23_0": true,
+    "gap_recognizes_all_three_as_characters": true,
+    "gap_scalar_products_match_symmetric": true,
+    "gap_scalar_products_match_alternating": true,
+    "gap_scalar_products_match_combined": true,
+    "balanced_outer_eigenspaces_25_25": true,
+    "phase_fixed_rotating_split_32_18": true,
+    "total_dimension_50": true,
+    "virtual_sym_minus_lambda_10_minus10_1": true
+  }
+}

@@ -1,8 +1,23 @@
 # W33 spread/chirality arc — consolidated claim-status ledger
 
-This ledger is the current source of truth for the Passes-1612--1975 spread,
-frame-colouring, and signed-edge-module arc. “Retracted” means the claim should
-not be repeated. “Narrowed” preserves only the stated scope.
+This ledger began as the source of truth for the Passes-1612--1975 spread,
+frame-colouring, and signed-edge-module arc. The controlling post-1975
+supersessions are recorded first so the historical rows are not mistaken for
+the current frontier. “Retracted” means the claim should not be repeated.
+“Narrowed” preserves only the stated scope.
+
+## Controlling updates after Pass 1975
+
+| claim | current status | controlling artifact |
+|---|---|---|
+| regular symplectic spreads form the predicted two-intersection graph | **proved for every odd prime power**; the `q+1` relation is the explicit SRG in Pass 2201 | [Passes 2200–2206](../PASS2200_2206_ALL_Q_SPREADS_NONREGULAR_CONTROLLER_RTL_RELEASE.md) |
+| the same two-intersection scheme extends to arbitrary symplectic spreads | **refuted** | the q=27 Ree–Tits control has intersections `19,28,37,46,55`, Pass 2203 |
+| the operative phase controller has order 48 | **narrowed** | order 48 is the abstract independent-two-register group; the canonical single-`J` image has order 24, Pass 2204 |
+| the finite controller contains or selects the golden ratio | **refuted at that scope** | `R4^2 U6` has spectral radius `phi` only in the overlapping infinite `SL3(Z)` carrier; Passes 2106 and 2306 |
+| the order-48, order-24, and rank-three controllers are coordinate versions of one object | **refuted** | minimal faithful rational degree 4 for the order-48 group; the rank-three carrier has common-inverter nullity 0, [Pass 2306](../PASS2306_CONTROLLER_REPRESENTATION_TRICHOTOMY.md) |
+| historical quadratic target multiplicities on the signed-edge 90 | **Pass-2200 table stands only as the outer-even half** | full `PSp` dimensions are `Sym^2: 3,6,5,12`; `Lambda^2: 3,4,5,12`, with all 50 bases explicit, Pass 2301 |
+| every q=27 symplectic spread has all hyperplane sections `1 mod 9` | **open in that universal scope** | exact for the regular, Kantor, Thas–Payne, and Ree–Tits coordinate families only; Passes 2300/2304 |
+| the 50 quadratic maps have an unexplained `25+25` outer split | **closed structurally** | combined phase/outer module is `16*1 + 16*sgn + 9*std`, which forces `25+25` and `32+18`, [Pass 2307](../PASS2307_QUADRATIC_HOM_S3_DECOMPOSITION.md) |
 
 | claim | originating pass/file | current status | reason / controlling artifact |
 |---|---|---|---|
