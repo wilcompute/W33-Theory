@@ -22,7 +22,7 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **7159** files; **7146** distinctive results
+Indexed **7160** files; **7146** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
 **3035** appear in exactly one file — the sharpest signal.
 
@@ -5425,7 +5425,7 @@ Indexed **7159** files; **7146** distinctive results
 | `1841` | `analysis/BT1840_BT1842_summary.md` · `analysis/BT1840_BT1844_execution_summary.md` · `analysis/BT1841_1845_execute_all_five.md` · `analysis/BT1841_numeric_F12_phase_table.md` · *(+11)* |
 | `1842` | `analysis/BT1840_BT1842_summary.md` · `analysis/BT1840_BT1844_execution_summary.md` · `analysis/BT1841_1845_execute_all_five.md` · `analysis/BT1842_covariance_aware_SPRT.md` · *(+8)* |
 | `1843` | `W33_FOR_EVERYONE.tex` · `analysis/BT1840_BT1844_execution_summary.md` · `analysis/BT1841_1845_execute_all_five.md` · `analysis/BT1843_BT1845_summary.md` · *(+11)* |
-| `1844` | `analysis/BT1840_BT1844_execution_summary.md` · `analysis/BT1841_1845_execute_all_five.md` · `analysis/BT1843_BT1845_summary.md` · `analysis/BT1844_F12_genus6_edge_bridge.md` · *(+11)* |
+| `1844` | `analysis/BT1840_BT1844_execution_summary.md` · `analysis/BT1841_1845_execute_all_five.md` · `analysis/BT1843_BT1845_summary.md` · `analysis/BT1844_F12_genus6_edge_bridge.md` · *(+12)* |
 | `1846` | `analysis/BT1845_BT1849_execution_summary.md` · `analysis/BT1846_1850_orbit_decoder_separator_probe_atlas.md` · `analysis/BT1846_BT1848_summary.md` · `analysis/BT1846_current_graph_lift.md` · *(+7)* |
 | `1847` | `analysis/BT1845_BT1849_execution_summary.md` · `analysis/BT1846_1850_orbit_decoder_separator_probe_atlas.md` · `analysis/BT1846_BT1848_summary.md` · `analysis/BT1847_F12_to_K12_functor.md` · *(+14)* |
 | `1848` | `analysis/BT1845_BT1849_execution_summary.md` · `analysis/BT1846_1850_orbit_decoder_separator_probe_atlas.md` · `analysis/BT1846_BT1848_summary.md` · `analysis/BT1848_covariance_target_optimizer.md` · *(+8)* |
@@ -5444,7 +5444,7 @@ Indexed **7159** files; **7146** distinctive results
 | `1862` | `analysis/BT1860_BT1864_execution_summary.md` · `analysis/BT1862_BT1864_summary.md` · `analysis/BT1862_homology_logical_basis.md` · `analysis/BT1869_BT1871_summary.md` · *(+6)* |
 | `1863` | `analysis/BT1860_BT1864_execution_summary.md` · `analysis/BT1862_BT1864_summary.md` · `analysis/BT1865_BT1868_summary.md` · `analysis/bt1863_trace_runner_selector_api_overlay.py` · *(+9)* |
 | `1864` | `analysis/BT1860_BT1864_execution_summary.md` · `analysis/BT1862_BT1864_summary.md` · `analysis/BT1864_rule110_orbit_witness.md` · `analysis/BT1865_BT1868_summary.md` · *(+15)* |
-| `1866` | `PASS1867_1871_OUTER_DOILY_CLOCK_RELEASE.md` · `analysis/BT1865_BT1868_summary.md` · `analysis/BT1865_BT1869_execution_summary.md` · `analysis/BT1867_1871_outer_doily_transfer_clock.md` · *(+9)* |
+| `1866` | `PASS1867_1871_OUTER_DOILY_CLOCK_RELEASE.md` · `analysis/BT1865_BT1868_summary.md` · `analysis/BT1865_BT1869_execution_summary.md` · `analysis/BT1867_1871_outer_doily_transfer_clock.md` · *(+10)* |
 | `1867` | `PASS1867_1871_OUTER_DOILY_CLOCK_RELEASE.md` · `PASS1872_1876_FIVE_FRONTIERS_RELEASE.md` · `analysis/BT1865_BT1868_summary.md` · `analysis/BT1865_BT1869_execution_summary.md` · *(+7)* |
 | `1868` | `analysis/BT1865_BT1868_summary.md` · `analysis/BT1865_BT1869_execution_summary.md` · `analysis/BT1867_1871_outer_doily_transfer_clock.md` · `analysis/BT1868_global_clock_css_skeleton.md` · *(+4)* |
 | `1869` | `analysis/BT1865_BT1869_execution_summary.md` · `analysis/BT1867_1871_outer_doily_transfer_clock.md` · `analysis/BT1869_BT1871_summary.md` · `analysis/BT1869_css_skeleton_distance_search.md` · *(+10)* |
@@ -5452,7 +5452,7 @@ Indexed **7159** files; **7146** distinctive results
 | `1871` | `PASS1867_1871_OUTER_DOILY_CLOCK_RELEASE.md` · `PASS1872_1876_FIVE_FRONTIERS_RELEASE.md` · `analysis/BT1867_1871_outer_doily_transfer_clock.md` · `analysis/BT1869_BT1871_summary.md` · *(+10)* |
 | `1872` | `PASS1872_1876_FIVE_FRONTIERS_RELEASE.md` · `analysis/BT1870_BT1874_execution_summary.md` · `analysis/BT1872_1876_five_frontiers.md` · `analysis/BT1872_BT1874_summary.md` · *(+19)* |
 | `1873` | `analysis/BT1870_BT1874_execution_summary.md` · `analysis/BT1872_1876_five_frontiers.md` · `analysis/BT1872_BT1874_summary.md` · `analysis/BT1873_subsystem_paired_gauge_construction.md` · *(+20)* |
-| `1874` | `analysis/BT1870_BT1874_execution_summary.md` · `analysis/BT1872_1876_five_frontiers.md` · `analysis/BT1872_BT1874_summary.md` · `analysis/BT1874_larger_ring_glider_catalog.md` · *(+12)* |
+| `1874` | `analysis/BT1870_BT1874_execution_summary.md` · `analysis/BT1872_1876_five_frontiers.md` · `analysis/BT1872_BT1874_summary.md` · `analysis/BT1874_larger_ring_glider_catalog.md` · *(+13)* |
 | `1877` | `analysis/BT1875_BT1877_summary.md` · `analysis/BT1875_BT1879_execution_summary.md` · `analysis/BT1877_glider_phase_class_extractor.md` · `analysis/BT1878_BT1880_summary.md` · *(+11)* |
 | `1878` | `analysis/BT1875_BT1879_execution_summary.md` · `analysis/BT1878_BT1880_summary.md` · `analysis/BT1878_css_decoder_table.md` · `analysis/BT1880_BT1884_execution_summary.md` · *(+12)* |
 | `1879` | `analysis/BT1875_BT1879_execution_summary.md` · `analysis/BT1878_BT1880_summary.md` · `analysis/BT1879_optical_resource_noise_budget.md` · `analysis/BT1882_loss_reuse_architecture.md` · *(+9)* |
