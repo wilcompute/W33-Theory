@@ -10,9 +10,7 @@ The exact part of this script:
   * writes canonical certificates for Passes 1966 and 1967.
 
 The bounded nine-colour HiGHS observation is frozen as telemetry rather than a
-theorem.  Use --solve-seconds to rerun the same combined MILP; a different
-bounded status must be reported separately rather than silently changing the
-certificate.
+theorem and is not rerun by this exact reconstruction script.
 """
 from __future__ import annotations
 import argparse, collections, hashlib, importlib.util, itertools, json
@@ -166,7 +164,7 @@ def main():
         "color_class_sizes":sizes,"coloring_sha256":hashlib.sha256(bytes(x)).hexdigest()},
       "bounded_9color_highs":{"time_limit_seconds":20,"status":"TIME_LIMIT",
         "primal_solution":False,"conclusion":"UNKNOWN",
-        "note":"Frozen local HiGHS feasibility observation on the combined 36-spread-count/40-cut MILP."},
+        "note":"HiGHS feasibility run on the combined 36-spread-count/40-geometric-cut MILP; no chromatic conclusion."},
       "checks":{"model_growth_40":base+40>base,
         "first_cut_nonvacuous":surv[0]<25920,
         "forty_cuts_nonvacuous":surv[39]<25920,

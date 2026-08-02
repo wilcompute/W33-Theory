@@ -2,7 +2,7 @@ from analysis.w33_pass1966_1970_verify_frozen import main
 
 def test_frozen_packet():
     out=main()
-    assert out['n_checks']==out['n_verified']==35
+    assert out['n_checks']==out['n_verified']==37
 
 def test_boundaries_and_key_values():
     import json
