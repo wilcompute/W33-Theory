@@ -1,0 +1,41 @@
+name: Passes 2200-2206 all-q spreads controller RTL
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass2201_all_q_regular_spread_scheme.py'
+      - 'analysis/w33_pass2203_ree_tits_nonregular_control.py'
+      - 'analysis/w33_pass2200_2204_2205_quadratic_controller_audit.py'
+      - 'analysis/w33_pass2206_verify_rtl.py'
+      - 'analysis/BT2200_BT2206_all_q_spreads_nonregular_controller_rtl.md'
+      - 'analysis/BT2206_all_q_spreads_nonregular_controller_rtl_insert.tex'
+      - 'data/w33_pass220*.json'
+      - 'rtl/w33_spread_mixer36.sv'
+      - 'tests/test_w33_pass2200_2206.py'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - '.github/workflows/pass2200_2206_all_q_spreads_controller_rtl.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check numpy pytest
+      - name: Verify frozen certificates
+        run: |
+          python analysis/w33_pass2201_all_q_regular_spread_scheme.py --verify-frozen
+          python analysis/w33_pass2203_ree_tits_nonregular_control.py --verify-frozen
+          python analysis/w33_pass2200_2204_2205_quadratic_controller_audit.py --verify-frozen
+          python analysis/w33_pass2206_verify_rtl.py --verify-frozen
+      - name: Focused regression
+        run: pytest -q tests/test_w33_pass2200_2206.py
+      - name: Manuscript and boundary sanity
+        run: |
+          grep -F '\input{analysis/BT2206_all_q_spreads_nonregular_controller_rtl_insert}' w33_paper.tex
+          grep -F '\input{analysis/BT2206_all_q_spreads_nonregular_controller_rtl_insert}' photonic_holonet.tex
+          grep -F 'not a classification of non-Desarguesian spreads' analysis/BT2200_BT2206_all_q_spreads_nonregular_controller_rtl.md
+          grep -F 'No local HDL compiler or synthesis suite was available' analysis/BT2200_BT2206_all_q_spreads_nonregular_controller_rtl.md
