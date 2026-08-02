@@ -1,132 +1,136 @@
 # The spread obstruction in `W(q,q)` — a standalone note
 
-**Scope.** This note collects the results of Passes 1612–1916 that are specific to
-`W(3,3)` and its generalisations, with prior art fixed. It exists because Pass
-1912 and Pass 1917 found that a neighbouring arc had already been done — once in
-the literature and once *in this repository* — and scattered results are exactly
-what makes that happen.
+**Scope.** This note collects the results of Passes 1612–1975 that are specific
+to `W(3,3)` and its generalisations, with prior art and withdrawals made
+explicit. Pass 1971 reconciled this note with the referee-shaped draft and found
+one theorem-level error: the spread 45-set is not maximal independent. The
+correct obstruction is residual support deficiency.
 
 Everything below is about the **frame graph** and the **signed edge module** of
-the symplectic generalised quadrangle, and survived a corpus check, a guard
-sweep, and a literature check.
+the symplectic generalised quadrangle.
 
 ---
 
-## 0. What is NOT ours — the boundary, drawn explicitly
+## 0. Ownership and retraction boundary
 
-Pass 1917 searched the corpus for the *result* rather than the topic and found
-`analysis/2026-07-15_pass355_sp43_frobenius_schur.md`, dated 15 July, which
-already contains:
+The general character-theoretic facts about non-real symplectic characters and
+twisted Frobenius–Schur indicators belong to Gow and Vinroot and were already
+represented in-repository by Passes 353/355. Passes 1900, 1907 and 1914 are
+therefore retracted as novel, though their module-specific computations remain
+useful.
 
-| statement | owner |
-|---|---|
-| `Sp(2n,q)` has non-real characters iff `q ≡ 3 (mod 4)` | **Gow (1985)**, cited in Pass 353/355 |
-| twisted Frobenius–Schur framework | **Vinroot (2005, 2010)**, cited in Pass 355 |
-| Weil pieces `W₊, W₋` are an `FS = 0` complex-conjugate pair | **Pass 355** |
-| "the pair is self-conjugate, each piece is not — so a choice is required" | **Pass 355** |
-| `(q²+1)/2` as the distinguished degree forcing `q = 3` | **Pass 227** |
-| the substrate cannot select chirality internally | **Pass 346** |
+The following readings are also retired:
 
-**Passes 1900, 1907 and 1914 are therefore retracted as novel.** They re-derive,
-for the edge module, what Pass 355 established for the Weil representation, using
-citations Pass 355 already carried. The July arc was filed under dated filenames
-with no topical signal, which is the documented reason topic-searching fails
-here; the fix that worked was searching for `Gow`, `Frobenius`, and `Weil` as
-*results*.
+- the internal `C6` is electric charge;
+- the internal `C6` is a Dirac or homological flux quantum;
+- the spread 45-set is a maximal independent set;
+- orbit-volume reduction is evidence of solver-tree reduction.
+
+The controlling claim ledger is `analysis/W33_CLAIM_STATUS_LEDGER.md`.
 
 ---
 
 ## 1. The frame graph is 240 edge-disjoint 9-cliques
 
-Let `H` have the 540 frames (unordered pairs of disjoint totally isotropic lines)
-as vertices, adjacent when their canonical cross-matchings share an edge.
+Let `H` have the 540 frames—unordered pairs of disjoint totally isotropic
+lines—as vertices, adjacent when their canonical cross-matchings share an edge.
 
 **Proposition.** Each of the 240 edges of `W(3,3)` lies in exactly 9 frames, all
-mutually adjacent; `H` is 32-regular; and `32 = 4 × 8` forces any two adjacent
-frames to share exactly one edge. Hence `H` is exactly the union of 240
-edge-disjoint 9-cliques.
+mutually adjacent; `H` is 32-regular; and adjacent frames share exactly one
+matching edge. Hence `H` is exactly the union of 240 edge-indexed, edge-disjoint
+`K9`s.
 
-*Verified:* the 240 cliques cover 8,640 pairs, equal to `|E(H)|`, with no
-duplication.
+The 240 cliques cover `240 C(9,2)=8640` graph edges, equal to
+`540·32/2`.
 
-**Corollary.** `χ(H) = 9` iff 540 variables in `1..9` satisfy 240
-`AllDifferent(9)` constraints — replacing the 4,860-variable / 99,909-clause CNF
-used by earlier attempts.
-
----
-
-## 2. A spread's `K₁₀` is maximal but not maximum
-
-**Theorem.** Let `S` be a spread of `W(q,q)` — its `q²+1` lines partition the
-points. All `C(q²+1, 2)` pairs are frames, and they form an **independent set of
-`H`**. Their matchings cover exactly the edges lying off `S`'s own lines, leaving
-the `(q²+1)·C(q+1,2)` edges lying on them.
-
-For `q = 3`: 45 frames, covering 180 edges, leaving 60. Exactly 15 frames lie
-inside those 60 and `15 × 4 = 60` — perfect arithmetic — yet **there are no
-completions**, and not narrowly: the 15 candidates touch only 20 of the 60 edges,
-so 40 lie in no admissible frame at all.
-
-> Every spread's `K₁₀` is a **maximal independent set of size 45** in a graph with
-> `α(H) = 60`. Verified for all 36 spreads.
-
-This names a reason five earlier resolution searches stalled: `H` has at least 36
-highly symmetric traps that a greedy or DFS search enters and cannot locally
-leave. Measured: 4,000 random greedy runs never reached 60, topping out at 49.
+**Corollary.** `chi(H)=9` iff 540 variables in `1..9` satisfy 240 rainbow
+`AllDifferent(9)` constraints.
 
 ---
 
-## 3. The `1/q` law and its mechanism
+## 2. A spread is a completion trap, not a maximal independent set
 
-**Theorem.** For `q ∈ {3, 5, 7}` the admissible completing frames number exactly
-`(q²+1)q/2` — precisely the number needed — yet the edges they touch number
-`(q+1)(q²+1)/2 = |points|/2`, a fraction `1/q` of the leftover, with multiplicity
-exactly `q`.
+Let `S` be a spread of `W(q,q)`. Its `q^2+1` lines partition the points.
 
-*Measured:* `20/60 = 1/3`, `78/390 = 1/5`, `200/1400 = 1/7`.
+**Theorem.** The `C(q^2+1,2)` pairs of spread lines are frames and form an
+independent set of `H`. Their matchings cover exactly the collinear point pairs
+whose endpoints lie on different spread lines. The residual set consists
+precisely of the edges lying inside the spread lines and has size
 
-**Mechanism.** The touched edges form a perfect matching **within each spread
-line**, of size `(q+1)/2`. Such a matching exists iff `q+1` is even, i.e. `q` odd.
-For `q` even a line has an odd number of points, no matching exists, and there are
-**no candidates at all** — the measured `q = 2` case, which is the theorem's other
-branch rather than an exception.
+`(q^2+1) C(q+1,2)`.
+
+For `q=3`, the seed has 45 frames, covers 180 edges, and leaves 60. Exactly 15
+candidate frames have all four matching edges in that residual set.
+Consequently the 45-frame seed is **not maximal independent**: any one of those
+15 candidates can be adjoined.
+
+What is exact—and is the actual obstruction—is that the 15 candidates
+collectively touch only 20 of the 60 residual edges. Forty residual edges occur
+in no candidate frame. Therefore no choice of 15 candidates can complete the
+spread seed to a 60-frame exact cover. This was verified for all 36 spreads of
+`W(3,3)`.
+
+The earlier “maximal-but-not-maximum” statement is withdrawn.
 
 ---
 
-## 4. `σ_S`: the obstruction's generator
+## 3. The `1/q` law and its proof scope
 
-**Theorem.** Each spread `S` carries a canonical collineation `σ_S`, and the
-candidate frames' matching edges are exactly its 2-cycles.
+Assume a spread `S` carries a fixed-point-free projective involution `sigma_S`
+which fixes every line of `S` setwise and no line outside `S` setwise.
 
-- `σ_S` is a fixed-point-free involution fixing every line of `S` (verified
-  `q = 3, 5, 7`).
-- The subgroup of collineations fixing every line of `S` is exactly `C₂`, and
-  `σ_S` generates it and lies in the centre of `Stab(S)` (order 1440).
-- `σ_S` is induced by a **symplectic similitude** `g` with `g² = μI`, `μ` a
-  **non-square** multiplier. A projective fixed point would need `λ² = μ` with
-  `λ ∈ F_q`, impossible; and a non-square multiplier is exactly what makes `g`
-  outer in `PGSp`. In characteristic 2 there are no non-squares, giving the even
-  branch again.
+**Theorem.** The residual candidate frames are exactly the line orbits
+`{A,sigma_S(A)}` for lines `A` outside `S`. Hence
 
-**Corollary (`q = 3`).** The 36 `σ_S` are exactly the 36 images of the 72
-similitudes with `g² = μI` and non-square multiplier — a bijection with the
-spreads. The *other* 540 solutions, with square multiplier, are symplectic, map
-to 270 inner involutions, and index the 270 ordered incident line-pairs of the
-27 lines on a cubic surface.
+- candidate frames: `q(q^2+1)/2`;
+- distinct supported residual edges: `(q^2+1)(q+1)/2`;
+- residual edges: `(q^2+1)q(q+1)/2`;
+- supported fraction: `1/q`;
+- multiplicity of every supported edge: exactly `q`.
 
-> One equation, `g² = μI`, split by the quadratic character of the multiplier,
-> yields the 27-lines geometry and the spread geometry.
+**Proof idea.** A line `A` outside the spread meets `q+1` spread lines. Its image
+`sigma_S(A)` meets the same spread lines at the paired points, so the canonical
+matching is `{x,sigma_S(x):x in A}` and lies inside the residual set. Conversely,
+a residual frame must pair each point with its certified partner on the same
+spread line, hence is `{A,sigma_S(A)}`. Outside-spread lines occur in two-element
+orbits, giving the candidate count. Each spread line contributes `(q+1)/2`
+paired edges, and each paired edge lies in the candidates arising from the `q`
+non-spread lines through one endpoint.
 
-*Prior-art caution:* the vocabulary here (symplectic spreads, Desarguesian
-spreads, `GSp` multipliers, a fixed non-square `ξ`) is entirely standard. A
-literature search (Pass 1923) found the framework everywhere and **no reference
-for this specific split**. Treat it as **likely known, reference not found** —
-not as new.
+The measured ratios are `20/60`, `78/390`, and `200/1400` at `q=3,5,7`.
+When `q` is even, a spread line has odd size `q+1`, so a fixed-point-free
+involution cannot partition it into 2-cycles; this explains the zero-candidate
+`q=2` branch.
 
-**Connection.** At `q = 3`, `σ_S` fixes 0 points and 10 lines — precisely the
-size-36 outer class that is one of only two classes sensitive to the substrate's
-full handedness. The element generating the resolution obstruction and the
-element reading the chirality are the same.
+This is a uniform theorem for spreads carrying `sigma_S`. It is not yet a
+classification theorem for every arbitrary symplectic spread.
+
+---
+
+## 4. `sigma_S` from a nonsquare similitude
+
+Let `q` be odd, choose a nonsquare `mu in F_q`, and set
+`K=F_q(alpha)` with `alpha^2=mu`. Regard the four-dimensional `F_q` space as a
+two-dimensional `K` space. Multiplication by `alpha` gives an `F_q`-linear
+symplectic similitude `g` with
+
+`g^2=mu I`.
+
+Projectively, `g` has order two. A fixed projective point would require an
+`F_q` eigenvalue `lambda` with `lambda^2=mu`, impossible. The one-dimensional
+`K`-subspaces form the associated Desarguesian symplectic spread and are fixed
+linewise by the induced involution.
+
+At `q=3`, exhaustive computation proves more: all 36 spreads carry the unique
+nontrivial linewise stabiliser, central in the spread stabiliser of order 1440.
+The 72 nonsquare-multiplier similitudes give 36 projective involutions; the
+square-multiplier branch gives 270 inner involutions. The exact `36/270` split is
+a certified finite result for which no literature reference has been located.
+The general regular-spread and symplectic-spread framework is standard and is
+not claimed as new.
+
+At `q=3`, `sigma_S` fixes 0 points and 10 lines and belongs to the size-36 outer
+class sensitive to the complete handedness data.
 
 ---
 
@@ -135,66 +139,77 @@ element reading the chirality are the same.
 Over `PGSp(4,3)` the orientation-signed 240-edge module is multiplicity-free:
 
 ```text
-V = 15 ⊕ 24  |  81  |  30 ⊕ 90
-    (exact)   (harmonic)  (coexact)
-      39          81         120
+V = 15 + 24  |  81  |  30 + 90
+    exact       harmonic  coexact
+      39          81       120
 ```
 
-- The gauge block `15 ⊕ 24` is the nontrivial part of the 40-point permutation
-  module, i.e. `d(functions on points)`; `40 − 1 = 39 = 15 + 24`.
-- `Res_PSp(90) = 45 ⊕ 45̄`, a genuine complex-conjugate pair, and
-  `dim_ℝ End_PSp(90) = 2`, so `End_ℝ ≅ ℂ` and the invariant complex structures
-  are exactly `±J`.
-- **The 81 and the 15 are odd-dimensional, so they admit no invariant complex
-  structure at any subgroup whatever** — the obstruction is parity, not
-  representation theory.
-- A permutation module has a canonical permuted basis and is therefore real, so
-  no `G`-set — points, lines, octets, spreads, frames, incident pairs — can carry
-  a complex pair. **Only an orientation-signed module can.**
+- `15+24` is the nonconstant part of the 40-point permutation module.
+- `Res_PSp(90)=45+conjugate(45)` and the real endomorphism algebra on the 90 is
+  `C`; invariant complex structures are `±J`.
+- The 15 and 81 are odd-dimensional and cannot admit a real `J` with `J^2=-1`.
+- The 90 is the only non-rational block, with field `Q(omega)` and integral phase
+  units `C6`.
+- The finite equivariant centralizer torsion is `(C2)^4 x C6`; its unique odd
+  subgroup `C3=<mu6^2>` acts faithfully only on the coexact 90.
+- The outer involution inverts `mu6`, giving `C6 semidirect C2 = D12` on the
+  phase label.
+- Multiplicity-freeness gives `Hom_PSp(90,X)=0` for
+  `X in {15,24,30,81}`. The phase is linearly confined to the 90 in the ideal
+  equivariant model.
 
-The last two points are the part of the chirality arc that is about *this module*
-rather than about `Sp(4,q)`, and they survive the Pass 1917 boundary.
+### What the phase is not
 
-### The phase, and what it is not
-
-The 90's character field is `ℚ(ω)` — it is the **only** non-rational block, the
-other four and the 90-over-the-full-group all being rational. Its integral units
-are `ℤ₆`, so the substrate has exactly one internal phase and it is sixfold.
-`End_PSp(V) = ℝ⁴ × ℂ`, whose finite unit group `{±1}⁴ × ℤ₆` of order 96 is the
-substrate's complete internal symmetry group; all of its non-sign content is that
-one `ℤ₆`.
-
-**Two physical readings of that `ℤ₆` were proposed in this arc and both are
-refuted. They are recorded here so the note cannot be read as still holding them.**
-
-| reading | refuted by |
+| reading | status |
 |---|---|
-| `ℤ₆` is electric charge (Gauss-law sector) | the phase sits in the **coexact** block, not the exact one — Pass 1934, and independently the parallel track's Pass 1943 |
-| `ℤ₆` is a flux quantum (Dirac duality) | the clique complex is **torsion-free at every prime** (`d₁, d₂, d₃` have equal rank over `ℚ, F₂, F₃, F₅`), so there is no `ℤ/3` or `ℤ/6` for a flux quantum to be — Pass 1944 |
+| electric charge from a Gauss-law sector | withdrawn: the phase is coexact, not exact/source-like |
+| Dirac or homological flux quantum | withdrawn: the integral boundary complex has no supporting `Z/3` or `Z/6` torsion |
+| QCD colour, generation, or neutrino label | not derived and not promoted |
+| internal cyclotomic sector marker | supported representation-theoretically |
 
-What stands is the representation theory: one non-rational block, field `ℚ(ω)`,
-internal units `ℤ₆`, acted on by the outer involution by inversion, touching only
-the coexact sector — so the physical sector 81 is both neutral (parity, Pass 1880)
-and colourless (the endomorphism split, Pass 1945). No physical identification of
-the `ℤ₆` is currently supported.
-
----
-
-## 6. Open
-
-- `χ(H) = 9`. Undecided. Best encoding branches on the spread-pair counts
-  (60,909 branches vs 2,127,575 plain); free cuts provably cannot help, since a
-  cut is free exactly when the spectral relaxation already implies it; prescribed
-  automorphisms all fail the clique test; `CP-SAT` symmetry levels 0/2/4 all
-  return `UNKNOWN`.
-- Whether `max |class ∩ K₁₀| = 13`. 13 is attained; `≥ 14` is undecided.
-- A written proof, rather than three verifications, that the candidate matchings
-  must lie inside a spread line's perfect matching.
+The `E8` Coxeter six-cycle action is not the same `C6`; the two full-carrier
+character multiplicities are incompatible.
 
 ---
 
-*Passes 1612–1916, glue track. Prior art: Gow (1985); Vinroot (2005, 2010);
-in-repo Passes 227, 346, 353, 355 (chirality/Weil), BT773 (frame involutions),
-BT790/BT795 (spreads and the `K₁₀`), BT794 (transversals), Pass 328 (guard
-calibration), Passes 1541/1606/1607 and 1841–1845 (parallel track: octets, the
-`195→225` gain, certified signature resolutions).*
+## 6. Solver status
+
+`chi(H)=9` remains undecided. Frozen branch counts are:
+
+```text
+plain                              2,127,575
+spread-variable branching            60,909
+geometric lex, 8 generators          198,352
+spread + lex, 8 generators           451,460
+spread + lex, 40 generators          512,714
+```
+
+The exact spread-signature orbit reduction `25,920 -> 807` remains valid, but it
+did not improve the tested fixed-search tree. The combined encodings are 7.4 and
+8.4 times worse than spread branching alone. The current diagnosis is a
+propagation-horizon mismatch: spread variables are fixed early while the lex
+constraints become informative mainly on later frame variables.
+
+Full-scale constraint auditing no longer uses truncated enumeration. Version 5
+of `scripts/constraint_audit.py` uses named feasible witnesses or explicit finite
+feasible orbits; such certificates prove only their stated scope.
+
+---
+
+## 7. Open problems
+
+- Decide `chi(H)=9`.
+- Decide whether `max |class intersection K10|=13`; 13 is attained and 14 is not
+  excluded.
+- Determine which non-Desarguesian symplectic spreads carry a linewise
+  fixed-point-free involution.
+- Prove or refute uniform uniqueness of the linewise stabiliser beyond `q=3`.
+- Locate prior art for the exact `36/270` multiplier split.
+- Classify nonlinear invariant couplings involving the phase-bearing 90 without
+  importing a physical label.
+
+---
+
+*Primary reconciliation: Passes 1971–1975. Relevant background includes Gow,
+Vinroot, Thas–Payne, De Bruyn, in-repository Passes 227/346/353/355, BT790/795,
+and the exact certificates cited in the claim-status ledger.*
