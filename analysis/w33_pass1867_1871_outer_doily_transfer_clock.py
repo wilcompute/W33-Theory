@@ -28,7 +28,13 @@ def main(output: Path | None = None) -> dict:
     result = load_implementation().main(None)
     result["schema"] = "w33.pass1867_1871.outer_doily_transfer_clock.v1"
     result.pop("sha256_without_hash_field", None)
-    canonical = json.dumps(result, indent=2, sort_keys=True) + "\n"
+    # Hash the ROUND-TRIPPED object, not the live Python dict.  `result` contains
+    # nested dicts with INTEGER keys (traces_1_to_16), and sort_keys=True orders
+    # ints numerically (1, 2, ..., 10) while the same keys after a JSON round-trip
+    # are strings and order lexicographically (1, 10, 11, ..., 2).  Hashing the live
+    # object therefore produces a digest that the written file can never reproduce.
+    # Found by scripts/check_certificates.py at Pass 2482.
+    canonical = json.dumps(json.loads(json.dumps(result)), indent=2, sort_keys=True) + "\n"
     result["sha256_without_hash_field"] = hashlib.sha256(canonical.encode()).hexdigest()
     if output is not None:
         output.parent.mkdir(parents=True, exist_ok=True)

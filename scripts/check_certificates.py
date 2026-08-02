@@ -31,12 +31,21 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def digest_without(d: dict, key: str) -> str:
-    """The repo's canonical digest: the object minus its own hash field."""
+def digest_without(d: dict, key: str) -> list[str]:
+    """Every digest the object minus its hash field could legitimately have.
+
+    Two serialisation conventions are in use in this repo and BOTH are correct:
+    compact separators, and indent=2 with a trailing newline.  Calibrated at
+    Pass 2482 -- trying only the compact one reported six of my own certificates
+    as broken when the checker was simply using the wrong serialisation.
+    """
     x = {k: v for k, v in d.items() if k != key}
-    return hashlib.sha256(
-        json.dumps(x, sort_keys=True, separators=(",", ":")).encode()
-    ).hexdigest()
+    compact = json.dumps(x, sort_keys=True, separators=(",", ":"))
+    indented = json.dumps(x, indent=2, sort_keys=True) + "\n"
+    return [
+        hashlib.sha256(compact.encode()).hexdigest(),
+        hashlib.sha256(indented.encode()).hexdigest(),
+    ]
 
 
 # Calibrated at Pass 2478 by measuring every sha256-named key across all of data/.
@@ -92,7 +101,7 @@ def sweep(paths: list[Path], quiet: bool = False) -> int:
         else:
             hashed += 1
             embedded, computed = d[key], digest_without(d, key)
-            if embedded == computed:
+            if embedded in computed:
                 verified += 1
             else:
                 problems.append(
