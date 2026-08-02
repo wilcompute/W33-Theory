@@ -37,5 +37,5 @@ jobs:
         run: |
           grep -F '\input{analysis/BT2206_all_q_spreads_nonregular_controller_rtl_insert}' w33_paper.tex
           grep -F '\input{analysis/BT2206_all_q_spreads_nonregular_controller_rtl_insert}' photonic_holonet.tex
-          grep -F 'not a classification of non-Desarguesian spreads' analysis/BT2200_BT2206_all_q_spreads_nonregular_controller_rtl.md
+          grep -F 'not a classification of nonregular spreads' analysis/BT2200_BT2206_all_q_spreads_nonregular_controller_rtl.md
           grep -F 'No local HDL compiler or synthesis suite was available' analysis/BT2200_BT2206_all_q_spreads_nonregular_controller_rtl.md
