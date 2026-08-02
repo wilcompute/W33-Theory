@@ -1,0 +1,37 @@
+name: Pass 2470-2475 five frontiers
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass2470*'
+      - 'analysis/w33_pass2471*'
+      - 'analysis/w33_pass2472*'
+      - 'analysis/w33_pass2473*'
+      - 'analysis/w33_pass2474*'
+      - 'data/w33_pass2470*'
+      - 'data/w33_pass2471*'
+      - 'data/w33_pass2472*'
+      - 'data/w33_pass2473*'
+      - 'data/w33_pass2474*'
+      - 'tests/test_w33_pass2470_2475.py'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy sympy networkx pytest
+      - run: python analysis/w33_pass2470_verify_multishard_union.py
+      - run: python analysis/w33_pass2471_verify_radius4_trade_obstruction.py
+      - run: python analysis/w33_pass2472_rank9_scheme_decode.py
+      - run: python analysis/w33_pass2473_tomotope_rank_colour_quotient_obstruction.py
+      - run: python analysis/w33_pass2474_f20_lifted_normalizer_hom.py
+      - run: python analysis/w33_pass2470_2475_verify_frozen.py
+      - run: g++ -O2 -std=c++17 analysis/w33_pass2470_multishard_union.cpp -o /tmp/p2470
+      - run: /tmp/p2470 data/w33_pass1848_syndrome_columns.txt 2 > /tmp/p2470.json
+      - run: python -c "import json; a=json.load(open('/tmp/p2470.json')); b=json.load(open('data/w33_pass2470_multishard_u6_union_engine.json'))['runs']['2']; assert a==b"
+      - run: g++ -O2 -std=c++17 analysis/w33_pass2471_signature_trade_search.cpp -o /tmp/p2471_trade
+      - run: g++ -O2 -std=c++17 analysis/w33_pass2471_extract_signature_fibers.cpp -o /tmp/p2471_extract
+      - run: g++ -O2 -std=c++17 analysis/w33_pass2471_pair_compat.cpp -o /tmp/p2471_pairs
+      - run: pytest -q tests/test_w33_pass2470_2475.py
