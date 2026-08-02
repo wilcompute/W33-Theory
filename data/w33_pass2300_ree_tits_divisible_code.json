@@ -1,0 +1,66 @@
+{
+  "boundaries": [
+    "This is an exhaustive q=27 theorem for the specified Ree--Tits coordinate ovoid.",
+    "The general theorem for arbitrary Q(4,q) ovoids guarantees intersection 1 modulo the characteristic p; the stronger modulo 9 property is not promoted universally here.",
+    "The Ree--Tits construction, projective-code correspondence, and general ovoid intersection theorem retain literature ownership."
+  ],
+  "checks": {
+    "all_sections_one_mod_9": true,
+    "code_size_q5": true,
+    "exactly_9_divisible": true,
+    "first_pless_factorial_moment": true,
+    "second_pless_factorial_moment": true,
+    "spectrum_sums_to_all_hyperplanes": true,
+    "third_pless_factorial_moment": true,
+    "typed_spectra_sum_to_all_hyperplanes": true
+  },
+  "complete_hyperplane_intersection_spectrum": {
+    "1": 730,
+    "10": 4563,
+    "19": 96174,
+    "28": 408294,
+    "37": 36504,
+    "46": 4914,
+    "55": 702
+  },
+  "field": "GF(27)=F3[t]/(t^3+2t+1)",
+  "hyperplane_types": {
+    "nonsquare_anisotropic_regular_sections": {
+      "10": 4563,
+      "19": 96174,
+      "28": 122499,
+      "37": 36504,
+      "46": 4914,
+      "55": 702
+    },
+    "singular": {
+      "1": 730,
+      "28": 19710
+    },
+    "square_anisotropic": {
+      "28": 266085
+    }
+  },
+  "ovoid_size": 730,
+  "projective_code": {
+    "divisibility": "9-divisible but not 27-divisible",
+    "explanation": "Every hyperplane intersection has size 730-w, so 9-divisible code weights are equivalent to section sizes congruent to 1 modulo 9.",
+    "nonzero_weight_enumerator": {
+      "675": 18252,
+      "684": 127764,
+      "693": 949104,
+      "702": 10615644,
+      "711": 2500524,
+      "720": 118638,
+      "729": 18980
+    },
+    "parameters": "[730,5]_27",
+    "size": 14348907,
+    "weight_gcd": 9
+  },
+  "projective_hyperplanes": 551881,
+  "schema": "w33.pass2300.ree_tits_divisible_code.v1",
+  "sha256_without_hash_field": "dc6a1b4262e96210af832d098a4140f58e022bea979b7cdf3c030246dbf956e9",
+  "status": "PASS_COMPLETE_Q27_REE_TITS_HYPERPLANE_SPECTRUM_AND_9_DIVISIBLE_CODE",
+  "theorem": "The q=27 Ree--Tits ovoid has complete hyperplane spectrum 1^730, 10^4563, 19^96174, 28^408294, 37^36504, 46^4914, 55^702. Its projective [730,5]_27 code has seven nonzero weights and is exactly 9-divisible."
+}
