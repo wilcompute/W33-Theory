@@ -7,6 +7,7 @@ on:
       - 'analysis/w33_pass2203_ree_tits_nonregular_control.py'
       - 'analysis/w33_pass2200_2204_2205_quadratic_controller_audit.py'
       - 'analysis/w33_pass2206_verify_rtl.py'
+      - 'analysis/w33_pass2200_2206_verify_frozen.py'
       - 'analysis/BT2200_BT2206_all_q_spreads_nonregular_controller_rtl.md'
       - 'analysis/BT2206_all_q_spreads_nonregular_controller_rtl_insert.tex'
       - 'data/w33_pass220*.json'
@@ -31,6 +32,7 @@ jobs:
           python analysis/w33_pass2203_ree_tits_nonregular_control.py --verify-frozen
           python analysis/w33_pass2200_2204_2205_quadratic_controller_audit.py --verify-frozen
           python analysis/w33_pass2206_verify_rtl.py --verify-frozen
+          python analysis/w33_pass2200_2206_verify_frozen.py
       - name: Focused regression
         run: pytest -q tests/test_w33_pass2200_2206.py
       - name: Manuscript and boundary sanity
