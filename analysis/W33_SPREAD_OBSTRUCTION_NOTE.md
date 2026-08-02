@@ -1,17 +1,17 @@
 # The spread obstruction in `W(q,q)` — a standalone note
 
-**Scope.** This note collects the results of Passes 1612–1975 that are specific
-to `W(3,3)` and its generalisations, with prior art and withdrawals made
-explicit. Pass 1971 reconciled this note with the referee-shaped draft and found
-one theorem-level error: the spread 45-set is not maximal independent. The
-correct obstruction is residual support deficiency.
+**Scope.** This note collects the results of Passes 1612–1975 concerning the
+frame graph and signed edge module of `W(3,3)` and related `W(q,q)` examples.
+Passes 1971 and 1974 corrected two scope errors: the spread 45-set is not maximal
+independent, and a linewise involution alone supplies a candidate subfamily but
+does not automatically prove that no additional candidates exist.
 
-Everything below is about the **frame graph** and the **signed edge module** of
-the symplectic generalised quadrangle.
+The controlling current-status document is
+`analysis/W33_CLAIM_STATUS_LEDGER.md`.
 
 ---
 
-## 0. Ownership and retraction boundary
+## 0. Ownership and withdrawal boundary
 
 The general character-theoretic facts about non-real symplectic characters and
 twisted Frobenius–Schur indicators belong to Gow and Vinroot and were already
@@ -19,18 +19,17 @@ represented in-repository by Passes 353/355. Passes 1900, 1907 and 1914 are
 therefore retracted as novel, though their module-specific computations remain
 useful.
 
-The following readings are also retired:
+The following readings are retired:
 
 - the internal `C6` is electric charge;
 - the internal `C6` is a Dirac or homological flux quantum;
 - the spread 45-set is a maximal independent set;
-- orbit-volume reduction is evidence of solver-tree reduction.
-
-The controlling claim ledger is `analysis/W33_CLAIM_STATUS_LEDGER.md`.
+- orbit-volume reduction is evidence of solver-tree reduction;
+- a linewise involution by itself proves exhaustiveness of the candidate set.
 
 ---
 
-## 1. The frame graph is 240 edge-disjoint 9-cliques
+## 1. The frame graph is 240 edge-indexed `K9`s
 
 Let `H` have the 540 frames—unordered pairs of disjoint totally isotropic
 lines—as vertices, adjacent when their canonical cross-matchings share an edge.
@@ -40,8 +39,7 @@ mutually adjacent; `H` is 32-regular; and adjacent frames share exactly one
 matching edge. Hence `H` is exactly the union of 240 edge-indexed, edge-disjoint
 `K9`s.
 
-The 240 cliques cover `240 C(9,2)=8640` graph edges, equal to
-`540·32/2`.
+The 240 cliques cover `240 C(9,2)=8640` graph edges, equal to `540·32/2`.
 
 **Corollary.** `chi(H)=9` iff 540 variables in `1..9` satisfy 240 rainbow
 `AllDifferent(9)` constraints.
@@ -57,7 +55,7 @@ independent set of `H`. Their matchings cover exactly the collinear point pairs
 whose endpoints lie on different spread lines. The residual set consists
 precisely of the edges lying inside the spread lines and has size
 
-`(q^2+1) C(q+1,2)`.
+`(q^2+1) C(q+1,2) = (q^2+1)q(q+1)/2`.
 
 For `q=3`, the seed has 45 frames, covers 180 edges, and leaves 60. Exactly 15
 candidate frames have all four matching edges in that residual set.
@@ -70,40 +68,38 @@ in no candidate frame. Therefore no choice of 15 candidates can complete the
 spread seed to a 60-frame exact cover. This was verified for all 36 spreads of
 `W(3,3)`.
 
-The earlier “maximal-but-not-maximum” statement is withdrawn.
-
 ---
 
-## 3. The `1/q` law and its proof scope
+## 3. The involution-generated candidate subfamily
 
-Assume a spread `S` carries a fixed-point-free projective involution `sigma_S`
-which fixes every line of `S` setwise and no line outside `S` setwise.
+Assume a spread `S` carries a projective involution `sigma_S` which fixes each
+spread line setwise, has no fixed point, and fixes no outside line setwise.
 
-**Theorem.** The residual candidate frames are exactly the line orbits
-`{A,sigma_S(A)}` for lines `A` outside `S`. Hence
+For every outside line `A`, the frame `{A,sigma_S(A)}` is residual: its canonical
+matching is `{x,sigma_S(x):x in A}`, lying inside the spread lines. Thus the
+involution supplies a candidate subfamily consisting of the two-element line
+orbits.
 
-- candidate frames: `q(q^2+1)/2`;
-- distinct supported residual edges: `(q^2+1)(q+1)/2`;
+Counting those orbits gives:
+
+- involution-generated candidates: `q(q^2+1)/2`;
+- distinct supported edges: `(q^2+1)(q+1)/2`;
 - residual edges: `(q^2+1)q(q+1)/2`;
-- supported fraction: `1/q`;
-- multiplicity of every supported edge: exactly `q`.
+- support fraction of this subfamily: `1/q`;
+- multiplicity of every supported edge in this subfamily: `q`.
 
-**Proof idea.** A line `A` outside the spread meets `q+1` spread lines. Its image
-`sigma_S(A)` meets the same spread lines at the paired points, so the canonical
-matching is `{x,sigma_S(x):x in A}` and lies inside the residual set. Conversely,
-a residual frame must pair each point with its certified partner on the same
-spread line, hence is `{A,sigma_S(A)}`. Outside-spread lines occur in two-element
-orbits, giving the candidate count. Each spread line contributes `(q+1)/2`
-paired edges, and each paired edge lies in the candidates arising from the `q`
-non-spread lines through one endpoint.
+The **candidate-orbit property** is the additional assertion that every residual
+candidate frame is one of these line orbits. When it holds, the formulas above
+are the exact complete-candidate census and the exact `1/q` law.
 
-The measured ratios are `20/60`, `78/390`, and `200/1400` at `q=3,5,7`.
-When `q` is even, a spread line has odd size `q+1`, so a fixed-point-free
-involution cannot partition it into 2-cycles; this explains the zero-candidate
-`q=2` branch.
+The property is verified by literal enumeration for the repository's `q=3,5,7`
+examples, giving `20/60`, `78/390`, and `200/1400`. It is not promoted as a
+uniform theorem for all spreads without a separate converse proof.
 
-This is a uniform theorem for spreads carrying `sigma_S`. It is not yet a
-classification theorem for every arbitrary symplectic spread.
+When `q` is even, `q+1` is odd, so a fixed-point-free involution cannot partition
+a spread line into 2-cycles. This rules out the involution mechanism and is
+consistent with the measured zero-candidate `q=2` case; it does not by itself
+classify every even-characteristic spread.
 
 ---
 
@@ -112,25 +108,21 @@ classification theorem for every arbitrary symplectic spread.
 Let `q` be odd, choose a nonsquare `mu in F_q`, and set
 `K=F_q(alpha)` with `alpha^2=mu`. Regard the four-dimensional `F_q` space as a
 two-dimensional `K` space. Multiplication by `alpha` gives an `F_q`-linear
-symplectic similitude `g` with
-
-`g^2=mu I`.
+symplectic similitude `g` with `g^2=mu I`.
 
 Projectively, `g` has order two. A fixed projective point would require an
 `F_q` eigenvalue `lambda` with `lambda^2=mu`, impossible. The one-dimensional
 `K`-subspaces form the associated Desarguesian symplectic spread and are fixed
 linewise by the induced involution.
 
+This proves existence of the linewise involution for the associated spread for
+every odd `q`. It does not, by itself, prove the candidate-orbit property.
+
 At `q=3`, exhaustive computation proves more: all 36 spreads carry the unique
 nontrivial linewise stabiliser, central in the spread stabiliser of order 1440.
 The 72 nonsquare-multiplier similitudes give 36 projective involutions; the
 square-multiplier branch gives 270 inner involutions. The exact `36/270` split is
 a certified finite result for which no literature reference has been located.
-The general regular-spread and symplectic-spread framework is standard and is
-not claimed as new.
-
-At `q=3`, `sigma_S` fixes 0 points and 10 lines and belongs to the size-36 outer
-class sensitive to the complete handedness data.
 
 ---
 
@@ -201,6 +193,8 @@ feasible orbits; such certificates prove only their stated scope.
 - Decide `chi(H)=9`.
 - Decide whether `max |class intersection K10|=13`; 13 is attained and 14 is not
   excluded.
+- Prove the candidate-orbit property uniformly for the associated Desarguesian
+  spread, or find a counterexample beyond `q=3,5,7`.
 - Determine which non-Desarguesian symplectic spreads carry a linewise
   fixed-point-free involution.
 - Prove or refute uniform uniqueness of the linewise stabiliser beyond `q=3`.
