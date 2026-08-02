@@ -1,0 +1,40 @@
+name: Passes 2430-2434 isolated exploration
+on:
+  issues:
+    types: [opened]
+permissions:
+  contents: read
+  issues: write
+jobs:
+  execute:
+    if: github.event.issue.title == '[pass2430-2434-isolated-exploration-v1]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy sympy networkx
+      - name: Run tomotope role probe
+        run: |
+          set -o pipefail
+          mkdir -p execution_artifacts logs
+          python analysis/w33_pass2430_tomotope_label_probe.py | tee execution_artifacts/pass2430_probe.json | tee logs/pass2430_probe.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pass2430-2434-isolated-exploration
+          path: |
+            execution_artifacts
+            logs
+      - name: Report result
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs=require('fs');
+            let body=`Passes 2430-2434 exploration run **${context.runId}** finished with status **${{ job.status }}**.`;
+            try { body += `\n\n\`\`\`json\n${fs.readFileSync('execution_artifacts/pass2430_probe.json','utf8').slice(0,60000)}\n\`\`\``; } catch(e) { body += `\nNo probe output: ${e}`; }
+            await github.rest.issues.createComment({owner:context.repo.owner,repo:context.repo.repo,issue_number:context.issue.number,body});
