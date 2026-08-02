@@ -14,21 +14,22 @@
 
 \begin{abstract}
 We study the graph whose 540 vertices are unordered pairs of disjoint totally
-isotropic lines of the symplectic generalized quadrangle \(W(3,3)\), with two
-vertices adjacent when their canonical cross-matchings share an edge. The graph
-is the edge-disjoint union of 240 cliques of order nine. A spread determines a
+isotropic lines of the symplectic generalized quadrangle \(W(3,3)\), adjacent
+when their canonical cross-matchings share an edge. The graph is the
+edge-disjoint union of 240 cliques of order nine. A spread determines a
 45-vertex independent seed which is not maximal: fifteen residual candidate
 frames can be adjoined individually. Nevertheless the seed cannot be completed
 to a 60-frame exact cover, because the candidates collectively meet only 20 of
-the 60 residual edges. For spreads carrying a fixed-point-free linewise
-involution, we prove the completing-frame count and support fraction
-\(q(q^2+1)/2\) and \(1/q\), respectively. The involution is constructed for the
-associated Desarguesian symplectic spread from a nonsquare symplectic
-similitude. We separate these finite-geometric statements from the
-representation theory of the orientation-signed 240-edge module. Its unique
-non-rational constituent is a coexact real 90 with Eisenstein character field
-and integral phase units \(C_6\). Charge and homological-flux readings of this
-phase are withdrawn. The chromatic decision \(\chi(H)=9\) remains open.
+the 60 residual edges. A fixed-point-free linewise involution supplies a
+canonical residual-candidate subfamily with the measured \(1/q\) support
+arithmetic. Exact exhaustiveness is the additional candidate-orbit property,
+verified computationally for \(q=3,5,7\) but not proved uniformly. A nonsquare
+symplectic similitude constructs the involution for the associated Desarguesian
+spread. We separate these finite-geometric statements from the orientation-signed
+240-edge module, whose unique non-rational constituent is a coexact real 90 with
+Eisenstein character field and integral phase units \(C_6\). Charge and
+homological-flux readings are withdrawn. The chromatic decision
+\(\chi(H)=9\) remains open.
 \end{abstract}
 
 \section{Objects and computational conventions}
@@ -40,8 +41,10 @@ as vertices, adjacent when their matching-edge sets intersect.
 
 All finite statements at \(q=3\) were checked from literal point, line, edge,
 frame, and group actions. Statements at \(q=5,7\) are labelled finite-case
-verification unless a uniform argument is supplied. Pass 1971 corrected an
-earlier claim: the 45-frame spread seed is not a maximal independent set.
+verification unless a uniform argument is supplied. Passes 1971 and 1974
+corrected two earlier claims: the 45-frame spread seed is not maximal, and a
+linewise involution does not by itself prove exhaustiveness of the residual
+candidate set.
 
 \section{The frame graph}
 \begin{proposition}[exact at \(q=3\)]
@@ -56,7 +59,7 @@ Consequently \(H\) is exactly the union of the 240 edge-indexed \(K_9\)'s.
 \begin{proof}
 Literal incidence enumeration gives nine frames through each edge. Each frame
 has four matching edges, and each such edge contributes eight neighbours, so the
-degree is \(4\cdot 8=32\). The clique edge count
+degree is \(4\cdot8=32\). The clique edge count
 \(240\binom92=8640\) equals \(540\cdot32/2\). Direct verification that adjacent
 frames share one matching edge removes multiple counting.
 \end{proof}
@@ -101,41 +104,49 @@ The earlier phrase ``maximal independent set of size 45'' is false and is
 withdrawn. The obstruction is support deficiency, not maximality.
 \end{remark}
 
-\section{The \(1/q\) support theorem}
+\section{The involution-generated subfamily and candidate-orbit property}
 Assume that a spread \(S\) admits a projective involution \(\sigma\) which fixes
 every line of \(S\) setwise, fixes no point, and fixes no line outside \(S\)
 setwise.
 
-\begin{theorem}[uniform under the stated involution hypothesis]
-The residual candidate frames are exactly the line orbits
-\(\{A,\sigma(A)\}\) with \(A\notin S\). Their number is
+\begin{proposition}[uniform candidate subfamily]
+For every line \(A\notin S\), the pair \(\{A,\sigma(A)\}\) is a residual
+candidate frame. These line orbits supply
 \[
- \frac{q(q^2+1)}2.
+ \frac{q(q^2+1)}2
 \]
-Their matching edges occupy
+candidates supported on
 \[
  \frac{(q+1)(q^2+1)}2
 \]
-distinct residual edges, a fraction \(1/q\) of the residual set, and every
-supported edge has multiplicity exactly \(q\).
-\end{theorem}
+distinct residual edges. Every supported edge occurs with multiplicity \(q\)
+in this subfamily.
+\end{proposition}
 
 \begin{proof}
 A line \(A\notin S\) meets \(q+1\) spread lines, one at each point. Since
 \(\sigma\) fixes those spread lines, the canonical matching between \(A\) and
 \(\sigma(A)\) is \(\{\{x,\sigma(x)\}:x\in A\}\) and lies inside the residual
-set. Conversely a residual frame must pair every point with its certified mate
-on the same spread line, hence has the form \(\{A,\sigma(A)\}\). There are
-\(q(q^2+1)\) lines outside the spread and no fixed ones, giving the candidate
-count. Each spread line contributes \((q+1)/2\) paired edges. A fixed paired edge
-lies in one candidate for each of the \(q\) non-spread lines through one
-endpoint, proving the multiplicity.
+set. There are \(q(q^2+1)\) outside lines and no fixed ones, giving the orbit
+count. Each spread line contributes \((q+1)/2\) involution edges. A fixed such
+edge lies in the orbit candidate arising from each of the \(q\) non-spread lines
+through one endpoint.
 \end{proof}
 
+\begin{remark}[candidate-orbit property]
+The converse statement that every residual candidate is of the form
+\(\{A,\sigma(A)\}\) is additional. We call it the candidate-orbit property.
+It is verified by literal enumeration for the repository's \(q=3,5,7\) examples.
+When it holds, the proposition gives the complete candidate census, the exact
+support fraction \(1/q\), and multiplicity \(q\). A uniform converse proof is
+not supplied here.
+\end{remark}
+
 The measured ratios at \(q=3,5,7\) are \(20/60\), \(78/390\), and
-\(200/1400\). For even \(q\), a spread line has odd size \(q+1\), so no
-fixed-point-free involution can partition it into 2-cycles. This explains the
-measured zero-candidate case at \(q=2\).
+\(200/1400\). For even \(q\), a spread line has odd size \(q+1\), so the
+fixed-point-free involution mechanism is impossible. This is consistent with the
+measured zero-candidate case at \(q=2\), but does not classify every
+characteristic-two spread.
 
 \section{The nonsquare-similitude construction}
 \begin{theorem}[associated Desarguesian spread, odd \(q\)]
@@ -155,9 +166,11 @@ point would give an eigenvalue \(\lambda\in\mathbb F_q\) satisfying
 multiplication by \(\alpha\), and form the standard associated spread.
 \end{proof}
 
-At \(q=3\), exhaustive computation establishes uniqueness of the nontrivial
-linewise stabilizer for all 36 spreads and the exact \(36/270\) nonsquare/square
-multiplier split. Uniform uniqueness beyond \(q=3\) is not claimed.
+This construction proves the involution, not the candidate-orbit converse. At
+\(q=3\), exhaustive computation establishes uniqueness of the nontrivial
+linewise stabilizer for all 36 spreads and the exact \(36/270\)
+nonsquare/square multiplier split. Uniform uniqueness beyond \(q=3\) is not
+claimed.
 
 \section{The orientation-signed edge module}
 Over \(PGSp(4,3)\), the signed 240-edge module decomposes multiplicity-freely as
@@ -221,15 +234,11 @@ open.
 
 \section{Ownership, prior art, and novelty boundary}
 General symplectic-spread, regular-spread, and spread-of-symmetry frameworks are
-standard. The relevant background includes Thas--Payne and De Bruyn. General
-facts about non-real symplectic characters and twisted Frobenius--Schur
-indicators belong to Gow and Vinroot and were already present in repository
-Passes 353/355. The exact \(q=3\) \(36/270\) split has no located reference and
-is labelled likely known rather than advertised as new.
-
-The paper-level contribution claimed here is restricted to the literal frame
-and spread calculations, their proof organisation and scope boundaries, and the
-module-specific localization and retraction record.
+standard. Relevant background includes Thas--Payne and De Bruyn. General facts
+about non-real symplectic characters and twisted Frobenius--Schur indicators
+belong to Gow and Vinroot and were already present in repository Passes 353/355.
+The exact \(q=3\) \(36/270\) split has no located reference and is labelled
+likely known rather than advertised as new.
 
 \section{Reproducibility checklist}
 \begin{center}
@@ -241,8 +250,9 @@ Claim & Evidence type & Status\\
 spread-pair independent seed & incidence proof & uniform\\
 45-set maximality & candidate counterexample & withdrawn\\
 q=3 completion obstruction & exhaustive finite enumeration & exact\\
-\(1/q\) law & involution proof & conditional uniform\\
-\(q=3,5,7\) support counts & literal enumeration & exact cases\\
+involution candidate subfamily & orbit counting proof & uniform under hypothesis\\
+candidate-orbit property & literal enumeration & exact q=3,5,7\\
+exact \(1/q\) law & subfamily plus candidate-orbit property & scoped\\
 \(\sigma_S\) existence & nonsquare-similitude construction & associated spread\\
 \(\sigma_S\) uniqueness & full q=3 group enumeration & exact q=3\\
 signed-module decomposition & exact projectors/characters & exact\\
@@ -257,6 +267,8 @@ internal \(C_6\) confinement & multiplicity-free Hom spaces & exact\\
 \item Decide whether \(\chi(H)=9\).
 \item Prove or refute that the maximum spread intersection of a resolution class
 is 13; 13 is attained and 14 remains undecided.
+\item Prove the candidate-orbit property uniformly for the associated
+Desarguesian spread, or find a counterexample beyond \(q=3,5,7\).
 \item Determine which non-Desarguesian symplectic spreads carry the linewise
 fixed-point-free involution.
 \item Prove or refute uniform uniqueness of the linewise stabilizer beyond
