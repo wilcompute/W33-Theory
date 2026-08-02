@@ -1,0 +1,38 @@
+name: Passes 2088-2092 complex structure controller
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass2088_2092_complex_structure_controller.py'
+      - 'analysis/BT2088_BT2092_regular_spread_quadratic_structure_controller.md'
+      - 'analysis/BT2092_regular_spread_quadratic_structure_controller_insert.tex'
+      - 'data/w33_pass2088_2092_complex_structure_controller.json'
+      - 'tests/test_w33_pass2088_2092.py'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - '.github/workflows/pass2088_2092_complex_structure_controller.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install focused test dependency
+        run: python -m pip install --disable-pip-version-check pytest
+      - name: Recompute certificate
+        run: |
+          python analysis/w33_pass2088_2092_complex_structure_controller.py \
+            --write-json /tmp/pass2088_2092.json
+          diff -u data/w33_pass2088_2092_complex_structure_controller.json \
+            /tmp/pass2088_2092.json
+      - name: Focused regression
+        run: pytest -q tests/test_w33_pass2088_2092.py
+      - name: Manuscript hook sanity
+        run: |
+          grep -F '\input{analysis/BT2092_regular_spread_quadratic_structure_controller_insert}' w33_paper.tex
+          grep -F '\input{analysis/BT2092_regular_spread_quadratic_structure_controller_insert}' photonic_holonet.tex
