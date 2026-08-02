@@ -1,0 +1,20 @@
+name: Pass 2410-2415 five frontiers
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass241*.py'
+      - 'analysis/cpp/w33_pass2412_all_different_search.cpp'
+      - 'data/w33_pass241*.json'
+      - 'tests/test_w33_pass2410_2415.py'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy networkx sympy pytest
+      - run: python analysis/w33_pass2410_2415_verify_frozen.py
+      - run: pytest -q tests/test_w33_pass2410_2415.py
+      - run: g++ -O3 -std=c++17 analysis/cpp/w33_pass2412_all_different_search.cpp -o /tmp/w33_pass2412
