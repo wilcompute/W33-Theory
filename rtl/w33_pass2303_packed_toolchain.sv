@@ -49,8 +49,12 @@ module w33_d24_action(
 );
     reg [4:0] tmp;
     always @* begin
-        if(!conjugated_in) begin tmp=phase_in+step12;phase_out=(tmp>=12)?tmp-12:tmp[3:0];end
-        else phase_out=(phase_in>=step12)?phase_in-step12:phase_in+12-step12;
+        if(!conjugated_in) begin
+            tmp={1'b0,phase_in}+{1'b0,step12};
+            phase_out=(tmp>=5'd12)?tmp-5'd12:tmp[3:0];
+        end else begin
+            phase_out=(phase_in>=step12)?phase_in-step12:phase_in+4'd12-step12;
+        end
     end
     assign conjugated_out=conjugated_in^reflect;
 endmodule
@@ -60,7 +64,7 @@ module w33_single_j_action24(
     input wire [1:0] step4,input wire [2:0] step6,input wire reflect,
     output wire [3:0] phase_out,output wire conjugated_out
 );
-    wire [5:0] raw=3*step4+2*step6;
-    wire [3:0] delta12=(raw>=12)?raw-12:raw[3:0];
+    wire [5:0] raw=6'd3*step4+6'd2*step6;
+    wire [3:0] delta12=(raw>=6'd12)?raw-6'd12:raw[3:0];
     w33_d24_action u(.phase_in(phase_in),.conjugated_in(conjugated_in),.step12(delta12),.reflect(reflect),.phase_out(phase_out),.conjugated_out(conjugated_out));
 endmodule
