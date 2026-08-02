@@ -10,7 +10,7 @@ to guess: `grep -i gow TOPICAL_ALIASES.md` reaches
 `2026-07-15_pass355_sp43_frobenius_schur.md`, which no search for
 "phase" or "complex structure" ever would.
 
-Files scanned: **3175** · distinct tokens: **613**
+Files scanned: **3176** · distinct tokens: **614**
 
 Tokens marked ⚠ appear ONLY in topically opaque filenames (dated or
 numbered), so they are invisible to any topic search — read those first.
@@ -39,6 +39,7 @@ numbered), so they are invisible to any topic search — read those first.
 - `cite:Group(2024)` — [README_LIVING_PAPER_2026_02_11.md](docs/README_LIVING_PAPER_2026_02_11.md)
 - `cite:Hashimoto(1989)` — [PART_DCMLXXVIII_CLEAN_PROOF.md](manuscripts/parts/PART_DCMLXXVIII_CLEAN_PROOF.md)
 - `cite:Hastings(2018)` — [new_connections_research.md](docs/new_connections_research.md)
+- `cite:Heawood(1890)` ⚠ — [w33_pass2045_2049_the_sevens_and_a_numbering_collision.md](analysis/w33_pass2045_2049_the_sevens_and_a_numbering_collision.md)
 - `cite:Hoffman(1970)` — [PART_CCCXVII_CLIQUE_CHROMATIC_BRIDGE.md](manuscripts/parts/PART_CCCXVII_CLIQUE_CHROMATIC_BRIDGE.md)
 - `cite:Holt(1969)` — [QUANTUM_INFORMATION_EXTENSION.md](docs/archive/QUANTUM_INFORMATION_EXTENSION.md)
 - `cite:Ihara(1966)` — [PART_DCMLXXVIII_CLEAN_PROOF.md](manuscripts/parts/PART_DCMLXXVIII_CLEAN_PROOF.md)
@@ -98,7 +99,7 @@ numbered), so they are invisible to any topic search — read those first.
 - `cite:Wilson(1985)` — [PART_CCXL_FISCHER_GROUPS_BRIDGE.md](manuscripts/parts/PART_CCXL_FISCHER_GROUPS_BRIDGE.md), [PART_CCXXXIX_CONWAY_GROUPS_BRIDGE.md](manuscripts/parts/PART_CCXXXIX_CONWAY_GROUPS_BRIDGE.md)
 - `cite:Wilson(1991)` — [VOGEL_SYNTHESIS_COMPLETE.md](docs/archive/VOGEL_SYNTHESIS_COMPLETE.md)
 - `cite:Wilson(2009)` — [monster_connection.md](docs/monster_connection.md)
-- `cite:Youngs(1968)` — [w33_pass2023_2028_the_converse_reduces_to_a_regulus.md](analysis/w33_pass2023_2028_the_converse_reduces_to_a_regulus.md), [PART_MCCXVI_MCCXXI_CYCLOTOMIC.md](manuscripts/parts/PART_MCCXVI_MCCXXI_CYCLOTOMIC.md)
+- `cite:Youngs(1968)` — [w33_pass2023_2028_the_converse_reduces_to_a_regulus.md](analysis/w33_pass2023_2028_the_converse_reduces_to_a_regulus.md), [w33_pass2045_2049_the_sevens_and_a_numbering_collision.md](analysis/w33_pass2045_2049_the_sevens_and_a_numbering_collision.md), [PART_MCCXVI_MCCXXI_CYCLOTOMIC.md](manuscripts/parts/PART_MCCXVI_MCCXXI_CYCLOTOMIC.md)
 - `cite:Zauner(1999)` — [QUANTUM_INFORMATION_EXTENSION.md](docs/archive/QUANTUM_INFORMATION_EXTENSION.md)
 - `code:[0,0,0]` ⚠ — [BT1685_qsp_phase_angle_synthesis.md](analysis/BT1685_qsp_phase_angle_synthesis.md), [BT1690_projector_hardware_falsifier_update.md](analysis/BT1690_projector_hardware_falsifier_update.md)
 - `code:[0,0,1]]` — [march_2026_frontier_note.md](docs/march_2026_frontier_note.md)
