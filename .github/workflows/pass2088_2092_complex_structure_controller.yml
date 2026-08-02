@@ -14,6 +14,9 @@ on:
       - '.github/workflows/pass2088_2092_complex_structure_controller.yml'
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   verify:
     runs-on: ubuntu-latest
