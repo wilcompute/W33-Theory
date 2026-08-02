@@ -14,7 +14,9 @@ It is a claim-by-claim reconciliation, not a third narrative.
 | Fifteen residual candidate frames exist at q=3 | asserted | asserted | **exact for all 36 spreads** |
 | The candidates touch only 20 of 60 residual edges | asserted | asserted | **exact for all 36 spreads** |
 | A spread seed cannot be completed to a 60-frame exact cover | asserted | asserted | **exact at q=3** |
-| Candidate support obeys the `1/q` law | q=3,5,7 verification | q=3,5,7 verification | **proved for every spread carrying the linewise fixed-point-free involution; otherwise finite-case only** |
+| A linewise involution supplies `{A,sigma(A)}` residual candidates | implicit | partially argued | **uniform subfamily theorem** |
+| Every residual candidate equals `{A,sigma(A)}` | inferred | inferred | **candidate-orbit property; verified q=3,5,7, open uniformly** |
+| Candidate support obeys the exact `1/q` law | q=3,5,7 verification | q=3,5,7 verification | **exact when the candidate-orbit property holds; otherwise the involution supplies the measured-size subfamily only** |
 | `sigma_S` is induced by `g^2=mu I`, `mu` nonsquare | asserted with q=3,5,7 checks | algebraic construction | **proved for the associated Desarguesian symplectic spread; uniqueness only exact at q=3** |
 | `chi(H)=9` | open | open | **open** |
 | Spread branching is the best measured single encoding | yes | stated | **current benchmark: 60,909 branches** |
@@ -26,22 +28,33 @@ It is a claim-by-claim reconciliation, not a third narrative.
 ## The maximality correction
 
 The repeated phrase “the spread `K10` is a maximal independent set” cannot be
-true together with the certified residual-candidate census.  Adjacency in the
-frame graph means sharing a matching edge.  The spread frames cover precisely
-the 180 off-spread edges.  Each of the 15 candidate frames uses only the 60
+true together with the certified residual-candidate census. Adjacency in the
+frame graph means sharing a matching edge. The spread frames cover precisely
+the 180 off-spread edges. Each of the 15 candidate frames uses only the 60
 on-spread residual edges, and is therefore nonadjacent to every spread frame.
 Consequently any candidate can be adjoined to the 45-frame independent set.
 
-The correct theorem is stronger in the direction actually needed and weaker in
-maximality language:
+The correct theorem is:
 
-> The spread frames form a 45-vertex independent seed.  At q=3 it has exactly
+> The spread frames form a 45-vertex independent seed. At q=3 it has exactly
 > 15 residual candidate extensions, but those candidates collectively meet only
-> 20 of the 60 residual edges.  Forty residual edges lie in no candidate, so no
+> 20 of the 60 residual edges. Forty residual edges lie in no candidate, so no
 > choice of 15 candidates can complete the seed to a 60-frame exact cover.
 
 Thus the obstruction is a **support-deficiency/completion obstruction**, not a
 maximal-independent-set obstruction.
+
+## The candidate-orbit scope correction
+
+A fixed-point-free involution fixing each spread line sends every outside line
+`A` to another line `sigma(A)` and supplies a residual candidate
+`{A,sigma(A)}`. Counting these line orbits proves the candidate number, support,
+and multiplicity for that subfamily.
+
+The converse—every residual candidate has this form—is an additional statement,
+called the **candidate-orbit property**. It is verified by literal enumeration
+for q=3,5,7. It is not a consequence of the four involution axioms alone and is
+not promoted as a uniform theorem without a separate coordinate proof.
 
 ## Solver reconciliation
 
@@ -52,13 +65,13 @@ compatible once their observables are separated:
 - actual fixed-search tree: `60,909` branches for spread branching alone,
   `451,460` with eight lex generators, and `512,714` with forty.
 
-Orbit-volume reduction is a valid symmetry certificate.  It is not a monotone
-proxy for CP-SAT runtime or branch count.  The referee draft must report both.
+Orbit-volume reduction is a valid symmetry certificate. It is not a monotone
+proxy for CP-SAT runtime or branch count. The referee draft reports both.
 
 ## Ownership boundary
 
-The general symplectic-spread and regular-spread framework is standard.  The
+The general symplectic-spread and regular-spread framework is standard. The
 repository has not located prior art for the exact q=3 `36/270` multiplier split.
 The draft therefore keeps “likely known; reference not located” rather than a
-novelty claim.  The Gow/Vinroot character-theory ownership and the in-repository
+novelty claim. The Gow/Vinroot character-theory ownership and the in-repository
 Pass-355 priority remain unchanged.
