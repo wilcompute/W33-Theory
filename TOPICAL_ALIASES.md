@@ -10,7 +10,7 @@ to guess: `grep -i gow TOPICAL_ALIASES.md` reaches
 `2026-07-15_pass355_sp43_frobenius_schur.md`, which no search for
 "phase" or "complex structure" ever would.
 
-Files scanned: **3160** · distinct tokens: **610**
+Files scanned: **3161** · distinct tokens: **610**
 
 Tokens marked ⚠ appear ONLY in topically opaque filenames (dated or
 numbered), so they are invisible to any topic search — read those first.
