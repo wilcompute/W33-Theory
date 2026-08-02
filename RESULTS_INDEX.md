@@ -22,7 +22,7 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **7150** files; **7124** distinctive results
+Indexed **7151** files; **7124** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
 **3016** appear in exactly one file — the sharpest signal.
 
@@ -5410,7 +5410,7 @@ Indexed **7150** files; **7124** distinctive results
 | `1841` | `analysis/BT1840_BT1842_summary.md` · `analysis/BT1840_BT1844_execution_summary.md` · `analysis/BT1841_1845_execute_all_five.md` · `analysis/BT1841_numeric_F12_phase_table.md` · *(+11)* |
 | `1842` | `analysis/BT1840_BT1842_summary.md` · `analysis/BT1840_BT1844_execution_summary.md` · `analysis/BT1841_1845_execute_all_five.md` · `analysis/BT1842_covariance_aware_SPRT.md` · *(+8)* |
 | `1843` | `W33_FOR_EVERYONE.tex` · `analysis/BT1840_BT1844_execution_summary.md` · `analysis/BT1841_1845_execute_all_five.md` · `analysis/BT1843_BT1845_summary.md` · *(+11)* |
-| `1844` | `analysis/BT1840_BT1844_execution_summary.md` · `analysis/BT1841_1845_execute_all_five.md` · `analysis/BT1843_BT1845_summary.md` · `analysis/BT1844_F12_genus6_edge_bridge.md` · *(+8)* |
+| `1844` | `analysis/BT1840_BT1844_execution_summary.md` · `analysis/BT1841_1845_execute_all_five.md` · `analysis/BT1843_BT1845_summary.md` · `analysis/BT1844_F12_genus6_edge_bridge.md` · *(+9)* |
 | `1846` | `analysis/BT1845_BT1849_execution_summary.md` · `analysis/BT1846_1850_orbit_decoder_separator_probe_atlas.md` · `analysis/BT1846_BT1848_summary.md` · `analysis/BT1846_current_graph_lift.md` · *(+7)* |
 | `1847` | `analysis/BT1845_BT1849_execution_summary.md` · `analysis/BT1846_1850_orbit_decoder_separator_probe_atlas.md` · `analysis/BT1846_BT1848_summary.md` · `analysis/BT1847_F12_to_K12_functor.md` · *(+14)* |
 | `1848` | `analysis/BT1845_BT1849_execution_summary.md` · `analysis/BT1846_1850_orbit_decoder_separator_probe_atlas.md` · `analysis/BT1846_BT1848_summary.md` · `analysis/BT1848_covariance_target_optimizer.md` · *(+8)* |
@@ -6976,7 +6976,7 @@ Indexed **7150** files; **7124** distinctive results
 | `798` | `analysis/BT795_spread_envelope_routing_cell.md` · `analysis/BT796_torus_cell_orbit_census.md` · `analysis/BT798_residual_tetrahedral_carrier.md` · `analysis/BT799_transversal_incidence_grammar.md` · *(+14)* |
 | `799` | `analysis/BT799_transversal_incidence_grammar.md` · `analysis/bt799_transversal_incidence_grammar.py` · `analysis/bt800_diagonal_quotient_shadow_plane.py` · `analysis/w33_pass174_dual_discriminant_fixed_rail.py` |
 | `801` | `W33_FOR_EVERYONE.tex` · `analysis/2026-05-31_BREAKTHROUGH_CHAIN_summary.md` · `analysis/BT801_805_five_frontier_release.md` · `analysis/BT801_global_transversal_repair_atlas.md` · *(+21)* |
-| `802` | `analysis/BT1844_F12_genus6_edge_bridge.md` · `analysis/BT801_805_five_frontier_release.md` · `analysis/BT802_oscillator_atlas_verification.md` · `analysis/BT821_825_five_frontier_release.md` · *(+7)* |
+| `802` | `analysis/BT1844_F12_genus6_edge_bridge.md` · `analysis/BT801_805_five_frontier_release.md` · `analysis/BT802_oscillator_atlas_verification.md` · `analysis/BT821_825_five_frontier_release.md` · *(+8)* |
 | `803` | `analysis/BT1441_BT1443_otto_closure_fano_heptad.md` · `analysis/BT801_805_five_frontier_release.md` · `analysis/BT803_seven_realizations_census.md` · `analysis/BT804_trio_pillow_fano_theorem.md` · *(+17)* |
 | `804` | `analysis/BT801_805_five_frontier_release.md` · `analysis/BT804_trio_pillow_fano_theorem.md` · `analysis/BT805_pg32_tetrahedron_model.md` · `analysis/BT806_a7_ladder_antiflag.md` · *(+5)* |
 | `805` | `analysis/BT801_805_five_frontier_release.md` · `analysis/BT805_pg32_tetrahedron_model.md` · `analysis/BT806_a7_ladder_antiflag.md` · `analysis/BT821_825_five_frontier_release.md` · *(+6)* |
