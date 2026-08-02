@@ -69,3 +69,13 @@ for f in sys.argv[1:]:
         language: system
         pass_filenames: false
         files: ^(analysis|docs|manuscripts)/.*\.(md|tex|html)$
+      # Added Pass 2478.  Warns when a frozen certificate no longer reproduces its
+      # own digest, or when a frozen `checks` block contains a false.  Calibrated
+      # to the three canonical self-digest key names -- matching "sha256" anywhere
+      # in a key flags 50% of files and is pure noise.  Warns, never blocks.
+      - id: certificate-digests
+        name: frozen certificates reproduce their own digests
+        entry: py -3 scripts/check_certificates.py --quiet
+        language: system
+        pass_filenames: true
+        files: ^data/.*\.json$
