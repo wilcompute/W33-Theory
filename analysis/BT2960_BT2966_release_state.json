@@ -1,0 +1,8 @@
+{
+  "schema":"w33.pass2960_2966.release_state.v1",
+  "source_status":"COMPLETE_EXACT_AND_MODELLED_SOURCE",
+  "local_semantic_regressions":"7/7 passed",
+  "materialized_source":"byte-identical to readable generator",
+  "observed_evidence":"pending draft PR workflow",
+  "claim_boundary":"No Icarus, Yosys/nextpnr, canonical blueprint/site, or PDF-build success is claimed until the evidence workflow completes."
+}
