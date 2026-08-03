@@ -1,0 +1,77 @@
+{
+  "boundaries": {
+    "diameter": "25 profiles are algebraic profiles, not asserted conjugacy classes",
+    "geometry": "line-stabilizer result is relative to the chosen classical line",
+    "hardware": "rank-code truth table is exact; cell count/timing require observed synthesis/P&R",
+    "m36": "full two-copy [[4,2]] stabilizer-projector family and mixtures, not 3+ copies or non-stabilizer projections",
+    "observer": "synthetic independent detector channels; no laboratory calibration",
+    "thermodynamics": "representation-specific Landauer floors, not measured energy"
+  },
+  "checks": {
+    "diameter19_census": true,
+    "information_budget": true,
+    "line_stabilizer_census": true,
+    "m36_first_order": true,
+    "middle_chirality": true,
+    "noise_aware_observer": true,
+    "rank7": true
+  },
+  "pass2917": {
+    "state_bits": 7,
+    "status": "remote synthesis pending",
+    "transition_checks": 324
+  },
+  "pass2918": {
+    "closed_deep_branches": 3393,
+    "improving_deep_branches": 48,
+    "minimum_slope": "2/3",
+    "minimum_slope_branch_count": 12,
+    "other_improving_slope": "0.845299461621"
+  },
+  "pass2919": {
+    "class_sizes": [4, 8, 12, 12],
+    "conjugation_swaps_middle_classes": true,
+    "operational_separator": "odd-Y Pauli expectations reverse sign in a fixed Pauli frame",
+    "probability_only_stabilizer_spectra_identical": true
+  },
+  "pass2920": {
+    "H_frame_bits": 6.339850002884624,
+    "H_phase_given_support_bits": 2.6666666666666665,
+    "H_support_bits": 3.6731833362179582,
+    "naive_adaptive_snapshot_bits": "484/27",
+    "noise_scenarios": {
+      "coordinate_asymmetric": [
+        {"error_probability": 0.14785483573217562, "expected_raw_bits": 17.925925925925924, "expected_raw_support_samples": 4.481481481481481, "repeats_per_support_decision": 1, "success_probability": 0.8521451642678244},
+        {"error_probability": 0.018363002372458803, "expected_raw_bits": 53.77777777777777, "expected_raw_support_samples": 13.444444444444443, "repeats_per_support_decision": 3, "success_probability": 0.9816369976275412}
+      ],
+      "dark_0p2pct_miss_3pct": [
+        {"error_probability": 0.1166552957532132, "expected_raw_bits": 17.925925925925924, "expected_raw_support_samples": 4.481481481481481, "repeats_per_support_decision": 1, "success_probability": 0.8833447042467868},
+        {"error_probability": 0.01030733219624802, "expected_raw_bits": 53.77777777777777, "expected_raw_support_samples": 13.444444444444443, "repeats_per_support_decision": 3, "success_probability": 0.989692667803752}
+      ],
+      "loss_dominated_stress": [
+        {"error_probability": 0.2793616536349567, "expected_raw_bits": 17.925925925925924, "expected_raw_support_samples": 4.481481481481481, "repeats_per_support_decision": 1, "success_probability": 0.7206383463650433},
+        {"error_probability": 0.024821628000858298, "expected_raw_bits": 53.77777777777777, "expected_raw_support_samples": 13.444444444444443, "repeats_per_support_decision": 3, "success_probability": 0.9751783719991417}
+      ],
+      "symmetric_2pct": [
+        {"error_probability": 0.12584966542790588, "expected_raw_bits": 17.925925925925924, "expected_raw_support_samples": 4.481481481481481, "repeats_per_support_decision": 1, "success_probability": 0.8741503345720941},
+        {"error_probability": 0.00764935141381351, "expected_raw_bits": 53.77777777777777, "expected_raw_support_samples": 13.444444444444443, "repeats_per_support_decision": 3, "success_probability": 0.9923506485861865}
+      ]
+    }
+  },
+  "pass2922": {
+    "conclusion": "the 4+8+12+12 Clifford classes require extra complex/Pauli structure",
+    "pointwise_line_stabilizer_order": 54,
+    "pointwise_magic_suborbit_sizes": [9, 9, 9, 9],
+    "setwise_line_stabilizer_order": 1296,
+    "setwise_magic_suborbit_sizes": [36]
+  },
+  "pass2923": {
+    "affine_order_histogram": {"10": 6, "12": 32, "18": 8, "4": 110, "5": 6, "6": 2, "8": 22, "9": 2},
+    "algebraic_profile_count": 25,
+    "fixed_frame_histogram": {"0": 12, "1": 174, "3": 2},
+    "inverse_depth_histogram": {"16": 18, "17": 46, "18": 48, "19": 76},
+    "shell_size": 188
+  },
+  "schema": "w33.pass2917_2923.seven_front_breakthrough.summary.v1",
+  "status": "LOCAL_EXACT_REMOTE_HARDWARE_AND_PDF_PENDING"
+}
