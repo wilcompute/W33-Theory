@@ -2,16 +2,24 @@
   "schema": "w33.pass_namespace_reservation.v2",
   "range": "2960-2966",
   "owner": "agent/pass2960-2966-physical-compiler-seven-front",
-  "status": "reserved",
+  "status": "source_complete_pending_observed_hardware_and_pdf_evidence",
   "reserved_after": "parallel reservation frontier through Pass 2959",
-  "passes": {
-    "2960": "physically optimize and compare the exact 15-probe affine-support observer and ternary SPC factorization",
-    "2961": "extend the compiled deep-M36 branch from stochastic Pauli faults to coherent overrotations, correlated faults, and leakage flags",
-    "2962": "classify the 10x4 spread-router triangle holonomy as a finite gauge field and test spread/gauge invariance",
-    "2963": "build a calibrated-parameter 10x4 OAM time/frequency optical channel simulator with loss, crosstalk, phase drift, and detector noise",
-    "2964": "synthesize the reversible transcript and 8192-state joint-rank compiler into explicit reversible primitives and thermodynamic ledger",
-    "2965": "BONKERS: derive a curvature-aware route code that turns involutory triangle holonomy into an error-detecting syndrome",
-    "2966": "BONKERS: search for a single symplectic transducer joining M36 distillation, OAM routing, and observer uncomputation"
+  "source_completion": {
+    "exact_summary_checks": "7/7",
+    "focused_regressions": "7/7 passed locally",
+    "materialized_source": "byte-identical to readable generator",
+    "evidence_pr": 226,
+    "workflow_run": 30859351593,
+    "workflow_status": "queued"
   },
-  "claim_boundary": "Reservation only. Exact, modelled, source-complete, synthesized, placed, and measured statements remain separately typed until executable evidence exists."
+  "passes": {
+    "2960": "exact minimum-incidence factorization of the optimal 15-probe observer: 24 to 8 incidence, 3 ternary adders, 8 NOT plus 8 CNOT decode",
+    "2961": "exact coherent-axis and correlated-two-location M36 censuses plus adversarial flagged-leakage bound",
+    "2962": "all 36 W33 spreads have gauge-fixed D4 holonomy and satisfy 210 tetrahedral Bianchi checks",
+    "2963": "configurable synthetic 10x4 OAM time/frequency channel simulator with loss, crosstalk, phase drift, detector efficiency, and dark counts",
+    "2964": "explicit 199-gate joint-rank network: 120 Toffoli plus 79 CNOT with all 24 scratch bits uncomputed",
+    "2965": "BONKERS: three-pilot curvature route code detects all 8280 arbitrary single-edge nonidentity S4 faults",
+    "2966": "BONKERS: anti-symplectic phase transducer unifies commutation, OAM phase, affine support, and M36 label chirality"
+  },
+  "claim_boundary": "Exact finite results, model-specific M36 analyses, synthetic optical profiles, source-complete RTL, and logical reversible gate counts are published. Icarus simulations, Yosys/nextpnr measurements, blueprint/site integration, and three PDF builds remain pending workflow 30859351593."
 }
