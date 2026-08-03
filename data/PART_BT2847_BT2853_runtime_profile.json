@@ -1,0 +1,21 @@
+{
+  "schema": "w33.pass2847_2853.runtime_profile.v1",
+  "environment": "local Python analysis environment",
+  "verifier": {
+    "wall_time_seconds": 30.97,
+    "peak_rss_kb": 202684,
+    "checks": 8,
+    "status": "PASS"
+  },
+  "focused_regressions": {
+    "tests": 6,
+    "wall_time_seconds": 0.09,
+    "status": "PASS"
+  },
+  "hardware_tools": {
+    "local_iverilog": "not available",
+    "local_yosys": "not available",
+    "local_nextpnr": "not available",
+    "remote_workflow": ".github/workflows/w33_pass2847_2853_protected_observer.yml"
+  }
+}
