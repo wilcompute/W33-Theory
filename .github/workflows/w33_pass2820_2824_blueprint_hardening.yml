@@ -15,6 +15,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: w33-pass2820-2824-blueprint-hardening
+  cancel-in-progress: false
+
 env:
   PYTHONUNBUFFERED: "1"
 
