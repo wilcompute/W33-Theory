@@ -1,0 +1,34 @@
+{
+  "schema": "w33.pass2828.double_word_distance4.summary.v1",
+  "status": "COMPLETE_EXACT",
+  "check_count": 6,
+  "checks": {
+    "eight_shortest_seed_words": true,
+    "ordered_pair_count_64": true,
+    "distance_profile_40_16_8": true,
+    "eight_distance4_words": true,
+    "canonical_distance4": true,
+    "canonical_nearest_pairs_18": true
+  },
+  "headline": "Eight concatenations of shortest support observers yield a 12-operation, 52-bit trajectory code of minimum distance four.",
+  "ordered_pair_distance_profile": {"2": 40, "3": 16, "4": 8},
+  "distance4_word_pairs": [[0, 5], [0, 6], [1, 2], [1, 3], [4, 5], [4, 6], [7, 2], [7, 3]],
+  "canonical": {
+    "first_word_index": 0,
+    "second_word_index": 5,
+    "word": [
+      "CX_p->f", "F_p", "Z_p", "F_p", "Z_p", "CX_p->f",
+      "CX_f->p", "F_p", "Z_p", "F_p", "Z_p", "CX_f->p"
+    ],
+    "minimum_distance": 4,
+    "nearest_pair_count": 18
+  },
+  "coding_consequence": {
+    "trajectory_bits": 52,
+    "minimum_distance": 4,
+    "guaranteed_detection_bits": 3,
+    "guaranteed_correction_bits": 1,
+    "decoder": "nearest-neighbor over 81 exact codewords"
+  },
+  "claim_boundary": "Optimal only inside the 8x8 concatenation family of shortest injective words; no global shortest distance-four theorem is claimed."
+}
