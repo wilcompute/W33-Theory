@@ -40,7 +40,6 @@ jobs:
           grep -F 'observer states only' holonet_machine_blueprint.tex
           grep -F 'best $\mathrm{GL}(4,2)$ Singer cycle' holonet_machine_blueprint.tex
       - name: Commit readable evidence and rewritten sources
-        if: github.event_name == 'push'
         run: |
           git config user.name 'W33 evidence bot'
           git config user.email 'noreply@github.com'
@@ -57,5 +56,6 @@ jobs:
             docs/index.html data/w33_pass_namespace_registry_v2.d/2901-2907.json
           if ! git diff --cached --quiet; then
             git commit -m 'Pass 2907: materialize evidence and rewrite blueprint [skip ci]'
-            git push origin HEAD:${GITHUB_REF_NAME}
+            TARGET_BRANCH="${GITHUB_HEAD_REF:-$GITHUB_REF_NAME}"
+            git push origin HEAD:"$TARGET_BRANCH"
           fi
