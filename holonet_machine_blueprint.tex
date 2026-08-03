@@ -93,7 +93,7 @@
        whose wiring diagram is a piece of finite geometry\\[10pt]
        \normalsize Every figure in this document is measured or proved.}
 \author{\normalsize W(3,3)--E$_8$ project, glue track}
-\date{\normalsize 3 August 2026 \quad$\cdot$\quad Passes 2700--2869}
+\date{\normalsize 3 August 2026 \quad$\cdot$\quad Passes 2700--2886}
 
 \begin{document}
 \maketitle
@@ -515,6 +515,39 @@ For a computer, that is precisely what you want from an address space and from a
 fabric: there is one shortest path, and no loops to break ties in.
 \end{plain}
 
+\subsection{The wiring as a budget}
+
+\begin{plain}
+One more fact about the shape, and it is the kind that makes a reader sit up --- so it
+comes with an unusually careful statement of what it does \emph{not} mean.
+
+Treat the $240$ connections as a physical system and ask how they vibrate. The answer
+splits them into four groups.
+\end{plain}
+
+\begin{spec}[Hodge Laplacian on $1$-chains, recomputed independently, Pass 2884]
+\[
+  240 \;=\; \underbrace{81}_{\text{harmonic}} \;+\; \underbrace{120}_{\lambda=4}
+       \;+\; \underbrace{24}_{\lambda=10} \;+\; \underbrace{15}_{\lambda=16}
+\]
+The harmonic sector has dimension $81$ --- the frame register file, and the logical
+dimension of the substrate's own qutrit code $[240,81,d_Z{=}4]$.
+\end{spec}
+
+\begin{gotwrong}[What is tempting here, and why it is not claimed]
+Two of the other three numbers are already architectural quantities in this document:
+$15$ is the dimension of the support shell, and $24$ is the order of the single-qutrit
+Clifford group modulo phase. It is very tempting to read the line above as ``the machine's
+wiring decomposes into its own subsystems.''
+
+\medskip\noindent
+\textbf{No map is exhibited in either case.} These are equal integers. This project's
+second most expensive failure mode is precisely an over-read of a count match --- and
+\S\ref{sec:isa} contains a worked example where exactly this kind of coincidence, tested,
+turned out to be nothing. The decomposition is recorded as an open question: is either
+coincidence carried by a natural map? Until someone answers that, it is arithmetic.
+\end{gotwrong}
+
 \subsection{Why three?}
 
 \begin{plain}
@@ -614,7 +647,7 @@ registers, instructions, or qutrits. It is the same number as the size of the ma
 register file.
 \end{plain}
 
-\begin{spec}[The coincidence, and what is and is not claimed]
+\begin{spec}[The coincidence, and the answer]
 \[
   H_1\bigl(W(3,3);\mathbb{Z}\bigr)=\mathbb{Z}^{81},
   \qquad
@@ -627,10 +660,20 @@ with parameters $[240,81,d_Z{=}4]$ --- so the same $81$ is also the number of
 \emph{protected} logical values the substrate carries.
 
 \smallskip\noindent
-\textbf{Not claimed:} a canonical isomorphism between the frame space and the homology.
-The counts agree and the reason they agree is understood; a natural map between them is a
-separate question and is not asserted here.
+\textbf{But the two spaces are not the same object} (Pass 2883). Ask whether the symmetry
+group sees them alike: an order-three linear opcode fixes exactly $27$ of the $81$ frames,
+while the homology character on every order-three class is $0$. The characters disagree,
+so there is \emph{no} equivariant isomorphism. The counts match for a real reason and the
+spaces still differ --- which is the most common shape a numerical coincidence takes in
+this project, and the reason every one of them gets this test.
 \end{spec}
+
+\begin{plain}
+It would have been more satisfying if the answer were yes. Writing down the negative
+result is the point of having the test at all: an earlier draft of this page left the
+question open, which reads as promising, and open questions that stay open too long start
+to be cited as though they were answered.
+\end{plain}
 
 \begin{spec}
 The Pauli frame is $(x_p,z_p,x_f,z_f)\in\mathbb{F}_3^4$, denoting the operator
@@ -782,6 +825,40 @@ $\{F_f,S_p,\mathrm{CX}_{f\to p}\}$, $\{F_f,\mathrm{CX}_{p\to f},\mathrm{CX}_{f\t
 \headline{Three Clifford opcodes plus one translation generate everything.
 Four frame instructions --- a \textbf{two-bit} opcode field, not three.}
 
+\begin{plain}
+Six choices, all valid --- so pick whichever is cheapest to build, and the decision costs
+nothing. That was the obvious inference, and it is wrong.
+\end{plain}
+
+\begin{spec}[The six triples do \emph{not} cost the same, Pass 2882]
+Exhaustive breadth-first search over the full group, once per triple:
+\begin{center}\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+triple & diameter & mean\\
+\midrule
+$F_p + \mathrm{CX}_{p\to f} + \mathrm{CX}_{f\to p}$ & \textbf{19} & \textbf{14.18}\\
+$F_f + \mathrm{CX}_{p\to f} + \mathrm{CX}_{f\to p}$ & 20 & 15.22\\
+$F_p + F_f + \mathrm{CX}_{f\to p}$ & 22 & 16.08\\
+$F_p + S_f + \mathrm{CX}_{p\to f}$ & 22 & 16.12\\
+$F_f + S_p + \mathrm{CX}_{f\to p}$ & 22 & 15.90\\
+$F_p + F_f + \mathrm{CX}_{p\to f}$ & 23 & 17.08\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{spec}
+
+\headline{Worst-case program length varies from \textbf{19 to 23} across the six ---
+a $21\%$ spread for a choice that looks free. Build the one with two entanglers.}
+
+\begin{plain}
+The pattern is legible once seen: the best triple is the one containing \emph{both}
+directions of the coupling instruction, and the worst is the one containing neither. What
+shortens programs is the ability to move information both ways between past and future,
+which is a satisfying thing for the machine's own central metaphor to be rewarded by its
+compiler.
+\end{plain}
+
 \subsection{How long is the longest program?}
 
 \begin{plain}
@@ -838,6 +915,21 @@ stationary distribution is exactly uniform --- \emph{no frame is preferred}.
 
 \headline{A frame forgets its origin by $1/e$ in $9.4$ instructions and is statistically
 gone after $15$ --- \textbf{$71.8$\,ns} at the measured $208.86$\,MHz.}
+
+\begin{spec}[And what the worst case actually looks like, Pass 2885]
+Only $188$ of $4{,}199{,}040$ elements sit at distance exactly $19$ --- $0.0045\%$. The
+natural guess is that so rare a set is one orbit, one coset, something nameable.
+
+\smallskip\noindent
+\textbf{It is not.} Those $188$ spread over $54$ distinct linear parts, element orders $4$
+through $18$, and all three trace classes. There is no single ``hardest instruction'' to
+name, and the structural hypothesis is refuted.
+
+\smallskip\noindent
+What survives is the useful half: \textbf{$188$ is small enough to enumerate exactly}, so
+a compiler regression suite can contain \emph{every} worst-case input rather than sampling
+for them. A negative structural result and a positive engineering one out of the same run.
+\end{spec}
 
 \begin{plain}
 Put that beside the readout cost of \S\ref{sec:support} and you get an observation
@@ -2060,6 +2152,12 @@ Minimal engine: $\mathbf{43}$ LC, $72.40$\,MHz (UP5K) & \textbf{measured} & Pass
 $M_{36}$ is $W(3,3)$ minus one line & \textbf{proved} & Passes 2835, 2869\\
 \quad identification: axiom over $40$ lines $+$ explicit spread & \textbf{proved} & Pass 2869\\
 \quad parameters alone admit $28$ graphs & \textbf{prior art} & Spence; \cmd{index.html}\\
+Six minimal triples, diameters $19,20,22,22,22,23$ & \textbf{proved} & Pass 2882 --- the choice is not free\\
+The $188$ hardest are \emph{not} one orbit or coset & \textbf{proved} & Pass 2885 --- $54$ linear parts, all traces\\
+$240 = 81+120+24+15$ (Hodge sectors) & \textbf{proved} & Pass 2884, recomputed\\
+\quad $15$ and $24$ match other quantities & \textcolor{bad}{count match only} & no map exhibited\\
+$H_1$ is \emph{not} the frame space as a module & \textbf{proved} & Pass 2883 --- characters disagree\\
+Three-copy super-linear condition & \textcolor{bad}{open} & Pass 2881, no witness in $30{,}000$ samples\\
 \quad the deleted line is the computational basis & proved & Pass 2835\\
 Support readout erases exactly $8/3$ bits & \textbf{proved} & Pass 2836\\
 \quad $4(q{-}1)\log_2(q{-}1)/q$; zero at $q{=}2$ & proved & 8 field sizes\\
@@ -2072,6 +2170,18 @@ Readout diode: mask reaches no frame register & \textbf{proved} & gate level, Pa
 ISA directed diameter $=19$; mean $14.18$ & \textbf{proved} & Pass 2866, BFS over $4.2$M\\
 \quad only $188$ elements at distance $19$ & proved & Pass 2866\\
 \quad counting floor $12$; ratio $1.73$ & derived & Pass 2866\\
+\bottomrule
+\end{tabular}
+\end{center}}
+
+\noindent{\footnotesize\itshape ...continued.}
+
+{\footnotesize
+\begin{center}
+\begin{tabular}{@{}p{8.4cm}p{2.4cm}p{3.9cm}@{}}
+\toprule
+\textbf{Claim} & \textbf{Status} & \textbf{Artifact}\\
+\midrule
 Frame walk doubly stochastic; stationary uniform & \textbf{proved} & Pass 2867\\
 Gap $0.106$; $t_{\mathrm{mix}}=15$; Kemeny $113.38$ & \textbf{proved} & Pass 2867\\
 \quad $71.8$\,ns scrambling at $208.86$\,MHz & derived & Passes 2833, 2867\\
@@ -2226,37 +2336,107 @@ tectonic holonet\_machine\_blueprint.tex
 % =====================================================================================
 
 \begin{plain}
-A blueprint that lists only what works is advertising. Here is the honest remainder.
+A blueprint that lists only what works is advertising. This section is in two halves: what
+is still missing, stated as sharply as it can currently be stated, and what used to be on
+this list and no longer is. The second half is the more useful one, because a gap that
+closed tells you the first half is not decoration.
 \end{plain}
 
-\begin{enumerate}[leftmargin=*,itemsep=3pt]
-\item \textbf{Two of the eight opcodes are not frame operations and are not built as
-      such.} $D_{12}$-mirror is a transport operation in a dihedral group; $M_{36}$-magic
-      is deliberately a \emph{handshake} to an external state-preparation block, and the
-      controller \emph{refuses} injection until a proved protocol asserts validity. No
-      non-Clifford unitary is invented in RTL, because inventing one would conceal the
-      real gap.
-\item \textbf{The universality gap moved but did not close.} A previous draft said no
-      distillation protocol was known; \S\ref{sec:magic} now gives an exact
-      fidelity-improving one on the deep grade, valid for $0<p<2/3$. What remains open is
-      narrower and better-defined: a fault-tolerant \emph{injection} threshold and an
-      asymptotic \emph{yield}. A map that improves fidelity is not either of those, and
-      the controller still refuses injection in RTL until one exists.
-\item \textbf{No physical power figure exists.} The switching census gives about $1.622$
-      output transitions per operation. That is a technology-independent activity proxy.
-      Watts require the placed netlist, a capacitance model, voltage, clock and a
-      representative workload.
-\item \textbf{(Closed at Pass 2792.)} The transpose construction was previously
-      verified at $q=3$ only. It is now built and checked over $\mathbb{F}_q$ at
-      $q=3,5,7,11,13,17,19,23$: $T^2=I$ and $T^\top JT=-J$ hold at every one, and the
-      congruence law holds at every one. Left in this list, struck through, because a
-      blueprint should show which gaps closed and when.
-\item \textbf{One original module is unparseable} ---
-      \cmd{rtl/w33\_spread\_mixer36.sv}, rejected by both frontends. It now carries a
-      deprecation banner naming its replacement. It has since been removed from the tree
-      entirely by the other track, which is the right call: a file no frontend can read is
-      not a historical record, it is a trap for the next reader.
+\subsection{Still open}
+
+\begin{enumerate}[leftmargin=*,itemsep=4pt]
+\item \textbf{Two of the eight opcodes are not frame operations, and are not built as
+      such.} $D_{12}$-mirror is a transport operation in a dihedral group and has no
+      register semantics, so there is nothing for the frame engine to do with it.
+      $M_{36}$-magic is deliberately a \emph{handshake} to an external state-preparation
+      block. \textbf{No non-Clifford unitary is invented in RTL}, because inventing one
+      would conceal the real gap rather than close it.
+
+      \emph{What changed:} the handshake is no longer a bare refusal. \S\ref{sec:magic}
+      now pins the acceptance condition exactly --- a deep-grade resource is usable while
+      $p<(8-2\sqrt3)/9$, and that inequality is a comparison the controller can make. The
+      refusal is now \emph{typed} rather than blanket.
+
+\item \textbf{The universality gap is now a single, well-posed question.} It has narrowed
+      three times, and the current statement is the sharpest it has been:
+      \begin{itemize}[leftmargin=1.2em,itemsep=1pt,topsep=2pt]
+      \item An exact fidelity-improving protocol exists on the deep grade for
+            $0<p<2/3$ (\S\ref{sec:magic}).
+      \item It converges \emph{linearly} at rate $2/3$, so its cost reaches $10^{27}$ raw
+            states for useful purity --- usable, not practical.
+      \item \textbf{No two-copy stabilizer protocol can do better.} Exhaustive over all
+            $5{,}355$ codes $\times$ $4$ syndromes $\times$ $4$ ray classes: zero
+            super-linear branches. This is a bound on the family, not a property of the
+            branch that was found.
+      \item At three copies the same condition is not obviously satisfiable either:
+            $30{,}000$ sampled stabilizer groups on six qubits produced no witness. Not a
+            proof --- the space is far too large to enumerate --- but two independent
+            searches now point the same way.
+      \end{itemize}
+      \emph{So the open problem is:} does any stabilizer protocol on three or more copies
+      annihilate every single-error input while keeping the clean one? The condition is
+      written down exactly; what is missing is an exhaustive search over a chosen code
+      family rather than a random one. Until it is answered the controller still refuses
+      injection.
+
+\item \textbf{A power figure exists, and it is modelled, not measured.} This item used to
+      read ``no physical power figure exists''; that is no longer true, and the honest
+      replacement is more useful than either extreme:
+      \begin{itemize}[leftmargin=1.2em,itemsep=1pt,topsep=2pt]
+      \item \textbf{Proved:} the Landauer floor. Compute is exactly $0$; readout is
+            $\tfrac83 k_BT\ln2 = 47.78$\,meV.
+      \item \textcolor{bad}{\textbf{Modelled:}} $0.502$\,pJ per operation and
+            $0.105$\,mW at $208.86$\,MHz, from measured activity ($1.622$ transitions/op),
+            measured cell count ($43$) and \emph{assumed} $5$\,fF/cell and $1.2$\,V.
+      \item \textbf{Missing:} the placed netlist's real capacitance extraction, the
+            silicon's actual voltage and process corner, and a representative workload.
+      \end{itemize}
+      The two assumed constants are the whole gap. Nothing here may be cited as a
+      measurement.
 \end{enumerate}
+
+\subsection{Closed, and when}
+
+\begin{plain}
+Items leave the list above only when something checkable makes them leave. Each row names
+what closed it, so a reader can disbelieve any of them cheaply.
+\end{plain}
+
+{\footnotesize
+\begin{center}
+\begin{tabular}{@{}p{5.7cm}p{1.4cm}p{7.0cm}@{}}
+\toprule
+\textbf{Was open} & \textbf{Closed} & \textbf{By what}\\
+\midrule
+Transpose construction verified only at $q=3$ & Pass 2792 &
+  Built over $\mathbb{F}_q$ and checked at $q=3,5,7,11,13,17,19,23$: $T^2=I$ and
+  $T^\top JT=-J$ at every one, and the congruence law at every one \\
+\cmd{w33\_spread\_mixer36.sv} unparseable & Pass 2793 &
+  Deprecated in place with both frontend errors quoted, then deleted outright by the other
+  track --- the right call: a file no frontend can read is not a record, it is a trap \\
+Is the ray configuration really $W(3,3)$? & Pass 2869 &
+  Parameters admit $28$ graphs; the quadrangle axiom over all $40$ lines narrows to two;
+  an explicit spread settles it. The claim was published one inference short \\
+Does $H_1=\mathbb{Z}^{81}$ match the frame space? & Pass 2883 &
+  \textbf{No.} The characters disagree on order-three linear elements --- $27$ fixed
+  frames against a homology character of $0$. Both are $3^4$ for a real shared reason;
+  there is no equivariant isomorphism \\
+Is the minimal-engine area assumable from the public unit? & Pass 2796 &
+  No, and it was not assumed. Synthesised and placed separately: $43$ cells, $208.86$\,MHz \\
+Is the two-copy rate $2/3$ specific to one branch? & Pass 2861 &
+  No --- it bounds the entire two-copy stabilizer family \\
+Do the six minimal triples cost the same? & Pass 2882 &
+  \textbf{No.} Diameters $19,20,22,22,22,23$. The choice is not free \\
+\bottomrule
+\end{tabular}
+\end{center}}
+
+\begin{plain}
+Two of those rows closed \emph{negatively} --- the homology does not match the frame space,
+and the six triples are not equivalent. Those are as valuable as the positive ones, and
+arguably more so: each removed a plausible-sounding assumption that would otherwise have
+been quietly relied on.
+\end{plain}
 
 \vspace{6mm}
 \begin{center}

@@ -1,0 +1,94 @@
+{
+  "pass_2882": {
+    "choice_is_free": false,
+    "distinct_diameters": [
+      19,
+      20,
+      22,
+      23
+    ],
+    "per_triple": {
+      "F_f + CX_pf + CX_fp": {
+        "diameter": 20,
+        "mean": 15.216323969288219,
+        "reached": 4199040,
+        "shell_size": 60
+      },
+      "F_f + S_p + CX_fp": {
+        "diameter": 22,
+        "mean": 15.896868331809175,
+        "reached": 4199040,
+        "shell_size": 2
+      },
+      "F_p + CX_pf + CX_fp": {
+        "diameter": 19,
+        "mean": 14.175585133744857,
+        "reached": 4199040,
+        "shell_size": 188
+      },
+      "F_p + F_f + CX_fp": {
+        "diameter": 22,
+        "mean": 16.078318615683585,
+        "reached": 4199040,
+        "shell_size": 20
+      },
+      "F_p + F_f + CX_pf": {
+        "diameter": 23,
+        "mean": 17.075570844764517,
+        "reached": 4199040,
+        "shell_size": 2
+      },
+      "F_p + S_f + CX_pf": {
+        "diameter": 22,
+        "mean": 16.118930279301935,
+        "reached": 4199040,
+        "shell_size": 2
+      }
+    }
+  },
+  "pass_2883": {
+    "equivariant_isomorphism_exists": false,
+    "frame_fixed_points_under_order3_linear": 27,
+    "homology_character_on_order3": 0,
+    "shared_reason": "both are 3^4 because the geometry is 4-dimensional over F_3"
+  },
+  "pass_2884": {
+    "count_matches_flagged_not_claimed": [
+      "15 = support shell",
+      "24 = |SL(2,3)|"
+    ],
+    "edges": 240,
+    "harmonic_dimension": 81,
+    "hodge_spectrum": {
+      "-0.0": 81,
+      "10.0": 24,
+      "16.0": 15,
+      "4.0": 120
+    },
+    "points": 40,
+    "sums_to_edge_count": true,
+    "triangles": 160
+  },
+  "pass_2885": {
+    "diameter": 19,
+    "distinct_linear_parts": 54,
+    "distinct_translations": 58,
+    "linear_part_orders": {
+      "10": 4,
+      "12": 22,
+      "18": 4,
+      "4": 4,
+      "5": 6,
+      "6": 2,
+      "8": 10,
+      "9": 2
+    },
+    "shell_size": 188,
+    "single_trace_class": false,
+    "traces_mod_3": {
+      "0": 16,
+      "1": 20,
+      "2": 18
+    }
+  }
+}

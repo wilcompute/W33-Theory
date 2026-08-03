@@ -1,0 +1,11 @@
+{
+  "conclusion": "no witness in a large random sample; not a proof either way",
+  "copies": 3,
+  "dimension": 64,
+  "pass": 2881,
+  "rank_is_not_the_obstruction": true,
+  "single_error_vectors": 9,
+  "singles_orthogonal_to_clean": true,
+  "trials": 30000,
+  "witnesses": 0
+}
