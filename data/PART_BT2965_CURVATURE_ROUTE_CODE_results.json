@@ -1,0 +1,35 @@
+{
+  "claim_boundary": "Exact permutation-fault coverage. Photon loss, detector erasure and coherent partial faults require the Pass 2963 channel model.",
+  "edge_positions_per_triangle": 3,
+  "fault_model": "one arbitrary nonidentity S4 permutation inserted on one edge of one spread triangle",
+  "fault_permutations": 23,
+  "minimum_universal_pilot_slots": 3,
+  "pilot_detection": {
+    "1": {
+      "detected": 6480,
+      "fault_cases": 8280,
+      "fraction": "18/23"
+    },
+    "2": {
+      "detected": 7920,
+      "fault_cases": 8280,
+      "fraction": "22/23"
+    },
+    "3": {
+      "detected": 8280,
+      "fault_cases": 8280,
+      "fraction": "1"
+    },
+    "4": {
+      "detected": 8280,
+      "fault_cases": 8280,
+      "fraction": "1"
+    }
+  },
+  "schema": "w33.pass2965.curvature_route_code.v1",
+  "status": "COMPLETE_EXACT",
+  "theorem": "Three distinct pilot slots determine an S4 route permutation; two pilots miss exactly the transposition of the other two slots.",
+  "three_pilot_detected": 8280,
+  "three_pilot_fault_cases": 8280,
+  "triangles": 120
+}
