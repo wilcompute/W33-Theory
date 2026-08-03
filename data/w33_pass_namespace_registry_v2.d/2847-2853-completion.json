@@ -1,0 +1,28 @@
+{
+  "schema": "w33.pass_completion.v1",
+  "range": "2847-2853",
+  "status": "complete_exact_remote_hardware_and_compile_pending",
+  "checks": 8,
+  "regressions": 6,
+  "exact_results": {
+    "fixed_trajectory_distance4_taps": 28,
+    "affine_square_distance4_samples": 24,
+    "word_digraph_automorphism_order": 32,
+    "selector_hypergraph_automorphism_order": 6912,
+    "adaptive_worst_case_operations": 4,
+    "adaptive_uniform_mean": "94/27",
+    "noisy_m36_critical_g": "(7-3*sqrt(5))/4",
+    "noisy_m36_critical_p": "(3-sqrt(5))/2"
+  },
+  "modelled_results": {
+    "asymmetric_ml_relative_error_reduction_range": [0.72, 0.7668539325842697],
+    "boundary": "synthetic independent support-bit channels; no laboratory calibration"
+  },
+  "pending_evidence": [
+    "remote Icarus simulation",
+    "Yosys synthesis",
+    "nextpnr HX8K placement and timing",
+    "three-manuscript Tectonic compile",
+    "monolithic blueprint and docs/index integration"
+  ]
+}
