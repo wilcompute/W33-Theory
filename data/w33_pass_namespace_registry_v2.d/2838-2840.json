@@ -1,0 +1,13 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "2838-2840",
+  "owner": "agent/pass2838-2840-blueprint-extension",
+  "status": "reserved",
+  "reserved_after": "Pass 2837 reservation frontier",
+  "reserved_at_utc": "2026-08-03T18:06:00Z",
+  "passes": {
+    "2838": "optimal seven-bit execution storage and three-code observer architecture",
+    "2839": "exact repeated-branch M36 purification cost exponent",
+    "2840": "idempotent blueprint extension, PDF compilation, and release closure"
+  }
+}
