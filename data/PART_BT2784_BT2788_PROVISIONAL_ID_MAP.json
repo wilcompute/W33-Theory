@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass2784_2788.provisional_id_map.v1",
+  "canonical_range": "2784-2788",
+  "reason": "Parallel work reserved Passes 2777-2783 while this packet was under construction. Source and RTL filenames retain their provisional build identifiers to preserve generated references; all claims, namespace records, aggregate certificates, manuscript promotions, workflow labels, and release metadata use the collision-free canonical identifiers.",
+  "mapping": {
+    "2784": {"provisional_id": "2777", "frontier": "M36 two-copy stabilizer-projection census"},
+    "2785": {"provisional_id": "2778", "frontier": "physical metaplectic interferometer"},
+    "2786": {"provisional_id": "2779", "frontier": "structured CX compiler"},
+    "2787": {"provisional_id": "2780", "frontier": "deterministic certificates, fold guard, and P&R"},
+    "2788": {"provisional_id": "2781", "frontier": "repeater-grade remote SUM"}
+  }
+}
