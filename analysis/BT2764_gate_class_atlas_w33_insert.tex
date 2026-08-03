@@ -1,0 +1,35 @@
+% Passes 2762-2764 -- host-independent exact W33 insert.
+\providecommand{\Sp}{\operatorname{Sp}}
+\section*{Transpose reversal, the controlled-add centralizer, and the complete gate atlas}
+In standard Pauli-frame coordinates the left--right transpose is an
+anti-symplectic involution,
+\[
+ T^2=I,\qquad T^{\mathsf T}JT=-J,
+\]
+and it reverses the controlled-add direction:
+\[
+ T\,\operatorname{CX}_{p\to f}\,T^{-1}=\operatorname{CX}_{f\to p}.
+\]
+The reverse direction nevertheless needs no additional entangling primitive, because
+\[
+ \operatorname{CX}_{f\to p}
+ =(F_pF_f^{-1})\operatorname{CX}_{p\to f}(F_p^{-1}F_f).
+\]
+The exact centralizer is determined constructively as
+\[
+ C_{\Sp(4,3)}(\operatorname{CX})\cong C_6\times C_3\times S_3.
+\]
+Its center has order eighteen, its derived subgroup has order three, and its
+\(S_3\) complement acts regularly on the six external fixed lines of the controlled-add
+fringe.  The projectively nontrivial central \(C_3\) rotates the two three-line pencils
+about their two distinguished points on the fixed axis.
+
+The complete exact atlas partitions all \(51{,}840\) elements of \(\Sp(4,3)\) into
+thirty-four conjugacy classes.  For each class it freezes a representative, class and
+centralizer orders, matrix order, trace, \(\operatorname{rank}(g-I)\), and cycle profiles
+on the forty points, forty lines, 160 flags, 240 collinearity edges, and 1620 apartments
+of \(W(3,3)\).  These five projective carriers give only fifteen distinct signatures.
+Consequently the exact class decoder is necessarily two-stage: the geometric signature
+selects a projective packet, after which the central-lift, inverse, and transpose metadata
+select the symplectic class.  This is an exact finite classification statement; no
+particle or physical gate content is inferred from a class label alone.

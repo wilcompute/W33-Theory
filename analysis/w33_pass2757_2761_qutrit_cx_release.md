@@ -63,21 +63,22 @@ of the symplectic form. The local Python suite passes 3/3. A focused GitHub Acti
 workflow installs Icarus Verilog and reruns both the exact certificate and RTL simulation.
 Remote CI is future evidence until observed.
 
-## Pass 2761 — manuscript promotion and evidence firewall
+## Pass 2761 — manuscript promotion and corrected evidence boundary
 
-The Holonet wrapper now reaches a host-independent theorem insert. It records the exact
-gate, fixed geometry, conjugacy split, Bell-qutrit preparation, and
+The Holonet wrapper reaches a host-independent theorem insert. It records the exact gate,
+fixed geometry, conjugacy split, Bell-qutrit preparation, and
 
 \[
 \langle F_p,F_f,S_p,S_f,\operatorname{CX}_{p\to f}\rangle
 =\operatorname{Sp}(4,3).
 \]
 
-The insert also states the physical boundary: exact controller RTL and symplectic logic do
-not constitute a measured deterministic photonic qutrit SUM gate. Published photonic
-work supports electro-optic qutrit tritters, arbitrary high-dimensional time-bin state
-preparation/measurement, and time-bin qubit entangling gates; the platform-specific qutrit
-SUM loss/fidelity budget remains open.
+The original release said no measured deterministic photonic qutrit SUM existed. Pass
+2765 corrects that statement: Imany *et al.*, *npj Quantum Information* **5**, 59
+(2019), experimentally implemented the same modulo-SUM truth table inside one photon,
+using frequency as control and time as target, with qutrit computational-basis fidelity
+\(0.92\pm0.01\). The remaining physical boundary is implementation-specific loss and
+full process engineering, plus the separate protected \(M_{36}\) magic pipeline.
 
 ## Evidence
 

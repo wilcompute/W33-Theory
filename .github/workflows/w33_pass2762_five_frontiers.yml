@@ -1,0 +1,51 @@
+name: Passes 2762-2766 Five Frontiers
+on:
+  push:
+    paths:
+      - 'analysis/bt2762_five_frontiers.py'
+      - 'analysis/BT2762_BT2766_five_frontiers.md'
+      - 'analysis/BT2764_gate_class_atlas_w33_insert.tex'
+      - 'analysis/BT2766_five_frontiers_holonet_insert.tex'
+      - 'data/PART_BT2762_BT2766_FIVE_FRONTIERS_results.json'
+      - 'data/PART_BT2764_SP43_GEOMETRIC_GATE_CLASS_ATLAS.json.gz'
+      - 'rtl/w33_pass2762_holonet_isa.sv'
+      - 'rtl/tb_w33_pass2762_holonet_isa.sv'
+      - 'tests/test_bt2762_five_frontiers.py'
+      - '.github/workflows/w33_pass2762_five_frontiers.yml'
+  pull_request:
+    paths:
+      - 'analysis/bt2762_five_frontiers.py'
+      - 'data/PART_BT2762_BT2766_FIVE_FRONTIERS_results.json'
+      - 'data/PART_BT2764_SP43_GEOMETRIC_GATE_CLASS_ATLAS.json.gz'
+      - 'rtl/w33_pass2762_holonet_isa.sv'
+      - 'rtl/tb_w33_pass2762_holonet_isa.sv'
+      - 'tests/test_bt2762_five_frontiers.py'
+jobs:
+  exact-five-frontiers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact-test tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog
+          python -m pip install pytest
+      - name: Rebuild exact certificates
+        run: python analysis/bt2762_five_frontiers.py
+      - name: Fail on certificate drift
+        run: |
+          git diff --exit-code -- \
+            data/PART_BT2762_BT2766_FIVE_FRONTIERS_results.json \
+            data/PART_BT2764_SP43_GEOMETRIC_GATE_CLASS_ATLAS.json.gz
+      - name: Run focused Python regressions
+        run: pytest -q tests/test_bt2762_five_frontiers.py
+      - name: Exhaustive RTL simulation
+        run: |
+          iverilog -g2012 -s tb_w33_pass2762_holonet_isa \
+            -o /tmp/w33_pass2762.vvp \
+            rtl/w33_pass2762_holonet_isa.sv \
+            rtl/tb_w33_pass2762_holonet_isa.sv
+          vvp /tmp/w33_pass2762.vvp
