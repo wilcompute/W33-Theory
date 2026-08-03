@@ -1,0 +1,23 @@
+{
+  "schema": "w33.pass2849.observer_symmetry.v1",
+  "distance4_word_digraph": {
+    "vertices": 8,
+    "edges": [[0,5],[0,6],[1,2],[1,3],[4,5],[4,6],[7,2],[7,3]],
+    "automorphism_order": 32,
+    "vertex_orbits": [[0,1,4,7],[2,3,5,6]],
+    "edge_orbits": 1,
+    "structure": "(S2 x S2)^2 semidirect S2",
+    "components": "two directed K2,2"
+  },
+  "fast_selector_hypergraph": {
+    "blocks": 48,
+    "block_size": 8,
+    "mandatory_vertices": [1,2,21,25,26],
+    "optional_degree16_orbit": [0,4,9],
+    "optional_degree12_orbit": [5,8,12,13,16,17,20,24],
+    "zero_codegree_components": [[5,8,12,17],[13,16,20,24]],
+    "automorphism_order": 6912,
+    "structure": "S3 x (S4 wreath S2)",
+    "block_orbits": 1
+  }
+}
