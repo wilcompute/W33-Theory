@@ -1,16 +1,9 @@
 {
   "range": "2840-2846",
   "owner": "tetrahedral-symmetry-harmonic-quantum-track",
-  "status": "RESERVED",
+  "status": "SUPERSEDED_BEFORE_EXECUTION",
   "reserved_at": "2026-08-03T18:02:00Z",
-  "scope": {
-    "2840": "signed-monomial polarization groupoid and fixed-form obstruction",
-    "2841": "Boolean/S4 harmonic and Terwilliger identification of the 15-state shell",
-    "2842": "measured seven-bit codec silicon comparison",
-    "2843": "selector-tomotope fused runtime and formal equivalence",
-    "2844": "quantum-channel support coarse-graining classification",
-    "2845": "outside-box q-Hadamard butterfly transform",
-    "2846": "outside-box exact support Green function and first-passage atlas"
-  },
-  "claim_boundary": "Reservation only; no theorem is promoted until exact witnesses and tests are committed."
+  "superseded_by": "2854-2860",
+  "reason": "A later parallel reservation overlapped Pass 2840. This track moved intact to the first uncontested seven-pass block beyond 2847-2853; no theorem or artifact was published under 2840-2846.",
+  "claim_boundary": "Namespace migration only; this range contains no promoted result from this track."
 }
