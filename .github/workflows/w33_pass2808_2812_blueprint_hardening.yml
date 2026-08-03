@@ -8,6 +8,7 @@ on:
       - holonet_machine_blueprint.tex
       - analysis/BT2808_BT2812_blueprint_evidence_insert.tex
       - analysis/bt2808_2812_blueprint_truth_gate.py
+      - analysis/bt2810_m36_distillation_operating_curve.py
       - analysis/BT2808_BT2812_blueprint_hardening.md
       - tests/test_bt2808_2812_blueprint_truth_gate.py
       - data/w33_pass_namespace_registry_v2.d/2808-2812.json
@@ -19,6 +20,7 @@ on:
       - holonet_machine_blueprint.tex
       - analysis/BT2808_BT2812_blueprint_evidence_insert.tex
       - analysis/bt2808_2812_blueprint_truth_gate.py
+      - analysis/bt2810_m36_distillation_operating_curve.py
       - analysis/BT2808_BT2812_blueprint_hardening.md
       - tests/test_bt2808_2812_blueprint_truth_gate.py
       - data/w33_pass_namespace_registry_v2.d/2808-2812.json
@@ -50,6 +52,9 @@ jobs:
 
       - name: Install focused test dependency
         run: python -m pip install pytest
+
+      - name: Rebuild exact M36 operating curve
+        run: python analysis/bt2810_m36_distillation_operating_curve.py
 
       - name: Apply idempotent blueprint migration
         run: python analysis/bt2808_2812_blueprint_truth_gate.py --write
@@ -91,9 +96,10 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add holonet_machine_blueprint.tex
           git add data/PART_BT2808_BT2812_BLUEPRINT_HARDENING_results.json
+          git add data/PART_BT2810_M36_DISTILLATION_OPERATING_CURVE_results.json
           git add -f holonet_machine_blueprint.pdf
           if git diff --cached --quiet; then
-            echo "Blueprint source, certificate, and PDF are already frozen."
+            echo "Blueprint source, exact certificates, and PDF are already frozen."
           else
             git commit -m "Passes 2808-2812: freeze hardened Holonet blueprint"
             git push origin "HEAD:${TARGET_BRANCH}"
@@ -108,3 +114,4 @@ jobs:
             holonet_machine_blueprint.pdf
             holonet_machine_blueprint.log
             data/PART_BT2808_BT2812_BLUEPRINT_HARDENING_results.json
+            data/PART_BT2810_M36_DISTILLATION_OPERATING_CURVE_results.json
