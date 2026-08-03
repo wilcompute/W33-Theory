@@ -1,0 +1,98 @@
+{
+  "all_checks_pass": true,
+  "basis_gate": "|p,f> -> |p,f+p mod 3>",
+  "bell_qutrit": {
+    "preparation": "CX (F3 tensor I) |00>",
+    "reduced_density": "I_3/3",
+    "schmidt_rank": 3,
+    "support": [[0, 0], [1, 1], [2, 2]]
+  },
+  "certificate_sha256": "c3b10f39320fe8941a73bbe2f513e077aca4c6096d16319fc226343d76e8026e",
+  "check_count": 24,
+  "checks": {
+    "all_81_pauli_frames_match_symplectic_matrix": true,
+    "bell_qutrit_support": true,
+    "bell_reduced_density_is_I_over_3": true,
+    "computational_basis_bijection": true,
+    "computational_gate_order_3": true,
+    "cx_centralizer_order_108": true,
+    "cx_conjugacy_class_size_480": true,
+    "each_line_profile_bucket_is_one_conjugacy_class": true,
+    "fixed_line_profile_axis_plus_six": true,
+    "fixed_points_form_one_isotropic_line": true,
+    "fixed_vector_space_dimension_2": true,
+    "four_points_per_line": true,
+    "full_sp4_3_closure_51840": true,
+    "image_equals_fixed_lagrangian_line": true,
+    "matrix_order_3": true,
+    "nilpotent_square_zero": true,
+    "point_cycle_profile_1^4_3^12": true,
+    "six_external_fixed_lines_form_two_three_line_pencils": true,
+    "six_fixed_edges_are_exactly_axis_K4": true,
+    "symplectic_identity": true,
+    "two_rank2_square_zero_unipotent_classes": true,
+    "w33_edge_count_240": true,
+    "w33_line_count_40": true,
+    "w33_point_count_40": true
+  },
+  "field": "F3",
+  "fixed_vector_dimension": 2,
+  "generator_closure": {
+    "generators": ["F_p", "F_f", "S_p", "S_f", "CX_p_to_f"],
+    "group": "Sp(4,3)",
+    "order": 51840
+  },
+  "jordan_type": "2+2",
+  "matrix_order": 3,
+  "nilpotent_index_of_M_minus_I": 2,
+  "pauli_coordinates": ["x_p", "z_p", "x_f", "z_f"],
+  "rank_of_M_minus_I": 2,
+  "scope": {
+    "not_proved": "a deterministic physical two-qutrit photonic gate with a particular loss/fidelity budget",
+    "proved": "exact gate, Pauli-frame action, W33 permutation action, Bell preparation, symplectic closure"
+  },
+  "symplectic_matrix": [[1,0,0,0],[0,1,0,2],[1,0,1,0],[0,0,0,1]],
+  "terminology": "rank-two symplectic Lagrangian unipotent (not a rank-one transvection)",
+  "title": "Qutrit controlled-add / W33 Lagrangian-unipotent certificate",
+  "unipotent_class_resolution": {
+    "classes": [
+      {
+        "centralizer_order": 216,
+        "conjugacy_class_size": 240,
+        "element_count": 240,
+        "line_cycle_profile": {"1": 1, "3": 13}
+      },
+      {
+        "centralizer_order": 108,
+        "conjugacy_class_size": 480,
+        "element_count": 480,
+        "line_cycle_profile": {"1": 7, "3": 11}
+      }
+    ],
+    "cx_centralizer_order": 108,
+    "cx_class_size": 480,
+    "cx_identifier": "line cycle profile 1^7 3^11",
+    "family": "order 3, rank(M-I)=2, (M-I)^2=0",
+    "lesson": "Jordan type 2+2 is insufficient; W33 line action resolves the two Sp(4,3) classes",
+    "total_elements": 720
+  },
+  "w33": {
+    "edge_cycle_profile": {"1": 6, "3": 78},
+    "edges": 240,
+    "fixed_line_structure": {
+      "axis_plus_external": "1 + 6",
+      "external_pencils_on_axis": [3, 3],
+      "fixed_edges": 6,
+      "fixed_edges_are_axis_K4": true,
+      "fixed_lines": 7
+    },
+    "fixed_points": [[0,0,1,0],[0,1,0,0],[0,1,1,0],[0,1,2,0]],
+    "fixed_points_are_one_isotropic_line": true,
+    "flag_cycle_profile": {"1": 10, "3": 50},
+    "flags": 160,
+    "line_cycle_profile": {"1": 7, "3": 11},
+    "lines": 40,
+    "point_cycle_profile": {"1": 4, "3": 12},
+    "points": 40
+  }
+}

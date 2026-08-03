@@ -1,0 +1,20 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.supplement",
+  "status": "ACTIVE",
+  "canonical_blocks": [
+    {
+      "range": "2757-2761",
+      "owner": "qutrit-cx-w33-lagrangian-unipotent-track",
+      "status": "COMPLETE_LOCAL_EXACT_REMOTE_PENDING",
+      "artifacts": {
+        "2757": "exact qutrit controlled-add computational and Pauli-frame verifier",
+        "2758": "fixed W33 Lagrangian line and point/line/flag/edge cycle profiles",
+        "2759": "complete rank-two square-zero unipotent class split and CX centralizer",
+        "2760": "synthesizable data/frame RTL, exhaustive testbench, tests, and CI",
+        "2761": "Holonet theorem insert, wrapper promotion, and physical evidence firewall"
+      },
+      "certificate_sha256": "c3b10f39320fe8941a73bbe2f513e077aca4c6096d16319fc226343d76e8026e",
+      "runtime_boundary": "All exact Python checks and focused regressions completed locally; the standalone TeX insert compiled locally. The RTL workflow is independent remote evidence and is not counted as successful until observed."
+    }
+  ]
+}
