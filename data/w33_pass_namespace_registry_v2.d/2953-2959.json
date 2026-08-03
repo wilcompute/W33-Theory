@@ -1,0 +1,17 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "2953-2959",
+  "owner": "agent/pass2953-2959-seven-front-closure",
+  "status": "reserved",
+  "reserved_after": "parallel reservation frontier through Pass 2952",
+  "passes": {
+    "2953": "exact conjugacy-class closure of the 188 directed-diameter-19 ASp(4,3) elements",
+    "2954": "minimal antiunitary-chirality discriminator circuit and synthesizable RTL for the two middle M36 classes",
+    "2955": "Bayes-optimal noisy adaptive support-observer policy under asymmetric observation and operation costs",
+    "2956": "most-complete feasible three-copy M36 stabilizer-projector first-order and yield search",
+    "2957": "observed rank7 versus arithmetic frame-engine synthesis/place-and-route verdict with role decision",
+    "2958": "BONKERS: test whether diameter-19 conjugacy classes are dual to observer/code cosets or Hodge eigenspaces",
+    "2959": "BONKERS: search for a reversible phase-chirality observer that fuses diagnostic transcript, compiler state, and magic-class selection"
+  },
+  "claim_boundary": "Reservation only. Conjugacy, hardware, Bayesian, three-copy, thermodynamic and manuscript statements remain separately typed until executable evidence exists."
+}
