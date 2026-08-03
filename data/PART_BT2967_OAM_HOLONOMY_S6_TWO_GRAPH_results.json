@@ -1,0 +1,50 @@
+{
+  "check_count": 10,
+  "checks": {
+    "all_36_spreads_enumerated": true,
+    "all_spread_curvatures_are_the_same_s6_two_graph": true,
+    "canonical_switching_representative_is_petersen": true,
+    "curvature_is_invariant_under_all_1024_vertex_sign_gauges": true,
+    "every_spread_has_60_transposition_and_60_double_transposition_triangles": true,
+    "explicit_s6_degree10_action_preserves_curvature_blocks": true,
+    "odd_holonomies_form_2_10_3_4_design_on_every_spread": true,
+    "tetrahedral_bianchi_identity_on_every_spread": true,
+    "two_graph_automorphism_group_order_720": true,
+    "w33_40_points_40_lines": true
+  },
+  "claim_boundary": "Exact for the finite routing permutations. This is a discrete parity connection, not a measured optical Berry phase or a continuum gauge field.",
+  "classification": {
+    "automorphism_group": "PΣL(2,9) ≅ S6",
+    "automorphism_group_order": 720,
+    "degree10_model": "S6 acting on the ten unordered 3+3 partitions of a six-set",
+    "s6_triple_orbits": [60, 60],
+    "switching_class_contains": "Petersen graph"
+  },
+  "gauge_field": {
+    "bianchi": "delta^2=0 on every one of the 210 tetrahedra",
+    "connection": "sign of each S4 inter-line transport permutation",
+    "curvature": "triangle coboundary of the edge-sign 1-cochain",
+    "gauge_group_seen_by_parity": "C2^10 / diagonal C2"
+  },
+  "headline": "The 10x4 OAM spread router carries a spread-independent Z2 curvature: its 60 odd triangle holonomies are the exceptional 10-point S6 two-graph, with the Petersen graph as a switching representative and an exact tetrahedral Bianchi identity.",
+  "odd_curvature_design": {
+    "pair_replication": 4,
+    "parameters": "2-(10,3,4)",
+    "point_replication": 18,
+    "two_graph_axiom": "Every four-mode tetrahedron contains an even number of odd-curvature faces."
+  },
+  "raw_slot_gauge_representative_histogram": [
+    {"degree_multiset": [3,3,3,3,3,3,3,3,3,3], "edge_count": 15, "is_petersen": true, "spread_count": 6},
+    {"degree_multiset": [1,3,3,3,3,5,5,5,5,5], "edge_count": 19, "is_petersen": false, "spread_count": 18},
+    {"degree_multiset": [3,5,5,5,5,5,5,7,7,7], "edge_count": 27, "is_petersen": false, "spread_count": 12}
+  ],
+  "schema": "w33.pass2967.oam_holonomy_s6_two_graph.v1",
+  "spreads": 36,
+  "status": "COMPLETE_EXACT_FINITE_GAUGE_CLASSIFICATION",
+  "triangle_holonomy": {
+    "double_transpositions": 60,
+    "even_curvature_blocks": 60,
+    "odd_curvature_blocks": 60,
+    "transpositions": 60
+  }
+}
