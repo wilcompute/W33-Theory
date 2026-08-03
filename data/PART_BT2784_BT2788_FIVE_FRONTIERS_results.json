@@ -1,0 +1,43 @@
+{
+  "artifact_sha256": {
+    "PART_BT2767_M36_PREPARATION_ROM.json": "710e27752ca45be7fb142b2331ef354aa416084a0fd4856bebe7cecb10fbed0b",
+    "PART_BT2777_M36_4_2_STABILIZER_CENSUS_summary.json": "642a7303952d163d5ed054e71d638ccbdbc3af330e362c4b321a188e3e8bccca",
+    "PART_BT2778_METAPLECTIC_INTERFEROMETER_summary.json": "f2407b057c89b6b4b2bae04fa48a98f5b7bb2e5e96a192a6b547681213cab5f1",
+    "PART_BT2779_STRUCTURED_CX_COMPILER_summary.json": "092060de22d85d2fb8e7d9c69a5b8f7821caeb0f89de0bf59f94b0f6e8ee254b",
+    "PART_BT2781_REPEATER_REMOTE_SUM_summary.json": "a9eb4bb63cf62692af644d1f49e9d56a50f6a97f1e711049a8ba123212f973b8"
+  },
+  "boundaries": {
+    "compiler": "exact matrix accumulator remains upstream input",
+    "distillation": "complete only for identical two-copy binary [[4,2]] stabilizer projections",
+    "hardware": "Icarus/Yosys/nextpnr evidence must be observed remotely",
+    "repeater": "exact Bell-diagonal recurrences plus engineering scenarios, not measured end-to-end hardware",
+    "sensor": "shot budget assumes independent phase-stable path measurements and calibrated determinant"
+  },
+  "canonical_pass_range": "2784-2788",
+  "check_count": 20,
+  "checks": {
+    "compiler_all_rewrites": true,
+    "compiler_compression_gt_40": true,
+    "compiler_group_51840": true,
+    "compiler_pairs_40x12": true,
+    "compiler_suffixes_108": true,
+    "distill_branches_21420": true,
+    "distill_codes_5355": true,
+    "distill_no_improving_deep": true,
+    "distill_no_improving_mid": true,
+    "distill_no_improving_shallow": true,
+    "repeater_1280_distillable": true,
+    "repeater_1280_segmented": true,
+    "repeater_fixed_points": true,
+    "repeater_improvement_region": true,
+    "repeater_remote_rate_positive": true,
+    "rom_deterministic_schema": true,
+    "sensor_classes_34": true,
+    "sensor_four_quadrature_budget": true,
+    "sensor_min_trace_one_ninth": true,
+    "sensor_trace_pairs_33": true
+  },
+  "provisional_artifact_ids": {"2777": "2784", "2778": "2785", "2779": "2786", "2780": "2787", "2781": "2788"},
+  "schema": "w33.pass2784_2788.five_frontiers.v1",
+  "status": "COMPLETE_LOCAL_EXACT_REMOTE_HARDWARE_PENDING"
+}
