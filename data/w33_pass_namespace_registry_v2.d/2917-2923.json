@@ -1,0 +1,26 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "2917-2923",
+  "owner": "agent/pass2917-2923-seven-front-breakthrough",
+  "status": "reserved_with_local_evidence",
+  "reserved_after": "parallel reservation frontier through Pass 2916",
+  "reserved_at_utc": "2026-08-03T19:24:00Z",
+  "supersedes_overlapped_reservation": "2887-2893",
+  "passes": {
+    "2917": "seven-bit rank-coded frame engine RTL and observed comparison against the 43-LC arithmetic engine",
+    "2918": "exact first-order M36 branch census plus mixture and adaptive-selection theorem",
+    "2919": "antiunitary chirality invariant separating the two middle 12-ray Clifford classes",
+    "2920": "noise-aware adaptive support observer and representation-dependent thermodynamic decision cost",
+    "2921": "current-master blueprint correction, structural rewrite, PDF compilation, and release reconciliation",
+    "2922": "outside-box falsifier: classical-line stabilizer suborbits versus the four magic classes",
+    "2923": "outside-box algebraic classification of the 188 diameter-19 compiler elements"
+  },
+  "local_evidence": {
+    "2917": "6/6 transition-model checks; 324 transitions; remote synthesis pending",
+    "2918": "exhaustive 5355-code first-order census complete; global minimum slope 2/3",
+    "2919": "8/8 antiunitary-chirality checks",
+    "2920": "exact entropy accounting and exact finite-channel adaptive evaluation complete",
+    "2922": "full PGSp/anti-symplectic line-stabilizer action enumerated",
+    "2923": "full 4,199,040-element directed BFS and 188-element shell census complete"
+  }
+}
