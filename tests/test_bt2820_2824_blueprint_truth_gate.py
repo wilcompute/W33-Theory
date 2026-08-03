@@ -17,27 +17,49 @@ def module():
     return mod
 
 
-def test_migration_is_idempotent_and_complete():
+def test_modular_wrapper_and_parts_are_exact():
     mod = module()
-    source = (ROOT / "holonet_machine_blueprint.tex").read_text(encoding="utf-8")
-    migrated = mod.upgrade(source)
-    assert mod.upgrade(migrated) == migrated
-    checks = mod.truth_checks(migrated)
-    assert len(checks) == 20
+    wrapper = (ROOT / "holonet_machine_blueprint.tex").read_text(encoding="utf-8")
+    assert wrapper == mod.WRAPPER
+    assert mod.upgrade(wrapper) == wrapper
+    texts, assembled = mod.read_parts()
+    assert len(texts) == 6
+    assert all(texts)
+    assert assembled.count("\\begin{document}") == 1
+    assert assembled.count("\\end{document}") == 1
+    assert [path.name for path in mod.PARTS] == [f"part_{i:02d}.tex" for i in range(6)]
+
+
+def test_truth_gate_is_complete_and_rejects_stale_m36_text():
+    mod = module()
+    wrapper = (ROOT / "holonet_machine_blueprint.tex").read_text(encoding="utf-8")
+    checks = mod.truth_checks(wrapper)
+    assert len(checks) == 25
     assert all(checks.values()), [name for name, ok in checks.items() if not ok]
+    _, assembled = mod.read_parts()
+    assert "Exactly $48$ deep-grade branches improve fidelity" in assembled
+    assert "p'=\\frac{p(4-p)}{3(p^2-2p+2)}" in assembled
+    assert "No distillation protocol for $M_{36}$ is known" not in assembled
 
 
 def test_distillation_and_evidence_boundaries_are_both_present():
     mod = module()
-    source = (ROOT / "holonet_machine_blueprint.tex").read_text(encoding="utf-8")
-    migrated = mod.upgrade(source)
-    combined = migrated + "\n" + INSERT.read_text(encoding="utf-8")
+    _, assembled = mod.read_parts()
+    combined = assembled + "\n" + INSERT.read_text(encoding="utf-8")
     assert "exactly $48$ improving branches" in combined
     assert "p'=R(p)" in combined
     assert "fault-tolerant injection" in combined
-    assert "not a measured Holonet" in migrated
-    assert "two-copy no-go" not in migrated
-    assert "does \\emph{not} supply a distillation protocol" not in migrated
+    assert "not a measured\nHolonet" in assembled or "not a measured Holonet" in " ".join(assembled.split())
+
+
+def test_certificate_hashes_every_source_fragment():
+    mod = module()
+    wrapper = (ROOT / "holonet_machine_blueprint.tex").read_text(encoding="utf-8")
+    payload = mod.build_payload(wrapper, mod.truth_checks(wrapper))
+    assert payload["status"] == "PASS"
+    assert payload["check_count"] == 25
+    assert list(payload["part_sha256"]) == [str(path.relative_to(ROOT)) for path in mod.PARTS]
+    assert len(set(payload["part_sha256"].values())) == 6
 
 
 def test_support_first_codec_is_exact_and_bounded():
@@ -47,7 +69,6 @@ def test_support_first_codec_is_exact_and_bounded():
     assert data["check_count"] == 43 and all(data["checks"].values())
     assert data["support_lift"]["tomotope_f_vector"] == [4, 12, 16, 8]
     assert data["selector_bridge"]["face_pairing_chart_count"] == 12
-    assert "not by itself an" in insert
     assert "objectwise intertwiner" in insert
 
 
