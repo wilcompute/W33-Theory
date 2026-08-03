@@ -1,0 +1,197 @@
+# Passes 2854–2860 — polarization groupoid, Boolean harmonics, exact coarse graining, and two outside-box closures
+
+## Executive result
+
+This packet executes all five continuations left open by Passes 2809–2815 and follows two evolving outside-box directions until they close exactly.
+
+1. The requested full signed-monomial `S4` lift has a precise obstruction: a fixed symplectic polarization admits only the matching stabilizer `D8`. Full `S4` lifts exactly as a three-object polarization groupoid with 288 projective and 576 affine arrows.
+2. The fifteen nonempty supports are the punctured Boolean permutation module `4[4] + 3[31] + [22]`; the full four-cube Terwilliger algebra has dimension 35 and Wedderburn type `M5(C) + M3(C) + M1(C)`.
+3. The seven-bit frame codec is exhaustively lossless and information-optimal. It saves one state bit relative to raw four-trit packing. A registered benchmark top and dedicated FPGA workflow now isolate its actual storage/logic cost; no new LC or timing number is promoted before CI observes it.
+4. A seven-bit typed runtime word fuses the twelve Type-A selector sheets with the eight parity-coded tomotope cells, giving exactly 96 valid control states.
+5. Quantum support coarse graining is classified exactly for the computational-basis support conditional expectation: support-descending deterministic affine Clifford maps are precisely the 384 signed monomial linear maps with zero translation, while Weyl-noise channels descend exactly when the X-displacement marginal is constant on each of the sixteen support fibers.
+6. The universal support quotient is a rank-one border correction of a punctured four-fold `q`-Hadamard involution and therefore has a 32-butterfly implementation.
+7. The support random walk has a closed Green function. At `q=3`, all 210 directed mean first-passage times take only thirteen values, from `9/2` to `42`.
+
+The aggregate release contains **68 exact checks** and **7 focused regression tests**.
+
+## Reconciliation with the live repository
+
+The release was based on the live master after absorbing the complete Passes 2825–2829 support-observer track and the Passes 2796–2802 hardware correction packet. In particular:
+
+- support is already known to be a finite-delay observer rather than an execution quotient: adaptive refinement is `16 -> 40 -> 78 -> 81`, fixed-word observability index is six, and eight support taps are minimal;
+- the measured same-harness hardware baselines remain the four-operation engine at `43 LC / 72.40 MHz` and the public six-operation unit at `72 LC / 60.80 MHz`;
+- Passes 2830–2837 were reserved by a parallel glue track, so this packet uses the disjoint namespace 2854–2860.
+
+Repository-wide searches were run under alternate terms including signed monomial, similitude, polarization, Boolean harmonic, Walsh/Hadamard, Terwilliger, conditional expectation, lumpability, observer, selector sheet, parity controller, Green function, and hitting time. GitHub code search still misses known files intermittently, so novelty statements are bounded by the retrieved corpus and exact predecessor audit.
+
+## Pass 2854 — the full symmetry is a polarization groupoid
+
+Let the three objects be the three perfect matchings of four coordinates, each defining a canonical alternating form. For one fixed form, exhaustive signed-monomial enumeration gives:
+
+```text
+coordinate-permutation projection:  D8, order 8
+projective signed-monomial isotropy: order 32
+affine signed-monomial isotropy:     order 64
+```
+
+Thus the requested fixed-form `S4` action does not exist. This is an exact obstruction, not a failed search.
+
+Across all three polarizations, however, every coordinate permutation lifts between the appropriate source and target forms. Every projective hom-set has order 32, giving
+
+```text
+3 objects
+288 projective arrows
+576 affine arrows
+multiplier profile: lambda=1 on 288 arrows, lambda=2 on 288 arrows
+```
+
+Composition closes exactly and every projective arrow preserves the zero/nonzero symplectic relation. Full `S4` is therefore present as a signed-monomial **polarization groupoid**.
+
+**Boundary.** This does not make the existing lexicographically ordered residual-channel selector an `S4`-equivariant atlas. Transporting that stronger object requires an intrinsic channel gauge rather than the checked-in lex order.
+
+## Pass 2855 — Boolean harmonics and the Terwilliger algebra
+
+The character of `S4` on the fifteen nonempty subsets, in cycle-type order `1^4, 2·1^2, 2^2, 3·1, 4`, is
+
+```text
+15, 7, 3, 3, 1.
+```
+
+Its exact decomposition is
+
+```text
+C[P([4]) \ {empty}] = 4[4] + 3[31] + [22].
+```
+
+By rank level:
+
+```text
+weight 1: [4] + [31]
+weight 2: [4] + [31] + [22]
+weight 3: [4] + [31]
+weight 4: [4]
+```
+
+Restriction to the matching stabilizer reproduces the earlier result exactly:
+
+```text
+5A1 + 3B1 + B2 + 3E.
+```
+
+For the full sixteen-state Boolean cube, the algebra generated by cube adjacency and dual adjacency has exact dimension `35`. Its irreducible strings have dimensions and multiplicities
+
+```text
+endpoint 0: dimension 5, multiplicity 1
+endpoint 1: dimension 3, multiplicity 3
+endpoint 2: dimension 1, multiplicity 2
+```
+
+so the standard module dimension is `5 + 3*3 + 1*2 = 16`, while the generated algebra has Wedderburn dimension `5^2 + 3^2 + 1^2 = 35`.
+
+**Boundary.** The underlying support module is `S4`-equivariant. A quotient operator tied to one matching is only `D8`-equivariant; its `1+9+5` eigenspaces are not individually promoted as `S4` modules.
+
+## Pass 2856 — codec benchmark against measured silicon baselines
+
+The codec theorem is exhaustive:
+
+```text
+81 affine states      <-> codes 0..80 in 7 bits
+40 projective classes <-> addresses 0..39 in 6 bits
+```
+
+All 81 affine states round-trip exactly. Seven and six bits meet the information lower bounds. Relative to the ordinary eight-bit packing of four two-bit trits, the stored affine state saves one bit, or `12.5%`.
+
+The live repository already owns two same-harness measurements:
+
+| design | logic cells | pins | Fmax |
+|---|---:|---:|---:|
+| four-operation minimal engine | 43 | 22 | 72.40 MHz |
+| six-operation public unit | 72 | 26 | 60.80 MHz |
+
+This release adds `rtl/w33_pass2856_codec_benchmark_top.sv`, which registers the seven-bit code and continuously decodes it, plus an exhaustive 81-state simulation. The dedicated workflow performs Icarus simulation, Yosys synthesis, HX8K placement and timing.
+
+**Boundary.** The one-bit storage saving is exact. The benchmark's new LC, Fmax and power figures remain pending until the remote workflow is observed; they are not inferred from the existing 43/72-LC measurements.
+
+## Pass 2857 — selector–tomotope fused runtime
+
+One typed control word
+
+```text
+face[1:0] + matching[1:0] + phase[2:0]
+```
+
+indexes four tetrahedral faces, three perfect-matching/Fano channels, and eight full-support phase classes. There are exactly `4 * 3 * 8 = 96` valid tokens. The sheet identifier is `3*face + matching`. Even phase parity selects one of the four tetrahedral cells through the `[3,2,2]` codewords; odd phase parity selects one of the four hemioctahedral cells through the unique minority coordinate. Every sheet reaches all four cells of both types.
+
+The RTL is `rtl/w33_pass2857_selector_tomotope_fusion.sv`; its testbench exhausts all 128 raw encodings and verifies the 96 valid ones.
+
+**Boundary.** The token count equals `|Aut(tomotope)|=96`, but this packet proves a typed bijection, not a regular group action on those tokens.
+
+## Pass 2858 — exact quantum support coarse graining
+
+Use the conditional expectation onto observables constant on the sixteen computational-basis support blocks of `F_3^4`.
+
+### Deterministic affine gates
+
+Among the eighty nonzero linear forms over `F_3^4`, only the eight scalar coordinate projections have zero/nonzero output determined solely by input support. Consequently, the invertible support-descending linear maps are exactly the signed monomial matrices: `2^4 * 4! = 384`.
+
+Exhausting all 384 linear maps and all 81 translations shows that only zero translation descends. Therefore there are exactly 384 support-descending affine bijections. This gives a sharp execution boundary: Fourier-like coordinate swaps descend; `CX` mixing and nonzero affine translations generally do not.
+
+### Weyl-noise channels
+
+For the 81 X-displacement probabilities, exact support lumpability produces 1040 linear equations of rank 65, hence a 16-dimensional solution space. The sixteen support-fiber indicators form a rank-16 basis and satisfy every equation.
+
+Therefore an X-displacement channel descends exactly when its displacement marginal is constant on each support fiber—equivalently, invariant under independent sign flips of nonzero coordinates. The Z-phase marginal is arbitrary for support observables.
+
+**Boundary.** This classifies the computational-basis support conditional expectation. It does not preserve or reconstruct coherences within or between support blocks.
+
+## Pass 2859 — outside-box I: a `q`-Hadamard butterfly
+
+Define `L_q = [[1, q-1], [1, -1]]`. Symbolically, `L_q^2 = q I_2`. With `P_tau` the coordinate-matching permutation, define `H_q = P_tau L_q^(tensor 4)`. The exact global identities are
+
+```text
+H_q^2 = q^4 I_16,
+trace(H_q) = 4q^2,
+spec(H_q) = (+q^2)^10 + (-q^2)^6.
+```
+
+For nonempty supports,
+
+```text
+Q_ST + delta_ST = q^(-1) ((q-1)^(|T|-1) + H_ST).
+```
+
+Thus the universal support quotient is a rank-one border correction of a punctured four-fold `q`-Hadamard involution. It can be evaluated by four stages of eight local butterflies—**32 butterflies total**—rather than a dense `15 x 15` multiply.
+
+**Boundary.** This is an exact finite transform identity. It is not automatically a unitary physical gate without normalization and a concrete implementation field.
+
+## Pass 2860 — outside-box II: closed Green function and hitting-time atlas
+
+Let `P` be the fifteen-state support walk and `Pi` its stationary projector. Because `P` has only two nontrivial eigenvalues, its fundamental matrix closes inside `span{I,P,Pi}`:
+
+```text
+Z = (I-P+Pi)^(-1) = alpha I + beta P + gamma Pi,
+alpha = q(q^2+q+2)/((q+1)(q^2+1)),
+beta  = q^2/(q^2+1),
+gamma = -(q^3+q^2+q-1)/((q+1)(q^2+1)).
+```
+
+Direct exact inversions agree at `q=2,3,4,5,7`. For `S != T`, every directed mean first-passage time is `m_ST = (alpha + beta(P_TT-P_ST))/pi_T`.
+
+At `q=3` there are 210 directed pairs, 13 distinct first-passage values, minimum `9/2`, maximum `42`, and Kemeny constant `291/20`, independent of source.
+
+**Boundary.** These are steps of a finite graph random walk, not laboratory clock times or thermodynamic relaxation times.
+
+## Reproduction
+
+```bash
+python analysis/bt2854_2860_seven_frontiers.py --verify-frozen
+pytest -q tests/test_bt2854_2860_seven_frontiers.py
+```
+
+The exact gate is `68/68`; focused regressions are `7/7`. Hardware observation is delegated to `.github/workflows/w33_pass2854_2860_seven_frontiers.yml`.
+
+## External anchors
+
+- Terwilliger-algebra and hypercube module language is aligned with the literature on Leonard triples for hypercubes and Q-polynomial association schemes.
+- Quantum coarse graining is stated in the conditional-expectation language used for private quantum channels and operator-algebraic reductions.
+- The classical stochastic boundary remains ordinary strong lumpability; no quantum-coherence claim is imported from the classical theorem.
