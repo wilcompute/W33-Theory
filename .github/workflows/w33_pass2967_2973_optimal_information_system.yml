@@ -1,0 +1,87 @@
+name: Pass 2967-2973 Optimal Information System
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [master]
+permissions:
+  contents: write
+jobs:
+  exact-rtl-docs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - name: Python dependencies
+        run: python -m pip install --upgrade pip numpy scipy sympy pytest
+      - name: Recompute exact and modeled packet
+        run: |
+          python analysis/bt2967_2973_optimal_information_system.py | tee /tmp/pass2967_2973_python.log
+          grep -F 'PASS 7 / 7' /tmp/pass2967_2973_python.log
+          pytest -q tests/test_bt2967_bt2973_optimal_information_system.py
+      - name: Install RTL and placement tools
+        run: sudo apt-get update && sudo apt-get install -y iverilog yosys nextpnr-ice40 fpga-icestorm
+      - name: Exhaustive RTL simulations
+        run: |
+          iverilog -g2012 -s tb_w33_pass2970_m36_relabel_microcode -o /tmp/m36.vvp rtl/w33_pass2970_m36_relabel_microcode.sv rtl/tb_w33_pass2970_m36_relabel_microcode.sv
+          vvp /tmp/m36.vvp
+          iverilog -g2012 -s tb_w33_pass2973_curvature_clock -o /tmp/clock.vvp rtl/w33_pass2973_curvature_clock.sv rtl/tb_w33_pass2973_curvature_clock.sv
+          vvp /tmp/clock.vvp
+      - name: Synthesize and place datapaths
+        run: |
+          mkdir -p evidence/pass2967_2973
+          for item in \
+            'm36 rtl/w33_pass2970_m36_relabel_microcode.sv w33_pass2970_m36_relabel_microcode' \
+            'clock rtl/w33_pass2973_curvature_clock.sv w33_pass2973_curvature_clock'; do
+              set -- $item; name=$1; src=$2; top=$3
+              yosys -p "read_verilog -sv $src; synth_ice40 -top $top -json /tmp/$name.json; stat" | tee evidence/pass2967_2973/${name}_yosys.log
+              nextpnr-ice40 --hx8k --package ct256 --json /tmp/$name.json --asc /tmp/$name.asc --pcf-allow-unconstrained |& tee evidence/pass2967_2973/${name}_nextpnr.log
+          done
+      - name: Integrate canonical blueprint and site idempotently
+        run: |
+          python tools/integrate_bt2967_bt2973.py
+          cp holonet_machine_blueprint.tex /tmp/blueprint.once
+          cp docs/index.html /tmp/index.once
+          python tools/integrate_bt2967_bt2973.py
+          cmp /tmp/blueprint.once holonet_machine_blueprint.tex
+          cmp /tmp/index.once docs/index.html
+      - uses: tectonic-typesetting/setup-tectonic@v1
+      - name: Compile canonical manuscripts
+        run: |
+          tectonic --keep-logs holonet_machine_blueprint.tex
+          tectonic --keep-logs w33_paper.tex
+          tectonic --keep-logs photonic_holonet.tex
+          ! grep -E 'Undefined control sequence|Emergency stop' *.log
+      - name: Freeze evidence manifest
+        run: |
+          sha256sum holonet_machine_blueprint.pdf w33_paper.pdf photonic_holonet.pdf > evidence/pass2967_2973/pdf_sha256.txt
+          printf 'python=PASS 7/7\npytest=PASS\nrtl=PASS\n' > evidence/pass2967_2973/manifest.txt
+          git diff --check
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass2967-2973-optimal-information-system-evidence
+          path: |
+            data/PART_BT2967*_results.json
+            data/PART_BT2968*_results.json
+            data/PART_BT2969*_results.json
+            data/PART_BT2970*_results.json
+            data/PART_BT2971*_results.json
+            data/PART_BT2972*_results.json
+            data/PART_BT2973*_results.json
+            evidence/pass2967_2973/*
+            holonet_machine_blueprint.pdf
+            w33_paper.pdf
+            photonic_holonet.pdf
+            *.log
+      - name: Commit observed integration evidence to PR branch
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add holonet_machine_blueprint.tex docs/index.html evidence/pass2967_2973
+          if ! git diff --cached --quiet; then
+            git commit -m 'Passes 2967-2973: record observed integration evidence'
+            git push origin HEAD:${{ github.head_ref }}
+          fi
