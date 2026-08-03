@@ -1,0 +1,60 @@
+% Passes 2820--2824: shared manuscript insert.
+\subsection{Post-2808 hardware and manuscript truth closure}
+\label{sec:bt2820-bt2824-blueprint-hardening}
+
+\paragraph{Public ISA versus internal micro-ISA.}
+The public Holonet interface remains the eight-opcode, three-bit instruction set.  The
+minimal internal frame engine uses only
+\[
+ F_p,\qquad \mathrm{CX}_{p\rightarrow f},\qquad
+ \mathrm{CX}_{f\rightarrow p},\qquad Z_p,
+\]
+so its opcode register needs two bits.  These four operations generate the full linear
+frame group of order $51{,}840$ and, after adjoining translations, the affine group of
+order $81\cdot51{,}840=4{,}199{,}040$.  The measured $72$-LC, $60.80$-MHz result belongs
+to the loadable public full-frame unit; it is not reused as synthesis evidence for the
+minimal four-operation engine.
+
+\paragraph{Deep-grade $M_{36}$ distillation.}
+The exhaustive search over all $5{,}355$ binary $[[4,2]]$ stabilizer projectors, all four
+syndromes, and all $11{,}520$ logical Clifford decoders finds no improving branch for the
+shallow or either middle grade, but exactly $48$ improving deep-grade branches.  One
+explicit branch takes input ray $5$, stabilizers
+$\mathrm{IYZY}$ and $\mathrm{YZXY}$, syndrome $(-1,+1)$, a Hadamard on the second
+logical coordinate, and output ray $7$.  Its exact operating curve is
+\[
+ P_{\mathrm{succ}}=\frac{p^2-2p+2}{4},\qquad
+ F_{\mathrm{out}}=\frac{5p^2-12p+8}{4(p^2-2p+2)},
+\]
+with
+\[
+ F_{\mathrm{out}}-F_{\mathrm{in}}
+ =\frac{p(p-1)(3p-2)}{4(p^2-2p+2)}.
+\]
+Hence fidelity improves for $0<p<2/3$.  This supersedes the earlier arbitrary-decoder
+no-go.  It is a state-fidelity distillation theorem, not a fault-tolerant injection
+threshold or asymptotic-yield claim.
+
+\paragraph{Support for readout, phase for execution.}
+The PG$(3,2)$ support shell remains an exact geometric/equitable codec, with tetrahedral
+capacity identity
+\[
+ (4,6,4,1)\odot(1,2,4,8)=(4,12,16,8).
+\]
+It is not a deterministic execution quotient.  The frame states $(0,1,0,0)$ and
+$(0,2,0,0)$ have the same binary support mask, but $Z_p$ sends them to different support
+masks.  Deterministic refinement under the selected four-operation micro-ISA gives
+\[
+ \boxed{16\longrightarrow40\longrightarrow78\longrightarrow81}.
+\]
+Thus the support shell is sufficient for readout, routing, and visualization, while the
+full ternary phase state is required for lossless execution.
+
+\paragraph{Evidence scope.}
+For the finite $\mu_{12}$ sensor lift the exponent is $3$ at odd depth and $9$ at even
+depth; arbitrary $U(1)$ representatives require exponent $3^n$.  Transpose is an
+anti-symplectic involution that exchanges the two controlled-add directions, with an
+inner projective class at $q=5$ and an outer diagonal class at $q=7$.  The live mixer is
+\texttt{rtl/w33\_pass2773\_spread\_mixer36\_synth.sv}; the historical dead source was
+removed.  Exact finite computations and remote synthesis/place-and-route measurements
+remain distinct evidence classes.
