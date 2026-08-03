@@ -1,6 +1,6 @@
 {
   "artifact_sha256": {
-    "PART_BT2767_M36_PREPARATION_ROM.json": "dfbee671e6717d76d9189d04831348f7065e0d2dd38f4e087a1b1d4ccf1bd92e",
+    "PART_BT2767_M36_PREPARATION_ROM.json": "710e27752ca45be7fb142b2331ef354aa416084a0fd4856bebe7cecb10fbed0b",
     "PART_BT2768_SP43_METAPLECTIC_LIFT_SENSOR.json.gz": "7c2bca4c7a98cd7528b529ff26074677e834970968d70888ab7118f3294a6b8b",
     "PART_BT2768_SP43_METAPLECTIC_LIFT_SENSOR_summary.json": "8ca95eda5dfb1a8bbe405f15606333cb99868779dc4de1898f0d643f979231bb",
     "PART_BT2769_CX_CENTRALIZER_COMPILER.json.gz": "689d6b4169776a711742c915b0ef5241aa9fa2c25efb8a21e54a67951331ef9c",
@@ -8,34 +8,8 @@
     "PART_BT2770_SWITCHING_ACTIVITY_PROXY.json": "11d85ffa0160b4cb31b653744e70e7f0e047efc6297f59d8e96a72c69d3d77e6",
     "PART_BT2771_REMOTE_QUTRIT_SUM_LINK.json": "89f662de26c383f0063f39ce83193aa729a8c56e9f0060c4b6b8feb8769531fd"
   },
-  "boundaries": {
-    "compiler": "exact finite-group normalization and cost metrics",
-    "fpga": "RTL and activity proxy local; placed timing, utilization, and physical power await remote toolchain",
-    "lift_sensor": "exact finite and projective-unitary computation",
-    "m36": "exact preparation and magic witness; no M36 distillation or injection threshold claimed",
-    "remote_sum": "exact LOCC map and explicit loss model; no combined experimental process fidelity claimed"
-  },
-  "check_count": 18,
-  "checks": {
-    "activity_is_proxy_only": true,
-    "centralizer_108": true,
-    "centralizer_cosets_480": true,
-    "compiler_entangler_reduction": true,
-    "compiler_max_rep_length_6": true,
-    "compiler_positive_reduction": true,
-    "lift_classes_34": true,
-    "lift_group_51840": true,
-    "m36_grade_census": true,
-    "m36_states_36": true,
-    "m36_typed_ququart_boundary": true,
-    "projective_signatures_15": true,
-    "remote_all_branches_accepted": true,
-    "remote_basis_9": true,
-    "remote_one_qutrit_pair": true,
-    "remote_random_32": true,
-    "remote_two_trits": true,
-    "two_shot_lift_complete_34": true
-  },
-  "schema": "w33.pass2767_2771.release.v1",
-  "status": "COMPLETE_LOCAL_EXACT_REMOTE_PNR_PENDING"
+  "boundaries":{"compiler":"exact finite-group normalization and cost metrics","fpga":"RTL and activity proxy local; placed timing, utilization, and physical power await remote toolchain","lift_sensor":"exact finite and projective-unitary computation","m36":"exact preparation and magic witness; no M36 distillation or injection threshold claimed","remote_sum":"exact LOCC map and explicit loss model; no combined experimental process fidelity claimed"},
+  "check_count":18,
+  "checks":{"activity_is_proxy_only":true,"centralizer_108":true,"centralizer_cosets_480":true,"compiler_entangler_reduction":true,"compiler_max_rep_length_6":true,"compiler_positive_reduction":true,"lift_classes_34":true,"lift_group_51840":true,"m36_grade_census":true,"m36_states_36":true,"m36_typed_ququart_boundary":true,"projective_signatures_15":true,"remote_all_branches_accepted":true,"remote_basis_9":true,"remote_one_qutrit_pair":true,"remote_random_32":true,"remote_two_trits":true,"two_shot_lift_complete_34":true},
+  "schema":"w33.pass2767_2771.release.v1","status":"COMPLETE_LOCAL_EXACT_REMOTE_PNR_PENDING"
 }
