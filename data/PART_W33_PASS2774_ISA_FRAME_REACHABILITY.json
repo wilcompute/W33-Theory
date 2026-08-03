@@ -1,0 +1,16 @@
+{
+  "modules": {
+    "rtl/w33_pass2752_cx_loadable_frame.sv::w33_cx_loadable_frame": "all 81 via the load port",
+    "rtl/w33_pass2757_qutrit_cx.sv::w33_qutrit_cx_frame": "reachable set {0}",
+    "rtl/w33_pass2762_holonet_isa.sv::w33_pass2762_holonet_isa": "reachable set is all 81"
+  },
+  "pass": 2774,
+  "reachable_from_reset": {
+    "cx_alone": 1,
+    "full_isa_with_sigma5_Z": 81,
+    "six_symplectic_opcodes": 1,
+    "total_frames": 81
+  },
+  "sigma5_Z_fixes_origin": false,
+  "symplectic_opcodes_preserve_form": true
+}

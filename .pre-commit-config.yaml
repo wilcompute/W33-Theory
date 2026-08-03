@@ -92,3 +92,15 @@ for f in sys.argv[1:]:
         language: system
         pass_filenames: true
         files: ^analysis/.*\.md$
+      # Added Pass 2772, after both tracks independently shipped a Pauli-frame tracker
+      # with no load port.  Such a module synthesizes to the identity -- yosys deletes
+      # 6 of its 8 state flops -- and simulation cannot see it, because a module that
+      # folds to a constant still simulates correctly, it just does nothing.  Only a
+      # synthesis frontend asks whether the state can move.  Scoped to rtl/ so the
+      # yosys cost is paid only when RTL changes.  Warns, never blocks.
+      - id: rtl-folds
+        name: RTL modules do not synthesize away
+        entry: py -3 scripts/check_rtl_folds.py --quiet
+        language: system
+        pass_filenames: true
+        files: ^rtl/.*\.sv$
