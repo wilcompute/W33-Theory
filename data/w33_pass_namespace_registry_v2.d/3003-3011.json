@@ -1,0 +1,19 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "3003-3011",
+  "owner": "agent/pass3003-3011-seven-front-optimal-information-closure",
+  "status": "reserved",
+  "reserved_after": "parallel reservation frontier through Pass 3002",
+  "passes": {
+    "3003": "finish the general-isotropic three-copy M36 frontier by exact orbit/rank reduction and integrate the full-shard census without overstating queued evidence",
+    "3004": "prove or improve the minimum triangle schedule for all one- and two-edge nonidentity D4 faults",
+    "3005": "build synthesizable golden A4 syndrome-shell RTL with a structural type barrier protecting the D4 route core",
+    "3006": "resolve or falsify the 540 by 12 curvature-clock to historical 540-fiber correspondence objectwise",
+    "3007": "compile a component-resolved Bayesian sequential chirality receiver with optimal stopping under loss, crosstalk, dark counts, and action cost",
+    "3008": "BONKERS: realize the A4 syndrome shell as a tetrahedral four-outcome information geometry and quantify its noise robustness",
+    "3009": "BONKERS: fuse the D12 phase clock with the golden Sturmian schedule as a cut-and-project calibration calendar and prove its burst/discrepancy properties",
+    "3010": "promote verified results into w33_paper, photonic_holonet, holonet_machine_blueprint, and docs/index",
+    "3011": "freeze exact certificates, RTL tests, focused regressions, literature boundaries, and guarded release workflows"
+  },
+  "claim_boundary": "Reservation only. Exhaustive finite searches, schedule optimality, RTL behavior, objectwise correspondences, calibrated decision policies, and physical interpretations remain separately typed until executable evidence exists."
+}
