@@ -1,0 +1,108 @@
+\section{Spread curvature, route decoding, and the corrected chirality receiver}
+\label{sec:bt2967-bt2970}
+
+\subsection{The spread curvature is the exceptional ten-point two-graph}
+
+Let \(g_{ij}\in S_4\) be the exact transport permutation between two modes of a
+\(W(3,3)\) spread, and define the sign connection
+\[
+ a_{ij}=\operatorname{sgn}(g_{ij})\in\mathbb F_2.
+\]
+The triangle curvature is
+\[
+ \kappa_{ijk}
+ =\operatorname{sgn}(g_{ki}g_{jk}g_{ij})
+ =a_{ij}+a_{jk}+a_{ki}.
+\]
+Pass~2967 enumerates all \(36\) spreads.  For each spread the \(120\) triangles
+split into \(60\) transposition and \(60\) double-transposition holonomies.
+The odd triangles form a \(2-(10,3,4)\) design, and every tetrahedron contains
+an even number of odd faces:
+\[
+ \delta\kappa=\delta^2a=0.
+\]
+All \(2^{10}\) vertex-sign gauges preserve \(\kappa\).  All \(36\) curvature
+hypergraphs belong to the same switching class, which contains the Petersen
+graph and has
+\[
+ \operatorname{Aut}(\mathcal T)
+ \cong \mathrm{P}\Sigma\mathrm L(2,9)
+ \cong S_6,
+ \qquad |\operatorname{Aut}(\mathcal T)|=720.
+\]
+The standard degree-ten model is the action of \(S_6\) on the unordered
+\(3+3\) partitions of a six-set.  The abstract two-graph identification is
+standard; the project-specific statement is its exact emergence from every
+spread-router table.
+
+\subsection{The parity curvature is a \([45,9,9]_2\) gauge code}
+
+Let \(H\in\mathbb F_2^{120\times45}\) be triangle--edge incidence on the ten
+spread modes.  After subtracting the certified baseline curvature, an edge
+parity fault \(e\) gives syndrome
+\[
+ s=He.
+\]
+Pass~2968 proves
+\[
+ \operatorname{rank}H=36,
+ \qquad
+ \ker H=\operatorname{Cut}(K_{10}),
+\]
+so the invisible patterns form the binary cut code
+\[
+ \boxed{[45,9,9]_2}.
+\]
+Its weight enumerator is
+\[
+ 1+10z^9+45z^{16}+120z^{21}+210z^{24}+126z^{25}.
+\]
+Thus all nongauge parity faults through weight eight are detected, and all
+parity faults through weight four are correctable modulo vertex switching.
+The \(120\) raw triangle checks compress to \(36\) independent syndrome bits.
+
+\subsection{Correction: the two-Pauli receiver is not the Helstrom receiver}
+
+Pass~2954 correctly found the minimum project-local Pauli cover
+\(\{YI,IY\}\), and all twelve conjugate pairs have
+\[
+ |\langle\psi_+|\psi_-\rangle|^2=\frac13.
+\]
+However, the previously labelled ``Helstrom'' number
+\[
+ \frac12\left(1+\frac1{\sqrt3}\right)=0.788675\ldots
+\]
+is the selected local Pauli receiver.  The unrestricted equal-prior pure-state
+Helstrom success is instead
+\[
+ \boxed{
+ P_{\rm H}^{(1)}
+ =\frac12\left(1+\sqrt{\frac23}\right)
+ =0.908248\ldots .}
+\]
+For \(n\) copies,
+\[
+ P_{\rm H}^{(n)}
+ =\frac12\left(1+\sqrt{1-3^{-n}}\right).
+\]
+Adaptive individual von Neumann measurements are known to attain this same
+collective bound for binary pure states at every finite \(n\) (Ac\'in et al.,
+Phys. Rev. A \textbf{71}, 032338 (2005)).  Six ideal copies drive the error
+below \(10^{-3}\), and twelve below \(10^{-6}\).
+
+\subsection{Layered route defense}
+
+The completed Pass~2965 result proves that three distinct pilot slots identify
+all \(23\) nonidentity \(S_4\) faults on one route edge, across all \(8280\)
+triangle/edge/fault cases.  Pass~2968 is complementary: it adds exact multi-edge
+correction for the odd-parity projection.  Therefore one arbitrary single-edge
+\(S_4\) error is completely identified by the pilot layer; if it is odd, the
+curvature layer also locates it and supports correction of up to four odd edge
+faults modulo gauge.
+
+\paragraph{Evidence boundary.}
+The two-graph and code statements concern exact finite routing permutations.
+They are not measured optical Berry phases or continuum gauge fields.  The
+multicopy discrimination formulas assume a known conjugate pair, equal priors,
+perfect copies, and ideal measurements.  The parity code does not detect even
+permutations, loss, or continuous drift inside a fixed parity class.
