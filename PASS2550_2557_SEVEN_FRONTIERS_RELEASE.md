@@ -6,14 +6,14 @@
 
 ## Aggregate semantic SHA-256
 
-`96a8eaccc582c69d311d616bc0ae3fa3e55585dbb18c022bb2af367ec9419e84`
+`1eff37f4559172813a331aa41a01ec97fe38c29d5a0eff26a4d320dd3abacd5b`
 
 ## Certificate hashes
 
-- 2550: `2585e86a888d4536b7676fda746a512b19280de7b666667d1cecea8177b36ac7`
-- 2551: `8715d12b8f71eeedfffe873ef73d71de9fd4cae9bcea520178e2c7d519d3fefa`
+- 2550: `aa9d5e8071280f4f7dda332586047cb6eebea3e142fcd05afa6b62fc9344a7dc`
+- 2551: `206630d56a601e1b83fd7445c654eddeb307003cda43d412252cea51f0ddae3f`
 - 2552: `187d40e521ee0094bc0ece7dcd5eef0d0e208fec564a553589707bd72bec336f`
-- 2553: `1b17e7eefe299e8b65154050495b4f56367b75db3f5ba68ff2e7a0bc77d585ef`
+- 2553: `7d7a051a03db540b93c0a6e6b743a3861b0e199aacf1bf0ffc8a2f10a025c4ae`
 - 2554: `17a884c8e11152c843d400ec94e33ef33f30b1ea489892ab8689a02d1b500e19`
 - 2555: `ee116fe729b3f8a5dde0c29b2752def1dc3c31e04ce62e3d8ae178743fa46516`
 - 2556: `075534d40ef7b74020637481da1827582fd85c9875427c40c5bb0fdc197dafe1`
@@ -30,4 +30,4 @@
 
 ## Open boundaries
 
-The exact global U6 singleton coefficient and the exact chromatic value in `{10,11,12,13,14}` remain open.  The nonlinear `5:8` covariants are subgroup-level objects and are not promoted to full `PSp(4,3)` couplings.
+The exact global U6 singleton coefficient and the exact chromatic value in `{10,11,12,13,14}` remain open. The nonlinear `5:8` covariants are subgroup-level objects and are not promoted to full `PSp(4,3)` couplings.
