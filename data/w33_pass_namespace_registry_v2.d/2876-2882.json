@@ -2,17 +2,9 @@
   "schema": "w33.pass_namespace_reservation.v2",
   "range": "2876-2882",
   "owner": "agent/pass2876-2882-selector-butterfly-observer-blueprint",
-  "status": "reserved",
-  "reserved_after": "Passes 2861-2868 compiler and thermodynamic closure; parallel Passes 2869-2875 magic/compiler packet",
+  "status": "superseded_due_to_later_overlap",
   "reserved_at_utc": "2026-08-03T19:00:00Z",
-  "passes": {
-    "2876": "intrinsic residual-channel S3 torsor and full-similitude obstruction to canonical numbering",
-    "2877": "q=3 sequential q-Hadamard butterfly quotient engine with dense-reference equivalence and hardware comparison workflow",
-    "2878": "coarsest exact observer congruences for every micro-ISA subset and full-81 minimality theorem",
-    "2879": "regular determinant-twisted order-96 action on selector-tomotope tokens and comparison with natural tomotope automorphisms",
-    "2880": "D8 first-passage classification and exact optimal 15-mask diagnostic cycle",
-    "2881": "outside-box nonlinear scheduler theorem: optimal cycle beats every GL(4,2) Singer cycle",
-    "2882": "outside-box 40-state observer mirage falsifier plus substantive blueprint rewrite, evidence repair, and compile workflow"
-  },
-  "claim_boundary": "Reservation only. No theorem or blueprint claim is promoted until exact certificates, regressions, and document compilation are published."
+  "superseded_by": "2894-2900",
+  "reason": "A later glue-track reservation claimed 2880-2886 and a parallel seven-front packet moved to 2887-2893. This packet was renumbered intact before theorem publication so no result ships under an ambiguous pass number.",
+  "claim_boundary": "Reservation only; no result was published under 2876-2882."
 }
