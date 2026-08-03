@@ -1,0 +1,86 @@
+{
+  "pass_2797": {
+    "class_sizes": [
+      4,
+      8,
+      12,
+      12
+    ],
+    "classes_equal_grades": false,
+    "clifford_group_with_phase": 92160,
+    "every_class_inside_one_grade": true,
+    "grade_sizes": [
+      4,
+      8,
+      24
+    ],
+    "grades": {
+      "0.622008468": 8,
+      "0.705341801": 24,
+      "0.750000000": 4
+    },
+    "images_leaving_the_ray_set": 3297792
+  },
+  "pass_2798": {
+    "deep": {
+      "D_min_1": 0.6849938737681645,
+      "D_min_2": 1.369987747536329,
+      "F_stab_1": 0.6220084679281462,
+      "F_stab_1_squared": 0.38689453417431974,
+      "F_stab_2": 0.38689453417431974,
+      "monotone_permits_self_distillation": true,
+      "multiplicative": true,
+      "output_grades_permitted_by_the_monotone": [
+        "shallow",
+        "mid",
+        "deep"
+      ]
+    },
+    "mid": {
+      "D_min_1": 0.5036055529980318,
+      "D_min_2": 1.0072111059960627,
+      "F_stab_1": 0.7053418012614794,
+      "F_stab_1_squared": 0.4975070566067883,
+      "F_stab_2": 0.49750705660678857,
+      "monotone_permits_self_distillation": true,
+      "multiplicative": true,
+      "output_grades_permitted_by_the_monotone": [
+        "shallow",
+        "mid",
+        "deep"
+      ]
+    },
+    "shallow": {
+      "D_min_1": 0.41503749927884404,
+      "D_min_2": 0.830074998557688,
+      "F_stab_1": 0.7499999999999999,
+      "F_stab_1_squared": 0.5624999999999999,
+      "F_stab_2": 0.5624999999999999,
+      "monotone_permits_self_distillation": true,
+      "multiplicative": true,
+      "output_grades_permitted_by_the_monotone": [
+        "shallow",
+        "mid",
+        "deep"
+      ]
+    }
+  },
+  "pass_2799": {
+    "conclusion": "phase group = mu_12 for all n; minimal exponent = 3^n mod 12",
+    "exponent_table": {
+      "1": 3,
+      "2": 9,
+      "3": 3,
+      "4": 9,
+      "5": 3,
+      "6": 9
+    },
+    "field_identities_hold": true,
+    "identity_residuals": {
+      "1/sqrt3 = (zeta_12 + conj(zeta_12))/3": 1.1102230246251565e-16,
+      "zeta_12 + conj(zeta_12) = sqrt3": 2.220446049250313e-16,
+      "zeta_12^3 = i": 2.7755575615628914e-16,
+      "zeta_12^4 = omega": 2.482534153247273e-16
+    }
+  }
+}

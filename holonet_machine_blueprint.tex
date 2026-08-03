@@ -93,7 +93,7 @@
        whose wiring diagram is a piece of finite geometry\\[10pt]
        \normalsize Every figure in this document is measured or proved.}
 \author{\normalsize W(3,3)--E$_8$ project, glue track}
-\date{\normalsize 3 August 2026 \quad$\cdot$\quad Passes 2700--2795}
+\date{\normalsize 3 August 2026 \quad$\cdot$\quad Passes 2700--2802}
 
 \begin{document}
 \maketitle
@@ -103,15 +103,18 @@
 \noindent
 This is a build document for a computer that does not exist yet, every part of which has
 been either mathematically proved, formally verified, or physically measured by someone.
-The machine's logic is a $40$-point finite geometry called $W(3,3)$; its instruction set
-has eight opcodes and generates a group of order $4{,}199{,}040$ exactly; its arithmetic
-unit fits in \textbf{72 logic cells} on a \$25 FPGA and runs at \textbf{60.8\,MHz}; and
-its physical layer is a photonic gate that a laboratory has already demonstrated with
-$0.92$ fidelity. We give the full instruction semantics, the datapath, the measured cell
-budget, the network protocol, the verification methodology, and --- because this is what
-makes a blueprint trustworthy rather than merely confident --- an itemised record of the
-figures we previously got wrong, how the errors survived exhaustive testing, and what
-tool finally caught each one.
+The machine's logic is a $40$-point finite geometry called $W(3,3)$. Its public
+instruction set has eight opcodes in three bits; its internal frame engine needs only
+\emph{four} operations in two bits, and both generate the same group of order
+$4{,}199{,}040$ exactly. The public unit fits in \textbf{72 logic cells} on a \$25 FPGA at
+$60.8$\,MHz; the minimal engine fits in \textbf{43} at \textbf{72.4\,MHz} --- both
+measured, neither inferred from the other. Its physical layer is a photonic gate a
+laboratory has already demonstrated at $0.92$ fidelity, and its magic-state resource now
+has an explicit fidelity-improving protocol on the deep grade. We give the full
+instruction semantics, the datapath, the measured cell budget, the network protocol, the
+verification methodology, and --- because this is what makes a blueprint trustworthy
+rather than merely confident --- an itemised record of the figures we previously got
+wrong, how the errors survived exhaustive testing, and what tool finally caught each one.
 \end{abstract}
 
 \vspace{-4mm}
@@ -185,10 +188,14 @@ one thing.}
                                 $\mathbb{C}^9=\mathrm{End}(\mathbb{C}^3)$. \\
 \textbf{Tracked quantity}     & The \emph{Pauli frame}: four trits
                                 $(x_p,z_p,x_f,z_f)\in\mathbb{F}_3^4$, i.e.\ $81$ states. \\
-\textbf{Instruction set}      & $\mathcal{I}_{\mathrm{holo}}$, eight opcodes, three bits. \\
+\textbf{Public ISA}           & $\mathcal{I}_{\mathrm{holo}}$, eight opcodes, three bits. \\
+\textbf{Internal micro-ISA}   & $F_p$, $\mathrm{CX}_{p\to f}$, $\mathrm{CX}_{f\to p}$,
+                                $Z_p$ --- four operations, two bits, no illegal encoding. \\
 \textbf{Group generated}      & $\mathrm{ASp}(4,3)=\mathbb{F}_3^4\rtimes\mathrm{Sp}(4,3)$,
                                 order $81\times 51840=4{,}199{,}040$ \emph{exactly}. \\
-\textbf{Arithmetic unit}      & $72$ iCE40 logic cells, $60.80$\,MHz (measured, \S\ref{sec:budget}). \\
+\textbf{Arithmetic unit}      & Public: $72$ iCE40 cells at $60.80$\,MHz.
+                                Minimal: $\mathbf{43}$ cells at $\mathbf{72.40}$\,MHz.
+                                Both measured, \S\ref{sec:budget}. \\
 \textbf{Physical layer}       & Time-bin $\times$ frequency-bin photonic qutrits; the
                                 two-qutrit \textsc{sum} gate is experimentally
                                 demonstrated at fidelity $0.92\pm0.01$. \\
@@ -639,6 +646,16 @@ $\{F_f,S_p,\mathrm{CX}_{f\to p}\}$, $\{F_f,\mathrm{CX}_{p\to f},\mathrm{CX}_{f\t
 \headline{Three Clifford opcodes plus one translation generate everything.
 Four frame instructions --- a \textbf{two-bit} opcode field, not three.}
 
+\begin{gotwrong}[A trap avoided, and worth naming]
+A minimality \emph{proof} says nothing about \emph{area}. It is tempting to quote the
+$72$-cell figure for the four-operation engine on the grounds that it does strictly less
+work --- and that would be wrong twice over: the number was measured on a different
+design, and removing decode cases can \emph{cost} cells when what was removed was being
+shared with what remains. The minimal engine was therefore synthesised and placed
+separately (\S\ref{sec:budget}), and only then quoted. It came out at $43$ cells; had it
+come out at $80$, that is the number this document would print.
+\end{gotwrong}
+
 \begin{plain}
 Two details are worth noticing. First, there are \emph{six} different minimal choices, so
 a chip designer has real freedom to pick whichever three are cheapest in silicon rather
@@ -720,6 +737,24 @@ breakout board for about \$25.
 The entire arithmetic core of this computer is \emph{seventy-two} logic cells, out of
 $5{,}280$ available. It uses $1.4\%$ of a \$25 chip.
 \end{plain}
+
+\begin{spec}[The two engines, measured in one harness]
+\begin{center}\small
+\begin{tabular}{@{}lrrrl@{}}
+\toprule
+\textbf{Design} & \textbf{Cells} & \textbf{Pins} & \textbf{$F_{\max}$} & \textbf{Opcode}\\
+\midrule
+Minimal engine, $4$ operations & \textbf{43} & 22 & \textbf{72.40}\,MHz & 2 bits \\
+Public unit, $6$ frame opcodes & 72 & 26 & 60.80\,MHz & 3 bits \\
+\bottomrule
+\end{tabular}
+\end{center}
+\textbf{$40\%$ fewer cells and $19\%$ faster.} The minimality theorem cashes out in
+silicon. Also verified on the minimal engine, because both checks are cheap and both have
+caught real defects here: the linear part is symplectic on frame \emph{differences}
+(SAT, $4100$ variables / $11278$ clauses --- a translation cancels in a difference, so one
+assertion covers all four opcodes at once), and no output folds to a constant.
+\end{spec}
 
 \begin{spec}[Measured; iCE40 UP5K SG48, Yosys 0.67 $+$ nextpnr]
 \begin{center}\small
@@ -912,7 +947,7 @@ Verified directly on $3\times3$ unitaries: $e=3$ is phase-invariant, $e\in\{2,4,
 a strictly cheaper measurement, alternating with width.}
 
 % =====================================================================================
-\section{The magic states, and the one thing the machine cannot yet do}\label{sec:magic}
+\section{The magic states, and the protocol that was found}\label{sec:magic}
 % =====================================================================================
 
 \begin{plain}
@@ -923,10 +958,14 @@ advantage you need one more ingredient, traditionally supplied as a special prep
 state called a \emph{magic state}.
 
 The substrate hands us $36$ candidates for free --- $36$ special directions in the
-four-dimensional space, called the Witting rays. The open question, and the single
-largest gap in this blueprint, is whether those $36$ can be \emph{purified}: whether many
-noisy copies can be distilled into one clean one. Without that, the machine is a very
-elegant classical simulator.
+four-dimensional space, called the Witting rays. The question is whether those $36$ can be
+\emph{purified}: whether noisy copies can be distilled into cleaner ones. Without that,
+the machine is a very elegant classical simulator.
+
+This section is the one that changed most between drafts, and the sequence is worth
+following, because it is a small case study in how a negative result should be read.
+First an exhaustive search said no. Then an argument from resource accounting said the
+``no'' could not be fundamental. Then a wider search said yes.
 \end{plain}
 
 \subsection{All thirty-six look identical from the inside}
@@ -987,23 +1026,178 @@ witness certifies non-stabilizerness exactly while $1-3p/4>F_{\mathrm{stab}}$:
 Three separately-published thresholds, one formula, agreement to $10^{-12}$.
 \end{spec}
 
-\headline{The distillation search needs \emph{three} representatives, not thirty-six.
-A Clifford-invariant protocol cannot distinguish rays within a grade.}
+\subsection{Four, not three: fidelity is necessary but not sufficient}
+
+\begin{gotwrong}
+An earlier draft of this section said: \emph{``the distillation search needs three
+representatives, not thirty-six.''} That was one step too far. Equal stabilizer fidelity
+does not imply the two states are interchangeable --- it is a single number, and a single
+number rarely separates everything.
+
+\medskip\noindent
+Acting with the full two-qubit Clifford group ($92{,}160$ matrices) on the $36$ rays and
+matching images by \emph{fidelity} rather than by a rounded key:
+\[
+  \text{Clifford equivalence classes} \;=\; 4,\qquad \text{sizes } [\,4,\;8,\;12,\;12\,].
+\]
+Every class sits inside one grade --- so the grading is real --- but the $24$-ray middle
+grade is \textbf{two} inequivalent families of twelve. The correct count is \textbf{four}.
+
+\medskip\noindent
+Corroborated from the other direction: an independent exhaustive distillation search,
+which knows nothing about Clifford orbits, reports results for ``\emph{both} middle
+grades''. Two unrelated computations, the same splitting.
+\end{gotwrong}
+
+\subsection{Why the first ``no'' could not have been the last word}
 
 \begin{plain}
-That is the practical payoff. The known result in this area is a \emph{no-go}: an
-exhaustive search over $5{,}355$ small stabilizer codes and $21{,}420$ branches found no
-two-copy protocol that improves fidelity anywhere it applies. The natural next move is to
-search bigger protocols, and that search is expensive. Knowing there are only three
-inequivalent starting materials shrinks it by a factor of twelve before it begins.
+An exhaustive search over $5{,}355$ small codes and $21{,}420$ branches found no two-copy
+protocol that improves fidelity. That is a real result, and the tempting reading is that
+two noisy copies simply do not contain enough raw material to make one better copy.
+
+There is a way to check that reading directly, without searching any protocols at all.
+Physicists have quantities that \emph{measure} how much magic a state contains and which
+are guaranteed never to increase under any allowed operation --- no measurement, no
+post-selection, no clever feedback can make one go up. If two copies scored lower than the
+target, distillation would be impossible for reasons no ingenuity could overcome. So:
+compute the score.
+\end{plain}
+
+\begin{spec}[$D_{\min}=-\log_2 F_{\mathrm{stab}}$ over all $36{,}720$ four-qubit stabilizer states]
+\begin{center}\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+grade & $F_{\mathrm{stab}}(\psi)$ & $F_{\mathrm{stab}}(\psi^{\otimes2})$
+      & $D_{\min}(\psi)$ & $D_{\min}(\psi^{\otimes2})$\\
+\midrule
+shallow & 0.750000000 & 0.562500000 & 0.415037 & 0.830075\\
+mid     & 0.705341801 & 0.497507057 & 0.503606 & 1.007211\\
+deep    & 0.622008468 & 0.386894534 & 0.684994 & 1.369988\\
+\bottomrule
+\end{tabular}
+\end{center}
+$F_{\mathrm{stab}}$ is \emph{exactly} multiplicative here, so
+$D_{\min}(\psi^{\otimes2})=2D_{\min}(\psi)>D_{\min}(\psi)$ for every grade. The budget is
+never the binding constraint.
+\end{spec}
+
+\headline{The monotone never obstructs. Any two-copy no-go in this system is
+\emph{structural}, not information-theoretic --- a fact about the protocol family
+searched, not about the resource. The right response to it is to widen the family.}
+
+\subsection{And widening the family worked}
+
+\begin{spec}[Deep-grade distillation, exact]
+Extending the search from one decoder to all $11{,}520$ logical Clifford decoders gives
+\textbf{$48$ improving branches} on the deep eight-ray grade, and zero on the shallow and
+both middle grades. One explicit branch --- input ray $5$, stabilizers $IYZY$ and $YZXY$,
+syndrome $(-1,+1)$, output ray $7$ --- has the exact curve
+\[
+  P_{\mathrm{succ}}=\frac{p^2-2p+2}{4},\qquad
+  F_{\mathrm{out}}=\frac{5p^2-12p+8}{4(p^2-2p+2)},
+\]
+\[
+  F_{\mathrm{out}}-F_{\mathrm{in}}=\frac{p(p-1)(3p-2)}{4(p^2-2p+2)}\;>\;0
+  \quad\text{for } 0<p<\tfrac23,
+\]
+an interval that contains the whole deep-grade magic window $p<(8-2\sqrt3)/9\approx0.504$.
+\end{spec}
+
+\begin{plain}
+So the resource is usable. Note the shape of the story: the first search was correct and
+its conclusion was correctly stated; the accounting argument said the obstruction could
+not be fundamental; the wider search then found the protocol. Nobody was wrong at any
+step --- but a reader who had stopped at ``exhaustive search found nothing'' would have
+drawn exactly the wrong conclusion about the machine.
 \end{plain}
 
 \begin{spec}[Evidence boundary, stated as bluntly as possible]
-No distillation protocol for $M_{36}$ is known. The controller types the resource
-\cmd{M36\_Q4\_RAW} and \emph{refuses} injection in RTL until a proved protocol asserts
-validity. \textbf{Until that assertion exists, this machine is not universal.} Everything
-else in this blueprint is built or proved; this is not.
+What the deep-grade result \emph{is}: an exact state-fidelity distillation theorem for an
+explicitly enumerated class --- all $5{,}355$ binary $[[4,2]]$ stabilizer projectors, all
+four syndromes, all $11{,}520$ logical Clifford decoders.
+
+\smallskip\noindent
+What it is \textbf{not}: a fault-tolerant injection threshold, an asymptotic-yield
+theorem, or a laboratory demonstration. The controller still types the resource
+\cmd{M36\_Q4\_RAW} and refuses injection in RTL until a proved \emph{fault-tolerant}
+protocol asserts validity, because a fidelity-improving map is not the same object as an
+injection threshold. \textbf{Universality is now a matter of closing a stated gap rather
+than of finding an unknown protocol} --- which is a different and much better position
+than the previous draft of this document described.
 \end{spec}
+
+% =====================================================================================
+\section{Support for readout, phase for execution}\label{sec:support}
+% =====================================================================================
+
+\begin{plain}
+Here is a design temptation, and the theorem that kills it.
+
+The machine's frame is four trits --- $81$ states. But a great deal of what you want to
+\emph{observe} about the frame is coarser than that: often you only care \emph{which} of
+the four registers are non-zero, not what they hold. That is a four-bit ``support mask'',
+$16$ possibilities instead of $81$, and it has beautiful structure --- it forms an exact
+finite geometry with the capacity profile
+\[
+  (4,6,4,1)\odot(1,2,4,8)=(4,12,16,8).
+\]
+A five-fold compression with geometry attached is exactly the kind of thing an engineer
+wants to build the machine out of. Can the machine simply \emph{run} on support masks and
+skip the phases?
+
+No. And the counterexample is two lines long.
+\end{plain}
+
+\begin{spec}[The obstruction]
+The two frames
+\[
+  (0,1,0,0)\qquad\text{and}\qquad(0,2,0,0)
+\]
+have the same support mask \cmd{0100}. Apply $Z_p$ --- the translation, $z_p\mapsto z_p+1$
+--- and their masks become \cmd{0100} and \cmd{0000}. Two states that the support layer
+cannot tell apart are sent to two states it \emph{can}.
+
+\smallskip\noindent
+So support is not a \emph{congruence}: it is not preserved by the dynamics, and a machine
+that stored only support would be unable to predict its own next state. Refining the
+partition until it is stable gives
+\[
+  \boxed{16\;\longrightarrow\;40\;\longrightarrow\;78\;\longrightarrow\;81}
+\]
+with class-size histograms
+$\{1{:}1,2{:}4,4{:}6,8{:}4,16{:}1\}\to\{1{:}7,2{:}29,4{:}4\}\to\{1{:}75,2{:}3\}\to\{1{:}81\}$.
+The terminal partition is \emph{discrete}: full ternary phase is forced.
+\end{spec}
+
+\headline{Support for readout, phase for execution. The compression is real and exact ---
+but it is a lens, not a substrate.}
+
+\begin{plain}
+This is a useful kind of negative result, because it tells you exactly where to put the
+cheap representation. Readout, routing, telemetry and visualisation can all live in the
+$16$-class support world and enjoy its geometry. The execution core cannot. A machine
+built the other way round would appear to work in simulation --- support is preserved by
+\emph{most} operations --- and would drift silently the first time a translation fired on
+a register holding a $2$.
+\end{plain}
+
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,>={Latex[length=2.2mm]}]
+  \node[draw=ink,rounded corners,fill=plainbg,minimum height=11mm,text width=34mm,
+        align=center] (sup) {\textbf{SUPPORT}\\\scriptsize $16$ classes, geometric};
+  \node[draw=ink,rounded corners,fill=specbg,minimum height=11mm,text width=34mm,
+        align=center,right=26mm of sup] (ph) {\textbf{PHASE}\\\scriptsize $81$ frames, complete};
+  \draw[->,line width=1pt] (ph) -- node[above,font=\scriptsize]{readout}
+                                  node[below,font=\scriptsize]{lossy, exact, cheap} (sup);
+  \draw[->,line width=1pt,draw=bad,dashed] ([yshift=-7mm]sup.south)
+        -- node[below,font=\scriptsize,text=bad]{execution: \emph{not} a congruence}
+           ([yshift=-7mm]ph.south);
+  \draw[draw=bad,line width=1pt] ($(sup)!0.5!(ph)+(0,-0.7)$) circle (2.2mm);
+  \draw[draw=bad,line width=1pt] ($(sup)!0.5!(ph)+(-0.155,-0.855)$)
+                              -- ($(sup)!0.5!(ph)+(0.155,-0.545)$);
+\end{tikzpicture}
+\end{center}
 
 % =====================================================================================
 \section{The network}\label{sec:network}
@@ -1238,8 +1432,16 @@ Minimal exponent $=3^n\bmod 12$: $3$ odd, $9$ even & derived & Pass 2791\\
 $36$ rays share one Gram profile ($11$ orth., $24$ at $1/3$) & proved & Pass 2790, $\mathbb{Z}[\omega]$\\
 $8{+}24{+}4$ is the stabilizer-fidelity spectrum & proved & Pass 2790, 60 stab.\ states\\
 All three witness thresholds $=\frac43(1-F_{\mathrm{stab}})$ & derived & Pass 2790, $10^{-12}$\\
-$M_{36}$ two-copy no-go, $5355$ codes $\times$ $4$ syndromes & \textbf{prior art} & parallel track, Pass 2784\\
-Frame unit: $72$ LC, $60.80$\,MHz & \textbf{measured} & \S\ref{sec:budget}\\
+Clifford classes on the $36$ rays: $[4,8,12,12]$ & proved & Pass 2797\\
+\quad the $24$-ray grade splits; ``three'' was wrong & \textbf{corrected} & Pass 2797\\
+$F_{\mathrm{stab}}$ exactly multiplicative on two copies & measured & Pass 2798, $36{,}720$ states\\
+The monotone never forbids two-copy distillation & proved & Pass 2798\\
+Deep grade: $48$ improving branches, $0<p<2/3$ & \textbf{prior art} & parallel track, Pass 2821\\
+Support is not an execution congruence: $16{\to}40{\to}78{\to}81$ & \textbf{prior art} & parallel track, Pass 2822\\
+Phase group $=\mu_{12}$ for \emph{every} $n$ & proved & Pass 2799\\
+Minimal engine: $\mathbf{43}$ LC, $\mathbf{72.40}$\,MHz & \textbf{measured} & Pass 2796\\
+\quad symplectic on differences, all four opcodes & SAT & $4100$ vars / $11278$ clauses\\
+Public frame unit: $72$ LC, $60.80$\,MHz & \textbf{measured} & \S\ref{sec:budget}\\
 Loadable CX: $23$ LC, $72.40$\,MHz, $\mathrm{CX}^3{=}I$ & measured $+$ proved &
    $5265$ vars / $14005$ clauses\\
 Parallel $36$-mixer: $13{,}965$ LUT4, does not fit & measured & Pass 2773\\
@@ -1249,7 +1451,9 @@ Photonic qutrit \textsc{sum}, fidelity $0.92\pm0.01$ & \textbf{published} &
    Imany \emph{et al.}\ 2019\\
 Remote \textsc{sum}: $1$ Bell pair $+$ $2$ trits & proved & parallel track, Pass 2771\\
 \midrule
-$M_{36}$ magic-state injection threshold & \textcolor{bad}{OPEN} & refused in RTL\\
+$M_{36}$ fault-tolerant \emph{injection} threshold & \textcolor{bad}{OPEN} & refused in RTL\\
+Asymptotic distillation yield & \textcolor{bad}{OPEN} & fidelity theorem only\\
+Do the two $12$-ray classes differ operationally? & \textcolor{bad}{OPEN} & Clifford class only\\
 Fault-tolerance threshold end to end & \textcolor{bad}{OPEN} & --- \\
 Physical power in watts & \textcolor{bad}{OPEN} & activity proxy only\\
 \bottomrule
@@ -1262,9 +1466,17 @@ Physical power in watts & \textcolor{bad}{OPEN} & activity proxy only\\
 
 \begin{spec}[Commands, in order]
 \begin{quote}\ttfamily\small
-\# reachability and the group\\
+\# reachability, the group, and the minimal generating sets\\
 py -3 analysis/w33\_pass2774\_isa\_frame\_reachability.py\\
-py -3 analysis/w33\_pass2778\_2779\_affine\_group\_and\_sensor\_exponent.py\\[4pt]
+py -3 analysis/w33\_pass2778\_2779\_affine\_group\_and\_sensor\_exponent.py\\
+py -3 analysis/w33\_pass2789\_2792\_minimal\_isa\_sensor\_and\_transpose.py\\[4pt]
+\# the magic states: geometry, Clifford classes, and the monotone\\
+py -3 analysis/w33\_pass2790\_witting\_ray\_geometry.py\\
+py -3 analysis/w33\_pass2797\_2799\_magic\_orbits\_and\_monotone.py\\[4pt]
+\# the minimal engine (43 LC) against the public unit (72 LC)\\
+yosys -p "read\_verilog -sv rtl/w33\_pass2796\_minimal\_frame\_engine.sv; \textbackslash\\
+\hspace*{1em}synth\_ice40 -top w33\_minimal\_frame\_engine -json m.json"\\
+nextpnr-ice40 -{}-up5k -{}-package sg48 -{}-json m.json -{}-asc m.asc -{}-freq 40\\[4pt]
 \# the cell budget (needs yosys + nextpnr-ice40)\\
 yosys -p "read\_verilog -sv rtl/w33\_pass2777\_isa\_frame\_unit.sv; \textbackslash\\
 \hspace*{1em}chparam -set EN 63 w33\_isa\_frame\_unit; \textbackslash\\
@@ -1298,11 +1510,12 @@ A blueprint that lists only what works is advertising. Here is the honest remain
       controller \emph{refuses} injection until a proved protocol asserts validity. No
       non-Clifford unitary is invented in RTL, because inventing one would conceal the
       real gap.
-\item \textbf{The magic-state route is the universality gap.} The substrate identifies
-      $36$ distinguished Witting rays and computes exact non-stabilizer witness
-      boundaries for them. It does \emph{not} supply a distillation protocol; the
-      published qutrit protocols act on a different space (ququart versus qutrit) and do
-      not transfer.
+\item \textbf{The universality gap moved but did not close.} A previous draft said no
+      distillation protocol was known; \S\ref{sec:magic} now gives an exact
+      fidelity-improving one on the deep grade, valid for $0<p<2/3$. What remains open is
+      narrower and better-defined: a fault-tolerant \emph{injection} threshold and an
+      asymptotic \emph{yield}. A map that improves fidelity is not either of those, and
+      the controller still refuses injection in RTL until one exists.
 \item \textbf{No physical power figure exists.} The switching census gives about $1.622$
       output transitions per operation. That is a technology-independent activity proxy.
       Watts require the placed netlist, a capacitance model, voltage, clock and a
@@ -1314,9 +1527,9 @@ A blueprint that lists only what works is advertising. Here is the honest remain
       blueprint should show which gaps closed and when.
 \item \textbf{One original module is unparseable} ---
       \cmd{rtl/w33\_spread\_mixer36.sv}, rejected by both frontends. It now carries a
-      deprecation banner naming its replacement and quoting both errors; the bytes are
-      kept as the historical record, since it compiles nowhere and deleting another
-      track's file is not ours to do.
+      deprecation banner naming its replacement. It has since been removed from the tree
+      entirely by the other track, which is the right call: a file no frontend can read is
+      not a historical record, it is a trap for the next reader.
 \end{enumerate}
 
 \vspace{6mm}
