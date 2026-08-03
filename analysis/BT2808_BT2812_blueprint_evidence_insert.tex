@@ -79,6 +79,37 @@ deep-grade state fidelity is two-copy distillable. It does not yet provide asymp
 yield, a fault-tolerant injection gadget, or an end-to-end logical error threshold.
 \end{gotwrong}
 
+\subsection{Operating curve for repeated accepted rounds}
+Writing the depolarizing parameter of an accepted output as $p'$, the explicit branch
+closes to the exact scalar recurrence
+\[
+ p'=R(p)=\frac{p(4-p)}{3(p^2-2p+2)},
+ \qquad
+ P_{\rm succ}(p)=\frac{p^2-2p+2}{4}.
+\]
+The fixed points are $p=0$, $2/3$, and $1$. Their local slopes are $2/3$, $6/5$, and
+$2/3$, respectively. Thus $0<p<2/3$ flows monotonically toward the pure resource
+$p=0$, while $2/3<p<1$ flows toward the maximally mixed endpoint $p=1$. The threshold
+$p=2/3$ is repelling. Because each accepted output consumes two input resources, the
+one-round accepted-output yield per input is $P_{\rm succ}/2$.
+
+\begin{center}
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+$p$ & $p'$ & $F_{\rm out}$ & $P_{\rm succ}$ & accepted outputs/input\\
+\midrule
+$1/2$ & $7/15$ & $13/20$ & $5/16$ & $5/32$\\
+$1/3$ & $11/39$ & $41/52$ & $13/36$ & $13/72$\\
+$1/10$ & $13/181$ & $685/724$ & $181/400$ & $181/800$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+This recurrence is exact for repeated accepted applications of this branch. It is not an
+optimized asymptotic yield theorem: preparation cost, branch multiplexing, decoder
+scheduling, logical noise, and rejected-round resource recovery remain separate design
+problems.
+
 \subsection{All-register metaplectic sensor law}
 For the standard finite qutrit Clifford lift, Pass 2805 proves that the scalar phase group
 is $\mu_{12}$ for every register width. On $n$ qutrits, $d=3^n$ and
@@ -113,8 +144,8 @@ the serial mixer is the deployable target architecture.
 \midrule
 Minimal/public ISA & group theorem and RTL & Promote cell count and timing only after the
 dedicated hardware runner completes synthesis and placement.\\
-Deep $M_{36}$ protocol & exact fidelity distillation & Derive asymptotic yield, injection
-integration, and logical-noise thresholds.\\
+Deep $M_{36}$ protocol & exact fidelity distillation & Derive optimized asymptotic yield,
+injection integration, and logical-noise thresholds.\\
 Metaplectic sensor & exact finite-lift exponent law & Add visibility, phase diffusion,
 loss, and detector-imbalance confusion matrices.\\
 Photonic remote \textsc{sum} & recurrence and scheduler model & Demonstrate the stated
