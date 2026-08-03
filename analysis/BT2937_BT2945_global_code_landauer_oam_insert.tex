@@ -1,0 +1,32 @@
+\section{Global protected support, thermodynamic diagnosis, and the OAM carrier boundary}
+\label{sec:bt2937-bt2945}
+
+The full affine-Clifford orbit has $120$ nonconstant binary support observables
+$f_{a,b}(x)=\mathbf 1[a\cdot x+b\ne0]=(a\cdot x+b)^2$ on $\mathbf F_3^4$.
+An exact integer program gives local $AG(3,3)$ distance-four optimum $12$.
+There are $120$ affine three-flats and each probe is nonconstant on $117$, so
+$n\ge\lceil120\cdot12/117\rceil=13$. An explicit sixteen-probe code on all
+$81$ frames has distance four:
+\[
+\boxed{13\le n_{\rm affine\ support,d=4}\le16.}
+\]
+The probes pair into an isodual but non-self-dual $[8,4,4]_3$ code. Its coordinate
+automorphism group is $S_4$, its monomial group is $C_2\times S_4$, and its sixteen
+one-symbol syndromes are distinct. A four-trit syndrome and sixteen-entry correction
+table therefore replace an eighty-one-codeword binary scan.
+
+For a uniform frame, every deterministic exact diagnostic transcript obeys
+$H(T)=H(X)=\log_2 81$. Adaptivity reduces latency or raw storage but cannot lower this
+optimally compressed Landauer information floor. Finite-time reset adds a positive,
+protocol-dependent excess and is not assigned a device-independent joule number.
+
+OAM is optional at the abstract level but explicit in the operator/OAM ABI and OAM/GKP
+hardware profile. Exhausting all $51{,}840$ projective symplectic-similitude actions on
+the forty points gives maximum cyclic orbit length $12$ and no $40$-cycle. One cyclic OAM
+shift therefore cannot implement the full geometry-preserving address bus; a physical
+implementation needs a multi-cycle sorter/interferometer or a hybrid mode register. The
+repository's radial-shell leakage figures remain symbolic falsifiers, not measurements.
+
+For the deep-$M_{36}$ branch the circuit-independent adversarial accepted-fault budget is
+$g_c=(7-3\sqrt5)/4$. A circuit with $L$ independent locations is inside this pessimistic
+envelope when $q<1-(1-g_c)^{1/L}$; this is not promoted as a compiled-circuit threshold.
