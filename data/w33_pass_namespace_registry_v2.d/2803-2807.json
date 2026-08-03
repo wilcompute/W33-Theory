@@ -1,0 +1,13 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "2803-2807",
+  "owner": "agent/pass2803-2807-blueprint-hardening",
+  "status": "reserved",
+  "passes": {
+    "2803": "minimal-versus-convenience ISA truth repair",
+    "2804": "evidence-state and promotion-gate matrix",
+    "2805": "M36 logical-decoder gauge firewall",
+    "2806": "sensor, transpose, and mixer scope hardening",
+    "2807": "executable blueprint migration, compile, and PDF closure"
+  }
+}
