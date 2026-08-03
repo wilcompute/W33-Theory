@@ -1,0 +1,6 @@
+{
+  "architecture":{"ancilla":"phase-stable path qubit","decoder":"combine tracked determinant with the ninth power of each measured trace; fuse with the existing W33 projective packet","determinant":"tracked from the programmed Clifford word and calibrated phase plates","register":"nine-mode two-qutrit register randomized uniformly over computational modes","shot_1":"controlled-path U, X/Y path readout estimates Tr(U)/9","shot_2":"controlled-path U^2, X/Y path readout estimates Tr(U^2)/9"},
+  "boundary":"The shot count is a worst-case Hoeffding design point assuming independent binary path measurements, exact determinant tracking, and no drift. Loss, phase diffusion, visibility, and detector imbalance must be calibrated experimentally; black-box modular DQC1 without a phase reference gives only trace modulus and is insufficient for the full class sensor.",
+  "class_count":34,"confidence":0.99,"conservative_quadrature_tolerance":0.02126019068694942,"minimum_nonzero_normalized_trace_magnitude":0.11111111111111105,
+  "schema":"w33.pass2773.metaplectic_interferometer.v1","shots_per_quadrature_hoeffding":29579,"status":"EXACT_CODEBOOK_CONSERVATIVE_SHOT_BUDGET","theta_pair_count":33,"total_detector_events_four_quadratures":118316
+}
