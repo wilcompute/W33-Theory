@@ -9,12 +9,13 @@ def load_runner():
     spec=importlib.util.spec_from_file_location('bt2917_2923',RUNNER);assert spec and spec.loader
     mod=importlib.util.module_from_spec(spec);spec.loader.exec_module(mod);return mod
 
-def test_atomic_payload_contains_all_readable_sources():
-    src=load_runner().sources()
-    expected={'2917','2918','2919','2920','2922','2923'}
-    assert expected=={name.split('bt')[1][:4] for name in src}
-    assert len(src)==7
-    assert all('if __name__' in text for text in src.values())
+def test_dispatcher_references_all_readable_sources():
+    mod=load_runner()
+    assert set(mod.SOURCES)=={'2917','2918','2919','2920a','2920b','2922','2923'}
+    assert len(mod.SOURCES)==7
+    for path in mod.SOURCES.values():
+        assert path.is_file()
+        assert 'if __name__' in path.read_text()
 
 def test_frozen_summary_boundaries_and_checks():
     data=json.loads(SUMMARY.read_text())
