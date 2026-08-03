@@ -1,0 +1,17 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "2960-2966",
+  "owner": "agent/pass2960-2966-physical-compiler-seven-front",
+  "status": "reserved",
+  "reserved_after": "parallel reservation frontier through Pass 2959",
+  "passes": {
+    "2960": "physically optimize and compare the exact 15-probe affine-support observer and ternary SPC factorization",
+    "2961": "extend the compiled deep-M36 branch from stochastic Pauli faults to coherent overrotations, correlated faults, and leakage flags",
+    "2962": "classify the 10x4 spread-router triangle holonomy as a finite gauge field and test spread/gauge invariance",
+    "2963": "build a calibrated-parameter 10x4 OAM time/frequency optical channel simulator with loss, crosstalk, phase drift, and detector noise",
+    "2964": "synthesize the reversible transcript and 8192-state joint-rank compiler into explicit reversible primitives and thermodynamic ledger",
+    "2965": "BONKERS: derive a curvature-aware route code that turns involutory triangle holonomy into an error-detecting syndrome",
+    "2966": "BONKERS: search for a single symplectic transducer joining M36 distillation, OAM routing, and observer uncomputation"
+  },
+  "claim_boundary": "Reservation only. Exact, modelled, source-complete, synthesized, placed, and measured statements remain separately typed until executable evidence exists."
+}
