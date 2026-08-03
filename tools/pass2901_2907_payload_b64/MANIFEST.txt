@@ -1,0 +1,4 @@
+chunks=10
+codec=base64+lzma
+schema=w33.pass2901_2907.bundle.v1
+materializer=tools/materialize_bt2901_bt2907.py
