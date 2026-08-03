@@ -1,0 +1,19 @@
+{
+  "schema": "w33.pass2946.affine_support_optimum.v1",
+  "status": "COMPLETE_EXACT",
+  "minimum_length": 15,
+  "check_count": 6,
+  "checks": {
+    "local_minimum12": true,
+    "local12_four_triplets": true,
+    "n13_infeasible": true,
+    "n14_all_single_infeasible": true,
+    "n14_double_infeasible": true,
+    "n15_distance4": true
+  },
+  "headline": "The exact affine-support distance-four optimum on the 81 frames is 15.",
+  "construction": "Full-three-offset binary image of the ternary [5,4,2]_3 single-parity-check code.",
+  "witness_feature_indices": [39,40,41,12,13,14,3,4,5,0,1,2,78,79,80],
+  "pair_distance_histogram": {"4":810,"6":810,"8":1215,"10":405},
+  "proof_summary": "Local AG(3,3) minimum 12 and exact four-triplet classification imply the direction cap. Length13 and all-single length14 are orbit-reduced MILP infeasible. A doubled direction forces a forbidden triple repetition."
+}
