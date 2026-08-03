@@ -1,0 +1,128 @@
+name: Passes 2974-2983 Priority Evidence Lane
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_m36_shard:
+        description: Run one exact general-isotropic pivot shard
+        required: false
+        type: boolean
+        default: true
+      pivot_index:
+        description: RREF pivot-shard index in 0..494
+        required: false
+        default: '494'
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/bt2974_2981_nonabelian_golden_information_closure.py'
+      - 'analysis/bt2977_general_isotropic_m36_search.py'
+      - 'analysis/BT2974_BT2983*'
+      - 'data/PART_BT2974*'
+      - 'data/PART_BT2977*'
+      - 'data/w33_pass_namespace_registry_v2.d/2974-2983.json'
+      - 'tests/test_bt2974_bt2983_nonabelian_golden_information.py'
+      - 'tools/integrate_bt2974_bt2983.py'
+      - '.github/workflows/w33_pass2974_2983_priority_evidence.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pass2974-2983-priority-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  exact-focused-release:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    env:
+      PYTHONUNBUFFERED: '1'
+      SOURCE_DATE_EPOCH: '1785715200'
+    steps:
+      - name: Check out writable head
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+          fetch-depth: 0
+
+      - name: Reconcile current master
+        run: |
+          git config user.name 'W33 priority evidence bot'
+          git config user.email 'noreply@github.com'
+          git fetch origin master
+          git merge --no-edit origin/master
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install focused dependencies
+        run: python -m pip install --upgrade pip numpy sympy networkx pytest
+
+      - name: Recompute exact finite and golden closure
+        run: python analysis/bt2974_2981_nonabelian_golden_information_closure.py
+
+      - name: Run deterministic general-isotropic pilot sentinel
+        run: python analysis/bt2977_general_isotropic_m36_search.py --quick 50000
+
+      - name: Run exact duplicate-free pivot shard
+        if: github.event_name == 'pull_request' || inputs.run_m36_shard
+        env:
+          PIVOT_INDEX: ${{ github.event_name == 'pull_request' && '494' || inputs.pivot_index }}
+        run: python analysis/bt2977_general_isotropic_m36_search.py --pivot-index "$PIVOT_INDEX"
+
+      - name: Focused regression
+        run: pytest -q tests/test_bt2974_bt2983_nonabelian_golden_information.py
+
+      - name: Integrate all four front doors idempotently
+        run: |
+          python tools/integrate_bt2974_bt2983.py
+          python tools/integrate_bt2974_bt2983.py --check
+          grep -Fq '\input{analysis/BT2974_BT2983_nonabelian_golden_information_insert}' w33_paper.tex
+          grep -Fq '\input{analysis/BT2974_BT2983_nonabelian_golden_information_insert}' photonic_holonet.tex
+          grep -Fq 'BEGIN BT2974-BT2983 NONABELIAN GOLDEN INFORMATION' holonet_machine_blueprint.tex
+          grep -Fq 'BEGIN BT2974-BT2983 NONABELIAN GOLDEN INFORMATION' docs/index.html
+          git diff --check
+
+      - uses: tectonic-typesetting/setup-tectonic@v1
+
+      - name: Compile the three current manuscripts
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p analysis/evidence/pass2974_2983
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            stem="${source%.tex}"
+            tectonic --keep-logs "$source" 2>&1 | tee "analysis/evidence/pass2974_2983/${stem}.build.log"
+            test -s "${stem}.pdf"
+            if grep -E 'Undefined control sequence|LaTeX Error|Emergency stop|Fatal error' "${stem}.log"; then
+              echo "release-blocking TeX error in ${source}"
+              exit 1
+            fi
+          done
+
+      - name: Freeze generated front doors on writable head
+        if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          TARGET_BRANCH: ${{ github.event.pull_request.head.ref || github.ref_name }}
+        run: |
+          git add w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html
+          git add data/PART_BT2974_BT2981_NONABELIAN_GOLDEN_INFORMATION_results.json
+          git add data/PART_BT2977_GENERAL_ISOTROPIC_M36_PILOT_results.json
+          git add analysis/evidence/pass2974_2983/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Passes 2982-2983: freeze front doors and focused evidence'
+          fi
+          git push origin "HEAD:${TARGET_BRANCH}"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass2974-2983-priority-evidence
+          path: |
+            data/PART_BT2974_BT2981_NONABELIAN_GOLDEN_INFORMATION_results.json
+            data/PART_BT2977_GENERAL_ISOTROPIC_M36_PILOT_results.json
+            analysis/evidence/pass2974_2983/
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
