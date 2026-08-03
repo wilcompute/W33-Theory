@@ -1,0 +1,61 @@
+{
+  "best_row_with_F_at_least_0_6": {
+    "elementary_fidelity_after_purification": 0.8783696335207317,
+    "elementary_link_probability": 0.0063468177550643455,
+    "end_to_end_bell_fidelity": 0.6710925978452756,
+    "logical_erasure_success": 0.972,
+    "logical_remote_sum_rate_hz": 0.022542303458903273,
+    "physical_end_pair_rate_hz": 0.06957501067562738,
+    "purifiable_after_distribution": true,
+    "purification_rounds": 1,
+    "rail_availability": 0.9,
+    "raw_elementary_rate_hz": 52.04390559152763,
+    "segment_km": 75.0,
+    "segments": 8
+  },
+  "boundary": "The recurrence, swapping, memory, and erasure formulas are exact for the stated isotropic and independent-erasure models. The 600 km rate sweep is an engineering model, not an experimental repeater demonstration or a full queueing-theory optimum.",
+  "feed_forward": {
+    "classical_payload_per_physical_remote_sum": "two trits",
+    "latency_model": "fiber propagation at 2e5 km/s plus controller latency",
+    "logical_payload": "six trits for three rails before erasure recovery"
+  },
+  "illustrative_scenario": {
+    "attenuation_db_per_km": 0.2,
+    "coupling": 0.8,
+    "detector": 0.8,
+    "local_transmission": 0.7,
+    "memory_coherence_s": 100.0,
+    "rail_availability": 0.9,
+    "source_fidelity": 0.806,
+    "source_rate_hz": 8200.0,
+    "swap_visibility": 0.99,
+    "total_km": 600.0
+  },
+  "memory": {
+    "map": "F(t)=1/9+(F(0)-1/9) exp(-t/Tmem)",
+    "maximum_wait_before_crossing_F=1/3_for_scenario_source_s": 114.00740784757045
+  },
+  "outer_erasure_code": {
+    "basis": "|s_L>=sum_r |r,r+s,r+2s>/sqrt(3)",
+    "code": "[[3,1,2]]_3 polynomial/threshold secret-sharing code",
+    "concatenation_threshold": "e<1/2 (eta>1/2)",
+    "erasure_recursion": "e_L=3e^2-2e^3",
+    "logical_success": "eta_L=3 eta^2-2 eta^3",
+    "transversal_sum_verified": true
+  },
+  "qutrit_purification": {
+    "distillation_region": "F>1/3",
+    "fidelity_map": "F'=(33F^2-2F+1)/(27F^2-6F+11)",
+    "fixed_points": ["1/9", "1/3", "1"],
+    "success_probability": "P=(27F^2-6F+11)/32"
+  },
+  "rows_with_F_at_least_0_8_count": 1,
+  "schema": "w33.pass2788.repeater_remote_sum.v1",
+  "status": "EXACT_RECURRENCES_WITH_EXPLICIT_ENGINEERING_SCENARIO",
+  "swapping": {"ideal_isotropic_map": "F_swap=F^2+(1-F)^2/8"},
+  "threshold_packet": {
+    "heralded_erasure_concatenation": "rail erasure e<1/2",
+    "isotropic_entanglement_purification": "F>1/3",
+    "memory_wait": "t<Tmem*ln((9F0-1)/2) to remain above F=1/3"
+  }
+}
