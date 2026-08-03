@@ -7,7 +7,7 @@ from pathlib import Path
 import numpy as np
 import sympy as sp
 ROOT=Path(__file__).resolve().parents[1];SQ3=sp.sqrt(3);p=sp.symbols('p',real=True)
-I2=np.eye(2,complex);X=np.array([[0,1],[1,0]],complex);Z=np.array([[1,0],[0,-1]],complex)
+I2=np.eye(2,dtype=complex);X=np.array([[0,1],[1,0]],complex);Z=np.array([[1,0],[0,-1]],complex)
 H=np.array([[1,1],[1,-1]],complex)/np.sqrt(2);S=np.diag([1,1j])
 def kron(ms):
  o=np.array([[1]],complex)
@@ -20,7 +20,7 @@ def mkey(M,d=9):
 def cliffords():
  c01=np.zeros((4,4),complex);c10=np.zeros((4,4),complex)
  for a,b in itertools.product(range(2),repeat=2):c01[2*a+(b^a),2*a+b]=1;c10[2*(a^b)+b,2*a+b]=1
- gs=[np.kron(H,I2),np.kron(I2,H),np.kron(S,I2),np.kron(I2,S),c01,c10];I=np.eye(4,complex);seen={mkey(I):I};q=deque([I])
+ gs=[np.kron(H,I2),np.kron(I2,H),np.kron(S,I2),np.kron(I2,S),c01,c10];I=np.eye(4,dtype=complex);seen={mkey(I):I};q=deque([I])
  while q:
   x=q.popleft()
   for g in gs:
@@ -58,7 +58,7 @@ def extend(s1,s2):
    if len(bs)==4:return bs[2],bs[3]
  raise AssertionError
 def joint(ops,signs):
- P=np.eye(16,complex);I=np.eye(16,complex)
+ P=np.eye(16,dtype=complex);I=np.eye(16,dtype=complex)
  for s,o in zip(signs,ops):P=P@((I+s*o)/2)
  j=int(np.argmax(np.linalg.norm(P,axis=0)));v=P[:,j];v/=np.linalg.norm(v);i=next(i for i,z in enumerate(v) if abs(z)>1e-10);v/=v[i]/abs(v[i]);return v
 def bases(space):
