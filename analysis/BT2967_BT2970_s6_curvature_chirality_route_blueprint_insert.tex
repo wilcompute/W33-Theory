@@ -1,0 +1,73 @@
+\section{The router can certify its own curvature}
+\label{sec:bt2967-bt2970-blueprint}
+
+\begin{plain}
+The ten spread modes are joined by exact four-channel permutations.  Local slot
+labels can change which links look even or odd, but they cannot change the
+parity accumulated around a triangle.  Across all thirty-six spreads, those
+triangle parities form one standard, highly symmetric object whose switching
+class contains the Petersen graph.  The machine can compare a measured parity
+table with that exact baseline and decode route faults.
+\end{plain}
+
+\begin{spec}[Pass 2967 --- exact curvature classification]
+For \(g_{ij}\in S_4\), define
+\[
+ a_{ij}=\operatorname{sgn}(g_{ij}),
+ \qquad
+ \kappa_{ijk}=\operatorname{sgn}(g_{ki}g_{jk}g_{ij})=(\delta a)_{ijk}.
+\]
+All \(36\) spreads give \(60\) odd and \(60\) even triangle holonomies.  The
+odd triangles form a \(2-(10,3,4)\) design and satisfy
+\[
+ \delta\kappa=\delta^2a=0
+\]
+on all \(210\) tetrahedra.  The switching class contains the Petersen graph and
+has automorphism group
+\[
+ \mathrm{P}\Sigma\mathrm L(2,9)\cong S_6,
+ \qquad |S_6|=720.
+\]
+\end{spec}
+
+\begin{spec}[Pass 2968 --- multi-edge parity decoder]
+Let \(H\) be the \(120\times45\) triangle--edge incidence matrix.  After
+subtracting the baseline, \(s=He\), and exact row reduction gives
+\[
+ \operatorname{rank}H=36,
+ \qquad
+ \ker H=\operatorname{Cut}(K_{10})=[45,9,9]_2.
+\]
+Therefore all nongauge odd-parity faults through weight eight are detected and
+all odd-parity faults through weight four are correctable modulo slot gauge.
+Only \(36\) independent syndrome bits are required.
+\end{spec}
+
+\begin{spec}[Pass 2970 --- complementary route defenses]
+The existing three-pilot layer identifies every one of the \(23\) nonidentity
+\(S_4\) permutations on one faulty edge.  The curvature layer adds multi-edge
+correction for the odd-parity projection.  Even single-edge faults are caught
+by pilots; odd faults are caught by both layers.
+\end{spec}
+
+\begin{gotwrong}[Receiver correction]
+The minimum project-local chirality probe alphabet remains \(\{YI,IY\}\), but
+its success
+\[
+ \tfrac12(1+1/\sqrt3)=0.788675\ldots
+\]
+is not the unrestricted Helstrom bound.  Since the squared pair overlap is
+\(1/3\), the correct ideal one-copy optimum is
+\[
+ \tfrac12(1+\sqrt{2/3})=0.908248\ldots .
+\]
+Adaptive individual measurements can attain the \(n\)-copy collective optimum
+\(\tfrac12(1+\sqrt{1-3^{-n}})\); that attainability theorem is published prior
+art, not a new machine theorem.
+\end{gotwrong}
+
+\noindent\textbf{Reproduce:}
+\cmd{python analysis/bt2967\_oam\_holonomy\_s6\_two\_graph.py},
+\cmd{python analysis/bt2968\_curvature\_route\_code.py},
+\cmd{python analysis/bt2969\_chirality\_receiver\_correction.py}, and
+\cmd{python analysis/bt2970\_layered\_route\_fault\_architecture.py}.
