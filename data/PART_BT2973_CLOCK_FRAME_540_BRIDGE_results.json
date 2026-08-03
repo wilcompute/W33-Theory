@@ -1,0 +1,28 @@
+{
+  "schema": "w33.pass2973.clock_frame_540_bridge.v1",
+  "status": "COMPLETE_EXACT_CARDINALITY_BRIDGE_WITH_EQUIVARIANCE_OPEN",
+  "checks": {
+    "each_line_has_27_disjoint_lines": true,
+    "unordered_skew_line_frames_540": true,
+    "clock_factorization_2_times_27_times_10": true,
+    "common_factor_27": true
+  },
+  "check_count": 4,
+  "pass2416_frame_count": {
+    "isotropic_lines": 40,
+    "other_lines_meeting_a_fixed_line": 12,
+    "lines_disjoint_from_a_fixed_line": 27,
+    "unordered_skew_pairs": 540,
+    "formula": "40*27/2"
+  },
+  "pass2973_clock_count": {
+    "duality_sectors": 2,
+    "translation_cosets_F3_4_mod_order3": 27,
+    "spread_lines": 10,
+    "clock_cycles": 540,
+    "formula": "2*27*10"
+  },
+  "bridge": "Both 540-object systems contain an exact 27-fold quotient factor: disjoint-line choices on the Pass-2416 side and translation cosets on the Pass-2973 side.",
+  "open_equivariance_test": "Construct or refute a natural bijection intertwining a common subgroup action. Equality of cardinality and the shared factor 27 do not by themselves identify the objects.",
+  "claim_boundary": "Exact counting bridge only; no objectwise or equivariant identification is claimed."
+}
