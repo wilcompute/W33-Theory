@@ -1,0 +1,122 @@
+name: W33 RTL synthesis gate
+
+# WHY THIS WORKFLOW EXISTS
+#
+# Every RTL job in this repo before Pass 2780 ran Icarus Verilog and stopped there.
+# Simulation cannot see the defect class that Pass 2753 found, because a module that
+# synthesises away STILL SIMULATES CORRECTLY -- it just does nothing.  Two independent
+# tracks each shipped a Pauli-frame tracker with no load port; both had exhaustive
+# testbenches; both passed; both compiled to the identity with six of eight state flops
+# deleted.
+#
+# Pass 2774 explains why in one line: the Clifford opcodes are symplectic, symplectic
+# maps are linear, and every linear map fixes the origin.  A frame register driven only
+# by Clifford opcodes can never leave (0,0,0,0).
+#
+# So this job asks the question simulation cannot: after full optimisation, can the
+# state still move?  It runs three checks, in increasing cost:
+#
+#   1. PARSE     -- both frontends read every file.  rtl/w33_spread_mixer36.sv was
+#                   headed "synthesizable" and was rejected by BOTH, for two different
+#                   unsupported constructs, for a full day before anyone ran either one.
+#   2. FOLD      -- scripts/check_rtl_folds.py: does any output port end up tied to a
+#                   literal after `flatten; opt -full`?
+#   3. PLACE     -- nextpnr on the flagship modules, so the cell budget quoted in the
+#                   blueprint is a measured number and not an estimate.
+#
+# It reports, and does not block: a fold is a candidate for reading, not a verdict, and
+# a blocking hook trains people to pass --no-verify.  The one thing it does fail on is
+# a PARSE error, because a file no frontend accepts is not RTL.
+
+on:
+  push:
+    paths:
+      - 'rtl/**'
+      - 'scripts/check_rtl_folds.py'
+      - '.github/workflows/w33_rtl_synthesis_gate.yml'
+  pull_request:
+    paths:
+      - 'rtl/**'
+      - 'scripts/check_rtl_folds.py'
+  workflow_dispatch:
+
+jobs:
+  synthesis-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install the toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys
+          python -m pip install --upgrade pip
+          python -m pip install yowasp-nextpnr-ice40 yowasp-yosys
+
+      # ------------------------------------------------------------------
+      # 1. PARSE.  Both frontends, every non-testbench file.  This is the check
+      #    that would have caught rtl/w33_spread_mixer36.sv on the day it landed.
+      # ------------------------------------------------------------------
+      - name: Parse with both frontends
+        run: |
+          fail=0
+          for f in rtl/*.sv; do
+            case "$(basename "$f")" in tb_*) continue;; esac
+            if ! iverilog -g2012 -t null "$f" 2>/tmp/iv.log; then
+              echo "::error file=$f::iverilog cannot parse this file"
+              sed 's/^/    /' /tmp/iv.log
+              fail=1
+            fi
+            if ! yosys -q -p "read_verilog -sv $f" 2>/tmp/ys.log; then
+              echo "::error file=$f::yosys cannot parse this file"
+              sed 's/^/    /' /tmp/ys.log
+              fail=1
+            fi
+          done
+          exit $fail
+
+      # ------------------------------------------------------------------
+      # 2. FOLD.  The Pass 2753 check.  Warns; never fails the job.
+      # ------------------------------------------------------------------
+      - name: Fold audit (reports, does not block)
+        continue-on-error: true
+        run: |
+          python scripts/check_rtl_folds.py | tee /tmp/folds.txt
+          if grep -q "CONSTANT OUTPUT" /tmp/folds.txt; then
+            echo "::warning::a module folds to a constant -- see the log; this is a"
+            echo "::warning::review item, not a failure.  Check for a missing load port."
+          fi
+
+      # ------------------------------------------------------------------
+      # 3. PLACE.  Real cell counts for the flagship modules, published as an
+      #    artifact so the blueprint's budget table cites measurements.
+      # ------------------------------------------------------------------
+      - name: Place and route the frame unit and CX
+        continue-on-error: true
+        run: |
+          set -x
+          mkdir -p /tmp/pnr && cd /tmp/pnr
+          place () {   # $1 = source, $2 = top, $3 = label
+            yosys -q -p "read_verilog -sv $GITHUB_WORKSPACE/$1; \
+                         synth_ice40 -top $2 -json $3.json" || return 0
+            yowasp-nextpnr-ice40 --up5k --package sg48 \
+              --json $3.json --asc $3.asc --freq 50 2>&1 \
+              | grep -E "ICESTORM_LC:|SB_IO:|Max frequency for" \
+              | sed "s/^/[$3] /" | tee -a /tmp/pnr/budget.txt
+          }
+          place rtl/w33_pass2777_isa_frame_unit.sv     w33_isa_frame_unit    frame_unit
+          place rtl/w33_pass2752_cx_loadable_frame.sv  w33_cx_loadable_frame cx_loadable
+          place rtl/w33_pass2762_holonet_isa.sv        w33_pass2762_holonet_isa isa_ctrl
+          cat /tmp/pnr/budget.txt
+
+      - name: Upload the measured budget
+        continue-on-error: true
+        uses: actions/upload-artifact@v4
+        with:
+          name: w33-cell-budget
+          path: /tmp/pnr/budget.txt
+          if-no-files-found: ignore

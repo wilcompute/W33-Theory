@@ -1,0 +1,45 @@
+{
+  "pass_2778": {
+    "ASp43_order": 4199040,
+    "affine_group_both_translations": 4199040,
+    "affine_group_one_translation": 4199040,
+    "is_full_sp43": true,
+    "linear_group_order": 51840,
+    "nonzero_vector_orbit": 80,
+    "one_translation_suffices": true,
+    "translations_from_Z_p_alone": 81,
+    "translations_from_both": 81
+  },
+  "pass_2779": {
+    "det_F3_order": 4,
+    "gauss_sum": [
+      9.992007221626409e-16,
+      1.7320508075688776
+    ],
+    "generic_phase_invariance_by_exponent": {
+      "10": false,
+      "3": false,
+      "8": false,
+      "9": true
+    },
+    "matrix_group_order": 50388480,
+    "minimal_phase_free_exponent": 9,
+    "phase_group_factorisation": "mu_12 = mu_4 (imaginary Gauss sum) x mu_3 (omega)",
+    "relation_scalars": {
+      "CX^3": [
+        1.0,
+        0.0
+      ],
+      "F_p^4": [
+        1.0,
+        0.0
+      ],
+      "S_p^3": [
+        1.0,
+        0.0
+      ]
+    },
+    "scalar_subgroup_order": 12,
+    "state_space_dimension": 9
+  }
+}
