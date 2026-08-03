@@ -11,13 +11,23 @@ on:
       - tests/test_bt2803_2807_blueprint_truth_gate.py
       - data/w33_pass_namespace_registry_v2.d/2803-2807.json
       - .github/workflows/w33_pass2803_2807_blueprint_hardening.yml
+  pull_request:
+    branches:
+      - master
+    paths:
+      - holonet_machine_blueprint.tex
+      - analysis/bt2803_2807_blueprint_truth_gate.py
+      - analysis/BT2803_BT2807_blueprint_hardening.md
+      - tests/test_bt2803_2807_blueprint_truth_gate.py
+      - data/w33_pass_namespace_registry_v2.d/2803-2807.json
+      - .github/workflows/w33_pass2803_2807_blueprint_hardening.yml
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: pass2803-2807-${{ github.ref }}
+  group: pass2803-2807-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -25,9 +35,10 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 25
     steps:
-      - name: Check out branch
+      - name: Check out writable head branch
         uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
           fetch-depth: 0
 
       - name: Set up Python
@@ -69,7 +80,10 @@ jobs:
         run: git diff --check
 
       - name: Commit deterministic generated artifacts
+        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
         shell: bash
+        env:
+          TARGET_BRANCH: ${{ github.event.pull_request.head.ref || github.ref_name }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -80,7 +94,7 @@ jobs:
             echo "Blueprint source, certificate, and PDF are already frozen."
           else
             git commit -m "Passes 2803-2807: freeze hardened Holonet blueprint"
-            git push origin HEAD:${GITHUB_REF_NAME}
+            git push origin "HEAD:${TARGET_BRANCH}"
           fi
 
       - name: Upload blueprint evidence
