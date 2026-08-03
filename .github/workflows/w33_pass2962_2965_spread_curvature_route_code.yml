@@ -1,0 +1,46 @@
+name: Passes 2962 and 2965 Spread Curvature Route Code
+
+on:
+  pull_request:
+    paths:
+      - 'analysis/bt2962_oam_holonomy_s6_two_graph.py'
+      - 'analysis/bt2965_curvature_route_code.py'
+      - 'analysis/BT2962*'
+      - 'analysis/BT2965*'
+      - 'data/PART_BT2962*'
+      - 'data/PART_BT2965*'
+      - 'tools/integrate_bt2962_bt2965_blueprint_index.py'
+      - 'tests/test_bt2962_bt2965_spread_curvature_route_code.py'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - '.github/workflows/w33_pass2962_2965_spread_curvature_route_code.yml'
+  workflow_dispatch:
+
+jobs:
+  exact-curvature-route-code:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install focused dependencies
+        run: python -m pip install --upgrade numpy networkx pytest
+      - name: Recompute Pass 2962
+        run: python analysis/bt2962_oam_holonomy_s6_two_graph.py
+      - name: Recompute Pass 2965
+        run: python analysis/bt2965_curvature_route_code.py
+      - name: Focused regression
+        run: pytest -q tests/test_bt2962_bt2965_spread_curvature_route_code.py
+      - name: Exercise blueprint and atlas integration against live files
+        run: |
+          python tools/integrate_bt2962_bt2965_blueprint_index.py
+          python tools/integrate_bt2962_bt2965_blueprint_index.py --check
+          grep -Fq '\input{analysis/BT2962_BT2965_spread_curvature_route_code_blueprint_insert}' holonet_machine_blueprint.tex
+          grep -Fq 'BT2962-BT2965-SPREAD-CURVATURE-ROUTE-CODE-V1' docs/index.html
+      - name: Verify paper promotions and whitespace
+        run: |
+          grep -Fq '\input{analysis/BT2962_BT2965_spread_curvature_route_code_insert}' w33_paper.tex
+          grep -Fq '\input{analysis/BT2962_BT2965_spread_curvature_route_code_insert}' photonic_holonet.tex
+          git diff --check
