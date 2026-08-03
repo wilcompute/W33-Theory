@@ -1,0 +1,22 @@
+{
+  "centralizer_occupied_hashes": 108,
+  "maximum_word_length": 6,
+  "schema": "w33.pass2774.compressed_cx_compiler.v1",
+  "status": "EXACT_LINE_FORM_AND_PERFECT_HASH_COMPILER",
+  "storage": {
+    "baseline_51840_state_output_table_bits": 829440,
+    "compressed_total_bits": 15233,
+    "compressed_total_bytes": 1905,
+    "compression_ratio": 54.4502067878947,
+    "line_and_form_classifier_bits": 712,
+    "representative_rom_bits": 12960,
+    "suffix_hash_rom_bits": 1561
+  },
+  "theorem": {
+    "cx_conjugacy_class": 480,
+    "factorization": "40 Lagrangian lines x 12 invertible symmetric 2x2 forms of determinant 2 over F3",
+    "form_alphabet": [[0,1,1,0],[0,1,1,1],[0,1,1,2],[0,2,2,0],[0,2,2,1],[0,2,2,2],[1,0,0,2],[1,1,1,0],[1,2,2,0],[2,0,0,1],[2,1,1,0],[2,2,2,0]],
+    "forms_per_line": 12,
+    "lines": 40
+  }
+}

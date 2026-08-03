@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Exact 36-state Witting magic-resource preparation ROM and witness thresholds."""
+"""Deterministic Pass 2767 M36 preparation ROM.
+
+The numerical stabilizer-overlap calculation remains a verifier, but serialized
+values are rounded canonical exact targets so NumPy/LAPACK version changes do not
+cause certificate drift.
+"""
 from __future__ import annotations
 
 import itertools
@@ -15,10 +20,10 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def hermitian_pauli(v: tuple[int, int, int, int]) -> np.ndarray:
     a, b, c, d = v
-    X = np.array([[0, 1], [1, 0]], dtype=complex)
-    Z = np.diag([1, -1]).astype(complex)
-    p1 = (1j ** (a * b)) * np.linalg.matrix_power(X, a) @ np.linalg.matrix_power(Z, b)
-    p2 = (1j ** (c * d)) * np.linalg.matrix_power(X, c) @ np.linalg.matrix_power(Z, d)
+    x = np.array([[0, 1], [1, 0]], dtype=complex)
+    z = np.diag([1, -1]).astype(complex)
+    p1 = (1j ** (a * b)) * np.linalg.matrix_power(x, a) @ np.linalg.matrix_power(z, b)
+    p2 = (1j ** (c * d)) * np.linalg.matrix_power(x, c) @ np.linalg.matrix_power(z, d)
     return np.kron(p1, p2)
 
 
@@ -36,16 +41,16 @@ def stabilizer_states() -> list[np.ndarray]:
         planes.add(tuple(sorted((u, v, w))))
     assert len(planes) == 15
     states: list[np.ndarray] = []
-    I = np.eye(4, dtype=complex)
+    ident = np.eye(4, dtype=complex)
     for plane in sorted(planes):
         u = plane[0]
         v = next(x for x in plane[1:] if x != u)
-        P = hermitian_pauli(u)
-        Q = hermitian_pauli(v)
+        p = hermitian_pauli(u)
+        q = hermitian_pauli(v)
         for s, t in itertools.product((-1, 1), repeat=2):
-            rho = ((I + s * P) @ (I + t * Q)) / 4
-            vals, vecs = np.linalg.eigh(rho)
-            psi = vecs[:, int(np.argmax(vals))]
+            rho = ((ident + s * p) @ (ident + t * q)) / 4
+            values, vectors_e = np.linalg.eigh(rho)
+            psi = vectors_e[:, int(np.argmax(values))]
             psi /= np.linalg.norm(psi)
             if not any(abs(np.vdot(psi, old)) ** 2 > 1 - 1e-9 for old in states):
                 states.append(psi)
@@ -54,7 +59,6 @@ def stabilizer_states() -> list[np.ndarray]:
 
 
 def ray_controls() -> list[dict]:
-    """Return the exact four-family ROM using sixth-root phase exponents."""
     rows: list[dict] = []
     for family in range(4):
         for mu in range(3):
@@ -69,15 +73,7 @@ def ray_controls() -> list[dict]:
                     phase = [0, (3 + 2 * mu) % 6, 0, (2 * nu) % 6]
                 else:
                     phase = [0, (2 * mu) % 6, (2 * nu) % 6, 0]
-                rows.append({
-                    "ray_id": family * 9 + 3 * mu + nu,
-                    "family": family,
-                    "mu": mu,
-                    "nu": nu,
-                    "dark_mode": dark,
-                    "phase6": phase,
-                })
-    assert len(rows) == 36
+                rows.append({"ray_id": family * 9 + 3 * mu + nu, "family": family, "mu": mu, "nu": nu, "dark_mode": dark, "phase6": phase})
     return rows
 
 
@@ -88,59 +84,55 @@ def controls_to_ray(row: dict) -> np.ndarray:
 
 
 def expected_ray(row: dict) -> np.ndarray:
-    w = np.exp(2j * math.pi / 3)
-    mu, nu, f = row["mu"], row["nu"], row["family"]
-    if f == 0:
-        raw = [0, 1, -(w**mu), w**nu]
-    elif f == 1:
-        raw = [1, 0, -(w**mu), -(w**nu)]
-    elif f == 2:
-        raw = [1, -(w**mu), 0, w**nu]
+    omega = np.exp(2j * math.pi / 3)
+    mu, nu, family = row["mu"], row["nu"], row["family"]
+    if family == 0:
+        raw = [0, 1, -(omega**mu), omega**nu]
+    elif family == 1:
+        raw = [1, 0, -(omega**mu), -(omega**nu)]
+    elif family == 2:
+        raw = [1, -(omega**mu), 0, omega**nu]
     else:
-        raw = [1, w**mu, w**nu, 0]
+        raw = [1, omega**mu, omega**nu, 0]
     return np.array(raw, dtype=complex) / math.sqrt(3)
 
 
 def build_rom() -> dict:
-    stabs = stabilizer_states()
+    stabilizers = stabilizer_states()
     rows = ray_controls()
     exact_values = [
-        ((2 + math.sqrt(3)) / 6, "deep", 0),
-        ((5 + 2 * math.sqrt(3)) / 12, "mid", 1),
-        (3 / 4, "shallow", 2),
+        ((2 + math.sqrt(3)) / 6, "deep", 0, "(2+sqrt(3))/6"),
+        ((5 + 2 * math.sqrt(3)) / 12, "mid", 1, "(5+2*sqrt(3))/12"),
+        (3 / 4, "shallow", 2, "3/4"),
     ]
     grades: Counter[str] = Counter()
     for row in rows:
         ray = controls_to_ray(row)
         expected = expected_ray(row)
         assert abs(abs(np.vdot(ray, expected)) ** 2 - 1) < 1e-10
-        fidelity = max(abs(np.vdot(ray, s)) ** 2 for s in stabs)
-        target, name, code = min(exact_values, key=lambda x: abs(fidelity - x[0]))
-        assert abs(fidelity - target) < 1e-8
+        measured = max(abs(np.vdot(ray, s)) ** 2 for s in stabilizers)
+        target, name, grade_code, exact = min(exact_values, key=lambda item: abs(measured - item[0]))
+        assert abs(measured - target) < 1e-8
         row["grade"] = name
-        row["grade_code"] = code
-        row["nearest_stabilizer_fidelity"] = fidelity
+        row["grade_code"] = grade_code
+        row["nearest_stabilizer_fidelity"] = round(target, 15)
+        row["nearest_stabilizer_fidelity_exact"] = exact
         grades[name] += 1
     assert grades == Counter({"mid": 24, "deep": 8, "shallow": 4})
-
     thresholds = {
-        "deep": {"depolarizing_magic_witness_p_lt": (8 - 2 * math.sqrt(3)) / 9, "exact": "(8-2*sqrt(3))/9"},
-        "mid": {"depolarizing_magic_witness_p_lt": (7 - 2 * math.sqrt(3)) / 9, "exact": "(7-2*sqrt(3))/9"},
-        "shallow": {"depolarizing_magic_witness_p_lt": 1 / 3, "exact": "1/3"},
+        "deep": {"depolarizing_magic_witness_p_lt": round((8 - 2 * math.sqrt(3)) / 9, 15), "exact": "(8-2*sqrt(3))/9"},
+        "mid": {"depolarizing_magic_witness_p_lt": round((7 - 2 * math.sqrt(3)) / 9, 15), "exact": "(7-2*sqrt(3))/9"},
+        "shallow": {"depolarizing_magic_witness_p_lt": round(1 / 3, 15), "exact": "1/3"},
     }
     return {
-        "schema": "w33.pass2767.m36_preparation_rom.v1",
+        "schema": "w33.pass2767.m36_preparation_rom.v2",
         "status": "EXACT_PREPARATION_AND_WITNESS_ONLY",
         "resource_type": "M36_Q4_RAW",
         "hardware_factorization": {"shared_balanced_tritter": 1, "dark_mode_choices": 4, "phase_alphabet": "sixth roots of unity", "states": 36},
         "grade_census": dict(grades),
         "depolarizing_witness_thresholds": thresholds,
         "rows": rows,
-        "boundary": (
-            "This ROM prepares and types the 36 ququart/two-qubit Witting rays. "
-            "It does not identify them with qutrit magic states and does not certify "
-            "a distillation code, injection gadget, or threshold for M36."
-        ),
+        "boundary": "This ROM prepares and types the 36 ququart/two-qubit Witting rays. It does not identify them with qutrit magic states and does not certify a distillation code, injection gadget, or threshold for M36.",
     }
 
 

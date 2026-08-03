@@ -1,0 +1,66 @@
+{
+  "boundary": "The shot count is a conservative Hoeffding/union bound for the exact finite trace alphabet. It is not an experimental calibration result; mode-dependent loss and coherent drift must be measured.",
+  "group_order": 51840,
+  "measurement_identity": "A_k=Tr(U^k)/9",
+  "nearest_alphabet_shot_bound": {
+    "loss_scaling": "launched shots = detected shots / eta_detection",
+    "phase_noise_scaling": "replace delta by exp(-sigma_phi^2/2)*delta for Gaussian path-phase noise",
+    "quadrature_tolerance": 0.02875767167805781,
+    "shots": {
+      "0.001": {"detected_shots_per_quadrature": 5434, "four_setting_detected_shots": 21736},
+      "0.01": {"detected_shots_per_quadrature": 4042, "four_setting_detected_shots": 16168},
+      "0.05": {"detected_shots_per_quadrature": 3069, "four_setting_detected_shots": 12276},
+      "1e-06": {"detected_shots_per_quadrature": 9610, "four_setting_detected_shots": 38440}
+    },
+    "union_bound": "P_fail <= 8 exp(-2 N epsilon^2)"
+  },
+  "physical_protocol": {
+    "ancilla": "path qubit prepared in |+>",
+    "arm_one": "compiled U^k",
+    "arm_zero": "identity",
+    "class_function": "Theta_k=(9*A_k)^9/det(U^k)",
+    "determinant": "tracked digitally from the Clifford instruction stream",
+    "internal_register": "nine time-frequency modes",
+    "parallel_mode": "multiplex all nine computational inputs and average detector-resolved path contrast",
+    "sequential_fallback_settings": 36,
+    "settings": ["k=1,X", "k=1,Y", "k=2,X", "k=2,Y"]
+  },
+  "schema": "w33.pass2773.physical_metaplectic_sensor.v1",
+  "status": "EXACT_ALPHABET_AND_CONSERVATIVE_SHOT_BOUND",
+  "trace_alphabet": {
+    "k1": [
+      {"imag": -0.111111111111, "magnitude": 0.111111111111, "multiplicity": 8043, "real": 0.0},
+      {"imag": 0.0, "magnitude": 0.111111111111, "multiplicity": 11427, "real": 0.111111111111},
+      {"imag": 0.111111111111, "magnitude": 0.111111111111, "multiplicity": 8061, "real": -0.0},
+      {"imag": 0.0, "magnitude": 0.111111111111, "multiplicity": 5598, "real": -0.111111111111},
+      {"imag": -0.19245008973, "magnitude": 0.19245008973, "multiplicity": 4039, "real": -0.0},
+      {"imag": -0.0, "magnitude": 0.19245008973, "multiplicity": 6838, "real": 0.19245008973},
+      {"imag": 0.19245008973, "magnitude": 0.19245008973, "multiplicity": 4043, "real": -0.0},
+      {"imag": 0.0, "magnitude": 0.19245008973, "multiplicity": 1640, "real": -0.19245008973},
+      {"imag": -0.333333333333, "magnitude": 0.333333333333, "multiplicity": 468, "real": 0.0},
+      {"imag": 0.0, "magnitude": 0.333333333333, "multiplicity": 1098, "real": 0.333333333333},
+      {"imag": 0.333333333333, "magnitude": 0.333333333333, "multiplicity": 468, "real": 0.0},
+      {"imag": 0.0, "magnitude": 0.333333333333, "multiplicity": 36, "real": -0.333333333333},
+      {"imag": -0.57735026919, "magnitude": 0.57735026919, "multiplicity": 10, "real": -0.0},
+      {"imag": -0.0, "magnitude": 0.57735026919, "multiplicity": 60, "real": 0.57735026919},
+      {"imag": 0.57735026919, "magnitude": 0.57735026919, "multiplicity": 10, "real": -0.0},
+      {"imag": 0.0, "magnitude": 1.0, "multiplicity": 1, "real": 1.0}
+    ],
+    "k1_size": 16,
+    "k2": [
+      {"imag": 0.0, "magnitude": 0.111111111111, "multiplicity": 11506, "real": 0.111111111111},
+      {"imag": 0.0, "magnitude": 0.111111111111, "multiplicity": 10202, "real": -0.111111111111},
+      {"imag": -0.19245008973, "magnitude": 0.19245008973, "multiplicity": 10070, "real": 0.0},
+      {"imag": 0.19245008973, "magnitude": 0.19245008973, "multiplicity": 10090, "real": 0.0},
+      {"imag": 0.0, "magnitude": 0.333333333333, "multiplicity": 5154, "real": 0.333333333333},
+      {"imag": 0.0, "magnitude": 0.333333333333, "multiplicity": 3126, "real": -0.333333333333},
+      {"imag": -0.57735026919, "magnitude": 0.57735026919, "multiplicity": 798, "real": 0.0},
+      {"imag": 0.57735026919, "magnitude": 0.57735026919, "multiplicity": 802, "real": 0.0},
+      {"imag": 0.0, "magnitude": 1.0, "multiplicity": 76, "real": 1.0},
+      {"imag": 0.0, "magnitude": 1.0, "multiplicity": 16, "real": -1.0}
+    ],
+    "k2_size": 10,
+    "minimum_complex_plane_separation": 0.081338978618764,
+    "minimum_separation_exact": "(sqrt(3)-1)/9"
+  }
+}

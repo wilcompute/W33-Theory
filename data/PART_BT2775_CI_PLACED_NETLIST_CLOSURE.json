@@ -1,0 +1,29 @@
+{
+  "canonical_hashes": {
+    "PART_BT2767_M36_PREPARATION_ROM.json": "4f637e7c174cd6f8597511911bb2ecdd6ee58fe8bfd862c3d62b18bf30138322",
+    "PART_BT2769_CX_CENTRALIZER_COMPILER_summary.json": "171f786436da34dc52c876032ee4ab80905e4808658a244de6ee43f172b067b7"
+  },
+  "checks": {
+    "PART_BT2767_M36_PREPARATION_ROM.json": true,
+    "PART_BT2769_CX_CENTRALIZER_COMPILER_summary.json": true
+  },
+  "implementation_boundary": "Placed utilization, timing, and power-proxy evidence becomes promoted only after the new GitHub Actions artifact is observed and parsed.",
+  "prior_failure": {
+    "failed_step": "Fail on certificate drift",
+    "mathematical_generators_completed_before_failure": true,
+    "root_causes": [
+      "M36 serialized floating-point overlap values were not canonical across NumPy/LAPACK versions",
+      "the compiler summary was committed in hand-compacted JSON rather than generator formatting"
+    ],
+    "rtl_and_pnr_steps_were_skipped": true,
+    "workflow_run": 30804032606
+  },
+  "repairs": [
+    "serialize exact M36 overlap labels plus rounded canonical values",
+    "commit generator-formatted compiler summary",
+    "split exact-certificate and RTL/P&R jobs so implementation evidence is not masked by certificate drift",
+    "run exhaustive Icarus simulation, Yosys synthesis, nextpnr-ice40 placement, and icetime timing"
+  ],
+  "schema": "w33.pass2775.ci_placed_netlist_closure.v1",
+  "status": "LOCAL_DRIFT_CLOSED_REMOTE_IMPLEMENTATION_PENDING"
+}

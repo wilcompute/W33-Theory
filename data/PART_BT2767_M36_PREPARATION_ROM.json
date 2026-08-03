@@ -1,0 +1,645 @@
+{
+  "boundary": "This ROM prepares and types the 36 ququart/two-qubit Witting rays. It does not identify them with qutrit magic states and does not certify a distillation code, injection gadget, or threshold for M36.",
+  "depolarizing_witness_thresholds": {
+    "deep": {
+      "depolarizing_magic_witness_p_lt": 0.503988709429138,
+      "exact": "(8-2*sqrt(3))/9"
+    },
+    "mid": {
+      "depolarizing_magic_witness_p_lt": 0.392877598318027,
+      "exact": "(7-2*sqrt(3))/9"
+    },
+    "shallow": {
+      "depolarizing_magic_witness_p_lt": 0.333333333333333,
+      "exact": "1/3"
+    }
+  },
+  "grade_census": {
+    "deep": 8,
+    "mid": 24,
+    "shallow": 4
+  },
+  "hardware_factorization": {
+    "dark_mode_choices": 4,
+    "phase_alphabet": "sixth roots of unity",
+    "shared_balanced_tritter": 1,
+    "states": 36
+  },
+  "resource_type": "M36_Q4_RAW",
+  "rows": [
+    {
+      "dark_mode": 0,
+      "family": 0,
+      "grade": "shallow",
+      "grade_code": 2,
+      "mu": 0,
+      "nearest_stabilizer_fidelity": 0.75,
+      "nearest_stabilizer_fidelity_exact": "3/4",
+      "nu": 0,
+      "phase6": [
+        0,
+        0,
+        3,
+        0
+      ],
+      "ray_id": 0
+    },
+    {
+      "dark_mode": 0,
+      "family": 0,
+      "grade": "mid",
+      "grade_code": 1,
+      "mu": 0,
+      "nearest_stabilizer_fidelity": 0.705341801261479,
+      "nearest_stabilizer_fidelity_exact": "(5+2*sqrt(3))/12",
+      "nu": 1,
+      "phase6": [
+        0,
+        0,
+        3,
+        2
+      ],
+      "ray_id": 1
+    },
+    {
+      "dark_mode": 0,
+      "family": 0,
+      "grade": "mid",
+      "grade_code": 1,
+      "mu": 0,
+      "nearest_stabilizer_fidelity": 0.705341801261479,
+      "nearest_stabilizer_fidelity_exact": "(5+2*sqrt(3))/12",
+      "nu": 2,
+      "phase6": [
+        0,
+        0,
+        3,
+        4
+      ],
+      "ray_id": 2
+    },
+    {
+      "dark_mode": 0,
+      "family": 0,
+      "grade": "mid",
+      "grade_code": 1,
+      "mu": 1,
+      "nearest_stabilizer_fidelity": 0.705341801261479,
+      "nearest_stabilizer_fidelity_exact": "(5+2*sqrt(3))/12",
+      "nu": 0,
+      "phase6": [
+        0,
+        0,
+        5,
+        0
+      ],
+      "ray_id": 3
+    },
+    {
+      "dark_mode": 0,
+      "family": 0,
+      "grade": "mid",
+      "grade_code": 1,
+      "mu": 1,
+      "nearest_stabilizer_fidelity": 0.705341801261479,
+      "nearest_stabilizer_fidelity_exact": "(5+2*sqrt(3))/12",
+      "nu": 1,
+      "phase6": [
+        0,
+        0,
+        5,
+        2
+      ],
+      "ray_id": 4
+    },
+    {
+      "dark_mode": 0,
+      "family": 0,
+      "grade": "deep",
+      "grade_code": 0,
+      "mu": 1,
+      "nearest_stabilizer_fidelity": 0.622008467928146,
+      "nearest_stabilizer_fidelity_exact": "(2+sqrt(3))/6",
+      "nu": 2,
+      "phase6": [
+        0,
+        0,
+        5,
+        4
+      ],
+      "ray_id": 5
+    },
+    {
+      "dark_mode": 0,
+      "family": 0,
+      "grade": "mid",
+      "grade_code": 1,
+      "mu": 2,
+      "nearest_stabilizer_fidelity": 0.705341801261479,
+      "nearest_stabilizer_fidelity_exact": "(5+2*sqrt(3))/12",
+      "nu": 0,
+      "phase6": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "ray_id": 6
+    },
+    {
+      "dark_mode": 0,
+      "family": 0,
+      "grade": "deep",
+      "grade_code": 0,
+      "mu": 2,
+      "nearest_stabilizer_fidelity": 0.622008467928146,
+      "nearest_stabilizer_fidelity_exact": "(2+sqrt(3))/6",
+      "nu": 1,
+      "phase6": [
+        0,
+        0,
+        1,
+        2
+      ],
+      "ray_id": 7
+    },
+    {
+      "dark_mode": 0,
+      "family": 0,
+      "grade": "mid",
+      "grade_code": 1,
+      "mu": 2,
+      "nearest_stabilizer_fidelity": 0.705341801261479,
+      "nearest_stabilizer_fidelity_exact": "(5+2*sqrt(3))/12",
+      "nu": 2,
+      "phase6": [
+        0,
+        0,
+        1,
+        4
+      ],
+      "ray_id": 8
+    },
+    {
+      "dark_mode": 1,
+      "family": 1,
+      "grade": "shallow",
+      "grade_code": 2,
+      "mu": 0,
+      "nearest_stabilizer_fidelity": 0.75,
+      "nearest_stabilizer_fidelity_exact": "3/4",
+      "nu": 0,
+      "phase6": [
+        0,
+        0,
+        3,
+        3
+      ],
+      "ray_id": 9
+    },
+    {
+      "dark_mode": 1,
+      "family": 1,
+      "grade": "mid",
+      "grade_code": 1,
+      "mu": 0,
+      "nearest_stabilizer_fidelity": 0.705341801261479,
+      "nearest_stabilizer_fidelity_exact": "(5+2*sqrt(3))/12",
+      "nu": 1,
+      "phase6": [
+        0,
+        0,
+        3,
+        5
+      ],
+      "ray_id": 10
+    },
+    {
+      "dark_mode": 1,
+      "family": 1,
+      "grade": "mid",
+      "grade_code": 1,
+      "mu": 0,
+      "nearest_stabilizer_fidelity": 0.705341801261479,
+      "nearest_stabilizer_fidelity_exact": "(5+2*sqrt(3))/12",
+      "nu": 2,
+      "phase6": [
+        0,
+        0,
+        3,
+        1
+      ],
+      "ray_id": 11
+    },
+    {
+      "dark_mode": 1,
+      "family": 1,
+      "grade": "mid",
+      "grade_code": 1,
+      "mu": 1,
+      "nearest_stabilizer_fidelity": 0.705341801261479,
+      "nearest_stabilizer_fidelity_exact": "(5+2*sqrt(3))/12",
+      "nu": 0,
+      "phase6": [
+        0,
+        0,
+        5,
+        3
+      ],
+      "ray_id": 12
+    },
+    {
+      "dark_mode": 1,
+      "family": 1,
+      "grade": "mid",
+      "grade_code": 1,
+      "mu": 1,
+      "nearest_stabilizer_fidelity": 0.705341801261479,
+      "nearest_stabilizer_fidelity_exact": "(5+2*sqrt(3))/12",
+      "nu": 1,
+      "phase6": [
+        0,
+        0,
+        5,
+        5
+      ],
+      "ray_id": 13
+    },
+    {
+      "dark_mode": 1,
+      "family": 1,
+      "grade": "deep",
+      "grade_code": 0,
+      "mu": 1,
+      "nearest_stabilizer_fidelity": 0.622008467928146,
+      "nearest_stabilizer_fidelity_exact": "(2+sqrt(3))/6",
+      "nu": 2,
+      "phase6": [
+        0,
+        0,
+        5,
+        1
+      ],
+      "ray_id": 14
+    },
+    {
+      "dark_mode": 1,
+      "family": 1,
+      "grade": "mid",
+      "grade_code": 1,
+      "mu": 2,
+      "nearest_stabilizer_fidelity": 0.705341801261479,
+      "nearest_stabilizer_fidelity_exact": "(5+2*sqrt(3))/12",
+      "nu": 0,
+      "phase6": [
+        0,
+        0,
+        1,
+        3
+      ],
+      "ray_id": 15
+    },
+    {
+      "dark_mode": 1,
+      "family": 1,
+      "grade": "deep",
+      "grade_code": 0,
+      "mu": 2,
+      "nearest_stabilizer_fidelity": 0.622008467928146,
+      "nearest_stabilizer_fidelity_exact": "(2+sqrt(3))/6",
+      "nu": 1,
+      "phase6": [
+        0,
+        0,
+        1,
+        5
+      ],
+      "ray_id": 16
+    },
+    {
+      "dark_mode": 1,
+      "family": 1,
+      "grade": "mid",
+      "grade_code": 1,
+      "mu": 2,
+      "nearest_stabilizer_fidelity": 0.705341801261479,
+      "nearest_stabilizer_fidelity_exact": "(5+2*sqrt(3))/12",
+      "nu": 2,
+      "phase6": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "ray_id": 17
+    },
+    {
+      "dark_mode": 2,
+      "family": 2,
+      "grade": "shallow",
+      "grade_code": 2,
+      "mu": 0,
+      "nearest_stabilizer_fidelity": 0.75,
+      "nearest_stabilizer_fidelity_exact": "3/4",
+      "nu": 0,
+      "phase6": [
+        0,
+        3,
+        0,
+        0
+      ],
+      "ray_id": 18
+    },
+    {
+      "dark_mode": 2,
+      "family": 2,
+      "grade": "mid",
+      "grade_code": 1,
+      "mu": 0,
+      "nearest_stabilizer_fidelity": 0.705341801261479,
+      "nearest_stabilizer_fidelity_exact": "(5+2*sqrt(3))/12",
+      "nu": 1,
+      "phase6": [
+        0,
+        3,
+        0,
+        2
+      ],
+      "ray_id": 19
+    },
+    {
+      "dark_mode": 2,
+      "family": 2,
+      "grade": "mid",
+      "grade_code": 1,
+      "mu": 0,
+      "nearest_stabilizer_fidelity": 0.705341801261479,
+      "nearest_stabilizer_fidelity_exact": "(5+2*sqrt(3))/12",
+      "nu": 2,
+      "phase6": [
+        0,
+        3,
+        0,
+        4
+      ],
+      "ray_id": 20
+    },
+    {
+      "dark_mode": 2,
+      "family": 2,
+      "grade": "mid",
+      "grade_code": 1,
+      "mu": 1,
+      "nearest_stabilizer_fidelity": 0.705341801261479,
+      "nearest_stabilizer_fidelity_exact": "(5+2*sqrt(3))/12",
+      "nu": 0,
+      "phase6": [
+        0,
+        5,
+        0,
+        0
+      ],
+      "ray_id": 21
+    },
+    {
+      "dark_mode": 2,
+      "family": 2,
+      "grade": "mid",
+      "grade_code": 1,
+      "mu": 1,
+      "nearest_stabilizer_fidelity": 0.705341801261479,
+      "nearest_stabilizer_fidelity_exact": "(5+2*sqrt(3))/12",
+      "nu": 1,
+      "phase6": [
+        0,
+        5,
+        0,
+        2
+      ],
+      "ray_id": 22
+    },
+    {
+      "dark_mode": 2,
+      "family": 2,
+      "grade": "deep",
+      "grade_code": 0,
+      "mu": 1,
+      "nearest_stabilizer_fidelity": 0.622008467928146,
+      "nearest_stabilizer_fidelity_exact": "(2+sqrt(3))/6",
+      "nu": 2,
+      "phase6": [
+        0,
+        5,
+        0,
+        4
+      ],
+      "ray_id": 23
+    },
+    {
+      "dark_mode": 2,
+      "family": 2,
+      "grade": "mid",
+      "grade_code": 1,
+      "mu": 2,
+      "nearest_stabilizer_fidelity": 0.705341801261479,
+      "nearest_stabilizer_fidelity_exact": "(5+2*sqrt(3))/12",
+      "nu": 0,
+      "phase6": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "ray_id": 24
+    },
+    {
+      "dark_mode": 2,
+      "family": 2,
+      "grade": "deep",
+      "grade_code": 0,
+      "mu": 2,
+      "nearest_stabilizer_fidelity": 0.622008467928146,
+      "nearest_stabilizer_fidelity_exact": "(2+sqrt(3))/6",
+      "nu": 1,
+      "phase6": [
+        0,
+        1,
+        0,
+        2
+      ],
+      "ray_id": 25
+    },
+    {
+      "dark_mode": 2,
+      "family": 2,
+      "grade": "mid",
+      "grade_code": 1,
+      "mu": 2,
+      "nearest_stabilizer_fidelity": 0.705341801261479,
+      "nearest_stabilizer_fidelity_exact": "(5+2*sqrt(3))/12",
+      "nu": 2,
+      "phase6": [
+        0,
+        1,
+        0,
+        4
+      ],
+      "ray_id": 26
+    },
+    {
+      "dark_mode": 3,
+      "family": 3,
+      "grade": "shallow",
+      "grade_code": 2,
+      "mu": 0,
+      "nearest_stabilizer_fidelity": 0.75,
+      "nearest_stabilizer_fidelity_exact": "3/4",
+      "nu": 0,
+      "phase6": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ray_id": 27
+    },
+    {
+      "dark_mode": 3,
+      "family": 3,
+      "grade": "mid",
+      "grade_code": 1,
+      "mu": 0,
+      "nearest_stabilizer_fidelity": 0.705341801261479,
+      "nearest_stabilizer_fidelity_exact": "(5+2*sqrt(3))/12",
+      "nu": 1,
+      "phase6": [
+        0,
+        0,
+        2,
+        0
+      ],
+      "ray_id": 28
+    },
+    {
+      "dark_mode": 3,
+      "family": 3,
+      "grade": "mid",
+      "grade_code": 1,
+      "mu": 0,
+      "nearest_stabilizer_fidelity": 0.705341801261479,
+      "nearest_stabilizer_fidelity_exact": "(5+2*sqrt(3))/12",
+      "nu": 2,
+      "phase6": [
+        0,
+        0,
+        4,
+        0
+      ],
+      "ray_id": 29
+    },
+    {
+      "dark_mode": 3,
+      "family": 3,
+      "grade": "mid",
+      "grade_code": 1,
+      "mu": 1,
+      "nearest_stabilizer_fidelity": 0.705341801261479,
+      "nearest_stabilizer_fidelity_exact": "(5+2*sqrt(3))/12",
+      "nu": 0,
+       "phase6": [
+        0,
+        2,
+        0,
+        0
+      ],
+      "ray_id": 30
+    },
+    {
+      "dark_mode": 3,
+      "family": 3,
+      "grade": "mid",
+      "grade_code": 1,
+      "mu": 1,
+      "nearest_stabilizer_fidelity": 0.705341801261479,
+      "nearest_stabilizer_fidelity_exact": "(5+2*sqrt(3))/12",
+      "nu": 1,
+      "phase6": [
+        0,
+        2,
+        2,
+        0
+      ],
+      "ray_id": 31
+    },
+    {
+      "dark_mode": 3,
+      "family": 3,
+      "grade": "deep",
+      "grade_code": 0,
+      "mu": 1,
+      "nearest_stabilizer_fidelity": 0.622008467928146,
+      "nearest_stabilizer_fidelity_exact": "(2+sqrt(3))/6",
+      "nu": 2,
+      "phase6": [
+        0,
+        2,
+        4,
+        0
+      ],
+      "ray_id": 32
+    },
+    {
+      "dark_mode": 3,
+      "family": 3,
+      "grade": "mid",
+      "grade_code": 1,
+      "mu": 2,
+       "nearest_stabilizer_fidelity": 0.705341801261479,
+      "nearest_stabilizer_fidelity_exact": "(5+2*sqrt(3))/12",
+      "nu": 0,
+      "phase6": [
+        0,
+        4,
+        0,
+        0
+      ],
+      "ray_id": 33
+    },
+    {
+      "dark_mode": 3,
+      "family": 3,
+      "grade": "deep",
+      "grade_code": 0,
+      "mu": 2,
+      "nearest_stabilizer_fidelity": 0.622008467928146,
+      "nearest_stabilizer_fidelity_exact": "(2+sqrt(3))/6",
+      "nu": 1,
+      "phase6": [
+        0,
+        4,
+        2,
+        0
+      ],
+      "ray_id": 34
+    },
+    {
+      "dark_mode": 3,
+      "family": 3,
+      "grade": "mid",
+      "grade_code": 1,
+      "mu": 2,
+      "nearest_stabilizer_fidelity": 0.705341801261479,
+      "nearest_stabilizer_fidelity_exact": "(5+2*sqrt(3))/12",
+      "nu": 2,
+      "phase6": [
+        0,
+        4,
+        4,
+        0
+      ],
+      "ray_id": 35
+    }
+  ],
+  "schema": "w33.pass2767.m36_preparation_rom.v2",
+  "status": "EXACT_PREPARATION_AND_WITNESS_ONLY"
+_
