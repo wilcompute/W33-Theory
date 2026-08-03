@@ -1,0 +1,34 @@
+{
+  "adaptive_receiver_prior_art": "Acin-Bagan-Baig-Masanes-Munoz-Tapia: adaptive individual von Neumann measurements attain the collective bound for every copy number.",
+  "check_count": 10,
+  "checks": {
+    "adaptive_individual_receiver_matches_collective_bound_by_published_theorem": true,
+    "all_squared_overlaps_equal_one_third": true,
+    "ncopy_overlap_squared_is_three_to_minus_n": true,
+    "pauli_receiver_success_is_0p788675": true,
+    "prior_helstrom_label_is_corrected": true,
+    "selected_pauli_expectation_magnitude_one_over_sqrt3": true,
+    "six_copies_cross_one_per_thousand_error": true,
+    "twelve_conjugate_pairs_reconstructed": true,
+    "twelve_copies_cross_one_per_million_error": true,
+    "unrestricted_helstrom_success_is_0p908248": true
+  },
+  "claim_boundary": "The formulas assume a known conjugate pair/frame, equal priors, perfect copies and ideal measurements. The adaptive attainability theorem is published prior art, not a new W33 theorem.",
+  "headline": "The two-Pauli chirality readout is minimal in probe alphabet but not Helstrom-optimal: unrestricted one-copy success is 90.825%, and adaptive individual measurements attain the n-copy collective bound.",
+  "minimum_project_local_pauli_cover": ["YI", "IY"],
+  "mislabelled_gap": 0.11957315586905015,
+  "ncopy_helstrom_error": "(1-sqrt(1-3^(-n)))/2",
+  "ncopy_helstrom_success": "(1+sqrt(1-3^(-n)))/2",
+  "pair_squared_overlap": "1/3",
+  "quantum_chernoff_exponent": "log(3)",
+  "schema": "w33.pass2969.chirality_receiver_correction.v1",
+  "selected_local_pauli_success": "(1+1/sqrt(3))/2",
+  "selected_local_pauli_success_decimal": 0.7886751345948129,
+  "status": "COMPLETE_EXACT_CORRECTION_AND_STANDARD_RECEIVER_APPLICATION",
+  "thresholds": {
+    "copies_for_error_below_1e-3": 6,
+    "copies_for_error_below_1e-6": 12
+  },
+  "unrestricted_single_copy_helstrom_success": "(1+sqrt(2/3))/2",
+  "unrestricted_single_copy_helstrom_success_decimal": 0.908248290463863
+}
