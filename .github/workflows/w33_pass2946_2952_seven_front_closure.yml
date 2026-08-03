@@ -1,0 +1,95 @@
+name: Pass 2946-2952 Seven Front Closure
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [master]
+permissions:
+  contents: read
+jobs:
+  exact-rtl-docs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - name: Python dependencies
+        run: python -m pip install --upgrade pip numpy scipy pytest
+      - name: Exact Pass 2946 orbit certificates in isolated processes
+        run: |
+          python analysis/bt2946_affine_support_optimum.py --case local
+          python analysis/bt2946_affine_support_optimum.py --case n13
+          python analysis/bt2946_affine_support_optimum.py --case n14_span_zero
+          python analysis/bt2946_affine_support_optimum.py --case n14_span_nonzero
+          python analysis/bt2946_affine_support_optimum.py --case n14_outside_span
+          python analysis/bt2946_affine_support_optimum.py --case double
+          python analysis/bt2946_affine_support_optimum.py --case witness
+          python analysis/bt2946_affine_support_optimum.py --case summary
+      - name: Recompute Passes 2947-2952
+        run: |
+          python analysis/bt2947_m36_compiled_branch.py
+          python analysis/bt2948_oam_spread_fabric.py
+          python tools/gen_bt2948_oam_router_rtl.py
+          python analysis/bt2949_reversible_transcript_codec.py
+          python analysis/bt2950_ternary_844_classification.py
+          python analysis/bt2951_isodual_oam_quarter_turn.py
+          python analysis/bt2952_router_observer_fusion.py
+          pytest -q tests/test_bt2946_bt2952_seven_front_closure.py
+      - name: Install RTL and placement tools
+        run: sudo apt-get update && sudo apt-get install -y iverilog yosys nextpnr-ice40 fpga-icestorm
+      - name: Exhaustive RTL simulations
+        run: |
+          iverilog -g2012 -s tb_w33_pass2947_m36_branch_microcode -o /tmp/m36.vvp rtl/w33_pass2947_m36_branch_microcode.sv rtl/tb_w33_pass2947_m36_branch_microcode.sv
+          vvp /tmp/m36.vvp
+          iverilog -g2012 -s tb_w33_pass2948_spread_router -o /tmp/router.vvp rtl/w33_pass2948_spread_router.sv rtl/tb_w33_pass2948_spread_router.sv
+          vvp /tmp/router.vvp
+          iverilog -g2012 -s tb_w33_pass2949_reversible_transcript_permutation -o /tmp/transcript.vvp rtl/w33_pass2949_reversible_transcript_permutation.sv rtl/tb_w33_pass2949_reversible_transcript_permutation.sv
+          vvp /tmp/transcript.vvp
+          iverilog -g2012 -s tb_w33_pass2951_isodual_quarter_turn -o /tmp/turn.vvp rtl/w33_pass2951_isodual_quarter_turn.sv rtl/tb_w33_pass2951_isodual_quarter_turn.sv
+          vvp /tmp/turn.vvp
+          iverilog -g2012 -s tb_w33_pass2952_joint_rank_codec -o /tmp/joint.vvp rtl/w33_pass2952_joint_rank_codec.sv rtl/tb_w33_pass2952_joint_rank_codec.sv
+          vvp /tmp/joint.vvp
+      - name: Synthesize and place new datapaths
+        run: |
+          mkdir -p evidence/pass2946_2952
+          for item in \
+            'router rtl/w33_pass2948_spread_router.sv w33_pass2948_spread_router' \
+            'transcript rtl/w33_pass2949_reversible_transcript_permutation.sv w33_pass2949_transcript_compress' \
+            'quarter rtl/w33_pass2951_isodual_quarter_turn.sv w33_pass2951_isodual_quarter_turn' \
+            'joint rtl/w33_pass2952_joint_rank_codec.sv w33_pass2952_joint_rank_encode'; do
+              set -- $item; name=$1; src=$2; top=$3
+              yosys -p "read_verilog -sv $src; synth_ice40 -top $top -json /tmp/$name.json; stat" | tee evidence/pass2946_2952/${name}_yosys.log
+              nextpnr-ice40 --hx8k --package ct256 --json /tmp/$name.json --asc /tmp/$name.asc --freq 12 --pcf-allow-unconstrained |& tee evidence/pass2946_2952/${name}_nextpnr.log
+          done
+      - name: Integrate canonical artifacts
+        run: |
+          python tools/integrate_bt2946_bt2952.py
+          python tools/integrate_bt2946_bt2952.py
+      - uses: tectonic-typesetting/setup-tectonic@v1
+      - name: Compile all three canonical manuscripts
+        run: |
+          tectonic --keep-logs holonet_machine_blueprint.tex
+          tectonic --keep-logs w33_paper.tex
+          tectonic --keep-logs photonic_holonet.tex
+          ! grep -E 'Undefined control sequence|Emergency stop' *.log
+      - name: Final audit
+        run: |
+          pytest -q tests/test_bt2946_bt2952_seven_front_closure.py
+          git diff --check
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass2946-2952-seven-front-evidence
+          path: |
+            data/PART_BT2946*_results.json
+            data/PART_BT2947*_results.json
+            data/PART_BT2948*_results.json
+            data/PART_BT2949*_results.json
+            data/PART_BT2950*_results.json
+            data/PART_BT2951*_results.json
+            data/PART_BT2952*_results.json
+            evidence/pass2946_2952/*
+            holonet_machine_blueprint.pdf
+            w33_paper.pdf
+            photonic_holonet.pdf
+            *.log
