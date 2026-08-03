@@ -2,17 +2,19 @@
   "schema": "w33.pass_namespace_reservation.v2",
   "range": "2887-2893",
   "owner": "agent/pass2887-2893-seven-front-breakthrough",
-  "status": "reserved",
+  "status": "superseded_after_local_execution_before_publication",
   "reserved_after": "parallel reservation frontier through Pass 2886",
   "reserved_at_utc": "2026-08-03T19:05:00Z",
-  "supersedes_conflicted_reservation": "2869-2875",
+  "superseded_at_utc": "2026-08-03T19:24:00Z",
+  "superseded_by": "2917-2923",
+  "reason": "A later parallel reservation overlapped 2887-2895. Completed local evidence was renumbered before repository publication so no theorem or artifact has ambiguous pass ownership.",
   "passes": {
-    "2887": "seven-bit rank-coded frame engine RTL and measured comparison against the 43-LC arithmetic engine",
-    "2888": "exact first-order M36 branch census plus mixture and adaptive-selection theorem",
-    "2889": "antiunitary chirality invariant separating the two middle 12-ray Clifford classes",
-    "2890": "noise-aware adaptive support observer and exact representation-dependent thermodynamic decision cost",
-    "2891": "current-master blueprint correction, structural rewrite, PDF compilation, and release reconciliation",
-    "2892": "outside-box test: four magic classes as suborbits of the distinguished classical-line stabilizer",
-    "2893": "outside-box test: algebraic classification of the 188 diameter-19 compiler elements"
+    "2887": "renumbered to 2917",
+    "2888": "renumbered to 2918",
+    "2889": "renumbered to 2919",
+    "2890": "renumbered to 2920",
+    "2891": "renumbered to 2921",
+    "2892": "renumbered to 2922",
+    "2893": "renumbered to 2923"
   }
 }

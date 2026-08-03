@@ -93,7 +93,7 @@
        whose wiring diagram is a piece of finite geometry\\[10pt]
        \normalsize Every figure in this document is measured or proved.}
 \author{\normalsize W(3,3)--E$_8$ project, glue track}
-\date{\normalsize 3 August 2026 \quad$\cdot$\quad Passes 2700--2886}
+\date{\normalsize 3 August 2026 \quad$\cdot$\quad Passes 2700--2916}
 
 \begin{document}
 \maketitle
@@ -1828,6 +1828,105 @@ a register holding a $2$.
 \end{center}
 
 % =====================================================================================
+\section{The machine hosts itself}\label{sec:vm}
+% =====================================================================================
+
+\begin{plain}
+Everything so far describes one machine. But the frame is \emph{two} qutrits, and a
+one-qutrit machine is a strictly smaller machine of exactly the same kind --- so this
+processor can run a smaller version of itself as a guest.
+
+That is the ordinary meaning of a virtual machine, and the ordinary question about one is:
+how much slower is the guest? Usually that is measured. Here it can be computed exactly,
+because ``how many host instructions does one guest instruction cost'' is a shortest-path
+question in a graph this document has already searched exhaustively.
+\end{plain}
+
+\begin{spec}[Emulation overhead, exact, Pass 2912]
+\begin{center}\small
+\begin{tabular}{@{}lr@{}}
+\toprule
+guest instruction & host instructions\\
+\midrule
+$F$ & 1\\
+$Z$ & 1\\
+$S$ & \textbf{8}\\
+\midrule
+worst case & $\mathbf{8\times}$\\
+mean & $3.33\times$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{spec}
+
+\headline{The entire overhead is one instruction. $F$ and $Z$ are free; the guest's phase
+gate costs eight --- because the minimal instruction set of \S\ref{sec:isa} \emph{dropped}
+$S$.}
+
+\begin{plain}
+So the two results talk to each other, and the conversation is a real design decision:
+dropping $S$ made the machine $40\%$ smaller and made one guest instruction eight times
+more expensive. If the machine is mostly going to run guests, that trade is bad. If it is
+mostly going to run native code, it is excellent. Nobody could have said which without
+both numbers.
+\end{plain}
+
+\subsection{Isolation without a memory manager}
+
+\begin{plain}
+Two guests fit side by side, one on each qutrit. The interesting part is what keeps them
+apart.
+
+In a conventional computer, isolation is \emph{enforced}: a memory management unit checks
+every access and refuses the ones that cross a boundary. Correctness depends on that check
+being present and right. Here there is nothing to check.
+\end{plain}
+
+\begin{spec}[Structural isolation]
+Of the four opcodes, exactly two --- $\mathrm{CX}_{p\to f}$ and $\mathrm{CX}_{f\to p}$ ---
+touch both halves of the frame. The other two act within one half.
+
+\smallskip\noindent
+\textbf{A hypervisor that never issues $\mathrm{CX}$ to a guest cannot leak between
+guests.} Not ``is not permitted to'': \emph{cannot}. There is no instruction that would do
+it. The guarantee comes from the algebra, not from an enforcement mechanism, and it cannot
+be defeated by a bug in the checker because there is no checker.
+\end{spec}
+
+\subsection{And it was built}
+
+\begin{spec}[One datapath, $N$ guest contexts; HX8K CT256, Pass 2914]
+\begin{center}\small
+\begin{tabular}{@{}rrrrr@{}}
+\toprule
+$N$ & shared & $F_{\max}$ & replicated ($43N$) & area saved\\
+\midrule
+1 & 42 & 175.1\,MHz & 43 & ---\\
+2 & 74 & 134.9 & 86 & 14\%\\
+4 & 118 & 128.5 & 172 & 31\%\\
+8 & 180 & 113.4 & 344 & \textbf{48\%}\\
+16 & 339 & 91.1 & 688 & \textbf{51\%}\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{spec}
+
+\begin{plain}
+Sharing wins on area at every size, and converges on saving about half --- for a legible
+reason: half the cost is the datapath, which is shareable, and half is the per-guest
+context storage, which is not.
+
+The price is speed. Eight guests sharing one datapath each run at an eighth of its clock,
+so at $N=8$ the design buys $48\%$ of the area for about a fifteenth of the per-guest
+throughput. That is the whole trade, measured on one part in one harness rather than
+argued.
+\end{plain}
+
+\headline{A network of these is a network of machines that can each host machines. The
+fractal claim of \S\ref{sec:network} is about topology; this is the same claim about
+\emph{execution}, and it is now a measured curve.}
+
+% =====================================================================================
 \section{The network}\label{sec:network}
 % =====================================================================================
 
@@ -2345,9 +2444,10 @@ closed tells you the first half is not decoration.
 \subsection{Still open}
 
 \begin{enumerate}[leftmargin=*,itemsep=4pt]
-\item \textbf{Two of the eight opcodes are not frame operations, and are not built as
-      such.} $D_{12}$-mirror is a transport operation in a dihedral group and has no
-      register semantics, so there is nothing for the frame engine to do with it.
+\item \textbf{One of the eight opcodes is not built, and deliberately so.}
+      $D_{12}$-mirror \emph{was} on this list and is now built (\S\ref{sec:vm}
+      neighbourhood; $21$ cells, $255.56$\,MHz, with its defining relation
+      SAT-proved in the netlist).
       $M_{36}$-magic is deliberately a \emph{handshake} to an external state-preparation
       block. \textbf{No non-Clifford unitary is invented in RTL}, because inventing one
       would conceal the real gap rather than close it.
@@ -2385,9 +2485,12 @@ closed tells you the first half is not decoration.
       \begin{itemize}[leftmargin=1.2em,itemsep=1pt,topsep=2pt]
       \item \textbf{Proved:} the Landauer floor. Compute is exactly $0$; readout is
             $\tfrac83 k_BT\ln2 = 47.78$\,meV.
-      \item \textcolor{bad}{\textbf{Modelled:}} $0.502$\,pJ per operation and
-            $0.105$\,mW at $208.86$\,MHz, from measured activity ($1.622$ transitions/op),
-            measured cell count ($43$) and \emph{assumed} $5$\,fF/cell and $1.2$\,V.
+      \item \textcolor{bad}{\textbf{Modelled:}} $\approx1.02$\,pJ per operation and
+            $\approx0.21$\,mW at $208.86$\,MHz. Three of the four inputs are now
+            measured --- activity ($1.622$ transitions/op), cell count ($43$), and
+            \textbf{mean fanout ($2.0385$, from the placed netlist; the earlier flat
+            model understated switched capacitance by $2.04\times$)}. Only the
+            per-unit capacitance and the voltage remain assumed.
       \item \textbf{Missing:} the placed netlist's real capacitance extraction, the
             silicon's actual voltage and process corner, and a representative workload.
       \end{itemize}
@@ -2427,6 +2530,13 @@ Is the two-copy rate $2/3$ specific to one branch? & Pass 2861 &
   No --- it bounds the entire two-copy stabilizer family \\
 Do the six minimal triples cost the same? & Pass 2882 &
   \textbf{No.} Diameters $19,20,22,22,22,23$. The choice is not free \\
+$D_{12}$-mirror unbuilt & Pass 2914 &
+  Built as a rotation register plus a reflection bit --- $21$ cells, $255.56$\,MHz.
+  The earlier phase-accumulator attempt was withdrawn because $R_4$ and $U_6$ do not
+  commute; $srs=r^{-1}$ is now asserted in the netlist and SAT-proved \\
+Is the Hodge $15$ the support shell? & Pass 2911 &
+  \textbf{No.} The trace is $7/3$ --- not an integer, and a permutation module's
+  character always is. Second count match tested and killed in three passes \\
 \bottomrule
 \end{tabular}
 \end{center}}
