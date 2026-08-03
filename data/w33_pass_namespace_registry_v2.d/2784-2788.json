@@ -1,0 +1,19 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.supplement",
+  "status": "ACTIVE",
+  "canonical_blocks": [
+    {
+      "range": "2784-2788",
+      "owner": "m36-no-go-metaplectic-hardware-structured-cx-repeater-track",
+      "status": "COMPLETE_LOCAL_EXACT_REMOTE_HARDWARE_PENDING",
+      "artifacts": {
+        "2784": "complete 5355-code, 21420-branch two-copy M36 stabilizer-projection no-go",
+        "2785": "phase-stable four-quadrature metaplectic sensor and conservative shot budget",
+        "2786": "40 x 12 structured CX coset decoder with 41-fold dispatch compression",
+        "2787": "deterministic M36 certificates, synthesis fold guard, and iCE40 P&R closure",
+        "2788": "exact qutrit Bell purification, nested repeater scheduler, memory and erasure model"
+      },
+      "runtime_boundary": "Local exact certificates and focused regressions pass. Remote RTL, synthesis, placement, timing and artifacts are not promoted until observed."
+    }
+  ]
+}
