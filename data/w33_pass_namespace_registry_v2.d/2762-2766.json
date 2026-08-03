@@ -1,0 +1,30 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.supplement",
+  "status": "ACTIVE",
+  "canonical_blocks": [
+    {
+      "range": "2762-2766",
+      "owner": "transpose-centralizer-gate-atlas-physical-sum-complete-isa-track",
+      "status": "COMPLETE_LOCAL_EXACT_REMOTE_RTL_PENDING",
+      "artifacts": {
+        "2762": "anti-symplectic transpose direction reversal and local-Fourier reverse-SUM synthesis",
+        "2763": "constructive C6 x C3 x S3 controlled-add centralizer and six-line fringe scheduler",
+        "2764": "complete 34-class Sp(4,3) geometric gate atlas on five W33 carriers",
+        "2765": "corrected deterministic single-photon time-frequency qutrit SUM compiler",
+        "2766": "complete eight-opcode Holonet digital contract with D12 bus and typed M36 8+24+4 grade handshake"
+      },
+      "rtl_sha256": "46d2c313696487480618f72e8c1c8491dc95b1950be046042933516ed40606b9",
+      "testbench_sha256": "f008dd00264ba7726ed75da872bc9cf98ef91a1e52018cba7c78ec259c795e99",
+      "tests_sha256": "d0a7fcfe39f9a8f793694fbac5586042849de807ebc479e0b3618eee90629420",
+      "runtime_boundary": "All 27 exact finite checks, 4 focused regressions, and both standalone manuscript inserts completed locally. Icarus Verilog was unavailable locally; the focused workflow is independent RTL evidence and is not counted as successful until observed. The published 2019 experiment closes the deterministic single-photon qutrit SUM principle, while protected M36 preparation, distillation, injection, decoding, and threshold remain open.",
+      "gate_atlas_gzip_sha256": "eaa77bd225353c39fba78971f8c0a99600274147abdc0521e06c2315efe94d8a",
+      "source_sha256": {
+        "analysis/bt2762_core.py": "597a8a5d0fe29ae6e87faf07e6185b088dcf1e4b7f8a1a855831badd5492ebd5",
+        "analysis/bt2762_group.py": "454fce1e29a3aefe4cad6e89e61436de33ce77d5dfbf17eedfb2f5689f155524",
+        "analysis/bt2762_isa.py": "9355fe4b60e399114efa1b67eac2e995a5c3176b6d83116c69035cfb23f58213",
+        "analysis/bt2762_five_frontiers.py": "3a41ee1d7405700df990badf6633a8acc37be26a9b0c44323b6b7a03dcc9100e"
+      },
+      "certificate_gzip_sha256": "79a5d6d37ec288b378d5dcc4f2db90c5c147a8956d1fc3417dbf11cbad9e4b1a"
+    }
+  ]
+}

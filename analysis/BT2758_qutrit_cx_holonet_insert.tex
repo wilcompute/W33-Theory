@@ -1,4 +1,4 @@
-% Pass 2758 -- host-independent manuscript insert.
+% Pass 2758 -- host-independent manuscript insert, corrected by Pass 2765.
 \providecommand{\Sp}{\operatorname{Sp}}
 \section*{Exact controlled-add instruction and its fixed W33 line}
 The first two-register instruction is the qutrit controlled-add gate
@@ -43,5 +43,9 @@ and the exact generator closure is
  \qquad |\Sp(4,3)|=51840.
 \]
 These statements are certified by exhaustive ternary and finite-geometric tests. The RTL
-models the exact data and Pauli-frame transformations; it does not by itself certify a
-platform-specific deterministic photonic implementation or its loss/fidelity budget.
+models the exact data and Pauli-frame transformations. A deterministic physical qutrit
+SUM has also been demonstrated inside one photon using frequency as control and time as
+target (Imany et al., \emph{npj Quantum Information} 5, 59 (2019), DOI
+10.1038/s41534-019-0173-8), with computational-basis fidelity \(0.92\pm0.01\).
+The remaining hardware boundary is the implementation-specific loss/process budget and
+the protected \(M_{36}\) magic-state pipeline, not the SUM principle itself.

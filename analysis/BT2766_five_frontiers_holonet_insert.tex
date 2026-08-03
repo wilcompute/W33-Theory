@@ -1,0 +1,46 @@
+% Passes 2762-2766 -- host-independent exact insert.
+\providecommand{\Sp}{\operatorname{Sp}}
+\section*{Bidirectional SUM, its centralizer, and the completed digital ISA}
+Let \(T\) denote the left--right transpose in the standard Pauli-frame coordinates.
+It is anti-symplectic,
+\[
+ T^2=I,\qquad T^{\mathsf T}JT=-J,
+\]
+and reverses the controlled-add gate:
+\[
+ T\,\operatorname{CX}_{p\to f}\,T^{-1}=\operatorname{CX}_{f\to p}.
+\]
+No second entangling primitive is needed, because the exact local-Clifford identity is
+\[
+ \operatorname{CX}_{f\to p}
+ =(F_pF_f^{-1})\operatorname{CX}_{p\to f}(F_p^{-1}F_f).
+\]
+The controlled-add centralizer is determined constructively as
+\[
+ C_{\Sp(4,3)}(\operatorname{CX})\cong C_6\times C_3\times S_3.
+\]
+Its \(S_3\) factor acts regularly on the six external fixed lines of the CX fringe,
+while the central factors preserve the two three-line pencils.
+
+The complete exact gate atlas has 34 conjugacy classes and records cycle profiles on the
+40 points, 40 lines, 160 flags, 240 collinearity edges, and 1620 apartments. These five
+projective carriers produce 15 distinct geometric signatures; the central-lift,
+inverse, and transpose metadata are therefore retained to decode the exact
+\(\Sp(4,3)\) class.
+
+A correction to the earlier physical boundary is required. Imany et al. demonstrated a
+deterministic single-photon time--frequency modulo-SUM gate in
+\emph{npj Quantum Information} 5, 59 (2019), DOI 10.1038/s41534-019-0173-8; their qutrit realization reported computational-basis fidelity
+\(0.92\pm0.01\) and produced
+\(3^{-1/2}(|00\rangle+|11\rangle+|22\rangle)\). Thus the Holonet logical gate compiles
+directly by mapping the control register to frequency and the target register to time.
+The open hardware boundary is no longer the SUM principle; it is the protected
+\(M_{36}\) preparation, injection, decoding, and threshold stack.
+
+Finally, all eight ISA entries now have a digital contract. The four local Clifford
+instructions, bidirectional CX, and \(\sigma^5=Z\) update the Pauli frame exactly; the
+mirror instruction multiplies an independent \(D_{12}\) bus state; and the
+\(M_{36}\) instruction is a typed request for one of 36 rays, exports the canonical
+BT822 deep/mid/shallow grade metadata with census \(8+24+4\), and retires only after an
+external preparation block asserts acknowledgement. This last handshake preserves the
+evidence boundary instead of inventing a non-Clifford unitary.

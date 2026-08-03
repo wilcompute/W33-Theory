@@ -109,14 +109,31 @@ The repository already had this abstract closure in BT825 and the optical Bell-q
 build sheet in BT1337. This pass supplies the missing executable data path, Pauli-frame
 path, exhaustive tests, and W33 permutation certificate.
 
-## Hardware boundary
+## Corrected hardware boundary
 
 The RTL is a synthesizable controller/data-path model. It proves ternary arithmetic,
-order three, and symplectic frame transport. It does **not** prove that a bare catalog
-EOM realizes a deterministic loss-tolerant photonic two-qutrit gate. Existing experiments
-support high-fidelity electro-optic qutrit tritters and time-bin qubit entangling gates, while
-recent high-dimensional time-bin work supports qutrit preparation and measurement; a
-platform-specific qutrit SUM fidelity/loss budget remains an experimental obligation.
+order three, and symplectic frame transport, but by itself it does not establish optical
+loss or process fidelity.
+
+The original release incorrectly stated that no measured deterministic photonic qudit
+SUM implementation existed. Imany *et al.*, *npj Quantum Information* **5**, 59
+(2019), DOI `10.1038/s41534-019-0173-8`, implemented deterministic two-qudit modulo-SUM
+logic within one photon using frequency as the control qudit and time as the target. Their
+qutrit operation is exactly
+
+\[
+|f,t\rangle\mapsto|f,t+f\pmod3\rangle,
+\]
+
+with reported computational-basis fidelity \(0.92\pm0.01\). Applied to a frequency
+superposition and the zeroth time bin, it produced
+\((|00\rangle+|11\rangle+|22\rangle)/\sqrt3\) and certified entanglement of formation
+at least \(1.19\pm0.12\) ebits.
+
+Thus the controller has a direct physical compiler when the logical control register is
+encoded in frequency and the logical target register in time. Remaining obligations are
+source efficiency, insertion-loss optimization, full process characterization in the
+chosen implementation, fault tolerance, and the separate \(M_{36}\) magic pipeline.
 
 ## Artifacts
 
@@ -126,18 +143,14 @@ platform-specific qutrit SUM fidelity/loss budget remains an experimental obliga
 - `rtl/tb_w33_pass2757_qutrit_cx.sv`
 - `tests/test_bt2757_qutrit_cx_w33.py`
 
-## External anchors used for the hardware boundary
+## External anchors
 
 - E. Hostens, J. Dehaene, and B. De Moor, *Phys. Rev. A* **71**, 042315
   (2005): modular/symplectic qudit Clifford formalism and the SUM gate.
 - H.-H. Lu *et al.*, *Phys. Rev. Lett.* **120**, 030502 (2018): electro-optic
-  frequency-bin qutrit tritter with high process fidelity.
-- H.-P. Lo *et al.*, *Phys. Rev. Applied* **13**, 034013 (2020): process-tomographic
-  time-bin controlled-phase/CNOT gate at the qubit level.
+  frequency-bin qutrit tritter with process fidelity \(0.9989\pm0.0004\).
+- P. Imany *et al.*, *npj Quantum Information* **5**, 59 (2019): deterministic
+  single-photon time-frequency two-qudit gates and the measured qutrit modulo-SUM gate.
 - F. Ghafari *et al.*, *Phys. Rev. Lett.* **134**, 180802 (2025): arbitrary
   high-dimensional time-bin state preparation/measurement and certified
   single-photon polarization-time entanglement.
-
-These sources support the single-qutrit and time-bin component technologies. They do not
-supply a measured deterministic photonic qutrit SUM gate matching this exact controller,
-which is why that claim is excluded from the certificate.
