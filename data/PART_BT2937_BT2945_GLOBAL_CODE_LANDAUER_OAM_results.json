@@ -1,0 +1,182 @@
+{
+  "calibrated_active_observer": {
+    "boundary": "independent calibrated-bit channel and union bound; not a laboratory detector model",
+    "false_negative": 0.03,
+    "false_positive": 0.002,
+    "maximum_adaptive_support_bits": 16,
+    "prior_support_one": 0.6666666666666666,
+    "rows": [
+      {
+        "decision_by_observed_one_count": [0,0,1,1,1,1],
+        "per_bit_bayes_error": 1.5915279957333333e-05,
+        "repetitions_per_support_bit": 5,
+        "target_total_failure": 0.001,
+        "union_bound_16_observations": 0.0002546444793173333
+      },
+      {
+        "decision_by_observed_one_count": [0,0,0,0,1,1,1,1,1,1],
+        "per_bit_bayes_error": 3.842329565730686e-08,
+        "repetitions_per_support_bit": 9,
+        "target_total_failure": 1e-06,
+        "union_bound_16_observations": 6.147727305169098e-07
+      },
+      {
+        "decision_by_observed_one_count": [0,0,0,0,0,1,1,1,1,1,1,1,1,1],
+        "per_bit_bayes_error": 2.1955701263325475e-11,
+        "repetitions_per_support_bit": 13,
+        "target_total_failure": 1e-09,
+        "union_bound_16_observations": 3.512912202132076e-10
+      },
+      {
+        "decision_by_observed_one_count": [0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1],
+        "per_bit_bayes_error": 6.889542585379089e-15,
+        "repetitions_per_support_bit": 18,
+        "target_total_failure": 1e-12,
+        "union_bound_16_observations": 1.1023268136606543e-13
+      }
+    ]
+  },
+  "check_count": 12,
+  "checks": {
+    "AG3_optimum_12": true,
+    "OAM_max_orbit_12": true,
+    "OAM_no_40_cycle": true,
+    "calibrated_repetition_rows": true,
+    "global_binary_d4": true,
+    "global_bracket_13_16": true,
+    "landauer_transcript_floor_log81": true,
+    "m36_fault_budget_positive": true,
+    "outer_code_monomial_group_48": true,
+    "outer_isodual_not_selfdual": true,
+    "outer_ternary_844": true,
+    "sixteen_unique_single_symbol_syndromes": true
+  },
+  "global_affine_support_code": {
+    "affine_feature_orbit": 120,
+    "binary_distance_enumerator": {"10":198,"11":112,"12":72,"13":12,"14":6,"4":176,"5":472,"6":688,"7":592,"8":532,"9":380},
+    "binary_minimum_distance": 4,
+    "binary_xor_kernel_size": 1,
+    "global_lower_bound": 13,
+    "global_upper_bound": 16,
+    "local_AG3_multiset_optimum": 12,
+    "nonconstant_three_flats_per_feature": 117,
+    "outer_code": {
+      "coordinate_automorphism_order": 24,
+      "coordinate_automorphism_structure": "S4",
+      "generator_rows": [[1,2,1,2],[1,1,1,2],[0,1,0,2],[1,2,1,0],[1,0,0,0],[0,0,1,1],[1,0,0,1],[0,0,1,2]],
+      "isodual": true,
+      "monomial_automorphism_order": 48,
+      "monomial_automorphism_structure": "C2 x S4",
+      "monomial_permutation_old_to_new": [1,0,3,2,6,7,4,5],
+      "monomial_signs": [1,2,2,1,1,1,2,2],
+      "pair_offsets": [[0,1],[2,1],[1,0],[1,2],[2,1],[0,1],[1,2],[0,2]],
+      "parameters": "[8,4,4]_3",
+      "parity_check_rows": [[1,1,1,1,0,0,0,0],[2,0,2,0,1,1,0,0],[2,1,1,0,2,0,1,0],[1,1,0,0,1,0,0,1]],
+      "self_dual": false,
+      "single_symbol_syndrome_count": 16,
+      "syndrome_table": {"0001":[7,1],"0002":[7,2],"0010":[6,1],"0020":[6,2],"0100":[5,1],"0121":[4,1],"0200":[5,2],"0212":[4,2],"1000":[3,1],"1011":[1,1],"1210":[2,1],"1221":[0,1],"2000":[3,2],"2022":[1,2],"2112":[0,2],"2120":[2,2]},
+      "weight_enumerator": {"0":1,"4":22,"5":24,"6":20,"7":8,"8":6},
+      "weight_four_support_count": 11
+    },
+    "selected_feature_indices": [108,83,19,103,18,41,6,7,43,40,104,82,9,109,44,11],
+    "selected_features": [
+      {"a":[1,2,1,2],"b":0},{"a":[1,1,1,2],"b":2},{"a":[0,1,0,2],"b":1},{"a":[1,2,1,0],"b":1},
+      {"a":[0,1,0,2],"b":0},{"a":[1,0,0,0],"b":2},{"a":[0,0,1,1],"b":0},{"a":[0,0,1,1],"b":1},
+      {"a":[1,0,0,1],"b":1},{"a":[1,0,0,0],"b":1},{"a":[1,2,1,0],"b":2},{"a":[1,1,1,2],"b":1},
+      {"a":[0,0,1,2],"b":0},{"a":[1,2,1,2],"b":1},{"a":[1,0,0,1],"b":2},{"a":[0,0,1,2],"b":2}
+    ],
+    "three_flat_count": 120
+  },
+  "headline": "Global affine support distance four is bracketed 13..16; the 16-bit witness is an isodual [8,4,4]_3 binary image, and no geometry-preserving OAM action is a 40-cycle.",
+  "landauer": {
+    "adaptive_compressed_floor_bits": 6.339850002884624,
+    "adaptive_expected_operations": 3.4814814814814814,
+    "adaptive_uncompressed_mask_bits": 13.925925925925926,
+    "best_static_raw_bits": 8,
+    "best_static_redundancy_bits": 1.6601499971153757,
+    "finite_time_boundary": "Landauer values are quasistatic floors; finite-time reset adds protocol-dependent positive dissipation and coherence can add cost.",
+    "protected_raw_bits": 16,
+    "protected_redundancy_bits": 9.660149997115376,
+    "single_error_label_entropy": "h2(p)+4p bits for no error versus 16 equiprobable single-bit errors",
+    "state_entropy_bits": 6.339850002884624,
+    "transcript_theorem": "Any deterministic exact diagnostic transcript that identifies a uniform 81-state frame has entropy exactly log2(81), independent of adaptive policy."
+  },
+  "local_AG3": {
+    "feature_count": 39,
+    "optimum": 12,
+    "point_count": 27,
+    "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "witness": [
+      {"a":[0,1,1],"b":0,"feature_index":6,"multiplicity":1},{"a":[0,1,1],"b":1,"feature_index":7,"multiplicity":1},{"a":[0,1,1],"b":2,"feature_index":8,"multiplicity":1},
+      {"a":[1,1,0],"b":0,"feature_index":21,"multiplicity":1},{"a":[1,1,0],"b":1,"feature_index":22,"multiplicity":1},{"a":[1,1,0],"b":2,"feature_index":23,"multiplicity":1},
+      {"a":[1,1,2],"b":0,"feature_index":27,"multiplicity":1},{"a":[1,1,2],"b":1,"feature_index":28,"multiplicity":1},{"a":[1,1,2],"b":2,"feature_index":29,"multiplicity":1},
+      {"a":[1,2,2],"b":0,"feature_index":36,"multiplicity":1},{"a":[1,2,2],"b":1,"feature_index":37,"multiplicity":1},{"a":[1,2,2],"b":2,"feature_index":38,"multiplicity":1}
+    ]
+  },
+  "m36_fault_envelope": {
+    "accepted_fault_budget": 0.07294901687515765,
+    "boundary": "circuit-independent adversarial accepted-fault envelope; not a compiled circuit threshold",
+    "envelope": "p_out <= f + (1-f)R(p), f <= 1-(1-q)^L",
+    "exact_budget": "(7-3*sqrt(5))/4",
+    "per_location_table": [
+      {"fault_locations":2,"max_independent_fault_probability":0.037165131954164043},{"fault_locations":4,"max_independent_fault_probability":0.018758506765110372},
+      {"fault_locations":6,"max_independent_fault_probability":0.01254509870579923},{"fault_locations":8,"max_independent_fault_probability":0.009423656029031946},
+      {"fault_locations":10,"max_independent_fault_probability":0.007546056166161885},{"fault_locations":12,"max_independent_fault_probability":0.006292346163017215},
+      {"fault_locations":16,"max_independent_fault_probability":0.004722981290651851},{"fault_locations":20,"max_independent_fault_probability":0.0037801729367969994},
+      {"fault_locations":24,"max_independent_fault_probability":0.003151137916593272},{"fault_locations":32,"max_independent_fault_probability":0.002364285568450586}
+    ]
+  },
+  "nonlinear_code_identification": {
+    "binary_image_distance": 4,
+    "binary_image_length": 16,
+    "binary_image_size": 81,
+    "binary_xor_kernel_size": 1,
+    "coordinate_automorphism_order": 24,
+    "coordinate_automorphism_structure": "S4",
+    "generator_rows": [[1,2,1,2],[1,1,1,2],[0,1,0,2],[1,2,1,0],[1,0,0,0],[0,0,1,1],[1,0,0,1],[0,0,1,2]],
+    "isodual": true,
+    "monomial_automorphism_order": 48,
+    "monomial_automorphism_structure": "C2 x S4",
+    "monomial_permutation_old_to_new": [1,0,3,2,6,7,4,5],
+    "monomial_signs": [1,2,2,1,1,1,2,2],
+    "pair_offsets": [[0,1],[2,1],[1,0],[1,2],[2,1],[0,1],[1,2],[0,2]],
+    "parameters": "[8,4,4]_3",
+    "parity_check_rows": [[1,1,1,1,0,0,0,0],[2,0,2,0,1,1,0,0],[2,1,1,0,2,0,1,0],[1,1,0,0,1,0,0,1]],
+    "self_dual": false,
+    "single_symbol_syndrome_count": 16,
+    "syndrome_table": {"0001":[7,1],"0002":[7,2],"0010":[6,1],"0020":[6,2],"0100":[5,1],"0121":[4,1],"0200":[5,2],"0212":[4,2],"1000":[3,1],"1011":[1,1],"1210":[2,1],"1221":[0,1],"2000":[3,2],"2022":[1,2],"2112":[0,2],"2120":[2,2]},
+    "weight_enumerator": {"0":1,"4":22,"5":24,"6":20,"7":8,"8":6},
+    "weight_four_support_count": 11
+  },
+  "oam": {
+    "group_theoretic_addressing_obstruction": {
+      "cycle_inventory": {
+        "1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1":1,
+        "10-10-10-10":5184,"12-12-12-4":4320,"12-12-4-4-3-2-2-1":4320,
+        "2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-1-1-1-1-1-1-1-1":585,
+        "2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2":306,
+        "3-3-3-3-3-3-3-3-3-1-1-1-1-1-1-1-1-1-1-1-1-1":80,
+        "3-3-3-3-3-3-3-3-3-3-3-3-1-1-1-1":720,
+        "4-4-4-4-4-4-4-4-2-2-1-1-1-1":540,"4-4-4-4-4-4-4-4-4-4":5400,"5-5-5-5-5-5-5-5":5184,
+        "6-6-6-6-3-2-2-2-2-1-1-1-1-1":720,"6-6-6-6-6-3-3-2-1-1":7200,"6-6-6-6-6-6-2-2":5040,
+        "8-8-8-8-4-2-1-1":6480,"9-9-9-3-3-3-3-1":5760
+      },
+      "cycle_type_count": 16,
+      "forty_cycle_exists": false,
+      "interpretation": "A single cyclic OAM shift cannot implement the full 40-point W(3,3) address permutation. Geometry-preserving OAM addressing needs at least a multi-cycle sorter/interferometer or multiple mode registers.",
+      "maximum_single_orbit": 12,
+      "projective_similitude_actions": 51840
+    },
+    "hardware_boundary": "operator ABI and radial-shell model are source-complete; no built 40-mode OAM Holonet or calibrated crosstalk matrix is claimed",
+    "logical_requirement": "optional carrier: the abstract machine needs any two independent qutrit-capable degrees of freedom",
+    "selected_hardware_profile": "the repository's OAM/GKP and path-times-OAM proposals use OAM explicitly"
+  },
+  "schema": "w33.pass2937_2945.global_code_landauer_oam.v1",
+  "status": "COMPLETE_EXACT_WITH_MODELLED_BOUNDARIES",
+  "symmetry_quotiented_decoder": {
+    "architecture": "16 binary probes -> eight ternary symbols -> four-trit syndrome -> 16-entry single-symbol correction table -> recover four frame trits",
+    "candidate_scans_removed": 81,
+    "claim": "one ternary-symbol correction follows from the exact [8,4,4]_3 outer code; directed binary-bit behavior remains a separate RTL contract",
+    "outer_syndromes": 16
+  }
+}
