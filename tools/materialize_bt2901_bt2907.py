@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 """Materialize the readable Passes 2901--2907 release packet atomically."""
 from __future__ import annotations
-import base64, hashlib, json, zlib
+import base64, hashlib, json, lzma
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-PARTS = ROOT / "tools" / "pass2901_2907_payload"
+PARTS = ROOT / "tools" / "pass2901_2907_payload_b64"
 
 
 def main() -> None:
-    payload = "".join(path.read_text(encoding="utf-8") for path in sorted(PARTS.glob("part*.txt")))
-    bundle = json.loads(zlib.decompress(base64.b85decode(payload.encode())).decode())
+    payload = "".join(path.read_text(encoding="utf-8") for path in sorted(PARTS.glob("chunk*.b64")))
+    bundle = json.loads(lzma.decompress(base64.b64decode(payload.encode())).decode())
     assert bundle["schema"] == "w33.pass2901_2907.bundle.v1"
     changed = []
     for entry in bundle["files"]:
