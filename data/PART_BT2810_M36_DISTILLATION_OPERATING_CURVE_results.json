@@ -1,0 +1,71 @@
+{
+  "accepted_outputs_per_input": "P_success/2",
+  "basins": {
+    "0<p<2/3": "p decreases toward 0; fidelity increases toward 1",
+    "2/3<p<1": "p increases toward 1; fidelity decreases toward 1/4"
+  },
+  "boundary": "This is an exact one-round recurrence and recursive operating curve. It is not an optimized asymptotic yield, preparation-cost, logical-noise, or fault-tolerance theorem.",
+  "check_count": 11,
+  "checks": {
+    "fixed_point_mixed": true,
+    "fixed_point_threshold": true,
+    "fixed_point_zero": true,
+    "half_fidelity_13_over_20": true,
+    "half_maps_to_7_over_15": true,
+    "half_success_5_over_16": true,
+    "mixed_local_slope_two_thirds": true,
+    "tenth_maps_to_13_over_181": true,
+    "third_maps_to_11_over_39": true,
+    "threshold_local_slope_six_fifths": true,
+    "zero_local_slope_two_thirds": true
+  },
+  "deep_witness_boundary": {
+    "accepted_outputs_per_input": "0.1557534000467214647748607798858387183144617608260",
+    "fidelity_in": "0.6220084679281462155879077235843120611571342089684",
+    "fidelity_out": "0.64648640536178273124073943848597689653141916845577",
+    "p_in": "0.50398870942913837921612303522091725179048772137547",
+    "p_out": "0.47135145951762302501234741535203080462477444205890",
+    "success_probability": "0.3115068000934429295497215597716774366289235216520"
+  },
+  "fixed_points": [
+    "0",
+    "2/3",
+    "1"
+  ],
+  "local_slopes": {
+    "0": "2/3",
+    "1": "2/3",
+    "2/3": "6/5"
+  },
+  "protocol_source": "Pass 2804 explicit deep-grade H-decoded branch",
+  "rational_samples": [
+    {
+      "accepted_outputs_per_input": "5/32",
+      "fidelity_in": "5/8",
+      "fidelity_out": "13/20",
+      "p_in": "1/2",
+      "p_out": "7/15",
+      "success_probability": "5/16"
+    },
+    {
+      "accepted_outputs_per_input": "13/72",
+      "fidelity_in": "3/4",
+      "fidelity_out": "41/52",
+      "p_in": "1/3",
+      "p_out": "11/39",
+      "success_probability": "13/36"
+    },
+    {
+      "accepted_outputs_per_input": "181/800",
+      "fidelity_in": "37/40",
+      "fidelity_out": "685/724",
+      "p_in": "1/10",
+      "p_out": "13/181",
+      "success_probability": "181/400"
+    }
+  ],
+  "recurrence": "p_next = p(4-p)/(3(p^2-2p+2))",
+  "schema": "w33.pass2810.m36_distillation_operating_curve.v1",
+  "status": "EXACT_ONE_ROUND_DYNAMICS",
+  "success_probability": "P_success = (p^2-2p+2)/4"
+}
