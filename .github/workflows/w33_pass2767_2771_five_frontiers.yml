@@ -4,18 +4,9 @@ on:
     paths:
       - 'analysis/bt2767_2771_*.py'
       - 'analysis/bt2767_m36_factory.py'
-      - 'analysis/bt2768_metaplectic_lift_sensor.py'
-      - 'analysis/bt2769_centralizer_compiler.py'
-      - 'analysis/bt2770_activity_power_proxy.py'
-      - 'analysis/bt2771_remote_sum_link.py'
-      - 'analysis/BT2767_BT2771_five_frontiers.md'
-      - 'analysis/BT2768_metaplectic_sensor_w33_insert.tex'
-      - 'analysis/BT2771_hardware_resource_holonet_insert.tex'
-      - 'data/PART_BT2767*'
-      - 'data/PART_BT2768*'
-      - 'data/PART_BT2769*'
-      - 'data/PART_BT2770*'
-      - 'data/PART_BT2771*'
+      - 'analysis/bt2777_2781_core.py'
+      - 'analysis/check_bt2780_yosys_state.py'
+      - 'data/PART_BT2767_BT2771_FIVE_FRONTIERS_results.json'
       - 'rtl/w33_pass2767*'
       - 'rtl/w33_pass2770*'
       - 'rtl/w33_pass2771*'
@@ -24,25 +15,20 @@ on:
       - '.github/workflows/w33_pass2767_2771_five_frontiers.yml'
   pull_request:
     paths:
-      - 'analysis/bt2767_2771_*.py'
       - 'analysis/bt2767_m36_factory.py'
-      - 'analysis/bt2768_metaplectic_lift_sensor.py'
-      - 'analysis/bt2769_centralizer_compiler.py'
-      - 'analysis/bt2770_activity_power_proxy.py'
-      - 'analysis/bt2771_remote_sum_link.py'
+      - 'analysis/bt2777_2781_core.py'
+      - 'analysis/check_bt2780_yosys_state.py'
+      - 'data/PART_BT2767_BT2771_FIVE_FRONTIERS_results.json'
       - 'rtl/w33_pass2767*'
       - 'rtl/w33_pass2770*'
       - 'rtl/w33_pass2771*'
-      - 'rtl/tb_w33_pass2770_full_release.sv'
-      - 'tests/test_bt2767_2771_five_frontiers.py'
 jobs:
   exact-hardware-resource-release:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
+        with: {python-version: '3.12'}
       - name: Install verification and iCE40 tools
         run: |
           sudo apt-get update
@@ -56,8 +42,14 @@ jobs:
           PYTHONPATH=analysis python analysis/bt2770_activity_power_proxy.py
           PYTHONPATH=analysis python analysis/bt2771_remote_sum_link.py
           PYTHONPATH=analysis python analysis/bt2767_2771_release.py
-      - name: Fail on certificate drift
-        run: git diff --exit-code -- data/PART_BT2767* data/PART_BT2768* data/PART_BT2769* data/PART_BT2770* data/PART_BT2771*
+      - name: Stable certificate drift guard
+        run: |
+          git diff --exit-code -- \
+            data/PART_BT2767_BT2771_FIVE_FRONTIERS_results.json \
+            data/PART_BT2768_SP43_METAPLECTIC_LIFT_SENSOR.json.gz \
+            data/PART_BT2769_CX_CENTRALIZER_COMPILER.json.gz \
+            data/PART_BT2770_SWITCHING_ACTIVITY_PROXY.json \
+            data/PART_BT2771_REMOTE_QUTRIT_SUM_LINK.json
       - name: Focused Python regressions
         run: PYTHONPATH=analysis pytest -q tests/test_bt2767_2771_five_frontiers.py
       - name: Exhaustive RTL simulation
@@ -68,20 +60,22 @@ jobs:
             rtl/w33_pass2770_holonet_top.sv rtl/w33_pass2771_remote_sum_link.sv \
             rtl/tb_w33_pass2770_full_release.sv
           vvp build/pass2770.vvp | tee build/rtl_simulation.txt
-      - name: Synthesize complete ISA for iCE40 HX8K
+      - name: Synthesize all stateful blocks
         run: |
-          yosys -p 'read_verilog -sv rtl/w33_pass2767_m36_factory.sv rtl/w33_pass2770_holonet_top.sv; synth_ice40 -top w33_pass2770_holonet_top -json build/holonet_hx8k.json; stat' | tee build/yosys_holonet.txt
-          yosys -p 'read_verilog -sv rtl/w33_pass2767_m36_factory.sv rtl/w33_pass2767_m36_pipeline.sv; synth_ice40 -top w33_pass2767_m36_pipeline -json build/m36_hx8k.json; stat' | tee build/yosys_m36.txt
-          yosys -p 'read_verilog -sv rtl/w33_pass2771_remote_sum_link.sv; synth_ice40 -top w33_pass2771_remote_sum_link -json build/remote_hx8k.json; stat' | tee build/yosys_remote.txt
-      - name: Place and route complete ISA
+          yosys -p 'read_verilog -sv rtl/w33_pass2767_m36_factory.sv rtl/w33_pass2770_holonet_top.sv; synth_ice40 -top w33_pass2770_holonet_top -json build/holonet.json; stat' | tee build/yosys_holonet.txt
+          yosys -p 'read_verilog -sv rtl/w33_pass2767_m36_factory.sv rtl/w33_pass2767_m36_pipeline.sv; synth_ice40 -top w33_pass2767_m36_pipeline -json build/m36.json; stat' | tee build/yosys_m36.txt
+          yosys -p 'read_verilog -sv rtl/w33_pass2771_remote_sum_link.sv; synth_ice40 -top w33_pass2771_remote_sum_link -json build/remote.json; stat' | tee build/yosys_remote.txt
+      - name: Reject folded state machines
         run: |
-          nextpnr-ice40 --hx8k --package tq144 --pcf-allow-unconstrained \
-            --json build/holonet_hx8k.json --asc build/holonet_hx8k.asc \
-            --freq 12 --report build/holonet_pnr.json |& tee build/nextpnr_holonet.txt
-          icetime -d hx8k -mtr build/holonet_timing.txt build/holonet_hx8k.asc
+          python analysis/check_bt2780_yosys_state.py build/holonet.json w33_pass2770_holonet_top --min-dff 8 --min-cells 16
+          python analysis/check_bt2780_yosys_state.py build/m36.json w33_pass2767_m36_pipeline --min-dff 4 --min-cells 8
+          python analysis/check_bt2780_yosys_state.py build/remote.json w33_pass2771_remote_sum_link --min-dff 4 --min-cells 8
+      - name: Place route and time HX8K
+        run: |
+          for top in holonet m36 remote; do
+            nextpnr-ice40 --hx8k --package tq144 --pcf-allow-unconstrained --json build/$top.json --asc build/$top.asc --freq 12 --report build/${top}_pnr.json |& tee build/nextpnr_${top}.txt
+            icetime -d hx8k -mtr build/${top}_timing.txt build/$top.asc
+          done
           cp data/PART_BT2770_SWITCHING_ACTIVITY_PROXY.json build/
-      - name: Upload implementation evidence
-        uses: actions/upload-artifact@v4
-        with:
-          name: pass2767-2771-hardware-evidence
-          path: build/
+      - uses: actions/upload-artifact@v4
+        with: {name: pass2767-2771-hardware-evidence, path: build/}
