@@ -1,0 +1,57 @@
+{
+  "boundary": "No global U6 singleton coefficient is claimed. The packet proves exactly which statistic is missing and freezes a disjoint deterministic reduction of that statistic.",
+  "cauchy_lower_bound_on_occupied_weight6_syndromes": 16797930540,
+  "checks": {
+    "ranges_partition_all_representatives": true,
+    "second_moment_identity": true,
+    "source_pair_total": true,
+    "witness_different_singletons": true,
+    "witness_same_E": true,
+    "witness_same_N": true
+  },
+  "distributed_union_contract": {
+    "chart_bitmap_bits": 6230484547,
+    "chart_bitmap_bytes": 778810569,
+    "globalization": "After fixed-chart union and cross-chart consistency, multiply only orbitwise-deduplicated singleton counts; never multiply pair incidences.",
+    "map_output": "idempotent bitset of chart combinadic ranks marked by any collision partner or lower-shadow syndrome",
+    "maximum_bits_per_shard": 60844576,
+    "minimum_bits_per_shard": 60844575,
+    "rank_ranges_sha256": "33421c8297c429bf28a08b1a5eb412c0f9a6657ec2d7295e07602c3f3a753e53",
+    "rank_shards": 4096,
+    "reduce": "bitwise OR followed by exact popcount"
+  },
+  "exact_second_moment_sum_m2_n_m": 3697497150640,
+  "factorial_moment_requirement": {
+    "F1": "sum m n_m = N",
+    "F2": "sum m(m-1)n_m = 2E",
+    "full_recovery": "If maximum multiplicity is M, F0 through FM determine the finite histogram by triangular inversion.",
+    "next_missing": "F3=sum m(m-1)(m-2)n_m"
+  },
+  "global_pair_collisions": 1724138884380,
+  "global_weight6_representatives": 249219381880,
+  "lower_shadow_union_boundary": "The existing lower-shadow incidence counts do not give the intersection between lower-shadow-marked errors and collision-marked errors, so the bitmap union cannot be inferred from separate totals.",
+  "nonidentifiability_witness": {
+    "conclusion": "N and E, equivalently the first and second factorial moments, do not determine n1.",
+    "distribution_A": {
+      "n1": 0,
+      "n2": 3,
+      "n3": 0,
+      "pair_collisions": 3,
+      "representatives": 6
+    },
+    "distribution_B": {
+      "n1": 3,
+      "n2": 0,
+      "n3": 1,
+      "pair_collisions": 3,
+      "representatives": 6
+    }
+  },
+  "schema": "w33.pass2431.u6_singleton_identifiability.v1",
+  "sha256_without_hash_field": "cdbb0265764cf07d8e00c489878594cc35e23f765838d28eaad9a1bc9145c2ed",
+  "size_biased_mean_multiplicity": {
+    "denominator": 249219381880,
+    "numerator": 3697497150640
+  },
+  "status": "PASS_EXACT_SECOND_MOMENT_WITH_SINGLETON_NONIDENTIFIABILITY_AND_DISTRIBUTED_UNION_CONTRACT"
+}
