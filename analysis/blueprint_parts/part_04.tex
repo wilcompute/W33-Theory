@@ -1,0 +1,240 @@
+relative to each other. If the rays differ at all, they differ only in how they sit
+relative to the \emph{ordinary} states --- an external comparison, not an internal one.
+\end{plain}
+
+\subsection{And from the outside, they fall into exactly three grades}
+
+\begin{spec}[$60$ two-qubit stabilizer states, $F_{\mathrm{stab}}=\max_s|\langle s|\psi\rangle|^2$]
+\begin{center}
+\begin{tabular}{@{}rlrl@{}}
+\toprule
+$F_{\mathrm{stab}}$ & closed form & rays & grade\\
+\midrule
+$0.750000$ & $9/12$              & \textbf{4}  & shallow\\
+$0.705342$ & $(5+2\sqrt3)/12$    & \textbf{24} & mid\\
+$0.622008$ & $(4+2\sqrt3)/12$    & \textbf{8}  & deep\\
+\bottomrule
+\end{tabular}
+\end{center}
+Stabilizer fidelity is a Clifford invariant, so the $8+24+4$ grading is genuine and not
+an artefact of the chosen basis.
+\end{spec}
+
+\begin{spec}[All three noise thresholds are one formula]
+For $\rho_p=(1-p)|m\rangle\!\langle m|+p\,I/4$ the target overlap is $1-3p/4$, so the
+witness certifies non-stabilizerness exactly while $1-3p/4>F_{\mathrm{stab}}$:
+\[
+  \boxed{\;p \;<\; \tfrac{4}{3}\bigl(1-F_{\mathrm{stab}}\bigr)\;}
+\]
+\[
+\begin{array}{lll}
+\text{shallow} & 0.333333333333 & =\ 1/3\\
+\text{mid}     & 0.392877598318 & =\ (7-2\sqrt3)/9\\
+\text{deep}    & 0.503988709429 & =\ (8-2\sqrt3)/9
+\end{array}
+\]
+Three separately-published thresholds, one formula, agreement to $10^{-12}$.
+\end{spec}
+
+\headline{The distillation search needs \emph{three} representatives, not thirty-six.
+A Clifford-invariant protocol cannot distinguish rays within a grade.}
+
+\begin{plain}
+That is the practical payoff. The known result in this area is a \emph{no-go}: an
+exhaustive search over $5{,}355$ small stabilizer codes and $21{,}420$ branches found no
+two-copy protocol that improves fidelity anywhere it applies. The natural next move is to
+search bigger protocols, and that search is expensive. Knowing there are only three
+inequivalent starting materials shrinks it by a factor of twelve before it begins.
+\end{plain}
+
+\begin{spec}[Evidence boundary, stated as bluntly as possible]
+No distillation protocol for $M_{36}$ is known. The controller types the resource
+\cmd{M36\_Q4\_RAW} and \emph{refuses} injection in RTL until a proved protocol asserts
+validity. \textbf{Until that assertion exists, this machine is not universal.} Everything
+else in this blueprint is built or proved; this is not.
+\end{spec}
+
+% =====================================================================================
+\section{The network}\label{sec:network}
+% =====================================================================================
+
+\subsection{Fractal scaling}
+
+\begin{plain}
+The machine is designed to be copied. A node contains $40$ sub-nodes; each sub-node
+contains $40$ of its own; and so on. The network of machines has the same shape as the
+inside of one machine --- which means one routing scheme, one addressing scheme, and one
+error model serve every scale at once.
+\end{plain}
+
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize,>={Latex[length=1.8mm]},
+  n0/.style={circle,draw=ink,fill=specbg,minimum size=8mm},
+  n1/.style={circle,draw=rule,fill=plainbg,minimum size=5mm},
+  n2/.style={circle,fill=future!55,inner sep=1.1pt}]
+  \node[n0] (r) at (0,0) {$1$};
+  \foreach \i [count=\k from 0] in {1,...,5}{
+     \pgfmathsetmacro\ang{200-\k*22}
+     \node[n1] (a\i) at (\ang:2.4) {};
+     \draw[->,draw=rule] (r) -- (a\i);
+     \foreach \j in {1,...,4}{
+        \pgfmathsetmacro\bng{\ang-14+\j*5.6}
+        \node[n2] (b\i\j) at (\bng:3.6) {};
+        \draw[draw=rule,opacity=0.6] (a\i) -- (b\i\j);
+     }
+  }
+  \node[font=\scriptsize,text=rule] at (-0.1,-1.2) {$\cdots$ $40$ children each $\cdots$};
+  \node[align=left,text width=6.6cm] at (7.6,0.4)
+   {\textbf{$N_n = 40^n$ leaves} at depth $n$\\[3pt]
+    \textbf{$I_n = \dfrac{40^n-1}{39}$ instances} in total\\[5pt]
+    \textbf{routing depth $= 8n = 8\log_{40}N$}\\[3pt]
+    where $8 = 3+5$: three trits of local address plus five of the
+    spread index. Address length is logarithmic in the size of the entire
+    network, at every scale, by construction.};
+\end{tikzpicture}
+\end{center}
+
+\subsection{Every bit string is a legal address}
+
+\begin{spec}
+The routing code has orbit sizes $162+162+324+648=1296$ on compass pairs, giving
+codeword lengths $3,3,2,1$ and
+\[
+  2^{-3}+2^{-3}+2^{-2}+2^{-1} \;=\; 1 \quad\text{exactly (Kraft equality).}
+\]
+The prefix code is $\{110,111,10,0\}$ with expected length $7/4$. Because Kraft holds
+with \emph{equality}, the decision tree has no unused branch: $20{,}000$ random bit
+strings were parsed with $0$ failures.
+\end{spec}
+
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize,level distance=11mm,
+  every node/.style={circle,draw=ink,inner sep=1.2pt},
+  level 1/.style={sibling distance=34mm},
+  level 2/.style={sibling distance=17mm},
+  level 3/.style={sibling distance=11mm}]
+\node {}
+  child {node[fill=good!35,label=below:{\texttt{0}}] {} edge from parent node[draw=none,left,xshift=1mm]{$0$}}
+  child {node {}
+    child {node[fill=good!35,label=below:{\texttt{10}}] {} edge from parent node[draw=none,left,xshift=1mm]{$0$}}
+    child {node {}
+      child {node[fill=good!35,label=below:{\texttt{110}}] {} edge from parent node[draw=none,left,xshift=1mm]{$0$}}
+      child {node[fill=good!35,label=below:{\texttt{111}}] {} edge from parent node[draw=none,right,xshift=-1mm]{$1$}}
+      edge from parent node[draw=none,right,xshift=-1mm]{$1$}}
+    edge from parent node[draw=none,right,xshift=-1mm]{$1$}};
+\end{tikzpicture}
+\end{center}
+
+\begin{plain}
+Look at the tree: every branch ends in a valid address. Nothing dangles.
+The engineering consequence is unusual and worth stating plainly. In a normal computer, a
+corrupted instruction stream can produce an \emph{illegal instruction} --- a bit pattern
+that means nothing, which the processor must detect and trap. Here that cannot happen. A
+corrupted packet is always a legal packet addressed somewhere else. The fault model
+therefore has no ``decode error'' term at all; it has only a ``wrong result'' term. That
+simplifies the error correction enormously, and it is forced by the geometry rather than
+designed in.
+\end{plain}
+
+\begin{gotwrong}
+We wrote that ``the consequence nobody has stated'' was that every bit string is a valid
+instruction stream. The project's own holonet manuscript says it at line 382 --- ``the
+routing words fill a binary decision tree with \emph{no unused branch}'' --- with a
+citation to McMillan. This was the first error in this project caught by an automated
+guard rather than by a human noticing. The engineering consequence drawn on top (no
+decode-error term in the fault model) is a step past the coding fact and appears to be
+new; the completeness property itself is the manuscript's.
+\end{gotwrong}
+
+\subsection{Remote operations}
+
+\begin{spec}
+A \textsc{sum} gate between two \emph{separate} machines costs exactly:
+\[
+  \boxed{\text{one shared qutrit Bell pair} \;+\; \text{two classical trits}}
+\]
+Protocol: Alice applies reverse local \textsc{sum} into her half of the pair, measures,
+sends trit $m$; Bob applies $X^{-m}F^2$, applies direct \textsc{sum} to his data, measures
+in the Fourier basis, sends trit $n$; Alice records $Z^n$ in her Pauli frame. All nine
+branches implement $\ket{x,y}\mapsto\ket{x,y+x}$; verified on all nine basis inputs, all
+nine branches, and $32$ random superpositions. Total conditional success probability $1$.
+\end{spec}
+
+% =====================================================================================
+\section{Verification: how we know}\label{sec:verification}
+% =====================================================================================
+
+\begin{plain}
+This is the section a working engineer should read first, because it is the one that
+determines whether any of the preceding numbers mean anything.
+
+The short version: this project has repeatedly shipped results that were verified in the
+direction that would confirm them and never in the direction that would break them. Every
+tool below exists because that happened at least three times.
+\end{plain}
+
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,>={Latex[length=2.2mm]},
+  st/.style={draw=ink,rounded corners=2pt,minimum height=9mm,text width=25mm,align=center,
+             inner sep=2.5pt}]
+  \node[st,fill=plainbg] (p) {\textbf{PARSE}\\\scriptsize both frontends read it};
+  \node[st,fill=plainbg,right=4mm of p] (s) {\textbf{SIMULATE}\\\scriptsize exhaustive vectors};
+  \node[st,fill=specbg,right=4mm of s] (y) {\textbf{SYNTHESISE}\\\scriptsize can the state move?};
+  \node[st,fill=specbg,right=4mm of y] (n) {\textbf{PLACE}\\\scriptsize real cells, real $F_{\max}$};
+  \node[st,fill=warnbg,right=4mm of n] (f) {\textbf{PROVE}\\\scriptsize SAT over all inputs};
+  \foreach \a/\b in {p/s,s/y,y/n,n/f}{\draw[->,line width=0.9pt] (\a) -- (\b);}
+  \node[font=\scriptsize\itshape,text=bad,align=center,below=3mm of s]
+    {everything stopped here\\before Pass 2780};
+  \node[font=\scriptsize\itshape,text=bad,align=center,below=3mm of y]
+    {the defect\\lives here};
+\end{tikzpicture}
+\end{center}
+
+\begin{spec}[The five automated guards, each built from a measured failure]
+\begin{center}\small
+\scriptsize\begin{tabular}{@{}p{4.2cm}p{4.1cm}p{4.7cm}@{}}
+\toprule
+\textbf{Guard} & \textbf{Catches} & \textbf{Built because}\\
+\midrule
+\cmd{check\_rediscovery.py} &
+  a staged file asserts a code parameter that exists elsewhere uncited &
+  $21\%$ of $173$ files did this (census, Pass 328) \\
+\cmd{check\_certificates.py} &
+  a frozen certificate that cannot reproduce its own digest &
+  one was unverifiable \emph{from birth} and passed every check while being so \\
+\cmd{check\_novelty\_claims.py} &
+  explicit novelty phrases whose tokens are in the encyclopedia &
+  five claims in one session were overturned by files we had not read \\
+\cmd{check\_implicit\_novelty.py} &
+  \emph{emphasised} results carried by a source the file never cites &
+  four of six failures never used a novelty phrase at all \\
+\cmd{check\_rtl\_folds.py} &
+  an output port tied to a literal after full optimisation &
+  two independent teams shipped a module that synthesises to the identity \\
+\bottomrule
+\end{tabular}
+\end{center}
+All five \textbf{warn and never block}. A collision is a candidate for reading, not a
+verdict, and a blocking hook trains people to pass \cmd{-{}-no-verify}.
+\end{spec}
+
+\begin{gotwrong}
+\textbf{The guards themselves needed calibration, and the calibration is the work.}
+\cmd{check\_implicit\_novelty.py} went through four measured versions:
+\begin{center}\small
+\begin{tabular}{@{}rll@{}}
+\toprule
+\textbf{Flagged} & \textbf{Version} & \textbf{What the noise turned out to be}\\
+\midrule
+$9/122$  & presence of any token & all nine were \emph{pass numbers in titles}\\
+$0/122$  & $+$ skip files citing ``Prior art'' &
+   \textcolor{bad}{vacuous} --- every file has that section\\
+$51/122$ & $+$ cite the \emph{right} source per token & \texttt{W(3,3)} $21\times$: the repo's own subject\\
+$27/122$ & $+$ rarity and non-round integers & what ships\\
+\bottomrule
+\end{tabular}
+\end{center}
+The second row is the instructive one: \textbf{a guard that passes everything looks
+exactly like a guard that finds nothing wrong.} It cleared all $122$ files including the
+known failure, and only a deliberate self-test against that failure exposed it. Every
+guard in this project now ships with a self-test against the specific defect that
