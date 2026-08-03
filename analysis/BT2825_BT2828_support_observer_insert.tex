@@ -1,0 +1,44 @@
+% Passes 2825--2828: finite-delay support observer.
+\subsection{Finite-delay support observability}
+\label{sec:bt2825-bt2828-support-observer}
+
+The PG$(3,2)$ support shell is not an instantaneous execution quotient of the
+$81$-state ternary frame, but it is an exact finite-delay observer.  Refinement by all
+support observations reachable with words of bounded length gives
+\[
+ \boxed{16\longrightarrow40\longrightarrow78\longrightarrow81},
+\]
+with unresolved state-pair counts
+\[
+ \boxed{272,\;53,\;3,\;0}.
+\]
+Thus the adaptive/all-word observability index is three.  The three pairs surviving
+through depth two are
+\[
+ (0,0,1,z_f)\sim(0,0,2,z_f),\qquad z_f\in\mathbb F_3,
+\]
+and all are split by length-three diagnostic words.
+
+A fixed preset experiment requires six operations.  The best numbers of distinct support
+trajectories for word lengths one through six are
+\[
+ \boxed{25,\;40,\;45,\;68,\;77,\;81}.
+\]
+Exactly eight length-six words are injective.  One canonical word is
+\[
+ \boxed{
+ \mathrm{CX}_{p\to f},\;F_p,\;Z_p,\;F_p,\;Z_p,\;\mathrm{CX}_{p\to f}
+ }.
+\]
+
+Its seven four-bit support snapshots contain $28$ raw bits.  Exhaustive tap selection
+shows that seven taps never suffice, while exactly $48$ eight-tap selectors distinguish
+all $81$ states.  A canonical selector uses flattened columns
+\[
+ \boxed{(0,1,2,5,13,21,25,26)}.
+\]
+No minimal selector samples the $z_f$ support bit.  Consequently the machine may retain
+full ternary phase internally while exposing only binary support telemetry: a six-cycle
+diagnostic sequencer, eight one-bit samples, and an $81$-entry ROM recover the exact frame.
+The result is noiseless observability; no robustness against loss, detector error, or gate
+imperfection is asserted.
