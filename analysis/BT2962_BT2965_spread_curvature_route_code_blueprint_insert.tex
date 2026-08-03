@@ -1,0 +1,74 @@
+\section{The spread router has curvature, and can check it}
+\label{sec:bt2962-bt2965-router-curvature}
+
+\begin{plain}
+The ten spread modes carry exact four-channel permutations between every pair.
+The even/odd sign of one link depends on local slot labelling, but the parity
+accumulated around a triangle does not.  Across all thirty-six W33 spreads, the
+same sixty triangle types are odd up to relabelling.  Those sixty triangles form
+a standard highly symmetric object whose switching class contains the Petersen
+graph.  The machine can compare the observed triangle parities with this
+certified table and turn disagreements into a route-error syndrome.
+\end{plain}
+
+\begin{spec}[Pass 2962 --- exact finite curvature]
+For transport permutations \(g_{ij}\in S_4\), define
+\[
+ a_{ij}=\operatorname{sgn}(g_{ij})\in\mathbb F_2,
+ \qquad
+ \kappa_{ijk}=\operatorname{sgn}(g_{ki}g_{jk}g_{ij}).
+\]
+Then
+\[
+ \kappa=\delta a,
+ \qquad
+ \delta\kappa=\delta^2a=0.
+\]
+The verifier enumerates all \(36\) spreads.  On every spread the \(120\)
+triangles split into \(60\) transposition and \(60\) double-transposition
+holonomies.  The odd triangles form a \(2-(10,3,4)\) design.  All \(2^{10}\)
+vertex-sign gauges preserve the curvature, all spreads give the same two-graph,
+and
+\[
+ \operatorname{Aut}(\mathcal T)
+ \cong \mathrm{P}\Sigma\mathrm L(2,9)
+ \cong S_6,
+ \qquad |\operatorname{Aut}(\mathcal T)|=720.
+\]
+One switching representative is the Petersen graph.
+\end{spec}
+
+\begin{spec}[Pass 2965 --- exact route syndrome]
+Let \(H\in\mathbb F_2^{120\times45}\) be triangle-versus-edge incidence on the
+ten spread modes.  For an edge-parity fault \(e\), subtracting the certified
+baseline gives the residual curvature
+\[
+ s=He.
+\]
+Exact row reduction gives
+\[
+ \operatorname{rank}H=36,
+ \qquad
+ \ker H=\operatorname{Cut}(K_{10}),
+\]
+so
+\[
+ \boxed{\ker H\text{ is the }[45,9,9]_2\text{ cut code}.}
+\]
+All non-gauge faults through weight eight are detected and all faults through
+weight four are correctable modulo vertex gauge.  The \(120\) raw checks reduce
+to \(36\) independent syndrome bits, and the tetrahedral boundary matrix obeys
+\(BH=0\).
+\end{spec}
+
+\begin{gotwrong}[Evidence boundary]
+This is an exact parity connection extracted from finite routing permutations,
+not a measured optical Berry phase or a continuum gauge field.  The route code
+sees odd/even permutation faults only.  Even-permutation errors, attenuation,
+continuous phase drift, and detector noise require the separately calibrated
+channel model.
+\end{gotwrong}
+
+\noindent\textbf{Reproduce:}
+\cmd{python analysis/bt2962\_oam\_holonomy\_s6\_two\_graph.py} and
+\cmd{python analysis/bt2965\_curvature\_route\_code.py}.
