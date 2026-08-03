@@ -38,7 +38,9 @@ module tb_w33_pass2770_full_release;
   task automatic pulse;
     begin start=1; @(posedge clk); #1; start=0; end
   endtask
-  task automatic expect(input logic cond, input integer code);
+  // `expect` is a SystemVerilog assertion keyword.  Naming a task `expect` parsed in
+  // some older simulators but fails in Icarus 12, so keep the contract task unambiguous.
+  task automatic check_ok(input logic cond, input integer code);
     begin if(!cond) begin $display("FAIL code=%0d",code); $fatal(1); end end
   endtask
   task automatic expected_magic(input [5:0] id,
@@ -73,44 +75,44 @@ module tb_w33_pass2770_full_release;
     repeat(3) @(posedge clk); rst=0; @(posedge clk);
     for(p=0;p<3;p=p+1) for(f=0;f<3;f=f+1) begin
       p_in=p;f_in=f;xp_in=0;zp_in=0;xf_in=0;zf_in=0;opcode=3'b100;operand=0;pulse();
-      expect(done && !error && p_out==p && f_out==add3(f,p),100+p*3+f);
-      operand=1;pulse(); expect(done && !error && p_out==add3(p,f) && f_out==f,200+p*3+f);
+      check_ok(done && !error && p_out==p && f_out==add3(f,p),100+p*3+f);
+      operand=1;pulse(); check_ok(done && !error && p_out==add3(p,f) && f_out==f,200+p*3+f);
     end
     p_in=0;f_in=0;
     for(xp=0;xp<3;xp=xp+1) for(zp=0;zp<3;zp=zp+1)
     for(xf=0;xf<3;xf=xf+1) for(zf=0;zf<3;zf=zf+1) begin
       xp_in=xp;zp_in=zp;xf_in=xf;zf_in=zf;
-      opcode=3'b000;pulse(); expect(xp_out==neg3(zp)&&zp_out==xp&&xf_out==xf&&zf_out==zf,300);
-      opcode=3'b001;pulse(); expect(xf_out==neg3(zf)&&zf_out==xf&&xp_out==xp&&zp_out==zp,301);
-      opcode=3'b010;pulse(); expect(zp_out==add3(zp,xp),302);
-      opcode=3'b011;pulse(); expect(zf_out==add3(zf,xf),303);
-      opcode=3'b101;operand=0;pulse(); expect(zp_out==add3(zp,1),304);
-      opcode=3'b101;operand=1;pulse(); expect(zf_out==add3(zf,1),305);
-      opcode=3'b100;operand=0;pulse(); expect(zp_out==add3(zp,neg3(zf))&&xf_out==add3(xf,xp),306);
-      opcode=3'b100;operand=1;pulse(); expect(xp_out==add3(xp,xf)&&zf_out==add3(zf,neg3(zp)),307);
+      opcode=3'b000;pulse(); check_ok(xp_out==neg3(zp)&&zp_out==xp&&xf_out==xf&&zf_out==zf,300);
+      opcode=3'b001;pulse(); check_ok(xf_out==neg3(zf)&&zf_out==xf&&xp_out==xp&&zp_out==zp,301);
+      opcode=3'b010;pulse(); check_ok(zp_out==add3(zp,xp),302);
+      opcode=3'b011;pulse(); check_ok(zf_out==add3(zf,xf),303);
+      opcode=3'b101;operand=0;pulse(); check_ok(zp_out==add3(zp,1),304);
+      opcode=3'b101;operand=1;pulse(); check_ok(zf_out==add3(zf,1),305);
+      opcode=3'b100;operand=0;pulse(); check_ok(zp_out==add3(zp,neg3(zf))&&xf_out==add3(xf,xp),306);
+      opcode=3'b100;operand=1;pulse(); check_ok(xp_out==add3(xp,xf)&&zf_out==add3(zf,neg3(zp)),307);
     end
     opcode=3'b110;
     for(a=0;a<6;a=a+1) for(b=0;b<2;b=b+1)
     for(c=0;c<6;c=c+1) for(d=0;d<2;d=d+1) begin
       d12_a_in=a;d12_b_in=b;d12_c_in=c;d12_d_in=d;pulse();
-      ea=add6(a,b?neg6(c):c); expect(done&&!error&&d12_a_out==ea&&d12_b_out==(b^d),400+a*24+b*12+c*2+d);
+      ea=add6(a,b?neg6(c):c); check_ok(done&&!error&&d12_a_out==ea&&d12_b_out==(b^d),400+a*24+b*12+c*2+d);
     end
-    d12_a_in=6;d12_c_in=0;pulse();expect(error&&done,500);
+    d12_a_in=6;d12_c_in=0;pulse();check_ok(error&&done,500);
     opcode=3'b111;
     for(id=0;id<36;id=id+1) begin
       magic_id=id;magic_ack=0;expected_magic(id,edark,egrade,ep0,ep1,ep2,ep3);pulse();
-      expect(busy&&magic_req&&magic_valid&&!done&&!error,600+id);
-      expect(magic_dark_mode==edark&&magic_grade==egrade,700+id);
-      expect(magic_phase6_0==ep0&&magic_phase6_1==ep1&&magic_phase6_2==ep2&&magic_phase6_3==ep3,800+id);
-      magic_ack=1;@(posedge clk);#1;magic_ack=0;expect(done&&!busy&&!magic_req,900+id);
+      check_ok(busy&&magic_req&&magic_valid&&!done&&!error,600+id);
+      check_ok(magic_dark_mode==edark&&magic_grade==egrade,700+id);
+      check_ok(magic_phase6_0==ep0&&magic_phase6_1==ep1&&magic_phase6_2==ep2&&magic_phase6_3==ep3,800+id);
+      magic_ack=1;@(posedge clk);#1;magic_ack=0;check_ok(done&&!busy&&!magic_req,900+id);
     end
-    magic_id=36;pulse();expect(error&&done&&!busy,1000);
+    magic_id=36;pulse();check_ok(error&&done&&!busy,1000);
     for(m=0;m<3;m=m+1) for(n=0;n<3;n=n+1) begin
       rm=m;rn=n;rlink=1;rstart=1;@(posedge clk);#1;rstart=0;
-      repeat(5) @(posedge clk); #1; expect(raction==6&&rx==neg3(m)&&rneg&&rz==n,1100+m*3+n);
-      @(posedge clk);#1;expect(rdone&&!rbusy,1200+m*3+n);
+      repeat(5) @(posedge clk); #1; check_ok(raction==6&&rx==neg3(m)&&rneg&&rz==n,1100+m*3+n);
+      @(posedge clk);#1;check_ok(rdone&&!rbusy,1200+m*3+n);
     end
-    rlink=0;rstart=1;@(posedge clk);#1;rstart=0;expect(rdone&&rerasure&&!rbusy,1300);
+    rlink=0;rstart=1;@(posedge clk);#1;rstart=0;check_ok(rdone&&rerasure&&!rbusy,1300);
     $display("PASS: Passes 2767-2771 exhaustive RTL contract");
     $finish;
   end
