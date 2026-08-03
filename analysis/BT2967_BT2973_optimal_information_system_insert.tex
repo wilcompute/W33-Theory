@@ -1,0 +1,56 @@
+\section{Pareto-optimal information-system closure: Passes 2967--2973}
+\label{sec:bt2967-2973-optimal-is}
+
+The optimized architecture retains the live controller in native mixed radix: four
+frame trits, ten spread-line modes, four intra-line slots, and one encode/check
+sector.  Binary joint ranking is deferred to archive, export, or reset boundaries.
+This removes Boolean rank arithmetic from the live path while retaining a reversible
+boundary encoder.
+
+Component-resolved Bayesian calibration is structurally necessary: the aggregate
+correct/wrong/erasure map has Jacobian rank two for four component parameters, so
+survival, OAM sorting, slot sorting, and dark counts cannot be inferred separately
+without intermediate counters.  The committed numerical reference is synthetic and
+serves only to validate the inference engine.
+
+For the $K_{10}$ spread-line routing complex, twenty-three measured triangles are
+necessary and sufficient to localize one faulty edge.  The lower bound follows from
+$3m\ge m+2(45-m)$, and an explicit schedule attains $m=23$.  The complete
+$D_4$-valued triangle syndrome is injective on the no-fault state and all one- and
+two-edge nonidentity faults, a total of $48{,}826$ hypotheses.  A 29-triangle
+subschedule distinguishes all of them, although minimality at weight two remains
+open.
+
+The binary frame-route compiler has an exact schedule of 120 Toffoli and 79 CNOT
+gates, dependency depth 94, and 86 Toffoli-bearing layers.  Its best architectural
+use is at the information boundary rather than in the live controller.  Published
+Clifford+$T$, measurement-assisted, and relative-phase decompositions give distinct
+resource points, but their physical ranking is platform-dependent.
+
+Two terminal SWAPs in the deep-$M_{36}$ decoder are static detector/output relabelings.
+Absorbing them produces a dominating branch with six CNOTs, three Hadamards, and two
+$Z$ measurements, while preserving success probability $1/2$ and exact ray-7
+output.  In the stated stochastic model,
+\[
+ p_{\rm out}=\frac23p+\frac{140}{81}q_1+\frac{956}{405}q_2+\frac13q_m+O(2).
+\]
+
+The native controller group on $2\cdot81\cdot40=6480$ states has order
+\[
+ 30{,}233{,}088=2^9 3^{10}.
+\]
+Its route subgroup has order 192.  Adding one symplectic transvection generates
+$A_{40}$ on route addresses; this is an address-controller group, not an identification
+with the W33 automorphism group, and arbitrary words need not be physically local.
+
+Exact Moore minimization for outputs consisting of duality sector, spread line, and
+symplectic phase stabilizes at 6048 future-distinguishable states.  The quotient still
+requires thirteen fixed bits and therefore is used as a verification-level sufficient
+statistic rather than as the physical live representation.
+
+Finally, translation by $a=(1,2,0,0)$ combined with the order-four slot rotation gives
+a clock step $C$ of order twelve.  Anti-symplectic reversal combined with slot
+reflection gives $R^2=1$ and $RCR=C^{-1}$, hence a $D_{12}$ logical clock.  The full
+controller state space partitions into exactly 540 twelve-cycles.  This is a reversible
+logical phase counter, not an autonomous time crystal or a demonstrated physical time
+standard.
