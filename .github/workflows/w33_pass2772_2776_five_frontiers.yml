@@ -1,0 +1,67 @@
+name: Passes 2772-2776 Distillation Sensor Compiler Repeater
+on:
+  push:
+    paths:
+      - 'analysis/bt2772_2776_*.py'
+      - 'analysis/bt2772_m36_stabilizer_code_census.py'
+      - 'analysis/bt2773_metaplectic_interferometer.py'
+      - 'analysis/bt2774_structured_cx_compiler.py'
+      - 'analysis/bt2776_repeater_remote_sum.py'
+      - 'data/PART_BT2772*'
+      - 'data/PART_BT2773*'
+      - 'data/PART_BT2774*'
+      - 'data/PART_BT2776*'
+      - 'rtl/w33_pass2773*'
+      - 'rtl/w33_pass2776*'
+      - 'tests/test_bt2772_2776_five_frontiers.py'
+      - '.github/workflows/w33_pass2772_2776_five_frontiers.yml'
+  pull_request:
+    paths:
+      - 'analysis/bt2772_2776_*.py'
+      - 'analysis/bt2772_m36_stabilizer_code_census.py'
+      - 'analysis/bt2773_metaplectic_interferometer.py'
+      - 'analysis/bt2774_structured_cx_compiler.py'
+      - 'analysis/bt2776_repeater_remote_sum.py'
+      - 'rtl/w33_pass2773*'
+      - 'rtl/w33_pass2776*'
+      - 'tests/test_bt2772_2776_five_frontiers.py'
+jobs:
+  exact-five-frontiers:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install exact and FPGA tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys nextpnr-ice40 fpga-icestorm
+          python -m pip install numpy sympy pytest
+      - name: Rebuild exact certificates and generated decoder
+        run: |
+          PYTHONPATH=analysis python analysis/bt2772_m36_stabilizer_code_census.py
+          PYTHONPATH=analysis python analysis/bt2773_metaplectic_interferometer.py
+          PYTHONPATH=analysis python analysis/bt2774_structured_cx_compiler.py
+          PYTHONPATH=analysis python analysis/bt2776_repeater_remote_sum.py
+          PYTHONPATH=analysis python analysis/bt2772_2776_release.py
+      - name: Focused regressions
+        run: PYTHONPATH=analysis pytest -q tests/test_bt2772_2776_five_frontiers.py
+      - name: RTL syntax closure
+        run: |
+          mkdir -p build
+          iverilog -g2012 -tnull rtl/w33_pass2773_metaplectic_sensor_controller.sv
+          iverilog -g2012 -tnull rtl/w33_pass2776_repeater_scheduler.sv
+          iverilog -g2012 -tnull rtl/w33_pass2774_structured_cx_decoder.sv
+      - name: Synthesize structured decoder and controllers
+        run: |
+          yosys -p 'read_verilog -sv rtl/w33_pass2774_structured_cx_decoder.sv; synth_ice40 -top w33_pass2774_structured_cx_decoder -json build/decoder.json; stat' | tee build/yosys_decoder.txt
+          yosys -p 'read_verilog -sv rtl/w33_pass2773_metaplectic_sensor_controller.sv; synth_ice40 -top w33_pass2773_metaplectic_sensor_controller -json build/sensor.json; stat' | tee build/yosys_sensor.txt
+          yosys -p 'read_verilog -sv rtl/w33_pass2776_repeater_scheduler.sv; synth_ice40 -top w33_pass2776_repeater_scheduler -json build/repeater.json; stat' | tee build/yosys_repeater.txt
+      - name: Place route and time iCE40 HX8K
+        run: |
+          nextpnr-ice40 --hx8k --package tq144 --pcf-allow-unconstrained --json build/decoder.json --asc build/decoder.asc --freq 12 --report build/decoder_pnr.json |& tee build/nextpnr_decoder.txt
+          icetime -d hx8k -mtr build/decoder_timing.txt build/decoder.asc
+          nextpnr-ice40 --hx8k --package tq144 --pcf-allow-unconstrained --json build/repeater.json --asc build/repeater.asc --freq 12 --report build/repeater_pnr.json |& tee build/nextpnr_repeater.txt
+          icetime -d hx8k -mtr build/repeater_timing.txt build/repeater.asc
+      - uses: actions/upload-artifact@v4
+        with: {name: pass2772-2776-hardware-evidence, path: build/}
