@@ -5,6 +5,7 @@ import json
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "analysis" / "bt2808_2812_blueprint_truth_gate.py"
 INSERT = ROOT / "analysis" / "BT2808_BT2812_blueprint_evidence_insert.tex"
+OPERATING = ROOT / "data" / "PART_BT2810_M36_DISTILLATION_OPERATING_CURVE_results.json"
 
 
 def module():
@@ -33,9 +34,20 @@ def test_distillation_and_evidence_boundaries_are_both_present():
     assert "exactly $48$ improving branches" in combined
     assert "improves for $0<p<2/3$" in combined
     assert "fault-tolerant injection" in combined
+    assert "p'=R(p)" in combined
     assert "not a measured Holonet" in migrated
     assert "two-copy no-go" not in migrated
     assert "does \\emph{not} supply a distillation protocol" not in migrated
+
+
+def test_operating_curve_certificate():
+    data = json.loads(OPERATING.read_text(encoding="utf-8"))
+    assert data["status"] == "EXACT_ONE_ROUND_DYNAMICS"
+    assert data["fixed_points"] == ["0", "2/3", "1"]
+    assert data["local_slopes"] == {"0": "2/3", "2/3": "6/5", "1": "2/3"}
+    assert data["rational_samples"][0]["p_out"] == "7/15"
+    assert data["rational_samples"][0]["accepted_outputs_per_input"] == "5/32"
+    assert data["check_count"] == 11 and all(data["checks"].values())
 
 
 def test_pass_stack_is_collision_free_and_explicit():
