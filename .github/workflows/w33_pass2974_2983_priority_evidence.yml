@@ -63,17 +63,32 @@ jobs:
       - name: Recompute exact finite and golden closure
         run: python analysis/bt2974_2981_nonabelian_golden_information_closure.py
 
+      - name: Preserve frozen pilot certificate
+        run: |
+          mkdir -p analysis/evidence/pass2974_2983
+          cp data/PART_BT2977_GENERAL_ISOTROPIC_M36_PILOT_results.json /tmp/bt2977_frozen.json
+
       - name: Run deterministic general-isotropic pilot sentinel
-        run: python analysis/bt2977_general_isotropic_m36_search.py --quick 50000
+        run: |
+          python analysis/bt2977_general_isotropic_m36_search.py --quick 50000
+          if test -f data/PART_BT2977_GENERAL_ISOTROPIC_M36_PILOT_results.json; then
+            cp data/PART_BT2977_GENERAL_ISOTROPIC_M36_PILOT_results.json analysis/evidence/pass2974_2983/bt2977_quick_results.json
+          fi
 
       - name: Run exact duplicate-free pivot shard
         if: github.event_name == 'pull_request' || inputs.run_m36_shard
         env:
           PIVOT_INDEX: ${{ github.event_name == 'pull_request' && '494' || inputs.pivot_index }}
-        run: python analysis/bt2977_general_isotropic_m36_search.py --pivot-index "$PIVOT_INDEX"
+        run: |
+          python analysis/bt2977_general_isotropic_m36_search.py --pivot-index "$PIVOT_INDEX"
+          if test -f data/PART_BT2977_GENERAL_ISOTROPIC_M36_PILOT_results.json; then
+            cp data/PART_BT2977_GENERAL_ISOTROPIC_M36_PILOT_results.json "analysis/evidence/pass2974_2983/bt2977_shard_${PIVOT_INDEX}.json"
+          fi
 
-      - name: Focused regression
-        run: pytest -q tests/test_bt2974_bt2983_nonabelian_golden_information.py
+      - name: Restore frozen pilot certificate and run regression
+        run: |
+          cp /tmp/bt2977_frozen.json data/PART_BT2977_GENERAL_ISOTROPIC_M36_PILOT_results.json
+          pytest -q tests/test_bt2974_bt2983_nonabelian_golden_information.py
 
       - name: Integrate all four front doors idempotently
         run: |
@@ -91,7 +106,6 @@ jobs:
         shell: bash
         run: |
           set -o pipefail
-          mkdir -p analysis/evidence/pass2974_2983
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
             stem="${source%.tex}"
             tectonic --keep-logs "$source" 2>&1 | tee "analysis/evidence/pass2974_2983/${stem}.build.log"
