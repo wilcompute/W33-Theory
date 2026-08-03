@@ -1,0 +1,69 @@
+name: Passes 2809-2815 Tetrahedral Support Closure
+on:
+  push:
+    paths:
+      - 'analysis/bt2809*'
+      - 'analysis/bt2810*'
+      - 'analysis/bt2811*'
+      - 'analysis/bt2812*'
+      - 'analysis/bt2813*'
+      - 'analysis/bt2814*'
+      - 'analysis/bt2815*'
+      - 'analysis/BT2809_BT2815*'
+      - 'data/PART_BT2809*'
+      - 'data/PART_BT2810*'
+      - 'data/PART_BT2811*'
+      - 'data/PART_BT2812*'
+      - 'data/PART_BT2813*'
+      - 'data/PART_BT2814*'
+      - 'data/PART_BT2815*'
+      - 'rtl/w33_pass2811*'
+      - 'rtl/w33_pass2815*'
+      - 'tests/test_bt2809_2815*'
+      - '.github/workflows/w33_pass2809_2815_seven_frontiers.yml'
+  pull_request:
+    paths:
+      - 'analysis/bt2809*'
+      - 'analysis/bt281*'
+      - 'data/PART_BT28*'
+      - 'rtl/w33_pass2811*'
+      - 'rtl/w33_pass2815*'
+      - 'tests/test_bt2809_2815*'
+  workflow_dispatch:
+jobs:
+  exact-and-rtl:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install exact and FPGA tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys nextpnr-ice40 fpga-icestorm
+          python -m pip install networkx sympy pytest
+      - name: Regenerate and verify all seven packets
+        run: python analysis/bt2809_2815_release.py --verify-frozen
+      - name: Focused exact regressions
+        run: pytest -q tests/test_bt2809_2815_seven_frontiers.py
+      - name: Simulate codec round trip
+        run: |
+          mkdir -p build
+          iverilog -g2012 -s tb_w33_pass2811_support_first_codec -o build/codec.vvp \
+            rtl/w33_pass2811_support_first_codec.sv \
+            rtl/tb_w33_pass2811_support_first_codec.sv
+          vvp build/codec.vvp | tee build/codec_sim.txt
+      - name: Parse and synthesize live RTL
+        run: |
+          yosys -p 'read_verilog -sv rtl/w33_pass2811_support_first_codec.sv; synth_ice40 -top w33_pass2811_support_first_codec -json build/codec.json; stat' | tee build/yosys_codec.txt
+          yosys -p 'read_verilog -sv rtl/w33_pass2815_tomotope_cell_classifier.sv; synth_ice40 -top w33_pass2815_tomotope_cell_classifier -json build/classifier.json; stat' | tee build/yosys_classifier.txt
+      - name: Place route and time codec
+        run: |
+          nextpnr-ice40 --hx8k --package tq144 --pcf-allow-unconstrained \
+            --json build/codec.json --asc build/codec.asc --freq 50 \
+            --report build/codec_pnr.json |& tee build/nextpnr_codec.txt
+          icetime -d hx8k -mtr build/codec_timing.txt build/codec.asc
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass2809-2815-evidence
+          path: build/
