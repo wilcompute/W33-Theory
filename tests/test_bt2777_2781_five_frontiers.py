@@ -11,4 +11,4 @@ def test_structured_compiler():
 def test_repeater():
  d=load('PART_BT2781_REPEATER_REMOTE_SUM_summary.json');assert d['isotropic_recurrence']['fixed_points']==[1/9,1/3,1.0];r=d['scenario_summary']['1280']['best_distillable_rate'];assert r['segments']==8 and r['distillable']
 def test_release():
- d=load('PART_BT2777_BT2781_FIVE_FRONTIERS_results.json');assert d['check_count']==20 and all(d['checks'].values())
+ d=load('PART_BT2784_BT2788_FIVE_FRONTIERS_results.json');assert d['canonical_pass_range']=='2784-2788';assert d['check_count']==20 and all(d['checks'].values())
