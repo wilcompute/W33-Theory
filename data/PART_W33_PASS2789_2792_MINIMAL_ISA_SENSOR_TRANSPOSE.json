@@ -1,0 +1,125 @@
+{
+  "pass_2789": {
+    "frame_instructions_needed": 4,
+    "minimal_clifford_subsets": {
+      "size_1": [],
+      "size_2": [],
+      "size_3": [
+        "F_p+F_f+CX_pf",
+        "F_p+F_f+CX_fp",
+        "F_p+S_f+CX_pf",
+        "F_p+CX_pf+CX_fp",
+        "F_f+S_p+CX_fp",
+        "F_f+CX_pf+CX_fp"
+      ]
+    },
+    "minimal_size": 3
+  },
+  "pass_2791": {
+    "exponent_table": {
+      "1": {
+        "dimension": 3,
+        "minimal_exponent": 3
+      },
+      "2": {
+        "dimension": 9,
+        "minimal_exponent": 9
+      },
+      "3": {
+        "dimension": 27,
+        "minimal_exponent": 3
+      },
+      "4": {
+        "dimension": 81,
+        "minimal_exponent": 9
+      },
+      "5": {
+        "dimension": 243,
+        "minimal_exponent": 3
+      },
+      "6": {
+        "dimension": 729,
+        "minimal_exponent": 9
+      },
+      "7": {
+        "dimension": 2187,
+        "minimal_exponent": 3
+      },
+      "8": {
+        "dimension": 6561,
+        "minimal_exponent": 9
+      }
+    },
+    "n1_group_order": 2592,
+    "n1_invariance_by_exponent": {
+      "2": false,
+      "3": true,
+      "4": false,
+      "9": false
+    },
+    "n1_order_consistent": true,
+    "n1_phase_group": 12
+  },
+  "pass_2792": {
+    "congruence_law_holds": true,
+    "construction_valid_all_q": true,
+    "per_q": {
+      "11": {
+        "T_squared_is_I": true,
+        "anti_symplectic": true,
+        "minus_one_is_square": false,
+        "q_mod_4": 3,
+        "verdict": "OUTER (physical)"
+      },
+      "13": {
+        "T_squared_is_I": true,
+        "anti_symplectic": true,
+        "minus_one_is_square": true,
+        "q_mod_4": 1,
+        "verdict": "INNER (gauge)"
+      },
+      "17": {
+        "T_squared_is_I": true,
+        "anti_symplectic": true,
+        "minus_one_is_square": true,
+        "q_mod_4": 1,
+        "verdict": "INNER (gauge)"
+      },
+      "19": {
+        "T_squared_is_I": true,
+        "anti_symplectic": true,
+        "minus_one_is_square": false,
+        "q_mod_4": 3,
+        "verdict": "OUTER (physical)"
+      },
+      "23": {
+        "T_squared_is_I": true,
+        "anti_symplectic": true,
+        "minus_one_is_square": false,
+        "q_mod_4": 3,
+        "verdict": "OUTER (physical)"
+      },
+      "3": {
+        "T_squared_is_I": true,
+        "anti_symplectic": true,
+        "minus_one_is_square": false,
+        "q_mod_4": 3,
+        "verdict": "OUTER (physical)"
+      },
+      "5": {
+        "T_squared_is_I": true,
+        "anti_symplectic": true,
+        "minus_one_is_square": true,
+        "q_mod_4": 1,
+        "verdict": "INNER (gauge)"
+      },
+      "7": {
+        "T_squared_is_I": true,
+        "anti_symplectic": true,
+        "minus_one_is_square": false,
+        "q_mod_4": 3,
+        "verdict": "OUTER (physical)"
+      }
+    }
+  }
+}

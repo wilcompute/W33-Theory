@@ -1,3 +1,31 @@
+// ===================================================================================
+// DEPRECATED (Pass 2793).  DO NOT BUILD ON THIS FILE.  Use instead:
+//
+//     rtl/w33_pass2773_spread_mixer36_synth.sv   ->  w33_spread_mixer36_synth
+//
+// Despite the header below, this file is SYNTHESIZABLE BY NOTHING.  Both frontends in
+// this repository reject it, for two different unsupported constructs:
+//
+//     yosys    line 7   syntax error, unexpected '['
+//                       (unpacked array PORTS:  input logic signed [W-1:0] x [0:35])
+//     iverilog line 10  sorry: unpacked array parameters are not supported yet
+//                       (the MASK localparam)
+//
+// It has therefore never been simulated or synthesized since it was committed on
+// 2026-08-02, and it is not a "structural RTL reference" in any usable sense -- no tool
+// in this repo can read it.  Found by scripts/check_rtl_folds.py on its first
+// repo-wide sweep (Pass 2772).
+//
+// The replacement is a PORT, not a redesign: identical arithmetic, with the unpacked
+// ports replaced by one packed bus and the unpacked mask by a packed 1296-bit constant.
+// It is SAT-proved on the signed-impulse class (1,097,152 variables / 3,185,010 clauses)
+// and synthesises to 13,965 SB_LUT4 + 799 SB_CARRY at W = 16 -- which is 1.8x the
+// HX8K's 7,680 logic cells, so the fully parallel mixer does not fit any iCE40 here.
+// That is why rtl/w33_pass2612_serial_mixer.sv (4,048 LC, 19.65 MHz) exists.
+//
+// The text below is kept verbatim as the historical record.  It is not compiled.
+// ===================================================================================
+//
 // Pass 2206: synthesizable reference datapaths for the exact W(3,3) spread mixer.
 // This is a structural RTL reference, not a timing-closed FPGA result.
 module w33_spread_mixer36 #(

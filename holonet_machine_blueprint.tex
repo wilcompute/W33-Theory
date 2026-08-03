@@ -93,7 +93,7 @@
        whose wiring diagram is a piece of finite geometry\\[10pt]
        \normalsize Every figure in this document is measured or proved.}
 \author{\normalsize W(3,3)--E$_8$ project, glue track}
-\date{\normalsize 3 August 2026 \quad$\cdot$\quad Passes 2700--2783}
+\date{\normalsize 3 August 2026 \quad$\cdot$\quad Passes 2700--2795}
 
 \begin{document}
 \maketitle
@@ -610,6 +610,46 @@ removed from the ISA.
 \headline{Eight opcodes. Three bits. $4{,}199{,}040$ distinct operations, exactly ---
 and the eighth opcode is provably redundant.}
 
+\subsection{How small can the instruction set be?}
+
+\begin{plain}
+If one opcode is redundant, how many are? This is not idle: every instruction removed is
+decoder logic removed, and if enough go, the opcode field itself gets shorter --- which
+shortens every instruction word in the machine.
+
+The answer is that you can throw away half of them.
+\end{plain}
+
+\begin{spec}[Exhaustive over all subsets, Pass 2789]
+Because $\mathbb{F}_3^4\rtimes H=\mathrm{ASp}(4,3)$ iff $H=\mathrm{Sp}(4,3)$ and at least
+one translation is present, the search reduces to the six linear opcodes:
+\[
+\begin{array}{ll}
+\text{subsets of size }1\text{ generating }\mathrm{Sp}(4,3): & 0\\
+\text{subsets of size }2: & 0\\
+\text{subsets of size }3: & \mathbf{6}
+\end{array}
+\]
+The six minimal triples are
+$\{F_p,F_f,\mathrm{CX}_{p\to f}\}$, $\{F_p,F_f,\mathrm{CX}_{f\to p}\}$,
+$\{F_p,S_f,\mathrm{CX}_{p\to f}\}$, $\{F_p,\mathrm{CX}_{p\to f},\mathrm{CX}_{f\to p}\}$,
+$\{F_f,S_p,\mathrm{CX}_{f\to p}\}$, $\{F_f,\mathrm{CX}_{p\to f},\mathrm{CX}_{f\to p}\}$.
+\end{spec}
+
+\headline{Three Clifford opcodes plus one translation generate everything.
+Four frame instructions --- a \textbf{two-bit} opcode field, not three.}
+
+\begin{plain}
+Two details are worth noticing. First, there are \emph{six} different minimal choices, so
+a chip designer has real freedom to pick whichever three are cheapest in silicon rather
+than being handed one answer.
+
+Second, every single one of the six contains at least one Fourier gate \emph{and} at
+least one controlled-add. No collection of phase gates and one Fourier gate will do. The
+entangler is not optional --- which is the formal version of the intuition that a machine
+that never couples past to future is not really using the self-entanglement at all.
+\end{plain}
+
 % =====================================================================================
 \section{The hardware}\label{sec:hardware}
 % =====================================================================================
@@ -847,6 +887,124 @@ from future?''. Both are the statement that $-1$ is not a perfect square when yo
 modulo $3$.
 \end{plain}
 
+\subsection{And for wider registers, it is usually three}
+
+\begin{spec}[Pass 2791]
+The phase group is not an artefact of the two-qutrit case. At $n=1$ the Clifford group is
+small enough to enumerate exactly rather than sample:
+\[
+  |\langle F,S,X\rangle| = 2592 = \underbrace{12}_{\mu_{12}}\times
+  \underbrace{216}_{|\mathrm{ASp}(2,3)|}\quad\text{--- consistent, so }\mu_{12}\text{ again.}
+\]
+For $n$ qutrits $d=3^n$, so the minimal exponent is the least $e\equiv 3^n \pmod{12}$, and
+$3^n \bmod 12$ cycles $3,9,3,9,\dots$:
+\[
+\begin{array}{c|cccc}
+n & 1 & 2 & 3 & 4\\\hline
+d=3^n & 3 & 9 & 27 & 81\\
+\text{minimal }e & \mathbf{3} & 9 & \mathbf{3} & 9
+\end{array}
+\]
+Verified directly on $3\times3$ unitaries: $e=3$ is phase-invariant, $e\in\{2,4,9\}$ is not.
+\end{spec}
+
+\headline{Odd register widths need only a \emph{cube} of the trace, not a ninth power ---
+a strictly cheaper measurement, alternating with width.}
+
+% =====================================================================================
+\section{The magic states, and the one thing the machine cannot yet do}\label{sec:magic}
+% =====================================================================================
+
+\begin{plain}
+Everything described so far is, in a precise technical sense, \emph{not enough}. The
+eight opcodes generate a large and useful group, but a machine restricted to those
+operations can be simulated efficiently by an ordinary computer. To get a genuine quantum
+advantage you need one more ingredient, traditionally supplied as a special prepared
+state called a \emph{magic state}.
+
+The substrate hands us $36$ candidates for free --- $36$ special directions in the
+four-dimensional space, called the Witting rays. The open question, and the single
+largest gap in this blueprint, is whether those $36$ can be \emph{purified}: whether many
+noisy copies can be distilled into one clean one. Without that, the machine is a very
+elegant classical simulator.
+\end{plain}
+
+\subsection{All thirty-six look identical from the inside}
+
+% The optional argument is braced: an unbraced "]" inside $\mathbb{Z}[\omega]$ closes
+% the optional argument early and LaTeX reports "Extra }, or forgotten $".
+\begin{spec}[{Exact integer arithmetic in $\mathbb{Z}[\omega]$, Pass 2790}]
+Only two overlap values occur among the $36$ rays:
+\[
+  |\langle i|j\rangle|^2 \in \{\,0,\ \tfrac13\,\},
+\]
+and every ray has the \emph{same} profile: $11$ orthogonal partners and $24$ partners at
+overlap $1/3$. There is exactly one Gram profile among all $36$.
+
+\smallskip\noindent
+(The orthogonality graph is $11$-regular on $36$ vertices but \emph{not} strongly
+regular: $\lambda\in\{1,2\}$, $\mu\in\{3,4\}$. Recorded because the near-miss invites a
+false claim.)
+\end{spec}
+
+\begin{plain}
+So no symmetry of the machine can tell one ray from another by looking at how they sit
+relative to each other. If the rays differ at all, they differ only in how they sit
+relative to the \emph{ordinary} states --- an external comparison, not an internal one.
+\end{plain}
+
+\subsection{And from the outside, they fall into exactly three grades}
+
+\begin{spec}[$60$ two-qubit stabilizer states, $F_{\mathrm{stab}}=\max_s|\langle s|\psi\rangle|^2$]
+\begin{center}
+\begin{tabular}{@{}rlrl@{}}
+\toprule
+$F_{\mathrm{stab}}$ & closed form & rays & grade\\
+\midrule
+$0.750000$ & $9/12$              & \textbf{4}  & shallow\\
+$0.705342$ & $(5+2\sqrt3)/12$    & \textbf{24} & mid\\
+$0.622008$ & $(4+2\sqrt3)/12$    & \textbf{8}  & deep\\
+\bottomrule
+\end{tabular}
+\end{center}
+Stabilizer fidelity is a Clifford invariant, so the $8+24+4$ grading is genuine and not
+an artefact of the chosen basis.
+\end{spec}
+
+\begin{spec}[All three noise thresholds are one formula]
+For $\rho_p=(1-p)|m\rangle\!\langle m|+p\,I/4$ the target overlap is $1-3p/4$, so the
+witness certifies non-stabilizerness exactly while $1-3p/4>F_{\mathrm{stab}}$:
+\[
+  \boxed{\;p \;<\; \tfrac{4}{3}\bigl(1-F_{\mathrm{stab}}\bigr)\;}
+\]
+\[
+\begin{array}{lll}
+\text{shallow} & 0.333333333333 & =\ 1/3\\
+\text{mid}     & 0.392877598318 & =\ (7-2\sqrt3)/9\\
+\text{deep}    & 0.503988709429 & =\ (8-2\sqrt3)/9
+\end{array}
+\]
+Three separately-published thresholds, one formula, agreement to $10^{-12}$.
+\end{spec}
+
+\headline{The distillation search needs \emph{three} representatives, not thirty-six.
+A Clifford-invariant protocol cannot distinguish rays within a grade.}
+
+\begin{plain}
+That is the practical payoff. The known result in this area is a \emph{no-go}: an
+exhaustive search over $5{,}355$ small stabilizer codes and $21{,}420$ branches found no
+two-copy protocol that improves fidelity anywhere it applies. The natural next move is to
+search bigger protocols, and that search is expensive. Knowing there are only three
+inequivalent starting materials shrinks it by a factor of twelve before it begins.
+\end{plain}
+
+\begin{spec}[Evidence boundary, stated as bluntly as possible]
+No distillation protocol for $M_{36}$ is known. The controller types the resource
+\cmd{M36\_Q4\_RAW} and \emph{refuses} injection in RTL until a proved protocol asserts
+validity. \textbf{Until that assertion exists, this machine is not universal.} Everything
+else in this blueprint is built or proved; this is not.
+\end{spec}
+
 % =====================================================================================
 \section{The network}\label{sec:network}
 % =====================================================================================
@@ -1062,7 +1220,8 @@ $W(3,3)$ has $\mathrm{SRG}(40,12,2,4)$ collinearity graph & classical & literatu
 $40=(3^4-1)/2$ from one self-entangled qutrit & proved & Pass 2724\\
 The one-qutrit thesis itself & \textbf{prior art} & \cmd{index.html} MCLXVII\\
 Outer involution $=$ transpose $=$ time reversal & proved at $q{=}3$ & Pass 2732\\
-Time reversal outer $\iff q\equiv 3\pmod 4$ & proved & Pass 2750, $q\le 23$\\
+Time reversal outer $\iff q\equiv 3\pmod 4$ & proved & Pass 2750\\
+Transpose \emph{constructed} and checked at $q\le 23$ & proved & Pass 2792, 8 primes\\
 Anti-symplectic $T$, $T^\top JT=-J$; class action $10$ pairs $+$ $14$ fixed
    & proved & parallel track, Pass 2762\\
 Six Clifford opcodes reach $1$ frame of $81$ & proved & Pass 2774 (BFS)\\
@@ -1070,8 +1229,16 @@ Full ISA reaches all $81$ & proved & Pass 2774\\
 Clifford opcodes generate $\mathrm{Sp}(4,3)$, order $51{,}840$ & proved & Pass 2778\\
 Full ISA generates $\mathrm{ASp}(4,3)$, order $4{,}199{,}040$ & proved & Pass 2778\\
 One translation generator suffices (orbit $=80$) & proved & Pass 2778\\
+Minimal Clifford subset has size $3$; sizes $1,2$ give none & proved & Pass 2789, 6 triples\\
+Frame ISA fits a \textbf{two-bit} opcode field & follows & Pass 2789\\
 Sensor exponent $9=\dim$; phase group $\mu_{12}$; $9$ minimal & proved & Pass 2779\\
 $\mu_4$ factor $=$ imaginary Gauss sum & proved & Pass 2779\\
+$\mu_{12}$ at $n{=}1$ by exact enumeration ($2592=12\cdot216$) & proved & Pass 2791\\
+Minimal exponent $=3^n\bmod 12$: $3$ odd, $9$ even & derived & Pass 2791\\
+$36$ rays share one Gram profile ($11$ orth., $24$ at $1/3$) & proved & Pass 2790, $\mathbb{Z}[\omega]$\\
+$8{+}24{+}4$ is the stabilizer-fidelity spectrum & proved & Pass 2790, 60 stab.\ states\\
+All three witness thresholds $=\frac43(1-F_{\mathrm{stab}})$ & derived & Pass 2790, $10^{-12}$\\
+$M_{36}$ two-copy no-go, $5355$ codes $\times$ $4$ syndromes & \textbf{prior art} & parallel track, Pass 2784\\
 Frame unit: $72$ LC, $60.80$\,MHz & \textbf{measured} & \S\ref{sec:budget}\\
 Loadable CX: $23$ LC, $72.40$\,MHz, $\mathrm{CX}^3{=}I$ & measured $+$ proved &
    $5265$ vars / $14005$ clauses\\
@@ -1140,12 +1307,16 @@ A blueprint that lists only what works is advertising. Here is the honest remain
       output transitions per operation. That is a technology-independent activity proxy.
       Watts require the placed netlist, a capacitance model, voltage, clock and a
       representative workload.
-\item \textbf{The transpose construction is verified at $q=3$ only.} The
-      $q\equiv 3\pmod 4$ statement is the quadratic-residue fact plus that
-      identification; it has not been re-derived at larger $q$.
-\item \textbf{One original module is unparseable and remains so.}
-      \cmd{rtl/w33\_spread\_mixer36.sv} is rejected by both frontends. We added a port
-      rather than editing another track's file; the original should be retired.
+\item \textbf{(Closed at Pass 2792.)} The transpose construction was previously
+      verified at $q=3$ only. It is now built and checked over $\mathbb{F}_q$ at
+      $q=3,5,7,11,13,17,19,23$: $T^2=I$ and $T^\top JT=-J$ hold at every one, and the
+      congruence law holds at every one. Left in this list, struck through, because a
+      blueprint should show which gaps closed and when.
+\item \textbf{One original module is unparseable} ---
+      \cmd{rtl/w33\_spread\_mixer36.sv}, rejected by both frontends. It now carries a
+      deprecation banner naming its replacement and quoting both errors; the bytes are
+      kept as the historical record, since it compiles nowhere and deleting another
+      track's file is not ours to do.
 \end{enumerate}
 
 \vspace{6mm}

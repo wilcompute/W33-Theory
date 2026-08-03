@@ -1,0 +1,34 @@
+{
+  "all_quoted_thresholds_derived": true,
+  "grading_is_stabilizer_fidelity": true,
+  "gram_profile_classes": [
+    36
+  ],
+  "matches_8_24_4_grading": false,
+  "one_threshold_formula": "p < 4 (1 - F_stab) / 3",
+  "orthogonality_degrees": {
+    "11": 36
+  },
+  "orthogonality_srg": null,
+  "overlap_values_9x": {
+    "0": 396,
+    "3": 864
+  },
+  "pass": 2790,
+  "prior_art": {
+    "census_8_24_4": "parallel track BT822 / Pass 2767",
+    "two_copy_no_go": "parallel track Pass 2784 (PR #206, provisional 2777)"
+  },
+  "rays": 36,
+  "stabilizer_fidelity_closed_forms_twelfths": {
+    "deep_8_rays": "(4 + 2 sqrt3)/12",
+    "mid_24_rays": "(5 + 2 sqrt3)/12",
+    "shallow_4_rays": "9/12"
+  },
+  "stabilizer_fidelity_tally": {
+    "0.622008": 8,
+    "0.705342": 24,
+    "0.750000": 4
+  },
+  "stabilizer_states": 60
+}
