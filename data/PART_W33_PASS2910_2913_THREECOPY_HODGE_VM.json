@@ -1,0 +1,34 @@
+{
+  "pass_2910": {
+    "conclusion": "no factor-wise three-copy projection is super-linear; not a proof over all stabilizer projectors",
+    "largest_kill_set": 1,
+    "paulis": 4095,
+    "search_is_exhaustive_over": "factor-wise family only, not all projectors",
+    "usable_factors": 18,
+    "witness": null
+  },
+  "pass_2911": {
+    "characters_agree_on_tested_element": false,
+    "eigenspace_dim": 15,
+    "fixed_subsets_of_support_shell": 3,
+    "trace_on_eigenspace": 2.333333333333333,
+    "verdict": "refuted: not isomorphic"
+  },
+  "pass_2912": {
+    "guest_instruction_cost": {
+      "F_guest": 1,
+      "S_guest": 8,
+      "Z_guest": 1
+    },
+    "guests_per_host": 2,
+    "isolation": "structural: only CX couples the register pairs",
+    "mean_overhead": 3.3333333333333335,
+    "worst_case_overhead": 8
+  },
+  "pass_2913": {
+    "ci_assertion": "diameter == 19 and shell_size == 188 for F_p+CX_pf+CX_fp",
+    "diameter": 19,
+    "distinct_linear_parts": 54,
+    "shell_size": 188
+  }
+}
