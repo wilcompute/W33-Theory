@@ -1,4 +1,18 @@
-// Pass 2642 -- a node whose network has the same shape as the node.
+// Pass 2642 -- a ternary recursion demonstrator.
+//
+// RELABELLED at Pass 2686.  This was published as "a node whose network has the same
+// shape as the node", justified by the E8 > A2 + E6 branching.  That justification is
+// WITHDRAWN, for three independent reasons:
+//   1. the holonet fractal is 40-ary (BT827: replace each of the 40 POINTS), not 3-ary;
+//   2. photonic_holonet_body.tex line 680 states that the E6 x A2 < E8 branching action
+//      and the transitive W33-code action are NONCONJUGATE with different root-orbit
+//      fingerprints;
+//   3. the same line calls using it "a chamber calibration rather than a
+//      symmetry-forced device frame".
+//
+// What remains true is only about this circuit: it is a recursive module with an
+// identical port signature at every depth, placed at depths 0-3, with the exact
+// measured law LC(d) = 75*3^d - 2.  It models no object in this project.
 //
 // The brief: minimal hardware that replicates itself, so that the machine, the program
 // and the network are one object, self-similar inward and outward.
