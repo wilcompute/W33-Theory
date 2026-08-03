@@ -1,0 +1,78 @@
+{
+  "every_edge_in_one_line": true,
+  "gq_axiom_holds": true,
+  "identified_as_W33": true,
+  "lines": 40,
+  "pass": 2869,
+  "prior_art": "docs/index.html Theory section states the Spence count",
+  "spence_nonisomorphic_count": 28,
+  "spread": [
+    [
+      0,
+      5,
+      7,
+      36
+    ],
+    [
+      1,
+      10,
+      19,
+      27
+    ],
+    [
+      2,
+      12,
+      21,
+      31
+    ],
+    [
+      3,
+      11,
+      26,
+      33
+    ],
+    [
+      4,
+      17,
+      23,
+      32
+    ],
+    [
+      6,
+      15,
+      18,
+      29
+    ],
+    [
+      8,
+      13,
+      25,
+      34
+    ],
+    [
+      9,
+      14,
+      16,
+      37
+    ],
+    [
+      20,
+      22,
+      24,
+      38
+    ],
+    [
+      28,
+      30,
+      35,
+      39
+    ]
+  ],
+  "spread_found": true,
+  "srg_parameters": [
+    40,
+    12,
+    2,
+    4
+  ]
+}

@@ -247,3 +247,43 @@ is the only place in this repository where a guard blocks.
   settles it.
 - A reversible router, which would zero the per-hop Landauer cost.
 - Whether the diameter-19 bound is tight for *some* other minimal triple — six exist.
+
+---
+
+## Pass 2869 — correction: `SRG(40,12,2,4)` does **not** identify `W(3,3)`
+
+Pass 2835 computed the orthogonality graph of the 40 rays, found `SRG(40,12,2,4)`, and
+concluded it *is* the `W(3,3)` collinearity graph. **That inference was one step short**,
+and `docs/index.html`'s Theory section says so in plain words:
+
+> *"The parameter tuple does not identify `W(3,3)`: Spence classified exactly **28
+> nonisomorphic** `SRG(40,12,2,4)` graphs. The object here is fixed by the displayed
+> symplectic construction."*
+
+The blueprint repeated the error in stronger language still — *"there is essentially one
+object in the world with that compatibility pattern"* — which is simply false.
+
+### The identification, completed
+
+```text
+SRG parameters (40,12,2,4)                          -> 28 candidates
+every edge in exactly one line (240 edges, 40 lines,
+  4 per point) and the GQ axiom over ALL 40 lines   -> 2 candidates: W(3,3), Q(4,3)
+a spread: 10 pairwise disjoint lines covering all 40 -> W(3,3)
+```
+
+`W(3,q)` has a spread for every `q`; `Q(4,q)` has one only for **even** `q`. One is
+exhibited explicitly:
+
+```text
+[0,5,7,36] [1,10,19,27] [2,12,21,31] [3,11,26,33] [4,17,23,32]
+[6,15,18,29] [8,13,25,34] [9,14,16,37] [20,22,24,38] [28,30,35,39]
+```
+
+> **The 40 rays are the points of `W(3,3)`** — now on the identification it needed rather
+> than on a parameter coincidence. The Pass 2835 headline survives intact.
+
+**Fifth false-novelty-class failure of the session, and the first found by reading a
+section end to end rather than grepping it.** The sentence that overturned it was in a
+document my own operating notes name as the first thing to read.
+

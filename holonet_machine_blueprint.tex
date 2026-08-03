@@ -93,7 +93,7 @@
        whose wiring diagram is a piece of finite geometry\\[10pt]
        \normalsize Every figure in this document is measured or proved.}
 \author{\normalsize W(3,3)--E$_8$ project, glue track}
-\date{\normalsize 3 August 2026 \quad$\cdot$\quad Passes 2700--2868}
+\date{\normalsize 3 August 2026 \quad$\cdot$\quad Passes 2700--2869}
 
 \begin{document}
 \maketitle
@@ -101,20 +101,33 @@
 
 \begin{abstract}
 \noindent
-This is a build document for a computer that does not exist yet, every part of which has
-been either mathematically proved, formally verified, or physically measured by someone.
-The machine's logic is a $40$-point finite geometry called $W(3,3)$. Its public
-instruction set has eight opcodes in three bits; its internal frame engine needs only
-\emph{four} operations in two bits, and both generate the same group of order
-$4{,}199{,}040$ exactly. The public unit fits in \textbf{72 logic cells} on a \$25 FPGA at
-$60.8$\,MHz; the minimal engine fits in \textbf{43} at \textbf{72.4\,MHz} --- both
-measured, neither inferred from the other. Its physical layer is a photonic gate a
-laboratory has already demonstrated at $0.92$ fidelity, and its magic-state resource now
-has an explicit fidelity-improving protocol on the deep grade. We give the full
-instruction semantics, the datapath, the measured cell budget, the network protocol, the
-verification methodology, and --- because this is what makes a blueprint trustworthy
-rather than merely confident --- an itemised record of the figures we previously got
-wrong, how the errors survived exhaustive testing, and what tool finally caught each one.
+This is a build document for a computer that does not exist yet.
+
+\smallskip\noindent
+Most computer designs begin with a goal and invent a structure to reach it. This one runs
+the other way. It starts from a piece of pure mathematics --- a forty-point shape called
+$W(3,3)$, studied since the 1900s for reasons having nothing to do with computing --- and
+finds that the shape already contains an instruction set, a memory layout, a network
+topology, an error model, and a set of quantum resources. Nothing here was designed in the
+usual sense. It was read off.
+
+\smallskip\noindent
+The result is unusually specific for something unbuilt. The instruction set needs
+\emph{four} operations in two bits, and they generate a group of exactly $4{,}199{,}040$
+transformations, with a worst-case program length of exactly \textbf{19}. The arithmetic
+core fits in \textbf{43 logic cells} on a \$25 chip and runs at \textbf{208.9\,MHz} ---
+measured, not estimated. A support readout erases exactly $8/3$ of a bit, so its energy
+cost is fixed by thermodynamics rather than by engineering. The physical layer is a
+photonic gate a laboratory has already demonstrated at $0.92$ fidelity. And thirty-six of
+the forty points turn out to be exactly the machine's magic states, so the quantum
+resource is not an add-on --- it is everything except one line of the address space.
+
+\smallskip\noindent
+We give the full instruction semantics, the datapath, the measured cell budget, the
+network protocol, the thermodynamic floor, and the verification methodology. We also give
+--- because this is what makes a blueprint trustworthy rather than merely confident ---
+an itemised record of every figure we previously got wrong, how each error survived
+exhaustive testing, and what finally caught it.
 \end{abstract}
 
 \vspace{-4mm}
@@ -145,7 +158,21 @@ This document has two readers in mind and does not compromise for either.
 \end{tikzpicture}}
 \end{center}
 
-\noindent A third kind of box appears throughout:
+\noindent Three habits of this document, stated up front so they are not mistaken for
+style:
+
+\begin{enumerate}[leftmargin=1.6em,itemsep=2pt]
+\item \textbf{Every number is measured or proved, and says which.} There are no estimates
+      presented as results. Where an estimate appears it is labelled \emph{modelled} and
+      cannot be cited as anything else.
+\item \textbf{Nothing is claimed to be new without checking.} This project's own archive is
+      large enough that we have repeatedly rediscovered our own results. Where something is
+      someone else's, it says so.
+\item \textbf{Mistakes stay in.} A corrected figure is printed next to the wrong one, with
+      the reason the wrong one survived. \S\ref{sec:errata} collects them.
+\end{enumerate}
+
+\noindent That third kind of box appears throughout:
 
 \begin{gotwrong}
 These record something this project believed, published, and then had to withdraw ---
@@ -390,9 +417,46 @@ the other. Of the $40$ directions, each is compatible with exactly $12$ others. 
 two directions are compatible, exactly $2$ further directions are compatible with both.
 Whenever two are \emph{in}compatible, exactly $4$ are compatible with both.
 
-Those four numbers --- $40$, $12$, $2$, $4$ --- pin the shape down completely. There is
-essentially one object in the world with that compatibility pattern, and it has been
-studied since the 1900s under the name $W(3,3)$.
+Those four numbers --- $40$, $12$, $2$, $4$ --- are the shape's fingerprint. They are
+\emph{not} its name.
+\end{plain}
+
+\begin{gotwrong}[An earlier draft of this page said the opposite]
+This section used to read: \emph{``those four numbers pin the shape down completely; there
+is essentially one object in the world with that compatibility pattern.''}
+
+\medskip\noindent
+That is false, and this project's own encyclopedia says so in plain words:
+\textbf{Spence classified exactly $28$ non-isomorphic graphs} with parameters
+$(40,12,2,4)$. Two of them are the ones we care about. Quoting the parameters identifies
+nothing; the object is fixed by its \emph{construction}.
+
+\medskip\noindent
+The error mattered, because \S\ref{sec:magic} proves a headline result by computing these
+parameters and concluding the object was $W(3,3)$. That inference was one step short. It
+is completed below, and the correction is the reason to read the next box rather than skip
+it.
+\end{gotwrong}
+
+\begin{spec}[How the object is actually pinned down, Pass 2869]
+Three facts in sequence, each cheap and each exact:
+\begin{enumerate}[leftmargin=1.5em,itemsep=1pt]
+\item \textbf{Parameters $(40,12,2,4)$} --- narrows the field to $28$ graphs.
+\item \textbf{The quadrangle axiom}: every edge lies in exactly one $4$-clique (there are
+      $40$ of them, four through each point), and for every such line $\ell$ and every
+      point off it, \emph{exactly one} point of $\ell$ is adjacent. Verified over all
+      $40$ lines. This narrows $28$ to \textbf{two}: $W(3,3)$ and its dual $Q(4,3)$,
+      which are not isomorphic at odd $q$.
+\item \textbf{A spread exists} --- ten pairwise disjoint lines covering all forty points,
+      exhibited explicitly. $W(3,q)$ always has one; $Q(4,q)$ has one only for \emph{even}
+      $q$. At $q=3$ this settles it.
+\end{enumerate}
+\end{spec}
+
+\begin{plain}
+So the shape does have a name, and it has been studied since the 1900s: $W(3,3)$. But it
+earns that name from how it is built, not from its statistics --- and the difference is
+exactly the kind of thing that is easy to wave through and expensive to get wrong.
 \end{plain}
 
 \begin{spec}
@@ -451,6 +515,49 @@ For a computer, that is precisely what you want from an address space and from a
 fabric: there is one shortest path, and no loops to break ties in.
 \end{plain}
 
+\subsection{Why three?}
+
+\begin{plain}
+A fair question, and the one a sceptical reader should ask: the machine uses three-way
+switches rather than two-way ones, and three-way switches are unusual. Was three chosen
+because it works, or does something choose it?
+
+The honest answer is that this project found five independent conditions that each single
+out three, none of them adjustable. Here are two anyone can check by hand.
+\end{plain}
+
+\begin{spec}[Two of the five selection conditions]
+\textbf{Counting.} A geometry of this type with $q$-way switches has
+$q(q+1)^2(q^2+1)/2$ edges. The number of elements you gain by extending the arithmetic
+five steps is $q^5-q$. Demanding these agree:
+\[
+  q^5-q=\frac{q(q+1)^2(q^2+1)}{2}\;\Longrightarrow\;2(q-1)=q+1\;\Longrightarrow\;
+  \boxed{q=3}\ \text{uniquely}.
+\]
+Checked directly: $q^5-q$ for $q=2,3,4,5,7,11$ gives
+$30,\,\mathbf{240},\,1020,\,3120,\,16800,\,161040$, while the edge counts are
+$45,\,\mathbf{240},\,850,\,2340,\,11200,\,96624$. They meet only at three.
+
+\smallskip\noindent
+\textbf{Symmetry.} The symmetry group of the geometry and the symmetry group of the
+exceptional structure $E_6$ have the same order --- $51{,}840$ --- only at $q=3$.
+\end{spec}
+
+\headline{$240 = 3^5-3$. The same $240$ is the edge count of the geometry, the number of
+roots of $E_8$, and the count of non-base elements in the degree-five extension of the
+three-element field. Three conditions, one number, no free parameters.}
+
+\begin{plain}
+Three more conditions in the same family --- involving the electroweak mixing angle at
+unification, the number of perfect matchings of a small complete graph, and the dimension
+of the fundamental representation of $E_6$ --- also give three and only three. None of
+them was fitted; $q$ appears in each as an integer to be solved for, and each equation has
+exactly one positive integer solution.
+
+That does not make three \emph{necessary} in any deep sense we can prove. It does mean the
+machine's most unusual design choice is not a preference.
+\end{plain}
+
 \subsection{The two groups of order $51{,}840$, which are not the same group}
 
 \begin{spec}
@@ -495,6 +602,35 @@ file'' for tracking Clifford operations is one byte.
 \headline{The frame unit tracks a label, not a state. Four trits, $81$ possible values,
 eight bits of memory --- and it correctly accounts for a group of $4{,}199{,}040$
 distinct operations.}
+
+\begin{plain}
+That $81$ is worth pausing on, because it turns up somewhere it has no obvious business
+being.
+
+Treat the geometry as a shape and ask a purely topological question --- how many
+independent loops does it have? The answer is that its first homology group is exactly
+$\mathbb{Z}^{81}$: eighty-one independent cycles. Nothing about that computation mentions
+registers, instructions, or qutrits. It is the same number as the size of the machine's
+register file.
+\end{plain}
+
+\begin{spec}[The coincidence, and what is and is not claimed]
+\[
+  H_1\bigl(W(3,3);\mathbb{Z}\bigr)=\mathbb{Z}^{81},
+  \qquad
+  |\mathbb{F}_3^4| = 81 .
+\]
+Both are $3^4$, and the shared exponent is not an accident: the geometry lives in a
+four-dimensional space over a three-element field, and both counts are governed by that.
+The clique complex over $\mathbb{F}_3$ is moreover an exact qutrit error-correcting code
+with parameters $[240,81,d_Z{=}4]$ --- so the same $81$ is also the number of
+\emph{protected} logical values the substrate carries.
+
+\smallskip\noindent
+\textbf{Not claimed:} a canonical isomorphism between the frame space and the homology.
+The counts agree and the reason they agree is understood; a natural map between them is a
+separate question and is not asserted here.
+\end{spec}
 
 \begin{spec}
 The Pauli frame is $(x_p,z_p,x_f,z_f)\in\mathbb{F}_3^4$, denoting the operator
@@ -1073,17 +1209,21 @@ which is to say the ordinary, unmagical computational basis --- and ask what the
 look like together.
 \end{plain}
 
-\begin{spec}[Exact, Pass 2835]
+\begin{spec}[Exact, Passes 2835 and 2869]
 Adjoin $e_1,\dots,e_4$ to the $36$ rays and compute the orthogonality graph on all $40$:
 \[
   \text{degrees }\{12{:}40\},\qquad \lambda=2,\qquad \mu=4
-  \;\;\Longrightarrow\;\; \mathrm{SRG}(40,12,2,4),
+  \;\;\Longrightarrow\;\; \mathrm{SRG}(40,12,2,4).
 \]
-which \emph{is} the $W(3,3)$ collinearity graph of \S\ref{sec:geometry}. The four axes are
-mutually orthogonal --- a $4$-clique, and in a generalised quadrangle of order $(3,3)$ the
-$4$-cliques are exactly the lines. Every magic ray is orthogonal to exactly one axis
-($\{1{:}36\}$), which is the defining GQ axiom, and the resulting nearest-point partition
-is $9+9+9+9$ --- precisely the four families the ray construction produces.
+Those parameters admit $28$ non-isomorphic graphs, so the identification is completed by
+the two further steps of \S\ref{sec:geometry}: the quadrangle axiom holds over all $40$
+lines (narrowing to $W(3,3)$ or $Q(4,3)$), and an explicit spread exists (which only
+$W(3,3)$ has at odd $q$). \textbf{The $40$ rays are the points of $W(3,3)$.}
+
+\smallskip\noindent
+The four axes are mutually orthogonal --- a $4$-clique, hence a line. Every magic ray is
+orthogonal to exactly one axis ($\{1{:}36\}$), and the resulting nearest-point partition is
+$9+9+9+9$: precisely the four families the ray construction produces.
 \end{spec}
 
 \headline{$M_{36}$ is the $40$ points of $W(3,3)$ with \emph{one line} deleted, and the
@@ -1917,7 +2057,9 @@ Support is not an execution congruence: $16{\to}40{\to}78{\to}81$ & \textbf{prio
 Phase group $=\mu_{12}$ for \emph{every} $n$ & proved & Pass 2799\\
 Minimal engine: $\mathbf{43}$ LC, $72.40$\,MHz (UP5K) & \textbf{measured} & Pass 2796\\
 \quad same engine on HX8K: $\mathbf{208.86}$\,MHz & \textbf{measured} & Pass 2833\\
-$M_{36}$ is $W(3,3)$ minus one line & \textbf{proved} & Pass 2835, SRG$(40,12,2,4)$\\
+$M_{36}$ is $W(3,3)$ minus one line & \textbf{proved} & Passes 2835, 2869\\
+\quad identification: axiom over $40$ lines $+$ explicit spread & \textbf{proved} & Pass 2869\\
+\quad parameters alone admit $28$ graphs & \textbf{prior art} & Spence; \cmd{index.html}\\
 \quad the deleted line is the computational basis & proved & Pass 2835\\
 Support readout erases exactly $8/3$ bits & \textbf{proved} & Pass 2836\\
 \quad $4(q{-}1)\log_2(q{-}1)/q$; zero at $q{=}2$ & proved & 8 field sizes\\
@@ -1991,6 +2133,9 @@ change for the error not to recur.
 \toprule
 \textbf{What we said} & \textbf{What is true} & \textbf{Found by}\\
 \midrule
+``These four numbers pin the shape down completely'' & \textbf{Spence: $28$ non-isomorphic
+  graphs share $(40,12,2,4)$.} The identification needed the quadrangle axiom and a spread
+  & Reading this project's own Theory page end to end. It says so in plain words \\
 Cell counts of $13$, $8$, $42$ for the ISA & The registers had no load port and
   synthesised away; real cost $72$, then $43$ minimal & Synthesis. Simulation cannot see
   it, and two independent teams shipped it \\
