@@ -1,0 +1,22 @@
+{
+  "schema": "w33.pass2828.support_observer_distance.summary.v1",
+  "status": "COMPLETE_EXACT",
+  "check_count": 4,
+  "checks": {
+    "eight_shortest_words": true,
+    "all_full_trajectory_distances_one": true,
+    "distance_one_pair_profile": true,
+    "no_single_bit_detection_guarantee": true
+  },
+  "headline": "Every shortest injective support trajectory code has minimum distance one; exact observability does not supply single-bit error detection.",
+  "minimum_distances": [1, 1, 1, 1, 1, 1, 1, 1],
+  "distance_one_pair_counts": [45, 36, 45, 45, 45, 36, 36, 36],
+  "canonical_word": ["CX_p->f", "F_p", "Z_p", "F_p", "Z_p", "CX_p->f"],
+  "canonical_full_trace_distance_one_pairs": 45,
+  "architecture_boundary": {
+    "noiseless_identification": true,
+    "single_arbitrary_bit_detection": false,
+    "single_arbitrary_bit_correction": false,
+    "required_next_layer": "repetition, longer or joint diagnostic words, checksum, or soft-decision decoding"
+  }
+}
