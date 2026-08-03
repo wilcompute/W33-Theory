@@ -1,0 +1,16 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "2847-2853",
+  "owner": "agent/pass2847-2853-protected-observer-noisy-m36",
+  "status": "reserved",
+  "reserved_after": "parallel Passes 2840-2846 reservation",
+  "passes": {
+    "2847": "exact distance-four trajectory puncturing and 28-tap optimum",
+    "2848": "affine-square feature bank and 24-sample repeated-feature optimum",
+    "2849": "observer-word and minimal-selector automorphism groups",
+    "2850": "photonic asymmetric-channel maximum-likelihood decoder",
+    "2851": "phenomenological noisy M36 recurrence and golden saddle-node threshold",
+    "2852": "adaptive no-reset support observer with four-cycle worst-case policy",
+    "2853": "RTL, regression, manuscript, website, and synthesis-evidence integration"
+  }
+}
