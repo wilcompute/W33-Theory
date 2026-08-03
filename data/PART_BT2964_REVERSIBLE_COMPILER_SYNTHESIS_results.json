@@ -1,0 +1,40 @@
+{
+  "claim_boundary": "Exact classical reversible gate list and exhaustive valid-state simulation. Physical Toffoli decomposition, clocking, fault tolerance and finite-time energy remain device dependent.",
+  "generic_joint_permutation": {
+    "clean_ancilla_toffoli_upper_bound": 828912,
+    "cycle_count": 3120,
+    "optimized_star_mcx_upper_bound": 39472,
+    "state_count": 8192,
+    "transposition_floor": 5072
+  },
+  "generic_transcript_permutation": {
+    "clean_ancilla_toffoli_upper_bound": 18018,
+    "cycles": [
+      74,
+      133,
+      43,
+      6
+    ],
+    "optimized_star_mcx_upper_bound": 1638,
+    "transposition_floor": 252
+  },
+  "schema": "w33.pass2964.reversible_compiler_synthesis.v1",
+  "status": "COMPLETE_EXACT_GATE_LEVEL",
+  "structured_protected_path": {
+    "all_scratch_uncomputed": true,
+    "clean_scratch_bits": 24,
+    "exhaustive_valid_states": 3240,
+    "joint_rank_cnot": 79,
+    "joint_rank_formula": "R=(r<<5)+(r<<3)+a",
+    "joint_rank_toffoli": 120,
+    "output_bits": 12,
+    "support_triplet_decode_cnot": 8,
+    "support_triplet_decode_not": 8
+  },
+  "thermodynamic_ledger": {
+    "eventual_joint_rank_floor_bits": 11.661778097771988,
+    "reversible_gate_erasure_bits": 0,
+    "scratch_reset_floor_bits": 0,
+    "single_error_record_floor": "h2(p)+p log2(15)"
+  }
+}
