@@ -1,0 +1,45 @@
+\section{The spread router can certify its own curvature}
+\label{sec:bt2967-bt2970-blueprint}
+
+\begin{plain}
+The ten spread modes carry exact four-channel permutations.  Local slot labels
+can change which links look even or odd, but not the parity accumulated around
+a triangle.  Across all thirty-six spreads, those triangle parities form one
+standard object whose switching class contains the Petersen graph.  The machine
+can compare an observed parity table with that certified baseline and decode
+route faults.
+\end{plain}
+
+\begin{spec}[Exact curvature and route code]
+Pass~2967 proves that the sixty odd triangle holonomies form a
+\(2-(10,3,4)\) two-graph with
+\[
+ \delta^2a=0,
+ \qquad
+ \operatorname{Aut}(\mathcal T)\cong S_6,
+ \qquad |S_6|=720.
+\]
+Pass~2968 proves that the \(120\times45\) triangle--edge matrix has rank \(36\)
+and kernel
+\[
+ \operatorname{Cut}(K_{10})=[45,9,9]_2.
+\]
+All nongauge odd faults through weight eight are detected; odd faults through
+weight four are correctable modulo slot gauge.
+\end{spec}
+
+\begin{spec}[Complementary pilot layer]
+Three distinct pilot slots identify every one of the twenty-three nonidentity
+\(S_4\) errors on one faulty edge.  The pilot layer therefore catches even
+errors that parity cannot see, while the curvature layer adds multi-edge
+correction for odd faults.
+\end{spec}
+
+\begin{gotwrong}[Receiver correction]
+The local Pauli cover \(\{YI,IY\}\) remains minimal, but its success
+\(\tfrac12(1+1/\sqrt3)=0.788675\ldots\) is not Helstrom-optimal.  With squared
+overlap \(1/3\), the ideal one-copy optimum is
+\(\tfrac12(1+\sqrt{2/3})=0.908248\ldots\), and the \(n\)-copy optimum is
+\(\tfrac12(1+\sqrt{1-3^{-n}})\).  Adaptive attainability is published prior
+art, not a new machine theorem.
+\end{gotwrong}
