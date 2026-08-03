@@ -1,0 +1,14 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "2825-2829",
+  "owner": "agent/pass2825-2829-support-observer",
+  "status": "reserved",
+  "reserved_after": "Passes 2820-2824 blueprint hardening and support execution obstruction",
+  "passes": {
+    "2825": "finite-delay support observer theorem",
+    "2826": "minimal distinguishing-word and residual-pair classification",
+    "2827": "support-only telemetry decoder architecture",
+    "2828": "observer RTL and formal equivalence harness",
+    "2829": "manuscript, blueprint, website, and compiled evidence promotion"
+  }
+}
