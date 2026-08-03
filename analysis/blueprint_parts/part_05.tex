@@ -1,0 +1,152 @@
+motivated it.
+
+\medskip\noindent
+\cmd{check\_rtl\_folds.py} had the same disease on its first run: it reported a clean
+sweep because the WSL mount is \cmd{/mnt/c} while Python resolves the drive as
+\cmd{C:}, so every directory change failed silently and no netlist was ever produced. It
+now reports \textsc{not synthesized} explicitly rather than treating a missing netlist as
+a pass.\end{gotwrong}
+
+\input{analysis/BT2820_BT2824_blueprint_evidence_insert}
+
+% =====================================================================================
+\section{The complete ledger}
+% =====================================================================================
+
+\begin{plain}
+Everything this blueprint asserts, with how it is known. If a row says
+``proved'' there is a machine-checkable artifact; if it says ``measured'' there is a tool
+output; if it says ``published'' someone else did it and we cite them.
+\end{plain}
+
+{\small
+\begin{center}
+\begin{tabular}{@{}p{8.6cm}p{2.5cm}p{4.0cm}@{}}
+\toprule
+\textbf{Claim} & \textbf{Status} & \textbf{Artifact}\\
+\midrule
+$W(3,3)$ has $\mathrm{SRG}(40,12,2,4)$ collinearity graph & classical & literature\\
+$40=(3^4-1)/2$ from one self-entangled qutrit & proved & Pass 2724\\
+The one-qutrit thesis itself & \textbf{prior art} & \cmd{index.html} MCLXVII\\
+Outer involution $=$ transpose $=$ time reversal & proved at $q{=}3$ & Pass 2732\\
+Time reversal outer $\iff q\equiv 3\pmod 4$ & proved & Pass 2750\\
+Transpose \emph{constructed} and checked at $q\le 23$ & proved & Pass 2792, 8 primes\\
+Anti-symplectic $T$, $T^\top JT=-J$; class action $10$ pairs $+$ $14$ fixed
+   & proved & parallel track, Pass 2762\\
+Six Clifford opcodes reach $1$ frame of $81$ & proved & Pass 2774 (BFS)\\
+Full ISA reaches all $81$ & proved & Pass 2774\\
+Clifford opcodes generate $\mathrm{Sp}(4,3)$, order $51{,}840$ & proved & Pass 2778\\
+Full ISA generates $\mathrm{ASp}(4,3)$, order $4{,}199{,}040$ & proved & Pass 2778\\
+One translation generator suffices (orbit $=80$) & proved & Pass 2778\\
+Minimal Clifford subset has size $3$; sizes $1,2$ give none & proved & Pass 2789, 6 triples\\
+Frame ISA fits a \textbf{two-bit} opcode field & follows & Pass 2789\\
+Sensor exponent $9=\dim$; phase group $\mu_{12}$; $9$ minimal & proved & Pass 2779\\
+$\mu_4$ factor $=$ imaginary Gauss sum & proved & Pass 2779\\
+Standard finite Clifford lift has scalar group $\mu_{12}$ for all $n$ & proved & Pass 2805\\
+Minimal finite-lift exponent: $3$ odd $n$, $9$ even $n$ & proved & Pass 2805\\
+Arbitrary $U(1)$ representative phase requires exponent $3^n$ & proved & Pass 2805\\
+$36$ rays share one Gram profile ($11$ orth., $24$ at $1/3$) & proved & Pass 2790, $\mathbb{Z}[\omega]$\\
+$8{+}24{+}4$ is the stabilizer-fidelity spectrum & proved & Pass 2790, 60 stab.\ states\\
+All three witness thresholds $=\frac43(1-F_{\mathrm{stab}})$ & derived & Pass 2790, $10^{-12}$\\
+$M_{36}$ full decoder search: $11{,}520$ Cliffords, $48$ deep improvements & proved & Pass 2804\\
+Explicit deep branch improves for $0<p<2/3$ & proved & Pass 2804\\
+Support map $PG(3,3)\to15$ tetrahedral masks; fibers $(4,12,16,8)$ & proved & Pass 2808\\
+Frame unit: $72$ LC, $60.80$\,MHz & \textbf{measured} & \S\ref{sec:budget}\\
+Loadable CX: $23$ LC, $72.40$\,MHz, $\mathrm{CX}^3{=}I$ & measured $+$ proved &
+   $5265$ vars / $14005$ clauses\\
+Parallel $36$-mixer: $13{,}965$ LUT4, does not fit & measured & Pass 2773\\
+Signed mixer correct on impulse class & proved & $1{,}097{,}152$ vars\\
+Kraft equality; $0$ parse failures in $20{,}000$ & proved $+$ measured & Pass 2682\\
+Photonic qutrit \textsc{sum}, fidelity $0.92\pm0.01$ & \textbf{published} &
+   Imany \emph{et al.}\ 2019\\
+Remote \textsc{sum}: $1$ Bell pair $+$ $2$ trits & proved & parallel track, Pass 2771\\
+\midrule
+$M_{36}$ magic-state injection threshold & \textcolor{bad}{OPEN} & refused in RTL\\
+Fault-tolerance threshold end to end & \textcolor{bad}{OPEN} & --- \\
+Physical power in watts & \textcolor{bad}{OPEN} & activity proxy only\\
+\bottomrule
+\end{tabular}
+\end{center}}
+
+% =====================================================================================
+\section{Reproducing everything in this document}
+% =====================================================================================
+
+\begin{spec}[Commands, in order]
+\begin{quote}\ttfamily\small
+\# reachability and the group\\
+py -3 analysis/w33\_pass2774\_isa\_frame\_reachability.py\\
+py -3 analysis/w33\_pass2778\_2779\_affine\_group\_and\_sensor\_exponent.py\\
+py -3 analysis/bt2804\_m36\_clifford\_decoder\_distillation.py\\
+py -3 analysis/bt2805\_n\_qutrit\_sensor\_exponent.py\\
+py -3 analysis/bt2808\_pg32\_tetrahedral\_support\_lift.py\\
+py -3 analysis/bt2821\_m36\_distillation\_operating\_curve.py\\
+py -3 analysis/bt2820\_2824\_blueprint\_truth\_gate.py -{}-check\\[4pt]
+\# the cell budget (needs yosys + nextpnr-ice40)\\
+yosys -p "read\_verilog -sv rtl/w33\_pass2777\_isa\_frame\_unit.sv; \textbackslash\\
+\hspace*{1em}chparam -set EN 63 w33\_isa\_frame\_unit; \textbackslash\\
+\hspace*{1em}synth\_ice40 -top w33\_isa\_frame\_unit -json u.json"\\
+nextpnr-ice40 -{}-up5k -{}-package sg48 -{}-json u.json -{}-asc u.asc -{}-freq 50\\[4pt]
+\# the formal proofs\\
+yosys -p "read\_verilog -sv -formal rtl/w33\_pass2752\_cx\_loadable\_frame.sv; \textbackslash\\
+\hspace*{1em}prep -top w33\_cx\_loadable\_formal -flatten; async2sync; \textbackslash\\
+\hspace*{1em}chformal -lower; sat -seq 8 -prove-asserts -verify"\\[4pt]
+\# the guards\\
+py -3 scripts/check\_rtl\_folds.py\\
+py -3 scripts/check\_implicit\_novelty.py\\
+py -3 scripts/check\_novelty\_claims.py\\[4pt]
+\# this document\\
+tectonic holonet\_machine\_blueprint.tex
+\end{quote}
+\end{spec}
+
+% =====================================================================================
+\section{What is not built}
+% =====================================================================================
+
+\begin{plain}
+A blueprint that lists only what works is advertising. Here is the honest remainder.
+\end{plain}
+
+\begin{enumerate}[leftmargin=*,itemsep=3pt]
+\item \textbf{Two of the eight opcodes are not frame operations and are not built as
+      such.} $D_{12}$-mirror is a transport operation in a dihedral group; $M_{36}$-magic
+      is deliberately a \emph{handshake} to an external state-preparation block, and the
+      controller \emph{refuses} injection until a proved protocol asserts validity. No
+      non-Clifford unitary is invented in RTL, because inventing one would conceal the
+      real gap.
+\item \textbf{State-fidelity distillation is built; fault-tolerant injection is not.}
+      Pass 2804 gives an explicit two-copy deep-grade protocol and proves exactly $48$
+      improving branches under full logical Clifford decoding. Pass 2821 closes the
+      accepted-round recurrence and its $p=2/3$ basin boundary. The open work is optimized
+      asymptotic yield, physical preparation cost, logical-noise propagation, injection
+      into the selected non-Clifford operation, and an end-to-end threshold.
+\item \textbf{No physical power figure exists.} The switching census gives about $1.622$
+      output transitions per operation. That is a technology-independent activity proxy.
+      Watts require the placed netlist, a capacitance model, voltage, clock and a
+      representative workload.
+\item \textbf{(Closed at Pass 2806.)} The transpose is checked objectwise at
+      $q=5$ and $q=7$: $T^2=I$, $T^{\mathsf T}JT=-J$, controlled-add directions are
+      conjugate, and the reverse gate is obtained by local Fourier conjugacy. The broader
+      eight-prime modular check remains in Pass 2792.
+\item \textbf{The rejected mixer source is removed from the active tree.}
+      Verification and workflow triggers now target
+      \cmd{rtl/w33\_pass2773\_spread\_mixer36\_synth.sv}. The packed-bus replacement is
+      exact and parseable, but its parallel area exceeds the iCE40 target; the serial
+      mixer remains the deployable architecture.
+\end{enumerate}
+\vspace{6mm}
+\begin{center}
+\begin{tikzpicture}
+ \node[draw=ink,line width=0.9pt,rounded corners=2pt,inner sep=10pt,
+       text width=0.86\linewidth,align=center,fill=plainbg]
+ {\itshape ``Before recording a result, ask what single computation would falsify it,
+   and run \emph{that} one. \textnormal{\textbf{maximal}}, \textnormal{\textbf{unique}},
+   \textnormal{\textbf{only}}, \textnormal{\textbf{exactly}}, \textnormal{\textbf{is}} ---
+   each of those words has a cheap negation.''\\[4pt]
+   \normalfont\footnotesize --- the operating rule of this project, learned expensively}
+ ;
+\end{tikzpicture}
+\end{center}
+
+\end{document}
