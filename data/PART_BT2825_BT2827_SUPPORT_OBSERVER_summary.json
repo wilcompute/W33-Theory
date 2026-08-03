@@ -1,0 +1,63 @@
+{
+  "schema": "w33.pass2825_2827.support_observer.summary.v1",
+  "status": "COMPLETE_EXACT",
+  "check_count": 11,
+  "checks": {
+    "adaptive_profile_16_40_78_81": true,
+    "adaptive_index_3": true,
+    "residual_pairs_exactly_3": true,
+    "three_common_length3_words": true,
+    "no_fixed_word_through_length5": true,
+    "fixed_word_index_6": true,
+    "eight_minimal_diagnostic_words": true,
+    "eight_taps_minimal": true,
+    "forty_eight_minimal_tap_sets": true,
+    "no_zf_sensor_needed": true,
+    "decoder_has_81_codes": true
+  },
+  "headline": "Binary support is a finite-delay observer for the full ternary frame: adaptive depth 3, fixed open-loop word length 6, and eight sampled support bits suffice to recover all 81 states.",
+  "adaptive_observer": {
+    "class_counts": [16, 40, 78, 81],
+    "unresolved_pair_counts": [272, 53, 3, 0],
+    "newly_resolved_pair_counts": [2968, 219, 50, 3],
+    "adaptive_observability_index": 3,
+    "penultimate_residual_pairs": [
+      [[0, 0, 1, 0], [0, 0, 2, 0]],
+      [[0, 0, 1, 1], [0, 0, 2, 1]],
+      [[0, 0, 1, 2], [0, 0, 2, 2]]
+    ],
+    "common_length3_distinguishing_words": [
+      ["CX_f->p", "F_p", "Z_p"],
+      ["Z_p", "F_p", "CX_p->f"],
+      ["Z_p", "F_p", "CX_f->p"]
+    ]
+  },
+  "open_loop_observer": {
+    "best_distinct_trajectories_by_word_length": [25, 40, 45, 68, 77, 81],
+    "fixed_word_observability_index": 6,
+    "injective_length6_word_count": 8,
+    "canonical_word": ["CX_p->f", "F_p", "Z_p", "F_p", "Z_p", "CX_p->f"]
+  },
+  "telemetry_decoder": {
+    "raw_support_trace_bits": 28,
+    "information_lower_bound_bits": 7,
+    "minimal_tap_count": 8,
+    "seven_tap_selector_count": 0,
+    "minimal_eight_tap_selector_count": 48,
+    "canonical_selector_columns": [0, 1, 2, 5, 13, 21, 25, 26],
+    "canonical_selector_taps": [
+      {"time": 0, "coordinate": "x_p"},
+      {"time": 0, "coordinate": "z_p"},
+      {"time": 0, "coordinate": "x_f"},
+      {"time": 1, "coordinate": "z_p"},
+      {"time": 3, "coordinate": "z_p"},
+      {"time": 5, "coordinate": "z_p"},
+      {"time": 6, "coordinate": "z_p"},
+      {"time": 6, "coordinate": "x_f"}
+    ],
+    "mandatory_columns": [1, 2, 21, 25, 26],
+    "z_f_taps_required": false,
+    "decoder_entries": 81
+  },
+  "claim_boundary": "Exact noiseless state identification; no noisy-channel robustness or laboratory readout fidelity is claimed."
+}
