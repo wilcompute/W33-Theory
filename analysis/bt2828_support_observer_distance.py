@@ -67,9 +67,9 @@ def main() -> None:
         "headline": "Every shortest injective support trajectory code has minimum distance one; exact observability does not supply single-bit error detection.",
         "words": words,
         "architecture_boundary": {
-            "noiseless_identification": true,
-            "single_arbitrary_bit_detection": false,
-            "single_arbitrary_bit_correction": false,
+            "noiseless_identification": True,
+            "single_arbitrary_bit_detection": False,
+            "single_arbitrary_bit_correction": False,
             "required_next_layer": "repetition, longer/joint diagnostic words, checksum, or soft-decision decoding"
         }
     }
