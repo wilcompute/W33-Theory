@@ -2,16 +2,23 @@
   "schema": "w33.pass_namespace_reservation.v2",
   "range": "2946-2952",
   "owner": "agent/pass2946-2952-seven-front-closure",
-  "status": "reserved",
+  "status": "source_complete_pending_observed_hardware_and_pdf_evidence",
   "reserved_after": "Passes 2937-2945 and merged parallel frontier through 2936",
-  "passes": {
-    "2946": "close or sharpen the 13..16 affine-support distance-four gap with orbit-aware exact search",
-    "2947": "compile the explicit deep-M36 stabilizer branch and enumerate circuit fault locations",
-    "2948": "hybrid OAM-times-time/frequency W33 address fabric with exact cycle-register decomposition",
-    "2949": "reversible diagnostic transcript compressor and syndrome-record erasure ledger",
-    "2950": "complete [8,4,4]_3 classification: covering radius, cosets, designs, and equivalence invariants",
-    "2951": "BONKERS: derive a physical OAM/check duality from the isodual mixer and W33 line contexts",
-    "2952": "BONKERS: search for a joint thermodynamic-distance compiler Pareto law and reversible router-observer fusion"
+  "source_completion": {
+    "exact_summary_checks": "8/8",
+    "focused_regressions": "8 tests source-complete",
+    "evidence_pr": 225,
+    "workflow_run": 30855913017,
+    "workflow_status": "queued"
   },
-  "claim_boundary": "Reservation only. Exact, modelled, source-complete, measured, and open statements remain separately typed."
+  "passes": {
+    "2946": "exact affine-support distance-four optimum n=15",
+    "2947": "compiled 15-gate deep-M36 branch and circuit-specific stochastic fault law",
+    "2948": "exact 10-OAM by 4-slot spread fabric and involutory triangle holonomy",
+    "2949": "256-state reversible observer-to-rank permutation and entropy ledger",
+    "2950": "[8,4,4]_3 covering radius, LCD hull, cosets, support and spectrum classification",
+    "2951": "BONKERS: isodual OAM/check quarter-turn D^2=-I, D^4=I",
+    "2952": "BONKERS: reversible 12-bit rank for 81 frame states times 40 route addresses"
+  },
+  "claim_boundary": "Exact finite results, model-specific M36 coefficients, and source-complete RTL are published. Icarus simulations, Yosys/nextpnr measurements, blueprint/site integration, and three PDF builds remain pending the observable workflow."
 }
