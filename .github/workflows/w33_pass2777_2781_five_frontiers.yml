@@ -1,4 +1,4 @@
-name: Passes 2777-2781 Distillation Sensor Compiler Repeater
+name: Passes 2784-2788 Distillation Sensor Compiler Repeater
 on:
   push:
     paths:
@@ -15,6 +15,7 @@ on:
       - 'data/PART_BT2778*'
       - 'data/PART_BT2779*'
       - 'data/PART_BT2781*'
+      - 'data/PART_BT2784*'
       - 'rtl/w33_pass2778*'
       - 'rtl/w33_pass2779*'
       - 'rtl/w33_pass2781*'
@@ -55,7 +56,7 @@ jobs:
           PYTHONPATH=analysis python analysis/bt2781_repeater_remote_sum.py
           PYTHONPATH=analysis python analysis/bt2777_2781_release.py
       - name: Aggregate deterministic drift guard
-        run: git diff --exit-code -- data/PART_BT2777_BT2781_FIVE_FRONTIERS_results.json
+        run: git diff --exit-code -- data/PART_BT2784_BT2788_FIVE_FRONTIERS_results.json
       - name: Focused regressions
         run: PYTHONPATH=analysis pytest -q tests/test_bt2777_2781_five_frontiers.py
       - name: RTL simulation and syntax closure
@@ -90,4 +91,4 @@ jobs:
           nextpnr-ice40 --hx8k --package tq144 --pcf-allow-unconstrained --json build/repeater.json --asc build/repeater.asc --freq 12 --report build/repeater_pnr.json |& tee build/nextpnr_repeater.txt
           icetime -d hx8k -mtr build/repeater_timing.txt build/repeater.asc
       - uses: actions/upload-artifact@v4
-        with: {name: pass2777-2781-hardware-evidence, path: build/}
+        with: {name: pass2784-2788-hardware-evidence, path: build/}
