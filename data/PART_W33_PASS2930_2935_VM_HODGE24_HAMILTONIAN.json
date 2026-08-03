@@ -1,0 +1,77 @@
+{
+  "pass_2930": {
+    "best_guest": "F_p + F_f + CX_pf",
+    "best_native": "F_p + CX_pf + CX_fp",
+    "lowest_guest_worst_case": 8,
+    "native_winner_also_best_for_guests": true,
+    "per_triple": {
+      "F_f + CX_pf + CX_fp": {
+        "F_guest": 9,
+        "S_guest": 8,
+        "Z_guest": 1,
+        "diameter": 20,
+        "mean": 6.0,
+        "worst": 9
+      },
+      "F_f + S_p + CX_fp": {
+        "F_guest": 10,
+        "S_guest": 1,
+        "Z_guest": 1,
+        "diameter": 22,
+        "mean": 4.0,
+        "worst": 10
+      },
+      "F_p + CX_pf + CX_fp": {
+        "F_guest": 1,
+        "S_guest": 8,
+        "Z_guest": 1,
+        "diameter": 19,
+        "mean": 3.3333333333333335,
+        "worst": 8
+      },
+      "F_p + F_f + CX_fp": {
+        "F_guest": 1,
+        "S_guest": 12,
+        "Z_guest": 1,
+        "diameter": 22,
+        "mean": 4.666666666666667,
+        "worst": 12
+      },
+      "F_p + F_f + CX_pf": {
+        "F_guest": 1,
+        "S_guest": 8,
+        "Z_guest": 1,
+        "diameter": 23,
+        "mean": 3.3333333333333335,
+        "worst": 8
+      },
+      "F_p + S_f + CX_pf": {
+        "F_guest": 1,
+        "S_guest": 9,
+        "Z_guest": 1,
+        "diameter": 22,
+        "mean": 3.6666666666666665,
+        "worst": 9
+      }
+    }
+  },
+  "pass_2932": {
+    "eigenspace_dim": 24,
+    "trace": 5.866666666666665,
+    "trace_is_integer": false,
+    "verdict": "refuted"
+  },
+  "pass_2933": {
+    "best_max_overlap": 0.0,
+    "covers_all_ranks": true,
+    "hits": 36,
+    "open_question": "a rank >= 2 stabilizer code in (singles)^perp whose range contains a magic state",
+    "rank_one_is_useless": "its range is a stabilizer state, which has no magic",
+    "rank_one_witness_exists": true,
+    "reduction": "projector kills all nine iff its range, a stabilizer code, lies in the complement; codes contain states",
+    "trials": 200000
+  },
+  "pass_2935": {
+    "cycle_length": null
+  }
+}

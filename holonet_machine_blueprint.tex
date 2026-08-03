@@ -463,18 +463,150 @@ earns that name from how it is built, not from its statistics --- and the differ
 exactly the kind of thing that is easy to wave through and expensive to get wrong.
 \end{plain}
 
-\begin{spec}
-$W(3,3)$ is the symplectic generalised quadrangle of order $(3,3)$: the points are the
-$40$ points of $\mathrm{PG}(3,3)$ and the lines are the $40$ totally isotropic lines of a
-non-degenerate alternating form. Its collinearity graph is strongly regular with
-parameters
+\subsection{The definition, stated once and precisely}
+
+\begin{plain}
+Everything downstream depends on this object being the right one, so here it is written
+out --- and it is worth noticing how short the definition is. The whole substrate is one
+line of arithmetic.
+\end{plain}
+
+\begin{spec}[$W(3,3)$, in full]
+$W(3,3)$ is the \textbf{symplectic polar space} $W(3,\mathbb{F}_3)$.
+
+\smallskip\noindent
+\textbf{Points.} The $40$ projective $1$-spaces of $\mathrm{GF}(3)^4$. Every $1$-space is
+automatically isotropic for an alternating form, so \emph{all} of them are points --- there
+is nothing to exclude.
+
+\smallskip\noindent
+\textbf{Adjacency.} With $J$ the standard symplectic form on $\mathrm{GF}(3)^4$,
 \[
-  \mathrm{SRG}(40,\,12,\,2,\,4),
+  \boxed{\;v \sim w \iff v^{\top} J\, w \equiv 0 \pmod 3\;}
 \]
-i.e.\ $40$ vertices, every vertex of degree $12$, adjacent pairs with $\lambda=2$ common
-neighbours, non-adjacent pairs with $\mu=4$. Its automorphism group is
-$\mathrm{PGSp}(4,3)=U_4(2){:}2=W(E_6)$ of order $51{,}840$.
+That single congruence generates every number in this document.
+
+\smallskip\noindent
+\textbf{Lines.} The $240$ edges pair up into $40$ \emph{totally isotropic projective
+lines}: each edge is a pair of orthogonal points spanning exactly one such line. A
+\emph{non}-edge spans an ordinary hyperbolic line instead --- the two kinds of pair are
+geometrically different objects, not merely present-or-absent.
+
+\smallskip\noindent
+\textbf{Graph.} The collinearity graph is $\mathrm{SRG}(40,12,2,4)$ with eigenvalues
+$12,\,2,\,-4$; it has \textbf{diameter $2$} and is \textbf{Ramanujan}.
+
+\smallskip\noindent
+\textbf{Symmetry.} $\mathrm{Aut} = \mathrm{Aut}(\mathrm{PSp}(4,3)) \cong
+\mathrm{PGSp}(4,3) \cong W(E_6)$, order $51{,}840$, with normal inner subgroup
+$\mathrm{PSp}(4,3)$ of order $25{,}920$.
 \end{spec}
+
+\begin{gotwrong}[The same order, twice, for two different groups]
+$\mathrm{Sp}(4,3) = 2.U_4(2)$ also has order $51{,}840$ and is \textbf{not} the group
+above. It has a centre $C_2$; the automorphism group has trivial centre. One is a central
+double cover, the other an outer extension, and they are not isomorphic.
+
+\medskip\noindent
+This is the most common error in this area and this project has made it. Both groups
+appear here for good reasons --- $\mathrm{Sp}(4,3)$ acts on Pauli frames and is what the
+hardware implements (\S\ref{sec:isa}); $\mathrm{PGSp}(4,3)$ acts on the drawing. Whenever
+$51{,}840$ appears in this document, which group is meant is stated.
+\end{gotwrong}
+
+\begin{plain}
+Two properties in that box are worth translating, because they are the ones an engineer
+should care about.
+
+\textbf{Diameter $2$} means any point reaches any other in at most two steps. For an
+address space that is the strongest possible statement short of everything being adjacent
+to everything: no packet is ever more than one relay from its destination \emph{within a
+node}.
+
+\textbf{Ramanujan} is a technical optimality condition on the eigenvalues. Informally, it
+means the graph is as well-connected as a graph of that degree can possibly be --- you
+cannot build a better-mixing network on $40$ nodes with $12$ links each. The routing
+fabric is not merely adequate; it is extremal.
+\end{plain}
+
+\subsection{What the shape already contains}
+
+\begin{plain}
+The definition is one congruence. What follows from it is not obvious, and most of the
+machine is downstream of these four facts rather than designed.
+\end{plain}
+
+\begin{spec}[Homology: an exact $81$-sector]
+The simplicial chain complex of the collinearity graph gives
+\[
+  H_1\bigl(W(3,3);\mathbb{Z}\bigr) = \mathbb{Z}^{81}.
+\]
+That is the same dimension as $\mathfrak{g}_1$ in the $\mathbb{Z}_3$-graded decomposition
+of the exceptional Lie algebra $E_8$,
+\[
+  E_8 = \mathfrak{g}_0(86) \oplus \mathfrak{g}_1(81) \oplus \mathfrak{g}_2(81),
+  \qquad \mathfrak{g}_0 = E_6 \oplus A_2 .
+\]
+\end{spec}
+
+\begin{spec}[Hodge theory: four sectors and an exact gap]
+The Hodge Laplacian $L_1$ on $1$-chains has exactly four eigenvalues:
+\begin{center}\small
+\begin{tabular}{@{}rrl@{}}
+\toprule
+eigenvalue & multiplicity & sector\\
+\midrule
+$0$ & $81$ & harmonic --- represents $H_1$\\
+$4$ & $120$ & \\
+$10$ & $24$ & \\
+$16$ & $15$ & \\
+\bottomrule
+\end{tabular}
+\end{center}
+The spectral gap $\Delta = 4$ is exact and separates the harmonic sector from the rest.
+
+\smallskip\noindent
+\textbf{It is not a mass, and not a Yang--Mills gap.} Either reading would need a curved
+four-dimensional bridge and an explicit field identification, neither of which this
+document has. It is a finite eigenvalue of a finite matrix.
+\end{spec}
+
+\begin{spec}[The substrate is its own error-correcting code]
+The clique complex of $W(3,3)$ over $\mathrm{GF}(3)$ is an exact qutrit CSS code
+\[
+  [\,240,\;81,\;d_Z = 4\,],
+\]
+with check ranks $39$ and $120$ and an explicit weight-$4$ logical cycle. So the $240$
+wires \emph{are} the code, the $81$ logical values \emph{are} the frame space's dimension
+count, and no separate error-correction layer has to be bolted on.
+
+\smallskip\noindent
+Euler characteristics, because two circulate and they are both right about different
+things: the truncated shell gives $40-240+160=-40$, and the full tetrahedral complex
+$(40,240,160,40)$ gives $-80$.
+\end{spec}
+
+\begin{gotwrong}[The $240$-to-$E_8$ temptation]
+The $240$ edges factor as $40 \times 3 \times 2$ (lines $\times$ matchings $\times$ edges
+per matching), and $E_8$ has exactly $240$ roots, which under $E_8 \to E_6\times SU(3)$
+branch as $3\times(24+2+27+27)$. An $E_8$ Dynkin subgraph even sits inside the adjacency
+graph directly, at vertices $[7,1,0,13,24,28,37,16]$, whose Gram matrix $2I - A_{\mathrm{sub}}$
+has determinant $1$ --- the $E_8$ Cartan matrix exactly.
+
+\medskip\noindent
+\textbf{And there is no equivariant bijection between the $240$ edges and the $240$ roots.}
+The inner group $\mathrm{PSp}(4,3)$ is edge-transitive, so the edges form a single orbit;
+the correspondence is representation-theoretic, not lattice-geometric. This project spent
+several passes on the stronger reading before establishing that it is false, and the
+finding is recorded in \S\ref{sec:errata}.
+\end{gotwrong}
+
+\begin{plain}
+That last box is the pattern this whole document is organised around. The shape produces
+number after number that matches something famous. Some of those matches are maps and some
+are arithmetic, and the only way to tell is to check each one --- which is why the ledger
+in \S\ref{sec:ledger} has a status column and why \S\ref{sec:errata} is as long as it is.
+\end{plain}
 
 \subsection{Why this shape and not another}
 
