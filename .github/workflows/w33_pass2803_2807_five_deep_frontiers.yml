@@ -1,0 +1,70 @@
+name: Passes 2803-2807 M36 Distillation Closure
+on:
+  push:
+    paths:
+      - 'analysis/bt2803*'
+      - 'analysis/bt2804*'
+      - 'analysis/bt2805*'
+      - 'analysis/bt2806*'
+      - 'analysis/bt2803_2807_release.py'
+      - 'analysis/BT2803_BT2807_five_deep_frontiers.md'
+      - 'rtl/w33_pass2803*'
+      - 'rtl/w33_pass2773_spread_mixer36_synth.sv'
+      - 'rtl/w33_spread_mixer36.sv'
+      - 'analysis/w33_pass2206_verify_rtl.py'
+      - 'data/w33_pass2206_rtl_reference.json'
+      - 'tests/test_bt2803_2807_five_deep_frontiers.py'
+      - '.github/workflows/w33_pass2803_2807_five_deep_frontiers.yml'
+  pull_request:
+    paths:
+      - 'analysis/bt2803*'
+      - 'analysis/bt2804*'
+      - 'analysis/bt2805*'
+      - 'analysis/bt2806*'
+      - 'rtl/w33_pass2803*'
+      - 'rtl/w33_pass2773_spread_mixer36_synth.sv'
+      - 'rtl/w33_spread_mixer36.sv'
+      - 'analysis/w33_pass2206_verify_rtl.py'
+      - 'tests/test_bt2803_2807_five_deep_frontiers.py'
+  workflow_dispatch:
+jobs:
+  exact-and-hardware:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install exact and FPGA tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys nextpnr-ice40 fpga-icestorm
+          python -m pip install numpy sympy pytest
+      - name: Exact finite closures
+        run: |
+          python analysis/bt2803_minimal_affine_frame_isa.py
+          python analysis/bt2804_m36_clifford_decoder_distillation.py
+          python analysis/bt2805_n_qutrit_sensor_exponent.py
+          python analysis/bt2806_transpose_cx_q5_q7.py
+          python analysis/w33_pass2206_verify_rtl.py --verify-frozen
+          python analysis/bt2803_2807_release.py
+      - name: Aggregate certificate drift guard
+        run: git diff --exit-code -- data/PART_BT2803_BT2807_FIVE_DEEP_FRONTIERS_results.json data/w33_pass2206_rtl_reference.json
+      - name: Focused regressions
+        run: pytest -q tests/test_bt2803_2807_five_deep_frontiers.py
+      - name: RTL simulation and dual-frontend parse
+        run: |
+          mkdir -p build
+          iverilog -g2012 -s tb_w33_pass2803_minimal_frame_unit -o build/minimal.vvp rtl/w33_pass2803_minimal_frame_unit.sv rtl/tb_w33_pass2803_minimal_frame_unit.sv
+          vvp build/minimal.vvp | tee build/minimal_sim.txt
+          iverilog -g2012 -tnull rtl/w33_pass2773_spread_mixer36_synth.sv
+          yosys -q -p 'read_verilog -sv rtl/w33_pass2773_spread_mixer36_synth.sv'
+      - name: Synthesize live blocks
+        run: |
+          yosys -p 'read_verilog -sv rtl/w33_pass2803_minimal_frame_unit.sv; synth_ice40 -top w33_pass2803_minimal_frame_unit -json build/minimal.json; stat' | tee build/yosys_minimal.txt
+          yosys -p 'read_verilog -sv rtl/w33_pass2773_spread_mixer36_synth.sv; synth_ice40 -top w33_spread_mixer36_synth -json build/mixer.json; stat' | tee build/yosys_mixer.txt
+      - name: Place route and time minimal engine
+        run: |
+          nextpnr-ice40 --hx8k --package tq144 --pcf-allow-unconstrained --json build/minimal.json --asc build/minimal.asc --freq 50 --report build/minimal_pnr.json |& tee build/nextpnr_minimal.txt
+          icetime -d hx8k -mtr build/minimal_timing.txt build/minimal.asc
+      - uses: actions/upload-artifact@v4
+        with: {name: pass2803-2807-evidence, path: build/}
