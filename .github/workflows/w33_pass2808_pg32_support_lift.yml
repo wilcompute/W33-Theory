@@ -1,0 +1,37 @@
+name: Pass 2808 PG32 Tetrahedral Support Lift
+
+on:
+  push:
+    paths:
+      - 'analysis/bt2808_pg32_tetrahedral_support_lift.py'
+      - 'analysis/bt2808_freeze.py'
+      - 'analysis/BT2808_pg32_tetrahedral_support_lift.md'
+      - 'analysis/BT2808_pg32_tetrahedral_support_lift_insert.tex'
+      - 'data/PART_BT2808_PG32_TETRAHEDRAL_SUPPORT_LIFT_results.json'
+      - 'tests/test_bt2808_pg32_tetrahedral_support_lift.py'
+      - 'tools/integrate_bt2808_pg32_support_lift.py'
+      - '.github/workflows/w33_pass2808_pg32_support_lift.yml'
+  pull_request:
+    paths:
+      - 'analysis/bt2808_pg32_tetrahedral_support_lift.py'
+      - 'analysis/bt2808_freeze.py'
+      - 'data/PART_BT2808_PG32_TETRAHEDRAL_SUPPORT_LIFT_results.json'
+      - 'tests/test_bt2808_pg32_tetrahedral_support_lift.py'
+  workflow_dispatch:
+
+jobs:
+  exact-support-lift:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact dependencies
+        run: python -m pip install sympy pytest
+      - name: Recompute exact certificate
+        run: |
+          python analysis/bt2808_pg32_tetrahedral_support_lift.py
+          python analysis/bt2808_freeze.py
+      - name: Focused regressions
+        run: pytest -q tests/test_bt2808_pg32_tetrahedral_support_lift.py
