@@ -1,0 +1,79 @@
+name: Passes 2854-2860 Symmetry Harmonics Quantum Closure
+on:
+  push:
+    paths:
+      - 'analysis/bt2854_2860*'
+      - 'analysis/BT2854_BT2860*'
+      - 'data/PART_BT2854*'
+      - 'data/PART_BT2855*'
+      - 'data/PART_BT2856*'
+      - 'data/PART_BT2857*'
+      - 'data/PART_BT2858*'
+      - 'data/PART_BT2859*'
+      - 'data/PART_BT2860*'
+      - 'rtl/w33_pass2856*'
+      - 'rtl/w33_pass2857*'
+      - 'rtl/tb_w33_pass2856*'
+      - 'rtl/tb_w33_pass2857*'
+      - 'rtl/w33_pass2811_support_first_codec.sv'
+      - 'tests/test_bt2854_2860*'
+      - '.github/workflows/w33_pass2854_2860_seven_frontiers.yml'
+  pull_request:
+    paths:
+      - 'analysis/bt2854_2860*'
+      - 'analysis/BT2854_BT2860*'
+      - 'data/PART_BT285*'
+      - 'data/PART_BT286*'
+      - 'rtl/w33_pass2856*'
+      - 'rtl/w33_pass2857*'
+      - 'tests/test_bt2854_2860*'
+  workflow_dispatch:
+
+jobs:
+  exact-and-fpga:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact and FPGA tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys nextpnr-ice40 fpga-icestorm
+          python -m pip install sympy pytest
+      - name: Verify frozen exact aggregate
+        run: python analysis/bt2854_2860_seven_frontiers.py --verify-frozen
+      - name: Focused exact regressions
+        run: pytest -q tests/test_bt2854_2860_seven_frontiers.py
+      - name: Simulate registered codec benchmark
+        run: |
+          mkdir -p build
+          iverilog -g2012 -s tb_w33_pass2856_codec_benchmark_top \
+            -o build/codec_benchmark.vvp \
+            rtl/w33_pass2811_support_first_codec.sv \
+            rtl/w33_pass2856_codec_benchmark_top.sv \
+            rtl/tb_w33_pass2856_codec_benchmark_top.sv
+          vvp build/codec_benchmark.vvp | tee build/codec_benchmark_sim.txt
+      - name: Simulate fused selector controller
+        run: |
+          iverilog -g2012 -s tb_w33_pass2857_selector_tomotope_fusion \
+            -o build/fusion.vvp \
+            rtl/w33_pass2857_selector_tomotope_fusion.sv \
+            rtl/tb_w33_pass2857_selector_tomotope_fusion.sv
+          vvp build/fusion.vvp | tee build/fusion_sim.txt
+      - name: Synthesize benchmark and controller
+        run: |
+          yosys -p 'read_verilog -sv rtl/w33_pass2811_support_first_codec.sv rtl/w33_pass2856_codec_benchmark_top.sv; synth_ice40 -top w33_pass2856_codec_benchmark_top -json build/codec_benchmark.json; stat' | tee build/yosys_codec_benchmark.txt
+          yosys -p 'read_verilog -sv rtl/w33_pass2857_selector_tomotope_fusion.sv; synth_ice40 -top w33_pass2857_selector_tomotope_fusion -json build/fusion.json; stat' | tee build/yosys_fusion.txt
+      - name: Place route and time registered codec benchmark
+        run: |
+          nextpnr-ice40 --hx8k --package tq144 --pcf-allow-unconstrained \
+            --json build/codec_benchmark.json --asc build/codec_benchmark.asc \
+            --freq 50 --report build/codec_benchmark_pnr.json \
+            |& tee build/nextpnr_codec_benchmark.txt
+          icetime -d hx8k -mtr build/codec_benchmark_timing.txt build/codec_benchmark.asc
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass2854-2860-evidence
+          path: build/

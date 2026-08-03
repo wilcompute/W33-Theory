@@ -1,16 +1,18 @@
 {
   "range": "2854-2860",
   "owner": "tetrahedral-symmetry-harmonic-quantum-track",
-  "status": "RESERVED",
+  "status": "COMPLETE_WITH_NEW_CODEC_PNR_PENDING",
   "reserved_at": "2026-08-03T18:23:00Z",
-  "scope": {
-    "2854": "signed-monomial polarization groupoid and fixed-form obstruction",
-    "2855": "Boolean/S4 harmonic and Terwilliger identification of the 15-state shell",
-    "2856": "seven-bit codec silicon comparison and dedicated benchmark",
-    "2857": "selector-tomotope fused runtime and formal typed equivalence",
-    "2858": "quantum-channel support coarse-graining classification",
-    "2859": "outside-box q-Hadamard butterfly transform",
-    "2860": "outside-box exact support Green function and first-passage atlas"
+  "completed_at": "2026-08-03T18:31:00Z",
+  "artifacts": {
+    "2854": "three-object signed-monomial polarization groupoid; fixed-form S4 obstruction",
+    "2855": "punctured Boolean S4 module and 35-dimensional Q4 Terwilliger algebra",
+    "2856": "information-optimal codec comparison and registered FPGA benchmark",
+    "2857": "96-state typed selector-tomotope fusion controller",
+    "2858": "exact deterministic and Weyl-noise support coarse-graining classification",
+    "2859": "four-stage 32-butterfly q-Hadamard quotient realization",
+    "2860": "closed support Green function and q=3 first-passage atlas"
   },
-  "claim_boundary": "Reservation only until the exact 68-check release and focused tests are published."
+  "evidence": "68/68 exact checks and 7/7 focused tests pass locally.",
+  "runtime_boundary": "New codec benchmark simulation, LC count, placement and timing remain observable CI surfaces until the dedicated workflow completes."
 }

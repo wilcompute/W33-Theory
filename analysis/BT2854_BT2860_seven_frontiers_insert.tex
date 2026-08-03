@@ -1,0 +1,78 @@
+\section*{Passes 2854--2860: polarization groupoids, Boolean harmonics, and exact support coarse graining}
+
+The five continuations of the tetrahedral support program and two further
+outside-box probes now close with exact witnesses.  First, the requested full
+signed-monomial $S_4$ lift has a sharp obstruction: in one fixed symplectic
+polarization the coordinate-permutation projection is only the matching
+stabilizer $D_8$.  Full $S_4$ instead lifts between the three perfect-matching
+polarizations as a three-object groupoid with $288$ projective and $576$ affine
+arrows.  Every projective hom-set has order $32$, composition closes, and the
+zero/nonzero symplectic relation is preserved.
+
+The fifteen nonempty supports form the punctured Boolean permutation module
+\[
+  \mathbb C[\mathcal P([4])\setminus\{\varnothing\}]
+  \cong 4[4]\oplus3[31]\oplus[22].
+\]
+For the full four-cube, adjacency together with dual adjacency generates the
+Terwilliger algebra of dimension $35$, with module strings of dimensions
+$5,3,1$ and multiplicities $1,3,2$; equivalently its Wedderburn type is
+$M_5(\mathbb C)\oplus M_3(\mathbb C)\oplus M_1(\mathbb C)$.  Restriction to a
+matching stabilizer recovers $5A_1+3B_1+B_2+3E$ exactly.
+
+The affine frame codec remains information-optimal: all $81$ states round-trip
+through codes $0,\ldots,80$ in seven bits, while the $40$ nonzero projective
+classes require six bits.  A registered benchmark isolates the one-bit storage
+saving from its combinational encode/decode cost; new logic-cell and timing
+figures remain unpromoted until the dedicated FPGA workflow completes.  The
+existing same-harness measurements remain $43$ logic cells at $72.40\,$MHz for
+the four-operation engine and $72$ logic cells at $60.80\,$MHz for the public
+six-operation unit.
+
+A typed seven-bit controller now fuses the four Type-A faces, three matching
+channels and eight parity-coded phase classes.  It has exactly
+$4\cdot3\cdot8=96$ valid states, selecting one of twelve sheets and one of the
+eight tomotope cells.  Equality with the tomotope automorphism-group order is
+recorded only as a bijective count, not yet as a regular action.
+
+For quantum coarse graining, let $\mathcal E$ be the conditional expectation
+onto observables constant on the sixteen computational-basis support blocks of
+$\mathbb F_3^4$.  An invertible affine gate descends through $\mathcal E$ iff
+its linear part is signed monomial and its translation is zero; there are
+exactly $2^4 4!=384$ such maps.  A Weyl displacement channel descends iff its
+$X$-displacement marginal is constant on each support fiber; the exact
+constraint system has rank $65$ on $81$ variables and a $16$-dimensional
+solution space.  The $Z$-phase marginal is unrestricted for support
+observables.  This is not a coherence-preservation theorem.
+
+Two further identities sharpen the architecture.  With
+\[
+ L_q=\begin{pmatrix}1&q-1\\1&-1\end{pmatrix},\qquad L_q^2=qI_2,
+\]
+and $H_q=P_\tau L_q^{\otimes4}$, one has
+\[
+ H_q^2=q^4I_{16},\qquad
+ \operatorname{spec}(H_q)=(+q^2)^{10}\oplus(-q^2)^6,
+\]
+while for nonempty supports
+\[
+ Q_{S,T}+\delta_{S,T}
+ =\frac1q\left((q-1)^{|T|-1}+(H_q)_{S,T}\right).
+\]
+Thus the support quotient admits a four-stage, $32$-butterfly realization.
+Finally, for its Markov matrix $P$ and stationary projector $\Pi$,
+\[
+ (I-P+\Pi)^{-1}=\alpha I+\beta P+\gamma\Pi,
+\]
+where
+\[
+ \alpha=\frac{q(q^2+q+2)}{(q+1)(q^2+1)},\quad
+ \beta=\frac{q^2}{q^2+1},\quad
+ \gamma=-\frac{q^3+q^2+q-1}{(q+1)(q^2+1)}.
+\]
+At $q=3$, the $210$ directed first-passage times take only thirteen values,
+from $9/2$ to $42$, and the Kemeny constant is $291/20$.
+
+The frozen release contains $68/68$ exact checks and $7/7$ focused tests.
+The fixed-polarization obstruction, coherence boundary, typed-token boundary,
+and pending new FPGA measurement are retained explicitly.
