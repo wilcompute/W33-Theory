@@ -1,0 +1,76 @@
+{
+  "claim_boundary": "Coherent results are exact quadratic susceptibilities for Pauli-axis overrotations. Pair results are an exact discrete Pauli census. Leakage is an adversarial flagged-erasure bound, not a device calibration.",
+  "common_systematic_CNOT_axis_coefficients": {
+    "IX": "5/3",
+    "IY": "13/54",
+    "IZ": "1/6",
+    "XI": "43/18",
+    "XX": "1",
+    "XY": "8/27",
+    "XZ": "7/18",
+    "YI": "23/27",
+    "YX": "13/18",
+    "YY": "35/27",
+    "YZ": "37/54",
+    "ZI": "14/9",
+    "ZX": "11/27",
+    "ZY": "20/27",
+    "ZZ": "1/3"
+  },
+  "common_systematic_H_axis_coefficients": {
+    "X": "7/18",
+    "Y": "7/54",
+    "Z": "7/18"
+  },
+  "correlated_two_location_pauli_census": {
+    "CX-CX": {
+      "accepted_bad": 13710,
+      "benign": 1140,
+      "conditional_bad_coefficient_per_location_pair": "24862/66825",
+      "events": 14850,
+      "mean_acceptance": "11431/44550",
+      "mean_accepted_bad_numerator": "12431/66825",
+      "rejected": 0
+    },
+    "CX-H": {
+      "accepted_bad": 700,
+      "benign": 65,
+      "conditional_bad_coefficient_per_location_pair": "34/81",
+      "events": 765,
+      "mean_acceptance": "1331/4590",
+      "mean_accepted_bad_numerator": "17/81",
+      "rejected": 0
+    },
+    "H-CX": {
+      "accepted_bad": 794,
+      "benign": 61,
+      "conditional_bad_coefficient_per_location_pair": "2834/7695",
+      "events": 855,
+      "mean_acceptance": "1297/5130",
+      "mean_accepted_bad_numerator": "1417/7695",
+      "rejected": 0
+    },
+    "H-H": {
+      "accepted_bad": 25,
+      "benign": 2,
+      "conditional_bad_coefficient_per_location_pair": "268/729",
+      "events": 27,
+      "mean_acceptance": "41/162",
+      "mean_accepted_bad_numerator": "134/729",
+      "rejected": 0
+    }
+  },
+  "false_flag_yield_bound": "Y <= (1/2)(1-17 f_false)+O(f_false^2)",
+  "leakage_flag_bound": "p_bad <= 34(1-eta_flag) ell + O(ell^2) for per-location leakage ell across 17 locations",
+  "one_qubit_axis_average_sum": "35/27",
+  "schema": "w33.pass2961.m36_coherent_correlated_leakage.v1",
+  "single_location_coherent_quadratic_histogram": {
+    "0": 14,
+    "1/18": 66,
+    "1/6": 22,
+    "2/27": 41,
+    "2/9": 46
+  },
+  "status": "COMPLETE_EXACT_FOR_STATED_MODELS",
+  "two_qubit_axis_average_sum": "521/27"
+}
