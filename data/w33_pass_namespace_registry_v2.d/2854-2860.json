@@ -1,0 +1,16 @@
+{
+  "range": "2854-2860",
+  "owner": "tetrahedral-symmetry-harmonic-quantum-track",
+  "status": "RESERVED",
+  "reserved_at": "2026-08-03T18:23:00Z",
+  "scope": {
+    "2854": "signed-monomial polarization groupoid and fixed-form obstruction",
+    "2855": "Boolean/S4 harmonic and Terwilliger identification of the 15-state shell",
+    "2856": "seven-bit codec silicon comparison and dedicated benchmark",
+    "2857": "selector-tomotope fused runtime and formal typed equivalence",
+    "2858": "quantum-channel support coarse-graining classification",
+    "2859": "outside-box q-Hadamard butterfly transform",
+    "2860": "outside-box exact support Green function and first-passage atlas"
+  },
+  "claim_boundary": "Reservation only until the exact 68-check release and focused tests are published."
+}
