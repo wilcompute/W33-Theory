@@ -1,0 +1,20 @@
+{
+  "schema":"w33.pass2952.router_observer_fusion.v1",
+  "status":"COMPLETE_EXACT_LOGICAL_COMPILER",
+  "valid_joint_states":3240,
+  "joint_rank_formula":"joint_rank = 40*(27*xp+9*zp+3*xf+zf) + (4*oam_line+slot)",
+  "joint_entropy_bits":11.661778097771988,
+  "frame_entropy_bits":6.339850002884624,
+  "address_entropy_bits":5.321928094887363,
+  "fixed_width_joint_bits":12,
+  "invalid_joint_words":856,
+  "permutation_size":8192,
+  "strategies":[
+    {"name":"fast_static_observer_plus_address","raw_bits":14,"correctable_bits":0,"compressed_fixed_bits":12,"fixed_bit_saving":2,"entropy_redundancy_bits":2.338221902228012},
+    {"name":"optimal_affine_d4_observer_plus_address","raw_bits":21,"correctable_bits":1,"compressed_fixed_bits":12,"fixed_bit_saving":9,"entropy_redundancy_bits":9.338221902228012},
+    {"name":"internal_rank_plus_address","raw_bits":13,"correctable_bits":0,"compressed_fixed_bits":12,"fixed_bit_saving":1,"entropy_redundancy_bits":1.3382219022280122}
+  ],
+  "corrected_error_record_entropy":"h2(p)+p*log2(15)",
+  "interpretation":"Correct, uncompute the fifteen probes, and fuse the frame and route into one twelve-bit joint rank.",
+  "claim_boundary":"Exact logical permutation and entropy ledger; physical energy and placement remain unmeasured."
+}
