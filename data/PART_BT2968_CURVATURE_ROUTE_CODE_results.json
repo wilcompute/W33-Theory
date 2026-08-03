@@ -1,0 +1,40 @@
+{
+  "check_count": 10,
+  "checks": {
+    "36_independent_triangle_checks_suffice": true,
+    "all_single_edge_faults_have_unique_weight8_syndromes": true,
+    "all_weight_at_most_4_faults_correctable_modulo_gauge": true,
+    "all_weight_at_most_8_nongauge_faults_detected": true,
+    "cut_code_parameters_45_9_9": true,
+    "kernel_dimension_9": true,
+    "kernel_equals_512_vertex_switching_cuts": true,
+    "tetrahedral_bianchi_BH_zero": true,
+    "triangle_coboundary_rank_36": true,
+    "triangle_edge_matrix_shape_120x45": true
+  },
+  "claim_boundary": "This detects parity faults in the finite S4 routing table. It does not detect even-permutation errors, optical amplitude loss, phase drift inside a fixed parity class, or detector faults unless separately mapped to flips.",
+  "code": {
+    "correctable_fault_weight_modulo_gauge": 4,
+    "detectable_nongauge_fault_weight": 8,
+    "kernel": "vertex-switching cut space of K10",
+    "minimum_undetectable_weight": 9,
+    "parameters": "[45,9,9]_2",
+    "weight_enumerator": {"0": 1, "9": 10, "16": 45, "21": 120, "24": 210, "25": 126}
+  },
+  "decoder_statement": "Compare observed triangle parities with the Pass-2967 baseline. The residual is H e. Decode to a minimum-weight edge-fault coset; two faults differing by a cut are gauge-equivalent.",
+  "headline": "The spread router's parity curvature is an exact [45,9,9]_2 gauge code: 120 triangle checks compress to 36 independent syndrome bits, all faults through weight four are correctable modulo vertex gauge, and the first undetectable patterns are precisely weight-nine gauge cuts.",
+  "raw_registers": {
+    "independent_syndrome_bits": 36,
+    "spread_modes": 10,
+    "tetrahedral_bianchi_relations": 210,
+    "transport_edges": 45,
+    "triangle_curvature_checks": 120
+  },
+  "schema": "w33.pass2968.curvature_route_code.v1",
+  "status": "COMPLETE_EXACT_BINARY_GAUGE_CODE",
+  "syndromes": {
+    "single_edge_syndrome_weight": 8,
+    "single_edge_syndromes_unique": true,
+    "two_edge_syndrome_weight_histogram": {"14": 360, "16": 630}
+  }
+}
