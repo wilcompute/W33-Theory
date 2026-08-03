@@ -67,6 +67,41 @@ def walk(obj, path=""):
         yield (path or "/", obj)
 
 
+# Added Pass 2666.  Three withdrawals in two batches (Passes 2650, 2651, 2652) traced
+# to photonic_holonet_body.tex, which nothing indexed: the certificate index covered
+# data/*.json only, and prose indexes cover words rather than values.  Manuscripts and
+# analysis notes carry load-bearing NUMBERS in running text, so they are indexed here
+# too -- by value, with the surrounding line as the location.
+TEXT_GLOBS = ("*.tex", "analysis/*.md", "docs/*.md", "*.md")
+NUM = __import__("re").compile(r"(?<![\w.])(\d{3,12})(?![\w.])")
+
+
+def build_text_index() -> dict[int, list[tuple[str, str]]]:
+    """Values appearing in manuscripts and notes, with their line number."""
+    idx: dict[int, list[tuple[str, str]]] = defaultdict(list)
+    seen_files = set()
+    for pat in TEXT_GLOBS:
+        for f in sorted(ROOT.glob(pat)):
+            if f in seen_files or not f.is_file():
+                continue
+            seen_files.add(f)
+            try:
+                lines = f.read_text(encoding="utf-8", errors="ignore").splitlines()
+            except Exception:
+                continue
+            local: set[tuple[int, int]] = set()
+            for ln, line in enumerate(lines, 1):
+                for m in NUM.finditer(line.replace(",", "")):
+                    v = int(m.group(1))
+                    if not (MIN_VALUE <= v <= MAX_VALUE):
+                        continue
+                    if (v, ln) in local:
+                        continue
+                    local.add((v, ln))
+                    idx[v].append((f.name, f":{ln}"))
+    return idx
+
+
 def build() -> dict[int, list[tuple[str, str]]]:
     index: dict[int, list[tuple[str, str]]] = defaultdict(list)
     for p in sorted(DATA.glob("*.json")):
@@ -94,7 +129,8 @@ def main(argv: list[str]) -> int:
         except ValueError:
             print(f"not an integer: {argv[0]}")
             return 2
-        hits = index.get(q, [])
+        tidx = build_text_index()
+        hits = index.get(q, []) + tidx.get(q, [])
         if not hits:
             print(f"{q}: not found in any certificate")
             return 0
