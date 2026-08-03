@@ -1,0 +1,38 @@
+{
+  "schema": "w33.pass2974_2983.nonabelian_golden_information_summary.v1",
+  "status": "SOURCE_COMPLETE_PRIORITY_EVIDENCE_PENDING_FULL_M36_SWEEP_OPEN",
+  "checks": {
+    "nonabelian_D4_gauge_quotient": true,
+    "constructive_degree10_S6_two_graph": true,
+    "adaptive_finite_copy_receiver": true,
+    "general_isotropic_duplicate_free_partition": true,
+    "general_isotropic_649940_pilot": true,
+    "priority_evidence_lane_source": true,
+    "golden_word_shortest_rational_reduction": true,
+    "balanced_golden_scheduler": true,
+    "A4_shell_D4_lift_obstruction": true,
+    "shared_manuscript_and_blueprint_sources": true
+  },
+  "check_count": 10,
+  "exact_highlights": {
+    "D4_fundamental_holonomies": 36,
+    "D4_gauge_orbits": "81129638418148456557941239054336",
+    "S6_actions": 720,
+    "two_graph": "2-(10,3,4)",
+    "general_isotropic_spaces": 213648435,
+    "general_isotropic_shards": 495,
+    "general_isotropic_pilot": 649940,
+    "nonCSS_collinearity_hits": 6,
+    "nonstabilizer_hits": 0,
+    "golden_word": "R4^2 U6",
+    "hybrid_shell": "V4 semidirect C3 is A4",
+    "D4_order3_lift": false
+  },
+  "open_items": [
+    "run all 495 general-isotropic M36 shards",
+    "observe the priority workflow and three PDF builds",
+    "materialize the blueprint and live-atlas front doors from the fail-closed integrator",
+    "calibrate the adaptive receiver and optical router with laboratory data"
+  ],
+  "claim_boundary": "Exact discrete results and a deterministic non-CSS pilot are complete. The full M36 sweep, observed CI verdict, generated front doors, PDF artifacts, and laboratory performance are not yet complete."
+}
