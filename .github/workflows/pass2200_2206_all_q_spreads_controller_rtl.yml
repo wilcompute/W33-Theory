@@ -11,7 +11,7 @@ on:
       - 'analysis/BT2200_BT2206_all_q_spreads_nonregular_controller_rtl.md'
       - 'analysis/BT2206_all_q_spreads_nonregular_controller_rtl_insert.tex'
       - 'data/w33_pass220*.json'
-      - 'rtl/w33_spread_mixer36.sv'
+      - 'rtl/w33_pass2773_spread_mixer36_synth.sv'
       - 'tests/test_w33_pass2200_2206.py'
       - 'w33_paper.tex'
       - 'photonic_holonet.tex'
