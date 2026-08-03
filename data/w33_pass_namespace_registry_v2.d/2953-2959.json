@@ -2,16 +2,17 @@
   "schema": "w33.pass_namespace_reservation.v2",
   "range": "2953-2959",
   "owner": "agent/pass2953-2959-seven-front-closure",
-  "status": "reserved",
+  "status": "executed_local_exact_remote_hardware_pdf_pending",
   "reserved_after": "parallel reservation frontier through Pass 2952",
   "passes": {
-    "2953": "exact conjugacy-class closure of the 188 directed-diameter-19 ASp(4,3) elements",
-    "2954": "minimal antiunitary-chirality discriminator circuit and synthesizable RTL for the two middle M36 classes",
-    "2955": "Bayes-optimal noisy adaptive support-observer policy under asymmetric observation and operation costs",
-    "2956": "most-complete feasible three-copy M36 stabilizer-projector first-order and yield search",
-    "2957": "observed rank7 versus arithmetic frame-engine synthesis/place-and-route verdict with role decision",
-    "2958": "BONKERS: test whether diameter-19 conjugacy classes are dual to observer/code cosets or Hodge eigenspaces",
-    "2959": "BONKERS: search for a reversible phase-chirality observer that fuses diagnostic transcript, compiler state, and magic-class selection"
+    "2953": "complete exact: 188 hard elements meet 12 full ASp(4,3) conjugacy classes",
+    "2954": "complete exact/controller source: class-blind impossibility and minimum local probe cover {YI,IY}",
+    "2955": "complete exact finite-horizon model: Bayesian policy cuts error 5.87 percent to 1.69 percent",
+    "2956": "complete exact CSS family: 697872 projectors, 67023 deep-closed branches, minimum slope 1",
+    "2957": "RTL and report parser complete; observed same-harness placement verdict pending",
+    "2958": "complete exact: terminal-shell Fourier support 79/81 with pure-zp zero pair",
+    "2959": "complete exact metadata/RTL source: reversible D12 C3 inversion"
   },
-  "claim_boundary": "Reservation only. Conjugacy, hardware, Bayesian, three-copy, thermodynamic and manuscript statements remain separately typed until executable evidence exists."
+  "certificate": "data/PART_BT2953_BT2959_SEVEN_FRONT_CLOSURE_results.json",
+  "claim_boundary": "Conjugacy, chirality, Bayesian, CSS and Fourier statements are exact in their stated finite scopes. Rank-engine P&R and the authoritative current-master PDF remain pending the dedicated workflow."
 }
