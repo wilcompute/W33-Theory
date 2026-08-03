@@ -22,7 +22,7 @@ def kron_all(ms):
     return out
 def hermitian_pauli(v,n):return kron_all([(1j**(x*z))*np.linalg.matrix_power(X2,x)@np.linalg.matrix_power(Z2,z) for x,z in zip(v[:n],v[n:])])
 def stabilizer_states_two_qubits():
-    vecs=[bvec(i,2) for i in range(1,16)];planes=set();states=[];I=np.eye(4,complex)
+    vecs=[bvec(i,2) for i in range(1,16)];planes=set();states=[];I=np.eye(4,dtype=complex)
     for i,u in enumerate(vecs):
         for v in vecs[i+1:]:
             if not bsymp(u,v,2):planes.add(tuple(sorted((u,v,bxor(u,v)))))
