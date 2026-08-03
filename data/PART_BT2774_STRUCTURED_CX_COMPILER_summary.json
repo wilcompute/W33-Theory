@@ -1,0 +1,7 @@
+{
+  "boundary":"The generated decoder accepts the accumulated gate matrix g and its CX conjugate h=g CX g^-1. The group accumulator remains responsible for producing those exact matrices; invalid/non-CX-class conjugates fail closed.",
+  "checks":{"all_pairs_present":true,"all_rewrites_verified":true,"group_elements":51840},
+  "factorization":{"centralizer":"C6 x C3 x S3","cosets":480,"suffixes":108},
+  "memory_bits":{"centralizer_matrices":3456,"compression_ratio":41.12653708845696,"dense_51840x16_dispatch":829440,"form_dictionary":72,"line_frames":1280,"representative_inverses":15360,"structured_total":20168},
+  "schema":"w33.pass2774.structured_cx_compiler.v1","status":"EXACT_51840_COMPLETE"
+}
