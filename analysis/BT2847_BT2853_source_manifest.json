@@ -1,0 +1,16 @@
+{
+  "schema": "w33.pass2847_2853.source_manifest.v1",
+  "note": "Git blob SHAs are authoritative in the commit history; this manifest enumerates the release paths.",
+  "paths": [
+    "analysis/bt2847_2853_protected_observer_noisy_m36.py",
+    "data/PART_BT2847_BT2853_PROTECTED_OBSERVER_NOISY_M36_results.json",
+    "analysis/BT2847_BT2853_protected_observer_noisy_m36.md",
+    "analysis/BT2847_BT2853_protected_observer_noisy_m36_insert.tex",
+    "rtl/w33_pass2848_affine_square_feature_encoder.sv",
+    "rtl/w33_pass2853_affine_square_nn_decoder.sv",
+    "rtl/tb_w33_pass2853_affine_square_nn_decoder.sv",
+    "tests/test_bt2847_2853_protected_observer_noisy_m36.py",
+    "tools/integrate_bt2847_bt2853.py",
+    ".github/workflows/w33_pass2847_2853_protected_observer.yml"
+  ]
+}
