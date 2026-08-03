@@ -1,0 +1,688 @@
+{
+  "canonical_pass_range": "2901-2907",
+  "check_count": 5,
+  "checks": {
+    "all_packet_checks_pass": true,
+    "all_packets_complete_or_bounded": true,
+    "canonical_pass_range_2901_2907": true,
+    "seven_packets": true,
+    "total_exact_checks_64": true
+  },
+  "headline": "The selector channels are intrinsically an S3 affine-line bundle; the q-Hadamard quotient has a 47-cycle sequential engine; the full ISA admits no nontrivial support-refining execution quotient; the 96 runtime tokens carry a regular determinant-twisted group action; the optimal diagnostic cycle costs 315 and is provably nonlinear; and the tempting 40-state observer=W33 identification is false.",
+  "packets": [
+    {
+      "boundary": "This canonically identifies the channel fiber and its transition group; it deliberately does not choose an origin or orientation that the full geometry does not supply.",
+      "check_count": 11,
+      "checks": {
+        "five_transvections_generate_projective_sp": true,
+        "forty_lines": true,
+        "forty_points": true,
+        "one_similitude_extends_to_pgsp": true,
+        "orbit_stabilizer_transitive": true,
+        "pgsp_induced_full_S3": true,
+        "pgsp_stabilizer_order_24": true,
+        "pointed_hyperbolic_lines_2160": true,
+        "residual_fiber_size_three": true,
+        "sp_induced_translation_C3": true,
+        "sp_stabilizer_order_12": true
+      },
+      "generator_point_indices": [
+        0,
+        1,
+        2,
+        4,
+        13
+      ],
+      "group_orders": {
+        "PGSp_projective_action": 51840,
+        "PSp_projective_action": 25920
+      },
+      "sample": {
+        "infinity": 0,
+        "pair": [
+          1,
+          13
+        ],
+        "pgsp_induced_permutations": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            1,
+            0
+          ]
+        ],
+        "residual_centers": [
+          4,
+          5,
+          6
+        ],
+        "sp_induced_permutations": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ]
+        ]
+      },
+      "schema": "w33.pass2901.intrinsic_channel_torsor.v1",
+      "status": "COMPLETE_EXACT_WITH_CANONICAL_NUMBERING_OBSTRUCTION",
+      "theorem": "For every noncollinear pair x,y and chosen common neighbour c, the three residual selector channels form the affine line C(x,y)\\{c}. The multiplier-one stabilizer induces its translation C3, while the full projective similitude stabilizer induces AGL(1,3)=S3. Therefore no PGSp-equivariant numbering by {0,1,2} exists; the intrinsic object is an affine-line bundle with S3 transition functions."
+    },
+    {
+      "architecture": {
+        "border": "one weighted support sum plus exact division by three and diagonal subtraction",
+        "dense_serial_reference_cycles": 225,
+        "exact_cycle_saving": "178/225",
+        "input": "15 signed samples loaded serially; empty-support lane hard-wired to zero",
+        "kernel": "four stages of eight L3 butterflies (u,v)->(u+2v,u-v)",
+        "latency_model_cycles": 47,
+        "rtl": [
+          "rtl/w33_pass2902_q3_hadamard_engine.sv",
+          "rtl/w33_pass2902_q3_dense_reference.sv"
+        ]
+      },
+      "basis_output_hash": "8e19cbe0223d22da068b9451db59468916f9df7ea3ff7547d5745a04b259a845",
+      "boundary": "Arithmetic equivalence and cycle counts are exact. Logic cells, Fmax, and switching activity remain measurements to be supplied by the dedicated workflow.",
+      "check_count": 9,
+      "checks": {
+        "all_fifteen_basis_vectors_exact": true,
+        "basis_column_hashes_distinct": true,
+        "cycle_reduction_fraction_178_over_225": true,
+        "dense_reference_mac_cycles_225": true,
+        "eight_butterflies_per_stage": true,
+        "four_stages": true,
+        "sequential_butterfly_plus_emit_cycles_47": true,
+        "thirty_two_butterflies": true,
+        "thirty_two_signed_probes_exact": true
+      },
+      "schema": "w33.pass2902.q3_hadamard_engine.v1",
+      "status": "COMPLETE_EXACT_RTL_AND_PNR_PENDING"
+    },
+    {
+      "boundary": "The 16->40->78->81 filtration is an observer hierarchy, not a sequence of execution quotients. Only its fixed point is a congruence for the selected ISA.",
+      "check_count": 9,
+      "checks": {
+        "F_alone_preserves_support_16": true,
+        "all_fifteen_nonempty_operation_subsets": true,
+        "each_exact_triple_is_F_Z_and_one_CX": true,
+        "full_isa_minimal_exact_quotient_is_81": true,
+        "full_refinement_16_40_78_81": true,
+        "two_CX_only_stable_dimension_25": true,
+        "two_minimal_exact_triples": true,
+        "without_F_stable_dimension_45": true,
+        "without_Z_stable_dimension_41": true
+      },
+      "minimal_full_state_generator_sets": [
+        [
+          "F_p",
+          "CX_f_to_p",
+          "Z_p"
+        ],
+        [
+          "F_p",
+          "CX_p_to_f",
+          "Z_p"
+        ]
+      ],
+      "operation_subset_atlas": [
+        {
+          "class_counts": [
+            16
+          ],
+          "operations": [
+            "F_p"
+          ],
+          "stable_dimension": 16,
+          "stable_histogram": {
+            "1": 1,
+            "16": 1,
+            "2": 4,
+            "4": 6,
+            "8": 4
+          }
+        },
+        {
+          "class_counts": [
+            16,
+            25
+          ],
+          "operations": [
+            "CX_p_to_f"
+          ],
+          "stable_dimension": 25,
+          "stable_histogram": {
+            "1": 1,
+            "2": 8,
+            "4": 16
+          }
+        },
+        {
+          "class_counts": [
+            16,
+            25
+          ],
+          "operations": [
+            "CX_f_to_p"
+          ],
+          "stable_dimension": 25,
+          "stable_histogram": {
+            "1": 1,
+            "2": 8,
+            "4": 16
+          }
+        },
+        {
+          "class_counts": [
+            16,
+            24
+          ],
+          "operations": [
+            "Z_p"
+          ],
+          "stable_dimension": 24,
+          "stable_histogram": {
+            "1": 3,
+            "2": 9,
+            "4": 9,
+            "8": 3
+          }
+        },
+        {
+          "class_counts": [
+            16,
+            25,
+            39,
+            41
+          ],
+          "operations": [
+            "F_p",
+            "CX_p_to_f"
+          ],
+          "stable_dimension": 41,
+          "stable_histogram": {
+            "1": 1,
+            "2": 40
+          }
+        },
+        {
+          "class_counts": [
+            16,
+            25,
+            39,
+            41
+          ],
+          "operations": [
+            "F_p",
+            "CX_f_to_p"
+          ],
+          "stable_dimension": 41,
+          "stable_histogram": {
+            "1": 1,
+            "2": 40
+          }
+        },
+        {
+          "class_counts": [
+            16,
+            24,
+            36
+          ],
+          "operations": [
+            "F_p",
+            "Z_p"
+          ],
+          "stable_dimension": 36,
+          "stable_histogram": {
+            "1": 9,
+            "2": 18,
+            "4": 9
+          }
+        },
+        {
+          "class_counts": [
+            16,
+            25
+          ],
+          "operations": [
+            "CX_p_to_f",
+            "CX_f_to_p"
+          ],
+          "stable_dimension": 25,
+          "stable_histogram": {
+            "1": 1,
+            "2": 8,
+            "4": 16
+          }
+        },
+        {
+          "class_counts": [
+            16,
+            40,
+            45
+          ],
+          "operations": [
+            "CX_p_to_f",
+            "Z_p"
+          ],
+          "stable_dimension": 45,
+          "stable_histogram": {
+            "1": 9,
+            "2": 36
+          }
+        },
+        {
+          "class_counts": [
+            16,
+            40,
+            45
+          ],
+          "operations": [
+            "CX_f_to_p",
+            "Z_p"
+          ],
+          "stable_dimension": 45,
+          "stable_histogram": {
+            "1": 9,
+            "2": 36
+          }
+        },
+        {
+          "class_counts": [
+            16,
+            25,
+            39,
+            41
+          ],
+          "operations": [
+            "F_p",
+            "CX_p_to_f",
+            "CX_f_to_p"
+          ],
+          "stable_dimension": 41,
+          "stable_histogram": {
+            "1": 1,
+            "2": 40
+          }
+        },
+        {
+          "class_counts": [
+            16,
+            40,
+            78,
+            81
+          ],
+          "operations": [
+            "F_p",
+            "CX_p_to_f",
+            "Z_p"
+          ],
+          "stable_dimension": 81,
+          "stable_histogram": {
+            "1": 81
+          }
+        },
+        {
+          "class_counts": [
+            16,
+            40,
+            78,
+            81
+          ],
+          "operations": [
+            "F_p",
+            "CX_f_to_p",
+            "Z_p"
+          ],
+          "stable_dimension": 81,
+          "stable_histogram": {
+            "1": 81
+          }
+        },
+        {
+          "class_counts": [
+            16,
+            40,
+            45
+          ],
+          "operations": [
+            "CX_p_to_f",
+            "CX_f_to_p",
+            "Z_p"
+          ],
+          "stable_dimension": 45,
+          "stable_histogram": {
+            "1": 9,
+            "2": 36
+          }
+        },
+        {
+          "class_counts": [
+            16,
+            40,
+            78,
+            81
+          ],
+          "operations": [
+            "F_p",
+            "CX_p_to_f",
+            "CX_f_to_p",
+            "Z_p"
+          ],
+          "stable_dimension": 81,
+          "stable_histogram": {
+            "1": 81
+          }
+        }
+      ],
+      "schema": "w33.pass2903.observer_congruence_atlas.v1",
+      "status": "COMPLETE_EXACT",
+      "theorem": "The coarsest deterministic congruence refining support for the full four-operation micro-ISA is the discrete 81-state partition. In fact F_p, Z_p, and either CX direction already force all 81 states."
+    },
+    {
+      "boundary": "The regular group is a determinant-twisted control symmetry. It exchanges T/H parity under odd coordinate permutations and is not the natural incidence-preserving embedding of the tomotope automorphism group.",
+      "check_count": 9,
+      "checks": {
+        "all_tokens_preserved": true,
+        "natural_action_two_orbits_48_48": true,
+        "natural_orbits_are_T_and_H_parity": true,
+        "natural_tomotope_group_order_96": true,
+        "twist_condition_is_projective_determinant_one": true,
+        "twisted_action_free": true,
+        "twisted_action_regular": true,
+        "twisted_action_transitive_96": true,
+        "twisted_group_order_96": true
+      },
+      "determinant_twisted_embedding": {
+        "action": "regular",
+        "orbit_size": 96,
+        "order": 96,
+        "stabilizer_order": 1
+      },
+      "natural_embedding": {
+        "invariant": "full-support phase parity (T versus H)",
+        "orbit_sizes": [
+          48,
+          48
+        ],
+        "order": 96
+      },
+      "schema": "w33.pass2904.regular_token_group.v1",
+      "status": "COMPLETE_EXACT",
+      "theorem": "The natural parity-preserving tomotope automorphism embedding cannot act regularly on the 96 typed tokens: it has two 48-state orbits. The determinant-twisted projective signed-permutation subgroup has order 96 and acts freely and transitively, giving the runtime tokens an exact group torsor."
+    },
+    {
+      "D8_orbit_count": 39,
+      "boundary": "This optimizes the exact mean-first-passage cost of the support random walk. It is not yet a wall-clock schedule until one walk step is tied to a measured physical operation.",
+      "check_count": 10,
+      "checks": {
+        "D8_order_8": true,
+        "cycle_visits_all_fifteen_nonzero_masks": true,
+        "directed_pair_orbits_39": true,
+        "exact_improvement_87_over_4": true,
+        "feature_triples_determine_mfpt": true,
+        "fifteen_feature_triples": true,
+        "lexicographic_cycle_cost_1347_over_4": true,
+        "optimal_cycle_cost_315": true,
+        "rooted_optimal_cycle_count_8336": true,
+        "thirteen_distinct_values": true
+      },
+      "feature_table": [
+        {
+          "directed_pair_count": 24,
+          "mfpt": "39",
+          "source_target_matched_intersection": 0,
+          "target_matched_intersection": 0,
+          "target_weight": 1
+        },
+        {
+          "directed_pair_count": 32,
+          "mfpt": "42",
+          "source_target_matched_intersection": 1,
+          "target_matched_intersection": 0,
+          "target_weight": 1
+        },
+        {
+          "directed_pair_count": 8,
+          "mfpt": "39/2",
+          "source_target_matched_intersection": 0,
+          "target_matched_intersection": 0,
+          "target_weight": 2
+        },
+        {
+          "directed_pair_count": 32,
+          "mfpt": "45/2",
+          "source_target_matched_intersection": 1,
+          "target_matched_intersection": 0,
+          "target_weight": 2
+        },
+        {
+          "directed_pair_count": 16,
+          "mfpt": "21",
+          "source_target_matched_intersection": 2,
+          "target_matched_intersection": 0,
+          "target_weight": 2
+        },
+        {
+          "directed_pair_count": 6,
+          "mfpt": "18",
+          "source_target_matched_intersection": 0,
+          "target_matched_intersection": 2,
+          "target_weight": 2
+        },
+        {
+          "directed_pair_count": 16,
+          "mfpt": "21",
+          "source_target_matched_intersection": 1,
+          "target_matched_intersection": 2,
+          "target_weight": 2
+        },
+        {
+          "directed_pair_count": 6,
+          "mfpt": "39/2",
+          "source_target_matched_intersection": 2,
+          "target_matched_intersection": 2,
+          "target_weight": 2
+        },
+        {
+          "directed_pair_count": 4,
+          "mfpt": "33/4",
+          "source_target_matched_intersection": 0,
+          "target_matched_intersection": 2,
+          "target_weight": 3
+        },
+        {
+          "directed_pair_count": 24,
+          "mfpt": "45/4",
+          "source_target_matched_intersection": 1,
+          "target_matched_intersection": 2,
+          "target_weight": 3
+        },
+        {
+          "directed_pair_count": 20,
+          "mfpt": "39/4",
+          "source_target_matched_intersection": 2,
+          "target_matched_intersection": 2,
+          "target_weight": 3
+        },
+        {
+          "directed_pair_count": 8,
+          "mfpt": "21/2",
+          "source_target_matched_intersection": 3,
+          "target_matched_intersection": 2,
+          "target_weight": 3
+        },
+        {
+          "directed_pair_count": 4,
+          "mfpt": "6",
+          "source_target_matched_intersection": 1,
+          "target_matched_intersection": 4,
+          "target_weight": 4
+        },
+        {
+          "directed_pair_count": 6,
+          "mfpt": "9/2",
+          "source_target_matched_intersection": 2,
+          "target_matched_intersection": 4,
+          "target_weight": 4
+        },
+        {
+          "directed_pair_count": 4,
+          "mfpt": "21/4",
+          "source_target_matched_intersection": 3,
+          "target_matched_intersection": 4,
+          "target_weight": 4
+        }
+      ],
+      "improvement": "87/4",
+      "lexicographic_cost": "1347/4",
+      "optimal_cost": "315",
+      "optimal_cycle": [
+        "0001",
+        "1001",
+        "1000",
+        "0101",
+        "1010",
+        "0100",
+        "0110",
+        "0010",
+        "0111",
+        "1110",
+        "1101",
+        "1011",
+        "1100",
+        "1111",
+        "0011",
+        "0001"
+      ],
+      "rooted_optimal_cycle_count": 8336,
+      "schema": "w33.pass2905.first_passage_scheduler.v1",
+      "status": "COMPLETE_EXACT"
+    },
+    {
+      "best_singer_cost": "1317/4",
+      "boundary": "The theorem excludes linear Singer-cycle schedules for this directed MFPT objective; it does not say nonlinear control is universally superior for other costs or noise models.",
+      "check_count": 8,
+      "checks": {
+        "GL4_2_order_20160_implicit": true,
+        "best_singer_1317_over_4": true,
+        "global_optimum_315": true,
+        "nineteen_singer_costs": true,
+        "no_singer_cycle_is_globally_optimal": true,
+        "nonlinear_gap_57_over_4": true,
+        "singer_elements_2688": true,
+        "worst_singer_1383_over_4": true
+      },
+      "cost_distribution": {
+        "1317/4": 192,
+        "1329/4": 64,
+        "1335/4": 448,
+        "1341/4": 16,
+        "1347/4": 192,
+        "1353/4": 80,
+        "1359/4": 32,
+        "1365/4": 64,
+        "1371/4": 208,
+        "1377/4": 16,
+        "1383/4": 32,
+        "330": 16,
+        "336": 512,
+        "339": 96,
+        "345": 96,
+        "663/2": 352,
+        "669/2": 80,
+        "681/2": 96,
+        "687/2": 96
+      },
+      "exact_gap": "57/4",
+      "global_optimum": "315",
+      "schema": "w33.pass2906.nonlinear_scheduler_singer_gap.v1",
+      "singer_element_count": 2688,
+      "status": "COMPLETE_EXACT",
+      "theorem": "No linear recurrence on the nonzero F2^4 support masks attains the optimal diagnostic cycle. Every GL(4,2) Singer cycle costs at least 1317/4, while the unrestricted optimum is 315."
+    },
+    {
+      "W33_hits": 0,
+      "ambiguous_orthogonality_unordered_pairs": 216,
+      "boundary": "This falsifies one tempting identification. It does not weaken the independent construction of W(3,3) from projective Pauli classes and the generalized-quadrangle incidence axioms.",
+      "candidate_distance_unions_with_240_edges": 1459,
+      "check_count": 8,
+      "checks": {
+        "class_histogram_1x7_2x29_4x4": true,
+        "distance_edge_subsets_with_240_edges_1459": true,
+        "no_hamming_distance_union_is_W33": true,
+        "not_projective_zero_plus_40_pairs": true,
+        "one_step_class_count_40": true,
+        "orthogonality_ambiguous_on_216_unordered_pairs": true,
+        "signature_hash_stable": true,
+        "signature_length_20": true
+      },
+      "class_size_histogram": {
+        "1": 7,
+        "2": 29,
+        "4": 4
+      },
+      "schema": "w33.pass2907.observer40_mirage_falsifier.v1",
+      "signature_distance_distribution": {
+        "1": 15,
+        "10": 69,
+        "11": 68,
+        "12": 66,
+        "13": 58,
+        "14": 46,
+        "15": 32,
+        "16": 26,
+        "17": 12,
+        "18": 8,
+        "19": 2,
+        "2": 18,
+        "20": 2,
+        "3": 21,
+        "4": 35,
+        "5": 38,
+        "6": 71,
+        "7": 64,
+        "8": 64,
+        "9": 65
+      },
+      "status": "COMPLETE_EXACT_NEGATIVE",
+      "theorem": "The 40 classes after one observer refinement are not the 40 projective points of W(3,3). The count is a mirage: class sizes are nonprojective, symplectic orthogonality does not descend, and no union of Hamming-distance relations on the 20-bit signatures yields SRG(40,12,2,4)."
+    }
+  ],
+  "schema": "w33.pass2901_2907.seven_frontiers.v1",
+  "status": "COMPLETE_64_EXACT_CHECKS_RTL_PNR_AND_DOCUMENT_COMPILE_PENDING",
+  "total_exact_checks": 64
+}
