@@ -1,14 +1,14 @@
 {
   "artifact_sha256": {
     "PART_BT2767_M36_PREPARATION_ROM.json": "710e27752ca45be7fb142b2331ef354aa416084a0fd4856bebe7cecb10fbed0b",
-    "PART_BT2777_M36_4_2_STABILIZER_CENSUS_summary.json": "642a7303952d163d5ed054e71d638ccbdbc3af330e362c4b321a188e3e8bccca",
-    "PART_BT2778_METAPLECTIC_INTERFEROMETER_summary.json": "f2407b057c89b6b4b2bae04fa48a98f5b7bb2e5e96a192a6b547681213cab5f1",
-    "PART_BT2779_STRUCTURED_CX_COMPILER_summary.json": "092060de22d85d2fb8e7d9c69a5b8f7821caeb0f89de0bf59f94b0f6e8ee254b",
+    "PART_BT2777_M36_4_2_STABILIZER_CENSUS_summary.json": "f095607e2839658a55f24d4ccdeb938b48a94132af8eed29f43d53a04c7f6b70",
+    "PART_BT2778_METAPLECTIC_INTERFEROMETER_summary.json": "6633174c14cc0ec5c90f0b6aaedc71691e89f9da41ab9c9db3af34c3e3294b89",
+    "PART_BT2779_STRUCTURED_CX_COMPILER_summary.json": "092060de22d85d2fb8e7d9c69a5b8f7821caeb0f89f94b0f6e8ee254b",
     "PART_BT2781_REPEATER_REMOTE_SUM_summary.json": "90b82d7996cc41fa3a5ef586d0136a0d8d842aa6d921d41adc65f8fe92777b15"
   },
   "boundaries": {
     "compiler": "exact matrix accumulator remains upstream input",
-    "distillation": "complete only for identical two-copy binary [[4,2]] stabilizer projections",
+    "distillation": "exhaustive only for the frozen canonical logical Pauli decoder gauge; arbitrary logical Clifford decoders remain open",
     "hardware": "Icarus/Yosys/nextpnr evidence must be observed remotely",
     "repeater": "exact Bell-diagonal recurrences plus engineering scenarios, not measured end-to-end hardware",
     "sensor": "shot budget assumes independent phase-stable path measurements and calibrated determinant"
@@ -44,6 +44,6 @@
     "2780": "2787",
     "2781": "2788"
   },
-  "schema": "w33.pass2784_2788.five_frontiers.v1",
+  "schema": "w33.pass2784_2788.five_frontiers.v2",
   "status": "COMPLETE_LOCAL_EXACT_REMOTE_HARDWARE_PENDING"
 }
