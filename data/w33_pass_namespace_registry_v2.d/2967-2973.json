@@ -1,0 +1,17 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "2967-2973",
+  "owner": "agent/pass2967-2973-s6-two-graph-route-code",
+  "status": "reserved",
+  "reserved_after": "completed parallel Passes 2960-2966",
+  "passes": {
+    "2967": "refine the all-spread D4 gauge classification to the exceptional ten-point S6 two-graph and exact Bianchi design",
+    "2968": "derive the parity-curvature [45,9,9]_2 gauge code and compressed 36-bit route syndrome",
+    "2969": "apply optimal multi-copy binary pure-state discrimination to the hard-shell chirality pair and compare collective, adaptive and majority receivers",
+    "2970": "weld the three-pilot full-S4 detector to the multi-edge parity decoder as a layered route fault architecture",
+    "2971": "promote the verified theorems into w33_paper.tex and photonic_holonet.tex",
+    "2972": "add fail-closed blueprint and live-atlas integration plus exact release workflow",
+    "2973": "audit the resulting claims against Chat7, docs/index.html and the two manuscript bodies"
+  },
+  "claim_boundary": "Reservation only. Standard two-graph and state-discrimination theory must be attributed; physical optical performance remains separately measured."
+}
