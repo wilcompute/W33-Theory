@@ -12,7 +12,7 @@ def test_compiled_m36():
 def test_oam_fabric():
  d=load('PART_BT2948_OAM_SPREAD_FABRIC_results.json');assert d['registers']=={'addresses':40,'oam_line_modes':10,'time_or_frequency_slots':4};assert d['triangle_holonomy_cycle_histogram']=={'2-1-1':60,'2-2':60}
 def test_reversible_transcript():
- d=load('PART_BT2949_REVERSIBLE_TRANSCRIPT_results.json');assert d['permutation_size']==256 and d['known_zero_high_bit_on_valid_inputs'];assert all(d['inverse'][d['forward'][i]]==i for i in range(256))
+ d=load('PART_BT2949_REVERSIBLE_TRANSCRIPT_results.json');assert d['permutation_size']==256 and d['known_zero_high_bit_on_valid_inputs'];assert d['cycle_length_histogram']=={'6':1,'43':1,'74':1,'133':1};assert d['valid_codewords']==81 and d['invalid_output_range']==[81,255]
 def test_ternary_classification():
  d=load('PART_BT2950_TERNARY_844_CLASSIFICATION_results.json');assert d['covering_radius']==2 and d['lcd'] and d['projective_hyperplane_spectrum']==[3,4,10,12,11]
 def test_quarter_turn():
