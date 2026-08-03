@@ -1,0 +1,28 @@
+{
+  "K": [
+    [0,1,0,0],
+    [1,0,0,0],
+    [0,0,0,1],
+    [0,0,1,0]
+  ],
+  "K_squared_identity": true,
+  "anti_symplectic": "K^T J K = -J",
+  "architectural_roles": [
+    "W33 commutation/adjacency test sigma=0",
+    "OAM route-dependent qutrit phase omega^sigma",
+    "affine-support observer triplet",
+    "phase-chirality reversal and support-offset swap"
+  ],
+  "claim_boundary": "Exact finite-field transducer and label covariance. The ray-5/ray-7 statement is a phase-label action, not a replacement proof of the physical distillation circuit.",
+  "fixed_nonzero_frame_zero_routes": 13,
+  "frame_zero_route_histogram": {"13":80,"40":1},
+  "global_phase_histogram": {"0":1080,"1":1080,"2":1080},
+  "m36_label_action": "within family 0, (mu,nu)=(1,2) for ray 5 swaps to (2,1) for ray 7",
+  "observer_identity": "the three bits 1[sigma+b != 0] are exactly an affine-support probe triplet with direction Jp",
+  "phase_checks": 3240,
+  "phase_covariance": "sigma(Kx, canon(Kp)) = -g(p) sigma(x,p)",
+  "projective_gauge_sign_histogram": {"-1":10,"1":30},
+  "projective_route_permutation": [1,0,2,3,13,16,19,14,17,20,15,18,21,4,7,10,5,8,11,6,9,12,22,25,28,23,26,29,24,27,30,31,37,34,33,39,36,32,38,35],
+  "schema": "w33.pass2966.antisymplectic_phase_transducer.v1",
+  "status": "COMPLETE_EXACT_SOURCE_RTL"
+}
