@@ -222,7 +222,7 @@ def build_result(audit: bool) -> dict:
         "micro_isa_four_operations": prior["isa_two_bit"],
         "m36_full_clifford_order": prior["m36_clifford_11520"],
         "m36_projector_count": (
-            "codes_5355"
+            "assert len(result) == 5355"
             in (ROOT / "analysis" / "bt2804_m36_clifford_decoder_distillation.py")
             .read_text(encoding="utf-8")
         ),
