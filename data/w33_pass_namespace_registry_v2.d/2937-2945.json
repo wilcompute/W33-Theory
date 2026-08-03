@@ -1,0 +1,19 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "2937-2945",
+  "owner": "agent/pass2937-2945-global-code-landauer-oam-bonkers",
+  "status": "reserved_after_local_exact_execution",
+  "reserved_after": "parallel frontier through Pass 2936",
+  "passes": {
+    "2937": "global affine-support distance-four lower and upper bounds over 120 probes",
+    "2938": "isodual [8,4,4]_3 syndrome decoder architecture and RTL",
+    "2939": "circuit-independent noisy M36 accepted-fault envelope",
+    "2940": "calibrated active support diagnosis under asymmetric readout",
+    "2941": "nonlinear binary-image and ternary-code identification with automorphism census",
+    "2942": "Landauer transcript conservation, correction entropy, and finite-time boundary",
+    "2943": "OAM carrier audit and projective 40-cycle obstruction",
+    "2944": "BONKERS: measurement/check reciprocity from isoduality",
+    "2945": "BONKERS: thermodynamic compiler optimizing raw entropy above the invariant transcript floor"
+  },
+  "claim_boundary": "Exact finite claims, explicitly modelled channel envelopes, source-complete RTL, and pending remote hardware/PDF evidence remain separately typed."
+}
