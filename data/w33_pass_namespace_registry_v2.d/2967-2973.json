@@ -9,8 +9,9 @@
     "focused_regressions": "9/9 passed locally",
     "local_rtl_toolchain": "Icarus and Yosys unavailable; no local RTL or placement claim",
     "evidence_pr": 229,
-    "workflow_run": 30862332911,
-    "workflow_status": "queued"
+    "workflow_run": 30862619477,
+    "workflow_status": "queued",
+    "evidence_commit_policy": "one-shot stable marker; volatile synthesis logs remain artifacts and cannot recursively retrigger commits"
   },
   "passes": {
     "2967": "component-resolved Bayesian calibration pipeline; aggregate three-outcome calibration is rank-two and cannot identify four component parameters",
@@ -19,7 +20,7 @@
     "2970": "dominating nine-gate deep-M36 recompile: six CNOT, three H, one-half yield, exact ray-7 output",
     "2971": "native controller group order 30,233,088; optional symplectic transvection expands route address control to A40",
     "2972": "BONKERS: exact 6,048-state minimal future-observation controller quotient, still requiring 13 fixed bits",
-    "2973": "BONKERS: exact D12 reversible curvature clock with 540 twelve-state controller cycles"
+    "2973": "BONKERS: exact D12 reversible curvature clock with 540 twelve-state controller cycles and an exact shared-27 counting bridge to the 540 skew-line frames"
   },
-  "claim_boundary": "Exact finite results, synthetic calibration, literature decomposition models, source-complete RTL, and logical-clock interpretations are published. Icarus simulation, Yosys/nextpnr measurements, blueprint/site integration, three PDF builds, laboratory optical calibration, physical locality, and autonomous-clock behavior remain pending or open."
+  "claim_boundary": "Exact finite results, synthetic calibration, literature decomposition models, source-complete RTL, and logical-clock interpretations are published. Icarus simulation, Yosys/nextpnr measurements, blueprint/site integration, three PDF builds, laboratory optical calibration, physical locality, autonomous-clock behavior, and an equivariant identification of the two 540-object systems remain pending or open."
 }
