@@ -1,0 +1,18 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "2887-2893",
+  "owner": "agent/pass2887-2893-seven-front-breakthrough",
+  "status": "reserved",
+  "reserved_after": "parallel reservation frontier through Pass 2886",
+  "reserved_at_utc": "2026-08-03T19:05:00Z",
+  "supersedes_conflicted_reservation": "2869-2875",
+  "passes": {
+    "2887": "seven-bit rank-coded frame engine RTL and measured comparison against the 43-LC arithmetic engine",
+    "2888": "exact first-order M36 branch census plus mixture and adaptive-selection theorem",
+    "2889": "antiunitary chirality invariant separating the two middle 12-ray Clifford classes",
+    "2890": "noise-aware adaptive support observer and exact representation-dependent thermodynamic decision cost",
+    "2891": "current-master blueprint correction, structural rewrite, PDF compilation, and release reconciliation",
+    "2892": "outside-box test: four magic classes as suborbits of the distinguished classical-line stabilizer",
+    "2893": "outside-box test: algebraic classification of the 188 diameter-19 compiler elements"
+  }
+}
