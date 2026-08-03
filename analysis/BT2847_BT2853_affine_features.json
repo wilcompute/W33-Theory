@@ -1,0 +1,26 @@
+{
+  "schema": "w33.pass2848.affine_square_features.v1",
+  "field": "F3",
+  "rule": "support(a.x+b)=(a.x+b)^2",
+  "samples_per_active_feature": 2,
+  "active_features": [
+    {"name":"x_p","coefficients":[1,0,0,0],"constant":0},
+    {"name":"z_p","coefficients":[0,1,0,0],"constant":0},
+    {"name":"x_f","coefficients":[0,0,1,0],"constant":0},
+    {"name":"z_f","coefficients":[0,0,0,1],"constant":0},
+    {"name":"z_p-z_f","coefficients":[0,1,0,2],"constant":0},
+    {"name":"x_p+x_f","coefficients":[1,0,1,0],"constant":0},
+    {"name":"x_p+1","coefficients":[1,0,0,0],"constant":1},
+    {"name":"z_p-z_f+2","coefficients":[0,1,0,2],"constant":2},
+    {"name":"z_p+2","coefficients":[0,1,0,0],"constant":2},
+    {"name":"x_f+2","coefficients":[0,0,1,0],"constant":2},
+    {"name":"x_p-x_f+1","coefficients":[1,0,2,0],"constant":1},
+    {"name":"z_f+2","coefficients":[0,0,0,1],"constant":2}
+  ],
+  "omitted_features": [
+    {"name":"x_p-x_f+2","coefficients":[1,0,2,0],"constant":2},
+    {"name":"z_p+z_f+2","coefficients":[0,1,0,1],"constant":2}
+  ],
+  "total_samples": 24,
+  "minimum_distance": 4
+}
