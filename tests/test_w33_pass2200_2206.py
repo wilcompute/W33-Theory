@@ -24,6 +24,7 @@ def test_controller_and_quadratic_correction():
 
 def test_rtl_reference():
  m=load('p2206','analysis/w33_pass2206_verify_rtl.py')
- d=m.build(ROOT/'rtl/w33_spread_mixer36.sv')
+ d=m.build(ROOT/'rtl/w33_pass2773_spread_mixer36_synth.sv')
  assert d==json.loads((ROOT/'data/w33_pass2206_rtl_reference.json').read_text())
  assert d['checks']['A2_equals_9I_plus_6J']
+ assert d['source']=='rtl/w33_pass2773_spread_mixer36_synth.sv'

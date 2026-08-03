@@ -1,0 +1,17 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.supplement",
+  "status": "ACTIVE",
+  "canonical_blocks": [{
+    "range": "2803-2807",
+    "owner": "minimal-isa-m36-distillation-sensor-transpose-mixer-retirement",
+    "status": "COMPLETE_EXACT_REMOTE_HARDWARE_PENDING",
+    "artifacts": {
+      "2803": "minimal four-operation affine frame micro-ISA and exact word metric",
+      "2804": "full logical-Clifford two-copy M36 distillation census and explicit deep protocol",
+      "2805": "n-qutrit mu_12 sensor exponent cycle",
+      "2806": "q=5,q=7 transpose, controlled-add direction, and local-Fourier closure",
+      "2807": "unparsable mixer retirement and live-source certificate migration"
+    },
+    "runtime_boundary": "Exact finite jobs are implemented. Synthesis, placement, timing, and utilization are not promoted until the dedicated workflow is observed."
+  }]
+}

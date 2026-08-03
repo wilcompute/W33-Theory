@@ -1,0 +1,29 @@
+{
+  "boundaries": {
+    "hardware": "synthesis and placement are promoted only after observed CI evidence",
+    "m36": "state-fidelity distillation, not a fault-tolerant injection threshold or asymptotic yield theorem",
+    "sensor": "finite mu_12 Clifford lift; arbitrary U(1) phases require exponent 3^n"
+  },
+  "canonical_pass_range": "2803-2807",
+  "check_count": 15,
+  "checks": {
+    "dead_mixer_absent": true,
+    "isa_asp43": true,
+    "isa_sp43": true,
+    "isa_two_bit": true,
+    "live_mixer_source": true,
+    "m36_clifford_11520": true,
+    "m36_deep_improving_48": true,
+    "m36_explicit_protocol": true,
+    "m36_orbits_960_2880_2880_640": true,
+    "m36_other_improving_zero": true,
+    "sensor_even_9": true,
+    "sensor_odd_3": true,
+    "transpose_cx_conjugacy": true,
+    "transpose_q5_inner": true,
+    "transpose_q7_outer": true
+  },
+  "headline": "The deep M36 grade is two-copy distillable under full logical Clifford decoding: 48 improving branches, with an explicit H-decoded protocol improving over the full magic-witness interval.",
+  "schema": "w33.pass2803_2807.five_deep_frontiers.v1",
+  "status": "COMPLETE_EXACT_REMOTE_HARDWARE_PENDING"
+}
