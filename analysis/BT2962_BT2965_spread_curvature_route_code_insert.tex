@@ -1,0 +1,93 @@
+\section{The OAM spread router carries the exceptional ten-point two-graph}
+\label{sec:bt2962-oam-two-graph}
+
+For a spread \(\mathcal S=\{L_0,\ldots,L_9\}\) of \(W(3,3)\), let
+\(g_{ij}\in S_4\) denote the exact four-channel transport permutation from
+\(L_i\) to \(L_j\).  Its sign defines an \(\mathbb F_2\)-valued edge
+connection
+\[
+ a_{ij}=\operatorname{sgn}(g_{ij}),
+\]
+while the parity of the triangle holonomy is
+\[
+ \kappa_{ijk}
+ =\operatorname{sgn}(g_{ki}g_{jk}g_{ij})
+ =a_{ij}+a_{jk}+a_{ki}
+ =(\delta a)_{ijk}.
+\]
+
+The Pass~2962 verifier enumerates all \(36\) spreads.  For every spread, the
+\(120\) mode triangles split into \(60\) transposition and \(60\)
+double-transposition holonomies.  The \(60\) odd triangles form a
+\(2-(10,3,4)\) design: every mode lies on \(18\) odd triangles and every pair
+lies on \(4\).  Moreover every four-mode tetrahedron contains an even number
+of odd faces,
+\[
+ \delta\kappa=\delta^2a=0,
+\]
+which is the exact discrete Bianchi identity.  Exhausting all \(2^{10}\)
+vertex-sign gauges leaves \(\kappa\) unchanged.
+
+All \(36\) curvature hypergraphs are isomorphic.  Their switching class
+contains the Petersen graph, and their full automorphism group is
+\[
+ \operatorname{Aut}(\mathcal T)
+ \cong \mathrm{P}\Sigma\mathrm L(2,9)
+ \cong S_6,
+ \qquad |\operatorname{Aut}(\mathcal T)|=720,
+\]
+with an explicit degree-ten model on the unordered \(3+3\) partitions of a
+six-set.  Thus the spread router does not merely exhibit involutory triangle
+holonomy: its parity curvature is the standard exceptional ten-point
+two-graph.
+
+\paragraph{Boundary.}
+This is an exact theorem about finite routing permutations.  It is not a
+measured optical Berry phase, a continuum Yang--Mills field, or a crosstalk
+claim.  The full \(S_4\) holonomy retains information discarded by the sign
+projection.
+
+\section{Curvature-aware route checking gives a \([45,9,9]_2\) gauge code}
+\label{sec:bt2965-curvature-route-code}
+
+The ten spread modes form \(K_{10}\), with \(45\) inter-mode transport
+edges.  Let \(e\in\mathbb F_2^{45}\) record parity flips of the exact \(S_4\)
+routing permutations, and let \(H\in\mathbb F_2^{120\times45}\) be the
+triangle-edge incidence matrix.  After subtracting the certified Pass~2962
+baseline curvature, the observed syndrome is
+\[
+ s=He.
+\]
+
+Pass~2965 proves
+\[
+ \operatorname{rank}_{\mathbb F_2}H=36,
+ \qquad
+ \ker H=\operatorname{Cut}(K_{10}),
+ \qquad
+ \dim\ker H=9.
+\]
+Thus the undetectable edge patterns form the cut code
+\[
+ \boxed{[45,9,9]_2}
+\]
+with weight enumerator
+\[
+ 1+10z^9+45z^{16}+120z^{21}+210z^{24}+126z^{25}.
+\]
+Every non-gauge fault of weight at most eight is detected, and every fault of
+weight at most four is correctable modulo vertex switching.  The first
+undetectable patterns are the weight-nine singleton cuts, which are exactly
+gauge transformations.  Every single-edge fault has a distinct weight-eight
+syndrome.  The \(120\) raw triangle checks compress to \(36\) independent
+checks, and the tetrahedral boundary matrix \(B\) satisfies
+\[
+ BH=0,
+\]
+the matrix Bianchi identity.
+
+\paragraph{Boundary.}
+The code detects parity faults of the finite routing permutations.  It does not
+detect even-permutation faults, optical loss, continuous phase drift inside a
+fixed parity class, or detector faults unless those are separately discretized
+as parity flips.
