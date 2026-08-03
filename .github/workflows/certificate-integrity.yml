@@ -1,0 +1,60 @@
+# Certificate integrity — added Pass 2577.
+#
+# Two guards exist and are calibrated, and neither ran on push until now:
+#
+#   scripts/check_certificates.py    frozen certificates reproduce their own digests,
+#                                    and no frozen `checks` block contains a false.
+#                                    Calibrated Pass 2478/2482 to three canonical
+#                                    self-digest key names and two serialisations;
+#                                    matching "sha256" anywhere flags 50% of files.
+#
+#   scripts/build_certificate_index.py  indexes certificate VALUES.  Certificates are
+#                                    prose-free, so no topic search reaches them; in one
+#                                    session seven questions were treated as open while
+#                                    their answers sat in committed certificates.
+#
+# Both WARN and never fail the build, matching the repo's standing policy: a blocking
+# guard trains people to bypass it, and a stale digest is a candidate for review rather
+# than proof of error.
+
+name: certificate-integrity
+
+on:
+  push:
+    paths:
+      - 'data/**.json'
+      - 'scripts/check_certificates.py'
+      - 'scripts/build_certificate_index.py'
+  pull_request:
+    paths:
+      - 'data/**.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  certificates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: frozen certificates reproduce their digests
+        continue-on-error: true
+        run: python scripts/check_certificates.py
+
+      - name: certificate value index is current
+        continue-on-error: true
+        run: |
+          python scripts/build_certificate_index.py
+          if ! git diff --quiet -- CERTIFICATE_INDEX.md; then
+            echo "::warning::CERTIFICATE_INDEX.md is stale."
+            echo "Run: py -3 scripts/build_certificate_index.py"
+            git diff --stat -- CERTIFICATE_INDEX.md
+          else
+            echo "CERTIFICATE_INDEX.md is current."
+          fi
