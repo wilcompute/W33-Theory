@@ -6,6 +6,8 @@ on:
       - agent/pass2820-2824-blueprint-hardening
     paths:
       - holonet_machine_blueprint.tex
+      - holonet_machine_blueprint.pdf
+      - analysis/blueprint_parts/**
       - analysis/BT2820_BT2824_blueprint_evidence_insert.tex
       - analysis/bt2820_2824_blueprint_truth_gate.py
       - analysis/bt2821_m36_distillation_operating_curve.py
@@ -17,6 +19,8 @@ on:
       - master
     paths:
       - holonet_machine_blueprint.tex
+      - holonet_machine_blueprint.pdf
+      - analysis/blueprint_parts/**
       - analysis/BT2820_BT2824_blueprint_evidence_insert.tex
       - analysis/bt2820_2824_blueprint_truth_gate.py
       - analysis/bt2821_m36_distillation_operating_curve.py
@@ -33,9 +37,11 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  migrate-verify-compile:
+  verify-compile-freeze:
     runs-on: ubuntu-24.04
     timeout-minutes: 30
+    env:
+      SOURCE_DATE_EPOCH: "1722643200"
     steps:
       - name: Check out writable head branch
         uses: actions/checkout@v4
@@ -59,11 +65,10 @@ jobs:
       - name: Rebuild exact Pass 2821 M36 operating curve
         run: python analysis/bt2821_m36_distillation_operating_curve.py
 
-      - name: Apply idempotent blueprint migration
-        run: python analysis/bt2820_2824_blueprint_truth_gate.py --write
-
-      - name: Recheck truth gate without mutation
-        run: python analysis/bt2820_2824_blueprint_truth_gate.py --check
+      - name: Normalize and verify the six-part blueprint
+        run: |
+          python analysis/bt2820_2824_blueprint_truth_gate.py --write
+          python analysis/bt2820_2824_blueprint_truth_gate.py --check
 
       - name: Run focused regressions
         run: pytest -q tests/test_bt2820_2824_blueprint_truth_gate.py
@@ -73,8 +78,15 @@ jobs:
         with:
           tectonic-version: 0.16.9
 
-      - name: Compile blueprint
-        run: tectonic --keep-logs holonet_machine_blueprint.tex
+      - name: Compile blueprint twice and require byte stability
+        shell: bash
+        run: |
+          rm -f holonet_machine_blueprint.pdf holonet_machine_blueprint.log
+          tectonic --keep-logs holonet_machine_blueprint.tex
+          cp holonet_machine_blueprint.pdf /tmp/holonet_machine_blueprint.first.pdf
+          cp holonet_machine_blueprint.log /tmp/holonet_machine_blueprint.first.log
+          tectonic --keep-logs holonet_machine_blueprint.tex
+          cmp /tmp/holonet_machine_blueprint.first.pdf holonet_machine_blueprint.pdf
 
       - name: Reject TeX errors and layout overflow
         shell: bash
@@ -85,6 +97,9 @@ jobs:
             echo "Blueprint log contains a release-blocking TeX or layout error."
             exit 1
           fi
+
+      - name: Freeze PDF and ordered-fragment hashes
+        run: python analysis/bt2820_2824_blueprint_truth_gate.py --check
 
       - name: Check source hygiene
         run: git diff --check
@@ -104,7 +119,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "Blueprint source, exact certificates, and PDF are already frozen."
           else
-            git commit -m "Passes 2820-2824: freeze hardened Holonet blueprint"
+            git commit -m "Passes 2820-2824: freeze modular Holonet blueprint"
             git push origin "HEAD:${TARGET_BRANCH}"
           fi
 
@@ -114,6 +129,7 @@ jobs:
           name: pass2820-2824-holonet-blueprint
           path: |
             holonet_machine_blueprint.tex
+            analysis/blueprint_parts/
             holonet_machine_blueprint.pdf
             holonet_machine_blueprint.log
             data/PART_BT2808_PG32_TETRAHEDRAL_SUPPORT_LIFT_results.json
