@@ -1,0 +1,12 @@
+{
+  "schema":"w33.pass2951.isodual_oam_quarter_turn.v1",
+  "status":"COMPLETE_EXACT_PHYSICAL_MAPPING_PROPOSAL",
+  "check_count":5,
+  "checks":{"maps_code_to_dual":true,"square_is_global_negation":true,"fourth_power_identity":true,"four_two_mode_lanes":true,"complex_eigenvalues_four_plus_i_four_minus_i":true},
+  "coordinate_cycles":[[0,1],[2,3],[4,6],[5,7]],
+  "algebra":"D^2=-I, D^4=I",
+  "complex_eigenvalues":[[0,-1],[0,-1],[0,-1],[0,-1],[0,1],[0,1],[0,1],[0,1]],
+  "hardware_mapping":"four OAM lanes times two time/frequency bins",
+  "interpretation":"One reciprocal signed-bin swap maps the code to its dual; two applications give global ternary inversion.",
+  "claim_boundary":"Exact finite-field wiring equivalence; coherent optical implementation and phase stability are unmeasured."
+}
