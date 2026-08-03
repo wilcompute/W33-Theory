@@ -1,12 +1,16 @@
-# Passes 2784–2788 — M36 no-go, physical lift sensing, structured CX silicon, reproducible P&R, and repeater remote SUM
+# Passes 2784–2788 — M36 decoder boundary, physical lift sensing, structured CX silicon, reproducible P&R, and repeater remote SUM
 
 The implementation files retain provisional build identifiers 2777, 2778, 2779, 2780, and 2781 because parallel work reserved those numbers while this packet was under construction. The canonical mapping is frozen in `data/PART_BT2784_BT2788_PROVISIONAL_ID_MAP.json`.
 
-## 2784 — complete two-copy M36 stabilizer-projection no-go
+## 2784 — deterministic two-copy M36 stabilizer-projection boundary
 
-The exact search enumerates all 5,355 rank-two isotropic subspaces of the four-qubit binary symplectic space and all four syndromes, giving 21,420 `[[4,2]]` stabilizer-projection branches. Inputs are two identical depolarized M36 resources; arbitrary logical Clifford decoding is absorbed by the Clifford-invariant 36-ray orbit. Among branches closing back onto M36, exact `Q(sqrt(3))` polynomial certificates find no fidelity-improving branch anywhere in the grade-specific magic-witness interval: shallow 35/35 non-improving, deep 237/237 with 25 fidelity-identical, middle 11/11. This excludes only the stated two-copy stabilizer family, not larger, adaptive, catalytic, nonidentical-input, or non-stabilizer-assisted protocols.
+The exact search enumerates all 5,355 rank-two isotropic subspaces of the four-qubit binary symplectic space and all four syndromes, giving 21,420 `[[4,2]]` stabilizer-projection branches. The original draft used eigenvectors returned by `numpy.linalg.eigh` as a logical basis. Their independent column phases are arbitrary, so the number of branches appearing to close onto an M36 ray changed across numerical-library builds.
 
-## 2785 — physical two-shot metaplectic sensor
+The repaired verifier constructs each logical basis vector directly from its rank-one joint Pauli projector and fixes phase by requiring the first nonzero computational component to be positive real. In this frozen canonical logical Pauli decoder gauge, every branch that closes back onto M36 is certified by exact `Q(sqrt(3))` Bernstein-polynomial inequalities to be non-improving throughout its grade-specific magic-witness interval.
+
+This is not an arbitrary-decoder no-go. Arbitrary logical Clifford decoders, larger codes, nonidentical inputs, catalytic resources, adaptive protocols, and non-stabilizer assistance remain open.
+
+## 2785 — physical metaplectic sensor
 
 A phase-stable path ancilla controls `U` and `U^2` on the nine-mode register. Uniform computational-mode randomization and path-X/Y readout estimate `Tr(U)/9` and `Tr(U^2)/9`; the determinant is tracked from the programmed Clifford word and calibrated phase plates. These four quadratures reconstruct `Theta_k=Tr(U^k)^9/det(U^k)`. Across all 34 classes the trace pair gives 33 packets and the W33 projective packet resolves the final collision. The minimum nonzero normalized trace magnitude is `1/9`; a conservative 99%-confidence Hoeffding design uses 29,579 events per quadrature, 118,316 total.
 
@@ -30,4 +34,4 @@ The fixed points are `1/9`, `1/3`, and `1`, and fidelity improves exactly for `F
 
 ## Evidence
 
-Local release: 20/20 aggregate checks and 5/5 focused regressions. Exact finite scans cover all 21,420 M36 branches and all 51,840 group elements. Remote RTL, synthesis, placement, timing, utilization, and fold-guard evidence remain pending until observed.
+The release has 20 aggregate checks and five focused regressions. Exact finite scans cover all 21,420 stabilizer-projector branches in the stated decoder gauge and all 51,840 group elements. Remote RTL, synthesis, placement, timing, utilization, and fold-guard evidence remain pending until observed.
