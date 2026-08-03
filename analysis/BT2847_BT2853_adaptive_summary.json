@@ -1,0 +1,11 @@
+{
+  "schema": "w33.pass2852.adaptive_observer.v1",
+  "states": 81,
+  "outputs": "four-bit support mask",
+  "inputs": ["F_p","CX_p->f","CX_f->p","Z_p"],
+  "preset_minimum_operations": 6,
+  "adaptive_worst_case_operations": 4,
+  "adaptive_uniform_mean_operations": "94/27",
+  "policy_model": "free support observation after each selected operation",
+  "claim_boundary": "exact noiseless no-reset policy; no detector noise or unequal action cost"
+}
