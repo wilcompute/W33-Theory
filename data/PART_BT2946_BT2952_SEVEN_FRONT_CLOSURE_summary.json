@@ -1,0 +1,60 @@
+{
+  "schema": "w33.pass2946_2952.seven_front_closure.v1",
+  "status": "COMPLETE_EXACT_WITH_SOURCE_COMPLETE_RTL_AND_MODEL_BOUNDARIES",
+  "check_count": 8,
+  "checks": {
+    "2946_optimum15": true,
+    "2947_compiled_branch": true,
+    "2948_10x4_fabric": true,
+    "2948_involutory_holonomy": true,
+    "2949_reversible_256": true,
+    "2950_radius2_lcd": true,
+    "2951_quarter_turn": true,
+    "2952_joint_rank": true
+  },
+  "pass2946": {
+    "minimum_affine_support_d4_length": 15,
+    "construction": "full-offset binary image of the ternary [5,4,2]_3 single-parity-check code"
+  },
+  "pass2947": {
+    "primitive_gates": 15,
+    "measurements": 2,
+    "ideal_success": "1/2",
+    "output_ray": 7,
+    "first_order": "(2/3)p + (140/81)q1 + (2084/405)q2 + (4/9)qm"
+  },
+  "pass2948": {
+    "carrier": "10 OAM spread lines x 4 time/frequency slots",
+    "edges": "60 intra + 180 inter = 240",
+    "triangle_holonomy": "60 transpositions + 60 double transpositions"
+  },
+  "pass2949": {
+    "permutation_states": 256,
+    "valid_observers": 81,
+    "fixed_rank_bits": 7,
+    "correlation_savings_bits": 1.0065166695512922
+  },
+  "pass2950": {
+    "parameters": "[8,4,4]_3",
+    "spectrum_type": "(3,4,10,12,11)",
+    "covering_radius": 2,
+    "lcd": true,
+    "coset_types": 9
+  },
+  "pass2951": {
+    "duality": "D^2=-I, D^4=I",
+    "physical_layout": "4 OAM lanes x 2 time/frequency bins"
+  },
+  "pass2952": {
+    "joint_states": 3240,
+    "joint_rank_bits": 12,
+    "protected_raw_bits": 21,
+    "fixed_bit_saving": 9
+  },
+  "boundaries": {
+    "hardware": "RTL/microcode source-complete; observed simulation/synthesis pending",
+    "m36": "specific stochastic Pauli and measurement-flip model",
+    "oam": "exact mode-address logic; optical loss and crosstalk unmeasured",
+    "landauer": "logical entropy floors; finite-time energy device-dependent"
+  }
+}
