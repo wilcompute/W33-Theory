@@ -1,0 +1,19 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.supplement",
+  "status": "ACTIVE",
+  "canonical_blocks": [
+    {
+      "range": "2767-2771",
+      "owner": "m36-metaplectic-centralizer-fpga-remote-sum-track",
+      "status": "COMPLETE_LOCAL_EXACT_REMOTE_PNR_PENDING",
+      "artifacts": {
+        "2767": "exact 36-state M36 preparation ROM, witness boundaries, and fail-closed typed pipeline",
+        "2768": "global-phase-invariant two-shot metaplectic sensor resolving all 34 Sp(4,3) classes",
+        "2769": "480-coset CX centralizer compiler and 51,840-entry exact normalization table",
+        "2770": "complete eight-opcode RTL, activity proxy, exhaustive bench, and iCE40 implementation workflow",
+        "2771": "exact one-pair qutrit remote SUM protocol, feed-forward controller, and heralded-loss budget"
+      },
+      "runtime_boundary": "All exact Python certificates, focused regressions, and standalone manuscript inserts completed locally. Icarus/Yosys/nextpnr evidence is remote pending and is not counted as successful until observed. M36 preparation and witnessing are exact, but no ququart distillation code or protected injection threshold is claimed."
+    }
+  ]
+}

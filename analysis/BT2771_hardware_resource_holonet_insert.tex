@@ -1,0 +1,37 @@
+% Passes 2767, 2770, 2771 -- host-independent Holonet insert.
+\section*{The M36 factory, complete controller, and a remote qutrit SUM}
+Every one of the thirty-six Witting resources has exactly one dark mode and three active
+modes of equal magnitude. Consequently the entire library is prepared by one balanced
+three-mode splitter, a four-way dark-mode selector, and sixth-root phase controls. The
+exact ROM reproduces the $8+24+4$ deep/middle/shallow census. The controller types these
+states as ququart resources and fails closed before injection unless an independently
+verified ququart code or encoding map is supplied; qutrit distillation thresholds are not
+silently transferred to M36.
+
+The complete eight-opcode controller, $D_{12}$ transport law, bidirectional SUM, M36
+pipeline, and remote feed-forward sequencer are synthesizable and exhaustively tested at
+the RTL contract level. An iCE40 HX8K workflow supplies independent synthesis,
+place-and-route, utilization, and timing evidence. Until that workflow concludes, the
+placed implementation remains remote pending; the local switching census is a power proxy,
+not a watt estimate.
+
+For two network nodes, share
+\[
+ |\Phi_3\rangle_{ab}=3^{-1/2}\sum_{j=0}^{2}|j,j\rangle
+\]
+in frequency link modes. Alice applies the reverse local SUM from her time-bin data to
+$a$, measures $a$ with outcome $m$, and sends one trit. Bob applies $X^{-m}F^2$ to $b$,
+uses the physical frequency-to-time SUM on his data, measures $b$ in the Fourier basis with
+outcome $n$, and sends one trit. Alice records $Z^n$. All nine branches implement
+\[
+ |x,y\rangle\mapsto|x,y+x\pmod3angle
+\]
+with no postselection loss beyond obtaining the heralded shared pair. The exact resource
+cost is one qutrit Bell pair and two classical trits. Fiber, coupling, local-optics, and
+detection losses enter as flagged erasures through
+\[
+ R_{\rm gate}=R_{\rm pair}10^{-\alpha(L_A+L_B)/10}
+ \eta_{cA}\eta_{cB}\tau_A\tau_B\eta_{dA}\eta_{dB}.
+\]
+This is an exact protocol and engineering budget, not a claim of a completed combined
+remote-gate experiment or a fault-tolerance threshold.

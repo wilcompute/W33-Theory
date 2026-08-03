@@ -1,0 +1,26 @@
+{
+  "canonical_coset_entangler_counts": {"0": 32, "1": 416, "2": 32},
+  "centralizer_order": 108,
+  "coset_representative_length": {
+    "distribution": {"0": 1, "1": 6, "2": 25, "3": 68, "4": 172, "5": 160, "6": 48},
+    "max": 6,
+    "mean": 4.241666666666666
+  },
+  "entangler_count_savings": {
+    "distribution": {"0": 21312, "1": 28800, "2": 1152, "3": 576},
+    "max": 3,
+    "mean": 0.6333333333333333,
+    "positive": 30528,
+    "positive_fraction": 0.5888888888888889
+  },
+  "group_order": 51840,
+  "gzip_sha256": "689d6b4169776a711742c915b0ef5241aa9fa2c25efb8a21e54a67951331ef9c",
+  "right_cosets": 480,
+  "unweighted_generator_savings": {
+    "distribution": {"0": 1263, "1": 9290, "10": 8, "2": 18536, "3": 12104, "4": 6425, "5": 2282, "6": 1164, "7": 546, "8": 172, "9": 50},
+    "max": 10,
+    "mean": 2.5558641975308642,
+    "positive": 50577,
+    "positive_fraction": 0.9756365740740741
+  }
+}
