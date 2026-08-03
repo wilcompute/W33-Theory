@@ -1,0 +1,17 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "2869-2875",
+  "owner": "agent/pass2869-2875-seven-front-breakthrough",
+  "status": "reserved",
+  "reserved_after": "canonical Passes 2861-2868 compiler, distillation-bound, and thermodynamic closure",
+  "reserved_at_utc": "2026-08-03T18:58:00Z",
+  "passes": {
+    "2869": "seven-bit rank-coded frame engine RTL and measured comparison against the 43-LC arithmetic engine",
+    "2870": "two-copy M36 branch-mixture and adaptive-selection linear-rate theorem",
+    "2871": "operational invariant search separating or identifying the two middle 12-ray Clifford classes",
+    "2872": "noise-aware adaptive support observer and exact thermodynamic decision cost",
+    "2873": "current-master blueprint rewrite, evidence repair, PDF compilation, and release reconciliation",
+    "2874": "outside-box test: four magic classes as suborbits of the distinguished classical-line stabilizer",
+    "2875": "outside-box test: algebraic classification of the 188 diameter-19 compiler elements"
+  }
+}
