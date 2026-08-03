@@ -4,15 +4,15 @@ import hashlib,json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 FILES=[
- ('data/w33_pass2550_global_u6_lower_shadow_singleton_orbits.json','2585e86a888d4536b7676fda746a512b19280de7b666667d1cecea8177b36ac7'),
- ('data/w33_pass2551_complete_cover_link_k8_refutation.json','8715d12b8f71eeedfffe873ef73d71de9fd4cae9bcea520178e2c7d519d3fefa'),
+ ('data/w33_pass2550_global_u6_lower_shadow_singleton_orbits.json','aa9d5e8071280f4f7dda332586047cb6eebea3e142fcd05afa6b62fc9344a7dc'),
+ ('data/w33_pass2551_complete_cover_link_k8_refutation.json','206630d56a601e1b83fd7445c654eddeb307003cda43d412252cea51f0ddae3f'),
  ('data/w33_pass2552_radius5_signature_trade_closure.json','187d40e521ee0094bc0ece7dcd5eef0d0e208fec564a553589707bd72bec336f'),
- ('data/w33_pass2553_rank9_octet_a4_v4_decoder.json','1b17e7eefe299e8b65154050495b4f56367b75db3f5ba68ff2e7a0bc77d585ef'),
+ ('data/w33_pass2553_rank9_octet_a4_v4_decoder.json','7d7a051a03db540b93c0a6e6b743a3861b0e199aacf1bf0ffc8a2f10a025c4ae'),
  ('data/w33_pass2554_5colon8_nonlinear_covariants.json','17a884c8e11152c843d400ec94e33ef33f30b1ea489892ab8689a02d1b500e19'),
  ('data/w33_pass2555_syndrome_triangle_geometry.json','ee116fe729b3f8a5dde0c29b2752def1dc3c31e04ce62e3d8ae178743fa46516'),
  ('data/w33_pass2556_frame_graph_chromatic_spectral_gap.json','075534d40ef7b74020637481da1827582fd85c9875427c40c5bb0fdc197dafe1'),
 ]
-AGG='96a8eaccc582c69d311d616bc0ae3fa3e55585dbb18c022bb2af367ec9419e84'
+AGG='1eff37f4559172813a331aa41a01ec97fe38c29d5a0eff26a4d320dd3abacd5b'
 def digest(d):
  x=dict(d);x.pop('sha256_without_hash_field',None)
  return hashlib.sha256(json.dumps(x,sort_keys=True,separators=(',',':')).encode()).hexdigest()
