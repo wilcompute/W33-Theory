@@ -1,0 +1,134 @@
+name: Passes 2901-2907 Selector Butterfly Observer Blueprint
+
+on:
+  push:
+    branches:
+      - research/pass2901-2907-selector-butterfly-observer-blueprint
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  exact-rtl-blueprint:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref }}
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install exact, FPGA, and document tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys nextpnr-ice40 fpga-icestorm
+          python -m pip install --upgrade pip pytest
+
+      - name: Materialize the readable release packet
+        run: python tools/materialize_bt2901_bt2907.py
+
+      - name: Verify all frozen exact certificates
+        run: python analysis/bt2901_2907_seven_frontiers.py --verify-frozen
+
+      - name: Run focused regressions
+        run: pytest -q tests/test_bt2901_2907_seven_frontiers.py
+
+      - name: Simulate dense and butterfly engines
+        run: |
+          mkdir -p build/pass2901_2907
+          iverilog -g2012 -s tb_w33_pass2902_q3_hadamard_engine \
+            -o build/pass2901_2907/q3_engine.vvp \
+            rtl/w33_pass2902_q3_dense_reference.sv \
+            rtl/w33_pass2902_q3_hadamard_engine.sv \
+            rtl/tb_w33_pass2902_q3_hadamard_engine.sv
+          vvp build/pass2901_2907/q3_engine.vvp \
+            | tee build/pass2901_2907/q3_engine_sim.txt
+
+      - name: Synthesize dense and butterfly engines
+        run: |
+          yosys -p 'read_verilog -sv rtl/w33_pass2902_q3_hadamard_engine.sv; synth_ice40 -top w33_pass2902_q3_hadamard_engine -json build/pass2901_2907/butterfly.json; stat' \
+            | tee build/pass2901_2907/yosys_butterfly.txt
+          yosys -p 'read_verilog -sv rtl/w33_pass2902_q3_dense_reference.sv; synth_ice40 -top w33_pass2902_q3_dense_reference -json build/pass2901_2907/dense.json; stat' \
+            | tee build/pass2901_2907/yosys_dense.txt
+
+      - name: Place, route, and time the sequential engine
+        run: |
+          nextpnr-ice40 --hx8k --package ct256 --pcf-allow-unconstrained \
+            --json build/pass2901_2907/butterfly.json \
+            --asc build/pass2901_2907/butterfly.asc \
+            --freq 25 --report build/pass2901_2907/butterfly_pnr.json \
+            |& tee build/pass2901_2907/nextpnr_butterfly.txt
+          icetime -d hx8k -mtr build/pass2901_2907/butterfly_timing.txt \
+            build/pass2901_2907/butterfly.asc
+
+      - name: Rewrite canonical artifacts in place
+        run: |
+          python tools/integrate_bt2901_bt2907.py
+          python tools/integrate_bt2901_bt2907.py
+          git diff --check
+
+      - uses: tectonic-typesetting/setup-tectonic@v1
+
+      - name: Compile blueprint and canonical papers
+        run: |
+          tectonic --keep-logs holonet_machine_blueprint.tex
+          tectonic --keep-logs w33_paper.tex
+          tectonic --keep-logs photonic_holonet.tex
+          ! grep -E 'Overfull|Undefined control sequence|Emergency stop' \
+            holonet_machine_blueprint.log w33_paper.log photonic_holonet.log
+
+      - name: Audit substantive blueprint repairs
+        run: |
+          grep -F 'BT2901-BT2907-BLUEPRINT-REWRITE-V1' holonet_machine_blueprint.tex
+          grep -F '28 nonisomorphic' holonet_machine_blueprint.tex
+          grep -F 'observer states only' holonet_machine_blueprint.tex
+          grep -F 'best $\mathrm{GL}(4,2)$ Singer cycle' holonet_machine_blueprint.tex
+          ! grep -F 'pin the shape down completely' holonet_machine_blueprint.tex
+          ! grep -F 'there is one shortest path, and no loops' holonet_machine_blueprint.tex
+
+      - name: Commit generated blueprint and PDFs to the research branch
+        if: github.event_name == 'push'
+        run: |
+          git config user.name 'W33 evidence bot'
+          git config user.email 'noreply@github.com'
+          git add -f analysis/BT2901_BT2907_seven_frontiers.md \
+            analysis/BT2901_BT2907_seven_frontiers_insert.tex \
+            analysis/bt2901_2907_seven_frontiers.py \
+            data/PART_BT2901_BT2907_SEVEN_FRONTIERS_results.json \
+            rtl/w33_pass2902_q3_hadamard_engine.sv \
+            rtl/w33_pass2902_q3_dense_reference.sv \
+            rtl/tb_w33_pass2902_q3_hadamard_engine.sv \
+            tests/test_bt2901_2907_seven_frontiers.py \
+            tools/integrate_bt2901_bt2907.py \
+            holonet_machine_blueprint.tex holonet_machine_blueprint.pdf \
+            w33_paper.tex w33_paper.pdf photonic_holonet.tex photonic_holonet.pdf \
+            docs/index.html data/w33_pass_namespace_registry_v2.d/2901-2907.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Pass 2907: rewrite and compile canonical blueprint [skip ci]'
+            git push origin HEAD:${GITHUB_REF_NAME}
+          fi
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass2901-2907-evidence
+          path: |
+            build/pass2901_2907/
+            data/PART_BT2901*_results.json
+            data/PART_BT2902*_results.json
+            data/PART_BT2903*_results.json
+            data/PART_BT2904*_results.json
+            data/PART_BT2905*_results.json
+            data/PART_BT2906*_results.json
+            data/PART_BT2907*_results.json
+            holonet_machine_blueprint.pdf
+            w33_paper.pdf
+            photonic_holonet.pdf
+            *.log

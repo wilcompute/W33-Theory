@@ -1,10 +1,18 @@
 {
-  "schema": "w33.pass_namespace_reservation.v2",
-  "range": "2901-2907",
+  "claim_boundary": "Reservation only. No theorem or blueprint claim is promoted until exact certificates, regressions, RTL evidence, and document compilation are published.",
+  "completion": {
+    "aggregate_certificate": "data/PART_BT2901_BT2907_SEVEN_FRONTIERS_results.json",
+    "blueprint_rewrite": "tools/integrate_bt2901_bt2907.py",
+    "insert": "analysis/BT2901_BT2907_seven_frontiers_insert.tex",
+    "rtl": [
+      "rtl/w33_pass2902_q3_hadamard_engine.sv",
+      "rtl/w33_pass2902_q3_dense_reference.sv",
+      "rtl/tb_w33_pass2902_q3_hadamard_engine.sv"
+    ],
+    "tests": "tests/test_bt2901_2907_seven_frontiers.py",
+    "verifier": "analysis/bt2901_2907_seven_frontiers.py"
+  },
   "owner": "agent/pass2901-2907-selector-butterfly-observer-blueprint",
-  "status": "reserved",
-  "reserved_after": "active parallel ranges through Pass 2900",
-  "reserved_at_utc": "2026-08-03T19:19:00Z",
   "passes": {
     "2901": "intrinsic residual-channel S3 torsor and full-similitude obstruction to canonical numbering",
     "2902": "q=3 sequential q-Hadamard butterfly quotient engine with dense-reference equivalence and hardware comparison workflow",
@@ -14,5 +22,9 @@
     "2906": "outside-box nonlinear scheduler theorem: optimal cycle beats every GL(4,2) Singer cycle",
     "2907": "outside-box 40-state observer mirage falsifier plus substantive blueprint rewrite, evidence repair, and compile workflow"
   },
-  "claim_boundary": "Reservation only. No theorem or blueprint claim is promoted until exact certificates, regressions, RTL evidence, and document compilation are published."
+  "range": "2901-2907",
+  "reserved_after": "active parallel ranges through Pass 2900",
+  "reserved_at_utc": "2026-08-03T19:19:00Z",
+  "schema": "w33.pass_namespace_reservation.v2",
+  "status": "complete"
 }

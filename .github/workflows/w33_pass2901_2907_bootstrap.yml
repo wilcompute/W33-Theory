@@ -1,0 +1,61 @@
+name: Passes 2901-2907 Readable Source and Blueprint Bootstrap
+
+on:
+  push:
+    branches:
+      - research/pass2901-2907-selector-butterfly-observer-blueprint
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  materialize-and-rewrite:
+    runs-on: macos-14
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Materialize digest-checked readable packet
+        run: python tools/materialize_bt2901_bt2907.py
+      - name: Run exact release gate
+        run: |
+          python -m pip install pytest
+          python analysis/bt2901_2907_seven_frontiers.py --verify-frozen
+          pytest -q tests/test_bt2901_2907_seven_frontiers.py
+      - name: Rewrite latest canonical blueprint and wrappers
+        run: |
+          python tools/integrate_bt2901_bt2907.py
+          python tools/integrate_bt2901_bt2907.py
+          git diff --check
+          grep -F 'BT2901-BT2907-BLUEPRINT-REWRITE-V1' holonet_machine_blueprint.tex
+          grep -F 'observer states only' holonet_machine_blueprint.tex
+          grep -F 'best $\mathrm{GL}(4,2)$ Singer cycle' holonet_machine_blueprint.tex
+      - name: Commit readable evidence and rewritten sources
+        run: |
+          git config user.name 'W33 evidence bot'
+          git config user.email 'noreply@github.com'
+          git add -f analysis/BT2901_BT2907_seven_frontiers.md \
+            analysis/BT2901_BT2907_seven_frontiers_insert.tex \
+            analysis/bt2901_2907_seven_frontiers.py \
+            data/PART_BT2901_BT2907_SEVEN_FRONTIERS_results.json \
+            rtl/w33_pass2902_q3_hadamard_engine.sv \
+            rtl/w33_pass2902_q3_dense_reference.sv \
+            rtl/tb_w33_pass2902_q3_hadamard_engine.sv \
+            tests/test_bt2901_2907_seven_frontiers.py \
+            tools/integrate_bt2901_bt2907.py \
+            holonet_machine_blueprint.tex w33_paper.tex photonic_holonet.tex \
+            docs/index.html data/w33_pass_namespace_registry_v2.d/2901-2907.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Pass 2907: materialize evidence and rewrite blueprint [skip ci]'
+            TARGET_BRANCH="${GITHUB_HEAD_REF:-$GITHUB_REF_NAME}"
+            git push origin HEAD:"$TARGET_BRANCH"
+          fi

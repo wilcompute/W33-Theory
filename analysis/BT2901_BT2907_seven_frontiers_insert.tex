@@ -1,0 +1,67 @@
+\section{Intrinsic selector channels, exact observer quotients, and nonlinear diagnosis}
+\label{sec:bt2901-2907}
+
+The residual three-channel selector is not intrinsically a numbered set.  For a pointed
+hyperbolic line $(x,y;c)$, the multiplier-one stabilizer induces the translation group
+$C_3$ on the remaining common neighbours, whereas the full projective similitude
+stabilizer induces $\operatorname{AGL}(1,3)\cong S_3$.  Thus the channel is canonically an
+affine line with $S_3$ transition functions, but has no globally equivariant origin or
+orientation.  The exact group orders are
+\[
+ |\operatorname{PSp}(4,3)|=25920,\qquad
+ |\operatorname{PGSp}(4,3)|=51840,
+\]
+and the pointed stabilizer orders are $12$ and $24$, respectively, with
+$51840/24=2160$ pointed hyperbolic lines.
+
+The $q=3$ support quotient now has a literal sequential realization.  Four stages of
+eight butterflies
+\[
+ (u,v)\longmapsto(u+2v,u-v)
+\]
+followed by fifteen border-corrected outputs require $47$ cycles, versus $225$ cycles for
+a serial dense $15\times15$ reference.  Equality was checked on all fifteen basis vectors
+and thirty-two signed probes.  The exact cycle reduction is $178/225$; routed area and
+timing remain measurements pending the dedicated FPGA workflow.
+
+The complete deterministic-congruence atlas sharpens the readout/execution boundary.  For
+the full four-operation micro-ISA the support partition refines as
+\[
+ 16\longrightarrow40\longrightarrow78\longrightarrow81,
+\]
+and the discrete $81$-state partition is the coarsest exact execution quotient refining
+support.  Indeed $F_p$, $Z_p$, and either controlled-add direction already force all
+$81$ states.  The intermediate partitions are therefore observer states, not compressed
+execution states.
+
+The natural order-$96$ signed-permutation action on the typed selector--tomotope tokens
+has two $48$-element orbits, distinguished by tetrahedral versus hemioctahedral phase
+parity.  Imposing the determinant-twisted condition
+\[
+  \Bigl(\prod_i\epsilon_i\Bigr)\operatorname{sgn}(\pi)=1
+\]
+produces another order-$96$ projective subgroup that acts freely and transitively.  Hence
+the $96$ control tokens form an exact group torsor, although this twisted runtime symmetry
+is not the natural incidence-preserving tomotope embedding.
+
+For the $q=3$ support walk, the $210$ directed passage costs form $39$ orbits under the
+matching stabilizer and are determined by
+\[
+ |T|,\qquad |T\cap\tau(T)|,\qquad |T\cap\tau(S)|.
+\]
+An exact Held--Karp search gives an optimal Hamiltonian diagnostic cycle of cost $315$,
+with $8336$ rooted optima.  The best $\operatorname{GL}(4,2)$ Singer-cycle schedule costs
+$1317/4$, leaving an exact nonlinear advantage of $57/4$.  Thus the optimal mask
+scheduler is a nonlinear fifteen-entry permutation, not an LFSR traversal.
+
+Finally, the first observer refinement has forty classes but is not $W(3,3)$.  Its class
+sizes are $1^7 2^{29}4^4$, symplectic orthogonality is ambiguous on $216$ unordered class
+pairs, and none of the $1459$ Hamming-distance unions with $240$ edges yields
+$\operatorname{SRG}(40,12,2,4)$.  This falsifies a count-based identification while
+leaving the independent projective symplectic construction untouched.
+
+\paragraph{Evidence boundary.}
+The packet carries $64$ exact checks and seven focused regressions.  Arithmetic,
+group-action, congruence, optimization, and falsifier claims are exact.  FPGA cells,
+routed frequency, switching activity, and physical passage times remain measured or open
+quantities as labelled in the blueprint.

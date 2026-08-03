@@ -1,0 +1,55 @@
+name: Passes 2901-2907 One-Shot Master Reconciliation
+
+on:
+  push:
+    branches:
+      - research/pass2901-2907-selector-butterfly-observer-blueprint
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    if: ${{ github.event_name == 'pull_request' || !contains(github.event.head_commit.message, '[master-sync]') }}
+    runs-on: macos-14
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/pass2901-2907-selector-butterfly-observer-blueprint
+          fetch-depth: 0
+      - name: Merge current master with a single explicit wrapper resolution
+        run: |
+          git config user.name 'W33 evidence bot'
+          git config user.email 'noreply@github.com'
+          cp w33_paper.tex /tmp/w33_paper.reconciled.tex
+          git fetch origin master
+          set +e
+          git merge --no-commit --no-ff origin/master
+          status=$?
+          set -e
+          conflicts="$(git diff --name-only --diff-filter=U)"
+          unexpected="$(printf '%s\n' "$conflicts" | grep -v '^w33_paper.tex$' || true)"
+          if [ -n "$unexpected" ]; then
+            echo "Unexpected conflicts:" >&2
+            printf '%s\n' "$unexpected" >&2
+            git merge --abort
+            exit 1
+          fi
+          if [ "$status" -ne 0 ] && [ "$conflicts" != "w33_paper.tex" ]; then
+            echo "Merge failed outside the one approved wrapper conflict" >&2
+            git merge --abort
+            exit 1
+          fi
+          cp /tmp/w33_paper.reconciled.tex w33_paper.tex
+          git add -A
+          if git diff --cached --quiet; then
+            echo 'Already synchronized with master.'
+            exit 0
+          fi
+          git commit -m 'Merge current master into Passes 2901-2907 [master-sync]'
+          git push origin HEAD:research/pass2901-2907-selector-butterfly-observer-blueprint

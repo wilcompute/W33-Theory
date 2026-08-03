@@ -1,3 +1,4 @@
+% BT2901-BT2907-BLUEPRINT-REWRITE-V1
 % =====================================================================================
 %  THE HOLONET MACHINE -- A COMPLETE BLUEPRINT
 %
@@ -10,9 +11,9 @@
 %  skips every grey box still understands the machine; a reader who reads only the grey
 %  boxes gets the specification.
 %
-%  Every number in this document is measured or proved.  Nothing is estimated.  Where a
-%  figure was WRONG in earlier work, the wrong figure is printed next to the right one,
-%  because how a number was wrong is part of what makes the right one trustworthy.
+%  Every promoted figure in this document is explicitly typed as proved, measured,
+%  published, derived, modelled, or open.  Modelled quantities are never presented as
+%  measurements.  Where a figure was wrong, its correction and detection method remain.
 % =====================================================================================
 
 \documentclass[11pt,a4paper]{article}
@@ -91,9 +92,9 @@
 \title{\vspace{-1.4cm}\Huge The Holonet Machine\\[4pt]
        \large A complete engineering blueprint for a computer\\
        whose wiring diagram is a piece of finite geometry\\[10pt]
-       \normalsize Every figure in this document is measured or proved.}
+       \normalsize Every promoted figure is typed: proved, measured, published, modelled, or open.}
 \author{\normalsize W(3,3)--E$_8$ project, glue track}
-\date{\normalsize 3 August 2026 \quad$\cdot$\quad Passes 2700--2916}
+\date{\normalsize 3 August 2026 \quad$\cdot$\quad Passes 2700--2907}
 
 \begin{document}
 \maketitle
@@ -114,11 +115,13 @@ usual sense. It was read off.
 \smallskip\noindent
 The result is unusually specific for something unbuilt. The instruction set needs
 \emph{four} operations in two bits, and they generate a group of exactly $4{,}199{,}040$
-transformations, with a worst-case program length of exactly \textbf{19}. The arithmetic
-core fits in \textbf{43 logic cells} on a \$25 chip and runs at \textbf{208.9\,MHz} ---
-measured, not estimated. A support readout erases exactly $8/3$ of a bit, so its energy
-cost is fixed by thermodynamics rather than by engineering. The physical layer is a
-photonic gate a laboratory has already demonstrated at $0.92$ fidelity. And thirty-six of
+transformations, with a worst-case program length of exactly \textbf{19}. On the HX8K target the minimal arithmetic core uses \textbf{43 logic cells} at
+\textbf{208.86\,MHz}; on the UP5K it uses the same 43 cells at 72.40\,MHz.  Those are
+part-specific measurements, not interchangeable headline numbers. A support-only observation discards exactly $8/3$ bits of conditional phase
+information.  Landauer supplies a thermodynamic floor for erasing that information, not
+an engineering power forecast. Published time-bin/frequency-bin experiments report a two-qutrit gate fidelity near
+$0.92$; this is prior-art evidence for a component class, not a measurement of the
+unbuilt Holonet stack. And thirty-six of
 the forty points turn out to be exactly the machine's magic states, so the quantum
 resource is not an add-on --- it is everything except one line of the address space.
 
@@ -176,8 +179,8 @@ style:
 
 \begin{gotwrong}
 These record something this project believed, published, and then had to withdraw ---
-with the measurement that overturned it. There are eleven of them. They are not
-apologies; they are the reason the other numbers in this document can be trusted. A
+with the measurement that overturned it. The errata index is authoritative and grows when a claim is corrected. These boxes are
+not apologies; they are the reason the other numbers in this document can be trusted. A
 blueprint with no errata is a blueprint nobody has checked.
 \end{gotwrong}
 
@@ -220,9 +223,9 @@ one thing.}
                                 $Z_p$ --- four operations, two bits, no illegal encoding. \\
 \textbf{Group generated}      & $\mathrm{ASp}(4,3)=\mathbb{F}_3^4\rtimes\mathrm{Sp}(4,3)$,
                                 order $81\times 51840=4{,}199{,}040$ \emph{exactly}. \\
-\textbf{Arithmetic unit}      & Public: $72$ iCE40 cells at $60.80$\,MHz.
-                                Minimal: $\mathbf{43}$ cells at $\mathbf{72.40}$\,MHz.
-                                Both measured, \S\ref{sec:budget}. \\
+\textbf{Arithmetic unit}      & HX8K: minimal $43$ LC at $208.86$\,MHz; public $72$ LC at
+                                $175.72$\,MHz; minimal plus support $48$ LC at $207.64$\,MHz.
+                                UP5K: the corresponding clocks are $72.40$, $60.80$, and $72.05$\,MHz. \\
 \textbf{Physical layer}       & Time-bin $\times$ frequency-bin photonic qutrits; the
                                 two-qutrit \textsc{sum} gate is experimentally
                                 demonstrated at fidelity $0.92\pm0.01$. \\
@@ -249,7 +252,7 @@ one thing.}
 \node[layer,fill=specbg,below=5mm of net] (isa) {\textbf{INSTRUCTION SET}\; ---\;
       eight opcodes; generates $\mathrm{ASp}(4,3)$, order $4{,}199{,}040$};
 \node[layer,fill=plainbg,below=5mm of isa] (frame){\textbf{FRAME UNIT}\; ---\;
-      $4$ trits of state, $72$ logic cells, $60.80$\,MHz};
+      $7$-bit frame code; minimal execution $43$ LC; support readout adds $5$ LC};
 \node[layer,fill=specbg,below=5mm of frame] (geo) {\textbf{GEOMETRY}\; ---\;
       $W(3,3)$: $40$ points, $40$ lines, $\mathrm{SRG}(40,12,2,4)$};
 \node[layer,fill=plainbg,below=5mm of geo] (phys) {\textbf{PHYSICS}\; ---\;
@@ -344,9 +347,10 @@ distinct operator up to phase; there are $9$ of them, and $8$ non-identity ones.
 
 \begin{plain}
 Now the key move. Take \emph{one} qutrit and entangle it with itself at two different
-times --- call them ``past'' and ``future''. Physically this is done by splitting a
-single photon's degrees of freedom: its arrival \emph{time} carries one qutrit and its
-\emph{colour} carries the other. It is one particle, entangled with its own history.
+times --- call them ``past'' and ``future''. The proposed optical encoding assigns one qutrit to arrival-time bins and one to
+frequency bins on a single carrier.  The words ``past'' and ``future'' name these two
+logical registers; they do not assert a demonstrated closed-time-loop interaction or a
+new physical form of temporal entanglement.
 
 Mathematically, an operator acting on one qutrit is a $3\times 3$ table of numbers, and
 there are $9$ independent slots in such a table. So the space of things you can \emph{do}
@@ -388,8 +392,8 @@ qutrit can be measured along.}
   \node[align=left,text width=6cm,font=\footnotesize] at (8.4,0.2)
     {$\displaystyle \ket{\Omega}=\mathrm{CX}_{p\to f}\,(F_3\otimes I)\ket{0}_p\ket{0}_f
       =\tfrac{1}{\sqrt3}\sum_{j=0}^{2}\ket{j}_p\ket{j}_f$\\[5pt]
-     \textit{One photon. Two degrees of freedom. The entanglement is between the
-     particle and itself.}};
+     \textit{One optical carrier, two encoded qutrit degrees of freedom.  The
+     past/future names are architectural labels.}};
 \end{tikzpicture}
 \end{center}
 
@@ -508,11 +512,12 @@ $\mathrm{PGSp}(4,3)=U_4(2){:}2=W(E_6)$ of order $51{,}840$.
 \end{center}
 
 \begin{plain}
-That last property --- ``exactly one'' --- is the entire content of the word
-\emph{quadrangle}. It is a strong constraint: it means the geometry contains no
-triangles, so there is never any ambiguity about how to get from one place to another.
-For a computer, that is precisely what you want from an address space and from a routing
-fabric: there is one shortest path, and no loops to break ties in.
+The ``exactly one'' statement is an incidence projection rule: for a point outside a
+line there is one point on that line collinear with it.  It does not imply unique
+shortest paths in the collinearity graph.  Each four-point line is a $K_4$, so that
+graph contains triangles; the triangle-free object is the bipartite point--line
+incidence graph, whose generalized-quadrangle girth is eight.  Routing claims must
+therefore be proved by the routing code, not inferred from the word quadrangle.
 \end{plain}
 
 \subsection{The wiring as a budget}
@@ -614,6 +619,51 @@ established in earlier work it cannot \emph{explain} one from the inside.
 \end{plain}
 
 % =====================================================================================
+
+% =====================================================================================
+\section{Four representations, four jobs}\label{sec:representations}
+% =====================================================================================
+
+\begin{plain}
+The machine now has four compact descriptions of the same underlying frame, and they must
+not be confused.  The seven-bit code is the execution state.  The four-bit support mask is
+cheap one-way telemetry.  The protected observer words trade more wires and time for error
+correction.  The ninety-six-state selector--tomotope token is a control word, not stored
+quantum data.  Earlier drafts occasionally used the word ``state'' for all four; this
+section removes that ambiguity from the architecture.
+\end{plain}
+
+\begin{spec}[Representation contract]
+\begin{tabular}{@{}p{3.2cm}p{2.1cm}p{6.4cm}@{}}
+\toprule
+\textbf{Representation} & \textbf{Width} & \textbf{Contract} \\
+\midrule
+Affine frame code & $7$ bits & Lossless code for all $81$ Pauli frames; execution may read and write it. \\
+Support telemetry & $4$ bits & Zero/nonzero mask only; frame $\to$ support is one-way in the netlist. \\
+Protected observer & $24$ or $28$ taps & Diagnostic feature word used for identification/correction, not the live datapath. \\
+Typed control token & $7$ raw bits, $96$ valid & Selects face, matching channel, and tomotope phase cell. \\
+\bottomrule
+\end{tabular}
+\end{spec}
+
+\begin{gotwrong}[Support is observable, not executable]
+The refinement count $16\to40\to78\to81$ was once easy to read as four increasingly
+accurate compressed machine states.  It is not.  Exhausting every nonempty subset of the
+four-operation micro-ISA proves that the coarsest exact support-refining execution
+quotient for the full ISA has all $81$ singleton classes.  The intermediate partitions
+are observer states only.  In fact $F_p$, $Z_p$, and either controlled-add direction
+already force the full frame.
+\end{gotwrong}
+
+\begin{spec}[Intrinsic selector channel]
+For a noncollinear pair $x,y$ and a distinguished common neighbour $c$, the three residual
+selector channels form the affine line $C(x,y)\setminus\{c\}$.  The multiplier-one
+stabilizer induces its translation group $C_3$; the full projective similitude stabilizer
+induces $\operatorname{AGL}(1,3)\cong S_3$.  There is therefore no globally equivariant
+numbering $0,1,2$.  Hardware may choose a local encoding, but interfaces transport it as
+an affine-line torsor rather than pretending the labels are geometric invariants.
+\end{spec}
+
 \section{The instruction set}\label{sec:isa}
 % =====================================================================================
 
@@ -1927,6 +1977,46 @@ fractal claim of \S\ref{sec:network} is about topology; this is the same claim a
 \emph{execution}, and it is now a measured curve.}
 
 % =====================================================================================
+
+% =====================================================================================
+\section{The support transform and diagnostic scheduler}\label{sec:support-transform}
+% =====================================================================================
+
+\begin{plain}
+A dense fifteen-by-fifteen table is not how the support dynamics should be built.  The
+table factors into thirty-two tiny two-input butterflies, followed by fifteen corrected
+outputs.  Diagnosis has a second surprise: the best order in which to visit the fifteen
+nonzero masks is not generated by a linear feedback register.  A short ROM is both more
+honest and better.
+\end{plain}
+
+\begin{spec}[Butterfly engine]
+At $q=3$ the local kernel is $(u,v)\mapsto(u+2v,u-v)$.  Four stages of eight butterflies
+and fifteen output cycles give a $47$-cycle sequential quotient engine.  A serial dense
+reference needs $15\times15=225$ cycles, so the exact cycle reduction is
+\[
+  \frac{225-47}{225}=\frac{178}{225}.
+\]
+Equality is checked on all fifteen basis vectors and thirty-two deterministic signed
+probes.  Logic cells, routed frequency, and switching activity remain measured quantities
+pending the dedicated workflow.
+\end{spec}
+
+\begin{spec}[Diagnostic mask ROM]
+The $210$ directed first-passage costs form $39$ matching-stabilizer orbits.  Exact
+Held--Karp optimization gives a Hamiltonian mask cycle of cost $315$ and $8336$ rooted
+optima.  The best $\mathrm{GL}(4,2)$ Singer cycle costs $1317/4$, an exact gap of $57/4$.
+The scheduler is therefore a fifteen-entry nonlinear permutation ROM, not an LFSR.
+\end{spec}
+
+\begin{gotwrong}[Forty is not enough]
+The first observer refinement has forty classes, but those classes are not the forty
+projective points of $W(3,3)$.  Their sizes are $1^7 2^{29}4^4$, symplectic
+orthogonality is ambiguous on $216$ unordered class pairs, and no union of Hamming-distance
+relations on their signatures yields $\mathrm{SRG}(40,12,2,4)$.  A matching count is a
+search hint, never an identification theorem.
+\end{gotwrong}
+
 \section{The network}\label{sec:network}
 % =====================================================================================
 
@@ -2562,4 +2652,5 @@ been quietly relied on.
 \end{tikzpicture}
 \end{center}
 
+\input{analysis/BT2901_BT2907_seven_frontiers_insert}%
 \end{document}
