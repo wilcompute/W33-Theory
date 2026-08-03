@@ -1,0 +1,24 @@
+{
+  "check_count": 7,
+  "checks": {
+    "pass2960_distance4": true,
+    "pass2961_coherent_hist": true,
+    "pass2962_all_spreads_D4": true,
+    "pass2963_probabilities": true,
+    "pass2964_gate_counts": true,
+    "pass2965_three_pilots": true,
+    "pass2966_balanced_phase": true
+  },
+  "claim_boundary": "Exact finite and gate-level results are separated from synthetic optical profiles and leakage bounds. FPGA placement, PDF compilation, and laboratory calibration remain pending dedicated evidence.",
+  "headlines": {
+    "2960": "The optimal 15-probe code factorizes through one minimum-incidence [5,4,2]_3 parity mixer.",
+    "2961": "The compiled M36 branch now has exact coherent-axis and correlated-pair susceptibility censuses plus a flagged-leakage bound.",
+    "2962": "All 36 W33 spreads carry the same nonabelian D4 routing curvature.",
+    "2963": "The 10x4 optical carrier has a configurable coherent/loss/dark-count channel simulator.",
+    "2964": "The structured valid-state compiler uses 120 Toffoli and 79 CNOT versus a 39,472-MCX generic upper bound.",
+    "2965": "Three pilot slots detect every arbitrary single-edge S4 routing permutation fault.",
+    "2966": "One anti-symplectic phase transducer unifies route commutation, observer support, and M36 phase-label chirality."
+  },
+  "schema": "w33.pass2960_2966.physical_compiler_seven_front.v1",
+  "status": "COMPLETE_EXACT_AND_MODELLED_SOURCE"
+}
