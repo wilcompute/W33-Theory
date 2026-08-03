@@ -1,0 +1,1 @@
+This branch differs from master only to trigger and retain observable Pass-2853 evidence. The workflow recomputes the exact certificate, runs regressions and RTL simulation, obtains Yosys/nextpnr logs, integrates the blueprint/site, compiles all three PDFs, and commits generated evidence back to this branch before merge.
