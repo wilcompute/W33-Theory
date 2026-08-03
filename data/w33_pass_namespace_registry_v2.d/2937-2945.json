@@ -1,0 +1,27 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "2937-2945",
+  "owner": "agent/pass2937-2945-global-code-landauer-oam-bonkers",
+  "status": "source_complete_pending_observed_hardware_and_pdf_evidence",
+  "reserved_after": "parallel frontier through Pass 2936",
+  "source_completion": {
+    "exact_checks": "12/12",
+    "focused_regressions": "8/8",
+    "local_runtime_seconds": 8.4,
+    "evidence_pr": 220,
+    "workflow_run": 30847754192,
+    "workflow_status": "queued"
+  },
+  "passes": {
+    "2937": "global affine-support distance-four bracket 13..16 over 120 probes",
+    "2938": "isodual [8,4,4]_3 syndrome decoder architecture and source-complete RTL",
+    "2939": "circuit-independent noisy M36 accepted-fault envelope",
+    "2940": "calibrated active support diagnosis under asymmetric readout",
+    "2941": "nonlinear binary-image and ternary-code identification with automorphism census",
+    "2942": "Landauer transcript conservation, correction entropy, and finite-time boundary",
+    "2943": "OAM carrier audit and projective 40-cycle obstruction",
+    "2944": "BONKERS: measurement/check reciprocity from isoduality",
+    "2945": "BONKERS: thermodynamic compiler optimizing raw entropy above the invariant transcript floor"
+  },
+  "claim_boundary": "Exact finite claims and modelled envelopes are published. Icarus/Yosys/nextpnr results, canonical Photonic-Holonet/blueprint/site integration, and three PDF builds remain pending the observed PR workflow."
+}

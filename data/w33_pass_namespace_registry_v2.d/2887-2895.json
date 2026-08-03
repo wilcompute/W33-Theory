@@ -2,18 +2,18 @@
   "schema": "w33.pass_namespace_reservation.v2",
   "range": "2887-2895",
   "owner": "agent/pass2887-2895-global-code-landauer-oam-bonkers",
-  "status": "reserved",
-  "reserved_after": "parallel Passes 2880-2886 reservation",
+  "status": "superseded_after_local_execution_before_publication",
+  "superseded_by": "2937-2945",
+  "reason": "Parallel reservations advanced through Pass 2936 while the local exact packet was executing. All completed evidence was renumbered before publication.",
   "passes": {
-    "2887": "global affine-support distance-four lower and upper bounds beyond the 14-feature trajectory",
-    "2888": "symmetry-quotiented protected decoder architecture and exact cycle/storage comparison",
-    "2889": "circuit-level noisy M36 branch model with syndrome, Clifford, acceptance and detector faults",
-    "2890": "calibrated active support diagnosis under asymmetric observation and operation costs",
-    "2891": "nonlinear-code identification, weight enumerator, kernel/rank and automorphism invariants",
-    "2892": "Landauer finite-time, reset, correction and routing thermodynamic ledger",
-    "2893": "OAM carrier audit and qutrit spin-orbit implementation boundary",
-    "2894": "BONKERS: thermodynamic compiler optimizing information gain per erased bit",
-    "2895": "BONKERS: W33 line/OAM vortex incidence as a multiplexed 40-mode photonic address layer"
-  },
-  "claim_boundary": "Reservation only; no claim is promoted until executable witnesses and evidence-class labels are committed."
+    "2887": "renumbered to 2937",
+    "2888": "renumbered to 2938",
+    "2889": "renumbered to 2939",
+    "2890": "renumbered to 2940",
+    "2891": "renumbered to 2941",
+    "2892": "renumbered to 2942",
+    "2893": "renumbered to 2943",
+    "2894": "renumbered to 2944",
+    "2895": "renumbered to 2945"
+  }
 }
