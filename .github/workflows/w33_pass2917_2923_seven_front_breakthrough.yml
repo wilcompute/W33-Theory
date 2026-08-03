@@ -62,6 +62,13 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
           fetch-depth: 0
 
+      - name: Reconcile the newest canonical master
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin master
+          git merge --no-edit origin/master
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -150,8 +157,8 @@ jobs:
             echo 'all generated artifacts already frozen'
           else
             git commit -m 'Passes 2917-2923: freeze exact evidence and Holonet blueprint PDF'
-            git push origin "HEAD:${TARGET_BRANCH}"
           fi
+          git push origin "HEAD:${TARGET_BRANCH}"
 
       - uses: actions/upload-artifact@v4
         with:
