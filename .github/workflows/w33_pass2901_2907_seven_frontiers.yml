@@ -99,7 +99,7 @@ jobs:
         run: |
           git config user.name 'W33 evidence bot'
           git config user.email 'noreply@github.com'
-          git add analysis/BT2901_BT2907_seven_frontiers.md \
+          git add -f analysis/BT2901_BT2907_seven_frontiers.md \
             analysis/BT2901_BT2907_seven_frontiers_insert.tex \
             analysis/bt2901_2907_seven_frontiers.py \
             data/PART_BT2901_BT2907_SEVEN_FRONTIERS_results.json \
