@@ -1,0 +1,95 @@
+{
+  "schema": "w33.pass2820_2824.blueprint_hardening.v1",
+  "status": "COMPLETE_EXACT_COMPILE_PENDING",
+  "canonical_pass_range": "2820-2824",
+  "headline": "The binary support shell is an exact geometric codec but not a lossless execution quotient: the selected four-operation micro-ISA refines 16 support classes through 40 and 78 classes to all 81 ternary frame states.",
+  "check_count": 19,
+  "checks": {
+    "micro_isa_linear_order": true,
+    "micro_isa_affine_order": true,
+    "micro_isa_four_operations": true,
+    "m36_full_clifford_order": true,
+    "m36_projector_count": true,
+    "m36_deep_improving_48": true,
+    "m36_other_improving_zero": true,
+    "m36_decoder_is_h": true,
+    "sensor_odd_3": true,
+    "sensor_even_9": true,
+    "transpose_q5_inner": true,
+    "transpose_q7_outer": true,
+    "transpose_cx_conjugacy": true,
+    "support_lift_43_checks": true,
+    "support_lift_tomotope_capacity": true,
+    "dead_mixer_removed": true,
+    "live_mixer_present": true,
+    "support_refines_to_full_81": true,
+    "support_witness_is_nondeterministic": true
+  },
+  "micro_isa": {
+    "public_opcode_bits": 3,
+    "public_opcode_count": 8,
+    "internal_opcode_bits": 2,
+    "internal_operation_count": 4,
+    "selected_operations": ["F_p", "CX_p->f", "CX_f->p", "Z_p"],
+    "linear_order": 51840,
+    "affine_order": 4199040,
+    "hardware_boundary": "72 LC / 60.80 MHz belongs to the public loadable full frame unit; the minimal four-operation engine needs separately observed synthesis and place-and-route evidence."
+  },
+  "m36": {
+    "projector_count": 5355,
+    "logical_clifford_order": 11520,
+    "improving_deep_branches": 48,
+    "improving_other_branches": 0,
+    "explicit_protocol": {
+      "input_ray": 5,
+      "output_ray": 7,
+      "stabilizers": ["IYZY", "YZXY"],
+      "syndrome": [-1, 1],
+      "decoder": "Hadamard on second logical coordinate",
+      "success_probability": "(p^2-2p+2)/4",
+      "output_fidelity": "(5p^2-12p+8)/(4(p^2-2p+2))",
+      "fidelity_gain": "p(p-1)(3p-2)/(4(p^2-2p+2))",
+      "improvement_interval": "0<p<2/3"
+    },
+    "boundary": "State-fidelity distillation, not a fault-tolerant injection threshold or asymptotic-yield theorem."
+  },
+  "support_codec": {
+    "state_count": 81,
+    "initial_support_classes": 16,
+    "initial_class_size_histogram": {"1": 1, "2": 4, "4": 6, "8": 4, "16": 1},
+    "deterministic_refinement_class_counts": [16, 40, 78, 81],
+    "refinement_histograms": [
+      {"1": 1, "2": 4, "4": 6, "8": 4, "16": 1},
+      {"1": 7, "2": 29, "4": 4},
+      {"1": 75, "2": 3},
+      {"1": 81}
+    ],
+    "non_lumpability_witness": {
+      "support_mask": "0100",
+      "states": [[0, 1, 0, 0], [0, 2, 0, 0]],
+      "operation": "Z_p",
+      "next_support_masks": ["0100", "0000"]
+    },
+    "interpretation": "Support-first readout/equitable geometry codec; full ternary phase is required for deterministic execution."
+  },
+  "sensor": {
+    "finite_mu12_lift": {"odd_n": 3, "even_n": 9},
+    "arbitrary_u1_representatives": "3^n"
+  },
+  "transpose": {
+    "q5": "inner projective class",
+    "q7": "outer diagonal class",
+    "cx_direction_conjugacy": true
+  },
+  "mixer": {
+    "live_source": "rtl/w33_pass2773_spread_mixer36_synth.sv",
+    "retired_source": "rtl/w33_spread_mixer36.sv"
+  },
+  "publication_state": {
+    "w33_paper_wrapper": "integrated",
+    "photonic_holonet_wrapper": "integrated",
+    "holonet_machine_blueprint": "migration committed; generated canonical update pending workflow execution",
+    "docs_index_html": "migration committed; generated canonical update pending workflow execution",
+    "pdfs": "compile pending"
+  }
+}
