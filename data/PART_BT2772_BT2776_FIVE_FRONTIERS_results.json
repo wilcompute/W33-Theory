@@ -1,0 +1,6 @@
+{
+  "boundaries":{"compiler":"exact matrix accumulator remains upstream input","distillation":"complete only for identical two-copy binary [[4,2]] stabilizer projections","hardware":"Icarus/Yosys/nextpnr evidence must be observed remotely","repeater":"exact Bell-diagonal recurrences plus engineering scenarios, not measured end-to-end hardware","sensor":"shot budget assumes independent phase-stable path measurements and calibrated determinant"},
+  "check_count":19,
+  "checks":{"compiler_all_rewrites":true,"compiler_compression_gt_40":true,"compiler_group_51840":true,"compiler_pairs_40x12":true,"compiler_suffixes_108":true,"distill_branches_21420":true,"distill_codes_5355":true,"distill_no_improving_deep":true,"distill_no_improving_mid":true,"distill_no_improving_shallow":true,"repeater_1280_distillable":true,"repeater_1280_segmented":true,"repeater_fixed_points":true,"repeater_improvement_region":true,"repeater_remote_rate_positive":true,"sensor_classes_34":true,"sensor_four_quadrature_budget":true,"sensor_min_trace_one_ninth":true,"sensor_trace_pairs_33":true},
+  "schema":"w33.pass2772_2776.five_frontiers.v1","status":"COMPLETE_LOCAL_EXACT_REMOTE_HARDWARE_PENDING"
+}
