@@ -1,0 +1,19 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.supplement",
+  "status": "ACTIVE",
+  "canonical_blocks": [
+    {
+      "range": "2784-2788",
+      "owner": "m36-distillation-metaplectic-sensor-compiler-silicon-repeater-track",
+      "status": "COMPLETE_LOCAL_EXACT_REMOTE_RTL_PNR_PENDING",
+      "artifacts": {
+        "2784": "exhaustive two-copy M36 stabilizer distillation with exact p<2/3 threshold",
+        "2785": "four-setting path-ancilla metaplectic trace sensor and shot bounds",
+        "2786": "40x12 CX conjugacy factorization, perfect centralizer hash, and 1.9 kB compiler",
+        "2787": "canonical certificate repair and independent exact-versus-hardware CI jobs",
+        "2788": "qutrit purification, [[3,1,2]]_3 erasure code, transversal SUM, and repeater budget"
+      },
+      "runtime_boundary": "Local exact certificates and regressions are complete. Icarus, Yosys, nextpnr, and icetime results are promoted only after the remote jobs complete and artifacts are inspected."
+    }
+  ]
+}
