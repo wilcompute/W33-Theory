@@ -93,7 +93,7 @@
        whose wiring diagram is a piece of finite geometry\\[10pt]
        \normalsize Every figure in this document is measured or proved.}
 \author{\normalsize W(3,3)--E$_8$ project, glue track}
-\date{\normalsize 3 August 2026 \quad$\cdot$\quad Passes 2700--2837}
+\date{\normalsize 3 August 2026 \quad$\cdot$\quad Passes 2700--2868}
 
 \begin{document}
 \maketitle
@@ -646,6 +646,74 @@ $\{F_f,S_p,\mathrm{CX}_{f\to p}\}$, $\{F_f,\mathrm{CX}_{p\to f},\mathrm{CX}_{f\t
 \headline{Three Clifford opcodes plus one translation generate everything.
 Four frame instructions --- a \textbf{two-bit} opcode field, not three.}
 
+\subsection{How long is the longest program?}
+
+\begin{plain}
+``These four operations can do everything'' is a statement about what is \emph{possible}.
+The question a compiler actually asks is what it \emph{costs}: if I hand you an arbitrary
+frame transformation, how many instructions do you need in the worst case?
+
+That number is the machine's \emph{diameter}, and it can be computed exactly, because the
+group is only four million elements and a computer can visit all of them.
+\end{plain}
+
+\begin{spec}[Exhaustive breadth-first search over $\mathrm{ASp}(4,3)$, Pass 2866]
+Forward generators only --- a processor cannot run an instruction backwards, so the
+\emph{directed} diameter is the honest number.
+\[
+  \boxed{\text{diameter}=19},\qquad
+  \text{mean program length}=14.176,\qquad
+  \text{counting floor }\lceil\log_4 4199040\rceil=12 .
+\]
+The last shell is tiny: only $188$ of $4{,}199{,}040$ elements are at distance exactly
+$19$. Ball sizes reach $93.3\%$ at depth $16$ and $99.996\%$ at depth $18$.
+\end{spec}
+
+\headline{Every frame transformation is at most \textbf{19} instructions away, and the
+average is \textbf{14.2}. No four-operation instruction set can beat $12$, so this one is
+worst-case optimal to within a factor of $1.73$.}
+
+\begin{plain}
+The method is worth a sentence because it is what makes the computation possible at all. A
+group element is a matrix together with a shift. Each instruction acts on the matrix part
+as a fixed \emph{shuffle} of $51{,}840$ labels and on the shift part as a fixed map of $81$
+labels. Build those two lookup tables once, and searching four million elements is just
+table lookups --- seconds, not days.
+\end{plain}
+
+\subsection{And how long until the machine forgets?}
+
+\begin{plain}
+The opposite question. Feed the machine random instructions: how many before its state
+tells you nothing about where it started?
+\end{plain}
+
+\begin{spec}[Exact, Pass 2867]
+Every opcode is a bijection on the $81$ frames, so the walk is doubly stochastic and the
+stationary distribution is exactly uniform --- \emph{no frame is preferred}.
+\[
+  |\lambda_2| = 0.893992,\qquad
+  \text{gap}=0.106008,\qquad
+  \frac{1}{\text{gap}}=9.43,\qquad
+  t_{\mathrm{mix}}(\tfrac14)=15,\qquad
+  K=113.38 .
+\]
+\end{spec}
+
+\headline{A frame forgets its origin by $1/e$ in $9.4$ instructions and is statistically
+gone after $15$ --- \textbf{$71.8$\,ns} at the measured $208.86$\,MHz.}
+
+\begin{plain}
+Put that beside the readout cost of \S\ref{sec:support} and you get an observation
+cadence, which is a real design parameter: reading more often than every fifteen
+instructions pays the thermodynamic price repeatedly for information the machine has not
+yet regenerated.
+
+Notice also how close $15$ and $19$ are. The machine scrambles almost exactly as fast as
+it can reach --- there is no regime in which it is still reachable but already random,
+which is a comfortable property for a scheduler to have.
+\end{plain}
+
 \begin{gotwrong}[A trap avoided, and worth naming]
 A minimality \emph{proof} says nothing about \emph{area}. It is tempting to quote the
 $72$-cell figure for the four-operation engine on the grounds that it does strictly less
@@ -1034,6 +1102,31 @@ them into $4+8+12+12$. \emph{Neither refines the other.} The symmetry and the ge
 are looking at different things.
 \end{plain}
 
+\begin{spec}[Is the deleted line special? Both answers are true, Pass 2862]
+Enumerating the $40$ lines and counting how many classical points each contains:
+\[
+  \underbrace{1}_{\text{all four classical}}\;+\;
+  \underbrace{12}_{\text{one classical, three magic}}\;+\;
+  \underbrace{27}_{\text{all four magic}}\;=\;40 .
+\]
+\textbf{Geometrically, no.} $\mathrm{Aut}(W(3,3))$ has order $51840=40\times1296$ and is
+transitive on lines, so nothing intrinsic to the $40$ points prefers one. Choosing a
+computational basis is choosing one line out of forty --- exactly $\log_2 40=5.3219$ bits
+of pure convention.
+
+\smallskip\noindent
+\textbf{Relative to the stabilizer structure, uniquely yes.} Exactly \emph{one} of the
+forty lines has all four of its points classical.
+\end{spec}
+
+\begin{plain}
+Which is a satisfying place to end up. ``Which states are magic'' is not a fact about the
+geometry --- the geometry is completely indifferent. It is a fact about which line you
+declared to be the basis. But the declaration is not lost afterwards: it is recoverable,
+because the line you chose is the unique all-classical one in the structure your choice
+created.
+\end{plain}
+
 \subsection{All thirty-six look identical from the inside}
 
 % The optional argument is braced: an unbraced "]" inside $\mathbb{Z}[\omega]$ closes
@@ -1233,9 +1326,57 @@ the earlier no-go. It is \emph{not}, by itself, a usable distillation routine. T
 twenty-seven raw states is not an engineering number.
 
 What it establishes is that the resource is not inert --- which is the thing that was
-genuinely in doubt. Making it practical needs a branch with super-linear convergence, or
-a portfolio composing several of the $48$. This document reports the honest state of that:
-one improving map, quantified, and a clear statement of what would have to be found next.
+genuinely in doubt.
+\end{plain}
+
+\subsection{And no other two-copy branch will fix it}
+
+\begin{plain}
+The natural next move is to hope one of the other $47$ branches converges faster. It does
+not, and the reason can be settled without examining any of them.
+
+For a protocol to be quadratic --- for the error to \emph{square} rather than shrink by a
+third --- it must throw away every input in which exactly one of the two copies was
+faulty. Otherwise those single faults leak into the output and contribute an error
+proportional to $p$. So the question becomes: is there \emph{any} stabilizer measurement
+that keeps the clean input and rejects all six single-fault inputs?
+\end{plain}
+
+\begin{spec}[Exhaustive, Pass 2861]
+Over all $5{,}355$ two-qubit stabilizer codes $\times$ $4$ syndromes $\times$ all four
+Clifford classes of ray:
+\[
+  \text{projectors keeping }|mm\rangle\text{ and annihilating all six single errors}
+  \;=\;\boxed{0}.
+\]
+\end{spec}
+
+\headline{The linear rate $2/3$ is not a property of the branch that was found. It is a
+\emph{bound on the entire two-copy stabilizer family}.}
+
+\begin{gotwrong}[The right answer, and a wrong reason nearly published]
+The tempting explanation is a dimension count: six error vectors, a rank-four projector,
+no room. That explanation is false. $|mm\rangle$ \emph{is} orthogonal to all six single-error
+vectors (checked: $2.6\times10^{-16}$), and $16-6=10\ge4$, so projectors with exactly this
+property exist in abundance --- the rank-one projector onto $|mm\rangle$ is one.
+
+\medskip\noindent
+What actually fails is that no \emph{stabilizer} projector aligns that way. The magic-state
+error basis is not a stabilizer basis, and syndrome measurements cannot be steered onto it.
+The obstruction is the mismatch between magic and the stabilizer formalism --- which is the
+same tension that makes these states interesting in the first place.
+
+\medskip\noindent
+Recorded because a right answer with a wrong reason is a claim waiting to be misapplied to
+the next case, where the reason would matter.
+\end{gotwrong}
+
+\begin{plain}
+So the road forward is narrower and clearer than it was. Two copies are provably not
+enough. Super-linear distillation of these states needs three or more copies, or
+operations from outside the stabilizer set --- and \S\ref{sec:magic} already reports that
+a search for a three-copy advantage found no witness either. This document states that as
+the open problem it is, rather than as a promise.
 \end{plain}
 
 \begin{gotwrong}[A near-miss in this very section]
@@ -1350,6 +1491,38 @@ precisely the part you pay to look at.}
 or $7.66$\,pW of unavoidable dissipation at a $1$\,GHz readout rate. This is a floor set
 by information theory, independent of the circuit: no implementation of the support
 readout can beat it.
+\end{spec}
+
+\begin{spec}[And the compute path is free, Pass 2864]
+Every opcode is a group element, hence a bijection on the $81$ frames --- which
+\S\ref{sec:isa} verified directly, since the walk's transition matrix came out doubly
+stochastic. A bijection erases nothing, so
+\[
+  E_{\mathrm{Landauer}}(\text{compute}) \;=\; \textbf{exactly zero}.
+\]
+\textbf{All of this machine's irreducible dissipation is in readout.} That is not a
+coincidence of the design; it is what building the ISA out of a \emph{group} buys you.
+\end{spec}
+
+\begin{plain}
+It would be easy to over-read that. Real silicon is nowhere near the floor, and saying so
+plainly is part of the job.
+\end{plain}
+
+\begin{spec}[Floor versus forecast]
+A CMOS estimate for the $43$-cell engine, at the measured activity of $1.622$ output
+transitions per operation, $5$\,fF effective per cell and $1.2$\,V:
+\[
+  E_{\mathrm{op}}\approx 0.502\ \mathrm{pJ},\qquad
+  0.105\ \mathrm{mW}\ \text{dynamic at }208.86\,\mathrm{MHz},
+\]
+\[
+  \frac{E_{\mathrm{op}}(\mathrm{CMOS})}{E_{\mathrm{Landauer}}(\mathrm{readout})}
+  \;=\;6.6\times10^{7}\;\approx\;10^{7.8}.
+\]
+Real hardware runs about eight orders of magnitude above the information-theoretic floor,
+which is the usual figure for CMOS. \textbf{The Landauer number is a floor, not a
+forecast}, and is quoted here only so that nobody mistakes it for one.
 \end{spec}
 
 \headline{And the counting floor lands exactly where the search does.
@@ -1503,6 +1676,36 @@ corrupted packet is always a legal packet addressed somewhere else. The fault mo
 therefore has no ``decode error'' term at all; it has only a ``wrong result'' term. That
 simplifies the error correction enormously, and it is forced by the geometry rather than
 designed in.
+
+That property is not free, and it is now possible to say exactly what it costs.
+\end{plain}
+
+\begin{spec}[The price of a complete code, Pass 2865]
+A $40$-ary router consumes one address symbol per hop:
+\[
+  \text{needed: }\log_2 40 = 5.3219\ \text{bits},\qquad
+  \text{spent: }8\ \text{bits},\qquad
+  \text{efficiency }66.52\%.
+\]
+A store-and-forward router that strips consumed header bits \emph{erases} them, so
+Landauer applies per hop:
+\[
+  \text{floor }95.37\ \mathrm{meV/hop},\qquad
+  \text{as coded }143.35\ \mathrm{meV/hop}\quad(300\,\mathrm{K}).
+\]
+Since $N=40^n$, the thermodynamic cost of delivering a packet across $N$ leaves is
+\textbf{exactly logarithmic in $N$}: $143.4$\,meV per level, $860$\,meV at depth six
+($4.1$ billion leaves).
+\end{spec}
+
+\headline{About a third of the routing energy buys the absence of an entire failure mode.
+That trade was always implicit in the design; it now has a number.}
+
+\begin{plain}
+Two honest caveats. A \emph{reversible} router pays none of this --- the floor applies only
+because the header is destroyed as it is consumed, and that is a design choice, not a law
+of nature. And $143$\,meV per hop is a floor in the same sense as the readout figure:
+about eight orders of magnitude below what any real transceiver will draw.
 \end{plain}
 
 \begin{gotwrong}
@@ -1583,9 +1786,32 @@ tool below exists because that happened at least three times.
 \bottomrule
 \end{tabular}
 \end{center}
-All five \textbf{warn and never block}. A collision is a candidate for reading, not a
-verdict, and a blocking hook trains people to pass \cmd{-{}-no-verify}.
+Five of the six \textbf{warn and never block}. A collision is a candidate for reading, not
+a verdict, and a blocking hook trains people to pass \cmd{-{}-no-verify}. The exception is
+the sixth.
 \end{spec}
+
+\begin{spec}[The one guard that fails, Pass 2834 and 2863]
+\cmd{check\_information\_flow.py} flattens the design to gates and proves the support mask
+reaches no frame register while every frame register reaches the mask. It is wired into
+the synthesis CI gate, and the same step then \emph{deliberately breaks the design} and
+requires the check to fail on it. If the negative control passes, the job fails with
+\emph{``the guard itself is broken, not the design under test.''}
+
+\smallskip\noindent
+The gate's policy is now explicit: \textbf{parse and flow fail; fold and place warn.} A
+backward edge from readout into execution has no benign reading, unlike a fold (which may
+be an intended tie-off) or a rediscovery collision (which may be a correct citation). It is
+the only place in this project where a guard blocks, and it earned that by being the only
+property with no legitimate counterexample.
+\end{spec}
+
+\begin{plain}
+Every guard here now ships with a self-test against the specific defect that motivated it.
+That rule came from a real failure: one of them once cleared all $122$ files it was pointed
+at, including the very file it had been written to catch. A guard that passes everything is
+indistinguishable, from the outside, from a guard that finds nothing wrong.
+\end{plain}
 
 \begin{gotwrong}
 \textbf{The guards themselves needed calibration, and the calibration is the work.}
@@ -1622,10 +1848,37 @@ a pass.
 % =====================================================================================
 
 \begin{plain}
-Everything this blueprint asserts, with how it is known. If a row says
-``proved'' there is a machine-checkable artifact; if it says ``measured'' there is a tool
-output; if it says ``published'' someone else did it and we cite them.
+Everything this blueprint asserts, with how it is known. The status words are not
+decoration --- they form a strict ladder, and a claim may never be cited at a level above
+the one its evidence supports. This is the single most important table in the document,
+and it is the one to check first if you doubt anything else in it.
 \end{plain}
+
+\begin{spec}[The evidence ladder]
+\begin{center}\small
+\begin{tabular}{@{}lp{11.2cm}@{}}
+\toprule
+\textbf{proved}    & a machine-checkable artifact exists: an exhaustive search, a SAT
+                     certificate, or exact arithmetic. Re-runnable from
+                     \S\ref{sec:repro}.\\
+\textbf{measured}  & a tool produced the number: yosys, nextpnr, or an instrumented run.
+                     Tied to a named part and a named version.\\
+\textbf{published} & someone outside this project did it and we cite them; we did not
+                     reproduce the experiment.\\
+\textbf{prior art} & the other track in this repository did it first; we cite rather than
+                     re-derive.\\
+\textbf{derived}   & follows from rows above by arithmetic no reader would dispute.\\
+\textbf{modelled}  & an engineering estimate with stated assumptions. \emph{Not} a
+                     measurement, and never promoted to one.\\
+\textcolor{bad}{\textbf{open}} & we do not know. Listed so the gaps are as visible as the
+                     results.\\
+\bottomrule
+\end{tabular}
+\end{center}
+The two rules that make the ladder useful: \textbf{nothing is promoted without new
+evidence}, and \textbf{a corrected row keeps its history} rather than being quietly
+rewritten --- which is why \S\ref{sec:errata} exists.
+\end{spec}
 
 {\footnotesize
 \begin{center}
@@ -1674,7 +1927,33 @@ Deep-grade map is \emph{linearly} convergent, rate $2/3$ & \textbf{proved} & Pas
 \quad $\sim10^{27}$ raw states for $10^{-9}$ infidelity & computed & Pass 2831\\
 Three-copy super-multiplicativity & \textcolor{bad}{no witness} & not a proof either way\\
 Readout diode: mask reaches no frame register & \textbf{proved} & gate level, Pass 2834\\
+ISA directed diameter $=19$; mean $14.18$ & \textbf{proved} & Pass 2866, BFS over $4.2$M\\
+\quad only $188$ elements at distance $19$ & proved & Pass 2866\\
+\quad counting floor $12$; ratio $1.73$ & derived & Pass 2866\\
+Frame walk doubly stochastic; stationary uniform & \textbf{proved} & Pass 2867\\
+Gap $0.106$; $t_{\mathrm{mix}}=15$; Kemeny $113.38$ & \textbf{proved} & Pass 2867\\
+\quad $71.8$\,ns scrambling at $208.86$\,MHz & derived & Passes 2833, 2867\\
+No quadratic two-copy stabilizer branch & \textbf{proved} & Pass 2861, $5355{\times}4{\times}4$\\
+\quad the reason is the stabilizer basis, not dimension & verified & Pass 2861\\
+$40$ lines: $1$ classical, $12$ mixed, $27$ magic & \textbf{proved} & Pass 2862\\
+\quad basis choice $=\log_2 40=5.32$ bits of convention & derived & Pass 2862\\
+Landauer: readout $47.79$\,meV, compute exactly $0$ & derived & Pass 2864\\
+CMOS $0.502$\,pJ/op, $10^{7.8}$ above the floor & \textcolor{bad}{modelled} & Pass 2864, stated assumptions\\
+Hop cost $95.4$\,meV floor / $143.4$\,meV as coded & derived & Pass 2865\\
+Diode proof in CI, with a negative control & done & Pass 2863\\
 \quad symplectic on differences, all four opcodes & SAT & $4100$ vars / $11278$ clauses\\
+\bottomrule
+\end{tabular}
+\end{center}}
+
+\noindent{\footnotesize\itshape ...continued.}
+
+{\footnotesize
+\begin{center}
+\begin{tabular}{@{}p{8.4cm}p{2.4cm}p{3.9cm}@{}}
+\toprule
+\textbf{Claim} & \textbf{Status} & \textbf{Artifact}\\
+\midrule
 Public frame unit: $72$ LC, $60.80$\,MHz & \textbf{measured} & \S\ref{sec:budget}\\
 Loadable CX: $23$ LC, $72.40$\,MHz, $\mathrm{CX}^3{=}I$ & measured $+$ proved &
    $5265$ vars / $14005$ clauses\\
@@ -1695,7 +1974,67 @@ Physical power in watts & \textcolor{bad}{OPEN} & activity proxy only\\
 \end{center}}
 
 % =====================================================================================
-\section{Reproducing everything in this document}
+\section{Errata index}\label{sec:errata}
+% =====================================================================================
+
+\begin{plain}
+A blueprint with no errata is a blueprint nobody has checked. These are gathered here so
+they can be found deliberately rather than stumbled on, and so a reader can audit our
+error \emph{rate} rather than take our word for our care. Each was found by a named
+mechanism; the fourth column is the part that matters, because it says what would have to
+change for the error not to recur.
+\end{plain}
+
+{\footnotesize
+\begin{center}
+\begin{tabular}{@{}p{4.9cm}p{4.4cm}p{4.8cm}@{}}
+\toprule
+\textbf{What we said} & \textbf{What is true} & \textbf{Found by}\\
+\midrule
+Cell counts of $13$, $8$, $42$ for the ISA & The registers had no load port and
+  synthesised away; real cost $72$, then $43$ minimal & Synthesis. Simulation cannot see
+  it, and two independent teams shipped it \\
+The one-qutrit self-entanglement thesis is ours & It is stated verbatim in this project's
+  own encyclopedia & Being shown the file. Now a guard \\
+``Nobody has stated'' the Kraft consequence & The manuscript says ``no unused branch''
+  with a citation & An automated novelty guard, first real run \\
+$E_8\supset A_2\oplus E_6$ gives the fractal branching & The paper explicitly warns
+  against that identification & Reading the paper \\
+The Jordan ladder is new here & Pillars 128--130 own it, including the exact rung we
+  hedged & The user pointing at a file \\
+Three inequivalent magic states & Four: the $24$-ray grade splits $12+12$ & Clifford
+  orbits; corroborated independently \\
+Distillation cost is ``doubly exponential in a good way'' & Convergence is \emph{linear},
+  rate $2/3$; cost reaches $10^{27}$ & Computing the derivative instead of eyeballing
+  the trend \\
+No quadratic branch, ``by a dimension count'' & The count does not apply; the obstruction
+  is the stabilizer basis & Checking the count \\
+The mixer is ``synthesizable'' & Rejected by both frontends, for two different reasons,
+  for a day & A repo-wide parse sweep \\
+The implicit-novelty guard is calibrated & It cleared all $122$ files including the one it
+  was written to catch & A deliberate self-test \\
+The fold guard reports a clean sweep & It had produced no netlists at all: WSL mounts
+  \cmd{/mnt/c}, pathlib says \cmd{C:} & Testing it on a known-bad file \\
+\bottomrule
+\end{tabular}
+\end{center}}
+
+\begin{plain}
+Two patterns run through the list, and both are worth more than any individual entry.
+
+\textbf{Every silent failure was a check that could only pass.} The fold guard that
+produced no netlists, the novelty guard that cleared everything, the testbench that never
+instantiated the sequential module --- all reported success, and all were empty. Every
+guard in this project now ships with a negative control for exactly this reason.
+
+\textbf{Every false novelty claim was findable by one grep of a file we had not read.}
+Not by cleverness --- by reading. The corpus is indexed by date, not by topic, so a
+search for the topic finds nothing and a search for the \emph{result} finds it
+immediately.
+\end{plain}
+
+% =====================================================================================
+\section{Reproducing everything in this document}\label{sec:repro}
 % =====================================================================================
 
 \begin{spec}[Commands, in order]
@@ -1706,7 +2045,12 @@ py -3 analysis/w33\_pass2778\_2779\_affine\_group\_and\_sensor\_exponent.py\\
 py -3 analysis/w33\_pass2789\_2792\_minimal\_isa\_sensor\_and\_transpose.py\\[4pt]
 \# the magic states: geometry, Clifford classes, and the monotone\\
 py -3 analysis/w33\_pass2790\_witting\_ray\_geometry.py\\
-py -3 analysis/w33\_pass2797\_2799\_magic\_orbits\_and\_monotone.py\\[4pt]
+py -3 analysis/w33\_pass2797\_2799\_magic\_orbits\_and\_monotone.py\\
+py -3 analysis/w33\_pass2830\_2832\_class\_separation\_yield\_three\_copy.py\\
+py -3 analysis/w33\_pass2835\_2836\_witting\_line\_and\_landauer.py\\
+py -3 analysis/w33\_pass2861\_2865\_quadratic\_line\_and\_power.py\\[4pt]
+\# the diameter and the scrambling time (a few minutes)\\
+py -3 analysis/w33\_pass2866\_2867\_isa\_diameter\_and\_scrambling.py\\[4pt]
 \# the minimal engine (43 LC) against the public unit (72 LC)\\
 yosys -p "read\_verilog -sv rtl/w33\_pass2796\_minimal\_frame\_engine.sv; \textbackslash\\
 \hspace*{1em}synth\_ice40 -top w33\_minimal\_frame\_engine -json m.json"\\
@@ -1723,7 +2067,10 @@ yosys -p "read\_verilog -sv -formal rtl/w33\_pass2752\_cx\_loadable\_frame.sv; \
 \# the guards\\
 py -3 scripts/check\_rtl\_folds.py\\
 py -3 scripts/check\_implicit\_novelty.py\\
-py -3 scripts/check\_novelty\_claims.py\\[4pt]
+py -3 scripts/check\_novelty\_claims.py\\
+py -3 scripts/check\_information\_flow.py rtl/w33\_pass2834\_support\_readout\_diode.sv \textbackslash\\
+\hspace*{1em}-{}-top w33\_support\_readout\_diode -{}-source support\_mask,tamper\_mask \textbackslash\\
+\hspace*{1em}-{}-sink xp\_o,zp\_o,xf\_o,zf\_o -{}-extra rtl/w33\_pass2796\_minimal\_frame\_engine.sv\\[4pt]
 \# this document\\
 tectonic holonet\_machine\_blueprint.tex
 \end{quote}

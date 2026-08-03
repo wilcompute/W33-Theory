@@ -13,20 +13,29 @@ name: W33 RTL synthesis gate
 # maps are linear, and every linear map fixes the origin.  A frame register driven only
 # by Clifford opcodes can never leave (0,0,0,0).
 #
-# So this job asks the question simulation cannot: after full optimisation, can the
-# state still move?  It runs three checks, in increasing cost:
+# So this job asks the questions simulation cannot.  Four checks, in increasing cost:
 #
 #   1. PARSE     -- both frontends read every file.  rtl/w33_spread_mixer36.sv was
 #                   headed "synthesizable" and was rejected by BOTH, for two different
 #                   unsupported constructs, for a full day before anyone ran either one.
 #   2. FOLD      -- scripts/check_rtl_folds.py: does any output port end up tied to a
 #                   literal after `flatten; opt -full`?
+#   2b. FLOW     -- scripts/check_information_flow.py: is the support readout a diode?
+#                   Added Pass 2863.
 #   3. PLACE     -- nextpnr on the flagship modules, so the cell budget quoted in the
 #                   blueprint is a measured number and not an estimate.
 #
-# It reports, and does not block: a fold is a candidate for reading, not a verdict, and
-# a blocking hook trains people to pass --no-verify.  The one thing it does fail on is
-# a PARSE error, because a file no frontend accepts is not RTL.
+# WHAT FAILS AND WHAT WARNS.  Two of the four fail the job and two report:
+#
+#   FAIL  PARSE -- a file no frontend accepts is not RTL.
+#   FAIL  FLOW  -- a backward edge from the readout into the execution path has no
+#                  benign reading, unlike a fold (which may be an intended tie-off) or a
+#                  rediscovery collision (which may be a correct citation).  This is the
+#                  only information-flow property the architecture has, and it is the
+#                  only place in this repository where a guard blocks.
+#   WARN  FOLD, PLACE -- candidates for reading, not verdicts.  A blocking hook on
+#                  these would train people to pass --no-verify, which is worse than
+#                  no hook at all.
 
 on:
   push:
@@ -89,6 +98,40 @@ jobs:
           if grep -q "CONSTANT OUTPUT" /tmp/folds.txt; then
             echo "::warning::a module folds to a constant -- see the log; this is a"
             echo "::warning::review item, not a failure.  Check for a missing load port."
+          fi
+
+      # ------------------------------------------------------------------
+      # 2b. INFORMATION FLOW.  The Pass 2834 check: the support readout must be a
+      #     diode.  This is the ONE gate here that FAILS rather than warns --
+      #     unlike a fold or a rediscovery collision, a backward edge from the
+      #     readout into the execution path has no benign reading.
+      #     Self-tested against a negative control in the same step, because a
+      #     guard that can only pass is not a guard (Pass 2781).
+      # ------------------------------------------------------------------
+      - name: Information-flow diode proof (fails the job)
+        env:
+          ENGINE: rtl/w33_pass2796_minimal_frame_engine.sv
+          DIODE: rtl/w33_pass2834_support_readout_diode.sv
+          SRC: support_mask,tamper_mask
+          SINK: xp_o,zp_o,xf_o,zf_o
+        run: |
+          set -e
+          python scripts/check_information_flow.py "$DIODE" \
+            --top w33_support_readout_diode --source "$SRC" --sink "$SINK" \
+            --extra "$ENGINE"
+
+          echo "--- negative control: the check must FAIL on a deliberately broken design ---"
+          sed -e 's/w33_support_readout_diode/w33_support_readout_BROKEN/' \
+              -e 's/\.load(load),/.load(load | (^tamper_mask)),/' \
+              "$DIODE" > /tmp/negctl.sv
+          if python scripts/check_information_flow.py /tmp/negctl.sv \
+               --top w33_support_readout_BROKEN --source "$SRC" --sink "$SINK" \
+               --extra "$ENGINE" | grep -q "FAIL: information flows backward"; then
+            echo "negative control behaved correctly -- the violation was detected"
+          else
+            echo "::error::the information-flow guard did NOT catch the negative control."
+            echo "::error::The guard itself is broken, not the design under test."
+            exit 1
           fi
 
       # ------------------------------------------------------------------

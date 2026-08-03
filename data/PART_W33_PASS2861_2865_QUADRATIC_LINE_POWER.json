@@ -1,0 +1,80 @@
+{
+  "pass_2861": {
+    "codes": 5355,
+    "conclusion": "no two-copy stabilizer projection is quadratic on M36",
+    "quadratic_branches_per_grade": {
+      "ray 0": 0,
+      "ray 18": 0,
+      "ray 27": 0,
+      "ray 9": 0
+    },
+    "total_quadratic_branches": 0
+  },
+  "pass_2862": {
+    "all_stabilizer_line_is_unique": true,
+    "convention_bits": 5.321928094887363,
+    "lines": 40,
+    "lines_by_axis_count": {
+      "0": 27,
+      "1": 12,
+      "4": 1
+    },
+    "lines_per_point": 4
+  },
+  "pass_2864": {
+    "cmos_E_op_J": 5.021712000000001e-13,
+    "cmos_activity_per_op": 1.622,
+    "cmos_cells": 43,
+    "cmos_over_landauer": 65592331.93205333,
+    "cmos_power_mW_at_208MHz": 0.10488347683200001,
+    "compute_landauer_floor_J": 0.0,
+    "landauer_J": 7.655943693543263e-21,
+    "landauer_meV": 47.78464203681093,
+    "readout_bits": 2.6666666666666665
+  },
+  "pass_2865": {
+    "bits_coded_per_hop": 8,
+    "bits_needed_per_hop": 5.321928094887363,
+    "coding_efficiency": 0.6652410118609203,
+    "depth_table": [
+      {
+        "bits": 8,
+        "depth": 1,
+        "joules": 2.296783108062979e-20,
+        "leaves": 40
+      },
+      {
+        "bits": 16,
+        "depth": 2,
+        "joules": 4.593566216125958e-20,
+        "leaves": 1600
+      },
+      {
+        "bits": 24,
+        "depth": 3,
+        "joules": 6.890349324188938e-20,
+        "leaves": 64000
+      },
+      {
+        "bits": 32,
+        "depth": 4,
+        "joules": 9.187132432251917e-20,
+        "leaves": 2560000
+      },
+      {
+        "bits": 40,
+        "depth": 5,
+        "joules": 1.1483915540314897e-19,
+        "leaves": 102400000
+      },
+      {
+        "bits": 48,
+        "depth": 6,
+        "joules": 1.3780698648377875e-19,
+        "leaves": 4096000000
+      }
+    ],
+    "landauer_per_hop_coded_J": 2.296783108062979e-20,
+    "landauer_per_hop_floor_J": 1.5279143188328857e-20
+  }
+}
