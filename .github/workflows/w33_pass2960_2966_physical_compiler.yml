@@ -1,0 +1,86 @@
+name: Pass 2960-2966 Physical Compiler
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [master]
+permissions:
+  contents: write
+jobs:
+  exact-rtl-docs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.head_ref || github.ref_name }}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - name: Python dependencies
+        run: python -m pip install --upgrade pip numpy scipy pytest
+      - name: Materialize and recompute exact seven-front source
+        run: |
+          python analysis/bt2960_2966_physical_compiler.py --materialize-source /tmp/bt2960_2966_readable.py
+          (cd /tmp && python bt2960_2966_readable.py) | tee /tmp/bt2960_2966_exact.log
+          grep -F 'PASS 7 / 7' /tmp/bt2960_2966_exact.log
+          pytest -q tests/test_bt2960_bt2966_physical_compiler.py
+          python tools/w33_pass2963_oam_channel_simulator.py --output /tmp/oam_profile.json
+      - name: Install RTL and placement tools
+        run: sudo apt-get update && sudo apt-get install -y iverilog yosys nextpnr-ice40 fpga-icestorm
+      - name: Exhaustive RTL simulations
+        run: |
+          iverilog -g2012 -s tb_w33_pass2960_spc15_factorized_encoder -o /tmp/spc15.vvp rtl/w33_pass2960_spc15_factorized_encoder.sv rtl/tb_w33_pass2960_spc15_factorized_encoder.sv
+          vvp /tmp/spc15.vvp
+          iverilog -g2012 -s tb_w33_pass2965_curvature_pilot_checker -o /tmp/pilots.vvp rtl/w33_pass2965_curvature_pilot_checker.sv rtl/tb_w33_pass2965_curvature_pilot_checker.sv
+          vvp /tmp/pilots.vvp
+          iverilog -g2012 -s tb_w33_pass2966_antisymplectic_phase_transducer -o /tmp/transducer.vvp rtl/w33_pass2966_antisymplectic_phase_transducer.sv rtl/tb_w33_pass2966_antisymplectic_phase_transducer.sv
+          vvp /tmp/transducer.vvp
+      - name: Synthesize and place physical compiler datapaths
+        run: |
+          mkdir -p evidence/pass2960_2966
+          for item in \
+            'spc15 rtl/w33_pass2960_spc15_factorized_encoder.sv w33_pass2960_spc15_factorized_encoder' \
+            'pilots rtl/w33_pass2965_curvature_pilot_checker.sv w33_pass2965_curvature_pilot_checker' \
+            'transducer rtl/w33_pass2966_antisymplectic_phase_transducer.sv w33_pass2966_antisymplectic_phase_transducer'; do
+              set -- $item; name=$1; src=$2; top=$3
+              yosys -p "read_verilog -sv $src; synth_ice40 -top $top -json /tmp/$name.json; stat" | tee evidence/pass2960_2966/${name}_yosys.log
+              nextpnr-ice40 --hx8k --package ct256 --json /tmp/$name.json --asc /tmp/$name.asc --freq 12 --pcf-allow-unconstrained |& tee evidence/pass2960_2966/${name}_nextpnr.log
+          done
+      - name: Integrate canonical blueprint and site idempotently
+        run: |
+          python tools/integrate_bt2960_bt2966.py
+          python tools/integrate_bt2960_bt2966.py | tee evidence/pass2960_2966/integration_second_run.log
+          grep -F "'idempotent': True" evidence/pass2960_2966/integration_second_run.log
+      - uses: tectonic-typesetting/setup-tectonic@v1
+      - name: Compile all three canonical manuscripts
+        run: |
+          tectonic --keep-logs holonet_machine_blueprint.tex
+          tectonic --keep-logs w33_paper.tex
+          tectonic --keep-logs photonic_holonet.tex
+          ! grep -E 'Undefined control sequence|Emergency stop' *.log
+      - name: Freeze evidence manifest
+        run: |
+          cp /tmp/bt2960_2966_exact.log evidence/pass2960_2966/exact.log
+          cp /tmp/oam_profile.json evidence/pass2960_2966/oam_default_profile.json
+          sha256sum data/PART_BT296*.json rtl/w33_pass296*.sv holonet_machine_blueprint.pdf w33_paper.pdf photonic_holonet.pdf > evidence/pass2960_2966/sha256.txt
+          pytest -q tests/test_bt2960_bt2966_physical_compiler.py
+          git diff --check
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass2960-2966-physical-compiler-evidence
+          path: |
+            data/PART_BT296*.json
+            evidence/pass2960_2966/*
+            holonet_machine_blueprint.pdf
+            w33_paper.pdf
+            photonic_holonet.pdf
+            *.log
+      - name: Commit observed evidence to PR branch
+        if: github.event_name == 'pull_request'
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add holonet_machine_blueprint.tex docs/index.html
+          git add -f evidence/pass2960_2966 holonet_machine_blueprint.pdf w33_paper.pdf photonic_holonet.pdf *.log
+          git commit -m 'Pass 2966: materialize physical compiler evidence [skip ci]' || exit 0
+          git push origin HEAD:${{ github.head_ref }}
