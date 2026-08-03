@@ -79,3 +79,16 @@ for f in sys.argv[1:]:
         language: system
         pass_filenames: true
         files: ^data/.*\.json$
+      # Added Pass 2752.  Built on a MEASURED failure rate: six claims in one session
+      # were overturned by docs/index.html or the two manuscripts -- files the repo's
+      # own notes say to read first.  When a file asserts novelty ("appears to be
+      # absent", "no prior art", "nobody has stated"), this greps the distinctive
+      # tokens around that assertion against the encyclopedia.  Warns, never blocks.
+      # Known limitation: it catches EXPLICIT novelty assertions only; four of the six
+      # failures were implicit framing, which no regex sees.
+      - id: novelty-claims
+        name: novelty claims are checked against the encyclopedia
+        entry: py -3 scripts/check_novelty_claims.py
+        language: system
+        pass_filenames: true
+        files: ^analysis/.*\.md$
