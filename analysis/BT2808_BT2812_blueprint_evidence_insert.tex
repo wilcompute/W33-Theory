@@ -1,0 +1,126 @@
+% Passes 2808--2812: evidence-state and breakthrough hardening for the Holonet blueprint.
+\section{Evidence states and release gates}\label{sec:evidence}
+
+\begin{plain}
+A mathematical theorem, a simulated controller, a synthesized netlist, a placed design, a
+laboratory component, and an end-to-end machine are different evidence states. Earlier
+drafts occasionally placed several in one sentence and allowed the strongest-sounding
+word to colour the rest. This section is the promotion firewall.
+\end{plain}
+
+\begin{spec}[Evidence-state contract]
+\begin{center}
+\begin{tabular}{@{}p{2.3cm}p{5.0cm}p{6.3cm}@{}}
+\toprule
+\textbf{State} & \textbf{Meaning} & \textbf{Promotion gate}\\
+\midrule
+Proved & Exact finite or symbolic statement & Deterministic rebuild and an independent
+falsifier both pass.\\
+Simulated & RTL behaviour under a stated bench & Both frontends parse; the bench observes
+state change and fail-closed illegal inputs.\\
+Synthesized & Technology-mapped netlist exists & Sequential state survives optimization;
+DFF and cell floors reject folded designs.\\
+Placed/timed & Routed design on a named part & Placement completes, utilization is
+recorded, and the requested clock has non-negative slack.\\
+Published component & External laboratory result & The cited device implements the same
+operation and encoding, with its assumptions preserved.\\
+Modelled system & End-to-end engineering scenario & Every rate, loss, memory, visibility
+and latency assumption is explicit; it is never called measured.\\
+Built system & Physical Holonet & Requires a reproducible end-to-end experiment. This row
+is currently open.\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{spec}
+
+\subsection{Minimal micro-ISA versus public convenience ISA}
+The public interface has eight three-bit opcodes because that is a useful scheduling and
+documentation surface. Exhaustive closure proves that the internal frame engine needs
+only three Clifford operations and one translation, hence two opcode bits. Of the six
+minimal triples, Pass 2803 selects
+\[
+ \{F_p,\,\mathrm{CX}_{p\to f},\,\mathrm{CX}_{f\to p}\}
+\]
+and adds $Z_p$. The linear triple generates all $51{,}840$ elements of
+$\mathrm{Sp}(4,3)$; one translation orbit spans all $81$ translations, giving
+$|\mathrm{ASp}(4,3)|=4{,}199{,}040$.
+
+\headline{Four operations are sufficient for frame expressivity. Eight opcodes remain
+useful at the public scheduling boundary. Every cell count must name the synthesized
+interface.}
+
+\subsection{The deep $M_{36}$ distillation theorem}
+The full logical-decoder search enumerates the $11{,}520$-element projective two-qubit
+Clifford group, all $5{,}355$ binary rank-two isotropic $[[4,2]]$ projectors, and all four
+syndromes. The shallow grade and both middle Clifford orbits contain no improving branch.
+The deep eight-ray grade contains exactly $48$ improving branches.
+
+One explicit protocol uses input ray $5$, stabilizers \cmd{IYZY} and \cmd{YZXY}, syndrome
+$(-1,+1)$, and a Hadamard on the second logical qubit, producing ray $7$. For input
+depolarization $p$,
+\[
+ P_{\rm succ}=\frac{p^2-2p+2}{4},\qquad
+ F_{\rm out}=\frac{5p^2-12p+8}{4(p^2-2p+2)},
+\]
+and
+\[
+ F_{\rm out}-F_{\rm in}
+ =\frac{p(p-1)(3p-2)}{4(p^2-2p+2)}.
+\]
+The branch improves for $0<p<2/3$, which contains the complete deep witness interval
+$0<p<(8-2\sqrt3)/9$.
+
+\begin{gotwrong}[The fixed-gauge no-go was not decoder independent]
+The previous finite census froze an arbitrary logical basis phase and then described the
+result as though logical Clifford decoding had been absorbed by the $M_{36}$ orbit. A
+clean CI rebuild first exposed the phase-gauge dependence; the complete $11{,}520$-decoder
+search then found the $48$ improving deep branches. The corrected theorem is positive:
+deep-grade state fidelity is two-copy distillable. It does not yet provide asymptotic
+yield, a fault-tolerant injection gadget, or an end-to-end logical error threshold.
+\end{gotwrong}
+
+\subsection{All-register metaplectic sensor law}
+For the standard finite qutrit Clifford lift, Pass 2805 proves that the scalar phase group
+is $\mu_{12}$ for every register width. On $n$ qutrits, $d=3^n$ and
+\[
+ \frac{\operatorname{Tr}(U^k)^e}{\det(U^k)}
+\]
+is phase invariant exactly when $e\equiv d\pmod{12}$. The minimal finite-lift exponent is
+therefore $3$ for odd $n$ and $9$ for even $n$. If representatives are allowed arbitrary
+$U(1)$ phases rather than the standard finite lift, the exponent must remain the full
+dimension $3^n$.
+
+\subsection{Transpose closure and mixer retirement}
+At $q=5$ and $q=7$, the involution obeys $T^2=I$, $T^{\mathsf T}JT=-J$, and
+\[
+ T\,\mathrm{CX}_{p\to f}\,T^{-1}=\mathrm{CX}_{f\to p}.
+\]
+The reverse controlled-add is also the local-Fourier conjugate of the forward gate. At
+$q=5$, $-1$ is a square and the projective class is inner; at $q=7$ it is nonsquare and
+the class is the nontrivial diagonal outer class.
+
+The source \cmd{rtl/w33\_spread\_mixer36.sv}, rejected by both Icarus and Yosys, is removed
+from the active tree. Exact verification and build triggers now point to the packed-bus
+replacement \cmd{rtl/w33\_pass2773\_spread\_mixer36\_synth.sv}. That replacement parses
+and is exact, but its measured $13{,}965$ LUT4 requirement still exceeds the iCE40 target;
+the serial mixer is the deployable target architecture.
+
+\subsection{Release-state matrix}
+\begin{center}
+\begin{tabular}{@{}p{4.0cm}p{3.1cm}p{7.0cm}@{}}
+\toprule
+\textbf{Packet} & \textbf{Promoted state} & \textbf{Remaining gate}\\
+\midrule
+Minimal/public ISA & group theorem and RTL & Promote cell count and timing only after the
+dedicated hardware runner completes synthesis and placement.\\
+Deep $M_{36}$ protocol & exact fidelity distillation & Derive asymptotic yield, injection
+integration, and logical-noise thresholds.\\
+Metaplectic sensor & exact finite-lift exponent law & Add visibility, phase diffusion,
+loss, and detector-imbalance confusion matrices.\\
+Photonic remote \textsc{sum} & recurrence and scheduler model & Demonstrate the stated
+encoding, heralding, and memory assumptions end to end.\\
+Holonet system & architecture and component evidence & Build and reproduce the complete
+physical machine.\\
+\bottomrule
+\end{tabular}
+\end{center}
