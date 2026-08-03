@@ -40,18 +40,39 @@ Three separately-published thresholds, one formula, agreement to $10^{-12}$.
 A Clifford-invariant protocol cannot distinguish rays within a grade.}
 
 \begin{plain}
-That is the practical payoff. The known result in this area is a \emph{no-go}: an
-exhaustive search over $5{,}355$ small stabilizer codes and $21{,}420$ branches found no
-two-copy protocol that improves fidelity anywhere it applies. The natural next move is to
-search bigger protocols, and that search is expensive. Knowing there are only three
-inequivalent starting materials shrinks it by a factor of twelve before it begins.
+That was the former frontier, and it failed for a subtle reason. The first exhaustive
+search fixed one logical decoder gauge and therefore missed valid output Clifford frames.
+Pass 2804 repeated the search over all $5{,}355$ binary rank-two isotropic projectors,
+all four syndromes, and the full $11{,}520$-element projective two-qubit Clifford decoder
+group. Exactly $48$ deep-grade branches improve fidelity. One explicit branch uses input
+ray $5$, stabilizers $IYZY$ and $YZXY$, syndrome $(-1,+1)$, and a Hadamard on the second
+logical qubit, producing output ray $7$.
 \end{plain}
 
-\begin{spec}[Evidence boundary, stated as bluntly as possible]
-No distillation protocol for $M_{36}$ is known. The controller types the resource
-\cmd{M36\_Q4\_RAW} and \emph{refuses} injection in RTL until a proved protocol asserts
-validity. \textbf{Until that assertion exists, this machine is not universal.} Everything
-else in this blueprint is built or proved; this is not.
+\begin{spec}[Exact accepted-round dynamics, Passes 2804 and 2821]
+For depolarizing strength $p$, the explicit branch has
+\[
+ P_{\rm succ}(p)=\frac{p^2-2p+2}{4},\qquad
+ F_{\rm out}(p)=\frac{5p^2-12p+8}{4(p^2-2p+2)},
+\]
+and therefore
+\[
+ F_{\rm out}-F_{\rm in}
+ =\frac{p(p-1)(3p-2)}{4(p^2-2p+2)}.
+\]
+It improves throughout $0<p<2/3$, including the complete deep magic-witness interval.
+The accepted output remains in the same depolarized-ray family with recurrence
+\[
+ p'=\frac{p(4-p)}{3(p^2-2p+2)},
+\]
+whose fixed points are $0$, $2/3$, and $1$. The accepted-output yield per raw input is
+$P_{\rm succ}/2$.
+
+\smallskip\noindent
+\textbf{Boundary:} this proves state-fidelity distillation and its exact one-round
+recurrence. It does not yet prove optimized asymptotic yield, physical preparation cost,
+fault-tolerant injection, logical-noise propagation, or an end-to-end threshold. The RTL
+handshake remains closed until those interfaces are specified and verified.
 \end{spec}
 
 % =====================================================================================
