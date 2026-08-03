@@ -131,8 +131,8 @@ asymptotic-yield theorem; the RTL injection gate remains evidence-gated.
       deprecation banner naming its replacement and quoting both errors; the bytes are
       kept as the historical record, since it compiles nowhere and deleting another
       track's file is not ours to do."""
-    new_ledger_mixer = r"""\item \textbf{(Closed at Pass 2805.)} The historical dead source
-      \cmd{rtl/w33\_spread\_mixer36.sv} was removed.  The only live mixer is
+    new_ledger_mixer = r"""\item \textbf{(Closed at Pass 2805.)} The historical dead source was removed:
+      \cmd{rtl/w33\_spread\_mixer36.sv}.  The only live mixer is
       \cmd{rtl/w33\_pass2773\_spread\_mixer36\_synth.sv}; provenance is retained in Git
       history rather than in an unparseable source file."""
     text = text.replace(old_ledger_mixer, new_ledger_mixer)
