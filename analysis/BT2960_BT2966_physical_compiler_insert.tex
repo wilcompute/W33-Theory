@@ -1,0 +1,35 @@
+\section{Passes 2960--2966: physical observer, coherent M36, dihedral OAM curvature, and reversible compilation}
+\label{sec:bt2960-bt2966}
+
+The exact fifteen-probe affine-support observer admits a minimum-incidence factorization through the ternary single-parity-check code $[5,4,2]_3$.  Up to monomial equivalence its five linear forms are
+\[
+ x_0,\ x_1,\ x_2,\ x_3,\ x_0+x_1+x_2+x_3.
+\]
+Computing each form once and sharing its three support offsets reduces linear-form incidence from $24$ to $8$.  Only one non-native four-trit mixer is required; a balanced implementation uses three ternary adders at depth two.  The corrected systematic triplets recover the four trits with eight NOT and eight CNOT operations, while the fifth triplet remains a parity syndrome.
+
+For the compiled deep-$M_{36}$ branch, exhaustive coherent Pauli-axis perturbation gives 189 single-location quadratic susceptibilities with spectrum
+\[
+ 0^{14},\quad (1/18)^{66},\quad (2/27)^{41},\quad (1/6)^{22},\quad (2/9)^{46}.
+\]
+Common systematic $H$-axis rotations have coefficients $7/18,7/54,7/18$ for $X,Y,Z$, respectively.  The complete two-location Pauli census contains $16{,}497$ events.  A flagged-leakage monitor of efficiency $\eta$ gives the adversarial first-order bound $p_{\rm bad}\le34(1-\eta)\ell+O(\ell^2)$ for per-location leakage probability $\ell$ across the seventeen circuit locations.
+
+All $36$ spreads of the present $W(3,3)$ realization have the same routing curvature.  Their $120$ triangle holonomies split as sixty transpositions and sixty double transpositions.  After tree gauge fixing, the thirty-six residual chords split $18+18$ and generate
+\[
+ \operatorname{Hol}=D_4,
+ \qquad |D_4|=8,
+\]
+with element-order profile $1^1 2^5 4^2$.  The sign projection obeys all $210$ tetrahedral Bianchi checks, so the surviving obstruction is nonabelian rather than an abelian parity cocycle.
+
+A configurable ten-OAM by four-slot channel model now includes coherent nearest-neighbour OAM coupling, phase noise in a four-port Fourier multiport, insertion loss, detector efficiency, and dark counts.  Its supplied parameter profiles are synthetic engineering probes and are not hardware calibrations.
+
+The reversible compiler is no longer a truth-table placeholder.  A generic completion of the $8192$-state frame-route permutation has an optimized star upper bound of $39{,}472$ multi-controlled swaps.  Exploiting
+\[
+ R=40r+a=(r\ll5)+(r\ll3)+a
+\]
+produces an explicit valid-subspace network of $120$ Toffoli and $79$ CNOT gates.  Exhaustive simulation covers all $81\cdot40=3240$ valid inputs and returns all twenty-four scratch bits to zero.
+
+Two additional closures follow.  First, three distinct pilot slots are necessary and sufficient to detect every arbitrary nonidentity $S_4$ permutation inserted on one edge of one spread triangle: one pilot detects $18/23$, two detect $22/23$, and three detect all $8280$ exact fault cases.  Second, the involution
+\[
+ K(x_0,x_1,x_2,x_3)=(x_1,x_0,x_3,x_2)
+\]
+is anti-symplectic, $K^TJK=-J$.  The phase transducer $\sigma(x,p)=x^TJp$ simultaneously implements the $W(3,3)$ commutation test, the route-dependent qutrit phase, and the affine-support probe triplet.  Globally its three phase values occur $1080$ times each.  On the deep-$M_{36}$ family-zero labels, $K$ swaps $(\mu,\nu)=(1,2)$ for ray 5 to $(2,1)$ for ray 7.  This is an exact label-level covariance, not a replacement for the compiled distillation circuit.
