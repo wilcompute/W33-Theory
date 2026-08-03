@@ -1,0 +1,30 @@
+{
+  "abelian_sign_curvature": {
+    "cohomology_note": "The sign projection is an edge coboundary; the obstruction is nonabelian D4 curvature.",
+    "even_triangles": 60,
+    "odd_triangles": 60,
+    "tetrahedral_bianchi_checks": 210,
+    "violations": 0
+  },
+  "claim_boundary": "Exact for all 36 spreads of this W(3,3) realization and arbitrary local S4 slot relabelings. Physical optical phases remain unmeasured.",
+  "gauge_equivalence_invariants_identical_for_all_spreads": true,
+  "gauge_fixed_chord_histogram": {
+    "2-1-1": 18,
+    "2-2": 18
+  },
+  "generated_holonomy_group": "D4",
+  "group_element_order_histogram": {
+    "1": 1,
+    "2": 5,
+    "4": 2
+  },
+  "group_order": 8,
+  "schema": "w33.pass2962.spread_gauge_classification.v1",
+  "spread_count": 36,
+  "status": "COMPLETE_EXACT",
+  "tree_gauge_fixed_chords": 36,
+  "triangle_holonomy_histogram": {
+    "2-1-1": 60,
+    "2-2": 60
+  }
+}
