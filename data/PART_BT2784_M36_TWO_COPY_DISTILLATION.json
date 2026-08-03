@@ -1,0 +1,35 @@
+{
+  "schema": "w33.pass2784.m36_two_copy_distillation.v1",
+  "scope_boundary": "This is exhaustive for two-copy binary [[4,2]] stabilizer projections, all syndromes, and the four two-qubit Clifford orbits represented inside M36. It is not an exhaustive classification of arbitrary multi-copy ququart stabilizer protocols.",
+  "search": {
+    "best_output_infidelity_slope_in_p": 0.5,
+    "input_infidelity_slope_in_p": 0.75,
+    "m36_clifford_orbit_representatives": 4,
+    "m36_closed_instances": 9264,
+    "optimal_instances": 12,
+    "protocol_instances": 85680,
+    "rank2_isotropic_stabilizer_subspaces": 5355,
+    "strictly_distilling_instances": 48,
+    "syndromes_per_subspace": 4
+  },
+  "selected_protocol": {
+    "accepted_eigenvalues": [1, 1],
+    "checks": ["IYYX", "YXIY"],
+    "distillation_region": "0<p<2/3",
+    "equivalent_input_fidelity_threshold": "F_in>1/2",
+    "fixed_points_in_p": [0, 0.6666666666666666, 1],
+    "ideal_success_probability": 0.5000000000000002,
+    "input_ray": [0, 1, 2],
+    "input_vector": "(0,1,-omega,omega^2)/sqrt(3)",
+    "logical_X": ["XYII", "YXXI"],
+    "logical_Z": ["IXXI", "XIIX"],
+    "logical_clifford_correction": {
+      "matrix_word_product": ["H1", "S0", "S1"],
+      "target_ray": [1, 2, 1]
+    },
+    "output_fidelity": "(5p^2-12p+8)/(4*(p^2-2p+2))",
+    "output_infidelity": "p*(4-p)/(4*(p^2-2p+2))",
+    "success_probability": "(p^2-2p+2)/4"
+  },
+  "status": "EXACT_EXHAUSTIVE_TWO_COPY_SEARCH"
+}
