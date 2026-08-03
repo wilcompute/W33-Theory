@@ -1,0 +1,14 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "2820-2824",
+  "owner": "agent/pass2820-2824-blueprint-hardening",
+  "status": "reserved",
+  "reserved_after": "canonical Pass 2808 PG(3,2) tetrahedral support lift",
+  "passes": {
+    "2820": "minimal-versus-public ISA and evidence-state truth repair",
+    "2821": "deep M36 distillation operating curve and superseded-no-go erratum",
+    "2822": "PG(3,2) tetrahedral support-lift codec integration",
+    "2823": "all-register sensor, transpose, and mixer scope hardening",
+    "2824": "executable blueprint migration, compile, PDF, and drift closure"
+  }
+}
