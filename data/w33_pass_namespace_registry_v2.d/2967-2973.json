@@ -1,0 +1,17 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "2967-2973",
+  "owner": "agent/pass2967-2973-s6-two-graph-route-code-r2",
+  "status": "source_complete_pending_observed_ci_and_pdf_evidence",
+  "reserved_after": "completed Passes 2960-2966 physical compiler packet",
+  "passes": {
+    "2967": "refine all-spread D4 holonomy to the exceptional ten-point S6 two-graph and exact Bianchi design",
+    "2968": "derive the parity-curvature [45,9,9]_2 gauge code and compressed 36-bit route syndrome",
+    "2969": "correct the chirality receiver optimality label and close ideal n-copy discrimination formulas",
+    "2970": "weld the three-pilot full-S4 detector to the multi-edge odd-parity decoder",
+    "2971": "promote corrected theorems into w33_paper.tex and photonic_holonet.tex",
+    "2972": "integrate holonet_machine_blueprint.tex and docs/index.html fail-closed",
+    "2973": "audit claims against Chat7, primary literature and the completed 2960-2966 packet"
+  },
+  "claim_boundary": "Exact finite routing and ideal pure-state results only; measured optical performance and continuum gauge claims remain outside scope."
+}
