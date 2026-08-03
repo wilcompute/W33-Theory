@@ -1,0 +1,59 @@
+\section{Spread curvature, route decoding, and corrected chirality readout}
+\label{sec:bt2967-bt2970}
+
+For spread transport permutations \(g_{ij}\in S_4\), define
+\[
+ a_{ij}=\operatorname{sgn}(g_{ij}),\qquad
+ \kappa_{ijk}=\operatorname{sgn}(g_{ki}g_{jk}g_{ij})=(\delta a)_{ijk}.
+\]
+Pass~2967 enumerates all \(36\) spreads.  Each has \(60\) transposition and
+\(60\) double-transposition triangle holonomies.  The odd triangles form a
+\(2-(10,3,4)\) design and satisfy the exact Bianchi identity
+\[
+ \delta\kappa=\delta^2a=0
+\]
+on all \(210\) tetrahedra.  All vertex-sign gauges preserve \(\kappa\).  The
+common switching class contains the Petersen graph and has
+\[
+ \operatorname{Aut}(\mathcal T)\cong\mathrm{P}\Sigma\mathrm L(2,9)\cong S_6,
+ \qquad |\operatorname{Aut}(\mathcal T)|=720.
+\]
+The abstract two-graph identification is standard; the exact emergence from
+every W33 spread-router table is the project-specific result.
+
+Let \(H\in\mathbb F_2^{120\times45}\) be triangle--edge incidence.  Pass~2968
+proves
+\[
+ \operatorname{rank}H=36,
+ \qquad \ker H=\operatorname{Cut}(K_{10})=[45,9,9]_2.
+\]
+Thus every nongauge odd-parity fault through weight eight is detected and every
+odd-parity fault through weight four is correctable modulo vertex switching.
+
+Pass~2969 corrects the receiver optimality label.  The minimum project-local
+Pauli cover remains \(\{YI,IY\}\), but
+\[
+ \tfrac12(1+1/\sqrt3)=0.788675\ldots
+\]
+is its selected local-Pauli success, not the unrestricted Helstrom bound.  Since
+all conjugate pairs have squared overlap \(1/3\), the ideal equal-prior optimum is
+\[
+ \boxed{P_{\rm H}^{(1)}=\tfrac12(1+\sqrt{2/3})=0.908248\ldots .}
+\]
+For \(n\) copies,
+\[
+ P_{\rm H}^{(n)}=\tfrac12(1+\sqrt{1-3^{-n}}).
+\]
+Adaptive individual measurements are known to attain this collective bound for
+binary pure states (Ac\'in et al., Phys. Rev. A \textbf{71}, 032338 (2005));
+this attainability theorem is prior art.
+
+Finally, Pass~2970 combines the completed three-pilot theorem with the parity
+code.  Three pilots identify one arbitrary nonidentity \(S_4\) error on one
+route edge, including even errors invisible to sign curvature.  The curvature
+layer adds exact multi-edge correction for the odd-parity projection.
+
+\paragraph{Boundary.}
+These are finite routing and ideal receiver statements, not measured optical
+Berry phases, continuum gauge fields, loss budgets, or simultaneous
+arbitrary-\(S_4\) multi-edge guarantees.
