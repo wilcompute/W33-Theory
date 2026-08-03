@@ -1,0 +1,110 @@
+name: Passes 2808-2812 Holonet Blueprint Hardening
+
+on:
+  push:
+    branches:
+      - agent/pass2808-2812-blueprint-hardening
+    paths:
+      - holonet_machine_blueprint.tex
+      - analysis/BT2808_BT2812_blueprint_evidence_insert.tex
+      - analysis/bt2808_2812_blueprint_truth_gate.py
+      - analysis/BT2808_BT2812_blueprint_hardening.md
+      - tests/test_bt2808_2812_blueprint_truth_gate.py
+      - data/w33_pass_namespace_registry_v2.d/2808-2812.json
+      - .github/workflows/w33_pass2808_2812_blueprint_hardening.yml
+  pull_request:
+    branches:
+      - master
+    paths:
+      - holonet_machine_blueprint.tex
+      - analysis/BT2808_BT2812_blueprint_evidence_insert.tex
+      - analysis/bt2808_2812_blueprint_truth_gate.py
+      - analysis/BT2808_BT2812_blueprint_hardening.md
+      - tests/test_bt2808_2812_blueprint_truth_gate.py
+      - data/w33_pass_namespace_registry_v2.d/2808-2812.json
+      - .github/workflows/w33_pass2808_2812_blueprint_hardening.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pass2808-2812-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  migrate-verify-compile:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Check out writable head branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install focused test dependency
+        run: python -m pip install pytest
+
+      - name: Apply idempotent blueprint migration
+        run: python analysis/bt2808_2812_blueprint_truth_gate.py --write
+
+      - name: Recheck truth gate without mutation
+        run: python analysis/bt2808_2812_blueprint_truth_gate.py --check
+
+      - name: Run focused regressions
+        run: pytest -q tests/test_bt2808_2812_blueprint_truth_gate.py
+
+      - name: Install Tectonic
+        uses: WtfJoke/setup-tectonic@v4
+        with:
+          tectonic-version: 0.16.9
+
+      - name: Compile blueprint
+        run: tectonic --keep-logs holonet_machine_blueprint.tex
+
+      - name: Reject TeX errors and layout overflow
+        shell: bash
+        run: |
+          test -s holonet_machine_blueprint.pdf
+          test -f holonet_machine_blueprint.log
+          if grep -E "Overfull|Undefined control sequence|LaTeX Error|Emergency stop|Fatal error" holonet_machine_blueprint.log; then
+            echo "Blueprint log contains a release-blocking TeX or layout error."
+            exit 1
+          fi
+
+      - name: Check source hygiene
+        run: git diff --check
+
+      - name: Commit deterministic generated artifacts
+        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+        shell: bash
+        env:
+          TARGET_BRANCH: ${{ github.event.pull_request.head.ref || github.ref_name }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add holonet_machine_blueprint.tex
+          git add data/PART_BT2808_BT2812_BLUEPRINT_HARDENING_results.json
+          git add -f holonet_machine_blueprint.pdf
+          if git diff --cached --quiet; then
+            echo "Blueprint source, certificate, and PDF are already frozen."
+          else
+            git commit -m "Passes 2808-2812: freeze hardened Holonet blueprint"
+            git push origin "HEAD:${TARGET_BRANCH}"
+          fi
+
+      - name: Upload blueprint evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: pass2808-2812-holonet-blueprint
+          path: |
+            holonet_machine_blueprint.tex
+            holonet_machine_blueprint.pdf
+            holonet_machine_blueprint.log
+            data/PART_BT2808_BT2812_BLUEPRINT_HARDENING_results.json
