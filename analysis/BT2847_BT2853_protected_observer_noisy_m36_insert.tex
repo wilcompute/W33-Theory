@@ -1,0 +1,60 @@
+\section{Protected support telemetry, active diagnosis, and noisy deep-grade operation}
+\label{sec:bt2847-2853}
+
+The protected support observer admits two distinct exact compression theorems. If the
+historical twelve-operation trajectory is held fixed, binary integer programming proves
+that its $52$ raw support bits can be punctured to $28$, but not fewer, while preserving
+minimum distance four. Across the eight distance-four trajectory words the exact optima
+are
+\[
+(28,29,29,29,28,29,28,28).
+\]
+The canonical optimum is certified by coincident primal and dual bounds and zero MIP gap.
+
+A second construction changes the measurement schedule. Every support observation after
+an affine Clifford evolution is an affine-square function
+\[
+\mathbf 1[a\cdot x+b\ne0]=(a\cdot x+b)^2\qquad\text{over }\mathbb F_3.
+\]
+The $52$ trajectory columns collapse to fourteen distinct functions. The optimal
+integer-repetition distance-four code uses twelve of them twice, for only $24$ samples.
+This is not a puncturing theorem: it requires independent resampling of selected affine
+features.
+
+The hidden symmetry is exact. The distance-four word digraph has automorphism order
+$32$ and consists of two directed $K_{2,2}$ components. The $48$ minimum eight-tap fast
+selectors form one block orbit under a group of order
+\[
+6912,
+\qquad
+S_3\times(S_4\wr S_2).
+\]
+
+Under an independent asymmetric support channel, maximum-likelihood decoding weights
+$0\to1$ and $1\to0$ events separately. It agrees with Hamming decoding in the symmetric
+model and reduces deterministic modelled word-error counts by more than seventy percent
+in each tested asymmetric profile. These are synthetic-channel results, not detector
+calibration.
+
+For the explicit deep-grade $M_{36}$ branch, let
+\[
+R(p)=\frac{p(4-p)}{3(p^2-2p+2)}.
+\]
+A phenomenological output depolarization $g$ gives $T_g(p)=g+(1-g)R(p)$ and fixed-point
+polynomial
+\[
+(p-1)\bigl(3p^2-(2+4g)p+6g\bigr).
+\]
+The useful and unstable fixed points merge at
+\[
+ g_c=\frac{7-3\sqrt5}{4}=0.072949016875\ldots,
+ \qquad
+ p_c=\frac{3-\sqrt5}{2}=0.381966011250\ldots .
+\]
+This is a symbolic phenomenological boundary, not a circuit-level logical threshold.
+
+Finally, support feedback can select the next probe. Exact adaptive-policy search lowers
+the no-reset identification horizon from six preset operations to four, with uniform mean
+$94/27$ operations among minimum-depth policies. The machine therefore has three honest
+telemetry modes: eight-bit fast preset readout, twenty-four-sample protected affine
+readout, and four-operation worst-case active diagnosis.
