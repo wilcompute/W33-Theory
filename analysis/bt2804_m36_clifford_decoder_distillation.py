@@ -270,7 +270,9 @@ def scan_grade(input_ray, stabilizer_fidelity, orbit, prepared):
     for (q_coefficients, n_coefficients, difference_text), multiplicity in sorted(
         profile_counts.items(), key=lambda item: str(item[0])
     ):
-        difference = sp.sympify(difference_text)
+        difference = sp.sympify(
+            difference_text, locals={"p": p, "sqrt": sp.sqrt}
+        )
         if difference == 0:
             classification = "identical"
             identical += multiplicity
