@@ -1,0 +1,240 @@
+\end{center}
+
+\subsection{The measured cell budget}\label{sec:budget}
+
+\begin{plain}
+Below is what the machine actually costs, measured by running the industry-standard
+open-source tools --- Yosys to translate the design into logic gates, nextpnr to place
+those gates on a real chip --- targeting a Lattice iCE40 UP5K, a chip you can buy on a
+breakout board for about \$25.
+
+The entire arithmetic core of this computer is \emph{seventy-two} logic cells, out of$5{,}280$ available. It uses $1.4\%$ of a \$25 chip.
+\end{plain}
+
+\begin{spec}[Measured; iCE40 UP5K SG48, Yosys 0.67 $+$ nextpnr]
+\begin{center}\small
+\begin{tabular}{@{}lrrl@{}}
+\toprule
+\textbf{Build} & \textbf{Logic cells} & \textbf{$F_{\max}$ (MHz)} & \textbf{Contains}\\
+\midrule
+$F$ only                 & 16 & 230.84 & one Fourier gate \\
+$F_p + F_f$              & 19 & 230.84 & both Fourier gates \\
+$F$ and $S$ (4 opcodes)  & 40 &  86.60 & the single-qutrit Cliffords \\
+$\mathrm{CX}$ only       & 33 &  72.40 & the entangler, both directions \\
+$\sigma^5{=}Z$ only      & 20 & 144.07 & the translation \\
+all Clifford, no $Z$     & 65 &  60.80 & \textcolor{bad}{cannot leave the origin} \\
+\textbf{full frame unit} & \textbf{72} & \textbf{60.80} & \textcolor{good}{the machine} \\
+\midrule
+\multicolumn{4}{@{}l}{\itshape For comparison, elsewhere in the design:}\\
+$\mathrm{CX}$, bare loadable        &  23 & 72.40 & \cmd{w33\_pass2752\_cx\_loadable\_frame.sv}\\
+$36$-lane mixer, serial            & 4048 & 19.65 & \cmd{w33\_pass2612\_serial\_mixer.sv}\\
+$36$-lane mixer, parallel          & \multicolumn{2}{l}{13{,}965 LUT4 $+$ 799 carry} &
+    \textcolor{bad}{does not fit any iCE40}\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{spec}
+
+\begin{plain}
+The last two rows are worth a moment. The ``mixer'' is the part that combines $36$
+signals at once. Built the obvious way --- all $36$ lanes in parallel --- it needs
+about $14{,}000$ logic cells, nearly twice what the largest chip in this family has. Built
+serially, one lane at a time, it needs $4{,}048$: about a third of the area, at
+$1/36$ of the speed. That is the kind of trade a blueprint exists to make explicit.
+\end{plain}
+
+\begin{gotwrong}
+\textbf{Every cell count in this project before Pass 2753 was wrong, and the reason is
+instructive.} We reported $13$ cells for $F$ and $S$, $8$ for $\mathrm{CX}$, $42$ for the
+ISA. Those modules had no load port. By the reachability theorem of \S\ref{sec:isa}, a
+register driven only by Clifford opcodes can never leave $(0,0,0,0)$ --- so the synthesis
+tool \emph{proved the state was constant and deleted six of the eight flip-flops}. We were
+measuring the area of nothing.
+
+\medskip\noindent
+Two independent teams shipped this same defect within four hours of each other. Both had
+\emph{exhaustive} testbenches --- one covered all $81^2$ pairs of frames --- and both
+passed, because the testbenches drove the \emph{combinational} logic and never
+instantiated the sequential wrapper.
+
+\medskip\noindent
+\textbf{Simulation cannot detect this class of defect at all.} A module that folds to a
+constant still simulates correctly. It just does nothing. Only a synthesis frontend asks
+whether the state can move.
+
+\medskip\noindent
+One figure survived unchanged: $\sigma^5=Z$ was reported at $21$ cells and re-measures at
+$20$. It was always real --- because it is the one instruction that is not linear, and so
+the one instruction that could always move the state. The theory predicted exactly which
+number would survive.
+\end{gotwrong}
+
+% =====================================================================================
+\section{The physical layer}
+% =====================================================================================
+
+\begin{plain}
+Everything above is logic --- it would work on any hardware that can implement the eight
+operations. This section is about doing it with light, which is the intended
+implementation, and about what has already been demonstrated in a laboratory as opposed
+to designed on paper.
+
+A single photon carries several independent properties. Two of them are useful here:
+\emph{when} it arrives (its time bin) and \emph{what colour} it is (its frequency bin).
+Chop time into three slots and colour into three bands, and one photon carries two
+qutrits --- the ``past'' and ``future'' registers of \S\ref{sec:physics}.
+\end{plain}
+
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize]
+  \draw[->,line width=0.8pt] (0,0) -- (9.0,0) node[right,font=\scriptsize] {time};
+  \draw[->,line width=0.8pt] (0,0) -- (0,3.2) node[above,font=\scriptsize] {frequency};
+  \foreach \i in {0,1,2}{
+    \draw[dashed,draw=rule] (0,\i*0.95+0.5) -- (8.6,\i*0.95+0.5);
+    \draw[dashed,draw=rule] (\i*2.7+0.9,0) -- (\i*2.7+0.9,3.0);
+  }
+  \foreach \i in {0,1,2}{
+    \node[font=\scriptsize,text=future,left] at (-0.05,\i*0.95+0.95) {$f_\i$};
+    \node[font=\scriptsize,text=past,below] at (\i*2.7+1.35,-0.08) {$t_\i$};
+  }
+  \foreach \i in {0,1,2}{
+    \fill[past!60,rounded corners=1pt]
+      (\i*2.7+1.0,\i*0.95+0.62) rectangle (\i*2.7+1.7,\i*0.95+1.28);
+  }
+  \node[align=left,text width=5.0cm,font=\scriptsize] at (12.3,1.7)
+   {\textbf{The \textsc{sum} gate}\\[3pt]
+    $\ket{f,t}\mapsto\ket{f,\;t+f \bmod 3}$\\[4pt]
+    A chirped fibre Bragg grating delays each colour by a different amount, so the
+    photon's \emph{colour} controls how far its \emph{arrival time} shifts. That is a
+    controlled-add, implemented with one passive optical element.};
+  \node[align=left,text width=5.0cm,font=\scriptsize,text=rule] at (12.3,-0.5)
+   {Demonstrated: Imany \emph{et al.}, \emph{npj Quantum Information} \textbf{5}, 59
+    (2019). Three $3$\,ns time bins at $6$\,ns spacing, three frequency bins at
+    $380$\,GHz, $-2$\,ns/nm dispersion, $18$\,ns wraparound. Measured basis fidelity
+    $0.92\pm0.01$; certified entanglement of formation $\ge 1.19\pm0.12$ ebits.};
+\end{tikzpicture}
+\end{center}
+
+\begin{spec}[Evidence boundary --- what is measured and what is not]
+\textbf{Measured in a laboratory:} the deterministic single-photon qutrit \textsc{sum}
+gate, at fidelity $0.92\pm0.01$, with the entangled output certified.
+
+\smallskip\noindent
+\textbf{Proved exactly:} the group theory, the geometry, the class atlas, the ISA
+semantics, the reachability, the synthesis and placement figures.
+
+\smallskip\noindent
+\textbf{Neither, and stated as such:} source efficiency, insertion-loss engineering,
+fault-tolerance thresholds, and the magic-state injection route. The $M_{36}$ resources
+are typed \cmd{M36\_Q4\_RAW} in the controller and injection is \emph{refused} in RTL
+until a proved ququart protocol supplies a validity assertion. That refusal is a designfeature: it makes the gap impossible to paper over.
+\end{spec}
+
+% =====================================================================================
+\section{Why the exponent nine}
+% =====================================================================================
+
+\begin{plain}
+A small but pretty result that shows how tightly the layers fit.
+
+To tell which operation the machine just performed, you measure a quantity and look it up
+in a table. The obvious quantity --- the ``trace'' --- has a flaw: it changes if the whole
+state picks up an irrelevant overall phase, which physically means nothing. The fix used
+in this project is to raise the trace to the \emph{ninth} power and divide by a
+determinant. The ninth power was found empirically. Where does nine come from?
+\end{plain}
+
+\begin{spec}[Derived, Pass 2779]
+For a $d$-dimensional representation, under $U\mapsto\lambda U$ we have
+$\mathrm{Tr}(U^k)^e\mapsto\lambda^{ke}\,\mathrm{Tr}(U^k)^e$ and
+$\det(U^k)\mapsto\lambda^{kd}\det(U^k)$, so
+\[
+  \Theta_k(g)=\frac{\mathrm{Tr}(U_g^k)^e}{\det(U_g^k)}
+\]
+is phase-invariant for all $\lambda$ \emph{exactly} when $e=d$. Here $d=9$, the dimension
+of the two-qutrit state space --- which by \S\ref{sec:physics} is
+$\dim\mathrm{End}(\mathbb{C}^3)$. Verified numerically: $e\in\{3,8,10\}$ fail, $e=9$ holds.
+
+\smallskip\noindent
+If the phase ambiguity were a \emph{finite} group $\mu_m$ one could use any
+$e\equiv 9\pmod m$, possibly smaller. We computed the scalar subgroup of the generated
+matrix group by collision sampling and it is $\mu_{12}$. Since $9\not\equiv 0\pmod{12}$,
+the determinant is genuinely required, and $9$ is the \emph{smallest} exponent that
+works: the sensor is minimal.
+\end{spec}
+
+\headline{$\mu_{12}=\mu_4\times\mu_3$. The $\mu_3$ is $\omega$, the qutrit alphabet.
+The $\mu_4$ is the quadratic Gauss sum $\sum_j\omega^{j^2}=i\sqrt3$, which is
+\emph{imaginary} precisely because $3\equiv 3 \pmod 4$ --- the same congruence that makes
+time reversal a physical rather than a gauge symmetry.}
+
+\begin{plain}
+That last box is the kind of thing that makes this project worth doing. A practical
+question --- ``why is the exponent nine in the measurement circuit?'' --- turns out to
+have the same answer as an abstract one --- ``why does this geometry distinguish past
+from future?''. Both are the statement that $-1$ is not a perfect square when you count
+modulo $3$.
+\end{plain}
+
+\subsection{And for wider registers, it is usually three}
+
+\begin{spec}[Pass 2791]
+The phase group is not an artefact of the two-qutrit case. At $n=1$ the Clifford group is
+small enough to enumerate exactly rather than sample:
+\[
+  |\langle F,S,X\rangle| = 2592 = \underbrace{12}_{\mu_{12}}\times
+  \underbrace{216}_{|\mathrm{ASp}(2,3)|}\quad\text{--- consistent, so }\mu_{12}\text{ again.}
+\]
+For $n$ qutrits $d=3^n$, so the minimal exponent is the least $e\equiv 3^n \pmod{12}$, and
+$3^n \bmod 12$ cycles $3,9,3,9,\dots$:
+\[
+\begin{array}{c|cccc}
+n & 1 & 2 & 3 & 4\\\hline
+d=3^n & 3 & 9 & 27 & 81\\
+\text{minimal }e & \mathbf{3} & 9 & \mathbf{3} & 9
+\end{array}
+\]
+Verified directly on $3\times3$ unitaries: $e=3$ is phase-invariant, $e\in\{2,4,9\}$ is not.
+\end{spec}
+
+\headline{Odd register widths need only a \emph{cube} of the trace, not a ninth power ---
+a strictly cheaper measurement, alternating with width.}
+
+% =====================================================================================
+\section{The magic states, and the one thing the machine cannot yet do}\label{sec:magic}
+% =====================================================================================
+
+\begin{plain}
+Everything described so far is, in a precise technical sense, \emph{not enough}. The
+eight opcodes generate a large and useful group, but a machine restricted to those
+operations can be simulated efficiently by an ordinary computer. To get a genuine quantum
+advantage you need one more ingredient, traditionally supplied as a special prepared
+state called a \emph{magic state}.
+
+The substrate hands us $36$ candidates for free --- $36$ special directions in the
+four-dimensional space, called the Witting rays. The open question, and the single
+largest gap in this blueprint, is whether those $36$ can be \emph{purified}: whether many
+noisy copies can be distilled into one clean one. Without that, the machine is a very
+elegant classical simulator.
+\end{plain}
+
+\subsection{All thirty-six look identical from the inside}
+
+% The optional argument is braced: an unbraced "]" inside $\mathbb{Z}[\omega]$ closes
+% the optional argument early and LaTeX reports "Extra }, or forgotten $".
+\begin{spec}[{Exact integer arithmetic in $\mathbb{Z}[\omega]$, Pass 2790}]
+Only two overlap values occur among the $36$ rays:
+\[
+  |\langle i|j\rangle|^2 \in \{\,0,\ \tfrac13\,\},
+\]
+and every ray has the \emph{same} profile: $11$ orthogonal partners and $24$ partners at
+overlap $1/3$. There is exactly one Gram profile among all $36$.
+
+\smallskip\noindent
+(The orthogonality graph is $11$-regular on $36$ vertices but \emph{not} strongly
+regular: $\lambda\in\{1,2\}$, $\mu\in\{3,4\}$. Recorded because the near-miss invites a
+false claim.)
+\end{spec}
+
+\begin{plain}
+So no symmetry of the machine can tell one ray from another by looking at how they sit
