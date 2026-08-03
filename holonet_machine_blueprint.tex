@@ -93,7 +93,7 @@
        whose wiring diagram is a piece of finite geometry\\[10pt]
        \normalsize Every figure in this document is measured or proved.}
 \author{\normalsize W(3,3)--E$_8$ project, glue track}
-\date{\normalsize 3 August 2026 \quad$\cdot$\quad Passes 2700--2802}
+\date{\normalsize 3 August 2026 \quad$\cdot$\quad Passes 2700--2837}
 
 \begin{document}
 \maketitle
@@ -738,7 +738,29 @@ The entire arithmetic core of this computer is \emph{seventy-two} logic cells, o
 $5{,}280$ available. It uses $1.4\%$ of a \$25 chip.
 \end{plain}
 
-\begin{spec}[The two engines, measured in one harness]
+\begin{spec}[The three designs, on two parts, in one harness]
+\begin{center}\small
+\begin{tabular}{@{}lrrrrl@{}}
+\toprule
+ & \multicolumn{2}{c}{\textbf{HX8K CT256}} & \multicolumn{2}{c}{\textbf{UP5K SG48}} & \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+\textbf{Design} & \textbf{LC} & \textbf{$F_{\max}$} & \textbf{LC} & \textbf{$F_{\max}$}
+                & \textbf{Opcode}\\
+\midrule
+Minimal engine, $4$ operations & \textbf{43} & \textbf{208.86} & 43 & 72.40 & 2 bits\\
+Public unit, $6$ frame opcodes & 72 & 175.72 & 72 & 60.80 & 3 bits\\
+Engine $+$ support readout     & 48 & 207.64 & 48 & 72.05 & 2 bits\\
+\bottomrule
+\end{tabular}\\[3pt]
+\itshape\footnotesize frequencies in MHz
+\end{center}
+Same cells on both parts --- synthesis does not know the package --- but the HX8K is
+$2.9\times$ faster. \textbf{Every UP5K figure elsewhere in this document therefore
+understates speed by about a factor of three}, and is kept because it is the part the
+$\$25$ board carries.
+\end{spec}
+
+\begin{spec}[Measured on UP5K SG48; the per-instruction breakdown]
 \begin{center}\small
 \begin{tabular}{@{}lrrrl@{}}
 \toprule
@@ -966,6 +988,50 @@ This section is the one that changed most between drafts, and the sequence is wo
 following, because it is a small case study in how a negative result should be read.
 First an exhaustive search said no. Then an argument from resource accounting said the
 ``no'' could not be fundamental. Then a wider search said yes.
+
+But before any of that: the $36$ are not a lucky accident. Count them against the
+machine's own address space.
+\end{plain}
+
+\subsection{Magic is everything except one line}
+
+\begin{plain}
+The machine addresses $40$ points. There are $36$ magic rays. That leaves $4$ --- and a
+\emph{line} of this geometry contains exactly $4$ points. Either a coincidence, or the
+whole story.
+
+Add the four missing directions back --- they turn out to be the four coordinate axes,
+which is to say the ordinary, unmagical computational basis --- and ask what the $40$
+look like together.
+\end{plain}
+
+\begin{spec}[Exact, Pass 2835]
+Adjoin $e_1,\dots,e_4$ to the $36$ rays and compute the orthogonality graph on all $40$:
+\[
+  \text{degrees }\{12{:}40\},\qquad \lambda=2,\qquad \mu=4
+  \;\;\Longrightarrow\;\; \mathrm{SRG}(40,12,2,4),
+\]
+which \emph{is} the $W(3,3)$ collinearity graph of \S\ref{sec:geometry}. The four axes are
+mutually orthogonal --- a $4$-clique, and in a generalised quadrangle of order $(3,3)$ the
+$4$-cliques are exactly the lines. Every magic ray is orthogonal to exactly one axis
+($\{1{:}36\}$), which is the defining GQ axiom, and the resulting nearest-point partition
+is $9+9+9+9$ --- precisely the four families the ray construction produces.
+\end{spec}
+
+\headline{$M_{36}$ is the $40$ points of $W(3,3)$ with \emph{one line} deleted, and the
+deleted line is the computational basis.}
+
+\begin{plain}
+This changes what the magic states \emph{are}. They are not a resource bolted onto the
+substrate and supplied from outside. They are the generic condition of the machine's own
+address space: pick a point at random and it is magic with probability $36/40$. The
+ordinary, classically-simulable states are the single distinguished line you have to
+delete to get rid of the magic.
+
+One more thing falls out, and it is a warning about reading structure off counts. The
+geometry partitions the $36$ into four families of nine. The Clifford group partitions
+them into $4+8+12+12$. \emph{Neither refines the other.} The symmetry and the geometry
+are looking at different things.
 \end{plain}
 
 \subsection{All thirty-six look identical from the inside}
@@ -1049,6 +1115,24 @@ which knows nothing about Clifford orbits, reports results for ``\emph{both} mid
 grades''. Two unrelated computations, the same splitting.
 \end{gotwrong}
 
+\begin{spec}[And nothing an overlap can see tells the twins apart, Pass 2830]
+The \emph{full} stabilizer overlap spectrum --- the multiset of $|\langle s|\psi\rangle|^2$
+over all $60$ stabilizer states --- is a Clifford invariant, and every stabilizer
+R\'enyi entropy and overlap moment is a function of it. Computed exactly in ninths, the
+two $12$-ray classes have the \textbf{identical} spectrum.
+
+\smallskip\noindent
+Across all four classes there are only \textbf{three} distinct spectra. So the entire
+$60$-value distribution has exactly the same resolving power as its single largest entry,
+$F_{\mathrm{stab}}$.
+
+\smallskip\noindent
+\textbf{Consequence.} A protocol that reads its input only through overlap statistics
+\emph{must} treat the two classes alike. The split can matter only to a protocol that uses
+the ray's Clifford orbit --- one that fixes a frame and cares which representative it was
+handed.
+\end{spec}
+
 \subsection{Why the first ``no'' could not have been the last word}
 
 \begin{plain}
@@ -1110,7 +1194,58 @@ its conclusion was correctly stated; the accounting argument said the obstructio
 not be fundamental; the wider search then found the protocol. Nobody was wrong at any
 step --- but a reader who had stopped at ``exhaustive search found nothing'' would have
 drawn exactly the wrong conclusion about the machine.
+
+And now the part that a reader should \emph{not} stop before.
 \end{plain}
+
+\subsection{Usable is not the same as practical}
+
+\begin{spec}[The convergence rate, Pass 2831]
+Linearising the accepted-round map at the pure fixed point:
+\[
+  \frac{dp'}{dp}\Big|_{p=0}=\frac23,\qquad P_{\mathrm{succ}}\big|_{p=0}=\frac12 .
+\]
+The noise is multiplied by two thirds each accepted round. It is \textbf{not} squared.
+Each round consumes two inputs and succeeds half the time, so the raw cost multiplies by
+$2/P_{\mathrm{succ}}\approx4$ per round while the infidelity only falls by a third.
+\end{spec}
+
+\begin{center}\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+start $p$ & to $10^{-3}$ & to $10^{-6}$ & to $10^{-9}$\\
+\midrule
+$0.10$ & $2.3\times10^{7}$  & $4.0\times10^{17}$ & $6.9\times10^{27}$\\
+$0.20$ & $5.6\times10^{8}$  & $9.7\times10^{18}$ & $1.7\times10^{29}$\\
+$0.30$ & $1.5\times10^{10}$ & $2.6\times10^{20}$ & $4.5\times10^{30}$\\
+$0.50$ & $1.1\times10^{14}$ & $1.9\times10^{24}$ & $3.2\times10^{34}$\\
+\bottomrule
+\end{tabular}\\[3pt]
+\itshape\footnotesize raw noisy states consumed per distilled output
+\end{center}
+
+\headline{The map converges \emph{linearly}. Standard distillation is quadratic or cubic
+--- Reed--Muller $15$-to-$1$ gives $p'\approx35p^3$ --- and that gap is the whole game.}
+
+\begin{plain}
+So: the deep-grade branch is a genuine fidelity-improving map and a genuine refutation of
+the earlier no-go. It is \emph{not}, by itself, a usable distillation routine. Ten to the
+twenty-seven raw states is not an engineering number.
+
+What it establishes is that the resource is not inert --- which is the thing that was
+genuinely in doubt. Making it practical needs a branch with super-linear convergence, or
+a portfolio composing several of the $48$. This document reports the honest state of that:
+one improving map, quantified, and a clear statement of what would have to be found next.
+\end{plain}
+
+\begin{gotwrong}[A near-miss in this very section]
+The first draft of the yield analysis described the cost as ``doubly exponential in a good
+way --- the infidelity squares each round.'' It does not; it falls by a factor of $2/3$.
+The tables above were already printed and would have looked like corroboration to anyone
+who did not check the ratio between successive rows. The linearisation is one derivative
+and it changes the conclusion from ``deep targets are cheap'' to ``deep targets are
+impossible.'' Compute the rate; do not eyeball the trend.
+\end{gotwrong}
 
 \begin{spec}[Evidence boundary, stated as bluntly as possible]
 What the deep-grade result \emph{is}: an exact state-fidelity distillation theorem for an
@@ -1172,6 +1307,94 @@ The terminal partition is \emph{discrete}: full ternary phase is forced.
 
 \headline{Support for readout, phase for execution. The compression is real and exact ---
 but it is a lens, not a substrate.}
+
+\subsection{What a readout costs, in joules}
+
+\begin{plain}
+A support readout throws information away --- that is what ``lossy'' means. Landauer's
+principle says throwing information away has an unavoidable energy cost, and here the
+cost is exactly computable, because the fibres are exactly known: a mask of weight $k$
+has exactly $2^k$ preimages, and there are $\binom{4}{k}$ such masks.
+\end{plain}
+
+\begin{spec}[Exact, Pass 2836]
+\[
+  H(\text{state}\mid\text{support})
+  =\frac{1}{81}\sum_{k=0}^{4}\binom{4}{k}2^{k}\,k
+  =\frac{216}{81}
+  =\boxed{\tfrac83\ \text{bits}}
+\]
+\[
+  H(\text{state})=\log_2 81=6.339850,\qquad
+  H(\text{support})=3.673183,\qquad
+  \frac{3.673183}{4}=91.83\%\ \text{efficient}.
+\]
+Over $\mathbb{F}_q$ the closed form is $\;4(q-1)\log_2(q-1)/q$, verified exactly at
+$q=2,3,4,5,7,8,9,11$.
+\end{spec}
+
+\begin{plain}
+At $q=2$ that formula gives \emph{zero}. Over a two-element field the support \emph{is}
+the state, so a support readout destroys nothing at all. Every one of the $8/3$ bits is
+the price of the third field element.
+
+That is the thermodynamic version of the architectural law: \textbf{the phase is
+precisely the part you pay to look at.}
+\end{plain}
+
+\begin{spec}[Landauer, at room temperature]
+\[
+  E\;\ge\;\tfrac83\,k_B T\ln 2\;=\;7.656\times10^{-21}\,\mathrm{J}
+  \;=\;47.78\ \mathrm{meV}\quad\text{at }300\,\mathrm{K},
+\]
+or $7.66$\,pW of unavoidable dissipation at a $1$\,GHz readout rate. This is a floor set
+by information theory, independent of the circuit: no implementation of the support
+readout can beat it.
+\end{spec}
+
+\headline{And the counting floor lands exactly where the search does.
+$\lceil\log_2 81\rceil=7$ bits are needed to label $81$ states; an exhaustive search shows
+no $7$ support taps suffice and exactly $48$ eight-tap sets do. The observer is one bit
+above the floor, and that bit is provably necessary.}
+
+\subsection{Enforcing the law in the netlist}
+
+\begin{plain}
+The law is a theorem about mathematics. It constrains no circuit. Nothing stops an
+engineer from wiring the cheap $4$-bit mask back into the execution path --- and the
+resulting machine would pass simulation almost always, because support \emph{is}
+preserved by most operations. It would drift the first time a translation fired on a
+register holding a $2$.
+
+That is the same failure shape as the folded registers of \S\ref{sec:budget}: correct in
+simulation, wrong in silicon, invisible to the testbench. So the law is enforced
+structurally instead of documented.
+\end{plain}
+
+\begin{spec}[Gate-level information flow, Pass 2834]
+\cmd{scripts/check\_information\_flow.py} flattens the design to gates, builds the driver
+graph and computes reachability in both directions:
+\begin{quote}\ttfamily\footnotesize
+top w33\_support\_readout\_diode: 59 cells after flatten+opt\\
+reverse: support\_mask, tamper\_mask reach none of xp\_o, zp\_o, xf\_o, zf\_o\\
+forward: every frame register reaches the mask\\
+PASS: the readout is a diode.
+\end{quote}
+Self-tested against a negative control --- rewiring a tamper input into the load enable
+makes it report \textsc{violation} on all four registers --- because a guard that can only
+pass is not a guard. The non-congruence witness is asserted in the netlist too and
+SAT-proved ($228$ variables, $600$ clauses).
+
+\smallskip\noindent
+This is the one check in this project that \textbf{fails} rather than warns. Unlike a
+rediscovery collision, a backward edge has no benign reading.
+\end{spec}
+
+\begin{plain}
+It is also nearly free. Adding the readout to the minimal engine costs \textbf{five logic
+cells} and $0.6\%$ of the clock: $43\to48$ cells, $208.86\to207.64$\,MHz. The cheap layer
+really is cheap --- and now it is cheap \emph{and} provably one-way.
+\end{plain}
 
 \begin{plain}
 This is a useful kind of negative result, because it tells you exactly where to put the
@@ -1404,9 +1627,9 @@ Everything this blueprint asserts, with how it is known. If a row says
 output; if it says ``published'' someone else did it and we cite them.
 \end{plain}
 
-{\small
+{\footnotesize
 \begin{center}
-\begin{tabular}{@{}p{8.6cm}p{2.5cm}p{4.0cm}@{}}
+\begin{tabular}{@{}p{8.4cm}p{2.4cm}p{3.9cm}@{}}
 \toprule
 \textbf{Claim} & \textbf{Status} & \textbf{Artifact}\\
 \midrule
@@ -1439,7 +1662,18 @@ The monotone never forbids two-copy distillation & proved & Pass 2798\\
 Deep grade: $48$ improving branches, $0<p<2/3$ & \textbf{prior art} & parallel track, Pass 2821\\
 Support is not an execution congruence: $16{\to}40{\to}78{\to}81$ & \textbf{prior art} & parallel track, Pass 2822\\
 Phase group $=\mu_{12}$ for \emph{every} $n$ & proved & Pass 2799\\
-Minimal engine: $\mathbf{43}$ LC, $\mathbf{72.40}$\,MHz & \textbf{measured} & Pass 2796\\
+Minimal engine: $\mathbf{43}$ LC, $72.40$\,MHz (UP5K) & \textbf{measured} & Pass 2796\\
+\quad same engine on HX8K: $\mathbf{208.86}$\,MHz & \textbf{measured} & Pass 2833\\
+$M_{36}$ is $W(3,3)$ minus one line & \textbf{proved} & Pass 2835, SRG$(40,12,2,4)$\\
+\quad the deleted line is the computational basis & proved & Pass 2835\\
+Support readout erases exactly $8/3$ bits & \textbf{proved} & Pass 2836\\
+\quad $4(q{-}1)\log_2(q{-}1)/q$; zero at $q{=}2$ & proved & 8 field sizes\\
+\quad Landauer $47.78$\,meV at $300$\,K & derived & Pass 2836\\
+The two $12$-ray classes share the full spectrum & \textbf{proved} & Pass 2830\\
+Deep-grade map is \emph{linearly} convergent, rate $2/3$ & \textbf{proved} & Pass 2831\\
+\quad $\sim10^{27}$ raw states for $10^{-9}$ infidelity & computed & Pass 2831\\
+Three-copy super-multiplicativity & \textcolor{bad}{no witness} & not a proof either way\\
+Readout diode: mask reaches no frame register & \textbf{proved} & gate level, Pass 2834\\
 \quad symplectic on differences, all four opcodes & SAT & $4100$ vars / $11278$ clauses\\
 Public frame unit: $72$ LC, $60.80$\,MHz & \textbf{measured} & \S\ref{sec:budget}\\
 Loadable CX: $23$ LC, $72.40$\,MHz, $\mathrm{CX}^3{=}I$ & measured $+$ proved &

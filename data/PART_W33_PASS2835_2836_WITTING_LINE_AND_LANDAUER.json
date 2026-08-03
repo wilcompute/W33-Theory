@@ -1,0 +1,96 @@
+{
+  "pass_2835": {
+    "M36_is_W33_minus_a_line": true,
+    "axes_form_a_line": true,
+    "each_magic_ray_meets_the_line_once": true,
+    "family_sizes": {
+      "0": 9,
+      "1": 9,
+      "2": 9,
+      "3": 9
+    },
+    "is_srg": true,
+    "rays": 40,
+    "srg_parameters": [
+      40,
+      12,
+      2,
+      4
+    ]
+  },
+  "pass_2836": {
+    "H_cond_bits": "8/3",
+    "H_cond_bits_numerator": 216,
+    "H_cond_float": 2.6666666666666665,
+    "H_state_bits": 6.339850002884624,
+    "H_support_bits": 3.673183336217958,
+    "fibres": {
+      "0": [
+        1,
+        1
+      ],
+      "1": [
+        4,
+        2
+      ],
+      "2": [
+        6,
+        4
+      ],
+      "3": [
+        4,
+        8
+      ],
+      "4": [
+        1,
+        16
+      ]
+    },
+    "general_q": {
+      "11": {
+        "agree": true,
+        "closed_form": 12.079738526863137,
+        "exact": 12.079738526863135
+      },
+      "2": {
+        "agree": true,
+        "closed_form": 0.0,
+        "exact": 0.0
+      },
+      "3": {
+        "agree": true,
+        "closed_form": 2.6666666666666665,
+        "exact": 2.6666666666666665
+      },
+      "4": {
+        "agree": true,
+        "closed_form": 4.754887502163468,
+        "exact": 4.754887502163468
+      },
+      "5": {
+        "agree": true,
+        "closed_form": 6.4,
+        "exact": 6.4
+      },
+      "7": {
+        "agree": true,
+        "closed_form": 8.862728573901107,
+        "exact": 8.862728573901107
+      },
+      "8": {
+        "agree": true,
+        "closed_form": 9.825742227201614,
+        "exact": 9.825742227201614
+      },
+      "9": {
+        "agree": true,
+        "closed_form": 10.666666666666666,
+        "exact": 10.666666666666666
+      }
+    },
+    "info_floor_bits": 7,
+    "landauer_joules_at_300K": 7.655943693543263e-21,
+    "observer_taps_needed": 8,
+    "support_channel_efficiency": 0.9182958340544894
+  }
+}
