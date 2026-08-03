@@ -2,19 +2,33 @@
   "schema": "w33.pass_namespace_reservation.v2",
   "range": "2974-2983",
   "owner": "agent/pass2974-2983-nonabelian-golden-information-closure",
-  "status": "reserved",
+  "status": "source_complete_exact_fronts_and_noncss_pilot_priority_evidence_pending",
   "reserved_after": "parallel reservation frontier through Pass 2973",
-  "passes": {
-    "2974": "construct a genuinely nonabelian D4 multi-edge route syndrome and classify its gauge kernel",
-    "2975": "derive the exceptional degree-ten S6 two-graph analytically from six-set 3+3 partitions and W33 spread transport",
-    "2976": "compile an adaptive finite-copy chirality receiver and compare ideal Helstrom, local Pauli, and noisy optical policies",
-    "2977": "enumerate the full six-qubit isotropic stabilizer search space for three-copy deep-M36 distillation beyond CSS",
-    "2978": "isolate a priority evidence lane that avoids the repository-wide Actions queue while preserving release integrity",
-    "2979": "classify R4/U6 words and prove the golden word is selected by shortest rational-line reduction and Fibonacci quotient action",
-    "2980": "BONKERS: turn the golden quotient into a reversible Zeckendorf/Sturmian schedule and test entropy and switching-cost optimality",
-    "2981": "BONKERS: fuse nonabelian D4 curvature with the R4/U6 arithmetic controller into a semidirect hybrid route-memory code",
-    "2982": "promote verified results into the W33 paper, Photonic Holonet, machine blueprint, and live atlas",
-    "2983": "freeze exact certificates, focused regressions, literature boundaries, and the guarded release workflow"
+  "source_completion": {
+    "exact_nonabelian_gauge_quotient": true,
+    "constructive_s6_two_graph": true,
+    "adaptive_receiver_and_synthetic_detector_profiles": true,
+    "general_isotropic_pilot_subspaces": 649940,
+    "general_isotropic_full_sweep": "pending 495 duplicate-free RREF shards",
+    "golden_word_selector_and_balanced_scheduler": true,
+    "a4_shell_and_d4_lift_obstruction": true,
+    "priority_workflow": ".github/workflows/w33_pass2974_2983_priority_evidence.yml"
   },
-  "claim_boundary": "Reservation only. Exact finite algebra, exhaustive searches, modeled optical performance, controller coding, and CI behavior remain separately typed until executable evidence exists."
+  "passes": {
+    "2974": "complete exact: D4^36 modulo simultaneous conjugation, with Burnside orbit count 81129638418148456557941239054336",
+    "2975": "complete constructive: Petersen odd-edge triples give the 2-(10,3,4) degree-ten S6 curvature and explicitly match W33 transport",
+    "2976": "complete ideal adaptive receiver and separately typed synthetic detector profiles",
+    "2977": "exact 213648435-space count and 495-shard partition; 649940-space general non-CSS pilot complete; exhaustive sweep pending",
+    "2978": "source-complete path-isolated priority evidence lane; observed workflow result pending",
+    "2979": "complete exact word census: R4^2 U6 selected by shortest rational-line reduction and Fibonacci quotient",
+    "2980": "complete exact 10000-slot balanced mechanical scheduler test and n+1 complexity through length 12",
+    "2981": "complete exact: Fibonacci mod-2 action gives A4 syndrome shell and cannot lift to D4 because Aut(D4) has no order-three element",
+    "2982": "shared paper and blueprint inserts plus fail-closed four-front-door integrator complete",
+    "2983": "frozen certificates, focused regressions, literature boundary, and priority workflow source complete"
+  },
+  "certificates": [
+    "data/PART_BT2974_BT2981_NONABELIAN_GOLDEN_INFORMATION_results.json",
+    "data/PART_BT2977_GENERAL_ISOTROPIC_M36_PILOT_results.json"
+  ],
+  "claim_boundary": "The finite group, design, word-metric, scheduler, and ideal receiver statements are exact in their stated scopes. Detector profiles are synthetic. The complete 213648435-subspace M36 sweep, generated front-door files, three PDF builds, and observed priority-workflow verdict remain pending."
 }
