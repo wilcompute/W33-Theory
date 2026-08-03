@@ -1,0 +1,30 @@
+{
+  "active_four_trit_parity_mixers": 1,
+  "all_witnesses_monomially_equivalent": true,
+  "balanced_adder_depth": 2,
+  "claim_boundary": "Exact algebraic and logical resource counts. Detector fanout, optical loss, clock rate and placed FPGA area remain unmeasured.",
+  "direct_unshared_affine_incidence": 24,
+  "factorized_incidence": 8,
+  "incidence_reduction_factor": 3,
+  "minimum_distance": 4,
+  "minimum_linear_form_incidence": 8,
+  "native_forms": 4,
+  "pair_distance_histogram": {
+    "10": 405,
+    "4": 810,
+    "6": 810,
+    "8": 1215
+  },
+  "schema": "w33.pass2960.spc15_physical_factorization.v1",
+  "status": "COMPLETE_EXACT_SOURCE_RTL",
+  "structured_reversible_decode": {
+    "cnot_gates": 8,
+    "decoded_trits": 4,
+    "fifth_triplet_role": "parity syndrome",
+    "not_gates": 8
+  },
+  "support_outputs": 15,
+  "systematic_spc_witness_count": 16,
+  "ternary_adders": 3,
+  "unique_linear_forms": 5
+}
