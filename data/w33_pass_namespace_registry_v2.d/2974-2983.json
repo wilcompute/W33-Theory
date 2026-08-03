@@ -1,0 +1,20 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "2974-2983",
+  "owner": "agent/pass2974-2983-nonabelian-golden-information-closure",
+  "status": "reserved",
+  "reserved_after": "parallel reservation frontier through Pass 2973",
+  "passes": {
+    "2974": "construct a genuinely nonabelian D4 multi-edge route syndrome and classify its gauge kernel",
+    "2975": "derive the exceptional degree-ten S6 two-graph analytically from six-set 3+3 partitions and W33 spread transport",
+    "2976": "compile an adaptive finite-copy chirality receiver and compare ideal Helstrom, local Pauli, and noisy optical policies",
+    "2977": "enumerate the full six-qubit isotropic stabilizer search space for three-copy deep-M36 distillation beyond CSS",
+    "2978": "isolate a priority evidence lane that avoids the repository-wide Actions queue while preserving release integrity",
+    "2979": "classify R4/U6 words and prove the golden word is selected by shortest rational-line reduction and Fibonacci quotient action",
+    "2980": "BONKERS: turn the golden quotient into a reversible Zeckendorf/Sturmian schedule and test entropy and switching-cost optimality",
+    "2981": "BONKERS: fuse nonabelian D4 curvature with the R4/U6 arithmetic controller into a semidirect hybrid route-memory code",
+    "2982": "promote verified results into the W33 paper, Photonic Holonet, machine blueprint, and live atlas",
+    "2983": "freeze exact certificates, focused regressions, literature boundaries, and the guarded release workflow"
+  },
+  "claim_boundary": "Reservation only. Exact finite algebra, exhaustive searches, modeled optical performance, controller coding, and CI behavior remain separately typed until executable evidence exists."
+}
