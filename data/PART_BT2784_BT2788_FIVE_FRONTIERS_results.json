@@ -1,0 +1,51 @@
+{
+  "artifact_sha256": {
+    "PART_BT2784_M36_TWO_COPY_DISTILLATION.json": "8e113e147db37090b9aaafff373e967de877858d58552279ae9e837e93539832",
+    "PART_BT2785_PHYSICAL_METAPLECTIC_SENSOR.json": "4af7a20d02fe900e728309c84762e057796f3ffc6345ae113052a47cc6ce7349",
+    "PART_BT2786_COMPRESSED_CX_COMPILER_summary.json": "bf3c2d08b78775b1fab3f8fae51547acfb2189a6eac3d58db778c7972c4d8690",
+    "PART_BT2787_CI_PLACED_NETLIST_CLOSURE.json": "6bed99c04cf5230dd1269ce46f0a1bbbccb41075216a7a943bfc91ceedcc2896",
+    "PART_BT2788_REPEATER_REMOTE_SUM_summary.json": "856ea08d8940acec6dc4729aae7cd4f4c88d83c4f64b0ae194470998d27ea9ee"
+  },
+  "boundaries": {
+    "ci": "local reproducibility closed; placed evidence must be observed before promotion",
+    "compiler": "exact finite decomposition; FPGA utilization and timing await remote toolchain",
+    "distillation": "exhaustive for two-copy binary [[4,2]] stabilizer projections, not arbitrary multi-copy ququart protocols",
+    "repeater": "exact independent-isotropic/erasure recurrences plus an illustrative queueing approximation",
+    "sensor": "exact trace alphabet and statistical bound, not measured optical calibration"
+  },
+  "check_count": 23,
+  "checks": {
+    "ci_jobs_decoupled": true,
+    "ci_old_drift_closed": true,
+    "compiler_40x12": true,
+    "compiler_480": true,
+    "compiler_compression_gt54": true,
+    "compiler_forms_det2": true,
+    "compiler_rep_max6": true,
+    "compiler_suffix_108": true,
+    "dist_best_slope_half": true,
+    "dist_closed_9264": true,
+    "dist_improving_48": true,
+    "dist_search_85680": true,
+    "dist_threshold_two_thirds": true,
+    "repeater_best_8_segments": true,
+    "repeater_best_one_round": true,
+    "repeater_erasure_threshold": true,
+    "repeater_purification_threshold": true,
+    "repeater_transversal_sum": true,
+    "sensor_001_shots_21736": true,
+    "sensor_four_settings": true,
+    "sensor_group_51840": true,
+    "sensor_k1_alphabet_16": true,
+    "sensor_k2_alphabet_10": true
+  },
+  "frontiers": {
+    "2784": "two-copy M36 stabilizer distillation with exact p<2/3 threshold",
+    "2785": "four-setting physical metaplectic trace sensor and conservative shot bounds",
+    "2786": "40x12 CX class factorization and 1.9 kB compressed compiler packet",
+    "2787": "certificate-drift repair plus independent RTL/synthesis/P&R jobs",
+    "2788": "qutrit purification, [[3,1,2]]_3 erasure threshold, and nested repeater budget"
+  },
+  "schema": "w33.pass2784_2788.release.v1",
+  "status": "COMPLETE_LOCAL_EXACT_REMOTE_RTL_PNR_PENDING"
+}
