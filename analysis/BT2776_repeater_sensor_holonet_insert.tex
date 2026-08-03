@@ -1,0 +1,21 @@
+% Passes 2773, 2775, 2776 -- host-independent Holonet insert.
+\section*{Physical lift sensing and repeater-grade remote controlled-add}
+A phase-stable path ancilla controls $U$ and $U^2$ on the nine-mode register.
+Uniform mode randomization and path-$X/Y$ readout estimate
+$\operatorname{Tr}(U^k)/9$, while the determinant is tracked from the programmed
+Clifford word. The four quadratures reconstruct
+$\Theta_k=\operatorname{Tr}(U^k)^9/\det(U^k)$ for $k=1,2$. A conservative
+$99\%$-confidence design uses $29{,}579$ events per quadrature; phase drift and
+visibility remain experimental calibration obligations.
+
+For isotropic qutrit Bell pairs, bilateral SUM purification obeys
+\[
+ P_{\rm acc}=\frac{27F^2-6F+11}{32},\qquad
+ F'=\frac{33F^2-2F+1}{27F^2-6F+11}.
+\]
+Its fixed points are $1/9$, $1/3$, and $1$, and it improves fidelity precisely
+for $F>1/3$. Nested swapping, memory decay, classical latency, and heralded
+erasures are explicit in the controller. Under the stated scenario, a
+$1{,}280\,$km link is optimized by eight segments with elementary and post-swap
+purification, yielding a distillable end-to-end pair at a sub-hertz rate. This is
+a modeled design point, not a measured repeater or fault-tolerance threshold.
