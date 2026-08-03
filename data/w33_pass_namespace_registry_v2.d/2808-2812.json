@@ -1,0 +1,14 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "2808-2812",
+  "owner": "agent/pass2808-2812-blueprint-hardening",
+  "status": "reserved",
+  "stacked_on": "PR #207 / Passes 2803-2807",
+  "passes": {
+    "2808": "minimal-versus-public ISA and measured-resource truth repair",
+    "2809": "evidence-state and promotion-gate matrix",
+    "2810": "deep M36 distillation theorem and superseded-no-go erratum",
+    "2811": "all-register sensor law, transpose, and mixer scope hardening",
+    "2812": "executable blueprint migration, compile, PDF, and drift closure"
+  }
+}
