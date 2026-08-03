@@ -1,0 +1,21 @@
+{
+  "schema":"w33.pass2950.ternary_844_classification.v1",
+  "status":"COMPLETE_EXACT",
+  "parameters":"[8,4,4]_3",
+  "weight_enumerator":{"0":1,"4":22,"5":24,"6":20,"7":8,"8":6},
+  "dual_weight_enumerator":{"0":1,"4":22,"5":24,"6":20,"7":8,"8":6},
+  "projective_hyperplane_spectrum":[3,4,10,12,11],
+  "literature_spectrum_type":"first listed [8,4,4]_3 spectrum (3,4,10,12,11)",
+  "covering_radius":2,
+  "coset_leader_distance_distribution":{"0":1,"1":16,"2":64},
+  "coset_leader_multiplicity_distribution":{"0:1":1,"1:1":16,"2:1":32,"2:2":18,"2:3":12,"2:4":2},
+  "ambient_distance_partition":{"0":81,"1":1296,"2":5184},
+  "coset_weight_enumerator_type_count":9,
+  "external_distance":5,
+  "uniformly_packed_wide_sense":false,
+  "hull_dimension":0,
+  "lcd":true,
+  "weight_four_supports":11,
+  "weight_four_point_degrees":[5,6,6,5,5,5,6,6],
+  "claim_boundary":"Exact invariants identify the published spectrum type; no uniqueness claim inside the type is made."
+}
