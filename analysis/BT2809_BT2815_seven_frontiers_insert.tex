@@ -1,0 +1,68 @@
+\section*{Passes 2809--2815: tetrahedral support shell, tomotope incidence, and all-$q$ closure}
+
+The support projection of Pass~2808 now closes objectwise.  The four
+weight-three masks are exactly the four Type-A selector masks and the three
+perfect matchings are exactly the three Fano channels.  Their Cartesian product
+is the existing twelve-sheet selector atlas: twelve distinct signed
+$2160\times160$ operators, all of rank $81$.
+
+More strongly, the projective signed support classes
+$\{0,\pm1\}^4/\{v\sim-v\}$ carry an explicit tomotope incidence model.  Ranks
+$0,1,2$ are signed restrictions of support weights $1,2,3$.  Four cells are the
+three-support hemioctahedra and four are the positive-product full-support
+tetrahedra.  The resulting object has
+\[
+ (f_0,f_1,f_2,f_3)=(4,12,16,8),\qquad |\mathcal F|=192,
+\]
+automorphism group order $96$, two flag orbits of size $96$, and symmetry class
+$2_{\{0,1,2\}}$; only the cell move exchanges the flag orbits.
+
+The same support shell yields an exact codec.  The $81$ affine frame states are
+enumerated by seven bits and the $40$ nonzero projective classes by six bits.
+The code factors through the four-bit support mask and the relative sign phase,
+with exhaustive round trips and frozen transition tables for
+$F_p$, $\mathrm{CX}_{p\to f}$, $\mathrm{CX}_{f\to p}$ and $Z_p$.
+
+For every finite field $\mathbb F_q$, including even and odd prime powers, the
+support fibers form an equitable partition of the point graph $W(3,q)$.  Put
+$s_S=(q-1)^{|S|-1}$, let $\tau$ be the chosen coordinate matching, and set
+$r=|T\cap\tau(S)|$.  With
+\[
+ N_r(q)=\frac{(q-1)^r+(q-1)(-1)^r}{q},
+\]
+the quotient entries are
+\[
+ Q_{S,T}=\frac{(q-1)^{|T|-r}N_r(q)}{q-1}-\delta_{S,T}.
+\]
+They satisfy
+\[
+ \operatorname{spec}(Q)=
+ q(q+1)^1\oplus(q-1)^9\oplus(-(q+1))^5,
+\]
+\[
+ \operatorname{diag}(s)Q=Q^{\mathsf T}\operatorname{diag}(s),\qquad
+ Q^2=(q^2-1)I-2Q+(q+1)\mathbf1s^{\mathsf T}.
+\]
+For the matching stabilizer $D_8$, the three sectors decompose as
+\[
+ A_1,\qquad 3A_1+B_1+B_2+2E,\qquad A_1+2B_1+E.
+\]
+
+Two further exact consequences emerged.  First, the unbiased random walk on
+$W(3,q)$ is strongly lumpable through the support map.  Its quotient spectrum
+is
+\[
+ 1^1\oplus\left(\frac{q-1}{q(q+1)}\right)^9
+ \oplus\left(-\frac1q\right)^5,
+\]
+so its absolute relaxation rate is $1/q$.  Second, the eight full-support sign
+classes form a parity-code controller: the even $[3,2,2]$ words label the four
+tetrahedra, while every odd word has a unique minority coordinate whose
+deletion labels one hemioctahedron.  The sixteen triangular faces are exactly
+the edges of the resulting $K_{4,4}$ cell-incidence graph.
+
+All statements are finite exact theorems.  The random-walk result is not a
+physical dynamics law, and the RTL area/timing claims remain pending until the
+dedicated synthesis workflow is observed.  Reproduce with
+\texttt{python analysis/bt2809\_2815\_release.py --verify-frozen} and
+\texttt{pytest -q tests/test\_bt2809\_2815\_seven\_frontiers.py}.
