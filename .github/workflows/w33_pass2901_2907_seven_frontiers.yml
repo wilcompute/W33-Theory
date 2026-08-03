@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - research/pass2901-2907-selector-butterfly-observer-blueprint
+  pull_request:
+    branches:
+      - master
   workflow_dispatch:
 
 permissions:
@@ -16,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref }}
+          ref: ${{ github.head_ref || github.ref }}
           fetch-depth: 0
 
       - uses: actions/setup-python@v5
@@ -92,6 +95,7 @@ jobs:
           ! grep -F 'there is one shortest path, and no loops' holonet_machine_blueprint.tex
 
       - name: Commit generated blueprint and PDFs to the research branch
+        if: github.event_name == 'push'
         run: |
           git config user.name 'W33 evidence bot'
           git config user.email 'noreply@github.com'
