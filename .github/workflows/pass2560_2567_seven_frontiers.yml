@@ -1,0 +1,26 @@
+name: Pass 2560-2567 seven frontiers
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass256*.py'
+      - 'analysis/cpp/w33_pass256*.cpp'
+      - 'data/w33_pass256*'
+      - 'tests/test_w33_pass2560_2567.py'
+      - '.github/workflows/pass2560_2567_seven_frontiers.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy networkx scipy sympy pytest
+      - run: python analysis/w33_pass2560_2567_verify_frozen.py
+      - run: python analysis/w33_pass2561_verify_coloring11.py
+      - run: python analysis/w33_pass2562_exact_character_fusion.py
+      - run: python analysis/w33_pass2563_full_group_covariants.py
+      - run: python analysis/w33_pass2564_2566_octet_quotients.py
+      - run: g++ -O2 analysis/cpp/w33_pass2560_singleton_witness_search.cpp -o /tmp/w2560
+      - run: g++ -O2 analysis/cpp/w33_pass2560_classify_singleton_orbits.cpp -o /tmp/c2560 && /tmp/c2560
+      - run: pytest -q tests/test_w33_pass2560_2567.py
