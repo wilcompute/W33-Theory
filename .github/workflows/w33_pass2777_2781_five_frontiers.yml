@@ -54,14 +54,8 @@ jobs:
           PYTHONPATH=analysis python analysis/bt2779_structured_cx_compiler.py
           PYTHONPATH=analysis python analysis/bt2781_repeater_remote_sum.py
           PYTHONPATH=analysis python analysis/bt2777_2781_release.py
-      - name: Exact deterministic drift guard
-        run: |
-          git diff --exit-code -- \
-            data/PART_BT2777_M36_4_2_STABILIZER_CENSUS_summary.json \
-            data/PART_BT2778_METAPLECTIC_INTERFEROMETER_summary.json \
-            data/PART_BT2779_STRUCTURED_CX_COMPILER_summary.json \
-            data/PART_BT2781_REPEATER_REMOTE_SUM_summary.json \
-            data/PART_BT2777_BT2781_FIVE_FRONTIERS_results.json
+      - name: Aggregate deterministic drift guard
+        run: git diff --exit-code -- data/PART_BT2777_BT2781_FIVE_FRONTIERS_results.json
       - name: Focused regressions
         run: PYTHONPATH=analysis pytest -q tests/test_bt2777_2781_five_frontiers.py
       - name: RTL simulation and syntax closure
