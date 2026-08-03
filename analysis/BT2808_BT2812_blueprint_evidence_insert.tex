@@ -10,7 +10,7 @@ word to colour the rest. This section is the promotion firewall.
 
 \begin{spec}[Evidence-state contract]
 \begin{center}
-\begin{tabular}{@{}p{2.3cm}p{5.0cm}p{6.3cm}@{}}
+\begin{tabular}{@{}p{2.0cm}p{4.4cm}p{6.2cm}@{}}
 \toprule
 \textbf{State} & \textbf{Meaning} & \textbf{Promotion gate}\\
 \midrule
@@ -130,15 +130,15 @@ The reverse controlled-add is also the local-Fourier conjugate of the forward ga
 $q=5$, $-1$ is a square and the projective class is inner; at $q=7$ it is nonsquare and
 the class is the nontrivial diagonal outer class.
 
-The source \cmd{rtl/w33\_spread\_mixer36.sv}, rejected by both Icarus and Yosys, is removed
+The source \path{rtl/w33_spread_mixer36.sv}, rejected by both Icarus and Yosys, is removed
 from the active tree. Exact verification and build triggers now point to the packed-bus
-replacement \cmd{rtl/w33\_pass2773\_spread\_mixer36\_synth.sv}. That replacement parses
-and is exact, but its measured $13{,}965$ LUT4 requirement still exceeds the iCE40 target;
-the serial mixer is the deployable target architecture.
+replacement \path{rtl/w33_pass2773_spread_mixer36_synth.sv}. That replacement parses and
+is exact, but its measured $13{,}965$ LUT4 requirement still exceeds the iCE40 target; the
+serial mixer is the deployable target architecture.
 
 \subsection{Release-state matrix}
 \begin{center}
-\begin{tabular}{@{}p{4.0cm}p{3.1cm}p{7.0cm}@{}}
+\begin{tabular}{@{}p{3.6cm}p{2.8cm}p{6.6cm}@{}}
 \toprule
 \textbf{Packet} & \textbf{Promoted state} & \textbf{Remaining gate}\\
 \midrule
