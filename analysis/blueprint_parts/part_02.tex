@@ -1,0 +1,240 @@
+\section{The instruction set}\label{sec:isa}
+% =====================================================================================
+
+\subsection{The idea of a Pauli frame}
+
+\begin{plain}
+Here is the trick that makes the machine cheap.
+
+A quantum state is expensive to write down: for two qutrits you need nine complex
+numbers, and keeping them accurate is most of what makes quantum computing hard. But for
+a large and useful family of operations --- the \emph{Clifford} operations --- you never
+need the state at all. You only need a \emph{label} saying how the state has been shifted
+relative to where it started.
+
+That label is four trits. Four trits is eight bits. The machine's entire ``register
+file'' for tracking Clifford operations is one byte.
+\end{plain}
+
+\headline{The frame unit tracks a label, not a state. Four trits, $81$ possible values,
+eight bits of memory --- and it correctly accounts for a group of $4{,}199{,}040$
+distinct operations.}
+
+\begin{spec}
+The Pauli frame is $(x_p,z_p,x_f,z_f)\in\mathbb{F}_3^4$, denoting the operator
+$X^{x_p}Z^{z_p}\otimes X^{x_f}Z^{z_f}$. A Clifford unitary $U$ acts on frames by
+conjugation, $U(X^aZ^b)U^\dagger = X^{a'}Z^{b'}$ up to phase, and the induced map on
+$\mathbb{F}_3^4$ is \emph{linear and symplectic}: it preserves
+\[
+  \langle u,v\rangle \;=\; (x_p z_p' - z_p x_p') + (x_f z_f' - z_f x_f') \bmod 3 .
+\]
+\end{spec}
+
+\subsection{The eight opcodes}
+
+\begin{spec}[$\mathcal{I}_{\mathrm{holo}}$, complete semantics]
+\begin{center}\small
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Op} & \textbf{Name} & \textbf{Action on $(x_p,z_p,x_f,z_f)$} & \textbf{Kind}\\
+\midrule
+\texttt{000} & $F_p$ & $(x_p,z_p)\mapsto(-z_p,\;x_p)$              & linear \\
+\texttt{001} & $F_f$ & $(x_f,z_f)\mapsto(-z_f,\;x_f)$              & linear \\
+\texttt{010} & $S_p$ & $z_p\mapsto z_p+x_p$                        & linear \\
+\texttt{011} & $S_f$ & $z_f\mapsto z_f+x_f$                        & linear \\
+\texttt{100} & $\mathrm{CX}$ & $d{=}0$: $z_p\mapsto z_p-z_f$, $x_f\mapsto x_f+x_p$
+                              & linear \\
+             &               & $d{=}1$: $x_p\mapsto x_p+x_f$, $z_f\mapsto z_f-z_p$
+                              & linear \\
+\texttt{101} & $\sigma^5{=}Z$ & $z_p\mapsto z_p+1$ \ or\  $z_f\mapsto z_f+1$
+                              & \textbf{affine} \\
+\texttt{110} & $D_{12}$-mirror & transport in the dihedral group $D_{12}$ & (not a frame op)\\
+\texttt{111} & $M_{36}$-magic & typed request for one of $36$ Witting rays & (handshake)\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{spec}
+
+\subsection{The reachability theorem, and why it matters}
+
+\begin{plain}
+Now a question that sounds trivial and is not: \emph{starting from a blank machine, which
+states can these instructions actually reach?}
+
+The answer is startling. All six of the Clifford instructions, applied in any order, any
+number of times, reach exactly \emph{one} state --- the blank one. They cannot move the
+machine at all.
+
+The reason is simple once you see it. Those six instructions are all \emph{linear}, and a
+linear map always leaves the origin where it is. Multiplying zero by anything gives zero.
+So a machine built from only those six instructions is, quite literally, a machine that
+does nothing, no matter how sophisticated its circuitry looks.
+
+The seventh instruction, $\sigma^5=Z$, is different: it \emph{adds one}. Addition moves
+the origin. That single instruction is what makes all $81$ states reachable --- and hence
+what makes the machine a computer instead of an ornament.
+\end{plain}
+
+\begin{center}
+\begin{tikzpicture}[font=\small,>={Latex[length=2.4mm]}]
+  % left: clifford only
+  \begin{scope}
+    \draw[draw=rule,rounded corners] (-0.6,-1.5) rectangle (3.6,1.9);
+    \node[font=\bfseries\small] at (1.5,1.55) {Clifford opcodes only};
+    \foreach \x in {0,...,4}\foreach \y in {0,...,3}{
+      \node[circle,draw=rule,inner sep=1.1pt,fill=white] at (0.7*\x,0.55*\y-1.0) {};}
+    \node[circle,fill=bad,inner sep=2.6pt] at (0,-1.0) {};
+    \draw[->,line width=0.9pt,draw=bad] (0.05,-0.85) arc (-40:250:0.28);
+    \node[font=\scriptsize,text=bad,align=center] at (1.9,-1.35)
+      {reachable: \textbf{1} of $81$};
+  \end{scope}
+  % right: with Z
+  \begin{scope}[xshift=7.2cm]
+    \draw[draw=rule,rounded corners] (-0.6,-1.5) rectangle (3.6,1.9);
+    \node[font=\bfseries\small] at (1.5,1.55) {with $\sigma^5=Z$};
+    \foreach \x in {0,...,4}\foreach \y in {0,...,3}{
+      \node[circle,fill=good,inner sep=2.0pt] at (0.7*\x,0.55*\y-1.0) {};}
+    \node[font=\scriptsize,text=good,align=center] at (1.9,-1.35)
+      {reachable: \textbf{81} of $81$};
+  \end{scope}
+  \draw[->,line width=1.1pt,draw=ink] (4.1,0.2) -- (6.3,0.2)
+    node[midway,above,font=\scriptsize,align=center] {one\\instruction};
+\end{tikzpicture}
+\end{center}
+
+\begin{spec}[Proved by exhaustive search, Pass 2774]
+Breadth-first search over all $3^4=81$ frames from $(0,0,0,0)$:
+\[
+\begin{array}{lr}
+\textrm{$\mathrm{CX}$ alone} & 1 \\
+\textrm{all six symplectic opcodes} & 1 \\
+\textrm{full ISA (adding $\sigma^5{=}Z$)} & 81 \\
+\end{array}
+\]
+Reproduce: \cmd{py -3 analysis/w33\_pass2774\_isa\_frame\_reachability.py}\\
+Certificate: \cmd{data/PART\_W33\_PASS2774\_ISA\_FRAME\_REACHABILITY.json}
+\end{spec}
+
+\subsection{How much computation the eight opcodes actually buy}
+
+\begin{plain}
+``All $81$ states are reachable'' is weaker than it sounds --- it says you can get
+anywhere, not that you can perform every operation. The stronger question is: what is the
+complete list of things this instruction set can do?
+\end{plain}
+
+\begin{spec}[Proved, Pass 2778]
+The six Clifford opcodes generate a group of order exactly $51{,}840$ --- that is, the
+whole of $\mathrm{Sp}(4,3)$, nothing missing. Adjoining the translation gives
+\[
+  \langle \mathcal{I}_{\mathrm{holo}}\rangle
+   \;=\; \mathrm{ASp}(4,3)\;=\;\mathbb{F}_3^4\rtimes\mathrm{Sp}(4,3),
+  \qquad |\cdot| = 81\times 51840 = 4{,}199{,}040 .
+\]
+\textbf{One translation generator suffices.} Enabling only $Z$ on the past register gives
+the same group as enabling both, because $\mathrm{Sp}(4,3)$ is transitive on the $80$
+nonzero frame vectors: the orbit of a single translation already spans $\mathbb{F}_3^4$.
+Measured orbit size: $80$. A second translation instruction adds nothing and can be
+removed from the ISA.
+\end{spec}
+
+\headline{Eight opcodes. Three bits. $4{,}199{,}040$ distinct operations, exactly ---
+and the eighth opcode is provably redundant.}
+
+\subsection{How small can the instruction set be?}
+
+\begin{plain}
+If one opcode is redundant, how many are? This is not idle: every instruction removed is
+decoder logic removed, and if enough go, the opcode field itself gets shorter --- which
+shortens every instruction word in the machine.
+
+The answer is that you can throw away half of them.
+\end{plain}
+
+\begin{spec}[Exhaustive over all subsets, Pass 2789]
+Because $\mathbb{F}_3^4\rtimes H=\mathrm{ASp}(4,3)$ iff $H=\mathrm{Sp}(4,3)$ and at least
+one translation is present, the search reduces to the six linear opcodes:
+\[
+\begin{array}{ll}
+\text{subsets of size }1\text{ generating }\mathrm{Sp}(4,3): & 0\\
+\text{subsets of size }2: & 0\\
+\text{subsets of size }3: & \mathbf{6}
+\end{array}
+\]
+The six minimal triples are
+$\{F_p,F_f,\mathrm{CX}_{p\to f}\}$, $\{F_p,F_f,\mathrm{CX}_{f\to p}\}$,
+$\{F_p,S_f,\mathrm{CX}_{p\to f}\}$, $\{F_p,\mathrm{CX}_{p\to f},\mathrm{CX}_{f\to p}\}$,
+$\{F_f,S_p,\mathrm{CX}_{f\to p}\}$, $\{F_f,\mathrm{CX}_{p\to f},\mathrm{CX}_{f\to p}\}$.
+\end{spec}
+
+\headline{Three Clifford opcodes plus one translation generate everything.
+Four frame instructions --- a \textbf{two-bit} opcode field, not three.}
+
+\begin{plain}
+Two details are worth noticing. First, there are \emph{six} different minimal choices, so
+a chip designer has real freedom to pick whichever three are cheapest in silicon rather
+than being handed one answer.
+
+Second, every single one of the six contains at least one Fourier gate \emph{and} at
+least one controlled-add. No collection of phase gates and one Fourier gate will do. The
+entangler is not optional --- which is the formal version of the intuition that a machine
+that never couples past to future is not really using the self-entanglement at all.
+\end{plain}
+
+% =====================================================================================
+\section{The hardware}\label{sec:hardware}
+% =====================================================================================
+
+\subsection{The frame unit datapath}
+
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,>={Latex[length=2.2mm]},
+  reg/.style={draw=ink,fill=specbg,minimum width=13mm,minimum height=8mm,rounded corners=1.5pt},
+  alu/.style={draw=ink,fill=plainbg,minimum width=17mm,minimum height=8mm,rounded corners=1.5pt},
+  mux/.style={draw=ink,fill=white,trapezium,trapezium angle=68,minimum width=9mm,
+              minimum height=7mm,shape border rotate=270,inner sep=1pt},
+  w/.style={-{Latex[length=1.8mm]},draw=rule,line width=0.7pt}]
+
+  % registers
+  \node[reg] (xp) at (0,3.0)  {$x_p$};
+  \node[reg] (zp) at (0,1.9)  {$z_p$};
+  \node[reg] (xf) at (0,0.8)  {$x_f$};
+  \node[reg] (zf) at (0,-0.3) {$z_f$};
+  \node[font=\scriptsize\itshape,text=rule,above=0.5mm of xp] {$4$ trits $=$ $8$ bits of state};
+
+  % f3 units
+  \node[alu] (a1) at (3.6,2.6) {$\mathrm{add}_3$};
+  \node[alu] (a2) at (3.6,1.4) {$\mathrm{sub}_3$};
+  \node[alu] (a3) at (3.6,0.2) {$\mathrm{neg}_3$};
+  \node[font=\scriptsize\itshape,text=rule,align=center] at (3.6,-0.9)
+    {mod-$3$ arithmetic\\(pure LUT logic, no carry chain)};
+
+  % opcode decode
+  \node[alu,minimum height=22mm,minimum width=15mm,fill=future!12] (dec) at (7.2,1.4)
+    {\begin{tabular}{c}opcode\\decode\\\scriptsize $3$ bits\end{tabular}};
+
+  % next-state mux
+  \node[mux] (m) at (10.0,1.4) {};
+  \node[font=\scriptsize] at (10.0,1.4) {mux};
+
+  \node[reg,fill=warnbg] (ld) at (10.0,3.4) {load port};
+  \node[font=\scriptsize\itshape,text=rule,align=center,above=0.5mm of ld]
+    {\textbf{without this the whole unit}\\\textbf{synthesises to nothing}};
+
+  \foreach \r in {xp,zp,xf,zf}{
+    \draw[w] (\r.east) -- ++(0.7,0) |- (a1.west);
+    \draw[w] (\r.east) -- ++(0.7,0) |- (a2.west);
+  }
+  \draw[w] (a1.east) -- (dec.west|-a1);
+  \draw[w] (a2.east) -- (dec.west|-a2);
+  \draw[w] (a3.east) -- (dec.west|-a3);
+  \draw[w] (dec.east) -- (m.west);
+  \draw[w] (ld.south) -- (m.north);
+  \draw[w] (m.south) |- ++(0,-1.4) -| (-1.4,-1.4) |- (xp.west);
+  \draw[w] (-1.4,-1.4) |- (zp.west);
+  \draw[w] (-1.4,-1.4) |- (xf.west);
+  \draw[w] (-1.4,-1.4) |- (zf.west);
+
+  \node[font=\scriptsize,text=rule] at (5.6,-1.6)
+    {\cmd{rtl/w33\_pass2777\_isa\_frame\_unit.sv}};
+\end{tikzpicture}
