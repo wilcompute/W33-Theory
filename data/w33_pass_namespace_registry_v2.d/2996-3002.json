@@ -1,0 +1,17 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "2996-3002",
+  "owner": "agent/pass2996-3002-deep-optimal-information-closure",
+  "status": "reserved",
+  "reserved_after": "parallel reservation frontier through Pass 2995",
+  "passes": {
+    "2996": "prove or refute global minimality of the 29-triangle one/two-edge D4 localization schedule via exact support-separation and nonabelian verification",
+    "2997": "construct or obstruct an equivariant bridge between the 540 D12 clock orbits and 540 skew-line frames using stabilizers and incidence",
+    "2998": "compile locality-weighted A40 address permutations and derive a shortest/lowest-loss controller library",
+    "2999": "build an adaptive Bayesian calibration-routing-fault escalation controller minimizing expected photons, latency, and residual risk",
+    "3000": "audit remaining Holonet and M36 operations for removable fake gates, Pauli frames, phase tracking, and static relabeling",
+    "3001": "BONKERS: construct a self-synchronizing curvature code that fuses D12 time, route address, and D4 fault telemetry",
+    "3002": "BONKERS: derive a predictive thermodynamic controller using future-decision equivalence and rate-distortion rather than raw state compression"
+  },
+  "claim_boundary": "Reservation only. Exact combinatorics, modeled physical costs, Bayesian policies, controller compression, and self-synchronizing interpretations remain separately typed until executable evidence exists."
+}
