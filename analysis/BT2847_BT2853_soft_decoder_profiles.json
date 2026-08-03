@@ -1,0 +1,14 @@
+{
+  "schema": "w33.pass2850.soft_decoder_profiles.v1",
+  "code_bits": 28,
+  "codewords": 81,
+  "minimum_distance": 4,
+  "channel": "independent binary asymmetric support-bit channel",
+  "profiles": [
+    {"name":"symmetric_2pct","samples":5000,"hamming_errors":17,"ml_errors":17,"relative_reduction":0.0},
+    {"name":"dark_0p2pct_miss_3pct","samples":8000,"hamming_errors":25,"ml_errors":7,"relative_reduction":0.72},
+    {"name":"time_coordinate_asymmetric","samples":8000,"hamming_errors":109,"ml_errors":28,"relative_reduction":0.7431192660550459},
+    {"name":"loss_dominated_stress","samples":8000,"hamming_errors":356,"ml_errors":83,"relative_reduction":0.7668539325842697}
+  ],
+  "claim_boundary": "deterministic-seed synthetic channels; no detector calibration"
+}
