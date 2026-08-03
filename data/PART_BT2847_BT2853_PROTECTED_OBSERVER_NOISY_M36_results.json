@@ -1,0 +1,152 @@
+{
+  "check_count": 8,
+  "checks": {
+    "adaptive_worst_case_4": true,
+    "eight_shortest_words": true,
+    "fixed_trajectory_optimum_28": true,
+    "golden_saddle_node": true,
+    "repeated_feature_optimum_24": true,
+    "selector_automorphism_order_6912": true,
+    "soft_decoder_improves_asymmetric_models": true,
+    "word_automorphism_order_32": true
+  },
+  "hardware_evidence": {
+    "new_feature_encoder_and_decoder": "RTL supplied in Pass 2853; synthesis/P&R remain separately observable",
+    "parallel_minimal_engine": "43 iCE40 LC, 72.40 MHz observed in Pass 2796"
+  },
+  "pass2847_distance4_puncturing": {
+    "canonical": {
+      "distance_histogram": {"10":270,"11":207,"12":336,"13":294,"14":360,"15":276,"16":282,"17":182,"18":150,"19":86,"20":60,"21":24,"22":16,"23":4,"4":108,"5":54,"6":135,"7":81,"8":189,"9":126},
+      "dual_bound": 28,
+      "mip_gap": 0.0,
+      "optimum": 28,
+      "pair": [0,5],
+      "selector": [1,2,4,8,9,12,16,17,20,21,22,23,24,27,28,33,36,37,40,41,43,44,45,47,48,49,50,51]
+    },
+    "claim_boundary": "Exact inside each fixed 52-column trajectory; it is not yet a global optimum over all diagnostic words.",
+    "compression": {"bits_removed":24,"fraction_removed":0.46153846153846156,"protected_bits":28,"raw_bits":52},
+    "distance4_pairs": [[0,5],[0,6],[1,2],[1,3],[4,5],[4,6],[7,2],[7,3]],
+    "distance_profile": {"2":40,"3":16,"4":8},
+    "minimum_over_family": 28,
+    "puncturing_optima": [28,29,29,29,28,29,28,28]
+  },
+  "pass2848_affine_square_feature_bank": {
+    "active_design": "12 affine-square features sampled twice",
+    "active_feature_count": 12,
+    "binary_function_rank": 14,
+    "claim_boundary": "The 24-sample optimum allows independent resampling of an affine-square feature; the fixed historical trajectory remains 28 taps.",
+    "distance4_integer_repetition_optimum": 24,
+    "distinct_affine_square_features": 14,
+    "dual_bound": 24,
+    "feature_formula": "support(a.x+b)=(a.x+b)^2 over F3",
+    "feature_weights": [2,2,2,2,2,2,2,2,2,2,0,0,2,2],
+    "features": [
+      {"coefficients":[1,0,0,0],"constant":0,"weight":2},
+      {"coefficients":[0,1,0,0],"constant":0,"weight":2},
+      {"coefficients":[0,0,1,0],"constant":0,"weight":2},
+      {"coefficients":[0,0,0,1],"constant":0,"weight":2},
+      {"coefficients":[0,1,0,2],"constant":0,"weight":2},
+      {"coefficients":[1,0,1,0],"constant":0,"weight":2},
+      {"coefficients":[1,0,0,0],"constant":1,"weight":2},
+      {"coefficients":[0,1,0,2],"constant":2,"weight":2},
+      {"coefficients":[0,1,0,0],"constant":2,"weight":2},
+      {"coefficients":[0,0,1,0],"constant":2,"weight":2},
+      {"coefficients":[1,0,2,0],"constant":2,"weight":0},
+      {"coefficients":[0,1,0,1],"constant":2,"weight":0},
+      {"coefficients":[1,0,2,0],"constant":1,"weight":2},
+      {"coefficients":[0,0,0,1],"constant":2,"weight":2}
+    ],
+    "injective_eight_feature_sets": 9,
+    "minimum_injective_feature_count": 8,
+    "raw_trajectory_columns": 52,
+    "ternary_quadratic_span_rank": 11,
+    "weighted_distance_histogram": {"10":639,"12":744,"14":600,"16":216,"18":84,"4":234,"6":207,"8":516}
+  },
+  "pass2849_observer_symmetry": {
+    "distance4_word_digraph": {
+      "automorphism_order": 32,
+      "edge_orbit_count": 1,
+      "structure": "(S2 x S2)^2 semidirect S2; two directed K2,2 components",
+      "vertex_orbits": [[0,1,4,7],[2,3,5,6]]
+    },
+    "minimal_fast_selector_hypergraph": {
+      "automorphism_order": 6912,
+      "block_orbits": 1,
+      "blocks": 48,
+      "intersection_histogram": {"5":432,"6":504,"7":192},
+      "mandatory_vertices": [1,2,21,25,26],
+      "optional_degree12_orbit": [5,8,12,13,16,17,20,24],
+      "optional_degree16_orbit": [0,4,9],
+      "optional_vertices": [0,4,5,8,9,12,13,16,17,20,24],
+      "structure": "S3 x (S4 wreath S2)",
+      "zero_codegree_low_components": [[5,8,12,17],[13,16,20,24]]
+    }
+  },
+  "pass2850_soft_decoder": {
+    "channel_model": "independent support-bit false-positive p01 and false-negative p10 rates",
+    "claim_boundary": "Deterministic-seed Monte Carlo under synthetic independent channels; no laboratory detector calibration is inferred.",
+    "headline": "Maximum-likelihood decoding is identical to Hamming under symmetric noise and cuts modelled asymmetric-channel errors by more than 70 percent in every tested profile.",
+    "scenarios": [
+      {"decoder_disagreement_rate":0.0,"hamming_error_rate":0.0034,"hamming_errors":17,"hamming_wilson95":[0.0021239367958294426,0.0054385447760012945],"mean_flips":0.5552,"ml_error_rate":0.0034,"ml_errors":17,"ml_wilson95":[0.0021239367958294426,0.0054385447760012945],"name":"symmetric_2pct","relative_error_reduction":0.0,"samples":5000},
+      {"decoder_disagreement_rate":0.003,"hamming_error_rate":0.003125,"hamming_errors":25,"hamming_wilson95":[0.0021176697419186073,0.004609282446940373],"mean_flips":0.5755,"ml_error_rate":0.000875,"ml_errors":7,"ml_wilson95":[0.00042392040246582287,0.0018051915698898777],"name":"dark_0p2pct_miss_3pct","relative_error_reduction":0.72,"samples":8000},
+      {"decoder_disagreement_rate":0.01375,"hamming_error_rate":0.013625,"hamming_errors":109,"hamming_wilson95":[0.01130799770527084,0.016408875493936777],"mean_flips":1.013875,"ml_error_rate":0.0035,"ml_errors":28,"ml_wilson95":[0.002422721243773731,0.005053870981169129],"name":"time_coordinate_asymmetric","relative_error_reduction":0.7431192660550459,"samples":8000},
+      {"decoder_disagreement_rate":0.043875,"hamming_error_rate":0.0445,"hamming_errors":356,"hamming_wilson95":[0.04019587244068284,0.049241363729430894],"mean_flips":1.866625,"ml_error_rate":0.010375,"ml_errors":83,"ml_wilson95":[0.00837771916503676,0.012842273721443899],"name":"loss_dominated_stress","relative_error_reduction":0.7668539325842697,"samples":8000}
+    ]
+  },
+  "pass2851_noisy_m36": {
+    "claim_boundary": "Phenomenological depolarizing decoder and maximally mixed false-accept model; not a circuit-level logical threshold.",
+    "decode_depolarization_recurrence": "(4*g*p**2 - 10*g*p + 6*g - p**2 + 4*p)/(3*(p**2 - 2*p + 2))",
+    "false_accept_bound": "-(r - 1)*(-4*g*p + 6*g + 3*p**2 - 2*p)/(3*(p**2 - 2*p - 2))",
+    "false_accept_margin": "-(p - 1)*(3*f*p**2 - 6*f*p - 6*f - 4*g*p*r + 4*g*p + 6*g*r - 6*g + 3*p**2*r - 3*p**2 - 2*p*r + 2*p)/16",
+    "fixed_points": ["(2*g - sqrt(4*g**2 - 14*g + 1) + 1)/3","(2*g + sqrt(4*g**2 - 14*g + 1) + 1)/3","1"],
+    "fixed_polynomial": "-(p - 1)*(-4*g*p + 6*g + 3*p**2 - 2*p)",
+    "ideal_recurrence": "-p*(p - 4)/(3*(p**2 - 2*p + 2))",
+    "one_round_decode_error_bound": "p*(3*p - 2)/(2*(2*p - 3))",
+    "operating_table": [
+      {"ideal_output_fidelity":0.9740473061760841,"input_fidelity":0.9625,"maximum_decode_depolarization_g":0.015948275862068966,"maximum_false_accept_f_at_r0_g0":0.014700039729837107,"maximum_false_accept_f_at_r0_g1pct":0.0054827175208581646,"p":0.05,"success_probability":0.475625},
+      {"ideal_output_fidelity":0.9461325966850829,"input_fidelity":0.925,"maximum_decode_depolarization_g":0.030357142857142857,"maximum_false_accept_f_at_r0_g0":0.0258751902587519,"maximum_false_accept_f_at_r0_g1pct":0.017351598173515982,"p":0.1,"success_probability":0.4525},
+      {"ideal_output_fidelity":0.85,"input_fidelity":0.8125,"maximum_decode_depolarization_g":0.0625,"maximum_false_accept_f_at_r0_g0":0.042735042735042736,"maximum_false_accept_f_at_r0_g1pct":0.035897435897435895,"p":0.25,"success_probability":0.390625},
+      {"ideal_output_fidelity":0.7352941176470589,"input_fidelity":0.7,"maximum_decode_depolarization_g":0.07272727272727272,"maximum_false_accept_f_at_r0_g0":0.0404040404040404,"maximum_false_accept_f_at_r0_g1pct":0.03484848484848485,"p":0.4,"success_probability":0.33999999999999997},
+      {"ideal_output_fidelity":0.6464864053617827,"input_fidelity":0.6220084679281462,"maximum_decode_depolarization_g":0.06173714181019923,"maximum_false_accept_f_at_r0_g0":0.029770756534646205,"maximum_false_accept_f_at_r0_g1pct":0.024948577265937664,"p":0.5039887094291384,"success_probability":0.31150680009344295}
+    ],
+    "saddle_node": {"critical_g":"-(-7 + 3*sqrt(5))/4","critical_g_decimal":0.07294901687515773,"critical_p":"-(-3 + sqrt(5))/2","critical_p_decimal":0.38196601125010515,"interpretation":"low-error attractor and unstable threshold merge at a golden-ratio value"}
+  },
+  "pass2852_adaptive_observer": {
+    "claim_boundary": "Exact policy search with free support observation after each selected micro-operation; detector noise and operation cost asymmetry are not included.",
+    "fixed_open_loop_operations": 6,
+    "groups": [
+      {"minimum_depth":0,"minimum_depth_expected_cost":0.0,"states":1,"support":[0,0,0,0]},
+      {"minimum_depth":2,"minimum_depth_expected_cost":2.0,"states":2,"support":[0,0,0,1]},
+      {"minimum_depth":3,"minimum_depth_expected_cost":3.0,"states":2,"support":[0,0,1,0]},
+      {"minimum_depth":4,"minimum_depth_expected_cost":4.0,"states":4,"support":[0,0,1,1]},
+      {"minimum_depth":1,"minimum_depth_expected_cost":1.0,"states":2,"support":[0,1,0,0]},
+      {"minimum_depth":2,"minimum_depth_expected_cost":2.0,"states":4,"support":[0,1,0,1]},
+      {"minimum_depth":4,"minimum_depth_expected_cost":3.5,"states":4,"support":[0,1,1,0]},
+      {"minimum_depth":4,"minimum_depth_expected_cost":4.0,"states":8,"support":[0,1,1,1]},
+      {"minimum_depth":2,"minimum_depth_expected_cost":2.0,"states":2,"support":[1,0,0,0]},
+      {"minimum_depth":3,"minimum_depth_expected_cost":3.0,"states":4,"support":[1,0,0,1]},
+      {"minimum_depth":3,"minimum_depth_expected_cost":3.0,"states":4,"support":[1,0,1,0]},
+      {"minimum_depth":4,"minimum_depth_expected_cost":4.0,"states":8,"support":[1,0,1,1]},
+      {"minimum_depth":3,"minimum_depth_expected_cost":3.0,"states":4,"support":[1,1,0,0]},
+      {"minimum_depth":4,"minimum_depth_expected_cost":4.0,"states":8,"support":[1,1,0,1]},
+      {"minimum_depth":4,"minimum_depth_expected_cost":4.0,"states":8,"support":[1,1,1,0]},
+      {"minimum_depth":4,"minimum_depth_expected_cost":4.0,"states":16,"support":[1,1,1,1]}
+    ],
+    "headline": "Adaptive support feedback lowers the no-reset identification horizon from six operations to four, with uniform mean 94/27 operations.",
+    "uniform_mean_exact": "94/27",
+    "uniform_mean_operations": 3.4814814814814814,
+    "worst_case_operations": 4
+  },
+  "schema": "w33.pass2847_2853.protected_observer_noisy_m36.v1",
+  "shortest_words": [
+    ["CX_p->f","F_p","Z_p","F_p","Z_p","CX_p->f"],
+    ["CX_p->f","F_p","Z_p","F_p","Z_p","CX_f->p"],
+    ["CX_p->f","Z_p","F_p","Z_p","F_p","CX_p->f"],
+    ["CX_p->f","Z_p","F_p","Z_p","F_p","CX_f->p"],
+    ["CX_f->p","F_p","Z_p","F_p","Z_p","CX_p->f"],
+    ["CX_f->p","F_p","Z_p","F_p","Z_p","CX_f->p"],
+    ["CX_f->p","Z_p","F_p","Z_p","F_p","CX_p->f"],
+    ["CX_f->p","Z_p","F_p","Z_p","F_p","CX_f->p"]
+  ],
+  "status": "COMPLETE_EXACT_WITH_MODELLED_CHANNEL"
+}
