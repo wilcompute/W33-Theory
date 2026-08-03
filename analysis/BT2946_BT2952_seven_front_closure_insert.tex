@@ -1,0 +1,53 @@
+\section{Exact protected observation, compiled magic, and a hybrid OAM fabric}
+\label{sec:bt2946-bt2952}
+
+The complete affine-support family on $\mathbf F_3^4$ has an exact binary
+minimum-length theorem at distance four:
+\[
+ \boxed{n_{\mathrm{affine\ support},d=4}=15.}
+\]
+The lower bound combines the exact $AG(3,3)$ minimum twelve, a four-complete-
+direction-triplet classification of every local optimum, orbit-reduced
+infeasibility certificates for lengths thirteen and fourteen, and a doubled-
+direction packet obstruction.  Equality is attained by taking all three support
+offsets of the ternary $[5,4,2]_3$ single-parity-check code.
+
+The deep-$M_{36}$ branch is now compiled explicitly.  A Clifford decoder sends
+$IYZY\mapsto-Z_0$ and $YZXY\mapsto-Z_1$, so syndrome $(-1,+1)$ is the decoded
+bit test $01$.  After decomposing two swaps, the branch uses twelve CNOTs, three
+Hadamards, and two $Z$ measurements; it accepts with probability $1/2$ and maps
+two copies of ray~5 to ray~7.  In the stated stochastic Pauli and measurement-
+flip model its first-order output infidelity is
+\[
+ {2\over3}p+{140\over81}q_1+{2084\over405}q_2+{4\over9}q_m+O(2).
+\]
+This is a circuit law for that model, not a coherent-error or leakage threshold.
+
+An exact spread gives a hybrid photonic address register
+\[
+ \boxed{10\ \text{OAM line modes}\times4\ \text{time/frequency slots}=40}
+\]
+with sixty intra-line and one hundred eighty inter-line edges.  Every ordered
+line pair is a four-channel permutation.  Across all $120$ spread-line triangles,
+the routing holonomy consists of sixty transpositions and sixty double
+transpositions; every triangular holonomy is an involution.
+
+The canonical eight-tap observer extends to a $256$-state reversible permutation
+whose valid outputs are the seven-bit frame ranks.  Its marginal-bit entropy
+exceeds the joint entropy by $1.0065166696$ bits, which can be exposed by
+reversible correlation compression; erasing the final rank still costs the
+$\log_2 81$ information floor.
+
+The isodual outer code is an LCD $[8,4,4]_3$ code of covering radius two and
+published spectrum type $(3,4,10,12,11)$.  The explicit isodual map obeys
+\[
+ D^2=-I,\qquad D^4=I,
+\]
+so one four-lane signed-bin mixer can alternate between generator and parity-
+check roles.  Finally, after correcting and uncomputing the optimal fifteen-probe
+record, the frame and forty-way route fuse into
+\[
+ R=40(27x_p+9z_p+3x_f+z_f)+(4\ell+s),
+\]
+a twelve-bit rank for all $3240$ valid joint states.  Optical loss, crosstalk,
+finite-time reset energy, and FPGA placement remain measured-evidence tasks.
