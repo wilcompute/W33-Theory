@@ -1,0 +1,84 @@
+\section{The binary tetrahedron inside the ternary machine}
+\label{sec:pg32-support-lift}
+
+\noindent
+The four frame coordinates carry a canonical binary coarse address.  For a
+projective ternary point
+\[
+ [x]=[x_1:x_2:x_3:x_4]\in PG(3,3),
+\]
+define
+\[
+ \pi([x])=(\mathbf 1_{x_1\ne0},\ldots,\mathbf 1_{x_4\ne0})
+ \in\mathbb F_2^4\setminus\{0\}.
+\]
+The fifteen nonzero binary masks are the fifteen simplicial cells of a
+tetrahedron: four vertices, six edges, four faces and one body.  The map is
+well-defined projectively because multiplication by $-1$ preserves support.
+
+\paragraph{Exact phase-capacity law.}
+If a mask $S$ has weight $w$, then
+\[
+ \boxed{|\pi^{-1}(S)|=2^{w-1}.}
+\]
+Therefore
+\[
+ (4,6,4,1)\odot(1,2,4,8)
+ =
+ \boxed{(4,12,16,8)}.
+\]
+Thus the tomotope f-vector is the exact rank-by-rank capacity profile of the
+ternary projective lift of the binary tetrahedron.  This is a capacity theorem;
+it does not by itself identify the quotient incidence object with the abstract
+tomotope.
+
+\paragraph{Equitable W33 quotient.}
+A perfect matching of the four tetrahedral vertices determines a standard
+symplectic coordinate pairing.  There are three such matchings.  For each one,
+the fifteen support fibers form an equitable partition of the W33
+collinearity graph.  If $Q$ is the quotient and
+$s_S=2^{|S|-1}$, then
+\[
+ \operatorname{spec}(Q)=12^1\oplus2^9\oplus(-4)^5,
+ \qquad
+ \operatorname{diag}(s)Q=Q^{\mathsf T}\operatorname{diag}(s),
+\]
+and
+\[
+ \boxed{Q^2=8I-2Q+4\mathbf1s^{\mathsf T}.}
+\]
+The full spectrum
+$12^1\oplus2^{24}\oplus(-4)^{15}$ consequently splits into a
+fifteen-dimensional binary-support sector and a twenty-five-dimensional
+internal ternary-phase sector with residual spectrum
+\[
+ \boxed{2^{15}\oplus(-4)^{10}.}
+\]
+
+\paragraph{Selector consequence.}
+The tetrahedral symmetry group $S_4$ acts transitively on the three perfect
+matchings.  A matching stabilizer is the nonabelian group $D_8$ of order
+eight, so
+\[
+ \boxed{24=8\cdot3=|S_4|=|D_8|\,[S_4:D_8].}
+\]
+Moreover, the four Type-A selector masks
+\[
+ 1110,\quad1101,\quad1011,\quad0111
+\]
+are exactly the four tetrahedral face masks.  Hence the twelve admissible
+Type-A/Fano sheets have the intrinsic parameter set
+\[
+ \{\text{four tetrahedral faces}\}
+ \times
+ \{\text{three symplectic pairings}\}.
+\]
+An objectwise intertwiner to the existing $2160\times160$ selector matrices is
+a separate verification target.
+
+\paragraph{Machine use.}
+The result supplies a support-first frame codec: first decode the fifteen-state
+binary occupancy shell, then decode the within-fiber ternary phase.  The exact
+verifier and frozen certificate are
+\texttt{analysis/bt2808\_pg32\_tetrahedral\_support\_lift.py} and
+\texttt{data/PART\_BT2808\_PG32\_TETRAHEDRAL\_SUPPORT\_LIFT\_results.json}.
