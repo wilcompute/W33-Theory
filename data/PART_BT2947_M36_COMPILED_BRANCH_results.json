@@ -1,0 +1,17 @@
+{
+  "schema":"w33.pass2947.m36_compiled_branch.v1",
+  "status":"COMPLETE_EXACT_CIRCUIT_AND_PAULI_MODEL",
+  "primitive_gate_count":15,
+  "measurement_count":2,
+  "input_ray":5,
+  "output_ray":7,
+  "stabilizers":["IYZY","YZXY"],
+  "syndrome":[-1,1],
+  "decoded_accept_bits":[0,1],
+  "ideal_success_probability":0.5,
+  "fault_event_count":191,
+  "fault_class_histogram":{"accepted_bad":177,"benign":14},
+  "coefficients":{"input":"2/3","one_qubit":"140/81","two_qubit":"2084/405","measurement":"4/9"},
+  "first_order_output_infidelity":"(2/3)p + (140/81)q1 + (2084/405)q2 + (4/9)qm + higher order",
+  "claim_boundary":"Exact for the compiled decoder and the stated stochastic Pauli/measurement-flip model."
+}
