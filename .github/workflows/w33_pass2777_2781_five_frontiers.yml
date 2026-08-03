@@ -1,0 +1,99 @@
+name: Passes 2777-2781 Distillation Sensor Compiler Repeater
+on:
+  push:
+    paths:
+      - 'analysis/bt2767_m36_factory.py'
+      - 'analysis/bt2777_2781_*.py'
+      - 'analysis/bt2777_m36_stabilizer_code_census.py'
+      - 'analysis/bt2778_metaplectic_interferometer.py'
+      - 'analysis/bt2779_structured_cx_compiler.py'
+      - 'analysis/bt2781_repeater_remote_sum.py'
+      - 'analysis/BT2777_BT2781_five_frontiers.md'
+      - 'analysis/BT2779_structured_compiler_w33_insert.tex'
+      - 'analysis/BT2781_repeater_sensor_holonet_insert.tex'
+      - 'data/PART_BT2777*'
+      - 'data/PART_BT2778*'
+      - 'data/PART_BT2779*'
+      - 'data/PART_BT2781*'
+      - 'rtl/w33_pass2778*'
+      - 'rtl/w33_pass2779*'
+      - 'rtl/w33_pass2781*'
+      - 'rtl/tb_w33_pass2778*'
+      - 'rtl/tb_w33_pass2781*'
+      - 'tests/test_bt2777_2781_five_frontiers.py'
+      - '.github/workflows/w33_pass2777_2781_five_frontiers.yml'
+  pull_request:
+    paths:
+      - 'analysis/bt2767_m36_factory.py'
+      - 'analysis/bt2777_2781_*.py'
+      - 'analysis/bt2777_m36_stabilizer_code_census.py'
+      - 'analysis/bt2778_metaplectic_interferometer.py'
+      - 'analysis/bt2779_structured_cx_compiler.py'
+      - 'analysis/bt2781_repeater_remote_sum.py'
+      - 'rtl/w33_pass2778*'
+      - 'rtl/w33_pass2779*'
+      - 'rtl/w33_pass2781*'
+      - 'tests/test_bt2777_2781_five_frontiers.py'
+jobs:
+  exact-five-frontiers:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install exact and FPGA tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys nextpnr-ice40 fpga-icestorm
+          python -m pip install numpy sympy pytest
+      - name: Rebuild certificates and generated RTL
+        run: |
+          PYTHONPATH=analysis python analysis/bt2767_m36_factory.py
+          PYTHONPATH=analysis python analysis/bt2777_m36_stabilizer_code_census.py
+          PYTHONPATH=analysis python analysis/bt2778_metaplectic_interferometer.py
+          PYTHONPATH=analysis python analysis/bt2779_structured_cx_compiler.py
+          PYTHONPATH=analysis python analysis/bt2781_repeater_remote_sum.py
+          PYTHONPATH=analysis python analysis/bt2777_2781_release.py
+      - name: Exact deterministic drift guard
+        run: |
+          git diff --exit-code -- \
+            data/PART_BT2777_M36_4_2_STABILIZER_CENSUS_summary.json \
+            data/PART_BT2778_METAPLECTIC_INTERFEROMETER_summary.json \
+            data/PART_BT2779_STRUCTURED_CX_COMPILER_summary.json \
+            data/PART_BT2781_REPEATER_REMOTE_SUM_summary.json \
+            data/PART_BT2777_BT2781_FIVE_FRONTIERS_results.json
+      - name: Focused regressions
+        run: PYTHONPATH=analysis pytest -q tests/test_bt2777_2781_five_frontiers.py
+      - name: RTL simulation and syntax closure
+        run: |
+          mkdir -p build
+          iverilog -g2012 -s tb_w33_pass2778_metaplectic_sensor_controller -o build/sensor.vvp \
+            rtl/w33_pass2778_metaplectic_sensor_controller.sv rtl/tb_w33_pass2778_metaplectic_sensor_controller.sv
+          vvp build/sensor.vvp | tee build/sensor_sim.txt
+          iverilog -g2012 -s tb_w33_pass2781_repeater_scheduler -o build/repeater.vvp \
+            rtl/w33_pass2781_repeater_scheduler.sv rtl/tb_w33_pass2781_repeater_scheduler.sv
+          vvp build/repeater.vvp | tee build/repeater_sim.txt
+          iverilog -g2012 -tnull rtl/w33_pass2779_structured_cx_decoder.sv
+      - name: Synthesize structured decoder and complete ISA
+        run: |
+          yosys -p 'read_verilog -sv rtl/w33_pass2779_structured_cx_decoder.sv; synth_ice40 -top w33_pass2779_structured_cx_decoder -json build/decoder.json; stat' | tee build/yosys_decoder.txt
+          yosys -p 'read_verilog -sv rtl/w33_pass2767_m36_factory.sv rtl/w33_pass2770_holonet_top.sv; synth_ice40 -top w33_pass2770_holonet_top -json build/holonet.json; stat' | tee build/yosys_holonet.txt
+          yosys -p 'read_verilog -sv rtl/w33_pass2778_metaplectic_sensor_controller.sv; synth_ice40 -top w33_pass2778_metaplectic_sensor_controller -json build/sensor.json; stat' | tee build/yosys_sensor.txt
+          yosys -p 'read_verilog -sv rtl/w33_pass2781_repeater_scheduler.sv; synth_ice40 -top w33_pass2781_repeater_scheduler -json build/repeater.json; stat' | tee build/yosys_repeater.txt
+      - name: Reject folded state machines
+        run: |
+          python analysis/check_bt2780_yosys_state.py build/sensor.json w33_pass2778_metaplectic_sensor_controller --min-dff 64 --min-cells 80
+          python analysis/check_bt2780_yosys_state.py build/repeater.json w33_pass2781_repeater_scheduler --min-dff 16 --min-cells 32
+          python analysis/check_bt2780_yosys_state.py build/holonet.json w33_pass2770_holonet_top --min-dff 8 --min-cells 16
+      - name: Place route and time iCE40 HX8K
+        run: |
+          nextpnr-ice40 --hx8k --package tq144 --pcf-allow-unconstrained --json build/decoder.json --asc build/decoder.asc --freq 12 --report build/decoder_pnr.json |& tee build/nextpnr_decoder.txt
+          icetime -d hx8k -mtr build/decoder_timing.txt build/decoder.asc
+          nextpnr-ice40 --hx8k --package tq144 --pcf-allow-unconstrained --json build/holonet.json --asc build/holonet.asc --freq 12 --report build/holonet_pnr.json |& tee build/nextpnr_holonet.txt
+          icetime -d hx8k -mtr build/holonet_timing.txt build/holonet.asc
+          nextpnr-ice40 --hx8k --package tq144 --pcf-allow-unconstrained --json build/sensor.json --asc build/sensor.asc --freq 12 --report build/sensor_pnr.json |& tee build/nextpnr_sensor.txt
+          icetime -d hx8k -mtr build/sensor_timing.txt build/sensor.asc
+          nextpnr-ice40 --hx8k --package tq144 --pcf-allow-unconstrained --json build/repeater.json --asc build/repeater.asc --freq 12 --report build/repeater_pnr.json |& tee build/nextpnr_repeater.txt
+          icetime -d hx8k -mtr build/repeater_timing.txt build/repeater.asc
+      - uses: actions/upload-artifact@v4
+        with: {name: pass2777-2781-hardware-evidence, path: build/}
