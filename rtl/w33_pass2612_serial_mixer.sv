@@ -58,8 +58,16 @@ module w33_mix_core #(parameter W = 4, parameter OW = 12) (
             wire signed [OW-1:0] partial [0:36];
             assign partial[0] = {OW{1'b0}};
             for (j = 0; j < 36; j = j + 1) begin : acc
-                wire signed [OW-1:0] term =
-                    masks[i][j] ? $signed(x_flat[j*W +: W]) : {OW{1'b0}};
+                // Sign-extend FIRST, into its own signed wire.  Doing it inside the
+                // ternary is wrong: in Verilog a conditional with one unsigned operand
+                // is unsigned throughout, and {OW{1'b0}} is unsigned -- so
+                // `masks[i][j] ? $signed(x) : {OW{1'b0}}` silently drops the sign
+                // extension and negative lanes become large positives.  Caught by the
+                // Pass 2613 SAT run; simulation missed it because the testbench only
+                // used non-negative inputs.
+                wire signed [OW-1:0] xs   = $signed(x_flat[j*W +: W]);
+                wire signed [OW-1:0] zero = {OW{1'b0}};
+                wire signed [OW-1:0] term = masks[i][j] ? xs : zero;
                 assign partial[j+1] = partial[j] + term;
             end
             assign y_flat[i*OW +: OW] = partial[36];
