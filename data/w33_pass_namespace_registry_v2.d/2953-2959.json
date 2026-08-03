@@ -1,0 +1,17 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "2953-2959",
+  "owner": "research/pass2953-2959-operator-butterfly-runtime-blueprint",
+  "status": "reserved",
+  "reserved_after": "Passes 2946-2952 parallel reservation",
+  "passes": {
+    "2953": "transport the intrinsic S3 selector-channel torsor through the literal selector operator family and certify the exact intertwiners",
+    "2954": "generate all-q Hadamard quotient architectures and derive exact dense-versus-butterfly cost crossover laws",
+    "2955": "construct a noise-aware adaptive support scheduler with exact Bayesian stopping and protected-observer constraints",
+    "2956": "compile the determinant-twisted regular order-96 token torsor into a minimal generator/Cayley runtime",
+    "2957": "classify intermediate observable algebras under operation subsets and support-fiber Weyl noise",
+    "2958": "BONKERS: compute selector-bundle holonomy and test whether runtime control carries a nontrivial discrete curvature checksum",
+    "2959": "BONKERS: minimize support-output experiments as a finite-state distinguishing automaton and search for universal diagnostic words"
+  },
+  "claim_boundary": "Reservation only. Exact, measured, modelled, source-complete, and open statements remain separately typed."
+}
