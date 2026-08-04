@@ -1,0 +1,106 @@
+name: Passes 3332-3343 Gauge Fault Clebsch Closure
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/*3332*'
+      - 'analysis/*3343*'
+      - 'bootstrap/pass3332_3343_verifier.py.zlib.b64'
+      - 'data/PART_BT3332*'
+      - 'data/w33_pass_namespace_registry_v2.d/3332-3343.json'
+      - 'tests/test_bt3332_3343_seven_front_closure.py'
+      - 'rtl/w33_envelope_clebsch_recovery.v'
+      - 'rtl/w33_q5_single_fault_router.v'
+      - 'rtl/tb_w33_pass3332_3343_fault_recovery.v'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'holonet_machine_blueprint.tex'
+      - 'docs/index.html'
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/*3332*'
+      - 'analysis/*3343*'
+      - 'bootstrap/pass3332_3343_verifier.py.zlib.b64'
+      - 'data/PART_BT3332*'
+      - 'tests/test_bt3332_3343_seven_front_closure.py'
+      - 'rtl/w33_envelope_clebsch_recovery.v'
+      - 'rtl/w33_q5_single_fault_router.v'
+      - 'rtl/tb_w33_pass3332_3343_fault_recovery.v'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pass3332-3343-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  exact-digital-papers:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install exact and digital tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys nextpnr-ice40
+          python -m pip install --upgrade pip
+          python -m pip install numpy networkx sympy pytest
+      - name: Regenerate exact artifacts
+        run: |
+          mkdir -p evidence/pass3332_3343
+          python analysis/bt3332_3343_seven_front_closure.py \
+            --json /tmp/results.json --routes-json /tmp/routes.json \
+            | tee evidence/pass3332_3343/exact.log
+          python - <<'PY'
+          from pathlib import Path
+          import base64,zlib
+          for src,dst in [
+            ('data/PART_BT3332_BT3343_SEVEN_FRONT_CLOSURE_results.json.zlib.b64','/tmp/frozen-results.json'),
+            ('data/PART_BT3332_BT3343_FAULT_ROUTE_manifest.json.zlib.b64','/tmp/frozen-routes.json')]:
+              Path(dst).write_bytes(zlib.decompress(base64.b64decode(Path(src).read_text(encoding='ascii'))))
+          PY
+          cmp /tmp/results.json /tmp/frozen-results.json
+          cmp /tmp/routes.json /tmp/frozen-routes.json
+          pytest -q tests/test_bt3332_3343_seven_front_closure.py \
+            | tee evidence/pass3332_3343/pytest.log
+          git diff --check
+      - name: Exhaust recovery and mirrored routing RTL
+        run: |
+          iverilog -g2012 -s tb_w33_pass3332_3343_fault_recovery \
+            -o evidence/pass3332_3343/fault_recovery_tb \
+            rtl/w33_signature_s3_rom4.v \
+            rtl/w33_signature_q4_router.v \
+            rtl/w33_envelope_clebsch_recovery.v \
+            rtl/w33_q5_single_fault_router.v \
+            rtl/tb_w33_pass3332_3343_fault_recovery.v
+          vvp evidence/pass3332_3343/fault_recovery_tb \
+            | tee evidence/pass3332_3343/rtl.log
+          grep -F 'PASS Clebsch recovery cases=352 and mirrored single-fault routes=96' evidence/pass3332_3343/rtl.log
+      - name: Synthesize recovery and failover wrappers
+        run: |
+          for top in w33_envelope_clebsch_recovery w33_q5_single_fault_router; do
+            yosys -p "read_verilog rtl/w33_signature_s3_rom4.v rtl/w33_signature_q4_router.v rtl/w33_envelope_clebsch_recovery.v rtl/w33_q5_single_fault_router.v; hierarchy -top ${top}; synth_ice40 -top ${top} -json evidence/pass3332_3343/${top}.json; stat" \
+              2>&1 | tee evidence/pass3332_3343/${top}.yosys.log
+            nextpnr-ice40 --up5k --package sg48 --json evidence/pass3332_3343/${top}.json \
+              --asc evidence/pass3332_3343/${top}.asc --pcf-allow-unconstrained --freq 12 \
+              2>&1 | tee evidence/pass3332_3343/${top}.nextpnr.log
+          done
+      - uses: WtfJoke/setup-tectonic@v3
+        with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
+      - name: Compile canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee evidence/pass3332_3343/${source%.tex}.log
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3332_3343/pdf_sha256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3332-3343-evidence
+          path: |
+            evidence/pass3332_3343/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
