@@ -1,0 +1,16 @@
+{
+  "schema": "w33.pass2996_3002.deep_optimal_information.v1",
+  "status": "COMPLETE_EXACT_MODELED_AND_SOURCE",
+  "check_count": 7,
+  "checks": {"2996": true, "2997": true, "2998": true, "2999": true, "3000": true, "3001": true, "3002": true},
+  "headlines": {
+    "2996": "The frozen 23-row base needs exactly six fixed extensions, but an adaptive tree resolves every D4 hypothesis in at most 25 rows.",
+    "2997": "The natural 540-to-540 C3 intertwiner is impossible: the clock action fixes 540 orbit labels while the W33 transvection fixes none.",
+    "2998": "All 40-point transfers need at most two symplectic transvections.",
+    "2999": "The exact adaptive controller averages 23.0899 rows uniformly and 23.00624 under the frozen sparse prior.",
+    "3000": "Eight exact frame/relabel/defer rules prevent fake gates from entering hardware.",
+    "3001": "An optimal balanced four-slot word gives distance-nine self-synchronization with zero extra pilot channels.",
+    "3002": "The next-action variable needs four fixed bits and only 0.051734 bits of entropy under the frozen prior."
+  },
+  "claim_boundary": "Global fixed-schedule minimality of 29 remains open. Exact finite results, synthetic priors, logical entropy, source RTL, and physical measurements remain separately typed."
+}
