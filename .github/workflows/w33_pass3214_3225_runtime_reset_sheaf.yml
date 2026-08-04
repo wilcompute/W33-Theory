@@ -1,0 +1,160 @@
+name: Passes 3214-3225 Runtime Reset Sheaf Closure
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'analysis/bt3214_all194_runtime.py'
+      - 'analysis/bt3215_3219_3221_reset_sheaf.py'
+      - 'analysis/bt3216_curvature_rom.py'
+      - 'analysis/bt3217_m36_sharded_census.py'
+      - 'analysis/bt3217_3222_proof_accumulator.py'
+      - 'analysis/bt3218_stack_drain.py'
+      - 'analysis/bt3220_reset_thermodynamics.py'
+      - 'analysis/BT3214_BT3225_*'
+      - 'data/PART_BT3214_BT3225_*'
+      - 'data/PART_BT3218_STACK_SNAPSHOT.json'
+      - 'data/w33_pass_namespace_registry_v2.d/3214-3225.json'
+      - 'rtl/*3216*'
+      - 'rtl/*3223*'
+      - 'tests/test_bt3214_bt3225_runtime_reset_sheaf.py'
+      - 'tools/integrate_bt3214_bt3225.py'
+      - '.github/workflows/w33_pass3214_3225_runtime_reset_sheaf.yml'
+permissions:
+  contents: write
+concurrency:
+  group: pass3214-3225-focused-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-rtl-place-papers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: "${{ github.event.pull_request.head.sha || github.sha }}"
+          fetch-depth: 0
+      - name: Reconcile current master
+        run: |
+          git config user.name w33-reconcile-bot
+          git config user.email actions@users.noreply.github.com
+          git fetch origin master
+          git merge --no-edit origin/master
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact and digital toolchains
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys fpga-icestorm nextpnr-ice40
+          python -m pip install --upgrade pip
+          python -m pip install numpy pytest
+      - uses: wtfjoke/setup-tectonic@v3
+      - name: Recompute fast exact fronts
+        run: |
+          python analysis/bt3214_all194_runtime.py --mode selftest --shard-count 32
+          python analysis/bt3217_m36_sharded_census.py --mode selftest
+          python analysis/bt3216_curvature_rom.py
+          python analysis/bt3215_3219_3221_reset_sheaf.py
+          python analysis/bt3220_reset_thermodynamics.py
+          python analysis/bt3217_3222_proof_accumulator.py
+          python analysis/bt3218_stack_drain.py
+      - name: Focused exact and fail-closed regressions
+        run: |
+          pytest -q tests/test_bt3214_bt3225_runtime_reset_sheaf.py
+          git diff --check
+      - name: Simulate ROM, reset, root and ISA contracts
+        run: |
+          iverilog -g2012 -s tb_w33_pass3216_3223_runtime_reset_proof \
+            -o /tmp/pass3216_3223.vvp \
+            rtl/w33_pass3216_3223_runtime_reset_proof.sv \
+            rtl/tb_w33_pass3216_3223_runtime_reset_proof.sv
+          vvp /tmp/pass3216_3223.vvp | tee evidence_pass3216_3223_iverilog.log
+          grep -F 'PASS quotient ROM, synchronization rank boundary, proof root and tri-ISA gate' evidence_pass3216_3223_iverilog.log
+      - name: Synthesize and place quotient ROM
+        run: |
+          yosys -p 'read_verilog -sv rtl/w33_pass3216_3223_runtime_reset_proof.sv; hierarchy -top w33_pass3223_curvature_rom_hx8k_top; synth_ice40 -top w33_pass3223_curvature_rom_hx8k_top -json /tmp/rom.json; stat' | tee evidence_pass3216_rom_yosys.log
+          nextpnr-ice40 --hx8k --package ct256 --pcf-allow-unconstrained \
+            --json /tmp/rom.json --asc /tmp/rom.asc |& tee evidence_pass3216_rom_nextpnr.log
+          grep -F 'Number of cells' evidence_pass3216_rom_yosys.log
+      - name: Synthesize and place reset and ISA gate
+        run: |
+          yosys -p 'read_verilog -sv rtl/w33_pass3216_3223_runtime_reset_proof.sv; hierarchy -top w33_pass3223_control_gate_hx8k_top; synth_ice40 -top w33_pass3223_control_gate_hx8k_top -json /tmp/control.json; stat' | tee evidence_pass3223_control_yosys.log
+          nextpnr-ice40 --hx8k --package ct256 --pcf-allow-unconstrained \
+            --json /tmp/control.json --asc /tmp/control.asc |& tee evidence_pass3223_control_nextpnr.log
+          grep -F 'Number of cells' evidence_pass3223_control_yosys.log
+      - name: Integrate all four front doors idempotently
+        run: |
+          python tools/integrate_bt3214_bt3225.py --report data/PART_BT3224_RUNTIME_RESET_SHEAF_INTEGRATION.json
+          sha256sum w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html > /tmp/frontdoor_a
+          python tools/integrate_bt3214_bt3225.py --report data/PART_BT3224_RUNTIME_RESET_SHEAF_INTEGRATION.json
+          sha256sum w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html > /tmp/frontdoor_b
+          diff -u /tmp/frontdoor_a /tmp/frontdoor_b
+      - name: Compile all three canonical papers
+        run: |
+          tectonic w33_paper.tex
+          tectonic photonic_holonet.tex
+          tectonic holonet_machine_blueprint.tex
+          test -s w33_paper.pdf
+          test -s photonic_holonet.pdf
+          test -s holonet_machine_blueprint.pdf
+      - name: Freeze observed focused evidence
+        env:
+          HEAD_BRANCH: "${{ github.event.pull_request.head.ref || github.ref_name }}"
+        run: |
+          mkdir -p evidence/pass3214_3225
+          cp evidence_pass3216_3223_iverilog.log evidence/pass3214_3225/
+          cp evidence_pass3216_rom_yosys.log evidence_pass3216_rom_nextpnr.log evidence/pass3214_3225/
+          cp evidence_pass3223_control_yosys.log evidence_pass3223_control_nextpnr.log evidence/pass3214_3225/
+          sha256sum \
+            data/PART_BT3214_ISA_PLAN.json \
+            data/PART_BT3217_M36_SHARD_PLAN.json \
+            data/PART_BT3216_CURVATURE_QUOTIENT_ROM.json \
+            data/PART_BT3216_CURVATURE_QUOTIENT_ROM.memh \
+            data/PART_BT3215_BT3221_RESET_SHEAF_RESULTS.json \
+            data/PART_BT3220_RESET_THERMODYNAMICS.json \
+            data/PART_BT3217_BT3222_PROOF_ACCUMULATOR.json \
+            data/PART_BT3218_STACK_DRAIN_RESULTS.json \
+            w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
+            > evidence/pass3214_3225/SHA256SUMS
+          python - <<'PY'
+          import json, os, pathlib
+          pathlib.Path('evidence/pass3214_3225/COMPLETE.json').write_text(json.dumps({
+            'schema':'w33.pass3214_3225.focused_evidence.v1',
+            'status':'COMPLETE_FAST_EXACT_RTL_HX8K_AND_THREE_PDFS',
+            'commit':os.environ['GITHUB_SHA'],
+            'all_194_bfs':'separate 32-shard workflow',
+            'm36_census':'separate 256-shard workflow',
+            'tri_isa_physical_promotion':'requires dedicated observed three-mode placement/calibration record',
+            'laboratory_claims':'none'
+          },indent=2,sort_keys=True)+'\n')
+          PY
+          git config user.name w33-evidence-bot
+          git config user.email actions@users.noreply.github.com
+          git add \
+            w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html \
+            data/PART_BT3214_ISA_PLAN.json data/PART_BT3217_M36_SHARD_PLAN.json \
+            data/PART_BT3216_CURVATURE_QUOTIENT_ROM.json data/PART_BT3216_CURVATURE_QUOTIENT_ROM.memh \
+            data/PART_BT3215_BT3221_RESET_SHEAF_RESULTS.json data/PART_BT3220_RESET_THERMODYNAMICS.json \
+            data/PART_BT3217_BT3222_PROOF_ACCUMULATOR.json data/PART_BT3218_STACK_DRAIN_RESULTS.json \
+            data/PART_BT3224_RUNTIME_RESET_SHEAF_INTEGRATION.json evidence/pass3214_3225
+          git add -f w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf
+          if ! git diff --cached --quiet; then
+            git commit -m 'Passes 3214-3225: record observed runtime reset sheaf evidence'
+            git push origin HEAD:"$HEAD_BRANCH"
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3214-3225-runtime-reset-sheaf-focused-evidence
+          path: |
+            evidence/pass3214_3225/
+            data/PART_BT3214_ISA_PLAN.json
+            data/PART_BT3217_M36_SHARD_PLAN.json
+            data/PART_BT3216_CURVATURE_QUOTIENT_ROM.json
+            data/PART_BT3216_CURVATURE_QUOTIENT_ROM.memh
+            data/PART_BT3215_BT3221_RESET_SHEAF_RESULTS.json
+            data/PART_BT3220_RESET_THERMODYNAMICS.json
+            data/PART_BT3217_BT3222_PROOF_ACCUMULATOR.json
+            data/PART_BT3218_STACK_DRAIN_RESULTS.json
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
