@@ -1,0 +1,35 @@
+name: Passes 3262-3265 Signature S3 Affine Lift
+on:
+  pull_request:
+    paths:
+      - 'analysis/bt3262_3265_signature_s3_affine_lift.py'
+      - 'analysis/BT3262_BT3265_signature_s3_affine_lift*'
+      - 'data/PART_BT3262_BT3265_SIGNATURE_S3_AFFINE_LIFT_results.json'
+      - 'tests/test_bt3262_3265_signature_s3_affine_lift.py'
+      - '.github/workflows/w33_bt3262_3265_signature_s3_affine_lift.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/bt3262_3265_signature_s3_affine_lift.py'
+      - 'analysis/BT3262_BT3265_signature_s3_affine_lift*'
+      - 'data/PART_BT3262_BT3265_SIGNATURE_S3_AFFINE_LIFT_results.json'
+      - 'tests/test_bt3262_3265_signature_s3_affine_lift.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Regenerate exact certificate
+        run: |
+          python analysis/bt3262_3265_signature_s3_affine_lift.py \
+            --json /tmp/PART_BT3262_BT3265_SIGNATURE_S3_AFFINE_LIFT_results.json
+          cmp /tmp/PART_BT3262_BT3265_SIGNATURE_S3_AFFINE_LIFT_results.json \
+            data/PART_BT3262_BT3265_SIGNATURE_S3_AFFINE_LIFT_results.json
+      - name: Frozen regression
+        run: python -m pytest -q tests/test_bt3262_3265_signature_s3_affine_lift.py
