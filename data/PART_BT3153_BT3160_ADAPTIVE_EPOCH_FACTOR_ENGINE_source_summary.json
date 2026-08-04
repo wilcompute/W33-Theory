@@ -1,5 +1,5 @@
 {
-  "schema": "w33.pass3153_3160.adaptive_epoch_factor_engine.source_summary.v1",
+  "schema": "w33.pass3153_3160.adaptive_epoch_factor_engine.source_summary.v2",
   "local_generator_status": "PASS",
   "pass_3153_3154": {
     "five_six_subsets": 462,
@@ -32,9 +32,13 @@
   "pass_3155_3156": {
     "dynamic_factors": 3697,
     "baseline_registers": 1,
-    "banks": 7,
-    "words_per_bank": 528,
     "word_bits": 18,
+    "unary_memory": {"rows": 45, "width_bits": 126, "aspect_ratio_estimate_ebr": 8},
+    "correction_banks": 7,
+    "correction_words_per_bank": 483,
+    "correction_bank_width_bits": 18,
+    "aspect_ratio_estimate_ebr_per_correction_bank": 3,
+    "aspect_ratio_estimate_total_ebr": 29,
     "single_table_bits": 66546,
     "unary_cycles": 45,
     "pair_cycles": 483,
@@ -42,8 +46,7 @@
     "parallel_factor_updates_per_cycle": 7,
     "modeled_100mhz_sweeps_per_second": 189393.9393939394,
     "modeled_internal_write_bandwidth_bits_per_second": 12600000000,
-    "ice40_4k_ebr_blocks": 21,
-    "boundary": "Schedule and memory arithmetic are exact; 100 MHz and placement are unobserved design inputs."
+    "boundary": "Schedule, information-bit count and iCE40 aspect-ratio estimate are exact arithmetic; inferred block count, 100 MHz operation and placement are unobserved tool gates."
   },
   "pass_3157_3158": {
     "payload_period": 12,
@@ -61,7 +64,7 @@
       {"payload_symbols":384,"overhead_fraction":0.012853470437017995,"maximum_received_symbols_to_confirm":391},
       {"payload_symbols":768,"overhead_fraction":0.00646830530401035,"maximum_received_symbols_to_confirm":775}
     ],
-    "boundary": "The delimiter theorem is exact. Post-marker laboratory symbol confusion and physical edit rates remain unmeasured."
+    "boundary": "The delimiter theorem is exact. Post-marker acquisition assumes two clean payload symbols; continuing edit corruption belongs to the bounded edit-mask controller. Laboratory symbol confusion and physical edit rates remain unmeasured."
   },
   "pass_3159": {
     "current_candidate_status": "NO_ACCEPTED_CANDIDATE_OBSERVED",
