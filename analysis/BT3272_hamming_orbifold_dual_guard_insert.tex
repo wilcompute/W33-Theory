@@ -1,0 +1,39 @@
+% BEGIN PASS 3262-3273 HAMMING ORBIFOLD DUAL GUARD
+\subsection{Closed cover component, Hamming orbifold, and non-Abelian guard compiler}
+The switch closure generated from the frozen exact 60-frame cover is now complete.  It contains 135 pairwise-disjoint $PSp(4,3)$ orbit species: 27 of size $6480$ and 108 of size $12960$.  Hence the component contains
+\[
+27(6480)+108(12960)=1574640=6480\cdot243
+\]
+exact covers.  This is a classification of that switch-connected component, not a proof that no disconnected maximum-cover components exist.
+
+The weighted orbit-species quotient is exactly the involution orbifold
+\[
+H(5,3)/\langle\tau\rangle,
+\qquad
+\tau(x_1,x_2,x_3,x_4,x_5)=(-x_4,1-x_3,1-x_2,-x_1,x_5),
+\]
+with spectrum
+\[
+10^1,\;7^6,\;4^{22},\;1^{44},\;(-2)^{42},\;(-5)^{20}.
+\]
+Its reversible walk has stationary weights $1/243$ on the 27 fixed species and $2/243$ on the 108 paired species, and obeys the exact six-tap recurrence
+\[
+W^6=15W^5-15W^4-475W^3+1056W^2+2220W-2800I.
+\]
+
+The rational port cone $\mathbb Q^6\oplus M_2(\mathbb Q)\oplus M_4(\mathbb Q)$ now has an exact principal-minor certificate checker.  The baseline identity $H+4I=MM^\top\succeq0$ reproduces the bound nine.  Full group averaging proves that a single colour-symmetric split-algebra matrix cannot improve this bound; the first profile-aware dual needs 55 coupled colour matrices and $55\cdot19=1045$ rational block coordinates.  No certificate deciding ten-colourability is yet known, so
+\[
+10\leq\chi(H)\leq11
+\]
+remains the live boundary.
+
+The $S_3$ decoder now retains the sign bit, the integral two-dimensional standard representation, and the full group symbol.  The standard character $(2,0,-1)$ detects three-cycles invisible to sign.  Reliability selects an edge explanation, ties fail closed, and blind correction remains disallowed by the exact distance-two theorem.
+
+One modular spiral core implements $S_3$, $D_4$, $D_5$, and $D_8$ by reduction modulo $2,3,5,7$.  The superficial match between the eight-dimensional port center and the eight $D(S_3)$ sector labels is explicitly falsified as an algebra isomorphism: their simple block dimensions are respectively
+\[
+1,1,1,1,1,1,4,16
+\quad\hbox{and}\quad
+1,1,4,4,4,4,9,9.
+\]
+The class--centralizer language remains a useful decoder taxonomy, not evidence for physical anyons or topological order.
+% END PASS 3262-3273 HAMMING ORBIFOLD DUAL GUARD
