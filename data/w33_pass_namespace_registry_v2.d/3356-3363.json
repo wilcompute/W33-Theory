@@ -3,7 +3,7 @@
   "range": [3356, 3363],
   "owner": "openai-gpt-5.6-thinking",
   "branch": "master",
-  "purpose": "Close theorem reachability across the wrapper-based W33, Photonic Holonet, machine-blueprint, and public-index front doors; repair the orphaned Passes 3320-3331 integration path; add a generic wrapper-aware publication auditor, exact tests, and fail-closed workflow evidence.",
+  "purpose": "Close theorem reachability across the wrapper-based W33, Photonic Holonet, machine-blueprint, and public-index front doors; repair the orphaned Passes 3320-3331 integration path; add a generic wrapper-aware publication auditor, exact tests, fail-closed workflow evidence, and prove that weight-two C3^5 gauge defects generate the entire 2400-dimensional flat connection space and 2180-dimensional switching quotient.",
   "base": "4c89108e339f036fe3ed3f7072f2bde72ef9d178",
-  "claim_boundary": "This packet proves source-level reachability and idempotent publication wiring. It does not promote queued PDF builds, hardware runs, chromatic decisions, laboratory evidence, or physical interpretations."
+  "claim_boundary": "This packet proves source-level reachability, idempotent publication wiring, and an exact finite cohomological generation theorem. It does not promote queued PDF builds, hardware runs, chromatic decisions, decoding-radius claims, laboratory evidence, or physical interpretations."
 }
