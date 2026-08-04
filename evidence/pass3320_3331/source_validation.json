@@ -1,0 +1,13 @@
+{
+  "schema": "w33.pass3320_3331.source_validation.v1",
+  "status": "PASS_LOCAL_EXACT_SOURCE_VALIDATION",
+  "exact_regeneration": "PASS",
+  "pytest": "2/2 PASS",
+  "python_syntax": "PASS",
+  "integrator": "IDEMPOTENT_BY_CONSTRUCTION_AND_WORKFLOW_DOUBLE_RUN",
+  "main_semantic_sha256": "adcca7a703b9d9ef8cb41f7c18fea11663e1c06501c867a51cd1e76cde3d98e0",
+  "script_sha256": "14b982748e455c32731d4ab4ae9f9f73c9f7ac3ff5c8ba389dc15b72754e43fb",
+  "frozen_result_sha256": "7d5e8e731b45d6bebec647ce134f5f4f44ee96fe08bbba1a4be967136319c915",
+  "decoder_vector_stream_sha256": "693cf77d3dc355b4040ef1eb82ae96ee8db53c30388cf95192ec98fafffdddbe",
+  "boundary": "No local Icarus/Yosys/placement/PDF result, terminal chromatic proof, quantum speedup, tomotope equivariance, laboratory calibration or spacetime claim is asserted."
+}
