@@ -1,0 +1,101 @@
+{
+  "claim_boundary": "No ten-colouring or checked UNSAT proof was obtained; no rational SDP dual bound above nine, general near-cover theorem, complete Kempe obstruction, nontrivial Z/9 contradiction, observed RTL/synthesis/PDF result, or physical spiral/relativity claim is made.",
+  "live_chromatic_boundary": "10 <= chi(H) <= 11",
+  "pass3226_port_sat": {
+    "base_dimacs_sha256": "6c0c3daac0ac1592fd3d84c45cad157c8e6e1b95ffe87b47868db4589c6b7cd5",
+    "fixed_missing_edge0": 9,
+    "manifest_sha256": "a6e55c50d628b77eb9ab16f6827ce7c613e5053618e4c5aa6151580bf2a34932",
+    "proof_gate": "Each UNSAT shard must carry a checked DRAT/LRAT proof; any SAT shard must pass the independent 540-color model checker.",
+    "shards": 100,
+    "split_edges": [1, 2],
+    "status": "EXACT_DISJOINT_SHARD_SURFACE_NO_SOLVER_CERTIFICATES"
+  },
+  "pass3227_port_terwilliger": {
+    "block_terwilliger_dimension_mod_primes": {"1000003": 16, "1000033": 16, "1000037": 16},
+    "boundary": "Matching dimensions at three large primes are exact finite-field computations and a strong characteristic-zero diagnostic, but no rational SDP dual certificate proving chi(H)>=11 was obtained.",
+    "cell_port_terwilliger_dimension_mod_primes": {"1000003": 26, "1000033": 26, "1000037": 26},
+    "generators": "four 135-cell relation matrices plus four dual subconstituent projectors at one base cell",
+    "status": "EXACT_MODULAR_ALGEBRA_DIMENSION_AND_SDP_DATA_SURFACE_NO_RATIONAL_DUAL_BOUND"
+  },
+  "pass3228_near_cover": {
+    "all_switch_family_members_cover_all_240_support_edges_once": true,
+    "commuting_switch_loci": 5,
+    "deletion_size_to_max_compatible_replacement_histogram": {
+      "1": {"0": 60},
+      "2": {"0": 1770},
+      "3": {"0": 34220},
+      "4": {"0": 487190, "1": 440, "4": 5},
+      "5": {"0": 5436647, "1": 24562, "2": 23, "4": 280},
+      "6": {"0": 49383591, "1": 670427, "2": 2133, "3": 9, "4": 7700}
+    },
+    "exact_cover_switch_family_size": 243,
+    "maximum_compatible_replacements": {"1": 0, "2": 0, "3": 0, "4": 4, "5": 4, "6": 4},
+    "scope": "Complete for all deletions of at most six frames from this frozen cover and for the generated five-locus switch family; not a classification of all independent sets or all exact covers.",
+    "signature_multiplicity_histogram": {"1": 440, "8": 5},
+    "theorem": "The frozen 60-frame exact cover contains five disjoint four-frame loci. At each locus, the eight outside frames with the same four-owner signature induce K4,4; its two bipartition classes are the only four-frame replacements. The five switches commute, producing 3^5=243 distinct exact 60-frame covers."
+  },
+  "pass3229_kempe_vizing": {
+    "boundary": "The recorded sequences are replayable and every terminal colouring exhausts the stated one-move neighborhood. This does not exclude longer non-monotone Kempe/Vizing sequences or prove chi(H)=11.",
+    "checked_neighborhood": "one direct recolor, or one connected bichromatic-component swap, optionally followed by one direct recolor of a target-colour vertex",
+    "records_summary": [
+      {"target":0,"initial_size":51,"final_size":41,"step_count":2,"checked_neighborhood_move_count_at_local_optimum":89,"improving_moves_at_local_optimum":0,"final_coloring_sha256":"bd9e09e857b572f1ae13e715b743af499f835c898d8240aa2948b583bea1267d"},
+      {"target":1,"initial_size":48,"final_size":41,"step_count":1,"checked_neighborhood_move_count_at_local_optimum":89,"improving_moves_at_local_optimum":0,"final_coloring_sha256":"aab0e97d49554c76c3e0e33689183c60372fbc8ad8f6ee511b5f22acaa919ae1"},
+      {"target":2,"initial_size":44,"final_size":41,"step_count":2,"checked_neighborhood_move_count_at_local_optimum":89,"improving_moves_at_local_optimum":0,"final_coloring_sha256":"4a3e5c83b0bd0f91675eda2b77f1fbc90e199dc4847a99c0b39d5510b46e93f7"},
+      {"target":3,"initial_size":43,"final_size":41,"step_count":1,"checked_neighborhood_move_count_at_local_optimum":89,"improving_moves_at_local_optimum":0,"final_coloring_sha256":"bc9badf0afcfb2d65f8d02239ce64c40f0ba7911325352f5fb905fcbe56f983d"},
+      {"target":4,"initial_size":47,"final_size":41,"step_count":1,"checked_neighborhood_move_count_at_local_optimum":89,"improving_moves_at_local_optimum":0,"final_coloring_sha256":"014391e408760d9aa334eb27efc01eaf63b12f961d38549412c61a4ae747881e"},
+      {"target":5,"initial_size":49,"final_size":41,"step_count":2,"checked_neighborhood_move_count_at_local_optimum":89,"improving_moves_at_local_optimum":0,"final_coloring_sha256":"89fe25dcd02074f180d81aa69e39605548e38432ec3bd6d44617d5f6c5371431"},
+      {"target":6,"initial_size":58,"final_size":41,"step_count":2,"checked_neighborhood_move_count_at_local_optimum":89,"improving_moves_at_local_optimum":0,"final_coloring_sha256":"f90a75a10a34c9891c4640455cd19510b3323a5d2cf9c5c430dd3d061ba5782a"},
+      {"target":7,"initial_size":48,"final_size":41,"step_count":2,"checked_neighborhood_move_count_at_local_optimum":89,"improving_moves_at_local_optimum":0,"final_coloring_sha256":"f786756c09c91a553f0c79035ed42b974721b38be8e3f95f74716c061dbab4f0"},
+      {"target":8,"initial_size":46,"final_size":41,"step_count":2,"checked_neighborhood_move_count_at_local_optimum":89,"improving_moves_at_local_optimum":0,"final_coloring_sha256":"b93c7e49453ebfecf31f2b3f2d565d84b3a70186e71ebb691f254a319624fbec"},
+      {"target":9,"initial_size":46,"final_size":41,"step_count":2,"checked_neighborhood_move_count_at_local_optimum":89,"improving_moves_at_local_optimum":0,"final_coloring_sha256":"b9e02186cd13f002371b5c7cd17178899eb8f8d0f516b287040c28dab32649f5"},
+      {"target":10,"initial_size":60,"final_size":41,"step_count":2,"checked_neighborhood_move_count_at_local_optimum":89,"improving_moves_at_local_optimum":0,"final_coloring_sha256":"5b592daa995bd3ee03860c4f679ff63f8a7ee0c2297cb367f23fbbbca0df3661"}
+    ],
+    "status": "EXPLICIT_PROPER_DESCENTS_TO_41_AND_EXHAUSTIVE_ONE_MOVE_LOCAL_OPTIMA_NO_TEN_COLORING",
+    "universal_local_floor_in_checked_neighborhood": 41
+  },
+  "pass3230_oa_voltage": {
+    "blocks_per_support": 3,
+    "boundary": "Any nontrivial global holonomy requires an externally specified matching/phase convention; it is not determined by the incidence geometry alone.",
+    "local_OA_isotopy_types": {"V4": 45},
+    "support_triangles": 240,
+    "theorem": "The local OA atlas is exact. The finite geometry supplies K3,3 relations, not canonical bijections; choosing a perfect matching gives an S3 gauge variable. Around each support triangle all six holonomies occur equally often (36 of 216 matching triples each), so no intrinsic voltage/curvature is selected without additional hardware or phase data.",
+    "transport_obstruction": {"S3_holonomy_values": 6, "matching_triples_per_holonomy": 36, "matching_triples_per_support_triangle": 216}
+  },
+  "pass3231_z9_lift": {
+    "conclusion": "The first port-specific constraint absent from the Smith/linear layer is cell exclusivity: for each block and color, occupancies in distinct K4 cells have pairwise product zero. The checker catches a properness mutation, but no Z/9 contradiction for ten colors has been certified.",
+    "frozen_11_color_positive_control": {"cell_exclusivity_residual_mod9": 0, "edge_collision_residual": 0, "missing_count_histogram": {"2": 240}, "onehot_residual_mod9": 0, "valid": true},
+    "polynomial_inventory": {"cell_exclusivity_quadratics": 1350, "edge_pairwise_distinct": 86400, "frame_boolean": 5400, "frame_onehot": 540, "missing_boolean": 2400, "missing_frame_coupling": 21600, "missing_onehot": 240},
+    "ring": "Z/9Z",
+    "single_collision_negative_control": {"cell_exclusivity_residual_mod9": 1, "edge_collision_residual": 3, "missing_count_histogram": {"2": 237, "3": 3}, "onehot_residual_mod9": 0, "valid": false},
+    "status": "NONLINEAR_PORT_LIFT_CHECKER_READY_NO_TEN_COLOR_DECISION"
+  },
+  "pass3232_physical_port_compiler": {
+    "boundary": "The compiler emits exact incidence labels. It does not choose one of the six K3,3 physical matchings and does not establish optical loss, timing, FPGA area or Landauer dissipation.",
+    "forward_address_bits": 10,
+    "inverse_from_any_two_ports": true,
+    "logical_rom_bits": 10080,
+    "payload": "8-bit global support edge plus three 2-bit local port labels",
+    "rom_entries": 720,
+    "rom_word_bits": 14,
+    "status": "SYNTHESIZABLE_SOURCE_MODEL_READY_PLACEMENT_UNOBSERVED"
+  },
+  "pass3233_3234_unit_spiral_phigital": {
+    "R4": [[0,-1,0],[1,0,0],[0,0,1]],
+    "R4_squared_U6": [[-1,0,0],[0,0,-1],[0,-1,1]],
+    "U6": [[1,0,0],[0,0,1],[0,-1,1]],
+    "checks": {"B_charpoly":true,"B_lorentz_anti_isometry":true,"B_squared_lorentz_isometry":true,"C_charpoly":true,"M_charpoly":true,"metric_from_omega_J":true,"phase_lift_symplectic":true,"similarity_C_to_iB":true,"symplectic_quarter_turn":true},
+    "golden_plane_block": [[0,-1],[-1,1]],
+    "golden_plane_eigenvalues": ["phi","-1/phi"],
+    "lorentz_duality": {"boost_eigenvalues":["phi^2","phi^-2"],"boundary":"This is an exact O(1,1)-type algebraic analogy on the golden plane, not evidence that the controller is physical spacetime.","metric":[[-2,1],[1,2]],"one_step":"B^T L B = -L","rapidity":"2 log(phi)","two_step":"(B^2)^T L (B^2) = L"},
+    "perpendicular_space_correction": "A tangent vector does not by itself become a metric tensor. The exact symplectic statement is v -> i_v omega in T*, and a compatible quarter-turn J recovers g(v,w)=omega(v,Jw). For nested orthogonal loops use the direct sum omega_n=sum_k d rho_k wedge d theta_k; return coupling is an extra boundary map, not automatic orthogonality.",
+    "phase_lift_companion": [["i","-1"],["1","0"]],
+    "phase_lift_eigenvalues": ["i*phi","-i/phi"],
+    "phigital_examples_exponents": {"1":[0],"14":[5,2,-3,-6],"2":[1,-2],"3":[2,-2]},
+    "phigital_geometry_boundary": "Base-phi/phigital arithmetic is standard at alpha=0. The alpha=pi/2 spiral lift is a new phase embedding used here; it preserves the golden recurrence and determinant-one dual mode, but it is not a standard numeral system and is not a physical relativity law.",
+    "recursive_iterative_duality": "On the universal logarithmic cover (rho,theta)=(k log phi,k pi/2), the discrete spiral is a straight lattice line. Exponentiating to the punctured plane makes it a four-armed logarithmic spiral. The symplectic quarter-turn (rho,theta)->(-theta,rho) exchanges radial and angular roles and sends pitch a to -1/a.",
+    "similarity_matrix": [["-I","I"],["0","1"]],
+    "unit_spiral_definition": "u_k=(phi*exp(i alpha))^k; for alpha=pi/2, u_{k+2}=i u_{k+1}-u_k and the companion determinant is 1."
+  },
+  "schema": "w33.pass3226_3234.port_spiral.v1",
+  "sha256_without_hash_field": "cc6b71cc6fb09c16527b247eecf2dc69d97cdc3a1e0ca3ef2dbd75093be8a4c6"
+}
