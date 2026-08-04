@@ -140,7 +140,8 @@ def synchronization_rank():
   'belief_states_remaining_after_any_phase_only_word':belief,
   'phase_only_reset_impossible':True,
   'explicit_belief_reset_rank':1,
-  'minimum_logical_erasure_bits_for_full_belief_reset':math.log2(belief),
+  'maximum_state_capacity_bits_removed_by_rank_one_reset':math.log2(belief),
+  'entropy_boundary':'The actual Shannon entropy erased depends on the input belief distribution; log2(876) is the full finite-state capacity difference.',
   'theorem':'Epoch synchronization and epistemic reset are distinct. Every word whose letters act identically on the belief coordinate has image rank at least 876; the optimal phase marker attains that floor but cannot synchronize belief.'}
 
 
@@ -171,7 +172,7 @@ def tri_isa_gate():
 
 
 def main():
- result={'schema':'w33.pass3215_3219_3221.reset_sheaf.v1','status':'PASS_EXACT_SOURCE_WITH_OBSERVED_HARDWARE_FAIL_CLOSED',
+ result={'schema':'w33.pass3215_3219_3221.reset_sheaf.v2','status':'PASS_EXACT_SOURCE_WITH_OBSERVED_HARDWARE_FAIL_CLOSED',
          'pass3215_tri_isa':tri_isa_gate(),'pass3219_3221_port_nerve':port_nerve(),
          'pass3220_synchronization_rank':synchronization_rank(),
          'headline':'The finite-port lift has 436 independent flat phase degrees of freedom and yields a [[720,436,2]] checksum code; phase synchronization alone has exact product rank 876 and cannot reset the curvature-aware belief machine.',
