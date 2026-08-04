@@ -21,6 +21,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with: {ref: "${{ github.event.pull_request.head.sha || github.sha }}", fetch-depth: 0}
+      - name: Reconcile current master
+        run: |
+          git config user.name w33-evidence-bot
+          git config user.email actions@users.noreply.github.com
+          git fetch origin master
+          git merge --no-edit origin/master
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
       - name: Install toolchains
@@ -64,7 +70,6 @@ jobs:
           import json,os,pathlib
           pathlib.Path('evidence/pass3064_3072/COMPLETE.json').write_text(json.dumps({'schema':'w33.pass3064_3072.observed_evidence.v1','status':'COMPLETE_FOCUSED_EXACT_RTL_AND_THREE_PDF_BUILDS','commit':os.environ['GITHUB_SHA'],'sat_27_optimality':'separate workflow','laboratory_claims':'none'},indent=2,sort_keys=True)+'\n')
           PY
-          git config user.name w33-evidence-bot; git config user.email actions@users.noreply.github.com
           git add w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html data/PART_BT306*.json data/PART_BT3070*.json evidence/pass3064_3072
           git add -f w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf
           if ! git diff --cached --quiet; then git commit -m 'Passes 3064-3072: record observed RTL and manuscript evidence'; git push origin HEAD:"$HEAD_BRANCH"; fi
