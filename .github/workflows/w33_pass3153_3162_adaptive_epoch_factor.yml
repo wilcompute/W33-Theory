@@ -1,0 +1,154 @@
+name: Passes 3153-3162 Adaptive Epoch Factor Engine
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'analysis/bt3153_3154_larger_isa_census.py'
+      - 'analysis/bt3155_3158_factor_epoch.py'
+      - 'analysis/bt3159_rank3_monotone_pipeline.py'
+      - 'analysis/bt3160_adaptive_dual_isa.py'
+      - 'analysis/BT3153_BT3162_*'
+      - 'data/PART_BT3153*'
+      - 'data/w33_pass_namespace_registry_v2.d/3153-3162.json'
+      - 'rtl/*3155*'
+      - 'rtl/*3157*'
+      - 'rtl/tb_w33_pass3155_3160_factor_epoch_scheduler.sv'
+      - 'tests/test_bt3153_bt3162_adaptive_epoch_factor_engine.py'
+      - 'tools/integrate_bt3153_bt3162.py'
+      - '.github/workflows/w33_pass3153_3162_adaptive_epoch_factor.yml'
+permissions:
+  contents: write
+concurrency:
+  group: pass3153-3162-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-rtl-place-papers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: "${{ github.event.pull_request.head.sha || github.sha }}"
+          fetch-depth: 0
+      - name: Reconcile current master
+        run: |
+          git fetch origin master
+          git merge --no-edit origin/master
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact and digital toolchains
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys fpga-icestorm nextpnr-ice40
+          python -m pip install --upgrade pip
+          python -m pip install numpy pytest
+      - uses: wtfjoke/setup-tectonic@v3
+      - name: Recompute all five source fronts
+        run: |
+          python analysis/bt3153_3154_larger_isa_census.py
+          python analysis/bt3155_3158_factor_epoch.py
+          python analysis/bt3159_rank3_monotone_pipeline.py
+          python analysis/bt3160_adaptive_dual_isa.py
+      - name: Focused exact regressions
+        run: |
+          pytest -q tests/test_bt3153_bt3162_adaptive_epoch_factor_engine.py
+          git diff --check
+      - name: Simulate factor, epoch and adaptive scheduler
+        run: |
+          iverilog -g2012 -s tb_w33_pass3155_3160_factor_epoch_scheduler \
+            -o /tmp/pass3155_3160.vvp \
+            rtl/w33_pass3155_sparse_factor_engine.sv \
+            rtl/w33_pass3157_3160_epoch_dual_isa.sv \
+            rtl/tb_w33_pass3155_3160_factor_epoch_scheduler.sv
+          vvp /tmp/pass3155_3160.vvp | tee evidence_pass3155_3160_iverilog.log
+          grep -F 'PASS split factor memories, robust epoch marker and adaptive dual ISA' evidence_pass3155_3160_iverilog.log
+      - name: Synthesize and place factor memory wrapper
+        run: |
+          yosys -p 'read_verilog -sv rtl/w33_pass3155_sparse_factor_engine.sv; hierarchy -top w33_pass3156_factor_engine_hx8k_top; synth_ice40 -top w33_pass3156_factor_engine_hx8k_top -json /tmp/factor.json; stat' | tee evidence_pass3156_factor_yosys.log
+          nextpnr-ice40 --hx8k --package ct256 --pcf-allow-unconstrained \
+            --json /tmp/factor.json --asc /tmp/factor.asc |& tee evidence_pass3156_factor_nextpnr.log
+          grep -F 'Number of cells' evidence_pass3156_factor_yosys.log
+          grep -E 'SB_RAM40_4K|ICESTORM_RAM' evidence_pass3156_factor_yosys.log > evidence_pass3156_factor_ram_lines.log || true
+      - name: Synthesize and place epoch tracker and ISA scheduler
+        run: |
+          yosys -p 'read_verilog -sv rtl/w33_pass3157_3160_epoch_dual_isa.sv; hierarchy -top w33_pass3157_epoch_tracker; synth_ice40 -top w33_pass3157_epoch_tracker -json /tmp/epoch.json; stat' | tee evidence_pass3157_epoch_yosys.log
+          nextpnr-ice40 --hx8k --package ct256 --pcf-allow-unconstrained \
+            --json /tmp/epoch.json --asc /tmp/epoch.asc |& tee evidence_pass3157_epoch_nextpnr.log
+          yosys -p 'read_verilog -sv rtl/w33_pass3157_3160_epoch_dual_isa.sv; hierarchy -top w33_pass3160_dual_isa_scheduler; synth_ice40 -top w33_pass3160_dual_isa_scheduler -json /tmp/scheduler.json; stat' | tee evidence_pass3160_scheduler_yosys.log
+          nextpnr-ice40 --hx8k --package ct256 --pcf-allow-unconstrained \
+            --json /tmp/scheduler.json --asc /tmp/scheduler.asc |& tee evidence_pass3160_scheduler_nextpnr.log
+          grep -F 'Number of cells' evidence_pass3157_epoch_yosys.log
+          grep -F 'Number of cells' evidence_pass3160_scheduler_yosys.log
+      - name: Integrate front doors idempotently
+        run: |
+          python tools/integrate_bt3153_bt3162.py
+          sha256sum w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html > /tmp/frontdoor_a
+          python tools/integrate_bt3153_bt3162.py
+          sha256sum w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html > /tmp/frontdoor_b
+          diff -u /tmp/frontdoor_a /tmp/frontdoor_b
+      - name: Compile all three canonical papers
+        run: |
+          tectonic w33_paper.tex
+          tectonic photonic_holonet.tex
+          tectonic holonet_machine_blueprint.tex
+          test -s w33_paper.pdf
+          test -s photonic_holonet.pdf
+          test -s holonet_machine_blueprint.pdf
+      - name: Freeze observed evidence
+        env:
+          HEAD_BRANCH: "${{ github.event.pull_request.head.ref || github.ref_name }}"
+        run: |
+          mkdir -p evidence/pass3153_3162
+          cp evidence_pass3155_3160_iverilog.log evidence/pass3153_3162/
+          cp evidence_pass3156_factor_yosys.log evidence_pass3156_factor_nextpnr.log evidence/pass3153_3162/
+          cp evidence_pass3156_factor_ram_lines.log evidence/pass3153_3162/
+          cp evidence_pass3157_epoch_yosys.log evidence_pass3157_epoch_nextpnr.log evidence/pass3153_3162/
+          cp evidence_pass3160_scheduler_yosys.log evidence_pass3160_scheduler_nextpnr.log evidence/pass3153_3162/
+          sha256sum \
+            data/PART_BT3153_BT3154_LARGER_ISA_CENSUS_results.json \
+            data/PART_BT3155_BT3158_FACTOR_EPOCH_results.json \
+            data/PART_BT3159_RANK3_MONOTONE_PIPELINE_results.json \
+            data/PART_BT3160_ADAPTIVE_DUAL_ISA_results.json \
+            w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
+            > evidence/pass3153_3162/SHA256SUMS
+          python - <<'PY'
+          import json, os, pathlib, re
+          text=pathlib.Path('evidence_pass3156_factor_yosys.log').read_text(errors='replace')
+          counts=[int(x) for x in re.findall(r'SB_RAM40_4K\s+(\d+)', text)]
+          pathlib.Path('evidence/pass3153_3162/COMPLETE.json').write_text(json.dumps({
+              'schema':'w33.pass3153_3162.observed_evidence.v1',
+              'status':'COMPLETE_EXACT_RTL_HX8K_AND_THREE_PDFS',
+              'commit':os.environ['GITHUB_SHA'],
+              'observed_factor_ram_count_candidates':counts,
+              'global_194_design_bfs':'separate exhaustive workflow',
+              'candidate_boundary':'no accepted rank-three input is not a no-go',
+              'laboratory_claims':'none'
+          }, indent=2, sort_keys=True)+'\n')
+          PY
+          git config user.name w33-evidence-bot
+          git config user.email actions@users.noreply.github.com
+          git add \
+            w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html \
+            data/PART_BT3153_BT3154_LARGER_ISA_CENSUS_results.json \
+            data/PART_BT3155_BT3158_FACTOR_EPOCH_results.json \
+            data/PART_BT3159_RANK3_MONOTONE_PIPELINE_results.json \
+            data/PART_BT3160_ADAPTIVE_DUAL_ISA_results.json \
+            evidence/pass3153_3162
+          git add -f w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf
+          if ! git diff --cached --quiet; then
+            git commit -m 'Passes 3153-3162: record observed adaptive epoch factor evidence'
+            git push origin HEAD:"$HEAD_BRANCH"
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3153-3162-adaptive-epoch-factor-evidence
+          path: |
+            evidence/pass3153_3162/
+            data/PART_BT3153_BT3154_LARGER_ISA_CENSUS_results.json
+            data/PART_BT3155_BT3158_FACTOR_EPOCH_results.json
+            data/PART_BT3159_RANK3_MONOTONE_PIPELINE_results.json
+            data/PART_BT3160_ADAPTIVE_DUAL_ISA_results.json
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
