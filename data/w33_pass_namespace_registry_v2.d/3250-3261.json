@@ -1,0 +1,22 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "3250-3261",
+  "owner": "agent/pass3250-3261-twisted-rom-runtime-reset-closure",
+  "status": "reserved_source_in_progress",
+  "reserved_after": "master through merged Passes 3238-3249; preserves open PR 246 correction lane and open PR 248 exhaustive runtime/M36 lane",
+  "passes": {
+    "3250": "collapse the 45-block/720-edge/240-face port complex explicitly and compile finite-field local systems on the surviving rank-436 graph",
+    "3251": "compute twisted H0 and H1 for scalar, unipotent, D4 and S3 transport and prove the free-group dimension law",
+    "3252": "reconstruct the curvature controller independently with permutation-valued D4 arithmetic and raw-subset transitions",
+    "3253": "verify the 876-state quotient by bottom-up partition refinement and state-number-independent canonical signatures",
+    "3254": "define separate typed universes for universal four-opcode designs, the 194 five/six-opcode census and future ISA families",
+    "3255": "install fail-closed projection and cross-universe comparison contracts with migration of the Pass-3195 partial record",
+    "3256": "construct the physically admissible passive event semigroup on the 876-state controller and determine its minimum transformation rank",
+    "3257": "prove the authorization-latch reset threshold and synthesize a shortest rank-one reset word",
+    "3258": "add RTL contracts for typed universe admission, passive rank preservation and two-token authorized reset",
+    "3259": "add focused exact regressions, mutation controls and state-number permutation tests",
+    "3260": "integrate the four fronts into all canonical manuscripts and the public site with explicit claim boundaries",
+    "3261": "install the focused exact/RTL/HX8K/three-PDF evidence workflow and source/evidence manifests"
+  },
+  "claim_boundary": "Twisted cohomology is computed for explicit finite-field local systems on the collapsed port complex; the independent quotient verifier addresses only the frozen noiseless policy; cross-universe ISA comparisons never imply census membership; passive synchronization and authorized reset are finite-state protocol results, not physical erasure-energy or laboratory performance claims."
+}
