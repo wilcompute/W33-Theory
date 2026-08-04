@@ -7,6 +7,11 @@ on:
     paths:
       - 'bootstrap/pass3286_3295/**'
       - '.github/workflows/w33_pass3286_3295_bootstrap.yml'
+  pull_request:
+    branches: [master]
+    paths:
+      - 'bootstrap/pass3286_3295/**'
+      - '.github/workflows/w33_pass3286_3295_bootstrap.yml'
   workflow_dispatch:
 
 permissions:
@@ -19,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/pass3286-3295-signature-port-common-envelope
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -34,6 +39,7 @@ jobs:
           python -m pytest -q tests/test_bt3286_3295_signature_port_common_envelope.py
           git diff --check
       - name: Publish readable files once
+        if: github.event_name == 'push'
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
@@ -53,5 +59,5 @@ jobs:
             w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html
           if ! git diff --cached --quiet; then
             git commit -m 'Materialize Passes 3286-3295 readable source [skip ci]'
-            git push
+            git push origin HEAD:agent/pass3286-3295-signature-port-common-envelope
           fi
