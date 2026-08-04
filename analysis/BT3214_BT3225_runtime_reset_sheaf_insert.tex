@@ -52,15 +52,16 @@ Finally, epoch synchronization and epistemic reset are distinct operations.  Cro
 $876$ belief states with twelve phase states gives $10{,}512$ product states.  Every phase-only
 letter acts identically on the belief coordinate, so every phase-only word has image rank at least
 $876$.  The optimal marker attains that rank by collapsing the phase factor, but it cannot reset
-belief.  Full belief reset erases at least
+belief.  A rank-one reset removes the full state capacity
 \[
  \log_2 876=9.7747870596\ \text{bits}.
 \]
-At $300\,\mathrm K$ the corresponding Landauer floor is
-$2.8063207254\times10^{-20}\,\mathrm J$ ($0.1751567627\,\mathrm{eV}$).  This is a
-thermodynamic lower bound, not an engineering energy estimate.  The hardware contract therefore
-permits a marker to lock phase while requiring separate authorization and a matching proof root
-before a belief-reset pulse.
+For a uniform or maximally mixed $876$-state ensemble at $300\,\mathrm K$, the corresponding
+Landauer floor is $2.8063207254\times10^{-20}\,\mathrm J$
+($0.1751567627\,\mathrm{eV}$).  The actual thermodynamic cost depends on the input distribution;
+this value is not a distribution-independent reset charge or an engineering energy estimate.  The
+hardware contract therefore permits a marker to lock phase while requiring separate authorization
+and a matching proof root before a belief-reset pulse.
 
 Runtime and rank-three M36 shards are committed through domain-separated SHA-256 Merkle leaves
 that bind plan, engine, source, result and candidate identities.  This supplies integrity,
