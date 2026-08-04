@@ -1,0 +1,115 @@
+name: Pass 3025-3031 Predictive Photonic Overhaul
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [master]
+permissions:
+  contents: write
+concurrency:
+  group: pass3025-3031-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-rtl-gap-docs:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+          fetch-depth: 0
+      - name: Materialize source-complete support bundle
+        run: python tools/materialize_bt3025_bt3031_bundle.py
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install exact dependencies and digital tools
+        run: |
+          python -m pip install --upgrade pip numpy scipy pytest
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys gap
+      - name: Recompute seven-front packet
+        run: |
+          python analysis/bt3025_3031_predictive_photonic_overhaul.py | tee /tmp/pass3025.log
+          grep -F 'PASS 7 / 7' /tmp/pass3025.log
+          python analysis/bt3025_3031_predictive_photonic_overhaul.py --materialize-source /tmp/bt3025_readable.py
+          python /tmp/bt3025_readable.py | grep -F 'PASS 7 / 7'
+          pytest -q tests/test_bt3025_bt3031_predictive_photonic_overhaul.py
+      - name: Compute exact flag-character decomposition
+        run: |
+          mkdir -p evidence/pass3025_3031
+          gap -q analysis/w33_pass3027_flag_character_decomposition.g | tee evidence/pass3025_3031/flag_character.log
+          grep -F 'degree=6480' evidence/pass3025_3031/flag_character.log
+          grep -F 'commutant=1770' evidence/pass3025_3031/flag_character.log
+          grep -F 'dimension check=6480' evidence/pass3025_3031/flag_character.log
+      - name: Exhaust 2796-tick self-dual comb RTL
+        run: |
+          iverilog -g2012 -s tb_w33_pass3031_selfdual_photonic_comb -o /tmp/comb.vvp \
+            rtl/w33_pass3031_selfdual_photonic_comb.sv \
+            rtl/tb_w33_pass3031_selfdual_photonic_comb.sv
+          vvp /tmp/comb.vvp | tee evidence/pass3025_3031/comb_iverilog.log
+          grep -F 'PASS 2796/2796 self-dual comb ticks' evidence/pass3025_3031/comb_iverilog.log
+      - name: Synthesize self-dual comb
+        run: |
+          yosys -p 'read_verilog -sv rtl/w33_pass3031_selfdual_photonic_comb.sv; synth_ice40 -top w33_pass3031_selfdual_photonic_comb; stat' \
+            2>&1 | tee evidence/pass3025_3031/comb_yosys.log
+      - name: Install complete paper overhaul idempotently
+        run: |
+          python tools/integrate_bt3025_bt3031.py
+          cp w33_paper.tex /tmp/w33.once
+          cp photonic_holonet.tex /tmp/photo.once
+          cp holonet_machine_blueprint.tex /tmp/blue.once
+          cp docs/index.html /tmp/index.once
+          python tools/integrate_bt3025_bt3031.py
+          cmp /tmp/w33.once w33_paper.tex
+          cmp /tmp/photo.once photonic_holonet.tex
+          cmp /tmp/blue.once holonet_machine_blueprint.tex
+          cmp /tmp/index.once docs/index.html
+          git diff --check
+      - uses: tectonic-typesetting/setup-tectonic@v1
+      - name: Compile all canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            stem="${source%.tex}"
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3025_3031/${stem}.build.log"
+            test -s "${stem}.pdf"
+            if grep -E 'Undefined control sequence|LaTeX Error|Emergency stop|Fatal error' "${stem}.log"; then exit 1; fi
+          done
+      - name: Freeze stable evidence
+        run: |
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3025_3031/pdf_sha256.txt
+          printf 'python=PASS 7/7\npytest=PASS 8/8\ngap=degree6480_commutant1770\nrtl=PASS 2796/2796\n' > evidence/pass3025_3031/manifest.txt
+          cat > evidence/pass3025_3031/OBSERVED_COMPLETE.json <<'EOF'
+          {"schema":"w33.pass3025_3031.observed_evidence.v1","status":"OBSERVED_DIGITAL_EVIDENCE_COMPLETE","claim_boundary":"Digital exact/RTL/PDF evidence only; no laboratory optical, physical Landauer, autonomous clock, 27-row impossibility, or full M36-census claim."}
+          EOF
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3025-3031-predictive-photonic-overhaul-evidence
+          path: |
+            data/PART_BT3025*.json
+            data/PART_BT3026*.json
+            data/PART_BT3027*.json
+            data/PART_BT3028*.json
+            data/PART_BT3029*.json
+            data/PART_BT3030*.json
+            data/PART_BT3031*.json
+            evidence/pass3025_3031/*
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
+      - name: Commit one-shot stable evidence
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          TARGET_BRANCH: ${{ github.event.pull_request.head.ref }}
+        run: |
+          if test -f evidence/pass3025_3031/OBSERVED_COMPLETE.json && git cat-file -e HEAD:evidence/pass3025_3031/OBSERVED_COMPLETE.json 2>/dev/null; then
+            echo 'stable observed marker already present; no recursive evidence commit'
+            exit 0
+          fi
+          git config user.name 'W33 predictive-photonic evidence bot'
+          git config user.email 'noreply@github.com'
+          git add w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html
+          git add evidence/pass3025_3031/pdf_sha256.txt evidence/pass3025_3031/manifest.txt evidence/pass3025_3031/OBSERVED_COMPLETE.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Passes 3025-3031: record stable observed overhaul evidence'
+            git push origin "HEAD:${TARGET_BRANCH}"
+          fi

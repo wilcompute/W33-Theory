@@ -1,0 +1,24 @@
+{
+  "check_count": 7,
+  "checks": {
+    "3025": true,
+    "3026": true,
+    "3027": true,
+    "3028": true,
+    "3029": true,
+    "3030": true,
+    "3031": true
+  },
+  "claim_boundary": "Exact finite results, bounded search, synthetic channels, and logical information ledgers are separated. Hardware, laboratory optical, full character-table, exhaustive M36-census, and PDF evidence remain pending.",
+  "headlines": {
+    "3025": "Independent 28-triangle full-D4 schedule; 27 remains unproved after 259 exact adversarial MILP schedules and 12,336 collision cuts.",
+    "3026": "All 18 reproduced orthogonal M36 witness pairs have common stabilizer rank three, not five; they are magic-bearing subspaces but not rank-two stabilizer codes.",
+    "3027": "The 6,480-flag PSp permutation module has V4 point stabilizer and exact commutant dimension 1,770.",
+    "3028": "A component-resolved tetrahedral SIC compiler quantifies four-way information per launched photon and repeated-copy performance.",
+    "3029": "One finite-horizon posterior controller jointly schedules route, calibration, and chirality photons in 5.129 expected actions versus a seven-action silo baseline.",
+    "3030": "Causal entropic curvature separates raw information efficiency from future consequence-weighted action value.",
+    "3031": "The optimal word 001032122313 is distance-nine and D4-self-dual; crossed with 89/233 it yields a reversible 2,796-tick comb."
+  },
+  "schema": "w33.pass3025_3031.predictive_photonic_overhaul.v1",
+  "status": "COMPLETE_EXACT_MODELED_AND_SOURCE"
+}

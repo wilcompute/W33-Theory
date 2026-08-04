@@ -1,0 +1,44 @@
+% Passes 3025--3031 machine-blueprint overhaul.
+\section{Unified Predictive Photonic Architecture}
+\label{sec:bt3025-3031-overhaul}
+
+The machine SHALL use a typed predictive-control stack rather than unconditional
+worst-case execution.
+
+\subsection{State and legal operations}
+The live state SHALL remain semantic and mixed-radix.  The route core SHALL expose only
+authorized \(D_4\) operations.  The tetrahedral \(A_4\) shell SHALL have no write path
+into core state.  Static permutations, Pauli byproducts, gauge conjugations, inverse
+routes, and covariant terminal phases SHALL be frame-tracked.
+
+\subsection{Diagnostic policy}
+Every shot SHALL begin with the certified 23-triangle base.  Unresolved syndromes SHALL
+request at most two posterior-selected triangles.  A fixed implementation MAY use the
+published 28-triangle schedule.  No implementation SHALL label 28 minimal until a
+27-row impossibility certificate exists.
+
+\subsection{Optical action controller}
+Route, calibration, and chirality measurements SHALL share a posterior state.  Action
+selection SHALL minimize expected downstream loss plus physical action cost.  Component
+statistics SHALL preserve survival, OAM correctness, slot correctness, erasures, and dark
+counts separately.
+
+\subsection{Clock, shell, and pilots}
+The synchronization word SHALL be \(001032122313\).  The 89/233 calibration calendar and
+the twelve-phase word SHALL be crossed into a 2796-tick schedule.  Reversal SHALL obey
+\(R(t)=1952-t\pmod{2796}\) together with slot reflection \((0\;2)\).  The omitted slot
+MAY carry the phase symbol while the other three slots carry the existing curvature
+pilots.
+
+\subsection{Irreversible boundary}
+Raw transcripts SHALL be reversibly uncomputed after extracting the next action and
+residual risk, unless archival or audit policy requires retention.  Logical entropy SHALL
+not be reported as physical heat without a temperature, reset protocol, and measured
+implementation.
+
+\subsection{Verification gates}
+Release evidence SHALL include exact certificate regeneration, focused regressions,
+2796-tick RTL covariance simulation, synthesis statistics, idempotent front-door
+integration, and successful compilation of the W33 paper, Photonic Holonet, and machine
+blueprint.  The full M36 census and complete flag-character decomposition remain separate
+fail-closed evidence lanes.

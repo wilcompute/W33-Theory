@@ -2,16 +2,25 @@
   "schema": "w33.pass_namespace_reservation.v2",
   "range": "3025-3031",
   "owner": "agent/pass3025-3031-predictive-photonic-overhaul",
-  "status": "reserved",
+  "status": "source_complete_pending_observed_gap_rtl_pdf_and_frontdoor_evidence",
   "reserved_after": "parallel reservation frontier through Pass 3024",
-  "passes": {
-    "3025": "resolve the 27-row fixed D4 question as far as exact central-r2 coding and full nonabelian verification permit",
-    "3026": "classify rank-two-or-higher three-copy M36 candidates by stabilizer-code validity and magic monotones without overstating queued shard evidence",
-    "3027": "derive the exact representation algebra of the 6480 skew-pair/spread/transversal flags and compare it with Hodge sectors by characters rather than counts",
-    "3028": "compile the tetrahedral A4 shell into a component-resolved optical POVM model and compare loss-adjusted information per photon",
-    "3029": "co-design noisy adaptive route diagnosis, calibration, and sequential chirality as one posterior action controller",
-    "3030": "BONKERS: construct a causal entropic curvature field in which diagnostic action is selected by expected future distinguishability per dissipated bit",
-    "3031": "BONKERS: test a self-dual twelve-phase photonic comb that fuses the 2796-tick calendar, A4 shell, D4 core, and reversible time reversal; overhaul all canonical papers around the unified architecture"
+  "source_completion": {
+    "exact_and_modeled_summary_checks": "7/7",
+    "focused_regressions": "8/8 passed locally",
+    "local_rtl_toolchain": "Icarus, Yosys, GAP, and Tectonic unavailable locally; no observed RTL, full character decomposition, placement, or PDF claim",
+    "evidence_pr": null,
+    "workflow_run": null,
+    "workflow_status": "not yet triggered",
+    "evidence_commit_policy": "one-shot stable marker; volatile synthesis, GAP, and manuscript logs remain artifacts"
   },
-  "claim_boundary": "Reservation only. Exact finite results, bounded searches, synthetic optical models, representation decompositions, predictive thermodynamic interpretations, and manuscript restructuring remain separately typed until executable evidence exists."
+  "passes": {
+    "3025": "independent exact 28-triangle D4 construction; all 48,826 full hypotheses and all 1,036 central-r2 supports are unique; resumable 27-row cutting plane found no witness in 259 feasible schedules and 12,336 collision cuts, not an impossibility proof",
+    "3026": "displayed seed/source reproduces 19 stabilizer witnesses and 18 orthogonal pairs; every pair has common signed Pauli rank three, not the rank five required for a six-qubit rank-two stabilizer code; clean projection success 1/6 and stabilizer Renyi-2 1.5405683814 bits",
+    "3027": "exact 6,480 skew-pair/spread/transversal flag G-set is transitive under PSp(4,3), has V4 point stabilizer, fixed-point character 6480,288,288,24, and commutant dimension 1,770; full irreducible multiplicities remain delegated to GAP",
+    "3028": "component-resolved tetrahedral A4 optical shell gives 0.1895477156 bits per detected photon and 0.1279194507 bits per launched photon at the frozen synthetic stack; its value is covariance and informational completeness rather than raw binary throughput",
+    "3029": "exact horizon-six joint posterior controller over route fault, calibration state, and chirality uses all three measurement families and reduces the seven-action silo baseline to 5.1289219452 expected physical actions in the frozen synthetic model",
+    "3030": "BONKERS: causal entropic curvature distinguishes raw mutual-information efficiency from expected future-risk reduction; the frozen controller chooses route first despite chirality having the largest one-shot information ratio",
+    "3031": "BONKERS: exhaustive balanced-word census selects self-dual word 001032122313 with cyclic distance nine and run length two; fused with the 89/233 calendar it yields the single reversal R(t)=1952-t mod 2796"
+  },
+  "claim_boundary": "Exact finite results, bounded negative searches, synthetic optical channels and priors, source-complete RTL, and logical information/thermodynamic interpretations are published. A 27-row impossibility proof, the full 213,648,435 M36 census, GAP irreducible multiplicities, noisy laboratory receiver data, Icarus/Yosys evidence, blueprint/site materialization, three PDF builds, and physical heat or autonomous-clock claims remain open or pending."
 }
