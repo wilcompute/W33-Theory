@@ -1,0 +1,130 @@
+{
+  "action_accumulator_bits_at_32_each": 5888,
+  "action_matches": 12,
+  "action_tests": 12,
+  "actions": 23,
+  "boundary": "Exact hypothesis/factor/outcome map and exact streaming schedule. Numeric errors are for deterministic synthetic factors; 100 MHz and laboratory likelihoods are unobserved.",
+  "cycle_contract": {
+    "argmax": 23,
+    "entropy_lut_23x8": 184,
+    "factor_load": 528,
+    "max_pass": 48826,
+    "modeled_decisions_per_second_at_100mhz": 1016.3944423551892,
+    "normalizer_and_23_action_bins_pass": 48826,
+    "total": 98387
+  },
+  "dense_posterior_ram_required": false,
+  "factor_reconstruction_identity": "base + unary(a) + unary(b) + shared-pair correction when present",
+  "fixed_point": {
+    "exp_clip": 16,
+    "exp_lut_step": 0.00390625,
+    "factor_fraction_bits": 12
+  },
+  "hypotheses": 48826,
+  "max_action_score_abs_error_bits": 4.439082887597312e-05,
+  "max_posterior_abs_error": 4.086462578367688e-07,
+  "outcomes_per_action": 8,
+  "pair_correction_factors": 3381,
+  "regression_runs": [
+    {
+      "action_score_max_abs_error_bits": 2.8540690000911084e-05,
+      "fixed_action": 21,
+      "float_action": 21,
+      "match": true,
+      "posterior_max_abs_error": 2.493095112608495e-07,
+      "seed": 0
+    },
+    {
+      "action_score_max_abs_error_bits": 2.3866855743959192e-05,
+      "fixed_action": 19,
+      "float_action": 19,
+      "match": true,
+      "posterior_max_abs_error": 3.278053637993845e-07,
+      "seed": 1
+    },
+    {
+      "action_score_max_abs_error_bits": 2.9314468015462225e-05,
+      "fixed_action": 21,
+      "float_action": 21,
+      "match": true,
+      "posterior_max_abs_error": 4.086462578367688e-07,
+      "seed": 2
+    },
+    {
+      "action_score_max_abs_error_bits": 4.333122119648536e-05,
+      "fixed_action": 20,
+      "float_action": 20,
+      "match": true,
+      "posterior_max_abs_error": 3.183676546743297e-07,
+      "seed": 3
+    },
+    {
+      "action_score_max_abs_error_bits": 3.693249730751802e-05,
+      "fixed_action": 9,
+      "float_action": 9,
+      "match": true,
+      "posterior_max_abs_error": 2.0843571369472016e-07,
+      "seed": 4
+    },
+    {
+      "action_score_max_abs_error_bits": 3.5707498596271314e-05,
+      "fixed_action": 0,
+      "float_action": 0,
+      "match": true,
+      "posterior_max_abs_error": 3.158048027640905e-07,
+      "seed": 5
+    },
+    {
+      "action_score_max_abs_error_bits": 2.816667331673184e-05,
+      "fixed_action": 10,
+      "float_action": 10,
+      "match": true,
+      "posterior_max_abs_error": 3.6417166169198044e-07,
+      "seed": 6
+    },
+    {
+      "action_score_max_abs_error_bits": 4.439082887597312e-05,
+      "fixed_action": 3,
+      "float_action": 3,
+      "match": true,
+      "posterior_max_abs_error": 2.75440073607431e-07,
+      "seed": 7
+    },
+    {
+      "action_score_max_abs_error_bits": 1.5410026201090332e-05,
+      "fixed_action": 11,
+      "float_action": 11,
+      "match": true,
+      "posterior_max_abs_error": 2.5236859958505543e-07,
+      "seed": 8
+    },
+    {
+      "action_score_max_abs_error_bits": 2.4805692217078068e-05,
+      "fixed_action": 11,
+      "float_action": 11,
+      "match": true,
+      "posterior_max_abs_error": 3.3826451499612475e-07,
+      "seed": 9
+    },
+    {
+      "action_score_max_abs_error_bits": 2.6774929596129482e-05,
+      "fixed_action": 5,
+      "float_action": 5,
+      "match": true,
+      "posterior_max_abs_error": 3.1855869052024475e-07,
+      "seed": 10
+    },
+    {
+      "action_score_max_abs_error_bits": 2.487741731216353e-05,
+      "fixed_action": 0,
+      "float_action": 0,
+      "match": true,
+      "posterior_max_abs_error": 2.4584330150995756e-07,
+      "seed": 11
+    }
+  ],
+  "schema": "w33.pass3169_3170.bayesian_datapath.v1",
+  "shared_measured_edge_pairs": 69,
+  "streaming_passes": 2,
+  "unary_factors": 315
+}

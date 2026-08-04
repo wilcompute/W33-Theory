@@ -1,0 +1,113 @@
+{
+  "boundary": "Exact runtime algebra from exact BFS/collision metrics. Decoder cells, RAM, Fmax, switching latency and physical error are pending observed placement.",
+  "crossovers": {
+    "current4_vs_fast6": -2.3597031587320547,
+    "current4_vs_low4": 3.741933823529581,
+    "fast6_vs_low4": 16.701642492779975
+  },
+  "isas": {
+    "current4": {
+      "collision_probability": 0.1388888888888889,
+      "decoder_operation_units": 5,
+      "diameter": 19,
+      "mean_length": 14.175585133744857,
+      "opcodes": [
+        "F_p",
+        "CX_pf",
+        "CX_fp",
+        "Z1"
+      ]
+    },
+    "fast6": {
+      "collision_probability": 0.12962962962962962,
+      "decoder_operation_units": 7,
+      "diameter": 19,
+      "mean_length": 13.72936957018747,
+      "opcodes": [
+        "F_f",
+        "CX_pf",
+        "CX_fp",
+        "Z0",
+        "Z1",
+        "Z3"
+      ]
+    },
+    "low4": {
+      "collision_probability": 0.1111111111111111,
+      "decoder_operation_units": 6,
+      "diameter": 20,
+      "mean_length": 15.216323969288219,
+      "opcodes": [
+        "CX_fp",
+        "CX_pf",
+        "F_f",
+        "Z0"
+      ]
+    }
+  },
+  "placement_targets": [
+    "w33_pass3164_current4",
+    "w33_pass3164_low4",
+    "w33_pass3164_fast6"
+  ],
+  "promotion_rule": "fast6 requires observed calibration, area fit and timing; mathematical dominance alone does not authorize hardware promotion",
+  "runtime_policy_without_area_charge": "fast6 below 16.7016424928, low4 above; current4 is a fail-closed hardware fallback",
+  "sample_costs": [
+    {
+      "collision_price": 0,
+      "costs": {
+        "current4": 14.175585133744857,
+        "fast6": 13.72936957018747,
+        "low4": 15.216323969288219
+      },
+      "winner": "fast6"
+    },
+    {
+      "collision_price": 1,
+      "costs": {
+        "current4": 16.14441640232053,
+        "fast6": 15.50910266261918,
+        "low4": 16.907026632542465
+      },
+      "winner": "fast6"
+    },
+    {
+      "collision_price": 3.741933823529581,
+      "costs": {
+        "current4": 21.542821450450827,
+        "fast6": 20.38901302561258,
+        "low4": 21.542821450450827
+      },
+      "winner": "fast6"
+    },
+    {
+      "collision_price": 10,
+      "costs": {
+        "current4": 33.8638978195016,
+        "fast6": 31.526700494504563,
+        "low4": 32.12335060183069
+      },
+      "winner": "fast6"
+    },
+    {
+      "collision_price": 16.701642492779975,
+      "costs": {
+        "current4": 47.05830111010225,
+        "fast6": 43.45383541255161,
+        "low4": 43.45383541255161
+      },
+      "winner": "low4"
+    },
+    {
+      "collision_price": 25,
+      "costs": {
+        "current4": 63.39636684813672,
+        "fast6": 58.222696880980195,
+        "low4": 57.48389055064438
+      },
+      "winner": "low4"
+    }
+  ],
+  "schema": "w33.pass3164.tri_isa_physical_contract.v1",
+  "theorem": "fast6 strictly dominates current4 for every nonnegative collision price in the frozen path-plus-collision model"
+}

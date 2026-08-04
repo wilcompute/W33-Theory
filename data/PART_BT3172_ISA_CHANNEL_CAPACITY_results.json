@@ -1,0 +1,74 @@
+{
+  "boundary": "Exact for uniform opcodes and uniform frame averaging. Program distributions, physical decoder energy and error rates are not inferred.",
+  "frames": 81,
+  "results": {
+    "comparisons": {
+      "fast6_absolute_gain_fraction": 0.3033474543385597,
+      "fast6_minus_current_bits": 0.5610477759291435,
+      "interpretation": "collisions are a control-channel ambiguity, but absolute and normalized capacity are different objectives",
+      "low4_minus_current_bits": 0.05555555555555558
+    },
+    "current4": {
+      "average_bits_per_dispatch": 1.8495219521538164,
+      "duplicate_destination_events": 24,
+      "ideal_bits_per_dispatch": 2.0,
+      "maximum_bits_per_dispatch": 2.0,
+      "minimum_bits_per_dispatch": 0.8112781244591328,
+      "multiplicity_pattern_histogram": {
+        "1x1x1x1": 59,
+        "2x1x1": 20,
+        "2x2": 1,
+        "3x1": 1
+      },
+      "normalized_capacity": 0.9247609760769082,
+      "opcodes": [
+        "F_p",
+        "CX_pf",
+        "CX_fp",
+        "Z1"
+      ]
+    },
+    "fast6": {
+      "average_bits_per_dispatch": 2.41056972808296,
+      "duplicate_destination_events": 42,
+      "ideal_bits_per_dispatch": 2.584962500721156,
+      "maximum_bits_per_dispatch": 2.584962500721156,
+      "minimum_bits_per_dispatch": 1.792481250360578,
+      "multiplicity_pattern_histogram": {
+        "1x1x1x1x1x1": 43,
+        "2x1x1x1x1": 34,
+        "2x2x1x1": 3,
+        "3x1x1x1": 1
+      },
+      "normalized_capacity": 0.9325356663434986,
+      "opcodes": [
+        "F_f",
+        "CX_pf",
+        "CX_fp",
+        "Z0",
+        "Z1",
+        "Z3"
+      ]
+    },
+    "low_collision4": {
+      "average_bits_per_dispatch": 1.905077507709372,
+      "duplicate_destination_events": 15,
+      "ideal_bits_per_dispatch": 2.0,
+      "maximum_bits_per_dispatch": 2.0,
+      "minimum_bits_per_dispatch": 0.8112781244591328,
+      "multiplicity_pattern_histogram": {
+        "1x1x1x1": 67,
+        "2x1x1": 13,
+        "3x1": 1
+      },
+      "normalized_capacity": 0.952538753854686,
+      "opcodes": [
+        "CX_fp",
+        "CX_pf",
+        "F_f",
+        "Z0"
+      ]
+    }
+  },
+  "schema": "w33.pass3172.isa_channel_capacity.v1"
+}

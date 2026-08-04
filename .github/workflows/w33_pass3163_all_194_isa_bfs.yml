@@ -1,0 +1,23 @@
+name: Pass 3163 All-194 ISA BFS
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  census:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy
+      - name: Run exhaustive universal ISA census
+        run: python analysis/bt3163_isa_full_census.py --exhaustive-full | tee pass3163_all194.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3163-all194-isa-bfs
+          path: |
+            pass3163_all194.log
+            data/PART_BT3163*.json

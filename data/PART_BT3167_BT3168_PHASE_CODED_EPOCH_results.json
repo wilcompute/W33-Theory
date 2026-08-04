@@ -1,0 +1,201 @@
+{
+  "boundary": "Exact adversarial edit theorem for the 24-symbol digital alphabet. Optical confusion probabilities and marker-generation fidelity remain unmeasured.",
+  "correctable_adversarial_edits": 2,
+  "marker_length": 5,
+  "markers": [
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    [
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    [
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    [
+      6,
+      6,
+      6,
+      6,
+      6
+    ],
+    [
+      8,
+      8,
+      8,
+      8,
+      8
+    ],
+    [
+      9,
+      9,
+      9,
+      9,
+      9
+    ],
+    [
+      10,
+      10,
+      10,
+      10,
+      10
+    ],
+    [
+      12,
+      12,
+      12,
+      12,
+      12
+    ],
+    [
+      13,
+      13,
+      13,
+      13,
+      13
+    ],
+    [
+      14,
+      14,
+      14,
+      14,
+      14
+    ],
+    [
+      17,
+      17,
+      17,
+      17,
+      17
+    ]
+  ],
+  "maximum_received_symbols_to_decode_marker": 7,
+  "minimum_marker_distance": 5,
+  "minimum_marker_to_payload_window_distance": 5,
+  "optimality": "length five is minimum because correcting t=2 requires minimum distance at least 2t+1=5",
+  "payload_period": 12,
+  "payload_used_symbols": [
+    0,
+    2,
+    7,
+    11,
+    15,
+    16,
+    19,
+    20,
+    23
+  ],
+  "phase_symbols": [
+    1,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10,
+    12,
+    13,
+    14,
+    17
+  ],
+  "post_marker_clean_symbols_required": 0,
+  "radius_two_ball_size_per_phase": 24845,
+  "radius_two_balls_pairwise_disjoint": true,
+  "schema": "w33.pass3167_3168.phase_coded_epoch.v1",
+  "spacing_pareto": [
+    {
+      "marker_symbols": 5,
+      "maximum_received_marker_symbols_under_two_insertions": 7,
+      "maximum_source_symbols_to_next_epoch": 17,
+      "overhead_fraction": 0.29411764705882354,
+      "payload_symbols": 12
+    },
+    {
+      "marker_symbols": 5,
+      "maximum_received_marker_symbols_under_two_insertions": 7,
+      "maximum_source_symbols_to_next_epoch": 29,
+      "overhead_fraction": 0.1724137931034483,
+      "payload_symbols": 24
+    },
+    {
+      "marker_symbols": 5,
+      "maximum_received_marker_symbols_under_two_insertions": 7,
+      "maximum_source_symbols_to_next_epoch": 53,
+      "overhead_fraction": 0.09433962264150944,
+      "payload_symbols": 48
+    },
+    {
+      "marker_symbols": 5,
+      "maximum_received_marker_symbols_under_two_insertions": 7,
+      "maximum_source_symbols_to_next_epoch": 101,
+      "overhead_fraction": 0.04950495049504951,
+      "payload_symbols": 96
+    },
+    {
+      "marker_symbols": 5,
+      "maximum_received_marker_symbols_under_two_insertions": 7,
+      "maximum_source_symbols_to_next_epoch": 197,
+      "overhead_fraction": 0.025380710659898477,
+      "payload_symbols": 192
+    },
+    {
+      "marker_symbols": 5,
+      "maximum_received_marker_symbols_under_two_insertions": 7,
+      "maximum_source_symbols_to_next_epoch": 389,
+      "overhead_fraction": 0.012853470437017995,
+      "payload_symbols": 384
+    },
+    {
+      "marker_symbols": 5,
+      "maximum_received_marker_symbols_under_two_insertions": 7,
+      "maximum_source_symbols_to_next_epoch": 773,
+      "overhead_fraction": 0.00646830530401035,
+      "payload_symbols": 768
+    }
+  ],
+  "total_exhausted_marker_traces": 298140,
+  "trace_length_histogram": {
+    "3": 1,
+    "4": 93,
+    "5": 5406,
+    "6": 8074,
+    "7": 11271
+  },
+  "unused_symbols": [
+    1,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10,
+    12,
+    13,
+    14,
+    17,
+    18,
+    21,
+    22
+  ]
+}

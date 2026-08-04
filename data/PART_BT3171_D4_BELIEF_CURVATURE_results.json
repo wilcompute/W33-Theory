@@ -1,0 +1,504 @@
+{
+  "boundary": "Exact group theory and exact factor counts. A nonzero curvature bit is an interaction diagnostic, not a measured optical field strength.",
+  "commutator_image": [
+    "1",
+    "r2"
+  ],
+  "conjugacy_block_census": [
+    {
+      "curved": 0,
+      "flat": 4,
+      "left_class": [
+        "r",
+        "r3"
+      ],
+      "right_class": [
+        "r",
+        "r3"
+      ]
+    },
+    {
+      "curved": 0,
+      "flat": 2,
+      "left_class": [
+        "r",
+        "r3"
+      ],
+      "right_class": [
+        "r2"
+      ]
+    },
+    {
+      "curved": 4,
+      "flat": 0,
+      "left_class": [
+        "r",
+        "r3"
+      ],
+      "right_class": [
+        "r2s",
+        "s"
+      ]
+    },
+    {
+      "curved": 4,
+      "flat": 0,
+      "left_class": [
+        "r",
+        "r3"
+      ],
+      "right_class": [
+        "r3s",
+        "rs"
+      ]
+    },
+    {
+      "curved": 0,
+      "flat": 2,
+      "left_class": [
+        "r2"
+      ],
+      "right_class": [
+        "r",
+        "r3"
+      ]
+    },
+    {
+      "curved": 0,
+      "flat": 1,
+      "left_class": [
+        "r2"
+      ],
+      "right_class": [
+        "r2"
+      ]
+    },
+    {
+      "curved": 0,
+      "flat": 2,
+      "left_class": [
+        "r2"
+      ],
+      "right_class": [
+        "r2s",
+        "s"
+      ]
+    },
+    {
+      "curved": 0,
+      "flat": 2,
+      "left_class": [
+        "r2"
+      ],
+      "right_class": [
+        "r3s",
+        "rs"
+      ]
+    },
+    {
+      "curved": 4,
+      "flat": 0,
+      "left_class": [
+        "r2s",
+        "s"
+      ],
+      "right_class": [
+        "r",
+        "r3"
+      ]
+    },
+    {
+      "curved": 0,
+      "flat": 2,
+      "left_class": [
+        "r2s",
+        "s"
+      ],
+      "right_class": [
+        "r2"
+      ]
+    },
+    {
+      "curved": 0,
+      "flat": 4,
+      "left_class": [
+        "r2s",
+        "s"
+      ],
+      "right_class": [
+        "r2s",
+        "s"
+      ]
+    },
+    {
+      "curved": 4,
+      "flat": 0,
+      "left_class": [
+        "r2s",
+        "s"
+      ],
+      "right_class": [
+        "r3s",
+        "rs"
+      ]
+    },
+    {
+      "curved": 4,
+      "flat": 0,
+      "left_class": [
+        "r3s",
+        "rs"
+      ],
+      "right_class": [
+        "r",
+        "r3"
+      ]
+    },
+    {
+      "curved": 0,
+      "flat": 2,
+      "left_class": [
+        "r3s",
+        "rs"
+      ],
+      "right_class": [
+        "r2"
+      ]
+    },
+    {
+      "curved": 4,
+      "flat": 0,
+      "left_class": [
+        "r3s",
+        "rs"
+      ],
+      "right_class": [
+        "r2s",
+        "s"
+      ]
+    },
+    {
+      "curved": 0,
+      "flat": 4,
+      "left_class": [
+        "r3s",
+        "rs"
+      ],
+      "right_class": [
+        "r3s",
+        "rs"
+      ]
+    }
+  ],
+  "curvature_syndrome_bits": 1,
+  "full_factor_census": {
+    "curved": 1656,
+    "flat": 1725
+  },
+  "group_order": 8,
+  "nonidentity_labels": 7,
+  "ordered_label_pair_census": {
+    "curved": 24,
+    "flat": 25
+  },
+  "ordered_table": [
+    {
+      "commutator": "1",
+      "curvature_bit": 0,
+      "left": "r",
+      "right": "r"
+    },
+    {
+      "commutator": "1",
+      "curvature_bit": 0,
+      "left": "r",
+      "right": "r2"
+    },
+    {
+      "commutator": "1",
+      "curvature_bit": 0,
+      "left": "r",
+      "right": "r3"
+    },
+    {
+      "commutator": "r2",
+      "curvature_bit": 1,
+      "left": "r",
+      "right": "s"
+    },
+    {
+      "commutator": "r2",
+      "curvature_bit": 1,
+      "left": "r",
+      "right": "rs"
+    },
+    {
+      "commutator": "r2",
+      "curvature_bit": 1,
+      "left": "r",
+      "right": "r2s"
+    },
+    {
+      "commutator": "r2",
+      "curvature_bit": 1,
+      "left": "r",
+      "right": "r3s"
+    },
+    {
+      "commutator": "1",
+      "curvature_bit": 0,
+      "left": "r2",
+      "right": "r"
+    },
+    {
+      "commutator": "1",
+      "curvature_bit": 0,
+      "left": "r2",
+      "right": "r2"
+    },
+    {
+      "commutator": "1",
+      "curvature_bit": 0,
+      "left": "r2",
+      "right": "r3"
+    },
+    {
+      "commutator": "1",
+      "curvature_bit": 0,
+      "left": "r2",
+      "right": "s"
+    },
+    {
+      "commutator": "1",
+      "curvature_bit": 0,
+      "left": "r2",
+      "right": "rs"
+    },
+    {
+      "commutator": "1",
+      "curvature_bit": 0,
+      "left": "r2",
+      "right": "r2s"
+    },
+    {
+      "commutator": "1",
+      "curvature_bit": 0,
+      "left": "r2",
+      "right": "r3s"
+    },
+    {
+      "commutator": "1",
+      "curvature_bit": 0,
+      "left": "r3",
+      "right": "r"
+    },
+    {
+      "commutator": "1",
+      "curvature_bit": 0,
+      "left": "r3",
+      "right": "r2"
+    },
+    {
+      "commutator": "1",
+      "curvature_bit": 0,
+      "left": "r3",
+      "right": "r3"
+    },
+    {
+      "commutator": "r2",
+      "curvature_bit": 1,
+      "left": "r3",
+      "right": "s"
+    },
+    {
+      "commutator": "r2",
+      "curvature_bit": 1,
+      "left": "r3",
+      "right": "rs"
+    },
+    {
+      "commutator": "r2",
+      "curvature_bit": 1,
+      "left": "r3",
+      "right": "r2s"
+    },
+    {
+      "commutator": "r2",
+      "curvature_bit": 1,
+      "left": "r3",
+      "right": "r3s"
+    },
+    {
+      "commutator": "r2",
+      "curvature_bit": 1,
+      "left": "s",
+      "right": "r"
+    },
+    {
+      "commutator": "1",
+      "curvature_bit": 0,
+      "left": "s",
+      "right": "r2"
+    },
+    {
+      "commutator": "r2",
+      "curvature_bit": 1,
+      "left": "s",
+      "right": "r3"
+    },
+    {
+      "commutator": "1",
+      "curvature_bit": 0,
+      "left": "s",
+      "right": "s"
+    },
+    {
+      "commutator": "r2",
+      "curvature_bit": 1,
+      "left": "s",
+      "right": "rs"
+    },
+    {
+      "commutator": "1",
+      "curvature_bit": 0,
+      "left": "s",
+      "right": "r2s"
+    },
+    {
+      "commutator": "r2",
+      "curvature_bit": 1,
+      "left": "s",
+      "right": "r3s"
+    },
+    {
+      "commutator": "r2",
+      "curvature_bit": 1,
+      "left": "rs",
+      "right": "r"
+    },
+    {
+      "commutator": "1",
+      "curvature_bit": 0,
+      "left": "rs",
+      "right": "r2"
+    },
+    {
+      "commutator": "r2",
+      "curvature_bit": 1,
+      "left": "rs",
+      "right": "r3"
+    },
+    {
+      "commutator": "r2",
+      "curvature_bit": 1,
+      "left": "rs",
+      "right": "s"
+    },
+    {
+      "commutator": "1",
+      "curvature_bit": 0,
+      "left": "rs",
+      "right": "rs"
+    },
+    {
+      "commutator": "r2",
+      "curvature_bit": 1,
+      "left": "rs",
+      "right": "r2s"
+    },
+    {
+      "commutator": "1",
+      "curvature_bit": 0,
+      "left": "rs",
+      "right": "r3s"
+    },
+    {
+      "commutator": "r2",
+      "curvature_bit": 1,
+      "left": "r2s",
+      "right": "r"
+    },
+    {
+      "commutator": "1",
+      "curvature_bit": 0,
+      "left": "r2s",
+      "right": "r2"
+    },
+    {
+      "commutator": "r2",
+      "curvature_bit": 1,
+      "left": "r2s",
+      "right": "r3"
+    },
+    {
+      "commutator": "1",
+      "curvature_bit": 0,
+      "left": "r2s",
+      "right": "s"
+    },
+    {
+      "commutator": "r2",
+      "curvature_bit": 1,
+      "left": "r2s",
+      "right": "rs"
+    },
+    {
+      "commutator": "1",
+      "curvature_bit": 0,
+      "left": "r2s",
+      "right": "r2s"
+    },
+    {
+      "commutator": "r2",
+      "curvature_bit": 1,
+      "left": "r2s",
+      "right": "r3s"
+    },
+    {
+      "commutator": "r2",
+      "curvature_bit": 1,
+      "left": "r3s",
+      "right": "r"
+    },
+    {
+      "commutator": "1",
+      "curvature_bit": 0,
+      "left": "r3s",
+      "right": "r2"
+    },
+    {
+      "commutator": "r2",
+      "curvature_bit": 1,
+      "left": "r3s",
+      "right": "r3"
+    },
+    {
+      "commutator": "r2",
+      "curvature_bit": 1,
+      "left": "r3s",
+      "right": "s"
+    },
+    {
+      "commutator": "1",
+      "curvature_bit": 0,
+      "left": "r3s",
+      "right": "rs"
+    },
+    {
+      "commutator": "r2",
+      "curvature_bit": 1,
+      "left": "r3s",
+      "right": "r2s"
+    },
+    {
+      "commutator": "1",
+      "curvature_bit": 0,
+      "left": "r3s",
+      "right": "r3s"
+    }
+  ],
+  "pair_correction_factors": 3381,
+  "schema": "w33.pass3171.d4_belief_curvature.v1",
+  "shared_measured_edge_pairs": 69,
+  "theorem": "the D4 derived subgroup is {1,r2}; conjugation fixes both elements, so the commutator bit is gauge invariant and complete"
+}

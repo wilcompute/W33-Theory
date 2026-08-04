@@ -1,0 +1,195 @@
+{
+  "checks": {
+    "bayesian": true,
+    "channel": true,
+    "curvature": true,
+    "m36_plan": true,
+    "phase_code": true,
+    "tri_dominance": true
+  },
+  "evidence_boundary": "Exact/model computations above were run locally. 194-ISA BFS aggregation, 256-shard M36 completion, RTL simulation/synthesis/place, manuscript materialization, PDF builds and laboratory behavior remain external evidence gates.",
+  "local_exact_status": "PASS",
+  "manuscript_refresh": {
+    "machine_blueprint_anchor": "four-trit frame machine; measured-versus-modelled evidence ladder; support/readout versus phase/execution; M36 injection remains an external typed handshake",
+    "machine_blueprint_pages_reviewed": 38,
+    "photonic_holonet_anchor": "carrier/state/operator duality; address-route duality; selector-clock versus mirror-bus separation; matter=magic; demonstrator versus fault-tolerant boundary",
+    "photonic_holonet_lines_read": 7332
+  },
+  "pass_3163": {
+    "claim_boundary": "No global full-distance optimum until all 194 shard records aggregate.",
+    "full_group_order": 4199040,
+    "shard_count": 32,
+    "status": "SHARDED_ENGINE_SOURCE_COMPLETE_EVIDENCE_PENDING",
+    "universal_larger_isas": 194
+  },
+  "pass_3164": {
+    "boundary": "Exact runtime algebra from exact BFS/collision metrics. Decoder cells, RAM, Fmax, switching latency and physical error are pending observed placement.",
+    "crossovers": {
+      "current4_vs_fast6": -2.3597031587320547,
+      "current4_vs_low4": 3.741933823529581,
+      "fast6_vs_low4": 16.701642492779975
+    },
+    "isas": {
+      "current4": {
+        "collision_probability": 0.1388888888888889,
+        "decoder_operation_units": 5,
+        "diameter": 19,
+        "mean_length": 14.175585133744857,
+        "opcodes": [
+          "F_p",
+          "CX_pf",
+          "CX_fp",
+          "Z1"
+        ]
+      },
+      "fast6": {
+        "collision_probability": 0.12962962962962962,
+        "decoder_operation_units": 7,
+        "diameter": 19,
+        "mean_length": 13.72936957018747,
+        "opcodes": [
+          "F_f",
+          "CX_pf",
+          "CX_fp",
+          "Z0",
+          "Z1",
+          "Z3"
+        ]
+      },
+      "low4": {
+        "collision_probability": 0.1111111111111111,
+        "decoder_operation_units": 6,
+        "diameter": 20,
+        "mean_length": 15.216323969288219,
+        "opcodes": [
+          "CX_fp",
+          "CX_pf",
+          "F_f",
+          "Z0"
+        ]
+      }
+    },
+    "placement_targets": [
+      "w33_pass3164_current4",
+      "w33_pass3164_low4",
+      "w33_pass3164_fast6"
+    ],
+    "promotion_rule": "fast6 requires observed calibration, area fit and timing; mathematical dominance alone does not authorize hardware promotion",
+    "runtime_policy_without_area_charge": "fast6 below 16.7016424928, low4 above; current4 is a fail-closed hardware fallback",
+    "sample_costs": [
+      {
+        "collision_price": 0,
+        "costs": {
+          "current4": 14.175585133744857,
+          "fast6": 13.72936957018747,
+          "low4": 15.216323969288219
+        },
+        "winner": "fast6"
+      },
+      {
+        "collision_price": 1,
+        "costs": {
+          "current4": 16.14441640232053,
+          "fast6": 15.50910266261918,
+          "low4": 16.907026632542465
+        },
+        "winner": "fast6"
+      },
+      {
+        "collision_price": 3.741933823529581,
+        "costs": {
+          "current4": 21.542821450450827,
+          "fast6": 20.38901302561258,
+          "low4": 21.542821450450827
+        },
+        "winner": "fast6"
+      },
+      {
+        "collision_price": 10,
+        "costs": {
+          "current4": 33.8638978195016,
+          "fast6": 31.526700494504563,
+          "low4": 32.12335060183069
+        },
+        "winner": "fast6"
+      },
+      {
+        "collision_price": 16.701642492779975,
+        "costs": {
+          "current4": 47.05830111010225,
+          "fast6": 43.45383541255161,
+          "low4": 43.45383541255161
+        },
+        "winner": "low4"
+      },
+      {
+        "collision_price": 25,
+        "costs": {
+          "current4": 63.39636684813672,
+          "fast6": 58.222696880980195,
+          "low4": 57.48389055064438
+        },
+        "winner": "low4"
+      }
+    ],
+    "schema": "w33.pass3164.tri_isa_physical_contract.v1",
+    "theorem": "fast6 strictly dominates current4 for every nonnegative collision price in the frozen path-plus-collision model"
+  },
+  "pass_3165_3166": {
+    "candidate_status": "NO_ACCEPTED_CANDIDATE_OBSERVED_BEFORE_THIS_RUN",
+    "claim_boundary": "Zero candidates is a no-go only after all 256 normalized shards and independent certification complete.",
+    "isotropic_rank3_subspaces": 50868675,
+    "logical_shards": 256,
+    "shards_per_bucket": 8,
+    "status": "256_SHARD_BRIDGE_SOURCE_COMPLETE_EVIDENCE_PENDING",
+    "workflow_buckets": 32
+  },
+  "pass_3167_3168": {
+    "correctable_edits": 2,
+    "exhausted_marker_traces": 298140,
+    "marker_length": 5,
+    "minimum_distance": 5,
+    "optimality": "length five is minimum because correcting t=2 requires minimum distance at least 2t+1=5",
+    "phase_symbols": [
+      1,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      12,
+      13,
+      14,
+      17
+    ],
+    "post_marker_clean_symbols_required": 0
+  },
+  "pass_3169_3170": {
+    "action_matches": 12,
+    "action_tests": 12,
+    "actions": 23,
+    "cycles_per_decision": 98387,
+    "hypotheses": 48826,
+    "max_action_score_abs_error_bits": 4.439082887597312e-05,
+    "max_posterior_abs_error": 4.086462578367688e-07,
+    "modeled_decisions_per_second_at_100mhz": 1016.3944423551892,
+    "streaming_passes": 2
+  },
+  "pass_3171": {
+    "curvature_bits": 1,
+    "curved": 1656,
+    "flat": 1725,
+    "pair_correction_factors": 3381,
+    "theorem": "the D4 derived subgroup is {1,r2}; conjugation fixes both elements, so the commutator bit is gauge invariant and complete"
+  },
+  "pass_3172": {
+    "current4_bits_per_dispatch": 1.8495219521538164,
+    "fast6_absolute_gain_fraction_vs_current": 0.3033474543385597,
+    "fast6_bits_per_dispatch": 2.41056972808296,
+    "low4_bits_per_dispatch": 1.905077507709372,
+    "theorem": "raw collision count and control-channel capacity are distinct; fast6 provides 30.3347% more absolute control information per dispatch than current4 under uniform frame/opcode averaging"
+  },
+  "schema": "w33.pass3163_3174.proof_carrying_runtime.source_summary.v1"
+}
