@@ -10,8 +10,9 @@ def test_factor_schedule_exact():
     assert len(schedule)==528
     assert len(pairs)==len(set(pairs))==69
     assert schedule[0]['address']==0 and schedule[44]['address']==44
-    assert schedule[45]['kind']=='pair' and schedule[-1]['address']==527
-    assert 7*528+1==3697
+    assert schedule[45]['kind']=='pair' and schedule[45]['address']==0
+    assert schedule[-1]['address']==482
+    assert 1+45*7+69*49==3697
 
 def test_epoch_marker_and_spacing():
     spacing=marker_proof()
@@ -33,6 +34,7 @@ def test_source_summary_boundaries():
     assert d['pass_3153_3154']['five_six_subsets']==462
     assert d['pass_3153_3154']['universal_subsets']==194
     assert d['pass_3155_3156']['sweep_cycles']==528
+    assert d['pass_3155_3156']['aspect_ratio_estimate_total_ebr']==29
     assert d['pass_3157_3158']['radius_two_false_acquisition']=='IMPOSSIBLE'
     assert d['pass_3159']['current_candidate_status']=='NO_ACCEPTED_CANDIDATE_OBSERVED'
     assert 'unobserved' in d['pass_3155_3156']['boundary']
@@ -40,6 +42,7 @@ def test_source_summary_boundaries():
 def test_rtl_and_integrity_sources_exist():
     factor=(ROOT/'rtl/w33_pass3155_sparse_factor_engine.sv').read_text()
     ctrl=(ROOT/'rtl/w33_pass3157_3160_epoch_dual_isa.sv').read_text()
-    assert 'bank6' in factor and "cycle_o==10'd527" in factor
+    assert 'unary_mem' in factor and 'corr6' in factor
+    assert "cycle_o==10'd527" in factor
     assert "5'd1" in ctrl and "5'd22" in ctrl
     assert 'UP_THRESHOLD' in ctrl and 'DOWN_THRESHOLD' in ctrl
