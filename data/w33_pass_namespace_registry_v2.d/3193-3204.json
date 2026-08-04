@@ -1,0 +1,22 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "3193-3204",
+  "owner": "agent/pass3193-3204-month-audit-seven-front-closure",
+  "status": "reserved_in_progress",
+  "reserved_after": "master through Passes 3175-3186; preserves open PR #245 Passes 3187-3192",
+  "passes": {
+    "3193": "compile a month-wide claim genealogy across commits, pull requests and canonical front doors, with explicit corrects, withdraws, supersedes and evidence-gates relations",
+    "3194": "derive the coarsest curvature-aware causal quotient compatible with frozen transition, observation and decision contracts",
+    "3195": "fuse the observed full-group runtime records and frame-local information records for all available universal five- and six-opcode ISAs into one typed multiobjective frontier",
+    "3196": "construct and exactly exhaust an optimal twelve-phase four-edit epoch family with the minimum length-nine delimiter theorem",
+    "3197": "implement a fail-closed streaming proof-envelope verifier for M36 candidate provenance, completeness, digest and authorization",
+    "3198": "derive exact concurrent belief-virtualization laws for k active root-to-leaf paths with common-prefix compression, checkpoints and traffic bounds",
+    "3199": "outside-box test of whether the 540-frame chromatic defect energy factors through the earlier A4/D4 curvature and cut-code layers",
+    "3200": "outside-box repository evidence-debt scheduler that identifies stale, superseded and dependency-blocked proof lanes without promoting queued results",
+    "3201": "unified RTL contracts for the four-edit decoder, proof-envelope authorization and concurrent-context allocator",
+    "3202": "canonical W33, Photonic Holonet, machine-blueprint and site corrections driven by the month-wide genealogy rather than append-only prose",
+    "3203": "focused exact regressions, semantic hashes, idempotence and cross-generation stale-claim checks",
+    "3204": "guarded Icarus, Yosys, HX8K and three-PDF evidence lane with typed claim ledger and publication boundary"
+  },
+  "claim_boundary": "Reservation only. No quotient minimality, all-194 global optimum, four-edit hardware result, cryptographic proof authorization, chromatic-curvature intertwiner, observed FPGA evidence, PDF build or physical performance is claimed before the dedicated source and evidence gates complete."
+}
