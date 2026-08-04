@@ -1,6 +1,6 @@
 <section id="bt3153-bt3162-adaptive-epoch-factor">
   <h2>Factorized epoch-aware adaptive execution</h2>
-  <p>The exact noisy posterior now compiles to one baseline plus seven banks of 528 18-bit words: 3,697 dynamic factors updated in 528 conflict-free cycles.</p>
+  <p>The exact noisy posterior now compiles to one baseline, a 45×126 unary memory, and seven 483×18 correction banks: 3,697 dynamic factors updated in 528 conflict-free cycles. The information count is 66,546 bits; the iCE40 aspect-ratio estimate is 29 EBRs, pending synthesis.</p>
   <p>An in-band marker <code>1,22,1,22,1</code> uses symbols absent from the payload. Its edit distance from every payload-only word is at least five, so two-edit false epoch acquisition is impossible without adding an optical mode.</p>
   <p>All 462 five- and six-opcode subsets were classified: 194 are universal. Eight non-dominated designs received complete 4,199,040-state BFS. The best observed six-opcode runtime design has mean length 13.72937 and collision probability 0.12963, improving both runtime metrics over the current ISA before decoder cost.</p>
   <p>The equal-footprint four-opcode runtime switches with hysteresis: current-to-low-collision at effective price 4.64080 and back at 2.84307 for a 0.25-instruction switching charge. Rank-three M36 candidates remain fail-closed behind projector, Pauli, negativity, stabilizer-fidelity and error-slope gates.</p>
