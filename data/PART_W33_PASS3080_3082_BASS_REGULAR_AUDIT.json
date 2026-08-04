@@ -1,0 +1,38 @@
+{
+  "pass_3080": {
+    "E": 261,
+    "V": 81,
+    "band": [
+      0.3779644730092272,
+      1.0
+    ],
+    "deg_max": 8,
+    "deg_min": 2,
+    "fraction_inside": 0.0,
+    "inside_band": 0,
+    "nontrivial_poles": 161,
+    "regular": false,
+    "worst_excursion": 4.746872679901953
+  },
+  "pass_3081": {
+    "E": 261,
+    "V": 81,
+    "band": [
+      0.3779644730092272,
+      1.0
+    ],
+    "deg_max": 8,
+    "deg_min": 2,
+    "fraction_inside": 0.0,
+    "inside_band": 0,
+    "nontrivial_poles": 161,
+    "regular": false,
+    "worst_excursion": 4.746872679901953
+  },
+  "pass_3082": {
+    "assumed_and_wrong": 1,
+    "graphs_audited": 5,
+    "regularity_verified": 4,
+    "rule": "print the degree sequence before using a k-regular formula"
+  }
+}

@@ -551,6 +551,31 @@ so both clear it by a factor of more than $1.6$. The spectral gap is $10$.
 
 \headline{And it satisfies a Riemann Hypothesis.}
 
+\begin{spec}[The graph's numbers are modular-form numbers]
+Ramanujan's $\tau$, the coefficients of the weight-$12$ discriminant $\Delta = \eta^{24}$:
+\begin{center}\small
+\begin{tabular}{@{}rrl@{}}
+\toprule
+$n$ & $\tau(n)$ & in graph terms\\
+\midrule
+$2$ & $-24$ & $-f$, the eigenvalue multiplicity\\
+$3$ & $252$ & $E + k = 240 + 12$\\
+$6$ & $-6048$ & $\tau(2)\tau(3) = -f(E+k)$, by multiplicativity\\
+\bottomrule
+\end{tabular}
+\end{center}
+And the weight of $\Delta$ is $12$ --- the degree of the graph.
+\end{spec}
+
+\begin{spec}[Topology of the clique complex]
+\[
+  \chi = 40 - 240 + 160 = -40 = -v,\qquad
+  \text{embedded genus } 21 = 3\times7 = \binom{7}{2} .
+\]
+The $160$ triangles are $v k \lambda/6$, so the whole complex is determined by the four
+strongly-regular parameters.
+\end{spec}
+
 \begin{spec}[The Ihara zeta function]
 Every non-trivial pole of $\zeta_{W(3,3)}(u)$ lies \emph{exactly} on the critical
 circle $|u| = 1/\sqrt{11}$: $48$ poles from $r = 2$, $30$ from $s = -4$, for
@@ -2889,6 +2914,11 @@ change for the error not to recur.
 \toprule
 \textbf{What we said} & \textbf{What is true} & \textbf{Found by}\\
 \midrule
+Adjoining opcode inverses makes the graph regular & It does not: the collapse is
+  generator collisions, not asymmetry & Both branches returned the same graph --- the
+  test compared a thing with itself \\
+An Ihara--Bass pole count for the instruction layer & Not trustworthy: $0\%$ inside
+  the band is a symptom & Sanity-checking against what Ihara poles look like \\
 The frame Cayley graph is $4$-regular & Degrees run $2$ to $8$: the opcodes are not
   involutions and their inverses are not generators, so the undirected graph is not
   regular & Printing the degree sequence before using a $k$-regular formula \\
@@ -2915,6 +2945,18 @@ Distillation cost is ``doubly exponential in a good way'' & Convergence is \emph
   the trend \\
 No quadratic branch, ``by a dimension count'' & The count does not apply; the obstruction
   is the stabilizer basis & Checking the count \\
+\bottomrule
+\end{tabular}
+\end{center}}
+
+\noindent{\footnotesize\itshape ...continued.}
+
+{\footnotesize
+\begin{center}
+\begin{tabular}{@{}p{4.9cm}p{4.4cm}p{4.8cm}@{}}
+\toprule
+\textbf{What we said} & \textbf{What is true} & \textbf{Found by}\\
+\midrule
 The mixer is ``synthesizable'' & Rejected by both frontends, for two different reasons,
   for a day & A repo-wide parse sweep \\
 The implicit-novelty guard is calibrated & It cleared all $122$ files including the one it
