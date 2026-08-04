@@ -534,6 +534,46 @@ address space that is the strongest possible statement short of everything being
 to everything: no packet is ever more than one relay from its destination \emph{within a
 node}.
 
+\subsection{How good is ``optimal'', exactly?}
+
+\begin{plain}
+``Ramanujan'' is usually a tight call --- a graph scrapes under the bound and earns the
+name. This one does not scrape.
+\end{plain}
+
+\begin{spec}[Prior art: \cmd{docs/index.html}]
+The non-trivial eigenvalues are $r = 2$ and $s = -4$, against a Ramanujan bound of
+\[
+  2\sqrt{k-1} = 2\sqrt{11} \approx 6.63 ,
+\]
+so both clear it by a factor of more than $1.6$. The spectral gap is $10$.
+\end{spec}
+
+\headline{And it satisfies a Riemann Hypothesis.}
+
+\begin{spec}[The Ihara zeta function]
+Every non-trivial pole of $\zeta_{W(3,3)}(u)$ lies \emph{exactly} on the critical
+circle $|u| = 1/\sqrt{11}$: $48$ poles from $r = 2$, $30$ from $s = -4$, for
+\[
+  48 + 30 = \mathbf{78} = \dim(E_6)
+\]
+complex poles in total. That is the graph-theoretic Riemann Hypothesis, and this graph
+satisfies it. The pole discriminants encode the graph back: $|\operatorname{disc} r| = 40 = v$,
+$|\operatorname{disc} s| = 28 = v-k$, and their difference is $k = 12$.
+\end{spec}
+
+\begin{plain}
+For an engineer the practical content is the first box: information crosses this network
+as fast as information can cross any network of this size and degree, with a wide margin
+rather than a technicality. The second box is the reason --- the same reason a Riemann
+Hypothesis is about anything at all, which is that the object's spectrum is as tightly
+controlled as a spectrum can be.
+
+It also sharpens \S\ref{sec:budget}'s comparison considerably. The address layer does not
+merely beat the instruction layer; it is provably at an optimum the instruction layer
+misses.
+\end{plain}
+
 \textbf{Ramanujan} is a technical optimality condition on the eigenvalues. Informally, it
 means the graph is as well-connected as a graph of that degree can possibly be --- you
 cannot build a better-mixing network on $40$ nodes with $12$ links each. The routing
@@ -2849,6 +2889,11 @@ change for the error not to recur.
 \toprule
 \textbf{What we said} & \textbf{What is true} & \textbf{Found by}\\
 \midrule
+The frame Cayley graph is $4$-regular & Degrees run $2$ to $8$: the opcodes are not
+  involutions and their inverses are not generators, so the undirected graph is not
+  regular & Printing the degree sequence before using a $k$-regular formula \\
+$2E = 324$, matching the Delsarte bound & $2E = 522$. The coincidence was not even a
+  coincidence & Arithmetic, before it was written down \\
 ``These four numbers pin the shape down completely'' & \textbf{Spence: $28$ non-isomorphic
   graphs share $(40,12,2,4)$.} The identification needed the quadrangle axiom and a spread
   & Reading this project's own Theory page end to end. It says so in plain words \\

@@ -1,0 +1,57 @@
+{
+  "pass_3060": {
+    "critical_radius": 0.4472135954999579,
+    "degree": 6,
+    "edges": 261,
+    "lambda2": 5.093693607910525,
+    "poles": 162,
+    "poles_off": 10,
+    "poles_on_circle": 152,
+    "ramanujan_bound": 4.47213595499958,
+    "regular": false,
+    "satisfies_graph_rh": false,
+    "vertices": 81,
+    "worst_deviation": 0.7395551300655823
+  },
+  "pass_3061": {
+    "delsarte_bound": 324,
+    "equal": false,
+    "map_exhibited": false,
+    "prior": "three coincidences of this shape tested, three refuted",
+    "two_E": 522
+  },
+  "pass_3062": {
+    "codes": [
+      {
+        "dim": 8,
+        "keep": 0.4303314829119354,
+        "leak": 0.3333333333333335,
+        "pair": [
+          0,
+          17
+        ]
+      },
+      {
+        "dim": 8,
+        "keep": 0.4303314829119354,
+        "leak": 0.3333333333333335,
+        "pair": [
+          0,
+          26
+        ]
+      },
+      {
+        "dim": 8,
+        "keep": 0.4303314829119354,
+        "leak": 0.3333333333333335,
+        "pair": [
+          0,
+          31
+        ]
+      }
+    ],
+    "pairs": 61,
+    "usable": 0,
+    "witnesses": 32
+  }
+}
