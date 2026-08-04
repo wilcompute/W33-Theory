@@ -1,0 +1,20 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "3133-3142",
+  "owner": "agent/pass3133-3142-certifying-adaptive-inference",
+  "status": "reserved_in_progress",
+  "reserved_after": "master through Pass 3132 reservation",
+  "passes": {
+    "3133": "fully noisy 23-row base-panel filter over all 48,826 D4 hypotheses using sparse exact likelihood factors and fail-closed posterior normalization",
+    "3134": "independent exact certifier for rank-three/eight-dimensional M36 code candidates produced by parallel searches",
+    "3135": "fuse the five D4 Fourier prediction lanes with the 470-state causal controller in synthesizable fixed-point RTL",
+    "3136": "bounded-delay streaming insertion/deletion/substitution decoder for omitted-slot plus pilot-order synchronization",
+    "3137": "joint action-rate-distortion frontier over triangle, sensor alphabet, route shear, chirality shot, stopping and reset",
+    "3138": "BONKERS: projective contraction geometry of the D4 belief simplex and a certified finite memory horizon",
+    "3139": "BONKERS: recursive virtualized belief machines with algebraic guest isolation and sufficient-statistic message passing",
+    "3140": "compute-versus-inference scheduling bridge using the 18-versus-45 collision frontier without duplicating Pass 3129",
+    "3141": "paper, blueprint and site overhaul around certifiable predictive execution",
+    "3142": "claim ledger, focused regressions, hardware/PDF evidence lane and cross-track reconciliation"
+  },
+  "claim_boundary": "Reservation only. Exact finite mathematics, synthetic channels, source RTL, candidate certification, solver output, synthesis, PDFs and laboratory behavior remain separately typed until observed."
+}
