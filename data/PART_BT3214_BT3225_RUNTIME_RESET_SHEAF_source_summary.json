@@ -1,5 +1,5 @@
 {
-  "schema": "w33.pass3214_3225.runtime_reset_sheaf.source_summary.v1",
+  "schema": "w33.pass3214_3225.runtime_reset_sheaf.source_summary.v2",
   "status": "SOURCE_COMPLETE_EVIDENCE_PENDING",
   "pass3214_all194_runtime": {
     "universal_designs": 194,
@@ -64,10 +64,11 @@
     "product_states": 10512,
     "phase_marker_rank": 876,
     "phase_only_full_reset_impossible": true,
-    "full_belief_reset_bits": 9.774787059601174,
-    "landauer_floor_300K_joules": 2.806320725425572e-20,
-    "landauer_floor_300K_electron_volts": 0.1751567627359102,
-    "boundary": "Thermodynamic lower bound, not engineering energy."
+    "full_belief_state_capacity_bits": 9.774787059601174,
+    "uniform_ensemble_assumption": true,
+    "landauer_floor_300K_uniform_ensemble_joules": 2.806320725425572e-20,
+    "landauer_floor_300K_uniform_ensemble_electron_volts": 0.1751567627359102,
+    "boundary": "The k_B T ln(876) value is for a uniform/maximally mixed 876-state ensemble at 300 K. It is not a distribution-independent per-event cost or an engineering energy prediction."
   },
   "digital_boundary": "Python generators, tests, SystemVerilog, testbench, workflows and integration source are committed or planned in this packet. Icarus, Yosys, HX8K placement, generated outputs and PDFs remain unobserved until focused CI succeeds.",
   "physical_boundary": "No laboratory error rate, optical loss, timing, power, heat, detector, coherence or fabrication claim is made."
