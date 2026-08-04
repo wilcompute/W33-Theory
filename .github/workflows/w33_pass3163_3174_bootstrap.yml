@@ -1,0 +1,86 @@
+name: Passes 3163-3174 Source Bootstrap
+on:
+  pull_request:
+    paths:
+      - 'data/bt3163_3174_bundle/**'
+      - 'tools/materialize_bt3163_bt3174_bundle.py'
+      - '.github/workflows/w33_pass3163_3174_bootstrap.yml'
+permissions:
+  contents: write
+concurrency:
+  group: pass3163-3174-bootstrap-${{ github.event.pull_request.number }}
+  cancel-in-progress: false
+jobs:
+  materialize-and-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: "${{ github.event.pull_request.head.sha }}"
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Materialize byte-verified source bundle
+        run: python tools/materialize_bt3163_bt3174_bundle.py
+      - name: Install focused exact runtime
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install numpy pytest
+      - name: Regenerate fast exact and model certificates
+        run: |
+          python analysis/bt3164_tri_isa_physical_contract.py
+          python analysis/bt3165_3166_m36_sharded_census.py --mode plan
+          python analysis/bt3167_3168_phase_coded_epoch.py
+          python analysis/bt3169_3170_bayesian_datapath.py
+          python analysis/bt3171_d4_belief_curvature.py
+          python analysis/bt3172_isa_channel_capacity.py
+          python analysis/bt3163_3174_proof_carrying_runtime_summary.py
+      - name: Focused source regression
+        run: |
+          pytest -q tests/test_bt3163_bt3174_proof_carrying_runtime.py
+          git diff --check
+      - name: Publish readable source tree once
+        env:
+          HEAD_BRANCH: "${{ github.event.pull_request.head.ref }}"
+        run: |
+          git config user.name w33-source-bootstrap
+          git config user.email actions@users.noreply.github.com
+          git add \
+            .github/workflows/w33_pass3163_3174_proof_carrying_runtime.yml \
+            .github/workflows/w33_pass3163_all_194_isa_bfs.yml \
+            .github/workflows/w33_pass3165_full_m36_census.yml \
+            analysis/BT3163_BT3174_CLAIM_LEDGER.md \
+            analysis/BT3163_BT3174_proof_carrying_runtime.md \
+            analysis/BT3163_BT3174_proof_carrying_runtime_index_insert.html \
+            analysis/BT3163_BT3174_proof_carrying_runtime_insert.tex \
+            analysis/bt3163_3174_proof_carrying_runtime_summary.py \
+            analysis/bt3163_isa_full_census.py \
+            analysis/bt3164_tri_isa_physical_contract.py \
+            analysis/bt3165_3166_m36_sharded_census.py \
+            analysis/bt3167_3168_phase_coded_epoch.py \
+            analysis/bt3169_3170_bayesian_datapath.py \
+            analysis/bt3171_d4_belief_curvature.py \
+            analysis/bt3172_isa_channel_capacity.py \
+            data/PART_BT3163_BT3174_PROOF_CARRYING_RUNTIME_source_summary.json \
+            data/PART_BT3164_TRI_ISA_PHYSICAL_CONTRACT_results.json \
+            data/PART_BT3165_M36_SHARD_PLAN.json \
+            data/PART_BT3167_BT3168_PHASE_CODED_EPOCH_results.json \
+            data/PART_BT3169_BT3170_BAYESIAN_DATAPATH_results.json \
+            data/PART_BT3171_D4_BELIEF_CURVATURE_results.json \
+            data/PART_BT3172_ISA_CHANNEL_CAPACITY_results.json \
+            data/w33_pass_namespace_registry_v2.d/3163-3174.json \
+            rtl/tb_w33_pass3163_3172_proof_runtime.sv \
+            rtl/w33_pass3164_tri_isa_decoder.sv \
+            rtl/w33_pass3168_phase_epoch_decoder.sv \
+            rtl/w33_pass3169_3170_bayesian_stream.sv \
+            rtl/w33_pass3169_hypothesis_enumerator.sv \
+            rtl/w33_pass3171_d4_curvature.sv \
+            rtl/w33_pass3172_information_tri_isa_scheduler.sv \
+            tests/test_bt3163_bt3174_proof_carrying_runtime.py \
+            tools/integrate_bt3163_bt3174.py
+          if ! git diff --cached --quiet; then
+            git commit -m 'Passes 3163-3174: materialize proof-carrying runtime sources'
+            git push origin HEAD:"$HEAD_BRANCH"
+          fi
