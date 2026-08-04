@@ -1,0 +1,20 @@
+{
+  "schema": "w33.pass3000.fake_gate_elimination_ledger.v1",
+  "status": "COMPLETE_FORMAL_REWRITE_LEDGER_WITH_EXACT_INSTANCES",
+  "check_count": 5,
+  "checks": {"eight_rewrite_classes": true, "m36_six_cnot_elimination_recorded": true, "pauli_frame_rule_present": true, "gauge_rule_present": true, "boundary_compressor_rule_present": true},
+  "optimization_order": ["delete by relabeling", "track in frame", "share computation", "defer to boundary", "only then synthesize physically"],
+  "rewrite_classes": [
+    "terminal permutation -> detector/output relabeling",
+    "terminal diagonal phase -> discard or classical phase frame",
+    "Pauli byproduct -> software Pauli frame",
+    "D4 gauge conjugation -> conjugate routing tables and syndrome labels",
+    "reverse route -> inverse lookup",
+    "affine triplet -> one 1-of-3 decoder from one trit",
+    "binary rank conversion -> defer to archive/export/reset",
+    "global ternary negation -> trit-label inversion when downstream is covariant"
+  ],
+  "exact_example": "Deleting two terminal M36 SWAPs removes six physical CNOT gates while preserving the branch.",
+  "new_architecture_rule": "No operation is a physical gate until it changes a future observable in every permissible frame representation.",
+  "claim_boundary": "Each rewrite is exact under its stated condition. This ledger is not a claim that arbitrary phases, permutations, or non-Clifford operations are always free."
+}
