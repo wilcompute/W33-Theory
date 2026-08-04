@@ -1,0 +1,22 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "3332-3343",
+  "owner": "agent/pass3332-3343-gauge-fault-clebsch-closure",
+  "status": "source_complete_evidence_gated",
+  "reserved_after": "master through reservation 3320-3331",
+  "passes": {
+    "3332": "prove minimum nontrivial C3^5 gauge support weight two",
+    "3333": "classify PSp orbits, stabilizers and shortest triangle syndromes",
+    "3334": "exhaust Q4 single and double edge/vertex fault routing",
+    "3335": "prove optimal static mirrored-Q5 single-fault tolerance and publish RTL",
+    "3336": "compute the 45-anchor character and prove the intrinsic orbital equivariance no-go",
+    "3337": "prove the full-M22 separable PSD lift is locked at Hoffman bound nine",
+    "3338": "classify all one-bit and two-bit envelope faults",
+    "3339": "prove and implement the minimum four-bit trusted two-error recovery tag",
+    "3340": "identify the Q5 antipodal checksum quotient as the Clebsch graph",
+    "3341": "derive the PG(4,3)-fiber minimum gauge-defect bundle",
+    "3342": "integrate reviewer-safe results into all canonical front doors",
+    "3343": "focused regression, RTL, synthesis, PDF workflow and evidence boundary"
+  },
+  "claim_boundary": "No chi(H) decision, physical fault probability, observed FPGA timing/area, fault-tolerant quantum memory, canonical physical gauge, laboratory result or spacetime claim is promoted without dedicated checked evidence."
+}

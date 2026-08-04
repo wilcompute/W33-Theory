@@ -1,0 +1,22 @@
+\section{Minimum gauge defects, fault-aware hypercubes, and Clebsch recovery}
+\label{sec:bt3332-3343}
+
+The filled 45-block port complex has minimum nontrivial flat $C_3^5$ cochain support
+\[
+d_{\rm gauge}=2.
+\]
+Every minimum support is two edges of one filled triangle.  The $720$ geometric supports form one $PSp(4,3)$ orbit; for each fixed nonzero coefficient vector the orbit has size $720$ and stabilizer order $36$.  There are $242$ labeled coefficient orbits, or $121$ projective directions after $v\sim-v$.  Each minimum defect produces nonzero holonomy on exactly $42$ unfilled triangles.
+
+The optimal nonlinear signature routing on $Q_4$ has work $34$ and dilation two.  Mirroring it in
+\[
+Q_5=Q_4\square K_2
+\]
+preserves the same work and dilation under every one of the $32$ single-vertex and $80$ single-edge failures.  Among two-vertex failures, loss is possible exactly for the $16$ interlayer replica pairs.  Under static one-cycle failover, $32$ physical state slots are both necessary and sufficient.
+
+The actual $45$-anchor action has order $25{,}920$, is transitive, and is perfect.  The intrinsic signature automorphism group has derived series $72\to18\to9\to1$.  Therefore no nontrivial action induced through the intrinsic signature coherent configuration can be equivariant with the anchor action; the identity orbital is fixed while the anchors are transitive.
+
+At a regular envelope basepoint the local algebra is $M_{22}(\mathbb Q)$.  Nevertheless every separable positive lift $A_{45}\otimes K$, $K\succeq0$, has extreme eigenvalues $32\lambda_{\max}(K)$ and $-4\lambda_{\max}(K)$, so its Hoffman bound remains exactly nine.  Any improvement must use nonseparable, profile-sensitive cross-block orientation data.  The exact chromatic boundary remains $10\leq\chi(H)\leq11$.
+
+Validity alone detects $36/110$ one-bit and $70/220$ two-bit envelope faults.  Exact confusability-graph colourings require $7$, $11$, and $16$ trusted symbols to correct one bit, correct one/detect two, and correct two bits, respectively.  The optimal four-bit two-error tag is the antipodal-axis label of $Q_5$.  The quotient $Q_5/\{x\sim\bar x\}$ is the Clebsch graph $SRG(16,5,0,2)$.  Six axes contain two valid states and ten contain one valid state with its guard antipode.  The decoder exhausts all $352$ error patterns of weight at most two, conditional on a trusted tag.
+
+These are exact finite and source-level digital results.  They do not assert physical fault probabilities, observed FPGA timing, fault-tolerant quantum memory, a chromatic decision, or laboratory performance.
