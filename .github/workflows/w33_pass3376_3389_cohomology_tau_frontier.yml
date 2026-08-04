@@ -4,14 +4,17 @@ on:
     branches: [master]
     paths:
       - 'analysis/*3376*'
+      - 'analysis/*3385*'
       - 'analysis/*3387*'
       - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
       - 'data/PART_BT3376*'
+      - 'data/PART_BT3385*'
       - 'data/w33_current_frontier_manifest_v1.json'
       - 'data/w33_pass_namespace_registry_v2.d/3376-3389.json'
       - 'tools/integrate_bt3376_bt3389.py'
       - 'tools/audit_w33_current_frontier.py'
       - 'tests/test_bt3376_3389_cohomology_tau_frontier.py'
+      - 'tests/test_bt3385_hidden_torus_dalembertian.py'
       - 'w33_paper.tex'
       - 'photonic_holonet.tex'
       - 'holonet_machine_blueprint.tex'
@@ -33,7 +36,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Regenerate exact certificate
+      - name: Regenerate exact certificates
         run: |
           mkdir -p evidence/pass3376_3389
           python -m pip install --disable-pip-version-check numpy pytest
@@ -42,6 +45,11 @@ jobs:
             | tee evidence/pass3376_3389/exact.log
           cmp /tmp/bt3376_3389_results.json \
             data/PART_BT3376_BT3389_COHOMOLOGY_TAU_results.json
+          python analysis/bt3385_hidden_torus_dalembertian.py \
+            --json /tmp/bt3385_results.json \
+            | tee evidence/pass3376_3389/dalembertian.log
+          cmp /tmp/bt3385_results.json \
+            data/PART_BT3385_HIDDEN_TORUS_DALEMBERTIAN_results.json
       - name: Materialize public front doors twice
         run: |
           python tools/integrate_bt3376_bt3389.py \
@@ -52,7 +60,9 @@ jobs:
             --report evidence/pass3376_3389/frontier_audit.json
       - name: Focused regression
         run: |
-          python -m pytest -q tests/test_bt3376_3389_cohomology_tau_frontier.py \
+          python -m pytest -q \
+            tests/test_bt3376_3389_cohomology_tau_frontier.py \
+            tests/test_bt3385_hidden_torus_dalembertian.py \
             | tee evidence/pass3376_3389/pytest.log
           git diff --check
       - uses: WtfJoke/setup-tectonic@v3
