@@ -33,13 +33,23 @@ def test_curvature_causal_quotient() -> None:
 def test_runtime_information_fusion_is_fail_closed() -> None:
     result = run("bt3195_runtime_information_fusion.py", "PART_BT3195_RUNTIME_INFORMATION_FUSION_results.json")
     assert result["information_records"] == 194
-    assert result["status"] in {"PARTIAL_RUNTIME_3_OF_194", "COMPLETE_RUNTIME_194_OF_194"}
-    if result["status"] == "PARTIAL_RUNTIME_3_OF_194":
-        assert result["runtime_records"] == 3
-        assert result["joined_records"] == 3
-        assert result["pending_runtime_records"] == 191
+    assert result["status"] in {
+        "PARTIAL_RUNTIME_1_OF_194_PLUS_2_BASELINES",
+        "COMPLETE_RUNTIME_194_OF_194",
+    }
+    if result["status"] == "PARTIAL_RUNTIME_1_OF_194_PLUS_2_BASELINES":
+        assert result["runtime_records_total"] == 3
+        assert result["joined_records"] == 1
+        assert result["out_of_census_baseline_count"] == 2
+        assert result["pending_runtime_records"] == 193
+        assert {row["runtime"]["name"] for row in result["out_of_census_baselines"]} == {
+            "current4",
+            "low4",
+        }
+        assert result["joined_records_detail"][0]["runtime"]["name"] == "fast6"
     else:
-        assert result["runtime_records"] == result["joined_records"] == 194
+        assert result["runtime_records_total"] == result["joined_records"] == 194
+        assert result["out_of_census_baseline_count"] == 0
         assert result["pending_runtime_records"] == 0
 
 
