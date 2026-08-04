@@ -7,10 +7,15 @@
   "source_completion": {
     "exact_and_modeled_summary_checks": "7/7",
     "focused_regressions": "8/8 passed locally",
+    "source_merge_commit": "af33d2e5750db7ec4aad3b362f3bfa1c1f1f664f",
+    "canonical_wrapper_commits": [
+      "9207e7222d87d61a93268c4520df8677c6180b07",
+      "a183a73caf7dba62b9daf7a4a2d8986b6622ba5e"
+    ],
     "local_rtl_toolchain": "Icarus, Yosys, GAP, and Tectonic unavailable locally; no observed RTL, full character decomposition, placement, or PDF claim",
-    "evidence_pr": null,
-    "workflow_run": null,
-    "workflow_status": "not yet triggered",
+    "evidence_pr": 235,
+    "workflow_run": 30870360590,
+    "workflow_status": "queued",
     "evidence_commit_policy": "one-shot stable marker; volatile synthesis, GAP, and manuscript logs remain artifacts"
   },
   "passes": {
@@ -22,5 +27,5 @@
     "3030": "BONKERS: causal entropic curvature distinguishes raw mutual-information efficiency from expected future-risk reduction; the frozen controller chooses route first despite chirality having the largest one-shot information ratio",
     "3031": "BONKERS: exhaustive balanced-word census selects self-dual word 001032122313 with cyclic distance nine and run length two; fused with the 89/233 calendar it yields the single reversal R(t)=1952-t mod 2796"
   },
-  "claim_boundary": "Exact finite results, bounded negative searches, synthetic optical channels and priors, source-complete RTL, and logical information/thermodynamic interpretations are published. A 27-row impossibility proof, the full 213,648,435 M36 census, GAP irreducible multiplicities, noisy laboratory receiver data, Icarus/Yosys evidence, blueprint/site materialization, three PDF builds, and physical heat or autonomous-clock claims remain open or pending."
+  "claim_boundary": "Exact finite results, bounded negative searches, synthetic optical channels and priors, source-complete RTL, and logical information/thermodynamic interpretations are published. A 27-row impossibility proof, the full 213,648,435 M36 census, GAP irreducible multiplicities, noisy laboratory receiver data, Icarus/Yosys evidence, blueprint/site materialization, three PDF builds, and physical heat or autonomous-clock claims remain open or pending workflow 30870360590."
 }
