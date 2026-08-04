@@ -1,0 +1,79 @@
+{
+  "checks": {
+    "null_rulings_1_plus_4_plus_4": true,
+    "nullity_9": true,
+    "operator_identity": true,
+    "rank_18": true,
+    "spectrum_6_3_0_minus3": true
+  },
+  "fourier_null_set": {
+    "constant": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "criterion": "k=0 or k3!=0 and exactly one of k1,k2 is nonzero",
+    "first_ruling": [
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        2,
+        1
+      ],
+      [
+        0,
+        2,
+        2
+      ]
+    ],
+    "second_ruling": [
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        2
+      ],
+      [
+        2,
+        0,
+        1
+      ],
+      [
+        2,
+        0,
+        2
+      ]
+    ]
+  },
+  "nullity": 9,
+  "operator": {
+    "boundary": "finite signed graph operator only; no physical spacetime identification",
+    "hidden": "D = A(C3)_3 - A(C3)_1 - A(C3)_2",
+    "shifted": "D + 2I = Delta_1 + Delta_2 - Delta_3",
+    "signature": "two positive Laplacian factors and one negative Laplacian factor"
+  },
+  "rank": 18,
+  "schema": "w33.bt3385.hidden_torus_dalembertian.v1",
+  "spectrum": {
+    "-3": 2,
+    "0": 9,
+    "3": 12,
+    "6": 4
+  },
+  "status": "PASS"
+}
