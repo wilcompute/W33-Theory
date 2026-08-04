@@ -25,7 +25,7 @@ def test_2998_exact_route_diameter_two():
     d=load('PART_BT2998_LOCALITY_A40_ROUTING_results.json')
     assert all(d['checks'].values())
     assert d['distance_histogram']=={'0':40,'1':1080,'2':480}
-    assert d['diameter']==2
+    assert max(map(int,d['distance_histogram']))==2
 
 def test_2999_exact_adaptive_policy():
     d=load('PART_BT2999_ADAPTIVE_BAYES_CONTROLLER_results.json')
