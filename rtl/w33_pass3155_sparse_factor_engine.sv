@@ -1,5 +1,6 @@
 // Passes 3155-3156: exact seven-bank schedule for the 3,697-factor posterior.
-// One baseline register plus seven banks x 528 words x W bits.
+// One baseline register plus seven banks x 528 words x W bits.  Reads are synchronous
+// so Yosys can infer block RAM rather than a large asynchronous LUT memory.
 module w33_pass3155_sparse_factor_engine #(
     parameter integer W=18,
     parameter integer DEPTH=528
@@ -32,23 +33,23 @@ module w33_pass3155_sparse_factor_engine #(
     logic signed [W-1:0] bank6[0:DEPTH-1];
 
     always_comb begin
-        case(read_bank_i)
-          3'd0:read_data_o=bank0[read_addr_i];
-          3'd1:read_data_o=bank1[read_addr_i];
-          3'd2:read_data_o=bank2[read_addr_i];
-          3'd3:read_data_o=bank3[read_addr_i];
-          3'd4:read_data_o=bank4[read_addr_i];
-          3'd5:read_data_o=bank5[read_addr_i];
-          default:read_data_o=bank6[read_addr_i];
-        endcase
         pair_phase_o=(cycle_o>=10'd45);
         unary_edge_o=pair_phase_o?6'd0:cycle_o[5:0];
     end
 
     always_ff @(posedge clk) begin
+        case(read_bank_i)
+          3'd0:read_data_o<=bank0[read_addr_i];
+          3'd1:read_data_o<=bank1[read_addr_i];
+          3'd2:read_data_o<=bank2[read_addr_i];
+          3'd3:read_data_o<=bank3[read_addr_i];
+          3'd4:read_data_o<=bank4[read_addr_i];
+          3'd5:read_data_o<=bank5[read_addr_i];
+          default:read_data_o<=bank6[read_addr_i];
+        endcase
         if(rst) begin
             baseline_o<='0;busy_o<=1'b0;done_o<=1'b0;cycle_o<='0;
-            pair_index_o<='0;left_label_o<='0;
+            pair_index_o<='0;left_label_o<='0;read_data_o<='0;
         end else begin
             done_o<=1'b0;
             if(baseline_valid_i) baseline_o<=baseline_i;
