@@ -6,6 +6,7 @@ on:
     paths:
       - 'analysis/*3187*'
       - 'analysis/*3191*'
+      - 'analysis/BT2435_five_frontiers_insert.tex'
       - 'data/PART_BT3187*'
       - 'data/w33_pass_namespace_registry_v2.d/3187-3192.json'
       - 'tests/test_bt3187_bt3192_chromatic_defect_block_filter.py'
