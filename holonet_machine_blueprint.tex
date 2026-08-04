@@ -551,29 +551,26 @@ so both clear it by a factor of more than $1.6$. The spectral gap is $10$.
 
 \headline{And it satisfies a Riemann Hypothesis.}
 
-\begin{spec}[The graph's numbers are modular-form numbers]
-Ramanujan's $\tau$, the coefficients of the weight-$12$ discriminant $\Delta = \eta^{24}$:
-\begin{center}\small
-\begin{tabular}{@{}rrl@{}}
+\begin{spec}[What the graph's own integers turn out to be]
+\begin{center}\footnotesize
+\begin{tabular}{@{}llp{6.6cm}@{}}
 \toprule
-$n$ & $\tau(n)$ & in graph terms\\
+\textbf{Object} & \textbf{Value} & \textbf{In graph terms}\\
 \midrule
-$2$ & $-24$ & $-f$, the eigenvalue multiplicity\\
-$3$ & $252$ & $E + k = 240 + 12$\\
-$6$ & $-6048$ & $\tau(2)\tau(3) = -f(E+k)$, by multiplicativity\\
+$\tau(2)$ & $-24$ & $-f$, the eigenvalue multiplicity\\
+$\tau(3)$ & $252$ & $E + k = 240 + 12$\\
+$\tau(6)$ & $-6048$ & $\tau(2)\tau(3)$, forced by multiplicativity\\
+weight of $\Delta$ & $12$ & $= k$, the degree of the graph\\
+\midrule
+$\chi$ & $-40$ & $40 - 240 + 160 = -v$\\
+genus & $21$ & $3\times7 = \binom{7}{2}$\\
+triangles & $160$ & $vk\lambda/6$ --- fixed by the four SRG parameters\\
 \bottomrule
 \end{tabular}
 \end{center}
-And the weight of $\Delta$ is $12$ --- the degree of the graph.
-\end{spec}
-
-\begin{spec}[Topology of the clique complex]
-\[
-  \chi = 40 - 240 + 160 = -40 = -v,\qquad
-  \text{embedded genus } 21 = 3\times7 = \binom{7}{2} .
-\]
-The $160$ triangles are $v k \lambda/6$, so the whole complex is determined by the four
-strongly-regular parameters.
+\textbf{And it stops there.} $\tau(4)$, $\tau(5)$, $\tau(7)$ and beyond match
+nothing, so the modular bridge is two independent coincidences and one identity ---
+not a law (Pass 3102).
 \end{spec}
 
 \begin{spec}[The Ihara zeta function]

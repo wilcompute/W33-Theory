@@ -1,0 +1,65 @@
+{
+  "pass_3100": {
+    "critical_radius": 0.7071067811865475,
+    "nontrivial": 7,
+    "on_circle": 6,
+    "poles": 8,
+    "reference": "K_4",
+    "reference_check_passes": true
+  },
+  "pass_3101": {
+    "examples": [
+      {
+        "degree": 8,
+        "gens": [
+          "Z0",
+          "Z1",
+          "Z2",
+          "Z3"
+        ],
+        "is_ramanujan": true,
+        "lambda2": 5.0000000000000115,
+        "ramanujan_bound": 5.291502622129181
+      }
+    ],
+    "regular_sets": 1,
+    "sets_tested": 80
+  },
+  "pass_3102": {
+    "conclusion": "two independent hits (n=2,3); tau(6) is forced; no extension",
+    "independent_hits": [
+      2,
+      3
+    ],
+    "matches": {
+      "1": [],
+      "10": [],
+      "2": [
+        "-f"
+      ],
+      "3": [
+        "E+k"
+      ],
+      "4": [],
+      "5": [],
+      "6": [
+        "-f*(E+k)"
+      ],
+      "7": [],
+      "8": [],
+      "9": []
+    },
+    "tau": {
+      "1": 1,
+      "10": -115920,
+      "2": -24,
+      "3": 252,
+      "4": -1472,
+      "5": 4830,
+      "6": -6048,
+      "7": -16744,
+      "8": 84480,
+      "9": -113643
+    }
+  }
+}
