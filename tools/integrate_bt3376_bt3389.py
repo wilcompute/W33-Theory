@@ -1,17 +1,14 @@
 #!/usr/bin/env python3
-"""Idempotently consolidate current-frontier wrappers and publish BT3376--3389."""
+"""Idempotently consolidate current-frontier wrappers and reconcile public sections."""
 from __future__ import annotations
 
 import argparse
 import json
-import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "data/w33_current_frontier_manifest_v1.json"
 MANIFEST_INPUT = r"\input{analysis/W33_CURRENT_FRONTIER_MANIFEST}%"
-HTML_SOURCE = ROOT / "analysis/BT3387_cohomology_tau_frontier_index_insert.html"
-HTML_ID = 'id="bt3376-3389-cohomology-tau-frontier"'
 
 
 def consolidate_wrapper(text: str, required_inputs: list[str]) -> tuple[str, str]:
@@ -48,12 +45,20 @@ def consolidate_wrapper(text: str, required_inputs: list[str]) -> tuple[str, str
     return result, mode
 
 
-def integrate_index(text: str, html: str) -> tuple[str, str]:
-    count = text.count(HTML_ID)
+def public_count(text: str, kind: str, token: str) -> int:
+    if kind == "id":
+        return text.count(f'id="{token}"')
+    if kind == "marker":
+        return text.count(token)
+    raise ValueError(f"unsupported public section kind: {kind}")
+
+
+def integrate_public_section(text: str, html: str, kind: str, token: str) -> tuple[str, str]:
+    count = public_count(text, kind, token)
     if count == 1:
         return text, "already_materialized"
     if count > 1:
-        raise ValueError("duplicate BT3376--3389 public index section")
+        raise ValueError(f"duplicate public section: {token}")
     lower = text.lower()
     position = lower.rfind("</main>")
     if position < 0:
@@ -61,6 +66,16 @@ def integrate_index(text: str, html: str) -> tuple[str, str]:
     if position < 0:
         raise ValueError("public index has no </main> or </body> insertion point")
     return text[:position] + html.rstrip() + "\n" + text[position:], "inserted"
+
+
+def integrate_index(text: str, html: str) -> tuple[str, str]:
+    """Compatibility helper for the BT3376--3389 section regression."""
+    return integrate_public_section(
+        text,
+        html,
+        "id",
+        "bt3376-3389-cohomology-tau-frontier",
+    )
 
 
 def integrate(root: Path = ROOT) -> dict:
@@ -78,16 +93,29 @@ def integrate(root: Path = ROOT) -> dict:
         }
 
     index_path = root / config["public_index"]
-    html = (root / "analysis/BT3387_cohomology_tau_frontier_index_insert.html").read_text(encoding="utf-8")
-    before = index_path.read_text(encoding="utf-8")
-    after, index_mode = integrate_index(before, html)
-    index_path.write_text(after, encoding="utf-8")
+    before_index = index_path.read_text(encoding="utf-8")
+    after_index = before_index
+    section_modes = {}
+    for section in config["public_sections"]:
+        source = root / section["source"]
+        html = source.read_text(encoding="utf-8")
+        after_index, mode = integrate_public_section(
+            after_index,
+            html,
+            section["kind"],
+            section["token"],
+        )
+        section_modes[section["token"]] = mode
+    index_path.write_text(after_index, encoding="utf-8")
 
     return {
         "schema": "w33.bt3376_3389.integration.v1",
         "status": "PASS",
         "wrappers": wrapper_modes,
-        "index": {"mode": index_mode, "changed": after != before},
+        "index": {
+            "changed": after_index != before_index,
+            "sections": section_modes,
+        },
     }
 
 
@@ -100,7 +128,7 @@ def main() -> None:
     if args.report:
         args.report.parent.mkdir(parents=True, exist_ok=True)
         args.report.write_text(payload, encoding="utf-8")
-    print("PASS integrated BT3376-BT3389 through generated frontier manifest")
+    print("PASS reconciled current-frontier manifest and public sections")
     print(payload, end="")
 
 
