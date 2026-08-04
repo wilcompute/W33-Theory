@@ -34,32 +34,30 @@ module w33_pass3155_sparse_factor_engine #(
     logic signed [W-1:0] corr5[0:482];
     logic signed [W-1:0] corr6[0:482];
     logic signed [7*W-1:0] unary_read_word;
+    logic signed [W-1:0] pair_read_word;
     logic [8:0] correction_write_addr;
 
     always_comb begin
         pair_phase_o=(cycle_o>=10'd45);
         unary_edge_o=pair_phase_o?6'd0:cycle_o[5:0];
         correction_write_addr=cycle_o-10'd45;
-        if(!read_pair_i) read_data_o=unary_read_word[read_bank_i*W +: W];
+        read_data_o=read_pair_i?pair_read_word:unary_read_word[read_bank_i*W +: W];
     end
 
     always_ff @(posedge clk) begin
-        if(!read_pair_i) begin
-            unary_read_word<=unary_mem[read_addr_i[5:0]];
-        end else begin
-            case(read_bank_i)
-              3'd0:read_data_o<=corr0[read_addr_i];
-              3'd1:read_data_o<=corr1[read_addr_i];
-              3'd2:read_data_o<=corr2[read_addr_i];
-              3'd3:read_data_o<=corr3[read_addr_i];
-              3'd4:read_data_o<=corr4[read_addr_i];
-              3'd5:read_data_o<=corr5[read_addr_i];
-              default:read_data_o<=corr6[read_addr_i];
-            endcase
-        end
+        unary_read_word<=unary_mem[read_addr_i[5:0]];
+        case(read_bank_i)
+          3'd0:pair_read_word<=corr0[read_addr_i];
+          3'd1:pair_read_word<=corr1[read_addr_i];
+          3'd2:pair_read_word<=corr2[read_addr_i];
+          3'd3:pair_read_word<=corr3[read_addr_i];
+          3'd4:pair_read_word<=corr4[read_addr_i];
+          3'd5:pair_read_word<=corr5[read_addr_i];
+          default:pair_read_word<=corr6[read_addr_i];
+        endcase
         if(rst) begin
             baseline_o<='0;busy_o<=1'b0;done_o<=1'b0;cycle_o<='0;
-            pair_index_o<='0;left_label_o<='0;read_data_o<='0;unary_read_word<='0;
+            pair_index_o<='0;left_label_o<='0;unary_read_word<='0;pair_read_word<='0;
         end else begin
             done_o<=1'b0;
             if(baseline_valid_i) baseline_o<=baseline_i;
