@@ -10,7 +10,7 @@ rank-three candidate intake
   -> exact 3,697-factor belief update
   -> in-band edit-robust epoch
   -> causal/route/calibration collision price
-  -> equal-footprint dual-ISA switch
+  -> adaptive ISA selection
 ```
 
 The packet also exhausts every five- and six-opcode subset of the frozen affine library at
@@ -27,9 +27,8 @@ There are
 \binom{10}{5}+\binom{10}{6}=252+210=462
 \]
 
-five- and six-generator subsets.  The library separates six zero-translation symplectic
-maps from four pure translations, so universality is certified without a 4.2-million-state
-closure for every subset:
+five- and six-generator subsets. The library separates six zero-translation symplectic
+maps from four pure translations, so universality is certified by
 
 \[
 |\langle L\rangle|=51,840,
@@ -46,10 +45,10 @@ Exact census:
 | total | 462 | 194 | — | — |
 
 Eight designs survive the joint non-dominance test over collision probability, 81-frame
-mean distance, directed spectral radius and decoder-operation count.  Exact full-group BFS
+mean distance, directed spectral radius and decoder-operation count. Exact full-group BFS
 was locally completed for all eight.
 
-The strongest runtime candidate is
+The strongest observed runtime candidate is
 
 ```text
 F_f + CX_pf + CX_fp + Z0 + Z1 + Z3.
@@ -95,13 +94,13 @@ Below that price the six-opcode design has lower modeled runtime cost; above it 
 36-collision four-opcode set wins.
 
 **Boundary.** Universality, collisions, frame distances and spectral metrics are exact for
-all 462 subsets.  Full-group BFS is locally observed for the eight non-dominated designs.
+all 462 subsets. Full-group BFS is locally observed for the eight non-dominated designs.
 The committed exhaustive workflow must still run full BFS for all 194 universal subsets
 before a global mean-distance optimum is claimed.
 
 ---
 
-## 3155–3156 — the exact factor table becomes a seven-lane machine
+## 3155–3156 — exact factor scheduling and realizable memory shape
 
 The sparse posterior has
 
@@ -109,41 +108,44 @@ The sparse posterior has
 1+315+3381=3697
 \]
 
-dynamic values.  Its interaction geometry gives a natural conflict-free banking:
-
-- bank index: one of seven nonidentity \(D_4\) labels;
-- unary address: one of 45 edges;
-- correction address: one of 69 measured adjacent-edge pairs and one of seven left labels.
-
-Therefore each bank has
-
-\[
-45+69\cdot7=528
-\]
-
-words.  A sweep is:
+dynamic values. The logical update is seven lanes wide:
 
 ```text
 45 unary cycles + 69×7 correction cycles = 528 cycles.
 ```
 
-Seven 18-bit factors update on every accepted cycle.  The exact memory count is
+The first 45 cycles update all seven nonidentity labels for one edge. The remaining 483
+cycles update seven correction factors at a time, indexed by one of 69 adjacent measured
+edge pairs and one of seven left labels.
+
+The exact information count is
 
 \[
-7\cdot528\cdot18+18=66,546\text{ bits}.
+45\cdot126+7\cdot483\cdot18+18=66,546\text{ bits}.
 \]
 
-Conservative bank-local iCE40 packing uses three 4-kbit EBRs per bank, or 21 EBRs total.
-At a stated 100 MHz design point, not observed timing, the schedule corresponds to
+A raw-bit estimate is not a physical RAM fit. Respecting iCE40 EBR aspect ratios gives the
+source architecture:
+
+| memory | shape | aspect-ratio estimate |
+|---|---:|---:|
+| unary factors | $45\times126$ | 8 EBRs |
+| each correction bank | $483\times18$ | 3 EBRs |
+| seven correction banks | — | 21 EBRs |
+| **total** | — | **29 EBRs** |
+
+The 29-block value is an exact aspect-ratio calculation for the proposed shape, not yet an
+observed Yosys mapping. The RTL uses synchronous reads and separates the wide unary memory
+from the seven correction banks so the evidence lane can confirm or falsify that mapping.
+
+At a stated 100 MHz design point, not observed timing, the 528-cycle schedule corresponds
+to
 
 \[
 189,393.94\text{ factor sweeps/s}
 \]
 
 and 12.6 Gbit/s of internal factor-write bandwidth.
-
-The RTL uses synchronous reads so the evidence lane tests block-RAM inference rather than
-an accidental asynchronous LUT implementation.
 
 ---
 
@@ -155,20 +157,20 @@ The payload period is
 7, 2, 16, 23, 20, 15, 0, 2, 7, 11, 16, 19.
 ```
 
-Symbols 1 and 22 are unused.  The epoch marker is
+Symbols 1 and 22 are unused. The epoch marker is
 
 ```text
 1, 22, 1, 22, 1.
 ```
 
-Every payload-only word contains zero marker-alphabet symbols.  Transforming any such word
+Every payload-only word contains zero marker-alphabet symbols. Transforming any such word
 of length \(L\) into the five-symbol marker requires at least
 
 \[
 \min(L,5)+|L-5|=\max(L,5)\ge5
 \]
 
-edits.  Hence the marker and payload radius-two Levenshtein balls are disjoint:
+edits. Hence the marker and payload radius-two Levenshtein balls are disjoint:
 
 \[
 \boxed{\text{two-edit false epoch acquisition is impossible}.}
@@ -177,9 +179,7 @@ edits.  Hence the marker and payload radius-two Levenshtein balls are disjoint:
 The RTL detects the surviving marker alphabet, then uses the already-proved unique cyclic
 payload pairs to reacquire exact phase in two clean payload symbols.
 
-Spacing remains a design choice:
-
-| payload symbols between markers | overhead | maximum received symbols to robust confirmation |
+| payload symbols between markers | overhead | maximum symbols to confirmation |
 |---:|---:|---:|
 | 12 | 29.41% | 19 |
 | 24 | 17.24% | 31 |
@@ -191,7 +191,7 @@ Spacing remains a design choice:
 
 No additional optical symbol or mode is introduced.
 
-**Boundary.** The delimiter theorem is adversarial and exact.  The committed detector's
+**Boundary.** The delimiter theorem is adversarial and exact. The committed detector's
 post-marker two-symbol acquisition assumes those acquisition symbols are clean; the
 existing edit-mask controller remains responsible for continuing edit corruption.
 Laboratory confusion probabilities remain absent.
@@ -204,8 +204,7 @@ The merged Pass 3125 packet supplies a duplicate-free engine for all 50,868,675 
 isotropic subspaces, but its full census is still separately gated and no accepted
 candidate has been observed.
 
-The new intake recursively scans every Pass 3125 artifact and refuses to interpret no input
-as a no-go.  Every candidate must first pass:
+Every candidate must first pass:
 
 1. three independent commuting symplectic generators;
 2. trace-eight Hermitian idempotent projector;
@@ -219,7 +218,7 @@ Accepted candidates then receive:
 - a fixed-Weyl-frame qubit negativity witness;
 - an exact maximum over 46,656 product stabilizer states, reported only as a lower bound on
   unrestricted stabilizer fidelity;
-- a three-logical-qubit symplectic frame for the rank-three code;
+- a three-logical-qubit symplectic frame;
 - exact first- and second-order accepted-success and output-fidelity coefficients for the
   frozen independent local-error model.
 
@@ -230,7 +229,7 @@ maximal isotropic stabilizer subspaces     4,922,775
 logical Clifford elements modulo phase   92,897,280
 ```
 
-This is a monotone-analysis pipeline, not a candidate-existence claim.
+No input is not a no-go theorem.
 
 ---
 
@@ -263,8 +262,8 @@ c_{\rm eff}=c_{\rm base}+0.35H_{\rm causal}+0.5R_{\rm route}
  +(1-\kappa_{\rm calibration}).
 \]
 
-The coefficients are controller parameters.  A low-collision decoder that is not marked
-calibrated fails closed to the current ISA.  The six-opcode candidate remains an advisory
+The coefficients are controller parameters. A low-collision decoder that is not marked
+calibrated fails closed to the current ISA. The six-opcode candidate remains an advisory
 third mode until its larger decoder receives observed area and timing.
 
 ---
@@ -272,11 +271,11 @@ third mode until its larger decoder receives observed area and timing.
 ## Evidence ladder
 
 - **Exact finite:** 462-set universality/collision/frame/spectral census; eight complete
-  4,199,040-state BFS runs; 528-cycle bank schedule; edit-distance delimiter proof;
-  dual-ISA crossover and hysteresis algebra.
+  4,199,040-state BFS runs; 528-cycle schedule; 66,546-bit information count; 29-EBR
+  aspect-ratio estimate; edit-distance delimiter proof; dual-ISA crossover algebra.
 - **Exact for explicit models:** runtime cost comparisons and error-slope definitions.
-- **Source-complete:** larger-ISA exhaustive engine, seven-bank RTL, epoch tracker,
+- **Source-complete:** larger-ISA engine, physical-shape factor RTL, epoch tracker,
   monotone pipeline, adaptive scheduler, regressions, paper integrator and evidence lanes.
-- **Pending:** all-194 full BFS workflow, accepted M36 candidate, exhaustive stabilizer
+- **Pending:** all-194 full BFS, accepted M36 candidate, exhaustive stabilizer
   fidelity/Clifford orbit, RTL simulation/synthesis/place, materialized front doors, PDFs,
-  and all laboratory behavior.
+  and laboratory behavior.
