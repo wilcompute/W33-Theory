@@ -2,16 +2,16 @@
 """Passes 3153-3154: exact five/six-opcode affine ISA census.
 
 The ten frozen generators split into six zero-translation symplectic maps and four
-pure translations.  Universality is therefore certified exactly by
+pure translations. Universality is certified exactly by
 
     |<linear parts>| = 51,840 and dim span(<linear parts> translations) = 4.
 
 All 462 five- and six-generator subsets receive exact universality, collision,
-81-frame distance, and spectral metrics.  Full 4,199,040-state BFS is run for every
+81-frame distance, and spectral metrics. Full 4,199,040-state BFS is run for every
 non-dominated design by default and for all universal designs with --exhaustive-full.
 """
 from __future__ import annotations
-import argparse, itertools, json, math
+import argparse,itertools,json
 from collections import deque
 from pathlib import Path
 import numpy as np
@@ -85,8 +85,7 @@ def subset_metrics(sub,closure):
     translations=[TRANS[n] for n in sub if n.startswith('Z')]
     orbit=[]
     if translations:
-        for A in closure:
-            orbit.extend((A@t)%3 for t in translations)
+        for A in closure:orbit.extend((A@t)%3 for t in translations)
     return {'collisions':coll,'collision_probability':coll/(81*len(sub)),
             'frame_diameter':int(dist.max()) if np.all(dist>=0) else None,
             'frame_mean_distance':float(dist.mean()) if np.all(dist>=0) else None,
@@ -145,11 +144,18 @@ def main():
     pareto=[x for x in universal if not any(dominates(y,x) for y in universal)]
     tables=full_tables();targets=universal if a.exhaustive_full else pareto
     full={'+'.join(x['generators']):full_bfs(tuple(x['generators']),tables) for x in targets}
-    out={'schema':'w33.pass3153_3154.larger_isa_census.v1','subsets':len(rows),
-         'universal':len(universal),'universal_by_size':{str(s):sum(x['universal'] and x['size']==s for x in rows) for s in (5,6)},
+    pareto_payload=[dict(x,full_group=full['+'.join(x['generators'])]) for x in pareto]
+    all_rows=None
+    if a.exhaustive_full:
+        all_rows=[dict(x,full_group=full.get('+'.join(x['generators']))) for x in rows]
+    out={'schema':'w33.pass3153_3154.larger_isa_census.v2','subsets':len(rows),
+         'universal':len(universal),
+         'universal_by_size':{str(s):sum(x['universal'] and x['size']==s for x in rows) for s in (5,6)},
          'minimum_collisions_by_size':{str(s):min(x['collisions'] for x in universal if x['size']==s) for s in (5,6)},
-         'pareto_count':len(pareto),'pareto':[dict(x,full_group=full['+'.join(x['generators'])]) for x in pareto],
-         'all_rows':rows if a.exhaustive_full else None,
+         'pareto_count':len(pareto),'pareto':pareto_payload,
+         'all_rows':all_rows,
+         'full_group_results':full,
+         'full_bfs_record_count':len(full),
          'full_bfs_mode':'all universal' if a.exhaustive_full else 'non-dominated only',
          'boundary':'Exact frozen-library census. Decoder operation units and any combined physical-cost scalar are explicit design proxies, not measured energy.'}
     OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps(out,indent=2,sort_keys=True))
