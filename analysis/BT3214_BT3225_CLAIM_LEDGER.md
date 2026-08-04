@@ -15,8 +15,9 @@
 | Vanishing port flux gives a unique bridge | **refuted** | `H^1` has dimension 436 | additional gauge, equivariance, physical or nonlinear constraints |
 | The cellular obstruction is a complete contextuality invariant | **not claimed** | outside scope and false in general | dedicated empirical-model/sheaf construction and complete invariant |
 | The phase marker synchronizes the full belief controller | **refuted** | exact product-map rank is 876 | add an explicitly authorized belief-reset operation |
-| Full belief reset erases at least `log2(876)` logical bits | exact information-theoretic corollary | source-complete | none under frozen finite-state reset model |
-| The 300 K Landauer floor for full belief reset is about `2.8063e-20 J` | thermodynamic lower-bound model | source-complete | temperature assumption only; never promote to engineering energy |
+| A rank-one belief reset removes `log2(876)` bits of available state capacity | exact finite-state corollary | source-complete | frozen 876-state register model |
+| The 300 K Landauer value `2.8063e-20 J` applies to resetting a uniform/maximally mixed 876-state ensemble | thermodynamic lower-bound model | source-complete | retain ensemble and temperature assumptions; never promote to per-event engineering energy |
+| The same Landauer value is a distribution-independent cost of every reset | **not claimed** | false without an input-entropy assumption | specify the actual belief distribution and reversible implementation details |
 | Runtime/M36 shard Merkle roots prove honest computation | **not claimed** | hashes provide integrity and provenance only | full recomputation or a sound proof-carrying/argument system |
 | A complete M36 census or accepted rank-three candidate exists | **not claimed** | zero complete 256-shard aggregate in this packet | all 256 normalized shards plus independent certificate and candidate inclusion proof |
 | PR stack scheduler grants merge authority | **not claimed** | explicitly forbidden | live green checks and explicit human merge operation |
@@ -30,6 +31,7 @@
 - An empty or partial M36 shard set is not a no-go.
 - A Merkle root authenticates committed bytes; it does not certify the computation that produced them.
 - A phase marker is not a belief reset.
+- `k_B T ln(876)` is the reset floor for a uniform/maximally mixed 876-state ensemble at the stated temperature, not a distribution-independent per-event energy.
 - Nonzero cellular flux obstructs a flat lift; zero flux leaves a 436-dimensional ambiguity and is not a complete contextuality result.
 - `[[720,436,2]]` is a high-rate provenance/checksum complex, not a fault-tolerant memory.
 - A queued, pending, action-required, failed, source-complete or mergeable PR is not green evidence.
