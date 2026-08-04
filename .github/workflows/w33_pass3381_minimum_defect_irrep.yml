@@ -1,0 +1,37 @@
+name: Pass 3381 Minimum Defect Irrep Candidates
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/bt3381_minimum_defect_irrep_candidates.g'
+      - '.github/workflows/w33_pass3381_minimum_defect_irrep.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  gap-character:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install GAP
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gap gap-character-tables
+      - name: Enumerate stabilizer characters
+        run: |
+          gap -q analysis/bt3381_minimum_defect_irrep_candidates.g \
+            | tee /tmp/bt3381_gap.log
+          test -s data/PART_BT3381_MINIMUM_DEFECT_IRREP_candidates.tsv
+          grep -F $'group_order\t25920' data/PART_BT3381_MINIMUM_DEFECT_IRREP_candidates.tsv
+      - name: Commit candidate table once
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/PART_BT3381_MINIMUM_DEFECT_IRREP_candidates.tsv
+          if ! git diff --cached --quiet; then
+            git commit -m 'Materialize Pass 3381 minimum-defect character candidates [skip ci]'
+            git push
+          fi
