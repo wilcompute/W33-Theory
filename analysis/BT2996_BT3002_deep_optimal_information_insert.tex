@@ -1,0 +1,68 @@
+\section{Adaptive and self-synchronizing information closure (Passes 2996--3002)}
+\label{sec:bt2996-3002}
+
+The fixed diagnostic problem is replaced by an exact adaptive one.  The frozen
+23-triangle single-edge-optimal panel already separates 44,848 of the 48,826
+no-, one-, and two-edge $D_4$ fault hypotheses.  Its 1,436 remaining collision
+classes have size at most three.  Holding those 23 triangles fixed, a binary
+MILP proves that six further triangles are necessary and sufficient for a fixed
+completion.  Global fixed-schedule optimality of 29 remains open:
+\[
+  23\le m^{\star}_{\rm fixed}\le29.
+\]
+However, a collision-specific exact decision tree resolves all hypotheses with
+at most two additional tests.  Its depth census is
+\[
+  44848\times23,\qquad3566\times24,\qquad412\times25,
+\]
+with uniform mean $23.0899111129$.  Thus the adaptive protocol strictly
+dominates every fixed 29-triangle protocol operationally.
+
+The earlier equality between 540 clock cycles and 540 skew-line frames does not
+extend to the natural order-three actions.  The clock translation fixes all 540
+cycle labels, whereas the corresponding W33 symplectic transvection fixes no
+skew-line frame and has 180 three-cycles.  Their permutation characters are
+therefore 540 and zero.  The numerical factorization
+$2\cdot27\cdot10=40\cdot27/2$ survives, but the natural $C_3$-equivariant
+identification is obstructed.
+
+All ordered W33 address transfers admit exact symplectic-transvection words of
+length at most two.  The distance census is
+\[
+  40\times0,\qquad1080\times1,\qquad480\times2.
+\]
+One transvection suffices exactly for noncommuting address pairs; distinct
+commuting pairs require two.
+
+For the explicit sparse decision prior
+$P_0=0.995$, $P_1=0.0045$, and $P_2=0.0005$, the adaptive controller escalates
+after the common 23 rows with probability $0.00423797155$ and uses
+$23.0062407751$ triangles on average.  Its fourteen next actions need four fixed
+bits and have entropy only $0.0517343817$ bits.  This motivates a predictive
+controller that retains the next action and residual risk rather than an opaque
+sixteen-bit fault-hypothesis index.
+
+Eight exact rewrite classes remove operations that are merely terminal wire
+permutations, diagonal measurement phases, Pauli byproducts, gauge-coordinate
+changes, route inversions, shared affine decoders, boundary-only binary ranks,
+or covariant ternary label inversions.  The governing synthesis rule is that no
+operation is promoted to a physical gate until it changes a future observable
+in every permissible frame representation.
+
+Finally, the balanced cyclic word
+\[
+  102332001123
+\]
+has twelve distinct shifts, maximum off-phase autocorrelation three, and optimal
+cyclic distance nine.  It corrects four arbitrary slot-symbol substitutions.
+At tick $t$, slot $w_t$ is omitted and the existing three curvature pilots are
+sent in the remaining slots.  The omitted slot supplies the mod-12
+synchronization symbol while the same three pilots retain arbitrary single-edge
+$S_4$ permutation detection.  No additional pilot channel is required.
+
+\paragraph{Claim boundary.}
+The conditional six-row optimum, adaptive depth, equivariance obstruction,
+transvection diameter, and cyclic-code properties are exact in their frozen
+finite models.  The fault prior is synthetic; global fixed-schedule minimality
+of 29, noisy optical decision policies, measured transvection loss, RTL
+placement, and physical Landauer energy remain open.
