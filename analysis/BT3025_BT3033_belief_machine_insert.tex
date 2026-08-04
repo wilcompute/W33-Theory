@@ -1,0 +1,81 @@
+% Passes 3025--3033: noisy predictive synchronization closure.
+\section*{Belief-machine closure: noisy $D_4$ inference, causal states, and edit indexing}
+
+The exact noiseless controller of Passes 2996--3002 is the zero-noise boundary of a more
+appropriate architecture: the live state is a calibrated belief, not a prematurely hard
+syndrome.  Conditional on one of the $1436$ collision classes left by the exact common
+$23$-triangle panel, we evaluate every distinct remaining triangle-likelihood pattern in
+an explicit nine-outcome channel (the eight elements of $D_4$ plus erasure).  The model
+separates erasure, partial left-rotation errors, conjugation drift, and a uniform dark
+component.  Exact two-step dynamic programming chooses between MAP stopping and another
+probe.  For the mild, moderate, and severe synthetic profiles the conditional residual
+errors are respectively
+\[
+6.404017\times10^{-4},\qquad7.574986\times10^{-4},\qquad1.316780\times10^{-3}.
+\]
+These are decision-theory values for stated synthetic likelihoods, not measured optical
+performance; the base collision class is assumed exact.
+
+\paragraph{Future-action quotient.}
+Two post-base histories are equivalent when the canonical controller requests the same
+next triangle and every possible $D_4$ observation enters equivalent future states.  Exact
+Moore-machine minimization gives
+\[
+1436\longrightarrow457
+\]
+initial future-action causal states and $470$ recursive states including the unique STOP
+state.  Under the frozen sparse prior, conditional memory falls from
+$8.280979504$ to $7.202688649$ bits, while fixed storage falls from $11$ to $9$ bits.
+This quotient is for diagnostic action selection; downstream correction labels remain
+separately typed.
+
+\paragraph{The fixed schedule is now a $27$-versus-$28$ problem.}
+A verified $28$-triangle construction separates all $48826$ no/one/two-edge nonidentity
+$D_4$ hypotheses.  On the central $r^2$ restriction, a size-$27$ schedule must make every
+nonzero edge difference of weight at most four visible.  Equivalently its selected
+triangle-boundary matrix must define a binary code of minimum distance at least five.  The
+exact SAT instance contains
+\[
+\sum_{j=1}^{4}{45\choose j}=164220
+\]
+separation clauses over $120$ triangle variables, an at-most-$27$ constraint, and a valid
+$S_{10}$ symmetry breaker.  The branch carries a proof-producing solver and independent
+proof gate.  Until an UNSAT proof or a full-$D_4$-verified $27$-row model is observed, the
+honest bound remains $23\le m^\star_{\rm fixed}\le28$.
+
+\paragraph{Insertion/deletion indexing without another mode.}
+The substitution-optimal omitted-slot word $102332001123$ has cyclic Hamming distance
+nine, but every cyclic word has adjacent rotations at insertion/deletion distance at most
+two.  Hence an isolated cyclic block cannot uniquely correct one edit of phase.  The
+three already-required distinct curvature pilots provide a zero-channel-cost alphabet via
+their six possible orders.  The order word $124523021541$ has finite synchronization
+score $1/2$; paired with the omitted-slot word, the score is $3/5$.  Thus omission carries
+substitution protection while pilot order supplies stream indexing.
+
+\paragraph{Two outside-box reductions.}
+For conjugation-invariant $D_4$ noise, harmonic prediction diagonalizes into four
+one-dimensional character channels and one scalar two-dimensional block.  For the exact
+rational demonstration kernel the nontrivial gains are
+\[
+43/50,\quad22/25,\quad9/10,\quad89/100,
+\]
+with the last repeated four times in the regular representation.  Bayesian normalization
+remains nonlinear and is not claimed to diagonalize.
+
+The controller may also choose the syndrome alphabet.  In the moderate synthetic channel,
+the best one-probe conditional Bayes errors are
+\[
+0.001222911\ (D_4),\quad0.001239361\ ({\rm conjugacy}),\quad
+0.002411084\ (V_4),\quad0.004097881\ ({\rm reflection}).
+\]
+The conjugacy-class detector retains $99.6683\%$ of the full detector's risk reduction.
+Full $D_4$ Blackwell-dominates every coarse detector, but a coarse alphabet can be optimal
+once physical cost is included.  The actual action is therefore the pair
+$(\hbox{triangle},\hbox{sensor alphabet})$.
+
+\paragraph{Hardware and evidence boundary.}
+A synthesizable three-score log-posterior core consumes calibrated likelihood increments,
+requests at most two escalation tests, and stops on a programmable top-two score gap.  The
+source and protocol testbench are complete; simulation, synthesis, placement, all three
+PDF builds, and physical likelihood calibration remain merge-gated evidence rather than
+assumed results.
