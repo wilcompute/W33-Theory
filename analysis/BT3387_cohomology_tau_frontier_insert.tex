@@ -1,0 +1,71 @@
+\section{Minimum-defect normal forms and the hidden signed ternary torus}
+\label{sec:bt3376-bt3389-cohomology-tau}
+The flat $C_3^5$ port connections admit an exact minimum-defect word metric.  On one filled triangle there are $1$ states of length zero, $726$ states of length one, and $58{,}322$ states of length two, so the local enumerator is
+\[
+  1+726z+58{,}322z^2.
+\]
+Because the $240$ filled faces partition all $720$ edges, the global flat-space enumerator is its $240$th power and the exact flat-space diameter is $480$.  A sphere-counting argument against the $3^{2180}$ switching classes gives the certified quotient bound
+\[
+  \boxed{389\leq \operatorname{diam} H^1\leq480}.
+\]
+The upper endpoint is the universal minimum-defect normal form; the exact quotient covering radius inside this interval remains open.
+
+The minimum defects also give a canonical $PSp(4,3)$-equivariant presentation.  For scalar coefficients,
+\[
+  0\longrightarrow \mathbb F_3[240\text{ faces}]
+  \longrightarrow \mathbb F_3[720\text{ supports}]
+  \longrightarrow Z^1\longrightarrow H^1\longrightarrow0,
+\]
+with dimensions $240,720,480,436$ after quotienting the $44$-dimensional coboundary space.  Tensoring by the externally labelled five-dimensional coefficient module gives $3600$ generators, $1200$ local face relations, $220$ coboundary relations, and
+\[
+  3600-1200-220=\boxed{2180}
+\]
+logical dimensions.  Thus the full logical sector is presented by minimum defects with exactly $1420$ independent relations.
+
+For the affine involution
+\[
+ \tau(x_1,x_2,x_3,x_4,x_5)=(-x_4,1-x_3,1-x_2,-x_1,x_5)
+\]
+on $\mathbb F_3^5$, the $135$ orbit species have only $108$ distinct block-one-hot $Q_{15}$ barycentres.  Their fibre profile is
+\[
+  81\text{ singletons}+27\text{ double fibres}.
+\]
+The $27$ double fibres occur exactly at ternary displacement four.  Taking the coordinatewise missing symbols maps their barycentres bijectively to the $27$ fixed points of $\tau$.  The two orbit species above each such centre are distinguished by the invariant binary correlation
+\[
+ h=(x_1+x_4)(x_2+x_3-1)\in\{1,2\}.
+\]
+Consequently the $54$ ambiguous species form a canonical two-sheeted cover of the fixed affine flat $\mathbb F_3^3$.
+
+More strongly, barycentric aggregation is exactly lumpable for the weighted Hamming-orbifold walk.  Its $135$-state operator splits as
+\[
+  \boxed{W_{135}\cong B_{108}\oplus D_{27}}.
+\]
+The barycentric block has spectrum
+\[
+10^1,\;7^6,\;4^{18},\;1^{32},\;(-2)^{33},\;(-5)^{18},
+\]
+and itself has the exact three-shell quotient
+\[
+ \begin{pmatrix}2&8&0\\2&4&4\\0&4&6\end{pmatrix}
+\]
+on shells of sizes $27,54,27$, with spectrum $10,4,-2$.
+
+Orienting each double fibre by $h=1$ versus $h=2$ identifies the hidden block with the signed Cayley operator on $\mathbb F_3^3$
+\[
+  \boxed{D_{27}=C_3^{(3)}-C_3^{(1)}-C_3^{(2)}}.
+\]
+Equivalently it has weight $+1$ on the two $\pm e_3$ steps and weight $-1$ on the four $\pm e_1,\pm e_2$ steps.  Its exact spectrum is
+\[
+  4^4,\;1^{12},\;(-2)^9,\;(-5)^2.
+\]
+This is a finite signed-torus theorem, not a spacetime-signature claim.
+
+Finally, a single minimum defect used as a $C_3^5$ voltage assignment generates only the subgroup $\langle v\rangle\cong C_3$.  The full $10{,}935$-vertex derived graph therefore splits into
+\[
+  \boxed{81\text{ connected components of }135\text{ vertices each}}.
+\]
+Each component is $32$-regular with $2{,}160$ edges and $15{,}714$ triangles.  Fourier decomposition across the $C_3$ fibre gives one untwisted $45$-state block and two conjugate magnetic blocks.  Their exact moments satisfy
+\[
+ \operatorname{tr}M^2=1440,\qquad \operatorname{tr}M^3=31{,}302,
+\]
+whereas the untwisted cubic trace is $31{,}680$.  The $378=42\cdot9$ deficit proves that this is a genuine nonseparable cohomological weighting.  It is a candidate chromatic-dual surface, not yet a certificate improving the bound nine.  Its cardinality match with the $135$ Hamming-orbit species is also not an isomorphism: the voltage component has degree $32$, while the Hamming-orbifold walk has degree $10$.
