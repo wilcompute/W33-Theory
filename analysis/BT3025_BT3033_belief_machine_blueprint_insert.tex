@@ -1,0 +1,53 @@
+% Blueprint-facing insert for Passes 3025--3033.
+\section*{The decoder is now a belief machine}
+
+The previous architecture correctly replaced a fixed $29$-row diagnostic with an exact
+adaptive $23/24/25$-row tree.  This pass changes the abstraction one level deeper.  A
+physical detector does not emit a theorem-valued $D_4$ symbol; it emits evidence with
+loss, confusion, drift and erasure.  The machine must therefore preserve likelihoods until
+the decision boundary.
+
+\begin{center}
+\begin{tabular}{@{}p{3.0cm}p{10.5cm}@{}}
+\textbf{Layer} & \textbf{Contract}\\ \hline
+Geometry & $48826$ exact no/one/two-edge $D_4$ hypotheses and $120$ triangle observables.\\
+Likelihood & Calibrated nine-outcome rows: eight $D_4$ symbols plus erasure.\\
+Belief & At most three posterior scores after the common panel identifies a collision class.\\
+Causal state & One of $457$ future-action classes, not one of $1436$ raw collision labels.\\
+Action & STOP or choose both a triangle and a sensor alphabet.\\
+Stream index & Omitted slot protects substitutions; ordering the same three pilots indexes edits.\\
+Reset boundary & Retain next action and residual risk; reversibly uncompute the transcript.\\
+\end{tabular}
+\end{center}
+
+\subsection*{Numbers a builder can use}
+
+\begin{itemize}
+\item The exact future-action quotient needs $9$ fixed bits instead of $11$ and saves
+$1.078290855$ conditional Shannon bits under the frozen sparse prior.
+\item A source-complete signed-score core handles size-two and size-three collision
+classes, programmable likelihood increments, a stop threshold, and two escalation slots.
+\item The substitution word still corrects four arbitrary symbol substitutions.  It does
+\emph{not} correct a single insertion/deletion as an isolated cyclic block; adjacent phases
+are edit-distance two.  Pilot ordering supplies the missing stream index with no new mode.
+\item In the moderate synthetic channel, a six-outcome conjugacy-class sensor retains
+$99.6683\%$ of the nine-outcome full-$D_4$ sensor's one-probe risk reduction.  Sensor
+resolution is therefore an action variable, not a constant of the machine.
+\item The static upper bound is $28$, not $29$.  A proof-producing SAT job decides whether
+$27$ is impossible in the central $r^2$ restriction and verifies every SAT model against
+the full nonabelian hypothesis set.
+\end{itemize}
+
+\subsection*{What is exact, what is modeled, what is still absent}
+
+The finite group calculations, causal quotient, edit obstruction, synchronization scores,
+Fourier decomposition and Blackwell order are exact.  The three optical confusion
+profiles and calm/burst drift process are explicit synthetic models.  The RTL is source
+complete.  FPGA timing, physical D4 confusion matrices, streaming edit benchmarks,
+proof-checked $27$-row UNSAT, and laboratory heat remain unobserved.
+
+The design rule is now sharper than ``measure adaptively'':
+\[
+\boxed{\text{preserve evidence}\;\longrightarrow\;\text{quotient by future action}
+\;\longrightarrow\;\text{spend photons only where the quotient changes}.}
+\]
