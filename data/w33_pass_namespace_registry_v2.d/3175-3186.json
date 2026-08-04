@@ -1,0 +1,22 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "3175-3186",
+  "owner": "agent/pass3175-3186-curvature-routed-inference",
+  "status": "source_complete_evidence_pending",
+  "reserved_after": "PR #243 readable head e35b90b2535f45e570b782c6c9782ab74eb00d93",
+  "passes": {
+    "3175": "D4 curvature latent and exact posterior marginal",
+    "3176": "curvature-conditioned controlled-sensing comparison",
+    "3177": "all-194 exact information frontier",
+    "3178": "optimal length-seven three-edit phase code",
+    "3179": "content-addressed proof-carrying M36 envelope",
+    "3180": "joint detector-route-epoch-curvature-ISA utility",
+    "3181": "D4 triangle Wilson-flux orbit census",
+    "3182": "recursive Holonet belief virtualization law",
+    "3183": "typed RTL/control contracts",
+    "3184": "Holonet and blueprint overhaul",
+    "3185": "focused tests and evidence workflows",
+    "3186": "claim ledger, integration and publication boundary"
+  },
+  "claim_boundary": "Exact/model sources complete. RTL, placement, PDFs, exhaustive M36 outcome and all physical claims remain pending."
+}
