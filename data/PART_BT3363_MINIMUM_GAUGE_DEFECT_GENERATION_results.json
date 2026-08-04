@@ -1,0 +1,41 @@
+{
+  "checks": {
+    "connected_coboundary_rank": true,
+    "faces_partition_edges": true,
+    "logical_flat_sector_rank": true,
+    "minimum_defects_span_full_C3_5_flat_space": true,
+    "minimum_defects_span_scalar_flat_space": true,
+    "minimum_vectors_are_flat": true,
+    "minimum_vectors_have_weight_two": true,
+    "minimum_vectors_span_local_flat_plane": true
+  },
+  "global": {
+    "C3_5_flat_rank": 2400,
+    "coboundary_rank": 220,
+    "cohomology_rank": 2180,
+    "generation_statement": "weight-two minimum defects span every flat C3^5 connection",
+    "scalar_flat_rank": 480
+  },
+  "local": {
+    "flat_plane_rank": 2,
+    "minimum_vector_count": 6,
+    "minimum_vectors": [
+      [1, 2, 0],
+      [2, 1, 0],
+      [1, 0, 2],
+      [2, 0, 1],
+      [0, 1, 2],
+      [0, 2, 1]
+    ],
+    "minimum_weight": 2
+  },
+  "parameters": {
+    "coefficient_module": "F3^5",
+    "edges": 720,
+    "field": "F3",
+    "filled_faces": 240,
+    "vertices": 45
+  },
+  "schema": "w33.minimum_gauge_defect_generation.v1",
+  "status": "PASS"
+}
