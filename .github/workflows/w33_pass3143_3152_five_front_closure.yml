@@ -63,9 +63,9 @@ jobs:
           grep -q 'PASS universal dispatch, blind acquisition, calibration and recursive contexts' evidence_pass3149_iverilog.log
       - name: Synthesize and place current and alternative dispatchers
         run: |
-          yosys -p 'read_verilog -sv rtl/w33_pass3148_3150_recursive_execution.sv; hierarchy -top w33_pass3148_affine_dispatch; synth_ice40 -top w33_pass3148_affine_dispatch -json /tmp/current.json' | tee evidence_pass3148_current_yosys.log
+          yosys -p 'read_verilog -sv rtl/w33_pass3135_fourier_causal_controller.sv rtl/w33_pass3148_3150_recursive_execution.sv; hierarchy -top w33_pass3148_affine_dispatch; synth_ice40 -top w33_pass3148_affine_dispatch -json /tmp/current.json' | tee evidence_pass3148_current_yosys.log
           nextpnr-ice40 --hx8k --package ct256 --pcf-allow-unconstrained --json /tmp/current.json --asc /tmp/current.asc |& tee evidence_pass3148_current_nextpnr.log
-          yosys -p 'read_verilog -sv rtl/w33_pass3148_3150_recursive_execution.sv; chparam -set ALTERNATIVE_ISA 1 w33_pass3148_affine_dispatch; hierarchy -top w33_pass3148_affine_dispatch; synth_ice40 -top w33_pass3148_affine_dispatch -json /tmp/alternative.json' | tee evidence_pass3148_alternative_yosys.log
+          yosys -p 'read_verilog -sv rtl/w33_pass3135_fourier_causal_controller.sv rtl/w33_pass3148_3150_recursive_execution.sv; chparam -set ALTERNATIVE_ISA 1 w33_pass3148_affine_dispatch; hierarchy -top w33_pass3148_affine_dispatch; synth_ice40 -top w33_pass3148_affine_dispatch -json /tmp/alternative.json' | tee evidence_pass3148_alternative_yosys.log
           nextpnr-ice40 --hx8k --package ct256 --pcf-allow-unconstrained --json /tmp/alternative.json --asc /tmp/alternative.asc |& tee evidence_pass3148_alternative_nextpnr.log
       - name: Synthesize and place recursive controller
         run: |
