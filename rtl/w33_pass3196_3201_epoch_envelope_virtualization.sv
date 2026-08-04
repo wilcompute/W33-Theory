@@ -17,16 +17,42 @@ module w33_pass3196_epoch4_decoder(
     reg [4:0] phase_symbol [0:PHASES-1];
     reg [3:0] count [0:PHASES-1];
     reg [4:0] received_length;
+    reg [3:0] decoded_phase;
+    reg [3:0] decoded_distance;
+    reg [3:0] decoded_winners;
     integer i;
-    integer d;
-    integer winners;
-    integer best;
+    integer j;
+    integer candidate_distance;
+    integer best_distance;
 
     initial begin
         phase_symbol[0]=1;  phase_symbol[1]=3;  phase_symbol[2]=4;
         phase_symbol[3]=5;  phase_symbol[4]=6;  phase_symbol[5]=8;
         phase_symbol[6]=9;  phase_symbol[7]=10; phase_symbol[8]=12;
         phase_symbol[9]=13; phase_symbol[10]=14; phase_symbol[11]=17;
+    end
+
+    // Pure reduction over the twelve constant-symbol codewords. Keeping the
+    // winner computation combinational avoids mixed blocking/nonblocking writes
+    // to the registered protocol outputs and is accepted by both Icarus and Yosys.
+    always @* begin
+        decoded_phase = 0;
+        decoded_distance = 15;
+        decoded_winners = 0;
+        best_distance = 15;
+        candidate_distance = 15;
+        for (j=0;j<PHASES;j=j+1) begin
+            candidate_distance = ((received_length > 9) ? received_length : 9)
+                               - ((count[j] > 9) ? 9 : count[j]);
+            if (candidate_distance <= 4) begin
+                decoded_winners = decoded_winners + 1'b1;
+                if (candidate_distance < best_distance) begin
+                    best_distance = candidate_distance;
+                    decoded_phase = j[3:0];
+                    decoded_distance = candidate_distance[3:0];
+                end
+            end
+        end
     end
 
     always @(posedge clk) begin
@@ -46,24 +72,11 @@ module w33_pass3196_epoch4_decoder(
                     if (symbol == phase_symbol[i]) count[i] <= count[i] + 1'b1;
             end
             if (finish) begin
-                winners = 0;
-                best = 15;
-                phase = 0;
-                for (i=0;i<PHASES;i=i+1) begin
-                    d = ((received_length > 9) ? received_length : 9)
-                      - ((count[i] > 9) ? 9 : count[i]);
-                    if (d <= 4) begin
-                        winners = winners + 1;
-                        if (d < best) begin
-                            best = d;
-                            phase = i[3:0];
-                        end
-                    end
-                end
                 done <= 1;
-                accept <= (winners == 1);
-                ambiguous <= (winners > 1);
-                distance <= best[3:0];
+                accept <= (decoded_winners == 1);
+                ambiguous <= (decoded_winners > 1);
+                phase <= decoded_phase;
+                distance <= decoded_distance;
             end
         end
     end
