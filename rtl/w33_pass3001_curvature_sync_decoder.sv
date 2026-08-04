@@ -34,7 +34,7 @@ module w33_pass3001_curvature_sync_decoder(
         if (rx_symbols[2*i +: 2] != base_symbol((p+i)%12)) d=d+1'b1;
       if (d < best) begin
         best=d;
-        phase=p[3:0];
+        phase=p;
         tie=1'b0;
       end else if (d == best) begin
         tie=1'b1;
