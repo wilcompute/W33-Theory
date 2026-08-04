@@ -1,11 +1,12 @@
 % Lightweight wrapper preserving the complete blueprint body byte-for-byte while
-% integrating the Pass 3187--3192 exact chromatic-defect theorem after the contents.
+% integrating the exact chromatic-defect and finite-port theorems after the contents.
 \AtBeginDocument{%
   \let\BTorigtableofcontents\tableofcontents
   \renewcommand{\tableofcontents}{%
     \BTorigtableofcontents
     \newpage
     \input{analysis/BT3191_chromatic_defect_block_filter_insert}%
+    \input{analysis/BT3212_chromatic_closure_insert}%
   }%
 }
 \input{holonet_machine_blueprint_body.tex}

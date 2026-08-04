@@ -1,0 +1,93 @@
+\section{The final chromatic bit as a finite port problem}
+\label{sec:bt3205-3213-chromatic-closure}
+
+The exact frame-graph frontier remains
+\[
+\boxed{10\leq\chi(H)\leq11}.
+\]
+The next reduction is not another bounded search claim.  It is an exact
+factorisation of the $540$ frames through $45$ block supports, $135$ local
+four-cells, and $240$ W33 edges.
+
+\paragraph{The $45\times240$ support incidence.}
+Let $N$ record which W33 edges occur in each canonical twelve-frame block.
+Every row of $N$ has weight $16$, every column has weight $3$, and
+\[
+\boxed{NN^{\mathsf T}=16I+A_{45}},
+\]
+where $A_{45}$ is the adjacency matrix of
+$\operatorname{SRG}(45,32,22,24)$.  Each W33 edge labels a triangle of this
+block graph, and the $720$ block-graph edges decompose uniquely into the
+$240$ resulting triangles.
+
+\paragraph{Three exact covers and sixteen ports per block.}
+The three independent $K_4$ cells inside a block each cover the same sixteen
+W33 edges exactly once.  Each support edge therefore chooses one frame from
+each cell.  The sixteen resulting triples form
+\[
+\boxed{\operatorname{OA}(16,3,4,2)},
+\]
+and every port is used by exactly two neighboring blocks.  Two blocks are
+either frame-disconnected or share one support edge; in the latter case their
+cross graph is exactly $K_{3,3}$.
+
+Equivalently, $H$ is the line graph of the four-uniform linear hypergraph whose
+$240$ vertices are W33 edges and whose $540$ hyperedges are frames.  Every
+hypergraph vertex has degree nine.  Thus a ten-colouring would assign nine
+distinct colours around every W33 edge and leave a unique missing colour there.
+
+\paragraph{Exact quotient and association algebra.}
+Writing $d_i=60-s_i$ for the ten class deficits, there are exactly
+$195{,}490$ sorted profiles with $\sum_i d_i=60$.  The defect-Gram trace is
+\[
+\operatorname{tr}K=3600-\sum_i d_i^2,
+\]
+with a unique maximum at $d_1=\cdots=d_{10}=6$.  This exhausts the diagonal
+quotient, not the off-diagonal Gram entries.
+
+The $135$ local cells form a symmetric rank-four association scheme with
+valencies $(1,2,96,36)$ and multiplicities $(1,24,20,90)$.  One eigenmatrix is
+\[
+P=\begin{pmatrix}
+1&2&96&36\\
+1&2&6&-9\\
+1&2&-12&9\\
+1&-1&0&0
+\end{pmatrix}.
+\]
+Its ordinary ratio bounds stop at nine.  Therefore an improvement to eleven
+must use the split port or triangle data rather than only the commutative
+Bose--Mesner layer.
+
+\paragraph{Arithmetic and uncertainty corrections.}
+The Smith form of $N$ is
+\[
+\boxed{1^{44}\oplus3}.
+\]
+There is one $3$-primary factor and no $5$-primary torsion.  Moreover, deleting
+any $d$ frames from a frozen exact cover gives a binary integral row-space
+witness of weight $4d$.  Hence linear $3$-adic and $5$-adic defect tests are
+vacuous for every possible deficit; any arithmetic obstruction must include
+nonlinear matching and port compatibility.
+
+The frame-space localization spectrum of $E_{-4}=\ker M^{\mathsf T}$ on every
+block is
+\[
+\frac29,\quad\left(\frac{43}{81}\right)^9,\quad1^2,
+\]
+so two Hoffman directions localize perfectly inside each block.  In contrast,
+the edge-kernel localization spectrum on a sixteen-edge support is
+\[
+0^{10}\oplus\left(\frac16\right)^6.
+\]
+Thus the naive frame-delocalization obstruction fails, while the cut-code edge
+kernel is strongly delocalized.
+
+\paragraph{Proof surface and boundary.}
+A deterministic strengthened ten-colour DIMACS instance has $7{,}800$
+variables and $146{,}289$ clauses.  It exposes both frame colours and the
+unique missing colour at each W33 edge; its SHA-256 is
+\texttt{6c0c3daa...9c6b7cd5}.  No SAT model and no checked UNSAT proof is claimed.
+The semantic exact certificate is
+\texttt{68e93f6b...db21d19}.  Time-bounded MILP and local-search failures remain
+diagnostics only.

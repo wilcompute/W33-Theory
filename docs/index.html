@@ -41,6 +41,45 @@
       </aside>
     </section>
 
+<!-- BT3205-BT3213-CHROMATIC-CLOSURE -->
+<h2>Passes 3205–3213: the frame graph becomes a finite port machine</h2>
+<section class="grid">
+  <article class="card theorem">
+    <div class="eyebrow">Support factorisation</div>
+    <div class="metric">45 × 240</div>
+    <p>Block support incidence has row weight 16, column weight 3, and <span class="mono">NNᵀ = 16I + A</span> for <span class="mono">SRG(45,32,22,24)</span>.</p>
+  </article>
+  <article class="card theorem">
+    <div class="eyebrow">Port code</div>
+    <div class="metric">OA(16,3,4,2)</div>
+    <p>Every block contains three exact covers of one sixteen-edge support. Neighbor transport occurs through sixteen orthogonal-array ports.</p>
+  </article>
+  <article class="card theorem">
+    <div class="eyebrow">Cross-block law</div>
+    <div class="metric">0 or K3,3</div>
+    <p>Two blocks are disconnected or share one W33 edge, in which case the complete frame-level bridge is exactly <span class="mono">K3,3</span>.</p>
+  </article>
+  <article class="card theorem">
+    <div class="eyebrow">Arithmetic correction</div>
+    <div class="metric">1⁴⁴ ⊕ 3</div>
+    <p>The support Smith form has one 3-primary factor and no 5-primary torsion. Linear p-adic defect tests are vacuous for every possible deficit weight.</p>
+  </article>
+  <article class="card theorem">
+    <div class="eyebrow">Exact quotient</div>
+    <div class="metric">195,490</div>
+    <p>All sorted ten-colour deficit profiles are exhausted. The balanced class profile <span class="mono">54¹⁰</span> uniquely maximizes defect-Gram trace.</p>
+  </article>
+  <article class="card theorem">
+    <div class="eyebrow">Proof surface</div>
+    <div class="metric">7,800 · 146,289</div>
+    <p>A deterministic strengthened CNF exposes frame colours and the unique missing colour at every W33 edge. A SAT model or checked UNSAT proof is still required.</p>
+  </article>
+</section>
+<section class="card boundary" style="margin-top:18px">
+  <strong>Current boundary.</strong> The exact value is still <span class="mono">χ(H) ∈ {10,11}</span>. The new result is an exact finite-geometric compiler and proof surface, not a bounded-search no-go claim.
+</section>
+<!-- /BT3205-BT3213-CHROMATIC-CLOSURE -->
+
     <h2>Passes 3187–3192: the last chromatic bit gets a proof filter</h2>
     <section class="grid">
       <article class="card theorem">
@@ -93,7 +132,7 @@
   </main>
 
   <footer>
-    <p>Passes 3187–3192 · semantic certificate SHA-256 <span class="mono">555aa1871e40b2d8…6877cd58</span></p>
+    <p>Passes 3205–3213 · semantic certificate SHA-256 <span class="mono">68e93f6bc4a583be…bbdb21d19</span></p>
   </footer>
 </div>
 </body>

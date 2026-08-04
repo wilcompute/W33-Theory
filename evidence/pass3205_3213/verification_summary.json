@@ -1,0 +1,36 @@
+{
+  "schema": "w33.pass3205_3213.verification_summary.v1",
+  "status": "PASS_LOCAL_EXACT_TESTS_PDF_GATE_PENDING",
+  "exact_certificate": {
+    "checks_passed": 18,
+    "checks_total": 18,
+    "semantic_sha256": "68e93f6bc4a583be79a3836501deaaaa7d7ebdd316da30209976ec2bbdb21d19"
+  },
+  "pytest": {
+    "passed": 2,
+    "failed": 0
+  },
+  "proof_surface": {
+    "variables": 7800,
+    "clauses": 146289,
+    "dimacs_sha256": "6c0c3daac0ac1592fd3d84c45cad157c8e6e1b95ffe87b47868db4589c6b7cd5",
+    "status": "INSTANCE_AND_CHECKER_READY_NO_SAT_OR_UNSAT_CERTIFICATE"
+  },
+  "front_doors": [
+    "w33_paper.tex",
+    "photonic_holonet.tex",
+    "holonet_machine_blueprint.tex",
+    "docs/index.html"
+  ],
+  "exact_highlights": [
+    "NN^T = 16I + A_SRG(45,32,22,24)",
+    "every canonical block contains three exact covers of one sixteen-edge support",
+    "the sixteen ports form OA(16,3,4,2)",
+    "cross-block frame graphs are empty or K3,3",
+    "the 135 local cells form a rank-four association scheme",
+    "the support incidence Smith form is 1^44 plus 3",
+    "all 195490 sorted ten-colour deficit profiles were exhausted",
+    "frame and edge-kernel block-localisation spectra were computed exactly"
+  ],
+  "claim_boundary": "The exact value remains chi(H) in {10,11}. No ten-colouring and no checked UNSAT certificate was obtained. The three-PDF build remains pending the dedicated GitHub Actions lane."
+}
