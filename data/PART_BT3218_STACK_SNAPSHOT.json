@@ -1,13 +1,68 @@
 {
   "schema": "w33.pass3218.stack_snapshot.v1",
-  "captured_at": "2026-08-04T13:12:00-04:00",
+  "captured_at": "2026-08-04T14:30:00-04:00",
   "master_commit": "3cab9f71783c254cb7821f9a88c911f377f0978c",
   "pulls": [
-    {"number": 242, "state": "open", "merged": false, "mergeable": false, "base": "master", "head": "agent/pass3153-3162-adaptive-epoch-factor-engine", "head_sha": "45a058475e54c732cec927cd0c70a8cc497bbaea", "depends_on": [], "focused_run": 30931293322, "focused_status": "queued"},
-    {"number": 243, "state": "open", "merged": false, "mergeable": true, "base": "agent/pass3153-3162-adaptive-epoch-factor-engine", "head": "agent/pass3163-3174-proof-carrying-runtime", "head_sha": "e35b90b2535f45e570b782c6c9782ab74eb00d93", "depends_on": [242], "focused_status": "action_required"},
-    {"number": 244, "state": "open", "merged": false, "mergeable": true, "base": "agent/pass3163-3174-proof-carrying-runtime", "head": "agent/pass3175-3186-curvature-routed-inference", "head_sha": "932c7e9d8c401451962fb93730a9e2289766cfab", "depends_on": [243], "focused_status": "unobserved"},
-    {"number": 246, "state": "open", "merged": false, "mergeable": true, "base": "master", "head": "agent/pass3193-3204-month-audit-seven-front-closure", "head_sha": "a9bfd932ae2c1dff1d6c243045650c5a4b788ab7", "depends_on": [], "focused_run": 30931074919, "focused_status": "pending"},
-    {"number": 247, "state": "closed", "merged": true, "mergeable": false, "base": "master", "head": "agent/pass3205-3213-chromatic-closure-seven-front", "head_sha": "3e94b79fd0ad9bcd0a31555339ad4bba28044a65", "merge_commit": "3e240792746f2d96c74d2f93b4abd8f06a33efa9", "depends_on": [], "focused_status": "source_merged_pdf_evidence_queued"}
+    {
+      "number": 242,
+      "state": "open",
+      "merged": false,
+      "mergeable": true,
+      "base": "master",
+      "head": "agent/pass3153-3162-adaptive-epoch-factor-engine",
+      "head_sha": "41e34c851b18b44f49527e06f4bd472d2129a8c1",
+      "depends_on": [],
+      "focused_run": 30940467641,
+      "focused_status": "queued",
+      "evidence_boundary": "Prior run passed exact regeneration, pytest, Icarus and all three HX8K placement targets, then failed at integration. The corrected head changes only byte-preserving integration; PDFs and persisted evidence remain unobserved."
+    },
+    {
+      "number": 243,
+      "state": "open",
+      "merged": false,
+      "mergeable": false,
+      "base": "agent/pass3153-3162-adaptive-epoch-factor-engine",
+      "head": "agent/pass3163-3174-proof-carrying-runtime",
+      "head_sha": "e35b90b2535f45e570b782c6c9782ab74eb00d93",
+      "depends_on": [242],
+      "focused_status": "action_required"
+    },
+    {
+      "number": 244,
+      "state": "open",
+      "merged": false,
+      "mergeable": true,
+      "base": "agent/pass3163-3174-proof-carrying-runtime",
+      "head": "agent/pass3175-3186-curvature-routed-inference",
+      "head_sha": "932c7e9d8c401451962fb93730a9e2289766cfab",
+      "depends_on": [243],
+      "focused_run": 30920672660,
+      "focused_status": "failure"
+    },
+    {
+      "number": 246,
+      "state": "open",
+      "merged": false,
+      "mergeable": true,
+      "base": "master",
+      "head": "agent/pass3193-3204-month-audit-seven-front-closure",
+      "head_sha": "a9bfd932ae2c1dff1d6c243045650c5a4b788ab7",
+      "depends_on": [],
+      "focused_run": 30931074919,
+      "focused_status": "failure"
+    },
+    {
+      "number": 247,
+      "state": "closed",
+      "merged": true,
+      "mergeable": false,
+      "base": "master",
+      "head": "agent/pass3205-3213-chromatic-closure-seven-front",
+      "head_sha": "3e94b79fd0ad9bcd0a31555339ad4bba28044a65",
+      "merge_commit": "3e240792746f2d96c74d2f93b4abd8f06a33efa9",
+      "depends_on": [],
+      "focused_status": "source_merged_pdf_evidence_queued"
+    }
   ],
-  "boundary": "Frozen connector snapshot. Live state must be refreshed before any merge, retarget, close or evidence promotion."
+  "boundary": "Frozen connector snapshot. Mergeability is not merge readiness. Live state and terminal evidence must be refreshed before any merge, retarget, close or evidence promotion."
 }
