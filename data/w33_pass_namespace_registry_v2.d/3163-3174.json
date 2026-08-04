@@ -1,0 +1,22 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "3163-3174",
+  "owner": "agent/pass3163-3174-proof-carrying-runtime",
+  "status": "source_complete_evidence_pending",
+  "reserved_after": "master reservation 8f7807f4d81093c7b133db2096110a0079c61927; implementation stacks on PR 242",
+  "passes": {
+    "3163": "32-shard exact full-affine BFS completion for all 194 universal five/six-opcode ISAs",
+    "3164": "three-way current4/low4/fast6 decoder RTL, placement comparison and physical promotion rule",
+    "3165": "256-shard complete rank-three M36 census launch over all 50,868,675 isotropic subspaces",
+    "3166": "fail-closed candidate aggregation through independent projector and monotone gates",
+    "3167": "optimal phase-coded length-five in-band epoch family",
+    "3168": "two-edit phase recovery with zero clean post-marker payload symbols and fused decoder RTL",
+    "3169": "complete streamed factor-to-48,826-hypothesis Bayesian reconstruction",
+    "3170": "streamed 23-action information scorer and fixed-point datapath contract",
+    "3171": "non-Abelian D4 belief-curvature theorem and one-bit commutator hardware",
+    "3172": "ISA-as-channel capacity theorem and information-aware tri-ISA scheduler",
+    "3173": "Photonic Holonet and machine-blueprint architecture/evidence refresh",
+    "3174": "claim ledger, regressions, exhaustive workflows, RTL and three-PDF evidence lane"
+  },
+  "claim_boundary": "Exact/model source results are complete. The 194-ISA aggregate, 256-shard M36 aggregate, accepted candidate existence, RTL simulation/synthesis/placement, manuscript materialization, PDF builds and laboratory behavior remain separately gated until observed."
+}
