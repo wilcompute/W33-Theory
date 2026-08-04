@@ -2,18 +2,35 @@
   "schema": "w33.pass_namespace_reservation.v2",
   "range": "3124-3132",
   "owner": "agent/pass3124-3132-deep-five-front-closure",
-  "status": "reserved_in_progress",
+  "status": "source_complete_pending_observed_character_rtl_pdf_and_exhaustive_evidence",
   "reserved_after": "master through Pass 3123",
-  "passes": {
-    "3124": "27-triangle fixed D4 optimum: orbit-reduced exact SAT/ILP or auditable bounded frontier",
-    "3125": "rank-three stabilizer-group / eight-dimensional M36 code search in the single-error complement",
-    "3126": "full 6,480-flag complex character decomposition and Hodge-sector intertwiner audit",
-    "3127": "robust joint POMDP with calibration uncertainty, erasure, drift, and route/chirality coupling",
-    "3128": "complete self-dual 2,796-tick optical timing fabric with typed A4/D4 authorization and formal RTL",
-    "3129": "compute-versus-routing ISA co-design using the new 18-versus-45 collision frontier",
-    "3130": "BONKERS: orbital-algebra predictive compression on the 1,770-dimensional flag commutant",
-    "3131": "BONKERS: joint route-time error-correcting product code coupling triangle curvature and self-dual phase words",
-    "3132": "paper, blueprint, site, certificates, regressions, and guarded evidence lane"
+  "source_completion": {
+    "source_pr": 237,
+    "source_merge_commit": "cef4152843f7618b719ec4b4f3406c291ed1840f",
+    "exact_and_modeled_checks": "8/8 passed locally",
+    "focused_regressions": "10/10 passed locally",
+    "support_bundle": "24 files materialize byte-for-byte from tools/materialize_bt3124_bt3132_bundle.py",
+    "focused_evidence_pr": 238,
+    "focused_workflow_run": 30878929969,
+    "focused_workflow_status": "queued",
+    "source_pr_workflow_run": 30878660181,
+    "source_pr_workflow_status": "queued",
+    "exhaustive_workflows": [
+      "w33_pass3124_d4_27_exact.yml",
+      "w33_pass3125_rank3_m36_full.yml"
+    ],
+    "evidence_commit_policy": "one stable completion marker; volatile GAP, RTL, synthesis, and manuscript logs remain artifacts"
   },
-  "claim_boundary": "Reservation only. No theorem, hardware, PDF, optical, exhaustive-search, or physical claim is implied until source and evidence are published."
+  "passes": {
+    "3124": "exact central-r2 27-row feasibility model: 120 triangle variables, 164,220 weight-one-through-four constraints, 66 fresh cut rounds and eight best residual collisions; no 27-row witness and no impossibility proof; fixed frontier remains 23..28",
+    "3125": "duplicate-free rank-three six-qubit census: 220 RREF pivot patterns, 408,345,795 rank-three subspaces and exactly 50,868,675 totally isotropic subspaces, eight signs each; pilot and predecessor samples contain no usable code; full 256-shard result pending",
+    "3126": "complete 6,480-flag character reconstructed from the exact 20-class U4(2) class algebra; irreducible multiplicities 1,0,0,1,3,3,3,8,8,10,3,11,11,6,6,9,9,14,16,24; degree 6,480 and commutant 1,770",
+    "3127": "32-state hidden-regime joint Bayes POMDP with route, calibration, chirality, synchronization, erasure and drift; adverse-model objective improves 4.189 percent relative to the nominal-only policy in the frozen synthetic model",
+    "3128": "complete self-dual 2,796-tick typed A4/D4 timing fabric; software exhausts phase, event and involution covariance, with source-complete RTL pending observed Icarus and Yosys evidence",
+    "3129": "exact census of all 210 four-opcode sets; 80 connected and 24 fully universal for Sp(4,3); universal Pareto frontier is 36-collision slower mixing versus the current 45-collision faster mixing ISA; the parallel 18-collision set is not universal",
+    "3130": "BONKERS: exact V4 predictive quotient from 6,480 flags to 1,770 orbits under invariant transition, observation, cost and terminal-loss contracts; fixed register width falls from 13 to 11 bits",
+    "3131": "BONKERS falsifier: the 48,826-by-12 route-time product is injective on 585,912 states, but route minimum distance is one while phase distance is 21; synchronization is error-correcting, route localization is not",
+    "3132": "source-complete report, theorem inserts, blueprint contract, site integrator, certificates, regressions, RTL and guarded focused/exhaustive evidence lanes"
+  },
+  "claim_boundary": "Exact finite results, bounded negative searches and explicit synthetic decision models are published. No 27-row impossibility, completed 50,868,675-subspace M36 census, laboratory optical result, physical Landauer heat, autonomous clock, observed GAP cross-check, observed Icarus/Yosys result or successful PDF build is claimed while workflow 30878929969 remains queued."
 }
