@@ -1,0 +1,74 @@
+{
+  "schema": "w33.pass3214_3225.runtime_reset_sheaf.source_summary.v1",
+  "status": "SOURCE_COMPLETE_EVIDENCE_PENDING",
+  "pass3214_all194_runtime": {
+    "universal_designs": 194,
+    "five_opcode": 80,
+    "six_opcode": 114,
+    "shard_count": 32,
+    "full_affine_order_required": 4199040,
+    "observed_complete_shards": 0,
+    "aggregate_status": "NOT_OBSERVED",
+    "boundary": "Canonical plan and exact engine are committed. No global runtime/information optimum is promoted before all 32 shards aggregate."
+  },
+  "pass3215_tri_isa": {
+    "source_modes": ["current4", "low4", "fast6"],
+    "observed_placement_record": false,
+    "status": "FAIL_CLOSED_SOURCE_ONLY",
+    "fallback": "current4"
+  },
+  "pass3216_curvature_rom": {
+    "hypotheses": 48826,
+    "base_signatures": 46284,
+    "collision_classes": 1436,
+    "unique_initial_states": 770,
+    "all_recursive_states": 876,
+    "address_bits": 10,
+    "rom_word_bits": 102,
+    "generated_rom_observed": false,
+    "placement_observed": false
+  },
+  "pass3217_3222_proof_accumulator": {
+    "runtime_shards_required": 32,
+    "m36_shards_required": 256,
+    "runtime_complete": false,
+    "m36_complete": false,
+    "integrity_layer": "domain-separated SHA-256 Merkle roots with deterministic inclusion challenges",
+    "boundary": "Integrity/provenance only; not a proof of honest computation, zero knowledge, consensus or cryptographic soundness."
+  },
+  "pass3218_stack": {
+    "active_chain": [242, 243, 244],
+    "independent_gate": [246],
+    "recently_merged": [247],
+    "merge_ready_snapshot_count": 0,
+    "merge_authority": "none"
+  },
+  "pass3219_3221_port_nerve": {
+    "vertices": 45,
+    "edges": 720,
+    "faces": 240,
+    "euler_characteristic": -435,
+    "betti_over_F2_F3_F5": [1, 436, 0],
+    "flat_lift_dimension": 436,
+    "css": "[[720,436,2]]",
+    "x_distance": 2,
+    "z_distance": 3,
+    "graph_triangles": 5280,
+    "filled_port_triangles": 240,
+    "unfilled_weight_three_cycles": 5040,
+    "boundary": "Cellular constant-coefficient result on the explicit port nerve; not a complete contextuality invariant or canonical physical bridge."
+  },
+  "pass3220_reset": {
+    "belief_states": 876,
+    "phase_states": 12,
+    "product_states": 10512,
+    "phase_marker_rank": 876,
+    "phase_only_full_reset_impossible": true,
+    "full_belief_reset_bits": 9.774787059601174,
+    "landauer_floor_300K_joules": 2.806320725425572e-20,
+    "landauer_floor_300K_electron_volts": 0.1751567627359102,
+    "boundary": "Thermodynamic lower bound, not engineering energy."
+  },
+  "digital_boundary": "Python generators, tests, SystemVerilog, testbench, workflows and integration source are committed or planned in this packet. Icarus, Yosys, HX8K placement, generated outputs and PDFs remain unobserved until focused CI succeeds.",
+  "physical_boundary": "No laboratory error rate, optical loss, timing, power, heat, detector, coherence or fabrication claim is made."
+}
