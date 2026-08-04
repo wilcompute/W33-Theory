@@ -1,0 +1,53 @@
+name: Passes 3262-3273 Readable Source Bootstrap
+on:
+  pull_request:
+    paths:
+      - 'bootstrap/pass3262_3273/**'
+      - '.github/workflows/w33_pass3262_3273_readable_source_bootstrap.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'bootstrap/pass3262_3273/**'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Materialize and verify all 32 readable files
+        run: |
+          python bootstrap/pass3262_3273/materialize.py
+          python - <<'PY'
+          import hashlib,json,pathlib
+          root=pathlib.Path('.')
+          m=json.loads((root/'bootstrap/pass3262_3273/manifest.json').read_text())
+          for p,h in m['files'].items():
+              assert hashlib.sha256((root/p).read_bytes()).hexdigest()==h,(p,h)
+          print('PASS 32/32 materialized hashes')
+          PY
+      - name: Focused exact validation
+        run: |
+          python -m pip install --disable-pip-version-check numpy sympy scipy pytest
+          python analysis/bt3262_3271_hamming_orbifold_dual_guard.py
+          python -m pytest -q tests/test_bt3262_3273_hamming_orbifold_dual_guard.py
+      - name: Publish readable files once
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          python - <<'PY' > /tmp/files.txt
+          import json
+          m=json.load(open('bootstrap/pass3262_3273/manifest.json'))
+          print('\n'.join(m['files']))
+          PY
+          xargs -d '\n' git add < /tmp/files.txt
+          if ! git diff --cached --quiet; then
+            git commit -m 'Materialize Passes 3262-3273 readable source [skip ci]'
+            git push
+          fi
