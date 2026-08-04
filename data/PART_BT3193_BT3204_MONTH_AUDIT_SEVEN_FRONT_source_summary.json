@@ -1,5 +1,5 @@
 {
-  "schema": "w33.pass3193_3204.month_audit_seven_front.source_summary.v1",
+  "schema": "w33.pass3193_3204.month_audit_seven_front.source_summary.v2",
   "status": "SOURCE_COMPLETE_EVIDENCE_PENDING",
   "audit_window": {
     "start": "2026-07-04",
@@ -18,11 +18,17 @@
     "boundary": "Exact for the frozen noiseless future-action policy and none/flat/curved output label."
   },
   "pass3195_runtime_information": {
+    "information_census_scope": "universal five- and six-opcode designs",
     "information_records": 194,
-    "observed_full_group_runtime_records": 3,
-    "pending_full_group_runtime_records": 191,
-    "status": "PARTIAL_RUNTIME_3_OF_194",
-    "promotion_rule": "No global runtime-information optimum until all 194 records reach affine order 4199040."
+    "runtime_records_total": 3,
+    "joined_census_runtime_records": 1,
+    "joined_census_runtime_names": ["fast6"],
+    "out_of_census_baseline_count": 2,
+    "out_of_census_baseline_names": ["current4", "low4"],
+    "pending_census_runtime_records": 193,
+    "status": "PARTIAL_RUNTIME_1_OF_194_PLUS_2_BASELINES",
+    "promotion_rule": "No global runtime-information optimum until all 194 five/six-opcode census records reach affine order 4199040.",
+    "boundary": "The two four-opcode baselines are exact comparison records but are not members of the 194-design census."
   },
   "pass3196_four_edit_epoch": {
     "alphabet_size": 24,
