@@ -1,0 +1,14 @@
+{
+  "schema": "w33.pass3001.self_synchronizing_curvature_code.v1",
+  "status": "COMPLETE_EXACT_OPTIMAL_BALANCED_FOUR_SLOT_SYNC_CODE",
+  "check_count": 5,
+  "checks": {"balanced_three_each": true, "twelve_distinct_shifts": true, "minimum_cyclic_distance_nine": true, "maximum_out_of_phase_autocorrelation_three": true, "three_pilot_zero_extra_clock_channel": true},
+  "slot_word": [1,0,2,3,3,2,0,0,1,1,2,3],
+  "cyclic_shift_minimum_distance": 9,
+  "correctable_arbitrary_slot_symbol_errors": 4,
+  "detectable_arbitrary_slot_symbol_errors": 8,
+  "optimality_proof": "Balanced counts 3,3,3,3 give total out-of-phase autocorrelation 4*3*2=24 over eleven shifts, so some shift has correlation at least 3 and distance at most 9. The displayed word attains 9.",
+  "fusion_protocol": "At tick t omit slot w[t] and send the already-required three distinct curvature pilots in the other slots. The omitted-slot sequence synchronizes the D12 phase while the same pilots detect every nonidentity S4 route permutation.",
+  "overhead": "zero additional pilot channels beyond the exact three-pilot fault-detection minimum",
+  "claim_boundary": "Exact symbol code and permutation-fault logic. Optical substitution, insertion, deletion, and erasure rates remain device dependent."
+}
