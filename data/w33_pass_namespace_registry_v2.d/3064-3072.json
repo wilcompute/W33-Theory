@@ -2,17 +2,19 @@
   "schema": "w33.pass_namespace_reservation.v2",
   "range": "3064-3072",
   "owner": "agent/pass3064-3072-noisy-predictive-sync-closure",
-  "status": "reserved_after_parallel_frontier_through_3063",
+  "status": "SOURCE_COMPLETE_EXACT_AND_EXPLICIT_MODELS_REMOTE_EVIDENCE_AND_SAT_PENDING",
   "passes": {
-    "3064": "collision-conditioned Bayesian D4 decoding with erasure, dark, partial-permutation and conjugation-drift likelihoods",
-    "3065": "proof-producing 27-versus-28 fixed D4 schedule decision through the central-r2 distance-five obstruction and full D4 verification",
-    "3066": "zero-extra-channel insertion/deletion indexing by ordering the three existing curvature pilots",
-    "3067": "synthesizable adaptive syndrome belief controller and protocol testbench",
-    "3068": "exact future-action causal-state quotient with an explicit drifting-prior extension",
-    "3069": "BONKERS: five-channel nonabelian Fourier belief prediction for conjugation-invariant D4 noise",
-    "3070": "BONKERS: adaptive measurement-basis portfolio over full D4 and deterministic coarse syndrome alphabets",
-    "3071": "four-front-door belief-machine overhaul and correction of stale fixed-panel/edit claims",
-    "3072": "claim ledger, focused regressions, proof/RTL/PDF evidence lanes and guarded publication"
+    "3064": "complete exact collision-conditioned Bayesian D4 decoding for three stated synthetic erasure/partial/drift/dark channels",
+    "3065": "complete proof-producing source and verified 28-row upper bound; proof-checked global 27 decision pending",
+    "3066": "complete cyclic edit obstruction and zero-extra-channel pilot-order construction with scores 1/2 and 3/5",
+    "3067": "complete synthesizable adaptive syndrome belief controller and protocol testbench source; remote evidence pending",
+    "3068": "complete exact 1436-to-457 future-action quotient and explicit drifting-prior extension",
+    "3069": "complete exact five-channel nonabelian Fourier prediction for conjugation-invariant D4 noise",
+    "3070": "complete exact adaptive measurement-basis frontier for the stated moderate synthetic channel",
+    "3071": "complete shared theorem/site inserts and idempotent four-front-door belief-machine overhaul source",
+    "3072": "complete claim ledger, focused regressions and separate proof/RTL/PDF evidence lanes"
   },
-  "claim_boundary": "Reservation only. Exact finite results, synthetic likelihood models, source RTL, SAT optimality, remote synthesis, PDFs and physical measurements remain separately typed."
+  "certificate": "data/PART_BT3064_BT3070_BELIEF_MACHINE_source_summary.json",
+  "pull_request": 233,
+  "claim_boundary": "Exact finite results and explicit synthetic models are source complete. The size-27 proof decision, RTL simulation/synthesis/placement, materialized front doors, three PDFs, fully noisy base inference and all laboratory likelihood/edit/energy claims remain pending observed evidence."
 }
