@@ -70,9 +70,10 @@ def test_reset_thermodynamic_boundary() -> None:
     run('bt3220_reset_thermodynamics.py')
     result=load('PART_BT3220_RESET_THERMODYNAMICS.json')
     assert result['phase_only_marker']['image_rank']==876
-    assert result['phase_only_marker']['epistemic_states_erased']==0
-    assert abs(result['full_belief_reset']['logical_bits_erased']-9.774787059601174)<1e-12
-    assert abs(result['full_belief_reset']['landauer_floor_joules']-2.806320725425572e-20)<1e-30
+    assert result['phase_only_marker']['belief_capacity_erased_bits']==0
+    assert abs(result['full_belief_reset']['maximum_logical_capacity_bits']-9.774787059601174)<1e-12
+    assert result['full_belief_reset']['ensemble_assumption']=='uniform/maximally mixed over all listed states'
+    assert abs(result['full_belief_reset']['landauer_floor_for_uniform_ensemble_joules']-2.806320725425572e-20)<1e-30
 
 def test_proof_accumulator_fails_closed_without_complete_shards() -> None:
     run('bt3217_3222_proof_accumulator.py')
