@@ -3,6 +3,7 @@ name: Passes 3286-3295 Readable Source Bootstrap
 on:
   push:
     branches:
+      - master
       - agent/pass3286-3295-signature-port-common-envelope
     paths:
       - 'bootstrap/pass3286_3295/**'
@@ -59,5 +60,5 @@ jobs:
             w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html
           if ! git diff --cached --quiet; then
             git commit -m 'Materialize Passes 3286-3295 readable source [skip ci]'
-            git push origin HEAD:agent/pass3286-3295-signature-port-common-envelope
+            git push origin HEAD:${GITHUB_REF_NAME}
           fi
