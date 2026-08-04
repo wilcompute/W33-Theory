@@ -1,0 +1,86 @@
+name: Passes 3376-3389 Cohomology Tau Frontier
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/*3376*'
+      - 'analysis/*3387*'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/PART_BT3376*'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - 'data/w33_pass_namespace_registry_v2.d/3376-3389.json'
+      - 'tools/integrate_bt3376_bt3389.py'
+      - 'tools/audit_w33_current_frontier.py'
+      - 'tests/test_bt3376_3389_cohomology_tau_frontier.py'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'holonet_machine_blueprint.tex'
+      - '.github/workflows/w33_pass3376_3389_cohomology_tau_frontier.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pass3376-3389-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-publication-pdfs:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Regenerate exact certificate
+        run: |
+          mkdir -p evidence/pass3376_3389
+          python -m pip install --disable-pip-version-check numpy pytest
+          python analysis/bt3376_3389_cohomology_tau_frontier.py \
+            --json /tmp/bt3376_3389_results.json \
+            | tee evidence/pass3376_3389/exact.log
+          cmp /tmp/bt3376_3389_results.json \
+            data/PART_BT3376_BT3389_COHOMOLOGY_TAU_results.json
+      - name: Materialize public front doors twice
+        run: |
+          python tools/integrate_bt3376_bt3389.py \
+            --report evidence/pass3376_3389/integration_first.json
+          python tools/integrate_bt3376_bt3389.py \
+            --report evidence/pass3376_3389/integration_second.json
+          python tools/audit_w33_current_frontier.py \
+            --report evidence/pass3376_3389/frontier_audit.json
+      - name: Focused regression
+        run: |
+          python -m pytest -q tests/test_bt3376_3389_cohomology_tau_frontier.py \
+            | tee evidence/pass3376_3389/pytest.log
+          git diff --check
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+      - name: Compile canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 \
+              | tee evidence/pass3376_3389/${source%.tex}.log
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
+            > evidence/pass3376_3389/pdf_sha256.txt
+      - name: Commit materialized index once
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html
+          if ! git diff --cached --quiet; then
+            git commit -m 'Materialize Passes 3376-3389 front doors [skip ci]'
+            git push
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3376-3389-cohomology-tau-evidence
+          path: |
+            evidence/pass3376_3389/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
