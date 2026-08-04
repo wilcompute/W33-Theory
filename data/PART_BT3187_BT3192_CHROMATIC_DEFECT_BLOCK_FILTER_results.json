@@ -1,0 +1,85 @@
+{
+  "boundary": "This is a proof-producing necessary-condition filter. It neither constructs a ten-colouring nor proves ten-colour infeasibility. Bounded heuristic and MILP searches are diagnostics only and are not theorem evidence.",
+  "canonical_block_system": {
+    "block_graph": "K12 minus 3K4",
+    "block_internal_degree": 8,
+    "block_size": 12,
+    "blocks": 45,
+    "frame_octet_pair_orbit_sizes": [540, 3240, 3240, 4320, 12960],
+    "partition_sha256": "bd9662e457f72c2dc0128c2720d51d484aa34cf2bb6fbf8d02933c968d7fcb90"
+  },
+  "checks": {
+    "each_block_K12_minus_3K4": true,
+    "fortyfive_blocks_of_twelve": true,
+    "frame_graph_edges_8640": true,
+    "frame_graph_regular_32": true,
+    "frame_octet_pair_orbits": true,
+    "frozen_11_class_sizes": true,
+    "frozen_11_coloring_proper": true,
+    "gram_diagonal_formula": true,
+    "gram_mod15_rank_one_congruence": true,
+    "gram_row_sum_zero": true,
+    "identity_H_plus_4I_MMT": true,
+    "w33_counts": true
+  },
+  "frozen_11_coloring": {
+    "class_sizes": [51, 48, 44, 43, 47, 49, 58, 48, 46, 46, 60],
+    "defect_gram_integer_scale": 15,
+    "integer_gram": [
+      [459, -78, -24, -108, -87, -39, -18, -3, -51, -51, 0],
+      [-78, 576, -27, -114, -36, -57, -24, -54, -93, -93, 0],
+      [-24, -27, 704, -137, -103, -116, -17, -132, -104, -44, 0],
+      [-108, -114, -137, 731, -101, -67, 11, -54, -103, -58, 0],
+      [-87, -36, -103, -101, 611, -83, 4, -66, -47, -92, 0],
+      [-39, -57, -116, -67, -83, 539, -7, -72, -19, -79, 0],
+      [-18, -24, -17, 11, 4, -7, 116, -24, -13, -28, 0],
+      [-3, -54, -132, -54, -66, -72, -24, 576, -93, -78, 0],
+      [-51, -93, -104, -103, -47, -19, -13, -93, 644, -121, 0],
+      [-51, -93, -44, -58, -92, -79, -28, -78, -121, 644, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    ],
+    "ordered_color_edge_counts": [
+      [0, 158, 148, 139, 154, 164, 196, 163, 153, 153, 204],
+      [158, 0, 139, 130, 148, 153, 184, 150, 141, 141, 192],
+      [148, 139, 0, 117, 131, 136, 169, 132, 128, 132, 176],
+      [139, 130, 117, 0, 128, 136, 167, 134, 125, 128, 172],
+      [154, 148, 131, 128, 0, 148, 182, 146, 141, 138, 188],
+      [164, 153, 136, 136, 148, 0, 189, 152, 149, 145, 196],
+      [196, 184, 169, 167, 182, 189, 0, 184, 177, 176, 232],
+      [163, 150, 132, 134, 146, 152, 184, 0, 141, 142, 192],
+      [153, 141, 128, 125, 141, 149, 177, 141, 0, 133, 184],
+      [153, 141, 132, 128, 138, 145, 176, 142, 133, 0, 184],
+      [204, 192, 176, 172, 188, 196, 232, 192, 184, 184, 0]
+    ],
+    "sorted_class_sizes": [43, 44, 46, 46, 47, 48, 48, 49, 51, 58, 60],
+    "source": "data/w33_pass2561_coloring11.txt",
+    "trace_defect": "1120/3",
+    "trace_integer_gram": 5600
+  },
+  "graph": {
+    "degree": 32,
+    "edges": 8640,
+    "identity": "H+4I=M M^T",
+    "spectrum": {"-4": 315, "14": 44, "2": 84, "32": 1, "4": 81, "8": 15},
+    "vertices": 540
+  },
+  "schema": "w33.pass3187_3192.chromatic_defect_block_filter.v1",
+  "sha256_without_hash_field": "555aa1871e40b2d8ed4ea000f0d19ac23ff71a1be10f10eb6f7f9d4b6877cd58",
+  "status": "PASS_EXACT_FILTER_WITHOUT_TEN_COLOR_DECISION",
+  "ten_color_filter": {
+    "class_sizes": "s_i are positive integers, s_i<=60, and sum_i s_i=540",
+    "deficits": "d_i=60-s_i>=0 and sum_i d_i=60",
+    "gram_constraints": ["K is positive semidefinite", "K*1=0", "rank(K)<=9", "K congruent to -s s^T modulo 15", "every 2x2 minor of K is divisible by 15"],
+    "integer_gram_definition": "K=15 G, G=X^T(H+4I)X-(1/15)ss^T",
+    "integer_gram_diagonal": "K_ii=s_i(60-s_i)",
+    "integer_gram_offdiagonal": "K_ij=15 e_ij-s_i s_j",
+    "local_block_rule": "within each K12-minus-3K4 block, every color is confined to one K4 cell",
+    "local_repeat_savings_lower_bound": 90,
+    "non_hoffman_squared_mass_upper_bound": 36,
+    "spectral_gap_used": 6,
+    "trace_equality_condition": "s_1=...=s_10=54",
+    "trace_identity": "tr(G)=240-(1/15) sum_i d_i^2",
+    "trace_upper_bound": 216
+  },
+  "theorem": "Every hypothetical ten-colouring is simultaneously a near-Hoffman partition and a constrained colouring of forty-five A4-torsor blocks. Its centered color indicators have total H+4I energy at most 216 and total squared mass outside the exact-cover eigenspace at most 36. Its 10-by-10 integer defect Gram matrix is positive semidefinite, has row sum zero and rank at most nine, is congruent to -s s^T modulo 15, and all its 2-by-2 minors are divisible by 15. Locally, the colouring must realize at least 90 repeated-color savings across the 45 blocks."
+}

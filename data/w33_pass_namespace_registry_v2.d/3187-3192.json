@@ -1,0 +1,16 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "3187-3192",
+  "owner": "agent/pass3187-3192-chromatic-defect-filter",
+  "status": "implemented_exact_filter",
+  "reserved_after": "master reservation through Passes 3175-3186; independent of unmerged PRs 242 and 243",
+  "passes": {
+    "3187": "reconcile the attached Pass-1821-1825 frontier against current master and identify the exact live chromatic boundary",
+    "3188": "reconstruct the forty-five canonical A4 torsor blocks and prove every local graph is K12 minus 3K4",
+    "3189": "derive the exact independent-set Hoffman defect identity and ten-colour near-eigenspace bound",
+    "3190": "construct the ten-by-ten integer arithmetic-semidefinite defect Gram quotient",
+    "3191": "promote reviewer-safe corrections and theorem inserts into all three manuscripts and docs/index.html",
+    "3192": "freeze exact regression, idempotent integration, three-PDF compilation, and publication boundary"
+  },
+  "claim_boundary": "The packet supplies exact necessary conditions for a ten-colouring but neither constructs one nor proves infeasibility. The exact value remains chi(H) in {10,11}."
+}

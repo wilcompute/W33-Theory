@@ -1,0 +1,9 @@
+<!-- BT3187-BT3192-CHROMATIC-DEFECT-FILTER -->
+<section id="bt3187-3192-chromatic-defect" class="card theorem-card">
+  <h2>The last chromatic bit now has an exact proof filter</h2>
+  <p><strong>Verified boundary:</strong> the 540-frame graph is not 9-colourable and has a literal proper 11-colouring, so its exact chromatic number is still <strong>10 or 11</strong>.</p>
+  <p>The new verifier partitions the frames into 45 canonical twelve-frame blocks. Every block is <code>K12 \ 3K4</code>. In any ten-colouring, a colour can occupy only one of the three four-cells, forcing at least 90 repeated-colour savings across the full block system.</p>
+  <p>A second reduction compresses every hypothetical ten-colouring to a 10&times;10 integer matrix <code>K</code>. It must be positive semidefinite, have row sum zero and rank at most nine, satisfy <code>K &equiv; -s s^T (mod 15)</code>, and have every 2&times;2 minor divisible by 15. The total non-Hoffman squared mass is at most 36.</p>
+  <p class="boundary"><strong>Claim boundary:</strong> these are exact necessary conditions, not a proof that ten colours exist or fail. Time-bounded heuristic and MILP runs are not treated as evidence.</p>
+</section>
+<!-- /BT3187-BT3192-CHROMATIC-DEFECT-FILTER -->

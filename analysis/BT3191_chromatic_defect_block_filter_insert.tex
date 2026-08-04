@@ -1,0 +1,74 @@
+% Passes 3187--3192: exact chromatic-defect and A4-block filter.
+\section{The last chromatic bit: an exact defect filter, not a search claim}
+\label{sec:bt3187-3192-chromatic-defect}
+
+The canonical frame graph has $540$ vertices, $8{,}640$ edges, degree $32$, and
+\[
+H+4I=MM^{\mathsf T},
+\qquad
+\operatorname{spec}(H)=32^1\oplus14^{44}\oplus8^{15}\oplus4^{81}\oplus2^{84}\oplus(-4)^{315}.
+\]
+The complete cover-link computation rules out nine colours, while a literal proper eleven-colouring is frozen.  The exact frontier is therefore
+\[
+\boxed{10\le\chi(H)\le11.}
+\]
+No bounded heuristic or MILP non-solution is used to sharpen this interval.
+
+\subsection*{Forty-five local $A_4$ blocks}
+The unique degree-one frame/octet relation partitions the frames into $45$ blocks of size $12$.  Every induced block is
+\[
+\boxed{K_{12}\setminus3K_4.}
+\]
+Thus one colour may occupy vertices in only one of the three independent four-cells.  A ten-colouring of twelve local vertices must save at least two colours by repetition, giving the exact global local-pressure law
+\[
+\boxed{\text{repeat savings}\ge45\cdot2=90.}
+\]
+
+\subsection*{Near-Hoffman energy}
+For an independent-set indicator $x$ of size $s$, put
+\[
+y=x-\frac{s}{540}\mathbf1.
+\]
+Then
+\[
+\boxed{y^{\mathsf T}(H+4I)y=\frac{s(60-s)}{15}.}
+\]
+For a hypothetical ten-colouring let $d_i=60-s_i$.  Since $\sum_i d_i=60$,
+\[
+\boxed{
+\sum_{i=1}^{10}y_i^{\mathsf T}(H+4I)y_i
+=240-\frac1{15}\sum_i d_i^2\le216.
+}
+\]
+The positive spectral gap away from $E_{-4}$ is $6$, hence
+\[
+\boxed{\sum_i\|P_{E_{-4}^{\perp}}y_i\|^2\le36.}
+\]
+Any ten-colouring must therefore lie close to the exact-cover/Hoffman eigenspace.
+
+\subsection*{A ten-by-ten proof quotient}
+Let $e_{ij}$ be the number of edges between colour classes $i$ and $j$, and define
+\[
+G=X^{\mathsf T}(H+4I)X-\frac1{15}ss^{\mathsf T},
+\qquad K=15G.
+\]
+Every ten-colouring must satisfy
+\[
+K\succeq0,
+\qquad K\mathbf1=0,
+\qquad \operatorname{rank}K\le9,
+\]
+with
+\[
+K_{ii}=s_i(60-s_i),
+\qquad
+K_{ij}=15e_{ij}-s_is_j.
+\]
+In particular,
+\[
+\boxed{K\equiv-ss^{\mathsf T}\pmod{15},}
+\]
+so every $2\times2$ minor of $K$ is divisible by $15$.  This arithmetic-semidefinite quotient and the $45$ local blocks are exact necessary-condition filters; they do not yet decide whether the tenth colour exists.
+
+\paragraph{Evidence type.}
+All graph counts, block decompositions, identities, and the frozen eleven-colouring are finite machine-verified results.  The remaining choice $\chi(H)=10$ versus $11$ is open.  The equality-case language is consistent with A.~Abiad, W.~Bosma, and T.~van Veluw, \emph{Hoffman colorings of graphs}, Linear Algebra Appl. 710 (2025), 129--150; the W33 finite computations are independent project certificates.
