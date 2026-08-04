@@ -1,0 +1,12 @@
+{
+  "diagnostic_shards": 100,
+  "fixed_covers": 27,
+  "flat_S3_count_digits": 339,
+  "free_pi1_rank": 436,
+  "live_boundary": "10 <= chi(H) <= 11",
+  "mod2_S3": true,
+  "schema": "w33.pass3238_3249.switch_gauge_spiral.manifest.v1",
+  "semantic_sha256": "3fed3aff43d22d91a8e444587f90904ef83ba356436e04b5425e70b15f33b796",
+  "status": "PASS_EXACT_SWITCH_GAUGE_SPIRAL_WITH_CHROMATIC_AND_PUBLICATION_GATES_OPEN",
+  "switch_stabilizer": "C4"
+}

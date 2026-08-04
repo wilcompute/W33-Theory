@@ -1,0 +1,68 @@
+name: Pass 3244 Proof-Producing Ten-Colour Shards
+on:
+  pull_request:
+    paths:
+      - 'analysis/bt3244_sat_proof_shards.py'
+      - '.github/workflows/w33_pass3244_sat_proof_shards.yml'
+  workflow_dispatch:
+jobs:
+  shard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install exact dependencies and proof tools
+        run: |
+          python -m pip install --disable-pip-version-check numpy
+          sudo apt-get update
+          sudo apt-get install -y cadical build-essential git
+          git clone --depth 1 https://github.com/marijnheule/drat-trim.git /tmp/drat-trim
+          make -C /tmp/drat-trim
+      - name: Emit exact shard
+        run: |
+          mkdir -p evidence
+          python analysis/bt3244_sat_proof_shards.py emit --shard ${{ matrix.shard }} --out evidence/shard.cnf --meta evidence/meta.json
+      - name: Solve and verify fail-closed
+        shell: bash
+        run: |
+          set +e
+          timeout 1800 cadical evidence/shard.cnf evidence/proof.drat > evidence/solver.log 2>&1
+          code=$?
+          set -e
+          verified=0
+          if grep -q '^s UNSATISFIABLE' evidence/solver.log; then
+            /tmp/drat-trim/drat-trim evidence/shard.cnf evidence/proof.drat | tee evidence/drat.log
+            grep -q 's VERIFIED' evidence/drat.log
+            verified=1
+          fi
+          args=()
+          if [ "$verified" = 1 ]; then args+=(--drat-verified); fi
+          python analysis/bt3244_sat_proof_shards.py classify --shard ${{ matrix.shard }} --solver-log evidence/solver.log --exit-code "$code" "${args[@]}" --out evidence/status.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3244-shard-${{ matrix.shard }}
+          if-no-files-found: error
+          path: evidence/
+  aggregate:
+    needs: shard
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: pass3244-shard-*
+          path: /tmp/shards
+      - run: python analysis/bt3244_sat_proof_shards.py aggregate --dir /tmp/shards --out pass3244_aggregate.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3244-all-shard-aggregate
+          path: pass3244_aggregate.json

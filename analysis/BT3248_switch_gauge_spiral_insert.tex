@@ -1,0 +1,34 @@
+% BEGIN PASS 3238-3249 SWITCH GAUGE SPIRAL
+\section{Exact-cover switch orbits, non-Abelian logical ports, and the real unit spiral}
+\label{sec:pass3238-3249}
+
+The five commuting $K_{4,4}$ replacements of Sec.~\ref{sec:pass3226-3237} give a genuine coordinate system $\mathbf F_3^5$ on 243 exact 60-frame covers, but not a five-qutrit symmetry under the finite geometry.  Exhausting all $25{,}920$ elements of $PSp(4,3)$ gives a setwise stabilizer $C_4$.  Its square fixes every cover and its quotient involution is
+\[
+ (x_1,x_2,x_3,x_4,x_5)\longmapsto(-x_4,1-x_3,1-x_2,-x_1,x_5).
+\]
+It fixes 27 covers and pairs the remaining 216, leaving 135 internal equivalence classes.  The fixed 27 form a weighted ternary cube:
+\[
+ |C_x\cap C_y|=60-8[\Delta a\ne0]-8[\Delta b\ne0]-4[\Delta c\ne0].
+\]
+No union of its five distance relations is the Schlaefli graph; the repeated count 27 is not, by itself, an $E_6$ identification.
+
+Gauge fixing the 45-block, 720-edge, 240-face port complex along a spanning tree removes 44 edge labels.  The 240 edge-disjoint triangular face relations eliminate 240 more distinct chords, so
+\[
+ \pi_1(X)\cong F_{436}.
+\]
+Flat $S_3$ port connections modulo switching are therefore simultaneous-conjugacy classes of $436$-tuples.  Burnside's lemma gives
+\[
+ \frac{6^{436}+3\,2^{436}+2\,3^{436}}6
+\]
+classes.  Abelianization $S_3\to C_2$ produces the $2^{436}$ binary logical sectors of the $[[720,436,2]]$ port CSS complex: the binary code is the sign-character shadow of a larger non-Abelian logical layer.
+
+The golden quarter-turn also has an exact real machine.  The matrix
+\[
+ R=\begin{pmatrix}
+0&-1&-1&0\\1&0&0&0\\1&0&0&-1\\0&0&1&0
+\end{pmatrix}
+\]
+has determinant one, characteristic polynomial $t^4+3t^2+1$, preserves a signature-$(2,2)$ integral metric and two independent unimodular symplectic forms, and admits a reversing involution $S$ with $SRS=R^{-1}$.  Modulo two, $\langle R^2,S\rangle\cong S_3$ on an invariant two-plane.  The same recursive/iterative spiral controller can therefore select the six perfect matchings of a physical $K_{3,3}$ port bridge.
+
+The ten-colour boundary remains $10\leq\chi(H)\leq11$.  All 100 proof shards received bounded diagnostic runs, but no SAT model and no checked UNSAT proof was obtained.  RTL, synthesis, placement and all three PDF builds remain separately evidence-gated.
+% END PASS 3238-3249 SWITCH GAUGE SPIRAL

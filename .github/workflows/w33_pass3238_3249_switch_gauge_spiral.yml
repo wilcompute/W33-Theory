@@ -1,0 +1,82 @@
+name: Passes 3238-3249 Switch Gauge Spiral Closure
+on:
+  pull_request:
+    paths:
+      - 'analysis/bt3238_3249_switch_gauge_spiral.py'
+      - 'analysis/bt3238_3249_common.py'
+      - 'analysis/bt3238_3239_cover_symmetry.py'
+      - 'analysis/bt3240_3241_port_gauge.py'
+      - 'analysis/bt3242_3243_real_spiral.py'
+      - 'analysis/BT3238_BT3249_switch_gauge_spiral.md'
+      - 'analysis/BT3248_switch_gauge_spiral_insert.tex'
+      - 'analysis/BT3248_switch_gauge_spiral_index_insert.html'
+      - 'data/PART_BT3238_BT3249_SWITCH_GAUGE_SPIRAL_manifest.json'
+      - 'data/bt3244_sat_shard_diagnostic.json'
+      - 'rtl/w33_pass3242_3243_spiral_s3.sv'
+      - 'tests/tb_w33_pass3242_3243.sv'
+      - 'tests/test_bt3238_3249_switch_gauge_spiral.py'
+      - 'tools/integrate_bt3238_bt3249.py'
+      - '.github/workflows/w33_pass3238_3249_switch_gauge_spiral.yml'
+  workflow_dispatch:
+jobs:
+  exact-rtl-pdf:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Recompute exact certificate
+        run: |
+          python -m pip install --disable-pip-version-check numpy sympy pytest
+          python analysis/bt3238_3249_switch_gauge_spiral.py
+          python - <<'PY'
+          import json
+          result=json.load(open('data/PART_BT3238_BT3249_SWITCH_GAUGE_SPIRAL_results.json'))
+          manifest=json.load(open('data/PART_BT3238_BT3249_SWITCH_GAUGE_SPIRAL_manifest.json'))
+          assert result['sha256_without_hash_field']==manifest['semantic_sha256']
+          assert result['status']==manifest['status']
+          assert result['live_chromatic_boundary']==manifest['live_boundary']
+          PY
+          python -m pytest -q tests/test_bt3238_3249_switch_gauge_spiral.py
+      - name: Install digital and TeX tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys
+          curl --proto '=https' --tlsv1.2 -LsSf https://drop-sh.fullyjustified.net | sh
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+      - name: Exhaust spiral and S3 RTL controls
+        run: |
+          iverilog -g2012 -o /tmp/tb3242 rtl/w33_pass3242_3243_spiral_s3.sv tests/tb_w33_pass3242_3243.sv
+          vvp /tmp/tb3242 | tee /tmp/tb3242.log
+          grep -q 'PASS SPIRAL/S3' /tmp/tb3242.log
+      - name: Synthesize both controller tops
+        run: |
+          yosys -p 'read_verilog -sv rtl/w33_pass3242_3243_spiral_s3.sv; hierarchy -top w33_pass3242_real_spiral_controller; proc; opt; stat' | tee /tmp/yosys_spiral.log
+          yosys -p 'read_verilog -sv rtl/w33_pass3242_3243_spiral_s3.sv; hierarchy -top w33_pass3243_s3_matching; proc; opt; stat' | tee /tmp/yosys_s3.log
+      - name: Integrate four front doors idempotently
+        run: |
+          python tools/integrate_bt3238_bt3249.py
+          sha256sum w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html > /tmp/front1.sha
+          python tools/integrate_bt3238_bt3249.py
+          sha256sum w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html > /tmp/front2.sha
+          diff -u /tmp/front1.sha /tmp/front2.sha
+      - name: Compile all canonical PDFs
+        run: |
+          tectonic --keep-logs w33_paper.tex
+          tectonic --keep-logs photonic_holonet.tex
+          tectonic --keep-logs holonet_machine_blueprint.tex
+          test -s w33_paper.pdf && test -s photonic_holonet.pdf && test -s holonet_machine_blueprint.pdf
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf | tee /tmp/pdf.sha
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3238-3249-switch-gauge-spiral-evidence
+          path: |
+            /tmp/tb3242.log
+            /tmp/yosys_spiral.log
+            /tmp/yosys_s3.log
+            /tmp/pdf.sha
+            data/PART_BT3238_BT3249_SWITCH_GAUGE_SPIRAL_results.json
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
