@@ -22,6 +22,15 @@ def load_config() -> dict:
     return json.loads(CONFIG.read_text(encoding="utf-8"))
 
 
+def section_count(index_text: str, section: dict) -> int:
+    token = section["token"]
+    if section["kind"] == "id":
+        return index_text.count(f'id="{token}"')
+    if section["kind"] == "marker":
+        return index_text.count(token)
+    raise ValueError(f"unsupported public section kind: {section['kind']}")
+
+
 def audit(require_index: bool = True) -> dict:
     config = load_config()
     tex_manifest = ROOT / config["tex_manifest"]
@@ -53,14 +62,23 @@ def audit(require_index: bool = True) -> dict:
 
     index_path = ROOT / config["public_index"]
     index_status = {"required": require_index, "path": str(index_path.relative_to(ROOT))}
+    source_status = {}
+    for section in config["public_sections"]:
+        source = ROOT / section["source"]
+        assert source.is_file(), source
+        source_status[section["token"]] = {
+            "kind": section["kind"],
+            "source": section["source"],
+            "sha256": sha256(source),
+        }
+    index_status["sources"] = source_status
+
     if require_index:
         assert index_path.is_file(), index_path
         index_text = index_path.read_text(encoding="utf-8")
-        ids = {item: index_text.count(f'id="{item}"') for item in config["required_public_ids"]}
-        markers = {item: index_text.count(item) for item in config.get("required_public_markers", [])}
-        assert all(count == 1 for count in ids.values()), ids
-        assert all(count >= 1 for count in markers.values()), markers
-        index_status.update({"sha256": sha256(index_path), "ids": ids, "markers": markers})
+        observed = {section["token"]: section_count(index_text, section) for section in config["public_sections"]}
+        assert all(count == 1 for count in observed.values()), observed
+        index_status.update({"sha256": sha256(index_path), "sections": observed})
 
     return {
         "schema": "w33.current_frontier_audit.v1",
