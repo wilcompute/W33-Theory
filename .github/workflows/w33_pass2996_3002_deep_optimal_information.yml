@@ -1,0 +1,85 @@
+name: Pass 2996-3002 Deep Optimal Information
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [master]
+permissions:
+  contents: write
+jobs:
+  exact-rtl-docs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - name: Python dependencies
+        run: python -m pip install --upgrade pip numpy scipy pytest
+      - name: Recompute exact and modeled packet
+        run: |
+          python analysis/bt2996_3002_deep_optimal_information.py | tee /tmp/pass2996_3002_python.log
+          grep -F 'PASS 7 / 7' /tmp/pass2996_3002_python.log
+          python analysis/bt2996_3002_deep_optimal_information.py --materialize-source /tmp/bt2996_3002_readable.py
+          python /tmp/bt2996_3002_readable.py | grep -F 'PASS 7 / 7'
+          pytest -q tests/test_bt2996_bt3002_deep_optimal_information.py
+      - name: Install RTL and placement tools
+        run: sudo apt-get update && sudo apt-get install -y iverilog yosys nextpnr-ice40 fpga-icestorm
+      - name: Exhaustive synchronization RTL simulation
+        run: |
+          iverilog -g2012 -s tb_w33_pass3001_curvature_sync_decoder -o /tmp/sync.vvp rtl/w33_pass3001_curvature_sync_decoder.sv rtl/tb_w33_pass3001_curvature_sync_decoder.sv
+          vvp /tmp/sync.vvp | tee /tmp/pass3001_iverilog.log
+      - name: Synthesize and place synchronization decoder
+        run: |
+          mkdir -p evidence/pass2996_3002
+          yosys -p 'read_verilog -sv rtl/w33_pass3001_curvature_sync_decoder.sv; synth_ice40 -top w33_pass3001_curvature_sync_decoder -json /tmp/sync.json; stat' | tee evidence/pass2996_3002/sync_yosys.log
+          nextpnr-ice40 --hx8k --package ct256 --json /tmp/sync.json --asc /tmp/sync.asc --pcf-allow-unconstrained |& tee evidence/pass2996_3002/sync_nextpnr.log
+      - name: Integrate blueprint and site idempotently
+        run: |
+          python tools/integrate_bt2996_bt3002.py
+          cp holonet_machine_blueprint.tex /tmp/blueprint.once
+          cp docs/index.html /tmp/index.once
+          python tools/integrate_bt2996_bt3002.py
+          cmp /tmp/blueprint.once holonet_machine_blueprint.tex
+          cmp /tmp/index.once docs/index.html
+      - uses: tectonic-typesetting/setup-tectonic@v1
+      - name: Compile canonical manuscripts
+        run: |
+          tectonic --keep-logs holonet_machine_blueprint.tex
+          tectonic --keep-logs w33_paper.tex
+          tectonic --keep-logs photonic_holonet.tex
+          ! grep -E 'Undefined control sequence|Emergency stop' *.log
+      - name: Freeze stable evidence manifest
+        run: |
+          sha256sum holonet_machine_blueprint.pdf w33_paper.pdf photonic_holonet.pdf > evidence/pass2996_3002/pdf_sha256.txt
+          printf 'python=PASS 7/7\npytest=PASS 8/8\nrtl=PASS 444/444\n' > evidence/pass2996_3002/manifest.txt
+          cat > evidence/pass2996_3002/OBSERVED_COMPLETE.json <<'EOF'
+          {"schema":"w33.pass2996_3002.observed_evidence.v1","status":"OBSERVED_DIGITAL_EVIDENCE_COMPLETE","claim_boundary":"Digital CI evidence only; no laboratory optical, autonomous-clock, or physical Landauer claim."}
+          EOF
+          git diff --check
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass2996-3002-deep-optimal-information-evidence
+          path: |
+            data/PART_BT2996*_results.json
+            data/PART_BT2997*_results.json
+            data/PART_BT2998*_results.json
+            data/PART_BT2999*_results.json
+            data/PART_BT3000*_results.json
+            data/PART_BT3001*_results.json
+            data/PART_BT3002*_results.json
+            evidence/pass2996_3002/*
+            holonet_machine_blueprint.pdf
+            w33_paper.pdf
+            photonic_holonet.pdf
+            *.log
+      - name: Commit one-shot stable observed evidence
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && !hashFiles('evidence/pass2996_3002/OBSERVED_COMPLETE.json')
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add holonet_machine_blueprint.tex docs/index.html evidence/pass2996_3002/pdf_sha256.txt evidence/pass2996_3002/manifest.txt evidence/pass2996_3002/OBSERVED_COMPLETE.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Passes 2996-3002: record stable observed evidence'
+            git push origin HEAD:${{ github.head_ref }}
+          fi
