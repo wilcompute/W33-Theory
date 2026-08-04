@@ -1,0 +1,20 @@
+{
+  "analysis/bt3364_3375_clebsch_d5_fault_closure.py": {
+    "bytes": 33379,
+    "encoded_path": "bootstrap/pass3364_3375/verifier.py.zlib.b64",
+    "encoded_sha256": "7af3c6967b2bd0760379165e30490af256681b88f3de55e605210f3caaa40c7d",
+    "sha256": "ee7dd0989b6048781f75dd3c390c5be5eeed440d676fe5181e1fdce172de87d6"
+  },
+  "analysis/bt3364_3375_engine.py": {
+    "bytes": 26889,
+    "encoded_path": "bootstrap/pass3364_3375/engine.py.zlib.b64",
+    "encoded_sha256": "9acff027cf63b1cc195d16fb326e0af4835c1b228d81858443a368b36ff191cb",
+    "sha256": "7a0913e32ef81bbd2f5826541995b18e54a9f18296f721d57a5395ee2deeb03e"
+  },
+  "data/PART_BT3364_BT3375_CLEBSCH_D5_FAULT_CLOSURE_results.json": {
+    "bytes": 66760,
+    "encoded_path": "data/PART_BT3364_BT3375_CLEBSCH_D5_FAULT_CLOSURE_results.json.zlib.b64",
+    "encoded_sha256": "263de2bf56ae0034ce12945f2488f89b44ee8a34e1db69ec3c13d304a6eb61ee",
+    "sha256": "a6b6ae7ffe7f19bc1e9d5682e02419a9bf7c4f465b6f833d4572531165776a0e"
+  }
+}
