@@ -38,7 +38,7 @@ module tb_w33_pass3155_3160_factor_epoch_scheduler;
     factor_valid=0;
     if(!done || busy) $fatal(1,"factor sweep did not finish");
     if(bout!==18'sd77) $fatal(1,"baseline mismatch");
-    rbank=3'd6;raddr=10'd527;#1;
+    rbank=3'd6;raddr=10'd527;tick();
     if(rdata!==18'sd5276) $fatal(1,"bank read mismatch %0d",rdata);
 
     // Two adversarial corruptions inside ABABA still leave three rare symbols.
