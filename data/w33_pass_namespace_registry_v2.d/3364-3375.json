@@ -1,0 +1,22 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "3364-3375",
+  "owner": "agent/pass3364-3375-clebsch-d5-fault-closure",
+  "status": "in_progress_evidence_gated",
+  "reserved_after": "master through Passes 3356-3363",
+  "passes": {
+    "3364": "construct and test the first nonseparable two-block M22 orientation dual",
+    "3365": "replace the trusted Clebsch tag assumption by a self-protecting joint state-tag code",
+    "3366": "classify bounded-latency dynamic replication below the static 32-slot frontier",
+    "3367": "compute the minimum gauge-defect fusion, cancellation and orbit algebra",
+    "3368": "exhaust mirrored-Q5 triple faults and test minimal Q6 replication boundaries",
+    "3369": "derive one independent high-risk construction from the surviving exact structures",
+    "3370": "derive a second independent high-risk construction from the surviving exact structures",
+    "3371": "identify the Clebsch checksum as the repetition-code coset graph and derive exact decoding consequences",
+    "3372": "compute the Clebsch automorphism, D5 half-spin and demicube correspondences objectwise",
+    "3373": "audit further Clebsch designs, spectra, subgraphs and controller-equivariance connections",
+    "3374": "integrate the eight-front theorem into the canonical manuscripts and public index",
+    "3375": "focused regression, RTL, synthesis, manuscript evidence and fail-closed publication boundary"
+  },
+  "claim_boundary": "No queued workflow, ten-colour decision, physical Spin(10) identification, fault-rate guarantee, FPGA timing, successful PDF, laboratory result or spacetime claim is promoted without dedicated checked evidence."
+}
