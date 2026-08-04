@@ -41,16 +41,13 @@ jobs:
         run: |
           pytest -q tests/test_bt3163_bt3174_proof_carrying_runtime.py
           git diff --check
-      - name: Publish readable source tree once
+      - name: Publish readable non-workflow source tree once
         env:
           HEAD_BRANCH: "${{ github.event.pull_request.head.ref }}"
         run: |
           git config user.name w33-source-bootstrap
           git config user.email actions@users.noreply.github.com
           git add -f \
-            .github/workflows/w33_pass3163_3174_proof_carrying_runtime.yml \
-            .github/workflows/w33_pass3163_all_194_isa_bfs.yml \
-            .github/workflows/w33_pass3165_full_m36_census.yml \
             analysis/BT3163_BT3174_CLAIM_LEDGER.md \
             analysis/BT3163_BT3174_proof_carrying_runtime.md \
             analysis/BT3163_BT3174_proof_carrying_runtime_index_insert.html \
