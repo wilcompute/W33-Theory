@@ -32,6 +32,8 @@ jobs:
           fetch-depth: 0
       - name: Reconcile current master
         run: |
+          git config user.name w33-reconcile-bot
+          git config user.email actions@users.noreply.github.com
           git fetch origin master
           git merge --no-edit origin/master
       - uses: actions/setup-python@v5
