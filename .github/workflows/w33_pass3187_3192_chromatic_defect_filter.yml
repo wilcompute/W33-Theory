@@ -39,7 +39,9 @@ jobs:
           python tools/integrate_bt3187_bt3192.py
           python tools/integrate_bt3187_bt3192.py --check
           git diff --check
-      - uses: tectonic-typesetting/setup-tectonic@v1
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Compile all three canonical manuscripts
         run: |
           mkdir -p evidence/pass3187_3192
