@@ -32,9 +32,14 @@ jobs:
           assert d['subsets']==462
           assert d['universal']==194
           assert d['full_bfs_mode']=='all universal'
+          assert d['full_bfs_record_count']==194
+          assert len(d['full_group_results'])==194
           assert d['all_rows'] is not None and len(d['all_rows'])==462
-          assert len(d['pareto'])>=1
-          print('PASS complete 194-design full affine BFS census')
+          universal=[r for r in d['all_rows'] if r['universal']]
+          assert len(universal)==194
+          assert all(r['full_group']['group_order_reached']==4199040 for r in universal)
+          assert all(r['full_group']['growth_series'][0]==1 for r in universal)
+          print('PASS complete serialized 194-design full affine BFS census')
           PY
       - name: Freeze artifact hashes
         run: |
