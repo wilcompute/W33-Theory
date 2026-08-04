@@ -1,0 +1,14 @@
+\section*{Passes 3364--3375: Clebsch--Petersen resilient closure}
+The folded five-cube checksum graph is the Clebsch graph, \(\operatorname{SRG}(16,5,0,2)\), with rooted shell decomposition \(1+5+10\). The ten distance-two vertices induce \(KG(5,2)\), the Petersen graph. Its Cayley form on \(\mathbb F_2^4\) has five circuit directions and automorphism group \(2^4{:}S_5\) of order 1920.
+
+Preserving the five raw envelope bits systematically, exhaustive search proves that seven parity bits are necessary and sufficient for a 22-word code of minimum distance five. Thus a self-protecting two-error-correcting envelope word requires 12 total bits. The mirrored \(Q_5\) placement has exactly 16 catastrophic two-vertex sets and 480 catastrophic three-vertex sets, precisely those containing a complete replica pair.
+
+The full block-distance-invariant nonseparable local-algebra lift reduces exactly to the three PSD cones
+\[
+K_0+32K_1+12K_2\succeq0,\quad K_0+2K_1-3K_2\succeq0,\quad K_0-4K_1+3K_2\succeq0.
+\]
+This compiler does not decide the ten-colour problem; the live boundary remains \(10\leq\chi(H)\leq11\).
+
+Minimum gauge defects obey a local fusion law: same omitted-edge types add coefficientwise and annihilate for opposite coefficients; distinct types in one filled face remain minimum exactly when their shared-edge coefficients cancel; distinct filled faces are edge-disjoint. Projectively, the 87,120 minimum defects contain 29,040 local three-state fusion triples.
+
+The Clebsch graph also supplies a nested checksum geometry: one reference axis, five singleton fault directions, and ten pair channels forming a Petersen graph. A degree-four del Pezzo/Segre quartic supplies a separate 16-line incidence realization of the same graph, retained only as a mathematical dictionary and not as a physical hardware identification.
