@@ -17,7 +17,7 @@ OPEN_PULLS = [
     {"number": 242, "kind": "implementation", "base": "master", "depends_on": [], "focused_gate": "failure", "topic": "3153-3162 adaptive epoch factor engine"},
     {"number": 243, "kind": "implementation", "base": "pr242", "depends_on": [242], "focused_gate": "exhaustive_pending", "topic": "3163-3174 proof-carrying runtime"},
     {"number": 244, "kind": "implementation", "base": "pr243", "depends_on": [243], "focused_gate": "publication_unresolved", "topic": "3175-3186 curvature-routed inference"},
-    {"number": 245, "kind": "implementation", "base": "master", "depends_on": [], "focused_gate": "queued", "topic": "3187-3192 chromatic defect filter"},
+    {"number": 246, "kind": "implementation", "base": "master", "depends_on": [], "focused_gate": "queued", "topic": "3193-3204 month-audit seven-front closure"},
     {"number": 236, "kind": "older_stack", "base": "master", "depends_on": [], "focused_gate": "queued_or_stale", "topic": "3133-3142 certifying adaptive inference"},
     {"number": 239, "kind": "older_stack", "base": "pr236", "depends_on": [236], "focused_gate": "queued_or_stale", "topic": "3143-3152 sparse inference and universal ISA correction"},
     {"number": 238, "kind": "evidence_only", "base": "master", "depends_on": [], "focused_gate": "stale_review", "topic": "3124-3132 evidence"},
@@ -35,6 +35,10 @@ OPEN_PULLS = [
     {"number": 217, "kind": "evidence_only", "base": "master", "depends_on": [], "focused_gate": "stale_review", "topic": "2862-2881 evidence"},
     {"number": 215, "kind": "source_or_evidence", "base": "master", "depends_on": [], "focused_gate": "supersession_review", "topic": "2847-2853 protected observer"},
     {"number": 213, "kind": "evidence_only", "base": "master", "depends_on": [], "focused_gate": "stale_review", "topic": "2840-2846 evidence"},
+]
+
+RECENT_MERGED = [
+    {"number": 245, "topic": "3187-3192 chromatic defect filter", "status": "merged_to_master"},
 ]
 
 
@@ -60,31 +64,33 @@ def main() -> None:
         by_gate[row["focused_gate"]] = by_gate.get(row["focused_gate"], 0) + 1
 
     execution_queue = [
-        {"priority": 1, "action": "repair PR #242 focused failure and rerun its dedicated gate", "promotion": False},
+        {"priority": 1, "action": "repair PR #242 focused RTL failure and rerun its dedicated gate", "promotion": False},
         {"priority": 2, "action": "only after #242 is green and merged, retarget/reconcile #243 and complete its 194-BFS and M36 shard gates", "promotion": False},
         {"priority": 3, "action": "only after #243 is green, reconcile #244 and close its lossless manuscript/PDF gate", "promotion": False},
-        {"priority": 4, "action": "run #245 independently; preserve its explicit no-ten-colour-decision boundary", "promotion": False},
-        {"priority": 5, "action": "archive or close superseded evidence-only PRs after recording their terminal artifacts and replacement links", "promotion": False},
+        {"priority": 4, "action": "run #246 independently and preserve its partial 3-of-194 runtime boundary", "promotion": False},
+        {"priority": 5, "action": "archive or close superseded evidence-only PRs after recording terminal artifacts and replacement links", "promotion": False},
     ]
     result = {
         "schema": "w33.pass3200.repository_evidence_debt.v1",
-        "snapshot_time": "2026-08-04T11:31:00-04:00",
+        "snapshot_time": "2026-08-04T12:50:00-04:00",
         "open_pull_count_in_audit": len(OPEN_PULLS),
         "open_pulls": OPEN_PULLS,
+        "recent_merged": RECENT_MERGED,
         "dependency_topological_order": order,
         "counts_by_kind": dict(sorted(by_kind.items())),
         "counts_by_gate": dict(sorted(by_gate.items())),
         "active_stack": [242, 243, 244],
-        "independent_current_front": [245],
+        "independent_current_front": [246],
+        "recent_merged_front": [245],
         "older_overlapping_stack": [236, 239],
         "execution_queue": execution_queue,
         "merge_authority": "none: this artifact schedules evidence work but never converts queued, failed or source-complete states into merge permission",
-        "headline": "The dominant repository risk is evidence debt and stacked-branch drift, not absence of new source: twenty-one open research/evidence PRs include multiple superseded gates and two overlapping inference stacks.",
+        "headline": "The dominant repository risk is evidence debt and stacked-branch drift, not absence of new source: twenty-one open research/evidence PRs include multiple superseded gates and two overlapping inference stacks; PR #245 is already merged.",
         "boundary": "Frozen audit snapshot from GitHub metadata and PR descriptions. Live state must be refreshed before any merge, close or retarget operation. Classification as supersession_review is a maintenance prompt, not permission to discard unique evidence."
     }
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    print(json.dumps({"open": len(OPEN_PULLS), "active_stack": [242, 243, 244]}, sort_keys=True))
+    print(json.dumps({"open": len(OPEN_PULLS), "active_stack": [242, 243, 244], "current": [246], "merged": [245]}, sort_keys=True))
 
 
 if __name__ == "__main__":
