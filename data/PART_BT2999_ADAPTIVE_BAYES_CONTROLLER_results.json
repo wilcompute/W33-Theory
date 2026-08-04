@@ -1,0 +1,18 @@
+{
+  "schema": "w33.pass2999.adaptive_bayesian_route_controller.v1",
+  "status": "COMPLETE_EXACT_DECISION_TREE_AND_SYNTHETIC_PRIOR_POLICY",
+  "check_count": 5,
+  "checks": {"depth_histogram": true, "exact_zero_risk_tree": true, "first_action_alphabet_13": true, "second_action_alphabet_10": true, "prior_normalized": true},
+  "fault_prior": {"no_fault": 0.995, "one_fault_total": 0.0045, "two_fault_total": 0.0005, "within_class": "uniform synthetic decision prior"},
+  "exact_adaptive_depth_histogram": {"23": 44848, "24": 3566, "25": 412},
+  "uniform_mean_triangles": 23.089911112931635,
+  "prior_weighted_mean_triangles": 23.006240775097925,
+  "prior_probability_of_escalation": 0.004237971552257268,
+  "stop_after_23_bayes_error": 0.000026200783343639815,
+  "exact_policy_residual_error": 0.0,
+  "probe_cost_to_error_loss_break_even": 0.004198321992463654,
+  "next_action_alphabet_size": 14,
+  "next_action_entropy_bits": 0.05173438166608032,
+  "policy": "Measure the common 23-row base. If unresolved, choose one of thirteen exact information-gain tests; at most one of ten second tests is then needed.",
+  "claim_boundary": "The decision tree is exact for noiseless D4 outcomes. Prior-weighted costs use an explicitly synthetic sparse-fault prior; erasures require posterior updates from Pass 2967."
+}
