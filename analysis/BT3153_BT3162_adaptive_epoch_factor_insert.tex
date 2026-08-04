@@ -1,0 +1,66 @@
+\section{Factorized epoch-aware adaptive execution}
+\label{sec:bt3153-bt3162}
+
+The noisy nonabelian controller admits a second exact compression layer.  The
+$48{,}826$-hypothesis posterior is represented by one no-fault baseline, $315$ unary
+edge/group factors, and $3{,}381$ shared-triangle corrections.  The resulting $3{,}697$
+values compile into seven banks of $528$ signed words plus one baseline register.  A full
+factor update therefore requires
+\[
+45+69\cdot7=528
+\]
+accepted cycles while updating seven group labels per cycle.  At $18$ bits per value the
+single-table storage is $66{,}546$ bits.  These counts and the bank-conflict proof are exact;
+any quoted clock frequency remains a design input until placement.
+
+The synchronization stream now carries an in-band epoch delimiter.  Symbols $1$ and $22$
+are unused by the twelve-symbol payload cycle, and the marker is
+\[
+(1,22,1,22,1).
+\]
+Every payload-only word has Levenshtein distance at least five from this marker.  Hence its
+radius-two edit ball is disjoint from every payload radius-two ball: two-edit false epoch
+acquisition is impossible without adding an optical mode.  After delimiter detection, the
+unique cyclic payload pairs reacquire exact phase in two clean payload symbols.  Continuing
+edits after the delimiter remain the responsibility of the bounded edit-mask controller.
+
+The frozen ten-opcode affine library was also exhausted beyond four-generator sets.  Among
+all
+\[
+\binom{10}{5}+\binom{10}{6}=462
+\]
+five- and six-generator subsets, $80$ five-generator and $114$ six-generator sets are
+universal.  Universality is certified by full linear order $51{,}840$ and translation-span
+rank four, not by connectivity on the $81$ frame vectors.  Eight designs survive the joint
+collision, frame-distance, spectral and decoder-operation non-dominance test, and complete
+$4{,}199{,}040$-state breadth-first searches were run for those eight.
+
+The best observed runtime candidate is
+\[
+\{F_f,CX_{pf},CX_{fp},Z_0,Z_1,Z_3\},
+\]
+with collision probability $63/486$, mean word length $13.7293695702$, and diameter $19$.
+It improves both mean length and collision exposure relative to the current four-opcode
+ISA before larger decoder cost is charged.  It crosses the equal-footprint $36$-collision
+four-opcode ISA at collision/instruction price $16.701642493$.  A separate exhaustive lane
+must still run full-group distance for every one of the $194$ universal larger subsets
+before a global mean-distance optimum is claimed.
+
+For equal-footprint hardware, the runtime retains the current and $36$-collision
+four-opcode decoders and switches according to
+\[
+J_i(c)=\bar L_i+c\,\bar L_i p_i.
+\]
+The zero-switch crossover is $c=3.741933824$.  With a $0.25$-instruction switching charge,
+the hysteresis thresholds are $4.640798576$ upward and $2.843069071$ downward.  The
+programmable effective collision price depends on causal uncertainty, route burden and
+calibration confidence; an uncalibrated alternative decoder fails closed to the current
+ISA.
+
+Finally, rank-three $M_{36}$ outputs are promoted only through a monotone-analysis gate.
+No accepted candidate has yet been observed.  Any future candidate must pass the trace-eight
+projector and first-order rejection checks before receiving its complete Pauli spectrum,
+a frame-explicit qubit Wigner witness, a product-stabilizer fidelity lower bound, a logical
+symplectic frame, and first- and second-order accepted-error coefficients.  The unrestricted
+$4{,}922{,}775$-Lagrangian stabilizer-fidelity census and the logical Clifford orbit remain
+separate exhaustive evidence gates.
