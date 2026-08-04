@@ -12,6 +12,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with: {fetch-depth: 0}
+      - id: observed_pre
+        name: Detect preexisting completion marker
+        run: |
+          if [ -f evidence/pass2996_3002/OBSERVED_COMPLETE.json ]; then
+            echo 'exists=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'exists=false' >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
       - name: Python dependencies
@@ -74,7 +82,7 @@ jobs:
             photonic_holonet.pdf
             *.log
       - name: Commit one-shot stable observed evidence
-        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && !hashFiles('evidence/pass2996_3002/OBSERVED_COMPLETE.json')
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && steps.observed_pre.outputs.exists != 'true'
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
