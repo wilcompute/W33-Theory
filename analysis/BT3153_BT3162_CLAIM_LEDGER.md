@@ -5,7 +5,8 @@
 | 462 five/six-opcode subsets; 194 universal | exact finite | source-observed | Universality uses linear order 51,840 and translation rank four. |
 | Eight non-dominated designs receive full 4,199,040-state BFS | exact finite | source-observed | Global mean-distance optimum over all 194 universal sets awaits exhaustive workflow. |
 | Six-opcode candidate mean 13.7293695702, diameter 19, collision probability 63/486 | exact finite | source-observed | Decoder area/timing unobserved. |
-| Seven banks x 528 words plus baseline exactly encode 3,697 factors | exact finite | source-observed | RTL memory inference and placement pending. |
+| One 45×126 unary memory plus seven 483×18 correction banks and a baseline encode 3,697 factors | exact finite | source-observed | Information count is 66,546 bits; memory inference and placement remain pending. |
+| Proposed iCE40 memory shape has a 29-EBR aspect-ratio estimate | exact arithmetic | source-observed | This is not an observed Yosys block count. |
 | One factor sweep is 528 accepted cycles | exact finite | source-observed | 100 MHz is a model input, not timing evidence. |
 | Marker (1,22,1,22,1) has payload distance at least five | exact theorem | source-observed | Continuing edits after marker are handled separately. |
 | Radius-two payload and marker balls are disjoint | exact theorem | source-observed | No laboratory symbol-confusion probability claimed. |
