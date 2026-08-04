@@ -1,0 +1,59 @@
+name: Passes 3344-3355 Readable Source Bootstrap
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'bootstrap/pass3344_3355/**'
+      - '.github/workflows/w33_pass3344_3355_readable_source_bootstrap.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'bootstrap/pass3344_3355/**'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pass3344-3355-bootstrap-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  materialize:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Materialize and hash-check all readable files
+        run: python bootstrap/pass3344_3355/materialize.py
+      - name: Focused exact validation
+        run: |
+          python -m pip install --disable-pip-version-check numpy sympy pytest
+          python analysis/bt3344_3353_exterior_dual_szegedy_q15.py
+          python -m pytest -q tests/test_bt3344_3355_exterior_dual_szegedy_q15.py
+          git diff --check
+      - name: Integrate current wrapper or monolithic front doors twice
+        run: |
+          python tools/integrate_bt3344_bt3355.py
+          sha256sum w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html > /tmp/front1.sha
+          python tools/integrate_bt3344_bt3355.py
+          sha256sum w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html > /tmp/front2.sha
+          diff -u /tmp/front1.sha /tmp/front2.sha
+      - name: Publish readable files and front-door integration once
+        if: github.event_name == 'push'
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          m=json.loads(Path('bootstrap/pass3344_3355/manifest.json').read_text())
+          Path('/tmp/files.txt').write_text('\n'.join(m['files'])+'\nw33_paper.tex\nphotonic_holonet.tex\nholonet_machine_blueprint.tex\ndocs/index.html\n')
+          PY
+          xargs -d '\n' git add < /tmp/files.txt
+          if ! git diff --cached --quiet; then
+            git commit -m 'Materialize Passes 3344-3355 readable source and front doors [skip ci]'
+            git push
+          fi
