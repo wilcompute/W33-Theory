@@ -1,0 +1,40 @@
+{
+  "pass_3120": {
+    "band": [
+      0.3779644730092272,
+      1.0
+    ],
+    "degrees": [
+      2,
+      8
+    ],
+    "fraction_inside": 0.968944099378882,
+    "inside": 156,
+    "nontrivial_poles": 161,
+    "radii": {
+      "max": 0.8694739038189495,
+      "median": 0.41944568242802543,
+      "min": 0.1740076830825238
+    }
+  },
+  "pass_3121": {
+    "computing": 79,
+    "connected_sets": 80,
+    "isa_collisions": 45,
+    "min_collisions_computing": 18,
+    "min_collisions_set": [
+      "CX_fp",
+      "Z0",
+      "Z1",
+      "Z2"
+    ],
+    "out_edges": 324
+  },
+  "pass_3122": {
+    "bound": 5.291502622129181,
+    "degree": 8,
+    "diameter": 4,
+    "is_ramanujan": true,
+    "lambda2": 5.0000000000000115
+  }
+}
