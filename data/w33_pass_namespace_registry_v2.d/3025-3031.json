@@ -1,0 +1,17 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "3025-3031",
+  "owner": "agent/pass3025-3031-predictive-photonic-overhaul",
+  "status": "reserved",
+  "reserved_after": "parallel reservation frontier through Pass 3024",
+  "passes": {
+    "3025": "resolve the 27-row fixed D4 question as far as exact central-r2 coding and full nonabelian verification permit",
+    "3026": "classify rank-two-or-higher three-copy M36 candidates by stabilizer-code validity and magic monotones without overstating queued shard evidence",
+    "3027": "derive the exact representation algebra of the 6480 skew-pair/spread/transversal flags and compare it with Hodge sectors by characters rather than counts",
+    "3028": "compile the tetrahedral A4 shell into a component-resolved optical POVM model and compare loss-adjusted information per photon",
+    "3029": "co-design noisy adaptive route diagnosis, calibration, and sequential chirality as one posterior action controller",
+    "3030": "BONKERS: construct a causal entropic curvature field in which diagnostic action is selected by expected future distinguishability per dissipated bit",
+    "3031": "BONKERS: test a self-dual twelve-phase photonic comb that fuses the 2796-tick calendar, A4 shell, D4 core, and reversible time reversal; overhaul all canonical papers around the unified architecture"
+  },
+  "claim_boundary": "Reservation only. Exact finite results, bounded searches, synthetic optical models, representation decompositions, predictive thermodynamic interpretations, and manuscript restructuring remain separately typed until executable evidence exists."
+}
