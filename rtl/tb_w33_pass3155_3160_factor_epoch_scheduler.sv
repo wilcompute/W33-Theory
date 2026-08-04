@@ -5,7 +5,7 @@ module tb_w33_pass3155_3160_factor_epoch_scheduler;
   logic signed [W-1:0] baseline;
   logic signed [7*W-1:0] bundle;
   logic rpair;logic [2:0] rbank;logic [8:0] raddr;logic signed [W-1:0] rdata,bout;
-  logic busy,done;logic [9:0] cyc;logic pairp;logic [5:0] edge;logic [6:0] pidx;logic [2:0] label;
+  logic busy,done;logic [9:0] cyc;logic pairp;logic [5:0] unary_edge;logic [6:0] pidx;logic [2:0] label;
   logic symv;logic [4:0] sym;logic marker,elock;logic [3:0] phase;logic [15:0] epochs;
   logic [15:0] basecost,ceff;logic [7:0] entropy,route,conf;logic calibrated,lowmode,sw;
   integer i,b;
@@ -15,7 +15,7 @@ module tb_w33_pass3155_3160_factor_epoch_scheduler;
     .factor_valid_i(factor_valid),.factor_bundle_i(bundle),.read_pair_i(rpair),
     .read_bank_i(rbank),.read_addr_i(raddr),.read_data_o(rdata),.baseline_o(bout),
     .busy_o(busy),.done_o(done),.cycle_o(cyc),.pair_phase_o(pairp),
-    .unary_edge_o(edge),.pair_index_o(pidx),.left_label_o(label));
+    .unary_edge_o(unary_edge),.pair_index_o(pidx),.left_label_o(label));
   w33_pass3157_epoch_tracker epoch(.clk(clk),.rst(rst),.symbol_valid_i(symv),.symbol_i(sym),
     .marker_seen_o(marker),.epoch_locked_o(elock),.phase_o(phase),.epoch_count_o(epochs));
   w33_pass3160_dual_isa_scheduler sched(.clk(clk),.rst(rst),
