@@ -1,0 +1,104 @@
+% BEGIN PASS 3286-3295 SIGNATURE PORT COMMON ENVELOPE
+\subsection{Signature--port obstruction and the minimal common controller}
+The sixteen exact-cover signature states and the sixteen natural \(V_4\)
+orthogonal-array ports are not the same \(S_3\)-set.  Their orbit profiles are
+\[
+\Omega_{\rm sig}:1+3+6+6,
+\qquad
+\Omega_{\rm port}:1+3+3+3+6,
+\]
+so no full \(S_3\)-equivariant bijection exists.  Restriction to the
+orientation-preserving subgroup \(C_3\) gives
+\[
+1+3+3+3+3+3
+\]
+on both sides, with exactly
+\[
+5!\,3^5=29160
+\]
+equivariant bijections.  The reflection restrictions differ:
+\[
+\Omega_{\rm sig}|_{C_2}:1^2\,2^7,
+\qquad
+\Omega_{\rm port}|_{C_2}:1^4\,2^6.
+\]
+Thus the obstruction is reflection-sensitive.
+
+The permutation characters are
+\[
+\chi_{\rm sig}=(16,2,1),
+\qquad
+\chi_{\rm port}=(16,4,1),
+\]
+and hence
+\[
+\mathbb Q[\Omega_{\rm sig}]
+\cong4\mathbf1\oplus2\,\mathrm{sgn}\oplus5V_{\rm std},
+\]
+\[
+\mathbb Q[\Omega_{\rm port}]
+\cong5\mathbf1\oplus\mathrm{sgn}\oplus5V_{\rm std}.
+\]
+The exact representation-ring defect is
+\[
+[\mathbb Q\Omega_{\rm port}]-[\mathbb Q\Omega_{\rm sig}]
+=[\mathbf1]-[\mathrm{sgn}],
+\]
+or stably
+\[
+\mathbb Q[\Omega_{\rm sig}]\oplus\mathbf1
+\cong
+\mathbb Q[\Omega_{\rm port}]\oplus\mathrm{sgn}.
+\]
+It vanishes on \(C_3\), where the sign character becomes trivial.
+
+The signature commutant has dimension
+\[
+4^2+2^2+5^2=45,
+\]
+whereas the natural port commutant has dimension
+\[
+5^2+1^2+5^2=51.
+\]
+Therefore the existing equality between forty-five anchor octets and
+forty-five signature orbitals cannot be lifted through the natural port
+action without treating the one-dimensional orientation defect.
+
+At the set level, the orbit multiplicities are
+\[
+\Omega_{\rm sig}:1^1\,3^1\,6^2,
+\qquad
+\Omega_{\rm port}:1^1\,3^3\,6^1.
+\]
+Their minimal common \(S_3\)-envelope has profile
+\[
+1^1\,3^3\,6^2
+\]
+and therefore size
+\[
+\boxed{22}.
+\]
+The maximum equivariant overlap is
+\[
+\boxed{10},
+\qquad
+16+16-10=22.
+\]
+Both alphabets are embedded explicitly into the same linear \(S_3\)-action
+on \(\mathbb F_2^5\).  The twenty-two valid words consist of ten shared
+states, six signature-only states, and six port-only states; the other ten
+ambient words are guards.
+
+A four-bit nonlinear signature ROM and a five-bit shared linear controller
+are supplied.  The fixed four-bit encoding has algebraic degree three and
+twenty-seven ANF terms; the five-bit generator cores each use one XOR plus
+wire permutations before multiplexing.  Source-level equivalence is exact.
+Observed synthesis, placement, manuscript-PDF evidence, and the unresolved
+chromatic decision remain separately gated.  In particular,
+\[
+10\leq\chi(H)\leq11
+\]
+is unchanged.  The new chromatic filter is that a full local \(S_3\)
+signature/port quotient is invalid, whereas a \(C_3\)-only quotient is
+locally compatible.
+% END PASS 3286-3295 SIGNATURE PORT COMMON ENVELOPE
