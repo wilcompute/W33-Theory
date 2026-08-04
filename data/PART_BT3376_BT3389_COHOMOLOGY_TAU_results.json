@@ -1,0 +1,197 @@
+{
+  "checks": {
+    "barycenter_fiber_profile_81_27": true,
+    "barycentric_lumping_108": true,
+    "equivariant_presentation_2180": true,
+    "flat_word_diameter_480": true,
+    "hidden_signed_torus_27": true,
+    "hidden_spectrum_closed": true,
+    "magnetic_trace_changes": true,
+    "quotient_sphere_lower_bound_389": true,
+    "voltage_components_81x135": true
+  },
+  "schema": "w33.bt3376_3389.cohomology_tau_frontier.v1",
+  "sections": {
+    "cohomology_voltage": {
+      "minimum_defect_equivariant_presentation": {
+        "coboundary_rank": 220,
+        "coefficient_action": "trivial F3^5 tensor factor under the certified PSp(4,3) support action",
+        "coefficient_generator_rank": 3600,
+        "cohomology_rank": 2180,
+        "flat_rank": 2400,
+        "local_relation_rank": 1200,
+        "scalar_exact_sequence_dimensions": [
+          240,
+          720,
+          480,
+          44,
+          436
+        ],
+        "scalar_sequence": "0 -> F3[240 faces] -> F3[720 supports] -> Z1 -> H1 -> 0",
+        "total_relation_rank": 1420
+      },
+      "minimum_defect_voltage_lift": {
+        "base_trace2": 1440,
+        "base_trace3": 31680,
+        "cardinality_falsifier": "the 135-vertex voltage component has degree 32, not the degree-10 Hamming-orbifold walk",
+        "character_blocks": [
+          "base_45",
+          "magnetic_45",
+          "conjugate_magnetic_45"
+        ],
+        "connected_components": 81,
+        "cubic_moment_deficit": 378,
+        "degree": 32,
+        "edges_per_component": 2160,
+        "full_C3_5_lift_vertices": 10935,
+        "magnetic_trace2": 1440,
+        "magnetic_trace3": 31302,
+        "nonseparable_certificate": "magnetic cubic trace differs from the untwisted block",
+        "triangles_per_component": 15714,
+        "vertices_per_component": 135,
+        "voltage_subgroup_order": 3
+      }
+    },
+    "tau_barycentric": {
+      "Q15_barycenters": {
+        "distinct": 108,
+        "fiber_profile": {
+          "size_1": 81,
+          "size_2": 27
+        },
+        "squared_norm_shells": {
+          "3": 27,
+          "4": 54,
+          "5": 27
+        },
+        "ternary_distance_profile_for_pairs": {
+          "2": 54,
+          "4": 54
+        },
+        "typed_profile": {
+          "distance2_singleton": 54,
+          "distance4_double": 27,
+          "fixed_singleton": 27
+        }
+      },
+      "ambiguous_double_cover": {
+        "base": "tau-fixed affine flat F3^3",
+        "base_size": 27,
+        "center_map": "coordinatewise missing symbols",
+        "cover_size": 54,
+        "hidden_fiber": "C2 represented by h=(x1+x4)(x2+x3-1) in {1,2}"
+      },
+      "barycentric_walk": {
+        "degree": 10,
+        "spectrum": {
+          "-5": 18,
+          "-2": 33,
+          "1": 32,
+          "4": 18,
+          "7": 6,
+          "10": 1
+        },
+        "states": 108,
+        "strongly_lumpable": true,
+        "three_shell_matrix": [
+          [
+            2,
+            8,
+            0
+          ],
+          [
+            2,
+            4,
+            4
+          ],
+          [
+            0,
+            4,
+            6
+          ]
+        ],
+        "three_shell_sizes": [
+          27,
+          54,
+          27
+        ],
+        "three_shell_spectrum": {
+          "-2": 1,
+          "4": 1,
+          "10": 1
+        },
+        "three_shell_stationary_masses": [
+          27,
+          108,
+          108
+        ]
+      },
+      "direct_sum": "H(5,3)/<tau> = barycentric_108 direct_sum hidden_signed_torus_27",
+      "hidden_phase_sector": {
+        "indexing": "tau-fixed affine flat F3^3",
+        "operator": "+C3(axis3)-C3(axis1)-C3(axis2)",
+        "shifted_by_2I_spectrum": {
+          "-3": 2,
+          "0": 9,
+          "3": 12,
+          "6": 4
+        },
+        "signed_cayley_kernel": {
+          "(0, 0, 1)": 1,
+          "(0, 0, 2)": 1,
+          "(0, 1, 0)": -1,
+          "(0, 2, 0)": -1,
+          "(1, 0, 0)": -1,
+          "(2, 0, 0)": -1
+        },
+        "spectrum": {
+          "-5": 2,
+          "-2": 9,
+          "1": 12,
+          "4": 4
+        },
+        "states": 27
+      },
+      "tau_orbits": {
+        "fixed": 27,
+        "paired": 108,
+        "total": 135
+      }
+    },
+    "word_metric": {
+      "cohomology_quotient": {
+        "cayley_diameter_lower_bound": 389,
+        "cayley_diameter_upper_bound": 480,
+        "cumulative_radius_388": {
+          "bit_length": 3452,
+          "decimal_digits": 1040,
+          "sha256_decimal": "5ff0a06b178d38e1a438bba3be55be4df60f418c6e6cfff7b68761017bb45f06"
+        },
+        "cumulative_radius_389": {
+          "bit_length": 3458,
+          "decimal_digits": 1041,
+          "sha256_decimal": "0b3c2c2f6db9be0e7c599aa8667b045e78eb0a755f1a68f34068a7fcb8108ca1"
+        },
+        "dimension_F3": 2180,
+        "quotient_size": {
+          "bit_length": 3456,
+          "decimal_digits": 1041,
+          "sha256_decimal": "0ee4ab91cd58ac22e76c8f86c3c34da76ecc20c195e6276a2078d003c664adfe"
+        },
+        "sphere_bound_threshold_radius": 389
+      },
+      "flat_space": {
+        "diameter": 480,
+        "dimension_F3": 2400,
+        "uniform_mean_length": "117370/59049"
+      },
+      "local_length_enumerator": {
+        "length_0": 1,
+        "length_1": 726,
+        "length_2": 58322,
+        "polynomial": "1 + 726 z + 58322 z^2"
+      }
+    }
+  },
+  "status": "PASS"
+}
