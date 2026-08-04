@@ -1,0 +1,30 @@
+{
+  "schema": "w33.pass3187_3192.verification_summary.v1",
+  "status": "PASS_EXACT_TESTS_AND_THREE_PDF_COMPILE",
+  "exact_certificate": {
+    "checks_passed": 12,
+    "checks_total": 12,
+    "semantic_sha256": "555aa1871e40b2d8ed4ea000f0d19ac23ff71a1be10f10eb6f7f9d4b6877cd58"
+  },
+  "pytest": {
+    "passed": 2,
+    "failed": 0
+  },
+  "front_doors": [
+    "w33_paper.tex",
+    "photonic_holonet.tex",
+    "holonet_machine_blueprint.tex",
+    "docs/index.html"
+  ],
+  "pdfs": {
+    "w33_paper.pdf": "2afbf004d8bb5025790563f084b3542d6525e80c447b8447250ce4d01c7a7607",
+    "photonic_holonet.pdf": "b8be3668358a1e5969a09ce13ee8ff10dd44f494b9e6fc0ec09c04af5acd8e89",
+    "holonet_machine_blueprint.pdf": "e67fcc0eee03c354c441c4a1172c42eeff0db17011d660ed81309833e6859b7e"
+  },
+  "ci": {
+    "successful_compile_run_id": 30924413170,
+    "job_id": 92042954102,
+    "note": "All exact tests, integration checks, Tectonic setup, three manuscript compilations, and artifact upload passed. The final evidence-bot push alone failed non-fast-forward because the branch advanced during the run; evidence was subsequently materialized directly."
+  },
+  "claim_boundary": "The exact chromatic value remains chi(H) in {10,11}. The packet provides necessary arithmetic-semidefinite and local-block filters only."
+}
