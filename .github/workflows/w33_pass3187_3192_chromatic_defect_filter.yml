@@ -1,0 +1,72 @@
+name: Passes 3187-3192 Chromatic Defect Filter
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/*3187*'
+      - 'analysis/*3191*'
+      - 'data/PART_BT3187*'
+      - 'data/w33_pass_namespace_registry_v2.d/3187-3192.json'
+      - 'tests/test_bt3187_bt3192_chromatic_defect_block_filter.py'
+      - 'tools/integrate_bt3187_bt3192.py'
+      - '.github/workflows/w33_pass3187_3192_chromatic_defect_filter.yml'
+permissions:
+  contents: write
+concurrency:
+  group: pass3187-3192-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-filter-and-papers:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install exact test tools
+        run: python -m pip install --upgrade pip numpy pytest
+      - name: Rebuild exact certificate and regression
+        run: |
+          python analysis/bt3187_3192_chromatic_defect_block_filter.py
+          pytest -q tests/test_bt3187_bt3192_chromatic_defect_block_filter.py
+          git diff --check
+      - name: Integrate all four front doors idempotently
+        run: |
+          python tools/integrate_bt3187_bt3192.py
+          python tools/integrate_bt3187_bt3192.py --check
+          git diff --check
+      - uses: tectonic-typesetting/setup-tectonic@v1
+      - name: Compile all three canonical manuscripts
+        run: |
+          mkdir -p evidence/pass3187_3192
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            stem=${source%.tex}
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3187_3192/${stem}.build.log"
+            test -s "${stem}.pdf"
+            if grep -E 'Undefined control sequence|LaTeX Error|Emergency stop|Fatal error' "${stem}.log"; then exit 1; fi
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3187_3192/pdf_sha256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3187-3192-chromatic-defect-evidence
+          path: |
+            data/PART_BT3187_BT3192_CHROMATIC_DEFECT_BLOCK_FILTER_results.json
+            evidence/pass3187_3192/*
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
+      - name: One-shot front-door and evidence commit
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        env: {TARGET_BRANCH: '${{ github.event.pull_request.head.ref }}'}
+        run: |
+          git config user.name 'W33 pass3187 evidence bot'
+          git config user.email 'noreply@github.com'
+          git add w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html data/PART_BT3187_BT3192_CHROMATIC_DEFECT_BLOCK_FILTER_results.json evidence/pass3187_3192/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Passes 3187-3192: materialize chromatic defect evidence'
+            git push origin "HEAD:${TARGET_BRANCH}"
+          fi
