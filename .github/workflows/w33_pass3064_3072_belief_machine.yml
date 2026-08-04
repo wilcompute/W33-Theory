@@ -1,0 +1,82 @@
+name: Passes 3064-3072 Belief Machine Evidence
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'analysis/bt3064_3070_belief_machine.py'
+      - 'analysis/bt3065_no27_sat.py'
+      - 'analysis/BT3064_BT3072_*'
+      - 'rtl/*3067*'
+      - 'tests/test_bt3064_bt3072_belief_machine.py'
+      - 'tools/integrate_bt3064_bt3072.py'
+      - '.github/workflows/w33_pass3064_3072_belief_machine.yml'
+permissions: {contents: write}
+concurrency:
+  group: pass3064-3072-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-rtl-manuscripts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: "${{ github.event.pull_request.head.sha || github.sha }}", fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install toolchains
+        run: |
+          sudo apt-get update && sudo apt-get install -y iverilog yosys
+          python -m pip install --upgrade pip
+          python -m pip install numpy pytest python-sat[pblib,aiger]
+      - uses: wtfjoke/setup-tectonic@v3
+      - name: Regenerate certificates
+        run: |
+          python analysis/bt3064_3070_belief_machine.py
+          python analysis/bt3065_no27_sat.py --cnf data/bt3065_no27.cnf
+      - name: Focused regression
+        run: pytest -q tests/test_bt3064_bt3072_belief_machine.py
+      - name: Simulate and synthesize posterior core
+        run: |
+          iverilog -g2012 -s tb_w33_pass3067_adaptive_belief_controller -o /tmp/p3067.vvp rtl/w33_pass3067_adaptive_belief_controller.sv rtl/tb_w33_pass3067_adaptive_belief_controller.sv
+          vvp /tmp/p3067.vvp | tee evidence_pass3067_iverilog.log
+          grep -q 'PASS adaptive belief controller' evidence_pass3067_iverilog.log
+          yosys -p 'read_verilog -sv rtl/w33_pass3067_adaptive_belief_controller.sv; hierarchy -top w33_pass3067_adaptive_belief_controller; proc; opt; check; stat' | tee evidence_pass3067_yosys.log
+          grep -q 'Number of cells' evidence_pass3067_yosys.log
+      - name: Integrate all front doors idempotently
+        run: |
+          python tools/integrate_bt3064_bt3072.py
+          sha256sum w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html >/tmp/a
+          python tools/integrate_bt3064_bt3072.py
+          sha256sum w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html >/tmp/b
+          diff -u /tmp/a /tmp/b
+      - name: Compile all manuscripts
+        run: |
+          tectonic w33_paper.tex
+          tectonic photonic_holonet.tex
+          tectonic holonet_machine_blueprint.tex
+          test -s w33_paper.pdf && test -s photonic_holonet.pdf && test -s holonet_machine_blueprint.pdf
+      - name: Freeze stable evidence
+        env: {HEAD_BRANCH: "${{ github.event.pull_request.head.ref || github.ref_name }}"}
+        run: |
+          mkdir -p evidence/pass3064_3072
+          sha256sum data/PART_BT306*_results.json data/PART_BT3070_MEASUREMENT_BASIS_PORTFOLIO_results.json w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3064_3072/SHA256SUMS
+          python - <<'PY'
+          import json,os,pathlib
+          pathlib.Path('evidence/pass3064_3072/COMPLETE.json').write_text(json.dumps({'schema':'w33.pass3064_3072.observed_evidence.v1','status':'COMPLETE_FOCUSED_EXACT_RTL_AND_THREE_PDF_BUILDS','commit':os.environ['GITHUB_SHA'],'sat_27_optimality':'separate workflow','laboratory_claims':'none'},indent=2,sort_keys=True)+'\n')
+          PY
+          git config user.name w33-evidence-bot; git config user.email actions@users.noreply.github.com
+          git add w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html data/PART_BT306*.json data/PART_BT3070*.json evidence/pass3064_3072
+          git add -f w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf
+          if ! git diff --cached --quiet; then git commit -m 'Passes 3064-3072: record observed RTL and manuscript evidence'; git push origin HEAD:"$HEAD_BRANCH"; fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3064-3072-belief-machine-evidence
+          path: |
+            evidence_pass3067_iverilog.log
+            evidence_pass3067_yosys.log
+            evidence/pass3064_3072/
+            data/PART_BT306*.json
+            data/PART_BT3070*.json
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
