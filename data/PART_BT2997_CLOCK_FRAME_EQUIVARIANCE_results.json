@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass2997.clock_frame_equivariance_obstruction.v1",
+  "status": "COMPLETE_EXACT_NATURAL_C3_EQUIVARIANCE_OBSTRUCTION",
+  "check_count": 5,
+  "checks": {"skew_frames_540": true, "transvection_order_three_orbits": true, "transvection_fixed_frames_zero": true, "clock_translation_fixes_all_cycle_labels": true, "characters_differ": true},
+  "skew_frame_character_at_transvection": 0,
+  "skew_frame_orbits_under_transvection": {"3": 180},
+  "clock_orbit_character_at_translation": 540,
+  "theorem": "Identifying clock translation C^4 with the natural W33 symplectic transvection cannot yield a C3-equivariant bijection: their permutation characters are 540 and 0.",
+  "surviving_bridge": "The cardinality identity 2*27*10=40*27/2=540 remains exact, but it is not equivariant under the natural order-three actions.",
+  "claim_boundary": "This obstructs the natural C3 intertwiner. It does not rule out every artificial bijection after discarding the native group actions."
+}
