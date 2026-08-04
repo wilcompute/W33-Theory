@@ -1,0 +1,188 @@
+name: Passes 3193-3204 Month Audit Seven Front
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'analysis/bt319[3-9]*'
+      - 'analysis/bt3200*'
+      - 'analysis/BT3193_BT3204_*'
+      - 'data/PART_BT3193*'
+      - 'data/PART_BT3200*'
+      - 'data/w33_pass_namespace_registry_v2.d/3193-3204.json'
+      - 'rtl/*3196*'
+      - 'rtl/*3201*'
+      - 'tests/test_bt3193_bt3204_month_audit_seven_front.py'
+      - 'tools/integrate_bt3193_bt3204.py'
+      - '.github/workflows/w33_pass3193_3204_month_audit_seven_front.yml'
+permissions:
+  contents: write
+concurrency:
+  group: pass3193-3204-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-rtl-hx8k-papers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: "${{ github.event.pull_request.head.sha || github.sha }}"
+          fetch-depth: 0
+      - name: Reconcile current master
+        run: |
+          git config user.name w33-reconcile-bot
+          git config user.email actions@users.noreply.github.com
+          git fetch origin master
+          git merge --no-edit origin/master
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact and digital toolchains
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys fpga-icestorm nextpnr-ice40
+          python -m pip install --upgrade pip
+          python -m pip install numpy pytest
+      - uses: wtfjoke/setup-tectonic@v3
+      - name: Recompute all seven fronts
+        run: |
+          python analysis/bt3193_month_claim_genealogy.py
+          python analysis/bt3194_curvature_causal_quotient.py
+          python analysis/bt3195_runtime_information_fusion.py
+          python analysis/bt3196_four_edit_phase_epoch.py
+          python analysis/bt3197_proof_envelope_authorization.py
+          python analysis/bt3198_concurrent_belief_virtualization.py
+          python analysis/bt3199_chromatic_curvature_bridge_falsifier.py
+          python analysis/bt3200_repository_evidence_debt.py
+      - name: Focused exact and fail-closed regressions
+        run: |
+          pytest -q tests/test_bt3193_bt3204_month_audit_seven_front.py
+          python - <<'PY'
+          import json, pathlib
+          data = pathlib.Path('data')
+          fusion = json.loads((data/'PART_BT3195_RUNTIME_INFORMATION_FUSION_results.json').read_text())
+          assert fusion['status'] in {'PARTIAL_RUNTIME_3_OF_194','COMPLETE_RUNTIME_194_OF_194'}
+          if fusion['status'].startswith('PARTIAL'):
+              assert fusion['pending_runtime_records'] == 191
+              assert 'global' not in fusion.get('promotion', '').lower()
+          bridge = json.loads((data/'PART_BT3199_CHROMATIC_CURVATURE_BRIDGE_results.json').read_text())
+          assert bridge['equivariant_bridge_exists_for_natural_relations'] is False
+          genealogy = json.loads((data/'PART_BT3193_MONTH_CLAIM_GENEALOGY_results.json').read_text())
+          assert genealogy['claim_families'] == 12
+          PY
+          git diff --check
+      - name: Simulate epoch, envelope and context contracts
+        run: |
+          iverilog -g2012 -s tb_w33_pass3196_3201_epoch_envelope_virtualization \
+            -o /tmp/pass3196_3201.vvp \
+            rtl/w33_pass3196_3201_epoch_envelope_virtualization.sv \
+            rtl/tb_w33_pass3196_3201_epoch_envelope_virtualization.sv
+          vvp /tmp/pass3196_3201.vvp | tee evidence_pass3196_3201_iverilog.log
+          grep -F 'PASS four-edit epoch, proof-envelope authorization, concurrent trie accounting' \
+            evidence_pass3196_3201_iverilog.log
+      - name: Synthesize and place low-pin HX8K evidence wrappers
+        run: |
+          for top in \
+            w33_pass3201_epoch_hx8k_top \
+            w33_pass3201_envelope_hx8k_top \
+            w33_pass3201_context_hx8k_top
+          do
+            yosys -p "read_verilog -sv rtl/w33_pass3196_3201_epoch_envelope_virtualization.sv rtl/w33_pass3201_hx8k_wrappers.sv; hierarchy -top $top; synth_ice40 -top $top -json /tmp/$top.json; stat" \
+              | tee evidence_${top}_yosys.log
+            nextpnr-ice40 --hx8k --package ct256 --pcf-allow-unconstrained \
+              --json /tmp/$top.json --asc /tmp/$top.asc \
+              |& tee evidence_${top}_nextpnr.log
+            grep -F 'Number of cells' evidence_${top}_yosys.log
+          done
+      - name: Integrate canonical front doors idempotently
+        run: |
+          python tools/integrate_bt3193_bt3204.py
+          sha256sum w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html > /tmp/frontdoor_a
+          python tools/integrate_bt3193_bt3204.py
+          sha256sum w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html > /tmp/frontdoor_b
+          diff -u /tmp/frontdoor_a /tmp/frontdoor_b
+      - name: Compile all three canonical papers
+        run: |
+          tectonic w33_paper.tex
+          tectonic photonic_holonet.tex
+          tectonic holonet_machine_blueprint.tex
+          test -s w33_paper.pdf
+          test -s photonic_holonet.pdf
+          test -s holonet_machine_blueprint.pdf
+      - name: Freeze observed evidence
+        env:
+          HEAD_BRANCH: "${{ github.event.pull_request.head.ref || github.ref_name }}"
+        run: |
+          mkdir -p evidence/pass3193_3204
+          cp evidence_pass3196_3201_iverilog.log evidence/pass3193_3204/
+          cp evidence_w33_pass3201_*_yosys.log evidence/pass3193_3204/
+          cp evidence_w33_pass3201_*_nextpnr.log evidence/pass3193_3204/
+          sha256sum \
+            data/PART_BT3193_MONTH_CLAIM_GENEALOGY_results.json \
+            data/PART_BT3194_CURVATURE_CAUSAL_QUOTIENT_results.json \
+            data/PART_BT3195_RUNTIME_INFORMATION_FUSION_results.json \
+            data/PART_BT3196_FOUR_EDIT_PHASE_EPOCH_results.json \
+            data/PART_BT3197_PROOF_ENVELOPE_AUTHORIZATION_results.json \
+            data/PART_BT3198_CONCURRENT_BELIEF_VIRTUALIZATION_results.json \
+            data/PART_BT3199_CHROMATIC_CURVATURE_BRIDGE_results.json \
+            data/PART_BT3200_REPOSITORY_EVIDENCE_DEBT_results.json \
+            w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
+            > evidence/pass3193_3204/SHA256SUMS
+          python - <<'PY'
+          import json, os, pathlib, re
+          evidence = pathlib.Path('evidence/pass3193_3204')
+          place = {}
+          for path in sorted(evidence.glob('*_nextpnr.log')):
+              text = path.read_text(errors='replace')
+              mhz = re.findall(r'Max frequency for clock[^:]*:\s*([0-9.]+) MHz', text)
+              place[path.name] = {'observed_max_frequency_mhz': [float(x) for x in mhz]}
+          fusion = json.loads(pathlib.Path('data/PART_BT3195_RUNTIME_INFORMATION_FUSION_results.json').read_text())
+          payload = {
+              'schema':'w33.pass3193_3204.observed_evidence.v1',
+              'status':'COMPLETE_EXACT_RTL_HX8K_AND_THREE_PDFS',
+              'commit':os.environ['GITHUB_SHA'],
+              'runtime_information_status':fusion['status'],
+              'runtime_records':fusion['runtime_records'],
+              'pending_runtime_records':fusion['pending_runtime_records'],
+              'placement':place,
+              'digest_boundary':'supplied computed SHA-256 only; no on-core SHA-256 engine',
+              'candidate_boundary':'authorization positive control is synthetic; no accepted M36 candidate is asserted',
+              'bridge_boundary':'only the direct natural equivariant 45-object bridge is falsified',
+              'laboratory_claims':'none'
+          }
+          (evidence/'COMPLETE.json').write_text(json.dumps(payload, indent=2, sort_keys=True)+'\n')
+          PY
+          git config user.name w33-evidence-bot
+          git config user.email actions@users.noreply.github.com
+          git add \
+            w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html \
+            data/PART_BT3193_MONTH_CLAIM_GENEALOGY_results.json \
+            data/PART_BT3194_CURVATURE_CAUSAL_QUOTIENT_results.json \
+            data/PART_BT3195_RUNTIME_INFORMATION_FUSION_results.json \
+            data/PART_BT3196_FOUR_EDIT_PHASE_EPOCH_results.json \
+            data/PART_BT3197_PROOF_ENVELOPE_AUTHORIZATION_results.json \
+            data/PART_BT3198_CONCURRENT_BELIEF_VIRTUALIZATION_results.json \
+            data/PART_BT3199_CHROMATIC_CURVATURE_BRIDGE_results.json \
+            data/PART_BT3200_REPOSITORY_EVIDENCE_DEBT_results.json \
+            evidence/pass3193_3204
+          git add -f w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf
+          if ! git diff --cached --quiet; then
+            git commit -m 'Passes 3193-3204: record observed month-audit seven-front evidence'
+            git push origin HEAD:"$HEAD_BRANCH"
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3193-3204-month-audit-seven-front-evidence
+          path: |
+            evidence/pass3193_3204/
+            data/PART_BT3193_MONTH_CLAIM_GENEALOGY_results.json
+            data/PART_BT3194_CURVATURE_CAUSAL_QUOTIENT_results.json
+            data/PART_BT3195_RUNTIME_INFORMATION_FUSION_results.json
+            data/PART_BT3196_FOUR_EDIT_PHASE_EPOCH_results.json
+            data/PART_BT3197_PROOF_ENVELOPE_AUTHORIZATION_results.json
+            data/PART_BT3198_CONCURRENT_BELIEF_VIRTUALIZATION_results.json
+            data/PART_BT3199_CHROMATIC_CURVATURE_BRIDGE_results.json
+            data/PART_BT3200_REPOSITORY_EVIDENCE_DEBT_results.json
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
