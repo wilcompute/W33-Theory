@@ -1,0 +1,22 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "3286-3297",
+  "owner": "agent/pass3286-3297-hamming-orbifold-dual-guard",
+  "status": "in_progress_evidence_gated",
+  "reserved_after": "master through parallel Passes 3262-3265; Passes 3274-3285 remain separately reserved",
+  "passes": {
+    "3286": "close the full switch-connected PSp(4,3) exact-cover orbit component",
+    "3287": "prove the weighted quotient is H(5,3) modulo the C4-induced affine involution",
+    "3288": "compile the rational 26-dimensional port algebra into exact PSD blocks",
+    "3289": "construct and test the profile-aware rational chromatic dual surface",
+    "3290": "compile the S3 standard-irrep and Wilson-class decoder in RTL",
+    "3291": "consume terminal shard evidence and refine only UNKNOWN chromatic cubes",
+    "3292": "parameterize the integral spiral guard controller over p=2,3,5,7",
+    "3293": "verify selector coverage, group orders and fail-closed modular RTL",
+    "3294": "test the eight-sector D(S3) anyon analogy against the eight-dimensional port center",
+    "3295": "derive the Hamming-orbifold eigenspace and reversible cover-walk compiler",
+    "3296": "integrate exact theorem inserts into all canonical front doors",
+    "3297": "focused tests, workflows, evidence ledger and publication boundary"
+  },
+  "claim_boundary": "No chi(H)=10 or 11 decision, global classification outside the closed switch component, physical anyon identification, observed RTL/synthesis/placement, successful PDF, calibration result or spacetime claim is promoted without dedicated checked evidence."
+}
