@@ -1,0 +1,11 @@
+{
+  "schema": "w33.pass3250_3261.verification_summary.v1",
+  "local_python_syntax": "PASS",
+  "local_pytest": "4/4 PASS",
+  "local_semantic_sha256": "cd30b56ef15d8cf269380a4052a9db8e9f308ab47c0571ed75203c6b04196eb3",
+  "local_cover_checkpoint": "42 orbit species; 486000 exact covers; 32-species frontier open",
+  "local_rtl": "UNOBSERVED_IF_ICARUS_UNAVAILABLE",
+  "external_focus": "PENDING_WORKFLOW",
+  "external_sat": "PASS_3244_RUN_REMAINS_SEPARATE_AND_QUEUED_AT_SOURCE_TIME",
+  "claim_boundary": "No global cover classification, chi(H) decision, observed RTL/synthesis/placement, materialized front doors, PDFs or physical calibration is promoted from source-only evidence."
+}

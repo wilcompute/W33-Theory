@@ -1,0 +1,47 @@
+name: Passes 3250-3261 Readable Source Bootstrap
+on:
+  pull_request:
+    paths:
+      - 'bootstrap/pass3250_3261/**'
+      - '.github/workflows/w33_pass3250_3261_bootstrap.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'bootstrap/pass3250_3261/**'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Materialize and verify exact readable packet
+        run: |
+          python bootstrap/pass3250_3261/materialize.py
+          python - <<'PY'
+          import hashlib,json,pathlib
+          root=pathlib.Path('.')
+          m=json.loads((root/'bootstrap/pass3250_3261/manifest.json').read_text())
+          for p,h in m['files'].items():
+              assert hashlib.sha256((root/p).read_bytes()).hexdigest()==h,(p,h)
+          print('PASS 15/15 materialized hashes')
+          PY
+      - name: Focused exact source validation
+        run: |
+          python -m pip install --disable-pip-version-check numpy sympy pytest
+          python analysis/bt3250_3260_cover_decoder_wedderburn.py
+          python -m pytest -q tests/test_bt3250_3261_cover_decoder_wedderburn.py
+      - name: Publish readable files once
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add .github/workflows/w33_pass3250_3261_cover_decoder_wedderburn.yml .github/workflows/w33_pass3256_adaptive_cube_manual.yml analysis/bt3250_3251_cover_orbit_augmentation.py analysis/bt3252_3253_s3_decoder.py analysis/bt3254_3255_port_wedderburn.py analysis/bt3256_adaptive_chromatic_cube.py analysis/bt3258_3259_modular_spiral_tower.py analysis/bt3250_3260_cover_decoder_wedderburn.py analysis/BT3250_BT3261_cover_decoder_wedderburn.md data/PART_BT3250_BT3251_COVER_AUGMENTATION_results.json data/PART_BT3252_BT3253_S3_DECODER_results.json data/PART_BT3254_BT3255_PORT_WEDDERBURN_results.json data/PART_BT3256_ADAPTIVE_CHROMATIC_CUBE_results.json data/PART_BT3258_BT3259_MODULAR_SPIRAL_TOWER_results.json data/PART_BT3250_BT3261_COVER_DECODER_WEDDERBURN_results.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Materialize Passes 3250-3261 readable source [skip ci]'
+            git push
+          fi

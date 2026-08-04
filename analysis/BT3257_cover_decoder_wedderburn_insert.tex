@@ -1,0 +1,27 @@
+% BEGIN PASS 3250-3261 COVER DECODER WEDDERBURN
+\subsection{Cover-orbit growth, non-Abelian port decoding, and rational port blocks}
+The five local four-for-four switches do not close after the two \(PSp(4,3)\) orbits meeting the original 243-cover family.  A deterministic canonical-augmentation checkpoint fully expands ten orbit species and certifies 42 pairwise-disjoint group orbits containing
+\[
+9(6480)+33(12960)=486000
+\]
+distinct 60-frame independent sets, each covering all 240 W33 supports exactly once.  Thirty-two orbit species remain on the replacement frontier, so this is a lower bound rather than a global classification.
+
+For the \(S_3\)-valued port connection, every nonidentity triangular syndrome has three weight-one explanations.  There are exactly 3600 weight-two flat non-gauge assignments, proving non-Abelian distance two.  A known-location single-edge error is corrected exactly, whereas syndrome alone has guaranteed correction radius zero; the controller therefore requires reliability/location side information and fails closed on ties.
+
+The 26-dimensional split-port Terwilliger algebra admits the exact rational decomposition
+\[
+\mathcal T_{\rm port}\cong\mathbb Q^6\oplus M_2(\mathbb Q)\oplus M_4(\mathbb Q).
+\]
+On the 135-cell module the \(M_2\) block has rank 18 and multiplicity nine, while the \(M_4\) block has rank four and multiplicity one.  Symmetric SDP constraints reduce to six scalars, one \(2\times2\) PSD block and one \(4\times4\) PSD block.  No rational dual excluding ten colours is yet claimed.
+
+Supports \(0,\ldots,7\) have pairwise-disjoint nine-frame incidence sets.  They define a proof-carrying adaptive cube extending the present 100 shards through depths three to seven.  The exact identity
+\[
+m_c=240-4s_c=4(60-s_c)
+\]
+forces every missing-colour count to be divisible by four.  Nevertheless, without a checked model or a complete verified proof tree the live boundary remains
+\[
+10\leq\chi(H)\leq11.
+\]
+
+Finally, the integral golden spiral obeys \(SRS=R^{-1}\).  Its prime reductions form a dihedral guard tower: the even rotation/reflection subgroup is \(S_3\) modulo two, \(D_4\) modulo three, pentagonal modulo five, and octagonal modulo seven.  The binary port code is only the sign-character shadow of the full \(S_3\) connection; the two-dimensional standard Fourier channel detects three-cycle faults invisible to the sign bit.
+% END PASS 3250-3261 COVER DECODER WEDDERBURN
