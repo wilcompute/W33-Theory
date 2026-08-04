@@ -1,0 +1,23 @@
+name: Passes 3165-3166 Full M36 Census
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  census-plan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy
+      - name: Validate sharded census contract
+        run: python analysis/bt3165_3166_m36_sharded_census.py --mode plan | tee pass3165_plan.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3165-m36-census-plan
+          path: |
+            pass3165_plan.log
+            data/PART_BT3165*.json
