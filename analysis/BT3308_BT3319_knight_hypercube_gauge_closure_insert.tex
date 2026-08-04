@@ -1,0 +1,108 @@
+% BEGIN PASS 3308-3319 KNIGHT HYPERCUBE GAUGE CLOSURE
+\subsection{Knight-hypercube gauge closure and the typed common controller}
+
+The local signature and natural-port alphabets become isomorphic after restriction
+to the orientation subgroup $C_3$, but the choice is highly noncanonical.  The
+filled port complex has $\pi_1\cong F_{436}$.  After freezing the pairing of the
+five three-cycles, its phase group is $A=C_3^5$, and therefore
+\[
+H^1(X;A)\cong A^{436}\cong\mathbb F_3^{2180}.
+\]
+Without freezing orbit pairing, the local intertwiner group is
+$W=C_3\wr S_5$ of order $3^5 5!=29160$.  Burnside enumeration over the
+$108$ wreath-product conjugacy types gives a $1943$-digit number of flat
+$W$-connections modulo switching.  A trivial coboundary gauge exists, but the
+geometry does not select one canonically.
+
+The minimal common envelope is the $22$-state $S_3$-set
+\[
+\Omega_{\rm env}\cong 1\sqcup3(S_3/C_2)\sqcup2S_3.
+\]
+Its character and rational module are
+\[
+\chi_{\rm env}=(22,4,1),\qquad
+\mathbb Q[\Omega_{\rm env}]
+\cong6\mathbf1\oplus2\,\mathrm{sgn}\oplus7V_{\rm std}.
+\]
+Consequently
+\[
+\dim\operatorname{End}_{S_3}\mathbb Q[\Omega_{\rm env}]
+=6^2+2^2+7^2=89.
+\]
+Direct enumeration gives orbital profile $1^1 3^{15}6^{73}$.  Algebra closure
+over two independent large prime fields gives the basepoint-dependent
+Terwilliger dimensions
+\[
+\dim T_x=
+\begin{cases}
+89,&x\text{ fixed},\\
+222,&x\text{ in a three-state orbit},\\
+484=22^2,&x\text{ in a regular six-state orbit}.
+\end{cases}
+\]
+Thus a regular signature basepoint generates the full matrix algebra and admits
+no further exact algebraic compression.
+
+The ten unused five-bit words form
+\[
+\Omega_{\rm guard}\cong1\sqcup3(S_3/C_2),
+\qquad
+\mathbb Q[\Omega_{\rm guard}]
+\cong4\mathbf1\oplus3V_{\rm std}.
+\]
+In particular the guard shell contains no sign constituent.  Its coherent
+algebra has rank $25$, and its Terwilliger dimensions are $25$ and $58$ on the
+two orbit types.  As an induced $Q_5$ network it has seven internal edges,
+thirty-six boundary edges, and component sizes $7,1,1,1$; this is a typed
+detection shell, not a fault-tolerant memory.
+
+The repository's $4\times4$ toroidal knight graph is exactly $Q_4$, and the
+frozen knight tour is a four-bit Gray Hamilton cycle.  The nonlinear signature
+controller contains seven transpositions and five three-cycles.  The
+transpositions contribute at least fourteen directed hops.  Since $Q_4$ is
+bipartite, each embedded three-cycle has metric perimeter at least four, so
+\[
+\text{total routing work}\ge14+5\cdot4=34.
+\]
+An exhaustive componentwise placement census attains the bound:
+\[
+\boxed{\text{minimum work}=34,\quad
+\text{average}=\frac{17}{16},\quad
+\text{minimum dilation}=2.}
+\]
+There are $1105920$ minimum-work labeled embeddings.  After fixing translation
+and quotienting coordinate permutations, all $2880$ representatives were
+routed exhaustively.  No minimum-work embedding has shortest-path link
+congestion below three, and congestion three is attained.
+
+The five-bit affine lift has the network decomposition
+\[
+Q_5=Q_4\square K_2,
+\]
+so it is two toroidal-knight boards joined by a sixteen-edge perfect matching.
+For both $S_3$ generators the binary column-weight profile is
+\[
+(1,1,1,1,2).
+\]
+Four basis directions remain one-hop routes; only the added symmetry direction
+is dilated to two.  This turns the one-bit symmetry overhead into a literal
+double-board interconnect theorem.
+
+Finally, the $45$ signature orbitals are not intrinsically individually
+labelled.  The order-$72$ automorphism group of the signature $S_3$-set acts on
+them with only thirteen orbits, of sizes
+\[
+1^5\,2^3\,4^1\,6^3\,12^1.
+\]
+Hence the equality between forty-five anchor octets and forty-five signature
+orbitals does not define a canonical correspondence from local data alone; any
+such lift needs extra global $PSp(4,3)$-equivariant structure.
+
+A complete canonical $C_3$ coboundary-gauge manifest is emitted for all
+$45$ blocks, $720$ block edges and $240$ filled triangles.  It is an exact
+bijective relabelling with transported interfaces, not a reduction or decision
+of the current ten-colour instance.  The live boundary remains
+\[
+\boxed{10\le\chi(H)\le11}.
+\]
+% END PASS 3308-3319 KNIGHT HYPERCUBE GAUGE CLOSURE
