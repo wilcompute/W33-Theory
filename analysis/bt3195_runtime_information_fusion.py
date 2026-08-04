@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Pass 3195: fail-closed fusion of all-194 information with observed affine BFS.
 
-The information census is complete. Runtime is joined only for exact 4,199,040-state BFS
-records. A complete Pass-3163 aggregate is accepted when present; otherwise the three frozen
-records are used and the other 191 designs remain explicitly pending.
+The information census is complete. Runtime is joined only for exact 4,199,040-state
+BFS records whose generator sets belong to the 80 five-opcode or 114 six-opcode
+census. A complete Pass-3163 aggregate is accepted when present; otherwise one
+frozen six-opcode record joins the census and two four-opcode records remain typed
+as out-of-census baselines.
 """
 from __future__ import annotations
 
@@ -97,7 +99,11 @@ def information_rows() -> list[dict]:
             if len(linear) != 51_840:
                 continue
             translations = [TRANS[name] for name in subset if name.startswith("Z")]
-            if rank_stream((matrix @ translation) % 3 for matrix in linear for translation in translations) != 4:
+            if rank_stream(
+                (matrix @ translation) % 3
+                for matrix in linear
+                for translation in translations
+            ) != 4:
                 continue
             entropies = []
             collisions = 0
@@ -105,7 +111,9 @@ def information_rows() -> list[dict]:
                 destinations = []
                 seen = set()
                 for name in subset:
-                    destination = VECTOR_INDEX[tuple(map(int, (MATS[name] @ vector + TRANS[name]) % 3))]
+                    destination = VECTOR_INDEX[
+                        tuple(map(int, (MATS[name] @ vector + TRANS[name]) % 3))
+                    ]
                     destinations.append(destination)
                     if destination == frame or destination in seen:
                         collisions += 1
@@ -114,17 +122,19 @@ def information_rows() -> list[dict]:
                 probabilities = [count / size for count in counts.values()]
                 entropies.append(-sum(p * math.log2(p) for p in probabilities))
             average = float(np.mean(entropies))
-            rows.append({
-                "generators": list(subset),
-                "size": size,
-                "information_average": average,
-                "information_minimum": min(entropies),
-                "information_maximum": max(entropies),
-                "information_variance": float(np.var(entropies)),
-                "information_normalized": average / math.log2(size),
-                "collision_probability": collisions / (81 * size),
-                "decoder_operation_units": sum(OPS[name] for name in subset),
-            })
+            rows.append(
+                {
+                    "generators": list(subset),
+                    "size": size,
+                    "information_average": average,
+                    "information_minimum": min(entropies),
+                    "information_maximum": max(entropies),
+                    "information_variance": float(np.var(entropies)),
+                    "information_normalized": average / math.log2(size),
+                    "collision_probability": collisions / (81 * size),
+                    "decoder_operation_units": sum(OPS[name] for name in subset),
+                }
+            )
     rows.sort(key=lambda row: (row["size"], row["generators"]))
     assert len(rows) == 194
     assert sum(row["size"] == 5 for row in rows) == 80
@@ -133,15 +143,21 @@ def information_rows() -> list[dict]:
 
 FROZEN_RUNTIME = {
     frozenset(("F_p", "CX_pf", "CX_fp", "Z1")): {
-        "name": "current4", "mean_distance": 14.175585133744857, "diameter": 19,
+        "name": "current4",
+        "mean_distance": 14.175585133744857,
+        "diameter": 19,
         "group_order_reached": 4_199_040,
     },
     frozenset(("CX_fp", "CX_pf", "F_f", "Z0")): {
-        "name": "low4", "mean_distance": 15.216323969288219, "diameter": 20,
+        "name": "low4",
+        "mean_distance": 15.216323969288219,
+        "diameter": 20,
         "group_order_reached": 4_199_040,
     },
     frozenset(("F_f", "CX_pf", "CX_fp", "Z0", "Z1", "Z3")): {
-        "name": "fast6", "mean_distance": 13.72936957018747, "diameter": 19,
+        "name": "fast6",
+        "mean_distance": 13.72936957018747,
+        "diameter": 19,
         "group_order_reached": 4_199_040,
     },
 }
@@ -149,7 +165,7 @@ FROZEN_RUNTIME = {
 
 def runtime_records() -> tuple[dict[frozenset[str], dict], str]:
     if not AGGREGATE.exists():
-        return dict(FROZEN_RUNTIME), "PARTIAL_RUNTIME_3_OF_194"
+        return dict(FROZEN_RUNTIME), "PARTIAL_RUNTIME_1_OF_194_PLUS_2_BASELINES"
     data = json.loads(AGGREGATE.read_text(encoding="utf-8"))
     records = data.get("records", [])
     assert len(records) == 194
@@ -173,7 +189,8 @@ def dominates(left: dict, right: dict) -> bool:
         and left["information_minimum"] >= right["information_minimum"] - 1e-12
         and left["collision_probability"] <= right["collision_probability"] + 1e-12
         and left["decoder_operation_units"] <= right["decoder_operation_units"]
-        and left["runtime"]["mean_distance"] <= right["runtime"]["mean_distance"] + 1e-12
+        and left["runtime"]["mean_distance"]
+        <= right["runtime"]["mean_distance"] + 1e-12
         and left["runtime"]["diameter"] <= right["runtime"]["diameter"]
     )
     strict = (
@@ -181,7 +198,8 @@ def dominates(left: dict, right: dict) -> bool:
         or left["information_minimum"] > right["information_minimum"] + 1e-12
         or left["collision_probability"] < right["collision_probability"] - 1e-12
         or left["decoder_operation_units"] < right["decoder_operation_units"]
-        or left["runtime"]["mean_distance"] < right["runtime"]["mean_distance"] - 1e-12
+        or left["runtime"]["mean_distance"]
+        < right["runtime"]["mean_distance"] - 1e-12
         or left["runtime"]["diameter"] < right["runtime"]["diameter"]
     )
     return weak and strict
@@ -189,30 +207,78 @@ def dominates(left: dict, right: dict) -> bool:
 
 def main() -> None:
     information = information_rows()
+    information_by_key = {
+        frozenset(row["generators"]): row for row in information
+    }
     runtime, status = runtime_records()
     joined = []
-    for row in information:
-        observed = runtime.get(frozenset(row["generators"]))
-        if observed is not None:
+    out_of_census_baselines = []
+    for key, observed in runtime.items():
+        row = information_by_key.get(key)
+        if row is None:
+            out_of_census_baselines.append(
+                {
+                    "generators": sorted(key),
+                    "runtime": observed,
+                    "reason": (
+                        "four-opcode baseline outside the frozen five/six-opcode "
+                        "194-design information census"
+                    ),
+                }
+            )
+        else:
             joined.append(dict(row, runtime=observed))
-    assert len(joined) == len(runtime)
-    frontier = [row for row in joined if not any(dominates(other, row) for other in joined)]
+
+    joined.sort(key=lambda row: (row["size"], row["generators"]))
+    out_of_census_baselines.sort(key=lambda row: row["generators"])
+    assert len(joined) + len(out_of_census_baselines) == len(runtime)
+    if status == "COMPLETE_RUNTIME_194_OF_194":
+        assert len(joined) == 194
+        assert not out_of_census_baselines
+    else:
+        assert len(joined) == 1
+        assert len(out_of_census_baselines) == 2
+
+    frontier = [
+        row for row in joined if not any(dominates(other, row) for other in joined)
+    ]
     result = {
-        "schema": "w33.pass3195.runtime_information_fusion.v1",
+        "schema": "w33.pass3195.runtime_information_fusion.v2",
         "status": status,
         "information_records": len(information),
-        "runtime_records": len(runtime),
+        "runtime_records_total": len(runtime),
         "joined_records": len(joined),
-        "pending_runtime_records": 194 - len(runtime),
+        "out_of_census_baseline_count": len(out_of_census_baselines),
+        "out_of_census_baselines": out_of_census_baselines,
+        "pending_runtime_records": 194 - len(joined),
         "joined_pareto_count": len(frontier),
         "joined_pareto": frontier,
         "joined_records_detail": joined,
-        "promotion_rule": "A global runtime-information optimum exists only when status is COMPLETE_RUNTIME_194_OF_194 and every record reaches order 4,199,040.",
-        "boundary": "Information is complete for all 194 designs. Runtime fusion is exact only for observed full-BFS records; missing rows are never estimated from the 81-frame graph. Placement cost and physical energy remain separate."
+        "promotion_rule": (
+            "A global runtime-information optimum exists only when status is "
+            "COMPLETE_RUNTIME_194_OF_194 and every joined record reaches order 4,199,040."
+        ),
+        "boundary": (
+            "Information is complete for all 194 five/six-opcode designs. Runtime fusion "
+            "is exact only for observed full-BFS records belonging to that census; "
+            "current4 and low4 are typed four-opcode baselines, not two of the 194. "
+            "Missing rows are never estimated from the 81-frame graph. Placement cost "
+            "and physical energy remain separate."
+        ),
     }
     DATA.mkdir(exist_ok=True)
     OUT.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    print(json.dumps({"status": status, "joined": len(joined), "frontier": len(frontier)}, sort_keys=True))
+    print(
+        json.dumps(
+            {
+                "status": status,
+                "joined": len(joined),
+                "baselines": len(out_of_census_baselines),
+                "frontier": len(frontier),
+            },
+            sort_keys=True,
+        )
+    )
 
 
 if __name__ == "__main__":
