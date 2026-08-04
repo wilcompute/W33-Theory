@@ -1,0 +1,67 @@
+{
+  "pass_2990": {
+    "cross_track": "parallel Pass 2977 independently found its six non-CSS hits were accepted-clean-state stabilizer projectors -- same conclusion, different method",
+    "orthogonal_pairs": 18,
+    "projection_norm": 0.408248290463863,
+    "witnesses": 19
+  },
+  "pass_2992": {
+    "found": false,
+    "nodes_searched": 1200070
+  },
+  "pass_2993": {
+    "layers": [
+      {
+        "bits": 6.339850002884624,
+        "bits_erased": 0.0,
+        "kind": "reversible",
+        "layer": "Pauli frame",
+        "meV": 0.0,
+        "states": 81
+      },
+      {
+        "bits": 5.321928094887363,
+        "bits_erased": 5.321928094887363,
+        "kind": "consumed per hop",
+        "layer": "route address (spread line)",
+        "meV": 95.36491085993993,
+        "states": 40
+      },
+      {
+        "bits": 4.0,
+        "bits_erased": 2.6666666666666665,
+        "kind": "lossy projection",
+        "layer": "support readout",
+        "meV": 47.78464203681093,
+        "states": 16
+      },
+      {
+        "bits": 5.321928094887363,
+        "bits_erased": 0.0,
+        "kind": "reversible",
+        "layer": "OAM x slot (parallel track)",
+        "meV": 0.0,
+        "states": 40
+      },
+      {
+        "bits": 1.0,
+        "bits_erased": 0.0,
+        "kind": "reversible",
+        "layer": "encode/check sector",
+        "meV": 0.0,
+        "states": 2
+      },
+      {
+        "bits": 12.661778097771988,
+        "bits_erased": 0.0,
+        "kind": "reversible",
+        "layer": "full controller (parallel track)",
+        "meV": 0.0,
+        "states": 6480
+      }
+    ],
+    "total_bits": 34.645484290431334,
+    "total_erased_bits": 7.98859476155403,
+    "total_meV": 143.14955289675083
+  }
+}

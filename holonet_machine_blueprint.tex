@@ -282,6 +282,17 @@ opcodes it has because those are the symmetries of that geometry. This is what t
 of the document demonstrates, layer by layer.
 
 % =====================================================================================
+\clearpage
+\begin{center}
+\begin{tikzpicture}
+  \node[draw=ink,line width=1pt,rounded corners=2pt,inner sep=12pt,
+        text width=0.84\linewidth,align=center,fill=specbg]
+  {\Large\bfseries Part I --- The object\\[6pt]
+   \normalfont\small\itshape One finite geometry, defined by a single congruence, and everything it already contains before anyone designs anything.};
+\end{tikzpicture}
+\end{center}
+\vspace{4mm}
+
 \section{Qutrits, and what ``self-entangled'' means}\label{sec:physics}
 % =====================================================================================
 
@@ -717,6 +728,24 @@ exceptional structure $E_6$ have the same order --- $51{,}840$ --- only at $q=3$
 roots of $E_8$, and the count of non-base elements in the degree-five extension of the
 three-element field. Three conditions, one number, no free parameters.}
 
+\begin{spec}[All five, for completeness]
+\begin{center}\small
+\begin{tabular}{@{}rp{8.4cm}l@{}}
+\toprule
+\# & condition & forces\\
+\midrule
+1 & $q^5-q$ equals the $GQ(q,q)$ edge count & $q=3$ uniquely\\
+2 & $\sin^2\theta_W = 3/8$ at unification & $3q^2-10q+3=0\Rightarrow q=3$\\
+3 & $K_{q+1}$ has exactly $q$ perfect matchings & only $q=3$: $K_4$ has $3$\\
+4 & non-neighbours $=\dim(E_6$ fundamental$)$ & $v-k-1=q^3=27\Rightarrow q=3$\\
+5 & $|\mathrm{PGSp}(4,q)| = |W(E_6)|$ & the order equality selects $q=3$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Every one has $q$ as an integer unknown and exactly one positive solution. Prior art:
+\cmd{docs/index.html} owns all five.
+\end{spec}
+
 \begin{plain}
 Three more conditions in the same family --- involving the electroweak mixing angle at
 unification, the number of perfect matchings of a small complete graph, and the dimension
@@ -766,16 +795,19 @@ section removes that ambiguity from the architecture.
 \end{plain}
 
 \begin{spec}[Representation contract]
-\begin{tabular}{@{}p{3.2cm}p{2.1cm}p{6.4cm}@{}}
+\footnotesize
+\noindent\makebox[\linewidth][l]{\begin{minipage}{0.97\linewidth}
+\begin{tabular}{@{}p{2.9cm}p{1.8cm}p{7.2cm}@{}}
 \toprule
 \textbf{Representation} & \textbf{Width} & \textbf{Contract} \\
 \midrule
-Affine frame code & $7$ bits & Lossless code for all $81$ Pauli frames; execution may read and write it. \\
+Affine frame code & $7$ bits & Lossless for all $81$ frames; execution may read and write it. \\
 Support telemetry & $4$ bits & Zero/nonzero mask only; frame $\to$ support is one-way in the netlist. \\
-Protected observer & $24$ or $28$ taps & Diagnostic feature word used for identification/correction, not the live datapath. \\
-Typed control token & $7$ raw bits, $96$ valid & Selects face, matching channel, and tomotope phase cell. \\
+Protected observer & $24$--$28$ taps & Diagnostic word for identification, not the live datapath. \\
+Typed control token & $7$ raw, $96$ valid & Selects face, matching channel, and tomotope phase cell. \\
 \bottomrule
 \end{tabular}
+\end{minipage}}
 \end{spec}
 
 \begin{gotwrong}[Support is observable, not executable]
@@ -795,6 +827,17 @@ induces $\operatorname{AGL}(1,3)\cong S_3$.  There is therefore no globally equi
 numbering $0,1,2$.  Hardware may choose a local encoding, but interfaces transport it as
 an affine-line torsor rather than pretending the labels are geometric invariants.
 \end{spec}
+
+\clearpage
+\begin{center}
+\begin{tikzpicture}
+  \node[draw=ink,line width=1pt,rounded corners=2pt,inner sep=12pt,
+        text width=0.84\linewidth,align=center,fill=specbg]
+  {\Large\bfseries Part II  --- The machine\\[6pt]
+   \normalfont\small\itshape What the geometry forces the instruction set, the datapath and the virtualisation layer to be --- measured on real silicon throughout.};
+\end{tikzpicture}
+\end{center}
+\vspace{4mm}
 
 \section{The instruction set}\label{sec:isa}
 % =====================================================================================
@@ -1315,6 +1358,17 @@ number would survive.
 \end{gotwrong}
 
 % =====================================================================================
+\clearpage
+\begin{center}
+\begin{tikzpicture}
+  \node[draw=ink,line width=1pt,rounded corners=2pt,inner sep=12pt,
+        text width=0.84\linewidth,align=center,fill=specbg]
+  {\Large\bfseries Part III  --- The physics\\[6pt]
+   \normalfont\small\itshape Light, magic states, thermodynamics: where the machine touches the world, and exactly how far the evidence goes.};
+\end{tikzpicture}
+\end{center}
+\vspace{4mm}
+
 \section{The physical layer}
 % =====================================================================================
 
@@ -2286,6 +2340,104 @@ nine branches, and $32$ random superpositions. Total conditional success probabi
 \end{spec}
 
 % =====================================================================================
+% =====================================================================================
+\section{What the other track built}\label{sec:crosstrack}
+% =====================================================================================
+
+\begin{plain}
+Two independent efforts work on this machine and do not read each other's filenames.
+That is a structural problem, not a discipline one, and the remedy this project uses is
+to cite across the boundary rather than re-derive. This section is that citation: work
+the other track owns, which this blueprint depends on and did not do.
+\end{plain}
+
+\begin{spec}[Owned elsewhere, relied on here]
+\begin{center}\footnotesize
+\begin{tabular}{@{}p{4.6cm}p{9.2cm}@{}}
+\toprule
+\textbf{Result} & \textbf{What it says}\\
+\midrule
+$M_{36}$ deep-grade protocol & $48$ improving branches; explicit curve improving on $0<p<2/3$. \S\ref{sec:magic} reports the yield and the linear rate; the protocol is theirs\\
+Support observer & Support is not an execution congruence ($16\to40\to78\to81$); a six-cycle observer with exactly $8$ taps reconstructs the frame, and $7$ provably do not\\
+Nine-gate $M_{36}$ branch & The old $15$-gate circuit's two terminal SWAPs are relabelling, not computation. $6$ CNOT $+$ $3H$, and enumerated faults fall $191\to101$\\
+Route fault localisation & $23$ triangles is the \emph{exact} optimum for single-edge localisation; $29$ distinguishes all $48{,}826$ two-edge hypotheses\\
+Controller group & Native controls generate order $30{,}233{,}088 = 2^9 3^{10}$; one extra transvection closes it to $A_{40}$\\
+$D_{12}$ curvature clock & $6480 = 540\times12$: every controller state lies on a $12$-cycle, giving a geometry-native reversible clock\\
+Adaptive chirality receiver & $P_{\mathrm{opt}}(n)=\tfrac12(1+\sqrt{1-3^{-n}})$; $0.9997$ at six copies\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{spec}
+
+\headline{And once, both tracks reached the same conclusion by different methods on the same day.}
+
+\begin{plain}
+This document found $36$ rank-one stabilizer witnesses for the three-copy distillation condition, and showed they are useless because a rank-one projector's range is a
+stabilizer state, which carries no magic. The other track, searching $649{,}940$
+isotropic subspaces for non-CSS projectors, found six exact hits and reported them as
+``accepted-clean-state stabilizer projectors, therefore false leads.''
+
+Same finding, opposite directions, neither aware of the other. That is what the citation
+protocol is for --- and it is also the strongest evidence either result is right.
+\end{plain}
+
+\clearpage
+\begin{center}
+\begin{tikzpicture}
+  \node[draw=ink,line width=1pt,rounded corners=2pt,inner sep=12pt,
+        text width=0.84\linewidth,align=center,fill=specbg]
+  {\Large\bfseries Part IV  --- The evidence\\[6pt]
+   \normalfont\small\itshape How every number above is known, what we got wrong on the way, and the commands that reproduce all of it.};
+\end{tikzpicture}
+\end{center}
+\vspace{4mm}
+
+% =====================================================================================
+\section{Every bit in the machine}\label{sec:budget}
+% =====================================================================================
+
+\begin{plain}
+Scattered through this document are the sizes of the machine's parts: eighty-one
+frames, forty addresses, sixteen support classes. Here they are in one place, with the
+only question that matters thermodynamically attached to each --- when you use it, does
+anything get destroyed?
+\end{plain}
+
+\begin{spec}[The whole state, and its Landauer floor]
+\begin{center}\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+layer & states & bits & erased & meV @ $300$\,K\\
+\midrule
+Pauli frame & $81$ & $6.340$ & $0$ & $0$\\
+route address & $40$ & $5.322$ & $5.322$ & $95.37$\\
+support readout & $16$ & $4.000$ & $2.667$ & $47.79$\\
+OAM $\times$ slot & $40$ & $5.322$ & $0$ & $0$\\
+encode/check sector & $2$ & $1.000$ & $0$ & $0$\\
+full controller & $6480$ & $12.662$ & $0$ & $0$\\
+\midrule
+\textbf{total} & & $\mathbf{34.65}$ & $\mathbf{7.99}$ & $\mathbf{143.15}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{spec}
+
+\headline{The machine's whole state is $34.65$ bits, and only $7.99$ of them cost
+anything to use.}
+
+\begin{plain}
+Two lines in that table are non-zero and the rest are exactly zero, for one reason:
+those two are the only places where the machine stops being a group action. The routing
+header is $\emph{destroyed}$ as it is consumed. The support readout is many-to-one.
+Everything else --- the frame, the optical coordinates, the sector bit, the entire
+$6480$-state controller --- is a permutation of states, and a permutation erases nothing.
+
+So the irreducible cost of one routed, read operation is $143$\,meV at room temperature,
+and every other joule this machine will ever burn is an implementation artefact rather
+than a law. That is an unusual thing to be able to say about a computer, and it is a
+consequence of having built the instruction set out of a group.
+\end{plain}
+
 \section{Verification: how we know}\label{sec:verification}
 % =====================================================================================
 
