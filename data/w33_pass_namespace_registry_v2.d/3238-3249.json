@@ -1,0 +1,22 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "3238-3249",
+  "owner": "agent/pass3238-3249-switch-gauge-spiral-breakthrough",
+  "status": "source_complete_evidence_gated",
+  "reserved_after": "master through Passes 3226-3237; preserves open PR 248 Passes 3214-3225",
+  "passes": {
+    "3238": "reconstruct the complete PSp(4,3) action on the 243 exact-cover switch family",
+    "3239": "classify the C4 setwise stabilizer, affine involution, cover stabilizers and full-group orbit sizes",
+    "3240": "tree-gauge the 45-block/720-edge/240-face port complex and prove pi1 is free of rank 436",
+    "3241": "count flat S3 switching classes exactly and identify the binary CSS layer as the sign-character shadow",
+    "3242": "realify the golden quarter-turn as an integral O(2,2) bi-symplectic recurrence with reversal",
+    "3243": "derive and compile the faithful mod-2 S3 matching selector for the six K3,3 matchings",
+    "3244": "execute all 100 bounded diagnostic shards and install proof-producing SAT/DRAT lanes",
+    "3245": "validate SAT models and UNSAT proofs fail-closed and aggregate all 100 shard records",
+    "3246": "outside-box weighted ternary fixed-27 code and exhaustive Schlaefli falsifier",
+    "3247": "outside-box non-Abelian logical-port interpretation and spiral finite-quotient bridge",
+    "3248": "canonical manuscript and public-site integration with stale-boundary correction",
+    "3249": "focused tests, RTL/PDF workflow, semantic hash and publication evidence boundary"
+  },
+  "claim_boundary": "No ten-colouring, ten-colour UNSAT proof, global classification of all exact covers, physical port calibration, observed RTL/synthesis/placement, compiled PDF or spacetime claim is promoted without its dedicated checked evidence."
+}
