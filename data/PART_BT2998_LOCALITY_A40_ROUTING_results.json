@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass2998.locality_weighted_address_library.v1",
+  "status": "COMPLETE_EXACT_POINT_ROUTING_LIBRARY",
+  "check_count": 5,
+  "checks": {"all_1600_routes": true, "all_words_replay": true, "diameter_two": true, "distance_histogram": true, "one_step_exactly_noncommuting_pairs": true},
+  "distance_histogram": {"0": 40, "1": 1080, "2": 480},
+  "diameter": 2,
+  "theorem": "Every noncommuting address pair is connected by one symplectic transvection; every distinct commuting W33-adjacent pair requires exactly two. The practical address-routing diameter is two.",
+  "modeled_survival_if_eta_transvection_0p995": {"one_step": 0.995, "two_step": 0.990025},
+  "primitive_interpretation": "Each transvection is a rank-one symplectic shear on F3^4. The exact generator regenerates the complete 1,600-pair canonical word library.",
+  "claim_boundary": "Exact projective address words. This is a useful point-transfer library, not a shortest-word atlas for every element of A40. Optical loss is unmeasured."
+}
