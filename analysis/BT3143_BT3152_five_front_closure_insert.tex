@@ -1,0 +1,93 @@
+\subsection{Five-front closure: sparse inference, edit epochs, and the universal ISA price}
+\label{sec:bt3143-3152-five-front}
+
+The controller is now organized as
+\[
+ \text{candidate}\to\text{independent certifier}\to\text{sparse posterior}
+ \to\text{costed action}\to\text{edit state}\to\text{recursive context}
+ \to\text{calibrated dispatch}\to\text{reset}.
+\]
+This section records the finite claims and, equally importantly, the boundaries that keep
+source calculations separate from candidate existence, placed hardware, and laboratory
+performance.
+
+\paragraph{Candidate intake is fail closed.}
+No Pass~3125 rank-three candidate is presently available.  The intake reports
+\texttt{NO\_INPUTS\_DISCOVERED}; this is not a no-go theorem.  Any later candidate is passed
+through the independent rank-three certifier before promotion.
+
+\paragraph{The noisy posterior is exactly sparse.}
+For the frozen 23-row panel, a hypothesis contains zero, one, or two faulty edges.  Write
+$L_0$ for the no-fault likelihood and $U_a=L_a/L_0$ for an atomic edge/group fault.  Two
+distinct edges are either disjoint or share one triangle.  Therefore
+\[
+ \frac{L_{ab}}{L_0}=U_aU_b C_{ab},
+ \qquad
+ C_{ab}=1
+\]
+unless the unique shared triangle is one of the 23 measured triangles.  On that triangle,
+for observed symbol $y$,
+\[
+ C_{ab}(y)=
+ \frac{P(y\mid s_{ab})P(y\mid 1)}
+      {P(y\mid s_a)P(y\mid s_b)}.
+\]
+There are one baseline factor, 315 unary factors, and
+$23\cdot3\cdot7^2=3381$ pair corrections, for 3697 dynamic values instead of 48826.  This
+is a $92.4282\%$ reduction, or a $13.2069\times$ compression.  Thirty-two noisy regression
+transcripts gave posterior error below $1.67\times10^{-15}$ and the same one-step
+mutual-information action in all 32 cases.  The algebraic factor identity, not the finite
+regression set, is the proof.
+
+\paragraph{Blind acquisition and edit correction require different resources.}
+The 24-symbol phase word has twelve distinct cyclic length-two words, so clean blind
+acquisition needs two symbols.  Blind insertion/deletion correction without an epoch is
+impossible: adjacent phase words are related by deleting the first symbol and appending
+one symbol, hence have Levenshtein distance at most two at every finite length.  With phase
+locked before a six-source-symbol burst, exhaustive enumeration of 41641 distinct traces
+containing at most two substitutions, insertions, or deletions gives the relock census
+\[
+ 34411\text{ in one symbol},\quad
+ 7148\text{ in two},\quad
+ 81\text{ in three},\quad
+ 1\text{ in four}.
+\]
+Every trace relocks.  The hardware therefore carries a trusted epoch and a private
+three-layer, twelve-phase Levenshtein mask per recursive guest.
+
+\paragraph{Correction to the collision frontier.}
+The earlier 18-collision set
+$\{CX_{fp},Z_0,Z_1,Z_2\}$ is connected on the 81 frame vectors but generates only 243
+affine transformations.  It is not a universal ISA.  Classifying all
+$\binom{10}{4}=210$ frozen four-generator sets by linear subgroup order, invariant
+translation dimension, affine order, and collision count gives 24 universal sets and a
+true universal minimum of 36 collisions.  Eight sets attain it; the selected representative
+is
+\[
+ \{CX_{fp},CX_{pf},F_f,Z_0\}.
+\]
+Full breadth-first enumeration on all 4199040 affine transformations gives
+\begin{center}
+\begin{tabular}{lrr}
+\hline
+metric & current ISA & 36-collision ISA\\
+\hline
+collisions & 45 & 36\\
+diameter & 19 & 20\\
+mean length & 14.175585 & 15.216324\\
+modal length & 15 & 16\\
+\hline
+\end{tabular}
+\end{center}
+The alternative becomes cheaper only when the cost of resolving one collision exceeds
+$3.7419338235$ instruction costs.  Below that threshold the current ISA remains optimal in
+the stated additive model.
+
+\paragraph{Recursive physical controller.}
+The source RTL combines the five fixed-point Fourier lanes, sixteen private causal states,
+sixteen private edit-mask triples, a frozen action-rate selector, explicit per-context
+reset, both ISA dispatch maps, and two 72-entry calibration banks with atomic bank commit.
+At eighteen bits per log factor, storage falls from 878868 to 66546 bits.  A one-factor-per-
+cycle design point at 100~MHz would rise from 2048.09 to 27048.96 posterior sweeps per
+second.  The frequency is a design assumption; simulation, synthesis, placement, timing,
+optical rates, heat, and calibrated likelihoods remain separately gated.
