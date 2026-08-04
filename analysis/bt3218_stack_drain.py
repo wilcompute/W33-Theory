@@ -21,8 +21,9 @@ def topo(rows):
  while pending:
   ready=sorted(n for n,deps in pending.items() if not deps.intersection(pending))
   if not ready:raise AssertionError('dependency cycle')
-  order+=ready
-  for n in ready:pending.pop(n)
+  # Consume one smallest ready item at a time.  This keeps a numbered dependency
+  # chain contiguous without changing the partial order or hiding parallel lanes.
+  number=ready[0];order.append(number);pending.pop(number)
  return order
 
 def main():
