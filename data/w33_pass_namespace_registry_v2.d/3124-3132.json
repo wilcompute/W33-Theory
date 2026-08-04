@@ -1,0 +1,19 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "3124-3132",
+  "owner": "agent/pass3124-3132-deep-five-front-closure",
+  "status": "reserved_in_progress",
+  "reserved_after": "master through Pass 3123",
+  "passes": {
+    "3124": "27-triangle fixed D4 optimum: orbit-reduced exact SAT/ILP or auditable bounded frontier",
+    "3125": "rank-three stabilizer-group / eight-dimensional M36 code search in the single-error complement",
+    "3126": "full 6,480-flag complex character decomposition and Hodge-sector intertwiner audit",
+    "3127": "robust joint POMDP with calibration uncertainty, erasure, drift, and route/chirality coupling",
+    "3128": "complete self-dual 2,796-tick optical timing fabric with typed A4/D4 authorization and formal RTL",
+    "3129": "compute-versus-routing ISA co-design using the new 18-versus-45 collision frontier",
+    "3130": "BONKERS: orbital-algebra predictive compression on the 1,770-dimensional flag commutant",
+    "3131": "BONKERS: joint route-time error-correcting product code coupling triangle curvature and self-dual phase words",
+    "3132": "paper, blueprint, site, certificates, regressions, and guarded evidence lane"
+  },
+  "claim_boundary": "Reservation only. No theorem, hardware, PDF, optical, exhaustive-search, or physical claim is implied until source and evidence are published."
+}
