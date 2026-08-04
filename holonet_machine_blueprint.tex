@@ -2473,6 +2473,67 @@ group. The address figure is the other track's; the frame figure is \S\ref{sec:i
 machine's worst-case work is frame algebra, and routing optimisation addresses
 ten per cent of the problem.}
 
+\subsection{The same finding, three more ways}
+
+\begin{plain}
+One measurement is an observation. Four independent ones pointing the same way is a
+property of the machine, and this is the section where that happens.
+\end{plain}
+
+\begin{spec}[Is the instruction layer extremal? Pass 3042]
+The address graph is \emph{Ramanujan} --- provably the best-mixing graph of its
+degree (\S\ref{sec:geometry}). For a $4$-regular graph the same optimality condition is
+\[
+  |\lambda_2| \le \frac{2\sqrt3}{4} = 0.866025,
+\qquad
+  \text{measured: } 0.893992 .
+\]
+\textbf{The instruction graph is not Ramanujan.} It misses by $3.23\%$: a good
+expander, not the best one.
+\end{spec}
+
+\headline{The machine's geometry is perfect and its algebra is merely very good,
+and every way of measuring it says so.}
+
+\begin{spec}[Four measurements, one conclusion]
+\begin{center}\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+measurement & geometry & algebra\\
+\midrule
+diameter & $2$ & $19$\\
+share of worst-case work & $10\%$ & $90\%$\\
+mixing & Ramanujan (optimal) & $3.23\%$ short\\
+identification & forced by construction & six valid triples, spread $19$--$23$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{spec}
+
+\subsection{The growth series, for the compiler}
+
+\begin{spec}[Pass 3041 --- the full ball profile, not just the diameter]
+\[
+  a_n = 1,\ 4,\ 15,\ 53,\ 176,\ 547,\ 1630,\ 4648,\ \dots
+\]
+\[
+  \text{mean } 14.176,\quad
+  \text{s.d. } 1.768,\quad
+  \text{modal length } \mathbf{15},\quad
+  \text{max } 19 .
+\]
+The early ratios fall $4.000, 3.750, 3.533, 3.321, 3.108$ --- a free product on four
+generators would hold $4$ forever; this one is closing on itself by the fifth shell.
+\end{spec}
+
+\begin{plain}
+For a compiler that is a better specification than a worst case. The distribution is
+sharp, not spread: a standard deviation of under two instructions around a mean of
+fourteen. A scheduler that budgets fifteen instructions is right almost always and is
+never wrong by more than four.
+\end{plain}
+
+
 \subsection{What fraction of the erasure is useful}
 
 \begin{spec}[Pass 3022]
