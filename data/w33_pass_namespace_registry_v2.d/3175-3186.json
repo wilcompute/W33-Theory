@@ -1,0 +1,22 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "3175-3186",
+  "owner": "agent/pass3175-3186-curvature-routed-inference",
+  "status": "reserved_in_progress",
+  "reserved_after": "master through Passes 3163-3174 reservation; implementation is stacked on PR #243",
+  "passes": {
+    "3175": "promote the D4 commutator curvature bit into a typed Bayesian latent variable and exact posterior marginal",
+    "3176": "compare curvature-conditioned sensing against the frozen causal quotient under explicit synthetic kernels",
+    "3177": "enrich all 194 universal larger ISAs with exact frame-local control-information distributions and a five-objective frontier",
+    "3178": "construct and exhaust a twelve-phase three-edit epoch family with an optimal length-seven delimiter theorem",
+    "3179": "define a content-addressed proof-carrying M36 candidate envelope with independent verification and tamper rejection",
+    "3180": "fuse detector information, route ambiguity, epoch confidence, curvature mass and ISA capacity into a typed action utility",
+    "3181": "outside-box D4 triangle Wilson-flux census and simultaneous-conjugation orbit theorem",
+    "3182": "outside-box recursive Holonet belief virtualization law: global linear state versus logarithmic active path state",
+    "3183": "curvature, three-edit epoch, proof-envelope and routed-utility RTL/control contracts",
+    "3184": "canonical photonic Holonet and machine-blueprint overhaul preserving clock, route, address and execution boundaries",
+    "3185": "focused exact regressions, exhaustive information workflow, RTL simulation/synthesis/place and three-PDF evidence lane",
+    "3186": "typed claim ledger, front-door idempotence, stack reconciliation and publication boundary"
+  },
+  "claim_boundary": "Reservation only. Curvature policy gains, all-194 enriched frontier, three-edit decoder RTL, accepted M36 candidates, physical placement, PDFs and laboratory behavior remain unobserved until their explicit gates complete."
+}
