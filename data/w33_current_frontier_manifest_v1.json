@@ -1,0 +1,27 @@
+{
+  "schema": "w33.current_frontier_manifest.v1",
+  "tex_manifest": "analysis/W33_CURRENT_FRONTIER_MANIFEST.tex",
+  "required_ordered_inputs": [
+    "analysis/BT3191_chromatic_defect_block_filter_insert",
+    "analysis/BT3212_chromatic_closure_insert",
+    "analysis/BT3262_BT3265_signature_s3_affine_lift_insert",
+    "analysis/BT3286_BT3295_signature_port_common_envelope_insert",
+    "analysis/BT3308_BT3319_knight_hypercube_gauge_closure_insert",
+    "analysis/BT3330_global_cover_quantum_hypercube_insert",
+    "analysis/BT3332_BT3343_seven_front_closure_insert",
+    "analysis/BT3363_minimum_gauge_defect_generation_insert",
+    "analysis/BT3387_cohomology_tau_frontier_insert"
+  ],
+  "front_doors": {
+    "w33_paper.tex": "w33_paper_body.tex",
+    "photonic_holonet.tex": "photonic_holonet_body.tex",
+    "holonet_machine_blueprint.tex": "holonet_machine_blueprint_body.tex"
+  },
+  "public_index": "docs/index.html",
+  "required_public_ids": [
+    "bt3320-3331-global-cover-quantum-hypercube",
+    "bt3363-minimum-gauge-defect-generation",
+    "bt3376-3389-cohomology-tau-frontier"
+  ],
+  "boundary": "The manifest controls source reachability and ordering only; it does not certify PDF, hardware, laboratory, or physical claims."
+}
