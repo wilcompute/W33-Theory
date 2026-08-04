@@ -11,7 +11,7 @@
     "materialized_readable_generator": "PASS 7/7",
     "local_rtl_toolchain": "Icarus and Yosys unavailable; no local RTL or placement claim",
     "evidence_pr": 232,
-    "workflow_run": 30866075394,
+    "workflow_run": 30866167664,
     "workflow_status": "queued",
     "evidence_commit_policy": "one-shot stable marker; volatile synthesis and placement logs remain artifacts"
   },
@@ -24,5 +24,5 @@
     "3001": "BONKERS: optimal balanced four-slot cyclic word 102332001123, distance nine, four-substitution correction, zero additional pilot channels",
     "3002": "BONKERS: fourteen-action predictive controller with four fixed bits and 0.0517343817 bits entropy under the frozen prior"
   },
-  "claim_boundary": "Exact finite results, synthetic priors, source-complete RTL, and logical predictive entropy are published. Global fixed-schedule minimality of 29, noisy/erasure policies, laboratory optical loss, Icarus/Yosys/nextpnr evidence, blueprint/site materialization, three PDF builds, and physical Landauer energy remain open or pending workflow 30866075394."
+  "claim_boundary": "Exact finite results, synthetic priors, source-complete RTL, and logical predictive entropy are published. Global fixed-schedule minimality of 29, noisy/erasure policies, laboratory optical loss, Icarus/Yosys/nextpnr evidence, blueprint/site materialization, three PDF builds, and physical Landauer energy remain open or pending workflow 30866167664."
 }
