@@ -1,0 +1,23 @@
+{
+  "chunks": 5,
+  "encoded_sha256": "22695d2f8ac349d10a3cc514546085e3ee96841830221804a2de402b2511acae",
+  "files": {
+    ".github/workflows/w33_pass3250_3261_cover_decoder_wedderburn.yml": "e9061eeb405dca44fa76e99dd173f49da7bb831039245392f466c83e5efeee66",
+    ".github/workflows/w33_pass3256_adaptive_cube_manual.yml": "d1a8343d1a063820621d3da7baa99a9bf0fef1a48c5b34ceacab31b814ffdbf4",
+    "analysis/BT3250_BT3261_cover_decoder_wedderburn.md": "df6550f3b6855781d18d8aaba9af2d97421a9d2554217c4fd9bcf21ad0b89698",
+    "analysis/bt3250_3251_cover_orbit_augmentation.py": "790562018082d50cc3c0411e2ad0cf3e0049cf214aca4a69816fd9d34cfe67d1",
+    "analysis/bt3250_3260_cover_decoder_wedderburn.py": "ea9dc1bdd21694b3223c48a0583ddb849ba40d91d382f721ee6ce3060d557d72",
+    "analysis/bt3252_3253_s3_decoder.py": "9573936e01ed93b207b589ea77651a44aff61d5d9f5a36e173042d5cc04b2025",
+    "analysis/bt3254_3255_port_wedderburn.py": "6a1e25d59f3fbf39923826433a557094ba0fde09d4aa9f05952b6e9cf77b924f",
+    "analysis/bt3256_adaptive_chromatic_cube.py": "ee198126c4beff5ab66d97d907c80db93998fddb9f34308478ea3aa4575b4c93",
+    "analysis/bt3258_3259_modular_spiral_tower.py": "7b970f1a358a0a57c88a4995bc573c073e8987baa0c9bea3c8aabc600601564c",
+    "data/PART_BT3250_BT3251_COVER_AUGMENTATION_results.json": "22a0da0209eb6896441e9b2e1b84e02e9352861aff221697268d5c8001d6071f",
+    "data/PART_BT3250_BT3261_COVER_DECODER_WEDDERBURN_results.json": "8271f2372ce6878c97cdc574baa7d5f98aebf7855dd7e86478000783d229f03a",
+    "data/PART_BT3252_BT3253_S3_DECODER_results.json": "588dedf4042916e507f3c2d34dac40e73bc74afbece2845525173cc5bae25adc",
+    "data/PART_BT3254_BT3255_PORT_WEDDERBURN_results.json": "f29c4ea31b01d8810d938d4a5bc41291d365037e4482fb045ea029f627db1261",
+    "data/PART_BT3256_ADAPTIVE_CHROMATIC_CUBE_results.json": "8850e73948c9e7ba0d0821e1f9f2ca04897f06a77babc5ce3afab7be776d4ce3",
+    "data/PART_BT3258_BT3259_MODULAR_SPIRAL_TOWER_results.json": "e53f85fc5fd98bb35a59515346ab17072114489e309a4ddcead6a1af41018af8"
+  },
+  "payload_sha256": "d2f13abb2461c1cdc35fc014d6058d383f099393854652793d52d34234cc9ad0",
+  "schema": "w33.pass3250_3261.bundle_manifest.v1"
+}

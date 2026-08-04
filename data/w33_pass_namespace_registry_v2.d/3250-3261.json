@@ -1,0 +1,22 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "3250-3261",
+  "owner": "agent/pass3250-3261-cover-decoder-wedderburn",
+  "status": "in_progress_evidence_gated",
+  "reserved_after": "master through Passes 3238-3249; preserves open PR 248 Passes 3214-3225 and queued Pass-3244/3249 evidence",
+  "passes": {
+    "3250": "bounded canonical augmentation of PSp(4,3) exact-cover orbit species",
+    "3251": "switch-orbit quotient graph and certified lower bound on maximum exact covers",
+    "3252": "S3 triangle syndrome decoder and exact correction degeneracy",
+    "3253": "non-Abelian distance-two boundary and reliability-aware correction compiler",
+    "3254": "exact rational center and multiplication chart for the 26-dimensional port Terwilliger algebra",
+    "3255": "Wedderburn decomposition into six scalar blocks plus M2 and M4",
+    "3256": "proof-carrying adaptive cube-and-conquer refinement of the ten-colour SAT surface",
+    "3257": "canonical manuscript, blueprint and public-index integration",
+    "3258": "modular unit-spiral Frobenius divisibility theorem",
+    "3259": "finite dihedral guard tower over primes and special mod-2 S3 quotient",
+    "3260": "S3 Fourier/Wilson syndrome split beyond the binary sign shadow",
+    "3261": "focused tests, RTL/compiler surfaces, workflows and explicit publication boundary"
+  },
+  "claim_boundary": "No global classification of all maximum independent sets, guaranteed correction of arbitrary unknown single-edge errors, chi(H)=10 or 11 decision, observed RTL/synthesis/placement, compiled PDF, physical calibration or spacetime interpretation is promoted without its dedicated checked evidence."
+}
