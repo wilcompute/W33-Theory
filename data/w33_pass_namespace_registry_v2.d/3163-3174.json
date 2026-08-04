@@ -1,0 +1,22 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "3163-3174",
+  "owner": "agent/pass3163-3174-proof-carrying-runtime",
+  "status": "reserved_in_progress",
+  "reserved_after": "master through Pass 3162 reservation; implementation stacks on PR 242",
+  "passes": {
+    "3163": "sharded exact full-affine BFS completion for all 194 universal five/six-opcode ISAs and global growth-series aggregation",
+    "3164": "three-way current4/low4/fast6 decoder RTL, synthesis/place comparison, and physical promotion rule",
+    "3165": "256-shard complete rank-three M36 census launch over all 50,868,675 isotropic subspaces",
+    "3166": "fail-closed candidate aggregation through projector, Pauli, Wigner, stabilizer-fidelity and error-slope gates",
+    "3167": "phase-coded in-band epoch family that remains uniquely decodable when post-marker acquisition symbols are edited",
+    "3168": "epoch/edit-mask fused decoder RTL and exhaustive bounded-relock certificate",
+    "3169": "complete streamed factor-to-48,826-hypothesis Bayesian reconstruction and normalization reference",
+    "3170": "streamed next-action information scorer, fixed-point datapath contract and RTL scheduling shell",
+    "3171": "outside-box non-Abelian belief-curvature theorem and D4 commutator syndrome hardware",
+    "3172": "outside-box ISA-as-channel capacity theorem and information-aware tri-ISA scheduler",
+    "3173": "full Photonic Holonet and machine-blueprint refresh with in-place architecture/evidence overhaul",
+    "3174": "claim ledger, regressions, sharded exhaustive workflows, RTL simulation/synthesis/place and three-PDF evidence lane"
+  },
+  "claim_boundary": "Reservation only. Exhaustive 194-ISA and 256-shard M36 completion, accepted candidate existence, RTL behavior, FPGA area/timing, manuscript materialization, PDFs and laboratory behavior remain separately typed until observed."
+}
