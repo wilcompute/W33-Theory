@@ -2,16 +2,27 @@
   "schema": "w33.pass_namespace_reservation.v2",
   "range": "2996-3002",
   "owner": "agent/pass2996-3002-deep-optimal-information-closure",
-  "status": "reserved",
+  "status": "source_complete_pending_observed_rtl_placement_and_pdf_evidence",
   "reserved_after": "parallel reservation frontier through Pass 2995",
-  "passes": {
-    "2996": "prove or refute global minimality of the 29-triangle one/two-edge D4 localization schedule via exact support-separation and nonabelian verification",
-    "2997": "construct or obstruct an equivariant bridge between the 540 D12 clock orbits and 540 skew-line frames using stabilizers and incidence",
-    "2998": "compile locality-weighted A40 address permutations and derive a shortest/lowest-loss controller library",
-    "2999": "build an adaptive Bayesian calibration-routing-fault escalation controller minimizing expected photons, latency, and residual risk",
-    "3000": "audit remaining Holonet and M36 operations for removable fake gates, Pauli frames, phase tracking, and static relabeling",
-    "3001": "BONKERS: construct a self-synchronizing curvature code that fuses D12 time, route address, and D4 fault telemetry",
-    "3002": "BONKERS: derive a predictive thermodynamic controller using future-decision equivalence and rate-distortion rather than raw state compression"
+  "source_completion": {
+    "exact_and_modeled_summary_checks": "7/7",
+    "focused_regressions": "8/8 passed locally",
+    "compressed_generator": "PASS 7/7",
+    "materialized_readable_generator": "PASS 7/7",
+    "local_rtl_toolchain": "Icarus and Yosys unavailable; no local RTL or placement claim",
+    "evidence_pr": 232,
+    "workflow_run": 30866075394,
+    "workflow_status": "queued",
+    "evidence_commit_policy": "one-shot stable marker; volatile synthesis and placement logs remain artifacts"
   },
-  "claim_boundary": "Reservation only. Exact combinatorics, modeled physical costs, Bayesian policies, controller compression, and self-synchronizing interpretations remain separately typed until executable evidence exists."
+  "passes": {
+    "2996": "exact conditional six-row extension of the frozen 23-row base plus exact adaptive localization of all 48,826 D4 hypotheses in at most 25 triangles; global fixed optimum remains 23 to 29",
+    "2997": "exact natural C3-equivariance obstruction between the two 540-object systems via permutation characters 540 and 0",
+    "2998": "exact 1,600-pair W33 address library with symplectic-transvection distance histogram 40,1080,480 and diameter two",
+    "2999": "exact adaptive decision tree with synthetic sparse-prior mean 23.0062407751 triangles and zero noiseless residual error",
+    "3000": "eight conditional fake-gate rewrite classes covering relabeling, Pauli/phase/gauge frames, shared decoding, and boundary deferral",
+    "3001": "BONKERS: optimal balanced four-slot cyclic word 102332001123, distance nine, four-substitution correction, zero additional pilot channels",
+    "3002": "BONKERS: fourteen-action predictive controller with four fixed bits and 0.0517343817 bits entropy under the frozen prior"
+  },
+  "claim_boundary": "Exact finite results, synthetic priors, source-complete RTL, and logical predictive entropy are published. Global fixed-schedule minimality of 29, noisy/erasure policies, laboratory optical loss, Icarus/Yosys/nextpnr evidence, blueprint/site materialization, three PDF builds, and physical Landauer energy remain open or pending workflow 30866075394."
 }
