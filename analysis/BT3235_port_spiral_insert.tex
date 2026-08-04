@@ -1,0 +1,32 @@
+% BEGIN PASS3226_3234_PORT_SPIRAL
+\section{Port switching and unit-spiral duality}
+\label{sec:port-spiral-3226}
+
+The exact finite-port factorisation exposes two complementary structures. On the colouring side, one frozen 60-frame exact cover contains five disjoint switching loci. At each locus four cover frames have eight external competitors inducing $K_{4,4}$; either bipartition class replaces the original four frames. The five switches commute, so the local exact-cover space contains a canonical ternary subcube of size
+\[
+  3^5=243.
+\]
+Every member is an independent 60-frame set covering all 240 W33 support edges exactly once. This is an exact local switching family, not a classification of all maximum independent sets.
+
+All 45 local $OA(16,3,4,2)$ port arrays are isotopic to the Klein-four Latin square. The global incidence law nevertheless does not select a voltage: a shared support produces $K_{3,3}$ and hence six perfect matchings. Around one support triangle the $6^3=216$ matching triples distribute uniformly over the six $S_3$ holonomies, 36 triples per value. Any nontrivial curvature therefore requires extra phase, hardware, or calibration data; it is not intrinsic to the bare incidence geometry.
+
+The arithmetic phase controller supplies a separate exact spiral lift. For
+\[
+ B=\begin{pmatrix}0&-1\\-1&1\end{pmatrix},\qquad
+ \operatorname{spec}(B)=\{\varphi,-\varphi^{-1}\},
+\]
+the quarter-turn companion
+\[
+ C=\begin{pmatrix}i&-1\\1&0\end{pmatrix}
+\]
+has eigenvalues $i\varphi$ and $-i/\varphi$ and obeys $CP=P(iB)$ for $P=\bigl(\begin{smallmatrix}-i&i\\0&1\end{smallmatrix}\bigr)$. Thus the expanding golden mode acquires one quarter turn per iteration while its dual mode contracts and the determinant remains one.
+
+With $L=\bigl(\begin{smallmatrix}-2&1\\1&2\end{smallmatrix}\bigr)$, the golden block obeys $B^TLB=-L$, while $(B^2)^TLB^2=L$. The two-step map is therefore an exact $O(1,1)$-type boost with eigenvalues $\varphi^2,\varphi^{-2}$ and rapidity $2\log\varphi$. This is an algebraic duality on the controller plane, not a physical spacetime claim.
+
+On the logarithmic cover, $(\rho_k,\theta_k)=(k\log\varphi,k\pi/2)$ is a straight lattice line; after exponentiation it is a four-armed logarithmic spiral. A compatible symplectic quarter-turn exchanges radial and angular coordinates, but a tangent vector does not itself become a metric: the precise maps are $v\mapsto\iota_v\omega$ and $g(v,w)=\omega(v,Jw)$.
+
+The term \emph{phigital} is used here only for the standard finite base-$\varphi$ representation. The quarter-turn construction is a phase lift of that recurrence, not a new numeral system and not a physical relativity claim.
+
+\paragraph{Evidence boundary.}
+The exact chromatic interval remains $10\leq\chi(H)\leq11$. The 100 port-SAT shards have no checked SAT model or DRAT/LRAT refutation; the 26-dimensional split Terwilliger surface has no rational dual bound above nine; the Kempe atlas proves only a 41-frame local floor in its stated one-move neighborhood; and RTL, placement, PDF, optical, and thermodynamic observations remain separately gated.
+% END PASS3226_3234_PORT_SPIRAL
