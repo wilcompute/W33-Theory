@@ -7,7 +7,7 @@ This packet is corrective rather than append-only. It audits the repository from
 The principal exact results are:
 
 1. The frozen 470-state noiseless future-action controller has a coarsest curvature-aware Moore quotient with **876 recursive states**. Curvature typing costs one fixed state bit, not a dense 48,826-hypothesis register.
-2. Information metrics are complete for all **194** universal five/six-opcode ISAs, but only **three** full 4,199,040-state BFS records are frozen. The fusion artifact remains `PARTIAL_RUNTIME_3_OF_194`; it does not infer the missing 191 from the 81-frame graph.
+2. Information metrics are complete for all **194** universal five/six-opcode ISAs. The currently frozen exact runtime records contain one census member, `fast6`, plus two exact four-opcode baselines, `current4` and `low4`. The fusion artifact is therefore `PARTIAL_RUNTIME_1_OF_194_PLUS_2_BASELINES`: **193** census runtimes remain pending, and the two baselines are never counted as members of the 194-design table.
 3. Twelve disjoint constant-symbol markers of length nine optimally correct four substitutions, insertions, or deletions. Each phase has **536,484,991** exact radius-four traces, for **6,437,819,892** phase-labelled traces.
 4. A proof-envelope gate requires twelve typed fields, complete provenance, bounded shard coordinates, independent acceptance, and matching supplied digests. Digest computation stays upstream; no accepted M36 candidate is asserted.
 5. For concurrent depth-$n$ addresses in the 40-ary recursive Holonet, live context storage is exactly the number of non-root nodes in their prefix trie.
@@ -49,11 +49,23 @@ The 23 frozen base tests produce 46,284 signatures and 1,436 collision classes. 
 
 curvature adds one fixed state bit under the frozen contract.
 
-## 3195 — Runtime/information fusion
+## 3195 — Typed runtime/information fusion
 
-The information layer recomputes all 194 universal larger ISAs. Runtime records are joined only when a complete affine BFS reaches order 4,199,040. The frozen records are `current4`, `low4`, and `fast6`; 191 designs remain pending. A global runtime-information winner is forbidden until the sharded aggregate contains all 194 valid records.
+The information layer recomputes all 194 universal five- and six-opcode designs. Runtime records join only when their generator set belongs to that census and a complete affine BFS reaches order 4,199,040.
 
-This blocks a recurrent repository error: frame connectivity and frame diameter are not substitutes for full affine universality or full-group word length.
+The frozen runtime records are:
+
+- `fast6`, a six-opcode census member, which joins the information table;
+- `current4`, an exact four-opcode comparison baseline outside the census;
+- `low4`, an exact four-opcode comparison baseline outside the census.
+
+Consequently the valid source state is
+
+`PARTIAL_RUNTIME_1_OF_194_PLUS_2_BASELINES`,
+
+with one joined census record, two out-of-census baselines, and 193 pending census runtimes. A global runtime-information winner is forbidden until the sharded aggregate contains all 194 valid five/six-opcode records.
+
+This corrects two recurrent repository errors simultaneously: frame connectivity is not a substitute for full affine BFS, and exact baselines are not members of a differently scoped census merely because the same metric is available.
 
 ## 3196 — Optimal four-edit epoch
 
