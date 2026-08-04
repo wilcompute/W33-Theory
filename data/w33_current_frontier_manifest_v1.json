@@ -10,6 +10,7 @@
     "analysis/BT3330_global_cover_quantum_hypercube_insert",
     "analysis/BT3332_BT3343_seven_front_closure_insert",
     "analysis/BT3363_minimum_gauge_defect_generation_insert",
+    "analysis/BT3364_BT3375_clebsch_petersen_resilient_closure_insert",
     "analysis/BT3387_cohomology_tau_frontier_insert"
   ],
   "front_doors": {
@@ -22,6 +23,9 @@
     "bt3320-3331-global-cover-quantum-hypercube",
     "bt3363-minimum-gauge-defect-generation",
     "bt3376-3389-cohomology-tau-frontier"
+  ],
+  "required_public_markers": [
+    "BT3364-BT3375-CLEBSCH-PETERSEN"
   ],
   "boundary": "The manifest controls source reachability and ordering only; it does not certify PDF, hardware, laboratory, or physical claims."
 }
