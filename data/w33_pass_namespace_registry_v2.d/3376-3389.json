@@ -1,0 +1,10 @@
+{
+  "schema": "w33.pass_namespace_registry.v2",
+  "range": [3376, 3389],
+  "owner": "openai-gpt-5.6-thinking",
+  "branch": "master",
+  "purpose": "Execute the post-BT3363 seven-front continuation: minimum-defect normal forms and Cayley radius; nonseparable cohomological chromatic dual tensors; tau-orbit barycentric phase-loss and Q15 quotient coding; PSp(4,3)-equivariant defect-module decomposition; publication-manifest and evidence closure; plus two independent high-risk constructions and chained falsifiers.",
+  "base": "1612533c63c3abcec8b867204fae43367abe18cc",
+  "coordination": "Preserve the reserved Passes 3344-3355 and 3364-3375 lanes; import only verified non-colliding results and do not overwrite their namespaces.",
+  "claim_boundary": "No terminal chromatic decision, canonical physical phase bit, laboratory result, quantum speedup, observed FPGA/PDF evidence, or spacetime interpretation is implied by source-level exact results."
+}
