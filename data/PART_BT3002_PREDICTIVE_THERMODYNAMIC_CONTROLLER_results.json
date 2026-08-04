@@ -1,0 +1,17 @@
+{
+  "schema": "w33.pass3002.predictive_thermodynamic_controller.v1",
+  "status": "COMPLETE_EXACT_ACTION_SUFFICIENCY_AND_TWO_POINT_RATE_DISTORTION",
+  "check_count": 5,
+  "checks": {"four_fixed_bits_for_next_action": true, "action_entropy_below_point_one_bit": true, "exact_policy_zero_residual": true, "stop_policy_zero_extra_probes": true, "break_even_positive": true},
+  "raw_hypothesis_fixed_bits": 16,
+  "predictive_next_action_fixed_bits": 4,
+  "predictive_next_action_entropy_bits": 0.05173438166608032,
+  "rate_distortion_endpoints": [
+    {"policy": "stop_after_23", "expected_extra_triangles": 0.0, "residual_bayes_error": 0.000026200783343639815},
+    {"policy": "exact_adaptive", "expected_extra_triangles": 0.006240775097925422, "residual_bayes_error": 0.0}
+  ],
+  "probe_cost_to_unit_error_loss_break_even": 0.004198321992463654,
+  "thermodynamic_ledger": "Only the predictive action variable must be retained for the next decision. Under the synthetic prior its Shannon reset floor is 0.05173438166608032 bits, not the sixteen-bit raw hypothesis index.",
+  "design_decision": "Compress toward future actions and residual risk, not toward a smaller opaque encoding of the past.",
+  "claim_boundary": "The action-sufficiency and entropy calculations are exact for the frozen prior and noiseless syndrome model. Landauer energy requires multiplication by k_B T ln 2 and a specified physical reset protocol."
+}
