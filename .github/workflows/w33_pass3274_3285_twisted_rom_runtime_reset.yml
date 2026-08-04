@@ -1,0 +1,136 @@
+name: Passes 3274-3285 Twisted ROM Runtime Reset
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'analysis/bt3274*'
+      - 'analysis/bt3276*'
+      - 'analysis/bt3278*'
+      - 'analysis/bt3280*'
+      - 'analysis/BT3274_BT3285*'
+      - 'tests/test_bt3274_bt3285*'
+      - 'tools/integrate_bt3274_bt3285.py'
+      - 'data/w33_pass_namespace_registry_v2.d/3274-3285.json'
+      - '.github/workflows/w33_pass3274_3285_twisted_rom_runtime_reset.yml'
+permissions:
+  contents: write
+concurrency:
+  group: pass3274-3285-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-and-three-papers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: "${{ github.event.pull_request.head.sha || github.sha }}"
+          fetch-depth: 0
+      - name: Reconcile current master
+        run: |
+          git config user.name w33-reconcile-bot
+          git config user.email actions@users.noreply.github.com
+          git fetch origin master
+          git merge --no-edit origin/master
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact toolchain
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install numpy pytest
+      - uses: wtfjoke/setup-tectonic@v3
+      - name: Regenerate exact packet
+        run: |
+          python analysis/bt3274_3285_twisted_rom_runtime_reset_summary.py
+          python -m py_compile \
+            analysis/bt3274_3275_twisted_port_local_system.py \
+            analysis/bt3276_3277_independent_curvature_quotient.py \
+            analysis/bt3278_3279_runtime_universe_firewall.py \
+            analysis/bt3280_3281_constrained_reset_semigroup.py \
+            analysis/bt3274_3285_twisted_rom_runtime_reset_summary.py
+      - name: Exact and adversarial regressions
+        run: |
+          pytest -q tests/test_bt3274_bt3285_twisted_rom_runtime_reset.py
+          python - <<'PY'
+          import json, pathlib
+          d=pathlib.Path('data')
+          twist=json.loads((d/'PART_BT3274_BT3275_TWISTED_PORT_LOCAL_SYSTEM_results.json').read_text())
+          assert twist['controls'][1]['dim_H1']==870
+          q=json.loads((d/'PART_BT3276_BT3277_INDEPENDENT_CURVATURE_QUOTIENT_results.json').read_text())
+          assert (q['quotient_states'],q['initial_quotient_states'])==(876,770)
+          runtime=json.loads((d/'PART_BT3278_BT3279_RUNTIME_UNIVERSE_FIREWALL_results.json').read_text())
+          assert runtime['census_pending_records'] in (193,0)
+          reset=json.loads((d/'PART_BT3280_BT3281_CONSTRAINED_RESET_SEMIGROUP_results.json').read_text())
+          assert reset['global_unauthorized_rank_floor']==3
+          assert reset['authorized_reset']['shortest_word_length']==1
+          PY
+          git diff --check
+      - name: Integrate four front doors idempotently
+        run: |
+          python tools/integrate_bt3274_bt3285.py
+          sha256sum w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html > /tmp/front_a
+          python tools/integrate_bt3274_bt3285.py
+          sha256sum w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html > /tmp/front_b
+          diff -u /tmp/front_a /tmp/front_b
+      - name: Compile three canonical papers
+        run: |
+          tectonic w33_paper.tex
+          tectonic photonic_holonet.tex
+          tectonic holonet_machine_blueprint.tex
+          test -s w33_paper.pdf
+          test -s photonic_holonet.pdf
+          test -s holonet_machine_blueprint.pdf
+      - name: Freeze observed evidence
+        env:
+          HEAD_BRANCH: "${{ github.event.pull_request.head.ref || github.ref_name }}"
+        run: |
+          mkdir -p evidence/pass3274_3285
+          sha256sum \
+            data/PART_BT3274_BT3275_TWISTED_PORT_LOCAL_SYSTEM_results.json \
+            data/PART_BT3276_BT3277_INDEPENDENT_CURVATURE_QUOTIENT_results.json \
+            data/PART_BT3278_BT3279_RUNTIME_UNIVERSE_FIREWALL_results.json \
+            data/PART_BT3280_BT3281_CONSTRAINED_RESET_SEMIGROUP_results.json \
+            data/PART_BT3274_BT3285_TWISTED_ROM_RUNTIME_RESET_source_summary.json \
+            w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
+            > evidence/pass3274_3285/SHA256SUMS
+          python - <<'PY'
+          import json, os, pathlib
+          p=pathlib.Path('evidence/pass3274_3285/COMPLETE.json')
+          p.write_text(json.dumps({
+            'schema':'w33.pass3274_3285.observed_evidence.v1',
+            'status':'COMPLETE_EXACT_AND_THREE_PDFS',
+            'commit':os.environ['GITHUB_SHA'],
+            'twisted_h1':870,
+            'quotient_states':876,
+            'runtime_boundary':'typed universe; complete only if aggregate has 194 census rows',
+            'unauthorized_reset_rank_floor':3,
+            'physical_claims':'none'
+          },indent=2,sort_keys=True)+'\n')
+          PY
+          git config user.name w33-evidence-bot
+          git config user.email actions@users.noreply.github.com
+          git add w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html evidence/pass3274_3285
+          git add -f data/PART_BT3274_BT3275_TWISTED_PORT_LOCAL_SYSTEM_results.json \
+            data/PART_BT3276_BT3277_INDEPENDENT_CURVATURE_QUOTIENT_results.json \
+            data/PART_BT3278_BT3279_RUNTIME_UNIVERSE_FIREWALL_results.json \
+            data/PART_BT3280_BT3281_CONSTRAINED_RESET_SEMIGROUP_results.json \
+            data/PART_BT3274_BT3285_TWISTED_ROM_RUNTIME_RESET_source_summary.json \
+            w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf
+          if ! git diff --cached --quiet; then
+            git commit -m 'Passes 3274-3285: record observed exact and paper evidence'
+            git push origin HEAD:"$HEAD_BRANCH"
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3274-3285-twisted-rom-runtime-reset-evidence
+          path: |
+            evidence/pass3274_3285/
+            data/PART_BT3274_BT3275_TWISTED_PORT_LOCAL_SYSTEM_results.json
+            data/PART_BT3276_BT3277_INDEPENDENT_CURVATURE_QUOTIENT_results.json
+            data/PART_BT3278_BT3279_RUNTIME_UNIVERSE_FIREWALL_results.json
+            data/PART_BT3280_BT3281_CONSTRAINED_RESET_SEMIGROUP_results.json
+            data/PART_BT3274_BT3285_TWISTED_ROM_RUNTIME_RESET_source_summary.json
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
