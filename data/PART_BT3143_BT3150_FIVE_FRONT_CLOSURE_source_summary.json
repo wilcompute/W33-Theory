@@ -1,0 +1,89 @@
+{
+  "schema": "w33.pass3143_3150.five_front_closure.source_summary.v1",
+  "local_generator_status": "PASS",
+  "pass_3143": {
+    "discovered_pass3125_candidate_files": 0,
+    "status": "NO_INPUTS_DISCOVERED",
+    "interpretation": "no candidate input is available; this is not a no-go result",
+    "intake": "analysis/bt3143_rank3_candidate_intake.py"
+  },
+  "pass_3144": {
+    "dense_hypotheses": 48826,
+    "dynamic_sparse_factors": 3697,
+    "baseline_factors": 1,
+    "unary_factors": 315,
+    "noncommutative_pair_corrections": 3381,
+    "dynamic_value_reduction_fraction": 0.9242821447589399,
+    "compression_ratio": 13.206924533405465,
+    "random_transcript_tests": 32,
+    "max_logweight_abs_error": 5.684341886080802e-14,
+    "max_posterior_abs_error": 1.6653345369377348e-15,
+    "max_action_score_abs_error": 3.1086244689504383e-15,
+    "next_action_matches": 32,
+    "exact_identity": "L_ab/L_0 = U_a U_b C_ab on the unique shared tested triangle; C_ab=1 otherwise"
+  },
+  "pass_3145": {
+    "clean_blind_acquisition_symbols": 2,
+    "blind_single_insdel_correction_without_epoch": "IMPOSSIBLE",
+    "reason": "adjacent phase words have Levenshtein distance at most two at every finite length",
+    "required_resource": "trusted epoch/reset or equivalent absolute tick boundary"
+  },
+  "pass_3146": {
+    "burst_source_window_symbols": 6,
+    "maximum_edits": 2,
+    "distinct_observation_phase_traces": 41641,
+    "relock_histogram": {
+      "1": 34411,
+      "2": 7148,
+      "3": 81,
+      "4": 1
+    },
+    "worst_received_symbols_to_relock": 4,
+    "all_traces_relock": true
+  },
+  "pass_3147": {
+    "four_generator_sets_classified": 210,
+    "universal_four_generator_sets": 24,
+    "full_affine_group_order": 4199040,
+    "previous_18_collision_set_order": 243,
+    "previous_18_collision_set_universal": false,
+    "minimum_collisions_among_universal_sets": 36,
+    "number_of_minimum_universal_sets": 8,
+    "selected_minimum_universal_set": ["CX_fp", "CX_pf", "F_f", "Z0"],
+    "current": {
+      "generators": ["F_p", "CX_pf", "CX_fp", "Z1"],
+      "collisions": 45,
+      "diameter": 19,
+      "mean_length": 14.175585133744857,
+      "standard_deviation": 1.768246753482396,
+      "modal_length": 15,
+      "growth_series": [1,4,15,53,176,547,1630,4648,12729,33142,81619,184858,365370,623863,909304,1002688,696532,255270,26403,188]
+    },
+    "alternative": {
+      "generators": ["CX_fp", "CX_pf", "F_f", "Z0"],
+      "collisions": 36,
+      "diameter": 20,
+      "mean_length": 15.216323969288219,
+      "standard_deviation": 1.8128484188031087,
+      "modal_length": 16,
+      "growth_series": [1,4,14,45,135,379,1015,2620,6638,16242,37723,83630,177084,346856,598578,875149,1000588,748566,277761,25952,60]
+    },
+    "collision_to_instruction_cost_ratio_break_even": 3.741933823529581,
+    "decision": "current ISA wins below the threshold; the 36-collision universal ISA wins above it"
+  },
+  "pass_3150": {
+    "log_factor_word_bits": 18,
+    "dense_dynamic_bits": 878868,
+    "sparse_dynamic_bits": 66546,
+    "dense_dynamic_bytes": 109858.5,
+    "sparse_dynamic_bytes": 8318.25,
+    "single_factor_per_cycle_100mhz": {
+      "dense_sweeps_per_second": 2048.089132839061,
+      "sparse_sweeps_per_second": 27048.958615093317,
+      "throughput_multiplier": 13.206924533405465
+    },
+    "double_buffered_calibration_bits": 2304,
+    "sixteen_context_state_bits": 800
+  },
+  "evidence_boundary": "exact/model Python computations were executed in an isolated environment; candidate certification, RTL simulation/synthesis/placement, paper integration, PDFs and laboratory behavior remain separate gates"
+}

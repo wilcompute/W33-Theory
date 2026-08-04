@@ -1,0 +1,143 @@
+name: Passes 3143-3152 Five Front Closure
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'analysis/bt3143_rank3_candidate_intake.py'
+      - 'analysis/bt3144_3150_sparse_sync_isa.py'
+      - 'analysis/BT3143_BT3152_*'
+      - 'data/PART_BT3143*'
+      - 'data/w33_pass_namespace_registry_v2.d/3143-3152.json'
+      - 'rtl/*3148*'
+      - 'tests/test_bt3143_bt3152_five_front_closure.py'
+      - 'tools/integrate_bt3143_bt3152.py'
+      - '.github/workflows/w33_pass3143_3152_five_front_closure.yml'
+permissions:
+  contents: write
+concurrency:
+  group: pass3143-3152-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-candidate-rtl-place-papers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: "${{ github.event.pull_request.head.sha || github.sha }}"
+          fetch-depth: 0
+      - name: Reconcile current master
+        run: |
+          git fetch origin master
+          git merge --no-edit origin/master
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact and hardware toolchains
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys fpga-icestorm nextpnr-ice40
+          python -m pip install --upgrade pip
+          python -m pip install numpy pytest
+      - uses: wtfjoke/setup-tectonic@v3
+      - name: Audit every available Pass 3125 candidate
+        run: python analysis/bt3143_rank3_candidate_intake.py
+      - name: Regenerate sparse, synchronization and ISA certificates
+        run: python analysis/bt3144_3150_sparse_sync_isa.py
+      - name: Focused Python regression
+        run: pytest -q tests/test_bt3143_bt3152_five_front_closure.py
+      - name: Simulate prior and recursive controllers
+        run: |
+          iverilog -g2012 -s tb_w33_pass3135_fourier_causal_controller \
+            -o /tmp/p3135.vvp \
+            rtl/w33_pass3135_fourier_causal_controller.sv \
+            rtl/tb_w33_pass3135_fourier_causal_controller.sv
+          vvp /tmp/p3135.vvp | tee evidence_pass3135_iverilog.log
+          grep -q 'PASS Fourier-causal controller and belief-hypervisor isolation' evidence_pass3135_iverilog.log
+          iverilog -g2012 -s tb_w33_pass3148_3150_recursive_execution \
+            -o /tmp/p3149.vvp \
+            rtl/w33_pass3135_fourier_causal_controller.sv \
+            rtl/w33_pass3148_3150_recursive_execution.sv \
+            rtl/tb_w33_pass3148_3150_recursive_execution.sv
+          vvp /tmp/p3149.vvp | tee evidence_pass3149_iverilog.log
+          grep -q 'PASS universal dispatch, blind acquisition, calibration and recursive contexts' evidence_pass3149_iverilog.log
+      - name: Synthesize and place current and alternative dispatchers
+        run: |
+          yosys -p 'read_verilog -sv rtl/w33_pass3135_fourier_causal_controller.sv rtl/w33_pass3148_3150_recursive_execution.sv; hierarchy -top w33_pass3148_affine_dispatch; synth_ice40 -top w33_pass3148_affine_dispatch -json /tmp/current.json' | tee evidence_pass3148_current_yosys.log
+          nextpnr-ice40 --hx8k --package ct256 --pcf-allow-unconstrained --json /tmp/current.json --asc /tmp/current.asc |& tee evidence_pass3148_current_nextpnr.log
+          yosys -p 'read_verilog -sv rtl/w33_pass3135_fourier_causal_controller.sv rtl/w33_pass3148_3150_recursive_execution.sv; chparam -set ALTERNATIVE_ISA 1 w33_pass3148_affine_dispatch; hierarchy -top w33_pass3148_affine_dispatch; synth_ice40 -top w33_pass3148_affine_dispatch -json /tmp/alternative.json' | tee evidence_pass3148_alternative_yosys.log
+          nextpnr-ice40 --hx8k --package ct256 --pcf-allow-unconstrained --json /tmp/alternative.json --asc /tmp/alternative.asc |& tee evidence_pass3148_alternative_nextpnr.log
+      - name: Synthesize and place recursive controller
+        run: |
+          yosys -p 'read_verilog -sv rtl/w33_pass3135_fourier_causal_controller.sv rtl/w33_pass3148_3150_recursive_execution.sv; synth_ice40 -top w33_pass3149_recursive_execution_controller -json /tmp/recursive.json' | tee evidence_pass3149_yosys.log
+          nextpnr-ice40 --hx8k --package ct256 --pcf-allow-unconstrained --json /tmp/recursive.json --asc /tmp/recursive.asc |& tee evidence_pass3149_nextpnr.log
+          grep -q 'Number of cells' evidence_pass3148_current_yosys.log
+          grep -q 'Number of cells' evidence_pass3148_alternative_yosys.log
+          grep -q 'Number of cells' evidence_pass3149_yosys.log
+      - name: Integrate both stacked packets idempotently
+        run: |
+          python tools/integrate_bt3133_bt3142.py
+          python tools/integrate_bt3143_bt3152.py
+          sha256sum w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html > /tmp/a
+          python tools/integrate_bt3133_bt3142.py
+          python tools/integrate_bt3143_bt3152.py
+          sha256sum w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html > /tmp/b
+          diff -u /tmp/a /tmp/b
+      - name: Compile all three papers
+        run: |
+          tectonic w33_paper.tex
+          tectonic photonic_holonet.tex
+          tectonic holonet_machine_blueprint.tex
+          test -s w33_paper.pdf
+          test -s photonic_holonet.pdf
+          test -s holonet_machine_blueprint.pdf
+      - name: Freeze observed evidence
+        env:
+          HEAD_BRANCH: "${{ github.event.pull_request.head.ref || github.ref_name }}"
+        run: |
+          mkdir -p evidence/pass3143_3152
+          sha256sum \
+            data/PART_BT3143_RANK3_CANDIDATE_INTAKE_results.json \
+            data/PART_BT3144_BT3150_SPARSE_SYNC_ISA_results.json \
+            w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
+            > evidence/pass3143_3152/SHA256SUMS
+          python - <<'PY'
+          import json, os, pathlib
+          pathlib.Path('evidence/pass3143_3152/COMPLETE.json').write_text(json.dumps({
+              'schema':'w33.pass3143_3152.observed_evidence.v1',
+              'status':'COMPLETE_EXACT_CANDIDATE_INTAKE_RTL_HX8K_AND_THREE_PDFS',
+              'commit':os.environ['GITHUB_SHA'],
+              'candidate_boundary':'no input is not a no-go; accepted inputs require Pass 3134 certification',
+              'laboratory_claims':'none'
+          }, indent=2, sort_keys=True)+'\n')
+          PY
+          git config user.name w33-evidence-bot
+          git config user.email actions@users.noreply.github.com
+          git add \
+            w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html \
+            data/PART_BT3143_RANK3_CANDIDATE_INTAKE_results.json \
+            data/PART_BT3144_BT3150_SPARSE_SYNC_ISA_results.json \
+            evidence/pass3143_3152
+          git add -f w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf
+          if ! git diff --cached --quiet; then
+            git commit -m 'Passes 3143-3152: record observed five-front evidence'
+            git push origin HEAD:"$HEAD_BRANCH"
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3143-3152-five-front-evidence
+          path: |
+            evidence_pass3135_iverilog.log
+            evidence_pass3149_iverilog.log
+            evidence_pass3148_current_yosys.log
+            evidence_pass3148_current_nextpnr.log
+            evidence_pass3148_alternative_yosys.log
+            evidence_pass3148_alternative_nextpnr.log
+            evidence_pass3149_yosys.log
+            evidence_pass3149_nextpnr.log
+            evidence/pass3143_3152/
+            data/PART_BT3143_RANK3_CANDIDATE_INTAKE_results.json
+            data/PART_BT3144_BT3150_SPARSE_SYNC_ISA_results.json
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf

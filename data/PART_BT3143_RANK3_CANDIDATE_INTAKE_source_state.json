@@ -1,0 +1,14 @@
+{
+  "schema": "w33.pass3143.rank3_candidate_intake.source_state.v1",
+  "status": "NO_INPUTS_DISCOVERED",
+  "source_file_count": 0,
+  "candidate_count": 0,
+  "accepted_count": 0,
+  "repository_queries": [
+    "branches matching 3124/3125",
+    "pull requests mentioning Passes 3124-3132",
+    "data files matching BT3125 + rank3 + candidate"
+  ],
+  "interpretation": "No candidate input is currently available. This is not a no-go result and does not constrain future Pass 3125 output.",
+  "promotion_rule": "Every future candidate must pass analysis/bt3143_rank3_candidate_intake.py and the independent Pass 3134 certifier."
+}

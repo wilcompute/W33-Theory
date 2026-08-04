@@ -1,0 +1,28 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "3143-3152",
+  "owner": "agent/pass3143-3152-five-front-closure",
+  "status": "SOURCE_COMPLETE_EVIDENCE_PENDING",
+  "reserved_after": "master through Pass 3142 reservation",
+  "passes": {
+    "3143": "machine-auditable intake and independent certification of every available Pass 3125 rank-three M36 candidate, with absence typed as no-input rather than no-go",
+    "3144": "exact sparse posterior factorization and action-equivalence proof for the 48,826-hypothesis noisy D4 filter",
+    "3145": "clean blind phase acquisition plus impossibility theorem for blind insertion/deletion correction without a trusted epoch",
+    "3146": "bounded two-edit burst decoder with exact 41,641-trace ambiguity and relock census",
+    "3147": "exhaustive universal-ISA audit correcting the nonuniversal 18-collision frontier, with exact full-group growth and break-even comparison",
+    "3148": "source-complete current-versus-36-collision universal ISA dispatch hardware",
+    "3149": "fully fused recursive inference controller combining spectral prediction, causal contexts, adaptive sensing, synchronization, calibration and reset",
+    "3150": "calibration-memory layout, bandwidth, context throughput and deterministic scheduling analysis",
+    "3151": "paper, blueprint and site overhaul for sparse certified recursive execution",
+    "3152": "claim ledger, regressions, candidate intake, RTL synthesis/place and three-PDF evidence lane"
+  },
+  "source_completion": {
+    "candidate_intake": "source complete; current repository state is NO_INPUTS_DISCOVERED, not a no-go",
+    "sparse_filter": "exact factor identity plus 32 numerical action-equivalence regressions",
+    "synchronization": "two-symbol clean acquisition, blind-insdel impossibility theorem, and exhaustive two-edit burst census",
+    "isa": "all 210 frozen four-generator sets classified; both selected universal ISAs enumerated over 4,199,040 affine elements",
+    "rtl": "dispatchers, edit-mask bank, recursive controller and testbench committed; remote tools pending",
+    "front_doors": "idempotent stacked integrator committed; materialization and compilation pending"
+  },
+  "claim_boundary": "Exact finite mathematics and stated design models are source-complete. Rank-three candidate existence, RTL simulation/synthesis/placement, manuscript integration/PDFs and laboratory likelihoods, rates, heat and coherence remain independently gated."
+}
