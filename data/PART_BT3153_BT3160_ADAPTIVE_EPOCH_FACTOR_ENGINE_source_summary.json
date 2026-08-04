@@ -1,0 +1,81 @@
+{
+  "schema": "w33.pass3153_3160.adaptive_epoch_factor_engine.source_summary.v1",
+  "local_generator_status": "PASS",
+  "pass_3153_3154": {
+    "five_six_subsets": 462,
+    "universal_subsets": 194,
+    "universal_by_size": {"5": 80, "6": 114},
+    "minimum_collisions_by_size": {"5": 45, "6": 63},
+    "number_attaining_minimum": {"5": 4, "6": 8},
+    "non_dominated_designs": 8,
+    "best_runtime_six_opcode": {
+      "generators": ["F_f", "CX_pf", "CX_fp", "Z0", "Z1", "Z3"],
+      "collisions": 63,
+      "collision_probability": 0.12962962962962962,
+      "frame_mean_distance": 3.567901234567901,
+      "frame_diameter": 5,
+      "slem": 0.7732176172835036,
+      "full_group_order": 4199040,
+      "full_diameter": 19,
+      "full_mean_distance": 13.72936957018747,
+      "growth_series": [1,6,28,116,424,1411,4212,11388,28227,65479,138689,262570,453578,709805,935817,894279,531294,151951,9694,71]
+    },
+    "five_opcode_low_collision": {
+      "generators": ["F_p", "F_f", "CX_fp", "Z1", "Z2"],
+      "collisions": 45,
+      "collision_probability": 0.1111111111111111,
+      "full_diameter": 21,
+      "full_mean_distance": 15.689901739445206
+    },
+    "boundary": "Universality, collision, spectral and frame-distance metrics are exact for all 462 subsets. Full 4,199,040-state BFS was locally observed for the eight non-dominated designs; exhaustive full BFS for all 194 universal sets remains CI-gated."
+  },
+  "pass_3155_3156": {
+    "dynamic_factors": 3697,
+    "baseline_registers": 1,
+    "banks": 7,
+    "words_per_bank": 528,
+    "word_bits": 18,
+    "single_table_bits": 66546,
+    "unary_cycles": 45,
+    "pair_cycles": 483,
+    "sweep_cycles": 528,
+    "parallel_factor_updates_per_cycle": 7,
+    "modeled_100mhz_sweeps_per_second": 189393.9393939394,
+    "modeled_internal_write_bandwidth_bits_per_second": 12600000000,
+    "ice40_4k_ebr_blocks": 21,
+    "boundary": "Schedule and memory arithmetic are exact; 100 MHz and placement are unobserved design inputs."
+  },
+  "pass_3157_3158": {
+    "payload_period": 12,
+    "marker": [1,22,1,22,1],
+    "payload_marker_edit_distance_lower_bound": 5,
+    "correctable_adversarial_edits": 2,
+    "radius_two_false_acquisition": "IMPOSSIBLE",
+    "clean_reacquisition_payload_symbols": 2,
+    "spacing_pareto": [
+      {"payload_symbols":12,"overhead_fraction":0.29411764705882354,"maximum_received_symbols_to_confirm":19},
+      {"payload_symbols":24,"overhead_fraction":0.1724137931034483,"maximum_received_symbols_to_confirm":31},
+      {"payload_symbols":48,"overhead_fraction":0.09433962264150944,"maximum_received_symbols_to_confirm":55},
+      {"payload_symbols":96,"overhead_fraction":0.04950495049504951,"maximum_received_symbols_to_confirm":103},
+      {"payload_symbols":192,"overhead_fraction":0.025380710659898477,"maximum_received_symbols_to_confirm":199},
+      {"payload_symbols":384,"overhead_fraction":0.012853470437017995,"maximum_received_symbols_to_confirm":391},
+      {"payload_symbols":768,"overhead_fraction":0.00646830530401035,"maximum_received_symbols_to_confirm":775}
+    ],
+    "boundary": "The delimiter theorem is exact. Post-marker laboratory symbol confusion and physical edit rates remain unmeasured."
+  },
+  "pass_3159": {
+    "current_candidate_status": "NO_ACCEPTED_CANDIDATE_OBSERVED",
+    "pipeline": ["rank-three projector certification","Pauli spectrum","fixed-Weyl-frame negativity","product-stabilizer fidelity lower bound","logical symplectic frame","first/second-order accepted-error slopes"],
+    "exact_followup_counts": {"lagrangian_stabilizer_subspaces":4922775,"logical_clifford_group_mod_phase":92897280},
+    "boundary": "No input is not a no-go. Full stabilizer fidelity and logical Clifford orbit remain separately sharded exhaustive gates."
+  },
+  "pass_3160": {
+    "zero_switch_threshold": 3.741933823529581,
+    "switch_cost_instructions": 0.25,
+    "current_to_low_threshold": 4.640798576082018,
+    "low_to_current_threshold": 2.843069070977144,
+    "fast6_vs_low4_crossover": 16.701642492779975,
+    "boundary": "Exact for the frozen additive runtime model; uncertainty, route and calibration coefficients are programmable controller parameters."
+  },
+  "evidence_boundary": "Exact/model Python computations were executed in an isolated environment. RTL simulation/synthesis/placement, exhaustive 194-design BFS, candidate exhaustive monotones, manuscript materialization, PDFs and laboratory behavior remain separate gates."
+}
