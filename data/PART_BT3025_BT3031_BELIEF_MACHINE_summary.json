@@ -1,0 +1,34 @@
+{
+  "schema": "w33.pass3025_3031.belief_machine_summary.v1",
+  "status": "EXACT_SOURCE_COMPLETE_WITH_SAT_RTL_PDF_EVIDENCE_PENDING",
+  "checks": {
+    "3025_noisy_collision_dp_reference_frozen": true,
+    "3026_verified_28_upper_bound_present": true,
+    "3026_global_27_decision_pending": true,
+    "3027_edit_obstruction_and_pilot_order_scores_frozen": true,
+    "3028_synthesizable_controller_and_testbench_present": true,
+    "3029_causal_1436_to_457": true,
+    "3030_five_fourier_channels": true,
+    "3031_blackwell_portfolio_frozen": true
+  },
+  "headlines": {
+    "3025": "Exact two-step Bayes policies for three explicit synthetic D4-plus-erasure escalation channels, conditional on an exact base collision class.",
+    "3026": "The stale 28-versus-29 problem is corrected to 27-versus-28; 164220 central-r2 separation clauses and a proof-producing fail-closed SAT route are committed.",
+    "3027": "A cyclic phase block cannot correct one insertion/deletion; ordering the same three pilots yields score 1/2 and the combined omission-order alphabet yields 3/5 with zero extra modes.",
+    "3028": "A signed three-score likelihood-accumulation and posterior-gap stopping core requests at most two escalation probes.",
+    "3029": "The 1436 post-base collision classes quotient to 457 initial future-action causal states and save 1.078290855 conditional bits under the frozen prior.",
+    "3030": "Conjugation-invariant D4 prediction diagonalizes into four character gains and one scalar two-dimensional block.",
+    "3031": "A conjugacy-class sensor retains 99.6683 percent of full-D4 one-probe risk reduction in the moderate synthetic channel."
+  },
+  "current_fixed_schedule_bounds": [23, 28],
+  "pending": [
+    "independently checked SAT/DRUP decision for size 27",
+    "RTL simulation and synthesis",
+    "FPGA placement and timing",
+    "four-front-door materialization",
+    "three PDF builds",
+    "fully noisy base-panel inference",
+    "laboratory likelihood and edit-rate calibration"
+  ],
+  "claim_boundary": "Exact finite calculations, synthetic decision models, source RTL and physical measurements are separately typed. No pending SAT, synthesis, PDF or laboratory result is implied by source completion."
+}
