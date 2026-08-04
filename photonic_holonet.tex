@@ -1,10 +1,11 @@
-% Pass 1420/1425/1408/1509/1510/1511-1515/1531-1541/1601-1616/1701-1705/1801-1810/1821-3002 plus frame-Hoffman wrapper:
-% preserve the complete historical manuscript body verbatim while injecting the
-% certified theorem inserts immediately after the contents.
+% Historical theorem ledger through Pass 3002 plus the Pass 3025--3031 predictive architecture overhaul:
+% preserve the complete manuscript body and certified inserts while placing the new
+% evidence-first architecture spine immediately after the contents.
 \AtBeginDocument{%
   \let\BTorigtableofcontents\tableofcontents
   \renewcommand{\tableofcontents}{%
     \BTorigtableofcontents
+    \input{analysis/BT3025_BT3031_unified_architecture_spine}%
     \input{analysis/BT1420_frame_signed_turn_bridge_insert}%
     \input{analysis/BT1425_full_weyl_integral_cover_addendum}%
     \input{analysis/BT1408_frame_cross_matching_theorem_insert}%
@@ -64,6 +65,7 @@
     \input{analysis/BT2960_BT2966_physical_compiler_insert}%
     \input{analysis/BT2967_BT2973_optimal_information_system_insert}%
     \input{analysis/BT2996_BT3002_deep_optimal_information_insert}%
+    \input{analysis/BT3025_BT3031_predictive_photonic_overhaul_insert}%
   }%
 }
 \input{photonic_holonet_body.tex}
