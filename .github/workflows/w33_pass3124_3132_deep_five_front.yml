@@ -1,0 +1,98 @@
+name: Pass 3124-3132 Deep Five-Front Closure
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [master]
+permissions:
+  contents: write
+concurrency:
+  group: pass3124-3132-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-rtl-character-docs:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - run: python tools/materialize_bt3124_bt3132_bundle.py
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install exact and digital tools
+        run: |
+          python -m pip install --upgrade pip numpy scipy pytest
+          sudo apt-get update
+          sudo apt-get install -y gap iverilog yosys
+      - name: Recompute fast packet and regressions
+        run: |
+          python analysis/bt3128_selfdual_timing_fabric.py > data/PART_BT3128_SELFDUAL_TIMING_FABRIC_results.json
+          python analysis/bt3130_flag_orbit_predictive_quotient.py > data/PART_BT3130_FLAG_ORBIT_PREDICTIVE_QUOTIENT_results.json
+          python analysis/bt3127_robust_joint_pomdp.py > data/PART_BT3127_ROBUST_JOINT_POMDP_results.json
+          python analysis/bt3129_universal_isa_pareto.py > data/PART_BT3129_UNIVERSAL_ISA_PARETO_results.json
+          python analysis/bt3131_route_time_product_code.py > data/PART_BT3131_ROUTE_TIME_PRODUCT_CODE_results.json
+          python analysis/bt3124_3132_deep_five_front_closure.py | tee /tmp/pass3124.log
+          grep -F 'PASS 8 / 8' /tmp/pass3124.log
+          pytest -q tests/test_bt3124_bt3132_deep_five_front_closure.py
+      - name: Rebuild exact U4(2) class algebra
+        run: |
+          mkdir -p evidence/pass3124_3132
+          python analysis/bt3126_u42_class_algebra.py | tee evidence/pass3124_3132/u42_class_algebra.log
+          grep -F 'dim 6480' evidence/pass3124_3132/u42_class_algebra.log
+          grep -F 'comm 1770' evidence/pass3124_3132/u42_class_algebra.log
+      - name: Exact GAP induced-character cross-check
+        run: |
+          gap -q analysis/w33_pass3126_flag_character_crosscheck.g | tee evidence/pass3124_3132/u42_gap.log
+          grep -F 'PASS U4(2) flag character multiplicities' evidence/pass3124_3132/u42_gap.log
+      - name: Exhaust and synthesize typed timing fabric
+        run: |
+          iverilog -g2012 -s tb_w33_pass3128_selfdual_timing_fabric -o /tmp/timing.vvp \
+            rtl/w33_pass3128_selfdual_timing_fabric.sv rtl/tb_w33_pass3128_selfdual_timing_fabric.sv
+          vvp /tmp/timing.vvp | tee evidence/pass3124_3132/timing_iverilog.log
+          grep -F 'PASS 2796/2796 self-dual timing ticks' evidence/pass3124_3132/timing_iverilog.log
+          yosys -p 'read_verilog -sv rtl/w33_pass3128_selfdual_timing_fabric.sv; synth_ice40 -top w33_pass3128_selfdual_timing_fabric; stat' 2>&1 | tee evidence/pass3124_3132/timing_yosys.log
+      - name: Integrate all front doors idempotently
+        run: |
+          python tools/integrate_bt3124_bt3132.py
+          python tools/integrate_bt3124_bt3132.py --check
+          git diff --check
+      - uses: tectonic-typesetting/setup-tectonic@v1
+      - name: Compile canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            stem=${source%.tex}
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3124_3132/${stem}.build.log"
+            test -s "${stem}.pdf"
+            if grep -E 'Undefined control sequence|LaTeX Error|Emergency stop|Fatal error' "${stem}.log"; then exit 1; fi
+          done
+      - name: Freeze stable digital evidence
+        run: |
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3124_3132/pdf_sha256.txt
+          printf 'models=PASS 8/8\npytest=PASS 10/10\ncharacter=degree6480_commutant1770\nrtl=PASS 2796/2796\n' > evidence/pass3124_3132/manifest.txt
+          cat > evidence/pass3124_3132/OBSERVED_COMPLETE.json <<'EOF'
+          {"schema":"w33.pass3124_3132.observed_evidence.v1","status":"OBSERVED_DIGITAL_EVIDENCE_COMPLETE","boundary":"No 27-row impossibility, full M36 census, laboratory optics, physical heat, or autonomous-clock claim."}
+          EOF
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3124-3132-deep-five-front-evidence
+          path: |
+            data/PART_BT3124*.json
+            data/PART_BT3125*.json
+            data/PART_BT3126*.json
+            data/PART_BT3127*.json
+            data/PART_BT3128*.json
+            data/PART_BT3129*.json
+            data/PART_BT3130*.json
+            data/PART_BT3131*.json
+            evidence/pass3124_3132/*
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
+      - name: One-shot stable evidence commit
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        env: {TARGET_BRANCH: '${{ github.event.pull_request.head.ref }}'}
+        run: |
+          if git cat-file -e HEAD:evidence/pass3124_3132/OBSERVED_COMPLETE.json 2>/dev/null; then exit 0; fi
+          git config user.name 'W33 pass3124 evidence bot'
+          git config user.email 'noreply@github.com'
+          git add w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html evidence/pass3124_3132/
+          if ! git diff --cached --quiet; then git commit -m 'Passes 3124-3132: record stable observed digital evidence'; git push origin "HEAD:${TARGET_BRANCH}"; fi
