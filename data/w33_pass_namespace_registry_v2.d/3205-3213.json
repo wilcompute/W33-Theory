@@ -1,0 +1,19 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "3205-3213",
+  "owner": "agent/pass3205-3213-chromatic-closure-seven-front",
+  "status": "reserved_in_progress",
+  "reserved_after": "master through Passes 3187-3192; preserves the independent reserved Passes 3193-3204 lane",
+  "passes": {
+    "3205": "exhaust the ten-colour class-size and integer defect-Gram quotient under exact trace, PSD, row-sum, rank and modulo-15 constraints",
+    "3206": "compile the forty-five K12-minus-3K4 blocks into a proof-producing ten-colour SAT or pseudo-Boolean solver with symmetry reduction and certificate checking",
+    "3207": "derive a Terwilliger/Delsarte strengthening of the spectral lower bound using the frame association algebra and canonical block moments",
+    "3208": "classify simultaneous 3-adic and 5-adic lifts of the defect Gram and test determinant/minor valuation obstructions",
+    "3209": "factor chromatic defect through the A4 torsor, D4 curvature and cut-code incidence layers with an explicit intertwiner or a certified obstruction",
+    "3210": "outside-box tropical defect geometry: convert admissible colour profiles into a min-plus energy complex and test whether forbidden cells yield a human-readable obstruction",
+    "3211": "outside-box uncertainty-principle bridge: test whether near-Hoffman colour indicators can simultaneously localize on the 45 A4 blocks and the 240-edge cut-code Fourier support",
+    "3212": "integrate exact conclusions and corrections into the W33 paper, Photonic Holonet, machine blueprint and public site without promoting bounded diagnostics",
+    "3213": "freeze deterministic certificates, focused regressions, proof-checking and three-PDF evidence with an explicit unresolved-boundary ledger"
+  },
+  "claim_boundary": "Reservation only. No ten-colour construction, ten-colour impossibility proof, improved chromatic lower bound, p-adic obstruction, curvature factorization, tropical obstruction, uncertainty theorem, observed hardware result or PDF build is claimed before its dedicated executable evidence completes."
+}
