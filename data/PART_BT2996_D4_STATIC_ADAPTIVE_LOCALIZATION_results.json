@@ -1,0 +1,15 @@
+{
+  "schema": "w33.pass2996.static_and_adaptive_d4_localization.v1",
+  "status": "COMPLETE_CONDITIONAL_STATIC_OPTIMUM_AND_EXACT_ADAPTIVE_DOMINANCE",
+  "check_count": 5,
+  "checks": {"full_hypotheses_48826": true, "known_29_unique": true, "frozen_23_extension_optimum_6": true, "adaptive_worst_case_25": true, "adaptive_all_resolved": true},
+  "global_fixed_schedule_bounds": {"lower": 23, "upper": 29, "global_29_minimality": "open"},
+  "conditional_theorem": "For the frozen exact 23-triangle single-edge optimum, six further triangles are necessary and sufficient for all no/one/two-edge D4 hypotheses.",
+  "optimal_extension_6": [[0,1,3],[0,7,9],[1,6,8],[2,4,5],[2,8,9],[5,6,7]],
+  "collision_group_count_after_23": 1436,
+  "adaptive_depth_histogram": {"23": 44848, "24": 3566, "25": 412},
+  "adaptive_uniform_mean_triangles": 23.089911112931635,
+  "adaptive_first_test_alphabet": [0,1,2,3,4,7,10,11,12,13,14,15,18],
+  "adaptive_second_test_alphabet": [1,2,3,4,7,11,12,13,14,18],
+  "claim_boundary": "The six-row extension optimum is exact conditional on the frozen 23-row base. Global fixed-schedule optimality of 29 remains open. The adaptive 25-row worst case is exact in the stated D4 model."
+}
