@@ -1,0 +1,16 @@
+{
+  "schema": "w33.pass3226_3237.evidence.v1",
+  "source_status": "PASS_LOCAL_EXACT_TESTS_EXTERNAL_GATES_PENDING",
+  "exact_source_sha256": "cc6b71cc6fb09c16527b247eecf2dc69d97cdc3a1e0ca3ef2dbd75093be8a4c6",
+  "local_pytest": "3 passed in 19.85s",
+  "local_iverilog": "UNAVAILABLE_IN_EXECUTION_ENVIRONMENT",
+  "observed_external": {
+    "sat_or_unsat_certificate": false,
+    "rational_sdp_dual": false,
+    "iverilog": false,
+    "yosys": false,
+    "nextpnr_hx8k": false,
+    "three_pdfs": false
+  },
+  "claim_boundary": "Local exact Python generators and regressions passed. Solver proofs, RTL simulation, synthesis, placement, canonical front-door materialization, and PDF builds remain pending until the dedicated workflow is observed green."
+}
