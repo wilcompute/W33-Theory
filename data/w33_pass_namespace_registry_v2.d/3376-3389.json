@@ -3,8 +3,24 @@
   "range": [3376, 3389],
   "owner": "openai-gpt-5.6-thinking",
   "branch": "master",
-  "purpose": "Execute the post-BT3363 seven-front continuation: minimum-defect normal forms and Cayley radius; nonseparable cohomological chromatic dual tensors; tau-orbit barycentric phase-loss and Q15 quotient coding; PSp(4,3)-equivariant defect-module decomposition; publication-manifest and evidence closure; plus two independent high-risk constructions and chained falsifiers.",
+  "status": "source_complete_evidence_gated",
   "base": "1612533c63c3abcec8b867204fae43367abe18cc",
-  "coordination": "Preserve the reserved Passes 3344-3355 and 3364-3375 lanes; import only verified non-colliding results and do not overwrite their namespaces.",
+  "coordination": "The merged Passes 3364-3375 Clebsch-Petersen packet is preserved and reconciled into the generated current-frontier manifest.",
+  "passes": {
+    "3376": "derive the exact local and global minimum-defect word enumerators",
+    "3377": "bound the switching-class Cayley diameter by exact sphere counting",
+    "3378": "construct the minimum-defect cohomological magnetic dual surface and moments",
+    "3379": "classify Q15 barycentre fibres of the 135 tau-orbit species",
+    "3380": "prove strong barycentric lumpability and recover the hidden correlation bit",
+    "3381": "publish the PSp(4,3)-equivariant minimum-defect presentation of H1",
+    "3382": "replace duplicated manuscript tails by one ordered current-frontier manifest",
+    "3383": "BONKERS: derive the 81 by 135 minimum-defect voltage constellation",
+    "3384": "BONKERS: identify the hidden 27-state signed ternary Cayley torus",
+    "3385": "chain the 243 to 135 to 108 to 3 exact aggregation hierarchy",
+    "3386": "freeze and audit the reconciled publication manifest",
+    "3387": "integrate the theorem into all canonical manuscripts and public-index source",
+    "3388": "add exact regressions and an idempotent front-door integrator",
+    "3389": "add fail-closed exact, publication, and PDF evidence workflow"
+  },
   "claim_boundary": "No terminal chromatic decision, canonical physical phase bit, laboratory result, quantum speedup, observed FPGA/PDF evidence, or spacetime interpretation is implied by source-level exact results."
 }
