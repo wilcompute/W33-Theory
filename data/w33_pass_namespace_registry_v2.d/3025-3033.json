@@ -1,0 +1,18 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "3025-3033",
+  "owner": "agent/pass3025-3033-noisy-predictive-sync-closure",
+  "status": "reserved_after_parallel_frontier_through_3024",
+  "passes": {
+    "3025": "compile a collision-conditioned Bayesian D4 decoder with erasure, dark-count, partial-permutation and conjugation-drift likelihoods",
+    "3026": "settle or fail-closed certify the global 27-versus-28 fixed D4 schedule problem through the central-r2 distance-five SAT obstruction and full D4 verification",
+    "3027": "generalize the zero-extra-channel curvature synchronizer to insertion/deletion indexing by modulating the ordering of the three existing pilots",
+    "3028": "build source-complete adaptive syndrome-controller RTL and exhaustive protocol-level testbench",
+    "3029": "minimize the deterministic escalation controller by future-action causal equivalence and extend it to an explicit drifting-prior model",
+    "3030": "BONKERS: diagonalize conjugation-invariant D4 noise in the exact nonabelian Fourier basis and expose a five-channel spectral belief engine",
+    "3031": "BONKERS: let the controller choose both the triangle and the syndrome alphabet; compute the Blackwell measurement-basis portfolio",
+    "3032": "overhaul all four front doors around the belief-machine architecture, correcting stale fixed-panel and synchronization claims",
+    "3033": "freeze exact certificates, claim ledger, focused regressions, SAT/RTL/PDF evidence workflows and merge boundaries"
+  },
+  "claim_boundary": "Reservation only. Exact finite results, synthetic likelihood models, source RTL, SAT optimality, remote synthesis, and physical measurements remain separately typed until their own evidence exists."
+}
