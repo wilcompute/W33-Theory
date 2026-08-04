@@ -1,0 +1,22 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "3226-3237",
+  "owner": "agent/pass3226-3237-port-spiral-eight-front",
+  "status": "reserved_in_progress",
+  "reserved_after": "master through 3cab9f7; preserves open PR #246 and parallel Passes 3214-3225",
+  "passes": {
+    "3226": "proof-producing port-SAT sharding with exact coverage, model verification and external DRAT/LRAT gate",
+    "3227": "split-port Terwilliger moment relaxation with exact symmetry reduction and rational certificate boundary",
+    "3228": "near-cover extension census and obstruction statistics for independent sets of sizes 54 through 59",
+    "3229": "hypergraph Kempe/Vizing colour-elimination engine with checked monotone moves and fail-closed outcomes",
+    "3230": "OA(16,3,4,2) isotopy, voltage and holonomy atlas over the 45 support blocks",
+    "3231": "nonlinear Z/9 port-lift constraints beyond the vacuous linear Smith filter",
+    "3232": "typed physical port compiler, reversible schedule and synthesizable readout/authorization boundary",
+    "3233": "unit-spiral recursive/iterative duality on the logarithmic cylinder and perpendicular-space bundle model",
+    "3234": "exact R4^2 U6 golden eigensplitting, phinary/phigital coordinate compiler and falsification tests",
+    "3235": "canonical manuscript and site integration with claim corrections and cross-packet compatibility",
+    "3236": "focused exact regressions, semantic hashes and deterministic evidence materialization",
+    "3237": "guarded solver, RTL, synthesis and three-PDF evidence workflow with typed publication boundary"
+  },
+  "claim_boundary": "Reservation only. No ten-colouring, UNSAT proof, SDP chromatic lower bound above nine, size-54..59 extension theorem, successful colour elimination, nontrivial Z/9 obstruction, observed hardware result, physical spiral law, PDF build or laboratory performance is claimed before checked evidence exists."
+}

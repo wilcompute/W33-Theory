@@ -1,0 +1,73 @@
+name: Passes 3226-3237 Port Spiral Closure
+
+on:
+  pull_request:
+    paths:
+      - 'analysis/bt3226_3234_port_spiral_closure.py'
+      - 'analysis/BT3226_BT3234_port_spiral_closure.md'
+      - 'analysis/BT3235_port_spiral_insert.tex'
+      - 'analysis/BT3235_port_spiral_index_insert.html'
+      - 'data/PART_BT3226_BT3234_PORT_SPIRAL_results.json'
+      - 'data/bt3232_port_rom.mem'
+      - 'rtl/w33_pass3232_port_compiler.sv'
+      - 'tests/test_bt3226_3234_port_spiral_closure.py'
+      - 'tests/tb_w33_pass3232_port_compiler.sv'
+      - 'tools/integrate_bt3226_bt3237.py'
+      - '.github/workflows/w33_pass3226_3237_port_spiral.yml'
+  workflow_dispatch:
+
+jobs:
+  exact-rtl-pdf:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact Python dependencies
+        run: python -m pip install --disable-pip-version-check numpy sympy pytest
+      - name: Regenerate exact certificate and ROM
+        run: |
+          python analysis/bt3226_3234_port_spiral_closure.py --emit-rom /tmp/port.mem
+          cmp /tmp/port.mem data/bt3232_port_rom.mem
+          python -m pytest -q tests/test_bt3226_3234_port_spiral_closure.py
+      - name: Install digital and TeX tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys
+          curl --proto '=https' --tlsv1.2 -LsSf https://drop-sh.fullyjustified.net | sh
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+      - name: Simulate all 720 compiler words
+        run: |
+          iverilog -g2012 -o /tmp/tb3232 rtl/w33_pass3232_port_compiler.sv tests/tb_w33_pass3232_port_compiler.sv
+          vvp /tmp/tb3232 | tee /tmp/tb3232.log
+          grep -q 'PASS 720/720' /tmp/tb3232.log
+      - name: Synthesize compiler source
+        run: yosys -p 'read_verilog -sv rtl/w33_pass3232_port_compiler.sv; hierarchy -top w33_pass3232_port_compiler; proc; memory; opt; stat' | tee /tmp/yosys3232.log
+      - name: Integrate front doors twice and prove idempotence
+        run: |
+          python tools/integrate_bt3226_bt3237.py
+          sha256sum w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html > /tmp/front1.sha
+          python tools/integrate_bt3226_bt3237.py
+          sha256sum w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html > /tmp/front2.sha
+          diff -u /tmp/front1.sha /tmp/front2.sha
+      - name: Compile all canonical PDFs
+        run: |
+          tectonic --keep-logs w33_paper.tex
+          tectonic --keep-logs photonic_holonet.tex
+          tectonic --keep-logs holonet_machine_blueprint.tex
+          test -s w33_paper.pdf
+          test -s photonic_holonet.pdf
+          test -s holonet_machine_blueprint.pdf
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf | tee /tmp/pdf.sha
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3226-3237-port-spiral-evidence
+          path: |
+            /tmp/tb3232.log
+            /tmp/yosys3232.log
+            /tmp/pdf.sha
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
