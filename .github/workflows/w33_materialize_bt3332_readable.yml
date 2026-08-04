@@ -1,0 +1,38 @@
+name: Materialize BT3332-BT3343 Readable Verifier
+on:
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/w33_materialize_bt3332_readable.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  materialize:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Decode verifier
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64, zlib
+          src=Path('bootstrap/pass3332_3343_verifier.py.zlib.b64')
+          dst=Path('analysis/bt3332_3343_verifier_readable.py')
+          dst.write_bytes(zlib.decompress(base64.b64decode(src.read_text(encoding='ascii'))))
+          compile(dst.read_text(encoding='utf-8'), str(dst), 'exec')
+          PY
+      - name: Commit readable source once
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis/bt3332_3343_verifier_readable.py
+          if ! git diff --cached --quiet; then
+            git commit -m 'Materialize readable Passes 3332-3343 verifier [skip ci]'
+            git push
+          fi
