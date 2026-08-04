@@ -7,6 +7,8 @@
   "source_completion": {
     "source_pr": 237,
     "source_merge_commit": "cef4152843f7618b719ec4b4f3406c291ed1840f",
+    "canonical_theorem_commit": "a4cc356fb5d0af1e9b65dbad83154a41eab61277",
+    "canonical_paper_wiring_commit": "da0be878e5761269e21ad160d89434509161d0e0",
     "exact_and_modeled_checks": "8/8 passed locally",
     "focused_regressions": "10/10 passed locally",
     "support_bundle": "24 files materialize byte-for-byte from tools/materialize_bt3124_bt3132_bundle.py",
