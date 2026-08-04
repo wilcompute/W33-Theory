@@ -1,0 +1,18 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "3064-3072",
+  "owner": "agent/pass3064-3072-noisy-predictive-sync-closure",
+  "status": "reserved_after_parallel_frontier_through_3063",
+  "passes": {
+    "3064": "collision-conditioned Bayesian D4 decoding with erasure, dark, partial-permutation and conjugation-drift likelihoods",
+    "3065": "proof-producing 27-versus-28 fixed D4 schedule decision through the central-r2 distance-five obstruction and full D4 verification",
+    "3066": "zero-extra-channel insertion/deletion indexing by ordering the three existing curvature pilots",
+    "3067": "synthesizable adaptive syndrome belief controller and protocol testbench",
+    "3068": "exact future-action causal-state quotient with an explicit drifting-prior extension",
+    "3069": "BONKERS: five-channel nonabelian Fourier belief prediction for conjugation-invariant D4 noise",
+    "3070": "BONKERS: adaptive measurement-basis portfolio over full D4 and deterministic coarse syndrome alphabets",
+    "3071": "four-front-door belief-machine overhaul and correction of stale fixed-panel/edit claims",
+    "3072": "claim ledger, focused regressions, proof/RTL/PDF evidence lanes and guarded publication"
+  },
+  "claim_boundary": "Reservation only. Exact finite results, synthetic likelihood models, source RTL, SAT optimality, remote synthesis, PDFs and physical measurements remain separately typed."
+}
