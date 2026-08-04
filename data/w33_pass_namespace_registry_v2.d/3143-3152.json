@@ -1,0 +1,20 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "3143-3152",
+  "owner": "agent/pass3143-3152-five-front-closure",
+  "status": "reserved_in_progress",
+  "reserved_after": "master through Pass 3142 reservation",
+  "passes": {
+    "3143": "machine-auditable intake and independent certification of every available Pass 3125 rank-three M36 candidate, with absence typed as no-input rather than no-go",
+    "3144": "exact sparse posterior factorization and action-equivalence proof for the 48,826-hypothesis noisy D4 filter",
+    "3145": "blind phase acquisition for the 24-symbol omitted-slot times pilot-order synchronization stream",
+    "3146": "bounded two-edit burst decoder with exact ambiguity census and fail-closed relock guarantees",
+    "3147": "exact directed growth series, diameter, mean distance, collision profile and break-even comparison for the 18-collision computing ISA",
+    "3148": "source-complete low-collision ISA decoder and resource-comparable dispatch hardware",
+    "3149": "fully fused recursive inference controller combining spectral prediction, causal contexts, adaptive sensing, synchronization and reset",
+    "3150": "calibration-memory layout, bandwidth, context throughput and deterministic scheduling analysis",
+    "3151": "paper, blueprint and site overhaul for sparse certified recursive execution",
+    "3152": "claim ledger, regressions, candidate intake, RTL synthesis/place and three-PDF evidence lane"
+  },
+  "claim_boundary": "Reservation only. Candidate existence, exact quotient sufficiency, decoder guarantees, ISA performance, RTL simulation/synthesis/placement, PDF builds and laboratory behavior remain separately typed until observed."
+}
