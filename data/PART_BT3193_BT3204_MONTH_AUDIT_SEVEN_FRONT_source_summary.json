@@ -59,7 +59,8 @@
   },
   "pass3200_evidence_debt": {
     "active_stack": [242, 243, 244],
-    "independent_current_front": [245],
+    "independent_current_front": [246],
+    "recent_merged_front": [245],
     "older_overlapping_stack": [236, 239],
     "merge_authority": "none"
   },
