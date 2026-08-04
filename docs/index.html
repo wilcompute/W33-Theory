@@ -41,138 +41,60 @@
       </aside>
     </section>
 
+<!-- BT3286-BT3295-SIGNATURE-PORT-COMMON-ENVELOPE -->
+<h2>Passes 3286–3295: signatures and ports share a 22-state controller—not a 16-state identity</h2>
+<section class="grid">
+  <article class="card theorem"><div class="eyebrow">Full symmetry obstruction</div><div class="metric">1+3+6+6 ≠ 1+3+3+3+6</div><p>The exact-cover signatures and natural <span class="mono">V4</span> OA ports are different <span class="mono">S3</span>-sets. No full equivariant 16-to-16 identification exists.</p></article>
+  <article class="card theorem"><div class="eyebrow">Orientation weld</div><div class="metric">29,160 C3 maps</div><p>After restricting to orientation-preserving transport, both alphabets become <span class="mono">1+3+3+3+3+3</span>. The mismatch is detected only by reflections.</p></article>
+  <article class="card theorem"><div class="eyebrow">Fourier defect</div><div class="metric">1 − sgn</div><p>The exact representation defect is <span class="mono">[port]−[signature]=[1]−[sgn]</span>. It vanishes on rotations and survives on chirality reversal.</p></article>
+  <article class="card theorem"><div class="eyebrow">Rank-45 audit</div><div class="metric">45 vs 51</div><p>The signature commutant has rank 45; the natural port commutant has rank 51. The anchor/signature equality cannot lift through the unmodified port action.</p></article>
+  <article class="card theorem"><div class="eyebrow">Minimal common envelope</div><div class="metric">16 + 16 − 10 = 22</div><p>One five-bit linear action contains both alphabets, their maximum ten-state equivariant overlap, and a ten-word guard shell.</p></article>
+  <article class="card theorem"><div class="eyebrow">Controller choice</div><div class="metric">4-bit ROM or 5-bit linear</div><p>The nonlinear signature ROM has algebraic degree three. The shared five-bit generators each use one XOR plus wire permutations before multiplexing.</p></article>
+</section>
+<section class="card boundary" style="margin-top:18px"><strong>Chromatic boundary.</strong> A full local <span class="mono">S3</span> signature/port quotient is invalid; a <span class="mono">C3</span>-only quotient is locally compatible. The global result remains <span class="mono">10 ≤ χ(H) ≤ 11</span>.</section>
+<!-- /BT3286-BT3295-SIGNATURE-PORT-COMMON-ENVELOPE -->
+
 <!-- BT3262-BT3265-SIGNATURE-S3-AFFINE-LIFT -->
 <h2>Passes 3262–3265: exact-cover signatures expose a one-bit symmetry cost</h2>
 <section class="grid">
-  <article class="card theorem">
-    <div class="eyebrow">Local signature alphabet</div>
-    <div class="metric">16 = 1 + 3 + 6 + 6</div>
-    <p>The four complete-census cell patterns form one fixed state, one three-state orbit, and two regular <span class="mono">S3</span> orbits.</p>
-  </article>
-  <article class="card theorem">
-    <div class="eyebrow">Fourier character</div>
-    <div class="metric">χ = (16, 2, 1)</div>
-    <p>The exact rational module is <span class="mono">4·1 ⊕ 2·sgn ⊕ 5·std</span>: four scalar channels, two sign channels, and five non-Abelian Fourier doublets.</p>
-  </article>
-  <article class="card theorem">
-    <div class="eyebrow">Coherent algebra</div>
-    <div class="metric">dim EndS3 = 45</div>
-    <p>Direct orbital enumeration also gives 45 relations, with size profile <span class="mono">1¹ 3³ 6⁴¹</span> and commutant <span class="mono">M4(Q) ⊕ M2(Q) ⊕ M5(Q)</span>.</p>
-  </article>
-  <article class="card theorem">
-    <div class="eyebrow">Exact rank-degree law</div>
-    <div class="metric">720 = 45 × 16</div>
-    <p>The global signature count equals local alphabet size times local commutant rank. This is an exact identity, not a claimed canonical anchor-to-orbital bijection.</p>
-  </article>
-  <article class="card theorem">
-    <div class="eyebrow">Four-bit affine no-go</div>
-    <div class="metric">2,800 S3 subgroups</div>
-    <p>Every embedded <span class="mono">S3 ≤ GL(4,2)</span> was classified. None has orbit profile <span class="mono">1+3+6+6</span>, so no affine four-bit realization exists.</p>
-  </article>
-  <article class="card theorem">
-    <div class="eyebrow">Minimal affine lift</div>
-    <div class="metric">4 + 1 = 5 bits</div>
-    <p>An explicit five-bit linear action realizes all sixteen states equivariantly. Four bits still work only through nonlinear lookup/permutation logic.</p>
-  </article>
+  <article class="card theorem"><div class="eyebrow">Local signature alphabet</div><div class="metric">16 = 1 + 3 + 6 + 6</div><p>The four complete-census cell patterns form one fixed state, one three-state orbit, and two regular <span class="mono">S3</span> orbits.</p></article>
+  <article class="card theorem"><div class="eyebrow">Fourier character</div><div class="metric">χ = (16, 2, 1)</div><p>The exact rational module is <span class="mono">4·1 ⊕ 2·sgn ⊕ 5·std</span>: four scalar channels, two sign channels, and five non-Abelian Fourier doublets.</p></article>
+  <article class="card theorem"><div class="eyebrow">Coherent algebra</div><div class="metric">dim EndS3 = 45</div><p>Direct orbital enumeration also gives 45 relations, with size profile <span class="mono">1¹ 3³ 6⁴¹</span> and commutant <span class="mono">M4(Q) ⊕ M2(Q) ⊕ M5(Q)</span>.</p></article>
+  <article class="card theorem"><div class="eyebrow">Exact rank-degree law</div><div class="metric">720 = 45 × 16</div><p>The global signature count equals local alphabet size times local commutant rank. This is an exact identity, not a claimed canonical anchor-to-orbital bijection.</p></article>
+  <article class="card theorem"><div class="eyebrow">Four-bit affine no-go</div><div class="metric">2,800 S3 subgroups</div><p>Every embedded <span class="mono">S3 ≤ GL(4,2)</span> was classified. None has orbit profile <span class="mono">1+3+6+6</span>, so no affine four-bit realization exists.</p></article>
+  <article class="card theorem"><div class="eyebrow">Minimal affine lift</div><div class="metric">4 + 1 = 5 bits</div><p>An explicit five-bit linear action realizes all sixteen states equivariantly. Four bits still work only through nonlinear lookup/permutation logic.</p></article>
 </section>
-<section class="card boundary" style="margin-top:18px">
-  <strong>Identification boundary.</strong> Equal cardinality does not identify the sixteen signature states with the <span class="mono">OA(16,3,4,2)</span> port alphabet. A direct intertwiner remains a separate proof obligation.
-</section>
+<section class="card boundary" style="margin-top:18px"><strong>Identification boundary.</strong> Equal cardinality does not identify the sixteen signature states with the <span class="mono">OA(16,3,4,2)</span> port alphabet.</section>
 <!-- /BT3262-BT3265-SIGNATURE-S3-AFFINE-LIFT -->
 
 <!-- BT3205-BT3213-CHROMATIC-CLOSURE -->
 <h2>Passes 3205–3213: the frame graph becomes a finite port machine</h2>
 <section class="grid">
-  <article class="card theorem">
-    <div class="eyebrow">Support factorisation</div>
-    <div class="metric">45 × 240</div>
-    <p>Block support incidence has row weight 16, column weight 3, and <span class="mono">NNᵀ = 16I + A</span> for <span class="mono">SRG(45,32,22,24)</span>.</p>
-  </article>
-  <article class="card theorem">
-    <div class="eyebrow">Port code</div>
-    <div class="metric">OA(16,3,4,2)</div>
-    <p>Every block contains three exact covers of one sixteen-edge support. Neighbor transport occurs through sixteen orthogonal-array ports.</p>
-  </article>
-  <article class="card theorem">
-    <div class="eyebrow">Cross-block law</div>
-    <div class="metric">0 or K3,3</div>
-    <p>Two blocks are disconnected or share one W33 edge, in which case the complete frame-level bridge is exactly <span class="mono">K3,3</span>.</p>
-  </article>
-  <article class="card theorem">
-    <div class="eyebrow">Arithmetic correction</div>
-    <div class="metric">1⁴⁴ ⊕ 3</div>
-    <p>The support Smith form has one 3-primary factor and no 5-primary torsion. Linear p-adic defect tests are vacuous for every possible deficit weight.</p>
-  </article>
-  <article class="card theorem">
-    <div class="eyebrow">Exact quotient</div>
-    <div class="metric">195,490</div>
-    <p>All sorted ten-colour deficit profiles are exhausted. The balanced class profile <span class="mono">54¹⁰</span> uniquely maximizes defect-Gram trace.</p>
-  </article>
-  <article class="card theorem">
-    <div class="eyebrow">Proof surface</div>
-    <div class="metric">7,800 · 146,289</div>
-    <p>A deterministic strengthened CNF exposes frame colours and the unique missing colour at every W33 edge. A SAT model or checked UNSAT proof is still required.</p>
-  </article>
+  <article class="card theorem"><div class="eyebrow">Support factorisation</div><div class="metric">45 × 240</div><p>Block support incidence has row weight 16, column weight 3, and <span class="mono">NNᵀ = 16I + A</span> for <span class="mono">SRG(45,32,22,24)</span>.</p></article>
+  <article class="card theorem"><div class="eyebrow">Port code</div><div class="metric">OA(16,3,4,2)</div><p>Every block contains three exact covers of one sixteen-edge support. Neighbor transport occurs through sixteen orthogonal-array ports.</p></article>
+  <article class="card theorem"><div class="eyebrow">Cross-block law</div><div class="metric">0 or K3,3</div><p>Two blocks are disconnected or share one W33 edge, in which case the complete frame-level bridge is exactly <span class="mono">K3,3</span>.</p></article>
+  <article class="card theorem"><div class="eyebrow">Arithmetic correction</div><div class="metric">1⁴⁴ ⊕ 3</div><p>The support Smith form has one 3-primary factor and no 5-primary torsion.</p></article>
+  <article class="card theorem"><div class="eyebrow">Exact quotient</div><div class="metric">195,490</div><p>All sorted ten-colour deficit profiles are exhausted. The balanced class profile <span class="mono">54¹⁰</span> uniquely maximizes defect-Gram trace.</p></article>
+  <article class="card theorem"><div class="eyebrow">Proof surface</div><div class="metric">7,800 · 146,289</div><p>A deterministic strengthened CNF exposes frame colours and the unique missing colour at every W33 edge.</p></article>
 </section>
-<section class="card boundary" style="margin-top:18px">
-  <strong>Current boundary.</strong> The exact value is still <span class="mono">χ(H) ∈ {10,11}</span>. The new result is an exact finite-geometric compiler and proof surface, not a bounded-search no-go claim.
-</section>
+<section class="card boundary" style="margin-top:18px"><strong>Current boundary.</strong> The exact value is still <span class="mono">χ(H) ∈ {10,11}</span>.</section>
 <!-- /BT3205-BT3213-CHROMATIC-CLOSURE -->
 
-    <h2>Passes 3187–3192: the last chromatic bit gets a proof filter</h2>
-    <section class="grid">
-      <article class="card theorem">
-        <div class="eyebrow">Local structure</div>
-        <div class="metric">45 × 12</div>
-        <p>The canonical frame/octet relation partitions all 540 frames into 45 blocks of 12. Every block induces <span class="mono">K12 minus 3K4</span>.</p>
-      </article>
-      <article class="card theorem">
-        <div class="eyebrow">Near-Hoffman bound</div>
-        <div class="metric">≤ 36</div>
-        <p>Any hypothetical ten-colouring has total squared mass outside the exact-cover <span class="mono">E−4</span> eigenspace at most 36.</p>
-      </article>
-      <article class="card theorem">
-        <div class="eyebrow">Arithmetic quotient</div>
-        <div class="metric">K ≡ −ssᵀ mod 15</div>
-        <p>Its 10×10 integer defect Gram must be positive semidefinite, have row sum zero and rank at most nine; every 2×2 minor is divisible by 15.</p>
-      </article>
-      <article class="card theorem">
-        <div class="eyebrow">Local pressure</div>
-        <div class="metric">≥ 90</div>
-        <p>A ten-colouring must realize at least 90 repeated-colour savings across the 45 local blocks.</p>
-      </article>
-    </section>
+<h2>Verified substrate</h2>
+<section class="grid">
+  <article class="card"><div class="metric">40 · 40 · 240</div><p class="muted">W(3,3) points, lines, and collinearity edges.</p></article>
+  <article class="card"><div class="metric">540 · 8,640</div><p class="muted">Canonical frames and frame-graph edges.</p></article>
+  <article class="card"><div class="metric">H + 4I = MMᵀ</div><p class="muted">Exact incidence factorization behind the cover/Hoffman sector.</p></article>
+  <article class="card"><div class="metric">3,547,800</div><p class="muted">Complete exact-cover census, classified into 327 inner orbits.</p></article>
+</section>
 
-    <section class="card boundary" style="margin-top:18px">
-      <strong>Evidence boundary.</strong> These are exact necessary conditions, not a proof that ten colours exist or fail. Time-bounded heuristic and MILP non-solutions are not treated as theorem evidence.
-    </section>
-
-    <h2>Verified substrate</h2>
-    <section class="grid">
-      <article class="card"><div class="metric">40 · 40 · 240</div><p class="muted">W(3,3) points, lines, and collinearity edges.</p></article>
-      <article class="card"><div class="metric">540 · 8,640</div><p class="muted">Canonical frames and frame-graph edges.</p></article>
-      <article class="card"><div class="metric">H + 4I = MMᵀ</div><p class="muted">Exact incidence factorization behind the cover/Hoffman sector.</p></article>
-      <article class="card"><div class="metric">3,547,800</div><p class="muted">Complete exact-cover census, classified into 327 inner orbits.</p></article>
-    </section>
-
-    <h2>Explore the project</h2>
-    <section class="grid">
-      <article class="card links">
-        <a href="atlas.html"><strong>Visual atlas</strong><span>W33, Levi geometry, Hodge projectors, codec chains, selectors, and falsifiers.</span></a>
-        <a href="falsifiers.html"><strong>Experimental falsifier dashboard</strong><span>Separates internal theorem status from externally refreshed empirical status.</span></a>
-      </article>
-      <article class="card checklist">
-        <div class="check"><b>✓</b><span>Executable theorem witnesses and frozen JSON certificates.</span></div>
-        <div class="check"><b>✓</b><span>Regression tests and fail-closed claim boundaries.</span></div>
-        <div class="check"><b>✓</b><span>Three canonical manuscripts compiled from the same theorem insert.</span></div>
-        <div class="check"><b>✓</b><span>Public claims separated from conjectures, analogies, and engineering targets.</span></div>
-      </article>
-    </section>
+<h2>Explore the project</h2>
+<section class="grid">
+  <article class="card links"><a href="atlas.html"><strong>Visual atlas</strong><span>W33, Levi geometry, Hodge projectors, codec chains, selectors, and falsifiers.</span></a><a href="falsifiers.html"><strong>Experimental falsifier dashboard</strong><span>Separates internal theorem status from externally refreshed empirical status.</span></a></article>
+  <article class="card checklist"><div class="check"><b>✓</b><span>Executable theorem witnesses and frozen JSON certificates.</span></div><div class="check"><b>✓</b><span>Regression tests and fail-closed claim boundaries.</span></div><div class="check"><b>✓</b><span>Three canonical manuscripts share certified inserts.</span></div><div class="check"><b>✓</b><span>Public claims remain separated from conjectures and engineering targets.</span></div></article>
+</section>
   </main>
-
-  <footer>
-    <p>Passes 3262–3265 · exact signature <span class="mono">S3</span> Fourier and affine-lift certificate</p>
-  </footer>
+  <footer><p>Passes 3286–3295 · exact signature-port obstruction and minimal common-envelope theorem</p></footer>
 </div>
 </body>
 </html>
