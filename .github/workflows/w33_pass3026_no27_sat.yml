@@ -1,0 +1,96 @@
+name: Pass 3026 Prove or Find 27 D4 Triangles
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - agent/pass3025-3033-noisy-predictive-sync-closure
+    paths:
+      - 'analysis/bt3025_3031_common.py'
+      - 'analysis/bt3026_27_triangle_sat.py'
+      - '.github/workflows/w33_pass3026_no27_sat.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pass3026-no27
+  cancel-in-progress: false
+
+jobs:
+  decide-central-obstruction:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install SAT stack and independent proof checker
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential git
+          python -m pip install --upgrade pip
+          python -m pip install numpy python-sat[pblib,aiger]
+          git clone --depth 1 https://github.com/marijnheule/drat-trim.git /tmp/drat-trim
+          make -C /tmp/drat-trim
+
+      - name: Solve the exact central-r2 size-27 instance
+        run: |
+          timeout 18000 python analysis/bt3026_27_triangle_sat.py \
+            --cnf data/bt3026_no27.cnf --solve --proof data/bt3026_no27.drup
+
+      - name: Independently check UNSAT or verify the full-D4 SAT model
+        run: |
+          python - <<'PY'
+          import hashlib,json,pathlib,subprocess
+          result_path=pathlib.Path('data/PART_BT3026_D4_FIXED_OPTIMUM_results.json')
+          data=json.loads(result_path.read_text())
+          status=data['status']
+          if status=='UNSAT_REPORTED_PROOF_REQUIRES_INDEPENDENT_CHECK':
+              check=subprocess.run(['/tmp/drat-trim/drat-trim','data/bt3026_no27.cnf','data/bt3026_no27.drup'],text=True,capture_output=True)
+              print(check.stdout)
+              print(check.stderr)
+              if check.returncode:
+                  raise SystemExit('DRUP proof did not verify')
+              proof=pathlib.Path('data/bt3026_no27.drup').read_bytes()
+              data['status']='COMPLETE_UNSAT_PROOF_VERIFIED_OPTIMUM_28'
+              data['independent_proof_checker']='drat-trim'
+              data['proof_sha256']=hashlib.sha256(proof).hexdigest()
+              data['exact_optimum']=28
+          elif status=='SAT_FULL_D4_27_FOUND':
+              data['exact_optimum_upper_bound']=27
+          elif status=='SAT_CENTRAL_ONLY_FULL_D4_REJECTED':
+              data['decision']='central candidate rejected; size-27 decision remains open'
+          else:
+              raise SystemExit(f'unexpected fail-closed status: {status}')
+          result_path.write_text(json.dumps(data,indent=2,sort_keys=True)+'\n')
+          PY
+
+      - name: Freeze stable decision record
+        env:
+          HEAD_BRANCH: ${{ github.ref_name }}
+        run: |
+          mkdir -p evidence/pass3026
+          sha256sum data/bt3026_no27.cnf data/PART_BT3026_D4_FIXED_OPTIMUM_results.json > evidence/pass3026/SHA256SUMS
+          git config user.name 'w33-sat-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/PART_BT3026_D4_FIXED_OPTIMUM_results.json evidence/pass3026
+          if ! git diff --cached --quiet; then
+            git commit -m 'Pass 3026: record proof-checked 27-triangle SAT decision'
+            git push origin HEAD:"$HEAD_BRANCH"
+          fi
+
+      - name: Upload CNF and proof artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: pass3026-no27-sat-proof
+          path: |
+            data/bt3026_no27.cnf
+            data/bt3026_no27.drup
+            data/PART_BT3026_D4_FIXED_OPTIMUM_results.json
+            evidence/pass3026/SHA256SUMS
