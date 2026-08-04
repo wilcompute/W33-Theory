@@ -1,0 +1,46 @@
+{
+  "schema": "w33.bt3364_3375.results.v1",
+  "checks": {"passed": 14, "total": 14},
+  "clebsch": {
+    "vertices": 16,
+    "edges": 40,
+    "srg": [16,5,0,2],
+    "intersection_array": [[5,4],[1,2]],
+    "spectrum": {"5":1,"1":10,"-3":5},
+    "automorphism_group": "2^4:S5",
+    "automorphism_group_order": 1920,
+    "shells": [1,5,10],
+    "second_subconstituent": "Petersen graph = KG(5,2)",
+    "coset_code": "[5,1,5] repetition code"
+  },
+  "systematic_self_protecting_code": {
+    "raw_bits": 5,
+    "minimum_parity_bits": 7,
+    "length": 12,
+    "messages": 22,
+    "minimum_distance": 5,
+    "search_nodes": {"r4":2,"r5":7,"r6":443,"r7":1388},
+    "distance_histogram": {"5":79,"6":90,"7":24,"8":15,"9":17,"10":5,"11":1},
+    "parity_map": {"0":0,"1":15,"2":51,"3":60,"4":85,"5":98,"6":75,"8":105,"10":70,"11":81,"12":26,"13":55,"16":94,"17":101,"19":72,"20":57,"22":38,"24":52,"25":42,"26":13,"29":1,"30":127}
+  },
+  "replication": {
+    "two_vertex_catastrophic": 16,
+    "two_vertex_survivable": 480,
+    "three_vertex_catastrophic": 480,
+    "three_vertex_survivable": 4480,
+    "static_single_vertex_minimum_slots": 32
+  },
+  "block_distance_psd_cones": [
+    "K0+32K1+12K2",
+    "K0+2K1-3K2",
+    "K0-4K1+3K2"
+  ],
+  "gauge_fusion": {
+    "same_type": "T_i(v)+T_i(w)=T_i(v+w)",
+    "annihilation": "w=-v",
+    "same_face_distinct_type": "minimum iff shared-edge coefficients cancel; otherwise weight 3",
+    "distinct_filled_faces": "edge-disjoint; generic weight 4",
+    "projective_fusion_triples": 29040
+  },
+  "claim_boundary": "No ten-colour decision, observed FPGA result, physical self-healing memory, laboratory fault rate, geometric hardware realization, successful queued PDF, or spacetime interpretation."
+}

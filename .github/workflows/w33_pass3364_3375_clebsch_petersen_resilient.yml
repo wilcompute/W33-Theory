@@ -1,0 +1,63 @@
+name: Passes 3364-3375 Clebsch Petersen Resilient Closure
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/*3364*'
+      - 'analysis/*3375*'
+      - 'data/PART_BT3364*'
+      - 'data/w33_pass_namespace_registry_v2.d/3364-3375.json'
+      - 'rtl/w33_envelope_systematic_d5_encoder.v'
+      - 'tests/test_bt3364_3375_clebsch_petersen_resilient_closure.py'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'holonet_machine_blueprint.tex'
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/*3364*'
+      - 'analysis/*3375*'
+      - 'data/PART_BT3364*'
+      - 'rtl/w33_envelope_systematic_d5_encoder.v'
+      - 'tests/test_bt3364_3375_clebsch_petersen_resilient_closure.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pass3364-3375-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  exact-rtl-papers:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install exact and digital tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys
+          python -m pip install --upgrade pip
+          python -m pip install numpy pytest
+      - name: Regenerate and test exact packet
+        run: |
+          mkdir -p evidence/pass3364_3375
+          python analysis/bt3364_3375_clebsch_petersen_resilient_closure.py --json /tmp/results.json | tee evidence/pass3364_3375/exact.log
+          python -m pytest -q tests/test_bt3364_3375_clebsch_petersen_resilient_closure.py | tee evidence/pass3364_3375/pytest.log
+          git diff --check
+      - name: Synthesize systematic distance-five encoder
+        run: |
+          yosys -p 'read_verilog rtl/w33_envelope_systematic_d5_encoder.v; hierarchy -top w33_envelope_systematic_d5_encoder; synth_ice40 -top w33_envelope_systematic_d5_encoder; stat' 2>&1 | tee evidence/pass3364_3375/encoder.yosys.log
+      - uses: WtfJoke/setup-tectonic@v3
+        with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
+      - name: Compile canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee evidence/pass3364_3375/${source%.tex}.log
+            test -s "${source%.tex}.pdf"
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3364-3375-clebsch-petersen-evidence
+          path: evidence/pass3364_3375/**
