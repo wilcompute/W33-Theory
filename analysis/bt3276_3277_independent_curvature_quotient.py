@@ -7,7 +7,7 @@ Unlike Pass 3216's recursive-signature constructor, this program:
   3. computes the coarsest stable partition by iterative label refinement;
   4. repeats discovery in opposite traversal order and compares partitions.
 
-State numbers are deliberately traversal-dependent.  The certificate is the
+State numbers are deliberately traversal-dependent. The certificate is the
 partition of raw subsets and the quotient transition graph, not ROM bytes.
 """
 from __future__ import annotations
@@ -102,7 +102,7 @@ def choose(indices, full):
 
 
 def raw_machine(initial, full, labels, reverse=False):
-    queue = deque(reversed(initial) if reverse else initial)
+    queue = deque(initial)
     seen = set(initial)
     records = {}
     while queue:
@@ -114,11 +114,18 @@ def raw_machine(initial, full, labels, reverse=False):
             continue
         action, children = choose(state, full)
         records[state] = (False, action, output, children)
-        ordered = sorted(children.values(), reverse=reverse)
-        for child in ordered:
+        for child in sorted(children.values()):
             if child not in seen:
                 seen.add(child); queue.append(child)
     return records
+
+
+def same_partition(left, right):
+    lr = defaultdict(set); rl = defaultdict(set)
+    for state in left:
+        lr[left[state]].add(right[state])
+        rl[right[state]].add(left[state])
+    return all(len(x) == 1 for x in lr.values()) and all(len(x) == 1 for x in rl.values())
 
 
 def refine(records):
@@ -135,29 +142,39 @@ def refine(records):
         palette2 = {key:i for i,key in enumerate(sorted(set(signatures.values()), key=repr))}
         new = {s:palette2[signatures[s]] for s in states}
         rounds += 1
-        if all(new[s] == old[s] for s in states):
+        if same_partition(old, new):
             return new, signatures, rounds
         labels = signatures
 
 
-def canonical_certificate(records, classes, signatures):
+def canonical_certificate(records, classes):
     members = defaultdict(list)
     for state, cid in classes.items(): members[cid].append(state)
     rows = []
     for cid, group in members.items():
         rep = min(group)
         terminal, action, output, children = records[rep]
-        row = {
+        expected = (terminal, action, output, tuple(sorted((o, classes[ch]) for o,ch in children.items())))
+        for state in group:
+            t,a,out,ch = records[state]
+            observed = (t,a,out,tuple(sorted((o,classes[c]) for o,c in ch.items())))
+            assert observed == expected
+        rows.append({
             "member_count": len(group),
             "terminal": terminal,
             "action": action,
             "output": output,
-            "transitions": sorted((o, classes[ch]) for o,ch in children.items()),
-        }
-        rows.append(row)
+            "transitions": expected[3],
+        })
     rows.sort(key=repr)
     text = json.dumps(rows, sort_keys=True, separators=(",",":"))
     return hashlib.sha256(text.encode()).hexdigest(), rows
+
+
+def groups(classes):
+    result = defaultdict(list)
+    for state,cid in classes.items(): result[cid].append(state)
+    return result.values()
 
 
 def main():
@@ -169,18 +186,17 @@ def main():
     assert len(grouped) == 46_284 and len(initial) == 1_436 and max(map(len,initial)) == 3
     labels = curvature(rows)
 
-    a = raw_machine(initial, full, labels, reverse=False)
-    b = raw_machine(initial, full, labels, reverse=True)
-    assert set(a) == set(b)
-    ca, sa, rounds_a = refine(a)
-    cb, sb, rounds_b = refine(b)
-    # Partition equivalence is tested pairwise through canonical class member sets.
-    pa = sorted(sorted(group) for group in _groups(ca))
-    pb = sorted(sorted(group) for group in _groups(cb))
-    assert pa == pb
-    assert len(set(ca.values())) == 876
-    assert len({ca[s] for s in initial}) == 770
-    digest, quotient = canonical_certificate(a, ca, sa)
+    forward = raw_machine(initial, full, labels, reverse=False)
+    reverse = raw_machine(initial, full, labels, reverse=True)
+    assert set(forward) == set(reverse)
+    cf, sf, rounds_f = refine(forward)
+    cr, sr, rounds_r = refine(reverse)
+    pf = sorted(tuple(sorted(group)) for group in groups(cf))
+    pr = sorted(tuple(sorted(group)) for group in groups(cr))
+    assert pf == pr
+    assert len(set(cf.values())) == 876
+    assert len({cf[s] for s in initial}) == 770
+    digest, quotient = canonical_certificate(forward, cf)
 
     payload = {
         "schema": "w33.pass3276_3277.independent_curvature_quotient.v1",
@@ -188,11 +204,11 @@ def main():
         "hypotheses": 48_826,
         "base_signatures": 46_284,
         "collision_classes": 1_436,
-        "raw_reachable_subsets": len(a),
+        "raw_reachable_subsets": len(forward),
         "quotient_states": 876,
         "initial_quotient_states": 770,
-        "refinement_rounds_forward": rounds_a,
-        "refinement_rounds_reverse": rounds_b,
+        "refinement_rounds_forward": rounds_f,
+        "refinement_rounds_reverse": rounds_r,
         "traversal_independent_partition": True,
         "quotient_semantic_sha256": digest,
         "algorithmic_independence": "Build raw subset DAG first, then iterate Moore partition refinement to a fixed point. No recursive signatures, canonical ROM IDs, or ROM-byte comparison are used.",
@@ -200,13 +216,7 @@ def main():
     }
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    print(json.dumps({"raw":len(a),"quotient":876,"initial":770,"sha256":digest}, sort_keys=True))
-
-
-def _groups(classes):
-    groups = defaultdict(list)
-    for state,cid in classes.items(): groups[cid].append(state)
-    return groups.values()
+    print(json.dumps({"raw":len(forward),"quotient":876,"initial":770,"sha256":digest}, sort_keys=True))
 
 
 if __name__ == "__main__":
