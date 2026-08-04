@@ -1,0 +1,22 @@
+{
+  "chunks": 5,
+  "encoded_sha256": "453e88620a9a02319165da03d669451f7e7189db6370a97f80e7d73e35b64b23",
+  "files": {
+    ".github/workflows/w33_pass3344_3355_exterior_dual_szegedy_q15.yml": "56ecff2e01fad9446bb7c1b3fc14ec33bca05be4929f88800f7bcaad024f1681",
+    ".github/workflows/w33_pass3347_tiny_status_sidecars.yml": "f94b850133dd14191b2b6aee9e2d01aefca4ec7889b1aa934d6d4bb02998d67b",
+    "analysis/BT3354_exterior_dual_szegedy_q15_index_insert.html": "3875a7cfaa22de673ddea7b7882f1824fc62be9f18f16844cd6e77e585b9b94a",
+    "analysis/BT3354_exterior_dual_szegedy_q15_insert.tex": "f1fa17e7f653cb7873337ac731c9ed61768fc78a424cc0f40b811d98b9e376bc",
+    "analysis/bt3344_3353_exterior_dual_szegedy_q15.py": "b10b2f7e55c95923cfaf0cbcf738dc379bbea6f6151bf36343051e093c16db0b",
+    "data/PART_BT3344_BT3353_EXTERIOR_DUAL_SZEGEDY_Q15_results.json": "72d425a682953934fdec80c989c94399e01c9316baa2f16611445d40a032411a",
+    "data/PART_BT3347_PROOF_STATUS_SIDECAR_manifest.json": "f1c15d366651815b13a5f65384c7b5690fc3a7c78636bb96178e7e5795d8da81",
+    "data/PART_BT3348_SZEGEDY_CIRCUIT_RESOURCE_LEDGER.json": "a545ab751bf84c888d8ce2d5a45307b7f05854d9c2fa492c8057392b25c63d29",
+    "data/PART_BT3348_SZEGEDY_TOKEN_ORACLE.json": "30ed1256e6b46c3242a8e4cb0a78146b51a3b9f97e0ea46f6ed579420ce39e68",
+    "data/PART_BT3349_BT3353_Q15_CODE_GUARD_GEOMETRY.json": "f7e51392f4dd806f9c17e8f9b107c01c30e17fa54b2e62e15b8ad903e9e41352",
+    "evidence/pass3344_3355/source_validation.json": "d9da0926beaf53ee76e592e5cae2085fc4128c9b3cde1012ea131eefa0dc289e",
+    "tests/test_bt3344_3355_exterior_dual_szegedy_q15.py": "a478afc52c8b968ff5c9f9230f503dd42854a4c61457c00f549ce9b4f4fa1f88",
+    "tools/aggregate_bt3347_status_sidecars.py": "5cfe0ffeedb1c93b8229a555fb7d2c8673e69867d1efb0a375a61694a516339c",
+    "tools/integrate_bt3344_bt3355.py": "136e899a65d792da99d8b0062ebe52f89036610db4aa72ac7a0ffee097535d11"
+  },
+  "payload_sha256": "902ccf8ceaeead4b45bc8c0f5d836dda439d5f78d151d8b8d095f4f8a2d6d229",
+  "schema": "w33.pass3344_3355.bundle_manifest.v1"
+}

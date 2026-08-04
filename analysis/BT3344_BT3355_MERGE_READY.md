@@ -1,0 +1,1 @@
+The source envelope is complete at head `a2cc293e0e7123d8a51addc6ef755bdd79354d5c`; all later parallel Clebsch, cohomology, tau and current-frontier results have been reviewed and separated by evidence type.
