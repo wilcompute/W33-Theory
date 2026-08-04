@@ -1,0 +1,22 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "3320-3331",
+  "owner": "agent/pass3320-3331-global-cover-quantum-hypercube",
+  "status": "in_progress_evidence_gated",
+  "reserved_after": "master through Passes 3308-3319 and merged Passes 3296-3307",
+  "passes": {
+    "3320": "reconcile the closed Hamming switch component with the exact global 3,547,800-cover census",
+    "3321": "classify the 1,973,160-cover exterior complement by stabilizer and orbit size",
+    "3322": "compile the 1,045-coordinate rational dual surface by exact deficit-profile stabilizer orbits",
+    "3323": "exhaust the S3 Fourier decoder truth table and bind Python, vector and RTL contracts",
+    "3324": "refine only terminal UNKNOWN chromatic shards with proof-carrying grandchildren",
+    "3325": "compile the reversible Hamming-orbifold chain into a Szegedy quantum-walk phase ledger",
+    "3326": "test the 192-orbit exterior-sector/tomotope analogy and preserve the equivariance boundary",
+    "3327": "derive the tau-invariant ternary Fourier decomposition of the 135-species quotient",
+    "3328": "prove the exact one-hot Q15 host and non-embedding boundary for H(5,3)",
+    "3329": "separate the secondary Q4 codec from the intrinsic Q15 cover host and construct the graph maps",
+    "3330": "integrate the eight-front theorem into the canonical manuscripts and public index",
+    "3331": "focused regression, evidence workflows, hashes and fail-closed publication boundary"
+  },
+  "claim_boundary": "No queued workflow, chi(H) decision, physical quantum speedup, tomotope equivariance, hardware timing, successful PDF, laboratory calibration or spacetime claim is promoted without dedicated checked evidence."
+}
