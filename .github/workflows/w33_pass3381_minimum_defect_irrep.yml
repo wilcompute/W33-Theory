@@ -1,9 +1,9 @@
-name: Pass 3381 Minimum Defect Irrep Candidates
+name: Pass 3381 Minimum Defect Edge Character
 on:
   push:
     branches: [master]
     paths:
-      - 'analysis/bt3381_minimum_defect_irrep_candidates.g'
+      - 'analysis/bt3381_minimum_defect_edge_character.py'
       - '.github/workflows/w33_pass3381_minimum_defect_irrep.yml'
   workflow_dispatch:
 permissions:
@@ -16,22 +16,29 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Install GAP
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y gap gap-character-tables
-      - name: Enumerate stabilizer characters
+          python -m pip install --disable-pip-version-check numpy networkx
+      - name: Decompose literal 720-edge action
         run: |
-          gap -q analysis/bt3381_minimum_defect_irrep_candidates.g \
-            | tee /tmp/bt3381_gap.log
-          test -s data/PART_BT3381_MINIMUM_DEFECT_IRREP_candidates.tsv
-          grep -F $'group_order\t25920' data/PART_BT3381_MINIMUM_DEFECT_IRREP_candidates.tsv
-      - name: Commit candidate table once
+          python analysis/bt3381_minimum_defect_edge_character.py \
+            | tee /tmp/bt3381_edge_character.log
+          test -s data/PART_BT3381_MINIMUM_DEFECT_EDGE_CHARACTER_results.json
+          grep -F '"group_order": 25920' \
+            data/PART_BT3381_MINIMUM_DEFECT_EDGE_CHARACTER_results.json
+          grep -F '"status": "PASS"' \
+            data/PART_BT3381_MINIMUM_DEFECT_EDGE_CHARACTER_results.json
+      - name: Commit exact character certificate once
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add data/PART_BT3381_MINIMUM_DEFECT_IRREP_candidates.tsv
+          git add data/PART_BT3381_MINIMUM_DEFECT_EDGE_CHARACTER_results.json
           if ! git diff --cached --quiet; then
-            git commit -m 'Materialize Pass 3381 minimum-defect character candidates [skip ci]'
+            git commit -m 'Materialize Pass 3381 minimum-defect edge character [skip ci]'
             git push
           fi
