@@ -1,0 +1,22 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "3214-3225",
+  "owner": "agent/pass3214-3225-runtime-reset-sheaf-closure",
+  "status": "reserved_in_progress",
+  "reserved_after": "master through Passes 3187-3192; preserves open PR #246 Passes 3193-3204 and PR #247 Passes 3205-3213",
+  "passes": {
+    "3214": "adopt and harden the 32-shard exact affine BFS engine for all 194 universal five- and six-opcode ISAs; produce fail-closed aggregate and typed runtime frontier",
+    "3215": "compile a tri-ISA physical promotion contract that consumes observed area, timing and calibration evidence but never substitutes source estimates for placement",
+    "3216": "materialize the exact 876-state curvature-aware Moore quotient as a canonical ROM with a machine-checkable bisimulation certificate and resource model",
+    "3217": "connect rank-three M36 shard outputs to content-addressed proof envelopes, independent certification, Merkle aggregation and fail-closed candidate authorization",
+    "3218": "repair and drain the active evidence stack in dependency order, classify terminal artifacts and generate exact retarget/merge preconditions without granting merge authority",
+    "3219": "outside-box sheaf/cohomology lift of the failed 45-object bridge across the 45-block/240-port incidence cover, with explicit obstruction and false-positive boundaries",
+    "3220": "outside-box synchronizing-automaton search on the curvature-aware controller crossed with the phase alphabet, producing either an exact reset word or a certified rank floor",
+    "3221": "derive the CSS/homology and expansion parameters of the 240-vertex 540-hyperedge frame incidence complex exposed by the finite-port factorisation",
+    "3222": "build a proof-carrying distributed BFS/M36 evidence accumulator with Merkle commitments, deterministic leaf challenges and naysayer-compatible counterexamples",
+    "3223": "unified synthesizable RTL for quotient-ROM dispatch, reset-word supervision, proof-root authorization and tri-ISA evidence gating",
+    "3224": "canonical manuscript/site corrections, exact regressions, semantic hashes, idempotence and cross-packet stale-claim checks",
+    "3225": "guarded Icarus, Yosys, HX8K, sharded-computation and three-PDF evidence lanes with typed claim ledger and publication boundary"
+  },
+  "claim_boundary": "Reservation only. No all-194 aggregate, observed tri-ISA hardware winner, quotient-ROM placement result, accepted M36 candidate, complete sheaf bridge, synchronizing reset word, CSS distance, cryptographic security, PDF build or physical performance is claimed before the dedicated source and evidence gates complete."
+}
