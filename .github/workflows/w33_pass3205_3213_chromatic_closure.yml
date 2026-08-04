@@ -1,0 +1,70 @@
+name: Passes 3205-3213 Chromatic Closure
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/*3205*'
+      - 'analysis/*3212*'
+      - 'data/PART_BT3205*'
+      - 'data/w33_pass_namespace_registry_v2.d/3205-3213.json'
+      - 'tests/test_bt3205_3213_chromatic_closure.py'
+      - 'tools/integrate_bt3205_bt3213.py'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'holonet_machine_blueprint.tex'
+      - 'docs/index.html'
+      - '.github/workflows/w33_pass3205_3213_chromatic_closure.yml'
+permissions:
+  contents: read
+concurrency:
+  group: pass3205-3213-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  exact-closure-and-papers:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install focused exact tools
+        run: python -m pip install --upgrade pip numpy sympy pytest
+      - name: Rebuild certificate, CNF and regression
+        run: |
+          cp data/PART_BT3205_BT3211_CHROMATIC_CLOSURE_results.json /tmp/frozen.json
+          python analysis/bt3205_3211_chromatic_closure.py --emit-cnf /tmp/w33_ten_color.cnf
+          diff -u /tmp/frozen.json data/PART_BT3205_BT3211_CHROMATIC_CLOSURE_results.json
+          pytest -q tests/test_bt3205_3213_chromatic_closure.py
+          sha256sum /tmp/w33_ten_color.cnf
+          git diff --check
+      - name: Verify four front doors are integrated idempotently
+        run: |
+          python tools/integrate_bt3205_bt3213.py --check
+          git diff --check
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Compile all three canonical manuscripts
+        run: |
+          mkdir -p evidence/pass3205_3213
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            stem=${source%.tex}
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3205_3213/${stem}.build.log"
+            test -s "${stem}.pdf"
+            if grep -E 'Undefined control sequence|LaTeX Error|Emergency stop|Fatal error' "${stem}.log"; then exit 1; fi
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3205_3213/pdf_sha256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3205-3213-chromatic-closure-evidence
+          path: |
+            data/PART_BT3205_BT3211_CHROMATIC_CLOSURE_results.json
+            /tmp/w33_ten_color.cnf
+            evidence/pass3205_3213/*
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
