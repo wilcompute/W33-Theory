@@ -2,7 +2,7 @@
   "schema": "w33.pass_namespace_reservation.v2",
   "range": "3133-3142",
   "owner": "agent/pass3133-3142-certifying-adaptive-inference",
-  "status": "reserved_in_progress",
+  "status": "SOURCE_COMPLETE_EVIDENCE_PENDING",
   "reserved_after": "master through Pass 3132 reservation",
   "passes": {
     "3133": "fully noisy 23-row base-panel filter over all 48,826 D4 hypotheses using sparse exact likelihood factors and fail-closed posterior normalization",
@@ -16,5 +16,12 @@
     "3141": "paper, blueprint and site overhaul around certifiable predictive execution",
     "3142": "claim ledger, focused regressions, hardware/PDF evidence lane and cross-track reconciliation"
   },
-  "claim_boundary": "Reservation only. Exact finite mathematics, synthetic channels, source RTL, candidate certification, solver output, synthesis, PDFs and laboratory behavior remain separately typed until observed."
+  "source_completion": {
+    "python_generator": "locally executed in an isolated environment",
+    "rank3_negative_control": "rejected as required",
+    "rtl": "source and testbench committed; remote tools pending",
+    "front_doors": "idempotent integrator committed; materialization and compilation pending",
+    "parallel_composition": "Passes 3124-3132 produce search objects; Pass 3134 independently certifies rank-three candidates"
+  },
+  "claim_boundary": "Exact finite mathematics and stated synthetic models are source-complete. Rank-three existence, RTL simulation/synthesis/placement, manuscript integration/PDFs and laboratory behavior remain independently gated."
 }
