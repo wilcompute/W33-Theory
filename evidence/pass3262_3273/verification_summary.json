@@ -1,0 +1,15 @@
+{
+  "bounded_chromatic_child_diagnostics": "10_TIME_LIMIT_NO_PRIMAL_NONRESULTS",
+  "claim_boundary": "No external tool result is promoted before its terminal workflow and artifacts are inspected.",
+  "focused_pytest": "PASS_7_OF_7",
+  "front_door_integrator_idempotence": "PASS_LOCAL_DUMMY_FOUR_FRONT_DOORS",
+  "front_door_materialization": "QUEUED_EXTERNAL_EVIDENCE",
+  "full_cover_census": "PASS_ACROSS_DETERMINISTIC_CHECKPOINTS_135_SPECIES_FRONTIER_ZERO",
+  "local_exact_regeneration": "PASS",
+  "rtl_simulation": "QUEUED_EXTERNAL_EVIDENCE",
+  "schema": "w33.pass3262_3273.verification_summary.v1",
+  "semantic_sha256": "e14bd51835ee43dd67818ee3654f037bca1b25c9893e80191a947a22f57d4829",
+  "source_workflows": "INSTALLED_NOT_OBSERVED",
+  "synthesis": "QUEUED_EXTERNAL_EVIDENCE",
+  "three_pdf_build": "QUEUED_EXTERNAL_EVIDENCE"
+}
