@@ -1,0 +1,131 @@
+{
+  "adaptive_receiver_prior_art": "Acin-Bagan-Baig-Masanes-Munoz-Tapia: adaptive individual von Neumann measurements attain the collective bound for every copy number.",
+  "check_count": 10,
+  "checks": {
+    "adaptive_individual_receiver_matches_collective_bound_by_published_theorem": true,
+    "all_squared_overlaps_equal_one_third": true,
+    "ncopy_overlap_squared_is_three_to_minus_n": true,
+    "pauli_receiver_success_is_0p788675": true,
+    "prior_helstrom_label_is_corrected": true,
+    "selected_pauli_expectation_magnitude_one_over_sqrt3": true,
+    "six_copies_cross_one_per_thousand_error": true,
+    "twelve_conjugate_pairs_reconstructed": true,
+    "twelve_copies_cross_one_per_million_error": true,
+    "unrestricted_helstrom_success_is_0p908248": true
+  },
+  "claim_boundary": "The formulas assume a known conjugate pair/frame, equal priors, perfect copies and ideal measurements. The adaptive attainability theorem is published prior art, not a new W33 theorem.",
+  "headline": "The two-Pauli chirality readout is minimal in probe alphabet but not Helstrom-optimal: unrestricted one-copy success is 90.825%, and adaptive individual measurements attain the n-copy collective bound.",
+  "minimum_project_local_pauli_cover": [
+    "YI",
+    "IY"
+  ],
+  "mislabelled_gap": 0.11957315586905015,
+  "ncopy_helstrom_error": "(1-sqrt(1-3^(-n)))/2",
+  "ncopy_helstrom_success": "(1+sqrt(1-3^(-n)))/2",
+  "pair_squared_overlap": "1/3",
+  "quantum_chernoff_exponent": "log(3)",
+  "schema": "w33.pass2969.chirality_receiver_correction.v1",
+  "selected_local_pauli_success": "(1+1/sqrt(3))/2",
+  "selected_local_pauli_success_decimal": 0.7886751345948129,
+  "status": "COMPLETE_EXACT_CORRECTION_AND_STANDARD_RECEIVER_APPLICATION",
+  "table": [
+    {
+      "collective_or_adaptive_helstrom_error": 0.09175170953613698,
+      "collective_or_adaptive_helstrom_success": 0.908248290463863,
+      "copies": 1,
+      "fixed_repeated_pauli_majority_success": 0.7886751345948129,
+      "fixed_repeated_single_copy_helstrom_majority_success": 0.908248290463863,
+      "unambiguous_success": 0.42264973081037427
+    },
+    {
+      "collective_or_adaptive_helstrom_error": 0.028595479208968322,
+      "collective_or_adaptive_helstrom_success": 0.9714045207910317,
+      "copies": 2,
+      "fixed_repeated_pauli_majority_success": 0.7886751345948129,
+      "fixed_repeated_single_copy_helstrom_majority_success": 0.908248290463863,
+      "unambiguous_success": 0.6666666666666667
+    },
+    {
+      "collective_or_adaptive_helstrom_error": 0.009346618537341811,
+      "collective_or_adaptive_helstrom_success": 0.9906533814626581,
+      "copies": 3,
+      "fixed_repeated_pauli_majority_success": 0.8849001794597505,
+      "fixed_repeated_single_copy_helstrom_majority_success": 0.9762896722078402,
+      "unambiguous_success": 0.8075499102701247
+    },
+    {
+      "collective_or_adaptive_helstrom_error": 0.003096005000046753,
+      "collective_or_adaptive_helstrom_success": 0.9969039949999532,
+      "copies": 4,
+      "fixed_repeated_pauli_majority_success": 0.8849001794597505,
+      "fixed_repeated_single_copy_helstrom_majority_success": 0.9762896722078401,
+      "unambiguous_success": 0.8888888888888888
+    },
+    {
+      "collective_or_adaptive_helstrom_error": 0.00102986721083409,
+      "collective_or_adaptive_helstrom_success": 0.9989701327891659,
+      "copies": 5,
+      "fixed_repeated_pauli_majority_success": 0.9330127018922194,
+      "fixed_repeated_single_copy_helstrom_majority_success": 0.9933000176438345,
+      "unambiguous_success": 0.9358499700900416
+    },
+    {
+      "collective_or_adaptive_helstrom_error": 0.00034305321362809726,
+      "collective_or_adaptive_helstrom_success": 0.9996569467863718,
+      "copies": 6,
+      "fixed_repeated_pauli_majority_success": 0.9330127018922193,
+      "fixed_repeated_single_copy_helstrom_majority_success": 0.9933000176438345,
+      "unambiguous_success": 0.962962962962963
+    },
+    {
+      "collective_or_adaptive_helstrom_error": 0.00011432491289259383,
+      "collective_or_adaptive_helstrom_success": 0.9998856750871075,
+      "copies": 7,
+      "fixed_repeated_pauli_majority_success": 0.9597418810213687,
+      "fixed_repeated_single_copy_helstrom_majority_success": 0.9980251135982774,
+      "unambiguous_success": 0.9786166566966805
+    },
+    {
+      "collective_or_adaptive_helstrom_error": 3.8105399590482314e-05,
+      "collective_or_adaptive_helstrom_success": 0.9999618946004095,
+      "copies": 8,
+      "fixed_repeated_pauli_majority_success": 0.9597418810213687,
+      "fixed_repeated_single_copy_helstrom_majority_success": 0.9980251135982773,
+      "unambiguous_success": 0.9876543209876543
+    },
+    {
+      "collective_or_adaptive_helstrom_error": 1.270147718385184e-05,
+      "collective_or_adaptive_helstrom_success": 0.9999872985228162,
+      "copies": 9,
+      "fixed_repeated_pauli_majority_success": 0.9753339021800391,
+      "fixed_repeated_single_copy_helstrom_majority_success": 0.9994032665849897,
+      "unambiguous_success": 0.9928722188988935
+    },
+    {
+      "collective_or_adaptive_helstrom_error": 4.233789877072791e-06,
+      "collective_or_adaptive_helstrom_success": 0.9999957662101229,
+      "copies": 10,
+      "fixed_repeated_pauli_majority_success": 0.9753339021800391,
+      "fixed_repeated_single_copy_helstrom_majority_success": 0.9994032665849899,
+      "unambiguous_success": 0.9958847736625515
+    },
+    {
+      "collective_or_adaptive_helstrom_error": 1.4112593090254144e-06,
+      "collective_or_adaptive_helstrom_success": 0.999998588740691,
+      "copies": 11,
+      "fixed_repeated_pauli_majority_success": 0.9846891148752412,
+      "fixed_repeated_single_copy_helstrom_majority_success": 0.9998167124810036,
+      "unambiguous_success": 0.9976240729662978
+    },
+    {
+      "collective_or_adaptive_helstrom_error": 4.7041932704772194e-07,
+      "collective_or_adaptive_helstrom_success": 0.999999529580673,
+      "copies": 12,
+      "fixed_repeated_pauli_majority_success": 0.9846891148752414,
+      "fixed_repeated_single_copy_helstrom_majority_success": 0.9998167124810036,
+      "unambiguous_success": 0.9986282578875172
+    }
+  ],
+  "unrestricted_single_copy_helstrom_success": "(1+sqrt(2/3))/2",
+  "unrestricted_single_copy_helstrom_success_decimal": 0.908248290463863
+}
