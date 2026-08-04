@@ -1,0 +1,64 @@
+name: Passes 3163-3174 Proof-Carrying Runtime
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'analysis/*3163*'
+      - 'analysis/*3164*'
+      - 'analysis/*3165*'
+      - 'analysis/*3167*'
+      - 'analysis/*3169*'
+      - 'analysis/*3171*'
+      - 'analysis/*3172*'
+      - 'rtl/*3164*'
+      - 'rtl/*3168*'
+      - 'rtl/*3169*'
+      - 'rtl/*3171*'
+      - 'rtl/*3172*'
+      - 'tests/test_bt3163_bt3174_proof_carrying_runtime.py'
+      - 'tools/integrate_bt3163_bt3174.py'
+      - '.github/workflows/w33_pass3163_3174_proof_carrying_runtime.yml'
+permissions:
+  contents: read
+jobs:
+  exact-rtl-papers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys fpga-icestorm nextpnr-ice40
+          python -m pip install numpy pytest
+      - uses: wtfjoke/setup-tectonic@v3
+      - name: Exact and model certificates
+        run: |
+          python analysis/bt3164_tri_isa_physical_contract.py
+          python analysis/bt3165_3166_m36_sharded_census.py --mode plan
+          python analysis/bt3167_3168_phase_coded_epoch.py
+          python analysis/bt3169_3170_bayesian_datapath.py
+          python analysis/bt3171_d4_belief_curvature.py
+          python analysis/bt3172_isa_channel_capacity.py
+          python analysis/bt3163_3174_proof_carrying_runtime_summary.py
+          pytest -q tests/test_bt3163_bt3174_proof_carrying_runtime.py
+      - name: RTL simulation
+        run: |
+          iverilog -g2012 -s tb_w33_pass3163_3172_proof_runtime -o /tmp/pass3174.vvp \
+            rtl/w33_pass3164_tri_isa_decoder.sv rtl/w33_pass3168_phase_epoch_decoder.sv \
+            rtl/w33_pass3169_hypothesis_enumerator.sv rtl/w33_pass3169_3170_bayesian_stream.sv \
+            rtl/w33_pass3171_d4_curvature.sv rtl/w33_pass3172_information_tri_isa_scheduler.sv \
+            rtl/tb_w33_pass3163_3172_proof_runtime.sv
+          vvp /tmp/pass3174.vvp
+      - name: Integrate and compile papers
+        run: |
+          python tools/integrate_bt3163_bt3174.py
+          sha256sum w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html > /tmp/a
+          python tools/integrate_bt3163_bt3174.py
+          sha256sum w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html > /tmp/b
+          diff -u /tmp/a /tmp/b
+          tectonic w33_paper.tex
+          tectonic photonic_holonet.tex
+          tectonic holonet_machine_blueprint.tex
