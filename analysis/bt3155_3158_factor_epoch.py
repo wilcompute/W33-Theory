@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Passes 3155-3158: seven-bank factor schedule and in-band epoch code."""
+"""Passes 3155-3158: factor schedule, physical bank shape, and in-band epoch code."""
 from __future__ import annotations
-import itertools,json,math
+import itertools,json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'data'/'PART_BT3155_BT3158_FACTOR_EPOCH_results.json'
@@ -20,23 +20,21 @@ def factor_schedule():
         pairs.extend(tuple(sorted((eid[a],eid[b]))) for a,b in itertools.combinations(es,2))
     assert len(pairs)==69 and len(set(pairs))==69
     schedule=[]
-    for e in range(45):schedule.append({'cycle':len(schedule),'kind':'unary','edge':e,'address':e})
+    for e in range(45):
+        schedule.append({'cycle':len(schedule),'kind':'unary','edge':e,
+                         'memory':'unary_wide','address':e})
     for p,pair in enumerate(pairs):
         for left_label in range(7):
             schedule.append({'cycle':len(schedule),'kind':'pair','edge_pair':list(pair),
-                             'left_label':left_label,'address':45+7*p+left_label})
+                             'left_label':left_label,'memory':'correction_banks',
+                             'address':7*p+left_label})
     assert len(schedule)==528
-    for bank in range(7):
-        addrs=[x['address'] for x in schedule]
-        assert len(addrs)==len(set(addrs))==528
+    assert [x['address'] for x in schedule[:45]]==list(range(45))
+    assert [x['address'] for x in schedule[45:]]==list(range(483))
     return schedule,pairs
 
 def marker_proof():
     used=set(SYNC);assert 1 not in used and 22 not in used
-    # Every payload-only word contains zero marker-alphabet symbols. Transforming any
-    # payload word to the five-symbol marker needs at least five edits, regardless of
-    # payload length: min(L,5) substitutions plus |L-5| insertions/deletions=max(L,5)>=5.
-    # Radius-two balls are therefore disjoint by the triangle inequality.
     assert len(MARKER)==5 and set(MARKER).isdisjoint(used)
     pairs=[(SYNC[i],SYNC[(i+1)%12]) for i in range(12)]
     assert len(set(pairs))==12
@@ -49,19 +47,25 @@ def marker_proof():
 
 def main():
     schedule,pairs=factor_schedule();spacing=marker_proof()
-    bits=7*528*18+18
-    out={'schema':'w33.pass3155_3158.factor_epoch.v1',
+    bits=45*126+7*483*18+18
+    # iCE40 aspect-ratio fit: unary 45x126 uses eight 256x16 columns;
+    # each 483x18 correction bank uses three 512x8 columns.
+    unary_ebr=8;correction_ebr_per_bank=3;total_ebr=unary_ebr+7*correction_ebr_per_bank
+    assert bits==66546 and total_ebr==29
+    out={'schema':'w33.pass3155_3158.factor_epoch.v2',
       'factor_engine':{
-        'dynamic_factors':3697,'baseline_registers':1,'banks':7,'words_per_bank':528,
-        'word_bits':18,'single_table_bits':bits,'single_table_bytes':bits/8,
+        'dynamic_factors':3697,'baseline_registers':1,'word_bits':18,
+        'unary_memory':{'rows':45,'width_bits':126,'ice40_ebr_blocks':unary_ebr},
+        'correction_banks':7,'correction_words_per_bank':483,
+        'correction_ebr_blocks_per_bank':correction_ebr_per_bank,
+        'ice40_total_ebr_blocks':total_ebr,
+        'single_table_bits':bits,'single_table_bytes':bits/8,
         'unary_cycles':45,'pair_cycles':483,'sweep_cycles':528,
         'parallel_factor_updates_per_cycle':7,
         'modeled_100mhz_sweeps_per_second':100_000_000/528,
         'modeled_internal_write_bandwidth_bits_per_second':7*18*100_000_000,
-        'ice40_4k_ebr_blocks_per_bank':math.ceil(528*18/4096),
-        'ice40_total_ebr_blocks':7*math.ceil(528*18/4096),
         'schedule':schedule,
-        'boundary':'Cycle exact schedule and memory arithmetic; 100 MHz is a design input, not placed timing.'},
+        'boundary':'Cycle and aspect-ratio arithmetic are exact; inferred block count, frequency and placement remain tool-observed gates.'},
       'epoch_code':{
         'payload_alphabet_size':24,'payload_period':12,'marker':list(MARKER),
         'marker_symbol_meaning':['omit0/order1','omit3/order4','omit0/order1','omit3/order4','omit0/order1'],
@@ -69,7 +73,7 @@ def main():
         'clean_blind_phase_acquisition_symbols':2,
         'two_edit_false_acquisition':'IMPOSSIBLE',
         'proof':'payload-to-marker Levenshtein distance is at least five; radius-two balls are disjoint',
-        'robust_detector':'declare epoch only for a received word at Levenshtein distance at most two from the five-symbol marker',
+        'robust_detector':'declare epoch only after at least three marker-alphabet symbols survive in a seven-symbol window',
         'spacing_pareto':spacing,
         'boundary':'Exact adversarial two-edit delimiter theorem. Optical symbol confusion probabilities are not measured.'}}
     OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps(out,indent=2,sort_keys=True))
