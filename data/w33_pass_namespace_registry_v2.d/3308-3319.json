@@ -1,0 +1,22 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "3308-3319",
+  "owner": "agent/pass3308-3319-knight-hypercube-gauge-closure",
+  "status": "in_progress_exact_hypercube_gauge_closure",
+  "base": "master@84e30c9623f4f6f7d400ef33780e974c44d5da10",
+  "passes": {
+    "3308": "global C3 signature-port gauge cohomology and wreath Burnside census",
+    "3309": "observed controller simulation and synthesis comparison lane",
+    "3310": "22-state common-envelope coherent and Terwilliger algebra",
+    "3311": "orientation-carrying C3 chromatic relabeling compiler and manifest",
+    "3312": "45 anchor-octet versus 45 signature-orbital canonicity audit",
+    "3313": "optimal nonlinear signature embedding in the Q4 toroidal-knight network",
+    "3314": "Q5 double-toroidal affine-lift network theorem",
+    "3315": "sign-dark ten-word guard-shell network and fault surface",
+    "3316": "deterministic shortest-path knight-router RTL",
+    "3317": "focused exact regressions, synthesis wrappers and evidence workflow",
+    "3318": "canonical manuscript and public-site integration",
+    "3319": "claim ledger, evidence boundary and release"
+  },
+  "claim_boundary": "No ten-colour SAT/UNSAT decision, canonical physical gauge, observed FPGA result before workflow evidence, laboratory performance, or spacetime identification is asserted."
+}

@@ -1,0 +1,139 @@
+{
+  "checks": {
+    "anchor_orbitals_split_13": true,
+    "c3_phase_dimension_2180": true,
+    "canonical_gauge_manifest": true,
+    "chromatic_boundary_preserved": true,
+    "envelope_orbitals": true,
+    "envelope_rank_89": true,
+    "envelope_terwilliger_89_222_484": true,
+    "full_gauge_digits_1943": true,
+    "guard_rank_25": true,
+    "guard_sign_dark": true,
+    "guard_size_10": true,
+    "guard_terwilliger_25_58": true,
+    "minimum_embedding_count": true,
+    "q5_double_torus": true,
+    "signature_q4_congestion_3": true,
+    "signature_q4_dilation_2": true,
+    "signature_q4_work_34": true,
+    "toroidal_knight_is_q4": true
+  },
+  "checks_passed": 18,
+  "checks_total": 18,
+  "claim_boundary": "No chi(H) decision, canonical physical gauge, laboratory performance, observed FPGA timing/area, or spacetime identification is asserted.",
+  "pass3308_global_c3_gauge": {
+    "burnside_formula": "sum_[wreath conjugacy classes C] |C_W(g)|^435",
+    "canonical_gauge_exists": true,
+    "canonical_gauge_selected_by_geometry": false,
+    "fixed_orbit_pairing_class_count_digits": 1041,
+    "fixed_orbit_pairing_class_count_prefix": "133148196681840579741904623331039168460908065910834630622310",
+    "fixed_orbit_pairing_class_count_sha256": "0ee4ab91cd58ac22e76c8f86c3c34da76ecc20c195e6276a2078d003c664adfe",
+    "fixed_orbit_pairing_class_count_suffix": "760777328156773301697823715882994017435826285339371772459601",
+    "fixed_orbit_pairing_dimension": 2180,
+    "fixed_orbit_pairing_phase_space": "F3^2180",
+    "full_nonabelian_class_count_digits": 1943,
+    "full_nonabelian_class_count_prefix": "456764455585182048216229216278173545692557477072579563988715",
+    "full_nonabelian_class_count_sha256": "3d27234dc2dddb3d8f33d40b79cf0228cbdc0e80601a5de5550fa21862bdd6d8",
+    "full_nonabelian_class_count_suffix": "260966725855707026994877597470052336372515577064587938349830",
+    "fundamental_group": "F_436",
+    "local_intertwiner_group": "C3 wr S5",
+    "local_intertwiner_group_order": 29160,
+    "wreath_conjugacy_class_count": 108
+  },
+  "pass3309_synthesis_contract": {
+    "evidence_boundary": "The focused workflow performs simulation and synthesis. Source metrics are not promoted to observed cell counts, timing or placement.",
+    "five_bit_envelope_source": "rtl/w33_signature_port_linear5.v",
+    "four_bit_port_source": "rtl/w33_port_s3_linear4.v",
+    "four_bit_signature_source": "rtl/w33_signature_s3_rom4.v",
+    "observed_icarus_yosys_nextpnr": false,
+    "source_level_metrics": {
+      "envelope_linear": "1 XOR per generator core plus wire permutations",
+      "port_linear": "2 XORs per generator core",
+      "signature_rom": "algebraic degree 3; 27 ANF terms"
+    }
+  },
+  "pass3310_common_envelope_scheme": {
+    "character": [22, 4, 1],
+    "commutant_dimension": 89,
+    "irreducible_multiplicities": {"sign": 2, "standard": 7, "trivial": 6},
+    "orbital_count": 89,
+    "orbital_size_histogram": {"1": 1, "3": 15, "6": 73},
+    "states": 22,
+    "terwilliger_dimensions_by_base_state": {"0": 89, "1": 222, "10": 484},
+    "terwilliger_primes": [1000003, 1000033]
+  },
+  "pass3310_guard_scheme": {
+    "character": [10, 4, 1],
+    "commutant_dimension": 25,
+    "irreducible_multiplicities": {"sign": 0, "standard": 3, "trivial": 4},
+    "orbital_count": 25,
+    "orbital_size_histogram": {"1": 1, "3": 15, "6": 9},
+    "states": 10,
+    "terwilliger_dimensions_by_base_state": {"7": 25, "9": 58},
+    "terwilliger_primes": [1000003, 1000033]
+  },
+  "pass3311_c3_chromatic_compiler": {
+    "block_edges": 720,
+    "blocks": 45,
+    "canonical_coboundary_gauge_verified": true,
+    "claim": "The compiler is an exact global C3 relabeling with transported interface data. It is a syntactic bijection, not a smaller SAT instance or terminal colouring certificate.",
+    "existing_cnf_boundary": "10 <= chi(H) <= 11",
+    "filled_triangles": 240,
+    "local_intertwiner_count": 29160,
+    "manifest_sha256": "b783c626f196a3c1cfa28b2a5e6e91580300fae11355d7e80bc1906191e2a347"
+  },
+  "pass3312_anchor_orbital_audit": {
+    "conclusion": "The local S3-set structure leaves only 13 intrinsic classes among the 45 orbitals. Therefore a 45-anchor-to-45-orbital labeling is not canonical from local signature data; any such correspondence needs extra global PSp(4,3)-equivariant structure.",
+    "intrinsic_signature_automorphism_group_order": 72,
+    "orbital_class_size_histogram": {"1": 5, "12": 1, "2": 3, "4": 1, "6": 3},
+    "orbital_classes_under_intrinsic_automorphisms": 13,
+    "signature_orbitals": 45
+  },
+  "pass3313_knight_q4_controller_embedding": {
+    "all_normalized_minimum_embeddings_have_congestion": 3,
+    "coordinate_orbit_count": 2880,
+    "lower_bound": 34,
+    "minimum_dilation": 2,
+    "minimum_embedding_count": 1105920,
+    "minimum_link_congestion_at_minimum_work": 3,
+    "minimum_total_hops": 34,
+    "normalized_embedding_count": 69120,
+    "one_link_load_histogram": {"1": 9, "2": 11, "3": 1},
+    "one_shortest_route_choice": [0, 0, 0, 0, 0],
+    "optimal_state_to_q4": {"0": "1101", "1": "1001", "10": "1011", "11": "1111", "12": "0111", "13": "0101", "14": "1110", "15": "1010", "2": "0000", "3": "0010", "4": "1000", "5": "1100", "6": "0100", "7": "0110", "8": "0001", "9": "0011"},
+    "optimal_state_to_toroidal_square": {"0": [1, 0], "1": [0, 2], "10": [3, 0], "11": [2, 2], "12": [0, 3], "13": [3, 1], "14": [0, 1], "15": [1, 3], "2": [0, 0], "3": [3, 2], "4": [2, 1], "5": [3, 3], "6": [1, 2], "7": [2, 0], "8": [2, 3], "9": [1, 1]},
+    "theorem": "The nonlinear four-bit signature controller embeds in the Q4/toroidal-knight network with optimal dilation two and total work 34. No minimum-work embedding admits shortest-path link congestion below three.",
+    "transition_distance_histogram": {"0": 3, "1": 24, "2": 5},
+    "uniform_average_hops": "17/16",
+    "used_physical_links": 21
+  },
+  "pass3314_q5_double_toroidal_lift": {
+    "generator_column_weights": {"R": [1, 1, 1, 1, 2], "S": [1, 1, 1, 1, 2]},
+    "interlayer_perfect_matching_edges": 16,
+    "interpretation": "The one-bit affine symmetry overhead is a second 4x4 toroidal-knight board. Four basis directions route within/between coordinates in one hop; only the added symmetry direction becomes a two-hop diagonal under the S3 generators.",
+    "one_hop_basis_directions": 4,
+    "q5_decomposition": "Q5 = Q4 square K2",
+    "states_per_board": 16,
+    "toroidal_board_copies": 2,
+    "two_hop_symmetry_direction": 1
+  },
+  "pass3315_guard_network": {
+    "envelope_guard_boundary_edges": 36,
+    "envelope_internal_q5_edges": 37,
+    "guard_component_sizes": [7, 1, 1, 1],
+    "guard_degree_histogram": {"0": 3, "1": 3, "2": 1, "3": 3},
+    "guard_edges": [["00111", "01111"], ["00111", "10111"], ["01110", "01111"], ["01111", "11111"], ["10101", "10111"], ["10111", "11111"], ["11011", "11111"]],
+    "guard_internal_q5_edges": 7,
+    "guard_states": ["00111", "01001", "01110", "01111", "10010", "10101", "10111", "11011", "11100", "11111"]
+  },
+  "repo_reconciled_knight_theorems": {
+    "antipodal_quotient_support": "K4,4 minus perfect matching = Q3",
+    "clifford_grade_profile": [1, 4, 6, 4, 1],
+    "gray_hamilton_cycle": true,
+    "toroidal_knight_graph": {"edges": 32, "is_q4": true, "vertices": 16}
+  },
+  "schema": "w33.pass3308_3319.knight_hypercube_gauge_closure.v1",
+  "sha256_without_hash_field": "e8d1535e877a377aeeca1fc7b9402335aea10f43897dd0b57cec649c52032d45",
+  "status": "PASS_EXACT_HYPERCUBE_GAUGE_AND_TYPED_CONTROLLER_CLOSURE"
+}

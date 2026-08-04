@@ -1,0 +1,159 @@
+name: Passes 3308-3319 Knight Hypercube Gauge Closure
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/*3308*'
+      - 'analysis/*3319*'
+      - 'data/PART_BT3308*'
+      - 'data/w33_pass_namespace_registry_v2.d/3308-3319.json'
+      - 'tests/test_bt3308_3319_knight_hypercube_gauge_closure.py'
+      - 'rtl/w33_signature_q4_router.v'
+      - 'rtl/tb_w33_signature_q4_router.v'
+      - 'rtl/w33_controller_synthesis_wrappers.v'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'holonet_machine_blueprint.tex'
+      - 'docs/index.html'
+      - '.github/workflows/w33_pass3308_3319_knight_hypercube_gauge_closure.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/*3308*'
+      - 'analysis/*3319*'
+      - 'data/PART_BT3308*'
+      - 'tests/test_bt3308_3319_knight_hypercube_gauge_closure.py'
+      - 'rtl/w33_signature_q4_router.v'
+      - 'rtl/w33_controller_synthesis_wrappers.v'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pass3308-3319-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  exact-digital-and-papers:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install exact and digital tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys nextpnr-ice40
+          python -m pip install --upgrade pip
+          python -m pip install numpy pytest
+
+      - name: Regenerate exact certificates
+        run: |
+          mkdir -p evidence/pass3308_3319
+          python analysis/bt3308_3319_knight_hypercube_gauge_closure.py \
+            --json /tmp/PART_BT3308_BT3319_KNIGHT_HYPERCUBE_GAUGE_CLOSURE_results.json \
+            --gauge-json /tmp/PART_BT3308_BT3319_C3_GAUGE_manifest.json \
+            | tee evidence/pass3308_3319/exact.log
+          cmp /tmp/PART_BT3308_BT3319_KNIGHT_HYPERCUBE_GAUGE_CLOSURE_results.json \
+            data/PART_BT3308_BT3319_KNIGHT_HYPERCUBE_GAUGE_CLOSURE_results.json
+          python - <<'PY'
+          import base64,zlib
+          from pathlib import Path
+          src=Path('data/PART_BT3308_BT3319_C3_GAUGE_manifest.json.zlib.b64')
+          Path('/tmp/frozen_c3_gauge_manifest.json').write_bytes(
+              zlib.decompress(base64.b64decode(src.read_text(encoding='ascii')))
+          )
+          PY
+          cmp /tmp/PART_BT3308_BT3319_C3_GAUGE_manifest.json \
+            /tmp/frozen_c3_gauge_manifest.json
+          python -m pytest -q tests/test_bt3308_3319_knight_hypercube_gauge_closure.py \
+            | tee evidence/pass3308_3319/pytest.log
+          git diff --check
+
+      - name: Exhaustive Q4 router simulation
+        run: |
+          iverilog -g2012 -s tb_w33_signature_q4_router \
+            -o evidence/pass3308_3319/q4_router_tb \
+            rtl/w33_signature_s3_rom4.v \
+            rtl/w33_signature_q4_router.v \
+            rtl/tb_w33_signature_q4_router.v
+          vvp evidence/pass3308_3319/q4_router_tb \
+            | tee evidence/pass3308_3319/q4_router_sim.log
+          grep -F 'PASS signature Q4 router total_hops=34 dilation=2' \
+            evidence/pass3308_3319/q4_router_sim.log
+
+      - name: Common Yosys synthesis comparison
+        run: |
+          for top in \
+            w33_signature_s3_rom4_registered \
+            w33_port_s3_linear4_registered \
+            w33_signature_port_linear5_registered
+          do
+            yosys -p "
+              read_verilog rtl/w33_signature_s3_rom4.v
+              read_verilog rtl/w33_port_s3_linear4.v
+              read_verilog rtl/w33_signature_port_linear5.v
+              read_verilog rtl/w33_controller_synthesis_wrappers.v
+              hierarchy -top ${top}
+              synth_ice40 -top ${top} -json evidence/pass3308_3319/${top}.json
+              stat -json
+            " 2>&1 | tee evidence/pass3308_3319/${top}.yosys.log
+            test -s evidence/pass3308_3319/${top}.json
+          done
+
+      - name: HX8K and UP5K placement comparison
+        run: |
+          for top in \
+            w33_signature_s3_rom4_registered \
+            w33_port_s3_linear4_registered \
+            w33_signature_port_linear5_registered
+          do
+            nextpnr-ice40 --hx8k --package ct256 \
+              --json evidence/pass3308_3319/${top}.json \
+              --asc evidence/pass3308_3319/${top}.hx8k.asc \
+              --pcf-allow-unconstrained --freq 12 \
+              2>&1 | tee evidence/pass3308_3319/${top}.hx8k.log
+            nextpnr-ice40 --up5k --package sg48 \
+              --json evidence/pass3308_3319/${top}.json \
+              --asc evidence/pass3308_3319/${top}.up5k.asc \
+              --pcf-allow-unconstrained --freq 12 \
+              2>&1 | tee evidence/pass3308_3319/${top}.up5k.log
+          done
+
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Compile all three canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex
+          do
+            stem=${source%.tex}
+            tectonic --keep-logs "$source" \
+              2>&1 | tee evidence/pass3308_3319/${stem}.build.log
+            test -s "${stem}.pdf"
+            if grep -E 'Undefined control sequence|LaTeX Error|Emergency stop|Fatal error' "${stem}.log"
+            then
+              exit 1
+            fi
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
+            > evidence/pass3308_3319/pdf_sha256.txt
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3308-3319-knight-hypercube-gauge-evidence
+          path: |
+            evidence/pass3308_3319/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
