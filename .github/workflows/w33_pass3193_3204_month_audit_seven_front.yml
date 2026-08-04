@@ -61,10 +61,22 @@ jobs:
           import json, pathlib
           data = pathlib.Path('data')
           fusion = json.loads((data/'PART_BT3195_RUNTIME_INFORMATION_FUSION_results.json').read_text())
-          assert fusion['status'] in {'PARTIAL_RUNTIME_3_OF_194','COMPLETE_RUNTIME_194_OF_194'}
+          assert fusion['status'] in {
+              'PARTIAL_RUNTIME_1_OF_194_PLUS_2_BASELINES',
+              'COMPLETE_RUNTIME_194_OF_194',
+          }
           if fusion['status'].startswith('PARTIAL'):
-              assert fusion['pending_runtime_records'] == 191
-              assert 'global' not in fusion.get('promotion', '').lower()
+              assert fusion['runtime_records_total'] == 3
+              assert fusion['joined_records'] == 1
+              assert fusion['out_of_census_baseline_count'] == 2
+              assert fusion['pending_runtime_records'] == 193
+              assert sorted(row['runtime']['name'] for row in fusion['out_of_census_baselines']) == ['current4', 'low4']
+          else:
+              assert fusion['runtime_records_total'] == 194
+              assert fusion['joined_records'] == 194
+              assert fusion['out_of_census_baseline_count'] == 0
+              assert fusion['pending_runtime_records'] == 0
+          assert 'global' not in fusion.get('promotion', '').lower()
           bridge = json.loads((data/'PART_BT3199_CHROMATIC_CURVATURE_BRIDGE_results.json').read_text())
           assert bridge['equivariant_bridge_exists_for_natural_relations'] is False
           genealogy = json.loads((data/'PART_BT3193_MONTH_CLAIM_GENEALOGY_results.json').read_text())
@@ -138,11 +150,14 @@ jobs:
               place[path.name] = {'observed_max_frequency_mhz': [float(x) for x in mhz]}
           fusion = json.loads(pathlib.Path('data/PART_BT3195_RUNTIME_INFORMATION_FUSION_results.json').read_text())
           payload = {
-              'schema':'w33.pass3193_3204.observed_evidence.v1',
+              'schema':'w33.pass3193_3204.observed_evidence.v2',
               'status':'COMPLETE_EXACT_RTL_HX8K_AND_THREE_PDFS',
               'commit':os.environ['GITHUB_SHA'],
               'runtime_information_status':fusion['status'],
-              'runtime_records':fusion['runtime_records'],
+              'runtime_records_total':fusion['runtime_records_total'],
+              'joined_runtime_records':fusion['joined_records'],
+              'out_of_census_baseline_count':fusion['out_of_census_baseline_count'],
+              'out_of_census_baseline_names':sorted(row['runtime']['name'] for row in fusion['out_of_census_baselines']),
               'pending_runtime_records':fusion['pending_runtime_records'],
               'placement':place,
               'digest_boundary':'supplied computed SHA-256 only; no on-core SHA-256 engine',
