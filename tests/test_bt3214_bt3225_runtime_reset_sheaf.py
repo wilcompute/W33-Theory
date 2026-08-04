@@ -24,6 +24,16 @@ def test_all194_canonical_plan() -> None:
     assert min(r['collisions'] for r in plan['rows'] if r['size']==6)==63
     assert len(plan['plan_sha256'])==64
 
+def test_m36_plan_is_complete_and_nonoverlapping() -> None:
+    run('bt3217_m36_sharded_census.py','--mode','selftest')
+    plan=load('PART_BT3217_M36_SHARD_PLAN.json')
+    assert plan['logical_shard_count']==256
+    assert plan['workflow_bucket_count']==32
+    assert plan['shards_per_bucket']==8
+    assert plan['expected_isotropic_subspaces']==50_868_675
+    flat=sorted(i for values in plan['mapping'].values() for i in values)
+    assert flat==list(range(256))
+
 def test_curvature_rom_is_canonical_and_complete() -> None:
     run('bt3216_curvature_rom.py')
     rom=load('PART_BT3216_CURVATURE_QUOTIENT_ROM.json')
@@ -55,6 +65,14 @@ def test_port_nerve_css_sheaf_and_reset_rank() -> None:
     assert reset['phase_marker_product_rank']==876
     assert reset['phase_only_reset_impossible'] is True
     assert result['pass3215_tri_isa']['status'] in {'FAIL_CLOSED_SOURCE_ONLY','OBSERVED_PROMOTION_READY'}
+
+def test_reset_thermodynamic_boundary() -> None:
+    run('bt3220_reset_thermodynamics.py')
+    result=load('PART_BT3220_RESET_THERMODYNAMICS.json')
+    assert result['phase_only_marker']['image_rank']==876
+    assert result['phase_only_marker']['epistemic_states_erased']==0
+    assert abs(result['full_belief_reset']['logical_bits_erased']-9.774787059601174)<1e-12
+    assert abs(result['full_belief_reset']['landauer_floor_joules']-2.806320725425572e-20)<1e-30
 
 def test_proof_accumulator_fails_closed_without_complete_shards() -> None:
     run('bt3217_3222_proof_accumulator.py')
