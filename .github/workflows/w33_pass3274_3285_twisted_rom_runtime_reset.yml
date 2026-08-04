@@ -95,12 +95,13 @@ jobs:
             w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
             > evidence/pass3274_3285/SHA256SUMS
           python - <<'PY'
-          import json, os, pathlib
+          import json, pathlib, subprocess
+          commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
           p=pathlib.Path('evidence/pass3274_3285/COMPLETE.json')
           p.write_text(json.dumps({
             'schema':'w33.pass3274_3285.observed_evidence.v1',
             'status':'COMPLETE_EXACT_AND_THREE_PDFS',
-            'commit':os.environ['GITHUB_SHA'],
+            'commit':commit,
             'twisted_h1':870,
             'quotient_states':876,
             'runtime_boundary':'typed universe; complete only if aggregate has 194 census rows',
