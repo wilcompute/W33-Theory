@@ -10,6 +10,7 @@ TEX_INPUT = r"    \input{analysis/BT3191_chromatic_defect_block_filter_insert}%"
 BLUEPRINT_INPUT = r"\input{analysis/BT3191_chromatic_defect_block_filter_insert}"
 HTML_BEGIN = "<!-- BT3187-BT3192-CHROMATIC-DEFECT-FILTER -->"
 HTML_END = "<!-- /BT3187-BT3192-CHROMATIC-DEFECT-FILTER -->"
+INDEX_NATIVE_MARKER = "Passes 3187–3192: the last chromatic bit gets a proof filter"
 
 
 def integrate_wrapper(path: Path) -> str:
@@ -35,6 +36,8 @@ def integrate_blueprint(path: Path) -> str:
 
 def integrate_index(path: Path) -> str:
     text = path.read_text(encoding="utf-8")
+    if INDEX_NATIVE_MARKER in text:
+        return text
     insert = (ROOT / "analysis" / "BT3191_chromatic_defect_block_filter_index_insert.html").read_text(encoding="utf-8").strip()
     if HTML_BEGIN in text:
         start = text.index(HTML_BEGIN)
