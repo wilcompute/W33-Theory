@@ -9,14 +9,20 @@ on:
       - 'analysis/BT2435_five_frontiers_insert.tex'
       - 'data/PART_BT3187*'
       - 'data/w33_pass_namespace_registry_v2.d/3187-3192.json'
+      - 'evidence/pass3187_3192/**'
       - 'tests/test_bt3187_bt3192_chromatic_defect_block_filter.py'
       - 'tools/integrate_bt3187_bt3192.py'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'holonet_machine_blueprint.tex'
+      - 'holonet_machine_blueprint_body.tex'
+      - 'docs/index.html'
       - '.github/workflows/w33_pass3187_3192_chromatic_defect_filter.yml'
 permissions:
-  contents: write
+  contents: read
 concurrency:
   group: pass3187-3192-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   exact-filter-and-papers:
     runs-on: ubuntu-24.04
@@ -35,9 +41,8 @@ jobs:
           python analysis/bt3187_3192_chromatic_defect_block_filter.py
           pytest -q tests/test_bt3187_bt3192_chromatic_defect_block_filter.py
           git diff --check
-      - name: Integrate all four front doors idempotently
+      - name: Verify all four front doors are integrated idempotently
         run: |
-          python tools/integrate_bt3187_bt3192.py
           python tools/integrate_bt3187_bt3192.py --check
           git diff --check
       - uses: WtfJoke/setup-tectonic@v3
@@ -52,7 +57,8 @@ jobs:
             test -s "${stem}.pdf"
             if grep -E 'Undefined control sequence|LaTeX Error|Emergency stop|Fatal error' "${stem}.log"; then exit 1; fi
           done
-          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3187_3192/pdf_sha256.txt
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > /tmp/pass3187_pdf_sha256.txt
+          diff -u evidence/pass3187_3192/pdf_sha256.txt /tmp/pass3187_pdf_sha256.txt
       - uses: actions/upload-artifact@v4
         with:
           name: pass3187-3192-chromatic-defect-evidence
@@ -62,14 +68,3 @@ jobs:
             w33_paper.pdf
             photonic_holonet.pdf
             holonet_machine_blueprint.pdf
-      - name: One-shot front-door and evidence commit
-        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
-        env: {TARGET_BRANCH: '${{ github.event.pull_request.head.ref }}'}
-        run: |
-          git config user.name 'W33 pass3187 evidence bot'
-          git config user.email 'noreply@github.com'
-          git add w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html data/PART_BT3187_BT3192_CHROMATIC_DEFECT_BLOCK_FILTER_results.json evidence/pass3187_3192/
-          if ! git diff --cached --quiet; then
-            git commit -m 'Passes 3187-3192: materialize chromatic defect evidence'
-            git push origin "HEAD:${TARGET_BRANCH}"
-          fi
