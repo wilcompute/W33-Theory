@@ -1,0 +1,51 @@
+name: Pass 3154 Exhaustive Larger ISA Growth Census
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pass3154-exhaustive-larger-isa
+  cancel-in-progress: false
+jobs:
+  full-growth-census:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact runtime
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install numpy
+      - name: Run full 194-design affine BFS census
+        run: |
+          python analysis/bt3153_3154_larger_isa_census.py --exhaustive-full \
+            | tee pass3154_exhaustive_larger_isa.log
+      - name: Verify complete exhaustive payload
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          p=pathlib.Path('data/PART_BT3153_BT3154_LARGER_ISA_CENSUS_results.json')
+          d=json.loads(p.read_text())
+          assert d['subsets']==462
+          assert d['universal']==194
+          assert d['full_bfs_mode']=='all universal'
+          assert d['all_rows'] is not None and len(d['all_rows'])==462
+          assert len(d['pareto'])>=1
+          print('PASS complete 194-design full affine BFS census')
+          PY
+      - name: Freeze artifact hashes
+        run: |
+          sha256sum \
+            data/PART_BT3153_BT3154_LARGER_ISA_CENSUS_results.json \
+            pass3154_exhaustive_larger_isa.log \
+            > PASS3154_SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3154-exhaustive-larger-isa-census
+          path: |
+            data/PART_BT3153_BT3154_LARGER_ISA_CENSUS_results.json
+            pass3154_exhaustive_larger_isa.log
+            PASS3154_SHA256SUMS
