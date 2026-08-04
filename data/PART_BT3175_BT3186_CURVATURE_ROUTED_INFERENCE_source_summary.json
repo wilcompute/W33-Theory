@@ -1,0 +1,29 @@
+{
+  "schema": "w33.pass3175_3186.curvature_routed_inference.source_summary.v1",
+  "status": "PASS_EXACT_AND_MODELED_SOURCE",
+  "curvature": {
+    "hypotheses": {"none": 45445, "flat": 1725, "curved": 1656},
+    "stress_action_changes": 1,
+    "stress_mean_gain_bits": 0.03552383939697967,
+    "operational_action_changes": 0,
+    "operational_mean_gain_bits": 0.000003938330856765155
+  },
+  "information_frontier": {
+    "universal_designs": 194,
+    "pareto_designs": 8,
+    "maximum_average_bits": 2.414140381361786,
+    "maximum_minimum_bits": 1.792481250360578,
+    "minimum_variance": 0.03575318151973104
+  },
+  "three_edit_epoch": {
+    "marker_length": 7,
+    "traces_per_phase": 3667012,
+    "total_phase_labelled_traces": 44004144,
+    "post_marker_clean_symbols": 0
+  },
+  "m36_envelope": {"negative_control_valid_and_rejected": true, "tamper_rejected": true, "accepted_candidate_claim": false},
+  "routed_utility": {"scenarios": 64, "action_changes": 8, "mode_counts": {"fast6": 45, "low4": 11, "current4": 8}, "mean_gain": 0.03458424440701498},
+  "wilson_flux": {"triples": 343, "flat": 223, "curved": 120, "conjugation_orbits": 106},
+  "recursive_virtualization_level6": {"replicated_bits": 5461333332, "active_path_bits": 312, "ratio": 17504273.5},
+  "boundary": "Python exact/model results locally observed. RTL simulation/synthesis/place, canonical PDF builds, exhaustive M36 outcome and laboratory behavior remain separate gates."
+}

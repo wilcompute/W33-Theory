@@ -1,0 +1,90 @@
+name: Passes 3175-3186 Curvature-Routed Inference
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'analysis/*3175*'
+      - 'analysis/*3177*'
+      - 'analysis/*3178*'
+      - 'analysis/*3179*'
+      - 'analysis/*3180*'
+      - 'analysis/*3181*'
+      - 'analysis/*3182*'
+      - 'rtl/*3175*'
+      - 'rtl/tb_w33_pass3175_3183_curvature_routed_runtime.sv'
+      - 'tests/test_bt3175_bt3186_curvature_routed_inference.py'
+      - 'tools/integrate_bt3175_bt3186.py'
+      - '.github/workflows/w33_pass3175_3186_curvature_routed_inference.yml'
+permissions:
+  contents: read
+jobs:
+  exact-rtl-papers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact and digital toolchains
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys fpga-icestorm nextpnr-ice40
+          python -m pip install numpy pytest
+      - uses: wtfjoke/setup-tectonic@v3
+      - name: Recompute all seven fronts
+        run: |
+          python analysis/bt3175_3176_curvature_conditioned_sensing.py
+          python analysis/bt3177_all194_information_frontier.py
+          python analysis/bt3178_three_edit_phase_epoch.py
+          python analysis/bt3179_m36_proof_envelope.py
+          python analysis/bt3180_routed_joint_utility.py
+          python analysis/bt3181_d4_triangle_wilson_flux.py
+          python analysis/bt3182_recursive_belief_virtualization.py
+          python analysis/bt3175_3186_curvature_routed_inference_summary.py
+      - name: Focused exact regressions
+        run: |
+          pytest -q tests/test_bt3175_bt3186_curvature_routed_inference.py
+          git diff --check
+      - name: Simulate protocol contracts
+        run: |
+          iverilog -g2012 -s tb_w33_pass3175_3183_curvature_routed_runtime -o /tmp/pass3183.vvp \
+            rtl/w33_pass3175_3183_curvature_routed_runtime.sv rtl/tb_w33_pass3175_3183_curvature_routed_runtime.sv
+          vvp /tmp/pass3183.vvp | tee pass3183_iverilog.log
+          grep -F 'PASS curvature, three-edit epoch, envelope, Wilson flux and routed utility' pass3183_iverilog.log
+      - name: Synthesize representative control tops
+        run: |
+          for top in w33_pass3175_curvature_accumulator w33_pass3178_three_edit_epoch_decoder w33_pass3181_d4_triangle_flux w33_pass3180_streamed_routed_utility; do
+            yosys -p "read_verilog -sv rtl/w33_pass3175_3183_curvature_routed_runtime.sv; hierarchy -top $top; synth_ice40 -top $top -json /tmp/$top.json; stat" | tee $top.yosys.log
+            nextpnr-ice40 --hx8k --package ct256 --pcf-allow-unconstrained --json /tmp/$top.json --asc /tmp/$top.asc |& tee $top.nextpnr.log
+          done
+      - name: Integrate front doors idempotently
+        run: |
+          python tools/integrate_bt3175_bt3186.py
+          sha256sum w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html > /tmp/a
+          python tools/integrate_bt3175_bt3186.py
+          sha256sum w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html > /tmp/b
+          diff -u /tmp/a /tmp/b
+      - name: Compile all three canonical papers
+        run: |
+          tectonic w33_paper.tex
+          tectonic photonic_holonet.tex
+          tectonic holonet_machine_blueprint.tex
+          test -s w33_paper.pdf && test -s photonic_holonet.pdf && test -s holonet_machine_blueprint.pdf
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3175-3186-curvature-routed-evidence
+          path: |
+            data/PART_BT3175*.json
+            data/PART_BT3177*.json
+            data/PART_BT3178*.json
+            data/PART_BT3179*.json
+            data/PART_BT3180*.json
+            data/PART_BT3181*.json
+            data/PART_BT3182*.json
+            pass3183_iverilog.log
+            *.yosys.log
+            *.nextpnr.log
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
