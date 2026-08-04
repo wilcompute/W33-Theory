@@ -795,19 +795,18 @@ section removes that ambiguity from the architecture.
 \end{plain}
 
 \begin{spec}[Representation contract]
-\footnotesize
-\noindent\makebox[\linewidth][l]{\begin{minipage}{0.97\linewidth}
-\begin{tabular}{@{}p{2.9cm}p{1.8cm}p{7.2cm}@{}}
-\toprule
-\textbf{Representation} & \textbf{Width} & \textbf{Contract} \\
-\midrule
-Affine frame code & $7$ bits & Lossless for all $81$ frames; execution may read and write it. \\
-Support telemetry & $4$ bits & Zero/nonzero mask only; frame $\to$ support is one-way in the netlist. \\
-Protected observer & $24$--$28$ taps & Diagnostic word for identification, not the live datapath. \\
-Typed control token & $7$ raw, $96$ valid & Selects face, matching channel, and tomotope phase cell. \\
-\bottomrule
-\end{tabular}
-\end{minipage}}
+\begin{description}[leftmargin=2.4cm,style=nextline,font=\normalfont\bfseries]
+\item[Affine frame]
+  $7$ bits. Lossless for all $81$ Pauli frames; execution may read and write it.
+\item[Support telemetry]
+  $4$ bits. Zero/nonzero mask only, and frame $\to$ support is one-way
+  in the netlist --- proved at the gate level, not asserted.
+\item[Protected observer]
+  $24$--$28$ taps. Diagnostic word for identification and correction; never
+  the live datapath.
+\item[Control token]
+  $7$ raw bits, $96$ valid. Selects face, matching channel and phase cell.
+\end{description}
 \end{spec}
 
 \begin{gotwrong}[Support is observable, not executable]
@@ -1819,6 +1818,32 @@ Clifford classes of ray:
 \]
 \end{spec}
 
+\begin{spec}[The three-copy route, as far as it has been taken]
+Four passes and three formulations, ending in a mechanism rather than a verdict:
+\begin{itemize}[leftmargin=1.3em,itemsep=1pt,topsep=2pt]
+\item Rank-one branches \emph{exist} --- $36$ stabilizer states annihilate every
+      single-error input while keeping the clean one.
+\item They are \emph{useless}: a rank-one range is a stabilizer state, which has no
+      magic. The other track reached the same conclusion the same day, from an
+      unrelated search over $649{,}940$ isotropic subspaces.
+\item Orthogonal \emph{pairs} exist --- $13$ of them, so $2$-dimensional subspaces sit
+      inside the complement.
+\item \textbf{But none of those pairs spans a stabilizer code.} Every pair tested has
+      exactly $7$ common stabilizing Paulis of $\mathbb{F}_2$-rank $\mathbf{3}$, and a
+      $2$-dimensional code needs rank $5$.
+\end{itemize}
+Spanning a subspace is not the same as being a joint eigenspace, and that gap is
+exactly where the route currently stops.
+\end{spec}
+
+\begin{plain}
+One thing that rank-$3$ number does suggest rather than close: a rank-$3$ stabilizer
+group has an \emph{eight}-dimensional code, not a two-dimensional one. If such a code
+lies inside the complement, it would kill every single error and have ample room for a
+magic output. That is the next question, and it is a better one than the three that
+preceded it.
+\end{plain}
+
 \headline{The linear rate $2/3$ is not a property of the branch that was found. It is a
 \emph{bound on the entire two-copy stabilizer family}.}
 
@@ -2424,6 +2449,53 @@ full controller & $6480$ & $12.662$ & $0$ & $0$\\
 
 \headline{The machine's whole state is $34.65$ bits, and only $7.99$ of them cost
 anything to use.}
+
+\subsection{Two diameters, and where the work actually is}
+
+\begin{plain}
+The machine has two different notions of ``how far apart can two things be'',
+and they are not remotely the same size.
+\end{plain}
+
+\begin{spec}[Pass 3021, combining two independently measured numbers]
+\[
+  \text{address transport diameter} = 2,\qquad
+  \text{frame ISA diameter} = 19,\qquad
+  \text{worst case} = \mathbf{21}.
+\]
+Moving a packet to any of the $40$ addresses costs at most \emph{two} shears,
+because the geometry has diameter $2$. Transforming the Pauli frame arbitrarily costs
+up to \emph{nineteen} instructions, because that is a walk in a four-million-element
+group. The address figure is the other track's; the frame figure is \S\ref{sec:isa}'s.
+\end{spec}
+
+\headline{Geometry is cheap; algebra is expensive. Ninety per cent of the
+machine's worst-case work is frame algebra, and routing optimisation addresses
+ten per cent of the problem.}
+
+\subsection{What fraction of the erasure is useful}
+
+\begin{spec}[Pass 3022]
+\[
+  \frac{\text{delivered}}{\text{erased}}
+  = \frac{3.673\ \text{bits}}{7.989\ \text{bits}}
+  = \mathbf{45.98\%}
+\]
+and the network law follows directly: depth $n$ costs $8n$ header bits, so
+\[
+  E(N) = 143.35\,\log_{40} N \text{ meV}
+\]
+--- the thermodynamic cost of delivering a packet is \textbf{logarithmic in the size
+of the entire network}. Depth $6$, four billion leaves: $860$\,meV.
+\end{spec}
+
+\begin{plain}
+The $54\%$ shortfall is not waste in the engineering sense. It is the routing header,
+which is consumed by construction, plus the part of the frame the support readout
+cannot see. Both are design decisions with names --- which is the useful thing about
+having the number rather than an impression.
+\end{plain}
+
 
 \begin{plain}
 Two lines in that table are non-zero and the rest are exactly zero, for one reason:

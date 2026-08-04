@@ -1,0 +1,23 @@
+{
+  "pass_3020": {
+    "genuine_codes_found": 0,
+    "max_common_stabilizer_rank": 3,
+    "pairs": 13,
+    "pairs_tested": 6,
+    "rank_needed": 5,
+    "witnesses": 17
+  },
+  "pass_3021": {
+    "address_diameter": 2,
+    "frame_diameter": 19,
+    "frame_share": 0.9047619047619048,
+    "worst_case_total": 21
+  },
+  "pass_3022": {
+    "delivered_bits": 3.673183336,
+    "efficiency": 0.4598034379810565,
+    "erased_bits": 7.988594761554028,
+    "meV_per_hop": 143.35392611043278,
+    "network_law": "E(N) = 143.35 * log_40(N) meV"
+  }
+}
