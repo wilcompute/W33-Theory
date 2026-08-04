@@ -1,0 +1,20 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "3153-3162",
+  "owner": "agent/pass3153-3162-adaptive-epoch-factor-engine",
+  "status": "reserved_in_progress",
+  "reserved_after": "master through Pass 3152 reservation and merged Passes 3124-3132 sources",
+  "passes": {
+    "3153": "complete exact universality, collision, spectral and quotient-distance census for every five- and six-generator subset of the frozen ten-opcode affine library",
+    "3154": "full 4,199,040-state growth series for every non-dominated larger ISA and exhaustive workflow for all universal larger subsets",
+    "3155": "seven-bank exact 3,697-factor posterior update schedule and cycle-accurate memory/bandwidth certificate",
+    "3156": "source-complete seven-lane sparse-factor RTL engine, bank loader, sweep controller and reconstruction interface",
+    "3157": "edit-robust in-band epoch delimiter over unused omission-times-pilot-order symbols with exact false-acquisition proof",
+    "3158": "epoch-spacing Pareto law and epoch-aware two-edit synchronization controller",
+    "3159": "rank-three M36 candidate intake extended to stabilizer fidelity, Pauli spectrum, Wigner witness, Clifford orbit and first/second-order error slopes",
+    "3160": "adaptive dual-ISA decision law and runtime scheduler using collision cost, uncertainty, route burden, calibration state and decoder switching cost",
+    "3161": "canonical paper, blueprint and site overhaul for factorized epoch-aware adaptive execution",
+    "3162": "typed claim ledger, exact regressions, exhaustive ISA workflow, RTL simulation/synthesis/place and three-PDF evidence lane"
+  },
+  "claim_boundary": "Reservation only. The complete larger-ISA mean-distance census, rank-three candidate existence, RTL simulation/synthesis/placement, manuscript materialization, PDF builds and laboratory behavior remain separately gated until observed."
+}
