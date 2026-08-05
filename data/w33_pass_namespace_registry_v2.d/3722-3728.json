@@ -3,8 +3,23 @@
   "range": [3722, 3728],
   "owner": "openai-gpt-5.6-thinking",
   "branch": "master",
-  "status": "reserved_for_seven_front_triple_design_naimark_axial_monster_closure",
-  "purpose": "Execute the five next fronts from Passes 3694-3700 plus two independent constructions: classify the 120 Norton-triple incidence geometry; materialize an explicit exact Naimark completion and circuit certificate; execute and freeze Monster class-fusion targets when available; refine concrete Monster-word search filters; compute derivations, ideals, two-axis and three-axis axial subalgebras; derive a dual code/design certificate for the 120 triples; and search for an exact lattice or switching-class construction from the ETF Seidel matrix.",
-  "coordination": "Begins after published Passes 3694-3700 and preserves separately reserved Passes 3701-3714 and 3715-3721. Reconcile every parallel commit before shared manifest, manuscript, and public-index updates.",
-  "claim_boundary": "No Monster embedding, observed class-fusion multiplicity, Majorana/Griess/VOA realization, laboratory implementation, new lattice identification, or remote CI/PDF result is promoted without an executed certificate."
+  "status": "published_source_complete_ci_pending",
+  "purpose": "Execute the five next fronts from Passes 3694-3700 plus two independent constructions: classify the 120 Norton-triple incidence geometry; materialize an explicit exact Naimark completion and circuit certificate; retain and sharpen Monster class-fusion targets; refine concrete Monster-word search filters; compute derivations, ideals, and two-axis axial subalgebras; derive a dual code/design certificate for the 120 triples; and construct the exact nonregular three-cover forced by the triple blocks.",
+  "coordination": "Published after the adjacent Passes 3701-3714 and 3715-3721 packets landed. The shared theorem manifest and frontier JSON retain both parallel packets and append this packet exactly once. Public-index insertion and canonical PDF compilation are delegated to the fail-closed workflow and remain unclaimed until observed.",
+  "source_certificate": {
+    "status": "PASS_EXACT_SEVEN_FRONT_SOURCE_MONSTER_EXTERNALS_PENDING",
+    "semantic_sha256": "dd23c386c7dee92be7a91817018bd737e9efb7fe050354be6bbf91952c59e525",
+    "focused_local_tests": "2 passed in 13.73s",
+    "artifacts": [
+      "analysis/w33_pass3722_3728_fischer_hadamard_orthogonal_code.py",
+      "data/PART_3722_3728_FISCHER_HADAMARD_ORTHOGONAL_CODE_results.json",
+      "tests/test_w33_pass3722_3728_fischer_hadamard_orthogonal_code.py",
+      "analysis/BT3722_BT3728_fischer_hadamard_orthogonal_code.md",
+      "analysis/BT3722_BT3728_fischer_hadamard_orthogonal_code_insert.tex",
+      "analysis/BT3722_BT3728_fischer_hadamard_orthogonal_code_index_insert.html",
+      "docs/fischer-hadamard-orthogonal-code.html",
+      ".github/workflows/w33_pass3722_3728_fischer_hadamard_orthogonal_code.yml"
+    ]
+  },
+  "claim_boundary": "No serialized Monster embedding, observed Monster class-fusion multiplicity, Majorana/Griess/VOA realization, physical optical implementation, remote CI/PDF result, or laboratory mechanism is promoted without an executed certificate."
 }
