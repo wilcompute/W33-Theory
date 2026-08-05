@@ -4,12 +4,15 @@
   "owner": "openai-gpt-5.6-thinking",
   "branch": "agent/pass3729-3742-five-front-website-restore",
   "purpose": "Restore the original long-form public website while preserving the accidental architecture landing page; close the cubic transversal, signed-Hermitian transported-M4, tomotope rank-four, 159-module filtration, and Gewirtz rounding fronts; and publish two chained outside-box constructions.",
-  "status": "reserved",
+  "status": "source_complete_pending_remote_evidence",
+  "semantic_sha256": "c6e5e73fb5a18d9add4c1643d52df31413280b0e5cd157294ca686f8df32a299",
   "website_restore": {
     "last_intact_commit": "df5c52314bf4c8c4b0d7a1b1f0afb66d872bdfb6",
+    "overwrite_commit": "413ed869b1ae82446df3583e43c3f9bcb365a18c",
     "original_index_blob": "41a8d733f42da18282fa276f5d2fa82bac7516f6",
-    "overwritten_index_blob": "cdc3f4bca4de50c596e5455e0834ffd52af45e87",
-    "archive_path": "docs/source-derived-architecture-landing-2026-08-05.html"
+    "overwritten_index_blob": "94e90827ec73fc20e632fba5519fed2d109846d6",
+    "archive_path": "docs/source-derived-architecture-landing-2026-08-05.html",
+    "method": "exact Git blob swap; no HTML reserialization"
   },
-  "claim_boundary": "Do not promote an exact cubic transversal, signed-Hermitian optimum, full tomotope isomorphism, modular composition label, 0/1 Gewirtz embedding, remote CI/PDF/hardware result, or physical interpretation without executed evidence."
+  "claim_boundary": "The cubic transversal remains in [106,178]; the chromatic number remains 10 or 11; the top 115-dimensional module, asymmetric Gewirtz rounding, remote CI/PDF/hardware results, and physical interpretations remain unpromoted without executed evidence."
 }
