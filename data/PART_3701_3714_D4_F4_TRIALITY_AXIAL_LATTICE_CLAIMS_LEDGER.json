@@ -1,0 +1,28 @@
+{
+  "schema": "w33.claims_ledger.pass3701_3714.v1",
+  "semantic_sha256": "17e8e1caaa48587b8feb5678963358b1a18961efd933858f677ca42e5713c644",
+  "proved_exact": [
+    "The 135 maximal chamber K4s collapse objectwise to 45 eight-point orbits, three pairwise-disjoint K4 frames per octad.",
+    "Octad disjointness is SRG(45,12,3,3), and the 45 centered octad vectors form a rank-24 two-distance tight frame.",
+    "The 135 frames are exactly the 135 Lagrangian three-spaces of W(5,2), restricted to the 36 anisotropic points.",
+    "The 135x36 incidence matrix has binary rank 29; its dual is the seven-dimensional affine restriction code with weights 0,16,20,36.",
+    "A frame stabilizer is C2^3 semidirect S4 of order 192, with an explicit S4 complement and the W(D4) order census.",
+    "The central quotient extension is nontrivial: the cocycle coefficient system has rank 95 and augmented rank 96.",
+    "The frame normalizer has order 576 and the full outer stabilizer has order 1152; the latter is explicitly conjugate to the 24-short-root action of W(F4).",
+    "No common outer involution inverts the exact four order-three generators; every color-split rank-eight factorization has at least 16 noncommuting edges, exceeding the seven allowed by a string diagram.",
+    "The 45 octad axes obey m0(u,u)=36u and m1(u,u)=-216u; no parameter gives the Monster 2A Majorana non-axis spectrum {0,1/4,1/32}.",
+    "Every even integral rank-24 Gram matrix is an integral graph section of II(24,24); E8^3 is constructed explicitly as a positive unimodular child.",
+    "No U4(2)-equivariant positive-definite unimodular graph polarization exists."
+  ],
+  "external_premises": [
+    "The Leech lattice exists and is an even unimodular rootless rank-24 lattice; combined with the proved graph-polarization formula this gives a noncanonical rootless section."
+  ],
+  "pending": [
+    "A regular abstract-polytope cover resolving the ternary panels.",
+    "Serialized mmgroup words generating the 5B-type U4(2) inside the Monster.",
+    "A frozen explicit Leech basis and a canonical or U4(2)-controlled Leech section.",
+    "A Majorana, Griess, or VOA product realization.",
+    "Remote CI, GAP, or manuscript PDF evidence.",
+    "Any laboratory or physical interpretation."
+  ]
+}
