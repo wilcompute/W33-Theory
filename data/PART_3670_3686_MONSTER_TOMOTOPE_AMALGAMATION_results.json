@@ -1,0 +1,133 @@
+{
+  "schema": "w33.pass3670_3686.monster_tomotope_amalgamation.v1",
+  "status": "PASS_EXACT_NINE_FRONT_SOURCE",
+  "checks": {
+    "chamber_intersections_270_360": true,
+    "chamber_srg_36_15_6_6": true,
+    "chamber_complement_srg_36_20_10_12": true,
+    "chamber_action_order_25920": true,
+    "chamber_suborbits_1_15_20": true,
+    "k4_count_135": true,
+    "k4s_maximal_and_transitive": true,
+    "k4_incidence_540": true,
+    "k4_stabilizer_order_192": true,
+    "k4_stabilizer_center_2": true,
+    "quotient_order_96": true,
+    "quotient_tomotope_census": true,
+    "marked_tomotope_isomorphism": true,
+    "central_lift_non_split": true,
+    "parabolics_order_648": true,
+    "parabolic_pair_intersections": true,
+    "parabolic_triple_intersections_3": true,
+    "parabolic_core_trivial": true,
+    "parabolic_panel_thickness_3": true,
+    "fixed_point_adjacency_one_of_six": true,
+    "nonscalar_glue_even_unimodular": true,
+    "nonscalar_glue_signature_24_24": true,
+    "equivariant_symmetric_product_multiplicity_2": true,
+    "equivariant_alternating_product_multiplicity_1": true,
+    "two_products_span_symmetric_envelope": true,
+    "both_products_frobenius": true,
+    "associative_product_no_go_mod_prime": true,
+    "prime_eta_A_B_channels_match": true,
+    "spectral_15s_irreducible": true,
+    "spectral_15s_inequivalent": true
+  },
+  "monster_embedding_front": {
+    "abstract_target": {
+      "group_order": 25920,
+      "generator_orders": [3,3,3,3],
+      "pair_product_orders": {"(0, 1)":3,"(0, 2)":6,"(0, 3)":6,"(1, 2)":6,"(1, 3)":6,"(2, 3)":6},
+      "triple_closure_orders": [648,648,648,648],
+      "full_closure_order": 25920
+    },
+    "a5_search_refinement": "The complete abstract A5 census has 1296 D10-sharing pairs and every such pair closes at A6, so a Monster search must add chamber/normalizer data or use the four-parabolic target.",
+    "status": "ABSTRACT_SIGNATURE_EXACT_MMgroup_WORDS_PENDING"
+  },
+  "chamber_association_scheme": {
+    "objects": 36,
+    "intersection_census": {"12":270,"18":360},
+    "relation_12_srg": {"parameters":[36,15,6,6],"spectrum":{"15":1,"3":15,"-3":20}},
+    "relation_18_srg": {"parameters":[36,20,10,12],"spectrum":{"20":1,"2":20,"-4":15}},
+    "u42_suborbits": [1,15,20]
+  },
+  "tomotope_central_lift": {
+    "maximal_K4s": 135,
+    "chamber_K4_incidences": 540,
+    "K4_stabilizer_order": 192,
+    "K4_stabilizer_order_census": {"1":1,"2":43,"3":32,"4":84,"6":32},
+    "center_order": 2,
+    "central_quotient_order": 96,
+    "central_quotient_order_census": {"1":1,"2":27,"3":32,"4":36},
+    "tomotope_order_census": {"1":1,"2":27,"3":32,"4":36},
+    "tomotope_pair_orders": {"01":3,"02":2,"03":2,"12":3,"13":4,"23":2},
+    "marked_generator_isomorphism": true,
+    "split_C2_times_AutT_census": {"1":1,"2":55,"3":32,"4":72,"6":32},
+    "non_split": true,
+    "interpretation": "Each of 135 chamber K4s has a non-split central order-192 stabilizer whose marked central quotient is Aut(tomotope). This is distinct from both the tomotope's 192 flags and the split order-192 universal group."
+  },
+  "thick_parabolic_amalgam": {
+    "parabolic_orders": [648,648,648,648],
+    "fixed_point_indices": [9,5,37,18],
+    "fixed_point_adjacencies": {"01":0,"02":0,"03":0,"12":0,"13":0,"23":1},
+    "pair_intersection_census": {"24":5,"54":1},
+    "triple_intersection_orders": [3,3,3,3],
+    "core_order": 1,
+    "cosets_per_type": [40,40,40,40],
+    "chambers": 25920,
+    "panel_thicknesses": [3,3,3,3],
+    "exchange_group": "C3 on every panel",
+    "polytope_verdict": "FAILS the abstract-polytope diamond condition: every panel has three chambers, so natural exchange moves are ternary rotations rather than involutions."
+  },
+  "nonscalar_discriminant_glue": {
+    "input_rank": 24,
+    "coupled_gram": "[[G,I],[I,0]]",
+    "rank": 48,
+    "determinant": 1,
+    "even": true,
+    "signature": [24,24],
+    "genus": "II_{24,24}",
+    "positive_definite_Leech_verdict": "NOT OBTAINED",
+    "interpretation": "Coupling L with its sign-reversed discriminant form cancels every local discriminant obstruction exactly, but necessarily yields an indefinite even-unimodular lattice."
+  },
+  "equivariant_product_envelope": {
+    "rank24_character_distribution": {"-1":6624,"0":16530,"2":2160,"3":480,"6":80,"8":45,"24":1},
+    "Hom_Sym2V_to_V_dimension": 2,
+    "Hom_wedge2V_to_V_dimension": 1,
+    "explicit_commutative_products": ["projected coordinatewise product","projected W33 triangle-neighbour product"],
+    "explicit_product_span_rank": 2,
+    "frobenius_products": [true,true],
+    "associativity_modulus": 1000003,
+    "associator_polynomials_nonzero": 542,
+    "associator_gcd_degree": 0,
+    "small_coprime_witness_pair": [[-25,-100,-100],[-9,-292,76]],
+    "associative_nonzero_product": "IMPOSSIBLE over Q (already impossible modulo 1000003)",
+    "boundary": "This is the full U4(2)-equivariant commutative Frobenius envelope, not a proved Griess or VOA product."
+  },
+  "prime_mckay_thompson_channels": {
+    "internal_primes_of_U42": [2,3,5],
+    "eta_channels": [
+      {"prime":2,"eta_exponent":24,"fricke_factor":4096,"class_A_coefficients_q0_through_qn":[0,4372,96256,1240002,10698752,74428120,431529984,2206741887,10117578752],"class_B_coefficients_q0_through_qn":[0,276,-2048,11202,-49152,184024,-614400,1881471,-5373952],"normalized_constant_terms_zero":true,"fricke_minus_nonfricke":[0,4096,98304,1228800,10747904,74244096,432144384,2204860416,10122952704]},
+      {"prime":3,"eta_exponent":12,"fricke_factor":729,"class_A_coefficients_q0_through_qn":[0,783,8672,65367,371520,1741655,7161696,26567946,90521472],"class_B_coefficients_q0_through_qn":[0,54,-76,-243,1188,-1384,-2916,11934,-11580],"normalized_constant_terms_zero":true,"fricke_minus_nonfricke":[0,729,8748,65610,370332,1743039,7164612,26556012,90533052]},
+      {"prime":5,"eta_exponent":6,"fricke_factor":125,"class_A_coefficients_q0_through_qn":[0,134,760,3345,12256,39350,114096,307060,776000],"class_B_coefficients_q0_through_qn":[0,9,10,-30,6,-25,96,60,-250],"normalized_constant_terms_zero":true,"fricke_minus_nonfricke":[0,125,750,3375,12250,39375,114000,307000,776250]}
+    ],
+    "formula_B": "T_pB=(eta(tau)/eta(p tau))^(24/(p-1))+24/(p-1)",
+    "formula_A": "T_pA=T_pB+p^(12/(p-1))*(eta(p tau)/eta(tau))^(24/(p-1))",
+    "interpretation": "The exact prime support of U4(2) selects the 2A/2B, 3A/3B, and 5A/5B Thompson channels. This upgrades the scalar J+24 completion to six class-dependent eta channels without claiming a Monster module."
+  },
+  "spectral_doppelganger_firewall": {
+    "w33_shared_dimension": 15,
+    "w33_eigenvalue": -4,
+    "chamber_complement_eigenvalue": -4,
+    "w33_character_norm": 1,
+    "chamber_character_norm": 1,
+    "character_inner_product": 0,
+    "character_pair_census": {"-1,-2":1440,"-1,0":2160,"-1,1":3240,"-1,3":270,"-1,7":45,"0,-1":4320,"0,0":10944,"0,3":480,"2,1":2160,"3,-1":540,"3,0":240,"6,-3":80,"15,15":1},
+    "verdict": "The two -4 eigenspaces are irreducible but inequivalent U4(2) modules. Equal dimension and eigenvalue do not supply an intertwiner."
+  },
+  "evidence_boundary": {
+    "proved_here": ["rank-3 36-chamber association scheme","complete 135-K4 census","non-split central order-192 tomotope lift with marked quotient isomorphism","four-parabolic panel-thickness-three obstruction","canonical II_24,24 non-scalar glue","full two-dimensional equivariant commutative Frobenius envelope","nonzero associative-product no-go modulo a prime","exact 2/3/5 A/B eta channels","inequivalence of the two spectral 15-dimensional modules"],
+    "not_proved_here": ["serialized Monster words generating U4(2)","observed Monster character restriction multiplicity","positive-definite Leech realization","Griess or VOA multiplication","regular universal-polytope cover of the thick chamber system","laboratory or physical mechanism"]
+  },
+  "semantic_sha256": "2d5fe418bb2bbee0eb479e42d22dd47d31c37f7d5f8be6b1732acf0dc1db8b78"
+}
