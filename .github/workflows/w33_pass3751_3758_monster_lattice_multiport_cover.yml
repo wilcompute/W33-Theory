@@ -1,0 +1,116 @@
+name: W33 Passes 3751-3758 Monster lattice multiport cover closure
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass3751_3758_monster_lattice_multiport_cover.py'
+      - 'analysis/BT3751_BT3758_monster_lattice_multiport_cover*'
+      - '.bootstrap/pass3751_bundle_*.b64'
+      - 'data/PART_3751_3758_MONSTER_LATTICE_MULTIPORT_COVER_results.json'
+      - 'data/PART_3751_MONSTER_U42_CLASS_FUSION_EXECUTION.json'
+      - 'data/w33_pass_namespace_registry_v2.d/3751-3758.json'
+      - 'tests/test_w33_pass3751_3758_monster_lattice_multiport_cover.py'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - 'docs/fischer-quadratic-lattice-multiport.html'
+      - '.github/workflows/w33_pass3751_3758_monster_lattice_multiport_cover.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: w33-pass3751-3758-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  exact-source:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact dependencies
+        run: python -m pip install --disable-pip-version-check numpy sympy networkx pytest
+      - name: Verify archive and reproduce frozen certificate
+        run: |
+          mkdir -p evidence/pass3751_3758
+          python analysis/w33_pass3751_3758_monster_lattice_multiport_cover.py \
+            --check data/PART_3751_3758_MONSTER_LATTICE_MULTIPORT_COVER_results.json \
+            | tee evidence/pass3751_3758/exact.log
+          grep -F '6271dafcc58467d6e758cdbcc9a1b220fe21693b3ace3c727fb5b5499be60ce6' evidence/pass3751_3758/exact.log
+      - name: Focused exact regression
+        run: |
+          pytest -q tests/test_w33_pass3751_3758_monster_lattice_multiport_cover.py \
+            | tee evidence/pass3751_3758/pytest.log
+          git diff --check
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3751-3758-exact-source
+          path: |
+            evidence/pass3751_3758/**
+            data/PART_3751_3758_MONSTER_LATTICE_MULTIPORT_COVER_results.json
+
+  publish-index:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+      - name: Insert public theorem card exactly once
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          index = Path('docs/index.html')
+          fragment = Path('analysis/BT3751_BT3758_monster_lattice_multiport_cover_index_insert.html').read_text(encoding='utf-8').strip()
+          text = index.read_text(encoding='utf-8')
+          token = 'id="bt3751-3758-monster-lattice-multiport-cover"'
+          if token not in text:
+              marker = '</main>' if '</main>' in text else '</body>'
+              if marker not in text:
+                  raise SystemExit('no safe public-index insertion marker')
+              text = text.replace(marker, fragment + '\n' + marker, 1)
+              index.write_text(text, encoding='utf-8')
+          assert index.read_text(encoding='utf-8').count(token) == 1
+          PY
+          if git diff --quiet -- docs/index.html; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/index.html
+          git commit -m 'Publish Passes 3751-3758 quadratic lattice multiport on public index'
+          git pull --rebase origin master
+          git push origin HEAD:master
+
+  canonical-papers:
+    needs: [exact-source, publish-index]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Verify reachability and compile canonical papers
+        run: |
+          grep -F 'BT3751_BT3758_monster_lattice_multiport_cover_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          grep -F 'id="bt3751-3758-monster-lattice-multiport-cover"' docs/index.html
+          mkdir -p evidence/pass3751_3758
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3751_3758/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3751_3758/pdf_sha256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3751-3758-canonical-papers
+          path: |
+            evidence/pass3751_3758/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
