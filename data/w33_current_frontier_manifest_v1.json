@@ -32,7 +32,8 @@
     "analysis/BT3600_BT3613_chained_breakthrough_insert",
     "analysis/BT3614_BT3627_monster_u42_steinberg_leech_falsifiers_insert",
     "analysis/BT3628_BT3634_octad_borel_matrix_proof_tomography_insert",
-    "analysis/BT3635_BT3648_monster_u42_completion_insert"
+    "analysis/BT3635_BT3648_monster_u42_completion_insert",
+    "analysis/BT3663_BT3669_monster_chamber_spread_bridge_insert"
   ],
   "front_doors": {
     "w33_paper.tex": "w33_paper_body.tex",
@@ -60,7 +61,8 @@
     {"kind": "id", "token": "bt3600-3613-chained-breakthrough", "source": "analysis/BT3600_BT3613_chained_breakthrough_index_insert.html"},
     {"kind": "id", "token": "bt3614-3627-monster-u42-steinberg", "source": "analysis/BT3614_BT3627_monster_u42_steinberg_leech_falsifiers_index_insert.html"},
     {"kind": "id", "token": "bt3628-3634-octad-borel-matrix-proof-tomography", "source": "analysis/BT3628_BT3634_octad_borel_matrix_proof_tomography_index_insert.html"},
-    {"kind": "id", "token": "bt3635-3648-monster-u42-completion", "source": "analysis/BT3635_BT3648_monster_u42_completion_index_insert.html"}
+    {"kind": "id", "token": "bt3635-3648-monster-u42-completion", "source": "analysis/BT3635_BT3648_monster_u42_completion_index_insert.html"},
+    {"kind": "id", "token": "bt3663-3669-monster-chamber-spread-bridge", "source": "analysis/BT3663_BT3669_monster_chamber_spread_bridge_index_insert.html"}
   ],
   "standalone_public_pages": [
     {"token": "passes-3500-3505-triangle-free-srg-m57", "source": "docs/triangle-free-srg-m57.html"},
@@ -73,7 +75,8 @@
     {"token": "passes-3577-3583-petersen-matrix-octad-marked-walk", "source": "docs/petersen-matrix-octad-marked-walk.html"},
     {"token": "passes-3614-3627-monster-u42-steinberg", "source": "docs/monster-u42-steinberg.html"},
     {"token": "passes-3628-3634-octad-borel-matrix-proof-tomography", "source": "docs/octad-borel-matrix-proof-tomography.html"},
-    {"token": "passes-3635-3648-monster-u42-completion", "source": "docs/monster-u42-completion.html"}
+    {"token": "passes-3635-3648-monster-u42-completion", "source": "docs/monster-u42-completion.html"},
+    {"token": "passes-3663-3669-monster-chamber-spread-double-six", "source": "docs/monster-a6-spread-double-six.html"}
   ],
   "boundary": "The manifest controls source reachability and ordering only; it does not certify PDF, hardware, laboratory, or physical claims."
 }
