@@ -1,0 +1,11 @@
+{
+  "schema": "w33.website_restore.v1",
+  "status": "prepared",
+  "overwrite_commit": "413ed869b1ae82446df3583e43c3f9bcb365a18c",
+  "last_intact_commit": "df5c52314bf4c8c4b0d7a1b1f0afb66d872bdfb6",
+  "last_intact_blob": "41a8d733f42da18282fa276f5d2fa82bac7516f6",
+  "current_architecture_blob": "94e90827ec73fc20e632fba5519fed2d109846d6",
+  "archive_path": "docs/source-derived-architecture-landing-2026-08-05.html",
+  "restored_path": "docs/index.html",
+  "overwrite_diff": {"additions": 86, "deletions": 28865}
+}
