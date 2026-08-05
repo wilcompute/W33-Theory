@@ -1,0 +1,321 @@
+from __future__ import annotations
+
+from collections import Counter, deque
+from hashlib import sha256
+from itertools import combinations
+from math import comb, gcd, lcm
+import json
+from pathlib import Path
+import runpy
+from typing import Iterable
+
+import numpy as np
+import sympy as sp
+
+MOD = 1_000_003
+HERE = Path(__file__).resolve().parent
+PREVIOUS = HERE / "w33_pass3635_3648_monster_u42_completion.py"
+OUTPUT = HERE.parent / "data" / "PART_3670_3686_MONSTER_TOMOTOPE_AMALGAMATION_results.json"
+
+
+def compose(a: tuple[int, ...], b: tuple[int, ...]) -> tuple[int, ...]:
+    return tuple(a[b[i]] for i in range(len(a)))
+
+
+def inverse(a: tuple[int, ...]) -> tuple[int, ...]:
+    out = [0] * len(a)
+    for i, j in enumerate(a):
+        out[j] = i
+    return tuple(out)
+
+
+def perm_order(g: tuple[int, ...]) -> int:
+    seen = [False] * len(g)
+    answer = 1
+    for i in range(len(g)):
+        if seen[i]:
+            continue
+        j = i
+        cycle = 0
+        while not seen[j]:
+            seen[j] = True
+            j = g[j]
+            cycle += 1
+        answer = lcm(answer, cycle)
+    return answer
+
+
+def closure_perm(generators: Iterable[tuple[int, ...]], *, cap: int | None = None) -> tuple[tuple[int, ...], ...]:
+    gens = list(generators)
+    if not gens:
+        raise ValueError("at least one generator required")
+    ident = tuple(range(len(gens[0])))
+    moves = list(dict.fromkeys(gens + [inverse(g) for g in gens]))
+    seen = {ident}
+    queue = deque([ident])
+    while queue:
+        h = queue.popleft()
+        for g in moves:
+            x = compose(g, h)
+            if x not in seen:
+                seen.add(x)
+                queue.append(x)
+                if cap is not None and len(seen) > cap:
+                    raise RuntimeError(f"closure exceeded cap {cap}")
+    return tuple(sorted(seen))
+
+
+def conjugate(g: tuple[int, ...], h: tuple[int, ...]) -> tuple[int, ...]:
+    return compose(compose(g, h), inverse(g))
+
+
+def matrix_rank_mod(a: np.ndarray, p: int = MOD) -> int:
+    x = np.asarray(a, dtype=np.int64).copy() % p
+    rows, cols = x.shape
+    rank = 0
+    for col in range(cols):
+        candidates = np.flatnonzero(x[rank:, col])
+        if len(candidates) == 0:
+            continue
+        pivot = rank + int(candidates[0])
+        if pivot != rank:
+            x[[rank, pivot]] = x[[pivot, rank]]
+        x[rank] = (x[rank] * pow(int(x[rank, col]), -1, p)) % p
+        for row in np.flatnonzero(x[:, col]):
+            if row != rank:
+                x[row] = (x[row] - x[row, col] * x[rank]) % p
+        rank += 1
+        if rank == rows:
+            break
+    return rank
+
+
+def inv_matrix_mod(a: np.ndarray, p: int = MOD) -> np.ndarray:
+    m = np.asarray(a, dtype=np.int64) % p
+    n = m.shape[0]
+    aug = np.concatenate([m.copy(), np.eye(n, dtype=np.int64)], axis=1)
+    rank = 0
+    for col in range(n):
+        candidates = np.flatnonzero(aug[rank:, col])
+        if len(candidates) == 0:
+            raise ValueError("singular matrix")
+        pivot = rank + int(candidates[0])
+        if pivot != rank:
+            aug[[rank, pivot]] = aug[[pivot, rank]]
+        aug[rank] = (aug[rank] * pow(int(aug[rank, col]), -1, p)) % p
+        for row in np.flatnonzero(aug[:, col]):
+            if row != rank:
+                aug[row] = (aug[row] - aug[row, col] * aug[rank]) % p
+        rank += 1
+    return aug[:, n:] % p
+
+
+def series_mul(a: list[int], b: list[int], n: int) -> list[int]:
+    out = [0] * (n + 1)
+    for i, x in enumerate(a[:n+1]):
+        if x == 0:
+            continue
+        for j, y in enumerate(b[:n+1-i]):
+            if y:
+                out[i+j] += x*y
+    return out
+
+
+def series_inv(a: list[int], n: int) -> list[int]:
+    if not a or a[0] != 1:
+        raise ValueError("series must begin with one")
+    out = [0] * (n+1)
+    out[0] = 1
+    for degree in range(1,n+1):
+        out[degree] = -sum(a[k]*out[degree-k] for k in range(1,min(degree,len(a)-1)+1))
+    return out
+
+
+def prime_eta_channels(p: int, n: int = 8) -> dict[str, object]:
+    r = 24 // (p-1)
+    product_series = [1] + [0] * (n+1)
+    for m in range(1,n+2):
+        numerator = [0] * (n+2)
+        for k in range(0,min(r,(n+1)//m)+1):
+            numerator[k*m] = (-1)**k * comb(r,k)
+        product_series = series_mul(product_series,numerator,n+1)
+        if p*m <= n+1:
+            denominator_inverse = [0] * (n+2)
+            for k in range(0,(n+1)//(p*m)+1):
+                denominator_inverse[k*p*m] = comb(r+k-1,k)
+            product_series = series_mul(product_series,denominator_inverse,n+1)
+    inverse_product = series_inv(product_series,n+1)
+    factor = p ** (r//2)
+    nonfricke = [product_series[i+1] for i in range(n+1)]
+    fricke = [product_series[i+1] + (factor*inverse_product[i-1] if i>=1 else 0) for i in range(n+1)]
+    nonfricke[0] += r
+    fricke[0] += r
+    return {
+        "prime": p,
+        "eta_exponent": r,
+        "fricke_factor": factor,
+        "class_A_coefficients_q0_through_qn": fricke,
+        "class_B_coefficients_q0_through_qn": nonfricke,
+        "normalized_constant_terms_zero": fricke[0] == nonfricke[0] == 0,
+        "fricke_minus_nonfricke": [fricke[i]-nonfricke[i] for i in range(n+1)],
+    }
+
+
+def _rank_with_pivots(a: np.ndarray, p: int = MOD) -> tuple[int, list[int]]:
+    x = np.asarray(a,dtype=np.int64).copy() % p
+    rows,cols=x.shape
+    rank=0
+    pivots=[]
+    for col in range(cols):
+        candidates=np.flatnonzero(x[rank:,col])
+        if len(candidates)==0:
+            continue
+        pivot=rank+int(candidates[0])
+        if pivot!=rank:
+            x[[rank,pivot]]=x[[pivot,rank]]
+        x[rank]=(x[rank]*pow(int(x[rank,col]),-1,p))%p
+        for row in np.flatnonzero(x[:,col]):
+            if row!=rank:
+                x[row]=(x[row]-x[row,col]*x[rank])%p
+        pivots.append(col)
+        rank+=1
+        if rank==rows:
+            break
+    return rank,pivots
+
+
+def build(prev: dict[str, object]) -> dict[str, object]:
+    POINTS = prev["POINTS"]
+    A = np.asarray(prev["A"],dtype=np.int64)
+    N = np.asarray(prev["N"],dtype=np.int64)
+    G4 = list(prev["G4"])
+    GROUP = tuple(sorted(prev["GROUP"]))
+    A6_SUBGROUPS = tuple(prev["A6_SUBGROUPS"])
+    group_order=len(GROUP)
+    assert group_order==25920
+    identity40=tuple(range(40))
+
+    a6_index={h:i for i,h in enumerate(A6_SUBGROUPS)}
+    intersection_matrix=np.zeros((36,36),dtype=np.int64)
+    for i,h in enumerate(A6_SUBGROUPS):
+        for j,k in enumerate(A6_SUBGROUPS):
+            intersection_matrix[i,j]=len(h.intersection(k))
+    intersection_census=Counter(int(intersection_matrix[i,j]) for i in range(36) for j in range(i+1,36))
+    adjacency=(intersection_matrix==12).astype(np.int64)
+    np.fill_diagonal(adjacency,0)
+    complement=np.ones((36,36),dtype=np.int64)-np.eye(36,dtype=np.int64)-adjacency
+    I36=np.eye(36,dtype=np.int64)
+    J36=np.ones((36,36),dtype=np.int64)
+    srg_12_identity=np.array_equal(adjacency@adjacency,9*I36+6*J36)
+    srg_18_identity=np.array_equal(complement@complement,8*I36-2*complement+12*J36)
+
+    def chamber_generator_perm(g):
+        return tuple(a6_index[frozenset(conjugate(g,x) for x in h)] for h in A6_SUBGROUPS)
+    chamber_generators=[chamber_generator_perm(g) for g in G4]
+    chamber_group=closure_perm(chamber_generators,cap=25920)
+    chamber_stabilizer=[g for g in chamber_group if g[0]==0]
+    chamber_suborbits=[]
+    unseen=set(range(36))
+    while unseen:
+        root=min(unseen)
+        orbit={g[root] for g in chamber_stabilizer}
+        chamber_suborbits.append(len(orbit)); unseen-=orbit
+    chamber_suborbits.sort()
+
+    k4s=tuple(c for c in combinations(range(36),4) if all(adjacency[i,j]==1 for i,j in combinations(c,2)))
+    k4_maximal=all(not any(all(adjacency[v,u]==1 for u in c) for v in set(range(36))-set(c)) for c in k4s)
+    k4_degrees=Counter(v for c in k4s for v in c)
+    k4_orbit={tuple(sorted(g[v] for v in k4s[0])) for g in chamber_group}
+    k4_stabilizer=tuple(g for g in chamber_group if tuple(sorted(g[v] for v in k4s[0]))==k4s[0])
+    k4_stabilizer_census=Counter(perm_order(g) for g in k4_stabilizer)
+    k4_center=tuple(z for z in k4_stabilizer if all(compose(z,h)==compose(h,z) for h in k4_stabilizer))
+    assert len(k4_center)==2
+    central_involution=next(z for z in k4_center if z!=tuple(range(36)))
+
+    quotient_cosets=[]; seen=set()
+    for g in k4_stabilizer:
+        if g in seen: continue
+        coset=tuple(sorted((g,compose(central_involution,g))))
+        quotient_cosets.append(coset); seen.update(coset)
+    quotient_cosets=tuple(sorted(quotient_cosets))
+    q_index={c:i for i,c in enumerate(quotient_cosets)}
+    q_identity=q_index[tuple(sorted((tuple(range(36)),central_involution)))]
+    def qmul(i,j):
+        product_perm=compose(quotient_cosets[i][0],quotient_cosets[j][0])
+        return q_index[tuple(sorted((product_perm,compose(central_involution,product_perm))))]
+    def qorder(i):
+        x=q_identity
+        for order in range(1,1000):
+            x=qmul(i,x)
+            if x==q_identity: return order
+        raise RuntimeError("quotient order search failed")
+    q_orders=[qorder(i) for i in range(96)]
+    q_census=Counter(q_orders)
+    def qclosure(gens):
+        seenq={q_identity}; queueq=deque([q_identity])
+        while queueq:
+            h=queueq.popleft()
+            for g in gens:
+                x=qmul(g,h)
+                if x not in seenq: seenq.add(x); queueq.append(x)
+        return seenq
+    q_involutions=[i for i,o in enumerate(q_orders) if o==2]
+    marked_q=None
+    for r0 in q_involutions:
+      for r1 in q_involutions:
+       if r1==r0 or qorder(qmul(r0,r1))!=3: continue
+       for r2 in q_involutions:
+        if r2 in (r0,r1) or qorder(qmul(r0,r2))!=2 or qorder(qmul(r1,r2))!=3: continue
+        for r3 in q_involutions:
+         if r3 in (r0,r1,r2): continue
+         if qorder(qmul(r0,r3))==2 and qorder(qmul(r1,r3))==4 and qorder(qmul(r2,r3))==2 and len(qclosure((r0,r1,r2,r3)))==96:
+            marked_q=(r0,r1,r2,r3); break
+        if marked_q is not None: break
+       if marked_q is not None: break
+      if marked_q is not None: break
+    assert marked_q is not None
+
+    def cycle_perm(n,transpositions):
+        p=list(range(n))
+        for a,b in transpositions: p[a-1],p[b-1]=p[b-1],p[a-1]
+        return tuple(p)
+    tomotope_generators=(
+      cycle_perm(12,((5,10),(6,9),(7,12),(8,11))),
+      cycle_perm(12,((1,6),(2,5),(3,8),(4,7))),
+      cycle_perm(12,((5,9),(6,10),(7,11),(8,12))),
+      cycle_perm(12,((5,8),(6,7),(9,12),(10,11))),
+    )
+    tomotope_group=closure_perm(tomotope_generators,cap=96)
+    tomotope_census=Counter(perm_order(g) for g in tomotope_group)
+    tomotope_pair_orders={f"{i}{j}":perm_order(compose(tomotope_generators[i],tomotope_generators[j])) for i,j in combinations(range(4),2)}
+    t_identity=tuple(range(12)); marked_map={t_identity:q_identity}; queue=deque([t_identity]); marked_consistent=True
+    while queue and marked_consistent:
+        h=queue.popleft(); qh=marked_map[h]
+        for tg,qg in zip(tomotope_generators,marked_q):
+            x=compose(tg,h); qx=qmul(qg,qh)
+            if x in marked_map:
+                if marked_map[x]!=qx: marked_consistent=False; break
+            else: marked_map[x]=qx; queue.append(x)
+    marked_isomorphism=marked_consistent and len(marked_map)==96 and len(set(marked_map.values()))==96
+    split_census=Counter()
+    for g in tomotope_group:
+        o=perm_order(g); split_census[o]+=1; split_census[lcm(o,2)]+=1
+    central_lift_non_split=k4_stabilizer_census!=split_census
+
+    parabolics=[]; fixed_point_indices=[]
+    for omitted in range(4):
+        gens=[G4[i] for i in range(4) if i!=omitted]
+        h=frozenset(prev["closure"](gens)); parabolics.append(h)
+        fixed=[i for i in range(40) if all(g[i]==i for g in gens)]; fixed_point_indices.append(fixed[0])
+    pair_intersections=Counter(len(parabolics[i].intersection(parabolics[j])) for i,j in combinations(range(4),2))
+    triple_intersections=[len(parabolics[i].intersection(parabolics[j]).intersection(parabolics[k])) for i,j,k in combinations(range(4),3)]
+    core=set(parabolics[0])
+    for h in parabolics[1:]: core.intersection_update(h)
+    fixed_point_adjacencies={f"{i}{j}":int(A[fixed_point_indices[i],fixed_point_indices[j]]) for i,j in combinations(range(4),2)}
+    panel_subgroups=[]
+    for omitted in range(4):
+        indices=[i for i in range(4) if i!=omitted]; panel=set(parabolics[indices[0]])
+        for i in indices[1:]: panel.intersection_update(parabolics[i])
+        panel_subgroups.append(panel)
+    panel_thicknesses=[len(h)//len(core) for h in panel_subgroups]
+    panel_cyclic_order3=all(len(h)==3 and all(perm_order(x) in (1,3) for x in h) for h in panel_subgroups)
