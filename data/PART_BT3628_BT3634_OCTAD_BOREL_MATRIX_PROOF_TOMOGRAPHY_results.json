@@ -1,0 +1,72 @@
+{
+  "boundaries": [
+    "The complete realized S8 orbit census of K8 octad families remains a heavy exact computation.",
+    "No Borel SAT/UNSAT verdict or degree-57 Moore graph construction is claimed.",
+    "The proof batch contains 16 real independently checkable DAGs, not the complete 3,720 archive.",
+    "Marked-resolvent tomography is mathematical graph dynamics, not measured optical hardware."
+  ],
+  "passes": {
+    "3628_abstract_octad_pattern_census": {
+      "flat_zero_block_pattern": 1,
+      "maximum_pattern": "one multiplicity-eight common matching (sunflower core)",
+      "maximum_triple_coincidence_excess": 56,
+      "nontrivial_block_sizes": [3, 4, 5, 6, 7, 8],
+      "orbit_counts_by_nontrivial_blocks": {"1": 6, "2": 10, "3": 10, "4": 13, "5": 14, "6": 8, "7": 6, "8": 1},
+      "points": 8,
+      "realization_boundary": "This is the complete abstract pair-intersection multiplicity census. Whether each of the 69 patterns is realized by eight actual K8 one-factorizations, and how many realization orbits each pattern has, remains a larger exact census.",
+      "representative_digest": "de3df6847357d549deb11cea22cb40e32dbd193f7be3dd1386030cdb585a2ea4",
+      "total_S8_orbits": 69
+    },
+    "3629_borel_petersen_core_solver": {
+      "P19": {"Petersen_thin_variables_fixed": 45, "fixed_to_regular_forced_zero": 18, "raw_variables": 30915, "residual_variables": 30771, "small_internal_forced_zero": 9, "small_small_thick_forced_zero": 72},
+      "P57": {"P57_only_nonneighbor_bridge_variables": 18, "Petersen_thin_variables_fixed": 15, "fixed_to_regular_forced_zero": 18, "neighbor_to_nonneighbor_thick_forced_zero": 36, "raw_variables": 30885, "residual_variables": 30789, "small_internal_thick_forced_zero": 27},
+      "P57_extension_rank": 18,
+      "contract_sha256": "220f6a3a66801ce08bd18a597e9df669f256c6cec94442ba09de3f308d1aa298",
+      "lazy_separator": "For each ordered-pair orbital representative (u,v), activate the exact equation sum_w e(u,w)e(v,w)=0 for an edge and =1 for a nonedge.",
+      "schema": "w33.m57.borel_petersen_core.v2",
+      "shared_binary_core": {"regular_internal": 1530, "regular_regular": 26163, "small_regular": 3078},
+      "shared_core_variables": 30771,
+      "verdict_boundary": "Presolve and solver-ready decomposition only; no SAT/UNSAT verdict is claimed."
+    },
+    "3630_perkel_matrix_units_and_PSD_cone": {
+      "H_determinant": "7/19",
+      "H_eigenvalues": ["1", "1 - 2*sqrt(57)/19", "2*sqrt(57)/19 + 1"],
+      "PSD_test": "For a transpose-symmetric conductor element X, Q=H*rho(X) is Hermitian. X is positive on the conductor module iff all principal minors of Q are nonnegative.",
+      "field": "Q(sqrt(-19))",
+      "field_matrix_units": 9,
+      "invariant_H": [["1", "2*s/19", "-2*s/19"], ["-2*s/19", "1", "2*s/19"], ["2*s/19", "-2*s/19", "1"]],
+      "matrix_algebra": "M3(Q(sqrt(-19)))",
+      "matrix_unit_digest": "e9d441ac71aeaffe498936989909f7d1170d84826e8a4c2485a6ecf03cdfd98a",
+      "matrix_units": 9,
+      "maximum_coefficient_denominator": 133,
+      "multiplication_law": "E_ij E_kl = delta_jk E_il; (sE_ij)(sE_kl)=-19 delta_jk E_il",
+      "sparse_orbital_coefficients": 315,
+      "two_by_two_principal_minor": "15/19"
+    },
+    "3631_real_proof_DAG_batch": {
+      "all_upper_proofs_embedded": true,
+      "boundary": "This is a deterministic multi-instance real proof batch, not the canonical all-3,720 archive. The complete archive remains sharded and resource-gated.",
+      "companion": "data/PART_BT3631_REAL_STAR_PROOF_BATCH.parts",
+      "compatibility_size_range": [48, 159],
+      "instances": 16,
+      "maximum_clique_histogram": {"10": 1, "11": 3, "12": 1, "13": 2, "16": 2, "31": 5, "8": 1, "9": 1},
+      "merkle_root": "c176539c7b944274fb64965275ce3f900852fe4b26f67923b2ca6a2f06e256a4",
+      "seed": 3617
+    },
+    "3632_minimum_marked_resolvent_tomography": {
+      "edge_recovery": "the second determinant coefficient recovers the induced marked edge count",
+      "line_decoder": "Every W33 triangle lies in a unique K4 line: an adjacent pair has exactly lambda=2 common neighbors, the other two points of that line. Thus the minimum rank-three marker reconstructs a unique line.",
+      "minimum_marker_size": 3,
+      "rank1_boundary": "one marked vertex is present in both graphs",
+      "rank2_boundary": "both graphs contain edges and nonedges",
+      "rank3_separator": "W33 contains a marked K3; Gewirtz is triangle-free and has no marked K3",
+      "tomography_hierarchy": {"2": "edge versus nonedge", "3": "triangle detection and unique W33 line decoding", "4": "full K4 line certificate"},
+      "triangle_channels": {"standard_multiplicity_2": "(z + 1)/((z - 2)*(z + 4))", "trivial": "(z**2 - 8*z - 36)/((z - 12)*(z - 2)*(z + 4))"},
+      "triangle_determinant_ratio": "(-tau*z - tau + z**2 + 2*z - 8)**2*(-tau*z**2 + 8*tau*z + 36*tau + z**3 - 10*z**2 - 32*z + 96)/((z - 12)*(z - 2)**3*(z + 4)**3)"
+    },
+    "3633_bonkers_rank18_Borel_bridge": {"P57_only_bridge_variables": 18, "shared_core_variables": 30771, "statement": "P57 is an exact rank-18 binary extension of the common 30,771-variable Petersen-spine core; P19 is the bare core."},
+    "3634_bonkers_Perkel_Gram_arithmetic": {"determinant": "7/19", "interpretation_boundary": "Exact arithmetic positivity certificate only; no physical or numerological mechanism is asserted.", "statement": "The invariant positive form has all 2x2 principal minors 15/19 and determinant 7/19.", "two_by_two_principal_minor": "15/19"}
+  },
+  "schema": "w33.pass3628_3634.v1",
+  "semantic_sha256": "58b7e205ee0a1409230d50df6efc3abe8d67caf3125b9eaa654dd6600b7b1d25"
+}
