@@ -1,0 +1,26 @@
+{
+  "schema": "w33.pass3751_3768.claims_ledger.v1",
+  "semantic_sha256": "f401d08e08c1f5898d363e2e371bfffb9ec0227b18486de4e9a4c72109d47b0b",
+  "promoted_exact": [
+    "The six-dimensional minus quadratic space reconstructs GQ(2,4) with 27 points and 45 lines and its dual GQ(4,2) with point graph SRG(45,12,3,3).",
+    "The complete Bose-Mesner multiplication, Krein parameters, and the 16-dimensional five-center Terwilliger algebra are regenerated exactly.",
+    "The 651 projective lines of PG(5,2) split 45+216+270+120 by singularity type, and the 120 all-nonsingular lines are the prior Norton/Fischer triples.",
+    "The dual quadrangle has 200 ovoids in automorphism orbits 40+160; the share-three-lines graph on the 40 plane ovoids is explicitly isomorphic to W33.",
+    "The 135 Lagrangian D4 frames and 135 ordinary GQ flags are inequivalent U4(2) permutation actions despite sharing a three-to-one map onto the 45 GQ lines.",
+    "The rank-24 minus-three eigenspace supports a simple 45-axis positive Frobenius algebra with axis spectrum 1, 1/7, -1/3, full multiplication algebra, and zero derivations.",
+    "No W(D4)-invariant even unimodular rank-24 Gram matrix exists because every invariant alternating form modulo two has rank at most sixteen.",
+    "An explicit integral basis change produces an E8^3 even-unimodular positive child whose exact surviving U4(2) stabilizer is C2."
+  ],
+  "external_context_not_reproved": [
+    "The names plane ovoid and tripod and the 40+160 split agree with the published GQ(4,2) literature.",
+    "The interpretation of the 63 vectors and 651 lines as the Veldkamp PG(5,2) of GQ(2,4) agrees with the published Veldkamp classification.",
+    "The ATLAS/CTblLib subgroup data motivate the W(F4), U6(2):2, Fi22, and Monster descent routes."
+  ],
+  "fail_closed": [
+    "No serialized mmgroup words or concrete Monster subgroup are claimed.",
+    "No executed Monster 196883 restriction or class fusion is claimed.",
+    "No rootless or canonical Leech polarization is claimed; E8^3 has roots.",
+    "No Majorana, Griess, VOA, hardware, laboratory, or physical realization is claimed.",
+    "No remote CI or manuscript PDF success is claimed until observed."
+  ]
+}
