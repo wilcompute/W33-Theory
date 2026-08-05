@@ -1,0 +1,37 @@
+\section{Monster \(U_4(2)\), the Steinberg register, and two exact falsifiers}
+\label{sec:monster-u42-steinberg-falsifiers}
+The structural program uses the genuine subgroup direction
+\[
+PSp(4,3)\cong U_4(2)\longrightarrow\mathbb M,
+\]
+while keeping character fusion and generator-level embedding distinct. A GAP companion filters class fusions by the documented \(5B\)-type constraints
+\[
+2\mapsto2B,\qquad3\mapsto3B,\qquad5\mapsto5B,
+\]
+and decomposes the restriction of the degree-\(196883\) Monster character.
+
+The protected module has the sharper local interpretation
+\[
+81=3^4=|\operatorname{Syl}_3(U_4(2))|.
+\]
+The unique degree-81 Steinberg character vanishes on every nonidentity 3-power class, so it restricts regularly to a Sylow 3-subgroup.
+
+For
+\[
+N=(12I-A)(A+4I)
+\]
+the exact W33 computation gives
+\[
+N^2=60N,\qquad\rank N=24,\qquad N_{xx}=36,\qquad N_{xy}\in\{6,-4\}.
+\]
+Uniform normalization to squared norm four yields off-diagonal products \(2/3\) and \(-4/9\), so the raw forty-vector frame is not directly an integral Leech subconfiguration.
+
+Also every three-eigenmode W33 adjacency sequence satisfies
+\[
+s_{n+3}=10s_{n+2}+32s_{n+1}-96s_n,
+\]
+while the first \(1A\) moonshine coefficients violate this recurrence. Any surviving bridge must therefore be graded, induced, glued, or ambient rather than a raw adjacency-moment identification.
+
+\paragraph{Majorana boundary.} For the documented \(5B\)-type embedding, subgroup involutions fuse to Monster \(2B\), whereas standard Monster Majorana axes correspond to \(2A\). A direct subgroup-involution-to-axis assignment is blocked.
+
+\paragraph{Evidence boundary.} Character-table fusion is not a concrete \texttt{mmgroup} embedding. Promotion requires serialized Monster generators, exact relations, class fusion, and an independent image-order certificate \(25920\).
