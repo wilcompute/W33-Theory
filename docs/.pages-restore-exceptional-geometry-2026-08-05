@@ -1,0 +1,8 @@
+GitHub Pages restoration marker
+
+Canonical public entrypoint: docs/index.html
+Canonical Exceptional Geometry blob: 41a8d733f42da18282fa276f5d2fa82bac7516f6
+Bad replacement commit: 413ed869b1ae82446df3583e43c3f9bcb365a18c
+Restored from the direct pre-replacement state and redeployed on 2026-08-05.
+
+This marker exists to force a fresh GitHub Pages publication from master/docs without changing the restored one-page website.
