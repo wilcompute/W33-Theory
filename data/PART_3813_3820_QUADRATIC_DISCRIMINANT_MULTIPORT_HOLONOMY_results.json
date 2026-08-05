@@ -1,0 +1,204 @@
+{
+  "bonkers_complementary_design_identity": {
+    "frame_incidence": "F F^T=15I+3A",
+    "interpretation": "After removing the all-ones channel, the weighted 135-frame plus 120-triple carrier is an exact tight 35-dimensional resolution of the 36 ports.",
+    "resolution": "F F^T+3 T T^T=42I+3J",
+    "triple_incidence": "T T^T=9I+J-A",
+    "weighted_incidence_singular_values_squared": {
+      "150": 1,
+      "42": 35
+    }
+  },
+  "bonkers_discrete_curvature": {
+    "base_complement_triangles": 3240,
+    "four_cycle_holonomy": {
+      "identity": 11070,
+      "three_cycle": 19440,
+      "transposition": 29160
+    },
+    "holonomy_group": "S3 (transpositions occur on triangles and three-cycles occur on four-cycles)",
+    "simple_four_cycles": 59670,
+    "triangle_holonomy": {
+      "identity": 1080,
+      "transposition": 2160
+    }
+  },
+  "bonkers_odd_unimodular_neighbors": {
+    "boundary": "These are three canonical singly-even self-dual code extensions; equality or inequivalence within the repeated enumerator type is not inferred from the enumerator alone.",
+    "count": 3,
+    "enumerator_types": 2,
+    "weight_distributions": [
+      {
+        "0": 1,
+        "10": 1920,
+        "12": 9555,
+        "14": 29040,
+        "16": 55755,
+        "18": 69120,
+        "20": 55755,
+        "22": 29040,
+        "24": 9555,
+        "26": 1920,
+        "28": 225,
+        "30": 16,
+        "36": 1,
+        "6": 16,
+        "8": 225
+      },
+      {
+        "0": 1,
+        "10": 1920,
+        "12": 9555,
+        "14": 29040,
+        "16": 55755,
+        "18": 69120,
+        "20": 55755,
+        "22": 29040,
+        "24": 9555,
+        "26": 1920,
+        "28": 225,
+        "30": 16,
+        "36": 1,
+        "6": 16,
+        "8": 225
+      },
+      {
+        "0": 1,
+        "10": 1956,
+        "12": 9555,
+        "14": 28950,
+        "16": 55755,
+        "18": 69240,
+        "20": 55755,
+        "22": 28950,
+        "24": 9555,
+        "26": 1956,
+        "28": 225,
+        "30": 10,
+        "36": 1,
+        "6": 10,
+        "8": 225
+      }
+    ]
+  },
+  "checks": {
+    "exact_21_reflection_two_mode_tree_compile": true,
+    "frame_triple_resolution_identity": true,
+    "holonomy_rank5_association_scheme": true,
+    "local_graphs_spread_complement_and_schlafli": true,
+    "maximal_doubly_even_extension_rank17": true,
+    "maximal_even_overlattice_determinant4": true,
+    "norton_seed_reconstruction": true,
+    "quadratic_parent_srg_64_36_20_20": true,
+    "three_odd_unimodular_code_neighbors": true,
+    "triangle_curvature_law": true
+  },
+  "discriminant_and_overlattices": {
+    "discriminant_group": "(Z/2Z)^24",
+    "even_overlattice_chain": [
+      {"code_dimension": 6,"isotropic_rank": 0,"lattice_determinant": 16777216},
+      {"code_dimension": 7,"isotropic_rank": 1,"lattice_determinant": 4194304},
+      {"code_dimension": 8,"isotropic_rank": 2,"lattice_determinant": 1048576},
+      {"code_dimension": 9,"isotropic_rank": 3,"lattice_determinant": 262144},
+      {"code_dimension": 10,"isotropic_rank": 4,"lattice_determinant": 65536},
+      {"code_dimension": 11,"isotropic_rank": 5,"lattice_determinant": 16384},
+      {"code_dimension": 12,"isotropic_rank": 6,"lattice_determinant": 4096},
+      {"code_dimension": 13,"isotropic_rank": 7,"lattice_determinant": 1024},
+      {"code_dimension": 14,"isotropic_rank": 8,"lattice_determinant": 256},
+      {"code_dimension": 15,"isotropic_rank": 9,"lattice_determinant": 64},
+      {"code_dimension": 16,"isotropic_rank": 10,"lattice_determinant": 16},
+      {"code_dimension": 17,"isotropic_rank": 11,"lattice_determinant": 4}
+    ],
+    "maximal_code": {
+      "extension_vectors_hex": ["0x800834e5c","0x4008637fe","0x200021295","0x100076c9c","0x80040c9a","0x40862441","0x208523d6","0x10807c01","0x8024e6f","0x4853ef7","0x1015e76"],
+      "parameters": [36,17,8],
+      "weight_distribution": {"0":1,"8":225,"12":9555,"16":55755,"20":55755,"24":9555,"28":225,"36":1}
+    },
+    "maximal_even_overlattice_determinant": 4,
+    "maximal_isotropic_rank": 11,
+    "odd_unimodular_code_neighbors": {
+      "boundary": "These are three canonical singly-even self-dual code extensions; equality or inequivalence within the repeated enumerator type is not inferred from the enumerator alone.",
+      "count": 3,
+      "enumerator_types": 2,
+      "weight_distributions": [
+        {"0":1,"6":16,"8":225,"10":1920,"12":9555,"14":29040,"16":55755,"18":69120,"20":55755,"22":29040,"24":9555,"26":1920,"28":225,"30":16,"36":1},
+        {"0":1,"6":16,"8":225,"10":1920,"12":9555,"14":29040,"16":55755,"18":69120,"20":55755,"22":29040,"24":9555,"26":1920,"28":225,"30":16,"36":1},
+        {"0":1,"6":10,"8":225,"10":1956,"12":9555,"14":28950,"16":55755,"18":69240,"20":55755,"22":28950,"24":9555,"26":1956,"28":225,"30":10,"36":1}
+      ]
+    },
+    "quadratic_form": "q_D(c+C)=wt(c)/2 mod 2Z on C_perp/C",
+    "unimodular_even_obstruction": "rank 36 is not divisible by 8"
+  },
+  "evidence_boundary": {
+    "not_proved_here": [
+      "serialized Monster words, an executed Monster subgroup embedding, or character fusion",
+      "Leech, rootless, or even-unimodular rank-36 identification",
+      "optimal two-mode gate count or optimal depth beyond the proved lower and constructive upper bounds",
+      "optical fabrication, loss, detector, or laboratory performance",
+      "remote CI or PDF success before an observable result is present"
+    ],
+    "proved_here": [
+      "the 64-point bent Cayley parent and both local subconstituents",
+      "the discriminant form model, maximal isotropic rank eleven, determinant-four maximal even chain, and three singly-even self-dual neighbors",
+      "an exact proof-carrying 21-reflection two-mode tree compiler and a 512-rotation adjacent optimization candidate",
+      "the full rank-five holonomy association scheme and its eigenmatrices",
+      "functorial reconstruction of the 135/120/27/36/45 line tower from the 36-graph seed",
+      "the complementary frame/triple resolution and S3 curvature census"
+    ]
+  },
+  "holonomy_association_scheme": {
+    "curvature": {
+      "base_complement_triangles": 3240,
+      "four_cycle_holonomy": {"identity":11070,"three_cycle":19440,"transposition":29160},
+      "holonomy_group": "S3 (transpositions occur on triangles and three-cycles occur on four-cycles)",
+      "simple_four_cycles": 59670,
+      "triangle_holonomy": {"identity":1080,"transposition":2160}
+    },
+    "first_eigenmatrix_P": [[1,2,54,36,27],[1,-1,-9,0,9],[1,2,-6,6,-3],[1,-1,3,0,-3],[1,2,6,-12,3]],
+    "multiplication": {
+      "R1R1":{"R0":2,"R1":1},"R1R2":{"R2":1,"R4":2},"R1R3":{"R3":2},"R1R4":{"R2":1},
+      "R2R2":{"R0":54,"R1":27,"R2":22,"R3":24,"R4":28},
+      "R2R3":{"R2":16,"R3":18,"R4":16},"R2R4":{"R1":27,"R2":14,"R3":12,"R4":8},
+      "R3R3":{"R0":36,"R1":36,"R2":12,"R3":6,"R4":12},"R3R4":{"R2":8,"R3":9,"R4":8},
+      "R4R4":{"R0":27,"R2":4,"R3":6,"R4":10}
+    },
+    "multiplicities": [1,20,24,60,15],
+    "quotient": {"W33_pair_blocks":{"R4_matching_plus_R2_complement":540,"complete_R3_K3_3":240},"fiber_size":3,"fibers":40},
+    "rank20_projector": "E20=(F A120 F+9F)/108; Q20^2=108Q20",
+    "relation_inner_products": ["1","-1/2","-1/6","0","1/3"],
+    "second_eigenmatrix_Q": [["1","20","24","60","15"],["1","-10","24","-30","15"],["1","-10/3","-8/3","10/3","5/3"],["1","0","4","0","-5"],["1","20/3","-8/3","-20/3","5/3"]],
+    "spherical_design": {"fixed_vector_moments":{"1":"0","2":"6","3":"3/2"},"verdict":"spherical 2-design but not a 3-design"},
+    "valencies": [1,2,54,36,27],
+    "vertices": 120
+  },
+  "monster_descent_compression": {
+    "boundary": "No serialized Monster elements, subgroup embedding, or character restriction is produced here.",
+    "promotion_rule": "A target-group candidate must first realize the 36-vertex graph; the 135 K4 frames, 120 Norton triples, [36,6] code, and 45+216+270+120 six-bit line split are then recomputed functorially rather than supplied as independent coincidences.",
+    "reconstructed": {
+      "abstract_line_split_by_weight20_count": {"0":45,"1":216,"2":270,"3":120},
+      "code_weight_distribution": {"0":1,"16":27,"20":36},
+      "hashes": {"abstract_lines":"a8dc7bd4fa3079c95ddf029131a94840daf6222f3701d92254ff7ef192b354d9","k4":"9c59605c3da8d39651555da942133650977b9c9b22135a3993c78b993bbaaf39","norton":"cf12c3080fb3673b64aad5e339df2eaee3f2d16a8932fbc4662bef67e81da398"},
+      "k4_count":135,"norton_triple_count":120,"triple_incidence_rank_f2":30
+    },
+    "seed": "the labeled SRG(36,15,6,6) adjacency alone"
+  },
+  "multiport_compiler": {
+    "adjacent_qr_optimization": {"boundary":"Topology and rational-square angle data are deterministic and numerically reconstructed; the exact proof-carrying compiler is the 21-reflection tree construction above.","nearest_neighbor_layers":69,"one_terminal_sign":true,"rational_square_parameter_sha256":"a042de7d5bc6f202adde35736484129a9638fa6fcf7a5ecf346f88280c3ea92b","rotations":512},
+    "depth_lower_bound": {"layers":6,"proof":"A depth-d circuit of disjoint two-mode gates can spread one input to at most 2^d outputs. H has full support 36, so d>=ceil(log2 36)=6."},
+    "exact_tree_compiler": {
+      "compiler_sha256":"e43cf1932b966481c42dadd5346fb0f163f31be9efcac97d1b51ab33ad228a54","integer_reflections":21,"maximum_reflection_tree_depth":13,
+      "norms2":[6,8,120,80,48,24,120,200,1200,720,360,210,2520,1800,19800,15048,684,1620,1296,1008,84],
+      "parameterization":"Every Givens coefficient is a signed square root of the recorded rational c^2 or s^2; forward tree, one pi phase, and inverse tree equal the integer Householder reflection exactly.",
+      "sequential_balanced_tree_depth":221,"single_mode_pi_phases":21,
+      "supports":[6,8,13,14,15,16,14,20,22,24,26,27,28,29,30,31,32,33,34,35,36],"two_mode_rotations":944
+    },
+    "multiport":"H=(2A36-J)/6","rank_split":[15,21]
+  },
+  "quadratic_parent": {
+    "bent_cayley_graph": {"first_subconstituent":"complement of SRG(36,15,6,6)","parameters":[64,36,20,20],"second_subconstituent":"Schlafli graph, complement of SRG(27,10,1,5)","spectrum":{"-4":36,"36":1,"4":27}},
+    "nonsingular":36,"projective_line_split":{"0":45,"1":216,"2":270,"3":120},"quadratic_space":"F2^6 minus type","singular_nonzero":27
+  },
+  "schema": "w33.pass3813_3820.quadratic_discriminant_multiport_holonomy.v1",
+  "semantic_sha256": "2b57dd96e94217573cf52a7031280ccbaaff8439ec86a3029d985723f10e6101",
+  "status": "PASS_EXACT_EIGHT_FRONT_SOURCE_MONSTER_WORDS_HARDWARE_CI_PDF_PENDING"
+}
