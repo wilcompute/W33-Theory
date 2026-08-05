@@ -1,0 +1,180 @@
+        p = list(range(24))
+        for cycle in cycles:
+            cycle = [x - 1 for x in cycle]
+            for i, x in enumerate(cycle):
+                p[x] = cycle[(i + 1) % len(cycle)]
+        return tuple(p)
+
+    m24_a = permutation([(1,4),(2,7),(3,17),(5,13),(6,9),(8,15),(10,19),(11,18),(12,21),(14,16),(20,24),(22,23)])
+    m24_b = permutation([(1,4,6),(2,21,14),(3,9,15),(5,18,10),(13,17,16),(19,24,23)])
+    assert (perm_order(m24_a), perm_order(m24_b), perm_order(compose(m24_a, m24_b))) == (2, 3, 23)
+    base_octad = frozenset(x - 1 for x in (1,2,3,4,5,11,17,24))
+    octads = {base_octad}
+    queue = deque([base_octad])
+    while queue:
+        block = queue.popleft()
+        for g in (m24_a, m24_b, inverse(m24_b)):
+            image = frozenset(g[x] for x in block)
+            if image not in octads:
+                octads.add(image)
+                queue.append(image)
+    assert len(octads) == 759
+    octad_matrix = np.array([[int(i in block) for i in range(24)] for block in sorted(octads, key=lambda x: tuple(sorted(x)))], dtype=np.int64)
+    work = octad_matrix.copy() % 2
+    rank = 0
+    for col in range(24):
+        candidates = np.flatnonzero(work[rank:, col])
+        if len(candidates) == 0:
+            continue
+        pivot = rank + int(candidates[0])
+        work[[rank, pivot]] = work[[pivot, rank]]
+        for row in range(work.shape[0]):
+            if row != rank and work[row, col]:
+                work[row] ^= work[rank]
+        rank += 1
+        if rank == 12:
+            break
+    golay_generator = work[:12]
+    codewords = np.array([np.array([(mask >> i) & 1 for i in range(12)]) @ golay_generator % 2 for mask in range(4096)])
+    weight_distribution = Counter(map(int, codewords.sum(axis=1)))
+    assert weight_distribution == Counter({12: 2576, 8: 759, 16: 759, 0: 1, 24: 1})
+
+    numerator_generators = []
+    for i in range(23):
+        row = np.zeros(24, dtype=np.int64)
+        row[i], row[23] = 4, -4
+        numerator_generators.append(row)
+    row = np.zeros(24, dtype=np.int64)
+    row[23] = 8
+    numerator_generators.append(row)
+    numerator_generators.extend(2 * row for row in golay_generator)
+    odd = np.ones(24, dtype=np.int64)
+    odd[0] = -3
+    numerator_generators.append(odd)
+    numerator_basis = hermite_normal_form(sp.Matrix(np.asarray(numerator_generators).tolist()).T).T
+    leech_gram = numerator_basis * numerator_basis.T / 8
+    assert abs(int(numerator_basis.det())) == 2 ** 36
+    assert all(x.q == 1 for x in leech_gram)
+    assert leech_gram.det() == 1 and leech_gram.is_positive_definite
+    assert all(int(leech_gram[i, i]) % 2 == 0 for i in range(24))
+    short_count, short_nodes = exact_short_vector_count(leech_gram, 2)
+    assert short_count == 1
+    assert min(map(int, leech_gram.diagonal())) == 4
+
+    word = [1,0,0,2,0,1,1,2,0,1,0,1,0,2]
+    m24_moves = (m24_a, m24_b, inverse(m24_b))
+    walk = tuple(range(24))
+    for letter in word:
+        walk = compose(m24_moves[letter], walk)
+    assert perm_order(walk) == 8
+    leech_involution = tuple(range(24))
+    for _ in range(4):
+        leech_involution = compose(walk, leech_involution)
+    assert perm_order(leech_involution) == 2 and sum(i == leech_involution[i] for i in range(24)) == 8
+    coordinate_permutation = sp.zeros(24)
+    for i, j in enumerate(leech_involution):
+        coordinate_permutation[i, j] = 1
+    row_action = numerator_basis * coordinate_permutation * numerator_basis.inv()
+    assert all(x.q == 1 for x in row_action)
+    assert row_action * row_action == sp.eye(24) and row_action.trace() == 8
+    assert row_action * leech_gram * row_action.T == leech_gram
+
+    transport_payload = json.loads((ROOT / "data" / "PART_3795_3812_LEECH_AXIAL_TRANSPORT.json").read_text(encoding="utf-8"))
+    transport = sp.Matrix(transport_payload["transport"])
+    axial_R = old["R"]
+    assert transport.det() == 1
+    assert row_action.T * transport == transport * axial_R
+    transport_np = np.asarray(transport_payload["transport"], dtype=np.int64)
+    leech_gram_np = np.asarray(leech_gram.tolist(), dtype=np.int64)
+    axial_leech_np = transport_np.T @ leech_gram_np @ transport_np
+    axial_R_np = np.asarray(axial_R.tolist(), dtype=np.int64)
+    assert np.array_equal(axial_R_np.T @ axial_leech_np @ axial_R_np, axial_leech_np)
+    assert all(int(axial_leech_np[i, i]) % 2 == 0 for i in range(24))
+    assert int(round(np.linalg.det(transport_np))) == 1
+    frozen_axial_hash = sha256(json.dumps(axial_leech_np.tolist(), separators=(",", ":")).encode()).hexdigest()
+    assert frozen_axial_hash == transport_payload["expected_axial_gram_sha256"]
+
+    coordinate_np = np.asarray(old["coordinate_np"], dtype=np.int64)
+    pivot_columns = np.asarray(old["pivcols"], dtype=int)
+    surviving = []
+    for g in old["even_line_group"]:
+        representation = coordinate_np[:, np.asarray(g, dtype=int)[pivot_columns]]
+        if np.array_equal(representation.T @ axial_leech_np @ representation, axial_leech_np):
+            surviving.append(g)
+    assert len(surviving) == 2 and Counter(perm_order(g) for g in surviving) == Counter({1: 1, 2: 1})
+    axial_leech_sha = frozen_axial_hash
+
+    # ------------------------------------------------------------------
+    # Front 4: explicit abstract finite descent, Monster target fail-closed.
+    # ------------------------------------------------------------------
+    full_group = closure(list(old["line_gens"]), 60_000)
+    even_group = tuple(old["even_line_group"])
+    assert (len(full_group), len(even_group)) == (51_840, 25_920)
+    full_order_census = Counter(perm_order(g) for g in full_group)
+    assert full_order_census == Counter({6:12960,12:8640,8:6480,4:5940,9:5760,5:5184,10:5184,2:891,3:800,1:1})
+    generator_digest = sha256(json.dumps([list(g) for g in old["line_gens"]], separators=(",", ":")).encode()).hexdigest()
+
+    # ------------------------------------------------------------------
+    # Front 5: intrinsic axial presentation and generated subalgebras.
+    # ------------------------------------------------------------------
+    P = np.asarray(old["P"].tolist(), dtype=np.int64) % MOD
+    pivot_columns_list = list(old["pivcols"])
+    pivot_rows = list(old["pivrows"])
+    U = P[:, pivot_columns_list] % MOD
+    left = inverse_mod(U[pivot_rows, :], MOD)
+    projector = P * pow(90, -1, MOD) % MOD
+    structure = np.zeros((24, 24, 24), dtype=np.int64)
+    for a in range(24):
+        for b in range(a, 24):
+            z = projector @ (U[:, a] * U[:, b] % MOD) % MOD
+            coordinates = left @ z[pivot_rows] % MOD
+            structure[:, a, b] = structure[:, b, a] = coordinates
+    axis_coordinates = np.column_stack([left @ P[:, i][pivot_rows] % MOD * pow(21, -1, MOD) % MOD for i in range(45)])
+
+    def product_vector(x, y):
+        return np.einsum("kab,a,b->k", structure, x, y, dtype=np.int64) % MOD
+
+    def generated_dimension(indices):
+        basis = IncrementalBasis(MOD)
+        vectors = []
+        for i in indices:
+            v = axis_coordinates[:, i]
+            if basis.add(v):
+                vectors.append(v)
+        changed = True
+        while changed:
+            changed = False
+            snapshot = list(vectors)
+            for i, x in enumerate(snapshot):
+                for y in snapshot[i:]:
+                    z = product_vector(x, y)
+                    if basis.add(z):
+                        vectors.append(z)
+                        changed = True
+            if len(vectors) == 24:
+                break
+        return len(vectors)
+
+    line_relation_matrix = np.zeros((27, 45), dtype=np.int64)
+    for row_id, star in enumerate(old["stars"]):
+        line_relation_matrix[row_id, list(star)] = 1
+    assert int(sp.Matrix(line_relation_matrix.tolist()).rank()) == 21
+    assert int(sp.Matrix.hstack(*old["axes"]).rank()) == 24
+
+    adjacent_pair = next((i, j) for i, j in combinations(range(45), 2) if old["A"][i, j])
+    nonadjacent_pair = next((i, j) for i, j in combinations(range(45), 2) if not old["A"][i, j])
+    pair_dimensions = {"collinear": generated_dimension(adjacent_pair), "noncollinear": generated_dimension(nonadjacent_pair)}
+    assert pair_dimensions == {"collinear": 2, "noncollinear": 4}
+
+    triples = tuple(combinations(range(45), 3))
+    seen_triples = set()
+    triple_orbits = []
+    for triple in triples:
+        if triple in seen_triples:
+            continue
+        queue = deque([triple])
+        seen_triples.add(triple)
+        orbit = []
+        while queue:
+            current = queue.popleft()
+            orbit.append(current)
