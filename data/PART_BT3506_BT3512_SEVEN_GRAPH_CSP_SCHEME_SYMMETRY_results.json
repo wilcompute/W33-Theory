@@ -1,0 +1,425 @@
+{
+  "evidence_boundary": [
+    "No existence or nonexistence result for M57 is claimed.",
+    "The full M57 CP-SAT instance is emitted but not solved.",
+    "The involutive-holonomy branch is a high-risk ansatz, not a theorem about M57.",
+    "Ordinary Krein feasibility does not prove graph existence.",
+    "The 2026 no-involution result remains a recent preprint.",
+    "No canonical W33-Gewirtz objectwise intertwiner is asserted."
+  ],
+  "front_3506_m57_csp": {
+    "CP_SAT_directed_integer_variables_with_explicit_inverses": 172480,
+    "boundary": "source-complete_model; no 56-fibre solution or unsat certificate claimed",
+    "constraints_before_lazy_cuts": {
+      "base_vertex_gauge_equalities": 55,
+      "inverse_channels": 1540,
+      "row_pair_AllDifferent": 1540,
+      "total_structural_constraints": 6271,
+      "vertex_star_AllDifferent": 3136
+    },
+    "exporter": "analysis/bt3506_m57_permutation_csp.py",
+    "fibre_size": 56,
+    "gauge": "sigma_0j(0)=j_for_j=1..55",
+    "independent_permutation_entries": 86240,
+    "lazy_cut_families": [
+      "triangle_holonomy_fixed_point_nogoods",
+      "nonadjacent_residual_pair_common_neighbor_nogoods"
+    ],
+    "one_hot_boolean_baseline": 4743200,
+    "row_triples_for_curvature_separation": 27720
+  },
+  "front_3507_descendant_atlas": {
+    "Clebsch_to_Petersen": {
+      "child": "Petersen",
+      "child_model": "weight_2_words; adjacency_iff_disjoint_supports",
+      "child_parameters": [
+        10,
+        3,
+        0,
+        1
+      ],
+      "literal_model": "even_weight_F2^5; adjacency_at_Hamming_distance_4",
+      "operation": "second_subconstituent_at_00000",
+      "parent": "Clebsch",
+      "parent_parameters": [
+        16,
+        5,
+        0,
+        2
+      ]
+    },
+    "Golay_Witt_chain": {
+      "Golay_weight_distribution": {
+        "0": 1,
+        "12": 2576,
+        "16": 759,
+        "24": 1,
+        "8": 759
+      },
+      "HS_second_subconstituent": {
+        "child": "M22",
+        "parameters": [
+          77,
+          16,
+          0,
+          4
+        ]
+      },
+      "Higman_Sims": [
+        100,
+        22,
+        0,
+        6
+      ],
+      "M22_point_avoidance": {
+        "child": "Gewirtz",
+        "parameters": [
+          56,
+          10,
+          0,
+          2
+        ]
+      },
+      "Witt_design": {
+        "block_size": 6,
+        "blocks": 77,
+        "lambda_3": 1,
+        "points": 22
+      },
+      "construction_boundary": "literal_Golay_Witt_construction_not_only_parameter_matching"
+    }
+  },
+  "front_3508_scheme_blindness": {
+    "all_parameter_spectral_absolute_krein_tests_pass": true,
+    "obstruction_location": "The nonexistent lambda=1 rung is invisible to the rank-three Bose-Mesner/Krein/absolute-bound layer; published proofs require finer local or star-complement compatibility.",
+    "rows": [
+      {
+        "absolute_bounds": {
+          "r_embedding_bound": 1595,
+          "s_embedding_bound": 252
+        },
+        "krein": {
+          "q11": [
+            "55",
+            "1287/32",
+            "1155/32"
+          ],
+          "q12": [
+            "0",
+            "441/32",
+            "605/32"
+          ],
+          "q22": [
+            "21",
+            "231/32",
+            "35/32"
+          ]
+        },
+        "lambda": 0,
+        "name": "M22",
+        "parameters": [
+          77,
+          16,
+          0,
+          4
+        ],
+        "spectrum": {
+          "eigenvalues": [
+            16,
+            2,
+            -6
+          ],
+          "multiplicities": [
+            1,
+            55,
+            21
+          ]
+        }
+      },
+      {
+        "absolute_bounds": {
+          "r_embedding_bound": 779,
+          "s_embedding_bound": 189
+        },
+        "krein": {
+          "q11": [
+            "38",
+            "1273/49",
+            "1140/49"
+          ],
+          "q12": [
+            "0",
+            "540/49",
+            "722/49"
+          ],
+          "q22": [
+            "18",
+            "342/49",
+            "111/49"
+          ]
+        },
+        "lambda": 1,
+        "name": "57_vertex_hole",
+        "parameters": [
+          57,
+          14,
+          1,
+          4
+        ],
+        "spectrum": {
+          "eigenvalues": [
+            14,
+            2,
+            -5
+          ],
+          "multiplicities": [
+            1,
+            38,
+            18
+          ]
+        }
+      },
+      {
+        "absolute_bounds": {
+          "r_embedding_bound": 324,
+          "s_embedding_bound": 135
+        },
+        "krein": {
+          "q11": [
+            "24",
+            "44/3",
+            "40/3"
+          ],
+          "q12": [
+            "0",
+            "25/3",
+            "32/3"
+          ],
+          "q22": [
+            "15",
+            "20/3",
+            "10/3"
+          ]
+        },
+        "lambda": 2,
+        "name": "W33_class",
+        "parameters": [
+          40,
+          12,
+          2,
+          4
+        ],
+        "spectrum": {
+          "eigenvalues": [
+            12,
+            2,
+            -4
+          ],
+          "multiplicities": [
+            1,
+            24,
+            15
+          ]
+        }
+      },
+      {
+        "absolute_bounds": {
+          "r_embedding_bound": 104,
+          "s_embedding_bound": 90
+        },
+        "krein": {
+          "q11": [
+            "13",
+            "156/25",
+            "156/25"
+          ],
+          "q12": [
+            "0",
+            "144/25",
+            "169/25"
+          ],
+          "q22": [
+            "12",
+            "156/25",
+            "106/25"
+          ]
+        },
+        "lambda": 3,
+        "name": "Paulus_class",
+        "parameters": [
+          26,
+          10,
+          3,
+          4
+        ],
+        "spectrum": {
+          "eigenvalues": [
+            10,
+            2,
+            -3
+          ],
+          "multiplicities": [
+            1,
+            13,
+            12
+          ]
+        }
+      },
+      {
+        "absolute_bounds": {
+          "r_embedding_bound": 20,
+          "s_embedding_bound": 54
+        },
+        "krein": {
+          "q11": [
+            "5",
+            "5/8",
+            "15/8"
+          ],
+          "q12": [
+            "0",
+            "27/8",
+            "25/8"
+          ],
+          "q22": [
+            "9",
+            "45/8",
+            "39/8"
+          ]
+        },
+        "lambda": 4,
+        "name": "T6",
+        "parameters": [
+          15,
+          8,
+          4,
+          4
+        ],
+        "spectrum": {
+          "eigenvalues": [
+            8,
+            2,
+            -2
+          ],
+          "multiplicities": [
+            1,
+            5,
+            9
+          ]
+        }
+      }
+    ]
+  },
+  "front_3509_spectral_transplant": {
+    "classification": {
+      "geometry_sensitive": [
+        "cliques_and_lines",
+        "incidence_factorizations",
+        "automorphism_group",
+        "codes_and_descendant_maps"
+      ],
+      "multiplicity_sensitive": [
+        "trace",
+        "determinant",
+        "projector_ranks"
+      ],
+      "polynomial_only": [
+        "adjacency_polynomial_identities",
+        "two_channel_functional_calculus",
+        "centered_complement_reflection"
+      ]
+    },
+    "examples_coefficients_low_to_high": {
+      "[0, 0, 1]": [
+        -2,
+        8
+      ],
+      "[0, 1]": [
+        1,
+        0
+      ],
+      "[1, -3, 2, 1]": [
+        5,
+        1
+      ],
+      "[7, 0, 0, 0, 1]": [
+        -40,
+        103
+      ]
+    },
+    "normal_form": "a*A+b*I",
+    "quotient_ring": "Q[x]/(x^2+2*x-8)",
+    "shared_by": {
+      "Gewirtz": {
+        "multiplicities": [
+          35,
+          20
+        ]
+      },
+      "W33": {
+        "multiplicities": [
+          24,
+          15
+        ]
+      }
+    },
+    "universal_projectors": [
+      "(I+U)/2",
+      "(I-U)/2"
+    ],
+    "universal_reflection": "U=(-I-A)/3_on_augmentation; U^2=I"
+  },
+  "front_3510_symmetry_firewall": {
+    "Borel_19_semidirect_9_order": 171,
+    "M57_automorphism_bounds_peer_reviewed": {
+      "even_order_case_at_most": 110,
+      "odd_order_case_at_most": 375
+    },
+    "PSL2_19_order": 3420,
+    "conditional_consequences": [
+      "Aut_M57_would_be_solvable_by_the_odd_order_theorem",
+      "no_A5_or_PSL2_19_subgroup",
+      "the_existing_A5_20_plane_comparison_cannot_be_an_actual_common_A5_automorphism_action"
+    ],
+    "next_exact_test": "restrict_Perkl_minus3_module_to_the_19:9_Borel_shadow",
+    "recent_preprint_boundary": "no_involutions_would_force_Aut_M57_to_have_odd_order",
+    "surviving_symmetry_shadow": "Parity alone does not exclude the odd Borel subgroup 19:9 of order 171, which lies below the peer-reviewed odd-order bound 375."
+  },
+  "front_3511_bonkers_nonabelian_curvature": {
+    "bonkers_M57_branch": "Search first inside the non-necessary ansatz where all 1540 row-pair matchings and all 27720 triangle holonomies are fixed-point-free involutions of cycle type 2^28.",
+    "boundary": "The involutive-curvature ansatz is inspired by HS, not necessary for M57.",
+    "fibre_size": 6,
+    "gauge_invariant": "holonomy_cycle_type_is_conjugacy_invariant",
+    "known_witness": "Hoffman_Singleton_edge_chart",
+    "pair_matchings": {
+      "count": 15,
+      "cycle_type": "2^3"
+    },
+    "triangle_holonomies": {
+      "count": 20,
+      "cycle_type": "2^3"
+    }
+  },
+  "front_3512_bonkers_Golay_puncture_functor": {
+    "boundary": "combinatorial_functor_language_not_a_category_equivalence_with_W33",
+    "interpretation": "The HS-M22-Gewirtz chain is an executable puncture/avoidance functor on one Golay-Witt incidence object, not three isolated graphs.",
+    "operations": [
+      "extend_cyclic_Golay_23_to_24_by_parity",
+      "fix_two_coordinates_in_octads_to_obtain_77_hexads",
+      "take_disjointness_graph_to_obtain_M22",
+      "avoid_one_point_to_obtain_Gewirtz",
+      "adjoin_22_points_and_infinity_to_reconstruct_Higman_Sims"
+    ]
+  },
+  "passes": [
+    3506,
+    3507,
+    3508,
+    3509,
+    3510,
+    3511,
+    3512
+  ],
+  "semantic_sha256": "15ab9b21e744e755917e0b4c40ec806b43c5463b8a11cfbfac7bdbb4a9c8dfe7",
+  "status": "PASS_7_FRONTS"
+}
