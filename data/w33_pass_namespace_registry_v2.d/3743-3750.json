@@ -3,8 +3,21 @@
   "range": [3743, 3750],
   "slug": "symmetry_os_spacetime_decoder_hybrid_factory_grand_tournament_preregistered_challenge_bonkers",
   "title": "Symmetry operating system, correlated space-time decoder, hybrid resource factory, grand tournament, preregistered challenge, and three architecture breakthroughs",
-  "status": "reserved",
+  "status": "published",
   "owner": "openai-gpt-5.6-thinking",
   "reserved_at": "2026-08-05T16:07:00-04:00",
-  "boundary": "Reservation only; publication requires exact source, frozen certificate, focused tests, workflow, manuscript integration, public reachability, and explicit experimental claim boundaries."
+  "published_at": "2026-08-05T16:38:00-04:00",
+  "semantic_sha256": "67ce2d0ab105d8809dd6ae1af60381e1181d9a08c9032ce1dad1130f7bb8ff62",
+  "files": [
+    "analysis/w33_pass3743_3750_symmetry_os_spacetime_factory_tournament.py",
+    "data/PART_3743_3750_SYMMETRY_OS_SPACETIME_FACTORY_TOURNAMENT_results.json",
+    "data/PART_3747_W33_HARDWARE_CHALLENGE_PREREGISTRATION.json",
+    "tests/test_w33_pass3743_3750_symmetry_os_spacetime_factory_tournament.py",
+    "analysis/BT3743_BT3750_symmetry_os_spacetime_factory_tournament.md",
+    "analysis/BT3743_BT3750_symmetry_os_spacetime_factory_tournament_insert.tex",
+    "analysis/BT3743_BT3750_symmetry_os_spacetime_factory_tournament_index_insert.html",
+    "docs/symmetry-os-spacetime-factory-tournament.html",
+    ".github/workflows/w33_pass3743_3750_symmetry_os_spacetime_factory_tournament.yml"
+  ],
+  "boundary": "The packet certifies finite compiler, decoder-model, resource-count, graph-tournament, preregistration, permutation-holonomy, twirl-cost, and control-port results. It does not certify calibrated optical pulses, measured device noise, a complete fault-tolerance threshold, minimum layout, coherent S40 universality, an optimal exact twirl design, or the exact zero-forcing number."
 }
