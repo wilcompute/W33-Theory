@@ -1,0 +1,156 @@
+{
+  "bonkers": {
+    "cap_fibre_orbit_frame": {
+      "W33_spectral_energies": {
+        "-4": "163/8",
+        "12": "3969/40",
+        "2": "157/5"
+      },
+      "antipodal_pair_occupancy_patterns": {
+        "(0, 0, 0)": 6,
+        "(0, 0, 1)": 17,
+        "(0, 0, 2)": 1,
+        "(0, 1, 1)": 6,
+        "(0, 1, 2)": 6,
+        "(1, 1, 1)": 3,
+        "(1, 2, 2)": 1
+      },
+      "count_histogram": {
+        "0": 6,
+        "1": 17,
+        "2": 7,
+        "3": 9,
+        "5": 1
+      },
+      "count_vector": [
+        1,1,2,1,5,1,2,3,1,0,3,1,1,1,1,2,0,2,2,1,1,3,3,1,3,2,3,0,3,0,3,1,1,0,1,1,2,1,0,3
+      ],
+      "count_vector_orbit_size": 25920,
+      "count_vector_stabilizer_order": 1,
+      "fibre_count": 40,
+      "fibre_size": 6,
+      "orbit_frame_constants": {
+        "constant": "2571912",
+        "eigenvalue_-4": "35208",
+        "eigenvalue_2": "33912"
+      }
+    },
+    "free_cap_orbit_code": {
+      "constant_weight": 63,
+      "intersection_census": {
+        "10":351,"11":632,"12":1252,"13":1881,"14":2765,"15":3101,"16":3244,"17":3074,"18":2726,"19":2243,"20":1576,"21":1099,"22":709,"23":491,"24":267,"25":126,"26":68,"27":57,"28":19,"29":22,"30":3,"31":2,"32":4,"6":4,"63":1,"7":21,"8":36,"9":146
+      },
+      "length": 240,
+      "maximum_hamming_distance": 114,
+      "minimum_hamming_distance": 62,
+      "size": 25920,
+      "stabilizer_order": 1
+    },
+    "gewirtz_residual_Petersen_blowup": {
+      "class_size": 4,
+      "interpretation": "independent fourfold blow-up of the Petersen graph",
+      "quotient_parameters": [10,3,0,1],
+      "twin_classes": 10
+    }
+  },
+  "corrections": [
+    "The exceptional order-192 tomotope completion group is centerless 2^4:D12, not a non-split central double cover.",
+    "The cubic transversal upper witness improves from 178 to 177; no endpoint optimality is claimed."
+  ],
+  "evidence_boundary": [
+    "No 64-cap nonexistence or exact cubic-transversal endpoint is asserted.",
+    "The tomotope group correction is an abstract finite-group theorem, not a physical cover.",
+    "The 115-dimensional composition census is over F3 and does not assert characteristic-zero semisimplicity.",
+    "The Gewirtz theorem rules out the natural two-point-stabilizer-invariant W33 residual, not every non-equivariant map.",
+    "The website lock authorizes no migration by itself; it only validates explicit future authorization records.",
+    "No remote CI, PDF, hardware, laboratory, Monster embedding, or physical result is asserted before observed execution."
+  ],
+  "fronts": {
+    "cubic_transversal_tightening": {
+      "cap_indices": [3,4,11,13,15,18,28,30,33,34,35,37,42,46,51,55,57,60,68,69,70,78,92,94,97,100,101,105,109,114,117,119,123,132,135,141,143,144,149,153,154,165,171,173,181,182,188,189,191,192,194,196,198,201,202,203,213,217,219,223,228,230,231],
+      "cap_sha256": "25c7f84b35f5286f1faa7752f76f0f45ef6d377f675ece8dd7fbc55b7b655cdf",
+      "global_endpoint_boundary": "No 64-cap infeasibility or 177-transversal optimality proof is claimed.",
+      "inherited_lower_bound": 106,
+      "new_cap_size": 63,
+      "new_interval": [106,177],
+      "new_transversal_size": 177,
+      "radius_two_local_optimality": {
+        "checks": {
+          "0":{"candidate_subset_checks":0,"maximum_individually_addable":0,"minimum_individually_addable":0,"sum_individually_addable":0},
+          "1":{"candidate_subset_checks":0,"maximum_individually_addable":1,"minimum_individually_addable":1,"sum_individually_addable":63},
+          "2":{"candidate_subset_checks":91,"maximum_individually_addable":5,"minimum_individually_addable":2,"sum_individually_addable":3980}
+        },
+        "exchange_radius": 2,
+        "locally_optimal": true,
+        "meaning": "No improvement exists after removing at most two cap faces and adding one more face than was removed."
+      },
+      "transversal_hit_profile": {"1":876,"2":2217,"3":1947}
+    },
+    "gewirtz_asymmetric_residual_scheme": {
+      "Gewirtz_parameters": [56,10,0,2],
+      "M22_order": 443520,
+      "M24_order": 244823040,
+      "W33_verdict": "not SRG(40,12,2,4)",
+      "canonical_split": {"independent_star":16,"residual_internal_degree":6,"residual_to_star_degree":4,"residual_vertices":40,"star_to_residual_degree":10},
+      "degree12_common_neighbor_census": {"adjacent":{"0":240},"nonadjacent":{"12":60,"4":480}},
+      "degree12_spectrum": {"-0.0":30,"-8.0":4,"12.0":1,"4.0":5},
+      "remaining_boundary": "A fully non-equivariant W33/Gewirtz identification is not ruled out by this stabilizer-scheme theorem.",
+      "residual_rank": 5,
+      "residual_subdegrees": [1,24,3,6,6],
+      "two_point_stabilizer_order": 960,
+      "unique_invariant_degree12_union": [3,4]
+    },
+    "modular_top115_complete_descent": {
+      "all_factors_absolutely_irreducible": true,
+      "composition_multiset": {"1":3,"10":3,"14":3,"25":1,"5":3},
+      "composition_series_dimensions": [0,10,24,29,39,64,69,70,84,89,99,100,114,115],
+      "dimension_check": 115,
+      "factor_algebra_dimensions": [100,196,25,100,625,25,1,196,25,100,1,196,1],
+      "new_status": "complete composition-factor census over F3",
+      "previous_boundary": "top 115-dimensional quotient unresolved",
+      "semisimplification": "3*(1+5+10+14)+25",
+      "successive_factor_dimensions": [10,14,5,10,25,5,1,14,5,10,1,14,1]
+    },
+    "tomotope_outer_extension_correction": {
+      "completion_order_matrix": [[96,96,192],[192,96,96],[96,192,96]],
+      "corrected_exceptional_group": "2^4:D12",
+      "exact_invariants": {
+        "center_order": 1,
+        "centralizer_of_ordinary_kernel": 1,
+        "extension": "split outer C2 extension",
+        "normal_elementary_abelian_order": 16,
+        "order": 192,
+        "ordinary_kernel_order": 96,
+        "ordinary_kernel_structure": "2^4:S3",
+        "outside_involutions": 16,
+        "quotient": "D12",
+        "quotient_order_census": {"1":1,"2":7,"3":2,"6":2}
+      },
+      "exceptional_completions": 3,
+      "exceptional_group_center_order": 1,
+      "exceptional_positions": [[0,2],[1,0],[2,1]],
+      "ordinary_completions": 6,
+      "ordinary_tomotope_group": "2^4:S3",
+      "outer": true,
+      "previous_identification_withdrawn": "The order-192 exceptional completion is not a non-split central double cover of Aut(tomotope).",
+      "split": true
+    },
+    "website_migration_lock": {
+      "actual_blob": "41a8d733f42da18282fa276f5d2fa82bac7516f6",
+      "authorization_policy": "Any future replacement must carry a validated migration authorization binding old blob, new blob, and an exact archive of the old page.",
+      "checked": true,
+      "required_blob": "41a8d733f42da18282fa276f5d2fa82bac7516f6",
+      "verification_gate": "tools/check_website_migration_authorization.py"
+    }
+  },
+  "live_boundaries": {
+    "cap_maximum": [63,null],
+    "chromatic_number": [10,11],
+    "covering_radius": [389,435],
+    "cubic_transversal": [106,177]
+  },
+  "passes": [3847,3848,3849,3850,3851,3852,3853,3854,3855,3856,3857,3858,3859,3860,3861,3862],
+  "schema": "w33.pass3847_3862.eight_front_closure.v1",
+  "semantic_sha256": "f764ac9ada894f4b076c9f2b0b09ea0466337de82bb30836cee76b0c5b5cc2e2",
+  "status": "PASS_5_FRONTS_PLUS_3_BONKERS_WITH_TWO_CORRECTIONS"
+}
