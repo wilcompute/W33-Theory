@@ -1,0 +1,47 @@
+{
+  "boundaries": [
+    "M57 remains open",
+    "the complete K8 octad orbit census remains open",
+    "the all-3,720 proof archive remains a heavy artifact",
+    "marked resolvents are mathematical graph dynamics, not laboratory measurements"
+  ],
+  "passes": {
+    "3577_borel_double_coset_presolve": {
+      "P19": {"edge_orbit_variables":30915,"residual_variables":30870,"spine_fixed_variables":45,"spine_selected_edges":15},
+      "P57": {"edge_orbit_variables":30885,"residual_variables":30870,"spine_fixed_variables":15,"spine_selected_edges":15},
+      "coset_degrees": {"1":171,"B":1,"C3":57,"C9":19},
+      "duality": "after fixing the Petersen spine both profiles have exactly 30,870 residual binary edge-orbit variables",
+      "fixed_graph": "Petersen graph on ten vertices in both profiles",
+      "group_order": 171,
+      "suborbit_size_histograms": {
+        "1->1":{"1":171},"1->B":{"1":1},"1->C3":{"1":57},"1->C9":{"1":19},
+        "B->1":{"171":1},"B->B":{"1":1},"B->C3":{"57":1},"B->C9":{"19":1},
+        "C3->1":{"3":57},"C3->B":{"1":1},"C3->C3":{"1":3,"3":18},"C3->C9":{"1":1,"3":6},
+        "C9->1":{"9":19},"C9->B":{"1":1},"C9->C3":{"3":1,"9":6},"C9->C9":{"1":1,"9":2}
+      }
+    },
+    "3578_perkel_constructive_matrix_model": {
+      "conductor19_component_dimension":18,"field":"Q(sqrt(-19))","matrix_model_digest":"366405ad8400779a79eb6b92437b6d354ad3019eb16e9b5a81b99c5adc77eb33","matrix_size":"3x3","maximum_denominator":14,"minimal_right_ideal_Q_dimension":6,"nonzero_matrix_entries":171,"orbital_rank":21,"thin_orbital_matrices":"the first three matrices are I3 and the two 3-cycle permutation matrices","verification":"all 441 orbital products agree in M3(Q(sqrt(-19)))"
+    },
+    "3579_k8_octad_phase_separation": {
+      "classification_boundary":"two inequivalent S8 phases are certified; a complete orbit census is not claimed","labelled_one_factorizations":6240,"perfect_matchings":105,
+      "mixed_phase": {
+        "S8_orbit_size":10080,"S8_stabilizer":4,"canonical_digest":"85b3249861063429a6b968446163800643cda7379042d2b6e042524c2abdfb40","common_core_size":0,
+        "compiled_graph": {"adjacent_common_neighbors":{"0":230,"1":84,"2":36,"3":4,"4":15},"charpoly":"(lambda - 9)*(lambda - 1)**2*(lambda**2 + lambda - 8)**9*(lambda**14 + lambda**13 - 51*lambda**12 - 47*lambda**11 + 969*lambda**10 + 761*lambda**9 - 8643*lambda**8 - 4860*lambda**7 + 37667*lambda**6 + 10176*lambda**5 - 72616*lambda**4 + 2881*lambda**3 + 40325*lambda**2 - 6448*lambda - 1140)*(lambda**15 + 7*lambda**14 - 41*lambda**13 - 327*lambda**12 + 639*lambda**11 + 5855*lambda**10 - 5169*lambda**9 - 50742*lambda**8 + 25759*lambda**7 + 217374*lambda**6 - 79938*lambda**5 - 413903*lambda**4 + 117209*lambda**3 + 237664*lambda**2 - 14764*lambda - 15944)*(lambda**16 - 10*lambda**15 - 18*lambda**14 + 428*lambda**13 - 358*lambda**12 - 6976*lambda**11 + 11516*lambda**10 + 55211*lambda**9 - 110283*lambda**8 - 223703*lambda**7 + 476890*lambda**6 + 453433*lambda**5 - 951552*lambda**4 - 417563*lambda**3 + 764780*lambda**2 + 129964*lambda - 169984)*(lambda**16 + 4*lambda**15 - 58*lambda**14 - 230*lambda**13 + 1268*lambda**12 + 4992*lambda**11 - 13152*lambda**10 - 51837*lambda**9 + 67015*lambda**8 + 273711*lambda**7 - 145094*lambda**6 - 708197*lambda**5 + 24192*lambda**4 + 752185*lambda**3 + 234396*lambda**2 - 164004*lambda - 61688)","degree":9,"diameter":3,"distance_pairs":{"1":369,"2":2222,"3":730},"edge_digest":"626cc75273de75c4f4c1668da4ce928fb4c81836d6f70c93cd78fa1a85b4979e","edges":369,"four_cycles":375,"nonadjacent_common_neighbors":{"0":730,"1":1830,"2":282,"3":110},"traces":[0,738,456,15546,55180,684810],"triangles":76,"vertices":82},
+        "incidence_multiplicity_histogram":{"0":72,"1":14,"2":16,"3":2,"4":1},"indices":[0,61,132,161,602,744,1323,1558]
+      },
+      "sunflower_moore_shell":{"diameter":3,"four_cycles":3024,"order_formula":"82=1+9+9*8","overcoupled_seven_common_neighbor_pairs":288,"spectrum":"9^1, 8^3, 1^32, (-1)^24, (-8)^4, roots(x^2+x-8)^9","triangles":0,"uncovered_nonadjacent_pairs":1728,"unit_common_neighbor_pairs":936},
+      "sunflower_phase": {
+        "S8_orbit_size":40320,"S8_stabilizer":1,"canonical_digest":"18f69827ed166cc1e987f7dfa49dec4320c43fbf7765ab315e01ae560fddeb81","common_core_size":1,
+        "compiled_graph":{"adjacent_common_neighbors":{"0":369},"charpoly":"(lambda - 9)*(lambda - 8)**3*(lambda - 1)**32*(lambda + 1)**24*(lambda + 8)**4*(lambda**2 + lambda - 8)**9","degree":9,"diameter":3,"distance_pairs":{"1":369,"2":1224,"3":1728},"edge_digest":"db7c1b9fc501dff5d862b4e2a8e909a4551f078f2021144323532a94fef33860","edges":369,"four_cycles":3024,"nonadjacent_common_neighbors":{"0":1728,"1":936,"7":288},"traces":[0,738,0,36738,23040,2381346],"triangles":0,"vertices":82},
+        "incidence_multiplicity_histogram":{"0":56,"1":48,"8":1},"indices":[0,61,132,161,215,259,275,373]
+      }
+    },
+    "3580_proof_carrying_canary":{"boundary":"a real proof-carrying spectral-survivor canary is executed; the full 3,720 archive is not claimed","companion":"analysis/bt3580_star_proof_canary.py","compatibility_vertices":52,"maximum_clique":11,"proof_sha256":"a07611183bd01fad1b60134aebba7dc3a8ec0ce7bc29fd7c46ea8c4146010b50","record_sha256":"2a984b9a2f51646691657a8dfe5d01b9e33496f75500ba9b79abdd5a68385390"},
+    "3581_marked_resolvent_discriminator":{"Gewirtz_J_channel":"2/((z - 10)*(z - 2)*(z + 4))","Gewirtz_boundary":"triangle-free, hence every marked four-set has at most four induced edges; it cannot reproduce the W33 line marker","Gewirtz_edge_weight":"(z - 6)/((z - 10)*(z - 2)**2*(z + 4)**2)","W33_J_channel":"4/((z - 12)*(z - 2)*(z + 4))","W33_edge_weight":"(z - 4)/((z - 12)*(z - 2)**2*(z + 4)**2)","W33_line":{"determinant_ratio":"(1-tau*((z - 11)/((z - 12)*(z - 2))))*(1-tau*((z + 1)/((z - 2)*(z + 4))))^3","induced_edges":6,"size":4},"edge_recovery":"the second determinant coefficient contains -e*b*(b+2c), so the induced edge count e is exactly recoverable","marked_set_formula":"R_S(z)=a(z)I+b(z)A[S]+c(z)J","shared_restricted_resolvent":{"a":"(z + 2)/((z - 2)*(z + 4))","b":"1/((z - 2)*(z + 4))"},"unmarked_no_go":"for every SRG, every analytic adjacency function lies in span{I,A,J}; it cannot distinguish nonisomorphic graphs with the same SRG parameters"},
+    "3582_bonkers_petersen_spine_duality":"P19 and P57 both reduce to exactly 30,870 residual edge-orbit variables after the fixed Petersen skeleton",
+    "3583_bonkers_sunflower_moore_shell":{"diameter":3,"four_cycles":3024,"order_formula":"82=1+9+9*8","overcoupled_seven_common_neighbor_pairs":288,"spectrum":"9^1, 8^3, 1^32, (-1)^24, (-8)^4, roots(x^2+x-8)^9","triangles":0,"uncovered_nonadjacent_pairs":1728,"unit_common_neighbor_pairs":936}
+  },
+  "schema":"w33.pass3577_3583.v1",
+  "semantic_sha256":"2a4a06836164c6eb92d971aa18ecd1369990c7bf501ae1aaf342e7b5e5bc23a4"
+}
