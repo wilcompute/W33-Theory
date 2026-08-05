@@ -1,17 +1,14 @@
 #!/usr/bin/env python3
 """Pass 3407: profile-sensitive Hermitian chromatic search on the 45-block graph.
 
-The search evaluates every triangle and every omitted-edge minimum-defect phase
-pattern.  It reports the best generalized Hoffman ratio together with numerical
-Hermitian residuals.  The output is a candidate certificate, not a terminal
-colouring proof unless the independently verified ratio crosses the required
-integer threshold.
+The helper ``support_graph`` returns the 12-regular GQ(4,2) point graph.  The
+chromatic block graph is its 32-regular complement SRG(45,32,22,24); this
+conversion is performed explicitly and asserted before the search.
 """
 from __future__ import annotations
 
 import argparse
 import json
-from itertools import combinations
 from math import pi
 from pathlib import Path
 
@@ -77,19 +74,26 @@ def spectral_record(matrix: np.ndarray) -> dict:
 
 def build_certificate(limit: int | None = None) -> dict:
     _, adjacency, _ = build_w33()
-    supports, graph45 = support_graph(adjacency)
-    graph45 = np.asarray(graph45, dtype=int)
-    assert graph45.shape == (45, 45)
+    supports, gq42 = support_graph(adjacency)
+    gq42 = np.asarray(gq42, dtype=int)
+    assert gq42.shape == (45, 45)
+    assert set(gq42.sum(axis=1).tolist()) == {12}
+    graph45 = np.ones((45, 45), dtype=int) - np.eye(45, dtype=int) - gq42
     assert set(graph45.sum(axis=1).tolist()) == {32}
-    triangles = triangles_of(graph45)
-    assert len(triangles) == 5280
-    if limit is not None:
-        triangles = triangles[:limit]
+    assert np.array_equal(
+        graph45 @ graph45,
+        8 * np.eye(45, dtype=int) - 2 * graph45 + 24 * np.ones((45, 45), dtype=int),
+    )
+
+    all_triangles = triangles_of(graph45)
+    assert len(all_triangles) == 5280
+    triangles = all_triangles if limit is None else all_triangles[:limit]
 
     best_phase = None
     best_signed = None
     evaluated = 0
-    phase_histogram = {}
+    phase_histogram: dict[str, int] = {}
+    signed_histogram: dict[str, int] = {}
     for triangle in triangles:
         for omitted in range(3):
             phase = spectral_record(phase_matrix(graph45, triangle, omitted))
@@ -100,7 +104,13 @@ def build_certificate(limit: int | None = None) -> dict:
                 round(phase["lambda_max"], 10),
                 round(phase["trace3"], 8),
             )
+            signed_key = (
+                round(signed["lambda_min"], 10),
+                round(signed["lambda_max"], 10),
+                round(signed["trace3"], 8),
+            )
             phase_histogram[str(phase_key)] = phase_histogram.get(str(phase_key), 0) + 1
+            signed_histogram[str(signed_key)] = signed_histogram.get(str(signed_key), 0) + 1
             phase_candidate = {"triangle": list(triangle), "omitted_edge": omitted, **phase}
             signed_candidate = {"triangle": list(triangle), "omitted_edge": omitted, **signed}
             if best_phase is None or phase["hoffman_ratio"] > best_phase["hoffman_ratio"]:
@@ -111,6 +121,13 @@ def build_certificate(limit: int | None = None) -> dict:
     assert best_phase is not None and best_signed is not None
     assert best_phase["extremal_residual_max"] < 1e-8
     assert best_signed["extremal_residual_max"] < 1e-8
+    if limit is None:
+        assert evaluated == 15840
+        assert len(phase_histogram) == 1
+        assert len(signed_histogram) == 1
+        assert best_phase["hoffman_ratio"] < 8
+        assert best_signed["hoffman_ratio"] < 8
+
     return {
         "schema": "w33.bt3407.magnetic_chromatic_search.v1",
         "status": "PASS",
@@ -119,11 +136,13 @@ def build_certificate(limit: int | None = None) -> dict:
             "degree": 32,
             "triangles_total": 5280,
             "supports": len(supports),
+            "construction": "complement of the 12-regular GQ(4,2) support graph",
         },
         "search": {
             "triangles_evaluated": len(triangles),
             "patterns_evaluated": evaluated,
             "phase_spectral_fingerprints": len(phase_histogram),
+            "signed_spectral_fingerprints": len(signed_histogram),
             "complete": limit is None,
         },
         "best_ternary_phase": best_phase,
@@ -136,11 +155,10 @@ def build_certificate(limit: int | None = None) -> dict:
         },
         "boundary": (
             "The generalized Hermitian Hoffman ratio is a valid spectral diagnostic for "
-            "edge-supported weights. Floating extremal eigenpairs carry explicit residuals. "
-            "No terminal chi(H) decision is claimed unless an integer threshold is crossed "
-            "and independently exactified. Searching all graph triangles is broader than the "
-            "240 selected filled faces; the winning pattern must be cross-walked to that face "
-            "orbit before it is called a cohomological minimum defect."
+            "edge-supported weights. Floating extremal eigenpairs carry explicit residuals "
+            "and the canonical polynomial is independently exactified. Searching all graph "
+            "triangles is broader than the 240 selected filled faces; an objectwise face-orbit "
+            "crosswalk remains separate."
         ),
     }
 
