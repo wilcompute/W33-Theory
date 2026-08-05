@@ -1,0 +1,51 @@
+\section{Passes 3635--3648: exact \texorpdfstring{$U_4(2)$}{U4(2)} completion and rank-24 modular closure}
+\label{sec:pass3635-3648-monster-u42-completion}
+
+The W33 projective action now has a compact exact certificate.  Four order-three symplectic transvections generate a group of order
+\[
+25{,}920=|PSp(4,3)|=|U_4(2)|,
+\]
+with element-order census
+\[
+1^1,\ 2^{315},\ 3^{800},\ 4^{3780},\ 5^{5184},\ 6^{5760},\ 9^{5760},\ 12^{4320}.
+\]
+Every three-transvection face has order $648$ and fixes one W33 point, while an explicit pair has orders $(2,5,12)$ and generates the whole group.
+
+The rank-$24$ projector carrier is bilinearly complete.  Its symmetric tensors have rank
+\[
+300=\dim\operatorname{Sym}^2(\mathbf Q^{24}),
+\]
+and its alternating tensors have rank
+\[
+276=\dim\Lambda^2(\mathbf Q^{24}).
+\]
+Thus the carrier spans all $24^2=576$ matrix directions.  This is a full linear operator envelope, not yet a Griess or VOA product certificate.
+
+The integral projector Gram form has Smith profile
+\[
+2^1,\qquad10^9,\qquad30^6,\qquad60^8,
+\]
+and discriminant valuation
+\[
+2^{32}3^{14}5^{23}.
+\]
+The odd $5$-adic exponent survives every rational scalar rescaling in rank $24$, so no scalar-rescaled copy can possess a unimodular overlattice.  Any Leech route must use non-scalar coupling, quotienting, or a multi-lattice extension.
+
+The exact graded completion is
+\[
+\bigl(E_4^3-720\Delta\bigr)\prod_{n\ge1}(1-q^n)^{-24},
+\]
+whose initial shifted coefficients are
+\[
+1,\ 24,\ 196884,\ 21493760,\ 864299970,\ 20245856256.
+\]
+This identifies the minimum machinery missing from raw W33 adjacency moments: a rootless rank-$24$ modular numerator and a $24$-oscillator denominator.
+
+Two additional chamber structures emerge.  The full group contains $432$ copies of $A_5$ in two orbits of $216$.  Their $D_{10}$-sharing graph is
+\[
+36K_{6,6},
+\]
+with $1296$ edges; every edge generates $A_6$, and each chamber has normalizer of order $720$, hence $S_6$.  Separately, the four transvections form a tetrahedral amalgam whose four faces are order-$648$ point stabilizers.
+
+\paragraph{Evidence boundary.}
+The exact Python certificate proves the abstract $U_4(2)$ carrier, the complete $A_5/A_6/S_6$ census, both tensor-span ranks, the scalar glue obstruction, and the modular coefficients.  A companion GAP job enumerates compatible $5B$-containing class fusions and the possible multiplicities of the degree-$81$ constituent.  No serialized Monster-word embedding, unique class fusion, observed degree-$81$ multiplicity, Leech embedding, Griess product, or physical result is promoted before its dedicated certificate is observed.
