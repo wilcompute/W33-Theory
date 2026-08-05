@@ -1,0 +1,14 @@
+{
+  "schema": "w33.monster_u42_class_fusion_target.status.v1",
+  "status": "PENDING_EXECUTED_GAP_ARTIFACT",
+  "promoted": false,
+  "target": "Enumerate all constrained U4(2)->M class fusions and record the multiplicities of every degree-81 U4(2) irreducible in the restriction of the Monster character of degree 196883.",
+  "constraints_encoded": [
+    "both U4(2) involution classes map to Monster 2B",
+    "all U4(2) order-3 classes map to Monster 3B",
+    "the U4(2) order-5 class maps to Monster 5B",
+    "Atlas source class 4B maps to Monster 4D when present"
+  ],
+  "executable": "analysis/w33_monster_u42_class_fusion_target.g",
+  "claim_boundary": "No degree-81 multiplicity is claimed until GAP/CTblLib execution is frozen."
+}
