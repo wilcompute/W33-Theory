@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fischer quadratic lattice and multiport atlas</title>
+<style>
+:root{color-scheme:dark;--bg:#090d14;--panel:#121927;--ink:#edf3ff;--muted:#a8b4c9;--line:#29354a;--accent:#82d9ff;--good:#99f2c8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.58 system-ui,sans-serif}main{max-width:1100px;margin:auto;padding:48px 24px 80px}h1{font-size:clamp(2rem,5vw,4.4rem);line-height:1.02;margin:.2em 0}h2{margin-top:2.5em}p,li{color:var(--muted)}code{color:var(--accent)}.eyebrow{color:var(--good);letter-spacing:.12em;text-transform:uppercase;font-weight:700}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin:28px 0}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px}.card b{display:block;font-size:1.8rem;color:var(--ink)}.eq{overflow:auto;background:#070a10;border:1px solid var(--line);border-radius:12px;padding:16px;color:#d9e8ff}.boundary{border-left:4px solid #ffbd73;padding-left:16px}.status{border-left:4px solid var(--good);padding-left:16px}a{color:var(--accent)}</style>
+</head>
+<body><main>
+<p class="eyebrow">Exact finite geometry · Passes 3751–3758</p>
+<h1>The six-bit parent behind the Fischer lattice and 36-port transform</h1>
+<p class="status">Frozen semantic certificate: <code>6271dafcc58467d6e758cdbcc9a1b220fe21693b3ace3c727fb5b5499be60ce6</code>.</p>
+<div class="grid">
+<div class="card"><b>[36,6,16]</b><span>binary minus-type code</span></div>
+<div class="card"><b>(64,36,20)</b><span>quadratic difference set</span></div>
+<div class="card"><b>1¹²2²⁴</b><span>lattice Gram Smith form</span></div>
+<div class="card"><b>55</b><span>modular Terwilliger dimension</span></div>
+</div>
+<h2>Rooted Construction-A lattice</h2>
+<p>The doubly-even, self-orthogonal code with weights <code>0¹ 16²⁷ 20³⁶</code> produces an even 36-dimensional lattice.</p>
+<div class="eq">L(C)=2<sup>−1/2</sup>{z∈Z<sup>36</sup>:z mod 2∈C}, &nbsp; det G=2<sup>24</sup>, &nbsp; L*/L≅(Z/2)<sup>24</sup>.</div>
+<p>The minimum norm is two and the complete root system is <code>A1^36</code>, containing 72 roots. This is an exact obstruction to identifying the lattice with a rootless unimodular lattice.</p>
+<h2>Quadratic Walsh parent</h2>
+<p>The 36 nonsingular vectors of the six-dimensional quadratic space form a <code>(64,36,20)</code> difference set. Every nonzero translation intersects it in exactly 20 points.</p>
+<div class="eq">W<sub>64</sub>W<sub>64</sub><sup>T</sup>=64I, &nbsp; K=W<sub>N</sub>−2I, &nbsp; H=K/6.</div>
+<p>The W33 multiport is therefore a shifted principal minor of the full six-bit bilinear Walsh transform.</p>
+<h2>Exact reflection network</h2>
+<p>The 21-dimensional negative eigenspace of <code>H</code> has an explicit pairwise-orthogonal primitive integer basis. The corresponding rational Householder reflections commute and multiply exactly to <code>H</code>.</p>
+<div class="eq">H=R<sub>1</sub>R<sub>2</sub>⋯R<sub>21</sub>.</div>
+<h2>Integral triple torsion</h2>
+<div class="eq">SNF(D)=1<sup>30</sup>2<sup>5</sup>6, &nbsp; coker(D)≅(Z/2)<sup>5</sup>×Z/6, &nbsp; |coker(D)|=192.</div>
+<p>The two-primary component recovers the six-dimensional orthogonal module. The three-primary component is one invariant conservation quotient. The value 192 is not treated as a tomotope isomorphism.</p>
+<h2>Cover rigidity and holonomy frame</h2>
+<p>The 120-vertex cover has degree 27, diameter three, full finite symmetry <code>U4(2):2</code>, and stabilizer subdegrees <code>1,2,27,36,54</code>. Two different distance-two intersection profiles prove that it is not distance-regular.</p>
+<div class="eq">Q<sub>20</sub><sup>2</sup>=108Q<sub>20</sub>, &nbsp; rank(E<sub>20</sub>)=20.</div>
+<p>The projected 120-vector frame has normalized angles <code>−1/2, −1/6, 0, 1/3</code>; each three-point fiber becomes an equilateral triangle summing to zero.</p>
+<h2>Monster boundary</h2>
+<p class="boundary">The exact abstract standard-pair and cycle fingerprints are search filters, not serialized Monster words. A self-reporting GAP workflow publishes an actual CTblLib result or a structured failure artifact. No Monster multiplicity is claimed before that file is observed.</p>
+</main></body></html>
