@@ -3,8 +3,20 @@
   "range": [3829, 3836],
   "slug": "adaptive_hypervisor_virtual_topology_autonomous_attractor_thermodynamics_substrate_inversion_bonkers",
   "title": "Noise-adaptive geometry hypervisor, virtual topology, autonomous attractor, thermodynamic and substrate tournaments, and three architecture breakthroughs",
-  "status": "reserved",
+  "status": "published",
   "owner": "openai-gpt-5.6-thinking",
   "reserved_at": "2026-08-05T19:12:00-04:00",
-  "boundary": "Reservation only; publication requires exact executable evidence, frozen certificate, tests, workflow, manuscript integration, restored-site-safe public reachability, and explicit hardware and thermodynamic claim boundaries."
+  "published_at": "2026-08-05T19:31:00-04:00",
+  "semantic_sha256": "d924764ba5d64326fbdc8d7a6bbd8bcdff2fd08fb2a4c6560f29c53a71c29fe4",
+  "files": [
+    "analysis/w33_pass3829_3836_adaptive_virtual_autonomous_thermo_substrate.py",
+    "data/PART_3829_3836_ADAPTIVE_VIRTUAL_AUTONOMOUS_THERMO_SUBSTRATE_results.json",
+    "tests/test_w33_pass3829_3836_adaptive_virtual_autonomous_thermo_substrate.py",
+    "analysis/BT3829_BT3836_adaptive_virtual_autonomous_thermo_substrate.md",
+    "analysis/BT3829_BT3836_adaptive_virtual_autonomous_thermo_substrate_insert.tex",
+    "analysis/BT3829_BT3836_adaptive_virtual_autonomous_thermo_substrate_index_insert.html",
+    "docs/adaptive-virtual-autonomous-thermo-substrate.html",
+    ".github/workflows/w33_pass3829_3836_adaptive_virtual_autonomous_thermo_substrate.yml"
+  ],
+  "boundary": "The packet certifies the finite adaptive benchmark, minimum twelve-round virtual W33 factorization, exact association-scheme contraction law, retry-energy crossover, substrate primitive counts, single-edge checksum/localization, independent heralded-route formulas, and the ideal transvection-bath spectrum. It does not certify learned process-tensor operation, complete cluster/fusion overhead, a physical autonomous Lindbladian, wall-plug energy, vendor superiority, correlated-link thresholds, or laboratory performance."
 }
