@@ -1,0 +1,156 @@
+{
+  "boundaries": {
+    "chromatic_number": "still in {10,11}",
+    "covering_radius": "still open in [389,436]",
+    "hardware": "RTL source and exhaustive simulation target only until remote synthesis evidence is observed",
+    "physics": "finite root, conic, and modular correspondences are not physical identifications"
+  },
+  "checks": {
+    "H1_dimension_436": true,
+    "S4_bridge_24": true,
+    "all_symbols_mod3_order3": true,
+    "conic_crossed_algebra_full_M4": true,
+    "dual_conservation_dimension_436": true,
+    "local_A2_SRG": true,
+    "modular_ranks_240_45_284": true,
+    "product_code_12_6_4": true,
+    "radius_reduced_to_generalized_covering": true,
+    "torus_algebra_dim4": true
+  },
+  "schema": "w33.bt3444_3457.radius_modular_fivechannel.v1",
+  "sections": {
+    "A2_conic_product_code": {
+      "boundary": "The length twelve matches several repository carriers, including the tomotope edge count, but no tomotope incidence identification is promoted.",
+      "construction": "A2 [3,2,2]_3 tensor null-conic [4,3,2]_3",
+      "dual_parameters": "[12,6,3]_3",
+      "dual_weight_enumerator": {
+        "0": 1,
+        "3": 8,
+        "4": 6,
+        "5": 24,
+        "6": 84,
+        "7": 96,
+        "8": 276,
+        "9": 128,
+        "10": 60,
+        "11": 24,
+        "12": 22
+      },
+      "generator_matrix": [[1,0,2,2,0,1,0,0,0,0,0,0],[0,1,2,0,2,1,0,0,0,0,0,0],[0,0,0,0,0,0,1,0,2,2,0,1],[0,0,0,0,0,0,0,1,2,0,2,1],[1,0,2,1,0,2,1,0,2,1,0,2],[0,1,2,0,1,2,0,1,2,0,1,2]],
+      "parameters": "[12,6,4]_3",
+      "visible_coordinate_action": "S3 x S4 on the 3 x 4 slot grid",
+      "weight_enumerator": {"0":1,"4":36,"6":84,"7":144,"8":162,"9":152,"10":144,"12":6}
+    },
+    "S4_crosswalk": {
+      "D5": {
+        "W_D5_order": 1920,
+        "chosen_coordinate_stabilizer_order": 384,
+        "quotient_action": "S4 on the remaining four coordinates",
+        "sign_kernel_order": 16
+      },
+      "boundary": "The choices are essential; no canonical ambient-geometry identification is claimed.",
+      "bridge": "After choosing one Fano point and one D5 coordinate, the conic points, the four Fano lines avoiding the point, and the four remaining D5 coordinates carry the same full S4 permutation action.",
+      "conic": {
+        "faithful_action_order": 24,
+        "points": [[0,1,1],[0,1,2],[1,0,1],[1,0,2]]
+      },
+      "fano": {
+        "chosen_point": [1,0,0],
+        "faithful_action_order": 24,
+        "nonincident_lines": [[[0,0,1],[0,1,0],[0,1,1]],[[0,0,1],[1,1,0],[1,1,1]],[[0,1,0],[1,0,1],[1,1,1]],[[0,1,1],[1,0,1],[1,1,0]]],
+        "point_stabilizer_order": 24
+      }
+    },
+    "five_channel_and_amplitudes": {
+      "amplitude_algebra_dimensions": {
+        "plus_conic_dual_sign": 8,
+        "plus_swap": 6,
+        "plus_swap_and_conic_dual_sign": 16,
+        "torus_commutative": 4
+      },
+      "binary_quotient_primitive": {
+        "eigenvalues": [-1,2],
+        "interpretation": "equitable 1+2 quotient of K3",
+        "matrix": [[0,2],[1,1]]
+      },
+      "boundary": "The torus amplitudes alone form a four-dimensional commutative algebra. The conic dual sign and one S4 coordinate swap generate full M4, providing a concrete noncommuting amplitude extension but not yet a chromatic certificate.",
+      "kronecker_sum": "B(k)=c1(I2 tensor M)+c2(M tensor I2)+c3 I4",
+      "mod3_collapse": {
+        "all_27_momenta_share_one_symbol": true,
+        "jordan_type": "J3(1) + J1(1) + J1(1)",
+        "matrix": [[2,1,1,0,0],[2,1,0,1,0],[2,0,1,1,0],[0,2,2,0,0],[0,0,0,0,1]],
+        "nilpotent_ranks_N_N2_N3": [2,1,0],
+        "order": 3
+      },
+      "spectral_fingerprint_count": 6,
+      "spectral_fingerprints": {
+        "(-5, -5, 1, 1, 7)": 1,
+        "(-5, -2, -2, 1, 1)": 1,
+        "(-5, -2, 1, 4, 4)": 2,
+        "(-2, -2, 1, 1, 4)": 1,
+        "(-2, 1, 1, 4, 7)": 2,
+        "(-2, -2, 4, 4, 10)": 1
+      },
+      "symbol_count": 8,
+      "symbol_table": {
+        "000": [[-1,-2,-2,0,0],[-1,-2,0,-2,0],[-1,0,-2,-2,0],[0,-1,-1,-3,0],[0,0,0,0,1]],
+        "001": [[2,-2,-2,0,0],[-1,1,0,-2,0],[-1,0,1,-2,0],[0,-1,-1,0,0],[0,0,0,0,4]],
+        "010": [[-1,-2,4,0,0],[-1,-2,0,4,0],[2,0,5,-2,0],[0,2,-1,3,0],[0,0,0,0,-2]],
+        "011": [[2,-2,4,0,0],[-1,1,0,4,0],[2,0,8,-2,0],[0,2,-1,6,0],[0,0,0,0,1]],
+        "100": [[-1,4,-2,0,0],[2,3,0,-2,0],[-1,0,-2,4,0],[0,-1,2,3,0],[0,0,0,0,-2]],
+        "101": [[2,4,-2,0,0],[2,6,0,-2,0],[-1,0,1,4,0],[0,-1,2,6,0],[0,0,0,0,1]],
+        "110": [[-1,4,4,0,0],[2,3,0,4,0],[2,0,5,4,0],[0,2,2,9,0],[0,0,0,0,-5]],
+        "111": [[2,4,4,0,0],[2,6,0,4,0],[2,0,8,4,0],[0,2,2,12,0],[0,0,0,0,-2]]
+      }
+    },
+    "generalized_covering_radius": {
+      "bounds": {
+        "basis_upper_bound": 436,
+        "exact_interval": [389,436],
+        "ordinary_F243_Hamming_sphere_lower_bound": 347,
+        "relation_aware_sphere_lower_bound": 389
+      },
+      "coefficient_identification": "Choose any F3-linear identification F3^5 ~= F243. The labelled support metric is the fifth generalized covering radius R5(K), equivalently the ordinary covering radius of K extended to F243.",
+      "local_A2_metric": {
+        "description": "three-direction Latin-square Cayley graph on F243^2",
+        "length_enumerator": [1,726,58322],
+        "strongly_regular_parameters": {
+          "degree": 726,
+          "lambda": 243,
+          "mu": 6,
+          "spectrum": {"-3":58322,"240":726,"726":1},
+          "vertices": 59049
+        }
+      },
+      "status": "The exact radius is not closed. The executed reduction identifies the correct generalized-covering and Latin-square association-scheme problem.",
+      "support_code": {
+        "dimension_over_F3": 284,
+        "length": 720,
+        "presentation": "K = im([face_relation_720x240, vertex_incidence_720x45])",
+        "redundancy": 436
+      },
+      "threshold_digests": {
+        "quotient_size": {"bit_length":3455,"decimal_digits":1040,"sha256_decimal":"e91cfe5ac6176143a97acefbe112f21af470fdaf478445b8af05809dcc61bb53"},
+        "radius_388": {"bit_length":3452,"decimal_digits":1039,"sha256_decimal":"355dbff137dd2d7ce8bc0d25a3b319a141498e81fe68b774a6f887e1982fa5a6"},
+        "radius_389": {"bit_length":3457,"decimal_digits":1041,"sha256_decimal":"f640c073e0b8425d61bcaec7be8cd59f92ba5b452c06699a40946b011600ee95"}
+      }
+    },
+    "modular_exact_sequence": {
+      "coboundary_dimension_in_flat_quotient": 44,
+      "cohomology_dimension": 436,
+      "combined_rank": 284,
+      "dual_conservation_code": "H1* = {edge functions with zero sum on every filled face and zero sum at every vertex}",
+      "dual_constraint_rank": 284,
+      "edges": 720,
+      "exact_sequence": "0 -> 1 -> F3[240 faces] + F3[45 vertices] -> F3[720 supports] -> H1 -> 0",
+      "face_relation_rank": 240,
+      "filled_faces": 240,
+      "flat_dimension": 480,
+      "group": "PSU(4,2)=PSp(4,3)",
+      "intersection_dimension": 1,
+      "triangle_orbit_sizes": [240,2160,2880],
+      "vertex_incidence_rank": 45
+    }
+  },
+  "status": "PASS"
+}
