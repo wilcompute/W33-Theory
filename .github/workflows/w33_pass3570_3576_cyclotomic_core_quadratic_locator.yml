@@ -1,0 +1,81 @@
+name: Passes 3570-3576 Cyclotomic Core Quadratic Locator
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/*3570*'
+      - 'data/PART_BT3570*'
+      - 'data/w33_pass_namespace_registry_v2.d/3570-3576.json'
+      - 'rtl/*3570*'
+      - 'rtl/w33_clebsch_double_fault_locator5*.v'
+      - 'tests/*3570*'
+      - '.github/workflows/w33_pass3570_3576_cyclotomic_core_quadratic_locator.yml'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/*3570*'
+      - 'data/PART_BT3570*'
+      - 'rtl/*3570*'
+      - 'tests/*3570*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pass3570-3576-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  exact-rtl-papers:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys
+          python -m pip install --disable-pip-version-check pytest
+      - name: Exact certificate and regression
+        run: |
+          mkdir -p evidence/pass3570_3576
+          python analysis/bt3570_3576_cyclotomic_core_quadratic_locator.py | tee evidence/pass3570_3576/exact.log
+          grep -F 'PASS_7_FRONTS 38ea92c1767dda0b786232710f37ead7ec35628511c36dfb7b3d2c79f35a9ad0' evidence/pass3570_3576/exact.log
+          pytest -q tests/test_bt3570_3576_cyclotomic_core_quadratic_locator.py | tee evidence/pass3570_3576/pytest.log
+          git diff --check
+      - name: Exhaust quadratic RTL equivalence and compound distance
+        run: |
+          iverilog -g2012 -s tb_w33_pass3570_3576 -o evidence/pass3570_3576/tb \
+            rtl/w33_clebsch_double_fault_locator5.v \
+            rtl/w33_clebsch_double_fault_locator5_quadratic.v \
+            rtl/tb_w33_pass3570_3576.v
+          vvp evidence/pass3570_3576/tb | tee evidence/pass3570_3576/rtl.log
+          grep -F 'PASS quadratic_locator equivalent=16 patterns=137 minimum_distance=3 and_gates=5' evidence/pass3570_3576/rtl.log
+      - name: Compare table and quadratic synthesis
+        run: |
+          yosys -p 'read_verilog rtl/w33_clebsch_double_fault_locator5.v; hierarchy -top w33_clebsch_double_fault_locator5; synth_ice40 -top w33_clebsch_double_fault_locator5; stat' 2>&1 | tee evidence/pass3570_3576/table.yosys.log
+          yosys -p 'read_verilog rtl/w33_clebsch_double_fault_locator5_quadratic.v; hierarchy -top w33_clebsch_double_fault_locator5_quadratic; synth_ice40 -top w33_clebsch_double_fault_locator5_quadratic; stat' 2>&1 | tee evidence/pass3570_3576/quadratic.yosys.log
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Compile canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee evidence/pass3570_3576/${source%.tex}.log
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3570_3576/pdf_sha256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3570-3576-cyclotomic-core-quadratic-locator-evidence
+          path: |
+            evidence/pass3570_3576/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
