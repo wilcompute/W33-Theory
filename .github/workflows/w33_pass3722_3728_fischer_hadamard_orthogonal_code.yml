@@ -1,0 +1,88 @@
+name: W33 Passes 3722-3728 Fischer Hadamard orthogonal code
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass3722_3728_fischer_hadamard_orthogonal_code.py'
+      - 'analysis/BT3722_BT3728_fischer_hadamard_orthogonal_code*'
+      - 'data/PART_3722_3728_FISCHER_HADAMARD_ORTHOGONAL_CODE_results.json'
+      - 'data/w33_pass_namespace_registry_v2.d/3722-3728.json'
+      - 'tests/test_w33_pass3722_3728_fischer_hadamard_orthogonal_code.py'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - 'docs/fischer-hadamard-orthogonal-code.html'
+      - 'docs/index.html'
+      - '.github/workflows/w33_pass3722_3728_fischer_hadamard_orthogonal_code.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: w33-pass3722-3728-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  exact-source:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check numpy sympy==1.14.0 pytest
+      - run: python analysis/w33_pass3722_3728_fischer_hadamard_orthogonal_code.py --check data/PART_3722_3728_FISCHER_HADAMARD_ORTHOGONAL_CODE_results.json
+      - run: pytest -q tests/test_w33_pass3722_3728_fischer_hadamard_orthogonal_code.py
+      - run: git diff --check
+  publish-index:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: master, fetch-depth: 0}
+      - name: Insert public theorem card exactly once
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          index=Path('docs/index.html')
+          fragment=Path('analysis/BT3722_BT3728_fischer_hadamard_orthogonal_code_index_insert.html').read_text(encoding='utf-8').strip()
+          text=index.read_text(encoding='utf-8')
+          token='id="bt3722-3728-fischer-hadamard-orthogonal-code"'
+          if token not in text:
+              marker='</main>' if '</main>' in text else '</body>'
+              if marker not in text: raise SystemExit('no safe public-index insertion marker')
+              index.write_text(text.replace(marker,fragment+'\n'+marker,1),encoding='utf-8')
+          assert index.read_text(encoding='utf-8').count(token)==1
+          PY
+          if git diff --quiet -- docs/index.html; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/index.html
+          git commit -m 'Publish Passes 3722-3728 Fischer Hadamard atlas on public index'
+          git pull --rebase origin master
+          git push origin HEAD:master
+  canonical-papers:
+    needs: [exact-source, publish-index]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: master}
+      - uses: WtfJoke/setup-tectonic@v3
+        with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
+      - name: Verify reachability and compile all canonical manuscripts
+        run: |
+          grep -F 'BT3722_BT3728_fischer_hadamard_orthogonal_code_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          grep -F 'id="bt3722-3728-fischer-hadamard-orthogonal-code"' docs/index.html
+          mkdir -p evidence/pass3722_3728
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3722_3728/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3722_3728/pdf_sha256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-pass3722-3728-exact-papers
+          path: |
+            evidence/pass3722_3728/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
