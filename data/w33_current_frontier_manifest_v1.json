@@ -28,7 +28,8 @@
     "analysis/BT3549_BT3555_borel_pentad_quantum_walk_insert",
     "analysis/BT3556_BT3569_radius_amplitude_code_fault_c5_insert",
     "analysis/BT3570_BT3576_cyclotomic_core_quadratic_locator_insert",
-    "analysis/BT3577_BT3583_petersen_matrix_octad_marked_walk_insert"
+    "analysis/BT3577_BT3583_petersen_matrix_octad_marked_walk_insert",
+    "analysis/BT3600_BT3613_chained_breakthrough_insert"
   ],
   "front_doors": {
     "w33_paper.tex": "w33_paper_body.tex",
@@ -52,7 +53,8 @@
     {"kind":"id","token":"bt3535-3541-clique-borel-fourier-factorization-ports","source":"analysis/BT3535_BT3541_clique_borel_fourier_factorization_ports_index_insert.html"},
     {"kind":"id","token":"bt3542-3548-borel-commutant-outer-s6-analytic","source":"analysis/BT3542_BT3548_borel_commutant_outer_s6_analytic_index_insert.html"},
     {"kind":"id","token":"bt3549-3555-borel-pentad-quantum-walk","source":"analysis/BT3549_BT3555_borel_pentad_quantum_walk_index_insert.html"},
-    {"kind":"id","token":"bt3577-3583-petersen-matrix-octad-marked-walk","source":"analysis/BT3577_BT3583_petersen_matrix_octad_marked_walk_index_insert.html"}
+    {"kind":"id","token":"bt3577-3583-petersen-matrix-octad-marked-walk","source":"analysis/BT3577_BT3583_petersen_matrix_octad_marked_walk_index_insert.html"},
+    {"kind":"id","token":"bt3600-3613-chained-breakthrough","source":"analysis/BT3600_BT3613_chained_breakthrough_index_insert.html"}
   ],
   "standalone_public_pages": [
     {"token":"passes-3500-3505-triangle-free-srg-m57","source":"docs/triangle-free-srg-m57.html"},
