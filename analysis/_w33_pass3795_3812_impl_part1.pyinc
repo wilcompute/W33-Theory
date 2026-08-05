@@ -1,0 +1,180 @@
+#!/usr/bin/env python3
+"""Passes 3795-3812: exact W33/ovoid/coherent/Leech/axial closure.
+
+The verifier reuses the published Passes 3769-3786 geometry source as an
+executable substrate, exposes its internally constructed finite objects, and
+then performs five queued fronts plus three independent constructions.
+
+Concrete Monster/mmgroup words, a Monster class fusion, Griess/VOA structure,
+and physical or hardware claims remain fail-closed.
+"""
+from __future__ import annotations
+
+import argparse
+from collections import Counter, deque
+from fractions import Fraction
+from hashlib import sha256
+from itertools import combinations, product
+import importlib.util
+import json
+from math import isqrt, lcm
+from pathlib import Path
+
+import networkx as nx
+import numpy as np
+import sympy as sp
+from sympy.matrices.normalforms import hermite_normal_form
+
+ROOT = Path(__file__).resolve().parents[1] if Path(__file__).resolve().parent.name == "analysis" else Path(__file__).resolve().parent
+PREVIOUS = ROOT / "analysis" / "w33_pass3751_3768_gq_veldkamp_axial_lattice_monster.py"
+DEFAULT_OUTPUT = ROOT / "data" / "PART_3795_3812_PLANE_OVOID_SCHEME_LEECH_AXIAL_results.json"
+MOD = 1_000_003
+
+
+def compose(a, b):
+    return tuple(a[b[i]] for i in range(len(a)))
+
+
+def inverse(a):
+    out = [0] * len(a)
+    for i, j in enumerate(a):
+        out[j] = i
+    return tuple(out)
+
+
+def perm_order(g):
+    seen = set()
+    answer = 1
+    for i in range(len(g)):
+        if i in seen:
+            continue
+        j, size = i, 0
+        while j not in seen:
+            seen.add(j)
+            size += 1
+            j = g[j]
+        answer = lcm(answer, size)
+    return answer
+
+
+def closure(generators, cap=300_000):
+    ident = tuple(range(len(generators[0])))
+    moves = list(dict.fromkeys(list(generators) + [inverse(g) for g in generators]))
+    seen = {ident}
+    queue = deque([ident])
+    while queue:
+        h = queue.popleft()
+        for g in moves:
+            x = compose(g, h)
+            if x not in seen:
+                seen.add(x)
+                queue.append(x)
+                if len(seen) > cap:
+                    raise RuntimeError("permutation closure cap exceeded")
+    return tuple(sorted(seen))
+
+
+def rank_mod(matrix, p=MOD):
+    a = np.asarray(matrix, dtype=np.int64).copy() % p
+    rank = 0
+    for col in range(a.shape[1]):
+        candidates = np.flatnonzero(a[rank:, col])
+        if len(candidates) == 0:
+            continue
+        pivot = rank + int(candidates[0])
+        if pivot != rank:
+            a[[rank, pivot]] = a[[pivot, rank]]
+        a[rank] = a[rank] * pow(int(a[rank, col]), -1, p) % p
+        for row in np.flatnonzero(a[:, col]):
+            if row != rank:
+                a[row] = (a[row] - a[row, col] * a[rank]) % p
+        rank += 1
+        if rank == a.shape[0]:
+            break
+    return rank
+
+
+def inverse_mod(matrix, p=MOD):
+    a = np.asarray(matrix, dtype=np.int64).copy() % p
+    n = a.shape[0]
+    aug = np.concatenate([a, np.eye(n, dtype=np.int64)], axis=1)
+    rank = 0
+    for col in range(n):
+        candidates = np.flatnonzero(aug[rank:, col])
+        if len(candidates) == 0:
+            raise ValueError("singular matrix")
+        pivot = rank + int(candidates[0])
+        aug[[rank, pivot]] = aug[[pivot, rank]]
+        aug[rank] = aug[rank] * pow(int(aug[rank, col]), -1, p) % p
+        for row in np.flatnonzero(aug[:, col]):
+            if row != rank:
+                aug[row] = (aug[row] - aug[row, col] * aug[rank]) % p
+        rank += 1
+    return aug[:, n:]
+
+
+class IncrementalBasis:
+    def __init__(self, p):
+        self.p = p
+        self.rows = []
+        self.pivots = []
+
+    def add(self, vector):
+        v = np.asarray(vector, dtype=np.int64).copy() % self.p
+        for row, pivot in zip(self.rows, self.pivots):
+            if v[pivot]:
+                v = (v - v[pivot] * row) % self.p
+        nz = np.flatnonzero(v)
+        if len(nz) == 0:
+            return False
+        pivot = int(nz[0])
+        v = v * pow(int(v[pivot]), -1, self.p) % self.p
+        for i, row in enumerate(self.rows):
+            if row[pivot]:
+                self.rows[i] = (row - row[pivot] * v) % self.p
+        pos = int(np.searchsorted(self.pivots, pivot))
+        self.pivots.insert(pos, pivot)
+        self.rows.insert(pos, v)
+        return True
+
+
+def expose_previous_build():
+    source = PREVIOUS.read_text(encoding="utf-8")
+    old = "    return result\n\n\ndef main():"
+    new = "    return result, locals()\n\n\ndef main():"
+    assert source.count(old) == 1
+    namespace = {"__name__": "w33_previous_exposed", "__file__": str(PREVIOUS)}
+    exec(compile(source.replace(old, new), str(PREVIOUS), "exec"), namespace)
+    return namespace["build"]()
+
+
+def canon_f3(v):
+    w = tuple(int(x) % 3 for x in v)
+    for x in w:
+        if x:
+            inv = 1 if x == 1 else 2
+            return tuple(inv * y % 3 for y in w)
+    raise ValueError("zero vector")
+
+
+def exact_short_vector_count(gram, bound):
+    """Exact Fincke-Pohst recursion using rational LDL data."""
+    L, D = gram.LDLdecomposition(hermitian=False)
+    n = gram.rows
+    lower = [[Fraction(L[i, j]) for j in range(n)] for i in range(n)]
+    diag = [Fraction(D[i, i]) for i in range(n)]
+    x = [0] * n
+    count = 0
+    nodes = 0
+
+    def ceil_div(a, b):
+        return -((-a) // b)
+
+    def recurse(i, remaining):
+        nonlocal count, nodes
+        nodes += 1
+        if i < 0:
+            count += 1
+            return
+        center = sum(lower[j][i] * x[j] for j in range(i + 1, n))
+        allowance = remaining / diag[i]
