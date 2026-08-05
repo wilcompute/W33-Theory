@@ -1,0 +1,61 @@
+\section{Octad pattern census, Borel core/bridge reduction, and marked tomography}
+\label{sec:bt3628-3634}
+
+The pair-intersection multiplicities of eight abstract one-factorization rows are exactly edge-disjoint clique packings of $K_8$.  Canonical augmentation gives
+\[
+\boxed{69}
+\]
+$S_8$-orbits of abstract multiplicity patterns, with orbit counts
+\[
+1,6,10,10,13,14,8,6,1
+\]
+by the number of nontrivial blocks.  This is a complete abstract pattern census, not yet the complete realization census inside the 6,240 labelled one-factorizations of $K_8$.
+
+The two surviving $19{:}9$ Moore-action profiles possess a literal common binary core.  Its variable classes have sizes
+\[
+18\cdot85=1530,\qquad \binom{18}{2}\cdot171=26163,
+\qquad 9\cdot18\cdot19=3\cdot18\cdot57=3078,
+\]
+so the shared core has
+\[
+\boxed{30771}
+\]
+variables.  The $P_{19}$ profile is exactly this core after presolve, while $P_{57}$ adds eighteen nonneighbor bridge variables:
+\[
+\boxed{30789=30771+18}.
+\]
+No SAT or UNSAT verdict is inferred.
+
+The conductor-$19$ component of the Perkel orbital algebra is realized by explicit matrix units in
+\[
+M_3\!\left(\mathbb Q(\sqrt{-19})\right).
+\]
+Writing $s^2=-19$, the units obey
+\[
+E_{ij}E_{kl}=\delta_{jk}E_{il},
+\qquad (sE_{ij})(sE_{kl})=-19\delta_{jk}E_{il}.
+\]
+The transpose involution is represented by the positive Hermitian form
+\[
+H=\begin{pmatrix}
+1&2s/19&-2s/19\\
+-2s/19&1&2s/19\\
+2s/19&-2s/19&1
+\end{pmatrix},
+\]
+whose two-by-two principal minors equal $15/19$ and whose determinant is $7/19$.
+
+A real proof-carrying archive of sixteen genuine star-complement compatibility graphs is frozen with clique histogram
+\[
+8^1,9^1,10^1,11^3,12^1,13^2,16^2,31^5
+\]
+and ordered Merkle root
+\[
+\texttt{c176539c7b944274fb64965275ce3f900852fe4b26f67923b2ca6a2f06e256a4}.
+\]
+Every upper-bound DAG is independently checked from its frozen adjacency bitsets.  The complete 3,720-instance archive remains resource-gated.
+
+Finally, the minimum marked-resolvent rank that distinguishes W33 from Gewirtz is three.  Rank one is common to both graphs, and rank two sees only edges versus nonedges.  At rank three, W33 has a triangle while Gewirtz is triangle-free.  Every W33 triangle reconstructs a unique $K_4$ line because an adjacent pair has exactly two common neighbors.
+
+\paragraph{Evidence boundary.}
+The degree-$57$ Moore graph, realized $K_8$ octad orbit census, Borel solver verdicts, complete proof archive, PDF evidence, and physical interpretation all remain open unless separately executed and observed.
