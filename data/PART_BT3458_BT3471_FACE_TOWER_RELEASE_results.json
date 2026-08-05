@@ -1,0 +1,59 @@
+{
+  "boundaries": {
+    "chromatic": "The objectwise full-M4 transport compiler is not yet a ten-colour or SDP certificate.",
+    "hardware": "No remote synthesis, timing, or PDF result is claimed before workflow evidence completes.",
+    "modular": "The 81-dimensional brick is not called simple without MeatAxe composition factors.",
+    "radius": "The local level-zero Delsarte computation proves only the 389 lower bound; the 435 upper bound is verified from Pass 3486.",
+    "tomotope": "The oriented 12_4 16_3 surface does not supply the missing 192-flag cell cocycle."
+  },
+  "dependency": {
+    "boundary": "The Pass 3458 association-scheme computation independently closes the level-zero lower bound at 389. The upper bound 435 is imported and verified from the later frozen Pass 3486-3499 packet.",
+    "checks": {
+      "lower_bound_preserved_389": true,
+      "parallel_radius_upper_bound_435": true
+    },
+    "live_covering_radius_interval": [389, 435],
+    "local_pass3458_delsarte_lower_bound": 389,
+    "parallel_pass3486_upper_bound": 435,
+    "schema": "w33.bt3471.parallel_radius_reconciliation.v1",
+    "source_packet": "Passes 3486-3499 frozen bootstrap certificate",
+    "status": "PASS"
+  },
+  "live_boundaries": {
+    "chromatic_number": [10, 11],
+    "covering_radius": [389, 435]
+  },
+  "raw_exact_checks": {
+    "Delsarte_level0_no_improvement": true,
+    "S3_holonomy_nontrivial": true,
+    "W33_recovered_objectwise": true,
+    "antisymmetric_81_plus_39": true,
+    "face_tower_240_120_40": true,
+    "formal_order3_source_target": true,
+    "local_stabilizer_3cubed_S4": true,
+    "objectwise_crossed_algebra_full_M4": true,
+    "oriented_tetrahedron_12_4_16_3": true,
+    "pair_module_local_endomorphism_ring": true,
+    "pair_scheme_rank5": true,
+    "product_code_tomotope_support_no_go": true
+  },
+  "schema": "w33.bt3458_3471.face_tower_release.v1",
+  "status": "PASS",
+  "theorems": {
+    "W33_quotient_srg": [40, 12, 2, 4],
+    "antisymmetric_decomposition": [81, 39],
+    "crossed_amplitude_algebra_dimension": 16,
+    "face_tower": [240, 120, 40],
+    "local_point_stabilizer": "3^3:S4",
+    "matching_holonomy": {
+      "identity": 1080,
+      "three_cycle": 0,
+      "transposition": 2160
+    },
+    "oriented_tetrahedron_configuration": [12, 4, 16, 3],
+    "pair_module_loewy_layers": [1, 3, 1],
+    "pair_scheme_rank": 5,
+    "pair_scheme_valencies": [1, 36, 27, 2, 54],
+    "product_code_max_projective_triples_per_dual_coset": 4
+  }
+}

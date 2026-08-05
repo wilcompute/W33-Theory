@@ -1,0 +1,186 @@
+name: Passes 3458-3471 Face Tower Brauer Tomotope
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/*3458*'
+      - 'analysis/*3471*'
+      - 'data/PART_BT3458*'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'rtl/w33_five_channel_formal_rom.v'
+      - 'rtl/tb_w33_pass3458_3471_order3.v'
+      - 'tests/test_bt3458_3471_face_tower_brauer_tomotope.py'
+      - 'tests/test_bt3471_face_tower_release.py'
+      - '.github/workflows/w33_pass3458_3471_face_tower_brauer_tomotope.yml'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'holonet_machine_blueprint.tex'
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/*3458*'
+      - 'analysis/*3471*'
+      - 'data/PART_BT3458*'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - 'rtl/w33_five_channel_formal_rom.v'
+      - 'rtl/tb_w33_pass3458_3471_order3.v'
+      - 'tests/test_bt3458_3471_face_tower_brauer_tomotope.py'
+      - 'tests/test_bt3471_face_tower_release.py'
+      - '.github/workflows/w33_pass3458_3471_face_tower_brauer_tomotope.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pass3458-3471-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  exact-formal-papers:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install exact and digital dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys
+          python -m pip install --disable-pip-version-check numpy sympy pytest
+
+      - name: Regenerate exact face-tower certificate
+        run: |
+          mkdir -p evidence/pass3458_3471
+          python analysis/bt3458_3471_face_tower_brauer_tomotope.py \
+            --json evidence/pass3458_3471/results.json \
+            | tee evidence/pass3458_3471/exact.log
+          grep -F 'PASS 12/12 face tower, Delsarte, modular, M4, hardware, and tomotope checks' \
+            evidence/pass3458_3471/exact.log
+
+      - name: Compare raw structural certificate exactly
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          generated = json.loads(Path('evidence/pass3458_3471/results.json').read_text())
+          frozen = json.loads(Path('data/PART_BT3458_BT3471_FACE_TOWER_BRAUER_TOMOTOPE_results.json').read_text())
+          assert generated == frozen
+          print('PASS exact raw structural certificate equality')
+          PY
+
+      - name: Reconcile and freeze the live 435 release
+        run: |
+          python analysis/bt3471_parallel_radius_reconciliation.py \
+            --json evidence/pass3458_3471/radius_reconciliation.json \
+            | tee evidence/pass3458_3471/radius_reconciliation.log
+          python analysis/bt3471_face_tower_release_certificate.py \
+            --json evidence/pass3458_3471/release.json \
+            | tee evidence/pass3458_3471/release.log
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          generated = json.loads(Path('evidence/pass3458_3471/release.json').read_text())
+          frozen = json.loads(Path('data/PART_BT3458_BT3471_FACE_TOWER_RELEASE_results.json').read_text())
+          assert generated == frozen
+          assert generated['live_boundaries']['covering_radius'] == [389, 435]
+          print('PASS live release certificate equality')
+          PY
+
+      - name: Focused Python regression
+        run: |
+          python -m pytest -q \
+            tests/test_bt3458_3471_face_tower_brauer_tomotope.py \
+            tests/test_bt3471_face_tower_release.py \
+            | tee evidence/pass3458_3471/pytest.log
+          git diff --check
+
+      - name: Exhaust literal compiler and order-three cases
+        run: |
+          iverilog -g2012 -s tb_w33_pass3458_3471_order3 \
+            -o evidence/pass3458_3471/order3_tb \
+            rtl/w33_five_channel_symbol.v \
+            rtl/w33_five_channel_formal_rom.v \
+            rtl/tb_w33_pass3458_3471_order3.v
+          vvp evidence/pass3458_3471/order3_tb \
+            | tee evidence/pass3458_3471/rtl.log
+          grep -F 'PASS literal_equivalence=200 order3_cases=1944' \
+            evidence/pass3458_3471/rtl.log
+
+      - name: Formally prove the three-step identity
+        run: |
+          yosys -p "read_verilog -formal -D FORMAL rtl/w33_five_channel_symbol.v rtl/w33_five_channel_formal_rom.v; prep -top w33_mod3_order3_formal; flatten; sat -verify -prove-asserts -set-assumes -show-inputs" \
+            2>&1 | tee evidence/pass3458_3471/formal.log
+
+      - name: Synthesize factored and literal baselines
+        run: |
+          for top in w33_five_channel_symbol w33_five_channel_symbol_rom; do
+            yosys -p "read_verilog rtl/w33_five_channel_symbol.v rtl/w33_five_channel_formal_rom.v; hierarchy -top ${top}; synth_ice40 -top ${top} -json evidence/pass3458_3471/${top}.json; stat" \
+              2>&1 | tee evidence/pass3458_3471/${top}.yosys.log
+            test -s evidence/pass3458_3471/${top}.json
+          done
+
+      - name: Verify source manifests
+        run: |
+          python - <<'PY'
+          import json, re
+          import os
+          from pathlib import Path
+          tex = Path('analysis/W33_CURRENT_FRONTIER_MANIFEST.tex').read_text()
+          inputs = re.findall(r'\\input\{([^}]+)\}', tex)
+          manifest = json.loads(Path('data/w33_current_frontier_manifest_v1.json').read_text())
+          assert inputs == manifest['required_ordered_inputs']
+          ours = 'analysis/BT3458_BT3471_face_tower_brauer_tomotope_insert'
+          before = 'analysis/BT3444_BT3457_radius_modular_fivechannel_insert'
+          after = 'analysis/BT3486_BT3499_radius_code_biplane_supplement_insert'
+          assert Path(ours + '.tex').is_file()
+          for stem in inputs:
+              assert Path(stem + '.tex').is_file(), stem
+          for item in manifest['public_sections']:
+              assert Path(item['source']).is_file(), item
+          if ours in inputs:
+              assert inputs.count(ours) == 1
+              assert inputs.index(before) < inputs.index(ours) < inputs.index(after)
+              tokens = [item['token'] for item in manifest['public_sections']]
+              assert tokens.count('bt3458-3471-face-tower-brauer-tomotope') == 1
+              assert tokens.index('bt3444-3457-radius-modular-fivechannel') \
+                  < tokens.index('bt3458-3471-face-tower-brauer-tomotope') \
+                  < tokens.index('bt3486-3499-radius-code-biplane-supplement')
+              print('PASS post-merge manifest integration and chronology')
+          else:
+              assert os.environ.get('GITHUB_EVENT_NAME') == 'pull_request'
+              assert Path('analysis/BT3458_BT3471_face_tower_brauer_tomotope_index_insert.html').is_file()
+              print('PASS staged PR insert; post-merge manifest integration required')
+          PY
+
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Compile canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" \
+              2>&1 | tee evidence/pass3458_3471/${source%.tex}.log
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
+            > evidence/pass3458_3471/pdf_sha256.txt
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3458-3471-face-tower-brauer-tomotope-evidence
+          path: |
+            evidence/pass3458_3471/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
