@@ -1,0 +1,13 @@
+{
+  "schema": "w33.pass3670_3686.mmgroup_four_parabolic_candidate.v1",
+  "status": "PENDING",
+  "generator_strings": [],
+  "generator_integers": [],
+  "expected_generator_orders": [3, 3, 3, 3],
+  "expected_pair_product_orders": [3, 6, 6, 6, 6, 6],
+  "expected_triple_closure_orders": [648, 648, 648, 648],
+  "expected_full_closure_order": 25920,
+  "expected_fusion": {"order_3": "3B", "order_5": "5B", "involutions": "2B"},
+  "class_fusion_artifact_sha256": null,
+  "boundary": "Populate only with version-stable MM strings or integers and an independent class-fusion certificate."
+}
