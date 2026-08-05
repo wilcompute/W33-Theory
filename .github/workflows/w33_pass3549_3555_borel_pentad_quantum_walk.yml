@@ -1,0 +1,133 @@
+name: Passes 3549-3555 Borel Pentad Quantum Walk
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/*3549*'
+      - 'analysis/*3550*'
+      - 'analysis/*3551*'
+      - 'analysis/*3552*'
+      - 'analysis/*3553*'
+      - 'analysis/*3554*'
+      - 'analysis/*3555*'
+      - 'data/PART_BT3549*'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - 'docs/borel-pentad-quantum-walk.html'
+      - 'docs/index.html'
+      - 'tests/test_bt3549_bt3555_borel_pentad_quantum_walk.py'
+      - '.github/workflows/w33_pass3549_3555_borel_pentad_quantum_walk.yml'
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/*3549*'
+      - 'analysis/*3550*'
+      - 'analysis/*3551*'
+      - 'analysis/*3552*'
+      - 'analysis/*3553*'
+      - 'analysis/*3554*'
+      - 'analysis/*3555*'
+      - 'data/PART_BT3549*'
+      - 'tests/test_bt3549_bt3555_borel_pentad_quantum_walk.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pass3549-3555-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  exact-packet-and-papers:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact dependencies
+        run: python -m pip install --disable-pip-version-check pytest sympy
+      - name: Regenerate exact certificate
+        run: |
+          mkdir -p evidence/pass3549_3555
+          cp data/PART_BT3549_BT3555_BOREL_PENTAD_QUANTUM_WALK_results.json /tmp/frozen3555.json
+          python analysis/bt3549_3555_borel_pentad_quantum_walk.py | tee evidence/pass3549_3555/exact.log
+          grep -F 'PASS_7_FRONTS 251725b948b166f475cf0a44b9d6662280c2dd7a7e12c47fb5ece3d110cc1f6b' evidence/pass3549_3555/exact.log
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          got=json.loads(Path('data/PART_BT3549_BT3555_BOREL_PENTAD_QUANTUM_WALK_results.json').read_text())
+          old=json.loads(Path('/tmp/frozen3555.json').read_text())
+          assert got==old
+          print('PASS semantic frozen-certificate equality')
+          PY
+      - name: Focused regressions and companion controls
+        run: |
+          pytest -q tests/test_bt3549_bt3555_borel_pentad_quantum_walk.py | tee evidence/pass3549_3555/pytest.log
+          python analysis/bt3549_borel_signature_models.py | tee evidence/pass3549_3555/borel_models.log
+          grep -F 'PASS_24_BOREL_MODEL_CONTRACTS 24' evidence/pass3549_3555/borel_models.log
+          python analysis/bt3552_clique_proof_archive.py --self-test | tee evidence/pass3549_3555/archive_selftest.log
+          grep -F 'PASS_PROOF_ARCHIVE_SELF_TEST' evidence/pass3549_3555/archive_selftest.log
+          git diff --check
+      - name: Verify manuscript and public reachability
+        run: |
+          python - <<'PY'
+          import json,re
+          from pathlib import Path
+          tex=Path('analysis/W33_CURRENT_FRONTIER_MANIFEST.tex').read_text()
+          inputs=re.findall(r'\\input\{([^}]+)\}',tex)
+          manifest=json.loads(Path('data/w33_current_frontier_manifest_v1.json').read_text())
+          assert inputs==manifest['required_ordered_inputs']
+          stem='analysis/BT3549_BT3555_borel_pentad_quantum_walk_insert'
+          assert inputs[-1]==stem
+          assert Path(stem+'.tex').is_file()
+          assert Path('docs/borel-pentad-quantum-walk.html').is_file()
+          assert 'bt3549-3555-borel-pentad-quantum-walk' in Path('docs/index.html').read_text()
+          print('PASS current-frontier and public reachability')
+          PY
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Compile canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3549_3555/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3549_3555/pdf_sha256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3549-3555-exact-packet-papers
+          path: |
+            evidence/pass3549_3555/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
+
+  proof-archive-shards:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check sympy
+      - name: Generate independently checked proof shard
+        run: |
+          mkdir -p evidence/pass3549_3555/shards
+          python analysis/bt3552_clique_proof_archive.py \
+            --shard ${{ matrix.shard }} \
+            --json evidence/pass3549_3555/shards/shard_${{ matrix.shard }}.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3552-proof-shard-${{ matrix.shard }}
+          compression-level: 9
+          path: evidence/pass3549_3555/shards/*.json
