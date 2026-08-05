@@ -35,7 +35,8 @@
     "analysis/BT3635_BT3648_monster_u42_completion_insert",
     "analysis/BT3649_BT3662_seven_front_closure_insert",
     "analysis/BT3663_BT3669_monster_chamber_spread_bridge_insert",
-    "analysis/BT3670_BT3686_monster_tomotope_amalgamation_insert"
+    "analysis/BT3670_BT3686_monster_tomotope_amalgamation_insert",
+    "analysis/BT3687_BT3693_realized_octad_borel_psd_proof_tomography_architecture_insert"
   ],
   "front_doors": {
     "w33_paper.tex": "w33_paper_body.tex",
@@ -66,7 +67,8 @@
     {"kind": "id", "token": "bt3635-3648-monster-u42-completion", "source": "analysis/BT3635_BT3648_monster_u42_completion_index_insert.html"},
     {"kind": "id", "token": "bt3649-3662-seven-front-closure", "source": "analysis/BT3649_BT3662_seven_front_closure_index_insert.html"},
     {"kind": "id", "token": "bt3663-3669-monster-chamber-spread-bridge", "source": "analysis/BT3663_BT3669_monster_chamber_spread_bridge_index_insert.html"},
-    {"kind": "id", "token": "bt3670-3686-monster-tomotope-amalgamation", "source": "analysis/BT3670_BT3686_monster_tomotope_amalgamation_index_insert.html"}
+    {"kind": "id", "token": "bt3670-3686-monster-tomotope-amalgamation", "source": "analysis/BT3670_BT3686_monster_tomotope_amalgamation_index_insert.html"},
+    {"kind": "id", "token": "bt3687-3693-realized-octad-borel-psd-proof-tomography-architecture", "source": "analysis/BT3687_BT3693_realized_octad_borel_psd_proof_tomography_architecture_index_insert.html"}
   ],
   "standalone_public_pages": [
     {"token": "passes-3500-3505-triangle-free-srg-m57", "source": "docs/triangle-free-srg-m57.html"},
@@ -81,7 +83,8 @@
     {"token": "passes-3628-3634-octad-borel-matrix-proof-tomography", "source": "docs/octad-borel-matrix-proof-tomography.html"},
     {"token": "passes-3635-3648-monster-u42-completion", "source": "docs/monster-u42-completion.html"},
     {"token": "passes-3663-3669-monster-chamber-spread-double-six", "source": "docs/monster-a6-spread-double-six.html"},
-    {"token": "passes-3670-3686-monster-tomotope-amalgamation", "source": "docs/monster-tomotope-amalgamation.html"}
+    {"token": "passes-3670-3686-monster-tomotope-amalgamation", "source": "docs/monster-tomotope-amalgamation.html"},
+    {"token": "passes-3687-3693-realized-octad-borel-psd-proof-tomography-architecture", "source": "docs/realized-octad-borel-psd-proof-tomography-architecture.html"}
   ],
   "boundary": "The manifest controls source reachability and ordering only; it does not certify PDF, hardware, laboratory, or physical claims."
 }
