@@ -1,0 +1,41 @@
+{
+  "schema": "w33.hardware_challenge.preregistration.v1",
+  "locked_before_data": true,
+  "devices": [
+    "W33 40-mode device",
+    "route-optimal degree-matched circulant",
+    "local-ring degree-matched control"
+  ],
+  "primary_structural_endpoints": [
+    "40 supported modes; degree 12 at every mode; 240 supported couplers",
+    "thresholded adjacency obeys A^2 = 8I - 2A + 4J",
+    "recover exactly 40 four-point lines and 160 line triangles",
+    "recover frozen rank-3 through rank-5 marked-resolvent signatures"
+  ],
+  "primary_operational_endpoint": "worst-nonedge two-hop task success exceeds both controls by at least 0.0002 under matched programmed edge transmissivity",
+  "twirl_endpoint": "symmetry-twirled residual outside span{I,A,J} is <= 0.1 of the untwirled Frobenius residual",
+  "schedule_endpoint": "four-tick incidence schedule completes all 160 interactions with no point/check collision and no throughput penalty versus controls",
+  "tomography_probability_tolerance": 0.01,
+  "familywise_alpha": 0.01,
+  "probability_families": 64000,
+  "shots_per_tomography_setting": 81825,
+  "operational_shots_per_device_lower_bound": 264915869,
+  "falsification_conditions": [
+    "support or SRG identity fails the declared confidence interval",
+    "W33 does not beat both matched controls on the locked primary operational endpoint",
+    "twirl residual ratio exceeds 0.1",
+    "four-tick schedule requires hidden serialization or additional unreported resources"
+  ],
+  "stopping_rule": "No efficacy stopping; stop only for hardware safety or irrecoverable data-integrity failure.",
+  "required_raw_release": [
+    "input pulse records",
+    "all detector counts",
+    "transfer matrices",
+    "loss maps",
+    "twirl seeds and words",
+    "analysis commit SHA",
+    "content hashes"
+  ],
+  "source_certificate": "data/PART_3743_3750_SYMMETRY_OS_SPACETIME_FACTORY_TOURNAMENT_results.json",
+  "claim_boundary": "This is a prospective analysis contract, not experimental evidence. Thresholds are locked benchmarks and may be rejected by data."
+}
