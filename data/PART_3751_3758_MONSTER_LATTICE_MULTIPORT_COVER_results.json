@@ -1,0 +1,176 @@
+{
+  "checks": {
+    "construction_a_even_lattice_exact": true,
+    "cover_non_distance_regular_exact": true,
+    "monster_standard_pair_filters_exact": true,
+    "quadratic_difference_set_64_36_20": true,
+    "terwilliger_dimension_55_three_primes": true,
+    "triple_incidence_smith_1_30_2_5_6": true,
+    "twenty_one_commuting_householders_exact": true,
+    "twisted_holonomy_frame_rank20": true,
+    "u42_and_u42d2_groups_exact": true,
+    "w33_spreads_triples_rebuilt": true
+  },
+  "construction_a_lattice": {
+    "boundary": "The lattice is rooted and 2-elementary; it is not even unimodular and is not the Leech lattice.",
+    "code": {
+      "doubly_even": true,
+      "parameters": [36, 6, 16],
+      "self_orthogonal": true,
+      "weight_distribution": {"0": 1, "16": 27, "20": 36}
+    },
+    "coordinate_automorphism_group": "O6-(2)=U4(2):2",
+    "coordinate_automorphism_order": 51840,
+    "definition": "L(C)=2^(-1/2){z in Z^36 : z mod 2 belongs to C}",
+    "discriminant_group": "(Z/2Z)^24",
+    "full_lattice_automorphism_group": "2^36 : O6-(2)",
+    "full_lattice_automorphism_order": 3562417673994240,
+    "gram_determinant": "2^24",
+    "gram_rank_mod2": 12,
+    "gram_smith_normal_form": {"1": 12, "2": 24},
+    "minimum_norm": 2,
+    "root_count": 72,
+    "root_system": "A1^36",
+    "theta_initial_by_norm": {"0": 1, "2": 72, "4": 2520, "6": 57120, "8": 2712024}
+  },
+  "cover_classification": {
+    "automorphism_identification": "U4(2):2 acting faithfully and transitively on the 120 triples",
+    "automorphism_subgroup_order": 51840,
+    "degree": 27,
+    "diameter": 3,
+    "distance_distribution": [1, 27, 90, 2],
+    "distance_intersection_patterns": {
+      "0": {"(0, 27, 0, 0)": 120},
+      "1": {"(1, 10, 16, 0)": 3240},
+      "2": {"(0, 4, 22, 1)": 6480, "(0, 6, 21, 0)": 4320},
+      "3": {"(0, 0, 27, 0)": 240}
+    },
+    "distance_regular": false,
+    "fiber_size": 3,
+    "full_automorphism_argument": "Distance-3 fibers are intrinsic; the deck kernel is trivial; the induced quotient action lies in Aut(W33)=PGSp(4,3) of order 51840; the certified subgroup already has that order.",
+    "intrinsic_fibers": 40,
+    "terwilliger_dimension_mod_primes": {"1000003": 55, "1000033": 55, "1000037": 55},
+    "terwilliger_verdict": "dimension 55 at three independent large primes; a characteristic-zero equality is not promoted solely from modular agreement",
+    "vertex_stabilizer_order": 432,
+    "vertex_stabilizer_subdegrees": [1, 2, 27, 36, 54],
+    "vertices": 120
+  },
+  "evidence_boundary": {
+    "not_proved_here": [
+      "serialized Monster words or a Monster embedding",
+      "executed Monster 196883 restriction unless the separate observable GAP artifact appears",
+      "characteristic-zero Terwilliger dimension solely from the modular runs",
+      "Leech or even-unimodular lattice identification",
+      "physical optical implementation or laboratory performance"
+    ],
+    "proved_here": [
+      "exact abstract Monster-search fingerprints and standard-pair filters",
+      "even rooted Construction-A lattice with discriminant (Z/2)^24",
+      "21-reflection exact rational factorization of the 36-port involution",
+      "non-distance-regular cover invariants and modular Terwilliger dimension 55",
+      "(64,36,20) quadratic difference-set and Walsh-parent identity",
+      "Smith cokernel (Z/2)^5 x Z/6 of triple incidence",
+      "rank-20 120-vector twisted holonomy tight frame"
+    ]
+  },
+  "hadamard_multiport_factorization": {
+    "boundary": "This is an exact transfer-matrix factorization, not a fabricated optical circuit or loss certificate.",
+    "factorization": "H is the product of 21 pairwise commuting rational Householder reflections",
+    "maximum_absolute_entries": [7,24,20,66,285,60,63,54,9,4,15,10,33,168,21,6,3,2,1,2,1],
+    "multiport": "H=(2A_spread-J)/6",
+    "phase_alphabet_of_H": ["0", "pi"],
+    "primitive_integer_reflection_vectors": [
+      [7,-1,-1,-1,-1,1,1,-1,-1,-1,1,1,-1,1,1,-1,1,1,1,-1,1,1,-1,1,1,-1,1,1,1,-1,1,1,-1,1,1,-1],
+      [0,24,-4,-4,3,-3,-3,3,-4,-4,4,4,3,-3,4,3,4,-3,-3,3,4,4,-4,4,4,3,-3,-3,4,3,4,-3,3,4,4,-4],
+      [0,0,20,2,-3,-3,-3,-3,2,-4,-2,-2,3,3,4,3,4,3,3,3,4,4,2,4,-2,-3,-3,3,4,3,-2,-3,-3,4,4,2],
+      [0,0,0,66,-9,-9,-9,-9,6,8,14,14,-11,-11,-8,9,12,9,-11,-11,-8,12,6,12,14,11,11,9,12,9,14,11,11,-8,-8,-14],
+      [0,0,0,0,285,-45,-45,21,-36,40,48,-40,-55,55,48,45,-28,67,55,33,-40,-28,52,60,48,-55,55,67,60,-43,-40,55,33,48,-40,40],
+      [0,0,0,0,0,60,3,-9,-9,10,-7,9,10,-10,12,16,-7,12,9,13,-10,12,13,-4,12,10,-10,-7,15,13,-10,9,13,-7,9,10],
+      [0,0,0,0,0,0,63,-9,-9,10,13,-11,10,10,-8,16,13,-8,-11,13,10,-8,13,16,-8,10,10,13,-5,13,10,-11,13,13,-11,10],
+      [0,0,0,0,0,0,0,54,-9,10,-8,10,10,10,-8,-5,13,13,10,-8,10,13,13,-5,-8,10,10,13,-5,13,10,10,-8,-8,10,10],
+      [0,0,0,0,0,0,0,0,9,2,2,2,2,2,2,-1,-1,-1,2,2,2,-1,-1,-1,2,2,2,-1,-1,-1,2,2,2,2,2,2],
+      [0,0,0,0,0,0,0,0,0,4,-1,-1,-1,-1,1,-1,1,-1,-1,-1,1,1,0,1,-1,0,0,-1,1,-1,-1,0,0,1,1,0],
+      [0,0,0,0,0,0,0,0,0,0,15,-5,3,-5,-3,-5,-3,3,3,-5,-3,5,4,1,-1,-4,0,-5,-3,3,-1,-4,0,1,5,4],
+      [0,0,0,0,0,0,0,0,0,0,0,10,-3,1,-3,1,-3,-3,-3,1,-3,2,4,4,-1,-1,-3,1,-3,-3,-1,-1,-3,4,2,4],
+      [0,0,0,0,0,0,0,0,0,0,0,0,33,-9,-9,-9,-9,3,-17,1,1,-8,-8,16,7,1,7,11,11,-7,-13,11,-13,-4,2,2],
+      [0,0,0,0,0,0,0,0,0,0,0,0,0,168,-63,3,-63,-45,-20,-92,7,76,-56,-20,49,40,16,-22,77,50,-91,-55,41,5,-19,14],
+      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,-9,-3,-9,-4,-4,-13,-4,8,-4,5,8,8,10,1,10,1,-11,-11,1,1,-2],
+      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,-3,-3,1,-2,1,-2,1,1,-2,-2,4,-2,1,1,1,1,-2,-2,4,-2],
+      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,-3,1,0,-1,0,-1,1,2,-2,0,0,-1,1,-1,1,0,-2,0,2],
+      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,-1,-1,-1,-1,2,-1,2,-1,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,-1,1,-1,0,-1,0,1,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,-1,-1,-1,-1,2,-1,2,-1],
+      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,-1,1,-1,0,-1,0,1]
+    ],
+    "rank_split": [15, 21],
+    "squared_norms": [84,1008,720,7920,150480,6840,7560,5670,162,36,540,270,2970,83160,1512,126,42,18,6,18,6],
+    "support_sizes": [36,35,34,33,32,31,30,29,28,21,24,25,24,23,22,21,14,9,6,9,6],
+    "vector_sha256": "114a4582c07f576a122e99ffe69af6f4d2c87c76268493ead7031b8235424ea9"
+  },
+  "monster_class_fusion_front": {
+    "boundary": "This Python certificate does not invent an unobserved fusion or degree-81 multiplicity.",
+    "observable_result": "data/PART_3751_MONSTER_U42_CLASS_FUSION_EXECUTION.json",
+    "status": "SELF_REPORTING_GITHUB_GAP_WORKFLOW_ADDED; OBSERVED_RESULT_PATH_PENDING",
+    "target": "analysis/w33_monster_u42_class_fusion_target.g",
+    "workflow": ".github/workflows/w33_pass3751_gap_monster_u42_class_fusion_commit.yml"
+  },
+  "monster_word_search_refinement": {
+    "boundary": "All words are in the exact abstract Miyamoto action; serialized mmgroup words remain pending.",
+    "even_group_order": 25920,
+    "even_group_order_census": {"1":1,"2":315,"3":800,"4":3780,"5":5184,"6":5760,"9":5760,"12":4320},
+    "fingerprints": {
+      "a": {"class_size_in_U42":45,"cycle_shape_120_triples":{"1":16,"2":52},"cycle_shape_36_axes":{"1":12,"2":12},"order":2},
+      "ab": {"class_size_in_U42":2880,"cycle_shape_120_triples":{"3":4,"9":12},"cycle_shape_36_axes":{"9":4},"order":9},
+      "b": {"class_size_in_U42":5184,"cycle_shape_120_triples":{"5":24},"cycle_shape_36_axes":{"1":1,"5":7},"order":5},
+      "c": {"class_size_in_U42d2":36,"cycle_shape_120_triples":{"1":30,"2":45},"cycle_shape_36_axes":{"1":16,"2":10},"order":2},
+      "cd": {"class_size_in_U42d2":5184,"cycle_shape_120_triples":{"5":6,"10":9},"cycle_shape_36_axes":{"1":1,"5":3,"10":2},"order":10},
+      "d": {"class_size_in_U42d2":5760,"cycle_shape_120_triples":{"3":4,"9":12},"cycle_shape_36_axes":{"9":4},"order":9}
+    },
+    "full_group_order": 51840,
+    "full_group_order_census": {"1":1,"2":891,"3":800,"4":5940,"5":5184,"6":12960,"8":6480,"9":5760,"10":5184,"12":8640},
+    "outer_spread_involution": {"centralizer_order":1440,"class_size":36,"fixed_axes":16,"fixed_triples":30},
+    "search_protocol": "First demand the 36-involution Fischer class and its cycle fingerprints, then test the compressed standard pairs, and only then pay for Monster closure/character fingerprints.",
+    "standard_pairs": {
+      "U42": {"a_word":[0,1,2,9],"b_word":[0,3,4,9,3,5],"commutator_order":3,"orders_a_b_ab":[2,5,9]},
+      "U42d2": {"c_word":[0],"d_word":[1,2,3,4,9,3,5,9],"order_c_d2":8,"order_commutator_c_d2":2,"orders_c_d_cd":[2,9,10]}
+    }
+  },
+  "quadratic_walsh_parent": {
+    "Fourier_character_sums": {"nonsingular":-4,"nonzero_singular":4,"trivial":36},
+    "binary_space_dimension": 6,
+    "difference_set_parameters": [64,36,20],
+    "full_walsh_identity": "W64 W64^T=64I",
+    "interpretation": "The 36-port Hadamard is a diagonal shift of a nonsingular principal minor of a six-bit quadratic Walsh transform.",
+    "nonsingular_set_size": 36,
+    "principal_minor_identity": "K=W_N-2I, where W_N[x,y]=(-1)^beta(x,y) on the 36 nonsingular vectors",
+    "quadratic_form": "q(x)=wt(codeword(x))/4 mod 2",
+    "translation_intersection_census": {"20":63},
+    "type": "minus"
+  },
+  "schema": "w33.pass3751_3758.monster_lattice_multiport_cover.v1",
+  "semantic_sha256": "6271dafcc58467d6e758cdbcc9a1b220fe21693b3ace3c727fb5b5499be60ce6",
+  "status": "PASS_EXACT_SEVEN_INTERNAL_FRONTS_GAP_EXECUTION_OBSERVATION_PENDING",
+  "triple_incidence_integral_cokernel": {
+    "cokernel": "(Z/2Z)^5 x Z/6Z = (Z/2Z)^6 x Z/3Z",
+    "cokernel_order": 192,
+    "matrix_shape": [36,120],
+    "rank_mod2": 30,
+    "rank_mod3": 35,
+    "smith_normal_form": {"1":30,"2":5,"6":1},
+    "three_primary_sector": "one-dimensional invariant conservation quotient",
+    "tomotope_boundary": "192 matches the tomotope flag count, but no objectwise tomotope identification follows from the count alone.",
+    "two_primary_sector": "six-dimensional minus-type orthogonal module dual to the [36,6] code"
+  },
+  "twisted_holonomy_frame": {
+    "ambient_vectors": 120,
+    "fiber_geometry": "each of the 40 fibers is an equilateral triangle with inner product -1/2 and vector sum zero",
+    "fiber_standard_dimension": 80,
+    "integer_projector_identity": "Q20^2=108Q20",
+    "interpretation": "The nonregular S3 cover carries a canonical rank-20 four-angle tight frame in its standard-holonomy sector.",
+    "normalized_inner_product_census": {"-1/2":120,"-1/6":3240,"0":2160,"1/3":1620},
+    "projector": "E20=(F A F + 9F)/108 with F=3P_standard",
+    "projector_diagonal": "1/6",
+    "rank": 20,
+    "tight_frame_bound": 6
+  }
+}
