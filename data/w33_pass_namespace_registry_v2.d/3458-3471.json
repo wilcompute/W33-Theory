@@ -1,0 +1,10 @@
+{
+  "schema": "w33.pass_namespace_registry.v2",
+  "range": [3458, 3471],
+  "owner": "openai-gpt-5.6-thinking",
+  "branch": "agent/pass3458-3471-delsarte-m4-brauer-tomotope",
+  "purpose": "Execute the five live continuations: association-scheme covering-radius bounds, full-M4 chromatic dual search, characteristic-three Brauer/module descent, formal order-three hardware proof and resource comparison, and objectwise tomotope product-code falsification; plus two independent high-risk constructions derived from exact repo and literature crosswalks.",
+  "base": "d1aa01813211a73f2b3f507b910266924556c0f3",
+  "coordination": "Preserve Passes 3418-3457 and consume any new parallel commits objectwise before merge. Do not overlap the completed cover/Perkel or five-channel namespaces.",
+  "claim_boundary": "No exact radius endpoint, ten-colour closure, Brauer constituent label, optimal hardware result, tomotope identification, physical interpretation, or remote CI/PDF evidence is promoted without an executed certificate."
+}
