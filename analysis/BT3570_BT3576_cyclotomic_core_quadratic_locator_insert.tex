@@ -1,0 +1,68 @@
+\section{Maximal cyclic rank-twenty bridge and a gate-minimal fault locator}
+\label{sec:bt3570-3576}
+
+The rational $C_5$ restrictions of the Perkel and W33 rank-twenty modules are
+\[
+P_{20}\downarrow_{C_5}\cong W_{20}\downarrow_{C_5}
+\cong4\mathbf1\oplus4\mathbb Q(\zeta_5).
+\]
+Consequently their rational intertwiner algebra is
+\[
+M_4(\mathbb Q)\oplus M_4(\mathbb Q(\zeta_5)),
+\]
+of dimension $80$.  Thus $C_5$ symmetry alone does not select a preferred
+objectwise map.
+
+The full sixteen-dimensional cyclotomic moving sector extends to the dihedral
+normalizer $D_{10}$.  The only obstruction lies in the four-dimensional
+$C_5$-fixed sector:
+\[
+P_{20}\downarrow_{D_{10}}\cong2\mathbf1\oplus2\varepsilon\oplus4V_{\rm cyc},
+\]
+\[
+W_{20}\downarrow_{D_{10}}\cong4\mathbf1\oplus4V_{\rm cyc}.
+\]
+Hence the maximum rank of a $D_{10}$-equivariant map is $18$, and the minimal
+stable repair is
+\[
+\boxed{P_{20}\oplus2\mathbf1\cong W_{20}\oplus2\varepsilon},
+\]
+of dimension $22$.  At the full $A_5$ level the maximum common rank is $14$,
+and the minimal stable repair is
+\[
+\boxed{P_{20}\oplus2\mathbf1\oplus4
+\cong W_{20}\oplus(3\oplus3')},
+\]
+of dimension $26$.  Thus the unstabilized common-rank ladder is
+\[
+20\longrightarrow18\longrightarrow14,
+\]
+while the minimal invertible stable dimensions are $20,22,26$.
+
+The Perkel Borel group has order
+\[
+171=3^2\cdot19,
+\]
+so it contains no element of order five.  Its eleven-observable/ten-phase
+orbital algebra therefore supplies neither a $C_5$ generator nor its dihedral
+normalizer; it is not automatically a canonical $C_5$ selector.
+
+The five-bit compound-fault locator admits the exact quadratic Boolean form
+\[
+\begin{aligned}
+y_0&=x_0x_2+x_0x_3+x_1x_3,\\
+y_1&=x_2+x_0x_2+x_1x_2+x_0x_3,\\
+y_2&=x_2+x_0x_2+x_1x_2+x_1x_3,\\
+y_3&=x_2+x_1x_2+x_0x_3+x_1x_3,\\
+y_4&=x_2+x_1x_2+x_0x_3+x_2x_3.
+\end{aligned}
+\]
+Its five homogeneous quadratic parts have rank five.  Since each AND gate can
+add at most one independent quadratic form, every XOR--AND realization needs
+at least five AND gates.  The products
+\[
+x_0x_2,\ x_0x_3,\ x_1x_2,\ x_1x_3,\ x_2x_3
+\]
+attain the bound, proving multiplicative complexity exactly five.  A shared
+network uses eight XOR gates.  Exhaustive RTL equivalence preserves all 137
+compound fault words and minimum distance three.

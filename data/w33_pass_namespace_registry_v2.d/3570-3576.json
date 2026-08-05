@@ -1,0 +1,10 @@
+{
+  "schema": "w33.pass_namespace_registry.v2",
+  "range": [3570, 3576],
+  "owner": "openai-gpt-5.6-thinking",
+  "branch": "agent/pass3570-3576-cyclotomic-core-quadratic-locator",
+  "purpose": "Close the C5 canonicality boundary representation-theoretically, identify the D10-stable cyclotomic core and minimal stable ancilla extensions, prove the Borel order-five obstruction, and compile the five-bit compound-fault locator into a multiplicatively optimal quadratic Boolean network.",
+  "base": "54c12e18f7af26c7b0035af2f145956dad17c9b3",
+  "coordination": "Continues the merged Passes 3556-3569 packet and preserves the parallel Passes 3549-3555 Borel/pentad packet as an input to the order-five obstruction.",
+  "claim_boundary": "The theorem proves non-canonicity from C5 action alone and minimal stable extension costs. It does not construct a preferred objectwise intertwiner from additional geometry, decide chi(H), close the cohomology radius, or certify the unrestricted magnetic optimum."
+}
