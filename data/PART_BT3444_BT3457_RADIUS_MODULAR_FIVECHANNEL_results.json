@@ -1,0 +1,92 @@
+{
+  "schema": "w33.bt3444_3457.radius_modular_fivechannel.semantic.v1",
+  "status": "PASS",
+  "checks": {
+    "radius_reduced_to_generalized_covering": true,
+    "local_A2_SRG": true,
+    "modular_ranks_240_45_284": true,
+    "H1_dimension_436": true,
+    "dual_conservation_dimension_436": true,
+    "torus_algebra_dim4": true,
+    "conic_crossed_algebra_full_M4": true,
+    "all_symbols_mod3_order3": true,
+    "S4_bridge_24": true,
+    "product_code_12_6_4": true
+  },
+  "generalized_covering_radius": {
+    "identification": "R5(K) over F3 equals R1(K tensor F243) after any F3-linear identification F3^5 ~= F243",
+    "support_code": "K = im([face_relation_720x240, vertex_incidence_720x45])",
+    "support_code_parameters": [720, 284, 436],
+    "local_A2_latin_square_SRG": [59049, 726, 243, 6],
+    "local_spectrum": {"726": 1, "240": 726, "-3": 58322},
+    "local_length_enumerator": [1, 726, 58322],
+    "ordinary_F243_sphere_threshold": 347,
+    "relation_aware_sphere_threshold": 389,
+    "basis_upper_bound": 436,
+    "exact_interval": [389, 436],
+    "threshold_digests": {
+      "radius_388": {"bit_length": 3452, "decimal_digits": 1040, "sha256_decimal": "5ff0a06b178d38e1a438bba3be55be4df60f418c6e6cfff7b68761017bb45f06"},
+      "radius_389": {"bit_length": 3458, "decimal_digits": 1041, "sha256_decimal": "0b3c2c2f6db9be0e7c599aa8667b045e78eb0a755f1a68f34068a7fcb8108ca1"},
+      "quotient_size": {"bit_length": 3456, "decimal_digits": 1041, "sha256_decimal": "0ee4ab91cd58ac22e76c8f86c3c34da76ecc20c195e6276a2078d003c664adfe"}
+    },
+    "boundary": "The exact covering radius remains open in [389,436]."
+  },
+  "modular_exact_sequence": {
+    "group": "PSU(4,2)=PSp(4,3)",
+    "triangle_orbits": [240, 2160, 2880],
+    "face_relation_rank": 240,
+    "vertex_incidence_rank": 45,
+    "combined_rank": 284,
+    "intersection_dimension": 1,
+    "flat_dimension": 480,
+    "coboundary_dimension": 44,
+    "cohomology_dimension": 436,
+    "sequence": "0 -> 1 -> F3[240 faces] direct-sum F3[45 vertices] -> F3[720 supports] -> H1 -> 0",
+    "dual": "H1* is the 436-dimensional edge code with zero sum on every filled face and at every vertex"
+  },
+  "five_channel": {
+    "primitive": [[0, 2], [1, 1]],
+    "primitive_interpretation": "equitable 1+2 quotient of K3",
+    "kronecker_sum": "B(k)=c1(I2 tensor M)+c2(M tensor I2)+c3 I4",
+    "symbol_count": 8,
+    "spectral_fingerprint_count": 6,
+    "spectral_fingerprints": {
+      "(-5,-5,1,1,7)": 1,
+      "(-5,-2,-2,1,1)": 1,
+      "(-5,-2,-2,1,4)": 2,
+      "(-2,-2,4,4,10)": 1,
+      "(-2,1,1,4,4)": 1,
+      "(-2,1,1,4,7)": 2
+    },
+    "amplitude_algebra_dimensions": [4, 6, 8, 16],
+    "amplitude_algebra_order": ["torus", "plus swap", "plus conic dual sign", "plus both = full M4"],
+    "mod3_symbol": [[2,1,1,0,0],[2,1,0,1,0],[2,0,1,1,0],[0,2,2,0,0],[0,0,0,0,1]],
+    "mod3_nilpotent_ranks": [2,1,0],
+    "mod3_jordan_type": "J3(1)+J1(1)+J1(1)",
+    "mod3_order": 3
+  },
+  "S4_crosswalk": {
+    "conic_action_order": 24,
+    "Fano_point_stabilizer_order": 24,
+    "Fano_nonincident_lines": 4,
+    "W_D5_order": 1920,
+    "D5_coordinate_stabilizer_order": 384,
+    "D5_sign_kernel_order": 16,
+    "quotient_action": "S4",
+    "boundary": "A Fano point and D5 coordinate must be chosen; no canonical ambient identification is claimed."
+  },
+  "A2_conic_product_code": {
+    "construction": "[3,2,2]_3 tensor [4,3,2]_3",
+    "parameters": [12,6,4],
+    "weight_enumerator": {"0":1,"4":36,"6":84,"7":144,"8":162,"9":152,"10":144,"12":6},
+    "dual_parameters": [12,6,3],
+    "dual_weight_enumerator": {"0":1,"3":8,"4":6,"5":24,"6":84,"7":96,"8":276,"9":128,"10":60,"11":24,"12":22},
+    "visible_action": "S3 x S4",
+    "boundary": "Length 12 alone does not identify the code with the tomotope edge set."
+  },
+  "global_boundaries": {
+    "chromatic_number": "10 <= chi(H) <= 11",
+    "hardware": "source and exhaustive simulation target only until synthesis evidence is observed",
+    "physics": "no physical root-system, spacetime, or particle identification"
+  }
+}

@@ -1,0 +1,83 @@
+\section{Generalized defect radius, modular cohomology, and the five-channel crossed algebra (Passes 3444--3457)}
+
+Let $E=\mathbb F_3^{720}$ be the minimum-support permutation module.  If $R$ is the filled-face relation map and $N$ the unsigned vertex--edge incidence map, exact row reduction gives
+\[
+\operatorname{rank}R=240,
+\qquad
+\operatorname{rank}N=45,
+\qquad
+\operatorname{rank}[R\;N]=284,
+\]
+with $\operatorname{im}R\cap\operatorname{im}N=\langle\mathbf 1_E\rangle$.  Hence the scalar cohomology has the objectwise presentation
+\[
+0\longrightarrow\mathbf 1
+\longrightarrow
+\mathbb F_3[240\text{ faces}]\oplus\mathbb F_3[45\text{ vertices}]
+\longrightarrow
+\mathbb F_3[720\text{ supports}]
+\longrightarrow H^1
+\longrightarrow0,
+\]
+and therefore
+\[
+\boxed{\dim_{\mathbb F_3}H^1=436}.
+\]
+Dually, $(H^1)^*$ is the 436-dimensional edge code whose coordinate sum vanishes on every filled face and at every vertex.
+
+After an arbitrary $\mathbb F_3$-linear identification $\mathbb F_3^5\cong\mathbb F_{243}$, the labelled minimum-defect diameter is the fifth generalized covering radius of the ternary code
+\[
+K=\operatorname{im}[R\;N],
+\]
+equivalently the ordinary covering radius of its scalar extension to $\mathbb F_{243}$.  One filled face contributes the three-direction Latin-square Cayley graph
+\[
+\operatorname{SRG}(59049,726,243,6),
+\]
+with spectrum $726^1,240^{726},(-3)^{58322}$ and local length enumerator $1+726z+58322z^2$.  The relation-aware sphere obstruction remains stronger than the ordinary $243$-ary Hamming count and yields
+\[
+\boxed{389\leq R_{\mathrm{defect}}\leq436}.
+\]
+The exact endpoint inside this interval remains open.
+
+The four-channel barycentric Fourier symbol factors through the equitable $1+2$ quotient of $K_3$,
+\[
+M=\begin{pmatrix}0&2\\1&1\end{pmatrix},
+\]
+as
+\[
+B(k)=c(k_1)(I_2\otimes M)+c(k_2)(M\otimes I_2)+c(k_3)I_4,
+\qquad
+c(t)=\begin{cases}2,&t=0,\\-1,&t\ne0.\end{cases}
+\]
+The hidden channel is $d(k)=c(k_3)-c(k_1)-c(k_2)$.  Thus only eight zero/nonzero masks are required, rather than 27 unrelated five-dimensional symbols.
+
+The torus amplitudes alone generate a four-dimensional commutative algebra.  Adding the coordinate swap $S$ raises the algebra dimension to six, while adding the null-conic dual sign
+\[
+D=\operatorname{diag}(1,1,-1,-1)
+\]
+raises it to eight.  Together,
+\[
+\boxed{\langle I_2\otimes M,M\otimes I_2,S,D\rangle=M_4(\mathbb Q)}.
+\]
+This supplies an explicit noncommuting amplitude extension beyond the exhausted phase-only magnetic families, but it is not yet a chromatic certificate; the live boundary remains $10\leq\chi(H)\leq11$.
+
+Modulo three, $2\equiv-1$, so all 27 momentum symbols collapse to one matrix $J$.  Writing $\mathcal N=J-I$, exact ranks give
+\[
+\operatorname{rank}\mathcal N=2,
+\qquad
+\operatorname{rank}\mathcal N^2=1,
+\qquad
+\mathcal N^3=0,
+\]
+so $J$ has Jordan type $J_3(1)\oplus J_1(1)\oplus J_1(1)$ and
+\[
+\boxed{J^3=I}.
+\]
+The accompanying RTL exhausts all 200 integer-symbol entries modulo three and all $8\cdot3^5=1944$ mask/state triples.
+
+Finally, after choosing one Fano point and one $D_5$ coordinate, three degree-four sets carry the same faithful $S_4$ action: the four projective null-conic directions, the four Fano lines avoiding the selected point, and the four residual $D_5$ coordinates.  The choices are essential, so this is an equivariant chart bridge rather than a canonical ambient-geometric identification.
+
+The local $A_2$ code $[3,2,2]_3$ tensored with the null-conic code $[4,3,2]_3$ gives the additional exact construction
+\[
+\boxed{[3,2,2]_3\otimes[4,3,2]_3=[12,6,4]_3},
+\]
+with visible $S_3\times S_4$ coordinate action and dual parameters $[12,6,3]_3$.  Its length agrees with the tomotope edge count, but no tomotope incidence realization is asserted without an explicit map.
