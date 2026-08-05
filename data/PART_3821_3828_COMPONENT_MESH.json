@@ -1,0 +1,20 @@
+{
+  "adjacent_layers": 69,
+  "boundary": "The 418-gate circuit is exact and improves the prior 512-gate candidate. Global gate-count or depth optimality is not claimed.",
+  "distinct_c2_values": 144,
+  "exact_adjacent_givens_rotations": 418,
+  "lower_bounds": {
+    "depth": 6,
+    "proof": "Full 36-mode support requires depth at least ceil(log2 36)=6 and a connected interaction graph with at least 35 edges.",
+    "two_mode_gates": 35
+  },
+  "maximum_c2_denominator": 3315585,
+  "multiport": "H=(2A36-J)/6",
+  "parameter_sha256": "5c933cc2e6d2484e97894f3ca1f71627214238e41a68cd59b7527993d2b06b6b",
+  "parameterization": "c=sign_c*sqrt(c2), s=sign_s*sqrt(s2), with exact rational c2+s2=1",
+  "permutation": [2,1,6,3,4,5,0,8,11,12,13,10,14,7,9,15,16,26,28,18,31,21,24,34,17,27,35,25,19,29,22,30,20,32,23,33],
+  "permutation_sha256": "c3ae2735f64ac66044480b004cfaad7181ebcbeeef890aeae2362d48729e8c1d",
+  "skip_sha256": "a9450dd5908229d8ef09a7badfd6ceb8fecbd5217ef07bfe0c2658f404f4166e",
+  "terminal_phase": "one pi sign on the final mode",
+  "zero_eliminations_skipped_exactly": 212
+}
