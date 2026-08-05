@@ -1,0 +1,175 @@
+name: Passes 3444-3457 Radius Modular Five-Channel Closure
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/*3444*'
+      - 'analysis/*3457*'
+      - 'data/PART_BT3444*'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'rtl/w33_five_channel_symbol.v'
+      - 'rtl/tb_w33_pass3444_3457_five_channel.v'
+      - 'tests/test_bt3444_3457_radius_modular_fivechannel.py'
+      - '.github/workflows/w33_pass3444_3457_radius_modular_fivechannel.yml'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'holonet_machine_blueprint.tex'
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/*3444*'
+      - 'analysis/*3457*'
+      - 'data/PART_BT3444*'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'rtl/w33_five_channel_symbol.v'
+      - 'rtl/tb_w33_pass3444_3457_five_channel.v'
+      - 'tests/test_bt3444_3457_radius_modular_fivechannel.py'
+      - '.github/workflows/w33_pass3444_3457_radius_modular_fivechannel.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pass3444-3457-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  exact-rtl-papers:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install exact and digital dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys
+          python -m pip install --disable-pip-version-check numpy sympy pytest
+
+      - name: Regenerate exact certificate
+        run: |
+          mkdir -p evidence/pass3444_3457
+          python analysis/bt3444_3457_radius_modular_fivechannel.py \
+            --json evidence/pass3444_3457/full.json \
+            | tee evidence/pass3444_3457/exact.log
+          grep -F 'PASS 10/10 radius, modular, five-channel, S4, and product-code checks' \
+            evidence/pass3444_3457/exact.log
+
+      - name: Compare frozen semantic certificate
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          generated = json.loads(Path('evidence/pass3444_3457/full.json').read_text())
+          frozen = json.loads(Path('data/PART_BT3444_BT3457_RADIUS_MODULAR_FIVECHANNEL_results.json').read_text())
+          assert generated['status'] == frozen['status'] == 'PASS'
+          assert generated['checks'] == frozen['checks']
+
+          radius = generated['sections']['generalized_covering_radius']
+          assert radius['bounds']['exact_interval'] == frozen['generalized_covering_radius']['exact_interval']
+          assert radius['bounds']['ordinary_F243_Hamming_sphere_lower_bound'] == frozen['generalized_covering_radius']['ordinary_F243_sphere_threshold']
+          assert radius['bounds']['relation_aware_sphere_lower_bound'] == frozen['generalized_covering_radius']['relation_aware_sphere_threshold']
+          assert radius['threshold_digests'] == frozen['generalized_covering_radius']['threshold_digests']
+
+          modular = generated['sections']['modular_exact_sequence']
+          assert [modular['face_relation_rank'], modular['vertex_incidence_rank'], modular['combined_rank']] == [240, 45, 284]
+          assert modular['cohomology_dimension'] == frozen['modular_exact_sequence']['cohomology_dimension'] == 436
+          assert modular['dual_constraint_rank'] == 284
+
+          five = generated['sections']['five_channel_and_amplitudes']
+          dims = five['amplitude_algebra_dimensions']
+          assert [dims['torus_commutative'], dims['plus_swap'], dims['plus_conic_dual_sign'], dims['plus_swap_and_conic_dual_sign']] == frozen['five_channel']['amplitude_algebra_dimensions']
+          assert five['mod3_collapse']['matrix'] == frozen['five_channel']['mod3_symbol']
+          assert five['mod3_collapse']['nilpotent_ranks_N_N2_N3'] == frozen['five_channel']['mod3_nilpotent_ranks']
+          assert five['mod3_collapse']['order'] == frozen['five_channel']['mod3_order'] == 3
+
+          bridge = generated['sections']['S4_crosswalk']
+          assert bridge['conic']['faithful_action_order'] == frozen['S4_crosswalk']['conic_action_order'] == 24
+          assert bridge['fano']['point_stabilizer_order'] == frozen['S4_crosswalk']['Fano_point_stabilizer_order'] == 24
+
+          code = generated['sections']['A2_conic_product_code']
+          assert code['parameters'] == '[12,6,4]_3'
+          assert code['weight_enumerator'] == frozen['A2_conic_product_code']['weight_enumerator']
+          assert code['dual_weight_enumerator'] == frozen['A2_conic_product_code']['dual_weight_enumerator']
+          print('PASS frozen semantic certificate comparison')
+          PY
+
+      - name: Focused Python regression
+        run: |
+          python -m pytest -q tests/test_bt3444_3457_radius_modular_fivechannel.py \
+            | tee evidence/pass3444_3457/pytest.log
+          git diff --check
+
+      - name: Exhaust five-channel RTL
+        run: |
+          iverilog -g2012 -s tb_w33_pass3444_3457_five_channel \
+            -o evidence/pass3444_3457/five_channel_tb \
+            rtl/w33_five_channel_symbol.v \
+            rtl/tb_w33_pass3444_3457_five_channel.v
+          vvp evidence/pass3444_3457/five_channel_tb \
+            | tee evidence/pass3444_3457/rtl.log
+          grep -F 'PASS five-channel symbols=200 modular_order3_states=1944' \
+            evidence/pass3444_3457/rtl.log
+
+      - name: Synthesize both engines
+        run: |
+          for top in w33_five_channel_symbol w33_mod3_five_channel_step; do
+            yosys -p "read_verilog rtl/w33_five_channel_symbol.v; hierarchy -top ${top}; synth_ice40 -top ${top} -json evidence/pass3444_3457/${top}.json; stat" \
+              2>&1 | tee evidence/pass3444_3457/${top}.yosys.log
+            test -s evidence/pass3444_3457/${top}.json
+          done
+
+      - name: Verify current-frontier manifests
+        run: |
+          python - <<'PY'
+          import json, re
+          from pathlib import Path
+
+          tex = Path('analysis/W33_CURRENT_FRONTIER_MANIFEST.tex').read_text()
+          tex_inputs = re.findall(r'\\input\{([^}]+)\}', tex)
+          manifest = json.loads(Path('data/w33_current_frontier_manifest_v1.json').read_text())
+          assert tex_inputs == manifest['required_ordered_inputs']
+          for stem in tex_inputs:
+              assert Path(stem + '.tex').is_file(), stem
+          for item in manifest['public_sections']:
+              assert Path(item['source']).is_file(), item
+          assert manifest['required_ordered_inputs'][-2:] == [
+              'analysis/BT3418_BT3429_clebsch_d5_supplement_insert',
+              'analysis/BT3444_BT3457_radius_modular_fivechannel_insert',
+          ]
+          print('PASS current-frontier manifest reachability')
+          PY
+
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Compile canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" \
+              2>&1 | tee evidence/pass3444_3457/${source%.tex}.log
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
+            > evidence/pass3444_3457/pdf_sha256.txt
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3444-3457-radius-modular-fivechannel-evidence
+          path: |
+            evidence/pass3444_3457/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
