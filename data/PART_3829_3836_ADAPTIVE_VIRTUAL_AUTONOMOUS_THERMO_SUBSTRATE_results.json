@@ -1,0 +1,103 @@
+{
+  "boundaries": [
+    "Adaptive-control coefficients are a declared benchmark MDP, not measured process-tensor data.",
+    "Virtual edges are abstract heralded qutrit edge tokens; complete cluster/fusion overhead remains open.",
+    "The attractor is an ideal orbit-projector reservoir target.",
+    "Thermodynamic and substrate results separate exact event counts from unmeasured platform coefficients.",
+    "Checksum and heralded-route theorems assume single defects or independent heralded edge events.",
+    "The symmetry bath is an ideal permutation Markov process, not a laboratory dissipator."
+  ],
+  "passes": {
+    "3829_noise_adaptive_geometry_hypervisor": {
+      "actions": ["w33","local_ring","floquet","spectrometer","direct_29_port"],
+      "best_static_scores": {"direct_29_port":79.63964418510272,"floquet":79.4428968241226,"local_ring":66.36163667578796,"spectrometer":93.2315017270005,"w33":68.41854409600364},
+      "boundary": "Finite fully observed benchmark MDP; not a learned device process tensor or measured logical-error law.",
+      "declared_cost_matrix": [[4,3,8,12,10],[12,15,2,4,5],[3,10,8,12,6],[9,7,10,3,4]],
+      "discount": "9/10",
+      "improvement_vs_best_static": 29.781661649619878,
+      "optimal_policy_by_state_and_previous_action": [["local_ring","local_ring","local_ring","local_ring","local_ring"],["floquet","floquet","floquet","floquet","floquet"],["w33","w33","w33","w33","w33"],["spectrometer","spectrometer","spectrometer","spectrometer","direct_29_port"]],
+      "states": ["clean","diagonal_drift","burst_loss","crosstalk"],
+      "switch_penalty": 2,
+      "uniform_initial_noise_previous_direct_score": 36.579975026168086
+    },
+    "3830_measurement_only_virtual_w33_topology": {
+      "boundary": "Edge-token/teleportation abstraction. Source, fusion, memory, classical-feedforward, and code overheads are not included.",
+      "edge_tokens_per_round": 20,
+      "factorization_digest": "87773cc3ac574a8b05a2577ca62e4ce87ab114f1873e41e5d597f878ee0ccfe6",
+      "minimum_reason": "Each node has degree 12 and can consume at most one edge token per round; the frozen 1-factorization attains 12.",
+      "minimum_rounds": 12,
+      "perfect_matching_rounds": 12,
+      "static_w33_couplers_required": 0,
+      "total_heralded_edge_tokens": 240,
+      "w33_edges": 240
+    },
+    "3831_autonomous_association_scheme_attractor": {
+      "boundary": "Ideal association-scheme reservoir target. A physical dissipator implementing the orbit projector remains to be engineered.",
+      "exact_deviation_contraction_factor": "1/2",
+      "fixed_space_basis": ["I","A","J-I-A"],
+      "fixed_space_dimension": 3,
+      "half_step_map": "X -> (X + Pi_orbit(X))/2",
+      "projector_idempotence_error": 7.601177430610147e-17,
+      "steps_for_2^-20_suppression": 20
+    },
+    "3832_thermodynamic_geometry_tournament": {
+      "boundary": "Retry-plus-wirelength and Landauer-floor benchmark only; wall-plug source, cooling, detector, and decoder energy are not measured.",
+      "break_even_edge_success": 0.795921897506963,
+      "exact_break_even_formula": "sqrt(1-sqrt(63/469))",
+      "route_models": {"control":"1-(1-p^2)^2","w33":"1-(1-p^2)^4"},
+      "table": [
+        {"edge_success":0.5,"landauer_J_per_heralded_success_control":1.9688399690407936e-20,"landauer_J_per_heralded_success_w33":4.768620770145871e-21,"normalized_wire_energy_per_success_control":2144.0,"normalized_wire_energy_per_success_w33":1555.9853658536585,"two_route_success":0.4375,"w33_route_success":0.68359375},
+        {"edge_success":0.7,"landauer_J_per_heralded_success_control":3.718283261721313e-21,"landauer_J_per_heralded_success_w33":3.357065905288766e-21,"normalized_wire_energy_per_success_control":1267.7388833450467,"normalized_wire_energy_per_success_w33":1141.6707352809082,"two_route_success":0.7399,"w33_route_success":0.93239999},
+        {"edge_success":0.8,"landauer_J_per_heralded_success_control":3.1949998205216016e-21,"landauer_J_per_heralded_success_w33":3.020292925910301e-21,"normalized_wire_energy_per_success_control":1089.6005948247808,"normalized_wire_energy_per_success_w33":1029.9946295324326,"two_route_success":0.8704000000000001,"w33_route_success":0.98320384},
+        {"edge_success":0.9,"landauer_J_per_heralded_success_control":2.976031524341586e-21,"landauer_J_per_heralded_success_w33":2.8717187237029307e-21,"normalized_wire_energy_per_success_control":973.6008309103569,"normalized_wire_energy_per_success_w33":1066.7048826338792,"two_route_success":0.9639,"w33_route_success":0.99869679},
+        {"edge_success":0.99,"landauer_J_per_heralded_success_control":2.8720963792942567e-21,"landauer_J_per_heralded_success_w33":2.8709589415993894e-21,"normalized_wire_energy_per_success_control":938.3716054317502,"normalized_wire_energy_per_success_w33":1064.000167072144,"two_route_success":0.99960399,"w33_route_success":0.9999998431760799}
+      ],
+      "w33_lower_normalized_energy_below_break_even": true,
+      "wirelength_proxy_two_route_control": 938,
+      "wirelength_proxy_w33": 1064
+    },
+    "3833_substrate_inversion_tournament": {
+      "abstract_substrate_classes": {
+        "native_w33_fabric": {"consumable_edge_tokens":0,"hop_tokens":240,"interaction_rounds":12,"static_links":240},
+        "nearest_neighbor_5x8_mesh": {"consumable_edge_tokens":0,"hop_tokens":870,"interaction_rounds_lower_bound":12,"interaction_rounds_serial_witness":870,"maximum_route_hops":10,"static_links":67},
+        "single_shared_bus": {"consumable_edge_tokens":0,"hop_tokens":240,"interaction_rounds":240,"static_links":1},
+        "teleported_virtual_graph": {"consumable_edge_tokens":240,"hop_tokens":240,"interaction_rounds":12,"static_links":0}
+      },
+      "boundary": "Exact primitive-count inversion, not a vendor benchmark. Mapping a physical platform to coefficients requires measured data.",
+      "conclusion": "No substrate is coefficient-independently optimal; the preferred implementation changes with fabrication, consumable-entanglement, latency, and routing-energy prices.",
+      "cost_expressions": {"bus":"a+240g+240d","mesh_interval":"67a+[12,870]g+870d","native":"240a+12g+240d","virtual":"240b+12g+240d"},
+      "mesh_layout": [25,20,31,28,38,19,21,5,18,13,10,16,7,35,37,0,14,9,26,32,2,17,36,3,27,22,30,12,24,4,8,33,23,11,6,1,15,39,29,34],
+      "mesh_layout_digest": "800bf1f5d830b58b5c2c24fe31d646251e8f128dccaa25dacb91f9eaec34ee8b",
+      "weighted_cost_symbols": ["alpha_static_link","beta_consumable_token","gamma_round","delta_hop"]
+    },
+    "3834_bonkers_srg_digital_twin_checksum": {
+      "boundary": "Exact single-edge digital-twin checksum and localizer; simultaneous defects require a separate decoding theorem.",
+      "endpoint_localization": "The two endpoint rows are uniquely the rows with support 13 (deletion) or 14 (insertion).",
+      "identity": "A^2+2A-8I-4J=0",
+      "single_edge_deletion": {"count":240,"frobenius_norm_squared":54,"rank":4,"residual_support":48,"row_support_histogram":{"0":18,"1":18,"2":2,"13":2}},
+      "single_edge_insertion": {"count":540,"frobenius_norm_squared":58,"rank":4,"residual_support":52,"row_support_histogram":{"0":18,"1":16,"2":4,"14":2}}
+    },
+    "3835_bonkers_heralded_topology_distillation": {
+      "adjacent_success": "1-(1-p)(1-p^2)^2",
+      "boundary": "Independent heralded-edge model; correlated source, memory, and fusion failures are outside the formula.",
+      "nonedge_success": "1-(1-p^2)^4",
+      "path_structure": "Four internally disjoint two-hop paths for every nonedge; one direct edge plus two edge-disjoint triangle detours for every edge.",
+      "thresholds": {
+        "0.99": {"adjacent_direct_plus_two_detours_threshold":0.8574195462935255,"nonedge_four_two_hop_threshold":0.8269052146305295},
+        "0.999": {"adjacent_direct_plus_two_detours_threshold":0.9356145986307456,"nonedge_four_two_hop_threshold":0.906737039607464},
+        "0.9999": {"adjacent_direct_plus_two_detours_threshold":0.9704683972798052,"nonedge_four_two_hop_threshold":0.9486832980505153}
+      }
+    },
+    "3836_bonkers_transvection_symmetry_bath": {
+      "boundary": "Spectral statement for the ideal discrete symmetry bath; physical jump rates and dissipation costs are not specified.",
+      "generator_jumps": 8,
+      "interpretation": "Random transvection jumps spread a localized single-site defect over the full point orbit before orbit averaging.",
+      "one_percent_total_variation_bound_steps": 89,
+      "second_eigenvalue": 0.9367092858522434,
+      "spectral_gap": 0.06329071414775655,
+      "stationary_distribution": "uniform on 40 points"
+    }
+  },
+  "schema": "w33.pass3829_3836.v1",
+  "semantic_sha256": "d924764ba5d64326fbdc8d7a6bbd8bcdff2fd08fb2a4c6560f29c53a71c29fe4"
+}
