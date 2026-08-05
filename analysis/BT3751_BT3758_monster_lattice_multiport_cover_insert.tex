@@ -1,0 +1,68 @@
+\section{The six-bit quadratic parent, the rooted code lattice, and the Fischer holonomy frame}
+\label{sec:bt3751-3758-monster-lattice-multiport-cover}
+
+The thirty-six spreads and their 120 Norton triples admit a further exact closure. The Miyamoto involutions generate
+\[
+O^-_6(2)\cong U_4(2){:}2,
+\qquad
+\Omega^-_6(2)\cong U_4(2),
+\]
+and the compressed standard pairs can be supplemented by complete cycle and class-size fingerprints on both the thirty-six axes and the 120 Fischer lines. These are abstract finite-group search filters; no serialized Monster words are asserted.
+
+Let $D$ be the $36\times120$ axis--triple incidence matrix. Its binary left kernel is the doubly-even self-orthogonal code
+\[
+C=[36,6,16],
+\qquad W_C(z)=1+27z^{16}+36z^{20}.
+\]
+The associated Construction-A lattice
+\[
+L(C)=2^{-1/2}\{z\in\mathbb Z^{36}:z\bmod2\in C\}
+\]
+is even, has minimum norm two, and satisfies
+\[
+\operatorname{SNF}(G)=1^{12}2^{24},
+\qquad L(C)^*/L(C)\cong(\mathbb Z/2\mathbb Z)^{24}.
+\]
+Its root system is $A_1^{36}$, so the lattice is explicitly rooted and non-unimodular rather than Leech-like.
+
+If $A$ is the spread graph adjacency matrix, then
+\[
+K=2A-J,
+\qquad H=K/6
+\]
+is the symmetric rational Hadamard involution of the previous section. There exist twenty-one pairwise orthogonal primitive vectors $v_i\in\mathbb Z^{36}$ such that the commuting Householder reflections
+\[
+R_i=I-2\frac{v_iv_i^{\mathsf T}}{v_i^{\mathsf T}v_i}
+\]
+satisfy the exact factorization
+\[
+H=R_1R_2\cdots R_{21}.
+\]
+This is a transfer-matrix factorization and not a fabricated optical-device claim.
+
+The same code identifies a six-dimensional minus-type quadratic space. Its thirty-six nonsingular vectors form a $(64,36,20)$ Hadamard difference set. For the full bilinear Walsh matrix $W_{64}$ and its nonsingular principal minor $W_N$,
+\[
+W_{64}W_{64}^{\mathsf T}=64I,
+\qquad K=W_N-2I.
+\]
+Thus the thirty-six-port transform is a diagonal shift of a quadratic-Walsh principal minor.
+
+Integrally, the triple incidence has
+\[
+\operatorname{SNF}(D)=1^{30}2^5 6,
+\qquad
+\operatorname{coker}(D)\cong(\mathbb Z/2\mathbb Z)^5\times\mathbb Z/6\mathbb Z.
+\]
+The order $192$ is not promoted to a tomotope identification without an objectwise map.
+
+Finally, the 120-vertex Fischer-line graph is not distance regular: distance-two pairs split into two intersection profiles. Its exact symmetry group is $U_4(2){:}2$, a vertex stabilizer has subdegrees $1,2,27,36,54$, and the Terwilliger algebra has dimension $55$ modulo three independent large primes. Projecting the three-point fibers to their standard $S_3$ sectors produces a rank-twenty tight-frame projector
+\[
+E_{20}=\frac{FAF+9F}{108},
+\qquad (FAF+9F)^2=108(FAF+9F),
+\]
+whose 120 vectors have normalized inner products in
+\[
+\left\{-\frac12,-\frac16,0,\frac13\right\}.
+\]
+
+The Monster class-fusion computation is delegated to a self-reporting GAP/CTblLib workflow. No fusion count or degree-$81$ multiplicity is asserted until its committed execution artifact is observed.
