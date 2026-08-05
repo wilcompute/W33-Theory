@@ -24,6 +24,7 @@
     <div class="brand">W33 Theory</div>
     <a class="pill" href="atlas.html">Visual atlas</a>
     <a class="pill" href="triangle-free-srg-m57.html">Triangle-free SRGs</a>
+    <a class="pill" href="seven-graph-csp-scheme.html">Graph CSP & schemes</a>
     <a class="pill" href="falsifiers.html">Falsifiers</a>
     <a class="pill" href="https://github.com/wilcompute/W33-Theory">Repository</a>
   </nav>
@@ -41,6 +42,19 @@
         <small>Nine colours are ruled out; a literal eleven-colouring is certified.</small>
       </aside>
     </section>
+
+<section id="bt3506-3512-seven-graph-csp-scheme-symmetry">
+  <h2>Passes 3506–3512: Moore CSP, exact descendants, and scheme blindness</h2>
+  <div class="grid">
+    <article class="card theorem"><div class="eyebrow">Moore permutation CSP</div><div class="metric">86,240 → 172,480</div><p>The 56×56 core is exported as permutation variables with inverse channels, vertex-star constraints, gauge fixing, and lazy curvature cuts.</p></article>
+    <article class="card theorem"><div class="eyebrow">Exact descendants</div><div class="metric">HS → M22 → Gewirtz</div><p>A literal Golay/Witt construction joins three sporadic graphs; Clebsch → Petersen is independently reconstructed in F2⁵.</p></article>
+    <article class="card theorem"><div class="eyebrow">Scheme-blind hole</div><div class="metric">all Krein tests pass</div><p>The nonexistent SRG(57,14,1,4) survives parameter, spectrum, absolute-bound, and rank-three Krein feasibility.</p></article>
+    <article class="card theorem"><div class="eyebrow">Spectral transplant</div><div class="metric">f(A)=aA+bI</div><p>W33 and Gewirtz share a two-channel polynomial calculus and the exact reflection U=(-I-A)/3.</p></article>
+    <article class="card theorem"><div class="eyebrow">Odd symmetry residue</div><div class="metric">19:9 · order 171</div><p>Conditional oddness kills common A5 and PSL(2,19), but parity alone leaves the Borel 19:9 shadow open.</p></article>
+    <article class="card theorem"><div class="eyebrow">Non-Abelian curvature</div><div class="metric">HS: all 2³</div><p>All fifteen Hoffman–Singleton row matchings and twenty triangle holonomies are fixed-point-free involutions.</p></article>
+  </div>
+  <section class="card boundary" style="margin-top:18px"><strong>Boundary.</strong> The M57 solver surface is implemented but not solved; involutive curvature is a high-risk ansatz, not a necessary condition. <a href="seven-graph-csp-scheme.html">Open the complete seven-front atlas.</a></section>
+</section>
 
 <section id="bt3500-3505-triangle-free-srg-m57">
   <h2>Passes 3500–3505: seven triangle-free SRGs and the missing-Moore firewall</h2>
@@ -184,11 +198,11 @@
 
 <h2>Explore the project</h2>
 <section class="grid">
-  <article class="card links"><a href="atlas.html"><strong>Visual atlas</strong><span>W33, Levi geometry, Hodge projectors, codec chains, selectors, and falsifiers.</span></a><a href="triangle-free-srg-m57.html"><strong>Triangle-free SRG / M57 atlas</strong><span>The seven known graphs, the μ=4 ladder, the Moore edge chart, and the four-way 57 firewall.</span></a><a href="falsifiers.html"><strong>Experimental falsifier dashboard</strong><span>Separates internal theorem status from externally refreshed empirical status.</span></a></article>
+  <article class="card links"><a href="atlas.html"><strong>Visual atlas</strong><span>W33, Levi geometry, Hodge projectors, codec chains, selectors, and falsifiers.</span></a><a href="triangle-free-srg-m57.html"><strong>Triangle-free SRG / M57 atlas</strong><span>The seven known graphs, the μ=4 ladder, the Moore edge chart, and the four-way 57 firewall.</span></a><a href="seven-graph-csp-scheme.html"><strong>Seven-graph CSP and scheme atlas</strong><span>The gauge-reduced M57 solver, exact descendant chains, scheme blindness, and permutation curvature.</span></a><a href="falsifiers.html"><strong>Experimental falsifier dashboard</strong><span>Separates internal theorem status from externally refreshed empirical status.</span></a></article>
   <article class="card checklist"><div class="check"><b>✓</b><span>Executable theorem witnesses and frozen JSON certificates.</span></div><div class="check"><b>✓</b><span>Regression tests and fail-closed claim boundaries.</span></div><div class="check"><b>✓</b><span>Three canonical manuscripts share certified inserts.</span></div><div class="check"><b>✓</b><span>Public claims remain separated from conjectures and engineering targets.</span></div></article>
 </section>
   </main>
-  <footer><p>Passes 3500–3505 · triangle-free SRG, W33–Gewirtz kernel, and missing-Moore firewall</p></footer>
+  <footer><p>Passes 3506–3512 · Moore permutation CSP, exact descendants, scheme blindness, and non-Abelian curvature</p></footer>
 </div>
 </body>
 </html>
