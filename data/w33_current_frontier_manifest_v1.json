@@ -33,6 +33,7 @@
     "analysis/BT3614_BT3627_monster_u42_steinberg_leech_falsifiers_insert",
     "analysis/BT3628_BT3634_octad_borel_matrix_proof_tomography_insert",
     "analysis/BT3635_BT3648_monster_u42_completion_insert",
+    "analysis/BT3649_BT3662_seven_front_closure_insert",
     "analysis/BT3663_BT3669_monster_chamber_spread_bridge_insert",
     "analysis/BT3670_BT3686_monster_tomotope_amalgamation_insert"
   ],
@@ -63,6 +64,7 @@
     {"kind": "id", "token": "bt3614-3627-monster-u42-steinberg", "source": "analysis/BT3614_BT3627_monster_u42_steinberg_leech_falsifiers_index_insert.html"},
     {"kind": "id", "token": "bt3628-3634-octad-borel-matrix-proof-tomography", "source": "analysis/BT3628_BT3634_octad_borel_matrix_proof_tomography_index_insert.html"},
     {"kind": "id", "token": "bt3635-3648-monster-u42-completion", "source": "analysis/BT3635_BT3648_monster_u42_completion_index_insert.html"},
+    {"kind": "id", "token": "bt3649-3662-seven-front-closure", "source": "analysis/BT3649_BT3662_seven_front_closure_index_insert.html"},
     {"kind": "id", "token": "bt3663-3669-monster-chamber-spread-bridge", "source": "analysis/BT3663_BT3669_monster_chamber_spread_bridge_index_insert.html"},
     {"kind": "id", "token": "bt3670-3686-monster-tomotope-amalgamation", "source": "analysis/BT3670_BT3686_monster_tomotope_amalgamation_index_insert.html"}
   ],
