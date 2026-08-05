@@ -20,7 +20,8 @@
     "analysis/BT3458_BT3471_face_tower_brauer_tomotope_insert",
     "analysis/BT3486_BT3499_radius_code_biplane_supplement_insert",
     "analysis/BT3500_BT3505_triangle_free_srg_m57_bridge_insert",
-    "analysis/BT3506_BT3512_seven_graph_csp_scheme_symmetry_insert"
+    "analysis/BT3506_BT3512_seven_graph_csp_scheme_symmetry_insert",
+    "analysis/BT3514_BT3527_multicircuit_rm_biplane_a5_insert"
   ],
   "front_doors": {
     "w33_paper.tex": "w33_paper_body.tex",
@@ -93,6 +94,10 @@
     {
       "token": "passes-3506-3512-seven-graph-csp-scheme-symmetry",
       "source": "docs/seven-graph-csp-scheme.html"
+    },
+    {
+      "token": "passes-3514-3527-multicircuit-rm-biplane-a5",
+      "source": "docs/multicircuit-rm-biplane-a5.html"
     }
   ],
   "boundary": "The manifest controls source reachability and ordering only; it does not certify PDF, hardware, laboratory, or physical claims."
