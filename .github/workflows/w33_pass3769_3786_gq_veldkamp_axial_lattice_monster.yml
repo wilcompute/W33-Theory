@@ -1,0 +1,60 @@
+name: Passes 3769-3786 GQ Veldkamp axial lattice
+
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass3751_3768_gq_veldkamp_axial_lattice_monster.py'
+      - 'analysis/w33_pass3769_3786_gq_veldkamp_axial_lattice_monster.py'
+      - 'analysis/w33_pass3769_3786_finite_group_descent_harness.py'
+      - 'data/PART_3769_3786_GQ_VELDKAMP_AXIAL_LATTICE_MONSTER_results.json'
+      - 'data/PART_3769_3786_FINITE_GROUP_DESCENT_candidate.json'
+      - 'tests/test_w33_pass3769_3786_gq_veldkamp_axial_lattice_monster.py'
+      - 'analysis/BT3769_BT3786_gq_veldkamp_axial_lattice_monster_insert.tex'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - 'docs/index.html'
+      - 'docs/gq-veldkamp-w33-axial.html'
+      - '.github/workflows/w33_pass3769_3786_gq_veldkamp_axial_lattice_monster.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy sympy networkx pytest
+      - name: Recompute collision-safe certificate
+        run: |
+          python analysis/w33_pass3769_3786_gq_veldkamp_axial_lattice_monster.py --output /tmp/pass3769-3786.json
+          cmp /tmp/pass3769-3786.json data/PART_3769_3786_GQ_VELDKAMP_AXIAL_LATTICE_MONSTER_results.json
+      - name: Run focused regression
+        run: pytest -q tests/test_w33_pass3769_3786_gq_veldkamp_axial_lattice_monster.py
+      - name: Confirm descent gate remains fail closed
+        run: python analysis/w33_pass3769_3786_finite_group_descent_harness.py
+      - name: Check source reachability
+        run: |
+          grep -F 'BT3769_BT3786_gq_veldkamp_axial_lattice_monster_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          grep -F 'bt3769-3786-gq-veldkamp-axial' docs/index.html
+          grep -F 'gq-veldkamp-w33-axial.html' data/w33_current_frontier_manifest_v1.json
+
+  manuscripts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Tectonic
+        run: |
+          curl --proto '=https' --tlsv1.2 -fsSL https://drop-sh.fullyjustified.net | sh
+          echo "$HOME/.cargo/bin" >> "$GITHUB_PATH"
+      - name: Compile all manuscript front doors
+        run: |
+          tectonic --keep-logs --keep-intermediates w33_paper.tex
+          tectonic --keep-logs --keep-intermediates photonic_holonet.tex
+          tectonic --keep-logs --keep-intermediates holonet_machine_blueprint.tex
