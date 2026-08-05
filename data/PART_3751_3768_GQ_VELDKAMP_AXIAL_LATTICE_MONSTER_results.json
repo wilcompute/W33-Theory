@@ -1,0 +1,204 @@
+{
+  "schema": "w33.pass3751_3768.gq_veldkamp_axial_lattice_monster.v1",
+  "status": "PASS_EXACT_EIGHT_FRONT_SOURCE_MONSTER_AND_ROOTLESS_LEECH_PENDING",
+  "checks": {
+    "gq_2_4_27_points_45_lines": true,
+    "dual_gq_4_2_srg_45_12_3_3": true,
+    "dual_gq_maximal_lines_27_K5": true,
+    "bose_mesner_and_krein_exact": true,
+    "terwilliger_dimension16_center5": true,
+    "veldkamp_pg5_2_line_types_exact": true,
+    "norton_triples_are_typeIV_lines": true,
+    "ovoid_count200_orbits40_160": true,
+    "plane_ovoid_graph_is_W33": true,
+    "incidence_tower_ranks_exact": true,
+    "frame_flag_actions_inequivalent": true,
+    "axis24_idempotent_spectrum": true,
+    "axis24_fusion_and_pair_laws": true,
+    "axis24_simple_zero_derivations": true,
+    "wd4_invariant_mod2_rank_no_go": true,
+    "c2_preserving_E8_cubed_child": true,
+    "monster_descent_target_fail_closed": true
+  },
+  "gq_association_algebra": {
+    "gq_2_4": {
+      "points": 27,
+      "lines": 45,
+      "line_size": 3,
+      "lines_per_point": 5,
+      "point_graph_srg": [27,10,1,5]
+    },
+    "dual_gq_4_2": {
+      "points": 45,
+      "lines": 27,
+      "line_size": 5,
+      "lines_per_point": 3,
+      "point_graph_srg": [45,12,3,3],
+      "spectrum": {"12":1,"3":20,"-3":24},
+      "maximal_K5_lines": 27
+    },
+    "bose_mesner_multiplication": {
+      "A1^2": "12 A0 + 3 A1 + 3 A2",
+      "A1*A2": "8 A1 + 9 A2",
+      "A2^2": "32 A0 + 24 A1 + 22 A2"
+    },
+    "primitive_idempotent_ranks": [1,20,24],
+    "krein_parameters": {
+      "q00": [1,0,0],
+      "q01": [0,1,0],
+      "q02": [0,0,1],
+      "q11": [20,10,"15/2"],
+      "q12": [0,9,"25/2"],
+      "q22": [24,15,"21/2"]
+    },
+    "terwilliger_at_vertex": {
+      "subconstituents": [1,12,32],
+      "dimension": 16,
+      "center_dimension": 5,
+      "generic_center_eigenvalue_multiplicities": [2,3,8,14,18],
+      "wedderburn_type": "M3 + M2 + C + C + C"
+    }
+  },
+  "veldkamp_triality_tower": {
+    "ambient": "PG(5,2) on the 63 nonzero vectors of a six-dimensional minus quadratic space",
+    "point_split": {"singular_perps":27,"nonsingular_doilies":36},
+    "line_type_census": {
+      "3_singular":45,
+      "2_singular_1_nonsingular":216,
+      "1_singular_2_nonsingular":270,
+      "3_nonsingular":120
+    },
+    "all_nonsingular_identification": "the 120 type-IV Veldkamp lines are exactly the Norton/Fischer triples",
+    "incidence_layers": {
+      "singular_point_by_gq_line": {"shape":[27,45],"rank_Q":21,"rank_F2":21},
+      "frame_by_gq_line": {"shape":[135,45],"rank_Q":45,"rank_F2":45},
+      "frame_by_nonsingular_point": {"shape":[135,36],"rank_Q":36,"rank_F2":29},
+      "norton_line_by_nonsingular_point": {"shape":[120,36],"rank_Q":36,"rank_F2":30},
+      "plane_ovoid_by_gq_line": {"shape":[40,45],"rank_Q":25,"rank_F2":15}
+    },
+    "regularities": {
+      "frames_per_gq_line":3,
+      "nonsingular_points_per_frame":4,
+      "frames_per_nonsingular_point":15,
+      "norton_lines_per_nonsingular_point":10,
+      "gq_lines_per_plane_ovoid":9,
+      "plane_ovoids_per_gq_line":8
+    }
+  },
+  "plane_ovoid_W33_bridge": {
+    "ovoids_total":200,
+    "automorphism_orbits":[40,160],
+    "terminology":{"40":"plane ovoids","160":"tripods"},
+    "plane_pair_intersections":{"1":540,"3":240},
+    "adjacency":"two plane ovoids share three GQ lines",
+    "graph_srg":[40,12,2,4],
+    "plane_ovoid_adjacency_sha256":"ea8bc0f4c5b644012047bab0cc92845acf19796c26c83e005d474e9c7a5766a6",
+    "W33_adjacency_sha256":"3112e83a139a7d3c07189fa5386c9905b0cd0f8b58de892a8972dc525b328c9d",
+    "incidence_gram":"M M^T = 8 I + 2 A_W33 + J",
+    "incidence_gram_spectrum":{"72":1,"12":24,"0":15}
+  },
+  "frame_flag_doppelganger": {
+    "objects_each":135,
+    "frame_meaning":"Lagrangian three-spaces; each has one singular GQ line and four nonsingular points",
+    "ordinary_flag_meaning":"incident point-line pairs of GQ(4,2)",
+    "even_group":"U4(2), order 25920",
+    "frame_stabilizer_order":192,
+    "frame_stabilizer_order_census":{"1":1,"2":43,"3":32,"4":84,"6":32},
+    "flag_stabilizer_order":192,
+    "flag_stabilizer_order_census":{"1":1,"2":27,"3":32,"4":36,"6":96},
+    "permutation_character_norms":{"frame":9,"flag":8,"cross_inner_product":4},
+    "verdict":"equal cardinality and a 3-to-1 map over the same 45 lines do not make the two U4(2) actions equivalent"
+  },
+  "gq24_axial_algebra": {
+    "space":"rank-24 primitive (-3)-eigenspace of the GQ(4,2) point graph",
+    "integral_projector":"P=(A-12I)(A-3I)=90 E_-3",
+    "projector_entries":{"diagonal":48,"adjacent":-12,"nonadjacent":3},
+    "axes":45,
+    "axis_normalization":"a_i=P e_i / 21",
+    "axis_spectrum":{"1":1,"1/7":14,"-1/3":9},
+    "fusion_law": {
+      "1*1":["1"],
+      "1*1/7":["1/7"],
+      "1*-1/3":["-1/3"],
+      "1/7*1/7":["1","1/7","-1/3"],
+      "1/7*-1/3":["1/7","-1/3"],
+      "-1/3*-1/3":["1","1/7","-1/3"]
+    },
+    "pair_laws": {
+      "collinear":"a_i a_j = -(a_i+a_j)/3; the five axes on every GQ line sum to zero",
+      "noncollinear":"a_i a_j = (a_i+a_j)/7 + (5/42) times the sum of the three common-neighbor axes"
+    },
+    "positive_frobenius":true,
+    "miyamoto_Z2_grading":false,
+    "multiplication_operator_algebra_dimension_mod_1000003":576,
+    "derivation_dimension_over_Q":0,
+    "verdict":"simple positive Frobenius axial algebra, but not Monster 2A/Majorana and not a nontrivially Z2-graded Miyamoto algebra"
+  },
+  "lattice_symmetry_breaking": {
+    "wd4_obstruction": {
+      "invariant_alternating_forms_dimension":7,
+      "rank_histogram":{"0":1,"4":3,"6":4,"8":12,"10":12,"14":40,"16":56},
+      "maximum_rank":16,
+      "verdict":"every W(D4)-invariant even integral Gram matrix is singular modulo 2, so no W(D4)-invariant even unimodular rank-24 child exists"
+    },
+    "c2_preserving_child": {
+      "isometry_type":"E8^3",
+      "positive_definite":true,
+      "even":true,
+      "determinant":1,
+      "minimum_norm":2,
+      "surviving_U4_2_stabilizer_order":2,
+      "basis_change_determinant":-1,
+      "gram_sha256":"1fee7de2ab3affc3d343e4856495c8e5fb480adcb17496b65bf9c1cf3280b660",
+      "maximum_absolute_gram_entry":24,
+      "boundary":"this is a controlled nontrivial-symmetry even-unimodular child, not rootless and not the Leech lattice"
+    },
+    "rootless_Leech_status":"PENDING explicit basis and executed symmetry-intersection certificate"
+  },
+  "monster_descent_front": {
+    "abstract_group":"U4(2):2 = O6-(2), order 51840",
+    "internal_fingerprint": {
+      "gq_points_lines":[45,27],
+      "plane_ovoid_W33_graph":[40,12,2,4],
+      "W_F4_normalizers":45,
+      "W_F4_order":1152,
+      "W_D4_frames":135,
+      "W_D4_order":192,
+      "Veldkamp_typeIV_lines":120,
+      "Fischer_involutions":36
+    },
+    "candidate_overgroup_routes": [
+      "Monster maximal 2^2.^2E6(2):S3 -> a U6(2):2 local route -> U4(2):2 x S3",
+      "Fi22 / 2.U6(2) route using the listed 2.2^(1+8):(U4(2):2) subgroup"
+    ],
+    "promotion_requirements": [
+      "serialized mmgroup generators",
+      "independent image order 51840",
+      "36-involution 3-transposition pattern",
+      "45 W(F4) stabilizers and 135 W(D4) frames",
+      "40 plane-ovoid W33 graph",
+      "120 type-IV Veldkamp lines",
+      "class fusion and content hash"
+    ],
+    "status":"FAIL_CLOSED_MMgroup_WORDS_PENDING"
+  },
+  "evidence_boundary": {
+    "proved_here": [
+      "complete GQ(4,2) Bose-Mesner/Krein/Terwilliger data",
+      "PG(5,2) Veldkamp line census and exact Norton-line identification",
+      "200-ovoid split and explicit W33 plane-ovoid graph isomorphism",
+      "inequivalence of the 135 frame and ordinary-flag actions",
+      "new simple rank-24 45-axis Frobenius algebra",
+      "W(D4)-invariant even-unimodular no-go",
+      "explicit C2-preserving E8^3 graph-polarization child"
+    ],
+    "not_proved_here": [
+      "serialized Monster words or executed Monster class fusion",
+      "rootless or canonical Leech polarization",
+      "Monster/Majorana/Griess/VOA identification",
+      "remote CI or PDF success",
+      "hardware or physical mechanism"
+    ]
+  },
+  "semantic_sha256":"f401d08e08c1f5898d363e2e371bfffb9ec0227b18486de4e9a4c72109d47b0b"
+}
