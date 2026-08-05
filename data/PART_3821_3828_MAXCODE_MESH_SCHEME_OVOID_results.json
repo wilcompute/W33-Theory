@@ -1,0 +1,170 @@
+{
+  "checks": {
+    "all_200_ovoids_and_264_orbital_rank_48": true,
+    "complete_internal_u42_standard_pair_census": true,
+    "component_isolation_deterministic": true,
+    "exact_418_gate_69_layer_adjacent_mesh": true,
+    "explicit_maximal_code_trivial_u42d2_stabilizer": true,
+    "maximal_extension_census_formula": true,
+    "orthogonal_group_order_51840": true,
+    "rank_five_scheme_krein_fusion_no_q_polynomial": true,
+    "terwilliger_dimension_79_center_10_over_Q": true,
+    "tripods_are_objectwise_w33_flags": true
+  },
+  "component_sha256": {
+    "maxcode": "57a0d24df8de27b4ad2ac233a2f1d56c3c8d5cd916ccfe97c31c554571ae55cc",
+    "mesh": "06fc8d68cce000f75b7a684a5262c7ff71867a683fec2f23ff7a75d82f7a1f3a",
+    "monster": "257c7e3c3b91c1de8a391b5b44026ddc03484d02176267b4dd66b81706160faa",
+    "ovoid": "31af623f37964d779cd90f444246e4c991fc4f84250cb1c26d3a1d6fd4b570d3",
+    "scheme": "eaeec13475012ad4f9edeb7b04c0895ea15db9e2cac959a6194d75f1965f9b41"
+  },
+  "evidence_boundary": {
+    "not_proved_here": [
+      "a materialized representative of each of at least 4.632e18 U4(2):2 maximal-code orbits",
+      "global optimality of 418 gates or 69 layers",
+      "serialized Monster words, a Monster embedding, or an executed character fusion",
+      "Leech/rootless identification, hardware fabrication, laboratory performance, remote CI, or PDF success"
+    ],
+    "proved_here": [
+      "exact total census and orbit explosion for maximal [36,17,8] extensions, plus one full free U4(2):2 orbit",
+      "an exact symbolic 418-rotation adjacent mesh in 69 layers",
+      "all Krein parameters, all fusion schemes, no Q-polynomial ordering, and exact Terwilliger dimensions 79/10",
+      "the complete two-orbit abstract U4(2) standard-pair census",
+      "all 200 ovoids and the objectwise W33 point-line-flag dictionary"
+    ]
+  },
+  "exact_adjacent_multiport": {
+    "adjacent_layers": 69,
+    "boundary": "The 418-gate circuit is exact and improves the prior 512-gate candidate. Global gate-count or depth optimality is not claimed.",
+    "distinct_c2_values": 144,
+    "exact_adjacent_givens_rotations": 418,
+    "lower_bounds": {
+      "depth": 6,
+      "proof": "Full 36-mode support requires depth at least ceil(log2 36)=6 and a connected interaction graph with at least 35 edges.",
+      "two_mode_gates": 35
+    },
+    "maximum_c2_denominator": 3315585,
+    "multiport": "H=(2A36-J)/6",
+    "parameter_sha256": "5c933cc2e6d2484e97894f3ca1f71627214238e41a68cd59b7527993d2b06b6b",
+    "parameterization": "c=sign_c*sqrt(c2), s=sign_s*sqrt(s2), with exact rational c2+s2=1",
+    "permutation": [2,1,6,3,4,5,0,8,11,12,13,10,14,7,9,15,16,26,28,18,31,21,24,34,17,27,35,25,19,29,22,30,20,32,23,33],
+    "permutation_sha256": "c3ae2735f64ac66044480b004cfaad7181ebcbeeef890aeae2362d48729e8c1d",
+    "skip_sha256": "a9450dd5908229d8ef09a7badfd6ceb8fecbd5217ef07bfe0c2658f404f4166e",
+    "terminal_phase": "one pi sign on the final mode",
+    "zero_eliminations_skipped_exactly": 212
+  },
+  "holonomy_association_scheme": {
+    "automorphism_group": "U4(2):2",
+    "automorphism_group_order": 51840,
+    "boundary": "No Q-polynomial ordering exists. The full Wedderburn block decomposition is not promoted here.",
+    "first_eigenmatrix_P": [["1","2","54","36","27"],["1","-1","-9","0","9"],["1","2","-6","6","-3"],["1","-1","3","0","-3"],["1","2","6","-12","3"]],
+    "fusion_schemes": [[[0],[1],[2],[3],[4]],[[0],[1],[2,4],[3]],[[0],[1],[2,3,4]],[[0],[1,2,3,4]]],
+    "krein_parameters": {
+      "0,0": ["1","0","0","0","0"],
+      "0,1": ["0","1","0","0","0"],
+      "0,2": ["0","0","1","0","0"],
+      "0,3": ["0","0","0","1","0"],
+      "0,4": ["0","0","0","0","1"],
+      "1,1": ["20","5","10/3","5/3","20/3"],
+      "1,2": ["0","4","0","20/3","0"],
+      "1,3": ["0","5","50/3","25/3","40/3"],
+      "1,4": ["0","5","0","10/3","0"],
+      "2,2": ["24","0","44/3","0","40/3"],
+      "2,3": ["0","20","0","52/3","0"],
+      "2,4": ["0","0","25/3","0","32/3"],
+      "3,3": ["60","25","130/3","65/3","140/3"],
+      "3,4": ["0","10","0","35/3","0"],
+      "4,4": ["15","0","20/3","0","10/3"]
+    },
+    "multiplicities": [1,20,24,60,15],
+    "point_stabilizer_order": 432,
+    "point_stabilizer_ordered_pair_orbits": 83,
+    "point_stabilizer_subdegrees": [1,2,27,36,54],
+    "proof": "79 exact word matrices are independent modulo 1000003; exact rational closure is verified on all 83 stabilizer orbitals. A 69-row exact center constraint subsystem has a ten-dimensional rational nullspace satisfying every constraint.",
+    "q_polynomial_orderings": [],
+    "second_eigenmatrix_Q": [["1","20","24","60","15"],["1","-10","24","-30","15"],["1","-10/3","-8/3","10/3","5/3"],["1","0","4","0","-5"],["1","20/3","-8/3","-20/3","5/3"]],
+    "terwilliger_center_dimension_over_Q": 10,
+    "terwilliger_dimension_over_Q": 79,
+    "valencies": [1,2,54,36,27],
+    "vertices": 120
+  },
+  "maximal_code_extensions": {
+    "base_code": {"parameters": [36,6,16], "weight_distribution": {"0":1,"16":27,"20":36}},
+    "complete_census": {
+      "boundary": "The exact census proves at least 4.632e18 U4(2):2 orbits. A literal representative list is not materialized in this packet.",
+      "formula": "product_{i=2}^{12}(2^i+1)",
+      "number_of_maximal_doubly_even_extensions": 240137905387279785868125,
+      "quadratic_space_type": "O^-(24,2), Witt index 11",
+      "u42d2_orbit_count_lower_bound": 4632289841575613440
+    },
+    "maximal_extension": {
+      "parameters": [36,17,8],
+      "u42d2_orbit_size": 51840,
+      "u42d2_stabilizer_order": 1,
+      "weight8_coordinate_degree_profile": {"42":5,"48":15,"54":15,"60":1},
+      "weight_distribution": {"0":1,"8":225,"12":9555,"16":55755,"20":55755,"24":9555,"28":225,"36":1}
+    }
+  },
+  "monster_internal_standard_pairs": {
+    "boundary": "This completely enumerates the abstract U4(2) candidate pairs. No serialized Monster words, Monster embedding, or 196883-character restriction is produced because no GAP/mmgroup result artifact is present.",
+    "centralizer_orbits": [576,576],
+    "class_summary": {"order_1_size_1":1,"order_2_size_45":1,"order_2_size_270":1,"order_3_size_40":2,"order_3_size_240":1,"order_3_size_480":1,"order_4_size_540":1,"order_4_size_3240":1,"order_5_size_5184":1,"order_6_size_360":2,"order_6_size_720":2,"order_6_size_1440":1,"order_6_size_2160":1,"order_9_size_2880":2,"order_12_size_2160":2},
+    "fixed_a_admissible_b_count": 1152,
+    "fixed_a_centralizer_order": 576,
+    "generated_group_orders": [25920,25920],
+    "group_order": 25920,
+    "internal_group": "U4(2)",
+    "relations": ["|a|=2","|b|=5","|ab|=9","|[a,b]|=3"],
+    "standard_pair_classes": {"a":{"class_size":45,"order":2},"b":{"class_size":5184,"order":5},"ab":{"class_size":2880,"order":9}},
+    "total_ordered_standard_pairs": 51840,
+    "two_distinct_order9_product_classes": true
+  },
+  "quadratic_parent_ovoid_fusion": {
+    "boundary": "This is an exact finite incidence dictionary. It does not identify ovoids or flags with physical states or spacetime events.",
+    "combined_264_object_orbital_coherent_configuration": {
+      "fibers": [1,27,36,40,160],
+      "orbital_rank": 48,
+      "stabilizer_subdegree_table": [
+        [[1],[27],[36],[40],[160]],
+        [[1],[1,10,16],[16,20],[40],[160]],
+        [[1],[12,15],[1,15,20],[40],[40,120]],
+        [[1],[27],[36],[1,12,27],[4,12,36,108]],
+        [[1],[27],[9,27],[1,3,9,27],[1,3,3,9,9,27,27,81]]
+      ]
+    },
+    "objectwise_dictionary": {
+      "160_tripods": "160 incident W33 point-line flags",
+      "40_plane_ovoids": "40 W33 points",
+      "40_tripod_classes": "40 W33 lines",
+      "checks": {"all_flags":160,"all_lines":40,"all_points":40},
+      "special_tripod_plane_orbit": "the flag incidence relation and all 160 pairs are disjoint ovoid pairs"
+    },
+    "ovoid_orbits": {"plane_ovoids":40,"tripods":160},
+    "tripod_port_incidence": {
+      "column_multiplicity":4,"column_weight":9,"distinct_columns":40,
+      "four_to_one_quotient":"the 40 distinct nine-port blocks are objectwise the W33 line-versus-spread incidence columns",
+      "gram_values":{"diagonal":40,"spread_adjacent":16,"spread_nonadjacent":4},
+      "rank_over_Q":16,"row_weight":40,"shape":[36,160]
+    }
+  },
+  "schema": "w33.pass3821_3828.maxcode_mesh_scheme_ovoid.v1",
+  "semantic_sha256": "b141dd0f82e4a6b1ee62d1c57f0e92bdfc9f58d3b32515f9521a0175fdca88a1",
+  "status": "PASS_EXACT_EIGHT_FRONT_COMPONENT_SOURCE_MONSTER_EXTERNAL_RUNTIME_PENDING",
+  "three_bonkers_constructions": {
+    "ovoids_as_points_and_flags": {
+      "160_tripods":"160 incident W33 point-line flags","40_plane_ovoids":"40 W33 points","40_tripod_classes":"40 W33 lines",
+      "checks":{"all_flags":160,"all_lines":40,"all_points":40},
+      "special_tripod_plane_orbit":"the flag incidence relation and all 160 pairs are disjoint ovoid pairs"
+    },
+    "rank_48_coherent_completion": {
+      "fibers":[1,27,36,40,160],"orbital_rank":48,
+      "stabilizer_subdegree_table":[[[1],[27],[36],[40],[160]],[[1],[1,10,16],[16,20],[40],[160]],[[1],[12,15],[1,15,20],[40],[40,120]],[[1],[27],[36],[1,12,27],[4,12,36,108]],[[1],[27],[9,27],[1,3,9,27],[1,3,3,9,9,27,27,81]]]
+    },
+    "tripod_fourfold_line_cover": {
+      "column_multiplicity":4,"column_weight":9,"distinct_columns":40,
+      "four_to_one_quotient":"the 40 distinct nine-port blocks are objectwise the W33 line-versus-spread incidence columns",
+      "gram_values":{"diagonal":40,"spread_adjacent":16,"spread_nonadjacent":4},
+      "rank_over_Q":16,"row_weight":40,"shape":[36,160]
+    }
+  }
+}
