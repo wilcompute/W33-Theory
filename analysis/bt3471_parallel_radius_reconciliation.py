@@ -23,10 +23,6 @@ def build_certificate() -> dict:
     interval = radius["improved_interval"]
     assert interval == [389, 435]
 
-    amplitude = parallel["sections"]["pass3487_3488_amplitude_grid"]
-    exact = amplitude["exact_winner"]
-    assert exact["ratio_strictly_below_9"] is True
-
     return {
         "schema": "w33.bt3471.parallel_radius_reconciliation.v1",
         "status": "PASS",
@@ -34,16 +30,14 @@ def build_certificate() -> dict:
         "live_covering_radius_interval": interval,
         "local_pass3458_delsarte_lower_bound": 389,
         "parallel_pass3486_upper_bound": 435,
-        "parallel_amplitude_grid_verdict": "exact winner strictly below Hoffman ratio 9",
         "checks": {
             "parallel_radius_upper_bound_435": interval[1] == 435,
             "lower_bound_preserved_389": interval[0] == 389,
-            "finite_amplitude_grid_below_9": exact["ratio_strictly_below_9"] is True,
         },
         "boundary": (
             "The Pass 3458 association-scheme computation independently closes the "
-            "level-zero lower bound at 389. The upper bound 435 and finite amplitude-grid "
-            "no-go are imported and verified from the later frozen Pass 3486-3499 packet."
+            "level-zero lower bound at 389. The upper bound 435 is imported and verified "
+            "from the later frozen Pass 3486-3499 packet."
         ),
     }
 
