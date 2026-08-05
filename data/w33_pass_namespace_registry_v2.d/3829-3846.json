@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [3829, 3846],
+  "slug": "ovoid_wedderburn_code_leech_monster_axial_triality_three_bonkers",
+  "title": "Characteristic-zero ovoid algebra, full code/Leech transport, concrete descent filters, universal axial presentation, triality incidence closure, and three chained constructions",
+  "status": "reserved",
+  "owner": "openai-gpt-5.6-thinking",
+  "reserved_at": "2026-08-05T19:10:00-04:00",
+  "purpose": "Execute all five published next steps from Passes 3795-3812 plus three independent constructions: compute the characteristic-zero Wedderburn decomposition of the 19-orbital 200-ovoid algebra; transport the complete W33 line/spread/Norton/code/frame tower through the canonical plane-ovoid dictionary and Leech carrier; execute every available abstract and serialized Monster descent filter without inventing words; prove an exact universal rational presentation and classify low-axis subalgebras; close the double-K4 triality geometry; and derive three additional executable structures.",
+  "coordination": "Passes 3821-3828 are reserved for a separate maximal-code/mesh-holonomy packet. Preserve Passes 3787-3828 and reconcile all newer parallel commits before shared manifest, manuscript, public-page, workflow, or namespace writes.",
+  "boundary": "Reservation only. No characteristic-zero decomposition, code/Leech incidence claim, Monster embedding or class fusion, universal-presentation theorem, automorphism identification, remote CI/PDF success, hardware/laboratory result, or physical interpretation is promoted without executable evidence."
+}
