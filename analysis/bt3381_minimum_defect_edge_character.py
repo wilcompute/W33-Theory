@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Exact PSp(4,3) decomposition of the 720 minimum-defect support carrier.
 
-The support patterns are the 720 undirected edges of the 45-block
-SRG(45,32,22,24): the 240 filled triangles partition those edges three at a
-time.  This script constructs the literal action, hands its two generators to
-GAP, and freezes the irreducible multiplicities and orbital rank.
+The helper ``support_graph`` returns the 12-regular GQ(4,2) point graph.  The
+minimum-defect supports are the 720 edges of its 32-regular complement
+SRG(45,32,22,24).  This script constructs that literal action, sends its two
+generators to GAP, and freezes the irreducible multiplicities and orbital rank.
 """
 from __future__ import annotations
 
@@ -26,7 +26,19 @@ OUT = ROOT / "data/PART_BT3381_MINIMUM_DEFECT_EDGE_CHARACTER_results.json"
 
 def build_edge_carrier():
     points, adjacency, symplectic = build_w33()
-    supports, graph45 = support_graph(adjacency)
+    supports, gq42 = support_graph(adjacency)
+    gq42 = np.asarray(gq42, dtype=np.int64)
+    assert gq42.shape == (45, 45)
+    assert set(gq42.sum(axis=1).tolist()) == {12}
+    graph45 = np.ones((45, 45), dtype=np.int64) - np.eye(45, dtype=np.int64) - gq42
+    assert set(graph45.sum(axis=1).tolist()) == {32}
+    assert np.array_equal(
+        graph45 @ graph45,
+        8 * np.eye(45, dtype=np.int64)
+        - 2 * graph45
+        + 24 * np.ones((45, 45), dtype=np.int64),
+    )
+
     support_index = {support: index for index, support in enumerate(supports)}
     edges = [
         (i, j)
@@ -118,6 +130,7 @@ def build_certificate():
         "rank_matches_multiplicity_squares": (
             sum(m * m for m in multiplicities) == result["orbital_rank"]
         ),
+        "orbital_rank_34": result["orbital_rank"] == 34,
         "transitive": result["subdegrees"][0] == 1,
         "subdegrees_sum_720": sum(result["subdegrees"]) == 720,
     }
