@@ -3,8 +3,10 @@
   "range": [3649, 3662],
   "owner": "openai-gpt-5.6-thinking",
   "branch": "agent/pass3649-3662-seven-front-closure",
-  "purpose": "Execute the five live continuations after Passes 3600-3613: degree-three covering relaxation, modular composition closure of the explicit E81 projector, unrestricted-orbital transported-M4 optimization, alternative tomotope cocycle census, and objectwise W33-Clebsch-Gewirtz bridge. Add two chained outside-box constructions derived from the cubic dependency operator and recent Monster/U4(2) frontier.",
+  "purpose": "Close the cubic degree-three integrality, explicit E81 modular structure, transported-M4 positive-gauge dual, corrected tomotope cocycle census, and objectwise W33-Clebsch-Gewirtz bridge; add the cubic obstruction clock and S3 tomotope selector.",
   "base": "b660d1e0cc01275402a37eba0bbc9e319ac3e193",
-  "status": "reserved",
-  "claim_boundary": "Do not promote a radius endpoint, ten-colour decision, unrestricted amplitude optimum, simple-module label, tomotope identification, Gewirtz embedding, Monster restriction, hardware/PDF/laboratory result, or physical interpretation without executed evidence."
+  "status": "source_complete_pending_remote_evidence",
+  "semantic_sha256": "067047bbf3fe04301fcb26bf484a3d151bf6db4ab762fa6bf31f527889d09a89",
+  "supersedes": ["Passes 3600-3613 tomotope eight-cell double-cover count 0"],
+  "claim_boundary": "The radius endpoint, ten-colour decision, arbitrary signed complex Hermitian optimum, complete tomotope isomorphism, 0/1 Gewirtz embedding, Monster embedding, remote PDF/CI/hardware/laboratory evidence, and physical interpretations remain unpromoted."
 }

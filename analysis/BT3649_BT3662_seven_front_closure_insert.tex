@@ -1,0 +1,44 @@
+\subsection{Cubic integrality, Steinberg closure, and the corrected tomotope lift}
+\label{sec:bt3649-3662-seven-front-closure}
+
+For the cubic dependency incidence matrix \(T\in\{0,1\}^{240\times5040}\), the uniform primal and dual witnesses have value 80:
+\[
+x=\tfrac13\mathbf1_{240},\qquad y=\tfrac1{63}\mathbf1_{5040}.
+\]
+Thus the fractional transversal number is 80.  An integral 80-set would make every covering constraint tight, \(T^Tx=\mathbf1\).  Since \(TT^T=63I+D\) has minimum eigenvalue 45 and full rank 240, the unique real solution is \(x=\tfrac13\mathbf1\), impossible for a binary vector.  Hence
+\[
+\boxed{\tau\ge81},\qquad \tau/\tau^*\ge81/80.
+\]
+This is a cubic integrality theorem, not a covering-radius endpoint; \(389\le R_{\rm defect}\le435\) remains live.
+
+The ten orbital matrices of the 240-face action restrict on \(E_{81}=-D^3\) to a one-dimensional algebra over \(\mathbb F_3\), so
+\[
+\operatorname{End}_{PSp(4,3)}(E_{81})=\mathbb F_3.
+\]
+A deterministic Sylow-three subgroup of order 81 acts regularly on this space. Therefore \(E_{81}\) is projective; the scalar endomorphism ring forces simplicity, and the explicit image realizes the defining-characteristic Steinberg module. The complementary filtration has dimensions \(159\supset44\supset14\supset0\).
+
+For the fourfold 45-anchor blowup, the 27 lifted independent 20-sets, each point occurring three times, give \(\chi_f=9\). The unrestricted positive-gauge weighted-Hoffman dual is therefore exactly nine, attained by \(A_{45}\otimes I_4\) with spectrum \(32^4,2^{96},(-4)^{80}\). Arbitrary signed complex Hermitian weights remain open.
+
+\paragraph{Correction to Passes 3600--3613.}
+The earlier zero count for eight-cell covers is withdrawn: its increasing-index backtracker skipped valid subsets. Complete enumeration of all \(\binom{12}{8}=495\) simple subsets finds exactly three covers, one orbit under the visible order-48 group, with stabilizer 16 and induced action \(S_3\). Each cover has cell adjacency \(K_{4,4}\). With
+\[
+A=\{0,3,8,11\},\quad B=\{1,5,6,10\},\quad C=\{2,4,7,9\},
+\]
+the covers are \(A\cup B,A\cup C,B\cup C\); exhaustive enumeration of all 75,582 multisets adds precisely \(2A,2B,2C\). This establishes the eight-cell incidence layer, but not yet the full rank-four polytope isomorphism.
+
+A concrete objectwise W33--Clebsch bridge is supplied by the integral matrix
+\[
+Q=\begin{pmatrix}
+56A_W-6J_{40}&8J_{40,16}\\
+8J_{16,40}&\frac72(-3A_C^2+18A_C+17I)+8J_{16}
+\end{pmatrix}.
+\]
+It has constant row sum 560 and obeys
+\[
+(Q-560I)(Q-112I)(Q+224I)=0,
+\]
+so \(Q/56\) has Gewirtz spectrum \(10^1,2^{35},(-4)^{20}\). This is an integral weighted spectral bridge, not a 0/1 graph embedding.
+
+Finally, \(C=I+D+E_{81}\) has order three over \(\mathbb F_3\), with \((C-I)\)-power ranks \(44,14,0\) and Jordan type \(J_3(1)^{14}\oplus J_2(1)^{16}\oplus J_1(1)^{166}\). The three corrected tomotope covers form a second exact \(S_3\)-selector register. Neither construction is promoted as physical dynamics.
+
+The frozen semantic SHA-256 is \texttt{067047bbf3fe04301fcb26bf484a3d151bf6db4ab762fa6bf31f527889d09a89}. No remote CI, PDF, FPGA, laboratory, Monster embedding, radius endpoint, or ten-colour result is asserted here.

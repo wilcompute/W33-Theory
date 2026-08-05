@@ -1,0 +1,27 @@
+{
+  "schema": "w33.pass3649_3662.claims_ledger.v1",
+  "semantic_sha256": "067047bbf3fe04301fcb26bf484a3d151bf6db4ab762fa6bf31f527889d09a89",
+  "proved": [
+    "fractional cubic transversal number 80 and integral lower bound 81",
+    "E81 endomorphism ring F3, Sylow-3 regular restriction, simple projective conclusion",
+    "positive-gauge transported-M4 weighted-Hoffman optimum 9",
+    "exact three simple tomotope-style covers and three doubled-tetrad multiset covers",
+    "integral 56-object W33-Clebsch weighted matrix with Gewirtz spectrum",
+    "order-three cubic obstruction register and S3 three-cover selector"
+  ],
+  "corrected": [{
+    "prior": "Passes 3600-3613: zero eight-cell double covers",
+    "status": "withdrawn",
+    "replacement": "three simple covers among 495 subsets; six covers among 75,582 multisets",
+    "cause": "incomplete increasing-index backtracker"
+  }],
+  "open": [
+    "covering-radius endpoint",
+    "ten-colour decision for the live frame graph",
+    "arbitrary signed complex Hermitian transported-M4 optimum",
+    "full rank-four tomotope isomorphism",
+    "0/1 Gewirtz graph embedding or canonical intertwiner",
+    "concrete Monster embedding and degree-81 restriction multiplicity",
+    "remote CI, PDF, FPGA, laboratory, and physical interpretation"
+  ]
+}
