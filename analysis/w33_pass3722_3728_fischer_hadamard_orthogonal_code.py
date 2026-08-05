@@ -555,7 +555,7 @@ def build_certificate():
             "miyamoto_group_order_51840": True,
             "even_subgroup_order_25920_and_census": True,
             "symmetric_regular_hadamard_order36": True,
-            "exact_naiamark_signal15_guard21": True,
+            "exact_naimark_signal15_guard21": True,
             "multiplication_algebra_full225_mod_prime": True,
             "derivations_zero_mod_prime": True,
             "all_two_axis_subalgebras_classified": True,
