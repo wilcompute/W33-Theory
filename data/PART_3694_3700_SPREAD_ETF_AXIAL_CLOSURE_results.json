@@ -1,0 +1,137 @@
+{
+  "checks": {
+    "centered_incidence_gram_18E15": true,
+    "etf_15_36_coherence_one_fifth": true,
+    "magic_ray_graph_exact_spectrum": true,
+    "magic_spread_graph_separation": true,
+    "naimark_guard_rank_21": true,
+    "norton_axes_36_idempotent": true,
+    "norton_axis_spectrum_1_5_9": true,
+    "norton_fusion_law_exact": true,
+    "norton_pair_formulas_all_630": true,
+    "norton_triples_120": true,
+    "primitive_idempotents_rank_15_20": true,
+    "seidel_minimal_polynomial": true,
+    "spread_intersections_270_360": true,
+    "spread_srg_36_15_6_6": true,
+    "three_triples_partition_nine_spreads_per_line": true,
+    "unbranched_binary_panel_cover_no_go": true,
+    "w33_lines_40": true,
+    "w33_points_40": true,
+    "w33_spreads_36": true,
+    "welch_bound_saturated": true
+  },
+  "evidence_boundary": {
+    "not_proved_here": [
+      "concrete U4(2) words inside the Monster",
+      "executed Monster class-fusion multiplicity",
+      "Majorana, Griess, or VOA identification",
+      "regular thin polytope cover",
+      "laboratory implementation"
+    ],
+    "proved_here": [
+      "exact ETF(15,36) from centered W33 line-spread incidence",
+      "minimal 21-dimensional Naimark guard sector",
+      "36-idempotent rank-15 Norton axial algebra and exact fusion law",
+      "120 Norton triples partitioned three-per-W33-line",
+      "exact nonisomorphism of spread and magic-ray graphs",
+      "unbranched-cover obstruction for ternary-to-binary panels"
+    ]
+  },
+  "magic_ray_firewall": {
+    "degree": 11,
+    "degree_mismatch": true,
+    "each_nine_block_components": [[3,3,3],[3,3,3],[3,3,3],[3,3,3]],
+    "equitable_four_by_nine_partition": true,
+    "magic_ray_graph_degree": 11,
+    "magic_ray_graph_not_srg": true,
+    "magic_ray_graph_spectrum": {"-1":3,"-4":12,"11":1,"2":20},
+    "quotient_matrix": [[2,3,3,3],[3,2,3,3],[3,3,2,3],[3,3,3,2]],
+    "spectrum": {"-1":3,"-4":12,"11":1,"2":20},
+    "spectrum_mismatch": true,
+    "spread_graph_degree": 15,
+    "spread_graph_spectrum": {"-3":20,"15":1,"3":15},
+    "strongly_regular": false,
+    "verdict": "The 36-spread rank-three graph and the 36-ray orthogonality graph are not isomorphic and must not be identified.",
+    "vertices": 36
+  },
+  "monster_class_fusion_front": {
+    "external_boundary": "The official CTblLib fusion search and Holmes-Wilson class constraints are inputs to the separate GAP workflow, not outputs of this Python verifier.",
+    "required_output": "All U4(2)->M class fusions satisfying the 5B-containing constraints and the multiplicity set of degree-81 constituents in the restricted 196883 character.",
+    "status": "EXECUTABLE_GAP_TARGET_ADDED_REMOTE_EXECUTION_PENDING"
+  },
+  "monster_word_front": {
+    "required_certificate": ["serialized mmgroup words","closure order 25920","four order-3 generators","four triple closures order 648","element-order census","Monster class fingerprints"],
+    "status": "EXECUTABLE_FAIL_CLOSED_HARNESS_ADDED_CANDIDATE_WORDS_PENDING"
+  },
+  "naimark_photonic_certificate": {
+    "boundary": "This is a linear-optical dimension certificate, not a fabricated device or laboratory validation.",
+    "complement_projector": "I36-E15",
+    "input_modes": 36,
+    "minimal_guard_rank": 21,
+    "row_isometry_gram": "E15",
+    "signal_rank": 15,
+    "verdict": "Any exact passive 36-mode unitary dilation of this ETF analysis map requires a 21-dimensional orthogonal guard sector; fewer guard modes cannot complete the isometry."
+  },
+  "norton_axial_algebra": {
+    "adjacent_pair_formula_count": 270,
+    "axis_count": 36,
+    "axis_definition": "a_i = 6 E15 e_i",
+    "axis_idempotent": true,
+    "axis_spectrum": {"-1/2":5,"1":1,"1/6":9},
+    "fusion_law": {
+      "-1/2*-1/2": ["1","1/6"],
+      "-1/2*1/6": ["-1/2"],
+      "1*-1/2": ["-1/2"],
+      "1*1": ["1"],
+      "1*1/6": ["1/6"],
+      "1/6*1/6": ["1","1/6"]
+    },
+    "majorana_verdict": "NOT_MAJORANA: positive Frobenius Norton algebra, but axis eigenvalue -1/2 and fusion law do not match Monster/Majorana type",
+    "nonadjacent_pair_formula_count": 360,
+    "primitive_axis": true,
+    "product": "x star y = E15(x coordinatewise-multiplied by y)",
+    "triple_count": 120,
+    "triple_system": {
+      "common_w33_line_per_triple": 1,
+      "partition_statement": "For each of 40 W33 lines, the nine spreads containing it split into three disjoint Norton triples.",
+      "triples": 120,
+      "triples_per_axis": 10,
+      "triples_per_w33_line": 3
+    },
+    "triples_per_axis": [10],
+    "z2_grading": {"even":["1","1/6"],"odd":["-1/2"]}
+  },
+  "schema": "w33.pass3694_3700.spread_etf_axial_closure.v1",
+  "semantic_sha256": "ddbe48339458f56f1d5b10b6d544a64be0e00ecdab73ce73c5203a7482fad65a",
+  "spread_association_scheme": {
+    "intersection_census": {"1":360,"4":270},
+    "points": 36,
+    "primitive_idempotents": {"rank15":"E15 = 1/2 I + 1/6 A - 1/12 J","rank20":"E20 = 1/2 I - 1/6 A + 1/18 J"},
+    "relation_share_four": {"parameters":[36,15,6,6],"spectrum":{"-3":20,"15":1,"3":15}}
+  },
+  "spread_incidence_etf": {
+    "centered_matrix": "C = B - (1/4)J",
+    "column_norm_squared": "15/2",
+    "column_weight": 10,
+    "exact_gram_identity": "C^T C = 18 E15",
+    "frame": "real ETF(15,36)",
+    "incidence_shape": [40,36],
+    "normalized_inner_products": {"share_1_line":"-1/5","share_4_lines":"1/5"},
+    "row_weight": 9,
+    "seidel_matrix": "S = I + 2A - J",
+    "seidel_polynomial": "S^2 - 2S - 35I = 0",
+    "seidel_spectrum": {"-5":21,"7":15},
+    "welch_coherence_squared": "1/25"
+  },
+  "status": "PASS_EXACT_SEVEN_FRONT_SOURCE_WITH_MONSTER_TARGETS_PENDING",
+  "ternary_panel_cover_no_go": {
+    "reason": "A chamber-system covering is locally bijective on each rank-one residue, so panel cardinality and colored degree are preserved.",
+    "source_colored_neighbor_degree": 2,
+    "source_panel_size": 3,
+    "surviving_routes": ["quotient","deletion","branched resolution","change of incidence structure"],
+    "thin_colored_neighbor_degree": 1,
+    "thin_panel_size": 2,
+    "unbranched_type_preserving_cover_possible": false
+  }
+}
