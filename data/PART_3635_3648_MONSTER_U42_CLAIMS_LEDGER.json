@@ -1,0 +1,32 @@
+{
+  "schema": "w33.pass3635_3648.claims_ledger.v1",
+  "proved_exactly": [
+    "The four published transvections generate a 40-point permutation group of order 25920.",
+    "The element-order census is 1^1, 2^315, 3^800, 4^3780, 5^5184, 6^5760, 9^5760, 12^4320.",
+    "Every three-transvection face has order 648 and fixes one W33 point.",
+    "There are 432 A5 subgroups in two orbits of 216, with 1296 D10-sharing edges and 36 K6,6 components.",
+    "Every D10-sharing edge generates A6, and the A6 normalizer has order 720.",
+    "The rank-24 carrier spans all 300 symmetric and all 276 alternating bilinear directions.",
+    "The projector Gram Smith profile is 2^1, 10^9, 30^6, 60^8, with discriminant 2^32 3^14 5^23.",
+    "No rational scalar rescaling of the same rank-24 form can admit a unimodular overlattice.",
+    "The rootless rank-24 theta numerator times the 24-boson product reproduces the first listed J+24 coefficients."
+  ],
+  "documented_external_facts": [
+    "U4(2) is isomorphic to PSp(4,3) and has order 25920.",
+    "The Monster contains subgroups isomorphic to U4(2), while the perfect double cover 2.U4(2) is excluded.",
+    "The classified 5B-containing U4(2) embeddings impose nontrivial Monster class-fusion constraints."
+  ],
+  "implemented_pending_execution_evidence": [
+    "GAP/CTblLib enumeration of compatible U4(2)-to-Monster class fusions.",
+    "Restriction of the Monster degree-196883 character and export of all possible degree-81 multiplicities.",
+    "Canonical manuscript PDF compilation in the dedicated workflow."
+  ],
+  "not_claimed": [
+    "A serialized pair of mmgroup words generating U4(2) inside the Monster.",
+    "A unique Monster class fusion.",
+    "A fixed degree-81 multiplicity before the GAP artifact is observed.",
+    "A Griess, Majorana, or VOA algebra isomorphism.",
+    "A Leech-lattice embedding of the W33 projector lattice.",
+    "A physical or laboratory result."
+  ]
+}
