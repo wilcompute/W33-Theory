@@ -1,0 +1,19 @@
+{
+  "schema": "w33.pass3769_3786.claims_ledger.v1",
+  "semantic_sha256": "8d3f383e362f30e58d8c482f48e2ac2b77414922366ba8053633859d6206313a",
+  "migration": "Exact content relocated from the retired overlapping 3751-3768 reservation after a parallel 3751-3758 publication. Mathematical claims are unchanged.",
+  "promoted_exact": [
+    "GQ(2,4), dual GQ(4,2), Bose-Mesner, Krein, and Terwilliger data.",
+    "Full PG(5,2) Veldkamp line census and exact identification of the 120 all-nonsingular lines with Norton/Fischer triples.",
+    "All 200 dual-quadrangle ovoids and the exact W33 graph on the 40 plane ovoids.",
+    "Inequivalence of the 135 Lagrangian-frame and ordinary-flag U4(2) actions.",
+    "A simple rank-24 positive Frobenius algebra on 45 GQ axes with spectrum 1, 1/7, -1/3 and zero derivations.",
+    "A W(D4)-invariant even-unimodular obstruction and an explicit C2-preserving E8^3 child."
+  ],
+  "fail_closed": [
+    "No explicit target-group words or executed class fusion.",
+    "No rootless or canonical Leech basis; the certified E8^3 child has roots.",
+    "No Monster, Majorana, Griess, VOA, hardware, laboratory, or physical realization.",
+    "No remote CI or manuscript PDF success until observed."
+  ]
+}
