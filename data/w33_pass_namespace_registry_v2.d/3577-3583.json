@@ -1,0 +1,11 @@
+{
+  "schema": "w33.pass_namespace.v2.fragment",
+  "range": [3577, 3583],
+  "status": "reserved_and_published",
+  "slug": "petersen-matrix-octad-marked-walk",
+  "primary_source": "analysis/bt3577_3583_petersen_matrix_octad_marked_walk.py",
+  "companion_sources": ["analysis/bt3580_star_proof_canary.py"],
+  "frozen_result": "data/PART_BT3577_BT3583_PETERSEN_MATRIX_OCTAD_MARKED_WALK_results.json",
+  "manuscript_insert": "analysis/BT3577_BT3583_petersen_matrix_octad_marked_walk_insert.tex",
+  "public_page": "docs/petersen-matrix-octad-marked-walk.html"
+}
