@@ -3,8 +3,20 @@
   "range": [3787, 3794],
   "slug": "twirl_design_floquet_code_distributed_clock_control_ports_dynamic_topology_bonkers",
   "title": "Exact twirl design, Floquet error correction, distributed clocking, control ports, dynamic topology, and three architecture breakthroughs",
-  "status": "reserved",
+  "status": "published",
   "owner": "openai-gpt-5.6-thinking",
   "reserved_at": "2026-08-05T17:46:00-04:00",
-  "boundary": "Reservation only; publication requires exact executable evidence, frozen certificate, tests, workflow, manuscript integration, restored-site-safe public reachability, and explicit physical claim boundaries."
+  "published_at": "2026-08-05T18:31:00-04:00",
+  "semantic_sha256": "aa3daf462320badd607a1720479f083df159044f24242e7f46810de30bc2e0d8",
+  "files": [
+    "analysis/w33_pass3787_3794_twirl_floquet_clock_control_hybrid.py",
+    "data/PART_3787_3794_TWIRL_FLOQUET_CLOCK_CONTROL_HYBRID_results.json",
+    "tests/test_w33_pass3787_3794_twirl_floquet_clock_control_hybrid.py",
+    "analysis/BT3787_BT3794_twirl_floquet_clock_control_hybrid.md",
+    "analysis/BT3787_BT3794_twirl_floquet_clock_control_hybrid_insert.tex",
+    "analysis/BT3787_BT3794_twirl_floquet_clock_control_hybrid_index_insert.html",
+    "docs/twirl-floquet-clock-control-hybrid.html",
+    ".github/workflows/w33_pass3787_3794_twirl_floquet_clock_control_hybrid.yml"
+  ],
+  "boundary": "The packet certifies minimum exact observable-orbit estimation, static diagonal Floquet cancellation, optimal seven-tick broadcast, Z(W33)=29, an explicit 352-coupler dynamic topology, actuator virtualization, Fourier diagnosis, and a fourteen-tick all-reduce construction. It does not certify an optimal active channel twirl, a general Floquet fault-tolerance threshold, noisy calibration accuracy, globally minimum layout, or laboratory performance."
 }
