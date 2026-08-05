@@ -1,0 +1,412 @@
+{
+  "claim_audit": {
+    "edge_count_is_not_automorphism_count": true,
+    "factorial_relabelling_is_not_fixed_graph_automorphism_group": true,
+    "regular_bipartite_does_not_imply_complete_bipartite": true,
+    "safe_edge_transitivity_boundary": "A connected regular edge-transitive non-vertex-transitive graph is bipartite; an M57 graph has girth five, hence is not bipartite."
+  },
+  "evidence_boundary": [
+    "No M57 existence or nonexistence claim is proved here.",
+    "The 2026 no-involution result is treated as a recent preprint.",
+    "No Perkel/57-cell/M57 graph identification is asserted.",
+    "The W33-Gewirtz bridge is spectral, not an objectwise intertwiner."
+  ],
+  "fifty_seven_firewall": {
+    "conditional_no_embedding": "If the 2026 no-involution preprint is correct, Aut(M57) has odd order, so PSL(2,19) cannot embed in Aut(M57).",
+    "objects": {
+      "Perkel": {
+        "degree": 6,
+        "meaning": "57_vertex_distance_regular_graph",
+        "status": "exists",
+        "vertices": 57
+      },
+      "lambda1_hole": {
+        "meaning": "57_vertex_SRG_in_mu4_r2_ladder",
+        "parameters": [
+          57,
+          14,
+          1,
+          4
+        ],
+        "status": "proved_nonexistent_1983"
+      },
+      "missing_M57": {
+        "degree": 57,
+        "meaning": "degree_57_Moore_graph",
+        "status": "existence_open",
+        "vertices": 3250
+      },
+      "regular_57_cell": {
+        "meaning": "abstract_regular_polytope_with_57_cells",
+        "status": "exists",
+        "symmetry_order": 3420
+      }
+    },
+    "psl2_19_even": true,
+    "psl2_19_order": 3420
+  },
+  "known_triangle_free_srgs": [
+    {
+      "name": "C5",
+      "parameters": [
+        5,
+        2,
+        0,
+        1
+      ],
+      "spectrum": {
+        "discriminant": 5,
+        "eigenvalues": [
+          "2",
+          "(-1+sqrt(5))/2",
+          "(-1-sqrt(5))/2"
+        ],
+        "multiplicities": [
+          1,
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "name": "Petersen",
+      "parameters": [
+        10,
+        3,
+        0,
+        1
+      ],
+      "spectrum": {
+        "discriminant": 9,
+        "eigenvalues": [
+          3,
+          1,
+          -2
+        ],
+        "multiplicities": [
+          1,
+          5,
+          4
+        ]
+      }
+    },
+    {
+      "name": "Clebsch",
+      "parameters": [
+        16,
+        5,
+        0,
+        2
+      ],
+      "spectrum": {
+        "discriminant": 16,
+        "eigenvalues": [
+          5,
+          1,
+          -3
+        ],
+        "multiplicities": [
+          1,
+          10,
+          5
+        ]
+      }
+    },
+    {
+      "name": "Hoffman-Singleton",
+      "parameters": [
+        50,
+        7,
+        0,
+        1
+      ],
+      "spectrum": {
+        "discriminant": 25,
+        "eigenvalues": [
+          7,
+          2,
+          -3
+        ],
+        "multiplicities": [
+          1,
+          28,
+          21
+        ]
+      }
+    },
+    {
+      "name": "Gewirtz",
+      "parameters": [
+        56,
+        10,
+        0,
+        2
+      ],
+      "spectrum": {
+        "discriminant": 36,
+        "eigenvalues": [
+          10,
+          2,
+          -4
+        ],
+        "multiplicities": [
+          1,
+          35,
+          20
+        ]
+      }
+    },
+    {
+      "name": "M22",
+      "parameters": [
+        77,
+        16,
+        0,
+        4
+      ],
+      "spectrum": {
+        "discriminant": 64,
+        "eigenvalues": [
+          16,
+          2,
+          -6
+        ],
+        "multiplicities": [
+          1,
+          55,
+          21
+        ]
+      }
+    },
+    {
+      "name": "Higman-Sims",
+      "parameters": [
+        100,
+        22,
+        0,
+        6
+      ],
+      "spectrum": {
+        "discriminant": 100,
+        "eigenvalues": [
+          22,
+          2,
+          -8
+        ],
+        "multiplicities": [
+          1,
+          77,
+          22
+        ]
+      }
+    }
+  ],
+  "missing_moore_edge_chart": {
+    "column_fibration": {
+      "between_distinct_fibres": "perfect_matching",
+      "fibre_size": 56,
+      "fibres": 56
+    },
+    "edge_count": 92625,
+    "edge_rooted_partition": [
+      2,
+      56,
+      56,
+      3136
+    ],
+    "parameters": [
+      3250,
+      57,
+      0,
+      1
+    ],
+    "permutation_constraints": [
+      "sigma_ji = inverse(sigma_ij)",
+      "sigma_ij has no fixed point",
+      "for distinct i,j,k: sigma_ki*sigma_jk*sigma_ij has no fixed point"
+    ],
+    "residual_degree": 55,
+    "residual_grid": [
+      56,
+      56
+    ],
+    "row_fibration": {
+      "between_distinct_fibres": "perfect_matching",
+      "fibre_size": 56,
+      "fibres": 56
+    },
+    "spectrum": {
+      "eigenvalues": [
+        57,
+        7,
+        -8
+      ],
+      "multiplicities": [
+        1,
+        1729,
+        1520
+      ]
+    },
+    "boundary": "These are necessary local constraints. Row/column relabellings are coordinate gauge, not automorphisms of a fixed graph."
+  },
+  "mu4_r2_ladder": [
+    {
+      "lambda": 0,
+      "name": "M22",
+      "parameters": [
+        77,
+        16,
+        0,
+        4
+      ],
+      "spectrum": {
+        "eigenvalues": [
+          16,
+          2,
+          -6
+        ],
+        "multiplicities": [
+          1,
+          55,
+          21
+        ]
+      },
+      "status": "exists_unique"
+    },
+    {
+      "lambda": 1,
+      "name": "57-vertex hole",
+      "parameters": [
+        57,
+        14,
+        1,
+        4
+      ],
+      "spectrum": {
+        "eigenvalues": [
+          14,
+          2,
+          -5
+        ],
+        "multiplicities": [
+          1,
+          38,
+          18
+        ]
+      },
+      "status": "nonexistent_Wilbrink_Brouwer_1983"
+    },
+    {
+      "lambda": 2,
+      "name": "W33 parameter class",
+      "parameters": [
+        40,
+        12,
+        2,
+        4
+      ],
+      "spectrum": {
+        "eigenvalues": [
+          12,
+          2,
+          -4
+        ],
+        "multiplicities": [
+          1,
+          24,
+          15
+        ]
+      },
+      "status": "exists_28_isomorphism_classes"
+    },
+    {
+      "lambda": 3,
+      "name": "Paulus parameter class",
+      "parameters": [
+        26,
+        10,
+        3,
+        4
+      ],
+      "spectrum": {
+        "eigenvalues": [
+          10,
+          2,
+          -3
+        ],
+        "multiplicities": [
+          1,
+          13,
+          12
+        ]
+      },
+      "status": "exists_10_isomorphism_classes"
+    },
+    {
+      "lambda": 4,
+      "name": "T(6)",
+      "parameters": [
+        15,
+        8,
+        4,
+        4
+      ],
+      "spectrum": {
+        "eigenvalues": [
+          8,
+          2,
+          -2
+        ],
+        "multiplicities": [
+          1,
+          5,
+          9
+        ]
+      },
+      "status": "exists_unique"
+    }
+  ],
+  "passes": [
+    3500,
+    3501,
+    3502,
+    3503,
+    3504,
+    3505
+  ],
+  "semantic_sha256": "e308364dd480970803061b90ab27bf86afa2ae4946399b656292f02682c17fd9",
+  "status": "PASS_6_FRONTS",
+  "w33_gewirtz_kernel": {
+    "Gewirtz": {
+      "eigenvalues": [
+        10,
+        2,
+        -4
+      ],
+      "multiplicities": [
+        1,
+        35,
+        20
+      ]
+    },
+    "W33": {
+      "eigenvalues": [
+        12,
+        2,
+        -4
+      ],
+      "multiplicities": [
+        1,
+        24,
+        15
+      ]
+    },
+    "boundary": "shared_functional_calculus_not_a_canonical_module_isomorphism",
+    "centered_complement_square": "9*I_on_augmentation",
+    "common_nonprincipal_minimal_polynomial": "x^2 + 2*x - 8",
+    "complement_nonprincipal_eigenvalues": [
+      -3,
+      3
+    ]
+  }
+}
