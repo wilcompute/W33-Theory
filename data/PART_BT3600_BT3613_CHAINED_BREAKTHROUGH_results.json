@@ -1,0 +1,75 @@
+{
+  "evidence_boundary": [
+    "The radius interval remains 389<=R<=435.",
+    "The chromatic interval remains 10<=chi(H)<=11.",
+    "The rank-81 image is an explicit direct summand but is not labelled simple.",
+    "No observed Icarus, Yosys, FPGA, PDF, laboratory, M57, or physical result is asserted by the source certificate."
+  ],
+  "live_boundaries": {"chromatic_number": [10, 11], "covering_radius": [389, 435]},
+  "passes": [3600, 3601, 3602, 3603, 3604, 3605, 3606, 3607, 3608, 3609, 3610, 3611, 3612, 3613],
+  "rehome": {
+    "provisional_ranges": [[3506, 3519], [3584, 3597]],
+    "provisional_semantic_sha256": "7ad66eec9cbb1b3f207eb4215a348cb9a63e0be9ab7876e53209dbed3099a13f",
+    "reason": "concurrent master packets claimed both provisional ranges; Passes 3600-3613 were reserved directly on master before publication"
+  },
+  "schema": "w33.bt3600_3613.chained_breakthrough.v1",
+  "semantic_sha256": "a08844aa7ec3a6be578dece00e455c1868ad8b4c833d912ebe02b7f014077f17",
+  "status": "PASS_7_FRONTS",
+  "theorems": {
+    "W33_Clebsch_Gewirtz_spectral_completion": {
+      "Gewirtz_nonprincipal_spectrum": {"-4": 20, "2": 35},
+      "W33_nonprincipal_spectrum": {"-4": 15, "2": 24},
+      "boundary": "functional-calculus completion, not graph embedding or canonical intertwiner",
+      "p_Clebsch_spectrum": {"-4": 5, "2": 11},
+      "polynomial": "p(x)=(-3x^2+18x+17)/16"
+    },
+    "characteristic_three_projector": {
+      "antipodal_antisymmetric_image_rank": 81,
+      "antipodal_symmetric_image_rank": 0,
+      "generalized_zero_dimension": 159,
+      "generalized_zero_jordan_type": {"J1(0)": 85, "J2(0)": 16, "J3(0)": 14},
+      "generalized_zero_power_ranks": [44, 14, 0],
+      "minimal_polynomial": "x^3(x+1)",
+      "operator_power_ranks": [125, 95, 81],
+      "projector": "E81=-D^3",
+      "projector_idempotent": true,
+      "projector_rank": 81,
+      "relation": "D^4=-D^3"
+    },
+    "dependency_hypergraph": {
+      "dependency_triples": 5040,
+      "face_degree": 63,
+      "incidence_ranks": {"2": 240, "3": 239, "5": 240},
+      "ordinary_multiplicity_fingerprint": [1, 15, 15, 20, 24, 24, 60, 81],
+      "pair_codegrees": {"2": 3240, "4": 2160},
+      "spectrum": [["126", 1], ["18+12sqrt(6)", 24], ["18", 20], ["6", 15], ["-6", 60], ["-10", 81], ["18-12sqrt(6)", 24], ["-18", 15]],
+      "supported_face_pairs": 5400,
+      "triple_size": 3,
+      "vertices": 240,
+      "weighted_two_section_degree": 126
+    },
+    "five_channel_hardware": {
+      "breadth_first_state_counts_depth_0_to_4": [1, 20, 310, 4560, 67245],
+      "minimum_binary_operations": 5,
+      "order": 3,
+      "witness": ["s=b+c", "p=d-a", "y0=s-a", "y1=p+b", "y2=p+c", "y3=-s", "y4=e"]
+    },
+    "missing_57_induced_decomposition_no_go": {
+      "hypothetical_graph": [57, 14, 1, 4],
+      "induced_Clebsch_external_degree_sum": 144,
+      "induced_W33_external_degree_sum": 80,
+      "maximum_possible_apex_incidence_difference": 16,
+      "required_apex_incidence_difference": 64,
+      "tempting_partition": [1, 16, 40]
+    },
+    "tomotope_lift": {"configuration": [12, 4, 16, 3], "eight_cell_double_cover_solutions": 0, "four_face_six_edge_cell_candidates": 12},
+    "transported_M4_grid": {
+      "best_hoffman_ratio": 3.275812021095,
+      "best_lambda_max": 32.0,
+      "best_lambda_min": -14.060915270409,
+      "best_weights": [1, 1, 1, 1, 1, 1],
+      "boundary": "finite deterministic ternary grid, not unrestricted optimum",
+      "weight_classes": 364
+    }
+  }
+}

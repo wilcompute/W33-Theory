@@ -3,9 +3,14 @@
   "range": [3600, 3613],
   "owner": "openai-gpt-5.6-thinking",
   "branch": "agent/pass3600-3613-chained-breakthrough",
-  "status": "reserved_rehome",
-  "provisional_semantic_sha256": "7ad66eec9cbb1b3f207eb4215a348cb9a63e0be9ab7876e53209dbed3099a13f",
+  "status": "source_complete_pending_remote_evidence",
+  "semantic_sha256": "a08844aa7ec3a6be578dece00e455c1868ad8b4c833d912ebe02b7f014077f17",
+  "rehome": {
+    "provisional_ranges": [[3506, 3519], [3584, 3597]],
+    "reason": "concurrent master packets claimed both provisional ranges; Passes 3600-3613 were reserved directly on master before publication",
+    "provisional_semantic_sha256": "7ad66eec9cbb1b3f207eb4215a348cb9a63e0be9ab7876e53209dbed3099a13f"
+  },
   "purpose": "Publish the cubic dependency hypergraph and rank-81 characteristic-three projector; exhaust a deterministic transported-M4 weight grid; prove the five-operation ternary datapath optimum; close the oriented-Reye/tomotope cell lift; obstruct an induced 1+16+40 decomposition of the 57-vertex parameter set; and construct the W33-Clebsch-Gewirtz functional-calculus completion.",
-  "coordination": "This range is reserved directly on master after provisional ranges 3506-3519 and 3584-3597 collided with concurrent packets. Preserve all merged work through the live frontier and publish no provisional pass identifier.",
+  "coordination": "Preserve all merged work through the live frontier. The provisional engine is retained under a private implementation filename only; no public frontier identifier overlaps a concurrent packet.",
   "claim_boundary": "No exact covering radius, ten-colour decision, unrestricted transported-M4 optimum, simple-module label, observed FPGA timing/power, tomotope monodromy, M57 existence, or physical interpretation is promoted without executed evidence."
 }

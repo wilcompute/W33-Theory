@@ -1,0 +1,119 @@
+name: Passes 3600-3613 Chained Breakthrough
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/*3600*'
+      - 'analysis/*3613*'
+      - 'analysis/_bt3506_3519_provisional_impl.py'
+      - 'data/PART_BT3600_BT3613_CHAINED_BREAKTHROUGH_results.json'
+      - 'data/w33_pass_namespace_registry_v2.d/3600-3613.json'
+      - 'tests/test_bt3600_3613_chained_breakthrough.py'
+      - 'rtl/w33_mod3_five_channel_min5.v'
+      - 'rtl/w33_mod3_five_channel_min5_formal.v'
+      - 'rtl/tb_w33_pass3600_3613_min5.v'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - '.github/workflows/w33_pass3600_3613_chained_breakthrough.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/*3600*'
+      - 'analysis/*3613*'
+      - 'analysis/_bt3506_3519_provisional_impl.py'
+      - 'data/PART_BT3600_BT3613_CHAINED_BREAKTHROUGH_results.json'
+      - 'tests/test_bt3600_3613_chained_breakthrough.py'
+      - 'rtl/w33_mod3_five_channel_min5.v'
+      - 'rtl/w33_mod3_five_channel_min5_formal.v'
+      - 'rtl/tb_w33_pass3600_3613_min5.v'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - '.github/workflows/w33_pass3600_3613_chained_breakthrough.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pass3600-3613-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  exact-rtl-papers:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys
+          python -m pip install --disable-pip-version-check numpy sympy pytest
+      - name: Regenerate certificate
+        run: |
+          mkdir -p evidence/pass3600_3613
+          python analysis/bt3600_3613_chained_breakthrough.py --json evidence/pass3600_3613/results.json | tee evidence/pass3600_3613/exact.log
+          grep -F 'PASS_7_FRONTS a08844aa7ec3a6be578dece00e455c1868ad8b4c833d912ebe02b7f014077f17' evidence/pass3600_3613/exact.log
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          generated=json.loads(Path('evidence/pass3600_3613/results.json').read_text())
+          frozen=json.loads(Path('data/PART_BT3600_BT3613_CHAINED_BREAKTHROUGH_results.json').read_text())
+          assert generated == frozen
+          assert generated['rehome']['provisional_semantic_sha256'] == '7ad66eec9cbb1b3f207eb4215a348cb9a63e0be9ab7876e53209dbed3099a13f'
+          print('PASS official/provisional certificate binding')
+          PY
+      - name: Focused regression
+        run: |
+          python -m pytest -q tests/test_bt3600_3613_chained_breakthrough.py | tee evidence/pass3600_3613/pytest.log
+          git diff --check
+      - name: Exhaust minimum datapath
+        run: |
+          iverilog -g2012 -s tb_w33_pass3600_3613_min5 -o evidence/pass3600_3613/min5_tb rtl/w33_mod3_five_channel_min5.v rtl/tb_w33_pass3600_3613_min5.v
+          vvp evidence/pass3600_3613/min5_tb | tee evidence/pass3600_3613/rtl.log
+          grep -F 'PASS pass3600_3613_min5_cases=243 order3_cases=243' evidence/pass3600_3613/rtl.log
+      - name: Formal order-three proof
+        run: |
+          yosys -p "read_verilog -formal -D FORMAL rtl/w33_mod3_five_channel_min5.v rtl/w33_mod3_five_channel_min5_formal.v; prep -top w33_mod3_five_channel_min5_formal; flatten; sat -verify -prove-asserts -set-assumes -show-inputs" 2>&1 | tee evidence/pass3600_3613/formal.log
+          grep -F 'SAT proof finished - no model found: SUCCESS!' evidence/pass3600_3613/formal.log
+      - name: Synthesize minimum datapath
+        run: |
+          yosys -p "read_verilog rtl/w33_mod3_five_channel_min5.v; hierarchy -top w33_mod3_five_channel_min5; synth_ice40 -top w33_mod3_five_channel_min5 -json evidence/pass3600_3613/min5.json; stat" 2>&1 | tee evidence/pass3600_3613/synthesis.log
+          test -s evidence/pass3600_3613/min5.json
+      - name: Verify manifests
+        run: |
+          python - <<'PY'
+          import json,re
+          from pathlib import Path
+          tex=Path('analysis/W33_CURRENT_FRONTIER_MANIFEST.tex').read_text()
+          inputs=re.findall(r'\\input\{([^}]+)\}',tex)
+          manifest=json.loads(Path('data/w33_current_frontier_manifest_v1.json').read_text())
+          assert inputs == manifest['required_ordered_inputs']
+          ours='analysis/BT3600_BT3613_chained_breakthrough_insert'
+          assert inputs.count(ours)==1
+          assert Path(ours+'.tex').is_file()
+          tokens=[item['token'] for item in manifest['public_sections']]
+          assert tokens.count('bt3600-3613-chained-breakthrough')==1
+          print('PASS manifest chronology and reachability')
+          PY
+      - uses: WtfJoke/setup-tectonic@v3
+        with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
+      - name: Compile canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee evidence/pass3600_3613/${source%.tex}.log
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3600_3613/pdf_sha256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3600-3613-chained-breakthrough-evidence
+          path: |
+            evidence/pass3600_3613/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
