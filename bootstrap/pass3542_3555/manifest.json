@@ -1,0 +1,10 @@
+{
+  "schema": "w33.pass3542_3555.artifact_manifest.v1",
+  "semantic_sha256": "7f81f6763278f1e1fad5fafb0ea63c9b1b7c9518cbb9b0fd24375eb5832812a3",
+  "core_sha256": "e1b44804f5a127ddff5a642123650f1703fee2405f8998b6cb0a0a53a1949ae7",
+  "verifier_sha256": "7fafffb4ce924b04e4d48a5efccd5fe1be6faeb2dfc2833c53a20d8d0cfdcff5",
+  "results_sha256": "5160fa13a265595c782ecc43f9a1dd0fd404da0a9129870688d3704edcbbe41d",
+  "core_bytes": 3442,
+  "verifier_bytes": 26871,
+  "results_bytes": 21219
+}
