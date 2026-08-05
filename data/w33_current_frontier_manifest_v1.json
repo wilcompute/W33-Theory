@@ -19,7 +19,8 @@
     "analysis/BT3444_BT3457_radius_modular_fivechannel_insert",
     "analysis/BT3458_BT3471_face_tower_brauer_tomotope_insert",
     "analysis/BT3486_BT3499_radius_code_biplane_supplement_insert",
-    "analysis/BT3500_BT3505_triangle_free_srg_m57_bridge_insert"
+    "analysis/BT3500_BT3505_triangle_free_srg_m57_bridge_insert",
+    "analysis/BT3506_BT3512_seven_graph_csp_scheme_symmetry_insert"
   ],
   "front_doors": {
     "w33_paper.tex": "w33_paper_body.tex",
@@ -77,12 +78,21 @@
       "kind": "id",
       "token": "bt3486-3499-radius-code-biplane-supplement",
       "source": "analysis/BT3486_BT3499_radius_code_biplane_supplement_index_insert.html"
+    },
+    {
+      "kind": "id",
+      "token": "bt3506-3512-seven-graph-csp-scheme-symmetry",
+      "source": "analysis/BT3506_BT3512_seven_graph_csp_scheme_symmetry_index_insert.html"
     }
   ],
   "standalone_public_pages": [
     {
       "token": "passes-3500-3505-triangle-free-srg-m57",
       "source": "docs/triangle-free-srg-m57.html"
+    },
+    {
+      "token": "passes-3506-3512-seven-graph-csp-scheme-symmetry",
+      "source": "docs/seven-graph-csp-scheme.html"
     }
   ],
   "boundary": "The manifest controls source reachability and ordering only; it does not certify PDF, hardware, laboratory, or physical claims."
