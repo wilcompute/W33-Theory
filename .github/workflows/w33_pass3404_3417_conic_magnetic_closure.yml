@@ -52,8 +52,6 @@ jobs:
           python analysis/bt3404_3417_conic_torus_closure.py \
             --json evidence/pass3404_3417/conic_torus.json \
             | tee evidence/pass3404_3417/conic_torus.log
-          cmp evidence/pass3404_3417/conic_torus.json \
-            data/PART_BT3404_BT3417_CONIC_TORUS_results.json
       - name: Exhaust and exactify magnetic triangle phases
         run: |
           python analysis/bt3407_magnetic_chromatic_search.py \
@@ -62,15 +60,25 @@ jobs:
           python analysis/bt3407_magnetic_exact_no_go.py \
             --json evidence/pass3404_3417/magnetic_exact_no_go.json \
             | tee evidence/pass3404_3417/magnetic_exact_no_go.log
-          cmp evidence/pass3404_3417/magnetic_exact_no_go.json \
-            data/PART_BT3407_MAGNETIC_EXACT_NO_GO_results.json
       - name: Reconstruct 720-edge commutant atlas
         run: |
           python analysis/bt3408_edge_commutant_decomposition.py \
             --json evidence/pass3404_3417/edge_commutant.json \
             | tee evidence/pass3404_3417/edge_commutant.log
-          cmp evidence/pass3404_3417/edge_commutant.json \
-            data/PART_BT3408_EDGE_COMMUTANT_DECOMPOSITION_results.json
+      - name: Compare frozen semantic certificates
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          pairs = [
+              ('evidence/pass3404_3417/conic_torus.json', 'data/PART_BT3404_BT3417_CONIC_TORUS_results.json'),
+              ('evidence/pass3404_3417/magnetic_exact_no_go.json', 'data/PART_BT3407_MAGNETIC_EXACT_NO_GO_results.json'),
+              ('evidence/pass3404_3417/edge_commutant.json', 'data/PART_BT3408_EDGE_COMMUTANT_DECOMPOSITION_results.json'),
+          ]
+          for generated, frozen in pairs:
+              assert json.loads(Path(generated).read_text()) == json.loads(Path(frozen).read_text()), (generated, frozen)
+          print('PASS semantic frozen certificate comparison')
+          PY
       - name: Independent GAP character atlas
         run: |
           python analysis/bt3381_minimum_defect_edge_character.py \
