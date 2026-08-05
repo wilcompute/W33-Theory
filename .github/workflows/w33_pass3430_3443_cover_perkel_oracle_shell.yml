@@ -1,0 +1,92 @@
+name: Passes 3430-3443 Cover Perkel Oracle Shell
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/*3430*'
+      - 'analysis/*3432*'
+      - 'analysis/cpp/w33_pass3430*'
+      - 'tests/test_bt3430_bt3443*'
+      - 'data/w33_pass_namespace_registry_v2.d/3430-3443.json'
+      - '.github/workflows/w33_pass3430_3443_cover_perkel_oracle_shell.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pass3430-3443-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  exact-lightweight:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check numpy sympy networkx pytest
+      - name: Exact seven-front verifier
+        run: python analysis/bt3430_3441_validated_runner.py
+      - name: Focused regression
+        run: pytest -q tests/test_bt3430_bt3443_cover_perkel_oracle_shell.py
+      - name: Evidence boundary
+        run: |
+          grep -F '10 <= chi(H) <= 11' data/PART_BT3430_BT3441_COVER_PERKEL_ORACLE_SHELL_results.json
+          git diff --check
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3430-3441-lightweight-results
+          path: data/PART_BT3430_BT3441_COVER_PERKEL_ORACLE_SHELL_results.json
+
+  canonical-327-ledger:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 210
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check numpy networkx
+      - name: Export live canonical geometry
+        run: python analysis/bt3430_export_cover_geometry.py
+      - name: Compile exact-cover and orbit reducer
+        run: g++ -std=c++17 -O3 -march=native -DNDEBUG analysis/cpp/w33_pass3430_cover_ledger.cpp -o /tmp/w33_pass3430_cover_ledger
+      - name: Enumerate fixed-frame covers and materialize 327 representatives
+        run: |
+          /tmp/w33_pass3430_cover_ledger \
+            data/PART_BT3430_CANONICAL_COVER_GEOMETRY.txt \
+            data/PART_BT3430_FIXED_FRAME_COVERS.bin \
+            data/PART_BT3430_BT3433_CANONICAL_COVER_REPRESENTATIVES.json
+      - name: Independent incidence validation
+        run: python analysis/bt3430_validate_cover_ledger.py
+      - name: Re-run main verifier with ledger present
+        run: |
+          python -m pip install --disable-pip-version-check sympy
+          python analysis/bt3430_3441_validated_runner.py
+          grep -F 'PASS_327_CANONICAL_REPRESENTATIVE_LEDGER' data/PART_BT3430_BT3441_COVER_PERKEL_ORACLE_SHELL_results.json
+      - name: Freeze hashes
+        run: sha256sum data/PART_BT3430_FIXED_FRAME_COVERS.bin data/PART_BT3430_BT3433_CANONICAL_COVER_REPRESENTATIVES.json data/PART_BT3430_BT3441_COVER_PERKEL_ORACLE_SHELL_results.json | tee data/PART_BT3430_BT3443_LEDGER_SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3430-3433-canonical-327-ledger
+          compression-level: 9
+          path: |
+            data/PART_BT3430_BT3433_CANONICAL_COVER_REPRESENTATIVES.json
+            data/PART_BT3430_BT3443_LEDGER_SHA256SUMS.txt
+            data/PART_BT3430_BT3441_COVER_PERKEL_ORACLE_SHELL_results.json
+
+  historical-switch-api:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check numpy sympy networkx
+      - name: Materialize and execute the certified Pass-3296 switch source
+        run: python analysis/bt3432_switch_api_inventory.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3432-historical-switch-api
+          path: |
+            data/PART_BT3432_SWITCH_API_INVENTORY.json
+            data/PART_BT3296_BT3297_COVER_ORBIT_LEDGER.json
+            data/PART_BT3296_BT3297_HAMMING_MAPPING.json
