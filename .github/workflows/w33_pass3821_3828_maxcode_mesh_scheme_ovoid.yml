@@ -1,0 +1,78 @@
+name: Passes 3821-3828 maxcode mesh scheme ovoid
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass3821_3828_maxcode_mesh_scheme_ovoid.py'
+      - 'analysis/w33_pass3824_monster_pair_promotion_harness.py'
+      - 'analysis/BT3821_BT3828_maxcode_mesh_scheme_ovoid*'
+      - '.bootstrap/pass3821_bundle_*.b64'
+      - 'data/PART_3821_3828_COMPONENT_*.json'
+      - 'data/PART_3821_3828_MAXCODE_MESH_SCHEME_OVOID_results.json'
+      - 'tests/test_w33_pass3821_3828_maxcode_mesh_scheme_ovoid.py'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - 'docs/maxcode-mesh-holonomy-ovoid-flags.html'
+      - '.github/workflows/w33_pass3821_3828_maxcode_mesh_scheme_ovoid.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-components:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      matrix:
+        component: [maxcode, mesh, monster, ovoid, scheme]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check numpy sympy
+      - name: Recompute isolated exact component
+        run: python analysis/w33_pass3821_3828_maxcode_mesh_scheme_ovoid.py --component "${{ matrix.component }}" > "/tmp/${{ matrix.component }}.json"
+      - name: Compare canonical component JSON
+        env:
+          COMPONENT: ${{ matrix.component }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          c = os.environ['COMPONENT']
+          expected = Path('data') / f'PART_3821_3828_COMPONENT_{c.upper()}.json'
+          assert json.loads(Path(f'/tmp/{c}.json').read_text()) == json.loads(expected.read_text())
+          PY
+
+  aggregate-and-tests:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    needs: exact-components
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check numpy sympy pytest
+      - run: python analysis/w33_pass3821_3828_maxcode_mesh_scheme_ovoid.py --check data/PART_3821_3828_MAXCODE_MESH_SCHEME_OVOID_results.json
+      - run: pytest -q tests/test_w33_pass3821_3828_maxcode_mesh_scheme_ovoid.py
+      - run: python analysis/w33_pass3824_monster_pair_promotion_harness.py
+      - run: grep -Fq '\input{analysis/BT3821_BT3828_maxcode_mesh_scheme_ovoid_insert}%' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+      - run: grep -Fq 'passes-3821-3828-maxcode-mesh-holonomy-ovoid-flags' data/w33_current_frontier_manifest_v1.json
+      - run: grep -Fq 'b141dd0f82e4a6b1ee62d1c57f0e92bdfc9f58d3b32515f9521a0175fdca88a1' docs/maxcode-mesh-holonomy-ovoid-flags.html
+
+  canonical-papers:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    needs: aggregate-and-tests
+    strategy:
+      matrix:
+        paper: [w33_paper.tex, photonic_holonet.tex, holonet_machine_blueprint.tex]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: wtfjoke/setup-tectonic@v3
+      - run: tectonic --keep-logs --keep-intermediates "${{ matrix.paper }}"
