@@ -1,0 +1,66 @@
+name: Passes 3795-3812 plane-ovoid scheme Leech axial
+
+on:
+  push:
+    paths:
+      - 'analysis/_w33_pass3795_3812_impl_part*.pyinc'
+      - 'analysis/w33_pass3795_3812_plane_ovoid_scheme_leech_axial.py'
+      - 'analysis/w33_pass3751_3768_gq_veldkamp_axial_lattice_monster.py'
+      - 'data/PART_3795_3812_LEECH_AXIAL_TRANSPORT.json'
+      - 'data/PART_3795_3812_PLANE_OVOID_SCHEME_LEECH_AXIAL_results.json'
+      - 'data/PART_3795_3812_PLANE_OVOID_SCHEME_LEECH_AXIAL_CLAIMS_LEDGER.json'
+      - 'tests/test_w33_pass3795_3812_plane_ovoid_scheme_leech_axial.py'
+      - 'analysis/BT3795_BT3812_plane_ovoid_scheme_leech_axial_insert.tex'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - 'docs/plane-ovoid-scheme-leech-axial.html'
+      - '.github/workflows/w33_pass3795_3812_plane_ovoid_scheme_leech_axial.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy sympy networkx pytest
+      - name: Recompute exact certificate
+        run: python analysis/w33_pass3795_3812_plane_ovoid_scheme_leech_axial.py --output /tmp/pass3795-3812.json
+      - name: Compare parsed frozen result and semantic hash
+        run: |
+          python - <<'PY'
+          import json
+          expected=json.load(open('data/PART_3795_3812_PLANE_OVOID_SCHEME_LEECH_AXIAL_results.json'))
+          observed=json.load(open('/tmp/pass3795-3812.json'))
+          assert observed == expected
+          assert observed['semantic_sha256'] == 'be5ee56a84141a7bbc896b4cef0e8eda32167a00749dbb17f10d24d0505bdd41'
+          assert all(observed['checks'].values())
+          PY
+      - name: Run focused regression
+        run: pytest -q tests/test_w33_pass3795_3812_plane_ovoid_scheme_leech_axial.py
+      - name: Check publication reachability
+        run: |
+          grep -F 'BT3795_BT3812_plane_ovoid_scheme_leech_axial_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          grep -F 'plane-ovoid-scheme-leech-axial.html' data/w33_current_frontier_manifest_v1.json
+          grep -F 'PASS_3795_3812' docs/plane-ovoid-scheme-leech-axial.html
+
+  manuscripts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Tectonic
+        run: |
+          curl --proto '=https' --tlsv1.2 -fsSL https://drop-sh.fullyjustified.net | sh
+          echo "$HOME/.cargo/bin" >> "$GITHUB_PATH"
+      - name: Compile all manuscript front doors
+        run: |
+          tectonic --keep-logs --keep-intermediates w33_paper.tex
+          tectonic --keep-logs --keep-intermediates photonic_holonet.tex
+          tectonic --keep-logs --keep-intermediates holonet_machine_blueprint.tex
