@@ -26,6 +26,7 @@ jobs:
           fetch-depth: 0
       - name: Require complete payload
         run: |
+          # Retrigger marker 2026-08-05T16:49-04:00
           for n in 00 01 02 03 04; do
             test -s ".bootstrap/pass3751_bundle_${n}.b64"
           done
