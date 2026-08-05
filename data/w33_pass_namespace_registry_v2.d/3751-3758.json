@@ -3,8 +3,31 @@
   "range": [3751, 3758],
   "owner": "openai-gpt-5.6-thinking",
   "branch": "master",
-  "status": "reserved_for_eight_front_monster_lattice_multiport_cover_bonkers_closure",
-  "purpose": "Execute the five next fronts from Passes 3722-3728 plus three independent high-risk constructions: refine and execute the Monster class-fusion target where possible; strengthen concrete Monster-word search filters; construct and classify the integral lattice arising from the [36,6] minus-type code; factor the exact Hadamard multiport into certified sparse orthogonal layers; classify the 120-vertex three-cover through voltage, Terwilliger, and automorphism data; derive a ternary/complex companion code from the same triple incidence; search for a Clifford/Gray-code realization of the 36-port transform; and build a recursive unit-spiral dynamical lift whose projection is tested against the Fischer cover rather than promoted by analogy.",
-  "coordination": "Begins after published Passes 3722-3728, preserves active Passes 3729-3742 and 3743-3750, and will reconcile every parallel commit before shared manifest, manuscript, and public-index updates.",
-  "claim_boundary": "No Monster embedding, observed Monster restriction multiplicity, Leech or unimodular lattice identification, physical optical implementation, regular cover identification, or dynamical physics claim is promoted without an executed certificate."
+  "status": "published_source_complete_ci_pending",
+  "purpose": "Execute the five next fronts from Passes 3722-3728 plus three independent high-risk constructions: make the Monster class-fusion runtime observable; strengthen concrete Monster-word filters; construct and classify the integral lattice from the [36,6] minus-type code; factor the exact Hadamard multiport into certified orthogonal layers; classify the 120-vertex cover through automorphism, distance, and Terwilliger data; derive the (64,36,20) quadratic-Walsh parent; determine the integral triple-incidence cokernel; and construct the rank-20 twisted-holonomy frame.",
+  "coordination": "This reservation was published at 2026-08-05T20:15:21Z, before the later overlapping 3751-3768 reservation at 2026-08-05T20:17:17Z. The scopes and artifact names are disjoint. Shared frontier updates preserve all published 3743-3750 work; the later 3751-3768 packet must reconcile this already-published source before its own shared writes.",
+  "source_certificate": {
+    "status": "PASS_EXACT_SEVEN_INTERNAL_FRONTS_GAP_EXECUTION_OBSERVATION_PENDING",
+    "semantic_sha256": "6271dafcc58467d6e758cdbcc9a1b220fe21693b3ace3c727fb5b5499be60ce6",
+    "source_archive_sha256": "649f8fd872b2fdd4da02d8a37fdc5fc23eb9aa53ed8a0678d3e707df5daac512",
+    "source_layout": "archive-backed exact verifier with five immutable base64 chunks under .bootstrap/",
+    "focused_local_tests": "2 passed in 18.64s",
+    "artifacts": [
+      "analysis/w33_pass3751_3758_monster_lattice_multiport_cover.py",
+      ".bootstrap/pass3751_bundle_00.b64",
+      ".bootstrap/pass3751_bundle_01.b64",
+      ".bootstrap/pass3751_bundle_02.b64",
+      ".bootstrap/pass3751_bundle_03.b64",
+      ".bootstrap/pass3751_bundle_04.b64",
+      "data/PART_3751_3758_MONSTER_LATTICE_MULTIPORT_COVER_results.json",
+      "tests/test_w33_pass3751_3758_monster_lattice_multiport_cover.py",
+      "analysis/BT3751_BT3758_monster_lattice_multiport_cover.md",
+      "analysis/BT3751_BT3758_monster_lattice_multiport_cover_insert.tex",
+      "analysis/BT3751_BT3758_monster_lattice_multiport_cover_index_insert.html",
+      "docs/fischer-quadratic-lattice-multiport.html",
+      ".github/workflows/w33_pass3751_gap_monster_u42_class_fusion_commit.yml",
+      ".github/workflows/w33_pass3751_3758_monster_lattice_multiport_cover.yml"
+    ]
+  },
+  "claim_boundary": "No serialized Monster embedding, observed Monster class-fusion multiplicity, characteristic-zero Terwilliger dimension inferred only from modular evidence, Leech or even-unimodular lattice identification, physical optical implementation, remote CI/PDF result, or laboratory mechanism is promoted without an executed certificate."
 }
