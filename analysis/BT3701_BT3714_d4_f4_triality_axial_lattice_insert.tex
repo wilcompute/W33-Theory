@@ -1,0 +1,62 @@
+\subsection{Passes 3701--3714: the \texorpdfstring{$D_4/F_4$}{D4/F4} triality carrier and the 45-axis firewall}
+\label{sec:pass3701-3714}
+
+The 135 maximal four-cliques of the 36-chamber graph admit an exact three-to-one quotient.  The stabilizer of each four-clique acts on the forty W33 points with an eight-point orbit; precisely three pairwise-disjoint four-cliques determine the same octad.  Hence
+\[
+135=45\cdot3.
+\]
+Two octads meet in zero or two points, and octad disjointness is
+\[
+\operatorname{SRG}(45,12,3,3),
+\qquad
+\operatorname{spec}=12^1\oplus3^{20}\oplus(-3)^{24}.
+\]
+The centered octad vectors, with entries $48$ on the octad and $-12$ off it, have norm $23040$, off-diagonal products $-5760$ or $1440$, and Gram spectrum
+\[
+43200^{24}\oplus0^{21}.
+\]
+Thus they form a rank-24 two-distance tight frame.
+
+The 135 four-cliques are exactly the 135 Lagrangian three-spaces of $W(5,2)$, restricted to the 36 anisotropic points of a minus quadratic form.  Their binary incidence matrix has rank $29$, and its dual is the affine restriction code
+\[
+[36,7,16]_2,
+\qquad
+W(z)=1+63z^{16}+63z^{20}+z^{36}.
+\]
+
+A frame stabilizer is
+\[
+C_2^3\rtimes S_4\cong W(D_4),
+\qquad |W(D_4)|=192.
+\]
+It has an explicit $S_4$ complement.  Its central quotient is non-split: the section cocycle system has coefficient rank $95$ and augmented rank $96$.  The common normalizer of the three frames over one octad has order $576$, while the stabilizer in the outer extension $U_4(2){:}2$ has order $1152$.  A colored-orbital conjugacy on a faithful 24-point orbit identifies the latter with the short-root action of $W(F_4)$.  Therefore
+\[
+W(D_4)\;(192)
+< W(F_4)_{\rm even\ frame}\;(576)
+< W(F_4)\;(1152).
+\]
+
+The ternary panels do not admit a string-Coxeter resolution preserving the exact four-generator target.  Each generator has $108$ inverting outer involutions, but no outer involution inverts all four.  In every two-involution-per-colour factorization, each pair of colours contributes at least two cross-colour noncommutations.  The resulting minimum is $16$ noncommuting edges, whereas a rank-eight string diagram has only seven.
+
+For the 45 canonical octad axes, the two basis products of the complete equivariant commutative Frobenius plane satisfy
+\[
+m_0(u,u)=36u,
+\qquad
+m_1(u,u)=-216u.
+\]
+The simultaneous left-eigenpairs are
+\[
+(36,-216)^1,
+\quad(28,152)^6,
+\quad(-12,-168)^8,
+\quad(-12,72)^9.
+\]
+No rational parameter gives the Monster $2A$ Majorana non-axis spectrum $\{0,1/4,1/32\}$.
+
+Finally, for
+\[
+\mathcal G=\begin{pmatrix}G&I\\I&0\end{pmatrix},
+\]
+the graph of an integral matrix $B$ has Gram matrix $G+B+B^{\mathsf T}$.  Every even integral rank-24 Gram matrix occurs in this way; $E_8^3$ is an explicit positive unimodular child.  The standard existence theorem for the Leech lattice therefore gives a noncanonical rootless graph section, but no explicit Leech basis is frozen here.  Equivariance is impossible: irreducibility forces $B=mI$, and no such scalar section is simultaneously positive definite and unimodular.
+
+Concrete Monster words, a regular thin polytope cover, an explicit canonical Leech section, and a Majorana/Griess/VOA realization remain certificate-gated.
