@@ -16,7 +16,8 @@
     "analysis/BT3404_BT3417_conic_magnetic_closure_insert",
     "analysis/BT3408_edge_commutant_decomposition_insert",
     "analysis/BT3418_BT3429_clebsch_d5_supplement_insert",
-    "analysis/BT3444_BT3457_radius_modular_fivechannel_insert"
+    "analysis/BT3444_BT3457_radius_modular_fivechannel_insert",
+    "analysis/BT3486_BT3499_radius_code_biplane_supplement_insert"
   ],
   "front_doors": {
     "w33_paper.tex": "w33_paper_body.tex",
@@ -64,6 +65,11 @@
       "kind": "id",
       "token": "bt3444-3457-radius-modular-fivechannel",
       "source": "analysis/BT3444_BT3457_radius_modular_fivechannel_index_insert.html"
+    },
+    {
+      "kind": "id",
+      "token": "bt3486-3499-radius-code-biplane-supplement",
+      "source": "analysis/BT3486_BT3499_radius_code_biplane_supplement_index_insert.html"
     }
   ],
   "boundary": "The manifest controls source reachability and ordering only; it does not certify PDF, hardware, laboratory, or physical claims."
