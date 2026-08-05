@@ -66,7 +66,7 @@ def _embedded_globals() -> dict[str, Any]:
             destination = (_EXTRACTED_ROOT / member.name).resolve()
             if destination != root and root not in destination.parents:
                 raise RuntimeError(f"unsafe archive member: {member.name}")
-        bundle.extractall(_EXTRACTED_ROOT, members=members)
+        bundle.extractall(_EXTRACTED_ROOT, members=members, filter="data")
     embedded = _EXTRACTED_ROOT / TARGET
     if not embedded.is_file():
         raise RuntimeError(f"embedded verifier absent: {TARGET}")
