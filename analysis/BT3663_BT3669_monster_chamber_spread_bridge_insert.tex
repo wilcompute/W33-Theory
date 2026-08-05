@@ -1,0 +1,82 @@
+\subsection{The canonical $A_6$-chamber/spread bridge and the exceptional $S_6$ double-six}
+\label{sec:monster-a6-spread-bridge}
+
+The preceding Monster-facing packet constructs all $432$ subgroups isomorphic to
+$A_5$, their $36$ $K_{6,6}$ components under the $D_{10}$-sharing relation, and
+one $A_6$ chamber per component.  Earlier exact work independently identifies the
+rank-three action of $PSp(4,3)$ on the $36$ spreads of $W(3,3)$.  The following
+result supplies the missing objectwise map; it is not an inference from equal
+cardinalities or strongly regular graph parameters.
+
+\begin{theorem}[Canonical chamber/spread bridge]
+Let $G=PSp(4,3)\cong U_4(2)$ act on $W(3,3)$, and let $H\cong A_6$ be one of the
+$36$ chambers.  Then
+\[
+ |N_G(H)|=720,
+ \qquad
+ [N_G(H),N_G(H)]=H.
+\]
+The normalizer fixes exactly one spread $\Sigma_H$, and
+\[
+ N_G(H)=\operatorname{Stab}_G(\Sigma_H).
+\]
+Consequently
+\[
+ \boxed{
+ G/N_G(A_6)\;\longleftrightarrow\;
+ \{\text{$W(3,3)$ spreads}\},
+ \qquad H\longmapsto\Sigma_H,
+ }
+\]
+is a canonical $G$-equivariant bijection of two $36$-element sets.
+\end{theorem}
+
+For distinct chambers $H$ and $K$, the complete intersection dictionary is
+\[
+ \boxed{|H\cap K|=18\iff|\Sigma_H\cap\Sigma_K|=1}
+ \qquad(360\text{ unordered pairs}),
+\]
+and
+\[
+ \boxed{|H\cap K|=12\iff|\Sigma_H\cap\Sigma_K|=4}
+ \qquad(270\text{ unordered pairs}).
+\]
+The order-$12$ relation is therefore
+\[
+ \operatorname{SRG}(36,15,6,6),
+ \qquad
+ \operatorname{spec}=15^1\oplus3^{15}\oplus(-3)^{20},
+\]
+while the complementary order-$18$ relation is
+\[
+ \operatorname{SRG}(36,20,10,12),
+ \qquad
+ \operatorname{spec}=20^1\oplus2^{20}\oplus(-4)^{15}.
+\]
+The graph identification is carried by the explicit equivariant bijection, not
+by the parameter tuple alone.
+
+Each chamber contains twelve $A_5$ subgroups, split by the two global $A_5$
+classes as $6+6$.  Two members of the same six-set intersect in $A_4$; every
+cross-pair intersects in $D_{10}$.  Thus the cross-intersection graph is exactly
+$K_{6,6}$.  The normalizer $S_6$ acts faithfully on both six-sets, and the exact
+cycle-type census verifies that the two actions are exchanged by the exceptional
+outer automorphism:
+\[
+ (2,1,1,1,1)\longleftrightarrow(2,2,2),
+ \qquad
+ (3,1,1,1)\longleftrightarrow(3,3),
+ \qquad
+ (6)\longleftrightarrow(3,2,1).
+\]
+Their directed multiplicities are respectively $15$, $40$, and $120$ in each
+direction.
+
+\paragraph{Monster-facing boundary.}
+Any future concrete $5B$-containing $U_4(2)$ embedding in the Monster transports
+this complete $36$-spread/$36$-chamber carrier and every local double-six chart.
+The certificate does not provide Monster words, a unique class fusion, a verified
+multiplicity of the $81$-dimensional constituent, or a Griess/VOA/photonic
+multiplication law.  In particular, this rank-three spread carrier is not
+identified with the distinct $36$-ray magic-state orthogonality graph, which is
+not strongly regular.
