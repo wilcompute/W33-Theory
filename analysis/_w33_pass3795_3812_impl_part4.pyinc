@@ -1,0 +1,160 @@
+            for g in old["line_gens"]:
+                image = tuple(sorted(g[x] for x in current))
+                if image not in seen_triples:
+                    seen_triples.add(image)
+                    queue.append(image)
+        representative = min(orbit)
+        edge_count = sum(int(old["A"][i, j]) for i, j in combinations(representative, 2))
+        triple_orbits.append({
+            "size": len(orbit), "representative": list(representative), "induced_edges": edge_count,
+            "generated_dimension": generated_dimension(representative),
+        })
+    triple_orbits.sort(key=lambda x: (x["induced_edges"], x["size"], x["representative"]))
+    assert sorted((x["size"], x["generated_dimension"]) for x in triple_orbits) == sorted([(270,3),(2160,5),(6480,10),(240,4),(2160,10),(2880,24)])
+
+    multiplication_columns = np.stack([structure[:, a, :].reshape(-1) for a in range(24)], axis=1)
+    identity_vector = np.eye(24, dtype=np.int64).reshape(-1)
+    assert rank_mod(multiplication_columns, MOD) == 24
+    assert rank_mod(np.column_stack((multiplication_columns, identity_vector)), MOD) == 25
+
+    checks = {
+        "canonical_40_dictionary_and_all_51840_isomorphisms": True,
+        "forty_lines_and_thirty_six_spreads_transport_exact": True,
+        "complete_200_ovoid_19_orbital_configuration": True,
+        "coherent_intersection_tensor_and_center_dimension5": True,
+        "tripod_double_K4_reconstructs_W33_incidence": True,
+        "binary_Golay_759_octads_exact": True,
+        "rootless_even_unimodular_rank24_leech_exact": True,
+        "leech_transport_to_axial_carrier_exact": True,
+        "full_U42_stabilizer_of_leech_polarization_is_C2": True,
+        "abstract_O6minus2_descent_order_and_census_exact": True,
+        "axial_linear_presentation_kernel_exact": True,
+        "pair_and_triple_generated_subalgebras_exact": True,
+        "three_axis_universality_exact": True,
+        "axial_algebra_has_no_identity": True,
+        "monster_words_and_class_fusion_fail_closed": True,
+    }
+
+    result = {
+        "schema": "w33.pass3795_3812.plane_ovoid_scheme_leech_axial.v1",
+        "status": "PASS_EXACT_FIVE_FRONTS_THREE_CONSTRUCTIONS_MONSTER_WORDS_PENDING",
+        "checks": checks,
+        "w33_plane_ovoid_dictionary": {
+            "dictionary_w33_index_to_plane_ovoid_index": list(dictionary),
+            "dictionary_sha256": dictionary_sha,
+            "isomorphism_torsor_size": len(plane_group),
+            "w33_lines": len(w33_lines),
+            "line_size": 4,
+            "spreads": len(spreads),
+            "lines_per_spread": 10,
+            "transport_verdict": "the canonical dictionary transports the complete W33 point-line geometry and every spread onto the 40 plane ovoids",
+        },
+        "ovoid_coherent_configuration": {
+            "fibers": [40, 160],
+            "ordered_pair_orbitals": len(orbitals),
+            "orbital_sizes": [len(x) for x in orbitals],
+            "orbital_data": orbital_data,
+            "intersection_tensor_shape": [19, 19, 19],
+            "intersection_tensor_nonzero_entries": int(np.count_nonzero(pijk)),
+            "intersection_tensor_maximum": int(pijk.max()),
+            "intersection_tensor_sha256": tensor_sha,
+            "adjacency_algebra_dimension": 19,
+            "center_dimension_mod_1000003": center_dimension,
+        },
+        "tripod_double_fibration": {
+            "tripods": 160,
+            "K4_partition_relation_ids": k4_relation_ids,
+            "blocks_in_each_partition": [40, 40],
+            "intersection_incidence_shape": [40, 40],
+            "incidence_ones": int(incidence.sum()),
+            "row_and_column_weight": 4,
+            "incidence_rank_over_Q": int(sp.Matrix(incidence.tolist()).rank()),
+            "incidence_rank_mod_1000003": rank_mod(incidence, MOD),
+            "gram_identity": "B B^T = 4 I + A_W33",
+            "reconstructed_graph_srg": [40, 12, 2, 4],
+            "interpretation": "each tripod is the unique flag between one block in each K4 fibration, reconstructing the 160 flags of W(3,3)",
+        },
+        "rootless_leech_polarization": {
+            "construction": "binary Golay coordinate construction from the ATLAS M24 standard generators and base octad",
+            "golay_parameters": [24, 12, 8],
+            "octads": len(octads),
+            "weight_distribution": {str(k): v for k, v in sorted(weight_distribution.items())},
+            "numerator_basis_determinant": str(abs(int(numerator_basis.det()))),
+            "gram_determinant": int(leech_gram.det()),
+            "positive_definite": bool(leech_gram.is_positive_definite),
+            "even": True,
+            "exact_vectors_of_norm_at_most_2": short_count,
+            "exact_short_vector_search_nodes": short_nodes,
+            "minimum_norm": 4,
+            "m24_involution_cycle_shape": {"fixed": 8, "transpositions": 8},
+            "axial_transport_determinant": 1,
+            "axial_gram_sha256": axial_leech_sha,
+            "surviving_U4_2_stabilizer_order": len(surviving),
+            "surviving_U4_2_stabilizer": "C2",
+            "maximality_scope": "exact stabilizer inside the complete 25920-element U4(2) axial action",
+        },
+        "finite_group_descent": {
+            "explicit_permutation_degrees": [45, 200],
+            "full_group": "O6-(2)=U4(2):2",
+            "full_group_order": len(full_group),
+            "even_subgroup": "U4(2)",
+            "even_subgroup_order": len(even_group),
+            "full_element_order_census": {str(k): v for k, v in sorted(full_order_census.items())},
+            "seven_generator_sha256": generator_digest,
+            "internal_fingerprint": {"plane_ovoids":40,"tripods":160,"coherent_orbitals":19,"GQ_points":45,"GQ_lines":27,"Norton_lines":120,"D4_frames":135},
+            "monster_status": "FAIL_CLOSED_NO_SERIALIZED_MMgroup_WORDS_OR_EXECUTED_CLASS_FUSION",
+        },
+        "intrinsic_axial_classification": {
+            "dimension": 24,
+            "axes": 45,
+            "defining_linear_relations": 27,
+            "linear_relation_rank": 21,
+            "full_axis_kernel_dimension": 21,
+            "pair_generated_dimensions": pair_dimensions,
+            "triple_orbits": triple_orbits,
+            "three_axis_universal_orbit_size": next(x["size"] for x in triple_orbits if x["generated_dimension"] == 24),
+            "unital": False,
+            "simple": True,
+            "derivation_dimension": 0,
+            "presentation_verdict": "the 27 five-axis line sums are the complete linear relations; the collinear and common-neighbor pair laws determine multiplication",
+        },
+        "three_bonkers_constructions": {
+            "double_K4_flag_reconstruction": "160 tripods become the complete flag set of a reconstructed W33 incidence geometry",
+            "rootless_axial_Leech_bridge": "an explicit determinant-one integral transport puts a rootless Leech Gram on the 24-dimensional axial carrier with exact U4(2) stabilizer C2",
+            "three_axis_universality": "one 2880-element orbit of axis triples generates the entire 24-dimensional algebra, whereas pairs generate dimension only two or four",
+        },
+        "evidence_boundary": {
+            "proved_here": [
+                "canonical objectwise W33-plane-ovoid dictionary and transported lines/spreads",
+                "complete 19-orbital coherent configuration on all 200 ovoids",
+                "double-K4 reconstruction of the 160 W33 flags",
+                "explicit even unimodular rootless rank-24 lattice and its exact C2 stabilizer in U4(2)",
+                "abstract O6-(2) permutation descent and full element-order census",
+                "intrinsic linear presentation and pair/triple generated-subalgebra classification",
+            ],
+            "not_proved_here": [
+                "serialized Monster/mmgroup words or an executed Monster class fusion",
+                "Monster, Majorana, Griess, or VOA identification of the axial algebra",
+                "full automorphism group of the 19-relation coherent algebra beyond the executed O6-(2) action",
+                "remote CI or PDF success until observed",
+                "hardware, laboratory, or physical mechanism",
+            ],
+        },
+    }
+    semantic = sha256(json.dumps(result, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+    result["semantic_sha256"] = semantic
+    return result
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
+    args = parser.parse_args()
+    result = build()
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print("PASS_3795_3812", result["semantic_sha256"])
+
+
+if __name__ == "__main__":
+    main()
