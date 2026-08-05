@@ -1,0 +1,91 @@
+\section{Maximal-code census, exact adjacent mesh, holonomy closure, and the ovoid flag completion}
+\label{sec:bt3821-3828}
+
+The six-bit minus-type quadratic parent supports a complete exact refinement of the code, multiport, Fischer-holonomy, finite-group, and ovoid fronts.  The frozen component certificate has semantic digest
+\[
+\texttt{b141dd0f82e4a6b1ee62d1c57f0e92bdfc9f58d3b32515f9521a0175fdca88a1}.
+\]
+
+\subsection{Maximal doubly-even extensions}
+Let $C=[36,6,16]$ be the binary character code on the nonsingular vectors.  Its discriminant module is the minus-type quadratic space $O^-_{24}(2)$ of Witt index eleven.  Hence the exact number of maximal doubly-even extensions is
+\[
+N=\prod_{i=2}^{12}(2^i+1)
+ =240137905387279785868125.
+\]
+Since $|U_4(2){:}2|=51840$, there are at least
+\[
+4632289841575613440
+\]
+orbits.  Thus the exact classification is necessarily a census and orbit-explosion theorem rather than a literal representative list.  An explicit maximal extension $D=[36,17,8]$ has enumerator
+\[
+1+225z^8+9555z^{12}+55755z^{16}+55755z^{20}
+ +9555z^{24}+225z^{28}+z^{36},
+\]
+and trivial stabilizer in $U_4(2){:}2$.
+
+\subsection{An exact 418-gate adjacent mesh}
+For
+\[
+H=(2A_{36}-J)/6,
+\]
+an exact symbolic adjacent Givens elimination gives 418 nontrivial rotations in 69 layers, 212 exact zero skips, and one terminal $\pi$ phase.  Every gate has
+\[
+c=\operatorname{sgn}(c)\sqrt{c^2},\qquad
+s=\operatorname{sgn}(s)\sqrt{s^2},\qquad c^2+s^2=1,
+\]
+with rational squared parameters.  The exact parameter digest is
+\[
+\texttt{5c933cc2e6d2484e97894f3ca1f71627214238e41a68cd59b7527993d2b06b6b}.
+\]
+The certified bounds are
+\[
+35\le g\le418,
+\qquad6\le d\le69.
+\]
+No global optimality claim is made.
+
+\subsection{The rank-five holonomy scheme}
+The 120 Fischer triples carry five Gram relations with valencies
+\[
+1,2,54,36,27
+\]
+and primitive multiplicities
+\[
+1,20,24,60,15.
+\]
+All Krein parameters are exact.  There is no $Q$-polynomial ordering, and exactly four fusion schemes survive: the full scheme, the fusion $(2,4)$, the fusion $(2,3,4)$, and the complete rank-two fusion.  The full automorphism group is $U_4(2){:}2$.  At a point,
+\[
+\dim_{\mathbf Q}T=79,
+\qquad
+\dim_{\mathbf Q}Z(T)=10.
+\]
+The certificate proves exact closure using 79 word matrices and all 83 point-stabilizer orbitals.
+
+\subsection{Complete abstract standard-pair census}
+Inside $U_4(2)$, fix an involution $a$ in the class of size 45.  Exactly 1152 order-five elements $b$ satisfy
+\[
+|ab|=9,
+\qquad |[a,b]|=3.
+\]
+The centralizer $C(a)$ has order 576 and splits those elements into two orbits of size 576.  Each orbit representative generates all 25920 elements.  Therefore the complete ordered standard-pair census is
+\[
+45\cdot1152=51840.
+\]
+No serialized Monster words or Monster character restriction is asserted.
+
+\subsection{Ovoids as W33 points and flags}
+All 200 ovoids of $GQ(4,2)$ split into 40 plane ovoids and 160 tripods.  Objectwise,
+\[
+40\text{ plane ovoids}=40\text{ W33 points},
+\]
+\[
+160\text{ tripods}=160\text{ incident W33 point-line flags}.
+\]
+The 160 tripod port columns collapse four-to-one onto the 40 W33 line-versus-spread incidence columns.  Finally the five fibers
+\[
+1\mid27\mid36\mid40\mid160
+\]
+form one $O^-_6(2)$ orbital coherent configuration of rank 48.
+
+\paragraph{Boundary.}
+The packet does not materialize billions of orbit representatives, prove global circuit optimality, produce Monster words or class fusion, identify a rootless lattice, or certify hardware, laboratory, remote-CI, or PDF results.
