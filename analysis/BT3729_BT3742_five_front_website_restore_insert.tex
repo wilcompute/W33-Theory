@@ -1,0 +1,74 @@
+\subsection{Cubic-transversal closure, tomotope completion square, and website restoration}
+\label{sec:bt3729-3742-five-front-website-restore}
+
+The long-form public site was restored byte-for-byte from the final intact blob
+\texttt{41a8d733f42da18282fa276f5d2fa82bac7516f6}; the compact replacement was
+preserved separately at
+\texttt{docs/source-derived-architecture-landing-2026-08-05.html}.
+
+For the $240\times5040$ cubic dependency incidence matrix $T$, put
+$D=TT^{\mathsf T}-63I$.  If a transversal has size $m$ and
+$P=\sum_t\binom{h_t}{2}=\frac12x^{\mathsf T}Dx$, then the minimum eigenvalue
+$-18$ of $D$ gives
+\[
+ P\geq \frac3{10}m^2-9m,
+\]
+while $h_t\in\{1,2,3\}$ gives
+\[
+ P\leq \frac32(63m-5040).
+\]
+Hence $(m-105)(m-240)\leq0$.  Equality at $m=105$ would make the integer
+$P$ equal to $4725/2$, so $m\geq106$.  An explicit $62$-face cap gives a
+$178$-face transversal, and therefore
+\[
+ \boxed{106\leq\tau_{\rm cubic}\leq178}.
+\]
+The covering-radius interval remains $389\leq R\leq435$.
+
+The 45-anchor graph has independence number five and fractional chromatic number
+nine.  The generalized weighted-Hoffman optimum over arbitrary edge-supported
+Hermitian matrices is therefore exactly nine, attained by
+$A_{45}\otimes I_4$.  This does not change $10\leq\chi(H)\leq11$.
+
+The corrected edge--face layer admits three vertex-structure orbits and three
+cell covers.  All nine pairings are connected rank-four incidence geometries
+with $f$-vector $(4,12,16,8)$, $192$ flags, and all diamond intervals of size
+two.  Their automorphism-order matrix is
+\[
+\begin{pmatrix}
+96&96&192\\
+192&96&96\\
+96&192&96
+\end{pmatrix}.
+\]
+Thus six completions are two-flag-orbit tomotopes with automorphism order $96$,
+while a perfect matching of three completions gives regular non-split central
+lifts of order $192$.
+
+The characteristic-three complement has filtration
+\[
+159\supset44\supset14\supset0.
+\]
+The bottom $14$-space is absolutely irreducible.  The middle quotient satisfies
+the non-split exact sequence
+\[
+0\longrightarrow 1\oplus5\oplus10
+\longrightarrow M_{30}
+\longrightarrow14
+\longrightarrow0.
+\]
+The top $115$-quotient has fixed-socle dimension two and trivial-head
+multiplicity one; its remaining factors are not labelled here.
+
+Finally, all $32$ full-orbit binary roundings of the integral weighted
+W33--Clebsch bridge were exhausted.  None is $10$-regular and none satisfies the
+Gewirtz identity $A^2=8I-2A+2J$.  Asymmetric rounding remains open.
+
+Two further constructions follow.  The $3\times3$ tomotope completion square
+has six order-$96$ entries and a perfect matching of three order-$192$ entries.
+The explicit $62$-cap has trivial stabilizer in $U_4(2)$, producing a free orbit
+of $25{,}920$ cap witnesses.
+
+The frozen semantic SHA-256 is
+\texttt{c6e5e73fb5a18d9add4c1643d52df31413280b0e5cd157294ca686f8df32a299}.
+No remote CI, PDF, hardware, laboratory, or physical claim is promoted here.
