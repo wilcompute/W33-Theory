@@ -37,6 +37,7 @@ def amplitude_certificate(geo):
         X=Binv*(M*B)[rows,:];assert M*B==B*X;restricted.append(X)
     w=sp.symbols('w0:5');x=sp.symbols('x')
     A=sum((w[i]*restricted[i] for i in range(5)),sp.zeros(14))
+    # The active real 14-space is two copies of a 7D rational characteristic factor.
     powA=sp.eye(14);powers=[]
     for k in range(1,8):
         powA=powA*A;powers.append(sp.expand(sp.trace(powA)/2))
@@ -47,9 +48,15 @@ def amplitude_certificate(geo):
     fs=sp.factor_list(p)[1];q2=[f for f,n in fs if sp.Poly(f,x).degree()==2][0];q5=[f for f,n in fs if sp.Poly(f,x).degree()==5][0]
     expected_q2=x**2+(w[1]+w[4])*x+w[1]*w[4]-9*w[3]**2
     assert sp.expand(q2-expected_q2)==0
+    # Exact scalar quotient.  The common kernel of the first four channels has
+    # dimension 76 and is invariant under channel four.  Its action satisfies
+    # (X+4I)(X-2I)=0 with trace -52, hence multiplicities 34 and 42 in the
+    # real representation, i.e. 17 and 21 in the complex Hermitian spectrum.
     comp=[i for i in range(90) if i not in rows]
+    # In the basis [B, e_j (j in comp)], the quotient action is the Schur coordinate block.
     X4=mats[4].extract(comp,comp)-B.extract(comp,range(14))*Binv*mats[4].extract(rows,comp)
     I76=sp.eye(76);assert (X4+4*I76)*(X4-2*I76)==sp.zeros(76) and sp.trace(X4)==-52
+    # Exact dyadic witness.
     N=32768;nums=[-15576,44300,-28135,-30786,N]
     q=sp.Poly(sp.expand(p.subs(dict(zip(w,nums)))),x)
     lo=-4*N;hi=32*N
@@ -57,7 +64,9 @@ def amplitude_certificate(geo):
     ints=q.intervals(eps=sp.Rational(1,10**18));maxlo,maxhi=ints[-1][0]
     ratio_lo=sp.Rational(1)+maxlo/(4*N);ratio_hi=sp.Rational(1)+maxhi/(4*N)
     assert ratio_lo>sp.Rational(890622,100000) and ratio_hi<sp.Rational(890623,100000)
-    fac=sp.factor(q.as_expr());assert sorted(sp.Poly(f,x).degree() for f,n in sp.factor_list(q.as_expr())[1])==[2,5]
+    fac=sp.factor(q.as_expr());faclist=[str(f) for f,n in sp.factor_list(q.as_expr())[1]]
+    assert sorted(sp.Poly(f,x).degree() for f,n in sp.factor_list(q.as_expr())[1])==[2,5]
+    # Exact double-boundary equations and algebraic KKT value polynomial.
     A2,B2,D2=sp.symbols('A B D')
     boundary=sp.expand(-15*A2**2*B2**2+16*A2**2*B2+16*A2*B2**2+A2*B2*D2-16*A2*B2+D2**2)
     P18=sp.Poly(93025*x**18-17368225*x**17+1343400488*x**16-54678836049*x**15+1208553186349*x**14-12568450299944*x**13+10408544953776*x**12+714023927292800*x**11-1918647323370496*x**10-9561946282978816*x**9+30508028220947456*x**8+46430249171922944*x**7-177191425380765696*x**6-90189547073110016*x**5+465447399548256256*x**4+53781503347261440*x**3-558321296207773696*x**2+9381546725212160*x+252166415161753600,x)
