@@ -3,8 +3,20 @@
   "range": [3715, 3721],
   "slug": "carrier_tournament_process_budget_identification_scheduler_twirl",
   "title": "Carrier, tournament, process tensor, budget, identification, scheduler, and twirl",
-  "status": "reserved",
+  "status": "published",
   "owner": "research-agent",
   "reserved_at": "2026-08-05T15:35:00-04:00",
-  "boundary": "Reservation only; publication requires exact source, frozen certificate, tests, workflow, manuscript integration, and public reachability."
+  "published_at": "2026-08-05T15:56:00-04:00",
+  "semantic_sha256": "2f934b56ba757c94c7b1c46396691dbc417a37aa0b5a07cf762067449705d9b1",
+  "files": [
+    "analysis/bt3715_3721_carrier_tournament_process_budget_identification_scheduler_twirl.py",
+    "data/PART_BT3715_BT3721_CARRIER_TOURNAMENT_PROCESS_BUDGET_IDENTIFICATION_SCHEDULER_TWIRL_results.json",
+    "tests/test_bt3715_bt3721_carrier_tournament_process_budget_identification_scheduler_twirl.py",
+    "analysis/BT3715_BT3721_carrier_tournament_process_budget_identification_scheduler_twirl.md",
+    "analysis/BT3715_BT3721_carrier_tournament_process_budget_identification_scheduler_twirl_insert.tex",
+    "analysis/BT3715_BT3721_carrier_tournament_process_budget_identification_scheduler_twirl_index_insert.html",
+    "docs/carrier-tournament-process-budget-identification.html",
+    ".github/workflows/w33_pass3715_3721_carrier_tournament_process_budget_identification_scheduler_twirl.yml"
+  ],
+  "boundary": "The 243-photon carrier is a minimum one-erasure construction; the tournament is exact for all 27,132 matched circulants; process memory is causal; energy values are lower-bound benchmarks; scheduler and twirl require physical implementation."
 }
