@@ -1,0 +1,11 @@
+{
+  "schema": "w33.pass_namespace_registry.v2",
+  "range": [3663, 3669],
+  "owner": "openai-gpt-5.6-thinking",
+  "branch": "master",
+  "purpose": "Construct the canonical A6-chamber/spread bijection inside U4(2), prove the objectwise intersection dictionary, certify the derived S6 stabilizers and their exceptional outer-automorphism double-six, and integrate the Monster-facing boundary into all three manuscripts and the public index.",
+  "base": "6e2331bbcd812370802ee99503bfb025fa7b8ad2",
+  "status": "reserved",
+  "coordination": "Avoids the overlapping 3649-3655 and 3649-3662 reservations already present on master; no files in either reserved packet are modified.",
+  "claim_boundary": "The theorem identifies abstract U4(2) G-sets and subgroup geometry. It does not serialize a Monster embedding, select a unique Monster class fusion, identify the physical M36 magic-ray Gram graph, or promote a Griess/VOA/photonic mechanism."
+}
