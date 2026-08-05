@@ -1,0 +1,48 @@
+{
+  "boundary": "The exact polynomial certificate is for a canonical triangle. The companion exhaustive numerical search verifies that all 15,840 triangle/omitted-edge patterns have the same extremal fingerprint; an objectwise filled-face crosswalk remains separate.",
+  "characteristic_polynomials": {
+    "common_fixed_factor": "(x-2)^22 (x+4)^18",
+    "real_signed_quintic": [1,-28,-140,520,1568,-1088],
+    "ternary_phase_quintic": [1,-28,-140,478,1448,-1328]
+  },
+  "checks": {
+    "graph_srg_45_32_22_24": true,
+    "phase_quintic_exact": true,
+    "phase_ratio_below_8": true,
+    "phase_traces_exact": true,
+    "signed_quintic_exact": true,
+    "signed_ratio_below_8": true,
+    "triangle_count_5280": true
+  },
+  "real_signed": {
+    "hoffman_ratio_numeric": 7.061318729427313,
+    "integer_lower_bound": 8,
+    "lambda_max_numeric": 31.836856841479943,
+    "lambda_min_numeric": -5.252463739765745,
+    "root_intervals": [
+      ["-1396399/265856","-1556825/296399"],
+      ["-579155/198516","-432114/148115"],
+      ["205933/344992","216092/362011"],
+      ["771256/206433","788401/211022"],
+      ["1569175/49288","7516077/236081"]
+    ],
+    "trace_powers_1_to_5": [0,1440,31176,1033344,32686560]
+  },
+  "schema": "w33.bt3407.magnetic_exact_no_go.v1",
+  "status": "PASS",
+  "ternary_phase": {
+    "hoffman_ratio_numeric": 7.283500280818932,
+    "integer_lower_bound": 8,
+    "lambda_max_numeric": 31.87795842508628,
+    "lambda_min_numeric": -5.073280337457327,
+    "root_intervals": [
+      ["-2174342/428587","-312717/61640"],
+      ["-799898/261649","-123053/40251"],
+      ["99714/129221","134609/174442"],
+      ["180285/51794","6226634/1788847"],
+      ["5025337/157643","2590116/81251"]
+    ],
+    "trace_powers_1_to_5": [0,1440,31302,1038528,32898600]
+  },
+  "verdict": "Both one-triangle magnetic families are spectrally weaker than the live chromatic lower bound ten. Profile sensitivity is real, but isolated minimum defects cannot close chi(H)."
+}

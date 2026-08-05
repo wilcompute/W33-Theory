@@ -1,0 +1,44 @@
+{
+  "boundary": "The group, orbit, stabilizer, subdegrees, orbital rank, and commutant matrices are constructed exactly. Isotypic degrees are recovered from well-separated deterministic numerical eigenvalues and close both dimension and character norm. The GAP workflow remains the independent CTblLib row-label check, especially for naming the selected conjugate degree-30 pair.",
+  "carrier": {
+    "description": "720 non-collinear pairs in H(3,4), equivalently edges of SRG(45,32,22,24)",
+    "orbital_rank": 34,
+    "size": 720,
+    "stabilizer_order": 36,
+    "subdegrees": [1,2,3,6,9,9,12,12,12,12,12,18,18,18,18,18,18,18,18,18,18,18,36,36,36,36,36,36,36,36,36,36,36,36]
+  },
+  "character_norm_check": 34,
+  "checks": {
+    "character_norm_closes_34": true,
+    "complex_commutant_degrees": true,
+    "dimension_closes_720": true,
+    "edge_action_transitive_720": true,
+    "edge_stabilizer_order_36": true,
+    "orbital_rank_34": true,
+    "real_commutant_conjugate_pairing": true,
+    "six_transvection_generators": true,
+    "unitary_group_order_25920": true
+  },
+  "decomposition_formula": "1 + 15a + 15b + 2*20 + 3*24 + 30a + 30b + 45a + 45b + 2*60 + 64 + 3*81",
+  "dimension_check": 720,
+  "generic_complex_commutant_eigenspace_dimensions": [1,15,15,20,20,24,24,24,30,30,45,45,60,60,64,81,81,81],
+  "generic_real_symmetric_commutant_eigenspace_dimensions": [1,15,15,20,20,24,24,24,60,60,60,64,81,81,81,90],
+  "group": {
+    "generator_growth": [2,6,12,48,192,25920],
+    "name": "PSU(4,2)=PSp(4,3)",
+    "order": 25920
+  },
+  "ordinary_degree_multiplicity_profile": {
+    "1": [1],
+    "15_pair": [1,1],
+    "20": [2],
+    "24": [3],
+    "30_conjugate_pair": [1,1],
+    "45_conjugate_pair": [1,1],
+    "60": [2],
+    "64": [1],
+    "81": [3]
+  },
+  "schema": "w33.bt3408.edge_commutant_decomposition.v1",
+  "status": "PASS"
+}
