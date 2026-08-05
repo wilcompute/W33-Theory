@@ -1,6 +1,7 @@
 from analysis.bt3404_3417_conic_torus_closure import build_certificate
 from analysis.bt3407_magnetic_chromatic_search import build_certificate as magnetic_certificate
 from analysis.bt3407_magnetic_exact_no_go import build_certificate as magnetic_exact_certificate
+from analysis.bt3408_edge_commutant_decomposition import build_certificate as edge_commutant_certificate
 
 
 def test_conic_torus_closure():
@@ -25,3 +26,12 @@ def test_magnetic_exact_no_go():
     assert all(result["checks"].values())
     assert result["ternary_phase"]["hoffman_ratio_numeric"] < 8
     assert result["real_signed"]["hoffman_ratio_numeric"] < 8
+
+
+def test_edge_commutant_decomposition():
+    result = edge_commutant_certificate()
+    assert result["status"] == "PASS"
+    assert all(result["checks"].values())
+    assert result["carrier"]["orbital_rank"] == 34
+    assert result["dimension_check"] == 720
+    assert result["character_norm_check"] == 34
