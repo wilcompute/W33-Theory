@@ -1,0 +1,91 @@
+{
+  "schema": "w33.pass3635_3648.monster_u42_completion.v1",
+  "status": "PASS_EXACT_PYTHON_FRONTIERS",
+  "checks": {
+    "projective_points_40": true,
+    "w33_degree_12": true,
+    "w33_srg_identity": true,
+    "projector_rank_24": true,
+    "projector_idempotent_scale_60": true,
+    "u42_order_25920": true,
+    "u42_order_census": true,
+    "four_generators_order_3": true,
+    "tetrahedral_triples_order_648": true,
+    "tetrahedral_triples_fix_one_point": true,
+    "compressed_pair_2_5_12": true,
+    "compressed_pair_generates_u42": true,
+    "a5_presentation_pair_count": true,
+    "a5_total_432": true,
+    "a5_two_orbits_216": true,
+    "d10_edges_1296": true,
+    "a6_chambers_36": true,
+    "all_d10_pairs_generate_a6": true,
+    "a5_graph_36_k66": true,
+    "a6_normalizer_s6_order_720": true,
+    "symmetric_span_full_300": true,
+    "alternating_span_full_276": true,
+    "full_matrix_span_576": true,
+    "snf_profile": true,
+    "scalar_unimodular_glue_blocked": true,
+    "leech_rootless_theta": true,
+    "boson24_coefficients": true,
+    "modular_completion_matches_jplus24": true
+  },
+  "u42_carrier": {
+    "generator_vectors": [[1,1,0,1],[0,1,2,2],[1,2,2,2],[1,2,1,2]],
+    "generator_orders": [3,3,3,3],
+    "pair_product_orders": {"01":3,"02":6,"03":6,"12":6,"13":6,"23":6},
+    "triple_stabilizers": {
+      "012": {"order":648,"fixed_point_indices":[18],"fixed_points":[[1,0,1,2]]},
+      "013": {"order":648,"fixed_point_indices":[37],"fixed_points":[[1,2,2,0]]},
+      "023": {"order":648,"fixed_point_indices":[5],"fixed_points":[[0,1,0,1]]},
+      "123": {"order":648,"fixed_point_indices":[9],"fixed_points":[[0,1,1,2]]}
+    },
+    "group_order": 25920,
+    "element_order_census": {"1":1,"2":315,"3":800,"4":3780,"5":5184,"6":5760,"9":5760,"12":4320},
+    "compressed_pair": {"orders":[2,5,12],"generated_order":25920,"words":["CDaCBac","BDaCbC"]}
+  },
+  "a5_a6_s6_geometry": {
+    "a5_presentation_pairs": 51840,
+    "a5_subgroups": 432,
+    "a5_conjugacy_orbits": [216,216],
+    "d10_sharing_edges": 1296,
+    "components": 36,
+    "component_shape": "K6,6",
+    "a6_subgroups": 36,
+    "edges_per_a6": [36],
+    "a6_normalizer_order": 720,
+    "interpretation": "Every bare D10-sharing A5 pair closes at A6; each A6 has normalizer S6 and supplies one of 36 chambers."
+  },
+  "local_matrix_algebra": {
+    "carrier_dimension": 24,
+    "symmetric_tensor_rank": 300,
+    "alternating_tensor_rank": 276,
+    "combined_rank": 576,
+    "interpretation": "The forty carrier vectors generate all Sym_24 and so_24 directions, hence the full 24x24 matrix algebra at the linear-span level."
+  },
+  "leech_glue": {
+    "smith_nonzero_profile": {"2":1,"10":9,"30":6,"60":8},
+    "discriminant_factorization": {"2":32,"3":14,"5":23},
+    "scalar_unimodular_overlattice": "IMPOSSIBLE",
+    "reason": "The 5-adic discriminant exponent is odd; multiplying the form by any rational scalar changes every valuation by a multiple of rank 24 and cannot make the discriminant a square.",
+    "surviving_route": "non-scalar coupling, quotient, or multi-lattice extension before rank-24 unimodular completion"
+  },
+  "graded_modular_completion": {
+    "theta_leech": [1,0,196560,16773120,398034000,4629381120],
+    "boson24": [1,24,324,3200,25650,176256],
+    "character_j_plus_24": [1,24,196884,21493760,864299970,20245856256],
+    "identity": "(E4^3 - 720 Delta) * prod_(n>=1)(1-q^n)^(-24) = q*(J+24) in coefficient indexing",
+    "boundary": "The W33 multiplicity 24 fixes the oscillator exponent, but W33 incidence does not by itself prove rootlessness or the Leech theta numerator."
+  },
+  "monster_restriction_front": {
+    "status": "GAP_WORKFLOW_REQUIRED",
+    "target": "Enumerate 5B-containing U4(2)->M class fusions and restrict the 196883 character, recording the degree-81 multiplicity set.",
+    "embedding_boundary": "The abstract 40-point certificate is not a serialized Monster-word embedding."
+  },
+  "evidence_boundary": {
+    "proved_here": ["explicit 40-point U4(2) order certificate","complete A5/A6/S6 chamber census","full symmetric and alternating tensor spans","scalar Leech-glue determinant obstruction","rank-24 modular completion coefficients"],
+    "not_proved_here": ["concrete mmgroup words for U4(2) inside M","unique Monster class fusion","observed degree-81 multiplicity before GAP artifact generation","Griess or VOA multiplication preserved by the matrix-algebra span","Leech embedding of the W33 projector lattice"]
+  },
+  "semantic_sha256": "cf276859798326def36c2bdc0e9fb75dbdadbbc44d69ba61cae24b5c82f40271"
+}
