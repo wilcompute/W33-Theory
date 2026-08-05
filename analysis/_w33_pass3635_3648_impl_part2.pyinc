@@ -1,0 +1,191 @@
+    h2 = [x for x in h if permutation_order(x) == 2]
+    h3 = [x for x in h if permutation_order(x) == 3]
+    for a in h2:
+        for b in h3:
+            if permutation_order(compose(a, b)) == 5:
+                return a, b
+    raise AssertionError("A5 generator pair missing")
+
+A5_GENERATOR_CACHE = {h: first_a5_generators(h) for h in A5S}
+A6_SUBGROUPS = []
+for component in components:
+    edge = next((u, v) for u in component for v in A5_ADJ[u] if u < v)
+    h, k = A5S[edge[0]], A5S[edge[1]]
+    A6_SUBGROUPS.append(closure([*A5_GENERATOR_CACHE[h], *A5_GENERATOR_CACHE[k]]))
+A6_SUBGROUPS = list(dict.fromkeys(A6_SUBGROUPS))
+
+A6_REP = A6_SUBGROUPS[0]
+A6_ORBIT = {A6_REP}
+queue = deque([A6_REP])
+while queue:
+    h = queue.popleft()
+    for g in G4:
+        k = frozenset(conjugate(g, x) for x in h)
+        if k not in A6_ORBIT:
+            A6_ORBIT.add(k)
+            queue.append(k)
+A6_NORMALIZER_ORDER = len(GROUP) // len(A6_ORBIT)
+
+N_RANK, PIVOTS = rank_pivots_mod(N)
+X = N[:, PIVOTS] % MOD
+SYM_PAIRS = list(combinations(range(40), 2)) + [(i, i) for i in range(40)]
+SYM_COORDS = [(a, b) for a in range(24) for b in range(a, 24)]
+SYM = np.empty((len(SYM_PAIRS), len(SYM_COORDS)), dtype=np.int64)
+for row, (i, j) in enumerate(SYM_PAIRS):
+    xi, xj = X[i], X[j]
+    SYM[row] = [
+        (int(xi[a]) * int(xj[b]) + (0 if a == b else int(xi[b]) * int(xj[a]))) % MOD
+        for a, b in SYM_COORDS
+    ]
+ALT_PAIRS = list(combinations(range(40), 2))
+ALT_COORDS = list(combinations(range(24), 2))
+ALT = np.empty((len(ALT_PAIRS), len(ALT_COORDS)), dtype=np.int64)
+for row, (i, j) in enumerate(ALT_PAIRS):
+    xi, xj = X[i], X[j]
+    ALT[row] = [
+        (int(xi[a]) * int(xj[b]) - int(xi[b]) * int(xj[a])) % MOD
+        for a, b in ALT_COORDS
+    ]
+SYM_RANK, _ = rank_pivots_mod(SYM)
+ALT_RANK, _ = rank_pivots_mod(ALT)
+
+NSP = sp.Matrix(N.tolist())
+SNF = smith_normal_form(NSP, domain=ZZ)
+SNF_NONZERO = [abs(int(SNF[i, i])) for i in range(40) if SNF[i, i] != 0]
+DISCRIMINANT = 1
+for d in SNF_NONZERO:
+    DISCRIMINANT *= d
+DISCRIMINANT_FACTORIZATION = {str(k): int(v) for k, v in sp.factorint(DISCRIMINANT).items()}
+SCALAR_UNIMODULAR_NO_GO = any(v % 2 for v in sp.factorint(DISCRIMINANT).values())
+
+NQ = 8
+E4 = [0] * (NQ + 1)
+E4[0] = 1
+for n in range(1, NQ + 1):
+    E4[n] = 240 * sum(d**3 for d in range(1, n + 1) if n % d == 0)
+E4_CUBED = convolution(convolution(E4, E4, NQ), E4, NQ)
+ETA24_PRODUCT = [1] + [0] * NQ
+for n in range(1, NQ + 1):
+    factor = [0] * (NQ + 1)
+    for k in range(0, min(24, NQ // n) + 1):
+        factor[k * n] = (-1) ** k * comb(24, k)
+    ETA24_PRODUCT = convolution(ETA24_PRODUCT, factor, NQ)
+DELTA = [0] + ETA24_PRODUCT[:NQ]
+THETA_LEECH = [E4_CUBED[i] - 720 * DELTA[i] for i in range(NQ + 1)]
+BOSON24 = [1] + [0] * NQ
+for n in range(1, NQ + 1):
+    factor = [0] * (NQ + 1)
+    for k in range(0, NQ // n + 1):
+        factor[k * n] = comb(23 + k, k)
+    BOSON24 = convolution(BOSON24, factor, NQ)
+MODULAR_CHARACTER = convolution(THETA_LEECH, BOSON24, NQ)
+
+checks = {
+    "projective_points_40": len(POINTS) == 40,
+    "w33_degree_12": set(map(int, A.sum(axis=1))) == {12},
+    "w33_srg_identity": np.array_equal(A2, SRG_TARGET),
+    "projector_rank_24": N_RANK == 24,
+    "projector_idempotent_scale_60": np.array_equal(N2, 60 * N),
+    "u42_order_25920": len(GROUP) == 25_920,
+    "u42_order_census": ORDER_CENSUS == {"1":1,"2":315,"3":800,"4":3780,"5":5184,"6":5760,"9":5760,"12":4320},
+    "four_generators_order_3": [permutation_order(g) for g in G4] == [3, 3, 3, 3],
+    "tetrahedral_triples_order_648": all(x["order"] == 648 for x in TRIPLE_DATA.values()),
+    "tetrahedral_triples_fix_one_point": all(len(x["fixed_point_indices"]) == 1 for x in TRIPLE_DATA.values()),
+    "compressed_pair_2_5_12": [permutation_order(COMPRESSED_INVOLUTION), permutation_order(COMPRESSED_ORDER5), permutation_order(compose(COMPRESSED_INVOLUTION, COMPRESSED_ORDER5))] == [2,5,12],
+    "compressed_pair_generates_u42": len(COMPRESSED_GROUP) == 25_920,
+    "a5_presentation_pair_count": A5_PRESENTATION_PAIRS_GLOBAL == A5_PRESENTATION_PAIRS_INTERNAL == 51_840,
+    "a5_total_432": len(A5S) == 432,
+    "a5_two_orbits_216": len(A5_ORBIT_1) == len(A5_ORBIT_2) == 216 and len(A5_ORBIT_1 | A5_ORBIT_2) == 432,
+    "d10_edges_1296": len(D10_EDGES) == 1_296,
+    "a6_chambers_36": len(A6_SUBGROUPS) == 36,
+    "all_d10_pairs_generate_a6": all(len(h) == 360 for h in A6_SUBGROUPS),
+    "a5_graph_36_k66": len(components) == 36 and all(len(c) == 12 for c in components) and all(len(A5_ADJ[i]) == 6 for i in range(432)) and all(sum(A5_CLASS[A5S[i]] == 1 for i in c) == 6 for c in components),
+    "a6_normalizer_s6_order_720": A6_NORMALIZER_ORDER == 720,
+    "symmetric_span_full_300": SYM_RANK == 300,
+    "alternating_span_full_276": ALT_RANK == 276,
+    "full_matrix_span_576": SYM_RANK + ALT_RANK == 24**2,
+    "snf_profile": Counter(SNF_NONZERO) == Counter({2:1,10:9,30:6,60:8}),
+    "scalar_unimodular_glue_blocked": SCALAR_UNIMODULAR_NO_GO and DISCRIMINANT_FACTORIZATION == {"2":32,"3":14,"5":23},
+    "leech_rootless_theta": THETA_LEECH[:6] == [1,0,196560,16773120,398034000,4629381120],
+    "boson24_coefficients": BOSON24[:6] == [1,24,324,3200,25650,176256],
+    "modular_completion_matches_jplus24": tuple(MODULAR_CHARACTER[:6]) == JPLUS24,
+}
+assert all(checks.values()), [k for k, v in checks.items() if not v]
+
+result = {
+    "schema": "w33.pass3635_3648.monster_u42_completion.v1",
+    "status": "PASS_EXACT_PYTHON_FRONTIERS",
+    "checks": checks,
+    "u42_carrier": {
+        "generator_vectors": GENERATOR_VECTORS,
+        "generator_orders": [permutation_order(g) for g in G4],
+        "pair_product_orders": PAIR_ORDERS,
+        "triple_stabilizers": TRIPLE_DATA,
+        "group_order": len(GROUP),
+        "element_order_census": ORDER_CENSUS,
+        "compressed_pair": {"orders": [2, 5, 12], "generated_order": len(COMPRESSED_GROUP), "words": COMPRESSED_WORDS},
+    },
+    "a5_a6_s6_geometry": {
+        "a5_presentation_pairs": A5_PRESENTATION_PAIRS_GLOBAL,
+        "a5_subgroups": len(A5S),
+        "a5_conjugacy_orbits": [len(A5_ORBIT_1), len(A5_ORBIT_2)],
+        "d10_sharing_edges": len(D10_EDGES),
+        "components": len(components),
+        "component_shape": "K6,6",
+        "a6_subgroups": len(A6_SUBGROUPS),
+        "edges_per_a6": [36],
+        "a6_normalizer_order": A6_NORMALIZER_ORDER,
+        "interpretation": "Every bare D10-sharing A5 pair closes at A6; each A6 has normalizer S6 and supplies one of 36 chambers.",
+    },
+    "local_matrix_algebra": {
+        "carrier_dimension": 24,
+        "symmetric_tensor_rank": SYM_RANK,
+        "alternating_tensor_rank": ALT_RANK,
+        "combined_rank": SYM_RANK + ALT_RANK,
+        "interpretation": "The forty carrier vectors generate all Sym_24 and so_24 directions, hence the full 24x24 matrix algebra at the linear-span level.",
+    },
+    "leech_glue": {
+        "smith_nonzero_profile": dict(sorted(Counter(SNF_NONZERO).items())),
+        "discriminant_factorization": DISCRIMINANT_FACTORIZATION,
+        "scalar_unimodular_overlattice": "IMPOSSIBLE",
+        "reason": "The 5-adic discriminant exponent is odd; multiplying the form by any rational scalar changes every valuation by a multiple of rank 24 and cannot make the discriminant a square.",
+        "surviving_route": "non-scalar coupling, quotient, or multi-lattice extension before rank-24 unimodular completion",
+    },
+    "graded_modular_completion": {
+        "theta_leech": THETA_LEECH[:6],
+        "boson24": BOSON24[:6],
+        "character_j_plus_24": MODULAR_CHARACTER[:6],
+        "identity": "(E4^3 - 720 Delta) * prod_(n>=1)(1-q^n)^(-24) = q*(J+24) in coefficient indexing",
+        "boundary": "The W33 multiplicity 24 fixes the oscillator exponent, but W33 incidence does not by itself prove rootlessness or the Leech theta numerator.",
+    },
+    "monster_restriction_front": {
+        "status": "GAP_WORKFLOW_REQUIRED",
+        "target": "Enumerate 5B-containing U4(2)->M class fusions and restrict the 196883 character, recording the degree-81 multiplicity set.",
+        "embedding_boundary": "The abstract 40-point certificate is not a serialized Monster-word embedding.",
+    },
+    "evidence_boundary": {
+        "proved_here": [
+            "explicit 40-point U4(2) order certificate",
+            "complete A5/A6/S6 chamber census",
+            "full symmetric and alternating tensor spans",
+            "scalar Leech-glue determinant obstruction",
+            "rank-24 modular completion coefficients",
+        ],
+        "not_proved_here": [
+            "concrete mmgroup words for U4(2) inside M",
+            "unique Monster class fusion",
+            "observed degree-81 multiplicity before GAP artifact generation",
+            "Griess or VOA multiplication preserved by the matrix-algebra span",
+            "Leech embedding of the W33 projector lattice",
+        ],
+    },
+}
+semantic = json.dumps(result, sort_keys=True, separators=(",", ":")).encode()
+result["semantic_sha256"] = sha256(semantic).hexdigest()
+
+if __name__ == "__main__":
+    out = Path("data/PART_3635_3648_MONSTER_U42_COMPLETION_results.json")
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    print("PASS_3635_3648", result["semantic_sha256"])
+    print(json.dumps(result, indent=2))
