@@ -1,0 +1,64 @@
+name: Passes 3500-3505 Triangle-Free SRG and M57 Bridge
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/*3500*'
+      - 'analysis/*3505*'
+      - 'data/PART_BT3500_BT3505_TRIANGLE_FREE_SRG_M57_BRIDGE_results.json'
+      - 'tests/test_bt3500_bt3505_triangle_free_srg_m57_bridge.py'
+      - 'docs/triangle-free-srg-m57.html'
+      - 'docs/index.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/*3500*'
+      - 'analysis/*3505*'
+      - 'data/PART_BT3500_BT3505_TRIANGLE_FREE_SRG_M57_BRIDGE_results.json'
+      - 'tests/test_bt3500_bt3505_triangle_free_srg_m57_bridge.py'
+      - 'docs/triangle-free-srg-m57.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pass3500-3505-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  exact-and-papers:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Rebuild exact certificate
+        run: |
+          cp data/PART_BT3500_BT3505_TRIANGLE_FREE_SRG_M57_BRIDGE_results.json /tmp/frozen.json
+          python analysis/bt3500_3505_triangle_free_srg_m57_bridge.py | tee /tmp/exact.log
+          grep -F 'PASS_6_FRONTS e308364dd480970803061b90ab27bf86afa2ae4946399b656292f02682c17fd9' /tmp/exact.log
+          cmp data/PART_BT3500_BT3505_TRIANGLE_FREE_SRG_M57_BRIDGE_results.json /tmp/frozen.json
+          python -m pip install --upgrade pip pytest
+          pytest -q tests/test_bt3500_bt3505_triangle_free_srg_m57_bridge.py
+      - name: Check public pages
+        run: |
+          grep -F 'Passes 3500–3505' docs/index.html
+          grep -F 'PASS_6_FRONTS' docs/triangle-free-srg-m57.html
+          grep -F 'BT3500_BT3505_triangle_free_srg_m57_bridge_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          git diff --check
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Compile canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex
+          do
+            tectonic --keep-logs "$source" 2>&1 | tee "/tmp/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
