@@ -1,0 +1,104 @@
+{
+  "schema": "w33.pass3663_3669.monster_chamber_spread_bridge.v1",
+  "status": "PASS_EXACT_OBJECTWISE_BRIDGE",
+  "checks": {
+    "w33_points_40": true,
+    "w33_lines_40": true,
+    "w33_srg_40_12_2_4": true,
+    "u42_order_25920": true,
+    "spreads_36": true,
+    "spread_intersections_1_4": true,
+    "a5_two_orbits_216": true,
+    "a5_total_432": true,
+    "d10_edges_1296": true,
+    "a6_chambers_36": true,
+    "normalizer_order_720": true,
+    "normalizer_derived_is_a6": true,
+    "unique_normalizer_fixed_spread": true,
+    "normalizer_equals_spread_stabilizer": true,
+    "equivariant_bijection_36": true,
+    "intersection_dictionary": true,
+    "order12_graph_srg_36_15_6_6": true,
+    "order18_graph_srg_36_20_10_12": true,
+    "complementary_orbitals": true,
+    "double_six_sizes": true,
+    "same_side_a4_cross_side_d10": true,
+    "two_faithful_degree6_actions": true,
+    "outer_transposition_triple_transposition_swap": true,
+    "outer_threecycle_doublethreecycle_swap": true,
+    "outer_sixcycle_321_swap": true
+  },
+  "prior_art_boundary": {
+    "already_known": [
+      "Passes 3635-3648: 432 A5 subgroups, 36 A6 chambers, S6 normalizers, 36 K6,6 components",
+      "Passes 1072/1079 and BT813: degree-36 spread action, subdegrees 1+15+20, and rank-three orbital graph"
+    ],
+    "new_here": [
+      "canonical objectwise A6-chamber to spread bijection via equality of normalizer and spread stabilizer",
+      "exact subgroup-intersection / spread-intersection dictionary",
+      "A6 as the derived subgroup of the unique spread stabilizer",
+      "explicit exceptional S6 outer-automorphism cycle-type certificate on the two A5 six-sets"
+    ]
+  },
+  "carrier": {
+    "group_order": 25920,
+    "points": 40,
+    "lines": 40,
+    "spreads": 36,
+    "a5_subgroups": 432,
+    "a6_chambers": 36
+  },
+  "canonical_bijection": {
+    "representative_normalizer_order": 720,
+    "representative_spread_stabilizer_order": 720,
+    "normalizer_equals_stabilizer": true,
+    "derived_subgroup_order": 360,
+    "derived_subgroup_is_a6": true,
+    "fixed_spreads": 1,
+    "image_size": 36,
+    "equivariant_under_generators": true
+  },
+  "intersection_dictionary": {
+    "A6_intersection_18__spread_intersection_1": 360,
+    "A6_intersection_12__spread_intersection_4": 270,
+    "order12_relation": {
+      "srg": [36, 15, 6, 6],
+      "spectrum": {"15": 1, "3": 15, "-3": 20}
+    },
+    "order18_relation": {
+      "srg": [36, 20, 10, 12],
+      "spectrum": {"20": 1, "2": 20, "-4": 15}
+    }
+  },
+  "exceptional_s6_double_six": {
+    "a5_orbits_in_chamber": [6, 6],
+    "within_orbit_intersection": "A4 of order 12",
+    "cross_orbit_intersection": "D10 of order 10",
+    "cross_intersection_graph": "K6,6",
+    "both_degree6_actions_faithful": true,
+    "cycle_type_pair_census": {
+      "1.1.1.1.1.1 -> 1.1.1.1.1.1": 1,
+      "2.1.1.1.1 -> 2.2.2": 15,
+      "2.2.1.1 -> 2.2.1.1": 45,
+      "2.2.2 -> 2.1.1.1.1": 15,
+      "3.1.1.1 -> 3.3": 40,
+      "3.2.1 -> 6": 120,
+      "3.3 -> 3.1.1.1": 40,
+      "4.1.1 -> 4.1.1": 90,
+      "4.2 -> 4.2": 90,
+      "5.1 -> 5.1": 144,
+      "6 -> 3.2.1": 120
+    },
+    "interpretation": "The two six-sets are the two faithful degree-six S6 actions exchanged by the exceptional outer automorphism."
+  },
+  "monster_boundary": {
+    "structural_use": "Any concrete 5B-containing U4(2) embedding in the Monster transports this complete 36-spread/A6-chamber carrier and its double-six local charts.",
+    "not_proved": [
+      "serialized Monster words for the subgroup",
+      "a unique Monster class fusion",
+      "an identification with the non-SRG 36 magic-ray orthogonality graph",
+      "a Griess, VOA, or photonic multiplication law"
+    ]
+  },
+  "semantic_sha256": "ea0d3d989c05d51dc1e60de05cb9fe9f3308d8c36f1e40749b915f7bc0aaefca"
+}
