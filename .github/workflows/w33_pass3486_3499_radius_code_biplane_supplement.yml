@@ -1,0 +1,82 @@
+name: Passes 3486-3499 Radius Code Biplane Supplement
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/*3486*'
+      - 'analysis/*3499*'
+      - 'bootstrap/pass3486_3499/**'
+      - 'data/w33_pass_namespace_registry_v2.d/3486-3499.json'
+      - 'rtl/w33_five_channel_torus_engine.v'
+      - 'rtl/w33_equivariant_linear28_encode.v'
+      - 'rtl/w33_clebsch_biplane_locator.v'
+      - 'rtl/tb_w33_pass3486_3499.v'
+      - 'tests/test_bt3486_3499_radius_code_biplane_supplement.py'
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/*3486*'
+      - 'analysis/*3499*'
+      - 'bootstrap/pass3486_3499/**'
+      - 'rtl/w33_five_channel_torus_engine.v'
+      - 'rtl/w33_equivariant_linear28_encode.v'
+      - 'rtl/w33_clebsch_biplane_locator.v'
+      - 'rtl/tb_w33_pass3486_3499.v'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pass3486-3499-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  exact-digital-papers:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact and digital tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys nextpnr-ice40
+          python -m pip install --upgrade pip
+          python -m pip install numpy scipy networkx sympy pytest
+      - name: Materialize, rebuild, and compare exact packet
+        run: |
+          python bootstrap/pass3486_3499/materialize.py
+          cp data/PART_BT3486_BT3499_RADIUS_CODE_BIPLANE_SUPPLEMENT_results.json /tmp/frozen.json
+          python analysis/bt3486_3499_radius_code_biplane_supplement.py | tee /tmp/exact.log
+          grep -F 'PASS_9_FRONTS 029228ef6f414a6fed7ec3afa6078e566cb3d780b9712b062f1f8a3ebdec06a7' /tmp/exact.log
+          cmp data/PART_BT3486_BT3499_RADIUS_CODE_BIPLANE_SUPPLEMENT_results.json /tmp/frozen.json
+          pytest -q tests/test_bt3486_3499_radius_code_biplane_supplement.py
+          git diff --check
+      - name: Exhaust RTL
+        run: |
+          iverilog -g2012 -s tb_w33_pass3486_3499 \
+            -o /tmp/pass3486_3499 \
+            rtl/w33_five_channel_torus_engine.v \
+            rtl/w33_equivariant_linear28_encode.v \
+            rtl/w33_clebsch_biplane_locator.v \
+            rtl/tb_w33_pass3486_3499.v
+          vvp /tmp/pass3486_3499 | tee /tmp/rtl.log
+          grep -F 'PASS torus_entries=675 code_messages=32 biplane_singles=17 distance=11' /tmp/rtl.log
+      - name: Synthesize compact engines
+        run: |
+          for top in w33_five_channel_torus_engine w33_equivariant_linear28_encode w33_clebsch_biplane_locator
+          do
+            yosys -p "read_verilog rtl/w33_five_channel_torus_engine.v rtl/w33_equivariant_linear28_encode.v rtl/w33_clebsch_biplane_locator.v; hierarchy -top ${top}; synth_ice40 -top ${top} -json /tmp/${top}.json; stat" 2>&1 | tee /tmp/${top}.yosys.log
+            test -s /tmp/${top}.json
+            nextpnr-ice40 --up5k --package sg48 --json /tmp/${top}.json --asc /tmp/${top}.asc --pcf-allow-unconstrained --freq 12 2>&1 | tee /tmp/${top}.nextpnr.log
+          done
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Compile canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex
+          do
+            tectonic --keep-logs "$source" 2>&1 | tee /tmp/${source%.tex}.log
+            test -s "${source%.tex}.pdf"
+          done
