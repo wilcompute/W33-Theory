@@ -1,0 +1,19 @@
+{
+  "schema": "w33.pass3769_3786.finite_group_descent_candidate.v1",
+  "status": "PENDING",
+  "mathematical_route": null,
+  "group_elements": [],
+  "expected_finite_structure": {
+    "group_order": 51840,
+    "index_two_subgroup_order": 25920,
+    "distinguished_involutions": 36,
+    "generalized_quadrangle_points": 45,
+    "generalized_quadrangle_lines": 27,
+    "order_1152_stabilizers": 45,
+    "order_192_frames": 135,
+    "plane_ovoids": 40,
+    "plane_ovoid_graph_parameters": [40,12,2,4],
+    "all_nonsingular_projective_lines": 120
+  },
+  "boundary": "PENDING is a strict mathematical non-result, not an embedding."
+}
