@@ -11,7 +11,6 @@ on:
       - 'tests/test_w33_pass3813_3820_quadratic_discriminant_multiport_holonomy.py'
       - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
       - 'data/w33_current_frontier_manifest_v1.json'
-      - 'docs/index.html'
       - 'docs/quadratic-discriminant-multiport-holonomy.html'
       - '.github/workflows/w33_pass3813_3820_quadratic_discriminant_multiport_holonomy.yml'
   workflow_dispatch:
@@ -33,7 +32,9 @@ jobs:
       - run: pytest -q tests/test_w33_pass3813_3820_quadratic_discriminant_multiport_holonomy.py
       - run: python -m py_compile analysis/w33_pass3817_monster_seed_compression_harness.py
       - run: grep -Fq '\input{analysis/BT3813_BT3820_quadratic_discriminant_multiport_holonomy_insert}%' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
-      - run: grep -Fq 'bt3813-3820-quadratic-discriminant-multiport-holonomy' docs/index.html
+      - run: grep -Fq 'bt3813-3820-quadratic-discriminant-multiport-holonomy' data/w33_current_frontier_manifest_v1.json
+      - run: grep -Fq 'passes-3813-3820-quadratic-discriminant-multiport-holonomy' data/w33_current_frontier_manifest_v1.json
+      - run: grep -Fq '2b57dd96e94217573cf52a7031280ccbaaff8439ec86a3029d985723f10e6101' docs/quadratic-discriminant-multiport-holonomy.html
 
   canonical-papers:
     runs-on: ubuntu-24.04
