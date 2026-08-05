@@ -1,0 +1,20 @@
+{
+  "base_code": {
+    "parameters": [36, 6, 16],
+    "weight_distribution": {"0": 1, "16": 27, "20": 36}
+  },
+  "complete_census": {
+    "boundary": "The exact census proves at least 4.632e18 U4(2):2 orbits. A literal representative list is not materialized in this packet.",
+    "formula": "product_{i=2}^{12}(2^i+1)",
+    "number_of_maximal_doubly_even_extensions": 240137905387279785868125,
+    "quadratic_space_type": "O^-(24,2), Witt index 11",
+    "u42d2_orbit_count_lower_bound": 4632289841575613440
+  },
+  "maximal_extension": {
+    "parameters": [36, 17, 8],
+    "u42d2_orbit_size": 51840,
+    "u42d2_stabilizer_order": 1,
+    "weight8_coordinate_degree_profile": {"42": 5, "48": 15, "54": 15, "60": 1},
+    "weight_distribution": {"0": 1, "8": 225, "12": 9555, "16": 55755, "20": 55755, "24": 9555, "28": 225, "36": 1}
+  }
+}
