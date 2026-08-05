@@ -1,0 +1,95 @@
+name: Passes 3663-3669 Monster Chamber Spread Bridge
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/*3663*'
+      - 'analysis/*3669*'
+      - 'data/PART_3663_3669*'
+      - 'data/w33_pass_namespace_registry_v2.d/3663-3669.json'
+      - 'tests/test_w33_pass3663_3669_monster_chamber_spread_bridge.py'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - 'docs/monster-a6-spread-double-six.html'
+      - 'docs/index.html'
+      - '.github/workflows/w33_pass3663_3669_monster_chamber_spread_bridge.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pass3663-3669-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  exact-papers:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact dependencies
+        run: python -m pip install --disable-pip-version-check numpy pytest
+      - name: Recompute exact objectwise certificate
+        run: |
+          mkdir -p evidence/pass3663_3669
+          cp data/PART_3663_3669_MONSTER_CHAMBER_SPREAD_BRIDGE_results.json evidence/pass3663_3669/frozen.json
+          python analysis/w33_pass3663_3669_monster_chamber_spread_bridge.py | tee evidence/pass3663_3669/exact.log
+          grep -F 'PASS_3663_3669 ea0d3d989c05d51dc1e60de05cb9fe9f3308d8c36f1e40749b915f7bc0aaefca' evidence/pass3663_3669/exact.log
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          generated=json.loads(Path('data/PART_3663_3669_MONSTER_CHAMBER_SPREAD_BRIDGE_results.json').read_text())
+          frozen=json.loads(Path('evidence/pass3663_3669/frozen.json').read_text())
+          assert generated == frozen
+          assert generated['semantic_sha256'] == 'ea0d3d989c05d51dc1e60de05cb9fe9f3308d8c36f1e40749b915f7bc0aaefca'
+          assert all(generated['checks'].values())
+          print('PASS frozen exact certificate equality')
+          PY
+      - name: Focused regression
+        run: |
+          python -m pytest -q tests/test_w33_pass3663_3669_monster_chamber_spread_bridge.py | tee evidence/pass3663_3669/pytest.log
+          git diff --check
+      - name: Verify manuscript and public reachability
+        run: |
+          python - <<'PY'
+          import json,re
+          from pathlib import Path
+          tex=Path('analysis/W33_CURRENT_FRONTIER_MANIFEST.tex').read_text()
+          inputs=re.findall(r'\\input\{([^}]+)\}',tex)
+          manifest=json.loads(Path('data/w33_current_frontier_manifest_v1.json').read_text())
+          assert inputs == manifest['required_ordered_inputs']
+          ours='analysis/BT3663_BT3669_monster_chamber_spread_bridge_insert'
+          assert inputs.count(ours)==1
+          assert Path(ours+'.tex').is_file()
+          assert Path('docs/monster-a6-spread-double-six.html').is_file()
+          index=Path('docs/index.html').read_text()
+          assert 'id="bt3663-3669-monster-chamber-spread-bridge"' in index
+          registry=json.loads(Path('data/w33_pass_namespace_registry_v2.d/3663-3669.json').read_text())
+          assert registry['range']==[3663,3669]
+          print('PASS manifest chronology and public reachability')
+          PY
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+      - name: Compile canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3663_3669/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3663_3669/pdf_sha256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3663-3669-monster-chamber-spread-evidence
+          path: |
+            evidence/pass3663_3669/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
