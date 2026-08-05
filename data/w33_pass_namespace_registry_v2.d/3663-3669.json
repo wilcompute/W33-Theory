@@ -5,7 +5,15 @@
   "branch": "master",
   "purpose": "Construct the canonical A6-chamber/spread bijection inside U4(2), prove the objectwise intersection dictionary, certify the derived S6 stabilizers and their exceptional outer-automorphism double-six, and integrate the Monster-facing boundary into all three manuscripts and the public index.",
   "base": "6e2331bbcd812370802ee99503bfb025fa7b8ad2",
-  "status": "reserved",
-  "coordination": "Avoids the overlapping 3649-3655 and 3649-3662 reservations already present on master; no files in either reserved packet are modified.",
-  "claim_boundary": "The theorem identifies abstract U4(2) G-sets and subgroup geometry. It does not serialize a Monster embedding, select a unique Monster class fusion, identify the physical M36 magic-ray Gram graph, or promote a Griess/VOA/photonic mechanism."
+  "status": "published_source_complete_ci_pending",
+  "primary_source": "analysis/w33_pass3663_3669_monster_chamber_spread_bridge.py",
+  "frozen_result": "data/PART_3663_3669_MONSTER_CHAMBER_SPREAD_BRIDGE_results.json",
+  "semantic_sha256": "ea0d3d989c05d51dc1e60de05cb9fe9f3308d8c36f1e40749b915f7bc0aaefca",
+  "focused_regression": "tests/test_w33_pass3663_3669_monster_chamber_spread_bridge.py",
+  "report": "analysis/BT3663_BT3669_monster_chamber_spread_bridge.md",
+  "manuscript_insert": "analysis/BT3663_BT3669_monster_chamber_spread_bridge_insert.tex",
+  "public_page": "docs/monster-a6-spread-double-six.html",
+  "workflow": ".github/workflows/w33_pass3663_3669_monster_chamber_spread_bridge.yml",
+  "coordination": "Avoids the overlapping 3649-3655 and 3649-3662 reservations already present on master; no files in either reserved packet were modified. The subsequent 3670-3686 reservation is preserved.",
+  "claim_boundary": "The theorem identifies abstract U4(2) G-sets and subgroup geometry. It does not serialize a Monster embedding, select a unique Monster class fusion, identify the physical M36 magic-ray Gram graph, or promote a Griess/VOA/photonic mechanism. Remote CI and PDF status remain pending until an observed workflow run completes."
 }
