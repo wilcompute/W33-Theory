@@ -1,0 +1,162 @@
+\section{Passes 3506--3512: exact descendants, Moore permutation curvature, and the scheme-blind 57-hole}
+\label{sec:bt3506-bt3512}
+
+\begin{tcolorbox}[title={Certified seven-front packet},colback=blue!2!white,colframe=blue!55!black]
+The standard-library verifier reports
+\[
+\texttt{PASS\_7\_FRONTS}
+\]
+with semantic SHA-256
+\[
+\texttt{15ab9b21e744e755917e0b4c40ec806b43c5463b8a11cfbfac7bdbb4a9c8dfe7}.
+\]
+The packet supplies an executable Moore-57 permutation CSP, literal descendant
+constructions among five standard triangle-free strongly regular graphs, the
+complete rank-three Krein census of the fixed \(\mu=4,r=2\) ladder, a
+W33/Gewirtz polynomial-transplant compiler, a sharpened 57-cell symmetry
+firewall, and two explicitly fenced high-risk constructions.
+\end{tcolorbox}
+
+\subsection{The Moore chart becomes a gauge-reduced permutation CSP}
+
+For a fixed edge of a hypothetical
+\(\operatorname{SRG}(3250,57,0,1)\), write \(p_{ij}(a)\) for the destination
+column in row \(j\) of the residual neighbor of \((i,a)\).  The independent
+matching data contain
+\[
+\binom{56}{2}56=86\,240
+\]
+entries.  The literal CP-SAT exporter uses \(172\,480\) directed integer
+variables with explicit inverse channels, rather than \(4\,743\,200\)
+nonfixed one-hot Boolean variables.  Before lazy cuts it has \(1\,540\)
+row-pair permutation constraints, \(1\,540\) inverse channels, \(3\,136\)
+vertex-star constraints, and \(55\) gauge equalities:
+\[
+p_{0j}(0)=j,\qquad1\leq j\leq55.
+\]
+Triangle fixed points are separated over the
+\[
+\binom{56}{3}=27\,720
+\]
+row triples.  This is a source-complete model, not a solved instance.
+
+\subsection{Two literal descendant chains}
+
+The Clebsch graph is reconstructed on the even-weight vectors of
+\(\mathbb F_2^5\), with adjacency at Hamming distance four.  Its second
+subconstituent at zero consists of the ten weight-two words and is exactly
+\(KG(5,2)\), the Petersen graph.
+
+Independently, a cyclic generator produces the extended binary Golay code with
+weight distribution
+\[
+1+759z^8+2576z^{12}+759z^{16}+z^{24}.
+\]
+Fixing two coordinates in the octads yields the \(77\) blocks of
+\(S(3,6,22)\).  Hexad disjointness gives \(M_{22}\); avoiding one point gives
+Gewirtz; adjoining the \(22\) points and infinity gives Higman--Sims.  Thus
+\[
+\boxed{\mathrm{HS}\longrightarrow M_{22}\longrightarrow\mathrm{Gewirtz}}
+\]
+and
+\[
+\boxed{\mathrm{Clebsch}\longrightarrow\mathrm{Petersen}}
+\]
+are now objectwise executable.
+
+\subsection{The nonexistent 57-vertex rung is invisible to rank-three feasibility}
+
+For every member of the fixed
+\[
+\mu=4,\qquad r=2
+\]
+ladder, the verifier computes the complete primitive-idempotent Krein products
+and both standard absolute bounds.  Every test passes, including for the
+nonexistent parameter set \(\operatorname{SRG}(57,14,1,4)\).  Its nontrivial
+Krein rows are
+\[
+q_{11}=\left(38,\frac{1273}{49},\frac{1140}{49}\right),
+\quad
+q_{12}=\left(0,\frac{540}{49},\frac{722}{49}\right),
+\quad
+q_{22}=\left(18,\frac{342}{49},\frac{111}{49}\right).
+\]
+Hence its obstruction is not visible in the ordinary rank-three
+Bose--Mesner algebra:
+\[
+\boxed{\text{the }\lambda=1\text{ hole is scheme-blind}.}
+\]
+Finer local, Terwilliger, or star-complement compatibility is required.
+
+\subsection{A two-channel W33/Gewirtz transplant algebra}
+
+On augmentation, W33 and Gewirtz both satisfy
+\[
+A^2+2A-8I=0.
+\]
+Consequently every adjacency polynomial reduces uniquely to
+\[
+f(A)=aA+bI
+\]
+in \(\mathbb Q[x]/(x^2+2x-8)\).  Moreover
+\[
+U=\frac{-I-A}{3}
+\]
+obeys
+\[
+U^2=I,
+\qquad
+P_\pm=\frac{I\pm U}{2}.
+\]
+Polynomial identities transport automatically.  Traces and projector ranks
+depend on the different multiplicities, while incidence, codes, automorphism
+groups, and descendant maps remain geometry-sensitive.
+
+\subsection{The 57-cell firewall and its surviving odd shadow}
+
+The Perkel/57-cell group has order
+\[
+|PSL(2,19)|=3420.
+\]
+Peer-reviewed results bound an odd hypothetical M57 automorphism group by
+\(375\) and an even one by \(110\).  Conditional on the June 2026
+no-involution preprint, \(\operatorname{Aut}(M57)\) is odd and hence solvable;
+there can be no common \(A_5\) or full \(PSL(2,19)\) automorphism action.
+However, the odd Borel subgroup
+\[
+C_{19}\rtimes C_9,\qquad |C_{19}\rtimes C_9|=171,
+\]
+is not excluded by parity and the order bound alone.  The next exact target is
+the restriction of the Perkel \(-3\) twenty-plane to this \(19{:}9\) shadow.
+
+\subsection{Bonkers front: non-Abelian Moore curvature}
+
+The row matchings form an \(S_{d-1}\)-valued connection.  Triangle holonomy
+\[
+H_{ijk}=\sigma_{ki}\sigma_{jk}\sigma_{ij}
+\]
+changes by conjugacy under gauge, so cycle type is invariant.  In an exact
+edge-rooted chart of the Hoffman--Singleton graph, all \(15\) row-pair
+matchings and all \(20\) triangle holonomies have cycle type
+\[
+2^3.
+\]
+This motivates a non-necessary M57 search branch in which all matchings and
+triangle holonomies have type \(2^{28}\).  It is a solver ansatz, not an M57
+theorem.
+
+\subsection{Bonkers front: one Golay puncture/avoidance functor}
+
+The chain
+\[
+[23,12,7]\to[24,12,8]\to S(3,6,22)\to M_{22}\to\mathrm{Gewirtz}
+\]
+together with the incidence extension to Higman--Sims is one executable
+information-losing pipeline.  Its comparison with the W33 face tower
+\(240\to120\to40\) is structural only: no category equivalence or group
+identification is asserted.
+
+\paragraph{Evidence boundary.}
+No M57 existence decision, complete CP-SAT run, necessity of involutive
+curvature, actual M57 \(19{:}9\) action, canonical W33--Gewirtz intertwiner,
+or peer-reviewed status for the June 2026 preprint is claimed.
