@@ -12,7 +12,6 @@ on:
       - 'analysis/BT3769_BT3786_gq_veldkamp_axial_lattice_monster_insert.tex'
       - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
       - 'data/w33_current_frontier_manifest_v1.json'
-      - 'docs/index.html'
       - 'docs/gq-veldkamp-w33-axial.html'
       - '.github/workflows/w33_pass3769_3786_gq_veldkamp_axial_lattice_monster.yml'
   workflow_dispatch:
@@ -41,8 +40,9 @@ jobs:
       - name: Check source reachability
         run: |
           grep -F 'BT3769_BT3786_gq_veldkamp_axial_lattice_monster_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
-          grep -F 'bt3769-3786-gq-veldkamp-axial' docs/index.html
-          grep -F 'gq-veldkamp-w33-axial.html' data/w33_current_frontier_manifest_v1.json
+          grep -F 'bt3769-3786-gq-veldkamp-axial' analysis/BT3769_BT3786_gq_veldkamp_axial_lattice_monster_index_insert.html
+          grep -F 'passes-3769-3786-gq-veldkamp-w33-axial' data/w33_current_frontier_manifest_v1.json
+          grep -F '8d3f383e362f30e58d8c482f48e2ac2b77414922366ba8053633859d6206313a' docs/gq-veldkamp-w33-axial.html
 
   manuscripts:
     runs-on: ubuntu-latest
