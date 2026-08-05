@@ -10,8 +10,10 @@ corrupted, or partial chunks cannot produce a certificate.
 from __future__ import annotations
 
 import atexit
+import argparse
 import base64
 import hashlib
+import json
 import os
 import runpy
 import shutil
@@ -99,11 +101,37 @@ def build_certificate() -> dict[str, object]:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--output", type=Path, default=ROOT / "data" / "PART_3821_3828_MAXCODE_MESH_SCHEME_OVOID_results.json")
+    parser.add_argument("--check", type=Path)
+    parser.add_argument("--component", choices=["maxcode", "mesh", "monster", "ovoid", "scheme"])
+    args = parser.parse_args()
+    if args.component:
+        return _delegate_component(args.component)
+    result = build_certificate()
+    if args.check:
+        observed = json.loads(args.check.read_text())
+        if observed != result:
+            raise SystemExit("frozen certificate mismatch")
+        print(result["status"])
+        print(result["semantic_sha256"])
+        return 0
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.output.write_text(json.dumps(result, indent=2, sort_keys=True, ensure_ascii=False) + "\n")
+    print(result["status"])
+    print(result["semantic_sha256"])
+    return 0
+
+
+def _delegate_component(component: str) -> int:
+    old_argv = list(sys.argv)
     old_root = os.environ.get("W33_REPO_ROOT")
     try:
         os.environ["W33_REPO_ROOT"] = str(ROOT)
+        sys.argv = [old_argv[0], "--component", component]
         return int(_embedded_globals()["main"]())
     finally:
+        sys.argv = old_argv
         if old_root is None:
             os.environ.pop("W33_REPO_ROOT", None)
         else:
