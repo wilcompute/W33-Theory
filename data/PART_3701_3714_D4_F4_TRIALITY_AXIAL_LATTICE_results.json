@@ -1,0 +1,115 @@
+{
+  "schema": "w33.pass3701_3714.d4_f4_triality_axial_lattice.v1",
+  "status": "PASS_EXACT_SEVEN_FRONT_SOURCE",
+  "checks": {
+    "octads_45_three_frames_each": true,
+    "octad_intersections_0_or_2": true,
+    "axis_graph_srg_45_12_3_3": true,
+    "axis_tight_frame_rank24": true,
+    "lagrangian_contexts_135": true,
+    "incidence_code_rank29": true,
+    "dual_affine_two_weight_code": true,
+    "frame_stabilizer_WD4_structure": true,
+    "central_extension_cocycle_nontrivial": true,
+    "triality_normalizer_576": true,
+    "full_octad_stabilizer_WF4": true,
+    "no_common_outer_inverter": true,
+    "rank8_string_factorization_no_go": true,
+    "octad_axis_square_laws": true,
+    "majorana_2A_spectrum_no_go": true,
+    "universal_graph_polarization": true,
+    "E8_cubed_positive_unimodular_child": true,
+    "equivariant_positive_unimodular_no_go": true
+  },
+  "binary_panel_resolution": {
+    "rank_preserving_cover": "IMPOSSIBLE: panel cardinality is preserved by an unbranched rank-preserving cover",
+    "outer_involutions": 576,
+    "inverters_per_exact_generator": [108,108,108,108],
+    "common_inverters": 0,
+    "minimum_cross_color_noncommuting_pairs": {"01":2,"02":2,"03":2,"12":2,"13":2,"23":2},
+    "minimum_total_noncommuting_edges": 16,
+    "string_rank8_maximum_edges": 7,
+    "verdict": "No common-sheet involutory lift and no color-split rank-8 string Coxeterization preserves the exact four-generator U4(2) target."
+  },
+  "d4_f4_triality": {
+    "frames": 135,
+    "octads": 45,
+    "frames_per_octad": 3,
+    "frame_stabilizer_order": 192,
+    "frame_stabilizer_census": {"1":1,"2":43,"3":32,"4":84,"6":32},
+    "kernel_C2_cubed_order": 8,
+    "quotient_S4_order": 24,
+    "S4_complement_order": 24,
+    "center_order": 2,
+    "central_quotient_cocycle_rank": 95,
+    "central_quotient_augmented_rank": 96,
+    "central_extension_non_split": true,
+    "triality_normalizer_order": 576,
+    "triality_normalizer_census": {"1":1,"2":43,"3":80,"4":84,"6":272,"12":96},
+    "full_outer_stabilizer_order": 1152,
+    "full_outer_stabilizer_census": {"1":1,"2":139,"3":80,"4":228,"6":464,"8":144,"12":96},
+    "full_outer_stabilizer_is_WF4": true,
+    "tower": "W(D4) (192) < even-frame triality subgroup (576) < W(F4) (1152)"
+  },
+  "axis45_geometry": {
+    "octad_intersection_census": {"0":270,"2":720},
+    "disjointness_srg": [45,12,3,3],
+    "spectrum": {"12":1,"3":20,"-3":24},
+    "axis_norm": 23040,
+    "axis_offdiagonal_gram_census": {"-5760":270,"1440":720},
+    "axis_gram_spectrum": {"43200":24,"0":21},
+    "tight_frame_dimension": 24
+  },
+  "three_qubit_lagrangian_code": {
+    "ambient": "W(5,2) three-qubit Pauli symplectic space",
+    "lagrangian_three_spaces": 135,
+    "anisotropic_points": 36,
+    "anisotropic_points_per_lagrangian": 4,
+    "binary_incidence_rank": 29,
+    "dual_dimension": 7,
+    "dual_weight_enumerator": {"0":1,"16":63,"20":63,"36":1},
+    "linear_form_weight_census": {"0":1,"16":27,"20":36},
+    "exact_identification": "restrictions of all affine-linear functions B(a,x)+c to q(x)=1"
+  },
+  "octad_axial_envelope": {
+    "distinct_axis_lines": 45,
+    "frames_per_axis": 3,
+    "unnormalized_axis_entries": {"on_octad":48,"off_octad":-12},
+    "axis_norm": 23040,
+    "product_square_laws": {"m0":"36 u","m1":"-216 u"},
+    "joint_left_eigenpairs": [
+      {"m0":36,"m1":-216,"multiplicity":1},
+      {"m0":28,"m1":152,"multiplicity":6},
+      {"m0":-12,"m1":-168,"multiplicity":8},
+      {"m0":-12,"m1":72,"multiplicity":9}
+    ],
+    "normalized_nonaxis_eigenvalues": ["(28+152t)/(36-216t) multiplicity 6","(-12-168t)/(36-216t) multiplicity 8","(-12+72t)/(36-216t) multiplicity 9"],
+    "monster_2A_majorana_target": ["0","1/4","1/32"],
+    "solutions": [],
+    "verdict": "No parameter in the complete two-dimensional U4(2)-equivariant commutative Frobenius plane gives the Monster 2A Majorana Peirce spectrum on the 45 canonical octad axes."
+  },
+  "monster_four_parabolic_front": {
+    "abstract_four_generator_signature": "unchanged and exact",
+    "new_internal_fingerprint": {"135_WD4_frames":true,"45_WF4_octad_normalizers":true,"degree45_rank3_suborbits":[1,12,32],"axis_graph_srg":[45,12,3,3]},
+    "public_search_result": "No serialized mmgroup U4(2) words were located in the checked maximal-subgroup database or documentation; U4(2) is non-maximal.",
+    "status": "MMgroup_WORDS_PENDING"
+  },
+  "II24_24_polarization": {
+    "graph_formula": "Gram(graph(B)) = G + B + B^T",
+    "universality": "Every even integral rank-24 Gram matrix H is obtained by an integral upper-triangular B.",
+    "executable_positive_child": "E8^3",
+    "E8_cubed_determinant": 1,
+    "leech_consequence": "Using the external theorem that the Leech lattice is even, unimodular, rank 24, and rootless, the same formula proves existence of a primitive noncanonical rootless graph section.",
+    "explicit_Leech_basis_frozen_here": false,
+    "U42_equivariant_B": "scalar mI by irreducibility/Schur",
+    "G_determinant_factorization": {"2":32,"3":14,"5":23},
+    "G_minus_2I_leading_15_minor": -171492398337997406208,
+    "equivariant_verdict": "No U4(2)-equivariant positive-definite unimodular graph polarization exists.",
+    "specificity_firewall": "Polarization universality means existence of a Leech child alone is not evidence of a W33-specific construction; a canonical or symmetry-controlled section remains required."
+  },
+  "evidence_boundary": {
+    "proved_here": ["strong involutory binary-resolution obstruction","explicit W(D4) frame stabilizer structure","nontrivial central quotient cocycle","exact W(D4)-triality-W(F4) tower","45-object SRG and two-distance tight frame","135 Lagrangian context identification and dual affine code","45-axis Majorana spectrum no-go","universal graph-polarization formula and executable E8^3 child","equivariant positive-unimodular polarization no-go"],
+    "not_proved_here": ["regular abstract-polytope cover of the ternary chamber system","serialized Monster words","explicit frozen Leech basis or canonical Leech section","Majorana, Griess, or VOA realization","remote CI or PDF evidence","physical implementation"]
+  },
+  "semantic_sha256": "17e8e1caaa48587b8feb5678963358b1a18961efd933858f677ca42e5713c644"
+}
