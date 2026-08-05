@@ -1,0 +1,7 @@
+{
+  "schema": "w33.pass_namespace_registry.v2",
+  "range": [3542, 3548],
+  "owner": "openai-gpt-5.6-thinking",
+  "topic": "Borel cyclic quotients, Perkel commutant, proof DAGs, outer S6, and analytic ports",
+  "entrypoint": "analysis/bt3542_3548_borel_commutant_outer_s6_analytic.py"
+}
