@@ -1,0 +1,88 @@
+{
+  "checks": {
+    "H1_upper_bound_436": true,
+    "barycentric_27x4": true,
+    "conic_code_432": true,
+    "conic_stabilizer_S4": true,
+    "full_walk_27x5": true,
+    "null_lifts_8_projective_4": true,
+    "three_qutrit_fourier_compiler": true
+  },
+  "schema": "w33.bt3404_3417.conic_torus_closure.v1",
+  "sections": {
+    "H1_covering_radius": {
+      "coefficient_dimension": 5,
+      "dimension_resonance_falsifier": {
+        "identity": "436 = 4*(108+1)",
+        "status": "dimension identity only; no equivariant intertwiner is claimed"
+      },
+      "full_H1_dimension": 2180,
+      "improved_interval": [389, 436],
+      "previous_interval": [389, 480],
+      "scalar_H1_dimension": 436,
+      "upper_bound_argument": "Choose 436 minimum-support generators forming a basis of scalar H1. After tensoring with F3^5, each nonzero coefficient vector on one basis support is one minimum defect, so every class has length at most 436."
+    },
+    "finite_null_conic": {
+      "lift_count": 8,
+      "nonzero_fourier_null_lifts": [[0,1,1],[0,1,2],[0,2,1],[0,2,2],[1,0,1],[1,0,2],[2,0,1],[2,0,2]],
+      "null_conic_code": {
+        "dual_generator": [1,1,2,2],
+        "dual_parameters": "[4,1,4]_3 signed repetition",
+        "generator_matrix": [[1,2,0,0],[0,0,1,2],[1,1,1,1]],
+        "parameters": "[4,3,2]_3 MDS",
+        "weight_enumerator": {"0":1,"2":12,"3":8,"4":6}
+      },
+      "projective_conic_points": [[0,1,1],[0,1,2],[1,0,1],[1,0,2]],
+      "projective_point_count": 4,
+      "projective_stabilizer_action": "full S4 on the four conic points",
+      "projective_stabilizer_order": 24,
+      "quadratic_form": "q(k)=k1^2+k2^2-k3^2 over F3"
+    },
+    "matrix_valued_torus": {
+      "barycentric_factorization": {
+        "center_count": 27,
+        "fourier_block_count": 27,
+        "fourier_block_fingerprints": {
+          "(-5, -2, -2, 1)": 8,
+          "(-5, -2, 1, 4)": 8,
+          "(-5, 1, 1, 7)": 2,
+          "(-2, 1, 1, 4)": 4,
+          "(-2, 1, 4, 7)": 4,
+          "(-2, 4, 4, 10)": 1
+        },
+        "fourier_block_size": 4,
+        "internal_labels": [[0,0],[1,0],[0,1],[1,1]],
+        "matrix_valued_cayley_kernel": {
+          "(0, 0, 1)": [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]],
+          "(0, 0, 2)": [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]],
+          "(0, 1, 0)": [[0,0,2,0],[0,0,0,2],[1,0,1,0],[0,1,0,1]],
+          "(0, 2, 0)": [[0,0,2,0],[0,0,0,2],[1,0,1,0],[0,1,0,1]],
+          "(1, 0, 0)": [[0,2,0,0],[1,1,0,0],[0,0,0,2],[0,0,1,1]],
+          "(2, 0, 0)": [[0,2,0,0],[1,1,0,0],[0,0,0,2],[0,0,1,1]]
+        },
+        "nonzero_translation_count": 6,
+        "set_bijection": "108 barycenters = F3^3 x F2^2",
+        "shell_weight_profile_per_center": [0,1,1,2]
+      },
+      "full_walk_factorization": {
+        "full_spectrum": {"-5":20,"-2":42,"1":44,"4":22,"7":6,"10":1},
+        "operator": "27 Fourier symbols of size 5 = 4 barycentric channels + 1 hidden signed channel",
+        "set_bijection": "135 = 27 x 5 after symmetric/antisymmetric splitting"
+      },
+      "mixed_radix_compiler": {
+        "binary_center_qubits": 5,
+        "binary_internal_qubits": 3,
+        "binary_state_qubits": 8,
+        "boundary": "The relabeling, block decomposition, and register counts are exact. Uniform amplitude preparation over ten neighbors and synthesis of the 5x5 controlled symbols require an explicit approximation tolerance before a Clifford+T count is meaningful.",
+        "center_register": "3 qutrits",
+        "controlled_internal_symbols": 27,
+        "hamming_neighbor_choices": 10,
+        "internal_register_levels": 5,
+        "neighbor_label_qubits": 4,
+        "qutrit_fourier_gates": 3,
+        "szegedy_reflections_per_step": 2
+      }
+    }
+  },
+  "status": "PASS"
+}
