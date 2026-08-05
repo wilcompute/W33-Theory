@@ -3,8 +3,9 @@
   "range": [3635, 3648],
   "owner": "openai-gpt-5.6-thinking",
   "branch": "master",
-  "status": "reserved_for_exact_monster_u42_completion",
+  "status": "source_complete_pending_gap_mmgroup_and_remote_pdf_evidence",
+  "semantic_sha256": "cf276859798326def36c2bdc0e9fb75dbdadbbc44d69ba61cae24b5c82f40271",
   "purpose": "Complete the explicit U4(2) carrier and Monster restriction front, construct the full local matrix algebra, close scalar Leech glue, derive the rank-24 modular completion, and certify two outside-the-box A5/S6 and transvection-amalgam geometries.",
-  "coordination": "Reserved after the live Passes 3628-3634 proof-tomography packet and its Pass 3631 payload commits. Preserve all parallel commits and append only through the current frontier manifest.",
+  "coordination": "Reserved after the live Passes 3628-3634 proof-tomography packet and its Pass 3631 payload commits. All parallel commits were preserved and this packet was appended through the ordered frontier manifest.",
   "claim_boundary": "No concrete Monster-word embedding, unique Monster class fusion, observed degree-81 multiplicity, Leech-lattice embedding, Griess product, VOA equivalence, laboratory result, or physical mechanism is promoted without its corresponding executed certificate."
 }
