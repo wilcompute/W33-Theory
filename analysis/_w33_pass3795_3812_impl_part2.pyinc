@@ -1,0 +1,180 @@
+        if allowance < 0:
+            return
+        a, b = center.numerator, center.denominator
+        k = isqrt((allowance.numerator * b * b) // allowance.denominator)
+        lo = ceil_div(-k - a, b)
+        hi = (k - a) // b
+        for value in range(lo, hi + 1):
+            cost = diag[i] * (Fraction(value) + center) ** 2
+            if cost <= remaining:
+                x[i] = value
+                recurse(i - 1, remaining - cost)
+        x[i] = 0
+
+    recurse(n - 1, Fraction(bound))
+    return count, nodes
+
+
+def canonical_involution_basis(T):
+    _, pivots = (T - sp.eye(T.rows)).rref()
+    pivots = list(pivots)
+    V = sp.eye(T.rows)[:, pivots]
+    pair = V.row_join(T * V)
+    kernel = sp.Matrix.hstack(*(T - sp.eye(T.rows)).nullspace())
+    need = T.rows - pair.cols
+    for candidate in combinations(range(kernel.cols), need):
+        trial = pair.row_join(kernel[:, candidate])
+        # Fast modular filter before exact determinant.
+        if rank_mod(np.asarray(trial.tolist(), dtype=np.int64), 1_000_003) != T.rows:
+            continue
+        determinant = int(trial.det(method="domain-ge"))
+        if abs(determinant) == 1:
+            return trial, candidate
+    raise AssertionError("no unimodular involution basis found")
+
+
+def build():
+    prior, old = expose_previous_build()
+    assert all(prior["checks"].values())
+
+    # ------------------------------------------------------------------
+    # Front 1: canonical W33 <-> plane-ovoid dictionary and transported lines.
+    # ------------------------------------------------------------------
+    plane_orbit = tuple(old["plane_orbit"])
+    plane_index = {x: i for i, x in enumerate(plane_orbit)}
+    plane_gens = [tuple(plane_index[g[x]] for x in plane_orbit) for g in old["ovoid_gens"]]
+    plane_group = closure(plane_gens, 60_000)
+    assert len(plane_group) == 51_840
+
+    graph_w33 = nx.from_numpy_array(np.asarray(old["a40_w33"], dtype=np.uint8))
+    graph_plane = nx.from_numpy_array(np.asarray(old["a40_ovoid"], dtype=np.uint8))
+    seed_map = next(nx.algorithms.isomorphism.GraphMatcher(graph_w33, graph_plane).isomorphisms_iter())
+    seed = tuple(seed_map[i] for i in range(40))
+    dictionary = min(tuple(g[seed[i]] for i in range(40)) for g in plane_group)
+    assert all(old["a40_w33"][i, j] == old["a40_ovoid"][dictionary[i], dictionary[j]] for i in range(40) for j in range(40))
+    dictionary_sha = sha256(bytes(dictionary)).hexdigest()
+
+    points3 = tuple(old["points3"])
+    point_index = {p: i for i, p in enumerate(points3)}
+    w33_lines = set()
+    for i, j in combinations(range(40), 2):
+        if not old["a40_w33"][i, j]:
+            continue
+        x, y = points3[i], points3[j]
+        line = set()
+        for a, b in product(range(3), repeat=2):
+            if a or b:
+                line.add(point_index[canon_f3(tuple(a * x[k] + b * y[k] for k in range(4)))])
+        assert len(line) == 4
+        w33_lines.add(tuple(sorted(line)))
+    w33_lines = tuple(sorted(w33_lines))
+    assert len(w33_lines) == 40
+    assert set(Counter(x for line in w33_lines for x in line).values()) == {4}
+    transported_lines = {tuple(sorted(dictionary[x] for x in line)) for line in w33_lines}
+    plane_cliques = {tuple(sorted(c)) for c in nx.find_cliques(graph_plane) if len(c) == 4}
+    assert transported_lines == plane_cliques and len(plane_cliques) == 40
+
+    through = {i: [] for i in range(40)}
+    for line_id, line in enumerate(w33_lines):
+        for x in line:
+            through[x].append(line_id)
+    spreads = []
+
+    def exact_cover(chosen, covered):
+        if len(covered) == 40:
+            spreads.append(tuple(sorted(chosen)))
+            return
+        choices = []
+        for x in range(40):
+            if x not in covered:
+                legal = [line_id for line_id in through[x] if not set(w33_lines[line_id]).intersection(covered)]
+                choices.append((len(legal), x, legal))
+        _, _, legal = min(choices)
+        for line_id in legal:
+            exact_cover(chosen + [line_id], covered.union(w33_lines[line_id]))
+
+    exact_cover([], set())
+    spreads = tuple(sorted(set(spreads)))
+    assert len(spreads) == 36
+
+    # ------------------------------------------------------------------
+    # Front 2: complete 200-object coherent configuration.
+    # ------------------------------------------------------------------
+    ovoids = tuple(old["ovoids"])
+    ovoid_gens = tuple(old["ovoid_gens"])
+    relation = np.full((200, 200), -1, dtype=np.int16)
+    orbitals = []
+    for a in range(200):
+        for b in range(200):
+            if relation[a, b] >= 0:
+                continue
+            relation_id = len(orbitals)
+            queue = deque([(a, b)])
+            relation[a, b] = relation_id
+            orbital = []
+            while queue:
+                x, y = queue.popleft()
+                orbital.append((x, y))
+                for g in ovoid_gens:
+                    z = (g[x], g[y])
+                    if relation[z] < 0:
+                        relation[z] = relation_id
+                        queue.append(z)
+            orbitals.append(tuple(orbital))
+    assert len(orbitals) == 19 and sum(map(len, orbitals)) == 40_000
+    relations = np.stack([(relation == r).astype(np.int16) for r in range(19)])
+    pijk = np.zeros((19, 19, 19), dtype=np.int16)
+    for k, orbital in enumerate(orbitals):
+        a, b = orbital[0]
+        pijk[:, :, k] = relations[:, a, :] @ relations[:, :, b].T
+    tensor_sha = sha256(pijk.tobytes()).hexdigest()
+
+    left_regular = [np.array([[pijk[i, j, k] for j in range(19)] for k in range(19)], dtype=np.int64) for i in range(19)]
+    central_equations = []
+    for j in range(19):
+        central_equations.append(np.stack([((left_regular[i] @ left_regular[j] - left_regular[j] @ left_regular[i]) % MOD).reshape(-1) for i in range(19)], axis=1))
+    center_dimension = 19 - rank_mod(np.vstack(central_equations), MOD)
+    assert center_dimension == 5
+
+    plane_set = set(plane_orbit)
+    tripods = tuple(i for i in range(200) if i not in plane_set)
+    tripod_index = {x: i for i, x in enumerate(tripods)}
+    orbital_data = []
+    k4_relation_ids = []
+    for r, orbital in enumerate(orbitals):
+        a, b = orbital[0]
+        source = 40 if a in plane_set else 160
+        target = 40 if b in plane_set else 160
+        intersection_sizes = sorted(set(len(set(ovoids[x]).intersection(ovoids[y])) for x, y in orbital))
+        transpose = int(relation[b, a])
+        source_representative = plane_orbit[0] if source == 40 else tripods[0]
+        valency = int(np.count_nonzero(relation[source_representative] == r))
+        orbital_data.append({
+            "id": r, "size": len(orbital), "source_fiber": source, "target_fiber": target,
+            "valency": valency, "intersection_sizes": intersection_sizes, "transpose": transpose,
+        })
+        if source == target == 160 and transpose == r and valency == 3:
+            matrix = np.array([[relation[x, y] == r for y in tripods] for x in tripods], dtype=np.uint8)
+            components = list(nx.connected_components(nx.from_numpy_array(matrix)))
+            if len(components) == 40 and set(map(len, components)) == {4}:
+                k4_relation_ids.append(r)
+    assert len(k4_relation_ids) == 2
+    k4_partitions = []
+    for r in k4_relation_ids:
+        matrix = np.array([[relation[x, y] == r for y in tripods] for x in tripods], dtype=np.uint8)
+        blocks = [tuple(sorted(tripods[i] for i in component)) for component in nx.connected_components(nx.from_numpy_array(matrix))]
+        k4_partitions.append(tuple(sorted(blocks)))
+    incidence = np.array([[len(set(a).intersection(b)) for b in k4_partitions[1]] for a in k4_partitions[0]], dtype=np.int64)
+    assert Counter(incidence.reshape(-1)) == Counter({0: 1440, 1: 160})
+    assert set(map(int, incidence.sum(axis=0))) == {4} and set(map(int, incidence.sum(axis=1))) == {4}
+    block_graph = incidence @ incidence.T - 4 * np.eye(40, dtype=np.int64)
+    block_graph_sq = block_graph @ block_graph
+    assert set(map(int, block_graph.sum(axis=1))) == {12}
+    assert {int(block_graph_sq[i, j]) for i, j in combinations(range(40), 2) if block_graph[i, j]} == {2}
+    assert {int(block_graph_sq[i, j]) for i, j in combinations(range(40), 2) if not block_graph[i, j]} == {4}
+    assert rank_mod(incidence, 1_000_003) == 25
+
+    # ------------------------------------------------------------------
+    # Front 3: explicit rootless Leech polarization with exact U4(2) C2.
+    # ------------------------------------------------------------------
+    def permutation(cycles):
