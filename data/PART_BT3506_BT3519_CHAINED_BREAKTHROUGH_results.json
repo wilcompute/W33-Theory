@@ -1,0 +1,135 @@
+{
+  "bonkers": {
+    "W33_Clebsch_Gewirtz_spectral_completion": {
+      "Clebsch_spectrum": {
+        "-3": 5,
+        "1": 10,
+        "5": 1
+      },
+      "Gewirtz_nonprincipal_spectrum": {
+        "-4": 20,
+        "2": 35
+      },
+      "W33_nonprincipal_spectrum": {
+        "-4": 15,
+        "2": 24
+      },
+      "coefficient_record": {
+        "1": "17/16",
+        "x": "9/8",
+        "x^2": "-3/16"
+      },
+      "direct_sum_nonprincipal_spectrum": {
+        "-4": 20,
+        "2": 35
+      },
+      "p(Clebsch)_spectrum": {
+        "-4": 5,
+        "2": 11
+      },
+      "polynomial": "p(x)=(-3x^2+18x+17)/16",
+      "verdict": "W33 plus the polynomially transformed Clebsch module gives an exact functional-calculus completion of the Gewirtz augmentation spectrum. This is not a graph embedding or canonical group-module intertwiner."
+    },
+    "missing_57_induced_decomposition_no_go": {
+      "hypothetical_graph": [57, 14, 1, 4],
+      "induced_Clebsch_external_degree_sum": 144,
+      "induced_W33_external_degree_sum": 80,
+      "maximum_possible_apex_incidence_difference": 16,
+      "required_apex_incidence_difference": 64,
+      "tempting_partition": [1, 16, 40],
+      "verdict": "No such induced W33 plus Clebsch plus apex decomposition exists."
+    }
+  },
+  "characteristic_three_projector": {
+    "antipodal_antisymmetric_image_rank": 81,
+    "antipodal_symmetric_image_rank": 0,
+    "field": "F3",
+    "generalized_zero_dimension": 159,
+    "generalized_zero_jordan_type": {
+      "J1(0)": 85,
+      "J2(0)": 16,
+      "J3(0)": 14
+    },
+    "generalized_zero_power_ranks": [44, 14, 0],
+    "minimal_polynomial": "x^3(x+1)",
+    "module_boundary": "The 81-dimensional summand is now cut out by an explicit F3-idempotent. It is not called simple until an independent composition-series calculation is supplied.",
+    "operator_power_ranks": [125, 95, 81],
+    "projector": "E81=-D^3",
+    "projector_eigenvalue_for_D": -1,
+    "projector_idempotent": true,
+    "projector_rank": 81,
+    "relation": "D^4=-D^3"
+  },
+  "dependency_hypergraph": {
+    "annihilator_checked_mod_primes": [101, 103],
+    "annihilator_polynomial_coefficients_low_to_high": [7936185600, 1259712000, -217230336, -40652928, -163296, 162720, 2016, -152, 1],
+    "covering_boundary": "This is the first code-sensitive cubic deck beyond the strength-two/fractional relaxation. It supplies the exact higher-order symmetry operator but does not by itself move 389<=R<=435.",
+    "dependency_triples": 5040,
+    "face_degree": 63,
+    "incidence_ranks": {
+      "2": 240,
+      "3": 239,
+      "5": 240
+    },
+    "ordinary_multiplicity_fingerprint": [1, 15, 15, 20, 24, 24, 60, 81],
+    "pair_codegrees": {
+      "2": 3240,
+      "4": 2160
+    },
+    "spectrum": [
+      {"eigenvalue": "126", "multiplicity": 1},
+      {"eigenvalue": "18+12sqrt(6)", "multiplicity": 24},
+      {"eigenvalue": "18", "multiplicity": 20},
+      {"eigenvalue": "6", "multiplicity": 15},
+      {"eigenvalue": "-6", "multiplicity": 60},
+      {"eigenvalue": "-10", "multiplicity": 81},
+      {"eigenvalue": "18-12sqrt(6)", "multiplicity": 24},
+      {"eigenvalue": "-18", "multiplicity": 15}
+    ],
+    "supported_face_pairs": 5400,
+    "triple_size": 3,
+    "vertices": 240,
+    "weighted_two_section_degree": 126
+  },
+  "evidence_boundary": [
+    "The radius interval remains 389<=R<=435.",
+    "The chromatic interval remains 10<=chi(H)<=11.",
+    "The 81-dimensional image is an explicit direct summand but is not labelled simple.",
+    "The M4 result is a deterministic finite-grid no-go, not an unrestricted optimum.",
+    "The circuit optimum is exact in the stated addition/subtraction cost model.",
+    "No remote Icarus, Yosys, FPGA, PDF, laboratory, M57, or physical result is claimed by the source verifier."
+  ],
+  "five_channel_hardware": {
+    "breadth_first_state_counts_depth_0_to_4": [1, 20, 310, 4560, 67245],
+    "cost_model": "binary ternary addition/subtraction; sign and copy free",
+    "matrix_mod3": [[2,1,1,0,0],[2,1,0,1,0],[2,0,1,1,0],[0,2,2,0,0],[0,0,0,0,1]],
+    "minimum_binary_operations": 5,
+    "order": 3,
+    "witness": ["s=b+c", "p=d-a", "y0=s-a", "y1=p+b", "y2=p+c", "y3=-s", "y4=e"]
+  },
+  "live_boundaries": {
+    "chromatic_number": [10, 11],
+    "covering_radius": [389, 435]
+  },
+  "passes": [3506,3507,3508,3509,3510,3511,3512,3513,3514,3515,3516,3517,3518,3519],
+  "schema": "w33.bt3506_3519.chained_breakthrough.v1",
+  "semantic_sha256": "7ad66eec9cbb1b3f207eb4215a348cb9a63e0be9ab7876e53209dbed3099a13f",
+  "status": "PASS_7_FRONTS",
+  "tomotope_lift": {
+    "configuration": [12, 4, 16, 3],
+    "eight_cell_double_cover_solutions": 0,
+    "four_face_six_edge_cell_candidates": 12,
+    "verdict": "The oriented-tetrahedron Reye-style 12_4 16_3 surface cannot be lifted to the tomotope by selecting eight four-face cells with every triangular face incident to two cells. The matching parameters are therefore not an incidence-preserving tomotope identification.",
+    "visible_S4_times_reversal_order": 48
+  },
+  "transported_M4_grid": {
+    "best_hoffman_ratio": 3.275812021095,
+    "best_lambda_max": 32.0,
+    "best_lambda_min": -14.060915270409,
+    "best_weights": [1,1,1,1,1,1],
+    "gauge": "lexicographically least face-group lift at each W33 quotient point",
+    "projective_weight_grid": "{-1,0,1}^6 / overall sign, zero removed",
+    "verdict": "The complete deterministic ternary six-weight grid stays below 4 and therefore cannot affect the live 10<=chi<=11 boundary. This is a finite-grid no-go, not an unrestricted transported-M4 optimum.",
+    "weight_classes": 364
+  }
+}
