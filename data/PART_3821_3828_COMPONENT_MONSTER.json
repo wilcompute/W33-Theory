@@ -1,0 +1,34 @@
+{
+  "boundary": "This completely enumerates the abstract U4(2) candidate pairs. No serialized Monster words, Monster embedding, or 196883-character restriction is produced because no GAP/mmgroup result artifact is present.",
+  "centralizer_orbits": [576, 576],
+  "class_summary": {
+    "order_1_size_1": 1,
+    "order_2_size_45": 1,
+    "order_2_size_270": 1,
+    "order_3_size_40": 2,
+    "order_3_size_240": 1,
+    "order_3_size_480": 1,
+    "order_4_size_540": 1,
+    "order_4_size_3240": 1,
+    "order_5_size_5184": 1,
+    "order_6_size_360": 2,
+    "order_6_size_720": 2,
+    "order_6_size_1440": 1,
+    "order_6_size_2160": 1,
+    "order_9_size_2880": 2,
+    "order_12_size_2160": 2
+  },
+  "fixed_a_admissible_b_count": 1152,
+  "fixed_a_centralizer_order": 576,
+  "generated_group_orders": [25920, 25920],
+  "group_order": 25920,
+  "internal_group": "U4(2)",
+  "relations": ["|a|=2", "|b|=5", "|ab|=9", "|[a,b]|=3"],
+  "standard_pair_classes": {
+    "a": {"class_size": 45, "order": 2},
+    "b": {"class_size": 5184, "order": 5},
+    "ab": {"class_size": 2880, "order": 9}
+  },
+  "total_ordered_standard_pairs": 51840,
+  "two_distinct_order9_product_classes": true
+}
