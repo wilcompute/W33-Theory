@@ -1,0 +1,131 @@
+name: Passes 3528-3534 Borel Star Moore Transplant
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/*3528*'
+      - 'analysis/*3529*'
+      - 'analysis/*3530*'
+      - 'analysis/*3532*'
+      - 'analysis/*3534*'
+      - 'data/PART_BT3528*'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - 'data/w33_pass_namespace_registry_v2.d/3528-3534.json'
+      - 'docs/borel-star-moore-transplant.html'
+      - 'docs/index.html'
+      - 'tests/test_bt3528_bt3534_borel_star_moore_functor_transplant.py'
+      - '.github/workflows/w33_pass3528_3534_borel_star_moore_transplant.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/*3528*'
+      - 'analysis/*3529*'
+      - 'analysis/*3530*'
+      - 'analysis/*3532*'
+      - 'analysis/*3534*'
+      - 'data/PART_BT3528*'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - 'docs/borel-star-moore-transplant.html'
+      - 'docs/index.html'
+      - 'tests/test_bt3528_bt3534_borel_star_moore_functor_transplant.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pass3528-3534-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  exact-models-papers:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact dependencies
+        run: python -m pip install --disable-pip-version-check numpy pytest ortools
+      - name: Regenerate exact certificate
+        run: |
+          mkdir -p evidence/pass3528_3534
+          cp data/PART_BT3528_BT3534_BOREL_STAR_MOORE_FUNCTOR_TRANSPLANT_results.json /tmp/frozen3528.json
+          python analysis/bt3528_3534_borel_star_moore_functor_transplant.py | tee evidence/pass3528_3534/exact.log
+          grep -F 'PASS_7_FRONTS 1ec126887cd1f09b8cdc074872567dd4962c2a399c1b14db8b035a8ea50dc591' evidence/pass3528_3534/exact.log
+          cmp /tmp/frozen3528.json data/PART_BT3528_BT3534_BOREL_STAR_MOORE_FUNCTOR_TRANSPLANT_results.json
+      - name: Focused regression and quick star census
+        run: |
+          pytest -q tests/test_bt3528_bt3534_borel_star_moore_functor_transplant.py | tee evidence/pass3528_3534/pytest.log
+          python analysis/bt3529_star_complement_census.py --quick | tee evidence/pass3528_3534/star_quick.log
+          grep -F 'PASS_QUICK_STAR_STAGES' evidence/pass3528_3534/star_quick.log
+      - name: Materialize both Moore model sources
+        run: |
+          python analysis/bt3530_m57_dual_tracks.py --n 6 --track unrestricted > evidence/pass3528_3534/unrestricted_n6.json
+          python analysis/bt3530_m57_dual_tracks.py --n 6 --track involutive > evidence/pass3528_3534/involutive_n6.json
+          python analysis/bt3530_m57_dual_tracks.py --n 56 --track stats > evidence/pass3528_3534/m57_stats.json
+          grep -F '"element_involution_constraints": 86240' evidence/pass3528_3534/m57_stats.json
+      - name: Audit live W33 Gewirtz policy
+        run: |
+          python analysis/bt3532_spectral_transplant_repo_audit.py --json evidence/pass3528_3534/transplant_audit.json | tee evidence/pass3528_3534/transplant.log
+          grep -F 'PASS_SPECTRAL_TRANSPLANT_POLICY_AUDIT' evidence/pass3528_3534/transplant.log
+      - name: Verify source reachability
+        run: |
+          python - <<'PY'
+          import json,re
+          from pathlib import Path
+          tex=Path('analysis/W33_CURRENT_FRONTIER_MANIFEST.tex').read_text()
+          inputs=re.findall(r'\\input\{([^}]+)\}',tex)
+          manifest=json.loads(Path('data/w33_current_frontier_manifest_v1.json').read_text())
+          assert inputs==manifest['required_ordered_inputs']
+          stem='analysis/BT3528_BT3534_borel_star_moore_functor_transplant_insert'
+          assert inputs[-1]==stem
+          assert Path(stem+'.tex').is_file()
+          assert Path('docs/borel-star-moore-transplant.html').is_file()
+          assert 'bt3528-3534-borel-star-moore-transplant' in Path('docs/index.html').read_text()
+          print('PASS current-frontier and public reachability')
+          PY
+          git diff --check
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Compile canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3528_3534/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3528_3534/pdf_sha256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3528-3534-exact-models-papers
+          path: |
+            evidence/pass3528_3534/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
+
+  full-star-complement-census:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check numpy
+      - name: Independently regenerate all 3720 candidates
+        run: |
+          mkdir -p evidence/pass3528_3534
+          python analysis/bt3529_star_complement_census.py --json evidence/pass3528_3534/star_full.json | tee evidence/pass3528_3534/star_full.log
+          grep -F 'PASS_3720_STAR_COMPLEMENT_CANDIDATES' evidence/pass3528_3534/star_full.log
+          grep -F 'c1e0cb753fbdeab4d8ecf8059896b6ff1eb1fcc75c663022ab7040ceea012219' evidence/pass3528_3534/star_full.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3529-full-star-complement-census
+          path: evidence/pass3528_3534/**
