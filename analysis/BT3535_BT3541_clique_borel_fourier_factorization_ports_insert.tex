@@ -1,0 +1,115 @@
+\section{Star-clique recertification, Borel--M57 archetypes, and nonseparable Moore factorization}
+\label{sec:bt3535-3541}
+
+The executable Passes~3535--3541 report
+\[
+\texttt{PASS\_7\_FRONTS}\quad
+\texttt{34ea459ab6acea3a2b5624ba6523016cfb914ffb54220ed64230f74f78a1fb6b}.
+\]
+The degree-$57$ Moore graph remains open; all statements below are finite theorems or explicitly conditional necessary conditions.
+
+\subsection{Independent star-complement clique source}
+For each of the $3720$ independently regenerated $19$-vertex star complements with adjacency matrix $C$, the companion source constructs
+\[
+M=2I-C
+\]
+exactly, enumerates every admissible binary reconstruction column $b$ satisfying
+\[
+b^{\mathsf T}M^{-1}b=2,
+\]
+and joins two columns when their exact inner product is $-1$ or $0$ and the corresponding $(\lambda,\mu)=(1,4)$ common-neighbour bound is respected. A deterministic bitset maximum-clique engine emits a witness and proof digest for every instance. The complete heavy job fails closed unless it reproduces the published clique histogram and compatibility-graph order range $4$ through $265$. No fresh all-$3720$ result is promoted before its artifact is observed.
+
+\subsection{Prime fixed sets and the surviving Borel action}
+Let an automorphism of prime order $p$ act on a hypothetical
+\[
+\operatorname{SRG}(3250,57,0,1).
+\]
+A nontrivial fixed set is closed under unique common neighbours, and if it has more than one vertex its induced graph is itself a Moore graph, with fixed degree congruent to $57$ modulo $p$. Consequently an order-$19$ element fixes exactly one vertex, whereas an order-$3$ element fixes either one vertex or a Petersen graph.
+
+Assume conditionally that
+\[
+B=C_{19}\rtimes C_9
+\]
+acts. Orbit arithmetic leaves precisely
+\[
+P_{19}:\ 1+9\cdot19+18\cdot171,
+\qquad
+P_{57}:\ 1+3\cdot57+18\cdot171.
+\]
+The adjacency trace on an order-$19$ element first permits
+\[
+g\in\{57,342,627,912,1197\},
+\]
+where $g$ counts vertices mapped to neighbours. Girth and equal displacement for nontrivial powers leave only
+\[
+\boxed{g\in\{57,342\}}.
+\]
+Thus exactly four conditional action archetypes survive: low/high versions of $P_{19}$ and $P_{57}$. They are necessary forms, not constructions or a contradiction.
+
+\subsection{Exact Perkel Fourier projectors}
+Let $A$ be the Perkel adjacency matrix, $J$ the all-ones matrix, and $B_{19}$ the block diagonal matrix with three $J_{19}$ blocks. Put
+\[
+N=-A^3+9A^2-19A+6I.
+\]
+The integer projector numerators
+\[
+P_1=3J,
+\quad
+P_2=9B_{19}-3J,
+\quad
+P_{18}=N-9B_{19}+3J,
+\quad
+P_{36}=171I-3J-N
+\]
+have ranks
+\[
+1,2,18,36
+\]
+and satisfy
+\[
+P_iP_j=171\delta_{ij}P_i,
+\qquad
+\sum_iP_i=171I.
+\]
+The conductor-$19$ projector is
+\[
+\boxed{P_{54}=171I-9B_{19}=P_{18}+P_{36}},
+\]
+and
+\[
+(A^3-8A+3I)P_{54}=0.
+\]
+Hence every Perkel adjacency polynomial reduces to a constant channel, a ternary $V_2$ channel, and a degree-two normal form on the conductor-$19$ sector modulo $x^3-8x+3$.
+
+\subsection{The one-factorization field}
+Inside the involutive edge-chart branch, each row pencil is a one-factorization. The exact Hoffman--Singleton control has $15$ perfect matchings and exactly six labelled one-factorizations of $K_6$. Its six residual rows realize all six factorizations exactly once. Moreover, all $5!=120$ globally separable colour identifications fail all $20$ row triangles: every one of the $2400$ holonomies has two fixed points. The actual Hoffman--Singleton holonomies all have cycle type $2^3$.
+
+Therefore a hypothetical involutive $n=56$ branch cannot reuse one global factorization. It requires $56$ genuinely row-dependent, reciprocity-coupled one-factorizations of $K_{56}$, each containing $55$ perfect matchings and covering all $1540$ symbol pairs.
+
+\subsection{Typed W33--Gewirtz polynomial port}
+Both exact graphs satisfy the common restricted relation
+\[
+(A-2I)(A+4I)=0
+\]
+on augmentation. With $P=J/v$ and $Q=I-P$, the full identity is
+\[
+(A-2I)(A+4I)=(k-2)(k+4)P.
+\]
+The reflection
+\[
+R=\frac{(k+1)P-I-A}{3}
+\]
+satisfies $R^2=Q$, and
+\[
+E_2=\frac{Q-R}{2},
+\qquad
+E_{-4}=\frac{Q+R}{2}.
+\]
+If $p(x)\equiv ax+b\pmod{x^2+2x-8}$, then
+\[
+\boxed{p(A)=p(k)P+(aA+bI)Q.}
+\]
+This ports every adjacency-polynomial and functional-calculus theorem. Trace, determinant, and rank formulas require the typed multiplicities $(24,15)$ for W33 and $(35,20)$ for Gewirtz. Incidence, codes, automorphisms, Smith forms, descendants, and intertwiners remain geometry-sensitive and require independent evidence.
+
+\paragraph{Boundary.}
+No M57 existence verdict, unobserved full clique rerun, W33--Gewirtz objectwise equivalence, hardware result, or physical interpretation is asserted.
