@@ -3,8 +3,26 @@
   "range": [3687, 3693],
   "slug": "realized_octad_borel_psd_proof_tomography_architecture",
   "title": "Realized octad deck, exact Borel bridge, Perkel PSD cone, proof archive, marked tomography, and architecture-level firewalls",
-  "status": "reserved",
+  "status": "published",
   "owner": "openai-agent",
   "reserved_at": "2026-08-05T14:45:00-04:00",
-  "boundary": "Reservation only; promoted claims require exact source, frozen certificates, focused tests, workflow, manuscript integration, and public reachability."
+  "published_at": "2026-08-05T15:18:00-04:00",
+  "semantic_sha256": "3ff49c19511ebcf3c9159c1d69f123ae66dd275498c94f501230710634982828",
+  "proof_merkle_root": "d75cdc80648d7ddf913555f164140bc864087689e4c37e8ba77b0c3f763d9529",
+  "files": [
+    "analysis/bt3687_3693_realized_octad_borel_psd_proof_tomography_architecture.py",
+    "analysis/BT3687_BT3693_realized_octad_borel_psd_proof_tomography_architecture.md",
+    "analysis/BT3687_BT3693_realized_octad_borel_psd_proof_tomography_architecture_insert.tex",
+    "analysis/BT3687_BT3693_realized_octad_borel_psd_proof_tomography_architecture_index_insert.html",
+    "data/PART_BT3687_BT3693_REALIZED_OCTAD_BOREL_PSD_PROOF_TOMOGRAPHY_ARCHITECTURE_results.json",
+    "data/PART_BT3690_CONTENT_ADDRESSED_PROOF_BATCH.parts/part00.b85",
+    "data/PART_BT3690_CONTENT_ADDRESSED_PROOF_BATCH.parts/part01.b85",
+    "data/PART_BT3690_CONTENT_ADDRESSED_PROOF_BATCH.parts/part02.b85",
+    "data/PART_BT3690_CONTENT_ADDRESSED_PROOF_BATCH.parts/part03.b85",
+    "data/PART_BT3690_CONTENT_ADDRESSED_PROOF_BATCH.parts/part04.b85",
+    "tests/test_bt3687_bt3693_realized_octad_borel_psd_proof_tomography_architecture.py",
+    ".github/workflows/w33_pass3687_3693_realized_octad_borel_psd_proof_tomography_architecture.yml",
+    "docs/realized-octad-borel-psd-proof-tomography-architecture.html"
+  ],
+  "boundary": "Fifty-nine of sixty-nine octad patterns are realized; ten remain open. The Borel screen is local, the proof archive has thirty-two records rather than all 3,720, and the architecture theorems do not substitute for measured hardware evidence."
 }
