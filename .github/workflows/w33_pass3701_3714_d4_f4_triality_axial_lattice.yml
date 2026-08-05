@@ -1,0 +1,95 @@
+name: Passes 3701-3714 D4 F4 Triality Axial Lattice
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/*3701*'
+      - 'analysis/*3714*'
+      - 'data/PART_3701_3714*'
+      - 'data/w33_pass_namespace_registry_v2.d/3701-3714.json'
+      - 'tests/test_w33_pass3701_3714_panel_d4_f4_axial_lattice.py'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - 'docs/d4-f4-triality-45-axis.html'
+      - 'docs/index.html'
+      - '.github/workflows/w33_pass3701_3714_d4_f4_triality_axial_lattice.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pass3701-3714-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  exact-and-papers:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact dependencies
+        run: python -m pip install --disable-pip-version-check numpy sympy networkx pytest
+      - name: Recompute exact certificate
+        run: |
+          mkdir -p evidence/pass3701_3714
+          cp data/PART_3701_3714_D4_F4_TRIALITY_AXIAL_LATTICE_results.json evidence/pass3701_3714/frozen.json
+          python analysis/w33_pass3701_3714_panel_d4_f4_axial_lattice.py | tee evidence/pass3701_3714/exact.log
+          grep -F 'PASS_3701_3714 17e8e1caaa48587b8feb5678963358b1a18961efd933858f677ca42e5713c644' evidence/pass3701_3714/exact.log
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          generated=json.loads(Path('data/PART_3701_3714_D4_F4_TRIALITY_AXIAL_LATTICE_results.json').read_text())
+          frozen=json.loads(Path('evidence/pass3701_3714/frozen.json').read_text())
+          assert generated == frozen
+          assert generated['semantic_sha256'] == '17e8e1caaa48587b8feb5678963358b1a18961efd933858f677ca42e5713c644'
+          assert all(generated['checks'].values())
+          print('PASS frozen exact certificate equality')
+          PY
+      - name: Focused regression
+        run: |
+          python -m pytest -q tests/test_w33_pass3701_3714_panel_d4_f4_axial_lattice.py | tee evidence/pass3701_3714/pytest.log
+          git diff --check
+      - name: Verify frontier and public reachability
+        run: |
+          python - <<'PY'
+          import json,re
+          from pathlib import Path
+          tex=Path('analysis/W33_CURRENT_FRONTIER_MANIFEST.tex').read_text()
+          inputs=re.findall(r'\\input\{([^}]+)\}',tex)
+          manifest=json.loads(Path('data/w33_current_frontier_manifest_v1.json').read_text())
+          assert inputs == manifest['required_ordered_inputs']
+          ours='analysis/BT3701_BT3714_d4_f4_triality_axial_lattice_insert'
+          assert inputs.count(ours)==1
+          assert inputs.index('analysis/BT3694_BT3700_spread_etf_axial_closure_insert') < inputs.index(ours)
+          assert inputs.index(ours) < inputs.index('analysis/BT3715_BT3721_carrier_tournament_process_budget_identification_scheduler_twirl_insert')
+          assert Path(ours+'.tex').is_file()
+          assert Path('docs/d4-f4-triality-45-axis.html').is_file()
+          index=Path('docs/index.html').read_text()
+          assert 'bt3701-3714-d4-f4-triality' in index
+          print('PASS chronology and public reachability')
+          PY
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+      - name: Compile canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3701_3714/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3701_3714/pdf_sha256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3701-3714-d4-f4-triality-evidence
+          path: |
+            evidence/pass3701_3714/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
