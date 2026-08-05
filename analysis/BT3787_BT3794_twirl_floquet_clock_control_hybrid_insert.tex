@@ -1,0 +1,54 @@
+\subsection{Exact twirl estimation, Floquet cancellation, distributed clocking, and control closure (Passes 3787--3794)}
+\label{sec:bt3787-3794}
+
+The W33 control architecture now has exact finite resource contracts beyond the preceding symmetry-operating-system packet.  The results below distinguish algebraic control statements from physical pulse and device claims.
+
+\paragraph{Minimum exact observable twirl.}
+The ordered-pair action has orbit sizes $40$, $480$, and $1080$.  Exact unweighted estimation of the diagonal, oriented-edge, and oriented-nonedge averages therefore needs at least
+\[
+40+480+1080=1600
+\]
+settings, and one shortest automorphism word per target attains the bound.  The total compiled cost is $8934$ generator macros, versus $211898$ for the complete group sweep.  This closes observable/orbit estimation, not the stronger active conjugation-channel twirl, whose unweighted divisibility lower bound remains $4320$.
+
+\paragraph{Floquet cancellation.}
+The four incidence matchings induce relative cycle types $(20,20)$, $(40)$, and $(40)$ and generate $S_{40}$.  For either relative forty-cycle $C$ and any diagonal error Hamiltonian $D$,
+\[
+\frac1{40}\sum_{t=0}^{39}C^{-t}DC^t
+=\frac{\operatorname{tr}D}{40}I.
+\]
+Hence all traceless static diagonal disorder cancels exactly over one orbit.  This is not a general coherent-error or loss theorem.
+
+\paragraph{Optimal distributed clock.}
+On the eighty-node point--line incidence network, one matching per tick gives the exact informed-node census
+\[
+1,2,4,8,16,30,54,80.
+\]
+All nodes receive the frame in seven ticks.  The information-doubling lower bound $\lceil\log_2 80\rceil=7$ proves optimality in the declared store-and-forward model, replacing the prior eighty-step central-bus serialization.
+
+\paragraph{Exact control-port count.}
+A complete automorphism-orbit enumeration of reverse zero-forcing sequences has orbit counts
+\[
+1,1,2,5,16,43,191,769,3024,9772,24852,34890
+\]
+through depth eleven.  Every depth-eleven orbit is terminal and depth twelve is empty.  Therefore
+\[
+\boxed{Z(W33)=29}.
+\]
+An explicit minimum set and eleven-step force chain are frozen in the executable certificate.  The graph-control consequence retains the standard Hamiltonian assumptions and is not a pulse-robustness result.
+
+\paragraph{Dynamic W33/local phase.}
+An explicit relabelling of the degree-twelve local ring and W33 shares $128$ of their $240$ couplers.  The reconfigurable union therefore uses
+\[
+240+240-128=352
+\]
+couplers, a $26.67\%$ reduction from disjoint hardware.  The cross-phase two-step operator has pairwise minimum two, while the complete two-phase walk has minimum four.  The witness is not claimed globally optimal.
+
+\paragraph{Three further mechanisms.}
+First, the exact zero-forcing chain virtualizes eleven unactuated calibration channels behind twenty-nine physical phase actuators in the ideal graph-linear model.  Second, the same forty-cycle provides a forty-setting Fourier spectrometer that reconstructs all thirty-nine traceless diagonal modes while its zero character performs common-mode averaging.  Third, reversing the optimal broadcast tree gives a seven-tick qutrit gather and a fourteen-tick collision-free all-reduce.
+
+\paragraph{Evidence boundary.}
+The frozen semantic certificate is
+\[
+\texttt{aa3daf462320badd607a1720479f083df159044f24242e7f46810de30bc2e0d8}.
+\]
+The results certify finite group words, orbit-estimation cost, static diagonal cancellation, broadcast depth, zero forcing, a dynamic-topology witness, and three algebraic communication/calibration mechanisms.  They do not certify an optimal active twirl, a complete Floquet quantum code, noisy actuator virtualization, minimum physical layout, or laboratory performance.
