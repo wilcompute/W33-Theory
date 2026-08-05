@@ -1,0 +1,113 @@
+name: Passes 3787-3794 Twirl Floquet Clock Control Hybrid
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/*3787*'
+      - 'analysis/*3788*'
+      - 'analysis/*3789*'
+      - 'analysis/*3790*'
+      - 'analysis/*3791*'
+      - 'analysis/*3792*'
+      - 'analysis/*3793*'
+      - 'analysis/*3794*'
+      - 'data/PART_3787_3794*'
+      - 'data/w33_pass_namespace_registry_v2.d/3787-3794.json'
+      - 'tests/test_w33_pass3787_3794_twirl_floquet_clock_control_hybrid.py'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - 'docs/twirl-floquet-clock-control-hybrid.html'
+      - '.github/workflows/w33_pass3787_3794_twirl_floquet_clock_control_hybrid.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pass3787-3794-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  exact-control-architecture:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install exact dependencies
+        run: python -m pip install --disable-pip-version-check pytest numpy==2.3.5 sympy==1.14.0
+      - name: Regenerate frozen semantic certificate
+        run: |
+          mkdir -p evidence/pass3787_3794
+          python analysis/w33_pass3787_3794_twirl_floquet_clock_control_hybrid.py --json evidence/pass3787_3794/results.json | tee evidence/pass3787_3794/exact.log
+          grep -F 'PASS_8_FRONTS aa3daf462320badd607a1720479f083df159044f24242e7f46810de30bc2e0d8' evidence/pass3787_3794/exact.log
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          got=json.loads(Path('evidence/pass3787_3794/results.json').read_text())
+          frozen=json.loads(Path('data/PART_3787_3794_TWIRL_FLOQUET_CLOCK_CONTROL_HYBRID_results.json').read_text())
+          assert got==frozen
+          assert got['passes']['3790_exact_zero_forcing_control_ports']['zero_forcing_number']==29
+          print('PASS frozen semantic equality')
+          PY
+      - name: Regenerate complete zero-forcing orbit proof
+        run: |
+          python analysis/w33_pass3787_3794_twirl_floquet_clock_control_hybrid.py --verify-zero-forcing-ledger | tee evidence/pass3787_3794/zero_forcing.log
+          grep -F 'PASS_ZERO_FORCING_LEDGER 94f90a31640a9504b89cad7262318b4d7356918c03b6968da09ece4959926f60' evidence/pass3787_3794/zero_forcing.log
+      - name: Focused exact regression
+        run: |
+          pytest -q tests/test_w33_pass3787_3794_twirl_floquet_clock_control_hybrid.py | tee evidence/pass3787_3794/pytest.log
+          git diff --check
+      - name: Verify manuscript, restored-site, and public reachability
+        run: |
+          python - <<'PY'
+          import json,re,subprocess
+          from pathlib import Path
+          tex=Path('analysis/W33_CURRENT_FRONTIER_MANIFEST.tex').read_text()
+          inputs=re.findall(r'\\input\{([^}]+)\}',tex)
+          manifest=json.loads(Path('data/w33_current_frontier_manifest_v1.json').read_text())
+          assert inputs==manifest['required_ordered_inputs']
+          ours='analysis/BT3787_BT3794_twirl_floquet_clock_control_hybrid_insert'
+          assert inputs.count(ours)==1
+          assert Path(ours+'.tex').is_file()
+          assert Path('analysis/BT3787_BT3794_twirl_floquet_clock_control_hybrid_index_insert.html').is_file()
+          assert Path('docs/twirl-floquet-clock-control-hybrid.html').is_file()
+          # Preserve the restored historical long-form index byte-for-byte.
+          sha=subprocess.check_output(['git','hash-object','docs/index.html'],text=True).strip()
+          assert sha=='41a8d733f42da18282fa276f5d2fa82bac7516f6',sha
+          print('PASS current-frontier, restored index, and public reachability')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3787-3794-exact-control-evidence
+          path: evidence/pass3787_3794/**
+
+  manuscripts:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Compile canonical manuscripts
+        run: |
+          mkdir -p evidence/pass3787_3794
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3787_3794/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3787_3794/pdf_sha256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3787-3794-papers
+          path: |
+            evidence/pass3787_3794/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
