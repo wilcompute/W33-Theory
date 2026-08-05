@@ -1,0 +1,121 @@
+{
+  "bonkers": {
+    "cubic_obstruction_clock": {
+      "C_minus_I_power_ranks": [44, 14, 0],
+      "E81_action": "fixed pointwise",
+      "boundary": "Canonical finite unipotent order-three register; not a physical time crystal or autonomous oscillator.",
+      "fixed_space_dimension": 196,
+      "jordan_type": "J3(1)^14 + J2(1)^16 + J1(1)^166",
+      "nonidentity": true,
+      "operator": "C=I+D+E81 over F3",
+      "order": 3
+    },
+    "tomotope_S3_selector": {
+      "boundary": "Exact finite selector register, not a physical qutrit claim.",
+      "interpretation": "The three simple covers are pairwise unions of three canonical tetrads; the visible 48-group induces every permutation of the three cover states.",
+      "kernel_order": 8,
+      "stabilizer_order": 16,
+      "states": 3,
+      "tetrads": [[0,3,8,11],[1,5,6,10],[2,4,7,9]],
+      "visible_action": "full S3"
+    }
+  },
+  "evidence_boundary": [
+    "The degree-three relaxation proves tau>=81 but does not close the covering-radius endpoint.",
+    "The positive-gauge/nonnegative transported-M4 optimum is exact at 9; arbitrary signed complex Hermitian weights remain open.",
+    "The E81 simple/projective conclusion is exact; the Steinberg name uses the established PSp(4,3)=U4(2) defining-characteristic identification.",
+    "The corrected tomotope result establishes an eight-cell incidence layer, not yet a complete abstract-polytope isomorphism.",
+    "The Gewirtz bridge is weighted and integral after scaling, not a 0/1 graph embedding.",
+    "No remote CI, PDF, FPGA, laboratory, Monster embedding, or physical result is asserted by the source certificate."
+  ],
+  "fronts": {
+    "degree_three_covering": {
+      "covering_boundary": "This cubic integrality certificate does not identify the covering-radius endpoint; 389<=R<=435 remains live.",
+      "dual_witness": "y=(1/63)1_5040",
+      "equality_obstruction": "Any 80-set hitting all 5040 triples has total incidence 5040, so T^T x=1. Full row rank makes x=(1/3)1 the unique real solution, contradicting x binary.",
+      "fractional_transversal_number": "80",
+      "gram_minimum_eigenvalue": 45,
+      "gram_rank": 240,
+      "gram_spectrum": ["189^1","(81+12sqrt(6))^24","81^20","69^15","57^60","53^81","(81-12sqrt(6))^24","45^15"],
+      "integral_transversal_lower_bound": 81,
+      "integrality_gap_lower_bound": "81/80",
+      "primal_witness": "x=(1/3)1_240"
+    },
+    "modular_E81": {
+      "bottom_14_boundary": "Schurian and fixed-point-free; no simplicity label is promoted from these two tests alone.",
+      "bottom_14_endomorphism_dimension": 1,
+      "bottom_14_fixed_dimension": 0,
+      "complement_filtration_dimensions": [159,44,14,0],
+      "complement_successive_dimensions": [115,30,14],
+      "endomorphism_ring": "F3",
+      "face_action_rank": 10,
+      "face_action_subdegrees": [1,18,27,4,18,108,1,27,18,18],
+      "orbital_restriction_span_rank": 1,
+      "orbital_scalar_multiset": {"0":2,"1":4,"2":4},
+      "projective_restriction": "regular F3[P] module",
+      "projector_rank": 81,
+      "simple_projective_conclusion": true,
+      "steinberg_identification": "The explicit 81-dimensional simple projective defining-characteristic module is the Steinberg module under the established PSp(4,3)=U4(2) carrier identification.",
+      "sylow_3_order": 81,
+      "sylow_cyclic_basis_index": 4,
+      "sylow_generator_orders": [9,3],
+      "sylow_growth": [9,81],
+      "sylow_invariant_dimension": 1,
+      "sylow_orbit_rank": 81
+    },
+    "objectwise_gewirtz_bridge": {
+      "annihilator": "(Q-560I)(Q-112I)(Q+224I)=0",
+      "blocks": {"Clebsch":"(7/2)(-3 A_C^2+18 A_C+17 I)+8 J_16","W33":"56 A_W - 6 J_40","cross":"8 J_40x16"},
+      "boundary": "Concrete objectwise integral weighted spectral bridge; not a 0/1 Gewirtz adjacency or canonical graph embedding.",
+      "constant_row_sum": 560,
+      "integral_entry_alphabet": [-13,-6,8,15,50,71],
+      "matrix": "Q=56 M on W33(40) plus Clebsch(16)",
+      "order": 56,
+      "scaled_spectrum": "10^1,2^35,(-4)^20",
+      "spectrum": "560^1,112^35,(-224)^20",
+      "traces": [0,1756160,0,154204897280]
+    },
+    "tomotope_cocycle_correction": {
+      "boundary": "This corrects the old no-lift theorem and supplies the eight-cell incidence layer; a full rank-4 tomotope isomorphism still requires the vertex-edge diamond and flag-connectivity checks.",
+      "canonical_tetrads": [[0,3,8,11],[1,5,6,10],[2,4,7,9]],
+      "cover_cell_adjacency": "K4,4 for each simple cover",
+      "doubled_tetrad_solutions": [[0,0,3,3,8,8,11,11],[1,1,5,5,6,6,10,10],[2,2,4,4,7,7,9,9]],
+      "failure_mode": "Increasing candidate indices were combined with a dynamically chosen deficient face, skipping valid sorted subsets.",
+      "induced_cover_action": "S3 with kernel order 8",
+      "local_cell_candidates": 12,
+      "multiset_double_cover_count": 6,
+      "multisets_examined": 75582,
+      "prior_zero_lift_claim": "WITHDRAWN_INCOMPLETE_BACKTRACKER",
+      "simple_cover_formula": "A union B, A union C, B union C",
+      "simple_cover_orbit_size": 3,
+      "simple_cover_stabilizer_order": 16,
+      "simple_double_cover_count": 3,
+      "simple_double_covers": [[0,1,3,5,6,8,10,11],[0,2,3,4,7,8,9,11],[1,2,4,5,6,7,9,10]],
+      "simple_eight_cell_subsets_examined": 495,
+      "visible_group_order": 48
+    },
+    "transported_M4_dual": {
+      "anchor_graph": "SRG(45,32,22,24)",
+      "anchor_spectrum": "32^1,2^24,(-4)^20",
+      "arbitrary_signed_complex_hermitian_boundary": "not closed by the fractional dual certificate",
+      "attaining_ratio": 9,
+      "attaining_spectrum": "32^4,2^96,(-4)^80",
+      "attaining_weight": "A45 tensor I4",
+      "fourfold_blowup_order": 180,
+      "fractional_chromatic_number": 9,
+      "independent_lines": 27,
+      "lifted_fractional_coloring": "27 sets weighted 1/3",
+      "lifted_independent_set_size": 20,
+      "maximum_independent_set_size": 5,
+      "point_line_multiplicity": 3,
+      "unrestricted_positive_gauge_hoffman_upper_bound": 9,
+      "verdict": "The unrestricted positive-gauge/nonnegative weighted-Hoffman optimum on the full fourfold anchor blowup is exactly 9. Arbitrary signed complex Hermitian weights remain a separate open boundary."
+    }
+  },
+  "live_boundaries": {"chromatic_number":[10,11],"covering_radius":[389,435]},
+  "passes": [3649,3650,3651,3652,3653,3654,3655,3656,3657,3658,3659,3660,3661,3662],
+  "schema": "w33.pass3649_3662.seven_front_closure.v1",
+  "semantic_sha256": "067047bbf3fe04301fcb26bf484a3d151bf6db4ab762fa6bf31f527889d09a89",
+  "status": "PASS_7_FRONTS_WITH_TOMOTOPE_CORRECTION",
+  "supersedes": ["Passes 3600-3613 tomotope eight-cell double-cover count 0"]
+}
