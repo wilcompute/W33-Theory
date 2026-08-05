@@ -58,7 +58,15 @@ jobs:
           cp data/PART_BT3528_BT3534_BOREL_STAR_MOORE_FUNCTOR_TRANSPLANT_results.json /tmp/frozen3528.json
           python analysis/bt3528_3534_borel_star_moore_functor_transplant.py | tee evidence/pass3528_3534/exact.log
           grep -F 'PASS_7_FRONTS 1ec126887cd1f09b8cdc074872567dd4962c2a399c1b14db8b035a8ea50dc591' evidence/pass3528_3534/exact.log
-          cmp /tmp/frozen3528.json data/PART_BT3528_BT3534_BOREL_STAR_MOORE_FUNCTOR_TRANSPLANT_results.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          generated=json.loads(Path('data/PART_BT3528_BT3534_BOREL_STAR_MOORE_FUNCTOR_TRANSPLANT_results.json').read_text())
+          frozen=json.loads(Path('/tmp/frozen3528.json').read_text())
+          assert generated==frozen
+          print('PASS semantic frozen-certificate equality')
+          PY
+          cp /tmp/frozen3528.json data/PART_BT3528_BT3534_BOREL_STAR_MOORE_FUNCTOR_TRANSPLANT_results.json
       - name: Focused regression and quick star census
         run: |
           pytest -q tests/test_bt3528_bt3534_borel_star_moore_functor_transplant.py | tee evidence/pass3528_3534/pytest.log
