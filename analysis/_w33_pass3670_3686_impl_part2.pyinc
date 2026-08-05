@@ -1,0 +1,174 @@
+    pivots=tuple(int(x) for x in prev["PIVOTS"])
+    gram=sp.Matrix(N[np.ix_(pivots,pivots)].tolist())
+    assert gram.shape==(24,24) and gram.det()!=0
+    block=gram.row_join(sp.eye(24)).col_join(sp.eye(24).row_join(sp.zeros(24)))
+    block_det=int(block.det())
+    block_even=all(int(block[i,i])%2==0 for i in range(48))
+    gram_positive=bool(np.linalg.eigvalsh(np.asarray(gram.tolist(),dtype=float)).min()>1e-7)
+    block_signature=(24,24) if gram_positive else None
+
+    p=MOD
+    X=np.asarray(prev["X"],dtype=np.int64)%p
+    row_rank,row_pivots=_rank_with_pivots(X.T,p)
+    basis_rows=tuple(row_pivots)
+    assert row_rank==24
+    left_inverse=inv_matrix_mod(X[np.array(basis_rows),:],p)
+    projector=(N%p)*pow(60,-1,p)%p
+    def ambient_to_coords(v): return left_inverse@(v[np.array(basis_rows)]%p)%p
+    triangle_pairs=[]
+    for i in range(40):
+        neigh=[j for j in range(40) if A[i,j]==1]
+        triangle_pairs.append([(j,k) for j,k in combinations(neigh,2) if A[j,k]==1])
+    assert set(map(len,triangle_pairs))=={12}
+    C0=np.zeros((24,24,24),dtype=np.int64); C1=np.zeros((24,24,24),dtype=np.int64)
+    for a in range(24):
+      xa=X[:,a]
+      for b in range(a,24):
+        xb=X[:,b]
+        z0=projector@((xa*xb)%p)%p
+        raw1=np.zeros(40,dtype=np.int64)
+        for i in range(40):
+            raw1[i]=sum(int(xa[j])*int(xb[k])+int(xa[k])*int(xb[j]) for j,k in triangle_pairs[i])%p
+        z1=projector@raw1%p
+        c0=ambient_to_coords(z0); c1=ambient_to_coords(z1)
+        C0[:,a,b]=C0[:,b,a]=c0; C1[:,a,b]=C1[:,b,a]=c1
+
+    chi24={g:sum(int(N[i,g[i]]) for i in range(40))//60 for g in GROUP}
+    char_distribution=Counter(chi24.values()); sym_inner=0; alt_inner=0
+    for g in GROUP:
+        g2=compose(g,g)
+        sym_char=(chi24[g]**2+chi24[g2])//2
+        alt_char=(chi24[g]**2-chi24[g2])//2
+        sym_inner+=chi24[g]*sym_char; alt_inner+=chi24[g]*alt_char
+    sym_multiplicity=sym_inner//group_order; alt_multiplicity=alt_inner//group_order
+    flattened=np.stack((C0.reshape(-1),C1.reshape(-1)),axis=0)
+    product_independence_rank=matrix_rank_mod(flattened,p)
+    invariant_gram=X.T@X%p
+    lowered0=np.einsum("io,iab->oab",invariant_gram,C0,optimize=True)%p
+    lowered1=np.einsum("io,iab->oab",invariant_gram,C1,optimize=True)%p
+    def fully_symmetric3(tensor):
+        return np.array_equal(tensor,tensor.transpose(1,0,2)) and np.array_equal(tensor,tensor.transpose(2,1,0))
+    frobenius_checks=[fully_symmetric3(lowered0),fully_symmetric3(lowered1)]
+
+    polynomials=set()
+    for a in range(24):
+      for b in range(24):
+       for c in range(24):
+        left00=C0[:,:,c]@C0[:,a,b]%p; right00=C0[:,a,:]@C0[:,b,c]%p
+        left11=C1[:,:,c]@C1[:,a,b]%p; right11=C1[:,a,:]@C1[:,b,c]%p
+        left01=(C0[:,:,c]@C1[:,a,b]+C1[:,:,c]@C0[:,a,b])%p
+        right01=(C0[:,a,:]@C1[:,b,c]+C1[:,a,:]@C0[:,b,c])%p
+        for o in range(24):
+            coeff=(int((left00[o]-right00[o])%p),int((left01[o]-right01[o])%p),int((left11[o]-right11[o])%p))
+            if coeff!=(0,0,0): polynomials.add(coeff)
+    t=sp.symbols("t"); gcd_poly=None
+    for coeff in polynomials:
+        poly=sp.Poly(coeff[0]*t**2+coeff[1]*t+coeff[2],t,modulus=p)
+        gcd_poly=poly if gcd_poly is None else sp.gcd(gcd_poly,poly)
+        if gcd_poly.degree()==0: break
+    pure_c0_nonassoc=any(c[0]!=0 for c in polynomials); pure_c1_nonassoc=any(c[2]!=0 for c in polynomials)
+    def signed(x):
+        x%=p
+        return x if x<=p//2 else x-p
+    signed_polys=sorted((sum(abs(signed(c)) for c in coeff),tuple(signed(c) for c in coeff)) for coeff in polynomials)
+    witness_pair=None; candidates=[coeff for _,coeff in signed_polys[:300]]
+    for i,fcoeff in enumerate(candidates):
+      f=sp.Poly(fcoeff[0]*t**2+fcoeff[1]*t+fcoeff[2],t,modulus=p)
+      for gcoeff in candidates[i+1:]:
+        q=sp.Poly(gcoeff[0]*t**2+gcoeff[1]*t+gcoeff[2],t,modulus=p)
+        if sp.gcd(f,q).degree()==0: witness_pair=(fcoeff,gcoeff); break
+      if witness_pair is not None: break
+    assert witness_pair is not None
+
+    eta_channels=[prime_eta_channels(prime,8) for prime in (2,3,5)]
+    expected_A={2:[0,4372,96256,1240002,10698752,74428120],3:[0,783,8672,65367,371520,1741655],5:[0,134,760,3345,12256,39350]}
+    expected_B={2:[0,276,-2048,11202,-49152,184024],3:[0,54,-76,-243,1188,-1384],5:[0,9,10,-30,6,-25]}
+    eta_match=all(row["class_A_coefficients_q0_through_qn"][:6]==expected_A[row["prime"]] and row["class_B_coefficients_q0_through_qn"][:6]==expected_B[row["prime"]] for row in eta_channels)
+
+    I40=np.eye(40,dtype=np.int64)
+    w33_15_numerator=(A-12*I40)@(A-2*I40)
+    chamber_15_numerator=(adjacency-15*I36)@(adjacency+3*I36)
+    moves40=G4+[inverse(g) for g in G4]; moves36=chamber_generators+[inverse(g) for g in chamber_generators]
+    action_map={identity40:tuple(range(36))}; queue=deque([identity40])
+    while queue:
+        h=queue.popleft(); ah=action_map[h]
+        for g,ag in zip(moves40,moves36):
+            x=compose(g,h)
+            if x not in action_map: action_map[x]=compose(ag,ah); queue.append(x)
+    assert len(action_map)==25920
+    def projected_trace(numerator,denominator,g):
+        total=sum(int(numerator[i,g[i]]) for i in range(len(g)))
+        assert total%denominator==0
+        return total//denominator
+    hom15=0; norm_w15=0; norm_c15=0; character_pair_census=Counter()
+    for g,cg in action_map.items():
+        cw=projected_trace(w33_15_numerator,96,g); cc=projected_trace(chamber_15_numerator,-72,cg)
+        hom15+=cw*cc; norm_w15+=cw*cw; norm_c15+=cc*cc; character_pair_census[(cw,cc)]+=1
+    hom15//=group_order; norm_w15//=group_order; norm_c15//=group_order
+
+    checks={
+      "chamber_intersections_270_360":intersection_census==Counter({12:270,18:360}),
+      "chamber_srg_36_15_6_6":srg_12_identity,
+      "chamber_complement_srg_36_20_10_12":srg_18_identity,
+      "chamber_action_order_25920":len(chamber_group)==25920,
+      "chamber_suborbits_1_15_20":chamber_suborbits==[1,15,20],
+      "k4_count_135":len(k4s)==135,
+      "k4s_maximal_and_transitive":k4_maximal and len(k4_orbit)==135,
+      "k4_incidence_540":set(k4_degrees.values())=={15} and sum(k4_degrees.values())==540,
+      "k4_stabilizer_order_192":len(k4_stabilizer)==192,
+      "k4_stabilizer_center_2":len(k4_center)==2,
+      "quotient_order_96":len(quotient_cosets)==96,
+      "quotient_tomotope_census":q_census==tomotope_census==Counter({1:1,2:27,3:32,4:36}),
+      "marked_tomotope_isomorphism":marked_isomorphism,
+      "central_lift_non_split":central_lift_non_split,
+      "parabolics_order_648":all(len(h)==648 for h in parabolics),
+      "parabolic_pair_intersections":pair_intersections==Counter({24:5,54:1}),
+      "parabolic_triple_intersections_3":triple_intersections==[3,3,3,3],
+      "parabolic_core_trivial":len(core)==1,
+      "parabolic_panel_thickness_3":panel_thicknesses==[3,3,3,3] and panel_cyclic_order3,
+      "fixed_point_adjacency_one_of_six":sum(fixed_point_adjacencies.values())==1,
+      "nonscalar_glue_even_unimodular":block_det==1 and block_even,
+      "nonscalar_glue_signature_24_24":block_signature==(24,24),
+      "equivariant_symmetric_product_multiplicity_2":sym_multiplicity==2,
+      "equivariant_alternating_product_multiplicity_1":alt_multiplicity==1,
+      "two_products_span_symmetric_envelope":product_independence_rank==2,
+      "both_products_frobenius":frobenius_checks==[True,True],
+      "associative_product_no_go_mod_prime":gcd_poly is not None and gcd_poly.degree()==0 and pure_c0_nonassoc and pure_c1_nonassoc,
+      "prime_eta_A_B_channels_match":eta_match,
+      "spectral_15s_irreducible":norm_w15==norm_c15==1,
+      "spectral_15s_inequivalent":hom15==0,
+    }
+    assert all(checks.values()),[k for k,v in checks.items() if not v]
+
+    result={
+      "schema":"w33.pass3670_3686.monster_tomotope_amalgamation.v1",
+      "status":"PASS_EXACT_NINE_FRONT_SOURCE",
+      "checks":checks,
+      "monster_embedding_front":{
+        "abstract_target":{"group_order":25920,"generator_orders":[3,3,3,3],"pair_product_orders":{str(k):int(v) for k,v in prev["PAIR_ORDERS"].items()},"triple_closure_orders":[648,648,648,648],"full_closure_order":25920},
+        "a5_search_refinement":"The complete abstract A5 census has 1296 D10-sharing pairs and every such pair closes at A6, so a Monster search must add chamber/normalizer data or use the four-parabolic target.",
+        "status":"ABSTRACT_SIGNATURE_EXACT_MMgroup_WORDS_PENDING"},
+      "chamber_association_scheme":{"objects":36,"intersection_census":dict(sorted(intersection_census.items())),"relation_12_srg":{"parameters":[36,15,6,6],"spectrum":{"15":1,"3":15,"-3":20}},"relation_18_srg":{"parameters":[36,20,10,12],"spectrum":{"20":1,"2":20,"-4":15}},"u42_suborbits":chamber_suborbits},
+      "tomotope_central_lift":{"maximal_K4s":len(k4s),"chamber_K4_incidences":sum(k4_degrees.values()),"K4_stabilizer_order":len(k4_stabilizer),"K4_stabilizer_order_census":dict(sorted(k4_stabilizer_census.items())),"center_order":len(k4_center),"central_quotient_order":len(quotient_cosets),"central_quotient_order_census":dict(sorted(q_census.items())),"tomotope_order_census":dict(sorted(tomotope_census.items())),"tomotope_pair_orders":tomotope_pair_orders,"marked_generator_isomorphism":marked_isomorphism,"split_C2_times_AutT_census":dict(sorted(split_census.items())),"non_split":central_lift_non_split,"interpretation":"Each of 135 chamber K4s has a non-split central order-192 stabilizer whose marked central quotient is Aut(tomotope). This is distinct from both the tomotope's 192 flags and the split order-192 universal group."},
+      "thick_parabolic_amalgam":{"parabolic_orders":[len(h) for h in parabolics],"fixed_point_indices":fixed_point_indices,"fixed_point_adjacencies":fixed_point_adjacencies,"pair_intersection_census":dict(sorted(pair_intersections.items())),"triple_intersection_orders":triple_intersections,"core_order":len(core),"cosets_per_type":[group_order//len(h) for h in parabolics],"chambers":group_order//len(core),"panel_thicknesses":panel_thicknesses,"exchange_group":"C3 on every panel","polytope_verdict":"FAILS the abstract-polytope diamond condition: every panel has three chambers, so natural exchange moves are ternary rotations rather than involutions."},
+      "nonscalar_discriminant_glue":{"input_rank":24,"coupled_gram":"[[G,I],[I,0]]","rank":48,"determinant":block_det,"even":block_even,"signature":list(block_signature),"genus":"II_{24,24}","positive_definite_Leech_verdict":"NOT OBTAINED","interpretation":"Coupling L with its sign-reversed discriminant form cancels every local discriminant obstruction exactly, but necessarily yields an indefinite even-unimodular lattice."},
+      "equivariant_product_envelope":{"rank24_character_distribution":dict(sorted(char_distribution.items())),"Hom_Sym2V_to_V_dimension":sym_multiplicity,"Hom_wedge2V_to_V_dimension":alt_multiplicity,"explicit_commutative_products":["projected coordinatewise product","projected W33 triangle-neighbour product"],"explicit_product_span_rank":product_independence_rank,"frobenius_products":frobenius_checks,"associativity_modulus":p,"associator_polynomials_nonzero":len(polynomials),"associator_gcd_degree":gcd_poly.degree(),"small_coprime_witness_pair":[list(witness_pair[0]),list(witness_pair[1])],"associative_nonzero_product":"IMPOSSIBLE over Q (already impossible modulo 1000003)","boundary":"This is the full U4(2)-equivariant commutative Frobenius envelope, not a proved Griess or VOA product."},
+      "prime_mckay_thompson_channels":{"internal_primes_of_U42":[2,3,5],"eta_channels":eta_channels,"formula_B":"T_pB=(eta(tau)/eta(p tau))^(24/(p-1))+24/(p-1)","formula_A":"T_pA=T_pB+p^(12/(p-1))*(eta(p tau)/eta(tau))^(24/(p-1))","interpretation":"The exact prime support of U4(2) selects the 2A/2B, 3A/3B, and 5A/5B Thompson channels. This upgrades the scalar J+24 completion to six class-dependent eta channels without claiming a Monster module."},
+      "spectral_doppelganger_firewall":{"w33_shared_dimension":15,"w33_eigenvalue":-4,"chamber_complement_eigenvalue":-4,"w33_character_norm":norm_w15,"chamber_character_norm":norm_c15,"character_inner_product":hom15,"character_pair_census":{f"{a},{b}":count for (a,b),count in sorted(character_pair_census.items())},"verdict":"The two -4 eigenspaces are irreducible but inequivalent U4(2) modules. Equal dimension and eigenvalue do not supply an intertwiner."},
+      "evidence_boundary":{"proved_here":["rank-3 36-chamber association scheme","complete 135-K4 census","non-split central order-192 tomotope lift with marked quotient isomorphism","four-parabolic panel-thickness-three obstruction","canonical II_24,24 non-scalar glue","full two-dimensional equivariant commutative Frobenius envelope","nonzero associative-product no-go modulo a prime","exact 2/3/5 A/B eta channels","inequivalence of the two spectral 15-dimensional modules"],"not_proved_here":["serialized Monster words generating U4(2)","observed Monster character restriction multiplicity","positive-definite Leech realization","Griess or VOA multiplication","regular universal-polytope cover of the thick chamber system","laboratory or physical mechanism"]}
+    }
+    semantic=json.dumps(result,sort_keys=True,separators=(",",":")).encode()
+    result["semantic_sha256"]=sha256(semantic).hexdigest()
+    return result
+
+
+def main():
+    previous=runpy.run_path(str(PREVIOUS))
+    result=build(previous)
+    OUTPUT.parent.mkdir(parents=True,exist_ok=True)
+    OUTPUT.write_text(json.dumps(result,indent=2)+"\n",encoding="utf-8")
+    print("PASS_3670_3686",result["semantic_sha256"])
+    print(json.dumps(result,indent=2))
+
+
+if __name__=="__main__": main()
