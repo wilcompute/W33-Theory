@@ -1,0 +1,108 @@
+{
+  "schema": "w33.pass3670_3686.claims_ledger.v1",
+  "semantic_certificate": "2d5fe418bb2bbee0eb479e42d22dd47d31c37f7d5f8be6b1732acf0dc1db8b78",
+  "proved_exactly": [
+    {
+      "claim": "The 36 A6 chambers carry the two complementary rank-three relations SRG(36,15,6,6) and SRG(36,20,10,12).",
+      "artifact": "data/PART_3670_3686_MONSTER_TOMOTOPE_AMALGAMATION_results.json",
+      "prior_art": "The SRGs and canonical chamber-spread bridge were independently established immediately before this packet in Passes 3663-3669; they are retained here as the carrier for the new K4 and spectral computations."
+    },
+    {
+      "claim": "The valency-15 chamber graph has exactly 135 maximal K4s, is transitive on them, and has 540 chamber-K4 incidences.",
+      "artifact": "analysis/w33_pass3670_3686_monster_tomotope_amalgamation.py"
+    },
+    {
+      "claim": "A K4 stabilizer has order 192 and center order 2; its central quotient is explicitly isomorphic as a marked four-generator group to Aut(tomotope), order 96.",
+      "artifact": "analysis/w33_pass3670_3686_monster_tomotope_amalgamation.py"
+    },
+    {
+      "claim": "The order-192 K4 stabilizer is not C2 x Aut(tomotope), as shown by the unequal element-order censuses.",
+      "artifact": "data/PART_3670_3686_MONSTER_TOMOTOPE_AMALGAMATION_results.json"
+    },
+    {
+      "claim": "The four order-648 parabolics have pair intersections 24^5 and 54^1, all triple intersections order 3, trivial total core, and panel thickness 3.",
+      "artifact": "analysis/w33_pass3670_3686_monster_tomotope_amalgamation.py"
+    },
+    {
+      "claim": "The natural four-parabolic coset geometry is not an abstract polytope because its rank-one residues have three chambers rather than two; its panel moves are C3 rotations rather than exchange involutions.",
+      "artifact": "data/PART_3670_3686_MONSTER_TOMOTOPE_AMALGAMATION_results.json"
+    },
+    {
+      "claim": "For any nonsingular integral rank-24 Gram matrix G, the block form [[G,I],[I,0]] is even unimodular of determinant 1; for the positive W33 projector Gram it has signature (24,24), hence realizes II_24,24.",
+      "artifact": "analysis/w33_pass3670_3686_monster_tomotope_amalgamation.py"
+    },
+    {
+      "claim": "The rank-24 U4(2) module has dim Hom_G(Sym^2 V,V)=2 and dim Hom_G(wedge^2 V,V)=1.",
+      "artifact": "data/PART_3670_3686_MONSTER_TOMOTOPE_AMALGAMATION_results.json"
+    },
+    {
+      "claim": "Projected coordinatewise multiplication and projected triangle-neighbour multiplication are independent, Frobenius, and span the complete U4(2)-equivariant commutative product space.",
+      "artifact": "analysis/w33_pass3670_3686_monster_tomotope_amalgamation.py"
+    },
+    {
+      "claim": "No nonzero product in that two-dimensional commutative envelope is associative over Q; a coprime associator pair already proves this modulo 1000003.",
+      "artifact": "data/PART_3670_3686_MONSTER_TOMOTOPE_AMALGAMATION_results.json"
+    },
+    {
+      "claim": "The eta-quotient formulas reproduce the first coefficients of the 2A/2B, 3A/3B, and 5A/5B McKay-Thompson channels exactly.",
+      "artifact": "analysis/w33_pass3670_3686_monster_tomotope_amalgamation.py"
+    },
+    {
+      "claim": "The W33 -4 eigenspace and the chamber-complement -4 eigenspace are both irreducible 15-dimensional U4(2) modules but have character inner product zero, so they are inequivalent.",
+      "artifact": "data/PART_3670_3686_MONSTER_TOMOTOPE_AMALGAMATION_results.json"
+    }
+  ],
+  "documented_external_facts": [
+    {
+      "claim": "The ATLAS degree-36 U4(2) action is primitive rank 3 with suborbits 1,15,20 and point stabilizer S6.",
+      "source": "ATLAS of Finite Group Representations, U4(2) permutation representation on 36 points"
+    },
+    {
+      "claim": "The tomotope has automorphism group order 96, f-vector 4,12,16,8, the four recorded edge permutations, and monodromy order 18432 failing the intersection property.",
+      "source": "Monson, Pellicer, Williams, The tomotope"
+    },
+    {
+      "claim": "Hartley's classification has seventeen universal rank-4 locally projective polytopes and 441 quotients.",
+      "source": "Hartley, The Classification of Rank 4 Locally Projective Polytopes and Their Quotients"
+    },
+    {
+      "claim": "Holmes and Wilson classify 5B-containing Monster subgroups including U4(2) by examining pairs of A5 subgroups intersecting in D10.",
+      "source": "Holmes and Wilson, On subgroups of the Monster containing A5's"
+    }
+  ],
+  "pending_or_blocked": [
+    {
+      "claim": "A concrete U4(2) subgroup inside the Monster with the four-parabolic signature.",
+      "status": "PENDING",
+      "gate": "Populate data/PART_3670_3686_MMgroup_four_parabolic_candidate.json with four version-stable MM words or integers and an independently hashed class-fusion artifact."
+    },
+    {
+      "claim": "A unique Monster class fusion or observed multiplicity of the U4(2) degree-81 constituent in the 196883 restriction.",
+      "status": "PENDING_GAP_ARTIFACT"
+    },
+    {
+      "claim": "A positive-definite Leech lattice obtained from the W33 projector lattice.",
+      "status": "NOT_PROVED",
+      "boundary": "The exact nonscalar coupling lands in the indefinite even-unimodular genus II_24,24."
+    },
+    {
+      "claim": "A Griess, Majorana, axial, or VOA multiplication law on the rank-24 carrier.",
+      "status": "NOT_PROVED",
+      "boundary": "The full equivariant commutative Frobenius envelope is classified, but every nonzero product in it is nonassociative and no Monster fusion law has been imposed."
+    },
+    {
+      "claim": "A regular universal abstract polytope whose chamber system is the four-parabolic geometry.",
+      "status": "EXACTLY_BLOCKED_AT_DIAMOND_CONDITION",
+      "boundary": "The natural panels have thickness three. A regular cover would require an added binary sheet or a different incidence functor."
+    },
+    {
+      "claim": "An isomorphism between the two 15-dimensional -4 spectral sectors.",
+      "status": "EXACTLY_FALSE",
+      "boundary": "Their irreducible characters are orthogonal."
+    },
+    {
+      "claim": "Remote CI, manuscript PDF, hardware, laboratory, or physical evidence.",
+      "status": "UNOBSERVED"
+    }
+  ]
+}
