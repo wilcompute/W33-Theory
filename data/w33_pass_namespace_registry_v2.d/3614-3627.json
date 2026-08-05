@@ -1,0 +1,11 @@
+{
+  "schema": "w33.pass_namespace_registry.v2",
+  "range": [3614, 3627],
+  "owner": "openai-gpt-5.6-thinking",
+  "branch": "master",
+  "status": "source_complete_pending_remote_gap_mmgroup_evidence",
+  "semantic_sha256": "603f4473f242d80a7d6cbcbb52646bed3d46cb41bcaef601fbdc788da76e4bb6",
+  "purpose": "Execute the Monster U4(2) embedding/restriction/Majorana/3-local program, integrate the evidence firewall, and test two outside-the-box Leech and raw-moonshine constructions with exact falsifiers.",
+  "coordination": "Allocated after the concurrent Passes 3600-3613 packet merged. Preserve that packet and append this Monster program to the shared frontier.",
+  "claim_boundary": "No concrete mmgroup embedding, unique class fusion, Steinberg multiplicity, Griess/VOA map, Leech embedding, or physical interpretation is promoted without the corresponding generated certificate."
+}
