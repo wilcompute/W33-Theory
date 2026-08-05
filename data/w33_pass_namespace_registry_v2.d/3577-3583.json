@@ -1,0 +1,10 @@
+{
+  "schema": "w33.pass_namespace_registry.v2",
+  "range": [3577, 3583],
+  "owner": "openai-gpt-5.6-thinking",
+  "branch": "agent/pass3577-3583-envelope-affine-hinge-falsifier",
+  "purpose": "Exhaust the affine automorphism group of the 22-state nonlinear controller envelope, falsify an affine D10 identification with the 22-dimensional stable bridge, and identify the unique fixed forbidden vector as the controller-invariant distance-three folded-cube hinge.",
+  "base": "2adc291ac4297da3edcd36fba0e156d7865eb61f",
+  "coordination": "Continues Passes 3570-3576. Uses the exact 22-state set published in the self-protecting envelope RTL and the previously proved invariant kernel <00111>.",
+  "claim_boundary": "The affine no-go does not exclude non-affine or externally decorated correspondences. The semidirect-product action is certified abstractly without assigning a physical gauge interpretation."
+}
