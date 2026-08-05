@@ -1,0 +1,252 @@
+from __future__ import annotations
+
+from collections import Counter, defaultdict, deque
+from hashlib import sha256
+from itertools import combinations, product
+from math import comb, lcm
+import json
+from pathlib import Path
+from typing import Iterable
+
+import numpy as np
+import sympy as sp
+from sympy.matrices.normalforms import smith_normal_form
+from sympy.polys.domains import ZZ
+
+P = 3
+MOD = 1_000_003
+J4 = np.array([
+    [0, 0, 1, 0],
+    [0, 0, 0, 1],
+    [-1, 0, 0, 0],
+    [0, -1, 0, 0],
+], dtype=np.int64) % P
+
+GENERATOR_VECTORS = (
+    (1, 1, 0, 1),
+    (0, 1, 2, 2),
+    (1, 2, 2, 2),
+    (1, 2, 1, 2),
+)
+
+COMPRESSED_WORDS = ("CDaCBac", "BDaCbC")
+A5_REPRESENTATIVE_WORDS = (("aDbaDaca", "ACDAdc"), ("aDbaDaca", "bDaDbDa"))
+JPLUS24 = (1, 24, 196_884, 21_493_760, 864_299_970, 20_245_856_256)
+
+
+def canonical(v: Iterable[int]) -> tuple[int, ...]:
+    a = np.array(tuple(v), dtype=np.int64) % P
+    for x in a:
+        if int(x) % P:
+            inv = pow(int(x), -1, P)
+            return tuple(int(y) for y in (a * inv) % P)
+    raise ValueError("zero vector")
+
+
+POINTS = sorted({canonical(v) for v in product(range(P), repeat=4) if any(v)})
+POINT_INDEX = {v: i for i, v in enumerate(POINTS)}
+IDENTITY = tuple(range(len(POINTS)))
+
+
+def symplectic(x: Iterable[int], y: Iterable[int]) -> int:
+    return int((np.array(tuple(x), dtype=np.int64) @ J4 @ np.array(tuple(y), dtype=np.int64)) % P)
+
+
+def transvection(v: Iterable[int]) -> tuple[int, ...]:
+    vv = np.array(tuple(v), dtype=np.int64) % P
+    out = []
+    for x in POINTS:
+        xx = np.array(x, dtype=np.int64)
+        yy = (xx + symplectic(x, vv) * vv) % P
+        out.append(POINT_INDEX[canonical(yy)])
+    return tuple(out)
+
+
+def compose(a: tuple[int, ...], b: tuple[int, ...]) -> tuple[int, ...]:
+    return tuple(a[b[i]] for i in range(len(a)))
+
+
+def inverse(a: tuple[int, ...]) -> tuple[int, ...]:
+    out = [0] * len(a)
+    for i, j in enumerate(a):
+        out[j] = i
+    return tuple(out)
+
+
+def closure(generators: Iterable[tuple[int, ...]], cap: int | None = None) -> frozenset[tuple[int, ...]]:
+    gens = list(generators)
+    moves = list(dict.fromkeys(gens + [inverse(g) for g in gens]))
+    seen = {IDENTITY}
+    queue = deque([IDENTITY])
+    while queue:
+        h = queue.popleft()
+        for g in moves:
+            x = compose(g, h)
+            if x not in seen:
+                seen.add(x)
+                queue.append(x)
+                if cap is not None and len(seen) > cap:
+                    return frozenset(seen)
+    return frozenset(seen)
+
+
+def permutation_order(g: tuple[int, ...]) -> int:
+    seen = [False] * len(g)
+    answer = 1
+    for i in range(len(g)):
+        if seen[i]:
+            continue
+        j = i
+        cycle = 0
+        while not seen[j]:
+            seen[j] = True
+            j = g[j]
+            cycle += 1
+        answer = lcm(answer, cycle)
+    return answer
+
+
+def conjugate(g: tuple[int, ...], h: tuple[int, ...]) -> tuple[int, ...]:
+    return compose(compose(g, h), inverse(g))
+
+
+def common_fixed(generators: Iterable[tuple[int, ...]]) -> list[int]:
+    gens = list(generators)
+    return [i for i in range(len(POINTS)) if all(g[i] == i for g in gens)]
+
+
+def rank_pivots_mod(matrix: np.ndarray, prime: int = MOD) -> tuple[int, list[int]]:
+    a = np.array(matrix, dtype=np.int64) % prime
+    rows, cols = a.shape
+    rank = 0
+    pivots: list[int] = []
+    for col in range(cols):
+        nz = np.flatnonzero(a[rank:, col])
+        if len(nz) == 0:
+            continue
+        pivot = rank + int(nz[0])
+        if pivot != rank:
+            a[[rank, pivot]] = a[[pivot, rank]]
+        inv = pow(int(a[rank, col]), -1, prime)
+        a[rank] = (a[rank] * inv) % prime
+        for row in np.flatnonzero(a[:, col]):
+            if row != rank:
+                a[row] = (a[row] - a[row, col] * a[rank]) % prime
+        pivots.append(col)
+        rank += 1
+        if rank == rows:
+            break
+    return rank, pivots
+
+
+def convolution(a: list[int], b: list[int], n: int) -> list[int]:
+    out = [0] * (n + 1)
+    for i, x in enumerate(a[: n + 1]):
+        if x == 0:
+            continue
+        for j, y in enumerate(b[: n + 1 - i]):
+            if y:
+                out[i + j] += x * y
+    return out
+
+
+A = np.array([
+    [int(i != j and symplectic(x, y) == 0) for j, y in enumerate(POINTS)]
+    for i, x in enumerate(POINTS)
+], dtype=np.int64)
+I40 = np.eye(40, dtype=np.int64)
+J40 = np.ones((40, 40), dtype=np.int64)
+A2 = A @ A
+SRG_TARGET = 8 * I40 - 2 * A + 4 * J40
+N = (12 * I40 - A) @ (A + 4 * I40)
+N2 = N @ N
+
+G4 = [transvection(v) for v in GENERATOR_VECTORS]
+GROUP = closure(G4)
+WORD_MOVES = {"a": G4[0], "b": G4[1], "c": G4[2], "d": G4[3],
+              "A": inverse(G4[0]), "B": inverse(G4[1]), "C": inverse(G4[2]), "D": inverse(G4[3])}
+
+def evaluate_word(word: str) -> tuple[int, ...]:
+    h = IDENTITY
+    for symbol in reversed(word):
+        h = compose(WORD_MOVES[symbol], h)
+    return h
+
+COMPRESSED_INVOLUTION, COMPRESSED_ORDER5 = map(evaluate_word, COMPRESSED_WORDS)
+ORDER_CLASSES: dict[int, list[tuple[int, ...]]] = defaultdict(list)
+for g in GROUP:
+    ORDER_CLASSES[permutation_order(g)].append(g)
+ORDER_CENSUS = {str(k): len(v) for k, v in sorted(ORDER_CLASSES.items())}
+
+PAIR_ORDERS = {
+    f"{i}{j}": permutation_order(compose(G4[i], G4[j]))
+    for i, j in combinations(range(4), 2)
+}
+TRIPLE_DATA = {}
+for triple in combinations(range(4), 3):
+    subgroup = closure(G4[i] for i in triple)
+    fixed = common_fixed(G4[i] for i in triple)
+    TRIPLE_DATA["".join(map(str, triple))] = {
+        "order": len(subgroup),
+        "fixed_point_indices": fixed,
+        "fixed_points": [POINTS[i] for i in fixed],
+    }
+
+COMPRESSED_GROUP = closure([COMPRESSED_INVOLUTION, COMPRESSED_ORDER5])
+
+A5_REPRESENTATIVE_GENERATORS = tuple(tuple(evaluate_word(w) for w in pair) for pair in A5_REPRESENTATIVE_WORDS)
+A5_REP_1 = closure(A5_REPRESENTATIVE_GENERATORS[0])
+A5_REP_2 = closure(A5_REPRESENTATIVE_GENERATORS[1])
+assert len(A5_REP_1) == len(A5_REP_2) == 60
+A5_ORBIT_1 = {
+    frozenset(conjugate(g, h) for h in A5_REP_1)
+    for g in GROUP
+}
+A5_ORBIT_2 = {
+    frozenset(conjugate(g, h) for h in A5_REP_2)
+    for g in GROUP
+}
+A5S = sorted(A5_ORBIT_1 | A5_ORBIT_2, key=lambda h: tuple(sorted(h)))
+A5_CLASS = {h: (1 if h in A5_ORBIT_1 else 2) for h in A5S}
+
+A5_PRESENTATION_PAIRS_INTERNAL = 0
+for h in A5S:
+    h2 = [x for x in h if permutation_order(x) == 2]
+    h3 = [x for x in h if permutation_order(x) == 3]
+    A5_PRESENTATION_PAIRS_INTERNAL += sum(
+        permutation_order(compose(a, b)) == 5 for a in h2 for b in h3
+    )
+A5_PRESENTATION_PAIRS_GLOBAL = sum(
+    permutation_order(compose(a, b)) == 5
+    for a in ORDER_CLASSES[2]
+    for b in ORDER_CLASSES[3]
+)
+
+D10_EDGES: list[tuple[int, int]] = []
+A5_ADJ = [set() for _ in A5S]
+for i, h in enumerate(A5S):
+    for j in range(i + 1, len(A5S)):
+        if len(h.intersection(A5S[j])) == 10:
+            D10_EDGES.append((i, j))
+            A5_ADJ[i].add(j)
+            A5_ADJ[j].add(i)
+
+components: list[list[int]] = []
+seen_vertices: set[int] = set()
+for root in range(len(A5S)):
+    if root in seen_vertices:
+        continue
+    stack = [root]
+    seen_vertices.add(root)
+    component: list[int] = []
+    while stack:
+        u = stack.pop()
+        component.append(u)
+        for v in A5_ADJ[u]:
+            if v not in seen_vertices:
+                seen_vertices.add(v)
+                stack.append(v)
+    components.append(component)
+
+
+def first_a5_generators(h: frozenset[tuple[int, ...]]) -> tuple[tuple[int, ...], tuple[int, ...]]:
