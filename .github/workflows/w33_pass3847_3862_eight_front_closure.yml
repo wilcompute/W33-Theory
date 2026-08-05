@@ -1,0 +1,69 @@
+name: Passes 3847-3862 Eight Front Closure
+on:
+  pull_request:
+    paths:
+      - 'analysis/bt3847_3862_eight_front_closure.py'
+      - 'analysis/BT3847_BT3862_eight_front_closure.md'
+      - 'analysis/BT3847_BT3862_eight_front_closure_insert.tex'
+      - 'data/PART_BT3847_BT3862_EIGHT_FRONT_CLOSURE_results.json'
+      - 'data/PART_BT3847_BT3862_TOP115_CYCLIC_SEEDS.json'
+      - 'data/BT3847_BT3862_CLAIMS_LEDGER.json'
+      - 'tools/check_website_migration_authorization.py'
+      - 'tests/test_bt3847_3862_eight_front_closure.py'
+      - 'tests/test_website_migration_authorization.py'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - 'docs/cap-tomotope-modular-gewirtz-atlas-3847-3862.html'
+      - '.github/workflows/w33_pass3847_3862_eight_front_closure.yml'
+  workflow_dispatch:
+
+jobs:
+  exact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install numpy sympy networkx pytest
+      - name: Regenerate exact certificate
+        run: |
+          python analysis/bt3847_3862_eight_front_closure.py \
+            --seeds data/PART_BT3847_BT3862_TOP115_CYCLIC_SEEDS.json \
+            --repository-root . \
+            --website-blob "$(git hash-object docs/index.html)" \
+            --json /tmp/PART_BT3847_BT3862_EIGHT_FRONT_CLOSURE_results.json
+          cmp /tmp/PART_BT3847_BT3862_EIGHT_FRONT_CLOSURE_results.json \
+              data/PART_BT3847_BT3862_EIGHT_FRONT_CLOSURE_results.json
+      - name: Focused regression
+        run: pytest -q tests/test_bt3847_3862_eight_front_closure.py tests/test_website_migration_authorization.py
+      - name: Enforce authoritative website lock
+        run: python tools/check_website_migration_authorization.py --repository-root .
+      - name: Check source reachability and boundaries
+        run: |
+          grep -F 'BT3847_BT3862_eight_front_closure_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          grep -F 'passes-3847-3862-cap-tomotope-modular-gewirtz' data/w33_current_frontier_manifest_v1.json
+          grep -F 'f764ac9ada894f4b076c9f2b0b09ea0466337de82bb30836cee76b0c5b5cc2e2' docs/cap-tomotope-modular-gewirtz-atlas-3847-3862.html
+          grep -F '389' data/PART_BT3847_BT3862_EIGHT_FRONT_CLOSURE_results.json
+          grep -F '435' data/PART_BT3847_BT3862_EIGHT_FRONT_CLOSURE_results.json
+
+  manuscripts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: wtfjoke/setup-tectonic@v3
+      - name: Compile canonical manuscripts
+        run: |
+          tectonic w33_paper.tex
+          tectonic photonic_holonet.tex
+          tectonic holonet_machine_blueprint.tex
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3847-3862-canonical-pdfs
+          path: |
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
