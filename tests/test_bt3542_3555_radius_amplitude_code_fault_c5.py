@@ -1,4 +1,4 @@
-import json,sys
+import base64,json,sys,zlib
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
@@ -11,7 +11,10 @@ def generated():
     return CACHE
 
 def frozen():
-    return json.loads((ROOT/'data/PART_BT3542_BT3555_RADIUS_AMPLITUDE_CODE_FAULT_C5_results.json').read_text())
+    path=ROOT/'data/PART_BT3542_BT3555_RADIUS_AMPLITUDE_CODE_FAULT_C5_results.json'
+    if path.exists():return json.loads(path.read_text())
+    parts=sorted((ROOT/'bootstrap/pass3542_3555').glob('results.*.zlib.b64'))
+    return json.loads(zlib.decompress(base64.b64decode(''.join(p.read_text().strip() for p in parts))))
 
 def test_exact_packet_matches_frozen_certificate():
     data=generated();saved=frozen()
