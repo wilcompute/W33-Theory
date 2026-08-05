@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Exact descendant chains, Moore-57 permutation CSP, scheme blindness, spectral transplantation, and permutation curvature in W33 Theory.">
+  <title>Seven-Graph CSP and Scheme Atlas — W33 Theory</title>
+  <style>
+    :root{--bg:#0e0d0b;--surface:#171511;--surface2:#1d1a15;--border:#302b22;--text:#eee8db;--muted:#aaa194;--gold:#e8af34;--teal:#58a6aa;--red:#e87979;--violet:#b58cff}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:var(--gold)}code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}.wrap{max-width:1140px;margin:auto;padding:28px 22px 64px}.nav{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:44px}.pill{border:1px solid var(--border);border-radius:999px;padding:7px 12px;text-decoration:none;color:var(--text)}h1{font-size:clamp(40px,7vw,76px);line-height:1;margin:0 0 18px;letter-spacing:-.04em}h2{font-size:clamp(27px,4vw,42px);margin:54px 0 18px}.lead{font-size:clamp(18px,2.2vw,24px);color:var(--muted);max-width:920px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:linear-gradient(145deg,var(--surface),var(--surface2));border:1px solid var(--border);border-radius:18px;padding:22px}.metric{font:750 27px/1.15 ui-monospace,monospace;color:var(--teal);margin:8px 0 12px}.boundary{border-left:4px solid var(--red)}.bonkers{border-left:4px solid var(--violet)}.formula{overflow:auto;padding:18px;background:#111;border-radius:12px;font:700 18px/1.6 ui-monospace,monospace;color:var(--teal)}table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--border)}th,td{padding:12px;text-align:left;border-bottom:1px solid var(--border)}th{color:var(--gold)}footer{margin-top:56px;color:var(--muted);border-top:1px solid var(--border);padding-top:20px}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav"><a class="pill" href="index.html">Home</a><a class="pill" href="triangle-free-srg-m57.html">57 atlas</a><a class="pill" href="atlas.html">Visual atlas</a><a class="pill" href="https://github.com/wilcompute/W33-Theory">Repository</a></nav>
+  <main>
+    <p class="mono" style="color:var(--gold)">PASSES 3506–3512 · EXACT SEVEN-FRONT PACKET</p>
+    <h1>The 57-hole is scheme-blind—and Moore matchings carry curvature.</h1>
+    <p class="lead">A gauge-reduced Moore-57 solver surface, literal Golay/Witt descendant chains, a complete Krein audit, a W33–Gewirtz polynomial compiler, and two deliberately high-risk but exact experiments.</p>
+
+    <h2>Moore-57 permutation CSP</h2>
+    <section class="grid">
+      <article class="card"><div class="metric">86,240</div><p>Independent entries in the 1,540 row-pair permutations of the 56×56 residual grid.</p></article>
+      <article class="card"><div class="metric">172,480</div><p>Directed CP-SAT integer variables with inverse channels, versus 4,743,200 one-hot Boolean variables.</p></article>
+      <article class="card"><div class="metric">6,271</div><p>Base permutation, inverse, vertex-star, and gauge constraints before lazy curvature cuts.</p></article>
+      <article class="card"><div class="metric">27,720</div><p>Row triangles inspected for fixed points of non-Abelian permutation holonomy.</p></article>
+    </section>
+    <section class="card boundary" style="margin-top:18px"><strong>Boundary.</strong> The model and separators are implemented; the 56-fibre instance is not claimed solved.</section>
+
+    <h2>Two exact descendant chains</h2>
+    <div class="formula">Clebsch → Petersen<br>Higman–Sims → M22 → Gewirtz</div>
+    <section class="grid" style="margin-top:16px">
+      <article class="card"><div class="metric">F₂⁵ even words</div><p>The Clebsch second shell at zero is the ten weight-two words with disjoint-support adjacency: Petersen KG(5,2).</p></article>
+      <article class="card"><div class="metric">1 + 759 + 2576 + 759 + 1</div><p>The extended binary Golay weight distribution is regenerated from a cyclic generator.</p></article>
+      <article class="card"><div class="metric">S(3,6,22)</div><p>Fixing two Golay coordinates yields 77 hexads, with every triple covered exactly once.</p></article>
+      <article class="card"><div class="metric">100 → 77 → 56</div><p>Incidence extension gives Higman–Sims; its second subconstituent is M22; avoiding a point gives Gewirtz.</p></article>
+    </section>
+
+    <h2>The 57-vertex hole passes every ordinary scheme test</h2>
+    <div class="formula">SRG(57,14,1,4): q₁₁=(38,1273/49,1140/49)<br>q₁₂=(0,540/49,722/49)<br>q₂₂=(18,342/49,111/49)</div>
+    <p>All entries are nonnegative, and both absolute bounds pass. The known nonexistence therefore lives beyond the rank-three Bose–Mesner algebra—in local compatibility or star complements.</p>
+
+    <h2>W33 ↔ Gewirtz: what actually transplants</h2>
+    <div class="formula">A² + 2A − 8I = 0 &nbsp; ⇒ &nbsp; f(A)=aA+bI<br>U=(-I-A)/3 &nbsp; and &nbsp; U²=I</div>
+    <table>
+      <thead><tr><th>Level</th><th>Transfers automatically?</th><th>Examples</th></tr></thead>
+      <tbody>
+        <tr><td>Polynomial-only</td><td>Yes</td><td>Adjacency identities, two-channel calculus, complement reflection</td></tr>
+        <tr><td>Multiplicity-sensitive</td><td>No</td><td>Trace, determinant, projector ranks</td></tr>
+        <tr><td>Geometry-sensitive</td><td>No</td><td>Lines, incidence factorizations, codes, automorphism groups</td></tr>
+      </tbody>
+    </table>
+
+    <h2>The surviving 57-cell symmetry shadow</h2>
+    <section class="grid">
+      <article class="card"><div class="metric">|PSL(2,19)| = 3420</div><p>Conditional oddness of Aut(M57) kills the full group and every common A5 action.</p></article>
+      <article class="card"><div class="metric">19:9 = 171</div><p>The odd Borel point stabilizer lies below the peer-reviewed odd-order bound 375, so parity alone does not exclude it.</p></article>
+    </section>
+
+    <h2>Bonkers experiment I: permutation curvature</h2>
+    <section class="card bonkers"><div class="metric">15 matchings + 20 holonomies = all 2³</div><p>In an exact Hoffman–Singleton edge chart, every row-pair matching and every triangle holonomy is a fixed-point-free involution. The high-risk M57 branch asks for cycle type 2²⁸ throughout. This is an ansatz, not a necessity theorem.</p></section>
+
+    <h2>Bonkers experiment II: Golay puncture functor</h2>
+    <section class="card bonkers"><div class="metric">[23,12,7] → [24,12,8] → S(3,6,22) → M22 → Gewirtz</div><p>Higman–Sims, M22, and Gewirtz are reconstructed as one executable coordinate-fixing, incidence-extension, and point-avoidance pipeline—not isolated parameter coincidences.</p></section>
+
+    <h2>Machine certificate</h2>
+    <div class="formula">PASS_7_FRONTS<br>15ab9b21e744e755917e0b4c40ec806b43c5463b8a11cfbfac7bdbb4a9c8dfe7</div>
+  </main>
+  <footer>Exact finite claims only. No M57 existence decision, no solved 56-fibre CSP, no canonical W33–Gewirtz intertwiner, and no claim that the 2²⁸ curvature ansatz is necessary.</footer>
+</div>
+</body>
+</html>
