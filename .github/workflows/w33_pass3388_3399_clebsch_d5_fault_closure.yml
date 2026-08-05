@@ -1,0 +1,131 @@
+name: Passes 3388-3399 Clebsch D5 Fault Closure
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/*3388*'
+      - 'analysis/*3399*'
+      - 'data/PART_BT3388*'
+      - 'data/w33_pass_namespace_registry_v2.d/3388-3399.json'
+      - 'rtl/w33_envelope_self_protecting_code.v'
+      - 'rtl/w33_q5_dynamic_spare_router.v'
+      - 'rtl/w33_q6_triple_fault_router.v'
+      - 'rtl/tb_w33_pass3388_3399_fault_codes.v'
+      - 'tests/test_bt3388_3399_clebsch_d5_fault_closure.py'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'holonet_machine_blueprint.tex'
+      - 'docs/index.html'
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/*3388*'
+      - 'analysis/*3399*'
+      - 'data/PART_BT3388*'
+      - 'rtl/w33_envelope_self_protecting_code.v'
+      - 'rtl/w33_q5_dynamic_spare_router.v'
+      - 'rtl/w33_q6_triple_fault_router.v'
+      - 'rtl/tb_w33_pass3388_3399_fault_codes.v'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pass3388-3399-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  exact-digital-papers:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact and digital tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys nextpnr-ice40
+          python -m pip install --upgrade pip
+          python -m pip install numpy scipy networkx pytest
+      - name: Regenerate exact packet
+        run: |
+          mkdir -p evidence/pass3388_3399
+          python analysis/bt3388_3399_clebsch_d5_fault_closure.py \
+            --json /tmp/results.json \
+            --routes-json /tmp/routes.json \
+            --codes-json /tmp/codes.json \
+            | tee evidence/pass3388_3399/exact.log
+          python - <<'PY'
+          from pathlib import Path
+          import base64,zlib
+          encoded=''.join(p.read_text() for p in sorted(Path('data').glob('PART_BT3388_BT3399_CLEBSCH_D5_FAULT_CLOSURE_results.json.zlib.b64.part*')))
+          Path('/tmp/frozen-results.json').write_bytes(zlib.decompress(base64.b64decode(encoded)))
+          PY
+          cmp /tmp/results.json /tmp/frozen-results.json
+          cmp /tmp/routes.json data/PART_BT3388_BT3399_DYNAMIC_ROUTE_manifest.json
+          cmp /tmp/codes.json data/PART_BT3388_BT3399_SELF_PROTECTING_CODE_manifest.json
+          pytest -q tests/test_bt3388_3399_clebsch_d5_fault_closure.py \
+            | tee evidence/pass3388_3399/pytest.log
+          git diff --check
+      - name: Exhaust code and routing RTL
+        run: |
+          iverilog -g2012 -s tb_w33_pass3388_3399_fault_codes \
+            -o evidence/pass3388_3399/fault_codes_tb \
+            rtl/w33_signature_s3_rom4.v \
+            rtl/w33_envelope_self_protecting_code.v \
+            rtl/w33_q5_dynamic_spare_router.v \
+            rtl/w33_q6_triple_fault_router.v \
+            rtl/tb_w33_pass3388_3399_fault_codes.v
+          vvp evidence/pass3388_3399/fault_codes_tb \
+            | tee evidence/pass3388_3399/rtl.log
+          grep -F 'PASS self-protecting cases=4682 dynamic_routes=512 q6_routes=480' \
+            evidence/pass3388_3399/rtl.log
+      - name: Synthesize exact controllers
+        run: |
+          for top in \
+            w33_envelope_nonlinear12_encode \
+            w33_envelope_nonlinear12_decode \
+            w33_linear13_encode \
+            w33_linear13_decode \
+            w33_q5_dynamic_spare_router \
+            w33_q6_triple_fault_router
+          do
+            yosys -p "read_verilog rtl/w33_signature_s3_rom4.v rtl/w33_envelope_self_protecting_code.v rtl/w33_q5_dynamic_spare_router.v rtl/w33_q6_triple_fault_router.v; hierarchy -top ${top}; synth_ice40 -top ${top} -json evidence/pass3388_3399/${top}.json; stat" \
+              2>&1 | tee evidence/pass3388_3399/${top}.yosys.log
+            test -s evidence/pass3388_3399/${top}.json
+          done
+      - name: Place compact encoders and routers on UP5K
+        run: |
+          for top in \
+            w33_envelope_nonlinear12_encode \
+            w33_linear13_encode \
+            w33_q5_dynamic_spare_router \
+            w33_q6_triple_fault_router
+          do
+            nextpnr-ice40 --up5k --package sg48 \
+              --json evidence/pass3388_3399/${top}.json \
+              --asc evidence/pass3388_3399/${top}.asc \
+              --pcf-allow-unconstrained --freq 12 \
+              2>&1 | tee evidence/pass3388_3399/${top}.nextpnr.log
+          done
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Compile canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex
+          do
+            tectonic --keep-logs "$source" \
+              2>&1 | tee evidence/pass3388_3399/${source%.tex}.log
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
+            > evidence/pass3388_3399/pdf_sha256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3388-3399-clebsch-d5-fault-evidence
+          path: |
+            evidence/pass3388_3399/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
