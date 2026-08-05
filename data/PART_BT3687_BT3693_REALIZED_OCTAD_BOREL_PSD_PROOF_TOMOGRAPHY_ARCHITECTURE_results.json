@@ -1,0 +1,99 @@
+{
+  "boundaries": [
+    "Ten abstract K8 octad patterns remain without realization or impossibility certificates.",
+    "The 55-state bridge screen is a necessary local reduction, not a Borel SAT/UNSAT verdict.",
+    "The proof archive contains 32 content-addressed records, not all 3,720 canonical candidates.",
+    "The one-photon and controllability results are architecture theorems; hardware thresholds and performance require experiment."
+  ],
+  "passes": {
+    "3687_realized_octad_deck": {
+      "abstract_patterns": 69,
+      "boundary": "59 abstract patterns have exact realization certificates. The ten-item frontier is not claimed unrealizable.",
+      "exceptional_frontier_blocks": [[7],[31],[63],[127],[7,25],[7,56],[7,120],[7,248],[7,249],[7,25,224]],
+      "exceptional_frontier_ids": [1,3,4,5,7,8,10,12,13,21],
+      "labelled_one_factorizations": 6240,
+      "perfect_matchings": 105,
+      "realized_patterns": 59,
+      "witness_count": 59,
+      "witness_digest": "1cd53497824bcec7da92bd283d0856f51ad61f90d17e97c0d583efa3cca6ab21"
+    },
+    "3688_exact_Borel_bridge_screen": {
+      "compatibility_components": [[0,4,8,10,12,17],[1,5,6,11,13,15],[2,3,7,9,14,16]],
+      "compatibility_edge_digest": "d24190bc0153e724aa7dae65d3e04097e008414032ad60a378e6340fee2f346d",
+      "compatibility_spectrum": "4^3, 0^9, (-2)^6",
+      "compatible_pair_count": 36,
+      "component_graph": "3 disjoint octahedral graphs K_{2,2,2}",
+      "conflicting_pair_count": 117,
+      "maximum_weight": 2,
+      "semantic_sha256": "bb35418dc663731d12475905c9423db7cf3bf94484b709c5f125a9849e65e662",
+      "thick_channels": 18,
+      "triangle_count": 24,
+      "valid_subsets": 55,
+      "weight_histogram": {"0":1,"1":18,"2":36}
+    },
+    "3689_observable_PSD_cone": {
+      "Caratheodory_number": 5,
+      "algebraic_boundary": "alpha*beta*det(Q)=0",
+      "algebraic_boundary_degree": 5,
+      "boundary_polynomial_sha256": "2df7fdcf15d87409c46049456ee0b109e977c873905d0d6f299bc1df72e3b5f6",
+      "cone_isomorphism": "R_+ x Herm_3^+(C) x R_+",
+      "connected_automorphisms": "positive scalar rescaling of each scalar block and Q -> A Q A^* for A in GL_3(C)",
+      "extreme_ray_families": ["left scalar axis","right scalar axis","rank-one Hermitian rays zz^* parametrized by CP^2"],
+      "face_lattice": "product of two scalar face lattices and PSD3 faces indexed by complex subspaces U <= C^3",
+      "invariant_form_2x2_minors": ["15/19","15/19","15/19"],
+      "invariant_form_determinant": "7/19",
+      "observable_dimension": 11,
+      "rank_strata": [[0,0,0],[0,0,1],[0,1,0],[0,1,1],[0,2,0],[0,2,1],[0,3,0],[0,3,1],[1,0,0],[1,0,1],[1,1,0],[1,1,1],[1,2,0],[1,2,1],[1,3,0],[1,3,1]],
+      "rank_strata_count": 16,
+      "self_dual_trace_pairing": true
+    },
+    "3690_content_addressed_proof_archive": {
+      "boundary": "32 content-addressed genuine proof DAGs; not the complete 3,720 canonical archive.",
+      "compatibility_size_range": [10,98],
+      "draws": 17944,
+      "instances": 32,
+      "maximum_clique_histogram": {"6":1,"7":2,"8":4,"9":4,"10":2,"11":6,"12":6,"13":3,"16":4},
+      "merkle_root": "d75cdc80648d7ddf913555f164140bc864087689e4c37e8ba77b0c3f763d9529",
+      "sampled_spectral_survivors": 160,
+      "schema": "w33.star.content_addressed_batch.v1",
+      "seed": 3652,
+      "stage2_counts": [22,784],
+      "state_digest": "07a166074418056d964c03ff76ab69e76273272bd9b5cff2b3b6346a5bb4cc9e"
+    },
+    "3691_marked_resolvent_atlas": {
+      "schema": "w33.marked_tomography.atlas.v1",
+      "semantic_sha256": "5adb4c66276a6af84f55d1ae9d52328367348c45db7395aefb4d413c0a9f2c8f",
+      "sizes": {
+        "1": {"G_exclusive_graph_types":[],"G_exclusive_resolvent_signatures":0,"G_induced_types":1,"G_total_subsets":56,"W_exclusive_graph_types":[],"W_exclusive_resolvent_signatures":0,"W_induced_types":1,"W_total_subsets":40},
+        "2": {"G_exclusive_graph_types":[],"G_exclusive_resolvent_signatures":0,"G_induced_types":2,"G_total_subsets":1540,"W_exclusive_graph_types":[],"W_exclusive_resolvent_signatures":0,"W_induced_types":2,"W_total_subsets":780},
+        "3": {"G_exclusive_graph_types":[],"G_exclusive_resolvent_signatures":0,"G_induced_types":3,"G_total_subsets":27720,"W_exclusive_graph_types":[{"count":160,"graph_mask":7,"signature":["(z - 2)*(z + 1)**2","3*(z + 1)**2"]}],"W_exclusive_resolvent_signatures":1,"W_induced_types":4,"W_total_subsets":9880},
+        "4": {"G_exclusive_graph_types":[],"G_exclusive_resolvent_signatures":0,"G_induced_types":7,"G_total_subsets":367290,"W_exclusive_graph_types":[{"count":1440,"graph_mask":11,"signature":["z*(z - 2)*(z + 1)**2","2*(z + 1)**2*(2*z - 1)"]},{"count":4320,"graph_mask":15,"signature":["(z + 1)*(z**3 - z**2 - 3*z + 1)","2*(z + 1)*(2*z**2 + 2*z - 1)"]},{"count":40,"graph_mask":63,"signature":["(z - 3)*(z + 1)**3","4*(z + 1)**3"]}],"W_exclusive_resolvent_signatures":3,"W_induced_types":10,"W_total_subsets":91390},
+        "5": {"G_exclusive_graph_types":[],"G_exclusive_resolvent_signatures":0,"G_induced_types":13,"G_total_subsets":3819816,"W_exclusive_graph_types":[{"count":4320,"graph_mask":19,"signature":["z**2*(z - 2)*(z + 1)**2","z*(z + 1)**2*(5*z - 4)"]},{"count":25920,"graph_mask":23,"signature":["z*(z + 1)*(z**3 - z**2 - 3*z + 1)","(z + 1)*(5*z**3 + 3*z**2 - 5*z + 1)"]},{"count":12960,"graph_mask":31,"signature":["z*(z + 1)*(z**3 - z**2 - 4*z + 2)","z*(z + 1)*(5*z**2 + 5*z - 4)"]},{"count":25920,"graph_mask":59,"signature":["z*(z**2 - z - 3)*(z**2 + z - 1)","(z**2 + z - 1)*(5*z**2 + 5*z - 1)"]},{"count":2160,"graph_mask":126,"signature":["z**3*(z**2 - 6)","z**3*(5*z + 12)"]},{"count":1440,"graph_mask":184,"signature":["(z - 2)*(z - 1)*(z + 1)**3","(z + 1)**3*(5*z - 7)"]},{"count":12960,"graph_mask":185,"signature":["(z - 1)*(z + 1)*(z**3 - 4*z - 2)","(z + 1)*(5*z**3 + 5*z**2 - 8*z - 4)"]},{"count":1440,"graph_mask":191,"signature":["(z + 1)**2*(z**3 - 2*z**2 - 4*z + 2)","(z + 1)**2*(5*z**2 + 4*z - 4)"]},{"count":2160,"graph_mask":207,"signature":["(z - 1)*(z + 1)**2*(z**2 - z - 4)","(z - 1)*(z + 1)**2*(5*z + 7)"]},{"count":12960,"graph_mask":221,"signature":["z*(z + 2)*(z**3 - 2*z**2 - 2*z + 2)","z*(z + 2)*(5*z**2 + 2*z - 4)"]}],"W_exclusive_resolvent_signatures":10,"W_induced_types":23,"W_total_subsets":658008}
+      }
+    },
+    "3692_bonkers_one_photon_scalability_loss_firewall": {
+      "Knill_Laflamme_loss_no_go": "On the one-photon sector a_i^*a_j=|i><j| span the full matrix algebra. Their compression can all be scalar only on a one-dimensional code. Thus no nontrivial exactly-one-photon code corrects arbitrary total photon loss.",
+      "architecture_consequence": "The abstract [[240,81,4]]_3 code does not by itself correct vacuum loss when physically represented by one photon across modes. Scalable fault tolerance requires a multi-photon/bosonic redundancy, teleportation/cluster carrier, or a quantum-memory layer.",
+      "benchmark_survival_requirement": "eta^(8n) > 2/3",
+      "logical_qutrits": 81,
+      "maximum_route_hops": 648,
+      "minimum_orthogonal_modes": 443426488243037769948249630619149892803,
+      "mode_scaling": "M >= 3^n for n independent logical qutrits in an exactly-one-photon mode space",
+      "per_hop_loss_upper_bound": 0.0006255220388929894,
+      "per_hop_transmissivity_lower_bound": 0.999374477961107
+    },
+    "3693_bonkers_generic_controllability_specificity_firewall": {
+      "W33_connected": true,
+      "cycle40_connected": true,
+      "direct_pair_interference_tomography_settings": 1561,
+      "dynamical_Lie_algebra_dimension": 1600,
+      "mode_dimension": 40,
+      "path40_connected": true,
+      "specificity_firewall": "Bare one-photon U(40) controllability is generic to connected graphs and therefore is not evidence that W33 is the uniquely useful substrate. W33 must earn its role through fault-tolerant overhead, routing, code, calibration, or experimentally measurable robustness advantages.",
+      "theorem": "For any connected mode graph, independently addressable diagonal phases Z_v and real edge couplers X_uv generate u(d): one commutator gives Y_uv, and commutators along paths generate every matrix unit.",
+      "tomography_parameter_count": 1599
+    }
+  },
+  "schema": "w33.pass3687_3693.v1",
+  "semantic_sha256": "3ff49c19511ebcf3c9159c1d69f123ae66dd275498c94f501230710634982828"
+}
