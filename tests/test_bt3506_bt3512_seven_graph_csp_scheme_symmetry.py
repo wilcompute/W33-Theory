@@ -1,5 +1,10 @@
 from analysis.bt3506_3512_seven_graph_csp_scheme_symmetry import build_certificate
-from analysis.bt3506_m57_permutation_csp import model_statistics
+from analysis.bt3506_m57_permutation_csp import (
+    model_statistics,
+    residual_mu_violations,
+    triangle_violations,
+    validate_double_fibration,
+)
 
 
 EXPECTED_SHA = "15ab9b21e744e755917e0b4c40ec806b43c5463b8a11cfbfac7bdbb4a9c8dfe7"
@@ -47,3 +52,15 @@ def test_csp_exporter_counts_match_certificate():
     assert stats["directed_integer_variables"] == 172480
     assert stats["one_hot_nonfixed_boolean_baseline"] == 4743200
     assert stats["row_triples"] == 27720
+    assert stats["residual_vertex_pairs"] == 4915680
+
+
+def test_petersen_two_fibre_chart_satisfies_all_separators():
+    # The edge-rooted Petersen core has two rows and the unique derangement S2.
+    candidate = {
+        (0, 1): (1, 0),
+        (1, 0): (1, 0),
+    }
+    validate_double_fibration(candidate, 2)
+    assert triangle_violations(candidate, 2) == []
+    assert residual_mu_violations(candidate, 2) == []
