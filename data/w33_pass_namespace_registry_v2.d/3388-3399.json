@@ -2,21 +2,8 @@
   "schema": "w33.pass_namespace_reservation.v2",
   "range": "3388-3399",
   "owner": "agent/pass3388-3399-clebsch-d5-supplement",
-  "status": "in_progress_evidence_gated",
-  "reserved_after": "master through the parallel Clebsch-Petersen packet and Passes 3385-3387",
-  "passes": {
-    "3388": "audit edge-dependent magnetic orientation duals beyond the three-cone block-distance compiler",
-    "3389": "prove the minimum linear all-word distance-five self-protecting code",
-    "3390": "classify post-fault symbolic state remapping and its six-spare exact-schedule frontier",
-    "3391": "freeze the 24-orbit minimum gauge-defect fusion and holonomy table",
-    "3392": "exhaust routed mirrored-Q5 triple faults and the untouched-layer Q6 boundary",
-    "3393": "derive the A2(F3) local root-plane decomposition of the flat connection space",
-    "3394": "derive the moving folded-cube quotient atlas and correction-equivariance obstruction",
-    "3395": "prove the Clebsch closed-neighborhood 2-(16,6,2) biplane",
-    "3396": "prove the D5 half-spin/demicube opposition realization and exact automorphism action",
-    "3397": "compute the valid-guard colored Clebsch stabilizer and remaining exact graph census",
-    "3398": "integrate the supplemental theorem into the current-frontier manifest and public index",
-    "3399": "focused regression, RTL, synthesis, manuscript evidence and fail-closed publication boundary"
-  },
-  "claim_boundary": "No queued workflow, ten-colour decision, rational certificate for numerical magnetic eigenvalues, state-memory recovery without an external symbolic-state contract, physical Spin(10) identification, FPGA timing, successful PDF, laboratory result or spacetime claim is promoted."
+  "status": "superseded_before_publication",
+  "superseded_by": "3418-3429",
+  "reason": "A later parallel packet merged as Passes 3390-3403 after this reservation, creating an overlap. The source hashes were preserved under provisional build tags while the theorem namespace moved to 3418-3429.",
+  "claim_boundary": "No theorem is published under this superseded range. See the 3418-3429 reservation."
 }
