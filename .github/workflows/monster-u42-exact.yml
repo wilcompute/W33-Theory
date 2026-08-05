@@ -1,0 +1,43 @@
+name: Monster U42 exact packet
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_monster_structural_program.py'
+      - 'analysis/w33_monster_u42_restriction.g'
+      - 'analysis/w33_monster_mmgroup_embedding_harness.py'
+      - 'tests/test_w33_monster_3614_3627.py'
+      - '.github/workflows/monster-u42-exact.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  exact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install GAP and CTblLib
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gap gap-ctbllib
+      - name: Exact W33 and falsifier certificate
+        run: python analysis/w33_monster_structural_program.py
+      - name: U4(2)-Monster character restriction
+        run: timeout 30m gap -q analysis/w33_monster_u42_restriction.g
+      - name: Focused regression
+        run: |
+          python -m pip install pytest
+          pytest -q tests/test_w33_monster_3614_3627.py
+          git diff --check
+      - name: Publish generated restriction certificate
+        run: |
+          if ! git diff --quiet -- data/PART_3614_3627_MONSTER_U42_RESTRICTION_results.json; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add data/PART_3614_3627_MONSTER_U42_RESTRICTION_results.json
+            git commit -m 'Pass 3618: freeze U4(2) Monster restriction certificate'
+            git push
+          fi
