@@ -1,0 +1,27 @@
+{
+  "schema": "w33.pass3847_3862.claims_ledger.v1",
+  "status": "SOURCE_EXACT_REMOTE_EVIDENCE_PENDING",
+  "proved": [
+    "A 63-face dependency cap exists and gives a 177-face cubic transversal.",
+    "The 63-cap is locally optimal against every exchange removing at most two selected faces.",
+    "The exceptional order-192 tomotope completion group is the split centerless group 2^4:D12.",
+    "The complete F3 composition multiset of the 115-dimensional quotient is 1^3+5^3+10^3+14^3+25.",
+    "The natural two-point-stabilizer-invariant degree-12 Gewirtz residual is the independent fourfold Petersen blow-up and is not W33.",
+    "The free 63-cap orbit is a constant-weight binary code of length 240, size 25920, weight 63, and minimum distance 62.",
+    "The cap's 40-fibre occupancy vector has a free 25920-element orbit and the frozen spectral energies.",
+    "The authoritative website blob is unchanged and future replacement is fail-closed behind explicit migration authorization."
+  ],
+  "withdrawn_or_corrected": [
+    "Withdraw the identification of the exceptional order-192 tomotope completion with a non-split central double cover.",
+    "Replace the cubic transversal upper witness 178 by 177."
+  ],
+  "open": [
+    "Whether a 64-face cap exists.",
+    "The exact cubic transversal endpoint.",
+    "The covering-radius endpoint in 389..435.",
+    "The chromatic endpoint in 10..11.",
+    "Any fully non-equivariant W33/Gewirtz bridge.",
+    "Observed remote CI and PDF results.",
+    "Hardware, laboratory, Monster-embedding, or physical interpretations."
+  ]
+}
