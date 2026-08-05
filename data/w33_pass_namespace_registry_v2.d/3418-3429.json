@@ -1,0 +1,22 @@
+{
+  "schema": "w33.pass_namespace_reservation.v2",
+  "range": "3418-3429",
+  "owner": "agent/pass3418-3429-clebsch-d5-supplement",
+  "status": "in_progress_evidence_gated",
+  "reserved_after": "master through Passes 3390-3403 and the 3404-3417 reservation",
+  "passes": {
+    "3418": "audit edge-dependent magnetic orientation duals beyond the block-distance compiler",
+    "3419": "prove the minimum linear all-word distance-five self-protecting code",
+    "3420": "classify post-fault symbolic state remapping and its six-spare exact-schedule frontier",
+    "3421": "freeze the 24-orbit minimum gauge-defect fusion and holonomy table",
+    "3422": "exhaust routed mirrored-Q5 triple faults and the untouched-layer Q6 boundary",
+    "3423": "derive the A2(F3) local root-plane decomposition of the flat connection space",
+    "3424": "derive the moving folded-cube quotient atlas and correction-equivariance obstruction",
+    "3425": "prove the Clebsch closed-neighborhood 2-(16,6,2) biplane",
+    "3426": "prove the D5 half-spin/demicube opposition realization and exact automorphism action",
+    "3427": "compute the valid-guard colored Clebsch stabilizer and remaining exact graph census",
+    "3428": "integrate the supplemental theorem into the current-frontier manifest and public index",
+    "3429": "focused regression, RTL, synthesis, manuscript evidence and fail-closed publication boundary"
+  },
+  "claim_boundary": "No queued workflow, ten-colour decision, rational certificate for numerical magnetic eigenvalues, state-memory recovery without an external symbolic-state contract, physical Spin(10) identification, FPGA timing, successful PDF, laboratory result or spacetime claim is promoted."
+}
