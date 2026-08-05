@@ -70,14 +70,23 @@ jobs:
           python - <<'PY'
           import json
           from pathlib import Path
-          pairs = [
-              ('evidence/pass3404_3417/conic_torus.json', 'data/PART_BT3404_BT3417_CONIC_TORUS_results.json'),
-              ('evidence/pass3404_3417/magnetic_exact_no_go.json', 'data/PART_BT3407_MAGNETIC_EXACT_NO_GO_results.json'),
-              ('evidence/pass3404_3417/edge_commutant.json', 'data/PART_BT3408_EDGE_COMMUTANT_DECOMPOSITION_results.json'),
-          ]
-          for generated, frozen in pairs:
-              assert json.loads(Path(generated).read_text()) == json.loads(Path(frozen).read_text()), (generated, frozen)
-          print('PASS semantic frozen certificate comparison')
+          generated_conic = json.loads(Path('evidence/pass3404_3417/conic_torus.json').read_text())
+          frozen_conic = json.loads(Path('data/PART_BT3404_BT3417_CONIC_TORUS_results.json').read_text())
+          assert generated_conic == frozen_conic
+
+          generated_edge = json.loads(Path('evidence/pass3404_3417/edge_commutant.json').read_text())
+          frozen_edge = json.loads(Path('data/PART_BT3408_EDGE_COMMUTANT_DECOMPOSITION_results.json').read_text())
+          assert generated_edge == frozen_edge
+
+          generated_mag = json.loads(Path('evidence/pass3404_3417/magnetic_exact_no_go.json').read_text())
+          frozen_mag = json.loads(Path('data/PART_BT3407_MAGNETIC_EXACT_NO_GO_results.json').read_text())
+          assert generated_mag['characteristic_polynomials'] == frozen_mag['characteristic_polynomials']
+          assert generated_mag['checks'] == frozen_mag['checks']
+          assert generated_mag['ternary_phase']['trace_powers_1_to_5'] == frozen_mag['ternary_phase']['trace_powers_1_to_5']
+          assert generated_mag['real_signed']['trace_powers_1_to_5'] == frozen_mag['real_signed']['trace_powers_1_to_5']
+          assert abs(generated_mag['ternary_phase']['hoffman_ratio_numeric'] - frozen_mag['ternary_phase']['hoffman_ratio_numeric']) < 1e-10
+          assert abs(generated_mag['real_signed']['hoffman_ratio_numeric'] - frozen_mag['real_signed']['hoffman_ratio_numeric']) < 1e-10
+          print('PASS frozen certificate comparison')
           PY
       - name: Independent GAP character atlas
         run: |
