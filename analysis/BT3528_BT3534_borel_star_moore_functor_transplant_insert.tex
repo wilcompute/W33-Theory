@@ -1,0 +1,137 @@
+\section{Borel Fourier anatomy, star complements, and typed Moore searches}
+\label{sec:bt3528-3534-borel-star-moore}
+
+Passes 3528--3534 execute the five graph-theoretic continuations after reconciling the complete-switch and common-$A_5$ packets.  The exact standard-library verifier reports
+\[
+\texttt{PASS\_7\_FRONTS}
+\]
+with semantic digest
+\begin{center}
+\texttt{1ec126887cd1f09b8cdc074872567dd4962c2a399c1b14db8b035a8ea50dc591}.
+\end{center}
+The degree-$57$ Moore graph remains open; no $56$-fibre SAT or UNSAT result is claimed.
+
+\subsection{The Perkel twenty-plane restricted to the odd Borel subgroup}
+
+On the explicit Perkel model $(i,j)\in\mathbb Z_3\times\mathbb F_{19}$, the maps
+\[
+(b,m):(i,j)\longmapsto(i+m,4^m j+b)
+\]
+realize all $171$ elements of
+\[
+B=C_{19}\rtimes C_9.
+\]
+Every map is checked objectwise against the edge set.  The $-3$ spectral projector is evaluated integrally through
+\[
+171E_{-3}=-A^3+9A^2-19A+6I.
+\]
+The restricted character has value distribution
+\[
+20^1,\qquad 1^{18},\qquad 2^{38},\qquad (-1)^{114},
+\]
+and fixed dimensions
+\[
+\dim V^{C_{19}}=2,
+\quad
+\dim V^{C_9}=2,
+\quad
+\dim V^{C_3}=8,
+\quad
+\dim V^B=0.
+\]
+Over $\mathbb Q$ the twenty-plane is
+\[
+\boxed{V_{-3}\downarrow_B\cong V_{18}\oplus V_2,}
+\]
+where $V_{18}$ is the conductor-$19$ rational constituent and $V_2$ is the conductor-$3$ constituent.  This closes the surviving $19{:}9$ comparison on the Perkel side only; it does not construct that subgroup in a hypothetical Moore graph.
+
+\subsection{The $57$-vertex star-complement firewall}
+
+For the nonexistent parameter set
+\[
+\operatorname{SRG}(57,14,1,4),
+\]
+the eigenvalue $2$ has multiplicity $38$, so a star complement has order $19$.  An independent heavy enumeration from the canonical windmill seed gives stage counts
+\[
+22,\quad 784,\quad 157{,}349,
+\]
+and exactly
+\[
+\boxed{3{,}720}
+\]
+spectral survivors.  Their canonical ledger hash is
+\begin{center}
+\texttt{c1e0cb753fbdeab4d8ecf8059896b6ff1eb1fcc75c663022ab7040ceea012219}.
+\end{center}
+The published compatibility-graph census has maximum clique $31$, whereas reconstruction requires a $38$-clique.  Therefore
+\[
+\boxed{31<38}
+\]
+reproves nonexistence, with margin seven.  The $3{,}720$ candidate census is independently regenerated here; the complete maximum-clique histogram remains source-locked to the published Cliquer computation and is not presented as a fresh independent rerun.
+
+\subsection{Two typed Moore-$57$ solver tracks}
+
+For fibre size $n=d-1$, a diameter-two Moore graph has parameters
+\[
+(d^2+1,d,0,1)
+\]
+and restricted polynomial
+\[
+x^2+x-(d-1).
+\]
+The exact global gate leaves only
+\[
+\boxed{n\in\{1,2,6,56\}},
+\]
+corresponding to $C_5$, Petersen, Hoffman--Singleton, and the open degree-$57$ case.  Every even stage $n=8,10,\ldots,54$ fails spectrum or multiplicity integrality before a local CSP is built.
+
+The unrestricted $n=56$ model retains $172{,}480$ directed integer variables, $6{,}271$ structural constraints, and lazy triangle and common-neighbour separators.  A second high-risk branch imposes
+\[
+\sigma_{ij}^2=1
+\]
+on every fixed-point-free row matching and separates triangle holonomies by cycle type $2^{28}$.  This adds $86{,}240$ source-level element-involution constraints.  Neither branch has an $n=56$ verdict.
+
+\subsection{The two descendant towers are typed differently}
+
+The W33 face tower
+\[
+240\longrightarrow120\longrightarrow40
+\]
+is a pair of uniform quotients with fibre sizes two and three.  The Golay--Witt chain
+\[
+100\longrightarrow77\longrightarrow56
+\]
+uses induced restriction and point avoidance.  Since
+\[
+100/77\notin\mathbb Z,
+\qquad
+77/56\notin\mathbb Z,
+\]
+there is no common uniform-fibre quotient functor.  The correct shared language requires distinct morphism types: uniform quotient, induced restriction, point avoidance, and incidence extension.
+
+\subsection{Fail-closed W33--Gewirtz transplantation}
+
+Automatic transfer is permitted only for statements reducible in
+\[
+\mathbb Q[x]/(x^2+2x-8).
+\]
+Thus every adjacency polynomial reduces to $aA+bI$, and
+\[
+U=\frac{-I-A}{3},
+\qquad U^2=I
+\]
+is common on augmentation.  Traces, determinants, ranks, multiplicities, Smith data, and $p$-ranks require new evidence.  Lines, incidence, codes, automorphism groups, descendant maps, and objectwise intertwiners are denied automatic transfer.  A repository scanner now fails closed on any explicit unsafe \texttt{AUTO\_PORT} annotation.
+
+\subsection{Two outside-box consequences}
+
+The complete Perkel vertex module has the rational Borel decomposition
+\[
+\boxed{\mathbb Q^{57}\cong\mathbf1\oplus3V_{18}\oplus V_2.}
+\]
+Its combined golden eigenspace is $2V_{18}$, while the $-3$ twenty-plane is $V_{18}\oplus V_2$.  The whole graph is therefore one constant channel, three conductor-$19$ channels, and one conductor-$3$ phase channel.
+
+Inside the involutive Moore branch, the vertex-star all-different law implies that the $n-1$ matchings issuing from each source row form a $1$-factorization of $K_n$.  Hoffman--Singleton becomes six coupled non-group $1$-factorization pencils of $K_6$.  The $n=56$ branch becomes
+\[
+\boxed{56\text{ reciprocity-coupled }1\text{-factorizations of }K_{56},}
+\]
+with $55$ perfect matchings and $55\cdot28=1540$ edges covered once in every pencil.  Pair-matching involution is coordinate dependent; holonomy cycle type is gauge invariant, and the theorem applies only to the declared involutive branch.
