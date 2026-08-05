@@ -3,8 +3,24 @@
   "range": [3694, 3700],
   "owner": "openai-gpt-5.6-thinking",
   "branch": "master",
-  "status": "reserved_for_seven_front_representation_and_axial_closure",
+  "status": "published_source_complete_ci_pending",
   "purpose": "Execute the five queued Monster/U4(2) fronts plus two independent outside-the-box constructions: exact rank-three idempotents and carrier decomposition; magic-ray separation firewall; class-fusion target solver; Monster-word candidate protocol; Majorana/axial envelope constraints; a ternary-panel binary-cover obstruction; and an exact interferometric realization/no-go certificate.",
-  "coordination": "Begins after published Passes 3670-3686 and avoids the separately reserved Passes 3687-3693. Reconcile all parallel commits before shared manifest, manuscript, and public-index updates.",
-  "claim_boundary": "No Monster embedding, observed Monster restriction multiplicity, Majorana/Griess/VOA algebra, regular polytope cover, or physical implementation is promoted without an executed certificate."
+  "coordination": "Published after Passes 3670-3686 and 3687-3693, before the separately reserved 3701-3714 packet. The shared theorem manifest and frontier JSON include this packet; public-index insertion and canonical PDF compilation are delegated to the fail-closed workflow and remain unclaimed until observed.",
+  "source_certificate": {
+    "status": "PASS_EXACT_SEVEN_FRONT_SOURCE_WITH_MONSTER_TARGETS_PENDING",
+    "semantic_sha256": "ddbe48339458f56f1d5b10b6d544a64be0e00ecdab73ce73c5203a7482fad65a",
+    "focused_local_tests": "2 passed",
+    "artifacts": [
+      "analysis/w33_pass3694_3700_spread_etf_axial_closure.py",
+      "data/PART_3694_3700_SPREAD_ETF_AXIAL_CLOSURE_results.json",
+      "tests/test_w33_pass3694_3700_spread_etf_axial_closure.py",
+      "analysis/BT3694_BT3700_spread_etf_axial_closure.md",
+      "analysis/BT3694_BT3700_spread_etf_axial_closure_insert.tex",
+      "analysis/w33_mmgroup_u42_candidate_harness.py",
+      "analysis/w33_monster_u42_class_fusion_target.g",
+      "docs/spread-etf-axial-atlas.html",
+      ".github/workflows/w33_pass3694_3700_spread_etf_axial_closure.yml"
+    ]
+  },
+  "claim_boundary": "No Monster embedding, observed Monster restriction multiplicity, Majorana/Griess/VOA algebra, regular polytope cover, remote CI/PDF result, or physical implementation is promoted without an executed certificate."
 }
