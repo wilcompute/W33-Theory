@@ -1,0 +1,41 @@
+name: W33 Passes 3694-3700 exact spread ETF and axial closure
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass3694_3700_spread_etf_axial_closure.py'
+      - 'analysis/w33_mmgroup_u42_candidate_harness.py'
+      - 'analysis/w33_monster_u42_class_fusion_target.g'
+      - 'data/PART_3694_3700_SPREAD_ETF_AXIAL_CLOSURE_results.json'
+      - 'tests/test_w33_pass3694_3700_spread_etf_axial_closure.py'
+      - '.github/workflows/w33_pass3694_3700_spread_etf_axial_closure.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --upgrade pip sympy pytest
+      - run: python analysis/w33_pass3694_3700_spread_etf_axial_closure.py --check data/PART_3694_3700_SPREAD_ETF_AXIAL_CLOSURE_results.json
+      - run: pytest -q tests/test_w33_pass3694_3700_spread_etf_axial_closure.py
+      - name: Monster-word slot stays explicit when empty
+        run: python analysis/w33_mmgroup_u42_candidate_harness.py data/w33_mmgroup_u42_candidate.json --allow-empty --output data/PART_3694_MMgroup_candidate_status.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-pass3694-3700-python-evidence
+          path: |
+            data/PART_3694_3700_SPREAD_ETF_AXIAL_CLOSURE_results.json
+            data/PART_3694_MMgroup_candidate_status.json
+  gap-class-fusion:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y gap gap-character-tables
+      - run: gap -q analysis/w33_monster_u42_class_fusion_target.g > data/PART_3695_MONSTER_U42_CLASS_FUSION_results.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-pass3695-gap-class-fusion
+          path: data/PART_3695_MONSTER_U42_CLASS_FUSION_results.json
