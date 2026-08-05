@@ -1,0 +1,72 @@
+name: Passes 3404-3417 Conic Magnetic Closure
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/*3404*'
+      - 'analysis/*3407*'
+      - 'analysis/*3417*'
+      - 'tests/test_bt3404_3417_conic_torus_closure.py'
+      - 'data/w33_pass_namespace_registry_v2.d/3404-3417.json'
+      - '.github/workflows/w33_pass3404_3417_conic_magnetic_closure.yml'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'holonet_machine_blueprint.tex'
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/*3404*'
+      - 'analysis/*3407*'
+      - 'analysis/*3417*'
+      - 'tests/test_bt3404_3417_conic_torus_closure.py'
+      - '.github/workflows/w33_pass3404_3417_conic_magnetic_closure.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pass3404-3417-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  exact-character-magnetic:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gap gap-character-tables
+          python -m pip install --disable-pip-version-check numpy networkx sympy pytest
+      - name: Regenerate conic and torus certificate
+        run: |
+          mkdir -p evidence/pass3404_3417
+          python analysis/bt3404_3417_conic_torus_closure.py \
+            --json evidence/pass3404_3417/conic_torus.json \
+            | tee evidence/pass3404_3417/conic_torus.log
+      - name: Exhaust magnetic triangle phases
+        run: |
+          python analysis/bt3407_magnetic_chromatic_search.py \
+            --json evidence/pass3404_3417/magnetic_search.json \
+            | tee evidence/pass3404_3417/magnetic_search.log
+      - name: Complete literal 720-edge character atlas
+        run: |
+          python analysis/bt3381_minimum_defect_edge_character.py \
+            | tee evidence/pass3404_3417/edge_character.log
+          cp data/PART_BT3381_MINIMUM_DEFECT_EDGE_CHARACTER_results.json \
+            evidence/pass3404_3417/edge_character.json
+      - name: Focused regression
+        run: |
+          python -m pytest -q tests/test_bt3404_3417_conic_torus_closure.py \
+            | tee evidence/pass3404_3417/pytest.log
+          git diff --check
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3404-3417-conic-magnetic-evidence
+          path: evidence/pass3404_3417/**
