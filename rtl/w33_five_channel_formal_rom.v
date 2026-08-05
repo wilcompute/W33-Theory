@@ -213,6 +213,7 @@ module w33_five_channel_symbol_rom (
     end
 endmodule
 
+`ifdef FORMAL
 module w33_mod3_order3_formal;
     (* anyconst *) wire [2:0] zero_mask;
     (* anyconst *) wire [1:0] in0;
@@ -254,5 +255,6 @@ module w33_mod3_order3_formal;
         assert(c4 == in4);
     end
 endmodule
+`endif
 
 `default_nettype wire
