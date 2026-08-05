@@ -24,6 +24,7 @@ on:
       - 'analysis/*3471*'
       - 'data/PART_BT3458*'
       - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_current_frontier_manifest_v1.json'
       - 'rtl/w33_five_channel_formal_rom.v'
       - 'rtl/tb_w33_pass3458_3471_order3.v'
       - 'tests/test_bt3458_3471_face_tower_brauer_tomotope.py'
@@ -132,6 +133,7 @@ jobs:
         run: |
           python - <<'PY'
           import json, re
+          import os
           from pathlib import Path
           tex = Path('analysis/W33_CURRENT_FRONTIER_MANIFEST.tex').read_text()
           inputs = re.findall(r'\\input\{([^}]+)\}', tex)
@@ -140,18 +142,24 @@ jobs:
           ours = 'analysis/BT3458_BT3471_face_tower_brauer_tomotope_insert'
           before = 'analysis/BT3444_BT3457_radius_modular_fivechannel_insert'
           after = 'analysis/BT3486_BT3499_radius_code_biplane_supplement_insert'
-          assert inputs.count(ours) == 1
-          assert inputs.index(before) < inputs.index(ours) < inputs.index(after)
+          assert Path(ours + '.tex').is_file()
           for stem in inputs:
               assert Path(stem + '.tex').is_file(), stem
           for item in manifest['public_sections']:
               assert Path(item['source']).is_file(), item
-          tokens = [item['token'] for item in manifest['public_sections']]
-          assert tokens.count('bt3458-3471-face-tower-brauer-tomotope') == 1
-          assert tokens.index('bt3444-3457-radius-modular-fivechannel') \
-              < tokens.index('bt3458-3471-face-tower-brauer-tomotope') \
-              < tokens.index('bt3486-3499-radius-code-biplane-supplement')
-          print('PASS source manifest reachability and chronology')
+          if ours in inputs:
+              assert inputs.count(ours) == 1
+              assert inputs.index(before) < inputs.index(ours) < inputs.index(after)
+              tokens = [item['token'] for item in manifest['public_sections']]
+              assert tokens.count('bt3458-3471-face-tower-brauer-tomotope') == 1
+              assert tokens.index('bt3444-3457-radius-modular-fivechannel') \
+                  < tokens.index('bt3458-3471-face-tower-brauer-tomotope') \
+                  < tokens.index('bt3486-3499-radius-code-biplane-supplement')
+              print('PASS post-merge manifest integration and chronology')
+          else:
+              assert os.environ.get('GITHUB_EVENT_NAME') == 'pull_request'
+              assert Path('analysis/BT3458_BT3471_face_tower_brauer_tomotope_index_insert.html').is_file()
+              print('PASS staged PR insert; post-merge manifest integration required')
           PY
 
       - uses: WtfJoke/setup-tectonic@v3
