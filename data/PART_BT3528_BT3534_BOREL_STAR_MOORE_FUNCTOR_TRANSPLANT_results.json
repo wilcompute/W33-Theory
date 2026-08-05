@@ -1,0 +1,163 @@
+{
+  "evidence_boundary": [
+    "No existence or nonexistence verdict for M57 is claimed.",
+    "No n=56 CP-SAT SAT/UNSAT result is claimed.",
+    "The star-complement 3720 census is independent; the all-graph clique histogram is publication-locked, not independently recomputed here.",
+    "The 19:9 module is constructed on Perkel only, not on a hypothetical M57.",
+    "The two descendant towers are not identified.",
+    "W33/Gewirtz geometry-sensitive claims do not auto-port."
+  ],
+  "front_3528_perkel_borel_restriction": {
+    "all_171_actions_verified_graph_automorphisms": true,
+    "boundary": "This closes the surviving 19:9 shadow on the Perkel side; it does not construct a 19:9 action on a hypothetical M57.",
+    "fixed_dimensions": {
+      "Borel_19:9": 0,
+      "C19": 2,
+      "C3": 8,
+      "C9": 2
+    },
+    "full_permutation_rational_decomposition": "Q^57 = 1 + 3*V18 + V2",
+    "group": {
+      "action": "(i,j)->(i+m mod 3, 4^m*j+b mod 19)",
+      "order": 171,
+      "structure": "C19 semidirect C9"
+    },
+    "minus3_character_distribution": {
+      "-1": 114,
+      "1": 18,
+      "2": 38,
+      "20": 1
+    },
+    "minus3_complex_decomposition": "chi_3 + chi_6 + psi_plus(deg9) + psi_minus(deg9)",
+    "minus3_rational_decomposition": "V18(conductor19) + V2(conductor3)",
+    "spectral_allocation": {
+      "combined_golden_36_space": "2*V18",
+      "constant_6_eigenspace": "1",
+      "minus3_20_space": "V18+V2"
+    }
+  },
+  "front_3529_star_complement_firewall": {
+    "boundary": "The 3720-candidate census is independently regenerated. The maximum-clique histogram is source-locked to the published Cliquer computation; an independent all-3720 clique rerun remains a separate reproducibility job.",
+    "independent_candidate_census": {
+      "canonical_survivor_sha256": "c1e0cb753fbdeab4d8ecf8059896b6ff1eb1fcc75c663022ab7040ceea012219",
+      "criterion": "second-largest adjacency eigenvalue strictly below 2",
+      "spectral_survivors": 3720,
+      "stage_counts_after_added_vertices": [22,784,157349]
+    },
+    "largest_clique": 31,
+    "nonexistence_margin": 7,
+    "obstruction_landscape": {
+      "forbidden_maximum_band": [17,28],
+      "maxima_29_through_31": 978,
+      "maxima_2_through_16": 2742
+    },
+    "provenance": {
+      "doi": "10.2298/FIL0802053M",
+      "paper": "M. Milosevic, Filomat 22:2 (2008), 53-57"
+    },
+    "published_compatibility_clique_histogram": {
+      "10": 131,"11": 220,"12": 502,"13": 400,"14": 58,"15": 123,"16": 303,
+      "2": 6,"29": 19,"3": 2,"30": 49,"31": 910,"4": 13,"5": 32,
+      "6": 18,"7": 173,"8": 358,"9": 403
+    },
+    "required_clique": 38,
+    "seed": "closed neighborhood windmill W14 plus one external vertex meeting four independent leaves",
+    "star_complement_order": 19,
+    "target_parameters": [57,14,1,4],
+    "target_spectrum": {"-5":18,"14":1,"2":38},
+    "verdict": "No compatibility graph has a 38-clique; SRG(57,14,1,4) does not exist."
+  },
+  "front_3530_m57_dual_tracks": {
+    "boundary": "Spectral rejection of intermediate stages is not a local-CSP UNSAT proof. The n=56 unrestricted and involutive tracks remain unsolved.",
+    "global_stage_gate": [
+      {"degree":2,"discriminant":5,"fibre_size":1,"interpretation":"C5 exact witness","multiplicities":[2,2],"restricted_eigenvalues":["(-1+sqrt(5))/2","(-1-sqrt(5))/2"],"status":"SPECTRALLY_ADMISSIBLE","vertices":5},
+      {"degree":3,"discriminant":9,"fibre_size":2,"interpretation":"Petersen exact witness","multiplicities":[5,4],"restricted_eigenvalues":[1,-2],"status":"SPECTRALLY_ADMISSIBLE","vertices":10},
+      {"degree":5,"discriminant":17,"fibre_size":4,"status":"REJECT_GLOBAL_SPECTRUM_NONSQUARE","vertices":26},
+      {"degree":7,"discriminant":25,"fibre_size":6,"interpretation":"Hoffman-Singleton exact witness","multiplicities":[28,21],"restricted_eigenvalues":[2,-3],"status":"SPECTRALLY_ADMISSIBLE","vertices":50},
+      {"degree":9,"discriminant":33,"fibre_size":8,"status":"REJECT_GLOBAL_SPECTRUM_NONSQUARE","vertices":82},
+      {"degree":11,"discriminant":41,"fibre_size":10,"status":"REJECT_GLOBAL_SPECTRUM_NONSQUARE","vertices":122},
+      {"degree":13,"discriminant":49,"fibre_size":12,"restricted_eigenvalues":[3,-4],"status":"REJECT_NONINTEGRAL_MULTIPLICITIES","vertices":170},
+      {"degree":15,"discriminant":57,"fibre_size":14,"status":"REJECT_GLOBAL_SPECTRUM_NONSQUARE","vertices":226},
+      {"degree":17,"discriminant":65,"fibre_size":16,"status":"REJECT_GLOBAL_SPECTRUM_NONSQUARE","vertices":290},
+      {"degree":19,"discriminant":73,"fibre_size":18,"status":"REJECT_GLOBAL_SPECTRUM_NONSQUARE","vertices":362},
+      {"degree":21,"discriminant":81,"fibre_size":20,"restricted_eigenvalues":[4,-5],"status":"REJECT_NONINTEGRAL_MULTIPLICITIES","vertices":442},
+      {"degree":23,"discriminant":89,"fibre_size":22,"status":"REJECT_GLOBAL_SPECTRUM_NONSQUARE","vertices":530},
+      {"degree":25,"discriminant":97,"fibre_size":24,"status":"REJECT_GLOBAL_SPECTRUM_NONSQUARE","vertices":626},
+      {"degree":27,"discriminant":105,"fibre_size":26,"status":"REJECT_GLOBAL_SPECTRUM_NONSQUARE","vertices":730},
+      {"degree":29,"discriminant":113,"fibre_size":28,"status":"REJECT_GLOBAL_SPECTRUM_NONSQUARE","vertices":842},
+      {"degree":31,"discriminant":121,"fibre_size":30,"restricted_eigenvalues":[5,-6],"status":"REJECT_NONINTEGRAL_MULTIPLICITIES","vertices":962},
+      {"degree":33,"discriminant":129,"fibre_size":32,"status":"REJECT_GLOBAL_SPECTRUM_NONSQUARE","vertices":1090},
+      {"degree":35,"discriminant":137,"fibre_size":34,"status":"REJECT_GLOBAL_SPECTRUM_NONSQUARE","vertices":1226},
+      {"degree":37,"discriminant":145,"fibre_size":36,"status":"REJECT_GLOBAL_SPECTRUM_NONSQUARE","vertices":1370},
+      {"degree":39,"discriminant":153,"fibre_size":38,"status":"REJECT_GLOBAL_SPECTRUM_NONSQUARE","vertices":1522},
+      {"degree":41,"discriminant":161,"fibre_size":40,"status":"REJECT_GLOBAL_SPECTRUM_NONSQUARE","vertices":1682},
+      {"degree":43,"discriminant":169,"fibre_size":42,"restricted_eigenvalues":[6,-7],"status":"REJECT_NONINTEGRAL_MULTIPLICITIES","vertices":1850},
+      {"degree":45,"discriminant":177,"fibre_size":44,"status":"REJECT_GLOBAL_SPECTRUM_NONSQUARE","vertices":2026},
+      {"degree":47,"discriminant":185,"fibre_size":46,"status":"REJECT_GLOBAL_SPECTRUM_NONSQUARE","vertices":2210},
+      {"degree":49,"discriminant":193,"fibre_size":48,"status":"REJECT_GLOBAL_SPECTRUM_NONSQUARE","vertices":2402},
+      {"degree":51,"discriminant":201,"fibre_size":50,"status":"REJECT_GLOBAL_SPECTRUM_NONSQUARE","vertices":2602},
+      {"degree":53,"discriminant":209,"fibre_size":52,"status":"REJECT_GLOBAL_SPECTRUM_NONSQUARE","vertices":2810},
+      {"degree":55,"discriminant":217,"fibre_size":54,"status":"REJECT_GLOBAL_SPECTRUM_NONSQUARE","vertices":3026},
+      {"degree":57,"discriminant":225,"fibre_size":56,"interpretation":"M57 open","multiplicities":[1729,1520],"restricted_eigenvalues":[7,-8],"status":"SPECTRALLY_ADMISSIBLE","vertices":3250}
+    ],
+    "involutive_curvature_track": {
+      "n2": "Petersen matching is the unique fixed-point-free involution on two symbols",
+      "n56": "export conjugacy-class branch with 2^28 holonomy cuts; no SAT/UNSAT verdict",
+      "n6": "all 15 pair matchings and all 20 triangle holonomies are 2^3"
+    },
+    "only_admissible_fibre_sizes": [1,2,6,56],
+    "unrestricted_track": {
+      "n56": "172480 directed integer variables plus lazy triangle and mu separators",
+      "n6": "exact Hoffman-Singleton edge-chart witness",
+      "n8_to_n54": "rejected before CSP by the global Moore spectral gate"
+    }
+  },
+  "front_3531_typed_quotient_reconstruct": {
+    "Golay_Witt_tower": {
+      "deleted_counts": [23,21],
+      "objects": [100,77,56],
+      "operations": ["induced second-subconstituent restriction deleting infinity plus 22 points","point-avoidance restriction deleting 21 hexads"],
+      "reconstruction_requires": "deleted incidence objects, not a fibre label",
+      "uniform_quotient_possible": [false,false]
+    },
+    "W33_face_tower": {
+      "combined_fibre": 6,"every_stage_surjective":true,"objects":[240,120,40],
+      "operations":["uniform antipodal quotient fibre 2","uniform 40K3 quotient fibre 3"],"side_label_alphabet":6
+    },
+    "boundary":"The two towers share a quotient-reconstruct pattern only in a typed information-loss category, not as one uniform quotient functor.",
+    "minimal_typed_morphism_vocabulary":["uniform_quotient","induced_restriction","point_avoidance","incidence_extension"],
+    "no_go_reason":"100/77 and 77/56 are nonintegral, whereas 240/120=2 and 120/40=3.",
+    "reconstruction_axiom":"A quotient plus side label reconstructs iff x -> (q(x),side(x)) is injective; an induced restriction instead needs the deleted object and incidence attachment data.",
+    "uniform_fibre_functor_equivalence":false
+  },
+  "front_3532_spectral_transplant_audit": {
+    "automatic_port_policy": {
+      "ALLOW":["identities reduced in Q[x]/(x^2+2x-8)","U=(-I-A)/3 and U^2=I on augmentation","polynomial spectral projectors as formulas"],
+      "DENY_AUTOMATIC_PORT":["lines","cliques","incidence factorizations","automorphism groups","codes","descendant maps","symplectic geometry"],
+      "REQUIRE_NEW_EVIDENCE":["trace","determinant","projector rank","multiplicity","p-rank"]
+    },
+    "baseline_head":"54133497390161b6cb6502e7c1aff1d8033b78d3",
+    "boundary":"This is an exact live-head source-search audit and policy guard, not proof that every historical prose mention is mathematically correct.",
+    "context_or_atlas_hits":["_test_q35.txt","_test_q35b.txt","_test_q35c.txt","_test_q36.txt","_test_q36b.txt","_test_q36c.txt","_test_q37.txt","archive/root_scripts/PMNS_AND_UNIQUENESS.py","exploration/PART_CCLXXIX_PLATONIC_MCKAY_BRIDGE.py","exploration/PART_CCLXXVIII_GOSSET_POLYTOPE_BRIDGE.py","exploration/PART_CCLXXVII_SCHLAFLI_DOUBLE_SIX_BRIDGE.py","exploration/PART_CCLXXXIII_DISCRETE_WIGNER_BRIDGE.py","exploration/PART_CCLXXXII_MBQC_GRAPH_STATES_BRIDGE.py","exploration/PART_CCLXXXIV_RAMANUJAN_IHARA_BRIDGE.py","exploration/PART_CCLXXXI_TERNARY_CODES_BRIDGE.py","exploration/PART_CCLXXXV_ALBERT_JORDAN_BRIDGE.py","exploration/PART_CCLXXX_FINITE_GEOMETRY_BRIDGE.py","out.txt","tests/test_albert_jordan_cclxxxv.py","tests/test_gosset_polytope_cclxxviii.py","tests/test_schlafli_double_six_cclxxvii.py","tools/SOLVE_IT.py"],
+    "direct_common_kernel_artifacts":["analysis/BT3500_BT3505_triangle_free_srg_m57_bridge.md","analysis/BT3506_BT3512_seven_graph_csp_scheme_symmetry.md","analysis/BT3506_BT3512_seven_graph_csp_scheme_symmetry_index_insert.html","analysis/BT3506_BT3512_seven_graph_csp_scheme_symmetry_insert.tex","analysis/bt3500_3505_triangle_free_srg_m57_bridge.py","analysis/bt3506_3512_seven_graph_csp_scheme_symmetry.py","data/PART_BT3500_BT3505_TRIANGLE_FREE_SRG_M57_BRIDGE_results.json","data/PART_BT3506_BT3512_SEVEN_GRAPH_CSP_SCHEME_SYMMETRY_results.json","docs/index.html","docs/seven-graph-csp-scheme.html","docs/triangle-free-srg-m57.html","tests/test_bt3500_bt3505_triangle_free_srg_m57_bridge.py"],
+    "explicit_nonports":["W33 projector ranks 24 and 15 versus Gewirtz ranks 35 and 20","W33 line/incidence and code constructions","any objectwise intertwiner"],
+    "hits":34,
+    "ported_now":["all adjacency polynomial identities reduce to aA+bI","centered complement is a common reflection","functional calculus is two-channel"],
+    "repository_code_search_query":"W33 Gewirtz"
+  },
+  "front_3533_bonkers_borel_fourier_tomography": {
+    "decomposition":"Q^57 = 1 + 3*V18 + V2",
+    "headline":"The entire Perkel 57-space is 1 + 3 conductor-19 channels + one conductor-3 phase channel.",
+    "spectral_split":"golden36=2*V18; minus3_20=V18+V2"
+  },
+  "front_3534_bonkers_factorization_curvature": {
+    "Hoffman_Singleton":{"closed_under_composition":false,"cycle_type":"2^3","edges_covered_once_per_pencil":15,"fibre_size":6,"matchings_per_pencil":5,"pencils":6,"reading":"six coupled non-group 1-factorization pencils"},
+    "M57_involutive_branch":{"cycle_type":"2^28","edges_covered_once_per_pencil":1540,"fibre_size":56,"matchings_per_pencil":55,"new_model_view":"56 reciprocity-coupled 1-factorizations of K56 plus holonomy and mu=1 cuts","pencils":56},
+    "boundary":"Pair-matching involution is gauge/coordinate dependent; triangle-holonomy cycle type is conjugacy invariant. The factorization theorem applies only inside the explicit involutive branch.",
+    "theorem":"If every row-pair permutation is an involution, then the vertex-star AllDifferent law makes the n-1 nonidentity maps at each source row a 1-factorization of K_n."
+  },
+  "passes":[3528,3529,3530,3531,3532,3533,3534],
+  "schema":"w33.pass3528_3534.borel_star_moore_functor_transplant.v1",
+  "semantic_sha256":"1ec126887cd1f09b8cdc074872567dd4962c2a399c1b14db8b035a8ea50dc591",
+  "status":"PASS_7_FRONTS"
+}
