@@ -1,0 +1,10 @@
+{
+  "schema": "w33.pass_namespace_registry.v2",
+  "range": [
+    3549,
+    3555
+  ],
+  "owner": "openai-gpt-5.6-thinking",
+  "topic": "Borel orbit models, Perkel table, generalized pentads, proof archive, and quantum walks",
+  "entrypoint": "analysis/bt3549_3555_borel_pentad_quantum_walk.py"
+}
