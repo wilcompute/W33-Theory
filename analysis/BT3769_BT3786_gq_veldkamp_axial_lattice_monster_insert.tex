@@ -1,0 +1,80 @@
+\subsection{Passes 3769--3786: the $GQ(4,2)$--Veldkamp--W33 closure}
+\label{sec:bt3769-3786-gq-veldkamp}
+
+The six-dimensional minus quadratic space over $\mathbb F_2$ supplies $27$ singular and $36$ nonsingular nonzero vectors.  Its singular points and totally singular lines form $GQ(2,4)$, with $27$ points and $45$ three-point lines; the dual $GQ(4,2)$ has $45$ points and $27$ five-point lines.  The dual point graph is
+\[
+ \operatorname{srg}(45,12,3,3),
+ \qquad
+ \operatorname{Spec}(A)=\{12^1,3^{20},(-3)^{24}\}.
+\]
+Writing $A_0=I$, $A_1=A$, and $A_2=J-I-A$, its Bose--Mesner multiplication is
+\[
+ A_1^2=12A_0+3A_1+3A_2,
+ \quad
+ A_1A_2=8A_1+9A_2,
+ \quad
+ A_2^2=32A_0+24A_1+22A_2.
+\]
+The primitive-idempotent ranks are $1,20,24$.  The Terwilliger algebra at a point has dimension $16$, center dimension $5$, and standard-module central block multiplicities $2,3,8,14,18$, hence semisimple type
+\[
+ M_3\oplus M_2\oplus \mathbb C^3.
+\]
+
+All $651$ projective lines of $PG(5,2)$ split by quadratic type as
+\[
+ 45+216+270+120.
+\]
+The final $120$ lines consist of three nonsingular vectors and coincide exactly with the Norton--Fischer triples of the preceding spread algebra.  Thus that triple system is the type-IV line class of the Veldkamp space $V(GQ(2,4))$.
+
+An exact-cover enumeration finds $200$ ovoids of $GQ(4,2)$, in automorphism orbits $40+160$.  On the $40$ plane ovoids, declare two objects adjacent when they share three quadrangle lines.  The resulting graph is
+\[
+ \operatorname{srg}(40,12,2,4)
+\]
+and is explicitly isomorphic to the independently reconstructed W33 point graph.  If $M$ is the $40\times45$ plane-ovoid incidence matrix, then
+\[
+ MM^{\mathsf T}=8I+2A_{W33}+J,
+ \qquad
+ \operatorname{Spec}(MM^{\mathsf T})=\{72^1,12^{24},0^{15}\}.
+\]
+
+The recurring count $135=45\cdot3$ supports two inequivalent $U_4(2)$ actions.  The Lagrangian-frame stabilizer has order census
+\[
+ 1^1\,2^{43}\,3^{32}\,4^{84}\,6^{32},
+\]
+whereas an ordinary $GQ(4,2)$ flag stabilizer has
+\[
+ 1^1\,2^{27}\,3^{32}\,4^{36}\,6^{96}.
+\]
+The corresponding permutation-character norms are $9$ and $8$, with cross-inner product $4$.
+
+The rank-$24$ primitive projector is
+\[
+ P=(A-12I)(A-3I)=90E_{-3},
+\]
+with entries $48$ on the diagonal, $-12$ on adjacent pairs, and $3$ on nonadjacent pairs.  On $\operatorname{im}P$ define
+\[
+ x\star y=E_{-3}(x\circ y),
+ \qquad
+ a_i=Pe_i/21.
+\]
+Then the $45$ vectors $a_i$ are idempotent axes with Peirce spectrum
+\[
+ 1^1,\qquad (1/7)^{14},\qquad (-1/3)^9.
+\]
+For collinear axes,
+\[
+ a_i\star a_j=-\frac13(a_i+a_j),
+\]
+and the five axes on every quadrangle line sum to zero.  For noncollinear $i,j$ with common neighbors $c_1,c_2,c_3$,
+\[
+ a_i\star a_j=rac17(a_i+a_j)+\frac5{42}(a_{c_1}+a_{c_2}+a_{c_3}).
+\]
+The algebra is positive Frobenius; its multiplication operators span all $M_{24}$ modulo $1000003$, so it is simple, and its derivation algebra is zero because $1/2$ is absent from every axis spectrum.  Its fusion law is not nontrivially $\mathbb Z_2$-graded, so this is not a Monster-$2A$ Majorana algebra.
+
+For a representative $W(D_4)$ frame stabilizer, the invariant alternating forms modulo two have dimension seven and rank distribution
+\[
+ 0^1,4^3,6^4,8^{12},10^{12},14^{40},16^{56}.
+\]
+No invariant form has rank $24$; consequently no $W(D_4)$-invariant even unimodular rank-$24$ child exists.  A deterministic trace-eight involution nevertheless permits an integral determinant-$-1$ basis change that pulls back $E_8^3$ to an even unimodular positive child whose exact surviving $U_4(2)$ stabilizer is $C_2$.  This child has roots and is not promoted as a Leech realization.
+
+The finite-group embedding front remains fail-closed.  A future candidate must reproduce the complete $36/45/27/120/135/40$ fingerprint, independent order $51840$, class correspondence, and content-addressed incidence digests before any Monster embedding is asserted.
