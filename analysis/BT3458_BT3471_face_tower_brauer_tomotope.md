@@ -2,19 +2,19 @@
 
 ## Status
 
-This packet executes all five requested continuations and two additional high-risk constructions after reconciling Passes 3418–3457 and the merged cover/Perkel lane.
+This packet executes all five requested continuations and two additional high-risk constructions after reconciling Passes 3418–3457, the merged cover/Perkel lane, and the later Passes 3486–3499 supplement.
 
-The exact verifier reports **PASS 12/12**. It independently reconstructs the 45-point Hermitian surface, the 240 filled-face orbit, the full `PSp(4,3)` actions on 240 and 120 states, the rank-five association scheme, the characteristic-three endomorphism algebras, the product-code coset census, and the oriented-tetrahedron incidence surface.
+The structural verifier reports **PASS 12/12**. It independently reconstructs the 45-point Hermitian surface, the 240 filled-face orbit, the full `PSp(4,3)` actions on 240 and 120 states, the rank-five association scheme, the characteristic-three endomorphism algebras, the product-code coset census, and the oriented-tetrahedron incidence surface. A separate release certificate decodes the later frozen Pass 3486 packet and verifies the improved live radius bound.
 
-The live boundaries remain
+The live boundaries are
 
 \[
-\boxed{389\leq R_{\rm defect}\leq436},
+\boxed{389\leq R_{\rm defect}\leq435},
 \qquad
 \boxed{10\leq\chi(H)\leq11}.
 \]
 
-No exact radius endpoint, ten-colour decision, simple-module label for the 81-dimensional modular summand, optimized FPGA result, tomotope monodromy identification, or physical interpretation is promoted.
+The lower bound 389 is reproduced independently here by the level-zero association-scheme relaxation. The upper bound 435 is imported objectwise from the later certified 247-circuit basis-exchange theorem. No exact radius endpoint, ten-colour decision, simple-module label for the 81-dimensional modular summand, optimized FPGA result, tomotope monodromy identification, or physical interpretation is promoted.
 
 ---
 
@@ -33,7 +33,7 @@ After scalar extension to \(\mathbb F_{243}\), one local filled-face quotient ha
 1+726z+58{,}322z^2.
 \]
 
-The 240-fold product sphere first reaches the quotient size at radius 389. Because the local metric is transitive, the uniform fractional-cover solution is optimal for the level-zero covering LP. Therefore the first Delsarte/fractional relaxation reproduces exactly the existing lower bound:
+The 240-fold product sphere first reaches the quotient size at radius 389. Because the local metric is transitive, the uniform fractional-cover solution is optimal for the level-zero covering LP. Therefore the first Delsarte/fractional relaxation reproduces exactly the lower bound
 
 \[
 \boxed{R_{\rm frac}=389}.
@@ -59,7 +59,23 @@ Its exact eigenmatrix rows, written with multiplicity first, are
 \end{array}
 \]
 
-The complete intersection tensor is frozen in the JSON certificate. It is the exact small orbital input needed for a symmetry-reduced two-point/Lasserre-style SDP; no 240-factor matrix needs to be carried explicitly.
+The complete intersection tensor is frozen in the structural JSON certificate. It is the exact small orbital input needed for a symmetry-reduced two-point/Lasserre-style SDP; no 240-factor matrix needs to be carried explicitly.
+
+### Live upper-bound reconciliation
+
+Pass 3486 subsequently found a 247-member fundamental circuit in a minimum-support basis. Pigeonholing 246 preferred shifts among the 242 nonzero vectors of \(\mathbb F_3^5\) cancels at least two basis coordinates while adding one extra defect. Hence
+
+\[
+436-2+1=435.
+\]
+
+`analysis/bt3471_parallel_radius_reconciliation.py` decodes the later frozen bootstrap certificate and asserts
+
+\[
+\boxed{389\leq R_{\rm defect}\leq435}.
+\]
+
+The local Delsarte no-go and the later constructive upper bound are independent and complementary.
 
 ---
 
@@ -204,11 +220,23 @@ The complete ordinary fingerprint of the 240-face action is
 \boxed{1+15_a+15_b+20+2\cdot24+60+81}.
 \]
 
+### Relation to the later edge filtration
+
+The later Pass 3489 filtration
+
+\[
+0<R_{240}<Z^1_{480}<E_{720}
+\]
+
+lives inside the 720-dimensional edge module. It is not the same object as the 240-dimensional filled-face permutation module decomposed here. The two results are complementary: the later packet finds the 196-dimensional quotient \(Z^1/(R+B^1)\), while this packet resolves the intrinsic antipodal and Loewy structure of the face carrier itself.
+
 ---
 
 ## 3462 — the full-\(M_4\) chromatic dead end and escape route
 
 Simply enlarging a trivial local fibre from a commutative algebra to `M4` cannot improve the old invariant chromatic frontier. Twirling a globally `PSp(4,3)`-invariant trivial-bundle weighting returns it to the existing three block spectral cones.
+
+The later Passes 3487–3488 also exhausted 63,869 denominator-32 amplitude profiles in a five-channel hinge family. The exactified winner still has Hoffman ratio strictly below nine. Thus scalar phases, the tested finite amplitude box, and an untwisted invariant `M4` fibre are all insufficient.
 
 The face tower supplies the missing ingredient: objectwise noncommuting transport.
 
@@ -232,10 +260,11 @@ Therefore the new amplitude compiler has:
 - 2,160 transposition-holonomy complement triangles;
 - full `M4` local amplitude reach after adding the conic sign.
 
-This closes both earlier brick walls:
+This closes three earlier brick walls:
 
 1. scalar phases are too weak;
-2. an untwisted full-`M4` fibre twirls back to the old cones.
+2. a tested dyadic amplitude box remains below nine;
+3. an untwisted full-`M4` fibre twirls back to the old cones.
 
 The resulting bundle is a concrete noncommuting candidate, not yet a certificate for the live 45-block chromatic graph.
 
@@ -257,7 +286,7 @@ over all
 
 valid ternary input states.
 
-The exact source comparison is:
+The exact source comparison is
 
 \[
 27\cdot25=675\text{ naive symbol entries},
@@ -360,8 +389,10 @@ Thus the final boundary is sharp:
 This packet contains:
 
 - `analysis/bt3458_3471_face_tower_brauer_tomotope.py`;
-- frozen exact JSON including the full intersection tensor;
-- focused pytest regression;
+- the raw 12-check structural JSON including the full intersection tensor;
+- `analysis/bt3471_parallel_radius_reconciliation.py`;
+- the compact live release certificate with interval \([389,435]\);
+- focused pytest regressions;
 - a generated literal symbol baseline;
 - exhaustive RTL testbench;
 - formal order-three harness;
