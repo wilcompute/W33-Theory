@@ -1,0 +1,25 @@
+\section{Passes 3715--3721: carrier replacement and control-plane architecture}
+
+The literal exactly-one-photon register is replaced by an explicit qutrit erasure carrier.  The code
+\[
+ |i_L\rangle=3^{-1/2}\sum_{j\in\mathbf F_3}|j,j+i,j+2i\rangle
+\]
+satisfies all Knill--Laflamme conditions for one known physical-qutrit erasure and realizes $[[3,1,2]]_3$.  Eighty-one logical qutrits therefore require 243 physical qutrits; under one-photon triple-rail encoding this is 243 photons in 729 modes.  For independent transmissivity $\eta$, the all-block success condition
+\[
+ [\eta^3+3(1-\eta)\eta^2]^{81}\ge 2/3
+\]
+gives $\eta\ge0.958628272258342$.
+
+An exhaustive degree-matched tournament checks all $\binom{19}{6}=27,132$ twelve-regular circulants on forty vertices.  W33 and the best route circulants share diameter two and average distance $22/13$, but W33 alone has exactly four common neighbours for every nonedge and zero redundancy variance; its spectral gap is 10, above the best circulant value found, approximately $9.280621379$.
+
+The proposed temporal loop is formalized as a causal qutrit process tensor: a qutrit SWAP stores the past state, a middle causal break replaces the exposed system, and a second SWAP retrieves the past.  This is non-Markovian memory without future-to-past signalling.  Its memory bond dimension is three for one qutrit and at least $3^{81}$ for an arbitrary eighty-one-qutrit state.
+
+At 1550 nm the minimum energy in the 243-photon carrier is $3.1142\times10^{-17}$ J per shot.  A 162-bit erasure record has a 300-K Landauer floor $4.6510\times10^{-19}$ J per cycle.  At group index four, feedforward delays of 1, 10, and 100 ns require approximately 7.49 cm, 74.95 cm, and 7.49 m of passive delay.
+
+A complete forty-mode intensity-interference identification uses 1600 input settings.  A familywise Hoeffding bound with $\epsilon=\delta=0.01$ requires 81,825 shots per setting, or 130,920,000 shots total.  The device must recover the SRG identity, forty lines, 160 line triangles, and the frozen marked-resolvent atlas against degree-matched controls.
+
+Two control-plane theorems change the architectural interpretation.  First, the 160 point-line incidences decompose into four perfect matchings, giving an optimal four-tick collision-free syndrome schedule.  Second, the order-25,920 symplectic group has exactly three ordered-pair orbits, so automorphism twirling compresses a generic 1600-parameter Hermitian calibration model to
+\[
+ aI+bA+c(J-I-A).
+\]
+Thus W33 need not be the literal protected Hilbert-space carrier to remain operationally distinguished: it can serve as an optimal syndrome scheduler and a rank-three calibration/noise compressor.  These are exact finite results; hardware cost, executed tomography, wall-plug power, and fault-tolerant thresholds remain evidence-gated.
