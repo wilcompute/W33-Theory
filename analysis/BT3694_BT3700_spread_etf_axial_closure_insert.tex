@@ -1,0 +1,55 @@
+\subsection{The spread ETF and its canonical Norton algebra (Passes 3694--3700)}
+\label{sec:spread-etf-norton}
+Let $A$ be the graph on the $36$ spreads of $W(3,3)$, adjacent when two
+spreads share four lines. Its rational primitive idempotents are
+\[
+ E_{15}=\tfrac12I+\tfrac16A-\tfrac1{12}J,
+ \qquad
+ E_{20}=\tfrac12I-\tfrac16A+\tfrac1{18}J.
+\]
+If $B$ is the $40\times36$ line--spread incidence matrix and
+$C=B-\frac14J_{40\times36}$, then
+\[
+ \boxed{C^{\mathsf T}C=18E_{15}}
+\]
+shows that the normalized columns form a real $\operatorname{ETF}(15,36)$.
+Their mutual inner products are $+1/5$ for a four-line intersection and
+$-1/5$ for a one-line intersection, saturating the Welch bound. The Seidel
+matrix $S=I+2A-J$ obeys $S^2-2S-35I=0$ and has spectrum
+$7^{15}\oplus(-5)^{21}$.
+
+The complementary projector $I-E_{15}$ has rank $21$. Thus an exact passive
+unitary dilation of the $36$-mode frame analysis requires a $21$-dimensional
+guard sector; this is a dimension certificate, not an experimental claim.
+
+On $V=\operatorname{im}E_{15}$ define the Norton product
+$x\star y=E_{15}(x\circ y)$ and axes $a_i=6E_{15}e_i$. The $36$ axes are
+primitive idempotents. Each axis has multiplication spectrum
+\[
+ 1^1\oplus(-\tfrac12)^5\oplus(\tfrac16)^9,
+\]
+with the exact $\mathbb Z_2$-graded fusion law
+\[
+(-\tfrac12)\star(-\tfrac12)\subseteq 1\oplus\tfrac16,
+\quad
+(-\tfrac12)\star\tfrac16\subseteq-\tfrac12,
+\quad
+\tfrac16\star\tfrac16\subseteq1\oplus\tfrac16.
+\]
+This is a positive Frobenius axial algebra but not a Monster/Majorana algebra.
+For adjacent axes, $a_i\star a_j=(a_i+a_j)/6$. Every nonadjacent pair has a
+unique third axis $a_k$ satisfying
+\[
+ a_i\star a_j=-\frac{a_i+a_j}{6}+\frac{a_k}{3}.
+\]
+These products define $120$ triples. Each triple consists of three spreads
+sharing one W33 line; for every W33 line, its nine containing spreads split
+into three disjoint triples.
+
+The $36$ Witting-ray orthogonality graph is a different object: it is
+$11$-regular with spectrum $11^1\oplus2^{20}\oplus(-1)^3\oplus(-4)^{12}$,
+whereas the spread graph is $15$-regular with spectrum
+$15^1\oplus3^{15}\oplus(-3)^{20}$. Finally, the ternary panels of the
+four-parabolic chamber system cannot be changed to binary panels by an
+unbranched type-preserving cover, because such covers are locally bijective
+on rank-one residues.
