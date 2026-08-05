@@ -1,17 +1,52 @@
 name: W33 Passes 3694-3700 exact spread ETF and axial closure
 on:
   push:
+    branches: [master]
     paths:
       - 'analysis/w33_pass3694_3700_spread_etf_axial_closure.py'
       - 'analysis/w33_mmgroup_u42_candidate_harness.py'
       - 'analysis/w33_monster_u42_class_fusion_target.g'
+      - 'analysis/BT3694_BT3700_spread_etf_axial_closure*'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
       - 'data/PART_3694_3700_SPREAD_ETF_AXIAL_CLOSURE_results.json'
+      - 'data/w33_current_frontier_manifest_v1.json'
       - 'tests/test_w33_pass3694_3700_spread_etf_axial_closure.py'
+      - 'docs/spread-etf-axial-atlas.html'
       - '.github/workflows/w33_pass3694_3700_spread_etf_axial_closure.yml'
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
+concurrency:
+  group: w33-pass3694-3700-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
+  publish-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: master, fetch-depth: 0}
+      - name: Insert public theorem card exactly once
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          index = Path('docs/index.html')
+          fragment = Path('analysis/BT3694_BT3700_spread_etf_axial_closure_index_insert.html').read_text(encoding='utf-8').strip()
+          text = index.read_text(encoding='utf-8')
+          if 'id="spread-etf-norton"' not in text:
+              marker = '</main>' if '</main>' in text else '</body>'
+              if marker not in text:
+                  raise SystemExit('no safe public-index insertion marker')
+              text = text.replace(marker, fragment + '\n' + marker, 1)
+              index.write_text(text, encoding='utf-8')
+          assert index.read_text(encoding='utf-8').count('id="spread-etf-norton"') == 1
+          PY
+          if git diff --quiet -- docs/index.html; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/index.html
+          git commit -m 'Publish Passes 3694-3700 spread ETF on public index'
+          git pull --rebase origin master
+          git push origin HEAD:master
   exact-python:
     runs-on: ubuntu-latest
     steps:
@@ -39,3 +74,29 @@ jobs:
         with:
           name: w33-pass3695-gap-class-fusion
           path: data/PART_3695_MONSTER_U42_CLASS_FUSION_results.json
+  canonical-papers:
+    needs: publish-index
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: master}
+      - uses: WtfJoke/setup-tectonic@v3
+        with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
+      - name: Verify reachability and compile all three manuscripts
+        run: |
+          grep -F 'BT3694_BT3700_spread_etf_axial_closure_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          grep -F 'id="spread-etf-norton"' docs/index.html
+          mkdir -p evidence/pass3694_3700
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3694_3700/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3694_3700/pdf_sha256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-pass3694-3700-canonical-papers
+          path: |
+            evidence/pass3694_3700/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
