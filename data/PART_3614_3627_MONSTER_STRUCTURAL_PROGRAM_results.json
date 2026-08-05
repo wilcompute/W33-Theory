@@ -1,0 +1,26 @@
+{
+  "verified": true,
+  "passes": "3614-3627",
+  "checks": {
+    "points": true,
+    "degree": true,
+    "srg_identity": true,
+    "projector_rank": true,
+    "projector_scale": true,
+    "projector_diagonal": true,
+    "adjacent_value": true,
+    "nonadjacent_value": true,
+    "leech_uniform_no_go": true,
+    "moonshine_raw_moment_no_go": true,
+    "prime_separation": true,
+    "minimal_degree_factorization": true,
+    "steinberg_sylow_scale": true
+  },
+  "w33": {"vertices": 40, "degree": 12, "srg": [40,12,2,4], "eigenvalue_2_projector": {"rank":24,"numerator_scale":60,"diagonal":36,"adjacent_off_diagonal":6,"nonadjacent_off_diagonal":-4}},
+  "bonkers_falsifiers": {
+    "leech_seed": {"status":"NO_GO_FOR_DIRECT_UNIFORM_EMBEDDING","norm4_adjacent_inner_product":"2/3","norm4_nonadjacent_inner_product":"-4/9","surviving_direction":"nonuniform integral extension, glue code, quotient, or multi-copy cancellation"},
+    "raw_moonshine_moments": {"status":"NO_GO_FOR_RAW_THREE_EIGENMODE_MODEL","recurrence":"s[n+3]=10*s[n+2]+32*s[n+1]-96*s[n]","residuals":[10933957100,105149879960,355102291024],"surviving_direction":"graded induction, Hecke/replicability, VOA, or ambient Monster module"}
+  },
+  "monster_u42": {"u42_order":25920,"u42_primes":[2,3,5],"monster_large_primes_external_to_u42":[47,59,71],"documented_5B_type_fusion_constraints":{"involutions":"2B","order_3":"3B","order_5":"5B"},"majorana_consequence":"DIRECT_2A_AXIS_MODEL_BLOCKED_FOR_5B_TYPE_EMBEDDING","steinberg_3_local_register":{"degree":81,"sylow_3_order":81,"status":"delegated to GAP companion certificate"}},
+  "evidence_boundary": {"not_claimed":["canonical concrete mmgroup U4(2) embedding","unique class fusion","observed degree-81 multiplicity","Griess or VOA multiplication from W33 incidence","Leech embedding of the W33 rank-24 frame"]}
+}
