@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [3821, 3828],
+  "slug": "maximal_code_orbits_exact_mesh_holonomy_krein_monster_ovoid_three_bonkers",
+  "title": "Maximal code-orbit classification, exact adjacent multiport mesh, holonomy Krein/Terwilliger closure, compressed Monster descent, quadratic-parent/ovoid fusion, and three chained constructions",
+  "status": "reserved",
+  "owner": "openai-gpt-5.6-thinking",
+  "reserved_at": "2026-08-05T18:28:00-04:00",
+  "purpose": "Execute all five published next steps from Passes 3813-3820 and three independent outside-the-box constructions: classify maximal [36,17,8] extensions under U4(2):2; replace the adjacent multiport candidate by an exact symbolic certificate and sharpen depth/gate bounds; complete the rank-five holonomy association scheme through Krein, fusion, Q-polynomial, automorphism, and Terwilliger data; execute every internally available compressed Monster filter and strengthen the fail-closed external slot; fuse the 64-point quadratic parent with the 200-ovoid GQ(4,2) system; and derive three further exact constructions from the resulting carriers.",
+  "coordination": "Preserve completed Passes 3787-3794, active Passes 3795-3812, and published Passes 3813-3820. The active 3795-3812 packet studies the complete ovoid/rootless/axial program; this packet restricts the ovoid front to the explicit 64-parent incidence fusion and uses disjoint artifact names. Reconcile every later parallel commit before shared manifest, manuscript, website, or namespace writes.",
+  "boundary": "Reservation only. No exhaustive orbit count, globally optimal circuit, characteristic-zero Terwilliger conclusion from modular evidence alone, serialized Monster embedding or class fusion, rootless/Leech identification, hardware/laboratory result, remote CI/PDF success, or physical interpretation is promoted without executed evidence."
+}
