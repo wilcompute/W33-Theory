@@ -1,0 +1,37 @@
+{
+  "boundaries": {
+    "amplitude": "unrestricted optimum open",
+    "canonical_objectwise": "A preferred objectwise map still requires extra cross-module geometry; C5 action alone cannot choose one.",
+    "chromatic": "10 <= chi(H) <= 11",
+    "covering_radius": "389 <= D_H1 <= 435",
+    "hardware": "RTL equivalence is exact; physical timing and power remain synthesis/placement evidence."
+  },
+  "locator": {
+    "and_construction": 5,
+    "and_lower_bound": 5,
+    "anf_monomial_masks": [[5,9,10],[4,5,6,9],[4,5,6,10],[4,6,9,10],[4,6,9,12]],
+    "compound_minimum_distance": 3,
+    "compound_patterns": 137,
+    "formulas": ["y0=x0*x2+x0*x3+x1*x3","y1=x2+x0*x2+x1*x2+x0*x3","y2=x2+x0*x2+x1*x2+x1*x3","y3=x2+x1*x2+x0*x3+x1*x3","y4=x2+x1*x2+x0*x3+x2*x3"],
+    "network": ["t0=a+b","y0=t0+d","t1=x2+t0","y1=t1+c","t2=y1+a","y2=t2+y0","y3=t0+y2","y4=t2+e"],
+    "quadratic_pair_order": ["x0x1","x0x2","x0x3","x1x2","x1x3","x2x3"],
+    "quadratic_row_masks": [22,14,26,28,44],
+    "quadratic_shadow": "all homogeneous quadratic forms with x0x1 coefficient zero",
+    "quadratic_span_rank": 5,
+    "shared_products": ["a=x0*x2","b=x0*x3","c=x1*x2","d=x1*x3","e=x2*x3"],
+    "theorem": "The locator has multiplicative complexity exactly five: five AND gates are necessary and sufficient.",
+    "truth_table": [0,0,0,0,30,25,0,7,0,27,13,22,14,18,29,1],
+    "xor_construction": 8
+  },
+  "representation": {
+    "A5": {"P_multiplicities":[1,1,2,1],"W_multiplicities":[3,0,3,1],"endomorphism_field_dimensions":[1,2,1,1],"hom_dimension":10,"maximum_common_rank":14,"rational_simple_dimensions":[1,6,4,5],"stable_dimension":26,"stable_equivalence":"P20 + 2*1 + 4 = W20 + (3+3prime)"},
+    "C5": {"P_multiplicities":[4,4],"W_multiplicities":[4,4],"canonicality":"C5 action alone leaves an 80-dimensional rational gauge algebra.","endomorphism_field_dimensions":[1,4],"hom_dimension":80,"intertwiner_algebra":"M4(Q) x M4(Q(zeta5))","invertible_intertwiners":"GL4(Q) x GL4(Q(zeta5))","maximum_common_rank":20,"rational_simple_dimensions":[1,4]},
+    "D10": {"P_multiplicities":[2,2,4],"W_multiplicities":[4,0,4],"cyclotomic_core_dimension":16,"endomorphism_field_dimensions":[1,1,2],"fixed_sector_common_rank":2,"hom_dimension":40,"kernel_cokernel_minimum":[2,2],"maximum_common_rank":18,"rational_simple_dimensions":[1,1,4],"stable_dimension":22,"stable_equivalence":"P20 + 2*1 = W20 + 2*eps"},
+    "borel": {"boundary":"The 19:9 Borel group supplies no C5 generator or normalizer; its 11-observable/10-phase split is not automatically a C5-equivariant selector.","contains_order_five":false,"factorization":"3^2*19","gcd_with_5":1,"order":171},
+    "hom_ladder": [80,40,10],
+    "rank_ladder": [20,18,14]
+  },
+  "schema": "w33.pass3570_3576.cyclotomic_core_quadratic_locator.v1",
+  "semantic_sha256": "38ea92c1767dda0b786232710f37ead7ec35628511c36dfb7b3d2c79f35a9ad0",
+  "status": "PASS_7_FRONTS"
+}
