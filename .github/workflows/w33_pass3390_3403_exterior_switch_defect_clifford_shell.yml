@@ -1,0 +1,33 @@
+name: Passes 3390-3403 Exterior Switch Defect Clifford Shell
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/*3390*'
+      - 'analysis/BT3390_BT3403*'
+      - 'tests/test_bt3390_bt3403*'
+      - 'data/w33_pass_namespace_registry_v2.d/3390-3403.json'
+      - '.github/workflows/w33_pass3390_3403_exterior_switch_defect_clifford_shell.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pass3390-3403-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check sympy pytest
+      - name: Regenerate exact certificate
+        run: python analysis/bt3390_3401_validated_runner.py
+      - name: Focused regression
+        run: pytest -q tests/test_bt3390_bt3403_exterior_switch_defect_clifford_shell.py
+      - name: Evidence boundary
+        run: |
+          grep -F '10 <= chi(H) <= 11' data/PART_BT3390_BT3401_EXTERIOR_SWITCH_DEFECT_CLIFFORD_SHELL_results.json
+          git diff --check
