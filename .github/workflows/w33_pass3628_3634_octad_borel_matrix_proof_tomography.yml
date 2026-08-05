@@ -1,0 +1,127 @@
+name: Passes 3628-3634 Octad Borel Matrix Proof Tomography
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/*3628*'
+      - 'analysis/*3629*'
+      - 'analysis/*3630*'
+      - 'analysis/*3631*'
+      - 'analysis/*3632*'
+      - 'analysis/*3633*'
+      - 'analysis/*3634*'
+      - 'data/PART_BT3628*'
+      - 'data/PART_BT3631*'
+      - 'data/w33_pass_namespace_registry_v2.d/3628-3634.json'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - 'docs/octad-borel-matrix-proof-tomography.html'
+      - 'docs/index.html'
+      - 'tests/test_bt3628_bt3634_octad_borel_matrix_proof_tomography.py'
+      - '.github/workflows/w33_pass3628_3634_octad_borel_matrix_proof_tomography.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pass3628-3634-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  exact-proof-batch-and-papers:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install exact dependencies
+        run: python -m pip install --disable-pip-version-check pytest numpy sympy
+      - name: Regenerate seven-front certificate
+        run: |
+          mkdir -p evidence/pass3628_3634
+          cp data/PART_BT3628_BT3634_OCTAD_BOREL_MATRIX_PROOF_TOMOGRAPHY_results.json /tmp/frozen3634.json
+          python analysis/bt3628_3634_octad_borel_matrix_proof_tomography.py --json evidence/pass3628_3634/results.json | tee evidence/pass3628_3634/exact.log
+          grep -F 'PASS_7_FRONTS 58b7e205ee0a1409230d50df6efc3abe8d67caf3125b9eaa654dd6600b7b1d25' evidence/pass3628_3634/exact.log
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          got=json.loads(Path('evidence/pass3628_3634/results.json').read_text())
+          old=json.loads(Path('/tmp/frozen3634.json').read_text())
+          assert got==old
+          print('PASS semantic frozen-certificate equality')
+          PY
+      - name: Regenerate and compare real proof batch
+        run: |
+          python analysis/bt3631_real_star_proof_batch.py --instances 16 --json evidence/pass3628_3634/proof_batch.json | tee evidence/pass3628_3634/proof_batch.log
+          grep -F 'PASS_REAL_STAR_BATCH c176539c7b944274fb64965275ce3f900852fe4b26f67923b2ca6a2f06e256a4' evidence/pass3628_3634/proof_batch.log
+          python - <<'PY'
+          import base64,json,lzma
+          from pathlib import Path
+          packed=''.join(p.read_text().strip() for p in sorted(Path('data/PART_BT3631_REAL_STAR_PROOF_BATCH.parts').glob('part*.b85')))
+          frozen=json.loads(lzma.decompress(base64.b85decode(packed)).decode())
+          got=json.loads(Path('evidence/pass3628_3634/proof_batch.json').read_text())
+          assert got==frozen
+          print('PASS proof-batch frozen equality')
+          PY
+      - name: Focused regression
+        run: |
+          pytest -q tests/test_bt3628_bt3634_octad_borel_matrix_proof_tomography.py | tee evidence/pass3628_3634/pytest.log
+          git diff --check
+      - name: Verify manuscript and public reachability
+        run: |
+          python - <<'PY'
+          import json,re
+          from pathlib import Path
+          tex=Path('analysis/W33_CURRENT_FRONTIER_MANIFEST.tex').read_text()
+          inputs=re.findall(r'\\input\{([^}]+)\}',tex)
+          manifest=json.loads(Path('data/w33_current_frontier_manifest_v1.json').read_text())
+          assert inputs==manifest['required_ordered_inputs']
+          ours='analysis/BT3628_BT3634_octad_borel_matrix_proof_tomography_insert'
+          assert inputs.count(ours)==1
+          assert Path(ours+'.tex').is_file()
+          assert 'bt3628-3634-octad-borel-matrix-proof-tomography' in Path('docs/index.html').read_text()
+          assert Path('docs/octad-borel-matrix-proof-tomography.html').is_file()
+          print('PASS current-frontier and public reachability')
+          PY
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Compile canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3628_3634/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3628_3634/pdf_sha256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3628-3634-exact-proof-papers
+          path: |
+            evidence/pass3628_3634/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
+
+  canonical-proof-shard:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check numpy sympy
+      - name: Execute first canonical 58/59-record archive shard
+        run: |
+          mkdir -p evidence/pass3628_3634/heavy
+          python analysis/bt3552_clique_proof_archive.py --shard 0 --json evidence/pass3628_3634/heavy/shard_00.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3631-canonical-proof-shard-00
+          compression-level: 9
+          path: evidence/pass3628_3634/heavy/shard_00.json
