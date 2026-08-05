@@ -775,7 +775,7 @@ def product_code_and_reye_certificate():
             "parameters": [12, 6, 4],
             "weight_four_projective_supports": len(weight_four_supports),
             "weight_three_vectors_examined": 1760,
-            "weight_three_coset_histogram": dict(sorted(histogram.items())),
+            "weight_three_coset_histogram": {str(key): value for key, value in sorted(histogram.items())},
             "maximum_weight_three_vectors_in_one_dual_coset": 8,
             "maximum_projective_triples_in_one_dual_coset": max_projective_weight_three_supports,
             "tomotope_triangular_faces_required": 16,
