@@ -1,0 +1,101 @@
+name: Pass 3751 execute Monster U4(2) class fusion
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/w33_pass3751_gap_monster_u42_class_fusion_commit.yml'
+      - 'analysis/w33_monster_u42_class_fusion_target.g'
+      - 'data/w33_pass_namespace_registry_v2.d/3751-3758.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: w33-pass3751-gap-class-fusion
+  cancel-in-progress: true
+
+jobs:
+  execute-and-publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+      - name: Install GAP and CTblLib
+        id: install
+        continue-on-error: true
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gap gap-character-tables
+      - name: Execute target and build structured artifact
+        env:
+          INSTALL_OUTCOME: ${{ steps.install.outcome }}
+        run: |
+          set +e
+          mkdir -p evidence/pass3751
+          if command -v gap >/dev/null 2>&1; then
+            timeout 75m gap -q analysis/w33_monster_u42_class_fusion_target.g > evidence/pass3751/stdout.txt 2> evidence/pass3751/stderr.txt
+            GAP_RC=$?
+          else
+            GAP_RC=127
+            : > evidence/pass3751/stdout.txt
+            printf '%s\n' 'gap executable unavailable after installation step' > evidence/pass3751/stderr.txt
+          fi
+          export GAP_RC
+          python - <<'PY'
+          import hashlib, json, os
+          from pathlib import Path
+          out = Path('evidence/pass3751/stdout.txt').read_text(errors='replace')
+          err = Path('evidence/pass3751/stderr.txt').read_text(errors='replace')
+          rc = int(os.environ['GAP_RC'])
+          parsed = None
+          parse_error = None
+          try:
+              parsed = json.loads(out)
+          except Exception as exc:
+              parse_error = f'{type(exc).__name__}: {exc}'
+          if rc == 0 and isinstance(parsed, dict) and parsed.get('status') == 'EXECUTED_CTBLIB_CLASS_FUSION_CENSUS':
+              artifact = parsed
+              artifact['workflow_wrapper'] = {
+                  'schema': 'w33.pass3751.gap_execution_wrapper.v1',
+                  'gap_returncode': rc,
+                  'install_outcome': os.environ.get('INSTALL_OUTCOME'),
+                  'stdout_sha256': hashlib.sha256(out.encode()).hexdigest(),
+                  'stderr_sha256': hashlib.sha256(err.encode()).hexdigest(),
+              }
+          else:
+              artifact = {
+                  'schema': 'w33.pass3751.gap_execution_wrapper.v1',
+                  'status': 'GAP_CLASS_FUSION_EXECUTION_FAILED_OR_INCOMPLETE',
+                  'gap_returncode': rc,
+                  'install_outcome': os.environ.get('INSTALL_OUTCOME'),
+                  'stdout_sha256': hashlib.sha256(out.encode()).hexdigest(),
+                  'stderr_sha256': hashlib.sha256(err.encode()).hexdigest(),
+                  'json_parse_error': parse_error,
+                  'stdout_tail': out[-4000:],
+                  'stderr_tail': err[-4000:],
+              }
+          Path('data/PART_3751_MONSTER_U42_CLASS_FUSION_EXECUTION.json').write_text(
+              json.dumps(artifact, indent=2, sort_keys=True) + '\n'
+          )
+          print(artifact['status'])
+          PY
+      - name: Publish observable result
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/PART_3751_MONSTER_U42_CLASS_FUSION_EXECUTION.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Pass 3751: publish observed GAP Monster U4(2) class-fusion result'
+          git pull --rebase origin master
+          git push origin HEAD:master
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3751-gap-class-fusion-evidence
+          path: |
+            evidence/pass3751/**
+            data/PART_3751_MONSTER_U42_CLASS_FUSION_EXECUTION.json
