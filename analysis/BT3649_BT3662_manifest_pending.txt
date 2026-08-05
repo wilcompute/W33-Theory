@@ -1,0 +1,1 @@
+Manifest integration is performed in the final current-master merge commit; this sentinel is removed before merge.
