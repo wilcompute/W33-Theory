@@ -3,8 +3,11 @@
   "range": [3628, 3634],
   "slug": "octad_borel_matrix_proof_tomography",
   "title": "Octad pattern census, Borel core/bridge solver, Perkel matrix units, proof batch, and marked tomography",
-  "status": "reserved",
+  "status": "published",
   "owner": "openai-agent",
   "reserved_at": "2026-08-05T12:40:00-04:00",
-  "boundary": "Reservation only; promoted results require exact source, frozen certificates, focused tests, workflow, manuscript integration, and public reachability."
+  "published_certificate": "data/PART_BT3628_BT3634_OCTAD_BOREL_MATRIX_PROOF_TOMOGRAPHY_results.json",
+  "proof_payload": "data/PART_BT3631_REAL_STAR_PROOF_BATCH.parts",
+  "semantic_sha256": "58b7e205ee0a1409230d50df6efc3abe8d67caf3125b9eaa654dd6600b7b1d25",
+  "boundary": "Published exact packet; M57, realized K8 octad orbit census, Borel verdicts, complete 3,720 proof archive, PDF evidence, and physical claims remain separately gated."
 }
