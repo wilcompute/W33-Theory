@@ -25,7 +25,10 @@
     "analysis/BT3528_BT3534_borel_star_moore_functor_transplant_insert",
     "analysis/BT3535_BT3541_clique_borel_fourier_factorization_ports_insert",
     "analysis/BT3542_BT3548_borel_commutant_outer_s6_analytic_insert",
-    "analysis/BT3549_BT3555_borel_pentad_quantum_walk_insert"
+    "analysis/BT3549_BT3555_borel_pentad_quantum_walk_insert",
+    "analysis/BT3556_BT3569_radius_amplitude_code_fault_c5_insert",
+    "analysis/BT3570_BT3576_cyclotomic_core_quadratic_locator_insert",
+    "analysis/BT3577_BT3583_petersen_matrix_octad_marked_walk_insert"
   ],
   "front_doors": {
     "w33_paper.tex": "w33_paper_body.tex",
@@ -48,7 +51,8 @@
     {"kind":"id","token":"bt3528-3534-borel-star-moore-transplant","source":"analysis/BT3528_BT3534_borel_star_moore_functor_transplant_index_insert.html"},
     {"kind":"id","token":"bt3535-3541-clique-borel-fourier-factorization-ports","source":"analysis/BT3535_BT3541_clique_borel_fourier_factorization_ports_index_insert.html"},
     {"kind":"id","token":"bt3542-3548-borel-commutant-outer-s6-analytic","source":"analysis/BT3542_BT3548_borel_commutant_outer_s6_analytic_index_insert.html"},
-    {"kind":"id","token":"bt3549-3555-borel-pentad-quantum-walk","source":"analysis/BT3549_BT3555_borel_pentad_quantum_walk_index_insert.html"}
+    {"kind":"id","token":"bt3549-3555-borel-pentad-quantum-walk","source":"analysis/BT3549_BT3555_borel_pentad_quantum_walk_index_insert.html"},
+    {"kind":"id","token":"bt3577-3583-petersen-matrix-octad-marked-walk","source":"analysis/BT3577_BT3583_petersen_matrix_octad_marked_walk_index_insert.html"}
   ],
   "standalone_public_pages": [
     {"token":"passes-3500-3505-triangle-free-srg-m57","source":"docs/triangle-free-srg-m57.html"},
@@ -57,7 +61,8 @@
     {"token":"passes-3528-3534-borel-star-moore-transplant","source":"docs/borel-star-moore-transplant.html"},
     {"token":"passes-3535-3541-clique-borel-fourier-factorization","source":"docs/clique-borel-fourier-factorization.html"},
     {"token":"passes-3542-3548-borel-commutant-outer-s6","source":"docs/borel-commutant-outer-s6.html"},
-    {"token":"passes-3549-3555-borel-pentad-quantum-walk","source":"docs/borel-pentad-quantum-walk.html"}
+    {"token":"passes-3549-3555-borel-pentad-quantum-walk","source":"docs/borel-pentad-quantum-walk.html"},
+    {"token":"passes-3577-3583-petersen-matrix-octad-marked-walk","source":"docs/petersen-matrix-octad-marked-walk.html"}
   ],
   "boundary": "The manifest controls source reachability and ordering only; it does not certify PDF, hardware, laboratory, or physical claims."
 }
