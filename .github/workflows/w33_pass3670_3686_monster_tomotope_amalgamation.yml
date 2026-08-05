@@ -1,0 +1,122 @@
+name: Passes 3670-3686 Monster Tomotope Amalgamation
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/*3670*'
+      - 'analysis/*3686*'
+      - 'data/PART_3670_3686*'
+      - 'data/w33_pass_namespace_registry_v2.d/3670-3686.json'
+      - 'tests/test_w33_pass3670_3686_monster_tomotope_amalgamation.py'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - 'docs/monster-tomotope-amalgamation.html'
+      - '.github/workflows/w33_pass3670_3686_monster_tomotope_amalgamation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pass3670-3686-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  exact-products-gap-papers:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gap gap-character-tables
+          python -m pip install --disable-pip-version-check numpy sympy pytest
+      - name: Recompute nine-front certificate
+        run: |
+          mkdir -p evidence/pass3670_3686
+          cp data/PART_3670_3686_MONSTER_TOMOTOPE_AMALGAMATION_results.json evidence/pass3670_3686/frozen.json
+          python analysis/w33_pass3670_3686_monster_tomotope_amalgamation.py | tee evidence/pass3670_3686/exact.log
+          grep -F 'PASS_3670_3686 2d5fe418bb2bbee0eb479e42d22dd47d31c37f7d5f8be6b1732acf0dc1db8b78' evidence/pass3670_3686/exact.log
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          generated=json.loads(Path('data/PART_3670_3686_MONSTER_TOMOTOPE_AMALGAMATION_results.json').read_text())
+          frozen=json.loads(Path('evidence/pass3670_3686/frozen.json').read_text())
+          assert generated == frozen
+          assert generated['semantic_sha256'] == '2d5fe418bb2bbee0eb479e42d22dd47d31c37f7d5f8be6b1732acf0dc1db8b78'
+          assert all(generated['checks'].values())
+          print('PASS frozen exact certificate equality')
+          PY
+      - name: Focused regression and pending Monster gate
+        run: |
+          python -m pytest -q tests/test_w33_pass3670_3686_monster_tomotope_amalgamation.py | tee evidence/pass3670_3686/pytest.log
+          python analysis/w33_pass3670_3686_mmgroup_four_parabolic_harness.py data/PART_3670_3686_MMgroup_four_parabolic_candidate.json | tee evidence/pass3670_3686/mmgroup_pending.log
+          grep -F '"status": "PENDING"' evidence/pass3670_3686/mmgroup_pending.log
+          git diff --check
+      - name: Execute Monster U4(2) restriction census
+        run: |
+          gap -q analysis/w33_pass3635_3648_monster_u42_restriction.g | tee evidence/pass3670_3686/gap_restriction.log
+          grep -F 'PASS 3635-3648: Monster/U4(2) restriction census written' evidence/pass3670_3686/gap_restriction.log
+          cp data/PART_3635_3648_MONSTER_U42_RESTRICTION_results.json evidence/pass3670_3686/
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path('data/PART_3635_3648_MONSTER_U42_RESTRICTION_results.json').read_text())
+          assert data['status']=='PASS_CHARACTER_TABLE_CENSUS'
+          assert data['u42_order']==25920
+          assert data['steinberg_degree']==81
+          assert data['steinberg_regular_on_sylow3'] is True
+          assert all(data['dimension_checks'])
+          print('PASS GAP restriction artifact; multiplicities=',data.get('possible_steinberg_multiplicities'))
+          PY
+      - name: Verify frontier chronology and public reachability
+        run: |
+          python - <<'PY'
+          import json,re
+          from pathlib import Path
+          tex=Path('analysis/W33_CURRENT_FRONTIER_MANIFEST.tex').read_text()
+          inputs=re.findall(r'\\input\{([^}]+)\}',tex)
+          manifest=json.loads(Path('data/w33_current_frontier_manifest_v1.json').read_text())
+          assert inputs == manifest['required_ordered_inputs']
+          ours='analysis/BT3670_BT3686_monster_tomotope_amalgamation_insert'
+          prior='analysis/BT3663_BT3669_monster_chamber_spread_bridge_insert'
+          assert inputs.index(prior) < inputs.index(ours)
+          assert inputs.count(ours)==1
+          assert Path(ours+'.tex').is_file()
+          assert Path('docs/monster-tomotope-amalgamation.html').is_file()
+          print('PASS manifest chronology and public reachability')
+          PY
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+      - name: Compile canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3670_3686/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3670_3686/pdf_sha256.txt
+      - name: Publish generated GAP artifact when permitted
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/PART_3635_3648_MONSTER_U42_RESTRICTION_results.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Pass 3686: freeze Monster U4(2) restriction census'
+            git push || echo 'Generated GAP certificate retained in workflow artifact; direct push was not permitted.'
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3670-3686-monster-tomotope-amalgamation-evidence
+          path: |
+            evidence/pass3670_3686/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
