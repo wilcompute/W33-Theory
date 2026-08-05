@@ -3,194 +3,77 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="W33 Theory: machine-verified finite geometry, quantum-information architecture, exact certificates, manuscripts, and falsifiers.">
-  <title>W33 Theory — Machine-Verified Geometry and Architecture</title>
+  <meta name="description" content="W33 Theory: machine-verified finite geometry, exact graph certificates, quantum-information architecture, manuscripts, and falsifiers.">
+  <title>W33 Theory — Exact Geometry and Architecture</title>
   <style>
-    :root{--bg:#0e0d0b;--surface:#171511;--surface2:#1d1a15;--border:#302b22;--text:#eee8db;--muted:#aaa194;--gold:#e8af34;--teal:#58a6aa;--violet:#b58cff;--red:#e87979}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-    a{color:var(--gold)}code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}.wrap{max-width:1180px;margin:auto;padding:28px 22px 64px}
-    nav{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:48px}.brand{font-weight:800;margin-right:auto}.pill{border:1px solid var(--border);border-radius:999px;padding:7px 12px;text-decoration:none;color:var(--text)}.pill:hover{border-color:var(--gold);color:var(--gold)}
-    .hero{display:grid;grid-template-columns:1.35fr .65fr;gap:24px;align-items:stretch}.hero h1{font-size:clamp(42px,7vw,82px);line-height:.98;margin:0 0 20px;letter-spacing:-.045em}.eyebrow{color:var(--gold);font-weight:750;text-transform:uppercase;letter-spacing:.12em;font-size:12px}.lead{font-size:clamp(18px,2.2vw,25px);color:var(--muted);max-width:780px}
-    .card{background:linear-gradient(145deg,var(--surface),var(--surface2));border:1px solid var(--border);border-radius:18px;padding:22px}.frontier{display:flex;flex-direction:column;justify-content:center;text-align:center}.frontier .formula{font:700 clamp(30px,5vw,58px)/1.1 ui-monospace,monospace;color:var(--gold)}.frontier small{color:var(--muted)}
-    h2{font-size:clamp(28px,4vw,44px);margin:56px 0 18px;letter-spacing:-.025em}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.metric{font:750 30px/1.1 ui-monospace,monospace;color:var(--teal);margin:6px 0 10px}.muted{color:var(--muted)}
-    .theorem{border-left:4px solid var(--gold)}.boundary{border-left:4px solid var(--red)}.links a{display:block;text-decoration:none;color:var(--text);padding:16px 0;border-bottom:1px solid var(--border)}.links a:hover{color:var(--gold)}.links strong{display:block}.links span{color:var(--muted)}
-    .checklist{display:grid;gap:10px}.check{display:flex;gap:10px}.check b{color:var(--teal)}footer{margin-top:64px;padding-top:24px;border-top:1px solid var(--border);color:var(--muted)}
-    @media(max-width:760px){.hero{grid-template-columns:1fr}.wrap{padding:20px 16px 48px}nav{margin-bottom:32px}}
+    :root{--bg:#0e0d0b;--surface:#171511;--surface2:#1e1a14;--border:#342e24;--text:#eee8db;--muted:#aaa194;--gold:#e8af34;--teal:#58a6aa;--red:#e87979}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.62 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:var(--gold)}code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}.wrap{max-width:1180px;margin:auto;padding:26px 20px 64px}
+    nav{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin-bottom:44px}.brand{font-weight:850;margin-right:auto}.pill{border:1px solid var(--border);border-radius:999px;padding:7px 11px;text-decoration:none;color:var(--text)}.pill:hover{border-color:var(--gold);color:var(--gold)}
+    .hero{display:grid;grid-template-columns:1.35fr .65fr;gap:18px}.hero h1{font-size:clamp(42px,7vw,80px);line-height:.98;margin:8px 0 18px;letter-spacing:-.045em}.lead{font-size:clamp(18px,2.2vw,24px);color:var(--muted)}
+    .card{background:linear-gradient(145deg,var(--surface),var(--surface2));border:1px solid var(--border);border-radius:18px;padding:21px}.frontier{display:flex;flex-direction:column;justify-content:center;text-align:center}.formula,.metric{font:760 clamp(27px,4vw,48px)/1.1 ui-monospace,monospace;color:var(--teal)}
+    h2{font-size:clamp(28px,4vw,43px);margin:54px 0 17px;letter-spacing:-.025em}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:15px}.eyebrow{color:var(--gold);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:12px}.theorem{border-left:4px solid var(--gold)}.boundary{border-left:4px solid var(--red);margin-top:17px}.muted{color:var(--muted)}
+    .links a{display:block;text-decoration:none;color:var(--text);padding:13px 0;border-bottom:1px solid var(--border)}.links a:hover{color:var(--gold)}.links span{display:block;color:var(--muted)}footer{margin-top:58px;padding-top:22px;border-top:1px solid var(--border);color:var(--muted)}
+    @media(max-width:760px){.hero{grid-template-columns:1fr}.wrap{padding:18px 15px 45px}nav{margin-bottom:30px}}
   </style>
 </head>
-<body>
-<div class="wrap">
-  <nav aria-label="Primary">
-    <div class="brand">W33 Theory</div>
-    <a class="pill" href="atlas.html">Visual atlas</a>
-    <a class="pill" href="triangle-free-srg-m57.html">Triangle-free SRGs</a>
-    <a class="pill" href="seven-graph-csp-scheme.html">Graph CSP & schemes</a>
-    <a class="pill" href="borel-star-moore-transplant.html">Borel & Moore</a>
-    <a class="pill" href="falsifiers.html">Falsifiers</a>
-    <a class="pill" href="https://github.com/wilcompute/W33-Theory">Repository</a>
-  </nav>
+<body><div class="wrap">
+<nav aria-label="Primary">
+  <div class="brand">W33 Theory</div>
+  <a class="pill" href="atlas.html">Visual atlas</a>
+  <a class="pill" href="triangle-free-srg-m57.html">Triangle-free SRGs</a>
+  <a class="pill" href="seven-graph-csp-scheme.html">Graph CSP</a>
+  <a class="pill" href="borel-star-moore-transplant.html">Borel & Moore</a>
+  <a class="pill" href="clique-borel-fourier-factorization.html">Clique & Fourier</a>
+  <a class="pill" href="falsifiers.html">Falsifiers</a>
+  <a class="pill" href="https://github.com/wilcompute/W33-Theory">Repository</a>
+</nav>
+<main>
+<section class="hero">
+  <div><div class="eyebrow">Finite geometry · exact computation · photonic architecture</div><h1>One substrate.<br>Many exact interfaces.</h1><p class="lead">W33 Theory develops executable connections among the symplectic generalized quadrangle W(3,3), finite-group representations, coding theory, contextuality, graph spectra, and a photonic quantum-computing blueprint.</p></div>
+  <aside class="card frontier"><small>Current exact frame-graph frontier</small><div class="formula">10 ≤ χ(H) ≤ 11</div><small>Nine colours are ruled out; an eleven-colouring is certified.</small></aside>
+</section>
 
-  <main>
-    <section class="hero">
-      <div>
-        <div class="eyebrow">Finite geometry · exact computation · photonic architecture</div>
-        <h1>One substrate.<br>Many exact interfaces.</h1>
-        <p class="lead">W33 Theory develops machine-verifiable connections among the symplectic generalized quadrangle W(3,3), finite-group representations, coding theory, contextuality, topological geometry, and a photonic quantum-computing blueprint.</p>
-      </div>
-      <aside class="card frontier" aria-label="Current exact chromatic frontier">
-        <small>Current exact frame-graph frontier</small>
-        <div class="formula">10 ≤ χ(H) ≤ 11</div>
-        <small>Nine colours are ruled out; a literal eleven-colouring is certified.</small>
-      </aside>
-    </section>
-
-<section id="bt3528-3534-borel-star-moore-transplant">
-  <h2>Passes 3528–3534: Borel Fourier anatomy, star complements, and staged Moore curvature</h2>
+<section id="bt3535-3541-clique-borel-fourier-factorization-ports">
+  <h2>Passes 3535–3541: four Borel archetypes and a factorization field</h2>
   <div class="grid">
-    <article class="card theorem"><div class="eyebrow">Perkel Borel restriction</div><div class="metric">Q57 = 1 + 3V18 + V2</div><p>All 171 maps in 19:9 are verified automorphisms. The golden 36-space is 2V18 and the −3 twenty-plane is V18+V2.</p></article>
-    <article class="card theorem"><div class="eyebrow">Star-complement firewall</div><div class="metric">3,720 · 31 &lt; 38</div><p>The candidate census is regenerated independently; the published compatibility maximum misses the required clique by seven.</p></article>
-    <article class="card theorem"><div class="eyebrow">Moore stage gate</div><div class="metric">n = 1, 2, 6, 56</div><p>Only the C5, Petersen, Hoffman–Singleton, and open M57 fibre sizes survive global spectral and multiplicity integrality.</p></article>
-    <article class="card theorem"><div class="eyebrow">Two solver tracks</div><div class="metric">U · I(2²⁸)</div><p>The unrestricted double-fibration model and an involutive one-factorization branch are both emitted without an n=56 verdict.</p></article>
-    <article class="card theorem"><div class="eyebrow">Functor firewall</div><div class="metric">240/120/40 ≠ 100/77/56</div><p>W33 uses uniform quotients; Golay–Witt uses induced restriction and point avoidance. One uniform-fibre functor is impossible.</p></article>
-    <article class="card theorem"><div class="eyebrow">Transplant policy</div><div class="metric">polynomial only</div><p>W33–Gewirtz auto-porting is restricted to Q[x]/(x²+2x−8); ranks, incidence, codes, and automorphisms require new evidence.</p></article>
+    <article class="card theorem"><div class="eyebrow">Clique recertifier</div><div class="metric">3,720</div><p>An independent exact reconstruction-column and maximum-clique engine is installed, with witnesses and proof digests per star complement.</p></article>
+    <article class="card theorem"><div class="eyebrow">Conditional M57 symmetry</div><div class="metric">4 forms</div><p>Two orbit profiles and two order-19 displacement values survive fixed-set recursion, character arithmetic, girth, and power balance.</p></article>
+    <article class="card theorem"><div class="eyebrow">Perkel Fourier machine</div><div class="metric">1·2·18·36</div><p>Four denominator-171 integer projectors split the vertex module; the conductor-19 sector compiles modulo x³−8x+3.</p></article>
+    <article class="card theorem"><div class="eyebrow">Separable no-go</div><div class="metric">0 / 120</div><p>Every global one-factorization identification fails every Hoffman–Singleton row triangle.</p></article>
+    <article class="card theorem"><div class="eyebrow">Complete K6 atlas</div><div class="metric">6 = 6</div><p>The six HS residual rows realize every labelled one-factorization of K6 exactly once.</p></article>
+    <article class="card theorem"><div class="eyebrow">Typed polynomial port</div><div class="metric">W33 ↔ Gewirtz</div><p>Every adjacency-polynomial theorem ports through Q[x]/(x²+2x−8); geometry-sensitive claims remain fail-closed.</p></article>
   </div>
-  <section class="card boundary" style="margin-top:18px"><strong>Boundary.</strong> M57 remains open; no 56-fibre SAT/UNSAT verdict or independent rerun of all 3,720 maximum-clique instances is claimed. <a href="borel-star-moore-transplant.html">Open the full atlas.</a></section>
+  <section class="card boundary"><strong>Boundary.</strong> M57 remains open. The four Borel forms are conditional, and the complete independent clique histogram is not promoted before its heavy artifact is observed. <a href="clique-borel-fourier-factorization.html">Open the full atlas.</a></section>
 </section>
 
-<section id="bt3506-3512-seven-graph-csp-scheme-symmetry">
-  <h2>Passes 3506–3512: Moore CSP, exact descendants, and scheme blindness</h2>
-  <div class="grid">
-    <article class="card theorem"><div class="eyebrow">Moore permutation CSP</div><div class="metric">86,240 → 172,480</div><p>The 56×56 core is exported as permutation variables with inverse channels, vertex-star constraints, gauge fixing, and lazy curvature cuts.</p></article>
-    <article class="card theorem"><div class="eyebrow">Exact descendants</div><div class="metric">HS → M22 → Gewirtz</div><p>A literal Golay/Witt construction joins three sporadic graphs; Clebsch → Petersen is independently reconstructed in F2⁵.</p></article>
-    <article class="card theorem"><div class="eyebrow">Scheme-blind hole</div><div class="metric">all Krein tests pass</div><p>The nonexistent SRG(57,14,1,4) survives parameter, spectrum, absolute-bound, and rank-three Krein feasibility.</p></article>
-    <article class="card theorem"><div class="eyebrow">Spectral transplant</div><div class="metric">f(A)=aA+bI</div><p>W33 and Gewirtz share a two-channel polynomial calculus and the exact reflection U=(-I-A)/3.</p></article>
-    <article class="card theorem"><div class="eyebrow">Odd symmetry residue</div><div class="metric">19:9 · order 171</div><p>Conditional oddness kills common A5 and PSL(2,19), but parity alone leaves the Borel 19:9 shadow open.</p></article>
-    <article class="card theorem"><div class="eyebrow">Non-Abelian curvature</div><div class="metric">HS: all 2³</div><p>All fifteen Hoffman–Singleton row matchings and twenty triangle holonomies are fixed-point-free involutions.</p></article>
-  </div>
-  <section class="card boundary" style="margin-top:18px"><strong>Boundary.</strong> The M57 solver surface is implemented but not solved; involutive curvature is a high-risk ansatz, not a necessary condition. <a href="seven-graph-csp-scheme.html">Open the complete seven-front atlas.</a></section>
-</section>
+<section id="bt3528-3534-borel-star-moore-transplant"><h2>Passes 3528–3534: Borel, star complements, and staged Moore curvature</h2><div class="grid"><article class="card"><div class="metric">Q57 = 1+3V18+V2</div><p>Exact Perkel Borel restriction and rational Fourier allocation.</p></article><article class="card"><div class="metric">31 &lt; 38</div><p>The published star-complement obstruction is exposed after an independent 3,720-candidate regeneration.</p></article><article class="card"><div class="metric">n=1,2,6,56</div><p>Only the known Moore controls and the open degree-57 case survive the global spectral gate.</p></article></div><p><a href="borel-star-moore-transplant.html">Open the Borel, star-complement, and Moore atlas.</a></p></section>
 
-<section id="bt3500-3505-triangle-free-srg-m57">
-  <h2>Passes 3500–3505: seven triangle-free SRGs and the missing-Moore firewall</h2>
-  <div class="grid">
-    <article class="card theorem"><div class="eyebrow">Exact spectral ladder</div><div class="metric">77 → 57 → 40 → 26 → 15</div><p>Fixing μ=4 and restricted eigenvalue r=2 forces M22, the nonexistent (57,14,1,4) rung, the W33 parameter class, the Paulus class, and T(6).</p></article>
-    <article class="card theorem"><div class="eyebrow">W33–Gewirtz kernel</div><div class="metric">(A−2I)(A+4I)=0</div><p>Both augmentation modules obey the same quadratic adjacency law; their centered complements square to 9I.</p></article>
-    <article class="card theorem"><div class="eyebrow">Moore edge chart</div><div class="metric">56 × 56 · degree 55</div><p>Fixing one hypothetical M57 edge forces a residual grid with orthogonal row and column perfect-matching fibrations.</p></article>
-    <article class="card theorem"><div class="eyebrow">Permutation constraints</div><div class="metric">short products derange</div><p>Matching permutations, inverses, and every three-row return product must be fixed-point-free to avoid triangles.</p></article>
-    <article class="card theorem"><div class="eyebrow">Four-way 57 firewall</div><div class="metric">3250 ≠ 57 ≠ Perkel</div><p>The degree-57 Moore graph, the impossible 57-vertex SRG rung, the Perkel graph, and the regular 57-cell are distinct objects.</p></article>
-    <article class="card theorem"><div class="eyebrow">Claim correction</div><div class="metric">92,625 = edges</div><p>Row relabellings are construction gauge, not 56! fixed-graph automorphisms; regular bipartite graphs need not be complete.</p></article>
-  </div>
-  <section class="card boundary" style="margin-top:18px"><strong>Boundary.</strong> The degree-57 Moore graph remains open. The June 2026 no-involution result is treated as a preprint; no W33–Gewirtz objectwise intertwiner or Perkel/57-cell/M57 identification is asserted. <a href="triangle-free-srg-m57.html">Open the full graph atlas.</a></section>
-</section>
+<section id="bt3506-3512-seven-graph-csp-scheme-symmetry"><h2>Passes 3506–3512: graph CSP and scheme blindness</h2><div class="grid"><article class="card"><div class="metric">172,480</div><p>The edge-rooted M57 permutation model with exact lazy triangle and μ separators.</p></article><article class="card"><div class="metric">HS→M22→Gewirtz</div><p>Literal descendant constructions from Golay/Witt data.</p></article><article class="card"><div class="metric">all Krein tests pass</div><p>The impossible 57-vertex SRG rung requires finer star-complement compatibility.</p></article></div><p><a href="seven-graph-csp-scheme.html">Open the seven-graph CSP atlas.</a></p></section>
 
-<section id="bt3486-3499-radius-code-biplane-supplement">
-  <h2>Passes 3486–3499: radius 435, equivariant coding, and Clebsch biplane closure</h2>
-  <div class="grid">
-    <article class="card theorem"><div class="eyebrow">Defect radius</div><div class="metric">389 ≤ D ≤ 435</div><p>A frozen 247-term minimum-defect circuit improves the universal upper bound by one through a coefficient-alphabet pigeonhole argument.</p></article>
-    <article class="card theorem"><div class="eyebrow">Amplitude dual</div><div class="metric">8.90246 &lt; 9</div><p>All 63,869 denominator-32 five-channel tuples are exhausted. The winner is exactified and still cannot reach nine.</p></article>
-    <article class="card theorem"><div class="eyebrow">Modular filtration</div><div class="metric">240 · 44 · 196</div><p>The face radical and point coboundaries are disjoint inside the 480-dimensional flat edge space, leaving a 196-dimensional residual quotient.</p></article>
-    <article class="card theorem"><div class="eyebrow">Equivariant code</div><div class="metric">[28,5,11]</div><p>Fifteen added coordinates are necessary and sufficient to complete the fixed linear controller encoder into an S3 coordinate-permutation module.</p></article>
-    <article class="card theorem"><div class="eyebrow">Biplane locator</div><div class="metric">d = 6 · B² = I − J</div><p>The Clebsch closed-neighborhood design corrects two syndrome-bit errors and becomes an involution on the 15-dimensional ternary augmentation space.</p></article>
-    <article class="card theorem"><div class="eyebrow">Hardware frontier</div><div class="metric">32 → 22 slots</div><p>Four checkpoint bits and six exact spares retain the 34-hop, dilation-two schedule; every bank of at most five spares fails.</p></article>
-  </div>
-  <section class="card boundary" style="margin-top:18px"><strong>Boundary.</strong> The exact defect radius, unrestricted real-amplitude optimum, global equivariant-code optimum, and ten-colour decision remain open. No physical D5 or Spin(10) identification is asserted.</section>
-</section>
+<section id="bt3500-3505-triangle-free-srg-m57"><h2>Passes 3500–3505: triangle-free SRGs and the M57 firewall</h2><div class="grid"><article class="card"><div class="metric">77→57→40→26→15</div><p>The exact μ=4, r=2 spectral ladder.</p></article><article class="card"><div class="metric">56×56</div><p>The hypothetical M57 residual grid and matching fibrations.</p></article><article class="card"><div class="metric">four distinct 57s</div><p>M57, the impossible 57-vertex rung, Perkel, and the regular 57-cell remain rigorously separated.</p></article></div><p><a href="triangle-free-srg-m57.html">Open the triangle-free SRG atlas.</a></p></section>
 
-<!-- BT3418-BT3429-CLEBSCH-D5-SUPPLEMENT -->
-<h2>Passes 3418–3429 supplement: the checksum becomes a repetition-code, Petersen, biplane, and D5 atlas</h2>
+<section id="bt3486-3499-radius-code-biplane-supplement"><h2>Radius, code, and biplane packet</h2><div class="grid"><article class="card"><div class="metric">389 ≤ D ≤ 435</div><p>Current exact defect-radius boundary.</p></article><article class="card"><div class="metric">[16,5,8]</div><p>The controller carries RM(1,4) on the Q4 substrate.</p></article><article class="card"><div class="metric">3 extra bits</div><p>Minimum Clebsch double-fault locator.</p></article></div></section>
+
+<h2>Earlier certified frontier</h2>
 <section class="grid">
-  <article class="card theorem"><div class="eyebrow">Nonseparable dual audit</div><div class="metric">best 7.2835 &lt; 9</div><p>All 48 one/two-defect magnetic orientation representatives weaken the Hoffman value. Future improvement must couple profile-sensitive amplitudes across blocks.</p></article>
-  <article class="card theorem"><div class="eyebrow">Self-protecting state</div><div class="metric">12 nonlinear · 13 linear</div><p>Seven parity bits are minimal for the 22-state envelope; eight are minimal for a linear all-word code. Both have exact distance five.</p></article>
-  <article class="card theorem"><div class="eyebrow">Symbolic remapping</div><div class="metric">16 + 6 = 22 slots</div><p>All 6,884 banks of size at most five fail. Exactly 96 six-spare banks preserve the original 34-hop, dilation-two schedule after any one state-slot loss under a protected-state/recompilation contract.</p></article>
-  <article class="card theorem"><div class="eyebrow">Triple faults</div><div class="metric">Q6 · 64 slots</div><p>The complete Q5 triple-fault census is frozen. Four Q4 layers are minimal in the untouched-layer model for exact-schedule survival of three layer-local faults.</p></article>
-  <article class="card theorem"><div class="eyebrow">Clebsch decoder shell</div><div class="metric">1 + 5 + 10</div><p>The four-bit tag is the syndrome of Rep(5). Five one-errors form an independent shell; ten double-errors form the Petersen graph KG(5,2).</p></article>
-  <article class="card theorem"><div class="eyebrow">Biplane and D5</div><div class="metric">2-(16,6,2) · |Aut|=1920</div><p>Closed neighborhoods form a symmetric biplane. The complementary demicube and Clebsch opposition relation realize the two distances among sixteen D5 half-spin weights.</p></article>
-  <article class="card theorem"><div class="eyebrow">A2 flux roots</div><div class="metric">2400 → 2180</div><p>Every filled triangle contributes an A2 root plane over F3. Their 240-fold direct sum spans all flat five-trit connections before the switching quotient.</p></article>
-  <article class="card theorem"><div class="eyebrow">No-free-lunch quotient</div><div class="metric">distance 5 ≠ invariant</div><p>The two-error repetition kernel moves through weight-five and weight-four charts. The unique invariant line has only distance three.</p></article>
+  <article class="card" id="bt3458-3471-face-tower-brauer-tomotope"><div class="metric">240→120→40</div><p>Face-tower quotient, Brauer, and tomotope certificates.</p></article>
+  <article class="card" id="bt3444-3457-radius-modular-fivechannel"><div class="metric">five channels</div><p>Radius and modular spectral witnesses.</p></article>
+  <article class="card" id="bt3418-3429-clebsch-d5-supplement"><div class="metric">Clebsch · D5</div><p>Biplane, demicube, and recovery-network atlas.</p></article>
+  <article class="card" id="bt3404-3417-conic-magnetic-closure"><div class="metric">conic · magnetic</div><p>Exact finite conic and magnetic closures.</p></article>
+  <article class="card" id="bt3376-3389-cohomology-tau-frontier"><div class="metric">H¹ · τ</div><p>Cohomology and involution frontier.</p></article>
+  <article class="card" id="bt3385-hidden-torus-dalembertian"><div class="metric">hidden torus</div><p>Exact toroidal and d'Alembertian interfaces.</p></article>
+  <article class="card" id="bt3363-minimum-gauge-defect-generation"><div class="metric">weight 2</div><p>Minimum gauge-defect generation.</p></article>
+  <!-- BT3364-BT3375-CLEBSCH-PETERSEN -->
+  <article class="card"><div class="metric">Clebsch→Petersen</div><p>Exact resilient descendant closure.</p></article>
+  <article class="card" id="bt3320-3331-global-cover-quantum-hypercube"><div class="metric">global covers</div><p>Quantum-hypercube and exact-cover interfaces.</p></article>
 </section>
-<section class="card boundary" style="margin-top:18px"><strong>Boundary.</strong> Exact finite code, graph, fusion, routing, and fault results; high-margin numerical magnetic audit only. The live chromatic frontier remains <span class="mono">10 ≤ χ(H) ≤ 11</span>.</section>
-<!-- /BT3418-BT3429-CLEBSCH-D5-SUPPLEMENT -->
-
-<!-- BT3332-BT3343-GAUGE-FAULT-CLEBSCH-CLOSURE -->
-<h2>Passes 3332–3343: gauge defects and a Clebsch recovery network</h2>
-<section class="grid">
-  <article class="card theorem"><div class="eyebrow">Minimum gauge defect</div><div class="metric">weight 2 · stabilizer 36</div><p>The 720 face-corner supports form one PSp orbit. Each defect has exactly 42 shortest unfilled-triangle holonomy witnesses.</p></article>
-  <article class="card theorem"><div class="eyebrow">Mirrored fault routing</div><div class="metric">Q5 · 34 hops</div><p>Every single vertex or edge fault preserves the original work and dilation. Static one-cycle tolerance requires and attains 32 state slots.</p></article>
-  <article class="card theorem"><div class="eyebrow">Global correspondence</div><div class="metric">absolute no-go</div><p>The anchor group is perfect and transitive; the intrinsic 72-element signature group is solvable and fixes the identity orbital.</p></article>
-  <article class="card theorem"><div class="eyebrow">Full local SDP cone</div><div class="metric">M22 still gives 9</div><p>Every separable positive local kernel leaves the block-graph Hoffman bound unchanged. Improvement must be nonseparable and profile-sensitive.</p></article>
-  <article class="card theorem"><div class="eyebrow">Exact two-bit recovery</div><div class="metric">4 trusted bits</div><p>A 16-clique proves minimality; the antipodal-axis decoder corrects all 352 zero-, one-, and two-bit cases.</p></article>
-  <article class="card theorem"><div class="eyebrow">Bonkers quotient</div><div class="metric">Clebsch SRG(16,5,0,2)</div><p>The 16 checksum symbols are the antipodal axes of Q5: six valid-valid axes and ten valid-guard axes.</p></article>
-</section>
-<section class="card boundary" style="margin-top:18px"><strong>Boundary.</strong> Exact graph, gauge, representation and source-level controller claims only. The live chromatic frontier remains <span class="mono">10 ≤ χ(H) ≤ 11</span>.</section>
-<!-- /BT3332-BT3343-GAUGE-FAULT-CLEBSCH-CLOSURE -->
-
-<!-- BT3308-BT3319-KNIGHT-HYPERCUBE-GAUGE-CLOSURE -->
-<h2>Passes 3308–3319: the four-bit controller becomes an exact knight-hypercube network</h2>
-<section class="grid">
-  <article class="card theorem"><div class="eyebrow">Global orientation gauge</div><div class="metric">H¹ = F3²¹⁸⁰</div><p>Freezing the five orbit pairings leaves 2,180 independent ternary holonomy coordinates. The full <span class="mono">C3 wr S5</span> gauge quotient has a 1,943-digit exact class count.</p></article>
-  <article class="card theorem"><div class="eyebrow">Envelope algebra</div><div class="metric">89 · 222 · 484</div><p>The 22-state common envelope has rank 89. Its Terwilliger algebra reaches the full <span class="mono">22²</span> matrix algebra from a regular signature basepoint.</p></article>
-  <article class="card theorem"><div class="eyebrow">Optimal Q4 embedding</div><div class="metric">34 hops · dilation 2</div><p>The nonlinear signature controller embeds optimally into the 4×4 toroidal-knight/Q4 network with average work <span class="mono">17/16</span> hops per dispatch.</p></article>
-  <article class="card theorem"><div class="eyebrow">Network congestion</div><div class="metric">minimum 3</div><p>All 1,105,920 minimum-work labeled embeddings were reduced to 2,880 coordinate classes and routed. No shortest-path realization lowers peak link load below three.</p></article>
-  <article class="card theorem"><div class="eyebrow">One-bit symmetry overhead</div><div class="metric">Q5 = Q4 × K2</div><p>The five-bit affine lift is two toroidal-knight boards joined by a sixteen-edge perfect matching. Only the added symmetry direction has dilation two.</p></article>
-  <article class="card theorem"><div class="eyebrow">Sign-dark guard shell</div><div class="metric">10 states · rank 25</div><p>The invalid-word shell contains no sign representation. It has seven internal Q5 edges, 36 boundary edges, and components of sizes 7,1,1,1.</p></article>
-</section>
-<section class="card boundary" style="margin-top:18px"><strong>Compiler boundary.</strong> A complete 45-block/720-edge/240-face <span class="mono">C3</span> coboundary manifest is exact, but it is a relabeling—not a smaller ten-colour proof. The live boundary remains <span class="mono">10 ≤ χ(H) ≤ 11</span>.</section>
-<!-- /BT3308-BT3319-KNIGHT-HYPERCUBE-GAUGE-CLOSURE -->
-
-<!-- BT3286-BT3295-SIGNATURE-PORT-COMMON-ENVELOPE -->
-<h2>Passes 3286–3295: signatures and ports share a 22-state controller—not a 16-state identity</h2>
-<section class="grid">
-  <article class="card theorem"><div class="eyebrow">Full symmetry obstruction</div><div class="metric">1+3+6+6 ≠ 1+3+3+3+6</div><p>The exact-cover signatures and natural <span class="mono">V4</span> OA ports are different <span class="mono">S3</span>-sets. No full equivariant 16-to-16 identification exists.</p></article>
-  <article class="card theorem"><div class="eyebrow">Orientation weld</div><div class="metric">29,160 C3 maps</div><p>After restricting to orientation-preserving transport, both alphabets become <span class="mono">1+3+3+3+3+3</span>. The mismatch is detected only by reflections.</p></article>
-  <article class="card theorem"><div class="eyebrow">Fourier defect</div><div class="metric">1 − sgn</div><p>The exact representation defect is <span class="mono">[port]−[signature]=[1]−[sgn]</span>. It vanishes on rotations and survives on chirality reversal.</p></article>
-  <article class="card theorem"><div class="eyebrow">Rank-45 audit</div><div class="metric">45 vs 51</div><p>The signature commutant has rank 45; the natural port commutant has rank 51. The anchor/signature equality cannot lift through the unmodified port action.</p></article>
-  <article class="card theorem"><div class="eyebrow">Minimal common envelope</div><div class="metric">16 + 16 − 10 = 22</div><p>One five-bit linear action contains both alphabets, their maximum ten-state equivariant overlap, and a ten-word guard shell.</p></article>
-  <article class="card theorem"><div class="eyebrow">Controller choice</div><div class="metric">4-bit ROM or 5-bit linear</div><p>The nonlinear signature ROM has algebraic degree three. The shared five-bit generators each use one XOR plus wire permutations before multiplexing.</p></article>
-</section>
-<section class="card boundary" style="margin-top:18px"><strong>Chromatic boundary.</strong> A full local <span class="mono">S3</span> signature/port quotient is invalid; a <span class="mono">C3</span>-only quotient is locally compatible. The global result remains <span class="mono">10 ≤ χ(H) ≤ 11</span>.</section>
-<!-- /BT3286-BT3295-SIGNATURE-PORT-COMMON-ENVELOPE -->
-
-<!-- BT3262-BT3265-SIGNATURE-S3-AFFINE-LIFT -->
-<h2>Passes 3262–3265: exact-cover signatures expose a one-bit symmetry cost</h2>
-<section class="grid">
-  <article class="card theorem"><div class="eyebrow">Local signature alphabet</div><div class="metric">16 = 1 + 3 + 6 + 6</div><p>The four complete-census cell patterns form one fixed state, one three-state orbit, and two regular <span class="mono">S3</span> orbits.</p></article>
-  <article class="card theorem"><div class="eyebrow">Fourier character</div><div class="metric">χ = (16, 2, 1)</div><p>The exact rational module is <span class="mono">4·1 ⊕ 2·sgn ⊕ 5·std</span>: four scalar channels, two sign channels, and five non-Abelian Fourier doublets.</p></article>
-  <article class="card theorem"><div class="eyebrow">Coherent algebra</div><div class="metric">dim EndS3 = 45</div><p>Direct orbital enumeration also gives 45 relations, with size profile <span class="mono">1¹ 3³ 6⁴¹</span> and commutant <span class="mono">M4(Q) ⊕ M2(Q) ⊕ M5(Q)</span>.</p></article>
-  <article class="card theorem"><div class="eyebrow">Exact rank-degree law</div><div class="metric">720 = 45 × 16</div><p>The global signature count equals local alphabet size times local commutant rank. This is an exact identity, not a claimed canonical anchor-to-orbital bijection.</p></article>
-  <article class="card theorem"><div class="eyebrow">Four-bit affine no-go</div><div class="metric">2,800 S3 subgroups</div><p>Every embedded <span class="mono">S3 ≤ GL(4,2)</span> was classified. None has orbit profile <span class="mono">1+3+6+6</span>, so no affine four-bit realization exists.</p></article>
-  <article class="card theorem"><div class="eyebrow">Minimal affine lift</div><div class="metric">4 + 1 = 5 bits</div><p>An explicit five-bit linear action realizes all sixteen states equivariantly. Four bits still work only through nonlinear lookup/permutation logic.</p></article>
-</section>
-<section class="card boundary" style="margin-top:18px"><strong>Identification boundary.</strong> Equal cardinality does not identify the sixteen signature states with the <span class="mono">OA(16,3,4,2)</span> port alphabet.</section>
-<!-- /BT3262-BT3265-SIGNATURE-S3-AFFINE-LIFT -->
-
-<!-- BT3205-BT3213-CHROMATIC-CLOSURE -->
-<h2>Passes 3205–3213: the frame graph becomes a finite port machine</h2>
-<section class="grid">
-  <article class="card theorem"><div class="eyebrow">Support factorisation</div><div class="metric">45 × 240</div><p>Block support incidence has row weight 16, column weight 3, and <span class="mono">NNᵀ = 16I + A</span> for <span class="mono">SRG(45,32,22,24)</span>.</p></article>
-  <article class="card theorem"><div class="eyebrow">Port code</div><div class="metric">OA(16,3,4,2)</div><p>Every block contains three exact covers of one sixteen-edge support. Neighbor transport occurs through sixteen orthogonal-array ports.</p></article>
-  <article class="card theorem"><div class="eyebrow">Cross-block law</div><div class="metric">0 or K3,3</div><p>Two blocks are disconnected or share one W33 edge, in which case the complete frame-level bridge is exactly <span class="mono">K3,3</span>.</p></article>
-  <article class="card theorem"><div class="eyebrow">Arithmetic correction</div><div class="metric">1⁴⁴ ⊕ 3</div><p>The support Smith form has one 3-primary factor and no 5-primary torsion.</p></article>
-  <article class="card theorem"><div class="eyebrow">Exact quotient</div><div class="metric">195,490</div><p>All sorted ten-colour deficit profiles are exhausted. The balanced class profile <span class="mono">54¹⁰</span> uniquely maximizes defect-Gram trace.</p></article>
-  <article class="card theorem"><div class="eyebrow">Proof surface</div><div class="metric">7,800 · 146,289</div><p>A deterministic strengthened CNF exposes frame colours and the unique missing colour at every W33 edge.</p></article>
-</section>
-<section class="card boundary" style="margin-top:18px"><strong>Current boundary.</strong> The exact value is still <span class="mono">χ(H) ∈ {10,11}</span>.</section>
-<!-- /BT3205-BT3213-CHROMATIC-CLOSURE -->
 
 <h2>Verified substrate</h2>
-<section class="grid">
-  <article class="card"><div class="metric">40 · 40 · 240</div><p class="muted">W(3,3) points, lines, and collinearity edges.</p></article>
-  <article class="card"><div class="metric">540 · 8,640</div><p class="muted">Canonical frames and frame-graph edges.</p></article>
-  <article class="card"><div class="metric">H + 4I = MMᵀ</div><p class="muted">Exact incidence factorization behind the cover/Hoffman sector.</p></article>
-  <article class="card"><div class="metric">3,547,800</div><p class="muted">Complete exact-cover census, classified into 327 inner orbits.</p></article>
-</section>
+<section class="grid"><article class="card"><div class="metric">40·40·240</div><p class="muted">W(3,3) points, lines, and collinearity edges.</p></article><article class="card"><div class="metric">540·8,640</div><p class="muted">Canonical frames and frame-graph edges.</p></article><article class="card"><div class="metric">3,547,800</div><p class="muted">Complete exact-cover census in 327 inner orbits.</p></article><article class="card"><div class="metric">3 manuscripts</div><p class="muted">One ordered theorem manifest feeds the mathematics paper, photonic architecture, and machine blueprint.</p></article></section>
 
-<h2>Explore the project</h2>
-<section class="grid">
-  <article class="card links"><a href="atlas.html"><strong>Visual atlas</strong><span>W33, Levi geometry, Hodge projectors, codec chains, selectors, and falsifiers.</span></a><a href="triangle-free-srg-m57.html"><strong>Triangle-free SRG / M57 atlas</strong><span>The seven known graphs, the μ=4 ladder, the Moore edge chart, and the four-way 57 firewall.</span></a><a href="seven-graph-csp-scheme.html"><strong>Seven-graph CSP and scheme atlas</strong><span>The gauge-reduced M57 solver, exact descendant chains, scheme blindness, and permutation curvature.</span></a><a href="borel-star-moore-transplant.html"><strong>Borel, star-complement, and Moore atlas</strong><span>The 19:9 Fourier split, 31-versus-38 obstruction, typed solver tracks, and transplant guard.</span></a><a href="falsifiers.html"><strong>Experimental falsifier dashboard</strong><span>Separates internal theorem status from externally refreshed empirical status.</span></a></article>
-  <article class="card checklist"><div class="check"><b>✓</b><span>Executable theorem witnesses and frozen JSON certificates.</span></div><div class="check"><b>✓</b><span>Regression tests and fail-closed claim boundaries.</span></div><div class="check"><b>✓</b><span>Three canonical manuscripts share certified inserts.</span></div><div class="check"><b>✓</b><span>Public claims remain separated from conjectures and engineering targets.</span></div></article>
-</section>
-  </main>
-  <footer><p>Passes 3528–3534 · Borel Fourier anatomy, star complements, staged Moore curvature, and typed transplantation</p></footer>
-</div>
-</body>
-</html>
+<h2>Explore</h2>
+<section class="grid"><article class="card links"><a href="atlas.html"><strong>Visual atlas</strong><span>Geometry, projectors, codes, selectors, and falsifiers.</span></a><a href="multicircuit-rm-biplane-a5.html"><strong>RM, biplane, and A5 packet</strong><span>Exact controller codes and representation firewall.</span></a><a href="clique-borel-fourier-factorization.html"><strong>Latest graph packet</strong><span>Four Borel archetypes, Perkel projectors, and factorization no-go.</span></a><a href="falsifiers.html"><strong>Falsifier dashboard</strong><span>Separates theorem status from empirical targets.</span></a></article><article class="card"><div class="eyebrow">Evidence discipline</div><p>Executable witnesses, frozen JSON certificates, focused regression tests, fail-closed CI, and explicit conjecture boundaries accompany the live frontier.</p></article></section>
+</main>
+<footer><p>Passes 3535–3541 · independent clique source, Borel–M57 archetypes, Perkel Fourier projectors, nonseparable factorization, and typed W33–Gewirtz ports</p></footer>
+</div></body></html>
