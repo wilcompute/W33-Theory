@@ -1,0 +1,91 @@
+\subsection{Cubic dependency projector and chained incidence closures}
+\label{sec:bt3506-3519-chained-breakthrough}
+
+The first code-sensitive failures beyond the strength-two covering relaxation form a canonical
+three-uniform hypergraph on the 240 filled faces.  Each of the 5,040 non-filled triangles of
+the 45-point block graph determines the three filled faces containing its three edges.  If
+\(T\in\{0,1\}^{240\times5040}\) is the resulting incidence matrix, then every face has degree
+63 and the face-pair codegrees are
+\[
+  2^{3240},\qquad 4^{2160}.
+\]
+The weighted two-section
+\[
+  D=TT^{\mathsf T}-63I
+\]
+is 126-regular and has spectrum
+\[
+\begin{split}
+  126^1,&\quad(18+12\sqrt6)^{24},\quad18^{20},\quad6^{15},\\
+  &(-6)^{60},\quad(-10)^{81},\quad(18-12\sqrt6)^{24},\quad(-18)^{15}.
+\end{split}
+\]
+Thus one cubic-dependency operator resolves the complete ordinary face-module multiplicity
+fingerprint \(1,15,15,20,24,24,60,81\).
+
+Characteristic three is exceptional:
+\[
+  \operatorname{rank}_{\mathbb F_3}T=239,
+  \qquad D^4=-D^3.
+\]
+Consequently
+\[
+  \boxed{E_{81}=-D^3}
+\]
+is an idempotent of rank 81.  It annihilates the antipodal-symmetric 120-space and has rank
+81 on the antipodal-antisymmetric 120-space.  The complementary generalized-zero module has
+power ranks \(44,14,0\) and nilpotent Jordan type
+\[
+  J_3(0)^{14}\oplus J_2(0)^{16}\oplus J_1(0)^{85}.
+\]
+This constructs the protected 81-dimensional direct summand explicitly; no simplicity claim is
+made without an independent composition-series computation.
+
+A deterministic transported-\(M_4\) screen exhausts all 364 projective weights in
+\(\{-1,0,1\}^6/\{\pm1\}\).  Its best member is the equal-weight vector and has weighted
+Hoffman ratio approximately \(3.275812021095\), so this complete finite grid cannot alter the
+live chromatic interval
+\[
+  10\leq\chi(H)\leq11.
+\]
+The result is not an unrestricted optimization over edge-dependent \(M_4\) amplitudes.
+
+The common five-channel characteristic-three symbol admits the exact minimum-operation circuit
+\[
+  s=b+c,\qquad p=d-a,
+\]
+\[
+  y_0=s-a,\qquad y_1=p+b,\qquad y_2=p+c,\qquad y_3=-s,\qquad y_4=e.
+\]
+An exhaustive linear-form breadth-first search proves that four binary ternary additions or
+subtractions are impossible, while the displayed construction uses five.  The symbol has order
+three.
+
+The oriented-tetrahedron \(12_4\,16_3\) surface does not lift to the tomotope edge--face
+incidence structure.  Although it has twelve four-face/six-edge local cell candidates, exhaustive
+incidence search finds no selection of eight cells covering every triangular face exactly twice.
+The shared Reye parameters therefore do not imply incidence equivalence.
+
+Two additional exact boundaries follow.  First, an induced partition
+\[
+  57=1+16+40
+\]
+of a hypothetical \(\operatorname{SRG}(57,14,1,4)\) into an apex, Clebsch, and W33 is
+impossible by external-degree balance: the Clebsch and W33 pieces demand external sums 144 and
+80, whose difference 64 cannot be supplied by one apex.  Second, the polynomial
+\[
+  p(x)=\frac{-3x^2+18x+17}{16}
+\]
+maps the Clebsch spectrum \(5^1,1^{10},(-3)^5\) to \(2^{11},(-4)^5\).  Adjoining this to
+the W33 nonprincipal spectrum \(2^{24},(-4)^{15}\) gives exactly the Gewirtz
+nonprincipal spectrum \(2^{35},(-4)^{20}\).  This is a functional-calculus completion, not
+a graph embedding or canonical module intertwiner.
+
+The covering-radius interval remains
+\[
+  389\leq R_{\rm defect}\leq435.
+\]
+The exact verifier, frozen semantic certificate, focused regression, five-operation RTL,
+exhaustive testbench, and evidence workflow are committed under Passes 3506--3519.  Source
+publication alone does not establish remote simulation, synthesis, placement, timing, PDF, or
+laboratory evidence.
