@@ -1,0 +1,98 @@
+name: Passes 3506-3512 Seven-Graph CSP Scheme Symmetry
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/*3506*'
+      - 'analysis/*3512*'
+      - 'data/PART_BT3506_BT3512_SEVEN_GRAPH_CSP_SCHEME_SYMMETRY_results.json'
+      - 'tests/test_bt3506_bt3512_seven_graph_csp_scheme_symmetry.py'
+      - 'docs/seven-graph-csp-scheme.html'
+      - 'docs/index.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_current_frontier_manifest_v1.json'
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/*3506*'
+      - 'analysis/*3512*'
+      - 'data/PART_BT3506_BT3512_SEVEN_GRAPH_CSP_SCHEME_SYMMETRY_results.json'
+      - 'tests/test_bt3506_bt3512_seven_graph_csp_scheme_symmetry.py'
+      - 'docs/seven-graph-csp-scheme.html'
+      - 'docs/index.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_current_frontier_manifest_v1.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pass3506-3512-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  exact-csp-and-papers:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install exact and CSP dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pytest ortools
+
+      - name: Rebuild exact seven-front certificate
+        run: |
+          cp data/PART_BT3506_BT3512_SEVEN_GRAPH_CSP_SCHEME_SYMMETRY_results.json /tmp/frozen.json
+          python analysis/bt3506_3512_seven_graph_csp_scheme_symmetry.py | tee /tmp/exact.log
+          grep -F 'PASS_7_FRONTS 15ab9b21e744e755917e0b4c40ec806b43c5463b8a11cfbfac7bdbb4a9c8dfe7' /tmp/exact.log
+          cmp data/PART_BT3506_BT3512_SEVEN_GRAPH_CSP_SCHEME_SYMMETRY_results.json /tmp/frozen.json
+          pytest -q tests/test_bt3506_bt3512_seven_graph_csp_scheme_symmetry.py
+
+      - name: Materialize compact CP-SAT witness and audit full counts
+        run: |
+          python analysis/bt3506_m57_permutation_csp.py --stats-only | tee /tmp/csp_stats.json
+          grep -F '"independent_permutation_entries": 86240' /tmp/csp_stats.json
+          grep -F '"row_triples": 27720' /tmp/csp_stats.json
+          python analysis/bt3506_m57_permutation_csp.py --n 2 --time-limit 10 | tee /tmp/csp_n2.json
+          grep -E '"status": "(OPTIMAL|FEASIBLE)"' /tmp/csp_n2.json
+
+      - name: Verify manuscript and public reachability
+        run: |
+          python - <<'PY'
+          import json, re
+          from pathlib import Path
+          tex = Path('analysis/W33_CURRENT_FRONTIER_MANIFEST.tex').read_text()
+          inputs = re.findall(r'\\input\{([^}]+)\}', tex)
+          manifest = json.loads(Path('data/w33_current_frontier_manifest_v1.json').read_text())
+          assert inputs == manifest['required_ordered_inputs']
+          ours = 'analysis/BT3506_BT3512_seven_graph_csp_scheme_symmetry_insert'
+          assert inputs.count(ours) == 1
+          assert inputs[-1] == ours
+          for stem in inputs:
+              assert Path(stem + '.tex').is_file(), stem
+          assert 'bt3506-3512-seven-graph-csp-scheme-symmetry' in Path('docs/index.html').read_text()
+          assert 'PASS_7_FRONTS' in Path('docs/seven-graph-csp-scheme.html').read_text()
+          standalone = {item['source'] for item in manifest['standalone_public_pages']}
+          assert 'docs/seven-graph-csp-scheme.html' in standalone
+          print('PASS manuscript and public reachability')
+          PY
+          git diff --check
+
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Compile canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex
+          do
+            tectonic --keep-logs "$source" 2>&1 | tee "/tmp/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
