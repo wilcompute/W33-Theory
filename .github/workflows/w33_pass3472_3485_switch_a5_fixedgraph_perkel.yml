@@ -1,0 +1,148 @@
+name: Passes 3472-3485 Switch A5 Fixed Graph Perkel
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/*3472*'
+      - 'analysis/*3474*'
+      - 'analysis/*3476*'
+      - 'analysis/*3477*'
+      - 'analysis/*3478*'
+      - 'analysis/*3480*'
+      - 'analysis/*3482*'
+      - 'analysis/w33_pass3472_literal_switch_components.cpp'
+      - 'tests/test_bt3472_3485*'
+      - 'bootstrap/pass3472_3485/**'
+      - '.github/workflows/w33_pass3472_3485_switch_a5_fixedgraph_perkel.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pass3472-3485-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  exact-lightweight:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check numpy sympy networkx pytest
+      - name: Materialize frozen exact packet
+        run: python bootstrap/pass3472_3485/materialize.py
+      - name: Materialize canonical ledger
+        run: python analysis/bt3472_materialize_canonical_ledger.py
+      - name: Regenerate exact lightweight fronts
+        run: |
+          python analysis/bt3474_a5_restriction_exhaustive.py
+          python analysis/bt3476_3477_fixed_graph_port_factor.py
+          python analysis/bt3477_fixed_graph_10color_cnf.py
+          python analysis/bt3476_3477_k9_defect_laplacian.py
+          python analysis/bt3478_3479_mixed_radix_basis_compiler.py
+          python analysis/bt3478_3479_projective_arithmetic_compiler.py
+          python analysis/bt3482_fiber_completed_perkel.py
+          python analysis/bt3472_3483_validated_runner.py
+      - name: Focused regression
+        run: pytest -q tests/test_bt3472_3485_switch_a5_fixedgraph_perkel.py
+      - name: Evidence boundary
+        run: |
+          grep -F '10 <= chi(H) <= 11' data/PART_BT3472_BT3483_VALIDATED_SUMMARY.json
+          git diff --check
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3472-3483-exact-lightweight
+          path: |
+            data/PART_BT3474_A5_RESTRICTION_EXHAUSTIVE.json
+            data/PART_BT3476_BT3477_FIXED_GRAPH_PORT_FACTOR.json
+            data/PART_BT3477_FIXED_GRAPH_10COLOR_CNF.json
+            data/PART_BT3476_BT3477_K9_DEFECT_LAPLACIAN.json
+            data/PART_BT3477_FIXED_GRAPH_10COLOR.cnf
+            data/PART_BT3478_BT3479_MIXED_RADIX_BASIS_COMPILER.json
+            data/PART_BT3478_BT3479_PROJECTIVE_ARITHMETIC_COMPILER.json
+            data/PART_BT3480_BT3481_CAP_PERKEL_ORBITAL_SEARCH.json
+            data/PART_BT3482_FIBER_COMPLETED_PERKEL.json
+            data/PART_BT3472_BT3483_VALIDATED_SUMMARY.json
+
+  cap-intrinsic-orbital-exhaustion:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check numpy networkx
+      - run: python bootstrap/pass3472_3485/materialize.py
+      - run: python analysis/bt3472_materialize_canonical_ledger.py
+      - name: Exhaust all 2^20 intrinsic cap relation unions
+        run: python analysis/bt3480_3481_cap_perkel_orbital_search.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3480-cap-intrinsic-orbital-exhaustion
+          path: data/PART_BT3480_BT3481_CAP_PERKEL_ORBITAL_SEARCH.json
+
+  literal-complete-switch-graph:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check numpy networkx
+      - name: Materialize frozen exact packet
+        run: python bootstrap/pass3472_3485/materialize.py
+      - name: Materialize canonical ledger
+        run: python analysis/bt3472_materialize_canonical_ledger.py
+      - name: Export canonical geometry
+        run: python analysis/bt3430_export_cover_geometry.py
+      - name: Compute complete orbit-species switch quotient
+        run: python analysis/bt3472_3473_full_switch_components.py
+      - name: Compile literal component engine
+        run: g++ -O3 -std=c++17 -march=native analysis/w33_pass3472_literal_switch_components.cpp -o /tmp/literal3472
+      - name: Expand and close exceptional covers
+        run: |
+          python analysis/bt3472_export_exceptional_covers.py
+          /tmp/literal3472 data/PART_BT3430_CANONICAL_COVER_GEOMETRY.txt data/PART_BT3472_EXCEPTIONAL_398520_COVERS.bin data/PART_BT3472_EXCEPTIONAL_FULL_COMPONENTS.json exceptional
+      - name: Expand and close both sheets
+        run: |
+          for sheet in 0 1; do
+            python analysis/bt3472_export_sheet_covers.py "$sheet"
+            /tmp/literal3472 data/PART_BT3430_CANONICAL_COVER_GEOMETRY.txt "data/PART_BT3472_SHEET${sheet}_COVERS.bin" "data/PART_BT3472_SHEET${sheet}_FULL_COMPONENTS.json" "sheet${sheet}"
+          done
+      - name: Prove Hamming coordinates and aggregate census
+        run: |
+          python analysis/bt3472_literal_component_probe.py
+          python analysis/bt3472_3473_complete_switch_summary.py
+          grep -F 'PASS_COMPLETE_LITERAL_SWITCH_COMPONENT_CENSUS' data/PART_BT3472_BT3473_COMPLETE_SWITCH_GRAPH.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3472-complete-switch-graph
+          compression-level: 9
+          path: |
+            data/PART_BT3472_BT3473_FULL_SWITCH_COMPONENTS.json
+            data/PART_BT3472_BT3473_COMPLETE_SWITCH_GRAPH.json
+            data/PART_BT3472_LITERAL_COMPONENT_PROBES.json
+            data/PART_BT3472_EXCEPTIONAL_FULL_COMPONENTS.json
+            data/PART_BT3472_SHEET0_FULL_COMPONENTS.json
+            data/PART_BT3472_SHEET1_FULL_COMPONENTS.json
+
+  fixed-graph-search-source:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check numpy networkx
+      - run: python analysis/bt3477_fixed_graph_10color_cnf.py
+      - name: Preserve exact solver input only
+        run: |
+          sha256sum data/PART_BT3477_FIXED_GRAPH_10COLOR.cnf
+          grep -F '10 <= chi(H) <= 11' data/PART_BT3477_FIXED_GRAPH_10COLOR_CNF.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3477-exact-ten-colour-cnf
+          path: |
+            data/PART_BT3477_FIXED_GRAPH_10COLOR.cnf
+            data/PART_BT3477_FIXED_GRAPH_10COLOR_CNF.json
+            data/PART_BT3476_BT3477_K9_DEFECT_LAPLACIAN.json
