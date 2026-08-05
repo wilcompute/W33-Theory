@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Passes 3514–3527: exact minimum-defect circuit limits, S3-equivariant code frontier, RM(1,4) Q4 bridge, Clebsch double-fault locator, and the Perkel/W33 A5 firewall.">
+  <title>Passes 3514–3527 — RM(1,4), Biplane Locator, and A5 Firewall</title>
+  <style>
+    :root{--bg:#0e0d0b;--surface:#171511;--surface2:#1d1a15;--border:#302b22;--text:#eee8db;--muted:#aaa194;--gold:#e8af34;--teal:#58a6aa;--red:#e87979}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.wrap{max-width:1120px;margin:auto;padding:28px 22px 64px}a{color:var(--gold)}nav{display:flex;gap:12px;align-items:center;margin-bottom:44px}.brand{font-weight:800;margin-right:auto}.pill{border:1px solid var(--border);border-radius:999px;padding:7px 12px;text-decoration:none;color:var(--text)}h1{font-size:clamp(40px,7vw,76px);line-height:1;margin:0 0 18px;letter-spacing:-.04em}h2{font-size:clamp(28px,4vw,42px);margin:52px 0 18px}.lead,.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}.card{background:linear-gradient(145deg,var(--surface),var(--surface2));border:1px solid var(--border);border-radius:18px;padding:22px}.theorem{border-left:4px solid var(--gold)}.boundary{border-left:4px solid var(--red);margin-top:18px}.eyebrow{color:var(--gold);font-weight:750;text-transform:uppercase;letter-spacing:.12em;font-size:12px}.metric{font:750 29px/1.15 ui-monospace,monospace;color:var(--teal);margin:7px 0 11px}.formula{font:700 clamp(25px,4vw,46px)/1.15 ui-monospace,monospace;color:var(--gold)}code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}footer{margin-top:58px;padding-top:22px;border-top:1px solid var(--border);color:var(--muted)}
+  </style>
+</head>
+<body><div class="wrap">
+<nav><div class="brand">W33 Theory</div><a class="pill" href="index.html">Home</a><a class="pill" href="atlas.html">Atlas</a><a class="pill" href="https://github.com/wilcompute/W33-Theory">Repository</a></nav>
+<main>
+<div class="eyebrow">Exact computation · coding theory · finite-group falsifiers</div>
+<h1>RM(1,4), double-fault location, and the A5 firewall</h1>
+<p class="lead">Passes 3514–3527 execute seven fronts on the live W33 controller and cohomology program. The exact verifier reports <code>PASS_7_FRONTS</code> with semantic SHA-256 <code>3cc9e9d0889148b749a51fdb0834881f2ff131c9ba25cc8b51a402de280c93b4</code>.</p>
+<section class="card boundary"><strong>Live boundaries.</strong><div class="formula">389 ≤ D<sub>H¹</sub> ≤ 435</div><div class="formula">10 ≤ χ(H) ≤ 11</div><p>No exact radius endpoint, ten-colour closure, unrestricted amplitude optimum, physical identification, or unobserved hardware result is asserted.</p></section>
+<h2>Exact results</h2>
+<section class="grid">
+<article class="card theorem"><div class="eyebrow">Single-circuit ceiling</div><div class="metric">260 terms · floor 435</div><p>A certified fundamental circuit improves the witness size, while rank 436 and the 242-value nonzero coefficient alphabet prove that no one-circuit pigeonhole argument can reach 434.</p></article>
+<article class="card theorem"><div class="eyebrow">Amplitude witness</div><div class="metric">8.905 &lt; h &lt; 9</div><p>The exact denominator-256 tuple <code>(122,346,220,-240,256)/256</code> improves the earlier grid witness. Rational root isolation certifies the strict interval.</p></article>
+<article class="card theorem"><div class="eyebrow">Equivariant frontier</div><div class="metric">505,230 cases</div><p>Every binary S3-equivariant dimension-five coordinate multiset through length forty was exhausted. Exact minima include [13,5,5], [16,5,8], [24,5,11], and [28,5,14].</p></article>
+<article class="card theorem"><div class="eyebrow">Q4 Reed–Muller bridge</div><div class="metric">RM(1,4) = [16,5,8]</div><p>The optimal sixteen columns are literally the affine hyperplane <code>&lt;00111,c&gt;=1</code> in F2<sup>5</sup>, identifying the toroidal-knight/Q4 controller with first-order Reed–Muller evaluation.</p></article>
+<article class="card theorem"><div class="eyebrow">Compound locator</div><div class="metric">3 bits · 137 patterns</div><p>One and two companion bits are impossible. Three are necessary and sufficient to distinguish the no-fault word, sixteen single faults, and all 120 Clebsch double faults.</p></article>
+<article class="card theorem"><div class="eyebrow">Cubic controller map</div><div class="metric">degree 3</div><p>The minimum three-bit fault companion is a cubic Boolean map on the same four-bit Q4 substrate as the independent nonlinear signature controller.</p></article>
+<article class="card theorem"><div class="eyebrow">A5 character firewall</div><div class="metric">rank 20 ≠ rank 20</div><p>The Perkel sector restricts as <code>1+3+3′+2·4+5</code>; the W33 sector restricts as <code>3·1+3·4+5</code>. No A5-equivariant rank-twenty intertwiner exists.</p></article>
+<article class="card theorem"><div class="eyebrow">Evidence surface</div><div class="metric">26,028 source bytes</div><p>The verifier and 19,767-byte frozen result certificate are compressed into hash-audited transport chunks. Readable Python, RTL, tests, manuscript insert, and CI are included.</p></article>
+</section>
+<h2>Engineering surfaces</h2>
+<section class="grid">
+<article class="card"><strong>Reed–Muller encoder</strong><p class="muted"><code>rtl/w33_rm14_equivariant_encode.v</code></p></article>
+<article class="card"><strong>Three-bit Clebsch locator</strong><p class="muted"><code>rtl/w33_clebsch_double_fault_locator3.v</code></p></article>
+<article class="card"><strong>Exhaustive testbench</strong><p class="muted"><code>rtl/tb_w33_pass3514_3527.v</code></p></article>
+</section>
+</main><footer>Passes 3514–3527 · exact finite claims only · remote RTL, synthesis, and PDF evidence remains workflow-gated.</footer>
+</div></body></html>
