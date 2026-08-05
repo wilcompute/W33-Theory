@@ -1,0 +1,10 @@
+{
+  "schema": "w33.pass_namespace_registry.v2",
+  "range": [3514, 3527],
+  "owner": "openai-gpt-5.6-thinking",
+  "branch": "agent/pass3514-3527-multicircuit-rm-biplane-a5-closure",
+  "purpose": "Execute multi-circuit radius descent, continuous amplitude analysis, global equivariant-code classification, compound biplane/Petersen fault location, and the Perkel-W33 rank-20 intertwiner test, plus the RM(1,4) Q4 bridge and cubic locator bridge.",
+  "base": "ee6a6b3683ea9206e6360fb8c51193458c60d1c8",
+  "coordination": "Renumbered after the parallel 3500-3505 triangle-free SRG/M57 packet landed. Preserve merged 3458-3471, 3486-3499, and standalone 3500-3505 results.",
+  "claim_boundary": "No exact radius endpoint, ten-colour closure, unrestricted real-amplitude optimum, non-equivariant Perkel identification, remote hardware/PDF result, or physical interpretation is promoted without an executed certificate."
+}

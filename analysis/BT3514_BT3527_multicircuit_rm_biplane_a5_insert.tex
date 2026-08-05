@@ -1,0 +1,60 @@
+\section{Multi-circuit, Reed--Muller, compound-biplane, and $A_5$ closure}
+\label{sec:bt3514-3527}
+
+The minimum-defect interval remains
+\[
+389\le D_{H^1}\le435,
+\]
+but the single-circuit method is now closed exactly.  A deterministic basis
+exchange produces a certified 260-term circuit.  Since a rank-436 fundamental
+circuit contains at most 436 basis coordinates while the nonzero coefficient
+alphabet has size $3^5-1=242$, one circuit can force at most two
+cancellations while adding one support.  Hence no single-circuit pigeonhole
+argument can improve the universal upper bound below $435$.
+
+A five-channel continuous amplitude search gives a numerical candidate with
+ratio approximately $8.9062301931$.  The nearby exact tuple
+\[
+\frac1{256}(122,346,220,-240,256)
+\]
+has a rational-polynomial certificate proving
+\[
+8.905<h<9.
+\]
+Thus it improves the earlier finite-grid witness but does not reach the live
+chromatic lower bound.
+
+The complete binary coordinate-permutation $S_3$-equivariant dimension-five
+code frontier was exhausted through length forty.  In particular,
+\[
+[13,5,5],\qquad [16,5,8],\qquad[24,5,11],\qquad[28,5,14]
+\]
+are length-minimal at the displayed target distances.  The sixteen columns of
+the $[16,5,8]$ code are exactly the affine hyperplane
+\[
+\{c\in\mathbb F_2^5:\langle00111,c\rangle=1\},
+\]
+so the controller code is objectwise $RM(1,4)$ with weight enumerator
+$1+30z^8+z^{16}$.
+
+The Clebsch biplane has thirty fourfold collision classes among its 120
+weight-two faults.  A canonical exhaustive search proves that three additional
+bits are necessary and sufficient to separate all of them.  The resulting
+nineteen-bit readout uniquely locates all
+\[
+1+16+\binom{16}{2}=137
+\]
+fault patterns of weight at most two.  The minimal companion map is cubic in
+the four-bit Clebsch-axis coordinate.
+
+Finally, an objectwise $A_5$ character computation separates the two tempting
+rank-twenty sectors.  The Perkel $-3$ sector restricts as
+\[
+1\oplus3\oplus3'\oplus2\cdot4\oplus5,
+\]
+whereas the W33 block $-4$ sector restricts as
+\[
+3\cdot1\oplus3\cdot4\oplus5.
+\]
+Consequently no $A_5$-equivariant rank-twenty intertwiner exists.  The live
+chromatic boundary remains $10\le\chi(H)\le11$.
