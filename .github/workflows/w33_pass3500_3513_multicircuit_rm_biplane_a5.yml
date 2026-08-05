@@ -1,0 +1,61 @@
+name: Passes 3500-3513 Multicircuit RM Biplane A5 Closure
+on:
+  pull_request:
+    branches: [master]
+    paths: ['analysis/*3500*','bootstrap/pass3500_3513/**','rtl/*3500*','rtl/w33_rm14_equivariant_encode.v','rtl/w33_clebsch_double_fault_locator3.v','tests/*3500*','.github/workflows/w33_pass3500_3513_multicircuit_rm_biplane_a5.yml']
+  push:
+    branches: [master]
+    paths: ['analysis/*3500*','bootstrap/pass3500_3513/**','rtl/*3500*','tests/*3500*']
+  workflow_dispatch:
+permissions: {contents: read}
+concurrency:
+  group: pass3500-3513-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  exact-rtl-papers:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys
+          python -m pip install --disable-pip-version-check numpy sympy networkx pytest
+      - name: Materialize and regenerate exact certificate
+        run: |
+          mkdir -p evidence/pass3500_3513
+          python bootstrap/pass3500_3513/materialize.py
+          python analysis/bt3500_3513_multicircuit_rm_biplane_a5.py | tee evidence/pass3500_3513/exact.log
+          grep -F 'PASS_7_FRONTS 5a2a10073fa2cc46a4d03e429ca4dff62e84b718f318ed30211749e6c45ddbeb' evidence/pass3500_3513/exact.log
+      - name: Focused regression
+        run: |
+          pytest -q tests/test_bt3500_3513_multicircuit_rm_biplane_a5.py | tee evidence/pass3500_3513/pytest.log
+          git diff --check
+      - name: Exhaust RTL
+        run: |
+          iverilog -g2012 -s tb_w33_pass3500_3513 -o evidence/pass3500_3513/tb rtl/w33_rm14_equivariant_encode.v rtl/w33_clebsch_double_fault_locator3.v rtl/tb_w33_pass3500_3513.v
+          vvp evidence/pass3500_3513/tb | tee evidence/pass3500_3513/rtl.log
+          grep -F 'PASS RM14 words=32 compound_locator_patterns=137 extra_bits=3' evidence/pass3500_3513/rtl.log
+      - name: Synthesize readable engines
+        run: |
+          for top in w33_rm14_equivariant_encode w33_clebsch_double_fault_locator3; do
+            yosys -p "read_verilog rtl/w33_rm14_equivariant_encode.v rtl/w33_clebsch_double_fault_locator3.v; hierarchy -top ${top}; synth_ice40 -top ${top}; stat" 2>&1 | tee evidence/pass3500_3513/${top}.yosys.log
+          done
+      - uses: WtfJoke/setup-tectonic@v3
+        with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
+      - name: Compile canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do tectonic --keep-logs "$source" 2>&1 | tee evidence/pass3500_3513/${source%.tex}.log; test -s "${source%.tex}.pdf"; done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3500_3513/pdf_sha256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3500-3513-evidence
+          path: |
+            evidence/pass3500_3513/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
