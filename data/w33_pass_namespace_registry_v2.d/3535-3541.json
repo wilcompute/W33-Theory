@@ -1,0 +1,7 @@
+{
+  "schema": "w33.pass_namespace_registry.v2",
+  "range": [3535, 3541],
+  "owner": "openai-gpt-5.6-thinking",
+  "topic": "clique Borel Fourier factorization and polynomial ports",
+  "entrypoint": "analysis/bt3535_3541_clique_borel_fourier_factorization_ports.py"
+}
