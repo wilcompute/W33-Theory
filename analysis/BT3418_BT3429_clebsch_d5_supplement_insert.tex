@@ -1,0 +1,131 @@
+\section{Passes 3418--3429: supplemental Clebsch--\(D_5\) closure}
+\label{sec:bt3418-3429-clebsch-d5}
+
+The executable source wrappers retain a provisional build tag only for hash continuity after a namespace collision.  Building on the parallel Clebsch--Petersen packet without replacing it, the source-complete verifier reports \textbf{PASS 11/11}.  All graph, code,
+orbit, fusion, routing, and fault counts in this section are exact.  The magnetic
+spectral family below is an explicitly marked high-margin numerical audit rather
+than a rational SDP certificate.  The chromatic boundary remains
+\[
+  \boxed{10\leq\chi(H)\leq 11}.
+\]
+
+\subsection{Edge-dependent magnetic phases do not improve the bound}
+For a flat \(C_3\) edge cochain \(z\), set
+\[
+ M(z)_{ab}=\omega^{z_{ab}},\qquad M(z)_{ba}=\overline{M(z)_{ab}}.
+\]
+The search exhausts the 24 \(PSp(4,3)\)-orbits of unordered pairs of the
+720 minimum-defect supports and both relative coefficient signs.  Among all
+48 one/two-defect representatives, the best nonzero spectral value is
+\[
+ \lambda_{\min}\simeq-5.073280337457312,
+ \quad \lambda_{\max}\simeq31.877958425086288,
+ \quad h\simeq7.283500280818951<9.
+\]
+Thus edge-dependent phases alone are insufficient; an improved dual must also
+retain nonseparable profile-sensitive amplitudes.
+
+\subsection{Self-protecting state codes}
+For arbitrary systematic encoding of the 22-state envelope, exhaustive search
+proves that seven parity bits are necessary and sufficient for distance five:
+\[
+ \boxed{(n,M,d)=(12,22,5)}.
+\]
+The exhaustive radius-two decoder surface contains
+\(22(1+12+\binom{12}{2})=1738\) received words.  In the linear systematic
+case, every five-bit difference occurs, so the problem is a binary
+\([5+r,5,5]\) code.  All 26,334 six-parity candidates and all 7,624,512
+seven-parity candidates fail; eight parity bits succeed:
+\[
+ \boxed{[13,5,5]},
+ \qquad (c_0,\ldots,c_4)=(15,51,85,106,150).
+\]
+The 12-bit code is information-theoretically smaller; the 13-bit code is
+XOR-linear over all 32 words.
+
+\subsection{Six-spare dynamic recovery}
+Static state-availability mirroring uses 32 physical slots.  Under an explicit protected-symbolic-state/recompilation contract, allowing bounded state remapping while
+preserving every original transition distance changes the frontier.  Every one
+of the 6,884 fixed spare banks of size at most five fails.  At size six there
+are exactly 96 solutions; the first is
+\[
+ \boxed{\{0,1,2,3,4,5\}}.
+\]
+Therefore 22 physical slots are necessary and sufficient for post-fault symbolic remapping at the original work 34 and dilation two.
+
+\subsection{Gauge fusion and the local \(A_2\) root plane}
+The 720 minimum supports have 24 unordered-pair orbits.  Their local fusion laws
+include annihilation, coefficient reversal, third-root completion, and a
+three-edge filled-face state.  On one filled triangle the six weight-two flat
+cochains are precisely the six nonzero roots of an \(A_2\) plane over
+\(\mathbb F_3\).  Consequently
+\[
+ Z^1(X;\mathbb F_3^5)
+ \cong
+ \left(A_2(\mathbb F_3)\otimes\mathbb F_3^5\right)^{\oplus240},
+ \qquad \dim Z^1=2400,
+\]
+with the 220-dimensional switching subspace leaving
+\(\dim H^1=2180\).
+
+\subsection{Triple faults and the \(Q_6\) boundary}
+The mirrored \(Q_5\) census is
+\[
+\begin{array}{c|r|r|r|r}
+\text{faults}&\text{cases}&\text{catastrophic}&\text{worst work}&\text{worst dilation}\\\hline
+EEE&82160&0&40&3\\
+VEE&101120&0&42&4\\
+VVE&39680&1280&45&4\\
+VVV&4960&480&46&4
+\end{array}
+\]
+Three \(Q_4\) layers, or 48 slots, are cardinality-minimal for arbitrary
+two-vertex loss.  Four layers give \(Q_6=Q_4\square Q_2\), use 64 slots, and
+are necessary and sufficient in the untouched-layer model for preserving work
+34 and dilation two after any three layer-local faults.
+
+\subsection{The Clebsch checksum is a repetition-code coset graph}
+The four-bit tag
+\[
+ t(x)=x_{3:0}\oplus x_4(1111)_2
+\]
+is a parity-check syndrome for the binary repetition code
+\(\operatorname{Rep}(5)=[5,1,5]\).  Hence
+\[
+ \boxed{Q_5/\operatorname{Rep}(5)=\mathrm{Clebsch}=\mathrm{SRG}(16,5,0,2)}.
+\]
+Every local checksum chart has distance shells
+\[
+ \boxed{1+5+10}.
+\]
+The five one-error neighbors are independent, while the ten two-error symbols
+induce the Petersen graph \(KG(5,2)\): two double-error syndromes are adjacent
+exactly when their error-position pairs are disjoint.
+
+The 16 closed neighborhoods form a symmetric biplane
+\[
+ \boxed{2-(16,6,2)},
+ \qquad B B^{\mathsf T}=4I+2J.
+\]
+Exact automorphism enumeration gives
+\(|\operatorname{Aut}(\mathrm{Clebsch})|=1920=2^4\cdot5!\).  In the even-sign
+model the complement is the 5-demicube skeleton and the Clebsch edges are the
+opposition relation on one 16-weight \(D_5\) half-spin orbit.  The controller's
+valid/guard coloring leaves only an elementary Abelian stabilizer \(C_2^3\).
+
+\subsection{Equivariance versus correction radius}
+The repetition kernel is not controller invariant: its generator has orbit
+\[
+ \{11111_2,01111_2,10111_2\}
+\]
+of weights \(5,4,4\).  The unique common invariant line is generated by
+\(00111_2\) and has distance three.  Therefore no fixed one-dimensional
+controller-equivariant quotient gives uniform two-bit correction.  One must
+re-encode the Clebsch syndrome, transport a moving quotient chart, or use the
+self-protecting 12/13-bit code.
+
+\paragraph{Boundary.}
+No ten-colour decision, exact rational magnetic certificate, recovery of destroyed uncheckpointed state data, measured fault
+rate, observed FPGA timing, successful fresh PDF, physical \(D_5\) or
+\(\mathrm{Spin}(10)\) identification, quantum speedup, laboratory operation, or
+spacetime claim is inferred from this finite packet.
