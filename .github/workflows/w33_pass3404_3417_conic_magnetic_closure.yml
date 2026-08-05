@@ -50,11 +50,14 @@ jobs:
           python analysis/bt3404_3417_conic_torus_closure.py \
             --json evidence/pass3404_3417/conic_torus.json \
             | tee evidence/pass3404_3417/conic_torus.log
-      - name: Exhaust magnetic triangle phases
+      - name: Exhaust and exactify magnetic triangle phases
         run: |
           python analysis/bt3407_magnetic_chromatic_search.py \
             --json evidence/pass3404_3417/magnetic_search.json \
             | tee evidence/pass3404_3417/magnetic_search.log
+          python analysis/bt3407_magnetic_exact_no_go.py \
+            --json evidence/pass3404_3417/magnetic_exact_no_go.json \
+            | tee evidence/pass3404_3417/magnetic_exact_no_go.log
       - name: Complete literal 720-edge character atlas
         run: |
           python analysis/bt3381_minimum_defect_edge_character.py \
