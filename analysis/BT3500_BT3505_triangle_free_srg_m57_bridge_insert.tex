@@ -1,0 +1,123 @@
+% Passes 3500--3505: shared exact triangle-free SRG / missing-Moore insert.
+\section{Triangle-free strongly regular graphs and the missing-Moore firewall}
+\label{sec:bt3500-bt3505-triangle-free-srg-m57}
+
+\paragraph{Exact fixed-$\mu$ ladder.}
+For a strongly regular graph with
+\[
+\mu=4
+\qquad\text{and restricted eigenvalue}\qquad r=2,
+\]
+the remaining data are forced by the SRG identities:
+\[
+s=\lambda-6,
+\qquad
+k=16-2\lambda,
+\qquad
+v=\frac{(\lambda-7)(3\lambda-22)}2,
+\]
+with multiplicities
+\[
+f_r=\frac{(\lambda-5)(3\lambda-22)}2,
+\qquad
+f_s=-3(\lambda-7).
+\]
+For $\lambda=0,1,2,3,4$ this gives
+\[
+\boxed{
+(77,16,0,4)
+\longrightarrow
+(57,14,1,4)
+\longrightarrow
+(40,12,2,4)
+\longrightarrow
+(26,10,3,4)
+\longrightarrow
+(15,8,4,4).
+}
+\]
+These are respectively the $M_{22}$ graph, the nonexistent Wilbrink--Brouwer
+parameter set, the $W(3,3)$ parameter class, the Paulus parameter class, and
+the triangular graph $T(6)$.  Thus there is an exact $57$-vertex spectral hole
+between $M_{22}$ and $W(3,3)$.  It is not the hypothetical degree-$57$ Moore
+graph, whose parameters would be $(3250,57,0,1)$.
+
+\paragraph{$W(3,3)$--Gewirtz restricted kernel.}
+The $W(3,3)$ and Gewirtz adjacency spectra are
+\[
+12^1,2^{24},(-4)^{15}
+\qquad\text{and}\qquad
+10^1,2^{35},(-4)^{20}.
+\]
+After removing the constant line, both operators therefore obey
+\[
+\boxed{(A-2I)(A+4I)=0.}
+\]
+Their complement operators have restricted eigenvalues $\pm3$, so their
+centered complement squares equal $9I$ on augmentation.  This is a shared
+quadratic functional calculus, not a canonical objectwise intertwiner; the
+multiplicities and incidence geometries differ.
+
+\paragraph{Necessary edge chart for a hypothetical $M_{57}$.}
+Assume temporarily that a Moore graph with parameters $(3250,57,0,1)$ exists
+and fix an edge $a\!\sim\!b$.  The punctured neighborhoods
+\[
+A=N(a)\setminus\{b\},
+\qquad
+B=N(b)\setminus\{a\}
+\]
+have size $56$, and the remaining $3136=56^2$ vertices are forced bijectively
+onto $A\times B$.  Every residual vertex has one neighbor in $A$, one in $B$,
+and $55$ residual neighbors.  No residual edge lies inside a row or column;
+hence every pair of distinct rows, and every pair of distinct columns, is
+joined by a perfect matching.  If $\sigma_{ij}\in S_{56}$ denotes the matching
+from row $i$ to row $j$, then necessarily
+\[
+\sigma_{ji}=\sigma_{ij}^{-1},
+\qquad
+\sigma_{ij}\text{ is fixed-point-free},
+\]
+and for distinct $i,j,k$ the product
+\[
+\sigma_{ki}\sigma_{jk}\sigma_{ij}
+\]
+is fixed-point-free.  These are necessary, not sufficient, constraints.
+Crucially, relabelling rows and columns is coordinate gauge, not an
+automorphism of one fixed completed graph; and
+\[
+\frac{3250\cdot57}{2}=92{,}625
+\]
+is the edge count, not the automorphism-group order.
+
+\paragraph{The four-way $57$ firewall.}
+Four different objects must remain separate:
+\[
+\begin{array}{c|c}
+\text{object}&\text{meaning}\\ \hline
+M_{57}&3250\text{ vertices, degree }57,\text{ existence open}\\
+(57,14,1,4)&57\text{ vertices, proved nonexistent}\\
+\text{Perkel graph}&57\text{ vertices, degree }6\\
+\text{regular }57\text{-cell}&57\text{ cells, }PSL(2,19)\text{ symmetry}
+\end{array}
+\]
+A June 2026 preprint claims that a hypothetical $M_{57}$ has no involutory
+automorphisms.  If that result survives review, then its automorphism group has
+odd order, whereas
+\[
+|PSL(2,19)|=3420
+\]
+is even; consequently the $57$-cell/Perkel symmetry cannot embed into
+$\operatorname{Aut}(M_{57})$.  This conditional firewall is not a proof of
+nonexistence.
+
+\paragraph{Machine certificate.}
+The standard-library verifier
+\texttt{analysis/bt3500\_3505\_triangle\_free\_srg\_m57\_bridge.py}
+reconstructs all parameter, spectrum, multiplicity, edge-chart, and order
+identities above.  Its frozen semantic digest is
+\begin{center}
+\texttt{e308364dd480970803061b90ab27bf86afa2ae4946399b656292f02682c17fd9}.
+\end{center}
+The evidence boundary is explicit: no existence decision for the missing Moore
+graph, no Perkel/$57$-cell/Moore identification, and no canonical
+$W(3,3)$--Gewirtz intertwiner are asserted.
