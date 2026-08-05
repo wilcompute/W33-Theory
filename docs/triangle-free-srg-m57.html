@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Exact W33 connections to the seven known triangle-free strongly regular graphs and the missing degree-57 Moore graph.">
+  <title>Triangle-Free SRGs and the Missing Moore Graph — W33 Theory</title>
+  <style>
+    :root{--bg:#0e0d0b;--surface:#171511;--surface2:#1d1a15;--border:#302b22;--text:#eee8db;--muted:#aaa194;--gold:#e8af34;--teal:#58a6aa;--red:#e87979}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:var(--gold)}code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}.wrap{max-width:1120px;margin:auto;padding:28px 22px 64px}.nav{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:44px}.pill{border:1px solid var(--border);border-radius:999px;padding:7px 12px;text-decoration:none;color:var(--text)}h1{font-size:clamp(40px,7vw,76px);line-height:1;margin:0 0 18px;letter-spacing:-.04em}h2{font-size:clamp(27px,4vw,42px);margin:54px 0 18px}.lead{font-size:clamp(18px,2.2vw,24px);color:var(--muted);max-width:900px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:linear-gradient(145deg,var(--surface),var(--surface2));border:1px solid var(--border);border-radius:18px;padding:22px}.metric{font:750 27px/1.15 ui-monospace,monospace;color:var(--teal);margin:8px 0 12px}.boundary{border-left:4px solid var(--red)}table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--border)}th,td{padding:12px;text-align:left;border-bottom:1px solid var(--border)}th{color:var(--gold)}.formula{overflow:auto;padding:18px;background:#111;border-radius:12px;font:700 18px/1.6 ui-monospace,monospace;color:var(--teal)}footer{margin-top:56px;color:var(--muted);border-top:1px solid var(--border);padding-top:20px}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav"><a class="pill" href="index.html">Home</a><a class="pill" href="atlas.html">Visual atlas</a><a class="pill" href="falsifiers.html">Falsifiers</a><a class="pill" href="https://github.com/wilcompute/W33-Theory">Repository</a></nav>
+  <main>
+    <p class="mono" style="color:var(--gold)">PASSES 3500–3505 · EXACT GRAPH-THEORY SUPPLEMENT</p>
+    <h1>Seven graphs, two different 57s, and one exact W33 ladder.</h1>
+    <p class="lead">The known triangle-free strongly regular graphs form real descendant and spectral structures. The missing degree-57 Moore graph is a separate 3250-vertex problem, and its edge-rooted construction is a coupled permutation system—not a source of 56! automorphisms.</p>
+
+    <h2>The seven known examples</h2>
+    <table>
+      <thead><tr><th>Graph</th><th>Parameters</th><th>Restricted spectrum</th></tr></thead>
+      <tbody>
+        <tr><td>C5</td><td>(5,2,0,1)</td><td>(−1±√5)/2</td></tr>
+        <tr><td>Petersen</td><td>(10,3,0,1)</td><td>1, −2</td></tr>
+        <tr><td>Clebsch</td><td>(16,5,0,2)</td><td>1, −3</td></tr>
+        <tr><td>Hoffman–Singleton</td><td>(50,7,0,1)</td><td>2, −3</td></tr>
+        <tr><td>Gewirtz</td><td>(56,10,0,2)</td><td>2, −4</td></tr>
+        <tr><td>M22</td><td>(77,16,0,4)</td><td>2, −6</td></tr>
+        <tr><td>Higman–Sims</td><td>(100,22,0,6)</td><td>2, −8</td></tr>
+      </tbody>
+    </table>
+
+    <h2>The μ=4, r=2 ladder</h2>
+    <div class="formula">(77,16,0,4) → (57,14,1,4) → (40,12,2,4) → (26,10,3,4) → (15,8,4,4)</div>
+    <div class="grid" style="margin-top:16px">
+      <article class="card"><div class="metric">M22 → hole → W33</div><p>Fixing μ=4 and the positive restricted eigenvalue r=2 forces a five-rung parameter family. The 57-vertex rung was proved nonexistent in 1983.</p></article>
+      <article class="card"><div class="metric">v(λ)=(λ−7)(3λ−22)/2</div><p>The degree, negative eigenvalue, and both multiplicities are polynomial functions of λ. W33 is the central λ=2 rung.</p></article>
+      <article class="card boundary"><div class="metric">57 vertices ≠ degree 57</div><p>The impossible SRG(57,14,1,4) is not the hypothetical Moore graph SRG(3250,57,0,1).</p></article>
+    </div>
+
+    <h2>W33 and Gewirtz share a quadratic kernel</h2>
+    <div class="formula">(A−2I)(A+4I)=0 &nbsp; on augmentation</div>
+    <p>Both graphs have nonprincipal eigenvalues 2 and −4. Their complement operators have nonprincipal eigenvalues ±3, so the centered complement squares to 9I. This is a shared functional calculus, not a canonical graph or module identification.</p>
+
+    <h2>The corrected Moore-57 edge chart</h2>
+    <div class="grid">
+      <article class="card"><div class="metric">2 + 56 + 56 + 56²</div><p>Fixing an edge partitions the hypothetical graph into its endpoints, two punctured neighborhoods, and a 3136-vertex residual core.</p></article>
+      <article class="card"><div class="metric">56 × 56</div><p>Each residual vertex is the unique common neighbor of one branch vertex on each side, forcing a row-column grid.</p></article>
+      <article class="card"><div class="metric">55 residual neighbors</div><p>Every pair of distinct rows—and every pair of distinct columns—is joined by a perfect matching.</p></article>
+      <article class="card"><div class="metric">short products derange</div><p>The matching permutations and their three-row products must be fixed-point-free to prevent triangles.</p></article>
+    </div>
+    <section class="card boundary" style="margin-top:18px"><strong>Automorphism correction.</strong> 92,625 is the edge count. The 56! coordinate relabellings are construction gauge, not automatically automorphisms of a fixed completed graph. Regular bipartite graphs also need not be complete bipartite.</section>
+
+    <h2>The four-way 57 firewall</h2>
+    <table>
+      <thead><tr><th>Object</th><th>What “57” means</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Missing M57</td><td>degree 57; 3250 vertices</td><td>Open</td></tr>
+        <tr><td>μ=4 ladder hole</td><td>57 vertices; degree 14</td><td>Nonexistent</td></tr>
+        <tr><td>Perkel graph</td><td>57 vertices; degree 6</td><td>Exists</td></tr>
+        <tr><td>Regular 57-cell</td><td>57 polytope cells</td><td>Exists</td></tr>
+      </tbody>
+    </table>
+    <p>A June 2026 preprint claims any missing Moore graph has no involutory automorphisms. If correct, its automorphism group is odd, so the even-order PSL(2,19) symmetry of the 57-cell/Perkel object cannot embed. This is a conditional symmetry firewall, not a nonexistence proof.</p>
+
+    <h2>Machine certificate</h2>
+    <div class="formula">PASS_6_FRONTS<br>e308364dd480970803061b90ab27bf86afa2ae4946399b656292f02682c17fd9</div>
+    <p>The verifier and frozen JSON certificate are in <code>analysis/bt3500_3505_triangle_free_srg_m57_bridge.py</code> and <code>data/PART_BT3500_BT3505_TRIANGLE_FREE_SRG_M57_BRIDGE_results.json</code>.</p>
+  </main>
+  <footer>Exact finite arithmetic and necessary local constraints only. No M57 existence claim, no Perkel/M57 identification, and no canonical W33–Gewirtz intertwiner.</footer>
+</div>
+</body>
+</html>
