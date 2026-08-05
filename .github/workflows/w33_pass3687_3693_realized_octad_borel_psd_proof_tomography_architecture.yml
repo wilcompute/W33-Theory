@@ -1,0 +1,97 @@
+name: Passes 3687-3693 Realized Octad Borel PSD Proof Tomography Architecture
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/*3687*'
+      - 'analysis/*3688*'
+      - 'analysis/*3689*'
+      - 'analysis/*3690*'
+      - 'analysis/*3691*'
+      - 'analysis/*3692*'
+      - 'analysis/*3693*'
+      - 'data/PART_BT3687*'
+      - 'data/PART_BT3690*'
+      - 'data/w33_pass_namespace_registry_v2.d/3687-3693.json'
+      - 'tests/test_bt3687_bt3693_realized_octad_borel_psd_proof_tomography_architecture.py'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - 'docs/realized-octad-borel-psd-proof-tomography-architecture.html'
+      - 'docs/index.html'
+      - '.github/workflows/w33_pass3687_3693_realized_octad_borel_psd_proof_tomography_architecture.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pass3687-3693-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  exact-architecture-and-papers:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install exact dependencies
+        run: python -m pip install --disable-pip-version-check pytest sympy==1.14.0
+      - name: Regenerate exact packet
+        run: |
+          mkdir -p evidence/pass3687_3693
+          cp data/PART_BT3687_BT3693_REALIZED_OCTAD_BOREL_PSD_PROOF_TOMOGRAPHY_ARCHITECTURE_results.json /tmp/frozen3693.json
+          python analysis/bt3687_3693_realized_octad_borel_psd_proof_tomography_architecture.py --json evidence/pass3687_3693/results.json | tee evidence/pass3687_3693/exact.log
+          grep -F 'PASS_7_FRONTS 3ff49c19511ebcf3c9159c1d69f123ae66dd275498c94f501230710634982828' evidence/pass3687_3693/exact.log
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          got=json.loads(Path('evidence/pass3687_3693/results.json').read_text())
+          old=json.loads(Path('/tmp/frozen3693.json').read_text())
+          assert got==old
+          assert got['passes']['3690_content_addressed_proof_archive']['merkle_root']=='d75cdc80648d7ddf913555f164140bc864087689e4c37e8ba77b0c3f763d9529'
+          print('PASS frozen semantic and proof-payload equality')
+          PY
+      - name: Focused exact regression
+        run: |
+          pytest -q tests/test_bt3687_bt3693_realized_octad_borel_psd_proof_tomography_architecture.py | tee evidence/pass3687_3693/pytest.log
+          git diff --check
+      - name: Verify manuscript and public reachability
+        run: |
+          python - <<'PY'
+          import json,re
+          from pathlib import Path
+          tex=Path('analysis/W33_CURRENT_FRONTIER_MANIFEST.tex').read_text()
+          inputs=re.findall(r'\\input\{([^}]+)\}',tex)
+          manifest=json.loads(Path('data/w33_current_frontier_manifest_v1.json').read_text())
+          assert inputs==manifest['required_ordered_inputs']
+          ours='analysis/BT3687_BT3693_realized_octad_borel_psd_proof_tomography_architecture_insert'
+          assert inputs.count(ours)==1
+          assert Path(ours+'.tex').is_file()
+          assert 'bt3687-3693-realized-octad-borel-psd-proof-tomography-architecture' in Path('docs/index.html').read_text()
+          assert Path('docs/realized-octad-borel-psd-proof-tomography-architecture.html').is_file()
+          print('PASS current-frontier and public reachability')
+          PY
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Compile canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3687_3693/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3687_3693/pdf_sha256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3687-3693-exact-architecture-papers
+          path: |
+            evidence/pass3687_3693/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
