@@ -1,0 +1,80 @@
+\section{Cyclic Borel quotients, the Perkel commutant, and the outer-$S_6$ Moore chart}
+\label{sec:bt3542-3548-borel-outer-s6}
+
+Passes 3542--3548 continue the degree-$57$ Moore and Perkel program with exact finite certificates.  The corresponding verifier reports
+\begin{verbatim}
+PASS_7_FRONTS a98621cc2f2378eaed09b8f747022f419a16fbb33433336eeb8f2414f4273f1a
+\end{verbatim}
+The missing Moore graph remains open.
+
+\paragraph{The $C_{19}$ quotient becomes three exact branches.}
+Assume $B=C_{19}\rtimes C_9$ acts on a hypothetical $\operatorname{SRG}(3250,57,0,1)$.  The normal $C_{19}$ fixes one vertex and has $171$ nonfixed orbit cells.  Exactly three cells lie in the fixed vertex's neighbourhood.  Writing $S_{ij}\subseteq\mathbb Z_{19}$ for the cyclic shifts between cells and $T_i=S_{ii}$, the unique-common-neighbour law forces the three neighbour cells to be independent, every connection leaving them to have size at most one, and their orbit-neighbour sets to be disjoint.  Hence the remaining $168$ cells split exactly as
+\[
+168=56+56+56.
+\]
+For a nonneighbour cell,
+\[
+\sum_j |S_{ij}|(|S_{ij}|-1)=18-|T_i|,
+\qquad |T_i|\in\{0,2,4\}.
+\]
+$C_9$ or $C_3$ stabilizer invariance forbids nonempty $T_i$ inside Borel orbits of size $19$ or $57$, so internal edges occur only in the eighteen size-$171$ Borel orbits.  If $a$ of those have internal degree two and $b$ have internal degree four, the two displacement levels reduce to
+\[
+a+2b=3\quad\hbox{or}\quad a+2b=18.
+\]
+Together with the two orbit profiles $P_{19}$ and $P_{57}$, the four Borel archetypes reduce to exactly twenty-four aggregate cyclic-difference signatures.  This is a finite CSP frontier, not a construction or contradiction.
+
+\paragraph{The complete Perkel Borel commutant.}
+For the explicit Perkel action $(i,j)\mapsto(i+m,4^m j+b)$, the point stabilizer is $C_3$ with three singleton orbits and eighteen orbits of size three.  The orbital algebra therefore has rank $21$.  The rational module
+\[
+\mathbb Q^{57}=\mathbf 1\oplus 3V_{18}\oplus V_2
+\]
+gives projected algebra dimensions $1,2,18$, and hence
+\[
+\operatorname{End}_{B}(\mathbb Q^{57})
+\cong
+\mathbb Q\oplus M_3\!\left(\mathbb Q(\sqrt{-19})\right)
+\oplus \mathbb Q(\sqrt{-3}).
+\]
+Let $P_{54}$ and $P_2$ be the conductor-$19$ and conductor-$3$ projector numerators.  The block-diagonal Paley tournament matrix $D_{19}$ and the oriented three-layer all-one operator $C_3$ obey
+\[
+9D_{19}^2=-P_{54},
+\qquad
+3C_3^2=-19P_2,
+\]
+and commute with all twenty-one orbital matrices.  The commutative adjacency layer has exact span
+\[
+\mathbb Q[A,B_{19}]
+\cong
+\mathbb Q\times\mathbb Q\times\mathbb Q\times\mathbb Q(\sqrt5),
+\]
+with basis $I,A,A^2,B_{19},AB_{19}$.
+
+\paragraph{Proof-carrying maximum cliques.}
+The star-complement pipeline now has an independently checkable upper-bound proof language.  A colour leaf proves $\omega(P)\le K$ by a proper $K$-colouring of the current candidate set.  A branch node on $v$ proves the include subproblem at $K-1$ and the exclude subproblem at $K$.  The checker reconstructs all subproblems, verifies colour classes and references, and separately checks the clique witness.  Thirty-one deterministic controls pass.  A complete $3720$-instance proof archive remains a heavy workflow boundary.
+
+\paragraph{A factorization-field Moore compiler.}
+Let $n$ be even and suppose $F_0,\dots,F_{n-1}$ are one-factorizations of $K_n$ satisfying $|F_i\cap F_j|=1$.  Let $m_{ij}$ be the shared perfect matching.  The vertex set
+\[
+\{x,y\}\cup\{r_i\}\cup\{c_a\}\cup\{z_{i,a}\}
+\]
+with edges
+\[
+x\sim y,r_i,
+\qquad y\sim c_a,
+\qquad z_{i,a}\sim r_i,c_a,z_{j,m_{ij}(a)}
+\]
+has $(n+1)^2+1$ vertices and degree $n+1$.  If every simple three-row and four-row holonomy is fixed-point-free, the graph has girth at least five and meets the Moore bound exactly.  For $n=56$ this becomes a $3250$-vertex, degree-$57$ construction surface with $27720$ triangle checks and $1101870$ simple four-cycle checks.  Pairwise unique intersection is a sufficient high-risk branch, not a proved necessity.
+
+\paragraph{Hoffman--Singleton as the outer automorphism of $S_6$.}
+The fifteen duads, fifteen synthemes, and six pentads are respectively the edges, perfect matchings, and one-factorizations of $K_6$.  Exact enumeration shows that every pair of pentads shares exactly one syntheme, every triangle holonomy has cycle type $2^3$, and every simple four-row holonomy has cycle type $3^2$.  The induced action of $S_6$ on the six pentads is faithful of order $720$; a point transposition of type $2\,1^4$ maps to type $2^3$, certifying the outer action.  Feeding the shared synthemes into the factorization-field compiler reconstructs
+\[
+\operatorname{SRG}(50,7,0,1),
+\]
+the Hoffman--Singleton graph.
+
+\paragraph{Analytic W33--Gewirtz ports.}
+For either graph,
+\[
+f(A)=f(k)P+f(2)E_2+f(-4)E_{-4}
+\]
+for every analytic $f$.  In particular the heat kernel and resolvent port exactly, while the Ihara--Bass factors retain the graph-specific degree and multiplicities.  No incidence, code, automorphism, hardware, or physical claim is inferred from this spectral compiler.
