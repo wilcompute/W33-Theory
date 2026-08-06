@@ -1,0 +1,82 @@
+\section{Passes 3989--3996: physical incidence photon processor}
+\label{sec:pass3989-3996}
+
+The W33 point graph admits an exact sparse physical lift.  Let $N$ be the $40\times40$ point--line incidence matrix of $W(3,3)$.  Exact enumeration gives
+\[
+NN^T=4I+A_{W33}.
+\]
+Hence a dense twelve-neighbour point Hamiltonian may be generated from an eighty-mode bipartite point--line device with 160 couplings, degree four, and girth eight.  Its spectrum is
+\[
+-4^1,-\sqrt6^{24},0^{30},\sqrt6^{24},4^1.
+\]
+With point--line coupling $g$ and bus detuning $\Delta$,
+\[
+H_{\rm eff}=-\frac{g^2}{\Delta}(A+4I)+O(g^4/\Delta^3),
+\]
+and $t=\pi\Delta/(2g^2)$ approaches the exact W33 half-period reflection on the point sector.  This is an analytic architecture, not a fabricated device.
+
+Let $B=J-I-A$ and $D=A-B$.  Then $A+B=J-I$ is geometry-blind on the nonuniform sector, while
+\[
+\operatorname{Spec}(D)=-15^1,5^{24},-7^{15}.
+\]
+The spectral projectors are
+\[
+E_{-15}=\frac{(D-5I)(D+7I)}{160}=\frac J{40},
+\quad
+E_5=\frac{(D+15I)(D+7I)}{240},
+\quad
+E_{-7}=-\frac{(D+15I)(D-5I)}{96}.
+\]
+Consequently $\langle D\rangle$ and $\langle D^2\rangle$ determine all three sector populations.  If identical commuting error $C$ enters both arms, then
+\[
+e^{-it(A+C)}e^{+it(B+C)}=e^{-it(A-B)},
+\]
+so the dual-geometry echo cancels it exactly.
+
+The maximum-code census is also complete.  The 945-vertex fixed-parent compatibility graph contains exactly 945 maximum $57$-cliques, split into three parent-group orbits
+\[
+\boxed{945=540+270+135}
+\]
+with stabilizer orders
+\[
+\boxed{96,192,384}.
+\]
+Thus maximum-code uniqueness is false in the fixed-parent problem.  This corrects the earlier division by an order-192 full coordinate stabilizer without first checking parent preservation.
+
+The seven primitive central blocks of the literal $48$-orbital algebra have simple degrees
+\[
+1,1,2,2,2,3,5.
+\]
+Their complete central coarse-graining lattice contains
+\[
+B_7=877
+\]
+partitions.  Quotienting equal-degree relabelings by $S_2\times S_3$ leaves exactly
+\[
+\boxed{198}
+\]
+inequivalent central types.  These are exact central subalgebras, not automatically combinatorial fusions of the 48 orbital relations.
+
+Three further photon constructions follow from the incidence lift.  First, $\operatorname{rank}N=25$, so the bipartite processor contains thirty exact dark modes.  Second, for $L=12I-A$,
+\[
+V=e^{-i\pi L/4}=I-(1+i)E_{10},
+\qquad V^2=U,
+\qquad V^4=I,
+\]
+which gives an exact four-phase internal graph clock.  Third, for a genuine $m$-fold tensor carrier,
+\[
+\operatorname{rank}(N^{\otimes m})=25^m,
+\qquad
+\dim\ker(N^{\otimes m})=40^m-25^m,
+\]
+so the one-side dark fraction is
+\[
+\boxed{1-(5/8)^m}.
+\]
+Only $m+1$ nonzero singular shells occur, with multiplicity $\binom mr24^r$ and squared singular value $16^{m-r}6^r$.
+
+The Monster acquisition gate now composes $U_4(2)\to H\to\mathbb M$ class fusions through maximal-subgroup tables and searches only compatible published explicit \texttt{mmgroup} overgroups.  The promoted status remains
+\[
+\boxed{\texttt{PENDING\_EXPLICIT\_MONSTER\_U42\_WORDS}}
+\]
+until four portable words pass the exact pair, triple, order-$25{,}920$, object-action, and class-fusion firewalls.  No variable vacuum $c$, literal hidden photon nodes, fabricated hardware, laboratory result, or unobserved remote build is claimed.
