@@ -1,23 +1,25 @@
 {
   "schema": "w33.pass_namespace_registry.v2.entry",
   "range": [3989, 3996],
-  "slug": "physical_w33_coupler_echo_three_maxcode_orbits_central_fusions_monster_overgroups_wigner_smith_dark_clock_tower",
-  "title": "Physical W33 couplers, dual-geometry echo, three maximum-code orbits, central fusion lattice, Monster overgroup acquisition, Wigner-Smith memory, dark clock, and tensor tower",
-  "status": "complete_with_external_monster_fourier_hardware_and_lab_boundaries",
+  "slug": "physical_w33_couplers_echo_three_maxcode_orbits_central_fusions_monster_overgroups_wigner_smith_dark_clock_tower",
+  "title": "Direct and incidence W33 couplers, dual echo, three maximum-code orbits, central fusion lattice, Monster acquisition, Wigner-Smith memory, dark clock, and tensor tower",
+  "status": "source_complete_external_monster_fourier_coefficients_remote_pdf_and_photon_lab_pending",
   "owner": "openai-gpt-5.6-thinking",
   "reserved_at": "2026-08-06T02:20:00-04:00",
-  "completed_at": "2026-08-06T03:08:00-04:00",
+  "completed_at": "2026-08-06T03:12:00-04:00",
   "certificate_status": "PASS_EXACT_FIVE_FRONT_THREE_BONKERS_MONSTER_WORDS_FOURIER_COEFFICIENT_FREEZE_AND_LAB_PENDING",
   "certificates": {
     "combined_breakthrough_manifest": "16397906a63553464abb18b0f65f839a7265afe9ef2fe712857c7e0efc977d27",
     "photon_incidence_echo_clock": "2223d77032d8b748cfeb32ec2ef6f2c68f43312a38b9b8c85b5e045d140404e9",
+    "direct_w33_coupler": "b4f3fea2f768c124f6190719b8895dc44205fda85319a4cd94b842a9aff24a88",
     "wigner_smith_information_delay": "5a666b410a874ac934ca60271f993ae74cc0c0605ef67c15834036baa3f7182d",
     "maximum_code_orbits_independent": "852db084763db441845f0ef082a28b30c90a0f6eccd0aff32cc57fde7fa46757",
     "maximum_code_orbits_parallel": "e2d3b136f48ec6e5107b38e0e8c4083ee8f44e63f645d91fcdd0d4cbbd15d8dd",
     "central_fusion_lattice": "16680f46b3768c71fe133d0a62985d2d10ad1d19c96afc899d733c2a7d17f615"
   },
   "promoted": [
-    "ideal 40-mode equal-edge W33 flight and 80-mode 160-edge degree-four girth-eight incidence lift with NN^T=4I+A",
+    "ideal 40-mode equal-edge W33 flight at kappa*z=pi/2 with no linear uniform-error average-fidelity penalty",
+    "80-mode 160-edge degree-four girth-eight incidence lift with NN^T=4I+A",
     "exact dual-geometry projectors, two-moment tomography, and commuting-error echo",
     "945 maximum fixed-parent codes in three parent-group orbits 540+270+135 with stabilizers 96,192,384",
     "877 central coarse-grainings and 198 inequivalent equal-degree-relabeling types",
@@ -26,12 +28,27 @@
     "30-dimensional dark sector, order-four Floquet clock, tensor dark fraction 1-(5/8)^m, and causal-refinement condition aJ constant"
   ],
   "correction": "Maximum-code uniqueness is false in the fixed-parent problem. Two independent exact implementations agree on three orbits. The earlier 270 inference used an order-192 full coordinate stabilizer without first checking preservation of the fixed parent.",
+  "artifacts": [
+    "analysis/w33_pass3989_3996_maximum_code_orbit_census.py",
+    "analysis/w33_pass3989_3996_physical_w33_coupler.py",
+    "analysis/w33_pass3989_3996_wigner_smith_causal_memory.py",
+    "analysis/w33_pass3989_3990_3994_3996_photon_incidence_echo_clock.py",
+    "analysis/w33_pass3991_maximum_code_orbit_census.py",
+    "analysis/w33_pass3992_central_fusion_lattice.py",
+    "analysis/w33_pass3993_monster_overgroup_acquisition.py",
+    "data/PART_3989_3996_PHOTON_BREAKTHROUGH_manifest.json",
+    "analysis/BT3989_BT3996_physical_photon_causal_memory.md",
+    "analysis/BT3989_BT3996_combined_photon_breakthrough_insert.tex",
+    "analysis/BT3989_BT3996_physical_photon_causal_memory_index_insert.html",
+    "docs/physical-incidence-photon-processor.html",
+    "docs/photon-causal-memory-3989-3996.html"
+  ],
   "external_pending": [
     "literal orbital-basis primitive-idempotent and 7x48 character-table workflow output",
-    "Monster maximal-overgroup fusion/database search and four explicit U4(2) words",
+    "Monster maximal-overgroup fusion/database output and four explicit U4(2) words",
     "fabricated photonic device, reconstructed electromagnetic Wigner-Smith delays, and laboratory measurements",
-    "remote manuscript PDF evidence"
+    "generated public-frontier JSON reconciliation and remote manuscript PDF evidence"
   ],
-  "coordination": "The canonical manuscript input is analysis/BT3989_BT3996_physical_photon_causal_memory_insert. Preserve the exact Passes 3973-3988 inputs and protected docs/index.html blob. Public material is supplied through a standalone page and theorem-card insert.",
+  "coordination": "The canonical manuscript input is analysis/BT3989_BT3996_combined_photon_breakthrough_insert, which reaches both independently frozen theorem layers exactly once. Preserve the exact Passes 3973-3988 inputs and protected docs/index.html blob.",
   "boundary": "No fabricated device, laboratory photon result, mode-dependent vacuum c, literal hidden photon-node ontology, Monster embedding, relation-level orbital fusion classification, or unobserved remote CI/PDF success is claimed."
 }
