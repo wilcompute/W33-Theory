@@ -1,0 +1,88 @@
+name: Passes 3913-3920 Multi-Defect Lindbladian Process Fusion Phase
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass3913_3920_multidefect_lindbladian_process_fusion_phase.py'
+      - 'data/PART_3913_3920_SOURCE.parts/**'
+      - 'data/PART_3913_3920_MULTIDEFECT_LINDBLADIAN_PROCESS_FUSION_PHASE_results.json'
+      - 'data/w33_pass_namespace_registry_v2.d/3913-3920.json'
+      - 'tests/test_w33_pass3913_3920_multidefect_lindbladian_process_fusion_phase.py'
+      - 'analysis/BT3913_BT3920_multidefect_lindbladian_process_fusion_phase*'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - 'docs/multidefect-lindbladian-process-fusion-phase.html'
+      - '.github/workflows/w33_pass3913_3920_multidefect_lindbladian_process_fusion_phase.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pass3913-3920-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  exact-eight-fronts:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install deterministic dependencies
+        run: python -m pip install --disable-pip-version-check pytest numpy==2.3.5 scipy==1.16.3 networkx==3.6.1
+      - name: Regenerate exact semantic certificate
+        run: |
+          mkdir -p evidence/pass3913_3920
+          python analysis/w33_pass3913_3920_multidefect_lindbladian_process_fusion_phase.py --json evidence/pass3913_3920/results.json | tee evidence/pass3913_3920/exact.log
+          grep -F 'PASS_8_FRONTS 019183d46768ff68a5f57676540d8aefd853010614545fd834656b69c4c7eb15' evidence/pass3913_3920/exact.log
+          python - <<'PY'
+          import json
+          expected=json.load(open('data/PART_3913_3920_MULTIDEFECT_LINDBLADIAN_PROCESS_FUSION_PHASE_results.json'))
+          observed=json.load(open('evidence/pass3913_3920/results.json'))
+          assert observed==expected
+          assert observed['passes']['3913_multidefect_topology_immune_system']['all_two_flip_syndromes']==303810
+          assert observed['passes']['3919_bonkers_dual_geometry_all_to_all_scheduler']['complete_graph_rounds']==39
+          print('PASS frozen semantic equality')
+          PY
+      - name: Focused exact regression
+        run: |
+          pytest -q tests/test_w33_pass3913_3920_multidefect_lindbladian_process_fusion_phase.py | tee evidence/pass3913_3920/pytest.log
+          git diff --check
+      - name: Check manuscript and public reachability
+        run: |
+          grep -F 'BT3913_BT3920_multidefect_lindbladian_process_fusion_phase_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          grep -F 'multidefect-lindbladian-process-fusion-phase.html' data/w33_current_frontier_manifest_v1.json
+          grep -F '019183d46768ff68a5f57676540d8aefd853010614545fd834656b69c4c7eb15' docs/multidefect-lindbladian-process-fusion-phase.html
+          test -f analysis/BT3913_BT3920_multidefect_lindbladian_process_fusion_phase_index_insert.html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3913-3920-exact-evidence
+          path: evidence/pass3913_3920/**
+
+  manuscripts:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: WtfJoke/setup-tectonic@v3
+        with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
+      - name: Compile all manuscript front doors
+        run: |
+          mkdir -p evidence/pass3913_3920
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3913_3920/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3913_3920/pdf_sha256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3913-3920-papers
+          path: |
+            evidence/pass3913_3920/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
