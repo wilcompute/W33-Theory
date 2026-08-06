@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [4013, 4018],
+  "slug": "incidence_link_h1_memory_projector_revival_tomography_and_coupler_bridge",
+  "title": "Exact incidence-link H1 memory, projector gate, two-step revival, sign-resolved tomography, and physical coupler bridge",
+  "status": "reserved",
+  "owner": "openai-gpt-5.6-thinking",
+  "reserved_at": "2026-08-06T09:31:00-04:00",
+  "purpose": "Reconcile the exact 80-mode revival packet with the older Levi Hodge theorem and prove whether the 160 physical incidence couplers themselves carry the protected 81-dimensional memory sector. Add independent tomography and gate certificates without duplicating Passes 4005-4012.",
+  "coordination": "Preserve Passes 4005-4012 exact revival artifacts and protected docs/index.html. Treat the link-current theorem as a new physical-layout bridge, not a replacement for the point/line bright-dark construction.",
+  "boundary": "Reservation only. No fabricated coupler network, loss tolerance, laboratory delay, variable vacuum c, literal photon-node ontology, Monster embedding, remote CI, or PDF success is promoted."
+}
