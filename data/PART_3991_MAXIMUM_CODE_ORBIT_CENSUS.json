@@ -1,0 +1,65 @@
+{
+  "anchored_composition": {
+    "3": 12,
+    "15": 45
+  },
+  "anchored_maximum_cliques": 57,
+  "boundary": "Exact for maximum doubly-even self-orthogonal extensions in the fixed 945-vertex compatibility graph containing the fixed [36,6,16] parent. It does not classify length-36 codes outside this parent-extension problem.",
+  "compatibility_graph": {
+    "degree": 624,
+    "maximum_clique_size": 57,
+    "vertices": 945
+  },
+  "correction": "The order-192 full coordinate stabilizer cannot be divided directly into the parent-group order. In the parent-preserving group the three maximum-code stabilizers have orders 96, 192, and 384.",
+  "fixed_anchor": 0,
+  "maximum_code_orbits": [
+    {
+      "anchored_solutions": 12,
+      "name": "orbit_540",
+      "orbit_size": 540,
+      "parent_group_stabilizer_order": 96,
+      "representative_support_sha256": "8685326af3948462fb3989cf5b9bb9b0c7c08b89ebd31677348378797abcbe0b",
+      "vertex_orbit_composition": {
+        "135_orbit": 3,
+        "810_orbit": 54
+      }
+    },
+    {
+      "anchored_solutions": 30,
+      "name": "orbit_270",
+      "orbit_size": 270,
+      "parent_group_stabilizer_order": 192,
+      "representative_support_sha256": "34a228831322086ba9315a1dcc3abddadaffefe78768499c65371a4c03fcacbf",
+      "vertex_orbit_composition": {
+        "135_orbit": 15,
+        "810_orbit": 42
+      }
+    },
+    {
+      "anchored_solutions": 15,
+      "name": "orbit_135",
+      "orbit_size": 135,
+      "parent_group_stabilizer_order": 384,
+      "representative_support_sha256": "67b6cee67c915d9d7a9ba00fee786e54b56a5e5ed23acec6004ee851a13b34db",
+      "vertex_orbit_composition": {
+        "135_orbit": 15,
+        "810_orbit": 42
+      }
+    }
+  ],
+  "parent_group_order": 51840,
+  "schema": "w33.pass3991.maximum_code_orbit_census.v1",
+  "search_nodes": 476762,
+  "seconds": 26.28028154373169,
+  "semantic_sha256": "852db084763db441845f0ef082a28b30c90a0f6eccd0aff32cc57fde7fa46757",
+  "status": "PASS_EXACT_THREE_MAXIMUM_CODE_ORBITS",
+  "total_by_135_orbit_composition": {
+    "15": 405,
+    "3": 540
+  },
+  "total_maximum_cliques": 945,
+  "weight4_vertex_orbits": [
+    135,
+    810
+  ]
+}
