@@ -1,0 +1,118 @@
+name: Passes 3965-3972 Topology Control and Causal Density
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass3965_3972_topology_control_causal_density.py'
+      - 'data/PART_3965_3972_TOPOLOGY_CONTROL_CAUSAL_DENSITY_results.json'
+      - 'data/w33_pass_namespace_registry_v2.d/3965-3972.json'
+      - 'tests/test_w33_pass3965_3972_topology_control_causal_density.py'
+      - 'analysis/BT3965_BT3972_topology_control_causal_density*'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - 'docs/topology-control-causal-density.html'
+      - '.github/workflows/w33_pass3965_3972_topology_control_causal_density.yml'
+  workflow_dispatch:
+    inputs:
+      heavy_ledger:
+        description: 'Regenerate the 78,788,060 weight-three ledger and weight-4/6 firewalls'
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pass3965-3972-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  exact-quick:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install deterministic dependencies
+        run: python -m pip install --disable-pip-version-check pytest numpy==2.3.5
+      - name: Regenerate quick exact certificate
+        run: |
+          mkdir -p evidence/pass3965_3972
+          python analysis/w33_pass3965_3972_topology_control_causal_density.py \
+            --json evidence/pass3965_3972/results.json | tee evidence/pass3965_3972/exact.log
+          grep -F 'PASS_8_FRONTS 90911496d42850652801e77da5bf6523027f5e3a52e8d906a9e817526fa68d57' \
+            evidence/pass3965_3972/exact.log
+          python - <<'PY'
+          import json
+          expected=json.load(open('data/PART_3965_3972_TOPOLOGY_CONTROL_CAUSAL_DENSITY_results.json'))
+          observed=json.load(open('evidence/pass3965_3972/results.json'))
+          assert observed == expected
+          assert observed['passes']['3967_dual_geometry_lie_closure']['minimum_independent_diagonal_ports'] == 24
+          assert observed['passes']['3970_bonkers_photon_causal_density']['serial_depth_bound'] == 'N_serial <= 4 E L/(h c)=4 L/lambda'
+          print('PASS frozen semantic equality')
+          PY
+      - name: Focused exact regression
+        run: |
+          pytest -q tests/test_w33_pass3965_3972_topology_control_causal_density.py | tee evidence/pass3965_3972/pytest.log
+          git diff --check
+      - name: Check manuscript and public reachability
+        run: |
+          grep -F 'BT3965_BT3972_topology_control_causal_density_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          grep -F 'topology-control-causal-density.html' data/w33_current_frontier_manifest_v1.json
+          grep -F '90911496d42850652801e77da5bf6523027f5e3a52e8d906a9e817526fa68d57' docs/topology-control-causal-density.html
+          test -f analysis/BT3965_BT3972_topology_control_causal_density_index_insert.html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3965-3972-quick-evidence
+          path: evidence/pass3965_3972/**
+
+  heavy-ledger:
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.heavy_ledger }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check numpy==2.3.5
+      - name: Regenerate exhaustive ledgers
+        run: |
+          mkdir -p evidence/pass3965_3972 /tmp/pass3965
+          python analysis/w33_pass3965_3972_topology_control_causal_density.py \
+            --heavy --workdir /tmp/pass3965 \
+            --json evidence/pass3965_3972/heavy_results.json | tee evidence/pass3965_3972/heavy.log
+          grep -F 'PASS_8_FRONTS 90911496d42850652801e77da5bf6523027f5e3a52e8d906a9e817526fa68d57' \
+            evidence/pass3965_3972/heavy.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3965-3972-heavy-evidence
+          path: evidence/pass3965_3972/**
+
+  manuscripts:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: WtfJoke/setup-tectonic@v3
+        with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
+      - name: Compile all manuscript front doors
+        run: |
+          mkdir -p evidence/pass3965_3972
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3965_3972/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
+            > evidence/pass3965_3972/pdf_sha256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3965-3972-papers
+          path: |
+            evidence/pass3965_3972/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
