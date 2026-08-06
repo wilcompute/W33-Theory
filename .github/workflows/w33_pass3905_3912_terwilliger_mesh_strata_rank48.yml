@@ -1,0 +1,45 @@
+name: Passes 3905-3912 Terwilliger mesh strata rank48
+on:
+  pull_request:
+    paths:
+      - 'analysis/w33_pass3905_3912_terwilliger_mesh_strata_rank48.py'
+      - 'data/PART_3905_3912_TERWILLIGER_MESH_STRATA_RANK48_results.json'
+      - 'tests/test_w33_pass3905_3912_terwilliger_mesh_strata_rank48.py'
+      - 'analysis/BT3905_BT3912_terwilliger_mesh_strata_rank48*'
+      - 'docs/maxcode-mesh-strata-rank48.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - '.github/workflows/w33_pass3905_3912_terwilliger_mesh_strata_rank48.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install numpy pytest
+      - run: python analysis/w33_pass3905_3912_terwilliger_mesh_strata_rank48.py --check data/PART_3905_3912_TERWILLIGER_MESH_STRATA_RANK48_results.json --root .
+      - run: pytest -q tests/test_w33_pass3905_3912_terwilliger_mesh_strata_rank48.py
+      - run: grep -F 'BT3905_BT3912_terwilliger_mesh_strata_rank48_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+      - run: grep -F 'de94973500dcf4af824eb34779034e15a6a9260902bf114a81524adff45aeb9b' docs/maxcode-mesh-strata-rank48.html
+  manuscripts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: wtfjoke/setup-tectonic@v3
+      - run: |
+          tectonic w33_paper.tex
+          tectonic photonic_holonet.tex
+          tectonic holonet_machine_blueprint.tex
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3905-3912-canonical-pdfs
+          path: |
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
