@@ -3,10 +3,18 @@
   "range": [4019, 4024],
   "slug": "photonic_line_graph_flat_band_apartment_tight_frame_and_disorder_boundary",
   "title": "Photonic line-graph flat band, apartment compact states, H1 tight frame, local address law, and disorder boundary",
-  "status": "reserved",
+  "status": "completed_exact_with_physical_model_boundaries",
   "owner": "openai-gpt-5.6-thinking",
   "reserved_at": "2026-08-06T09:45:00-04:00",
+  "completed_at": "2026-08-06T09:52:00-04:00",
   "purpose": "Translate the exact 160-coupler H1 theorem into a line-graph flat-band construction. Prove the -2 flat band, show that the 1620 Levi apartments are compact localized states spanning it as a unit-norm tight frame, and state the exact robustness boundary under uniform versus local perturbations.",
-  "coordination": "Build on BT545-BT550 and Passes 4013-4018 without relabeling old results. Distinguish the secondary 160-site line-graph Hamiltonian from the primary 80-mode incidence device and from link-current dynamics.",
-  "boundary": "Reservation only. External photonic flat-band literature is context, not evidence of a fabricated W33 lattice. No device, disorder tolerance, local synthesis, measured localization, variable vacuum c, or laboratory performance is promoted."
+  "result": "The secondary 160-site Levi line graph satisfies A_X=D^T D-2I, so its -2 flat band is exactly the 81-dimensional H1 cycle space. All 1620 Levi apartments are compact eight-site flat-band states spanning that band; after normalization they form a unit-norm tight frame with frame bound 20. Every site lies in 81 apartments. Uniform onsite shifts preserve the degeneracy, while a one-site perturbation has rank-one projected action with eigenvalue 81/160, excluding generic disorder immunity.",
+  "certificate": "data/PART_4019_4024_PHOTONIC_FLAT_BAND_H1.json",
+  "semantic_sha256": "e7746ea1730daea1b29d0e7831bc627c4d115ee0ccf1c81441796363101aa59f",
+  "verifier": "analysis/w33_pass4019_4024_photonic_flat_band_h1.py",
+  "regression": "tests/test_w33_pass4019_4024_photonic_flat_band_h1.py",
+  "manuscript_insert": "analysis/BT4019_BT4024_photonic_flat_band_h1_insert.tex",
+  "public_page": "docs/photon-flat-band-h1.html",
+  "coordination": "BT548 owns the earlier algebraic line-graph projector theorem. This packet adds the secondary photonic model, apartment compact-state frame, exact local address law, and perturbation boundary without relabeling BT548.",
+  "boundary": "Exact finite graph, line-graph, eigenspace, apartment-frame, and first-order projected perturbation statements only. External flat-band literature is context. No fabricated secondary lattice, measured localization, disorder tolerance, local synthesis, variable vacuum c, hidden photon nodes, remote CI, or laboratory performance is promoted."
 }
