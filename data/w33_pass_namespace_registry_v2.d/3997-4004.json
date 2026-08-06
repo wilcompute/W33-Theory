@@ -3,10 +3,51 @@
   "range": [3997, 4004],
   "slug": "photon_layout_tomography_orbital_fourier_monster_execution_code_stabilizers_three_bonkers",
   "title": "Photon layout competition, Wigner-Smith tomography, orbital Fourier closure, Monster execution, code-stabilizer identification, and three photon constructions",
-  "status": "reserved",
+  "status": "source_complete_exact_layout_tomography_stabilizers_three_bonkers_orbital_monster_remote_outputs_ci_pdf_lab_pending",
   "owner": "openai-gpt-5.6-thinking",
   "reserved_at": "2026-08-06T08:03:00-04:00",
-  "purpose": "Execute the five open continuations after Passes 3989-3996 and three additional photon constructions: compare direct and incidence physical layouts under explicit cost models; build a nuisance-complete Wigner-Smith tomography simulator; materialize exact orbital Fourier data and test relation-level fusions; execute the Monster overgroup acquisition gate as far as available engines permit; structurally identify the three maximum-code stabilizers; and derive three independent, executable photon ideas.",
-  "coordination": "Preserve the canonical Passes 3989-3996 theorem input and protected docs/index.html. Reuse frozen certificates rather than recomputing or overwriting them. Reconcile parallel commits before shared-manifest writes.",
-  "boundary": "Reservation only. No fabricated layout, measured delay, relation-level fusion, Monster embedding, stabilizer isomorphism, variable vacuum c, remote CI/PDF success, or laboratory result is promoted without an executed certificate."
+  "completed_at": "2026-08-06T08:36:00-04:00",
+  "certificate_status": "PASS_EXACT_LAYOUT_TOMOGRAPHY_STABILIZERS_THREE_BONKERS_WITH_EXTERNAL_FOURIER_MONSTER_EXECUTION_PENDING",
+  "certificates": {
+    "layout_tomography_edge_memory": "ed4eddab150575ec2a719bc55974ac24e0b1852b1a3bec4a08204bc9114f4960",
+    "code_stabilizer_identification": "2bb684e7fcbfc8ca00e233c4955fc7a985c8aada6791c932599db10b4287598c"
+  },
+  "promoted": [
+    "exact one-factorizations of the direct 40-mode W33 graph into 12 perfect-matching layers and the 80-mode incidence lift into 4 layers",
+    "linear fabrication phase boundary 5 alpha = 10 beta + gamma between direct and incidence architectures",
+    "three-sector Wigner-Smith moment inversion with executed second-order finite-difference convergence",
+    "common-delay-free identity Q-(Tr Q/40)I=-theta-prime A_W33, reconstructing all 240 graph edges",
+    "maximum-code stabilizers S4 x V4, D8 semidirect_{sign,alpha} S4, and C2 wr S4 = W(B4)",
+    "240-edge carrier spectrum 0^201+10^24+16^15 and exact half-flight 24-sector reflection",
+    "delay-metrology laws F_Q(vertex)=48 theta-prime^2 and F_Q(opt)=256 theta-prime^2"
+  ],
+  "correction": "The order-192 maximum-code stabilizer is not S4 x D8. Its exact structure is a nontrivial D8 semidirect S4 whose action factors through the sign map, with alpha(r)=r^-1 and alpha(s)=r^2 s.",
+  "artifacts": [
+    "analysis/w33_pass3997_4004_layout_tomography_edge_memory.py",
+    "data/PART_3997_4004_LAYOUT_TOMOGRAPHY_EDGE_MEMORY.json",
+    "analysis/w33_pass4001_code_stabilizer_identification.py",
+    "data/PART_4001_CODE_STABILIZER_IDENTIFICATION.json",
+    "analysis/w33_pass3999_orbital_relation_fusion.py",
+    ".github/workflows/w33_pass3999_orbital_relation_fusion.yml",
+    "analysis/w33_pass4000_monster_execution_summary.py",
+    ".github/workflows/w33_pass4000_monster_execution.yml",
+    "tests/test_w33_pass3997_4004_layout_tomography_stabilizers.py",
+    "data/PART_3997_4004_PHOTON_LAYOUT_FOURIER_STABILIZER_manifest.json",
+    "analysis/BT3997_BT4004_photon_layout_fourier_stabilizers.md",
+    "analysis/BT3997_BT4004_photon_layout_fourier_stabilizers_insert.tex",
+    "analysis/BT3997_BT4004_photon_layout_fourier_stabilizers_index_insert.html",
+    "docs/photon-layout-delay-geometry-stabilizers.html",
+    ".github/workflows/w33_pass3997_4004_exact.yml",
+    "tools/integrate_pass3997_4004_frontier.py",
+    ".github/workflows/w33_pass3997_4004_frontier.yml"
+  ],
+  "external_pending": [
+    "literal orbital-basis primitive-idempotent coefficients, 7x48 character table, and relation-level fusion output",
+    "executed Monster GAP/mmgroup overgroup-search output and four explicit U4(2) words",
+    "generated current-frontier JSON reconciliation commit",
+    "remote exact CI and manuscript PDF evidence",
+    "fabrication-aware placement and routing, measured Wigner-Smith delays, hardware, and laboratory performance"
+  ],
+  "coordination": "The canonical manuscript input is analysis/BT3997_BT4004_photon_layout_fourier_stabilizers_insert. The protected docs/index.html blob was not modified; public material is supplied through a theorem-card fragment and standalone atlas.",
+  "boundary": "No fabricated device, measured delay, relation-level orbital fusion, Monster embedding, variable vacuum c, unobserved remote CI/PDF success, or laboratory result is claimed."
 }
