@@ -1,0 +1,52 @@
+name: Pass 3993 Monster Overgroup Acquisition
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass3993_monster_overgroup_sieve.g'
+      - 'analysis/w33_pass3993_monster_overgroup_acquisition.py'
+      - '.github/workflows/w33_pass3993_monster_overgroup_acquisition.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pass3993-monster-overgroup-acquisition
+  cancel-in-progress: false
+jobs:
+  acquire:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - name: Install character tables and Monster engine
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gap gap-character-tables
+          python -m pip install --disable-pip-version-check mmgroup==1.0.0
+      - name: Clone published maximal-subgroup generator database
+        run: git clone --depth 1 https://github.com/apsmath/MonsterSubgroups.git /tmp/MonsterSubgroups
+      - name: Compose U4(2) fusions through maximal overgroups
+        run: gap -q analysis/w33_pass3993_monster_overgroup_sieve.g | tee /tmp/pass3993_gap.txt
+      - name: Inventory explicit overgroups and run bounded word search
+        run: |
+          python analysis/w33_pass3993_monster_overgroup_acquisition.py \
+            --gap-output /tmp/pass3993_gap.txt --database /tmp/MonsterSubgroups | tee /tmp/pass3993.log
+          grep -F 'PASS_MONSTER_OVERGROUP_ACQUISITION' /tmp/pass3993.log
+      - name: Preserve strict final word gate
+        run: |
+          python analysis/w33_mmgroup_u42_candidate_harness.py \
+            data/PART_3751_MONSTER_U42_CLASS_FUSION_EXECUTION.json \
+            --allow-empty --output /tmp/pass3993_strict_gate.json
+      - name: Commit acquisition certificate
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/PART_3993_MONSTER_OVERGROUP_ACQUISITION.json
+          test ! -f data/PART_3751_MONSTER_U42_CLASS_FUSION_EXECUTION.json || git add data/PART_3751_MONSTER_U42_CLASS_FUSION_EXECUTION.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Pass 3993: freeze Monster overgroup acquisition evidence'
+          git pull --rebase origin master
+          git push
