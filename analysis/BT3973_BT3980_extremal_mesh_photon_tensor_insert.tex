@@ -1,0 +1,68 @@
+\section*{Passes 3973--3980: extremal-code geometry, mesh locality, and photon resource separation}
+\addcontentsline{toc}{section}{Passes 3973--3980: extremal-code geometry, mesh locality, and photon resource separation}
+
+\paragraph{Exact 57-code geometry.}
+For the deterministic maximal doubly-even code $D=[36,17,4]$, join two weight-four words when their supports meet in two coordinates.  The resulting graph is not merely a $45+6+6$ census: an explicit maximal-clique reconstruction gives
+\[
+  \boxed{G_{57}\cong T(10)\sqcup T(4)\sqcup T(4)
+  =L(K_{10})\sqcup L(K_4)\sqcup L(K_4).}
+\]
+Thus
+\[
+  57=\binom{10}{2}+2\binom{4}{2}.
+\]
+If $t=A_4$, MacWilliams symmetry forces
+\[
+ A_8=11t+225,\qquad A_{12}=9555-39t,\qquad A_{16}=55755+27t,
+\]
+and, on the dual side,
+\[
+ B_4=t,\quad B_6=6(t+7),\quad B_{12}=39(245-t).
+\]
+Nonnegativity gives only $t\le245$.  Hence $t=57$ is exact and geometrically rigid here, but global $A_4$-extremality is not claimed.
+
+\paragraph{Exact radius-one mesh optimum.}
+The established 36-port factorization uses 398 nontrivial exact multiquadratic Givens rotations, 232 exact zero eliminations, and 69 layers.  All $\binom{36}{2}=630$ single transpositions of the port order were replayed exactly.  None improves 398, 22 tie it, and every neighbor has depth 69.  Therefore the order is an exact radius-one local optimum in permutation space; global rotation and depth optimality remain open.
+
+\paragraph{One-photon slope/intercept falsifier.}
+The physically conservative null is
+\[
+  t(M,L)=a(M)+L/c,
+\]
+where $M$ is the orthogonal-mode alphabet and $a(M)$ absorbs encoder, decoder, detector, and pulse-shape latency.  Randomly interleaving fixed-spectrum alphabets $M\in\{2,4,8,16,40\}$ at two or more free-space lengths permits the fit
+\[
+  t(M,L)=a(M)+b(M)L.
+\]
+A mode-dependent intercept is ordinary device latency; only a reproducible mode-dependent slope, surviving encoder swaps and length scaling, challenges the invariant-front null.  Capacity must be reported separately from timing.  For a symmetric $M$-ary channel with total error probability $\epsilon$,
+\[
+ I(M,\epsilon)=\log_2M+(1-\epsilon)\log_2(1-\epsilon)
+ +\epsilon\log_2\!\left(\frac{\epsilon}{M-1}\right).
+\]
+At $M=40$, this is $5.32193$ ideal bits per use, about $5.18828$ bits at one-percent symmetric error, and $4.77126$ bits at five-percent error.
+
+\paragraph{Rank-48 multiplication tensor.}
+The split centralizer algebra
+\[
+ \boxed{\mathbb Q^2\oplus M_2(\mathbb Q)^3\oplus M_3(\mathbb Q)\oplus M_5(\mathbb Q)}
+\]
+has dimension 48 and center dimension seven.  Its complete matrix-unit multiplication table contains
+\[
+ 1^3+1^3+3\cdot2^3+3^3+5^3=178
+\]
+nonzero structure constants.  This is the complete tensor in Wedderburn coordinates, not yet the geometric orbital-relation tensor.
+
+\paragraph{Photon resource trilemma.}
+A one-photon direct-sum alphabet of $M$ orthogonal alternatives carries at most $\log_2M$ ideal classical bits per use.  A tensor-product claim $N\log_2d$ requires $N$ physically independent factors.  Mutually orthogonal serial updates obey a separate energy--time bound.  Temporal packing additionally satisfies the engineering estimate $M\sim2WT$ for half-bandwidth $W$ and duration $T$.  Larger internal alphabets can therefore increase capacity and spacetime support without changing vacuum $c$.
+
+For the Cartesian power $W(3,3)^{\square m}$,
+\[
+ |V|=40^m,\qquad \operatorname{diam}=2m,
+\]
+so the self-similar address density is
+\[
+ \boxed{\frac{\log_2|V|}{\operatorname{diam}}=\frac{\log_2 40}{2}\approx2.660964.}
+\]
+This is an addressing/routing invariant, not a variable-light-speed law.
+
+\paragraph{Monster gate and evidence boundary.}
+The required observable Monster class-fusion artifact remains absent, so no Monster embedding is promoted.  Exact results in this insert are the code geometry, enumerator identities, all-630 mesh audit, Wedderburn tensor, and algebraic resource formulas.  The timing sensitivity and time-bandwidth examples are models; the photon experiment, global code extremality, global mesh optimum, orbital-basis tensor, Monster fusion, hardware, and laboratory validation remain open.
