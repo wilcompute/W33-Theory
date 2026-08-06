@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [4041, 4048],
+  "slug": "holonomic_interacting_flatband_number_conserving_cooling_coulomb_spectroscopy_refinement_susy_floquet_wormhole",
+  "title": "Physics expansion: non-Abelian H1 holonomies, interacting two-photon flat-band matter, number-conserving Hodge cooling, Coulomb spectroscopy, causal refinement, supersymmetry, Floquet clock, and protected perfect transfer",
+  "status": "reserved",
+  "owner": "openai-gpt-5.6-thinking",
+  "reserved_at": "2026-08-06T10:31:00-04:00",
+  "purpose": "Execute the five physics next steps after Passes 4033-4040 and add three independent outside-box physics constructions with executable falsifiers and strict evidence boundaries.",
+  "coordination": "Preserve Passes 4005-4040, the restored large website index, and the protected frontier manifest. Distinguish exact finite-dimensional results from fabricated hardware, continuum emergence, laboratory observations, or cosmological claims.",
+  "boundary": "Reservation only. No adiabatic-fidelity measurement, interacting-device realization, reservoir reset implementation, continuum Maxwell theory, emergent four-dimensional spacetime, physical supersymmetry, time crystal, literal wormhole, or laboratory performance is promoted by this reservation."
+}
