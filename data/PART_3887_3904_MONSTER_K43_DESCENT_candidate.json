@@ -1,0 +1,34 @@
+{
+  "schema": "w33.pass3887_3904.monster_k43_descent_candidate.v1",
+  "status": "PENDING",
+  "source_database": {
+    "repository": "melissa-maths/MonsterSubgroups",
+    "commit": "1fa1e5cc5ad92bb822a1f11d2818e6703904271a",
+    "portable_generator_file": "GetGeneratorsOfSubgroupInM.py"
+  },
+  "searched_direct_keys": ["U4(2)", "U4(2):2", "O6-(2)", "40K4,3"],
+  "direct_key_hits": 0,
+  "available_maximal_overgroup_routes": [
+    "3.Fi via N(3A)",
+    "(D10 x HN).2 via N(5A)",
+    "2^2 . 2E6(2) : S3"
+  ],
+  "mm_strings": [],
+  "expected_image_order": 51840,
+  "required_fingerprint": {
+    "GQ_points": 45,
+    "GQ_lines": 27,
+    "plane_ovoids": 40,
+    "tripods": 160,
+    "Norton_lines": 120,
+    "D4_frames": 135,
+    "ovoid_orbitals": 19,
+    "tripod_Norton_orbitals": [480, 1440, 4320, 12960],
+    "smallest_orbital_components": "40 K4,3",
+    "incidence_character_norm": 23,
+    "hidden_residual_degree": 200,
+    "hidden_residual_character_norm": 4
+  },
+  "class_fusion_artifact_sha256": null,
+  "boundary": "PENDING is a strict non-result. Promote only portable MM strings plus independently executed order, carrier, and class-fusion certificates."
+}
