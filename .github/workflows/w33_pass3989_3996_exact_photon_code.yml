@@ -4,11 +4,14 @@ on:
     branches: [master]
     paths:
       - 'analysis/w33_pass3989_3990_3994_3996_photon_incidence_echo_clock.py'
+      - 'analysis/w33_pass3989_3996_wigner_smith_causal_memory.py'
       - 'analysis/w33_pass3991_maximum_code_orbit_census.py'
       - 'analysis/w33_pass3992_central_fusion_lattice.py'
       - 'data/PART_3989_3990_3994_3996_PHOTON_INCIDENCE_ECHO_CLOCK.json'
+      - 'data/PART_3993_3996_WIGNER_SMITH_CAUSAL_MEMORY.json'
       - 'data/PART_3991_MAXIMUM_CODE_ORBIT_CENSUS.json'
       - 'data/PART_3992_CENTRAL_FUSION_SUMMARY.json'
+      - 'data/PART_3989_3996_PHOTON_BREAKTHROUGH_manifest.json'
       - 'tests/test_w33_pass3989_3996_photon_breakthrough.py'
       - '.github/workflows/w33_pass3989_3996_exact_photon_code.yml'
   workflow_dispatch:
@@ -25,15 +28,17 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
-      - run: python -m pip install --disable-pip-version-check pytest
+      - run: python -m pip install --disable-pip-version-check pytest numpy==2.3.5
       - name: Recompute exact certificates
         run: |
           python analysis/w33_pass3989_3990_3994_3996_photon_incidence_echo_clock.py | tee /tmp/pass3989.log
+          python analysis/w33_pass3989_3996_wigner_smith_causal_memory.py | tee /tmp/pass3996.log
           python analysis/w33_pass3991_maximum_code_orbit_census.py | tee /tmp/pass3991.log
           python analysis/w33_pass3992_central_fusion_lattice.py | tee /tmp/pass3992.log
       - name: Check pass markers
         run: |
           grep -F 'PASS_PHOTON_INCIDENCE_ECHO_CLOCK 80 160 30 4 2223d77032d8b748cfeb32ec2ef6f2c68f43312a38b9b8c85b5e045d140404e9' /tmp/pass3989.log
+          grep -F 'PASS_WIGNER_SMITH_CAUSAL_MEMORY 5a666b410a874ac934ca60271f993ae74cc0c0605ef67c15834036baa3f7182d' /tmp/pass3996.log
           grep -F 'PASS_MAXIMUM_CODE_ORBITS 945 [540, 270, 135] 852db084763db441845f0ef082a28b30c90a0f6eccd0aff32cc57fde7fa46757' /tmp/pass3991.log
           grep -F 'PASS_CENTRAL_FUSION_LATTICE 877 198' /tmp/pass3992.log
       - run: pytest -q tests/test_w33_pass3989_3996_photon_breakthrough.py
