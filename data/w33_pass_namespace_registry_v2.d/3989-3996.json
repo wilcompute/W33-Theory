@@ -6,7 +6,7 @@
   "status": "source_complete_external_monster_fourier_coefficients_remote_pdf_and_photon_lab_pending",
   "owner": "openai-gpt-5.6-thinking",
   "reserved_at": "2026-08-06T02:20:00-04:00",
-  "completed_at": "2026-08-06T03:12:00-04:00",
+  "completed_at": "2026-08-06T03:15:00-04:00",
   "certificate_status": "PASS_EXACT_FIVE_FRONT_THREE_BONKERS_MONSTER_WORDS_FOURIER_COEFFICIENT_FREEZE_AND_LAB_PENDING",
   "certificates": {
     "combined_breakthrough_manifest": "16397906a63553464abb18b0f65f839a7265afe9ef2fe712857c7e0efc977d27",
@@ -38,8 +38,8 @@
     "analysis/w33_pass3993_monster_overgroup_acquisition.py",
     "data/PART_3989_3996_PHOTON_BREAKTHROUGH_manifest.json",
     "analysis/BT3989_BT3996_physical_photon_causal_memory.md",
-    "analysis/BT3989_BT3996_combined_photon_breakthrough_insert.tex",
-    "analysis/BT3989_BT3996_physical_photon_causal_memory_index_insert.html",
+    "analysis/BT3989_BT3996_physical_photon_causal_memory_insert.tex",
+    "analysis/BT3989_BT3996_physical_incidence_photon_breakthrough_index_insert.html",
     "docs/physical-incidence-photon-processor.html",
     "docs/photon-causal-memory-3989-3996.html"
   ],
@@ -49,6 +49,6 @@
     "fabricated photonic device, reconstructed electromagnetic Wigner-Smith delays, and laboratory measurements",
     "generated public-frontier JSON reconciliation and remote manuscript PDF evidence"
   ],
-  "coordination": "The canonical manuscript input is analysis/BT3989_BT3996_combined_photon_breakthrough_insert, which reaches both independently frozen theorem layers exactly once. Preserve the exact Passes 3973-3988 inputs and protected docs/index.html blob.",
+  "coordination": "The canonical live manuscript input is analysis/BT3989_BT3996_physical_photon_causal_memory_insert. The collision wrapper and incidence-only insert remain archived but are excluded from the live frontier to prevent duplicate sections. Preserve the exact Passes 3973-3988 inputs and protected docs/index.html blob.",
   "boundary": "No fabricated device, laboratory photon result, mode-dependent vacuum c, literal hidden photon-node ontology, Monster embedding, relation-level orbital fusion classification, or unobserved remote CI/PDF success is claimed."
 }
