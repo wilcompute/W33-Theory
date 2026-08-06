@@ -1,4 +1,4 @@
-name: Passes 3973-3980 Frontier Reconcile
+name: Passes 3973-3980 Dual-Certificate Frontier Reconcile
 
 on:
   push:
@@ -6,8 +6,11 @@ on:
     paths:
       - 'tools/integrate_pass3973_3980_frontier.py'
       - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'analysis/BT3973_BT3980_combined_extremal_mesh_photon_tensor_insert.tex'
       - 'analysis/BT3973_BT3980_extremal_mesh_photon_tensor_index_insert.html'
+      - 'analysis/BT3973_BT3980_extremal_mesh_photon_tensor_monster_index_insert.html'
       - 'docs/extremal-mesh-photon-tensor.html'
+      - 'docs/extremal-code-mesh-photon-tensor.html'
       - '.github/workflows/w33_pass3973_3980_frontier_reconcile.yml'
   workflow_dispatch:
 
@@ -26,7 +29,7 @@ jobs:
         with: {fetch-depth: 0}
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
-      - name: Register manuscript and public artifacts without touching protected index
+      - name: Register both certificates without touching protected index
         run: |
           mkdir -p evidence/pass3973_3980
           python tools/integrate_pass3973_3980_frontier.py \
@@ -35,12 +38,18 @@ jobs:
           import json,re
           from pathlib import Path
           tex=Path('analysis/W33_CURRENT_FRONTIER_MANIFEST.tex').read_text()
+          wrapper=Path('analysis/BT3973_BT3980_combined_extremal_mesh_photon_tensor_insert.tex').read_text()
           config=json.loads(Path('data/w33_current_frontier_manifest_v1.json').read_text())
           inputs=re.findall(r'\\input\{([^}]+)\}',tex)
           assert inputs == config['required_ordered_inputs']
-          assert config['public_sections'][-1]['token'] == 'bt3973-3980-extremal-mesh-photon'
-          assert config['standalone_public_pages'][-1]['token'] == 'passes-3973-3980-extremal-mesh-photon-tensor'
-          print('PASS protected frontier registration')
+          assert inputs[-1] == 'analysis/BT3973_BT3980_combined_extremal_mesh_photon_tensor_insert'
+          assert 'BT3973_BT3980_extremal_mesh_photon_tensor_insert' in wrapper
+          assert 'BT3973_BT3980_extremal_mesh_photon_tensor_monster_insert' in wrapper
+          section_tokens={x['token'] for x in config['public_sections']}
+          page_tokens={x['token'] for x in config['standalone_public_pages']}
+          assert {'bt3973-3980-extremal-mesh-photon','bt3973-3980-extremal-mesh-photon-tensor'} <= section_tokens
+          assert {'passes-3973-3980-extremal-mesh-photon-tensor','passes-3973-3980-extremal-code-mesh-photon-tensor'} <= page_tokens
+          print('PASS protected dual-certificate frontier registration')
           PY
       - name: Commit generated manifest when needed
         run: |
@@ -51,9 +60,10 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data/w33_current_frontier_manifest_v1.json
-          git commit -m 'Integrate Passes 3973-3980 public frontier'
+          git commit -m 'Integrate Passes 3973-3980 dual public frontier'
+          git pull --rebase origin master
           git push origin HEAD:master
       - uses: actions/upload-artifact@v4
         with:
-          name: pass3973-3980-frontier-reconcile
+          name: pass3973-3980-dual-frontier-reconcile
           path: evidence/pass3973_3980/**
