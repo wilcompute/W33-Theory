@@ -1,0 +1,40 @@
+name: Pass 3992 Orbital Fourier and Central Fusion
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass3983_orbital_central_fourier.py'
+      - 'analysis/w33_pass3992_central_fusion_lattice.py'
+      - '.github/workflows/w33_pass3992_orbital_fourier_fusion.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pass3992-orbital-fourier-fusion
+  cancel-in-progress: false
+jobs:
+  symbolic:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check sympy==1.14.0
+      - name: Compute literal-orbital central Fourier transform
+        run: python analysis/w33_pass3983_orbital_central_fourier.py | tee /tmp/pass3983.log
+      - name: Compute exact central fusion lattice
+        run: python analysis/w33_pass3992_central_fusion_lattice.py | tee /tmp/pass3992.log
+      - run: |
+          grep -F 'PASS_ORBITAL_CENTRAL_FOURIER' /tmp/pass3983.log
+          grep -F 'PASS_CENTRAL_FUSION_LATTICE 877 198' /tmp/pass3992.log
+      - name: Commit exact symbolic certificates
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/PART_3983_ORBITAL_CENTRAL_FOURIER.json data/PART_3992_CENTRAL_FUSION_LATTICE.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Pass 3992: freeze orbital Fourier and central fusion certificates'
+          git pull --rebase origin master
+          git push
