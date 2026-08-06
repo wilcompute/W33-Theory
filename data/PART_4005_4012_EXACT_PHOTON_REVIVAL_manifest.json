@@ -1,0 +1,30 @@
+{
+  "schema": "w33.pass4005_4012.execution_manifest.v1",
+  "status": "PASS_EXACT_FIVE_FRONT_THREE_BONKERS_ALGEBRA_ENGINES_QUEUED",
+  "exact_photon_certificate": "3e4561f56a0719c85a3b1e9b56f3c79d5d3e0bc4e9a21707a30abd26bb6a5cf2",
+  "observable_algebra_gate_certificate": "a4d8ca2b78c3e6953632b6567db9163fa0bc7cd495258cb32f8c8690efb25bba",
+  "five_fronts": {
+    "nondispersive_incidence_revival": "Exact zero-leakage full 80-mode revival at Delta/g=2sqrt(2), gt=pi/sqrt(2).",
+    "wigner_smith_tomography": "General Hermitian Q from 1600 quadratic probes; reciprocal real Q from 820; all 240 W33 edges recovered.",
+    "bright_dark_memory_gate": "Exact 25-dimensional bright-sector write-hold-read with both 15-dimensional dark sectors fixed.",
+    "literal_relation_fusion": "Observable engine run 31105713885 queued; no generated relation rank promoted.",
+    "monster_execution": "Observable GAP/mmgroup run 31105713885 queued; no words or bounded-search count promoted."
+  },
+  "three_bonkers": {
+    "revival_integer_quadric": "3 n16^2-8 n6^2+5 k^2=0; shortest primitive solution (3,2,1).",
+    "spectral_checksum_geometry_oracle": "Q(Q-10 tau I)(Q-16 tau I)=0 and A=-(Q-Tr(Q)I/40)/tau.",
+    "synchronized_tensor_clock": "All commuting factors revive at gt=pi/sqrt(2), with m_plus/minus=(40^m +/- (-8)^m)/2."
+  },
+  "artifacts": [
+    "analysis/w33_pass4005_4007_4010_4012_exact_photon_revival.py",
+    "data/PART_4005_4007_4010_4012_EXACT_PHOTON_REVIVAL.json",
+    "data/PART_4008_4009_OBSERVABLE_ALGEBRA_GATE.json",
+    "analysis/BT4005_BT4012_exact_photon_revival_memory.md",
+    "analysis/BT4005_BT4012_exact_photon_revival_memory_insert.tex",
+    "analysis/BT4005_BT4012_exact_photon_revival_memory_index_insert.html",
+    "docs/exact-photon-revival-memory.html",
+    "tests/test_w33_pass4005_4012_exact_photon_revival.py"
+  ],
+  "boundary": "Exact matrix and controlled-Hamiltonian statements are promoted. Relation fusion and Monster outputs were not observed; hardware, laboratory data, changed vacuum c, literal hidden nodes, remote CI, and PDFs are not claimed.",
+  "semantic_sha256": "3ee952bd3cd233eba6a0616a800dbbe53556eb3f404b818ff80fb43592f634b1"
+}
