@@ -1,0 +1,28 @@
+name: Passes 4019-4024 Photonic Flat-Band H1
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4019_4024_photonic_flat_band_h1.py'
+      - 'data/PART_4019_4024_PHOTONIC_FLAT_BAND_H1.json'
+      - 'tests/test_w33_pass4019_4024_photonic_flat_band_h1.py'
+      - '.github/workflows/w33_pass4019_4024_exact.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+concurrency:
+  group: pass4019-4024-exact-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check numpy networkx pytest
+      - run: python analysis/w33_pass4019_4024_photonic_flat_band_h1.py | tee /tmp/pass4019.log
+      - run: grep -F 'PASS_4019_4024_PHOTONIC_FLAT_BAND_H1 e7746ea1730daea1b29d0e7831bc627c4d115ee0ccf1c81441796363101aa59f' /tmp/pass4019.log
+      - run: pytest -q tests/test_w33_pass4019_4024_photonic_flat_band_h1.py
+      - run: git diff --exit-code -- data/PART_4019_4024_PHOTONIC_FLAT_BAND_H1.json
+      - run: git diff --check
