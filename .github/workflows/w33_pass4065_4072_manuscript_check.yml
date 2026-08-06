@@ -1,0 +1,28 @@
+name: Passes 4065-4072 Manuscript Check
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/BT4065_BT4072_explicit_qsp_dirac_magic_gauge_insert.tex'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - '.github/workflows/w33_pass4065_4072_manuscript_check.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  compile:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: WtfJoke/setup-tectonic@v3
+        with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
+      - run: |
+          mkdir -p evidence/pass4065_4072
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass4065_4072/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass4065-4072-manuscripts
+          path: evidence/pass4065_4072/**
