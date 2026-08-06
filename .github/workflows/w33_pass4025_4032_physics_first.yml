@@ -1,0 +1,25 @@
+name: Passes 4025-4032 Physics-First Universal Computer Audit
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4025_4032_physics_first_universal_computer.py'
+      - 'data/PART_4025_4032_PHYSICS_FIRST_UNIVERSAL_COMPUTER.json'
+      - 'tests/test_w33_pass4025_4032_physics_first.py'
+      - '.github/workflows/w33_pass4025_4032_physics_first.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+concurrency: {group: pass4025-4032-physics-${{ github.ref }}, cancel-in-progress: true}
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check numpy sympy networkx pytest
+      - run: python analysis/w33_pass4025_4032_physics_first_universal_computer.py | tee /tmp/pass4025.log
+      - run: grep -F 'PASS_4025_4032_PHYSICS_FIRST cc50a83926bd9d32770c33dcfb48ba04640d3601a3fbf64b29f34bb22f940a2f' /tmp/pass4025.log
+      - run: pytest -q tests/test_w33_pass4025_4032_physics_first.py
+      - run: git diff --check
