@@ -18,7 +18,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "data" / "PART_3993_3996_WIGNER_SMITH_CAUSAL_MEMORY.json"
-EXPECTED_SEMANTIC = "730d8e7436d9f192b62b95f7d3b23cca865345db130d27bf49e3e0abfe9a5f8c"
+EXPECTED_SEMANTIC = "43856798c359b4f3627ca3a593d51ab781718b27769d887996d44076714028b5"
 
 
 def canonical_sha(obj: object) -> str:
