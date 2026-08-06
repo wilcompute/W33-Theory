@@ -52,8 +52,10 @@
     "analysis/BT3829_BT3836_adaptive_virtual_autonomous_thermo_substrate_insert",
     "analysis/BT3837_BT3854_ovoid_wedderburn_code_leech_triality_insert",
     "analysis/BT3871_BT3886_eight_front_closure_insert",
+    "analysis/BT3887_BT3904_unmarked_wedderburn_monster_fouraxis_order192_insert",
     "analysis/BT3905_BT3912_terwilliger_mesh_strata_rank48_insert",
-    "analysis/BT3913_BT3920_multidefect_lindbladian_process_fusion_phase_insert"
+    "analysis/BT3913_BT3920_multidefect_lindbladian_process_fusion_phase_insert",
+    "analysis/BT3921_BT3936_cap_gewirtz_modular_closure_insert"
   ],
   "front_doors": {
     "w33_paper.tex": "w33_paper_body.tex",
@@ -99,6 +101,7 @@
     {"kind":"id","token":"bt3821-3828-maxcode-mesh-scheme-ovoid","source":"analysis/BT3821_BT3828_maxcode_mesh_scheme_ovoid_index_insert.html"},
     {"kind":"id","token":"bt3829-3836-adaptive-virtual-autonomous-thermo-substrate","source":"analysis/BT3829_BT3836_adaptive_virtual_autonomous_thermo_substrate_index_insert.html"},
     {"kind":"id","token":"bt3837-3854-ovoid-wedderburn-code-leech-triality","source":"analysis/BT3837_BT3854_ovoid_wedderburn_code_leech_triality_index_insert.html"},
+    {"kind":"id","token":"bt3887-3904-unmarked-wedderburn-fouraxis-order192","source":"analysis/BT3887_BT3904_unmarked_wedderburn_monster_fouraxis_order192_index_insert.html"},
     {"kind":"id","token":"bt3905-3912-terwilliger-mesh-strata-rank48","source":"analysis/BT3905_BT3912_terwilliger_mesh_strata_rank48_index_insert.html"},
     {"kind":"id","token":"bt3913-3920-multidefect-lindbladian-process-fusion-phase","source":"analysis/BT3913_BT3920_multidefect_lindbladian_process_fusion_phase_index_insert.html"}
   ],
@@ -132,8 +135,10 @@
     {"token":"passes-3829-3836-adaptive-virtual-autonomous-thermo-substrate","source":"docs/adaptive-virtual-autonomous-thermo-substrate.html"},
     {"token":"passes-3837-3854-ovoid-wedderburn-code-leech-triality","source":"docs/ovoid-wedderburn-code-leech-triality.html"},
     {"token":"passes-3871-3886-cap-tomotope-modular-gewirtz","source":"docs/cap-tomotope-modular-gewirtz-atlas-3871-3886.html"},
+    {"token":"passes-3887-3904-unmarked-wedderburn-fouraxis-order192","source":"docs/unmarked-wedderburn-fouraxis-order192.html"},
     {"token":"passes-3905-3912-terwilliger-mesh-strata-rank48","source":"docs/maxcode-mesh-strata-rank48.html"},
-    {"token":"passes-3913-3920-multidefect-lindbladian-process-fusion-phase","source":"docs/multidefect-lindbladian-process-fusion-phase.html"}
+    {"token":"passes-3913-3920-multidefect-lindbladian-process-fusion-phase","source":"docs/multidefect-lindbladian-process-fusion-phase.html"},
+    {"token":"passes-3921-3936-cap-gewirtz-modular-closure","source":"docs/cap-gewirtz-modular-closure-3921-3936.html"}
   ],
   "boundary": "The manifest controls source reachability and ordering only; it does not certify PDF, hardware, laboratory, or physical claims."
 }

@@ -1,0 +1,17 @@
+{
+  "schema": "w33.pass3921_3936.release_validation.v1",
+  "branch": "agent/pass3921-3936-cap-gewirtz-modular-closure",
+  "exact_regeneration": {
+    "command": "pytest -q tests/test_bt3921_3936_cap_gewirtz_modular_closure.py",
+    "result": "4 passed",
+    "elapsed_seconds": 28.20
+  },
+  "diff_audit": {
+    "changed_files": 14,
+    "forbidden_index_file_changed": false,
+    "frontier_manifest_append_only": true,
+    "standalone_page_registered": true
+  },
+  "semantic_sha256": "5dafbb5aa12c8166e7fad1568b566cdca8bdb8800a147a023fe062cc0315c64b",
+  "status": "PASS_LOCAL_EXACT_REMOTE_PENDING"
+}
