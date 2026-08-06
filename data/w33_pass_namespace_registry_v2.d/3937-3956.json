@@ -7,12 +7,14 @@
   "owner": "openai-gpt-5.6-thinking",
   "reserved_at": "2026-08-05T23:23:00-04:00",
   "semantic_sha256": "14cc255a662b55b8a86ba020ae00392faaad50be04ebbb5027a52d470ad3ef54",
+  "merged_pr": 280,
+  "merge_commit": "4e3bacafa0e665a510d06911733c6ee8d588108d",
   "proved": [
     "rho200=20+30+60+90 multiplicity-free",
     "complete eight-species local-algebra inclusion geometry and all representative intersection histograms",
     "sufficient projected-coordinate reconstruction theorem with complete W33/GQ(4,2) instance",
     "dimensionally consistent and scale-invariant photon null-processor model with explicit falsifiers"
   ],
-  "coordination": "Preserve the parallel Passes 3921-3936 branch, later Passes 3957-3988, and all protected Pages deployment files. Insert this theorem chronologically before Passes 3957-3964 without replacing docs/index.html.",
+  "coordination": "Passes 3957-3988 and all protected Pages deployment files were preserved. The TeX theorem is ordered before Passes 3957-3964; protected JSON reconciliation is automated without replacing docs/index.html. The parallel Passes 3921-3936 branch remains separate unless independently merged.",
   "boundary": "No portable Monster/mmgroup words, executed Monster class fusion, octonion SmallGroup identifier, literal photon internal-node ontology, derivation or variation of the measured vacuum speed c, hardware/laboratory result, or remote CI/PDF success is promoted without separate evidence."
 }
