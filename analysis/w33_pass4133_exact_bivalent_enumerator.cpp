@@ -1,0 +1,10 @@
+#include <bits/stdc++.h>
+using namespace std;
+vector<array<int,4>> pts; int A[40][40], C[40][40], targetv; long long countsol,nodes; unsigned long long h;
+array<int,4> canon(array<int,4> v){for(int&x:v){x%=3;if(x<0)x+=3;}for(int i=0;i<4;i++)if(v[i]){int z=v[i]==1?1:2;for(int&x:v)x=x*z%3;return v;}return v;}
+int symp(const array<int,4>&u,const array<int,4>&v){int z=u[0]*v[2]+u[1]*v[3]-u[2]*v[0]-u[3]*v[1];z%=3;if(z<0)z+=3;return z;}
+bool feasible(const array<signed char,40>&a,int r,int force=-1,int fv=0){int s=0,mn=0,mx=0;for(int i=0;i<40;i++){int c=C[r][i];if(!c)continue;int v=i==force?fv:a[i];if(v!=-1)s+=c*v;else if(c>0)mx+=c;else mn+=c;}return s+mn<=targetv&&targetv<=s+mx;}
+bool prop(array<signed char,40>&a){bool ch=true;while(ch){ch=false;for(int r=0;r<40;r++)if(!feasible(a,r))return false;for(int i=0;i<40;i++)if(a[i]<0){bool p0=1,p1=1;for(int r=0;r<40;r++)if(C[r][i]){p0&=feasible(a,r,i,0);p1&=feasible(a,r,i,1);}if(!p0&&!p1)return false;if(p0!=p1){a[i]=p1;ch=true;}}}return true;}
+void dfs(array<signed char,40>a){nodes++;if(!prop(a))return;int b=-1;double bs=-1;for(int i=0;i<40;i++)if(a[i]<0){double sc=0;for(int r=0;r<40;r++)if(C[r][i]){int mn=0,mx=0,s=0;for(int j=0;j<40;j++){int c=C[r][j],v=a[j];if(!c)continue;if(v>=0)s+=c*v;else if(c>0)mx+=c;else mn+=c;}sc+=1.0/(mx-mn+1);}if(sc>bs){bs=sc;b=i;}}if(b<0){for(int r=0;r<40;r++){int s=0;for(int i=0;i<40;i++)s+=C[r][i]*a[i];if(s!=targetv)return;}countsol++;for(int i=0;i<40;i++){h^=(unsigned char)a[i];h*=1099511628211ULL;}return;}for(int v=0;v<2;v++){auto z=a;z[b]=v;dfs(z);}}
+void run(int diag,int target){for(int r=0;r<40;r++)for(int i=0;i<40;i++)C[r][i]=A[r][i]+(r==i?diag:0);targetv=target;countsol=nodes=0;h=1469598103934665603ULL;array<signed char,40>a;a.fill(-1);dfs(a);cout<<diag<<" "<<target<<" "<<countsol<<" "<<nodes<<" "<<h<<"\n";}
+int main(){set<array<int,4>>S;for(int a=0;a<3;a++)for(int b=0;b<3;b++)for(int c=0;c<3;c++)for(int d=0;d<3;d++){array<int,4>v{a,b,c,d};if(a||b||c||d)S.insert(canon(v));}for(auto v:S)pts.push_back(v);for(int i=0;i<40;i++)for(int j=0;j<40;j++)A[i][j]=(i!=j&&symp(pts[i],pts[j])==0);run(-2,5);run(4,8);}
