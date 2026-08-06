@@ -1,0 +1,25 @@
+{
+  "schema": "w33.pass3837_3854.monster_descent_candidate.v1",
+  "status": "PENDING",
+  "mmgroup_strings": [],
+  "mmgroup_integers": [],
+  "degree45_generators": [],
+  "degree200_generators": [],
+  "class_fusion_artifact": null,
+  "expected": {
+    "full_group_order": 51840,
+    "even_subgroup_order": 25920,
+    "degree45_rank": 3,
+    "degree45_suborbits": [1, 12, 32],
+    "gq_points": 45,
+    "gq_lines": 27,
+    "plane_ovoids": 40,
+    "tripods": 160,
+    "norton_lines": 120,
+    "d4_frames": 135,
+    "ovoid_orbitals": 19,
+    "tripod_norton_orbits": [[480,3,4],[1440,9,12],[4320,27,36],[12960,81,108]],
+    "semantic_reference": "ede91cc799f9093209c589fb0b73c88fca4159bedcc8e1e7cd6680c5f0c778fd"
+  },
+  "boundary": "PENDING is a strict non-result. Promotion requires version-stable MM strings, an independently checkable finite carrier certificate reproducing every expected field, and a content-addressed executed class-fusion artifact."
+}
