@@ -1,0 +1,41 @@
+\subsection{Passes 4121--4128: explicit gauge audit, relational phase coding, decoding, foundry feasibility, attractors, and outside-box probes}
+\label{sec:passes4121-4128}
+
+The explicit $145$-dimensional carrier
+\[
+(\mathbb C^7\!\otimes V_1)\oplus(\mathbb C^6\!\otimes V_{15})\oplus(\mathbb C^2\!\otimes V_{24})
+\]
+was equipped with concrete $SU(3)\times SU(2)\times U(1)$ generators.  This calculation corrects the earlier multiplicity-space reading: the complete carrier has W33 weights $(q,u,d,l,e)=(1,15,15,24,1)$ and is anomalous,
+\[
+\mathcal A_{3^3}=-28,\quad \mathcal A_{3^2Y}=-\frac73,
+\quad \mathcal A_{2^2Y}=-\frac{23}{4},\quad
+\mathcal A_{\mathrm{grav}^2Y}=-37,\quad \mathcal A_{Y^3}=-\frac{599}{36}.
+\]
+The weak-doublet count is $27$.  Without exotic representations, the anomaly equations force equal W33 weights $q=u=d=l=e$.  Exact repair architectures therefore require either a rank-one PSp-breaking generation inside the $145$ states, a $225$-dimensional $V_{15}$ generation, a $360$-dimensional $V_{24}$ generation, or $600$ dimensions containing one complete generation in each of $V_1,V_{15},V_{24}$.  Gauge symmetry permits three Yukawa tensors, but a W33-singlet Higgs permits none; the up, down, and lepton couplings require mediators in $V_{15},V_{15},V_{24}$.
+
+For the optimal sine phase reference, a single fixed-weight subspace is an exact decoherence-free space but supports only a global phase.  Pairing $\mathcal H_r$ and $\mathcal H_{r+1}$ for $N=2r+1$ instead gives
+\[
+\mathbb C^2_{\rm clock}\otimes\mathbb C^{\binom Nr}_{\rm payload}.
+\]
+The reference noise and desired phase act only on the clock; all payload coherences are exact.  At $K=256$ and $N=31$, one clock plus $28$ payload qubits has error $7.3646628264\times10^{-5}$, versus $5.5087125884\times10^{-2}$ for direct $29$-qubit injection.
+
+The three-error self-stress decoder was reduced from $682641$ global supports to at most
+\[
+1+20+\binom{20}{2}+\binom{20}{3}=1351
+\]
+local candidates.  The candidate graph is formed from all Levi paths of length at most three between threshold vertices; an exhaustive audit proves the $20$-edge bound.  Stability remains controlled by
+\[
+\sigma_6=2\sin(\pi/14),\qquad \|\widehat e-e\|_2\le 2\epsilon/\sigma_6.
+\]
+
+A CORNERSTONE $340\,$nm SOI floorplan audit gives $1934$ crossings, at most $21$ on one path, $480$ selector/recombiner MMIs, and $480$ phase shifters for a spatial $80$-mode realization.  Under conservative public platform inputs, five signal uses incur a conditional pre-MMI path loss of $27.43\,$dB.  Thus the exact logical router is not tapeout-ready in naive spatial SOI; low-loss passive routing with an active phase layer, or time/frequency serialization, is required.
+
+A $64$-seed nonlinear census produced $25$ observed orbit classes for the nominal $24$-mode selector and $9$ for the nominal $15$-mode selector.  Pure bivalent stabilizers include $V_4,S_3,D_8,C_6\times C_2,D_{10},S_5$, and $A_5$, while mixed-sector attractors show that cubic saturation does not globally remain in one Laplacian eigenspace.
+
+Three outside-box consequences were certified.  First, the $A_5$ sign vector satisfies $As=-4s$ and attains the exact MaxCut value $160$, hence the antiferromagnetic ground energy is $-80J$.  Second, the continuous-time walk at $t=\pi/(2J)$ is the exact Householder mirror
+\[
+U=I-2P_2=\frac{A^2-8A-18I}{30}=-\frac{I+A}{3}+\frac{2}{15}J_{40},
+\]
+which flips precisely the $24$-dimensional eigenvalue-two sector.  Third, pairing the $15$ eigenvalue-minus-four modes with $15$ eigenvalue-two modes yields fifteen simultaneous EP$_2$ blocks at $\gamma=g$; the paired $30$-dimensional operator has square zero and rank $15$.
+
+All statements above are finite algebraic, combinatorial, or explicitly labelled numerical results.  No derived Standard Model, fabricated chip, measured decoder or pattern, physical magnet, graph-walk processor, exceptional-point sensor, gravity, cosmology, or theory of everything is claimed.
