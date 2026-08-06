@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [4049, 4056],
+  "slug": "minimal_qsvt_h1_pulse_alphabet_4d_fiber_scaling_m36_postselected_magic_observable_functor_shell_frame_calorimeter",
+  "title": "Five-front physical closure and three outside-box probes: minimal QSVT, H1 pulses, 4D scaling, M36 magic reduction, observable functor, shell entangler, apartment code, spectral calorimeter",
+  "status": "reserved",
+  "owner": "openai-gpt-5.6-thinking",
+  "reserved_at": "2026-08-06T10:42:00-04:00",
+  "purpose": "Execute the five stated next steps after Passes 4025-4040 without colliding with reserved Passes 4041-4048, then add three independent exact constructions outside the existing holonomy/interacting/cooling/refinement/SUSY/Floquet/transfer packet.",
+  "coordination": "Preserve Passes 4005-4048, the restored large docs/index.html, and all protected frontier manifests. Reuse Passes 4033-4040 full H1 swap and u(81) controllability rather than duplicating them.",
+  "boundary": "Reservation only. No fabricated QSVT device, deterministic fault-tolerant magic injection, emergent Lorentzian spacetime, Standard Model identification, gravity, calorimetric measurement, or theory of everything is promoted."
+}
