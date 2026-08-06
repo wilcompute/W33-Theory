@@ -1,0 +1,59 @@
+name: Deploy restored W33 site to Pages
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'docs/**'
+      - 'tools/check_website_migration_authorization.py'
+      - 'data/website_migration_authorization.json'
+      - '.github/workflows/deploy-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout current master
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Verify restored authoritative index
+        shell: bash
+        run: |
+          set -euo pipefail
+          expected='41a8d733f42da18282fa276f5d2fa82bac7516f6'
+          actual="$(git hash-object docs/index.html)"
+          test "$actual" = "$expected"
+          python tools/check_website_migration_authorization.py --repository-root .
+          echo "Deploying docs/index.html blob $actual"
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload docs artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./docs
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
