@@ -1,0 +1,29 @@
+{
+  "schema": "w33.pass4073_4080.execution_manifest.v1",
+  "status": "PASS_EXACT_FIVE_ENGINEERING_THREE_OUTSIDE_BOX_PHYSICS",
+  "certificate": "0304eef2ec49efabf5721ed47a35e48064530f459f2964ae49e455ef1d3c5a31",
+  "five_fronts": {
+    "physical_block_encoding": "Exact four-perfect-matching, four-router selected block A_Levi/4 with explicit selector and implementation-error bound.",
+    "phase_reference": "Deterministic K-copy binomial reference processor with exact coherence multiplier, error bound, and approximate-catalysis boundary.",
+    "nonabelian_multiplicity": "Minimum dimension-57 M3 plus M2 commutant extension, determinant-one global group audit, vectorlike anomaly cancellation, and chirality no-go.",
+    "leakage_control": "Four-gap differential notch cancels all first-order H1-to-bright amplitudes and combines with SK1.",
+    "experiment_suite": "Six explicit observables and falsification signatures without laboratory claims."
+  },
+  "outside_box": {
+    "mechanical_self_stress": "The rank-81 H1 memory is exactly the Maxwell-Calladine state-of-self-stress space of the scalar Levi spring network.",
+    "quench_work": "Exact three-line work distribution, characteristic function, and Jarzynski identity for sudden W33 coupling quenches.",
+    "synchronization": "Exact 24-versus-15 Kuramoto decay spectrum, stability sign, weak-disorder response, and 8/5 time-scale ratio."
+  },
+  "artifacts": [
+    "analysis/w33_pass4073_4080_engineering_outside_box.py",
+    "data/PART_4073_4080_ENGINEERING_OUTSIDE_BOX.json",
+    "tests/test_w33_pass4073_4080_engineering_outside_box.py",
+    "analysis/BT4073_BT4080_engineering_outside_box.md",
+    "analysis/BT4073_BT4080_engineering_outside_box_insert.tex",
+    "analysis/BT4073_BT4080_engineering_outside_box_index_insert.html",
+    "docs/engineering-outside-box-4073-4080.html"
+  ],
+  "coordination": "Preserves Passes 4005-4072, the authoritative master/docs Pages source, the restored website, and docs/index.html.",
+  "boundary": "No fabricated device, exact finite reusable irrational catalyst, fault-tolerance threshold, chiral Standard Model, mechanical prototype, global nonlinear synchronization theorem, gravity, cosmology, or TOE.",
+  "semantic_sha256": "7901850b02e27eb6bae1641107dc2fd76e8d227b6be027a8c2cacae5b5cfe43f"
+}
