@@ -3,10 +3,19 @@
   "range": [4081, 4088],
   "slug": "dark_irrep_idempotents_mobile_pairs_two_parameter_pump_overlap_fermions_subgroup_gauge_inverse_scattering_landauer_causal_metric",
   "title": "Deep physics closure: canonical dark irreps, mobile composite pairs, a genuine two-parameter pump, overlap fermions, subgroup-generated gauge blocks, inverse scattering, Landauer cost, and a defect causal metric",
-  "status": "reserved",
+  "status": "completed_exact_with_binding_filling_hardware_chiral_and_emergence_boundaries",
   "owner": "openai-gpt-5.6-thinking",
   "reserved_at": "2026-08-06T12:46:00-04:00",
+  "completed_at": "2026-08-06T13:12:00-04:00",
   "purpose": "Execute the five requested physics targets after Passes 4057-4072 and add three independent outside-box probes grounded in repo data and primary literature.",
-  "coordination": "Preserve Passes 4005-4080, the authoritative master/docs Pages source, the restored large website, and all ordered frontier manifests. Avoid the parallel 4073-4080 multiplicity-engineering route by treating Pass 4085 as subgroup/orbit symmetry breaking.",
-  "boundary": "Reservation only. No ATLAS suffix is guessed without a certified class map; no mobile bound-pair experiment, quantized pump measurement, chiral Standard Model, fabricated overlap device, non-Abelian gauge boson identification, inverse-scattering experiment, thermodynamic measurement, emergent gravity, cosmology, or theory of everything is promoted."
+  "result": "All 3161 contact-dark pair states were resolved into exact ATLAS-ordered PSp(4,3) character fingerprints and central idempotents; an explicitly bound dark pair acquired a symmetry-preserving Schrieffer-Wolff mobile band; a two-parameter pair-center Rice-Mele cycle had Chern number +1 and pumped one pair per clean filled-band cycle; the W33-fibered overlap operator obeyed Ginsparg-Wilson chirality with 81 light vectorlike species; and one marked incidence edge was minimal for exposing exact U(3) and U(2) commutant blocks. Three independent probes produced a one-port inverse spectral theorem, exact Landauer accounting for the dark reservoir, and a short-time operational causal metric recovering distance and geodesic degeneracy.",
+  "certificate": "data/PART_4081_4088_DEEP_PHYSICS.json",
+  "semantic_sha256": "2f545b68de78b2cc7ab9844834ba5d9275841fce4e8aefa156c0f5388c9a5c9a",
+  "verifier": "analysis/w33_pass4081_4088_deep_physics.py",
+  "regression": "tests/test_w33_pass4081_4088_deep_physics.py",
+  "report": "analysis/BT4081_BT4088_deep_physics.md",
+  "manuscript_insert": "analysis/BT4081_BT4088_deep_physics_insert.tex",
+  "public_page": "docs/deep-physics-4081-4088.html",
+  "coordination": "Passes 4005-4080 and the authoritative long-form docs/index.html remain intact. Publication is through the ordered manifest, standalone page, protected theorem card, and idempotent frontier reconciler.",
+  "boundary": "Exact finite group, effective-band, topological-pump, overlap-operator, subgroup-commutant, resolvent, information-thermodynamic, and graph-propagation statements only. No fabricated mobile-pair device, measured quantization, chiral Standard Model, physical gauge-boson identification, gravity, cosmology, or theory of everything is established."
 }
