@@ -1,0 +1,29 @@
+name: Passes 4013-4018 Incidence-Link H1 Memory
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4013_4018_incidence_link_h1_memory.py'
+      - 'data/PART_4013_4018_INCIDENCE_LINK_H1_MEMORY.json'
+      - 'tests/test_w33_pass4013_4018_incidence_link_h1_memory.py'
+      - '.github/workflows/w33_pass4013_4018_exact.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+concurrency:
+  group: pass4013-4018-exact-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check numpy networkx pytest
+      - name: Recompute exact certificate
+        run: python analysis/w33_pass4013_4018_incidence_link_h1_memory.py | tee /tmp/pass4013.log
+      - run: grep -F 'PASS_4013_4018_INCIDENCE_LINK_H1_MEMORY bf19623ed99a287cde193ec3315e5a7f86b101f4340a1546a9dee394904c5bd3' /tmp/pass4013.log
+      - run: pytest -q tests/test_w33_pass4013_4018_incidence_link_h1_memory.py
+      - run: git diff --exit-code -- data/PART_4013_4018_INCIDENCE_LINK_H1_MEMORY.json
+      - run: git diff --check
