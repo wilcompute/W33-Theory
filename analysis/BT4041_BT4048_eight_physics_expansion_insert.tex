@@ -1,0 +1,130 @@
+\section{Eight-physics expansion: holonomies, interacting flat-band matter, cooling, spectroscopy, refinement, and three outside-box constructions}
+\label{sec:bt4041-4048-eight-physics}
+
+Passes 4041--4048 extend the exact W33/Levi $H_1$ architecture along five requested physics fronts and three independent finite-model constructions.  All claims below are finite-dimensional and machine checked; none is a fabricated-device, continuum-gravity, Standard-Model, or laboratory-performance claim.
+
+\subsection{Non-Abelian holonomic control in the harmonic memory}
+Choose an orthonormal logical pair in the $81$-dimensional harmonic space, a third harmonic helper, and one excited ancilla.  The ideal tripod spectrum is $\{-\Omega,0,0,+\Omega\}$ and the dark space has rank two.  In a real tripod chart,
+\[
+ A_\phi=\cos\theta\begin{pmatrix}0&-1\\1&0\end{pmatrix},\qquad A_\theta=0.
+\]
+The closed loop through $\theta=\arccos(1/4)$ yields
+\[
+ U_X=\begin{pmatrix}0&1\\-1&0\end{pmatrix},
+\]
+while a phase loop at $\theta=\pi/6$ yields $U_Z=\operatorname{diag}(-i,1)$.  Their commutator obeys
+\[
+ \|[U_X,U_Z]\|_F^2=4,
+\]
+so the exact geometric gates are non-Abelian.  Varying the loop latitudes gives continuous rotations about two nonparallel axes and therefore ideal $SU(2)$ control.  This does not certify finite-speed adiabatic fidelity or a laboratory pulse sequence.
+
+\subsection{Projected two-photon contact spectrum}
+For onsite interaction projected into the flat band,
+\[
+ V=U\sum_{e=1}^{160}|Pe,Pe\rangle\langle Pe,Pe|,
+\]
+we have $\dim\operatorname{Sym}^2(H_1)=3321$.  The contact map has rank $160$, leaving an exact contact-dark pair space of dimension
+\[
+ \boxed{3161}.
+\]
+The complete nonzero spectrum of $V/U$ is
+\[
+ \left(\frac{81}{160}\right)^1,
+ \left(\frac{252+27\sqrt6}{800}\right)^{24},
+ \left(\frac{117}{400}\right)^{30},
+ \left(\frac{252-27\sqrt6}{800}\right)^{24},
+ \left(\frac{41}{200}\right)^{81}.
+\]
+No bound-pair transport or many-body phase follows without additional dynamics.
+
+\subsection{Number-conserving one-shot Hodge cooling}
+On the charge-zero vertex sector let
+\[
+ Q=D^T(DD^T)^{-1/2}.
+\]
+Then $Q^TQ=I_{79}$ and $QQ^T=P_{\rm cut}$.  Coupling $160$ system links to $79$ reservoir modes through
+\[
+ H_{\rm cool}=g\begin{pmatrix}0&Q\\Q^T&0\end{pmatrix}
+\]
+produces at $t=\pi/(2g)$ the exact passive swap
+\[
+ |\psi\rangle_{\rm sys}|0\rangle_{\rm res}
+ \longmapsto
+ P_{H_1}|\psi\rangle_{\rm sys}-iQ^T|\psi\rangle_{\rm res}.
+\]
+Thus all cut-space excitation leaves the system while the harmonic memory remains.  The polar coupler is generally dense, and reservoir reset and finite-depth synthesis remain engineering obligations.
+
+\subsection{Synthetic Coulomb spectroscopy}
+For opposite drive at Levi vertices separated by distance $d$, define $s=(i\omega C+\gamma)/J$.  The shell responses are
+\[
+ Z_1(s)=\frac{2(s^3+15s^2+66s+79)}{(s+4)(s+8)(s^2+8s+10)},
+\]
+\[
+ Z_2(s)=\frac{2(s^2+8s+13)}{(s+4)(s^2+8s+10)},
+\]
+\[
+ Z_3(s)=\frac{2(s^3+16s^2+78s+111)}{(s+4)(s+8)(s^2+8s+10)},
+\]
+\[
+ Z_4(s)=\frac{2(s^2+8s+14)}{(s+4)(s^2+8s+10)}.
+\]
+Their DC limits are
+\[
+ \boxed{79/160,\ 13/20,\ 111/160,\ 7/10}.
+\]
+The minimum shell gap is $1/160$, so absolute error below $1/320$ in units of $1/J$ is sufficient for nearest-shell identification.
+
+\subsection{Causal refinement tower and dimensional boundary}
+For a periodic $d$-dimensional array of cells,
+\[
+ \lambda(k)=2\kappa\sum_{\mu=1}^{d}(1-\cos k_\mu)
+ =\kappa|k|^2+O(k^4),
+\]
+and the wave equation gives
+\[
+ \omega(k)=\sqrt\kappa|k|+O(k^3),\qquad c_{\rm cell}=a\sqrt\kappa.
+\]
+At $N=64$ and $\kappa/J=0.05$, the one-dimensional tower has a stable $d_s\simeq1$ heat-kernel window, while a four-dimensional torus has a stable $d_s\simeq4$ window.  The conclusion is a boundary rather than an emergence claim: four macroscopic dimensions occur only when four external lattice directions are explicitly supplied.
+
+\subsection{Three outside-box exact constructions}
+First, the discrete supercharge
+\[
+ \mathcal Q=\begin{pmatrix}0&D\\D^T&0\end{pmatrix}
+\]
+has $82$ zero modes, one uniform vertex mode and $81$ harmonic edge modes.  With vertex-positive and edge-negative grading, the Witten index is
+\[
+ \boxed{1-81=-80}.
+\]
+Every nonzero eigenvalue occurs in an exact $\pm$ pair.  This is incidence-complex supersymmetry, not particle-physics supersymmetry.
+
+Second, one local site reflection composed with the Hodge reflection,
+\[
+ U_F=(I-2|e\rangle\langle e|)(I-2P_{H_1}),
+\]
+has spectrum $(+1)^{78}+(-1)^{80}+e^{\pm i\phi}$ with
+\[
+ \boxed{\cos\phi=1/80}.
+\]
+Niven's theorem excludes rational $\phi/\pi$, so the Floquet rotor has infinite order.  This is not a many-body time crystal.
+
+Third, the normalized protected site states satisfy
+\[
+ \langle u_e|u_f\rangle=-1/3,\ 1/9,\ -1/27,\ 1/81
+\]
+for line-graph distances $1,2,3,4$.  Under the two-defect Hamiltonian
+\[
+ H_{ef}=P|e\rangle\langle e|P+P|f\rangle\langle f|P,
+\]
+unit-fidelity transfer occurs at
+\[
+ \boxed{t/\pi=80/27,\ 80/9,\ 80/3,\ 80}.
+\]
+This is perfect transfer between nonorthogonal projected modes in an ideal protected model, not superluminal signaling or a spacetime wormhole.
+
+\paragraph{Evidence firewall.}
+The frozen semantic certificate is
+\texttt{08414977d5198aa43ea25127bbe7fa0e6529f56471dabe9745f229e91aba63c4}.
+The exact verifier and focused regression are
+\texttt{analysis/w33\_pass4041\_4048\_eight\_physics\_expansion.py}
+and
+\texttt{tests/test\_w33\_pass4041\_4048\_eight\_physics\_expansion.py}.
