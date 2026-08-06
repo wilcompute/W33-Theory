@@ -1,0 +1,28 @@
+name: Passes 4025-4032 Manuscript Check
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/BT4025_BT4032_physics_first_universal_computer_insert.tex'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - '.github/workflows/w33_pass4025_4032_manuscript_check.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  compile:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: WtfJoke/setup-tectonic@v3
+        with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
+      - run: |
+          mkdir -p evidence/pass4025_4032
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass4025_4032/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass4025-4032-manuscripts
+          path: evidence/pass4025_4032/**
