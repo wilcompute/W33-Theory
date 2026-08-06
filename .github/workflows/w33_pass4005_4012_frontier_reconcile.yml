@@ -1,0 +1,33 @@
+name: Passes 4005-4012 Protected Frontier Reconcile
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'tools/integrate_pass4005_4012_frontier.py'
+      - 'analysis/BT4005_BT4012_exact_photon_revival_memory_insert.tex'
+      - 'analysis/BT4005_BT4012_exact_photon_revival_memory_index_insert.html'
+      - 'docs/exact-photon-revival-memory.html'
+      - '.github/workflows/w33_pass4005_4012_frontier_reconcile.yml'
+  workflow_dispatch:
+permissions: {contents: write}
+concurrency: {group: pass4005-4012-frontier-reconcile, cancel-in-progress: false}
+jobs:
+  reconcile:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python tools/integrate_pass4005_4012_frontier.py | tee /tmp/frontier.log
+      - run: grep -F 'PASS_4005_4012_FRONTIER_RECONCILE 1 1 1' /tmp/frontier.log
+      - run: git diff --exit-code -- docs/index.html
+      - name: Commit manifest reconciliation
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/w33_current_frontier_manifest_v1.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Pass 4012: reconcile exact photon revival public frontier'
+          git pull --rebase origin master
+          git push
