@@ -3,10 +3,32 @@
   "range": [3957, 3964],
   "slug": "terwilliger_blocks_symbolic_mesh_code_strata_monster_gate_rank48_photon_capacity_three_bonkers",
   "title": "Exact Terwilliger block selection, symbolic adjacent mesh closure, maximal-code strata, external Monster gate, rank-48 coherent algebra, photon capacity model, and three constructions",
-  "status": "reserved",
+  "status": "published_source_complete_remote_ci_pdf_monster_external_and_photon_ontology_pending",
   "owner": "openai-gpt-5.6-thinking",
   "reserved_at": "2026-08-05T23:31:00-04:00",
-  "purpose": "Execute the five published next steps from Passes 3905-3912: select the actual ten Terwilliger Wedderburn blocks; symbolically replay and improve the 398-rotation adjacent mesh; classify invariant strata of maximal [36,17] codes; execute or fail-close the external Monster gate; and compute the complete rank-48 coherent-configuration algebra. Add three independent constructions. One construction develops the user's photon/node-density intuition as a dimensionally consistent information-capacity and causal-update model, explicitly separating invariant light speed from frequency, internal Hilbert-space dimension, channel capacity, and speculative holonet node packing.",
-  "coordination": "Preserve completed Passes through 3920, the parallel Passes 3921-3936 branch, active Passes 3937-3956, and the protected website deployment files. The photon model here is complementary to 3937-3956: it focuses on information bounds, causal update counts, and falsifiable dispersion constraints rather than an ontological variable-c mechanism.",
-  "boundary": "Reservation only. No complete Terwilliger decomposition, exact 398-gate radical identity, exhaustive maximal-code orbit classification, Monster embedding or class fusion, complete rank-48 tensor, variable speed of light, photon internal-node ontology, hardware result, laboratory result, or physical mechanism is promoted without executable or primary-source evidence."
+  "semantic_sha256": "763b9a6a3f04e3436099ccf9abcc18f2723d0540050ecedacc3a245708ba7148",
+  "focused_local_validation": "canonical frozen-certificate equality PASS; 2 pytest tests passed; exact verifier and canonical checker imported and executed; Monster gate remained PENDING because no serialized MM words or class-fusion artifact exists",
+  "purpose": "Execute the five published next steps from Passes 3905-3912: select the actual ten Terwilliger Wedderburn blocks; symbolically replay and improve the 398-rotation adjacent mesh; classify invariant strata of maximal [36,17] codes; execute or fail-close the external Monster gate; and compute the complete rank-48 coherent-configuration algebra. Add three independent constructions, including a dimensionally consistent information-capacity and causal-update model for the user's photon/node-density idea.",
+  "coordination": "Completed Passes through 3920 are preserved. The parallel Passes 3921-3936 branch, active Passes 3937-3956, and active Passes 3965-3972 use disjoint artifact names. This packet's photon model is complementary to 3937-3956: it constrains information capacity, causal update counts, and dispersion without promoting an ontological variable-c mechanism. The protected website deployment files were not replaced.",
+  "artifacts": [
+    "analysis/w33_pass3957_3964_exact_algebra_mesh_code_photon.py",
+    "analysis/w33_pass3957_3964_check.py",
+    "data/PART_3957_3964_EXACT_ALGEBRA_MESH_CODE_PHOTON_results.json",
+    "tests/test_w33_pass3957_3964_exact_algebra_mesh_code_photon.py",
+    "analysis/BT3957_BT3964_exact_algebra_mesh_code_photon.md",
+    "analysis/BT3957_BT3964_exact_algebra_mesh_code_photon_insert.tex",
+    "analysis/BT3957_BT3964_exact_algebra_mesh_code_photon_index_insert.html",
+    "docs/exact-algebra-mesh-code-photon-capacity.html",
+    ".github/workflows/w33_pass3957_3964_exact_algebra_mesh_code_photon.yml",
+    "analysis/W33_CURRENT_FRONTIER_MANIFEST.tex",
+    "data/w33_current_frontier_manifest_v1.json"
+  ],
+  "proved": [
+    "the exact rational Terwilliger decomposition Q^3 + M2(Q)^2 + M3(Q)^3 + M4(Q) + M5(Q), promoted from the existing primitive-idempotent certificate",
+    "an exact radical replay of the 398-rotation, 69-layer adjacent multiport with 232 exact zero eliminations",
+    "an explicit maximal [36,17,4] code with A4=57 and weight-four intersection graph SRG(45,16,8,4) plus two octahedral graphs",
+    "the characteristic-zero rank-48 centralizer algebra Q^2 + M2(Q)^3 + M3(Q) + M5(Q)",
+    "the scale-invariant photon node-packing identity and one-photon orthogonal-update speed-limit falsifier"
+  ],
+  "boundary": "No global circuit optimality, global maximality or orbit classification of A4=57, serialized Monster words, Monster embedding or character fusion, literal photon internal-node ontology, variable or emergent vacuum light speed, hardware fabrication, laboratory performance, remote CI/PDF success, or physical mechanism is claimed without observable evidence."
 }
