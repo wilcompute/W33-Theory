@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [4097, 4104],
+  "slug": "fractional_pair_pump_quantum_link_su3_horizon_scattering_spectral_rg_information_engine_manybody_scar_metrology_thermodynamic_geometry",
+  "title": "Five physics closures and three outside-box probes: interacting fractional pair pumping, dynamical SU(3) quantum links, horizon scattering, spectral renormalization, a topological information engine, many-body scars, nonlinear metrology, and thermodynamic geometry",
+  "status": "reserved",
+  "owner": "openai-gpt-5.6-thinking",
+  "reserved_at": "2026-08-06T13:20:00-04:00",
+  "purpose": "Execute the five physics targets following Passes 4081-4088 and add three independent outside-box constructions with exact finite-system checks and strict evidence boundaries.",
+  "coordination": "Preserve Passes 4005-4096, the authoritative master/docs Pages source, the restored long-form website, and all ordered frontier manifests. Do not edit docs/index.html directly. Keep this packet separate from the active 4089-4096 implementation packet.",
+  "boundary": "Reservation only. No fractional-pump experiment, continuum SU(3) gauge theory, Hawking radiation observation, continuum renormalization fixed point, work-extracting device, many-body scar experiment, Heisenberg-scaling sensor, gravity, cosmology, or theory of everything is promoted."
+}
