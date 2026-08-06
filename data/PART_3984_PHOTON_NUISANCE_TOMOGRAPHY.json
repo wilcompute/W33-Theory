@@ -1,0 +1,36 @@
+{
+  "boundary": "Numerically certified design/Fisher calculation with declared Gaussian jitter; not a performed experiment, apparatus forecast, or measurement of variable vacuum c.",
+  "capacity_table": [
+    {"M": 2, "error": 0.006500000000000001, "ideal_bits": 1.0, "mutual_information_bits": 0.9434282857333776},
+    {"M": 4, "error": 0.008, "ideal_bits": 2.0, "mutual_information_bits": 1.920098755235924},
+    {"M": 8, "error": 0.009500000000000001, "ideal_bits": 3.0, "mutual_information_bits": 2.8958701947791172},
+    {"M": 16, "error": 0.011, "ideal_bits": 4.0, "mutual_information_bits": 3.8696722835319877},
+    {"M": 40, "error": 0.012982892142331046, "ideal_bits": 5.321928094887363, "mutual_information_bits": 5.153333092635304}
+  ],
+  "cells": 48,
+  "design_rank": 16,
+  "design_sha256": "2a89bf44129b514eb0b85075a6803bc51be941f53a332e6405c69978d8692f4b",
+  "events_per_cell": 1000000,
+  "five_sigma_events_per_cell_for_abs_gamma_1e-9": 120429862,
+  "full_model_gamma_estimate": 6.762059458667156e-25,
+  "max_mode_dependent_delay_ps_for_gamma_1e-9": 0.12304777374065683,
+  "normalized_design_condition_number": 113.0444526391014,
+  "omitted_bias_removed": true,
+  "omitted_variable_demo": "Deleting measured k_perp and spectrum creates a false gamma of order 10^-9; the full declared model removes it exactly in the noiseless synthetic design.",
+  "omitted_variable_gamma_estimate": 1.1242584614613146e-09,
+  "parameters": 16,
+  "primary_falsifier": "A nonzero length-by-log(M) coefficient that survives measured k_perp, spectrum, encoder-swap, detector-swap, pulse-width, intensity, and drift regressors.",
+  "projected_gamma_information_ps2": 83035883907393.27,
+  "protocol": [
+    "randomize mode alphabet, encoder implementation, and detector channel",
+    "repeat every setting at three path lengths including a zero-length latency calibration",
+    "measure transverse-momentum and spectral covariates on every block",
+    "fit mode-dependent intercepts separately from the length-by-log(M) slope",
+    "report pulse-front and pulse-peak estimators separately",
+    "decode a complete confusion matrix and report mutual information independently of timing"
+  ],
+  "schema": "w33.pass3984.photon_nuisance_tomography.v2",
+  "sigma_gamma": 2.194810802944939e-09,
+  "single_event_jitter_ps": 20.0,
+  "status": "PASS"
+}
