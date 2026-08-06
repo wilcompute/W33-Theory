@@ -1,0 +1,33 @@
+name: Pass 3984 Photon Nuisance Tomography
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass3984_photon_nuisance_tomography.py'
+      - '.github/workflows/w33_pass3984_photon_nuisance_tomography.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pass3984-photon-nuisance-tomography
+  cancel-in-progress: true
+jobs:
+  design:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check numpy==2.3.5
+      - run: python analysis/w33_pass3984_photon_nuisance_tomography.py | tee /tmp/pass3984.log
+      - run: grep -F 'PASS_PHOTON_NUISANCE_TOMOGRAPHY' /tmp/pass3984.log
+      - name: Commit design certificate
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/PART_3984_PHOTON_NUISANCE_TOMOGRAPHY.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Pass 3984: freeze photon nuisance tomography'
+          git push
