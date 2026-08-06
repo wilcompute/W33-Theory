@@ -3,10 +3,34 @@
   "range": [4089, 4096],
   "slug": "router_layout_optimal_phase_reference_exterior_anomalies_notch_waveform_mechanical_tolerance_selfstress_code_turing_resistance",
   "title": "Five implementation closures and three outside-box probes: exact router layout, optimal phase reference, exterior-algebra anomaly audit, materialized notch control, mechanical prototype, self-stress coding, Turing patterns, and resistance geometry",
-  "status": "reserved",
+  "status": "source_complete_exact_certificate_layout_reference_anomaly_notch_mechanics_code_turing_resistance_hardware_and_experiments_pending",
   "owner": "openai-gpt-5.6-thinking",
   "reserved_at": "2026-08-06T13:10:00-04:00",
-  "purpose": "Execute the five open implementation steps after Passes 4073-4080 without duplicating the completed 4081-4088 overlap-chirality and pump packet, then add three independent constructions in rigidity coding, reaction-diffusion, and circuit geometry.",
-  "coordination": "Preserve Passes 4005-4088, the authoritative master/docs Pages source, the restored long-form website, and all ordered frontier manifests. Do not edit docs/index.html directly.",
-  "boundary": "Reservation only. No fabricated router, exact finite reusable irrational catalyst, derived Standard Model, measured pulse, mechanical prototype, laboratory error correction, nonlinear Turing experiment, gravitational resistance interpretation, cosmology, or theory of everything is promoted."
+  "completed_at": "2026-08-06T13:39:00-04:00",
+  "certificate_status": "PASS_EXACT_LAYOUT_OPTIMAL_REFERENCE_EXTERIOR_ANOMALY_NOTCH_MECHANICS_CODE_TURING_RESISTANCE",
+  "certificates": {
+    "exact_packet": "598f80f12de4571824218228000fbfc874f339b59717009fb567e4268a5797dc",
+    "combined_manifest": "52fbaafacbb5eab607d89c883ab1973d8d1db935b39cde514ab298fef054c148",
+    "router_layout": "32e46ee39dde19ae936eb7334e79db5f083a75db9a9c4dafa6902f1190152556"
+  },
+  "promoted": [
+    "corrected exact 160-assignment four-router layout and QSP tolerance budget",
+    "optimal path-Perron phase reference with O(K^-2) single-use error",
+    "anomaly-free one-generation charge pattern in the exterior representation ring of the dimension-57 multiplicity spaces",
+    "compact C7 four-gap notch waveform and full 160-mode quartic leakage simulation",
+    "80-mass 160-spring mechanical contract with a sufficient 9.6907 percent worst-case spring tolerance",
+    "real [160,81,8] self-stress sparse-error code",
+    "explicit 24-mode and 15-mode W33 Turing selectors",
+    "two-valued effective-resistance geometry with Kirchhoff index 267/2"
+  ],
+  "external_pending": [
+    "fabricated router network and calibrated loss, crosstalk, and phase stability",
+    "multi-use phase-reference degradation and fault-tolerant preparation",
+    "dynamical particle realization, generations, masses, Yukawas, symmetry breaking, and observed couplings",
+    "hardware-bandlimited notch pulse with differential loss and simultaneous controls",
+    "mechanical prototype, robust sparse decoder, nonlinear pattern experiment, and resistor-array measurement",
+    "remote exact CI, protected frontier reconciliation, and manuscript PDF evidence"
+  ],
+  "coordination": "Preserves Passes 4005-4088, the authoritative master/docs Pages source, restored long-form website, and docs/index.html.",
+  "boundary": "No fabricated hardware, exact finite reusable irrational reference, derived Standard Model, measured experiment, gravity, cosmology, or theory of everything is promoted."
 }
