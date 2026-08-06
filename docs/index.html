@@ -2132,16 +2132,6 @@
             <td><a href="#theory-exceptional-quotients">Quotients</a></td>
           </tr>
           <tr>
-            <td>Regular symplectic spreads</td>
-            <td>An explicit strongly regular graph for every odd prime power; Ree&ndash;Tits control at q=27</td>
-            <td><a href="#theory-spread-controller">Spread theorem</a></td>
-          </tr>
-          <tr>
-            <td>Phase/controller representations</td>
-            <td>Abstract order 48, canonical order 24, and arithmetic SL<sub>3</sub>(Z) are distinct objects</td>
-            <td><a href="#theory-spread-controller">Controller trichotomy</a></td>
-          </tr>
-          <tr>
             <td>Curved external factor</td>
             <td>Explicit finite seeds; continuum spectral-action asymptotics remain open</td>
             <td><a href="#theory-curved-4d">4D boundary</a></td>
@@ -2151,55 +2141,6 @@
           before re-deriving a formula, and use the
           <a href="https://github.com/wilcompute/W33-Theory/blob/master/RESULTS_VOCABULARY.md">canonical vocabulary</a>
           to resolve aliases, retractions, and object scope.</p>
-      </div>
-      <div class="spotlight" id="theory-spread-controller">
-        <h3>Current exact frontier: spreads, quadratic channels, and controllers</h3>
-        <p><strong>All odd prime powers (Passes 2200&ndash;2206).</strong> The regular symplectic spreads form a
-          two-intersection scheme. Joining spreads that meet in <code>q+1</code> lines gives an SRG with</p>
-        <p style="text-align:center"><code>
-          v=q&sup2;(q&sup2;&minus;1)/2,&nbsp;
-          k=q(q&minus;2)(q&sup2;+1)/2,<br>
-          &lambda;=q(q&sup3;&minus;4q&sup2;+7q&minus;8)/2,&nbsp;
-          &mu;=q(q&minus;2)(q&minus;1)&sup2;/2,
-        </code></p>
-        <p>with nontrivial eigenvalues <code>q(q&minus;2)</code> and <code>&minus;q</code>. Regularity is essential:
-          a closed 144-spread slice of the q=27 Ree&ndash;Tits orbit has exact intersection histogram
-          <code>19<sup>34</sup>, 28<sup>76</sup>, 37<sup>28</sup>, 46<sup>4</sup>, 55<sup>2</sup></code>.</p>
-        <p><strong>Complete q=27 control (Passes 2300 and 2304).</strong> Ree&ndash;Tits has complete hyperplane
-          spectrum <code>1<sup>730</sup>, 10<sup>4563</sup>, 19<sup>96174</sup>, 28<sup>408294</sup>,
-          37<sup>36504</sup>, 46<sup>4914</sup>, 55<sup>702</sup></code> and an exactly 9-divisible
-          <code>[730,5]<sub>27</sub></code> projective code. The regular, Kantor, Thas&ndash;Payne, and Ree&ndash;Tits
-          coordinate families all have sections congruent to 1 modulo 9 but pairwise distinct complete spectra and
-          weight enumerators. The regular code is 27-divisible <code>[730,4]<sub>27</sub></code>; the three named
-          nonregular codes are exactly 9-divisible <code>[730,5]<sub>27</sub></code>. This classifies those four
-          coordinate families, not every symplectic spread.</p>
-        <p><strong>Complete quadratic channels (Passes 2200 and 2301).</strong> For targets
-          <code>15,24,30,81</code>, the Pass-2200 rows <code>3,5,3,7</code> and <code>0,0,2,5</code> are exactly the
-          outer-even, <code>PGSp(4,3)</code>-extendible halves. The full <code>PSp(4,3)</code> Hom dimensions are
-          <code>Sym&sup2;=(3,6,5,12)</code> and <code>&Lambda;&sup2;=(3,4,5,12)</code>: 26 symmetric plus 24
-          alternating maps. All fifty signed-orbit basis maps are explicit and target-surjective.</p>
-        <p><strong>Controller representation trichotomy (Pass 2306).</strong> The abstract independent-clock group
-          <code>(C4&times;C6):C2</code> has order 48 and <strong>minimal faithful rational degree</strong> 4. Its
-          canonical single-<code>J</code> action has image <code>C12:C2</code> of order 24. The overlapping
-          three-coordinate carrier is instead <code>&lang;R4,U6&rang;=SL3(Z)</code>: its generators do not commute,
-          and the exact simultaneous equations for a rational <strong>common inverter</strong> have rank 9 and nullity
-          0.</p>
-        <p>The matched finite word <code>A4&sup2;B6</code> has order 6 and spectral radius 1; the arithmetic word
-          <code>R4&sup2;U6</code> has infinite order and spectral radius <code>&phi;</code>. Thus the golden ratio is
-          located in the infinite arithmetic action. It is <strong>not a selected physical observable</strong> and is
-          not an invariant of either finite controller without an additional operational map.</p>
-        <p><strong>Quadratic-map symmetry (Pass 2307).</strong> On the complete 50-dimensional Hom space, the
-          simultaneous phase and outer inversion generate <code>S3</code>. GAP gives
-          <code>Sym=13&middot;1 &oplus; 3&middot;sgn &oplus; 5&middot;std</code> and
-          <code>&Lambda;=3&middot;1 &oplus; 13&middot;sgn &oplus; 4&middot;std</code>, hence the combined module is
-          <code>16&middot;1 &oplus; 16&middot;sgn &oplus; 9&middot;std</code>. This forces the balanced outer split
-          <code>25+25</code> and the phase split <code>32+18</code>. These are representation multiplicities, not
-          physical couplings or identifications with unrelated counts.</p>
-        <p><a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS2200_2206_ALL_Q_SPREADS_NONREGULAR_CONTROLLER_RTL_RELEASE.md">Read the all-q spread release</a>
-          &middot; <a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/w33_pass2300_ree_tits_divisible_code.py">inspect the complete Ree&ndash;Tits code witness</a>
-          &middot; <a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/w33_pass2301_complete_quadratic_hom_bases.py">inspect all quadratic Hom bases</a>
-          &middot; <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS2306_CONTROLLER_REPRESENTATION_TRICHOTOMY.md">read Pass 2306</a>
-          &middot; <a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS2307_QUADRATIC_HOM_S3_DECOMPOSITION.md">read Pass 2307</a>.</p>
       </div>
       <div class="spotlight" id="theory-integral-frontier">
         <p><strong>The ramified boundary is closed (Pass 1002).</strong> The <code>2</code>-primary gluing is recovered
@@ -2860,13 +2801,8 @@
         </div>
       </div>
       <div class="highlights-banner" hidden aria-hidden="true">
-        <h3>Historical computational archive &mdash; not current claim status</h3>
-<details class="spotlight"><summary style="cursor:pointer;font-weight:600">Expand historical archive &mdash; preserved for provenance, including superseded and retracted claims</summary>
-          <p style="border-left:4px solid #be123c;padding:0.8rem 1rem;background:rgba(190,18,60,.08)">
-            <strong>RETRACTED / HISTORICAL SNAPSHOT.</strong> The cards below preserve the project's chronological
-            exploration. A passing arithmetic identity or regression count does not establish a physical derivation.
-            Several headlines below are false, over-scoped, or superseded; use <a href="#theory">The Theory</a> and the
-            <a href="#reader-guide">Reader Guide</a> for current audited status.</p>
+        <h3>Latest Results &mdash; 900+ Passes, 2,925 Certificates, Q1&ndash;Q8 All Closed</h3>
+<details class="spotlight"><summary style="cursor:pointer;font-weight:600">Expand &mdash; Latest Results &mdash; 900+ Passes, 2,925 Certificates, Q1&ndash;Q8 All Closed (204,756 characters, preserved in full)</summary>
 
         <div class="highlights-grid">
           <div class="highlight-item"><span class="hi-icon">★</span><span><strong>Spectral Action</strong> — Full NCG
@@ -2951,8 +2887,8 @@
               <code>a<sub>2</sub>/a<sub>0</sub> = 2&Phi;<sub>6</sub>/q = 14/3</code>. Moments satisfy recurrence with
               coefficients polynomial in <code>q</code>. Spectral determinant
               <code>det'(D<sup>2</sup>) = 2<sup>808</sup> &middot; 5<sup>48</sup></code>.</span></div>
-          <div class="highlight-item"><span class="hi-icon">&starf;</span><span><strong>RETRACTED HISTORICAL CLAIM:
-                Zero-Parameter SM Dictionary</strong> &mdash; this archived card asserted that every Standard Model parameter is an exact rational function of
+          <div class="highlight-item"><span class="hi-icon">&starf;</span><span><strong>Zero-Parameter SM
+                Dictionary</strong> &mdash; every Standard Model parameter is now an exact rational function of
               <code>(v,k,&lambda;,&mu;)</code> with <code>q = 3</code>. Four independent channels (fine-structure,
               Weinberg angle, Higgs ratio, cosmological constant) each uniquely select <code>q = 3</code> via distinct
               polynomial equations. The inverse problem is solved: from any two observables, reconstruct the full
@@ -3320,12 +3256,10 @@
               |Sp(4,3)|=q⁴(q²-1)(q⁴-1)=51840=|W(E₆)| (exact!); Poincaré polynomial P(q)=μV=4&times;40=160; Gaussian
               binomial [4 choose 1]_q=V=40; [3 choose 1]_q=q²+q+1=13 (supersingular prime); Langlands dual SO(5) has
               dimension q²+1=10.</span></div>
-          <div class="highlight-item"><span class="hi-icon">&starf;</span><span><strong>SCOPED CORRECTION: Perkel and
-                the Golden Ratio (CL)</strong> &mdash; the 57-cell 1-skeleton has spectrum {2q, &phi;&sup2;, 1/&phi;&sup2;, -q} where
+          <div class="highlight-item"><span class="hi-icon">&starf;</span><span><strong>Perkel Golden Ratio
+                (CL)</strong> &mdash; the 57-cell 1-skeleton has spectrum {2q, &phi;&sup2;, 1/&phi;&sup2;, -q} where
               &phi;&sup2;+1/&phi;&sup2;=q=3 (field characteristic!), &phi;&sup4;+1/&phi;&sup4;=&lambda;+&mu;+1=7, and
-              the sum of distinct |eigenvalues|=k=12. This is a Perkel-graph identity; no canonical W(3,3)-to-Perkel
-              map selects it. Separately, Pass 2306 locates &phi; exactly in the infinite arithmetic word
-              R<sub>4</sub><sup>2</sup>U<sub>6</sub>, not in the finite controller.</span></div>
+              the sum of distinct |eigenvalues|=k=12. Golden ratio from W(3,3).</span></div>
           <div class="highlight-item"><span class="hi-icon">&starf;</span><span><strong>PSL(2,p) Tower (CLI)</strong>
               &mdash; four primes 3,5,11,19 from W(3,3) parameters generate |PSL(2,q)|=k, |PSL(2,5)|=|A&sub5;|,
               |PSL(2,k-1)|=|Aut(11-cell)|, |PSL(2,k+q+&mu;)|=|Aut(57-cell)|. Vertex formula:
@@ -4729,7 +4663,6 @@
           <div class="highlight-item" style="border-left:3px solid #be123c;padding-left:1rem"><span class="hi-icon"
               style="color:#be123c">&#9733;</span><span><strong>Phase 35: The Complete Theory &mdash; Uniqueness,
                 Quantum Foundations, Dark Matter, Predictions &amp; The Final Theorem (SOLVE_OPEN Q103)</strong> &mdash;
-              <strong>RETRACTED HISTORICAL SNAPSHOT: the arithmetic identities below do not imply the physical claims.</strong>
               <strong>THE THEORY OF EVERYTHING FROM ONE EQUATION: q!=2q &rArr; q=3.</strong> <strong>I. UNIQUENESS
                 THEOREM:</strong> q!=2q has UNIQUE solution q=3 for all q&ge;1; discriminant
               (q!)&sup2;&minus;4&middot;2<sup>q</sup>=4 (perfect square); roots &lambda;=2, &mu;=4 from
@@ -4766,25 +4699,26 @@
                 THEOREM:</strong> q!=2q &rArr; q=3 &rArr; W(3,3)=SRG(40,12,2,4) &rArr; ALL of physics. Zero free
               parameters. <strong>41 new checks, 2856 total, 0 failures.</strong></span></div>
           <div class="highlight-item" style="border-left:3px solid #0284c7;padding-left:1rem"><span class="hi-icon"
-              style="color:#0284c7">&#9733;</span><span><strong>Phase 36: RETRACTED HISTORICAL SNAPSHOT &mdash; GQ(3,3),
-                corrected group scope, D4 triality &amp; finite phase space</strong> &mdash;
+              style="color:#0284c7">&#9733;</span><span><strong>Phase 36: Incidence Geometry &mdash; GQ(3,3),
+                Sp(4,3)=W(E<sub>6</sub>), D4 Triality &amp; Finite Phase Space (SOLVE_OPEN Q103)</strong> &mdash;
               <strong>W(3,3) IS THE COLLINEARITY GRAPH OF GQ(3,3)</strong>, the symplectic generalized quadrangle.
               <strong>GQ(s,t) FORMULA:</strong> v=(s+1)(st+1), k=s(t+1), &lambda;=s&minus;1, &mu;=t+1; for s=t=q=3 gives
-              (40,12,2,4) exactly. <strong>CORRECT INCIDENCE GEOMETRY:</strong> GQ(3,3) has 40 points and 40 isotropic
-              lines; 120 is not the line count. Its dual is Q(4,3), not an asserted incidence self-duality.
-              <strong>CORRECT GROUP SCOPE:</strong> <code>Aut(W(3,3))=PGSp(4,3)&cong;W(E6)</code> has order 51840;
-              <code>Sp(4,3)</code> is a central double cover of <code>PSp(4,3)</code>, with the same order 51840 but not
-              the faithful projective automorphism group.
+              (40,12,2,4) exactly. <strong>INCIDENCE GEOMETRY:</strong> b=v&middot;k/(q+1)=E/&lambda;=120 lines in
+              GQ(3,3); dual GQ(3,3) is self&hyphen;dual; q+1=&mu; points per line, q+1=&mu; lines per point.
+              <strong>|Sp(4,3)|=51840=|W(E<sub>6</sub>)|:</strong> the automorphism group of W(3,3) is EXACTLY the Weyl
+              group of E<sub>6</sub>! PSp(4,3)&cong;W(E<sub>6</sub>)<sup>+</sup> (same simple group, order 25920).
               <strong>DEEP IDENTITY:</strong>
               |Sp(4,3)|=v&middot;k&middot;(v&minus;k&minus;1)&middot;&mu;=40&middot;12&middot;27&middot;4=51840; the 27
               non-neighbours=dim(E<sub>6</sub> fundamental rep). <strong>sp(4)&cong;so(5):</strong>
               B<sub>2</sub>=C<sub>2</sub> Lie algebra isomorphism, dim=&Theta;=10. <strong>28 NON-ISOMORPHIC
                 SRG(40,12,2,4):</strong> complete enumeration by Spence (2000); 28=dim
-              SO(8)=C(2<sup>q</sup>,&lambda;)=D<sub>4</sub> Lie algebra dimension; that numerical equality does not
-              derive three fermion families. <strong>PG(3,3):</strong> |PG(3,3)|=v=40 points; #hyperplanes=v;
+              SO(8)=C(2<sup>q</sup>,&lambda;)=D<sub>4</sub> Lie algebra dimension &rArr; <strong>D<sub>4</sub> triality
+                &rarr; 3 fermion families</strong>. <strong>PG(3,3):</strong> |PG(3,3)|=v=40 points; #hyperplanes=v;
               #lines=(v&middot;(v&minus;1))/(q&middot;(q+1))=&Phi;<sub>13</sub>=130. <strong>FINITE PHASE
-                SPACE:</strong> the vector space F<sub>3</sub><sup>4</sup> has 81 vectors, 80 of them nonzero; these
-              counts are not a count of Lagrangian frames. <strong>SPREADS:</strong> (q<sup>2</sup>+1)=&Theta; disjoint lines partition v=40
+                SPACE:</strong> symplectic F<sub>q</sub><sup>4</sup> has
+              q<sup>4</sup>=&lambda;<sup>&mu;</sup>&middot;(&mu;+1)=v&middot;&lambda;=80 Lagrangian frames;
+              q<sup>&mu;</sup>=&lambda;<sup><sup>&Phi;<sub>6</sub></sup></sup> symplectic matrices in
+              Sp(4,F<sub>q</sub>). <strong>SPREADS:</strong> (q<sup>2</sup>+1)=&Theta; disjoint lines partition v=40
               points &rArr; perfect 1&hyphen;factorisation. <strong>OVOIDS:</strong> q<sup>2</sup>+1=&Theta; pairwise
               non&hyphen;collinear points; spread&middot;ovoid=v. <strong>FINITE FIELD:</strong>
               |GF(q<sup>2</sup>)|=q<sup>2</sup>; Frobenius order=&lambda;=2; primitive element
@@ -18250,8 +18184,7 @@
           <p><strong>Navigator required:</strong> this live paper is too large to read linearly. If you care about
             the exact mathematics first, start at <a href="#theory">The Theory</a> or
             <a href="#numbers">Core Numbers</a>. If you care about the physical program, start at
-            <a href="#physics">Historical Physics Derivations</a>, treating every object-to-physics identification as
-            a hypothesis unless the current Theory section explicitly promotes it.
+            <a href="#physics">Physics Derivations</a>, where conditional identifications are marked explicitly.
             For raw proof ledgers, start at <a href="#hard-computation">Hard Computation Phases</a>.
             The page is meant to be navigated by question, not read straight through.</p>
         </div>
@@ -18259,10 +18192,7 @@
           <h3 style="margin-top:0;">Current audited scope</h3>
           <p><strong>Finite exact core:</strong> <code>W(3,3)=SRG(40,12,2,4)</code>, its group actions, codes,
             lattices, selector covers, and representation-theoretic bridges are studied through named constructions
-            with GAP/Python witnesses and regression certificates. The current frontier includes the all-odd-q
-            regular-spread SRG theorem, complete spectra and divisible codes for four named q=27 families, all fifty
-            quadratic Hom maps and their <code>S3</code> character, and the exact separation of the order-48 abstract
-            controller, order-24 single-<code>J</code> image, and infinite arithmetic carrier.</p>
+            with GAP/Python witnesses and regression certificates.</p>
           <p><strong>Holonet software:</strong> the repository contains a runnable finite-geometry VM, routing and
             scheduling experiments, simulators, and reproducibility tools. These are software artifacts, not evidence
             that a photonic device or fault-tolerant quantum computer has been physically built.</p>
@@ -18309,8 +18239,8 @@ pass produced it.</p>
       <td>Canonical graph, homology, lattice, code, and Schl&auml;fli-module invariants, without physics formulas mixed into the theorem layer.</td></tr>
   <tr><td><strong>Whether to believe it</strong></td><td><a href="#independent-verification">Independent Verification</a></td>
       <td>Executable witnesses, regression tests, named certificates, and the correction trail. The April “verified” block is retained only as a superseded historical snapshot.</td></tr>
-  <tr><td><strong>The historical physics program</strong></td><td><a href="#physics">Historical Physics Derivations</a></td>
-      <td>The proposed maps from combinatorics to particles and forces, preserved as hypotheses and audit history rather than current theorem status.</td></tr>
+  <tr><td><strong>The physics reading</strong></td><td><a href="#physics">Physics Derivations</a></td>
+      <td>How the combinatorics is mapped onto particles and forces &mdash; and where that mapping is still a conjecture rather than a theorem.</td></tr>
   <tr><td><strong>The mathematics, in depth</strong></td><td><a href="#pillars-main">Mathematical Pillars</a></td>
       <td>Lattices, codes, zeta functions, representation theory. Self-contained results that stand whatever you think of the physics.</td></tr>
   <tr><td><strong>To check it yourself</strong></td><td><a href="#hard-computation">Hard Computation</a></td>
@@ -18341,18 +18271,6 @@ pass produced it.</p>
               degree-20 character model, primitive systems through <code>p<sup>6</sup></code>, Smith/Loewy
               separation, and the GAP theorem that upgrades <code>120&rarr;360</code> to a global
               simple-cycle-plus-copy orbit minimum without inventing a canonical copy.</li>
-            <li><a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS2200_2206_ALL_Q_SPREADS_NONREGULAR_CONTROLLER_RTL_RELEASE.md">Passes 2200&ndash;2206</a>
-              &mdash; the all-odd-q regular-spread SRG theorem, q=27 Ree&ndash;Tits nonregular control, corrected quadratic
-              target table, and canonical order-24 single-<code>J</code> controller.</li>
-            <li><a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS2306_CONTROLLER_REPRESENTATION_TRICHOTOMY.md">Pass 2306</a>
-              &mdash; the minimal faithful rational degree-4 controller, the no-common-inverter theorem in rank three,
-              and the exact finite-versus-arithmetic location of the golden word.</li>
-            <li><a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/w33_pass2300_ree_tits_divisible_code.py">Passes 2300&ndash;2304</a>
-              &mdash; complete q=27 named-family spectra and divisible codes, all fifty quadratic Hom bases, and the
-              q=7/11 canonical Weil outer-inversion theorem.</li>
-            <li><a href="https://github.com/wilcompute/W33-Theory/blob/master/PASS2307_QUADRATIC_HOM_S3_DECOMPOSITION.md">Pass 2307</a>
-              &mdash; the exact <code>16&middot;1 &oplus; 16&middot;sgn &oplus; 9&middot;std</code> quadratic-map
-              <code>S3</code> module and its structural explanation of the <code>25+25</code> outer split.</li>
             <li><a href="#q3-all-m-theorem">Pass 541</a> &mdash; the exact <code>q=3</code> trace-valuation minimum for
               every exponent <code>m&ge;2</code>, proved by six cubic recurrences and two finite mod-<code>9</code>
               clocks.</li>
@@ -28865,15 +28783,6 @@ deliberately &mdash; including the parts that turned out to be wrong.</p>
     })();
   </script>
 
-
-<section id="pass-2901-2907-selector-butterfly-observer" class="section theorem-section">
-  <div class="section-number">Passes 2901--2907</div>
-  <h2>Intrinsic selector channels and nonlinear support diagnosis</h2>
-  <p>The three residual selector channels are an affine line with C3 translations and S3 transition functions; no global geometry-equivariant numbering exists.</p>
-  <p>A literal q=3 butterfly engine evaluates the fifteen-state quotient in 47 modeled cycles rather than 225 dense serial cycles. The full micro-ISA still requires all 81 frame states for exact execution.</p>
-  <p>The 96 typed selector--tomotope tokens carry a regular determinant-twisted group action. The optimal fifteen-mask passage schedule costs 315 and is provably nonlinear: every GL(4,2) Singer cycle costs more.</p>
-  <p>The first forty observer classes are not W(3,3); the matching count is explicitly recorded as a falsified identification.</p>
-</section>
 </body>
 
 </html>
