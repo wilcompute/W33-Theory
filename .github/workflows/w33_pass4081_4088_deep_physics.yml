@@ -1,0 +1,29 @@
+name: Passes 4081-4088 Deep Physics
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4081_4088_deep_physics.py'
+      - 'analysis/w33_pass4057_4064_advanced_physics.py'
+      - 'data/PART_4081_4088_DEEP_PHYSICS.json'
+      - 'tests/test_w33_pass4081_4088_deep_physics.py'
+      - '.github/workflows/w33_pass4081_4088_deep_physics.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass4081_4088_deep_physics.py'
+      - 'analysis/w33_pass4057_4064_advanced_physics.py'
+      - 'data/PART_4081_4088_DEEP_PHYSICS.json'
+      - 'tests/test_w33_pass4081_4088_deep_physics.py'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy sympy networkx pytest
+      - run: python analysis/w33_pass4081_4088_deep_physics.py
+      - run: pytest -q tests/test_w33_pass4081_4088_deep_physics.py
