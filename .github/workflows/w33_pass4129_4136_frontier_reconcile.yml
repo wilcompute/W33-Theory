@@ -1,0 +1,21 @@
+name: W33 Passes 4129-4136 frontier reconcile
+on:
+  push:
+    paths:
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'analysis/BT4129_BT4136_anomaly_gates_decoder_hybrid_orbits_insert.tex'
+      - 'data/PART_4129_4136_ANOMALY_GATES_DECODER_HYBRID_ORBITS_BONKERS.json'
+      - 'data/w33_pass_namespace_registry_v2.d/4129-4136.json'
+      - 'docs/anomaly-gates-decoder-hybrid-orbits-4129-4136.html'
+      - 'tools/integrate_pass4129_4136_frontier.py'
+      - '.github/workflows/w33_pass4129_4136_frontier_reconcile.yml'
+  workflow_dispatch:
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python tools/integrate_pass4129_4136_frontier.py
