@@ -1,15 +1,9 @@
-name: Deploy authoritative W33 site to Pages
+name: Manual fallback W33 Pages deployment
 
+# The repository's automatic GitHub Pages source is master:/docs.
+# This workflow is deliberately manual-only so it cannot race the managed
+# branch publisher or overwrite it with an older queued artifact.
 on:
-  push:
-    branches:
-      - master
-    paths:
-      - 'docs/index.html'
-      - 'docs/index-redirect-archive-2026-08-06.html'
-      - 'docs/exceptional-geometry-41a8d733.html'
-      - 'tools/check_website_migration_authorization.py'
-      - '.github/workflows/deploy-pages.yml'
   workflow_dispatch:
 
 permissions:
@@ -18,8 +12,8 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages-authoritative-w33-site
-  cancel-in-progress: true
+  group: pages-manual-fallback-w33-site
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -29,18 +23,26 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: master
+          fetch-depth: 1
 
-      - name: Verify large authoritative index
+      - name: Verify canonical docs payload
         shell: bash
         run: |
           set -euo pipefail
           expected='41a8d733f42da18282fa276f5d2fa82bac7516f6'
-          index_blob="$(git hash-object docs/index.html)"
-          immutable_blob="$(git hash-object docs/exceptional-geometry-41a8d733.html)"
-          test "$index_blob" = "$expected"
-          test "$immutable_blob" = "$expected"
+          for path in \
+            docs/index.html \
+            docs/404.html \
+            docs/full-site-2026-08-06.html \
+            docs/exceptional-geometry-41a8d733.html
+          do
+            test -f "$path"
+            actual="$(git hash-object "$path")"
+            echo "$path $actual"
+            test "$actual" = "$expected"
+          done
+          test -f docs/.nojekyll
           python tools/check_website_migration_authorization.py --repository-root .
-          echo "Deploying large authoritative docs/index.html blob $index_blob"
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
