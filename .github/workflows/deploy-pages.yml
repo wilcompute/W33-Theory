@@ -1,4 +1,4 @@
-name: Deploy restored W33 site to Pages
+name: Deploy cache-proof W33 Exceptional Geometry site
 
 on:
   push:
@@ -6,6 +6,7 @@ on:
       - master
     paths:
       - 'docs/index.html'
+      - 'docs/exceptional-geometry-41a8d733.html'
       - 'docs/.pages-deploy-restored-index-*'
       - 'tools/check_website_migration_authorization.py'
       - 'data/website_migration_authorization.json'
@@ -18,7 +19,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages-restored-authoritative-index
+  group: pages-exceptional-geometry-cache-proof
   cancel-in-progress: true
 
 jobs:
@@ -27,25 +28,30 @@ jobs:
     outputs:
       checkout_sha: ${{ steps.verify.outputs.checkout_sha }}
       index_blob: ${{ steps.verify.outputs.index_blob }}
+      site_blob: ${{ steps.verify.outputs.site_blob }}
     steps:
       - name: Checkout current master
         uses: actions/checkout@v4
         with:
           ref: master
 
-      - name: Verify restored authoritative index
+      - name: Verify bootstrap and immutable Exceptional Geometry page
         id: verify
         shell: bash
         run: |
           set -euo pipefail
-          expected='41a8d733f42da18282fa276f5d2fa82bac7516f6'
-          actual="$(git hash-object docs/index.html)"
+          expected_index='6dccf99d59ff03b9dfcfc8c3b70648d7ab357f89'
+          expected_site='41a8d733f42da18282fa276f5d2fa82bac7516f6'
+          index_blob="$(git hash-object docs/index.html)"
+          site_blob="$(git hash-object docs/exceptional-geometry-41a8d733.html)"
           checkout_sha="$(git rev-parse HEAD)"
-          test "$actual" = "$expected"
+          test "$index_blob" = "$expected_index"
+          test "$site_blob" = "$expected_site"
           python tools/check_website_migration_authorization.py --repository-root .
           echo "checkout_sha=$checkout_sha" >> "$GITHUB_OUTPUT"
-          echo "index_blob=$actual" >> "$GITHUB_OUTPUT"
-          echo "Deploying checkout $checkout_sha with docs/index.html blob $actual"
+          echo "index_blob=$index_blob" >> "$GITHUB_OUTPUT"
+          echo "site_blob=$site_blob" >> "$GITHUB_OUTPUT"
+          echo "Deploying checkout $checkout_sha with bootstrap $index_blob and Exceptional Geometry page $site_blob"
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
@@ -80,6 +86,7 @@ jobs:
         env:
           CHECKOUT_SHA: ${{ needs.build.outputs.checkout_sha }}
           INDEX_BLOB: ${{ needs.build.outputs.index_blob }}
+          SITE_BLOB: ${{ needs.build.outputs.site_blob }}
           PAGE_URL: ${{ needs.deploy.outputs.page_url }}
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -94,6 +101,8 @@ jobs:
               trigger_sha: context.sha,
               deployed_checkout_sha: process.env.CHECKOUT_SHA,
               verified_index_blob: process.env.INDEX_BLOB,
+              verified_site_blob: process.env.SITE_BLOB,
+              immutable_site_path: 'docs/exceptional-geometry-41a8d733.html',
               page_url: process.env.PAGE_URL,
               deployed_at: new Date().toISOString()
             };
