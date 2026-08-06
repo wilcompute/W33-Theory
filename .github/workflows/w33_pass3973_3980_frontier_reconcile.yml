@@ -1,0 +1,59 @@
+name: Passes 3973-3980 Frontier Reconcile
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'tools/integrate_pass3973_3980_frontier.py'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'analysis/BT3973_BT3980_extremal_mesh_photon_tensor_index_insert.html'
+      - 'docs/extremal-mesh-photon-tensor.html'
+      - '.github/workflows/w33_pass3973_3980_frontier_reconcile.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pass3973-3980-frontier-reconcile
+  cancel-in-progress: false
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Register manuscript and public artifacts without touching protected index
+        run: |
+          mkdir -p evidence/pass3973_3980
+          python tools/integrate_pass3973_3980_frontier.py \
+            --report evidence/pass3973_3980/frontier_reconcile.json
+          python - <<'PY'
+          import json,re
+          from pathlib import Path
+          tex=Path('analysis/W33_CURRENT_FRONTIER_MANIFEST.tex').read_text()
+          config=json.loads(Path('data/w33_current_frontier_manifest_v1.json').read_text())
+          inputs=re.findall(r'\\input\{([^}]+)\}',tex)
+          assert inputs == config['required_ordered_inputs']
+          assert config['public_sections'][-1]['token'] == 'bt3973-3980-extremal-mesh-photon'
+          assert config['standalone_public_pages'][-1]['token'] == 'passes-3973-3980-extremal-mesh-photon-tensor'
+          print('PASS protected frontier registration')
+          PY
+      - name: Commit generated manifest when needed
+        run: |
+          if git diff --quiet -- data/w33_current_frontier_manifest_v1.json; then
+            echo 'Frontier manifest already reconciled.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/w33_current_frontier_manifest_v1.json
+          git commit -m 'Integrate Passes 3973-3980 public frontier'
+          git push origin HEAD:master
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3973-3980-frontier-reconcile
+          path: evidence/pass3973_3980/**
