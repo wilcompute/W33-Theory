@@ -1,0 +1,59 @@
+{
+  "boundary": "The W33 matrix identities and tensor-shell laws are exact. The electromagnetic realization, Lieb-Robinson prefactor, reconstructed proper delays, hidden-node test, hardware, and laboratory performance are declared models or future measurements. No variable vacuum c or literal photon-node ontology is claimed.",
+  "causal_refinement_law": {
+    "N_node_refinement": "a_N=L/N and J_N >= hbar c N/(C_LR(12)L) to keep the internal causal cone matched to c",
+    "generic_graph_speed_bound": "v_graph <= C_LR(Delta) J/hbar graph-edges per second",
+    "interpretation": "Packing more serial nodes without raising coupling strength slows the internal graph cone. Node density alone cannot raise or set vacuum c.",
+    "physical_speed": "v_internal <= a C_LR(Delta) J/hbar",
+    "scale_invariant_condition": "a J = constant"
+  },
+  "dual_geometry_delay_echo": {
+    "common_generator": "A+B=J-I",
+    "common_spectrum": [39, -1, -1],
+    "contrast_generator": "A-B",
+    "contrast_spectrum": [-15, 5, -7],
+    "interpretation": "The common arm is geometry-blind on the 39-dimensional nonuniform sector; the contrast arm isolates W33-specific delay memory.",
+    "protected_nonuniform_delay_split_in_units_of_theta_prime": 12
+  },
+  "photon_falsifier": {
+    "hidden_node_signal": "A residual mode-count-dependent front-arrival slope after subtracting the measured Wigner-Smith proper delays.",
+    "null": "After conditioning on spectrum, transverse momentum, resonant dwell time, encoder, detector, and path length, changing mode count changes capacity/intercept but not the vacuum propagation slope.",
+    "required_firewall": "Separate causal-front timing from pulse peak/group delay and independently reconstruct Q from the frequency derivative of the scattering matrix."
+  },
+  "primary_sources": [
+    "Patel and Michielssen, Wigner-Smith Time Delay Matrix for Electromagnetics, arXiv:2003.06985",
+    "Nachtergaele, Sims, and Young, Quasi-Locality Bounds for Quantum Lattice Systems I, arXiv:1810.02428",
+    "Yang et al., Programmable high-dimensional Hamiltonian in a photonic waveguide array, arXiv:2311.14951"
+  ],
+  "schema": "w33.pass3993_3996.wigner_smith_causal_memory.v1",
+  "self_similar_delay_shells": {
+    "generating_polynomial": "(1+24 z^10+15 z^16)^m",
+    "interpretation": "Tensor self-similarity multiplies mode count but adds proper-delay history. The delay distribution is an additive memory ledger over exponentially many modes.",
+    "mean_in_units_of_theta_prime": "12m",
+    "multiplicities_m1_to_m4": {
+      "1": {"0": 1, "10": 24, "16": 15},
+      "2": {"0": 1, "10": 48, "16": 30, "20": 576, "26": 720, "32": 225},
+      "3": {"0": 1, "10": 72, "16": 45, "20": 1728, "26": 2160, "30": 13824, "32": 675, "36": 25920, "42": 16200, "48": 3375},
+      "4": {"0": 1, "10": 96, "16": 60, "20": 3456, "26": 4320, "30": 55296, "32": 1350, "36": 103680, "40": 331776, "42": 64800, "46": 829440, "48": 13500, "52": 777600, "58": 324000, "64": 50625}
+    },
+    "total_trace_in_units_of_theta_prime": "12m*40^m",
+    "variance_in_units_of_theta_prime_squared": "12m"
+  },
+  "semantic_sha256": "43856798c359b4f3627ca3a593d51ab781718b27769d887996d44076714028b5",
+  "status": "PASS_EXACT_WIGNER_SMITH_MEMORY_WITH_DECLARED_CAUSAL_MODELS",
+  "w33_laplacian": {
+    "spectrum": {"0": 1, "10": 24, "16": 15},
+    "trace": 480,
+    "trace_square": 6240
+  },
+  "wigner_smith_theorem": {
+    "delay_variance_in_units_of_theta_prime_squared": 12,
+    "density_of_states_convention": "Delta rho(omega)=Tr Q(omega)/(2 pi)",
+    "interpretation": "Time-as-memory is the stored/dwell-time spectrum of the multiport. More internal resonant structure increases delay or density of states; it does not change the vacuum causal front.",
+    "mean_delay_in_units_of_theta_prime": 12,
+    "proper_delay_operator": "Q(omega)=-i S(omega)^dagger dS/domega=theta'(omega)L_W33",
+    "proper_delay_sectors_in_units_of_theta_prime": {"0": 1, "10": 24, "16": 15},
+    "scattering_unitary": "S(omega)=exp(i theta(omega) L_W33)",
+    "total_delay_in_units_of_theta_prime": 480
+  }
+}
