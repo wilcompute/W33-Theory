@@ -3,10 +3,24 @@
   "range": [4137, 4144],
   "slug": "matrix_wilson_pump_extended_hawking_lattice_microscopic_rg_autonomous_scar_curvature_scaling_geometric_transistor_causal_entropy_synthetic_monopole",
   "title": "Five physics closures and three outside-box probes: matrix-valued Wilson pumping, an extended Hawking lattice, microscopic channel-balance RG, an autonomous scar gadget, curvature finite-size scaling, a geometric phase transistor, a causal-entropy bound, and a synthetic monopole",
-  "status": "reserved",
+  "status": "completed_exact_with_singlet_multiplicity_gaussian_chain_markov_clock_and_finite_size_boundaries",
   "owner": "openai-gpt-5.6-thinking",
   "reserved_at": "2026-08-06T15:10:00-04:00",
+  "completed_at": "2026-08-06T15:33:00-04:00",
   "purpose": "Execute the five physics targets following Passes 4113-4120 and add three independent outside-box constructions with deterministic finite-model checks and strict evidence boundaries.",
-  "coordination": "Preserve Passes 4005-4136, the single-publisher master:/docs Pages contract, the authoritative long-form website, and all ordered frontier manifests. Do not edit docs/index.html directly. Keep this packet separate from the active 4129-4136 implementation packet.",
-  "boundary": "Reservation only. No continuum QCD, fabricated non-Abelian pump, observed Hawking radiation, derivation of physical spacetime, laboratory autonomous scar device, thermodynamic phase transition, anyon transistor, black-hole entropy law, physical magnetic monopole, gravity, cosmology, or theory of everything is promoted."
+  "result": "A six-dimensional SU(3)-singlet contraction space produced a rank-two Wilczek-Zee bundle with noncommuting Wilson loops and commutator trace -1/4. A nine-cell 38-dimensional paraunitary Hawking chain resolved greybody loss, partner localization, entanglement, stability, and an ultraviolet counterpropagating branch. Four microscopic Markov channels derived the channel-balance scale flow and selected deterministic spectral dimension four. A 25-state engineered static history clock executed a 24-gate local SWAP program with exact data and full-history revivals. Product thermodynamic curvature scaled exactly as 1/N and a positive one-dimensional transfer matrix excluded a finite-temperature singularity. Three outside-box probes produced a geometric phase-order transistor, a Levi-cut causal-entropy throughput bound, and spin-one Chern bands (-2,0,2) carrying synthetic charge two.",
+  "certificate": "data/PART_4137_4144_MATRIX_HORIZON_RG_SCAR_CURVATURE.json",
+  "semantic_sha256": "d16f8ab7ce51f2953cfd4866e7a716e31a271b3337a05b6105b367736bcecb6d",
+  "verifier": "analysis/w33_pass4137_4144_matrix_horizon_rg_scar_curvature.py",
+  "regression": "tests/test_w33_pass4137_4144_matrix_horizon_rg_scar_curvature.py",
+  "report": "analysis/BT4137_BT4144_matrix_horizon_rg_scar_curvature.md",
+  "manuscript_insert": "analysis/BT4137_BT4144_matrix_horizon_rg_scar_curvature_insert.tex",
+  "public_page": "docs/matrix-horizon-rg-scar-curvature-4137-4144.html",
+  "coordination": "Passes 4005-4136, the single-publisher master:/docs Pages contract, and the authoritative long-form docs/index.html remain intact. A concurrency-safe reconciler places this packet after 4129-4136 when the active parallel packet publishes; docs/index.html is never edited directly.",
+  "remote_pending": [
+    "GitHub Actions exact regression status",
+    "protected frontier reconciliation result",
+    "three manuscript PDF artifacts"
+  ],
+  "boundary": "Exact finite singlet-multiplicity, Gaussian-scattering, Markov, history-clock, transfer-matrix, circuit-entropy, and band-topology statements only. No continuum QCD, fabricated non-Abelian pump, observed Hawking radiation, derivation of physical spacetime, thermodynamic phase transition, non-Abelian anyon, black-hole entropy law, physical magnetic monopole, gravity, cosmology, or theory of everything is established."
 }
