@@ -1,0 +1,32 @@
+name: Passes 3997-4004 Protected Frontier
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'tools/integrate_pass3997_4004_frontier.py'
+      - 'analysis/BT3997_BT4004_photon_layout_fourier_stabilizers_insert.tex'
+      - 'analysis/BT3997_BT4004_photon_layout_fourier_stabilizers_index_insert.html'
+      - 'docs/photon-layout-delay-geometry-stabilizers.html'
+      - '.github/workflows/w33_pass3997_4004_frontier.yml'
+  workflow_dispatch:
+permissions: {contents: write}
+concurrency: {group: pass3997-4004-frontier, cancel-in-progress: false}
+jobs:
+  reconcile:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python tools/integrate_pass3997_4004_frontier.py | tee /tmp/frontier.log
+      - run: grep -F 'PASS_3997_4004_FRONTIER 1 1 1' /tmp/frontier.log
+      - run: git diff --exit-code -- docs/index.html
+      - run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/w33_current_frontier_manifest_v1.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Pass 4004: reconcile photon layout and stabilizer frontier'
+          git pull --rebase origin master
+          git push
