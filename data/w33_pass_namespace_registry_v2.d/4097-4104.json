@@ -3,10 +3,24 @@
   "range": [4097, 4104],
   "slug": "fractional_pair_pump_quantum_link_su3_horizon_scattering_spectral_rg_information_engine_manybody_scar_metrology_thermodynamic_geometry",
   "title": "Five physics closures and three outside-box probes: interacting fractional pair pumping, dynamical SU(3) quantum links, horizon scattering, spectral renormalization, a topological information engine, many-body scars, nonlinear metrology, and thermodynamic geometry",
-  "status": "reserved",
+  "status": "completed_exact_with_strong_coupling_truncation_hardware_and_emergence_boundaries",
   "owner": "openai-gpt-5.6-thinking",
   "reserved_at": "2026-08-06T13:20:00-04:00",
+  "completed_at": "2026-08-06T13:44:00-04:00",
   "purpose": "Execute the five physics targets following Passes 4081-4088 and add three independent outside-box constructions with exact finite-system checks and strict evidence boundaries.",
-  "coordination": "Preserve Passes 4005-4096, the authoritative master/docs Pages source, the restored long-form website, and all ordered frontier manifests. Do not edit docs/index.html directly. Keep this packet separate from the active 4089-4096 implementation packet.",
-  "boundary": "Reservation only. No fractional-pump experiment, continuum SU(3) gauge theory, Hawking radiation observation, continuum renormalization fixed point, work-extracting device, many-body scar experiment, Heisenberg-scaling sensor, gravity, cosmology, or theory of everything is promoted."
+  "result": "An exact one-third-filled strong-coupling ground bundle has Chern number one and branch transport one third per cycle; a finite SU(3) quantum-link truncation has a unique one-link Gauss singlet, linear string energy, and exact two-state plaquette spectrum; a passive reciprocal hopping gradient obeys a decisive no-horizon and no-spontaneous-Hawking theorem; an 80-branch hierarchy realizes a discrete-scale fixed cycle with log-period-average spectral dimension four only when b=80^(1/4) is supplied; and a closed irrep-controlled topological information engine has zero maximum net work in the reversible limit. Three independent probes give an exact CDW scar trimer, qutrit-cat Fisher information scaling, and the canonical Fisher geometry of the dark reservoir.",
+  "certificate": "data/PART_4097_4104_MANYBODY_GAUGE_HORIZON_RG_ENGINE.json",
+  "semantic_sha256": "4687bd582e2d83c5bc0c168f905139edbab429bee37715398e4a7952cc3cf1ef",
+  "verifier": "analysis/w33_pass4097_4104_manybody_gauge_horizon_rg_engine.py",
+  "regression": "tests/test_w33_pass4097_4104_manybody_gauge_horizon_rg_engine.py",
+  "report": "analysis/BT4097_BT4104_manybody_gauge_horizon_rg_engine.md",
+  "manuscript_insert": "analysis/BT4097_BT4104_manybody_gauge_horizon_rg_engine_insert.tex",
+  "public_page": "docs/manybody-gauge-horizon-rg-engine-4097-4104.html",
+  "coordination": "Passes 4005-4096 and the authoritative long-form docs/index.html remain intact. Publication is through the ordered manifest, standalone page, protected theorem card, and idempotent frontier reconciler.",
+  "remote_pending": [
+    "GitHub Actions exact regression status",
+    "protected frontier reconciliation result",
+    "three manuscript PDF artifacts"
+  ],
+  "boundary": "Exact finite strong-coupling, SU(3)-covariant quantum-link, Gauss-law, passive-Bogoliubov, hierarchical-spectrum, information-thermodynamic, invariant-subspace, quantum-Fisher, and canonical-geometry statements only. No fractional-pump experiment, continuum QCD, Hawking observation, physical four-dimensional spacetime, positive-work engine, generic scar phase, gravity, cosmology, or theory of everything is established."
 }
