@@ -3,8 +3,23 @@
   "range": [3913, 3920],
   "slug": "multidefect_lindbladian_process_controller_fusion_phase_topology_dna_dual_scheduler_sensor",
   "title": "Multi-defect immune system, symmetry Lindbladian, process controller, correlated fusion, phase diagram, and three architecture breakthroughs",
-  "status": "reserved",
+  "status": "published",
   "owner": "openai-gpt-5.6-thinking",
   "reserved_at": "2026-08-05T21:27:00-04:00",
-  "boundary": "Reservation only; publication requires executable evidence, frozen semantic certificate, focused tests, fail-closed CI, manuscript integration, verified-site-safe public reachability, and explicit physical claim boundaries."
+  "published_at": "2026-08-05T21:52:00-04:00",
+  "semantic_sha256": "019183d46768ff68a5f57676540d8aefd853010614545fd834656b69c4c7eb15",
+  "files": [
+    "data/PART_3913_3920_SOURCE.parts/part00.b85",
+    "data/PART_3913_3920_SOURCE.parts/part01.b85",
+    "data/PART_3913_3920_SOURCE.parts/part02.b85",
+    "analysis/w33_pass3913_3920_multidefect_lindbladian_process_fusion_phase.py",
+    "data/PART_3913_3920_MULTIDEFECT_LINDBLADIAN_PROCESS_FUSION_PHASE_results.json",
+    "tests/test_w33_pass3913_3920_multidefect_lindbladian_process_fusion_phase.py",
+    "analysis/BT3913_BT3920_multidefect_lindbladian_process_fusion_phase.md",
+    "analysis/BT3913_BT3920_multidefect_lindbladian_process_fusion_phase_insert.tex",
+    "analysis/BT3913_BT3920_multidefect_lindbladian_process_fusion_phase_index_insert.html",
+    "docs/multidefect-lindbladian-process-fusion-phase.html",
+    ".github/workflows/w33_pass3913_3920_multidefect_lindbladian_process_fusion_phase.yml"
+  ],
+  "boundary": "The packet certifies exhaustive two-edge insert/delete syndrome uniqueness, exhaustive three-edge-deletion uniqueness, a global random-unitary W33 Lindbladian, the declared partially observed HMM controller, the declared correlated-fusion Markov threshold, a frozen architecture cost grid, topology-DNA reconstruction, an optimal 39-round W33/complement all-to-all schedule, and an explicit 192-entry two-defect sensor. It does not certify general mixed weight-three decoding, sparse local Lindbladian synthesis, measured process-tensor performance, microscopic fusion correlations, measured substrate costs, minimum topology memory, simultaneous all-to-all coupling, minimum sensor size, remote CI/PDF completion, hardware performance, or laboratory validation."
 }
