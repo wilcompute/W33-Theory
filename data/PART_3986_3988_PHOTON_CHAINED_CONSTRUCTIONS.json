@@ -1,0 +1,35 @@
+{
+  "pass3986_spectral_metrology": {
+    "boundary": "QFI assumes ideal coherent access to the declared spectral generator; it is not a measured sensitivity.",
+    "laplacian_spectrum": {"0": 1, "10": 24, "16": 15},
+    "localized_mean": 12.0,
+    "localized_qfi": 48.0,
+    "localized_variance": 12.0,
+    "optimal_single_copy_qfi": 256,
+    "scaling_laws": {"localized_product_qfi": "48m", "spectral_cat_qfi": "256m^2", "cat_over_product": "16m/3"}
+  },
+  "pass3987_dual_geometry_echo": {
+    "A_eigenvalues": [12, 2, -4],
+    "complement_eigenvalues": [27, -3, 3],
+    "difference_channel": [-15, 5, -7],
+    "difference_nontrivial_gap": 12,
+    "full_space_optimal_qfi": 400,
+    "interpretation": "The sum arm is a geometry-blind common-mode control on the 39-dimensional nonuniform space; the difference arm resolves the two W33 sectors.",
+    "protected_nontrivial_qfi": 144,
+    "sum_channel": [39, -1, -1],
+    "sum_nontrivial_degeneracy": true
+  },
+  "pass3988_exact_global_reflection": {
+    "boundary": "Physical realization requires an engineered Hamiltonian and calibrated coupling time; tensor powers require genuine independent mode factors and do not change vacuum c.",
+    "formula": "exp(-i*pi*L/2)=I-2E_10=-(I+A)/3+2J/15",
+    "half_period": "real symmetric involution",
+    "interpretation": "A continuous-time W33 coupling performs a global parallel 40-mode reflection in one analog evolution interval. This does not represent forty sequential orthogonal updates.",
+    "period": "pi",
+    "row_amplitudes": {"nonneighbor": "2/15", "point_or_neighbor": "-1/5"},
+    "row_multiplicities": {"nonneighbor": 27, "point_or_neighbor": 13},
+    "tensor_power_shell_rule": {"amplitude": "(-1/5)^(m-r)(2/15)^r", "multiplicity": "binom(m,r)13^(m-r)27^r", "r": "0..m"}
+  },
+  "schema": "w33.pass3986_3988.photon_chained_constructions.v1.summary",
+  "semantic_sha256_full_certificate": "8f7839a1395db4b2908291551f645e6b5b8215a5b10ba86f57581dd540f99072",
+  "status": "PASS"
+}
