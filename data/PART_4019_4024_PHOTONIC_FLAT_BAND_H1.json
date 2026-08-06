@@ -1,0 +1,84 @@
+{
+  "boundaries": [
+    "Exact finite graph, line-graph, eigenspace, cycle-frame, and first-order projected perturbation statements only.",
+    "No fabricated 160-site secondary lattice, measured localization, disorder tolerance, coupling synthesis, variable vacuum c, or laboratory performance is claimed.",
+    "The 160-site line-graph Hamiltonian, 80-mode incidence Hamiltonian, and 160-dimensional link-current space are related but distinct physical models."
+  ],
+  "checks": {
+    "apartments_1620": true,
+    "apartments_are_compact_flat_states": true,
+    "apartments_span_flat_band": true,
+    "diagonal_disorder_trace_law": true,
+    "each_site_in_81_apartments": true,
+    "incidence_balance_12960": true,
+    "levi_80_160_degree4": true,
+    "line_graph_160_480_degree6": true,
+    "minus2_flat_band_rank81": true,
+    "oriented_incidence_identity": true,
+    "projector_polynomial_exact": true,
+    "single_site_disorder_splits_rank1": true,
+    "tight_frame_integer_identity": true,
+    "uniform_shift_preserves_flat_band": true,
+    "w33_40_240": true
+  },
+  "external_context": {
+    "flat_band_photonics": "Photonic flat bands and compact localized states are established consequences of destructive interference; the new repo result is the exact W33/Levi realization and its 1620-state H1 tight frame.",
+    "reviewed_sources": [
+      "Real et al., Scientific Reports 7, 15085 (2017)",
+      "Xia et al., arXiv:1810.12618",
+      "Yang et al., Nature Communications 15, 1484 (2024)"
+    ]
+  },
+  "pass4019_coupler_as_site_line_graph": {
+    "degree": 6,
+    "identity": "A_X=D^T D-2I",
+    "resource_boundary": "This secondary site Hamiltonian is not the same object as the primary 80-mode incidence Hamiltonian or passive link-current coordinates.",
+    "secondary_links": 480,
+    "secondary_sites": 160,
+    "spectrum": {
+      "-2": 81,
+      "2": 30,
+      "2+sqrt(6)": 24,
+      "2-sqrt(6)": 24,
+      "6": 1
+    }
+  },
+  "pass4020_h1_is_minus2_flat_band": {
+    "flat_band_eigenvalue": -2,
+    "identity": "ker(D)=E_{-2}(A_X)",
+    "integer_polynomial": "C C^T=1/2(A_X-6I)(A_X-2I)(A_X^2-4A_X-2I)",
+    "multiplicity": 81,
+    "projector": "P_H1=(1/160) C C^T"
+  },
+  "pass4021_apartment_compact_localized_states": {
+    "amplitudes": "alternating +/-1 around each Levi octagon",
+    "apartments": 1620,
+    "eigen_equation": "A_X c=-2c",
+    "reading": "Every Tits-building apartment supplies a compact flat-band state; all apartments together span the complete H1 band.",
+    "span_rank": 81,
+    "support_per_state": 8
+  },
+  "pass4022_apartment_unit_norm_tight_frame": {
+    "ambient_flat_band_dimension": 81,
+    "frame_bound": 20,
+    "integer_identity": "(C C^T) C=160 C",
+    "normalization": "columns have norm sqrt(8), so (C/sqrt(8))(C/sqrt(8))^T=20 P_H1",
+    "redundancy": 20,
+    "unit_vectors": 1620
+  },
+  "pass4023_local_address_law": {
+    "apartments_per_secondary_site": 81,
+    "double_count": "160*81=1620*8=12960",
+    "interpretation": "Each physical incidence-link address participates in exactly 81 compact apartment states.",
+    "links_per_apartment": 8
+  },
+  "pass4024_perturbation_boundary": {
+    "general_diagonal_trace_law": "Tr(P_H1 diag(v))=(81/160) sum_e v_e",
+    "honest_boundary": "The H1 flat band is exact in the symmetric Hamiltonian but is not generically immune to nonuniform onsite or coupling disorder.",
+    "single_site_onsite_perturbation": "P_H1 |e><e| P_H1 has rank 1 and nonzero eigenvalue 81/160",
+    "uniform_onsite_shift": "delta I shifts the whole flat band rigidly and does not split it"
+  },
+  "schema": "w33.pass4019_4024.photonic_flat_band_h1.v1",
+  "semantic_sha256": "e7746ea1730daea1b29d0e7831bc627c4d115ee0ccf1c81441796363101aa59f",
+  "status": "PASS_EXACT_PHOTONIC_LINE_GRAPH_FLAT_BAND_H1"
+}
