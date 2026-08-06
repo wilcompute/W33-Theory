@@ -1,12 +1,40 @@
 {
   "schema": "w33.pass_namespace_registry.v2.entry",
   "range": [4121, 4128],
-  "slug": "explicit_145_gauge_matrices_constant_weight_dfs_graph_decoder_cornerstone_layout_attractor_orbits_ising_qutrit_walk_exceptional_sensor",
-  "title": "Five implementation closures and three bonkers probes: explicit 145-dimensional gauge matrices and intertwiners, constant-weight phase-reference codes, graph-aware sparse decoding, CORNERSTONE router floorplan, nonlinear attractor orbit classification, antiferromagnetic Ising ground states, qutrit quantum-walk phase gates, and exceptional-point sensing",
-  "status": "reserved",
+  "slug": "explicit_145_gauge_matrices_relational_dfs_graph_decoder_cornerstone_layout_attractor_orbits_ising_householder_exceptional_sensor",
+  "title": "Five implementation closures and three bonkers probes: explicit 145-dimensional gauge matrices and anomaly correction, relational phase-reference coding, graph-aware sparse decoding, CORNERSTONE router audit, nonlinear attractor orbit classification, antiferromagnetic Ising ground states, graph-walk Householder control, and exceptional-point sensing",
+  "status": "source_complete_exact_certificate_gauge_anomaly_correction_relational_dfs_decoder_foundry_attractors_ising_householder_EP_hardware_and_experiments_pending",
   "owner": "openai-gpt-5.6-thinking",
   "reserved_at": "2026-08-06T14:23:00-04:00",
-  "purpose": "Execute the five open implementation targets after Passes 4105-4112 while preserving the concurrent 4113-4120 physics packet, then add three nonoverlapping constructions in frustrated magnetism, exact graph quantum control, and non-Hermitian sensing.",
-  "coordination": "Preserve Passes 4005-4120, the repaired single-publisher master:/docs Pages contract, the authoritative long-form website, and all ordered frontier manifests. Do not edit docs/index.html directly.",
-  "boundary": "Reservation only. No derived Standard Model, fabricated CORNERSTONE chip, laboratory decoder or pattern, physical magnetic material, quantum processor, exceptional-point experiment, gravity, cosmology, or theory of everything is promoted."
+  "completed_at": "2026-08-06T15:05:00-04:00",
+  "certificate_status": "PASS_EXACT_FULL_CARRIER_ANOMALY_CORRECTION_RELATIONAL_DFS_DECODER_FOUNDRY_AUDIT_ATTRACTOR_ORBITS_ISING_MIRROR_EP",
+  "certificates": {
+    "exact_packet": "a549172701e05bdcb0e629f8cea5282be46db70f223e043b4cb0359b9c3dc4bc",
+    "combined_manifest": "7f88c9aded5ad0ed09b33e064102d3a82bb36a9ecf3b31459b6672636831c28d",
+    "explicit_gauge": "8139bb2e1f570d9f89d193967b775b5305047f49b13eb52d2298d9e9a9a3c3c5",
+    "foundry_audit": "43a5c2d4d53d6800e627879d47716ac662e918bf577e1177e42ddd0de2f6a552",
+    "attractor_census": "7c36a5cf28487069ff51cb04780c671035a24e4ef4200b661e92c5ddb4d59088"
+  },
+  "promoted": [
+    "explicit 145-by-145 gauge generators and exact correction that the complete carrier is anomalous",
+    "equal-W33-multiplicity anomaly theorem and four explicit repair architectures",
+    "relational adjacent-weight phase code with exact payload coherences",
+    "exact graph-aware three-error decoder reducing 682641 supports to at most 1351",
+    "CORNERSTONE SOI340 floorplan audit with corrected MMI and phase-shifter counts",
+    "64-seed PSp-by-sign nonlinear attractor orbit census",
+    "exact 160-edge antiferromagnetic maximum cut",
+    "exact continuous-time graph-walk Householder mirror",
+    "fifteen simultaneous second-order exceptional points"
+  ],
+  "external_pending": [
+    "an anomaly-free dynamical chiral gauge realization, masses, Yukawas, symmetry breaking, and observed couplings",
+    "fault-tolerant relational-code preparation and universal number-conserving gates",
+    "sensor calibration and extension beyond three sparse errors",
+    "hybrid SiN-active-layer or serialized foundry layout, GDS, DRC, S-parameters, packaging, and fabrication",
+    "complete nonlinear attractor classification and experimental pattern data",
+    "local physical implementations of the Ising, graph-walk, and exceptional-point constructions",
+    "remote exact CI and manuscript PDF evidence"
+  ],
+  "coordination": "Preserves Passes 4005-4120, the repaired single-publisher master:/docs Pages contract, the authoritative long-form website, and docs/index.html.",
+  "boundary": "No derived Standard Model, fabricated chip, measured experiment, physical magnet, quantum processor, exceptional-point sensor, gravity, cosmology, or theory of everything is promoted."
 }
