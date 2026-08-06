@@ -1,0 +1,13 @@
+{
+  "executed_class_fusion": null,
+  "portable_MM_words": [],
+  "promotion_rule": "Reject unless portable MM strings independently generate order 51840 and reproduce all carrier actions, character constituents, and an executed Monster class fusion.",
+  "required_fingerprint": {
+    "carrier_degrees": [27, 40, 45, 120, 135, 160, 200, 480],
+    "group_order": 51840,
+    "ovoid_orbitals": 19,
+    "rho200_irreducibles": [20, 30, 60, 90]
+  },
+  "schema": "w33.pass3937_3956.monster_descent_candidate.v1",
+  "status": "PENDING"
+}
