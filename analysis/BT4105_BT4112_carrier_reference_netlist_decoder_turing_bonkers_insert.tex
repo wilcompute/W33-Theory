@@ -1,0 +1,35 @@
+\subsection*{Passes 4105--4112: carrier audit, correlated reference, implementation contracts, and three outside-box probes}
+The candidate module
+\[
+(\mathbb C^6\!\otimes V_1)\oplus(\mathbb C^3\!\otimes V_{15})\oplus(\mathbb C^2\!\otimes V_{24})
+\]
+has dimension $99$ and commutant $M_6\oplus M_3\oplus M_2$, but it contains only one independent anti-triplet and no independent charged singlet.  Under the sector assignment $Q,e^c\mapsto V_1$, $u^c,d^c\mapsto V_{15}$, and $L\mapsto V_{24}$, the minimum direct carrier is therefore
+\[
+(\mathbb C^7\!\otimes V_1)\oplus(\mathbb C^6\!\otimes V_{15})\oplus(\mathbb C^2\!\otimes V_{24}),
+\qquad \dim=145.
+\]
+This carries the anomaly-free one-generation representation as a representation architecture, not as a derived particle model.
+
+For the sine phase reference $c_n=\sqrt{2/(K+2)}\sin((n+1)\theta)$, $\theta=\pi/(K+2)$, sequential use gives a collective channel
+\[
+\mathcal E_N(|x\rangle\langle y|)=z_{|x|-|y|}|x\rangle\langle y|,
+\]
+with exact bulk overlap
+\[
+C_m={ (K+1-m)\cos(m\theta)+\sin((m+1)\theta)/\sin\theta\over K+2}.
+\]
+Equal-Hamming-weight coherences are decoherence-free and the fixed-$N$ error is $O(N^2/K^2)$.
+
+The four-router signal unitary compiles to four coherent $80$-mode branches with $40$ parallel swaps per branch.  A recirculating five-query realization uses $160$ swap cells, six selector/recombiner couplers, six phase shifters, and five coherent passes; an unrolled realization uses $800$ swap cells.
+
+For noisy self-stress syndrome data $y=De+n$, exhaustive support-three decoding obeys
+\[
+\|\widehat e-e\|_2\le {2\|n\|_2\over 2\sin(\pi/14)},
+\]
+because every union of two support-three candidates is a forest and the worst six-edge restricted singular value is $2\sin(\pi/14)$.  Cubically saturated reaction--diffusion simulations converge with unit numerical modal purity into the intended $24$- and $15$-dimensional eigenspaces.
+
+Finally,
+\[
+{J\over40}=I-{13\over80}L+{1\over160}L^2
+\]
+gives exact two-round average consensus; simple random walk has adjacent and nonadjacent hitting times $39$ and $42$ with Kemeny constant $801/20$; and the abstract H\"uckel model has a $50$-electron closed shell with gap $6|\beta|$ and a $40$-electron open-shell determinant count $\binom{48}{10}=6{,}540{,}715{,}896$.
