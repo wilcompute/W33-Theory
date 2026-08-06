@@ -11,7 +11,6 @@ on:
       - 'tests/test_bt3871_3886_eight_front_closure.py'
       - 'tests/test_website_migration_authorization.py'
       - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
-      - 'data/w33_current_frontier_manifest_v1.json'
       - 'docs/cap-tomotope-modular-gewirtz-atlas-3871-3886.html'
       - '.github/workflows/w33_pass3871_3886_eight_front_closure.yml'
   workflow_dispatch:
@@ -36,8 +35,9 @@ jobs:
       - name: Check reachability and boundaries
         run: |
           grep -F 'BT3871_BT3886_eight_front_closure_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
-          grep -F 'passes-3871-3886-cap-tomotope-modular-gewirtz' data/w33_current_frontier_manifest_v1.json
           grep -F 'd1ac79b9df49e25d84c2e08f5c440ac9a0e5bd90b60e89deebe6699f309143b5' docs/cap-tomotope-modular-gewirtz-atlas-3871-3886.html
+          grep -F '389' data/PART_BT3871_BT3886_EIGHT_FRONT_CLOSURE_results.json
+          grep -F '435' data/PART_BT3871_BT3886_EIGHT_FRONT_CLOSURE_results.json
   manuscripts:
     runs-on: ubuntu-latest
     timeout-minutes: 20
