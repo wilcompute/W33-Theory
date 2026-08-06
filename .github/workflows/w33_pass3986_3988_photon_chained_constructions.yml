@@ -1,0 +1,32 @@
+name: Passes 3986-3988 Photon Chained Constructions
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass3986_3988_photon_chained_constructions.py'
+      - '.github/workflows/w33_pass3986_3988_photon_chained_constructions.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pass3986-3988-photon-chained
+  cancel-in-progress: true
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python analysis/w33_pass3986_3988_photon_chained_constructions.py | tee /tmp/pass3986.log
+      - run: grep -F 'PASS_PHOTON_CHAINED_CONSTRUCTIONS 48 256 400' /tmp/pass3986.log
+      - name: Commit exact constructions
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/PART_3986_3988_PHOTON_CHAINED_CONSTRUCTIONS.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Passes 3986-3988: freeze chained photon constructions'
+          git push
