@@ -1,0 +1,104 @@
+\subsection{Exact selector algebra, radical multiport, code strata, and photon-capacity boundary}
+\label{sec:bt3957-3964}
+
+The fourteen-case arithmetic sieve for the $79$-dimensional selector Terwilliger algebra is superseded by the exact characteristic-zero result already certified in Passes 1365--1369:
+\[
+T(x)\cong
+\mathbb Q^3\oplus M_2(\mathbb Q)^2\oplus M_3(\mathbb Q)^3
+\oplus M_4(\mathbb Q)\oplus M_5(\mathbb Q).
+\]
+Its simple degrees are
+\[
+1,1,1,2,2,3,3,3,4,5,
+\]
+with standard-module multiplicities
+\[
+3,12,14,1,2,4,4,8,8,1.
+\]
+
+For the spread-graph multiport
+\[
+H=\frac{2A_{36}-J}{6},
+\]
+an exact sparse multiquadratic replay now proves the previously numerical adjacent-mode candidate.  The complete transform uses
+\[
+398
+\]
+nontrivial adjacent Givens rotations in $69$ layers, skips $232$ eliminations because their entries are exactly zero, and terminates at
+\[
+\operatorname{diag}(1^{35},-1).
+\]
+Every intermediate entry is a single rational radical.  There are $75$ distinct values of $c^2$, the largest denominator is $441$, and the ordered parameter digest is
+\[
+\texttt{2c3be7815b8346cd90be108faad4cc68866ad453f13b76bbdd4a9988a4569555}.
+\]
+No global gate-count or depth optimality is claimed.
+
+The binary character code $C=[36,6,16]$ admits an explicit maximal doubly-even extension
+\[
+D=[36,17,4]
+\]
+with
+\[
+\begin{aligned}
+W_D(z)={}&1+57z^4+852z^8+7332z^{12}+57294z^{16}\\
+&+57294z^{20}+7332z^{24}+852z^{28}+57z^{32}+z^{36}.
+\end{aligned}
+\]
+The intersection-two graph on its $57$ weight-four words splits as
+\[
+\boxed{
+\operatorname{SRG}(45,16,8,4)\;\sqcup\;K_{2,2,2}\;\sqcup\;K_{2,2,2}.
+}
+\]
+The coordinate-degree profile is $9^{20}3^{16}$.  This proves an exact $A_4=57$ stratum, not its global maximality.
+
+The five-fiber carrier $1|27|36|40|160$ has rational permutation decomposition
+\[
+\mathbb Q^{264}\cong
+1^5\oplus6\oplus15_a^2\oplus15_b^2\oplus20^2\oplus24^3\oplus81,
+\]
+and hence
+\[
+\boxed{
+\operatorname{End}_G(\mathbb Q^{264})
+\cong
+\mathbb Q^2\oplus M_2(\mathbb Q)^3\oplus M_3(\mathbb Q)\oplus M_5(\mathbb Q).
+}
+\]
+The algebra dimension is $48$, its centre has dimension seven, and the cross-carrier Hom space has dimension
+\[
+7=3\cdot2+1,
+\]
+consisting of six trivial channels and one shared $15_b$ channel.
+
+\paragraph{Photon node-packing boundary.}
+For optical frequency $\nu$,
+\[
+T=\nu^{-1},\qquad \lambda=c/\nu.
+\]
+If $N$ internal update sites refine one wavelength and one period together,
+\[
+a_N=\lambda/N,\qquad \tau_N=T/N,
+\]
+then
+\[
+\boxed{\frac{a_N}{\tau_N}=c.}
+\]
+Thus node density can refine internal state space and update throughput while leaving vacuum $c$ invariant.  In the ideal tensor-factor bookkeeping,
+\[
+R=N\nu\log_2d,\qquad \rho=N/\lambda,
+\qquad
+\frac{R}{\rho\log_2d}=c.
+\]
+A single photon distributed over $N$ alternatives with a $d$-state label generally has direct-sum dimension $Nd$, however, so its accessible classical information is bounded by $\log_2(Nd)$ rather than $N\log_2d$ unless physically independent tensor factors exist.
+
+The Margolus--Levitin rate for one photon of energy $E=h\nu$ gives
+\[
+\Gamma_\perp\le\frac{2E}{\pi\hbar}=4\nu,
+\qquad
+\Gamma_\perp T\le4.
+\]
+Consequently forty W33 nodes cannot mean forty sequential mutually orthogonal transitions within one optical period of an isolated photon.  They must represent parallel or nonorthogonal modes, multiple periods, or externally driven evolution.  This is a falsifier for one literal interpretation, not a rejection of high-dimensional single-photon processing.
+
+The Monster descent remains fail-closed: no portable serialized Monster words or executed character-fusion artifact are present, and no embedding is promoted.  No literal photon-node ontology, variable-$c$ mechanism, hardware result, laboratory result, remote-CI success, or PDF success is claimed.
