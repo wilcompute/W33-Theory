@@ -1,0 +1,7 @@
+GitHub Pages redeploy request
+
+Entry point: docs/index.html
+Canonical index blob: 41a8d733f42da18282fa276f5d2fa82bac7516f6
+Requested: 2026-08-05T20:07:00-04:00
+
+This marker forces GitHub Pages to rebuild and redeploy the complete master/docs source, including docs/index.html, without modifying the restored page content.
