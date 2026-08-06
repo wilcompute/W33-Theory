@@ -3,10 +3,34 @@
   "range": [4049, 4056],
   "slug": "minimal_qsvt_h1_pulse_alphabet_4d_fiber_scaling_m36_postselected_magic_observable_functor_shell_frame_calorimeter",
   "title": "Five-front physical closure and three outside-box probes: minimal QSVT, H1 pulses, 4D scaling, M36 magic reduction, observable functor, shell entangler, apartment code, spectral calorimeter",
-  "status": "reserved",
+  "status": "source_complete_exact_certificate_ideal_postselected_universality_physical_block_encoding_fault_tolerance_and_lorentzian_limit_pending",
   "owner": "openai-gpt-5.6-thinking",
   "reserved_at": "2026-08-06T10:42:00-04:00",
-  "purpose": "Execute the five stated next steps after Passes 4025-4040 without colliding with reserved Passes 4041-4048, then add three independent exact constructions outside the existing holonomy/interacting/cooling/refinement/SUSY/Floquet/transfer packet.",
-  "coordination": "Preserve Passes 4005-4048, the restored large docs/index.html, and all protected frontier manifests. Reuse Passes 4033-4040 full H1 swap and u(81) controllability rather than duplicating them.",
-  "boundary": "Reservation only. No fabricated QSVT device, deterministic fault-tolerant magic injection, emergent Lorentzian spacetime, Standard Model identification, gravity, calorimetric measurement, or theory of everything is promoted."
+  "completed_at": "2026-08-06T11:08:00-04:00",
+  "certificate_status": "PASS_EXACT_FIVE_FRONT_THREE_OUTSIDE_BOX_IDEAL_POSTSELECTED_UNIVERSALITY_PHYSICAL_AND_FT_PENDING",
+  "certificates": {
+    "exact_packet": "5f99f47f1a899b76c5e3e464a56440a63f51396a94c5d1ba9978ca65303b6946",
+    "combined_manifest": "c96b2e8ae2a19c12581ceb63eb46822459a3470963b1f71a8d5e74dbdfe0d596"
+  },
+  "promoted": [
+    "minimal globally bounded degree-five QSVT sign polynomial for the normalized Levi Hamiltonian, with exact degree-three no-go",
+    "exact projected-link phase gates, Householder reflections, overlap census, and four-angle H1 pulse alphabet",
+    "bounded-degree W33-fibered discrete four-torus family with controlled heat-kernel spectral dimension approaching four",
+    "exact one-copy Witting-to-irrational-equatorial-magic reduction and postselected non-Clifford injection with total success 5/12",
+    "explicit W33-automorphism-invariant free quadratic observable functor with three mass sectors of multiplicities 1,24,15",
+    "exact 13-versus-27 shell beam splitter with 0.9988455359952018 bits of mode-partition entropy",
+    "exact five-angle apartment tight projective code and proof it is not a real projective 2-design",
+    "exact finite-spectrum partition function and Schottky calorimetry peak"
+  ],
+  "external_pending": [
+    "physical block encoding of H_L/4 and extraction/calibration of one concrete six-phase QSP convention",
+    "bandwidth-optimal leakage-compensated H1 pulse words and fault-tolerance threshold",
+    "Lorentzian quantum-walk or cellular-automaton continuation of the four-dimensional base",
+    "deterministic correction or distillation of the inverse M36 injection branch and logical encoding",
+    "chiral gauge interactions, generations, dimensional scales, gravity, and a Standard Model extension of the free observable functor",
+    "fabricated device, measured magic fidelity, measured shell amplitudes, frame statistics, or calorimetry",
+    "remote exact CI, frontier reconciliation, and manuscript PDF evidence"
+  ],
+  "coordination": "Does not overwrite reserved Passes 4041-4048. Reuses the exact Passes 4033-4040 H1 swap and u(81) control algebra. Preserves the restored large docs/index.html.",
+  "boundary": "No fabricated QSVT device, extracted hardware phase list, deterministic fault-tolerant universal machine, emergent Lorentzian spacetime, Standard Model, gravity, cosmology, measured calorimetry, or theory of everything is promoted."
 }
