@@ -1,0 +1,32 @@
+name: Pass 3981 Maximum Code Orbit Census
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass3981_max_code_orbit_census.py'
+      - '.github/workflows/w33_pass3981_max_code_census.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pass3981-max-code-census
+  cancel-in-progress: true
+jobs:
+  census:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python analysis/w33_pass3981_max_code_orbit_census.py | tee /tmp/pass3981.log
+      - run: grep -F 'PASS_MAX_CODE_CENSUS' /tmp/pass3981.log
+      - name: Commit exact census
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/PART_3981_MAXIMUM_CODE_ORBIT_CENSUS.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Pass 3981: freeze maximum-code orbit census'
+          git push
