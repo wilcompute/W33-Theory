@@ -40,16 +40,24 @@ A mode-dependent intercept is ordinary device latency; only a reproducible mode-
 \]
 At $M=40$, this is $5.32193$ ideal bits per use, about $5.18828$ bits at one-percent symmetric error, and $4.77126$ bits at five-percent error.
 
-\paragraph{Rank-48 multiplication tensor.}
+\paragraph{Literal rank-48 multiplication tensor.}
 The split centralizer algebra
 \[
  \boxed{\mathbb Q^2\oplus M_2(\mathbb Q)^3\oplus M_3(\mathbb Q)\oplus M_5(\mathbb Q)}
 \]
-has dimension 48 and center dimension seven.  Its complete matrix-unit multiplication table contains
+has dimension 48 and center dimension seven.  Its matrix-unit multiplication table contains
 \[
  1^3+1^3+3\cdot2^3+3^3+5^3=178
 \]
-nonzero structure constants.  This is the complete tensor in Wedderburn coordinates, not yet the geometric orbital-relation tensor.
+nonzero products.  The later content-addressed verifier also reconstructs the complete literal orbital tensor:
+\[
+ \boxed{48\text{ relations},\qquad904\text{ nonzero intersection constants}.}
+\]
+Its tensor SHA-256 is
+\[
+ \mathtt{a17a375552c102d281e3ba79b602b67aa54a426fd68b1878293763ea65395ff9}.
+\]
+Thus both the split Wedderburn tensor and the geometric orbital-relation tensor are closed exactly.
 
 \paragraph{Photon resource trilemma.}
 A one-photon direct-sum alphabet of $M$ orthogonal alternatives carries at most $\log_2M$ ideal classical bits per use.  A tensor-product claim $N\log_2d$ requires $N$ physically independent factors.  Mutually orthogonal serial updates obey a separate energy--time bound.  Temporal packing additionally satisfies the engineering estimate $M\sim2WT$ for half-bandwidth $W$ and duration $T$.  Larger internal alphabets can therefore increase capacity and spacetime support without changing vacuum $c$.
@@ -65,4 +73,4 @@ so the self-similar address density is
 This is an addressing/routing invariant, not a variable-light-speed law.
 
 \paragraph{Monster gate and evidence boundary.}
-The required observable Monster class-fusion artifact remains absent, so no Monster embedding is promoted.  Exact results in this insert are the code geometry, enumerator identities, all-630 mesh audit, Wedderburn tensor, and algebraic resource formulas.  The timing sensitivity and time-bandwidth examples are models; the photon experiment, global code extremality, global mesh optimum, orbital-basis tensor, Monster fusion, hardware, and laboratory validation remain open.
+The required observable Monster class-fusion artifact remains absent, so no Monster embedding is promoted.  Exact results in this insert are the code geometry, enumerator identities, all-630 mesh audit, split and literal rank-48 tensors, and algebraic resource formulas.  The timing sensitivity and time-bandwidth examples are models; the photon experiment, global code extremality, global mesh optimum, Monster fusion, remote CI/PDF success, hardware, and laboratory validation remain open.
