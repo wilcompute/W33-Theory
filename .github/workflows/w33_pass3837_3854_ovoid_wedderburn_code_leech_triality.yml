@@ -1,0 +1,83 @@
+name: Passes 3837-3854 ovoid Wedderburn code Leech triality
+
+on:
+  push:
+    paths:
+      - 'analysis/_w33_pass3837_3854_impl_part*.pyinc'
+      - 'analysis/w33_pass3837_3854_ovoid_wedderburn_code_leech_triality.py'
+      - 'analysis/w33_pass3837_3854_graph_aut_certificate.py'
+      - 'analysis/w33_pass3837_3854_monster_descent_harness.py'
+      - 'data/PART_3837_3854_DOUBLE_K4_INCIDENCE.json'
+      - 'data/PART_3837_3854_GRAPH_AUT_CERTIFICATE.json'
+      - 'data/PART_3837_3854_MONSTER_DESCENT_candidate.json'
+      - 'data/PART_3837_3854_OVOID_WEDDERBURN_CODE_LEECH_TRIALITY_results.json'
+      - 'data/PART_3837_3854_OVOID_WEDDERBURN_CODE_LEECH_TRIALITY_CLAIMS_LEDGER.json'
+      - 'tests/test_w33_pass3837_3854_ovoid_wedderburn_code_leech_triality.py'
+      - 'analysis/BT3837_BT3854_ovoid_wedderburn_code_leech_triality_insert.tex'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - 'docs/ovoid-wedderburn-code-leech-triality.html'
+      - '.github/workflows/w33_pass3837_3854_ovoid_wedderburn_code_leech_triality.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy sympy networkx pytest
+      - name: Recompute independent graph certificate
+        run: python analysis/w33_pass3837_3854_graph_aut_certificate.py --output /tmp/pass3837-3854-graph.json
+      - name: Compare graph certificate
+        run: |
+          python - <<'PY'
+          import json
+          expected=json.load(open('data/PART_3837_3854_GRAPH_AUT_CERTIFICATE.json'))
+          observed=json.load(open('/tmp/pass3837-3854-graph.json'))
+          assert observed == expected
+          assert observed['semantic_sha256'] == '3f036d376ac7f1333aaba011a5842790904ef390066db30a94c7333533e93abf'
+          assert observed['row_column_isomorphic'] is False
+          PY
+      - name: Recompute exact main certificate
+        run: python analysis/w33_pass3837_3854_ovoid_wedderburn_code_leech_triality.py --output /tmp/pass3837-3854.json
+      - name: Compare parsed frozen result and semantic hash
+        run: |
+          python - <<'PY'
+          import json
+          expected=json.load(open('data/PART_3837_3854_OVOID_WEDDERBURN_CODE_LEECH_TRIALITY_results.json'))
+          observed=json.load(open('/tmp/pass3837-3854.json'))
+          assert observed == expected
+          assert observed['semantic_sha256'] == 'ede91cc799f9093209c589fb0b73c88fca4159bedcc8e1e7cd6680c5f0c778fd'
+          assert all(observed['checks'].values())
+          PY
+      - name: Confirm fail-closed Monster slot
+        run: python analysis/w33_pass3837_3854_monster_descent_harness.py
+      - name: Run focused regression
+        run: pytest -q tests/test_w33_pass3837_3854_ovoid_wedderburn_code_leech_triality.py
+      - name: Check publication reachability
+        run: |
+          grep -F 'BT3837_BT3854_ovoid_wedderburn_code_leech_triality_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          grep -F 'ovoid-wedderburn-code-leech-triality.html' data/w33_current_frontier_manifest_v1.json
+          grep -F 'ede91cc799f9093209c589fb0b73c88fca4159bedcc8e1e7cd6680c5f0c778fd' docs/ovoid-wedderburn-code-leech-triality.html
+
+  manuscripts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Tectonic
+        run: |
+          curl --proto '=https' --tlsv1.2 -fsSL https://drop-sh.fullyjustified.net | sh
+          echo "$HOME/.cargo/bin" >> "$GITHUB_PATH"
+      - name: Compile all manuscript front doors
+        run: |
+          tectonic --keep-logs --keep-intermediates w33_paper.tex
+          tectonic --keep-logs --keep-intermediates photonic_holonet.tex
+          tectonic --keep-logs --keep-intermediates holonet_machine_blueprint.tex
