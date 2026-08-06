@@ -1,0 +1,21 @@
+{
+  "pending": {
+    "monster": "NO_PORTABLE_WORDS_OR_EXECUTED_CLASS_FUSION",
+    "octonion192": "NO_SMALLGROUP_IDENTIFIER_WITHOUT_ACTIVE_GENERATORS",
+    "physics": "NO_LITERAL_INTERNAL_NODES_OR_DERIVATION_OF_C"
+  },
+  "promoted": {
+    "local_poset": "EXACT_EIGHT_SPECIES_NINE_COVERS_ALL_INTERSECTION_HISTOGRAMS",
+    "photon_model": "SPECULATIVE_DIMENSIONALLY_CONSISTENT_SCALE_FIXED_MODEL",
+    "rho200": "EXACT_20_PLUS_30_PLUS_60_PLUS_90",
+    "universal_reconstruction": "EXACT_SUFFICIENT_THEOREM_AND_W33_INSTANCE"
+  },
+  "schema": "w33.pass3937_3956.claims_ledger.v1",
+  "semantic_sha256": "14cc255a662b55b8a86ba020ae00392faaad50be04ebbb5027a52d470ad3ef54",
+  "withdrawn_or_forbidden": [
+    "c depends on node count N alone",
+    "information amount and efficiency are generally inverses",
+    "a photon rest-frame clock",
+    "equal order 192 implies group isomorphism"
+  ]
+}
