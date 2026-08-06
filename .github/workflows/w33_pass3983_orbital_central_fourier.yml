@@ -1,0 +1,33 @@
+name: Pass 3983 Orbital Central Fourier
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass3983_orbital_central_fourier.py'
+      - '.github/workflows/w33_pass3983_orbital_central_fourier.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pass3983-orbital-central-fourier
+  cancel-in-progress: true
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check sympy==1.14.0
+      - run: python analysis/w33_pass3983_orbital_central_fourier.py | tee /tmp/pass3983.log
+      - run: grep -F 'PASS_ORBITAL_CENTRAL_FOURIER' /tmp/pass3983.log
+      - name: Commit exact result
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/PART_3983_ORBITAL_CENTRAL_FOURIER.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Pass 3983: freeze orbital central Fourier data'
+          git push
