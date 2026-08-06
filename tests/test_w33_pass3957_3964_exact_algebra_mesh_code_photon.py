@@ -16,7 +16,8 @@ def load_module():
 
 def test_frozen_certificate_reproduces():
     module = load_module()
-    assert module.build_certificate(ROOT) == json.loads(FROZEN.read_text(encoding="utf-8"))
+    generated = json.loads(json.dumps(module.build_certificate(ROOT), sort_keys=True))
+    assert generated == json.loads(FROZEN.read_text(encoding="utf-8"))
 
 def test_key_exact_boundaries():
     frozen = json.loads(FROZEN.read_text(encoding="utf-8"))
