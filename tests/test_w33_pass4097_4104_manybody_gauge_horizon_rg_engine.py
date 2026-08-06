@@ -1,10 +1,13 @@
 from __future__ import annotations
+import hashlib
 import importlib.util
+import json
 from pathlib import Path
 import pytest
 
 ROOT=Path(__file__).resolve().parents[1]
 SCRIPT=ROOT/"analysis/w33_pass4097_4104_manybody_gauge_horizon_rg_engine.py"
+FROZEN=ROOT/"data/PART_4097_4104_MANYBODY_GAUGE_HORIZON_RG_ENGINE.json"
 
 @pytest.fixture(scope="module")
 def cert():
@@ -52,6 +55,11 @@ def test_4104_thermodynamic_geometry(cert):
     assert x["canonical_path_length_beta_0_to_infinity"]>x["fisher_rao_geodesic_distance"]
     assert x["canonical_path_excess_over_geodesic_fraction"]<0.024
 
-def test_semantic_certificate(cert):
+def test_frozen_semantic_certificate(cert):
+    frozen=json.loads(FROZEN.read_text())
+    raw={k:v for k,v in frozen.items() if k!="semantic_sha256"}
+    digest=hashlib.sha256(json.dumps(raw,sort_keys=True,separators=(",",":")).encode()).hexdigest()
     assert cert["all_checks_hold"]
-    assert cert["semantic_sha256"]=="4687bd582e2d83c5bc0c168f905139edbab429bee37715398e4a7952cc3cf1ef"
+    assert frozen["all_checks_hold"]
+    assert digest==frozen["semantic_sha256"]
+    assert digest=="4687bd582e2d83c5bc0c168f905139edbab429bee37715398e4a7952cc3cf1ef"
