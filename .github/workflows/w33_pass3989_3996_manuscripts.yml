@@ -3,8 +3,9 @@ on:
   push:
     branches: [master]
     paths:
-      - 'analysis/BT3989_BT3996_physical_incidence_photon_breakthrough_insert.tex'
+      - 'analysis/BT3989_BT3996_physical_photon_causal_memory_insert.tex'
       - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/PART_3993_3996_WIGNER_SMITH_CAUSAL_MEMORY.json'
       - 'tests/test_w33_pass3989_3996_photon_breakthrough.py'
       - '.github/workflows/w33_pass3989_3996_manuscripts.yml'
   workflow_dispatch:
