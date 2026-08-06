@@ -1,0 +1,33 @@
+name: Passes 4089-4096 Protected Frontier Reconcile
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'tools/integrate_pass4089_4096_frontier.py'
+      - 'analysis/BT4089_BT4096_implementation_outside_box_insert.tex'
+      - 'analysis/BT4089_BT4096_implementation_outside_box_index_insert.html'
+      - 'docs/implementation-outside-box-4089-4096.html'
+      - '.github/workflows/w33_pass4089_4096_frontier_reconcile.yml'
+  workflow_dispatch:
+permissions: {contents: write}
+concurrency: {group: pass4089-4096-frontier, cancel-in-progress: false}
+jobs:
+  reconcile:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python tools/integrate_pass4089_4096_frontier.py | tee /tmp/frontier.log
+      - run: grep -F 'PASS_4089_4096_FRONTIER 1 1 1' /tmp/frontier.log
+      - run: git diff --exit-code -- docs/index.html
+      - name: Commit reconciliation
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/w33_current_frontier_manifest_v1.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Pass 4096: reconcile implementation frontier'
+          git pull --rebase origin master
+          git push
