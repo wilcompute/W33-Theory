@@ -1,0 +1,261 @@
+{
+  "K43_monster_seed": {
+    "decomposition_on_constructed_irreps": {
+      "1": 1,
+      "15a": 2,
+      "15b": 1,
+      "24": 3,
+      "81": 2
+    },
+    "incidence_action_degree": 480,
+    "incidence_character_census": {
+      "0": 42534,
+      "12": 720,
+      "2": 7200,
+      "32": 585,
+      "48": 80,
+      "480": 1,
+      "8": 720
+    },
+    "incidence_character_norm": 23,
+    "known_degree_accounted": 280,
+    "official_database": {
+      "available_overgroup_routes": [
+        "3.Fi via N(3A)",
+        "(D10 x HN).2 via N(5A)",
+        "2^2 . 2E6(2) : S3"
+      ],
+      "commit": "1fa1e5cc5ad92bb822a1f11d2818e6703904271a",
+      "direct_key_searches": {
+        "40K4,3": 0,
+        "O6-(2)": 0,
+        "U4(2)": 0,
+        "U4(2):2": 0
+      },
+      "executed_descent_status": "NO_DIRECT_U4_KEY_AND_NO_SERIALIZED_DESCENT_WORDS_FOUND",
+      "portable_generator_file": "GetGeneratorsOfSubgroupInM.py",
+      "repository": "melissa-maths/MonsterSubgroups"
+    },
+    "orthogonal_residual_character_census": {
+      "-1": 9120,
+      "-16": 45,
+      "-3": 4320,
+      "-4": 720,
+      "0": 23328,
+      "1": 9360,
+      "10": 36,
+      "2": 3240,
+      "20": 80,
+      "200": 1,
+      "4": 810,
+      "5": 240,
+      "6": 540
+    },
+    "orthogonal_residual_character_norm": 4,
+    "orthogonal_residual_degree": 200,
+    "orthogonal_residual_inner_products": {
+      "1": 0,
+      "15a": 0,
+      "15b": 0,
+      "24": 0,
+      "81": 0
+    },
+    "repository_candidate_slots": {
+      "PART_3670_3686_MMgroup_four_parabolic_candidate.json": "PENDING",
+      "PART_3769_3786_FINITE_GROUP_DESCENT_candidate.json": "PENDING",
+      "PART_3837_3854_MONSTER_DESCENT_candidate.json": "PENDING",
+      "PART_3887_3904_MONSTER_K43_DESCENT_candidate.json": "PENDING"
+    },
+    "status": "FAIL_CLOSED_NO_SERIALIZED_MMGROUP_WORDS_OR_EXECUTED_CLASS_FUSION"
+  },
+  "checks": {
+    "D8xS4_involution_centralizer_order192_exact": true,
+    "K43_seed_character_decomposition_and_hidden_residual_exact": true,
+    "WD4_incident_pair_order192_exact": true,
+    "all_eight_local_algebra_species_simple_nonunital": true,
+    "axes_are_exactly_minimum_norm_nonzero_idempotents": true,
+    "explicit_split_rational_Wedderburn_models_exact": true,
+    "five_rational_characters_irreducible_and_pairwise_distinct": true,
+    "four_axis_overflow_identified_and_corrected": true,
+    "four_order192_mechanisms_distinguished": true,
+    "full_unmarked_automorphism_group_is_O6minus2_order51840": true,
+    "known_tensor_projections_exact": true,
+    "monster_embedding_and_class_fusion_fail_closed": true,
+    "official_monster_database_searched_no_direct_U42_key": true,
+    "safe_four_axis_dimensions_stable_across_six_primes": true,
+    "trace_form_equals_seven_thirtieth_standard_inner_product_exact": true,
+    "twenty_generating_set_orbits_and_eight_subalgebra_classes_exact": true
+  },
+  "evidence_boundary": {
+    "not_proved_here": [
+      "serialized Monster/mmgroup U4(2):2 words or executed Monster class fusion",
+      "complete tensor-product decompositions beyond the five known irreducibles",
+      "irreducible decomposition of the hidden degree-200 residual",
+      "SmallGroup identifier or full internal structure of the octonion axis stabilizer",
+      "remote CI/PDF success until observed",
+      "hardware, laboratory, thermodynamic, or physical mechanism"
+    ],
+    "proved_here": [
+      "intrinsic minimum-idempotent characterization and full unmarked automorphism group",
+      "explicit rational split Wedderburn block models, primitive projectors, irreducible characters, and known tensor projections",
+      "exact K4,3 character decomposition and degree-200 norm-four residual",
+      "overflow-safe corrected twenty-orbit and eight-species four-axis classification",
+      "finite order-192 barcodes for W(D4) and D8xS4, with source-exact octonion and corrected tomotope separation"
+    ]
+  },
+  "explicit_wedderburn_models": {
+    "block_models": {
+      "1": {
+        "algebra_block_size": 2,
+        "commutant_dimension": 1,
+        "matrix_sha256": "ad9c7622089b743c8bad438473514edba5d7d15861251f54ef4409c788b66b7a",
+        "multiplication_verified": true,
+        "seed_orbital": 0
+      },
+      "15a": {
+        "algebra_block_size": 2,
+        "commutant_dimension": 1,
+        "matrix_sha256": "3e163af31a66bfc82316107b9794823056d93298a6e06e914e7d79315cf2d5a0",
+        "multiplication_verified": true,
+        "seed_orbital": 0
+      },
+      "15b": {
+        "algebra_block_size": 1,
+        "commutant_dimension": 1,
+        "matrix_sha256": "dcae712edeb9ca0a3f51da6050b317c9d3daac8a99493dd2573d6c150f852484",
+        "multiplication_verified": true,
+        "seed_orbital": 0
+      },
+      "24": {
+        "algebra_block_size": 3,
+        "commutant_dimension": 1,
+        "matrix_sha256": "4d91d8b3ee4dd8e48173553c6f4e7e13b292ae6576f4a8740ed18b4a3c91de37",
+        "multiplication_verified": true,
+        "seed_orbital": 1
+      },
+      "81": {
+        "algebra_block_size": 1,
+        "commutant_dimension": 1,
+        "matrix_sha256": "d880800a48fca9d9f6eea2579891f907e8dd97497319a302bd08bc2dca3c0013",
+        "multiplication_verified": true,
+        "seed_orbital": 0
+      }
+    },
+    "character_inner_products": {
+      "1": {"1": 1, "15a": 0, "15b": 0, "24": 0, "81": 0},
+      "15a": {"1": 0, "15a": 1, "15b": 0, "24": 0, "81": 0},
+      "15b": {"1": 0, "15a": 0, "15b": 1, "24": 0, "81": 0},
+      "24": {"1": 0, "15a": 0, "15b": 0, "24": 1, "81": 0},
+      "81": {"1": 0, "15a": 0, "15b": 0, "24": 0, "81": 1}
+    },
+    "character_value_censuses": {
+      "1": {"1": 51840},
+      "15a": {"-1": 13635, "-2": 1440, "-5": 36, "0": 25248, "1": 7920, "15": 1, "2": 2160, "3": 1320, "6": 80},
+      "15b": {"-1": 14400, "-2": 1440, "-3": 80, "0": 22848, "1": 10260, "15": 1, "2": 1440, "3": 1290, "5": 36, "7": 45},
+      "24": {"-1": 11808, "-2": 1440, "0": 29490, "1": 5760, "2": 2160, "24": 1, "3": 480, "4": 576, "6": 80, "8": 45},
+      "81": {"-1": 9720, "-3": 1350, "-9": 36, "0": 28160, "1": 11988, "3": 540, "81": 1, "9": 45}
+    },
+    "irrep_dimensions": {"1": 1, "15a": 15, "15b": 15, "24": 24, "81": 81},
+    "known_tensor_projections": {
+      "1x1": {"known_projections": {"1": 1}, "residual_dimension": 0},
+      "1x15a": {"known_projections": {"15a": 1}, "residual_dimension": 0},
+      "1x15b": {"known_projections": {"15b": 1}, "residual_dimension": 0},
+      "1x24": {"known_projections": {"24": 1}, "residual_dimension": 0},
+      "1x81": {"known_projections": {"81": 1}, "residual_dimension": 0},
+      "15ax15a": {"known_projections": {"1": 1, "15a": 1, "24": 1}, "residual_dimension": 185},
+      "15ax15b": {"known_projections": {"81": 1}, "residual_dimension": 144},
+      "15ax24": {"known_projections": {"15a": 1, "24": 1, "81": 1}, "residual_dimension": 240},
+      "15bx15b": {"known_projections": {"1": 1, "15b": 1, "24": 1}, "residual_dimension": 185},
+      "15bx24": {"known_projections": {"15b": 1, "24": 1, "81": 1}, "residual_dimension": 240},
+      "24x24": {"known_projections": {"1": 1, "15a": 1, "15b": 1, "24": 2, "81": 2}, "residual_dimension": 335},
+      "81x15a": {"known_projections": {"15b": 1, "24": 1, "81": 2}, "residual_dimension": 1014},
+      "81x15b": {"known_projections": {"15a": 1, "24": 1, "81": 3}, "residual_dimension": 933},
+      "81x24": {"known_projections": {"15a": 1, "15b": 1, "24": 2, "81": 4}, "residual_dimension": 1542},
+      "81x81": {"known_projections": {"1": 1, "15a": 2, "15b": 3, "24": 4, "81": 10}, "residual_dimension": 5579}
+    },
+    "module_decomposition": "1^2 + 15a^2 + 15b + 24^3 + 81",
+    "primitive_projector_orbital_coefficients": {
+      "1": {"0": "1/160", "10": "1/160", "11": "1/160", "13": "1/40", "14": "1/40", "16": "1/40", "2": "1/160", "3": "1/160", "5": "1/160", "6": "1/160", "8": "1/160"},
+      "15a": {"0": "3/32", "10": "3/32", "11": "-1/32", "13": "3/8", "14": "-1/8", "16": "1/24", "2": "-1/32", "3": "1/96", "5": "1/96", "6": "-1/32", "8": "-1/32"},
+      "15b": {"0": "3/32", "10": "-1/32", "11": "-1/32", "2": "3/32", "3": "-1/32", "5": "1/96", "6": "1/96", "8": "-1/32"},
+      "24": {"0": "3/20", "10": "-8/45", "2": "13/180", "3": "-1/60", "5": "1/30", "6": "1/30", "8": "-7/60"},
+      "81": {"0": "81/160", "10": "-27/160", "11": "9/160", "2": "-27/160", "3": "-3/160", "5": "1/160", "6": "-3/160", "8": "9/160"}
+    },
+    "split_Q_algebra": "M2(Q) + Q + M2(Q) + Q + M3(Q)",
+    "tensor_boundary": "Only projections onto the five constructed irreducibles are claimed; residual dimensions may contain other irreducibles."
+  },
+  "four_axis_classification": {
+    "class_dimensions": [4, 5, 6, 10, 12, 14, 16, 24],
+    "corrected_weighted_dimension_census": {"10": 16740, "12": 5040, "14": 27000, "16": 14040, "24": 84240, "4": 135, "5": 720, "6": 1080},
+    "eight_subalgebra_isomorphism_classes": [
+      {"contained_axes": 5, "dimension": 4, "generating_set_orbit_indices": [0], "invariants": {"annihilator": 0, "associator_ideal": 4, "associator_span": 4, "dimension": 4, "multiplication_algebra": 16, "nucleus": 0, "square_span": 4, "trace_form_rank": 4, "unital": false}, "representatives": [[0,1,2,3]], "subalgebra_orbit_size": 27},
+      {"contained_axes": 4, "dimension": 5, "generating_set_orbit_indices": [5], "invariants": {"annihilator": 0, "associator_ideal": 5, "associator_span": 5, "dimension": 5, "multiplication_algebra": 25, "nucleus": 0, "square_span": 5, "trace_form_rank": 5, "unital": false}, "representatives": [[0,1,5,13]], "subalgebra_orbit_size": 720},
+      {"contained_axes": 6, "dimension": 6, "generating_set_orbit_indices": [3], "invariants": {"annihilator": 0, "associator_ideal": 6, "associator_span": 6, "dimension": 6, "multiplication_algebra": 36, "nucleus": 0, "square_span": 6, "trace_form_rank": 6, "unital": false}, "representatives": [[0,1,5,6]], "subalgebra_orbit_size": 120},
+      {"contained_axes": 7, "dimension": 10, "generating_set_orbit_indices": [1,6,10,12], "invariants": {"annihilator": 0, "associator_ideal": 10, "associator_span": 10, "dimension": 10, "multiplication_algebra": 100, "nucleus": 0, "square_span": 10, "trace_form_rank": 10, "unital": false}, "representatives": [[0,1,2,5],[0,1,5,14],[0,1,7,18],[0,1,7,30]], "subalgebra_orbit_size": 540},
+      {"contained_axes": 9, "dimension": 12, "generating_set_orbit_indices": [16,19], "invariants": {"annihilator": 0, "associator_ideal": 12, "associator_span": 12, "dimension": 12, "multiplication_algebra": 144, "nucleus": 0, "square_span": 12, "trace_form_rank": 12, "unital": false}, "representatives": [[0,6,17,33],[0,6,33,40]], "subalgebra_orbit_size": 40},
+      {"contained_axes": 15, "dimension": 14, "generating_set_orbit_indices": [4,7,17], "invariants": {"annihilator": 0, "associator_ideal": 14, "associator_span": 14, "dimension": 14, "multiplication_algebra": 196, "nucleus": 0, "square_span": 14, "trace_form_rank": 14, "unital": false}, "representatives": [[0,1,5,7],[0,1,5,27],[0,6,18,24]], "subalgebra_orbit_size": 36},
+      {"contained_axes": 13, "dimension": 16, "generating_set_orbit_indices": [2,14,15], "invariants": {"annihilator": 0, "associator_ideal": 16, "associator_span": 16, "dimension": 16, "multiplication_algebra": 256, "nucleus": 0, "square_span": 16, "trace_form_rank": 16, "unital": false}, "representatives": [[0,1,2,8],[0,1,7,39],[0,1,7,41]], "subalgebra_orbit_size": 45},
+      {"contained_axes": 45, "dimension": 24, "generating_set_orbit_indices": [8,9,11,13,18], "invariants": {"annihilator": 0, "associator_ideal": 24, "associator_span": 24, "dimension": 24, "multiplication_algebra": 576, "nucleus": 0, "square_span": 24, "trace_form_rank": 24, "unital": false}, "representatives": [[0,1,5,33],[0,1,7,8],[0,1,7,19],[0,1,7,31],[0,6,18,25]], "subalgebra_orbit_size": 1}
+    ],
+    "prime_stability": {
+      "101": [4,10,16,6,14,5,10,14,24,24,10,24,10,24,16,16,12,14,24,12],
+      "1000003": [4,10,16,6,14,5,10,14,24,24,10,24,10,24,16,16,12,14,24,12],
+      "10007": [4,10,16,6,14,5,10,14,24,24,10,24,10,24,16,16,12,14,24,12],
+      "1009": [4,10,16,6,14,5,10,14,24,24,10,24,10,24,16,16,12,14,24,12],
+      "103": [4,10,16,6,14,5,10,14,24,24,10,24,10,24,16,16,12,14,24,12],
+      "107": [4,10,16,6,14,5,10,14,24,24,10,24,10,24,16,16,12,14,24,12]
+    },
+    "prior_bug": {"correction": "Use a two-stage contraction with modular reduction between stages.", "fault": "np.einsum('kab,a,b->k', ..., dtype=np.int64) formed unreduced three-factor products near 10^18 and overflowed int64 before modular reduction", "source": "Passes 3837-3854", "withdrawn_weighted_dimension_census": {"10": 16740, "14": 27000, "24": 103320, "4": 135, "5": 720, "6": 1080}},
+    "safe_contraction": "temp=tensordot(T,x,axes=([1],[0])) mod p; product=(temp@y) mod p",
+    "twenty_generating_set_orbits": [
+      {"degree_sequence":[3,3,3,3],"dimension":4,"induced_edges":6,"orbit_size":135,"rep":[0,1,2,3]},
+      {"degree_sequence":[1,2,2,3],"dimension":10,"induced_edges":4,"orbit_size":6480,"rep":[0,1,2,5]},
+      {"degree_sequence":[0,2,2,2],"dimension":16,"induced_edges":3,"orbit_size":4320,"rep":[0,1,2,8]},
+      {"degree_sequence":[2,2,2,2],"dimension":6,"induced_edges":4,"orbit_size":1080,"rep":[0,1,5,6]},
+      {"degree_sequence":[1,1,2,2],"dimension":14,"induced_edges":3,"orbit_size":12960,"rep":[0,1,5,7]},
+      {"degree_sequence":[1,1,1,3],"dimension":5,"induced_edges":3,"orbit_size":720,"rep":[0,1,5,13]},
+      {"degree_sequence":[1,1,1,3],"dimension":10,"induced_edges":3,"orbit_size":2160,"rep":[0,1,5,14]},
+      {"degree_sequence":[0,1,1,2],"dimension":14,"induced_edges":2,"orbit_size":12960,"rep":[0,1,5,27]},
+      {"degree_sequence":[0,1,1,2],"dimension":24,"induced_edges":2,"orbit_size":25920,"rep":[0,1,5,33]},
+      {"degree_sequence":[1,1,1,1],"dimension":24,"induced_edges":2,"orbit_size":6480,"rep":[0,1,7,8]},
+      {"degree_sequence":[0,0,1,1],"dimension":10,"induced_edges":1,"orbit_size":6480,"rep":[0,1,7,18]},
+      {"degree_sequence":[0,0,1,1],"dimension":24,"induced_edges":1,"orbit_size":25920,"rep":[0,1,7,19]},
+      {"degree_sequence":[1,1,1,1],"dimension":10,"induced_edges":2,"orbit_size":1620,"rep":[0,1,7,30]},
+      {"degree_sequence":[0,0,1,1],"dimension":24,"induced_edges":1,"orbit_size":12960,"rep":[0,1,7,31]},
+      {"degree_sequence":[1,1,1,1],"dimension":16,"induced_edges":2,"orbit_size":3240,"rep":[0,1,7,39]},
+      {"degree_sequence":[0,0,1,1],"dimension":16,"induced_edges":1,"orbit_size":6480,"rep":[0,1,7,41]},
+      {"degree_sequence":[0,0,0,0],"dimension":12,"induced_edges":0,"orbit_size":2880,"rep":[0,6,17,33]},
+      {"degree_sequence":[0,0,0,0],"dimension":14,"induced_edges":0,"orbit_size":1080,"rep":[0,6,18,24]},
+      {"degree_sequence":[0,0,0,0],"dimension":24,"induced_edges":0,"orbit_size":12960,"rep":[0,6,18,25]},
+      {"degree_sequence":[0,0,0,0],"dimension":12,"induced_edges":0,"orbit_size":2160,"rep":[0,6,33,40]}
+    ],
+    "verdict": "The 20 four-generator orbits collapse to eight global subalgebra orbits, one in each dimension 4,5,6,10,12,14,16,24."
+  },
+  "order192_reconciliation": {
+    "W_D4_frame_and_ordered_incident_pair": {"abelianization_order":2,"center_order":2,"derived_order":96,"element_order_census":{"1":1,"2":43,"3":32,"4":84,"6":32},"generator_count":3,"order":192,"point_orbits":[1,1,1,8,8,8],"structure":"W(D4)=2^3:S4 with central involution"},
+    "anti_coincidence_verdict": "At least four non-equivalent mechanisms produce 192: W(D4), D8xS4, the centerless octonion axis stabilizer, and centerless 2^4:D12. Equality of order or carrier size is not an identification.",
+    "exceptional_tomotope_completion": {"center_order":1,"extension":"split outer C2 extension","normal_elementary_abelian_order":16,"order":192,"ordinary_kernel":"2^4:S3","ordinary_kernel_order":96,"outside_involutions":16,"source":"Passes 3871-3886 correction","structure":"2^4:D12"},
+    "involution_centralizer": {"abelianization_order":8,"center_order":2,"derived_order":24,"element_order_census":{"1":1,"12":16,"2":59,"3":8,"4":68,"6":40},"generator_count":5,"matches_D8_x_S4_order_census":true,"order":192,"point_orbits":[1,4,6,16],"structure":"D8 x S4"},
+    "octonion_axis_line_stabilizer": {"action":"free transitive torsor on each axis-fixed 192 embedding slice","center_order":1,"order":192,"order8_elements":48,"source":"archive/dirs/TOE_w33_axis192_torsor_v01_20260227_bundle and data/w33_tomotope_H_obstruction.json","structure_status":"centerless signed-permutation octonion axis stabilizer; not identified with W(D4)"}
+  },
+  "schema": "w33.pass3887_3904.unmarked_wedderburn_monster_fouraxis_order192.v1",
+  "semantic_sha256": "6ef2f6c4a0fa7e52da9f4abff6d899d0250eeabde1a601d53c40052a841e7039",
+  "status": "PASS_EXACT_FIVE_FRONTS_THREE_CONSTRUCTIONS_MONSTER_WORDS_PENDING_WITH_OVERFLOW_CORRECTION",
+  "three_bonkers_constructions": {
+    "eight_species_local_zoo": "The corrected twenty four-generator orbits organize into exactly eight simple nonunital subalgebra species of dimensions 4,5,6,10,12,14,16,24.",
+    "hidden_degree200_character": "The 480-element K4,3 incidence action contains a degree-200 orthogonal residual character of norm four, invisible to the five previously constructed irreducibles.",
+    "minimum_idempotent_reconstruction": "The abstract multiplication and trace form recover the 45 GQ(4,2) points as the unique minimum-norm nonzero idempotents."
+  },
+  "unmarked_automorphism_theorem": {
+    "algebra_dimension": 24,
+    "axes": 45,
+    "axis_coordinate_profile": {"maximum":"16/7","thirty_two_nonneighbors":"1/7","twelve_neighbors":"-4/7"},
+    "axis_norm_squared": "480/49",
+    "marked_automorphism_order": 51840,
+    "proof_certificate": {"coordinate_equation":"m = (8/15)m^2 - (2/15)N + (1/30)Q","equality_characterization":"m=16/7, each of three neighbor foursomes is constant -4/7, all 32 nonneighbors are 1/7; hence y is one of the 45 axes","idempotent_frobenius_identity":"||y||^2 = sum_i y_i^3","maximum_coordinate_bound":"m >= 1","nonneighbor_bound":"Q >= m^2 / 8","norm_equation":"S = 30m - 15m^2 + 5N","piecewise_lower_bounds":["S >= 30m - 45m^2/4 for 1 <= m <= 16/7","S >= 15m^2/8 for m >= 16/7"],"sharp_minimum":"S >= 480/49","three_line_neighbor_bound":"N >= 3 m^2 / 4"},
+    "trace_form_identity": "tr(L_x L_y) = (7/30)<x,y>",
+    "unmarked_automorphism_group": "O6-(2)=U4(2):2",
+    "unmarked_automorphism_order": 51840,
+    "verdict": "Every algebra automorphism preserves the intrinsic trace form, hence norm and idempotency; it therefore permutes the 45 minimum-norm nonzero idempotents."
+  }
+}
