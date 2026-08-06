@@ -1,0 +1,44 @@
+name: Pass 3985 Monster Acquisition Gate
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass3985_monster_class_fusion_sieve.g'
+      - 'analysis/w33_pass3985_parse_monster_fusion.py'
+      - '.github/workflows/w33_pass3985_monster_acquisition_gate.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pass3985-monster-acquisition-gate
+  cancel-in-progress: true
+jobs:
+  fusion-and-engine:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - name: Install GAP and mmgroup
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gap gap-character-tables
+          python -m pip install --disable-pip-version-check mmgroup==1.0.0
+      - name: Run class-fusion sieve
+        run: gap -q analysis/w33_pass3985_monster_class_fusion_sieve.g | tee /tmp/pass3985_gap.txt
+      - name: Parse and verify engine
+        env: {GAP_OUTPUT: /tmp/pass3985_gap.txt}
+        run: python analysis/w33_pass3985_parse_monster_fusion.py | tee /tmp/pass3985.log
+      - run: grep -F 'PASS_MONSTER_ACQUISITION_GATE' /tmp/pass3985.log
+      - name: Preserve strict word gate
+        run: python analysis/w33_mmgroup_u42_candidate_harness.py data/PART_3751_MONSTER_U42_CLASS_FUSION_EXECUTION.json --allow-empty --output /tmp/pass3985_word_gate.json
+      - name: Commit exact sieve
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/PART_3985_MONSTER_ACQUISITION_GATE.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Pass 3985: freeze Monster acquisition gate'
+          git push
