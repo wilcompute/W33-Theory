@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [4137, 4144],
+  "slug": "matrix_wilson_pump_extended_hawking_lattice_microscopic_rg_autonomous_scar_curvature_scaling_geometric_transistor_causal_entropy_synthetic_monopole",
+  "title": "Five physics closures and three outside-box probes: matrix-valued Wilson pumping, an extended Hawking lattice, microscopic channel-balance RG, an autonomous scar gadget, curvature finite-size scaling, a geometric phase transistor, a causal-entropy bound, and a synthetic monopole",
+  "status": "reserved",
+  "owner": "openai-gpt-5.6-thinking",
+  "reserved_at": "2026-08-06T15:10:00-04:00",
+  "purpose": "Execute the five physics targets following Passes 4113-4120 and add three independent outside-box constructions with deterministic finite-model checks and strict evidence boundaries.",
+  "coordination": "Preserve Passes 4005-4136, the single-publisher master:/docs Pages contract, the authoritative long-form website, and all ordered frontier manifests. Do not edit docs/index.html directly. Keep this packet separate from the active 4129-4136 implementation packet.",
+  "boundary": "Reservation only. No continuum QCD, fabricated non-Abelian pump, observed Hawking radiation, derivation of physical spacetime, laboratory autonomous scar device, thermodynamic phase transition, anyon transistor, black-hole entropy law, physical magnetic monopole, gravity, cosmology, or theory of everything is promoted."
+}
