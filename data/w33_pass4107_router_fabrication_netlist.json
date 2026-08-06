@@ -1,0 +1,42 @@
+{
+  "schema": "w33.pass4107.router_fabrication_netlist.v1",
+  "source_layout": "data/w33_pass4089_four_router_layout.json",
+  "system_modes": 80,
+  "coherent_selector": {
+    "paths": 4,
+    "binary_tree_layers": 2,
+    "balanced_couplers_prepare": 3,
+    "balanced_couplers_unprepare": 3
+  },
+  "branches": [
+    {"branch": 0, "router_id": 0, "parallel_swap_cells": 40},
+    {"branch": 1, "router_id": 1, "parallel_swap_cells": 40},
+    {"branch": 2, "router_id": 2, "parallel_swap_cells": 40},
+    {"branch": 3, "router_id": 3, "parallel_swap_cells": 40}
+  ],
+  "branch_rails": 320,
+  "total_swap_cells": 160,
+  "active_depth": 5,
+  "active_depth_breakdown": ["selector layer 1", "selector layer 2", "parallel router swaps", "recombiner layer 1", "recombiner layer 2"],
+  "recirculating_qsp": {
+    "physical_signal_blocks": 1,
+    "signal_reuses": 5,
+    "swap_cells": 160,
+    "selector_and_recombiner_couplers": 6,
+    "qsp_phase_shifters": 6,
+    "requires": ["coherent loop", "five-pass switch", "phase-stable recirculation"]
+  },
+  "spatially_unrolled_qsp": {
+    "physical_signal_blocks": 5,
+    "swap_cells": 800,
+    "selector_and_recombiner_couplers": 30,
+    "qsp_phase_shifters": 6,
+    "requires": ["five cascaded signal blocks", "no recirculating loop"]
+  },
+  "compilation_rule": "For every pair [point_id,line_id] in router j, instantiate one point-line SWAP cell in branch j. All 40 cells in a branch act concurrently.",
+  "error_contract": {
+    "signal": "eta_signal <= (1/4) sum_j |tau_j-1|",
+    "five_query_qsp": "||delta U_QSP|| <= 5 eta_signal+6 delta_phi"
+  },
+  "boundary": "Logical fabrication netlist only; foundry geometry, bend radii, crossings, heater power, packaging, insertion loss, and thermal drift are not measured."
+}
