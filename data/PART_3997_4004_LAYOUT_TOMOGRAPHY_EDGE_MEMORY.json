@@ -1,0 +1,61 @@
+{
+  "bonkers_centered_delay_geometry": {
+    "identity": "Q_centered=-theta_prime A_W33",
+    "spectrum_in_units_theta_prime": {"-12": 1, "-2": 24, "4": 15}
+  },
+  "bonkers_delay_metrology": {
+    "cramer_rao": "delta_omega >= 1/sqrt(nu*F_Q)",
+    "localized_vertex_qfi": "48*theta_prime^2",
+    "optimal_0_16_cat_qfi": "256*theta_prime^2",
+    "proof": "For a pure probe F_Q=4 Var(Q); a vertex has Laplacian moments 12 and 156, while the spectral diameter is 16."
+  },
+  "bonkers_edge_carrier_memory": {
+    "boundary": "The 201-dimensional kernel is the raw graph cycle space, not the previously certified 81-dimensional Hodge/CSS logical space.",
+    "dark_cycle_dimension": 201,
+    "exact_half_flight": "exp(-i*pi*D^T D/2)=I-2E_10",
+    "generator_spectrum": {"0": 201, "10": 24, "16": 15},
+    "modes": 240,
+    "oriented_incidence_rank": 39
+  },
+  "boundary": "Exact finite graph, matrix, scheduling, synthetic noiseless tomography, and QFI statements. No fabricated layout, measured delay, device loss model, variable vacuum c, or laboratory sensitivity is claimed.",
+  "layout_competition": {
+    "direct_40_mode": {
+      "balanced_cut_spectral_lower_bound": 100,
+      "degree": 12,
+      "factorization_sha256": "9c59e365c9c3fd771e65c63297e1558fd588cabb9e49401153ebb8708978c5fe",
+      "links": 240,
+      "modes": 40,
+      "perfect_matching_layers": 12
+    },
+    "incidence_80_mode": {
+      "balanced_cut_spectral_lower_bound": "20*(4-sqrt(6))",
+      "degree": 4,
+      "factorization_sha256": "9c023abfbdc7dd4c7fa9c9c37e3bcae65c53dd600a381dda2d5409d7043d50c4",
+      "girth": 8,
+      "links": 160,
+      "modes": 80,
+      "perfect_matching_layers": 4
+    },
+    "interpretation": "The direct device minimizes modes; the incidence lift minimizes degree, links, and disjoint coupling layers. The exact phase boundary exposes which fabrication resource dominates.",
+    "linear_cost_boundary": {
+      "direct_minus_incidence": "-40*alpha+80*beta+8*gamma",
+      "direct_preferred_iff": "5*alpha>10*beta+gamma",
+      "incidence_preferred_iff": "5*alpha<10*beta+gamma"
+    }
+  },
+  "schema": "w33.pass3997_4004.layout_tomography_edge_memory.v1",
+  "semantic_sha256": "ed4eddab150575ec2a719bc55974ac24e0b1852b1a3bec4a08204bc9114f4960",
+  "status": "PASS_EXACT_LAYOUT_TOMOGRAPHY_AND_THREE_PHOTON_CONSTRUCTIONS",
+  "wigner_smith_tomography": {
+    "central_difference_h": [0.1, 0.05, 0.025, 0.0125],
+    "common_delay_gauge_theorem": "Q-(Tr Q/40)I=-theta_prime A_W33",
+    "full_transfer_tomography_ledger": {"coherent_input_probes": 40, "complex_transfer_amplitudes_per_frequency": 1600, "frequencies": 3, "real_scalar_data_before_gauge_reduction": 9600},
+    "geometry_recovery": "After common-delay subtraction, thresholding the off-diagonal delay kernel reconstructs all 240 W33 edges exactly.",
+    "operator": "Q(omega)=-i S^dagger dS/domega=theta_prime L_W33",
+    "recovered_population": [0.17000000000000026, 0.5099999999999995, 0.3200000000000003],
+    "relative_frobenius_errors": [0.04495210230041327, 0.011373453497843472, 0.0028518860771191527, 0.0007135051037779798],
+    "successive_error_ratios": [3.9523705186763785, 3.9880462228464695, 3.9970086577076107],
+    "synthetic_population": [0.17, 0.51, 0.32],
+    "three_sector_moment_inverse": {"p0": "1-p10-p16", "p10": "(16*m1-m2)/60", "p16": "(m2-10*m1)/96"}
+  }
+}
