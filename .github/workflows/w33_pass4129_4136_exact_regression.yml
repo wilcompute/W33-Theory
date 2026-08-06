@@ -1,0 +1,26 @@
+name: W33 Passes 4129-4136 exact regression
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass4129_4136_anomaly_gates_decoder_hybrid_orbits.py'
+      - 'analysis/w33_pass4133_exact_bivalent_enumerator.cpp'
+      - 'data/PART_4129_4136_ANOMALY_GATES_DECODER_HYBRID_ORBITS_BONKERS.json'
+      - 'data/w33_pass4129_anomaly_repair_optimization.json'
+      - 'data/w33_pass4132_hybrid_sin_active_router.json'
+      - 'data/w33_pass4132_hybrid_permutation_schedule.json'
+      - 'data/w33_pass4133_exact_bivalent_orbit_catalogue.json'
+      - 'tests/test_w33_pass4129_4136_anomaly_gates_decoder_hybrid_orbits.py'
+      - '.github/workflows/w33_pass4129_4136_exact_regression.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install numpy networkx sympy pytest
+      - run: pytest -q tests/test_w33_pass4129_4136_anomaly_gates_decoder_hybrid_orbits.py
