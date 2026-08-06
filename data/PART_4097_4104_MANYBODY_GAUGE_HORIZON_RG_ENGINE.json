@@ -1,0 +1,217 @@
+{
+  "all_checks_hold": true,
+  "boundaries": [
+    "All promoted statements are exact finite strong-coupling, group-generator, Gauss-law, passive-Bogoliubov, hierarchical-spectrum, information-thermodynamic, invariant-subspace, Fisher-information, or canonical-geometry results.",
+    "No fractional-pump experiment, continuum QCD, Hawking observation, physical four-dimensional spacetime, positive-work engine, generic many-body scar, fabricated sensor, gravity, cosmology, or theory of everything is claimed."
+  ],
+  "checks": {
+    "4097": true,
+    "4098": true,
+    "4099": true,
+    "4100": true,
+    "4101": true,
+    "4102": true,
+    "4103": true,
+    "4104": true
+  },
+  "pass4097_fractional_many_pair_pump": {
+    "boundary": "Exact strong-coupling degenerate-bundle pump. Finite hopping, generic disorder, adiabatic preparation, loss, and experimental fractional plateaux are not certified.",
+    "determinant": "det W(phi)=exp(i phi)",
+    "fixed_filling_dimension": 84,
+    "ground_bundle_chern_number": 1,
+    "ground_degeneracy": 3,
+    "ground_states": [
+      "100100100",
+      "010010010",
+      "001001001"
+    ],
+    "many_body_gap": "2U",
+    "model": "L=9 hard-core composite-pair ring at N=3 with H/U=sum_i(n_i+n_{i+1}+n_{i+2}-1)^2",
+    "pumped_pair_charge_per_branch_cycle": "1/3",
+    "pumped_photon_number_per_branch_cycle": "2/3",
+    "resta_polarizations": [
+      "0",
+      "1/3",
+      "2/3"
+    ],
+    "return_cycles": 3,
+    "spectrum_over_U": {
+      "0": 3,
+      "10": 9,
+      "2": 18,
+      "4": 36,
+      "6": 18
+    },
+    "three_cycle_transport": "one composite pair = two photons",
+    "twisted_ground_holonomy": "W(phi)=exp(i phi/3) T_3"
+  },
+  "pass4098_su3_quantum_link": {
+    "boundary": "Exact finite SU(3)-covariant quantum-link truncation and Gauss-law sectors. It is not a continuum Yang-Mills limit, QCD spectrum, or fabricated gauge simulator.",
+    "electric_hamiltonian": "H_E=(g^2/2) sum_links L_link^2",
+    "endpoint_string_hilbert_dimension": 81,
+    "flux_sector_dimension": 9,
+    "fundamental_casimir": "4/3",
+    "gauss_casimir_kernel_dimension": 1,
+    "gauss_generators": "G_L^a=T_anti3(matter)+T_3(link-left), G_R^a=T_anti3(link-right)+T_3(matter)",
+    "link_hilbert": "1 plus (3 tensor anti-3), dimension 10",
+    "minimal_plaquette_basis": [
+      "vacuum",
+      "oriented color-contracted loop"
+    ],
+    "numeric_demo_g2_1_J_0p37": [
+      -0.050385488457343114,
+      2.7170521551240094
+    ],
+    "plaquette_eigenvalues": "4g^2/3 +/- sqrt(16g^4/9+J^2)",
+    "plaquette_gap": "2 sqrt(16g^4/9+J^2)",
+    "plaquette_hamiltonian": "[[0,-J],[-J,8g^2/3]]",
+    "string_energy_for_R_links": "E_string(R)=2 g^2 R/3",
+    "string_tension": "sigma=2 g^2/(3a)",
+    "unique_one_link_singlet": "(1/3) sum_ab |anti-a> |a,anti-b> |b>"
+  },
+  "pass4099_horizon_no_go": {
+    "boundary": "Exact no-go for the passive number-conserving proposal, not a no-go for analogue Hawking radiation in Floquet, flowing, quenched, or Bogoliubov systems.",
+    "nambu_evolution": "S=diag(U,U*) and Bogoliubov beta=0",
+    "proposal_tested": "a static spatial gradient or sign change of reciprocal nearest-neighbour hopping J(x)",
+    "reciprocity": "For real symmetric h, U(t)=exp(-iht) is symmetric, so |U_ij|=|U_ji|.",
+    "required_extension": "A directed Floquet/background-flow sector can create a kinematic horizon; a BdG pairing or filled negative-energy sea is additionally required for particle-hole Bogoliubov production.",
+    "sign_gradient_result": "On an open chain all real hopping signs are removed by local pi phases; a zero hopping is a literal cut.",
+    "spontaneous_vacuum_particles": 0.0,
+    "verdict": "A passive reciprocal J(x) profile alone supplies neither a one-way causal horizon nor spontaneous Hawking emission."
+  },
+  "pass4100_spectral_rg": {
+    "asymptotic_log_period_average_spectral_dimension": "log(80)/log(b)=4",
+    "boundary": "Four is obtained only after choosing b=80^(1/4); the W33/Levi cell does not independently select the rescaling or prove physical spacetime emergence.",
+    "dimension_level_n": "80^n",
+    "discrete_scale_period_log_t": "2 log b",
+    "finite_level_demo": {
+      "max_ds": 5.144023305447831,
+      "mean_ds": 3.999870842472255,
+      "min_ds": 2.9776556022653717,
+      "n": 14
+    },
+    "fixed_point_type": "discrete-scale-invariant with persistent log-periodic oscillations, not a smooth continuum fixed point",
+    "hierarchy_spectrum": "At level n: one zero mode and, for j=0..n-1, eigenvalues lambda_alpha b^{-2(n-1-j)} with multiplicity m_alpha 80^j.",
+    "length_rescaling": "b=80^(1/4)",
+    "local_lambda": [
+      "4-sqrt(6)",
+      "4",
+      "4+sqrt(6)",
+      "8"
+    ],
+    "local_multiplicity": [
+      24,
+      30,
+      24,
+      1
+    ]
+  },
+  "pass4101_topological_information_engine": {
+    "boundary": "Exact information and ideal adiabatic accounting. No finite-time engine, bath coupling, load curve, or measured work extraction is certified.",
+    "closed_cycle": [
+      "isothermally expand a pure reference into the uniform dark reservoir and extract kBT ln3161",
+      "measure/store the irrep label reversibly and topologically route the pair",
+      "erase the conditional microstate at cost kBT sum p_j ln n_j",
+      "erase the label at cost kBT H(label)"
+    ],
+    "conditional_microstate_entropy_nats": 5.730777383999302,
+    "controlled_topological_sorter": "Use the irrep label to choose C_j=+1 or -1 pair-pump orientation; each clean cycle routes one composite pair, i.e. two photons.",
+    "dark_dimension": 3161,
+    "identity": "H(label)+sum_j p_j ln n_j=ln3161",
+    "irrep_label_entropy_nats": 2.327866328216315,
+    "loaded_pump_rule": "Work delivered against a chemical-potential bias must be supplied by the cyclic drive; topology quantizes transport but does not evade the second law.",
+    "maximum_closed_cycle_net_work": "0 in the reversible limit",
+    "reversible_expansion_work": "k_B T ln(3161)",
+    "sector_dimensions": [
+      5,
+      5,
+      12,
+      10,
+      10,
+      15,
+      45,
+      180,
+      100,
+      180,
+      512,
+      180,
+      180,
+      540,
+      160,
+      160,
+      90,
+      729,
+      48
+    ]
+  },
+  "pass4102_exact_scar_trimer": {
+    "boundary": "Exact projector-embedded scar trimer with a global translation term; locality, generic stability, and experimental realization are not established.",
+    "embedding": "Project the three one-third-filled CDW states into an invariant clock subspace and choose an arbitrary nonintegrable Hamiltonian on its orthogonal complement.",
+    "first_perfect_revival": "2 pi/(3 Omega)",
+    "fixed_filling_hilbert_dimension_L9_N3": 84,
+    "fourier_cat_entanglement": "ln 3 across a cut that distinguishes the three CDW patterns",
+    "return_probability": "P_A(t)=(5+4 cos(3 Omega t))/9",
+    "scar_dimension": 3,
+    "scar_eigenvalues": [
+      "-Omega",
+      "-Omega",
+      "2Omega"
+    ],
+    "scar_fraction_L9_N3": "1/28",
+    "scar_hamiltonian": "H_scar=Omega(T_3+T_3^dagger)"
+  },
+  "pass4103_fractional_cat_metrology": {
+    "L9_Np3_pair_qfi": 24.0,
+    "L9_Np3_photon_qfi": 96.0,
+    "boundary": "Exact pure-state QFI. State preparation, branch dephasing, loss, estimator bias, and laboratory saturation are open.",
+    "cramer_rao_pair_phase": "delta phi >= sqrt(3)/(sqrt(8) N_p)",
+    "pair_gradient_qfi": "F_Q=8 N_p^2/3",
+    "pair_position_eigenvalues_general": [
+      "X0",
+      "X0+N_p",
+      "X0+2N_p"
+    ],
+    "photon_gradient_qfi": "F_Q=32 N_p^2/3 because each composite contains two photons",
+    "probe_state": "(|A>+|B>+|C>)/sqrt(3) over the three fractional-pump CDW branches",
+    "readout": "inverse qutrit Fourier transform followed by CDW-branch measurement"
+  },
+  "pass4104_thermodynamic_geometry": {
+    "boundary": "Exact canonical information geometry of the projected two-pair spectrum, not a spacetime metric or a finite-time thermodynamic protocol.",
+    "canonical_path_excess_over_geodesic_fraction": 0.02351427597432143,
+    "canonical_path_length_beta_0_to_infinity": 0.4530018812338062,
+    "canonical_spectrum_over_U": [
+      {
+        "degeneracy": 3161,
+        "energy": "0"
+      },
+      {
+        "degeneracy": 81,
+        "energy": "41/200"
+      },
+      {
+        "degeneracy": 24,
+        "energy": "(252-27sqrt6)/800"
+      },
+      {
+        "degeneracy": 30,
+        "energy": "117/400"
+      },
+      {
+        "degeneracy": 24,
+        "energy": "(252+27sqrt6)/800"
+      },
+      {
+        "degeneracy": 1,
+        "energy": "81/160"
+      }
+    ],
+    "endpoint_bhattacharyya_coefficient": 0.9756135200168286,
+    "fisher_metric": "g_beta_beta=Var_beta(E)=C/(k_B beta^2)",
+    "fisher_rao_geodesic_distance": 0.4425945899021065,
+    "high_temperature_variance_over_U2": 0.0032555026769779893,
+    "reading": "The thermal path is only about 2.35 percent longer than the information-geometric geodesic because 95.18 percent of the full Hilbert space already belongs to the zero-energy dark reservoir."
+  },
+  "schema": "w33.pass4097_4104.manybody_gauge_horizon_rg_engine.v1",
+  "semantic_sha256": "4687bd582e2d83c5bc0c168f905139edbab429bee37715398e4a7952cc3cf1ef",
+  "status": "PASS_EXACT_EIGHT_FRONT_WITH_STRONG_COUPLING_TRUNCATION_HARDWARE_AND_EMERGENCE_BOUNDARIES"
+}
