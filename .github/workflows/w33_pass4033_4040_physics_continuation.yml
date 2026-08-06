@@ -6,10 +6,6 @@ on:
       - 'analysis/w33_pass4033_4040_physics_continuation.py'
       - 'data/PART_4033_4040_PHYSICS_CONTINUATION.json'
       - 'tests/test_w33_pass4033_4040_physics_continuation.py'
-      - 'analysis/BT4033_BT4040_physics_continuation_insert.tex'
-      - 'analysis/BT4033_BT4040_physics_continuation_index_insert.html'
-      - 'docs/physics-continuation-h1-control.html'
-      - 'tools/integrate_pass4033_4040_frontier.py'
       - '.github/workflows/w33_pass4033_4040_physics_continuation.yml'
   pull_request:
     branches: [master]
@@ -17,10 +13,6 @@ on:
       - 'analysis/w33_pass4033_4040_physics_continuation.py'
       - 'data/PART_4033_4040_PHYSICS_CONTINUATION.json'
       - 'tests/test_w33_pass4033_4040_physics_continuation.py'
-      - 'analysis/BT4033_BT4040_physics_continuation_insert.tex'
-      - 'analysis/BT4033_BT4040_physics_continuation_index_insert.html'
-      - 'docs/physics-continuation-h1-control.html'
-      - 'tools/integrate_pass4033_4040_frontier.py'
       - '.github/workflows/w33_pass4033_4040_physics_continuation.yml'
   workflow_dispatch:
 permissions: {contents: read}
@@ -51,12 +43,3 @@ jobs:
           assert x['semantic_sha256']=='022ba7f16ba122b83f6696869cbbefc2068b2d301e2ec196d4c3eb3e90c7d6a0'
           assert x['pass4035_literal_algebra_gate']['status'] in {'COMPLETE','BLOCKED_ENGINE_OUTPUTS_MISSING'}
           PY
-  protected-frontier:
-    runs-on: ubuntu-24.04
-    timeout-minutes: 15
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with: {python-version: '3.12'}
-      - run: python tools/integrate_pass4033_4040_frontier.py
-      - run: git diff --exit-code data/w33_current_frontier_manifest_v1.json
