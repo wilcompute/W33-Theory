@@ -54,7 +54,8 @@
     "analysis/BT3871_BT3886_eight_front_closure_insert",
     "analysis/BT3887_BT3904_unmarked_wedderburn_monster_fouraxis_order192_insert",
     "analysis/BT3905_BT3912_terwilliger_mesh_strata_rank48_insert",
-    "analysis/BT3913_BT3920_multidefect_lindbladian_process_fusion_phase_insert"
+    "analysis/BT3913_BT3920_multidefect_lindbladian_process_fusion_phase_insert",
+    "analysis/BT3921_BT3936_cap_gewirtz_modular_closure_insert"
   ],
   "front_doors": {
     "w33_paper.tex": "w33_paper_body.tex",
@@ -136,7 +137,8 @@
     {"token":"passes-3871-3886-cap-tomotope-modular-gewirtz","source":"docs/cap-tomotope-modular-gewirtz-atlas-3871-3886.html"},
     {"token":"passes-3887-3904-unmarked-wedderburn-fouraxis-order192","source":"docs/unmarked-wedderburn-fouraxis-order192.html"},
     {"token":"passes-3905-3912-terwilliger-mesh-strata-rank48","source":"docs/maxcode-mesh-strata-rank48.html"},
-    {"token":"passes-3913-3920-multidefect-lindbladian-process-fusion-phase","source":"docs/multidefect-lindbladian-process-fusion-phase.html"}
+    {"token":"passes-3913-3920-multidefect-lindbladian-process-fusion-phase","source":"docs/multidefect-lindbladian-process-fusion-phase.html"},
+    {"token":"passes-3921-3936-cap-gewirtz-modular-closure","source":"docs/cap-gewirtz-modular-closure-3921-3936.html"}
   ],
   "boundary": "The manifest controls source reachability and ordering only; it does not certify PDF, hardware, laboratory, or physical claims."
 }
