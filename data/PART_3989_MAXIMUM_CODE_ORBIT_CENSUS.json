@@ -1,0 +1,60 @@
+{
+  "boundary": "Complete orbit census for maximum doubly-even self-orthogonal extensions containing the fixed [36,6,16] parent. No classification of unrelated length-36 codes is implied.",
+  "compatibility_graph": {
+    "degree": 624,
+    "maximum_clique_size": 57,
+    "vertex_orbits": [135, 810],
+    "vertices": 945
+  },
+  "fixed_135_vertex_census": {
+    "intersection_distribution": {"15": 45, "3": 12},
+    "maximum_cliques_through_representative": 57,
+    "representative": 0
+  },
+  "generator_vectors_hex": ["03", "07", "0b", "0d", "10", "11", "20"],
+  "global_clique_sha256": "14f4f6f0ad2732fe6b32962f7c6536e6ff5969859cf558ea58d451c94dc4ab30",
+  "group_order": 51840,
+  "maximum_clique_orbits": [
+    {
+      "code_dimension": 17,
+      "coordinate_degree_profile": {"3": 16, "9": 20},
+      "intersection_two_component_parameters": [[45, 16, 8, 4], [6, 4, 2, 4], [6, 4, 2, 4]],
+      "minimum_weight": 4,
+      "orbit_clique_sha256": "1782f8f02e49e5e0487b1c9ae7b68726c4c526c10882f68a32fbac6542cd02ef",
+      "orbit_size": 540,
+      "parent_vertex_orbit_counts": {"135": 3, "810": 54},
+      "representative_support_sha256": "b674f08fb65f8c8e42875eefbb1960055f640f7674a60e60a85fadf76405da41",
+      "stabilizer_order": 96,
+      "weight_distribution": {"0": 1, "4": 57, "8": 852, "12": 7332, "16": 57294, "20": 57294, "24": 7332, "28": 852, "32": 57, "36": 1}
+    },
+    {
+      "code_dimension": 17,
+      "coordinate_degree_profile": {"3": 16, "9": 20},
+      "intersection_two_component_parameters": [[45, 16, 8, 4], [6, 4, 2, 4], [6, 4, 2, 4]],
+      "minimum_weight": 4,
+      "orbit_clique_sha256": "6a3c3f741c523eabdbac786d471d75346306c23658670f5f6558dcff497224d3",
+      "orbit_size": 270,
+      "parent_vertex_orbit_counts": {"135": 15, "810": 42},
+      "representative_support_sha256": "71438d1561cc761917eaf3a01971577bd89a84e68fecfd98116d86c702fa4436",
+      "stabilizer_order": 192,
+      "weight_distribution": {"0": 1, "4": 57, "8": 852, "12": 7332, "16": 57294, "20": 57294, "24": 7332, "28": 852, "32": 57, "36": 1}
+    },
+    {
+      "code_dimension": 17,
+      "coordinate_degree_profile": {"3": 16, "9": 20},
+      "intersection_two_component_parameters": [[45, 16, 8, 4], [6, 4, 2, 4], [6, 4, 2, 4]],
+      "minimum_weight": 4,
+      "orbit_clique_sha256": "adb1c319dab56d89203a6a8f8ab8c7406dc77526eb4b10a09d3cea1987f0f409",
+      "orbit_size": 135,
+      "parent_vertex_orbit_counts": {"135": 15, "810": 42},
+      "representative_support_sha256": "f564b912399eec6abf373218f5d918cfea66e4697e4c8f354a397bb7a82e5121",
+      "stabilizer_order": 384,
+      "weight_distribution": {"0": 1, "4": 57, "8": 852, "12": 7332, "16": 57294, "20": 57294, "24": 7332, "28": 852, "32": 57, "36": 1}
+    }
+  ],
+  "maximum_cliques_total": 945,
+  "parent_code": "[36,6,16]",
+  "schema": "w33.pass3989.maximum_code_orbit_census.v1",
+  "semantic_sha256": "e2d3b136f48ec6e5107b38e0e8c4083ee8f44e63f645d91fcdd0d4cbbd15d8dd",
+  "status": "PASS_EXACT_COMPLETE_FIXED_PARENT_MAXIMUM_CODE_CENSUS"
+}
