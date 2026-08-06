@@ -1,0 +1,33 @@
+name: Passes 4121-4128 manuscript check
+
+on:
+  push:
+    paths:
+      - 'analysis/BT4121_BT4128_explicit_gauge_dfs_decoder_foundry_attractors_insert.tex'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'holonet_machine_blueprint.tex'
+      - '.github/workflows/w33_pass4121_4128_manuscript_check.yml'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  manuscript:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify ordered insert and TeX syntax surface
+        run: |
+          python tools/integrate_pass4121_4128_frontier.py
+          test -s analysis/BT4121_BT4128_explicit_gauge_dfs_decoder_foundry_attractors_insert.tex
+          grep -q 'Passes 4121--4128' analysis/BT4121_BT4128_explicit_gauge_dfs_decoder_foundry_attractors_insert.tex
+      - name: Compile manuscripts when LaTeX sources are self-contained
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: |
+            w33_paper.tex
+            photonic_holonet.tex
+            holonet_machine_blueprint.tex
+          continue_on_error: false
