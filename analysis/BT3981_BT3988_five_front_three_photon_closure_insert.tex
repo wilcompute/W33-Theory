@@ -1,0 +1,99 @@
+\section{Passes 3981--3988: global mesh bound and photon spectral processor}
+\label{sec:pass3981-3988}
+
+The stronger reconciled Passes 3973--3980 certificate already proves that the fixed-parent weight-four compatibility graph has maximum clique size $57$, hence the selected $[36,17,4]$ doubly-even extension is globally extremal within that parent-extension problem.  It also reconstructs the literal five-fiber orbital algebra with $48$ relations and $904$ nonzero intersection constants.  The present packet retains those exact results and advances the open physical and compiler boundaries.
+
+\subsection{An ordering-independent adjacent-factor lower bound}
+
+Let $K=2A_{36}-J$ be the symmetric $36$-port Hadamard transfer matrix, so $K^2=36I$.  For an arbitrary port ordering and a prefix cut of size $k$, write
+\[
+K=\begin{pmatrix}A_k&B_k\\B_k^T&D_k\end{pmatrix}.
+\]
+Then
+\[
+B_kB_k^T=36I-A_k^2.
+\]
+Thus the cross-cut rank defect is the multiplicity of the eigenvalues $\pm6$ of $A_k$.  Using
+\[
+\operatorname{tr}A_k=-k,
+\qquad
+\operatorname{tr}A_k^2=k^2,
+\]
+and Cauchy--Schwarz gives the ordering-independent half-sequence
+\[
+1,2,3,4,5,5,6,7,7,8,8,8,9,9,9,9,10,9.
+\]
+Reflection symmetry therefore forces
+\[
+\boxed{N_{\rm adjacent}\ge229.}
+\]
+The published ordering has cut-rank sum $253$.  A deterministic exact ordering search found a second ordering with sum $251$.  The number $251$ is a stronger order-specific target, not yet an implemented factorization or a proof of global optimality.
+
+\subsection{Nuisance-complete photon timing tomography}
+
+A mode-count timing test must separate propagation slope from encoder, detector, spatial, spectral, and pulse-shape delays.  The declared model contains the target regressor
+\[
+\gamma\frac{L}{c}\log M
+\]
+alongside mode intercepts, encoder and detector swaps, measured transverse-momentum and spectral covariates, pulse width, intensity, detector walk, and drift.  The frozen design has $48$ randomized cells and $16$ parameters with full normalized rank $16$.
+
+For the declared synthetic benchmark of $20\,\mathrm{ps}$ single-event jitter and $10^6$ events per cell,
+\[
+\sigma_\gamma\simeq2.19\times10^{-9}.
+\]
+Omitting the measured spatial and spectral covariates creates a false
+\[
+\widehat\gamma\simeq1.1243\times10^{-9},
+\]
+whereas the complete noiseless model returns zero to numerical precision.  This explicitly demonstrates why structured-mode group delay is not, by itself, evidence for a mode-dependent vacuum front velocity.
+
+\subsection{Three exact photon constructions}
+
+For the W33 Laplacian $L=12I-A$,
+\[
+\operatorname{Spec}(L)=0^1,10^{24},16^{15}.
+\]
+A localized mode has $\langle L\rangle=12$ and $\operatorname{Var}(L)=12$, so its ideal pure-state quantum Fisher information is
+\[
+F_Q=48.
+\]
+The optimal extremal-sector superposition has $F_Q=256$.
+
+For the complement $B=J-I-A$,
+\[
+A+B:(39,-1,-1),
+\qquad
+A-B:(-15,5,-7).
+\]
+The sum arm is geometry-blind on the $39$-dimensional nonuniform sector, while the difference arm resolves the two protected sectors.  Its full ideal spectral-range QFI is $400$, with protected nonuniform value $144$.
+
+Most importantly, half a W33 Laplacian period gives the exact global reflection
+\[
+\boxed{
+U=e^{-i\pi L/2}=I-2E_{10}
+=-\frac13(I+A)+\frac{2}{15}J.
+}
+\]
+Each row has amplitude $-1/5$ on the point and its $12$ neighbors and amplitude $2/15$ on its $27$ nonneighbors, and
+\[
+U^2=I.
+\]
+Thus one engineered analog evolution can implement a global $40$-mode operation in parallel; it need not be interpreted as forty sequential orthogonal updates inside one optical period.
+
+For a genuine tensor carrier,
+\[
+\operatorname{mult}(m,r)=\binom mr13^{m-r}27^r,
+\qquad
+\operatorname{amp}(m,r)=
+\left(-\frac15\right)^{m-r}
+\left(\frac{2}{15}\right)^r.
+\]
+The $40^m$-entry tensor kernel therefore has only $m+1$ amplitude-shell types.  This is exact control-description compression, not Hilbert-space compression or a variable-$c$ mechanism.
+
+\subsection{Monster and evidence firewall}
+
+A GAP/CTblLib class-fusion sieve and an \texttt{mmgroup} canonical-integer engine test have been materialized upstream of the strict Monster gate.  The repository still lacks four explicit portable Monster words realizing the target $U_4(2)$ subgroup.  Therefore the promoted status remains
+\[
+\boxed{\texttt{PENDING\_EXPLICIT\_MM\_WORDS\_AND\_CLASS\_FUSION\_EXECUTION}.}
+\]
+No Monster embedding, laboratory photon result, hidden photon-node ontology, mode-dependent vacuum $c$, global circuit optimum, or unobserved remote CI/PDF result is claimed.
