@@ -1,0 +1,54 @@
+\section{Passes 4137--4144: matrix Wilson pumping, extended horizons, microscopic scale flow, and autonomous history dynamics}
+\label{sec:passes4137-4144}
+
+The exact certificate for this packet is
+\texttt{d16f8ab7ce51f2953cfd4866e7a716e31a271b3337a05b6105b367736bcecb6d}.
+All statements in this section concern finite group, Gaussian, Markov, clock, transfer-matrix, circuit, or band-topology models.
+
+\paragraph{Matrix-valued gauge-singlet holonomy.}
+The color space $(\mathbf3\otimes\bar{\mathbf3})^{\otimes3}$ contains six independent contraction singlets, with Gram spectrum
+\[
+\left\{\frac29,\left(\frac89\right)^4,\frac{20}{9}\right\}.
+\]
+Three orthonormal singlet channels support a tripod Hamiltonian whose rank-two dark bundle has two exact Wilson loops
+\[
+U_y=\begin{pmatrix}-\frac12&-\frac{\sqrt3}{2}\\[2pt]\frac{\sqrt3}{2}&-\frac12\end{pmatrix},
+\qquad
+U_z=\operatorname{diag}(e^{-2\pi i/3},e^{2\pi i/3}).
+\]
+Their group commutator has trace $-1/4$, so the adiabatic Wilson response is genuinely matrix-valued rather than a center phase.
+
+\paragraph{Extended active horizon lattice.}
+Nine localized squeezing cells act on one outgoing, nine partner, and nine environment modes.  The resulting $38\times38$ Nambu map has paraunitary residual $1.11\times10^{-15}$.  At $\omega=0.3$ the outgoing occupation is $0.01195894$, the greybody ratio is $0.48573560$, and the outgoing/partner logarithmic negativity is $0.20853530$.  The partner profile is centered at cell $4.0048$ with RMS width $1.1977$ cells.  The inside-flow lattice dispersion has two ultraviolet roots with opposite group velocities, giving explicit mode conversion without promoting the finite analogue model to gravitational Hawking radiation.
+
+\paragraph{Microscopic channel-balance flow.}
+Four independent local Markov channels sum to
+\[
+ds=\gamma(\ln80-4s)dt+\sqrt{2D}\,dW.
+\]
+The stationary law is Gaussian around $s_*=\ln80/4$, the Fokker--Planck gap is $4\gamma$, and the deterministic spectral dimension is exactly
+\[
+d_s=\frac{\ln80}{s_*}=4.
+\]
+For $D=0.01$ and $\gamma=1$, the mean noisy value is $4.00838502$ and relative entropy to stationarity decreases monotonically.
+
+\paragraph{Autonomous history-state scar gadget.}
+Three repetitions of the eight adjacent-SWAP branch compiler define a 24-gate program.  The static engineered history Hamiltonian
+\[
+H=\Omega\sum_{t=0}^{23}\sqrt{(t+1)(24-t)}
+\left(|t+1\rangle\langle t|\otimes U_{t+1}+\mathrm{h.c.}\right)
+\]
+has a 25-state clock, an equally spaced spectrum from $-24\Omega$ to $24\Omega$, perfect endpoint transfer at $\pi/(2\Omega)$, and full history revival at $\pi/\Omega$.  The endpoint data operation is $U_{\rm shift}^3=I$.
+
+\paragraph{Curvature scaling.}
+For $N$ independent dark-reservoir cells, $Z_N=Z_1^N$, $g_N=Ng_1$, and the scalar curvature satisfies
+\[
+R_N=\frac{R_1}{N}.
+\]
+The sign change remains at $\beta U=14.5791667571$, but its magnitude vanishes in the thermodynamic limit.  A positive $2\times2$ transfer matrix for a weakly coupled one-dimensional dark/bright hierarchy is analytic for finite coupling and has correlation length $0.14340675$ cells in the frozen demonstration, excluding a finite-temperature singularity in this class.
+
+\paragraph{Outside-box probes.}
+Ordering $U_yU_z$ versus $U_zU_y$ yields output fidelity $7/16$, furnishing a geometric phase-order transistor.  Levi edge connectivity four and the $2\ln3$ entropy-change bound per two-qutrit cut gate imply a throughput ceiling of $8\ln3$ nats per layer and at least 74 layers for 80 maximally mixed dark cells.  Finally, a spin-one Qi--Wu--Zhang control Hamiltonian on three singlet channels has band Chern numbers $(-2,0,2)$ and realizes a charge-two synthetic control-space monopole.
+
+\paragraph{Boundary.}
+No continuum QCD, fabricated non-Abelian pump, observed Hawking radiation, derivation of physical spacetime, thermodynamic phase transition, non-Abelian anyon, physical monopole, gravity, cosmology, or theory of everything follows from these finite exact results.
