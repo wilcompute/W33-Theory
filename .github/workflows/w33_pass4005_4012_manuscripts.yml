@@ -1,0 +1,42 @@
+name: Passes 4005-4012 Manuscript Evidence
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/BT4005_BT4012_exact_photon_revival_memory_insert.tex'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'tests/test_w33_pass4005_4012_exact_photon_revival.py'
+      - '.github/workflows/w33_pass4005_4012_manuscripts.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+concurrency:
+  group: pass4005-4012-manuscripts-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  papers:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check pytest
+      - run: pytest -q tests/test_w33_pass4005_4012_exact_photon_revival.py
+      - uses: WtfJoke/setup-tectonic@v3
+        with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
+      - name: Compile manuscript front doors
+        run: |
+          mkdir -p evidence/pass4005_4012
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass4005_4012/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass4005_4012/pdf_sha256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass4005-4012-papers
+          path: |
+            evidence/pass4005_4012/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
