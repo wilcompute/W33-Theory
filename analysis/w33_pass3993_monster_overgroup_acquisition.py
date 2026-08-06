@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """Pass 3993: fail-closed Monster U4(2) acquisition through explicit maximal overgroups."""
 from __future__ import annotations
-import argparse, ast, contextlib, hashlib, importlib.util, io, itertools, json, re, subprocess
+import argparse, ast, contextlib, hashlib, importlib.util, io, itertools, json, os, re, subprocess, sys
 from collections import deque
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
 TARGET_ORDER=25920
 PAIR_TARGET=[3,6,6,6,6,6]
+TRIPLE_TARGET=[648,648,648,648]
 
 def norm(x):
     x=x.lower().replace("psl","l").replace("psu","u")
@@ -30,6 +31,7 @@ def load_database(repo):
     source=repo/"GetGeneratorsOfSubgroupInM.py"
     if not source.exists(): raise FileNotFoundError(source)
     text=source.read_text(encoding="utf-8")
+    sys.path.insert(0,str(repo))
     spec=importlib.util.spec_from_file_location("monster_subgroups_db",source)
     if spec is None or spec.loader is None: raise RuntimeError("cannot import generator database")
     mod=importlib.util.module_from_spec(spec); spec.loader.exec_module(mod)
