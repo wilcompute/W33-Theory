@@ -1,0 +1,113 @@
+{
+  "schema": "w33.pass4089_4096.implementation_outside_box.v1",
+  "status": "PASS_EXACT_LAYOUT_OPTIMAL_REFERENCE_EXTERIOR_ANOMALY_NOTCH_MECHANICS_CODE_TURING_RESISTANCE",
+  "semantic_sha256": "57e7b7f57717193da8ff0a3d3ff01444e98e2f7ab264168374210f2cd1462039",
+  "boundaries": [
+    "All promoted statements are exact finite algebra, deterministic graph constructions, exact representation-ring identities, or explicitly stated perturbative numerical simulations.",
+    "No fabricated router, exact finite reusable irrational catalyst, derived Standard Model, measured pulse or mechanical prototype, laboratory sparse-error correction, nonlinear Turing experiment, gravity, cosmology, or theory of everything is claimed."
+  ],
+  "pass4089_router_layout": {
+    "layout_file": "data/w33_pass4089_four_router_layout.json",
+    "layout_semantic_sha256": "32e46ee39dde19ae936eb7334e79db5f083a75db9a9c4dafa6902f1190152556",
+    "routers": 4,
+    "swaps_per_router": 40,
+    "total_assignments": 160,
+    "identity": "(<00|B^dagger tensor I) U_sel (B|00> tensor I)=A_Levi/4",
+    "differential_error_bound": "eta_signal <= (1/4) sum_j |t_j exp(i theta_j)-1|",
+    "qsp_error_bound": "||delta U_QSP|| <= 5 eta_signal+6 delta_phi",
+    "example_budget": {"per_router_complex_error": 0.001, "phase_error_radians": 0.0005, "operator_bound": 0.008},
+    "boundary": "Exact route table and norm bounds; no chip, calibrated insertion loss, crosstalk map, or thermal-drift measurement."
+  },
+  "pass4090_optimal_phase_reference": {
+    "amplitudes": "c_n=sqrt(2/(K+2)) sin((n+1)pi/(K+2))",
+    "optimal_overlap": "sum c_(n-1)c_n=cos(pi/(K+2))",
+    "proof": "Rayleigh quotient of the length-(K+1) path adjacency matrix",
+    "wrap_weight": "2 sin^2(pi/(K+2))/(K+2)",
+    "diamond_bound": "1-cos(pi/(K+2))+2 sin^2(pi/(K+2))/(K+2)",
+    "asymptotic": "pi^2/(2K^2)+O(K^-3)",
+    "samples": {
+      "K32": {"actual_error": 0.003916406797549922, "bound": 0.004766614890733127},
+      "K64": {"actual_error": 0.001096332482869706, "bound": 0.0012012680507331795},
+      "K128": {"actual_error": 0.00029425543526967755, "bound": 0.00030096879032762315},
+      "K256": {"actual_error": 0.00007364662826336721, "bound": 0.00007528462842100564}
+    },
+    "boundary": "Optimal single-use path-overlap reference; repeated-use correlations and fault-tolerant preparation remain open."
+  },
+  "pass4091_exterior_anomaly_bridge": {
+    "multiplicity_spaces": "C^3 and C^2 from the dimension-57 commutant",
+    "central_charges": {"3": "-1/3", "2": "+1/2"},
+    "generation": [
+      "Q=(3,2)_(1/6)=3 tensor 2",
+      "u^c=(bar3,1)_(-2/3)=Lambda^2 3",
+      "d^c=(bar3,1)_(1/3)=conjugate 3",
+      "L=(1,2)_(-1/2)=conjugate 2",
+      "e^c=(1,1)_1=Lambda^2 2"
+    ],
+    "anomalies": {"SU3_cubed": 0, "SU3_sq_U1": 0, "SU2_sq_U1": 0, "gravity_sq_U1": 0, "U1_cubed": 0, "Witten_SU2_doublets": 4},
+    "minimum_linear_carrier_dimension": 99,
+    "minimum_linear_carrier_formula": "6*1+3*15+2*24",
+    "boundary": "Exact representation-ring identity, not dynamically derived particles, generations, masses, Yukawas, confinement, or measured couplings."
+  },
+  "pass4092_materialized_notch": {
+    "base": "h(t)=218790 T^-1 x^8(1-x)^8, x=t/T",
+    "waveform": "f=[h^(8)+124h^(6)+4644h^(4)+53056h''+102400h]/102400",
+    "T_over_J_inverse": 16,
+    "peak_per_unit_area": 0.18314110947845705,
+    "L2_norm_per_unit_area": 0.36334398280982766,
+    "exact_notches": ["4-sqrt6", "4", "4+sqrt6", "8"],
+    "etas": [0.2, 0.1, 0.05, 0.025],
+    "square_leakage": [2.872725658964879e-06, 7.007767868335358e-07, 1.7329360035041467e-07, 4.310317824030698e-08],
+    "notched_leakage": [8.952306970276451e-10, 5.4699178652472066e-11, 3.3789111627156127e-12, 2.0992906986895968e-13],
+    "loglog_slopes": {"square": 2.0191183097288676, "notched": 4.019131434651201},
+    "boundary": "Closed 160-mode simulation with one local diagonal control; differential loss, hardware bandwidth, and multi-control calibration remain open."
+  },
+  "pass4093_mechanical_tolerance": {
+    "nodes": 80,
+    "springs": 160,
+    "pin_one_node": true,
+    "self_stress_dimension": 81,
+    "squared_frequency_multiplicities": {"4-sqrt6": 24, "4": 30, "4+sqrt6": 24, "8": 1},
+    "Weyl_bound": "||delta M||<=8 epsilon k/m",
+    "half_gap_condition": "epsilon<(4-sqrt6)/16",
+    "relative_tolerance": 0.09690689107605138,
+    "tomography": "P_selfstress=I-D^T(DD^T)^+D",
+    "boundary": "Worst-case build tolerance and measurement protocol; no Euclidean bar-joint embedding, fabrication, or measured spectrum."
+  },
+  "pass4094_selfstress_sparse_code": {
+    "code": "ker D subset R^160",
+    "length": 160,
+    "dimension": 81,
+    "minimum_support": 8,
+    "reason": "Every nonzero circulation contains a cycle and the Levi girth is eight",
+    "detectable_sparse_errors": 7,
+    "uniquely_correctable_sparse_errors": 3,
+    "boundary": "Exact noiseless syndrome theorem; no robust decoder or experiment."
+  },
+  "pass4095_Turing_selection": {
+    "W33_modes": {"0": 1, "10": 24, "16": 15},
+    "select_24": {
+      "Jacobian": [[2,5],[-21,-20]],
+      "diffusivities": [0.1,10],
+      "determinant": "(lambda-5)(lambda-13)",
+      "positive_growth_at_lambda10": 0.125917182,
+      "unstable_dimension": 24
+    },
+    "select_15": {
+      "Jacobian": [[3.2,12],[-21,-10]],
+      "diffusivities": [0.1,10],
+      "determinant": "(lambda-11)(lambda-20)",
+      "positive_growth_at_lambda16": 0.118681204,
+      "unstable_dimension": 15
+    },
+    "boundary": "Exact linear Turing selection; nonlinear saturation, morphology, noise, and experiment remain open."
+  },
+  "pass4096_resistance_geometry": {
+    "laplacian_pseudoinverse": "L^+=(7/80)I+(1/160)A-(13/3200)J",
+    "adjacent_resistance": "13/80",
+    "nonadjacent_resistance": "7/40",
+    "ratio": "14/13",
+    "pair_counts": {"adjacent": 240, "nonadjacent": 540},
+    "Kirchhoff_index": "267/2",
+    "boundary": "Exact unit-resistor network theorem, not spacetime or gravity."
+  }
+}
