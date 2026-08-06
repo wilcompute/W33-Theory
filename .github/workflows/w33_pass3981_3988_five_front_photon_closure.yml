@@ -1,0 +1,73 @@
+name: Passes 3981-3988 Five Front Photon Closure
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/*3981*'
+      - 'analysis/*3982*'
+      - 'analysis/*3983*'
+      - 'analysis/*3984*'
+      - 'analysis/*3985*'
+      - 'analysis/*3986*'
+      - 'analysis/*3987*'
+      - 'analysis/*3988*'
+      - 'data/PART_3982_GLOBAL_MESH_BOUND.json'
+      - 'data/PART_3984_PHOTON_NUISANCE_TOMOGRAPHY.json'
+      - 'data/PART_3986_3988_PHOTON_CHAINED_CONSTRUCTIONS.json'
+      - 'data/w33_pass_namespace_registry_v2.d/3981-3988.json'
+      - 'tests/test_w33_pass3981_3988_five_front_photon_closure.py'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'docs/five-front-photon-closure.html'
+      - '.github/workflows/w33_pass3981_3988_five_front_photon_closure.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pass3981-3988-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check pytest numpy==2.3.5
+      - name: Recompute fast photon certificates
+        run: |
+          python analysis/w33_pass3984_photon_nuisance_tomography.py
+          python analysis/w33_pass3986_3988_photon_chained_constructions.py
+      - name: Focused regression
+        run: |
+          pytest -q tests/test_w33_pass3981_3988_five_front_photon_closure.py
+          git diff --check
+      - name: Check evidence firewall
+        run: |
+          grep -F 'PENDING_EXPLICIT_MM_WORDS' analysis/w33_mmgroup_u42_candidate_harness.py
+          grep -F 'BT3981_BT3988_five_front_three_photon_closure_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          grep -F '767e5fc07b97fb53d9e53d75381fbabf46ab775557a7a19151641d3b64f53ba8' analysis/BT3981_BT3988_five_front_three_photon_closure_index_insert.html
+  manuscripts:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: WtfJoke/setup-tectonic@v3
+        with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
+      - name: Compile manuscript front doors
+        run: |
+          mkdir -p evidence/pass3981_3988
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3981_3988/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3981_3988/pdf_sha256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3981-3988-papers
+          path: |
+            evidence/pass3981_3988/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
