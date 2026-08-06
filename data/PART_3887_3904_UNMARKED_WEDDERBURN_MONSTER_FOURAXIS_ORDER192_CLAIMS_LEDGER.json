@@ -1,0 +1,35 @@
+{
+  "schema": "w33.claims_ledger.v1",
+  "passes": [3887, 3904],
+  "semantic_sha256": "6ef2f6c4a0fa7e52da9f4abff6d899d0250eeabde1a601d53c40052a841e7039",
+  "promoted": [
+    "The 45 marked axes are exactly the minimum-norm nonzero idempotents, so the full unmarked algebra automorphism group is O6-(2) of order 51840.",
+    "The 19-dimensional rational coherent algebra has explicit split block models M2(Q)+Q+M2(Q)+Q+M3(Q), five explicit rational irreducible characters, and frozen primitive projectors.",
+    "The 480-element 40K4,3 incidence action decomposes on the five constructed irreducibles with a remaining degree-200 character of norm four.",
+    "The Passes 3837-3854 four-axis dimension census is withdrawn because an int64 einsum overflowed before modular reduction.",
+    "Overflow-safe contraction is stable over six primes and yields 20 generating-set orbits collapsing to eight simple nonunital subalgebra species of dimensions 4,5,6,10,12,14,16,24.",
+    "Four order-192 mechanisms are separated by exact barcodes: W(D4), D8xS4, the centerless octonion axis-line stabilizer, and the corrected centerless 2^4:D12 tomotope completion."
+  ],
+  "withdrawn_or_corrected": [
+    {
+      "source": "Passes 3837-3854",
+      "withdrawn": "four-axis weighted dimension census 4^135 5^720 6^1080 10^16740 14^27000 24^103320",
+      "reason": "np.einsum with dtype=int64 formed unreduced three-factor products and overflowed before reduction modulo 1000003",
+      "replacement": "4^135 5^720 6^1080 10^16740 12^5040 14^27000 16^14040 24^84240"
+    }
+  ],
+  "pending": [
+    "Portable Monster/mmgroup words for U4(2):2 and an executed Monster class fusion.",
+    "Complete tensor decompositions after resolving the residual constituents.",
+    "Irreducible decomposition of the hidden degree-200 norm-four character.",
+    "A SmallGroup identifier and complete internal structure theorem for the octonion axis-line stabilizer.",
+    "Remote CI and manuscript PDF success until observed.",
+    "Any hardware, laboratory, thermodynamic, or physical interpretation."
+  ],
+  "firewalls": [
+    "Same order does not identify finite groups or actions.",
+    "Same carrier cardinality does not identify permutation characters.",
+    "Modular computations use reduction between contractions; unreduced three-factor int64 contraction is forbidden.",
+    "Monster promotion requires portable MM strings and an independent class-fusion artifact."
+  ]
+}

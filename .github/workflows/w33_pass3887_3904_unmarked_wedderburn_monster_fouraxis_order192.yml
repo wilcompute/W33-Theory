@@ -1,0 +1,68 @@
+name: Passes 3887-3904 Unmarked Wedderburn Four-Axis Order-192
+
+on:
+  pull_request:
+    paths:
+      - 'analysis/w33_pass3887_3904_unmarked_wedderburn_monster_fouraxis_order192.py'
+      - 'analysis/BT3887_BT3904_unmarked_wedderburn_monster_fouraxis_order192*'
+      - 'data/PART_3887_3904_*'
+      - 'tests/test_w33_pass3887_3904_unmarked_wedderburn_monster_fouraxis_order192.py'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - 'docs/unmarked-wedderburn-fouraxis-order192.html'
+      - '.github/workflows/w33_pass3887_3904_unmarked_wedderburn_monster_fouraxis_order192.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy sympy pytest
+      - name: Compile source
+        run: python -m py_compile analysis/w33_pass3887_3904_unmarked_wedderburn_monster_fouraxis_order192.py
+      - name: Recompute independent exact certificate
+        run: python analysis/w33_pass3887_3904_unmarked_wedderburn_monster_fouraxis_order192.py --output /tmp/pass3887-3904.json
+      - name: Compare parsed frozen result
+        run: |
+          python - <<'PY'
+          import json
+          expected=json.load(open('data/PART_3887_3904_UNMARKED_WEDDERBURN_MONSTER_FOURAXIS_ORDER192_results.json'))
+          observed=json.load(open('/tmp/pass3887-3904.json'))
+          assert observed == expected
+          assert observed['semantic_sha256'] == '6ef2f6c4a0fa7e52da9f4abff6d899d0250eeabde1a601d53c40052a841e7039'
+          assert all(observed['checks'].values())
+          PY
+      - name: Run focused regression and correction firewall
+        run: pytest -q tests/test_w33_pass3887_3904_unmarked_wedderburn_monster_fouraxis_order192.py
+      - name: Check source reachability
+        run: |
+          grep -F 'BT3887_BT3904_unmarked_wedderburn_monster_fouraxis_order192_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          grep -F 'unmarked-wedderburn-fouraxis-order192.html' data/w33_current_frontier_manifest_v1.json
+          grep -F '6ef2f6c4a0fa7e52da9f4abff6d899d0250eeabde1a601d53c40052a841e7039' docs/unmarked-wedderburn-fouraxis-order192.html
+
+  manuscripts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: wtfjoke/setup-tectonic@v3
+      - name: Compile all manuscript front doors
+        run: |
+          tectonic w33_paper.tex
+          tectonic photonic_holonet.tex
+          tectonic holonet_machine_blueprint.tex
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3887-3904-canonical-pdfs
+          path: |
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
