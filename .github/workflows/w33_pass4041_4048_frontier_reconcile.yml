@@ -1,0 +1,34 @@
+name: Passes 4041-4048 Protected Frontier Reconcile
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'tools/integrate_pass4041_4048_frontier.py'
+      - 'analysis/BT4041_BT4048_eight_physics_expansion_insert.tex'
+      - 'analysis/BT4041_BT4048_eight_physics_expansion_index_insert.html'
+      - 'docs/eight-physics-expansion.html'
+      - '.github/workflows/w33_pass4041_4048_frontier_reconcile.yml'
+  workflow_dispatch:
+permissions: {contents: write}
+concurrency: {group: pass4041-4048-frontier, cancel-in-progress: false}
+jobs:
+  reconcile:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python tools/integrate_pass4041_4048_frontier.py | tee /tmp/frontier.log
+      - run: grep -F 'PASS_4041_4048_FRONTIER 1 1 1' /tmp/frontier.log
+      - run: git diff --exit-code -- docs/index.html
+      - name: Commit manifest reconciliation
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/w33_current_frontier_manifest_v1.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Pass 4048: reconcile eight-physics public frontier'
+          git pull --rebase origin master
+          git push
