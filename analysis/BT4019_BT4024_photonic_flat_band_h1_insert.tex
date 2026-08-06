@@ -1,0 +1,72 @@
+\section{The protected $H_1$ sector as an exact photonic flat band}
+\label{sec:bt4019-4024}
+
+BT548 already identified the protected Levi cycle projector with the
+$-2$ eigenspace of the Levi line graph.  The new step is the explicit
+coupler-as-site physical model and its apartment-frame and perturbation
+refinement.
+
+Promote the $160$ incidence links of the $80$-vertex Levi graph $L$ to the
+sites of
+\[
+ X=\operatorname{LineGraph}(L).
+\]
+Then $X$ has $160$ sites, $480$ links, and degree $6$.  For the oriented
+Levi boundary matrix $D$,
+\[
+ \boxed{A_X=D^TD-2I.}
+\]
+Hence
+\[
+ \boxed{\ker D=E_{-2}(A_X)},
+\]
+and the protected $H_1=81$ sector is exactly the $-2$ flat band of $X$.
+Its spectrum is
+\[
+ 6^1+(2+\sqrt6)^{24}+2^{30}+(2-\sqrt6)^{24}+(-2)^{81}.
+\]
+
+Let $C\in\{-1,0,1\}^{160\times1620}$ have one signed alternating column
+for each Levi octagon.  Every such apartment column $c$ has support $8$ and
+satisfies
+\[
+ A_Xc=-2c.
+\]
+The $1620$ compact apartment states span the full flat band, and
+\[
+ P_{H_1}=\frac1{160}CC^T,
+\]
+\[
+ CC^T=\frac12(A_X-6I)(A_X-2I)(A_X^2-4A_X-2I).
+\]
+After normalizing each column by $\sqrt8$, they form a unit-norm tight frame:
+\[
+ \boxed{
+ \left(\frac C{\sqrt8}\right)
+ \left(\frac C{\sqrt8}\right)^T=20P_{H_1}
+ },
+\qquad \frac{1620}{81}=20.
+\]
+Each secondary site belongs to exactly $81$ apartments,
+\[
+ \boxed{160\cdot81=1620\cdot8=12960.}
+\]
+
+The perturbation boundary is exact.  A uniform onsite shift $\delta I$ moves
+the band without splitting it, whereas
+\[
+ P_{H_1}|e\rangle\langle e|P_{H_1}
+\]
+has rank one and nonzero eigenvalue $81/160$.  More generally,
+\[
+ \operatorname{Tr}(P_{H_1}\operatorname{diag}v)
+ =\frac{81}{160}\sum_e v_e.
+\]
+Thus the symmetric model has an exact flat band, but generic nonuniform onsite
+or coupling disorder is not proved harmless.
+
+This $160$-site line-graph Hamiltonian, the primary $80$-mode incidence
+Hamiltonian, and the passive $160$-dimensional link-current coordinates are
+related but distinct physical models.  No fabricated secondary lattice,
+measured localization, disorder tolerance, local coupling synthesis, variable
+vacuum $c$, hidden-node ontology, or laboratory performance is claimed.
