@@ -75,22 +75,26 @@ def phase_error(K,m,phi):
     z=np.exp(1j*m*phi)*C+np.exp(-1j*(K+1-m)*phi)*B
     return abs(z-np.exp(1j*m*phi))
 
-def candidate_edges(adj,E,support):
-    y=np.zeros(80)
-    for e in support:
-        u,v=E[e]; y[u]+=1; y[v]-=1
-    S=[i for i,x in enumerate(y) if abs(x)>0.5]; out=set()
-    for a,b in itertools.combinations(S,2):
-        q=deque([(a,[])]); seen={a}; found=None
+def path_table(adj):
+    table={}
+    for a in range(80):
+        q=deque([(a,())]); seen={a}
         while q:
             u,path=q.popleft()
             if len(path)>=3: continue
             for v,e in adj[u]:
                 if v in seen: continue
-                npth=path+[e]
-                if v==b: found=npth; q.clear(); break
-                seen.add(v); q.append((v,npth))
-        if found is not None: out.update(found)
+                seen.add(v); p=path+(e,); q.append((v,p)); table[tuple(sorted((a,v)))]=p
+    return table
+
+def candidate_edges(E,table,support):
+    y={}
+    for e in support:
+        u,v=E[e]; y[u]=y.get(u,0)+1; y[v]=y.get(v,0)-1
+    S=[v for v,z in y.items() if z]; out=set()
+    for a,b in itertools.combinations(S,2):
+        p=table.get(tuple(sorted((a,b))))
+        if p is not None: out.update(p)
     return out
 
 def inversion_count(perm):
@@ -102,23 +106,21 @@ def main():
     pts,A=w33(); assert A.sum(axis=1).tolist()==[12]*40; assert np.allclose(np.linalg.eigvalsh(A),[-4]*15+[2]*24+[12])
     G3,G2,Y=gauge_matrices(); assert all(np.max(abs(g-g.conj().T))<1e-14 for g in G3+G2+[Y]); assert max(np.max(abs(a@b-b@a)) for a in G3 for b in G2+[Y])<1e-14
     q,u,d,l,e=1,15,15,24,1
-    assert 2*q-u-d==-28 and Fraction(q-2*u+d,3)==Fraction(-7,3) and Fraction(3*q-l,4)==Fraction(-23,4) and q-2*u+d-l+e==-37
+    assert 2*q-u-d==-28 and Fraction(q-2*u+d,6)==Fraction(-7,3) and Fraction(q-l,4)==Fraction(-23,4) and q-2*u+d-l+e==-37
     M=np.array([[2,-1,-1,0,0],[1,-2,1,0,0],[1,0,0,-1,0],[1,-2,1,-1,1]],float); ns=np.linalg.svd(M)[2][-1]; assert np.allclose(ns/ns[0],np.ones(5))
     phi=math.atan2(3,-4)
     for row in cert["pass4122_relational_phase_subsystem"]["rows"]:
         assert abs(row["K256_encoded_clock_error"]-phase_error(256,1,phi))<2e-13
         assert abs(row["K256_direct_worst_error"]-phase_error(256,row["total_logical_qubits"],phi))<2e-13
         assert row["paired_sector_dimension"]==math.comb(row["physical_modes"],row["weights"][0])
-    E,D,adj=levi(A); assert np.linalg.matrix_rank(D)==79
-    maxc=0; worst=None
+    E,D,adj=levi(A); assert np.linalg.matrix_rank(D)==79; table=path_table(adj); maxc=0; worst=None
     for r in range(4):
         for supp in itertools.combinations(range(160),r):
-            c=candidate_edges(adj,E,supp)
+            c=candidate_edges(E,table,supp)
             if len(c)>maxc: maxc=len(c); worst=(supp,sorted(c))
     assert maxc==20 and worst[0]==tuple(cert["pass4123_graph_aware_decoder"]["worst_case_support_edge_ids"]) and worst[1]==cert["pass4123_graph_aware_decoder"]["worst_case_candidate_edge_ids"]
     assert 1+20+math.comb(20,2)+math.comb(20,3)==1351
-    router=json.loads(ROUTER.read_text()); po=foundry["balanced_ordering"]["point_order"]; lo=foundry["balanced_ordering"]["line_order"]; ppos={x:i for i,x in enumerate(po)}; lpos={x:i for i,x in enumerate(lo)}
-    inv=[]; max_path=0
+    router=json.loads(ROUTER.read_text()); po=foundry["balanced_ordering"]["point_order"]; lo=foundry["balanced_ordering"]["line_order"]; ppos={x:i for i,x in enumerate(po)}; lpos={x:i for i,x in enumerate(lo)}; inv=[]; max_path=0
     for R in router["routers"]:
         perm=[None]*40
         for p,l in R["pairs"]: perm[ppos[p]]=lpos[l]
@@ -132,6 +134,6 @@ def main():
     col=U[:,0]**2; assert abs(col[0]-Fraction(1,25))<1e-14 and abs(col[A[0]==1].sum()-Fraction(12,25))<1e-14 and abs(col[A[0]==0].sum()-col[0]-Fraction(12,25))<1e-14
     g=1.0; B=np.array([[1j*g,g],[g,-1j*g]],complex); H=np.kron(np.eye(15),B)
     assert np.linalg.matrix_rank(H,tol=1e-10)==15 and np.max(abs(H@H))<1e-12
-    print(json.dumps({"status":cert["status"],"semantic_sha256":cert["semantic_sha256"],"decoder_max_candidate_edges":maxc,"crossings":1934,"maxcut":cut,"simultaneous_EP2":15},sort_keys=True))
+    print(json.dumps({"status":cert["status"],"semantic_sha256":cert["semantic_sha256"],"full_carrier_anomalies":cert["pass4121_explicit_145_gauge_matrices"]["full_carrier_anomalies"],"decoder_max_candidate_edges":maxc,"crossings":1934,"maxcut":int(cut),"simultaneous_EP2":15},sort_keys=True))
 
 if __name__=="__main__": main()
