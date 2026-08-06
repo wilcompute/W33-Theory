@@ -2,7 +2,7 @@
   "schema": "w33.pass_namespace_registry.v2.entry",
   "range": [3973, 3980],
   "slug": "a4_57_extremal_mesh_optimizer_photon_mode_experiment_rank48_tensor_monster_gate_three_bonkers",
-  "title": "A4=57 geometry, exact mesh neighborhood, one-photon falsifier, literal rank-48 tensor, Monster gate, and three chained constructions",
+  "title": "Global A4=57 fixed-parent extremality, active-mixer optimization, six-model photon protocol, literal rank-48 tensor, Monster gate, and three constructions",
   "status": "complete_remote_ci_pdf_frontier_reconcile_monster_external_and_photon_lab_pending",
   "owner": "openai-gpt-5.6-thinking",
   "reserved_at": "2026-08-06T00:28:00-04:00",
@@ -16,13 +16,15 @@
     "full_certificate_manifest": "data/PART_3973_3980_EXTREMAL_MESH_PHOTON_TENSOR_manifest.json",
     "certificate_checker": "analysis/w33_pass3973_3980_check.py",
     "literal_rank48_tensor": "data/.bootstrap/PART_3973_3980_RANK48_TENSOR.b64",
-    "report": "analysis/BT3973_BT3980_extremal_mesh_photon_tensor.md",
+    "report_summary": "analysis/BT3973_BT3980_extremal_mesh_photon_tensor.md",
+    "report_full": "analysis/BT3973_BT3980_extremal_mesh_photon_tensor_monster.md",
     "rank48_amendment": "analysis/BT3973_BT3980_rank48_literal_tensor_amendment.md",
-    "insert": "analysis/BT3973_BT3980_extremal_mesh_photon_tensor_insert.tex",
-    "test": "tests/test_pass3973_3980_extremal_mesh_photon_tensor.py",
+    "insert_combined": "analysis/BT3973_BT3980_combined_extremal_mesh_photon_tensor_insert.tex",
+    "test_summary": "tests/test_pass3973_3980_extremal_mesh_photon_tensor.py",
+    "test_full": "tests/test_w33_pass3973_3980_extremal_mesh_photon_tensor_monster.py",
     "atlas": "docs/extremal-mesh-photon-tensor.html"
   },
-  "result": "The 57 support graph is exactly T(10) disjoint union 2T(4); the one-parameter MacWilliams family gives only t<=245 and does not prove global A4 extremality. All 630 single transpositions of the 36-port order were replayed exactly: none beats 398 rotations, 22 tie it, and all have depth 69. A length-slope/intercept one-photon experiment separates mode-dependent device latency from propagation. The rank-48 algebra is closed twice: 178 nonzero products in split Wedderburn matrix-unit coordinates and a literal 48-relation orbital tensor containing 904 nonzero intersection constants, tensor SHA-256 a17a375552c102d281e3ba79b602b67aa54a426fd68b1878293763ea65395ff9. The Monster gate remains fail-closed. Three constructions separate direct-sum capacity, tensor-product factors, serial speed limits, time-bandwidth packing, and self-similar address density while preserving invariant vacuum c.",
-  "coordination": "Preserves completed Passes through 3972, does not modify protected docs/index.html, and adds the paper result once through the shared current-frontier TeX manifest used by all three manuscript wrappers. The public JSON frontier reconciler exists but no workflow execution is observable.",
-  "boundary": "No global A4 extremality, global mesh optimum, experimentally achieved capacity, variable vacuum c, literal hidden photon-node ontology, Monster embedding or class fusion, remote CI/PDF success, generated public-frontier reconciliation success, hardware performance, or laboratory result is promoted."
+  "result": "Global A4=57 extremality is proved among doubly-even self-orthogonal extensions containing the fixed [36,6,16] parent code. The 945-word compatibility graph has O6-(2) orbits 135+810; exact clique searches give orbit maxima 15 and 54, while the fixed-representative neighborhood search proves the global bound 57, attained by an explicit [36,17,4] code. Its weight-four graph is T(10) disjoint union 2T(4), and its coordinate stabilizer has order 192. The common-order exact mesh remains 398=302 genuine mixers+96 signed swaps in 69 layers and is radius-one optimal over all 630 transpositions; allowing distinct input/output orders yields 401=296 genuine mixers+105 signed swaps, removing six active mixers, while an exact fixed-order cut argument gives lower bound 253. The six-model photon protocol separates invariant-front direct-sum capacity, transverse-structure group delay, a hidden-node falsifier, engineered W33 graph kinetics with 0:10:16 sectors, hyperentangled tensor factors, and self-similar coupling efficiency. The rank-48 algebra is closed both in split Wedderburn coordinates and as a literal 48-relation orbital tensor containing 904 nonzero intersection constants, tensor SHA-256 a17a375552c102d281e3ba79b602b67aa54a426fd68b1878293763ea65395ff9. The Monster gate remains fail-closed.",
+  "coordination": "Preserves completed Passes through 3972 and the active disjoint Passes 3981-3988 range. The combined theorem insert is reachable through the shared current-frontier TeX manifest used by all three manuscript wrappers. Protected docs/index.html was not modified. The public JSON frontier reconciler exists but no workflow execution is observable.",
+  "boundary": "No uniqueness or complete orbit census of maximum A4=57 codes, global mesh optimum, physically free signed swaps, measured photon delay or achieved capacity, variable vacuum c, literal hidden photon-node ontology, Monster embedding or class fusion, remote CI/PDF success, generated public-frontier reconciliation success, hardware performance, or laboratory result is promoted."
 }
