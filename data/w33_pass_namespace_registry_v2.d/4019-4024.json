@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [4019, 4024],
+  "slug": "photonic_line_graph_flat_band_apartment_tight_frame_and_disorder_boundary",
+  "title": "Photonic line-graph flat band, apartment compact states, H1 tight frame, local address law, and disorder boundary",
+  "status": "reserved",
+  "owner": "openai-gpt-5.6-thinking",
+  "reserved_at": "2026-08-06T09:45:00-04:00",
+  "purpose": "Translate the exact 160-coupler H1 theorem into a line-graph flat-band construction. Prove the -2 flat band, show that the 1620 Levi apartments are compact localized states spanning it as a unit-norm tight frame, and state the exact robustness boundary under uniform versus local perturbations.",
+  "coordination": "Build on BT545-BT550 and Passes 4013-4018 without relabeling old results. Distinguish the secondary 160-site line-graph Hamiltonian from the primary 80-mode incidence device and from link-current dynamics.",
+  "boundary": "Reservation only. External photonic flat-band literature is context, not evidence of a fabricated W33 lattice. No device, disorder tolerance, local synthesis, measured localization, variable vacuum c, or laboratory performance is promoted."
+}
