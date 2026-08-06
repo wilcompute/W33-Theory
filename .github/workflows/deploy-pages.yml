@@ -5,7 +5,8 @@ on:
     branches:
       - master
     paths:
-      - 'docs/**'
+      - 'docs/index.html'
+      - 'docs/.pages-deploy-restored-index-*'
       - 'tools/check_website_migration_authorization.py'
       - 'data/website_migration_authorization.json'
       - '.github/workflows/deploy-pages.yml'
@@ -17,7 +18,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: pages-restored-authoritative-index
   cancel-in-progress: true
 
 jobs:
