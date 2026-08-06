@@ -1,0 +1,184 @@
+\section{Minimal spectral compiler, protected pulse alphabet, scaling family, and magic reduction}
+\label{sec:bt4049-4056}
+
+\paragraph{Minimal bounded QSVT compiler.}
+With $X=H_L/4$, the relevant spectrum is
+\[
+\{-1,-\sqrt6/4,0,\sqrt6/4,1\}.
+\]
+The unique exact odd cubic sign interpolant exceeds one on $[-1,1]$, reaching
+approximately $1.09215935$, and is therefore not directly QSVT-admissible.  The
+minimal bounded odd polynomial is the quintic
+\[
+\begin{aligned}
+p_5(x)={}&\left(\frac9{25}+\frac{24\sqrt6}{25}\right)x
++\left(-\frac{48}{25}-\frac{152\sqrt6}{225}\right)x^3\\
+&+\left(\frac{64}{25}-\frac{64\sqrt6}{225}\right)x^5.
+\end{aligned}
+\]
+It has the exact certificate
+\[
+1-p_5(x)^2=
+\frac{4096(29-6\sqrt6)}{16875}(1-x^2)
+\left(x^2-\frac38\right)^2q_+(x)q_-(x),
+\]
+where
+\[
+q_\pm(x)=x^2\pm\left(1+\frac{\sqrt6}{2}\right)x+
+\frac{9+\sqrt6}{8}>0.
+\]
+Thus $|p_5(x)|\le1$ on $[-1,1]$, and the exact polar sign transform admits a
+degree-five, six-phase QSVT realization once a block encoding of $H_L/4$ is
+provided.  Degree five is minimal because the unique degree-three interpolant
+violates boundedness.
+
+\paragraph{Protected local phase pulses.}
+For $P=P_{H_1}$ and
+\[
+|u_e\rangle=\sqrt{160/81}\,P|e\rangle,
+\]
+the normalized off-diagonal overlap alphabet is
+\[
+-\frac13,\quad\frac19,\quad-\frac1{27},\quad\frac1{81},
+\]
+with respective per-site multiplicities $6,18,54,81$.  A calibrated local
+detuning produces
+\[
+A_e=P|e\rangle\!\langle e|P=rac{81}{160}|u_e\rangle\!\langle u_e|.
+\]
+Holding amplitude $\delta_e$ for
+\[
+t_\phi=\frac{160\phi}{81\delta_e}
+\]
+implements
+\[
+U_e(\phi)=I+(e^{-i\phi}-1)|u_e\rangle\!\langle u_e|.
+\]
+At $\phi=\pi$ this is a Householder reflection.  Two-reflection rotations have
+angle alphabet
+\[
+2\arccos(1/3),\quad2\arccos(1/9),\quad
+2\arccos(1/27),\quad2\arccos(1/81).
+\]
+Together with the Pass~4034 Lie-closure theorem, these are exact pulse-level
+generators of $\mathfrak u(81)$ on the protected memory.
+
+\paragraph{A local four-dimensional W33-fiber family.}
+Define
+\[
+G_n=W33\square C_n\square C_n\square C_n\square C_n.
+\]
+Then $|V(G_n)|=40n^4$ and $\deg G_n=20$.  For physical side length $L$ and
+internal scale $M$, use
+\[
+\mathcal L_n=M^2L_{W33}\otimes I+
+I\otimes\left(\frac nL\right)^2
+\sum_{\mu=1}^4L_{C_n}^{(\mu)}.
+\]
+The heat trace factors into the W33 internal trace and four identical discrete
+circle traces.  In the window
+\[
+M^{-2}\ll t\ll L^2,\qquad(L/n)^2\ll t,
+\]
+the internal excitations freeze while the rescaled discrete torus converges to
+a real four-torus, giving $d_s\to4$.  This is a controlled four-dimensional
+base with W33 internal fiber; it does not derive dimension four from W33.
+
+\paragraph{Exact one-copy M36 magic reduction.}
+For
+\[
+|m\rangle=(0,1,-1,1)/\sqrt3,
+\]
+measure the first qubit in the $X$ basis and retain the plus result.  With
+probability $5/6$, the remaining qubit is
+\[
+(-|0\rangle+2|1\rangle)/\sqrt5.
+\]
+After the Clifford $R_x(\pi/2)$ this becomes
+\[
+|A_\phi\rangle=(|0\rangle+e^{i\phi}|1\rangle)/\sqrt2,
+\qquad e^{i\phi}=(-4+3i)/5.
+\]
+Since $\cos\phi=-4/5$, the rational-cosine theorem implies
+$\phi/\pi\notin\mathbb Q$.  A CNOT from data to this resource followed by a
+computational-basis resource measurement applies
+$\operatorname{diag}(1,e^{i\phi})$ on one outcome and its inverse on the
+other.  Postselecting the desired outcome succeeds with total probability
+\[
+\boxed{5/12}.
+\]
+The irrational $z$-rotation, Clifford conjugates, and an entangling Clifford
+gate give ideal postselected universal quantum computation.  Deterministic
+correction, logical encoding, distillation, and a fault-tolerance threshold
+remain open.
+
+\paragraph{Finite-to-observable quadratic functor.}
+On
+\[
+\mathcal H_n=\ell^2((C_n)^4)\otimes\mathbb C^{40},
+\]
+define
+\[
+K_n=\left(\frac nL\right)^2L_{(C_n)^4}\otimes I+
+I\otimes[m_0^2I+g(12I-A_{W33})].
+\]
+Full W33 automorphism invariance restricts the internal quadratic algebra to
+$\operatorname{span}\{I,A,J\}$.  The resulting free species have squared
+masses
+\[
+m_0^2,\qquad m_0^2+10g,\qquad m_0^2+16g
+\]
+with multiplicities $1,24,15$.  This is an explicit free-field observable
+dictionary and selection rule, not a Standard Model construction.
+
+\paragraph{Outside-box shell splitter.}
+For a localized point state, the exact reflection gives amplitude $-1/5$ on
+the closed neighbourhood of size $13$ and $2/15$ on the far shell of size
+$27$:
+\[
+U|v\rangle=-\frac{\sqrt{13}}5|N_v\rangle+
+\frac{2\sqrt3}{5}|F_v\rangle.
+\]
+The shell probabilities are $13/25$ and $12/25$, yielding
+$H_2(13/25)\simeq0.998845536$ bits of single-photon mode-partition
+entanglement.  Since $U^2=I$, the shell split recombines exactly.
+
+\paragraph{Outside-box apartment projective code.}
+The 1620 normalized apartment states in dimension 81 have absolute inner
+products
+\[
+0,\quad1/8,\quad1/4,\quad3/8,\quad1/2,\quad1.
+\]
+Their fourth-power frame potential is
+\[
+F_2=79785/16,
+\]
+whereas a real projective 2-design would have $97200/83$.  The exact defect
+ratio is $16351/3840$.  Thus the apartment frame is a five-angle tight
+projective code but not a projective 2-design; tightness does not imply Haar
+isotropy or maximal scrambling.
+
+\paragraph{Outside-box spectral calorimeter.}
+The finite W33 spectrum $0^1+10^{24}+16^{15}$ has partition function
+\[
+Z(\beta)=1+24e^{-10\beta}+15e^{-16\beta}.
+\]
+Its Schottky heat-capacity peak occurs at
+\[
+\beta_*\simeq0.4127094288,
+\qquad k_BT_*/J\simeq2.4225277564,
+\]
+with
+\[
+C_{\max}/k_B\simeq3.8006256108.
+\]
+This is an exact single-particle spectral fingerprint, not a measured or
+interacting thermodynamic response.
+
+\paragraph{Boundary.}
+The results establish an exact minimal bounded spectral compiler, pulse-level
+protected controls, a convergent W33-fibered four-dimensional family, ideal
+postselected non-Clifford universality, and a free quadratic observable
+functor.  They do not establish a fabricated block encoding, extracted phase
+list, deterministic fault-tolerant injection, Lorentzian spacetime, Standard
+Model, gravity, measured calorimetry, or a theory of everything.
