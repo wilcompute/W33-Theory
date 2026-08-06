@@ -1,0 +1,118 @@
+\section{Exact finite-detuning photon revival and coherent delay memory}
+\label{sec:bt4005-4012}
+
+\paragraph{Exact non-dispersive incidence revival.}
+Let $N$ be the $40\times40$ point--line incidence matrix of $W(3,3)$,
+so that $NN^{\mathsf T}=4I+A$.  For the full point--bus Hamiltonian
+\[
+ H=g\begin{pmatrix}0&N\\N^{\mathsf T}&(\Delta/g)I\end{pmatrix},
+\]
+the finite values
+\[
+ \boxed{\Delta/g=2\sqrt2},\qquad
+ \boxed{gt=\pi/\sqrt2}
+\]
+produce an exact zero-leakage revival.  The half-angle windings of the
+singular-value-$4$, singular-value-$\sqrt6$, and bus-dark sectors are
+$3\pi$, $2\pi$, and $\pi$, respectively.  Hence the point action is
+\[
+ \boxed{U_P=E_{16}-E_6+E_0
+ =I-2E_6=-\frac{I+A}{3}+\frac{2J}{15}},
+\]
+and the line action is $U_L=F_{16}-F_6+F_0$.  Direct exponentiation of
+the full eighty-mode matrix gives operator error below $6.6\times10^{-15}$
+and off-block leakage below $2.9\times10^{-15}$.  This is not a
+dispersive approximation.
+
+\paragraph{Quadratic-form Wigner--Smith tomography.}
+For $\tau(v)=v^\dagger Qv$,
+\[
+ Q_{ii}=\tau(e_i),
+\]
+\[
+ \Re Q_{ij}=\tau\!\left(\frac{e_i+e_j}{\sqrt2}\right)
+ -\frac{Q_{ii}+Q_{jj}}2,
+\]
+\[
+ \Im Q_{ij}=\frac{Q_{ii}+Q_{jj}}2
+ -\tau\!\left(\frac{e_i+i e_j}{\sqrt2}\right).
+\]
+Thus a general Hermitian forty-mode delay matrix requires exactly
+$40^2=1600$ expectation probes, reduced to
+$40+\binom{40}{2}=820$ under reciprocal real symmetry.  The exact
+synthetic reconstruction recovered all 240 W33 edges with maximum
+matrix error below $2.6\times10^{-15}$.  For a three-frequency central
+difference and a linear phase law,
+\[
+ Q_h=\frac{\sin(h\theta' L)}h
+ =Q-\frac{h^2}{6}(\theta')^3L^3+O(h^4),
+\]
+and Richardson extrapolation removes the leading error.  A separate
+precursor/front measurement remains mandatory before testing any
+mode-count-dependent causal-front slope.
+
+\paragraph{Exact bright-sector write--hold--read gate.}
+Define
+\[
+ T=N^{\mathsf T}\left(\frac{E_{16}}4+\frac{E_6}{\sqrt6}\right),
+\qquad
+ X=\begin{pmatrix}0&T^{\mathsf T}\\T&0\end{pmatrix}.
+\]
+Then
+\[
+ T^{\mathsf T}T=E_{16}+E_6,
+ \qquad TT^{\mathsf T}=F_{16}+F_6,
+\]
+and
+\[
+ \boxed{W=e^{-i\pi X/2}}
+\]
+swaps the twenty-five-dimensional point-bright sector into the
+line-bright sector while fixing both fifteen-dimensional dark sectors.
+A diagonal bus hold phase followed by $W^\dagger$ returns
+\[
+ \boxed{e^{-i\phi_0}E_0+e^{-i\phi_6}E_6+e^{-i\phi_{16}}E_{16}}
+\]
+on the point modes.  An arbitrary three-phase test had operator error
+below $2.7\times10^{-15}$ and leakage below $3.1\times10^{-15}$.  This
+is an exact controlled-Hamiltonian synthesis, not a fabricated-memory
+claim.
+
+\paragraph{Three further photon constructions.}
+Exact zero-leakage reflection revivals satisfy the integer quadric
+\[
+ \boxed{3n_{16}^2-8n_6^2+5k^2=0},
+\]
+with $n_{16}+k$ even and $n_6+k$ odd.  The parameter map is
+\[
+ \frac{\Delta}{g}=k\sqrt{\frac{24}{n_6^2-k^2}},
+ \qquad
+ gt=2\pi\sqrt{\frac{n_6^2-k^2}{24}}.
+\]
+The shortest positive primitive solution is $(n_{16},n_6,k)=(3,2,1)$,
+which yields the revival above.
+
+Writing $\tau=\operatorname{Tr}Q/480$, an ideal W33 delay matrix obeys
+the basis-free checksum
+\[
+ \boxed{Q(Q-10\tau I)(Q-16\tau I)=0},
+\]
+and the geometry is recovered self-calibratingly by
+\[
+ \boxed{A=-\frac{Q-(\operatorname{Tr}Q/40)I}{\tau}}.
+\]
+For $m$ commuting physical copies, all factors revive at the same gate
+time $gt=\pi/\sqrt2$.  The point action is $U_P^{\otimes m}$, with
+\[
+ \boxed{m_+=\frac{40^m+(-8)^m}{2},\qquad
+ m_-=\frac{40^m-(-8)^m}{2}}.
+\]
+This is a synchronization theorem, not a hardware-compression theorem.
+
+\paragraph{Algebra and evidence boundary.}
+The literal 48-relation Fourier/fusion calculation and the GAP/mmgroup
+Monster maximal-overgroup search are exposed through an artifact-producing
+execution workflow.  No relation-fusion rank, Monster words, or embedding
+is promoted until the generated artifacts are inspected.  Fabricated
+hardware, measured delay matrices, literal hidden photon nodes, variable
+vacuum light speed, remote CI, and PDF evidence likewise remain unclaimed.
