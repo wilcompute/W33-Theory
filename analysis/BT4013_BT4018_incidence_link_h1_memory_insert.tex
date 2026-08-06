@@ -1,0 +1,68 @@
+\section{Physical incidence-link $H_1$ memory and exact projector gates}
+\label{sec:bt4013-4018}
+
+The lower-degree point--line incidence architecture has $80$ modes and $160$
+physical couplers.  Let $D\in\{-1,0,1\}^{80\times160}$ be its oriented
+vertex--edge boundary matrix and put $K=D^TD$.  The exact spectrum is
+\[
+0^{81},\quad 8^1,\quad4^{30},\quad
+(4-\sqrt6)^{24},\quad(4+\sqrt6)^{24}.
+\]
+Therefore
+\[
+\boxed{
+320P_{H_1}=(K-8I)(K-4I)\bigl((K-4I)^2-6I\bigr)
+}
+\]
+is an exact integral numerator for the rank-$81$ Hodge/Kirchhoff cycle
+projector.  Indeed $DP_{H_1}=0$, $\operatorname{rank}D=79$, and
+$\operatorname{rank}P_{H_1}=81$, so its image is exactly the boundaryless
+link-current space.  Every physical coupler has diagonal projector weight
+$81/160$.
+
+The corresponding exact memory reflection is
+\[
+\boxed{R_{H_1}=I-2P_{H_1}},
+\qquad
+\operatorname{Tr}R_{H_1}=79-81=-2.
+\]
+It is $+1$ on the cut space and $-1$ on the protected cycle-memory space.
+
+A separate polynomial dynamics exists on the $80$ mode coordinates.  The raw
+Levi adjacency has spectrum
+\[
+-4^1,\;(-\sqrt6)^{24},\;0^{30},\;(+\sqrt6)^{24},\;4^1
+\]
+and is not globally periodic.  Its sign fold $H_2=A_L^2$ has spectrum
+$0^{30}+6^{48}+16^2$, giving
+\[
+e^{-i\pi H_2}=I,
+\qquad
+e^{-i\pi H_2/2}=I-2E_6,
+\qquad
+e^{-i\pi H_2/4}=I+(i-1)E_6.
+\]
+This polynomial revival is distinct from the finite-detuning block Hamiltonian
+of Pass~4005, although both use the same incidence matrix.
+
+The five signed Levi sectors are recovered from four moments.  With
+$a=p_{+4}+p_{-4}$, $b=p_{+\sqrt6}+p_{-\sqrt6}$,
+$d=p_{+4}-p_{-4}$, and $e=p_{+\sqrt6}-p_{-\sqrt6}$,
+\[
+a=\frac{m_4-6m_2}{160},\qquad
+b=\frac{16m_2-m_4}{60},
+\]
+\[
+d=\frac{m_3-6m_1}{40},\qquad
+e=\frac{16m_1-m_3}{10\sqrt6}.
+\]
+Finally, in the ideal delay model $Q=\tau I+\theta'A_L$,
+\[
+\boxed{Q-\frac{\operatorname{Tr}Q}{80}I=\theta'A_L},
+\]
+so the centered delay kernel recovers all $160$ point--line incidences.
+
+The mode decomposition $30+48+2$ and the link-current decomposition $79+81$
+are distinct vector spaces.  No fabricated coupler network, measured delay,
+loss tolerance, variable vacuum $c$, literal hidden photon nodes, Monster
+embedding, or laboratory performance is claimed.
