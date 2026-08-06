@@ -1,0 +1,24 @@
+name: Passes 4113-4120 Exact Regression
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4113_4120_gauge_horizon_dimension_scar_curvature.py'
+      - 'data/PART_4113_4120_GAUGE_HORIZON_DIMENSION_SCAR_CURVATURE.json'
+      - 'tests/test_w33_pass4113_4120_gauge_horizon_dimension_scar_curvature.py'
+      - '.github/workflows/w33_pass4113_4120_gauge_horizon_dimension_scar_curvature.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --upgrade pip numpy pytest
+      - run: python analysis/w33_pass4113_4120_gauge_horizon_dimension_scar_curvature.py | tee /tmp/pass4113.log
+      - run: grep -F '28391f98e03ec20cc688cc8692579ff0cf352930d085b2d33d979de7ef9a3e2a' /tmp/pass4113.log
+      - run: python -m pytest -q tests/test_w33_pass4113_4120_gauge_horizon_dimension_scar_curvature.py
+      - run: git diff --exit-code -- data/PART_4113_4120_GAUGE_HORIZON_DIMENSION_SCAR_CURVATURE.json
