@@ -1,0 +1,19 @@
+{
+  "schema": "w33.pass4089_4096.execution_manifest.v1",
+  "status": "PASS_EXACT_LAYOUT_OPTIMAL_REFERENCE_EXTERIOR_ANOMALY_NOTCH_MECHANICS_CODE_TURING_RESISTANCE",
+  "certificate": "598f80f12de4571824218228000fbfc874f339b59717009fb567e4268a5797dc",
+  "semantic_sha256": "52fbaafacbb5eab607d89c883ab1973d8d1db935b39cde514ab298fef054c148",
+  "five_fronts": {
+    "router_layout": "160 exact assignments in four perfect-matching routers with a complete QSP tolerance budget.",
+    "phase_reference": "Path-Perron reference with optimal O(K^-2) one-use error.",
+    "anomaly_bridge": "Exterior algebra of C3 and C2 yields one anomaly-free generation charge pattern.",
+    "notch_control": "Compact C7 base waveform gives exact four-gap notches and quartic simulated leakage.",
+    "mechanical_prototype": "80-mass/160-spring build sheet with a 9.6907% sufficient worst-case spring tolerance."
+  },
+  "outside_box": {
+    "selfstress_code": "Real [160,81,8] circulation code detects seven and corrects three noiseless sparse errors.",
+    "Turing": "Explicit Jacobians select either the 24- or 15-dimensional W33 Laplacian eigenspace.",
+    "resistance": "Two exact effective resistances 13/80 and 7/40; Kirchhoff index 267/2."
+  },
+  "boundary": "No fabricated hardware, finite exact reusable irrational reference, derived Standard Model, measured experiment, gravity, cosmology, or TOE."
+}
