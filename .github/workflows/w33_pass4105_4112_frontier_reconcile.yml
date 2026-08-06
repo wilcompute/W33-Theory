@@ -1,0 +1,19 @@
+name: Pass 4112 protected frontier reconciliation
+on:
+  push:
+    paths:
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'analysis/BT4105_BT4112_carrier_reference_netlist_decoder_turing_bonkers_insert.tex'
+      - 'tools/integrate_pass4105_4112_frontier.py'
+      - '.github/workflows/w33_pass4105_4112_frontier_reconcile.yml'
+  pull_request:
+  workflow_dispatch:
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python tools/integrate_pass4105_4112_frontier.py
