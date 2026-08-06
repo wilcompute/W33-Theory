@@ -1,0 +1,25 @@
+name: Passes 4065-4072 Exact Regression
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4065_4072_explicit_qsp_dirac_magic_gauge.py'
+      - 'data/PART_4065_4072_EXPLICIT_QSP_DIRAC_MAGIC_GAUGE_BONKERS.json'
+      - 'tests/test_w33_pass4065_4072_explicit_qsp_dirac_magic_gauge.py'
+      - '.github/workflows/w33_pass4065_4072_exact.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+concurrency: {group: pass4065-4072-${{ github.ref }}, cancel-in-progress: true}
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check numpy scipy pytest
+      - run: python analysis/w33_pass4065_4072_explicit_qsp_dirac_magic_gauge.py | tee /tmp/pass.log
+      - run: grep -F 'PASS_4065_4072 342e8e7ae8f3ef06750716a1d3bdb25f2db432ee55e3ca35482086e16d6544ed' /tmp/pass.log
+      - run: pytest -q tests/test_w33_pass4065_4072_explicit_qsp_dirac_magic_gauge.py
+      - run: git diff --check
