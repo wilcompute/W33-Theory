@@ -1,0 +1,33 @@
+{
+  "schema": "w33.pass3973_3980.compressed_certificate_manifest.v1",
+  "status": "PASS_EXACT_FIVE_FRONT_THREE_BONKERS_MONSTER_EXTERNAL_AND_PHOTON_LAB_PENDING",
+  "semantic_sha256": "03c37b821bb9b6f875a8bd4edde8dc96fe36a43d6d8dc24144d8dbd5e3aa5104",
+  "certificate": {
+    "parts": [
+      "data/.bootstrap/PART_3973_3980_CERT_00.b64",
+      "data/.bootstrap/PART_3973_3980_CERT_01.b64"
+    ],
+    "compressed_sha256": "60f7ea0e519805f27aa7d5224f0f560f3d48551be339dab9736bb2026ab3141e",
+    "json_sha256": "378bc2f4ca162a80790709f19424a16d5d1e60e7faf43c9c773e34633939b8b8",
+    "json_bytes": 80402
+  },
+  "rank48_tensor": {
+    "path": "data/.bootstrap/PART_3973_3980_RANK48_TENSOR.b64",
+    "compressed_sha256": "f4f24bf64e7190d4c03df2e1f2292a244347534ce1521bf46ff615983562cd7a",
+    "json_sha256": "851186d770c7942a25c7ac06bc7cae0b85751bd47dcc304b5413618efe0fae87",
+    "json_bytes": 55126,
+    "relations": 48,
+    "nonzero_intersection_constants": 904,
+    "tensor_sha256": "a17a375552c102d281e3ba79b602b67aa54a426fd68b1878293763ea65395ff9"
+  },
+  "source": {
+    "loader": "analysis/w33_pass3973_3980_extremal_mesh_photon_tensor_monster.py",
+    "parts": [
+      "analysis/.bootstrap/pass3973_source_00.b64",
+      "analysis/.bootstrap/pass3973_source_01.b64"
+    ],
+    "compressed_sha256": "9464de8797ae9b4ec6d876f4298db868f068f14a853cd802f5ea4133347e6fe4",
+    "source_sha256": "0fba5345203d56ff4aafc6da7a4ee784dd3091d14e08e486f93cb11b599b8941"
+  },
+  "boundary": "The compressed files are immutable exact snapshots. No Monster embedding, variable-c mechanism, photon-node ontology, hardware result, laboratory result, or remote CI/PDF success is implied."
+}
