@@ -1,0 +1,57 @@
+name: Passes 3871-3886 Eight Front Closure
+on:
+  pull_request:
+    paths:
+      - 'analysis/bt3871_3886_eight_front_closure.py'
+      - 'analysis/_bt3871_3886_payload_*.txt'
+      - 'analysis/BT3871_BT3886_eight_front_closure*'
+      - 'data/PART_BT3871_BT3886_*'
+      - 'data/BT3871_BT3886_CLAIMS_LEDGER.json'
+      - 'tools/check_website_migration_authorization.py'
+      - 'tests/test_bt3871_3886_eight_front_closure.py'
+      - 'tests/test_website_migration_authorization.py'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'docs/cap-tomotope-modular-gewirtz-atlas-3871-3886.html'
+      - '.github/workflows/w33_pass3871_3886_eight_front_closure.yml'
+  workflow_dispatch:
+jobs:
+  exact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install numpy sympy networkx pytest
+      - name: Regenerate exact certificate
+        run: |
+          python analysis/bt3871_3886_eight_front_closure.py --seeds data/PART_BT3871_BT3886_TOP115_CYCLIC_SEEDS.json --repository-root . --website-blob "$(git hash-object docs/index.html)" --json /tmp/result.json
+          python - <<'PY'
+          import json
+          assert json.load(open('/tmp/result.json')) == json.load(open('data/PART_BT3871_BT3886_EIGHT_FRONT_CLOSURE_results.json'))
+          PY
+      - run: pytest -q tests/test_bt3871_3886_eight_front_closure.py tests/test_website_migration_authorization.py
+      - run: python tools/check_website_migration_authorization.py --repository-root .
+      - name: Check reachability and boundaries
+        run: |
+          grep -F 'BT3871_BT3886_eight_front_closure_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          grep -F 'd1ac79b9df49e25d84c2e08f5c440ac9a0e5bd90b60e89deebe6699f309143b5' docs/cap-tomotope-modular-gewirtz-atlas-3871-3886.html
+          grep -F '389' data/PART_BT3871_BT3886_EIGHT_FRONT_CLOSURE_results.json
+          grep -F '435' data/PART_BT3871_BT3886_EIGHT_FRONT_CLOSURE_results.json
+  manuscripts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: wtfjoke/setup-tectonic@v3
+      - run: |
+          tectonic w33_paper.tex
+          tectonic photonic_holonet.tex
+          tectonic holonet_machine_blueprint.tex
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3871-3886-canonical-pdfs
+          path: |
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
