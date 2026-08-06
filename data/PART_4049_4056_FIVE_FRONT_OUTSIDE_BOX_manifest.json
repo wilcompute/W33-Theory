@@ -1,0 +1,29 @@
+{
+  "schema": "w33.pass4049_4056.execution_manifest.v1",
+  "status": "PASS_EXACT_FIVE_FRONT_THREE_OUTSIDE_BOX_IDEAL_POSTSELECTED_UNIVERSALITY_PHYSICAL_AND_FT_PENDING",
+  "certificate": "5f99f47f1a899b76c5e3e464a56440a63f51396a94c5d1ba9978ca65303b6946",
+  "five_fronts": {
+    "minimal_qsvt": "Exact bounded degree-five sign polynomial; degree-three no-go; block encoding and phase extraction pending.",
+    "H1_pulses": "Exact local phase and Householder primitives plus four overlap/rotation classes; robust schedule pending.",
+    "four_dimensional_scaling": "Bounded-degree W33-fibered discrete four-tori with controlled d_s→4 heat-kernel window; Lorentzian limit pending.",
+    "M36_magic": "Exact one-copy irrational phase resource and postselected injection success 5/12; deterministic fault tolerance pending.",
+    "observable_functor": "Explicit free quadratic three-sector mass and propagator dictionary; Standard Model extension pending."
+  },
+  "outside_box": {
+    "shell_splitter": "Exact 13/25 versus 12/25 two-shell reflection and 0.998845536-bit mode partition.",
+    "apartment_code": "Exact five-angle tight projective code; fourth frame potential proves it is not a real projective 2-design.",
+    "spectral_calorimeter": "Exact partition function and Schottky peak from multiplicities 1,24,15."
+  },
+  "artifacts": [
+    "analysis/w33_pass4049_4056_five_front_outside_box.py",
+    "data/PART_4049_4056_FIVE_FRONT_OUTSIDE_BOX.json",
+    "tests/test_w33_pass4049_4056_five_front_outside_box.py",
+    "analysis/BT4049_BT4056_five_front_outside_box.md",
+    "analysis/BT4049_BT4056_five_front_outside_box_insert.tex",
+    "analysis/BT4049_BT4056_five_front_outside_box_index_insert.html",
+    "docs/five-front-outside-box.html"
+  ],
+  "coordination": "Does not overwrite reserved Passes 4041-4048. Reuses exact Passes 4033-4040 H1 swap and u(81) control algebra.",
+  "boundary": "No fabricated block encoding, extracted QSP phase list, deterministic logical injection, fault-tolerance threshold, Lorentzian spacetime, Standard Model, gravity, measured calorimetry, or TOE.",
+  "semantic_sha256": "c96b2e8ae2a19c12581ceb63eb46822459a3470963b1f71a8d5e74dbdfe0d596"
+}
