@@ -1,0 +1,22 @@
+{
+  "schema": "w33.pass3837_3854.claims_ledger.v1",
+  "semantic_sha256": "ede91cc799f9093209c589fb0b73c88fca4159bedcc8e1e7cd6680c5f0c778fd",
+  "claims": [
+    {"id":"WEDDERBURN-Q","status":"PROVED","evidence":"exact center rank, rational primitive idempotents, minimal-left-ideal ranks"},
+    {"id":"MODULE-200","status":"PROVED","evidence":"central-idempotent traces and split block sizes"},
+    {"id":"CSS-240-81-3","status":"PROVED","evidence":"F3 ranks, orthogonality, weight-three X witness, weight-four nonboundary cycle"},
+    {"id":"LEECH-TRANSPORT","status":"PROVED","evidence":"frozen determinant-one Leech Gram from Passes 3795-3812 and exact transported norms"},
+    {"id":"MINIMAL-AXIS-TRIAD","status":"PROVED","evidence":"exact Gram norms for all 45 axial numerator vectors"},
+    {"id":"MARKED-AXIAL-PRESENTATION","status":"PROVED","evidence":"rank-21 line-relation kernel, pair laws, quotient dimension 24"},
+    {"id":"MARKED-AUTOMORPHISMS","status":"PROVED","evidence":"independent rooted graph automorphism certificate, order 51840"},
+    {"id":"UNMARKED-AUTOMORPHISMS","status":"PENDING","boundary":"requires an intrinsic characterization of the distinguished 45 axes"},
+    {"id":"FOUR-AXIS-CENSUS","status":"PROVED","evidence":"20 exact O6-(2) orbits covering all 148995 four-subsets"},
+    {"id":"DUAL-40-CARRIERS","status":"PROVED","evidence":"independent graph hashes, equal SRG parameters, exact nonisomorphism"},
+    {"id":"CROSS-ORBITALS","status":"PROVED","evidence":"complete product-set orbit enumeration"},
+    {"id":"FORTY-K43","status":"PROVED","evidence":"rank-40 160x120 incidence and 40 connected K4,3 components"},
+    {"id":"480-FIREWALL","status":"PROVED","evidence":"permutation-character norms 23 and 24 with cross inner product 18"},
+    {"id":"MONSTER-WORDS","status":"PENDING","boundary":"all observed candidate slots are empty/PENDING"},
+    {"id":"MONSTER-CLASS-FUSION","status":"PENDING","boundary":"no content-addressed executed fusion artifact"},
+    {"id":"REMOTE-CI-PDF","status":"PENDING","boundary":"promote only after observable workflow/artifact evidence"}
+  ]
+}
