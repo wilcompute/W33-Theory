@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>W33 Incidence-Link H1 Memory — Passes 4013–4018</title>
+<style>
+:root{color-scheme:dark;--bg:#0b0d12;--panel:#141823;--text:#e9edf7;--muted:#aeb7cc;--line:#2b3347;--accent:#82d8ff;--gold:#ffd47a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.62 system-ui,sans-serif}.page{max-width:1060px;margin:auto;padding:42px 22px 80px}h1{font-size:clamp(2.1rem,5vw,4.3rem);line-height:1.02;margin:.2em 0}h2{margin-top:2.2em;color:var(--accent)}p{max-width:78ch}.lead{font-size:1.2rem;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:28px 0}.card{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:18px}.n{font-size:2.2rem;font-weight:800;color:var(--gold)}.eq{overflow:auto;background:#090b10;border:1px solid var(--line);border-radius:12px;padding:17px;font:1.06rem ui-monospace,monospace;margin:18px 0}.boundary{border-left:4px solid var(--gold);padding:12px 18px;background:var(--panel)}table{width:100%;border-collapse:collapse}td,th{padding:10px;border-bottom:1px solid var(--line);text-align:left}a{color:var(--accent)}
+</style>
+</head>
+<body><main class="page">
+<p><a href="index.html">← W33 Theory atlas</a></p>
+<h1>The physical incidence links carry the protected H1 memory</h1>
+<p class="lead">Passes 4013–4018 connect the lower-degree 80-mode photonic layout to the exact 81-dimensional Hodge memory—on the layout’s 160 physical couplers themselves.</p>
+<div class="grid">
+<div class="card"><div class="n">80</div><div>point + line modes</div></div>
+<div class="card"><div class="n">160</div><div>physical incidence couplers</div></div>
+<div class="card"><div class="n">79</div><div>cut-current dimensions</div></div>
+<div class="card"><div class="n">81</div><div>boundaryless H1 dimensions</div></div>
+</div>
+<h2>Exact link-current projector</h2>
+<p>For the oriented 80×160 boundary matrix D, set K=DᵀD. Its nonzero roots are 8, 4, and 4±√6. The exact integral projector numerator is:</p>
+<div class="eq">320 P<sub>H1</sub> = (K−8I)(K−4I)(((K−4I)²)−6I)</div>
+<p>It is symmetric, idempotent after division by 320, boundaryless, and rank 81. Since ker D also has dimension 81, it is exactly the canonical Hodge/Kirchhoff cycle projector.</p>
+<h2>Exact memory reflection</h2>
+<div class="eq">R<sub>H1</sub> = I − 2P<sub>H1</sub>, &nbsp; Tr(R<sub>H1</sub>) = 79 − 81 = −2</div>
+<table><thead><tr><th>Subspace</th><th>Dimension</th><th>Gate phase</th></tr></thead><tbody><tr><td>Cut currents</td><td>79</td><td>+1</td></tr><tr><td>Boundaryless cycle currents</td><td>81</td><td>−1</td></tr></tbody></table>
+<h2>Independent two-step mode revival</h2>
+<p>The raw Levi adjacency is not globally periodic because its nonzero eigenvalue ratio 4/√6 is irrational. Squaring folds the signs:</p>
+<div class="eq">Spec(A<sub>Levi</sub>²) = 0³⁰ + 6⁴⁸ + 16²</div>
+<div class="eq">exp(−iπA<sub>Levi</sub>²/2)=I−2E₆ &nbsp; and &nbsp; exp(−iπA<sub>Levi</sub>²/4)=I+(i−1)E₆</div>
+<p>This polynomial gate is distinct from the exact finite-detuning block Hamiltonian of Pass 4005. The two constructions share the incidence matrix but not the generator.</p>
+<h2>Tomography</h2>
+<p>Four moments recover all five signed Levi spectral populations. In the ideal centered-delay model, the full incidence graph is recovered directly:</p>
+<div class="eq">Q − (Tr Q / 80)I = θ′ A<sub>Levi</sub></div>
+<p>That inverse returns all 80 point/line vertices and all 160 flags.</p>
+<p class="boundary"><strong>Evidence boundary.</strong> These are exact finite graph and matrix results. They do not establish fabricated couplers, local synthesis cost, robustness to loss or disorder, measured Wigner–Smith data, laboratory timing, variable vacuum c, literal hidden photon nodes, Monster embedding, or hardware performance.</p>
+</main></body></html>
