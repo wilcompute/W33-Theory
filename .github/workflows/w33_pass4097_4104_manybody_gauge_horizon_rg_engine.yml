@@ -1,0 +1,24 @@
+name: Passes 4097-4104 Exact Regression
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4097_4104_manybody_gauge_horizon_rg_engine.py'
+      - 'data/PART_4097_4104_MANYBODY_GAUGE_HORIZON_RG_ENGINE.json'
+      - 'tests/test_w33_pass4097_4104_manybody_gauge_horizon_rg_engine.py'
+      - '.github/workflows/w33_pass4097_4104_manybody_gauge_horizon_rg_engine.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --upgrade pip numpy scipy pytest
+      - run: python analysis/w33_pass4097_4104_manybody_gauge_horizon_rg_engine.py | tee /tmp/pass4097.log
+      - run: grep -F '4687bd582e2d83c5bc0c168f905139edbab429bee37715398e4a7952cc3cf1ef' /tmp/pass4097.log
+      - run: python -m pytest -q tests/test_w33_pass4097_4104_manybody_gauge_horizon_rg_engine.py
+      - run: git diff --exit-code -- data/PART_4097_4104_MANYBODY_GAUGE_HORIZON_RG_ENGINE.json
