@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [4033, 4040],
+  "slug": "h1_swap_compiler_disorder_control_compressed_tomography_fabrication_dissipation_coulomb_and_literal_algebra_gate",
+  "title": "Independent physics continuation: full H1 swap compiler, projected disorder/control algebra, compressed tomography, fabrication contract, dissipative cooling, Coulomb law, and literal algebra gate",
+  "status": "reserved",
+  "owner": "openai-gpt-5.6-thinking",
+  "reserved_at": "2026-08-06T10:13:00-04:00",
+  "purpose": "Complete the physics items not closed by Passes 4025-4032: construct a full 81-channel write/read compiler using 80 modes plus one ancilla, classify projected disorder and control, minimize sector tomography, publish a fabrication-level resource/gap contract, and add three independent physics constructions.",
+  "coordination": "Preserve Passes 4005-4032 and protected docs/index.html. Passes 4033-4040 are an independent supplement, not a replacement for the completed physics-first packet.",
+  "boundary": "Reservation only. No fabricated device, measured tolerance, completed Monster embedding, continuum Maxwell theory, gravity derivation, or laboratory performance is promoted."
+}
