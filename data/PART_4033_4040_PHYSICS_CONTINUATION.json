@@ -1,0 +1,103 @@
+{
+  "all_checks_hold": true,
+  "boundaries": [
+    "No fabricated device or measured performance.",
+    "No literal algebra/Monster result without engine artifacts.",
+    "No continuum, Standard Model, gravity, or TOE claim."
+  ],
+  "checks": {
+    "compiler": true,
+    "coulomb": true,
+    "disorder": true,
+    "engine_fail_closed": true,
+    "fabrication_gap": true,
+    "fridge": true,
+    "geometry": true,
+    "hodge": true,
+    "tomography": true
+  },
+  "pass4033_full_H1_swap_compiler": {
+    "basis_shape": [160, 81],
+    "columns": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80],
+    "formula": "W=B(B^T B)^(-1/2)",
+    "gram_condition": 160.0000000000018,
+    "input_requirement": "80 device modes plus one ancilla for all 81 H1 channels",
+    "isometry_error": 1.454392162258955e-14,
+    "projector_error": 8.770761894538737e-15,
+    "swap_hamiltonian": "[[0,W^T],[W,0]]",
+    "swap_time": "pi/2"
+  },
+  "pass4034_projected_disorder_algebra": {
+    "all_pair_inner_products_nonzero": true,
+    "atom_gram_spectrum": {
+      "(252+27sqrt6)/800": 24,
+      "(252-27sqrt6)/800": 24,
+      "164/800": 81,
+      "234/800": 30,
+      "81/160": 1
+    },
+    "combined_span": 320,
+    "commutant": "scalars",
+    "coupling_span": 320,
+    "generated_algebra": "M_81(C)",
+    "generated_lie_algebra": "u(81) with uniform identity control",
+    "incident_identity": "A_e=-(1/4)sum_{f~e}A_ef",
+    "incident_identity_error": 3.885780586188048e-16,
+    "onsite_span": 160
+  },
+  "pass4035_literal_algebra_gate": {
+    "boundary": "No relation-fusion rank, Monster word, class fusion, or embedding is promoted without generated outputs and inspected logs.",
+    "monster_output": false,
+    "relation_output": false,
+    "status": "BLOCKED_ENGINE_OUTPUTS_MISSING"
+  },
+  "pass4036_compressed_sector_tomography": {
+    "line_graph": {"chebyshev_condition_2": 1.7259582666773856, "chebyshev_inverse_inf": 1.1865305980755143, "minimal_nontrivial_probes": 4, "raw_condition_2": 1348.0199307431078, "sectors": 5},
+    "mode_H2": {"chebyshev_condition_2": 1.6134003706213789, "chebyshev_inverse_inf": 1.0666666666666667, "minimal_nontrivial_probes": 2, "raw_condition_2": 266.2793617853622, "sectors": 3},
+    "signed_Levi": {"chebyshev_condition_2": 1.7259582666773856, "chebyshev_inverse_inf": 1.1865305980755143, "minimal_nontrivial_probes": 4, "raw_condition_2": 376.21698126034795, "sectors": 5}
+  },
+  "pass4037_fabrication_contract": {
+    "design_target_not_measurement": "kappa/J <= 0.1",
+    "flat_energy_over_J": -2,
+    "gap_over_J": 1.5505102572168221,
+    "hopping": "uniform real +J; no negative hopping is required",
+    "nearest_energy_over_J": -0.4494897427831779,
+    "platforms": ["3D laser-written waveguide/resonator graph", "time/frequency synthetic-dimension resonator network"],
+    "primary": {"degree": 4, "links": 160, "modes": 80},
+    "secondary": {"degree": 6, "links": 480, "sites": 160},
+    "sufficient_cluster_condition": "||V||_2 < (4-sqrt(6))J/2"
+  },
+  "pass4038_bonkers_dissipative_Hodge_refrigerator": {
+    "boundary": "Linear loss alone needs no-jump postselection, replenishment, or number-conserving reservoir engineering to preserve a photon.",
+    "dark_dimension": 81,
+    "dark_space": "ker(D)=H1",
+    "decay_spectrum": {"0": 81, "4": 30, "4+sqrt6": 24, "4-sqrt6": 24, "8": 1},
+    "dissipative_gap": "4-sqrt(6)",
+    "jump_map": "L_v=sum_e D[v,e] a_e"
+  },
+  "pass4039_bonkers_disorder_as_universal_control": {
+    "all_control_rays_nonorthogonal": true,
+    "associative_closure": "M_81(C)",
+    "boundary": "Ideal controllability only; pulse synthesis, loss, calibration, and leakage are not certified.",
+    "commutant": "scalars",
+    "hamiltonian_lie_closure": "u(81)",
+    "linear_span": 160,
+    "local_rank_one_controls": 160
+  },
+  "pass4040_bonkers_Levi_Coulomb_law": {
+    "boundary": "Exact finite network electrodynamics, not continuum Maxwell theory or gravity.",
+    "charge_rank": 79,
+    "gauss_map": "rho=D E, sum rho=0",
+    "harmonic_flux_rank": 81,
+    "penalty": "J D^T D",
+    "resistance_by_distance": {
+      "1": {"pairs": 160, "resistance": "79/160", "spread": 1.3877787807814457e-15},
+      "2": {"pairs": 480, "resistance": "13/20", "spread": 1.4432899320127035e-15},
+      "3": {"pairs": 1440, "resistance": "111/160", "spread": 1.5543122344752192e-15},
+      "4": {"pairs": 1080, "resistance": "7/10", "spread": 1.7763568394002505e-15}
+    }
+  },
+  "schema": "w33.pass4033_4040.physics_continuation.v1",
+  "semantic_sha256": "022ba7f16ba122b83f6696869cbbefc2068b2d301e2ec196d4c3eb3e90c7d6a0",
+  "status": "PASS_EXACT_INDEPENDENT_PHYSICS_CONTINUATION_WITH_LITERAL_ENGINE_GATE_FAIL_CLOSED"
+}
