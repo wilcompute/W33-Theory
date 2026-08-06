@@ -45,7 +45,7 @@ jobs:
           git diff --check
       - name: Check evidence firewall
         run: |
-          grep -F 'PENDING_EXPLICIT_MM_WORDS' analysis/w33_mmgroup_u42_candidate_harness.py
+          grep -F 'PENDING_EXPLICIT_MONSTER_WORDS' analysis/w33_mmgroup_u42_candidate_harness.py
           grep -F 'BT3981_BT3988_five_front_three_photon_closure_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
           grep -F '767e5fc07b97fb53d9e53d75381fbabf46ab775557a7a19151641d3b64f53ba8' analysis/BT3981_BT3988_five_front_three_photon_closure_index_insert.html
   manuscripts:
