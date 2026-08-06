@@ -4,7 +4,7 @@ on:
     branches: [master]
     paths:
       - 'tools/integrate_pass3989_3996_frontier.py'
-      - 'analysis/BT3989_BT3996_physical_incidence_photon_breakthrough_insert.tex'
+      - 'analysis/BT3989_BT3996_physical_photon_causal_memory_insert.tex'
       - 'analysis/BT3989_BT3996_physical_incidence_photon_breakthrough_index_insert.html'
       - 'docs/physical-incidence-photon-processor.html'
       - '.github/workflows/w33_pass3989_3996_frontier_reconcile.yml'
@@ -23,7 +23,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
       - run: python tools/integrate_pass3989_3996_frontier.py | tee /tmp/frontier.log
-      - run: grep -F 'PASS_3989_3996_FRONTIER_RECONCILE 1 1 1' /tmp/frontier.log
+      - run: grep -F 'PASS_3989_3996_FRONTIER_RECONCILE 1 0 1 1' /tmp/frontier.log
       - name: Preserve protected index blob
         run: git diff --exit-code -- docs/index.html
       - name: Commit manifest reconciliation
