@@ -1,0 +1,30 @@
+name: Passes 3981-3988 Exact Object Probe
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass3981_3988_schema_probe.py'
+      - '.github/workflows/w33_pass3981_3988_schema_probe.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pass3981-3988-probe
+  cancel-in-progress: true
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python analysis/w33_pass3981_3988_schema_probe.py
+      - name: Commit probe
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/PART_3981_3988_SCHEMA_PROBE.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Pass 3981: freeze exact-object schema probe'
+          git push
