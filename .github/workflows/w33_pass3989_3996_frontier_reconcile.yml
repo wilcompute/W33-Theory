@@ -6,7 +6,9 @@ on:
       - 'tools/integrate_pass3989_3996_frontier.py'
       - 'analysis/BT3989_BT3996_physical_photon_causal_memory_insert.tex'
       - 'analysis/BT3989_BT3996_physical_incidence_photon_breakthrough_index_insert.html'
+      - 'analysis/BT3989_BT3996_physical_photon_causal_memory_index_insert.html'
       - 'docs/physical-incidence-photon-processor.html'
+      - 'docs/photon-causal-memory-3989-3996.html'
       - '.github/workflows/w33_pass3989_3996_frontier_reconcile.yml'
   workflow_dispatch:
 permissions:
@@ -23,7 +25,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
       - run: python tools/integrate_pass3989_3996_frontier.py | tee /tmp/frontier.log
-      - run: grep -F 'PASS_3989_3996_FRONTIER_RECONCILE 1 0 1 1' /tmp/frontier.log
+      - run: grep -F 'PASS_3989_3996_FRONTIER_RECONCILE 1 0 [1, 1] [1, 1]' /tmp/frontier.log
       - name: Preserve protected index blob
         run: git diff --exit-code -- docs/index.html
       - name: Commit manifest reconciliation
@@ -32,6 +34,6 @@ jobs:
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add data/w33_current_frontier_manifest_v1.json
           git diff --cached --quiet && exit 0
-          git commit -m 'Pass 3996: reconcile physical photon public frontier'
+          git commit -m 'Pass 3996: reconcile photon causal-memory public frontier'
           git pull --rebase origin master
           git push
