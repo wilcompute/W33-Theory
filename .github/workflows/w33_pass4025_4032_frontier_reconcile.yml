@@ -1,0 +1,33 @@
+name: Passes 4025-4032 Protected Frontier Reconcile
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'tools/integrate_pass4025_4032_frontier.py'
+      - 'analysis/BT4025_BT4032_physics_first_universal_computer_insert.tex'
+      - 'analysis/BT4025_BT4032_physics_first_universal_computer_index_insert.html'
+      - 'docs/physics-first-universal-computer.html'
+      - '.github/workflows/w33_pass4025_4032_frontier_reconcile.yml'
+  workflow_dispatch:
+permissions: {contents: write}
+concurrency: {group: pass4025-4032-frontier, cancel-in-progress: false}
+jobs:
+  reconcile:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python tools/integrate_pass4025_4032_frontier.py | tee /tmp/frontier.log
+      - run: grep -F 'PASS_4025_4032_FRONTIER 1 1 1' /tmp/frontier.log
+      - run: git diff --exit-code -- docs/index.html
+      - name: Commit manifest reconciliation
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/w33_current_frontier_manifest_v1.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Pass 4032: reconcile physics-first public frontier'
+          git pull --rebase origin master
+          git push
