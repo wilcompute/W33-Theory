@@ -1,0 +1,255 @@
+{
+  "boundaries": [
+    "All promoted results are exact finite algebra, deterministic numerical certificates, or explicit first-order perturbative constructions with stated assumptions.",
+    "No fabricated hardware, exact finite reusable irrational-phase catalyst, fault-tolerance threshold, chiral Standard Model, measured experiment, Euclidean bar-joint embedding, global nonlinear synchronization theorem, gravity, cosmology, or theory of everything is claimed."
+  ],
+  "pass4073_physical_four_router_block_encoding": {
+    "block_identity": "(<00|B^dagger tensor I) U_sel (B|00> tensor I)=A_Levi/4",
+    "boundary": "Exact abstract mode-router/interferometer architecture. No chip layout, insertion loss, crosstalk, or calibrated device.",
+    "degree": 4,
+    "edges_per_matching": 40,
+    "exact_matrix_residual": 0,
+    "factorization_sha256": "7f64e26215eff19a70bb6ce8dceca611cff0404b8f52e97448329cbb5d1242e8",
+    "imperfect_prepare_bound": "If ||B_tilde|00>-B|00>||<=eps, block error <=2 eps+eps^2; the five-query QSP error then obeys <=5(2eps+eps^2)+6 delta_phi.",
+    "incidence_edges": 160,
+    "normalized_spectrum": {
+      "-1": 1,
+      "-sqrt6/4": 24,
+      "0": 30,
+      "1": 1,
+      "sqrt6/4": 24
+    },
+    "perfect_matchings": 4,
+    "prepare": "B|00>=1/2 sum_{j=0}^3 |j>",
+    "router_definition": "P_j swaps the two endpoints of each edge in perfect matching j; every P_j is a real involutory permutation.",
+    "router_involution_residual": 0,
+    "selector_dimension": 4,
+    "selector_qubits_or_paths": 2,
+    "signal_unitary": "U_sel=sum_j |j><j| tensor P_j",
+    "system_modes": 80
+  },
+  "pass4074_binomial_phase_reference": {
+    "asymptotic": "1-S_K~1/(2K); this removes the doubled-angle hierarchy but not the O(1/epsilon) raw-state scaling.",
+    "base_program": "|A_phi>=(|0>+exp(i phi)|1>)/sqrt2, exp(i phi)=(-4+3i)/5",
+    "boundary": "Deterministic approximate phase-reference processor, not exact finite deterministic injection or a fault-tolerant factory.",
+    "catalytic_boundary": "The reference is only approximately catalytic: the two data branches leave reference states with overlap z_K. Exact finite pure catalysis is not claimed, and repeated reuse requires a correlation/degradation budget.",
+    "coherence_formula": "z_K=exp(i phi) S_K+2^(-K)exp(-i K phi), S_K=2^(-K) sum_{n=1}^K sqrt(C(K,n-1)C(K,n)).",
+    "compression": "The K-copy symmetric state has amplitudes c_n=sqrt(C(K,n))/2^(K/2) and phase exp(i n phi) in the Hamming-weight basis n=0,...,K.",
+    "one_use_error_bound": "||E_K-U_phi||_diamond <= |z_K-exp(i phi)| <= 1-S_K+2^(-K).",
+    "processor": "A data-controlled cyclic lowering C^{-1} on the compressed K+1 dimensional reference multiplies data coherence by z_K.",
+    "samples": [
+      {
+        "K": 32,
+        "S_K": 0.9844827919115379,
+        "bound": 0.015517208321292775,
+        "channel_error_to_ideal": 0.015517207918995869,
+        "coherence_multiplier": [
+          -0.7875862335690074,
+          0.5906896753763304
+        ],
+        "reference_branch_infidelity": 0.0307936320963903
+      },
+      {
+        "K": 64,
+        "S_K": 0.9922162968103633,
+        "bound": 0.007783703189636726,
+        "channel_error_to_ideal": 0.00778370318963677,
+        "coherence_multiplier": [
+          -0.7937730374482906,
+          0.5953297780862179
+        ],
+        "reference_branch_infidelity": 0.01550682034392914
+      },
+      {
+        "K": 128,
+        "S_K": 0.9961011676964896,
+        "bound": 0.0038988323035104022,
+        "channel_error_to_ideal": 0.003898832303510358,
+        "coherence_multiplier": [
+          -0.7968809341571917,
+          0.5976607006178938
+        ],
+        "reference_branch_infidelity": 0.007782463713689736
+      },
+      {
+        "K": 256,
+        "S_K": 0.9980487560835472,
+        "bound": 0.0019512439164528494,
+        "channel_error_to_ideal": 0.0019512439164528716,
+        "coherence_multiplier": [
+          -0.7984390048668377,
+          0.5988292536501283
+        ],
+        "reference_branch_infidelity": 0.003898680480084238
+      }
+    ]
+  },
+  "pass4075_minimal_nonabelian_multiplicity_extension": {
+    "anomaly_audit": "With the existing Dirac walk the construction is vectorlike, so left-minus-right perturbative gauge anomalies vanish. The V_15 weak block gives 30 left-handed SU(2) doublets after converting right-handed fields to left conjugates, hence the mod-2 Witten count is even.",
+    "boundary": "Exact commutant and anomaly-count audit only.",
+    "minimum_bifundamental_carrier": {
+      "commutant": "M_6(C) direct_sum C direct_sum C",
+      "dimension": 45,
+      "multiplicities": {
+        "V_1": 6,
+        "V_15": 1,
+        "V_24": 1
+      },
+      "reading": "U(6) contains an SU(3)xSU(2) tensor-product action on C^3 tensor C^2, but unwanted U(6) generators require additional symmetry breaking."
+    },
+    "minimum_exact_factor_extension": {
+      "central_charge_ratio": "The determinant-one central embedding has q_3:q_2=-1/3:1/2, equivalently -2:3.",
+      "commutant": "M_3(C) direct_sum C direct_sum M_2(C)",
+      "dimension": 57,
+      "multiplicities": {
+        "V_1": 3,
+        "V_15": 2,
+        "V_24": 1
+      },
+      "special_subgroup": "S(U(3)xU(2)) congruent to (SU(3)xSU(2)xU(1))/Z_6 after freezing the spectator U(1).",
+      "unitary_group": "U(3) x U(1) x U(2)"
+    },
+    "no_go": "The multiplicity extension creates the correct non-Abelian matrix algebras but does not derive chirality, hypercharge assignments, generations, or the Standard Model matter representation.",
+    "original_module": "C^40=V_1 direct_sum V_24 direct_sum V_15, multiplicity free."
+  },
+  "pass4076_four_gap_leakage_notch_control": {
+    "area_identity": "integral f dt=integral h dt",
+    "boundary": "Perturbative closed-system cancellation. Peak amplitude, finite bandwidth, loss, pulse truncation, and many-control crosstalk remain unoptimized.",
+    "bright_gaps_over_J": [
+      "4-sqrt6",
+      "4",
+      "4+sqrt6",
+      "8"
+    ],
+    "combined_SK1": "Using this envelope for each SK1 segment preserves the previously certified first-order amplitude-error cancellation while adding first-order spectral-leakage cancellation.",
+    "envelope": "f(t)=[h^(8)+124 h^(6)+4644 h^(4)+53056 h''+102400 h]/102400, with h and derivatives through order 7 vanishing at the endpoints.",
+    "flat_energy": "-2J",
+    "fourier_identity": "F(omega)=H(omega) prod_r(Delta_r^2-omega^2)/102400",
+    "gap_polynomial": "prod_r (z+Delta_r^2)=z^4+124z^3+4644z^2+53056z+102400",
+    "leakage_zero": "F(Delta_r)=0 for all four bright gaps, so every first-order H1-to-bright transition amplitude vanishes for any local diagonal control matrix element.",
+    "scaling": "For a control-strength parameter eta, leakage amplitude begins at O(eta^2) and leakage probability at O(eta^4), versus generic O(eta^2) probability for an unshaped pulse."
+  },
+  "pass4077_experimental_falsification_suite": {
+    "boundary": "Design and analysis contract only. No data, fabrication, confidence interval, or laboratory pass is reported.",
+    "contracts": [
+      {
+        "name": "four_router_block",
+        "observable": "Ancilla-zero process block",
+        "prediction": "A_Levi/4 with spectrum +/-1, +/-sqrt6/4, 0 and multiplicities 1,24,24,30; any sixth spectral value falsifies the exact router model."
+      },
+      {
+        "name": "five_query_QSP",
+        "observable": "Sector-resolved transfer amplitude",
+        "prediction": "p5 maps the five normalized spectral values to -1,-1,0,+1,+1; phase and router errors are bounded by 6 delta_phi+5 eta_signal."
+      },
+      {
+        "name": "phase_reference_K64",
+        "observable": "Off-diagonal process multiplier",
+        "prediction": "z_64=-0.7937730374482906+0.5953297780862179 i; distance from exp(i phi) is 0.00778370318963677."
+      },
+      {
+        "name": "four_gap_notch",
+        "observable": "Leakage versus small control amplitude eta",
+        "prediction": "Notched pulse has quartic leading leakage probability; a generic square pulse has quadratic leading leakage probability."
+      },
+      {
+        "name": "Dirac_walk",
+        "observable": "Generator error under lattice-spacing halving",
+        "prediction": "First-order convergence: halving a halves the operator error asymptotically, with a one-step causal cube |Delta x_j|<=1."
+      },
+      {
+        "name": "reflection_control",
+        "observable": "Repeated isolated reflection",
+        "prediction": "Strict period two and time-averaged pure-state entropy <=1 bit; sustained higher-period isolated dynamics falsifies the involution-only model."
+      }
+    ]
+  },
+  "pass4078_bonkers_Maxwell_Calladine_mechanics": {
+    "Maxwell_Calladine": "n_zero-n_selfstress=1-81=80-160=-80",
+    "boundary": "Abstract scalar spring/torsional network. No planar or three-dimensional bar-joint embedding or prototype is supplied.",
+    "compatibility": "C=D^T maps 80 scalar node displacements to 160 spring extensions.",
+    "dynamical_matrix": "(k/m) D D^T",
+    "equilibrium": "Q=D maps 160 spring tensions to 80 nodal forces.",
+    "free_mechanism_dimension": 1,
+    "frequency_squared_over_km": {
+      "0": 1,
+      "4": 30,
+      "4+sqrt6": 24,
+      "4-sqrt6": 24,
+      "8": 1
+    },
+    "local_bond_projection": "(P_selfstress)_ee=81/160",
+    "pinned_system": {
+      "constraints": 160,
+      "displacements": 79,
+      "index": -81,
+      "self_stress": 81,
+      "zero_modes": 0
+    },
+    "rank_D": 79,
+    "reading": "The protected H1 memory is exactly the state-of-self-stress space of an 80-node, 160-spring scalar mechanical network.",
+    "self_stress_dimension": 81,
+    "stress_projector": "P_selfstress=I-D^T(DD^T)^+D=P_H1"
+  },
+  "pass4079_bonkers_quantum_quench_work": {
+    "Hamiltonian": "H(g)=g L_W33 with levels 0,10g,16g and degeneracies 1,24,15.",
+    "Jarzynski": "<e^(-beta W)>=Z1/Z0=e^(-beta Delta F) exactly.",
+    "boundary": "Two-projective-measurement prediction for an isolated sudden quench. No work measurement, bath dynamics, or interacting many-body thermodynamics.",
+    "characteristic_function": "chi(u)=Z0^-1[1+24e^(-10 beta g0)e^(i10 Delta g u)+15e^(-16 beta g0)e^(i16 Delta g u)].",
+    "sample": {
+      "Delta_F": 0.8069171437082165,
+      "Jarzynski_average": 0.7241426631318428,
+      "Z0": 1.4644986924272294,
+      "Z1": 1.0605059832873553,
+      "Z1_over_Z0": 0.7241426631318427,
+      "beta": 0.4,
+      "dissipated_work": 0.830000357020855,
+      "g0": 1.0,
+      "g1": 1.5,
+      "mean_work": 1.6369175007290715,
+      "probabilities": [
+        0.6828275130397153,
+        0.3001541316510685,
+        0.017018355309216124
+      ],
+      "work_values": [
+        0,
+        5.0,
+        8.0
+      ],
+      "work_variance": 5.913529126873435
+    },
+    "sudden_quench": "g0 to g1; eigenvectors are unchanged.",
+    "work_distribution": "P(W)=Z0^-1[delta(W)+24e^(-10 beta g0)delta(W-10 Delta g)+15e^(-16 beta g0)delta(W-16 Delta g)]."
+  },
+  "pass4080_bonkers_Kuramoto_synchronization": {
+    "boundary": "Local linear and weak-disorder theory only; no global synchronization theorem, chimera classification, or oscillator experiment.",
+    "decay_rates": {
+      "15_dimensional": "(4/3)K cos(alpha)",
+      "24_dimensional": "(5/6)K cos(alpha)",
+      "uniform": 0
+    },
+    "linearization": "delta_dot=-(K cos(alpha)/12)L_W33 delta.",
+    "local_stability": "The synchronous state is linearly asymptotically stable modulo global phase iff K cos(alpha)>0.",
+    "model": "dot(theta_i)=omega_i+(K/12) sum_j A_ij sin(theta_j-theta_i-alpha).",
+    "reading": "W33 supplies an exact two-band synchronization spectrum and a 24-versus-15 dimensional relaxation split.",
+    "relaxation_times": {
+      "fast_15": "3/[4K cos(alpha)]",
+      "slow_24": "6/[5K cos(alpha)]"
+    },
+    "synchronous_frequency": "Omega=omega-K sin(alpha) for identical oscillators.",
+    "timescale_ratio": "tau_slow/tau_fast=8/5",
+    "weak_disorder_response": "For zero-mean frequency disorder delta_omega, theta_star=(12/[K cos(alpha)])L^+ delta_omega and ||theta_star||_2 <=(6/[5|K cos(alpha)|])||delta_omega||_2."
+  },
+  "primary_literature": [
+    "Camps et al., arXiv:2203.10236, explicit block encodings of structured sparse matrices.",
+    "Gidney and Fowler, arXiv:1812.01238, arbitrary-angle phase catalysis as a comparison architecture.",
+    "van Luijk, Werner and Wilming, arXiv:2301.09877, correlations and degradation in covariant catalysis.",
+    "Maxwell-Calladine rigidity and states-of-self-stress framework.",
+    "Quantum two-projective-measurement Jarzynski work statistics.",
+    "Network Kuramoto synchronization linearized through graph Laplacian modes."
+  ],
+  "schema": "w33.pass4073_4080.engineering_outside_box.v1",
+  "semantic_sha256": "0304eef2ec49efabf5721ed47a35e48064530f459f2964ae49e455ef1d3c5a31",
+  "status": "PASS_EXACT_PHYSICAL_BLOCK_REFERENCE_MULTIPLICITY_LEAKAGE_EXPERIMENTS_AND_THREE_OUTSIDE_BOX"
+}
