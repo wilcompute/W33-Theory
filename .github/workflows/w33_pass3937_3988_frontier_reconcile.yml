@@ -1,0 +1,33 @@
+name: Passes 3937-3988 Protected Frontier Reconcile
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'tools/integrate_pass3937_3988_frontier.py'
+      - 'analysis/BT3937_BT3956_rho200_poset_monster_octonion_universal_photon_insert.tex'
+      - 'analysis/BT3937_BT3956_rho200_poset_monster_octonion_universal_photon_index_insert.html'
+      - 'docs/rho200-local-algebra-photon-null-processor.html'
+      - '.github/workflows/w33_pass3937_3988_frontier_reconcile.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pass3937-3988-frontier-reconcile
+  cancel-in-progress: true
+jobs:
+  reconcile:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - run: python tools/integrate_pass3937_3988_frontier.py
+      - name: Verify protected index unchanged
+        run: git diff --exit-code -- docs/index.html
+      - name: Commit generated frontier JSON
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/w33_current_frontier_manifest_v1.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Register Passes 3937-3988 in current frontier JSON'
+          git push
