@@ -1,8 +1,15 @@
 name: Force authoritative master docs Pages rebuild
 
 on:
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/pages-source-switch-issue.yml'
   issues:
     types: [opened]
+  issue_comment:
+    types: [created]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -11,6 +18,7 @@ permissions:
 
 env:
   EXPECTED_INDEX_BLOB: 41a8d733f42da18282fa276f5d2fa82bac7516f6
+  RECEIPT_ISSUE: '287'
 
 concurrency:
   group: force-master-docs-pages-rebuild
@@ -18,7 +26,11 @@ concurrency:
 
 jobs:
   rebuild:
-    if: github.event.issue.title == 'RUN_W33_MASTER_DOCS_PAGES_REBUILD'
+    if: >-
+      github.event_name == 'push' ||
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'issues' && github.event.issue.title == 'RUN_W33_MASTER_DOCS_PAGES_REBUILD') ||
+      (github.event_name == 'issue_comment' && github.event.issue.number == 287 && contains(github.event.comment.body, '/rebuild-pages'))
     runs-on: ubuntu-latest
     steps:
       - name: Check out authoritative source
@@ -123,12 +135,12 @@ jobs:
         if: success()
         env:
           GH_TOKEN: ${{ github.token }}
-          ISSUE: ${{ github.event.issue.number }}
         shell: bash
         run: |
           cat > receipt.md <<EOF
           Pages rebuild succeeded.
 
+          - trigger: `${{ github.event_name }}`
           - configured source: `${{ steps.config.outputs.branch }}:${{ steps.config.outputs.path }}`
           - build type: `${{ steps.config.outputs.build_type }}`
           - source blob: `${{ steps.verify.outputs.actual_blob }}`
@@ -139,23 +151,23 @@ jobs:
           - public mirror: `${{ steps.live.outputs.mirror_code }}` / `${{ steps.live.outputs.mirror_blob }}`
           - workflow run: https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
           EOF
-          gh issue comment "$ISSUE" --body-file receipt.md
-          gh issue close "$ISSUE" --reason completed
+          gh issue comment "$RECEIPT_ISSUE" --body-file receipt.md
+          gh issue close "$RECEIPT_ISSUE" --reason completed
 
       - name: Publish failure receipt
         if: failure()
         env:
           GH_TOKEN: ${{ github.token }}
-          ISSUE: ${{ github.event.issue.number }}
         shell: bash
         run: |
           cat > receipt.md <<EOF
           Pages rebuild did not verify successfully.
 
+          - trigger: `${{ github.event_name }}`
           - configured source observed: `${{ steps.config.outputs.branch }}:${{ steps.config.outputs.path }}`
           - source blob observed: `${{ steps.verify.outputs.actual_blob }}`
           - workflow run: https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
 
           The issue remains open because the live root and mirror were not both verified as the canonical long-form blob.
           EOF
-          gh issue comment "$ISSUE" --body-file receipt.md
+          gh issue comment "$RECEIPT_ISSUE" --body-file receipt.md
