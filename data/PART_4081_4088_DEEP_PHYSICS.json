@@ -14,40 +14,271 @@
     "4088": true
   },
   "pass4081_canonical_dark_irreps": {
-    "atlas_class_order": ["1A","2A","2B","3A","3B","3C","3D","4A","4B","5A","6A","6B","6C","6D","6E","6F","9A","9B","12A","12B"],
+    "atlas_class_order": [
+      "1A",
+      "2A",
+      "2B",
+      "3A",
+      "3B",
+      "3C",
+      "3D",
+      "4A",
+      "4B",
+      "5A",
+      "6A",
+      "6B",
+      "6C",
+      "6D",
+      "6E",
+      "6F",
+      "9A",
+      "9B",
+      "12A",
+      "12B"
+    ],
     "boundary": "The ATLAS class map, character fingerprints, multiplicities, and central idempotents are exact. Galois-pair a/b suffix orientation is left canonical unless independently fixed by an official representation trace.",
     "canonical_orientation": "For unresolved Galois/table-automorphism suffix pairs, plus/minus is fixed by the sign of the imaginary part on the first ATLAS class where the pair differs; no suffix is guessed.",
     "central_idempotent": "e_chi=(degree/25920) sum_C conjugate(chi(C)) K_C; the listed exact fingerprints determine every coefficient.",
-    "certified_atlas_suffixes": ["5a","5b","15a","15b"],
+    "certified_atlas_suffixes": [
+      "5a",
+      "5b",
+      "15a",
+      "15b"
+    ],
     "character_field": "Every fingerprint entry [p,q] denotes (p + q i sqrt(3))/2 in the exact ATLAS class order.",
-    "class_orders_in_atlas_order": [1,2,2,3,3,3,3,4,4,5,6,6,6,6,6,6,9,9,12,12],
-    "class_sizes_in_atlas_order": [1,45,270,40,40,240,480,540,3240,5184,360,360,720,720,1440,2160,2880,2880,2160,2160],
+    "class_orders_in_atlas_order": [
+      1,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      4,
+      4,
+      5,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      9,
+      9,
+      12,
+      12
+    ],
+    "class_sizes_in_atlas_order": [
+      1,
+      45,
+      270,
+      40,
+      40,
+      240,
+      480,
+      540,
+      3240,
+      5184,
+      360,
+      360,
+      720,
+      720,
+      1440,
+      2160,
+      2880,
+      2880,
+      2160,
+      2160
+    ],
     "dark_dimension": 3161,
     "dark_projector": "P_dark,chi is the action of e_chi on Sym^2(H1) minus the 160-dimensional incidence-edge bright module.",
     "group": "PSp(4,3) = U4(2), generated explicitly by four projective symplectic transvections",
     "group_order": 25920,
-    "internal_class_index_in_atlas_order": [0,1,2,4,3,5,6,7,8,9,11,10,13,12,14,15,16,17,19,18],
+    "internal_class_index_in_atlas_order": [
+      0,
+      1,
+      2,
+      4,
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
+      11,
+      10,
+      13,
+      12,
+      14,
+      15,
+      16,
+      17,
+      19,
+      18
+    ],
     "irreducibles": [
-      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0]],"dark_multiplicity":0,"degree":1,"internal_index":0,"isotypic_dimension":0,"label":"1"},
-      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[10,0],[-6,0],[2,0],[1,3],[1,-3],[-2,0],[4,0],[2,0],[-2,0],[0,0],[-3,-1],[-3,1],[0,2],[0,-2],[0,0],[2,0],[1,-1],[1,1],[-1,1],[-1,-1]],"dark_multiplicity":1,"degree":5,"internal_index":1,"isotypic_dimension":5,"label":"5a"},
-      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[10,0],[-6,0],[2,0],[1,-3],[1,3],[-2,0],[4,0],[2,0],[-2,0],[0,0],[-3,1],[-3,-1],[0,-2],[0,2],[0,0],[2,0],[1,1],[1,-1],[-1,-1],[-1,1]],"dark_multiplicity":1,"degree":5,"internal_index":2,"isotypic_dimension":5,"label":"5b"},
-      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[12,0],[-4,0],[4,0],[0,0],[0,0],[0,0],[0,0],[4,0],[0,0],[2,0],[0,0],[0,0],[0,0],[0,0],[0,0],[-2,0],[0,0],[0,0],[0,0],[0,0]],"dark_multiplicity":2,"degree":6,"internal_index":3,"isotypic_dimension":12,"label":"6"},
-      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[20,0],[4,0],[4,0],[-1,-3],[-1,3],[2,0],[2,0],[0,0],[0,0],[-2,0],[1,1],[1,-1],[0,-2],[0,2],[0,0],[-2,0],[-1,1],[-1,-1],[1,-1],[1,1]],"dark_multiplicity":1,"degree":10,"internal_index":4,"isotypic_dimension":10,"label":"10_plus"},
-      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[20,0],[4,0],[4,0],[-1,3],[-1,-3],[2,0],[2,0],[0,0],[0,0],[-2,0],[1,-1],[1,1],[0,2],[0,-2],[0,0],[-2,0],[-1,-1],[-1,1],[1,1],[1,-1]],"dark_multiplicity":1,"degree":10,"internal_index":5,"isotypic_dimension":10,"label":"10_minus"},
-      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[30,0],[-2,0],[6,0],[3,0],[3,0],[0,0],[-6,0],[-2,0],[-2,0],[0,0],[-3,0],[-3,0],[0,0],[0,0],[0,0],[2,0],[0,0],[0,0],[1,0],[1,0]],"dark_multiplicity":1,"degree":15,"internal_index":6,"isotypic_dimension":15,"label":"15a"},
-      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[30,0],[14,0],[-2,0],[3,0],[3,0],[0,0],[2,0],[6,0],[-2,0],[0,0],[1,0],[1,0],[0,0],[0,0],[0,0],[2,0],[0,0],[0,0],[-1,0],[-1,0]],"dark_multiplicity":3,"degree":15,"internal_index":7,"isotypic_dimension":45,"label":"15b"},
-      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[60,0],[12,0],[4,0],[-3,9],[-3,-9],[0,0],[0,0],[4,0],[0,0],[0,0],[-3,1],[-3,-1],[0,2],[0,-2],[0,0],[0,0],[0,0],[0,0],[1,1],[1,-1]],"dark_multiplicity":6,"degree":30,"internal_index":8,"isotypic_dimension":180,"label":"30_plus"},
-      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[40,0],[8,0],[0,0],[-2,0],[-2,0],[2,0],[-4,0],[0,0],[0,0],[-2,0],[2,0],[2,0],[0,0],[0,0],[0,0],[0,0],[2,0],[2,0],[0,0],[0,0]],"dark_multiplicity":5,"degree":20,"internal_index":9,"isotypic_dimension":100,"label":"20"},
-      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[60,0],[12,0],[4,0],[-3,-9],[-3,9],[0,0],[0,0],[4,0],[0,0],[0,0],[-3,-1],[-3,1],[0,-2],[0,2],[0,0],[0,0],[0,0],[0,0],[1,-1],[1,1]],"dark_multiplicity":6,"degree":30,"internal_index":10,"isotypic_dimension":180,"label":"30_minus"},
-      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[128,0],[0,0],[0,0],[2,0],[2,0],[-4,0],[2,0],[0,0],[0,0],[2,0],[-2,0],[-2,0],[2,0],[2,0],[0,0],[0,0],[-1,0],[-1,0],[0,0],[0,0]],"dark_multiplicity":8,"degree":64,"internal_index":11,"isotypic_dimension":512,"label":"64"},
-      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[90,0],[-6,0],[2,0],[9,-9],[9,9],[0,0],[0,0],[-2,0],[2,0],[0,0],[-3,3],[-3,-3],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[-1,1],[-1,-1]],"dark_multiplicity":4,"degree":45,"internal_index":12,"isotypic_dimension":180,"label":"45_minus"},
-      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[90,0],[-6,0],[2,0],[9,9],[9,-9],[0,0],[0,0],[-2,0],[2,0],[0,0],[-3,-3],[-3,3],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[-1,-1],[-1,1]],"dark_multiplicity":4,"degree":45,"internal_index":13,"isotypic_dimension":180,"label":"45_plus"},
-      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[120,0],[-8,0],[8,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"dark_multiplicity":9,"degree":60,"internal_index":14,"isotypic_dimension":540,"label":"60"},
-      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[80,0],[-16,0],[0,0],[-10,-6],[-10,6],[2,0],[2,0],[0,0],[0,0],[-1,-1],[2,-2],[2,2],[2,-2],[2,2],[0,0],[0,0],[-1,-1],[-1,1],[0,0],[0,0]],"dark_multiplicity":4,"degree":40,"internal_index":15,"isotypic_dimension":160,"label":"40_minus"},
-      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[80,0],[-16,0],[0,0],[-10,6],[-10,-6],[2,0],[2,0],[0,0],[0,0],[-1,1],[2,2],[2,-2],[2,2],[2,-2],[0,0],[0,0],[-1,1],[-1,-1],[0,0],[0,0]],"dark_multiplicity":4,"degree":40,"internal_index":16,"isotypic_dimension":160,"label":"40_plus"},
-      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[60,0],[-20,0],[4,0],[6,0],[6,0],[0,0],[0,0],[-4,0],[0,0],[0,0],[2,0],[2,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"dark_multiplicity":3,"degree":30,"internal_index":17,"isotypic_dimension":90,"label":"30_real"},
-      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[162,0],[18,0],[2,0],[0,0],[0,0],[0,0],[0,0],[2,0],[2,0],[2,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"dark_multiplicity":9,"degree":81,"internal_index":18,"isotypic_dimension":729,"label":"81"},
-      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[48,0],[16,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[-2,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"dark_multiplicity":2,"degree":24,"internal_index":19,"isotypic_dimension":48,"label":"24"}
+      {
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [
+          [2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0]
+        ],
+        "dark_multiplicity": 0,
+        "degree": 1,
+        "internal_index": 0,
+        "isotypic_dimension": 0,
+        "label": "1"
+      },
+      {
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[10,0],[-6,0],[2,0],[1,3],[1,-3],[-2,0],[4,0],[2,0],[-2,0],[0,0],[-3,-1],[-3,1],[0,2],[0,-2],[0,0],[2,0],[1,-1],[1,1],[-1,1],[-1,-1]],
+        "dark_multiplicity": 1,
+        "degree": 5,
+        "internal_index": 1,
+        "isotypic_dimension": 5,
+        "label": "5a"
+      },
+      {
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[10,0],[-6,0],[2,0],[1,-3],[1,3],[-2,0],[4,0],[2,0],[-2,0],[0,0],[-3,1],[-3,-1],[0,-2],[0,2],[0,0],[2,0],[1,1],[1,-1],[-1,-1],[-1,1]],
+        "dark_multiplicity": 1,
+        "degree": 5,
+        "internal_index": 2,
+        "isotypic_dimension": 5,
+        "label": "5b"
+      },
+      {
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[12,0],[-4,0],[4,0],[0,0],[0,0],[0,0],[0,0],[4,0],[0,0],[2,0],[0,0],[0,0],[0,0],[0,0],[0,0],[-2,0],[0,0],[0,0],[0,0],[0,0]],
+        "dark_multiplicity": 2,
+        "degree": 6,
+        "internal_index": 3,
+        "isotypic_dimension": 12,
+        "label": "6"
+      },
+      {
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[20,0],[4,0],[4,0],[-1,-3],[-1,3],[2,0],[2,0],[0,0],[0,0],[-2,0],[1,1],[1,-1],[0,-2],[0,2],[0,0],[-2,0],[-1,1],[-1,-1],[1,-1],[1,1]],
+        "dark_multiplicity": 1,
+        "degree": 10,
+        "internal_index": 4,
+        "isotypic_dimension": 10,
+        "label": "10_plus"
+      },
+      {
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[20,0],[4,0],[4,0],[-1,3],[-1,-3],[2,0],[2,0],[0,0],[0,0],[-2,0],[1,-1],[1,1],[0,2],[0,-2],[0,0],[-2,0],[-1,-1],[-1,1],[1,1],[1,-1]],
+        "dark_multiplicity": 1,
+        "degree": 10,
+        "internal_index": 5,
+        "isotypic_dimension": 10,
+        "label": "10_minus"
+      },
+      {
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[30,0],[-2,0],[6,0],[3,0],[3,0],[0,0],[-6,0],[-2,0],[-2,0],[0,0],[-3,0],[-3,0],[0,0],[0,0],[0,0],[2,0],[0,0],[0,0],[1,0],[1,0]],
+        "dark_multiplicity": 1,
+        "degree": 15,
+        "internal_index": 6,
+        "isotypic_dimension": 15,
+        "label": "15a"
+      },
+      {
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[30,0],[14,0],[-2,0],[3,0],[3,0],[0,0],[2,0],[6,0],[-2,0],[0,0],[1,0],[1,0],[0,0],[0,0],[0,0],[2,0],[0,0],[0,0],[-1,0],[-1,0]],
+        "dark_multiplicity": 3,
+        "degree": 15,
+        "internal_index": 7,
+        "isotypic_dimension": 45,
+        "label": "15b"
+      },
+      {
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[60,0],[12,0],[4,0],[-3,9],[-3,-9],[0,0],[0,0],[4,0],[0,0],[0,0],[-3,1],[-3,-1],[0,2],[0,-2],[0,0],[0,0],[0,0],[0,0],[1,1],[1,-1]],
+        "dark_multiplicity": 6,
+        "degree": 30,
+        "internal_index": 8,
+        "isotypic_dimension": 180,
+        "label": "30_plus"
+      },
+      {
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[40,0],[8,0],[0,0],[-2,0],[-2,0],[2,0],[-4,0],[0,0],[0,0],[-2,0],[2,0],[2,0],[0,0],[0,0],[0,0],[0,0],[2,0],[2,0],[0,0],[0,0]],
+        "dark_multiplicity": 5,
+        "degree": 20,
+        "internal_index": 9,
+        "isotypic_dimension": 100,
+        "label": "20"
+      },
+      {
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[60,0],[12,0],[4,0],[-3,-9],[-3,9],[0,0],[0,0],[4,0],[0,0],[0,0],[-3,-1],[-3,1],[0,-2],[0,2],[0,0],[0,0],[0,0],[0,0],[1,-1],[1,1]],
+        "dark_multiplicity": 6,
+        "degree": 30,
+        "internal_index": 10,
+        "isotypic_dimension": 180,
+        "label": "30_minus"
+      },
+      {
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[128,0],[0,0],[0,0],[2,0],[2,0],[-4,0],[2,0],[0,0],[0,0],[2,0],[-2,0],[-2,0],[2,0],[2,0],[0,0],[0,0],[-1,0],[-1,0],[0,0],[0,0]],
+        "dark_multiplicity": 8,
+        "degree": 64,
+        "internal_index": 11,
+        "isotypic_dimension": 512,
+        "label": "64"
+      },
+      {
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[90,0],[-6,0],[2,0],[9,-9],[9,9],[0,0],[0,0],[-2,0],[2,0],[0,0],[-3,3],[-3,-3],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[-1,1],[-1,-1]],
+        "dark_multiplicity": 4,
+        "degree": 45,
+        "internal_index": 12,
+        "isotypic_dimension": 180,
+        "label": "45_minus"
+      },
+      {
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[90,0],[-6,0],[2,0],[9,9],[9,-9],[0,0],[0,0],[-2,0],[2,0],[0,0],[-3,-3],[-3,3],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[-1,-1],[-1,1]],
+        "dark_multiplicity": 4,
+        "degree": 45,
+        "internal_index": 13,
+        "isotypic_dimension": 180,
+        "label": "45_plus"
+      },
+      {
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[120,0],[-8,0],[8,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],
+        "dark_multiplicity": 9,
+        "degree": 60,
+        "internal_index": 14,
+        "isotypic_dimension": 540,
+        "label": "60"
+      },
+      {
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[80,0],[-16,0],[0,0],[-10,-6],[-10,6],[2,0],[2,0],[0,0],[0,0],[-1,-1],[2,-2],[2,2],[2,-2],[2,2],[0,0],[0,0],[-1,-1],[-1,1],[0,0],[0,0]],
+        "dark_multiplicity": 4,
+        "degree": 40,
+        "internal_index": 15,
+        "isotypic_dimension": 160,
+        "label": "40_minus"
+      },
+      {
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[80,0],[-16,0],[0,0],[-10,6],[-10,-6],[2,0],[2,0],[0,0],[0,0],[-1,1],[2,2],[2,-2],[2,2],[2,-2],[0,0],[0,0],[-1,1],[-1,-1],[0,0],[0,0]],
+        "dark_multiplicity": 4,
+        "degree": 40,
+        "internal_index": 16,
+        "isotypic_dimension": 160,
+        "label": "40_plus"
+      },
+      {
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[60,0],[-20,0],[4,0],[6,0],[6,0],[0,0],[0,0],[-4,0],[0,0],[0,0],[2,0],[2,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],
+        "dark_multiplicity": 3,
+        "degree": 30,
+        "internal_index": 17,
+        "isotypic_dimension": 90,
+        "label": "30_real"
+      },
+      {
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[162,0],[18,0],[2,0],[0,0],[0,0],[0,0],[0,0],[2,0],[2,0],[2,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],
+        "dark_multiplicity": 9,
+        "degree": 81,
+        "internal_index": 18,
+        "isotypic_dimension": 729,
+        "label": "81"
+      },
+      {
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[48,0],[16,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[-2,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],
+        "dark_multiplicity": 2,
+        "degree": 24,
+        "internal_index": 19,
+        "isotypic_dimension": 48,
+        "label": "24"
+      }
     ],
     "trivial_multiplicity": 0
   },
@@ -62,12 +293,20 @@
     "onsite_self_energy": "-4 t^2/Delta",
     "pair_hopping": "J_pair=2 t^2/Delta",
     "schrieffer_wolff_order": 2,
-    "single_pair_defect": {"inverse_localization_length":"asinh(|nu|/(2|J_pair|))","relative_bound_energy":"sgn(nu) sqrt(nu^2+4 J_pair^2)"}
+    "single_pair_defect": {
+      "inverse_localization_length": "asinh(|nu|/(2|J_pair|))",
+      "relative_bound_energy": "sgn(nu) sqrt(nu^2+4 J_pair^2)"
+    }
   },
   "pass4083_two_parameter_pair_pump": {
     "bloch_hamiltonian": "h=(J1+J2 cos k) sigma_x + J2 sin k sigma_y + m sigma_z",
     "boundary": "Exact clean filled-band Rice-Mele/Thouless pump for the effective pair center. Disorder, interactions between pairs, finite filling preparation, loss, and measured quantization remain open.",
-    "cycle": ["J1=J+R cos(theta)","J2=J-R cos(theta)","m=2R sin(theta)","0<R<J"],
+    "cycle": [
+      "J1=J+R cos(theta)",
+      "J2=J-R cos(theta)",
+      "m=2R sin(theta)",
+      "0<R<J"
+    ],
     "fukui_hatsugai_suzuki_numeric": 1.0000000000000009,
     "gap_closing_enclosed": "(k,delta,m)=(pi,0,0)",
     "lower_band_chern_number": 1,
@@ -95,7 +334,25 @@
     "minimal_mark_count": 1,
     "minimality": "Zero marked edges leaves only scalar U(1); one marked edge already yields U(3), so one is minimal in number of marked incidence edges.",
     "restriction_components": [
-      {"block":"U(1)","character_index":2,"degree":1,"multiplicity":1},{"block":"U(2)","character_index":4,"degree":3,"multiplicity":2},{"block":"U(2)","character_index":5,"degree":3,"multiplicity":2},{"block":"U(1)","character_index":6,"degree":3,"multiplicity":1},{"block":"U(1)","character_index":7,"degree":3,"multiplicity":1},{"block":"U(1)","character_index":8,"degree":1,"multiplicity":1},{"block":"U(1)","character_index":9,"degree":2,"multiplicity":1},{"block":"U(1)","character_index":10,"degree":1,"multiplicity":1},{"block":"U(1)","character_index":11,"degree":2,"multiplicity":1},{"block":"U(1)","character_index":12,"degree":2,"multiplicity":1},{"block":"U(2)","character_index":13,"degree":3,"multiplicity":2},{"block":"U(3)","character_index":14,"degree":6,"multiplicity":3},{"block":"U(2)","character_index":15,"degree":3,"multiplicity":2},{"block":"U(1)","character_index":16,"degree":3,"multiplicity":1},{"block":"U(1)","character_index":17,"degree":3,"multiplicity":1},{"block":"U(1)","character_index":18,"degree":3,"multiplicity":1},{"block":"U(1)","character_index":19,"degree":3,"multiplicity":1},{"block":"U(2)","character_index":20,"degree":3,"multiplicity":2},{"block":"U(2)","character_index":21,"degree":3,"multiplicity":2}
+      {"block":"U(1)","character_index":2,"degree":1,"multiplicity":1},
+      {"block":"U(2)","character_index":4,"degree":3,"multiplicity":2},
+      {"block":"U(2)","character_index":5,"degree":3,"multiplicity":2},
+      {"block":"U(1)","character_index":6,"degree":3,"multiplicity":1},
+      {"block":"U(1)","character_index":7,"degree":3,"multiplicity":1},
+      {"block":"U(1)","character_index":8,"degree":1,"multiplicity":1},
+      {"block":"U(1)","character_index":9,"degree":2,"multiplicity":1},
+      {"block":"U(1)","character_index":10,"degree":1,"multiplicity":1},
+      {"block":"U(1)","character_index":11,"degree":2,"multiplicity":1},
+      {"block":"U(1)","character_index":12,"degree":2,"multiplicity":1},
+      {"block":"U(2)","character_index":13,"degree":3,"multiplicity":2},
+      {"block":"U(3)","character_index":14,"degree":6,"multiplicity":3},
+      {"block":"U(2)","character_index":15,"degree":3,"multiplicity":2},
+      {"block":"U(1)","character_index":16,"degree":3,"multiplicity":1},
+      {"block":"U(1)","character_index":17,"degree":3,"multiplicity":1},
+      {"block":"U(1)","character_index":18,"degree":3,"multiplicity":1},
+      {"block":"U(1)","character_index":19,"degree":3,"multiplicity":1},
+      {"block":"U(2)","character_index":20,"degree":3,"multiplicity":2},
+      {"block":"U(2)","character_index":21,"degree":3,"multiplicity":2}
     ],
     "stabilizer_conjugacy_classes": 22,
     "stabilizer_order": 162,
