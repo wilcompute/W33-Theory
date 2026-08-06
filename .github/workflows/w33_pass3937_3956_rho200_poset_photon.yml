@@ -1,0 +1,42 @@
+name: Passes 3937-3956 Rho200 Poset Photon Null Processor
+
+on:
+  pull_request:
+    paths:
+      - 'analysis/w33_pass3937_3956_rho200_poset_monster_octonion_universal_photon.py'
+      - 'analysis/BT3937_BT3956_rho200_poset_monster_octonion_universal_photon*'
+      - 'data/PART_3937_3956_*'
+      - 'tests/test_w33_pass3937_3956_rho200_poset_monster_octonion_universal_photon.py'
+      - 'docs/rho200-local-algebra-photon-null-processor.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - '.github/workflows/w33_pass3937_3956_rho200_poset_photon.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-certificate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pytest
+      - run: python -m py_compile analysis/w33_pass3937_3956_rho200_poset_monster_octonion_universal_photon.py
+      - run: python analysis/w33_pass3937_3956_rho200_poset_monster_octonion_universal_photon.py --print
+      - run: pytest -q tests/test_w33_pass3937_3956_rho200_poset_monster_octonion_universal_photon.py
+      - run: grep -F '14cc255a662b55b8a86ba020ae00392faaad50be04ebbb5027a52d470ad3ef54' docs/rho200-local-algebra-photon-null-processor.html
+
+  manuscripts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: wtfjoke/setup-tectonic@v3
+      - run: |
+          tectonic w33_paper.tex
+          tectonic photonic_holonet.tex
+          tectonic holonet_machine_blueprint.tex

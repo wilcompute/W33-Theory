@@ -1,0 +1,28 @@
+{
+  "compressed_certificate": {
+    "base85_chars": 7233,
+    "encoding": "zlib+base85",
+    "parts": [
+      "data/PART_3937_3956_CERTIFICATE.parts/part00.b85",
+      "data/PART_3937_3956_CERTIFICATE.parts/part01.b85",
+      "data/PART_3937_3956_CERTIFICATE.parts/part02.b85",
+      "data/PART_3937_3956_CERTIFICATE.parts/part03.b85"
+    ],
+    "uncompressed_bytes": 30266
+  },
+  "headline_results": {
+    "local_algebra_hasse": "8 species, 9 covers, beta1=2",
+    "photon_null_processor": "c=N*a/T scale-fixed; node count alone cannot alter vacuum c",
+    "rho200": "20+30+60+90 multiplicity-free",
+    "universal_reconstruction": "exact sufficient theorem and W33 instance"
+  },
+  "pending": [
+    "portable Monster words and class fusion",
+    "octonion order-192 SmallGroup identifier",
+    "literal photon nodes or derivation of c",
+    "remote CI/PDF"
+  ],
+  "schema": "w33.pass3937_3956.certificate_manifest.v1",
+  "semantic_sha256": "14cc255a662b55b8a86ba020ae00392faaad50be04ebbb5027a52d470ad3ef54",
+  "status": "PASS_EXACT_RHO200_POSET_UNIVERSAL_AND_PHOTON_MODEL_MONSTER_AND_OCTONION_ID_PENDING"
+}
