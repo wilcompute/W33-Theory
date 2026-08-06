@@ -1,0 +1,30 @@
+{
+  "all_set_partitions": 877,
+  "boundary": "Every record is an exact unital subalgebra of the seven-dimensional center obtained by summing primitive central idempotents. This does not claim that every central partition lifts to a combinatorial fusion of the 48 orbital relations.",
+  "count_by_central_dimension": {
+    "1": 1,
+    "2": 63,
+    "3": 301,
+    "4": 350,
+    "5": 140,
+    "6": 21,
+    "7": 1
+  },
+  "equal_degree_relabeling_group_order": 12,
+  "fourier_enrichment_present": false,
+  "inequivalent_central_fusions": 198,
+  "inequivalent_count_by_central_dimension": {
+    "1": 1,
+    "2": 23,
+    "3": 68,
+    "4": 66,
+    "5": 31,
+    "6": 8,
+    "7": 1
+  },
+  "primitive_regular_ranks": [1,1,4,4,4,9,25],
+  "primitive_simple_degrees": [1,1,2,2,2,3,5],
+  "schema": "w33.pass3992.central_fusion_lattice.v1",
+  "semantic_sha256": "16680f46b3768c71fe133d0a62985d2d10ad1d19c96afc899d733c2a7d17f615",
+  "status": "PASS_EXACT_CENTRAL_FUSION_LATTICE"
+}
