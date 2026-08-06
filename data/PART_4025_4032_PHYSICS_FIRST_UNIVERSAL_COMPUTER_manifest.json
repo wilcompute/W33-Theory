@@ -1,0 +1,28 @@
+{
+  "schema": "w33.pass4025_4032.execution_manifest.v1",
+  "status": "PASS_EXACT_FIVE_FRONT_THREE_BONKERS_TOE_HYPOTHESIS_NOT_ESTABLISHED_ALGEBRA_ENGINES_PENDING",
+  "certificate": "cc50a83926bd9d32770c33dcfb48ba04640d3601a3fbf64b29f34bb22f940a2f",
+  "five_fronts": {
+    "revival_error_budget": "Exact timing/detuning Hessians, phase/leakage split, optimal retiming, and local tolerance table.",
+    "polar_physical_compiler": "Exact cubic sign transform of the sparse Levi Hamiltonian.",
+    "mode_to_H1_bridge": "Incidence-only no-go plus 160 equivalent rank-one local write/read ports.",
+    "noise_aware_geometry_tomography": "Common-delay-invariant scale, adjacency, cubic checksum, and deterministic recovery thresholds.",
+    "literal_algebra_engines": "PR 281 workflow run 31105713885 remained queued; no relation-fusion or Monster output promoted."
+  },
+  "three_bonkers": {
+    "causal_speed_and_quantum_limits": "Bounded cell diameter, Lieb-Robinson scaling obligation, and exact MT/ML speed budget.",
+    "spectral_dimension_falsifier": "Neither W33 nor its Levi line graph has a four-dimensional Weyl plateau.",
+    "thermodynamic_holographic_capacity": "The 1620-state frame has only 81 orthogonal dimensions; capacity <= log2(81) and erasure >= kBT ln81."
+  },
+  "artifacts": [
+    "analysis/w33_pass4025_4032_physics_first_universal_computer.py",
+    "data/PART_4025_4032_PHYSICS_FIRST_UNIVERSAL_COMPUTER.json",
+    "tests/test_w33_pass4025_4032_physics_first.py",
+    "analysis/BT4025_BT4032_physics_first_universal_computer.md",
+    "analysis/BT4025_BT4032_physics_first_universal_computer_insert.tex",
+    "analysis/BT4025_BT4032_physics_first_universal_computer_index_insert.html",
+    "docs/physics-first-universal-computer.html"
+  ],
+  "boundary": "The finite physics results are exact. Fault-tolerant non-Clifford universality, scalable locality, continuum QFT, Lorentz invariance, Standard Model and gravity functors, dimensional scales, fabricated hardware, laboratory data, Monster embedding, and a theory of everything are not established.",
+  "semantic_sha256": "f0352d8c81d6215fc5f668df268cedb5bb334a6c28aa058c47a8ca9e28175458"
+}
