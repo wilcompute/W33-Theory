@@ -3,10 +3,18 @@
   "range": [4013, 4018],
   "slug": "incidence_link_h1_memory_projector_revival_tomography_and_coupler_bridge",
   "title": "Exact incidence-link H1 memory, projector gate, two-step revival, sign-resolved tomography, and physical coupler bridge",
-  "status": "reserved",
+  "status": "completed_exact_with_engineering_boundaries",
   "owner": "openai-gpt-5.6-thinking",
   "reserved_at": "2026-08-06T09:31:00-04:00",
+  "completed_at": "2026-08-06T09:39:00-04:00",
   "purpose": "Reconcile the exact 80-mode revival packet with the older Levi Hodge theorem and prove whether the 160 physical incidence couplers themselves carry the protected 81-dimensional memory sector. Add independent tomography and gate certificates without duplicating Passes 4005-4012.",
-  "coordination": "Preserve Passes 4005-4012 exact revival artifacts and protected docs/index.html. Treat the link-current theorem as a new physical-layout bridge, not a replacement for the point/line bright-dark construction.",
-  "boundary": "Reservation only. No fabricated coupler network, loss tolerance, laboratory delay, variable vacuum c, literal photon-node ontology, Monster embedding, remote CI, or PDF success is promoted."
+  "result": "The oriented 80x160 incidence-link boundary has rank 79 and its 81-dimensional kernel is selected by an exact integral polynomial in K=D^T D. The resulting projector is the canonical Hodge/Kirchhoff cycle projector on the physical couplers; R=I-2P is an exact 79/81 cut-cycle reflection. A distinct A_Levi^2 revival, signed four-moment tomography, and ideal centered-delay recovery of all 160 incidences were also certified.",
+  "certificate": "data/PART_4013_4018_INCIDENCE_LINK_H1_MEMORY.json",
+  "semantic_sha256": "bf19623ed99a287cde193ec3315e5a7f86b101f4340a1546a9dee394904c5bd3",
+  "verifier": "analysis/w33_pass4013_4018_incidence_link_h1_memory.py",
+  "regression": "tests/test_w33_pass4013_4018_incidence_link_h1_memory.py",
+  "manuscript_insert": "analysis/BT4013_BT4018_incidence_link_h1_memory_insert.tex",
+  "public_page": "docs/photon-incidence-link-h1-memory.html",
+  "coordination": "Passes 4005-4012 remain the point/line finite-detuning and bright-dark packet. Passes 4013-4018 add the distinct physical link-current H1 theorem and do not replace those artifacts. Protected docs/index.html is updated only through the manifest reconciler.",
+  "boundary": "Exact finite graph, matrix, projector, rank, tomography-inverse, and polynomial-gate statements only. No fabricated coupler network, local synthesis cost, loss/disorder tolerance, laboratory delay, variable vacuum c, literal photon-node ontology, Monster embedding, remote CI, or PDF success is promoted."
 }
