@@ -1,0 +1,23 @@
+name: Pass 3887 exact workspace discovery
+on:
+  pull_request:
+    paths:
+      - 'analysis/w33_pass3887_3904_discover.py'
+      - '.github/workflows/w33_pass3887_3904_discover.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy sympy networkx pytest
+      - run: python analysis/w33_pass3887_3904_discover.py | tee /tmp/discovery.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3887-discovery
+          path: /tmp/discovery.json
