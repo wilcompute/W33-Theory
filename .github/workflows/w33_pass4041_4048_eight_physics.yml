@@ -1,0 +1,45 @@
+name: Passes 4041-4048 Eight Physics Expansion
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4041_4048_eight_physics_expansion.py'
+      - 'data/PART_4041_4048_EIGHT_PHYSICS_EXPANSION.json'
+      - 'tests/test_w33_pass4041_4048_eight_physics_expansion.py'
+      - '.github/workflows/w33_pass4041_4048_eight_physics.yml'
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4041_4048_eight_physics_expansion.py'
+      - 'data/PART_4041_4048_EIGHT_PHYSICS_EXPANSION.json'
+      - 'tests/test_w33_pass4041_4048_eight_physics_expansion.py'
+      - '.github/workflows/w33_pass4041_4048_eight_physics.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+concurrency:
+  group: pass4041-4048-${{ github.event.pull_request.head.sha || github.sha }}
+  cancel-in-progress: false
+jobs:
+  exact-physics:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check numpy networkx sympy pytest
+      - name: Recompute exact certificate
+        run: python analysis/w33_pass4041_4048_eight_physics_expansion.py
+      - name: Focused regression
+        run: pytest -q tests/test_w33_pass4041_4048_eight_physics_expansion.py
+      - name: Verify frozen semantic certificate
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          x=json.loads(Path('data/PART_4041_4048_EIGHT_PHYSICS_EXPANSION.json').read_text())
+          assert all(x['checks'].values())
+          assert x['semantic_sha256']=='08414977d5198aa43ea25127bbe7fa0e6529f56471dabe9745f229e91aba63c4'
+          assert x['pass4042_interacting_two_photon_flat_band']['contact_dark_dimension']==3161
+          assert x['pass4046_outside_box_Hodge_supersymmetry']['witten_index']=='1-81=-80'
+          PY
