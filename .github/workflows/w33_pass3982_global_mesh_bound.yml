@@ -1,0 +1,32 @@
+name: Pass 3982 Global Mesh Bound
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass3982_global_mesh_bound.py'
+      - '.github/workflows/w33_pass3982_global_mesh_bound.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pass3982-global-mesh-bound
+  cancel-in-progress: true
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python analysis/w33_pass3982_global_mesh_bound.py | tee /tmp/pass3982.log
+      - run: grep -F 'PASS_GLOBAL_MESH_BOUND 229' /tmp/pass3982.log
+      - name: Commit exact result
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/PART_3982_GLOBAL_MESH_BOUND.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Pass 3982: freeze global mesh bound'
+          git push
