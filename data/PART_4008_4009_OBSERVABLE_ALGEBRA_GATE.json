@@ -1,0 +1,35 @@
+{
+  "schema": "w33.pass4008_4009.observable_algebra_gate.v1",
+  "status": "PENDING_GITHUB_RUN_QUEUED_NO_ENGINE_OUTPUTS",
+  "pull_request": 281,
+  "head_commit": "8ad53881473732aaf7b7b18b42e1eb42a28759dd",
+  "workflow_run_id": 31105713885,
+  "workflow_name": "Passes 4008-4009 Observable Algebra Execution",
+  "workflow_status": "queued",
+  "orbital_relation_fusion": {
+    "required_output": "data/PART_3999_ORBITAL_RELATION_FUSION.json",
+    "output_observed": false,
+    "job": "orbital-relation-fusion",
+    "artifacts": [
+      "data/PART_3983_ORBITAL_CENTRAL_FOURIER.json",
+      "data/PART_3999_ORBITAL_RELATION_FUSION.json",
+      "fourier.log",
+      "fusion.log"
+    ]
+  },
+  "monster_overgroup": {
+    "required_output": "data/PART_4000_MONSTER_EXECUTION_SUMMARY.json",
+    "output_observed": false,
+    "job": "monster-overgroup",
+    "artifacts": [
+      "data/PART_3993_MONSTER_OVERGROUP_ACQUISITION.json",
+      "data/PART_4000_MONSTER_EXECUTION_SUMMARY.json",
+      "data/PART_3751_MONSTER_U42_CLASS_FUSION_EXECUTION.json",
+      "gap.txt",
+      "acquire.log",
+      "summary.log"
+    ]
+  },
+  "boundary": "The execution path is concrete and observable, but both engine jobs were queued when this certificate was frozen. No relation-fusion rank, Monster candidate, negative-search count, or embedding is promoted without generated outputs and inspected logs.",
+  "semantic_sha256": "a4d8ca2b78c3e6953632b6567db9163fa0bc7cd495258cb32f8c8690efb25bba"
+}
