@@ -1,0 +1,159 @@
+\section{Sparse W33 photonics and causal-memory closure}
+\label{sec:bt3989-3996}
+
+\paragraph{Two sparse coupler realizations.}
+Let $A$ be the adjacency matrix of $W(3,3)$.  A forty-mode equal-edge
+coupled-mode array obeying
+\[
+ i\frac{d\psi}{dz}=\kappa A\psi
+\]
+implements, at $\kappa z=\pi/2$,
+\[
+ \boxed{e^{-i\pi A/2}=-\frac{I+A}{3}+\frac{2J}{15}.}
+\]
+This is an exact symmetric involution with row amplitudes $-1/5$ on a
+point and its twelve neighbours and $2/15$ on its twenty-seven
+nonneighbours.  Uniform fractional interaction error $\epsilon$ has no
+linear average-fidelity term:
+\[
+ F_{\rm pro}=1-3\pi^2\epsilon^2+O(\epsilon^3),\qquad
+ F_{\rm avg}=1-\frac{120}{41}\pi^2\epsilon^2+O(\epsilon^3).
+\]
+
+A complementary degree-four lift uses the $40\times40$ point--line
+incidence matrix $N$,
+\[
+ NN^{\mathsf T}=4I+A.
+\]
+Its eighty-mode bipartite graph has 160 edges, girth eight, and spectrum
+\[
+ -4^1,\;(-\sqrt6)^{24},\;0^{30},\;(\sqrt6)^{24},\;4^1.
+\]
+For detuned line-bus modes the leading effective Hamiltonian is
+\[
+ H_{\rm eff}=-\frac{g^2}{\Delta}(A+4I)+O(g^4/\Delta^3).
+\]
+These are exact matrix and spectral statements, not fabricated-device
+claims.
+
+\paragraph{Dual-geometry echo.}
+For the complement $B=J-I-A$,
+\[
+ A+B=J-I,
+\]
+while $D=A-B$ has spectrum
+\[
+ -15^1,\quad5^{24},\quad(-7)^{15}.
+\]
+If the same commuting perturbation $C$ enters both arms, then
+\[
+ e^{-it(A+C)}e^{+it(B+C)}=e^{-it(A-B)}.
+\]
+Thus the common arm is geometry-blind on the nonuniform sector and the
+difference arm isolates W33-specific contrast.
+
+\paragraph{Complete maximum-code orbit census.}
+For the fixed character code $C=[36,6,16]$, the 945 admissible
+weight-four words form a degree-624 compatibility graph with maximum
+clique size 57.  There are exactly 945 maximum cliques.  Under
+$O_6^-(2)\cong U_4(2){:}2$ they split as
+\[
+ \boxed{540+270+135}
+\]
+with stabilizers
+\[
+ \boxed{96,\;192,\;384}.
+\]
+Every maximum code is $[36,17,4]$, has the same weight enumerator, and
+has intersection-two graph
+\[
+ \operatorname{SRG}(45,16,8,4)\sqcup
+ 2\operatorname{SRG}(6,4,2,4)
+ \cong T(10)\sqcup2T(4).
+\]
+Uniqueness is false, but the fixed-parent maximum-code problem is
+completely classified.
+
+\paragraph{Central fusion lattice.}
+The rank-48 algebra has simple degrees
+\[
+ 1,1,2,2,2,3,5.
+\]
+All 877 partitions of its seven primitive central sectors were
+enumerated.  After quotienting by the order-twelve equal-degree
+relabeling group, exactly
+\[
+ \boxed{198}
+\]
+inequivalent central fusion subalgebras remain.  This does not assert
+that every central partition lifts to a fusion of the forty-eight
+orbital relations.
+
+\paragraph{Wigner--Smith time as operational memory.}
+For a frequency-dependent W33 scattering unitary
+\[
+ S(\omega)=e^{i\theta(\omega)L_{W33}},
+\]
+the Wigner--Smith operator is exactly
+\[
+ \boxed{Q(\omega)=-iS^\dagger\frac{dS}{d\omega}
+ =\theta'(\omega)L_{W33}.}
+\]
+Hence the proper-delay sectors are
+\[
+ 0^1,\qquad(10\theta')^{24},\qquad(16\theta')^{15},
+\]
+with mean $12\theta'$, variance $12(\theta')^2$, and total trace
+$480\theta'$.  This gives a measurable meaning to internal history:
+dwell-time and stored-energy sensitivity, not a changed vacuum causal
+speed.
+
+For $m$ independent W33 factors, the exact delay-shell polynomial is
+\[
+ \boxed{(1+24z^{10}+15z^{16})^m.}
+\]
+The address space has $40^m$ modes, while
+\[
+ \langle\tau\rangle=12m\theta',\qquad
+ \operatorname{Var}(\tau)=12m(\theta')^2.
+\]
+Therefore
+\[
+ \boxed{
+ \frac{\log_2(40^m)}{\langle\tau\rangle}
+ =\frac{\log_2 40}{12\theta'}
+ }
+\]
+is independent of self-similar depth, and the relative delay width is
+$1/\sqrt{12m}$.
+
+\paragraph{Dark memory and causal refinement.}
+The incidence lift has a thirty-dimensional exact dark sector.  Under
+tensor powers,
+\[
+ \operatorname{rank}(N^{\otimes m})=25^m,
+ \qquad
+ \dim\ker(N^{\otimes m})=40^m-25^m,
+\]
+so the dark fraction is $1-(5/8)^m$.  The exact quarter-step
+\[
+ V=e^{-i\pi L/4}=I-(1+i)E_{10}
+\]
+has order four and supplies an internal Floquet clock.
+
+A local-interaction causal cone has schematic physical velocity
+\[
+ v_{\rm int}\lesssim aC_{LR}(\Delta)J/\hbar.
+\]
+Self-similar refinement preserves the cone only when $aJ$ remains
+fixed.  More serial nodes without stronger coupling slow the internal
+cone; node density alone neither determines nor raises vacuum $c$.
+
+\paragraph{Monster and evidence boundary.}
+The acquisition search now composes class fusions through explicit
+Monster maximal overgroups and performs bounded four-generator
+\texttt{mmgroup} searches.  No portable $U_4(2)$ words have passed the
+full closure, object-action, and character-fusion gates, so no Monster
+embedding is promoted.  Fabrication, measured Wigner--Smith delays,
+variable vacuum $c$, literal hidden photon nodes, remote CI/PDF success,
+and laboratory performance likewise remain unclaimed.
