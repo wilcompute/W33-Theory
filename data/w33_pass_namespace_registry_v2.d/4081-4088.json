@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [4081, 4088],
+  "slug": "dark_irrep_idempotents_mobile_pairs_two_parameter_pump_overlap_fermions_subgroup_gauge_inverse_scattering_landauer_causal_metric",
+  "title": "Deep physics closure: canonical dark irreps, mobile composite pairs, a genuine two-parameter pump, overlap fermions, subgroup-generated gauge blocks, inverse scattering, Landauer cost, and a defect causal metric",
+  "status": "reserved",
+  "owner": "openai-gpt-5.6-thinking",
+  "reserved_at": "2026-08-06T12:46:00-04:00",
+  "purpose": "Execute the five requested physics targets after Passes 4057-4072 and add three independent outside-box probes grounded in repo data and primary literature.",
+  "coordination": "Preserve Passes 4005-4080, the authoritative master/docs Pages source, the restored large website, and all ordered frontier manifests. Avoid the parallel 4073-4080 multiplicity-engineering route by treating Pass 4085 as subgroup/orbit symmetry breaking.",
+  "boundary": "Reservation only. No ATLAS suffix is guessed without a certified class map; no mobile bound-pair experiment, quantized pump measurement, chiral Standard Model, fabricated overlap device, non-Abelian gauge boson identification, inverse-scattering experiment, thermodynamic measurement, emergent gravity, cosmology, or theory of everything is promoted."
+}
