@@ -1,0 +1,4 @@
+Authoritative GitHub Pages source: master:/docs
+Canonical index blob: 41a8d733f42da18282fa276f5d2fa82bac7516f6
+Purpose: trigger classic branch-based Pages while suppressing ordinary CI fan-out.
+Created: 2026-08-06T12:45:00-04:00
