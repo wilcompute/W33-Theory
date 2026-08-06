@@ -1,0 +1,155 @@
+    assert minimal_frames == (7,10,12,40,82,106,115,121,127)
+
+    plane_inc = np.zeros((40,45),dtype=np.int64)
+    for r,o in enumerate(plane_ovoid_sets):
+        plane_inc[r,list(o)] = 1
+    centered = 5*plane_inc - np.ones((40,45),dtype=np.int64)
+    left_q = old["left_q"]
+    pivrows = list(old["pivrows"])
+    centered_coords = []
+    for row in centered:
+        c = left_q * sp.Matrix(row.tolist())[pivrows,:]
+        centered_coords.append(c)
+    denominators = [sp.ilcm(*[x.q for x in c]) for c in centered_coords]
+    assert max(denominators) == 18
+    scaled_point_vectors = [np.asarray((18*c).tolist(),dtype=np.int64).reshape(24) for c in centered_coords]
+    assert rank_mod(np.stack(scaled_point_vectors),MOD) == 24
+    scaled_point_norms = [int(v.T @ axial_gram @ v) for v in scaled_point_vectors]
+    assert min(scaled_point_norms) == 72
+    line_vectors = []
+    for line in loc["w33_lines"]:
+        v = sum((scaled_point_vectors[dictionary[i]] for i in line), np.zeros(24,dtype=np.int64))
+        assert np.all(v % 6 == 0)
+        line_vectors.append(v//6)
+    assert rank_mod(np.stack(line_vectors),MOD) == 24
+    for spread in loc["spreads"]:
+        assert np.all(sum((line_vectors[i] for i in spread), np.zeros(24,dtype=np.int64)) == 0)
+
+    # ==================================================================
+    # Front 3: executable finite descent and strict pending-word audit.
+    # ==================================================================
+    full_group = tuple(loc["full_group"])
+    even_group = tuple(loc["even_group"])
+    assert len(full_group) == 51840 and len(even_group) == 25920
+    order_census = Counter(perm_order(g) for g in full_group)
+    assert order_census == Counter({6:12960,12:8640,8:6480,4:5940,9:5760,5:5184,10:5184,2:891,3:800,1:1})
+    historical_slots = {}
+    for path in [
+        ROOT/"data"/"PART_3670_3686_MMgroup_four_parabolic_candidate.json",
+        ROOT/"data"/"PART_3769_3786_FINITE_GROUP_DESCENT_candidate.json",
+        ROOT/"data"/"PART_3837_3854_MONSTER_DESCENT_candidate.json",
+    ]:
+        if path.exists():
+            payload = json.loads(path.read_text(encoding="utf-8"))
+            historical_slots[path.name] = payload.get("status")
+            assert payload.get("status") == "PENDING"
+        else:
+            historical_slots[path.name] = "PENDING_FILE_CREATED_SEPARATELY"
+    assert not any(status.startswith("PASS") for status in historical_slots.values())
+
+    # ==================================================================
+    # Front 4: universal rational marked-axis presentation and 4-axis orbits.
+    # ==================================================================
+    relation_matrix = sp.Matrix(np.asarray(loc["line_relation_matrix"],dtype=np.int64).tolist())
+    assert relation_matrix.rank() == 21
+    axes_exact = tuple(old["axes"])
+    axis_matrix = sp.Matrix.hstack(*axes_exact)
+    assert axis_matrix.rank() == 24
+    assert axis_matrix.nullspace() and len(axis_matrix.nullspace()) == 21
+    assert all(sum((axes_exact[i] for i in star), sp.zeros(45,1)) == sp.zeros(45,1) for star in old["stars"])
+    # Bilinearity makes each verified zero line sum annihilate every generator.
+    # The prior exact substrate already certifies both pair-product formulas.
+    graph45_adjacency = np.asarray(old["A"],dtype=np.uint8)
+    graph_certificate = json.loads((ROOT/"data"/"PART_3837_3854_GRAPH_AUT_CERTIFICATE.json").read_text(encoding="utf-8"))
+    assert sha256(graph45_adjacency.tobytes()).hexdigest() == graph_certificate["gq45_adjacency_sha256"]
+    rooted_automorphisms = int(graph_certificate["gq45_rooted_automorphisms"])
+    assert rooted_automorphisms == 1152
+    marked_axis_aut_order = 45*rooted_automorphisms
+    assert marked_axis_aut_order == 51840
+
+    structure = np.asarray(loc["structure"],dtype=np.int64)
+    axis_coordinates = np.asarray(loc["axis_coordinates"],dtype=np.int64)
+    def product_vector(x,y):
+        return np.einsum("kab,a,b->k",structure,x,y,dtype=np.int64)%MOD
+    def generated_dimension(indices):
+        basis = IncrementalBasis(MOD); vectors=[]
+        for i in indices:
+            v=axis_coordinates[:,i]
+            if basis.add(v): vectors.append(v)
+        changed=True
+        while changed and len(vectors)<24:
+            changed=False
+            snapshot=list(vectors)
+            for a,x in enumerate(snapshot):
+                for y in snapshot[a:]:
+                    z=product_vector(x,y)
+                    if basis.add(z): vectors.append(z); changed=True
+                    if len(vectors)==24: break
+                if len(vectors)==24: break
+        return len(vectors)
+    four_remaining = set(combinations(range(45),4))
+    four_orbits=[]
+    while four_remaining:
+        seed=min(four_remaining); queue=deque([seed]); four_remaining.remove(seed); orbit=[]
+        while queue:
+            current=queue.popleft(); orbit.append(current)
+            for g in old["line_gens"]:
+                image=tuple(sorted(g[i] for i in current))
+                if image in four_remaining:
+                    four_remaining.remove(image); queue.append(image)
+        rep=min(orbit)
+        degrees=tuple(sorted(sum(int(old["A"][i,j]) for j in rep if j!=i) for i in rep))
+        edges_induced=sum(int(old["A"][i,j]) for i,j in combinations(rep,2))
+        four_orbits.append({"size":len(orbit),"representative":list(rep),"induced_edges":edges_induced,"degree_sequence":list(degrees),"generated_dimension":generated_dimension(rep)})
+    four_orbits.sort(key=lambda x:(-x["induced_edges"],x["degree_sequence"],x["representative"]))
+    assert len(four_orbits)==20 and sum(x["size"] for x in four_orbits)==148995
+    four_dimension_census=Counter()
+    for item in four_orbits: four_dimension_census[item["generated_dimension"]]+=item["size"]
+    assert four_dimension_census == Counter({24:103320,14:27000,10:16740,6:1080,5:720,4:135})
+
+    # ==================================================================
+    # Front 5: close the double-K4 triality incidence geometry.
+    # ==================================================================
+    tripods=tuple(loc["tripods"]); tripod_index={x:i for i,x in enumerate(tripods)}
+    ovoid_gens=tuple(loc["ovoid_gens"])
+    tripod_gens=[tuple(tripod_index[g[x]] for x in tripods) for g in ovoid_gens]
+    norton_lines=tuple(old["norton_lines"]); norton_index={x:i for i,x in enumerate(norton_lines)}
+    norton_gens=[]
+    for v in old["selected_symmetries"]:
+        norton_gens.append(tuple(norton_index[tuple(sorted(symmetry(v,x) for x in line))] for line in norton_lines))
+    lag_gens=tuple(old["lag_gens"]); flag_gens=tuple(old["flag_gens"]); line_gens=tuple(old["line_gens"])
+    assert len(tripod_gens)==len(norton_gens)==len(lag_gens)==len(flag_gens)==len(line_gens)
+
+    k4_partitions=loc["k4_partitions"]
+    block_gens=[]
+    for partition in k4_partitions:
+        index={frozenset(block):i for i,block in enumerate(partition)}
+        gens=[]
+        for g in ovoid_gens:
+            gens.append(tuple(index[frozenset(g[x] for x in block)] for block in partition))
+        block_gens.append(tuple(gens))
+    incidence=np.asarray(loc["incidence"],dtype=np.int64)
+    row_graph=incidence@incidence.T-4*np.eye(40,dtype=np.int64)
+    col_graph=incidence.T@incidence-4*np.eye(40,dtype=np.int64)
+    def srg_parameters(A):
+        A=np.asarray(A,dtype=np.int64); A2=A@A
+        return (A.shape[0],int(A.sum(axis=1)[0]),next(int(A2[i,j]) for i,j in combinations(range(A.shape[0]),2) if A[i,j]),next(int(A2[i,j]) for i,j in combinations(range(A.shape[0]),2) if not A[i,j]))
+    assert srg_parameters(row_graph)==srg_parameters(col_graph)==(40,12,2,4)
+    frozen_incidence = json.loads((ROOT/"data"/"PART_3837_3854_DOUBLE_K4_INCIDENCE.json").read_text(encoding="utf-8"))
+    assert np.array_equal(incidence, np.asarray(frozen_incidence["incidence"],dtype=np.int64))
+    assert sha256(incidence.astype(np.uint8).tobytes()).hexdigest() == frozen_incidence["incidence_sha256"]
+    assert sha256(row_graph.astype(np.uint8).tobytes()).hexdigest() == graph_certificate["row40_adjacency_sha256"]
+    assert sha256(col_graph.astype(np.uint8).tobytes()).hexdigest() == graph_certificate["column40_adjacency_sha256"]
+    assert graph_certificate["row_column_isomorphic"] is False
+    row_rooted_aut=int(graph_certificate["row40_rooted_automorphisms"])
+    assert row_rooted_aut==1296 and 40*row_rooted_aut==51840
+    for gr,gcol in zip(block_gens[0],block_gens[1]):
+        assert np.array_equal(incidence[np.ix_(gr,gcol)],incidence)
+
+    cross_tn=orbit_partition(tuple((i,j) for i in range(160) for j in range(120)),tuple(zip(tripod_gens,norton_gens)))
+    cross_tf=orbit_partition(tuple((i,j) for i in range(160) for j in range(135)),tuple(zip(tripod_gens,lag_gens)))
+    cross_nf=orbit_partition(tuple((i,j) for i in range(120) for j in range(135)),tuple(zip(norton_gens,lag_gens)))
+    cross_tflag=orbit_partition(tuple((i,j) for i in range(160) for j in range(135)),tuple(zip(tripod_gens,flag_gens)))
+    def orbit_summaries(orbits,na,nb):
+        out=[]
+        for orbit in orbits:
