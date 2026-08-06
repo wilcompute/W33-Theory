@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [4113, 4120],
+  "slug": "gauge_string_fractional_pump_active_floquet_bogoliubov_horizon_dynamic_dimension_local_scar_compiler_thermodynamic_curvature_qutrit_holonomy_speed_limit_spectral_redshift",
+  "title": "Five physics closures and three outside-box probes: gauge-string fractional pumping, an active Floquet-Bogoliubov horizon, dynamically selected spectral dimension, a local scar compiler, thermodynamic curvature, qutrit holonomy memory, transport speed limits, and spectral redshift",
+  "status": "reserved",
+  "owner": "openai-gpt-5.6-thinking",
+  "reserved_at": "2026-08-06T14:17:00-04:00",
+  "purpose": "Execute the five physics targets following Passes 4097-4104 and add three independent outside-box constructions with exact finite-model checks and strict evidence boundaries.",
+  "coordination": "Preserve Passes 4005-4112, the repaired single-publisher master:/docs Pages contract, the authoritative long-form website, and all ordered frontier manifests. Do not edit docs/index.html directly.",
+  "boundary": "Reservation only. No color-transport experiment, continuum QCD, observed Hawking radiation, derivation of physical four-dimensional spacetime, static local scar Hamiltonian claim without proof, thermodynamic phase transition, non-Abelian anyon claim, fabricated speed-limit device, cosmological redshift, gravity, cosmology, or theory of everything is promoted."
+}
