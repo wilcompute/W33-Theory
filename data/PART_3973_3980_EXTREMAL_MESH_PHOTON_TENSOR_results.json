@@ -1,0 +1,87 @@
+{
+  "evidence_boundary": {
+    "exact": [
+      "57-code reconstruction and T(10)+2T(4) identification",
+      "one-parameter enumerator rigidity",
+      "exact Givens neighborhood audit",
+      "48-dimensional Wedderburn multiplication tensor",
+      "capacity/timing formulas"
+    ],
+    "modeled": [
+      "symmetric-channel information",
+      "timing sensitivity",
+      "Slepian Shannon-number engineering estimate"
+    ],
+    "open": [
+      "global A4 extremality",
+      "global mesh optimum",
+      "performed photon experiment",
+      "geometric orbital-basis rank-48 tensor",
+      "Monster embedding/class fusion",
+      "variable vacuum c",
+      "hardware or laboratory validation"
+    ]
+  },
+  "pass3973_code57_geometry": {
+    "A4": 57,
+    "T10_star_cliques": 10,
+    "T10_vertices_as_pairs": 45,
+    "basis_sha256": "853b9be8cbdc92d9a6fad36bb5a954d924e21ecf5096e98a3e0e3b7daf8c0a4c",
+    "code_parameters": [36, 17, 4],
+    "component_identifications": ["T(10)=L(K10)", "T(4)=L(K4)", "T(4)=L(K4)"],
+    "extremality_status": "NOT_PROVED_GLOBAL; exact geometry and one-parameter enumerator rigidity proved",
+    "intersection2_components": [45, 6, 6],
+    "small_complement_matchings": 3,
+    "weight4_support_sha256": "689cee7b1ab874d671f1af555a510828cf21c8f4249255153d284e6f1a8fccd0",
+    "weight_distribution": {"0": 1, "4": 57, "8": 852, "12": 7332, "16": 57294, "20": 57294, "24": 7332, "28": 852, "32": 57, "36": 1}
+  },
+  "pass3973_enumerator_rigidity": {
+    "boundary": "This rigidity theorem does not prove t=57 globally maximal.",
+    "forced_dual": {"B2": "0", "B4": "t", "B6": "6(t+7)", "B8": "11t+225", "B10": "12(5t+483)", "B12": "39(245-t)", "B14": "6(14505-49t)", "B16": "27(t+2065)", "B18": "456(t+455)"},
+    "forced_primal": {"A8": "11t+225", "A12": "9555-39t", "A16": "55755+27t"},
+    "parameter": "t=A4",
+    "t57_evaluation": {"A8": 852, "A12": 7332, "A16": 57294, "B6": 384, "B10": 9216, "B14": 70272, "B18": 233472},
+    "universal_LP_bound": "t<=245"
+  },
+  "pass3974_mesh_radius_one": {
+    "all_layers": 69,
+    "audit_note": "All 630 exact multiquadratic replays were executed in the authoring session; the standalone script retains --heavy for full regeneration and default quick mode for CI.",
+    "base": {"exact_zeros": 232, "layers": 69, "rotations": 398},
+    "minimum_rotations": 398,
+    "neighborhood": "all 630 transpositions",
+    "rotation_histogram": {"398":22,"400":43,"402":20,"404":17,"406":30,"408":18,"410":19,"412":17,"414":16,"416":23,"418":10,"420":21,"422":23,"424":14,"426":16,"428":15,"430":18,"432":10,"434":15,"436":16,"438":15,"440":15,"442":17,"444":12,"446":13,"448":11,"450":11,"452":15,"454":13,"456":10,"458":12,"460":8,"462":10,"464":9,"466":8,"468":12,"470":10,"472":9,"474":9,"476":6,"478":6,"480":3,"482":6,"484":5,"486":2},
+    "sha256": "d0e4b57c47e8db57def844d9d9da63b3e7cda0652b05473fcebc5884fbd8d80f",
+    "status": "EXACT_RADIUS_ONE_LOCAL_OPTIMUM; global optimum remains open",
+    "tested": 630,
+    "tie_transpositions": [[0,1],[2,3],[4,5],[6,7],[8,9],[10,11],[12,13],[14,15],[16,17],[18,19],[20,21],[20,22],[20,23],[21,22],[21,23],[22,23],[24,25],[26,27],[28,29],[30,32],[31,32],[34,35]],
+    "ties_at_398": 22
+  },
+  "pass3975_photon_experiment": {
+    "boundary": "This is a numerically certified design and sensitivity model, not a performed experiment or a measurement of fundamental vacuum front speed.",
+    "capacity_table": [
+      {"M":2,"bits_at_1pct_symmetric_error":0.9192068641040888,"bits_at_5pct_symmetric_error":0.7136030428840439,"ideal_bits":1.0},
+      {"M":4,"bits_at_1pct_symmetric_error":1.9033572390968774,"bits_at_5pct_symmetric_error":1.634354917847986,"ideal_bits":2.0},
+      {"M":8,"bits_at_1pct_symmetric_error":2.8911333148835126,"bits_at_5pct_symmetric_error":2.5732352967811636,"ideal_bits":3.0},
+      {"M":16,"bits_at_1pct_symmetric_error":3.8801379581480036,"bits_at_5pct_symmetric_error":3.5182585131036177,"ideal_bits":4.0},
+      {"M":40,"bits_at_1pct_symmetric_error":5.188280936802829,"bits_at_5pct_symmetric_error":4.771261026828294,"ideal_bits":5.321928094887363},
+      {"M":81,"bits_at_1pct_symmetric_error":6.19583758603984,"bits_at_5pct_symmetric_error":5.7373566410243,"ideal_bits":6.339850002884624},
+      {"M":729,"bits_at_1pct_symmetric_error":9.33390392202904,"bits_at_5pct_symmetric_error":8.747988315201045,"ideal_bits":9.509775004326936}
+    ],
+    "falsifier": "A reproducible mode-count-dependent slope b(M), surviving encoder swaps and length scaling, would falsify the invariant-front null. Intercept shifts alone do not.",
+    "protocol": ["herald one 1550-nm photon with fixed spectral envelope","randomly interleave unitary mode alphabets M=2,4,8,16,40","repeat at two or more free-space lengths and fit t(M,L)=a(M)+b(M)L","treat a(M) as encoder/decoder latency and b(M)-1/c as the propagation test","decode to a confusion matrix and report mutual information separately from timing"],
+    "slepian_shannon_number_examples": [{"M":40,"duration_s":1e-09,"half_bandwidth_Hz":20000000000.0,"vacuum_length_m":0.29979245800000004},{"M":81,"duration_s":2.025e-09,"half_bandwidth_Hz":20000000000.0,"vacuum_length_m":0.6070797274499999},{"M":729,"duration_s":1.8225e-08,"half_bandwidth_Hz":20000000000.0,"vacuum_length_m":5.46371754705}],
+    "timing_example": {"events_per_setting":1000000,"length_m":10000.0,"model":"c_eff(M)=c*(M/2)^gamma","sigma_level":5.0,"single_event_jitter_s":5e-11,"statistical_abs_gamma_bound_if_null":2.501829524675288e-09,"systematics_warning":"clock drift, mode-dependent optics, detector walk, and pulse reshaping dominate unless length-slope separation is used"}
+  },
+  "pass3976_rank48_tensor": {"algebra":"Q^2 + M2(Q)^3 + M3(Q) + M5(Q)","boundary":"Complete multiplication tensor in Wedderburn matrix-unit coordinates, not yet the geometric orbital-relation intersection tensor.","center_dimension":7,"dimension":48,"nonzero_structure_constants":178,"tensor_sha256":"1694a3e8be02b9e267afc9796e96014d8d7a837e8fab5e59626aee6cc6f29ba2","wedderburn_blocks":[1,1,2,2,2,3,5]},
+  "pass3977_monster_gate": {"boundary":"Abstract U4(2):2 fingerprints are not serialized mmgroup/Monster words and do not execute the class-fusion gate.","observed_in_repo":false,"promoted_embedding":false,"required_artifact":"data/PART_3751_MONSTER_U42_CLASS_FUSION_EXECUTION.json","status":"PENDING_EXPLICIT_MONSTER_WORDS_AND_CLASS_FUSION"},
+  "pass3978_3980_constructions": {
+    "capacity_trilemma": {"direct_sum":"one photon over M orthogonal alternatives carries at most log2(M) ideal classical bits per use","tensor_product":"N log2(d) bits requires N physically independent d-state factors, not merely N named nodes","time_bandwidth":"approximately M concentrated temporal modes require a Shannon number 2WT of order M"},
+    "direct_sum_examples": [{"bits":5.321928094887363,"modes":40},{"bits":6.339850002884624,"modes":81},{"bits":9.509775004326936,"modes":729}],
+    "self_similarity_invariants": {"bits_per_graph_diameter":2.6609640474436813,"bits_per_qsl_min_wavelength":10.643856189774725,"interpretation":"self-similarity preserves address density per routing depth; it does not alter vacuum c"},
+    "serial_qsl_examples_1550nm": [{"min_length_m":7.75e-07,"min_length_wavelengths":0.5,"orthogonal_updates":2},{"min_length_m":4.65e-06,"min_length_wavelengths":3.0,"orthogonal_updates":12},{"min_length_m":1.51125e-05,"min_length_wavelengths":9.75,"orthogonal_updates":39},{"min_length_m":1.55e-05,"min_length_wavelengths":10.0,"orthogonal_updates":40},{"min_length_m":3.13875e-05,"min_length_wavelengths":20.25,"orthogonal_updates":81}]
+  },
+  "regeneration": {"command":"python analysis/w33_pass3973_3980_extremal_mesh_photon_tensor.py --heavy --output /tmp/pass3973_3980.json","quick_ci":"python analysis/w33_pass3973_3980_extremal_mesh_photon_tensor.py --output /tmp/pass3973_3980_quick.json"},
+  "schema": "w33.pass3973_3980.extremal_mesh_photon_tensor.v1.frozen_summary",
+  "semantic_sha256": "769f2f1b29e832050fbf148f38ab64acd992766d5dc758a525b3f97e6e77d44e",
+  "status": "PASS_EXACT_57_GEOMETRY_MESH_RADIUS1_TENSOR_EXPERIMENT_MODEL_MONSTER_FAIL_CLOSED"
+}
