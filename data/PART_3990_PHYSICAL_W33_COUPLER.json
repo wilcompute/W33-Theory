@@ -1,0 +1,40 @@
+{
+  "boundary": "Exact coupled-mode transfer under an ideal equal-edge W33 Hamiltonian. Layout feasibility, non-nearest physical crossings, coupling uniformity, loss, fabrication, bandwidth, and measured fidelity remain open.",
+  "comparison": {
+    "dense_36_port_adjacent_factors": 398,
+    "warning": "These implement different target spaces and cost models; the analog result does not prove a 36-port mesh optimum.",
+    "w33_analog_operation": "one simultaneous sparse Hamiltonian flight"
+  },
+  "coupled_mode_equation": "i d psi/dz = kappa A_W33 psi",
+  "exact_interaction_area": "kappa*z=pi/2 modulo 2*pi",
+  "exact_transfer": "exp(-i*pi*A_W33/2)=-(I+A_W33)/3+2J/15",
+  "graph": {
+    "adjacency_spectrum": {"-4": 15, "12": 1, "2": 24},
+    "degree": 12,
+    "edges": 240,
+    "vertices": 40
+  },
+  "implementation_counting": {
+    "equal_coupling_links": 240,
+    "programmable_diagonal_ports_needed_for_this_fixed_reflection": 0,
+    "simultaneous_analog_sections": 1
+  },
+  "schema": "w33.pass3990.physical_sparse_coupler.v1",
+  "semantic_sha256": "b4f3fea2f768c124f6190719b8895dc44205fda85319a4cd94b842a9aff24a88",
+  "status": "PASS_EXACT_SPARSE_ANALOG_COUPLER_MODEL_HARDWARE_PENDING",
+  "transfer": {
+    "involution": true,
+    "row_amplitudes": {"nonneighbor": "2/15", "point_or_neighbor": "-1/5"},
+    "row_multiplicities": {"nonneighbor": 27, "point_or_neighbor": 13},
+    "symmetric": true
+  },
+  "uniform_fractional_coupling_error": {
+    "average_gate_fidelity_expansion": "F_avg=1-(120/41)*pi^2*epsilon^2+O(epsilon^3)",
+    "interpretation": "Uniform coupling-length miscalibration has no linear average-fidelity penalty because Tr A_W33=0.",
+    "multiplicities": [1, 24, 15],
+    "process_fidelity_expansion": "F_pro=1-3*pi^2*epsilon^2+O(epsilon^3)",
+    "relative_phase_slopes_in_units_of_pi_epsilon": [-6, -1, 2],
+    "weighted_first_moment": 0,
+    "weighted_second_moment": 3
+  }
+}
