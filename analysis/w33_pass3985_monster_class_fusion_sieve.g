@@ -1,0 +1,20 @@
+LoadPackage("ctbllib");
+u := CharacterTable("U4(2)");
+if u = fail then Error("CTblLib table U4(2) unavailable"); fi;
+m := CharacterTable("M");
+if m = fail then Error("CTblLib table M unavailable"); fi;
+fus := PossibleClassFusions(u,m);
+irru := Irr(u); irrm := Irr(m);
+degm := List(irrm,x->x[1]);
+pos := Position(degm,196883);
+if pos = fail then Error("Monster 196883 character unavailable"); fi;
+Print("FUSION_COUNT=",Length(fus),"\n");
+Print("U_DEGREES=",List(irru,x->x[1]),"\n");
+for i in [1..Length(fus)] do
+  vals := List(fus[i],j->irrm[pos][j]);
+  cf := ClassFunction(u,vals);
+  dec := List(irru,psi->ScalarProduct(u,psi,cf));
+  Print("FUSION_",i,"=",fus[i],"\n");
+  Print("DECOMP_",i,"=",dec,"\n");
+od;
+QUIT;
