@@ -1,0 +1,37 @@
+name: Passes 3997-4004 Exact Photon Layout and Stabilizers
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass3997_4004_layout_tomography_edge_memory.py'
+      - 'analysis/w33_pass4001_code_stabilizer_identification.py'
+      - 'data/PART_3997_4004_LAYOUT_TOMOGRAPHY_EDGE_MEMORY.json'
+      - 'data/PART_4001_CODE_STABILIZER_IDENTIFICATION.json'
+      - 'tests/test_w33_pass3997_4004_layout_tomography_stabilizers.py'
+      - 'analysis/BT3997_BT4004_photon_layout_fourier_stabilizers*'
+      - '.github/workflows/w33_pass3997_4004_exact.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+concurrency: {group: pass3997-4004-exact-${{ github.ref }}, cancel-in-progress: true}
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check numpy networkx pytest
+      - run: python analysis/w33_pass3997_4004_layout_tomography_edge_memory.py | tee /tmp/layout.log
+      - run: python analysis/w33_pass4001_code_stabilizer_identification.py | tee /tmp/stab.log
+      - run: grep -F 'PASS_LAYOUT_TOMOGRAPHY_EDGE_MEMORY ed4eddab150575ec2a719bc55974ac24e0b1852b1a3bec4a08204bc9114f4960' /tmp/layout.log
+      - run: grep -F 'PASS_CODE_STABILIZERS 2bb684e7fcbfc8ca00e233c4955fc7a985c8aada6791c932599db10b4287598c' /tmp/stab.log
+      - run: pytest -q tests/test_w33_pass3997_4004_layout_tomography_stabilizers.py
+      - run: git diff --exit-code -- data/PART_3997_4004_LAYOUT_TOMOGRAPHY_EDGE_MEMORY.json data/PART_4001_CODE_STABILIZER_IDENTIFICATION.json
+  manuscripts:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: wtfjoke/setup-tectonic@v3
+      - run: tectonic w33_paper.tex && tectonic photonic_holonet.tex && tectonic holonet_machine_blueprint.tex
