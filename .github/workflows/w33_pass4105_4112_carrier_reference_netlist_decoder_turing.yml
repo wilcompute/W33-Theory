@@ -1,0 +1,23 @@
+name: Passes 4105-4112 exact regression
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass4105_4112_carrier_reference_netlist_decoder_turing.py'
+      - 'tests/test_w33_pass4105_4112_carrier_reference_netlist_decoder_turing.py'
+      - 'data/PART_4105_4112_CARRIER_REFERENCE_NETLIST_DECODER_TURING_BONKERS.json'
+      - 'data/w33_pass4105_sector_faithful_carrier.json'
+      - 'data/w33_pass4107_router_fabrication_netlist.json'
+      - '.github/workflows/w33_pass4105_4112_carrier_reference_netlist_decoder_turing.yml'
+  pull_request:
+  workflow_dispatch:
+jobs:
+  exact-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --upgrade pip numpy scipy pytest
+      - run: python analysis/w33_pass4105_4112_carrier_reference_netlist_decoder_turing.py
+      - run: pytest -q tests/test_w33_pass4105_4112_carrier_reference_netlist_decoder_turing.py
