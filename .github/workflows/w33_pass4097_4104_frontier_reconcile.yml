@@ -1,0 +1,33 @@
+name: Passes 4097-4104 Protected Frontier Reconcile
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'tools/integrate_pass4097_4104_frontier.py'
+      - 'analysis/BT4097_BT4104_manybody_gauge_horizon_rg_engine_insert.tex'
+      - 'analysis/BT4097_BT4104_manybody_gauge_horizon_rg_engine_index_insert.html'
+      - 'docs/manybody-gauge-horizon-rg-engine-4097-4104.html'
+      - '.github/workflows/w33_pass4097_4104_frontier_reconcile.yml'
+  workflow_dispatch:
+permissions: {contents: write}
+concurrency: {group: pass4097-4104-frontier, cancel-in-progress: false}
+jobs:
+  reconcile:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python tools/integrate_pass4097_4104_frontier.py | tee /tmp/frontier.log
+      - run: grep -F 'PASS_4097_4104_FRONTIER 1 1 1 1' /tmp/frontier.log
+      - run: git diff --exit-code -- docs/index.html
+      - name: Commit manifest reconciliation
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/w33_current_frontier_manifest_v1.json analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          git diff --cached --quiet && exit 0
+          git commit -m 'Pass 4104: reconcile many-body gauge horizon RG public frontier'
+          git pull --rebase origin master
+          git push
