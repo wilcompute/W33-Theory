@@ -2,11 +2,21 @@
   "schema": "w33.pass_namespace_registry.v2.entry",
   "range": [3973, 3980],
   "slug": "a4_57_extremal_mesh_optimizer_photon_mode_experiment_rank48_tensor_monster_gate_three_bonkers",
-  "title": "A4=57 extremality, exact adjacent-mesh optimization, one-photon mode experiment, rank-48 orbital tensor, Monster execution gate, and three chained constructions",
-  "status": "reserved",
+  "title": "A4=57 geometry, exact mesh neighborhood, one-photon falsifier, rank-48 tensor, Monster gate, and three chained constructions",
+  "status": "complete",
   "owner": "openai-gpt-5.6-thinking",
   "reserved_at": "2026-08-06T00:28:00-04:00",
-  "purpose": "Execute the five published next steps from Passes 3957-3964: determine whether the A4=57 maximal code is extremal and classify its geometry; search for a smaller/deeper exact adjacent multiport; specify and numerically certify a falsifiable one-photon mode-capacity and arrival-time experiment; materialize the 48-relation coherent-configuration tensor or the strongest exact reachable substitute; and execute or fail-close the Monster gate. Add three independent creative constructions, with one extending the photon idea through several competing models rather than one ontology.",
-  "coordination": "Preserve completed Passes through 3972, the parallel Passes 3921-3936 branch, the active Passes 3937-3956 reservation, and protected website deployment files. Reuse the causal-density and 24-port results from Passes 3965-3972 without duplicating them.",
-  "boundary": "Reservation only. No global A4 bound, mesh optimum, experimentally achieved capacity, vacuum speed variation, literal photon-node ontology, full orbital tensor, Monster embedding, remote CI/PDF result, hardware performance, or laboratory result is promoted without executable or primary-source evidence."
+  "completed_at": "2026-08-06",
+  "semantic_sha256": "769f2f1b29e832050fbf148f38ab64acd992766d5dc758a525b3f97e6e77d44e",
+  "artifacts": {
+    "source": "analysis/w33_pass3973_3980_extremal_mesh_photon_tensor.py",
+    "results": "data/PART_3973_3980_EXTREMAL_MESH_PHOTON_TENSOR_results.json",
+    "report": "analysis/BT3973_BT3980_extremal_mesh_photon_tensor.md",
+    "insert": "analysis/BT3973_BT3980_extremal_mesh_photon_tensor_insert.tex",
+    "test": "tests/test_pass3973_3980_extremal_mesh_photon_tensor.py",
+    "atlas": "docs/extremal-mesh-photon-tensor.html"
+  },
+  "result": "The 57 support graph is explicitly T(10) disjoint union 2T(4); the one-parameter MacWilliams family gives only t<=245 and therefore does not prove global A4 extremality. All 630 single transpositions of the 36-port order were replayed exactly: none beats 398 rotations, 22 tie it, and all have depth 69. A length-slope/intercept one-photon experiment separates mode-dependent device latency from propagation. The split rank-48 matrix-unit tensor is complete with 178 nonzero structure constants. The Monster gate remains fail-closed. Three constructions separate direct-sum capacity, tensor-product factors, serial speed limits, time-bandwidth packing, and self-similar address density while preserving invariant vacuum c.",
+  "coordination": "Preserves completed Passes through 3972, does not modify protected docs/index.html, and adds the paper result once through the shared current-frontier manifest used by all three manuscript wrappers.",
+  "boundary": "No global A4 extremality, global mesh optimum, experimentally achieved capacity, variable vacuum c, literal hidden photon-node ontology, geometric orbital-basis rank-48 tensor, Monster embedding, remote PDF/CI result, hardware performance, or laboratory result is promoted."
 }
