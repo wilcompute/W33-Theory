@@ -12,7 +12,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "data" / "PART_3990_PHYSICAL_W33_COUPLER.json"
-EXPECTED_SEMANTIC = "1d7e6e54ed8c870940ff62a02106ed67ff6ea4742fba2d64e4bf0697330caf56"
+EXPECTED_SEMANTIC = "b4f3fea2f768c124f6190719b8895dc44205fda85319a4cd94b842a9aff24a88"
 
 
 def canonical_sha(value: object) -> str:
@@ -65,10 +65,6 @@ def build() -> dict[str, object]:
     weighted_mean=sum(s*m for s,m in zip(slopes,multiplicities))/dimension
     weighted_second=sum(s*s*m for s,m in zip(slopes,multiplicities))/dimension
     assert weighted_mean==0 and weighted_second==3
-    # |Tr/d|^2 = 1-3*pi^2 eps^2+O(eps^3).
-    process_infidelity_coefficient=3
-    average_infidelity_coefficient_num=120
-    average_infidelity_coefficient_den=41
 
     payload: dict[str, object] = {
       "schema":"w33.pass3990.physical_sparse_coupler.v1",
