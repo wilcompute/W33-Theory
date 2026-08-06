@@ -1,0 +1,13 @@
+{
+  "schema": "w33.pass3997_4004.combined_manifest.v1",
+  "status": "PASS_EXACT_LAYOUT_TOMOGRAPHY_STABILIZERS_THREE_BONKERS_FOURIER_AND_MONSTER_EXTERNAL_EXECUTION_PENDING",
+  "certificates": {
+    "layout_tomography_edge_memory": "ed4eddab150575ec2a719bc55974ac24e0b1852b1a3bec4a08204bc9114f4960",
+    "code_stabilizer_identification": "2bb684e7fcbfc8ca00e233c4955fc7a985c8aada6791c932599db10b4287598c"
+  },
+  "external_execution_gates": {
+    "orbital_fourier_relation_fusion": "analysis/w33_pass3999_orbital_relation_fusion.py",
+    "monster_overgroup_execution": "analysis/w33_pass4000_monster_execution_summary.py"
+  },
+  "boundary": "The two listed certificates were executed locally. Literal orbital Fourier coefficients, relation-level fusion output, Monster GAP/mmgroup output, hardware, laboratory data, remote CI, and PDFs remain pending until corresponding artifacts appear."
+}
