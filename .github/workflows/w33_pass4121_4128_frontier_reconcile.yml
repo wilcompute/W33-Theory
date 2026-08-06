@@ -1,0 +1,30 @@
+name: Passes 4121-4128 protected frontier
+
+on:
+  push:
+    paths:
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'analysis/BT4121_BT4128_explicit_gauge_dfs_decoder_foundry_attractors_insert.tex'
+      - 'analysis/BT4121_BT4128_explicit_gauge_dfs_decoder_foundry_attractors_index_insert.html'
+      - 'docs/explicit-gauge-dfs-decoder-foundry-attractors-4121-4128.html'
+      - 'data/w33_pass_namespace_registry_v2.d/4121-4128.json'
+      - 'tools/integrate_pass4121_4128_frontier.py'
+      - '.github/workflows/w33_pass4121_4128_frontier_reconcile.yml'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python tools/integrate_pass4121_4128_frontier.py
+      - name: Assert this packet does not replace the Pages entry point
+        run: |
+          if git show --pretty='' --name-only HEAD | grep -qx 'docs/index.html'; then
+            echo 'Passes 4121-4128 must not modify docs/index.html' >&2
+            exit 1
+          fi
