@@ -1,0 +1,113 @@
+name: Verify live W33 Pages payload
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'index.html'
+      - 'docs/index.html'
+      - 'docs/.pages-deploy-restored-index-*'
+      - '.github/workflows/verify-live-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: verify-live-w33-pages
+  cancel-in-progress: true
+
+jobs:
+  verify-live:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout current master
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Poll the public site and verify the exact large index
+        id: probe
+        shell: bash
+        env:
+          EXPECTED_BLOB: 41a8d733f42da18282fa276f5d2fa82bac7516f6
+          PUBLIC_URL: https://wilcompute.github.io/W33-Theory/
+        run: |
+          set -euo pipefail
+          for attempt in $(seq 1 60); do
+            url="${PUBLIC_URL}?verify=${GITHUB_SHA}-${GITHUB_RUN_ID}-${attempt}"
+            if curl --fail --silent --show-error --location \
+              -H 'Cache-Control: no-cache, no-store, max-age=0' \
+              -H 'Pragma: no-cache' \
+              "$url" -o /tmp/w33-live-index.html; then
+              live_blob="$(git hash-object /tmp/w33-live-index.html)"
+              live_bytes="$(wc -c < /tmp/w33-live-index.html | tr -d ' ')"
+              live_title="$(python - <<'PY'
+          from pathlib import Path
+          import re
+          text = Path('/tmp/w33-live-index.html').read_text(encoding='utf-8', errors='replace')
+          match = re.search(r'<title>(.*?)</title>', text, flags=re.I | re.S)
+          print(' '.join(match.group(1).split()) if match else 'NO_TITLE')
+          PY
+              )"
+              echo "attempt=$attempt blob=$live_blob bytes=$live_bytes title=$live_title"
+              if [[ "$live_blob" == "$EXPECTED_BLOB" ]]; then
+                echo "live_blob=$live_blob" >> "$GITHUB_OUTPUT"
+                echo "live_bytes=$live_bytes" >> "$GITHUB_OUTPUT"
+                echo "live_title=$live_title" >> "$GITHUB_OUTPUT"
+                echo "verified_url=$url" >> "$GITHUB_OUTPUT"
+                exit 0
+              fi
+            fi
+            sleep 10
+          done
+          echo 'The public root never served the authoritative large index.' >&2
+          echo 'Final response preview:' >&2
+          head -n 40 /tmp/w33-live-index.html >&2 || true
+          exit 1
+
+      - name: Record exact live verification receipt
+        uses: actions/github-script@v7
+        env:
+          LIVE_BLOB: ${{ steps.probe.outputs.live_blob }}
+          LIVE_BYTES: ${{ steps.probe.outputs.live_bytes }}
+          LIVE_TITLE: ${{ steps.probe.outputs.live_title }}
+          VERIFIED_URL: ${{ steps.probe.outputs.verified_url }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const path = 'data/pages_live_verification.json';
+            const payload = {
+              schema: 'w33.pages_live_verification.v1',
+              status: 'PASS_LIVE_BODY_EQUALS_AUTHORITATIVE_INDEX',
+              expected_blob: '41a8d733f42da18282fa276f5d2fa82bac7516f6',
+              live_blob: process.env.LIVE_BLOB,
+              live_bytes: Number(process.env.LIVE_BYTES),
+              live_title: process.env.LIVE_TITLE,
+              verified_url: process.env.VERIFIED_URL,
+              workflow_run_id: context.runId,
+              trigger_sha: context.sha,
+              verified_at: new Date().toISOString()
+            };
+            let sha;
+            try {
+              const current = await github.rest.repos.getContent({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                path,
+                ref: 'master'
+              });
+              sha = current.data.sha;
+            } catch (error) {
+              if (error.status !== 404) throw error;
+            }
+            await github.rest.repos.createOrUpdateFileContents({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              path,
+              branch: 'master',
+              message: `Record verified live Pages payload ${context.runId}`,
+              content: Buffer.from(JSON.stringify(payload, null, 2) + '\n').toString('base64'),
+              ...(sha ? { sha } : {})
+            });
