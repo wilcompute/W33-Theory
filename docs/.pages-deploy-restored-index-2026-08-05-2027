@@ -1,0 +1,8 @@
+Verified GitHub Pages deployment trigger
+
+Authoritative entry point: docs/index.html
+Required Git blob: 41a8d733f42da18282fa276f5d2fa82bac7516f6
+Deployment workflow: .github/workflows/deploy-pages.yml
+Requested: 2026-08-05T20:27:00-04:00
+
+The workflow must verify the blob above before uploading the complete docs directory.
