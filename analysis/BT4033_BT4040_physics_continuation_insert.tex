@@ -1,0 +1,62 @@
+\subsection{Full harmonic compiler, projected controls, and finite-network electrodynamics (Passes 4033--4040)}
+\label{sec:pass4033-4040-physics-continuation}
+
+The completed physics-first audit is supplemented by a deterministic construction on the same W33 point--line Levi graph.  Let
+\[
+D\in\{-1,0,1\}^{80\times160},\qquad
+C\in\{-1,0,1\}^{160\times1620},\qquad
+P_{H_1}=\frac1{160}CC^T,
+\]
+with \(\operatorname{rank}D=79\), \(\operatorname{rank}C=81\), and \(DC=0\).
+
+\paragraph{Exact write/read compiler.}
+The first 81 canonically ordered apartment columns form an integer basis \(B\) of \(H_1\).  With
+\[
+W=B(B^TB)^{-1/2},
+\]
+one has
+\[
+W^TW=I_{81},\qquad WW^T=P_{H_1}.
+\]
+Hence
+\[
+H_{\rm swap}=\begin{pmatrix}0&W^T\\W&0\end{pmatrix}
+\]
+performs a complete input--\(H_1\) swap at time \(\pi/2\), up to phase.  The dimension mismatch is physical: all 81 harmonic channels require the 80 incidence modes plus one ancilla.
+
+\paragraph{Projected disorder and control.}
+The 160 projected onsite operators
+\[
+A_e=P_{H_1}|e\rangle\!\langle e|P_{H_1}
+\]
+are linearly independent.  The 480 nearest-neighbour projected couplings span 320 dimensions, and the onsite span lies inside that coupling span through
+\[
+A_e=-\frac14\sum_{f\sim e}P_{H_1}
+\bigl(|e\rangle\!\langle f|+|f\rangle\!\langle e|\bigr)P_{H_1}.
+\]
+All projected site rays are pairwise nonorthogonal, so their commutant on \(H_1\) is scalar.  Their associative closure is \(M_{81}(\mathbb C)\); with the uniform identity control the ideal Hamiltonian Lie closure is \(\mathfrak u(81)\).  Thus uncalibrated local detuning is a splitting mechanism, whereas calibrated detuning is a universal control alphabet.
+
+\paragraph{Compressed tomography and fabrication contract.}
+The three-sector \(H_2\) populations require two nontrivial scalar probes.  Each five-sector signed-Levi or line-graph population vector requires four.  Affinely scaled Chebyshev probes have condition number below two in all three cases.  The secondary flat-band realization requires 160 sites, 480 degree-six couplings, and only uniform real hopping.  Its exact flat-band gap is
+\[
+\Delta_{\rm fb}=(4-\sqrt6)J.
+\]
+A sufficient static cluster-separation condition is \(\|V\|_2<\Delta_{\rm fb}/2\).  This is a design theorem, not a fabrication claim.
+
+\paragraph{Three physics constructions.}
+First, the Lindblad jump map
+\[
+L_v=\sum_eD_{ve}a_e
+\]
+has dark space \(\ker D=H_1\) and dissipative gap \(4-\sqrt6\).  Second, the local projected controls generate \(\mathfrak u(81)\) in the ideal protected model.  Third, interpreting \(\rho=DE\) as a discrete Gauss law gives an exact Levi effective-resistance law
+\[
+R_1=\frac{79}{160},\qquad
+R_2=\frac{13}{20},\qquad
+R_3=\frac{111}{160},\qquad
+R_4=\frac7{10}.
+\]
+This is finite-network electrodynamics, not a continuum Maxwell or gravity derivation.
+
+\paragraph{Execution boundary.}
+The literal 48-relation fusion and Monster jobs still have no generated engine outputs.  No relation-fusion rank, Monster word, class fusion, or embedding is promoted.  The exact certificate is
+\texttt{data/PART\_4033\_4040\_PHYSICS\_CONTINUATION.json}.
