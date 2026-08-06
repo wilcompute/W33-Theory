@@ -1,0 +1,33 @@
+{
+  "schema": "w33.pass4105.sector_faithful_carrier.v1",
+  "candidate_99": {
+    "module": "(C^6 tensor V_1) direct_sum (C^3 tensor V_15) direct_sum (C^2 tensor V_24)",
+    "dimension": 99,
+    "commutant": "M_6(C) direct_sum M_3(C) direct_sum M_2(C)",
+    "supported": ["Q=(3,2)_(1/6)", "one anti-triplet", "L=(1,2)_(-1/2)"],
+    "missing": ["a second independent anti-triplet", "e^c=(1,1)_1"],
+    "verdict": "exact module, incomplete direct one-generation carrier"
+  },
+  "corrected_145": {
+    "module": "(C^7 tensor V_1) direct_sum (C^6 tensor V_15) direct_sum (C^2 tensor V_24)",
+    "dimension": 145,
+    "commutant": "M_7(C) direct_sum M_6(C) direct_sum M_2(C)",
+    "sector_assignments": {
+      "V_1": ["Q=(3,2)_(1/6)", "e^c=(1,1)_1"],
+      "V_15": ["u^c=(bar3,1)_(-2/3)", "d^c=(bar3,1)_(1/3)"],
+      "V_24": ["L=(1,2)_(-1/2)"]
+    },
+    "multiplicity_lower_bounds": {"m_1": 7, "m_15": 6, "m_24": 2},
+    "minimality_identity": "7+6*15+2*24=145",
+    "anomaly_checks": {
+      "SU3_cubed": 0,
+      "SU3_sq_U1": 0,
+      "SU2_sq_U1": 0,
+      "gravity_sq_U1": 0,
+      "U1_cubed": 0,
+      "Witten_SU2_doublets": 4
+    },
+    "chirality_interface": "Use the external overlap operator with P_hat_minus=(1-gamma5(1-aD))/2 on every internal carrier state."
+  },
+  "boundary": "Representation architecture only; no derived particles, masses, Yukawas, generations, symmetry breaking, confinement, or observed couplings."
+}
