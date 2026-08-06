@@ -1,0 +1,74 @@
+\subsection{Passes 4073--4080: engineering closures and outside-box physics probes}
+\label{sec:pass4073-4080}
+
+\paragraph{Exact four-router block encoding.}
+The $4$-regular Levi graph admits a one-factorization
+$A_L=P_0+P_1+P_2+P_3$ into four involutory perfect-matching
+permutations.  Consequently a balanced four-path selector and the
+controlled router $U_{\rm sel}=\sum_j |j\rangle\langle j|\otimes P_j$
+obey
+\[
+ (\langle 00|B^\dagger\otimes I)U_{\rm sel}(B|00\rangle\otimes I)
+ ={A_L\over4}.
+\]
+This is an exact abstract block encoding with two selector bits or paths;
+loss, crosstalk, and fabrication are not included.
+
+\paragraph{Finite phase reference.}
+Compressing $K$ copies of
+$|A_\phi\rangle=(|0\rangle+e^{i\phi}|1\rangle)/\sqrt2$ into the symmetric
+Hamming-weight basis and applying a controlled cyclic lowering produces
+coherence multiplier
+\[
+ z_K=e^{i\phi}S_K+2^{-K}e^{-iK\phi},\qquad
+ S_K=2^{-K}\sum_{n=1}^K\sqrt{\binom K{n-1}\binom Kn}.
+\]
+The one-use channel error is at most $1-S_K+2^{-K}$, with
+$1-S_K\sim(2K)^{-1}$.  This removes the doubled-angle hierarchy but is
+only approximately catalytic.
+
+\paragraph{Minimal non-Abelian multiplicities.}
+The multiplicity extension
+$(m_1,m_{24},m_{15})=(3,1,2)$ has dimension $57$ and commutant
+\[
+ M_3(\mathbb C)\oplus\mathbb C\oplus M_2(\mathbb C).
+\]
+After freezing the spectator $U(1)$, its determinant-one subgroup has
+global form $S(U(3)\times U(2))\cong
+(SU(3)\times SU(2)\times U(1))/\mathbb Z_6$ and central charge ratio
+$-1/3:1/2$.  The present Dirac matter remains vectorlike; chirality and
+the observed matter representation are not derived.
+
+\paragraph{Four-gap leakage notch.}
+For the bright gaps
+$\Delta/J\in\{4-\sqrt6,4,4+\sqrt6,8\}$, choose
+\[
+ f={h^{(8)}+124h^{(6)}+4644h^{(4)}+53056h''+102400h\over102400},
+\]
+with $h$ and its first seven derivatives vanishing at the pulse
+endpoints.  Then
+\[
+ F(\omega)=H(\omega){\prod_r(\Delta_r^2-\omega^2)\over102400},
+\]
+so all first-order $H_1$-to-bright transition amplitudes vanish while
+$\int f=\int h$.  Leakage probability therefore begins at fourth order
+in the perturbative control strength.
+
+\paragraph{Independent falsifiers and outside-box correspondences.}
+The packet freezes six laboratory null tests.  It also identifies
+$P_{H_1}$ with the Maxwell--Calladine state-of-self-stress projector of
+an $80$-node, $160$-spring scalar network, giving one uniform mechanism
+and $81$ self-stress states.  A sudden quench of $H(g)=gL_{W33}$ has an
+exact three-line work distribution and obeys
+$\langle e^{-\beta W}\rangle=Z_1/Z_0$.  Finally, the normalized
+Sakaguchi--Kuramoto linearization has decay rates
+$(5/6)K\cos\alpha$ with multiplicity $24$ and
+$(4/3)K\cos\alpha$ with multiplicity $15$, fixing the relaxation-time
+ratio to $8/5$.
+
+\paragraph{Boundary.}
+These are exact finite or perturbative ideal-model statements.  They do
+not certify a fabricated interferometer, an exact finite reusable
+irrational-phase catalyst, a fault-tolerance threshold, a chiral
+Standard Model, a mechanical prototype, a global nonlinear
+synchronization theorem, gravity, cosmology, or a theory of everything.
