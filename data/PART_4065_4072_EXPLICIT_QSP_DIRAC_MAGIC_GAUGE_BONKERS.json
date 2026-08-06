@@ -1,0 +1,102 @@
+{
+  "boundaries": [
+    "All promoted statements are exact algebraic formulas or deterministic numerical certificates in explicitly stated conventions.",
+    "No fabricated hardware, finite-cost exact deterministic irrational injection, fault-tolerance threshold, Standard Model, gravity, cosmology, or theory of everything."
+  ],
+  "pass4065_explicit_qsp_phases": {
+    "boundary": "Numerically extracted phase convention with deterministic regression; no fabricated block encoding or calibrated hardware.",
+    "convention": "Wx QSP: U_phi(x)=exp(i phi0 Z) product_{j=1}^5[W(x) exp(i phij Z)], W=[[x,i sqrt(1-x^2)],[i sqrt(1-x^2),x]]",
+    "dense_grid_points": 20001,
+    "max_top_left_residual": 1.1871385360742503e-15,
+    "max_unitarity_residual": 1.1621269493077919e-15,
+    "phase_gates": 6,
+    "phases_over_pi": [-0.8934306293135316,-0.6502466856295572,-0.7702030095379818,0.7702030095379818,-0.3497533143704426,-0.10656937068646843],
+    "phases_radians": [-2.8067951015434964,-2.042810210594929,-2.419664116537273,2.419664116537273,-1.0987824429948638,-0.3347975520462967],
+    "queries": 5,
+    "symmetry": ["phi0+phi5=-pi","phi1+phi4=-pi","phi2+phi3=0"],
+    "target_polynomial": "p5(x)=(9/25+24sqrt(6)/25)x+(-48/25-152sqrt(6)/225)x^3+(64/25-64sqrt(6)/225)x^5",
+    "telescoping_error_bound": "||delta U|| <= 6 delta_phi_max + 5 eta_signal for per-phase error <=delta_phi_max and per-query signal error <=eta_signal"
+  },
+  "pass4066_adaptive_magic_correction": {
+    "accepted_channel_diamond_bound_K": "2^(-K)",
+    "angle_doubling_factory": "Two |A_theta> states, even Z tensor Z parity, and a CNOT produce |A_{2theta}> with probability 1/2.",
+    "base_phase": "exp(i phi)=(-4+3i)/5; phi/pi irrational",
+    "boundary": "No fault-tolerant logical injection or finite-cost exact deterministic protocol.",
+    "correction_rule": "After a -2^k phi branch, inject |A_{2^(k+1) phi}>; the desired outcome moves the accumulated angle to +phi.",
+    "direct_angle_resource_expected_injections_K": "2-2^(-K)",
+    "failure_probability_K": "2^(-(K+1))",
+    "finite_exact_no_go": "After K correction failures the residual angle is -(2^(K+1)-1)phi; its difference from +phi is -2^(K+1)phi, never a Clifford angle because phi/pi is irrational.",
+    "raw_A_phi_expected_cost_K": "2^(K+1)-1 under recursive parity-doubling factories",
+    "sample_K10": {"diamond_bound":0.0009765625,"expected_angle_resources":1.9990234375,"expected_raw_A_phi":2047,"failure_probability":0.00048828125},
+    "verdict": "Almost-sure exact correction exists with an infinite angle ladder, but naive recursive production has divergent expected raw M36 cost. Finite deterministic acceptance is approximate with explicit error-cost tradeoff."
+  },
+  "pass4067_lorentzian_dirac_walk": {
+    "W33_masses": "m_r=sqrt(m0^2+g lambda_r), lambda_r in {0,10,16} with multiplicities {1,24,15}",
+    "boundary": "Exact local unitary and first-order continuum convergence; no measured propagation, curved metric, interacting QFT, or derivation of c.",
+    "coin_dimension": 4,
+    "continuum": "(U_a-I)/(-i a)=m_r beta+sum_j p_j alpha_j+O(a)",
+    "gamma_choice": "beta=Z tensor I; alpha_j=X tensor sigma_j, so {alpha_i,alpha_j}=2delta_ij and {alpha_j,beta}=0",
+    "position_reading": "Each spatial factor is a conditional nearest-neighbour shift; one macrostep has finite support inside |Delta x_j|<=1.",
+    "sample": {"a_values":[0.2,0.1,0.05,0.025],"g":0.05,"m0":0.4,"operator_errors":{"15_sector":[0.1348208287626954,0.06736716703814138,0.03367607612906116,0.016837018087129802],"24_sector":[0.10339725361646904,0.05168349225205043,0.025839268669252468,0.012919304189489523],"singlet":[0.04670947795887019,0.023363675737795575,0.011682950829842302,0.005841614404535399]},"p":[0.3,-0.2,0.1]},
+    "space": "three-dimensional periodic cubic lattice; discrete time gives 3+1 dimensions",
+    "walk": "U_a(p,r)=exp(-i a m_r beta) exp(-i a p1 alpha1) exp(-i a p2 alpha2) exp(-i a p3 alpha3)"
+  },
+  "pass4068_SK1_H1_robust_pulse": {
+    "boundary": "Projected two-level amplitude-error cancellation only; leakage, bandwidth, decoherence, and full 81-dimensional scheduling remain open.",
+    "chi": "arccos[-theta/(4pi)]",
+    "first_order": "d/d eps [R_x(theta)^dagger U_SK1] at eps=0 equals 0",
+    "logical_model": "Any calibrated two-level subspace selected inside H1 with continuous equatorial rotations inherited from the u(81) control algebra.",
+    "pi_pulse": {"average_gate_infidelity":"5 pi^4 eps^4/32+O(eps^5)","chi":"arccos(-1/4)","coefficient_numeric":4.778101684884314,"entanglement_infidelity":"15 pi^4 eps^4/64+O(eps^5)","error_frame":"R_x(pi)^dagger U_SK1=I-i(sqrt(15)pi^2/8)eps^2 Z+O(eps^3)","operator_error_coefficient":"sqrt(15)pi^2/8"},
+    "sequence": "R_{-chi}(2pi(1+eps)) R_{chi}(2pi(1+eps)) R_x(theta(1+eps))"
+  },
+  "pass4069_gauge_commutant_obstruction": {
+    "boundary": "Exact representation-theoretic obstruction, not a Standard Model derivation.",
+    "charge_operator": "Q=q_12 E_12+q_2 E_2+q_-4 E_-4",
+    "commutant": "span{E_12,E_2,E_-4}=span{I,A,J}, a three-dimensional commutative algebra",
+    "escape_routes": ["break W33 symmetry","introduce multiplicity/flavor copies","use a larger noncommutative algebra not restricted to the permutation commutant"],
+    "internal_module": "C^40 W33 permutation module = 1 direct-sum 24 direct-sum 15",
+    "lattice_covariance": "psi_x->exp(i alpha_x Q)psi_x; link U_xmu->exp(i alpha_x Q)U_xmu exp(-i alpha_{x+mu}Q)",
+    "no_go": "The full unbroken W33 commutant cannot generate non-Abelian SU(2) or SU(3) gauge bosons or mix the 1,24,15 sectors.",
+    "unitary_gauge_group_from_unbroken_commutant": "U(1)^3"
+  },
+  "pass4070_bonkers_reflection_antithermalization": {
+    "boundary": "No claim about richer driven sequences or interacting many-body dynamics.",
+    "gate": "U=I-2E_6; U^2=I",
+    "localized_time_average_entropy_bits": 0.9709505944546686,
+    "localized_vertex_weights": {"minus":"3/5","plus":"2/5"},
+    "orbit": "Repeated applications span at most {psi,U psi}; discrete orbit dimension <=2.",
+    "pure_state_entropy_bound_bits": 1,
+    "time_average": "rho_bar=P_+ rho P_+ + P_- rho P_-",
+    "verdict": "The exact reflection alone cannot produce a Page curve, Haar scrambling, or thermalization; it dephases only the two plus/minus sectors."
+  },
+  "pass4071_bonkers_H1_frame_metrology": {
+    "achievability": "A divergence-free Eulerian H1 flow with equal edge magnitudes has mu_e=1/160 and saturates the total bound.",
+    "boundary": "Ideal unitary single-parameter metrology; no noise, simultaneous-estimation compatibility, or experiment.",
+    "local_generator": "A_e=P|e><e|P=(81/160)|u_e><u_e|",
+    "maximum_total_QFI": "2 t^2",
+    "maximum_uniform_prior_average_QFI": "t^2/80",
+    "single_site_max_QFI": "(81/160)^2 t^2",
+    "single_site_max_QFI_numeric_per_t2": 0.2562890625,
+    "statewise_total_QFI": "sum_e F_e=4t^2[(81/160)-sum_e mu_e^2], mu_e=<psi|A_e|psi>, sum mu_e=1",
+    "sum_rule": "sum_e A_e=I_H1"
+  },
+  "pass4072_bonkers_Kirchhoff_tree_entropy": {
+    "Levi_laplacian_spectrum": "0^1+(4-sqrt6)^24+4^30+(4+sqrt6)^24+8^1",
+    "Levi_spanning_trees": "tau(Levi)=8*4^30*10^24/80=2^83 5^23",
+    "W33_laplacian_spectrum": "0^1+10^24+16^15",
+    "W33_spanning_trees": "tau(W33)=10^24 16^15/40=2^81 5^23",
+    "boundary": "Exact graph complexity, not gravitational entropy or physical microstate counting.",
+    "exact_ratio": "tau(Levi)/tau(W33)=4",
+    "log2_counts": {"Levi":136.4043461824093,"W33":134.4043461824093},
+    "reading": "The point-line incidence lift doubles the vertices but changes Kirchhoff complexity by exactly two bits."
+  },
+  "primary_literature": [
+    "Dong et al., arXiv:2002.11649, stable numerical QSP phase evaluation",
+    "Arrighi, Forets and Nesme, arXiv:1307.3524, causal quantum walks converging to Dirac evolution",
+    "Paetznick and Svore, arXiv:1311.1074, repeat-until-success rotation synthesis",
+    "Brown, Harrow and Chuang, Phys. Rev. A 70, 052318 (2004), arbitrarily accurate composite pulses"
+  ],
+  "schema": "w33.pass4065_4072.five_front_bonkers.v1",
+  "semantic_sha256": "342e8e7ae8f3ef06750716a1d3bdb25f2db432ee55e3ca35482086e16d6544ed",
+  "status": "PASS_EXPLICIT_QSP_ADAPTIVE_MAGIC_DIRAC_SK1_GAUGE_OBSTRUCTION_AND_THREE_BONKERS"
+}
