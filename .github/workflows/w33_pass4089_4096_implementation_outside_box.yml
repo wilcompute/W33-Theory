@@ -1,0 +1,24 @@
+name: Passes 4089-4096 Implementation Outside Box
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4089_4096_implementation_outside_box.py'
+      - 'data/PART_4089_4096_IMPLEMENTATION_OUTSIDE_BOX.json'
+      - 'data/w33_pass4089_four_router_layout.json'
+      - 'tests/test_w33_pass4089_4096_implementation_outside_box.py'
+      - '.github/workflows/w33_pass4089_4096_implementation_outside_box.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install numpy pytest
+      - run: python analysis/w33_pass4089_4096_implementation_outside_box.py | tee /tmp/pass.log
+      - run: grep -F 'PASS_4089_4096 598f80f12de4571824218228000fbfc874f339b59717009fb567e4268a5797dc' /tmp/pass.log
+      - run: pytest -q tests/test_w33_pass4089_4096_implementation_outside_box.py
