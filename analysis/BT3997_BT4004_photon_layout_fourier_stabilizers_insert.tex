@@ -1,0 +1,63 @@
+\section{Photon layout, delay tomography, orbital closure, and code stabilizers}
+\label{sec:bt3997-4004}
+
+The direct forty-mode W33 coupler and the eighty-mode point--line incidence lift both admit exact one-factorizations. Their resource vectors
+\[
+ (\text{modes},\text{links},\text{degree},\text{layers})
+\]
+are
+\[
+ (40,240,12,12),\qquad(80,160,4,4).
+\]
+For linear cost $C=\alpha M+\beta E+\gamma R$,
+\[
+ C_{40}-C_{80}=-40\alpha+80\beta+8\gamma,
+\]
+so the direct device wins exactly when
+\[
+ \boxed{5\alpha>10\beta+\gamma}.
+\]
+
+For $S(\omega)=e^{i\theta(\omega)L}$, the Wigner--Smith operator is $Q=\theta' L$. The three sector populations obey
+\[
+ p_{16}=\frac{m_2-10m_1}{96},\qquad
+ p_{10}=\frac{16m_1-m_2}{60},\qquad
+ p_0=1-p_{10}-p_{16}.
+\]
+The executed central-difference reconstruction converges quadratically. Removing common delay gives the stronger identity
+\[
+ \boxed{Q-\frac{\operatorname{Tr}Q}{40}I=-\theta' A_{W33}},
+\]
+so the complete W33 adjacency relation is recovered from the off-diagonal delay kernel.
+
+The three fixed-parent maximum-code stabilizers are identified exactly:
+\[
+ G_{540}\cong S_4\times V_4,
+\]
+\[
+ G_{270}\cong D_8\rtimes_{\operatorname{sgn},\alpha}S_4,
+ \qquad \alpha(r)=r^{-1},\quad\alpha(s)=r^2s,
+\]
+and
+\[
+ \boxed{G_{135}\cong C_2\wr S_4=2^4:S_4=W(B_4).}
+\]
+The last group acts faithfully on eight coordinates preserving four opposite pairs, giving an exact four-bit hypercube/cross-polytope bridge.
+
+For the oriented vertex--edge incidence matrix $D$,
+\[
+ \operatorname{Spec}(D^TD)=0^{201}+10^{24}+16^{15},
+\]
+and therefore
+\[
+ \boxed{e^{-i\pi D^TD/2}=I-2E_{10}}.
+\]
+The 201-dimensional kernel is raw cycle-space memory, not the 81-dimensional Hodge/CSS logical sector.
+
+Finally, pure-state delay metrology satisfies $F_Q=4\operatorname{Var}(Q)$. Thus
+\[
+ F_Q^{\rm vertex}=48(\theta')^2,
+ \qquad
+ F_Q^{\rm opt}=256(\theta')^2.
+\]
+The literal orbital Fourier/relation-fusion and Monster overgroup workflows are executable but their generated outputs remain pending. No fabricated device, measured delay, variable vacuum $c$, Monster embedding, remote CI/PDF success, or laboratory result is claimed.
