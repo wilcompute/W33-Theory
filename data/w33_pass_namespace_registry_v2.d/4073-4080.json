@@ -3,10 +3,34 @@
   "range": [4073, 4080],
   "slug": "physical_block_encoding_phase_reference_nonabelian_multiplicity_leakage_control_experiment_suite_mechanical_jarzynski_sync",
   "title": "Five engineering closures and three outside-box physics probes: physical block encoding, catalytic phase reference, minimal non-Abelian multiplicities, leakage-aware H1 control, falsification suite, mechanical self-stress, work statistics, and synchronization",
-  "status": "reserved",
+  "status": "source_complete_exact_certificate_physical_architecture_phase_reference_nonabelian_extension_and_outside_box_results_hardware_ft_chirality_and_experiments_pending",
   "owner": "openai-gpt-5.6-thinking",
   "reserved_at": "2026-08-06T12:39:00-04:00",
-  "purpose": "Execute the five open engineering steps after Passes 4065-4072 and add three genuinely nonoverlapping physics constructions outside the established photonic, gauge, Dirac, thermodynamic-spectrum, and graph-reflection tracks.",
-  "coordination": "Preserve Passes 4005-4072, the authoritative master/docs Pages source, the restored large website, and all ordered frontier manifests. Do not edit docs/index.html directly.",
-  "boundary": "Reservation only. No fabricated interferometer, exact finite catalytic irrational gate, fault-tolerance threshold, Standard Model identification, measured leakage suppression, mechanical prototype, nonequilibrium experiment, global nonlinear synchronization theorem, gravity, cosmology, or theory of everything is promoted."
+  "completed_at": "2026-08-06T13:16:00-04:00",
+  "certificate_status": "PASS_EXACT_PHYSICAL_BLOCK_REFERENCE_MULTIPLICITY_LEAKAGE_EXPERIMENTS_AND_THREE_OUTSIDE_BOX",
+  "certificates": {
+    "exact_packet": "0304eef2ec49efabf5721ed47a35e48064530f459f2964ae49e455ef1d3c5a31",
+    "combined_manifest": "7901850b02e27eb6bae1641107dc2fd76e8d227b6be027a8c2cacae5b5cfe43f"
+  },
+  "promoted": [
+    "exact four-perfect-matching physical block encoding of A_Levi/4 using a balanced four-path selector and four involutory routers",
+    "deterministic K-copy binomial phase-reference processor with exact coherence, error, and degradation formulas",
+    "minimum dimension-57 multiplicity extension with M3 plus M2 commutant and determinant-one S(U3 x U2) subgroup, while remaining vectorlike",
+    "eighth-order four-gap spectral-notch envelope cancelling all first-order H1-to-bright transition amplitudes",
+    "six concrete experimental falsification contracts without laboratory claims",
+    "exact Maxwell-Calladine interpretation of the 81-dimensional H1 memory as mechanical states of self stress",
+    "exact three-line sudden-quench work distribution and Jarzynski identity",
+    "exact 24-versus-15 Kuramoto synchronization decay spectrum and 8/5 relaxation-time ratio"
+  ],
+  "external_pending": [
+    "fabricated and calibrated four-router interferometer with insertion-loss and crosstalk characterization",
+    "resource-efficient reusable phase reference or fault-tolerant arbitrary-angle factory",
+    "a non-arbitrary chiral matter assignment, observed hypercharges, generations, and anomaly-complete Standard Model construction",
+    "bounded-bandwidth leakage-notch pulse realization including decoherence and multi-control crosstalk",
+    "laboratory execution and statistical analysis of the six falsification contracts",
+    "mechanical, nonequilibrium-work, and oscillator-network prototypes",
+    "remote exact CI, protected frontier reconciliation, and manuscript PDF evidence"
+  ],
+  "coordination": "Preserves Passes 4005-4072, the authoritative master/docs Pages source, the restored website, and docs/index.html.",
+  "boundary": "No fabricated device, exact finite reusable irrational catalyst, fault-tolerance threshold, chiral Standard Model, measured experiment, mechanical prototype, global nonlinear synchronization theorem, gravity, cosmology, or theory of everything is promoted."
 }
