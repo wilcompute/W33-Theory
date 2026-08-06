@@ -1,0 +1,119 @@
+\subsection{Passes 4113--4120: gauge-string pumping, active horizons, dynamic dimension, local scar compilation, and thermodynamic curvature}
+\label{sec:passes4113-4120}
+
+The exact evidence bundle for this subsection is
+\texttt{data/PART\_4113\_4120\_GAUGE\_HORIZON\_DIMENSION\_SCAR\_CURVATURE.json},
+with semantic SHA-256
+\texttt{28391f98e03ec20cc688cc8692579ff0cf352930d085b2d33d979de7ef9a3e2a}.
+All statements below are finite-model statements; continuum QCD, observed Hawking radiation,
+physical spacetime emergence, a static local scar Hamiltonian, thermodynamic singularities,
+and non-Abelian anyons remain outside the evidence boundary.
+
+\paragraph{Gauge-string fractional pump.}
+Tensoring the three one-third-filled CDW branches with the unique finite $SU(3)$ Gauss singlet
+\[
+ |\mathcal M\rangle=\frac13\sum_{a,b=1}^{3}|\bar a\rangle|a,\bar b\rangle|b\rangle
+\]
+gives a one-dimensional simultaneous left/right Gauss-law kernel in the $81$-dimensional endpoint--link--endpoint space.
+A branch cycle transports one third of a gauge-invariant composite and its attached fundamental--antifundamental flux support.
+After three cycles one complete singlet composite crosses a cut, but the net transported color charge is zero.
+In the zero-flux sector the three-cycle Wilson holonomy is the identity; a prescribed $\mathbb Z_3$ center flux contributes only
+$e^{2\pi i k/3}I$.  Non-Abelian Wilson mixing therefore requires a degenerate color multiplet or nontrivial plaquette background.
+
+\paragraph{Active Floquet--Bogoliubov horizon.}
+The passive reciprocal no-go is evaded by combining directed walk dispersion
+\[
+ \Omega(k)=\frac{2}{\tau}\arcsin\!\left[v\sin\left(\frac{ka}{2}\right)\right]
+\]
+with a local two-mode squeezer.  At a horizon $u(x_H)=c_{\rm eff}$,
+\[
+ \kappa=|\partial_x(u-c_{\rm eff})|_{x_H},\qquad T_H=\frac{\kappa}{2\pi},
+\]
+and
+\[
+ \tanh r=e^{-\pi\omega/\kappa},\qquad
+ n_\omega=\sinh^2r=\frac{1}{e^{2\pi\omega/\kappa}-1}.
+\]
+A greybody beam splitter of transmission $\Gamma$ gives $n_{\rm out}=\Gamma n_\omega$.
+The full six-channel Nambu map is paraunitary with residual
+$2.282836126979115\times10^{-16}$ in the frozen demonstration.
+For $\kappa=0.4$, $\omega=0.3$, and $\Gamma=0.7$,
+$T_H=0.06366197723675814$, $n_\omega=0.009064722057396675$,
+$n_{\rm out}=0.006345305440177674$, and the post-greybody logarithmic negativity is
+$0.15624263179344325$.
+The lattice ultraviolet correction begins at cubic order,
+\[
+ \Omega(k)=\frac{va}{\tau}k+\frac{v^3-v}{24}\frac{a^3}{\tau}k^3+O(k^5a^5).
+\]
+
+\paragraph{Dynamically selected spectral dimension.}
+Let $s=\ln b$, use the exact branch count $B=80$ and exact Levi edge connectivity $\chi=4$, and define
+\[
+ \Phi(s)=\frac12[\ln80-4s]^2,
+ \qquad
+ \dot s=\gamma[\ln80-4s].
+\]
+Then
+\[
+ \dot\Phi=-4\gamma[\ln80-4s]^2\le0,
+\]
+so
+\[
+ s_*=\frac{\ln80}{4},\qquad b_*=80^{1/4}=2.9906975624424406
+\]
+is globally stable, with linear exponent $-4\gamma$.  The selected spectral dimension is
+\[
+ d_s=\frac{\ln80}{\ln b_*}=4.
+\]
+This is an explicit four-channel information-balance law, not an independent derivation of physical spacetime.
+
+\paragraph{Local scar compilation and static no-go.}
+The three CDW words
+$100100100$, $010010010$, and $001001001$ have pairwise Hamming distance six.
+Any operator supported on fewer than six sites therefore has zero direct matrix element between distinct branches.
+If their bare span is exactly invariant, a strictly finite-range static Hamiltonian cannot realize the nontrivial branch cycle.
+An exact local Floquet realization nevertheless exists: apply the eight adjacent swaps $(0,1),(1,2),\ldots,(7,8)$ sequentially, each generated for time $\tau$ by
+\[
+ H_i=\frac{\pi}{2\tau}(I-\mathrm{SWAP}_{i,i+1}).
+\]
+One compiled shift takes $T_{\rm shift}=8\tau$, cycles the three CDW branches, and obeys
+\[
+ U_{\rm shift}^{3}=I,
+ \qquad T_{\rm rev}=24\tau.
+\]
+The Floquet quasienergies are $0$ and $\pm2\pi/(3T_{\rm shift})$.
+
+\paragraph{Thermodynamic curvature.}
+Assign each dark isotypic block of dimension $n_j$ the splitting charge $q_j=\ln n_j$, while the five bright groups retain their exact contact energies and have $q=0$.  Then
+\[
+ Z(\beta,h)=\sum_{j\in\mathrm{dark}}n_j e^{-h\ln n_j}
+ +\sum_{a\in\mathrm{bright}}g_a e^{-\beta E_a},
+ \qquad g_{ab}=\operatorname{Cov}(T_a,T_b),\quad T=(-E,-q).
+\]
+The two-dimensional Hessian scalar curvature satisfies
+\[
+ R(0,0)=-0.6460278596846867,
+\]
+crosses zero at $\beta U=14.579166757087052$, and reaches
+$R(20,0)=0.20080335722980544$.
+Because $Z$ is a finite positive exponential sum, this is a finite information-geometric crossover rather than a thermodynamic singularity.
+
+\paragraph{Three outside-box consequences.}
+First, the branch shift $X$ and branch twist $Z$ satisfy
+\[
+ ZX=\omega XZ,\qquad \omega=e^{2\pi i/3},
+\]
+with residual $2.482534153247273\times10^{-16}$, yielding the qutrit Heisenberg--Weyl logical algebra and projective commutator $\omega I$; this is projective holonomy, not anyon braiding.
+Second, the principal logarithm of $X$ has phases $0,\pm2\pi/3$, so any generator with $\|H-cI\|\le\Lambda$ obeys the exact unitary-geodesic limit
+\[
+ T\ge\frac{2\pi}{3\Lambda}.
+\]
+Third, at $b_*=80^{1/4}$ the hierarchy obeys
+\[
+ \lambda_{n+m}=\lambda_n b_*^{-2m},\qquad
+ \omega_{n+m}=\omega_n b_*^{-m},\qquad
+ 1+z_m=b_*^m=80^{m/4}.
+\]
+For $m=1,2,3,4$, the spectral redshifts are
+$1.9906975624424406$, $7.944271909999156$, $25.749612199056866$, and $79$.
+This is discrete spectral scaling, not gravitational or cosmological redshift.
