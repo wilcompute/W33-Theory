@@ -1,7 +1,7 @@
-name: Passes 3973-3980 Extremal Mesh Photon Tensor
+name: Passes 3973-3980 Extremal Mesh Photon Tensor Supplement
 
 on:
-  pull_request:
+  push:
     branches: [master]
     paths:
       - 'analysis/w33_pass3973_3980_*'
@@ -13,9 +13,9 @@ on:
       - 'docs/extremal-code-mesh-photon-tensor.html'
       - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
       - 'data/w33_current_frontier_manifest_v1.json'
-      - 'w33_paper.tex'
-      - 'photonic_holonet.tex'
-      - 'holonet_machine_blueprint.tex'
+      - '.github/workflows/w33_pass3973_3980_extremal_mesh_photon_tensor_monster.yml'
+  pull_request:
+    branches: [master]
   workflow_dispatch:
 
 permissions:
@@ -31,8 +31,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
+        with: {python-version: '3.12'}
       - run: python -m pip install --disable-pip-version-check pytest
       - run: python analysis/w33_pass3973_3980_check.py
       - run: pytest -q tests/test_w33_pass3973_3980_extremal_mesh_photon_tensor_monster.py
@@ -45,7 +44,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: sudo apt-get update && sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-science texlive-pictures
-      - run: grep -q '\\input{analysis/BT3973_BT3980_extremal_mesh_photon_tensor_monster_insert}' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+      - run: grep -q '\\input{analysis/BT3973_BT3980_combined_extremal_mesh_photon_tensor_insert}' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+      - run: grep -q 'BT3973_BT3980_extremal_mesh_photon_tensor_monster_insert' analysis/BT3973_BT3980_combined_extremal_mesh_photon_tensor_insert.tex
       - run: grep -q 'bt3973-3980-extremal-mesh-photon-tensor' data/w33_current_frontier_manifest_v1.json
       - run: test -s docs/extremal-code-mesh-photon-tensor.html
       - run: pdflatex -interaction=nonstopmode -halt-on-error w33_paper.tex
