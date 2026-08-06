@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [3913, 3928],
+  "slug": "cap_endpoint_gewirtz_nonequivariant_modular_extensions_tomotope_action_three_constructions",
+  "title": "Cubic-cap endpoint pressure, non-equivariant Gewirtz search, modular extension structure, tomotope action refinement, and three chained constructions",
+  "status": "reserved",
+  "owner": "openai-gpt-5.6-thinking",
+  "reserved_at": "2026-08-05T21:13:00-04:00",
+  "purpose": "Continue beyond Passes 3871-3886 without overlapping active Passes 3887-3912: pressure-test 64-cap existence and improve or certify the 177 transversal witness; search beyond the two-point-stabilizer Gewirtz residual for non-equivariant W33-compatible structures; refine the characteristic-three 115-module from composition factors to extension and socle/radical data; sharpen the split 2^4:D12 tomotope action; and derive three exact constructions from the free cap orbit, Petersen blow-up, modular carrier, and W33 fibre frame.",
+  "coordination": "Do not read, modify, regenerate, register, deploy, or otherwise touch docs/index.html. Preserve all completed Passes through 3886 and active reservations through 3912. Reconcile later parallel commits before shared manifest, manuscript, workflow, namespace, or standalone-page writes.",
+  "boundary": "Reservation only. No 64-cap nonexistence theorem, exact cubic endpoint, W33 realization inside the Gewirtz residual, complete modular Ext-quiver, physical interpretation, remote CI/PDF success, hardware/laboratory result, or website claim is promoted without executable evidence."
+}
