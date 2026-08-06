@@ -3,10 +3,24 @@
   "range": [4113, 4120],
   "slug": "gauge_string_fractional_pump_active_floquet_bogoliubov_horizon_dynamic_dimension_local_scar_compiler_thermodynamic_curvature_qutrit_holonomy_speed_limit_spectral_redshift",
   "title": "Five physics closures and three outside-box probes: gauge-string fractional pumping, an active Floquet-Bogoliubov horizon, dynamically selected spectral dimension, a local scar compiler, thermodynamic curvature, qutrit holonomy memory, transport speed limits, and spectral redshift",
-  "status": "reserved",
+  "status": "completed_exact_with_active_model_channel_balance_floquet_and_finite_size_boundaries",
   "owner": "openai-gpt-5.6-thinking",
   "reserved_at": "2026-08-06T14:17:00-04:00",
+  "completed_at": "2026-08-06T14:35:00-04:00",
   "purpose": "Execute the five physics targets following Passes 4097-4104 and add three independent outside-box constructions with exact finite-model checks and strict evidence boundaries.",
-  "coordination": "Preserve Passes 4005-4112, the repaired single-publisher master:/docs Pages contract, the authoritative long-form website, and all ordered frontier manifests. Do not edit docs/index.html directly.",
-  "boundary": "Reservation only. No color-transport experiment, continuum QCD, observed Hawking radiation, derivation of physical four-dimensional spacetime, static local scar Hamiltonian claim without proof, thermodynamic phase transition, non-Abelian anyon claim, fabricated speed-limit device, cosmological redshift, gravity, cosmology, or theory of everything is promoted."
+  "result": "The one-third-filled pump was tensored with the unique finite SU(3) Gauss singlet, proving that matter and attached flux move together while net color charge vanishes and the zero-flux three-cycle Wilson holonomy is identity. A directed Floquet walk plus BdG squeezing produced an exact six-channel paraunitary horizon cell with thermal occupation, greybody loss, partner entanglement, and lattice UV corrections. A four-channel information-balance Lyapunov flow selected b=80^(1/4) and spectral dimension four as a stable fixed point. A Hamming-support no-go ruled out direct static finite-range cycling of the bare CDW trio, while an eight-pulse nearest-neighbor Floquet SWAP compiler gave exact three-cycle revival. The two-parameter dark-reservoir Fisher curvature changed sign without a finite thermodynamic singularity. Three outside-box probes produced qutrit projective holonomy, an exact branch-shift quantum speed limit, and a discrete spectral-redshift law.",
+  "certificate": "data/PART_4113_4120_GAUGE_HORIZON_DIMENSION_SCAR_CURVATURE.json",
+  "semantic_sha256": "28391f98e03ec20cc688cc8692579ff0cf352930d085b2d33d979de7ef9a3e2a",
+  "verifier": "analysis/w33_pass4113_4120_gauge_horizon_dimension_scar_curvature.py",
+  "regression": "tests/test_w33_pass4113_4120_gauge_horizon_dimension_scar_curvature.py",
+  "report": "analysis/BT4113_BT4120_gauge_horizon_dimension_scar_curvature.md",
+  "manuscript_insert": "analysis/BT4113_BT4120_gauge_horizon_dimension_scar_curvature_insert.tex",
+  "public_page": "docs/gauge-horizon-dimension-scar-curvature-4113-4120.html",
+  "coordination": "Passes 4005-4112, the repaired single-publisher master:/docs Pages contract, the authoritative long-form docs/index.html, and the ordered manuscript frontier remain intact. This packet does not edit docs/index.html directly.",
+  "remote_pending": [
+    "GitHub Actions exact regression status",
+    "protected frontier reconciliation result",
+    "three manuscript PDF artifacts"
+  ],
+  "boundary": "Exact finite Gauss-law, paraunitary-scattering, gradient-flow, local-circuit, finite information-geometry, projective-holonomy, unitary-geodesic, and hierarchy-scaling statements only. No continuum QCD, observed Hawking radiation, derivation of physical four-dimensional spacetime, static local scar Hamiltonian, thermodynamic phase transition, non-Abelian anyon, gravity, cosmology, or theory of everything is established."
 }
