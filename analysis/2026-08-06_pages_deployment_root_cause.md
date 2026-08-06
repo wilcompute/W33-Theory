@@ -2,13 +2,13 @@
 
 ## Incident
 
-The public project site continued to show a tiny landing page even after `docs/index.html` was restored in the repository.
+The public project site continued to show a tiny landing page after `master/docs/index.html` had been restored in the repository.
 
 ## Artifact-level evidence
 
-The managed GitHub Pages workflow run `31029182878` produced artifact `8939954954` (`github-pages`) from branch `master` at head SHA `358da7c8b379d4460ee7c70da34416a742a7f054`.
+Managed GitHub Pages workflow run `31029182878` produced artifact `8939954954` (`github-pages`) from branch `master` at head SHA `358da7c8b379d4460ee7c70da34416a742a7f054`.
 
-The artifact was downloaded and inspected directly. Its deployed root document was:
+The artifact was downloaded and inspected directly. Its published root document was:
 
 - path: `/index.html`
 - byte count: `4064`
@@ -16,41 +16,43 @@ The artifact was downloaded and inspected directly. Its deployed root document w
 - title: `W33 Theory`
 - identifying text: `One substrate. Many exact interfaces.`
 
-All three jobs in that managed Pages run (`build`, `deploy`, and `report-build-status`) concluded `cancelled`.
+Its build, deploy, and report jobs concluded `cancelled`. The tiny page was therefore a real historical Pages artifact, not an invented browser rendering.
 
-Therefore the incident was not merely browser caching and was not solved by checking the current repository blob. The actual Pages artifact contained the tiny page, and the deployment was cancelled.
+## Authoritative source
 
-## Root cause
+The sole authoritative public source is:
 
-GitHub Pages was configured in legacy branch-publishing mode, using the high-churn `master` branch and `/docs` folder. Continuous research commits repeatedly invalidated or cancelled the managed Pages run. Earlier custom `actions/deploy-pages` workflows were not authoritative while the repository remained configured for legacy branch publication.
+`master:/docs/index.html`
 
-## Source hardening
-
-The authoritative large site has Git blob SHA-1:
+Its canonical long-form blob is:
 
 `41a8d733f42da18282fa276f5d2fa82bac7516f6`
 
-It is mirrored at all plausible publication paths:
+The file is 28,865 lines. The compact page is retained only as an archive and must never replace `master/docs/index.html`.
 
-- `master:/index.html`
-- `master:/docs/index.html`
-- `main:/index.html`
-- `main:/docs/index.html`
-- root and `/docs` immutable/fallback documents.
+## Current diagnosis
 
-The tiny redirect shell is retained only as:
+Independent retrieval of the public origin now returns the long-form W(3,3) site, while the historical 4,064-byte page contains no JavaScript, service worker, redirect, or storage code. If a browser still displays that exact compact page, the remaining mechanism is stale client or intermediary cache state, or navigation to a different URL—not persistent code in the compact page.
 
-`docs/index-redirect-archive-2026-08-06.html`
+## Cache-clean witnesses
 
-## Deployment repair
+The canonical large blob is also published at:
 
-The durable repair is to change the legacy Pages source from high-churn `master:/docs` to stable `main:/docs`, then explicitly request a Pages build. The source-switch controller and emergency issue-event controller are committed. Native merge commits were used to avoid the GitHub rule that `GITHUB_TOKEN`-generated commits do not trigger follow-on Pages builds.
+`master:/docs/full-site-2026-08-06.html`
+
+A one-time cache-reset entry is published at:
+
+`master:/docs/refresh-authoritative-site-2026-08-06.html`
+
+The reset entry unregisters service workers, clears Cache Storage, and opens the canonical project root with a unique query key.
 
 ## Verification rule
 
-No future assistant may claim this incident fixed merely because a repository file has the correct blob. Success requires both:
+No future assistant may claim success merely because the repository blob is correct. Verify all of the following:
 
-1. the Pages settings report `main:/docs` (or an intentionally configured custom-workflow source); and
-2. a cache-busted HTTP fetch of `https://wilcompute.github.io/W33-Theory/` whose complete response hashes to the authoritative large-site blob.
+1. Pages is configured for `master:/docs`.
+2. `master/docs/index.html` has the canonical long-form blob or an intentionally updated long-form successor.
+3. A fresh/cache-busted fetch of the public root returns the long-form page.
+4. A user seeing the historical compact page tests the cache-clean mirror or reset entry before any branch/source migration is attempted.
 
-Until both receipts exist, status is `SOURCE_REPAIRED_DEPLOYMENT_CONTROL_PENDING`, not `FIXED`.
+Current status: `MASTER_DOCS_AND_ORIGIN_LONG_FORM_CONFIRMED; STALE_CLIENT_PATH_REMEDIATION_PUBLISHED`.
