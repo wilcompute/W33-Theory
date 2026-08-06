@@ -1,0 +1,29 @@
+{
+  "schema": "w33.pass4065_4072.execution_manifest.v1",
+  "status": "PASS_EXPLICIT_QSP_ADAPTIVE_MAGIC_DIRAC_SK1_GAUGE_OBSTRUCTION_AND_THREE_BONKERS",
+  "certificate": "342e8e7ae8f3ef06750716a1d3bdb25f2db432ee55e3ca35482086e16d6544ed",
+  "five_fronts": {
+    "explicit_qsp": "Concrete six-phase Wx-convention sequence for the exact degree-five W33 sign polynomial, with residual below 1.2e-15 and a telescoping implementation-error bound.",
+    "adaptive_magic": "Exact correction tree, finite deterministic diamond-error law, raw-resource law, and finite exact no-go from irrationality.",
+    "lorentzian_dirac": "Exact local three-spatial-dimensional unitary walk with a 3+1 Dirac continuum carrying the W33 1,24,15 mass sectors.",
+    "robust_H1": "SK1 logical pulse cancels first-order amplitude error and yields fourth-order infidelity.",
+    "gauge_commutant": "The unbroken W33 commutant is commutative and supports only U(1)^3; non-Abelian gauge structure needs extra ingredients."
+  },
+  "outside_box": {
+    "anti_thermalization": "The involutory reflection has orbit dimension at most two and cannot produce a Page curve or thermalization by itself.",
+    "H1_metrology": "Local projected defects obey a total QFI budget 2t^2, attained by an equal-magnitude Eulerian H1 flow.",
+    "Kirchhoff_entropy": "W33 and Levi spanning-tree counts are 2^81 5^23 and 2^83 5^23, an exact factor four."
+  },
+  "artifacts": [
+    "analysis/w33_pass4065_4072_explicit_qsp_dirac_magic_gauge.py",
+    "data/PART_4065_4072_EXPLICIT_QSP_DIRAC_MAGIC_GAUGE_BONKERS.json",
+    "tests/test_w33_pass4065_4072_explicit_qsp_dirac_magic_gauge.py",
+    "analysis/BT4065_BT4072_explicit_qsp_dirac_magic_gauge.md",
+    "analysis/BT4065_BT4072_explicit_qsp_dirac_magic_gauge_insert.tex",
+    "analysis/BT4065_BT4072_explicit_qsp_dirac_magic_gauge_index_insert.html",
+    "docs/explicit-qsp-dirac-magic-gauge.html"
+  ],
+  "coordination": "Does not overwrite Passes 4057-4064. Preserves the stable Pages source and does not edit docs/index.html directly.",
+  "boundary": "No fabricated block encoding, finite-cost exact deterministic irrational gate, fault-tolerance threshold, Standard Model, gravity, cosmology, or TOE.",
+  "semantic_sha256": "f1c00d6d63d67f4ee6309f48e680ffda5edbdcda3e7f5b70c3e48f0f514f2610"
+}
