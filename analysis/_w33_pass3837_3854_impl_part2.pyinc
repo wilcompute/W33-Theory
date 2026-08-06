@@ -1,0 +1,155 @@
+
+
+def build():
+    prior, loc = expose_previous_build()
+    assert all(prior["checks"].values())
+    old = loc["old"]
+
+    # ==================================================================
+    # Front 1: characteristic-zero Wedderburn decomposition.
+    # ==================================================================
+    pijk = np.asarray(loc["pijk"], dtype=np.int64)
+    left_regular = [sp.Matrix([[int(pijk[i, j, k]) for j in range(19)] for k in range(19)]) for i in range(19)]
+    center_equations = []
+    for j in range(19):
+        commutators = [left_regular[i]*left_regular[j] - left_regular[j]*left_regular[i] for i in range(19)]
+        for row in range(19):
+            for col in range(19):
+                center_equations.append([int(commutators[i][row, col]) for i in range(19)])
+    center_matrix = sp.Matrix(center_equations)
+    assert center_matrix.rank() == 14
+    center_nullity = 19 - center_matrix.rank()
+    assert center_nullity == 5
+
+    center_basis_coeffs = [
+        [-27,0,0,3,0,-1,0,0,0,0,9,0,0,0,0,0,0,0,0],
+        [0,0,-27,6,0,-2,-3,0,9,0,0,9,0,0,0,0,0,0,0],
+        [1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0],
+        [0,0,3,0,0,0,1,0,0,0,0,0,0,0,3,0,0,0,0],
+        [0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,3,0,0],
+    ]
+    assert sp.Matrix(center_basis_coeffs).rank() == 5
+    for coeffs in center_basis_coeffs:
+        z = sum((coeffs[i]*left_regular[i] for i in range(19)), sp.zeros(19))
+        assert all(z*g == g*z for g in left_regular)
+    generic_coeffs = [-24,0,-39,15,0,2,-1,0,18,0,9,18,0,3,15,0,21,0,0]
+    generic = sum((generic_coeffs[i]*left_regular[i] for i in range(19)), sp.zeros(19))
+    generic_eigen = {int(k): int(v) for k, v in generic.eigenvals().items()}
+    assert generic_eigen == {750:4, 30:1, 6:4, -378:1, -30:9}
+
+    primitive_coeffs = {
+        "750": {0:Fraction(1,160),2:Fraction(1,160),3:Fraction(1,160),5:Fraction(1,160),6:Fraction(1,160),8:Fraction(1,160),10:Fraction(1,160),11:Fraction(1,160),13:Fraction(1,40),14:Fraction(1,40),16:Fraction(1,40)},
+        "30": {0:Fraction(81,160),2:Fraction(-27,160),3:Fraction(-3,160),5:Fraction(1,160),6:Fraction(-3,160),8:Fraction(9,160),10:Fraction(-27,160),11:Fraction(9,160)},
+        "6": {0:Fraction(3,32),2:Fraction(-1,32),3:Fraction(1,96),5:Fraction(1,96),6:Fraction(-1,32),8:Fraction(-1,32),10:Fraction(3,32),11:Fraction(-1,32),13:Fraction(3,8),14:Fraction(-1,8),16:Fraction(1,24)},
+        "-378": {0:Fraction(3,32),2:Fraction(3,32),3:Fraction(-1,32),5:Fraction(1,96),6:Fraction(1,96),8:Fraction(-1,32),10:Fraction(-1,32),11:Fraction(-1,32)},
+        "-30": {0:Fraction(3,10),2:Fraction(1,10),3:Fraction(1,30),5:Fraction(-1,30),6:Fraction(1,30),10:Fraction(1,10),13:Fraction(3,5),14:Fraction(1,10),16:Fraction(-1,15)},
+    }
+    idempotents = {}
+    for label, coeffs in primitive_coeffs.items():
+        idempotents[label] = sum((sp.Rational(v.numerator,v.denominator)*left_regular[i] for i,v in coeffs.items()), sp.zeros(19))
+    for a, ea in idempotents.items():
+        for b, eb in idempotents.items():
+            assert ea*eb == (ea if a == b else sp.zeros(19))
+    assert sum(idempotents.values(), sp.zeros(19)) == left_regular[0] + left_regular[13]
+    regular_component_dimensions = {label: matrix.rank() for label, matrix in idempotents.items()}
+    assert regular_component_dimensions == {"750":4,"30":1,"6":4,"-378":1,"-30":9}
+    split_minimal_left_ideal_ranks = {}
+    for label, e in idempotents.items():
+        positive = sorted({(e*left_regular[j]).rank() for j in range(19) if (e*left_regular[j]).rank()})
+        split_minimal_left_ideal_ranks[label] = positive[0]
+    assert split_minimal_left_ideal_ranks == {"750":2,"30":1,"6":2,"-378":1,"-30":3}
+    module_ranks = {}
+    for label, coeffs in primitive_coeffs.items():
+        module_ranks[label] = int(160*coeffs.get(0,0) + 40*coeffs.get(13,0))
+    assert module_ranks == {"750":2,"30":81,"6":30,"-378":15,"-30":72}
+    block_sizes = {label: split_minimal_left_ideal_ranks[label] for label in idempotents}
+    module_multiplicities = {label: module_ranks[label] // block_sizes[label] for label in idempotents}
+    assert module_multiplicities == {"750":1,"30":81,"6":15,"-378":15,"-30":24}
+    coeff_payload = {label:{str(i):fraction_string(v) for i,v in sorted(coeffs.items())} for label,coeffs in primitive_coeffs.items()}
+    idempotent_sha = sha256(json.dumps(coeff_payload, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+    assert idempotent_sha == "6a099b6f9c2172770349dcdb80af95e6446e4c86ab2d372a092b9b301d8c5a29"
+
+    # Release exact regular-representation workspaces before graph isomorphism searches.
+    del center_matrix, center_equations, generic, idempotents, left_regular
+    gc.collect()
+
+    # ==================================================================
+    # Front 2: complete W33 code tower and Leech transport.
+    # ==================================================================
+    a40 = np.asarray(old["a40_w33"], dtype=np.uint8)
+    dictionary = tuple(loc["dictionary"])
+    edges = tuple((i,j) for i,j in combinations(range(40),2) if a40[i,j])
+    edge_index = {edge:i for i,edge in enumerate(edges)}
+    assert len(edges) == 240
+    triangles = tuple((i,j,k) for i,j,k in combinations(range(40),3) if a40[i,j] and a40[i,k] and a40[j,k])
+    assert len(triangles) == 160
+    hx = np.zeros((40,240), dtype=np.int64)
+    for col,(u,v) in enumerate(edges):
+        hx[u,col] = -1
+        hx[v,col] = 1
+    hz = np.zeros((160,240), dtype=np.int64)
+    for row,(u,v,w) in enumerate(triangles):
+        hz[row,edge_index[(u,v)]] = 1
+        hz[row,edge_index[(v,w)]] = 1
+        hz[row,edge_index[(u,w)]] = -1
+    assert rank_mod(hx,3) == 39 and rank_mod(hz,3) == 120
+    assert np.all((hx @ hz.T) % 3 == 0)
+    css_k = 240-rank_mod(hx,3)-rank_mod(hz,3)
+    assert css_k == 81
+    assert all(np.count_nonzero(hx[:,i]) == 2 for i in range(240))
+    assert len({tuple(hx[:,i] % 3) for i in range(240)}) == 240
+    dx_witness = (0,1,2)
+    x3 = np.zeros(240,dtype=np.int64); x3[list(dx_witness)] = 1
+    assert np.all(hz @ x3 % 3 == 0)
+    assert rank_mod(np.vstack([hx,x3]),3) == 40
+    cycle_vertices = (0,1,4,13)
+    z4 = np.zeros(240,dtype=np.int64)
+    z4[edge_index[(0,1)]] = 1
+    z4[edge_index[(1,4)]] = 1
+    z4[edge_index[(4,13)]] = 1
+    z4[edge_index[(0,13)]] = -1
+    assert np.all(hx @ z4 % 3 == 0)
+    assert rank_mod(np.vstack([hz,z4]),3) == 121
+    for tri in triangles:
+        z = np.zeros(240,dtype=np.int64)
+        u,v,w = tri
+        z[edge_index[(u,v)]]=1; z[edge_index[(v,w)]]=1; z[edge_index[(u,w)]]=-1
+        assert rank_mod(np.vstack([hz,z]),3) == 120
+
+    transported_edges = tuple(sorted(tuple(sorted((dictionary[u],dictionary[v]))) for u,v in edges))
+    transported_triangles = tuple(sorted(tuple(sorted((dictionary[u],dictionary[v],dictionary[w]))) for u,v,w in triangles))
+    edge_sha = sha256(json.dumps(transported_edges,separators=(",", ":")).encode()).hexdigest()
+    triangle_sha = sha256(json.dumps(transported_triangles,separators=(",", ":")).encode()).hexdigest()
+    hx_sha = sha256((hx % 3).astype(np.uint8).tobytes()).hexdigest()
+    hz_sha = sha256((hz % 3).astype(np.uint8).tobytes()).hexdigest()
+    assert edge_sha == "3b3d9e83d5f700b54aa3662b320e69b73ad2ff62969ff7cae4798688aae006b2"
+    assert triangle_sha == "fb331942a4b5fcdd0107f6253b782549eb9a88baa615ba1ea8934cb17178210c"
+    assert hx_sha == "c50095d61396456c6026ec0de0379e8341f30cc84f0d08b7bf363b9e5c96d4f0"
+    assert hz_sha == "07d884c914a85ce76af04b6deec03705aaf2a92a325407939424e954f6e2807d"
+
+    coordinate_np = np.asarray(old["coordinate_np"], dtype=np.int64)
+    axial_gram = np.asarray(loc["axial_leech_np"], dtype=np.int64)
+    axis_norms = [int(coordinate_np[:,i].T @ axial_gram @ coordinate_np[:,i]) for i in range(45)]
+    minimal_axes = tuple(i for i,n in enumerate(axis_norms) if n == 4)
+    assert minimal_axes == (3,33,36)
+    minimal_axis_inners = {(i,j):int(coordinate_np[:,i].T @ axial_gram @ coordinate_np[:,j]) for i,j in combinations(minimal_axes,2)}
+    assert set(minimal_axis_inners.values()) == {2}
+    surviving_involution = next(g for g in loc["surviving"] if perm_order(g)==2)
+    assert surviving_involution[3] == 3 and surviving_involution[33] == 36 and surviving_involution[36] == 33
+    assert sum(i == surviving_involution[i] for i in range(45)) == 13
+
+    plane_orbit = tuple(loc["plane_orbit"])
+    plane_ovoid_sets = tuple(loc["ovoids"][global_index] for global_index in plane_orbit)
+    inverse_dictionary = {plane:w33 for w33,plane in enumerate(dictionary)}
+    minimal_axis_point_carriers = {}
+    for axis in minimal_axes:
+        minimal_axis_point_carriers[str(axis)] = sorted(inverse_dictionary[p] for p,o in enumerate(plane_ovoid_sets) if axis in o)
+        assert len(minimal_axis_point_carriers[str(axis)]) == 8
+    assert [len(set(minimal_axis_point_carriers[str(i)]).intersection(minimal_axis_point_carriers[str(j)])) for i,j in combinations(minimal_axes,2)] == [0,0,2]
+
+    m135_45 = np.asarray(old["m135_45"],dtype=np.int64)
+    frame_axis = tuple(int(np.flatnonzero(row)[0]) for row in m135_45)
+    assert Counter(frame_axis) == Counter({i:3 for i in range(45)})
+    frame_axis_sha = sha256(bytes(frame_axis)).hexdigest()
+    assert frame_axis_sha == "9f9865f4a481f0274839c174dcdab2ba1a63f421a9841d15cc5e6d5f37f4b576"
+    minimal_frames = tuple(i for i,a in enumerate(frame_axis) if a in minimal_axes)
