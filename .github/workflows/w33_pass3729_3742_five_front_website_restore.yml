@@ -1,5 +1,9 @@
 name: Passes 3729-3742 Five Front and Website Restore
 
+# This is a theorem/regression workflow, not a Pages publisher.  Live-site
+# changes are verified by the dedicated Pages lock and must not launch this
+# three-manuscript build, which previously added heavy queue pressure whenever
+# docs/index.html changed.
 on:
   pull_request:
     branches: [master]
@@ -9,9 +13,6 @@ on:
       - 'data/PART_BT3729_BT3742_FIVE_FRONT_WEBSITE_RESTORE_results.json'
       - 'data/w33_pass_namespace_registry_v2.d/3729-3742.json'
       - 'tests/test_bt3729_3742_five_front_website_restore.py'
-      - 'docs/index.html'
-      - 'docs/source-derived-architecture-landing-2026-08-05.html'
-      - 'docs/cubic-tomotope-module-website-restore.html'
       - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
       - 'data/w33_current_frontier_manifest_v1.json'
       - '.github/workflows/w33_pass3729_3742_five_front_website_restore.yml'
@@ -22,10 +23,9 @@ on:
       - 'analysis/*3742*'
       - 'data/PART_BT3729_BT3742_FIVE_FRONT_WEBSITE_RESTORE_results.json'
       - 'tests/test_bt3729_3742_five_front_website_restore.py'
-      - 'docs/index.html'
-      - 'docs/source-derived-architecture-landing-2026-08-05.html'
       - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
       - 'data/w33_current_frontier_manifest_v1.json'
+      - '.github/workflows/w33_pass3729_3742_five_front_website_restore.yml'
   workflow_dispatch:
 
 permissions:
