@@ -1,0 +1,149 @@
+            rows=Counter(a for a,b in orbit); cols=Counter(b for a,b in orbit)
+            out.append({"size":len(orbit),"row_degree":next(iter(rows.values())),"column_degree":next(iter(cols.values())),"representative":list(orbit[0])})
+            assert len(rows)==na and len(cols)==nb
+        return out
+    tn_summary=orbit_summaries(cross_tn,160,120)
+    tf_summary=orbit_summaries(cross_tf,160,135)
+    nf_summary=orbit_summaries(cross_nf,120,135)
+    tflag_summary=orbit_summaries(cross_tflag,160,135)
+    assert [(x["size"],x["row_degree"],x["column_degree"]) for x in tn_summary]==[(480,3,4),(1440,9,12),(4320,27,36),(12960,81,108)]
+    assert sorted((x["size"],x["row_degree"],x["column_degree"]) for x in tf_summary)==sorted([(4320,27,32)]*3+[(8640,54,64)])
+    assert sorted((x["size"],x["row_degree"],x["column_degree"]) for x in nf_summary)==sorted([(2160,18,16),(3240,27,24),(4320,36,32),(6480,54,48)])
+    assert sorted((x["size"],x["row_degree"],x["column_degree"]) for x in tflag_summary)==sorted([(4320,27,32),(4320,27,32),(12960,81,96)])
+
+    smallest_tn=cross_tn[0]
+    tn_inc=np.zeros((160,120),dtype=np.int64)
+    for i,j in smallest_tn: tn_inc[i,j]=1
+    assert rank_mod(tn_inc,2)==rank_mod(tn_inc,3)==rank_mod(tn_inc,5)==rank_mod(tn_inc,MOD)==40
+    bip=nx.Graph(); bip.add_nodes_from(range(160),bipartite=0); bip.add_nodes_from(range(160,280),bipartite=1)
+    bip.add_edges_from((i,160+j) for i,j in smallest_tn)
+    components=list(nx.connected_components(bip))
+    assert len(components)==40
+    component_shapes=Counter((sum(v<160 for v in c),sum(v>=160 for v in c)) for c in components)
+    assert component_shapes==Counter({(4,3):40})
+    tn_sha=sha256(tn_inc.astype(np.uint8).tobytes()).hexdigest()
+    assert tn_sha=="98c4e426554f2c39ee732fb8bac121a57756da500784523553d40226f3de499f"
+
+    # Simultaneous action for the 480-character firewall.
+    identities=(tuple(range(45)),tuple(range(160)),tuple(range(120)),tuple(range(40)))
+    simultaneous={identities[0]:(identities[1],identities[2],identities[3])}; queue=deque([identities[0]])
+    while queue:
+        gl=queue.popleft(); gt,gn,gr=simultaneous[gl]
+        for a,b,c,d in zip(line_gens,tripod_gens,norton_gens,block_gens[0]):
+            nl=compose(a,gl)
+            if nl not in simultaneous:
+                simultaneous[nl]=(compose(b,gt),compose(c,gn),compose(d,gr)); queue.append(nl)
+    assert len(simultaneous)==51840
+    relation_pairs=set(smallest_tn)
+    directed_edges=tuple((i,j) for i in range(40) for j in range(40) if row_graph[i,j])
+    assert len(directed_edges)==480
+    chi_inc=[]; chi_dir=[]
+    for gl,(gt,gn,gr) in simultaneous.items():
+        fixed_t=[i for i in range(160) if gt[i]==i]; fixed_n=[j for j in range(120) if gn[j]==j]
+        chi_inc.append(sum((i,j) in relation_pairs for i in fixed_t for j in fixed_n))
+        chi_dir.append(sum(gr[i]==i and gr[j]==j for i,j in directed_edges))
+    inner_inc=sum(x*x for x in chi_inc)//51840; inner_dir=sum(x*x for x in chi_dir)//51840; inner_cross=sum(x*y for x,y in zip(chi_inc,chi_dir))//51840
+    assert (inner_inc,inner_dir,inner_cross)==(23,24,18)
+    inc_fixed_census=Counter(chi_inc); dir_fixed_census=Counter(chi_dir)
+    assert inc_fixed_census==Counter({0:42534,2:7200,8:720,12:720,32:585,48:80,480:1})
+    assert dir_fixed_census==Counter({0:45654,4:4320,12:800,16:540,24:480,96:45,480:1})
+
+    checks={
+        "characteristic_zero_center_rank_and_split_wedderburn_exact":True,
+        "primitive_central_idempotents_exact":True,
+        "permutation_module_decomposition_exact":True,
+        "w33_plane_ovoid_line_spread_transport_exact":True,
+        "ternary_css_240_81_3_with_dz4_exact":True,
+        "leech_axis_norm_and_frame_transport_exact":True,
+        "finite_O6minus2_descent_and_pending_word_audit_exact":True,
+        "universal_rational_marked_axis_presentation_exact":True,
+        "marked_axis_automorphism_group_order_51840_exact":True,
+        "complete_four_axis_orbit_and_subalgebra_census_exact":True,
+        "double_K4_incidence_aut_order_and_no_side_swap_exact":True,
+        "cross_carrier_orbitals_exact":True,
+        "tripod_norton_40K43_factorization_exact":True,
+        "minimal_leech_axis_triad_exact":True,
+        "two_480_actions_inequivalent_exact":True,
+        "monster_embedding_and_class_fusion_fail_closed":True,
+    }
+    result={
+        "schema":"w33.pass3837_3854.ovoid_wedderburn_code_leech_triality.v1",
+        "status":"PASS_EXACT_FIVE_FRONTS_THREE_CONSTRUCTIONS_MONSTER_WORDS_PENDING",
+        "checks":checks,
+        "wedderburn":{
+            "center_equation_rank_Q":14,
+            "center_dimension_Q":5,
+            "generic_center_coefficients":generic_coeffs,
+            "generic_center_eigenvalues_regular":{str(k):v for k,v in generic_eigen.items()},
+            "primitive_central_idempotent_coefficients":coeff_payload,
+            "primitive_idempotent_sha256":idempotent_sha,
+            "regular_component_dimensions":regular_component_dimensions,
+            "minimal_left_ideal_ranks":split_minimal_left_ideal_ranks,
+            "split_Q_algebra":"M2(Q) + Q + M2(Q) + Q + M3(Q)",
+            "permutation_module_central_ranks":module_ranks,
+            "permutation_module_simple_multiplicities":module_multiplicities,
+            "module_decomposition":"1^2 + 15a^2 + 15b + 24^3 + 81",
+        },
+        "code_and_leech_transport":{
+            "w33_edges":240,"w33_triangles":160,
+            "css_parameters_q3":[240,81,3],"css_dx":3,"css_dz":4,
+            "hx_rank_F3":39,"hz_rank_F3":120,
+            "dx_witness_columns":list(dx_witness),"dz_witness_cycle_vertices":list(cycle_vertices),
+            "transported_edge_sha256":edge_sha,"transported_triangle_sha256":triangle_sha,
+            "hx_sha256":hx_sha,"hz_sha256":hz_sha,
+            "scaled_plane_carrier_rank":24,"scaled_plane_carrier_minimum_norm":min(scaled_point_norms),
+            "line_vector_rank":24,"line_vector_divisor":6,"spread_line_sum":"zero",
+            "axial_numerator_norm_distribution":{str(k):v for k,v in sorted(Counter(axis_norms).items())},
+            "minimal_axis_indices":list(minimal_axes),"minimal_axis_pair_inner_products":{f"{i},{j}":v for (i,j),v in minimal_axis_inners.items()},
+            "minimal_axis_point_carriers":minimal_axis_point_carriers,
+            "frame_to_axis_sha256":frame_axis_sha,"minimal_D4_frame_indices":list(minimal_frames),
+            "surviving_C2_action":"fixes axis 3 and swaps axes 33,36",
+        },
+        "monster_descent":{
+            "abstract_group":"O6-(2)=U4(2):2","order":51840,"even_subgroup_order":25920,
+            "order_census":{str(k):v for k,v in sorted(order_census.items())},
+            "historical_candidate_slot_statuses":historical_slots,
+            "promotion_fingerprint":{"GQ_points":45,"GQ_lines":27,"plane_ovoids":40,"tripods":160,"Norton_lines":120,"D4_frames":135,"ovoid_orbitals":19,"cross_tripod_norton_orbits":4},
+            "status":"FAIL_CLOSED_NO_SERIALIZED_MMGROUP_WORDS_OR_EXECUTED_CLASS_FUSION",
+        },
+        "universal_axial_presentation":{
+            "generators":45,"line_relations":27,"line_relation_rank":21,"quotient_dimension":24,
+            "marked_axis_automorphism_group":"O6-(2)=U4(2):2","marked_axis_automorphism_order":marked_axis_aut_order,"point_stabilizer_order":rooted_automorphisms,
+            "four_axis_orbits":four_orbits,"four_axis_orbit_count":20,"four_axis_generated_dimension_census":{str(k):v for k,v in sorted(four_dimension_census.items())},
+            "verdict":"the 27 five-axis line sums and the two pair laws present the marked 24-dimensional rational algebra",
+            "boundary":"The full unmarked linear automorphism group is not promoted without an intrinsic-axis theorem.",
+        },
+        "triality_incidence":{
+            "double_K4_incidence_shape":[40,40],"row_and_column_degree":4,
+            "row_graph_parameters":[40,12,2,4],"column_graph_parameters":[40,12,2,4],
+            "row_column_graphs_isomorphic":False,"bipartition_preserving_automorphism_order":51840,"side_swaps":0,
+            "tripod_norton_orbits":tn_summary,"tripod_frame_orbits":tf_summary,"norton_frame_orbits":nf_summary,"tripod_ordinary_flag_orbits":tflag_summary,
+            "smallest_tripod_norton_relation":{"size":480,"rank_Q":40,"rank_F2":40,"rank_F3":40,"components":"40 copies of K4,3","sha256":tn_sha},
+        },
+        "three_bonkers_constructions":{
+            "minimal_Leech_axis_triad":"exactly three of the 45 axial numerator vectors are Leech minimal vectors; their three carriers lift to nine D4 frames and the surviving C2 fixes one axis while swapping two",
+            "forty_K43_triality_factorization":"the smallest tripod-Norton orbital factors into 40 disjoint K4,3 components and reconstructs a rank-40 three-sheet/four-sheet carrier bridge",
+            "480_doppelganger_firewall":{"incidence_action_character_norm":inner_inc,"directed_W33_edge_character_norm":inner_dir,"cross_inner_product":inner_cross,"incidence_fixed_census":{str(k):v for k,v in sorted(inc_fixed_census.items())},"directed_edge_fixed_census":{str(k):v for k,v in sorted(dir_fixed_census.items())}},
+        },
+        "evidence_boundary":{
+            "proved_here":["split characteristic-zero Wedderburn decomposition and rational central idempotents","complete ternary CSS and objectwise plane-ovoid transport","exact Leech norms of transported carriers and frame lift","universal marked-axis rational presentation and complete four-axis census","full double-K4/cross-carrier incidence closure and two inequivalent 480-actions"],
+            "not_proved_here":["serialized Monster/mmgroup words or Monster class fusion","full unmarked linear automorphism group of the axial algebra","physical, hardware, laboratory, or thermodynamic mechanism","remote CI or PDF success until observed"],
+        },
+    }
+    semantic=sha256(json.dumps(result,sort_keys=True,separators=(",", ":")).encode()).hexdigest()
+    result["semantic_sha256"]=semantic
+    return result
+
+
+def main():
+    parser=argparse.ArgumentParser()
+    parser.add_argument("--output",type=Path,default=DEFAULT_OUTPUT)
+    args=parser.parse_args()
+    result=build()
+    args.output.parent.mkdir(parents=True,exist_ok=True)
+    args.output.write_text(json.dumps(result,indent=2,sort_keys=True)+"\n",encoding="utf-8")
+    print("PASS_3837_3854",result["semantic_sha256"])
+
+
+if __name__=="__main__":
+    main()
