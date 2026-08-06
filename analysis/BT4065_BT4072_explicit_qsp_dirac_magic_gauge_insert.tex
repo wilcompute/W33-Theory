@@ -1,0 +1,123 @@
+\section{Explicit QSP, adaptive irrational magic, Lorentzian Dirac dynamics, and exact physical obstructions}
+\label{sec:bt4065-4072}
+
+\paragraph{Six-phase QSP compiler.}
+In the $W_x$ convention
+\[
+W(x)=\begin{pmatrix}x&i\sqrt{1-x^2}\\i\sqrt{1-x^2}&x\end{pmatrix},
+\quad
+U_{\boldsymbol\phi}(x)=e^{i\phi_0Z}\prod_{j=1}^{5}[W(x)e^{i\phi_jZ}],
+\]
+the bounded quintic sign compiler is realized by
+\[
+\boldsymbol\phi=(-2.8067951015434964,-2.042810210594929,-2.419664116537273,
+2.419664116537273,-1.0987824429948638,-0.3347975520462967).
+\]
+On a 20,001-point grid the top-left polynomial residual is below
+$1.19\times10^{-15}$.  The sequence uses five signal queries and six phase
+gates.  A telescoping perturbation bound is
+\[
+\|\delta U\|\le6\delta_\phi+5\eta_W.
+\]
+
+\paragraph{Adaptive irrational-magic correction.}
+For $e^{i\phi}=(-4+3i)/5$, an undesired $-\phi$ injection branch is corrected
+with $2\phi$, then $4\phi$, and so forth.  After $K$ correction levels,
+\[
+p_{\rm fail}=2^{-(K+1)},
+\qquad
+\|\mathcal E_K-\mathcal U_\phi\|_\diamond\le2^{-K}.
+\]
+If doubled-angle states are directly available, fewer than two are injected on
+average.  If each is recursively produced from the original state by parity
+doubling, the expected raw cost is
+\[
+N_{\rm raw}=2^{K+1}-1.
+\]
+No finite doubling tree is exactly deterministic because the final residual
+differs from the target by $2^{K+1}\phi$, and $\phi/\pi$ is irrational.
+
+\paragraph{Causal W33-fibered Dirac walk.}
+Let
+\[
+\beta=Z\otimes I,
+\qquad
+\alpha_j=X\otimes\sigma_j,
+\qquad
+m_r=\sqrt{m_0^2+g\lambda_r},
+\]
+where $\lambda_r\in\{0,10,16\}$ with multiplicities $1,24,15$.  The exact
+three-spatial-dimensional local walk is
+\[
+U_a(p,r)=e^{-iam_r\beta}e^{-iap_1\alpha_1}e^{-iap_2\alpha_2}e^{-iap_3\alpha_3}.
+\]
+Each factor is a conditional nearest-neighbour shift, and
+\[
+\frac{U_a-I}{-ia}=m_r\beta+\sum_{j=1}^{3}p_j\alpha_j+O(a).
+\]
+Thus discrete time plus three spatial directions supplies a controlled
+$3+1$-dimensional Dirac limit carrying the three W33 mass sectors.
+
+\paragraph{SK1-protected H1 pulse.}
+For common fractional amplitude error $\epsilon$,
+\[
+U_{\rm SK1}=R_{-\chi}(2\pi(1+\epsilon))R_\chi(2\pi(1+\epsilon))
+R_x(\theta(1+\epsilon)),
+\quad
+\chi=\arccos\left(-\frac\theta{4\pi}\right).
+\]
+The linear error vanishes.  For $\theta=\pi$,
+\[
+R_x(\pi)^\dagger U_{\rm SK1}
+=I-i\frac{\sqrt{15}\pi^2}{8}\epsilon^2Z+O(\epsilon^3),
+\]
+so the entanglement infidelity begins at
+$15\pi^4\epsilon^4/64$.
+
+\paragraph{Gauge-commutant obstruction.}
+The W33 permutation module decomposes as
+\[
+\mathbb C^{40}=\mathbf1\oplus V_{24}\oplus V_{15},
+\]
+and its full automorphism commutant is
+\[
+\operatorname{span}\{E_{12},E_2,E_{-4}\}=\operatorname{span}\{I,A,J\}.
+\]
+This algebra is commutative, so its unitary gauge group is exactly
+\[
+\boxed{U(1)^3}.
+\]
+Unbroken W33 symmetry alone cannot generate non-Abelian $SU(2)$ or $SU(3)$
+gauge bosons or mix the three sectors.  A non-Abelian gauge theory requires
+symmetry breaking, multiplicity spaces, or a larger noncommutative algebra.
+
+\paragraph{Three outside-box exact results.}
+First, the reflection $U=I-2E_6$ obeys $U^2=I$, so repeated reflection has
+orbit dimension at most two and pure-state time-averaged entropy at most one
+bit.  A localized vertex gives $H_2(3/5)=0.97095059445$ bits; the reflection
+alone cannot thermalize or generate a Page curve.
+
+Second, local H1 defect sensing satisfies
+\[
+F_e^{\max}=\left(\frac{81}{160}\right)^2t^2,
+\qquad
+\sum_eF_e\le2t^2.
+\]
+The total bound is attained by an equal-magnitude divergence-free Eulerian
+flow, giving uniform-prior average QFI $t^2/80$.
+
+Third, the matrix-tree theorem gives
+\[
+\tau(W33)=2^{81}5^{23},
+\qquad
+\tau(L_{\rm Levi})=2^{83}5^{23},
+\qquad
+\frac{\tau(L_{\rm Levi})}{\tau(W33)}=4.
+\]
+The incidence lift changes Kirchhoff complexity by exactly two bits.
+
+\paragraph{Boundary.}
+These are exact algebraic or deterministic numerical statements in explicitly
+specified models.  No fabricated block encoding, finite-cost exact
+deterministic irrational injection, fault-tolerance threshold, Standard Model,
+gravity, cosmology, or theory of everything is established.
