@@ -1,0 +1,79 @@
+name: Emergency W33 Pages source switch
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  pages: write
+  issues: write
+
+jobs:
+  switch-source:
+    if: github.event.issue.title == 'RUN_W33_PAGES_SOURCE_SWITCH_MAIN_DOCS'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Move legacy Pages to stable main/docs and request build
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const issue_number = context.issue.number;
+            const headers = {
+              accept: 'application/vnd.github+json',
+              'X-GitHub-Api-Version': '2026-03-10'
+            };
+            const before = (await github.request('GET /repos/{owner}/{repo}/pages', {
+              owner, repo, headers
+            })).data;
+            await github.request('PUT /repos/{owner}/{repo}/pages', {
+              owner,
+              repo,
+              build_type: 'legacy',
+              source: { branch: 'main', path: '/docs' },
+              headers
+            });
+            let build;
+            try {
+              build = (await github.request('POST /repos/{owner}/{repo}/pages/builds', {
+                owner, repo, headers
+              })).data;
+            } catch (error) {
+              build = { request_error_status: error.status, request_error_message: error.message };
+            }
+            const after = (await github.request('GET /repos/{owner}/{repo}/pages', {
+              owner, repo, headers
+            })).data;
+            const payload = {
+              schema: 'w33.pages_source_switch.v2',
+              status: 'PAGES_SOURCE_SWITCH_EXECUTED',
+              before: { build_type: before.build_type, source: before.source, status: before.status, html_url: before.html_url },
+              after: { build_type: after.build_type, source: after.source, status: after.status, html_url: after.html_url },
+              build,
+              issue_number,
+              workflow_run_id: context.runId,
+              trigger_sha: context.sha,
+              switched_at: new Date().toISOString()
+            };
+            const path = 'data/pages_source_switch.json';
+            let sha;
+            try {
+              const current = await github.rest.repos.getContent({ owner, repo, path, ref: 'main' });
+              sha = current.data.sha;
+            } catch (error) {
+              if (error.status !== 404) throw error;
+            }
+            await github.rest.repos.createOrUpdateFileContents({
+              owner, repo, path, branch: 'main',
+              message: `Record emergency Pages source switch ${context.runId}`,
+              content: Buffer.from(JSON.stringify(payload, null, 2) + '\n').toString('base64'),
+              ...(sha ? { sha } : {})
+            });
+            await github.rest.issues.createComment({
+              owner, repo, issue_number,
+              body: `Pages source switch executed. Before: \`${before.source?.branch || before.build_type}:${before.source?.path || ''}\`. After: \`${after.source?.branch || after.build_type}:${after.source?.path || ''}\`. Build request: \`${JSON.stringify(build)}\`. Workflow run: ${context.runId}.`
+            });
+            await github.rest.issues.update({ owner, repo, issue_number, state: 'closed', state_reason: 'completed' });
