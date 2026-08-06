@@ -17,3 +17,4 @@ for k,v in sorted(ns.items()):
         except Exception:item['signature']='?'
     out[k]=item
 print(json.dumps(out,indent=2,sort_keys=True))
+# Triggered after workflow creation so GitHub evaluates the watched source path.
