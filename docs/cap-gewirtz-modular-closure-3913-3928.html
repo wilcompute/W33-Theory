@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Passes 3913–3928 — Cap, Gewirtz, and Modular Closure</title>
+<style>
+:root{color-scheme:dark;--bg:#0c1117;--panel:#141b24;--line:#2b3948;--text:#e7edf4;--muted:#9dacbc;--accent:#7ed7c4;--warn:#f0c674}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,sans-serif}
+main{max-width:1080px;margin:auto;padding:44px 22px 72px}h1{font-size:clamp(2rem,5vw,4rem);line-height:1.02;margin:.2em 0}
+h2{margin-top:2.2em;border-bottom:1px solid var(--line);padding-bottom:.35em}code{color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:24px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
+.big{font-size:1.7rem;font-weight:750;color:var(--accent)}.muted{color:var(--muted)}
+.boundary{border-left:4px solid var(--warn);padding:12px 16px;background:#191812}
+table{width:100%;border-collapse:collapse;background:var(--panel)}th,td{padding:10px;border:1px solid var(--line);text-align:left}
+pre{white-space:pre-wrap;background:var(--panel);border:1px solid var(--line);padding:14px;border-radius:10px;overflow:auto}
+</style>
+</head>
+<body><main>
+<p class="muted">Machine-verified finite geometry · Passes 3913–3928</p>
+<h1>Cap endpoint pressure, Petersen switching closure, and modular extension structure</h1>
+<p><code>PASS_5_FRONTS_PLUS_3_CONSTRUCTIONS</code><br>
+<code>753c9039c032574dbcf5c20b899444ccc74bd092be22646211173fbd36be9eb6</code></p>
+
+<div class="grid">
+<div class="card"><div class="big">68</div><div>verified cap size</div></div>
+<div class="card"><div class="big">172</div><div>complementary transversal</div></div>
+<div class="card"><div class="big">4</div><div>inequivalent free cap orbits</div></div>
+<div class="card"><div class="big">512</div><div>twin-class switches exhausted</div></div>
+<div class="card"><div class="big">39</div><div>whitened frame dimension</div></div>
+<div class="card"><div class="big">25,920</div><div>vectors per free orbit</div></div>
+</div>
+
+<h2>Cubic dependency frontier</h2>
+<p>The exact 240-vertex, 5,040-triple dependency hypergraph has four pairwise inequivalent free 68-cap orbits. Every cap complement is a 172-face transversal, sharpening the live interval to <strong>106 ≤ τ<sub>cubic</sub> ≤ 172</strong>.</p>
+<p>A 69-set contains exactly one forbidden triple, <strong>{76, 80, 175}</strong>. Deleting each of its three members produces three inequivalent 68-caps. No repair exists within exchange radius three.</p>
+
+<h2>Petersen blow-up scheme</h2>
+<p>The natural 40-vertex Gewirtz residual is the independent fourfold blow-up of Petersen. Its symmetric three-class association scheme has valencies <strong>1, 3, 12, 24</strong>, multiplicities <strong>1, 5, 4, 30</strong>, and automorphism group <strong>S₄¹⁰:S₅</strong>.</p>
+<table><thead><tr><th>Sector</th><th>Eigenmatrix row</th></tr></thead><tbody>
+<tr><td>Trivial</td><td>1, 3, 12, 24</td></tr>
+<tr><td>Five-dimensional</td><td>1, 3, 4, −8</td></tr>
+<tr><td>Four-dimensional</td><td>1, 3, −8, 4</td></tr>
+<tr><td>Twin-difference</td><td>1, −1, 0, 0</td></tr>
+</tbody></table>
+<p>All 512 Seidel switches by unions of canonical twin classes were exhausted modulo complement. The only regular outputs are Petersen blow-ups and complement-Petersen blow-ups; none is W33.</p>
+
+<h2>Characteristic-three extension structure</h2>
+<p>The 115-dimensional module has fixed dimension two and coinvariant dimension one. The invariant-to-coinvariant pairing has rank one, yielding</p>
+<pre>M115 = 1 ⊕ K114
+0 → 1 → K114 → Q113 → 0  (nonsplit)</pre>
+<p>The three trivial composition factors occupy one split summand, one nonsplit socle position, and one strictly interior position. The module is not self-dual and has no nondegenerate invariant bilinear form.</p>
+
+<h2>Three constructions</h2>
+<p>The cap-fibre orbit whitens to a 25,920-vector tight frame in dimension 39 with unit-norm frame bound <strong>8640/13</strong>. Each free cap orbit is a <strong>1-(240,68,7344)</strong> tactical configuration; its complementary transversals form a <strong>1-(240,172,18576)</strong> configuration. The four cap orbits are constant-weight codes with minimum distances <strong>8, 18, 20, 16</strong>.</p>
+
+<div class="boundary">
+<strong>Evidence boundary.</strong> No 69-cap nonexistence, exact cubic endpoint, arbitrary non-twin-class switching closure, complete modular Ext-quiver, remote CI/PDF success, hardware result, laboratory result, Monster embedding, or physical mechanism is claimed.
+</div>
+</main></body></html>
