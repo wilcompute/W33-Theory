@@ -1,0 +1,45 @@
+\subsection{Topology-code firewall, optimal 24-port control, autonomous boot, and photon causal density}
+\label{sec:bt3965-3972}
+
+The W33 polynomial residual
+\[
+R(B)=B^2+2B-8I-4J
+\]
+separates all $79{,}092{,}651$ edge-toggle patterns of weight at most three: one zero pattern, $780$ single toggles, $303{,}810$ double toggles, and $78{,}788{,}060$ triple toggles.  A zero residual has balanced insertion and deletion degree at every vertex. Exhaustion of all $27{,}000$ alternating weight-four supports and $2{,}769{,}952$ alternating simple weight-six supports finds no undetectable pattern.  A nonadjacent vertex transposition gives an explicit undetectable weight-$32$ relabelling, so
+\[
+8\le d_0\le32.
+\]
+The exact distance remains open.
+
+The desired symmetry dissipator cannot be made from independent strictly two- or three-mode permutation jumps.  Every nontrivial W33 automorphism moves at least $27$ points, and every transvection has cycle structure $1^{13}3^9$. Four transvections are necessary and sufficient to generate the full order-$25{,}920$ group; each global jump is compilable into nine disjoint three-mode cycles, but those cycles must remain one macro if the fixed algebra
+\[
+\operatorname{span}\{I,A,J-I-A\}
+\]
+is to be preserved.
+
+Writing $B=J-I-A=(A^2-2A-12I)/4$, the complement adds no passive drift algebra.  The largest adjacency multiplicity forces at least $24$ independent diagonal controls.  For one explicit $24$-port set, the commutant constraint has modular rank $279$ on $280$ coordinates over three primes, leaving scalars only.  Therefore the ideal controlled $*$-algebra has dimension
+\[
+40^2=1600,
+\]
+and $24$ ports are necessary and sufficient algebraically.
+
+The topology can boot from four transvection vectors and one ordered edge, an $18$-trit seed.  Its ordered-edge orbit has $480$ elements and BFS diameter $9$; a deterministic factorization then supplies $12$ collision-free W33 matching rounds.  The declared boot sequence---seed verification, orbit expansion, schedule compilation, a $192$-entry residual measurement, bounded repair, and symmetry activation---has a $221$-round network-action upper bound before source, detector, classical, memory, and settling overhead.
+
+The user-proposed relation between photon computation and light speed survives in a constrained form.  If serial node spacing is $\ell$ and local update time is $\tau$, Lorentz-compatible propagation requires $\ell/\tau=c$.  Combining a one-photon energy $E=h\nu$ with the Margolus--Levitin speed limit gives
+\[
+N_{\rm serial}\le \frac{4EL}{hc}=\frac{4L}{\lambda}.
+\]
+Increasing serial node count at fixed length therefore requires faster internal updates; it does not change invariant vacuum $c$.  Parallel photonic modes enlarge capacity---an ideal $M$-mode alphabet carries $\log_2 M$ bits---without representing $M$ serial state transitions per optical cycle.  Any literal node-count dependence of vacuum speed would predict encoding- or frequency-dependent front arrival and is retained only as a falsifiable, presently unsupported hypothesis.
+
+Two additional exact constructions follow.  Since $A$ and its complement commute,
+\[
+e^{-itA}e^{-itB}=e^{-it(J-I)},\qquad
+e^{-itA}e^{+itB}=e^{-it(A-B)},
+\]
+giving common-mode and W33-contrast interferometric channels.  For the Cartesian hierarchy $W33^{\square m}$,
+\[
+|V|=40^m,\quad k=12m,\quad \operatorname{diam}=2m,\quad |E|=6m40^m,
+\]
+with absolute spectral gap $10$ and ideal causal-density requirement $L/\lambda\ge m/2$.  Self-similarity yields logarithmic routing depth but does not compress the exponential physical mode requirement.
+
+No exact topology distance, independently local Lindbladian, robust pulse theorem, learned process tensor, autonomous physical boot, hidden photon-node ontology, variable speed of light, hardware result, or laboratory validation is claimed.
