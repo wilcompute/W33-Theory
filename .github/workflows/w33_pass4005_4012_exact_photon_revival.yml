@@ -1,0 +1,29 @@
+name: Passes 4005-4012 Exact Photon Revival
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4005_4007_4010_4012_exact_photon_revival.py'
+      - 'data/PART_4005_4007_4010_4012_EXACT_PHOTON_REVIVAL.json'
+      - 'tests/test_w33_pass4005_4012_exact_photon_revival.py'
+      - '.github/workflows/w33_pass4005_4012_exact_photon_revival.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+concurrency:
+  group: pass4005-4012-exact-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check numpy scipy pytest
+      - name: Recompute exact certificate
+        run: python analysis/w33_pass4005_4007_4010_4012_exact_photon_revival.py | tee /tmp/pass4005.log
+      - run: grep -F 'PASS_EXACT_PHOTON_REVIVAL 3e4561f56a0719c85a3b1e9b56f3c79d5d3e0bc4e9a21707a30abd26bb6a5cf2' /tmp/pass4005.log
+      - run: pytest -q tests/test_w33_pass4005_4012_exact_photon_revival.py
+      - run: git diff --exit-code -- data/PART_4005_4007_4010_4012_EXACT_PHOTON_REVIVAL.json
+      - run: git diff --check
