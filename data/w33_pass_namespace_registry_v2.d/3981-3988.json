@@ -3,10 +3,27 @@
   "range": [3981, 3988],
   "slug": "maximum_code_orbits_mesh_global_bounds_orbital_fusions_photon_tomography_monster_acquisition_three_bonkers",
   "title": "Maximum-code orbit census, global mesh bounds, orbital tensor fusions, nuisance-complete photon tomography, Monster acquisition gate, and three chained photon constructions",
-  "status": "reserved",
+  "status": "completed_with_fail_closed_external_gates",
   "owner": "openai-gpt-5.6-thinking",
   "reserved_at": "2026-08-06T01:28:00-04:00",
-  "purpose": "Execute the five open continuations after Passes 3973-3980: classify maximum A4=57 codes up to the parent group; strengthen global active-mixer and depth bounds; derive exact fusion/central-idempotent data in the 48-orbital basis; build a nuisance-complete photon timing/capacity simulator and falsifier; and execute or strengthen the fail-closed Monster word-acquisition gate. Add three independent chained photon constructions involving delay spectroscopy, time-frequency metrology, and self-similar causal renormalization.",
-  "coordination": "Preserve both completed Passes 3973-3980 certificate families, use the stronger global-extremality and literal-orbital-tensor packet as baseline, and do not modify protected docs/index.html directly.",
-  "boundary": "Reservation only. No uniqueness of maximum codes, global mesh optimum, laboratory photon result, variable vacuum speed, Monster embedding, remote CI/PDF success, or hardware performance is promoted without executable or primary-source evidence."
+  "completed_at": "2026-08-06T01:55:00-04:00",
+  "semantic_sha256": "767e5fc07b97fb53d9e53d75381fbabf46ab775557a7a19151641d3b64f53ba8",
+  "completed": [
+    "retained exact fixed-parent A4=57 global extremality and the literal 48-relation 904-constant tensor",
+    "proved the ordering-independent adjacent-factor lower bound 229 and froze exact cut sums 253 and 251",
+    "materialized the orbital central-Fourier verifier",
+    "froze a full-rank 48-cell nuisance-complete photon timing/capacity design",
+    "materialized GAP/CTblLib and mmgroup Monster acquisition gates",
+    "proved the W33 QFI, dual-geometry echo, rational global reflection, and tensor-shell laws",
+    "integrated the shared theorem into all three manuscripts and published a protected standalone page"
+  ],
+  "pending": [
+    "complete maximum-code orbit census and uniqueness",
+    "frozen orbital central-idempotent/character output if the remote exact job has not completed",
+    "explicit portable Monster U4(2) words and executed class fusion",
+    "global adjacent-circuit optimum or an implemented circuit attaining cut sum 251",
+    "laboratory photon, hardware, and measured-QFI evidence",
+    "remote manuscript PDF success unless separately observed"
+  ],
+  "boundary": "No maximum-code uniqueness, global mesh optimum, laboratory photon result, variable vacuum speed, Monster embedding, remote CI/PDF success, or hardware performance is promoted without executable or primary-source evidence."
 }
