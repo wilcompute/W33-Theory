@@ -1,0 +1,506 @@
+{
+  "evidence_boundary": {
+    "not_proved": [
+      "global mesh optimality",
+      "global maximum t=57",
+      "Monster embedding or fusion",
+      "literal photon node ontology",
+      "variable or emergent c mechanism",
+      "hardware or laboratory performance",
+      "remote CI or PDF success"
+    ],
+    "proved": [
+      "exact rational Terwilliger blocks via existing certificate",
+      "398-gate exact radical replay",
+      "explicit t=57 maximal code and 45+6+6 geometry",
+      "rank-48 rational centralizer decomposition",
+      "dimensionally consistent photon capacity identities"
+    ]
+  },
+  "exact_adjacent_mesh": {
+    "boundary": "Exact radical replay and exact zero pattern are proved. Global gate-count and depth optimality are not claimed.",
+    "diagonal_signs": {
+      "minus": 1,
+      "plus": 35
+    },
+    "distinct_c2": 75,
+    "layers": 69,
+    "matrix": "H=(2A36-J)/6",
+    "max_c2_denominator": 441,
+    "max_terms_per_entry": 1,
+    "offdiagonal_nonzeros": 0,
+    "parameter_sha256": "2c3be7815b8346cd90be108faad4cc68866ad453f13b76bbdd4a9988a4569555",
+    "parameterization": "Each gate has c=sign(c)*sqrt(c2), s=sign(s)*sqrt(1-c2) with exact rational c2.",
+    "permutation": [
+      7,
+      19,
+      9,
+      17,
+      14,
+      25,
+      24,
+      15,
+      10,
+      16,
+      20,
+      6,
+      4,
+      32,
+      31,
+      0,
+      33,
+      3,
+      1,
+      28,
+      5,
+      2,
+      30,
+      26,
+      29,
+      27,
+      35,
+      34,
+      21,
+      22,
+      23,
+      12,
+      11,
+      13,
+      8,
+      18
+    ],
+    "port_labels": [
+      17,
+      36,
+      20,
+      33,
+      26,
+      47,
+      42,
+      31,
+      21,
+      32,
+      37,
+      16,
+      13,
+      56,
+      54,
+      3,
+      57,
+      12,
+      7,
+      50,
+      14,
+      11,
+      53,
+      48,
+      52,
+      49,
+      63,
+      58,
+      38,
+      40,
+      41,
+      24,
+      22,
+      25,
+      18,
+      34
+    ],
+    "rotations": 398,
+    "skipped_exact_zeros": 232
+  },
+  "maximal_code_stratum_57": {
+    "base_code": "[36,6,16]",
+    "basis_hex": [
+      "0x81c4711f9",
+      "0x41c8721dd",
+      "0x21c8721ed",
+      "0x11c4711f5",
+      "0x90000003",
+      "0x48000003",
+      "0x24000003",
+      "0x240000c",
+      "0x1800030",
+      "0x240003",
+      "0x120003",
+      "0x90003",
+      "0x900c",
+      "0x6030",
+      "0x903",
+      "0x483",
+      "0x243"
+    ],
+    "basis_sha256": "9e2b6404c8c85460f51f4429a1eb42fb380c7dd7e3bf8525daf60389d1b31d5a",
+    "boundary": "This constructs an exact t=A4=57 stratum. It does not prove that 57 is the maximum possible A4 or classify all group orbits.",
+    "coordinate_degree_profile": {
+      "3": 16,
+      "9": 20
+    },
+    "dual_weight_distribution": {
+      "0": 1,
+      "4": 57,
+      "6": 384,
+      "8": 852,
+      "10": 9216,
+      "12": 7332,
+      "14": 70272,
+      "16": 57294,
+      "18": 233472,
+      "20": 57294,
+      "22": 70272,
+      "24": 7332,
+      "26": 9216,
+      "28": 852,
+      "30": 384,
+      "32": 57,
+      "36": 1
+    },
+    "maximal_code": "[36,17,4]",
+    "weight4_count": 57,
+    "weight4_intersection2_graph": {
+      "component_sizes": [
+        45,
+        6,
+        6
+      ],
+      "components": [
+        {
+          "degree_values": [
+            16
+          ],
+          "edges": 360,
+          "lambda_values": [
+            8
+          ],
+          "mu_values": [
+            4
+          ],
+          "v": 45
+        },
+        {
+          "degree_values": [
+            4
+          ],
+          "edges": 12,
+          "lambda_values": [
+            2
+          ],
+          "mu_values": [
+            4
+          ],
+          "v": 6
+        },
+        {
+          "degree_values": [
+            4
+          ],
+          "edges": 12,
+          "lambda_values": [
+            2
+          ],
+          "mu_values": [
+            4
+          ],
+          "v": 6
+        }
+      ],
+      "interpretation": [
+        "SRG(45,16,8,4)",
+        "octahedral K2,2,2",
+        "octahedral K2,2,2"
+      ],
+      "total_edges": 384
+    },
+    "weight4_support_sha256": "3f8b9d1f7652b975f57d586acaa75c48b1e52a24db0d362421b89b5f770f38a3",
+    "weight_distribution": {
+      "0": 1,
+      "4": 57,
+      "8": 852,
+      "12": 7332,
+      "16": 57294,
+      "20": 57294,
+      "24": 7332,
+      "28": 852,
+      "32": 57,
+      "36": 1
+    }
+  },
+  "monster_gate": {
+    "boundary": "No Monster embedding or character fusion is promoted.",
+    "existing_harness": "analysis/w33_mmgroup_u42_candidate_harness.py",
+    "negative_result": "No concrete runtime artifact is present at data/PART_3751_MONSTER_U42_CLASS_FUSION_EXECUTION.json.",
+    "required": [
+      "four portable serialized MM words",
+      "mmgroup version/provenance",
+      "closure order 25920",
+      "generator/pair/triple order signature",
+      "element-order census",
+      "36-axis, 135-frame, 120-Norton, code, and line-split hashes",
+      "content-addressed character-fusion artifact"
+    ],
+    "status": "PENDING_EXPLICIT_MONSTER_WORDS_AND_CLASS_FUSION"
+  },
+  "photon_node_capacity_model": {
+    "Lorentz_dispersion_firewall": {
+      "allowed": "N-dependent internal Hilbert-space capacity with invariant c",
+      "disallowed_without_evidence": "c depending on N, photon frequency, or mode count",
+      "reason": "Such dependence generically creates vacuum dispersion and violates the invariant-speed boundary."
+    },
+    "established_kinematic_identity": {
+      "causal_ratio": "a_N/tau_N=c",
+      "conclusion": "N cancels when spatial and temporal refinement scale together.",
+      "node_step": "a_N=lambda/N",
+      "node_tick": "tau_N=T/N",
+      "period": "T=1/nu",
+      "wavelength": "lambda=c/nu"
+    },
+    "information_model": {
+      "density_throughput_identity": "rho=N/lambda=N*nu/c and R/(rho*log2(d))=c in the ideal tensor-factor model",
+      "direct_sum_single_photon": {
+        "Holevo_ceiling_bits": 6.906890595608519,
+        "W33_N40_d3_dimension": 120,
+        "dimension": "N*d"
+      },
+      "latency_per_bit": "L=T/B",
+      "tensor_product_ideal": {
+        "W33_N40_d3_bits": 63.39850002884624,
+        "bits": "N*log2(d)"
+      },
+      "throughput": "R=B/T=B*nu=1/L"
+    },
+    "ontology_boundary": "The equations define an information-capacity and causal-update model. They do not establish that a photon literally contains discrete holo nodes.",
+    "quantum_speed_limit": {
+      "Margolus_Levitin_orthogonal_rate": "Gamma<=2E/(pi*hbar)=4nu",
+      "W33_sequential_updates_per_period": 40,
+      "falsifier": "Forty W33 nodes cannot be forty sequential mutually orthogonal state changes within one optical period for an isolated single photon of energy h nu. They must be parallel/nonorthogonal modes, span multiple periods, or use external drive.",
+      "orthogonal_updates_per_period_max": 4,
+      "overload_factor": 10,
+      "photon_energy": "E=h*nu"
+    }
+  },
+  "rank48_coherent_algebra": {
+    "boundary": "This closes the characteristic-zero centralizer algebra. A literal 48-relation intersection tensor and every fusion scheme are not enumerated here.",
+    "carrier_decompositions": {
+      "Q200": "1^2 + 15a^2 + 15b + 24^3 + 81",
+      "Q264": "1^5 + 6 + 15a^2 + 15b^2 + 20^2 + 24^3 + 81",
+      "Q64": "1^3 + 6 + 15b + 20^2"
+    },
+    "center_dimension": 7,
+    "centralizer_dimension": 48,
+    "cross_channels": {
+      "shared_15b": 1,
+      "trivial": 6
+    },
+    "cross_hom_dimension": 7,
+    "module_table": [
+      {
+        "dimension": 1,
+        "irrep": "1",
+        "multiplicity": 5
+      },
+      {
+        "dimension": 6,
+        "irrep": "6",
+        "multiplicity": 1
+      },
+      {
+        "dimension": 15,
+        "irrep": "15a",
+        "multiplicity": 2
+      },
+      {
+        "dimension": 15,
+        "irrep": "15b",
+        "multiplicity": 2
+      },
+      {
+        "dimension": 20,
+        "irrep": "20",
+        "multiplicity": 2
+      },
+      {
+        "dimension": 24,
+        "irrep": "24",
+        "multiplicity": 3
+      },
+      {
+        "dimension": 81,
+        "irrep": "81",
+        "multiplicity": 1
+      }
+    ],
+    "wedderburn": "Q^2 + M2(Q)^3 + M3(Q) + M5(Q)"
+  },
+  "schema": "w33.pass3957_3964.exact_algebra_mesh_code_photon.v1",
+  "semantic_sha256": "763b9a6a3f04e3436099ccf9abcc18f2723d0540050ecedacc3a245708ba7148",
+  "status": "PASS_EXACT_FIVE_FRONT_THREE_BONKERS_MONSTER_EXTERNAL_PENDING",
+  "terwilliger_exact_wedderburn": {
+    "algebra_dimension": 79,
+    "blocks": [
+      {
+        "isotypic_dimension": 3,
+        "module_multiplicity": 3,
+        "primitive_shell": 2,
+        "shell_ranks": [
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        "simple_block_size": 1
+      },
+      {
+        "isotypic_dimension": 12,
+        "module_multiplicity": 12,
+        "primitive_shell": 2,
+        "shell_ranks": [
+          0,
+          0,
+          12,
+          0,
+          0
+        ],
+        "simple_block_size": 1
+      },
+      {
+        "isotypic_dimension": 14,
+        "module_multiplicity": 14,
+        "primitive_shell": 4,
+        "shell_ranks": [
+          0,
+          0,
+          0,
+          0,
+          14
+        ],
+        "simple_block_size": 1
+      },
+      {
+        "isotypic_dimension": 2,
+        "module_multiplicity": 1,
+        "primitive_shell": 1,
+        "shell_ranks": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "simple_block_size": 2
+      },
+      {
+        "isotypic_dimension": 4,
+        "module_multiplicity": 2,
+        "primitive_shell": 3,
+        "shell_ranks": [
+          0,
+          0,
+          0,
+          2,
+          2
+        ],
+        "simple_block_size": 2
+      },
+      {
+        "isotypic_dimension": 12,
+        "module_multiplicity": 4,
+        "primitive_shell": 3,
+        "shell_ranks": [
+          0,
+          0,
+          0,
+          4,
+          8
+        ],
+        "simple_block_size": 3
+      },
+      {
+        "isotypic_dimension": 12,
+        "module_multiplicity": 4,
+        "primitive_shell": 2,
+        "shell_ranks": [
+          0,
+          0,
+          4,
+          4,
+          4
+        ],
+        "simple_block_size": 3
+      },
+      {
+        "isotypic_dimension": 24,
+        "module_multiplicity": 8,
+        "primitive_shell": 2,
+        "shell_ranks": [
+          0,
+          0,
+          8,
+          8,
+          8
+        ],
+        "simple_block_size": 3
+      },
+      {
+        "isotypic_dimension": 32,
+        "module_multiplicity": 8,
+        "primitive_shell": 2,
+        "shell_ranks": [
+          0,
+          0,
+          8,
+          8,
+          16
+        ],
+        "simple_block_size": 4
+      },
+      {
+        "isotypic_dimension": 5,
+        "module_multiplicity": 1,
+        "primitive_shell": 0,
+        "shell_ranks": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "simple_block_size": 5
+      }
+    ],
+    "center_dimension": 10,
+    "closure": "The fourteen-case arithmetic sieve from Passes 3905-3912 is superseded by the exact rational primitive-idempotent certificate from Passes 1365-1369.",
+    "decomposition": "Q^3 + M2(Q)^2 + M3(Q)^3 + M4(Q) + M5(Q)",
+    "module_multiplicities": [
+      3,
+      12,
+      14,
+      1,
+      2,
+      4,
+      4,
+      8,
+      8,
+      1
+    ],
+    "simple_sizes": [
+      1,
+      1,
+      1,
+      2,
+      2,
+      3,
+      3,
+      3,
+      4,
+      5
+    ],
+    "source_certificate": "data/w33_pass1365_1369_rational_schur_completion.json"
+  },
+  "three_bonkers": {
+    "fifty_seven_block_geometry": "The new t=57 code's weight-4 supports split as SRG(45,16,8,4)+2 octahedra.",
+    "four_update_quantum_speed_falsifier": "An isolated photon of energy h nu supports at most four mutually orthogonal transitions per optical period under the Margolus-Levitin bound.",
+    "photon_node_packing_invariance": "c=(lambda/N)/(T/N); node density may increase capacity while c remains invariant."
+  }
+}
