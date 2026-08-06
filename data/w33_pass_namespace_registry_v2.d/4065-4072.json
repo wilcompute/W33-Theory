@@ -3,10 +3,34 @@
   "range": [4065, 4072],
   "slug": "explicit_qsp_adaptive_magic_lorentzian_dirac_sk1_gauge_commutant_antithermalization_metrology_tree_entropy",
   "title": "Five-front closure and three outside-box probes: explicit QSP phases, adaptive magic correction, Lorentzian Dirac walk, robust H1 pulses, gauge commutant, anti-thermalization, frame metrology, and tree entropy",
-  "status": "reserved",
+  "status": "source_complete_exact_certificate_explicit_qsp_lorentzian_walk_and_adaptive_magic_finite_exact_determinism_ft_and_sm_pending",
   "owner": "openai-gpt-5.6-thinking",
   "reserved_at": "2026-08-06T11:19:00-04:00",
-  "purpose": "Execute the five open steps after Passes 4049-4056 and add three nonoverlapping exact outside-box constructions.",
-  "coordination": "Preserve Passes 4005-4064, the stable Pages source controller, restored large website, and protected manifests. Do not edit docs/index.html directly.",
-  "boundary": "Reservation only. No fabricated QSP block encoding, finite-cost exact deterministic irrational gate, measured Lorentzian propagation, fault-tolerance threshold, Standard Model gauge group, thermalization experiment, metrology experiment, gravity, or TOE is promoted."
+  "completed_at": "2026-08-06T11:38:00-04:00",
+  "certificate_status": "PASS_EXPLICIT_QSP_ADAPTIVE_MAGIC_DIRAC_SK1_GAUGE_OBSTRUCTION_AND_THREE_BONKERS",
+  "certificates": {
+    "exact_packet": "342e8e7ae8f3ef06750716a1d3bdb25f2db432ee55e3ca35482086e16d6544ed",
+    "combined_manifest": "5b722bff1a0003902a2aee597e9a06e8dee8fdcc7c5e7160f14f1bd6097985ac"
+  },
+  "promoted": [
+    "explicit six-phase five-query Wx-convention QSP compiler for the W33 sign quintic with residual below 1.2e-15",
+    "adaptive irrational-magic correction with exact failure, diamond-error, raw-resource laws, and a finite exact no-go",
+    "local three-spatial-dimensional W33-fibered quantum walk converging to a 3+1 Dirac operator with mass multiplicities 1,24,15",
+    "SK1-protected H1 logical pulse cancelling first-order amplitude error and producing fourth-order infidelity",
+    "exact obstruction that the unbroken W33 automorphism commutant supports only U(1)^3 and cannot generate non-Abelian SU(2) or SU(3)",
+    "reflection anti-thermalization theorem with pure-state time-average entropy at most one bit",
+    "H1 local-defect quantum Fisher information total budget 2t^2 and an attaining Eulerian flow",
+    "exact Kirchhoff spanning-tree counts and factor-four Levi-to-W33 complexity ratio"
+  ],
+  "external_pending": [
+    "fabricated and calibrated block encoding implementing the six-phase QSP convention",
+    "resource-efficient doubled-angle magic factories, finite deterministic correction, logical injection, and fault-tolerance threshold",
+    "measured causal propagation and controlled interacting Lorentzian field theory",
+    "leakage- and decoherence-aware full-H1 composite pulse scheduling",
+    "a symmetry-breaking or multiplicity mechanism that supplies non-Abelian gauge structure without arbitrary assignments",
+    "laboratory thermalization, metrology, or graph-complexity observables",
+    "remote exact CI, protected frontier reconciliation, and manuscript PDF evidence"
+  ],
+  "coordination": "Does not overwrite Passes 4057-4064. Preserves the stable Pages source controller, restored website, and docs/index.html.",
+  "boundary": "No fabricated QSP device, finite-cost exact deterministic irrational gate, fault-tolerant universal machine, Standard Model, gravity, cosmology, or theory of everything is promoted."
 }
