@@ -1,0 +1,41 @@
+name: Pass 4000 Monster Execution Escalation
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4000_monster_execution_summary.py'
+      - 'analysis/w33_pass3993_monster_overgroup_acquisition.py'
+      - 'analysis/w33_pass3993_monster_overgroup_sieve.g'
+      - '.github/workflows/w33_pass4000_monster_execution.yml'
+  workflow_dispatch:
+permissions: {contents: write}
+concurrency: {group: pass4000-monster-execution, cancel-in-progress: false}
+jobs:
+  execute:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: |
+          sudo apt-get update
+          sudo apt-get install -y gap gap-character-tables
+          python -m pip install --disable-pip-version-check mmgroup==1.0.0
+      - run: git clone --depth 1 https://github.com/apsmath/MonsterSubgroups.git /tmp/MonsterSubgroups
+      - run: gap -q analysis/w33_pass3993_monster_overgroup_sieve.g | tee /tmp/gap.txt
+      - run: python analysis/w33_pass3993_monster_overgroup_acquisition.py --gap-output /tmp/gap.txt --database /tmp/MonsterSubgroups | tee /tmp/acquire.log
+      - run: python analysis/w33_pass4000_monster_execution_summary.py | tee /tmp/summary.log
+      - run: grep -F 'PASS_MONSTER_OVERGROUP_ACQUISITION' /tmp/acquire.log && grep -F 'PASS_MONSTER_EXECUTION_SUMMARY' /tmp/summary.log
+      - run: python analysis/w33_mmgroup_u42_candidate_harness.py data/PART_3751_MONSTER_U42_CLASS_FUSION_EXECUTION.json --allow-empty --output /tmp/strict.json
+      - name: Commit execution evidence
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/PART_3993_MONSTER_OVERGROUP_ACQUISITION.json data/PART_4000_MONSTER_EXECUTION_SUMMARY.json
+          test ! -f data/PART_3751_MONSTER_U42_CLASS_FUSION_EXECUTION.json || git add data/PART_3751_MONSTER_U42_CLASS_FUSION_EXECUTION.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Pass 4000: freeze executed Monster overgroup search evidence'
+          git pull --rebase origin master
+          git push
