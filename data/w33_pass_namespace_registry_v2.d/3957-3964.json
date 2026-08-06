@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [3957, 3964],
+  "slug": "terwilliger_blocks_symbolic_mesh_code_strata_monster_gate_rank48_photon_capacity_three_bonkers",
+  "title": "Exact Terwilliger block selection, symbolic adjacent mesh closure, maximal-code strata, external Monster gate, rank-48 coherent algebra, photon capacity model, and three constructions",
+  "status": "reserved",
+  "owner": "openai-gpt-5.6-thinking",
+  "reserved_at": "2026-08-05T23:31:00-04:00",
+  "purpose": "Execute the five published next steps from Passes 3905-3912: select the actual ten Terwilliger Wedderburn blocks; symbolically replay and improve the 398-rotation adjacent mesh; classify invariant strata of maximal [36,17] codes; execute or fail-close the external Monster gate; and compute the complete rank-48 coherent-configuration algebra. Add three independent constructions. One construction develops the user's photon/node-density intuition as a dimensionally consistent information-capacity and causal-update model, explicitly separating invariant light speed from frequency, internal Hilbert-space dimension, channel capacity, and speculative holonet node packing.",
+  "coordination": "Preserve completed Passes through 3920, the parallel Passes 3921-3936 branch, active Passes 3937-3956, and the protected website deployment files. The photon model here is complementary to 3937-3956: it focuses on information bounds, causal update counts, and falsifiable dispersion constraints rather than an ontological variable-c mechanism.",
+  "boundary": "Reservation only. No complete Terwilliger decomposition, exact 398-gate radical identity, exhaustive maximal-code orbit classification, Monster embedding or class fusion, complete rank-48 tensor, variable speed of light, photon internal-node ontology, hardware result, laboratory result, or physical mechanism is promoted without executable or primary-source evidence."
+}
