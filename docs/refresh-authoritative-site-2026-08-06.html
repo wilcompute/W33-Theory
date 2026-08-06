@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>Reloading authoritative W33 site</title>
+  <style>body{font:16px/1.5 system-ui;max-width:760px;margin:10vh auto;padding:24px;background:#0d1117;color:#e6edf3}a{color:#58a6ff}</style>
+</head>
+<body>
+  <h1>Reloading the authoritative W33 site…</h1>
+  <p>This one-time entry clears Cache Storage and unregisters any service worker, then opens <code>master/docs/index.html</code> through a cache-busted URL.</p>
+  <p><a id="manual" href="./?authoritative-master-docs=20260806T1134-0400">Continue manually</a></p>
+  <script>
+    (async () => {
+      try {
+        if ('serviceWorker' in navigator) {
+          const registrations = await navigator.serviceWorker.getRegistrations();
+          await Promise.all(registrations.map(r => r.unregister()));
+        }
+        if ('caches' in window) {
+          const names = await caches.keys();
+          await Promise.all(names.map(name => caches.delete(name)));
+        }
+      } catch (_) {}
+      location.replace('./?authoritative-master-docs=20260806T1134-0400');
+    })();
+  </script>
+</body>
+</html>
