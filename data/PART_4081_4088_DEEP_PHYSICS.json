@@ -1,0 +1,146 @@
+{
+  "boundaries": [
+    "All promoted statements are exact finite group, projector, perturbative effective-Hamiltonian, Bloch-band, overlap-operator, subgroup-commutant, resolvent, information-thermodynamic, or short-time propagator results.",
+    "No fabricated mobile-pair device, measured pump, chiral Standard Model, physical non-Abelian gauge boson, inverse-scattering experiment, thermodynamic measurement, gravity, cosmology, or theory of everything is claimed."
+  ],
+  "checks": {
+    "4081": true,
+    "4082": true,
+    "4083": true,
+    "4084": true,
+    "4085": true,
+    "4086": true,
+    "4087": true,
+    "4088": true
+  },
+  "pass4081_canonical_dark_irreps": {
+    "atlas_class_order": ["1A","2A","2B","3A","3B","3C","3D","4A","4B","5A","6A","6B","6C","6D","6E","6F","9A","9B","12A","12B"],
+    "boundary": "The ATLAS class map, character fingerprints, multiplicities, and central idempotents are exact. Galois-pair a/b suffix orientation is left canonical unless independently fixed by an official representation trace.",
+    "canonical_orientation": "For unresolved Galois/table-automorphism suffix pairs, plus/minus is fixed by the sign of the imaginary part on the first ATLAS class where the pair differs; no suffix is guessed.",
+    "central_idempotent": "e_chi=(degree/25920) sum_C conjugate(chi(C)) K_C; the listed exact fingerprints determine every coefficient.",
+    "certified_atlas_suffixes": ["5a","5b","15a","15b"],
+    "character_field": "Every fingerprint entry [p,q] denotes (p + q i sqrt(3))/2 in the exact ATLAS class order.",
+    "class_orders_in_atlas_order": [1,2,2,3,3,3,3,4,4,5,6,6,6,6,6,6,9,9,12,12],
+    "class_sizes_in_atlas_order": [1,45,270,40,40,240,480,540,3240,5184,360,360,720,720,1440,2160,2880,2880,2160,2160],
+    "dark_dimension": 3161,
+    "dark_projector": "P_dark,chi is the action of e_chi on Sym^2(H1) minus the 160-dimensional incidence-edge bright module.",
+    "group": "PSp(4,3) = U4(2), generated explicitly by four projective symplectic transvections",
+    "group_order": 25920,
+    "internal_class_index_in_atlas_order": [0,1,2,4,3,5,6,7,8,9,11,10,13,12,14,15,16,17,19,18],
+    "irreducibles": [
+      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0]],"dark_multiplicity":0,"degree":1,"internal_index":0,"isotypic_dimension":0,"label":"1"},
+      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[10,0],[-6,0],[2,0],[1,3],[1,-3],[-2,0],[4,0],[2,0],[-2,0],[0,0],[-3,-1],[-3,1],[0,2],[0,-2],[0,0],[2,0],[1,-1],[1,1],[-1,1],[-1,-1]],"dark_multiplicity":1,"degree":5,"internal_index":1,"isotypic_dimension":5,"label":"5a"},
+      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[10,0],[-6,0],[2,0],[1,-3],[1,3],[-2,0],[4,0],[2,0],[-2,0],[0,0],[-3,1],[-3,-1],[0,-2],[0,2],[0,0],[2,0],[1,1],[1,-1],[-1,-1],[-1,1]],"dark_multiplicity":1,"degree":5,"internal_index":2,"isotypic_dimension":5,"label":"5b"},
+      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[12,0],[-4,0],[4,0],[0,0],[0,0],[0,0],[0,0],[4,0],[0,0],[2,0],[0,0],[0,0],[0,0],[0,0],[0,0],[-2,0],[0,0],[0,0],[0,0],[0,0]],"dark_multiplicity":2,"degree":6,"internal_index":3,"isotypic_dimension":12,"label":"6"},
+      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[20,0],[4,0],[4,0],[-1,-3],[-1,3],[2,0],[2,0],[0,0],[0,0],[-2,0],[1,1],[1,-1],[0,-2],[0,2],[0,0],[-2,0],[-1,1],[-1,-1],[1,-1],[1,1]],"dark_multiplicity":1,"degree":10,"internal_index":4,"isotypic_dimension":10,"label":"10_plus"},
+      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[20,0],[4,0],[4,0],[-1,3],[-1,-3],[2,0],[2,0],[0,0],[0,0],[-2,0],[1,-1],[1,1],[0,2],[0,-2],[0,0],[-2,0],[-1,-1],[-1,1],[1,1],[1,-1]],"dark_multiplicity":1,"degree":10,"internal_index":5,"isotypic_dimension":10,"label":"10_minus"},
+      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[30,0],[-2,0],[6,0],[3,0],[3,0],[0,0],[-6,0],[-2,0],[-2,0],[0,0],[-3,0],[-3,0],[0,0],[0,0],[0,0],[2,0],[0,0],[0,0],[1,0],[1,0]],"dark_multiplicity":1,"degree":15,"internal_index":6,"isotypic_dimension":15,"label":"15a"},
+      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[30,0],[14,0],[-2,0],[3,0],[3,0],[0,0],[2,0],[6,0],[-2,0],[0,0],[1,0],[1,0],[0,0],[0,0],[0,0],[2,0],[0,0],[0,0],[-1,0],[-1,0]],"dark_multiplicity":3,"degree":15,"internal_index":7,"isotypic_dimension":45,"label":"15b"},
+      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[60,0],[12,0],[4,0],[-3,9],[-3,-9],[0,0],[0,0],[4,0],[0,0],[0,0],[-3,1],[-3,-1],[0,2],[0,-2],[0,0],[0,0],[0,0],[0,0],[1,1],[1,-1]],"dark_multiplicity":6,"degree":30,"internal_index":8,"isotypic_dimension":180,"label":"30_plus"},
+      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[40,0],[8,0],[0,0],[-2,0],[-2,0],[2,0],[-4,0],[0,0],[0,0],[-2,0],[2,0],[2,0],[0,0],[0,0],[0,0],[0,0],[2,0],[2,0],[0,0],[0,0]],"dark_multiplicity":5,"degree":20,"internal_index":9,"isotypic_dimension":100,"label":"20"},
+      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[60,0],[12,0],[4,0],[-3,-9],[-3,9],[0,0],[0,0],[4,0],[0,0],[0,0],[-3,-1],[-3,1],[0,-2],[0,2],[0,0],[0,0],[0,0],[0,0],[1,-1],[1,1]],"dark_multiplicity":6,"degree":30,"internal_index":10,"isotypic_dimension":180,"label":"30_minus"},
+      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[128,0],[0,0],[0,0],[2,0],[2,0],[-4,0],[2,0],[0,0],[0,0],[2,0],[-2,0],[-2,0],[2,0],[2,0],[0,0],[0,0],[-1,0],[-1,0],[0,0],[0,0]],"dark_multiplicity":8,"degree":64,"internal_index":11,"isotypic_dimension":512,"label":"64"},
+      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[90,0],[-6,0],[2,0],[9,-9],[9,9],[0,0],[0,0],[-2,0],[2,0],[0,0],[-3,3],[-3,-3],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[-1,1],[-1,-1]],"dark_multiplicity":4,"degree":45,"internal_index":12,"isotypic_dimension":180,"label":"45_minus"},
+      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[90,0],[-6,0],[2,0],[9,9],[9,-9],[0,0],[0,0],[-2,0],[2,0],[0,0],[-3,-3],[-3,3],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[-1,-1],[-1,1]],"dark_multiplicity":4,"degree":45,"internal_index":13,"isotypic_dimension":180,"label":"45_plus"},
+      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[120,0],[-8,0],[8,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"dark_multiplicity":9,"degree":60,"internal_index":14,"isotypic_dimension":540,"label":"60"},
+      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[80,0],[-16,0],[0,0],[-10,-6],[-10,6],[2,0],[2,0],[0,0],[0,0],[-1,-1],[2,-2],[2,2],[2,-2],[2,2],[0,0],[0,0],[-1,-1],[-1,1],[0,0],[0,0]],"dark_multiplicity":4,"degree":40,"internal_index":15,"isotypic_dimension":160,"label":"40_minus"},
+      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[80,0],[-16,0],[0,0],[-10,6],[-10,-6],[2,0],[2,0],[0,0],[0,0],[-1,1],[2,2],[2,-2],[2,2],[2,-2],[0,0],[0,0],[-1,1],[-1,-1],[0,0],[0,0]],"dark_multiplicity":4,"degree":40,"internal_index":16,"isotypic_dimension":160,"label":"40_plus"},
+      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[60,0],[-20,0],[4,0],[6,0],[6,0],[0,0],[0,0],[-4,0],[0,0],[0,0],[2,0],[2,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"dark_multiplicity":3,"degree":30,"internal_index":17,"isotypic_dimension":90,"label":"30_real"},
+      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[162,0],[18,0],[2,0],[0,0],[0,0],[0,0],[0,0],[2,0],[2,0],[2,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"dark_multiplicity":9,"degree":81,"internal_index":18,"isotypic_dimension":729,"label":"81"},
+      {"atlas_character_fingerprint_half_p_plus_q_i_sqrt3":[[48,0],[16,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[-2,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"dark_multiplicity":2,"degree":24,"internal_index":19,"isotypic_dimension":48,"label":"24"}
+    ],
+    "trivial_multiplicity": 0
+  },
+  "pass4082_mobile_composite_pairs": {
+    "bandwidth": "8 t^2/Delta",
+    "boundary": "Mobility requires the explicit pair-binding offset Delta. The bare repulsive contact-dark manifold alone is neither bound nor mobile.",
+    "clean_first_chern_number": 0,
+    "dispersion": "E(k)=-Delta-4t^2/Delta-4t^2 cos(k)/Delta",
+    "effective_mass_hbar1": "m*=Delta/(4 t^2 a^2)",
+    "irrep_action": "Symmetry-preserving hopping is identity on every one of the 19 dark isotypic sectors, so sectors do not mix and share the clean dispersion.",
+    "model": "A ring of cells with a -Delta energy for same-cell contact-dark pairs and single-photon nearest-neighbour hopping t that preserves the H1 internal mode.",
+    "onsite_self_energy": "-4 t^2/Delta",
+    "pair_hopping": "J_pair=2 t^2/Delta",
+    "schrieffer_wolff_order": 2,
+    "single_pair_defect": {"inverse_localization_length":"asinh(|nu|/(2|J_pair|))","relative_bound_energy":"sgn(nu) sqrt(nu^2+4 J_pair^2)"}
+  },
+  "pass4083_two_parameter_pair_pump": {
+    "bloch_hamiltonian": "h=(J1+J2 cos k) sigma_x + J2 sin k sigma_y + m sigma_z",
+    "boundary": "Exact clean filled-band Rice-Mele/Thouless pump for the effective pair center. Disorder, interactions between pairs, finite filling preparation, loss, and measured quantization remain open.",
+    "cycle": ["J1=J+R cos(theta)","J2=J-R cos(theta)","m=2R sin(theta)","0<R<J"],
+    "fukui_hatsugai_suzuki_numeric": 1.0000000000000009,
+    "gap_closing_enclosed": "(k,delta,m)=(pi,0,0)",
+    "lower_band_chern_number": 1,
+    "minimum_band_gap": "4R",
+    "pumped_composite_pairs_per_cycle": 1,
+    "pumped_photons_per_cycle": 2
+  },
+  "pass4084_overlap_fermions": {
+    "anomaly_boundary": "Eighty-one identical vectorlike copies do not automatically make an anomaly-free Weyl theory. Chiral gauge content and anomaly cancellation remain unconstructed.",
+    "corner_audit": "One light external species survives; fifteen Wilson corners are heavy.",
+    "domain_wall_limit": "Finite fifth dimension approximates sign(H_W) exponentially; exact overlap is the infinite/explicit-sign limit.",
+    "ginsparg_wilson": "gamma5 D + D gamma5 = a D gamma5 D",
+    "mass_window": "0<m0<2r",
+    "modified_chirality": "hat_gamma5=gamma5(1-aD), with exact lattice chiral projectors.",
+    "overlap_operator": "D_ov=a^-1[I+gamma5 sign(H_W)]",
+    "verified_sample_residual_max": 2.404473386885297e-15,
+    "w33_fiber_light_species": 81,
+    "wilson_kernel": "H_W(k)=gamma5[D_W(k)-m0], with D_W=i sum gamma_mu sin k_mu + r sum(1-cos k_mu)"
+  },
+  "pass4085_one_marked_edge_nonabelian_commutant": {
+    "boundary": "This is a symmetry-commutant control algebra, not an identification of physical QCD or electroweak gauge bosons. Coupling selection and dynamical gauge fields remain open.",
+    "commutant_dimension": 45,
+    "largest_block": "A six-dimensional stabilizer irrep occurs with multiplicity 3, producing U(3) and hence an exact SU(3) subalgebra.",
+    "marked_object": "one incidence edge",
+    "minimal_mark_count": 1,
+    "minimality": "Zero marked edges leaves only scalar U(1); one marked edge already yields U(3), so one is minimal in number of marked incidence edges.",
+    "restriction_components": [
+      {"block":"U(1)","character_index":2,"degree":1,"multiplicity":1},{"block":"U(2)","character_index":4,"degree":3,"multiplicity":2},{"block":"U(2)","character_index":5,"degree":3,"multiplicity":2},{"block":"U(1)","character_index":6,"degree":3,"multiplicity":1},{"block":"U(1)","character_index":7,"degree":3,"multiplicity":1},{"block":"U(1)","character_index":8,"degree":1,"multiplicity":1},{"block":"U(1)","character_index":9,"degree":2,"multiplicity":1},{"block":"U(1)","character_index":10,"degree":1,"multiplicity":1},{"block":"U(1)","character_index":11,"degree":2,"multiplicity":1},{"block":"U(1)","character_index":12,"degree":2,"multiplicity":1},{"block":"U(2)","character_index":13,"degree":3,"multiplicity":2},{"block":"U(3)","character_index":14,"degree":6,"multiplicity":3},{"block":"U(2)","character_index":15,"degree":3,"multiplicity":2},{"block":"U(1)","character_index":16,"degree":3,"multiplicity":1},{"block":"U(1)","character_index":17,"degree":3,"multiplicity":1},{"block":"U(1)","character_index":18,"degree":3,"multiplicity":1},{"block":"U(1)","character_index":19,"degree":3,"multiplicity":1},{"block":"U(2)","character_index":20,"degree":3,"multiplicity":2},{"block":"U(2)","character_index":21,"degree":3,"multiplicity":2}
+    ],
+    "stabilizer_conjugacy_classes": 22,
+    "stabilizer_order": 162,
+    "su2_blocks": "Several three-dimensional stabilizer irreps occur with multiplicity 2, producing exact U(2) and SU(2) subalgebras.",
+    "unmarked_commutant": "H1 is irreducible under PSp(4,3), so the full-symmetry commutant is scalar U(1)."
+  },
+  "pass4086_single_port_inverse_spectrum": {
+    "boundary": "Ideal noiseless rational inverse scattering. Finite-window conditioning, parasitics, and laboratory system identification remain open.",
+    "impulse_response": "h(t)=(1/80)[1+24e^{-(4-sqrt6)t}+30e^{-4t}+24e^{-(4+sqrt6)t}+e^{-8t}]",
+    "inverse_statement": "One ideal vertex port recovers all five Levi Laplacian eigenvalues and multiplicities from poles and residues because the graph is vertex-transitive.",
+    "local_resolvent": "G_00(s)=(s^4+16s^3+78s^2+112s+4)/[s(s+4)(s+8)(s^2+8s+10)]",
+    "partial_fraction": "(1/80)[1/s+24/(s+4-sqrt6)+30/(s+4)+24/(s+4+sqrt6)+1/(s+8)]",
+    "shell_extension": "Combining the port with the four exact differential shell transfer functions recovers graph distance 1,2,3,4."
+  },
+  "pass4087_landauer_dark_reservoir": {
+    "boundary": "Reversible information-thermodynamic lower bounds only; no calorimetric experiment or finite-time erasure protocol is certified.",
+    "conditional_erasure_given_retained_irrep_label_over_kBT": 5.730777383999303,
+    "dark_dimension": 3161,
+    "identity": "ln(3161)=H(label)+sum_label p_label ln(dim_label)",
+    "irrep_label_information_nats": 2.3278663282163152,
+    "isotypic_dimensions": [5,5,12,10,10,15,45,180,100,180,512,180,180,540,160,160,90,729,48],
+    "no_free_lunch": "Erasing the retained label record costs at least the same kBT H(label), restoring the full Landauer cost.",
+    "unconditioned_erasure_work_over_kBT": "ln(3161)",
+    "unconditioned_numeric": 8.058643712215618,
+    "work_reduction_if_label_retained_over_kBT": 2.3278663282163152
+  },
+  "pass4088_operational_causal_metric": {
+    "boundary": "An operational causal metric on a finite hopping graph, not an emergent Lorentzian spacetime or gravity theory.",
+    "definition": "d(u,v)=min{n>=0 : d^n/dt^n <u|exp(-iHt)|v>|_{t=0} != 0}",
+    "exact_metric": "d(u,v) equals line-graph distance because (A^n)_uv=0 below the shortest-path length.",
+    "first_nonzero_path_multiplicity": {"1":1,"2":1,"3":1,"4":2},
+    "hamiltonian": "H=J A_line on the 160 incidence-link sites",
+    "leading_amplitudes": {"1":"(-i J t)","2":"(-i J t)^2/2!","3":"(-i J t)^3/3!","4":"2(-i J t)^4/4!"},
+    "reading": "Short-time response order reconstructs distance; the coefficient reconstructs shortest-path degeneracy.",
+    "shells": {"1":6,"2":18,"3":54,"4":81}
+  },
+  "primary_literature": [
+    "ATLAS of Finite Group Representations: U4(2)=PSp(4,3) standard generators, classes, and representations.",
+    "Bravyi, DiVincenzo, and Loss, Schrieffer-Wolff transformation for quantum many-body systems.",
+    "Thouless, Quantization of particle transport, Phys. Rev. B 27, 6083 (1983).",
+    "Thouless, Kohmoto, Nightingale, and den Nijs, Quantized Hall Conductance in a Two-Dimensional Periodic Potential.",
+    "Neuberger, The Overlap Dirac Operator.",
+    "Landauer principle and information-thermodynamic erasure bounds."
+  ],
+  "schema": "w33.pass4081_4088.deep_physics.v1",
+  "semantic_sha256": "2f545b68de78b2cc7ab9844834ba5d9275841fce4e8aefa156c0f5388c9a5c9a",
+  "status": "PASS_EXACT_FIVE_TARGETS_THREE_OUTSIDE_BOX_WITH_EXPERIMENTAL_CHIRAL_AND_EMERGENCE_BOUNDARIES"
+}
