@@ -1,0 +1,129 @@
+name: Passes 3973-3980 Extremal Mesh Photon Tensor
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass3973_3980_extremal_mesh_photon_tensor.py'
+      - 'data/PART_3973_3980_EXTREMAL_MESH_PHOTON_TENSOR_results.json'
+      - 'data/w33_pass_namespace_registry_v2.d/3973-3980.json'
+      - 'tests/test_pass3973_3980_extremal_mesh_photon_tensor.py'
+      - 'analysis/BT3973_BT3980_extremal_mesh_photon_tensor*'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'docs/extremal-mesh-photon-tensor.html'
+      - '.github/workflows/w33_pass3973_3980_extremal_mesh_photon_tensor.yml'
+  workflow_dispatch:
+    inputs:
+      heavy_mesh:
+        description: 'Replay all 630 exact multiquadratic port-order transpositions'
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pass3973-3980-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  exact-quick:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install deterministic dependencies
+        run: python -m pip install --disable-pip-version-check pytest
+      - name: Regenerate quick exact certificate
+        run: |
+          mkdir -p evidence/pass3973_3980
+          python analysis/w33_pass3973_3980_extremal_mesh_photon_tensor.py \
+            --output evidence/pass3973_3980/quick_results.json \
+            > evidence/pass3973_3980/exact.log
+          grep -F 'PASS_EXACT_57_GEOMETRY_MESH_RADIUS1_TENSOR_EXPERIMENT_MODEL_MONSTER_FAIL_CLOSED' \
+            evidence/pass3973_3980/exact.log
+      - name: Focused exact regression
+        run: |
+          pytest -q tests/test_pass3973_3980_extremal_mesh_photon_tensor.py \
+            | tee evidence/pass3973_3980/pytest.log
+          git diff --check
+      - name: Check frozen audit and public reachability
+        run: |
+          python - <<'PY'
+          import json
+          result=json.load(open('data/PART_3973_3980_EXTREMAL_MESH_PHOTON_TENSOR_results.json'))
+          assert result['pass3973_code57_geometry']['component_identifications'] == ['T(10)=L(K10)','T(4)=L(K4)','T(4)=L(K4)']
+          mesh=result['pass3974_mesh_radius_one']
+          assert mesh['tested'] == 630
+          assert sum(mesh['rotation_histogram'].values()) == 630
+          assert mesh['minimum_rotations'] == 398
+          assert mesh['ties_at_398'] == 22
+          assert result['pass3976_rank48_tensor']['nonzero_structure_constants'] == 178
+          assert result['pass3977_monster_gate']['promoted_embedding'] is False
+          print('PASS frozen exact summary')
+          PY
+          grep -F 'BT3973_BT3980_extremal_mesh_photon_tensor_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          grep -F '769f2f1b29e832050fbf148f38ab64acd992766d5dc758a525b3f97e6e77d44e' docs/extremal-mesh-photon-tensor.html
+          test -f analysis/BT3973_BT3980_extremal_mesh_photon_tensor_index_insert.html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3973-3980-quick-evidence
+          path: evidence/pass3973_3980/**
+
+  heavy-mesh:
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.heavy_mesh }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Regenerate all 630 exact transpositions
+        run: |
+          mkdir -p evidence/pass3973_3980
+          python analysis/w33_pass3973_3980_extremal_mesh_photon_tensor.py \
+            --heavy --output evidence/pass3973_3980/heavy_results.json \
+            > evidence/pass3973_3980/heavy.log
+          python - <<'PY'
+          import json
+          result=json.load(open('evidence/pass3973_3980/heavy_results.json'))
+          mesh=result['pass3974_mesh_radius_one']
+          assert mesh['tested'] == 630
+          assert mesh['minimum_rotations'] == 398
+          assert mesh['ties_at_398'] == 22
+          assert mesh['all_layers'] == 69
+          print('PASS all-630 exact replay')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3973-3980-heavy-evidence
+          path: evidence/pass3973_3980/**
+
+  manuscripts:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: WtfJoke/setup-tectonic@v3
+        with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
+      - name: Compile all manuscript front doors
+        run: |
+          mkdir -p evidence/pass3973_3980
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3973_3980/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
+            > evidence/pass3973_3980/pdf_sha256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3973-3980-papers
+          path: |
+            evidence/pass3973_3980/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
