@@ -39,7 +39,14 @@
     "total_trace_in_units_of_theta_prime": "12m*40^m",
     "variance_in_units_of_theta_prime_squared": "12m"
   },
-  "semantic_sha256": "43856798c359b4f3627ca3a593d51ab781718b27769d887996d44076714028b5",
+  "self_similar_information_delay_invariant": {
+    "address_bits": "m*log2(40)",
+    "bits_per_mean_proper_delay": "log2(40)/(12*theta_prime)",
+    "interpretation": "Self-similarity scales accessible address space and accumulated dwell-time history together; their ratio is independent of tensor depth m.",
+    "mean_proper_delay": "12m*theta_prime",
+    "relative_delay_standard_deviation": "1/sqrt(12m)"
+  },
+  "semantic_sha256": "5a666b410a874ac934ca60271f993ae74cc0c0605ef67c15834036baa3f7182d",
   "status": "PASS_EXACT_WIGNER_SMITH_MEMORY_WITH_DECLARED_CAUSAL_MODELS",
   "w33_laplacian": {
     "spectrum": {"0": 1, "10": 24, "16": 15},
