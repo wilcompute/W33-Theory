@@ -3,10 +3,12 @@ name: Stabilize W33 Pages source
 on:
   push:
     branches:
+      - master
       - main
     paths:
       - '.github/workflows/stabilize-pages-source.yml'
       - 'docs/.pages-source-stabilize-*'
+      - 'docs/.pages-source-switch-*'
   workflow_dispatch:
 
 permissions:
