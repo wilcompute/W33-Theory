@@ -1,0 +1,41 @@
+{
+  "live_boundaries": {
+    "cap_maximum": [
+      68,
+      null
+    ],
+    "chromatic_number": [
+      10,
+      11
+    ],
+    "covering_radius": [
+      389,
+      435
+    ],
+    "cubic_transversal": [
+      106,
+      172
+    ]
+  },
+  "not_proved": [
+    "Nonexistence of a 69-cap or optimality of the 172-face transversal.",
+    "Seidel switching closure when a switch splits a canonical twin class.",
+    "The complete Ext-quiver or all nontrivial Loewy layers of the 115-dimensional module.",
+    "The exact covering-radius endpoint or ten-colour closure.",
+    "Remote CI/PDF success, hardware, laboratory, Monster embedding, or physical mechanism."
+  ],
+  "proved": [
+    "The 240-vertex dependency hypergraph has an explicit 68-cap and hence a 172-face transversal.",
+    "Four pairwise inequivalent free 68-cap orbits are certified under the order-25920 face action.",
+    "One 69-set has exactly one forbidden dependency triple and its three deletions yield three of those cap orbits.",
+    "The Petersen fourfold blow-up relations form a symmetric three-class association scheme with valencies 1,3,12,24.",
+    "All 512 twin-class Seidel switches modulo complement are exhausted and none yields W33.",
+    "The 115-dimensional F3 module splits as 1 direct_sum K114, with a nonsplit trivial socle in K114.",
+    "The centered cap-fibre orbit whitens to a 25920-vector tight frame in dimension 39.",
+    "Each free cap orbit and its complement form exact strength-one tactical configurations."
+  ],
+  "schema": "w33.pass3913_3928.claims_ledger.v1",
+  "semantic_sha256": "753c9039c032574dbcf5c20b899444ccc74bd092be22646211173fbd36be9eb6",
+  "source": "data/PART_BT3913_BT3928_CAP_GEWIRTZ_MODULAR_CLOSURE_results.json",
+  "status": "PASS_5_FRONTS_PLUS_3_CONSTRUCTIONS"
+}
