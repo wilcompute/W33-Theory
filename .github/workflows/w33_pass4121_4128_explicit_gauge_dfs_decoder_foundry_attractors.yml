@@ -1,0 +1,32 @@
+name: Passes 4121-4128 exact regression
+
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass4121_4128_explicit_gauge_dfs_decoder_foundry_attractors.py'
+      - 'data/PART_4121_4128_EXPLICIT_GAUGE_DFS_DECODER_FOUNDRY_ATTRACTORS_BONKERS.json'
+      - 'data/w33_pass4121_explicit_145_gauge_action.json'
+      - 'data/w33_pass4124_cornerstone_floorplan_audit.json'
+      - 'data/w33_pass4125_attractor_orbit_census.json'
+      - 'data/w33_pass4089_four_router_layout.json'
+      - 'tests/test_w33_pass4121_4128_explicit_gauge_dfs_decoder_foundry_attractors.py'
+      - '.github/workflows/w33_pass4121_4128_explicit_gauge_dfs_decoder_foundry_attractors.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass4121_4128_explicit_gauge_dfs_decoder_foundry_attractors.py'
+      - 'data/PART_4121_4128_EXPLICIT_GAUGE_DFS_DECODER_FOUNDRY_ATTRACTORS_BONKERS.json'
+      - 'tests/test_w33_pass4121_4128_explicit_gauge_dfs_decoder_foundry_attractors.py'
+  workflow_dispatch:
+
+jobs:
+  exact-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --upgrade pip numpy pytest
+      - run: python analysis/w33_pass4121_4128_explicit_gauge_dfs_decoder_foundry_attractors.py
+      - run: pytest -q tests/test_w33_pass4121_4128_explicit_gauge_dfs_decoder_foundry_attractors.py
