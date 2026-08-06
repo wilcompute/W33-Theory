@@ -1,0 +1,28 @@
+name: Passes 4081-4088 Manuscript Check
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/BT4081_BT4088_deep_physics_insert.tex'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - '.github/workflows/w33_pass4081_4088_manuscript_check.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  compile:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: WtfJoke/setup-tectonic@v3
+        with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
+      - run: |
+          mkdir -p evidence/pass4081_4088
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass4081_4088/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass4081-4088-manuscripts
+          path: evidence/pass4081_4088/**
