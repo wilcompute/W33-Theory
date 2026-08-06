@@ -78,6 +78,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const path = 'data/pages_live_verification.json';
+            const branch = 'pages-diagnostics';
             const payload = {
               schema: 'w33.pages_live_verification.v1',
               status: 'PASS_LIVE_BODY_EQUALS_AUTHORITATIVE_INDEX',
@@ -96,7 +97,7 @@ jobs:
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 path,
-                ref: 'master'
+                ref: branch
               });
               sha = current.data.sha;
             } catch (error) {
@@ -106,7 +107,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               path,
-              branch: 'master',
+              branch,
               message: `Record verified live Pages payload ${context.runId}`,
               content: Buffer.from(JSON.stringify(payload, null, 2) + '\n').toString('base64'),
               ...(sha ? { sha } : {})
