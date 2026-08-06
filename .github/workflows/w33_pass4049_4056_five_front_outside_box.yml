@@ -1,0 +1,25 @@
+name: Passes 4049-4056 Five Front Plus Outside Box
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4049_4056_five_front_outside_box.py'
+      - 'data/PART_4049_4056_FIVE_FRONT_OUTSIDE_BOX.json'
+      - 'tests/test_w33_pass4049_4056_five_front_outside_box.py'
+      - '.github/workflows/w33_pass4049_4056_five_front_outside_box.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+concurrency: {group: pass4049-4056-${{ github.ref }}, cancel-in-progress: true}
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check numpy sympy networkx pytest
+      - run: python analysis/w33_pass4049_4056_five_front_outside_box.py | tee /tmp/pass4049.log
+      - run: grep -F 'PASS_4049_4056_FIVE_FRONT_OUTSIDE_BOX 5f99f47f1a899b76c5e3e464a56440a63f51396a94c5d1ba9978ca65303b6946' /tmp/pass4049.log
+      - run: pytest -q tests/test_w33_pass4049_4056_five_front_outside_box.py
+      - run: git diff --check
