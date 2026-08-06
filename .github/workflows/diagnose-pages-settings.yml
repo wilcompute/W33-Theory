@@ -28,6 +28,7 @@ jobs:
             });
             const page = response.data;
             const path = 'data/pages_settings_diagnostic.json';
+            const branch = 'pages-diagnostics';
             const payload = {
               schema: 'w33.pages_settings_diagnostic.v1',
               build_type: page.build_type,
@@ -46,7 +47,7 @@ jobs:
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 path,
-                ref: 'master'
+                ref: branch
               });
               sha = current.data.sha;
             } catch (error) {
@@ -56,7 +57,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               path,
-              branch: 'master',
+              branch,
               message: `Record Pages settings diagnostic ${context.runId}`,
               content: Buffer.from(JSON.stringify(payload, null, 2) + '\n').toString('base64'),
               ...(sha ? { sha } : {})
