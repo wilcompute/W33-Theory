@@ -1,0 +1,26 @@
+name: W33 Passes 4057-4064 Advanced Physics
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass4057_4064_advanced_physics.py'
+      - 'data/PART_4057_4064_ADVANCED_PHYSICS.json'
+      - 'tests/test_w33_pass4057_4064_advanced_physics.py'
+      - '.github/workflows/w33_pass4057_4064_advanced_physics.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass4057_4064_advanced_physics.py'
+      - 'data/PART_4057_4064_ADVANCED_PHYSICS.json'
+      - 'tests/test_w33_pass4057_4064_advanced_physics.py'
+  workflow_dispatch:
+jobs:
+  exact-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy sympy networkx pytest
+      - run: python analysis/w33_pass4057_4064_advanced_physics.py
+      - run: pytest -q tests/test_w33_pass4057_4064_advanced_physics.py
