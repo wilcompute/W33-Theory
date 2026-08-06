@@ -1,0 +1,62 @@
+% Passes 4057--4064: advanced physics closure.
+\subsection{Transitionless holonomies, dark-pair characters, local Hodge cooling, and finite-graph physics}
+\label{sec:bt4057-4064}
+
+Passes 4057--4064 close five physics targets and three independent outside-box probes on the exact Levi--$H_1$ substrate.  All statements in this subsection are finite graph, representation-theoretic, spectral, lattice, Floquet, or canonical-ensemble statements; none is evidence for fabricated hardware, measured gate fidelity, a chiral Standard Model, quantized pumping, gravity, cosmology, or a theory of everything.
+
+For the two non-Abelian tripod loops, the Kato counterdiabatic term
+\[
+ H_{\rm CD}=i[\dot P_D,P_D]
+\]
+produces exact finite-time parallel transport in the ideal dark bundle.  Their Fubini--Study actions are
+\[
+ L_X=2\arccos(1/4)+\frac{\pi\sqrt{15}}2=8.719900157\ldots,
+ \qquad
+ L_Z=\frac\pi3+\frac{\pi\sqrt3}{2}=3.767896598\ldots .
+\]
+Thus a constant-speed duration $T$ requires peak counterdiabatic norm $L/T$, while uniform loss gives no-jump survival $e^{-\kappa T}$.
+
+The $3161$-dimensional two-boson contact-dark module was decomposed by generating $PSp(4,3)$ as a $25{,}920$-element permutation group, reconstructing its twenty conjugacy classes and class algebra, and diagonalizing the center.  Grouped by equal ordinary-character degree, its multiplicities are
+\[
+\begin{array}{c|ccccccccccccc}
+ d&1&5&6&10&15&20&24&30&40&45&60&64&81\\ \hline
+ m&0&(1,1)&2&(1,1)&(1,3)&5&2&(3,6,6)&(4,4)&(4,4)&9&8&9.
+\end{array}
+\]
+The weighted dimension is exactly $3161$, and there is no trivial constituent.  The bright rank-$160$ contact sector is an equivariant incidence-edge permutation module, so
+\[
+ P_{\rm dark}V_{\rm contact}P_{\rm dark}=0;
+\]
+contact-only first-order pair motion inside the dark sector is forbidden.
+
+Because the nonzero Levi Laplacian spectrum is $\{4-\sqrt6,4,4+\sqrt6,8\}$, the inverse square root is represented exactly on the physical spectrum by a cubic Lagrange polynomial $p_3$.  Consequently
+\[
+ Q=D^Tp_3(DD^T),\qquad Q^TQ=I-J/80,\qquad QQ^T=P_{\rm cut}.
+\]
+The polar cooler can therefore be compiled from three nearest-neighbour Levi-Laplacian queries and one incidence query, together with the bounded degree-five sign compiler of Pass 4049.  The collapsed matrix remains dense; this is exact circuit/query locality, not a one-layer sparse Hamiltonian.
+
+On the explicit four-dimensional refinement tower, the gauge-covariant Wilson--Dirac operator
+\[
+ H(k)=\sum_{\mu=1}^{4}\gamma_\mu\sin k_\mu+\gamma_5\left[m+r\sum_\mu(1-\cos k_\mu)\right]
+\]
+is nearest-neighbour and may be tensored with $I_{81}$ on the harmonic fiber.  At $m=0$, the naive operator has sixteen corner zeros, whereas $r=1$ leaves only the origin and gives the other corners Wilson masses $2,4,6,8$.  The price is explicit breaking of exact lattice chirality; the construction is vectorlike and does not evade the Nielsen--Ninomiya boundary.
+
+Feeding the irrational Floquet phase $\cos\phi=1/80$ into a static Coulomb port yields $V_n=Z_d(s)I_n$.  The static linear network preserves the input quasifrequencies and
+\[
+ \frac1N\sum_{n<N}e^{in\phi}\longrightarrow0,
+ \qquad
+ \left|\sum_{n=0}^{N-1}e^{in\phi}\right|\le \frac{2}{|1-e^{i\phi}|}.
+\]
+Hence there is no DC pump and no integer topological transport from one irrational phase alone; a second independently cycled parameter and a maintained gap are required.
+
+Three outside-box consequences are exact.  First, two projected Householder reflections convert graph distance into quasienergy through
+\[
+ |\langle u_e,u_f\rangle|=3^{-d},\qquad \theta_d=2\arccos(3^{-d}),
+\]
+giving four infinite-order distance clocks.  Second, the repulsive two-boson contact model has residual entropy $k_B\log3161$ and infinite-temperature dark probability $3161/3321$.  Third, the Levi graph has edge connectivity four, so any $r\le3$ missing couplers leave
+\[
+ \dim H_1=81-r,\qquad \mathcal I_W=-80+r,
+\]
+providing a topological fault odometer up to the four-edge connectivity threshold.
+
+The executable certificate is \texttt{data/PART\_4057\_4064\_ADVANCED\_PHYSICS.json}, with semantic SHA-256 \texttt{131ba5f89474a0283eedd0ae1ec5e5e6618b6d3e2bd6eeb8654fd4df8abbcd72}.
