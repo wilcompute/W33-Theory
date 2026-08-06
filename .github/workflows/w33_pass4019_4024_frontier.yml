@@ -1,0 +1,34 @@
+name: Passes 4019-4024 Protected Frontier
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'tools/integrate_pass4019_4024_frontier.py'
+      - 'analysis/BT4019_BT4024_photonic_flat_band_h1_insert.tex'
+      - 'analysis/BT4019_BT4024_photonic_flat_band_h1_index_insert.html'
+      - 'docs/photon-flat-band-h1.html'
+      - '.github/workflows/w33_pass4019_4024_frontier.yml'
+  workflow_dispatch:
+permissions: {contents: write}
+concurrency:
+  group: pass4019-4024-frontier
+  cancel-in-progress: false
+jobs:
+  reconcile:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python tools/integrate_pass4019_4024_frontier.py | tee /tmp/frontier.log
+      - run: grep -F 'PASS_4019_4024_FRONTIER 1 1 1' /tmp/frontier.log
+      - run: git diff --exit-code -- docs/index.html
+      - run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/w33_current_frontier_manifest_v1.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Pass 4024: reconcile photonic flat-band H1 frontier'
+          git pull --rebase origin master
+          git push
