@@ -9,6 +9,12 @@ on:
       - 'docs/index.html'
       - 'docs/.pages-deploy-restored-index-*'
       - '.github/workflows/verify-live-pages.yml'
+  pull_request:
+    branches:
+      - master
+    paths:
+      - 'docs/.pages-deploy-restored-index-*'
+      - '.github/workflows/verify-live-pages.yml'
   workflow_dispatch:
 
 permissions:
