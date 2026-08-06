@@ -1,0 +1,23 @@
+name: Passes 4073-4080 Engineering and Outside-Box Regression
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4073_4080_engineering_outside_box.py'
+      - 'data/PART_4073_4080_ENGINEERING_OUTSIDE_BOX.json'
+      - 'tests/test_w33_pass4073_4080_engineering_outside_box.py'
+      - '.github/workflows/w33_pass4073_4080_engineering_outside_box.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --upgrade pip numpy pytest
+      - run: python analysis/w33_pass4073_4080_engineering_outside_box.py | tee /tmp/pass4073_4080.log
+      - run: grep -F 'PASS_4073_4080 0304eef2ec49efabf5721ed47a35e48064530f459f2964ae49e455ef1d3c5a31' /tmp/pass4073_4080.log
+      - run: pytest -q tests/test_w33_pass4073_4080_engineering_outside_box.py
