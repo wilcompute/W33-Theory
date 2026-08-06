@@ -1,0 +1,142 @@
+{
+  "boundaries": [
+    "Exact finite graph, projector, interaction, holonomy, swap, resolvent, heat-trace, supersymmetry, Floquet, and transfer statements only.",
+    "No fabricated device, measured gate fidelity, many-body phase, reservoir implementation, emergent spacetime, physical supersymmetry, time crystal, wormhole, gravity, Standard Model, or theory of everything is established."
+  ],
+  "checks": {
+    "cooling": true,
+    "cooling_action": true,
+    "coulomb": true,
+    "floquet": true,
+    "geometry": true,
+    "h1_projector": true,
+    "holonomic": true,
+    "refinement": true,
+    "susy": true,
+    "two_boson": true,
+    "wormhole": true
+  },
+  "external_context": [
+    "Tripod/M-pod dark spaces are established platforms for non-Abelian holonomic quantum computation.",
+    "Interacting flat-band photons can delocalize or form interaction-enabled states; the present result is the exact W33 projected contact spectrum.",
+    "Particle-number-conserving engineered cooling is an active preparation strategy; the present result is an exact one-shot polar swap.",
+    "The four-dimensional heat-kernel plateau in the refinement model is externally supplied by four torus directions, not derived from W33."
+  ],
+  "pass4041_non_abelian_H1_holonomies": {
+    "adiabatic_gap": "Omega",
+    "boundary": "Exact Wilczek-Zee connection and holonomies in the ideal tripod embedding; no finite-speed fidelity, pulse bandwidth, loss, or laboratory implementation is certified.",
+    "commutator_frobenius_squared": 4,
+    "continuous_control": "varying theta gives continuous Y- and Z-axis angles; the two loop families generate SU(2)",
+    "dark_dimension": 2,
+    "logical_support": "any orthonormal pair inside rank-81 H1 plus one H1 helper and one excited ancilla",
+    "loop_X": {
+      "connection": "A_phi=cos(theta)[[0,-1],[1,0]]",
+      "holonomy": [["0","1"],["-1","0"]],
+      "path": "theta:0->acos(1/4), phi:0->2pi, theta->0"
+    },
+    "loop_Z": {
+      "connection": "A_chi=diag(i sin^2(theta),0)",
+      "holonomy": [["-i","0"],["0","1"]],
+      "path": "theta:0->pi/6, chi:0->2pi, theta->0"
+    },
+    "tripod_spectrum": "{-Omega,0,0,+Omega}"
+  },
+  "pass4042_interacting_two_photon_flat_band": {
+    "boundary": "Exact flat-band-projected two-boson contact spectrum only; no bound-pair mobility, many-body phase, topological order, or interacting-device experiment is claimed.",
+    "contact_dark_dimension": 3161,
+    "contact_map_rank": 160,
+    "nonzero_energies_over_U": [
+      {"multiplicity":1,"value":"81/160"},
+      {"multiplicity":24,"value":"(252+27sqrt(6))/800"},
+      {"multiplicity":30,"value":"117/400"},
+      {"multiplicity":24,"value":"(252-27sqrt(6))/800"},
+      {"multiplicity":81,"value":"41/200"}
+    ],
+    "projected_interaction": "V=U sum_e |P e,P e><P e,P e|",
+    "reading": "The contact interaction has 160 bright pair channels and a 3161-dimensional exactly contact-dark pair manifold.",
+    "single_particle_flat_band_dimension": 81,
+    "symmetric_two_boson_dimension": 3321
+  },
+  "pass4043_number_conserving_Hodge_cooling": {
+    "boundary": "The exact swap requires a 79-mode polar coupler. Reservoir reset, locality, finite-depth synthesis, calibration, and loss are not certified.",
+    "cut_modes": 79,
+    "identities": ["Q^T Q=I_79","Q Q^T=P_cut"],
+    "number_conservation": "The coupling is bilinear and passive; total excitation number is conserved before reservoir reset.",
+    "one_shot_action": "|psi>_sys|0>_res -> P_H1|psi>_sys - i Q^T|psi>_res",
+    "one_shot_time": "pi/(2g)",
+    "passive_swap_hamiltonian": "H_cool=[[0,Q],[Q^T,0]]",
+    "polar_isometry": "Q=D^T(DD^T)^(-1/2) on the charge-zero vertex sector",
+    "protected_modes": 81,
+    "reservoir_modes": 79,
+    "system_link_modes": 160
+  },
+  "pass4044_synthetic_Coulomb_spectroscopy": {
+    "boundary": "Exact finite-network impedance spectroscopy. Parasitic capacitance, port loading, calibration drift, and continuum electromagnetism are outside the theorem.",
+    "canonical_pairs_from_vertex_0": {"1":[0,40],"2":[0,1],"3":[0,44],"4":[0,4]},
+    "dc_resistances": {"1":"79/160","2":"13/20","3":"111/160","4":"7/10"},
+    "drive": "inject +I at vertex u and -I at vertex v",
+    "minimum_dc_shell_gap": "1/160",
+    "readout": "measure differential potential (phi_u-phi_v)/I",
+    "regularized_response_parameter": "s=(i omega C + gamma)/J",
+    "shell_transfer_functions": {
+      "1":"2*(s**3 + 15*s**2 + 66*s + 79)/((s + 4)*(s + 8)*(s**2 + 8*s + 10))",
+      "2":"2*(s**2 + 8*s + 13)/((s + 4)*(s**2 + 8*s + 10))",
+      "3":"2*(s**3 + 16*s**2 + 78*s + 111)/((s + 4)*(s + 8)*(s**2 + 8*s + 10))",
+      "4":"2*(s**2 + 8*s + 14)/((s + 4)*(s**2 + 8*s + 10))"
+    },
+    "sufficient_absolute_classification_error": "<1/320 in units of 1/J",
+    "unordered_pair_counts": {"1":160,"2":480,"3":1440,"4":1080}
+  },
+  "pass4045_causal_refinement_tower": {
+    "boundary": "This is an engineered refinement family, not emergence of four dimensions from one W33 cell and not a derivation of Lorentz invariance or vacuum c.",
+    "cell": "80-vertex Levi graph with internal Laplacian spectrum 0^1+(4-sqrt6)^24+4^30+(4+sqrt6)^24+8^1",
+    "cell_light_speed": "c_cell=a sqrt(kappa)",
+    "external_graph": "d-dimensional periodic cubic torus of W33 cells",
+    "four_dimensional_tower_plateau": {"ds_max":4.0498508792841585,"ds_min":3.951062761743854,"samples":784,"t_end":2633.2015182133664,"t_start":210.8942859517395},
+    "long_wavelength_laplacian": "lambda(k)=2 kappa sum_mu(1-cos k_mu)=kappa |k|^2+O(k^4)",
+    "one_dimensional_tower_plateau": {"ds_max":1.0498138027535362,"ds_min":0.9507116539880177,"samples":1235,"t_end":3299.922198513594,"t_start":61.73878971567349},
+    "parameters": {"N_per_axis":64,"kappa_over_J":0.05},
+    "verdict": "A 4D plateau is obtained only when four external lattice directions are explicitly supplied; a 1D chain remains one-dimensional.",
+    "wave_equation": "d2 psi/dt2 + L psi=0 gives omega(k)=sqrt(kappa)|k|+O(k^3)"
+  },
+  "pass4046_outside_box_Hodge_supersymmetry": {
+    "boundary": "Exact discrete supersymmetric factorization of the incidence complex; it is not evidence for supersymmetry in particle physics.",
+    "grading": "+ on 80 vertex modes, - on 160 link modes",
+    "pairing": "Every nonzero eigenvalue occurs in an exact +/- pair.",
+    "positive_supercharge_spectrum": [
+      {"multiplicity":24,"value":"sqrt(4-sqrt(6))"},
+      {"multiplicity":30,"value":"2"},
+      {"multiplicity":24,"value":"sqrt(4+sqrt(6))"},
+      {"multiplicity":1,"value":"sqrt(8)"}
+    ],
+    "square": "Q^2=diag(DD^T,D^T D)",
+    "supercharge": "Q=[[0,D],[D^T,0]]",
+    "witten_index": "1-81=-80",
+    "zero_modes": {"edge_H1":81,"total":82,"vertex_uniform":1}
+  },
+  "pass4047_outside_box_single_defect_Floquet_clock": {
+    "boundary": "This is an infinite-order Floquet rotor, not a many-body time crystal or spontaneous temporal symmetry breaking.",
+    "floquet_unitary": "U_F=(I-2|e><e|)(I-2P_H1)",
+    "infinite_order_proof": "If phi/pi were rational and cos(phi) rational, Niven theorem permits only 0, +/-1/2, +/-1; 1/80 is excluded.",
+    "phase": "cos(phi)=2(P_H1)ee-1=1/80",
+    "reading": "One local defect plus the global Hodge reflection produces an exact quasiperiodic single-particle clock.",
+    "spectrum": {"+1":78,"-1":80,"nontrivial":"exp(+/- i phi)"}
+  },
+  "pass4048_outside_box_protected_perfect_transfer": {
+    "boundary": "Perfect transfer between nonorthogonal protected site states in the ideal projected model; not superluminal signaling, a spacetime wormhole, or a locality-preserving hardware protocol.",
+    "mechanism": "The symmetric and antisymmetric protected combinations acquire a relative phase pi.",
+    "normalized_protected_site_state": "|u_e>=P_H1|e>/sqrt(81/160)",
+    "perfect_transfer_times_over_pi": {"1":"80/27","2":"80/9","3":"80/3","4":"80"},
+    "projected_overlap_by_line_graph_distance": {"1":"-1/3","2":"1/9","3":"-1/27","4":"1/81"},
+    "two_defect_hamiltonian": "H_ef=P|e><e|P+P|f><f|P",
+    "verified_probabilities": {
+      "1":{"normalized_overlap":-0.33333333333333337,"probability":1.0,"time_over_pi":2.962962962962963},
+      "2":{"normalized_overlap":0.11111111111111112,"probability":1.0,"time_over_pi":8.88888888888889},
+      "3":{"normalized_overlap":-0.037037037037037035,"probability":1.0,"time_over_pi":26.666666666666668},
+      "4":{"normalized_overlap":0.01234567901234568,"probability":1.0,"time_over_pi":80.0}
+    }
+  },
+  "schema": "w33.pass4041_4048.eight_physics_expansion.v1",
+  "semantic_sha256": "08414977d5198aa43ea25127bbe7fa0e6529f56471dabe9745f229e91aba63c4",
+  "status": "PASS_EXACT_FIVE_PHYSICS_AND_THREE_OUTSIDE_BOX_WITH_CONTINUUM_AND_HARDWARE_BOUNDARIES"
+}
