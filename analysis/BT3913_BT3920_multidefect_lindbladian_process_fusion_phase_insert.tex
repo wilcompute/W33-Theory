@@ -1,0 +1,76 @@
+\section{Passes 3913--3920: multi-defect immunity, symmetry dissipation, process control, and dual scheduling}
+\label{sec:bt3913-3920}
+
+The W33 control architecture now has a bounded multi-defect decoder, an explicit random-unitary symmetry Lindbladian, a partially observed controller, a correlated-fusion threshold, and a joint substrate/topology phase diagram.  Three additional constructions compress the graph into a finite-field seed, extend the interaction schedule to an optimal all-to-all epoch, and compress the two-defect sensor.
+
+\paragraph{Bounded topology immune system.}
+For a measured adjacency matrix $B$, define
+\[
+R(B)=B^2+2B-8I-4J.
+\]
+The exhaustive ledger contains all
+\[
+\binom{780}{2}=303{,}810
+\]
+two-edge insertion/deletion mixtures, and every complete residual is distinct.  It also contains all
+\[
+\binom{240}{3}=2{,}275{,}280
+\]
+three-edge deletions, again without a repeated residual.  General mixed weight-three cases remain open.
+
+\paragraph{Symmetry Lindbladian.}
+Let $U_g$ denote the four generating transvections and their inverses.  The random-unitary generator
+\[
+\mathcal L(X)=\frac18\sum_g(U_gXU_g^\dagger-X)
+\]
+has fixed algebra
+\[
+\operatorname{Fix}(\mathcal L)=\operatorname{span}\{I,A,J-I-A\}.
+\]
+Its unit-rate gap is
+\[
+0.06329071414775411.
+\]
+Every transvection consists of nine disjoint three-cycles and thirteen fixed points, yielding a 72 three-mode-cycle compilation target for the eight directed jumps.  A sparse local physical realization with the same fixed algebra is not yet proved.
+
+\paragraph{Partially observed geometry control.}
+A six-step four-regime hidden-Markov benchmark with 85-percent regime readout and five geometry/control modes has exact belief-state optimum
+\[
+23.115384313076735.
+\]
+The best static policy costs $30.176036574158424$, while full regime information gives the lower bound $16.514150252446512$.  These are declared benchmark values, not learned process-tensor measurements.
+
+\paragraph{Correlated fusion compiler.}
+A twenty-edge matching is accumulated by a 21-state Markov chain with stored-edge survival $0.995$, common outage probability $0.05$, and five attempts.  Requiring a complete twelve-matching epoch to succeed with probability at least $0.99$ gives
+\[
+p\ge0.9158993399430635.
+\]
+The corresponding independent no-decay threshold is $0.8668344006872047$.
+
+\paragraph{Architecture phase diagram.}
+A 500-point declared-cost grid compares native W33, virtual W33, a local ring, a routed mesh, and a shared bus.  The winner counts are respectively
+\[
+54,\quad84,\quad37,\quad15,\quad310.
+\]
+Every implementation wins somewhere; no architecture is coefficient-independently optimal.
+
+\paragraph{Topology DNA.}
+Four four-trit transvection generators and one ordered edge generate the order-$25{,}920$ group and the complete 480-element oriented-edge orbit.  The graph seed therefore uses eighteen finite-field coordinate symbols rather than 960 explicit oriented-edge endpoint symbols.
+
+\paragraph{Dual-geometry all-to-all epoch.}
+The twelve W33 perfect matchings and twenty-seven complement perfect matchings partition $E(K_{40})$.  Hence
+\[
+A+(J-I-A)=J-I
+\]
+and the complete all-to-all one-port schedule has optimal depth
+\[
+12+27=39.
+\]
+
+\paragraph{Compressed two-defect sensor.}
+A fixed set of 192 residual entries distinguishes all 303,810 two-edge syndromes, reducing the complete $40\times40$ residual readout by a factor $1600/192=25/3$.  Minimality and noise robustness remain open.
+
+\paragraph{Evidence boundary.}
+The executable semantic certificate is
+\texttt{019183d46768ff68a5f57676540d8aefd853010614545fd834656b69c4c7eb15}.
+The packet does not establish general mixed weight-three decoding, a local Lindbladian implementation, measured process control, microscopic fusion correlations, measured platform costs, minimum topology memory, simultaneous all-to-all coupling, minimum sensing, hardware performance, or laboratory validation.
