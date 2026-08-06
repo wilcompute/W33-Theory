@@ -3,10 +3,11 @@
   "range": [3837, 3854],
   "slug": "ovoid_wedderburn_code_leech_monster_axial_triality_three_bonkers",
   "title": "Characteristic-zero ovoid algebra, full code/Leech transport, concrete descent filters, universal axial presentation, triality incidence closure, and three chained constructions",
-  "status": "reserved",
+  "status": "source_complete_pending_remote_ci_pdf_monster_words_class_fusion_and_unmarked_automorphism",
   "owner": "openai-gpt-5.6-thinking",
   "reserved_at": "2026-08-05T19:33:00-04:00",
-  "purpose": "Execute all five published next steps from Passes 3795-3812 plus three independent constructions: compute the characteristic-zero Wedderburn decomposition of the 19-orbital 200-ovoid algebra; transport the complete W33 line/spread/Norton/code/frame tower through the canonical plane-ovoid dictionary and Leech carrier; execute every available abstract and serialized Monster descent filter without inventing words; prove an exact universal rational marked-axis presentation and classify low-axis subalgebras; close the double-K4 triality incidence geometry; and derive three additional executable structures.",
-  "coordination": "This range replaces the retired 3829-3846 reservation after the parallel adaptive-architecture packet published Passes 3829-3836. Preserve and reconcile completed/active Passes 3821-3836 and every newer parallel commit before shared manifest, manuscript, public-page, workflow, or namespace writes.",
-  "boundary": "Reservation only. No characteristic-zero decomposition, code/Leech incidence claim, Monster embedding or class fusion, universal-presentation theorem, unmarked automorphism identification, remote CI/PDF success, hardware/laboratory result, or physical interpretation is promoted without executable evidence."
+  "semantic_sha256": "ede91cc799f9093209c589fb0b73c88fca4159bedcc8e1e7cd6680c5f0c778fd",
+  "graph_certificate_sha256": "3f036d376ac7f1333aaba011a5842790904ef390066db30a94c7333533e93abf",
+  "coordination": "This range replaced the retired 3829-3846 reservation after the parallel adaptive-architecture packet published Passes 3829-3836. Completed Passes 3821-3836, the protected restored website, and later Passes 3871-3886 were preserved. The theorem is ordered between Passes 3829-3836 and 3871-3886 in the live frontier.",
+  "claim_boundary": "The split characteristic-zero algebra, ternary CSS transport, Leech carrier norms, marked-axis presentation, four-axis census, and triality incidence closures are executable. No serialized Monster/mmgroup words, executed Monster class fusion, full unmarked linear automorphism theorem, remote CI/PDF success, hardware/laboratory result, or physical mechanism is promoted without separate evidence."
 }
