@@ -6,6 +6,12 @@ on:
       - master
     paths:
       - '.github/workflows/diagnose-pages-settings.yml'
+  pull_request:
+    branches:
+      - master
+    paths:
+      - 'docs/.pages-deploy-restored-index-*'
+      - '.github/workflows/diagnose-pages-settings.yml'
   workflow_dispatch:
 
 permissions:
