@@ -1,0 +1,56 @@
+name: Passes 3913-3928 Cap Gewirtz Modular Closure
+
+on:
+  pull_request:
+    paths:
+      - 'analysis/bt3913_3928_cap_gewirtz_modular_closure.py'
+      - 'analysis/_bt3913_3928_payload_*.txt'
+      - 'analysis/BT3913_BT3928_cap_gewirtz_modular_closure*'
+      - 'data/PART_BT3913_BT3928_CAP_GEWIRTZ_MODULAR_CLOSURE_results.json'
+      - 'data/BT3913_BT3928_CLAIMS_LEDGER.json'
+      - 'data/w33_pass_namespace_registry_v2.d/3913-3928.json'
+      - 'tests/test_bt3913_3928_cap_gewirtz_modular_closure.py'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - 'docs/cap-gewirtz-modular-closure-3913-3928.html'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'holonet_machine_blueprint.tex'
+      - '.github/workflows/w33_pass3913_3928_cap_gewirtz_modular_closure.yml'
+  workflow_dispatch:
+
+jobs:
+  exact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy networkx pytest
+      - run: pytest -q tests/test_bt3913_3928_cap_gewirtz_modular_closure.py
+      - name: Check theorem reachability and live boundaries
+        run: |
+          grep -F 'BT3913_BT3928_cap_gewirtz_modular_closure_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          grep -F '753c9039c032574dbcf5c20b899444ccc74bd092be22646211173fbd36be9eb6' docs/cap-gewirtz-modular-closure-3913-3928.html
+          grep -F '"cubic_transversal":[106,172]' data/PART_BT3913_BT3928_CAP_GEWIRTZ_MODULAR_CLOSURE_results.json
+          grep -F '"covering_radius":[389,435]' data/PART_BT3913_BT3928_CAP_GEWIRTZ_MODULAR_CLOSURE_results.json
+
+  manuscripts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: wtfjoke/setup-tectonic@v3
+      - run: |
+          tectonic w33_paper.tex
+          tectonic photonic_holonet.tex
+          tectonic holonet_machine_blueprint.tex
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3913-3928-canonical-pdfs
+          path: |
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
