@@ -6,6 +6,7 @@ import argparse
 import json
 from pathlib import Path
 
+# This file is intentionally a generated-manifest reconciler: it updates metadata only.
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "data/w33_current_frontier_manifest_v1.json"
 TEX_INPUT = "analysis/BT3973_BT3980_extremal_mesh_photon_tensor_insert"
