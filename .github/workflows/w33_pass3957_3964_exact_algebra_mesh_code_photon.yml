@@ -1,0 +1,64 @@
+name: Passes 3957-3964 Exact Algebra Mesh Code Photon
+
+on:
+  pull_request:
+    paths:
+      - 'analysis/w33_pass3957_3964_exact_algebra_mesh_code_photon.py'
+      - 'analysis/w33_pass3957_3964_check.py'
+      - 'analysis/BT3957_BT3964_exact_algebra_mesh_code_photon*'
+      - 'data/PART_3957_3964_EXACT_ALGEBRA_MESH_CODE_PHOTON_results.json'
+      - 'tests/test_w33_pass3957_3964_exact_algebra_mesh_code_photon.py'
+      - 'docs/exact-algebra-mesh-code-photon-capacity.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - '.github/workflows/w33_pass3957_3964_exact_algebra_mesh_code_photon.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check pytest
+      - name: Reproduce exact certificate
+        run: python analysis/w33_pass3957_3964_check.py --root .
+      - name: Focused regression
+        run: pytest -q tests/test_w33_pass3957_3964_exact_algebra_mesh_code_photon.py
+      - name: Fail-closed Monster gate
+        run: |
+          python analysis/w33_mmgroup_u42_candidate_harness.py \
+            data/PART_3957_3964_MONSTER_CANDIDATE.json \
+            --allow-empty \
+            --output /tmp/pass3957_monster.json
+          grep -F 'PENDING_EXPLICIT_MONSTER_WORDS' /tmp/pass3957_monster.json
+      - name: Publication reachability
+        run: |
+          grep -F 'BT3957_BT3964_exact_algebra_mesh_code_photon_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          grep -F 'bt3957-3964-exact-algebra-mesh-code-photon' data/w33_current_frontier_manifest_v1.json
+          grep -F '763b9a6a3f04e3436099ccf9abcc18f2723d0540050ecedacc3a245708ba7148' docs/exact-algebra-mesh-code-photon-capacity.html
+
+  manuscripts:
+    needs: exact
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: wtfjoke/setup-tectonic@v3
+      - run: |
+          tectonic w33_paper.tex
+          tectonic photonic_holonet.tex
+          tectonic holonet_machine_blueprint.tex
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3957-3964-canonical-pdfs
+          path: |
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
