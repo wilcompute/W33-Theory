@@ -2,11 +2,40 @@
   "schema": "w33.pass_namespace_registry.v2.entry",
   "range": [4129, 4136],
   "slug": "anomaly_lattice_relational_gates_decoder_t7_hybrid_router_attractor_maxcut_tomography_spectral_gearbox",
-  "title": "Five implementation closures and three bonkers probes: anomaly-lattice optimization, relational-code logical gates, sparse decoding through seven faults, hybrid SiN-active router architecture, attractor and maximum-cut catalogue extension, anomaly Smith form, exact network tomography, and a finite-order spectral gearbox",
-  "status": "reserved",
+  "title": "Five implementation closures and three bonkers probes: anomaly-lattice optimization, relational-code logical gates, sparse decoding through seven faults, hybrid SiN-active router architecture, exact pure-attractor and maximum-cut catalogues, anomaly Smith form, exact network tomography, and a finite-order spectral gearbox",
+  "status": "source_complete_exact_certificate_anomaly_optimization_relational_gates_t7_decoder_hybrid_router_pure_orbits_snf_tomography_gearbox_hardware_and_experiments_pending",
   "owner": "openai-gpt-5.6-thinking",
   "reserved_at": "2026-08-06T15:08:00-04:00",
-  "purpose": "Execute the five open steps after Passes 4121-4128 and add three nonoverlapping exact constructions in anomaly integer lattices, graph network tomography, and reversible spectral clocking.",
-  "coordination": "Preserve Passes 4005-4128, the single-publisher master:/docs Pages contract, the authoritative long-form website, and all ordered frontier manifests. Do not edit docs/index.html directly.",
-  "boundary": "Reservation only. No derived Standard Model, fabricated hybrid photonic chip, laboratory decoder, complete nonlinear-attractor proof, physical tomography instrument, emergent time, gravity, cosmology, or theory of everything is promoted."
+  "completed_at": "2026-08-06T15:42:00-04:00",
+  "certificate_status": "PASS_EXACT_ANOMALY_OPTIMIZATION_RELATIONAL_GATES_T7_DECODER_HYBRID_ARCHITECTURE_PURE_ORBITS_SNF_TOMOGRAPHY_GEARBOX",
+  "certificates": {
+    "exact_packet": "e8a48ff8074816830fedd753bd76f10daa9c16eddc604a6e1654fb32b3b605dd",
+    "combined_manifest": "e659fbc861f84ecba9f17ac20705d7744787cb67fe9cdfc1a6386e3a03c2e626",
+    "anomaly": "c1e32c90231cb349636022ebd8c998d3c0f0eb091d10412ad45aba2e51213bc8",
+    "hybrid_router": "0c65ef2eaee16a027ce074fde529c639a7be5bc0aa734eac6fbd68068f0f3103",
+    "pure_orbits": "22cba26832d6180a4e2444265b5c51b6e0f9fef384997f02666d8978af55593e"
+  },
+  "promoted": [
+    "exact standard-charge and PSp-module-respecting anomaly repair optima",
+    "fixed-number relational clock plus 28 protected payload qubits and an exact logical gate algebra",
+    "exact no-go for four-error uniqueness from incidence syndrome alone",
+    "two deterministic moment channels certifying every seven-sparse error in the noiseless model",
+    "hybrid SiN-active router schedule with zero same-plane crossings and 30 active controls",
+    "complete 432-sign lambda-16 maximum-cut catalogue",
+    "complete 33264-sign lambda-10 pure-bivalent catalogue in seven symmetry classes",
+    "Smith-form three-torsion anomaly obstruction",
+    "exact two-round distributed network tomography",
+    "exact reversible forty-tick spectral gearbox"
+  ],
+  "external_pending": [
+    "arbitrary exotic-representation anomaly optimization and a dynamical anomaly-free gauge theory",
+    "local fault-tolerant synthesis of relational logical gates",
+    "conditioning, calibration, and noisy seven-fault recovery",
+    "interlayer couplers, common-mode phase plates, delay storage, GDS, DRC, S-parameters, packaging, and fabrication",
+    "complete mixed-amplitude nonlinear-attractor classification",
+    "physical tomography and finite-clock implementations",
+    "remote exact CI and manuscript PDF evidence"
+  ],
+  "coordination": "Preserves Passes 4005-4144, the single-publisher master:/docs Pages contract, the authoritative long-form website, and docs/index.html.",
+  "boundary": "No derived Standard Model, fabricated chip, measured experiment, complete mixed-attractor proof, emergent physical time, gravity, cosmology, or theory of everything is promoted."
 }
