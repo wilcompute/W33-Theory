@@ -1,0 +1,24 @@
+name: W33 Passes 4177-4184 exact regression
+on:
+  push:
+    paths:
+      - "analysis/w33_pass4177_4184_af_nogo_twobody_hodge_pdk_interval_bonkers.py"
+      - "data/PART_4177_4184_AF_NOGO_TWOBODY_HODGE_PDK_INTERVAL_BONKERS.json"
+      - "data/w33_pass4177_fixed_carrier_af_nogo.json"
+      - "data/w33_pass4178_strict_two_mode_relational_compiler.json"
+      - "data/w33_pass4179_hodge_complete_real_decoder.json"
+      - "data/w33_pass4180_pdk_grounded_tapped_delay_layout.json"
+      - "data/w33_pass4181_symmetry_stratified_interval_mixed_push.json"
+      - "tests/test_w33_pass4177_4184_af_nogo_twobody_hodge_pdk_interval_bonkers.py"
+      - ".github/workflows/w33_pass4177_4184_exact_regression.yml"
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install numpy networkx pytest
+      - run: pytest -q tests/test_w33_pass4177_4184_af_nogo_twobody_hodge_pdk_interval_bonkers.py
