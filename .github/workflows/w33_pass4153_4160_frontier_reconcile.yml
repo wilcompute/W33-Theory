@@ -1,0 +1,36 @@
+name: Passes 4153-4160 Protected Frontier Reconcile
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'tools/integrate_pass4153_4160_frontier.py'
+      - 'analysis/BT4153_BT4160_second_chern_disorder_lindblad_clock_thermo_insert.tex'
+      - 'analysis/BT4153_BT4160_second_chern_disorder_lindblad_clock_thermo_index_insert.html'
+      - 'docs/second-chern-disorder-lindblad-clock-thermo-4153-4160.html'
+      - '.github/workflows/w33_pass4153_4160_frontier_reconcile.yml'
+  workflow_dispatch:
+permissions: {contents: write}
+concurrency: {group: pass4153-4160-frontier, cancel-in-progress: false}
+jobs:
+  reconcile:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python tools/integrate_pass4153_4160_frontier.py | tee /tmp/frontier.log
+      - run: grep -F 'PASS_4153_4160_FRONTIER 1 1 1 1' /tmp/frontier.log
+      - run: git diff --exit-code -- docs/index.html
+      - name: Commit manifest reconciliation
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/w33_current_frontier_manifest_v1.json analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          git diff --cached --quiet && exit 0
+          git commit -m 'Pass 4160: reconcile second-Chern disorder Lindblad clock thermodynamics frontier'
+          git pull --rebase origin master
+          python tools/integrate_pass4153_4160_frontier.py
+          git add data/w33_current_frontier_manifest_v1.json analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          git commit --amend --no-edit
+          git push
