@@ -1,0 +1,21 @@
+name: W33 Passes 4177-4184 manuscript check
+on:
+  push:
+    paths:
+      - "analysis/BT4177_BT4184_af_nogo_twobody_hodge_pdk_interval_bonkers_insert.tex"
+      - "analysis/W33_CURRENT_FRONTIER_MANIFEST.tex"
+      - "w33_paper.tex"
+      - "photonic_holonet.tex"
+      - "holonet_machine_blueprint.tex"
+      - ".github/workflows/w33_pass4177_4184_manuscript_check.yml"
+  workflow_dispatch:
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y latexmk texlive-latex-extra texlive-science
+      - run: python tools/integrate_pass4177_4184_frontier.py --check
+      - run: latexmk -pdf -interaction=nonstopmode -halt-on-error w33_paper.tex
+      - run: latexmk -pdf -interaction=nonstopmode -halt-on-error photonic_holonet.tex
+      - run: latexmk -pdf -interaction=nonstopmode -halt-on-error holonet_machine_blueprint.tex
