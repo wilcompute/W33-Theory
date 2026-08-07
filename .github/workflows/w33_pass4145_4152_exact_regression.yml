@@ -1,0 +1,23 @@
+name: W33 Passes 4145-4152 exact regression
+on:
+  push:
+    paths:
+      - "analysis/w33_pass4145_4152_exotic_local_conditioned_stack_mixed_bonkers.py"
+      - "data/PART_4145_4152_EXOTIC_LOCAL_CONDITIONED_STACK_MIXED_BONKERS.json"
+      - "data/w33_pass4145_bounded_exotic_anomaly_optimization.json"
+      - "data/w33_pass4147_conditioned_seven_fault_moments.json"
+      - "data/w33_pass4148_hybrid_stack_materialization.json"
+      - "data/w33_pass4149_mixed_attractor_newton_catalogue.json"
+      - "tests/test_w33_pass4145_4152_exotic_local_conditioned_stack_mixed_bonkers.py"
+      - ".github/workflows/w33_pass4145_4152_exact_regression.yml"
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install numpy scipy networkx pytest
+      - run: pytest -q tests/test_w33_pass4145_4152_exotic_local_conditioned_stack_mixed_bonkers.py
