@@ -1,0 +1,19 @@
+name: W33 Pass 4184 protected frontier reconciliation
+on:
+  push:
+    paths:
+      - "analysis/BT4177_BT4184_af_nogo_twobody_hodge_pdk_interval_bonkers_insert.tex"
+      - "analysis/W33_CURRENT_FRONTIER_MANIFEST.tex"
+      - "tools/integrate_pass4177_4184_frontier.py"
+      - ".github/workflows/w33_pass4177_4184_frontier_reconcile.yml"
+  workflow_dispatch:
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python tools/integrate_pass4177_4184_frontier.py --check
+      - run: test "$(grep -c 'BT4177_BT4184_af_nogo_twobody_hodge_pdk_interval_bonkers_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex)" = 1
