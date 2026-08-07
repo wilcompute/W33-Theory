@@ -1,0 +1,49 @@
+\subsection*{Passes 4185--4192: adaptive $C_2$, Hawking criticality, hysteresis, exact three-local clocks, and high-girth covers}
+\paragraph{Adaptive second-Chern compilation.}
+For the Wilson--Dirac map $d=(\sin k_1,\ldots,\sin k_4,-3+\sum_i\cos k_i)$, the sixteen high-symmetry corners still give the exact integer certificate $C_2=1$. Phase-centered midpoint cubature reaches the correct rounded integer already at $7^4=2401$ samples and falls below five-percent response error at $9^4=6561$ samples, a $107.8008\times$ reduction from the prior 707281-node response mesh. This is a deterministic response-compiler improvement, not a proof of global sample minimality.
+
+\paragraph{Hawking critical surfaces.}
+For a symmetric two-mode squeezed thermal core with $r(\omega)=\operatorname{atanh}(e^{-\pi\omega/\kappa})$ and one-sided attenuation $\eta$, the finite Gaussian thresholds are
+\[
+n_{\rm ent}=\frac{e^{2r}-1}{2},\qquad n_{B\to A}=\sinh^2r,
+\]
+\[
+n_{A\to B}=(2\eta-1)\sinh^2r\quad(\eta>1/2),\qquad
+Q_{\rm pure\ loss}=\max\!\left\{0,\log_2\frac{\eta}{1-\eta}\right\}.
+\]
+At $\omega=0.3$ one has $r=0.09506557725$, $n_{\rm ent}=0.1047041033$, and $n_{B\to A}=0.009064722057$. The analytic core is tied to the previously frozen correlated-disorder envelope but is not promoted to an arbitrary continuous five-dimensional channel theorem.
+
+\paragraph{Saturating backreaction and hysteresis.}
+The nonlinear scale flow
+\[
+\dot s=\gamma\left[\ln80-4s+g n_B(2e^{-s})-0.004\,n_B(2e^{-s})^2\right]
+\]
+has a three-fixed-point window
+\[
+0.4815579549<g<1.1377609143.
+\]
+At $g=0.5$, the stable branches are $s=1.2568469367$ and $s=4.9471634287$, separated by the unstable branch $s=4.2806819287$. This supplies a finite scale-memory hysteresis model, not physical spacetime hysteresis.
+
+\paragraph{Exact three-local autonomous clock.}
+Each of the 24 Gray-clock transitions is split into a conditioned clock-update/transition-flag substep and a transition-flag-controlled two-site SWAP substep. With 72 static AND ancillas and 24 one-hot transition ancillas, every propagation and legality term is at most three-local. The resulting 49-state legal history chain has spectrum
+\[
+-48\Omega,-46\Omega,\ldots,+48\Omega,
+\]
+legal gap $2\Omega$, perfect transfer time $\pi/(2\Omega)$, and full revival time $\pi/\Omega$.
+
+\paragraph{High-girth Levi covers.}
+The corrected degree-four $W(3,3)$ point--line Levi graph has cycle counts $N_8=1620$, $N_{10}=5184$, and $N_{12}=43200$, and free fundamental-group rank 81. A deterministic $\mathbb Z_{65537}$ voltage assignment has nonzero voltage on every audited simple cycle of lengths 8, 10, and 12, producing a 5,242,960-vertex cyclic cover with certified girth at least 14. Since the base fundamental group is the residually finite free group $F_{81}$, finite regular covers with girth tending to infinity exist abstractly.
+
+\paragraph{Three outside-box closures.}
+The two noncommuting order-three Wilczek--Zee loops from Pass 4137 have commutator trace $-1/4$, hence eigenphase cosine $-1/8$ and infinite commutator order; closed-subgroup classification then gives dense closure $SU(2)$, so they form a universal single-qubit holonomic gate set. The corrected Levi graph is bipartite Ramanujan and has exact Ihara factorization
+\[
+\zeta^{-1}(u)=(1-u^2)^{81}(1-9u^2)(1+9u^4)^{24}(1+3u^2)^{30}.
+\]
+Finally its exact heat trace gives a maximum diffusion spectral dimension only
+\[
+d_s^{\max}=3.47143073390<4,
+\]
+so bare Levi diffusion does not reproduce the separate channel-balance $d_s=4$ model.
+
+\paragraph{Boundary.}
+These are finite Wilson--Dirac, Gaussian, nonlinear mean-field, clock-gadget, graph-cover, holonomy-group, Ihara-zeta, and heat-kernel statements only. No fabricated four-dimensional pump, observed Hawking radiation, physical spacetime hysteresis, laboratory three-local processor, fabricated high-girth network, experimental holonomic universality, gravity, cosmology, or theory of everything is established.
