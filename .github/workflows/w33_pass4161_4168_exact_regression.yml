@@ -1,0 +1,25 @@
+name: W33 Passes 4161-4168 exact regression
+on:
+  push:
+    paths:
+      - "analysis/w33_pass4161_4168_broader_anomaly_hardware_noisy_storage_landscape_bonkers.py"
+      - "data/PART_4161_4168_BROADER_ANOMALY_HARDWARE_NOISY_STORAGE_LANDSCAPE_BONKERS.json"
+      - "data/w33_pass4161_broader_rep_anomaly_optimization.json"
+      - "data/w33_pass4162_relational_hardware_graph.json"
+      - "data/w33_pass4163_quantized_noisy_t7_decoder.json"
+      - "data/w33_pass4164_storage_primitive_comparison.json"
+      - "data/w33_pass4165_global_mixed_landscape_push.json"
+      - "tests/test_w33_pass4161_4168_broader_anomaly_hardware_noisy_storage_landscape_bonkers.py"
+      - ".github/workflows/w33_pass4161_4168_exact_regression.yml"
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install numpy scipy networkx pytest
+      - run: pytest -q tests/test_w33_pass4161_4168_broader_anomaly_hardware_noisy_storage_landscape_bonkers.py
