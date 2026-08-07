@@ -1,0 +1,20 @@
+name: W33 Pass 4152 protected frontier reconciliation
+on:
+  push:
+    paths:
+      - "analysis/BT4145_BT4152_exotic_local_conditioned_stack_mixed_bonkers_insert.tex"
+      - "analysis/W33_CURRENT_FRONTIER_MANIFEST.tex"
+      - "tools/integrate_pass4145_4152_frontier.py"
+      - ".github/workflows/w33_pass4145_4152_frontier_reconcile.yml"
+  workflow_dispatch:
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python tools/integrate_pass4145_4152_frontier.py --check
+      - run: test "$(grep -c 'BT4145_BT4152_exotic_local_conditioned_stack_mixed_bonkers_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex)" = 1
+      - run: test "$(grep -c 'BT4153_BT4160_second_chern_disorder_lindblad_clock_thermo_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex)" = 1
