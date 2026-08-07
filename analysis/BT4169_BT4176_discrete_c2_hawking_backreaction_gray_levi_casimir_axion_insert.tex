@@ -1,0 +1,76 @@
+\section{Passes 4169--4176: discrete $C_2$, Hawking disorder, backreaction, Gray locality, Levi-cover correction, Casimir and axion reduction}
+\label{sec:bt4169-bt4176}
+
+\paragraph{Pass 4169: discrete second-Chern compiler.}
+For the four-dimensional Wilson--Dirac control
+\[
+d(k)=(\sin k_1,\sin k_2,\sin k_3,\sin k_4,-3+\textstyle\sum_i\cos k_i),
+\qquad H=\widehat d\cdot\Gamma,
+\]
+the sixteen high-symmetry masses group as $1,-1,-3,-5,-7$ with multiplicities $1,4,6,4,1$.  The oriented Dirac count gives
+\[
+C_2={1\over2}\sum_{N=0}^4 {4\choose N}(-1)^N\operatorname{sgn}(-3+4-2N)=1.
+\]
+Thus sixteen calibration points certify the topological sector.  A uniform central-difference response integral converges much more slowly: among the audited meshes, $N=29$ per control axis is the first below five-percent error, with $C_2^{(29)}=0.9504670029565596$ on $29^4=707281$ nodes.
+
+\paragraph{Pass 4170: continuous Hawking disorder.}
+For 512 correlated-Gaussian samples with $C_{ij}=e^{-|i-j|/2}$, $r_j\mapsto r_j e^{0.35x_j}$, and $\Gamma_j\mapsto\operatorname{logistic}(\operatorname{logit}\Gamma_j+0.25x_j)$, the logarithmic negativity remains in
+\[
+0.0822919174978226\le E_N\le0.5298852171115666.
+\]
+A 721-phase quasiperiodic scan with $\alpha=(\sqrt5-1)/2$ and amplitude $0.7$ gives $0.24211601793444767\le E_N\le0.27238456666720445$.  With thermal occupation $n_{\rm th}$, the PPT mobility edge is defined by $\widetilde\nu_-(\omega_c,n_{\rm th})=1/2$; for $n_{\rm th}=0.01$, $\omega_c=0.5783917254706858$, while at $\omega=0.3$ the thermal threshold is $n_{\rm th}=0.11593620709206182$.
+
+\paragraph{Pass 4171: scale--geometry backreaction.}
+For the minimal occupied-mode feedback
+\[
+\dot s=\gamma\left[\ln80-4s+g\,n_B(2e^{-s})\right],
+\]
+$g=1$ has a stable root $s=1.5949469860997991$ and an unstable root $s=2.5062250949365414$.  They annihilate at the saddle node
+\[
+(s_c,g_c)=(1.9679175210441553,1.1252773999853873).
+\]
+Thus this minimal positive backreaction shifts the spectral dimension away from four and ultimately destroys the stationary scale; it does not create two stable geometric branches without an additional saturation mechanism.
+
+\paragraph{Pass 4172: exact locality reduction of the Gray clock.}
+A five-qubit reflected-Gray transition flips one clock bit conditioned on four spectator literals and accompanies a two-site data SWAP, hence is directly seven-local.  Three binary AND ancillas per transition encode the four spectators using the exact two-local penalty
+\[
+P_{\rm AND}(x,y,z)=xy-2xz-2yz+3z,
+\]
+reducing each propagation term to the four-local form $f_tX_{c_t}\mathrm{SWAP}$.  For twenty-four transitions this requires seventy-two static ancillas.  The legal clock block is unchanged exactly, preserving spacing $2\Omega$, perfect transfer at $\pi/(2\Omega)$, and full revival at $\pi/\Omega$.
+
+\paragraph{Pass 4173: Levi-cover correction and obstruction.}
+The committed $W(3,3)$ geometry has forty points, forty lines, and $40(3+1)=160$ flags.  Hence its point--line Levi graph has eighty vertices, degree four, 160 edges, and girth eight.  This supersedes the degree-six premise used in Pass 4157.  The graph contains exactly 1620 simple eight-cycles.  Requiring every one to acquire odd sign parity in a signed two-lift produces a $1620\times160$ binary system whose coefficient rank is $81$ and augmented rank is $82$, so the system is inconsistent.  Therefore no signed two-lift can double all base eight-cycles.  The correct degree-four Bethe comparison has
+\[
+3\tanh(\beta_cJ)=1,
+\qquad
+\beta_cJ=\operatorname{atanh}(1/3)={\ln2\over2}=0.34657359027997264.
+\]
+Simple iterated two-lifts remain girth eight and therefore do not provide the previously assumed large-girth sequence.
+
+\paragraph{Pass 4174: Hawking erasure-channel threshold.}
+Interpreting the greybody stage as an effective pure-loss channel with $\eta_{\rm eff}=n_{\rm out}/n_{\rm out}^{\rm lossless}$, the baseline value is $0.485735597242<1/2$, hence the unassisted pure-loss quantum capacity is zero.  Across the 512 binary disorder patterns, $\eta_{\rm eff}$ spans $0.3109129598611626$ to $0.7282862738005136$: 251 patterns lie in the antidegradable half and 261 above the capacity threshold.  The largest effective capacity in that ensemble is $1.4224182063347266$ bits per use.
+
+\paragraph{Pass 4175: exact graph-spectral Casimir attraction.}
+For the massive Levi operator $K=L+I=5I-A$, $G=K^{-1}$ has exact distance data
+\[
+G_{uu}={211\over855},\quad
+G_1={10\over171},\quad
+G_2={13\over855},\quad
+G_3={1\over171},\quad
+G_4={4\over855}.
+\]
+Two unit-strength pinning defects therefore interact through
+\[
+E_{\rm int}(u,v)={1\over2}\ln\left[1-{G_{uv}^2\over(1+G_{uu})(1+G_{vv})}\right]<0,
+\]
+with values $-1.1012191859481348\times10^{-3}$, $-7.436602973476341\times10^{-5}$, $-1.1000194923920593\times10^{-5}$, and $-7.04009687184613\times10^{-6}$ at graph distances one through four.
+
+\paragraph{Pass 4176: dimensional reduction.}
+For the parent bundle with $C_2=1$, the three-dimensional Chern--Simons descendant satisfies
+\[
+\Delta\theta=2\pi C_2=2\pi.
+\]
+The closed bulk returns to the same $\theta\bmod2\pi$ sector, while a gapped boundary Chern--Simons level shifts by one, corresponding in electronic normalization to one $e^2/h$ Hall-sheet unit.
+
+\paragraph{Evidence boundary.}
+These are finite Wilson--Dirac, Gaussian, one-mode backreaction, clock-gadget, graph-cover, pure-loss-channel, Green-function determinant, and dimensional-reduction statements.  In particular, Pass 4173 is an explicit erratum to the degree-six assumption in Pass 4157 for the $W(3,3)$ point--line Levi graph.  No fabricated four-dimensional pump, observed Hawking radiation, physical spacetime backreaction, hardware-optimal clock, experimental criticality, black-hole communication result, measured Casimir force, axion detection, gravity, cosmology, or theory of everything is established.
