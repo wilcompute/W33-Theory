@@ -1,0 +1,31 @@
+name: Pass 4192 protected frontier reconciliation
+on:
+  push:
+    paths:
+      - 'tools/integrate_pass4185_4192_frontier.py'
+      - 'analysis/BT4185_BT4192_adaptive_c2_hawking_hysteresis_3local_cover_holonomy_ihara_heat_insert.tex'
+      - 'analysis/BT4185_BT4192_adaptive_c2_hawking_hysteresis_3local_cover_holonomy_ihara_heat_index_insert.html'
+      - 'docs/adaptive-c2-hawking-hysteresis-3local-cover-holonomy-ihara-heat-4185-4192.html'
+      - '.github/workflows/w33_pass4185_4192_frontier_reconcile.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - run: python tools/integrate_pass4185_4192_frontier.py | tee /tmp/frontier.log
+      - run: grep -F 'PASS_4185_4192_FRONTIER 1 1 1 1' /tmp/frontier.log
+      - run: git diff --exit-code -- docs/index.html
+      - name: Commit reconciled manifests if needed
+        run: |
+          if ! git diff --quiet -- analysis/W33_CURRENT_FRONTIER_MANIFEST.tex data/w33_current_frontier_manifest_v1.json; then
+            git config user.name github-actions[bot]
+            git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+            git add analysis/W33_CURRENT_FRONTIER_MANIFEST.tex data/w33_current_frontier_manifest_v1.json
+            git commit -m 'Pass 4192: reconcile protected frontier manifests'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
