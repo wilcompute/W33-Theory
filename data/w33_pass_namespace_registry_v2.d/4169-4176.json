@@ -3,10 +3,24 @@
   "range": [4169, 4176],
   "slug": "discrete_c2_compiler_continuous_hawking_disorder_scale_backreaction_locality_reduced_gray_clock_levi_cover_scaling_horizon_erasure_spectral_casimir_axion_reduction",
   "title": "Five physics closures and three outside-box probes: discrete second-Chern compilation, continuous-disorder Hawking structure, scale-geometry backreaction, locality-reduced Gray clocks, explicit Levi-cover scaling, a Hawking erasure channel, a graph spectral Casimir effect, and second-Chern axion dimensional reduction",
-  "status": "reserved",
+  "status": "completed_exact_with_c2_disorder_backreaction_locality_levi_erratum_and_topological_boundaries",
   "owner": "openai-gpt-5.6-sol",
   "reserved_at": "2026-08-07T12:23:00-04:00",
+  "completed_at": "2026-08-07T12:47:00-04:00",
   "purpose": "Execute the five physics targets following Passes 4153-4160 and add three independent outside-box constructions with deterministic finite-model checks and strict evidence boundaries.",
-  "coordination": "Preserve Passes 4005-4168, all Pages diagnostics, the single-publisher master:/docs contract, the authoritative long-form docs/index.html, and ordered frontier manifests. Do not edit docs/index.html directly. Keep this packet separate from active Passes 4161-4168.",
-  "boundary": "Reservation only. No fabricated four-dimensional pump, observed disordered Hawking radiation, derivation of physical spacetime, universal low-locality clock machine, experimental thermodynamic criticality, black-hole quantum channel, physical Casimir measurement, axion detection, gravity, cosmology, or theory of everything is promoted."
+  "result": "The Wilson-Dirac control was reduced to a 16-point exact topological calibration certificate with C2=1 while a 29^4 response mesh was needed to cross the audited five-percent quadrature threshold. Correlated-Gaussian and quasiperiodic Hawking scans remained entangled while thermal occupation generated an explicit PPT mobility edge. A one-mode scale backreaction shifted the stable spectral dimension and terminated in a saddle node rather than bistability. The five-qubit Gray history clock was reduced exactly from seven-local to four-local using 72 static AND ancillas without changing its legal spectrum. The actual W(3,3) point-line Levi graph was audited as an 80-vertex degree-four girth-eight graph; its 1620 eight-cycle parity system has rank 81 and augmented rank 82, proving no signed 2-lift removes all base eight-cycles and superseding the degree-six premise in Pass 4157. Three outside-box probes identified a pure-loss Hawking capacity threshold, an exact attractive graph-spectral Casimir determinant interaction, and a Delta-theta equals 2pi descendant of the C2=1 bundle.",
+  "certificate": "data/PART_4169_4176_DISCRETE_C2_HAWKING_BACKREACTION_GRAY_LEVI_CASIMIR_AXION.json",
+  "semantic_sha256": "053198379caf1080b369299e9e13234e580446782e128306bc5ac317618d8348",
+  "verifier": "analysis/w33_pass4169_4176_discrete_c2_hawking_backreaction_gray_levi_casimir_axion.py",
+  "regression": "tests/test_w33_pass4169_4176_discrete_c2_hawking_backreaction_gray_levi_casimir_axion.py",
+  "report": "analysis/BT4169_BT4176_discrete_c2_hawking_backreaction_gray_levi_casimir_axion.md",
+  "manuscript_insert": "analysis/BT4169_BT4176_discrete_c2_hawking_backreaction_gray_levi_casimir_axion_insert.tex",
+  "public_page": "docs/discrete-c2-hawking-backreaction-gray-levi-casimir-axion-4169-4176.html",
+  "coordination": "Passes 4005-4168, Pages diagnostics, the single-publisher master:/docs contract, and the authoritative long-form docs/index.html remain intact. A numerical-order reconciler will place this packet after active Passes 4161-4168 when that packet publishes; docs/index.html is never edited directly.",
+  "remote_pending": [
+    "GitHub Actions exact regression status",
+    "protected frontier reconciliation result",
+    "three manuscript PDF artifacts"
+  ],
+  "boundary": "Exact finite Wilson-Dirac, Gaussian, one-mode backreaction, clock-gadget, graph-cover, pure-loss-channel, graph Green-function, and topological dimensional-reduction statements only. Pass 4173 supersedes the degree-six premise in Pass 4157 for the W(3,3) point-line Levi graph. No fabricated 4D pump, observed Hawking radiation, physical spacetime backreaction, experimental criticality, black-hole communication theorem, measured Casimir force, axion detection, gravity, cosmology, or theory of everything is established."
 }
