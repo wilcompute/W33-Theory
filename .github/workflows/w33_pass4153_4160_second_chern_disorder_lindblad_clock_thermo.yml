@@ -1,0 +1,24 @@
+name: Passes 4153-4160 Exact Regression
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4153_4160_second_chern_disorder_lindblad_clock_thermo.py'
+      - 'data/PART_4153_4160_SECOND_CHERN_DISORDER_LINDBLAD_CLOCK_THERMO.json'
+      - 'tests/test_w33_pass4153_4160_second_chern_disorder_lindblad_clock_thermo.py'
+      - '.github/workflows/w33_pass4153_4160_second_chern_disorder_lindblad_clock_thermo.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --upgrade pip numpy scipy pytest
+      - run: sha256sum data/PART_4153_4160_SECOND_CHERN_DISORDER_LINDBLAD_CLOCK_THERMO.json
+      - run: python analysis/w33_pass4153_4160_second_chern_disorder_lindblad_clock_thermo.py
+      - run: python -m pytest -q tests/test_w33_pass4153_4160_second_chern_disorder_lindblad_clock_thermo.py
+      - run: git diff --exit-code -- data/PART_4153_4160_SECOND_CHERN_DISORDER_LINDBLAD_CLOCK_THERMO.json
