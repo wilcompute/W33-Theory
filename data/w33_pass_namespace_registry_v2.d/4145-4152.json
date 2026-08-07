@@ -2,11 +2,49 @@
   "schema": "w33.pass_namespace_registry.v2.entry",
   "range": [4145, 4152],
   "slug": "exotic_anomaly_exchange_local_relational_gates_conditioned_t7_hybrid_stack_mixed_attractors_maxwell_demon_incidence_susy_echo_crystal",
-  "title": "Five implementation closures and three bonkers probes: bounded exotic anomaly optimization, exchange-local relational gates, conditioned seven-fault measurements, hybrid SiN-active stack materialization, certified mixed-attractor continuation, graph Maxwell-demon accounting, signed-incidence supersymmetry, and an exact W33 echo crystal",
-  "status": "reserved",
+  "title": "Five implementation closures and three bonkers probes: bounded exotic anomaly optimization, exchange-local relational gates, conditioned seven-fault measurements, hybrid SiN-active stack materialization, Newton-refined mixed-attractor continuation, graph Maxwell-demon accounting, signed-incidence supersymmetry, and an exact W33 echo crystal",
+  "status": "source_complete_exact_certificate_exotic_local_conditioned_stack_mixed_demon_susy_echo_hardware_and_global_completion_pending",
   "owner": "openai-gpt-5.6-thinking",
   "reserved_at": "2026-08-06T20:04:00-04:00",
+  "completed_at": "2026-08-06T20:41:00-04:00",
   "purpose": "Execute the five open implementation targets after Passes 4129-4144 and add three independent exact probes in feedback thermodynamics, incidence supersymmetry, and coherent refocusing.",
-  "coordination": "Preserve Passes 4005-4144, the single-publisher master:/docs Pages contract, the authoritative long-form website, all ordered frontier manifests, and docs/index.html.",
-  "boundary": "Reservation only. No derived Standard Model, universal local gate machine, laboratory seven-fault decoder, fabricated hybrid photonic stack, complete global nonlinear-attractor theorem, perpetual-motion device, physical supersymmetry, measured echo crystal, gravity, cosmology, or theory of everything is promoted."
+  "certificate_status": "PASS_EXACT_BOUNDED_EXOTIC_OPTIMUM_LOCAL_RELATIONAL_LIFT_CONDITIONED_T7_STACK_LEDGER_NEWTON_MIXED_DEMON_SUSY_ECHO",
+  "certificates": {
+    "exact_packet": "bbe2401f7139b90a04fe241657b1aaeb0d0621550347ad360084227289509584",
+    "combined_manifest": "80e7dc64d9d4f40efea2f6d29ddbb3d3a6438645d0b48125c97d6c734045ab66",
+    "bounded_exotic_anomaly": "ca215d3037ef1317ad34a494e96dfe4af76da67f4b8ca2092eae4ba07c4c761f",
+    "conditioned_measurements": "ab02380ad1973a6155d99d479768c036435157a203c16aa7c792975024bb26dd",
+    "hybrid_stack": "01595a1322fcff2d24583a87b635268ed3eb4c5b0bd95609e5a8f4441391226b",
+    "mixed_newton": "727729940b34d5777c509ffb2985bf9b9c502554dd71bd2df6570c8d2c3a15aa"
+  },
+  "promoted": [
+    "252-state optimum within the bounded fundamental/singlet exotic anomaly family",
+    "exact 32-locality obstruction for the compressed relational clock and a 58-mode exchange-local lift",
+    "two centered measurement rows below 12000 certifying noiseless seven-fault uniqueness",
+    "complete 33-layer zero-crossing route ledger and explicit static-storage loss boundary",
+    "18 stable selector24 mixed roots and five selector15 mixed roots in the stated Newton-refined corpora",
+    "56260624960 perfect matchings and exact Landauer balance for the W33 feedback engine",
+    "signed-incidence supercharge with 82 zero modes and Witten index minus 80",
+    "exact two-half W33 echo for every switching interval"
+  ],
+  "external_pending": [
+    "unrestricted exotic-representation optimization, phenomenology, masses, and gauge dynamics",
+    "hardware-local pulse synthesis and fault-tolerant relational gates",
+    "quantized noisy seven-fault recovery and sensor calibration",
+    "interlayer couplers, resonant or frequency-bin storage, GDS, DRC, S-parameters, packaging, and fabrication",
+    "a globally complete full-space mixed-attractor theorem",
+    "laboratory Maxwell-demon, supersymmetry, and echo implementations",
+    "remote exact CI, frontier reconciliation, and manuscript PDF evidence"
+  ],
+  "artifacts": {
+    "certificate": "data/PART_4145_4152_EXOTIC_LOCAL_CONDITIONED_STACK_MIXED_BONKERS.json",
+    "manifest": "data/PART_4145_4152_EXOTIC_LOCAL_CONDITIONED_STACK_MIXED_BONKERS_manifest.json",
+    "verifier": "analysis/w33_pass4145_4152_exotic_local_conditioned_stack_mixed_bonkers.py",
+    "regression": "tests/test_w33_pass4145_4152_exotic_local_conditioned_stack_mixed_bonkers.py",
+    "report": "analysis/BT4145_BT4152_exotic_local_conditioned_stack_mixed_bonkers.md",
+    "manuscript_insert": "analysis/BT4145_BT4152_exotic_local_conditioned_stack_mixed_bonkers_insert.tex",
+    "public_page": "docs/exotic-local-conditioned-stack-mixed-4145-4152.html"
+  },
+  "coordination": "Preserves Passes 4005-4160, places this packet numerically before Passes 4153-4160, and preserves the single-publisher master:/docs Pages contract, the authoritative long-form website, and docs/index.html.",
+  "boundary": "No derived Standard Model, universal local gate machine, laboratory seven-fault decoder, fabricated hybrid photonic stack, complete global nonlinear-attractor theorem, perpetual-motion device, physical supersymmetry, measured echo crystal or time crystal, gravity, cosmology, or theory of everything is promoted."
 }
