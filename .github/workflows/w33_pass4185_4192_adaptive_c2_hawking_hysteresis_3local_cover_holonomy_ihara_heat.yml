@@ -1,0 +1,20 @@
+name: Passes 4185-4192 exact regression
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass4185_4192_adaptive_c2_hawking_hysteresis_3local_cover_holonomy_ihara_heat.py'
+      - 'data/PART_4185_4192_ADAPTIVE_C2_HAWKING_HYSTERESIS_3LOCAL_COVER_HOLONOMY_IHARA_HEAT.json'
+      - 'tests/test_w33_pass4185_4192_adaptive_c2_hawking_hysteresis_3local_cover_holonomy_ihara_heat.py'
+      - '.github/workflows/w33_pass4185_4192_adaptive_c2_hawking_hysteresis_3local_cover_holonomy_ihara_heat.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install numpy scipy pytest
+      - run: python analysis/w33_pass4185_4192_adaptive_c2_hawking_hysteresis_3local_cover_holonomy_ihara_heat.py | tee /tmp/pass.log
+      - run: pytest -q tests/test_w33_pass4185_4192_adaptive_c2_hawking_hysteresis_3local_cover_holonomy_ihara_heat.py
+      - run: grep -F 'd0ebd9622620c4666781d8d972bb657721901756acb8fe66d7d99101d1874c6a' /tmp/pass.log
