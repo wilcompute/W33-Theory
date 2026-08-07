@@ -1,0 +1,15 @@
+{
+  "schema": "w33.pages_settings_diagnostic.v1",
+  "build_type": "legacy",
+  "source": {
+    "branch": "master",
+    "path": "/docs"
+  },
+  "html_url": "https://wilcompute.github.io/W33-Theory/",
+  "status": "errored",
+  "cname": null,
+  "https_enforced": true,
+  "workflow_run_id": 31112780866,
+  "trigger_sha": "20c12a07efb92a539fe34f74a127e2dbe42ad2d2",
+  "observed_at": "2026-08-07T10:49:01.375Z"
+}
