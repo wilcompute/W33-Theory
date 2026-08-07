@@ -2,11 +2,53 @@
   "schema": "w33.pass_namespace_registry.v2.entry",
   "range": [4177, 4184],
   "slug": "viable_anomaly_twobody_relational_continuous_t7_pdk_delay_interval_mixed_scattering_forest_spectral_lens",
-  "title": "Five implementation closures and three bonkers probes: gauge-dynamically constrained anomaly search, strict two-body relational compilation, continuous-amplitude seven-fault stability, PDK-grounded tapped-delay materialization, symmetry-stratified interval mixed-equilibrium push, exact W33 scattering channels, matrix-forest thermodynamics, and a minimum-polynomial spectral lens",
-  "status": "reserved",
+  "title": "Five implementation closures and three bonkers probes: fixed-carrier gauge-dynamics no-go, strict two-body relational compilation, arbitrary-real Hodge decoding, PDK-grounded tapped-delay materialization, symmetry-stratified interval mixed-equilibrium push, exact W33 scattering channels, matrix-forest thermodynamics, and a minimum-polynomial spectral lens",
+  "status": "source_complete_exact_certificate_af_nogo_twobody_hodge_pdk_interval_scattering_forest_lens_hardware_and_global_completion_pending",
   "owner": "openai-gpt-5.6-sol",
   "reserved_at": "2026-08-07T13:55:00-04:00",
+  "completed_at": "2026-08-07T14:33:00-04:00",
   "purpose": "Execute the five open implementation targets after Passes 4161-4176 and add three independent finite exact probes in spectral scattering, spanning-forest ensembles, and polynomial spectral focusing.",
-  "coordination": "Preserve Passes 4005-4176, all website diagnostics, the single-publisher master:/docs Pages contract, the authoritative long-form docs/index.html, and ordered frontier manifests. Do not edit docs/index.html directly.",
-  "boundary": "Reservation only. No derived Standard Model, viable phenomenology unless explicitly proved within the finite search, fabricated relational processor, laboratory decoder, fabricated photonic stack, globally complete nonlinear theorem, physical scattering experiment, thermodynamic phase transition, optical lens fabrication, gravity, cosmology, or theory of everything is promoted."
+  "certificate_status": "PASS_EXACT_FIXED_CARRIER_AF_NOGO_TWO_MODE_COMPILER_HODGE_REAL_DECODER_PDK_DELAY_INTERVAL_STRATUM_SCATTER_FOREST_LENS",
+  "certificates": {
+    "exact_packet": "99d11682058d2a518a358831ddc411aba73810c0a5983924c2e586e6cc6c79ce",
+    "combined_manifest": "5ec6370c178c348843a141c745eeeee99e8bcbbc29caf96c92af9b8fe3aeb25c",
+    "fixed_carrier_af_nogo": "2e739231aa9532d3f0ddf8e200dff81131186f7d093b9f70fe93e54188640ec3",
+    "two_mode_compiler": "1a7a2628f3621c28bc13c374ce114a1e55e7cf486dd301c23e7fd46770c507f4",
+    "hodge_decoder": "a65115d689a4ea0886c7b3aaec12074872e9c35dba03de8cfa3bddf1728cc88c",
+    "pdk_delay": "9082bc6a1ffcbde9bfcd389b1325d0177b1a189ccdbb16b3351769652d82e822",
+    "interval_strata": "e5c09aba68277216ccff771aa3b2f64361073557231386143f2f9a7a2977d2db",
+    "scattering": "044dc4700e6cc64c0459d447c26a0c2e96744a89949113bf91a605350e15842a",
+    "forest": "6dec0dd8ef546fd49ef3375150f471ba7f78bd8a4d152068fe07d492e324bb58",
+    "spectral_lens": "69f8c9fc3cdb8d7c3f4888ec17e755dd3097d61693f0801b9b001e97878234fe"
+  },
+  "promoted": [
+    "representation-independent add-only one-loop SU3 asymptotic-freedom no-go for the fixed 145-state carrier",
+    "58-mode strict two-mode relational compiler with 84 couplers and maximum degree four",
+    "Hodge-complete arbitrary-real-amplitude decoder with sigma_min one and condition number 2sqrt2",
+    "919-unit populated tapped-delay schedule with 0.688773172255 m aggregate passive delay",
+    "point-stabilizer interval completeness with exactly three roots per selector plus explicit edge/nonedge quotient strata",
+    "exact quadratic three-channel W33 unitary scattering kernel",
+    "exact rooted-forest partition (1+10t)^24(1+16t)^15",
+    "minimum-degree signed spectral lens K=P2-P-4"
+  ],
+  "external_pending": [
+    "changed gauge embedding or removal/reassignment route capable of restoring viable gauge dynamics",
+    "platform-specific exchange/cross-Kerr strengths, pulse calibration, loss and fault tolerance",
+    "physical orthonormal H1 sensor construction and analog calibration",
+    "current proprietary PDK DRC, taps/couplers, dispersion, electrical routing, packaging and fabrication",
+    "interval-exhaustive edge/nonedge stabilizer strata and globally complete 80D nonlinear classification",
+    "hardware realizations of the scattering and spectral filters",
+    "remote exact CI, frontier reconciliation, and manuscript PDF evidence"
+  ],
+  "artifacts": {
+    "certificate": "data/PART_4177_4184_AF_NOGO_TWOBODY_HODGE_PDK_INTERVAL_BONKERS.json",
+    "manifest": "data/PART_4177_4184_AF_NOGO_TWOBODY_HODGE_PDK_INTERVAL_BONKERS_manifest.json",
+    "verifier": "analysis/w33_pass4177_4184_af_nogo_twobody_hodge_pdk_interval_bonkers.py",
+    "regression": "tests/test_w33_pass4177_4184_af_nogo_twobody_hodge_pdk_interval_bonkers.py",
+    "report": "analysis/BT4177_BT4184_af_nogo_twobody_hodge_pdk_interval_bonkers.md",
+    "manuscript_insert": "analysis/BT4177_BT4184_af_nogo_twobody_hodge_pdk_interval_bonkers_insert.tex",
+    "public_page": "docs/af-nogo-twobody-hodge-pdk-interval-4177-4184.html"
+  },
+  "coordination": "Preserves Passes 4005-4192, places this packet numerically between Passes 4169-4176 and 4185-4192, preserves website diagnostics and the master:/docs Pages contract, and does not edit docs/index.html directly.",
+  "boundary": "No Standard Model derivation, fabricated relational processor, laboratory decoder, DRC-clean/fabricated photonic stack, globally complete 80D nonlinear theorem, measured scattering experiment, material phase transition, fabricated spectral lens, gravity, cosmology, or theory of everything is promoted."
 }
