@@ -1,0 +1,20 @@
+name: W33 Pass 4168 protected frontier reconciliation
+on:
+  push:
+    paths:
+      - "analysis/BT4161_BT4168_broader_anomaly_hardware_noisy_storage_landscape_bonkers_insert.tex"
+      - "analysis/W33_CURRENT_FRONTIER_MANIFEST.tex"
+      - "tools/integrate_pass4161_4168_frontier.py"
+      - ".github/workflows/w33_pass4161_4168_frontier_reconcile.yml"
+  workflow_dispatch:
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python tools/integrate_pass4161_4168_frontier.py --check
+      - run: test "$(grep -c 'BT4161_BT4168_broader_anomaly_hardware_noisy_storage_landscape_bonkers_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex)" = 1
+      - run: test "$(grep -c 'BT4169_BT4176_discrete_c2_hawking_backreaction_gray_levi_casimir_axion_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex)" = 1
