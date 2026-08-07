@@ -3,10 +3,50 @@
   "range": [4161, 4168],
   "slug": "higher_rep_anomaly_hardware_graph_noisy_t7_storage_global_mixed_quantum_search_resistance_causal_diamond",
   "title": "Five implementation closures and three bonkers probes: broader anomaly representations, bounded-degree relational hardware graph, noisy seven-fault decoding, real photonic storage comparison, global mixed-equilibrium certification push, exact W33 search reflections, effective-resistance inertial metric, and finite Levi causal-diamond entropy",
-  "status": "reserved",
+  "status": "source_complete_exact_certificate_broader_anomaly_hardware_graph_quantized_t7_storage_landscape_search_resistance_diamonds_hardware_and_global_completion_pending",
   "owner": "openai-gpt-5.6-sol",
   "reserved_at": "2026-08-07T12:16:00-04:00",
+  "completed_at": "2026-08-07T12:53:00-04:00",
   "purpose": "Execute the five open physics and implementation targets after Passes 4145-4160 and add three independent exact constructions in spectral search, network resistance geometry, and finite causal diamonds.",
-  "coordination": "Preserve Passes 4005-4160, all current website diagnostics, the single-publisher master:/docs Pages contract, the authoritative long-form docs/index.html, and ordered frontier manifests. Do not edit docs/index.html directly.",
-  "boundary": "Reservation only. No derived Standard Model, fabricated relational processor, laboratory seven-fault decoder, fabricated storage stack, globally complete nonlinear theorem, quantum speedup experiment, physical inertia derivation, spacetime entropy law, gravity, cosmology, or theory of everything is promoted."
+  "certificate_status": "PASS_EXACT_BROADER_ANOMALY_HARDWARE_GRAPH_QUANTIZED_T7_STORAGE_BOUND_LANDSCAPE_PUSH_SEARCH_RESISTANCE_DIAMONDS",
+  "certificates": {
+    "exact_packet": "db91cd6c70138d44917ba4274a7d087927caec691be5d49efd83528e7f8d4bd5",
+    "combined_manifest": "6788ff3acc688c2cc8532efd6fa9b060d317081ccbc0a3fbcdba12ba0a10f5a2",
+    "broader_anomaly": "fc596999e3c36a2c979cf08a12d7e36a9d2c836dd8898583e96e8159809510b7",
+    "hardware_graph": "cbc522f6c75a22072445559f4a429240628aa9bfa0ca5b7bca3660334ec71bc5",
+    "quantized_decoder": "868254ad236a3dc4b47b5ea4de8911c766e571940094207b10ec4308d4bd8c36",
+    "storage": "67628e3ea6cf2eb6c60cac80350674207b4e508d2ca6440e0d99003406a73452",
+    "landscape": "7493fb4d5572f884a43ed8607e6f0253b2c54f4840a44de62128b94355e8b4a4"
+  },
+  "promoted": [
+    "213-state anomaly-free optimum within the stated 228-species representation family",
+    "exact minimum added SU3 Dynkin load 11 and resulting one-loop asymptotic-freedom obstruction within that family",
+    "58-mode 139-coupler relational hardware graph of maximum degree seven",
+    "lattice-amplitude seven-fault recovery under componentwise noise below Delta/2, with 15-bit modular readout option",
+    "low-loss tapped delay bank as the first physical storage candidate and an exact single-pole 5-ps time-bandwidth no-go",
+    "global coordinate boxes plus a selector24 macroscopic basin corpus containing twenty mixed classes absent from the perturbative census",
+    "exact W33 quadratic Grover diffusion reflection with four-query success 3920137321/4000000000",
+    "exact two-distance W33 resistance metric and Kirchhoff index 267/2",
+    "exact diameter-four Levi diamond profile 1-4-4-4-1 with four geodesics and finite entropy ln4"
+  ],
+  "external_pending": [
+    "unrestricted anomaly representation search, phenomenology, masses, and viable gauge dynamics",
+    "platform-specific pulse synthesis, three-body decomposition, fault tolerance, and fabrication of the relational graph",
+    "arbitrary-real-amplitude noisy seven-fault recovery, calibration drift, saturation, and practical decoding algorithms",
+    "delay-bank tap/switch loss, interlayer couplers, GDS, DRC, timing jitter, packaging, and fabrication",
+    "globally complete interval/degree/Morse-Conley classification of all mixed equilibria and basins",
+    "hardware implementations of the search, resistance, and causal-diamond analogies",
+    "remote exact CI, frontier reconciliation, and manuscript PDF evidence"
+  ],
+  "artifacts": {
+    "certificate": "data/PART_4161_4168_BROADER_ANOMALY_HARDWARE_NOISY_STORAGE_LANDSCAPE_BONKERS.json",
+    "manifest": "data/PART_4161_4168_BROADER_ANOMALY_HARDWARE_NOISY_STORAGE_LANDSCAPE_BONKERS_manifest.json",
+    "verifier": "analysis/w33_pass4161_4168_broader_anomaly_hardware_noisy_storage_landscape_bonkers.py",
+    "regression": "tests/test_w33_pass4161_4168_broader_anomaly_hardware_noisy_storage_landscape_bonkers.py",
+    "report": "analysis/BT4161_BT4168_broader_anomaly_hardware_noisy_storage_landscape_bonkers.md",
+    "manuscript_insert": "analysis/BT4161_BT4168_broader_anomaly_hardware_noisy_storage_landscape_bonkers_insert.tex",
+    "public_page": "docs/broader-anomaly-hardware-noisy-storage-landscape-4161-4168.html"
+  },
+  "coordination": "Preserves Passes 4005-4176, places this packet numerically before Passes 4169-4176, preserves current website diagnostics and the single-publisher master:/docs Pages contract, and does not edit docs/index.html directly.",
+  "boundary": "No derived Standard Model, fabricated relational processor, laboratory seven-fault decoder, fabricated storage stack, globally complete nonlinear theorem, measured quantum speedup, physical inertia derivation, spacetime entropy law, gravity, cosmology, or theory of everything is promoted."
 }
