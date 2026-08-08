@@ -2657,6 +2657,62 @@ extremality and universality was an artefact of what was measurable, not a fact 
 machine.
 \end{plain}
 
+\begin{spec}[Pass 4232 --- and now over the sets that can actually compute]
+Pass 4228 ranked sets of size four and five, most of which cannot run a program. Restricting
+instead to the \textbf{360} subsets of the ten-generator pool that genuinely generate
+$\mathrm{ASp}(4,3)$, at every size from four to ten: \textbf{not one satisfies the graph
+Riemann Hypothesis.}
+
+The ranking is the deliverable. Ordering by $\rho(B)$ --- the growth rate of
+non-backtracking instruction streams, so lower means the frame register scrambles more
+slowly per instruction --- the shipped four-opcode ISA sits at position \textbf{12 of 360}.
+It was chosen for cheapness and universality, with no spectral criterion applied at any
+point, and it lands in the top four percent.
+
+\emph{Scope, stated plainly:} exhaustive over this ten-generator pool, not over all
+generating sets of $\mathrm{ASp}(4,3)$.
+\end{spec}
+
+\subsection{The one number in this chapter with no closed form}
+
+\begin{spec}[Pass 4236 --- what $\rho(B) = 5.746873$ is, and one thing it is not]
+For a $k$-regular graph $\rho(B) = k-1$ \emph{exactly} --- an integer, because every vertex
+offers the same number of non-backtracking continuations. The instruction graph offers
+between $1$ and $7$ depending on where you stand, and its growth rate is
+\[
+  \rho(B) = 5.746872679901964274417558660209539683477378347461941\ldots
+\]
+computed two independent ways that agree: as an eigenvalue of the quadratic pencil, and by
+high-precision bisection on $\det(\lambda^2 I - \lambda A + Q)$, which touches no eigenvalue
+routine at all. It is \textbf{not} the average degree minus one ($5.444444$), nor any other
+simple statistic of the degree sequence.
+
+$\rho(B)$ is an algebraic integer --- a root of the monic degree-$162$ characteristic
+polynomial of that pencil --- with \textbf{no closed form of degree ten or less}.
+Irregularity does not merely break the $k$-regular formula. It removes the closed form.
+\end{spec}
+
+\begin{plain}
+A caution belongs here, because this pass first produced a wrong answer that looked right.
+An integer-relation search offered
+\[
+  15668303\,x^3 - 4686695\,x^2 - 824152814\,x + 1917252871
+\]
+with a relative residual of $4.8\times10^{-26}$: apparently a degree-three minimal
+polynomial. It is false, and it fails for a reason available without any computation.
+$\rho(B)$ is an eigenvalue of an integer matrix, hence an \emph{algebraic integer}, hence its
+minimal polynomial is monic with integer coefficients --- so any true relation must be an
+integer multiple of a monic one, and $15668303$ does not divide $1917252871$. Confirmed
+numerically as well: the residual \emph{plateaus} at $8.33\times10^{-37}$ across $60$, $90$
+and $140$ digits rather than falling, which is the signature of a near-relation. The cause
+was allowing coefficients up to $10^{12}$ on four terms with far too little working precision
+to rule out coincidence.
+
+The rule that follows is short enough to keep: when hunting a closed form for a quantity you
+know to be an algebraic integer, \textbf{require the relation to be a monic multiple, and
+re-check the residual at double precision --- it must fall, not plateau.}
+\end{plain}
+
 \headline{The machine's geometry is extremal; its algebra is not, and after Pass 4213
 we can say why the comparison only runs one way.}
 
