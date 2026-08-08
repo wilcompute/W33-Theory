@@ -3104,15 +3104,34 @@ Closing the set under inverses --- eight instructions instead of four --- makes 
 exactly symmetric, with $0$ one-way pairs and entropy production $0$ bits per instruction.
 \end{spec}
 
-\begin{plain}
-Logical reversibility of each gate and thermodynamic reversibility of the process are
-different properties, and the four-opcode machine has the first without the second. No
-information is destroyed --- every opcode is invertible --- but the \emph{choice} is not: to
-undo an opcode is not itself an instruction.
+\begin{gotwrong}[What this does \emph{not} mean]
+An earlier draft of this section said the closure ``sharpens Pass 2836's \emph{compute is
+exactly zero}: that holds of the reversible closure, and the shipped four-opcode ISA does
+not have it.'' \textbf{That is wrong, and it inverts the actual situation.}
 
-That is a genuine engineering trade, and it did not exist as a number before this pass. It
-also sharpens Pass 2836's ``compute is exactly zero'': that holds of the reversible closure,
-and the shipped four-opcode ISA does not have it.
+Every opcode of every machine here is a bijection on the $81$ frames. A program is a
+composition of bijections, so it erases nothing and its Landauer cost is zero --- on the
+four-opcode machine exactly as much as on the closure. Checked directly: a
+$200$-instruction random program maps the $81$ states onto $81$ states on both machines.
+\emph{Compute is exactly zero on all four designs}, and the closure buys none of it.
+\end{gotwrong}
+
+\begin{plain}
+So what does the closure buy? The entropy production above is a property of a different
+object: the Markov chain you get by driving the machine with \emph{uniformly random}
+instructions. That chain fails detailed balance on the four-opcode machine and satisfies it
+on the closure.
+
+It is a real difference and a useful one, but it is about the instruction set as a source of
+randomness, not about running a program. Read correctly it says: watch a random instruction
+stream on machine A and you can tell which way time runs; watch one on machine D and you
+cannot. For a scrambler, a physical randomness source, or anything whose security rests on
+trajectory indistinguishability, that is the whole point. For a machine executing a program,
+it is not a dissipation at all.
+
+The honest form of the trade is therefore narrower than ``buy reversibility'': you are
+buying \textbf{time-symmetry of the random-instruction walk}, and \S\ref{sec:budget} prices
+it, relative to the four-opcode machine's $103$ cells, at $2.00\times$ the cells.
 \end{plain}
 
 \begin{spec}[Pass 4279 --- and now the other side of the trade, in gates]
@@ -3131,8 +3150,10 @@ D\quad symmetric, reversible & $12$ & $240$ & $2.33\times$\\
 \bottomrule
 \end{tabular}
 \end{center}
-\textbf{Thermodynamic reversibility costs $2.00\times$ the cells; removing the bias costs
-$1.28\times$; both together cost $2.33\times$.}
+\textbf{Measured against machine A} ($103$ cells), time-symmetry of the random-instruction
+walk costs $2.00\times$, removing the $p/f$ bias costs $1.28\times$, and both together cost
+$2.33\times$. (Not ``thermodynamic reversibility'' --- see the correction above: every
+machine here computes at zero Landauer cost already.)
 
 Every row was \emph{simulated} against the group computation before its cell count was
 recorded --- a random program per machine, final register state matched exactly. The

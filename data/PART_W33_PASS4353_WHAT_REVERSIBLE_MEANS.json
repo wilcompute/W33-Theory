@@ -1,0 +1,20 @@
+{
+  "correct_statement": "closing the opcode set under inverses makes the UNIFORM-RANDOM-INSTRUCTION walk satisfy detailed balance; it buys trajectory time-symmetry, not a reduction in the Landauer cost of computing",
+  "every_opcode_bijective": true,
+  "machines": {
+    "A shipped (4 opcodes)": {
+      "one_way_pairs": 243,
+      "opcodes": 4,
+      "program_erasure_bits": 0.0,
+      "random_walk_entropy_bits": null
+    },
+    "C closure (8 opcodes)": {
+      "one_way_pairs": 0,
+      "opcodes": 8,
+      "program_erasure_bits": 0.0,
+      "random_walk_entropy_bits": 0.0
+    }
+  },
+  "over_read": "'thermodynamic reversibility costs 2.00x' implies machine A dissipates while D does not; both erase nothing",
+  "program_landauer_cost_bits": 0.0
+}
