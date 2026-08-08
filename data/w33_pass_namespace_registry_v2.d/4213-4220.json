@@ -2,25 +2,12 @@
   "schema": "w33.pass_namespace_registry.v2.entry",
   "range": [4213, 4220],
   "slug": "small_high_girth_cover_su4_holonomy_quantum_hysteresis_compressed_3local_clock_full_hawking_channel_pell_echo_vacuum_entanglement_information_velocity",
-  "title": "Five physics closures and three outside-box probes: smaller high-girth Levi covers, SU(4) holonomic universality, quantized hysteretic scale memory, compressed exact three-local clocks, the full nineteen-mode Hawking channel, Pell echoes, Levi vacuum entanglement, and high-girth information velocity",
-  "status": "completed_exact_with_small_cover_su4_hysteresis_clock_full_gaussian_pell_vacuum_velocity_boundaries",
+  "status": "superseded_due_to_prior_4213_glue_reservation",
   "owner": "openai-gpt-5.6-sol",
   "reserved_at": "2026-08-07T21:33:00-04:00",
-  "completed_at": "2026-08-07T21:55:00-04:00",
-  "purpose": "Execute the five physics targets following Passes 4185-4192 and add three independent outside-box constructions with deterministic finite-model checks and strict evidence boundaries.",
-  "result": "A Z_359 voltage assignment eliminates every zero-voltage base cycle of lengths 8, 10, and 12, producing a 28,720-vertex Levi cover with certified girth at least 14 and reducing the prior Z_65537 construction by a factor 182.5543. Two dense rank-two singlet holonomy bundles plus one auxiliary bright level produce exact geometric CZ; explicit Pauli commutator closure spans su(4). The saturated scale potential has a classical coexistence point with equal barrier 4.4597412117, instanton action 7.7881701215, Kramers lifetimes, and a two-state quantum-memory reduction. Exact MILP sharing reduces the existing three-local Gray clock from 96 to 61 auxiliary bits while preserving its legal gap and revival times. The complete 19-mode Gaussian horizon separates outside-to-partner steering, coherent-information, reverse-steering, and PPT thresholds and remains entangled in all 512 correlated-disorder samples at n_th=0.005 while stronger resources partially disappear. Three outside-box probes give Pell near-echoes without exact revival, exact point-line harmonic-vacuum entanglement, and a high-girth radial band velocity 2 sqrt(3) J whose capacity scaling is distinct from propagation speed.",
-  "certificate": "data/PART_4213_4220_SMALL_COVER_SU4_QUANTUM_HYSTERESIS_CLOCK_HAWKING_PELL_VACUUM_VELOCITY.json",
-  "semantic_sha256": "c79c7edd47d9d038b921838df73baba17d74043af4c74a0d3d35543335019d26",
-  "verifier": "analysis/w33_pass4213_4220_small_cover_su4_quantum_hysteresis_clock_hawking_pell_vacuum_velocity.py",
-  "regression": "tests/test_w33_pass4213_4220_small_cover_su4_quantum_hysteresis_clock_hawking_pell_vacuum_velocity.py",
-  "report": "analysis/BT4213_BT4220_small_cover_su4_quantum_hysteresis_clock_hawking_pell_vacuum_velocity.md",
-  "manuscript_insert": "analysis/BT4213_BT4220_small_cover_su4_quantum_hysteresis_clock_hawking_pell_vacuum_velocity_insert.tex",
-  "public_page": "docs/small-cover-su4-hysteresis-clock-hawking-pell-vacuum-velocity-4213-4220.html",
-  "coordination": "All current Pages diagnostics and the Actions-based Pages contract remain intact. The authoritative long-form docs/index.html is never edited directly. A numerical-order reconciler places this packet after active Passes 4205-4212 when that packet publishes.",
-  "remote_pending": [
-    "GitHub Actions exact regression status",
-    "protected frontier reconciliation result",
-    "three manuscript PDF artifacts"
-  ],
-  "boundary": "Exact finite graph-cover, holonomic-control, effective stochastic/semiclassical, clock-gadget, Gaussian-channel, spectral-recurrence, harmonic-network, and high-girth tree-band statements only. No fabricated high-girth network, experimentally universal processor, physical spacetime memory, global minimum-ancilla theorem, observed Hawking radiation, physical recurrence clock, measured vacuum entanglement, identification of graph information velocity with physical c, gravity, cosmology, or theory of everything is established."
+  "superseded_at": "2026-08-07T21:57:00-04:00",
+  "collision": "Glue track commit 84db6db5c80a99b21c58f21351774eb522e031b4 reserved Pass 4213 at 21:32:02-04:00, before this block reservation at 21:33:07-04:00. Commit ee0af6eaf011c596cbfa8078c47f7b0127bcf10b explicitly directed this physics block to 4214-4221.",
+  "canonical_replacement": "data/w33_pass_namespace_registry_v2.d/4214-4221.json",
+  "legacy_semantic_sha256": "c79c7edd47d9d038b921838df73baba17d74043af4c74a0d3d35543335019d26",
+  "boundary": "This entry is retained only as a collision/audit record. Its pass numbering is not canonical and must not be cited as assigning Pass 4213 to the physics packet."
 }
