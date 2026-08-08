@@ -1,0 +1,58 @@
+{
+  "pass_4321_design_space": {
+    "A  biased, irreversible (shipped)": {
+      "entropy_bits": null,
+      "loc": 0.6128670516611174,
+      "mix": 15,
+      "one_way": 243,
+      "ops": 4,
+      "rho": 5.74687267990198
+    },
+    "B  symmetric, irreversible": {
+      "entropy_bits": null,
+      "loc": 0.46043493157314924,
+      "mix": 12,
+      "one_way": 342,
+      "ops": 6,
+      "rho": 8.762090305812745
+    },
+    "C  biased, reversible": {
+      "entropy_bits": 0.0,
+      "loc": 0.6128670516611174,
+      "mix": 16,
+      "one_way": 0,
+      "ops": 8,
+      "rho": 5.74687267990198
+    },
+    "D  symmetric, reversible": {
+      "entropy_bits": 0.0,
+      "loc": 0.46043493157314924,
+      "mix": 13,
+      "one_way": 0,
+      "ops": 12,
+      "rho": 8.762090305812745
+    }
+  },
+  "pass_4322_flags_are_edges": {
+    "directed": 320,
+    "flags": 160,
+    "hashimoto_dim": 320,
+    "identical": true,
+    "levi_edges": 160,
+    "rho": 3.0000000000000058
+  },
+  "pass_4323_zero_asymmetry": {
+    "arrow_removed": true,
+    "bias_reduced": true,
+    "bias_removed": false,
+    "machine_D": {
+      "entropy_bits": 0.0,
+      "loc": 0.46043493157314924,
+      "mix": 13,
+      "one_way": 0,
+      "ops": 12,
+      "rho": 8.762090305812745
+    },
+    "uniform_reference": 0.3333333333333333
+  }
+}
