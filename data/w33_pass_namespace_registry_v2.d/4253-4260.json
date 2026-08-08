@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [4253, 4260],
+  "slug": "small_girth16_cover_fault_aware_su4_quantum_hysteresis_spectrum_clock_aux_lower_bounds_full_hawking_channel_bounds_spectral_scrambling_modular_vacuum_causal_capacity",
+  "title": "Five physics closures and three outside-box probes: smaller girth-16 Levi covers, fault-aware SU(4) holonomy, the quantum hysteresis spectrum, exact three-local clock auxiliary compression, full nineteen-mode Hawking communication bounds, plus spectral scrambling, modular vacuum structure, and causal-capacity separation",
+  "status": "reserved",
+  "owner": "openai-gpt-5.6-sol",
+  "reserved_at": "2026-08-08T01:32:00-04:00",
+  "purpose": "Execute the five physics targets following canonical Passes 4214-4221 and add three independent outside-box constructions with deterministic finite-model checks and strict evidence boundaries.",
+  "coordination": "Preserve Passes through 4252, all glue-track corrections, the single Actions Pages publisher, the authoritative long-form docs/index.html, and numerically ordered frontier manifests. Do not edit docs/index.html directly.",
+  "boundary": "Reservation only. No fabricated high-girth network, fault-tolerant holonomic processor, physical spacetime memory, globally minimal clock theorem, observed Hawking radiation, physical scrambling experiment, continuum modular field theory, speed-of-light derivation, gravity, cosmology, or theory of everything is promoted."
+}
