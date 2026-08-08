@@ -1,0 +1,37 @@
+name: W33 Passes 4245-4252 exact regression
+on:
+  push:
+    paths:
+      - "analysis/w33_pass4245_4252_residual_symmetry_ghz_hodge_route_lattice_outside_box.py"
+      - "analysis/w33_pass4248_route_centerline_generator.py"
+      - "data/w33_pass4245_residual_generation_anchor_symmetry.json"
+      - "data/w33_pass4246_ghz28_operating_strategy.json"
+      - "data/w33_pass4247_exact_minimum_hodge_channels.json"
+      - "data/w33_pass4248_explicit_routed_delay_geometry.json"
+      - "data/w33_pass4249_triple_stabilizer_lattice.json"
+      - "data/w33_pass4250_symmetry_resolved_metrology.json"
+      - "data/w33_pass4251_hodge_two_temperature_exergy.json"
+      - "data/w33_pass4252_exact_quotient_rg_chain.json"
+      - "data/PART_4245_4252_RESIDUAL_SYMMETRY_GHZ_HODGE_ROUTE_LATTICE_OUTSIDE_BOX.json"
+      - "tests/test_w33_pass4245_4252_residual_symmetry_ghz_hodge_route_lattice_outside_box.py"
+      - ".github/workflows/w33_pass4245_4252_exact_regression.yml"
+  workflow_dispatch:
+jobs:
+  quick:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install numpy scipy pytest
+      - run: pytest -q tests/test_w33_pass4245_4252_residual_symmetry_ghz_hodge_route_lattice_outside_box.py
+  exhaustive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install numpy scipy
+      - run: python analysis/w33_pass4245_4252_residual_symmetry_ghz_hodge_route_lattice_outside_box.py --full
