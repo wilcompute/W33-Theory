@@ -1,0 +1,19 @@
+name: W33 Pass 4252 protected frontier reconciliation
+on:
+  push:
+    paths:
+      - "analysis/BT4245_BT4252_residual_symmetry_ghz_hodge_route_lattice_outside_box_insert.tex"
+      - "analysis/W33_CURRENT_FRONTIER_MANIFEST.tex"
+      - "tools/integrate_pass4245_4252_frontier.py"
+      - ".github/workflows/w33_pass4245_4252_frontier_reconcile.yml"
+  workflow_dispatch:
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python tools/integrate_pass4245_4252_frontier.py --check
+      - run: test "$(grep -c 'BT4245_BT4252_residual_symmetry_ghz_hodge_route_lattice_outside_box_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex)" = 1
