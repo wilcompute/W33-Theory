@@ -1,0 +1,20 @@
+name: Passes 4253-4260 exact regression
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass4253_4260_girth16_faultaware_su4_hysteresis_clock_channel_scrambling_modular_capacity.py'
+      - 'data/PART_4253_4260_GIRTH16_FAULTAWARE_SU4_HYSTERESIS_CLOCK_CHANNEL_SCRAMBLING_MODULAR_CAPACITY.json'
+      - 'tests/test_w33_pass4253_4260_girth16_faultaware_su4_hysteresis_clock_channel_scrambling_modular_capacity.py'
+      - '.github/workflows/w33_pass4253_4260_girth16_faultaware_su4_hysteresis_clock_channel_scrambling_modular_capacity.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install numpy scipy pytest
+      - run: python analysis/w33_pass4253_4260_girth16_faultaware_su4_hysteresis_clock_channel_scrambling_modular_capacity.py | tee /tmp/pass.log
+      - run: pytest -q tests/test_w33_pass4253_4260_girth16_faultaware_su4_hysteresis_clock_channel_scrambling_modular_capacity.py
+      - run: grep -F '35e1ba8df34b401ec0092e1f145cc1f5c5618bff7b29c684b869493201b72e18' /tmp/pass.log
