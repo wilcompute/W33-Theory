@@ -1,3 +1,13 @@
+% Portable theorem guard: define only what the host preamble is missing, so this
+% file drops into any of our manuscripts and re-running it is a no-op.
+\makeatletter
+\@ifundefined{theorem}{\newtheorem{theorem}{Theorem}}{}
+\@ifundefined{lemma}{\newtheorem{lemma}[theorem]{Lemma}}{}
+\@ifundefined{proposition}{\newtheorem{proposition}[theorem]{Proposition}}{}
+\@ifundefined{corollary}{\newtheorem{corollary}[theorem]{Corollary}}{}
+\@ifundefined{definition}{\newtheorem{definition}[theorem]{Definition}}{}
+\@ifundefined{remark}{\newtheorem{remark}[theorem]{Remark}}{}
+\makeatother
 % BT1172 incidence-45 theorem.
 
 \begin{theorem}[Labeled incidence model for the $45$ relation sector]
