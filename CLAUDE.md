@@ -115,6 +115,28 @@ Ordered by how hard they are to catch. Each was found the expensive way.
    start. See `analysis/w33_pass322_the_rank_law_was_already_ours.py`: ~15 passes
    re-derived a rank law the repo had already proved and formalized in Lean, and
    whose two halves are published (Sastry–Sin; Chandler–Sin–Xiang) and cited here.
+6. **The untested premise** — *added Pass 4372, after it produced three errors in one
+   session.* A comparison, ratio or price computed before checking the comparison was
+   licensed. "Translations exist only on the point side, so that side was forced" — a
+   translation acts on **neither** projective carrier. "Reversibility costs 2× the cells" —
+   every machine was already reversible in the sense implied. "Dual-rail fault detection" —
+   it compared each faulty run against the correct run, which you do not have at runtime.
+   Each was arithmetically fine and answered a question that did not apply.
+   **Guard:** before writing *X costs N* or *A beats B*, state what would make the
+   comparison invalid, and check that first. `scripts/check_ratio_claims.py` catches the
+   sub-case where a ratio names no baseline; the general case needs the sentence.
+7. **The vacuous check** — *added Pass 4372; the most dangerous of the seven, because a
+   clean report from a broken checker is indistinguishable from a clean corpus.* Not an
+   unbuilt object: the checker exists, runs, and reports. `check_tex_insert_pitfalls.py`
+   scanned 287 files, reported zero, while two of them failed to compile — the fault family
+   did not exist yet. A duplicate-detector reported 27 hits, every one its own repair from
+   the same session. A ratio checker reported zero with the offending sentence three lines
+   from where it was written.
+   **Guard:** every check ships with a planted fault it must detect.
+   `scripts/test_checker_recall.py` is the pattern — fresh instances sharing no bytes with
+   the originals, plus a clean file the checker must stay silent on. Note its own limit,
+   stated in the file: planted-fault recall measures the families you have, never the ones
+   you lack.
 
 ### The operational prior
 

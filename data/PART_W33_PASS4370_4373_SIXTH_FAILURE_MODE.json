@@ -1,0 +1,157 @@
+{
+  "pass_4370_sigfigs": {
+    "figures": [
+      {
+        "earned_digits": 15,
+        "figure": "rho(B) = 5.746872679901964...",
+        "overstated": true,
+        "printed_digits": 22,
+        "weakest_input": "eigenvalue solve"
+      },
+      {
+        "earned_digits": 0,
+        "figure": "readout power 1.066e-13 W",
+        "overstated": true,
+        "printed_digits": 4,
+        "weakest_input": "cadence 15 instructions"
+      },
+      {
+        "earned_digits": 2,
+        "figure": "cell counts 103 / 132 / 206 / 240",
+        "overstated": true,
+        "printed_digits": 3,
+        "weakest_input": "opcode ordering"
+      },
+      {
+        "earned_digits": 1,
+        "figure": "mixing time 15 instructions",
+        "overstated": true,
+        "printed_digits": 2,
+        "weakest_input": "TV threshold 1/4"
+      },
+      {
+        "earned_digits": 15,
+        "figure": "|lambda_2| = 0.893992320",
+        "overstated": false,
+        "printed_digits": 9,
+        "weakest_input": "eigenvalue solve"
+      },
+      {
+        "earned_digits": 3,
+        "figure": "143 meV per routed read",
+        "overstated": false,
+        "printed_digits": 3,
+        "weakest_input": "temperature 300 K"
+      }
+    ],
+    "overstated": 4
+  },
+  "pass_4372_failure_modes": {
+    "errors": 8,
+    "proposed_seventh": "the vacuous check",
+    "proposed_sixth": "the untested premise",
+    "self_caught": 5,
+    "shapes": {
+      "checker measured its own repair": 1,
+      "checker never shown to catch anything": 1,
+      "no valid null model": 1,
+      "precision exceeded the weakest input": 1,
+      "premise never tested": 3,
+      "weaker test substituted for the real one": 1
+    }
+  },
+  "pass_4373_claim_language": {
+    "rows": [
+      {
+        "file": "w33_paper_v2.tex",
+        "hedge_share": 0.018867924528301886,
+        "hedged": 2,
+        "strong": 104
+      },
+      {
+        "file": "toe_master_synthesis.tex",
+        "hedge_share": 0.05263157894736842,
+        "hedged": 9,
+        "strong": 162
+      },
+      {
+        "file": "standard_model_from_one_transvection.tex",
+        "hedge_share": 0.058823529411764705,
+        "hedged": 2,
+        "strong": 32
+      },
+      {
+        "file": "toe_constants_companion.tex",
+        "hedge_share": 0.06756756756756757,
+        "hedged": 5,
+        "strong": 69
+      },
+      {
+        "file": "PAPER_SECTION5_MODULAR.tex",
+        "hedge_share": 0.075,
+        "hedged": 3,
+        "strong": 37
+      },
+      {
+        "file": "self_entanglement_companion.tex",
+        "hedge_share": 0.07547169811320754,
+        "hedged": 4,
+        "strong": 49
+      },
+      {
+        "file": "single_photon_universal_computation.tex",
+        "hedge_share": 0.0784313725490196,
+        "hedged": 12,
+        "strong": 141
+      },
+      {
+        "file": "W36_PAPER.tex",
+        "hedge_share": 0.1111111111111111,
+        "hedged": 35,
+        "strong": 280
+      },
+      {
+        "file": "main.tex",
+        "hedge_share": 0.1282051282051282,
+        "hedged": 5,
+        "strong": 34
+      },
+      {
+        "file": "holonet_practical_implications.tex",
+        "hedge_share": 0.18867924528301888,
+        "hedged": 10,
+        "strong": 43
+      },
+      {
+        "file": "W33_FOR_EVERYONE.tex",
+        "hedge_share": 0.1892744479495268,
+        "hedged": 60,
+        "strong": 257
+      },
+      {
+        "file": "w33_paper_body.tex",
+        "hedge_share": 0.1964956195244055,
+        "hedged": 157,
+        "strong": 642
+      },
+      {
+        "file": "photonic_holonet_body.tex",
+        "hedge_share": 0.2087912087912088,
+        "hedged": 76,
+        "strong": 288
+      },
+      {
+        "file": "W36_PAPER_arxiv.tex",
+        "hedge_share": 0.3225806451612903,
+        "hedged": 10,
+        "strong": 21
+      },
+      {
+        "file": "holonet_machine_blueprint_body.tex",
+        "hedge_share": 0.37058823529411766,
+        "hedged": 63,
+        "strong": 107
+      }
+    ]
+  }
+}

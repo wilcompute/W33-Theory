@@ -2474,6 +2474,14 @@ such.  Nothing here floats free of the verification chain.
 
 \subsection{Physics}
 
+\begin{plainbox}
+What has to be true of the world for this architecture to work, separated from
+what has to be true of the mathematics. The mathematics is checked; the physics is a set of
+requirements on materials, loss rates and detector performance that current technology meets
+in some cases and not in others. Each requirement below says which.
+\end{plainbox}
+
+
 \paragraph{The vacuum is a gauge choice among five.}
 The decomposition $40=1+12+27$ (self, gauge, matter) that organizes
 the entire Standard-Model derivation is \emph{one of five} maximal
@@ -5982,6 +5990,13 @@ $\tau_p\approx4.6\times10^{35}$\,yr sits squarely in the Hyper-Kamiokande window
 (Witness: \path{analysis/w33_proton_branching_two_scale.py}.)
 
 \subsection{Pass 1 --- three closures: the neutrino matrix, the selection census, the threshold number}
+
+\begin{plainbox}
+Three separate questions that closed in the same pass, grouped because they closed
+together and not because they are related. Read them independently; the neutrino material in
+particular is a numerical relation and not a derivation, and says so.
+\end{plainbox}
+
 \label{sec:three-closures}
 
 \emph{Reading the next four subsections.} They make four passes over three of the
@@ -9440,6 +9455,14 @@ inputs.
 % BT1586 OPERATOR_OAM_FULL_APPENDIX END
 
 \subsection{Exact Schl\"afli--W33 transport capsule (Pass 1147)}
+
+\begin{plainbox}
+A self-contained package: the exact correspondence between our geometry and a
+classical configuration of lines studied since the nineteenth century, with everything
+needed to check it in one place. ``Capsule'' means it can be lifted out and verified without
+reading the surrounding sections.
+\end{plainbox}
+
 \label{sec:schlaefli-w33-exact-capsule}
 
 \begin{theorem}[Integral Schl\"afli--Steinberg bridge]
@@ -9617,5 +9640,36 @@ decoder, or hardware performance claim.
 % scripts/route_orphaned_inserts.py -- routed by intended destination and vetted for
 % dangling refs, duplicate labels and the Pass 4231 LaTeX pitfall families.
 \input{analysis/W33_PHOTONIC_RECOVERED_APPENDIX}%
+
+\section{Errata}
+\label{sec:photonic-errata}
+
+\begin{plainbox}
+Corrections to this document, kept on the page rather than edited away. The list is short,
+and the front matter explains why that is not reassuring: a design attracts fewer
+falsification attempts than a theorem, so a thin errata section may reflect thin scrutiny
+rather than few mistakes.
+\end{plainbox}
+
+\begin{warnbox}[Inherited from the machine blueprint]
+The following were established in the companion blueprint and correct claims that this
+document's architecture rests on.
+
+\begin{itemize}\itemsep2pt
+\item \textbf{The instruction graph is not a Cayley graph.} It is a \emph{Schreier} graph
+      on a coset space, so its degrees are not constant and regular-graph optimality
+      notions do not apply to it. Three separate spectral claims were withdrawn for
+      assuming otherwise.
+\item \textbf{$78 = \dim E_6$ is a parameter fact.} All $28$ non-isomorphic
+      $\mathrm{SRG}(40,12,2,4)$ graphs give the same $78$ zeta poles, so the coincidence
+      says nothing about \emph{which} graph this architecture uses.
+\item \textbf{The load port does not act on the projective carriers.} A translation is not
+      well defined on projective points, so no argument about which carrier the machine
+      addresses may be built from where translations live.
+\item \textbf{``Compute is exactly zero'' holds of every design here}, not only of a
+      reversible closure --- every opcode is a bijection. What closing under inverses buys
+      is time-symmetry of the random-instruction walk, not a reduction in dissipation.
+\end{itemize}
+\end{warnbox}
 
 \end{document}

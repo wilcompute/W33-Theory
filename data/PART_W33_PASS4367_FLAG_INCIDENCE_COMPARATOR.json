@@ -1,0 +1,14 @@
+{
+  "constraint_rejects_fraction": 0.9,
+  "credit": "Codex track Pass 4331 reservation: framing and name",
+  "detects": "any single-register corruption leaving the incidence relation",
+  "flags": 160,
+  "line_fault_miss_rate": 0.07692307692307693,
+  "lines_per_point": 4,
+  "misses": "faults mapping one valid flag to another, including every group element, so incorrect computation is invisible to it",
+  "overall_detection": 0.9230769230769231,
+  "pairs": 1600,
+  "point_fault_miss_rate": 0.07692307692307693,
+  "points_per_line": 4,
+  "trials": 12480
+}
