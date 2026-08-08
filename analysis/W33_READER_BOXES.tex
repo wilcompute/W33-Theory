@@ -1,0 +1,80 @@
+% =====================================================================================
+%  W33 READER BOXES -- the shared audience system, Pass 4316.
+%
+%  The machine blueprint had a three-audience convention (cream = plain language,
+%  blue = specification, rose = withdrawn claim) and the other manuscripts had none:
+%  476 pages of w33_paper and 346 of photonic_holonet with no way in for a reader who
+%  is not already inside the project.
+%
+%  NAMING, learned the expensive way.  The first version of this file defined
+%  environments called `plain`, `spec` and `gotwrong` to match the blueprint.  That
+%  broke photonic_holonet catastrophically -- 106 errors, 10 pages -- because that
+%  manuscript uses \spec as a MATH OPERATOR (\operatorname{spec}) declared by its
+%  inserts via \providecommand.  Defining a `spec` ENVIRONMENT in the preamble defines
+%  the macro \spec, so the later \providecommand silently declined and every \spec(...)
+%  in the body invoked an environment opener instead of a spectrum.
+%
+%  The environments here are therefore named plainbox / specbox / warnbox: distinct from
+%  anything the manuscripts already use, and distinct from the blueprint's own names so
+%  the blueprint is untouched.
+%
+%  Colours are the blueprint's, unchanged:
+%    plainbg  F4F1EA  cream   -- plain language, for the non-specialist
+%    specbg   EAF0F4  blue    -- the exact statement, for the specialist
+%    warnbg   F7EDE9  rose    -- a claim this project withdrew
+% =====================================================================================
+
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{positioning}          % \readerguide places nodes with `right=of`
+
+\providecolor{plainbg}{HTML}{F4F1EA}
+\providecolor{specbg}{HTML}{EAF0F4}
+\providecolor{warnbg}{HTML}{F7EDE9}
+
+\newenvironment{plainbox}[1][In plain language]
+  {\par\medskip\noindent\begin{tikzpicture}
+     \node[fill=plainbg,rounded corners=2pt,inner sep=8pt,
+           text width=\dimexpr\linewidth-20pt]
+     (B) \bgroup\textbf{\small #1.}\itshape\small}
+  {\egroup;\end{tikzpicture}\par\medskip}
+
+\newenvironment{specbox}[1][Exactly]
+  {\par\medskip\noindent\begin{tikzpicture}
+     \node[fill=specbg,rounded corners=2pt,inner sep=8pt,
+           text width=\dimexpr\linewidth-20pt]
+     (B) \bgroup\textbf{\small #1.}\small}
+  {\egroup;\end{tikzpicture}\par\medskip}
+
+\newenvironment{warnbox}[1][What we got wrong]
+  {\par\medskip\noindent\begin{tikzpicture}
+     \node[fill=warnbg,rounded corners=2pt,inner sep=8pt,
+           text width=\dimexpr\linewidth-20pt]
+     (B) \bgroup\textbf{\small #1.}\small}
+  {\egroup;\end{tikzpicture}\par\medskip}
+
+% The three-audience guide, as one command so every manuscript opens the same way.
+\providecommand{\readerguide}[1]{%
+  \begin{center}
+  \resizebox{\linewidth}{!}{%
+  \begin{tikzpicture}[node distance=4mm]
+    \node[fill=plainbg,rounded corners,inner sep=7pt,text width=0.32\linewidth,
+          font=\small] (rga)
+      {\textbf{If you are not a specialist.}\\[3pt]
+       Read the cream boxes and the diagrams. They are self-contained: each explains
+       the idea before the symbols, and you can skip every blue box without losing
+       the argument.};
+    \node[fill=specbg,rounded corners,inner sep=7pt,text width=0.32\linewidth,
+          font=\small,right=5mm of rga] (rgb)
+      {\textbf{If you are a physicist or mathematician.}\\[3pt]
+       The blue boxes carry the exact statements, with the scope each one actually
+       establishes. Where a result is someone else's, it says so; where it is
+       exhaustion rather than proof, it says that too.};
+    \node[fill=warnbg,rounded corners,inner sep=7pt,text width=0.32\linewidth,
+          font=\small,right=5mm of rgb] (rgc)
+      {\textbf{If you are assessing this.}\\[3pt]
+       The rose boxes are claims this project published and then withdrew, each with
+       the measurement that overturned it. They are the reason the remaining numbers
+       can be trusted. #1};
+  \end{tikzpicture}}
+  \end{center}}

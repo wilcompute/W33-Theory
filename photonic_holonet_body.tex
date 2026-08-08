@@ -29,6 +29,9 @@ Universal Network, and Clock\\ on the $\W$ Substrate}
 \author{Wil Dahn}
 \date{June 2026 --- machine-verified edition}
 
+% Pass 4316: the shared three-audience box system (see analysis/W33_READER_BOXES.tex)
+\input{analysis/W33_READER_BOXES}
+
 \begin{document}
 \maketitle
 
@@ -117,10 +120,24 @@ parameters appear anywhere: every constant is substrate arithmetic at
 $q=3$.
 \end{abstract}
 
+\readerguide{Section~\ref{sec:overture} states the architecture; the
+       limitations are stated in the same voice as the results.}
+
+\begin{plainbox}[What this document is, in one paragraph]
+This describes an architecture in which a single photon, prepared in a particular
+self-entangled state and routed through one finite geometry, acts at once as the computer,
+the network that links computers, and the clock that times them. The geometry is not chosen
+for convenience: the same forty-point object fixes the number of optical modes, the set of
+available gates, and the routing table. What is presented is a design and its supporting
+mathematics, machine-verified where verification is possible. No such device has been
+built, and the sections describing fabrication say so explicitly.
+\end{plainbox}
+
+
 \tableofcontents
 
 %======================================================================
-\section{Overture: the machine is the geometry is the carrier}
+\section{Overture: the machine is the geometry is the carrier}\label{sec:overture}
 
 Classical architecture separates three things: the processor that acts,
 the program that directs, and the network that connects.  The thesis of
