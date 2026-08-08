@@ -190,6 +190,47 @@ we have said so on the same page. What follows is the specification, the evidenc
 the boundary of both.
 \end{plain}
 
+% ---------------------------------------------------------------------------------------
+% Pass 4349: the one figure for a reader who reads nothing else.  Geometry on the left,
+% silicon on the right, and the arrows are derivations rather than design decisions.
+% ---------------------------------------------------------------------------------------
+\begin{center}
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[font=\small,>={Latex[length=2.6mm]},
+  stage/.style={draw=ink,rounded corners=3pt,minimum height=17mm,text width=32mm,
+                align=center,inner sep=5pt},
+  arr/.style={-{Latex[length=2.6mm]},line width=1pt,draw=rule},
+  note/.style={font=\scriptsize\itshape,text=rule,align=center,text width=30mm}]
+
+  \node[stage,fill=plainbg] (geo)
+    {\textbf{One shape}\\[2pt]$W(3,3)$\\ $40$ points, $12$ links each};
+  \node[stage,fill=plainbg,right=17mm of geo] (grp)
+    {\textbf{Its symmetries}\\[2pt]$\mathrm{Sp}(4,3)$\\ $51{,}840$ of them};
+  \node[stage,fill=specbg,right=17mm of grp] (isa)
+    {\textbf{The instructions}\\[2pt]$4$ opcodes\\ on $81$ register states};
+  \node[stage,fill=specbg,right=17mm of isa] (si)
+    {\textbf{The silicon}\\[2pt]$103$ cells\\ at $208.86$\,MHz};
+
+  \draw[arr] (geo) -- node[note,above=1mm]{the shape has\\ exactly these} (grp);
+  \draw[arr] (grp) -- node[note,above=1mm]{smallest set that\\ reaches everything} (isa);
+  \draw[arr] (isa) -- node[note,above=1mm]{synthesised,\\ then measured} (si);
+
+  \node[note,below=3mm of geo,text width=34mm]{Chosen once, in Part~II};
+  \node[note,below=3mm of grp,text width=34mm]{Not chosen --- counted};
+  \node[note,below=3mm of isa,text width=34mm]{Not chosen --- proved minimal};
+  \node[note,below=3mm of si,text width=34mm]{Not chosen --- measured};
+\end{tikzpicture}}
+\end{center}
+
+\begin{plain}[Why that picture is the whole argument]
+Read left to right, only the first box is a decision. The symmetries are counted from the
+shape, the instruction set is the smallest one that can reach every state, and the cell
+count comes from running a synthesiser on the result. If the picture is right, then a
+disagreement about this machine is a disagreement about the shape --- not about
+engineering taste. That is the claim worth checking, and every later part exists to let
+you check one arrow of it.
+\end{plain}
+
 \noindent Three habits of this document, stated up front so they are not mistaken for
 style:
 
@@ -267,6 +308,16 @@ one thing.}
 \end{spec}
 
 \subsection*{The whole system, at a glance}
+
+\begin{plain}
+Four layers, drawn in the order a signal meets them. At the bottom is one photon carrying a
+three-valued symbol; above it the instruction set that moves that symbol around; above that
+the machine's own supervisor, running inside the same hardware it supervises; and at the top
+a network in which every machine is addressed by a point of the same geometry. Read the
+boxes downward and each is built from the one below it. Nothing in the picture is chosen for
+convenience --- the widths, the counts and the connections are all fixed by the shape in
+Part~II.
+\end{plain}
 
 \begin{center}
 \begin{tikzpicture}[
@@ -1375,6 +1426,15 @@ that never couples past to future is not really using the self-entanglement at a
 % =====================================================================================
 
 \subsection{The frame unit datapath}
+\begin{plain}
+This is the circuit diagram of the register itself --- the part of the machine that actually
+holds a number. Four small boxes across the top store the four coordinates; the shapes below
+them are the arithmetic that adds and multiplies modulo three; the funnel symbols are
+switches choosing which instruction is being carried out this cycle. The single box on the
+right marked \emph{load port} is the only way a value ever enters from outside, and
+\S\ref{sec:pbias} is about the consequences of it being there.
+\end{plain}
+
 
 \begin{center}
 \begin{tikzpicture}[font=\footnotesize,>={Latex[length=2.2mm]},
@@ -1846,6 +1906,16 @@ Three separately-published thresholds, one formula, agreement to $10^{-12}$.
 \end{spec}
 
 \subsection{Four, not three: fidelity is necessary but not sufficient}
+\begin{plain}
+A correction, and a useful one to read even if you skip the mathematics. We had sorted
+thirty-six quantum states into three groups by a single number measuring their quality, and
+concluded that only three genuinely different states existed. That was too quick: two things
+can score the same on one measurement and still behave differently. Acting with the full
+symmetry group instead of comparing numbers splits the thirty-six into \emph{four} classes,
+not three. The lesson generalises past this section --- a single number rarely separates
+everything, and this project has made that mistake more than once.
+\end{plain}
+
 
 \begin{gotwrong}
 An earlier draft of this section said: \emph{``the distillation search needs three
@@ -2376,9 +2446,19 @@ throughput. That is the whole trade, measured on one part in one harness rather 
 argued.
 \end{plain}
 
-\headline{A network of these is a network of machines that can each host machines. The
-fractal claim of \S\ref{sec:network} is about topology; this is the same claim about
-\emph{execution}, and it is now a measured curve.}
+\headline{The measured curve proves one synthesized datapath can host multiple guest
+contexts. It does not prove a network of nested machines or a distributed hypervisor.}
+
+\begin{plain}
+The software-side object that now closes part of that gap is HoloBox
+(\path{analysis/holobox.py}). A leaf VM and a recursively nested 40-child network use one
+immutable state grammar; addressed mailbox delivery and guest execution replace only one
+digest path. At six levels the uniform graph denotes $105{,}025{,}641$ logical VMs with six
+node blobs, and an independent GAP witness proves the logical W33 line-route bound $2n$.
+That is still a Python reference runtime, not an FPGA network, KVM boundary, OCI-conformant
+container engine, or measured distributed system. BT827's separate chart-aware lowering
+continues to cost $8n=(3+5)n$ micro-moves.
+\end{plain}
 
 % =====================================================================================
 
@@ -3042,20 +3122,31 @@ algebra, and put through yosys:
 \begin{center}\small
 \begin{tabular}{@{}lrrr@{}}
 \toprule
-design & opcodes & cells & wires\\
+machine & opcodes & cells & vs A\\
 \midrule
-four-opcode ISA & $4$ & $103$ & $137$\\
-reversible closure & $8$ & $201$ & $269$\\
+A\quad biased, irreversible (shipped) & $4$ & $103$ & $1.00\times$\\
+B\quad symmetric, irreversible & $6$ & $132$ & $1.28\times$\\
+C\quad biased, reversible & $8$ & $206$ & $2.00\times$\\
+D\quad symmetric, reversible & $12$ & $240$ & $2.33\times$\\
 \bottomrule
 \end{tabular}
 \end{center}
-\textbf{Thermodynamic reversibility costs $1.95\times$ the cells.} The datapath is shared;
-only the decode widens.
+\textbf{Thermodynamic reversibility costs $2.00\times$ the cells; removing the bias costs
+$1.28\times$; both together cost $2.33\times$.}
 
-The RTL was verified before the count was believed: a $40$-instruction random program run
-under \texttt{iverilog} ends at frame $(2,2,1,0)$, exactly matching the group computation in
-Python. The simulation also reproduces Pass 4204 independently --- from the origin, all
-three linear opcodes leave the register at $(0,0,0,0)$ and only the load port moves it.
+Every row was \emph{simulated} against the group computation before its cell count was
+recorded --- a random program per machine, final register state matched exactly. The
+simulation also reproduces Pass 4204 independently: from the origin, all three linear
+opcodes leave the register at $(0,0,0,0)$ and only the load port moves it.
+
+\emph{Two cautions on these figures.} The same eight-opcode design measured $201$ cells in
+an earlier run and $206$ here; the difference is the \emph{order} in which opcodes are
+assigned to the decoder, so these counts carry roughly $2.5\%$ encoding sensitivity and the
+ratios are the meaningful quantity. And the natural question --- do the two fixes share
+hardware? --- has the dull answer: $B + C - A = 235$ against a measured $240$, so they are
+independent to within that same noise. An earlier draft compared $2.33$ with
+$1.28 \times 2.00 = 2.56$ and reported synergy; gate counts add rather than multiply, and
+that comparison had no valid baseline.
 
 \emph{Scope:} yosys generic-gate counts after \texttt{abc} mapping, so the ratio is
 meaningful and the absolute numbers are not a tape-out estimate.
@@ -3063,6 +3154,62 @@ meaningful and the absolute numbers are not a tape-out estimate.
 
 \subsection{The one asymmetry underneath all of it}
 \label{sec:pbias}
+
+\begin{gotwrong}
+An earlier version of this section derived the bias from the geometry's point/line duality:
+translations act only on the point side, so \emph{the point carrier was forced}. That chain
+is \textbf{withdrawn}. A translation is not a map on projective points at all --- $[v] = [2v]$
+while $[v+t] \neq [2v+t]$, and it disagrees on $40$ of the $40$ points. The load port
+descends to \emph{neither} carrier; it lives on the $81$ affine vectors, a third object.
+The argument compared what the two carriers admit without first checking that the operation
+acts on either. Caught by the parallel track (Pass 4330), confirmed here (Pass 4335), and
+rebuilt below on the affine register, where it holds.
+\end{gotwrong}
+
+\begin{spec}[Pass 4341 --- the bias, by conjugation]
+Let $\sigma$ exchange the two hyperbolic pairs, $p \leftrightarrow f$. The question is
+whether $\sigma$ maps the instruction set to itself:
+\[
+  F_p \mapsto F_f, \qquad
+  \mathrm{CX}_{pf} \mapsto \mathrm{CX}_{fp}, \qquad
+  \mathrm{CX}_{fp} \mapsto \mathrm{CX}_{pf}, \qquad
+  Z_p \mapsto Z_f .
+\]
+The two couplers swap into each other and stay inside. $F_p$ and $Z_p$ do not: their images
+$F_f$ and $Z_f$ are \emph{not opcodes of this machine}. So the shipped ISA is not
+$\sigma$-invariant, and the symmetrised machine of Pass 4277, which contains both mirrors,
+is.
+
+Note what this replaces. Pass 4305 asked whether each opcode \emph{fixes} the two planes,
+got matching booleans, and concluded symmetry. Fixation booleans can agree while conjugation
+carries an opcode out of the set --- which is exactly what happens here.
+\end{spec}
+
+\begin{spec}[Pass 4345 --- and the load port is a symmetry-breaking term]
+$\mathrm{Sp}(4,3)$ fixes the origin \emph{exactly} and fixes nothing else; the translations
+fix nothing at all. The quotient is
+\[
+  |\mathrm{ASp}(4,3)| / |\mathrm{Sp}(4,3)| = 4{,}199{,}040 / 51{,}840 = 81 ,
+\]
+and those $81$ cosets \emph{are} the register states. The frame register is the vacuum
+manifold: the set of states reached from a distinguished one by broken generators.
+
+There are four broken directions, and they are equivalent under the unbroken group, since
+$\mathrm{Sp}(4,3)$ is transitive on the $80$ non-zero vectors. \textbf{No direction is
+intrinsically special, so a machine with one load port must pick one --- and that pick is
+the bias.}
+\end{spec}
+
+\begin{plain}
+Which makes the bias neither a flaw nor an accident. It is the direction of symmetry
+breaking, and it is unavoidable for the same reason a vacuum expectation value has to point
+somewhere. What \emph{is} a free choice is how many directions get ports: all four restores
+the symmetry, at the cost Part~III measures.
+
+The boundary, so the physics language is not over-read: this is a finite group acting on
+$81$ states. There is no Lagrangian and no continuous symmetry, so there is no Goldstone
+theorem here --- the count of broken directions is a coset count, not a count of modes.
+\end{plain}
 
 \begin{spec}[Pass 4282 --- the under-stirred pair is the f-register]
 The symplectic form splits the register into two hyperbolic pairs, $p = (x_0, x_1)$ and
@@ -3585,6 +3732,14 @@ immediately.
 
 % =====================================================================================
 \section{Reproducing everything in this document}\label{sec:repro}
+\begin{plain}
+Every number in this document comes from a program you can run. What follows is the list of
+commands, in dependency order: the group-theory computations first, then the hardware
+synthesis, then the formal proofs, then the guards that check the rest for the specific
+mistakes this project has made before. You do not need to understand the commands to use
+this page --- its purpose is that nothing here rests on being believed.
+\end{plain}
+
 % =====================================================================================
 
 \begin{spec}[Commands, in order]
@@ -3638,6 +3793,13 @@ closed tells you the first half is not decoration.
 \end{plain}
 
 \subsection{Still open}
+\begin{plain}
+The honest list. Everything below is either unbuilt, unproved, or built but not yet
+verified to the standard the rest of this document holds itself to. It is placed near the
+end because it is the section a reader deciding whether to trust the others should read
+second --- after the errata, and before anything else.
+\end{plain}
+
 
 \begin{enumerate}[leftmargin=*,itemsep=4pt]
 \item \textbf{One of the eight opcodes is not built, and deliberately so.}

@@ -42,13 +42,17 @@ def main() -> int:
             c[m.group(1)] += 1
             tot[m.group(1)] += 1
         ind = {"part": "", "section": "  ", "subsection": "    "}[lvl]
-        if lvl in ("part", "section") and c["plain"] == 0 and end - pos > 1500:
-            silent.append(title)
+        # SUBSECTIONS COUNT TOO.  The first version only checked part and section level
+        # and reported one silent section, while several long subsections -- the frame
+        # unit datapath, the whole system at a glance -- had no way in for a
+        # non-specialist either.  A reader does not care what level a heading is.
+        if c["plain"] == 0 and end - pos > 1200:
+            silent.append((lvl, title, end - pos))
         print(f"  {ind}{lvl:8s} {c['plain']:5d} {c['spec']:5d} {c['warn']:5d}  {title}")
     print(f"\n  totals: plain {tot['plain']}, spec {tot['spec']}, warn {tot['warn']}")
-    print(f"  sections over 1500 chars with NO plain-language box: {len(silent)}")
-    for s in silent:
-        print(f"    {s}")
+    print(f"  headings over 1200 chars with NO plain-language box: {len(silent)}")
+    for lvl, t, n in sorted(silent, key=lambda r: -r[2]):
+        print(f"    {n:6d}  {lvl:10s} {t}")
     return 0
 
 
