@@ -1,0 +1,17 @@
+name: Passes 4269-4276 frontier reconcile
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'analysis/BT4269_BT4276_h145_fusion_hodge_gds_strata_outside_box_insert.tex'
+      - 'tools/integrate_pass4269_4276_frontier.py'
+      - '.github/workflows/w33_pass4269_4276_frontier_reconcile.yml'
+  workflow_dispatch:
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python tools/integrate_pass4269_4276_frontier.py
+      - run: git diff --exit-code analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
