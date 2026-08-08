@@ -2760,11 +2760,46 @@ the motion, and a register coordinate the instruction set barely stirs is precis
 mode.
 
 That reframes the defect. It is not \emph{how many} edges leave a frame; it is \emph{which
-direction} they move it in, and one direction is nearly frozen. The prescription that
-follows is correspondingly different from the one we expected: what the design needs is an
-opcode that moves $x_2$ unconditionally --- the shear $S_f$ does exactly that --- rather
-than a second load port. Pass 4225 showed one load port suffices for \emph{reachability};
-this shows reachability was never the constraint on mixing.
+direction} they move it in, and one direction is nearly frozen.
+\end{plain}
+
+\begin{plain}
+\textbf{And here the first draft of this section was wrong, in a way worth keeping on the
+page.} It prescribed adding ``the shear $S_f$, which moves $x_2$ unconditionally''. $S_f$
+moves $x_2$ on \emph{zero} of the $81$ frames --- its third row is $(0,0,1,0)$, so it moves
+$x_3$. The reasoning had gone from the coordinate's name to an opcode whose subscript
+matched, which is not an argument.
+
+Pass 4245 tested it anyway, and found something better than the intended fix. Of the six
+opcodes, only $F_f$ and $\mathrm{CX}_{pf}$ move $x_2$ at all, each on $54$ of $81$ frames.
+\textbf{No opcode in the pool moves $x_2$ on every frame}, so the frozen coordinate cannot
+be unfrozen from inside the instruction set at all. And a control --- adding an ordinary
+translation instead --- improves mixing at least as much as either targeted opcode, which
+means the gain from any addition is mostly ``one more generator'', not ``the defect was
+addressed''.
+\end{plain}
+
+\begin{spec}[Pass 4246 --- the deficit is a constant, not a quirk]
+Across all $24$ minimum-size universal generating sets, the minimum stir --- the fraction of
+frames on which \emph{some} opcode moves the worst-served coordinate --- is
+\[
+  \tfrac{2}{3}\ \text{ exactly, in all } 24 .
+\]
+Not ``most'', not ``on average''. Four generators cannot fully stir four coordinates of this
+register, and the deficit is identical every time. The frozen coordinate is a property of
+the number four, not of the choice.
+\end{spec}
+
+\begin{plain}
+Pass 4250 adds a caution to the diagnosis itself. Measured in the time domain, the
+slowest-decaying coordinate observable is $x_3$ (half-life $4$ instructions), not $x_2$.
+There is no contradiction: the shipped ISA's stir scores are $x_0 = 1$, $x_1 = 0.889$,
+$x_2 = x_3 = 0.667$, so $x_2$ and $x_3$ are \emph{tied} at the minimum and two different
+instruments picked different members of a tied pair. The honest object is the under-stirred
+\emph{pair}, not a single frozen coordinate.
+
+The engineering consequence survives all of this: an observable with a $4$-instruction
+half-life is one that a $15$-instruction readout cadence does not fully scramble.
 \end{plain}
 
 \begin{spec}[Pass 4242 --- the instruction stream has an entropy, and it meets Landauer]
@@ -2791,9 +2826,72 @@ growing like $\rho^m$ --- Pass 4242's entropy seen from the other side, the same
 governing how much dead code exists and how much trajectory the machine generates.
 
 The shortest are the instruction set's \textbf{defining relations}, read off a trace rather
-than derived from a presentation; and every one of them is a peephole optimisation, since
-any occurrence in a stream is dead code by construction.
+than derived from a presentation.
+
+\emph{But not every closed walk is deletable}, and conflating the two would break programs.
+A closed walk returns the \emph{frame}; dead code must return the whole affine element.
+Pass 4248's optimiser (\texttt{scripts/w33\_peephole.py}) computes the latter by group
+multiplication and finds only $3$ minimal identity words of length $3$
+($\mathrm{CX}_{fp}^3$, $\mathrm{CX}_{pf}^3$, $Z_p^3$) plus one of length $4$ --- against
+$738$ frame-returning walks. It rewrites streams and verifies semantics are preserved on
+every run.
 \end{spec}
+
+\subsection{Two measurements the machine had never been given}
+
+\begin{spec}[Pass 4251 --- against its own comparison class, not against an ideal]
+Every spectral claim above is scored against the \emph{regular} case, which this object
+provably cannot attain. That makes the instruction layer look defective by construction.
+The fair comparison is other connected four-generator Schreier graphs on the same $81$
+frames. Against $120$ random ones:
+\begin{center}\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+ & shipped ISA & random median & percentile\\
+\midrule
+$\rho(B)$ (growth; lower is better) & $5.747$ & $6.656$ & $\mathbf{0}$\\
+top-hyperplane weight (localisation) & $0.613$ & $0.373$ & $\mathbf{100}$\\
+minimum stir & $0.667$ & $0.988$ & $\mathbf{0}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\textbf{Lowest growth of all $120$, and the most localised of all $120$.}
+\end{spec}
+
+\begin{plain}
+Those two extremes are the same fact. Everything the earlier sections called a failure ---
+not Ramanujan, graph RH violated, poles filling a band --- is the price of being a
+four-generator Schreier graph at all, and this one pays \emph{less} of it than any random
+peer. What is genuinely specific to it is the localisation, and that is inseparable from the
+rest: the algebraic structure making the instruction set cheap and slow-growing is the same
+structure that leaves a coordinate nearly still. A random generating set stirs everything
+and grows fast; this one grows slowly and freezes a direction.
+\end{plain}
+
+\begin{spec}[Pass 4252 --- the four-opcode machine has an arrow of time]
+Every opcode is a bijection, so the walk is doubly stochastic and its stationary
+distribution is exactly uniform. \textbf{That is not reversibility.} Reversibility needs the
+transition matrix to be symmetric, and the opcode set is not closed under inverses: there
+are $243$ ordered pairs of frames with a forward move and no reverse move, so the stationary
+entropy production is \emph{infinite}. Watching the trajectory reveals the direction of time
+with certainty the moment one of those transitions occurs.
+
+Closing the set under inverses --- eight instructions instead of four --- makes the walk
+exactly symmetric, with $0$ one-way pairs and entropy production $0$ bits per instruction.
+\end{spec}
+
+\begin{plain}
+Logical reversibility of each gate and thermodynamic reversibility of the process are
+different properties, and the four-opcode machine has the first without the second. No
+information is destroyed --- every opcode is invertible --- but the \emph{choice} is not: to
+undo an opcode is not itself an instruction.
+
+That is a genuine engineering trade, and it did not exist as a number before this pass. A
+four-opcode machine is cheap and arrow-of-time-violating; an eight-opcode machine doubles
+the decode logic and runs thermodynamically free. It also sharpens Pass 2836's ``compute is
+exactly zero'': that holds of the reversible closure, and the shipped four-opcode ISA does
+not have it.
+\end{plain}
 
 \headline{The machine's geometry is extremal; its algebra is not, and after Pass 4213
 we can say why the comparison only runs one way.}

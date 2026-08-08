@@ -1,0 +1,366 @@
+{
+  "pass_4245_fix": {
+    "best_mover": "F_f",
+    "prescription_failed": true,
+    "rows": {
+      "ISA + F_f (moves x2)": {
+        "deg": [
+          2,
+          10
+        ],
+        "hyperplane": "x1=0",
+        "hyperplane_weight": 0.41455352718074057,
+        "mixing": 16,
+        "participation_pct": 46.7822848160675,
+        "rho": 7.622792283261061,
+        "stir": [
+          1.0,
+          0.8888888888888888,
+          0.8888888888888888,
+          0.8888888888888888
+        ]
+      },
+      "ISA + S_f (4244's guess)": {
+        "deg": [
+          2,
+          10
+        ],
+        "hyperplane": "x2=2",
+        "hyperplane_weight": 0.4610038869739863,
+        "mixing": 14,
+        "participation_pct": 54.71864363373095,
+        "rho": 7.340145712072688,
+        "stir": [
+          1.0,
+          0.8888888888888888,
+          0.6666666666666666,
+          0.8888888888888888
+        ]
+      },
+      "ISA + Z1 (control)": {
+        "deg": [
+          4,
+          8
+        ],
+        "hyperplane": "x2=0",
+        "hyperplane_weight": 0.4693782066049946,
+        "mixing": 10,
+        "participation_pct": 39.58959460943968,
+        "rho": 6.748691918650675,
+        "stir": [
+          1.0,
+          1.0,
+          0.6666666666666666,
+          0.6666666666666666
+        ]
+      },
+      "shipped ISA": {
+        "deg": [
+          2,
+          8
+        ],
+        "hyperplane": "x2=0",
+        "hyperplane_weight": 0.6128670516611174,
+        "mixing": 15,
+        "participation_pct": 33.16039775273936,
+        "rho": 5.746872679901983,
+        "stir": [
+          1.0,
+          0.8888888888888888,
+          0.6666666666666666,
+          0.6666666666666666
+        ]
+      }
+    },
+    "why": "S_f moves x3 not x2; and no pool opcode moves x2 on more than 54/81 frames, so the pool cannot unfreeze it",
+    "x2_movers": {
+      "CX_fp": 0,
+      "CX_pf": 54,
+      "F_f": 54,
+      "F_p": 0,
+      "S_f": 0,
+      "S_p": 0
+    },
+    "x2_stir_cap": 0.6666666666666666
+  },
+  "pass_4246_census": {
+    "constant_value": 0.666667,
+    "distinct_min_stir": [
+      0.666667
+    ],
+    "distinct_plane_weights": [
+      0.3707,
+      0.3802,
+      0.4317,
+      0.4598,
+      0.4609,
+      0.4659,
+      0.4682,
+      0.6129
+    ],
+    "min_stir_is_constant": true,
+    "rows": [
+      {
+        "argmin": 1,
+        "min_stir": 0.6666666666666666,
+        "plane": "x1=1",
+        "plane_weight": 0.45982814220130813,
+        "set": "CX_fp+CX_pf+F_f+Z0",
+        "stir": [
+          1.0,
+          0.6666666666666666,
+          0.8888888888888888,
+          0.8888888888888888
+        ]
+      },
+      {
+        "argmin": 0,
+        "min_stir": 0.6666666666666666,
+        "plane": "x0=1",
+        "plane_weight": 0.4598281422013085,
+        "set": "CX_fp+CX_pf+F_f+Z1",
+        "stir": [
+          0.6666666666666666,
+          1.0,
+          0.8888888888888888,
+          0.8888888888888888
+        ]
+      },
+      {
+        "argmin": 0,
+        "min_stir": 0.6666666666666666,
+        "plane": "x0=0",
+        "plane_weight": 0.612867051661117,
+        "set": "CX_fp+CX_pf+F_f+Z2",
+        "stir": [
+          0.6666666666666666,
+          0.6666666666666666,
+          1.0,
+          0.8888888888888888
+        ]
+      },
+      {
+        "argmin": 0,
+        "min_stir": 0.6666666666666666,
+        "plane": "x1=0",
+        "plane_weight": 0.6128670516611171,
+        "set": "CX_fp+CX_pf+F_f+Z3",
+        "stir": [
+          0.6666666666666666,
+          0.6666666666666666,
+          0.8888888888888888,
+          1.0
+        ]
+      },
+      {
+        "argmin": 2,
+        "min_stir": 0.6666666666666666,
+        "plane": "x2=0",
+        "plane_weight": 0.6128670516611174,
+        "set": "CX_fp+CX_pf+F_p+Z0",
+        "stir": [
+          1.0,
+          0.8888888888888888,
+          0.6666666666666666,
+          0.6666666666666666
+        ]
+      },
+      {
+        "argmin": 2,
+        "min_stir": 0.6666666666666666,
+        "plane": "x3=0",
+        "plane_weight": 0.612867051661117,
+        "set": "CX_fp+CX_pf+F_p+Z1",
+        "stir": [
+          0.8888888888888888,
+          1.0,
+          0.6666666666666666,
+          0.6666666666666666
+        ]
+      },
+      {
+        "argmin": 3,
+        "min_stir": 0.6666666666666666,
+        "plane": "x3=2",
+        "plane_weight": 0.4598281422013081,
+        "set": "CX_fp+CX_pf+F_p+Z2",
+        "stir": [
+          0.8888888888888888,
+          0.8888888888888888,
+          1.0,
+          0.6666666666666666
+        ]
+      },
+      {
+        "argmin": 2,
+        "min_stir": 0.6666666666666666,
+        "plane": "x2=1",
+        "plane_weight": 0.4598281422013096,
+        "set": "CX_fp+CX_pf+F_p+Z3",
+        "stir": [
+          0.8888888888888888,
+          0.8888888888888888,
+          0.6666666666666666,
+          1.0
+        ]
+      },
+      {
+        "argmin": 1,
+        "min_stir": 0.6666666666666666,
+        "plane": "x2=0",
+        "plane_weight": 0.370671193491121,
+        "set": "CX_fp+F_f+F_p+Z0",
+        "stir": [
+          1.0,
+          0.6666666666666666,
+          0.6666666666666666,
+          0.8888888888888888
+        ]
+      },
+      {
+        "argmin": 2,
+        "min_stir": 0.6666666666666666,
+        "plane": "x0=0",
+        "plane_weight": 0.43166313219121727,
+        "set": "CX_fp+F_f+F_p+Z1",
+        "stir": [
+          0.8888888888888888,
+          1.0,
+          0.6666666666666666,
+          0.8888888888888888
+        ]
+      },
+      {
+        "argmin": 1,
+        "min_stir": 0.6666666666666666,
+        "plane": "x3=0",
+        "plane_weight": 0.43166313219121755,
+        "set": "CX_fp+F_f+F_p+Z2",
+        "stir": [
+          0.8888888888888888,
+          0.6666666666666666,
+          1.0,
+          0.8888888888888888
+        ]
+      },
+      {
+        "argmin": 1,
+        "min_stir": 0.6666666666666666,
+        "plane": "x1=0",
+        "plane_weight": 0.3706711934911209,
+        "set": "CX_fp+F_f+F_p+Z3",
+        "stir": [
+          0.8888888888888888,
+          0.6666666666666666,
+          0.6666666666666666,
+          1.0
+        ]
+      }
+    ],
+    "universal_size4": 24,
+    "with_frozen": 24
+  },
+  "pass_4247_factor_degrees": {
+    "distinct": [
+      1,
+      2,
+      14,
+      16,
+      20,
+      33
+    ],
+    "factor_degrees": [
+      1,
+      2,
+      2,
+      2,
+      2,
+      14,
+      14,
+      16,
+      16,
+      20,
+      20,
+      20,
+      33
+    ],
+    "in_sp43_character_degrees": [
+      1,
+      20
+    ],
+    "in_we6_character_degrees": [
+      1,
+      20
+    ],
+    "reason": "the generating set's symmetry group has order 4; its irreducible degrees are all 1, so no isotypic decomposition is available",
+    "representation_theoretic": false
+  },
+  "pass_4250_conservation": {
+    "frame_mixing_time": 15,
+    "note": "spectral localisation picks x2, time-domain decay picks x3; both are at the tied minimum stir, so the object is the pair, not one coordinate",
+    "per_coordinate": [
+      {
+        "amp_at_15": 0.020696984181225283,
+        "coord": 0,
+        "half_life": 1
+      },
+      {
+        "amp_at_15": 0.06046276361388025,
+        "coord": 1,
+        "half_life": 2
+      },
+      {
+        "amp_at_15": 0.04038490930646676,
+        "coord": 2,
+        "half_life": 3
+      },
+      {
+        "amp_at_15": 0.1300662678747153,
+        "coord": 3,
+        "half_life": 4
+      }
+    ],
+    "slowest": {
+      "amp_at_15": 0.1300662678747153,
+      "coord": 3,
+      "half_life": 4
+    },
+    "stir": [
+      1.0,
+      0.8888888888888888,
+      0.6666666666666666,
+      0.6666666666666666
+    ],
+    "understirred_tied": [
+      2,
+      3
+    ]
+  },
+  "pass_4251_null_model": {
+    "isa": {
+      "min_stir": 0.6666666666666666,
+      "plane_weight": 0.6128670516611174,
+      "rho": 5.746872679901983
+    },
+    "isa_percentile": {
+      "min_stir": 0.0,
+      "plane_weight": 100.0,
+      "rho": 0.0
+    },
+    "random_median": {
+      "min_stir": 0.9876543209876543,
+      "plane_weight": 0.3733785748915981,
+      "rho": 6.656128922853586
+    },
+    "samples": 120
+  },
+  "pass_4252_arrow_of_time": {
+    "doubly_stochastic": true,
+    "entropy_production_4op": "infinite",
+    "entropy_production_8op_bits": 0.0,
+    "one_way_pairs_4op": 243,
+    "one_way_pairs_8op": 0,
+    "symmetric_4op": false,
+    "symmetric_8op": true
+  }
+}

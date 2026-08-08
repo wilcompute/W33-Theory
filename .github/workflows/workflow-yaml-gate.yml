@@ -1,0 +1,71 @@
+name: Workflow YAML gate
+
+# WHY THIS EXISTS
+#
+# Six workflow files in this repository could not be parsed by GitHub and failed on every
+# single trigger. They were invisible as a class because a broken workflow still appears in
+# the run list -- just listed by FILE PATH instead of by its `name:` field, which is easy to
+# read as an ordinary failure.
+#
+# Two fault classes, both genuine YAML violations rather than GitHub quirks:
+#
+#   1. an unquoted scalar containing ": "
+#        run: echo 'Disabled: GitHub Pages must remain on master:/docs.'
+#      YAML reads `run: echo 'Disabled` and then chokes on the second colon.
+#
+#   2. `${{ ... }}` inside a FLOW mapping
+#        concurrency: {group: pass4065-4072-${{ github.ref }}, cancel-in-progress: true}
+#      Block style tolerates the braces; inside `{ }` the `{{` opens a nested flow mapping
+#      mid-value.
+#
+# Both are one-line fixes (quote the value). This job blocks, because a workflow that
+# cannot be parsed is not a failing test -- it is a test that never ran.
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/**'
+  pull_request:
+    branches: [master]
+    paths:
+      - '.github/workflows/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: workflow-yaml-gate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  parse:
+    name: every workflow file must parse
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Parse all workflow YAML
+        run: |
+          python - <<'PY'
+          import glob, sys, yaml
+          bad = []
+          files = sorted(glob.glob('.github/workflows/*.yml') +
+                         glob.glob('.github/workflows/*.yaml'))
+          for f in files:
+              try:
+                  yaml.safe_load(open(f, encoding='utf-8'))
+              except Exception as e:
+                  bad.append((f, str(e).splitlines()[0]))
+          print(f"{len(files)} workflow files, {len(bad)} unparseable")
+          for f, e in bad:
+              print(f"  {f}: {e}")
+          if bad:
+              print()
+              print("Fix: quote the offending scalar. The two classes seen here were an")
+              print("unquoted value containing ': ', and ${{ }} inside a { } flow mapping.")
+          sys.exit(1 if bad else 0)
+          PY

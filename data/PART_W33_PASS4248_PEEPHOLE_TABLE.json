@@ -1,0 +1,15 @@
+{
+  "max_len": 5,
+  "note": "identity words multiply to the identity of ASp(4,3), so they are deletable from any stream; frame-returning words that are not group identities are NOT deletable and are excluded",
+  "opcodes": [
+    "CX_fp",
+    "CX_pf",
+    "F_p",
+    "Z_p"
+  ],
+  "patterns_by_length": {
+    "3": 3,
+    "4": 1
+  },
+  "total_patterns": 4
+}
