@@ -1593,6 +1593,15 @@ compiler and threshold. (Witness: \path{analysis/w33_self_fueling_cost.py}.)
 
 %======================================================================
 \section{Memory, protection, and the immune system}
+
+\begin{plainbox}
+How the machine stores information without losing it. Quantum states decay, so a
+useful memory has to notice damage and repair it before the damage accumulates --- the
+reason for the biological metaphor. What makes this section unusual is that the code doing
+the protecting is not designed and then bolted on: it is already present in the geometry,
+as the shape's own hole structure.
+\end{plainbox}
+
 \label{sec:memory}
 
 \begin{theorem}[The code register is the Steinberg module]
@@ -1973,6 +1982,15 @@ $\log_3 q^2 = 2$ trits per cycle.
 
 %======================================================================
 \section{Synchronization: beacons and schedules}
+
+\begin{plainbox}
+How separated machines agree on the time. The trick is to find sets of optical
+states that are all equally distinguishable from one another --- so that no member of the
+set is a special case --- and use them as a shared reference. This section counts how many
+such sets exist, which turns out to be exactly determined by the geometry rather than
+chosen, and then builds a schedule from them.
+\end{plainbox}
+
 \label{sec:sync}
 
 The maximum classically coherent constellations are the
@@ -7737,11 +7755,11 @@ combinatorial check --- the single remaining step. The K3 identification keeps i
 So the gravitational frontier reduces to one finite condition plus standard analysis --- a dramatic
 narrowing, honestly bounded.
 
-\subsection{Pass 33 --- the last link is a theorem: the gravity derivation closes to two narrow conditions}
+\subsection{Pass 33 --- one discretization link is a theorem; the physical chain remains conditional}
 \label{sec:capstone-thirtythree}
 
-The single finite condition is run, and the gravity arc closes: no open analytic theorem remains in
-the chain from $q=3$ to Riemannian spacetime.
+The shape-regularity subproblem has a standard theorem behind it. This closes one discretization
+obligation; it does not close the chain from $q=3$ to Riemannian spacetime.
 
 \emph{Edgewise subdivision is shape-regular.} The K3 tower is built by edgewise refinement, and
 edgewise subdivision is the classical shape-regular scheme: Edelsbrunner--Grayson (2000) proved its
@@ -7755,32 +7773,30 @@ Edelsbrunner--Grayson scheme is the shape-regular one). K3 is four-dimensional, 
 is shape-regular by the $d=4$ case --- a known theorem, not an open problem. (Witness:
 \path{analysis/w33_edgewise_shape_regularity.py}.)
 
-\emph{The chain closes to two narrow conditions.} So the gravity arc --- Pass 28 (open sector)
+\emph{The remaining obligations are explicit.} The proposed gravity arc --- Pass 28 (open sector)
 $\to$ 29 (gravity \emph{is} the spectral action) $\to$ 30 (manifold $=$ K3) $\to$ 31 (4D convergence
 demonstrated) $\to$ 32 (collapse to one finite condition) $\to$ 33 (that condition is a theorem) ---
-ends with \emph{no open analytic theorem} in the chain. What remains is two narrow, well-defined
-conditions, neither an open theorem: \textbf{(1)} the candidate identification that the substrate's
+still contains two material, well-defined obligations: \textbf{(1)} the candidate identification that the substrate's
 continuum is specifically K3 (supported by $\chi=f$, $\sigma=-\mu^2$, $b_2^+=q$, the lattice
 $2E_8\oplus3H=M_1$, the hyperk\"ahler structure, and the heterotic--K3 dictionary), and
 \textbf{(2)} the confirmation that the BT984--1135 edgewise refinement is the canonical
-Edelsbrunner--Grayson subdivision. Given both, the chain runs unbroken:
+Edelsbrunner--Grayson subdivision. If both are supplied, the intended mathematical route is:
 \[
-q{=}3\to W(3,3)\to\text{spectral action}=\text{gravity}+\text{SM}\to M^4{=}K3
-\xrightarrow{\text{[shape-regular]}}\text{Dodziuk--Patodi}+\text{GH/FEEC}\to\text{propinquity}\to
-\text{Riemannian }K3,\ G>0,\ \text{Ricci-flat vacuum}.
+\begin{aligned}
+q{=}3&\to W(3,3)\to\text{candidate spectral-action model}\to M^4{=}K3,\\
+M^4&\xrightarrow{\text{shape regular}}\text{Dodziuk--Patodi and GH/FEEC}
+\to\text{propinquity}\to\text{Riemannian }K3.
+\end{aligned}
 \]
-The whole of physics --- the Standard Model, cosmology, and gravity as the spectral action whose
-continuum is Ricci-flat K3 with positive Newton constant --- follows from the single integer $q=3$.
+This conditional route does not show that the Standard Model, cosmology, gravity, or a positive
+Newton constant follows from the single integer $q=3$.
 (Witness: \path{analysis/w33_last_link_closed.py}.)
 
-\emph{Honest scope:} this is the closing \emph{status}, not a claim of complete proof. The two
-remaining conditions are genuine --- the K3 identification is a strong candidate, not a uniqueness
-proof, and the scheme confirmation is a combinatorial property of the construction, not re-verified
-here --- and several analysis steps cite established theorems (Edelsbrunner--Grayson, Dodziuk--Patodi,
-FEEC, Gromov--Hausdorff, Latr\'emoli\`ere) applied to the substrate's tower, with the Newton
-positivity assuming a standard positive cutoff. ``Closed to two narrow conditions'' means no
-\emph{open} analytic theorem remains in the chain, the residuals being a candidate identification and
-a scheme confirmation --- a faithful, honestly-bounded closing status.
+\emph{Honest scope:} the K3 identification is a candidate rather than a uniqueness theorem, the
+scheme confirmation is not re-verified here, and applying the cited convergence theorems requires
+their hypotheses on the actual tower. Newton positivity additionally assumes a standard positive
+cutoff. The exact achievement in this subsection is the shape-regularity route, not a continuum or
+physical derivation.
 
 \subsection{Pass 34 --- the system: the substrate as a computer and network architecture}
 \label{sec:capstone-thirtyfour}
@@ -8089,50 +8105,54 @@ $78$--$88\%$ optical survival. Catalog optics, no cryostat, calibration-free: a 
 $1/10$ certifies the $q=3$ contextuality (the magic fuel), near $0$ refutes the identification. (Witness:
 \path{analysis/w33_demonstrator_experiment.py}.)
 
-\emph{The planetary computer.} The fractal law $H_n$ (replace each of the $40$ points by $H_{n-1}$)
-gives $40^n$ leaf cores, $(40^n-1)/39$ instances, and routing diameter exactly $8n=8\log_{40}N$
-(verified). Seating $N$ needs level $\lceil\log_{40}N\rceil$: humanity ($8\times10^9$) and all devices
-($3\times10^{10}$) both fit at level $7$ ($1.64\times10^{11}$ slots), diameter $56$ hops, with $W(E_6)$
-transitive on the leaves so no node is privileged --- consensus is structural, a node joins by splicing.
-And it boots on legacy hardware: the Clifford layer is the Gottesman--Knill stabilizer formalism
-(polynomial), so the whole architecture runs as a classical emulator on any computer; only the quantum
-advantage costs more, $9^t$ for $t$ cubic gates, a knob from $t=0$ (a fully classical node) upward.
-(Witness: \path{analysis/w33_fractal_datacenter.py}.)
+\emph{The recursive systems target.} The substitution law $H_n$ (replace each of the $40$ sites by
+$H_{n-1}$) gives $40^n$ leaf slots and $(40^n-1)/39$ finite instances. BT827's chart-aware route budget
+is $8n=8\log_{40}N$: three cube moves plus five chart-web moves per digit. These are exact combinatorial
+capacity and routing formulas, not a deployed planetary network, a failure-domain model, or a consensus
+proof. Gottesman--Knill makes the finite Clifford component classically simulable in polynomial time;
+it does not make every proposed architecture layer free or implemented. (Witness:
+\path{analysis/w33_fractal_datacenter.py}.)
 
-\emph{One number, two worlds.} The engineering datasheet and the Standard Model are arithmetic in the
-same nine integers (forced by $q!=2q$): $q=3$ is the radix and the three generations; $k=12$ the network
-radix and $\sin^2\theta_W=3/8$; $f=24$ the per-qutrit Clifford order and $1/\alpha=137=\Phi_4\Phi_3+\Phi_6$;
-$|W(E_6)|=51840=24\cdot2160$; bisection $100$; beat $30=h(E_8)$; $1/10=1/\Phi_4$. So one benchtop
-measurement tests the computer and the cosmos at once. (Witness: \path{analysis/w33_physics_bridge.py}.)
+The current software advance is \path{analysis/holobox.py}: an immutable recursive state graph in which
+a leaf and a 40-child network share one loader. At six levels it denotes $105{,}025{,}641$ logical VMs
+and $4{,}096{,}000{,}000$ leaf chamber slots with six uniform blobs; a depth-five mailbox send and guest
+execution each copy exactly six blobs. Its table-free $2n$ route counts logical W33 line-bus
+transactions, not BT827 chart micro-moves. This is a deterministic Python runtime, not a photonic,
+KVM-isolated, or OCI-conformant deployment.
 
-\emph{Honest scope:} the shot-count decision statistics, the fractal scaling, the $9^t$ emulation cost,
-and the shared-integer arithmetic are computed; the contextual fraction $1/10$, the fractal substitution
-law (BT827), and the physics identifications are corpus results used as inputs, several at integer level.
-``Boots on a dinosaur'' means the architecture layer is polynomial-time classical, not that legacy
-hardware delivers quantum advantage.
+\emph{One integer palette, two proposed readings.} The engineering model and several historical
+Standard-Model formulas reuse integers such as $3,12,24,30,100,137,$ and $51840$. Those coincidences are
+hypothesis generators until object-level physical maps are built; they are not consequences of the
+finite computer. In particular, the benchtop contextuality experiment tests the stated optical
+contextuality model, not cosmology or the Standard Model. (Audit witness:
+\path{analysis/w33_physics_bridge.py}.)
+
+\emph{Honest scope:} the shot-count decision statistics, recursive counts, finite emulator, and HoloBox
+lifecycle are executable artifacts. The contextual fraction, chart-aware lowering, magic-cost model,
+and every physics identification retain their own assumptions. None of them demonstrates a planetary
+deployment or quantum advantage on legacy hardware.
 
 \subsection{Pass 40 --- the machine made runnable: the emulator and three frontier applications}
 \label{sec:capstone-forty}
 
-This pass ships the architecture as a \emph{runnable} program and pushes three frontier applications
-from conjecture to verified witnesses; the companion paper \path{holonet_practical_implications.tex}
-collects the practical case.
+This pass ships a runnable finite-node demonstration and three application probes; the companion paper
+\path{holonet_practical_implications.tex} collects their present scope and limitations.
 
-\emph{The universal VM, executable.} \path{analysis/holonet_node.py} is a runnable holonet node: it
+\emph{The finite node emulator.} \path{analysis/holonet_node.py} is a runnable holonet node model: it
 builds the $40$-node GQ$(3,3)$ fabric and routes a packet in two hops (address is route, $\mu=4$
 multipath); runs a qutrit register as a Clifford stabilizer tableau over $\mathbb{F}_3$ that evolves by
 the symplectic group in \emph{polynomial} time (a Fourier$+$SUM circuit builds a valid entangled
 qutrit-Bell stabilizer state, checked by mutual commutation; gate timing stays flat from $4$ to $32$
 qutrits); exposes the magic dial (classical cost $9^t$); and self-reproduces by splicing a $W(3,3)$
-child (address $+1$ digit, diameter $+8$). That the file executes on a laptop is the demonstration: the
-architecture of life boots on ordinary hardware, and the network of many such emulators is, as one
-$W(E_6)$-symmetric object, the planetary computer.
+child (address $+1$ digit in the older chart-budget model). Executing this file proves portability of
+the finite control path. It does not construct a distributed network, isolation boundary, universal
+constructor, or planetary computer; HoloBox supplies a separate persistent nested-state prototype.
 
-\emph{Mining-free consensus.} \path{analysis/w33_consensus_ledger.py}: $W(E_6)$ vertex-transitivity
-makes a ledger leaderless (leader election dissolves); agreement is two hops plus a $1/3$-per-round
-averaging contraction ($\sim19$ rounds for a part in $10^9$), Byzantine-safe to $5$. Proof-of-work pays
-$\sim10^9$~J/transaction (Bitcoin $\sim150$~TWh/yr); the holonet's floor is the $\sim2.6\times10^{-19}$~J
-syndrome export --- $\sim27$ orders lower, security from geometry not burned power.
+\emph{Consensus probe.} \path{analysis/w33_consensus_ledger.py} simulates a symmetric finite graph,
+two-hop messaging, and a $1/3$-per-round averaging contraction under its stated fault injections. It is
+not a production Byzantine-consensus proof, leader-election elimination theorem, or transaction-energy
+benchmark. Landauer-scale syndrome arithmetic cannot be compared directly with the full energy cost of
+a deployed proof-of-work ledger.
 
 \emph{The substrate code is a DNA code.} \path{analysis/w33_dna_storage_code.py}: a homopolymer-free DNA
 encoding has density $\log_2 3 = 1.585$~bit/nt --- the substrate's exact Holevo/OAM alphabet --- and the
