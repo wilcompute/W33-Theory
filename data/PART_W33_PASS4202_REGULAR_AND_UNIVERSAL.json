@@ -1,0 +1,33 @@
+{
+  "by_size": [
+    {
+      "regular": 1,
+      "size": 4,
+      "universal": 0
+    },
+    {
+      "regular": 2,
+      "size": 5,
+      "universal": 0
+    },
+    {
+      "regular": 1,
+      "size": 6,
+      "universal": 0
+    },
+    {
+      "regular": 0,
+      "size": 7,
+      "universal": 0
+    },
+    {
+      "regular": 0,
+      "size": 8,
+      "universal": 0
+    }
+  ],
+  "conclusion": "exhaustive over this pool sizes 4-8: no regular universal set",
+  "full_group_order": 4199040,
+  "pool": 10,
+  "universal_regular_sets": []
+}
