@@ -1,0 +1,72 @@
+name: Manuscript checkers
+
+# WHY THIS EXISTS
+#
+# The blueprint accumulated twenty LaTeX errors across five fault families and nobody
+# noticed, because it had not been compiled since a refactor and the checkers only ran
+# when someone remembered to run them.  Two of those faults silently truncated the PDF
+# from 158 pages to 34 while still reporting success.
+#
+# Two jobs, deliberately different in severity:
+#
+#   recall  -- HARD FAIL.  scripts/test_checker_recall.py plants fresh instances of every
+#              fault family and requires each to be caught.  If it fails, a checker is
+#              broken, and a broken checker is worse than none because it reports clean.
+#              This must block.
+#
+#   scan    -- WARN ONLY.  scripts/check_tex_insert_pitfalls.py is advisory: it reports
+#              candidates, and candidates are sometimes fine.  Per this repo's hook
+#              philosophy (see CLAUDE.md on check_rediscovery.py), blocking on advisory
+#              output trains people to bypass the gate, so this one never blocks.
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - '**/*.tex'
+      - 'scripts/check_tex_insert_pitfalls.py'
+      - 'scripts/test_checker_recall.py'
+      - '.github/workflows/manuscript-checkers.yml'
+  pull_request:
+    branches: [master]
+    paths:
+      - '**/*.tex'
+      - 'scripts/check_tex_insert_pitfalls.py'
+      - 'scripts/test_checker_recall.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: manuscript-checkers-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  recall:
+    name: checker recall (must pass)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Plant fresh faults and require every family to catch its own
+        run: python scripts/test_checker_recall.py
+
+  scan:
+    name: pitfall scan (advisory)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Scan every insert for the five fault families
+        continue-on-error: true
+        run: |
+          python scripts/check_tex_insert_pitfalls.py | tee scan.txt
+          echo "### Manuscript pitfall scan" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          tail -40 scan.txt >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"

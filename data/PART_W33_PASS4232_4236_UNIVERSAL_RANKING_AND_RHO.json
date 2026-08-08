@@ -1,0 +1,217 @@
+{
+  "pass_4232_universal_ranking": {
+    "isa_rank": 11,
+    "ranked_bottom": [
+      {
+        "E": 459,
+        "V": 81,
+        "deg_max": 14,
+        "deg_min": 6,
+        "graph_RH": false,
+        "label": "CX_fp+CX_pf+F_f+F_p+S_f+S_p+Z0+Z2+Z3",
+        "nontrivial": 160,
+        "on_circle": 0,
+        "regular": false,
+        "rho_B": 10.687103470845276
+      },
+      {
+        "E": 468,
+        "V": 81,
+        "deg_max": 14,
+        "deg_min": 8,
+        "graph_RH": false,
+        "label": "CX_fp+CX_pf+F_f+F_p+Z0+Z1+Z2+Z3",
+        "nontrivial": 160,
+        "on_circle": 0,
+        "regular": false,
+        "rho_B": 10.835414289684252
+      },
+      {
+        "E": 468,
+        "V": 81,
+        "deg_max": 14,
+        "deg_min": 8,
+        "graph_RH": false,
+        "label": "CX_fp+CX_pf+F_f+F_p+S_f+Z0+Z1+Z2+Z3",
+        "nontrivial": 160,
+        "on_circle": 0,
+        "regular": false,
+        "rho_B": 10.835414289684252
+      },
+      {
+        "E": 468,
+        "V": 81,
+        "deg_max": 14,
+        "deg_min": 8,
+        "graph_RH": false,
+        "label": "CX_fp+CX_pf+F_f+F_p+S_p+Z0+Z1+Z2+Z3",
+        "nontrivial": 160,
+        "on_circle": 0,
+        "regular": false,
+        "rho_B": 10.835414289684252
+      },
+      {
+        "E": 468,
+        "V": 81,
+        "deg_max": 14,
+        "deg_min": 8,
+        "graph_RH": false,
+        "label": "CX_fp+CX_pf+F_f+F_p+S_f+S_p+Z0+Z1+Z2+Z3",
+        "nontrivial": 160,
+        "on_circle": 0,
+        "regular": false,
+        "rho_B": 10.835414289684252
+      }
+    ],
+    "ranked_top": [
+      {
+        "E": 225,
+        "V": 81,
+        "deg_max": 6,
+        "deg_min": 2,
+        "graph_RH": false,
+        "label": "CX_fp+F_f+S_p+Z1",
+        "nontrivial": 160,
+        "on_circle": 0,
+        "regular": false,
+        "rho_B": 4.83107415242776
+      },
+      {
+        "E": 225,
+        "V": 81,
+        "deg_max": 6,
+        "deg_min": 2,
+        "graph_RH": false,
+        "label": "CX_pf+F_p+S_f+Z3",
+        "nontrivial": 160,
+        "on_circle": 0,
+        "regular": false,
+        "rho_B": 4.831074152427762
+      },
+      {
+        "E": 243,
+        "V": 81,
+        "deg_max": 8,
+        "deg_min": 2,
+        "graph_RH": false,
+        "label": "CX_fp+F_f+S_p+Z3",
+        "nontrivial": 160,
+        "on_circle": 0,
+        "regular": false,
+        "rho_B": 5.567302295063923
+      },
+      {
+        "E": 243,
+        "V": 81,
+        "deg_max": 8,
+        "deg_min": 2,
+        "graph_RH": false,
+        "label": "CX_fp+F_f+S_f+S_p+Z3",
+        "nontrivial": 160,
+        "on_circle": 0,
+        "regular": false,
+        "rho_B": 5.567302295063923
+      },
+      {
+        "E": 243,
+        "V": 81,
+        "deg_max": 8,
+        "deg_min": 2,
+        "graph_RH": false,
+        "label": "CX_pf+F_p+S_f+Z1",
+        "nontrivial": 160,
+        "on_circle": 0,
+        "regular": false,
+        "rho_B": 5.56730229506393
+      },
+      {
+        "E": 243,
+        "V": 81,
+        "deg_max": 8,
+        "deg_min": 2,
+        "graph_RH": false,
+        "label": "CX_pf+F_p+S_f+S_p+Z1",
+        "nontrivial": 160,
+        "on_circle": 0,
+        "regular": false,
+        "rho_B": 5.56730229506393
+      },
+      {
+        "E": 261,
+        "V": 81,
+        "deg_max": 8,
+        "deg_min": 2,
+        "graph_RH": false,
+        "label": "CX_fp+CX_pf+F_p+Z1",
+        "nontrivial": 160,
+        "on_circle": 0,
+        "regular": false,
+        "rho_B": 5.746872679901948
+      },
+      {
+        "E": 261,
+        "V": 81,
+        "deg_max": 8,
+        "deg_min": 2,
+        "graph_RH": false,
+        "label": "CX_fp+CX_pf+F_p+S_p+Z1",
+        "nontrivial": 160,
+        "on_circle": 0,
+        "regular": false,
+        "rho_B": 5.746872679901948
+      },
+      {
+        "E": 261,
+        "V": 81,
+        "deg_max": 8,
+        "deg_min": 2,
+        "graph_RH": false,
+        "label": "CX_fp+CX_pf+F_f+Z2",
+        "nontrivial": 160,
+        "on_circle": 0,
+        "regular": false,
+        "rho_B": 5.746872679901973
+      },
+      {
+        "E": 261,
+        "V": 81,
+        "deg_max": 8,
+        "deg_min": 2,
+        "graph_RH": false,
+        "label": "CX_fp+CX_pf+F_f+Z3",
+        "nontrivial": 160,
+        "on_circle": 0,
+        "regular": false,
+        "rho_B": 5.746872679901976
+      }
+    ],
+    "rh_universal": 0,
+    "subsets_examined": 848,
+    "universal": 360
+  },
+  "pass_4233_ledger": {
+    "E": 261,
+    "V": 81,
+    "bass_identity_verified": true,
+    "status": {
+      "open": "whether any irregular Schreier graph on these frames can satisfy the graph RH",
+      "proved_here": "finite exhaustion over a ten-generator pool",
+      "regular_side": "cited (Terras): RH <=> Ramanujan for k-regular"
+    }
+  },
+  "pass_4234_manuscript_sweep": {
+    "flagged": {},
+    "manuscripts_scanned": 75,
+    "total_review_lines": 0
+  },
+  "pass_4236_rho_identity": {
+    "avg_degree_minus_one": 5.444444444444445,
+    "degree": null,
+    "independent_methods_agree": true,
+    "monic_coeffs": null,
+    "note": "no monic integer relation of degree <= 10; a non-monic cubic was rejected by the algebraic-integer test and by a residual plateau at 8.33455e-37 across 60/90/140 digits",
+    "rejected_candidates": [],
+    "rho_from_pencil_float": 5.746872679901983,
+    "rho_high_precision": "5.746872679901964274417558660209539683477"
+  }
+}
