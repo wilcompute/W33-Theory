@@ -1,0 +1,50 @@
+name: Passes 4269-4276 exact regression
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4269_4276_h145_fusion_hodge_gds_strata_outside_box.py'
+      - 'analysis/w33_pass4272_gds_delay_compiler.py'
+      - 'data/w33_pass4269_*.json'
+      - 'data/w33_pass427*.json'
+      - 'data/PART_4269_4276_*.json'
+      - 'tests/test_w33_pass4269_4276_h145_fusion_hodge_gds_strata_outside_box.py'
+      - '.github/workflows/w33_pass4269_4276_exact_regression.yml'
+  workflow_dispatch:
+jobs:
+  quick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy pytest
+      - run: python analysis/w33_pass4269_4276_h145_fusion_hodge_gds_strata_outside_box.py
+      - run: pytest -q tests/test_w33_pass4269_4276_h145_fusion_hodge_gds_strata_outside_box.py
+      - run: python analysis/w33_pass4272_gds_delay_compiler.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-pass4272-gds-delay-bank
+          path: |
+            build/w33_delay_bank_4272.gds
+            build/w33_delay_bank_4272_summary.json
+  full-finite-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - run: python analysis/w33_pass4269_4276_h145_fusion_hodge_gds_strata_outside_box.py --full
+  heavy-strata-replay:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - run: python analysis/w33_pass4269_4276_h145_fusion_hodge_gds_strata_outside_box.py --replay-strata
