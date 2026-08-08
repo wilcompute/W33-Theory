@@ -42,6 +42,27 @@ jobs:
       - name: Audit every manuscript's labels
         run: python scripts/check_labels.py --strict
 
+      - name: Every heading must have a way in for a non-specialist
+        # Advisory. The blueprint reached zero at Pass 4348 and the point is to notice
+        # when a new section arrives without a plain-language box, not to block on it.
+        continue-on-error: true
+        run: |
+          python scripts/blueprint_outline.py | tail -20 >> "$GITHUB_STEP_SUMMARY"
+          python - <<'PY'
+          import re, subprocess, sys
+          out = subprocess.run([sys.executable, "scripts/blueprint_outline.py"],
+                               capture_output=True, text=True).stdout
+          m = re.search(r"NO plain-language box: (\d+)", out)
+          n = int(m.group(1)) if m else 0
+          print(f"headings with no plain-language box: {n}")
+          PY
+
+      - name: Ratio claims must name a baseline
+        # Advisory for the same reason: it is a triage list, and one known false positive
+        # (a comparison whose baseline is the table above it) is expected.
+        continue-on-error: true
+        run: python scripts/check_ratio_claims.py | tee -a "$GITHUB_STEP_SUMMARY"
+
   compile:
     name: ${{ matrix.doc }}
     runs-on: ubuntu-24.04
