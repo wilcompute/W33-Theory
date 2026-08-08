@@ -1,0 +1,20 @@
+name: W33 Pass 4212 protected frontier reconciliation
+on:
+  push:
+    paths:
+      - "analysis/BT4205_BT4212_carrier_native_hodge_delay_interval_bonkers_insert.tex"
+      - "analysis/W33_CURRENT_FRONTIER_MANIFEST.tex"
+      - "tools/integrate_pass4205_4212_frontier.py"
+      - ".github/workflows/w33_pass4205_4212_frontier_reconcile.yml"
+  workflow_dispatch:
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python tools/integrate_pass4205_4212_frontier.py --check
+      - run: test "$(grep -c 'BT4205_BT4212_carrier_native_hodge_delay_interval_bonkers_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex)" = 1
+      - run: test "$(grep -c 'BT4213_BT4220_small_cover_su4_quantum_hysteresis_clock_hawking_pell_vacuum_velocity_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex)" = 1
