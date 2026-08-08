@@ -1,0 +1,72 @@
+{
+  "pass_4301_dual_machine": {
+    "line": {
+      "E": 91,
+      "V": 40,
+      "deg": [
+        1,
+        6
+      ],
+      "graph_RH": false,
+      "label": "line side",
+      "nontrivial": 72,
+      "on_circle": 0,
+      "rho": 4.078733846523846
+    },
+    "load_port_has_dual": false,
+    "point": {
+      "E": 102,
+      "V": 40,
+      "deg": [
+        2,
+        6
+      ],
+      "graph_RH": false,
+      "label": "point side",
+      "nontrivial": 78,
+      "on_circle": 0,
+      "rho": 4.620533158134286
+    },
+    "spectrally_identical": false
+  },
+  "pass_4303_gset": {
+    "characters_equal": false,
+    "distinct_pairs": 14,
+    "elements_with_differing_fix": 29950,
+    "group_order": 51840,
+    "profile": {
+      "0,0": 10368,
+      "0,1": 4320,
+      "0,2": 6480,
+      "0,4": 540,
+      "1,0": 8640,
+      "1,1": 11520,
+      "13,4": 160,
+      "2,1": 5760,
+      "4,0": 1080,
+      "4,1": 480,
+      "4,7": 960,
+      "40,40": 2,
+      "5,4": 1440,
+      "8,16": 90
+    }
+  },
+  "pass_4304_dual_rail": {
+    "detected": 1897,
+    "detection_rate": 0.9571140262361252,
+    "missed": 85,
+    "trials": 1982
+  },
+  "pass_4305_duality_stable": {
+    "bias_source": "the load port Z_p, which has no dual and no f-counterpart",
+    "f_plane_is_line": false,
+    "f_plane_points": 4,
+    "linear_opcode_plane_asymmetry": 0,
+    "linear_part_is_pf_symmetric": true,
+    "omega_on_f": 1,
+    "omega_on_p": 1,
+    "p_plane_is_line": false,
+    "p_plane_points": 4,
+    "planes_are_hyperbolic_not_isotropic": true
+  }
+}

@@ -44,9 +44,10 @@ jobs:
         with: {python-version: '3.12'}
       - name: Count orphans against the baseline
         env:
-          # Set by Pass 4297 after routing 108 of the original 114 home. The remainder are
-          # the six that match no manuscript's vocabulary; see the pass notes.
-          BASELINE: '6'
+          # Pass 4297 routed 108 of the original 114 home; Pass 4300 read the last six,
+          # found none of them dead, and placed them too. The backlog is CLEARED, so the
+          # baseline is zero and any new unreferenced insert now fails the build.
+          BASELINE: '0'
         run: |
           python - <<'PY'
           import os, re, sys

@@ -1,0 +1,378 @@
+{
+  "pass_4300_homeless": {
+    "rows": [
+      {
+        "bytes": 1552,
+        "duplicated_in": [],
+        "headings": [
+          "Raw Cubic Leakage Ratios"
+        ],
+        "stem": "BT588_leakage_table_latex_insert",
+        "verdict": "standalone result, no home document"
+      },
+      {
+        "bytes": 1816,
+        "duplicated_in": [],
+        "headings": [
+          "Levi Homology versus Phase-Cover Fiber Homology"
+        ],
+        "stem": "BT589_homology_separation_latex_insert",
+        "verdict": "standalone result, no home document"
+      },
+      {
+        "bytes": 1687,
+        "duplicated_in": [],
+        "headings": [
+          "Cubic Leakage as an Ihara Shadow"
+        ],
+        "stem": "BT597_cubic_leakage_as_ihara_shadow_insert",
+        "verdict": "standalone result, no home document"
+      },
+      {
+        "bytes": 993,
+        "duplicated_in": [],
+        "headings": [
+          "Internal Tetrahedral Carrier and Hodge Clock"
+        ],
+        "stem": "BT646_internal_s4_hodge_clock_insert",
+        "verdict": "standalone result, no home document"
+      },
+      {
+        "bytes": 2084,
+        "duplicated_in": [],
+        "headings": [
+          "The Six-Carrier/Four-Cell Boundary Split"
+        ],
+        "stem": "BT659_s4_trace_codec_split_insert",
+        "verdict": "standalone result, no home document"
+      },
+      {
+        "bytes": 2498,
+        "duplicated_in": [],
+        "headings": [
+          "Five Levi frontiers: odd-order Jordan law, discriminant lift, and typed middleware"
+        ],
+        "stem": "PART_2026_07_10_LEVI_FIVE_FRONTIERS_insert",
+        "verdict": "standalone result, no home document"
+      }
+    ],
+    "superseded": 0
+  },
+  "pass_4302_render_audit": {
+    "audited": 108,
+    "detail": [],
+    "issues": {}
+  },
+  "pass_4306_parameter_sweep": {
+    "flags": {
+      "PAPER_SECTION4_E6E8.tex": [
+        [
+          28,
+          "78",
+          "2(v-1), the pole count"
+        ]
+      ],
+      "W33_FOR_EVERYONE.tex": [
+        [
+          2367,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          2367,
+          "15",
+          "eigenvalue multiplicity g"
+        ],
+        [
+          2397,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          2614,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          4408,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          4594,
+          "78",
+          "2(v-1), the pole count"
+        ]
+      ],
+      "W36_PAPER.tex": [
+        [
+          639,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          657,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          682,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          3128,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          4575,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          4577,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          4582,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          4590,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          4592,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          4594,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          4793,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          4794,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          4809,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          4813,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          4867,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          4903,
+          "78",
+          "2(v-1), the pole count"
+        ]
+      ],
+      "holonet_machine_blueprint_body.tex": [
+        [
+          581,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          581,
+          "48",
+          "poles from r"
+        ],
+        [
+          581,
+          "30",
+          "poles from s"
+        ],
+        [
+          948,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          3063,
+          "78",
+          "2(v-1), the pole count"
+        ]
+      ],
+      "photonic_holonet_body.tex": [
+        [
+          3654,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          5679,
+          "78",
+          "2(v-1), the pole count"
+        ]
+      ],
+      "single_photon_universal_computation.tex": [
+        [
+          248,
+          "78",
+          "2(v-1), the pole count"
+        ]
+      ],
+      "w33_paper_CLII_deep_solution_insert.tex": [
+        [
+          59,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          59,
+          "24",
+          "eigenvalue multiplicity f"
+        ],
+        [
+          59,
+          "15",
+          "eigenvalue multiplicity g"
+        ]
+      ],
+      "w33_paper_body.tex": [
+        [
+          1274,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          3595,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          4224,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          4810,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          4891,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          4892,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          4892,
+          "24",
+          "eigenvalue multiplicity f"
+        ],
+        [
+          4892,
+          "15",
+          "eigenvalue multiplicity g"
+        ],
+        [
+          4942,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          4942,
+          "48",
+          "poles from r"
+        ],
+        [
+          4942,
+          "30",
+          "poles from s"
+        ],
+        [
+          4969,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          4975,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          4975,
+          "24",
+          "eigenvalue multiplicity f"
+        ],
+        [
+          4975,
+          "15",
+          "eigenvalue multiplicity g"
+        ],
+        [
+          5353,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          7688,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          7690,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          7691,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          11533,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          11538,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          11753,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          11788,
+          "78",
+          "2(v-1), the pole count"
+        ],
+        [
+          13565,
+          "78",
+          "2(v-1), the pole count"
+        ]
+      ]
+    },
+    "manuscripts_flagged": 8,
+    "total_passages": 58
+  }
+}

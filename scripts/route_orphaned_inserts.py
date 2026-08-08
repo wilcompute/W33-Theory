@@ -47,10 +47,18 @@ BOOKS = {
         ROOT / "analysis" / "W33_PHOTONIC_RECOVERED_APPENDIX.tex"),
 }
 APPENDICES = {v[1].resolve() for v in BOOKS.values()}
+# Pass 4300 read the six that previously matched nothing.  None is a dead draft: each
+# carries a section heading and a result (cubic leakage ratios, Levi versus phase-cover
+# homology, cubic leakage as an Ihara shadow, the tetrahedral Hodge clock, the
+# six-carrier/four-cell split, five Levi frontiers).  They sit beside the blueprint's Ihara
+# and Levi material, so the vocabulary is widened to reach them rather than leaving genuine
+# findings unreachable on a technicality about filenames.
 FALLBACK = {
     "holonet_machine_blueprint_body.tex": ("opcode", "register", "instruction", "rtl",
                                            "synthesis", "compiler", "decoder",
-                                           "controller", "architecture", "hardware"),
+                                           "controller", "architecture", "hardware",
+                                           "ihara", "levi", "leakage", "carrier",
+                                           "hodge clock", "codec"),
     "w33_paper_body.tex": ("theorem", "lemma", "cohomolog", "character", "irreducible",
                            "lattice", "weyl", "root system", "moonshine"),
     "photonic_holonet_body.tex": ("photon", "optical", "waveguide", "oam", "laser",

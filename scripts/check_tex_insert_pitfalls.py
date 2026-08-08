@@ -87,13 +87,87 @@ def bare_underscores(txt: str):
     return [m.start() for m in re.finditer(r"_", masked)]
 
 
-def preamble_packages() -> set[str]:
-    if not BODY.exists():
+def _pkgs_of(path: Path) -> set[str]:
+    if not path.exists():
         return set()
-    txt = BODY.read_text(encoding="utf-8", errors="replace")
+    txt = path.read_text(encoding="utf-8", errors="replace")
     out: set[str] = set()
     for m in re.finditer(r"\\usepackage(?:\[[^\]]*\])?\{([^}]*)\}", txt):
         out.update(p.strip() for p in m.group(1).split(","))
+    return out
+
+
+def includers() -> dict[str, list[Path]]:
+    """Which manuscript bodies actually \\input each insert, transitively through the
+    generated appendices.
+
+    WHY THIS EXISTS.  Until Pass 4299 the needs-pkg family tested every insert against the
+    BLUEPRINT's preamble only.  That made it structurally blind to a missing package in
+    any other document, and it duly missed photonic_holonet's absent tcolorbox -- reported
+    as a clean scan while the manuscript failed to compile.  A checker that always consults
+    the wrong preamble cannot be fixed by better recall testing."""
+    inc: dict[str, list[Path]] = {}
+    # Start at the TOP-LEVEL manuscripts, not the bodies.  The wrappers are what carry
+    # \input of the shared frontier manifest, and an earlier version that began at
+    # *_body.tex mapped the two tcolorbox inserts to no manuscript at all -- so the fix
+    # for the blueprint-only blindness silently did nothing.
+    roots = [p for p in ROOT.glob("*.tex") if not p.name.endswith("_body.tex")]
+
+    def links(p: Path) -> set[str]:
+        try:
+            txt = p.read_text(encoding="utf-8", errors="replace")
+        except OSError:
+            return set()
+        return {Path(m).name.removesuffix(".tex")
+                for m in re.findall(r"\\(?:input|include)\{([^}]*)\}", txt)}
+
+    def resolve(stem: str) -> Path | None:
+        for cand in (ROOT / f"{stem}.tex", ROOT / "analysis" / f"{stem}.tex",
+                     ROOT / "manuscripts" / f"{stem}.tex"):
+            if cand.exists():
+                return cand
+        return None
+
+    for r in roots:
+        frontier, seen = list(links(r)), set(links(r))
+        while frontier:
+            s = frontier.pop()
+            inc.setdefault(s, []).append(r)
+            f = resolve(s)
+            if f is None:
+                continue
+            for n in links(f):
+                if n not in seen:
+                    seen.add(n)
+                    frontier.append(n)
+    return inc
+
+
+_INCLUDERS = includers()
+
+
+def preamble_packages(stem: str | None = None) -> set[str]:
+    """Packages available to an insert: the union over every manuscript that includes it.
+    With no stem, the blueprint's own preamble (the historical behaviour)."""
+    if stem is None:
+        return _pkgs_of(BODY)
+    hosts = _INCLUDERS.get(stem)
+    if not hosts:
+        return _pkgs_of(BODY)          # unincluded: judge against the default target
+
+    def host_pkgs(root: Path) -> set[str]:
+        """A wrapper's packages plus those of every body it inputs."""
+        out = _pkgs_of(root)
+        txt = root.read_text(encoding="utf-8", errors="replace")
+        for m in re.findall(r"\\(?:input|include)\{([^}]*)\}", txt):
+            n = Path(m).name.removesuffix(".tex")
+            if n.endswith("_body"):
+                out |= _pkgs_of(ROOT / f"{n}.tex")
+        return out
+
+    out = host_pkgs(hosts[0])
+    for h in hosts[1:]:
+        out &= host_pkgs(h)            # must work in EVERY host, so intersect
     return out
 
 
@@ -127,6 +201,9 @@ def scan(path: Path, have: set[str], thms: set[str]) -> list[tuple[int, str, str
         if ln not in seen_lines:
             seen_lines.add(ln)
             hits.append((ln, "bare-underscore", c))
+    # Judge each insert against the preamble(s) of the manuscript(s) that include it,
+    # not against a single hard-coded document.
+    have = preamble_packages(path.stem) or have
     for env, pkg in NEEDS.items():
         if pkg in have:
             continue
