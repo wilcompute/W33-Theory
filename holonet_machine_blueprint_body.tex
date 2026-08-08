@@ -620,11 +620,38 @@ take $20$ distinct values --- an invariant the zeta discards entirely, which is 
 how a graph can be exceptional and spectrally anonymous at once.
 
 \textbf{But $|\mathrm{Aut}|$ does not pick a graph either.} The maximum
-$51{,}840 = |\mathrm{Sp}(4,3)|$ is attained by \textbf{two} of the $28$, not one. So the
-zeta distinguishes $1$ class of $28$, $|\mathrm{Aut}|$ distinguishes $20$, and separating
-the final pair needs something neither provides. That residual ambiguity is an open
-question, recorded as one rather than rounded away.
+$51{,}840 = |\mathrm{Sp}(4,3)|$ is attained by \textbf{two} of the $28$, not one.
 \end{spec}
+
+\begin{spec}[Pass 4296 --- and the last two are the two halves of one geometry]
+Pass 4287 left the pair as an open ambiguity. It is not one. The two graphs agree on
+\emph{every} cheap invariant --- rank $3$, vertex-transitive, $160$ triangles, $40$
+$4$-cliques, identical local spectra, and both locally $4K_3$ --- and an exhaustive search
+confirms they are genuinely non-isomorphic. That combination is the signature of a duality,
+not of two unrelated objects, and building the symplectic generalized quadrangle
+$\mathrm{GQ}(3,3)$ from the form settles it:
+\[
+  \text{graph } 27 = \text{POINT graph}, \qquad
+  \text{graph } 26 = \text{LINE graph},
+\]
+verified by explicit isomorphism. $\mathrm{GQ}(3,3)$ has $40$ points \emph{and} $40$
+totally isotropic lines, and for odd $q$ the duality $W(3,q) \leftrightarrow Q(4,q)$ is not
+an isomorphism --- which is exactly why the pair share the parameters, the spectrum,
+$|\mathrm{Aut}|$, the rank and the local structure while remaining distinct.
+\end{spec}
+
+\begin{plain}
+So the identification ladder closes, and its last rung says something about this machine
+rather than merely about graph theory. The zeta resolves $1$ class of $28$;
+$|\mathrm{Aut}|$ resolves $20$; and the final two are the point side and the line side of a
+single geometry. What separates them is not a count but a \emph{role}.
+
+That is the same distinction the register is built on. \S\ref{sec:pbias} found the
+instruction set biased toward $p$ over $f$ --- and $p$ and $f$ are precisely the two
+hyperbolic halves the symplectic form names. The ambiguity at the top of the graph
+hierarchy and the asymmetry at the bottom of the instruction set are the same duality, seen
+from opposite ends of the machine.
+\end{plain}
 
 \begin{plain}
 For an engineer the practical content is the first box: information crosses this network
@@ -2647,6 +2674,14 @@ $|\lambda| = \sqrt\rho$.
 
 \textbf{The instruction graph does not satisfy the graph Riemann Hypothesis.} The question
 that was ill-posed three times has an answer, and it is negative.
+
+\medskip
+\emph{Scope (Pass 4291).} Every number in this box is an invariant of the frame graph, and
+the frame graph does not determine the instruction set: $349$ universal generating sets
+yield only $89$ distinct zeta signatures, with up to twelve sets sharing one. So this is a
+statement about an equivalence class of instruction sets, not about a unique ISA. The same
+caveat applies to every $\rho(B)$, pole count and localisation weight in this chapter, and
+is stated once here rather than repeated at each.
 \end{spec}
 
 \begin{plain}

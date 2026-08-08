@@ -1,0 +1,83 @@
+name: Orphaned inserts gate
+
+# WHY THIS EXISTS
+#
+# 114 analysis/*_insert.tex files had been written, committed, and never \input by any
+# manuscript -- finished write-ups no reader could reach. They accumulated because the
+# convention has two halves (write the insert, include it) and nothing checked the second.
+#
+# This gate makes the class extinct rather than periodically rediscovered. It fails when a
+# NEW insert lands unreferenced, and only then: the historical backlog is recorded as a
+# baseline so the gate does not fire on work that predates it. Lower the baseline as
+# orphans are routed home; it is a ratchet, not a target.
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/*_insert.tex'
+      - '**/*.tex'
+      - 'scripts/find_orphaned_inserts.py'
+      - '.github/workflows/orphaned-inserts-gate.yml'
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/*_insert.tex'
+      - '**/*.tex'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: orphaned-inserts-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  gate:
+    name: no NEW unreferenced inserts
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Count orphans against the baseline
+        env:
+          # Set by Pass 4297 after routing 108 of the original 114 home. The remainder are
+          # the six that match no manuscript's vocabulary; see the pass notes.
+          BASELINE: '6'
+        run: |
+          python - <<'PY'
+          import os, re, sys
+          from pathlib import Path
+
+          ROOT = Path('.')
+          INPUT_RE = re.compile(r'\\(?:input|include)\{([^}]*)\}')
+          inserts = {p.stem for p in ROOT.glob('analysis/*_insert.tex')}
+          included = set()
+          for tex in ROOT.rglob('*.tex'):
+              try:
+                  txt = tex.read_text(encoding='utf-8', errors='replace')
+              except OSError:
+                  continue
+              for m in INPUT_RE.finditer(txt):
+                  n = Path(m.group(1).strip()).name
+                  included.add(n[:-4] if n.endswith('.tex') else n)
+          orphans = sorted(inserts - included)
+          baseline = int(os.environ['BASELINE'])
+          print(f'{len(inserts)} insert files, {len(orphans)} unreferenced '
+                f'(baseline {baseline})')
+          for o in orphans:
+              print(f'  {o}')
+          if len(orphans) > baseline:
+              print()
+              print(f'FAIL: {len(orphans) - baseline} insert(s) beyond the baseline are not '
+                    f'\\input by any manuscript.')
+              print('Route them with: py -3 scripts/route_orphaned_inserts.py --emit')
+              sys.exit(1)
+          if len(orphans) < baseline:
+              print()
+              print(f'Orphans are below the baseline. Lower BASELINE to {len(orphans)} '
+                    f'in this workflow to hold the gain.')
+          PY

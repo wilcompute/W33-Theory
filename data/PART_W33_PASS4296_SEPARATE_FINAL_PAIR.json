@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    26,
+    27
+  ],
+  "gq_duality": true,
+  "isomorphism": {
+    "isomorphic": false,
+    "permutation": null,
+    "verified": null
+  },
+  "results": {
+    "26": {
+      "aut": 51840,
+      "distinct_local_spectra": 1,
+      "four_cliques": 40,
+      "local_cycle_type": "{(3, 3, 3, 3): 40}",
+      "local_spectrum": "(-1.0, -1.0, -1.0, -1.0)...",
+      "orbital_rank": 3,
+      "triangles": 160,
+      "vertex_transitive": true
+    },
+    "27": {
+      "aut": 51840,
+      "distinct_local_spectra": 1,
+      "four_cliques": 40,
+      "local_cycle_type": "{(3, 3, 3, 3): 40}",
+      "local_spectrum": "(-1.0, -1.0, -1.0, -1.0)...",
+      "orbital_rank": 3,
+      "triangles": 160,
+      "vertex_transitive": true
+    }
+  },
+  "separating_invariants": []
+}
