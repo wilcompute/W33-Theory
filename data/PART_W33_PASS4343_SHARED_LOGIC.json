@@ -1,0 +1,116 @@
+{
+  "by_cell": [
+    {
+      "A": 23,
+      "B": 35,
+      "C": 62,
+      "D": 76,
+      "cell": "$_AND_",
+      "predicted": 74,
+      "saved": -2
+    },
+    {
+      "A": 1,
+      "B": 5,
+      "C": 12,
+      "D": 8,
+      "cell": "$_MUX_",
+      "predicted": 16,
+      "saved": 8
+    },
+    {
+      "A": 38,
+      "B": 49,
+      "C": 84,
+      "D": 100,
+      "cell": "$_NAND_",
+      "predicted": 95,
+      "saved": -5
+    },
+    {
+      "A": 8,
+      "B": 11,
+      "C": 8,
+      "D": 13,
+      "cell": "$_NOR_",
+      "predicted": 11,
+      "saved": -2
+    },
+    {
+      "A": 7,
+      "B": 8,
+      "C": 12,
+      "D": 12,
+      "cell": "$_NOT_",
+      "predicted": 13,
+      "saved": 1
+    },
+    {
+      "A": 12,
+      "B": 13,
+      "C": 14,
+      "D": 16,
+      "cell": "$_OR_",
+      "predicted": 15,
+      "saved": -1
+    },
+    {
+      "A": 8,
+      "B": 0,
+      "C": 8,
+      "D": 0,
+      "cell": "$_SDFFE_PP0N_",
+      "predicted": 0,
+      "saved": 0
+    },
+    {
+      "A": 0,
+      "B": 8,
+      "C": 0,
+      "D": 8,
+      "cell": "$_SDFFE_PP0P_",
+      "predicted": 8,
+      "saved": 0
+    },
+    {
+      "A": 3,
+      "B": 3,
+      "C": 6,
+      "D": 7,
+      "cell": "$_XNOR_",
+      "predicted": 6,
+      "saved": -1
+    },
+    {
+      "A": 3,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "cell": "$_XOR_",
+      "predicted": -3,
+      "saved": -3
+    }
+  ],
+  "caveat": "same order as the opcode-ordering sensitivity noted at Pass 4339",
+  "machines": {
+    "w33_machine_a": {
+      "cells": 103,
+      "label": "A biased, irreversible"
+    },
+    "w33_machine_b": {
+      "cells": 132,
+      "label": "B symmetric, irreversible"
+    },
+    "w33_machine_c": {
+      "cells": 206,
+      "label": "C biased, reversible"
+    },
+    "w33_machine_d": {
+      "cells": 240,
+      "label": "D symmetric, reversible"
+    }
+  },
+  "measured_D": 240,
+  "predicted_total": 235,
+  "saved": -5
+}
