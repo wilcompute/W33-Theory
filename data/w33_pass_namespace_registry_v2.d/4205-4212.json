@@ -2,11 +2,54 @@
   "schema": "w33.pass_namespace_registry.v2.entry",
   "range": [4205, 4212],
   "slug": "carrier_surgery_native_twobody_compressed_hodge_pdk_delay_interval_lattice_absorber_uncertainty_topological_battery",
-  "title": "Five implementation closures and three bonkers probes: carrier representation surgery, native two-body relational compilation, compressed Hodge sensing, component-level tapped-delay materialization, edge/nonedge interval completion, exact W33 critical absorber, graph uncertainty, and Levi harmonic storage",
-  "status": "reserved",
+  "title": "Five implementation closures and three bonkers probes: carrier representation surgery, native dual-rail compilation, compressed Hodge sensing, component-level tapped-delay materialization, edge/nonedge interval completion, exact W33 critical absorber, graph uncertainty, and Levi harmonic storage",
+  "status": "source_complete_exact_certificate_carrier_surgery_native_dualrail_compressed_hodge_component_delay_interval_strata_absorber_uncertainty_harmonic_storage_hardware_and_global_completion_pending",
   "owner": "openai-gpt-5.6-sol",
   "reserved_at": "2026-08-07T21:31:00-04:00",
+  "completed_at": "2026-08-07T21:59:00-04:00",
   "purpose": "Execute the five open implementation targets after Passes 4177-4204 and add three independent finite exact probes in critical coupling, graph uncertainty, and harmonic-cycle storage.",
-  "coordination": "Preserve all current website diagnostics and the Actions-based Pages contract, the authoritative long-form docs/index.html, and numerically ordered frontier manifests. Do not edit docs/index.html directly.",
-  "boundary": "Reservation only. No derived Standard Model, fabricated processor, laboratory analog decoder, fabricated photonic stack, globally complete nonlinear theorem, measured absorber, physical uncertainty experiment, energy-storage device, gravity, cosmology, or theory of everything is promoted."
+  "certificate_status": "PASS_EXACT_CARRIER_SURGERY_NATIVE_DUALRAIL_COMPRESSED_HODGE_COMPONENT_DELAY_INTERVAL_STRATA_ABSORBER_UNCERTAINTY_HARMONIC_STORAGE",
+  "certificates": {
+    "exact_packet": "3ac264ad9e91406b0016b01fa987f6e2d5770d5ee3874fb729707b38c475cf37",
+    "combined_manifest": "5a93faeedf96f61df842272e827c04ae153f1d37fc8537e4d02ebfb0439abc3f",
+    "carrier_surgery": "e90cd4f7f745b21cf77b03d677ee5d6b14429148b44bf807c83aa8c38b61482d",
+    "native_dualrail": "93e7bb7475d53893d245e01484522d39f97093551519b487033e1963e6fcce81",
+    "compressed_hodge": "c2755c293c4234d49ba0fc616425446dc956f0ee6c673b6529dd513ea125e824",
+    "component_delay": "2350d9380886ccb4f3ec385c325fc2a55e6354ce1deea9c7dc43678417642710",
+    "interval_strata": "a52e6d2658676f5c01aa75140e9bcc1b74f4c388c036a648aa3125444de51df1",
+    "absorber": "5e898a1041f08dfa5a8ecd63c74783a6be9a821f8de2960e4e47c0ce2b51d423",
+    "uncertainty": "09039497e1ed5633a1710466740d4fe759f824779327f120d606cca975319dd3",
+    "harmonic_storage": "8432aecf80c66790186f1259deb41ffae995a5002bf4e0815a29abbaa1062c0c"
+  },
+  "promoted": [
+    "five complete standard generations are the maximum standard-charge sector keeping both nonabelian Weyl-only one-loop beta coefficients positive inside 145 states",
+    "exhaustive 5888-case block packing finds no nonzero full-PSp-commuting standard-charge re-embedding in the fixed H145 carrier",
+    "29-logical-qubit dual-rail transmon topology using 87 transmons excluding readout and 28 inter-logical tunable couplers",
+    "ten deterministic compressed H1 channels are the first member of the stated nested family clearing gain 0.05 on every audited cycle/theta nullspace through support 14",
+    "component-level static tapped-delay contract with 919 cells and rejection of a 1280-MZI dynamic selector counterfactual",
+    "interval-exhaustive edge and nonedge stabilizer fixed spaces with root counts 5/3 and 13/9 for selectors 24/15",
+    "exact rank-24 critical absorber with vertex absorption 3/5",
+    "exact W33 vertex-spectral support law s*d>=40",
+    "81-mode gauge-invariant Levi harmonic quadratic storage functional with minimum integer-cycle energy four"
+  ],
+  "external_pending": [
+    "phenomenologically viable gauge embedding, scalar/Higgs beta contributions, masses, Yukawas and UV completion",
+    "87-transmon fabrication, calibrated parallel entangling gates, readout, crosstalk and fault tolerance",
+    "globally optimal compressed Hodge channel count, physical analog sensor construction and calibration",
+    "proprietary PDK DRC, exact cell insertion losses, dispersion, electrical keepouts, packaging and fabrication",
+    "subgroup-lattice completion and globally complete 80-dimensional nonlinear classification with independent arbitrary-precision interval proof",
+    "hardware implementations of the absorber and harmonic filters",
+    "remote quick/exhaustive CI, frontier reconciliation and manuscript PDF evidence"
+  ],
+  "artifacts": {
+    "certificate": "data/PART_4205_4212_CARRIER_NATIVE_HODGE_DELAY_INTERVAL_BONKERS.json",
+    "manifest": "data/PART_4205_4212_CARRIER_NATIVE_HODGE_DELAY_INTERVAL_BONKERS_manifest.json",
+    "verifier": "analysis/w33_pass4205_4212_carrier_native_hodge_delay_interval_bonkers.py",
+    "regression": "tests/test_w33_pass4205_4212_carrier_native_hodge_delay_interval_bonkers.py",
+    "report": "analysis/BT4205_BT4212_carrier_native_hodge_delay_interval_bonkers.md",
+    "manuscript_insert": "analysis/BT4205_BT4212_carrier_native_hodge_delay_interval_bonkers_insert.tex",
+    "public_page": "docs/carrier-native-hodge-delay-interval-4205-4212.html"
+  },
+  "coordination": "Preserves all earlier packets and the independent 4213-4220 packet, places this packet numerically between 4185-4192 and 4213-4220 in the shared frontier, preserves the Actions-based Pages contract and authoritative long-form website, and does not edit docs/index.html directly.",
+  "boundary": "No Standard Model derivation, fabricated processor, laboratory analog decoder, DRC-clean/fabricated photonic stack, globally complete nonlinear theorem, measured absorber, continuum uncertainty experiment, physical energy-storage device, gravity, cosmology, or theory of everything is promoted."
 }
