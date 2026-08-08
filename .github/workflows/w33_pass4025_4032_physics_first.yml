@@ -9,7 +9,7 @@ on:
       - '.github/workflows/w33_pass4025_4032_physics_first.yml'
   workflow_dispatch:
 permissions: {contents: read}
-concurrency: {group: pass4025-4032-physics-${{ github.ref }}, cancel-in-progress: true}
+concurrency: {group: "pass4025-4032-physics-${{ github.ref }}", cancel-in-progress: true}
 jobs:
   exact:
     runs-on: ubuntu-24.04

@@ -20,4 +20,4 @@ jobs:
       - run: python -m pip install --upgrade pip numpy scipy networkx pytest
       - run: python analysis/w33_pass4137_4144_matrix_horizon_rg_scar_curvature.py > /tmp/pass4137.json
       - run: python -m pytest -q tests/test_w33_pass4137_4144_matrix_horizon_rg_scar_curvature.py
-      - run: grep -F '"all_checks_hold": true' /tmp/pass4137.json
+      - run: "grep -F '\"all_checks_hold\": true' /tmp/pass4137.json"

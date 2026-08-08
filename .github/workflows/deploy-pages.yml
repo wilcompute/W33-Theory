@@ -1,64 +1,38 @@
-name: Manual fallback W33 Pages deployment
+name: Disabled superseded W33 Pages deployment
 
-# The repository's automatic GitHub Pages source is master:/docs.
-# This workflow is deliberately manual-only so it cannot race the managed
-# branch publisher or overwrite it with an older queued artifact.
+# SUPERSEDED. The single publisher is .github/workflows/pages-deploy.yml.
+#
+# WHY THIS ONE IS DISABLED RATHER THAN LEFT AS A FALLBACK.
+#
+# Its verification step required all four of
+#   docs/index.html, docs/404.html, docs/full-site-2026-08-06.html,
+#   docs/exceptional-geometry-41a8d733.html
+# to hash to 41a8d733f42da18282fa276f5d2fa82bac7516f6.
+#
+# The other three still do. `docs/index.html` does not and must not: 41a8d733 is the
+# 11 KB LANDING PAGE, not the 1.9 MB paper. So this workflow could no longer succeed --
+# and if it somehow did, it would republish the landing page, which is the exact fault
+# that took the site down (commit 413ed869b replaced index.html with an 86-line stub).
+#
+# A dispatchable workflow whose success condition is the outage is not a fallback. Two
+# workflows that can both publish to Pages is also the ambiguity that made the original
+# stale-CDN failure hard to diagnose: when the site is wrong, "which of these published
+# it?" should not be a question.
+#
+# Kept as an inert record rather than deleted, matching stabilize-pages-source.yml.
+# To deploy, use pages-deploy.yml -- it runs on pushes touching docs/ and by
+# workflow_dispatch, gates on structural invariants before publishing, and verifies the
+# SERVED BYTES against the repository afterwards via scripts/check_site_is_current.py.
+
 on:
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages-manual-fallback-w33-site
-  cancel-in-progress: false
 
 jobs:
-  build:
+  disabled:
+    if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout current master
-        uses: actions/checkout@v4
-        with:
-          ref: master
-          fetch-depth: 1
-
-      - name: Verify canonical docs payload
-        shell: bash
-        run: |
-          set -euo pipefail
-          expected='41a8d733f42da18282fa276f5d2fa82bac7516f6'
-          for path in \
-            docs/index.html \
-            docs/404.html \
-            docs/full-site-2026-08-06.html \
-            docs/exceptional-geometry-41a8d733.html
-          do
-            test -f "$path"
-            actual="$(git hash-object "$path")"
-            echo "$path $actual"
-            test "$actual" = "$expected"
-          done
-          test -f docs/.nojekyll
-          python tools/check_website_migration_authorization.py --repository-root .
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload docs artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./docs
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
+      - run: "echo 'Disabled - use .github/workflows/pages-deploy.yml (single publisher).'"

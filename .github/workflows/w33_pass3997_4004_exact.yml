@@ -12,7 +12,7 @@ on:
       - '.github/workflows/w33_pass3997_4004_exact.yml'
   workflow_dispatch:
 permissions: {contents: read}
-concurrency: {group: pass3997-4004-exact-${{ github.ref }}, cancel-in-progress: true}
+concurrency: {group: "pass3997-4004-exact-${{ github.ref }}", cancel-in-progress: true}
 jobs:
   exact:
     runs-on: ubuntu-24.04

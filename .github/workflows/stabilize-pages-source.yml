@@ -8,4 +8,4 @@ jobs:
     if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'Disabled: GitHub Pages must remain on master:/docs.'
+      - run: "echo 'Disabled: GitHub Pages must remain on master:/docs.'"

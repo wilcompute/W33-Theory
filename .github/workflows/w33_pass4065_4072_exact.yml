@@ -9,7 +9,7 @@ on:
       - '.github/workflows/w33_pass4065_4072_exact.yml'
   workflow_dispatch:
 permissions: {contents: read}
-concurrency: {group: pass4065-4072-${{ github.ref }}, cancel-in-progress: true}
+concurrency: {group: "pass4065-4072-${{ github.ref }}", cancel-in-progress: true}
 jobs:
   exact:
     runs-on: ubuntu-24.04
