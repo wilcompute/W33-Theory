@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [4269, 4276],
+  "slug": "h145_branching_ghz_fusion_noisy_two_row_gds_triple_completion_secretsharing_curvature_fdt",
+  "title": "Five implementation closures and three outside-box probes: H145 branching under the order-72 anchor stabilizer, explicit GHZ28 heralded fusion, noisy two-row Hodge optimization, GDS-oriented photonic compiler, remaining triple-stratum completion, spectral access structure, discrete transport curvature, and Hodge fluctuation-dissipation",
+  "status": "reserved",
+  "owner": "openai-gpt-5.6-sol",
+  "reserved_at": "2026-08-08T02:07:00-04:00",
+  "purpose": "Execute the five open targets after Passes 4245-4252 and add three independent finite probes in quantum access structures, discrete transport curvature, and Hodge fluctuation-dissipation.",
+  "coordination": "Preserve canonical Passes 4214-4221, glue-track Passes 4222-4244, Passes 4245-4252, independent Passes 4253-4268, the single-publisher Pages contract, and authoritative docs/index.html. Do not edit docs/index.html directly.",
+  "boundary": "Reservation only. No phenomenologically viable gauge theory, fabricated GHZ28 processor, globally noise-optimal physical decoder, proprietary DRC-clean photonic chip, globally complete nonlinear theorem, physical secret-sharing device, measured spacetime curvature, thermodynamic experiment, gravity, cosmology, or theory of everything is promoted."
+}
