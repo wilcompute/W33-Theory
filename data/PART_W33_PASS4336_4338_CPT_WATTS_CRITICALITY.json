@@ -1,0 +1,57 @@
+{
+  "pass_4336_cpt": {
+    "C_available": false,
+    "PT_symmetry": false,
+    "P_symmetry": false,
+    "T_symmetry": false,
+    "cpt_theorem_applies": false,
+    "reason_C_unavailable": "the ISA translation descends to neither projective carrier (Pass 4335)",
+    "why": "no Lorentz invariance, no locality; the analogy is not entitled to it"
+  },
+  "pass_4337_watts": {
+    "clock_hz": 208860000.0,
+    "kT_ln2_joules": 2.870978885078724e-21,
+    "machine_A_finite": false,
+    "readout_watts_at_cadence": 1.066013599888964e-13,
+    "rows": [
+      {
+        "item": "compute, machine A (4 opcodes)",
+        "note": "irreversible: one-way transitions exist",
+        "watts": null
+      },
+      {
+        "bits_per_instruction": 0.0,
+        "item": "compute, machine D (reversible closure)",
+        "note": "exactly zero, Pass 4321",
+        "watts": 0.0
+      },
+      {
+        "bits_per_instruction": 2.6666666666666665,
+        "item": "support readout, per readout",
+        "note": "8/3 bits, Pass 2836",
+        "watts": 1.599020399833446e-12
+      },
+      {
+        "bits_per_instruction": 0.17777777777777776,
+        "item": "readout at the 15-instruction mixing cadence",
+        "note": "amortised over the cadence Pass 2867 sets",
+        "watts": 1.066013599888964e-13
+      }
+    ],
+    "temperature_K": 300.0
+  },
+  "pass_4338_criticality": {
+    "R": 0.17400768308252404,
+    "band": [
+      1.1501207748820843,
+      3.3496860847191616
+    ],
+    "critical_modulus": 2.39726358164929,
+    "free_energy_per_step_nats": 1.74865582509575,
+    "inside_circle": 86,
+    "nontrivial": 160,
+    "outside_circle": 74,
+    "rho": 5.746872679901983,
+    "single_critical_point": false
+  }
+}

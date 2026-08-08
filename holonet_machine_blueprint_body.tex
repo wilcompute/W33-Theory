@@ -2925,15 +2925,16 @@ means the gain from any addition is mostly ``one more generator'', not ``the def
 addressed''.
 \end{plain}
 
-\begin{spec}[Pass 4246 --- the deficit is a constant, not a quirk]
-Across all $24$ minimum-size universal generating sets, the minimum stir --- the fraction of
-frames on which \emph{some} opcode moves the worst-served coordinate --- is
+\begin{spec}[Pass 4246 --- a pool-wide four-generator constant]
+Across all $24$ minimum-size universal generating sets drawn from the frozen ten-opcode
+pool, the minimum stir --- the fraction of frames on which \emph{some} opcode moves the
+worst-served coordinate --- is
 \[
   \tfrac{2}{3}\ \text{ exactly, in all } 24 .
 \]
-Not ``most'', not ``on average''. Four generators cannot fully stir four coordinates of this
-register, and the deficit is identical every time. The frozen coordinate is a property of
-the number four, not of the choice.
+Not ``most'', not ``on average''. The deficit is identical across this finite pool. This is
+not a theorem about every four-generator action on four coordinates, and it cannot be
+applied unchanged to the six- or twelve-opcode machines.
 \end{spec}
 
 \begin{plain}
@@ -2948,17 +2949,14 @@ The engineering consequence survives all of this: an observable with a $4$-instr
 half-life is one that a $15$-instruction readout cadence does not fully scramble.
 \end{plain}
 
-\begin{spec}[Pass 4242 --- the instruction stream has an entropy, and it meets Landauer]
-$\log_2 \rho(B) = 2.5228$ bits of trajectory entropy per instruction --- more than the
-$\log_2 4 = 2$ bits the opcode count suggests, because the graph is undirected and a
-non-backtracking walk chooses among up to seven continuations, not four. The machine's
-trajectory space is richer than its instruction encoding.
+\begin{spec}[Pass 4242 --- entropy of the undirected frame-graph edge shift]
+$\log_2 \rho(B) = 2.5228$ bits is the topological entropy per step of the undirected simple
+frame graph's non-backtracking edge shift. It is not yet the entropy rate of executable
+four-opcode streams: labels and multiplicities were discarded and inverse edges were added.
 
-Against Pass 2836's exact $8/3$ bits erased per support readout, a readout costs the
-entropy of $1.06$ instructions. That is a thermodynamic cadence bound --- and it is
-\emph{weaker} than Pass 2867's mixing bound of $15$ instructions. \textbf{The machine is
-limited by how fast it forgets, not by how fast it generates.} Both numbers are exact, and
-they were computed six hundred passes apart from unrelated objects.
+The numerical ratio $(8/3)/\log_2\rho=1.06$ is a comparison between two finite invariants.
+Without a labeled directed automaton and a stochastic physical mode calculation it is not a
+Landauer cadence bound or a theorem about which process limits the machine.
 \end{spec}
 
 \begin{spec}[Pass 4243 --- the programs that do nothing]
@@ -3526,6 +3524,14 @@ $2E = 324$, matching the Delsarte bound & $2E = 522$. The coincidence was not ev
 Cell counts of $13$, $8$, $42$ for the ISA & The registers had no load port and
   synthesised away; real cost $72$, then $43$ minimal & Synthesis. Simulation cannot see
   it, and two independent teams shipped it \\
+``The point carrier was \emph{forced}: only it admits a load port'' & A translation is not
+  a map on projective points at all. $[v] = [2v]$, but $[v+t] \neq [2v+t]$ --- it disagrees
+  on $40$ of the $40$ points, so it descends to \emph{neither} carrier. The load port lives
+  on the $81$ affine vectors, a third object. What survives: a translation is needed to
+  connect the affine register and may point along any coordinate, which selects no
+  projective side & The parallel track, checking whether the operation acts on either
+  carrier before comparing what each admits. Published here, in the README and on the live
+  paper before it was caught \\
 The one-qutrit self-entanglement thesis is ours & It is stated verbatim in this project's
   own encyclopedia & Being shown the file. Now a guard \\
 ``Nobody has stated'' the Kraft consequence & The manuscript says ``no unused branch''

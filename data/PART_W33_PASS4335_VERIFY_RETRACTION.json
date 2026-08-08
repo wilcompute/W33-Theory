@@ -1,0 +1,15 @@
+{
+  "credit": "parallel track, Pass 4330",
+  "points_where_representatives_disagree": 40,
+  "retracted_claim": "Pass 4301: translations exist only on the point side, so addressing points was forced",
+  "retraction_confirmed": true,
+  "survives": "a translation is necessary to connect the 81-frame affine register and may point along any coordinate; this selects no projective carrier",
+  "total_points": 40,
+  "translation": [
+    1,
+    0,
+    0,
+    0
+  ],
+  "well_defined_on_a_single_class": false
+}
