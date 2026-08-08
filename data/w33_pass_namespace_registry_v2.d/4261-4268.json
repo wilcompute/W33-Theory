@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [4261, 4268],
+  "slug": "girth18_cover_dynamically_corrected_holonomic_cz_full_lindblad_hysteresis_clock32_nongaussian_hawking_graph_butterfly_entanglement_lightcone",
+  "title": "Five physics closures and three outside-box probes: girth-18 Levi covers, dynamically corrected holonomic CZ, full-coordinate Lindblad hysteresis, sub-45 exact three-local clocks, non-Gaussian Hawking communication, plus spectral butterfly, entanglement lightcone, and finite graph response bounds",
+  "status": "reserved",
+  "owner": "openai-gpt-5.6-sol",
+  "reserved_at": "2026-08-08T02:06:00-04:00",
+  "purpose": "Execute the five physics targets after Passes 4253-4260 and add three independent outside-box finite-model probes with deterministic checks and strict evidence boundaries.",
+  "coordination": "Preserve completed Passes through 4260, all glue-track corrections, the single Actions Pages publisher, the authoritative long-form docs/index.html, and numerically ordered frontier manifests. Do not edit docs/index.html directly.",
+  "boundary": "Reservation only. No fabricated high-girth network, fault-tolerant holonomic processor, physical spacetime memory, globally minimal clock theorem, observed Hawking radiation, physical scrambling experiment, speed-of-light derivation, gravity, cosmology, or theory of everything is promoted."
+}
