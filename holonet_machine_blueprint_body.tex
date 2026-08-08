@@ -139,28 +139,56 @@ exhaustive testing, and what finally caught it.
 \newpage
 
 % =====================================================================================
+
+% ======================================================================
+\part{Orientation}
+
+\begin{plain}[What this part is]
+Three chapters that assume nothing. What the machine is, why a computer would be
+built out of a shape at all, and the one piece of physics --- the qutrit --- that the rest
+of the document rests on. If you read only this part, you will know what is being claimed
+and what is not.
+\end{plain}
+
 \section{How to read this document}
 % =====================================================================================
 
-This document has two readers in mind and does not compromise for either.
+This document has three readers in mind and does not compromise for any of them.
 
 \begin{center}
 \resizebox{\linewidth}{!}{%
 \begin{tikzpicture}[node distance=4mm]
-  \node[fill=plainbg,rounded corners,inner sep=7pt,text width=0.40\linewidth,
+  \node[fill=plainbg,rounded corners,inner sep=7pt,text width=0.32\linewidth,
         font=\small] (a)
     {\textbf{If you are not an engineer.}\\[3pt]
      Read the cream boxes and the diagrams. They are complete: every idea in the
      machine is explained there from scratch, in order, with no symbols you have not
      already met. You may skip every blue box without losing the thread.};
-  \node[fill=specbg,rounded corners,inner sep=7pt,text width=0.40\linewidth,
+  \node[fill=specbg,rounded corners,inner sep=7pt,text width=0.32\linewidth,
         font=\small,right=5mm of a] (b)
-    {\textbf{If you are an engineer.}\\[3pt]
+    {\textbf{If you are a physicist or engineer.}\\[3pt]
      The blue boxes carry the specification: exact semantics, matrices, cell counts,
      clock frequencies, proof obligations and the commands that reproduce them. The
      cream boxes are there so you can hand this to a colleague in a different field.};
+  \node[fill=warnbg,rounded corners,inner sep=7pt,text width=0.32\linewidth,
+        font=\small,right=5mm of b] (c)
+    {\textbf{If you are deciding whether to fund this.}\\[3pt]
+     Read Part~I, then go straight to \emph{What is not built} at the end. It is an
+     explicit list of everything this document does \emph{not} claim. Then read the
+     errata index. Those two sections are where a technical document is most likely to
+     be quietly silent, and they are the ones we wrote first.};
 \end{tikzpicture}}
 \end{center}
+
+\begin{plain}[The one-paragraph version]
+This is a design for a computer whose instruction set is not chosen but \emph{derived}:
+its register, its gates and its wiring all fall out of a single geometric object with
+forty points. The claim is not that such a machine has been built --- it has not. The
+claim is that its specification is forced, that every number in it is either measured
+from synthesised hardware or proved from the geometry, and that where we have been wrong
+we have said so on the same page. What follows is the specification, the evidence, and
+the boundary of both.
+\end{plain}
 
 \noindent Three habits of this document, stated up front so they are not mistaken for
 style:
@@ -421,6 +449,16 @@ $\mathrm{End}(\mathbb{C}^3)$, and the identification of the $40$ lines as the ma
 \end{gotwrong}
 
 % =====================================================================================
+
+% ======================================================================
+\part{The Substrate}
+
+\begin{plain}[What this part is]
+The shape itself. A single object with $40$ points and $12$ connections each,
+defined by one congruence, from which the rest of the machine follows rather than being
+designed. This part is geometry, not engineering: no hardware appears until Part III.
+\end{plain}
+
 \section{The substrate: $W(3,3)$}\label{sec:geometry}
 % =====================================================================================
 
@@ -660,7 +698,7 @@ rather than a technicality. The second box is the reason --- the same reason a R
 Hypothesis is about anything at all, which is that the object's spectrum is as tightly
 controlled as a spectrum can be.
 
-It also sharpens \S\ref{sec:budget}'s comparison, though not in the direction one first
+It also sharpens \S\ref{sec:everybit}'s comparison, though not in the direction one first
 reaches for. The address layer is provably at an optimum. The instruction layer does not
 \emph{miss} that optimum --- it has none to miss, because Ramanujan optimality is a
 property of $k$-regular graphs and the instruction layer is a Schreier graph with degrees
@@ -972,6 +1010,16 @@ an affine-line torsor rather than pretending the labels are geometric invariants
 \end{tikzpicture}
 \end{center}
 \vspace{4mm}
+
+
+% ======================================================================
+\part{The Machine}
+
+\begin{plain}[What this part is]
+The computer proper --- its instructions, its register, its gate count, and the
+physical layer that would run it. Everything here is either measured from a synthesised
+netlist or derived exactly from the geometry of Part II, and each claim says which.
+\end{plain}
 
 \section{The instruction set}\label{sec:isa}
 % =====================================================================================
@@ -1635,6 +1683,16 @@ Verified directly on $3\times3$ unitaries: $e=3$ is phase-invariant, $e\in\{2,4,
 a strictly cheaper measurement, alternating with width.}
 
 % =====================================================================================
+
+% ======================================================================
+\part{Quantum Operation}
+
+\begin{plain}[What this part is]
+What makes the machine quantum rather than merely reversible: the magic states
+that buy universality, the thermodynamic price of looking at the register, the machine
+running inside itself, and the network that joins many of them.
+\end{plain}
+
 \section{The magic states, and the protocol that was found}\label{sec:magic}
 % =====================================================================================
 
@@ -2553,7 +2611,18 @@ protocol is for --- and it is also the strongest evidence either result is right
 \vspace{4mm}
 
 % =====================================================================================
-\section{Every bit in the machine}\label{sec:budget}
+
+% ======================================================================
+\part{What We Measured}
+
+\begin{plain}[What this part is]
+The measurement chapter, and the most heavily corrected part of this document.
+It contains results we are confident in, results we withdrew, and --- stated plainly ---
+the reasons each withdrawal happened. A blueprint that hides its retractions is not a
+blueprint, it is a brochure.
+\end{plain}
+
+\section{Every bit in the machine}\label{sec:everybit}
 % =====================================================================================
 
 \begin{plain}
@@ -3152,6 +3221,16 @@ than a law. That is an unusual thing to be able to say about a computer, and it 
 consequence of having built the instruction set out of a group.
 \end{plain}
 
+
+% ======================================================================
+\part{Evidence and Limits}
+
+\begin{plain}[What this part is]
+How every number above can be reproduced, what has been formally verified, the
+complete errata, and an explicit list of what has \emph{not} been built. The last of those
+is the most important page in the document for anyone deciding whether to fund it.
+\end{plain}
+
 \section{Verification: how we know}\label{sec:verification}
 % =====================================================================================
 
@@ -3263,7 +3342,7 @@ a pass.
 \end{gotwrong}
 
 % =====================================================================================
-\section{The complete ledger}
+\section{The complete ledger}\label{sec:ledger}
 % =====================================================================================
 
 \begin{plain}

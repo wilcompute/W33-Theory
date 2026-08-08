@@ -86,9 +86,39 @@ def existing_placement():
 _PLACED = existing_placement()
 
 
+def cross_reference_partners():
+    """stem -> stems whose labels it \\ref's.
+
+    Inserts that cite each other must land in the SAME manuscript or the reference dangles
+    at compile time.  Pass 4315 hit exactly this: BT1672 \\ref's a label defined in BT1657,
+    routing sent them to the blueprint and w33_paper respectively, and the blueprint built
+    with an undefined reference that no per-file vetting could have caught -- the label
+    existed, just not in the same document."""
+    labels: dict[str, str] = {}
+    refs: dict[str, set[str]] = {}
+    for p in sorted((ROOT / "analysis").glob("*_insert.tex")):
+        txt = p.read_text(encoding="utf-8", errors="replace")
+        for lab in LABEL.findall(txt):
+            labels[lab] = p.stem
+        refs[p.stem] = set(REF.findall(txt))
+    out: dict[str, set[str]] = {}
+    for stem, rs in refs.items():
+        partners = {labels[r] for r in rs if r in labels and labels[r] != stem}
+        if partners:
+            out[stem] = partners
+    return out
+
+
+_PARTNERS = cross_reference_partners()
+
+
 def route(stem: str, text: str):
     if stem in _PLACED:
         return _PLACED[stem], "already placed"
+    # Follow a cross-reference to its target's home before anything else.
+    for partner in _PARTNERS.get(stem, ()):
+        if partner in _PLACED:
+            return _PLACED[partner], f"co-located with {partner[:28]}"
     low = stem.lower()
     for book, (markers, _) in BOOKS.items():
         for m in markers:
