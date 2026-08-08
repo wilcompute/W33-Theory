@@ -1,0 +1,38 @@
+{
+  "E": 324,
+  "V": 81,
+  "degree": 8,
+  "generators": [
+    "S_f",
+    "Z0",
+    "Z1",
+    "Z2",
+    "Z3"
+  ],
+  "is_ramanujan": true,
+  "lambda2": 5.0,
+  "ramanujan_bound": 5.291502622129181,
+  "regular_computing_sets": 2,
+  "spectrum": [
+    [
+      8.0,
+      1
+    ],
+    [
+      5.0,
+      8
+    ],
+    [
+      2.0,
+      24
+    ],
+    [
+      -1.0,
+      32
+    ],
+    [
+      -4.0,
+      16
+    ]
+  ]
+}
