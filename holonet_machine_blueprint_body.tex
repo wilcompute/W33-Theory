@@ -594,8 +594,36 @@ by its parameters --- so all $28$ are zeta-identical by construction.
 
 \emph{The $78$ is therefore a property of the parameter set $(40,12,2,4)$, not of $W(3,3)$.}
 It remains a true and striking arithmetic fact that $78 = \dim E_6$; it is not evidence that
-\emph{this} graph is the exceptional one. What distinguishes $W(3,3)$ among the $28$ is its
-automorphism group, which the zeta never sees.
+\emph{this} graph is the exceptional one.
+\end{spec}
+
+\begin{spec}[Pass 4286 --- the full list of what the parameters already fix]
+Everything below follows from $(v,k,\lambda,\mu) = (40,12,2,4)$ alone, so it is identical
+across all $28$ graphs and none of it can be evidence about $W(3,3)$:
+\[
+  r,s = 2,-4; \quad f,g = 24,15; \quad \rho(B) = k-1 = 11; \quad
+  \text{poles } 2(v-1) = 78 = 48+30;
+\]
+\[
+  \text{Laplacian } \{0^1, 10^{24}, 16^{15}\}; \quad
+  \text{spanning trees } 2.8823\times10^{40}; \quad
+  \text{Ramanujan iff } |s| \le 2\sqrt{k-1}.
+\]
+\textbf{The rule worth keeping:} before citing a graph-derived constant as evidence about
+$W(3,3)$, check whether it is a function of $(v,k,\lambda,\mu)$. If it is, it says nothing
+about \emph{which} graph you have.
+\end{spec}
+
+\begin{spec}[Pass 4287 --- so what does distinguish it? Less than expected]
+The automorphism orders of the $28$ were computed exactly. They span $1$ to $51{,}840$ and
+take $20$ distinct values --- an invariant the zeta discards entirely, which is precisely
+how a graph can be exceptional and spectrally anonymous at once.
+
+\textbf{But $|\mathrm{Aut}|$ does not pick a graph either.} The maximum
+$51{,}840 = |\mathrm{Sp}(4,3)|$ is attained by \textbf{two} of the $28$, not one. So the
+zeta distinguishes $1$ class of $28$, $|\mathrm{Aut}|$ distinguishes $20$, and separating
+the final pair needs something neither provides. That residual ambiguity is an open
+question, recorded as one rather than rounded away.
 \end{spec}
 
 \begin{plain}
@@ -2633,10 +2661,11 @@ Reproducing $\det(I-uB)$ correctly says nothing about the \emph{classifier} buil
 of it, and Pass 4229 found a fault there: the first version counted the Perron root
 $\rho$ among the non-trivial eigenvalues, which made both reference graphs appear to fail.
 It was caught because $W(3,3)$ came back with $78$ poles on the critical circle out of a
-claimed $79$ --- and $78 = \dim E_6$ is this project's standing count, so the numerator was
-right and the denominator was wrong. Corrected, $W(3,3)$ gives $78/78$ and the Levi graph
-$156/156$, both satisfying the graph RH, and the instruction graph $0/160$, failing it.
-\textbf{Calibrate every layer against a known answer, not merely the bottom one.}
+claimed $79$ --- and $78$ is this project's standing count (a \emph{parameter} count: see
+\S\ref{sec:hashimoto}, it is $2(v-1)$ for any $\mathrm{SRG}(40,12,2,4)$), so the numerator
+was right and the denominator was wrong. Corrected, $W(3,3)$ gives $78/78$ and the Levi
+graph $156/156$, both satisfying the graph RH, and the instruction graph $0/160$, failing
+it. \textbf{Calibrate every layer against a known answer, not merely the bottom one.}
 
 That is worth stating plainly because of what it says about the three withdrawals. The
 object was never too hard. The tool was wrong, and being wrong about the tool is what
@@ -2959,6 +2988,37 @@ the symmetrised machine ties on localisation and is \emph{worse} on both mixing 
 ($12$ vs $11$) and growth ($\rho = 8.76$ vs $6.75$). The $p$-bias is real and it is not what
 governs mixing; two more generators of any kind move that further than symmetry does.
 \end{plain}
+
+\begin{spec}[Pass 4288 --- and what \emph{does} govern mixing]
+Across all $349$ universal generating sets with a finite mixing time, correlation against
+mixing time:
+\begin{center}\small
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+$n$ & $E$ & $\rho(B)$ & $d_{\min}$ & $d_{\max}$ & spread\\
+\midrule
+$-0.553$ & $-0.719$ & $-0.684$ & $\mathbf{-0.736}$ & $-0.602$ & $+0.228$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\textbf{The strongest predictor is the minimum degree.} Frames that mix slowly are the ones
+with fewest ways out, and \emph{any} added generator raises that floor --- which is exactly
+why the $p$-side control matched the $f$-mirrors in Pass 4277 while doing nothing about the
+frozen coordinate. The design lever for mixing is $d_{\min}$, not opcode symmetry. Those are
+different knobs, and this chapter had been conflating them.
+\end{spec}
+
+\begin{spec}[Pass 4291 --- and the zeta is not an ISA fingerprint either]
+The same test as Pass 4281, on the algebra side. Of $349$ universal generating sets there
+are only $89$ distinct zeta signatures; $87$ are shared by more than one set and the largest
+class holds $12$. Distinct instruction sets --- different opcodes, different silicon ---
+produce byte-identical Ihara zetas.
+
+\textbf{So no spectral statement in this chapter is a statement about \emph{the} instruction
+layer.} Each is a statement about an equivalence class of up to twelve of them. That does not
+make the measurements wrong; it fixes their scope, and the class is what the instrument can
+resolve.
+\end{spec}
 
 \begin{spec}[Pass 4278 --- why the deficit is exactly $2/3$]
 Each opcode is affine, so the frames it leaves fixed in coordinate $c$ solve one linear
