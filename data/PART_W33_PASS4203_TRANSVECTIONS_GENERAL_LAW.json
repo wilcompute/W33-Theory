@@ -1,0 +1,16 @@
+{
+  "best": {
+    "degree": 8,
+    "label": "T + translations",
+    "lambda2": 5.0000000000000115,
+    "order": 729,
+    "ramanujan": true,
+    "size": 2,
+    "universal": false
+  },
+  "correct_framing": "the 81-frame graph is a Schreier graph on a coset space, not a Cayley graph of ASp(4,3); Schreier graphs collide",
+  "general_law": false,
+  "s3_regular": true,
+  "sets_tested": 2400,
+  "transvections": 40
+}
