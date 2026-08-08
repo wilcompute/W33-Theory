@@ -1,0 +1,31 @@
+name: Passes 4261-4268 manuscript compile check
+on:
+  push:
+    paths:
+      - 'analysis/BT4261_BT4268_girth18_cd_hysteresis_clock37_nongaussian_search_defect_thermal_insert.tex'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'holonet_machine_blueprint.tex'
+      - '.github/workflows/w33_pass4261_4268_manuscript_check.yml'
+  workflow_dispatch:
+jobs:
+  tectonic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: WtfJoke/setup-tectonic@v3
+      - name: Compile manuscripts
+        run: |
+          mkdir -p /tmp/pass4261-4268
+          for f in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs --keep-intermediates "$f" |& tee "/tmp/pass4261-4268/${f%.tex}.log"
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass4261-4268-manuscript-evidence
+          path: |
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
+            /tmp/pass4261-4268/*.log
