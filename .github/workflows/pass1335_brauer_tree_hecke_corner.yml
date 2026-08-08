@@ -4,6 +4,15 @@ on:
   push:
     branches:
       - master
+    # Scoped to its own inputs, matching the 294 other per-pass workflows.  See the note
+    # in pass1330_1334_modular_triality_atlas.yml.
+    paths:
+      - 'analysis/w33_pass1335_brauer_tree_hecke_corner.g'
+      - 'analysis/w33_pass1335_export_hecke_gap_input.py'
+      - 'data/w33_pass1335_brauer_tree_hecke_corner.json'
+      - 'data/w33_pass1335_hecke_ext_input.g'
+      - 'tests/test_w33_pass1335_brauer_tree_hecke_corner.py'
+      - '.github/workflows/pass1335_brauer_tree_hecke_corner.yml'
   pull_request:
     branches:
       - master

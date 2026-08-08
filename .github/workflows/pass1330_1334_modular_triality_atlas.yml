@@ -4,6 +4,16 @@ on:
   push:
     branches:
       - master
+    # Scoped to its own inputs, matching the 294 other per-pass workflows.  Unscoped it
+    # ran on every master push, and with two agents pushing reservation commits against
+    # four concurrent runners that queue is what delayed the Pages deploy.
+    paths:
+      - 'analysis/w33_pass1330_1334_modular_triality_cycle_atlas.py'
+      - 'analysis/w33_pass1333_atlasrep_species20.g'
+      - 'data/w33_pass1330_1334_modular_triality_cycle_atlas.json'
+      - 'data/w33_pass1333_atlasrep_species20.json'
+      - 'tests/test_w33_pass1330_1334.py'
+      - '.github/workflows/pass1330_1334_modular_triality_atlas.yml'
   pull_request:
     branches:
       - master
