@@ -1,0 +1,58 @@
+{
+  "w33_machine_a": {
+    "cells": 103,
+    "expected_frame": [
+      2,
+      2,
+      2,
+      0
+    ],
+    "label": "A biased, irreversible",
+    "op_bits": 2,
+    "opcodes": 4,
+    "verified": true,
+    "wires": 137
+  },
+  "w33_machine_b": {
+    "cells": 132,
+    "expected_frame": [
+      2,
+      0,
+      2,
+      1
+    ],
+    "label": "B symmetric, irreversible",
+    "op_bits": 3,
+    "opcodes": 6,
+    "verified": true,
+    "wires": 176
+  },
+  "w33_machine_c": {
+    "cells": 206,
+    "expected_frame": [
+      0,
+      0,
+      2,
+      0
+    ],
+    "label": "C biased, reversible",
+    "op_bits": 3,
+    "opcodes": 8,
+    "verified": true,
+    "wires": 274
+  },
+  "w33_machine_d": {
+    "cells": 240,
+    "expected_frame": [
+      0,
+      0,
+      2,
+      0
+    ],
+    "label": "D symmetric, reversible",
+    "op_bits": 4,
+    "opcodes": 12,
+    "verified": true,
+    "wires": 328
+  }
+}
