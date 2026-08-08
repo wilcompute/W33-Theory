@@ -88,6 +88,25 @@ jobs:
       # Prove the deploy actually replaced what the CDN serves.  The failure this whole
       # workflow exists for reported success while serving stale bytes, so "the build
       # succeeded" is not evidence -- the served title is.
+      # The strongest available check: compare the SERVED BYTES against docs/index.html.
+      # A 200 response proves the CDN answered, not that it answered with this page --
+      # which is exactly how the original outage stayed invisible.
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Confirm the served page IS this repository's page
+        run: |
+          for i in $(seq 1 10); do
+            if python3 scripts/check_site_is_current.py --url "${{ steps.deployment.outputs.page_url }}"; then
+              exit 0
+            fi
+            echo "not current yet -- retrying in 15s"
+            sleep 15
+          done
+          echo "::error::the published site never matched docs/index.html"
+          exit 1
+
       - name: Confirm the live site is the page we just deployed
         run: |
           URL="${{ steps.deployment.outputs.page_url }}"
