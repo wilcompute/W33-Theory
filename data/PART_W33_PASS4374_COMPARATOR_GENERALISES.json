@@ -1,0 +1,48 @@
+{
+  "closed_form": "1 - q/((q+1)(q^2+1) - 1)",
+  "closed_form_verified": true,
+  "improves_with_q": true,
+  "q3_is_weak_end": true,
+  "rows": [
+    {
+      "detection": 0.8571428571428572,
+      "flags": 45,
+      "lines": 15,
+      "lines_per_point": 3,
+      "points": 15,
+      "points_per_line": 3,
+      "q": 2,
+      "reject_fraction": 0.8
+    },
+    {
+      "detection": 0.9230769230769231,
+      "flags": 160,
+      "lines": 40,
+      "lines_per_point": 4,
+      "points": 40,
+      "points_per_line": 4,
+      "q": 3,
+      "reject_fraction": 0.9
+    },
+    {
+      "detection": 0.967741935483871,
+      "flags": 936,
+      "lines": 156,
+      "lines_per_point": 6,
+      "points": 156,
+      "points_per_line": 6,
+      "q": 5,
+      "reject_fraction": 0.9615384615384616
+    },
+    {
+      "detection": 0.9824561403508771,
+      "flags": 3200,
+      "lines": 400,
+      "lines_per_point": 8,
+      "points": 400,
+      "points_per_line": 8,
+      "q": 7,
+      "reject_fraction": 0.98
+    }
+  ]
+}
