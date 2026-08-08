@@ -1,0 +1,48 @@
+{
+  "pass_4341_bias_affine": {
+    "A shipped (biased)": {
+      "escapes": 2,
+      "n": 4,
+      "swap_invariant": false
+    },
+    "B symmetric": {
+      "escapes": 0,
+      "n": 6,
+      "swap_invariant": true
+    }
+  },
+  "pass_4345_symmetry_breaking": {
+    "broken_directions": 4,
+    "fixed_by_translation": 0,
+    "full_order": 4199040,
+    "goldstone_theorem_applies": false,
+    "origin_fixed_by_linear": 1,
+    "unbroken_order": 51840,
+    "vacuum_manifold_size": 81
+  },
+  "pass_4346_mode_spectrum": {
+    "converted_to_energy": false,
+    "distinct_rates": 51,
+    "machines": [
+      {
+        "lambda2": 0.8939923195964179,
+        "machine": "A shipped",
+        "tau_instructions": 8.92394253965842,
+        "tau_seconds": 4.272691056046356e-08
+      },
+      {
+        "lambda2": 0.8489999366664298,
+        "machine": "B symmetric",
+        "tau_instructions": 6.108878519794099,
+        "tau_seconds": 2.924867624147323e-08
+      }
+    ],
+    "slowest_tau_instructions": 8.923914070125774,
+    "slowest_tau_ns": 42.72677425129643
+  },
+  "pass_4347_noether": {
+    "conserved_quantity_exists": false,
+    "reason": "the instruction set is transitive on the 81 frames, so the only trajectory-invariant function is constant",
+    "strongest_available": "a slow observable (Pass 4250), not a conserved charge"
+  }
+}
