@@ -1,0 +1,44 @@
+{
+  "address_graph_unaffected": {
+    "is_ramanujan": true,
+    "lambda2_over_k": 0.16666666666666666,
+    "ramanujan_bound": 0.5527707983925666,
+    "regular_degree": 12
+  },
+  "degrees": [
+    2,
+    8
+  ],
+  "doubly_stochastic": true,
+  "isa": [
+    "F_p",
+    "CX_pf",
+    "CX_fp",
+    "Z_p"
+  ],
+  "lambda2_reproduced": 0.8939923195964179,
+  "lambda2_target": 0.89399232,
+  "pass4204c_correction": {
+    "note": "Pass 4204(c) profiled a Clifford-only set that is neither the ISA nor universal; the real ISA contains the translation Z_p, and that load port is exactly what keeps the origin from being isolated",
+    "real_isa_degrees": [
+      2,
+      8
+    ],
+    "real_isa_isolated": 0,
+    "wrong_set": [
+      "F_p",
+      "F_f",
+      "CX_pf",
+      "CX_fp"
+    ],
+    "wrong_set_degrees": [
+      0,
+      8
+    ],
+    "wrong_set_isolated": 1
+  },
+  "quoted_threshold_4regular": 0.8660254037844386,
+  "regular": false,
+  "reproduces": true,
+  "verdict": "the 0.893992320 measurement stands -- doubly stochastic, uniform stationary, mixing time 15 -- but the '3.23% short of Ramanujan' verdict is withdrawn: it scores a graph with degrees 2-8 against a 4-regular threshold, which is not defined for it"
+}

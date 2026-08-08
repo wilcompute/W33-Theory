@@ -2543,20 +2543,35 @@ One measurement is an observation. Four independent ones pointing the same way i
 property of the machine, and this is the section where that happens.
 \end{plain}
 
-\begin{spec}[Is the instruction layer extremal? Pass 3042]
-The address graph is \emph{Ramanujan} --- provably the best-mixing graph of its
-degree (\S\ref{sec:geometry}). For a $4$-regular graph the same optimality condition is
+\begin{spec}[Is the instruction layer extremal? Pass 3042, corrected at Pass 4213]
+A random instruction stream drives a walk on the $81$ frames. Every opcode is a
+bijection, so the walk is doubly stochastic, its stationary distribution is exactly
+uniform --- no frame is preferred --- and
 \[
-  |\lambda_2| \le \frac{2\sqrt3}{4} = 0.866025,
+  |\lambda_2| = 0.893992320,
 \qquad
-  \text{measured: } 0.893992 .
+  \text{relaxation } 9.43,
+\qquad
+  \text{mixing } 15 \text{ instructions.}
 \]
-\textbf{The instruction graph is not Ramanujan.} It misses by $3.23\%$: a good
-expander, not the best one.
+Those numbers are exact and are what the machine does.
+
+\textbf{What we may not do is grade them.} Pass 3042 compared $0.893992$ with
+$2\sqrt3/4 = 0.866025$ and reported the instruction graph as $3.23\%$ short of
+Ramanujan. That verdict is \textbf{withdrawn}. The bound $2\sqrt{k-1}/k$ belongs to a
+$k$-\emph{regular} graph, and it is that number because the universal cover of a
+$k$-regular graph is the $k$-regular tree of spectral radius $2\sqrt{k-1}$. The frame
+graph has degrees $2$ to $8$ (Pass 4203), so it has a different cover, a different
+radius, and no claim on $0.866025$. The shortfall was a precise-looking figure for a
+quantity this graph does not possess.
+
+What survives is a comparison rather than a grade: the address layer mixes at the
+optimum for its degree; the instruction layer mixes more slowly. \emph{How far short of
+optimal} is not a question a non-regular graph admits.
 \end{spec}
 
-\headline{The machine's geometry is perfect and its algebra is merely very good,
-and every way of measuring it says so.}
+\headline{The machine's geometry is extremal; its algebra is not, and after Pass 4213
+we can say why the comparison only runs one way.}
 
 \begin{spec}[Four measurements, one conclusion]
 \begin{center}\small
@@ -2566,11 +2581,15 @@ measurement & geometry & algebra\\
 \midrule
 diameter & $2$ & $19$\\
 share of worst-case work & $10\%$ & $90\%$\\
-mixing & Ramanujan (optimal) & $3.23\%$ short\\
+mixing & Ramanujan (optimal) & $|\lambda_2| = 0.894$; not gradable\\
 identification & forced by construction & six valid triples, spread $19$--$23$\\
 \bottomrule
 \end{tabular}
 \end{center}
+The last row is the honest form of what used to read ``$3.23\%$ short''. The geometry is
+a $12$-regular graph, so optimality is defined for it and attained. The algebra is a
+Schreier graph with degrees $2$ to $8$, so optimality is not defined for it at all --- and
+that asymmetry, rather than a percentage, is the finding.
 \end{spec}
 
 \subsection{The growth series, for the compiler}
