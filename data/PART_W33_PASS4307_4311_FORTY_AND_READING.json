@@ -1,0 +1,226 @@
+{
+  "pass_4307_which_forty": {
+    "ambiguous": 160,
+    "by_manuscript": {
+      "BT1620_synthesis_section.tex": [
+        19,
+        21,
+        32,
+        58,
+        82
+      ],
+      "PAPER_INTRODUCTION.tex": [
+        92
+      ],
+      "PAPER_SECTION2_ZETA.tex": [
+        13
+      ],
+      "PAPER_SECTION3_CRITICAL_GROUPS.tex": [
+        50
+      ],
+      "PAPER_SECTION4_E6E8.tex": [
+        29
+      ],
+      "PAPER_SECTION5_MODULAR.tex": [
+        177,
+        179,
+        181
+      ],
+      "W33_FOR_EVERYONE.tex": [
+        537,
+        581,
+        641,
+        642,
+        2117,
+        2119,
+        2625,
+        2672
+      ],
+      "W36_PAPER.tex": [
+        119,
+        329,
+        365,
+        415,
+        479,
+        880,
+        904,
+        1590,
+        1612,
+        1615,
+        1633,
+        1717,
+        1842,
+        2686,
+        3517,
+        3518,
+        3522,
+        3630,
+        3631,
+        3963,
+        4436,
+        4647,
+        4661,
+        4667,
+        4707,
+        4733,
+        4735,
+        5009,
+        5481,
+        5871,
+        5874,
+        6043,
+        6069,
+        6070
+      ],
+      "W36_PAPER_arxiv.tex": [
+        105,
+        125,
+        154,
+        156,
+        184,
+        233,
+        297,
+        823,
+        826,
+        834,
+        980,
+        981
+      ],
+      "W36_PRL_LETTER.tex": [
+        54,
+        60,
+        91,
+        337,
+        339,
+        354
+      ],
+      "holonet_machine.tex": [
+        142
+      ],
+      "holonet_machine_blueprint_body.tex": [
+        566,
+        595,
+        1675,
+        1677,
+        2700
+      ],
+      "holonet_practical_implications.tex": [
+        212,
+        412
+      ],
+      "holonet_shannon_capacity.tex": [
+        94
+      ],
+      "main.tex": [
+        22
+      ],
+      "photonic_holonet_body.tex": [
+        280,
+        349,
+        514,
+        524,
+        903,
+        904,
+        2374,
+        2378,
+        2379,
+        2659,
+        2786,
+        3012,
+        3539,
+        6879,
+        7321,
+        7325,
+        7807,
+        7808,
+        8105,
+        8150,
+        9002,
+        9104
+      ],
+      "single_photon_universal_computation.tex": [
+        1515,
+        1516,
+        1771,
+        1960
+      ],
+      "supplement_o_arxiv.tex": [
+        24
+      ],
+      "toe_master_synthesis.tex": [
+        41,
+        462,
+        1607
+      ],
+      "w33_paper_CLII_deep_solution_insert.tex": [
+        24,
+        193
+      ],
+      "w33_paper_body.tex": [
+        929,
+        945,
+        3431,
+        3747,
+        3985,
+        3986,
+        4264,
+        4394,
+        4609,
+        4707,
+        4956,
+        4970,
+        6241,
+        6444,
+        6515,
+        7042,
+        7044,
+        7196,
+        7233,
+        7701,
+        7704,
+        7851,
+        7907,
+        7908,
+        7909,
+        8079,
+        8254,
+        8260,
+        8662,
+        9386,
+        9406,
+        9486,
+        9512,
+        9593,
+        10210,
+        10232,
+        11297,
+        11598,
+        12649,
+        13504,
+        13507,
+        14209,
+        14216,
+        16222
+      ],
+      "w33_paper_v2.tex": [
+        357,
+        1655
+      ]
+    },
+    "qualified": 371
+  },
+  "pass_4311_reading": {
+    "by_claim": {
+      "'Cayley graph'": 1
+    },
+    "detail": [
+      {
+        "claim": "'Cayley graph'",
+        "line": 30,
+        "stem": "BT682_secondary_g2_synthesis_insert"
+      }
+    ],
+    "flags": 1,
+    "inserts": 114
+  }
+}

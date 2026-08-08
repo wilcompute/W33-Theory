@@ -1,0 +1,132 @@
+{
+  "pass_4310_two_thirds": {
+    "derivable_from_load_port": false,
+    "linear_ceiling": 0.6666666666666666,
+    "solo_stir": {
+      "CX_fp": [
+        0.6666666666666666,
+        0.0,
+        0.0,
+        0.6666666666666666
+      ],
+      "CX_pf": [
+        0.0,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.0
+      ],
+      "F_f": [
+        0.0,
+        0.0,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "F_p": [
+        0.6666666666666666,
+        0.6666666666666666,
+        0.0,
+        0.0
+      ],
+      "S_f": [
+        0.0,
+        0.0,
+        0.0,
+        0.6666666666666666
+      ],
+      "S_p": [
+        0.0,
+        0.6666666666666666,
+        0.0,
+        0.0
+      ],
+      "Z0": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "Z1": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "Z2": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "Z3": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "translation_stirs_own_coordinate": 1.0
+  },
+  "pass_4312_symmetry": {
+    "gains_symmetry": true,
+    "stabilisers": {
+      "all four load ports": 8,
+      "shipped: one load port e0": 4,
+      "symmetric linear too (+F_f)": 8,
+      "symmetric: e0 and e2": 4
+    }
+  },
+  "pass_4313_levi_datapath": {
+    "degrees": [
+      4,
+      4
+    ],
+    "flags": 160,
+    "graph_RH": true,
+    "levi_edges": 160,
+    "levi_vertices": 80,
+    "nontrivial": 156,
+    "on_circle": 156,
+    "provides_load_port": false,
+    "rho": 3.0000000000000018
+  },
+  "pass_4314_unification": {
+    "arrow_ever_zero_by_translations": false,
+    "arrow_tracks_load_port": false,
+    "independent_asymmetries": 2,
+    "localisation_tracks_load_port": true,
+    "variants": {
+      "all four load ports": {
+        "deg_min": 8,
+        "entropy_bits": null,
+        "loc_plane": "x2=2",
+        "loc_weight": 0.42410314123131987,
+        "n": 7,
+        "one_way": 378
+      },
+      "linear only (no load port)": {
+        "deg_min": 0,
+        "entropy_bits": null,
+        "loc_plane": "x3=0",
+        "loc_weight": 0.43645411878419066,
+        "n": 3,
+        "one_way": 216
+      },
+      "shipped ISA (one load port)": {
+        "deg_min": 2,
+        "entropy_bits": null,
+        "loc_plane": "x2=0",
+        "loc_weight": 0.6128670516611174,
+        "n": 4,
+        "one_way": 243
+      },
+      "symmetric load ports (Z0+Z2)": {
+        "deg_min": 4,
+        "entropy_bits": null,
+        "loc_plane": "x3=2",
+        "loc_weight": 0.4593305302366693,
+        "n": 5,
+        "one_way": 297
+      }
+    }
+  }
+}

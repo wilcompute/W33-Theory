@@ -1,0 +1,76 @@
+name: Manuscripts compile
+
+# WHY THIS EXISTS
+#
+# Only the blueprint was ever recompiled by habit. In one session w33_paper and
+# photonic_holonet both broke silently -- photonic on a missing tcolorbox package -- and
+# both were caught by hand rather than by anything automatic. Twenty LaTeX errors had
+# also accumulated in the blueprint earlier for the same reason: nobody compiled it.
+#
+# All three manuscripts build here on every change to a .tex file. The job uses
+# `-Z continue-on-errors` so a single fault does not mask the rest, then FAILS on any
+# error in the log -- harvesting every fault per run instead of one per run.
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - '**/*.tex'
+      - '.github/workflows/manuscripts-compile.yml'
+  pull_request:
+    branches: [master]
+    paths:
+      - '**/*.tex'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: manuscripts-compile-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  compile:
+    name: ${{ matrix.doc }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false          # one broken manuscript must not hide the others
+      matrix:
+        doc: [holonet_machine_blueprint, w33_paper, photonic_holonet]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install tectonic
+        run: |
+          curl -fsSL https://drop-sh.fullyjustified.net | sh
+          sudo mv tectonic /usr/local/bin/
+          tectonic --version
+      - name: Compile ${{ matrix.doc }}
+        run: |
+          set -o pipefail
+          tectonic -X compile "${{ matrix.doc }}.tex" \
+            --keep-logs --outdir . -Z continue-on-errors 2>&1 | tail -40
+      - name: Fail on any error in the log
+        run: |
+          log="${{ matrix.doc }}.log"
+          n=$(grep -cE '^! ' "$log" || true)
+          pages=$(grep -oE '\([0-9]+ pages' "$log" | tail -1 || true)
+          echo "${{ matrix.doc }}: $n error(s), $pages"
+          {
+            echo "### ${{ matrix.doc }}"
+            echo "- errors: $n"
+            echo "- $pages"
+          } >> "$GITHUB_STEP_SUMMARY"
+          if [ "$n" -gt 0 ]; then
+            grep -E '^! ' "$log" | head -20
+            exit 1
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ${{ matrix.doc }}-pdf
+          path: |
+            ${{ matrix.doc }}.pdf
+            ${{ matrix.doc }}.log
+          if-no-files-found: warn
