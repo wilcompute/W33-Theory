@@ -2688,8 +2688,18 @@ routine at all. It is \textbf{not} the average degree minus one ($5.444444$), no
 simple statistic of the degree sequence.
 
 $\rho(B)$ is an algebraic integer --- a root of the monic degree-$162$ characteristic
-polynomial of that pencil --- with \textbf{no closed form of degree ten or less}.
-Irregularity does not merely break the $k$-regular formula. It removes the closed form.
+polynomial of that pencil. Pass 4237 computed that polynomial \emph{exactly} over
+$\mathbb Z$ and factored it:
+\[
+  \deg = 1,\ 2,\ 2,\ 2^{2},\ 14,\ 14,\ 16,\ 16,\ 20,\ 20,\ 20,\ \mathbf{33}
+  \qquad (\text{summing to }162),
+\]
+and $\rho(B)$ is a root of the degree-$33$ factor. So
+\[
+  \boxed{\ \rho(B)\ \text{is an algebraic integer of degree exactly } 33.\ }
+\]
+A $k$-regular graph gives $\rho = k-1$: degree one. Irregularity does not merely break the
+$k$-regular formula. It raises the degree of the answer from $1$ to $33$.
 \end{spec}
 
 \begin{plain}
@@ -2710,8 +2720,80 @@ to rule out coincidence.
 
 The rule that follows is short enough to keep: when hunting a closed form for a quantity you
 know to be an algebraic integer, \textbf{require the relation to be a monic multiple, and
-re-check the residual at double precision --- it must fall, not plateau.}
+re-check the residual at double precision --- it must fall, not plateau.} The degree-$33$
+polynomial above passes all three tests the cubic failed: monic, irreducible over
+$\mathbb Q$, and a residual falling from $6.4\times10^{-32}$ to $2.3\times10^{-54}$ as the
+precision doubles.
 \end{plain}
+
+\subsection{Where the machine is slow, and why it is not where you would guess}
+\label{sec:bottleneck}
+
+\begin{plain}
+The graph Riemann Hypothesis fails, which means some poles sit off the critical circle. The
+one furthest off corresponds to the slowest-decaying correlation in the machine --- the last
+thing the register forgets. Its eigenvector says \emph{where} that memory lives, so the
+bottleneck can be named rather than guessed at.
+
+The obvious guess is wrong, and it is worth saying so because it is the guess we made.
+\end{plain}
+
+\begin{spec}[Pass 4244 --- a hyperplane, not a degree deficit]
+The slowest non-trivial mode has modulus $3.3497$, some $1.40\times$ the critical circle,
+and it is localised: a participation ratio of $173$ of $522$ directed edges.
+
+\textbf{It is not a degree effect.} The frames carrying it have mean degree $6.67$ against
+$6.44$ across the register --- slightly \emph{above} average, not below --- and the
+correlation between mode weight and degree is only $+0.14$.
+
+\textbf{It lives on a hyperplane.} The $27$ frames with $x_2 = 0$ carry $61.3\%$ of the
+mode, against $19.4\%$ for each of the other two values of $x_2$, while the mean degree is
+identically $6.44$ on all three classes.
+\end{spec}
+
+\begin{plain}
+The cause is visible once you look at the opcodes rather than the graph. Of the four
+instructions, \textbf{only $\mathrm{CX}_{pf}$ moves $x_2$ at all}, and it moves it only on
+the $54$ frames where $x_0 \neq 0$. The other three --- $F_p$, $\mathrm{CX}_{fp}$ and the
+load port $Z_p$ --- leave $x_2$ exactly where it was. So $x_2$ is very nearly a constant of
+the motion, and a register coordinate the instruction set barely stirs is precisely a slow
+mode.
+
+That reframes the defect. It is not \emph{how many} edges leave a frame; it is \emph{which
+direction} they move it in, and one direction is nearly frozen. The prescription that
+follows is correspondingly different from the one we expected: what the design needs is an
+opcode that moves $x_2$ unconditionally --- the shear $S_f$ does exactly that --- rather
+than a second load port. Pass 4225 showed one load port suffices for \emph{reachability};
+this shows reachability was never the constraint on mixing.
+\end{plain}
+
+\begin{spec}[Pass 4242 --- the instruction stream has an entropy, and it meets Landauer]
+$\log_2 \rho(B) = 2.5228$ bits of trajectory entropy per instruction --- more than the
+$\log_2 4 = 2$ bits the opcode count suggests, because the graph is undirected and a
+non-backtracking walk chooses among up to seven continuations, not four. The machine's
+trajectory space is richer than its instruction encoding.
+
+Against Pass 2836's exact $8/3$ bits erased per support readout, a readout costs the
+entropy of $1.06$ instructions. That is a thermodynamic cadence bound --- and it is
+\emph{weaker} than Pass 2867's mixing bound of $15$ instructions. \textbf{The machine is
+limited by how fast it forgets, not by how fast it generates.} Both numbers are exact, and
+they were computed six hundred passes apart from unrelated objects.
+\end{spec}
+
+\begin{spec}[Pass 4243 --- the programs that do nothing]
+A closed non-backtracking walk on the instruction graph is a program that returns the frame
+register to its start. $\operatorname{tr}(B^m)$ therefore counts the machine's identity
+programs by length:
+\[
+  738,\ 1584,\ 6220,\ 42954,\ 211540,\ \ldots \qquad (m = 3,4,5,6,7)
+\]
+growing like $\rho^m$ --- Pass 4242's entropy seen from the other side, the same constant
+governing how much dead code exists and how much trajectory the machine generates.
+
+The shortest are the instruction set's \textbf{defining relations}, read off a trace rather
+than derived from a presentation; and every one of them is a peephole optimisation, since
+any occurrence in a stream is dead code by construction.
+\end{spec}
 
 \headline{The machine's geometry is extremal; its algebra is not, and after Pass 4213
 we can say why the comparison only runs one way.}
