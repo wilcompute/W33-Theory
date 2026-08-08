@@ -1,0 +1,51 @@
+{
+  "criterion": "a Schreier graph is regular iff the deficiency (loops plus collapsed multi-edges) is constant; freeness is sufficient, not necessary",
+  "diameter_results_unaffected": true,
+  "fixed_points": {
+    "CX_fp": 9,
+    "CX_pf": 9,
+    "F_f": 9,
+    "F_p": 9,
+    "S_f": 27,
+    "S_p": 27,
+    "Z0": 0,
+    "Z1": 0,
+    "Z2": 0,
+    "Z3": 0
+  },
+  "free_generators": [
+    "Z0",
+    "Z1",
+    "Z2",
+    "Z3"
+  ],
+  "free_generators_are_exactly_the_translations": true,
+  "irregularity_locus": {
+    "deficiency_supported_on_fixed_loci": true,
+    "deficient_frames": 25,
+    "degree_max": 8,
+    "degree_min": 0,
+    "isa": [
+      "F_p",
+      "F_f",
+      "CX_pf",
+      "CX_fp"
+    ],
+    "union_of_fixed_loci": 25
+  },
+  "pass4201_retraction": {
+    "S_f_edges_absorbed_by_Z3": true,
+    "S_f_fixed_frames": 27,
+    "graph_equals_translation_graph": true,
+    "regular": true,
+    "set": [
+      "S_f",
+      "Z0",
+      "Z1",
+      "Z2",
+      "Z3"
+    ],
+    "torus_spectrum_matches": true,
+    "verdict": "Pass 4201's regular 'computing' presentation is the discrete torus C_3^4; its Clifford generator draws no edges, so its Ramanujan property is a fact about an abelian group, not the instruction layer"
+  }
+}
