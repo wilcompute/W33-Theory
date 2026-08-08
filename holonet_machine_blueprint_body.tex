@@ -592,9 +592,13 @@ rather than a technicality. The second box is the reason --- the same reason a R
 Hypothesis is about anything at all, which is that the object's spectrum is as tightly
 controlled as a spectrum can be.
 
-It also sharpens \S\ref{sec:budget}'s comparison considerably. The address layer does not
-merely beat the instruction layer; it is provably at an optimum the instruction layer
-misses.
+It also sharpens \S\ref{sec:budget}'s comparison, though not in the direction one first
+reaches for. The address layer is provably at an optimum. The instruction layer does not
+\emph{miss} that optimum --- it has none to miss, because Ramanujan optimality is a
+property of $k$-regular graphs and the instruction layer is a Schreier graph with degrees
+$2$ to $8$ (Passes 4203, 4213). The asymmetry between the two layers is therefore sharper
+than a gap in performance: one of them is the kind of object that can be optimal, and the
+other is not.
 \end{plain}
 
 \textbf{Ramanujan} is a technical optimality condition on the eigenvalues. Informally, it
@@ -2569,6 +2573,52 @@ What survives is a comparison rather than a grade: the address layer mixes at th
 optimum for its degree; the instruction layer mixes more slowly. \emph{How far short of
 optimal} is not a question a non-regular graph admits.
 \end{spec}
+
+\subsection{The zeta function the instruction graph actually has}
+\label{sec:hashimoto}
+
+\begin{plain}
+Three separate attempts to say something spectral about the instruction layer were
+withdrawn, all for one reason: each reached for a formula that assumes every vertex has
+the same degree. The fix turns out not to be a better estimate. It is a different
+theorem.
+\end{plain}
+
+\begin{spec}[Pass 4222 --- Ihara without Bass, and therefore without regularity]
+Bass's determinant relation needs a degree. The Ihara zeta does not. For \emph{any} finite
+graph,
+\[
+  \zeta^{-1}(u) \;=\; \det\!\left(I - uB\right),
+\]
+where $B$ is the \textbf{Hashimoto} non-backtracking matrix on the $2E$ directed edges,
+$B_{(x,y),(y,z)} = 1$ exactly when $z \neq x$. No vertex degree appears anywhere in the
+definition.
+
+The instruction graph has $V=81$, $E=261$, so $B$ is $522\times522$ --- a small eigenvalue
+problem, and one that was available at Pass 3060.
+\[
+  \rho(B) = 5.746873, \qquad
+  R = 1/\rho = 0.174008, \qquad
+  \sqrt{\rho} = 2.397264 .
+\]
+Of the $161$ non-trivial Hashimoto eigenvalues, \textbf{none} lies on the circle
+$|\lambda| = \sqrt\rho$.
+
+\textbf{The instruction graph does not satisfy the graph Riemann Hypothesis.} The question
+that was ill-posed three times has an answer, and it is negative.
+\end{spec}
+
+\begin{plain}
+The method was validated before it was trusted, on two graphs where the answer is already
+known: $K_4$, whose zeta is textbook, and the degree-four Levi graph, whose closed form
+$(1-u^2)^{81}(1-9u^2)(1+9u^4)^{24}(1+3u^2)^{30}$ Bass produces directly. The Hashimoto
+route reproduces both exactly. It agrees with Bass wherever Bass applies, and then keeps
+going where Bass cannot.
+
+That is worth stating plainly because of what it says about the three withdrawals. The
+object was never too hard. The tool was wrong, and being wrong about the tool is what
+made the object look mysterious.
+\end{plain}
 
 \headline{The machine's geometry is extremal; its algebra is not, and after Pass 4213
 we can say why the comparison only runs one way.}

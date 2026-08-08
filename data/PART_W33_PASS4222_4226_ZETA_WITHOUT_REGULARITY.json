@@ -1,0 +1,171 @@
+{
+  "pass_4222_zeta": {
+    "B_dim": 522,
+    "E": 261,
+    "V": 81,
+    "deg_max": 8,
+    "deg_min": 2,
+    "graph_riemann_hypothesis": false,
+    "k4_reference": true,
+    "levi_reference": true,
+    "nontrivial_count": 161,
+    "nontrivial_on_circle": 0,
+    "regular": false,
+    "rho_B": 5.746872679901985,
+    "sqrt_rho": 2.3972635816492907,
+    "zeta_radius": 0.17400768308252398
+  },
+  "pass_4223_benchmark": {
+    "avg_degree": 6.444444444444445,
+    "hoory_benchmark": 4.666666666666667,
+    "lambda1": 6.776467787411513,
+    "lambda2": 5.093693607910528,
+    "lambda2_above_benchmark": true,
+    "refusal": "no percentage-from-optimal exists for this graph; optimality is a regular-graph notion"
+  },
+  "pass_4224_orbits": {
+    "class_geometry": {
+      "0": {
+        "affine_subspace_or_coset": false,
+        "size": 12
+      },
+      "1": {
+        "affine_subspace_or_coset": null,
+        "size": 36
+      },
+      "2": {
+        "affine_subspace_or_coset": false,
+        "size": 24
+      },
+      "4": {
+        "affine_subspace_or_coset": false,
+        "size": 6
+      },
+      "6": {
+        "affine_subspace_or_coset": true,
+        "size": 3
+      }
+    },
+    "deficiency_profile": {
+      "0": 12,
+      "1": 36,
+      "2": 24,
+      "4": 6,
+      "6": 3
+    },
+    "degree_classes": 5,
+    "discarded_framing": "'deficiency is constant on automorphism orbits' is trivially true for every graph, since degree is an automorphism invariant; the first draft also computed it on a group of order 1",
+    "wl_cell_sizes": {
+      "1": 1,
+      "2": 4,
+      "4": 6,
+      "8": 6
+    },
+    "wl_cells": 17,
+    "wl_cells_inside_degree_classes": true,
+    "wl_refines_degree": true
+  },
+  "pass_4225_load_ports": {
+    "direction_matters": false,
+    "minimum_load_ports": 1,
+    "one_port": [
+      {
+        "connected": true,
+        "deg_max": 8,
+        "deg_min": 2,
+        "direction": "e0",
+        "group_order": 4199040,
+        "linear_orbit_size": 80,
+        "spans_all_translations": true,
+        "universal": true
+      },
+      {
+        "connected": true,
+        "deg_max": 8,
+        "deg_min": 2,
+        "direction": "e1",
+        "group_order": 4199040,
+        "linear_orbit_size": 80,
+        "spans_all_translations": true,
+        "universal": true
+      },
+      {
+        "connected": true,
+        "deg_max": 8,
+        "deg_min": 2,
+        "direction": "e2",
+        "group_order": 4199040,
+        "linear_orbit_size": 80,
+        "spans_all_translations": true,
+        "universal": true
+      },
+      {
+        "connected": true,
+        "deg_max": 8,
+        "deg_min": 2,
+        "direction": "e3",
+        "group_order": 4199040,
+        "linear_orbit_size": 80,
+        "spans_all_translations": true,
+        "universal": true
+      }
+    ],
+    "zero_ports": {
+      "connected": false,
+      "deg_max": 6,
+      "deg_min": 0,
+      "group_order": 51840,
+      "isolated": 1
+    }
+  },
+  "pass_4226_sweep": {
+    "buckets": {
+      "NEEDS REVIEW": [],
+      "address-graph": [
+        509,
+        541,
+        546,
+        548,
+        577,
+        578,
+        1677,
+        1678,
+        1697,
+        1698,
+        1715,
+        1716,
+        1815,
+        2634,
+        2640,
+        3119
+      ],
+      "documented-as-wrong": [
+        597,
+        598,
+        604,
+        2555,
+        2564,
+        2565,
+        2566,
+        2567,
+        2574,
+        2577,
+        2587,
+        2588,
+        2591,
+        2613,
+        2984,
+        2987,
+        2988,
+        2989
+      ],
+      "measurement-only": [
+        1199
+      ]
+    },
+    "fourth_instance_found_and_fixed": true,
+    "is_triage_not_verdict": true,
+    "needs_review": [],
+    "regular_notion_lines": 35
+  }
+}
