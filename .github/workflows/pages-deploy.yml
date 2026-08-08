@@ -1,0 +1,110 @@
+name: Deploy docs to GitHub Pages
+
+# WHY THIS EXISTS
+#
+# The site was served by GitHub's LEGACY Pages builder from `master:/docs`.  That builder
+# went stale: the API reported `status: built` against the current commit while the CDN
+# kept serving an artifact roughly 116 KB and three sections behind, with a stale <title>.
+# A manually requested rebuild sat in `building` for over ten minutes without completing.
+#
+# A stuck legacy build has no logs and no lever.  This workflow replaces it with the
+# supported path: upload `docs/` as a Pages artifact and deploy it.  Every run is
+# observable, re-runnable, and fails loudly instead of silently serving yesterday's page.
+#
+# The site is a single 1.9 MB `docs/index.html` plus ~550 static files.  `.nojekyll` is
+# present, so nothing is processed -- the directory is published verbatim.
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'docs/**'
+      - '.github/workflows/pages-deploy.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never let two deploys race; let a newer push supersede an in-flight one.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Fail here rather than deploying a broken page.  These are the exact properties
+      # whose absence produced the stale-serve symptom: the entry point must exist, be
+      # large enough to be the real atlas rather than a stub or a 404, and be structurally
+      # closed so a browser renders all of it instead of stopping early.
+      - name: Verify the site entry point
+        run: |
+          set -e
+          test -f docs/index.html || { echo "::error::docs/index.html is missing"; exit 1; }
+          test -f docs/.nojekyll || { echo "::error::docs/.nojekyll is missing"; exit 1; }
+          BYTES=$(wc -c < docs/index.html)
+          echo "docs/index.html is $BYTES bytes"
+          if [ "$BYTES" -lt 500000 ]; then
+            echo "::error::index.html is only $BYTES bytes -- that is a stub, not the atlas"
+            exit 1
+          fi
+          for tag in '</html>' '</body>'; do
+            n=$(grep -c -- "$tag" docs/index.html || true)
+            [ "$n" -eq 1 ] || { echo "::error::expected exactly one $tag, found $n"; exit 1; }
+          done
+          python3 - <<'PY'
+          import sys
+          d = open('docs/index.html', encoding='utf-8', errors='ignore').read()
+          # the closing tag must be at the very end: an early </html> silently truncates
+          # the rendered page, which is indistinguishable from a "tiny page" in a browser
+          tail = len(d) - d.find('</html>')
+          assert tail < 32, f"</html> is {tail} chars from the end -- content follows it"
+          for o, c in (('<div', '</div>'), ('<script', '</script>')):
+              a, b = d.count(o), d.count(c)
+              assert a == b, f"unbalanced {o}: {a} open, {b} close"
+          print(f"structure OK: {len(d)} chars, tags balanced, closes at the end")
+          PY
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+      # Prove the deploy actually replaced what the CDN serves.  The failure this whole
+      # workflow exists for reported success while serving stale bytes, so "the build
+      # succeeded" is not evidence -- the served title is.
+      - name: Confirm the live site is the page we just deployed
+        run: |
+          URL="${{ steps.deployment.outputs.page_url }}"
+          for i in $(seq 1 12); do
+            code=$(curl -s -o /tmp/live.html -w "%{http_code}" -L "$URL")
+            if [ "$code" = "200" ]; then
+              bytes=$(wc -c < /tmp/live.html)
+              echo "served $bytes bytes"
+              if [ "$bytes" -gt 500000 ]; then
+                echo "Live site is serving the full atlas."
+                exit 0
+              fi
+              echo "::warning::served only $bytes bytes -- retrying"
+            else
+              echo "attempt $i: HTTP $code"
+            fi
+            sleep 10
+          done
+          echo "::error::site did not serve the full atlas after retries"
+          exit 1
