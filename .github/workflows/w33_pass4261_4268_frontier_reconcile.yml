@@ -1,0 +1,33 @@
+name: Pass 4268 protected frontier reconciliation
+on:
+  push:
+    paths:
+      - 'tools/integrate_pass4261_4268_frontier.py'
+      - 'analysis/BT4253_BT4260_girth16_faultaware_su4_hysteresis_clock_channel_scrambling_modular_capacity_insert.tex'
+      - 'analysis/BT4261_BT4268_girth18_cd_hysteresis_clock37_nongaussian_search_defect_thermal_insert.tex'
+      - 'analysis/BT4261_BT4268_girth18_cd_hysteresis_clock37_nongaussian_search_defect_thermal_index_insert.html'
+      - 'docs/girth18-cd-hysteresis-clock37-nongaussian-search-defect-thermal-4261-4268.html'
+      - '.github/workflows/w33_pass4261_4268_frontier_reconcile.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: python tools/integrate_pass4261_4268_frontier.py | tee /tmp/frontier4268.log
+      - run: grep -F 'PASS_4261_4268_FRONTIER [1, 1] [1, 1] [1, 1] [1, 1]' /tmp/frontier4268.log
+      - run: git diff --exit-code -- docs/index.html
+      - name: Commit reconciled manifests if needed
+        run: |
+          if ! git diff --quiet -- analysis/W33_CURRENT_FRONTIER_MANIFEST.tex data/w33_current_frontier_manifest_v1.json; then
+            git config user.name github-actions[bot]
+            git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+            git add analysis/W33_CURRENT_FRONTIER_MANIFEST.tex data/w33_current_frontier_manifest_v1.json
+            git commit -m 'Pass 4268: reconcile protected frontier manifests'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
