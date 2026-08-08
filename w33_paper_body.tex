@@ -200,9 +200,25 @@ sections were appended as work proceeded and were \emph{not} pruned when later
 work overturned them. Several sections below therefore state results that have
 since been \textbf{withdrawn}. Before relying on any section, consult the
 \textbf{Errata} in ``Honest Synthesis and Errata'' at the end, and the full
-ledger in \texttt{analysis/W33\_HONEST\_SYNTHESIS.md}.
+ledger in \texttt{analysis/W33\_HONEST\_SYNTHESIS.md}
+
+\begin{plainbox}
+The corrections. Everything here was believed, written down, and then withdrawn,
+with the measurement that overturned it. The attribution note at the top is the most
+important: two results this project once claimed as its own were already published by other
+people, and the entry names them. A record that quietly drops its mistakes cannot be
+audited, which is why this section exists and why it is long.
+\end{plainbox}
 
 \smallskip
+\begin{warnbox}[The two claims this project had to give back]
+The note below is the single most consequential correction in this manuscript: two results
+once presented here as ours were already published by other people, and in one case already
+proved inside this repository before the passes that ``derived'' it. Both are withdrawn,
+both name their true source, and the entry is kept rather than deleted --- a corpus that
+silently drops its wrong attributions cannot be audited by anyone.
+\end{warnbox}
+
 \textbf{ATTRIBUTION --- READ FIRST (Passes 322--326).} An earlier version of this
 box claimed the incidence rank law and the CSS family as results of this
 programme. \textbf{Both claims were wrong, and are withdrawn.} The rank law is
@@ -1454,6 +1470,15 @@ $\Phithree = 13$ (total), $\mu = 4$ (isotropic), $q^2 = 9$ (non-isotropic).
 \part{\texorpdfstring{Complete Physics from $W(3,3)$}{Complete Physics from W(3,3)}}
 
 \section{The Bose--Mesner Equation as Einstein's Equation}
+
+\begin{plainbox}
+A formal correspondence, and the word ``formal'' is doing real work. The algebraic
+relation satisfied by the shape's adjacency matrix has the same shape as the field equation
+of general relativity, term for term. That is an analogy of structure, not a derivation of
+gravity: no physical prediction follows from it here, and the section is placed among the
+speculative material for that reason.
+\end{plainbox}
+
 \label{sec:einstein}
 
 \begin{theorem}[Gravity from Graph]
@@ -4865,6 +4890,14 @@ $\max(|r|,|s|)=4 < 2\sqrt{11}\approx 6.633$.
 
 \section*{The Prime-Geodesic Expansion}
 
+\begin{plainbox}
+Closed paths that do not repeat themselves play the role of prime numbers for a
+network: every closed path factors into them, and counting them is how the zeta function is
+built. This section writes that product out and extracts what the count of short paths says
+about the shape's global structure.
+\end{plainbox}
+
+
 The Ihara zeta admits an Euler product over prime cycles:
 \[
 \frac{1}{\zeta_G(u)} = \prod_{\text{prime } P} (1 - u^{\ell(P)}),
@@ -4943,6 +4976,14 @@ $\{11,1\}\cup\{1\pm i\sqrt{10}\}^{24}\cup\{-2\pm i\sqrt{7}\}^{15}\cup
 
 \subsection*{The Zeta Frontier: Quadrangle Primes, the Explicit Formula,
 and What the Zeta Cannot Hear}
+
+\begin{plainbox}
+A zeta function packages a shape's closed paths into a single object whose
+singularities encode the shape. Four exact extensions of that idea are established here.
+The section's title records its own limit: some questions about the shape are simply
+invisible to the zeta, and knowing which is as valuable as the answers it does give.
+\end{plainbox}
+
 
 Four exact extensions, all verified in
 \texttt{w33\_pass74\_zeta\_frontier.py} (status \texttt{PASS}).
@@ -5754,6 +5795,16 @@ $E_8$-symmetric $8$-dimensional lattice.  Supplement~M proves that the
 same symmetry-breaking step is unavoidable on the finite $W_{3,3}$ side.
 
 \section*{The Missing Datum is a Three-State Transport Law}
+
+\begin{plainbox}
+The forty lines of the shape form a second network, cospectral with the first ---
+same eigenvalues, different graph. Two objects agreeing on every spectral measurement while
+remaining genuinely different is the recurring theme of this manuscript, and this section
+identifies exactly what extra datum is needed to tell them apart. The answer is a rule for
+moving between three states, which is why the object cannot be described by two-valued
+logic alone.
+\end{plainbox}
+
 
 The obstruction theorem can be sharpened.  The $40$ isotropic lines of
 $W_{3,3}$ carry the concurrence graph of the dual quadrangle $Q(4,3)$.
@@ -10504,6 +10555,15 @@ packet now has a precise metrology boundary.
 %% ===============================================================
 \section{The Integral $E_8$ Lift: Eigenlattice Obstruction and the
 Completeness Boundary}
+
+\begin{plainbox}
+$E_8$ is the largest of the exceptional symmetry structures, and the question is
+whether our forty-point object contains one exactly --- not approximately, not up to
+scaling, but over the integers. This section finds where the lift succeeds and, more
+usefully, proves where it must fail. The obstruction is the result; the near-miss is not
+evidence of a deeper connection.
+\end{plainbox}
+
 \label{sec:e8-eigenlattice-boundary}
 %% ===============================================================
 
@@ -10673,6 +10733,16 @@ established correspondence. (Witness:
 \texttt{analysis/w33\_pass1012\_edge\_root\_equivariance\_obstruction.py}.)
 
 \subsection*{What the gluing group knows}
+
+\begin{plainbox}
+How much of the shape can be recovered from one particular summary of it. The
+gluing group is a compressed description --- it throws information away by design --- so
+the useful question is not what it says but what it \emph{cannot} say. Both bounds are
+proved here: a lower one showing it sees at least this much, and an upper one showing it
+is blind past that. A summary with only one of those bounds is a summary you cannot
+trust.
+\end{plainbox}
+
 
 The eigenlattice gluing $\Gamma(G) = \ZZ^n/\sum_c L_c$ has been used above as an
 invariant of the substrate. It is worth recording exactly how much of the graph

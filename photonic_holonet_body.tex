@@ -133,6 +133,22 @@ mathematics, machine-verified where verification is possible. No such device has
 built, and the sections describing fabrication say so explicitly.
 \end{plainbox}
 
+\begin{warnbox}[Where this document's corrections live, and a caveat about their absence]
+This project's rule is that a withdrawn claim stays on the page beside the measurement that
+overturned it. Applied honestly, that rule produces a visible correction record --- and
+\emph{this manuscript has almost none}, while the machine blueprint has a full errata index
+and the research atlas carries thirty-six retractions.
+
+Two readings are possible and a reader should be told which: either the architecture here
+has genuinely needed few corrections, or its claims have had less adversarial attention
+than the mathematics has. The second is more likely. Design documents attract fewer
+falsification attempts than theorems do, because a design is not wrong until it is built,
+and nothing here has been built.
+
+Treat the implementation claims accordingly. The finite mathematics they rest on is
+checked; the engineering that would realise it is not, and the difference is not marked on
+every page.
+\end{warnbox}
 
 \tableofcontents
 
@@ -473,6 +489,15 @@ The useful result is stronger than the count: a hierarchical decoder
 and a persistent address bit are forced by the two parabolic actions.
 
 \subsection{The incidence transceiver and the route-dark lattice}
+
+\begin{plainbox}
+How a message gets from one machine to another. ``Incidence'' means the sender and
+receiver share a point of the geometry; the transceiver is the optical hardware that
+exploits it. The second half of the title is the failure mode: some routes are dark ---
+structurally unreachable --- and this section maps them rather than assuming a fully
+connected network.
+\end{plainbox}
+
 \label{sec:incidence-transceiver-route-dark}
 
 Pass~173 turns the address/route distinction into an exact signal law.
@@ -1342,6 +1367,14 @@ cover family without invalidating the other non-comparable families.
 \emph{Witness: \path{bt831_tomotope_minimal_cover_architecture.py}.}
 
 \subsection{Cover-indexed storage, rerouting, and guard bands}
+
+\begin{plainbox}
+Where data physically sits and what happens when part of the machine fails.
+Storage locations are indexed by the geometry rather than by an address counter, which
+means a failure has a shape: the states lost when one component dies are a geometrically
+describable set, and rerouting can be planned against it in advance.
+\end{plainbox}
+
 
 The infinite-cover warning would be useless as engineering unless it
 changed the runtime.  BT832--BT834 make it operational.  The principle
@@ -3617,6 +3650,14 @@ literal content of ``holo-net''. (Witness:
 \texttt{analysis/w33\_holographic\_architecture.py}.)
 
 \subsection{Rank $24$: the finite moonshine/CFT comparison}
+
+\begin{plainbox}
+A comparison with the conformal field theories that appear in string theory, where
+similar-looking counts occur. Read carefully: this section establishes that certain numbers
+agree and does \emph{not} establish that the two structures are the same. Numerical
+agreement between a finite object and an infinite one is a lead, not a result.
+\end{plainbox}
+
 \label{sec:central-charge}
 
 The finite lattice tower has a distinguished rank $24$, which can be compared
@@ -5191,6 +5232,15 @@ Every entry is a closed substrate expression; the lone historical tension
 are sharp near-term falsification handles.
 
 \subsection{The one object and its seven faces}
+
+\begin{plainbox}
+One mathematical object, described seven different ways --- as a network, as a set
+of symmetries, as a code, as an optical mode structure, and so on. The point is not that
+seven descriptions exist but that they are the same object: a fact proved in one language
+is automatically a fact in the other six. That is what makes the architecture in this paper
+possible at all.
+\end{plainbox}
+
 \label{sec:five-faces}
 
 Before the details, the organizing claim --- and it frames the entire paper, not

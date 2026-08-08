@@ -1,0 +1,48 @@
+{
+  "bits_per_readout": 2.6666666666666665,
+  "cadence_is_an_assumption": true,
+  "clock_hz": 208860000.0,
+  "conclusion_robust": true,
+  "kT_ln2": 2.870978885078724e-21,
+  "quoted_figure_watts": 1.066013599888964e-13,
+  "rows": [
+    {
+      "instructions_per_readout": 1,
+      "label": "every instruction (worst case)",
+      "rate_hz": 208860000.0,
+      "watts": 1.599020399833446e-12
+    },
+    {
+      "instructions_per_readout": 2,
+      "label": "every other instruction",
+      "rate_hz": 104430000.0,
+      "watts": 7.99510199916723e-13
+    },
+    {
+      "instructions_per_readout": 15,
+      "label": "the mixing time (Pass 2867)",
+      "rate_hz": 13924000.0,
+      "watts": 1.066013599888964e-13
+    },
+    {
+      "instructions_per_readout": 19,
+      "label": "the ISA diameter (Pass 2866)",
+      "rate_hz": 10992631.578947369,
+      "watts": 8.415896841228663e-14
+    },
+    {
+      "instructions_per_readout": 100,
+      "label": "once per hundred",
+      "rate_hz": 2088600.0,
+      "watts": 1.599020399833446e-14
+    },
+    {
+      "instructions_per_readout": 1000,
+      "label": "once per thousand",
+      "rate_hz": 208860.0,
+      "watts": 1.599020399833446e-15
+    }
+  ],
+  "span_factor": 999.9999999999999,
+  "why": "even the worst-case cadence is ten orders of magnitude below device static power, so the argument never depended on the cadence"
+}
