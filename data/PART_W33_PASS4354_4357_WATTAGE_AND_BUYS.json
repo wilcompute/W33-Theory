@@ -1,0 +1,117 @@
+{
+  "pass_4354_wattage": {
+    "conditional_entropy_bits": 2.6666666666666665,
+    "differs_from_4353_because": "the erasure is real; the map frame->support is not injective",
+    "is_a_floor_not_an_estimate": true,
+    "kT_ln2": 2.870978885078724e-21,
+    "matches_8_over_3": true,
+    "readout_watts_floor": 1.0660135998889639e-13,
+    "survives_scrutiny": true
+  },
+  "pass_4357_buys_sweep": {
+    "claims": 97,
+    "sample": [
+      {
+        "file": "BT1620_synthesis_section.tex",
+        "line": 29,
+        "text": "The 1600 frames split into 800 $T$-invariant pairs; the entropy co"
+      },
+      {
+        "file": "BT1620_synthesis_section.tex",
+        "line": 45,
+        "text": "The irreducible feedback floor is $S_{\\min} \\approx 2.070$~bits, t"
+      },
+      {
+        "file": "BT1620_synthesis_section.tex",
+        "line": 92,
+        "text": "S_{\\min}                     &=  2.070~\\text{bits} &\\text{[irreduc"
+      },
+      {
+        "file": "holonet_machine.tex",
+        "line": 47,
+        "text": "The quantum advantage is the one priced resource (classical emulat"
+      },
+      {
+        "file": "holonet_machine.tex",
+        "line": 130,
+        "text": "imposes no per-bit penalty ($kT\\ln3/\\log_2 3=kT\\ln2$). The only ir"
+      },
+      {
+        "file": "holonet_machine_blueprint_body.tex",
+        "line": 1569,
+        "text": "The last two rows are worth a moment. The ``mixer'' is the part th"
+      },
+      {
+        "file": "holonet_machine_blueprint_body.tex",
+        "line": 2734,
+        "text": "\\headline{The machine's whole state is $34.65$ bits, and only $7.9"
+      },
+      {
+        "file": "holonet_machine_blueprint_body.tex",
+        "line": 2750,
+        "text": "Moving a packet to any of the $40$ addresses costs at most \\emph{t"
+      },
+      {
+        "file": "holonet_machine_blueprint_body.tex",
+        "line": 2751,
+        "text": "because the geometry has diameter $2$. Transforming the Pauli fram"
+      },
+      {
+        "file": "holonet_machine_blueprint_body.tex",
+        "line": 3361,
+        "text": "and the network law follows directly: depth $n$ costs $8n$ header "
+      },
+      {
+        "file": "holonet_machine_blueprint_body.tex",
+        "line": 3384,
+        "text": "So the irreducible cost of one routed, read operation is $143$\\,me"
+      },
+      {
+        "file": "holonet_machine_blueprint_body.tex",
+        "line": 3714,
+        "text": "rate $2/3$; cost reaches $10^{27}$ & Computing the derivative inst"
+      },
+      {
+        "file": "holonet_parity_control.tex",
+        "line": 139,
+        "text": "the engineering cost of buying the control.  As in v1, a positive "
+      },
+      {
+        "file": "holonet_practical_implications.tex",
+        "line": 45,
+        "text": "priced resource ($9^{t}$ for $t$ magic gates). (ii)~The \\textbf{pl"
+      },
+      {
+        "file": "holonet_practical_implications.tex",
+        "line": 383,
+        "text": "\\item $t>0$: each magic gate multiplies the classical cost by $9$."
+      },
+      {
+        "file": "holonet_practical_implications.tex",
+        "line": 392,
+        "text": "continuously priced resource, $9^t$ in the magic count $t$. You pr"
+      },
+      {
+        "file": "holonet_practical_implications.tex",
+        "line": 584,
+        "text": "imposes \\emph{no} per-bit penalty: $kT\\ln 3/\\log_2 3 = kT\\ln 2$, s"
+      },
+      {
+        "file": "holonet_practical_implications.tex",
+        "line": 607,
+        "text": "$945$~TWh of 2030 data-center demand assumes incremental CMOS. It "
+      },
+      {
+        "file": "holonet_practical_implications.tex",
+        "line": 773,
+        "text": "nodes. The energy contrast is the headline: proof-of-work pays $\\s"
+      },
+      {
+        "file": "holonet_practical_implications.tex",
+        "line": 774,
+        "text": "transaction (Bitcoin draws $\\sim\\!150$~TWh/yr), while the holonet'"
+      }
+    ],
+    "unbacked": 31
+  }
+}
