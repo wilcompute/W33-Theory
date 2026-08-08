@@ -1,0 +1,21 @@
+name: Passes 4214-4221 exact regression
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass4214_4221_small_cover_su4_quantum_hysteresis_clock_hawking_pell_vacuum_velocity.py'
+      - 'analysis/w33_pass4213_4220_small_cover_su4_quantum_hysteresis_clock_hawking_pell_vacuum_velocity.py'
+      - 'data/PART_4214_4221_SMALL_COVER_SU4_QUANTUM_HYSTERESIS_CLOCK_HAWKING_PELL_VACUUM_VELOCITY.json'
+      - 'tests/test_w33_pass4214_4221_small_cover_su4_quantum_hysteresis_clock_hawking_pell_vacuum_velocity.py'
+      - '.github/workflows/w33_pass4214_4221_small_cover_su4_quantum_hysteresis_clock_hawking_pell_vacuum_velocity.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install numpy scipy pytest
+      - run: python analysis/w33_pass4214_4221_small_cover_su4_quantum_hysteresis_clock_hawking_pell_vacuum_velocity.py | tee /tmp/pass.log
+      - run: pytest -q tests/test_w33_pass4214_4221_small_cover_su4_quantum_hysteresis_clock_hawking_pell_vacuum_velocity.py
+      - run: grep -F '2b2e3951e7e5a017cd41217d764ab34cc1e74ec23ba28b72044bb0126cf1bce4' /tmp/pass.log
