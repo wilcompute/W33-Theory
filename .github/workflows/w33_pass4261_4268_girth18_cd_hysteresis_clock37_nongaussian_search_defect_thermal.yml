@@ -1,0 +1,21 @@
+name: Passes 4261-4268 exact regression
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass4261_4268_girth18_cd_hysteresis_clock37_nongaussian_search_defect_thermal.py'
+      - 'data/PART_4261_4268_GIRTH18_CD_HYSTERESIS_CLOCK37_NONGAUSSIAN_SEARCH_DEFECT_THERMAL.json'
+      - 'tests/test_w33_pass4261_4268_girth18_cd_hysteresis_clock37_nongaussian_search_defect_thermal.py'
+      - '.github/workflows/w33_pass4261_4268_girth18_cd_hysteresis_clock37_nongaussian_search_defect_thermal.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy scipy pytest
+      - run: python analysis/w33_pass4261_4268_girth18_cd_hysteresis_clock37_nongaussian_search_defect_thermal.py | tee /tmp/pass4261.log
+      - run: pytest -q tests/test_w33_pass4261_4268_girth18_cd_hysteresis_clock37_nongaussian_search_defect_thermal.py
+      - run: grep -F '900c1daacd2482cd0711e9b0e1427ced1eeef38003560c1e899bce61f121b3ff' /tmp/pass4261.log
