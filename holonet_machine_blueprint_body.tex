@@ -583,6 +583,19 @@ circle $|u| = 1/\sqrt{11}$: $48$ poles from $r = 2$, $30$ from $s = -4$, for
 complex poles in total. That is the graph-theoretic Riemann Hypothesis, and this graph
 satisfies it. The pole discriminants encode the graph back: $|\operatorname{disc} r| = 40 = v$,
 $|\operatorname{disc} s| = 28 = v-k$, and their difference is $k = 12$.
+
+\medskip
+\textbf{Scope, added at Pass 4281, because the coincidence invites an over-read.} Spence
+classified exactly $28$ non-isomorphic $\mathrm{SRG}(40,12,2,4)$ graphs. All $28$ were run
+through this same pipeline: \emph{every one} is Ramanujan, satisfies the graph RH, and
+returns $\rho(B) = 11$ with the same $78$ poles on the critical circle. The Ihara zeta of a
+regular graph is determined by its adjacency spectrum, and an SRG's spectrum is determined
+by its parameters --- so all $28$ are zeta-identical by construction.
+
+\emph{The $78$ is therefore a property of the parameter set $(40,12,2,4)$, not of $W(3,3)$.}
+It remains a true and striking arithmetic fact that $78 = \dim E_6$; it is not evidence that
+\emph{this} graph is the exceptional one. What distinguishes $W(3,3)$ among the $28$ is its
+automorphism group, which the zeta never sees.
 \end{spec}
 
 \begin{plain}
@@ -2886,12 +2899,80 @@ different properties, and the four-opcode machine has the first without the seco
 information is destroyed --- every opcode is invertible --- but the \emph{choice} is not: to
 undo an opcode is not itself an instruction.
 
-That is a genuine engineering trade, and it did not exist as a number before this pass. A
-four-opcode machine is cheap and arrow-of-time-violating; an eight-opcode machine doubles
-the decode logic and runs thermodynamically free. It also sharpens Pass 2836's ``compute is
-exactly zero'': that holds of the reversible closure, and the shipped four-opcode ISA does
-not have it.
+That is a genuine engineering trade, and it did not exist as a number before this pass. It
+also sharpens Pass 2836's ``compute is exactly zero'': that holds of the reversible closure,
+and the shipped four-opcode ISA does not have it.
 \end{plain}
+
+\begin{spec}[Pass 4279 --- and now the other side of the trade, in gates]
+``Twice the decode logic'' was an assertion. Synthesisable Verilog for both machines was
+generated \emph{from the opcode matrices themselves}, so the RTL cannot disagree with the
+algebra, and put through yosys:
+\begin{center}\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+design & opcodes & cells & wires\\
+\midrule
+four-opcode ISA & $4$ & $103$ & $137$\\
+reversible closure & $8$ & $201$ & $269$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\textbf{Thermodynamic reversibility costs $1.95\times$ the cells.} The datapath is shared;
+only the decode widens.
+
+The RTL was verified before the count was believed: a $40$-instruction random program run
+under \texttt{iverilog} ends at frame $(2,2,1,0)$, exactly matching the group computation in
+Python. The simulation also reproduces Pass 4204 independently --- from the origin, all
+three linear opcodes leave the register at $(0,0,0,0)$ and only the load port moves it.
+
+\emph{Scope:} yosys generic-gate counts after \texttt{abc} mapping, so the ratio is
+meaningful and the absolute numbers are not a tape-out estimate.
+\end{spec}
+
+\subsection{The one asymmetry underneath all of it}
+\label{sec:pbias}
+
+\begin{spec}[Pass 4282 --- the under-stirred pair is the f-register]
+The symplectic form splits the register into two hyperbolic pairs, $p = (x_0, x_1)$ and
+$f = (x_2, x_3)$, mutually orthogonal. The ISA's stir scores are
+\[
+  x_0 = 1.000,\quad x_1 = 0.889,\quad x_2 = 0.667,\quad x_3 = 0.667 .
+\]
+\textbf{The under-stirred pair is exactly $f$.} And the opcode list says why in its own
+notation: $F_p$, $\mathrm{CX}_{pf}$, $\mathrm{CX}_{fp}$, $Z_p$ --- a Fourier on $p$, two
+couplers, and a translation of $p$. Only the two couplers touch $f$ at all, and the load
+port, which Pass 4204 proved must be present because translations are the only free
+generators, moves $p$ and nothing else.
+\end{spec}
+
+\begin{plain}
+So the spectral story of this whole chapter reduces to one sentence: \textbf{the instruction
+set is $p$-biased, and the zeta can see it.} The slow mode on a hyperplane (4244), the tied
+under-stirred pair (4250), the $100$th-percentile localisation against random Schreier graphs
+(4251) --- these are not four findings. They are one asymmetry measured four ways.
+
+\textbf{But the cure is only half a cure}, and the control says so. Adding the two
+$f$-mirrors takes minimum stir from $0.667$ to $0.889$ where two extra $p$-generators leave
+it exactly where it was --- the causal claim survives. Yet against that size-matched control
+the symmetrised machine ties on localisation and is \emph{worse} on both mixing time
+($12$ vs $11$) and growth ($\rho = 8.76$ vs $6.75$). The $p$-bias is real and it is not what
+governs mixing; two more generators of any kind move that further than symmetry does.
+\end{plain}
+
+\begin{spec}[Pass 4278 --- why the deficit is exactly $2/3$]
+Each opcode is affine, so the frames it leaves fixed in coordinate $c$ solve one linear
+equation over $\mathbb F_3$ --- an affine subspace, of size $3^k$. The number of frames
+\emph{moved} is therefore $81 - 3^k$, and the only possible values are
+\[
+  0,\ 54,\ 72,\ 78,\ 80 .
+\]
+The count is quantised. Across this pool only $0$ and $54$ occur, because each opcode's
+matrix differs from the identity in at most one entry per row, so every mover fixes a
+hyperplane. Four generators never supply two movers with \emph{different} hyperplanes for
+the same worst coordinate, so the union stays at $54$ and the ratio is forced:
+$54/81 = 2/3$, identically for all $24$ minimum-size universal sets.
+\end{spec}
 
 \headline{The machine's geometry is extremal; its algebra is not, and after Pass 4213
 we can say why the comparison only runs one way.}

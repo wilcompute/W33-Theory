@@ -1,0 +1,243 @@
+{
+  "pass_4277_symmetrise": {
+    "loc_margin": 0.008943275031845332,
+    "mix_margin": -1,
+    "rho_margin": -2.0133983871620558,
+    "rows": {
+      "+ F_f (f-mirror of F_p)": {
+        "deg": [
+          2,
+          10
+        ],
+        "loc_plane": "x1=0",
+        "loc_weight": 0.41455352718074057,
+        "min_stir": 0.8888888888888888,
+        "mix": 16,
+        "n": 5,
+        "rho": 7.622792283261061,
+        "stir": [
+          1.0,
+          0.8888888888888888,
+          0.8888888888888888,
+          0.8888888888888888
+        ]
+      },
+      "+ Z2 (f load port)": {
+        "deg": [
+          4,
+          10
+        ],
+        "loc_plane": "x3=2",
+        "loc_weight": 0.4593305302366693,
+        "min_stir": 0.6666666666666666,
+        "mix": 18,
+        "n": 5,
+        "rho": 7.48140270269631,
+        "stir": [
+          1.0,
+          0.8888888888888888,
+          1.0,
+          0.6666666666666666
+        ]
+      },
+      "SYMMETRISED: +F_f +Z2": {
+        "deg": [
+          4,
+          12
+        ],
+        "loc_plane": "x3=0",
+        "loc_weight": 0.46043493157314924,
+        "min_stir": 0.8888888888888888,
+        "mix": 12,
+        "n": 6,
+        "rho": 8.76209030581273,
+        "stir": [
+          1.0,
+          0.8888888888888888,
+          1.0,
+          0.8888888888888888
+        ]
+      },
+      "control: +Z1 +S_p (p-side)": {
+        "deg": [
+          4,
+          8
+        ],
+        "loc_plane": "x2=0",
+        "loc_weight": 0.4693782066049946,
+        "min_stir": 0.6666666666666666,
+        "mix": 11,
+        "n": 6,
+        "rho": 6.748691918650675,
+        "stir": [
+          1.0,
+          1.0,
+          0.6666666666666666,
+          0.6666666666666666
+        ]
+      },
+      "shipped ISA (p-biased)": {
+        "deg": [
+          2,
+          8
+        ],
+        "loc_plane": "x2=0",
+        "loc_weight": 0.6128670516611174,
+        "min_stir": 0.6666666666666666,
+        "mix": 15,
+        "n": 4,
+        "rho": 5.746872679901983,
+        "stir": [
+          1.0,
+          0.8888888888888888,
+          0.6666666666666666,
+          0.6666666666666666
+        ]
+      }
+    },
+    "stir_margin": 0.2222222222222222,
+    "verdict": "mechanism confirmed (stir), symptom not (localisation tie, control better on mixing and growth)"
+  },
+  "pass_4278_two_thirds": {
+    "argument": "fixed sets are affine subspaces, so moved-counts are 81-3^k; sparse opcodes give only 0 or 54, and 54/81 = 2/3",
+    "per_opcode_counts": {
+      "CX_fp": [
+        54,
+        0,
+        0,
+        54
+      ],
+      "CX_pf": [
+        0,
+        54,
+        54,
+        0
+      ],
+      "F_f": [
+        0,
+        0,
+        54,
+        54
+      ],
+      "F_p": [
+        54,
+        54,
+        0,
+        0
+      ],
+      "S_f": [
+        0,
+        0,
+        0,
+        54
+      ],
+      "S_p": [
+        0,
+        54,
+        0,
+        0
+      ],
+      "Z0": [
+        81,
+        0,
+        0,
+        0
+      ],
+      "Z1": [
+        0,
+        81,
+        0,
+        0
+      ],
+      "Z2": [
+        0,
+        0,
+        81,
+        0
+      ],
+      "Z3": [
+        0,
+        0,
+        0,
+        81
+      ]
+    },
+    "possible_values": [
+      80,
+      78,
+      72,
+      54,
+      0
+    ],
+    "values_occurring": [
+      0,
+      54,
+      81
+    ]
+  },
+  "pass_4281_spence_28": {
+    "distinct_pole_counts": {
+      "78": 28
+    },
+    "distinct_rho": {
+      "11.0": 28
+    },
+    "graph_RH": 28,
+    "graphs": 28,
+    "ramanujan": 28,
+    "zeta_distinguishes_w33": false
+  },
+  "pass_4282_f_register": {
+    "hyperbolic_f": true,
+    "hyperbolic_p": true,
+    "is_f_register": true,
+    "opcode_bias": {
+      "both": 2,
+      "f": 0,
+      "p": 2
+    },
+    "pairs_orthogonal": true,
+    "stir": [
+      1.0,
+      0.8888888888888888,
+      0.6666666666666666,
+      0.6666666666666666
+    ],
+    "understirred": [
+      2,
+      3
+    ]
+  },
+  "pass_4283_bands": {
+    "angular_spacing_std": 0.04968422948644762,
+    "critical_circle": 2.3972635816492907,
+    "empty_bands": 7,
+    "nontrivial_max": 3.349686084719167,
+    "nontrivial_min": 1.1501207748820945,
+    "widest_gap": [
+      1.4250664386117284,
+      1.5167149931882733
+    ]
+  },
+  "pass_4284_code": {
+    "ball": [
+      1,
+      5,
+      20,
+      73,
+      249,
+      796,
+      2426,
+      7074,
+      19803,
+      52945,
+      134564,
+      319422
+    ],
+    "bits_ball_growth": 1.3372242573052546,
+    "bits_encoding": 2.0,
+    "bits_topological": 2.522777087087237,
+    "waste_bits": 0.6627757426947454,
+    "waste_fraction": 0.3313878713473727
+  }
+}
