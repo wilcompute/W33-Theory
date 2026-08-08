@@ -78,8 +78,10 @@ def main(argv: list[str]) -> int:
         print(f"  title differs  -- served {sd['title'][:50]!r}")
         print(f"                    local  {ld['title'][:50]!r}")
     if sd["bytes"] != ld["bytes"]:
-        print(f"  size differs   -- served is {ld['bytes'] - sd['bytes']:+,d} bytes "
-              f"from local")
+        delta = sd["bytes"] - ld["bytes"]
+        print(f"  size differs   -- served is {abs(delta):,d} bytes "
+              f"{'larger' if delta > 0 else 'smaller'} than local "
+              f"(served {sd['bytes']:,d}, local {ld['bytes']:,d})")
     if sd["sections"] != ld["sections"]:
         print(f"  sections differ-- served {sd['sections']}, local {ld['sections']}")
     print("\n  A 200 response proves the CDN answered, not that it answered with this")
