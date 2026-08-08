@@ -56,10 +56,19 @@ PLANTS = {
     "needs-pkg": (
         "\\section{Another planted section}\n"
         "\\begin{tikzcd}\nA \\arrow{r} & B\n\\end{tikzcd}\n"),
+    # Added at Pass 4285.  This family did not exist when the checker was written, and
+    # its absence let two inserts through that then failed to compile -- a reminder that
+    # planted-fault recall measures the families you HAVE, never the ones you lack.
+    "bare-underscore": (
+        "The comparator emits rows marked PENDING_VERDICT until tolerances land.\n"
+        "Escaped ones like FOO\\_BAR and $x_{i}$ and \\texttt{a_b} must NOT fire,\n"
+        "nor must a hash inside verbatim:\n"
+        "\\begin{verbatim}\nRUN_TAG deadbeef\n\\end{verbatim}\n"),
 }
 # Which family label each plant must produce (prefix match).
 EXPECT = {"row-bracket": "row-bracket", "double-sub": "double-sub",
-          "ctrl-byte": "ctrl-byte", "undef-env": "undef-env", "needs-pkg": "needs-pkg"}
+          "ctrl-byte": "ctrl-byte", "undef-env": "undef-env", "needs-pkg": "needs-pkg",
+          "bare-underscore": "bare-underscore"}
 
 # A clean file that must NOT fire: the honest form of the sentence Pass 4213 corrected.
 CLEAN = (

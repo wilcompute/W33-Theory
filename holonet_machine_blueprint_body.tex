@@ -3579,4 +3579,17 @@ been quietly relied on.
 \end{center}
 
 \input{analysis/BT2901_BT2907_seven_frontiers_insert}%
+
+% ---------------------------------------------------------------------------
+% Pass 4285: work that was finished, committed, and unreachable.
+%
+% A census (scripts/find_orphaned_inserts.py) found 114 analysis/*_insert.tex files
+% that NO manuscript included.  Routing them by their filename convention sends 26 to
+% w33_paper and 1 to photonic_holonet -- not this document's to absorb -- and leaves 57
+% written for the blueprint.  Each was vetted (scripts/vet_inserts_for_blueprint.py) for
+% dangling cross-references, duplicate labels, and the Pass 4231 LaTeX pitfall families
+% before inclusion; one dangling \ref was repaired rather than dropping the write-up.
+% ---------------------------------------------------------------------------
+\appendix
+\input{analysis/W33_BLUEPRINT_RECOVERED_APPENDIX}%
 \end{document}

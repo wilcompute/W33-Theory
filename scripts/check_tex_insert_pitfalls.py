@@ -32,6 +32,12 @@ Families, all observed in analysis/*_insert.tex:
                 or shell escape: \\frac written through an unescaped string becomes
                 formfeed + "rac", and TeX then reports "Missing $ inserted" some lines
                 later, pointing nowhere near the cause.  Two files carried this.
+  bare-underscore
+                an unescaped _ in TEXT mode, e.g. MISSING_OBSERVABLE in prose.  TeX reads
+                it as a subscript and reports "Missing $ inserted".  Added at Pass 4285:
+                this checker scanned all 287 inserts and reported zero pitfalls while two
+                of them failed to compile for exactly this reason -- a recall gap the
+                planted-fault test could not have found, because the family did not exist.
 
     py -3 scripts/check_tex_insert_pitfalls.py [files...]
 """
@@ -60,6 +66,25 @@ DOUBLE_SUB = re.compile(r"_(?:\{[^{}]*\}|[A-Za-z0-9])"
                         r"_(?:\{|\\)")
 NEWTHM = re.compile(r"\\newtheorem\*?\s*\{([A-Za-z]+)\}")
 BEGIN = re.compile(r"\\begin\{([A-Za-z*]+)\}")
+
+# For bare-underscore detection: blank out anything where _ is legal before looking.
+_MATH = re.compile(r"\$[^$]*\$|\\\[.*?\\\]|\\\(.*?\\\)", re.S)
+# verbatim-like environments take _ literally; flagging them is a false positive, and the
+# first version of this family produced one on a certificate hash inside \begin{verbatim}.
+_VERB = re.compile(r"\\begin\{(verbatim|lstlisting|minted|alltt)\*?\}.*?"
+                   r"\\end\{\1\*?\}", re.S)
+_SAFE_CMD = re.compile(r"\\(?:label|ref|eqref|cref|Cref|autoref|input|include|cite|"
+                       r"texttt|verb|url|href|path)\s*\{[^}]*\}")
+_ESCAPED = re.compile(r"\\_")
+_COMMENT = re.compile(r"(?<!\\)%.*")
+
+
+def bare_underscores(txt: str):
+    """Positions of _ that TeX will read as a subscript in text mode."""
+    masked = _COMMENT.sub(lambda m: " " * len(m.group()), txt)
+    for pat in (_VERB, _MATH, _SAFE_CMD, _ESCAPED):
+        masked = pat.sub(lambda m: " " * len(m.group()), masked)
+    return [m.start() for m in re.finditer(r"_", masked)]
 
 
 def preamble_packages() -> set[str]:
@@ -96,6 +121,12 @@ def scan(path: Path, have: set[str], thms: set[str]) -> list[tuple[int, str, str
     for m in DOUBLE_SUB.finditer(txt):
         ln, c = ctx(m.start())
         hits.append((ln, "double-sub", c))
+    seen_lines: set[int] = set()
+    for pos in bare_underscores(txt):
+        ln, c = ctx(pos)
+        if ln not in seen_lines:
+            seen_lines.add(ln)
+            hits.append((ln, "bare-underscore", c))
     for env, pkg in NEEDS.items():
         if pkg in have:
             continue
