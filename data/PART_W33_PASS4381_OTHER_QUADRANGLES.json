@@ -1,0 +1,58 @@
+{
+  "asymmetric_gives_unequal_protection": true,
+  "asymmetric_rows_are_derived_not_measured": true,
+  "general_formula": "1 - [s/((s+1)(st+1)-1) + t/((t+1)(st+1)-1)]/2",
+  "reproduces_measured_symplectic": true,
+  "rows": [
+    {
+      "detection": 0.9230769230769231,
+      "family": "symplectic W(3,q), q=3",
+      "lines": 40,
+      "miss_line": 0.07692307692307693,
+      "miss_point": 0.07692307692307693,
+      "points": 40,
+      "s": 3,
+      "t": 3
+    },
+    {
+      "detection": 0.970357454228422,
+      "family": "Hermitian H(3,q^2), q=3",
+      "lines": 280,
+      "miss_line": 0.03225806451612903,
+      "miss_point": 0.02702702702702703,
+      "points": 112,
+      "s": 3,
+      "t": 9
+    },
+    {
+      "detection": 0.970357454228422,
+      "family": "Hermitian dual, q=3",
+      "lines": 112,
+      "miss_line": 0.02702702702702703,
+      "miss_point": 0.03225806451612903,
+      "points": 280,
+      "s": 9,
+      "t": 3
+    },
+    {
+      "detection": 0.970357454228422,
+      "family": "orthogonal Q(5,q), q=3",
+      "lines": 280,
+      "miss_line": 0.03225806451612903,
+      "miss_point": 0.02702702702702703,
+      "points": 112,
+      "s": 3,
+      "t": 9
+    },
+    {
+      "detection": 0.989010989010989,
+      "family": "symplectic W(3,q), q=9",
+      "lines": 820,
+      "miss_line": 0.01098901098901099,
+      "miss_point": 0.01098901098901099,
+      "points": 820,
+      "s": 9,
+      "t": 9
+    }
+  ]
+}

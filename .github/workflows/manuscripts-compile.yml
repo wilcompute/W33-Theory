@@ -57,6 +57,14 @@ jobs:
           print(f"headings with no plain-language box: {n}")
           PY
 
+      - name: No box inserted inside a heading argument
+        # BLOCKS. An insertion inside a \section argument is a compile error, and one
+        # shipped this way at Pass 4368 because the insertion point was "the first }"
+        # in a heading containing $q{+}1$. The selftest proves the check can fail.
+        run: |
+          python scripts/check_tex_insertions.py --selftest
+          python scripts/check_tex_insertions.py
+
       - name: Ratio claims must name a baseline
         # Advisory for the same reason: it is a triage list, and one known false positive
         # (a comparison whose baseline is the table above it) is expected.

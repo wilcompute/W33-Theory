@@ -1,0 +1,133 @@
+{
+  "conclusion": "zero confirmed untested premises in twenty; the older corpus already applies the rule and frequently states it; Pass 4375's implied backlog is withdrawn",
+  "confirmed_errors": 0,
+  "counts": {
+    "EXEMPLARY": 7,
+    "SOUND": 8,
+    "SUSPECT": 5
+  },
+  "sampled": 20,
+  "seed": 4380,
+  "verdicts": [
+    {
+      "file": "2026-07-10_levi_closure.md",
+      "line": 78,
+      "verdict": "SOUND",
+      "why": "reports two weight sequences agree; draws nothing from it"
+    },
+    {
+      "file": "2026-07-15_pass76_k6_matchings_codewords.md",
+      "line": 42,
+      "verdict": "EXEMPLARY",
+      "why": "labels it 'triple coincidence noted', then TESTS the connection and finds the complement is NOT in ker(A^T)"
+    },
+    {
+      "file": "2026-07-07_pass69_three_perpendicular_tracks.md",
+      "line": 132,
+      "verdict": "SUSPECT",
+      "why": "'all three tracks point to the same number sqrt(97)' -- three routes to one value, and the shared value is the argument"
+    },
+    {
+      "file": "2026-05-30_s4_torsor_bridge_between_12_codecs.md",
+      "line": 36,
+      "verdict": "EXEMPLARY",
+      "why": "'both are 12-element regular torsors, BUT FOR DIFFERENT GROUPS' -- the exact distinction CLAUDE.md's G-set rule exists for"
+    },
+    {
+      "file": "2026-05-18_toroidal_metric_parity_taylor.md",
+      "line": 176,
+      "verdict": "SUSPECT",
+      "why": "bare 'matches the signed phase-frame kernel'"
+    },
+    {
+      "file": "2026-05-18_toroidal_spectrum_realization_bridge.md",
+      "line": 82,
+      "verdict": "SOUND",
+      "why": "reports invariants; not a comparability claim"
+    },
+    {
+      "file": "2026-07-10_levi_closure.md",
+      "line": 15,
+      "verdict": "SOUND",
+      "why": "reports that two counts are both odd"
+    },
+    {
+      "file": "2026-05-18_minimal_logical_x_scheme_eigenmatrix.md",
+      "line": 103,
+      "verdict": "SOUND",
+      "why": "'matches ... NOW EXPLAINED BY the primitive eigenspaces' -- supplies the mechanism"
+    },
+    {
+      "file": "2026-05-30_ordered_spread_transport_orbits.md",
+      "line": 102,
+      "verdict": "EXEMPLARY",
+      "why": "'same order as the total number of triples, SO a regular transport interpretation MUST INCLUDE more' -- names the coincidence and demands more"
+    },
+    {
+      "file": "2026-05-31_polarity_chirality_orientation_duality.md",
+      "line": 131,
+      "verdict": "SUSPECT",
+      "why": "'this cleanly matches the toroidal duality'"
+    },
+    {
+      "file": "2026-07-15_pass353_factor17_rep_theory.md",
+      "line": 50,
+      "verdict": "EXEMPLARY",
+      "why": "'flagged speculative ... filed as open, not proved'"
+    },
+    {
+      "file": "2026-05-21_toroidal_dual_genus_horizon.md",
+      "line": 40,
+      "verdict": "SOUND",
+      "why": "reports a shared formula"
+    },
+    {
+      "file": "2026-05-18_horizon_f3_parity_matrix.md",
+      "line": 70,
+      "verdict": "SOUND",
+      "why": "'[72,66]-STYLE' -- rank determines n and k, so the inference is licensed and the hedging word is doing real work"
+    },
+    {
+      "file": "2026-05-30_index_read_correction_and_local_shell.md",
+      "line": 21,
+      "verdict": "SOUND",
+      "why": "a meta-comment about a page emphasising a coincidence"
+    },
+    {
+      "file": "2026-07-15_pass354_factor17_correction.md",
+      "line": 35,
+      "verdict": "EXEMPLARY",
+      "why": "'Is this a coincidence? ... The source is unknown.'"
+    },
+    {
+      "file": "2026-05-30_ordered_spread_transport_orbits.md",
+      "line": 51,
+      "verdict": "SUSPECT",
+      "why": "'the count matches the full linear symplectic order exactly'"
+    },
+    {
+      "file": "2026-05-18_toroidal_vef_edge_phase_kernel.md",
+      "line": 103,
+      "verdict": "SOUND",
+      "why": "reports a shared value"
+    },
+    {
+      "file": "2026-06-07_bc_ring_torus_lift.md",
+      "line": 156,
+      "verdict": "EXEMPLARY",
+      "why": "'this is NOT a numerical coincidence; it is a chain-complex theorem'"
+    },
+    {
+      "file": "2026-05-31_fano_84_chart_codec.md",
+      "line": 127,
+      "verdict": "EXEMPLARY",
+      "why": "'does NOT yet prove a canonical equality ... it proves a natural object of the same size' -- the distinction stated in one sentence"
+    },
+    {
+      "file": "2026-05-29_q4_fano_chain_complex_homology.md",
+      "line": 133,
+      "verdict": "SUSPECT",
+      "why": "'this matches the known signed phase-frame rank'"
+    }
+  ]
+}

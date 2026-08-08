@@ -4952,6 +4952,13 @@ transaction.  BT1697 is an ABI theorem, not a calibrated optical layout.
 
 \subsection{BT1698--BT1700 execution stack}
 
+\begin{plainbox}
+The full run-time picture, from an instruction arriving to a result leaving. Each
+layer here was specified separately earlier in the paper; this section is where they are
+shown to fit together, and where any mismatch between them would appear.
+\end{plainbox}
+
+
 The ABI can now be executed, lowered, and recursively scaled.  BT1698 reads the
 existing microframe rows as a deterministic state machine.  The body is not a
 bag of \(48\) ticks; it is exactly \(16\) chained Q6/tomotope edges, each with
@@ -7624,6 +7631,14 @@ threshold uncertainty; the exact $M_{\rm GUT}$, $\alpha_{\rm GUT}$ and the preci
 derived in detail here.
 
 \subsection{Pass 28 --- the Higgs sector, one structural supersymmetry, and the state of the solution}
+
+\begin{plainbox}
+Particle-physics material, and the most speculative in this paper. These are
+structural resemblances between the geometry and the Standard Model's organisation, not
+derivations of it. Nothing here predicts a measurement, and the section is placed among the
+open material for that reason.
+\end{plainbox}
+
 \label{sec:capstone-twentyeight}
 
 The electroweak symmetry-breaking sector closes the matter map, the apparent two-scale
@@ -7978,6 +7993,14 @@ the von~Neumann architecture of self-reproduction --- the rigorous computational
 computation $+$ construction $+$ error-corrected heredity) --- not literal biochemistry.
 
 \subsection{Pass 35 --- the datapath: the router, the clock, and the reliability budget}
+
+\begin{plainbox}
+The three pieces of hardware everything else assumes: the part that moves data, the
+part that keeps time, and the part that notices when either has gone wrong. Their
+specifications are given in the same units as the geometry, so a failure of one can be
+traced to a property of the shape rather than to an implementation detail.
+\end{plainbox}
+
 \label{sec:capstone-thirtyfive}
 
 Pass~34 gave the datasheet; this pass quantifies its three working subsystems the way a systems
@@ -8038,6 +8061,13 @@ the true value is smaller --- so $p_{\mathrm th}\approx5\times10^{-4}$ is a cons
 MTBF depends on the assumed clock and physical error rate.
 
 \subsection{Pass 36 --- the silicon questions: the ISA enumerated, the power budget, the floorplan}
+
+\begin{plainbox}
+What a chip designer would ask, answered where the answer is known and marked open
+where it is not. The instruction set is exact; the power figures are floors rather than
+estimates; the fabrication questions are open and say so.
+\end{plainbox}
+
 \label{sec:capstone-thirtysix}
 
 Three questions a chip architect asks of any machine --- what are the opcodes, what does it cost to
