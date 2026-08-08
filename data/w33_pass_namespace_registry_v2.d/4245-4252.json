@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [4245, 4252],
+  "slug": "residual_symmetry_ghz_operating_point_min_hodge_routed_delay_subgroup_lattice_metrology_hodge_engine_quotient_rg",
+  "title": "Five implementation closures and three outside-box probes: residual-symmetry carrier surgery, GHZ28 operating strategy, minimum compressed Hodge sensing, explicit routed delay geometry, nonlinear subgroup lattice, symmetry-resolved metrology, Hodge heat engine, and quotient renormalization",
+  "status": "reserved",
+  "owner": "openai-gpt-5.6-sol",
+  "reserved_at": "2026-08-08T01:25:00-04:00",
+  "purpose": "Execute the five open targets after Passes 4205-4212 and add three independent finite exact probes in metrology, Hodge thermodynamics, and quotient coarse-graining.",
+  "coordination": "Preserve the Actions-based single-publisher Pages contract, current blueprint corrections, canonical Passes 4214-4221, glue Passes 4222-4244, and the authoritative long-form docs/index.html. Do not edit docs/index.html directly.",
+  "boundary": "Reservation only. No phenomenologically viable gauge theory, fabricated GHZ28 processor, globally minimal physical sensor, DRC-clean photonic chip, globally complete nonlinear theorem, measured metrology advantage, physical heat engine, continuum renormalization group, gravity, cosmology, or theory of everything is promoted."
+}
