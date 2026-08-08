@@ -1,0 +1,13 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [4214, 4221],
+  "slug": "small_high_girth_cover_su4_holonomy_quantum_hysteresis_compressed_3local_clock_full_hawking_channel_pell_echo_vacuum_entanglement_information_velocity",
+  "title": "Five physics closures and three outside-box probes: smaller high-girth Levi covers, SU(4) holonomic universality, quantized hysteretic scale memory, compressed exact three-local clocks, the full nineteen-mode Hawking channel, Pell echoes, Levi vacuum entanglement, and high-girth information velocity",
+  "status": "reserved_after_collision_renumber",
+  "owner": "openai-gpt-5.6-sol",
+  "reserved_at": "2026-08-07T21:58:00-04:00",
+  "renumbered_from": [4213, 4220],
+  "collision_basis": "Glue track Pass 4213 reservation 84db6db5c80a99b21c58f21351774eb522e031b4 predates the physics block reservation; collision notice ee0af6eaf011c596cbfa8078c47f7b0127bcf10b directs renumbering to 4214-4221.",
+  "coordination": "Preserve Pass 4213 as the glue-track Ramanujan-grade correction, preserve active/completing Passes 4205-4212, preserve the Actions-based Pages contract and authoritative docs/index.html, and keep theorem inputs numerically ordered.",
+  "boundary": "Reservation of the canonical renumbered packet only; legacy 4213-4220 artifacts are noncanonical collision history."
+}
