@@ -1,0 +1,38 @@
+name: W33 Passes 4205-4212 exact regression
+on:
+  push:
+    paths:
+      - "analysis/w33_pass4205_4212_carrier_native_hodge_delay_interval_bonkers.py"
+      - "data/PART_4205_4212_CARRIER_NATIVE_HODGE_DELAY_INTERVAL_BONKERS.json"
+      - "data/PART_4205_4212_CARRIER_NATIVE_HODGE_DELAY_INTERVAL_BONKERS_manifest.json"
+      - "data/w33_pass4205_carrier_surgery.json"
+      - "data/w33_pass4206_native_dualrail_transmon_mapping.json"
+      - "data/w33_pass4207_compressed_hodge_sensor.json"
+      - "data/w33_pass4208_component_level_tapped_delay.json"
+      - "data/w33_pass4209_edge_nonedge_interval_completion.json"
+      - "data/w33_pass4210_critical_absorber.json"
+      - "data/w33_pass4211_vertex_spectral_uncertainty.json"
+      - "data/w33_pass4212_levi_harmonic_battery.json"
+      - "tests/test_w33_pass4205_4212_carrier_native_hodge_delay_interval_bonkers.py"
+      - ".github/workflows/w33_pass4205_4212_exact_regression.yml"
+  workflow_dispatch:
+jobs:
+  quick:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install numpy scipy pytest
+      - run: pytest -q tests/test_w33_pass4205_4212_carrier_native_hodge_delay_interval_bonkers.py
+  exhaustive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install numpy scipy
+      - run: python analysis/w33_pass4205_4212_carrier_native_hodge_delay_interval_bonkers.py --full
