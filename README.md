@@ -102,9 +102,44 @@ reader to guess which of several historical versions is strongest.
 | Reproducer / reviewer | [Reproduction commands](#reproduce-the-flagship-results) | [certificates](data/) · [tests](tests/) · [correction ledger](#things-we-got-wrong-on-purpose-and-in-public) |
 | Lattice / deformation researcher | [Determinant-law paper](docs/pdf/heisenberg_weyl_determinant_law.pdf) | [eigenlattice table](#eigenlattices-gluing-and-the-e₈-boundary--the-2026-07-arc) |
 | Photonic / systems reader | [Photonic Holonet](docs/pdf/photonic_holonet.pdf) · [source](photonic_holonet.tex) | [`HOLONET.md`](HOLONET.md); treat implementation claims as conditional |
+| Assessing whether to fund this | [Machine blueprint](holonet_machine_blueprint.tex), Part I | then **What is not built** and the **errata index**, both at the end of that document |
 
 The corpus is too large to navigate by filenames. Search the **result itself**
 in [`RESULTS_INDEX.md`](RESULTS_INDEX.md) before re-deriving it.
+
+### The three manuscripts
+
+All three share one reader convention: **cream** boxes are plain language and are
+self-contained, **blue** boxes carry the exact statement with its scope, and **rose** boxes
+are claims this project published and then withdrew, each with the measurement that
+overturned it. You can read any of them by cream box alone.
+
+| Document | Pages | What it is |
+|---|---:|---|
+| [`holonet_machine_blueprint.tex`](holonet_machine_blueprint.tex) | 205 | A computer specified by the geometry — instruction set, gate counts, thermodynamics. Six parts, each opening in plain language. |
+| [`w33_paper.tex`](w33_paper.tex) | 477 | The research atlas: everything established about `W(3,3)`, evidence-tiered. |
+| [`photonic_holonet.tex`](photonic_holonet.tex) | 347 | One self-entangled photon as computer, network and clock. |
+
+All three build with **zero errors and zero undefined references**, enforced in CI
+(`.github/workflows/manuscripts-compile.yml`) — an undefined reference is only a *warning*
+in LaTeX, so three of them once shipped through hundreds of clean builds.
+
+### The machine, in one table
+
+Two independent asymmetries in the instruction set mean four possible machines, not one.
+Reported together because no two are the same design and the prices do not substitute:
+
+| machine | opcodes | mixing | ρ(B) | localisation | entropy production |
+|---|---:|---:|---:|---:|---:|
+| A — biased, irreversible (shipped) | 4 | 15 | 5.7469 | 0.6129 | infinite |
+| B — symmetric, irreversible | 6 | 12 | 8.7621 | 0.4604 | infinite |
+| C — biased, reversible | 8 | 16 | 5.7469 | 0.6129 | 0 |
+| D — symmetric, reversible | 12 | 13 | 8.7621 | 0.4604 | 0 |
+
+C shares A's spectrum *exactly*: closing an instruction set under inverses adds no new
+undirected edges, so it buys thermodynamics and nothing spectral. The arrow of time can be
+removed exactly; the bias can only be reduced. A zero-asymmetry machine does not exist in
+this family, and the obstruction is counting rather than choice.
 
 ## Evidence tiers
 
@@ -495,6 +530,42 @@ This is the section that makes the rest trustworthy.
 **The five failure modes this repo has actually produced**, in increasing order of how hard they are to catch:
 coordinate artefacts · over-reads · unbuilt objects · unbuilt halves · **rediscovery**. The last one cannot be
 self-checked, because novelty is a property of the corpus, not of the claim. It can only be searched for.
+
+### The 2026-08 instruction-layer arc
+
+| Claim | Why it was withdrawn | Pass |
+|---|---|---|
+| "The frame Cayley graph" | It is a **Schreier** graph on a coset space. Schreier graphs collide by construction; the misnomer made regularity feel obligatory and caused the next three entries. | 4203 |
+| "The instruction layer can be Ramanujan" | The five-generator graph measured was the discrete torus `C₃⁴`; its only Clifford generator draws **no edges at all**, every one duplicating a translation edge. | 4201 → 4204 |
+| "The instruction graph misses Ramanujan by 3.23%" | `2√(k−1)/k` is a *k*-regular bound. This graph has degrees 2–8, so it has no claim on 0.866. The **measurement** (\|λ₂\| = 0.893992320) is exact and stands; only the grade was withdrawn. | 3042 → 4213 |
+| "78 = dim E₆ identifies W(3,3)" | All **28** Spence graphs give the same 78 poles: it is `2(v−1)`, a property of the parameter set (40,12,2,4), not of this graph. | 4281 |
+| "\|Aut\| singles out W(3,3)" | 51,840 is attained by **two** of the 28 — the point graph and the line graph of one GQ(3,3). | 4287 → 4296 |
+| "Add `S_f` to unfreeze the register" | `S_f` moves `x₃`, not `x₂` — the reasoning went from a coordinate's *name* to an opcode whose *subscript* matched. No pool opcode can unfreeze it, and a control improved mixing as much as either candidate. | 4244 → 4245 |
+| "Every defect traces to the load port" | Localisation does; the **arrow of time does not**. One-way transitions rise as load ports are added, and the machine with none still has 216. Two independent asymmetries. | 4314 |
+
+---
+
+## How this repository checks itself
+
+Each of these exists because the same mistake was made more than once, and each has been
+**verified against a planted fault** — a checker that has only ever reported clean has
+unknown recall.
+
+| Check | Catches | Verified by |
+|---|---|---|
+| [`check_tex_insert_pitfalls.py`](scripts/check_tex_insert_pitfalls.py) | six LaTeX fault families across 287 inserts | [`test_checker_recall.py`](scripts/test_checker_recall.py) — 6/6 planted faults, silent on a clean file |
+| [`check_labels.py`](scripts/check_labels.py) | duplicate labels, dangling references | planted duplicate + planted dangling ref, both caught |
+| [`find_orphaned_inserts.py`](scripts/find_orphaned_inserts.py) | finished write-ups no manuscript includes | census went 114 → 0; CI baseline now 0 |
+| [`route_orphaned_inserts.py`](scripts/route_orphaned_inserts.py) | inserts routed away from the section they cite | planted cross-referencing pair, co-location confirmed |
+| [`check_site_is_current.py`](scripts/check_site_is_current.py) | the CDN serving a stale page behind a green deploy | caught a 116 KB-behind artifact reporting `status: built` |
+| [`check_certificates.py`](scripts/check_certificates.py) | certificates that cannot reproduce their own digest | a certificate unverifiable *from birth* |
+
+Two lessons worth stating in the open, because both cost real time:
+
+- **Zero LaTeX errors is not zero undefined references.** Both are now CI failures.
+- **Planted-fault recall measures the families you have, never the ones you lack.** The
+  pitfall checker reported a clean scan across all 287 inserts while two of them failed to
+  compile, because the fault family did not yet exist.
 
 ---
 

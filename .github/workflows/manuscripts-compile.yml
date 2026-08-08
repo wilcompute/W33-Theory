@@ -31,6 +31,17 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  labels:
+    name: labels (no duplicates, no dangling refs)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Audit every manuscript's labels
+        run: python scripts/check_labels.py --strict
+
   compile:
     name: ${{ matrix.doc }}
     runs-on: ubuntu-24.04
@@ -51,21 +62,27 @@ jobs:
           set -o pipefail
           tectonic -X compile "${{ matrix.doc }}.tex" \
             --keep-logs --outdir . -Z continue-on-errors 2>&1 | tail -40
-      - name: Fail on any error in the log
+      - name: Fail on errors OR undefined references
+        # An undefined reference is only a WARNING, so a document can carry one through
+        # hundreds of clean builds. Three of them shipped this way before Pass 4315.
         run: |
           log="${{ matrix.doc }}.log"
           n=$(grep -cE '^! ' "$log" || true)
+          u=$(grep -c 'Reference .* undefined' "$log" || true)
+          m=$(grep -c 'multiply.defined' "$log" || true)
           pages=$(grep -oE '\([0-9]+ pages' "$log" | tail -1 || true)
-          echo "${{ matrix.doc }}: $n error(s), $pages"
+          echo "${{ matrix.doc }}: $n error(s), $u undefined ref(s), $m multiply-defined, $pages"
           {
             echo "### ${{ matrix.doc }}"
             echo "- errors: $n"
+            echo "- undefined references: $u"
+            echo "- multiply-defined labels: $m"
             echo "- $pages"
           } >> "$GITHUB_STEP_SUMMARY"
-          if [ "$n" -gt 0 ]; then
-            grep -E '^! ' "$log" | head -20
-            exit 1
-          fi
+          if [ "$n" -gt 0 ]; then grep -E '^! ' "$log" | head -20; fi
+          if [ "$u" -gt 0 ]; then grep 'Reference .* undefined' "$log" | head -10; fi
+          if [ "$m" -gt 0 ]; then grep 'multiply.defined' "$log" | head -10; fi
+          if [ "$n" -gt 0 ] || [ "$u" -gt 0 ] || [ "$m" -gt 0 ]; then exit 1; fi
       - uses: actions/upload-artifact@v4
         if: always()
         with:
