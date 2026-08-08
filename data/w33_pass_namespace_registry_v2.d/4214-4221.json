@@ -3,11 +3,25 @@
   "range": [4214, 4221],
   "slug": "small_high_girth_cover_su4_holonomy_quantum_hysteresis_compressed_3local_clock_full_hawking_channel_pell_echo_vacuum_entanglement_information_velocity",
   "title": "Five physics closures and three outside-box probes: smaller high-girth Levi covers, SU(4) holonomic universality, quantized hysteretic scale memory, compressed exact three-local clocks, the full nineteen-mode Hawking channel, Pell echoes, Levi vacuum entanglement, and high-girth information velocity",
-  "status": "reserved_after_collision_renumber",
+  "status": "completed_exact_with_small_cover_su4_hysteresis_clock_full_gaussian_pell_vacuum_velocity_boundaries",
   "owner": "openai-gpt-5.6-sol",
   "reserved_at": "2026-08-07T21:58:00-04:00",
+  "completed_at": "2026-08-07T22:04:00-04:00",
   "renumbered_from": [4213, 4220],
-  "collision_basis": "Glue track Pass 4213 reservation 84db6db5c80a99b21c58f21351774eb522e031b4 predates the physics block reservation; collision notice ee0af6eaf011c596cbfa8078c47f7b0127bcf10b directs renumbering to 4214-4221.",
-  "coordination": "Preserve Pass 4213 as the glue-track Ramanujan-grade correction, preserve active/completing Passes 4205-4212, preserve the Actions-based Pages contract and authoritative docs/index.html, and keep theorem inputs numerically ordered.",
-  "boundary": "Reservation of the canonical renumbered packet only; legacy 4213-4220 artifacts are noncanonical collision history."
+  "collision_basis": "Glue track Pass 4213 reservation 84db6db5c80a99b21c58f21351774eb522e031b4 predates the physics block reservation; collision notice ee0af6eaf011c596cbfa8078c47f7b0127bcf10b directed the canonical renumbering to 4214-4221. The legacy namespace is explicitly superseded and its workflows are disabled.",
+  "result": "A Z_359 voltage assignment eliminates every zero-voltage base cycle of lengths 8, 10, and 12, producing a 28,720-vertex Levi cover with certified girth at least 14 and reducing the prior Z_65537 construction by 182.5543x. Two dense rank-two singlet holonomy bundles plus one auxiliary bright level produce exact geometric CZ and an explicit 15-dimensional su(4) Pauli closure. The saturated scale potential has an equal-well coexistence point, barrier 4.4597412117, instanton action 7.7881701215, Kramers lifetimes, and a two-state quantum-memory reduction. Exact MILP sharing reduces the three-local Gray clock from 96 to 61 auxiliaries while preserving the legal gap and revival times. The complete 19-mode Gaussian horizon separates directional steering, coherent-information, and PPT thresholds and stays entangled in all 512 correlated-disorder samples at n_th=0.005 while stronger resources partially disappear. Three outside-box probes establish Pell near-echoes without exact revival, exact point-line harmonic-vacuum entanglement, and high-girth radial information velocity 2 sqrt(3) J with capacity scaling distinct from propagation speed.",
+  "certificate": "data/PART_4214_4221_SMALL_COVER_SU4_QUANTUM_HYSTERESIS_CLOCK_HAWKING_PELL_VACUUM_VELOCITY.json",
+  "semantic_sha256": "2b2e3951e7e5a017cd41217d764ab34cc1e74ec23ba28b72044bb0126cf1bce4",
+  "verifier": "analysis/w33_pass4214_4221_small_cover_su4_quantum_hysteresis_clock_hawking_pell_vacuum_velocity.py",
+  "regression": "tests/test_w33_pass4214_4221_small_cover_su4_quantum_hysteresis_clock_hawking_pell_vacuum_velocity.py",
+  "report": "analysis/BT4214_BT4221_small_cover_su4_quantum_hysteresis_clock_hawking_pell_vacuum_velocity.md",
+  "manuscript_insert": "analysis/BT4214_BT4221_small_cover_su4_quantum_hysteresis_clock_hawking_pell_vacuum_velocity_insert.tex",
+  "public_page": "docs/small-cover-su4-hysteresis-clock-hawking-pell-vacuum-velocity-4214-4221.html",
+  "coordination": "Pass 4213 remains solely the glue-track Ramanujan-grade correction. Passes 4205-4212 are ordered before this packet. The Actions-based Pages contract and authoritative long-form docs/index.html remain intact; docs/index.html is never edited directly. Canonical reconciliation removes any legacy 4213-4220 frontier token.",
+  "remote_pending": [
+    "GitHub Actions canonical exact regression status",
+    "canonical protected frontier reconciliation result",
+    "three canonical manuscript PDF artifacts"
+  ],
+  "boundary": "Exact finite graph-cover, holonomic-control, effective stochastic/semiclassical, clock-gadget, Gaussian-channel, spectral-recurrence, harmonic-network, and high-girth tree-band statements only. No fabricated high-girth network, experimentally universal processor, physical spacetime memory, global minimum-ancilla theorem, observed Hawking radiation, physical recurrence clock, measured vacuum entanglement, identification of graph information velocity with physical c, gravity, cosmology, or theory of everything is established."
 }
