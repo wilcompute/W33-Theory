@@ -2601,7 +2601,7 @@ problem, and one that was available at Pass 3060.
   R = 1/\rho = 0.174008, \qquad
   \sqrt{\rho} = 2.397264 .
 \]
-Of the $161$ non-trivial Hashimoto eigenvalues, \textbf{none} lies on the circle
+Of the $160$ non-trivial Hashimoto eigenvalues, \textbf{none} lies on the circle
 $|\lambda| = \sqrt\rho$.
 
 \textbf{The instruction graph does not satisfy the graph Riemann Hypothesis.} The question
@@ -2615,9 +2615,46 @@ $(1-u^2)^{81}(1-9u^2)(1+9u^4)^{24}(1+3u^2)^{30}$ Bass produces directly. The Has
 route reproduces both exactly. It agrees with Bass wherever Bass applies, and then keeps
 going where Bass cannot.
 
+That validation was not enough, and the way it fell short is the more useful lesson.
+Reproducing $\det(I-uB)$ correctly says nothing about the \emph{classifier} built on top
+of it, and Pass 4229 found a fault there: the first version counted the Perron root
+$\rho$ among the non-trivial eigenvalues, which made both reference graphs appear to fail.
+It was caught because $W(3,3)$ came back with $78$ poles on the critical circle out of a
+claimed $79$ --- and $78 = \dim E_6$ is this project's standing count, so the numerator was
+right and the denominator was wrong. Corrected, $W(3,3)$ gives $78/78$ and the Levi graph
+$156/156$, both satisfying the graph RH, and the instruction graph $0/160$, failing it.
+\textbf{Calibrate every layer against a known answer, not merely the bottom one.}
+
 That is worth stating plainly because of what it says about the three withdrawals. The
 object was never too hard. The tool was wrong, and being wrong about the tool is what
 made the object look mysterious.
+\end{plain}
+
+\begin{spec}[Pass 4228 --- a tri-equivalence over the generator pool]
+With $\rho(B)$ defined for \emph{every} generating set rather than only the regular ones,
+all $258$ connected sets of size four and five can finally be ranked. The sets satisfying
+the graph Riemann Hypothesis are \textbf{exactly} the regular sets: three of them, each of
+degree $8$ with $\rho(B) = 7 = k-1$, and all three the same graph --- the discrete torus
+$C_3^4$, because $S_f$ and $S_p$ draw no edges the four translations have not already drawn
+(Pass 4204). Every other set returns $0$ of $160$ poles on the critical circle. Not a near
+miss: nothing else is close.
+
+Pass 4202 showed that none of those three is universal. So the three properties lock
+together:
+\[
+  \text{graph RH} \iff \text{regular} \iff \text{abelian} \implies \text{cannot compute.}
+\]
+\textbf{The instruction layer cannot be spectrally extremal for the same reason it can
+compute at all.}
+\end{spec}
+
+\begin{plain}
+This also dissolves part of the older puzzle. Before the Hashimoto route, the only
+generating sets whose zeta anyone could compute were the regular ones --- which are
+precisely the sets Pass 4202 had shown are never universal. The interesting sets were
+exactly the sets the method could not reach, so some of the apparent tension between
+extremality and universality was an artefact of what was measurable, not a fact about the
+machine.
 \end{plain}
 
 \headline{The machine's geometry is extremal; its algebra is not, and after Pass 4213
