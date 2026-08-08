@@ -1,12 +1,27 @@
 {
   "schema": "w33.pass_namespace_registry.v2.entry",
   "range": [4261, 4268],
-  "slug": "girth18_cover_dynamically_corrected_holonomic_cz_full_lindblad_hysteresis_clock32_nongaussian_hawking_graph_butterfly_entanglement_lightcone",
-  "title": "Five physics closures and three outside-box probes: girth-18 Levi covers, dynamically corrected holonomic CZ, full-coordinate Lindblad hysteresis, sub-45 exact three-local clocks, non-Gaussian Hawking communication, plus spectral butterfly, entanglement lightcone, and finite graph response bounds",
-  "status": "reserved",
+  "slug": "girth18_cd_hysteresis_clock37_nongaussian_search_defect_thermal",
+  "title": "Five physics closures and three outside-box probes: girth-18 Levi cover, dynamically corrected holonomic CZ, full-coordinate Lindblad hysteresis, exact qutrit Gray clock compression, non-Gaussian Hawking communication search, Levi quantum search, defect binding, and thermal entanglement death",
+  "status": "completed_exact_with_girth18_upper_bound_cd_echo_full_coordinate_davies_clock37_nongaussian_no_positive_search_defect_thermal_boundaries",
   "owner": "openai-gpt-5.6-sol",
   "reserved_at": "2026-08-08T02:06:00-04:00",
+  "completed_at": "2026-08-08T02:25:00-04:00",
   "purpose": "Execute the five physics targets after Passes 4253-4260 and add three independent outside-box finite-model probes with deterministic checks and strict evidence boundaries.",
-  "coordination": "Preserve completed Passes through 4260, all glue-track corrections, the single Actions Pages publisher, the authoritative long-form docs/index.html, and numerically ordered frontier manifests. Do not edit docs/index.html directly.",
-  "boundary": "Reservation only. No fabricated high-girth network, fault-tolerant holonomic processor, physical spacetime memory, globally minimal clock theorem, observed Hawking radiation, physical scrambling experiment, speed-of-light derivation, gravity, cosmology, or theory of everything is promoted."
+  "result": "A frozen Z_750019 voltage assignment gives collision-free radius-eight voltage-cover balls above all 80 Levi base vertices and therefore an explicit girth-at-least-18 cover, although compact sub-10000-sheet girth 18 remains open. A four-loop branch-swapped composite holonomic CZ has geometric phase -pi cos(delta), cancels repeatable static loop-dependent dynamic phase by echo, and admits exact modeled counterdiabatic driving; a one-percent CD-amplitude error at omega/Omega=0.1 gives a four-loop leakage union bound 2.004e-6. The full scale coordinate is quantized on a 180-point grid and coupled through s to an Ohmic Davies bath; its K=20 metastable gap is 1.8722329e-11 in the frozen dimensionless calibration. Five qutrit Gray clock digits absorb the intermediate transition flag, reducing the exact three-local history architecture from 45 to 37 auxiliary qubits while preserving the 49-state path, gap and revival times. Low-Fock non-Gaussian searches on the two tau>1/2 Hawking signal channels find no positive coherent information in the audited families, but unrestricted quantum capacity remains open. Outside-box probes give a 73.016 percent marked-vertex continuous-time search point in the exact five-shell quotient, a V=4 rank-one defect mode at E=4.9600853 with 76.202 percent defect weight, and two-stage thermal point-line entanglement death at T=0.9947197 and 1.2027283.",
+  "certificate": "data/PART_4261_4268_GIRTH18_CD_HYSTERESIS_CLOCK37_NONGAUSSIAN_SEARCH_DEFECT_THERMAL.json",
+  "semantic_sha256": "900c1daacd2482cd0711e9b0e1427ced1eeef38003560c1e899bce61f121b3ff",
+  "verifier": "analysis/w33_pass4261_4268_girth18_cd_hysteresis_clock37_nongaussian_search_defect_thermal.py",
+  "regression": "tests/test_w33_pass4261_4268_girth18_cd_hysteresis_clock37_nongaussian_search_defect_thermal.py",
+  "report": "analysis/BT4261_BT4268_girth18_cd_hysteresis_clock37_nongaussian_search_defect_thermal.md",
+  "manuscript_insert": "analysis/BT4261_BT4268_girth18_cd_hysteresis_clock37_nongaussian_search_defect_thermal_insert.tex",
+  "public_page": "docs/girth18-cd-hysteresis-clock37-nongaussian-search-defect-thermal-4261-4268.html",
+  "coordination": "Passes 4245-4252 are complete; Passes 4253-4260 and 4261-4268 are now explicitly ordered after them in the TeX frontier. The dual-packet reconciler repairs the stale JSON/public frontier for both physics packets. Parallel Passes 4269-4276 are disjoint. The Actions-based single Pages publisher and authoritative docs/index.html remain protected and are not edited directly by this packet.",
+  "local_verification": "deterministic verifier PASS; focused pytest 9 passed in 1.72 s",
+  "remote_pending": [
+    "GitHub Actions exact regression status",
+    "protected dual-packet frontier reconciliation result",
+    "three manuscript PDF artifacts"
+  ],
+  "boundary": "Exact finite graph-cover, holonomic-control, discretized Davies/Lindblad, qutrit-clock, low-Fock non-Gaussian channel-search, finite quantum-search, rank-one-defect, and harmonic-network statements only. The girth-18 cover is not compact or globally minimal; the corrected holonomic sequence is not fault tolerant; no unrestricted Hawking-channel capacity theorem is proved; no fabricated device, observed Hawking radiation, physical spacetime memory, global clock minimum, speed-of-light derivation, gravity, cosmology, or theory of everything is established."
 }
