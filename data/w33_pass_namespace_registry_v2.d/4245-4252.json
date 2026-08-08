@@ -3,10 +3,53 @@
   "range": [4245, 4252],
   "slug": "residual_symmetry_ghz_operating_point_min_hodge_routed_delay_subgroup_lattice_metrology_hodge_engine_quotient_rg",
   "title": "Five implementation closures and three outside-box probes: residual-symmetry carrier surgery, GHZ28 operating strategy, minimum compressed Hodge sensing, explicit routed delay geometry, nonlinear subgroup lattice, symmetry-resolved metrology, Hodge heat engine, and quotient renormalization",
-  "status": "reserved",
+  "status": "source_complete_exact_certificate_residual_anchor_ghz_min_two_hodge_routed_delay_triple_strata_metrology_exergy_quotient_rg_hardware_and_global_completion_pending",
   "owner": "openai-gpt-5.6-sol",
   "reserved_at": "2026-08-08T01:25:00-04:00",
+  "completed_at": "2026-08-08T02:00:00-04:00",
   "purpose": "Execute the five open targets after Passes 4205-4212 and add three independent finite exact probes in metrology, Hodge thermodynamics, and quotient coarse-graining.",
-  "coordination": "Preserve the Actions-based single-publisher Pages contract, current blueprint corrections, canonical Passes 4214-4221, glue Passes 4222-4244, and the authoritative long-form docs/index.html. Do not edit docs/index.html directly.",
-  "boundary": "Reservation only. No phenomenologically viable gauge theory, fabricated GHZ28 processor, globally minimal physical sensor, DRC-clean photonic chip, globally complete nonlinear theorem, measured metrology advantage, physical heat engine, continuum renormalization group, gravity, cosmology, or theory of everything is promoted."
+  "certificate_status": "PASS_EXACT_RESIDUAL_ANCHOR_SYMMETRY_GHZ_RESOURCE_MIN_TWO_HODGE_ROUTE_GEOMETRY_TRIPLE_STRATA_METROLOGY_EXERGY_QUOTIENT_RG",
+  "certificates": {
+    "exact_packet": "314ff5c6d21bd4f70a6c7a3228a958cc00f6f4991a288c0f293dcedd9146b8c2",
+    "combined_manifest": "c66a1d0925d55a599570cfebee2195cc98034c302b6170ed03f863fada52bfe3",
+    "residual_anchor_symmetry": "3dc2540de255b447eebbe85c7c243c342cd4abf38ea01f86c112a6735e211948",
+    "ghz_operating_strategy": "374c33ab15c014292a617729e85665512ce256fa4e3ec3ceac0d87d517a811d6",
+    "minimum_hodge_channels": "5bf70fafeb490bff7dc5dfb1389b310406217b0c1d285e905adf5754fdc7f1fc",
+    "routed_delay_geometry": "30119353ea4a7dcaf1f6730e4db6356ba976514ff9de1e61a025642b87df9ad8",
+    "triple_stabilizer_lattice": "9706686c675b6f0dd212ee983ce170f5780220079be715f7fe1e0389c4245404",
+    "metrology": "089c42b0c89899ace9b1dac4899e354b744d7df0618a02c5722d3ebb15a111b2",
+    "hodge_exergy": "f919d1dc3ea1df445f76cb0f3471da9e532016f94257f418255513edbbfa6da2",
+    "quotient_rg": "9edbfdf7c491203eb5fdaa254a84e9f0075bc45f9db5120f1f4ba20d6512e026"
+  },
+  "promoted": [
+    "maximum five-generation anchor stabilizer order 72 across all 43 PSp(4,3) five-subset orbits, with K1,4 scaffold, central C6 kernel and A4 leaf action",
+    "physically disjoint GHZ28 tree broadcast requires seven entangling rounds; modular heralded fusion resource models improve yield dramatically over whole-run postselection at the stated dual-rail operating point",
+    "exact information-theoretic minimum of two additional global scalar rows beyond Levi incidence for noiseless arbitrary-real seven-sparse recovery",
+    "deterministic route-by-route rounded-dogleg centerline generator reproducing all 160 routes and 919 delay units from the frozen permutation schedule",
+    "five PSp(4,3) three-subset stabilizer types, with triangle and maximally symmetric independent-triple quotient systems interval-exhausted",
+    "exact W33 adjacency quantum-Fisher bound 256 versus 48 for a localized vertex probe",
+    "exact 81-harmonic/79-gradient reversible Gaussian Hodge exergy ledger",
+    "exact point-to-edge-to-triangle quotient refinement chain of dimensions 3 to 6 to 8, intertwining adjacency polynomials and componentwise cubic nonlinear dynamics"
+  ],
+  "external_pending": [
+    "full H145 restriction and branching under the order-72 anchor stabilizer, viable masses, Yukawas and phenomenology",
+    "explicit verified GHZ28 fusion circuit with correlated errors, feed-forward, readout and fault tolerance",
+    "optimal noisy two-row Hodge conditioning, calibration and physical analog sensor realization",
+    "proprietary PDK GDS/DRC, exact bend/coupler/tap losses, dispersion, electrical keepouts, packaging and fabrication",
+    "interval exhaustion of the remaining three triple-subset strata, deeper subgroup lattice and globally complete 80-dimensional nonlinear classification",
+    "physical implementations of the metrology, Hodge exergy and quotient-filter constructions",
+    "remote quick/exhaustive CI, frontier reconciliation and manuscript PDF evidence"
+  ],
+  "artifacts": {
+    "certificate": "data/PART_4245_4252_RESIDUAL_SYMMETRY_GHZ_HODGE_ROUTE_LATTICE_OUTSIDE_BOX.json",
+    "manifest": "data/PART_4245_4252_RESIDUAL_SYMMETRY_GHZ_HODGE_ROUTE_LATTICE_OUTSIDE_BOX_manifest.json",
+    "verifier": "analysis/w33_pass4245_4252_residual_symmetry_ghz_hodge_route_lattice_outside_box.py",
+    "route_generator": "analysis/w33_pass4248_route_centerline_generator.py",
+    "regression": "tests/test_w33_pass4245_4252_residual_symmetry_ghz_hodge_route_lattice_outside_box.py",
+    "report": "analysis/BT4245_BT4252_residual_symmetry_ghz_hodge_route_lattice_outside_box.md",
+    "manuscript_insert": "analysis/BT4245_BT4252_residual_symmetry_ghz_hodge_route_lattice_outside_box_insert.tex",
+    "public_page": "docs/residual-symmetry-ghz-hodge-route-lattice-4245-4252.html"
+  },
+  "coordination": "Preserves canonical Passes 4214-4221, glue-track Passes 4222-4244, the independent Passes 4253-4260 packet, current blueprint corrections, the Actions-based single-publisher Pages contract, and the authoritative long-form website. This packet does not edit docs/index.html directly.",
+  "boundary": "No phenomenologically viable gauge theory, fabricated GHZ28 processor, globally minimal noisy physical sensor, proprietary DRC-clean photonic chip, globally complete nonlinear theorem, measured metrology advantage, physical heat engine, continuum renormalization group, gravity, cosmology, or theory of everything is promoted."
 }
