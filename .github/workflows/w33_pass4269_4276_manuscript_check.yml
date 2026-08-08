@@ -1,0 +1,29 @@
+name: Passes 4269-4276 manuscript check
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/BT4269_BT4276_h145_fusion_hodge_gds_strata_outside_box_insert.tex'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'holonet_machine_blueprint.tex'
+      - '.github/workflows/w33_pass4269_4276_manuscript_check.yml'
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: grep -Fq 'BT4269_BT4276_h145_fusion_hodge_gds_strata_outside_box_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+      - name: LaTeX pitfall checker if present
+        run: |
+          if [ -f scripts/check_latex_pitfalls.py ]; then python scripts/check_latex_pitfalls.py; fi
+      - name: Compile manuscripts when latexmk is available
+        run: |
+          if command -v latexmk >/dev/null 2>&1; then
+            for f in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do latexmk -pdf -interaction=nonstopmode -halt-on-error "$f"; done
+          else
+            echo 'latexmk unavailable on runner image; source guards only'
+          fi
