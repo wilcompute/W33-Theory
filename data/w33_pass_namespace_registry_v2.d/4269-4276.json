@@ -2,11 +2,55 @@
   "schema": "w33.pass_namespace_registry.v2.entry",
   "range": [4269, 4276],
   "slug": "h145_branching_ghz_fusion_noisy_two_row_gds_triple_completion_secretsharing_curvature_fdt",
-  "title": "Five implementation closures and three outside-box probes: H145 branching under the order-72 anchor stabilizer, explicit GHZ28 heralded fusion, noisy two-row Hodge optimization, GDS-oriented photonic compiler, remaining triple-stratum completion, spectral access structure, discrete transport curvature, and Hodge fluctuation-dissipation",
-  "status": "reserved",
+  "title": "Five implementation closures and three outside-box probes: H145 branching under the order-72 anchor stabilizer, explicit GHZ28 heralded fusion, noisy two-row Hodge optimization, GDS-oriented photonic compiler, remaining triple-stratum boundary, graph-state uniformity, discrete transport curvature, and Hodge fluctuation-dissipation",
+  "status": "source_complete_exact_certificate_h145_order72_branching_ghz_fusion_signed16_hodge_gds_geometry_strata_boundary_graphstate_curvature_fdt_hardware_and_global_completion_pending",
   "owner": "openai-gpt-5.6-sol",
   "reserved_at": "2026-08-08T02:07:00-04:00",
-  "purpose": "Execute the five open targets after Passes 4245-4252 and add three independent finite probes in quantum access structures, discrete transport curvature, and Hodge fluctuation-dissipation.",
-  "coordination": "Preserve canonical Passes 4214-4221, glue-track Passes 4222-4244, Passes 4245-4252, independent Passes 4253-4268, the single-publisher Pages contract, and authoritative docs/index.html. Do not edit docs/index.html directly.",
-  "boundary": "Reservation only. No phenomenologically viable gauge theory, fabricated GHZ28 processor, globally noise-optimal physical decoder, proprietary DRC-clean photonic chip, globally complete nonlinear theorem, physical secret-sharing device, measured spacetime curvature, thermodynamic experiment, gravity, cosmology, or theory of everything is promoted."
+  "completed_at": "2026-08-08T02:55:00-04:00",
+  "purpose": "Execute the five open targets after Passes 4245-4252 and add three independent finite probes in graph-state information structure, discrete transport curvature, and Hodge fluctuation-dissipation.",
+  "certificate_status": "PASS_EXACT_H145_ORDER72_BRANCHING_GHZ28_HERALDED_FUSION_SIGNED16_TWO_ROW_HODGE_GDS_GEOMETRY_TRIPLE_STRATA_BOUNDARY_GRAPHSTATE5_UNIFORM_CURVATURE_FDT",
+  "certificates": {
+    "exact_packet": "1626607e66b2186563b31ccf614ac38770fbc8e946ba26f31fca946004989d73",
+    "combined_manifest": "a8266e22dcaa1465d1a9a5358b5094b7ab9beae1da035ec2973c40f0ce9721f9",
+    "h145_branching": "f503f7f136f7e0043e6323ebefe1ae2798c3d4a4fc3e7e7da7bfb687f6f761ff",
+    "ghz_fusion": "4fe1d14f3529ce30507c9b15a3e08323192d46f110ef67199b9b3ebbf7639b86",
+    "signed16_hodge": "014c55120d2f35c10ceeff4a6db33c5345ddc54ae081a133e92f9ef0cdf8a645",
+    "gds_geometry": "025886bcd093c6042f1a7eb3868eb454838240337f7393cefe032916b70396be",
+    "triple_strata_boundary": "b599abd09cafc1feb85a96082a587504aa8ad7c206d6ec9e7092f24dc13b8ce9",
+    "graphstate_uniformity": "4f6813ba93f9e4b2f4ea3d2e8e30c74eda632c828c0443968338c6792e6b657d",
+    "ollivier_curvature": "2a0ff0b9f896312fa8139d17f5c1292bd5bbd6235cb90342ef781f23f86bc127",
+    "hodge_fdt": "168cb1c13bfd03ebb881fb4a5dc239e55592a4844ee2f6180dcc7a6efb7a5eac"
+  },
+  "promoted": [
+    "the order-72 five-anchor stabilizer is C3 x SL(2,3), with explicit V15, V24 and H145 branching and a species-wise H-equivariant 75-state five-generation partition",
+    "an identical five-dimensional generation H-module repeated over all 15 gauge-internal labels is impossible at order 72",
+    "an explicit nondestructive heralded GHZ28 parity-fusion protocol reduces the stated whole-run erasure-restart CNOT-attempt cost by 12.30x in the frozen independent model",
+    "a deterministic signed-16 exact two-row Levi sensor over F_65537 improves the normalized worst theta gain by 1.805x and cycle gain by 6.407x over the prior pair while preserving spark at least 15",
+    "the prior rounded-dogleg placement is geometrically inconsistent and is superseded by a corrected pure-Python GDSII compiler contract with 0.205-mm cells, 0.45-mm lanes and an 11.04-mm by 14.85-mm preliminary keepout bbox",
+    "remaining triple-stratum deterministic catalogues expose at least 2376/246 locally certified roots in the order-6 quotient, and rank four already contains a trivial-stabilizer orbit, establishing a boundary for symmetry-stratum-only completion",
+    "the 40-qubit W33 graph state is exactly five-uniform but not six-uniform, with exactly 240 minimum weight-six stabilizers supported on pairs of disjoint triangles",
+    "non-lazy Ollivier edge curvature is +1/6 on W33 and -1 on the Levi incidence graph, and the 81/79 Hodge split yields an exact sector-resolved Ornstein-Uhlenbeck fluctuation-dissipation identity"
+  ],
+  "external_pending": [
+    "phenomenologically viable five-generation embedding, masses, Yukawas, scalar sectors and the largest subgroup admitting true family-universal replication",
+    "GHZ28 correlated-error simulation, parity-readout errors, feed-forward latency, erasure-detection imperfections and fault tolerance",
+    "globally noise-optimal two-row sensor design, ADC/calibration theorem and physical analog realization",
+    "actual schedule GDS artifact from remote workflow, foundry component insertion loss, proprietary PDK DRC, dispersion simulation, electrical keepouts, packaging and fabrication",
+    "global nonlinear degree/Conley/Morse accounting beyond low-symmetry quotient enumeration and a complete 80-dimensional classification",
+    "physical graph-state, curvature or fluctuation-dissipation implementations",
+    "remote quick/full regression, optional heavy strata replay, frontier reconciliation and manuscript PDF evidence"
+  ],
+  "artifacts": {
+    "certificate": "data/PART_4269_4276_H145_FUSION_HODGE_GDS_STRATA_OUTSIDE_BOX.json",
+    "manifest": "data/PART_4269_4276_H145_FUSION_HODGE_GDS_STRATA_OUTSIDE_BOX_manifest.json",
+    "verifier": "analysis/w33_pass4269_4276_h145_fusion_hodge_gds_strata_outside_box.py",
+    "gds_compiler": "analysis/w33_pass4272_gds_delay_compiler.py",
+    "regression": "tests/test_w33_pass4269_4276_h145_fusion_hodge_gds_strata_outside_box.py",
+    "report": "analysis/BT4269_BT4276_h145_fusion_hodge_gds_strata_outside_box.md",
+    "manuscript_insert": "analysis/BT4269_BT4276_h145_fusion_hodge_gds_strata_outside_box_insert.tex",
+    "public_page": "docs/h145-fusion-hodge-gds-strata-4269-4276.html"
+  },
+  "local_verification": "quick deterministic verifier PASS after the final quick/full/heavy split; component cycle/theta, graph-state and nonlinear censuses were executed during construction; the combined --full invocation exceeded the local runtime window and is therefore not claimed locally complete",
+  "coordination": "Preserves canonical Passes through 4268, all glue-track corrections, the single Actions Pages publisher and authoritative long-form docs/index.html. The shared frontier places 4269-4276 immediately after 4261-4268. This packet does not edit docs/index.html directly.",
+  "boundary": "No phenomenologically complete gauge theory, fabricated GHZ28 processor, globally noise-optimal physical decoder, proprietary DRC-clean photonic chip, globally complete nonlinear theorem, prepared graph-state secret-sharing device, measured continuum curvature, thermodynamic experiment, gravity, cosmology, or theory of everything is promoted."
 }
