@@ -1,0 +1,122 @@
+% Passes 4461--4462: line-signing/apartment trace bridge and exact null model.
+\subsection{Line signings as an exact apartment-parity observable}
+\label{sec:pass4461-line-signing-apartment}
+
+The signing and building threads admit a sharper common formulation than the
+numerical Wilson-loop comparison alone.  Let $G$ be the $40$-vertex
+collinearity graph of $W(3,3)$ and let $\mathcal L$ be its $40$ geometric
+lines.  The six edges of each $K_4$ line are disjoint from the six-edge sets of
+the other lines, so the $40$ line supports partition all $240$ graph edges.
+Choose a sign $\sigma_\ell\in\{\pm1\}$ for each $\ell\in\mathcal L$, and give
+every collinearity edge on $\ell$ that sign.  Write $A_\sigma$ for the signed
+adjacency matrix and $N$ for the $40\times40$ point--line incidence matrix.
+Then the signed graph has the exact incidence factorization
+\begin{equation}
+ \boxed{
+ A_\sigma=N\,\operatorname{diag}(\sigma)N^{T}
+           -\operatorname{diag}(N\sigma).}
+ \label{eq:pass4461-incidence-factorization}
+\end{equation}
+The subtraction removes the diagonal point-wise signed line sums.
+
+There are exactly $1620$ simple quadrangles in the point collinearity graph.
+Indeed, the graph has $540$ nonedges; each nonedge has $\mu=4$ common
+neighbours, so choosing two common neighbours gives
+$540\binom42/2=1620$ quadrangles.  For every such quadrangle its four edge-lines
+are distinct and induce a quadrangle in the dual line-collinearity graph.
+Equivalently, inserting the four side-lines produces the corresponding simple
+$8$-cycle in the point--line Levi graph.  Thus the $1620$ point-graph
+quadrangles, the $1620$ dual line-graph quadrangles, and the $1620$ Levi
+apartments are three shadows of the same rank-two-building apartments.
+
+For an apartment $a$, define its line parity
+\[
+ \chi_a(\sigma)=\prod_{\ell\in a}\sigma_\ell,
+ \qquad
+ W_4(\sigma)=\sum_{a}\chi_a(\sigma).
+\]
+A direct closed-walk count gives the exact moment identities
+\begin{equation}
+ \boxed{\operatorname{tr}(A_\sigma^2)=480,}
+ \qquad
+ \boxed{\operatorname{tr}(A_\sigma^3)=24\sum_{\ell}\sigma_\ell,}
+ \label{eq:pass4461-low-moments}
+\end{equation}
+and, crucially,
+\begin{equation}
+ \boxed{\operatorname{tr}(A_\sigma^4)=12000+8W_4(\sigma).}
+ \label{eq:pass4461-fourth-moment}
+\end{equation}
+If $f_4$ is the fraction of apartments with negative parity, then
+$W_4=1620(1-2f_4)$ and therefore
+\begin{equation}
+ \boxed{\operatorname{tr}(A_\sigma^4)=24960-25920f_4.}
+ \label{eq:pass4461-frustration-law}
+\end{equation}
+The coefficient $25920=16\cdot1620$ is used here only as the combinatorial
+coefficient in the trace identity; its numerical equality with
+$|\operatorname{PSp}(4,3)|$ is not a group-theoretic inference.  Likewise,
+Pass~4434 remains correct that fourth-moment pressure is a generic even-moment
+feature of signed graphs.  The $W(3,3)$-specific statement is instead that the
+\emph{entire variable part} of the fourth moment is exactly the apartment-parity
+observable of the building.  This is the precise geometric content behind the
+length-four signal without reintroducing the withdrawn claim that $\mu=4$
+causes spectral optimization in general.
+
+The apartment family itself has a compact Bose--Mesner certificate.  Let
+$H\in\{0,1\}^{40\times1620}$ be line--apartment incidence and $A^\ast$ the dual
+line-collinearity adjacency matrix.  Each line lies in $162$ apartments, each
+intersecting pair of lines in $27$, and each disjoint pair in $6$.  Hence
+\begin{equation}
+ \boxed{HH^T=156I+21A^\ast+6J,}
+ \qquad
+ \boxed{\operatorname{spec}(HH^T)=648^1\oplus198^{24}\oplus72^{15}.}
+ \label{eq:pass4461-apartment-gram}
+\end{equation}
+This gives an explicit point/line-dual carrier for the apartment observable,
+even though the projective point and line actions should not be conflated.
+
+\paragraph{Exact random-line baseline.}
+The $1620$ apartment supports are $1620$ distinct four-subsets of the $40$ line
+bits.  Under independent Rademacher line signs the apartment parities are
+therefore distinct Walsh characters.  Orthogonality immediately gives
+\[
+ \mathbb E W_4=0,
+ \qquad
+ \mathbb E W_4^2=1620,
+ \qquad
+ \mathbb E f_4=\frac12,
+ \qquad
+ \operatorname{sd}(f_4)=\frac{1}{2\sqrt{1620}}.
+\]
+Pass~4462 computes the higher null moments by exact symmetric-difference counts:
+\begin{equation}
+ \boxed{
+ \mathbb E W_4^3=12960,
+ \qquad
+ \mathbb E W_4^4=9891720.}
+ \label{eq:pass4462-null-moments}
+\end{equation}
+Thus the line-signing null is not exactly Gaussian: its standardized skewness is
+$0.1987615979\ldots$ and its excess kurtosis is
+$0.7691358025\ldots$.  The corresponding fourth-trace null has
+\[
+ \mathbb E\operatorname{tr}(A_\sigma^4)=12000,
+ \qquad
+ \operatorname{Var}\!\left(\operatorname{tr}(A_\sigma^4)\right)=103680.
+\]
+This is an analytic control distribution, not a search result.  Its purpose is
+to make the baseline mandatory and reproducible before any optimized line
+signing is called exceptional.
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{\small
+\textbf{Evidence boundary.}  The identities above are finite combinatorial
+statements verified by the executable witnesses
+\texttt{analysis/w33\_pass4461\_line\_signing\_apartment\_trace.py} and
+\texttt{analysis/w33\_pass4462\_apartment\_walsh\_null\_model.py}.  They do not
+identify a physical gauge field, do not make a particular signing statistically
+special, and do not promote the Artin--Ihara/2-lift analogy into a spacetime
+claim.  They do show that the recent signing observable and the older $1620$
+apartment carrier are literally the same quartic finite-geometric statistic.}}
+\end{center}
