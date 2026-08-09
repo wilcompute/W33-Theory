@@ -7,7 +7,7 @@ ten local vectors form a basis of H10=im(A_*).
 
 This pass finds ten ambient readout coordinates on which that basis restricts to
 an invertible 10x10 matrix, freezes its inverse, and exhausts all 1024 protected
-vectors.  Thus ten sampled bits reconstruct the full 40-bit protected vector;
+vectors. Thus ten sampled bits reconstruct the full 40-bit protected vector;
 the first decoded coordinate is exactly the missing parity bit and the remaining
 nine are local spoke coordinates.
 
@@ -70,10 +70,9 @@ def main():
         y=(M@c)%2; dec=(Sinv@y[rows])%2
         assert np.array_equal(dec,c)
         assert np.array_equal((M@dec)%2,y)
-        # Only the first basis vector has odd coefficient parity.
         assert int(dec[0])==int(c[0])
     c4535=json.loads((ROOT/'data/PART_W33_PASS4535_BOREL_EDGE_TRANSFER_QUOTIENT.json').read_text())
-    orbit_sizes=c4535['orbit_sizes']
+    orbit_sizes=c4535['Borel_orbit_sizes']
     assert len(orbit_sizes)==8 and sum(orbit_sizes)==240 and max(orbit_sizes)>1
     out={
       'pass':4539,'protected_dimension':10,
