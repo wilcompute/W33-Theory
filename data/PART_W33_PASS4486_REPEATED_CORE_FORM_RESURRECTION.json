@@ -1,0 +1,21 @@
+{
+  "boundary": "Same module does not mean same form: the radical occurrence is totally null. No physical metric creation, E8 dynamics, or four-qubit hardware is inferred.",
+  "checks": {"passed": 11, "total": 11},
+  "connection": "The exact 135/120 protected counts are the same finite 8-core used by parallel Passes 4477/4478.",
+  "core": "U/J",
+  "dimension": 8,
+  "pass": 4486,
+  "protected_occurrence": {
+    "anisotropic": 120,
+    "lift_independent": true,
+    "polar_rank": 8,
+    "quadratic_type": "O+(8,2)",
+    "singular_including_zero": 136,
+    "singular_nonzero": 135
+  },
+  "radical_occurrence": {
+    "polar_rank": 0,
+    "quadratic": "identically zero on all 256 classes"
+  },
+  "theorem": "W33 repeated 8-core form-resurrection theorem"
+}
