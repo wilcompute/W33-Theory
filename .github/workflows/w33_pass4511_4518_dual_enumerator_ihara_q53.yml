@@ -1,0 +1,129 @@
+name: Passes 4511-4518 Dual Enumerator Ihara Q53
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4511_4514_dual_even_prism_ihara.py'
+      - 'analysis/w33_pass4512_apartment_weight_enumerator_reduction.py'
+      - 'analysis/w33_pass4515_q53_apartment_code_frontier.py'
+      - 'analysis/PASS4511_4518_dual_enumerator_ihara_q53_insert.tex'
+      - 'analysis/PASS4511_4518_dual_enumerator_ihara_q53_index_insert.html'
+      - 'analysis/PASS4503_4510_apartment_obstruction_scaling_insert.tex'
+      - 'data/PART_W33_PASS4511_4518_DUAL_EVEN_PRISM_IHARA.json'
+      - 'data/PART_W33_PASS4512_APARTMENT_WEIGHT_ENUMERATOR_REDUCTION.json'
+      - 'data/PART_W33_PASS4515_Q53_APARTMENT_CODE_FRONTIER.json'
+      - 'data/w33_public_frontier_extension_pass4461_4464.json'
+      - 'docs/apartment-dual-enumerator-ihara-q53.html'
+      - '.github/workflows/w33_pass4511_4518_dual_enumerator_ihara_q53.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pass4511-4518-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install verifier dependencies
+        run: python -m pip install --disable-pip-version-check numpy
+      - name: Preserve compact frozen summaries
+        run: |
+          mkdir -p evidence/pass4511_4518
+          cp data/PART_W33_PASS4511_4518_DUAL_EVEN_PRISM_IHARA.json /tmp/frozen4511.json
+          cp data/PART_W33_PASS4512_APARTMENT_WEIGHT_ENUMERATOR_REDUCTION.json /tmp/frozen4512.json
+          cp data/PART_W33_PASS4515_Q53_APARTMENT_CODE_FRONTIER.json /tmp/frozen4515.json
+      - name: Regenerate W33 dual, prism, and Ihara evidence
+        run: |
+          python analysis/w33_pass4511_4514_dual_even_prism_ihara.py \
+            | tee evidence/pass4511_4518/w33_dual_ihara.log
+          python - <<'PY'
+          import json
+          g=json.load(open('data/PART_W33_PASS4511_4518_DUAL_EVEN_PRISM_IHARA.json'))
+          f=json.load(open('/tmp/frozen4511.json'))
+          assert g['4511_dual_completion']['weight4_words']==84240
+          assert g['4511_dual_completion']['weight4_span_rank']==1580
+          assert g['4511_dual_completion']['combined_weight3_weight4_span_rank']==1581
+          assert g['4513_prism_edge_identification']['protected_images']==240
+          assert g['4513_prism_edge_identification']['fiber_size']==9
+          assert g['4516_nine_sheet_prism_fiber']['fiber_action_image_order']==36
+          assert g['4516_nine_sheet_prism_fiber']['kernel_order']==3
+          assert g['4517_regular_weight4_seed']['orbit_span_rank']==1580
+          assert g['4518_sixth_ihara_tomography']['degree2_coefficient_adjacent_pair']==252
+          assert g['4518_sixth_ihara_tomography']['degree2_coefficient_disjoint_pair']==48
+          assert g['4511_dual_completion']['weight4_words']==f['4511_dual_completion']['weight4_words']
+          assert g['4514_ihara_support_decomposition']['oriented_primitive_prime_counts']==f['4514_ihara_support_decomposition']['oriented_primitive_prime_counts']
+          PY
+          cp data/PART_W33_PASS4511_4518_DUAL_EVEN_PRISM_IHARA.json evidence/pass4511_4518/generated4511.json
+          cp /tmp/frozen4511.json data/PART_W33_PASS4511_4518_DUAL_EVEN_PRISM_IHARA.json
+      - name: Regenerate exact enumerator reduction
+        run: |
+          python analysis/w33_pass4512_apartment_weight_enumerator_reduction.py \
+            | tee evidence/pass4511_4518/enumerator.log
+          python - <<'PY'
+          import json
+          g=json.load(open('data/PART_W33_PASS4512_APARTMENT_WEIGHT_ENUMERATOR_REDUCTION.json'))
+          f=json.load(open('/tmp/frozen4512.json'))
+          for k in ['exact_weight_formula','proved_low_weight_enumerator','Burnside','complete_numerical_enumerator_status']:
+              assert g[k]==f[k], (k,g[k],f[k])
+          assert g['Burnside']['codeword_orbits_mod_complement']==10789604
+          assert g['complete_numerical_enumerator_status']=='OPEN'
+          PY
+          cp data/PART_W33_PASS4512_APARTMENT_WEIGHT_ENUMERATOR_REDUCTION.json evidence/pass4511_4518/generated4512.json
+          cp /tmp/frozen4512.json data/PART_W33_PASS4512_APARTMENT_WEIGHT_ENUMERATOR_REDUCTION.json
+      - name: Regenerate Q(5,3) code frontier
+        run: |
+          python analysis/w33_pass4515_q53_apartment_code_frontier.py \
+            | tee evidence/pass4511_4518/q53.log
+          python - <<'PY'
+          import json
+          g=json.load(open('data/PART_W33_PASS4515_Q53_APARTMENT_CODE_FRONTIER.json'))
+          f=json.load(open('/tmp/frozen4515.json'))
+          assert g['geometry']==f['geometry']
+          assert g['distance_frontier']['exact_weight_formula']==f['distance_frontier']['exact_weight_formula']
+          assert g['distance_frontier']['counterexample_support_window_after_complement_gauge']==[13,140]
+          assert g['distance_frontier']['minimum_distance_status'].startswith('OPEN')
+          assert g['dual']['minimum_distance']==3
+          assert g['dual']['weight3_words']==544320
+          PY
+          cp data/PART_W33_PASS4515_Q53_APARTMENT_CODE_FRONTIER.json evidence/pass4511_4518/generated4515.json
+          cp /tmp/frozen4515.json data/PART_W33_PASS4515_Q53_APARTMENT_CODE_FRONTIER.json
+      - name: Dry-run restored-site reconciler
+        run: |
+          python tools/integrate_bt3376_bt3389.py --report evidence/pass4511_4518/site.json
+          test "$(grep -c 'id=\"pass4511-4518-dual-enumerator-ihara-q53\"' docs/index.html)" -eq 1
+          test -s docs/apartment-dual-enumerator-ihara-q53.html
+          grep -q '10,789,604' docs/apartment-dual-enumerator-ihara-q53.html
+          grep -q '544,320' docs/apartment-dual-enumerator-ihara-q53.html
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+      - name: Compile all canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass4511_4518/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass4511_4518/pdf_sha256.txt
+      - name: Static boundaries and cleanliness
+        run: |
+          git diff --check
+          grep -q 'PASS4511_4518_dual_enumerator_ihara_q53_insert' analysis/PASS4503_4510_apartment_obstruction_scaling_insert.tex
+          grep -q 'complete numerical coefficient table' analysis/PASS4511_4518_dual_enumerator_ihara_q53_insert.tex
+          grep -q 'equality remains OPEN' analysis/PASS4511_4518_dual_enumerator_ihara_q53_insert.tex
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pass4511-4518-dual-enumerator-ihara-q53-evidence
+          path: |
+            evidence/pass4511_4518/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
