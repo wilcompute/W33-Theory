@@ -88,7 +88,8 @@ def small_generating_set(group,n=40):
 
 
 def line_perm_from_point_perm(p,lines,lidx):
-    return tuple(lidx[frozenset(p[x] for x in L)] for L in lines)
+    """Convert a point permutation to the canonical tuple-keyed line action."""
+    return tuple(lidx[tuple(sorted(p[x] for x in L))] for L in lines)
 
 
 def perm_matrix(p):
