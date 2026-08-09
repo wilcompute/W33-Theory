@@ -1,0 +1,104 @@
+name: Passes 4495-4502 Distance Cohomology Prisms
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4495_4502_distance_prism_reconstruction.py'
+      - 'analysis/w33_pass4496_h10_extension_cohomology.py'
+      - 'analysis/w33_pass4497_4499_ihara_clifford_thermal.py'
+      - 'analysis/PASS4495_4502_distance_cohomology_ihara_clifford_prism_insert.tex'
+      - 'analysis/PASS4495_4502_distance_cohomology_ihara_clifford_prism_index_insert.html'
+      - 'analysis/PASS4469_4471_apartment_css_bridge_insert.tex'
+      - 'analysis/PASS4485_4488_apartment_core_self_gluing_insert.tex'
+      - 'data/PART_W33_PASS4495_4502_DISTANCE_PRISM_RECONSTRUCTION.json'
+      - 'data/PART_W33_PASS4496_H10_EXTENSION_COHOMOLOGY.json'
+      - 'data/PART_W33_PASS4497_4499_IHARA_CLIFFORD_THERMAL.json'
+      - 'data/w33_public_frontier_extension_pass4461_4464.json'
+      - 'docs/apartment-code-distance-cohomology-prisms.html'
+      - 'tools/integrate_bt3376_bt3389.py'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'holonet_machine_blueprint.tex'
+      - '.github/workflows/w33_pass4495_4502_distance_cohomology_prisms.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pass4495-4502-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact verifier dependency
+        run: python -m pip install --disable-pip-version-check numpy
+      - name: Reproduce distance, W33 reconstruction, and prism certificate
+        run: |
+          mkdir -p evidence/pass4495_4502
+          python analysis/w33_pass4495_4502_distance_prism_reconstruction.py \
+            | tee evidence/pass4495_4502/distance_prisms.log
+          git diff --exit-code -- data/PART_W33_PASS4495_4502_DISTANCE_PRISM_RECONSTRUCTION.json
+      - name: Reproduce H10 extension cohomology
+        run: |
+          python analysis/w33_pass4496_h10_extension_cohomology.py \
+            | tee evidence/pass4495_4502/h1.log
+          git diff --exit-code -- data/PART_W33_PASS4496_H10_EXTENSION_COHOMOLOGY.json
+      - name: Reproduce higher Ihara, Clifford lift, and thermal shell
+        run: |
+          python analysis/w33_pass4497_4499_ihara_clifford_thermal.py \
+            | tee evidence/pass4495_4502/ihara_clifford_thermal.log
+          git diff --exit-code -- data/PART_W33_PASS4497_4499_IHARA_CLIFFORD_THERMAL.json
+      - name: Static theorem checks
+        run: |
+          python - <<'PY'
+          import json
+          a=json.load(open('data/PART_W33_PASS4495_4502_DISTANCE_PRISM_RECONSTRUCTION.json'))
+          b=json.load(open('data/PART_W33_PASS4496_H10_EXTENSION_COHOMOLOGY.json'))
+          c=json.load(open('data/PART_W33_PASS4497_4499_IHARA_CLIFFORD_THERMAL.json'))
+          assert a['4495_primal_distance']['minimum_distance']==162
+          assert a['4495_primal_distance']['minimum_word_count']==40
+          assert a['4501_dual_prisms']['weight3_span_rank']==1215
+          assert a['4502_prism_protected_orbit']['protected_image_count']==240
+          assert b['cohomology']['dim_H1']==2
+          assert b['module']['uniserial'] is True
+          assert c['4497_ihara']['conclusion'].startswith('u^5 is the first')
+          assert c['4498_clifford']['outer_image_order']==51840
+          assert c['4499_thermal']['full_enumerator_status']=='OPEN'
+          PY
+          grep -q 'PASS4472_4479_apartment_module_thermo_ihara_pauli_insert' analysis/PASS4469_4471_apartment_css_bridge_insert.tex
+          grep -q 'PASS4495_4502_distance_cohomology_ihara_clifford_prism_insert' analysis/PASS4485_4488_apartment_core_self_gluing_insert.tex
+          git diff --check
+      - name: Dry-run restored-site reconciliation
+        run: |
+          python tools/integrate_bt3376_bt3389.py --report evidence/pass4495_4502/site_integration.json
+          test "$(grep -c 'id="pass4495-4502-distance-cohomology-ihara-clifford-prism"' docs/index.html)" -eq 1
+          test -s docs/apartment-code-distance-cohomology-prisms.html
+          grep -q '\[1620,39,162\]' docs/apartment-code-distance-cohomology-prisms.html
+          grep -q '2,160' docs/apartment-code-distance-cohomology-prisms.html
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+      - name: Compile all canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass4495_4502/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
+            > evidence/pass4495_4502/pdf_sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pass4495-4502-distance-cohomology-prisms-evidence
+          path: |
+            evidence/pass4495_4502/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
