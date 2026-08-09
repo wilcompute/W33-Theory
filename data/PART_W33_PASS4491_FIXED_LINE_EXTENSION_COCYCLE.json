@@ -1,0 +1,19 @@
+{
+  "boundary": "Cohomological/module support only; not a physical error current, transport energy, or hardware fault path.",
+  "checks": {"passed": 10, "total": 10},
+  "cocycle": "c_g=G_E(g)e-e for a lift of the unique fixed v in H10",
+  "gauge_tests": {
+    "I/J": {"dimension": 9, "possible": false, "rank_augmented": 31, "rank_coefficient": 30},
+    "KcapRperp/J": {"dimension": 23, "possible": true, "rank_augmented": 16, "rank_coefficient": 16}
+  },
+  "interpretation": "The fixed-line nonsplitting cocycle needs the repeated 8-core, the trivial 1, and the 14-layer, but not the route-side 6-layer.",
+  "pass": 4491,
+  "support": {
+    "ambient_dimension": 24,
+    "dimension": 23,
+    "full_radical_profile": "8 | (6+1) | 14",
+    "module": "(K intersect R^perp)/J",
+    "profile": "8 | 1 | 14"
+  },
+  "theorem": "W33 fixed-line extension cocycle support theorem"
+}
