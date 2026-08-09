@@ -1,0 +1,20 @@
+{
+  "boundary": "This weld identifies finite representation/quadratic data only; it does not turn the radical copy into Pauli hardware or imply E8 dynamics.",
+  "checks": {"passed": 9, "total": 9},
+  "connection": "Parallel Passes 4477/4478 and Passes 4485/4486 use the same ambient U/J quotient in explicit coordinates.",
+  "core": {
+    "anisotropic": 120,
+    "dimension": 8,
+    "literal_space": "U/J",
+    "quadratic": "O+(8,2)",
+    "singular_nonzero": 135
+  },
+  "identities": [
+    "B10*v = j",
+    "B10*vperp = U",
+    "parallel F8 = lift-defined protected F8",
+    "parallel q8 = wt(Nb)/2 on all 256 classes"
+  ],
+  "pass": 4487,
+  "theorem": "literal U/J to parallel E8/Pauli core coordinate weld"
+}
