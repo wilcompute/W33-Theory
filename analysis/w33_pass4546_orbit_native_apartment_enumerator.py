@@ -2,33 +2,31 @@
 """Pass 4546 -- resumable orbit-native engine for the full W33 apartment enumerator.
 
 The complete [1620,39,162] numerical weight enumerator remains open until every
-PGSp(4,3)+complement orbit has been accumulated.  Pass 4512 reduced the task to
+PGSp(4,3)+complement orbit has been accumulated. Pass 4512 reduced the task to
 10,789,604 codeword orbits; Pass 4520 supplied the exact support-orbit schedule.
 This script is the missing executable engine rather than another raw-subset scan.
 
-Key observation: Aut(C)=PGSp(4,3)=Aut(W33).  A coefficient subset S of the forty
-line vertices is exactly a two-colouring of the fixed dual-W33 graph.  Two
-subsets are in the same PGSp orbit iff the corresponding coloured graphs are
-isomorphic.  pynauty's canonical certificate therefore gives an exact orbit
-key without iterating all C(40,m) labelled subsets.
+Aut(C)=PGSp(4,3)=Aut(W33). To encode a coefficient subset S without any ambiguity
+about exchanging S with its complement, adjoin a 41st marker vertex to the fixed
+40-vertex dual-W33 graph. The marker is placed in its own colour cell and joined
+exactly to the vertices of S. Two such 41-vertex coloured graphs are isomorphic
+iff their neighbor sets S are in the same Aut(W33) orbit. Thus a pynauty
+canonical certificate is an exact subset-orbit key, including at support 20.
+Complement reduction is deliberately postponed until the final codeword assembly.
 
-Orbit generation is inductive.  From every representative at support m, add one
-unselected vertex, canonicalize the coloured graph, and retain one representative
-per certificate.  The exact expected shell counts from Pass 4520 are asserted.
-For each representative the coloured-graph automorphism group is its stabilizer
-inside Aut(W33), so orbit_size=51840/|Aut(W33,S)|.  The four-statistic theorem
+Orbit generation is inductive. From every representative at support m, add one
+unselected vertex, canonicalize the marked graph, and retain one representative
+per certificate. The exact expected shell counts from Pass 4520 are asserted.
+For each representative the marked-graph automorphism group is its stabilizer
+inside Aut(W33), so orbit_size=51840/|Aut(W33,S)|. The four-statistic theorem
 then evaluates
 
   wt = 162m - 12*C(m,2) - 42e + 12p3 - 8c4.
 
-The engine writes one JSONL checkpoint per support.  Support 20 is halved by the
-global-complement kernel when assembling codewords.  A completed run is accepted
-only if (i) every shell representative count matches Burnside, (ii) orbit sizes
-sum to C(40,m), and (iii) the final complement-reduced orbit count is 10,789,604.
-
-This file does not claim those 10.8M orbits have already been run.  It turns the
-frontier into a deterministic, resumable exact computation with fail-closed
-acceptance conditions.
+The engine writes one JSONL checkpoint per support. A completed run is accepted
+only if every shell count matches Burnside, orbit sizes sum to C(40,m), and the
+support-20 complement involution reduces the grand total to 10,789,604 codeword
+orbits. This file does not claim that final run has already completed.
 """
 from __future__ import annotations
 
@@ -51,24 +49,27 @@ def load_nauty():
     return pynauty
 
 
-def coloured_graph(pynauty,A,mask):
+def marked_graph(pynauty,A,mask):
+    # Vertices 0..39 are W33 line vertices. Vertex 40 is a distinguished marker
+    # whose neighborhood is exactly S. The singleton color fixes it absolutely.
     adj={i:set(int(j) for j in range(40) if A[i,j]) for i in range(40)}
-    S={i for i in range(40) if (mask>>i)&1};T=set(range(40))-S
-    # A partition into two colour cells; empty cells are omitted at m=0/40.
-    coloring=[x for x in (S,T) if x]
-    return pynauty.Graph(number_of_vertices=40,directed=False,adjacency_dict=adj,vertex_coloring=coloring)
+    S={i for i in range(40) if (mask>>i)&1}
+    adj[40]=set(S)
+    for i in S:adj[i].add(40)
+    coloring=[set(range(40)),{40}]
+    return pynauty.Graph(number_of_vertices=41,directed=False,adjacency_dict=adj,vertex_coloring=coloring)
 
 
 def certificate(pynauty,A,mask):
-    return pynauty.certificate(coloured_graph(pynauty,A,mask))
+    return pynauty.certificate(marked_graph(pynauty,A,mask))
 
 
 def stabilizer_order(pynauty,A,mask):
     # pynauty.autgrp returns generators, mantissa, exponent, vertex orbits, n_orbits.
-    ans=pynauty.autgrp(coloured_graph(pynauty,A,mask))
+    ans=pynauty.autgrp(marked_graph(pynauty,A,mask))
     mant,exp=ans[1],ans[2]
     order=int(round(float(mant)*(10**int(exp))))
-    assert AUT_ORDER%order==0
+    assert AUT_ORDER%order==0,(mask,order)
     return order
 
 
@@ -148,8 +149,8 @@ def main()->int:
     summary={'pass':4546,'through_support':args.through,'expected_orbits_through_support':sum(EXPECTED[:args.through+1]),
              'observed_orbits_through_support':norb,'spectra_by_support':spectra,
              'full_target_codeword_orbits_mod_group_and_complement':10789604,
-             'status':'COMPLETE' if args.through==20 else 'RESUMABLE_FRONTIER',
-             'acceptance':'At through=20, separately quotient the middle shell by complement and require total 10,789,604; no COMPLETE claim is valid before that checksum.'}
+             'status':'SHELLS_0_TO_20_READY_FOR_COMPLEMENT_ASSEMBLY' if args.through==20 else 'RESUMABLE_FRONTIER',
+             'acceptance':'At through=20, apply complement only to support-20 representatives and require grand total 10,789,604; no COMPLETE enumerator claim is valid before that checksum and coefficient accumulation.'}
     (args.directory/'summary.json').write_text(json.dumps(summary,indent=2,sort_keys=True)+'\n',encoding='utf-8')
     print(json.dumps({k:v for k,v in summary.items() if k!='spectra_by_support'},indent=2));return 0
 
