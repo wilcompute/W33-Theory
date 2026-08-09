@@ -1,0 +1,19 @@
+{
+  "bootstrap_chain": [
+    "C8^(4) coefficient-712 support selector",
+    "40x1620 apartment incidence H",
+    "A_*=HH^T mod2",
+    "dual-W33 line graph",
+    "H10=im(A_*), dim 10",
+    "j=all-ones fixed vector",
+    "pi(x)=B(x,j)",
+    "V9=ker(pi)=j^perp, dim 9"
+  ],
+  "boundary": "Sufficiency, not absolute information-theoretic minimality. It does not prove no other lower-order statistic could encode equivalent data, nor does it make zeta a physical observable.",
+  "input_data": "Boolean indicator on 4-subsets: selected iff primitive C8 degree-four Walsh coefficient equals 712",
+  "pass": 4555,
+  "reconstructed_ranks": {"dim_V9": 9, "rank_Astar": 10, "rank_H": 39},
+  "redundancy_result": "No C6 or C7 coefficient layer is needed for this chain once the C8 degree-four 712-selector is supplied.",
+  "selector_size": 1620,
+  "theorem": "A single certified primitive-C8 degree-four selector layer suffices to reconstruct the apartment hypergraph, dual W33, H10, its parity functional, and the 9+1 protected filtration."
+}
