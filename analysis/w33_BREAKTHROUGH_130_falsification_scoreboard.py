@@ -12,11 +12,23 @@ Format: prediction | substrate value | current bound | sensitivity |
         decision experiment | decision year
 
   F1. tau_proton            ~10^33 yr      > 1.6e34 (SK)    1e35 (HypK)  Hyper-K          2030-2040
+      ^^^ EXCLUDED BY THE BOUND PRINTED IN THIS ROW. ~10^33 yr is 16x BELOW the
+          > 1.6e34 limit recorded beside it, and Super-Kamiokande now gives
+          p->e+pi0 > 2.4e34 yr. Scored as pending a 2030-2040 test while already
+          falsified. See analysis/PASS4569_TWO_ROWS_WERE_DEAD_ON_THE_PAGE.md
   F2. lambda_3 (di-Higgs)   95.7 GeV        > 1 TeV (CMS)    5%           FCC-hh           2040+
   F3. T_nu/T_CMB            (4/11)^(1/3)    0.71 (theory)    1%           CMB-S4           2030
   F4. Delta H_0             q! = 6          5.64 (PDG)       0.5         JWST/Euclid       2027-2030
   F5. Witting KS bound      34/40           (untested)        photonic     Photonic         testable now
   F6. alpha^-1              137 + 1/28      137.036 (CODATA) 1e-12        CODATA           ongoing
+      ^^^ EXCLUDED. Re-scored at Pass 4569 against CODATA 2022:
+          predicted 137 + 1/28 = 137.035714286
+          measured             = 137.035999177 +/- 0.000000021
+          discrepancy          = 13,566 sigma
+          The row survives only because the observed value is quoted as "137.036",
+          rounded to three decimals, at which point both numbers read the same. At six
+          decimals they are 137.035714 vs 137.035999 and never agreed. This row was
+          refuted when it was typed, not by any later measurement.
   F7. m_H                   125 (mu+1)^q    125.20 +/- 0.11  0.05 GeV     HL-LHC           2028
   F8. 4th gen fermion       NONE            no evidence       LHC/FCC      LHC/FCC          ongoing
   F9. r tensor-to-scalar    2/90 = 0.0222   < 0.036 (BICEP)  1e-3         LiteBIRD/Simons  2027-2030  *** DECISIVE ***
