@@ -1,0 +1,23 @@
+{
+  "C8_selector": {
+    "Walsh_degree": 4,
+    "apartment_coefficient": 712,
+    "primitive_length": 8,
+    "selected_supports": 1620
+  },
+  "boundary": "The new exact statement is C8 degree-four zeta tensor -> apartment incidence matrix. Distance 162 and Aut(C) are inherited from earlier independent certificates; no physical zeta observable is asserted.",
+  "identity": "the coefficient-712 support set equals the 1620 apartment C4 column supports exactly",
+  "inherited_certified_consequences": {
+    "apartment_code": "[1620,39,162] (Pass 4495)",
+    "code_reconstructs_dual_W33": "Pass 4500",
+    "minimum_words": 40
+  },
+  "pass": 4551,
+  "reconstructed_matrix": {
+    "Gram_mod2": "A_* (dual-W33 line adjacency)",
+    "column_weight": 4,
+    "rank_F2": 39,
+    "row_weight": 162,
+    "shape": [40,1620]
+  }
+}
