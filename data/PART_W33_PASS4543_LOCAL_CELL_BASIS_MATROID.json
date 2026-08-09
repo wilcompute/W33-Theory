@@ -1,0 +1,22 @@
+{
+  "basis_rule": "center line-star plus nine neighbors whose omitted triple is independent across three distinct K3 pencils",
+  "boundary": "This is a representable-matroid/local-incidence theorem. The 108 bases are not hardware layouts or independent physical encodings without additional constraints.",
+  "cell": "K1 join 4K3 on 13 lines",
+  "center": 0,
+  "center_is_essential": "Every 10-line subset using only the 12 neighbors has rank at most 9; the center supplies the parity-odd tenth direction.",
+  "example_full_basis": [0,1,2,3,4,5,7,8,28,32],
+  "examples": {
+    "edge_plus_isolated": {"chosen":[1,2,3,4,5,6,7,8,28],"omitted":[9,32,36]},
+    "independent": {"chosen":[1,2,3,4,5,7,8,28,32],"omitted":[6,9,36]},
+    "triangle": {"chosen":[1,2,3,4,5,6,7,8,9],"omitted":[28,32,36]}
+  },
+  "full_local_H10_bases": 108,
+  "neighbors": [1,2,3,4,5,6,7,8,9,28,32,36],
+  "nine_neighbor_rank_by_omitted_triple": {
+    "edge_plus_isolated": {"count":108,"count_formula":"4*C(3,2)*3*3","rank":8},
+    "independent": {"count":108,"count_formula":"C(4,3)*3^3","rank":9},
+    "triangle": {"count":4,"count_formula":"4","rank":7}
+  },
+  "pass": 4543,
+  "theorem": "The 13-line Borel gauge cell contains exactly 108 geometrically characterized ten-line bases of H10. Their V9 part is controlled purely by the omitted-triple type in 4K3."
+}
