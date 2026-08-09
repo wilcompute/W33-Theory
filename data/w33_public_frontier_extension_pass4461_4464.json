@@ -5,11 +5,16 @@
       "kind": "id",
       "token": "pass4461-4464-line-signing-apartment-parity",
       "source": "analysis/PASS4461_4464_line_signing_apartment_index_insert.html"
+    },
+    {
+      "kind": "id",
+      "token": "pass4469-4471-apartment-h10-bridge",
+      "source": "analysis/PASS4469_4471_apartment_h10_index_insert.html"
     }
   ],
   "standalone_public_pages": [
     {
-      "token": "pass4461-4464-line-signing-apartment-parity-page",
+      "token": "pass4461-4471-line-signing-apartment-parity-page",
       "source": "docs/line-signing-apartment-parity.html"
     }
   ]
