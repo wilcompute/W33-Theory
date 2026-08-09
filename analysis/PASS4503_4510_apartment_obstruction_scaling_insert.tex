@@ -1,0 +1,106 @@
+% Passes 4503--4510: corrected maximal-subgroup obstruction, explicit flag gauge,
+% radical cohomology, GQ(3,9) scaling, and three outside-box consequences.
+\subsection{Maximal-subgroup obstruction and the corrected flag gauge (Passes 4503--4504)}
+\label{sec:pass4503-4510-apartment-obstruction-scaling}
+
+Adversarial re-execution of the Pass~4493 restricted section systems corrected a
+false positive without changing the full-group nonsplitting theorem.  For the
+exact extension
+\[
+0\to K/J\;(29)\to E=M/J\;(39)\to H_{10}\;(10)\to0,
+\]
+representatives of all five maximal subgroup types of $PSp(4,3)$ remain
+nonsplit.  Their orders and coefficient/augmented ranks are
+\[
+\begin{array}{c|c|c}
+|H|&[PSp(4,3):H]&\operatorname{rank}A/\operatorname{rank}[A\mid b]\\ \hline
+960&27&388/389\\
+720&36&386/387\\
+648&40&386/387\\
+648&40&387/388\\
+576&45&386/387.
+\end{array}
+\]
+The two order-$648$ rows are the line and point stabilizers respectively.  Thus
+the historical $370=370$ point/line claim is withdrawn.  The canonical incident
+point--line flag stabilizer has order $162$ and instead gives
+\[
+\boxed{\operatorname{rank}A=\operatorname{rank}[A\mid b]=384},
+\]
+with a six-dimensional affine family, hence exactly $64$ equivariant sections.
+Exhaustive optimization of those $64$ sections in the canonical quotient basis
+gives total minimal ambient Hamming weight $42$, maximum column weight $9$, and
+minimum union support $13$ lines.
+
+\subsection{The full radical carries two obstruction bits (Pass 4505)}
+
+For the complete apartment radical $R_{29}=K/J$, an exact full-Cayley-graph
+cocycle computation gives
+\[
+\dim Z^1(PSp(4,3),R_{29})=31,\qquad
+\dim B^1(PSp(4,3),R_{29})=29,
+\]
+and therefore
+\[
+\boxed{H^1(PSp(4,3),R_{29})\cong\mathbb F_2^2.}
+\]
+All three nonzero classes generate the same $23$-dimensional support module
+\[
+W/J=(K\cap\operatorname{row}N)/J,
+\]
+which Pass~4492 already resolved as the route-hull/sentinel extension with
+profile $8\mid(1\mid14)$.  In particular, the remaining six-dimensional radical
+factor is absent from the module closure of every nonzero class.  This is
+$H^1(G,R_{29})$ and must not be confused with a computation of the entire
+$\operatorname{Ext}^1_G(H_{10},R_{29})$ group.
+
+\subsection{The apartment bridge scales from $10$ to $70$ (Pass 4506)}
+
+The independent $Q(5,3)=GQ(3,9)$ builder gives $112$ points, $280$ lines and
+$102060$ building apartments.  Over $\mathbb F_2$,
+\[
+\operatorname{rank}H=279,\qquad
+\operatorname{rank}N=91,\qquad
+\operatorname{rank}(N^TN)=70,
+\]
+with the exact entrywise identity
+\[
+HH^T=N^TN.
+\]
+Consequently the apartment code has a $209$-dimensional radical and a
+$70$-dimensional nondegenerate quotient, canonically identified by incidence with
+\[
+\operatorname{im}N/\ker N^T,
+\qquad 91-21=70.
+\]
+The dual $GQ(9,3)$ orientation fails sharply on the same building: its apartment
+Gram has rank $1$ (indeed it is the all-ones matrix), whereas the dual incidence
+Gram has rank $22$.  This concretely confirms the characteristic-two orientation
+criterion rather than treating duality as automatic.
+
+\subsection{Three outside-box consequences (Passes 4508--4510)}
+
+First, Pass~4496 and Pass~4505 produce two different two-dimensional cohomology
+spaces.  For the protected irreducible eight-core, the $PGSp$ outer involution
+swaps an $H^1$ basis, leaving one nonzero class fixed.  For the full radical
+$R_{29}$, the outer involution acts trivially on $H^1$, so all three nonzero
+classes are outer-fixed.  Equal dimension therefore does not identify the two
+outer modules.
+
+Second, restriction of the two radical obstruction bits explains the corrected
+symmetry threshold.  The order-$960$, $720$, and $576$ maximals kill no nonzero
+class.  A point stabilizer kills one one-dimensional obstruction subspace, while
+a line stabilizer kills a distinct one.  Their incident intersection, the
+order-$162$ flag stabilizer, kills all of $H^1(G,R_{29})$.  Thus a point or line
+removes one obstruction charge; a flag removes both.
+
+Third, the $13$-line minimum support of the optimized flag section is exactly the
+closed neighborhood of the fixed flag line in the W33 line-intersection graph.
+Its induced graph is
+\[
+\boxed{K_1\vee4K_3},
+\]
+one center line together with the four pencils of three other lines through its
+four points.  Hence the valid symmetry-broken representative register can be
+chosen inside a single radius-one W33 line cell.  This is finite-graph locality,
+not automatically spatial, optical or energetic locality in hardware.
