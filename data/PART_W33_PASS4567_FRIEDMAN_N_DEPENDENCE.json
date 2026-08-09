@@ -1,0 +1,56 @@
+{
+  "bound": 6.633249580711,
+  "boundary": "random d-regular graphs at d = 12 only, n up to 640, with a fresh graph per batch; sample counts fall with n as the eigendecomposition cost grows, so the large-n fractions carry more error. Friedman's theorem is cited as the frame, not verified here -- this measures a finite-n trend and does not establish an asymptotic law",
+  "conclusion": "the Ramanujan fraction falls monotonically with n at fixed degree, so Pass 4438's 87% is a property of n = 40 rather than of W(3,3); combined with Pass 4565 the two knobs act oppositely -- larger structure group raises the fraction, larger n lowers it",
+  "corrects": "Pass 4438 said 'Bilu-Linial is not a hard problem on this graph'. True but misleading: it is not hard on any graph this small, and the same family at larger n makes it hard with no change to the mathematics",
+  "degree": 12,
+  "fraction_falls_with_n": true,
+  "log_log_slope_of_mean_excess": -0.851020603781,
+  "rows": [
+    {
+      "fraction_ramanujan": 0.858333333333,
+      "graphs": 24,
+      "max_rho": 7.180203929719,
+      "mean_rho": 6.381516971794,
+      "n": 40,
+      "samples": 960,
+      "std_rho": 0.224821013677
+    },
+    {
+      "fraction_ramanujan": 0.84,
+      "graphs": 20,
+      "max_rho": 7.012440409712,
+      "mean_rho": 6.486672367348,
+      "n": 80,
+      "samples": 600,
+      "std_rho": 0.150728066257
+    },
+    {
+      "fraction_ramanujan": 0.821428571429,
+      "graphs": 14,
+      "max_rho": 6.887281172603,
+      "mean_rho": 6.549848358966,
+      "n": 160,
+      "samples": 280,
+      "std_rho": 0.10331744166
+    },
+    {
+      "fraction_ramanujan": 0.708333333333,
+      "graphs": 8,
+      "max_rho": 6.749414884147,
+      "mean_rho": 6.595505073086,
+      "n": 320,
+      "samples": 96,
+      "std_rho": 0.065352171157
+    },
+    {
+      "fraction_ramanujan": 0.75,
+      "graphs": 4,
+      "max_rho": 6.708091774328,
+      "mean_rho": 6.607269997363,
+      "n": 640,
+      "samples": 24,
+      "std_rho": 0.043805501163
+    }
+  ]
+}
