@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>W33 Line-Signing Apartment Parity — Passes 4461–4465</title>
+<title>W33 Line-Signing Apartment Parity — Passes 4461–4466</title>
 <style>
-:root{color-scheme:dark;background:#0b0d11;color:#e8ecf2;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}body{max-width:980px;margin:0 auto;padding:36px 22px 72px;line-height:1.58}a{color:#8fd3ff}.card{border:1px solid #2b3442;border-radius:14px;padding:20px;margin:18px 0;background:#11151c}.eq{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#090b0f;border-radius:8px;padding:10px 12px;overflow:auto;white-space:pre-wrap}h1,h2{line-height:1.15}.boundary{border-left:4px solid #d7a84b;padding-left:16px;color:#d9dfe8}.small{color:#aab4c2;font-size:.94rem}</style>
+:root{color-scheme:dark;background:#0b0d11;color:#e8ecf2;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}body{max-width:980px;margin:0 auto;padding:36px 22px 72px;line-height:1.58}a{color:#8fd3ff}.card{border:1px solid #2b3442;border-radius:14px;padding:20px;margin:18px 0;background:#11151c}.eq{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#090b0f;border-radius:8px;padding:10px 12px;overflow:auto;white-space:pre-wrap}h1,h2{line-height:1.15}.boundary{border-left:4px solid #d7a84b;padding-left:16px;color:#d9dfe8}.correction{border-left:4px solid #ee7b7b;padding-left:16px}.small{color:#aab4c2;font-size:.94rem}</style>
 </head>
 <body>
 <p><a href="index.html">← Exceptional Geometry home</a></p>
 <h1>Line signings, building apartments, and the parity code</h1>
-<p class="small">Passes 4461–4465 · exact finite-combinatorial frontier · W(3,3) and general GQ(s,t)</p>
+<p class="small">Passes 4461–4466 · exact finite-combinatorial frontier · W(3,3) and general GQ(s,t)</p>
 <div class="card">
 <h2>1. The signing is incidence-native</h2>
 <p>Assign one sign σ<sub>ℓ</sub>∈{±1} to each of the 40 geometric lines of W(3,3). Each K<sub>4</sub> line owns six point-collinearity edges, and the 40 six-edge supports partition all 240 edges. If N is point–line incidence, the signed adjacency is</p>
@@ -59,6 +59,13 @@ tr(Aσ⁴) = n d(2d−1) + 24 L C(s+1,4) + 8 WQ.</div>
 <div class="eq">H Hᵀ = (r−β) I + (α−β) A* + β J.</div>
 <p>The dual pair GQ(3,9) and GQ(9,3) both have Q=102,060 quadrangle observables, while their line-sign registers have 280 and 112 bits respectively. Duality preserves the apartment count, not the signing granularity. This is why the general trace theorem does <em>not</em> resurrect the refuted claim that Ramanujan probability is controlled by s alone.</p>
 </div>
-<p class="boundary"><strong>Evidence boundary.</strong> These statements are finite-geometric identities and exact null-model calculations. They do not establish a physical gauge field, do not make any optimized signing statistically special without comparison to the exact null, and do not assert that an optical experiment automatically measures all apartment parities. The executable witnesses and frozen JSON certificates live in <code>analysis/w33_pass4461_...</code> through <code>w33_pass4465_...</code> and <code>data/PART_W33_PASS4461_...</code> through <code>PASS4465</code>.</p>
+<div class="card correction">
+<h2>7. Correction to the recent Pass 4433 cycle statistic</h2>
+<p>The Pass 4433 helper claimed to list every simple 4-cycle once. On W33 it actually emits 3,480 records: 1,740 underlying simple C₄s, each twice. Those 1,740 split into the 1,620 induced apartments plus 120 cycles wholly inside the geometric K₄ lines.</p>
+<p>Line-internal cycles always have positive parity under a line signing, so Pass 4433's raw fraction was a diluted apartment fraction:</p>
+<div class="eq">flegacy = (27/29) fapartment   on W(3,3).</div>
+<p>This does <strong>not</strong> invalidate its standardized z-score against a random line-signing baseline; multiplying every sample by the same positive factor leaves z unchanged. It corrects the raw normalization and the label. In general, <code>flegacy = Q/(Q+3L C(s+1,4)) fapartment</code>. The dilution factors are 243/245 for GQ(3,9) but only 81/137 for GQ(9,3), so cross-GQ raw legacy fractions should not be compared without undilution.</p>
+</div>
+<p class="boundary"><strong>Evidence boundary.</strong> These statements are finite-geometric identities, exact null-model calculations, and an explicit correction to recent enumeration semantics. They do not establish a physical gauge field, do not make any optimized signing statistically special without comparison to the exact null, and do not assert that an optical experiment automatically measures all apartment parities. The executable witnesses and frozen JSON certificates live in <code>analysis/w33_pass4461_...</code> through <code>w33_pass4466_...</code> and <code>data/PART_W33_PASS4461_...</code> through <code>PASS4466</code>.</p>
 </body>
 </html>
