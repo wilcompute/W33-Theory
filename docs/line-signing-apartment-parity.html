@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>W33 Line-Signing Apartment Parity — Passes 4461–4464</title>
+<style>
+:root{color-scheme:dark;background:#0b0d11;color:#e8ecf2;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}body{max-width:980px;margin:0 auto;padding:36px 22px 72px;line-height:1.58}a{color:#8fd3ff}.card{border:1px solid #2b3442;border-radius:14px;padding:20px;margin:18px 0;background:#11151c}.eq{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#090b0f;border-radius:8px;padding:10px 12px;overflow:auto}h1,h2{line-height:1.15}.boundary{border-left:4px solid #d7a84b;padding-left:16px;color:#d9dfe8}.small{color:#aab4c2;font-size:.94rem}</style>
+</head>
+<body>
+<p><a href="index.html">← Exceptional Geometry home</a></p>
+<h1>Line signings, building apartments, and the parity code</h1>
+<p class="small">Passes 4461–4464 · exact finite-combinatorial frontier · W(3,3)</p>
+<div class="card">
+<h2>1. The signing is incidence-native</h2>
+<p>Assign one sign σ<sub>ℓ</sub>∈{±1} to each of the 40 geometric lines of W(3,3). Each K<sub>4</sub> line owns six point-collinearity edges, and the 40 six-edge supports partition all 240 edges. If N is point–line incidence, the signed adjacency is</p>
+<div class="eq">Aσ = N diag(σ) Nᵀ − diag(Nσ).</div>
+<p>The first moments are exact: tr(Aσ²)=480 and tr(Aσ³)=24 Σℓ σℓ. Any 20/20 balanced line signing therefore has zero cubic trace.</p>
+</div>
+<div class="card">
+<h2>2. The 1,620 quadrangles are the Levi apartments</h2>
+<p>The point graph has exactly 1,620 simple 4-cycles. Each uses four distinct geometric lines; those four lines form a 4-cycle in the dual line graph, and inserting the line vertices gives the corresponding Levi 8-cycle. These are three shadows of the same rank-two-building apartment.</p>
+<div class="eq">tr(Aσ⁴) = 12000 + 8 W₄ = 24960 − 25920 f₄</div>
+<p>Here W₄ is the sum of the four-line sign products over the 1,620 apartments, and f₄ is the fraction with negative product. The fourth moment’s entire variable part is therefore an apartment-parity observable.</p>
+</div>
+<div class="card">
+<h2>3. Exact random baseline</h2>
+<p>Under independent random line signs, the apartment products are distinct quartic Walsh characters. This gives a closed-form control distribution rather than a Monte-Carlo benchmark:</p>
+<div class="eq">E W₄ = 0
+Var(W₄) = 1620
+E W₄³ = 12960
+E W₄⁴ = 9891720
+E f₄ = 1/2
+SD(f₄) = 1/(2√1620)</div>
+<p>The null is not exactly Gaussian: standardized skewness is about 0.198761598 and excess kurtosis about 0.769135802.</p>
+</div>
+<div class="card">
+<h2>4. Apartment incidence and tomography</h2>
+<p>Let H be the 40×1,620 line/apartment incidence matrix and A* the dual W33 line-collinearity adjacency. Exact pair counts give</p>
+<div class="eq">H Hᵀ = 156 I + 21 A* + 6 J
+spec(H Hᵀ) = 648¹ ⊕ 198²⁴ ⊕ 72¹⁵.</div>
+<p>Modulo two, HHᵀ=A*. More strongly, rank<sub>F₂</sub>(H)=39 and ker(Hᵀ)=⟨1<sub>40</sub>⟩. Thus all 1,620 apartment parities recover the 40 line signs up to the unavoidable global reversal σ↦−σ.</p>
+</div>
+<div class="card">
+<h2>5. The nondegenerate binary core</h2>
+<p>The apartment-parity image is a binary [1620,39] linear code. The dual adjacency form has rank 10 over F₂, so the code radical has dimension 29 and the quotient is a nondegenerate 10-dimensional alternating, hence symplectic, vector space.</p>
+<div class="eq">dim C = 39
+dim rad(C) = 29
+dim C/rad(C) = 10.</div>
+<p>A one-line code generator has weight 162. The XOR of two line generators has weight 270 when the two lines intersect and 312 when they are disjoint.</p>
+</div>
+<p class="boundary"><strong>Evidence boundary.</strong> These statements are finite-geometric identities and exact null-model calculations. They do not establish a physical gauge field, do not make any optimized signing statistically special without comparison to the exact null, and do not assert that an optical experiment automatically measures all apartment parities. The executable witnesses and frozen JSON certificates live in <code>analysis/w33_pass4461_...</code> through <code>w33_pass4464_...</code> and <code>data/PART_W33_PASS4461_...</code> through <code>PASS4464</code>.</p>
+</body>
+</html>
