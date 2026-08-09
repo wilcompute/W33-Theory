@@ -1,0 +1,22 @@
+{
+  "boundary": "A reduction is not a proof of the missing all-q code theorem.",
+  "equivalent_missing_theorem": {
+    "code": "C=im(N) in F2^(#points)",
+    "consequence": "rank(N^T N)=dim(C/C^perp)=(q^2+1)(q^2-q+1)",
+    "dimension": "dim C=q^4+q^2+1",
+    "dual_containing": "C^perp=ker(N^T) <= C",
+    "dual_dimension": "dim C^perp=q(q^2-q+1)"
+  },
+  "exact_anchors": [
+    {"candidate_dual_dimension":21,"candidate_rank_N":91,"candidate_rank_NtN":70,"dual_containing_verified_by_dimensions":true,"exact_dim_imN_intersect_kerNt":21,"exact_dim_ker_Nt":21,"exact_rank_N":91,"exact_rank_NtN":70,"points":112,"q":3},
+    {"candidate_dual_dimension":105,"candidate_rank_N":651,"candidate_rank_NtN":546,"dual_containing_verified_by_dimensions":true,"exact_dim_imN_intersect_kerNt":105,"exact_dim_ker_Nt":105,"exact_rank_N":651,"exact_rank_NtN":546,"points":756,"q":5},
+    {"candidate_dual_dimension":301,"candidate_rank_N":2451,"candidate_rank_NtN":2150,"dual_containing_verified_by_dimensions":true,"exact_dim_imN_intersect_kerNt":301,"exact_dim_ker_Nt":301,"exact_rank_N":2451,"exact_rank_NtN":2150,"points":2752,"q":7}
+  ],
+  "literature_audit": {
+    "excluded_wrong_route": "Bagchi-Brouwer-Wilbrink O(5,q) concerns the dual of square Sp(4,q), not Q^-(5,q)=GQ(q,q^2).",
+    "related_but_insufficient": "Blokhuis-Moorhouse determines defining-characteristic p-ranks for quadric point-hyperplane incidence; Chandler-Sin-Xiang treats symplectic polar spaces. Neither statement is the binary point-line rank needed here for odd q.",
+    "status": "NO DIRECT ALL-q CROSS-CHARACTERISTIC BINARY POINT-LINE THEOREM LOCATED"
+  },
+  "pass": 4580,
+  "status": "The candidate law is exact at q=3,5,7 and reduced to a single dual-containing incidence-code theorem; infinite proof remains open."
+}
