@@ -21,7 +21,7 @@ CERTS = [
 
 
 def test_executable_witnesses_pass_and_regenerate_frozen_certificates() -> None:
-    before = [path.read_text(encoding="utf-8") for path in CERTS]
+    before = [json.loads(path.read_text(encoding="utf-8")) for path in CERTS]
     for script in SCRIPTS:
         proc = subprocess.run(
             [sys.executable, str(script)],
@@ -31,7 +31,7 @@ def test_executable_witnesses_pass_and_regenerate_frozen_certificates() -> None:
             check=False,
         )
         assert proc.returncode == 0, proc.stdout + "\n" + proc.stderr
-    after = [path.read_text(encoding="utf-8") for path in CERTS]
+    after = [json.loads(path.read_text(encoding="utf-8")) for path in CERTS]
     assert after == before
 
 
