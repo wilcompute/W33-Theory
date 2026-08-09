@@ -1,0 +1,36 @@
+{
+  "boundary": "both quadrangles are constructed and their GQ parameters verified from the incidence rather than assumed; the percentages are 600 random line-signings each, so they are densities with sampling error of order 2%, not exact quantities. Duality is verified by counts matching under exchange, which is necessary not sufficient",
+  "correction": {
+    "consequence": "Pass 4457's s=2 row is genuinely two geometries and its null result on t remains unexplained; Pass 4560's account of that row is withdrawn. The H(3,9)/Q(5,3) unification is unaffected",
+    "pass_4560_claim": "W(3,2) and Q(5,2) are a dual pair",
+    "status": "FALSE -- W(3,2) = GQ(2,2) is self-dual; Q(5,2) = GQ(2,4) is dual to GQ(4,2) = H(3,4)"
+  },
+  "pair1_reference": {
+    "H(3,9)": 0.0,
+    "Q(5,3)": 0.072,
+    "source": "Pass 4457/4433"
+  },
+  "replicated": true,
+  "second_dual_pair": {
+    "H(3,4) point graph  (s=4)": {
+      "bound": 6.633249580711,
+      "degree": 12,
+      "edges_per_block": 10,
+      "fraction_ramanujan": 0.0,
+      "lines": 27,
+      "mean_rho": 7.654596030946,
+      "min_rho": 6.665207705789,
+      "points": 45
+    },
+    "Q(5,2) point graph  (s=2)": {
+      "bound": 6.0,
+      "degree": 10,
+      "edges_per_block": 3,
+      "fraction_ramanujan": 0.851666666667,
+      "lines": 45,
+      "mean_rho": 5.708008203461,
+      "min_rho": 4.926486246936,
+      "points": 27
+    }
+  }
+}
