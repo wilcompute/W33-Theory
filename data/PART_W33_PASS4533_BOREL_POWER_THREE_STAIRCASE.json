@@ -1,0 +1,18 @@
+{
+  "boundary": "Power-of-three orbit sizes are exact. A Bruhat-length, renormalization, causal-depth, or energy-scale interpretation would require a separate intertwiner/dynamics theorem.",
+  "edge_staircase": {
+    "identity": "2*(3+9+27+81)=240",
+    "orbit_sizes": [3,3,9,9,27,27,81,81],
+    "shells": [
+      {"Borel_stabilizer_order":54,"cell_locations":["internal","internal"],"exponent":1,"number_of_edge_orbits":2,"orbit_size":3,"representatives":[[0,1],[1,2]]},
+      {"Borel_stabilizer_order":18,"cell_locations":["internal","internal"],"exponent":2,"number_of_edge_orbits":2,"orbit_size":9,"representatives":[[0,4],[4,5]]},
+      {"Borel_stabilizer_order":6,"cell_locations":["boundary","exterior"],"exponent":3,"number_of_edge_orbits":2,"orbit_size":27,"representatives":[[1,10],[10,11]]},
+      {"Borel_stabilizer_order":2,"cell_locations":["boundary","exterior"],"exponent":4,"number_of_edge_orbits":2,"orbit_size":81,"representatives":[[4,12],[10,13]]}
+    ]
+  },
+  "interpretation": "This is an exact finite orbit filtration naturally aligned with the order-81 unipotent core of the Borel; the certificate records the arithmetic hierarchy without assigning it a physical scale variable.",
+  "pass": 4533,
+  "stabilizer_staircase": [54,18,6,2],
+  "theorem": "The canonical Borel action organizes all 40 line vertices into one orbit of each size 3^0..3^3 and all 240 protected edges into exactly two orbits of each size 3^1..3^4, with stabilizers dropping by a factor three at every edge shell.",
+  "vertex_staircase": {"identity":"1+3+9+27=40","orbit_sizes":[1,3,9,27]}
+}
