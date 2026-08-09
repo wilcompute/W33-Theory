@@ -1,0 +1,141 @@
+{
+  "boundary": "exact diagonalisation of a 40-site tight-binding model; the random-matrix statements are ensemble statements over 400 gauge fields, not properties of any single Hamiltonian, and no continuum or thermodynamic limit is taken",
+  "conclusion": "a gauge field moves W(3,3)'s collinearity graph from GOE to GUE statistics with no change to the geometry; the three-value spectrum and the Ramanujan property are both properties of the ZERO-FLUX operator and neither survives generic disorder",
+  "graph": {
+    "betti_1": 201,
+    "degree": 12,
+    "edges": 240,
+    "lines": 40,
+    "points": 40,
+    "ramanujan_bound": 6.633249580711,
+    "srg": [
+      40,
+      12,
+      2,
+      4
+    ],
+    "zero_flux_spectrum": {
+      "-4": 15,
+      "12": 1,
+      "2": 24
+    }
+  },
+  "pass_4403_single_flux": {
+    "cycle": [
+      1,
+      2
+    ],
+    "max_split_15_block": 1.476211635837,
+    "max_split_24_block": 2.438509364015,
+    "returns_at_2pi": true,
+    "scan": [
+      {
+        "distinct": 3,
+        "lambda_2": 2.0,
+        "lambda_max": 12.0,
+        "theta_over_pi": 0.0,
+        "width_15": 0.0,
+        "width_24": 0.0
+      },
+      {
+        "distinct": 7,
+        "lambda_2": 2.44757505623,
+        "lambda_max": 11.987703182162,
+        "theta_over_pi": 0.25,
+        "width_15": 0.54424245267,
+        "width_24": 0.909192978379
+      },
+      {
+        "distinct": 7,
+        "lambda_2": 2.822868455902,
+        "lambda_max": 11.957748824781,
+        "theta_over_pi": 0.5,
+        "width_15": 1.020223229159,
+        "width_24": 1.697059964363
+      },
+      {
+        "distinct": 7,
+        "lambda_2": 3.073841961502,
+        "lambda_max": 11.927406203004,
+        "theta_over_pi": 0.75,
+        "width_15": 1.354257130633,
+        "width_24": 2.241909532009
+      },
+      {
+        "distinct": 7,
+        "lambda_2": 3.162277660168,
+        "lambda_max": 11.914720999852,
+        "theta_over_pi": 1.0,
+        "width_15": 1.476211635837,
+        "width_24": 2.438509364015
+      },
+      {
+        "distinct": 7,
+        "lambda_2": 3.073841961502,
+        "lambda_max": 11.927406203004,
+        "theta_over_pi": 1.25,
+        "width_15": 1.354257130633,
+        "width_24": 2.241909532009
+      },
+      {
+        "distinct": 7,
+        "lambda_2": 2.822868455902,
+        "lambda_max": 11.957748824781,
+        "theta_over_pi": 1.5,
+        "width_15": 1.020223229159,
+        "width_24": 1.697059964363
+      },
+      {
+        "distinct": 7,
+        "lambda_2": 2.44757505623,
+        "lambda_max": 11.987703182162,
+        "theta_over_pi": 1.75,
+        "width_15": 0.54424245267,
+        "width_24": 0.909192978379
+      },
+      {
+        "distinct": 3,
+        "lambda_2": 2.0,
+        "lambda_max": 12.0,
+        "theta_over_pi": 2.0,
+        "width_15": 0.0,
+        "width_24": 0.0
+      }
+    ],
+    "spectral_flow": false
+  },
+  "pass_4404_4405_ensembles": {
+    "no flux (control)": {
+      "lambda_2_max": 2.0,
+      "lambda_2_mean": 2.0,
+      "mean_r": 0.6,
+      "nearest_class": "GUE",
+      "ratios": 400,
+      "real_hamiltonian": true,
+      "usable": true
+    },
+    "phase disorder theta uniform": {
+      "lambda_2_max": 6.15267119995,
+      "lambda_2_mean": 5.706301095783,
+      "mean_r": 0.593848903219,
+      "nearest_class": "GUE",
+      "ratios": 15200,
+      "real_hamiltonian": false,
+      "usable": true
+    },
+    "sign disorder  theta in {0,pi}": {
+      "lambda_2_max": 6.349946291461,
+      "lambda_2_mean": 5.70065792977,
+      "mean_r": 0.532525127835,
+      "nearest_class": "GOE",
+      "ratios": 15200,
+      "real_hamiltonian": true,
+      "usable": true
+    }
+  },
+  "reference_mean_r": {
+    "GOE": 0.5307,
+    "GUE": 0.59957,
+    "Poisson": 0.38629
+  }
+}

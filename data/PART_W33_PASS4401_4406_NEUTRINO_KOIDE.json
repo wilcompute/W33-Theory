@@ -1,0 +1,70 @@
+{
+  "boundary": "this is a falsification check on predictions the repository already made; it derives nothing from the geometry, and the cosmological verdicts are model-dependent by construction -- the ordering statement and the Koide check are not",
+  "pass_4401_neutrino_sum": {
+    "conclusion": "excluded in LCDM by DESI DR2 + CMB (0.0642 eV, 95%) and by the frequentist limit (0.053 eV); allowed under w0waCDM (0.163 eV); F16 is now CONDITIONAL on evolving dark energy",
+    "not_used": "the 4-parameter dark-energy bound is numerically 0.101 eV, equal to the prediction; it is a bound not a measurement and nothing is drawn from the coincidence",
+    "predicted_eV": 0.101,
+    "scoreboard_row_bound_eV": 0.12,
+    "scoreboard_row_status": "SUPERSEDED",
+    "verdicts": [
+      {
+        "bound_eV": 0.0642,
+        "dataset": "DESI DR2 BAO + ACT CMB",
+        "model": "LCDM",
+        "verdict": "EXCLUDED"
+      },
+      {
+        "bound_eV": 0.053,
+        "dataset": "DESI DR2 + Planck PR4 + lensing",
+        "model": "LCDM",
+        "verdict": "EXCLUDED"
+      },
+      {
+        "bound_eV": 0.163,
+        "dataset": "DESI DR2 + CMB",
+        "model": "w0waCDM",
+        "verdict": "allowed"
+      },
+      {
+        "bound_eV": 0.101,
+        "dataset": "DESI DR2 + CMB",
+        "model": "4-parameter w(z)",
+        "verdict": "at the boundary"
+      },
+      {
+        "bound_eV": 0.12,
+        "dataset": "Planck 2018 (the scoreboard's row)",
+        "model": "LCDM",
+        "verdict": "allowed"
+      }
+    ]
+  },
+  "pass_4402_ordering": {
+    "conclusion": "101 meV is generic for normal ordering (lightest ~15 meV) and within 2 meV of the inverted-ordering floor; the inverted reading is testable by JUNO independently of cosmology",
+    "rows": [
+      {
+        "above_floor_meV": 42.00666959602,
+        "floor_eV": 0.058993330404,
+        "lightest_required_eV": 0.022181147933,
+        "ordering": "NO"
+      },
+      {
+        "above_floor_meV": 1.55336738588,
+        "floor_eV": 0.099446632614,
+        "lightest_required_eV": 0.001507661443,
+        "ordering": "IO"
+      }
+    ]
+  },
+  "pass_4406_koide": {
+    "Q": 0.666660511477,
+    "deviation_sigma": 0.908498025954,
+    "sigma": 6.775127e-06,
+    "two_thirds": 0.666666666667
+  },
+  "sources": [
+    "DESI DR2 BAO cosmology (arXiv:2503.14738) and neutrino physics (arXiv:2503.14744)",
+    "frequentist treatment: arXiv:2507.12401 / FERMILAB-PUB-25-0477-PPD",
+    "4-parameter dark energy: arXiv:2512.08752"
+  ]
+}

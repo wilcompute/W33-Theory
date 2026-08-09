@@ -27,6 +27,14 @@ Format: prediction | substrate value | current bound | sensitivity |
  F14. GW band ~22 GHz       phase-closure    no constraint     next-gen     LISA/etc        2035+
  F15. M_W/sin^2 theta_W     ~1e-4 corr      no test           1e-4         EW precision     2030+
  F16. Sigma m_nu            101 meV         < 120 (Planck)    1e-3         CMB-S4/Euclid    2027-2032
+      ^^^ THE BOUND IN THAT ROW IS SUPERSEDED.  Re-scored at Pass 4401 against DESI DR2:
+          LCDM, DESI DR2 BAO + ACT CMB          Sigma m_nu < 64.2 meV (95%)   -> 101 meV EXCLUDED
+          LCDM, frequentist (Feldman-Cousins)   Sigma m_nu < 53   meV (95%)   -> EXCLUDED
+          w0waCDM (evolving dark energy)        Sigma m_nu < 163  meV (95%)   -> allowed
+          F16 is therefore no longer an independent prediction: it survives only if dark
+          energy evolves, which makes it a joint claim about the neutrino AND dark sectors.
+          The row is kept unedited above because a scoreboard that quietly rewrites its
+          own bounds cannot be audited.  See w33_pass4401_4402_4406_neutrino_ordering_koide.py
 
 ==============================================================
 DECISION TIMELINE
