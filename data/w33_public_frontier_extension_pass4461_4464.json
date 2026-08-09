@@ -10,7 +10,8 @@
     {"kind":"id","token":"pass4493-symmetry-breaking-section-threshold","source":"analysis/PASS4493_symmetry_breaking_section_index_insert.html"},
     {"kind":"id","token":"pass4495-4502-distance-cohomology-ihara-clifford-prism","source":"analysis/PASS4495_4502_distance_cohomology_ihara_clifford_prism_index_insert.html"},
     {"kind":"id","token":"pass4503-4510-apartment-obstruction-scaling","source":"analysis/PASS4503_4510_apartment_obstruction_scaling_index_insert.html"},
-    {"kind":"id","token":"pass4511-4518-dual-enumerator-ihara-q53","source":"analysis/PASS4511_4518_dual_enumerator_ihara_q53_index_insert.html"}
+    {"kind":"id","token":"pass4511-4518-dual-enumerator-ihara-q53","source":"analysis/PASS4511_4518_dual_enumerator_ihara_q53_index_insert.html"},
+    {"kind":"id","token":"pass4528-4535-borel-building-compiler-edge","source":"analysis/PASS4528_4535_borel_building_compiler_edge_index_insert.html"}
   ],
   "standalone_public_pages": [
     {"token":"pass4461-4471-line-signing-apartment-parity-page","source":"docs/line-signing-apartment-parity.html"},
