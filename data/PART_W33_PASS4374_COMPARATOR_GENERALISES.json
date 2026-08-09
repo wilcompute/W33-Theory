@@ -1,4 +1,5 @@
 {
+  "boundary": "the law is derived for self-dual quadrangles and checked against the measured symplectic cases; nothing outside GQ(s,s) is verified in this pass",
   "closed_form": "1 - q/((q+1)(q^2+1) - 1)",
   "closed_form_verified": true,
   "improves_with_q": true,

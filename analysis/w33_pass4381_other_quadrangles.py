@@ -108,7 +108,13 @@ def main() -> int:
   quadrangle was built here, and if one of those families fails to have the stated
   parameters the corresponding row is wrong.""")
 
-    out = {"general_formula": ("1 - [s/((s+1)(st+1)-1) + t/((t+1)(st+1)-1)]/2"),
+    out = {
+
+        "boundary": ("the symplectic rows are measured; the asymmetric rows are DERIVED from the "
+
+            "incidence parameters and were not constructed here (Pass 4389 constructs "
+
+            "H(3,9) and confirms them)"),"general_formula": ("1 - [s/((s+1)(st+1)-1) + t/((t+1)(st+1)-1)]/2"),
            "reproduces_measured_symplectic": bool(ok),
            "rows": rows,
            "asymmetric_gives_unequal_protection": True,

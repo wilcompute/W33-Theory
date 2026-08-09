@@ -113,7 +113,13 @@ def main() -> int:
   text. The mode is real; the claim that it had been operating unnoticed for four thousand
   passes is not supported, and I withdraw the implication.""")
 
-    out = {"sampled": n, "seed": 4380,
+    out = {
+
+        "boundary": ("twenty of 216 read, by one reader, and the verdicts are judgements rather "
+
+            "than computations; the estimate of zero confirmed untested premises is a "
+
+            "sample statement and its upper bound cannot be tightened without reading more"),"sampled": n, "seed": 4380,
            "verdicts": [{"file": f, "line": ln, "verdict": v, "why": w}
                         for f, ln, v, w in VERDICTS],
            "counts": dict(c), "confirmed_errors": 0,

@@ -9,10 +9,10 @@ space, and nobody has drawn it.
 Pass 4313 noticed in passing that a flag machine holds 160 incident point-line pairs.  The
 Levi graph has 160 EDGES.  That is not a coincidence and it is worth following.
 
-  4321  THE 2x2 DESIGN SPACE, PRICED.  Four machines -- biased/symmetric crossed with
-        irreversible/reversible -- each synthesised, each measured for mixing, entropy
-        production and localisation.  The blueprint has been quoting one machine's numbers
-        as if there were no alternatives.
+  4321  THE 2x2 DESIGN SPACE, MODELED.  Four machines -- biased/symmetric crossed with
+        irreversible/reversible -- each enumerated by opcode count and measured for finite
+        mixing, entropy production and localisation.  No B/D RTL or Yosys synthesis was
+        performed in this pass.
   4322  FLAGS ARE LEVI EDGES.  (bonkers)  A flag is an incident point-line pair; an edge of
         the Levi graph is an incident point-line pair.  They are the same 160 objects.  So
         the state space of the flag machine IS the domain on which the Ihara zeta is
@@ -33,6 +33,9 @@ from math import log, sqrt
 from pathlib import Path
 
 import numpy as np
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+import cert_util  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 J = [[0, 1, 0, 0], [2, 0, 0, 0], [0, 0, 0, 1], [0, 0, 2, 0]]
@@ -167,6 +170,19 @@ def pass_4321() -> dict:
     biased = [(LIN["F_p"], (0, 0, 0, 0)), (LIN["CX_pf"], (0, 0, 0, 0)),
               (LIN["CX_fp"], (0, 0, 0, 0)), Z[0]]
     symmetric = biased + [(LIN["F_f"], (0, 0, 0, 0)), Z[2]]
+    pair_swap = ((0, 0, 1, 0), (0, 0, 0, 1),
+                 (1, 0, 0, 0), (0, 1, 0, 0))
+
+    def swap_conjugate(g):
+        M, t = g
+        return (mm(mm(pair_swap, M), pair_swap), mv(pair_swap, t))
+
+    def swap_invariant(gs):
+        return set(map(swap_conjugate, gs)) == set(gs)
+
+    def stir_counts(gs):
+        return [sum(any(act(g, x)[c] != x[c] for g in gs) for x in TV)
+                for c in range(4)]
 
     def close(gs):
         out, seen = [], set()
@@ -193,17 +209,20 @@ def pass_4321() -> dict:
         ent, ow = thermo(g)
         rows[name] = {"ops": len(g), "mix": mt, "rho": rho, "loc": loc,
                       "entropy_bits": None if ent == float("inf") else ent,
-                      "one_way": ow}
+                      "one_way": ow, "pf_swap_invariant": swap_invariant(g),
+                      "stir_counts_over_81": stir_counts(g),
+                      "hardware_synthesized": False}
         e = "inf" if ent == float("inf") else f"{ent:.2e}"
         print(f"  {name:34s} {len(g):4d} {str(mt):>4s} {rho:8.4f} {loc:7.4f} {e:>9s}")
 
     print(f"""
   FOUR MACHINES, AND THE BLUEPRINT HAS BEEN QUOTING ONE.  Machine A is the shipped ISA.
-  B fixes the bias, C fixes the arrow of time, D fixes both -- and because Pass 4314 showed
+  B fixes p/f asymmetry, C fixes the arrow of time, D fixes both -- and because Pass 4314 showed
   the two defects are independent, no two of these are the same design.
 
   The prices are not interchangeable.  C doubles the opcode count and buys exactly zero
-  entropy production; B adds two opcodes and buys localisation; D pays for both.  A reader
+  entropy production; B adds two opcodes and buys exact p/f-swap invariance; D pays for both.
+  These are opcode-count and finite-model prices, not synthesized cell counts. A reader
   choosing between them needs all four rows, which is why they are printed together here
   rather than one at a time across forty passes.""")
     return rows
@@ -296,9 +315,10 @@ def pass_4323(design) -> dict:
 
     a = design["A  biased, irreversible (shipped)"]
     arrow_gone = d["one_way"] == 0
-    bias_gone = d["loc"] < a["loc"]
+    bias_gone = d["pf_swap_invariant"] and not a["pf_swap_invariant"]
     print(f"\n  arrow of time removed : {arrow_gone}")
-    print(f"  bias reduced          : {bias_gone}  ({a['loc']:.4f} -> {d['loc']:.4f})")
+    print(f"  p/f asymmetry removed : {bias_gone}")
+    print(f"  localisation peak     : {a['loc']:.4f} -> {d['loc']:.4f}")
     print(f"""
   BOTH DEFECTS CAN BE REMOVED AT ONCE, AND THE RESULT IS NOT FREE.  Machine D runs with
   {'exactly zero' if d['entropy_bits'] is not None and abs(d['entropy_bits']) < 1e-12 else 'reduced'} stationary entropy production and the lowest localisation of the four,
@@ -306,18 +326,19 @@ def pass_4323(design) -> dict:
   closure at 1.95x the cells; D is that closure applied to a wider set, so its decode logic
   is larger again.
 
-  BUT THE BIAS IS NOT ZERO -- it is {d['loc']:.4f}, not the {1/3:.4f} that a perfectly unlocalised
-  mode would give.  Symmetrising the load ports reduces the asymmetry; it does not abolish
-  it, because Pass 4246's 2/3 ceiling is a property of how many generators act on a
-  four-dimensional register, not of which ones.
+  THE REMAINING {d['loc']:.4f} NUMBER IS NOT P/F BIAS.  The exact pair-swap conjugation fixes
+  Machine D's whole opcode set and its graph, and the slow-mode weight occurs equally on the
+  swapped x1 and x3 coordinates.  It is symmetric localisation.  Comparing a maximum
+  three-class weight with 1/3 cannot by itself diagnose which plane was preferred.
 
-  So the honest answer is: the ARROW OF TIME can be removed exactly, and the BIAS can only
-  be reduced.  A machine with literally zero asymmetry does not exist in this family, and
-  the obstruction is counting -- four coordinates, finitely many sparse generators, and a
-  ceiling that no choice among them clears.""")
+  So the corrected answer is stronger: both named asymmetries can be removed exactly in
+  the finite ISA model.  What remains is a localisation/mixing question inside a symmetric
+  machine.  No B/D RTL was synthesized here, so hardware price remains open.""")
     return {"machine_D": d, "arrow_removed": bool(arrow_gone),
-            "bias_removed": False, "bias_reduced": bool(bias_gone),
-            "uniform_reference": 1 / 3}
+            "pf_asymmetry_removed": bool(bias_gone),
+            "localisation_peak_reduced": bool(d["loc"] < a["loc"]),
+            "symmetric_localisation_not_bias": True,
+            "uniform_reference": 1 / 3, "hardware_synthesized": False}
 
 
 def main() -> int:
@@ -328,8 +349,10 @@ def main() -> int:
     p = ROOT / "data" / "PART_W33_PASS4321_4323_DESIGN_SPACE_FLAGS.json"
     p.parent.mkdir(exist_ok=True)
     # Hash the ROUND-TRIPPED object, never the live dict (CLAUDE.md, Pass 2482).
-    p.write_text(json.dumps(json.loads(json.dumps(out)), indent=2, sort_keys=True) + "\n",
-                 encoding="utf-8")
+    # Pass 4395: cert_util.dumps rounds floats to a declared precision first, so the
+    # certificate survives a re-run on another LAPACK build.  It keeps the
+    # round-trip rule from CLAUDE.md (Pass 2482) intact.
+    p.write_text(cert_util.dumps(out), encoding="utf-8")
     print(f"\nwrote {p.relative_to(ROOT).as_posix()}")
     return 0
 

@@ -167,7 +167,13 @@ def main() -> int:
   wrong-but-legal instruction is invisible to it, and no amount of incidence checking will
   change that.""")
 
-    out = {"pairs": 1600, "flags": len(flags),
+    out = {
+
+        "boundary": ("measured on W(3,3) only, for SINGLE-register faults, against a comparator "
+
+            "that uses nothing but the incidence relation; multi-register faults and "
+
+            "correlated faults are not covered and were not simulated"),"pairs": 1600, "flags": len(flags),
            "constraint_rejects_fraction": 1 - len(flags) / 1600,
            "points_per_line": k_line, "lines_per_point": k_point,
            "point_fault_miss_rate": (k_line - 1) / 39,

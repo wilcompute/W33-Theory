@@ -15,9 +15,9 @@ That was never a decision anyone recorded, so it is worth asking what the other 
   4305  IS THE ISA DUALITY-STABLE?  (bonkers)  If the p-bias of Pass 4282 mirrors into an
         f-bias on the dual, the machine chose a side.  If it does not mirror, the bias is
         intrinsic to four generators on a four-dimensional register (Pass 4246's 2/3).
-  4304  DUAL-RAIL FAULT DETECTION FROM GEOMETRY.  (bonkers)  Running a computation on both
-        sides and comparing is an error detector that falls out of the geometry rather
-        than being bolted on.  What fraction of single faults does it catch?
+  4304  GOLDEN-RUN SENSITIVITY, NOT DUAL-RAIL COMPARISON.  The historical experiment
+        compares each faulty trajectory with its correct trajectory.  Pass 4331 supplies
+        the actual self-contained incidence comparator and its exact fault boundary.
 
     py -3 analysis/w33_pass4301_4306_the_dual_machine.py
 """
@@ -30,6 +30,9 @@ from math import sqrt
 from pathlib import Path
 
 import numpy as np
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+import cert_util  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 J = [[0, 1, 0, 0], [2, 0, 0, 0], [0, 0, 0, 1], [0, 0, 2, 0]]
@@ -159,8 +162,9 @@ def pass_4303(pts, pidx, lines, lidx) -> dict:
     print("=" * 78)
     print("""  Both are transitive Sp(4,3)-sets of size 40.  CLAUDE.md's standing rule, learned
   from three errors in the 1612-1989 arc: equal size proves nothing, permutation CHARACTERS
-  prove everything.  Two transitive G-sets are isomorphic iff their characters agree, so
-  compute the fixed-point count of every group element on both domains.\n""")
+  distinguish these two actions. Different permutation characters prove inequivalence;
+  agreement alone would not prove conjugacy in general. Compute the fixed-point count of
+  every group element on both domains.\n""")
     G = sp43()
     print(f"  |Sp(4,3)| enumerated from the three linear opcodes: {len(G):,}")
     pairs = Counter()
@@ -227,18 +231,19 @@ def pass_4301(pts, pidx, lines, lidx) -> dict:
                  and sp["on_circle"] == sl["on_circle"])
     print(f"\n  the two sides are spectrally identical: {same_spec}")
     print(f"""
-  AND THE LOAD PORT HAS NO DUAL.  The full ISA is three linear opcodes plus a TRANSLATION,
-  and translations act on the 81 affine frames, not on projective points or lines.  Lines
-  are not a vector space, so there is no line-side Z_p: the dual machine can rotate its
-  address space but cannot load an address into it.
+  THE LOAD PORT IS OUTSIDE BOTH PROJECTIVE CARRIERS. The full affine ISA is three linear
+  opcodes plus a translation on 81 vectors. A translation does not descend to projective
+  points: [e_1]=[2e_1], but [e_1+e_0] differs from [2e_1+e_0]. It therefore cannot induce
+  a line action either. The 40-point and 40-line rows above audit only the linear subgroup.
 
-  That is the sharpest form of Pass 4204 yet.  Translations are the only generators that
-  act freely, they are the reason the frame graph is connected at all (Pass 4225), and they
-  exist only on the point side.  The machine did not merely happen to address points --
-  \033[0mthe point side is the only side that admits a load port, so the choice was forced by
-  the requirement to write an address, not by convention.""".replace("\033[0m", ""))
+  The valid architectural statement is narrower. A translation is necessary to connect
+  the 81-frame affine register, and its direction may be any coordinate. That fact does not
+  force a point-side rather than line-side projective machine; Pass 4330 retracts the old
+  forced point-side load-port chain.""")
     return {"point": sp, "line": sl, "spectrally_identical": bool(same_spec),
-            "load_port_has_dual": False}
+            "affine_translation_descends_to_projective_points": False,
+            "affine_translation_descends_to_projective_lines": False,
+            "projective_rows_use_linear_subgroup_only": True}
 
 
 # ------------------------------------------------------------------ 4305
@@ -276,6 +281,10 @@ def pass_4305(pts, pidx, lines, lidx) -> dict:
     for n, (a, b) in rows.items():
         print(f"  {n:8s} {str(a):>14s} {str(b):>14s}")
     asym = sum(1 for a, b in rows.values() if a != b)
+    pair_swap = ((0, 0, 1, 0), (0, 0, 0, 1),
+                 (1, 0, 0, 0), (0, 1, 0, 0))
+    literal_swap_image = {mm(mm(pair_swap, LIN[n]), pair_swap) for n in ISA_LIN}
+    literal_swap_invariant = literal_swap_image == {LIN[n] for n in ISA_LIN}
     print(f"\n  opcodes treating the two planes differently: {asym} of {len(rows)}")
 
     # Why neither plane is a line, stated from the form rather than asserted.
@@ -293,38 +302,34 @@ def pass_4305(pts, pidx, lines, lidx) -> dict:
   quadrangle's duality are two different structures on the same space, and conflating them
   would have been the same size-versus-character error Pass 4303 just documented.
 
-  SECOND, the linear opcodes are p/f SYMMETRIC.  All {len(rows)} of them treat the two planes
-  alike ({asym} asymmetries).  So Pass 4282's p-bias does not come from the Clifford part of
-  the instruction set at all.
+  SECOND, the old fixation test was too weak. All {len(rows)} opcodes have matching booleans
+  on the two hyperbolic planes ({asym} mismatches), but literal p/f conjugation sends F_p to
+  the missing F_f. The shipped linear set is therefore NOT p/f-swap invariant. Equal
+  setwise-fixation flags do not prove symmetry.
 
-  WHICH LEAVES ONLY ONE CULPRIT: the load port.  Z_p translates along e0 and there is no
-  Z_f in the shipped ISA -- and Pass 4301 showed translations exist only on the point side,
-  because lines are not a vector space.  So the chain closes: the machine must be able to
-  write an address, only the point side admits a load port, a load port picks a direction,
-  and that direction is the entire p-bias.
-
-  The bias is therefore not a design preference anyone chose and not an artefact of the
-  geometry.  It is the shadow of the one operation the geometry cannot supply
-  symmetrically.""")
+  Pass 4330 performs the correct affine conjugation audit. Machines A and C are p/f biased;
+  B and D, which add F_f and the paired translation, are exactly p/f symmetric. The load
+  port contributes to A's asymmetry, but is not the sole possible source, and it does not
+  select a projective point side.""")
     return {"p_plane_points": len(p_pts), "f_plane_points": len(f_pts),
             "p_plane_is_line": bool(p_is_line), "f_plane_is_line": bool(f_is_line),
             "omega_on_p": wp, "omega_on_f": wf,
             "planes_are_hyperbolic_not_isotropic": True,
-            "linear_opcode_plane_asymmetry": asym,
-            "linear_part_is_pf_symmetric": bool(asym == 0),
-            "bias_source": "the load port Z_p, which has no dual and no f-counterpart"}
+            "setwise_plane_fixation_mismatch_count": asym,
+            "setwise_fixation_test_was_insufficient": True,
+            "linear_opcode_set_pf_swap_invariant": bool(literal_swap_invariant),
+            "superseded_by": "Pass 4330 exact affine-conjugation audit"}
 
 
 # ------------------------------------------------------------------ 4304
 def pass_4304(pts, pidx, lines, lidx) -> dict:
     print()
     print("=" * 78)
-    print("Pass 4304 -- dual-rail fault detection that falls out of the geometry")
+    print("Pass 4304 -- golden-run sensitivity (not a dual-rail comparator)")
     print("=" * 78)
-    print("""  Run the same opcode stream on the point side and on the line side.  A fault that
-  changes one rail's trajectory but not the other's is detected by comparison alone -- an
-  error detector derived from the duality rather than bolted on.  What fraction of single
-  opcode faults does it catch?\n""")
+    print("""  The historical experiment changes one opcode, then compares each faulty point
+  and line trajectory with its own golden trajectory. That is a useful sensitivity test,
+  but it requires the correct answer and is not an intrinsic cross-rail comparator.\n""")
     rng = np.random.default_rng(4304)
     L, trials = 30, 3000
     detected = miss = 0
@@ -357,20 +362,16 @@ def pass_4304(pts, pidx, lines, lidx) -> dict:
     print(f"  changed at least one rail     : {detected}  ({100 * detected / tot:.2f}%)")
     print(f"  silent on BOTH rails          : {miss}  ({100 * miss / tot:.2f}%)")
     print(f"""
-  A fault is invisible to the pair only when it changes neither trajectory, which means the
-  two opcode words act identically on both the point and the line the machine happens to be
-  holding.  At {100 * miss / tot:.2f}% that is rare but not zero, so dual-rail comparison here is an
-  error DETECTOR and not a proof of correctness.
-
-  What makes it interesting is that it costs no redundant hardware design.  The second rail
-  is not a copy of the first -- it is the same group acting on the other side of a duality,
-  so a fault in the shared control logic lands differently on the two rails.  That is the
-  property duplicated-and-compared logic usually has to be argued into having.
-
-  Scope, plainly: this counts faults in the OPCODE STREAM under an exact model.  It says
-  nothing about faults in the datapath, and nothing about how often faults occur.""")
+  This does not establish fault detection by geometry alone. Pass 4331 replaces that
+  interpretation with the intrinsic predicate p in ell on 160 flags. That comparator
+  detects 1,656/1,920 differential single-rail substitutions and 0/960 shared-control
+  substitutions, because applying the same wrong group element to both rails preserves
+  incidence exactly.""")
     return {"trials": tot, "detected": detected, "missed": miss,
-            "detection_rate": detected / tot if tot else None}
+            "detection_rate": detected / tot if tot else None,
+            "model": "faulty trajectory versus golden trajectory on each rail",
+            "is_self_contained_dual_rail_comparator": False,
+            "superseded_by": "Pass 4331 exact incidence comparator"}
 
 
 def main() -> int:
@@ -384,8 +385,10 @@ def main() -> int:
     p = ROOT / "data" / "PART_W33_PASS4301_4306_DUAL_MACHINE.json"
     p.parent.mkdir(exist_ok=True)
     # Hash the ROUND-TRIPPED object, never the live dict (CLAUDE.md, Pass 2482).
-    p.write_text(json.dumps(json.loads(json.dumps(out)), indent=2, sort_keys=True) + "\n",
-                 encoding="utf-8")
+    # Pass 4395: cert_util.dumps rounds floats to a declared precision first, so the
+    # certificate survives a re-run on another LAPACK build.  It keeps the
+    # round-trip rule from CLAUDE.md (Pass 2482) intact.
+    p.write_text(cert_util.dumps(out), encoding="utf-8")
     print(f"\nwrote {p.relative_to(ROOT).as_posix()}")
     return 0
 

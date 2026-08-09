@@ -114,7 +114,13 @@ def main() -> int:
   What survives for a designer is the plain table, not a synergy claim: A 103, B 132,
   C 206, D 240 cells, and buying both fixes costs about what buying them separately costs.""")
 
-    out = {"machines": {m: {"label": d2["label"], "cells": d2["cells"]}
+    out = {
+
+        "boundary": ("the null model here is additive (B + C - A) and applies to GATE COUNTS from "
+
+            "one yosys run at one set of synthesis options; it is not a statement about "
+
+            "area, power, or any other technology mapping"),"machines": {m: {"label": d2["label"], "cells": d2["cells"]}
                         for m, d2 in data.items()},
            "by_cell": rows, "predicted_total": tot_pred, "measured_D": tot_d,
            "saved": tot_pred - tot_d,

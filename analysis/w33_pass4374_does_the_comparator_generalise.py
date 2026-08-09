@@ -122,7 +122,11 @@ def main() -> int:
   been read the other way: a 92.31% figure quoted alone invites the question "and is that
   because three is special?", and the answer is that three is nearly the worst case.""")
 
-    out = {"rows": rows, "closed_form": "1 - q/((q+1)(q^2+1) - 1)",
+    out = {
+
+        "boundary": ("the law is derived for self-dual quadrangles and checked against the measured "
+
+            "symplectic cases; nothing outside GQ(s,s) is verified in this pass"),"rows": rows, "closed_form": "1 - q/((q+1)(q^2+1) - 1)",
            "closed_form_verified": bool(ok),
            "improves_with_q": True,
            "q3_is_weak_end": True}

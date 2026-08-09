@@ -1,4 +1,5 @@
 {
+  "boundary": "measured on W(3,3) only, for SINGLE-register faults, against a comparator that uses nothing but the incidence relation; multi-register faults and correlated faults are not covered and were not simulated",
   "constraint_rejects_fraction": 0.9,
   "credit": "Codex track Pass 4331 reservation: framing and name",
   "detects": "any single-register corruption leaving the incidence relation",

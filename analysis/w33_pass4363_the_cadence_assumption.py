@@ -72,7 +72,13 @@ def main() -> int:
   how often the machine is read, and Landauer is not what limits this design at any cadence
   in that range.""")
 
-    out = {"bits_per_readout": BITS, "kT_ln2": kTln2, "clock_hz": CLOCK_HZ,
+    out = {
+
+        "boundary": ("the readout cadence is an ASSUMPTION with a 1000x plausible span, not a "
+
+            "measurement; every wattage figure downstream inherits that span and no figure "
+
+            "here should be quoted to more than an order of magnitude"),"bits_per_readout": BITS, "kT_ln2": kTln2, "clock_hz": CLOCK_HZ,
            "rows": rows, "span_factor": lo / hi,
            "quoted_figure_watts": rows[2]["watts"],
            "cadence_is_an_assumption": True,

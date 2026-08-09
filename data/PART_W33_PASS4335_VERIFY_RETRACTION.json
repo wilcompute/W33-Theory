@@ -1,4 +1,5 @@
 {
+  "boundary": "this confirms the retraction of Pass 4301's projective chain; the LINEAR subgroup audit it was built on stands, and only the affine step fails",
   "credit": "parallel track, Pass 4330",
   "points_where_representatives_disagree": 40,
   "retracted_claim": "Pass 4301: translations exist only on the point side, so addressing points was forced",

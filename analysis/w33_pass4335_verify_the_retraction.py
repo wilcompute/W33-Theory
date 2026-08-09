@@ -99,7 +99,11 @@ def main() -> int:
   was reached by comparing what the two projective carriers admit, without first checking
   that the operation in question acts on either.""")
 
-    out = {"translation": list(t),
+    out = {
+
+        "boundary": ("this confirms the retraction of Pass 4301's projective chain; the LINEAR "
+
+            "subgroup audit it was built on stands, and only the affine step fails"),"translation": list(t),
            "well_defined_on_a_single_class": bool(well_defined),
            "points_where_representatives_disagree": bad,
            "total_points": len(pts),

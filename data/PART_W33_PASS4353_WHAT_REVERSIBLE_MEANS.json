@@ -13,7 +13,8 @@
       "opcodes": 8,
       "program_erasure_bits": 0.0,
       "random_walk_entropy_bits": 0.0
-    }
+    },
+    "boundary": "this establishes that every opcode in all four machines is a bijection, so COMPUTE erases nothing on any of them; it says nothing about erasure at measurement, readout, or reset, which is where the erasure actually is"
   },
   "over_read": "'thermodynamic reversibility costs 2.00x' implies machine A dissipates while D does not; both erase nothing",
   "program_landauer_cost_bits": 0.0

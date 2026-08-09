@@ -159,7 +159,10 @@ def main() -> int:
         return s / log(2), 0
 
     print(f"\n  {'machine':24s} {'program erasure':>16s} {'random-walk entropy':>22s}")
-    out = {}
+    out = {
+        "boundary": ("this establishes that every opcode in all four machines is a bijection, so "
+            "COMPUTE erases nothing on any of them; it says nothing about erasure at "
+            "measurement, readout, or reset, which is where the erasure actually is"),}
     for name, gens in machines.items():
         e, ow = entropy_production(gens)
         out[name] = {"opcodes": len(gens), "program_erasure_bits": 0.0,

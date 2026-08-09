@@ -1,4 +1,5 @@
 {
+  "boundary": "the null model here is additive (B + C - A) and applies to GATE COUNTS from one yosys run at one set of synthesis options; it is not a statement about area, power, or any other technology mapping",
   "by_cell": [
     {
       "A": 23,

@@ -1,5 +1,6 @@
 {
   "bits_per_readout": 2.6666666666666665,
+  "boundary": "the readout cadence is an ASSUMPTION with a 1000x plausible span, not a measurement; every wattage figure downstream inherits that span and no figure here should be quoted to more than an order of magnitude",
   "cadence_is_an_assumption": true,
   "clock_hz": 208860000.0,
   "conclusion_robust": true,
