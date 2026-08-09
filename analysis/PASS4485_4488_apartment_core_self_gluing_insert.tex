@@ -1,4 +1,4 @@
-% Passes 4485--4488: repeated 8-core, form comparison, parallel weld, nonsplitting.
+% Passes 4485--4488: apartment-side reuse of the Pass-176 route-hull 8-core, form comparison, parallel reconciliation, nonsplitting.
 \subsection{The repeated eight-core and the nonsplit apartment extension (Passes 4485--4488)}
 \label{sec:pass4485-apartment-core-self-gluing}
 
@@ -16,19 +16,23 @@ isomorphism
 The protected quotient $M/K\cong H_{10}$ therefore has the literal filtration
 \[
  0<J<U<I,
- \qquad 1\mid8\mid1,
+ \qquad 1\mid8\mid1.
 \]
-so its middle factor is $U/J$.  But the same $U/J$ already sits as an invariant
-submodule of the apartment radical $K/J$.  Thus the same irreducible eight-space,
-not merely an abstract dimension-eight copy, appears on both sides of
+The protected middle eight-space itself is \emph{not} new here: Pass~176
+already proved the incidence-fixed-line quadratic isometry from
+$f^\perp/\langle f\rangle$ onto the route hull $U/J$ (in its route-code
+notation), including the plus-type $136/120$ census.  The new apartment-side
+statement is that this same pre-existing $U/J$ also sits as an invariant
+submodule of the newly discovered apartment radical $K/J$.  Thus one owned
+eight-core appears on both sides of
 \[
  0\to K/J\;(29)\to M/J\;(39)\to M/K\;(10)\to0.
 \]
 
-Pass~4486 compares the two form structures.  On the radical occurrence,
-the apartment polar form and its Hamming quadratic refinement vanish
-identically on $U/J$.  On the protected occurrence, transport through
-$\overline A_*$ gives
+Pass~4486 compares the two \emph{newly juxtaposed} form structures.  On the
+radical occurrence, the apartment polar form and its Hamming quadratic
+refinement vanish identically on $U/J$.  On the protected occurrence, the
+Pass-176 form can be written through $\overline A_*$ as
 \[
  B_{\rm prot}(A_*b,A_*c)=b^TA_*c,
  \qquad
@@ -37,25 +41,25 @@ $\overline A_*$ gives
 These expressions are lift-independent.  On $U/J$ the protected polar form has
 rank eight and the quadratic has
 \[
- \boxed{136=1+135\text{ singular classes},\qquad120\text{ anisotropic classes},}
+ 136=1+135\text{ singular classes},\qquad120\text{ anisotropic classes},
 \]
-so it is plus-type $O^+(8,2)$.  The same module is therefore form-null in the
+reproducing the prior Pass-176 plus-type $O^+(8,2)$ result.  The new conclusion
+is therefore the contrast: the same owned module is form-null in the apartment
 radical and nondegenerate when viewed through the protected quotient.
 
-Pass~4487 welds this intrinsic construction to the independent Passes
-4477--4478 implementation in literal coordinates.  If $B_{10}$ is the parallel
-basis of $I$, $v$ its unique fixed vector, and $v^\perp$ the nine-space used to
-form the parallel eight-core, the verifier proves
+Pass~4487 is a reconciliation certificate, not a new claim of the eight-core
+itself.  It places the independent Passes 4477--4478 implementation in the same
+ambient line coordinates and proves
 \[
  \boxed{B_{10}v=\mathbf1,\qquad B_{10}v^\perp=U.}
 \]
 In the resulting quotient basis, the parallel $F_8$ Gram matrix equals the
-lift-defined protected Gram matrix entry by entry, and the parallel invariant
-quadratic $q_8$ equals $\operatorname{wt}(Nb)/2$ on all $256$ classes.  Hence the
-E8/2E8 and real four-Pauli finite phase-space realization of Passes 4477--4478
-uses exactly the same ambient $U/J$ quotient.  This is a finite
-representation/quadratic weld; it does not import E8 dynamics or Pauli hardware
-into the radical copy.
+Pass-176/lift-defined protected Gram matrix entry by entry, and the parallel
+invariant quadratic $q_8$ equals $\operatorname{wt}(Nb)/2$ on all $256$
+classes.  Hence Passes 176 and 4477--4478 are exact coordinate realizations of
+the same route-hull $U/J$; Passes 4485--4487 add its apartment-radical
+placement and cross-packet consistency check.  No E8 dynamics or Pauli hardware
+is imported into the radical copy.
 
 Finally, Pass~4488 tests whether the apartment extension splits equivariantly.
 Write $E=M/J$, $V=M/K$, and $\Pi:E\to V$.  A $PSp(4,3)$-equivariant section
@@ -80,5 +84,5 @@ Its unique nonzero map has rank nine, projects to zero in $V$, and is exactly
 with image $I/J$ inside the radical and one-dimensional kernel.  Thus the only
 nonzero symmetry-preserving return channel folds the protected module back into
 the radical; there is no invariant ten-dimensional protected complement.
-This obstruction does not forbid non-equivariant decoding or symmetry-breaking
-hardware.
+This nonsplitting result is new relative to the earlier route-hull bridge and
+does not forbid non-equivariant decoding or symmetry-breaking hardware.
