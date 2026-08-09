@@ -1,0 +1,19 @@
+{
+  "boundary": "The 13-line/weight-42 optimum is coordinate-basis dependent software gauge synthesis in E=M/J. It is not a physical measurement optimum, decoder threshold, or optical layout claim.",
+  "flag": {"line": 0, "order": 162, "point": 0, "section_family_dimension": 6, "sections_exhausted": 64},
+  "objective": ["total_minimal_ambient_Hamming_weight", "maximum_column_weight", "union_line_support"],
+  "optimum": {
+    "affine_mask": 0,
+    "ambient_line_supports": [[0],[1],[2],[3],[1,2,3,5,6],[1,2,3,4,6],[1,2,3,8,9],[1,2,3,7,9],[0,2,3,4,6,7,9,32,36],[0,2,3,4,5,8,9,28,32]],
+    "column_weights": [1,1,1,1,5,5,5,5,9,9],
+    "score": [42,9,13],
+    "union": [0,1,2,3,4,5,6,7,8,9,28,32,36]
+  },
+  "optimization_basis": "canonical Pass-4493 quotient coordinates",
+  "order648_no_go": {
+    "line": {"order": 648, "rank_augmented": 387, "rank_coefficient": 386, "split": false},
+    "point": {"order": 648, "rank_augmented": 388, "rank_coefficient": 387, "split": false}
+  },
+  "pass": 4504,
+  "theorem": "order-648 no-go plus exhaustive optimal order-162 flag-equivariant section"
+}
