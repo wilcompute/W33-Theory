@@ -1,0 +1,13 @@
+{
+  "pass": 4512,
+  "code": {"length": 1620, "dimension": 39, "codewords": 549755813888, "global_kernel": "S~V\\S"},
+  "exact_weight_formula": "wt=162*m-12*C(m,2)-42*e+12*p3-8*c4",
+  "formula_statistics": {"m": "vertices of coefficient subset", "e": "induced dual-W33 edges", "p3": "induced P3 triples", "c4": "induced apartment C4s"},
+  "design_constants": {"row_apartments": 162, "intersecting_pair_apartments": 27, "disjoint_pair_apartments": 6, "P3_triple_apartments": 3},
+  "proved_low_weight_enumerator": {"0": 1, "162": 40, "270": 240, "312": 540, "324": 200},
+  "Burnside": {"AutC_order": 51840, "cycle_types": 25, "subset_orbits": 21578952, "codeword_orbits_mod_complement": 10789604, "twisted_complement_fixed_sum": 13271040},
+  "exact_centered_weight_moments": {"mean": 810, "variance": 405, "third": -1620, "fourth": "1236465/2"},
+  "complete_numerical_enumerator_status": "OPEN",
+  "remaining_exact_task": "evaluate the four-statistic induced-subgraph polynomial on 10,789,604 PGSp+complement codeword orbits",
+  "boundary": "The exact induced-subgraph sum is a reduction, not a completed numerical coefficient table; do not describe the full enumerator as closed."
+}
