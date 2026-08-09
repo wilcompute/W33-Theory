@@ -1,4 +1,4 @@
-% Passes 4461--4462: line-signing/apartment trace bridge and exact null model.
+% Passes 4461--4463: line-signing/apartment trace bridge, exact null model, and parity tomography.
 \subsection{Line signings as an exact apartment-parity observable}
 \label{sec:pass4461-line-signing-apartment}
 
@@ -109,14 +109,46 @@ This is an analytic control distribution, not a search result.  Its purpose is
 to make the baseline mandatory and reproducible before any optimized line
 signing is called exceptional.
 
+\paragraph{Apartment-parity tomography.}
+Encode the line signs by $b\in\mathbb F_2^{40}$ through
+$\sigma_\ell=(-1)^{b_\ell}$.  The full apartment-parity record is then simply
+\[
+ y=H^Tb\in\mathbb F_2^{1620}.
+\]
+Pass~4463 row-reduces the exact incidence matrix and obtains
+\begin{equation}
+ \boxed{\operatorname{rank}_{\mathbb F_2}H=39,}
+ \qquad
+ \boxed{\ker(H^T)=\langle\mathbf 1_{40}\rangle.}
+ \label{eq:pass4463-tomography}
+\end{equation}
+Hence the $1620$ apartment parities determine all $40$ line signs up to the one
+unavoidable ambiguity $\sigma\mapsto-\sigma$.  Global reversal is necessarily
+invisible because every apartment contains four lines; the rank theorem says
+there is no second hidden signing gauge.  Equivalently, the apartment-parity
+image is a binary $[1620,39]$ code.  A one-line generator has Hamming weight
+$162$, while the XOR of two line generators has weight $270$ for intersecting
+lines and $312$ for disjoint lines.  Reducing
+Eq.~\eqref{eq:pass4461-apartment-gram} modulo two gives the especially compact
+identity
+\begin{equation}
+ \boxed{HH^T=A^\ast\quad\text{over }\mathbb F_2.}
+ \label{eq:pass4463-mod2-gram}
+\end{equation}
+This is a finite-geometric identifiability theorem, not a statement that an
+optical experiment automatically measures all $1620$ apartment products.
+
 \begin{center}
 \fbox{\parbox{0.92\textwidth}{\small
 \textbf{Evidence boundary.}  The identities above are finite combinatorial
 statements verified by the executable witnesses
-\texttt{analysis/w33\_pass4461\_line\_signing\_apartment\_trace.py} and
-\texttt{analysis/w33\_pass4462\_apartment\_walsh\_null\_model.py}.  They do not
+\texttt{analysis/w33\_pass4461\_line\_signing\_apartment\_trace.py},
+\texttt{analysis/w33\_pass4462\_apartment\_walsh\_null\_model.py}, and
+\texttt{analysis/w33\_pass4463\_apartment\_parity\_tomography.py}.  They do not
 identify a physical gauge field, do not make a particular signing statistically
-special, and do not promote the Artin--Ihara/2-lift analogy into a spacetime
-claim.  They do show that the recent signing observable and the older $1620$
-apartment carrier are literally the same quartic finite-geometric statistic.}}
+special, do not assert physical measurement completeness, and do not promote
+the Artin--Ihara/2-lift analogy into a spacetime claim.  They do show that the
+recent signing observable and the older $1620$ apartment carrier are literally
+the same quartic finite-geometric statistic, and that within the line-signing
+model this statistic family loses only the global sign bit.}}
 \end{center}
