@@ -1,0 +1,19 @@
+{
+  "boundary": "Exact for overgroups containing this canonical Borel. It is not a census of all subgroup conjugacy classes and does not prove a global maximum splitting-subgroup order.",
+  "flag": {"line": 0, "order": 162, "point": 0},
+  "group_order": 25920,
+  "overgroup_orders": {"Borel": 162, "G": 25920, "line_parabolic": 648, "point_parabolic": 648},
+  "H_double_cosets": [
+    {"double_coset_size": 162, "generated_overgroup": "Borel_flag_162", "overgroup_order": 162, "section_affine_dimension": 6, "section_rank_augmented": 384, "section_rank_coefficient": 384, "split": true},
+    {"double_coset_size": 486, "generated_overgroup": "line_parabolic_648", "overgroup_order": 648, "section_affine_dimension": null, "section_rank_augmented": 387, "section_rank_coefficient": 386, "split": false},
+    {"double_coset_size": 486, "generated_overgroup": "point_parabolic_648", "overgroup_order": 648, "section_affine_dimension": null, "section_rank_augmented": 388, "section_rank_coefficient": 387, "split": false},
+    {"double_coset_size": 1458, "generated_overgroup": "full_PSp_25920", "overgroup_order": 25920, "section_affine_dimension": null, "section_rank_augmented": 390, "section_rank_coefficient": 389, "split": false},
+    {"double_coset_size": 1458, "generated_overgroup": "full_PSp_25920", "overgroup_order": 25920, "section_affine_dimension": null, "section_rank_augmented": 390, "section_rank_coefficient": 389, "split": false},
+    {"double_coset_size": 4374, "generated_overgroup": "full_PSp_25920", "overgroup_order": 25920, "section_affine_dimension": null, "section_rank_augmented": 390, "section_rank_coefficient": 389, "split": false},
+    {"double_coset_size": 4374, "generated_overgroup": "full_PSp_25920", "overgroup_order": 25920, "section_affine_dimension": null, "section_rank_augmented": 390, "section_rank_coefficient": 389, "split": false},
+    {"double_coset_size": 13122, "generated_overgroup": "full_PSp_25920", "overgroup_order": 25920, "section_affine_dimension": null, "section_rank_augmented": 390, "section_rank_coefficient": 389, "split": false}
+  ],
+  "pass": 4528,
+  "structural_reading": "The symmetry breaking is chamber-minimal in the exact overgroup lattice: adjoining any element outside H either restores one simple-root parabolic or generates all of PSp(4,3), and the apartment extension obstruction immediately returns.",
+  "theorem": "Every overgroup of the canonical flag/Borel is H, one of the two order-648 maximal parabolics, or G; H is the unique splitting member of this overgroup interval."
+}
