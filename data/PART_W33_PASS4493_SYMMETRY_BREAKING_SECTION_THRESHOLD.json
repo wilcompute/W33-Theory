@@ -1,45 +1,19 @@
 {
-  "boundary": "This is not a classification of every subgroup of PSp(4,3), and does not prove that no larger non-geometric subgroup splits the extension. A linear section is a symmetry-breaking gauge choice, not automatically a physical decoder or hardware implementation.",
-  "checks": {"passed": 12, "total": 12},
-  "conclusion": "Among the tested canonical geometric stabilizers, full PSp(4,3) is nonsplit, while fixing one point or one line (order 648, index 40) already permits an equivariant 10-dimensional section; finer flag/apartment stabilizers admit larger families.",
+  "boundary": "Pass 4503 proves all five maximal subgroup types are nonsplit. The order-162 flag is a verified splitting subgroup, not yet a classification of every subgroup.",
+  "erratum": {
+    "full_group_result_preserved": "389/390 nonsplitting",
+    "replacement": "point/line remain nonsplit; canonical order-162 incident flag splits 384/384 with affine dimension 6",
+    "withdrawn": "the historical 370/370 point-line split, 338 flag rank and 308 apartment rank"
+  },
   "pass": 4493,
   "sequence": "0 -> K/J (29) -> E=M/J (39) -> V=M/K=H10 (10) -> 0",
+  "status": "CORRECTED_BY_PASSES_4503_4507",
   "tested_subgroups": {
-    "full_PSp": {
-      "order": 25920,
-      "index_in_PSp": 1,
-      "fixed_dim_E39": 0,
-      "fixed_dim_V10": 1,
-      "section_system": {"rank_coefficient": 389, "rank_augmented": 390, "consistent": false, "affine_dimension": null}
-    },
-    "one_line_stabilizer": {
-      "order": 648,
-      "index_in_PSp": 40,
-      "fixed_dim_E39": 3,
-      "fixed_dim_V10": 3,
-      "section_system": {"rank_coefficient": 370, "rank_augmented": 370, "consistent": true, "affine_dimension": 20}
-    },
-    "one_point_stabilizer": {
-      "order": 648,
-      "index_in_PSp": 40,
-      "fixed_dim_E39": 3,
-      "fixed_dim_V10": 3,
-      "section_system": {"rank_coefficient": 370, "rank_augmented": 370, "consistent": true, "affine_dimension": 20}
-    },
-    "incident_flag_stabilizer": {
-      "order": 162,
-      "index_in_PSp": 160,
-      "fixed_dim_E39": 4,
-      "fixed_dim_V10": 4,
-      "section_system": {"rank_coefficient": 338, "rank_augmented": 338, "consistent": true, "affine_dimension": 52}
-    },
-    "apartment_setwise_stabilizer": {
-      "order": 16,
-      "index_in_PSp": 1620,
-      "fixed_dim_E39": 7,
-      "fixed_dim_V10": 4,
-      "section_system": {"rank_coefficient": 308, "rank_augmented": 308, "consistent": true, "affine_dimension": 82}
-    }
+    "apartment_setwise_stabilizer": {"fixed_dim_E39": 6, "fixed_dim_V10": 3, "index_in_PSp": 1620, "order": 16, "section_system": {"affine_dimension": null, "consistent": false, "rank_augmented": 358, "rank_coefficient": 357}},
+    "full_PSp": {"fixed_dim_E39": 0, "fixed_dim_V10": 1, "index_in_PSp": 1, "order": 25920, "section_system": {"affine_dimension": null, "consistent": false, "rank_augmented": 390, "rank_coefficient": 389}},
+    "incident_flag_stabilizer": {"fixed_dim_E39": 3, "fixed_dim_V10": 2, "index_in_PSp": 160, "order": 162, "section_system": {"affine_dimension": 6, "consistent": true, "rank_augmented": 384, "rank_coefficient": 384}},
+    "one_line_stabilizer": {"fixed_dim_E39": 2, "fixed_dim_V10": 2, "index_in_PSp": 40, "order": 648, "section_system": {"affine_dimension": null, "consistent": false, "rank_augmented": 387, "rank_coefficient": 386}},
+    "one_point_stabilizer": {"fixed_dim_E39": 1, "fixed_dim_V10": 1, "index_in_PSp": 40, "order": 648, "section_system": {"affine_dimension": null, "consistent": false, "rank_augmented": 388, "rank_coefficient": 387}}
   },
-  "theorem": "W33 natural geometric symmetry-breaking section threshold theorem"
+  "theorem": "corrected natural geometric restriction census for the nonsplit apartment extension"
 }
