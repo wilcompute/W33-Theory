@@ -1,5 +1,6 @@
 {
   "boundary": "Exact finite GF(2) statement. The quotient functional is not a physical qubit, charge, or measurement without a separate implementation theorem.",
+  "canonical_column_basis": [0,1,2,3,4,5,7,8,10,11],
   "coefficient_even_hyperplane_dimension": 39,
   "edge_shell_identity": "the 240 pi=0 vectors of ambient weight 20 are exactly the protected dual-W33 edge images",
   "edge_span_dimension": 9,
@@ -15,18 +16,8 @@
   "pass": 4536,
   "protected_dimension": 10,
   "protected_weight_enumerator_by_pi": {
-    "pi_0": {
-      "0": 1,
-      "16": 135,
-      "20": 240,
-      "24": 135,
-      "40": 1
-    },
-    "pi_1": {
-      "12": 40,
-      "20": 432,
-      "28": 40
-    }
+    "pi_0": {"0":1,"16":135,"20":240,"24":135,"40":1},
+    "pi_1": {"12":40,"20":432,"28":40}
   },
   "quotient_functional": "pi(A_* b) = sum_i b_i mod 2",
   "theorem": "The missing tenth protected direction is exactly coefficient parity. One line-star augments the nine local edge directions to all of H10, and no edge combination can change this parity bit."
