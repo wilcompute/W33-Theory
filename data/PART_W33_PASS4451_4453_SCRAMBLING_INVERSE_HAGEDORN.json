@@ -1,0 +1,80 @@
+{
+  "boundary": "4451's scrambling comparison is explicitly WITHDRAWN in the text as dimensionally invalid; what survives is the diameter-2 observation. 4452's reconstruction is floating-point and its error is arithmetic, not fundamental. 4453 evaluates a partial sum to m = 24, so the divergence is inferred from the term ratio rather than observed",
+  "pass_4451_scrambling": {
+    "diameter": 2,
+    "logN_over_logq": 1.538382220425,
+    "survives": "W(3,3) has diameter 2, so there is no logarithmic scrambling regime to observe at N = 40",
+    "t_90pct_spread": 1.3,
+    "t_half_coverage": 1.4,
+    "withdrawn": "the agreement between t_scr and log N / log q compares a continuous time against a discrete step count; different dimensions, invalid comparison"
+  },
+  "pass_4452_inverse": {
+    "correct_route": "Bass reduction: tr(B^m) = sum_i (mu_i+^m + mu_i-^m) + (|E|-|V|)(1+(-1)^m) with mu^2 - lambda_i mu + q = 0, reducing 480 unknowns to 40 and needing 80 power sums in exact integer arithmetic",
+    "m_max": 24,
+    "max_error": 1.842781533858,
+    "moebius_round_trip_exact": true,
+    "top_recovered": [
+      11.000000000739,
+      5.159406324214,
+      5.159406324214,
+      5.085677892571,
+      5.085677892571,
+      4.999709778476
+    ],
+    "top_true": [
+      11.0,
+      3.316624790355,
+      3.316624790355,
+      3.316624790355,
+      3.316624790355,
+      3.316624790355
+    ],
+    "verdict": "FAILED -- ill-posed, not imprecise",
+    "why": "24 power sums cannot determine 480 eigenvalues; Newton's identities on p_1..p_24 give elementary symmetric functions of 480 numbers and the degree-24 polynomial built from them has roots that are not eigenvalues. Only the dominant eigenvalue survives"
+  },
+  "pass_4453_hagedorn": {
+    "beta_c": 2.397895272798,
+    "divergence_type": "logarithmic, not a pole -- pi(m) ~ q^m/m makes sum_m q^m e^{-beta m}/m the logarithm series at beta_c",
+    "identification": "beta_c = log q is the Ihara zeta's dominant pole at u = 1/q under u = exp(-beta)",
+    "q": 11,
+    "rows": [
+      {
+        "Z_partial": 0.009287759497,
+        "beta": 3.596842909198,
+        "over_beta_c": 1.5,
+        "term_ratio": 0.28894837189
+      },
+      {
+        "Z_partial": 0.133031309745,
+        "beta": 2.877474327358,
+        "over_beta_c": 1.2,
+        "term_ratio": 0.593250423994
+      },
+      {
+        "Z_partial": 0.828467487045,
+        "beta": 2.517790036438,
+        "over_beta_c": 1.05,
+        "term_ratio": 0.850054870502
+      },
+      {
+        "Z_partial": 1.750211644083,
+        "beta": 2.421874225526,
+        "over_beta_c": 1.01,
+        "term_ratio": 0.935626830712
+      },
+      {
+        "Z_partial": 2.19797226378,
+        "beta": 2.397895272798,
+        "over_beta_c": 1.0,
+        "term_ratio": 0.958333333342
+      },
+      {
+        "Z_partial": 2.818795247993,
+        "beta": 2.37391632007,
+        "over_beta_c": 0.99,
+        "term_ratio": 0.981590894626
+      }
+    ],
+    "term_ratio_at_beta_c": "m/(m+1), tending to 1 from below"
+  }
+}

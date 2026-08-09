@@ -1,0 +1,106 @@
+{
+  "boundary": "4448 builds Q(5,3) and verifies its GQ parameters, then samples 400 line-signings -- a density, not a proof; 4449 uses one edge-colouring and one two-step drive, so a negative is about that drive; 4450's Sipser-Spielman bound is a LOWER bound and a vacuous bound does not mean the code is bad, only that the theorem says nothing",
+  "pass_4448_q53": {
+    "bound": 10.770329614269,
+    "degree": 30,
+    "edges_per_line": 6,
+    "fraction_ramanujan": 0.0725,
+    "lines": 280,
+    "mean_rho": 11.474864410915,
+    "min_rho": 10.36720423175,
+    "points": 112,
+    "prediction_held_qualitatively": true,
+    "strong_law_refuted": true,
+    "verdict": "s is DOMINANT -- it sets whether line-signings can work at all (Q(5,3) 7.25% vs H(3,9) 0%) -- but the strong form 'independent of t' is refuted, since Q(5,3) reaches only 7.25% against W(3,3)'s 27% at the same s"
+  },
+  "pass_4449_floquet": {
+    "clean": [
+      {
+        "T": 0.785398163397,
+        "near_pi": 2,
+        "near_zero": 10
+      },
+      {
+        "T": 1.047197551197,
+        "near_pi": 0,
+        "near_zero": 4
+      },
+      {
+        "T": 1.570796326795,
+        "near_pi": 0,
+        "near_zero": 4
+      },
+      {
+        "T": 2.094395102393,
+        "near_pi": 0,
+        "near_zero": 0
+      },
+      {
+        "T": 2.356194490192,
+        "near_pi": 2,
+        "near_zero": 0
+      },
+      {
+        "T": 3.14159265359,
+        "near_pi": 2,
+        "near_zero": 2
+      }
+    ],
+    "colouring": [
+      40,
+      40,
+      40,
+      40
+    ],
+    "disorder": [
+      {
+        "W": 0.0,
+        "max": 2,
+        "mean": 2.0,
+        "min": 2
+      },
+      {
+        "W": 0.1,
+        "max": 2,
+        "mean": 1.933333333333,
+        "min": 0
+      },
+      {
+        "W": 0.3,
+        "max": 2,
+        "mean": 1.533333333333,
+        "min": 0
+      },
+      {
+        "W": 0.6,
+        "max": 2,
+        "mean": 0.6,
+        "min": 0
+      },
+      {
+        "W": 1.0,
+        "max": 2,
+        "mean": 0.533333333333,
+        "min": 0
+      }
+    ],
+    "leftover": 0,
+    "robust": false
+  },
+  "pass_4450_tanner": {
+    "cover_vertices": 80,
+    "degree": 12,
+    "delta0": 0.333333333333,
+    "edges": 480,
+    "lambda": 5.618917371795,
+    "lambda_over_d": 0.468243114316,
+    "local_code": [
+      12,
+      6,
+      4
+    ],
+    "rate_lower_bound": 0.0,
+    "sipser_spielman_relative_distance": -0.044969926994,
+    "verdict": "the bound is vacuous at this size; expander codes are an asymptotic construction and 80 vertices is not asymptotic"
+  }
+}
