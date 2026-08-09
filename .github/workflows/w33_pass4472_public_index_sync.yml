@@ -1,0 +1,42 @@
+name: W33 Pass 4472 public index sync
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - analysis/PASS4469_4471_apartment_h10_index_insert.html
+      - data/w33_public_frontier_extension_pass4461_4464.json
+      - .github/workflows/w33_pass4472_public_index_sync.yml
+
+permissions:
+  contents: write
+
+jobs:
+  sync-public-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Reconcile configured public sections
+        run: python tools/integrate_bt3376_bt3389.py
+      - name: Refuse collateral wrapper rewrites
+        run: git diff --exit-code -- w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex
+      - name: Validate new public token
+        run: |
+          test "$(grep -c 'id="pass4469-4471-apartment-h10-bridge"' docs/index.html)" -eq 1
+          grep -q 'line-signing-apartment-parity.html' docs/index.html
+      - name: Commit generated index only when changed
+        run: |
+          if git diff --quiet -- docs/index.html; then
+            echo 'docs/index.html already synchronized'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/index.html
+          git commit -m 'Pass 4472: materialize apartment H10 bridge in public index'
+          git push origin HEAD:master
