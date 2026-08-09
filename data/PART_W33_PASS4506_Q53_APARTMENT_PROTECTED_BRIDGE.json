@@ -1,0 +1,8 @@
+{
+  "GQ_3_9": {"apartment_radical_dimension": 209, "apartments": 102060, "canonical_map": "[b] -> [N b]", "gram_identity_HHt_eq_NtN": true, "lines": 280, "points": 112, "protected_quotient_dimension": 70, "rank_H": 279, "rank_N": 91, "rank_NtN": 70, "sentinel_dimension": 21},
+  "boundary": "This is an exact binary incidence/apartment theorem for the concrete Q(5,3) builder. It does not identify 70 with a physical state count or claim the same rank formula for every generalized quadrangle without separate computation.",
+  "dual_GQ_9_3": {"apartment_gram_is_all_ones": true, "gram_identity": false, "lines_as_original_points": 112, "rank_H_dual": 111, "rank_apartment_gram": 1, "rank_incidence_gram": 22},
+  "pass": 4506,
+  "scaling_from_W33": "protected dimension 10 -> 70 while the same incidence-quotient construction remains exact in the passing orientation",
+  "theorem": "Q(5,3)=GQ(3,9) realizes a 70D apartment-protected quotient; the dual GQ(9,3) orientation fails the Gram bridge"
+}
