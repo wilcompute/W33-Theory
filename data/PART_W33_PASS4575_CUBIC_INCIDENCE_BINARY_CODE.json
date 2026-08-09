@@ -1,0 +1,39 @@
+{
+  "binary_rank": 6,
+  "boundary": "Exact finite GF(2) coding/orthogonal geometry. No physical six-bit carrier is inferred.",
+  "column_code": {
+    "dual_kernel": {
+      "A3": 45,
+      "A4": 270,
+      "parameters": "[27,21,3]"
+    },
+    "parameters": "[27,6,12]",
+    "self_orthogonal": true,
+    "weight_enumerator": {
+      "0": 1,
+      "12": 36,
+      "16": 27
+    }
+  },
+  "incidence_identity": {
+    "entrywise_verified_through_frozen_4525_4527_isomorphisms": true,
+    "matrix": "the actual 27x36 cubic-line/double-six incidence from Pass4549",
+    "orthogonal_coordinates": "R[s,a]=B(s,a) for the 27 nonzero singular and 36 anisotropic vectors of U6"
+  },
+  "pass": 4575,
+  "quadratic_reading": "the two nonzero weight shells are exactly the singular/anisotropic split of the natural O^-(6,2) module",
+  "row_code": {
+    "dual_kernel": {
+      "A3": 120,
+      "A4": 945,
+      "parameters": "[36,30,3]"
+    },
+    "parameters": "[36,6,16]",
+    "self_orthogonal": true,
+    "weight_enumerator": {
+      "0": 1,
+      "16": 27,
+      "20": 36
+    }
+  }
+}
