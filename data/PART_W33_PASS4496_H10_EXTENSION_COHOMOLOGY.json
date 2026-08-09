@@ -1,0 +1,46 @@
+{
+  "boundary": "H1 is computed for the actual 8-dimensional PSp module in this H10 filtration. No claim is made about unrelated Ext groups or physical registers.",
+  "cohomology": {
+    "bottom_adjacent_extension_class_after_symplectic_dual_identification": [
+      1,
+      1
+    ],
+    "dim_B1": 8,
+    "dim_H1": 2,
+    "dim_Z1": 10,
+    "middle_module_dimension": 8,
+    "outer_action_on_chosen_H1_basis": [
+      "e1 -> e2",
+      "e2 -> e1"
+    ],
+    "top_adjacent_extension_class": [
+      1,
+      1
+    ],
+    "unique_nonzero_outer_fixed_class": [
+      1,
+      1
+    ]
+  },
+  "group": {
+    "generators": 5,
+    "inner": "PSp(4,3)",
+    "order": 25920
+  },
+  "module": {
+    "composition": "1|8|1",
+    "cyclic_generator_dimensions": {
+      "1": 1,
+      "10": 512,
+      "9": 510
+    },
+    "dimension": 10,
+    "fixed_dimension": 1,
+    "fixed_perp_dimension": 9,
+    "invariant_submodule_lattice": "0 < 1 < 9 < 10",
+    "uniserial": true
+  },
+  "pass": 4496,
+  "relation_to_prior_passes": "Passes 4488 and 4490--4494 proved/localized nonsplitting cocycles. Pass 4496 computes the complete relevant H1, proves uniseriality, and classifies the outer action.",
+  "theorem": "exact H1 and outer-invariant extension class of H10=1|8|1"
+}
