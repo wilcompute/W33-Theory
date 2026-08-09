@@ -8,6 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "data/w33_current_frontier_manifest_v1.json"
+PUBLIC_EXTENSION_PATH = ROOT / "data/w33_public_frontier_extension_pass4461_4464.json"
 MANIFEST_INPUT = r"\input{analysis/W33_CURRENT_FRONTIER_MANIFEST}%"
 
 
@@ -78,6 +79,27 @@ def integrate_index(text: str, html: str) -> tuple[str, str]:
     )
 
 
+def configured_public_sections(config: dict, root: Path) -> list[dict]:
+    """Return canonical public sections plus collision-checked frontier extensions."""
+    sections = list(config["public_sections"])
+    if PUBLIC_EXTENSION_PATH.is_file():
+        extension = json.loads(PUBLIC_EXTENSION_PATH.read_text(encoding="utf-8"))
+        if extension.get("schema") != "w33.public_frontier_extension.v1":
+            raise ValueError("wrong public frontier extension schema")
+        sections.extend(extension.get("public_sections", []))
+
+    seen: set[tuple[str, str]] = set()
+    for section in sections:
+        key = (section["kind"], section["token"])
+        if key in seen:
+            raise ValueError(f"duplicate configured public section: {key}")
+        seen.add(key)
+        source = root / section["source"]
+        if not source.is_file():
+            raise ValueError(f"missing configured public section source: {section['source']}")
+    return sections
+
+
 def integrate(root: Path = ROOT) -> dict:
     config = json.loads((root / "data/w33_current_frontier_manifest_v1.json").read_text(encoding="utf-8"))
     required = config["required_ordered_inputs"]
@@ -96,7 +118,7 @@ def integrate(root: Path = ROOT) -> dict:
     before_index = index_path.read_text(encoding="utf-8")
     after_index = before_index
     section_modes = {}
-    for section in config["public_sections"]:
+    for section in configured_public_sections(config, root):
         source = root / section["source"]
         html = source.read_text(encoding="utf-8")
         after_index, mode = integrate_public_section(
