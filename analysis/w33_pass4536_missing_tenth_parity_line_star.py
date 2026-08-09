@@ -25,14 +25,13 @@ measurement until a hardware map is separately supplied.
 """
 from __future__ import annotations
 
-import itertools
 import json
 from collections import Counter
 from pathlib import Path
 import numpy as np
 
 from w33_apartment_section_core import build_geometry, rank2
-from w33_pass4469_apartment_css_h10_intertwiner import nullspace_mod2, rref_rows
+from w33_pass4469_apartment_css_h10_intertwiner import nullspace_mod2
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data/PART_W33_PASS4536_MISSING_TENTH_PARITY_LINE_STAR.json"
@@ -42,16 +41,31 @@ def vecmask(v) -> int:
     return sum(int(b) << i for i, b in enumerate(v) if b)
 
 
+def independent_columns(A: np.ndarray) -> list[int]:
+    """Deterministically choose the first lexicographic column basis over GF(2)."""
+    piv: list[int] = []
+    current = np.zeros((A.shape[0], 0), dtype=np.uint8)
+    r = 0
+    for j in range(A.shape[1]):
+        trial = np.column_stack((current, A[:, j]))
+        rr = rank2(trial)
+        if rr > r:
+            piv.append(j)
+            current = trial
+            r = rr
+        if r == rank2(A):
+            break
+    return piv
+
+
 def main() -> int:
     _pts, _pidx, _lines, _lidx, _Ap, A, *_ = build_geometry()
     assert A.shape == (40, 40) and rank2(A) == 10
 
     edges = [(i, j) for i in range(40) for j in range(i + 1, 40) if A[i, j]]
     assert len(edges) == 240
-    endpoint = np.asarray([
-        np.eye(40, dtype=np.uint8)[i] ^ np.eye(40, dtype=np.uint8)[j]
-        for i, j in edges
-    ], dtype=np.uint8)
+    eye = np.eye(40, dtype=np.uint8)
+    endpoint = np.asarray([eye[i] ^ eye[j] for i, j in edges], dtype=np.uint8)
     assert rank2(endpoint) == 39  # connected graph -> full even-weight hyperplane
     assert all(int(row.sum()) % 2 == 0 for row in endpoint)
 
@@ -66,12 +80,12 @@ def main() -> int:
     assert all(rank2(np.vstack((edge_images, A[:, i]))) == 10 for i in range(40))
     assert len({vecmask(A[:, i]) for i in range(40)}) == 40
 
-    # Exhaust im(A) using ten independent columns, keeping the coefficient parity
-    # of that canonical preimage. Kernel-evenness proves the parity is independent
+    # Exhaust im(A) using a deterministic ten-column basis, retaining coefficient
+    # parity of its canonical preimage. Kernel-evenness proves parity is independent
     # of the chosen preimage.
-    _, piv = rref_rows(A)
-    piv = list(map(int, piv[:10]))
+    piv = independent_columns(A)
     assert len(piv) == 10
+    assert rank2(A[:, piv]) == 10
     distributions = {0: Counter(), 1: Counter()}
     image_by_parity = {0: set(), 1: set()}
     for mask in range(1 << 10):
@@ -107,8 +121,7 @@ def main() -> int:
     assert line_stars == odd_weight12
 
     # All line-star columns represent the same nonzero class modulo V9 because
-    # their pairwise differences are images of even endpoint vectors.  Along a
-    # connected path the difference is a sum of protected edge images.
+    # their pairwise differences are images of even coefficient vectors.
     for i in range(40):
         assert vecmask(A[:, 0] ^ A[:, i]) in image_by_parity[0]
 
@@ -119,6 +132,7 @@ def main() -> int:
         "coefficient_even_hyperplane_dimension": 39,
         "kernel_dimension": 30,
         "kernel_is_even": True,
+        "canonical_column_basis": piv,
         "quotient_functional": "pi(A_* b) = sum_i b_i mod 2",
         "kernel_of_pi": "V9 = span{A_*(e_i+e_j): i~j} = A_*(even coefficient vectors)",
         "minimal_missing_shell": {
