@@ -1,0 +1,20 @@
+{
+  "ambient_exact_sequence": "0 -> U(route hull,9) -> W=K intersect R^perp (24) --N--> C(sentinel,15) -> 0",
+  "boundary": "Exact code/module extension only; no physical coupling, energy transfer, or error-channel interpretation is inferred.",
+  "checks": {"passed": 8, "total": 8},
+  "C_over_j_vector_orbits": 2,
+  "image": "C=ker N^T = Pass-201 [40,15,8] sentinel code",
+  "kernel": "U=R intersect R^perp = Pass-176 route hull",
+  "map": "point-line incidence N",
+  "new_content": "The Pass-4491 23D obstruction support is the incidence extension welding the owned route-hull 8-core to the owned sentinel 15-code.",
+  "owners": {
+    "C_over_fixed_line_14_factor": "Pass 187",
+    "U/J": "Pass 176",
+    "W/J_as_cocycle_support": "Pass 4491",
+    "sentinel_C": "Pass 201"
+  },
+  "pass": 4492,
+  "quotient_exact_sequence": "0 -> U/J (8) -> W/J (23) -> C (15) -> 0",
+  "support_profile": "8 | (1 | 14)",
+  "theorem": "W33 cocycle-support route-hull/sentinel extension theorem"
+}
