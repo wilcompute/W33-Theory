@@ -1,0 +1,20 @@
+{
+  "O8plus_identification": "The 135 weight-16 images give exactly one representative of every nonzero singular class in V8=V9/<j>; q8=16/4=0 mod2.",
+  "all_fibers_same_type": true,
+  "apartments": 1620,
+  "boundary": "This is a finite quotient/fiber theorem. The 12-fold lift is not a physical degeneracy or microscopic state count.",
+  "fiber_graph": {
+    "adjacency": "apartments share exactly one line",
+    "complement_components": [4, 4, 4],
+    "degree": 8,
+    "disjoint_pairs": 18,
+    "edges": 48,
+    "graph": "K_{4,4,4}",
+    "vertices": 12
+  },
+  "image_weight": 16,
+  "pass": 4558,
+  "protected_images": 135,
+  "theorem": "The 1620 apartments form a uniform 12-to-1 lift of the 135 nonzero O+(8,2) singular protected classes, and every lift fiber has intrinsic K4,4,4 intersection geometry.",
+  "uniform_fiber_size": 12
+}
