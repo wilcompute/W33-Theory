@@ -1,0 +1,53 @@
+name: W33 Passes 4469-4473 apartment-H10 bridge
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - analysis/w33_pass4469_apartment_css_h10_intertwiner.py
+      - analysis/w33_pass4470_apartment_h10_quadratic_fixed_layer.py
+      - analysis/w33_pass4471_general_gq_apartment_incidence_bridge.py
+      - analysis/PASS4469_4471_apartment_css_bridge_insert.tex
+      - analysis/PASS4469_4471_apartment_h10_index_insert.html
+      - data/PART_W33_PASS4469_APARTMENT_CSS_H10_INTERTWINER.json
+      - data/PART_W33_PASS4470_APARTMENT_H10_QUADRATIC_FIXED_LAYER.json
+      - data/PART_W33_PASS4471_GENERAL_GQ_APARTMENT_INCIDENCE_BRIDGE.json
+      - tests/test_w33_pass4469_4471_apartment_h10_bridge.py
+      - .github/workflows/w33_pass4469_4473_apartment_h10_bridge.yml
+  pull_request:
+    paths:
+      - analysis/w33_pass4469_apartment_css_h10_intertwiner.py
+      - analysis/w33_pass4470_apartment_h10_quadratic_fixed_layer.py
+      - analysis/w33_pass4471_general_gq_apartment_incidence_bridge.py
+      - analysis/PASS4469_4471_apartment_css_bridge_insert.tex
+      - analysis/PASS4469_4471_apartment_h10_index_insert.html
+      - data/PART_W33_PASS4469_APARTMENT_CSS_H10_INTERTWINER.json
+      - data/PART_W33_PASS4470_APARTMENT_H10_QUADRATIC_FIXED_LAYER.json
+      - data/PART_W33_PASS4471_GENERAL_GQ_APARTMENT_INCIDENCE_BRIDGE.json
+      - tests/test_w33_pass4469_4471_apartment_h10_bridge.py
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install focused dependencies
+        run: python -m pip install --upgrade numpy pytest
+      - name: Re-run exact witnesses
+        run: |
+          python analysis/w33_pass4469_apartment_css_h10_intertwiner.py
+          python analysis/w33_pass4470_apartment_h10_quadratic_fixed_layer.py
+          python analysis/w33_pass4471_general_gq_apartment_incidence_bridge.py
+      - name: Run focused regression
+        run: pytest -q tests/test_w33_pass4469_4471_apartment_h10_bridge.py
+      - name: Check manuscript boundary language
+        run: |
+          grep -q 'not the full 20-dimensional logical Pauli space' data/PART_W33_PASS4469_APARTMENT_CSS_H10_INTERTWINER.json
+          grep -q 'not asserted to be a physical gate' data/PART_W33_PASS4470_APARTMENT_H10_QUADRATIC_FIXED_LAYER.json
+          grep -q 'does not explain or predict' data/PART_W33_PASS4471_GENERAL_GQ_APARTMENT_INCIDENCE_BRIDGE.json
+          test "$(grep -c 'PASS4469_4471_apartment_css_bridge_insert' w33_paper.tex)" -eq 1
+          test "$(grep -c 'PASS4469_4471_apartment_css_bridge_insert' photonic_holonet.tex)" -eq 1
+          test "$(grep -c 'PASS4469_4471_apartment_css_bridge_insert' holonet_machine_blueprint.tex)" -eq 1
