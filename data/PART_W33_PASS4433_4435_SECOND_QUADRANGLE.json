@@ -1,0 +1,79 @@
+{
+  "boundary": "line-signings only -- a 2^40 subfamily of the 2^240 signings, chosen because the lines partition the edges. 4433 optimises within that family on both graphs, so the rho values are not comparable to Pass 4409's unconstrained search. 4435's density is 4000 samples. The trace argument at 4434 is exact",
+  "pass_4433": {
+    "H(3,9)": {
+      "bound": 11.832159566199,
+      "degree": 36,
+      "four_cycles": 345240,
+      "frustration_optimised": 0.266458116093,
+      "frustration_random_mean": 0.295844050516,
+      "frustration_random_std": 0.000915007771,
+      "is_ramanujan": false,
+      "lines": 112,
+      "points": 280,
+      "rho_line_signing": 14.141256216976,
+      "traces": {
+        "3": {
+          "optimised": 0.0,
+          "random": 0.0,
+          "ratio": null
+        },
+        "4": {
+          "optimised": 1360704.0,
+          "random": 1280448.0,
+          "ratio": 1.062678062678
+        },
+        "5": {
+          "optimised": -3200.0,
+          "random": -33280.0,
+          "ratio": 0.096153846154
+        }
+      },
+      "z": -32.115502569022
+    },
+    "W(3,3)": {
+      "bound": 6.633249580711,
+      "degree": 12,
+      "four_cycles": 3480,
+      "frustration_optimised": 0.479310344828,
+      "frustration_random_mean": 0.466245210728,
+      "frustration_random_std": 0.011228668637,
+      "is_ramanujan": true,
+      "lines": 40,
+      "points": 40,
+      "rho_line_signing": 5.768243100972,
+      "traces": {
+        "3": {
+          "optimised": 0.0,
+          "random": -96.0,
+          "ratio": 0.0
+        },
+        "4": {
+          "optimised": 11616.0,
+          "random": 12224.0,
+          "ratio": 0.950261780105
+        },
+        "5": {
+          "optimised": 480.0,
+          "random": -2400.0,
+          "ratio": -0.2
+        }
+      },
+      "z": 1.163551487848
+    }
+  },
+  "pass_4433_confound": "Pass 4425 measured z=+4.81 with an UNCONSTRAINED 240-edge signing; this pass measures z=+1.16 on the same graph with a 40-line signing. The effect depends on the signing family, not only on the graph",
+  "pass_4433_verdict": "VOID as a test of the length-4 signal: no Ramanujan line-signing was found on H(3,9) (14.14 vs bound 11.83), so its holonomy cannot be compared with W(3,3)'s Ramanujan case. What IS established is that signing the lines suffices on W(3,3) and does not on H(3,9)",
+  "pass_4434_mechanism": "sum lambda^2 is fixed at 2|E| for every signing, so minimising max|lambda| spreads the spectrum and lowers sum lambda^4 by the power-mean inequality. Confirmed on W(3,3) where the optimum is Ramanujan (ratio 0.950); untested on H(3,9) where it is not. Odd traces cancel and carry no constraint. The length-4 signal is about EVENNESS, so Pass 4425's mu = 4 suggestion is WITHDRAWN on the mechanism's strength",
+  "pass_4435_family": {
+    "bound": 6.633249580711,
+    "closed_under_complement": true,
+    "fraction_ramanujan": 0.25625,
+    "linear_code": false,
+    "rho_max": 8.997400524573,
+    "rho_min": 5.873529616366,
+    "samples": 4000,
+    "xor_pairs_good": 54,
+    "xor_pairs_tested": 200
+  }
+}

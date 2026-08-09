@@ -1,0 +1,59 @@
+{
+  "boundary": "4436's equivalence is standard theory verified numerically here, not a new theorem; 4437 checks walk-regularity, which is necessary but not sufficient for vertex-transitivity, and does not identify the cover against any catalogue; 4438 is 1500 samples per family on one graph",
+  "graph": {
+    "bound": 6.633249580711,
+    "degree": 12,
+    "rh_circle_radius": 0.301511344578,
+    "vertices": 40
+  },
+  "pass_4436_lfunction": {
+    "optimised line-signing": {
+      "max_dev": 0.0,
+      "on_circle": 80,
+      "ramanujan": true,
+      "rho": 5.844856157103,
+      "zeros": 80
+    },
+    "random line-signing": {
+      "max_dev": 0.122950947556,
+      "on_circle": 76,
+      "ramanujan": false,
+      "rho": 7.02500709047,
+      "zeros": 80
+    },
+    "trivial (all +1)": {
+      "max_dev": 0.698488655422,
+      "on_circle": 78,
+      "ramanujan": false,
+      "rho": 12.0,
+      "zeros": 80
+    }
+  },
+  "pass_4436_statement": "zeta_{X_s} = zeta_X * L(u,chi); L^{-1} = det(I - A_s u + (d-1)u^2 I); its zeros lie on |u| = 1/sqrt(d-1) iff every |lambda(A_s)| <= 2 sqrt(d-1). Bilu-Linial IS the Riemann Hypothesis for this L-function",
+  "pass_4437_cover": {
+    "connected": true,
+    "degree": 12,
+    "distinct_eigenvalues": 43,
+    "is_ramanujan": true,
+    "largest_nontrivial": 5.844856157103,
+    "vertices": 80,
+    "walk_regular": false
+  },
+  "pass_4438_deflation": "87% of RANDOM signings over all 240 edges are already Ramanujan, so the searches at 4409/4418/4426 solved an easy problem; and the line-signing restriction makes the property RARER (27%), not commoner, because forcing six edges to agree is a coarse gauge field",
+  "pass_4438_landscape": {
+    "all signings": {
+      "dof": 240,
+      "fraction_ramanujan": 0.871333333333,
+      "mean": 6.375794363487,
+      "min": 5.74658029155,
+      "std": 0.216579408396
+    },
+    "line-signings": {
+      "dof": 40,
+      "fraction_ramanujan": 0.267333333333,
+      "mean": 6.938495293155,
+      "min": 5.91514722534,
+      "std": 0.460787680377
+    }
+  }
+}
