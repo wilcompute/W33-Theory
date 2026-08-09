@@ -1,0 +1,50 @@
+name: W33 Pass 4494 guarded frontier manifest recovery
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - .github/workflows/w33_pass4494_frontier_manifest_recovery.yml
+
+permissions:
+  contents: write
+
+jobs:
+  recover-and-append:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Recover prior manifest if current frontier was truncated
+        shell: bash
+        run: |
+          set -euo pipefail
+          file=analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          cp "$file" /tmp/current_manifest.tex
+          if grep -q '4472' "$file" && [ "$(wc -l < "$file")" -gt 5 ]; then
+            cp "$file" /tmp/base_manifest.tex
+            echo 'Current manifest retains parallel frontier; using it as base.'
+          else
+            prev="$(git log --format=%H -- "$file" | sed -n '2p')"
+            test -n "$prev"
+            git show "$prev:$file" > /tmp/base_manifest.tex
+            echo "Recovered previous manifest from $prev"
+          fi
+          if ! grep -q 'PASS4493_symmetry_breaking_section_insert' /tmp/base_manifest.tex; then
+            printf '\n\\input{analysis/PASS4493_symmetry_breaking_section_insert}\n' >> /tmp/base_manifest.tex
+          fi
+          cp /tmp/base_manifest.tex "$file"
+          grep -q '4472' "$file"
+          grep -q 'PASS4493_symmetry_breaking_section_insert' "$file"
+      - name: Commit manifest only if changed
+        run: |
+          if git diff --quiet -- analysis/W33_CURRENT_FRONTIER_MANIFEST.tex; then
+            echo 'Manifest already correct.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          git commit -m 'Pass 4494: recover frontier manifest and append symmetry threshold'
+          git push origin HEAD:master
