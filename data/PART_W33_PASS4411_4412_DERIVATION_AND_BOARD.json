@@ -1,0 +1,59 @@
+{
+  "boundary": "4411b's look-elsewhere count depends on the expression grammar chosen, which is a judgement; a different grammar gives a different density. The point survives the choice -- the window is crowded -- but the specific number is not a unique measurement. 4412 re-scores published bounds and derives nothing",
+  "pass_4411_derivation": {
+    "fixes_ordering": false,
+    "formula": "(Phi_4^2 + 1) meV with Phi_4 = q^2 + 1 = 10",
+    "geometry_supplies": 101,
+    "unit_supplied_by": "hand -- no mass scale is derived anywhere in W(3,3)",
+    "withdrawn": "Pass 4402's implication that JUNO tests the theory; JUNO tests an interpretation of the number that the derivation does not make"
+  },
+  "pass_4411b_look_elsewhere": {
+    "conclusion": "the window the prediction had to hit contains 55 values reachable by comparably simple expressions, so landing in it is not evidence at the precision the scoreboard claims",
+    "density_per_meV": 0.8871,
+    "hits_in_current_LCDM_window": 6,
+    "hits_in_window": 55,
+    "reachable_integers": 372,
+    "window_meV": [
+      59.0,
+      120.0
+    ]
+  },
+  "pass_4412_rescored": [
+    {
+      "measured": "125.20 +/- 0.11 GeV (PDG)",
+      "predicts": "125 GeV = (mu+1)^q = 5^3",
+      "row": "F7  m_H",
+      "verdict": "1.8 sigma LOW -- the tightest live tension on the board"
+    },
+    {
+      "measured": "r < 0.034 (95%, Planck+SPT+ACT+BK, 2025)",
+      "predicts": "2/90 = 0.02222",
+      "row": "F9  r",
+      "verdict": "ALLOWED; headroom fell from 0.036 to 0.034 and LiteBIRD reaches 1e-3"
+    },
+    {
+      "measured": "XENONnT 3.1 t-yr: 1.7e-47 cm^2 min at 30 GeV; far weaker at 2 TeV",
+      "predicts": "2143 GeV",
+      "row": "F10 m_chi WIMP",
+      "verdict": "NOT YET CONSTRAINED at this mass -- the row's own note is still right"
+    },
+    {
+      "measured": "DESI DR2 + CMB: < 64.2 meV (LCDM, 95%)",
+      "predicts": "101 meV",
+      "row": "F16 Sigma m_nu",
+      "verdict": "EXCLUDED in LCDM (Pass 4401); allowed only under w0waCDM"
+    },
+    {
+      "measured": "0.666660511 +/- 0.000006775 (PDG masses)",
+      "predicts": "2/3",
+      "row": "Koide Q",
+      "verdict": "HOLDS at 0.91 sigma (Pass 4406); limited entirely by the tau mass"
+    }
+  ],
+  "sources": [
+    "r: Planck + SPT + ACT + BICEP/Keck, r < 0.034 (95%), 2025",
+    "WIMP: XENONnT 3.1 tonne-year, arXiv:2502.18005",
+    "Sigma m_nu: DESI DR2, arXiv:2503.14738 / 2503.14744",
+    "m_H, lepton masses: PDG"
+  ]
+}
