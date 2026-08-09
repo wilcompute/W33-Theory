@@ -1,57 +1,24 @@
 {
   "schema": "w33.public_frontier_extension.v1",
   "public_sections": [
-    {
-      "kind": "id",
-      "token": "pass4461-4464-line-signing-apartment-parity",
-      "source": "analysis/PASS4461_4464_line_signing_apartment_index_insert.html"
-    },
-    {
-      "kind": "id",
-      "token": "pass4469-4471-apartment-h10-bridge",
-      "source": "analysis/PASS4469_4471_apartment_h10_index_insert.html"
-    },
-    {
-      "kind": "id",
-      "token": "pass4472-4479-apartment-module-thermo-ihara-pauli",
-      "source": "analysis/PASS4472_4479_apartment_module_index_insert.html"
-    },
-    {
-      "kind": "id",
-      "token": "pass4480-4483-apartment-h10-geometric-readout",
-      "source": "analysis/PASS4480_4483_apartment_h10_index_insert.html"
-    },
-    {
-      "kind": "id",
-      "token": "pass4485-4488-apartment-core-self-gluing",
-      "source": "analysis/PASS4485_4488_apartment_core_self_gluing_index_insert.html"
-    },
-    {
-      "kind": "id",
-      "token": "pass4495-4502-distance-cohomology-ihara-clifford-prism",
-      "source": "analysis/PASS4495_4502_distance_cohomology_ihara_clifford_prism_index_insert.html"
-    }
+    {"kind":"id","token":"pass4461-4464-line-signing-apartment-parity","source":"analysis/PASS4461_4464_line_signing_apartment_index_insert.html"},
+    {"kind":"id","token":"pass4469-4471-apartment-h10-bridge","source":"analysis/PASS4469_4471_apartment_h10_index_insert.html"},
+    {"kind":"id","token":"pass4472-4479-apartment-module-thermo-ihara-pauli","source":"analysis/PASS4472_4479_apartment_module_index_insert.html"},
+    {"kind":"id","token":"pass4480-4483-apartment-h10-geometric-readout","source":"analysis/PASS4480_4483_apartment_h10_index_insert.html"},
+    {"kind":"id","token":"pass4485-4488-apartment-core-self-gluing","source":"analysis/PASS4485_4488_apartment_core_self_gluing_index_insert.html"},
+    {"kind":"id","token":"pass4490-4492-fixed-point-cocycle","source":"analysis/PASS4490_4492_fixed_point_cocycle_index_insert.html"},
+    {"kind":"id","token":"pass4493-symmetry-breaking-section-threshold","source":"analysis/PASS4493_symmetry_breaking_section_index_insert.html"},
+    {"kind":"id","token":"pass4495-4502-distance-cohomology-ihara-clifford-prism","source":"analysis/PASS4495_4502_distance_cohomology_ihara_clifford_prism_index_insert.html"},
+    {"kind":"id","token":"pass4503-4510-apartment-obstruction-scaling","source":"analysis/PASS4503_4510_apartment_obstruction_scaling_index_insert.html"}
   ],
   "standalone_public_pages": [
-    {
-      "token": "pass4461-4471-line-signing-apartment-parity-page",
-      "source": "docs/line-signing-apartment-parity.html"
-    },
-    {
-      "token": "pass4472-4479-apartment-module-thermo-ihara-pauli-page",
-      "source": "docs/apartment-module-thermo-ihara-pauli.html"
-    },
-    {
-      "token": "pass4480-4483-apartment-h10-geometric-readout-page",
-      "source": "docs/apartment-h10-geometric-readout.html"
-    },
-    {
-      "token": "pass4485-4488-apartment-core-self-gluing-page",
-      "source": "docs/apartment-core-self-gluing.html"
-    },
-    {
-      "token": "pass4495-4502-distance-cohomology-ihara-clifford-prism-page",
-      "source": "docs/apartment-code-distance-cohomology-prisms.html"
-    }
+    {"token":"pass4461-4471-line-signing-apartment-parity-page","source":"docs/line-signing-apartment-parity.html"},
+    {"token":"pass4472-4479-apartment-module-thermo-ihara-pauli-page","source":"docs/apartment-module-thermo-ihara-pauli.html"},
+    {"token":"pass4480-4483-apartment-h10-geometric-readout-page","source":"docs/apartment-h10-geometric-readout.html"},
+    {"token":"pass4485-4488-apartment-core-self-gluing-page","source":"docs/apartment-core-self-gluing.html"},
+    {"token":"pass4490-4492-fixed-point-cocycle-page","source":"docs/apartment-extension-cocycle.html"},
+    {"token":"pass4493-symmetry-breaking-section-threshold-page","source":"docs/apartment-symmetry-breaking-section.html"},
+    {"token":"pass4495-4502-distance-cohomology-ihara-clifford-prism-page","source":"docs/apartment-code-distance-cohomology-prisms.html"},
+    {"token":"pass4503-4510-apartment-obstruction-scaling-page","source":"docs/apartment-obstruction-cohomology-gq.html"}
   ]
 }
