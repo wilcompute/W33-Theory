@@ -86,7 +86,7 @@ jobs:
         run: |
           python analysis/w33_pass4546_orbit_native_apartment_enumerator.py --directory evidence/pass4544_4551/orbits --through 5 | tee evidence/pass4544_4551/enumerator.log
           python - <<'PY'
-          import json,math
+          import json
           d=json.load(open('evidence/pass4544_4551/orbits/summary.json'))
           assert d['status']=='RESUMABLE_FRONTIER'
           assert d['observed_orbits_through_support']==73
@@ -143,8 +143,8 @@ jobs:
         run: |
           git diff --check
           grep -q 'PASS4544_4551_module_cubic_enumerator_zeta_insert' analysis/PASS4536_4543_parity_rank_decoder_reconstruction_insert.tex
-          grep -q 'full 10.8M-orbit run is still' analysis/PASS4544_4551_module_cubic_enumerator_zeta_index_insert.html
-          grep -q 'complete numerical W33 weight enumerator remains open' analysis/PASS4544_4551_module_cubic_enumerator_zeta_insert.tex
+          grep -q '10,789,604-orbit numerical run is still' analysis/PASS4544_4551_module_cubic_enumerator_zeta_index_insert.html
+          grep -q 'numerical W33 weight enumerator remains open' analysis/PASS4544_4551_module_cubic_enumerator_zeta_insert.tex
       - uses: actions/upload-artifact@v4
         if: always()
         with:
