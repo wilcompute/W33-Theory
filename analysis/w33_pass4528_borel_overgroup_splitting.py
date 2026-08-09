@@ -21,9 +21,8 @@ import json
 from pathlib import Path
 
 from w33_apartment_section_core import (
-    build_geometry, build_line_perm, line_perm_from_point_perm,
-    perm_group, point_perm_from_matrix, quotient_model, section_system,
-    small_generating_set, transvection_matrix,
+    actions_from_line_gens, build_geometry, build_line_perm, perm_group,
+    quotient_model, section_system, small_generating_set, transvection_matrix,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -35,8 +34,7 @@ def compose(p, q):
 
 
 def main() -> int:
-    pts, pidx, lines, lidx, *_rest = build_geometry()
-    point_trans = [point_perm_from_matrix(transvection_matrix(v), pts, pidx) for v in pts]
+    pts, pidx, lines, lidx, _Apoint, Astar, *_ = build_geometry()
     line_trans = [build_line_perm(transvection_matrix(v), pts, pidx, lines, lidx) for v in pts]
 
     chosen = []
@@ -49,24 +47,21 @@ def main() -> int:
         if len(G) == 25920:
             break
     assert len(G) == 25920
-    Gpoint = perm_group([point_trans[i] for i in chosen], 40)
-    assert len(Gpoint) == 25920
 
     fp, fl = min((p, li) for li, L in enumerate(lines) for p in L)
-    # Work in the line action, converting to point action only for the point stabilizer.
-    def induced_point(g):
-        pencils = [frozenset(i for i, L in enumerate(lines) if p in L) for p in range(40)]
-        pindex = {S: i for i, S in enumerate(pencils)}
-        return tuple(pindex[frozenset(g[i] for i in S)] for S in pencils)
+    pencils = [frozenset(i for i, L in enumerate(lines) if p in L) for p in range(40)]
+    pindex = {S: i for i, S in enumerate(pencils)}
+    def induced_point_at_flag(g):
+        return pindex[frozenset(g[i] for i in pencils[fp])]
 
-    H = {g for g in G if g[fl] == fl and induced_point(g)[fp] == fp}
-    Ppoint = {g for g in G if induced_point(g)[fp] == fp}
+    H = {g for g in G if g[fl] == fl and induced_point_at_flag(g) == fp}
+    Ppoint = {g for g in G if induced_point_at_flag(g) == fp}
     Pline = {g for g in G if g[fl] == fl}
     assert (len(H), len(Ppoint), len(Pline), len(Ppoint & Pline)) == (162, 648, 648, 162)
     assert Ppoint & Pline == H
 
     Hgens = small_generating_set(H, 40)
-    K, Ereps, Vreps, coordE, coordV, Pi = quotient_model(_rest[1])  # Astar
+    _K, Ereps, Vreps, coordE, coordV, Pi = quotient_model(Astar)
 
     remaining = set(G)
     rows = []
@@ -84,11 +79,10 @@ def main() -> int:
         elif O == G:
             label = "full_PSp_25920"
         else:
-            label = "unexpected"
-        assert label != "unexpected"
-        sys = section_system(Pi, *(__import__('w33_apartment_section_core').actions_from_line_gens(
-            small_generating_set(O, 40), Ereps, Vreps, coordE, coordV
-        )))
+            raise AssertionError(f"unexpected overgroup order {len(O)}")
+        Ogens = small_generating_set(O, 40)
+        GE, GV = actions_from_line_gens(Ogens, Ereps, Vreps, coordE, coordV)
+        sys = section_system(Pi, GE, GV)
         rows.append({
             "double_coset_size": len(D),
             "generated_overgroup": label,
@@ -102,7 +96,7 @@ def main() -> int:
     rows.sort(key=lambda r: (r["double_coset_size"], r["overgroup_order"], r["generated_overgroup"]))
     assert len(rows) == 8
     assert sum(r["double_coset_size"] for r in rows) == 25920
-    assert [r["double_coset_size"] for r in rows] == [162, 486, 486, 1458, 1458, 4374, 4374, 13122]
+    assert [r["double_coset_size"] for r in rows] == [162,486,486,1458,1458,4374,4374,13122]
     assert {r["generated_overgroup"] for r in rows} == {
         "Borel_flag_162", "point_parabolic_648", "line_parabolic_648", "full_PSp_25920"
     }
