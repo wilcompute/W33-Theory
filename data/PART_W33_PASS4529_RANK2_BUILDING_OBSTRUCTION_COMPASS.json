@@ -1,0 +1,14 @@
+{
+  "boundary": "This is an exact re-coordinatization of the computed restriction barcode, not a proof that every rank-two building extension has two obstruction bits or that the full Ext^1_G(H10,K/J) is F2^2.",
+  "class_coordinates": {"fixed_line": [1, 0], "second": [1, 1], "sum": [0, 1]},
+  "cohomology_space": "H^1(PSp(4,3), K/J) ~= F2^2",
+  "coordinate_basis": {"e_line": "sum", "e_point": "fixed_line"},
+  "overgroup_link": "Pass 4528 proves the Borel is the intersection of the two order-648 parabolics and the unique splitting member of its overgroup interval.",
+  "pass": 4529,
+  "restriction_kernels": {
+    "incident_Borel_162": {"dimension": 2, "span": ["e_point", "e_line"]},
+    "line_parabolic_648": {"dimension": 1, "span": ["e_line"]},
+    "point_parabolic_648": {"dimension": 1, "span": ["e_point"]}
+  },
+  "theorem": "The two computed radical obstruction bits can be coordinatized by the two simple parabolic residue directions: point and line parabolics kill distinct axes, while their incident chamber/Borel kills their full F2^2 span."
+}
