@@ -1,0 +1,45 @@
+{
+  "4522_dual_module": {
+    "anisotropic": 36,
+    "boundary": "The 358D submodule and 6D quotient are exact; this pass does not claim a complete Loewy series for the 364D middle.",
+    "chosen_deterministic_seed": 54,
+    "dual_dimension": 1581,
+    "even_dual_dimension": 1580,
+    "fixed_hyperplane_dimension": 365,
+    "fixed_line_dimension": 1,
+    "group_reading": "PSp(4,3)=Omega^-(6,2) on the faithful 6D quotient; adjoining the projective outer involution gives O^-(6,2)",
+    "inner_image_order": 25920,
+    "invariant_alternating_form_rank": 6,
+    "middle_dimension": 364,
+    "middle_standard_basis_cyclic_dimensions": {"284": 2, "330": 10, "358": 49, "364": 303},
+    "orthogonal_quotient_dimension": 6,
+    "outer_image_order": 51840,
+    "outer_invariant_submodule_dimension": 358,
+    "prism_intersect_even_dimension": 1214,
+    "prism_span_dimension": 1215,
+    "quadratic_type": "minus",
+    "quotient_D_mod_P_dimension": 366,
+    "quotient_even_mod_intersection_dimension": 366,
+    "singular_including_zero": 28
+  },
+  "4525_schlafli_bridge": {
+    "conclusion": "the 27 singular-vector action is explicitly the repo Schlaefli/cubic-line action, not a parameter-only match",
+    "existing_repo_carrier": "W(E6) 27 cubic-surface lines with meet adjacency",
+    "explicit_isomorphism_new_to_repo": [0,6,7,12,25,3,17,13,24,14,22,26,4,19,5,8,23,20,9,2,16,11,15,21,10,18,1],
+    "generator_conjugation_verified": true,
+    "orthogonality_graph_srg": [27,10,1,5],
+    "repo_group_order": 51840,
+    "singular_nonzero": 27
+  },
+  "4527_double_six_bridge": {
+    "anisotropic_vectors": 36,
+    "conclusion": "the 36 anisotropic action is explicitly the repo double-six action",
+    "existing_repo_carrier": "36 cubic-surface double-sixes; adjacency iff 12-line supports intersect in 4 lines",
+    "explicit_isomorphism_new_to_repo": [0,21,5,14,13,31,34,6,22,20,12,8,18,4,26,30,1,32,35,24,10,25,16,2,15,28,33,19,23,7,17,9,11,29,27,3],
+    "generator_conjugation_verified": true,
+    "orthogonality_graph_srg": [36,15,6,6],
+    "repo_group_order": 51840
+  },
+  "boundary": "All bridges are verified by explicit graph isomorphisms and permutation-generator conjugation. No physical identification follows.",
+  "passes": [4522,4525,4527]
+}
