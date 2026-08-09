@@ -1,0 +1,47 @@
+name: W33 Pass 4507 TeX frontier chain reconciliation
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/w33_pass4507_tex_chain_reconcile.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: w33-pass4507-tex-chain
+  cancel-in-progress: false
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+      - name: Insert missing 4490-4493 continuation before 4495
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('analysis/PASS4485_4488_apartment_core_self_gluing_insert.tex')
+          text=p.read_text(encoding='utf-8')
+          a='\\input{analysis/PASS4490_4492_fixed_point_cocycle_insert}%'
+          b='\\input{analysis/PASS4493_symmetry_breaking_section_insert}%'
+          needle='% Current exact continuation: distance, complete relevant H^1, higher graph\n% primes, explicit Clifford lift, and prism/minimum-shell reconstruction.\n\\input{analysis/PASS4495_4502_distance_cohomology_ihara_clifford_prism_insert}%'
+          if a not in text or b not in text:
+              repl='% Exact fixed-point/cocycle and corrected symmetry-breaking continuation.\n'+a+'\n'+b+'\n\n'+needle
+              assert needle in text
+              text=text.replace(needle,repl,1)
+              p.write_text(text,encoding='utf-8')
+          PY
+      - name: Commit only the chain if changed
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- analysis/PASS4485_4488_apartment_core_self_gluing_insert.tex; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add analysis/PASS4485_4488_apartment_core_self_gluing_insert.tex
+          git commit -m 'Pass 4507: restore 4490-4493 manuscript chain before 4495'
+          git pull --rebase origin master
+          git push origin HEAD:master
