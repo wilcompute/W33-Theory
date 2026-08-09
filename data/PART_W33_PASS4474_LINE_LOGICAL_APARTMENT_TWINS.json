@@ -1,0 +1,34 @@
+{
+  "boundary": "The singular/anisotropic twin is a statement inside the finite quadratic label space H10. It is not a physical particle doubling, not a second CSS code, and does not promote the comparison transvection to an implemented logical gate. Minimum distance 4 remains owned by Pass 201.",
+  "checks": {
+    "passed": 25,
+    "total": 25
+  },
+  "owners": {
+    "H10_fixed_layer": "Pass 187",
+    "apartment_H10_symplectic_bridge": "Pass 4469",
+    "fixed_quadratic_defect_transvection": "Pass 4470",
+    "minimum_logical_weight_4_and_40_line_logicals": "Pass 201"
+  },
+  "pass": 4474,
+  "quadratic_twin": {
+    "apartment_line_generators": "40 anisotropic apartment classes q=1",
+    "fixed_class_characterization": "unique H10 class f with B(x_l,f)=1 for all 40 lines",
+    "fixed_class_isotropic": true,
+    "raw_and_shifted_class_sets_disjoint": true,
+    "raw_line_classes": "40 singular H10 classes q=0",
+    "shifted_line_classes": "40 anisotropic H10 classes q=1",
+    "shifted_pairing_graph": "same Astar/W33 polar graph",
+    "transvection": "T_f(x_l)=x_l+f for every line l"
+  },
+  "single_line_correspondence": {
+    "apartment_generator": "g_l = H^T e_l",
+    "apartment_generator_weight": 162,
+    "logical_line": "x_l = N e_l",
+    "logical_line_weight": 4,
+    "number_of_distinct_H10_line_classes": 40,
+    "pairing_graph": "Astar: dual W33 line-collinearity",
+    "span_with_C_dimension": 25
+  },
+  "theorem": "W33 line-logical / apartment-generator singular-anisotropic twin theorem"
+}
