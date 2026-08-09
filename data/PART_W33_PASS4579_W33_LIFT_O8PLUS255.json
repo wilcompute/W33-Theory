@@ -1,0 +1,38 @@
+{
+  "boundary": "This is finite protected Hamming/quadratic geometry; it does not identify these 255 classes with physical states.",
+  "lift_partition": {
+    "anisotropic_from_edges": 120,
+    "apartment_fiber": 12,
+    "apartments": 1620,
+    "edge_fiber": 2,
+    "edges": 240,
+    "exhausts_nonzero_V8": true,
+    "singular_from_apartments": 135
+  },
+  "orthogonality": {
+    "anisotropic_to_anisotropic_degree": 63,
+    "anisotropic_to_singular_degree": 63,
+    "full_nonzero_orthogonal_degree_excluding_self": 126,
+    "singular_to_anisotropic_degree": 56,
+    "singular_to_singular_degree": 70
+  },
+  "pass": 4579,
+  "projective_lines": {
+    "one_singular_two_anisotropic": 3780,
+    "three_anisotropic": 5440,
+    "three_singular": 1575,
+    "total": 10795
+  },
+  "protected_quotient": {
+    "V8_classes_including_zero": 256,
+    "V9_dimension": 9,
+    "fixed_vector": "j=all ones",
+    "nonzero_classes": 255
+  },
+  "quadratic": {
+    "definition": "q([x])=wt(x)/4 mod 2",
+    "polar": "B(x,y)=q(x+y)+q(x)+q(y)",
+    "type": "plus"
+  },
+  "theorem": "The W33 apartment and opposite-edge lifts alone reconstruct all 255 nonzero vectors, the plus-type quadratic, its polar form, and the complete singular/anisotropic incidence geometry of O+(8,2)."
+}
