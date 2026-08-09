@@ -1,0 +1,69 @@
+% Pass 4466: correction to the recent Pass-4433 four-cycle frustration normalisation.
+\subsection{Correction: legacy ``four-cycle frustration'' versus apartment frustration}
+\label{sec:pass4466-four-cycle-audit}
+
+The general apartment theorem exposes a normalization issue in the recent
+Pass~4433 signing experiment.  Its helper
+\texttt{four\_cycles(A)} was documented as ``Every simple 4-cycle ... counted
+once'', but the implementation iterates over every unordered diagonal pair and
+every pair of common neighbours.  On $W(3,3)$ it therefore emits
+\[
+ \boxed{3480\text{ records}}
+\]
+representing only
+\[
+ \boxed{1740\text{ underlying simple }C_4\text{s}},
+\]
+each exactly twice.  The $1740$ split as
+\[
+ \boxed{1620\text{ induced building apartments}+120\text{ line-internal }C_4\text{s}.}
+\]
+The second family lies inside the forty geometric $K_4$ lines.  Under a line
+signing every edge on such a line has the same sign, so every line-internal
+$C_4$ has parity $+1$ and can never be frustrated.
+
+Consequently the historical fraction is not the pure apartment fraction.  For
+$W(3,3)$ they are related exactly by
+\begin{equation}
+ \boxed{
+ f_{\rm legacy}=\frac{27}{29}f_{\rm apartment}.}
+ \label{eq:pass4466-w33-dilution}
+\end{equation}
+Its independent-random-line-signing mean is therefore $27/58$, not $1/2$.
+This does \emph{not} invalidate the standardized $z$-score quoted in
+Pass~4433: both the optimized value and its random baseline are multiplied by
+the same positive constant, so the $z$-score is invariant.  The correction is
+to the label and raw normalization, not to the separate Ramanujan verdict.
+
+For a general $\mathrm{GQ}(s,t)$ the same audit is parameter-exact.  With
+$Q$ induced quadrangles and $L=(t+1)(st+1)$ geometric lines, the number of
+line-internal simple four-cycles is
+\[
+ C_{\rm line}=3L\binom{s+1}{4},
+\]
+and the legacy helper returns $2(Q+C_{\rm line})$ records.  Hence
+\begin{equation}
+ \boxed{
+ f_{\rm legacy}=\frac{Q}{Q+C_{\rm line}}f_{\rm apartment}.}
+ \label{eq:pass4466-general-dilution}
+\end{equation}
+This matters sharply in the recent dual-pair comparison:
+\[
+ \mathrm{GQ}(3,9):\quad \frac{f_{\rm legacy}}{f_{\rm apartment}}=\frac{243}{245},
+ \qquad
+ \mathrm{GQ}(9,3):\quad \frac{f_{\rm legacy}}{f_{\rm apartment}}=\frac{81}{137}.
+\]
+The same $102060$ apartment count can therefore sit underneath very different
+raw legacy normalizations.  Cross-generalized-quadrangle comparisons should use
+the induced-apartment observable or apply the exact undilution before comparing
+fractions.
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{\small
+\textbf{Correction boundary.}  The executable audit is
+\texttt{analysis/w33\_pass4466\_legacy\_four\_cycle\_frustration\_audit.py}.
+It corrects cycle enumeration semantics and normalization only.  It does not
+withdraw Pass~4433's separate statement that a Ramanujan line signing was found
+on $W(3,3)$ while the searched $\mathrm{GQ}(9,3)$ line-signing family remained
+above its Ramanujan bound.}}
+\end{center}
