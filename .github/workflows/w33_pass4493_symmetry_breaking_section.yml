@@ -1,0 +1,35 @@
+name: W33 Pass 4493 symmetry-breaking section threshold
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - analysis/w33_pass4493_symmetry_breaking_section_threshold.py
+      - analysis/PASS4493_symmetry_breaking_section_insert.tex
+      - analysis/PASS4493_symmetry_breaking_section_index_insert.html
+      - data/PART_W33_PASS4493_SYMMETRY_BREAKING_SECTION_THRESHOLD.json
+      - tests/test_w33_pass4493_symmetry_breaking_section_threshold.py
+      - .github/workflows/w33_pass4493_symmetry_breaking_section.yml
+  pull_request:
+    paths:
+      - analysis/w33_pass4493_symmetry_breaking_section_threshold.py
+      - tests/test_w33_pass4493_symmetry_breaking_section_threshold.py
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install focused dependencies
+        run: python -m pip install --upgrade numpy pytest
+      - name: Re-run exact subgroup threshold witness
+        run: python analysis/w33_pass4493_symmetry_breaking_section_threshold.py
+      - name: Run focused regression
+        run: pytest -q tests/test_w33_pass4493_symmetry_breaking_section_threshold.py
+      - name: Enforce scope boundary
+        run: |
+          grep -q 'not a classification of every subgroup' data/PART_W33_PASS4493_SYMMETRY_BREAKING_SECTION_THRESHOLD.json
+          grep -q 'order 648, index 40' data/PART_W33_PASS4493_SYMMETRY_BREAKING_SECTION_THRESHOLD.json
