@@ -1,0 +1,64 @@
+{
+  "conclusion": "4 unitary transvections generate PSU(4,3); the group theory does not obstruct an instruction set on the asymmetric quadrangle",
+  "distinct_transvection_permutations": 560,
+  "geometry": "H(3,9)",
+  "lines": 112,
+  "min_transvections_generating_PSU": 4,
+  "open": "no unitary analogue of the affine translation Z_p is built here, and no cell counts exist over GF(9); generation is necessary, not sufficient",
+  "orders": {
+    "GU(4,3)": 52254720,
+    "PGU(4,3)": 13063680,
+    "PSU(4,3)": 3265920,
+    "SU(4,3)": 13063680
+  },
+  "points": 280,
+  "premise_caught": "the exclusion argument -- symmetric ISA needs point-line duality, H(3,9) is not self-dual, therefore no symmetric machine -- is INVALID: the ISA's p/f symmetry is a block swap of the ambient 4-space, and the Hermitian space has Witt index 2 so the block split exists",
+  "search": {
+    "2": {
+      "best": 24,
+      "generates_PSU": false,
+      "tries": 400
+    },
+    "3": {
+      "best": 6048,
+      "generates_PSU": false,
+      "tries": 3000
+    },
+    "4": {
+      "best": 3265920,
+      "generates_PSU": true,
+      "tries": 1
+    }
+  },
+  "search_scope": "random search; a k with generates_PSU false means NOT FOUND in that many tries, never proved impossible",
+  "witt_index_2_blocks": {
+    "f": [
+      [
+        1,
+        4,
+        0,
+        0
+      ],
+      [
+        1,
+        5,
+        0,
+        0
+      ]
+    ],
+    "p": [
+      [
+        0,
+        0,
+        1,
+        4
+      ],
+      [
+        0,
+        0,
+        1,
+        5
+      ]
+    ]
+  }
+}

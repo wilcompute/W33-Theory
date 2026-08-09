@@ -794,6 +794,14 @@ by \emph{date}, not topic, so a topic search cannot find its own proofs.
 \part{Foundations: From a Single Equation to a Unique Geometry}
 
 \section{The Master Equation}
+
+\begin{plainbox}
+The single relation the rest of the structure hangs on. Everything before this
+section is building the objects that appear in it; everything after is consequences. If you
+read one equation in this paper, read this one --- but the surrounding text explains what
+each symbol is, so it can be read without the algebra.
+\end{plainbox}
+
 \label{sec:master}
 
 The entire theory rests on a single Diophantine equation.
@@ -1174,6 +1182,15 @@ $|\Sp(4,3)| = q^4\cdot\lambda\mu\cdot\lambda\mu\Theta
 \end{proof}
 
 \subsection{Exceptional Isomorphisms}
+
+\begin{plainbox}
+Occasionally two mathematical objects built for entirely different reasons turn out
+to be the same object. These coincidences are rare, they are completely classified, and
+several of them meet at the structure in this paper --- which is the reason a single small
+geometry keeps connecting to subjects that appear unrelated. This section lists which ones
+apply and, importantly, which superficially similar cases do not.
+\end{plainbox}
+
 
 \begin{theorem}[The corrected $W(E_6)$ group ledger]
 \label{thm:e6}
@@ -3144,6 +3161,15 @@ d\bigl(d(\varphi(v(q)))\bigr) = \lambda(q) \quad (q=3,5,6,7).
 This promotes the arithmetic layer from exact one-step coincidences to a finite semigroup of operators with an explicit defect locus.
 
 \subsection{The Riemann Zeta Dictionary}
+
+\begin{plainbox}
+Graphs have their own zeta function, built by counting closed paths, and it behaves
+enough like the famous one from number theory that the vocabulary carries across. This
+section is the translation table. It is a dictionary, not a bridge: an analogy that lets
+results be stated compactly, and it is not claimed to say anything about the Riemann
+hypothesis itself.
+\end{plainbox}
+
 \label{sec:zeta-dict}
 
 The Riemann zeta function at negative odd integers --- equivalently the
@@ -3228,6 +3254,15 @@ r\cdot s &= -2^q < 0 \;\;\text{(opposite statistics guaranteed)}
 \part{The Complete Theory}
 
 \section{Summary of Predictions vs.\ Experiment}
+
+\begin{plainbox}
+The scoreboard. Each row is a quantity the theory produces and the number the world
+actually shows, side by side, with the agreement stated honestly --- including the rows
+where it is poor. Predictions made before the comparison are marked separately from
+quantities fitted afterwards, because the two are not the same kind of evidence and
+presenting them together would be misleading.
+\end{plainbox}
+
 \label{sec:summary}
 
 \begin{center}
@@ -3340,6 +3375,13 @@ If mass gaps and spontaneous decays equate to structural bottlenecks in spanning
 
 % ═══════════════════════════════════════════════════════════════
 \section{The Final Theorem}
+
+\begin{plainbox}
+The strongest single statement the preceding chapters support, written so that its
+scope is unmistakable --- what is proved, over what range, and what remains assumption. The
+hedging in the wording is deliberate and load-bearing.
+\end{plainbox}
+
 \label{sec:final}
 
 \begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,
@@ -3386,6 +3428,13 @@ checks across 39 phases, with zero failures}.
 % \appendix  % removed to avoid counter overflow with 50+ sections
 
 \section{Complete Parameter Reference}
+
+\begin{plainbox}
+A lookup table, not an argument. Every constant used anywhere in the paper appears
+here once, with its value, where it came from, and whether it was derived or measured.
+If a number elsewhere in the text seems to appear from nowhere, it is defined here.
+\end{plainbox}
+
 \label{app:params}
 
 \begin{center}
@@ -3757,6 +3806,14 @@ machine-verified in
 
 
 \section{Verification Statistics}
+
+\begin{plainbox}
+How much of this has actually been run. Every claim in the paper is backed by a
+script that can be executed, and this section counts them: how many tests, how long they
+take, what fraction of the results are checked automatically on every change. The point is
+that the reader does not have to take the arithmetic on trust.
+\end{plainbox}
+
 \label{app:verification}
 
 \begin{center}
@@ -3835,6 +3892,13 @@ Total: \textbf{706 new pytest checks across 36 files} (CCCLXIV--CCCXCIX),
 all passing. Aggregate count exceeds 3300 checks.
 
 \section{Skeleton Recap}
+
+\begin{plainbox}
+A one-page rebuild of the core object from nothing, for a reader arriving in the
+middle. Everything needed to follow the chapters that come next is restated here; nothing
+new is claimed.
+\end{plainbox}
+
 \[
 v=40,\ k=12,\ \lambda=2,\ \mu=4,\ q=3,\ f=24,\ g=15,\ r=2,\ s=-4,\ E=240.
 \]
@@ -4356,6 +4420,15 @@ the live FT3 background spine.
 \addcontentsline{toc}{part}{Supplement C --- Millennium Problems}
 
 \section*{A W$_{3,3}$ Map of the Seven Problems}
+
+\begin{plainbox}
+The seven Millennium Prize Problems are the most famous open questions in
+mathematics. This section does not solve any of them. What it does is locate where each one
+would touch the structure studied here, which is useful in the way a map is useful: it shows
+which questions this framework could in principle speak to, and which it simply cannot
+reach.
+\end{plainbox}
+
 We do not claim formal proofs of the Clay statements. We exhibit, for
 each problem, the specific integer identities in
 $(v,k,\lambda,\mu)=(40,12,2,4)$, $q=3$, $\Phi_{3,4,6}=(13,10,7)$, by
@@ -4453,6 +4526,15 @@ contemporary mathematical physics.
 \addcontentsline{toc}{part}{Supplement D --- Anthropic Closure}
 
 \section*{The Selection Question}
+
+\begin{plainbox}
+Physics has two different jobs: describing what the world does, and explaining why
+it does that rather than something else. This section is about the second, and about a
+limit discovered here --- the structure can *host* a particular asymmetry of nature, but
+cannot *select* it from the inside. That is a negative result, and it is reported as
+prominently as the positive ones because it bounds what this whole approach can claim.
+\end{plainbox}
+
 Spence (2000) enumerated the 28 non-isomorphic strongly-regular graphs
 with parameters $(40,12,2,4)$. Why, of these 28, is $W_{3,3}$ --- the
 \emph{symplectic} $\GQ(3,3)$ --- the one that parametrises the universe?
@@ -4550,6 +4632,14 @@ $\lambda_H=7/54$, $f_a=9840$ GeV) are all falsifiable.
 \addcontentsline{toc}{part}{Supplement E --- Experimental Falsifiers}
 
 \section*{How to Kill This Theory}
+
+\begin{plainbox}
+A claim that cannot fail is not a result. This section lists the specific
+measurements and computations that would refute the work --- not vague caveats, but
+numbered experiments with the values they would have to return. If you want to check
+whether any of this is real, this is the shortest route: pick one and run it.
+\end{plainbox}
+
 A theory is scientific only if specific measurements could disprove
 it. Below is the full catalogue: \textbf{15 predictions} (15 = $g$,
 the 15-dim spectral block of $W_{3,3}$), each a closed-form rational
@@ -5581,6 +5671,14 @@ the ternary cube $q^q$, and the cyclotomic remnant $\Phi_6=7$.
 
 \section*{Interpretation for the QGR Bridge}
 
+\begin{plainbox}
+Quantum gravity is the unsolved problem of making Einstein's description of gravity
+and quantum mechanics work together. This section says what, if anything, the structure here
+contributes --- and the answer is deliberately modest. What is offered is a discrete setting
+in which certain questions can be asked exactly rather than approximately.
+\end{plainbox}
+
+
 Quantum Gravity Research's
 \href{https://quantumgravityresearch.org/cycle-clock-theory-overview/}{Cycle Clock Theory overview}
 and Irwin's
@@ -5696,6 +5794,15 @@ borrowed from $H_4$; it is a canonical quotient object of the symplectic
 polar space.
 
 \section*{Executable Certificate}
+
+\begin{plainbox}
+A certificate is a small machine-readable file recording exactly what was computed,
+what it produced, and a fingerprint of the result. Anyone can re-run the computation and
+check the fingerprint matches. This is how the paper avoids asking to be believed: the
+claims in this section are not summaries of work done elsewhere, they are the work, in a
+form a computer can re-check.
+\end{plainbox}
+
 
 \begin{plainbox}
 A verification, not a result. This section exists so that a reader who does not
@@ -6008,6 +6115,15 @@ golden selector is the compatibility law that synchronizes those clocks
 across the hub network.
 
 \section*{Executable Certificate}
+
+\begin{plainbox}
+A certificate is a small machine-readable file recording exactly what was computed,
+what it produced, and a fingerprint of the result. Anyone can re-run the computation and
+check the fingerprint matches. This is how the paper avoids asking to be believed: the
+claims in this section are not summaries of work done elsewhere, they are the work, in a
+form a computer can re-check.
+\end{plainbox}
+
 
 The verification is encoded in
 \[
@@ -7025,6 +7141,13 @@ below.
 
 \section*{The Breakthrough}
 
+\begin{plainbox}
+The result that made the rest of this chapter worth writing. It is stated plainly
+first, then argued. If the argument that follows is heavy going, the plain statement is the
+part to carry forward.
+\end{plainbox}
+
+
 The live programme is fixed in the main theorem by the seed $q!=2q$.
 On the prime-only $E_6$-dimension surface, the same lock reappears as the
 derived Diophantine corollary
@@ -7292,6 +7415,17 @@ reverse implications of $q^q=q^3$.
 \end{remark}
 
 \section*{Reader's Map of the Paper}
+
+\begin{plainbox}
+Start here. This paper is long because it records everything that was checked, not
+because the idea is complicated. The idea is that one small geometric object --- forty
+points and forty lines, arranged so that every point sits on four lines and every line
+carries four points --- turns out to be rigid enough to determine a great deal about the
+machines you can build on it. This map tells you which chapters carry the argument and
+which are supporting evidence, so you can read the first group and treat the second as an
+appendix.
+\end{plainbox}
+
 
 \begin{center}
 \renewcommand{\arraystretch}{1.25}
@@ -7995,6 +8129,15 @@ packet; it already requires genuine transport cocycle data.
 % {540:unrelated}
 
 \section*{Executable Certificate}
+
+\begin{plainbox}
+A certificate is a small machine-readable file recording exactly what was computed,
+what it produced, and a fingerprint of the result. Anyone can re-run the computation and
+check the fingerprint matches. This is how the paper avoids asking to be believed: the
+claims in this section are not summaries of work done elsewhere, they are the work, in a
+form a computer can re-check.
+\end{plainbox}
+
 
 The boundary audit is encoded in
 \[
@@ -10505,6 +10648,14 @@ squared temporal self-entanglement seed $24=q!(q+1)$ transported through the
 $32$-edge router shell.
 
 \section*{The Measured-Constant Layer is Unit-Gauge Only}
+
+\begin{plainbox}
+An honest warning about a whole class of results. Some quantities here match measured
+physical constants, and that is genuinely interesting --- but any dimensionless number can
+be made to match another by a choice of units, so a match alone proves nothing. This section
+states exactly which comparisons survive that objection and which do not.
+\end{plainbox}
+
 
 The latest measured/derived constant packet is deliberately not a new
 dimensionless-prediction theorem.  It is a metrology theorem: once SI or

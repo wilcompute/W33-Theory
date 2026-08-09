@@ -1,0 +1,55 @@
+{
+  "audited": "this session's passes (~50 of ~4000)",
+  "checker": "scripts/check_certificates_regenerate.py (--selftest plants a fault)",
+  "conclusion": "six certificates cannot regenerate; four record line numbers in living manuscripts and were therefore never reproducible, two differ only in float tails; a certificate that records WHERE something is expires, one that records WHAT it says does not",
+  "drift": [
+    {
+      "fields": 58,
+      "kind": "line-number",
+      "script": "w33_pass4222_4226_zeta_without_regularity.py",
+      "why": "bucket contents are manuscript line numbers; every .tex edit moves them"
+    },
+    {
+      "fields": 37,
+      "kind": "line-number",
+      "script": "w33_pass4300_4306_homeless_render_and_params.py",
+      "why": "flags keyed by (file, line); 'audited 108' is now 114 as files were added"
+    },
+    {
+      "fields": 2,
+      "kind": "float-tail",
+      "script": "w33_pass4301_4306_the_dual_machine.py",
+      "why": "point/line spectral radii differ in the 15th decimal"
+    },
+    {
+      "fields": 72,
+      "kind": "line-number",
+      "script": "w33_pass4307_4311_the_forty_and_a_reading.py",
+      "why": "per-manuscript line numbers for every occurrence of the forty"
+    },
+    {
+      "fields": 11,
+      "kind": "float-tail",
+      "script": "w33_pass4321_4323_design_space_and_the_flag_machine.py",
+      "why": "rho and loc for the four machines, 15th-decimal only"
+    },
+    {
+      "fields": 6,
+      "kind": "line-number",
+      "script": "w33_pass4370_4373_sixth_failure_mode.py",
+      "why": "hedged/strong sentence counts over files that have since been edited"
+    }
+  ],
+  "remedies": {
+    "float-tail": "round to a declared precision before serialising -- these are spectral radii known to ~1e-12, and writing 15 digits claims a reproducibility LAPACK does not promise across builds. Round to 12 and the certificate becomes portable.",
+    "line-number": "record the matched TEXT plus a sha256 of the file it came from, never the line number. The text survives edits elsewhere in the document; the hash says exactly which version was scanned, so a mismatch is informative instead of inevitable."
+  },
+  "scope": "no rate is extrapolated to the corpus; only this session's passes were re-run",
+  "verdicts": {
+    "DRIFTED": 6,
+    "NO-CERT": 11,
+    "REPRODUCES": 31,
+    "TIMEOUT": 6
+  },
+  "why_existing_checks_missed_it": "check_certificates.py compares a certificate to its own digest and never re-runs the generating script, so a stale certificate is internally consistent and passes"
+}

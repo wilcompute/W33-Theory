@@ -43,6 +43,28 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  certificates-regenerate:
+    name: certificates still regenerate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install --quiet numpy sympy
+      - name: The checker must be able to fail
+        # Pass 4392. check_certificates.py compares a certificate to its own digest and
+        # never re-runs the script, so a STALE certificate passes it forever. This one
+        # re-runs. Its selftest plants a fault it must detect, per failure mode 7.
+        run: python scripts/check_certificates_regenerate.py --selftest
+      - name: Re-run the recent passes and compare certificates byte for byte
+        # Advisory: several passes legitimately exceed the budget, and a timeout is not a
+        # defect. DRIFTED is what matters, and it is surfaced in the step summary.
+        continue-on-error: true
+        run: |
+          python scripts/check_certificates_regenerate.py \
+            analysis/w33_pass43*.py --budget 90 | tee -a "$GITHUB_STEP_SUMMARY"
+
   recall:
     name: checker recall (must pass)
     runs-on: ubuntu-24.04

@@ -131,6 +131,17 @@ The three tracks form a triangle:
 
 All three tracks point to the same number: \(\sqrt{97}\).
 
+> **Correction (Pass 4388).** The sentence above overstates what the three tracks show, and
+> is corrected rather than deleted so the reason is visible. \(\lambda_2=(1+\sqrt{97})/2\)
+> is *one eigenvalue of one adjacency matrix*. Track 1 uses it for the Ramanujan violation;
+> Track 2's HOM dip \(	au=16\pi/(\sqrt{97}-5)\) is **derived from** \(\lambda_2-\lambda_3\);
+> Track 3's spectral gap is that same spectrum. The tracks do not converge on \(\sqrt{97}\)
+> independently --- they **consume** it. They are three *consequences* of one eigenvalue.
+> Track 2's prediction remains genuinely falsifiable, but measuring \(	au_{	ext{HOM}}\)
+> confirms the shared spectrum, not the other two tracks. This is failure mode 2
+> (over-read) in `CLAUDE.md`; no number on this page is wrong.
+
+
 ---
 
 ## Next Frontier: Pass 70

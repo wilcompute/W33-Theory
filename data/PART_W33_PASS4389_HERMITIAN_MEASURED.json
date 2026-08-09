@@ -1,0 +1,36 @@
+{
+  "asymmetry_factor_h39": 1.193548,
+  "conclusion": "H(3,9) built explicitly over GF(9); order (9,3) verified from the incidence; exhaustive miss enumeration reproduces Pass 4381's derived rates exactly, and the two registers differ",
+  "control_reproduced": 92.3077,
+  "field": "GF(9) = GF(3)[i]/(i^2+1)",
+  "open": "no instruction set is known on H(3,9); PGU(4,3) is not Sp(4,3) and the quadrangle is not self-dual, so the design lever is confirmed to EXIST but not yet shown to be REACHABLE",
+  "pass4381_law_confirmed_against_construction": true,
+  "rows": [
+    {
+      "agrees_with_pass4381": true,
+      "detection": "12/13",
+      "detection_pct": 92.3077,
+      "flags": 160,
+      "geometry": "W(3,3)",
+      "lines": 40,
+      "miss_line": "1/13",
+      "miss_point": "1/13",
+      "points": 40,
+      "s": 3,
+      "t": 3
+    },
+    {
+      "agrees_with_pass4381": true,
+      "detection": "1113/1147",
+      "detection_pct": 97.0357,
+      "flags": 1120,
+      "geometry": "H(3,9)",
+      "lines": 112,
+      "miss_line": "1/37",
+      "miss_point": "1/31",
+      "points": 280,
+      "s": 9,
+      "t": 3
+    }
+  ]
+}

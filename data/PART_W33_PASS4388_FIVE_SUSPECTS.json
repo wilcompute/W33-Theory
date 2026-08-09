@@ -1,0 +1,100 @@
+{
+  "conclusion": "one confirmed over-read of five (sqrt(97) framed as three convergent routes to one eigenvalue all three consume); zero mathematical errors; the decorative-concentration hypothesis is REFUTED at 19:20; and the falsifying run found that the 'Honest boundary' convention is 88% of the 2026-05 arc and ~0% after it -- a proven in-repo remedy for failure modes 2 and 6 that was dropped without replacement",
+  "confirmed_over_reads": 1,
+  "decorative_vs_load_bearing": [
+    19,
+    20
+  ],
+  "detail": [
+    {
+      "file": "2026-07-07_pass69_three_perpendicular_tracks.md",
+      "finding": "lambda_2 = (1+sqrt 97)/2 is ONE eigenvalue of ONE adjacency matrix. Track 1 uses it for the Ramanujan violation; Track 2's HOM dip tau = 16 pi/(sqrt 97 - 5) is DERIVED from lambda_2 - lambda_3; Track 3's spectral gap is that same spectrum. The three tracks do not converge on sqrt(97) -- they consume it. The sentence reads as independent confirmation and the construction cannot supply any.",
+      "line": 132,
+      "load": "the file's Track-1 theorem does not use the sentence; the harm is framing",
+      "remedy": "three CONSEQUENCES of one eigenvalue, not three routes to it. Track 2's prediction is still genuinely falsifiable, but measuring tau confirms the shared spectrum, not the two other tracks.",
+      "section": "Connection Between All Three Tracks",
+      "text": "All three tracks point to the same number: sqrt(97).",
+      "verdict": "OVER-READ"
+    },
+    {
+      "file": "2026-05-18_toroidal_metric_parity_taylor.md",
+      "finding": "one of four ad-hoc arithmetic decompositions in a row (48 = 2*24, 504/7 = 72, 401 = 320+81, 79 = 160-81). 79 is prime and small; there are many ways to write it. This IS the signature.",
+      "line": 176,
+      "load": "zero -- excluded by the file's own honesty boundary",
+      "remedy": "none needed to the mathematics. The file's theorem is the exact Taylor identity P(t) = 12u + 48u^2 + 0u^3 + 4u^4 + u^5 + 3u^6, which is proved and uses none of the four; its honesty boundary already says 'it does not prove physical' anything.",
+      "section": "Relation to the spectrum",
+      "text": "79 = 160 - 81 matches the signed phase-frame kernel.",
+      "verdict": "DECORATIVE"
+    },
+    {
+      "file": "2026-05-31_polarity_chirality_orientation_duality.md",
+      "finding": "the sweep saw 'matches the' and no licence in four lines. The licence is on line 141: 'Fano polarity implements the dual swap' -- the map is NAMED, which is precisely what CLAUDE.md's rule asks for. Line 125, six lines ABOVE, is an explicit refusal of the stronger claim: 'it is not meaningful, at this abstract F2-incidence level, to claim that polarity preserves or reverses Euclidean chirality.'",
+      "line": 131,
+      "load": "n/a",
+      "remedy": "none. Upgrade from SUSPECT; the window was too narrow, not the passage.",
+      "section": "Relation to toroidal duality",
+      "text": "This cleanly matches the toroidal duality.",
+      "verdict": "SOUND"
+    },
+    {
+      "file": "2026-05-30_ordered_spread_transport_orbits.md",
+      "finding": "40*36*36 = 51840 = |Sp(4,3)| is arithmetic and true. The line is the SETUP for 'the tempting stronger claim' stated on line 11 -- and the rest of the file REFUTES it: PSp(4,3) does not act with one regular orbit, the triples split by incidence type, and the file's corrected statement demands the missing sign/orientation datum.",
+      "line": 51,
+      "load": "the file exists to remove the load",
+      "remedy": "none. This is failure mode 6 handled correctly, at length, in 2026-05-30.",
+      "section": "Setup",
+      "text": "So the count matches the full linear symplectic order exactly.",
+      "verdict": "EXEMPLARY"
+    },
+    {
+      "file": "2026-05-29_q4_fano_chain_complex_homology.md",
+      "finding": "3^4 = 81 from four qutrit phase modes, and a matrix rank that is also 81. No map is named between them. It appears in the compressed theorem, but as a trailing 'matching' clause after the proved part.",
+      "line": 133,
+      "load": "zero by the file's own boundary; would be mode 6 if anything rested on it",
+      "remedy": "the proved part is the homology computation (H0,H1,H2) = (1,0,7) full and (1,0,3) after antipodal quotient, and the file's honest boundary claims exactly that -- 'this proves the finite chain-complex homology bridge'. The 81 = 81 clause is outside it.",
+      "section": "Geometric reading (trailing clause of the compressed theorem)",
+      "text": "This matches the known signed phase-frame rank: rank(AA^T/160) = 81.",
+      "verdict": "DECORATIVE"
+    }
+  ],
+  "distinct_headings": 194,
+  "honest_boundary_by_arc": {
+    "2026-05": [
+      98,
+      86
+    ],
+    "2026-06": [
+      15,
+      0
+    ],
+    "2026-07": [
+      69,
+      0
+    ],
+    "2026-08": [
+      2,
+      1
+    ],
+    "not date-named": [
+      1427,
+      22
+    ]
+  },
+  "hypothesis": "flags concentrate under decorative headings",
+  "hypothesis_verdict": "REFUTED",
+  "mathematical_errors": 0,
+  "reflagged_total": 216,
+  "section_kind": {
+    "decorative": 19,
+    "load-bearing": 20,
+    "unclassified": 177
+  },
+  "suspects_read": 5,
+  "verdicts": {
+    "2026-05-18_toroidal_metric_parity_taylor.md:176": "DECORATIVE",
+    "2026-05-29_q4_fano_chain_complex_homology.md:133": "DECORATIVE",
+    "2026-05-30_ordered_spread_transport_orbits.md:51": "EXEMPLARY",
+    "2026-05-31_polarity_chirality_orientation_duality.md:131": "SOUND",
+    "2026-07-07_pass69_three_perpendicular_tracks.md:132": "OVER-READ"
+  }
+}
