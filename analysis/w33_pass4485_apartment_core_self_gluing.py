@@ -1,38 +1,26 @@
 #!/usr/bin/env python3
-"""Pass 4485 -- the apartment code glues through the same irreducible 8-core twice.
+"""Pass 4485 -- the apartment radical reuses the Pass-176 irreducible 8-core.
 
 Let M=F_2^40 be the W33 line permutation module and A*=N^T N mod 2.  Put
 K=ker A*, I=im A*, R=ker N, U=R cap I, J=<1>.  Pass 4481 gives
 
-    dim(J,U,I,K,M) = (1,9,10,30,40),
+    dim(J,U,I,K,M) = (1,9,10,30,40).
 
-with U/J irreducible of dimension 8.  The apartment code is M/J, its radical
-is K/J, and its protected quotient is M/K.
-
-Because A*^2=0, I<=K.  More importantly A* induces an equivariant isomorphism
-
-    Abar : M/K  -> I,
-
-since ker A*=K and im A*=I.  Inside I the invariant chain
-
-    0 < J < U < I
-
-has factor dimensions 1|8|1.  Hence the middle protected factor is literally
-U/J.  But U/J is already an invariant submodule of the radical K/J.
+Pass 176 already owns the protected fixed-line reduction onto the route-hull
+8-space U/J, including its plus-type quadratic structure.  The new statement
+here is apartment-side: because A*^2=0 and A* induces M/K ~= I, the same owned
+U/J that is the middle factor of protected H10=1|8|1 also sits inside the
+29-dimensional apartment radical K/J.
 
 Thus the *same quotient space U/J*, not merely another 8-dimensional module,
-appears twice in the 39-dimensional apartment code:
+appears on both sides of the new apartment extension:
 
     radical side:    U/J  <  K/J,
     protected side:  M/K --Abar~--> I, whose middle factor is U/J.
 
-The verifier checks the diagram and the action matrices for two PSp(4,3)
-generators.  No semisimplicity or splitting is assumed.
-
-This provides the exact algebraic bridge to the parallel Pass-4472 statement
-that H10 has filtration 1|8|1.  Passes 4477/4478 additionally realize that
-protected 8-core as a plus-type quadratic / four-Pauli phase-space module; this
-pass does not import their physical interpretation, only the module identity.
+The verifier checks the diagram and action matrices.  The protected U/J bridge
+itself remains Pass-176 ownership; Pass 4485 adds its occurrence inside the
+apartment radical.
 """
 from __future__ import annotations
 import json
@@ -52,7 +40,7 @@ def same(A,B):
 def main():
     points,A,symp=build_w33(); lines=w33_lines(A); N=np.zeros((40,40),dtype=np.uint8)
     for li,L in enumerate(lines): N[list(L),li]=1
-    Ast=(N.T@N)%2; M=np.eye(40,dtype=np.uint8); J=np.ones((1,40),dtype=np.uint8)
+    Ast=(N.T@N)%2; J=np.ones((1,40),dtype=np.uint8)
     K=rref_rows(nullspace_mod2(Ast)); I=rref_rows(Ast); R=rref_rows(nullspace_mod2(N)); U=inter(R,I)
     checks={
       'dims_1_9_10_30_40':(len(J),len(U),len(I),len(K),40)==(1,9,10,30,40),
@@ -61,21 +49,19 @@ def main():
       'middle_same_literal_UmodJ':len(U)-len(J)==8,'radical_dim29':len(K)-len(J)==29}
     _,group=build_group(points,symp); pg=small_generating_set(group); idx={frozenset(L):i for i,L in enumerate(lines)}
     lg=[tuple(idx[frozenset(g[p] for p in L)] for L in lines) for g in pg]
-    # U/J action, used both as radical submodule factor and protected middle factor.
     a8,d8=subquotient_action_matrices(U,J,lg); ir8,orbits=exhaustive_cyclic_irreducible(a8,d8)
-    # I/U is the protected top 1; J is the protected bottom 1.
     atop,dt=subquotient_action_matrices(I,U,lg)
     checks.update({'UmodJ_dim8_irreducible':d8==8 and ir8,'IoverU_trivial1':dt==1 and all(int(x[0,0])==1 for x in atop)})
-    # Equivariance of A*: graph automorphisms commute with adjacency.
     for gi,g in enumerate(lg):
         P=np.zeros((40,40),dtype=np.uint8)
         for i,j in enumerate(g): P[j,i]=1
         checks[f'Astar_equivariant_gen{gi}']=np.array_equal((P@Ast)%2,(Ast@P)%2)
     assert all(checks.values()),checks
-    out={'pass':4485,'theorem':'W33 apartment 8-core self-gluing theorem',
-      'diagram':{'apartment_code':'M/J (39)','radical':'K/J (29)','protected':'M/K (10)','incidence_isomorphism':'Abar: M/K -> I=im(A*)','protected_filtration':'J < U < I gives 1|8|1','repeated_core':'U/J (8) is both radical submodule and protected middle factor'},
+    out={'pass':4485,'theorem':'W33 apartment-radical reuse of the Pass-176 eight-core theorem',
+      'diagram':{'apartment_code':'M/J (39)','radical':'K/J (29)','protected':'M/K (10)','incidence_isomorphism':'Abar: M/K -> I=im(A*)','protected_filtration':'J < U < I gives 1|8|1','repeated_core':'the Pass-176 U/J (8) protected core also occurs as an apartment-radical submodule'},
       'core':{'dimension':8,'irreducible':True,'vector_orbits':orbits,'literal_space':'U/J'},
-      'boundary':'Exact module self-gluing only. No semisimple splitting, hardware duplication, E8 dynamics, or four-qubit machine is inferred.',
+      'prior_owner':'Pass 176 owns the protected f^perp/<f> -> route-hull U/J quadratic isometry; Pass 4485 adds its occurrence inside the apartment radical.',
+      'boundary':'Exact apartment-side self-gluing only. Pass 176 already owns the protected route-hull U/J quadratic eight-core. No semisimple splitting, hardware duplication, E8 dynamics, or four-qubit machine is inferred.',
       'checks':{'passed':sum(checks.values()),'total':len(checks)}}
     p=ROOT/'data/PART_W33_PASS4485_APARTMENT_CORE_SELF_GLUING.json'; p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
     print(json.dumps(out,indent=2,sort_keys=True));return 0
