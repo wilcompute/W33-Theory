@@ -1,0 +1,89 @@
+{
+  "passes": [4511, 4513, 4514, 4516, 4517, 4518],
+  "4511_dual_completion": {
+    "dual_dimension": 1581,
+    "prism_weight3_words": 2160,
+    "prism_span_rank": 1215,
+    "weight4_words": 84240,
+    "weight4_span_rank": 1580,
+    "weight4_span": "entire even-weight subcode of C^perp",
+    "combined_weight3_weight4_span_rank": 1581,
+    "missing_beyond_prisms": 366,
+    "PSp_weight4_orbit_sizes": [1620, 1620, 3240, 6480, 6480, 6480, 6480, 12960, 12960, 25920],
+    "PGSp_weight4_orbit_sizes": [1620, 1620, 3240, 6480, 6480, 12960, 12960, 12960, 25920],
+    "PGSp_orbit_gain_over_prisms": [
+      {"orbit_size": 1620, "union_lines": 6, "union_edges": 8, "union_triangles": 0, "span_rank": 1050, "gain": 284},
+      {"orbit_size": 1620, "union_lines": 8, "union_edges": 16, "union_triangles": 8, "span_rank": 900, "gain": 0},
+      {"orbit_size": 3240, "union_lines": 8, "union_edges": 12, "union_triangles": 0, "span_rank": 1295, "gain": 359},
+      {"orbit_size": 6480, "union_lines": 8, "union_edges": 12, "union_triangles": 0, "span_rank": 1543, "gain": 359},
+      {"orbit_size": 6480, "union_lines": 8, "union_edges": 14, "union_triangles": 4, "span_rank": 1170, "gain": 0},
+      {"orbit_size": 12960, "union_lines": 7, "union_edges": 10, "union_triangles": 0, "span_rank": 1579, "gain": 365},
+      {"orbit_size": 12960, "union_lines": 7, "union_edges": 11, "union_triangles": 1, "span_rank": 1579, "gain": 365},
+      {"orbit_size": 12960, "union_lines": 8, "union_edges": 13, "union_triangles": 0, "span_rank": 1579, "gain": 365},
+      {"orbit_size": 25920, "union_lines": 8, "union_edges": 14, "union_triangles": 2, "span_rank": 1580, "gain": 366}
+    ]
+  },
+  "4513_prism_edge_identification": {
+    "identity": "protected(prism)=A_*(e_i+e_j) for a unique adjacent pair i~j",
+    "protected_images": 240,
+    "prisms": 2160,
+    "fiber_size": 9,
+    "edge_endpoints_outside_prism": true,
+    "each_edge_endpoint_meets_prism_lines": 3,
+    "PSp_edge_stabilizer_order": 108,
+    "PSp_suborbits": [1,1,2,2,18,18,18,18,27,27,54,54],
+    "PGSp_edge_stabilizer_order": 216,
+    "PGSp_suborbits": [1,1,4,18,18,18,18,27,27,108],
+    "conclusion": "the protected 240-set is equivariantly the dual-W33 edge action; it is not identified with E8 roots"
+  },
+  "4514_ihara_support_decomposition": {
+    "oriented_primitive_prime_counts": {"6": 302880, "7": 2739840, "8": 26750160},
+    "PSp_nonzero_parity_support_orbits": {"6": 10, "7": 26, "8": 142},
+    "support_size_summary": {
+      "6": {
+        "0": {"PSp_orbits": 1, "distinct_masks": 1, "primitive_prime_classes": 480},
+        "2": {"PSp_orbits": 2, "distinct_masks": 780, "primitive_prime_classes": 86400},
+        "4": {"PSp_orbits": 2, "distinct_masks": 14580, "primitive_prime_classes": 129600},
+        "6": {"PSp_orbits": 5, "distinct_masks": 36720, "primitive_prime_classes": 86400}
+      },
+      "7": {
+        "1": {"PSp_orbits": 1, "distinct_masks": 40, "primitive_prime_classes": 121920},
+        "3": {"PSp_orbits": 2, "distinct_masks": 6480, "primitive_prime_classes": 648000},
+        "5": {"PSp_orbits": 10, "distinct_masks": 98064, "primitive_prime_classes": 1296000},
+        "7": {"PSp_orbits": 13, "distinct_masks": 311040, "primitive_prime_classes": 673920}
+      },
+      "8": {
+        "0": {"PSp_orbits": 1, "distinct_masks": 1, "primitive_prime_classes": 61200},
+        "2": {"PSp_orbits": 2, "distinct_masks": 780, "primitive_prime_classes": 1715040},
+        "4": {"PSp_orbits": 10, "distinct_masks": 55080, "primitive_prime_classes": 8598960},
+        "6": {"PSp_orbits": 42, "distinct_masks": 699840, "primitive_prime_classes": 11975040},
+        "8": {"PSp_orbits": 87, "distinct_masks": 1768500, "primitive_prime_classes": 4399920}
+      }
+    }
+  },
+  "4516_nine_sheet_prism_fiber": {
+    "edge_stabilizer_order": 108,
+    "fiber_action_image_order": 36,
+    "kernel_order": 3,
+    "fiber_action_element_orders": {"1": 1, "2": 9, "3": 8, "4": 18},
+    "normal_regular_translation_subgroup_order": 9,
+    "point_stabilizer_order": 4,
+    "group_identification": "C3^2:C4"
+  },
+  "4517_regular_weight4_seed": {
+    "PSp_orbit_size": 25920,
+    "PSp_stabilizer_order": 1,
+    "orbit_span_rank": 1580,
+    "generates": "entire even-weight subcode of C^perp",
+    "seed_geometry": {"union_lines": 8, "union_edges": 14, "union_triangles": 2, "union_degree_sequence": [3,3,3,3,4,4,4,4], "apartment_intersections": [0,0,2,2,2,2]}
+  },
+  "4518_sixth_ihara_tomography": {
+    "degree2_coefficient_adjacent_pair": 252,
+    "degree2_coefficient_disjoint_pair": 48,
+    "adjacent_pairs": 240,
+    "disjoint_pairs": 540,
+    "matrix_identity": "offdiag Walsh coefficient matrix = 48*(J-I) + 204*A_*",
+    "conclusion": "the degree-2 Walsh layer of primitive C6 reconstructs dual-W33 adjacency exactly"
+  },
+  "boundary": "Finite exact code/group/zeta statements only. The full detailed C6-C8 orbit table is regenerated by the executable verifier; this frozen summary records the load-bearing totals and orbit counts."
+}
