@@ -1,0 +1,48 @@
+{
+  "boundary": "the duality is verified here only by the point/line counts matching under exchange, which is necessary and not sufficient for an isomorphism of incidence structures; the classical result Q(5,q) = dual of H(3,q^2) is cited, not reproved",
+  "carriers": [
+    {
+      "bound": 10.770329614269,
+      "carrier": "Q(5,3) point graph  = H(3,9) LINE graph",
+      "degree": 30,
+      "edges_per_gauge_block": 6,
+      "gauge_dof": 280,
+      "vertices": 112
+    },
+    {
+      "bound": 11.832159566199,
+      "carrier": "H(3,9) point graph  = Q(5,3) LINE graph",
+      "degree": 36,
+      "edges_per_gauge_block": 45,
+      "gauge_dof": 112,
+      "vertices": 280
+    }
+  ],
+  "corrects": "Pass 4442/4457 presented H(3,9) and Q(5,3) as two independent quadrangles supporting a coarseness law. They are dual, so that is one geometry read twice: the four-row table has three data points, and the s=2 pair (W(3,2), Q(5,2)) is likewise a single geometry, which is why raising t there changed nothing",
+  "dual_pair": {
+    "H(3,9)": {
+      "lines": 112,
+      "points": 280,
+      "s": 9,
+      "t": 3
+    },
+    "Q(5,3)": {
+      "lines": 280,
+      "points": 112,
+      "s": 3,
+      "t": 9
+    },
+    "counts_match_under_exchange": true
+  },
+  "unified": {
+    "pass_4389_protection": {
+      "line_register_miss": "1/37",
+      "point_register_miss": "1/31"
+    },
+    "pass_4457_signing": {
+      "H39_point_graph_pct": 0.0,
+      "Q53_point_graph_pct": 7.2
+    },
+    "statement": "both are the same fact -- a non-self-dual GQ has two inequivalent carriers; W(3,3) is self-dual and shows neither"
+  }
+}
