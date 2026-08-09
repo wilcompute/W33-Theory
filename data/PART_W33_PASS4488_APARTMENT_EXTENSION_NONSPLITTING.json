@@ -1,0 +1,23 @@
+{
+  "Hom_PSp_H10_to_Cap": {
+    "dimension": 1,
+    "formula": "T([b])=[A* b] mod J",
+    "image": "I/J inside radical",
+    "kernel_dimension": 1,
+    "projection_to_H10": "zero",
+    "unique_nonzero_rank": 9
+  },
+  "boundary": "Does not forbid non-equivariant decoding or symmetry-breaking hardware; it forbids a PSp-equivariant linear section only.",
+  "checks": {"passed": 16, "total": 16},
+  "interpretation": "The only nonzero equivariant return channel folds H10 into the radical and kills one fixed line; no invariant 10D complement exists.",
+  "pass": 4488,
+  "section_system": {
+    "equations": 1660,
+    "rank_augmented": 390,
+    "rank_coefficient": 389,
+    "unknowns": 390
+  },
+  "sequence": "0 -> K/J (29) -> M/J (39) -> M/K=H10 (10) -> 0",
+  "splits_PSp_equivariantly": false,
+  "theorem": "W33 apartment-code nonsplit protected/radical extension theorem"
+}
