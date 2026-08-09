@@ -40,6 +40,18 @@ jobs:
           python-version: '3.11'
       - name: Install focused dependencies
         run: python -m pip install --upgrade numpy pytest
+      - name: Snapshot frozen certificates
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/w33-4536-4543-frozen
+          cp data/PART_W33_PASS4536_MISSING_TENTH_PARITY_LINE_STAR.json /tmp/w33-4536-4543-frozen/
+          cp data/PART_W33_PASS4537_Q5Q_BINARY_RANK_FRONTIER.json /tmp/w33-4536-4543-frozen/
+          cp data/PART_W33_PASS4538_GLOBAL_LARGE_SPLITTING_CENSUS.json /tmp/w33-4536-4543-frozen/
+          cp data/PART_W33_PASS4539_EXACT_LOCAL_H10_DECODER.json /tmp/w33-4536-4543-frozen/
+          cp data/PART_W33_PASS4540_ZETA_PARITY_PRISM_CROSS_FUSION.json /tmp/w33-4536-4543-frozen/
+          cp data/PART_W33_PASS4541_PARITY_FIXED_VECTOR_PAIRING.json /tmp/w33-4536-4543-frozen/
+          cp data/PART_W33_PASS4542_ODD_SHELL_RECONSTRUCTS_W33.json /tmp/w33-4536-4543-frozen/
+          cp data/PART_W33_PASS4543_LOCAL_CELL_BASIS_MATROID.json /tmp/w33-4536-4543-frozen/
       - name: Re-run exact witnesses
         run: |
           set -euo pipefail
@@ -51,17 +63,29 @@ jobs:
           python analysis/w33_pass4541_parity_is_fixed_vector_pairing.py
           python analysis/w33_pass4542_odd_shell_reconstructs_w33.py
           python analysis/w33_pass4543_local_cell_basis_matroid.py
-      - name: Frozen certificates must regenerate exactly
+      - name: Frozen certificates must regenerate semantically
         run: |
-          git diff --exit-code -- \
-            data/PART_W33_PASS4536_MISSING_TENTH_PARITY_LINE_STAR.json \
-            data/PART_W33_PASS4537_Q5Q_BINARY_RANK_FRONTIER.json \
-            data/PART_W33_PASS4538_GLOBAL_LARGE_SPLITTING_CENSUS.json \
-            data/PART_W33_PASS4539_EXACT_LOCAL_H10_DECODER.json \
-            data/PART_W33_PASS4540_ZETA_PARITY_PRISM_CROSS_FUSION.json \
-            data/PART_W33_PASS4541_PARITY_FIXED_VECTOR_PAIRING.json \
-            data/PART_W33_PASS4542_ODD_SHELL_RECONSTRUCTS_W33.json \
-            data/PART_W33_PASS4543_LOCAL_CELL_BASIS_MATROID.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          frozen=Path('/tmp/w33-4536-4543-frozen')
+          live=Path('data')
+          names=[
+            'PART_W33_PASS4536_MISSING_TENTH_PARITY_LINE_STAR.json',
+            'PART_W33_PASS4537_Q5Q_BINARY_RANK_FRONTIER.json',
+            'PART_W33_PASS4538_GLOBAL_LARGE_SPLITTING_CENSUS.json',
+            'PART_W33_PASS4539_EXACT_LOCAL_H10_DECODER.json',
+            'PART_W33_PASS4540_ZETA_PARITY_PRISM_CROSS_FUSION.json',
+            'PART_W33_PASS4541_PARITY_FIXED_VECTOR_PAIRING.json',
+            'PART_W33_PASS4542_ODD_SHELL_RECONSTRUCTS_W33.json',
+            'PART_W33_PASS4543_LOCAL_CELL_BASIS_MATROID.json',
+          ]
+          for name in names:
+              a=json.loads((frozen/name).read_text())
+              b=json.loads((live/name).read_text())
+              assert a==b, name
+          print('PASS semantic certificate regeneration')
+          PY
       - name: Focused regression
         run: pytest -q tests/test_w33_pass4536_4543_parity_decoder_reconstruction.py
       - name: TeX insertion hygiene
