@@ -1,5 +1,6 @@
 {
-  "boundary": "Expected exact permutation-action certificate from the colored Q(5,3) incidence graph, verified by analysis/w33_pass4547_q53_global_prism_action.py. No abstract isomorphism type is assigned to the order-1440 rung action from order alone.",
+  "status": "REMOTE_VERIFIER_TARGET_UNOBSERVED",
+  "boundary": "This file is the fail-closed target for analysis/w33_pass4547_q53_global_prism_action.py. The dedicated GitHub Actions verifier has been pushed, but no remote status is currently surfaced; do not cite the transitivity/stabilizer values as observed workflow evidence until that verifier is green. No abstract isomorphism type is assigned to the order-1440 rung action from order alone.",
   "full_bipartition_preserving_automorphism_group": {
     "order": 13063680
   },
