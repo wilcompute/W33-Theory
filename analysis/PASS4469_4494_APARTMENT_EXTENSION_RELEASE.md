@@ -1,3 +1,6 @@
+<!-- PASS4507-ERRATUM-BANNER -->
+> **CORRECTION — Passes 4503/4507/4519.** The restricted-subgroup section table in this historical release is superseded. The full-group `389/390` nonsplitting result remains valid, but point and line stabilizers are exactly `386/387` and `387/388` (both nonsplit), while the canonical incident-flag stabilizer is `384/384` with affine section dimension `6`. Pass 4519 further proves that this order-162 flag is exactly the Sylow-3 normalizer/Borel subgroup. See [`PASS4503_4510_CORRECTED_APARTMENT_RELEASE.md`](PASS4503_4510_CORRECTED_APARTMENT_RELEASE.md). The old `370/370`, `338/338`, and `308/308` values below are retained only as historical text and must not be cited as current results.
+
 # Passes 4469–4494 — apartment parity, protected H10, nonsplitting, and symmetry-breaking release
 
 ## Release thesis
