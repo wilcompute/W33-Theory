@@ -1,0 +1,44 @@
+{
+  "boundary": "Exact local GQ counting plus Pass 4524 global injectivity. The protected Hamming metric merges the Johnson intersection-1 and intersection-0 relations; no W33-style edge-fiber collapse is claimed.",
+  "geometry": {
+    "GQ": "Q(5,3)=GQ(3,9)",
+    "noncollinear_point_pairs": 4536,
+    "rungs_per_pair": 10
+  },
+  "local_fan_code": {
+    "codewords": 512,
+    "dimension": 9,
+    "kernel_relation": "sum of all ten rung images = 0; no other coefficient relation",
+    "length": 280,
+    "minimum_distance": 56,
+    "weight_enumerator": {
+      "0": 1,
+      "56": 10,
+      "64": 45,
+      "96": 210,
+      "104": 120,
+      "120": 126
+    },
+    "weight_formula": "w(k)=20*(k mod 2)+4*k*(10-k)"
+  },
+  "passes": [4547,4550],
+  "prism_shell": {
+    "distance64_graph": "Johnson J(10,3)",
+    "distance64_iff_triple_intersection": 2,
+    "distance96_iff_triple_intersection": [0,1],
+    "global_images_distinct_by_pass4524": true,
+    "global_prisms": 544320,
+    "johnson_adjacent_common_neighbors": 8,
+    "johnson_degree": 21,
+    "johnson_nonadjacent_common_neighbors_by_intersection": {
+      "0": 0,
+      "1": 4
+    },
+    "pair_distance_counts": {
+      "64": 1260,
+      "96": 5880
+    },
+    "weight": 104,
+    "words_per_fan": 120
+  }
+}
