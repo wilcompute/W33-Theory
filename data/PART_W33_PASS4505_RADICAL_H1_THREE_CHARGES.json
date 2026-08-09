@@ -1,0 +1,9 @@
+{
+  "boundary": "This is H1(G,K/J), including the fixed-line connecting obstruction. It is not a computation of the full Ext^1_G(H10,K/J) group, whose particular apartment extension is already proved nonsplit in Pass 4488.",
+  "cohomology": {"dim_B1": 29, "dim_H1": 2, "dim_Z1": 31, "fixed_line_class_coordinates_in_computed_basis": [1,0], "module_dimension": 29, "nonzero_classes": 3},
+  "negative_result": "The 6-dimensional radical composition factor is absent from the module closure of every nonzero H1 class.",
+  "pass": 4505,
+  "relation_to_pass4496": "Pass 4496 independently computes dim H1=2 on the irreducible middle 8-space. Pass 4505 computes the different cohomology H1(G,K/J) of the full 29D apartment radical.",
+  "support": {"all_three_nonzero_classes_same_support": true, "dimension": 23, "identified_as": "W/J = (K intersect rowspace(N))/J", "profile": "8 | (1 | 14)", "relation": "exactly Pass-4492 route-hull/sentinel support"},
+  "theorem": "H1(PSp(4,3), apartment radical K/J) is F2^2 with three nonzero classes on one common 23D support"
+}
