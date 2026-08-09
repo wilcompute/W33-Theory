@@ -1,0 +1,37 @@
+{
+  "boundary": "Exact finite cubic-surface incidence and representation transport. It transports the apartment-derived orthogonal quotient into the existing Schlaefli carriers; no physical interpretation follows.",
+  "incidence": {
+    "column_sum_lines_per_double_six": 12,
+    "double_six_pair_intersection_counts": {
+      "4": 270,
+      "6": 360
+    },
+    "meeting_line_pair_common_double_sixes": 8,
+    "rank_over_Q": 21,
+    "row_sum_double_sixes_per_line": 16,
+    "shape": [27,36],
+    "skew_line_pair_common_double_sixes": 6
+  },
+  "matrix_identities": {
+    "RRt": "10 I27 + 2 A27 + 6 J27",
+    "RtR": "6 I36 - 2 A36 + 6 J36",
+    "adjacency_intertwiner": "3 A27 R + R A36 = 20 J27x36",
+    "centered_intertwiner": "3 A27 R + R A36 = 0 on centered modules"
+  },
+  "passes": [4545,4549],
+  "rational_constituents": {
+    "27_line_module": "1 + 20 + 6",
+    "36_double_six_module": "1 + 20 + 15",
+    "R_kills_on_27_side": 6,
+    "R_kills_on_36_side": 15,
+    "R_survives": "1 + 20",
+    "nontrivial_singular_value_squared": 12,
+    "trivial_singular_value_squared": 192
+  },
+  "transport": {
+    "classical_label_convention": "deterministic first double-six; a0..a5, b0..b5, c_ij",
+    "pass4525_new_singular_index_to_classical_label": [
+      "a0","c35","c34","c05","b5","a3","c12","c04","b4","c03","b3","a5","a4","b0","c45","c25","c01","b1","c24","a2","c13","c14","c02","b2","c15","c23","a1"
+    ]
+  }
+}
