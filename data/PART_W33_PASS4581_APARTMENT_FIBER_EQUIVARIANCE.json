@@ -1,0 +1,24 @@
+{
+  "boundary": "The 3x4 resolution is finite W33 group geometry, not a qutrit/tomotope identification without an explicit intertwiner.",
+  "fiber": {
+    "apartments": 12,
+    "common_support_lines": 16,
+    "graph": "K4,4,4",
+    "meaning": "the three parts are three distinct partitions of the same 16-line support into four disjoint apartments",
+    "parts": [4,4,4]
+  },
+  "pass": 4581,
+  "singular_stabilizer": {
+    "common_support_is_unique_16_orbit": true,
+    "fiber_action_kernel_order": 2,
+    "fiber_action_order": 96,
+    "fiber_transitive": true,
+    "line_orbits": [8,8,8,16],
+    "one_part_restriction": "D8 (order 8)",
+    "one_part_setwise_stabilizer_order": 32,
+    "order": 192,
+    "part_action": "S3",
+    "part_kernel": "C2^4 (order 16)"
+  },
+  "theorem": "A singular apartment fiber is an equivariant 3x4 resolution of one canonical 16-line orbit: three apartment partitions, permuted as S3, with a 2^4 kernel on the partitions."
+}
