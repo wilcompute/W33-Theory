@@ -1,0 +1,15 @@
+{
+  "boundary": "Exact module self-gluing only. No semisimple splitting, hardware duplication, E8 dynamics, or four-qubit machine is inferred.",
+  "checks": {"passed": 15, "total": 15},
+  "core": {"dimension": 8, "irreducible": true, "literal_space": "U/J", "vector_orbits": 2},
+  "diagram": {
+    "apartment_code": "M/J (39)",
+    "incidence_isomorphism": "Abar: M/K -> I=im(A*)",
+    "protected": "M/K (10)",
+    "protected_filtration": "J < U < I gives 1|8|1",
+    "radical": "K/J (29)",
+    "repeated_core": "U/J (8) is both radical submodule and protected middle factor"
+  },
+  "pass": 4485,
+  "theorem": "W33 apartment 8-core self-gluing theorem"
+}
