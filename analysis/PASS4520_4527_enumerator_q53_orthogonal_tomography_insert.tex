@@ -1,0 +1,154 @@
+% Passes 4520--4527: enumerator frontier, Q(5,3) distance, dual quotient,
+% all-GQ primitive-six tomography, prism-fan exception, Schlaefli and double-six bridges.
+\subsection{Enumerator frontier, exact $Q(5,3)$ distance, and the orthogonal dual quotient (Passes 4520--4527)}
+\label{sec:pass4520-4527-enumerator-q53-orthogonal}
+
+\paragraph{Pass 4520: the full W33 enumerator remains open, with a sharper exact frontier.}
+The exact Burnside reduction of Pass~4512 leaves $10{,}789{,}604$ codeword
+orbits modulo $PGSp(4,3)$ and global complement.  Pass~4520 does not relabel
+that reduction as a completed coefficient table.  Instead it exhaustively
+computes the coefficient-support shells $m=6,7$: all
+$\binom{40}{6}=3{,}838{,}380$ and $\binom{40}{7}=18{,}643{,}560$ subsets are
+traversed.  Weight $486$ first occurs with multiplicities $1440$ and $240$ in
+those two shells respectively.  The exact $PGSp$ subset-orbit counts for
+$m=0,\ldots,20$ are
+\[
+1,1,2,5,16,48,165,571,1961,6252,18226,47911,113314,240735,
+460273,793280,1234880,1739041,2218732,2566830,2694464,
+\]
+with $1{,}347{,}360$ complement-orbits at the middle shell $m=20$.
+\textbf{Boundary:} the complete numerical weight enumerator and Fisher-zero
+table remain OPEN.
+
+\paragraph{Pass 4521: the $Q(5,3)=GQ(3,9)$ apartment code is exactly $[102060,279,1458]$.}
+For coefficient support $S$ in the $280$-vertex line graph, write
+$m=|S|$, $e=e(S)$, $p_3=p_3(S)$ and $c_4=c_4(S)$.  Pass~4515 gives
+\[
+ w=1458m-12\binom m2-150e+36p_3-8c_4.
+\]
+The line graph is $SRG(280,36,8,4)$ with nontrivial eigenvalues $8,-4$, so
+\[
+ \frac{m^2}{14}-2m\le e\le4m+\frac{m^2}{20}.
+\]
+If $t_{uv}\le4$ counts common neighbours inside $S$ for a nonedge $uv$, then
+$p_3=\sum t_{uv}$ and $2c_4=\sum\binom{t_{uv}}2$, whence
+$36p_3-8c_4\ge30p_3$.  Also
+\[
+ p_3=\sum_x\binom{d_x}{2}-3T
+ \ge \frac{2e^2}{m}-9e,
+\]
+because $3T\le8e$.  Therefore
+\[
+ w\ge1458m-12\binom m2-150e+30\max\!\left(0,\frac{2e^2}{m}-9e\right).
+\]
+Minimizing this convex piecewise expression on the spectral edge interval gives
+\[
+\begin{cases}
+864m-\frac{27}{2}m^2,&2\le m\le10,\\
+m(789-6m),&10\le m\le91,\\
+\dfrac{3m(5m^2-868m+41552)}{49},&91\le m\le140.
+\end{cases}
+\]
+Its minimum on $2\le m\le140$ is $1674>1458$.  Global complement lets every
+nonzero codeword use $m\le140$, while the $280$ support-one line-star words all
+have weight $1458$.  Hence
+\[
+\boxed{C_{Q(5,3)}=[102060,279,1458],\qquad A_{1458}=280.}
+\]
+
+\paragraph{Pass 4522: the $366$ missing dual dimensions contain a faithful $O^-_6(2)$ quotient.}
+Let $D=C^\perp$, $P$ be the span of the $2160$ odd weight-three prism checks,
+and $E\le D$ the even-weight subcode.  Since parity is nonzero on $P$,
+\[
+\boxed{\dim(D,P,E,P\cap E)=(1581,1215,1580,1214),}
+\]
+so
+\[
+\boxed{\dim(D/P)=\dim(E/(P\cap E))=366.}
+\]
+This corrects the tempting but false picture of $P$ as a submodule of $E$.
+The $366$-space has a canonical fixed line inside a canonical fixed hyperplane;
+the middle quotient has dimension $364$.  A deterministic outer-invariant
+$358$-submodule yields a faithful six-dimensional quotient.  On it the inner
+and outer images have orders $25920$ and $51840$, the invariant alternating
+form is unique and nondegenerate, and the invariant quadratic refinement is
+minus type with
+\[
+28=1+27\text{ singular vectors},\qquad36\text{ anisotropic vectors}.
+\]
+Thus this quotient realizes the standard
+$PSp(4,3)\cong\Omega^-_6(2)$ shadow and adjoining the projective outer
+involution gives $O^-_6(2)$.  The pass does \emph{not} claim that the displayed
+$358$-submodule completes the Loewy series of the $364$-space.
+
+\paragraph{Pass 4523: primitive-six zeta tomography works for every thick $GQ(s,t)$.}
+For the signed primitive length-six Ihara polynomial, the degree-two Walsh
+coefficient for two geometric lines is
+\[
+\boxed{c_{\rm dis}=s(s+1)(s-1)^2}
+\]
+when they are disjoint and
+\[
+\boxed{c_{\rm adj}=s^2(s-1)^2(2t+1)}
+\]
+when they intersect.  Indeed a fixed pair belongs to
+$\beta=s(s+1)/2$ or $\alpha=s^2t$ apartments, each apartment contributes
+$2(s-1)^2$ oriented simple hexagons to the parity pair, and an intersecting pair
+has the additional $s^2(s-1)^2$ triangle--triangle figure-eight family.
+Therefore
+\[
+ c_{\rm adj}-c_{\rm dis}=s(s-1)^2(2st-1)>0
+\]
+for every thick generalized quadrangle, and the degree-two primitive-six Walsh
+matrix reconstructs the line-intersection graph exactly.
+
+\paragraph{Pass 4524: $Q(5,3)$ falsifies a naive nine-sheet prism extrapolation.}
+There are $4536\binom{10}{3}=544320$ triangular prisms.  Projecting each
+six-line indicator $b$ by $b\mapsto A_*b$ gives
+\[
+\boxed{544320\text{ distinct images, all of weight }104.}
+\]
+Thus the map is injective, not nine-to-one.  For each noncollinear point pair,
+the XOR of all ten rung pairs is in $\ker A_*$, so a three-rung prism has the
+same image as its complementary seven-rung fan.  This is the precise mechanism
+that changes from W33.
+
+\paragraph{Pass 4525 (outside the box): the $27$ singular vectors are explicitly the cubic-surface lines.}
+Polar orthogonality on the nonzero singular vectors of the six-space gives
+$SRG(27,10,1,5)$.  Rather than infer a Schlaefli identification from those
+parameters, the executable gives an explicit $27$-vertex graph isomorphism to
+the repo's existing $W(E_6)$ cubic-surface-line carrier and conjugates all five
+inner generators plus the outer generator into the existing $W(E_6)$
+permutation group.  Hence the permutation representations are literally
+isomorphic.
+
+\paragraph{Pass 4526 (outside the box): the odd-$t$ fan-kernel theorem explains W33's exceptional collapse.}
+For noncollinear points $x,y$ of any $GQ(s,t)$, their $t+1$ common neighbours
+give two complete line-stars joined into a rung fan.  When $t$ is odd, every
+fan line meets $t+1$ fan lines and every external line meets exactly two, so the
+full fan lies in $\ker A_{\rm line}$ over $\mathbb F_2$.  Consequently a
+$k$-rung selection and its $(t+1-k)$-rung complement have the same protected
+image.  For a three-rung prism the canonical complement has $t-2$ rungs, which
+is a single edge exactly at $t=3$.  Thus the W33 edge collapse is the special
+$4=3+1$ case; $Q(5,3)$ has $10=3+7$ instead.
+
+\paragraph{Pass 4527 (outside the box): the $36$ anisotropic vectors are explicitly the $36$ double-sixes.}
+Polar orthogonality on the anisotropic vectors gives $SRG(36,15,6,6)$.  An
+explicit $36$-vertex isomorphism identifies it with the repo's double-six
+carrier, where two double-sixes are adjacent exactly when their $12$-line
+supports intersect in four cubic-surface lines.  Generator conjugation again
+matches the full order-$51840$ permutation action.  This is an explicit
+representation bridge, not a $36=36$ coincidence.
+
+\begin{quote}\small
+\textbf{Evidence boundary.}  The exact executable certificates are
+\texttt{w33\_pass4520\_apartment\_enumerator\_frontier.py},
+\texttt{w33\_pass4521\_q53\_apartment\_distance\_proof.py},
+\texttt{w33\_pass4522\_4525\_4527\_dual\_orthogonal\_schlafli.py},
+\texttt{w33\_pass4523\_general\_gq\_c6\_tomography.py},
+\texttt{w33\_pass4524\_q53\_prism\_fiber\_exception.py}, and
+\texttt{w33\_pass4526\_general\_gq\_prism\_fan\_kernel.py}.
+The complete W33 numerical weight enumerator remains open.  No finite group,
+code, graph-zeta or cubic-surface identification in this section is promoted to
+a physical hardware or field-theory statement.
+\end{quote}
