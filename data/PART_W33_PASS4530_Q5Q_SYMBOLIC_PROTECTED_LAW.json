@@ -1,0 +1,34 @@
+{
+  "boundary": "This is a symbolic incidence/Gram theorem. It neither enumerates apartments for q>3 nor identifies the protected dimension with a physical state count.",
+  "family": "Q(5,q)=GQ(q,q^2), q congruent 3 mod 4",
+  "general_GQ_gram": {
+    "alpha": "s^2t",
+    "beta": "s(s+1)/2",
+    "identity": "HH^T=(r-beta)I+(alpha-beta)A_*+beta J",
+    "incidence": "N^T N=(s+1)I+A_*",
+    "passing_criterion": "s congruent 3 mod4 and t odd",
+    "r": "(s+1)s^2t^2/2"
+  },
+  "open_rank_problem": "A closed formula for h(q) and rho(q) is not proved here. Classical generalized-quadrangle code literature is relevant, but this certificate does not substitute a remembered or guessed rank formula.",
+  "pass": 4530,
+  "Q5q_theorem": {
+    "apartment_radical_dimension": "h(q)-rho(q), where h(q)=rank_2(H)",
+    "gram_identity": "HH^T=N^T N over F2 for every q congruent 3 mod4",
+    "protected_dimension": "rho(q)=rank_2(N^T N)",
+    "rank_bounds": "rho(q) <= h(q) <= (q^2+1)(q^3+1)-1"
+  },
+  "q3_anchor": {"h": 279, "protected": 70, "radical": 209, "rho": 70},
+  "symbolic_counts": {
+    "apartments": "(q^2+1)(q^3+1) q^6(q+1)/8",
+    "apartments_through_line": "q^6(q+1)/2",
+    "lines": "(q^2+1)(q^3+1)",
+    "points": "(q+1)(q^3+1)"
+  },
+  "examples": [
+    {"q": 3, "order": [3,9], "points": 112, "lines": 280, "apartments": 102060, "apartments_through_line_r": 1458, "alpha": 81, "beta": 6},
+    {"q": 7, "order": [7,49], "points": 2752, "lines": 17200, "apartments": 2023562800, "apartments_through_line_r": 470596, "alpha": 2401, "beta": 28},
+    {"q": 11, "order": [11,121], "points": 15984, "lines": 162504, "apartments": 431828623116, "apartments_through_line_r": 10629366, "alpha": 14641, "beta": 66},
+    {"q": 19, "order": [19,361], "points": 137200, "lines": 2483320, "apartments": 292074943012300, "apartments_through_line_r": 470458810, "alpha": 130321, "beta": 190}
+  ],
+  "theorem": "The W33 apartment/incidence bridge extends symbolically to the infinite Q(5,q) subfamily q=3 mod4; its protected dimension is exactly the binary incidence-Gram rank rho(q), with no q=3 extrapolation needed."
+}
