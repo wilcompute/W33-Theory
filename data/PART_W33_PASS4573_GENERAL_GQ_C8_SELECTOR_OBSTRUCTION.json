@@ -1,0 +1,30 @@
+{
+  "W33_special_case": {
+    "apartment_coefficient": 712,
+    "apartments": 1620,
+    "geometry": "GQ(3,3)",
+    "status": "Pass4548 exact: coefficient 712 singles out apartments"
+  },
+  "boundary": "This refutes C8-coefficient-alone universality. It does not classify all (s,t) for which a unique C8 apartment coefficient exists.",
+  "control": {
+    "conclusion": "the GQ(2,2) collision is not forced merely by s=2",
+    "geometry": "Q^-(5,2)=GQ(2,4)",
+    "lines": 45,
+    "points": 27,
+    "sample_K13_coefficient": 36,
+    "sample_apartment_coefficient": 60
+  },
+  "counterexample": {
+    "apartments": 90,
+    "conclusion": "coefficient 36 contains both all apartments and 60 non-apartment stars",
+    "geometry": "W(3,2)=GQ(2,2)",
+    "induced_K13_supports": 60,
+    "lines": 15,
+    "points": 15,
+    "primitive_C8_degree4_K13_coefficient": 36,
+    "primitive_C8_degree4_apartment_coefficient": 36
+  },
+  "pass": 4573,
+  "universal_C8_coefficient_selector": false,
+  "universal_replacement": "Pass4523 C6 degree-two reconstructs the line graph for every thick GQ; apartments are then its induced C4 building cycles"
+}
