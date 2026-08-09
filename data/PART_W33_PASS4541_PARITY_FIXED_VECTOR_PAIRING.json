@@ -1,0 +1,11 @@
+{
+  "boundary": "Symplectic/fixed-vector language is finite module geometry. It does not identify pi with a physical conserved charge without dynamics.",
+  "edge_layer": "V9=ker(pi)=1^perp",
+  "exhausted_protected_vectors": 1024,
+  "fixed_vector_ambient": [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+  "fixed_vector_preimage_support": [0,1,2,3],
+  "identity": "pi(A_* b)=B(A_* b, 1)=b^T 1",
+  "module_chain": "0 < <1> < 1^perp < H10 with dimensions 0<1<9<10",
+  "pass": 4541,
+  "theorem": "The missing coefficient-parity bit is the alternating-form coordinate dual to the unique PSp-fixed protected vector; the entire edge carrier is exactly its orthogonal hyperplane."
+}
