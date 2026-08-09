@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>W33 Line-Signing Apartment Parity — Passes 4461–4464</title>
+<title>W33 Line-Signing Apartment Parity — Passes 4461–4465</title>
 <style>
-:root{color-scheme:dark;background:#0b0d11;color:#e8ecf2;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}body{max-width:980px;margin:0 auto;padding:36px 22px 72px;line-height:1.58}a{color:#8fd3ff}.card{border:1px solid #2b3442;border-radius:14px;padding:20px;margin:18px 0;background:#11151c}.eq{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#090b0f;border-radius:8px;padding:10px 12px;overflow:auto}h1,h2{line-height:1.15}.boundary{border-left:4px solid #d7a84b;padding-left:16px;color:#d9dfe8}.small{color:#aab4c2;font-size:.94rem}</style>
+:root{color-scheme:dark;background:#0b0d11;color:#e8ecf2;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}body{max-width:980px;margin:0 auto;padding:36px 22px 72px;line-height:1.58}a{color:#8fd3ff}.card{border:1px solid #2b3442;border-radius:14px;padding:20px;margin:18px 0;background:#11151c}.eq{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#090b0f;border-radius:8px;padding:10px 12px;overflow:auto;white-space:pre-wrap}h1,h2{line-height:1.15}.boundary{border-left:4px solid #d7a84b;padding-left:16px;color:#d9dfe8}.small{color:#aab4c2;font-size:.94rem}</style>
 </head>
 <body>
 <p><a href="index.html">← Exceptional Geometry home</a></p>
 <h1>Line signings, building apartments, and the parity code</h1>
-<p class="small">Passes 4461–4464 · exact finite-combinatorial frontier · W(3,3)</p>
+<p class="small">Passes 4461–4465 · exact finite-combinatorial frontier · W(3,3) and general GQ(s,t)</p>
 <div class="card">
 <h2>1. The signing is incidence-native</h2>
 <p>Assign one sign σ<sub>ℓ</sub>∈{±1} to each of the 40 geometric lines of W(3,3). Each K<sub>4</sub> line owns six point-collinearity edges, and the 40 six-edge supports partition all 240 edges. If N is point–line incidence, the signed adjacency is</p>
@@ -19,7 +19,7 @@
 </div>
 <div class="card">
 <h2>2. The 1,620 quadrangles are the Levi apartments</h2>
-<p>The point graph has exactly 1,620 simple 4-cycles. Each uses four distinct geometric lines; those four lines form a 4-cycle in the dual line graph, and inserting the line vertices gives the corresponding Levi 8-cycle. These are three shadows of the same rank-two-building apartment.</p>
+<p>The point graph has exactly 1,620 induced quadrangles. Each uses four distinct geometric lines; those four lines form a 4-cycle in the dual line graph, and inserting the line vertices gives the corresponding Levi 8-cycle. These are three shadows of the same rank-two-building apartment.</p>
 <div class="eq">tr(Aσ⁴) = 12000 + 8 W₄ = 24960 − 25920 f₄</div>
 <p>Here W₄ is the sum of the four-line sign products over the 1,620 apartments, and f₄ is the fraction with negative product. The fourth moment’s entire variable part is therefore an apartment-parity observable.</p>
 </div>
@@ -49,6 +49,16 @@ dim rad(C) = 29
 dim C/rad(C) = 10.</div>
 <p>A one-line code generator has weight 162. The XOR of two line generators has weight 270 when the two lines intersect and 312 when they are disjoint.</p>
 </div>
-<p class="boundary"><strong>Evidence boundary.</strong> These statements are finite-geometric identities and exact null-model calculations. They do not establish a physical gauge field, do not make any optimized signing statistically special without comparison to the exact null, and do not assert that an optical experiment automatically measures all apartment parities. The executable witnesses and frozen JSON certificates live in <code>analysis/w33_pass4461_...</code> through <code>w33_pass4464_...</code> and <code>data/PART_W33_PASS4461_...</code> through <code>PASS4464</code>.</p>
+<div class="card">
+<h2>6. The theorem extends to every generalized quadrangle</h2>
+<p>For a finite GQ(s,t), set n=(s+1)(st+1), L=(t+1)(st+1), and d=s(t+1). A sign on each geometric line gives:</p>
+<div class="eq">tr(Aσ²) = n d
+tr(Aσ³) = 6 C(s+1,3) Σℓ σℓ
+tr(Aσ⁴) = n d(2d−1) + 24 L C(s+1,4) + 8 WQ.</div>
+<p>The exact number of induced quadrangles is Q=n s²t²(t+1)/8. If H is line–quadrangle incidence in that GQ, a line lies in r=(s+1)s²t²/2 quadrangles, intersecting line pairs in α=s²t, and disjoint line pairs in β=s(s+1)/2, so</p>
+<div class="eq">H Hᵀ = (r−β) I + (α−β) A* + β J.</div>
+<p>The dual pair GQ(3,9) and GQ(9,3) both have Q=102,060 quadrangle observables, while their line-sign registers have 280 and 112 bits respectively. Duality preserves the apartment count, not the signing granularity. This is why the general trace theorem does <em>not</em> resurrect the refuted claim that Ramanujan probability is controlled by s alone.</p>
+</div>
+<p class="boundary"><strong>Evidence boundary.</strong> These statements are finite-geometric identities and exact null-model calculations. They do not establish a physical gauge field, do not make any optimized signing statistically special without comparison to the exact null, and do not assert that an optical experiment automatically measures all apartment parities. The executable witnesses and frozen JSON certificates live in <code>analysis/w33_pass4461_...</code> through <code>w33_pass4465_...</code> and <code>data/PART_W33_PASS4461_...</code> through <code>PASS4465</code>.</p>
 </body>
 </html>
