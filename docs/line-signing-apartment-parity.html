@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>W33 Line-Signing Apartment Parity — Passes 4461–4466</title>
+<title>W33 Line-Signing Apartment Parity — Passes 4461–4471</title>
 <style>
-:root{color-scheme:dark;background:#0b0d11;color:#e8ecf2;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}body{max-width:980px;margin:0 auto;padding:36px 22px 72px;line-height:1.58}a{color:#8fd3ff}.card{border:1px solid #2b3442;border-radius:14px;padding:20px;margin:18px 0;background:#11151c}.eq{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#090b0f;border-radius:8px;padding:10px 12px;overflow:auto;white-space:pre-wrap}h1,h2{line-height:1.15}.boundary{border-left:4px solid #d7a84b;padding-left:16px;color:#d9dfe8}.correction{border-left:4px solid #ee7b7b;padding-left:16px}.small{color:#aab4c2;font-size:.94rem}</style>
+:root{color-scheme:dark;background:#0b0d11;color:#e8ecf2;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}body{max-width:980px;margin:0 auto;padding:36px 22px 72px;line-height:1.58}a{color:#8fd3ff}.card{border:1px solid #2b3442;border-radius:14px;padding:20px;margin:18px 0;background:#11151c}.eq{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#090b0f;border-radius:8px;padding:10px 12px;overflow:auto;white-space:pre-wrap}h1,h2{line-height:1.15}.boundary{border-left:4px solid #d7a84b;padding-left:16px;color:#d9dfe8}.correction{border-left:4px solid #ee7b7b;padding-left:16px}.new{border-left:4px solid #78c7a3;padding-left:16px}.small{color:#aab4c2;font-size:.94rem}</style>
 </head>
 <body>
 <p><a href="index.html">← Exceptional Geometry home</a></p>
 <h1>Line signings, building apartments, and the parity code</h1>
-<p class="small">Passes 4461–4466 · exact finite-combinatorial frontier · W(3,3) and general GQ(s,t)</p>
+<p class="small">Passes 4461–4471 · exact finite-combinatorial frontier · W(3,3), protected H10, and general GQ(s,t)</p>
 <div class="card">
 <h2>1. The signing is incidence-native</h2>
 <p>Assign one sign σ<sub>ℓ</sub>∈{±1} to each of the 40 geometric lines of W(3,3). Each K<sub>4</sub> line owns six point-collinearity edges, and the 40 six-edge supports partition all 240 edges. If N is point–line incidence, the signed adjacency is</p>
@@ -44,28 +44,54 @@ spec(H Hᵀ) = 648¹ ⊕ 198²⁴ ⊕ 72¹⁵.</div>
 <div class="card">
 <h2>5. The nondegenerate binary core</h2>
 <p>The apartment-parity image is a binary [1620,39] linear code. The dual adjacency form has rank 10 over F₂, so the code radical has dimension 29 and the quotient is a nondegenerate 10-dimensional alternating, hence symplectic, vector space.</p>
-<div class="eq">dim C = 39
-dim rad(C) = 29
-dim C/rad(C) = 10.</div>
+<div class="eq">dim C_ap = 39
+dim rad(C_ap) = 29
+dim C_ap/rad(C_ap) = 10.</div>
 <p>A one-line code generator has weight 162. The XOR of two line generators has weight 270 when the two lines intersect and 312 when they are disjoint.</p>
 </div>
 <div class="card">
-<h2>6. The theorem extends to every generalized quadrangle</h2>
+<h2>6. The trace theorem extends to every generalized quadrangle</h2>
 <p>For a finite GQ(s,t), set n=(s+1)(st+1), L=(t+1)(st+1), and d=s(t+1). A sign on each geometric line gives:</p>
 <div class="eq">tr(Aσ²) = n d
 tr(Aσ³) = 6 C(s+1,3) Σℓ σℓ
 tr(Aσ⁴) = n d(2d−1) + 24 L C(s+1,4) + 8 WQ.</div>
 <p>The exact number of induced quadrangles is Q=n s²t²(t+1)/8. If H is line–quadrangle incidence in that GQ, a line lies in r=(s+1)s²t²/2 quadrangles, intersecting line pairs in α=s²t, and disjoint line pairs in β=s(s+1)/2, so</p>
 <div class="eq">H Hᵀ = (r−β) I + (α−β) A* + β J.</div>
-<p>The dual pair GQ(3,9) and GQ(9,3) both have Q=102,060 quadrangle observables, while their line-sign registers have 280 and 112 bits respectively. Duality preserves the apartment count, not the signing granularity. This is why the general trace theorem does <em>not</em> resurrect the refuted claim that Ramanujan probability is controlled by s alone.</p>
 </div>
 <div class="card correction">
 <h2>7. Correction to the recent Pass 4433 cycle statistic</h2>
 <p>The Pass 4433 helper claimed to list every simple 4-cycle once. On W33 it actually emits 3,480 records: 1,740 underlying simple C₄s, each twice. Those 1,740 split into the 1,620 induced apartments plus 120 cycles wholly inside the geometric K₄ lines.</p>
 <p>Line-internal cycles always have positive parity under a line signing, so Pass 4433's raw fraction was a diluted apartment fraction:</p>
 <div class="eq">flegacy = (27/29) fapartment   on W(3,3).</div>
-<p>This does <strong>not</strong> invalidate its standardized z-score against a random line-signing baseline; multiplying every sample by the same positive factor leaves z unchanged. It corrects the raw normalization and the label. In general, <code>flegacy = Q/(Q+3L C(s+1,4)) fapartment</code>. The dilution factors are 243/245 for GQ(3,9) but only 81/137 for GQ(9,3), so cross-GQ raw legacy fractions should not be compared without undilution.</p>
+<p>This does <strong>not</strong> invalidate its standardized z-score against a random line-signing baseline; multiplying every sample by the same positive factor leaves z unchanged. In general, <code>flegacy = Q/(Q+3L C(s+1,4)) fapartment</code>. The dilution factors are 243/245 for GQ(3,9) but only 81/137 for GQ(9,3), so cross-GQ raw legacy fractions should not be compared without undilution.</p>
 </div>
-<p class="boundary"><strong>Evidence boundary.</strong> These statements are finite-geometric identities, exact null-model calculations, and an explicit correction to recent enumeration semantics. They do not establish a physical gauge field, do not make any optimized signing statistically special without comparison to the exact null, and do not assert that an optical experiment automatically measures all apartment parities. The executable witnesses and frozen JSON certificates live in <code>analysis/w33_pass4461_...</code> through <code>w33_pass4466_...</code> and <code>data/PART_W33_PASS4461_...</code> through <code>PASS4466</code>.</p>
+<div class="card new">
+<h2>8. New: the apartment quotient is exactly the protected H10 label space</h2>
+<p>The 10-dimensional quotient is not just numerically equal to the older CSS logical-label shadow. If C=ker(Nᵀ) is the established [40,15,8] sentinel code and C<sup>⊥</sup>=im(N), then incidence itself gives the canonical chain</p>
+<div class="eq">C_ap/rad(C_ap)
+≅ F₂⁴⁰ / ker(NᵀN)
+ -- [b] ↦ [Nb] -->
+ im(N) / ker(Nᵀ)
+= C⊥/C = H10.</div>
+<p>The kernel and pairing are literal:</p>
+<div class="eq">Nb ∈ ker(Nᵀ)  ⇔  NᵀNb = 0
+⟨Hᵀb,Hᵀc⟩ = bᵀNᵀNc = ⟨Nb,Nc⟩.</div>
+<p>All 2¹⁰ quotient classes were checked. This identifies the apartment-parity quotient with <em>one</em> protected H10 logical-label copy of the established [[40,10,4]] CSS code; the full logical Pauli label space remains 20-dimensional.</p>
+</div>
+<div class="card new">
+<h2>9. New: the only quadratic mismatch is the old fixed 1-layer</h2>
+<p>Both quotients carry the natural Hamming quadratic refinement q(v)=wt(v)/2 mod 2 and both have exactly 528 singular classes including zero, so both are plus-type O<sup>+</sup>(10,2). The raw incidence map is symplectic but not quadratic: the two refinements differ by one nonzero linear functional.</p>
+<p>Nondegeneracy represents that functional by a unique isotropic class a. Under the incidence bridge its H10 image is exactly</p>
+<div class="eq">im(Apoint mod 2) / C,</div>
+<p>the fixed one-dimensional layer already present in the older H10=1|8|1 module filtration. A single transvection T<sub>a</sub>(v)=v+B(v,a)a repairs the quadratic on all 1,024 classes. Because the defect line is invariant and one-dimensional over F₂, the correction is equivariant. This is a comparison-map correction, not a claim of a new physical gate.</p>
+</div>
+<div class="card new">
+<h2>10. New: exact orientation criterion for the bridge in GQ(s,t)</h2>
+<p>Point–line incidence always satisfies NᵀN=(s+1)I+A*. Comparing this with the general apartment Gram above and reducing modulo two gives the sharp condition</p>
+<div class="eq">HHᵀ = NᵀN over F₂
+⇔ s ≡ 3 (mod 4) and t is odd.</div>
+<p>So W(3,3) passes. GQ(3,9) also passes in the displayed line orientation. The dual parameter orientation GQ(9,3) fails. The bridge is therefore a characteristic-two orientation effect, not a duality invariant. This exact criterion is adjacent to—but does not explain—the empirical s/t line-signing success sweep in Pass 4457.</p>
+</div>
+<p class="boundary"><strong>Evidence boundary.</strong> These statements are finite-geometric identities, exact quotient/isometry calculations, and explicit corrections. They do not establish a physical gauge field, do not make any optimized signing statistically special without comparison to the exact null, do not assert that an optical experiment automatically measures all apartment parities, and do not turn the quadratic comparison transvection into a hardware gate. The executable witnesses and frozen JSON certificates now run through Pass 4471.</p>
 </body>
 </html>
