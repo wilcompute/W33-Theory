@@ -1,0 +1,40 @@
+name: Pass 4547 Q53 Global Prism Action
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4547_q53_global_prism_action.py'
+      - 'data/PART_W33_PASS4547_Q53_GLOBAL_PRISM_ACTION.json'
+      - '.github/workflows/w33_pass4547_q53_global_prism_action.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-action:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check numpy pynauty
+      - name: Preserve target certificate and execute verifier
+        run: |
+          cp data/PART_W33_PASS4547_Q53_GLOBAL_PRISM_ACTION.json /tmp/target.json
+          python analysis/w33_pass4547_q53_global_prism_action.py | tee /tmp/pass4547.log
+          python - <<'PY'
+          import json
+          g=json.load(open('data/PART_W33_PASS4547_Q53_GLOBAL_PRISM_ACTION.json'))
+          t=json.load(open('/tmp/target.json'))
+          assert g['full_bipartition_preserving_automorphism_group']['order']==t['full_bipartition_preserving_automorphism_group']['order']==13063680
+          assert g['noncollinear_pair_action']['orbit_size']==4536
+          assert g['noncollinear_pair_action']['stabilizer_order']==2880
+          assert g['noncollinear_pair_action']['stabilizer_image_on_rungs_order']==1440
+          assert g['noncollinear_pair_action']['kernel_order']==2
+          assert g['noncollinear_pair_action']['ordered_distinct_triple_orbit_size']==720
+          assert g['noncollinear_pair_action']['unordered_3_subset_orbit_size']==120
+          assert g['global_prism_action']==t['global_prism_action']
+          PY
+          cp /tmp/target.json data/PART_W33_PASS4547_Q53_GLOBAL_PRISM_ACTION.json
+      - run: git diff --check
