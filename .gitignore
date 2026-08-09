@@ -262,3 +262,6 @@ formal/.lake/
 !/PART_CCCXLIX_eigenmatrix_pq_results.json
 
 data/corpus_index.sqlite
+# Pass 4466: DuckDB certificate index -- rebuildable from data/**/*.json
+data/cert_index.duckdb
+data/first_appearance_cache.json
