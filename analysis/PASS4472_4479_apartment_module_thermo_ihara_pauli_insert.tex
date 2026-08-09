@@ -1,0 +1,197 @@
+% Passes 4472--4479: module action, four-spin model, C4 audit, Artin--Ihara,
+% code structure, E8/2E8 carrier, real four-qubit Pauli shadow, MacWilliams thermal duality.
+\subsection{Apartment parity beyond the $10$-space: module structure, zeta coefficients, and exact thermal duality}
+\label{sec:pass4472-4479-apartment-module}
+
+Passes~4461--4466 turned the $1620$ building apartments into a binary
+$[1620,39]$ parity code $C$ whose nondegenerate alternating quotient has
+dimension $10$.  The concurrent Passes~4469--4471 identify that quotient with
+the protected $H_{10}$ label shadow by an incidence map.  The present packet
+asks a different question: what does the native W33 symmetry \emph{do} on that
+space, and what additional exact structures become visible once the action is
+computed rather than inferred from the dimension?
+
+\paragraph{Pass 4472: the $10$-space has a canonical $1|8|1$ filtration.}
+Rebuilding the projective line action from transvections gives the inner
+$\operatorname{PSp}(4,3)$ image of order $25920$ and, after adjoining a
+similitude, the projective outer extension of order $51840$.  Both act
+faithfully on the nondegenerate $10$-dimensional apartment quotient.  The inner
+action fixes exactly one line.  If $v$ spans that line, symplectic invariance
+forces the $9$-space $v^\perp$ to be invariant, and direct computation gives
+\begin{equation}
+  0 < \langle v\rangle < v^\perp < H_{10},
+  \qquad
+  \dim=(1,9,10).
+  \label{eq:pass4472-filtration}
+\end{equation}
+The composition dimensions are therefore
+\begin{equation}
+  \boxed{1\mid 8\mid 1.}
+  \label{eq:pass4472-181}
+\end{equation}
+The middle $8$-dimensional factor is faithful and irreducible for the inner
+group.  Its nonzero vectors form exactly two orbits, of sizes $135$ and $120$.
+Thus the new quotient is not an irreducible ``mysterious ten'': it contains a
+canonical eight-dimensional core between two trivial one-dimensional factors.
+
+\paragraph{Pass 4473: the apartment Hamiltonian is a code energy exactly.}
+For line-sign bits $b\in\mathbb F_2^{40}$ define
+\[
+  \mathcal H(b)=-W_4(b).
+\]
+Since the apartment syndrome is $H^Tb$ and
+$W_4=1620-2\operatorname{wt}(H^Tb)$,
+\begin{equation}
+  \boxed{\mathcal H(b)=-1620+2\operatorname{wt}(H^Tb).}
+  \label{eq:pass4473-hamiltonian}
+\end{equation}
+Pass~4463 proved $\ker H^T=\langle\mathbf1_{40}\rangle$, so the exact ground
+space has only the two globally reversed constant signings,
+\begin{equation}
+  \boxed{E_0=-1620,\qquad g_0=2.}
+  \label{eq:pass4473-ground}
+\end{equation}
+A one-line flip has code weight $162$ and energy $-1296$.  Under independent
+random line signs the exact energy moments are
+\[
+ \mathbb E E=0,
+ \quad \operatorname{Var}E=1620,
+ \quad \mathbb E E^3=-12960,
+ \quad \mathbb E E^4=9891720.
+\]
+As a deliberately labelled empirical control, $4096$ deterministic random
+line signings (seed $4473$) give correlation
+$\operatorname{corr}(\rho,E)=-0.27752577$ between signed spectral radius and
+four-spin energy; $26.4648\%$ are Ramanujan in that sample, and their mean
+energy is $6.5092$ versus $-0.1475$ overall.  This modest opposition is
+consistent with the earlier warning that a spin-glass objective is not a
+surrogate for Bilu--Linial spectral optimization; the correlation itself is not
+a theorem.
+
+\paragraph{Pass 4474: three different ``four-cycle counts'' must remain distinct.}
+The exact W33 census is
+\begin{equation}
+ \boxed{1740=1620+120,}
+ \label{eq:pass4474-c4-census}
+\end{equation}
+where $1620$ are induced generalized-quadrangle apartments and $120$ are simple
+$C_4$'s lying inside the forty geometric $K_4$ lines.  The historical
+Pass~4433 common-neighbour helper emits $3480$ records because it sees every
+simple $C_4$ from both diagonal pairs.  Therefore an unqualified statement
+``W33 has $1620$ four-cycles'' is safe only when ``four-cycle'' explicitly means
+induced quadrangle/apartment.  The advisory checker
+\texttt{scripts/check\_w33\_c4\_semantics.py} now scans the repository for this
+semantic failure mode while allowing historical corrected text to remain in
+place.
+
+\paragraph{Pass 4475: the apartment observable is an Artin--Ihara coefficient.}
+Let $B_\sigma$ be the $480\times480$ signed non-backtracking matrix for a line
+signing and put $S=\sum_\ell\sigma_\ell$.  Exact directed-walk enumeration gives
+\begin{equation}
+ \boxed{\operatorname{tr}(B_\sigma^3)=24S,}
+ \qquad
+ \boxed{\operatorname{tr}(B_\sigma^4)=960+8W_4.}
+ \label{eq:pass4475-hashimoto-traces}
+\end{equation}
+The fixed $960=8\cdot120$ is precisely the eight orientations of the $120$
+line-internal simple $C_4$'s.  Therefore, for
+$L_\sigma(u)=\det(I-uB_\sigma)^{-1}$,
+\begin{equation}
+ \boxed{
+ \log L_\sigma(u)
+ =8S\,u^3+(240+2W_4)u^4+O(u^5).}
+ \label{eq:pass4475-artin-ihara}
+\end{equation}
+This makes the bridge to the covering-graph Artin--Ihara language literal: the
+apartment Walsh Hamiltonian is the complete signing-dependent part of the
+$u^4$ logarithmic coefficient after the fixed geometric-line contribution is
+removed.  The determinant/L-function context is the standard finite-covering
+graph framework of Stark and Terras; the W33 coefficient identity above is the
+new finite calculation.
+
+\paragraph{Pass 4476: low-weight structure of the $[1620,39]$ apartment code.}
+The primal minimum distance is \emph{not} promoted to a theorem: one line gives
+$d(C)\le162$, and exhaustive coefficient supports through five flipped lines
+find no smaller codeword, but that does not exclude a lower-weight word with
+larger coefficient support.  What is exact is the dual beginning:
+\begin{equation}
+ \boxed{d(C^\perp)=3,\qquad A_3(C^\perp)=2160,\qquad
+ A_4(C^\perp)=84240.}
+ \label{eq:pass4476-dual-lowweights}
+\end{equation}
+There are no dual words of weight one or two because the $1620$ apartment
+columns are nonzero and distinct; exact XOR enumeration supplies the weight
+three and four counts.  The projective similitude action permutes the apartment
+coordinates, giving a certified automorphism subgroup of order at least
+$51840$; equality with the full code automorphism group is not claimed.
+
+\paragraph{Pass 4477: the eight-dimensional core reconstructs the old $E_8/2E_8$ carrier.}
+The middle factor admits a unique invariant quadratic refinement under the
+outer action.  It is plus type:
+\[
+  \#\{Q=0\}=136\quad(135\text{ nonzero}),
+  \qquad \#\{Q=1\}=120.
+\]
+The polar-orthogonality graphs on the two nonzero classes are exactly
+\begin{equation}
+ \boxed{\operatorname{SRG}(135,70,37,35),}
+ \qquad
+ \boxed{\operatorname{SRG}(120,63,30,36).}
+ \label{eq:pass4477-e8-srgs}
+\end{equation}
+More discriminatingly, a nonsingular-vector stabilizer has order $216$ in the
+inner group and suborbits
+$1,1,1,27,27,27,36$; adjoining the outer action doubles it to order $432$ and
+changes the suborbits to $1,2,27,36,54$.  Those are exactly the corrected
+fingerprints already used in this repository for the transitive code embedding
+of the $E_8/2E_8$ plus-type carrier after the Pass~1070 orbit/suborbit
+retraction.  Thus apartment parity supplies a new construction of that old
+carrier, not merely another occurrence of the numbers $135$ and $120$.
+
+\paragraph{Pass 4478 (outside the box): a real four-qubit Pauli phase-space shadow.}
+An explicit hyperbolic basis puts the invariant quadratic into the canonical
+form
+\begin{equation}
+ \boxed{Q(a_1,b_1,\ldots,a_4,b_4)=\sum_{i=1}^4 a_i b_i\pmod2.}
+ \label{eq:pass4478-pauli-q}
+\end{equation}
+For real four-qubit Pauli classes this quadratic records the parity of the
+number of $Y$ factors: the nonidentity even-parity/symmetric classes number
+$135$, while the odd-parity/skew classes number $120$.  The executable witness
+checks the isometry on all $256$ vectors.  This matches the established finite
+geometry of the real four-qubit Pauli group described by Saniga, Levay and
+Pracna.  It is a finite phase-space isometry only; it does not say that the
+$1620$-coordinate apartment code is physically implemented by four qubits.
+
+\paragraph{Pass 4479 (outside the box): MacWilliams is an exact thermal transform.}
+Let $W_C(z)=\sum_{c\in C}z^{\operatorname{wt}(c)}$.  Since every codeword has
+exactly two line-sign preimages,
+\begin{equation}
+ \boxed{
+ Z(\beta)=\sum_{b\in\mathbb F_2^{40}}e^{-\beta\mathcal H(b)}
+ =2e^{1620\beta}W_C(e^{-2\beta}).}
+ \label{eq:pass4479-partition}
+\end{equation}
+Together with the two-variable MacWilliams identity
+\begin{equation}
+ \boxed{
+ W_C(x,y)=|C^\perp|^{-1}W_{C^\perp}(x+y,x-y),}
+ \label{eq:pass4479-macwilliams}
+\end{equation}
+this is a literal finite coding/statistical-mechanics duality for the apartment
+Hamiltonian.  No thermodynamic-limit phase transition is asserted; the exact
+content is the finite partition-function transform.
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{\small
+\textbf{Evidence boundary.}  Passes~4472--4479 are regenerated by
+\texttt{analysis/w33\_pass4472\_4479\_apartment\_module\_thermo\_ihara\_pauli.py}
+and frozen in
+\texttt{data/PART\_W33\_PASS4472\_4479\_APARTMENT\_MODULE\_THERMO\_IHARA\_PAULI.json}.
+All module orders, filtrations, orbit sizes, quadratic types, SRG parameters,
+Hashimoto traces, dual low-weight counts, and finite partition-function
+identities are exact computations.  The $4096$-sample spectral/energy
+correlation is explicitly empirical.  No physical gauge field, physical
+four-qubit machine, $E_8$ dynamics, continuum temperature, or spectral
+optimality is inferred from the finite identifications alone.}}
+\end{center}
