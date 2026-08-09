@@ -1,0 +1,109 @@
+% Passes 4469--4471: apartment parity -> protected H10 bridge.
+% Evidence-tiered manuscript insert; prior owners are named explicitly.
+\subsection{Apartment parity and the protected binary label space (Passes 4469--4471)}
+\label{sec:pass4469-apartment-h10-bridge}
+
+Let $N$ be the $40\times40$ point--line incidence matrix of $W(3,3)$ and
+let $H$ be the $40\times1620$ line--apartment incidence matrix.  Passes
+4463--4464 established
+\[
+ \operatorname{rank}_{\mathbb F_2}H=39,
+ \qquad
+ \dim\operatorname{rad}(\operatorname{im}H^T)=29,
+ \qquad
+ H H^T=N^TN=A_*\pmod2,
+\]
+with $A_*$ the dual line-collinearity adjacency.  Pass~201 independently
+owns the binary sentinel code
+\[
+ C=\ker N^T=[40,15,8],
+ \qquad C^\perp=\operatorname{im}N,
+\]
+and the $10$-dimensional logical-label quotient
+$H_{10}=C^\perp/C$ of the $[[40,10,4]]$ CSS code.
+
+\begin{theorem}[Canonical apartment--$H_{10}$ symplectic bridge]
+The incidence map induces an exact isometry of nondegenerate alternating
+spaces
+\[
+ \boxed{
+ \frac{\operatorname{im}H^T}{\operatorname{rad}(\operatorname{im}H^T)}
+ \;\cong\;
+ \frac{\mathbb F_2^{40}}{\ker(N^TN)}
+ \xrightarrow{\ [b]\mapsto[Nb]\ }
+ \frac{\operatorname{im}N}{\ker N^T}
+ =H_{10}.}
+\]
+Its kernel statement and pairing statement are literal:
+\[
+ Nb\in\ker N^T\iff N^TN b=0,
+\]
+\[
+ \langle H^Tb,H^Tc\rangle
+ =b^TN^TNc
+ =\langle Nb,Nc\rangle\pmod2.
+\]
+The executable witness checks the quotient dimensions, the three Gram
+matrices, and all $2^{10}$ quotient classes.
+\end{theorem}
+
+The two natural Hamming quadratic refinements,
+\[
+ q_{\rm ap}([y])=\frac{\operatorname{wt}(y)}2\pmod2,
+ \qquad
+ q_{H_{10}}([x])=\frac{\operatorname{wt}(x)}2\pmod2,
+\]
+both descend and both have $528$ singular classes including zero; hence
+both are of plus type $O^+(10,2)$.  The raw incidence isometry is not,
+however, a quadratic isometry.  Their difference is one nonzero linear
+functional $\ell(v)=B(v,a)$.  Pass~4470 identifies the unique isotropic
+defect class under the bridge with
+\[
+ \boxed{\operatorname{im}(A_{\rm point}\bmod2)/C,}
+\]
+the fixed one-dimensional layer already owned by Pass~187 inside the
+uniserial $H_{10}=1\mid8\mid1$ filtration.  The single symplectic
+transvection
+\[
+ T_a(v)=v+B(v,a)a
+\]
+repairs the quadratic refinement on all $2^{10}$ classes, so
+$T_a\circ\Phi$ is an equivariant quadratic isometry.  This transvection
+is a comparison-map correction; it is not being promoted to a physical
+gate.
+
+The same mechanism has a sharp generalized-quadrangle boundary.  For a
+finite $GQ(s,t)$, Pass~4465 gives
+\[
+ HH^T=(r-\beta)I+(\alpha-\beta)A_*+\beta J,
+ \quad
+ r=\frac{(s+1)s^2t^2}{2},\quad
+ \alpha=s^2t,\quad
+ \beta=\frac{s(s+1)}2,
+\]
+whereas point--line incidence always gives
+$N^TN=(s+1)I+A_*$.  Reduction modulo two yields
+\[
+ \boxed{HH^T=N^TN\ \text{ over }\mathbb F_2
+ \iff s\equiv3\pmod4\ \text{ and }t\text{ is odd}.}
+\]
+Thus $W(3,3)$ and the displayed $GQ(3,9)$ orientation satisfy the bridge,
+while the dual parameter orientation $GQ(9,3)$ does not.  The statement
+is therefore an orientation-sensitive characteristic-two theorem, not a
+duality invariant and not an explanation of the empirical Ramanujan
+signing percentages of Pass~4457.
+
+\begin{quote}\small
+\textbf{Evidence boundary.}
+The new content is the explicit incidence intertwiner, the fixed-layer
+quadratic correction, and the exact $s\bmod4$/parity criterion.  The
+$[[40,10,4]]$ code, the $H_{10}=1\mid8\mid1$ filtration, and the $528$
+plus-type count are prior results and remain cited to Passes 201 and 187.
+No full $20$-dimensional logical-Pauli identification, physical apartment
+measurement protocol, or fault-tolerant gate set follows from this bridge.
+The executable witnesses are
+\texttt{analysis/w33\_pass4469\_apartment\_css\_h10\_intertwiner.py},
+\texttt{analysis/w33\_pass4470\_apartment\_h10\_quadratic\_fixed\_layer.py},
+and
+\texttt{analysis/w33\_pass4471\_general\_gq\_apartment\_incidence\_bridge.py}.
+\end{quote}
