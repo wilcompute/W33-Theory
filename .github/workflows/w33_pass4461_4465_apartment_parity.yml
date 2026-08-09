@@ -1,4 +1,4 @@
-name: Passes 4461-4465 Apartment Parity
+name: Passes 4461-4466 Apartment Parity
 on:
   push:
     branches: [master]
@@ -8,14 +8,17 @@ on:
       - 'analysis/w33_pass4463_apartment_parity_tomography.py'
       - 'analysis/w33_pass4464_apartment_code_symplectic_quotient.py'
       - 'analysis/w33_pass4465_general_gq_line_signing_trace.py'
+      - 'analysis/w33_pass4466_legacy_four_cycle_frustration_audit.py'
       - 'analysis/PASS4461_4462_line_signing_apartment_insert.tex'
       - 'analysis/PASS4465_general_gq_line_signing_insert.tex'
+      - 'analysis/PASS4466_legacy_four_cycle_audit_insert.tex'
       - 'analysis/PASS4461_4464_line_signing_apartment_index_insert.html'
       - 'data/PART_W33_PASS4461_LINE_SIGNING_APARTMENT_TRACE.json'
       - 'data/PART_W33_PASS4462_APARTMENT_WALSH_NULL_MODEL.json'
       - 'data/PART_W33_PASS4463_APARTMENT_PARITY_TOMOGRAPHY.json'
       - 'data/PART_W33_PASS4464_APARTMENT_CODE_SYMPLECTIC_QUOTIENT.json'
       - 'data/PART_W33_PASS4465_GENERAL_GQ_LINE_SIGNING_TRACE.json'
+      - 'data/PART_W33_PASS4466_LEGACY_FOUR_CYCLE_FRUSTRATION_AUDIT.json'
       - 'data/w33_public_frontier_extension_pass4461_4464.json'
       - 'docs/line-signing-apartment-parity.html'
       - 'tools/integrate_bt3376_bt3389.py'
@@ -27,7 +30,7 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: pass4461-4465-${{ github.ref }}
+  group: pass4461-4466-${{ github.ref }}
   cancel-in-progress: false
 jobs:
   exact-manuscript-site-dry-run:
@@ -44,30 +47,33 @@ jobs:
         run: python -m pip install --disable-pip-version-check numpy
       - name: Regenerate exact certificates
         run: |
-          mkdir -p evidence/pass4461_4465
-          for pass in 4461 4462 4463 4464 4465; do
+          mkdir -p evidence/pass4461_4466
+          for pass in 4461 4462 4463 4464 4465 4466; do
             case "$pass" in
               4461) script=analysis/w33_pass4461_line_signing_apartment_trace.py ;;
               4462) script=analysis/w33_pass4462_apartment_walsh_null_model.py ;;
               4463) script=analysis/w33_pass4463_apartment_parity_tomography.py ;;
               4464) script=analysis/w33_pass4464_apartment_code_symplectic_quotient.py ;;
               4465) script=analysis/w33_pass4465_general_gq_line_signing_trace.py ;;
+              4466) script=analysis/w33_pass4466_legacy_four_cycle_frustration_audit.py ;;
             esac
-            python "$script" | tee "evidence/pass4461_4465/pass${pass}.log"
+            python "$script" | tee "evidence/pass4461_4466/pass${pass}.log"
           done
           git diff --exit-code -- \
             data/PART_W33_PASS4461_LINE_SIGNING_APARTMENT_TRACE.json \
             data/PART_W33_PASS4462_APARTMENT_WALSH_NULL_MODEL.json \
             data/PART_W33_PASS4463_APARTMENT_PARITY_TOMOGRAPHY.json \
             data/PART_W33_PASS4464_APARTMENT_CODE_SYMPLECTIC_QUOTIENT.json \
-            data/PART_W33_PASS4465_GENERAL_GQ_LINE_SIGNING_TRACE.json
+            data/PART_W33_PASS4465_GENERAL_GQ_LINE_SIGNING_TRACE.json \
+            data/PART_W33_PASS4466_LEGACY_FOUR_CYCLE_FRUSTRATION_AUDIT.json
       - name: Dry-run restored-site reconciliation
         run: |
           python tools/integrate_bt3376_bt3389.py \
-            --report evidence/pass4461_4465/site_integration.json
+            --report evidence/pass4461_4466/site_integration.json
           test "$(grep -c 'id="pass4461-4464-line-signing-apartment-parity"' docs/index.html)" -eq 1
           test -s docs/line-signing-apartment-parity.html
           grep -q '102,060' docs/line-signing-apartment-parity.html
+          grep -q '27/29' docs/line-signing-apartment-parity.html
       - uses: WtfJoke/setup-tectonic@v3
         with:
           github-token: '${{ secrets.GITHUB_TOKEN }}'
@@ -75,23 +81,24 @@ jobs:
         run: |
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
             tectonic --keep-logs "$source" 2>&1 \
-              | tee "evidence/pass4461_4465/${source%.tex}.log"
+              | tee "evidence/pass4461_4466/${source%.tex}.log"
             test -s "${source%.tex}.pdf"
           done
           sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
-            > evidence/pass4461_4465/pdf_sha256.txt
+            > evidence/pass4461_4466/pdf_sha256.txt
       - name: Static integrity
         run: |
           git diff --check
           grep -q 'PASS4465_general_gq_line_signing_insert' w33_paper.tex
           grep -q 'PASS4465_general_gq_line_signing_insert' photonic_holonet.tex
           grep -q 'PASS4465_general_gq_line_signing_insert' holonet_machine_blueprint.tex
+          grep -q 'PASS4466_legacy_four_cycle_audit_insert' analysis/PASS4465_general_gq_line_signing_insert.tex
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: pass4461-4465-apartment-parity-evidence
+          name: pass4461-4466-apartment-parity-evidence
           path: |
-            evidence/pass4461_4465/**
+            evidence/pass4461_4466/**
             w33_paper.pdf
             photonic_holonet.pdf
             holonet_machine_blueprint.pdf
