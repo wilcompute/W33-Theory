@@ -1,0 +1,21 @@
+{
+  "Borel_order": 162,
+  "boundary": "This is an exact finite Borel-orbit/locality decomposition of the Pass-4513 edge action. It is not an E8 identification, spacetime locality statement, or decoder-performance claim.",
+  "edge_location_totals": {"boundary":108,"exterior":108,"internal":24},
+  "fixed_flag": {"line":0,"point":0},
+  "line_vertex_orbit_sizes": [1,3,9,27],
+  "local_cell": {"center_spokes":12,"induced_graph":"K1 join 4K3","internal_edges":24,"size":13,"support":[0,1,2,3,4,5,6,7,8,9,28,32,36],"triangle_edges":12},
+  "orbit_size_identity": "240 = 2*(3+9+27+81)",
+  "pass": 4532,
+  "protected_edge_orbits": [
+    {"cell_location":"internal","endpoints_in_13_line_cell":2,"orbit_size":3,"representative":[0,1],"stabilizer_order_in_Borel":54,"vertex_orbit_types":[0,1]},
+    {"cell_location":"internal","endpoints_in_13_line_cell":2,"orbit_size":3,"representative":[1,2],"stabilizer_order_in_Borel":54,"vertex_orbit_types":[1,1]},
+    {"cell_location":"internal","endpoints_in_13_line_cell":2,"orbit_size":9,"representative":[0,4],"stabilizer_order_in_Borel":18,"vertex_orbit_types":[0,2]},
+    {"cell_location":"internal","endpoints_in_13_line_cell":2,"orbit_size":9,"representative":[4,5],"stabilizer_order_in_Borel":18,"vertex_orbit_types":[2,2]},
+    {"cell_location":"boundary","endpoints_in_13_line_cell":1,"orbit_size":27,"representative":[1,10],"stabilizer_order_in_Borel":6,"vertex_orbit_types":[1,3]},
+    {"cell_location":"exterior","endpoints_in_13_line_cell":0,"orbit_size":27,"representative":[10,11],"stabilizer_order_in_Borel":6,"vertex_orbit_types":[3,3]},
+    {"cell_location":"boundary","endpoints_in_13_line_cell":1,"orbit_size":81,"representative":[4,12],"stabilizer_order_in_Borel":2,"vertex_orbit_types":[2,3]},
+    {"cell_location":"exterior","endpoints_in_13_line_cell":0,"orbit_size":81,"representative":[10,13],"stabilizer_order_in_Borel":2,"vertex_orbit_types":[3,3]}
+  ],
+  "theorem": "Under the splitting Borel, the protected dual-W33 240-edge carrier decomposes into eight power-of-three orbits; the 13-line gauge cell contains exactly the four smallest orbits (24 edges), with 108 boundary and 108 exterior edges."
+}
