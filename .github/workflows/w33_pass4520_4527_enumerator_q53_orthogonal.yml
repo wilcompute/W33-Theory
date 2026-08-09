@@ -1,0 +1,137 @@
+name: Passes 4520-4527 Enumerator Q53 Orthogonal
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4520_apartment_enumerator_frontier.py'
+      - 'analysis/w33_pass4521_q53_apartment_distance_proof.py'
+      - 'analysis/w33_pass4522_4525_4527_dual_orthogonal_schlafli.py'
+      - 'analysis/w33_pass4523_general_gq_c6_tomography.py'
+      - 'analysis/w33_pass4524_q53_prism_fiber_exception.py'
+      - 'analysis/w33_pass4526_general_gq_prism_fan_kernel.py'
+      - 'analysis/PASS4520_4527_enumerator_q53_orthogonal_tomography_insert.tex'
+      - 'analysis/PASS4520_4527_enumerator_q53_orthogonal_tomography_index_insert.html'
+      - 'analysis/PASS4503_4510_apartment_obstruction_scaling_insert.tex'
+      - 'data/PART_W33_PASS4520_APARTMENT_ENUMERATOR_FRONTIER.json'
+      - 'data/PART_W33_PASS4521_Q53_APARTMENT_DISTANCE_PROOF.json'
+      - 'data/PART_W33_PASS4522_4525_4527_DUAL_ORTHOGONAL_SCHLAFLI.json'
+      - 'data/PART_W33_PASS4523_GENERAL_GQ_C6_TOMOGRAPHY.json'
+      - 'data/PART_W33_PASS4524_Q53_PRISM_FIBER_EXCEPTION.json'
+      - 'data/PART_W33_PASS4526_GENERAL_GQ_PRISM_FAN_KERNEL.json'
+      - 'data/w33_public_frontier_extension_pass4461_4464.json'
+      - 'docs/apartment-q53-orthogonal-tomography.html'
+      - '.github/workflows/w33_pass4520_4527_enumerator_q53_orthogonal.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pass4520-4527-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install verifier dependencies
+        run: python -m pip install --disable-pip-version-check numpy pytest
+      - name: Preserve frozen certificates
+        run: |
+          mkdir -p evidence/pass4520_4527 /tmp/pass4520_4527
+          for f in \
+            data/PART_W33_PASS4520_APARTMENT_ENUMERATOR_FRONTIER.json \
+            data/PART_W33_PASS4521_Q53_APARTMENT_DISTANCE_PROOF.json \
+            data/PART_W33_PASS4522_4525_4527_DUAL_ORTHOGONAL_SCHLAFLI.json \
+            data/PART_W33_PASS4523_GENERAL_GQ_C6_TOMOGRAPHY.json \
+            data/PART_W33_PASS4524_Q53_PRISM_FIBER_EXCEPTION.json \
+            data/PART_W33_PASS4526_GENERAL_GQ_PRISM_FAN_KERNEL.json; do
+            cp "$f" "/tmp/pass4520_4527/$(basename "$f")"
+          done
+      - name: Regenerate exact Q53 distance and general GQ theorems
+        run: |
+          python analysis/w33_pass4521_q53_apartment_distance_proof.py | tee evidence/pass4520_4527/q53_distance.log
+          python analysis/w33_pass4523_general_gq_c6_tomography.py | tee evidence/pass4520_4527/gq_c6.log
+          python analysis/w33_pass4524_q53_prism_fiber_exception.py | tee evidence/pass4520_4527/q53_prism.log
+          python analysis/w33_pass4526_general_gq_prism_fan_kernel.py | tee evidence/pass4520_4527/fan_kernel.log
+          python - <<'PY'
+          import json
+          assert json.load(open('data/PART_W33_PASS4521_Q53_APARTMENT_DISTANCE_PROOF.json'))['code']=={'dimension':279,'length':102060,'minimum_distance':1458,'minimum_word_count':280}
+          g=json.load(open('data/PART_W33_PASS4523_GENERAL_GQ_C6_TOMOGRAPHY.json'))
+          assert g['coefficients']['disjoint']=='s(s+1)(s-1)^2'
+          assert g['coefficients']['adjacent']=='s^2(s-1)^2(2t+1)'
+          q=json.load(open('data/PART_W33_PASS4524_Q53_PRISM_FIBER_EXCEPTION.json'))
+          assert q['protected_map']['injective'] and q['protected_map']['distinct_images']==544320 and q['protected_map']['image_weight']==104
+          f=json.load(open('data/PART_W33_PASS4526_GENERAL_GQ_PRISM_FAN_KERNEL.json'))
+          assert f['triangular_prism']['canonical_complement_is_single_edge_iff']=='t=3'
+          PY
+      - name: Regenerate 366D quotient and explicit cubic-surface bridges
+        run: |
+          python analysis/w33_pass4522_4525_4527_dual_orthogonal_schlafli.py | tee evidence/pass4520_4527/orthogonal_bridges.log
+          python - <<'PY'
+          import json
+          d=json.load(open('data/PART_W33_PASS4522_4525_4527_DUAL_ORTHOGONAL_SCHLAFLI.json'))
+          m=d['4522_dual_module']
+          assert (m['dual_dimension'],m['prism_span_dimension'],m['even_dual_dimension'],m['prism_intersect_even_dimension'])==(1581,1215,1580,1214)
+          assert m['orthogonal_quotient_dimension']==6 and m['inner_image_order']==25920 and m['outer_image_order']==51840
+          assert d['4525_schlafli_bridge']['generator_conjugation_verified']
+          assert d['4527_double_six_bridge']['generator_conjugation_verified']
+          PY
+      - name: Regenerate exact support-6/7 enumerator frontier
+        run: |
+          python analysis/w33_pass4520_apartment_enumerator_frontier.py | tee evidence/pass4520_4527/enumerator.log
+          python - <<'PY'
+          import json
+          d=json.load(open('data/PART_W33_PASS4520_APARTMENT_ENUMERATOR_FRONTIER.json'))
+          assert d['status']=='OPEN_FULL_ENUMERATOR'
+          assert d['exact_support_6']['486']==1440
+          assert d['exact_support_7']['486']==240
+          assert d['total_codeword_orbits_mod_PGSp_and_complement']==10789604
+          PY
+      - name: Restore frozen certificate formatting and archive regenerated payloads
+        run: |
+          for f in data/PART_W33_PASS4520_APARTMENT_ENUMERATOR_FRONTIER.json data/PART_W33_PASS4521_Q53_APARTMENT_DISTANCE_PROOF.json data/PART_W33_PASS4522_4525_4527_DUAL_ORTHOGONAL_SCHLAFLI.json data/PART_W33_PASS4523_GENERAL_GQ_C6_TOMOGRAPHY.json data/PART_W33_PASS4524_Q53_PRISM_FIBER_EXCEPTION.json data/PART_W33_PASS4526_GENERAL_GQ_PRISM_FAN_KERNEL.json; do
+            cp "$f" "evidence/pass4520_4527/generated_$(basename "$f")"
+            cp "/tmp/pass4520_4527/$(basename "$f")" "$f"
+          done
+      - name: Verify concurrent manuscript chain and restored-site dry run
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('analysis/PASS4503_4510_apartment_obstruction_scaling_insert.tex').read_text()
+          a=p.index('PASS4519_flag_borel_sylow3_normalizer_insert')
+          b=p.index('PASS4520_4527_enumerator_q53_orthogonal_tomography_insert')
+          c=p.index('PASS4528_4535_borel_building_compiler_edge_insert')
+          assert a<b<c
+          PY
+          python tools/integrate_bt3376_bt3389.py --report evidence/pass4520_4527/site.json
+          test "$(grep -c 'id=\"pass4520-4527-enumerator-q53-orthogonal\"' docs/index.html)" -eq 1
+          test -s docs/apartment-q53-orthogonal-tomography.html
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+      - name: Compile canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass4520_4527/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass4520_4527/pdf_sha256.txt
+      - name: Fail-closed boundaries
+        run: |
+          git diff --check
+          grep -q 'complete numerical weight enumerator and Fisher-zero' analysis/PASS4520_4527_enumerator_q53_orthogonal_tomography_insert.tex
+          grep -q 'does not claim a complete Loewy series' analysis/PASS4520_4527_enumerator_q53_orthogonal_tomography_insert.tex
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pass4520-4527-enumerator-q53-orthogonal-evidence
+          path: |
+            evidence/pass4520_4527/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
