@@ -1,0 +1,11 @@
+{
+  "boundary": "This is an exact finite-group/building identification. Borel/chamber locality is not by itself a physical gauge field, spacetime locality, or hardware subgroup implementation.",
+  "cohomology_restriction": {"all_three_nonzero_classes_killed": true, "radical_H1_dimension": 2, "restriction_kernel_dimension": 2},
+  "flag": {"index": 160, "line": 0, "order": 162, "point": 0},
+  "group_order": 25920,
+  "normalizer": {"element_order_histogram": {"1": 1, "2": 9, "3": 44, "6": 72, "9": 36}, "equals_flag_stabilizer": true, "order": 162},
+  "pass": 4519,
+  "structural_reading": "The corrected symmetry-breaking threshold is a chamber/Borel gauge: fixing an incident point-line flag selects the Sylow-3 normalizer and annihilates both radical obstruction bits.",
+  "sylow3": {"element_order_histogram": {"1": 1, "3": 44, "9": 36}, "generators_used": 2, "index_in_flag": 2, "order": 81},
+  "theorem": "the canonical incident-flag splitting subgroup is exactly the Sylow-3 normalizer/Borel of PSp(4,3)"
+}
