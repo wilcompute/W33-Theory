@@ -1,0 +1,32 @@
+{
+  "boundary": "the ladder counts scripts whose source names an existing data file; the ground-truth half counts files named anywhere in analysis/*.py and cannot distinguish inputs from outputs, nor see producers outside analysis/. Neither half establishes that an orphan is abandoned",
+  "ground_truth": {
+    "files": 4963,
+    "named_verbatim": 2558,
+    "orphan_extensions": {
+      ".b85": 10,
+      ".csv": 43,
+      ".json": 1854,
+      ".md": 26,
+      ".npz": 7,
+      ".png": 9,
+      ".txt": 76,
+      ".zip": 44
+    },
+    "orphaned": 2097,
+    "stem_only": 308
+  },
+  "ladder": {
+    "dynamic_path_builders": 26,
+    "pass_scripts": 1149,
+    "upper_bound_output_free": 240,
+    "v1_PART_only": 133,
+    "v1_claimed_no_cert": 1016,
+    "v2_claimed_no_cert": 270,
+    "v2_word_json": 879,
+    "v3_any_extension": 883,
+    "v3_no_cert": 266
+  },
+  "lesson": "finding an instrument broken is not fixing it; a replacement guess must be validated against something that is not another instrument of the same kind -- here, the files themselves",
+  "retracts": "Pass 4461's corrected figure of 269 NO-CERT; the upper bound is 240 and the true value is lower still"
+}
