@@ -1,0 +1,185 @@
+% Passes 4511--4518: dual-code completion, exact enumerator reduction,
+% prism=edge identification, higher Ihara shadows, Q(5,3) code frontier,
+% nine-sheet prism fiber, one-orbit even-dual generation, and zeta tomography.
+\subsection{Dual completion, induced-subgraph enumerators, and higher zeta tomography (Passes 4511--4518)}
+\label{sec:pass4511-4518-dual-enumerator-ihara-q53}
+
+Passes~4495--4502 proved $C_{\rm ap}=[1620,39,162]$, identified the $2160$
+minimum dual words with triangular prisms, and left a $366$-dimensional gap
+between their rank-$1215$ span and $\dim C_{\rm ap}^{\perp}=1581$.  The present
+packet closes that dual gap, identifies the prism-induced $240$-set by an
+explicit equivariant map, pushes the signed Ihara hierarchy through lengths
+six--eight, and separates what can and cannot yet be proved about the complete
+weight enumerator and the larger $GQ(3,9)$ apartment code.
+
+\paragraph{Pass 4511: weight four closes the entire missing dual sector.}
+There are exactly $84240$ weight-four words of $C_{\rm ap}^{\perp}$.  Their
+binary span has dimension
+\[
+ \boxed{1580},
+\]
+which is exactly the even-coordinate-weight subcode of the $1581$-dimensional
+dual.  Adding any odd weight-three prism word therefore gives all of
+$C_{\rm ap}^{\perp}$.  Equivalently,
+\[
+ \boxed{\langle C^\perp_{(4)}\rangle=C^\perp_{\rm even},\qquad
+        \langle C^\perp_{(3)},C^\perp_{(4)}\rangle=C^\perp.}
+\]
+Under $PGSp(4,3)$ the $84240$ weight-four relations split into nine orbits of
+sizes
+\[
+1620,1620,3240,6480,6480,12960,12960,12960,25920.
+\]
+The final orbit alone supplies all $366$ dimensions missing from the prism span.
+Under the inner $PSp(4,3)$ action that same $25920$-set is a regular orbit, so a
+single weight-four seed and its full inner orbit already span the complete
+$1580$-dimensional even dual code.
+
+\paragraph{Pass 4512: the full enumerator reduces exactly to four W33 statistics, but is not yet numerically closed.}
+For a coefficient subset $S$ of the forty dual-W33 line vertices write
+$m=|S|$, let $e(S)$ count induced dual-W33 edges, $p_3(S)$ induced $P_3$
+triples, and $c_4(S)$ induced apartment quadrangles.  Expanding odd apartment
+intersection parity by
+\[
+ {\bf1}_{j\ {m odd}}={j\choose1}-2{j\choose2}+4{j\choose3}-8{j\choose4}
+\]
+and using the exact apartment incidences gives
+\[
+ \boxed{\operatorname{wt}(H^T1_S)
+ =162m-12{m\choose2}-42e(S)+12p_3(S)-8c_4(S).}
+\]
+Hence the complete enumerator is exactly the induced-subgraph sum
+\[
+ \boxed{W_C(z)=\frac12\sum_{S\subseteq V(W33)}
+ z^{162|S|-12{ |S|\choose2}-42e(S)+12p_3(S)-8c_4(S)}.}
+\]
+The factor $1/2$ is the global-complement kernel.  Burnside on
+$\operatorname{Aut}(C)=PGSp(4,3)$, whose action on the forty coefficients has
+$25$ cycle types, leaves $21578952$ subset orbits and
+\[
+ \boxed{10789604}
+\]
+codeword orbits after also quotienting by complement.  This is a rigorous
+reduction of the remaining exact computation, \emph{not} a completed numerical
+coefficient table.  The full weight enumerator therefore remains open.
+
+\paragraph{Pass 4513: the prism $240$-orbit is exactly the W33 edge action.}
+Let a prism have six-line indicator $b$.  For every prism there is a unique
+adjacent dual-line pair $i\sim j$ such that
+\[
+ \boxed{A_*b=A_*(e_i+e_j).}
+\]
+Conversely all $240$ adjacent pairs occur.  Thus the protected $240$-set of
+Pass~4502 is equivariantly the dual-W33 edge set, rather than merely another
+set of cardinality $240$.  Every edge has exactly nine prism preimages.  Its two
+endpoints lie outside each six-line prism and each endpoint meets exactly three
+of the prism lines.  The inner edge stabilizer has order $108$ and the previously
+observed suborbit fingerprint
+\[
+1,1,2,2,18,18,18,18,27,27,54,54,
+\]
+while the outer extension has stabilizer order $216$ and suborbits
+$1,1,4,18,18,18,18,27,27,108$.  In particular this explicit edge map prevents
+a count-only identification with the distinct $E_8$ root action.
+
+\paragraph{Pass 4514: primitive lengths six--eight have exact parity-support decompositions.}
+A meet-in-the-middle diagonal nonbacktracking trace, transported by directed-edge
+transitivity, decomposes every signed primitive coefficient into Walsh characters
+of line-parity supports.  After removing repetitions of shorter primes, the
+unsigned oriented primitive counts remain
+\[
+N_6=302880,\qquad N_7=2739840,\qquad N_8=26750160.
+\]
+The nonzero support characters occupy respectively $10$, $26$, and $142$
+$PSp(4,3)$ orbits.  By support size the primitive-class masses are
+\[
+\begin{array}{c|rrrrr}
+ n & |S|=0&2&4&6&8\\ \hline
+6&480&86400&129600&86400&0\\
+8&61200&1715040&8598960&11975040&4399920
+\end{array}
+\]
+and for odd length seven
+\[
+ |S|=1,3,5,7:\qquad 121920,\ 648000,\ 1296000,\ 673920.
+\]
+These are exact finite orbit sums, not sampled prime statistics.
+
+\paragraph{Pass 4515: $Q(5,3)=GQ(3,9)$ scales the code, but its distance equality remains open.}
+Pass~4506 already owns the exact $112$-point, $280$-line, $102060$-apartment
+construction and its $70$-dimensional apartment/protected quotient.  The new code
+question starts from its rank-$279$ apartment incidence matrix.  Every line row
+has weight $1458$, and for a coefficient subset $S$ in the $280$-vertex
+line-intersection graph,
+\[
+ \boxed{\operatorname{wt}(H^T1_S)
+ =1458m-12{m\choose2}-150e(S)+36p_3(S)-8c_4(S).}
+\]
+The exact support-two weights are $2754^{5040}$ and $2904^{34020}$; the
+support-three spectrum is
+\[
+3888^{13440},\quad4074^{136080},\quad4188^{1088640},\quad4338^{2381400}.
+\]
+A universal lower bound excludes every coefficient support size $2\le m\le12$
+from beating the line word.  After fixing complement symmetry, any counterexample
+to $d=1458$ must therefore have support between $13$ and $140$.  Accordingly
+\[
+ \boxed{d\le1458\quad\text{and equality remains OPEN}.}
+\]
+The dual side does close: its minimum distance is $3$, with exactly
+\[
+ \boxed{544320=4536{10\choose3}}
+\]
+minimum words, again the three rectangular apartment faces of triangular prisms.
+Here $4536$ is the number of noncollinear point pairs and the ten choices around
+such a pair are the $t+1$ common neighbors.
+
+\paragraph{Pass 4516 (outside the box): each W33 edge carries an affine nine-sheet prism fiber.}
+The order-$108$ inner edge stabilizer acts on the nine prism preimages with image
+order $36$ and kernel order $3$.  The image has element-order census
+\[
+1^1,\quad2^9,\quad3^8,\quad4^{18}.
+\]
+Its identity plus eight order-three elements form a normal regular translation
+subgroup $C_3^2$, while a fiber-point stabilizer is cyclic of order four.  Thus
+\[
+ \boxed{G_{\rm fiber}\cong C_3^2{:}C_4,\qquad
+        1\to C_3\to G_{\rm edge}\to C_3^2{:}C_4\to1.}
+\]
+This is an action-theoretic explanation of the nine-to-one prism projection, not
+a physical nine-state subsystem.
+
+\paragraph{Pass 4517 (outside the box): one regular orbit generates the even dual code.}
+A representative weight-four relation in the regular inner orbit uses eight
+lines whose induced dual-W33 subgraph has fourteen edges, two triangles and
+degree sequence
+\[
+3,3,3,3,4,4,4,4.
+\]
+Its four apartment supports have pairwise intersection sizes
+$0,0,2,2,2,2$.  The $25920$ $PSp(4,3)$ translates of this one relation span
+rank $1580$.  Hence a single orbit seed is a symmetry-complete generator for the
+entire even dual sector.
+
+\paragraph{Pass 4518 (outside the box): the sixth Ihara coefficient reconstructs W33.}
+Inside the primitive length-six Walsh polynomial, the degree-two coefficient is
+$252$ for the $240$ adjacent line pairs and $48$ for the $540$ disjoint pairs.
+Therefore its off-diagonal quadratic-coefficient matrix is exactly
+\[
+ \boxed{48(J-I)+204A_*.}
+\]
+So the two-body Walsh layer of $C_6$ alone reconstructs the dual-W33 adjacency
+matrix.  Together with Pass~4513 this gives two independent reconstructions of
+the same substrate: the prism projection recovers its edge action, while the
+length-six zeta coefficient recovers its adjacency.
+
+\begin{quote}\small
+\textbf{Evidence boundary.}  Passes~4511, 4513--4514 and 4516--4518 are exact
+finite code/group/zeta statements.  Pass~4512 gives an exact enumerator formula
+and exact Burnside search size but does not close the full numerical weight
+enumerator.  Pass~4515 proves the displayed $Q(5,3)$ formulas, support bounds and
+dual minimum relations but does not prove $d=1458$.  The $240$ identification is
+accepted only because an explicit equivariant edge map is constructed; no
+$E_8$-root identification or physical gauge interpretation follows from the
+counts.
+\end{quote}
