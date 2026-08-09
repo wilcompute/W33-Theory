@@ -1,0 +1,13 @@
+{
+  "boundary": "This is linear-algebraic information completeness for the finite protected edge family, not physical state tomography, a measurement protocol, or a fault-tolerance claim.",
+  "edge_image_span_dimension": 9,
+  "local_completeness": "The 13-line Borel cell, and already its 12 center spokes, span every vector obtainable from the protected 240-edge orbit.",
+  "local_ranks": {"all_240_edges":9,"boundary_108":9,"center_spokes_12":9,"exterior_108":8,"internal_24":9,"internal_tangential_12":8},
+  "minimal_local_spoke_basis_size": 9,
+  "missing_direction": "The edge-image family is codimension one in H10, so no combination of protected edge vectors reaches the top 1D quotient H10/V9.",
+  "module_identification": "The PSp-invariant span of all 240 edge images is the unique 9-dimensional invariant submodule in H10=1|8|1.",
+  "one_nine_spoke_basis": [[0,1],[0,2],[0,3],[0,4],[0,5],[0,7],[0,8],[0,28],[0,32]],
+  "pass": 4534,
+  "protected_H10_dimension": 10,
+  "theorem": "Protected edge tomography is completely local to one Borel cell but intrinsically 9-dimensional: nine local spokes generate the unique 9-layer of H10, while the tenth protected direction lies outside the entire 240-edge carrier."
+}
