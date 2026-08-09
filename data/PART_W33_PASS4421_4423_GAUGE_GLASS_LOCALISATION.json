@@ -1,0 +1,93 @@
+{
+  "boundary": "40 sites is small: IPR saturates at 1/40 = 0.025 for a perfectly extended state, so no localisation LENGTH is extracted and no thermodynamic limit is taken. Ground-state energies are annealed, not exact -- 2^40 configurations were not enumerated. The correlations are over 41 signings",
+  "graph": {
+    "edges": 240,
+    "ramanujan_bound": 6.633249580711,
+    "sites": 40,
+    "triangles": 160
+  },
+  "pass_4421_frustration": {
+    "conclusion": "NULL RESULT, against my prediction: triangle frustration does not distinguish a spectrally optimal signing from a random one (within 1 sigma). The trivial gauge field IS distinguished, so the observable is not blind -- a triangle is simply the shortest loop, and larger Wilson loops are where to look",
+    "optimised": {
+      "frustrated": 0.475,
+      "rho": 5.275388864292
+    },
+    "random": {
+      "mean": 0.497,
+      "n": 200,
+      "std": 0.039730341051
+    },
+    "trivial": {
+      "frustrated": 0.0,
+      "rho": 12.0
+    },
+    "z_score_vs_random": -0.553732976316
+  },
+  "pass_4422_localisation": {
+    "conclusion": "W(3,3) resists Anderson localisation where a 40-site ring does not; the mechanism is the spectral gap, so the Ramanujan property and resistance to localisation are the same statement",
+    "curve": [
+      {
+        "W": 0.0,
+        "ipr_ring": 0.0375,
+        "ipr_w33": 0.087225321739,
+        "sites_ring": 26.666666666667,
+        "sites_w33": 11.464560749865
+      },
+      {
+        "W": 1.0,
+        "ipr_ring": 0.061287471123,
+        "ipr_w33": 0.099932843413,
+        "sites_ring": 16.31654858118,
+        "sites_w33": 10.00672017171
+      },
+      {
+        "W": 2.0,
+        "ipr_ring": 0.11127717306,
+        "ipr_w33": 0.099183850126,
+        "sites_ring": 8.986569055476,
+        "sites_w33": 10.082286569099
+      },
+      {
+        "W": 4.0,
+        "ipr_ring": 0.232383974861,
+        "ipr_w33": 0.101066845967,
+        "sites_ring": 4.303222718349,
+        "sites_w33": 9.894441549392
+      },
+      {
+        "W": 8.0,
+        "ipr_ring": 0.448251168687,
+        "ipr_w33": 0.110425341049,
+        "sites_ring": 2.230892119987,
+        "sites_w33": 9.055892338633
+      },
+      {
+        "W": 16.0,
+        "ipr_ring": 0.669900951736,
+        "ipr_w33": 0.150443679702,
+        "sites_ring": 1.492757992669,
+        "sites_w33": 6.647005723223
+      },
+      {
+        "W": 32.0,
+        "ipr_ring": 0.82951452654,
+        "ipr_w33": 0.269923257208,
+        "sites_ring": 1.205524397712,
+        "sites_w33": 3.704756716199
+      }
+    ]
+  },
+  "pass_4423_glass": {
+    "corr_rho_energy": -0.636138704522,
+    "corr_rho_frustration": -0.017152274293,
+    "optimised": {
+      "E0": -86.0,
+      "frustration": 0.475,
+      "rho": 5.275388864292
+    },
+    "random_mean": {
+      "E0": -98.05,
+      "rho": 6.375487284501
+    }
+  }
+}

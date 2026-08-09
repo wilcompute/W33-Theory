@@ -1,0 +1,43 @@
+{
+  "boundary": "4417 is 120 gauge fields per disorder type on one graph -- the zero-mode lifting is a sample statement, though the chiral index argument that predicts it is not. 4418's no-go is exact: it is linear algebra over F2 plus edge-transitivity, with the point action verified to have order 25,920",
+  "pass_4417_zero_modes": {
+    "all_lift_phase": true,
+    "all_lift_sign": false,
+    "chiral_index": 0,
+    "conclusion": "phase disorder lifts all 30 zero modes as the vanishing chiral index requires; SIGN disorder does not, because a +/-1 signing keeps the matrix integral and is a measure-zero slice through the generic ensemble. The chiral symmetry itself is exact under both and cannot be broken by any gauge field",
+    "sublattice": [
+      40,
+      40
+    ],
+    "under_disorder": [
+      {
+        "chiral_symmetry_residual": 0.0,
+        "disorder": "sign disorder",
+        "max_zero_modes": 4,
+        "mean_zero_modes": 1.233333333333,
+        "median_closest_to_zero": 0.0
+      },
+      {
+        "chiral_symmetry_residual": 0.0,
+        "disorder": "phase disorder",
+        "max_zero_modes": 0,
+        "mean_zero_modes": 0.0,
+        "median_closest_to_zero": 0.054045622849
+      }
+    ],
+    "zero_modes_at_zero_flux": 30
+  },
+  "pass_4418_symmetric_signing": {
+    "best_rho_over_invariant_classes": 6.435686023335,
+    "dim_H1_F2": 201,
+    "dim_invariant_classes": 29,
+    "edge_orbit_size": 240,
+    "edge_transitive": true,
+    "edges": 240,
+    "invariant_class_beats_bound": true,
+    "point_action_order": 25920,
+    "proved": "edge-transitivity forces a literally invariant signing to be constant, rho = 12, far above the bound",
+    "ramanujan_bound": 6.633249580711,
+    "searched_not_proved": "the 29-dimensional invariant subspace of H^1(X,F2) was sampled and locally searched, not enumerated; 2^29 classes"
+  }
+}

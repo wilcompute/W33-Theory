@@ -1,0 +1,88 @@
+{
+  "boundary": "the expression grammar is a judgement and the absolute counts depend on it; only the RANKING between rows is robust, since all rows use the same grammar. Windows are stated with their rationale and are also judgements. Nothing here is derived from the geometry",
+  "instrument_rebuilt": "v1 asked only reachability, saturated at 83% in the Higgs window, and could not express (mu+1)^q at all; v2 ranks by description length, which does not saturate",
+  "pass_4420_F7": {
+    "error_GeV": 0.11,
+    "hl_lhc_projected_error_GeV": 0.05,
+    "measured_GeV": 125.2,
+    "predicted_GeV": 125.0,
+    "tension_sigma": 1.818,
+    "tension_sigma_if_central_holds": 4.0,
+    "unresolved": "the prediction does not state a renormalisation scheme; pole, MS-bar and resonance-position masses differ at the sub-GeV level, which is larger than the quoted tension"
+  },
+  "reachable_integers": 17602,
+  "rows": [
+    {
+      "cheaper_in_window": 10,
+      "cheapest_form": "mu+1^3",
+      "cost": 3,
+      "equally_cheap_in_window": 42,
+      "predicted": 125,
+      "quantity": "Higgs mass",
+      "reachable": true,
+      "row": "F7",
+      "saturation": 1.0,
+      "unit": "GeV",
+      "verdict": "uninformative",
+      "window": [
+        114,
+        200
+      ],
+      "window_rationale": "LEP direct limit below, perturbative-unitarity above"
+    },
+    {
+      "cheaper_in_window": 10,
+      "cheapest_form": "Phi_4^2+1",
+      "cost": 3,
+      "equally_cheap_in_window": 38,
+      "predicted": 101,
+      "quantity": "Sigma m_nu",
+      "reachable": true,
+      "row": "F16",
+      "saturation": 1.0,
+      "unit": "meV",
+      "verdict": "uninformative",
+      "window": [
+        59,
+        120
+      ],
+      "window_rationale": "normal-ordering oscillation floor below, Planck 2018 above"
+    },
+    {
+      "cheaper_in_window": 2077,
+      "cheapest_form": "Phi_3^3-2*27",
+      "cost": 5,
+      "equally_cheap_in_window": 7752,
+      "predicted": 2143,
+      "quantity": "WIMP mass",
+      "reachable": true,
+      "row": "F10",
+      "saturation": 0.1454,
+      "unit": "GeV",
+      "verdict": "uninformative",
+      "window": [
+        10,
+        100000
+      ],
+      "window_rationale": "the mass range direct detection was ever sensitive to"
+    },
+    {
+      "cheaper_in_window": 70,
+      "cheapest_form": "g^3-160",
+      "cost": 4,
+      "equally_cheap_in_window": 399,
+      "predicted": 3215,
+      "quantity": "heavy scalar",
+      "reachable": true,
+      "row": "F12",
+      "saturation": 0.4836,
+      "unit": "GeV",
+      "verdict": "uninformative",
+      "window": [
+        1500,
+        10000
+      ],
+      "window_rationale": "LHC exclusion below, FCC reach above"
+    }
+  ]
+}
