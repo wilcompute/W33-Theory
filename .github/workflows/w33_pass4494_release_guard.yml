@@ -1,0 +1,90 @@
+name: W33 Pass 4494 apartment-extension release guard
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+      - analysis/PASS4469_4471_apartment_css_bridge_insert.tex
+      - analysis/PASS4480_4483_apartment_h10_continuation_insert.tex
+      - analysis/PASS4485_4488_apartment_core_self_gluing_insert.tex
+      - analysis/PASS4490_4492_fixed_point_cocycle_insert.tex
+      - analysis/PASS4493_symmetry_breaking_section_insert.tex
+      - analysis/PASS4469_4489_APARTMENT_H10_RECONCILED_REPORT.md
+      - data/w33_public_frontier_extension_pass4461_4464.json
+      - docs/apartment-h10-geometric-readout.html
+      - docs/apartment-core-self-gluing.html
+      - docs/apartment-extension-cocycle.html
+      - docs/apartment-symmetry-breaking-section.html
+      - .github/workflows/w33_pass4494_release_guard.yml
+  pull_request:
+    paths:
+      - analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+      - analysis/PASS4493_symmetry_breaking_section_insert.tex
+      - data/w33_public_frontier_extension_pass4461_4464.json
+
+jobs:
+  release-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install focused dependencies
+        run: python -m pip install --upgrade numpy pytest
+      - name: Guard frontier manifest against truncation
+        run: |
+          set -euo pipefail
+          test "$(wc -l < analysis/W33_CURRENT_FRONTIER_MANIFEST.tex)" -gt 5
+          grep -q '4472' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          grep -q 'PASS4493_symmetry_breaking_section_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+      - name: Guard all three root manuscripts
+        run: |
+          set -euo pipefail
+          for f in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            grep -q 'W33_CURRENT_FRONTIER_MANIFEST' "$f"
+            grep -q 'PASS4469_4471_apartment_css_bridge_insert' "$f"
+            grep -q 'PASS4480_4483_apartment_h10_continuation_insert' "$f"
+            grep -q 'PASS4485_4488_apartment_core_self_gluing_insert' "$f"
+            grep -q 'PASS4490_4492_fixed_point_cocycle_insert' "$f"
+          done
+      - name: Guard rediscovery ownership correction
+        run: |
+          grep -q 'Pass 176' analysis/PASS4483_apartment_h10_prior_art_boundary.md
+          grep -q 'Pass~176' analysis/PASS4485_4488_apartment_core_self_gluing_insert.tex
+          grep -q 'Pass 176' data/PART_W33_PASS4485_APARTMENT_CORE_SELF_GLUING.json
+      - name: Guard public registry and standalone pages
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('.')
+          d=json.loads((root/'data/w33_public_frontier_extension_pass4461_4464.json').read_text())
+          tokens={x['token'] for x in d['public_sections']}
+          need={
+            'pass4469-4471-apartment-h10-bridge',
+            'pass4472-4479-apartment-module-thermo-ihara-pauli',
+            'pass4480-4483-apartment-h10-geometric-readout',
+            'pass4485-4488-apartment-core-self-gluing',
+            'pass4490-4492-fixed-point-cocycle',
+            'pass4493-symmetry-breaking-section-threshold',
+          }
+          assert need <= tokens, need-tokens
+          for name in [
+            'docs/line-signing-apartment-parity.html',
+            'docs/apartment-h10-geometric-readout.html',
+            'docs/apartment-core-self-gluing.html',
+            'docs/apartment-extension-cocycle.html',
+            'docs/apartment-symmetry-breaking-section.html',
+          ]:
+            assert (root/name).exists(), name
+          PY
+      - name: Re-run focused theorem packet
+        run: |
+          pytest -q \
+            tests/test_w33_pass4469_4471_apartment_h10_bridge.py \
+            tests/test_w33_pass4480_4484_apartment_h10_continuation.py \
+            tests/test_w33_pass4485_4489_apartment_core_self_gluing.py \
+            tests/test_w33_pass4490_4494_fixed_point_cocycle.py \
+            tests/test_w33_pass4493_symmetry_breaking_section_threshold.py
