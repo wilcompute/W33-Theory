@@ -1,0 +1,94 @@
+% Pass 4465: general GQ(s,t) line-signing low-moment and quadrangle-incidence theorem.
+\subsection{The apartment-parity trace law for a general $\mathrm{GQ}(s,t)$}
+\label{sec:pass4465-general-gq-line-signing}
+
+The $W(3,3)$ identities above are not isolated numerical features.  Let
+$\mathcal Q$ be any finite generalized quadrangle of order $(s,t)$, let $G$ be
+its point-collinearity graph, and assign one sign $\sigma_\ell\in\{\pm1\}$ to
+each geometric line $\ell$.  Every line induces a clique $K_{s+1}$ in $G$ and
+every graph edge lies on a unique geometric line.  With
+\[
+ n=(s+1)(st+1),\qquad
+ L=(t+1)(st+1),\qquad
+ d=s(t+1),
+\]
+the line-signed adjacency matrix obeys the parameter-exact trace laws
+\begin{align}
+ \operatorname{tr}(A_\sigma^2)
+   &=nd,\\
+ \operatorname{tr}(A_\sigma^3)
+   &=6\binom{s+1}{3}\sum_{\ell}\sigma_\ell,\\
+ \operatorname{tr}(A_\sigma^4)
+   &=nd(2d-1)+24L\binom{s+1}{4}+8W_{\mathcal Q}(\sigma),
+ \label{eq:pass4465-general-traces}
+\end{align}
+where $W_{\mathcal Q}$ is the sum of the products of the four side-line signs
+over all induced quadrangles.  The fourth-moment classification is exhaustive:
+repeated-edge closed walks give $nd(2d-1)$; a simple $4$-cycle with a chord
+contains a triangle and is therefore forced into one geometric line; and every
+remaining simple $4$-cycle is an induced generalized-quadrangle apartment using
+four distinct lines.
+
+The number of induced quadrangles is
+\begin{equation}
+ \boxed{
+ Q=\frac{n s^2 t^2(t+1)}{8}.}
+ \label{eq:pass4465-general-Q}
+\end{equation}
+If $H$ denotes line--quadrangle incidence and $A^\ast$ the line-collinearity
+adjacency matrix (equivalently the point graph of the dual $\mathrm{GQ}(t,s)$),
+then one line occurs in
+\[
+ r=\frac{(s+1)s^2t^2}{2}
+\]
+quadrangles, two intersecting lines occur together in
+\[
+ \alpha=s^2t,
+\]
+and two disjoint lines occur together in
+\[
+ \beta=\binom{s+1}{2}=\frac{s(s+1)}2.
+\]
+Consequently
+\begin{equation}
+ \boxed{
+ HH^T=(r-\beta)I+(\alpha-\beta)A^\ast+\beta J.}
+ \label{eq:pass4465-general-gram}
+\end{equation}
+For independent random line signs the distinct quadrangle supports are distinct
+quartic Walsh characters, so
+\[
+ \mathbb E W_{\mathcal Q}=0,
+ \qquad
+ \operatorname{Var}(W_{\mathcal Q})=Q,
+ \qquad
+ \mathbb E f_{\mathcal Q}=\frac12,
+ \qquad
+ \operatorname{sd}(f_{\mathcal Q})=\frac1{2\sqrt Q}.
+\]
+
+This theorem also clarifies the recent cross-generalized-quadrangle signing
+experiments without reviving the refuted ``coarseness law''.  The dual parameter
+sets $(s,t)=(3,9)$ and $(9,3)$ both have
+\[
+ \boxed{Q=102060}
+\]
+quadrangle observables, but their line-sign registers have respectively $280$
+and $112$ degrees of freedom and their signed cliques have sizes $4$ and $10$.
+Thus duality preserves the apartment count while not preserving line-signing
+granularity.  The theorem predicts exact low moments and null variances; it does
+\emph{not} predict the probability that a random line signing is Ramanujan.
+The measured $\mathrm{GQ}(3,9)$ counterexample from the recent signing frontier
+therefore remains a genuine boundary on any stronger $(s,t)$-only heuristic.
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{\small
+\textbf{Executable boundary.}  The formulas are generated and the $W(3,3)$
+specialisation is rebuilt exactly by
+\texttt{analysis/w33\_pass4465\_general\_gq\_line\_signing\_trace.py}, with the
+frozen certificate
+\texttt{data/PART\_W33\_PASS4465\_GENERAL\_GQ\_LINE\_SIGNING\_TRACE.json}.
+The result is a finite generalized-quadrangle theorem.  It does not turn the
+line signs into a physical gauge field and does not infer spectral optimality
+from the parameters alone.}}
+\end{center}
