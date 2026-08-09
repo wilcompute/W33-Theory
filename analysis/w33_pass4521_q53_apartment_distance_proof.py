@@ -42,13 +42,10 @@ OUT=ROOT/'data'/'PART_W33_PASS4521_Q53_APARTMENT_DISTANCE_PROOF.json'
 
 def lower_piece(m:int)->Fraction:
     if 2 <= m <= 10:
-        # e_max=4m+m^2/20 <=4.5m; B is decreasing here.
         return Fraction(864*m,1)-Fraction(27*m*m,2)
     if 10 <= m <= 91:
-        # 4.5m lies inside the spectral feasible interval.
         return Fraction(m*(789-6*m),1)
     if 91 <= m <= 140:
-        # e_min=m^2/14-2m >=4.5m; B is increasing here.
         return Fraction(3*m*(5*m*m-868*m+41552),49)
     raise ValueError(m)
 
@@ -58,13 +55,10 @@ def main()->int:
     m0=min(vals,key=vals.get)
     global_min=vals[m0]
     assert global_min>1458
-    # Boundary values and monotonicity checks for the three analytic pieces.
     assert vals[2]==1674
-    assert vals[10]==1890
+    assert vals[10]==7290
     assert vals[91]==22113
-    assert vals[140]>1458
-    # The support-one row weight is the exact design constant from Pass 4515.
-    row_weight=1458
+    assert vals[140]==154560
     result={
       'pass':4521,
       'theorem':'the Q(5,3)=GQ(3,9) binary apartment code has minimum distance 1458',
@@ -81,9 +75,9 @@ def main()->int:
         '10<=m<=91':'m(789-6m)',
         '91<=m<=140':'3m(5m^2-868m+41552)/49'},
       'minimum_lower_bound_over_support_2_to_140':{'support':m0,'value':str(global_min)},
-      'support_one':{'words':280,'weight':row_weight},
+      'support_one':{'words':280,'weight':1458},
       'complement_gauge':'every nonzero codeword has a coefficient representative with 1<=m<=140',
-      'boundary':'This is an exact combinatorial/spectral proof. No exhaustive 2^279 traversal is used.'}
+      'boundary':'Exact combinatorial/spectral proof; no exhaustive 2^279 traversal is used.'}
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(json.dumps(result,indent=2,sort_keys=True)+'\n',encoding='utf-8')
     print(json.dumps(result,indent=2,sort_keys=True));return 0
