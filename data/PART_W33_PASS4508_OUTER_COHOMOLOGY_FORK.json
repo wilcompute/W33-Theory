@@ -1,0 +1,8 @@
+{
+  "boundary": "This compares exact outer actions on two different coefficient-module cohomology groups. It does not assert a canonical map between those H1 spaces.",
+  "negative_identification": "The equal F2^2 dimensions do not define the same PGSp outer module; the two H1 spaces must not be identified by dimension alone.",
+  "pass": 4508,
+  "protected_middle_H1": {"PGSp_outer_action": "basis swap", "coefficient_module": "V8 middle factor of H10=1|8|1", "dimension": 2, "nonzero_outer_fixed_classes": 1, "owner": "Pass 4496"},
+  "radical_H1": {"PGSp_outer_action": "identity", "coefficient_module": "R29=K/J", "dimension": 2, "nonzero_outer_fixed_classes": 3},
+  "theorem": "outer-action fork between two dimension-2 PSp(4,3) cohomology spaces"
+}
