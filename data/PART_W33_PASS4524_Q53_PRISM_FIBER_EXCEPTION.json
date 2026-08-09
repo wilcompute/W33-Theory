@@ -1,0 +1,42 @@
+{
+  "Q53_comparison": {
+    "consequence": "no edge collapse; prism map is injective",
+    "rungs": 10,
+    "t": 9,
+    "three_rung_complement": 7
+  },
+  "W33_comparison": {
+    "consequence": "nine-sheet collapse to the omitted-rung line-graph edge",
+    "rungs": 4,
+    "t": 3,
+    "three_rung_complement": 1
+  },
+  "boundary": "Exact finite-geometry negative/generalization result. The W33 9-sheet edge fiber is not extrapolated to Q(5,3).",
+  "complement_duality": {
+    "three_rungs": "same image as complementary seven rungs",
+    "verified_prisms": 544320
+  },
+  "fan_kernel": {
+    "full_rungs": 10,
+    "identity": "A_*(xor of all 10 rung pairs)=0",
+    "verified_pairs": 4536
+  },
+  "geometry": {
+    "common_neighbors_per_pair": 10,
+    "lines": 280,
+    "noncollinear_point_pairs": 4536,
+    "points": 112
+  },
+  "pass": 4524,
+  "prisms": {
+    "count": 544320,
+    "formula": "4536*C(10,3)",
+    "rungs_chosen": 3
+  },
+  "protected_map": {
+    "distinct_images": 544320,
+    "image_weight": 104,
+    "injective": true,
+    "map": "b -> A_* b"
+  }
+}
