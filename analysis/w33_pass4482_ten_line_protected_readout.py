@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Pass 4482 -- optimal ten-line protected software readout.
 
-Renumbering note: first pushed under 4476; canonical ownership is 4482 because
-the independent 4472--4479 reservation predates the abandoned local one.
+Pass-4507 hardening correction: the previously frozen SELECTED list had drifted
+from the current canonical W33 line ordering and no longer passed this script's
+own Gram/P4+3K2 assertions.  The replacement below is recomputed directly in the
+current geometry and again realizes the six-intersection optimum.
 """
 from __future__ import annotations
 import json
@@ -13,7 +15,7 @@ from w33_pass4463_apartment_parity_tomography import rank_mod2
 from w33_pass4469_apartment_css_h10_intertwiner import nullspace_mod2, rref_rows
 
 ROOT=Path(__file__).resolve().parents[1]
-SELECTED=[1,5,14,15,19,23,24,33,35,39]
+SELECTED=[0,1,4,10,17,18,22,24,26,31]
 def inv2(M):
     M=np.asarray(M,dtype=np.uint8); n=len(M); A=np.hstack((M.copy(),np.eye(n,dtype=np.uint8)))
     for c in range(n):
@@ -66,9 +68,10 @@ def main():
       'no_induced_matching5':m5 is None,'induced_matching4_exists':m4 is not None,'inverse':np.array_equal((G@Gi)%2,np.eye(10,dtype=np.uint8)),
       'radical_orthogonal':not np.any((radical@B.T)%2),'all1024_recovered':recovered}
     assert all(checks.values()),checks
-    out={'pass':4482,'theorem':'W33 optimal ten-line protected software readout theorem','selected_line_indices':SELECTED,
+    out={'pass':4482,'status':'REPAIRED_BY_PASS4507','theorem':'W33 optimal ten-line protected software readout theorem','selected_line_indices':SELECTED,
       'basis_graph':{'type':'P4 disjoint-union 3K2','edges':6,'maximum_induced_matching':4,'minimum_intersections':6},
       'readout':{'bits':10,'formula':'p_i=<y,g_i>; c=p G^{-1}','all_1024_classes_verified':True,'each_g_i_weight':162},
+      'erratum':'The former frozen index list [1,5,14,15,19,23,24,33,35,39] had drifted and is superseded by the current canonical-basis list.',
       'boundary':'Ten bits are software parity post-processing of acquired apartment data, not ten physical apartment measurements or an optical-cost optimum.',
       'checks':{'passed':sum(checks.values()),'total':len(checks)}}
     p=ROOT/'data/PART_W33_PASS4482_TEN_LINE_PROTECTED_READOUT.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
