@@ -25,10 +25,10 @@
     "points": "(q+1)(q^3+1)"
   },
   "examples": [
-    {"q": 3, "order": [3,9], "points": 112, "lines": 280, "apartments": 102060, "apartments_through_line_r": 1458, "alpha": 81, "beta": 6},
-    {"q": 7, "order": [7,49], "points": 2752, "lines": 17200, "apartments": 2023562800, "apartments_through_line_r": 470596, "alpha": 2401, "beta": 28},
-    {"q": 11, "order": [11,121], "points": 15984, "lines": 162504, "apartments": 431828623116, "apartments_through_line_r": 10629366, "alpha": 14641, "beta": 66},
-    {"q": 19, "order": [19,361], "points": 137200, "lines": 2483320, "apartments": 292074943012300, "apartments_through_line_r": 470458810, "alpha": 130321, "beta": 190}
+    {"q":3,"order":[3,9],"points":112,"lines":280,"apartments":102060,"apartments_through_line_r":1458,"alpha":81,"beta":6,"gram_mod2":"HH^T = N^T N = A_line","protected_dimension":"rho(q)=rank_2(N^T N)","apartment_radical_dimension":"h(q)-rho(q), h(q)=rank_2(H)","rank_bounds":"rho(q) <= h(q) <= lines-1"},
+    {"q":7,"order":[7,49],"points":2752,"lines":17200,"apartments":2023562800,"apartments_through_line_r":470596,"alpha":2401,"beta":28,"gram_mod2":"HH^T = N^T N = A_line","protected_dimension":"rho(q)=rank_2(N^T N)","apartment_radical_dimension":"h(q)-rho(q), h(q)=rank_2(H)","rank_bounds":"rho(q) <= h(q) <= lines-1"},
+    {"q":11,"order":[11,121],"points":15984,"lines":162504,"apartments":431828623116,"apartments_through_line_r":10629366,"alpha":14641,"beta":66,"gram_mod2":"HH^T = N^T N = A_line","protected_dimension":"rho(q)=rank_2(N^T N)","apartment_radical_dimension":"h(q)-rho(q), h(q)=rank_2(H)","rank_bounds":"rho(q) <= h(q) <= lines-1"},
+    {"q":19,"order":[19,361],"points":137200,"lines":2483320,"apartments":292074943012300,"apartments_through_line_r":470458810,"alpha":130321,"beta":190,"gram_mod2":"HH^T = N^T N = A_line","protected_dimension":"rho(q)=rank_2(N^T N)","apartment_radical_dimension":"h(q)-rho(q), h(q)=rank_2(H)","rank_bounds":"rho(q) <= h(q) <= lines-1"}
   ],
   "theorem": "The W33 apartment/incidence bridge extends symbolically to the infinite Q(5,q) subfamily q=3 mod4; its protected dimension is exactly the binary incidence-Gram rank rho(q), with no q=3 extrapolation needed."
 }
