@@ -1,0 +1,13 @@
+{
+  "boundary": "Finite Hamming-shell incidence only; no physical distance or spacetime metric is implied.",
+  "global_cross_distance_counts": {"12": 480, "20": 8640, "28": 480},
+  "pass": 4557,
+  "per_edge_cross_distance_profile": {"12": 2, "20": 36, "28": 2},
+  "reconstruction": {
+    "distance_12": "exactly the two endpoints of the W33 line-graph edge",
+    "distance_28": "exactly the two common neighbors of those endpoints",
+    "four_line_closure": "the 2 endpoints plus 2 distance-28 stars form the unique K4 pencil through their geometric intersection point"
+  },
+  "shells": {"even_edge_vectors": 240, "odd_line_stars": 40},
+  "theorem": "The parity-refined H10 Hamming metric reconstructs not only W33 adjacency but the full vertex-edge incidence and each edge's four-line point pencil."
+}
