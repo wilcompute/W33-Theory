@@ -1,0 +1,123 @@
+% Passes 4552--4559: Qminus rank frontier, canonical H10 filtration,
+% 108-basis ensemble, one-layer C8 bootstrap, exceptional-six obstruction,
+% and three protected-shell/fiber constructions.
+\subsection{Protected parity geometry after the zeta bootstrap (Passes 4552--4559)}
+\label{sec:pass4552-4559-rank-filtration-shells}
+
+\paragraph{Pass 4552: a third exact elliptic-quadric rank anchor, and a literature-scope correction.}
+An independent construction of $Q^-(5,5)=GQ(5,25)$ gives $756$ points and
+$3276$ lines and, over $\mathbb F_2$,
+\[
+ \operatorname{rank}N=651,\qquad \operatorname{rank}(N^TN)=546.
+\]
+Together with the exact $q=3,7$ anchors this gives
+\[
+\begin{array}{c|ccc}q&3&5&7\\\hline
+\operatorname{rank}N&91&651&2451\\
+\operatorname{rank}(N^TN)&70&546&2150
+\end{array}
+\]
+and all three agree with
+$\operatorname{rank}N=q^4+q^2+1$ and
+$\operatorname{rank}(N^TN)=(q^2+1)(q^2-q+1)$.  The closed odd-$q$ formulas
+remain open.  In particular, the Bagchi--Brouwer--Wilbrink $O(5,q)$ binary-code
+paper concerns the dual of the square symplectic quadrangle $Sp(4,q)$, not the
+elliptic $Q^-(5,q)=GQ(q,q^2)$ family, so it is not used as a proof here.
+
+\paragraph{Pass 4553: the $1\mid8\mid1$ chain is intrinsic parity geometry.}
+Let $j$ be the all-ones protected vector.  Pass~4541 gives
+$\pi(x)=B(x,j)$, hence
+\[
+ \boxed{0<\langle j\rangle<j^\perp=V_9<H_{10}}.
+\]
+On $V_8=V_9/\langle j\rangle$ the formula
+\[
+ \boxed{q_8([x])=\frac{\operatorname{wt}(x)}4\pmod2}
+\]
+is well defined under $x\mapsto x+j$ and polarizes exactly to $B$.  It has
+$136$ singular classes including zero and $120$ anisotropic classes, so this is
+an explicit plus-type $O^+(8,2)$ model.  The fixed line and nine-space are now
+located without cyclic-submodule search; irreducibility of the middle eight is
+inherited from the independent Passes~4477/4496 certificate.
+
+\paragraph{Pass 4554: the 108 local bases form a basis-switching codebook.}
+The one-spoke exchange graph on the $108$ Pass~4543 bases is $15$-regular with
+$810$ edges, diameter three, distance distribution $(1,15,48,44)$, and spectrum
+\[
+ 15^1,\quad9^8,\quad3^{27},\quad0^{16},\quad(-3)^{56}.
+\]
+The order-$162$ Borel has two basis orbits of sizes $81$ and $27$ with equitable
+quotient
+\[
+ \begin{pmatrix}12&3\\9&6\end{pmatrix}.
+\]
+Every specified spoke is omitted by $27$ bases; two erased spokes in distinct
+pencils are simultaneously omitted by six bases, while two in one pencil are
+never simultaneously omitted.  An erased three-spoke set has exactly one
+surviving basis iff it meets three distinct pencils.
+
+\paragraph{Pass 4555: one primitive-$C_8$ selector layer suffices for the whole protected bootstrap.}
+Pass~4551 proves that coefficient $712$ at Walsh degree four selects exactly the
+$1620$ apartments.  Keeping only that Boolean selector already gives
+\[
+ C_8^{(4)}[712]\to H\to HH^T=A_*\to W33^\vee\to H_{10}
+ \to (j,\pi,V_9).
+\]
+Thus no $C_6$ or $C_7$ layer is required once this $C_8$ selector is available.
+This is a sufficiency theorem, not an absolute lower bound on all possible
+encodings of the same geometry.
+
+\paragraph{Pass 4556: no linear equivariant shortcut from $H_{10}$ to the exceptional six-space.}
+The protected module has composition factors $1,8,1$, while the faithful
+$O^-_6(2)$ module $U_6$ from Passes~4522/4544 is simple of dimension six.
+Therefore
+\[
+ \boxed{\operatorname{Hom}_{PSp(4,3)}(H_{10},U_6)=
+        \operatorname{Hom}_{PSp(4,3)}(U_6,H_{10})=0.}
+\]
+Any nonzero map would force a six-dimensional simple composition factor in
+$H_{10}$.  The Schlaefli/double-six incidence intertwiner acts on different
+$27$- and $36$-point permutation carriers and does not evade this obstruction.
+
+\paragraph{Pass 4557 (outside the box): cross-shell Hamming distance recovers line pencils.}
+For an even edge vector $e_{jk}=s_j+s_k$ and the forty odd line-stars, the
+cross-shell distance profile is
+\[
+ d=12:2,\qquad d=20:36,\qquad d=28:2.
+\]
+The two distance-$12$ stars are exactly $j,k$; the two distance-$28$ stars are
+exactly their common neighbors.  These four vertices form the unique $K_4$
+line pencil through the geometric intersection point.  Thus protected Hamming
+geometry reconstructs vertex--edge incidence and point pencils, not merely the
+SRG adjacency relation.
+
+\paragraph{Pass 4558 (outside the box): apartments uniformly lift the singular $O^+(8,2)$ shell.}
+The $1620$ apartment indicators have only $135$ distinct protected images under
+$b\mapsto A_*b$.  Every image has weight $16$, every image has exactly twelve
+apartment preimages, and these images are precisely the $135$ nonzero singular
+classes of $V_8$.  In each twelve-element fiber, join two apartments when they
+share one line.  Every fiber is
+\[
+ \boxed{K_{4,4,4}},
+\]
+with degree eight, $48$ intersecting pairs and $18$ disjoint pairs.
+
+\paragraph{Pass 4559 (outside the box): the $240$ edges are a two-sheeted anisotropic lift.}
+Every protected edge has weight $20$, hence represents an anisotropic class of
+$V_8$.  Addition of $j$ pairs the $240$ edge vectors into $120$ classes.  On the
+W33 carrier this involution sends an edge to the opposite edge in the unique
+four-line $K_4$ pencil through the same point.  Therefore
+\[
+ \boxed{240\longrightarrow120}
+\]
+is the canonical opposite-edge double cover of the anisotropic shell; its polar
+orthogonality quotient is again $\operatorname{SRG}(120,63,30,36)$.
+
+\begin{quote}\small
+\textbf{Evidence boundary.} Passes~4552--4559 are finite geometry, binary
+module, graph-zeta, and representable-matroid statements.  The $Q^-(5,q)$
+closed rank formula is exact only at $q=3,5,7$ here.  The exceptional-six result
+excludes linear equivariant maps only.  Hamming distance, twelve-fold apartment
+fibers, and the edge double cover are not physical distances, degeneracies, or
+particle labels without a separate dynamics theorem.
+\end{quote}
