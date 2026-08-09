@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Passes 4511–4518 — Apartment dual completion and zeta tomography</title></head>
+<body>
+<main>
+<h1>Passes 4511–4518: dual completion, exact enumerator reduction, prism fibers, and higher Ihara shadows</h1>
+<p>This page records the finite statements only. It deliberately separates completed theorems from the two remaining exact frontiers.</p>
+
+<h2>1. The missing 366 dual dimensions are closed</h2>
+<p>The W33 apartment code is <code>[1620,39,162]</code>, hence its dual has dimension 1581. The 2160 weight-3 triangular-prism checks span rank 1215. There are exactly 84,240 weight-4 dual words and their span has rank 1580: precisely the even-coordinate-weight subcode. Adding any odd prism check gives the full dual.</p>
+<p>The PGSp weight-4 orbit sizes are 1620, 1620, 3240, 6480, 6480, 12960, 12960, 12960, and 25920. The last orbit supplies all 366 dimensions missing from the prism span. Under PSp it is regular and, by itself, spans the entire rank-1580 even dual sector.</p>
+
+<h2>2. The full weight enumerator has an exact W33 reduction</h2>
+<p>For a subset S of the forty dual-W33 coefficient vertices let m be its size, e its induced-edge count, p3 its induced P3 count, and c4 its induced apartment-C4 count. Then</p>
+<pre>wt(H^T 1_S) = 162 m − 12 C(m,2) − 42 e + 12 p3 − 8 c4.</pre>
+<p>Thus the complete weight enumerator is exactly one half of the sum of <code>z^wt(S)</code> over all coefficient subsets, the factor one half accounting for the global-complement kernel. Burnside for Aut(C)=PGSp(4,3) gives 21,578,952 subset orbits and 10,789,604 codeword orbits after complement. This is an exact reduction, not a finished numerical coefficient table.</p>
+
+<h2>3. The prism 240-set is the W33 edge action</h2>
+<p>If b is the six-line indicator of a prism, there is a unique adjacent pair i~j in dual W33 such that</p>
+<pre>A_* b = A_* (e_i + e_j).</pre>
+<p>All 240 adjacent pairs occur, and every edge has exactly nine prism preimages. The edge endpoints are outside the six-line prism and each meets three prism lines. This explicit equivariant formula identifies the protected 240-set with the dual-W33 edge action; it is not an identification with the distinct E8-root action.</p>
+
+<h2>4. Primitive Ihara coefficients at lengths 6–8</h2>
+<p>The signed primitive nonbacktracking coefficients decompose exactly into Walsh characters of line-parity supports. Their unsigned oriented prime counts are 302,880, 2,739,840, and 26,750,160 at lengths 6, 7, and 8. Their nonzero supports occupy 10, 26, and 142 PSp orbits respectively.</p>
+<p>At length six, the degree-two Walsh coefficient is 252 on each of the 240 adjacent line pairs and 48 on each of the 540 disjoint pairs. Therefore the off-diagonal quadratic coefficient matrix is</p>
+<pre>48 (J − I) + 204 A_*.</pre>
+<p>The sixth primitive Ihara coefficient therefore reconstructs the dual-W33 adjacency exactly.</p>
+
+<h2>5. Q(5,3)=GQ(3,9) code frontier</h2>
+<p>Pass 4506 already established the 112-point, 280-line, 102,060-apartment geometry, rank(H)=279, and the 70-dimensional apartment/protected quotient. For a coefficient subset S of the 280 line vertices, the new exact code-weight formula is</p>
+<pre>wt = 1458 m − 12 C(m,2) − 150 e + 36 p3 − 8 c4.</pre>
+<p>A line row has weight 1458. The exact support-two weights are 2754 (5,040 words) and 2904 (34,020 words). The exact support-three weights are 3888, 4074, 4188, and 4338 with multiplicities 13,440; 136,080; 1,088,640; and 2,381,400. A rigorous universal bound excludes all coefficient supports of sizes 2 through 12 from beating 1458. After complement symmetry, any counterexample to d=1458 must therefore have support 13 through 140. Equality is still open.</p>
+<p>The dual minimum distance is exactly 3. There are 544,320 minimum relations, again triangular prisms: 4,536 noncollinear point pairs times C(10,3).</p>
+
+<h2>6. Three outside-box closures</h2>
+<p><strong>Nine-sheet fiber.</strong> The PSp edge stabilizer of order 108 acts on the nine prism preimages through an image of order 36, with kernel C3. The image is C3²:C4: its normal order-9 translation subgroup acts regularly on the fiber.</p>
+<p><strong>One-orbit generator.</strong> A single weight-4 seed with trivial PSp stabilizer has a 25,920-element orbit whose span is the entire even dual code.</p>
+<p><strong>Zeta tomography.</strong> The two-body Walsh layer of the primitive length-six Ihara coefficient reconstructs A_* independently of the minimum-codeword reconstruction and the prism-edge map.</p>
+
+<h2>Evidence boundary</h2>
+<p>The complete numerical W33 weight enumerator remains open; only its exact induced-subgraph reduction, Burnside orbit count, moments, and low-weight coefficients are certified here. The Q(5,3) equality d=1458 also remains open. All other statements on this page are finite code, group-action, or graph-zeta statements; they do not by themselves imply physical gauge fields, E8 dynamics, or hardware realizations.</p>
+</main>
+</body>
+</html>
