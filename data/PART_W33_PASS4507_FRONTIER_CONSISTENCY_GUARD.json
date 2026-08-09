@@ -1,0 +1,10 @@
+{
+  "boundary": "This is release-integrity evidence, not a new mathematical theorem about W33 itself.",
+  "builder_ordering_exactly_equal": true,
+  "guarded_current_passes": [4503,4504,4505,4506,4508,4509,4510],
+  "pass": 4507,
+  "policy": "regenerate executable evidence and fail closed on script/certificate, manuscript/public, builder-order, or registry disagreement",
+  "public_tokens_required": ["pass4461-4464-line-signing-apartment-parity","pass4469-4471-apartment-h10-bridge","pass4472-4479-apartment-module-thermo-ihara-pauli","pass4480-4483-apartment-h10-geometric-readout","pass4485-4488-apartment-core-self-gluing","pass4490-4492-fixed-point-cocycle","pass4493-symmetry-breaking-section-threshold","pass4495-4502-distance-cohomology-ihara-clifford-prism","pass4503-4510-apartment-obstruction-scaling"],
+  "repaired_passes": [4482,4493],
+  "theorem": "frontier consistency guard after stale-certificate and concurrent-registry failures"
+}
