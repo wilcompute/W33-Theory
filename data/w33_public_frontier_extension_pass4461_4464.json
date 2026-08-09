@@ -25,6 +25,11 @@
       "kind": "id",
       "token": "pass4485-4488-apartment-core-self-gluing",
       "source": "analysis/PASS4485_4488_apartment_core_self_gluing_index_insert.html"
+    },
+    {
+      "kind": "id",
+      "token": "pass4495-4502-distance-cohomology-ihara-clifford-prism",
+      "source": "analysis/PASS4495_4502_distance_cohomology_ihara_clifford_prism_index_insert.html"
     }
   ],
   "standalone_public_pages": [
@@ -43,6 +48,10 @@
     {
       "token": "pass4485-4488-apartment-core-self-gluing-page",
       "source": "docs/apartment-core-self-gluing.html"
+    },
+    {
+      "token": "pass4495-4502-distance-cohomology-ihara-clifford-prism-page",
+      "source": "docs/apartment-code-distance-cohomology-prisms.html"
     }
   ]
 }
