@@ -61,7 +61,7 @@ jobs:
           test "$(grep -c 'id="pass4472-4479-apartment-module-thermo-ihara-pauli"' docs/index.html)" -eq 1
           test -s docs/apartment-module-thermo-ihara-pauli.html
           grep -q '1|8|1' docs/apartment-module-thermo-ihara-pauli.html
-          grep -q '84240' docs/apartment-module-thermo-ihara-pauli.html
+          grep -q '84,240' docs/apartment-module-thermo-ihara-pauli.html
       - uses: WtfJoke/setup-tectonic@v3
         with:
           github-token: '${{ secrets.GITHUB_TOKEN }}'
