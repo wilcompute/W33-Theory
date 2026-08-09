@@ -1,0 +1,164 @@
+{
+  "boundary": "4441 is a re-reading of claims, not a recomputation of them; 4442's law is derived from GQ parameters and is CONFIRMED on two rows and predicted on six, with the discriminating Q(5,3) row NOT built; 4443 measures one cover from one optimised signing and 'not in a classical family' means it fails the cheap structural tests, not that a catalogue was searched",
+  "pass_4441_rescore": [
+    {
+      "after_baseline": "87% of random signings already qualify, so EXISTENCE was never in doubt; what the search bought is rho 5.17 against a random 6.38",
+      "claim": "Ramanujan signings found for all three graphs",
+      "implied": "that finding one was the achievement",
+      "pass": 4409,
+      "still_true": true
+    },
+    {
+      "after_baseline": "6.4357 is WORSE than the random average of 6.376 -- the invariant subspace search found something a coin flip beats on average. The existence claim stands; the difficulty framing does not",
+      "claim": "a symmetry-respecting Ramanujan signing exists (rho 6.4357)",
+      "implied": "that respecting Sp(4,3) up to gauge was hard to achieve",
+      "pass": 4418,
+      "still_true": true
+    },
+    {
+      "after_baseline": "unaffected -- this is a proof from edge-transitivity, not a search, and the baseline is irrelevant to it",
+      "claim": "no LITERALLY invariant signing beats the bound",
+      "implied": "a no-go",
+      "pass": 4418,
+      "still_true": true
+    },
+    {
+      "after_baseline": "still exact and still elegant, but the reduction makes the Ramanujan property RARER (27% vs 87%), which was not said",
+      "claim": "the 40 line-cochains partition the 240 edges",
+      "implied": "an elegant reduction from 2^240 to 2^40",
+      "pass": 4426,
+      "still_true": true
+    },
+    {
+      "after_baseline": "unaffected -- a translation between two exact statements, and the most durable thing in the arc",
+      "claim": "Bilu-Linial is RH for the Artin-Ihara L-function",
+      "implied": "nothing about difficulty",
+      "pass": 4436,
+      "still_true": true
+    },
+    {
+      "after_baseline": "87% of signings give one, so the CONSTRUCTION is cheap; whether this particular graph is interesting is Pass 4443's question and was never answered by the fact that it is Ramanujan",
+      "claim": "the cover is an 80-vertex 12-regular Ramanujan graph",
+      "implied": "a construction of a rare object",
+      "pass": 4437,
+      "still_true": true
+    }
+  ],
+  "pass_4442_coarseness": {
+    "explains": "H(3,9) has 45 edges per line against W(3,3)'s 6, so its line-signing is 7.5x coarser and cannot cancel; the failure is about s = 9, not about the quadrangle being asymmetric",
+    "family": [
+      {
+        "bound": 4.472135955,
+        "degree": 6,
+        "dof_fraction": 0.333333333333,
+        "edges": 45,
+        "edges_per_line": 3,
+        "lines": 15,
+        "name": "W(3,2) = GQ(2,2)",
+        "points": 15,
+        "s": 2,
+        "t": 2
+      },
+      {
+        "bound": 6.633249580711,
+        "degree": 12,
+        "dof_fraction": 0.166666666667,
+        "edges": 240,
+        "edges_per_line": 6,
+        "lines": 40,
+        "name": "W(3,3) = GQ(3,3)",
+        "points": 40,
+        "s": 3,
+        "t": 3
+      },
+      {
+        "bound": 8.717797887081,
+        "degree": 20,
+        "dof_fraction": 0.1,
+        "edges": 850,
+        "edges_per_line": 10,
+        "lines": 85,
+        "name": "W(3,4) = GQ(4,4)",
+        "points": 85,
+        "s": 4,
+        "t": 4
+      },
+      {
+        "bound": 10.770329614269,
+        "degree": 30,
+        "dof_fraction": 0.066666666667,
+        "edges": 2340,
+        "edges_per_line": 15,
+        "lines": 156,
+        "name": "W(3,5) = GQ(5,5)",
+        "points": 156,
+        "s": 5,
+        "t": 5
+      },
+      {
+        "bound": 6.633249580711,
+        "degree": 12,
+        "dof_fraction": 0.1,
+        "edges": 270,
+        "edges_per_line": 10,
+        "lines": 27,
+        "name": "H(3,4) = GQ(4,2)",
+        "points": 45,
+        "s": 4,
+        "t": 2
+      },
+      {
+        "bound": 11.832159566199,
+        "degree": 36,
+        "dof_fraction": 0.022222222222,
+        "edges": 5040,
+        "edges_per_line": 45,
+        "lines": 112,
+        "name": "H(3,9) = GQ(9,3)",
+        "points": 280,
+        "s": 9,
+        "t": 3
+      },
+      {
+        "bound": 11.832159566199,
+        "degree": 36,
+        "dof_fraction": 0.1,
+        "edges": 2970,
+        "edges_per_line": 10,
+        "lines": 297,
+        "name": "H(4,4) = GQ(4,8)",
+        "points": 165,
+        "s": 4,
+        "t": 8
+      },
+      {
+        "bound": 10.770329614269,
+        "degree": 30,
+        "dof_fraction": 0.166666666667,
+        "edges": 1680,
+        "edges_per_line": 6,
+        "lines": 280,
+        "name": "Q(5,3) = GQ(3,9)",
+        "points": 112,
+        "s": 3,
+        "t": 9
+      }
+    ],
+    "law": "a line of GQ(s,t) carries C(s+1,2) = s(s+1)/2 edges; granularity is set by s alone, independent of t",
+    "untested_prediction": "Q(5,3) = GQ(3,9) has s = 3 and so 6 edges per line; line-signings should work there despite t = 9"
+  },
+  "pass_4443_cover": {
+    "conclusion": "generic: Ramanujan and structureless, with far too many distinct eigenvalues for any classical family; the construction is exact, the object is unremarkable",
+    "degree": 12,
+    "diameter": 3,
+    "distance_distribution": {
+      "0": 1,
+      "1": 12,
+      "2": 57,
+      "3": 10
+    },
+    "distinct_eigenvalues": 43,
+    "girth": 3,
+    "vertices": 80
+  }
+}

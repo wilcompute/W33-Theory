@@ -1,0 +1,169 @@
+{
+  "boundary": "4444 computes pi(m) exactly to m = 16 on one graph -- the PNT is asymptotic and 16 is not infinity; 4445 samples 4000 codewords so the minimum weight is an upper bound on the distance, though the girth argument bounds it above independently; 4446 tries six drive periods and two Hamiltonians, so 'no pi-modes' means none found in that slice",
+  "pass_4444_primes": {
+    "error_decay_slope_RH_predicted": -1.198947636399,
+    "error_decay_slope_measured": -1.238841331336,
+    "largest_nontrivial_hashimoto": 3.316624790355,
+    "q": 11,
+    "rows": [
+      {
+        "N_m": 0.0,
+        "m": 1,
+        "pi_m": 0.0,
+        "pnt": 11.0,
+        "ratio": 0.0
+      },
+      {
+        "N_m": 0.0,
+        "m": 2,
+        "pi_m": 0.0,
+        "pnt": 60.5,
+        "ratio": 0.0
+      },
+      {
+        "N_m": 960.0,
+        "m": 3,
+        "pi_m": 320.0,
+        "pnt": 443.666666666667,
+        "ratio": 0.721262208866
+      },
+      {
+        "N_m": 13920.0,
+        "m": 4,
+        "pi_m": 3480.0,
+        "pnt": 3660.25,
+        "ratio": 0.950754729868
+      },
+      {
+        "N_m": 181440.0,
+        "m": 5,
+        "pi_m": 36288.0,
+        "pnt": 32210.2,
+        "ratio": 1.126599648559
+      },
+      {
+        "N_m": 1818240.0,
+        "m": 6,
+        "pi_m": 302880.0,
+        "pnt": 295260.1666666667,
+        "ratio": 1.025807183608
+      },
+      {
+        "N_m": 19178880.0,
+        "m": 7,
+        "pi_m": 2739840.0,
+        "pnt": 2783881.5714285714,
+        "ratio": 0.984179797057
+      },
+      {
+        "N_m": 214015200.0,
+        "m": 8,
+        "pi_m": 26750160.0,
+        "pnt": 26794860.125,
+        "ratio": 0.998331764943
+      },
+      {
+        "N_m": 2359466880.0,
+        "m": 9,
+        "pi_m": 262162880.0,
+        "pnt": 261994187.8888889,
+        "ratio": 1.000643877303
+      },
+      {
+        "N_m": 25940386560.0,
+        "m": 10,
+        "pi_m": 2594020512.0,
+        "pnt": 2593742460.1,
+        "ratio": 1.000107201044
+      },
+      {
+        "N_m": 285329352000.0,
+        "m": 11,
+        "pi_m": 25939032000.0,
+        "pnt": 25937424601.0,
+        "ratio": 1.00006197219
+      },
+      {
+        "N_m": 3138359764320.0,
+        "m": 12,
+        "pi_m": 261529827680.0,
+        "pnt": 261535698060.08334,
+        "ratio": 0.999977554192
+      },
+      {
+        "N_m": 34522352854080.0,
+        "m": 13,
+        "pi_m": 2655565604160.0,
+        "pnt": 2655593241840.846,
+        "ratio": 0.999989592653
+      },
+      {
+        "N_m": 379750765403520.0,
+        "m": 14,
+        "pi_m": 27125053301760.0,
+        "pnt": 27124988113088.645,
+        "ratio": 1.00000240327
+      },
+      {
+        "N_m": 4177250705867520.0,
+        "m": 15,
+        "pi_m": 278483380379008.0,
+        "pnt": 278483211294376.72,
+        "ratio": 1.000000607163
+      },
+      {
+        "N_m": 4.594972795171632e+16,
+        "m": 16,
+        "pi_m": 2871857983606320.0,
+        "pnt": 2871858116473260.0,
+        "ratio": 0.999999953735
+      }
+    ],
+    "sqrt_q": 3.316624790355
+  },
+  "pass_4445_code": {
+    "cover_vertices": 80,
+    "distance_is_girth": 3,
+    "edges": 480,
+    "error": "reached for the cycle-space code; Sipser-Spielman expander codes use the graph as a TANNER graph and the cycle space cannot see expansion at all",
+    "k": 401,
+    "min_sampled_weight": 199,
+    "rate": 0.835416666667
+  },
+  "pass_4446_floquet": {
+    "drives": [
+      {
+        "T": 0.25,
+        "near_pi": 0,
+        "near_zero": 0
+      },
+      {
+        "T": 0.5,
+        "near_pi": 0,
+        "near_zero": 0
+      },
+      {
+        "T": 1.0,
+        "near_pi": 2,
+        "near_zero": 0
+      },
+      {
+        "T": 1.570796326795,
+        "near_pi": 4,
+        "near_zero": 2
+      },
+      {
+        "T": 2.0,
+        "near_pi": 2,
+        "near_zero": 2
+      },
+      {
+        "T": 3.0,
+        "near_pi": 0,
+        "near_zero": 3
+      }
+    ],
+    "max_near_pi": 4,
+    "why": "the collinearity graph has girth 3 and no chiral symmetry, so nothing pins quasi-energies to pi; the bipartite incidence graph is where to look"
+  }
+}
