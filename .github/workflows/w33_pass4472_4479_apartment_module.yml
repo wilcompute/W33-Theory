@@ -1,0 +1,92 @@
+name: Passes 4472-4479 Apartment Module
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4472_4479_apartment_module_thermo_ihara_pauli.py'
+      - 'analysis/PASS4472_4479_apartment_module_thermo_ihara_pauli_insert.tex'
+      - 'analysis/PASS4472_4479_apartment_module_index_insert.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/PART_W33_PASS4472_4479_APARTMENT_MODULE_THERMO_IHARA_PAULI.json'
+      - 'data/w33_public_frontier_extension_pass4461_4464.json'
+      - 'docs/apartment-module-thermo-ihara-pauli.html'
+      - 'scripts/check_w33_c4_semantics.py'
+      - 'tools/integrate_bt3376_bt3389.py'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'holonet_machine_blueprint.tex'
+      - '.github/workflows/w33_pass4472_4479_apartment_module.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pass4472-4479-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-manuscript-site-dry-run:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install verifier dependency
+        run: python -m pip install --disable-pip-version-check numpy
+      - name: Regenerate exact Passes 4472-4479 certificate
+        run: |
+          mkdir -p evidence/pass4472_4479
+          python analysis/w33_pass4472_4479_apartment_module_thermo_ihara_pauli.py \
+            | tee evidence/pass4472_4479/exact.log
+          git diff --exit-code -- \
+            data/PART_W33_PASS4472_4479_APARTMENT_MODULE_THERMO_IHARA_PAULI.json
+      - name: Audit four-cycle semantics
+        run: |
+          python scripts/check_w33_c4_semantics.py \
+            --json evidence/pass4472_4479/c4_semantics.json \
+            > evidence/pass4472_4479/c4_semantics.log
+          python - <<'PY'
+          import json
+          x=json.load(open('evidence/pass4472_4479/c4_semantics.json'))
+          assert x['canonical_counts']['all_simple_C4'] == 1740
+          assert x['canonical_counts']['induced_GQ_apartments'] == 1620
+          assert x['canonical_counts']['legacy_pass4433_records'] == 3480
+          PY
+      - name: Dry-run restored-site reconciliation
+        run: |
+          python tools/integrate_bt3376_bt3389.py \
+            --report evidence/pass4472_4479/site_integration.json
+          test "$(grep -c 'id="pass4472-4479-apartment-module-thermo-ihara-pauli"' docs/index.html)" -eq 1
+          test -s docs/apartment-module-thermo-ihara-pauli.html
+          grep -q '1|8|1' docs/apartment-module-thermo-ihara-pauli.html
+          grep -q '84240' docs/apartment-module-thermo-ihara-pauli.html
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+      - name: Compile all three canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 \
+              | tee "evidence/pass4472_4479/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
+            > evidence/pass4472_4479/pdf_sha256.txt
+      - name: Static integrity
+        run: |
+          git diff --check
+          grep -q 'PASS4472_4479_apartment_module_thermo_ihara_pauli_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          grep -q 'analysis/W33_CURRENT_FRONTIER_MANIFEST' w33_paper.tex
+          grep -q 'analysis/W33_CURRENT_FRONTIER_MANIFEST' photonic_holonet.tex
+          grep -q 'analysis/W33_CURRENT_FRONTIER_MANIFEST' holonet_machine_blueprint.tex
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pass4472-4479-apartment-module-evidence
+          path: |
+            evidence/pass4472_4479/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
