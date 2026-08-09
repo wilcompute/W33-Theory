@@ -1,0 +1,44 @@
+{
+  "apartment_incidence_gram": {
+    "identity": "H H^T = 156 I + 21 A_dual + 6 J",
+    "spectrum": {
+      "198": 24,
+      "648": 1,
+      "72": 15
+    }
+  },
+  "apartments": {
+    "apartments_per_disjoint_line_pair": 6,
+    "apartments_per_intersecting_line_pair": 27,
+    "apartments_per_line": 162,
+    "count": 1620,
+    "lines_per_apartment": 4
+  },
+  "boundary": "Fourth-moment pressure is generic for signed graphs. The W33-specific theorem is that the entire variable fourth moment is the parity sum over the 1620 rank-two-building apartments. The equality 25920=16*1620=|PSp(4,3)| is recorded only as arithmetic and is not used structurally.",
+  "checks": {
+    "passed": 3417,
+    "total": 3417
+  },
+  "pass": 4461,
+  "random_line_signing_baseline": {
+    "E_W4": 0,
+    "E_frustrated_fraction": 0.5,
+    "E_trace_A4": 12000,
+    "SD_frustrated_fraction": 0.012422599874998832,
+    "Var_W4": 1620
+  },
+  "substrate": {
+    "degree": 12,
+    "edges": 240,
+    "lambda": 2,
+    "lines": 40,
+    "mu": 4,
+    "points": 40
+  },
+  "theorem": "W33 line-signing apartment trace theorem",
+  "trace_laws": {
+    "trace_A2": "480",
+    "trace_A3": "24 * sum(sigma_l)",
+    "trace_A4": "12000 + 8*W4 = 24960 - 25920*f4"
+  }
+}
