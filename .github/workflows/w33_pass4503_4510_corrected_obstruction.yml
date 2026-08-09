@@ -1,4 +1,4 @@
-name: W33 Passes 4503-4510 corrected apartment obstruction
+name: W33 Passes 4503-4519 corrected apartment obstruction
 
 on:
   push:
@@ -15,29 +15,35 @@ on:
       - 'analysis/w33_pass4508_outer_cohomology_fork.py'
       - 'analysis/w33_pass4509_cohomology_restriction_barcode.py'
       - 'analysis/w33_pass4510_local_flag_gauge_cell.py'
+      - 'analysis/w33_pass4519_flag_borel_sylow3_normalizer.py'
       - 'analysis/PASS4493_symmetry_breaking_section_insert.tex'
       - 'analysis/PASS4503_4510_apartment_obstruction_scaling_insert.tex'
+      - 'analysis/PASS4519_flag_borel_sylow3_normalizer_insert.tex'
       - 'analysis/PASS4503_4510_apartment_obstruction_scaling_index_insert.html'
       - 'data/PART_W33_PASS4482_TEN_LINE_PROTECTED_READOUT.json'
       - 'data/PART_W33_PASS4493_SYMMETRY_BREAKING_SECTION_THRESHOLD.json'
       - 'data/PART_W33_PASS450*.json'
       - 'data/PART_W33_PASS4510_LOCAL_FLAG_GAUGE_CELL.json'
+      - 'data/PART_W33_PASS4519_FLAG_BOREL_SYLOW3_NORMALIZER.json'
       - 'data/w33_public_frontier_extension_pass4461_4464.json'
       - 'docs/apartment-symmetry-breaking-section.html'
       - 'docs/apartment-obstruction-cohomology-gq.html'
       - 'tests/test_w33_pass4493_symmetry_breaking_section_threshold.py'
       - 'tests/test_w33_pass4503_4510_corrected_obstruction.py'
+      - 'tests/test_w33_pass4519_flag_borel.py'
       - '.github/workflows/w33_pass4503_4510_corrected_obstruction.yml'
   pull_request:
     paths:
       - 'analysis/w33_pass450*.py'
       - 'analysis/w33_pass4510_local_flag_gauge_cell.py'
+      - 'analysis/w33_pass4519_flag_borel_sylow3_normalizer.py'
       - 'tests/test_w33_pass4503_4510_corrected_obstruction.py'
+      - 'tests/test_w33_pass4519_flag_borel.py'
 
 jobs:
   exact-evidence:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -57,6 +63,7 @@ jobs:
           python analysis/w33_pass4508_outer_cohomology_fork.py
           python analysis/w33_pass4509_cohomology_restriction_barcode.py
           python analysis/w33_pass4510_local_flag_gauge_cell.py
+          python analysis/w33_pass4519_flag_borel_sylow3_normalizer.py
           python analysis/w33_pass4507_frontier_consistency_guard.py
       - name: Frozen certificates must exactly regenerate
         run: |
@@ -70,13 +77,15 @@ jobs:
             data/PART_W33_PASS4507_FRONTIER_CONSISTENCY_GUARD.json \
             data/PART_W33_PASS4508_OUTER_COHOMOLOGY_FORK.json \
             data/PART_W33_PASS4509_COHOMOLOGY_RESTRICTION_BARCODE.json \
-            data/PART_W33_PASS4510_LOCAL_FLAG_GAUGE_CELL.json
+            data/PART_W33_PASS4510_LOCAL_FLAG_GAUGE_CELL.json \
+            data/PART_W33_PASS4519_FLAG_BOREL_SYLOW3_NORMALIZER.json
       - name: Focused regressions
         run: |
           pytest -q \
             tests/test_w33_pass4480_4484_apartment_h10_continuation.py \
             tests/test_w33_pass4493_symmetry_breaking_section_threshold.py \
-            tests/test_w33_pass4503_4510_corrected_obstruction.py
+            tests/test_w33_pass4503_4510_corrected_obstruction.py \
+            tests/test_w33_pass4519_flag_borel.py
       - name: LaTeX insertion hygiene
         run: |
           if test -f scripts/check_tex_insertions.py; then python scripts/check_tex_insertions.py; fi
