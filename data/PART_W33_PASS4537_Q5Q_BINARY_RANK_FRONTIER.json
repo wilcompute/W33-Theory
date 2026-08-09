@@ -1,0 +1,17 @@
+{
+  "boundary": "Do not promote the two-anchor rank formula to an all-q theorem without a modular-representation/code proof. Published incidence-rank tables are external corroboration, not encoded as proof in this executable.",
+  "closed_rank_conjecture": "rank_2(N^T N)=(q^2+1)(q^2-q+1)=#lines/(q+1) for odd q; for q=3 mod4 this is the Pass-4530 protected apartment dimension",
+  "companion_incidence_conjecture": "dim ker(N^T)=q(q^2-q+1), equivalently rank N=(q+1)(q^3+1)-q(q^2-q+1)",
+  "exact_prime_field_anchors": [
+    {"candidate_kernel_formula":21,"candidate_rho_formula":70,"ker_Nt_dimension":21,"lines":280,"nonsquare_d":2,"points":112,"q":3,"rank_N":91,"rank_NtN":70},
+    {"candidate_kernel_formula":301,"candidate_rho_formula":2150,"ker_Nt_dimension":301,"lines":17200,"nonsquare_d":3,"points":2752,"q":7,"rank_N":2451,"rank_NtN":2150}
+  ],
+  "general_odd_q_square_zero_theorem": {
+    "consequence": "A^2=0 over F2, hence im(A) <= ker(A) and rank_2(A) <= number_of_lines/2",
+    "line_graph_parameters": {"k":"q^2(q+1)","lambda":"q^2-1","mu":"q+1"},
+    "odd_q_parities": "k=lambda=mu=0 mod 2"
+  },
+  "pass": 4537,
+  "status": "EXACT at q=3 and q=7; general A^2=0 theorem exact; closed rank formula remains unproved",
+  "theorem": "An independent Q^-(5,7) construction gives rank N=2451 and rank(N^T N)=2150, exactly matching the closed candidate law; the all-odd-q adjacency is square-zero over F2."
+}
