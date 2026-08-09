@@ -1,0 +1,69 @@
+name: W33 Passes 4536-4543 parity decoder reconstruction
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4536_*.py'
+      - 'analysis/w33_pass4537_*.py'
+      - 'analysis/w33_pass4538_*.py'
+      - 'analysis/w33_pass4539_*.py'
+      - 'analysis/w33_pass4540_*.py'
+      - 'analysis/w33_pass4541_*.py'
+      - 'analysis/w33_pass4542_*.py'
+      - 'analysis/w33_pass4543_*.py'
+      - 'analysis/PASS4536_4543_*'
+      - 'data/PART_W33_PASS4536_*.json'
+      - 'data/PART_W33_PASS4537_*.json'
+      - 'data/PART_W33_PASS4538_*.json'
+      - 'data/PART_W33_PASS4539_*.json'
+      - 'data/PART_W33_PASS4540_*.json'
+      - 'data/PART_W33_PASS4541_*.json'
+      - 'data/PART_W33_PASS4542_*.json'
+      - 'data/PART_W33_PASS4543_*.json'
+      - 'tests/test_w33_pass4536_4543_parity_decoder_reconstruction.py'
+      - '.github/workflows/w33_pass4536_4543_parity_decoder.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass453[6-9]_*.py'
+      - 'analysis/w33_pass454[0-3]_*.py'
+      - 'tests/test_w33_pass4536_4543_parity_decoder_reconstruction.py'
+
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install focused dependencies
+        run: python -m pip install --upgrade numpy pytest
+      - name: Re-run exact witnesses
+        run: |
+          set -euo pipefail
+          python analysis/w33_pass4536_missing_tenth_parity_line_star.py
+          python analysis/w33_pass4537_q5q_binary_rank_frontier.py
+          python analysis/w33_pass4538_global_large_splitting_census.py
+          python analysis/w33_pass4539_exact_local_h10_decoder.py
+          python analysis/w33_pass4540_zeta_parity_prism_cross_fusion.py
+          python analysis/w33_pass4541_parity_is_fixed_vector_pairing.py
+          python analysis/w33_pass4542_odd_shell_reconstructs_w33.py
+          python analysis/w33_pass4543_local_cell_basis_matroid.py
+      - name: Frozen certificates must regenerate exactly
+        run: |
+          git diff --exit-code -- \
+            data/PART_W33_PASS4536_MISSING_TENTH_PARITY_LINE_STAR.json \
+            data/PART_W33_PASS4537_Q5Q_BINARY_RANK_FRONTIER.json \
+            data/PART_W33_PASS4538_GLOBAL_LARGE_SPLITTING_CENSUS.json \
+            data/PART_W33_PASS4539_EXACT_LOCAL_H10_DECODER.json \
+            data/PART_W33_PASS4540_ZETA_PARITY_PRISM_CROSS_FUSION.json \
+            data/PART_W33_PASS4541_PARITY_FIXED_VECTOR_PAIRING.json \
+            data/PART_W33_PASS4542_ODD_SHELL_RECONSTRUCTS_W33.json \
+            data/PART_W33_PASS4543_LOCAL_CELL_BASIS_MATROID.json
+      - name: Focused regression
+        run: pytest -q tests/test_w33_pass4536_4543_parity_decoder_reconstruction.py
+      - name: TeX insertion hygiene
+        run: |
+          if test -f scripts/check_tex_insertions.py; then python scripts/check_tex_insertions.py; fi
