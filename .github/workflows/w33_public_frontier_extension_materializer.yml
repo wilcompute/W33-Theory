@@ -1,0 +1,66 @@
+name: W33 safe public frontier extension materializer
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'data/w33_public_frontier_extension_pass4461_4464.json'
+      - 'analysis/*_index_insert.html'
+      - '.github/workflows/w33_public_frontier_extension_materializer.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: w33-public-frontier-extension-materializer
+  cancel-in-progress: false
+
+jobs:
+  materialize-index-only:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Materialize all configured public cards idempotently
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from tools.integrate_bt3376_bt3389 import configured_public_sections, integrate_public_section
+          root=Path('.')
+          config=json.loads((root/'data/w33_current_frontier_manifest_v1.json').read_text(encoding='utf-8'))
+          path=root/config['public_index']
+          text=path.read_text(encoding='utf-8')
+          modes={}
+          for section in configured_public_sections(config,root):
+              html=(root/section['source']).read_text(encoding='utf-8')
+              text,mode=integrate_public_section(text,html,section['kind'],section['token'])
+              modes[section['token']]=mode
+          path.write_text(text,encoding='utf-8')
+          ext=json.loads((root/'data/w33_public_frontier_extension_pass4461_4464.json').read_text(encoding='utf-8'))
+          for section in ext['public_sections']:
+              token=section['token']
+              if section['kind']=='id': assert text.count(f'id="{token}"')==1, token
+              else: assert text.count(token)==1, token
+          print(json.dumps(modes,indent=2,sort_keys=True))
+          PY
+      - name: Commit only docs/index.html if changed
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- docs/index.html; then
+            echo 'index already materialized'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/index.html
+          git commit -m 'Materialize public frontier extension cards [skip ci]'
+          git pull --rebase origin master
+          git push origin HEAD:master
