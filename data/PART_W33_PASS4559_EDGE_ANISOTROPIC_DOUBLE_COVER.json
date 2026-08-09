@@ -1,0 +1,14 @@
+{
+  "anisotropic_polar_graph_srg": [120, 63, 30, 36],
+  "boundary": "Finite quotient geometry only. The two sheets are not physical particle/antiparticle or time-reversal states.",
+  "edge_images": 240,
+  "geometric_involution": "x->x+j sends each W33 line-graph edge to the opposite edge in the unique K4 pencil through the same geometric point.",
+  "opposite_edge_pairs_per_pencil": 3,
+  "pass": 4559,
+  "pencil_count": 40,
+  "quadratic_type": "Every edge image has weight20, hence q8=20/4=1 and represents an anisotropic class.",
+  "quotient_classes": 120,
+  "quotient_relation": "x~x+j where j is the unique fixed all-ones protected vector",
+  "theorem": "The 240 protected edge carrier is a canonical two-sheeted lift of the 120 anisotropic O+(8,2) classes; the deck involution is opposite-edge complementation inside W33 point pencils.",
+  "total_opposite_pairs": 120
+}
