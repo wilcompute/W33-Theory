@@ -1,0 +1,186 @@
+% Passes 4528--4535: Borel overgroups, obstruction compass, Q(5,q) scaling,
+% local compiler, protected-edge fusion, and three outside-box consequences.
+\subsection{Borel maximality, local compilation, and protected-edge compression (Passes 4528--4535)}
+\label{sec:pass4528-4535-borel-compiler-edge}
+
+Pass~4519 identified the corrected splitting flag with the order-$162$
+Sylow-$3$ normalizer/Borel $H$.  The next packet asks whether this chamber
+gauge is merely one convenient section or is structurally singled out, how it
+scales, and how much protected information can be confined to its local cell.
+
+\paragraph{Pass 4528: the Borel is maximal by inclusion inside its splitting overgroup interval.}
+The exact $H$--double-coset decomposition of $G=PSp(4,3)$ has eight cells of
+sizes
+\[
+ 162,\ 486,\ 486,\ 1458,\ 1458,\ 4374,\ 4374,\ 13122.
+\]
+For a representative $g$ of each cell, the generated group $\langle H,g\rangle$
+is always one of only four groups:
+\[
+ H,\qquad P_{\rm point},\qquad P_{\rm line},\qquad G,
+\]
+with orders $162,648,648,25920$.  In particular the two maximal parabolics
+intersect exactly in $H$.  Recomputing the apartment-extension section system
+gives
+\[
+\begin{array}{c|c|c}
+K & \operatorname{rank}(A_K) / \operatorname{rank}(A_K|b) & \text{section}\ \\ \hline
+H & 384/384 & \text{yes, affine dimension }6\\
+P_{\rm line}&386/387&\text{no}\\
+P_{\rm point}&387/388&\text{no}\\
+G&389/390&\text{no}.
+\end{array}
+\]
+Hence adjoining any element outside the chamber either restores one simple
+parabolic or generates all of $G$, and in every case the obstruction returns.
+This proves maximality by inclusion among splitting overgroups containing this
+Borel; it is not a census of unrelated subgroup conjugacy classes.
+
+\paragraph{Pass 4529: the two obstruction bits are the two parabolic directions.}
+Pass~4509 gives $H^1(G,K/J)\cong\mathbb F_2^2$.  Choose
+\[
+ e_P=[\mathrm{fixed\_line}],\qquad e_L=[\mathrm{sum}].
+\]
+Then the third nonzero class is $e_P+e_L=[\mathrm{second}]$, while restriction
+kernels are
+\[
+ \ker\operatorname{res}_{P_{\rm point}}=\langle e_P\rangle,\qquad
+ \ker\operatorname{res}_{P_{\rm line}}=\langle e_L\rangle,\qquad
+ \ker\operatorname{res}_{H}=\langle e_P,e_L\rangle.
+\]
+Thus the computed two-bit obstruction admits an exact rank-two-building
+coordinate system: point and line residues remove distinct axes, and their
+incident chamber removes both.  This is a re-coordinatization of the computed
+radical cohomology, not a general theorem about all $\operatorname{Ext}^1$
+modules of rank-two groups.
+
+\paragraph{Pass 4530: an infinite symbolic $Q(5,q)$ bridge, with the hard rank kept explicit.}
+For $Q(5,q)=GQ(q,q^2)$ and $q\equiv3\pmod4$, Pass~4471 specializes to
+\[
+ HH^T=N^TN\pmod2.
+\]
+The family has
+\[
+ |\mathcal P|=(q+1)(q^3+1),\qquad
+ |\mathcal L|=(q^2+1)(q^3+1),
+\]
+\[
+ r=\frac{q^6(q+1)}2,\qquad
+ |\mathcal A|=\frac{(q^2+1)(q^3+1)q^6(q+1)}8.
+\]
+Writing $h(q)=\operatorname{rank}_2H$ and
+$\rho(q)=\operatorname{rank}_2(N^TN)$, the apartment module therefore has
+\[
+ \boxed{\dim V_{\rm protected}=\rho(q),\qquad
+ \dim\operatorname{rad}=h(q)-\rho(q).}
+\]
+For $q=3$, Pass~4506 supplies $h(3)=279$, $\rho(3)=70$, and radical dimension
+$209$.  No polynomial formula for $h(q)$ or $\rho(q)$ is extrapolated from this
+single anchor; obtaining a closed binary-rank formula remains a separate
+classical-code problem.
+
+\paragraph{Pass 4531: the exact flag section compiles in nine single-port clocks.}
+The ten optimal Pass~4504 section columns have weights
+\[
+ 1,1,1,1,5,5,5,5,9,9
+\]
+and $42$ total source-line incidences on the $13$-line cell.  In the explicit
+Boolean model where each line may feed at most one quotient accumulator per
+clock and each accumulator accepts at most one source, compilation is bipartite
+edge coloring.  The maximum degree is $9$, so K\H{o}nig's theorem gives a lower
+bound of nine clocks; the executable witness supplies a conflict-free
+nine-round coloring.  Hence
+\[
+ \boxed{42\ \text{primitive XOR routes},\qquad \text{depth}=9\ \text{exactly in this model}.}
+\]
+This is a register/scheduling theorem, not FPGA timing closure, optical PPA,
+fault tolerance, or a physical optimum under a different port model.
+
+\paragraph{Pass 4532: the Borel splits the protected $240$ edges into a local/boundary/exterior hierarchy.}
+Using Pass~4513's exact identification of the protected $240$-set with the
+dual-W33 edges, the Borel orbit sizes are
+\[
+ \boxed{3,3,9,9,27,27,81,81=2(3+9+27+81).}
+\]
+Its line-vertex orbits are $1,3,9,27$.  The optimal $13$-line gauge cell is the
+closed neighborhood of the fixed line and induces $K_1\vee4K_3$.  Exactly the
+four smallest edge orbits lie wholly inside this cell:
+\[
+ 24=3+3+9+9,
+\]
+while $108=27+81$ edges cross its boundary and another $108=27+81$ lie wholly
+outside.  The internal $24$ split as twelve center spokes and twelve triangle
+edges.
+
+\paragraph{Pass 4533 (outside the box): a power-of-three Borel staircase.}
+The preceding orbit arithmetic is exact at every shell:
+\[
+ |\mathcal O_{\rm vertex}|=3^0,3^1,3^2,3^3,
+ \qquad
+ |\mathcal O_{\rm edge}|=2\times(3^1,3^2,3^3,3^4),
+\]
+with edge stabilizer orders $54,18,6,2$.  This gives a finite orbit filtration
+aligned with the order-$81$ Sylow core.  It is not promoted here to a physical
+scale, energy, causal depth, or Bruhat-length variable.
+
+\paragraph{Pass 4534 (outside the box): nine local spokes saturate the entire edge-accessible protected layer.}
+The vectors $A_*(e_i+e_j)$ over all $240$ adjacent pairs span dimension
+\emph{nine}, not ten.  Because this span is $PSp(4,3)$-invariant and Pass~4496
+proved that
+\[
+ H_{10}:\qquad 0<1<9<10
+\]
+is the complete invariant-submodule lattice, the edge-image span is exactly the
+unique nine-dimensional submodule $V_9\subset H_{10}$.  Yet the localization is
+complete relative to that carrier:
+\[
+ \operatorname{rank}(\text{all }240)=
+ \operatorname{rank}(\text{internal }24)=
+ \operatorname{rank}(\text{center spokes }12)=9.
+\]
+Indeed nine explicitly certified center spokes already form a basis.  Thus one
+Borel cell recovers every edge-accessible protected direction, while the tenth
+logical direction lies outside the entire $240$-edge family.  This is finite
+linear tomography, not a physical measurement protocol.
+
+\paragraph{Pass 4535 (outside the box): an eight-state quotient retains the complete distinct edge spectrum.}
+Form the line graph of the $240$ protected dual-W33 edges, joining two carrier
+states when their W33 edges share an endpoint.  It is $22$-regular.  The eight
+Borel edge orbits form an equitable partition with quotient
+\[
+Q=\begin{pmatrix}
+2&2&9&0&9&0&0&0\\
+2&2&0&0&18&0&0&0\\
+3&0&8&2&0&0&9&0\\
+0&0&2&2&0&0&18&0\\
+1&2&0&0&8&2&3&6\\
+0&0&0&0&2&2&6&12\\
+0&0&1&2&1&2&10&6\\
+0&0&0&0&2&4&6&10
+\end{pmatrix}.
+\]
+It satisfies detailed balance $|O_i|Q_{ij}=|O_j|Q_{ji}$ and
+\[
+ \chi_Q(x)=(x-22)(x-12)^2(x-6)(x+2)^4.
+\]
+The full $240$-state line graph is annihilated by
+$(L-22I)(L-12I)(L-6I)(L+2I)$, so the quotient already contains every distinct
+full-graph eigenvalue:
+\[
+ \boxed{\operatorname{Spec}_{\rm distinct}(Q)=
+ \operatorname{Spec}_{\rm distinct}(L)=\{22,12,6,-2\}.}
+\]
+This is an exact equitable spectral compression, not a Hamiltonian or measured
+transfer function.
+
+\begin{quote}\small
+\textbf{Evidence boundary.}
+Passes~4528--4535 sharpen the chamber/Borel theorem into an exact overgroup
+classification, a two-axis cohomology compass, a symbolic $Q(5,q)$ family law,
+a model-optimal nine-clock compiler, and three independently checked local-edge
+compressions.  The executable witnesses and frozen JSON certificates under
+\texttt{analysis/} and \texttt{data/} are authoritative.  Count coincidences do
+not identify E8 roots, finite locality is not spacetime locality, and the
+symbolic $Q(5,q)$ statement intentionally leaves the difficult binary-rank
+function explicit.
+\end{quote}
