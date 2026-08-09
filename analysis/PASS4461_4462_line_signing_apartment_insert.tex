@@ -1,4 +1,4 @@
-% Passes 4461--4463: line-signing/apartment trace bridge, exact null model, and parity tomography.
+% Passes 4461--4464: line-signing/apartment trace bridge, exact null model, parity tomography, and symplectic quotient.
 \subsection{Line signings as an exact apartment-parity observable}
 \label{sec:pass4461-line-signing-apartment}
 
@@ -138,17 +138,46 @@ identity
 This is a finite-geometric identifiability theorem, not a statement that an
 optical experiment automatically measures all $1620$ apartment products.
 
+\paragraph{The nondegenerate parity core.}
+The binary code $C=\operatorname{rowspan}_{\mathbb F_2}(H)$ has dimension $39$,
+but the ambient dot product on $C$ is highly degenerate.  Pass~4464 computes
+\[
+ \operatorname{rank}_{\mathbb F_2}(A^\ast)=10,
+ \qquad
+ \dim\ker(A^\ast)=30.
+\]
+Because the global-reversal vector $\mathbf1_{40}$ lies in this kernel and is
+already the one-dimensional kernel of the coefficient-to-code map, the radical
+of $C$ has dimension $30-1=29$.  Therefore
+\begin{equation}
+ \boxed{\dim C=39,\qquad \dim\operatorname{rad}(C)=29,\qquad
+ \dim C/\operatorname{rad}(C)=10.}
+ \label{eq:pass4464-symplectic-quotient}
+\end{equation}
+The form is alternating because $A^\ast$ has zero diagonal; after quotienting
+by the radical it is nondegenerate.  Thus $C/\operatorname{rad}(C)$ is a
+$10$-dimensional symplectic vector space over $\mathbb F_2$.  This dimension is
+not introduced by pattern matching: it is the exact rank of the apartment Gram
+form.  For the point--line incidence matrix one also has
+$N^TN=A^\ast$ over $\mathbb F_2$, with
+$\operatorname{rank}_{\mathbb F_2}N=25$; the restricted dot product on that
+$25$-dimensional incidence image therefore has a $15$-dimensional radical.
+No physical qubit count or unrelated cyclotomic identification is inferred from
+these dimensions alone.
+
 \begin{center}
 \fbox{\parbox{0.92\textwidth}{\small
 \textbf{Evidence boundary.}  The identities above are finite combinatorial
 statements verified by the executable witnesses
 \texttt{analysis/w33\_pass4461\_line\_signing\_apartment\_trace.py},
-\texttt{analysis/w33\_pass4462\_apartment\_walsh\_null\_model.py}, and
-\texttt{analysis/w33\_pass4463\_apartment\_parity\_tomography.py}.  They do not
-identify a physical gauge field, do not make a particular signing statistically
-special, do not assert physical measurement completeness, and do not promote
-the Artin--Ihara/2-lift analogy into a spacetime claim.  They do show that the
-recent signing observable and the older $1620$ apartment carrier are literally
-the same quartic finite-geometric statistic, and that within the line-signing
-model this statistic family loses only the global sign bit.}}
+\texttt{analysis/w33\_pass4462\_apartment\_walsh\_null\_model.py},
+\texttt{analysis/w33\_pass4463\_apartment\_parity\_tomography.py}, and
+\texttt{analysis/w33\_pass4464\_apartment\_code\_symplectic\_quotient.py}.
+They do not identify a physical gauge field, do not make a particular signing
+statistically special, do not assert physical measurement completeness, and do
+not promote the Artin--Ihara/2-lift analogy into a spacetime claim.  They do
+show that the recent signing observable and the older $1620$ apartment carrier
+are literally the same quartic finite-geometric statistic; within the
+line-signing model its full parity family loses only the global sign bit, and
+its nondegenerate binary core is an exact $10$-dimensional symplectic quotient.}}
 \end{center}
