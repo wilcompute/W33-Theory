@@ -1,0 +1,46 @@
+name: W33 Passes 4490-4494 fixed-point cocycle
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - analysis/w33_pass4490_fixed_point_nonsplitting_obstruction.py
+      - analysis/w33_pass4491_fixed_line_extension_cocycle.py
+      - analysis/w33_pass4492_cocycle_support_route_sentinel_extension.py
+      - analysis/PASS4490_4492_fixed_point_cocycle_insert.tex
+      - analysis/PASS4490_4492_fixed_point_cocycle_index_insert.html
+      - data/PART_W33_PASS4490_FIXED_POINT_NONSPLITTING_OBSTRUCTION.json
+      - data/PART_W33_PASS4491_FIXED_LINE_EXTENSION_COCYCLE.json
+      - data/PART_W33_PASS4492_COCYCLE_SUPPORT_ROUTE_SENTINEL_EXTENSION.json
+      - tests/test_w33_pass4490_4494_fixed_point_cocycle.py
+      - .github/workflows/w33_pass4490_4494_fixed_point_cocycle.yml
+  pull_request:
+    paths:
+      - analysis/w33_pass4490_fixed_point_nonsplitting_obstruction.py
+      - analysis/w33_pass4491_fixed_line_extension_cocycle.py
+      - analysis/w33_pass4492_cocycle_support_route_sentinel_extension.py
+      - tests/test_w33_pass4490_4494_fixed_point_cocycle.py
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install focused dependencies
+        run: python -m pip install --upgrade numpy pytest
+      - name: Re-run exact witnesses
+        run: |
+          python analysis/w33_pass4490_fixed_point_nonsplitting_obstruction.py
+          python analysis/w33_pass4491_fixed_line_extension_cocycle.py
+          python analysis/w33_pass4492_cocycle_support_route_sentinel_extension.py
+      - name: Run focused regression
+        run: pytest -q tests/test_w33_pass4490_4494_fixed_point_cocycle.py
+      - name: Enforce ownership and physical boundaries
+        run: |
+          grep -q 'Pass 176' data/PART_W33_PASS4492_COCYCLE_SUPPORT_ROUTE_SENTINEL_EXTENSION.json
+          grep -q 'Pass 201' data/PART_W33_PASS4492_COCYCLE_SUPPORT_ROUTE_SENTINEL_EXTENSION.json
+          grep -q 'non-equivariant or symmetry-breaking decoders are not excluded' data/PART_W33_PASS4490_FIXED_POINT_NONSPLITTING_OBSTRUCTION.json
+          grep -q 'not a physical error current' data/PART_W33_PASS4491_FIXED_LINE_EXTENSION_COCYCLE.json
