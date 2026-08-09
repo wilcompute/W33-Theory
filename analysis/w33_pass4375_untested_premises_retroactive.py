@@ -27,6 +27,9 @@ import json
 import re
 from collections import Counter
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+import cert_util  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -95,15 +98,18 @@ def main() -> int:
 
     out = {"flagged": len(rows), "files": len(by_file),
            "top_files": dict(by_file.most_common(12)),
-           "sample": [{"file": a, "line": b, "text": c} for a, b, c in rows[:40]],
+           # Pass 4429: the TEXT is the durable record; the line number is navigation
+           # only, and the digest says which version of the file was scanned.
+           "sample": [{"file": a, "line": b, "text": c,
+                       "source": cert_util.source_digest(ROOT / "analysis" / a)}
+                      for a, b, c in rows[:40]],
            "precision": "low by construction; a triage list, not a verdict",
            "conclusion": "the signature is common and was unchecked; quantifying the real "
                          "backlog needs reading, not more grepping"}
     p = ROOT / "data" / "PART_W33_PASS4375_UNTESTED_PREMISES.json"
     p.parent.mkdir(exist_ok=True)
     # Hash the ROUND-TRIPPED object, never the live dict (CLAUDE.md, Pass 2482).
-    p.write_text(json.dumps(json.loads(json.dumps(out)), indent=2, sort_keys=True) + "\n",
-                 encoding="utf-8")
+    p.write_text(cert_util.dumps(out), encoding="utf-8")
     print(f"\nwrote {p.relative_to(ROOT).as_posix()}")
     return 0
 

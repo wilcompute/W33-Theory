@@ -41,6 +41,9 @@ import json
 import re
 from collections import Counter
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+import cert_util  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -288,7 +291,10 @@ def main() -> int:
 
     out = {
         "suspects_read": len(SUSPECTS),
-        "verdicts": {s["file"] + ":" + str(s["line"]): s["verdict"] for s in SUSPECTS},
+        # Pass 4429: key on the file and the quoted passage, not on a line number in a
+        # document that is edited most days.
+        "verdicts": {s["file"] + " :: " + s["text"][:48]: s["verdict"]
+                     for s in SUSPECTS},
         "detail": SUSPECTS,
         "confirmed_over_reads": c["OVER-READ"],
         "mathematical_errors": 0,
@@ -310,8 +316,7 @@ def main() -> int:
     p = ROOT / "data" / "PART_W33_PASS4388_FIVE_SUSPECTS.json"
     p.parent.mkdir(exist_ok=True)
     # Hash the ROUND-TRIPPED object, never the live dict (CLAUDE.md, Pass 2482).
-    p.write_text(json.dumps(json.loads(json.dumps(out)), indent=2, sort_keys=True) + "\n",
-                 encoding="utf-8")
+    p.write_text(cert_util.dumps(out), encoding="utf-8")
     print(f"\nwrote {p.relative_to(ROOT).as_posix()}")
     return 0
 

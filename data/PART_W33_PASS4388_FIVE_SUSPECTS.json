@@ -57,7 +57,7 @@
       "verdict": "DECORATIVE"
     }
   ],
-  "distinct_headings": 194,
+  "distinct_headings": 197,
   "honest_boundary_by_arc": {
     "2026-05": [
       98,
@@ -76,25 +76,25 @@
       1
     ],
     "not date-named": [
-      1427,
+      1434,
       22
     ]
   },
   "hypothesis": "flags concentrate under decorative headings",
   "hypothesis_verdict": "REFUTED",
   "mathematical_errors": 0,
-  "reflagged_total": 216,
+  "reflagged_total": 219,
   "section_kind": {
     "decorative": 19,
     "load-bearing": 20,
-    "unclassified": 177
+    "unclassified": 180
   },
   "suspects_read": 5,
   "verdicts": {
-    "2026-05-18_toroidal_metric_parity_taylor.md:176": "DECORATIVE",
-    "2026-05-29_q4_fano_chain_complex_homology.md:133": "DECORATIVE",
-    "2026-05-30_ordered_spread_transport_orbits.md:51": "EXEMPLARY",
-    "2026-05-31_polarity_chirality_orientation_duality.md:131": "SOUND",
-    "2026-07-07_pass69_three_perpendicular_tracks.md:132": "OVER-READ"
+    "2026-05-18_toroidal_metric_parity_taylor.md :: 79 = 160 - 81 matches the signed phase-frame ker": "DECORATIVE",
+    "2026-05-29_q4_fano_chain_complex_homology.md :: This matches the known signed phase-frame rank: ": "DECORATIVE",
+    "2026-05-30_ordered_spread_transport_orbits.md :: So the count matches the full linear symplectic ": "EXEMPLARY",
+    "2026-05-31_polarity_chirality_orientation_duality.md :: This cleanly matches the toroidal duality.": "SOUND",
+    "2026-07-07_pass69_three_perpendicular_tracks.md :: All three tracks point to the same number: sqrt(": "OVER-READ"
   }
 }

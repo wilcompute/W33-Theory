@@ -1,0 +1,865 @@
+{
+  "boundary": "'cited' means the pass filename appears in another file, which over-counts index and reservation mentions and under-counts results used without attribution; a triage list, not a verdict. 4428 diagnoses and repairs nothing",
+  "pass_4427": {
+    "backlog": [
+      {
+        "citations": 42,
+        "cited_by": [
+          "MILESTONES.md",
+          "RESULTS_INDEX.md",
+          "RESULTS_VOCABULARY.md",
+          "w33_pass488_character_order_is_the_discriminator.py",
+          "w33_pass489_frobenius_generality.py",
+          "w33_pass490_necessity_and_placement.py",
+          "w33_pass491_real_subring_and_third_failure.py",
+          "w33_pass503_dominant_term_and_parity.py"
+        ],
+        "pass": "w33_pass487_scope_of_the_law_and_det_hunt"
+      },
+      {
+        "citations": 39,
+        "cited_by": [
+          "CANON_40_15_8.md",
+          "CERTIFICATE_INDEX.md",
+          "bt3381_minimum_defect_edge_character.py",
+          "bt3407_magnetic_chromatic_search.py",
+          "w33_pass159_sentinel_dark_modes.py",
+          "w33_pass160_trade_tower_gq42.py",
+          "w33_pass161_gq42_ihara_inheritance.py",
+          "w33_pass162_mod8_anomaly_ledger.py"
+        ],
+        "pass": "w33_pass158_chiral_trade_lattice_two_480s"
+      },
+      {
+        "citations": 39,
+        "cited_by": [
+          "BT3430_BT3443_cover_perkel_oracle_shell.md",
+          "RESULTS_INDEX.md",
+          "bt3430_export_cover_geometry.py",
+          "bt3430_validate_cover_ledger.py",
+          "w33_pass1801_1805_component.py",
+          "w33_pass1801_1805_five_frontiers.py",
+          "w33_pass1802_xor_milp_falsifier.py",
+          "w33_pass1826_1830_prepare_inputs.py"
+        ],
+        "pass": "w33_pass1801_1805_common"
+      },
+      {
+        "citations": 29,
+        "cited_by": [
+          "MILESTONES.md",
+          "RESULTS_INDEX.md",
+          "w33_pass490_necessity_and_placement.py",
+          "w33_pass491_real_subring_and_third_failure.py",
+          "w33_pass503_dominant_term_and_parity.py",
+          "w33_pass504_trDq_fitting_and_noncommutative.py",
+          "w33_pass505_power_sum_profile_and_noncommutative_depth.py",
+          "w33_pass506_characteristic_vs_blocksize.py"
+        ],
+        "pass": "w33_pass489_frobenius_generality"
+      },
+      {
+        "citations": 26,
+        "cited_by": [
+          "RESULTS_VOCABULARY.md",
+          "bt3381_minimum_defect_edge_character.py",
+          "bt3407_magnetic_chromatic_search.py",
+          "w33_pass160_trade_tower_gq42.py",
+          "w33_pass163_two480s_character_decomposition.py",
+          "w33_pass164_so10_shadow_quotient_form.py",
+          "w33_pass166_ihara_discriminant_law.py",
+          "w33_pass168_second_shell_scheme.py"
+        ],
+        "pass": "w33_pass161_gq42_ihara_inheritance"
+      },
+      {
+        "citations": 26,
+        "cited_by": [
+          "MILESTONES.md",
+          "RESULTS_INDEX.md",
+          "w33_pass505_power_sum_profile_and_noncommutative_depth.py",
+          "w33_pass506_characteristic_vs_blocksize.py",
+          "w33_pass507_factorial_law_reduction.py",
+          "w33_pass508_mechanism_audit_and_q81.py",
+          "w33_pass509_cyclic_orbits_and_deviations.py",
+          "w33_pass510_orbit_size_decomposition.py"
+        ],
+        "pass": "w33_pass504_trDq_fitting_and_noncommutative"
+      },
+      {
+        "citations": 25,
+        "cited_by": [
+          "RESULTS_INDEX.md",
+          "w33_pass226_sentinel_distance_tower.py",
+          "w33_pass228_sentinel_weight_enumerator.py",
+          "w33_pass229_css_code_family.py",
+          "w33_pass232_even_q_sister_tower.py",
+          "w33_pass233_lattice_theta.py",
+          "w33_pass234_photonic_device_spec.py",
+          "w33_pass237_magic_distillation.py"
+        ],
+        "pass": "w33_pass224_shadow_code_tower"
+      },
+      {
+        "citations": 20,
+        "cited_by": [
+          "w33_pass410_prime_power_smith.py",
+          "w33_pass411_qutrit_magic_injection.py",
+          "w33_pass412_multislip_sandpile_decoder.py",
+          "w33_pass413_automorphism_twirl.py",
+          "w33_pass414_independent_lab_packet.py",
+          "w33_pass415_frobenius_smith_packets.py",
+          "w33_pass416_qutrit_distillation_search.py",
+          "w33_pass417_divisor_cycle_hybrid_decoder.py"
+        ],
+        "pass": "w33_pass410_414_common"
+      },
+      {
+        "citations": 20,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "MILESTONES.md",
+          "RESULTS_INDEX.md",
+          "w33_pass512_converse_and_legendre_tower.py",
+          "w33_pass513_character_order_and_weight_share.py",
+          "w33_pass514_sieve_theorem.py",
+          "w33_pass516_sieve_is_complete.py",
+          "w33_pass517_mobius_closed_form.py"
+        ],
+        "pass": "w33_pass511_constant_orbit_theorem"
+      },
+      {
+        "citations": 19,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "RESULTS_INDEX.md",
+          "w33_pass165_doily_trade_fusion.py",
+          "w33_pass166_ihara_discriminant_law.py",
+          "w33_pass168_second_shell_scheme.py",
+          "w33_pass169_canonical_cycles.py",
+          "w33_pass180_dual_trade_lattice_q43.py",
+          "w33_pass181_adjoint_shadow_mod3.py"
+        ],
+        "pass": "w33_pass160_trade_tower_gq42"
+      },
+      {
+        "citations": 19,
+        "cited_by": [
+          "w33_pass543_q5_icosahedral_association_image.py",
+          "w33_pass544_binary_switch_spectral_fibre.py",
+          "w33_pass545_triality_antiunitary_lift.py",
+          "w33_pass546_z9_kernel_fourier_image.py",
+          "w33_pass547_q5_recurrence_families.py",
+          "w33_pass548_q5_invariant_tensor_hierarchy.py",
+          "w33_pass549_quadratic_spectral_fibre.py",
+          "w33_pass550_q5_semilinear_covariance.py"
+        ],
+        "pass": "w33_pass543_547_common"
+      },
+      {
+        "citations": 18,
+        "cited_by": [
+          "RESULTS_INDEX.md",
+          "w33_pass1004_cross_track_verification.py",
+          "w33_pass1008_constant_table_audit.py",
+          "w33_pass1011_rank_bound_retraction.py",
+          "w33_pass1012_edge_root_equivariance_obstruction.py",
+          "w33_pass1015_gluing_is_a_complementation_invariant.py",
+          "w33_pass1017_affine_pencil_stability.py",
+          "w33_pass1018_pencil_rigidity_and_the_wqq_family.py"
+        ],
+        "pass": "w33_pass682_flatblock_h1_branch_separation"
+      },
+      {
+        "citations": 17,
+        "cited_by": [
+          "PASS1060_1064_FIVE_STREAM_RELEASE.md",
+          "w33_pass1060_minimal_signed_cover.py",
+          "w33_pass1061_springer_embedding_decision.py",
+          "w33_pass1062_inner48_540_geometry.py",
+          "w33_pass1064_dual_falsifier_preregistration.py",
+          "w33_pass1065_schur_cocycle.py",
+          "w33_pass1066_outer_lift.py",
+          "w33_pass1067_outer_class_geometry.py"
+        ],
+        "pass": "w33_pass1060_1064_core"
+      },
+      {
+        "citations": 17,
+        "cited_by": [
+          "w33_pass1836_1840_verify_frozen.py",
+          "w33_pass1848_duad_syntheme_transfer.py",
+          "w33_pass1856_duad_syntheme_contraction_frontier.py",
+          "w33_pass1876_prepare_exact_dual_inputs.py",
+          "w33_pass1885_exceptional_s6_carrier_intertwiners.py",
+          "w33_pass1888_residual_s6_refined_enumerator.py",
+          "w33_pass1889_1891_algebra_voltage_verify.py",
+          "w33_pass1951_minimum_shell_s6_orbits.py"
+        ],
+        "pass": "w33_pass1837_middle_layer_compression"
+      },
+      {
+        "citations": 15,
+        "cited_by": [
+          "RESULTS_INDEX.md",
+          "w33_pass1817_1818_free_cuts_and_branching.py",
+          "w33_pass1827_1828_spread_seeds_and_the_mod2_sweep.py",
+          "w33_pass1861_1862_1865_traps_covers_and_general_q.py",
+          "w33_pass1872_1873_q7_and_the_resolution_by_mrv.py",
+          "w33_pass1877_1878_the_matching_is_an_involution.py",
+          "w33_pass1883_1886_how_many_disjoint_classes.py",
+          "w33_pass1887_cpsat_the_resolution.py"
+        ],
+        "pass": "w33_pass1612_1614_frame_kernel_and_the_simplex"
+      },
+      {
+        "citations": 13,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "PASS1330_1334_MODULAR_TRIALITY_ATLAS_RELEASE.md",
+          "README.md",
+          "RESULTS_INDEX.md",
+          "RESULTS_VOCABULARY.md",
+          "w33_pass1335_export_hecke_gap_input.py",
+          "w33_pass1340_1344_cartan_atlas_selector_padic.py",
+          "w33_pass1343_padic_lifting.py"
+        ],
+        "pass": "w33_pass1330_1334_modular_triality_cycle_atlas"
+      },
+      {
+        "citations": 11,
+        "cited_by": [
+          "PASS1081_1086_PARALLEL_HINTS_EXECUTION.md",
+          "w33_pass1081_frame_module_lattice.py",
+          "w33_pass1082_frame_coherent_configuration.py",
+          "w33_pass1083_levi_frame_steinberg_intertwiner.py",
+          "w33_pass1085_hardware_in_loop_rehearsal.py",
+          "w33_pass1087_canonical_steinberg_parity.py",
+          "w33_pass1088_frame_adjacency_wedderburn.py",
+          "w33_pass1090_controller_protocol_boundary.py"
+        ],
+        "pass": "w33_pass1081_1086_core"
+      },
+      {
+        "citations": 10,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "PASS1193_1197_EXACT_EQUIVARIANT_RELEASE.md",
+          "w33_pass1203_residual_exact_factor_attack_plan.py",
+          "w33_pass1213_residual_commutant_geometry_memo.py",
+          "w33_pass1214_residual_species_prioritization_table.py",
+          "w33_pass1215_projector_fingerprint_atlas.py",
+          "w33_pass1228_qutrit_27line_orthogonality_verification_plan.py",
+          "w33_pass1241_matrix_unit_species20_seed.py"
+        ],
+        "pass": "w33_pass1194_residual_central_idempotents"
+      },
+      {
+        "citations": 9,
+        "cited_by": [
+          "2026-07-27_cubic_map_kernel_decomposition.md",
+          "CERTIFICATE_INDEX.md",
+          "PASS1138_EXPLICIT_CUBIC_INCIDENCE_BRIDGE.md",
+          "RESULTS_INDEX.md",
+          "w33_pass1158_kernel_residual_1952.py",
+          "w33_pass1171_needs_tag_fix.py",
+          "w33_pass1188_exact_kernel_residual_wedderburn.py",
+          "w33_pass1194_residual_central_idempotents.py"
+        ],
+        "pass": "w33_pass1135_cubic_kernel_decomposition"
+      },
+      {
+        "citations": 9,
+        "cited_by": [
+          "MILESTONES.md",
+          "RESULTS_INDEX.md",
+          "RESULTS_VOCABULARY.md",
+          "w33_pass518_phase_obstruction.py",
+          "w33_pass522_completeness_corrected.py",
+          "w33_pass523_vacuous_census.py",
+          "w33_pass524_status_upgrade.py",
+          "w33_pass525_infinite_families.py"
+        ],
+        "pass": "w33_pass517_mobius_closed_form"
+      },
+      {
+        "citations": 9,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "RESULTS_INDEX.md",
+          "w33_pass568_572_release.py",
+          "w33_pass573_hjelmslev_c3_600cell_apex.py",
+          "w33_pass578_fixed_locus_monomial_search.py",
+          "w33_pass578_residual_collision_symmetry.py",
+          "w33_pass583_collision_groupoid_polynomial.py",
+          "w33_pass584_colored_intertwiner_a4.py"
+        ],
+        "pass": "w33_pass569_z9_coupled_affine_radial_quadratic"
+      },
+      {
+        "citations": 9,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "RESULTS_INDEX.md",
+          "w33_pass573_577_release.py",
+          "w33_pass578_fixed_locus_monomial_search.py",
+          "w33_pass578_residual_collision_symmetry.py",
+          "w33_pass579_colored_600cell_module.py",
+          "w33_pass583_collision_groupoid_polynomial.py",
+          "w33_pass584_colored_intertwiner_a4.py"
+        ],
+        "pass": "w33_pass573_hjelmslev_c3_600cell_apex"
+      },
+      {
+        "citations": 8,
+        "cited_by": [
+          "CROSS_TRACK_LEDGER.md",
+          "RESULTS_INDEX.md",
+          "w33_pass1028_primary_obstruction_syndrome.py",
+          "w33_pass1030_eighty_carrier_orientation_obstruction.py",
+          "w33_pass1080_contextual_fraction_audit.py",
+          "w33_pass2442_2447_one_mechanism.md",
+          "w33_pass2442_chirality_meets_contextuality.py",
+          "w33_pass2674_2681_the_paper_warned_me_three_times.md"
+        ],
+        "pass": "w33_pass1021_corollary_ovoid_orientation"
+      },
+      {
+        "citations": 8,
+        "cited_by": [
+          "RESULTS_INDEX.md",
+          "w33_pass1417_exact_cover_orbit_frontier.py",
+          "w33_pass1418_mod2_bridge_loewy_flag.py",
+          "w33_pass1505_exact_cover_census_frontier.py",
+          "w33_pass1506_bridge_local_arithmetic.py",
+          "w33_pass1507_joint_algebra_morita.py",
+          "w33_pass1508_contextual_fraction_falsifier.py",
+          "w33_pass1509_qutrit_hamming_m20_chart.py"
+        ],
+        "pass": "w33_pass1416_cokernel_signed_turn_intertwiner"
+      },
+      {
+        "citations": 8,
+        "cited_by": [
+          "RESULTS_INDEX.md",
+          "w33_pass266_rank_mechanism.py",
+          "w33_pass270_the_plus_one_is_j.py",
+          "w33_pass271_no_drop_elementary_divisors.py",
+          "w33_pass276_kernel_lifting.py",
+          "w33_pass281_all_primes_rank.py",
+          "w33_pass282_nonlifting_vector.py",
+          "w33_pass298_forced_field_ladder.py"
+        ],
+        "pass": "w33_pass232_even_q_sister_tower"
+      },
+      {
+        "citations": 8,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "RESULTS_INDEX.md",
+          "RESULTS_VOCABULARY.md",
+          "w33_pass473_universal_trace_laws_and_q3_det_law.py",
+          "w33_pass479_det_congruence_sheet_census_and_orbit_burnside.py",
+          "w33_pass480_qplus3_mechanism_factory_pf_intertwiner.py",
+          "w33_pass481_t1_theorem_second_mechanism_q9_law_freeness.py",
+          "w33_pass482_order_theorem_q9_criterion_mechanism_census.py"
+        ],
+        "pass": "w33_pass456_q5_collision_anatomy"
+      },
+      {
+        "citations": 8,
+        "cited_by": [
+          "MILESTONES.md",
+          "w33_pass516_sieve_is_complete.py",
+          "w33_pass517_mobius_closed_form.py",
+          "w33_pass518_phase_obstruction.py",
+          "w33_pass522_completeness_corrected.py",
+          "w33_pass523_vacuous_census.py",
+          "w33_pass524_status_upgrade.py",
+          "w33_pass525_infinite_families.py"
+        ],
+        "pass": "w33_pass515_sieve_rank"
+      },
+      {
+        "citations": 8,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "RESULTS_INDEX.md",
+          "w33_pass721_formal_rigidity_local_h2_census.py",
+          "w33_pass801_global_h2_stable_elements.py",
+          "w33_pass802_gluing66_extension_geometry.py",
+          "w33_pass821_gluing66_composition_series.py",
+          "w33_pass822_cut10_heisenberg_layer_and_flatblock_retraction.py",
+          "w33_pass823_integral_deformation_tower.py"
+        ],
+        "pass": "w33_pass681_h1_cocycle_rigidity_h2_scalar"
+      },
+      {
+        "citations": 7,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "PASS1079_ORBITAL_PAIRING_CORRECTION.md",
+          "PASS1081_1086_PARALLEL_HINTS_EXECUTION.md",
+          "RESULTS_INDEX.md",
+          "w33_pass1088_frame_adjacency_wedderburn.py",
+          "w33_pass1091_formal_orbital_intertwiner_lock.py",
+          "w33_pass1092_u42dot2_character_identification.py"
+        ],
+        "pass": "w33_pass1082_frame_coherent_configuration"
+      },
+      {
+        "citations": 7,
+        "cited_by": [
+          "PASS1258_1262_EXECUTION_RELEASE.md",
+          "RESULTS_INDEX.md",
+          "w33_k9_retraction.py",
+          "w33_pass1320_1324_common.py",
+          "w33_pass1320_1324_linking.py",
+          "w33_pass1320_1324_transport_core.py",
+          "w33_pass1320_1324_transport_linking.py"
+        ],
+        "pass": "w33_pass1315_1319_exact_frontiers"
+      },
+      {
+        "citations": 7,
+        "cited_by": [
+          "w33_pass169_canonical_cycles.py",
+          "w33_pass182_line_octahedron_dictionary.py",
+          "w33_pass185_octahedron_clock.py",
+          "w33_pass191_supercycle_pullback.py",
+          "w33_pass192_signed_trade_edge_s4.py",
+          "w33_pass193_sandwich_tower.py",
+          "w33_pass203_supercycle_bundle.py"
+        ],
+        "pass": "w33_pass168_second_shell_scheme"
+      },
+      {
+        "citations": 7,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "PASS173_INCIDENCE_TRANSCEIVER_ROUTE_DARK_LATTICE.md",
+          "RESULTS_INDEX.md",
+          "holonet_practical_implications.tex",
+          "photonic_holonet_body.tex",
+          "w33_pass177_address_route_dual_theta_split.py",
+          "w33_pass2716_2721_incidence_transceiver_implemented.md"
+        ],
+        "pass": "w33_pass173_incidence_transceiver_route_dark_lattice"
+      },
+      {
+        "citations": 7,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "bt3430_3441_cover_perkel_oracle_shell.py",
+          "w33_pass1831_1835_five_executions.py",
+          "w33_pass1841_1845_five_executions.py",
+          "w33_pass2416_nine_signature_cover_fibers.py",
+          "w33_pass2482_2487_the_hook_found_a_real_bug_and_it_was_mine.md",
+          "w33_pass2618_2623_the_sat_was_right_and_a_third_rediscovery.md"
+        ],
+        "pass": "w33_pass1821_1825_complete_cover_signature"
+      },
+      {
+        "citations": 7,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "README.md",
+          "RESULTS_INDEX.md",
+          "RESULTS_VOCABULARY.md",
+          "index.html",
+          "w33_pass2300_2305_verify_frozen.py",
+          "w33_pass2304_known_q27_spread_spectra.py"
+        ],
+        "pass": "w33_pass2300_ree_tits_divisible_code"
+      },
+      {
+        "citations": 7,
+        "cited_by": [
+          "MILESTONES.md",
+          "RESULTS_INDEX.md",
+          "w33_pass491_real_subring_and_third_failure.py",
+          "w33_pass503_dominant_term_and_parity.py",
+          "w33_pass507_factorial_law_reduction.py",
+          "w33_pass508_mechanism_audit_and_q81.py",
+          "w33_pass509_cyclic_orbits_and_deviations.py"
+        ],
+        "pass": "w33_pass490_necessity_and_placement"
+      },
+      {
+        "citations": 7,
+        "cited_by": [
+          "MILESTONES.md",
+          "RESULTS_INDEX.md",
+          "RESULTS_VOCABULARY.md",
+          "w33_pass506_characteristic_vs_blocksize.py",
+          "w33_pass507_factorial_law_reduction.py",
+          "w33_pass508_mechanism_audit_and_q81.py",
+          "w33_pass509_cyclic_orbits_and_deviations.py"
+        ],
+        "pass": "w33_pass491_real_subring_and_third_failure"
+      },
+      {
+        "citations": 7,
+        "cited_by": [
+          "MILESTONES.md",
+          "RESULTS_INDEX.md",
+          "RESULTS_VOCABULARY.md",
+          "w33_pass515_sieve_rank.py",
+          "w33_pass516_sieve_is_complete.py",
+          "w33_pass517_mobius_closed_form.py",
+          "w33_pass518_phase_obstruction.py"
+        ],
+        "pass": "w33_pass514_sieve_theorem"
+      },
+      {
+        "citations": 6,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "RESULTS_INDEX.md",
+          "w33_pass1015_gluing_is_a_complementation_invariant.py",
+          "w33_pass1016_seidel_invariant_and_unramified_separation.py",
+          "w33_pass1017_affine_pencil_stability.py",
+          "w33_pass1018_pencil_rigidity_and_the_wqq_family.py"
+        ],
+        "pass": "w33_pass1014_ramified_prime_separates_cospectral"
+      },
+      {
+        "citations": 6,
+        "cited_by": [
+          "AGENTS.md",
+          "CERTIFICATE_INDEX.md",
+          "GEMINI.md",
+          "PASS1142_RESERVED.md",
+          "PASS1143_RESERVED.md",
+          "PASS1146_RESERVED.md"
+        ],
+        "pass": "w33_pass1142_1146_exact"
+      },
+      {
+        "citations": 6,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "RESULTS_INDEX.md",
+          "w33_pass1533_cover_orbit_frontier_audit.py",
+          "w33_pass1534_four_packing_simplex.py",
+          "w33_pass2496_2501_the_k8_criterion_and_the_gauss_sum_closes.md",
+          "w33_pass2503_link_clique_numbers.py"
+        ],
+        "pass": "w33_pass1511_1515_cover_resolution_frontiers"
+      },
+      {
+        "citations": 6,
+        "cited_by": [
+          "w33_pass1827_1828_spread_seeds_and_the_mod2_sweep.py",
+          "w33_pass1861_1862_1865_traps_covers_and_general_q.py",
+          "w33_pass1887c_resolution_with_the_free_cuts.py",
+          "w33_pass1892_1896_spread_encoding_and_a_self_audit.py",
+          "w33_pass1897_1899_long_run_k10_max_and_sigma_matrix.py",
+          "w33_pass1924_1927_hand_symmetry_and_note_regression.py"
+        ],
+        "pass": "w33_pass1817_1818_free_cuts_and_branching"
+      },
+      {
+        "citations": 6,
+        "cited_by": [
+          "README.md",
+          "RESULTS_INDEX.md",
+          "RESULTS_VOCABULARY.md",
+          "index.html",
+          "w33_pass2300_2305_verify_frozen.py",
+          "w33_pass2310_quadratic_hom_orbit_seed_compression.py"
+        ],
+        "pass": "w33_pass2301_complete_quadratic_hom_bases"
+      },
+      {
+        "citations": 6,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "MILESTONES.md",
+          "RESULTS_INDEX.md",
+          "RESULTS_VOCABULARY.md",
+          "w33_pass526_transfer_covariance.py",
+          "w33_pass527_spectrum_deflation.py"
+        ],
+        "pass": "w33_pass519_transfer_matrix"
+      },
+      {
+        "citations": 5,
+        "cited_by": [
+          "w33_pass1054_hessian_affine_isomorphism.py",
+          "w33_pass1055_unsigned_equivariant_signed_obstruction.py",
+          "w33_pass1056_two_648_class_fusions.py",
+          "w33_pass1057_action_semantics_firewall.py",
+          "w33_pass1058_central_c3_discriminator.py"
+        ],
+        "pass": "w33_pass1054_1059_core"
+      },
+      {
+        "citations": 5,
+        "cited_by": [
+          "RESULTS_INDEX.md",
+          "bt1901_cf_preregistration_audit.py",
+          "w33_pass1086_contextuality_claim_firewall.py",
+          "w33_pass1098_what_one_tenth_measures.py",
+          "w33_pass1099_exact_ks_maximum.py"
+        ],
+        "pass": "w33_pass1080_contextual_fraction_audit"
+      },
+      {
+        "citations": 5,
+        "cited_by": [
+          "PASS1092_1096_CHARACTER_HESSE_E8_VENDOR_FORMAL_RELEASE.md",
+          "RESULTS_INDEX.md",
+          "w33_pass1094_e8_root_sheet_bridge.py",
+          "w33_pass1096_formal_character_hesse_e8_lock.py",
+          "w33_pass1109_1110_sl23_and_steinberg.md"
+        ],
+        "pass": "w33_pass1092_u42dot2_character_identification"
+      },
+      {
+        "citations": 5,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "PASS1325_1329_TRIALITY_INTEGRAL_GAUGE_RELEASE.md",
+          "README.md",
+          "RESULTS_INDEX.md",
+          "w33_pass1329_independent_checker.py"
+        ],
+        "pass": "w33_pass1325_1329_triality_integral_gauge"
+      },
+      {
+        "citations": 5,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "PASS1340_1344_CARTAN_ATLAS_SELECTOR_PADIC_RELEASE.md",
+          "RESULTS_INDEX.md",
+          "index.html",
+          "w33_pass1343_padic_lifting.py"
+        ],
+        "pass": "w33_pass1340_1344_cartan_atlas_selector_padic"
+      },
+      {
+        "citations": 5,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "RESULTS_INDEX.md",
+          "w33_pass1421_1424_outer_integral_cover_extension.py",
+          "w33_pass1431_1435_promotion_selftests_and_a_false_positive.md",
+          "w33_pass1509_qutrit_hamming_m20_chart.py"
+        ],
+        "pass": "w33_pass1417_exact_cover_orbit_frontier"
+      },
+      {
+        "citations": 5,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "RESULTS_INDEX.md",
+          "w33_pass175_dual_shell_720.py",
+          "w33_pass177_address_route_dual_theta_split.py",
+          "w33_pass179_poisson_modular_pair.py"
+        ],
+        "pass": "w33_pass167_sentinel_theta_macwilliams"
+      },
+      {
+        "citations": 5,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "RESULTS_INDEX.md",
+          "w33_pass2476_2481_the_144_and_a_calibrated_hook.md",
+          "w33_pass2488_2495_seventy_three_solved_and_the_gauss_sum.md",
+          "w33_pass2580_2585_the_fusion_test_and_a_fair_index_hit.md"
+        ],
+        "pass": "w33_pass1872_1876_five_frontiers"
+      },
+      {
+        "citations": 5,
+        "cited_by": [
+          "AGENTS.md",
+          "CERTIFICATE_INDEX.md",
+          "CLAUDE.md",
+          "GEMINI.md",
+          "RESULTS_INDEX.md"
+        ],
+        "pass": "w33_pass322_the_rank_law_was_already_ours"
+      },
+      {
+        "citations": 5,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "MILESTONES.md",
+          "RESULTS_INDEX.md",
+          "w33_pass530_q5_nonintegrality.py",
+          "w33_pass531_reality.py"
+        ],
+        "pass": "w33_pass527_spectrum_deflation"
+      },
+      {
+        "citations": 5,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "PASS552_VALUATION_CERTIFICATE_NOTE.md",
+          "RESULTS_INDEX.md",
+          "w33_pass548_552_release.py",
+          "w33_pass557_formal_valuation_support.py"
+        ],
+        "pass": "w33_pass552_q5_constant_and_switch_valuations"
+      },
+      {
+        "citations": 5,
+        "cited_by": [
+          "RESULTS_INDEX.md",
+          "w33_pass555_all_fixed_magnitude_fibres.py",
+          "w33_pass558_q5_triality_partition.py",
+          "w33_pass561_noise_aware_orientation_latch.py",
+          "w33_pass562_q5_tensor_type_derivation.py"
+        ],
+        "pass": "w33_pass553_five_point_core_geometry"
+      },
+      {
+        "citations": 5,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "RESULTS_INDEX.md",
+          "w33_pass573_577_release.py",
+          "w33_pass582_continuous_bellman_enclosure.py",
+          "w33_pass587_infinite_horizon_blackwell_lift.py"
+        ],
+        "pass": "w33_pass577_bayesian_posterior_dynamic_program"
+      },
+      {
+        "citations": 4,
+        "cited_by": [
+          "README.md",
+          "RESULTS_INDEX.md",
+          "w33_pass1003_chang_clique_complex_separator.py",
+          "w33_pass1004_cross_track_verification.py"
+        ],
+        "pass": "w33_pass1002_ramified_kernel_growth_gluing"
+      },
+      {
+        "citations": 4,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "PASS1087_1091_FIVE_STREAM_RELEASE.md",
+          "RESULTS_INDEX.md",
+          "w33_pass1092_u42dot2_character_identification.py"
+        ],
+        "pass": "w33_pass1088_frame_adjacency_wedderburn"
+      },
+      {
+        "citations": 4,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "PASS1102_1106_CLIFFORD_FIREWALL_E8_KEYSIGHT_FORMAL_RELEASE.md",
+          "RESULTS_INDEX.md",
+          "w33_pass1106_formal_clifford_firewall_carrier.py"
+        ],
+        "pass": "w33_pass1104_e8_pair_carrier_census"
+      },
+      {
+        "citations": 4,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "PASS1193_1197_EXACT_EQUIVARIANT_RELEASE.md",
+          "RESULTS_INDEX.md",
+          "w33_pass1196_primitive_cycle_orbits.py"
+        ],
+        "pass": "w33_pass1195_we6_equivariant_hashimoto"
+      }
+    ],
+    "cited_and_uncertified": 780,
+    "no_certificate": 1015,
+    "pass_scripts": 1139
+  },
+  "pass_4428": {
+    "diagnoses": [
+      {
+        "assert_site": "",
+        "kind": "KeyError",
+        "message": "KeyError: 'C0'",
+        "pass": "w33_pass3701_3714_panel_d4_f4_axial_lattice.py"
+      },
+      {
+        "assert_site": "",
+        "kind": "binascii.Error",
+        "message": "binascii.Error: Excess padding not allowed",
+        "pass": "w33_pass3973_3980_check.py"
+      },
+      {
+        "assert_site": "",
+        "kind": "zlib.error",
+        "message": "zlib.error: Error -5 while decompressing data: incomplete or truncated stream",
+        "pass": "w33_pass3981_3988_schema_probe.py"
+      },
+      {
+        "assert_site": "",
+        "kind": "zlib.error",
+        "message": "zlib.error: Error -5 while decompressing data: incomplete or truncated stream",
+        "pass": "w33_pass3983_orbital_central_fourier.py"
+      },
+      {
+        "assert_site": "assert set(np.unique(np.round(target,12))) == {-0.2, 2/15}",
+        "kind": "AssertionError",
+        "message": "AssertionError",
+        "pass": "w33_pass3989_3996_physical_w33_coupler.py"
+      },
+      {
+        "assert_site": "data=json.loads(OUT.read_text());saved=data.pop('semantic_sha256');assert sha(data)==saved=='5f99f47",
+        "kind": "AssertionError",
+        "message": "AssertionError",
+        "pass": "w33_pass4049_4056_five_front_outside_box.py"
+      },
+      {
+        "assert_site": "x=json.loads(OUT.read_text());saved=x.pop('semantic_sha256');assert sha(x)==saved=='342e8e7ae8f3ef06",
+        "kind": "AssertionError",
+        "message": "AssertionError",
+        "pass": "w33_pass4065_4072_explicit_qsp_dirac_magic_gauge.py"
+      },
+      {
+        "assert_site": "assert semantic_sha(c)==c[\"semantic_sha256\"]",
+        "kind": "AssertionError",
+        "message": "AssertionError",
+        "pass": "w33_pass4081_4088_deep_physics.py"
+      },
+      {
+        "assert_site": "assert canonical_hash(cert)==cert[\"semantic_sha256\"]",
+        "kind": "AssertionError",
+        "message": "AssertionError",
+        "pass": "w33_pass4105_4112_carrier_reference_netlist_decoder_turing.py"
+      },
+      {
+        "assert_site": "assert frozen[\"semantic_sha256\"]==x[\"semantic_sha256\"]",
+        "kind": "AssertionError",
+        "message": "AssertionError",
+        "pass": "w33_pass4113_4120_gauge_horizon_dimension_scar_curvature.py"
+      },
+      {
+        "assert_site": "",
+        "kind": "FileNotFoundError",
+        "message": "FileNotFoundError: [WinError 2] The system cannot find the file specified",
+        "pass": "w33_pass4129_4136_anomaly_gates_decoder_hybrid_orbits.py"
+      },
+      {
+        "assert_site": "assert semantic_hash(CERT)==CERT[\"semantic_sha256\"]",
+        "kind": "AssertionError",
+        "message": "AssertionError",
+        "pass": "w33_pass4169_4176_discrete_c2_hawking_backreaction_gray_levi_casimir_axion.py"
+      },
+      {
+        "assert_site": "assert semantic_hash(CERT)==CERT['semantic_sha256']",
+        "kind": "AssertionError",
+        "message": "AssertionError",
+        "pass": "w33_pass4185_4192_adaptive_c2_hawking_hysteresis_3local_cover_holonomy_ihara_heat.py"
+      }
+    ],
+    "kinds": {
+      "AssertionError": 8,
+      "FileNotFoundError": 1,
+      "KeyError": 1,
+      "binascii.Error": 1,
+      "zlib.error": 2
+    },
+    "one_fix": "scripts/cert_util.dumps bakes the round-trip in",
+    "single_root_cause": "7-8 of the 13 fail on assert semantic_hash(CERT) == CERT['semantic_sha256'] -- certificates that were never verifiable, the Pass 2482 live-dict-vs-round-trip trap"
+  }
+}

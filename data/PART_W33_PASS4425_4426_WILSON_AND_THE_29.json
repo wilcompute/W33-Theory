@@ -1,0 +1,50 @@
+{
+  "boundary": "4425 is 120 random signings against one optimised one on one graph; 'no separation' means none at 2 sigma over lengths 3-5, not a proof that none exists at any length. 4426's dimension equality is exact linear algebra over F2, and the containment argument that upgrades it to an identification is stated explicitly rather than assumed",
+  "pass_4425_wilson": {
+    "bound": 6.633249580711,
+    "by_length": [
+      {
+        "cycles": 160,
+        "length": 3,
+        "optimised": 0.525,
+        "random_mean": 0.504583333333,
+        "random_std": 0.040276819912,
+        "trivial": 0.0,
+        "z": 0.506908606769
+      },
+      {
+        "cycles": 1740,
+        "length": 4,
+        "optimised": 0.555747126437,
+        "random_mean": 0.50117816092,
+        "random_std": 0.011335554347,
+        "trivial": 0.0,
+        "z": 4.81396532067
+      },
+      {
+        "cycles": 18144,
+        "length": 5,
+        "optimised": 0.497574955908,
+        "random_mean": 0.499775867137,
+        "random_std": 0.003301881554,
+        "trivial": 0.0,
+        "z": -0.666562743947
+      }
+    ],
+    "conclusion": "the optimised signing is invisible at lengths 3 and 5 and VISIBLE at length 4 (+4.8 sigma) -- the loop length a generalised quadrangle is defined by; one signing vs 120 random, so a hint needing a second quadrangle to confirm",
+    "max_abs_z": 4.81396532067,
+    "optimised_rho": 5.212743377455,
+    "separating_length": 4
+  },
+  "pass_4426_invariant_subspace": {
+    "best_rho_line_signing": 5.785609808204,
+    "conclusion": "two collinear points of a GQ lie on a unique line, so the 40 line-cochains have disjoint supports and partition all 240 edges; signing the lines is a 40-parameter geometric gauge family that CONTAINS a Ramanujan signing",
+    "error_recorded": "dimension 40 was compared against dimension 29 without checking the objects were comparable: the line span is an invariant SUBMODULE, the 29 is a FIXED-point space. Failure mode 6, committed inside a pass about care",
+    "fixed_subspace_dim": 29,
+    "line_cochain_rank": 40,
+    "line_signing_is_ramanujan": true,
+    "line_span_in_H1": 40,
+    "lines": 40,
+    "supports_partition_edges": true
+  }
+}

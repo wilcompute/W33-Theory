@@ -1,207 +1,247 @@
 {
   "conclusion": "the signature is common and was unchecked; quantifying the real backlog needs reading, not more grepping",
-  "files": 175,
-  "flagged": 216,
+  "files": 177,
+  "flagged": 219,
   "precision": "low by construction; a triage list, not a verdict",
   "sample": [
     {
       "file": "2026-05-18_critical_edge_correction_horizon.md",
       "line": 227,
+      "source": "ef5d4f8276221cb8",
       "text": "This matches the idea that a choice can prevent further correction with re"
     },
     {
       "file": "2026-05-18_horizon_f3_parity_matrix.md",
       "line": 70,
+      "source": "c98c7e12ddd9e758",
       "text": "Both have rank 6 over \\(\\mathbb F_3\\).  Therefore both define \\([72,66]\\)-"
     },
     {
       "file": "2026-05-18_mckay_heptad_noncommutation_bridge.md",
       "line": 89,
+      "source": "8427191950d6ec08",
       "text": "The same count has three important quotients."
     },
     {
       "file": "2026-05-18_mckay_heptad_noncommutation_bridge.md",
       "line": 153,
+      "source": "8427191950d6ec08",
       "text": "This matches the X-scheme primitive multiplicities:"
     },
     {
       "file": "2026-05-18_minimal_logical_dual_phase_projector.md",
       "line": 121,
+      "source": "70efe0a6f1763231",
       "text": "This is a very clean asymmetric-dual signature: the X side is small and hi"
     },
     {
       "file": "2026-05-18_minimal_logical_x_scheme_eigenmatrix.md",
       "line": 103,
+      "source": "1dc837e5e88ffd74",
       "text": "This matches the previous 3-adic overlap spectrum, now explained by the pr"
     },
     {
       "file": "2026-05-18_staircase_parity_horizon_lift.md",
       "line": 73,
+      "source": "331d57d0fec6a8d1",
       "text": "So the \\(n=12\\) block is not a loose coincidence.  It is the first nontriv"
     },
     {
       "file": "2026-05-18_toroidal_metric_parity_taylor.md",
       "line": 164,
+      "source": "47eae5085fdba903",
       "text": "matches the middle eigenvalue."
     },
     {
       "file": "2026-05-18_toroidal_metric_parity_taylor.md",
       "line": 170,
+      "source": "47eae5085fdba903",
       "text": "matches the minimal X-vector count plus protected homology."
     },
     {
       "file": "2026-05-18_toroidal_metric_parity_taylor.md",
       "line": 176,
+      "source": "47eae5085fdba903",
       "text": "matches the signed phase-frame kernel."
     },
     {
       "file": "2026-05-18_toroidal_spectrum_realization_bridge.md",
       "line": 46,
+      "source": "43c6886ff2b6c165",
       "text": "The same script verifies the centered shell refines as \\(4+1+1\\), that the"
     },
     {
       "file": "2026-05-18_toroidal_spectrum_realization_bridge.md",
       "line": 82,
+      "source": "43c6886ff2b6c165",
       "text": "The pair also has clean symmetric invariants:"
     },
     {
       "file": "2026-05-18_toroidal_vef_edge_phase_kernel.md",
       "line": 103,
+      "source": "5b2719ab1112ce7f",
       "text": "Each realization also has"
     },
     {
       "file": "2026-05-18_toroidal_vef_edge_phase_kernel.md",
       "line": 273,
+      "source": "5b2719ab1112ce7f",
       "text": "This matches the earlier Hodge split:"
     },
     {
       "file": "2026-05-21_toroidal_dual_genus_horizon.md",
       "line": 40,
+      "source": "284d92d82262ecb6",
       "text": "Both have"
     },
     {
       "file": "2026-05-21_toroidal_dual_genus_horizon.md",
       "line": 46,
+      "source": "284d92d82262ecb6",
       "text": "so both are genus-one toroidal polyhedra."
     },
     {
       "file": "2026-05-21_toroidal_dual_genus_horizon.md",
       "line": 254,
+      "source": "284d92d82262ecb6",
       "text": "Both give genus one and numerator"
     },
     {
       "file": "2026-05-29_q4_fano_chain_complex_homology.md",
       "line": 133,
+      "source": "a9388a9f09a7e24b",
       "text": "This matches the known signed phase-frame rank:"
     },
     {
       "file": "2026-05-29_spread_square_we6_factorization.md",
       "line": 65,
+      "source": "d9d0b078c0432ee0",
       "text": "The same number is also the order of the linear symplectic group:"
     },
     {
       "file": "2026-05-30_index_read_correction_and_local_shell.md",
       "line": 21,
+      "source": "a8954e4fb95d4383",
       "text": "The page emphasizes the coincidence/equality"
     },
     {
       "file": "2026-05-30_ordered_spread_transport_orbits.md",
       "line": 51,
+      "source": "7613580475bb05e9",
       "text": "So the count matches the full linear symplectic order exactly."
     },
     {
       "file": "2026-05-30_ordered_spread_transport_orbits.md",
       "line": 102,
+      "source": "7613580475bb05e9",
       "text": "Sp(4,3) has the same order as the total number of triples, so a regular tr"
     },
     {
       "file": "2026-05-30_s4_torsor_bridge_between_12_codecs.md",
       "line": 36,
+      "source": "334e385e218f2c78",
       "text": "So both are 12-element regular torsors, but for different groups:"
     },
     {
       "file": "2026-05-31_BREAKTHROUGH_15_FINAL_SYNTHESIS.md",
       "line": 62,
+      "source": "b2cc85de247bdadf",
       "text": "Each forcing pins q = 3 INDEPENDENTLY. The thirteen-fold coincidence is"
     },
     {
       "file": "2026-05-31_fano_84_chart_codec.md",
       "line": 127,
+      "source": "2d57691c42b5b36b",
       "text": "This theorem does not yet prove a canonical equality with those flags. It "
     },
     {
       "file": "2026-05-31_polarity_chirality_orientation_duality.md",
       "line": 131,
+      "source": "e0514f081b4d30f9",
       "text": "This cleanly matches the toroidal duality:"
     },
     {
       "file": "2026-05-31_q3_FORMAL_THEOREM.md",
       "line": 135,
+      "source": "2d26d21db7181e6e",
       "text": "conditions all coincide at q = 3, and no other positive integer"
     },
     {
       "file": "2026-05-31_szilassi_dual_from_csaszar_rotation.md",
       "line": 113,
+      "source": "f0b58e097b9b6c89",
       "text": "So the concrete toroidal duality matches the earlier abstract Fano polarit"
     },
     {
       "file": "2026-06-07_bc_ring_torus_lift.md",
       "line": 156,
+      "source": "e121cd9e255292da",
       "text": "This is not a numerical coincidence; it is a chain-complex theorem for the"
     },
     {
       "file": "2026-06-07_toroidal_html_dual_repair.md",
       "line": 79,
+      "source": "e288a65b0baffd78",
       "text": "Both have the same genus. The shared face-edge incidence is:"
     },
     {
       "file": "2026-07-07_pass69_three_perpendicular_tracks.md",
       "line": 132,
+      "source": "d6e1d4a747115e6d",
       "text": "All three tracks point to the same number: \\(\\sqrt{97}\\)."
     },
     {
       "file": "2026-07-08_pass70_key_numerics.md",
       "line": 40,
+      "source": "9a3972daebcd0b5e",
       "text": "of the underlying code. This is not a coincidence: Ramanujan graphs"
     },
     {
       "file": "2026-07-10_levi_closure.md",
       "line": 15,
+      "source": "02b09ea858f6a561",
       "text": "An incident point-line pair has `q` intermediate alternatives and a noninc"
     },
     {
       "file": "2026-07-10_levi_closure.md",
       "line": 78,
+      "source": "02b09ea858f6a561",
       "text": "Both have stage weights `1,4,12,40`. These eight `Z^40` states supply the "
     },
     {
       "file": "2026-07-10_levi_five_frontiers.md",
       "line": 89,
+      "source": "5f913904012dfa3d",
       "text": "Both are doubly even and self-orthogonal, so"
     },
     {
       "file": "2026-07-15_pass353_factor17_rep_theory.md",
       "line": 50,
+      "source": "b54a5a46e37c5b07",
       "text": "4. \u2713 H1 (q=4 coincidence) stated and flagged speculative"
     },
     {
       "file": "2026-07-15_pass354_factor17_correction.md",
       "line": 19,
+      "source": "035afdc166953dfb",
       "text": "The 17 in det(B_5) = 5\u00b2\u00b713\u00b2\u00b77\u00b7**17**\u00b771 is a **separate arithmetic coincid"
     },
     {
       "file": "2026-07-15_pass354_factor17_correction.md",
       "line": 35,
+      "source": "035afdc166953dfb",
       "text": "For p=3: disc(B_3) = 272 = 16\u00b717. The factor 17 reappears. Is this a coinc"
     },
     {
       "file": "2026-07-15_pass357_master_forcing_table.md",
       "line": 52,
+      "source": "c3ed89b35cf2fe03",
       "text": "The substrate W(3,3) is not merely a mathematical coincidence \u2014 it is the "
     },
     {
       "file": "2026-07-15_pass76_k6_matchings_codewords.md",
       "line": 42,
+      "source": "3814ea2c3f119dc5",
       "text": "2. \u2713 15 = edges of K6 = perfect matchings of K6 = doily points: triple coi"
     }
   ],
