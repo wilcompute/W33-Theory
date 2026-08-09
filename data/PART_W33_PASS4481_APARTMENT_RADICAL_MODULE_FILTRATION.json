@@ -1,0 +1,11 @@
+{
+  "boundary": "Modular representation dimensions only; no particle interpretation or physical radical-discarding measurement is inferred.",
+  "checks": {"passed": 12, "total": 12},
+  "exact_sequence": "0 -> K/J (29) -> C_ap (39) -> H10 (10) -> 0",
+  "irreducible_factors": [8, 6, 14],
+  "orbit_scans": {"14": 12, "6": 2, "8": 2},
+  "pass": 4481,
+  "radical_profile": "8 | (6 + 1) | 14",
+  "spaces": {"I": 10, "J": 1, "K": 30, "R": 15, "S": 16, "U": 9},
+  "theorem": "W33 apartment-code radical module filtration theorem"
+}
