@@ -1,0 +1,21 @@
+{
+  "V9_ambient_weights": {"0": 1, "16": 135, "20": 240, "24": 135, "40": 1},
+  "boundary": "Finite binary module geometry only; q8 is not a physical energy or charge.",
+  "canonical_chain": "0 < <j> < j^perp=V9 < H10",
+  "dimensions": [0, 1, 9, 10],
+  "fixed_vector": "j=all-ones; uniqueness inside H10 follows from transitivity of the ambient 40-line permutation action",
+  "irreducibility_boundary": "The intrinsic construction locates the 1 and 9 layers without cyclic-submodule search. Irreducibility of V8 is inherited from independent Pass 4477/4496 exhaustive certificates.",
+  "middle_quotient": {
+    "anisotropic": 120,
+    "dimension": 8,
+    "polar_form": "protected alternating B",
+    "quadratic_form": "q8([x])=wt(x)/4 mod2",
+    "singular_including_zero": 136,
+    "space": "V8=V9/<j>",
+    "type": "O+(8,2)",
+    "well_defined_under_complement": true
+  },
+  "parity_pairing": "pi(x)=B(x,j), hence V9=ker(pi)=j^perp",
+  "pass": 4553,
+  "theorem": "The protected 1|8|1 filtration is canonically the fixed line, its symplectic perpendicular, and the full H10; the middle factor has an explicit plus-type weight quadratic."
+}
