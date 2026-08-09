@@ -1,0 +1,29 @@
+{
+  "all_large_classes_nonsplit": true,
+  "all_maximals_nonsplit_from_pass4503": true,
+  "attained_by": "canonical flag/Borel N_G(Sylow_3), Pass 4519",
+  "boundary": "The completeness step uses standard finite-group subgroup structure of the five ATLAS maximal types. The executable independently verifies the exact representatives and section ranks, but is not itself a from-scratch enumeration of every subgroup of the 25920-element group.",
+  "classification_reduction": {
+    "2.(A4xA4).2": "large proper types represented at 288 and the two global 192 classes; the second 192 class is shared with 2^4:A4",
+    "2^4:A5": "only >162 proper type is 2^4:A4 (192)",
+    "3^(1+2):2A4": "only >162 proper type is 3^(1+2):Q8 (216)",
+    "3^3:S4": "types 3^3:A4 (324) and 3^3:D8 (216)",
+    "S6": "only >162 proper type is A6 (360)"
+  },
+  "global_maximum_splitting_order": 162,
+  "group": "PSp(4,3) ~= U4(2)",
+  "group_order": 25920,
+  "large_class_orders": [360,324,288,216,216,192,192],
+  "maximal_orders": [960,720,648,648,576],
+  "pass": 4538,
+  "proper_subgroup_classes_above_162_below_maximals": {
+    "2^4_A4_order192": {"order":192,"rank_augmented":386,"rank_coefficient":385,"split":false},
+    "3^3_A4_order324": {"order":324,"rank_augmented":387,"rank_coefficient":386,"split":false},
+    "3^3_D8_order216": {"order":216,"rank_augmented":387,"rank_coefficient":386,"split":false},
+    "A6_order360": {"order":360,"rank_augmented":387,"rank_coefficient":386,"split":false},
+    "c576_index2_order288": {"order":288,"rank_augmented":387,"rank_coefficient":386,"split":false},
+    "c576_index3_order192": {"order":192,"rank_augmented":381,"rank_coefficient":380,"split":false},
+    "extraspecial_Q8_order216": {"order":216,"rank_augmented":386,"rank_coefficient":385,"split":false}
+  },
+  "theorem": "Combining the standard subgroup structures of the five maximal types with exact section tests gives a global order bound: every subgroup of PSp(4,3) of order >162 is nonsplit, while the order-162 Borel splits."
+}
