@@ -66,28 +66,28 @@
     "log_L_through_u4": "8*S*u^3 + (240+2*W4)*u^4 + O(u^5)",
     "sample_checks": [
       [
-        2,
+        0,
         -40,
-        48,
+        0,
         640
       ],
       [
+        -14,
+        -28,
+        -336,
+        736
+      ],
+      [
         2,
-        -20,
+        -8,
         48,
-        800
+        896
       ],
       [
-        -6,
-        -12,
-        -144,
-        864
-      ],
-      [
-        -2,
-        -12,
-        -48,
-        864
+        4,
+        -32,
+        96,
+        704
       ]
     ],
     "signed_hashimoto_dimension": 480,
@@ -176,16 +176,16 @@
       36
     ],
     "interpretation": "Exact fingerprint match to the repository's corrected E8/2E8 code embedding; this supplies a new apartment-code construction of that carrier.",
-    "nonzero_orbits": {
-      "nonsingular": 120,
-      "singular": 135
-    },
     "nonsingular_polar_graph_srg": [
       120,
       63,
       30,
       36
     ],
+    "nonzero_orbits": {
+      "nonsingular": 120,
+      "singular": 135
+    },
     "q0_count_including_zero": 136,
     "q1_count": 120,
     "quadratic_type": "plus",
