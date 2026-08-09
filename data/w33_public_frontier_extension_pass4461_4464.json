@@ -13,7 +13,8 @@
     {"kind":"id","token":"pass4511-4518-dual-enumerator-ihara-q53","source":"analysis/PASS4511_4518_dual_enumerator_ihara_q53_index_insert.html"},
     {"kind":"id","token":"pass4520-4527-enumerator-q53-orthogonal","source":"analysis/PASS4520_4527_enumerator_q53_orthogonal_tomography_index_insert.html"},
     {"kind":"id","token":"pass4528-4535-borel-building-compiler-edge","source":"analysis/PASS4528_4535_borel_building_compiler_edge_index_insert.html"},
-    {"kind":"id","token":"pass4536-4543-parity-decoder","source":"analysis/PASS4536_4543_parity_decoder_index_insert.html"}
+    {"kind":"id","token":"pass4536-4543-parity-decoder","source":"analysis/PASS4536_4543_parity_decoder_index_insert.html"},
+    {"kind":"id","token":"pass4544-4551-module-cubic-enumerator-zeta","source":"analysis/PASS4544_4551_module_cubic_enumerator_zeta_index_insert.html"}
   ],
   "standalone_public_pages": [
     {"token":"pass4461-4471-line-signing-apartment-parity-page","source":"docs/line-signing-apartment-parity.html"},
@@ -26,6 +27,7 @@
     {"token":"pass4503-4510-apartment-obstruction-scaling-page","source":"docs/apartment-obstruction-cohomology-gq.html"},
     {"token":"pass4511-4518-dual-enumerator-ihara-q53-page","source":"docs/apartment-dual-enumerator-ihara-q53.html"},
     {"token":"pass4520-4527-enumerator-q53-orthogonal-page","source":"docs/apartment-q53-orthogonal-tomography.html"},
-    {"token":"pass4536-4543-parity-decoder-page","source":"docs/protected-parity-decoder.html"}
+    {"token":"pass4536-4543-parity-decoder-page","source":"docs/protected-parity-decoder.html"},
+    {"token":"pass4544-4551-module-cubic-enumerator-zeta-page","source":"docs/apartment-module-cubic-zeta.html"}
   ]
 }
