@@ -1,0 +1,28 @@
+{
+  "boundary": "Model-level Boolean scheduling only. No synthesis, placement, optical loss, timing closure, decoder threshold, Landauer minimum, or physical optimum is claimed.",
+  "column_degrees": [1,1,1,1,5,5,5,5,9,9],
+  "depth_lower_bound": 9,
+  "depth_optimal_in_model": true,
+  "instantaneous_source_fanout": 1,
+  "maximum_degree": 9,
+  "maximum_total_source_fanout": 7,
+  "model": "one source-line -> one quotient XOR accumulator per primitive operation; no source or accumulator reused within a clock",
+  "pass": 4531,
+  "primitive_operations": 42,
+  "quotient_columns": 10,
+  "schedule_depth": 9,
+  "source_degrees": {"0":3,"1":5,"2":7,"3":7,"4":3,"5":2,"6":3,"7":2,"8":2,"9":4,"28":1,"32":2,"36":1},
+  "source_lines": [0,1,2,3,4,5,6,7,8,9,28,32,36],
+  "rounds": [
+    [{"line":0,"column":0},{"line":1,"column":1},{"line":2,"column":8},{"line":3,"column":4},{"line":6,"column":5},{"line":7,"column":7},{"line":8,"column":6},{"line":9,"column":9}],
+    [{"line":1,"column":7},{"line":2,"column":9},{"line":3,"column":8},{"line":4,"column":5},{"line":6,"column":4},{"line":9,"column":6}],
+    [{"line":0,"column":9},{"line":1,"column":6},{"line":2,"column":4},{"line":3,"column":5},{"line":9,"column":8}],
+    [{"line":0,"column":8},{"line":1,"column":4},{"line":2,"column":5},{"line":3,"column":6},{"line":4,"column":9},{"line":9,"column":7}],
+    [{"line":1,"column":5},{"line":2,"column":6},{"line":3,"column":7},{"line":4,"column":8},{"line":5,"column":4},{"line":32,"column":9}],
+    [{"line":2,"column":7},{"line":3,"column":9},{"line":6,"column":8}],
+    [{"line":2,"column":2},{"line":3,"column":3},{"line":5,"column":9},{"line":7,"column":8}],
+    [{"line":8,"column":9},{"line":32,"column":8}],
+    [{"line":28,"column":9},{"line":36,"column":8}]
+  ],
+  "theorem": "The exact Pass-4504 flag section compiles to 42 primitive XOR routes in 9 conflict-free clocks, and 9 is optimal in the stated bipartite single-port model."
+}
