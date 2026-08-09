@@ -1,0 +1,77 @@
+{
+  "boundary": "4456's recovery is exact integer arithmetic and the forward step legitimately uses A to generate the data, as a measurement would; the inverse step reads only N_1..N_40. 4457 samples 400 signings per quadrangle and H(3,9)'s row is quoted from Pass 4433, not rebuilt",
+  "pass_4456_bass": {
+    "B_size": 480,
+    "E": 240,
+    "V": 40,
+    "characteristic_polynomial": "(x - 12)*(x - 2)**24*(x + 4)**15",
+    "degree": 12,
+    "lesson": "Pass 4452 failed for a structural reason and diagnosed it as such instead of blaming floating point; fixing the reduction rather than the arithmetic is what made this work",
+    "match": true,
+    "power_sums_used": 40,
+    "q": 11,
+    "recovered_spectrum": {
+      "-4": 15,
+      "12": 1,
+      "2": 24
+    },
+    "traces_recovered_exactly": true,
+    "true_spectrum": {
+      "-4": 15,
+      "12": 1,
+      "2": 24
+    },
+    "unknowns_reduced_to": 40
+  },
+  "pass_4457_family": [
+    {
+      "bound": 4.472135955,
+      "degree": 6,
+      "edges_per_line": 3,
+      "fraction_ramanujan": 0.85,
+      "lines": 15,
+      "mean_rho": 4.156188277279,
+      "name": "W(3,2) = GQ(2,2)",
+      "points": 15,
+      "s": 2,
+      "t": 2
+    },
+    {
+      "bound": 6.633249580711,
+      "degree": 12,
+      "edges_per_line": 6,
+      "fraction_ramanujan": 0.2475,
+      "lines": 40,
+      "mean_rho": 6.926860855704,
+      "name": "W(3,3) = GQ(3,3)",
+      "points": 40,
+      "s": 3,
+      "t": 3
+    },
+    {
+      "bound": 6.0,
+      "degree": 10,
+      "edges_per_line": 3,
+      "fraction_ramanujan": 0.86,
+      "lines": 45,
+      "mean_rho": 5.69899853724,
+      "name": "Q(5,2) = GQ(2,4)",
+      "points": 27,
+      "s": 2,
+      "t": 4
+    },
+    {
+      "bound": 10.770329614269,
+      "degree": 30,
+      "edges_per_line": 6,
+      "fraction_ramanujan": 0.065,
+      "lines": 280,
+      "mean_rho": 11.467002686469,
+      "name": "Q(5,3) = GQ(3,9)",
+      "points": 112,
+      "s": 3,
+      "t": 9
+    }
+  ],
+  "pass_4457_law": "edges per line = s(s+1)/2 sets whether line-signings can reach the Ramanujan bound at all -- 85% at 3, 25% at 6, 0% at 45. t's effect is NOT consistent: large at s=3 (24.8% -> 6.5%), absent at s=2 (85.0% -> 86.0%, well within sampling error). A ceiling at s=2 fits both rows but is fitted after the fact and cannot be distinguished, since GQ(2,t) exists only for t = 1, 2, 4"
+}

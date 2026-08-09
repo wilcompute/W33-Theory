@@ -1,0 +1,475 @@
+{
+  "boundary": "4458 exhausts the two-step partitions of the four perfect matchings at seven drive periods -- it does not exhaust all Floquet drives, only those built this way. 4459's citation count is a filename match and over-counts index mentions",
+  "pass_4458_drives": {
+    "best_T_over_pi": 0.25,
+    "best_partition": {
+      "best": 2,
+      "counts": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        2,
+        2
+      ],
+      "partition": [
+        0
+      ]
+    },
+    "conclusion": "no two-step drive built from the perfect matchings gives disorder-protected pi-modes; Pass 4449's open question is closed",
+    "disorder": [
+      {
+        "W": 0.0,
+        "max": 2,
+        "mean": 2.0,
+        "min": 2
+      },
+      {
+        "W": 0.2,
+        "max": 2,
+        "mean": 1.6,
+        "min": 0
+      },
+      {
+        "W": 0.5,
+        "max": 2,
+        "mean": 0.8,
+        "min": 0
+      },
+      {
+        "W": 1.0,
+        "max": 2,
+        "mean": 0.4,
+        "min": 0
+      }
+    ],
+    "partitions": [
+      {
+        "best": 2,
+        "counts": [
+          0,
+          2,
+          0,
+          0,
+          0,
+          2,
+          2
+        ],
+        "partition": [
+          0
+        ]
+      },
+      {
+        "best": 2,
+        "counts": [
+          0,
+          2,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "partition": [
+          1
+        ]
+      },
+      {
+        "best": 2,
+        "counts": [
+          0,
+          2,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "partition": [
+          2
+        ]
+      },
+      {
+        "best": 2,
+        "counts": [
+          0,
+          2,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "partition": [
+          3
+        ]
+      },
+      {
+        "best": 2,
+        "counts": [
+          0,
+          2,
+          0,
+          0,
+          0,
+          2,
+          2
+        ],
+        "partition": [
+          0,
+          1
+        ]
+      },
+      {
+        "best": 2,
+        "counts": [
+          0,
+          2,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "partition": [
+          0,
+          2
+        ]
+      },
+      {
+        "best": 2,
+        "counts": [
+          0,
+          2,
+          0,
+          0,
+          0,
+          2,
+          2
+        ],
+        "partition": [
+          0,
+          3
+        ]
+      }
+    ],
+    "protected": false
+  },
+  "pass_4459_backlog": {
+    "no_baseline": 40,
+    "no_baseline_and_cited": 36,
+    "no_baseline_cited_uncertified": 23,
+    "priority": [
+      {
+        "citations": 9,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "RESULTS_INDEX.md",
+          "w33_pass568_572_release.py",
+          "w33_pass573_hjelmslev_c3_600cell_apex.py",
+          "w33_pass578_fixed_locus_monomial_search.py",
+          "w33_pass578_residual_collision_symmetry.py"
+        ],
+        "has_certificate": false,
+        "pass": "w33_pass569_z9_coupled_affine_radial_quadratic"
+      },
+      {
+        "citations": 5,
+        "cited_by": [
+          "AGENTS.md",
+          "CERTIFICATE_INDEX.md",
+          "CLAUDE.md",
+          "GEMINI.md",
+          "RESULTS_INDEX.md"
+        ],
+        "has_certificate": false,
+        "pass": "w33_pass322_the_rank_law_was_already_ours"
+      },
+      {
+        "citations": 4,
+        "cited_by": [
+          "MILESTONES.md",
+          "RESULTS_INDEX.md",
+          "RESULTS_VOCABULARY.md",
+          "w33_pass482_order_theorem_q9_criterion_mechanism_census.py"
+        ],
+        "has_certificate": false,
+        "pass": "w33_pass481_t1_theorem_second_mechanism_q9_law_freeness"
+      },
+      {
+        "citations": 3,
+        "cited_by": [
+          "RESULTS_INDEX.md",
+          "THE_27_FOLD_WAY.md",
+          "w33_pass432_genuinely_nonabelian_pds.py"
+        ],
+        "has_certificate": false,
+        "pass": "w33_pass370_the_two_27s_are_one_torsor"
+      },
+      {
+        "citations": 2,
+        "cited_by": [
+          "RESULTS_INDEX.md",
+          "w33_pass3817_monster_seed_compression_harness.py"
+        ],
+        "has_certificate": false,
+        "pass": "w33_pass3813_3820_quadratic_discriminant_multiport_holonomy"
+      },
+      {
+        "citations": 2,
+        "cited_by": [
+          "w33_pass421_qutrit_phase_portrait.py",
+          "w33_pass426_mixed_qutrit_phase_portrait.py"
+        ],
+        "has_certificate": false,
+        "pass": "w33_pass416_qutrit_distillation_search"
+      },
+      {
+        "citations": 2,
+        "cited_by": [
+          "w33_pass802_gluing66_extension_geometry.py",
+          "w33_pass821_gluing66_composition_series.py"
+        ],
+        "has_certificate": false,
+        "pass": "w33_pass722_cycle_lattice_two_branch_order"
+      },
+      {
+        "citations": 2,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "w33_pass825_facet_pruned_polyhedral_runtime.py"
+        ],
+        "has_certificate": false,
+        "pass": "w33_pass805_continuous_minplus_circuit"
+      },
+      {
+        "citations": 2,
+        "cited_by": [
+          "CERTIFICATE_INDEX.md",
+          "RESULTS_INDEX.md"
+        ],
+        "has_certificate": false,
+        "pass": "w33_pass824_minimax_audit_stream_allocator"
+      },
+      {
+        "citations": 2,
+        "cited_by": [
+          "RESULTS_INDEX.md",
+          "w33_pass981_arxiv_batch_intake_audit.py"
+        ],
+        "has_certificate": false,
+        "pass": "w33_pass881_seven_thread_batch_intake_audit"
+      },
+      {
+        "citations": 1,
+        "cited_by": [
+          "RESULTS_INDEX.md"
+        ],
+        "has_certificate": false,
+        "pass": "w33_pass1011_rank_bound_retraction"
+      },
+      {
+        "citations": 1,
+        "cited_by": [
+          "w33_pass1098_what_one_tenth_measures.py"
+        ],
+        "has_certificate": false,
+        "pass": "w33_pass1099_exact_ks_maximum"
+      },
+      {
+        "citations": 1,
+        "cited_by": [
+          "RESULTS_INDEX.md"
+        ],
+        "has_certificate": true,
+        "pass": "w33_pass2774_isa_frame_reachability"
+      },
+      {
+        "citations": 1,
+        "cited_by": [
+          "RESULTS_INDEX.md"
+        ],
+        "has_certificate": true,
+        "pass": "w33_pass2830_2832_class_separation_yield_three_copy"
+      },
+      {
+        "citations": 1,
+        "cited_by": [
+          "RESULTS_INDEX.md"
+        ],
+        "has_certificate": true,
+        "pass": "w33_pass2861_2865_quadratic_line_and_power"
+      },
+      {
+        "citations": 1,
+        "cited_by": [
+          "RESULTS_INDEX.md"
+        ],
+        "has_certificate": true,
+        "pass": "w33_pass2866_2867_isa_diameter_and_scrambling"
+      },
+      {
+        "citations": 1,
+        "cited_by": [
+          "RESULTS_INDEX.md"
+        ],
+        "has_certificate": true,
+        "pass": "w33_pass2869_which_srg_is_it"
+      },
+      {
+        "citations": 1,
+        "cited_by": [
+          "RESULTS_INDEX.md"
+        ],
+        "has_certificate": true,
+        "pass": "w33_pass2910_2913_threecopy_hodge_and_vm"
+      },
+      {
+        "citations": 1,
+        "cited_by": [
+          "RESULTS_INDEX.md"
+        ],
+        "has_certificate": true,
+        "pass": "w33_pass2930_2935_vm_table_hodge24_hamiltonian"
+      },
+      {
+        "citations": 1,
+        "cited_by": [
+          "RESULTS_INDEX.md"
+        ],
+        "has_certificate": true,
+        "pass": "w33_pass3040_3043_code8_growth_ramanujan"
+      },
+      {
+        "citations": 1,
+        "cited_by": [
+          "RESULTS_INDEX.md"
+        ],
+        "has_certificate": false,
+        "pass": "w33_pass323_the_css_family_audit"
+      },
+      {
+        "citations": 1,
+        "cited_by": [
+          "RESULTS_INDEX.md"
+        ],
+        "has_certificate": false,
+        "pass": "w33_pass325_what_the_program_is_for"
+      },
+      {
+        "citations": 1,
+        "cited_by": [
+          "RESULTS_INDEX.md"
+        ],
+        "has_certificate": true,
+        "pass": "w33_pass4237_4244_exact_minpoly_and_three_outside_box"
+      },
+      {
+        "citations": 1,
+        "cited_by": [
+          "RESULTS_INDEX.md"
+        ],
+        "has_certificate": false,
+        "pass": "w33_pass427_adaptive_telemetry_channel"
+      },
+      {
+        "citations": 1,
+        "cited_by": [
+          "RESULTS_INDEX.md"
+        ],
+        "has_certificate": true,
+        "pass": "w33_pass4296_separate_the_final_pair"
+      },
+      {
+        "citations": 1,
+        "cited_by": [
+          "RESULTS_INDEX.md"
+        ],
+        "has_certificate": true,
+        "pass": "w33_pass4409_4410_signings_and_larger_graphs"
+      },
+      {
+        "citations": 1,
+        "cited_by": [
+          "RESULTS_INDEX.md"
+        ],
+        "has_certificate": true,
+        "pass": "w33_pass4417_4418_chiral_and_symmetric_signings"
+      },
+      {
+        "citations": 1,
+        "cited_by": [
+          "RESULTS_INDEX.md"
+        ],
+        "has_certificate": true,
+        "pass": "w33_pass4425_4426_wilson_loops_and_the_29"
+      },
+      {
+        "citations": 1,
+        "cited_by": [
+          "RESULTS_INDEX.md"
+        ],
+        "has_certificate": false,
+        "pass": "w33_pass460_switching_trade_search"
+      },
+      {
+        "citations": 1,
+        "cited_by": [
+          "RESULTS_VOCABULARY.md"
+        ],
+        "has_certificate": false,
+        "pass": "w33_pass535_image_closed"
+      },
+      {
+        "citations": 1,
+        "cited_by": [
+          "RESULTS_INDEX.md"
+        ],
+        "has_certificate": false,
+        "pass": "w33_pass610_optimal_wilson_inference"
+      },
+      {
+        "citations": 1,
+        "cited_by": [
+          "RESULTS_INDEX.md"
+        ],
+        "has_certificate": false,
+        "pass": "w33_pass635_joint_optical_eprocess_design"
+      },
+      {
+        "citations": 1,
+        "cited_by": [
+          "RESULTS_INDEX.md"
+        ],
+        "has_certificate": false,
+        "pass": "w33_pass674_per_shot_propensity_martingale"
+      },
+      {
+        "citations": 1,
+        "cited_by": [
+          "RESULTS_INDEX.md"
+        ],
+        "has_certificate": false,
+        "pass": "w33_pass684_open_ended_propensity_confidence_process"
+      },
+      {
+        "citations": 1,
+        "cited_by": [
+          "RESULTS_INDEX.md"
+        ],
+        "has_certificate": false,
+        "pass": "w33_pass804_adversarial_calibration_failclosed"
+      },
+      {
+        "citations": 1,
+        "cited_by": [
+          "w33_pass981_arxiv_batch_intake_audit.py"
+        ],
+        "has_certificate": false,
+        "pass": "w33_pass882_spectral_surgery_rigidity"
+      }
+    ],
+    "searching_passes": 48
+  }
+}
