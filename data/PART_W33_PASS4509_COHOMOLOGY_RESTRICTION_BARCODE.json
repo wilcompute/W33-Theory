@@ -1,0 +1,16 @@
+{
+  "H1_dimension": 2,
+  "barcode": {
+    "M20_960": {"killed_nonzero_classes": [], "order": 960, "restriction_kernel_dimension": 0},
+    "class45_C576": {"killed_nonzero_classes": [], "order": 576, "restriction_kernel_dimension": 0},
+    "incident_flag_162": {"killed_nonzero_classes": ["fixed_line","second","sum"], "order": 162, "restriction_kernel_dimension": 2},
+    "line_648": {"killed_nonzero_classes": ["sum"], "order": 648, "restriction_kernel_dimension": 1},
+    "point_648": {"killed_nonzero_classes": ["fixed_line"], "order": 648, "restriction_kernel_dimension": 1},
+    "spread_S6_720": {"killed_nonzero_classes": [], "order": 720, "restriction_kernel_dimension": 0}
+  },
+  "boundary": "Vanishing of these fixed-line radical H1 restrictions explains an obstruction channel but is not asserted to classify the complete Ext^1(H10,R29) restriction theory for every subgroup.",
+  "pass": 4509,
+  "relation_to_section_census": "All five maximals remain nonsplit in Pass 4503; the flag is the canonical tested subgroup where both radical obstruction charges vanish, consistent with its exact 384/384 section system.",
+  "structural_statement": "Point and line stabilizers annihilate distinct 1D obstruction subspaces; their incident intersection annihilates all of H1(G,R29).",
+  "theorem": "two-bit radical obstruction restriction barcode explains why point/line maximals fail but their incident flag splits"
+}
