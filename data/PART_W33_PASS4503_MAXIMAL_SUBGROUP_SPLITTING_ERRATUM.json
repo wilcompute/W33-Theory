@@ -1,0 +1,23 @@
+{
+  "all_five_maximal_types_nonsplit": true,
+  "boundary": "This proves nonsplitting on every maximal subgroup type and splitting on one canonical order-162 flag stabilizer. It does not classify every subgroup or prove that 162 is the globally largest splitting order.",
+  "erratum": {
+    "corrected_natural_split": "canonical incident-flag stabilizer order 162 splits with rank 384/384 and a 6-dimensional affine section family",
+    "still_valid_from_4493": "full PSp(4,3) rank 389/390 nonsplitting",
+    "supersedes": "Pass 4493 restricted-subgroup ranks only",
+    "withdrawn": "point/line order-648 splitting and old flag/apartment rank table"
+  },
+  "geometry": {"class45_involutions": 45, "deterministic_M20_pair_search_trial": 32, "flag": {"line": 0, "point": 0}, "involutions_total": 315, "spreads": 36},
+  "maximal_subgroup_orders": [960,720,648,648,576],
+  "pass": 4503,
+  "results": {
+    "canonical_flag_stabilizer_order162": {"affine_section_dimension": 6, "fixed_dim_E39": 3, "fixed_dim_V10": 2, "generators_used": 3, "index": 160, "order": 162, "rank_augmented": 384, "rank_coefficient": 384, "split": true},
+    "full_PSp4_3": {"affine_section_dimension": null, "fixed_dim_E39": 0, "fixed_dim_V10": 1, "generators_used": 5, "index": 1, "order": 25920, "rank_augmented": 390, "rank_coefficient": 389, "split": false},
+    "maximal_2^4_A5_order960": {"affine_section_dimension": null, "fixed_dim_E39": 0, "fixed_dim_V10": 1, "generators_used": 3, "index": 27, "order": 960, "rank_augmented": 389, "rank_coefficient": 388, "split": false},
+    "maximal_class45_involution_centralizer_order576": {"affine_section_dimension": null, "fixed_dim_E39": 1, "fixed_dim_V10": 1, "generators_used": 3, "index": 45, "order": 576, "rank_augmented": 387, "rank_coefficient": 386, "split": false},
+    "maximal_line_stabilizer_order648": {"affine_section_dimension": null, "fixed_dim_E39": 2, "fixed_dim_V10": 2, "generators_used": 4, "index": 40, "order": 648, "rank_augmented": 387, "rank_coefficient": 386, "split": false},
+    "maximal_point_stabilizer_order648": {"affine_section_dimension": null, "fixed_dim_E39": 1, "fixed_dim_V10": 1, "generators_used": 3, "index": 40, "order": 648, "rank_augmented": 388, "rank_coefficient": 387, "split": false},
+    "maximal_spread_S6_order720": {"affine_section_dimension": null, "fixed_dim_E39": 1, "fixed_dim_V10": 1, "generators_used": 3, "index": 36, "order": 720, "rank_augmented": 387, "rank_coefficient": 386, "split": false}
+  },
+  "theorem": "all five maximal PSp(4,3) subgroup types retain the apartment-extension obstruction"
+}
