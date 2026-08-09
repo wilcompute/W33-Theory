@@ -15,6 +15,11 @@
       "kind": "id",
       "token": "pass4472-4479-apartment-module-thermo-ihara-pauli",
       "source": "analysis/PASS4472_4479_apartment_module_index_insert.html"
+    },
+    {
+      "kind": "id",
+      "token": "pass4480-4483-apartment-h10-geometric-readout",
+      "source": "analysis/PASS4480_4483_apartment_h10_index_insert.html"
     }
   ],
   "standalone_public_pages": [
@@ -25,6 +30,10 @@
     {
       "token": "pass4472-4479-apartment-module-thermo-ihara-pauli-page",
       "source": "docs/apartment-module-thermo-ihara-pauli.html"
+    },
+    {
+      "token": "pass4480-4483-apartment-h10-geometric-readout-page",
+      "source": "docs/apartment-h10-geometric-readout.html"
     }
   ]
 }
