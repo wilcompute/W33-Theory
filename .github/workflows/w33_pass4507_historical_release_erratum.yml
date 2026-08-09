@@ -1,0 +1,55 @@
+name: W33 Pass 4507 historical apartment release erratum
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/w33_pass4507_historical_release_erratum.yml'
+      - 'analysis/PASS4503_4510_CORRECTED_APARTMENT_RELEASE.md'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: w33-pass4507-historical-release-erratum
+  cancel-in-progress: false
+
+jobs:
+  patch-historical-report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+      - name: Prepend correction banner idempotently
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('analysis/PASS4469_4494_APARTMENT_EXTENSION_RELEASE.md')
+          text=p.read_text(encoding='utf-8')
+          marker='PASS4507-ERRATUM-BANNER'
+          if marker not in text:
+              banner='''<!-- PASS4507-ERRATUM-BANNER -->
+> **CORRECTION — Passes 4503/4507.** The restricted-subgroup section table in this historical release is superseded. The full-group `389/390` nonsplitting result remains valid, but point and line stabilizers are now exactly `386/387` and `387/388` (both nonsplit), while the canonical incident-flag stabilizer is `384/384` with affine section dimension `6`. See [`PASS4503_4510_CORRECTED_APARTMENT_RELEASE.md`](PASS4503_4510_CORRECTED_APARTMENT_RELEASE.md). The old `370/370` point/line and `338/308` finer-gauge values below are retained only as historical text and must not be cited as current results.
+
+'''
+              p.write_text(banner+text,encoding='utf-8')
+          PY
+      - name: Commit only the historical report if changed
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- analysis/PASS4469_4494_APARTMENT_EXTENSION_RELEASE.md; then
+            echo 'already patched'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add analysis/PASS4469_4494_APARTMENT_EXTENSION_RELEASE.md
+          git commit -m 'Pass 4507: mark historical 4493 section table superseded'
+          git pull --rebase origin master
+          git push origin HEAD:master
