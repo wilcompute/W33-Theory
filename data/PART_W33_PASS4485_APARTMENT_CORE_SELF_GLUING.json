@@ -1,5 +1,5 @@
 {
-  "boundary": "Exact module self-gluing only. No semisimple splitting, hardware duplication, E8 dynamics, or four-qubit machine is inferred.",
+  "boundary": "Exact apartment-side self-gluing only. Pass 176 already owns the protected route-hull U/J quadratic eight-core. No semisimple splitting, hardware duplication, E8 dynamics, or four-qubit machine is inferred.",
   "checks": {"passed": 15, "total": 15},
   "core": {"dimension": 8, "irreducible": true, "literal_space": "U/J", "vector_orbits": 2},
   "diagram": {
@@ -8,8 +8,9 @@
     "protected": "M/K (10)",
     "protected_filtration": "J < U < I gives 1|8|1",
     "radical": "K/J (29)",
-    "repeated_core": "U/J (8) is both radical submodule and protected middle factor"
+    "repeated_core": "the Pass-176 U/J (8) protected core also occurs as an apartment-radical submodule"
   },
   "pass": 4485,
-  "theorem": "W33 apartment 8-core self-gluing theorem"
+  "prior_owner": "Pass 176 owns the protected f^perp/<f> -> route-hull U/J quadratic isometry; Pass 4485 adds its occurrence inside the apartment radical.",
+  "theorem": "W33 apartment-radical reuse of the Pass-176 eight-core theorem"
 }
