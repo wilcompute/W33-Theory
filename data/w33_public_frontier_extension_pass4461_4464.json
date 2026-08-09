@@ -1,0 +1,16 @@
+{
+  "schema": "w33.public_frontier_extension.v1",
+  "public_sections": [
+    {
+      "kind": "id",
+      "token": "pass4461-4464-line-signing-apartment-parity",
+      "source": "analysis/PASS4461_4464_line_signing_apartment_index_insert.html"
+    }
+  ],
+  "standalone_public_pages": [
+    {
+      "token": "pass4461-4464-line-signing-apartment-parity-page",
+      "source": "docs/line-signing-apartment-parity.html"
+    }
+  ]
+}
