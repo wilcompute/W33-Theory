@@ -1,0 +1,82 @@
+name: W33 Passes 4503-4510 corrected apartment obstruction
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_apartment_section_core.py'
+      - 'analysis/w33_pass4482_ten_line_protected_readout.py'
+      - 'analysis/w33_pass4493_symmetry_breaking_section_threshold.py'
+      - 'analysis/w33_pass4503_maximal_subgroup_splitting_erratum.py'
+      - 'analysis/w33_pass4504_minimal_flag_section.py'
+      - 'analysis/w33_pass4505_radical_h1_three_charges.py'
+      - 'analysis/w33_pass4506_q53_apartment_protected_bridge.py'
+      - 'analysis/w33_pass4507_frontier_consistency_guard.py'
+      - 'analysis/w33_pass4508_outer_cohomology_fork.py'
+      - 'analysis/w33_pass4509_cohomology_restriction_barcode.py'
+      - 'analysis/w33_pass4510_local_flag_gauge_cell.py'
+      - 'analysis/PASS4493_symmetry_breaking_section_insert.tex'
+      - 'analysis/PASS4503_4510_apartment_obstruction_scaling_insert.tex'
+      - 'analysis/PASS4503_4510_apartment_obstruction_scaling_index_insert.html'
+      - 'data/PART_W33_PASS4482_TEN_LINE_PROTECTED_READOUT.json'
+      - 'data/PART_W33_PASS4493_SYMMETRY_BREAKING_SECTION_THRESHOLD.json'
+      - 'data/PART_W33_PASS450*.json'
+      - 'data/PART_W33_PASS4510_LOCAL_FLAG_GAUGE_CELL.json'
+      - 'data/w33_public_frontier_extension_pass4461_4464.json'
+      - 'docs/apartment-symmetry-breaking-section.html'
+      - 'docs/apartment-obstruction-cohomology-gq.html'
+      - 'tests/test_w33_pass4493_symmetry_breaking_section_threshold.py'
+      - 'tests/test_w33_pass4503_4510_corrected_obstruction.py'
+      - '.github/workflows/w33_pass4503_4510_corrected_obstruction.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass450*.py'
+      - 'analysis/w33_pass4510_local_flag_gauge_cell.py'
+      - 'tests/test_w33_pass4503_4510_corrected_obstruction.py'
+
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install focused dependencies
+        run: python -m pip install --upgrade numpy pytest
+      - name: Re-run repaired and new exact witnesses
+        run: |
+          set -euo pipefail
+          python analysis/w33_pass4482_ten_line_protected_readout.py
+          python analysis/w33_pass4493_symmetry_breaking_section_threshold.py
+          python analysis/w33_pass4503_maximal_subgroup_splitting_erratum.py
+          python analysis/w33_pass4504_minimal_flag_section.py
+          python analysis/w33_pass4505_radical_h1_three_charges.py
+          python analysis/w33_pass4506_q53_apartment_protected_bridge.py
+          python analysis/w33_pass4508_outer_cohomology_fork.py
+          python analysis/w33_pass4509_cohomology_restriction_barcode.py
+          python analysis/w33_pass4510_local_flag_gauge_cell.py
+          python analysis/w33_pass4507_frontier_consistency_guard.py
+      - name: Frozen certificates must exactly regenerate
+        run: |
+          git diff --exit-code -- \
+            data/PART_W33_PASS4482_TEN_LINE_PROTECTED_READOUT.json \
+            data/PART_W33_PASS4493_SYMMETRY_BREAKING_SECTION_THRESHOLD.json \
+            data/PART_W33_PASS4503_MAXIMAL_SUBGROUP_SPLITTING_ERRATUM.json \
+            data/PART_W33_PASS4504_MINIMAL_FLAG_SECTION.json \
+            data/PART_W33_PASS4505_RADICAL_H1_THREE_CHARGES.json \
+            data/PART_W33_PASS4506_Q53_APARTMENT_PROTECTED_BRIDGE.json \
+            data/PART_W33_PASS4507_FRONTIER_CONSISTENCY_GUARD.json \
+            data/PART_W33_PASS4508_OUTER_COHOMOLOGY_FORK.json \
+            data/PART_W33_PASS4509_COHOMOLOGY_RESTRICTION_BARCODE.json \
+            data/PART_W33_PASS4510_LOCAL_FLAG_GAUGE_CELL.json
+      - name: Focused regressions
+        run: |
+          pytest -q \
+            tests/test_w33_pass4480_4484_apartment_h10_continuation.py \
+            tests/test_w33_pass4493_symmetry_breaking_section_threshold.py \
+            tests/test_w33_pass4503_4510_corrected_obstruction.py
+      - name: LaTeX insertion hygiene
+        run: |
+          if test -f scripts/check_tex_insertions.py; then python scripts/check_tex_insertions.py; fi
