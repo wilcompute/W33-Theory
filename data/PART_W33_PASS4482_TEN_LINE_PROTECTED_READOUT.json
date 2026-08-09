@@ -1,19 +1,11 @@
 {
-  "basis_graph": {
-    "edges": 6,
-    "maximum_induced_matching": 4,
-    "minimum_intersections": 6,
-    "type": "P4 disjoint-union 3K2"
-  },
+  "basis_graph": {"edges": 6, "maximum_induced_matching": 4, "minimum_intersections": 6, "type": "P4 disjoint-union 3K2"},
   "boundary": "Ten bits are software parity post-processing of acquired apartment data, not ten physical apartment measurements or an optical-cost optimum.",
   "checks": {"passed": 11, "total": 11},
+  "erratum": "The former frozen index list [1,5,14,15,19,23,24,33,35,39] had drifted and is superseded by the current canonical-basis list.",
   "pass": 4482,
-  "readout": {
-    "all_1024_classes_verified": true,
-    "bits": 10,
-    "each_g_i_weight": 162,
-    "formula": "p_i=<y,g_i>; c=p G^{-1}"
-  },
-  "selected_line_indices": [1, 5, 14, 15, 19, 23, 24, 33, 35, 39],
+  "readout": {"all_1024_classes_verified": true, "bits": 10, "each_g_i_weight": 162, "formula": "p_i=<y,g_i>; c=p G^{-1}"},
+  "selected_line_indices": [0,1,4,10,17,18,22,24,26,31],
+  "status": "REPAIRED_BY_PASS4507",
   "theorem": "W33 optimal ten-line protected software readout theorem"
 }
