@@ -1,0 +1,35 @@
+{
+  "apartment_mask_xor_multiplicity": 8,
+  "apartments": 1620,
+  "boundary": "These are exact moments of the independent random line-signing baseline. They grade future optimized/sign-structured samples; they do not themselves make an optimized sample significant.",
+  "frustrated_fraction": {
+    "excess_kurtosis": 0.7691358024691359,
+    "mean": 0.5,
+    "sd": 0.012422599874998832,
+    "standardized_skewness": -0.1987615979999813
+  },
+  "ordered_pair_xor_multiplicity_spectrum": {
+    "12": 2160,
+    "1620": 1,
+    "2": 1071630,
+    "24": 540,
+    "4": 64800,
+    "6": 10800,
+    "8": 14580
+  },
+  "pass": 4462,
+  "theorem": "W33 apartment Walsh exact null model",
+  "trace_A4_null": {
+    "mean": 12000,
+    "sd": 321.99378875996973,
+    "variance": 103680
+  },
+  "walsh_moments": {
+    "E_W4": 0,
+    "E_W4_2": 1620,
+    "E_W4_3": 12960,
+    "E_W4_4": 9891720,
+    "excess_kurtosis": 0.7691358024691359,
+    "standardized_skewness": 0.1987615979999813
+  }
+}
