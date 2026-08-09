@@ -1,0 +1,31 @@
+{
+  "boundary": "The 10-dimensional quotient is structural: it is the nondegenerate quotient of the exact alternating apartment Gram form over F_2. No physical qubit count or unrelated Phi_4 identification is inferred from the dimension alone.",
+  "code": {
+    "dimension": 39,
+    "length": 1620,
+    "radical_dimension": 29,
+    "symplectic_quotient_dimension": 10
+  },
+  "coefficient_form": {
+    "dimension": 40,
+    "kernel_contains_global_reversal": true,
+    "kernel_dimension": 30,
+    "quotient_by_line_sign_kernel_gives_code_radical_dimension": 29
+  },
+  "identities_mod2": [
+    "H H^T = A_star",
+    "N^T N = A_star"
+  ],
+  "incidence_image": {
+    "dimension": 25,
+    "radical_dimension": 15,
+    "restricted_dot_product_rank": 10
+  },
+  "pass": 4464,
+  "ranks_F2": {
+    "dual_adjacency_Astar": 10,
+    "line_apartment_H": 39,
+    "point_line_incidence_N": 25
+  },
+  "theorem": "W33 apartment parity code symplectic quotient theorem"
+}
