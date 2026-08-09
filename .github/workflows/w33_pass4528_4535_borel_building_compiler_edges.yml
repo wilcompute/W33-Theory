@@ -1,0 +1,96 @@
+name: W33 Passes 4528-4535 Borel building compiler edges
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4528_borel_overgroup_splitting.py'
+      - 'analysis/w33_pass4529_rank2_building_obstruction_compass.py'
+      - 'analysis/w33_pass4530_q5q_symbolic_protected_law.py'
+      - 'analysis/w33_pass4531_flag_gauge_bipartite_compiler.py'
+      - 'analysis/w33_pass4532_borel_edge_local_cell_fusion.py'
+      - 'analysis/w33_pass4533_borel_power_three_staircase.py'
+      - 'analysis/w33_pass4534_local_edge_tomography_nine_layer.py'
+      - 'analysis/w33_pass4535_borel_edge_transfer_quotient.py'
+      - 'analysis/PASS4528_4535_borel_building_compiler_edge_insert.tex'
+      - 'analysis/PASS4528_4535_borel_building_compiler_edge_index_insert.html'
+      - 'analysis/PASS4519_flag_borel_sylow3_normalizer_insert.tex'
+      - 'data/PART_W33_PASS4528_BOREL_OVERGROUP_SPLITTING.json'
+      - 'data/PART_W33_PASS4529_RANK2_BUILDING_OBSTRUCTION_COMPASS.json'
+      - 'data/PART_W33_PASS4530_Q5Q_SYMBOLIC_PROTECTED_LAW.json'
+      - 'data/PART_W33_PASS4531_FLAG_GAUGE_COMPILER.json'
+      - 'data/PART_W33_PASS4532_BOREL_EDGE_LOCAL_CELL_FUSION.json'
+      - 'data/PART_W33_PASS4533_BOREL_POWER_THREE_STAIRCASE.json'
+      - 'data/PART_W33_PASS4534_LOCAL_EDGE_TOMOGRAPHY_NINE_LAYER.json'
+      - 'data/PART_W33_PASS4535_BOREL_EDGE_TRANSFER_QUOTIENT.json'
+      - 'docs/apartment-obstruction-cohomology-gq.html'
+      - 'tests/test_w33_pass4528_4535_borel_building_compiler_edges.py'
+      - '.github/workflows/w33_pass4528_4535_borel_building_compiler_edges.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass4528_borel_overgroup_splitting.py'
+      - 'analysis/w33_pass4529_rank2_building_obstruction_compass.py'
+      - 'analysis/w33_pass4530_q5q_symbolic_protected_law.py'
+      - 'analysis/w33_pass4531_flag_gauge_bipartite_compiler.py'
+      - 'analysis/w33_pass4532_borel_edge_local_cell_fusion.py'
+      - 'analysis/w33_pass4533_borel_power_three_staircase.py'
+      - 'analysis/w33_pass4534_local_edge_tomography_nine_layer.py'
+      - 'analysis/w33_pass4535_borel_edge_transfer_quotient.py'
+      - 'tests/test_w33_pass4528_4535_borel_building_compiler_edges.py'
+
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install focused dependencies
+        run: python -m pip install --upgrade numpy pytest
+      - name: Snapshot frozen JSON semantics
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          names=[
+            'PART_W33_PASS4528_BOREL_OVERGROUP_SPLITTING.json',
+            'PART_W33_PASS4529_RANK2_BUILDING_OBSTRUCTION_COMPASS.json',
+            'PART_W33_PASS4530_Q5Q_SYMBOLIC_PROTECTED_LAW.json',
+            'PART_W33_PASS4531_FLAG_GAUGE_COMPILER.json',
+            'PART_W33_PASS4532_BOREL_EDGE_LOCAL_CELL_FUSION.json',
+            'PART_W33_PASS4533_BOREL_POWER_THREE_STAIRCASE.json',
+            'PART_W33_PASS4534_LOCAL_EDGE_TOMOGRAPHY_NINE_LAYER.json',
+            'PART_W33_PASS4535_BOREL_EDGE_TRANSFER_QUOTIENT.json',
+          ]
+          snap={n:json.loads((Path('data')/n).read_text()) for n in names}
+          Path('/tmp/pass4528_4535_expected.json').write_text(json.dumps(snap,sort_keys=True))
+          PY
+      - name: Re-run all eight exact witnesses
+        run: |
+          set -euo pipefail
+          python analysis/w33_pass4528_borel_overgroup_splitting.py
+          python analysis/w33_pass4529_rank2_building_obstruction_compass.py
+          python analysis/w33_pass4530_q5q_symbolic_protected_law.py
+          python analysis/w33_pass4531_flag_gauge_bipartite_compiler.py
+          python analysis/w33_pass4532_borel_edge_local_cell_fusion.py
+          python analysis/w33_pass4533_borel_power_three_staircase.py
+          python analysis/w33_pass4534_local_edge_tomography_nine_layer.py
+          python analysis/w33_pass4535_borel_edge_transfer_quotient.py
+      - name: Regenerated certificates must match frozen semantics
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          expected=json.loads(Path('/tmp/pass4528_4535_expected.json').read_text())
+          for n,want in expected.items():
+              got=json.loads((Path('data')/n).read_text())
+              assert got==want, n
+          print('all eight frozen certificates semantically regenerate')
+          PY
+      - name: Focused frontier regressions
+        run: pytest -q tests/test_w33_pass4528_4535_borel_building_compiler_edges.py
+      - name: LaTeX insertion hygiene
+        run: |
+          if test -f scripts/check_tex_insertions.py; then python scripts/check_tex_insertions.py; fi
