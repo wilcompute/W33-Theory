@@ -1,0 +1,71 @@
+{
+  "W33_exact_census": {
+    "direct_scaling_max_residual_64_samples": 0.0,
+    "induced_apartments": 1620,
+    "legacy_records": 3480,
+    "legacy_to_apartment_factor": "27/29",
+    "line_internal_simple_C4": 120,
+    "random_apartment_mean": 0.5,
+    "random_legacy_mean": 0.46551724137931033,
+    "record_multiplicity_per_simple_C4": 2,
+    "unique_underlying_simple_C4": 1740
+  },
+  "boundary": "This audit corrects enumeration semantics and normalization only. It does not alter Pass 4433's separate Ramanujan/non-Ramanujan spectral verdicts.",
+  "correction": "Pass 4433's W33 z-score is not withdrawn. Its raw 'four-cycle frustration' should be read as a diluted apartment frustration. Cross-GQ raw fractions require the parameter-dependent undilution above before comparison.",
+  "examples": {
+    "GQ(2,2)": {
+      "factor_float": 1.0,
+      "induced_quadrangles_Q": 90,
+      "legacy_records": 180,
+      "legacy_to_apartment_factor": "1/1",
+      "line_internal_simple_C4": 0,
+      "random_legacy_mean": 0.5,
+      "random_legacy_sd": 0.05270462766947299,
+      "s": 2,
+      "t": 2
+    },
+    "GQ(3,3)": {
+      "factor_float": 0.9310344827586207,
+      "induced_quadrangles_Q": 1620,
+      "legacy_records": 3480,
+      "legacy_to_apartment_factor": "27/29",
+      "line_internal_simple_C4": 120,
+      "random_legacy_mean": 0.46551724137931033,
+      "random_legacy_sd": 0.011565868849136842,
+      "s": 3,
+      "t": 3
+    },
+    "GQ(3,9)": {
+      "factor_float": 0.9918367346938776,
+      "induced_quadrangles_Q": 102060,
+      "legacy_records": 205800,
+      "legacy_to_apartment_factor": "243/245",
+      "line_internal_simple_C4": 840,
+      "random_legacy_mean": 0.4959183673469388,
+      "random_legacy_sd": 0.0015523241413380917,
+      "s": 3,
+      "t": 9
+    },
+    "GQ(9,3)": {
+      "factor_float": 0.5912408759124088,
+      "induced_quadrangles_Q": 102060,
+      "legacy_records": 345240,
+      "legacy_to_apartment_factor": "81/137",
+      "line_internal_simple_C4": 70560,
+      "random_legacy_mean": 0.2956204379562044,
+      "random_legacy_sd": 0.0009253513737903467,
+      "s": 9,
+      "t": 3
+    }
+  },
+  "general_formula": {
+    "C_line": "3 L C(s+1,4)",
+    "f_legacy": "Q/(Q+C_line) * f_apartment",
+    "legacy_records": "2(Q+C_line)",
+    "z_score_invariance": "For a fixed GQ and a random-line-signing baseline, f_legacy is a positive scalar multiple of f_apartment, so standardized z scores are unchanged."
+  },
+  "historical_docstring_claim": "Every simple 4-cycle ... Counted once.",
+  "historical_source": "analysis/w33_pass4433_4435_second_quadrangle_and_mechanism.py",
+  "pass": 4466,
+  "theorem": "legacy four-cycle frustration normalization audit"
+}
