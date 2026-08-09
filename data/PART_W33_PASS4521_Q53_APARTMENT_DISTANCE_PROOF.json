@@ -1,0 +1,39 @@
+{
+  "boundary": "Exact combinatorial/spectral proof; no exhaustive 2^279 traversal is used.",
+  "code": {
+    "dimension": 279,
+    "length": 102060,
+    "minimum_distance": 1458,
+    "minimum_word_count": 280
+  },
+  "complement_gauge": "every nonzero codeword has a coefficient representative with 1<=m<=140",
+  "exact_weight_formula": "wt=1458*m-12*C(m,2)-150*e+36*p3-8*c4",
+  "line_graph": {
+    "eigenvalues": [36, 8, -4],
+    "srg": [280, 36, 8, 4]
+  },
+  "local_inequalities": {
+    "p3_bound": "p3 >= max(0,2*e^2/m-9*e)",
+    "quadrangle_correction": "36*p3-8*c4 >= 30*p3",
+    "reason": "3T<=8e and sum C(d_x,2)>=2e^2/m-e"
+  },
+  "minimum_lower_bound_over_support_2_to_140": {
+    "support": 2,
+    "value": "1674"
+  },
+  "pass": 4521,
+  "piecewise_weight_lower_bound": {
+    "10<=m<=91": "m(789-6m)",
+    "2<=m<=10": "864m-(27/2)m^2",
+    "91<=m<=140": "3m(5m^2-868m+41552)/49"
+  },
+  "spectral_edge_interval": {
+    "lower": "m^2/14-2m",
+    "upper": "4m+m^2/20"
+  },
+  "support_one": {
+    "weight": 1458,
+    "words": 280
+  },
+  "theorem": "the Q(5,3)=GQ(3,9) binary apartment code has minimum distance 1458"
+}
