@@ -1,0 +1,87 @@
+{
+  "boundary": "This criterion does not explain or predict the empirical line-signing Ramanujan success rates of Pass 4457. It classifies an exact mod-2 Gram coincidence and the resulting nondegenerate quotient isometry only. A CSS/logical interpretation requires the additional code hypotheses of the chosen family.",
+  "checks": {
+    "passed": 8,
+    "total": 8
+  },
+  "criterion": "H H^T = N^T N over F_2 iff s == 3 (mod 4) and t is odd",
+  "examples": {
+    "GQ(2,2)=W(3,2)": {
+      "HHt_mod2_coefficients_I_A_J": [1, 1, 1],
+      "NtN_mod2_coefficients_I_A_J": [1, 1, 0],
+      "criterion": false,
+      "s": 2,
+      "t": 2
+    },
+    "GQ(3,3)=W(3,3)": {
+      "HHt_mod2_coefficients_I_A_J": [0, 1, 0],
+      "NtN_mod2_coefficients_I_A_J": [0, 1, 0],
+      "criterion": true,
+      "s": 3,
+      "t": 3
+    },
+    "GQ(3,9)=Q(5,3)": {
+      "HHt_mod2_coefficients_I_A_J": [0, 1, 0],
+      "NtN_mod2_coefficients_I_A_J": [0, 1, 0],
+      "criterion": true,
+      "s": 3,
+      "t": 9
+    },
+    "GQ(9,3) dual parameter set": {
+      "HHt_mod2_coefficients_I_A_J": [0, 0, 1],
+      "NtN_mod2_coefficients_I_A_J": [0, 1, 0],
+      "criterion": false,
+      "s": 9,
+      "t": 3
+    },
+    "GQ(5,5)": {
+      "HHt_mod2_coefficients_I_A_J": [0, 0, 1],
+      "NtN_mod2_coefficients_I_A_J": [0, 1, 0],
+      "criterion": false,
+      "s": 5,
+      "t": 5
+    },
+    "GQ(7,7)": {
+      "HHt_mod2_coefficients_I_A_J": [0, 1, 0],
+      "NtN_mod2_coefficients_I_A_J": [0, 1, 0],
+      "criterion": true,
+      "s": 7,
+      "t": 7
+    },
+    "GQ(11,11)": {
+      "HHt_mod2_coefficients_I_A_J": [0, 1, 0],
+      "NtN_mod2_coefficients_I_A_J": [0, 1, 0],
+      "criterion": true,
+      "s": 11,
+      "t": 11
+    }
+  },
+  "generic_quotient_bridge_when_criterion_holds": [
+    "im(H^T)/rad(im(H^T))",
+    "F_2^L/ker(N^T N)",
+    "im(N)/(im(N) intersect ker(N^T))"
+  ],
+  "integer_gram_inputs": {
+    "alpha": "s^2t",
+    "apartment": "H H^T = (r-beta)I + (alpha-beta)A_dual + beta J",
+    "beta": "s(s+1)/2",
+    "incidence": "N^T N = (s+1)I + A_dual",
+    "r": "(s+1)s^2t^2/2"
+  },
+  "interpretation": "The apartment/incidence bridge is an orientation-sensitive characteristic-two theorem, not a duality invariant. W33 and GQ(3,9) satisfy it in the displayed line orientation; GQ(9,3) does not.",
+  "map": "[b] -> [N b]",
+  "pairing": "<H^T b,H^T c> = b^T N^T N c = <N b,N c>",
+  "pass": 4471,
+  "residue_table": {
+    "s=0mod4,t=0mod2": false,
+    "s=0mod4,t=1mod2": false,
+    "s=1mod4,t=0mod2": false,
+    "s=1mod4,t=1mod2": false,
+    "s=2mod4,t=0mod2": false,
+    "s=2mod4,t=1mod2": false,
+    "s=3mod4,t=0mod2": false,
+    "s=3mod4,t=1mod2": true
+  },
+  "sweep_mismatches": [],
+  "theorem": "general GQ(s,t) apartment/incidence binary Gram bridge criterion"
+}
