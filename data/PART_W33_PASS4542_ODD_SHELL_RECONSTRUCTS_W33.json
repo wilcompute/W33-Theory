@@ -1,0 +1,10 @@
+{
+  "boundary": "Intrinsic finite Hamming/symplectic reconstruction only; this does not identify the shell with a physical particle multiplet.",
+  "even_shell_link": {"identity":"exactly the protected edge shell","weight16_distinct_differences":135,"weight20_distinct_differences":240},
+  "odd_minimum_shell": {"ambient_weight":12,"objects":"the forty line-star protected vectors","size":40},
+  "pair_difference_histogram": {"16":540,"20":240},
+  "pass": 4542,
+  "reconstructed_graph": "SRG(40,12,2,4), exactly the dual W33 line-intersection graph",
+  "reconstruction_rule": "join two odd minimum vectors iff their XOR has ambient weight 20",
+  "theorem": "The parity-refined H10 weight geometry is self-describing: its forty pi=1 minimum vectors reconstruct dual W33 exactly, and their adjacent-pair differences reproduce the 240 protected edge carrier."
+}
