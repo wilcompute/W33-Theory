@@ -1,0 +1,105 @@
+name: Dormant checkers
+
+# WHY THIS EXISTS
+#
+# A survey on 2026-08-09 found ~14 checkers in scripts/ with recent mtimes and ZERO
+# references from any workflow or pre-commit config. They were built, they work, and
+# nothing runs them. Two of them were written the same day by the agent that then failed
+# to notice the gap they were meant to close.
+#
+# A checker nobody runs is worse than no checker: it produces the FEELING of coverage.
+# CLAUDE.md failure mode 7 is about checks that cannot see their fault; this is the
+# adjacent case -- checks that can, and are never asked.
+#
+# Everything here is ADVISORY (continue-on-error) because these are triage instruments
+# with known false-positive rates, and a blocking gate on a triage list trains --no-verify.
+# The SELFTESTS are not advisory: a checker that cannot demonstrate it detects a planted
+# fault has no business reporting a clean corpus.
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/**'
+      - 'scripts/**'
+      - '.github/workflows/dormant-checkers.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: dormant-checkers-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  selftests:
+    name: every checker must prove it can fail
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install --quiet numpy sympy duckdb
+      - name: search-baseline checker selftest
+        run: python scripts/check_search_baseline.py --selftest
+      - name: honest-boundary checker selftest
+        run: python scripts/check_honest_boundary.py --selftest
+      - name: certificate-regeneration checker selftest
+        run: python scripts/check_certificates_regenerate.py --selftest
+      - name: tex-insertion checker selftest
+        run: python scripts/check_tex_insertions.py --selftest
+      - name: cert_util selftest
+        run: python scripts/cert_util.py
+      - name: ownership-resolution selftest
+        # the pathspec case matters: a bad path returns the WHOLE history and hands
+        # ownership of every result to the repository's first commit, silently.
+        run: python scripts/first_appearance.py --selftest
+
+  advisory:
+    name: run them, report, do not block
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    needs: selftests
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install --quiet numpy sympy duckdb
+
+      - name: repository inventory (what conventions exist)
+        # This one is not a checker but a reference. A detector written against the
+        # wrong convention reported 90% of passes uncertified on 2026-08-09; the true
+        # figure was the reverse. Printing the conventions on every run makes the next
+        # such regex obviously wrong before it ships.
+        continue-on-error: true
+        run: python scripts/repo_inventory.py --patterns | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: searches reported without a random baseline
+        continue-on-error: true
+        run: python scripts/check_search_baseline.py | tail -40 >> "$GITHUB_STEP_SUMMARY"
+
+      - name: passes that never state their own scope
+        continue-on-error: true
+        run: python scripts/check_honest_boundary.py | tail -30 >> "$GITHUB_STEP_SUMMARY"
+
+      - name: refuted-claim linter
+        continue-on-error: true
+        run: python scripts/check_refuted_claims.py 2>&1 | tail -30 >> "$GITHUB_STEP_SUMMARY"
+
+      - name: implicit novelty claims
+        continue-on-error: true
+        run: python scripts/check_implicit_novelty.py 2>&1 | tail -30 >> "$GITHUB_STEP_SUMMARY"
+
+      - name: sampler bias
+        continue-on-error: true
+        run: python scripts/check_sampler_bias.py 2>&1 | tail -30 >> "$GITHUB_STEP_SUMMARY"
+
+      - name: the richer orphaned-insert checker CI never ran
+        # find_orphaned_inserts.py (75 lines) is wired in; check_orphan_inserts.py
+        # (177 lines, strictly richer) was not. Running the better one.
+        continue-on-error: true
+        run: python scripts/check_orphan_inserts.py 2>&1 | tail -30 >> "$GITHUB_STEP_SUMMARY"

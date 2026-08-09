@@ -30,15 +30,21 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 # Conventions are DISCOVERED below, not asserted here; this is only the labelling.
+#
+# ORDER MATTERS -- first match wins, so the specific patterns precede `w33_* (other)`.
+# The roman-numeral row was WRONG in the first version of this file: it anchored at the
+# start of the name and so missed all 74 `w33_MCCCLXXX_*` files, which is the same class
+# of error this script exists to prevent. Anchoring assumptions are the bug.
 CONVENTIONS = [
     ("PART_*", re.compile(r"^PART_")),
     ("w33_passN_*", re.compile(r"^w33_pass\d")),
     ("w33_BREAKTHROUGH_*", re.compile(r"^w33_BREAKTHROUGH", re.I)),
-    ("w33_* (other)", re.compile(r"^w33_")),
+    ("w33_<ROMAN>_*", re.compile(r"^w33_[MDCLXVI]{3,}[_.]")),
+    ("w33_* (topic-named)", re.compile(r"^w33_")),
     ("btN_* / BTN_*", re.compile(r"^bt\d", re.I)),
-    ("passN_*", re.compile(r"^pass\d", re.I)),
+    ("PASSn_* / passn_*", re.compile(r"^pass\d", re.I)),
     ("date-named YYYY-MM-DD", re.compile(r"^\d{4}-\d{2}-\d{2}")),
-    ("roman-numeral", re.compile(r"^[cdilmvx]{4,}[_.]", re.I)),
+    ("bare roman-numeral", re.compile(r"^[MDCLXVI]{4,}[_.]")),
 ]
 
 
@@ -113,12 +119,23 @@ def main() -> int:
         analysis/w33_pass*.py  analysis/bt*.py  analysis/w33_BREAKTHROUGH_*.py
     the DATE-NAMED files that no topic search reaches (CLAUDE.md failure mode 5):
         analysis/[0-9][0-9][0-9][0-9]-[0-9][0-9]-*.md
+    the ROMAN-NUMERAL files, which no numeric or 'pass' pattern reaches:
+        analysis/w33_[MDCLXVI][MDCLXVI][MDCLXVI]*
     a certificate written by a pass, WITHOUT assuming its name:
         grep -oE '"[^"]*\\.(json|csv|npy|npz|txt)"' <pass.py>
 
+  CASE MATTERS. `PASS` outnumbers `pass` roughly 5:1 and `BT` outnumbers `bt` roughly
+  2:1, so every glob over these must be case-insensitive or it silently halves.
+
+  START HERE, NOT WITH A GLOB. `grep <number-or-formula> RESULTS_INDEX.md` is the
+  documented entry point and it is keyed by RESULT rather than by filename, which is the
+  only way to reach the date-named and roman-numeral files at all.
+
   THE ONE RULE. Do not write a checker that recognises files by a name pattern you
   chose. Match the extension and verify against the filesystem, or read this inventory
-  first. A pattern invented from one convention will silently ignore the other five.""")
+  first. A pattern invented from one convention will silently ignore the other six --
+  and the first version of THIS file missed the roman-numeral convention by anchoring
+  its regex at the start of the name.""")
 
     print(f"""
   WHY THIS FILE EXISTS. A detector matching only `PART_*.json` reported that 90% of pass
