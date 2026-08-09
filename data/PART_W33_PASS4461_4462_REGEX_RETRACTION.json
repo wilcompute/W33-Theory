@@ -1,0 +1,66 @@
+{
+  "boundary": "the corrected certificate count matches any *.json in data/ named in the source; a pass that writes a certificate under a computed name would still be missed, so this is a lower bound on certificate coverage rather than an exact figure",
+  "pass_4461_retraction": {
+    "cause": "the detector matched only PART_*.json; the repository's dominant convention is w33_passNNNN_*.json and it had never seen one",
+    "certificates_corrected": 878,
+    "certificates_old_detector": 132,
+    "corrected_intersection": 1,
+    "found_by": "reading w33_pass569 -- an exhaustive CRT enumeration over F3^13 with its own boundary field and drift check, sitting at the top of the 'worst offenders' list",
+    "invisible_to_old_detector": 746,
+    "pass_scripts": 1148,
+    "retracts": {
+      "4424": "NO-CERT = 1015, '90% of pass scripts emit no certificate'",
+      "4427": "'the backlog is 780, not 1015'",
+      "4459": "'23 passes searched, claimed a winner, and emit nothing'"
+    },
+    "true_no_cert": 270,
+    "why_it_survived": "four passes consumed the number without re-deriving it, each adding confidence rather than scrutiny, because they all asked the same instrument the same question"
+  },
+  "pass_4462_higman": {
+    "inequality": "t <= s^2 for any GQ(s,t) with s > 1 (Higman)",
+    "rows": [
+      {
+        "classical_t": [
+          1,
+          2,
+          4
+        ],
+        "higman_max_t": 4,
+        "s": 2
+      },
+      {
+        "classical_t": [
+          1,
+          3,
+          5,
+          9
+        ],
+        "higman_max_t": 9,
+        "s": 3
+      },
+      {
+        "classical_t": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "higman_max_t": 16,
+        "s": 4
+      },
+      {
+        "classical_t": [
+          1,
+          3,
+          9,
+          27,
+          81
+        ],
+        "higman_max_t": 81,
+        "s": 9
+      }
+    ],
+    "verdict": "the s=2 ceiling hypothesis is UNTESTABLE: Higman caps t at 4 when s = 2, and t = 4 is already measured. No larger GQ(2,t) can exist"
+  }
+}

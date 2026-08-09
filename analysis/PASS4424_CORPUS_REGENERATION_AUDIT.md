@@ -1,5 +1,24 @@
 # Pass 4424 — the corpus-wide regeneration audit, finished
 
+> ## ⚠ RETRACTED AT PASS 4461 — the NO-CERT row is an artifact
+>
+> **The headline of this file is wrong.** The certificate detector matched only
+> `PART_*.json`, while this repository's dominant convention is `w33_passNNNN_*.json`. It
+> was blind to **746** passes that do emit a certificate.
+>
+> | | reported here | corrected (Pass 4461) |
+> |---|---:|---:|
+> | emit a certificate | 114 | **878 of 1148 (76%)** |
+> | **NO-CERT** | **1015** | **270** |
+>
+> So "90% of pass scripts emit no certificate" is false; roughly a quarter do not. The
+> DRIFTED / FAILED / REPRODUCES rows below are unaffected — those passes were re-run and
+> their results stand. Everything downstream of the NO-CERT row is retracted: Pass 4427's
+> "the backlog is 780", and Pass 4459's "23 passes searched and emit nothing".
+>
+> The file is kept unedited below because a record that quietly rewrites its own numbers
+> cannot be audited. See `w33_pass4461_4462_the_regex_that_invented_a_backlog.py`.
+
 `scripts/check_certificates_regenerate.py` re-ran every `analysis/w33_pass*.py` in the
 repository at a 240-second budget and compared each emitted `data/*.json` byte for byte
 against the committed one. Pass 4392 measured this over ~50 recent passes and explicitly

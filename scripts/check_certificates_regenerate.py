@@ -48,7 +48,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
-WRITES = re.compile(r"""["'](?:data/)?(PART_[A-Za-z0-9_]+\.json)["']""")
+# Pass 4461: this ORIGINALLY matched only PART_*.json and therefore missed 746 of
+# the 878 passes that do emit a certificate -- the dominant convention here is
+# w33_passNNNN_*.json.  Pass 4424's headline "1015 emit no certificate" was an
+# artifact of this regex and is retracted at Pass 4461.
+WRITES = re.compile(r"""["'](?:data/)?([A-Za-z0-9_]+\.json)["']""")
 
 
 def certificates_of(script: Path) -> list[str]:
