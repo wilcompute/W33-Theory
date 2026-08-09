@@ -1,0 +1,197 @@
+% Passes 4495--4502: apartment-code distance, H^1, higher Ihara coefficients,
+% explicit Clifford lift, thermal enumerator, intrinsic reconstruction, and prism geometry.
+\subsection{Distance, extension cohomology, higher graph primes, and prism self-reconstruction (Passes 4495--4502)}
+\label{sec:pass4495-4502-apartment-distance-cohomology}
+
+The apartment-parity programme now admits three independent descriptions of the same
+finite object: a binary code on the $1620$ building apartments, a protected quotient
+$H_{10}$, and a line-signing Walsh Hamiltonian.  Passes~4495--4502 close several of
+the remaining exact questions while retaining the evidence boundary established in
+Passes~4461--4494.
+
+\paragraph{Pass 4495: the apartment code is exactly $[1620,39,162]$.}
+Write a line signing as $\sigma_\ell=(-1)^{b_\ell}$ and
+\[
+  W_4(\sigma)=\sum_{a\in\mathcal A}\prod_{\ell\in a}\sigma_\ell,
+  \qquad
+  \operatorname{wt}(H^Tb)=\frac{1620-W_4(\sigma)}2.
+\]
+The only kernel of $b\mapsto H^Tb$ is global reversal, so fix
+$\sigma_0=+1$ and search the remaining $2^{39}$ assignments exactly.  At every
+partial assignment the quartic Walsh polynomial is collected by its residual
+monomials,
+\[
+  P=c_0+\sum_{M\ne\varnothing}c_M\chi_M,
+  \qquad
+  P\le c_0+\sum_{M\ne\varnothing}|c_M|,
+\]
+which gives a rigorous branch-and-bound certificate.  Only the all-positive word
+has $W_4>1296$; exactly forty nonzero codewords have $W_4=1296$.  Therefore
+\[
+  \boxed{C_{\rm ap}=[1620,39,162],\qquad A_{162}=40.}
+\]
+The same exact traversal gives the beginning of the weight enumerator
+\[
+  \boxed{W_C(z)=1+40z^{162}+240z^{270}+540z^{312}+200z^{324}+\cdots.}
+\]
+No extrapolation from low coefficient support is used in the distance proof.
+
+\paragraph{Pass 4496: the protected $1|8|1$ module has a complete cohomological label.}
+Passes~4488 and 4490--4494 proved nonsplitting and localized concrete cocycles.
+Let $V_8$ be the irreducible middle factor of $H_{10}$.  Propagating symbolic
+$1$-cocycles over all $25920$ elements of $PSp(4,3)$ from five geometric
+generators gives
+\[
+  \dim Z^1(PSp(4,3),V_8)=10,
+  \qquad
+  \dim B^1(PSp(4,3),V_8)=8,
+\]
+and hence
+\[
+  \boxed{\dim H^1(PSp(4,3),V_8)=2.}
+\]
+The outer projective similitude exchanges a chosen basis of this two-space, so
+there is exactly one nonzero outer-invariant class, represented by their sum.
+After identifying $V_8^*\simeq V_8$ with the invariant symplectic form, the two
+adjacent extensions in
+\[
+  H_{10}=1|8|1
+\]
+both represent this same outer-fixed nonzero class.  Independently, scanning all
+$1023$ nonzero vectors gives cyclic-span dimensions
+\[
+  1^1,\qquad 9^{510},\qquad 10^{512};
+\]
+thus the invariant-submodule lattice is exactly
+\[
+  \boxed{0<1<9<10,}
+\]
+so the displayed $1|8|1$ is genuinely uniserial, not merely a composition-factor
+list.
+
+\paragraph{Pass 4497: the first new graph-prime invariant occurs at $u^5$.}
+Let $B_\sigma$ be the signed Hashimoto matrix, $T_k=\operatorname{tr}(A_\sigma^k)$,
+and let $C_n(\sigma)$ denote the signed sum over oriented primitive
+nonbacktracking prime classes of length $n$.  Bass recurrence gives, through
+length eight,
+\begin{align*}
+ \operatorname{tr}B_\sigma^3 &=T_3,\\
+ \operatorname{tr}B_\sigma^4 &=T_4-11040,\\
+ \operatorname{tr}B_\sigma^5 &=T_5-55T_3,\\
+ \operatorname{tr}B_\sigma^6 &=T_6-66T_4+416640,\\
+ \operatorname{tr}B_\sigma^7 &=T_7-77T_5+1694T_3,\\
+ \operatorname{tr}B_\sigma^8 &=T_8-88T_6+2420T_4-9050400.
+\end{align*}
+Consequently
+\[
+ \boxed{\log L_\sigma(u)=8Su^3+(240+2W_4)u^4+C_5u^5
+ +(160+C_6)u^6+C_7u^7+(1740+C_8)u^8+O(u^9),}
+\]
+where $S=\sum_\ell\sigma_\ell$.  The constants at $u^6$ and $u^8$ are the
+fixed repetitions of primitive triangles and primitive four-cycles.
+
+The $18144$ simple point-graph pentagons have an unexpectedly rigid line-shadow.
+After reducing their five edge-line labels modulo two, exactly $2160$ distinct
+supports are induced $P_3$'s in the dual W33 graph and each occurs six times,
+while $5184$ distinct supports induce a dual $C_5$ and each occurs once.  Hence,
+for the undirected pentagon holonomy sum,
+\[
+  \boxed{U_5=6W_{P_3}+W_{C_5^*},\qquad C_5=2U_5.}
+\]
+Under independent random line signs these Walsh characters are orthogonal:
+$\mathbb E U_5=0$, $\operatorname{Var}(U_5)=82944=288^2$, and
+$\operatorname{Cov}(S,U_5)=\operatorname{Cov}(W_4,U_5)=0$.
+Two explicit signings in the certificate have the same $S=-2$ and $W_4=8$
+(apartment weight $806$) but $U_5=600$ and $-136$, respectively.  Thus
+\[
+  \boxed{u^5\text{ is the first coefficient not determined by }S\text{ and }W_4.}
+\]
+The unsigned oriented primitive-prime counts at lengths $3,\ldots,8$ are
+$320,3480,36288,302880,2739840,26750160$.
+
+\paragraph{Pass 4498: an explicit four-qubit Clifford lift of the protected eight-core.}
+A computed hyperbolic basis carries the unique invariant plus-type quadratic to
+\[
+  \boxed{q(x,z)=x_1z_1+x_2z_2+x_3z_3+x_4z_4\pmod2.}
+\]
+In those coordinates all five inner $PSp(4,3)$ generators and the outer
+similitude are explicitly conjugated into $Sp(8,2)$.  Each is then factored into
+binary symplectic transvections $T_v:x\mapsto x+B(x,v)v$; the five inner words
+have length six and the outer word has length four.  Interpreting $v$ as a
+four-qubit Pauli label, $T_v$ is the projective Clifford action of a $\pi/4$
+Pauli rotation.  The exact Pauli words are frozen in the certificate.  This is a
+finite Clifford-label realization of the eight-core; it is not a claim that the
+$1620$-bit apartment code has been implemented as four physical qubits.
+
+\paragraph{Pass 4499: exact low-temperature expansion, with the full enumerator still open.}
+Combining Pass~4479 with the now-proved low weights gives
+\[
+ Z(\beta)=2e^{1620\beta}\!\left[
+ 1+40e^{-324\beta}+240e^{-540\beta}+540e^{-624\beta}
+ +200e^{-648\beta}+R(\beta)\right],
+\]
+where
+\[
+ R(\beta)=\sum_{w>324}A_w e^{-2\beta w}.
+\]
+The complete $2^{39}$ weight enumerator is \emph{not} claimed computed; this
+pass upgrades the low-temperature series exactly and leaves the remaining
+coefficients as a sharply stated coding problem.
+
+\paragraph{Pass 4500 (outside the box): the code reconstructs W33 from its minimum words.}
+The forty minimum words are exactly the forty line-star rows of $H$.  For two of
+them the Hamming distance is $270$ precisely when the corresponding dual W33
+lines intersect, and $312$ when they are disjoint.  Hence the code alone
+reconstructs the dual line-collinearity graph from its minimum-weight shell.
+Moreover the $1620$ apartment columns have distinct forty-bit incidence patterns,
+so an apartment-coordinate automorphism acting trivially on the minimum shell is
+itself trivial.  Therefore
+\[
+  \operatorname{Aut}(C)\hookrightarrow\operatorname{Aut}(W(3,3)).
+\]
+The natural projective similitude action supplies a subgroup of order $51840$;
+using the repository's independently certified theorem
+$\operatorname{Aut}(W(3,3))=PGSp(4,3)$ of order $51840$ gives
+\[
+  \boxed{\operatorname{Aut}(C)=PGSp(4,3),\qquad |\operatorname{Aut}(C)|=51840.}
+\]
+This replaces Pass~4476's lower bound by an exact automorphism theorem.
+
+\paragraph{Pass 4501 (outside the box): dual minimum checks are triangular prisms.}
+The $2160$ weight-three words of $C^\perp$ are triples of apartment columns
+$a,b,c$ with $a+b+c=0$.  Every pair of their four-line supports intersects in
+two lines; their union consists of six dual-W33 lines inducing a triangular
+prism.  The three apartments are exactly the prism's three rectangular faces.
+Conversely every certified relation has this form.  Thus
+\[
+  \boxed{\{c\in C^\perp:\operatorname{wt}c=3\}
+  \longleftrightarrow\{2160\text{ triangular prisms in dual }W33\}.}
+\]
+The span of these minimum dual checks has rank only $1215$, strictly below
+$\dim C^\perp=1581$.  Prism checks therefore do \emph{not} generate the entire
+dual code; the negative is part of the theorem.
+
+\paragraph{Pass 4502 (outside the box): a prism-induced protected $240$-orbit.}
+The six-line coefficient set of every such prism gives a primal apartment word
+of weight $534$.  Project the same six-line indicator through $A_*$ into the
+protected quotient.  The $2160$ prisms collapse exactly $9$-to-$1$ onto
+\[
+  \boxed{240\text{ distinct protected vectors, each of ambient weight }20.}
+\]
+$PSp(4,3)$ is transitive on this set; a stabilizer has order $108$ and suborbit
+profile
+\[
+  \boxed{1,1,2,2,18,18,18,18,27,27,54,54.}
+\]
+The profile is recorded precisely so that the object is not identified with an
+E8-root carrier, a W33-edge carrier, or any other $240$-set merely because the
+cardinality agrees.
+
+\paragraph{Rediscovery and literature boundary.}
+Classical generalized-quadrangle code literature studies point/line incidence
+codes and their modular ranks, while the present code has the $1620$ building
+apartments as coordinates.  The executable claims above are therefore presented
+as repository-certified finite theorems; absence of the exact construction in a
+targeted literature search is not used as proof of global novelty.  Likewise the
+Artin--Ihara terminology supplies the standard graph-covering language, not a
+claim that a physical gauge field has been derived.
