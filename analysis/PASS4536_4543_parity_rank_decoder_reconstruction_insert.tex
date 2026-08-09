@@ -1,0 +1,163 @@
+% Passes 4536--4543: protected parity completion, Q(5,q) binary-rank frontier,
+% global splitting bound, exact local decoder, cross-lane fusion, and three
+% outside-box self-reconstruction/local-matroid consequences.
+\subsection{The missing protected bit is parity, and the Borel cell already contains full $H_{10}$ (Passes 4536--4543)}
+\label{sec:pass4536-4543-parity-decoder}
+
+\paragraph{Pass 4536: the missing tenth direction is coefficient parity.}
+Let $A_*$ be the dual-W33 line-intersection matrix over $\mathbb F_2$.  Pass~4534
+showed that the protected edge vectors $A_*(e_i+e_j)$ span the unique
+nine-dimensional invariant submodule $V_9\subset H_{10}=\operatorname{im}A_*$.  Since
+the connected line graph's endpoint vectors span the full even-weight hyperplane
+of $\mathbb F_2^{40}$ and every vector in $\ker A_*$ has even coefficient parity,
+\[
+ \boxed{\pi(A_*b)=\sum_i b_i\pmod2}
+\]
+is a well-defined nonzero functional on $H_{10}$ with
+\[
+ \ker\pi=V_9=A_*(\text{even coefficient vectors}).
+\]
+Thus any single line-star $A_*e_i$ supplies the missing tenth direction.  The
+complete parity-refined protected weight enumerator is
+\[
+\begin{array}{c|ccccc}
+\pi=0&w=0&16&20&24&40\\ \hline
+A_w&1&135&240&135&1
+\end{array},\qquad
+\begin{array}{c|ccc}
+\pi=1&w=12&20&28\\ \hline
+A_w&40&432&40.
+\end{array}
+\]
+The $240$ even weight-$20$ vectors are exactly the protected edge shell; the
+forty odd minimum vectors are exactly the forty line-stars.
+
+\paragraph{Pass 4537: a second exact $Q(5,q)$ rank anchor and a closed-rank conjecture.}
+An independent elliptic-quadric construction gives
+\[
+\begin{array}{c|ccccc}
+q&|\mathcal P|&|\mathcal L|&\operatorname{rank}_2N&\dim\ker N^T&\operatorname{rank}_2(N^TN)\\ \hline
+3&112&280&91&21&70\\
+7&2752&17200&2451&301&2150.
+\end{array}
+\]
+Both anchors satisfy
+\[
+ \rho(q)=(q^2+1)(q^2-q+1)=\frac{|\mathcal L|}{q+1},\qquad
+ \dim\ker N^T=q(q^2-q+1).
+\]
+For every odd $q$, the line-graph SRG parameters
+$k=q^2(q+1)$, $\lambda=q^2-1$, $\mu=q+1$ are even, hence
+\[
+ \boxed{A_*^2=0\quad\text{over }\mathbb F_2}.
+\]
+The displayed closed rank formula is therefore a strongly supported conjecture,
+not yet an all-$q$ theorem; only the two exact anchors and square-zero theorem
+are claimed here.
+
+\paragraph{Pass 4538: the Borel attains the global maximum splitting order.}
+Pass~4503 already proved all five maximal subgroup types nonsplit.  Using the
+standard subgroup structures of those maximals, every remaining proper subgroup
+of order above $162$ reduces to seven large types of orders
+\[
+ 360,324,288,216,216,192,192.
+\]
+Exact representatives have section ranks
+\[
+ 386/387,\ 386/387,\ 386/387,\ 385/386,\ 386/387,\ 385/386,\ 380/381,
+\]
+respectively, so all are nonsplit.  Therefore
+\[
+ \boxed{\max\{|H|:H\le PSp(4,3)\text{ and the apartment extension splits on }H\}=162,}
+\]
+attained by the chamber/Borel of Pass~4519.  Completeness of the order bound uses
+the standard finite-group subgroup classification of the five maximal types;
+the executable verifies representatives and section ranks independently.
+
+\paragraph{Pass 4539: ten local samples decode every protected vector.}
+Take the parity-odd center line-star together with the nine local spokes
+\[
+ (0,1),(0,2),(0,3),(0,4),(0,5),(0,7),(0,8),(0,28),(0,32).
+\]
+These form a basis of $H_{10}$.  Restriction to ambient coordinates
+\[
+ 0,1,2,3,4,5,7,8,10,11
+\]
+is invertible; the frozen $10\times10$ inverse was exhaustively checked on all
+$1024$ protected states.  Its XOR fan-ins are
+\[
+ 4,5,3,3,4,4,4,4,8,6
+\]
+with $45$ total input incidences.  The first decoded coordinate is $\pi$ and the
+remaining nine are local-spoke coordinates.  The separate eight-state Borel
+equitable quotient remains a spectral/orbit compression, not an identity-
+preserving decoder.
+
+\paragraph{Pass 4540: primitive-six zeta tomography reconstructs the protected filtration.}
+Pass~4523 specializes in W33 to
+\[
+ M_6=48(J-I)+204A_*.
+\]
+Thus the degree-two Walsh data determines $A_*$ exactly and consequently the
+entire chain
+\[
+ M_6\longrightarrow A_*\longrightarrow H_{10}=\operatorname{im}A_*
+ \longrightarrow V_9=A_*(\text{even})\longrightarrow H_{10}/V_9\cong\mathbb F_2.
+\]
+The same cross-lane comparison explains the prism exception: for odd $t$ a
+three-rung fan equals its $(t-2)$-rung complement modulo $\ker A_*$.  Only
+$t=3$ makes the complement one rung, yielding W33's nine-sheet edge collapse;
+for $Q(5,3)=GQ(3,9)$ the complement has seven rungs and the $544320$ prism
+images are injective.
+
+\paragraph{Pass 4541 (outside the box): parity is pairing with the unique fixed vector.}
+The all-ones protected vector has coefficient preimage
+$e_0+e_1+e_2+e_3$, and the protected alternating form gives
+\[
+ \boxed{\pi(A_*b)=B(A_*b,\mathbf1)=b^T\mathbf1.}
+\]
+Pass~4496 proved that the fixed space is one-dimensional and its perpendicular
+has dimension nine.  Hence
+\[
+ 0<\langle\mathbf1\rangle<\mathbf1^\perp=V_9<H_{10}
+\]
+is exactly the established $1|8|1$ uniserial chain: the missing bit is the
+symplectic coordinate dual to the unique fixed vector.
+
+\paragraph{Pass 4542 (outside the box): the odd minimum shell reconstructs W33.}
+The forty $\pi=1$ minimum vectors $s_i=A_*e_i$ all have weight $12$.  For
+$i\ne j$,
+\[
+ \operatorname{wt}(s_i+s_j)=
+ \begin{cases}20,&i\sim j,\\16,&i\not\sim j.\end{cases}
+\]
+Among the $780$ pairs there are exactly $240$ weight-$20$ and $540$ weight-$16$
+differences.  Joining the former reconstructs exactly
+$\operatorname{SRG}(40,12,2,4)$, the dual W33 line graph, while the $240$
+distinct adjacent differences are exactly the protected edge shell.  Thus the
+parity-refined $H_{10}$ weight geometry remembers W33 intrinsically.
+
+\paragraph{Pass 4543 (outside the box): the local cell contains exactly $108$ full bases.}
+Remove the center from the $K_1\vee4K_3$ Borel cell and choose nine of its twelve
+neighbors, equivalently omit three.  The rank depends only on the omitted
+triple's induced type in $4K_3$:
+\[
+\begin{array}{c|ccc}
+\text{omitted triple}&K_3&K_2\sqcup K_1&3K_1\\ \hline
+\text{count}&4&108&108\\
+\text{rank of chosen nine}&7&8&9.
+\end{array}
+\]
+Therefore the $108$ independent omitted triples give all local nine-line bases
+of $V_9$ of this form, and adjoining the center line-star yields exactly $108$
+ten-line bases of full $H_{10}$.  The center is essential: any ten-line subset
+using only the twelve neighbors has rank at most nine.
+
+\begin{quote}\small
+\textbf{Evidence boundary.}
+Passes~4536--4543 are finite GF(2), finite-group, graph-zeta, and representable-
+matroid statements.  The $Q(5,q)$ closed rank formula remains explicitly a
+conjecture beyond the exact $q=3,7$ anchors.  Coefficient parity is not called a
+physical charge, local bases are not physical hardware layouts, and Ihara/Walsh
+reconstruction is not promoted to dynamics without an additional theorem.
+\end{quote}
