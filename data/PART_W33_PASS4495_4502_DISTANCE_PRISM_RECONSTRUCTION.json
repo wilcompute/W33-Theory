@@ -1,0 +1,80 @@
+{
+  "4495_primal_distance": {
+    "branch_count_ge_1296": {
+      "nodes": 2841,
+      "prunes": 1380,
+      "solutions": {
+        "1296": 40,
+        "1620": 1
+      }
+    },
+    "branch_count_ge_W4_972": {
+      "nodes": 89105,
+      "prunes": 43532
+    },
+    "branch_proof_gt_1296": {
+      "nodes": 2085,
+      "prunes": 1042,
+      "solutions": {
+        "1620": 1
+      }
+    },
+    "code_parameters": "[1620,39,162]",
+    "exact_low_weight_counts": {
+      "162": 40,
+      "270": 240,
+      "312": 540,
+      "324": 200
+    },
+    "minimum_distance": 162,
+    "minimum_word_count": 40,
+    "proof_boundary": "Exhaustive Walsh branch-and-bound over all 2^39 codewords after the exact global-reversal gauge.",
+    "walsh_gauge": "sigma_0=+1"
+  },
+  "4500_intrinsic_reconstruction": {
+    "apartment_columns_distinct": 1620,
+    "aut_code_conclusion": "Aut(C)=PGSp(4,3), order 51840, conditional only on the already-certified repository theorem Aut(W33)=PGSp(4,3).",
+    "distance_if_dual_lines_disjoint": 312,
+    "distance_if_dual_lines_intersect": 270,
+    "minimum_words": 40,
+    "natural_PGSp_automorphism_subgroup_order": 51840,
+    "reconstructed_graph": "SRG(40,12,2,4), the dual W(3,3) line-collinearity graph"
+  },
+  "4501_dual_prisms": {
+    "dual_dimension": 1581,
+    "dual_minimum_weight": 3,
+    "generate_full_dual": false,
+    "geometry": "each relation is the three rectangular apartment faces of a triangular prism on six dual-W33 lines",
+    "weight3_span_rank": 1215,
+    "weight3_words": 2160
+  },
+  "4502_prism_protected_orbit": {
+    "PSp_orbit_transitive": true,
+    "boundary": "The 240-orbit is reported by its actual action fingerprint. It is not identified with E8 roots, W33 edges, or any other 240-set from cardinality alone.",
+    "prism_six_line_primal_weight": 534,
+    "prisms_per_image": 9,
+    "protected_image_count": 240,
+    "protected_image_weight": 20,
+    "stabilizer_order": 108,
+    "stabilizer_suborbits": [
+      1,
+      1,
+      2,
+      2,
+      18,
+      18,
+      18,
+      18,
+      27,
+      27,
+      54,
+      54
+    ]
+  },
+  "passes": [
+    4495,
+    4500,
+    4501,
+    4502
+  ]
+}
