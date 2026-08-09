@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Apartment Code Distance, Cohomology, Ihara and Prism Geometry — W33 Theory</title><style>body{font:16px/1.55 system-ui,sans-serif;max-width:980px;margin:40px auto;padding:0 22px;color:#171717}h1,h2{line-height:1.15}code,pre{background:#f3f3f3;padding:.12em .3em;border-radius:4px}pre{padding:14px;overflow:auto}.box{border-left:4px solid #555;padding:10px 16px;background:#f7f7f7}table{border-collapse:collapse;width:100%}th,td{border:1px solid #ccc;padding:7px;text-align:left}</style></head><body>
+<h1>Apartment code distance, extension cohomology, higher Ihara coefficients, and prism geometry</h1>
+<p><strong>Passes 4495–4502.</strong> This page records exact finite results. It separates theorem, exhaustive computation, and open remainder explicitly.</p>
+
+<h2>1. Distance is closed: C<sub>ap</sub> = [1620,39,162]</h2>
+<p>For line signs σ<sub>ℓ</sub>=(-1)<sup>bℓ</sup>, apartment parity gives</p>
+<pre>w(Hᵀb) = (1620 - W₄(σ))/2.</pre>
+<p>The only coefficient kernel is global reversal. Fixing σ<sub>0</sub>=+1 leaves exactly 2<sup>39</sup> codewords. At each partial assignment the residual Walsh polynomial <code>P=c0+Σ cM χM</code> obeys the rigorous bound <code>P ≤ c0+Σ|cM|</code>. Branch-and-bound proves only the zero word has W₄&gt;1296 and exactly 40 nonzero words have W₄=1296.</p>
+<div class="box"><strong>Theorem.</strong> <code>C_ap=[1620,39,162]</code> and <code>A_162=40</code>.</div>
+<p>The exact low shell is</p>
+<pre>W_C(z) = 1 + 40 z^162 + 240 z^270 + 540 z^312 + 200 z^324 + …</pre>
+
+<h2>2. The protected H10 extension has a complete H¹ label</h2>
+<p>The 10-dimensional protected module has composition structure <code>1|8|1</code>. An exhaustive cyclic-submodule scan of all 1,023 nonzero vectors yields dimensions <code>1^1, 9^510, 10^512</code>, so its invariant-submodule lattice is exactly <code>0&lt;1&lt;9&lt;10</code>.</p>
+<p>For the irreducible middle eight-space V₈, symbolic cocycles were propagated over all 25,920 elements of PSp(4,3):</p>
+<pre>dim Z¹(PSp(4,3),V₈) = 10
+Dim B¹(PSp(4,3),V₈) = 8
+dim H¹(PSp(4,3),V₈) = 2.</pre>
+<p>The outer PGSp involution swaps a chosen H¹ basis. Its unique nonzero fixed class is their sum. After the invariant symplectic identification V₈*≅V₈, both adjacent extensions in <code>1|8|1</code> select that same outer-fixed nonzero class.</p>
+
+<h2>3. The first new Ihara coefficient is u⁵</h2>
+<p>Let B<sub>σ</sub> be the signed Hashimoto matrix, T<sub>k</sub>=tr(A<sub>σ</sub><sup>k</sup>), and C<sub>n</sub> the signed sum over oriented primitive nonbacktracking prime classes of length n. Bass recurrence gives</p>
+<pre>tr B³ = T₃
+tr B⁴ = T₄ - 11040
+tr B⁵ = T₅ - 55 T₃
+tr B⁶ = T₆ - 66 T₄ + 416640
+tr B⁷ = T₇ - 77 T₅ + 1694 T₃
+tr B⁸ = T₈ - 88 T₆ + 2420 T₄ - 9050400.</pre>
+<p>Hence</p>
+<pre>log Lσ(u) = 8 S u³ + (240+2W₄)u⁴ + C₅u⁵ + (160+C₆)u⁶ + C₇u⁷ + (1740+C₈)u⁸ + O(u⁹).</pre>
+<p>The 18,144 simple point-graph pentagons reduce by edge-line parity to exactly 2,160 induced P₃ supports of the dual W33 graph, each with multiplicity six, and 5,184 dual C₅ supports, each with multiplicity one:</p>
+<pre>U₅ = 6 W_P3 + W_C5*,      C₅ = 2 U₅.</pre>
+<p>Under random independent line signs, Var(U₅)=82,944=288² and it is exactly uncorrelated with both the line sum S and W₄. Two frozen signings have the same <code>S=-2</code> and <code>W₄=8</code> but <code>U₅=600</code> and <code>-136</code>. Thus u⁵ is the first coefficient carrying information not determined by S and apartment weight.</p>
+
+<h2>4. Explicit four-qubit Clifford coordinates</h2>
+<p>A verified hyperbolic basis sends the unique invariant plus-type quadratic on the eight-core to</p>
+<pre>q(x,z)=x₁z₁+x₂z₂+x₃z₃+x₄z₄ mod 2.</pre>
+<p>All five inner PSp generators and the outer projective similitude were conjugated into these Sp(8,2) coordinates and factored into binary symplectic transvections. The five inner words use six transvections each; the outer uses four. The frozen certificate records the corresponding four-qubit Pauli labels. This is a projective Clifford-label realization, not a claim that the 1,620-bit code is physically four qubits.</p>
+
+<h2>5. Exact finite thermal expansion</h2>
+<pre>Z(β)=2 exp(1620β) W_C(exp(-2β))</pre>
+<p>now begins exactly as</p>
+<pre>2 e^(1620β)[1 + 40e^(-324β) + 240e^(-540β) + 540e^(-624β) + 200e^(-648β) + R(β)],
+R(β)=Σ_{w&gt;324} A_w e^(-2βw).</pre>
+<p><strong>Open:</strong> the complete 2<sup>39</sup> weight enumerator is not claimed solved.</p>
+
+<h2>6. Outside the box: the code reconstructs W33</h2>
+<p>The 40 minimum words are exactly the 40 line-star rows. Their pairwise Hamming distance is 270 iff the corresponding dual W33 lines intersect and 312 otherwise. Therefore the minimum-weight shell intrinsically reconstructs the dual SRG(40,12,2,4). Because all 1,620 apartment columns have distinct incidence patterns, a code-coordinate automorphism acting trivially on this shell is trivial. Combining this injection with the natural PGSp(4,3) action and the repository's independent automorphism theorem gives <code>Aut(C)=PGSp(4,3)</code>, order 51,840.</p>
+
+<h2>7. Outside the box: dual minimum checks are triangular prisms</h2>
+<p>Every weight-3 dual word is a relation among three apartment columns. There are exactly 2,160. Their three four-line supports pairwise meet in two lines and their six-line union induces a triangular prism in the dual W33 graph; the apartments are exactly its three rectangular faces.</p>
+<p>The span of these 2,160 minimum checks has rank only 1,215, below <code>dim C⊥=1,581</code>. So the minimum dual checks do <em>not</em> generate the full dual code.</p>
+
+<h2>8. Outside the box: a prism-induced protected 240-orbit</h2>
+<p>Each prism's six-line indicator produces a primal codeword of weight 534. Applying A* to the same indicator collapses the 2,160 prisms exactly 9-to-1 onto 240 protected vectors, all of ambient weight 20. PSp(4,3) acts transitively; a stabilizer has order 108 and suborbits</p>
+<pre>1,1,2,2,18,18,18,18,27,27,54,54.</pre>
+<p>The action fingerprint is reported precisely to prevent a count-only identification with E8 roots, W33 edges, or any other 240-set.</p>
+
+<h2>Evidence boundary</h2>
+<p>These are finite coding, group-cohomology, graph-zeta, and Clifford-label results. Classical generalized-quadrangle coding work gives important incidence-code context, but this construction uses the 1,620 building apartments as coordinates. The absence of an exact match in a targeted literature search is not treated as proof of global novelty.</p>
+</body></html>
