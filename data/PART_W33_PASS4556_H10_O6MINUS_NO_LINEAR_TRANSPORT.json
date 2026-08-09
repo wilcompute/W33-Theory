@@ -1,0 +1,20 @@
+{
+  "H10": {
+    "composition_factors_dimensions": [1, 8, 1],
+    "dimension": 10,
+    "distinguished_functional": "pi with kernel V9"
+  },
+  "O6minus_module": {
+    "dimension": 6,
+    "name": "U6",
+    "simple": true,
+    "source": "Passes 4522/4544 faithful O^-(6,2) quotient"
+  },
+  "boundary": "This excludes linear equivariant transports only. Nonlinear invariants, correspondences through larger modules, or non-equivariant hardware maps are not ruled out.",
+  "cubic_intertwiner_boundary": "The 27x36 Schlaefli/double-six incidence map R intertwines different permutation carriers; it is not a linear map between H10 and U6.",
+  "group": "PSp(4,3)",
+  "hom_spaces": {"Hom_G(H10,U6)": 0, "Hom_G(U6,H10)": 0},
+  "pass": 4556,
+  "proof": "Any nonzero map H10->U6 is onto because U6 is simple, forcing U6 as a composition factor of H10. Any nonzero U6->H10 embeds a simple six-space into H10. Both contradict the certified 1,8,1 composition factors.",
+  "theorem": "There is no nonzero PSp(4,3)-equivariant linear transport in either direction between protected H10 and the O^-(6,2) six-space. The parity 9+1 split therefore has no linear exceptional-six shadow."
+}
