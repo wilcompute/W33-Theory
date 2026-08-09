@@ -1,49 +1,51 @@
-% Pass 4493: natural geometric symmetry-breaking threshold for the nonsplit apartment extension.
-\subsection{Geometric symmetry breaking selects a protected complement (Pass 4493)}
+% Pass 4493, corrected by Passes 4503/4507.
+\subsection{Corrected symmetry-breaking boundary for the nonsplit apartment extension (Passes 4493, 4503--4504)}
 \label{sec:pass4493-symmetry-breaking-section}
 
 The full $PSp(4,3)$ action forbids an equivariant section of
 \[
-0\to K/J\;(29)\to E=M/J\;(39)\to V=M/K\cong H_{10}\;(10)\to0.
+0\to K/J\;(29)\to E=M/J\;(39)\to V=M/K\cong H_{10}\;(10)\to0,
 \]
-Pass~4493 restricts the same exact section equations to natural geometric
-stabilizers.  The first tested canonical symmetry breaking already succeeds:
-fixing one point or one line leaves a subgroup of order $648$ and index $40$,
-and the affine section equations become consistent,
+with the reproducible full-group ranks
 \[
-\boxed{\operatorname{rank}A=\operatorname{rank}[A\mid b]=370.}
+\operatorname{rank}A=389,\qquad\operatorname{rank}[A\mid b]=390.
 \]
-Hence each point or line stabilizer admits a $20$-dimensional affine family of
-$H$-equivariant linear sections $V\to E$.  The corresponding fixed-space
-dimensions are
+A later adversarial re-execution (Pass~4503) found that the originally frozen
+Pass~4493 restricted-subgroup table was a false positive.  The historical
+$370=370$ point/line claim is withdrawn.  Exact reconstruction from the same
+$GF(3)^4$ geometry gives
 \[
-\dim E^H=\dim V^H=3.
+\begin{array}{c|c|c}
+H & |H| & \operatorname{rank}A/\operatorname{rank}[A\mid b]\\ \hline
+\text{line stabilizer} &648&386/387\\
+\text{point stabilizer}&648&387/388\\
+\text{incident flag stabilizer}&162&384/384\\
+\text{apartment setwise stabilizer}&16&357/358.
+\end{array}
 \]
+Thus neither order-$648$ maximal geometric stabilizer selects a protected
+complement.  The canonical incident-flag stabilizer does: its section family is
+six-dimensional, hence contains exactly $2^6=64$ equivariant sections.
 
-Finer geometric gauges admit still larger section families.  For an incident
-point--line flag stabilizer of order $162$ (index $160$), the section rank is
-$338$ and the affine family has dimension $52$.  For the setwise stabilizer of
-one building apartment, of order $16$ (index $1620$), the rank is $308$ and
-the section family has dimension $82$.  By contrast, the full group retains
+Pass~4503 extends the correction beyond these geometric examples: representatives
+of all five maximal subgroup types of $PSp(4,3)$, of orders
 \[
-\operatorname{rank}A=389,\qquad
-\operatorname{rank}[A\mid b]=390,
+960,\ 720,\ 648,\ 648,\ 576,
 \]
-and no section.
+retain the obstruction.  Pass~4504 exhausts the $64$ flag-equivariant sections
+and finds a canonical-coordinate optimum of total ambient Hamming weight $42$,
+maximum column weight $9$, and union support $13$ lines.  These are software
+gauge representatives in $E=M/J$, not physical measurement or decoder costs.
 
-Thus, among the tested canonical geometric stabilizers,
+The corrected architectural statement is therefore
 \[
-\boxed{
-\text{full W33 symmetry}\Rightarrow\text{protected sector only as a quotient},
-}
+\boxed{\text{full symmetry and every maximal subgroup type tested}\Rightarrow
+\text{protected sector remains quotient-only},}
 \]
-while
+whereas
 \[
-\boxed{
-\text{fix one point or one line}\Rightarrow\text{an equivariant 10D complement can be chosen}.
-}
+\boxed{\text{fix an incident point--line flag}\Rightarrow
+\text{an equivariant 10D representative section exists}.}
 \]
-This is a symmetry-breaking gauge statement, not a classification of all
-subgroups of $PSp(4,3)$.  In particular, it does not prove that no larger
-non-geometric subgroup splits the extension, and a linear section is not by
-itself a physical decoder or hardware implementation.
+The order-$162$ flag is a verified splitting subgroup; this does not by itself
+classify every subgroup or prove $162$ is the globally largest splitting order.
