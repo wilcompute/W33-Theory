@@ -20,6 +20,11 @@
       "kind": "id",
       "token": "pass4480-4483-apartment-h10-geometric-readout",
       "source": "analysis/PASS4480_4483_apartment_h10_index_insert.html"
+    },
+    {
+      "kind": "id",
+      "token": "pass4485-4488-apartment-core-self-gluing",
+      "source": "analysis/PASS4485_4488_apartment_core_self_gluing_index_insert.html"
     }
   ],
   "standalone_public_pages": [
@@ -34,6 +39,10 @@
     {
       "token": "pass4480-4483-apartment-h10-geometric-readout-page",
       "source": "docs/apartment-h10-geometric-readout.html"
+    },
+    {
+      "token": "pass4485-4488-apartment-core-self-gluing-page",
+      "source": "docs/apartment-core-self-gluing.html"
     }
   ]
 }
