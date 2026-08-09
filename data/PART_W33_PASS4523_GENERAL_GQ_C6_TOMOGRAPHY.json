@@ -1,0 +1,25 @@
+{
+  "boundary": "Finite graph-zeta theorem. It reconstructs incidence/line adjacency, not a physical gauge field.",
+  "coefficients": {
+    "adjacent": "s^2(s-1)^2(2t+1)",
+    "difference": "s(s-1)^2(2st-1)>0",
+    "disjoint": "s(s+1)(s-1)^2"
+  },
+  "derivation": {
+    "apartments_per_disjoint_pair": "beta=s(s+1)/2",
+    "apartments_per_intersecting_pair": "alpha=s^2 t",
+    "extra_adjacent_figure_eights": "s^2(s-1)^2",
+    "imprimitive_triangle_twice": "zero parity support",
+    "oriented_simple_hexagons_per_apartment_pair": "2(s-1)^2"
+  },
+  "matrix_reconstruction": "off-diagonal M6 = c_dis*(J-I) + (c_adj-c_dis)*A_line",
+  "pass": 4523,
+  "regressions": [
+    {"adjacent": 20, "disjoint": 6, "figure_eight_adjacent": 4, "gap": 14, "s": 2, "simple_adjacent": 16, "simple_disjoint": 6, "t": 2},
+    {"adjacent": 252, "disjoint": 48, "figure_eight_adjacent": 36, "gap": 204, "s": 3, "simple_adjacent": 216, "simple_disjoint": 48, "t": 3},
+    {"adjacent": 4400, "disjoint": 480, "figure_eight_adjacent": 400, "gap": 3920, "s": 5, "simple_adjacent": 4000, "simple_disjoint": 480, "t": 5},
+    {"adjacent": 684, "disjoint": 48, "figure_eight_adjacent": 36, "gap": 636, "s": 3, "simple_adjacent": 648, "simple_disjoint": 48, "t": 9},
+    {"adjacent": 36288, "disjoint": 5760, "figure_eight_adjacent": 5184, "gap": 30528, "s": 9, "simple_adjacent": 31104, "simple_disjoint": 5760, "t": 3}
+  ],
+  "theorem": "primitive length-six degree-two Walsh tomography reconstructs the line graph of every thick finite GQ(s,t)"
+}
