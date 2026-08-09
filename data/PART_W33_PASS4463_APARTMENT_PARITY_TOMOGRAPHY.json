@@ -1,0 +1,17 @@
+{
+  "apartment_parity_bits": 1620,
+  "boundary": "Finite-geometric identifiability only. The theorem concerns the 40-bit line-signing model; it does not assert physical measurement completeness.",
+  "generator_weight": 162,
+  "image_code": "binary [1620,39] apartment-parity code",
+  "kernel_dimension_Ht": 1,
+  "kernel_generator": "all-ones 40-vector (global sign reversal)",
+  "line_bits": 40,
+  "mod2_gram_identity": "H H^T = A_dual over F_2",
+  "pass": 4463,
+  "rank_F2_H": 39,
+  "theorem": "W33 apartment-parity tomography theorem",
+  "two_generator_weights": {
+    "disjoint_lines": 312,
+    "intersecting_lines": 270
+  }
+}
