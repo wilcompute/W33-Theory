@@ -1,0 +1,40 @@
+{
+  "boundary": "This is a canonical symplectic identification with one H10 logical-label copy, not the full 20-dimensional logical Pauli space.  No physical measurement completeness or gate inventory is inferred.  Quadratic refinements are deliberately deferred to Pass 4470.",
+  "canonical_chain": [
+    "A_ap/rad(A_ap)",
+    "F_2^40 / ker(N^T N)",
+    "im(N) / ker(N^T)",
+    "C^perp/C = H10"
+  ],
+  "checks": {
+    "passed": 23,
+    "total": 23
+  },
+  "dimensions": {
+    "H10_Cperp_mod_C": 10,
+    "apartment_code": 39,
+    "apartment_quotient": 10,
+    "apartment_radical": 29,
+    "context_Cperp": 25,
+    "kernel_NtN": 30,
+    "rank_H": 39,
+    "rank_N": 25,
+    "rank_NtN": 10,
+    "sentinel_C": 15
+  },
+  "gram_rank": 10,
+  "intertwiner": {
+    "equivariance": "formal for every incidence automorphism: P_point N = N P_line",
+    "exhaustive_nonzero_quotient_kernel_classes": 0,
+    "formula": "Phi([b]) = [N b]",
+    "kernel_identity": "N b in ker(N^T) iff N^T N b = 0",
+    "pairing_identity": "<H^T b,H^T c> = b^T N^T N c = <N b,N c> (mod 2)"
+  },
+  "owners": {
+    "apartment_code": "Pass 4463",
+    "apartment_symplectic_quotient": "Pass 4464",
+    "sentinel_css_H10": "Pass 201"
+  },
+  "pass": 4469,
+  "theorem": "W33 apartment-parity / CSS-H10 symplectic intertwiner"
+}
