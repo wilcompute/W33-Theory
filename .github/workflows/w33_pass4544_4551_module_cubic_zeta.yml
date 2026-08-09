@@ -1,0 +1,156 @@
+name: Passes 4544-4551 Module Cubic Enumerator Zeta
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4544_dual_middle_module_lattice.py'
+      - 'analysis/w33_pass4545_4549_schlafli_double_six_incidence_intertwiner.py'
+      - 'analysis/w33_pass4546_orbit_native_apartment_enumerator.py'
+      - 'analysis/w33_pass4547_4550_q53_fan_johnson_code.py'
+      - 'analysis/w33_pass4548_c7_c8_higher_body_tomography.py'
+      - 'analysis/w33_pass4551_zeta_to_apartment_code_reconstruction.py'
+      - 'analysis/PASS4544_4551_module_cubic_enumerator_zeta_insert.tex'
+      - 'analysis/PASS4544_4551_module_cubic_enumerator_zeta_index_insert.html'
+      - 'analysis/PASS4536_4543_parity_rank_decoder_reconstruction_insert.tex'
+      - 'data/PART_W33_PASS4544_DUAL_MIDDLE_MODULE_LATTICE.json'
+      - 'data/PART_W33_PASS4545_4549_SCHLAFLI_DOUBLE_SIX_INTERTWINER.json'
+      - 'data/PART_W33_PASS4546_ORBIT_NATIVE_ENUMERATOR_ENGINE.json'
+      - 'data/PART_W33_PASS4547_4550_Q53_FAN_JOHNSON_CODE.json'
+      - 'data/PART_W33_PASS4548_C7_C8_HIGHER_BODY_TOMOGRAPHY.json'
+      - 'data/PART_W33_PASS4551_ZETA_TO_APARTMENT_CODE.json'
+      - 'data/w33_public_frontier_extension_pass4461_4464.json'
+      - 'docs/apartment-module-cubic-zeta.html'
+      - 'tests/test_w33_pass4544_4551_module_cubic_zeta.py'
+      - '.github/workflows/w33_pass4544_4551_module_cubic_zeta.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pass4544-4551-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install verifier dependencies
+        run: python -m pip install --disable-pip-version-check numpy pytest pynauty
+      - name: Run frozen invariant regression
+        run: pytest -q tests/test_w33_pass4544_4551_module_cubic_zeta.py
+      - name: Preserve compact public certificates
+        run: |
+          mkdir -p evidence/pass4544_4551
+          for f in \
+            PART_W33_PASS4544_DUAL_MIDDLE_MODULE_LATTICE.json \
+            PART_W33_PASS4545_4549_SCHLAFLI_DOUBLE_SIX_INTERTWINER.json \
+            PART_W33_PASS4547_4550_Q53_FAN_JOHNSON_CODE.json \
+            PART_W33_PASS4548_C7_C8_HIGHER_BODY_TOMOGRAPHY.json \
+            PART_W33_PASS4551_ZETA_TO_APARTMENT_CODE.json; do
+            cp "data/$f" "/tmp/$f"
+          done
+      - name: Recompute exact module lattice
+        run: |
+          python analysis/w33_pass4544_dual_middle_module_lattice.py | tee evidence/pass4544_4551/module.log
+          python - <<'PY'
+          import json
+          d=json.load(open('data/PART_W33_PASS4544_DUAL_MIDDLE_MODULE_LATTICE.json'))
+          assert d['upper_lattice']['number_of_S358']==3
+          assert d['upper_lattice']['common_K352']==352
+          assert d['top_quotient']['proper_nonzero_submodules']==3
+          assert d['K352_over_S330']['structure']=='V8 direct-sum V14'
+          assert d['K256_frontier']['unique_S186_dimension']==186
+          assert d['K256_frontier']['open']
+          PY
+          cp data/PART_W33_PASS4544_DUAL_MIDDLE_MODULE_LATTICE.json evidence/pass4544_4551/generated4544.json
+          cp /tmp/PART_W33_PASS4544_DUAL_MIDDLE_MODULE_LATTICE.json data/PART_W33_PASS4544_DUAL_MIDDLE_MODULE_LATTICE.json
+      - name: Recompute cubic-surface incidence intertwiner
+        run: |
+          python analysis/w33_pass4545_4549_schlafli_double_six_incidence_intertwiner.py | tee evidence/pass4544_4551/cubic.log
+          python - <<'PY'
+          import json
+          d=json.load(open('data/PART_W33_PASS4545_4549_SCHLAFLI_DOUBLE_SIX_INTERTWINER.json'))
+          assert d['incidence']['rank_over_Q']==21
+          assert d['incidence']['meeting_line_pair_common_double_sixes']==8
+          assert d['incidence']['skew_line_pair_common_double_sixes']==6
+          assert d['matrix_identities']['adjacency_intertwiner']=='3 A27 R + R A36 = 20 J27x36'
+          PY
+          cp data/PART_W33_PASS4545_4549_SCHLAFLI_DOUBLE_SIX_INTERTWINER.json evidence/pass4544_4551/generated4545.json
+          cp /tmp/PART_W33_PASS4545_4549_SCHLAFLI_DOUBLE_SIX_INTERTWINER.json data/PART_W33_PASS4545_4549_SCHLAFLI_DOUBLE_SIX_INTERTWINER.json
+      - name: Validate orbit-native enumerator on exact small shells
+        run: |
+          python analysis/w33_pass4546_orbit_native_apartment_enumerator.py --directory evidence/pass4544_4551/orbits --through 5 | tee evidence/pass4544_4551/enumerator.log
+          python - <<'PY'
+          import json,math
+          d=json.load(open('evidence/pass4544_4551/orbits/summary.json'))
+          assert d['status']=='RESUMABLE_FRONTIER'
+          assert d['observed_orbits_through_support']==73
+          for m,n in enumerate([1,1,2,5,16,48]):
+              rows=[x for x in open(f'evidence/pass4544_4551/orbits/support_{m:02d}.jsonl') if x.strip()]
+              assert len(rows)==n
+          PY
+      - name: Recompute Q53 fan code
+        run: |
+          python analysis/w33_pass4547_4550_q53_fan_johnson_code.py | tee evidence/pass4544_4551/fan.log
+          python - <<'PY'
+          import json
+          d=json.load(open('data/PART_W33_PASS4547_4550_Q53_FAN_JOHNSON_CODE.json'))
+          assert d['local_fan_code']['dimension']==9
+          assert d['prism_shell']['distance64_graph']=='Johnson J(10,3)'
+          assert d['prism_shell']['global_prisms']==544320
+          PY
+          cp data/PART_W33_PASS4547_4550_Q53_FAN_JOHNSON_CODE.json evidence/pass4544_4551/generated4547.json
+          cp /tmp/PART_W33_PASS4547_4550_Q53_FAN_JOHNSON_CODE.json data/PART_W33_PASS4547_4550_Q53_FAN_JOHNSON_CODE.json
+      - name: Recompute C7 C8 tomography and zeta-to-code bootstrap
+        run: |
+          python analysis/w33_pass4548_c7_c8_higher_body_tomography.py | tee evidence/pass4544_4551/zeta78.log
+          python analysis/w33_pass4551_zeta_to_apartment_code_reconstruction.py | tee evidence/pass4544_4551/zeta_code.log
+          python - <<'PY'
+          import json
+          a=json.load(open('data/PART_W33_PASS4548_C7_C8_HIGHER_BODY_TOMOGRAPHY.json'))
+          b=json.load(open('data/PART_W33_PASS4551_ZETA_TO_APARTMENT_CODE.json'))
+          assert '712' in a['C8_degree4']['apartment_theorem']
+          assert b['C8_selector']['selected_supports']==1620
+          assert b['reconstructed_matrix']['rank_F2']==39
+          PY
+          cp data/PART_W33_PASS4548_C7_C8_HIGHER_BODY_TOMOGRAPHY.json evidence/pass4544_4551/generated4548.json
+          cp data/PART_W33_PASS4551_ZETA_TO_APARTMENT_CODE.json evidence/pass4544_4551/generated4551.json
+          cp /tmp/PART_W33_PASS4548_C7_C8_HIGHER_BODY_TOMOGRAPHY.json data/PART_W33_PASS4548_C7_C8_HIGHER_BODY_TOMOGRAPHY.json
+          cp /tmp/PART_W33_PASS4551_ZETA_TO_APARTMENT_CODE.json data/PART_W33_PASS4551_ZETA_TO_APARTMENT_CODE.json
+      - name: Dry-run safe restored-site materializer
+        run: |
+          python tools/integrate_bt3376_bt3389.py --report evidence/pass4544_4551/site.json
+          test "$(grep -c 'id=\"pass4544-4551-module-cubic-enumerator-zeta\"' docs/index.html)" -eq 1
+          test -s docs/apartment-module-cubic-zeta.html
+          grep -q '712' docs/apartment-module-cubic-zeta.html
+          grep -q '10,789,604' docs/apartment-module-cubic-zeta.html
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+      - name: Compile all canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass4544_4551/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass4544_4551/pdf_sha256.txt
+      - name: Static evidence boundaries and chain order
+        run: |
+          git diff --check
+          grep -q 'PASS4544_4551_module_cubic_enumerator_zeta_insert' analysis/PASS4536_4543_parity_rank_decoder_reconstruction_insert.tex
+          grep -q 'full 10.8M-orbit run is still' analysis/PASS4544_4551_module_cubic_enumerator_zeta_index_insert.html
+          grep -q 'complete numerical W33 weight enumerator remains open' analysis/PASS4544_4551_module_cubic_enumerator_zeta_insert.tex
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pass4544-4551-module-cubic-zeta-evidence
+          path: |
+            evidence/pass4544_4551/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
