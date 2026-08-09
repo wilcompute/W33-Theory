@@ -1,0 +1,29 @@
+{
+  "Borel_action": {
+    "equitable_quotient": [[12, 3], [9, 6]],
+    "orbit_reading": "81 bases omit one line in the fixed flag pencil and two other pencils; 27 bases omit only the three nonfixed pencils",
+    "orbit_sizes": [81, 27],
+    "order": 162
+  },
+  "bases": 108,
+  "basis_exchange_graph": {
+    "degree": 15,
+    "diameter": 3,
+    "distance_distribution": [1, 15, 48, 44],
+    "edges": 810,
+    "spectrum": {"-3": 56, "0": 16, "3": 27, "9": 8, "15": 1},
+    "vertices": 108
+  },
+  "basis_rule": "center line-star plus nine neighbors; omitted triple independent across three of four K3 pencils",
+  "boundary": "This is finite representable-matroid redundancy; it is not a physical fault-tolerance threshold or noise model.",
+  "center_boundary": "All 108 bases use the parity-odd center line-star, so erasing that anchor kills this center-anchored ensemble.",
+  "erasure_resilience": {
+    "single_spoke": "27 of 108 bases avoid any specified spoke",
+    "three_spokes": "exactly one surviving basis iff the three erased spokes lie in three distinct pencils; 108 such triples",
+    "two_spokes_distinct_pencils": 6,
+    "two_spokes_same_pencil": 0
+  },
+  "pairwise_basis_overlap_counts": {"7": 2376, "8": 2592, "9": 810},
+  "pass": 4554,
+  "theorem": "The 108 local H10 bases form a connected 15-regular diameter-3 exchange graph with two Borel orbits 81+27 and exact spoke-erasure switching statistics."
+}
