@@ -1,0 +1,55 @@
+name: W33 Passes 4552-4559 rank filtration basis shells
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass455[2-9]_*.py'
+      - 'analysis/PASS4552_4559_*'
+      - 'data/PART_W33_PASS455[2-9]_*.json'
+      - 'tests/test_w33_pass4552_4559_rank_filtration_basis_shells.py'
+      - '.github/workflows/w33_pass4552_4559_rank_filtration_shells.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass455[2-9]_*.py'
+      - 'tests/test_w33_pass4552_4559_rank_filtration_basis_shells.py'
+
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install focused dependencies
+        run: python -m pip install --upgrade numpy pytest
+      - name: Re-run exact witnesses
+        run: |
+          set -euo pipefail
+          python analysis/w33_pass4552_qminus5_rank_third_anchor.py
+          python analysis/w33_pass4553_canonical_h10_weight_quadratic.py
+          python analysis/w33_pass4554_local_basis_exchange_ensemble.py
+          python analysis/w33_pass4555_c8_selector_bootstrap.py
+          python analysis/w33_pass4556_h10_o6minus_no_linear_transport.py
+          python analysis/w33_pass4557_shell_cross_incidence.py
+          python analysis/w33_pass4558_apartment_singular_fibers.py
+          python analysis/w33_pass4559_edge_anisotropic_double_cover.py
+      - name: Frozen certificates must regenerate semantically
+        run: |
+          set -euo pipefail
+          git diff --exit-code -- \
+            data/PART_W33_PASS4552_QMINUS5_RANK_THIRD_ANCHOR.json \
+            data/PART_W33_PASS4553_CANONICAL_H10_WEIGHT_QUADRATIC.json \
+            data/PART_W33_PASS4554_LOCAL_BASIS_EXCHANGE_ENSEMBLE.json \
+            data/PART_W33_PASS4555_C8_SELECTOR_BOOTSTRAP.json \
+            data/PART_W33_PASS4556_H10_O6MINUS_NO_LINEAR_TRANSPORT.json \
+            data/PART_W33_PASS4557_SHELL_CROSS_INCIDENCE.json \
+            data/PART_W33_PASS4558_APARTMENT_SINGULAR_FIBERS.json \
+            data/PART_W33_PASS4559_EDGE_ANISOTROPIC_DOUBLE_COVER.json
+      - name: Focused regressions
+        run: pytest -q tests/test_w33_pass4552_4559_rank_filtration_basis_shells.py
+      - name: LaTeX insertion hygiene
+        run: |
+          if test -f scripts/check_tex_insertions.py; then python scripts/check_tex_insertions.py; fi
