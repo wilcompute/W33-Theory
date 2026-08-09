@@ -1,0 +1,59 @@
+{
+  "K256_frontier": {
+    "K256_over_S250_dimension": 6,
+    "K256_over_S250_irreducible_exhaustive": true,
+    "S250_over_S186_dimension": 64,
+    "S250_over_S186_standard_basis_all_cyclic_dimension": 64,
+    "open": [
+      "irreducibility/composition structure of S186",
+      "irreducibility/composition structure of the 64D quotient"
+    ],
+    "standard_basis_cyclic_dimensions": {
+      "186": 6,
+      "250": 57,
+      "256": 193
+    },
+    "unique_S186_dimension": 186,
+    "unique_S250_dimension": 250
+  },
+  "K352_over_S330": {
+    "V14_irreducible_exhaustive": true,
+    "V8_irreducible_exhaustive": true,
+    "dimension": 22,
+    "structure": "V8 direct-sum V14"
+  },
+  "S284_branch": {
+    "I278_over_K256": "V8 direct-sum V14",
+    "S284_intersect_K352_dimension": 278,
+    "S284_intersect_S330_dimension": 256,
+    "S284_over_I278_dimension": 6,
+    "top_6D_irreducible_exhaustive": true
+  },
+  "boundary": "This closes the upper lattice through K256 and proves every displayed 6D/8D/14D simple layer exhaustively. It does NOT claim the complete Loewy lattice below S186 or certify the 64D quotient irreducible.",
+  "middle_module": {
+    "dimension": 364,
+    "standard_basis_cyclic_dimensions": {
+      "284": 2,
+      "330": 10,
+      "358": 49,
+      "364": 303
+    }
+  },
+  "pass": 4544,
+  "top_quotient": {
+    "M_over_K352_dimension": 12,
+    "all_three_6D_irreducible_exhaustive": true,
+    "proper_nonzero_submodules": 3,
+    "proper_submodule_dimensions": [6,6,6],
+    "structure": "U6 direct-sum U6; the three 6D submodules are the three F2-lines in a 2D multiplicity space"
+  },
+  "upper_lattice": {
+    "all_S358_contain_S330": true,
+    "common_K352": 352,
+    "number_of_S358": 3,
+    "outer_action_shape": "one fixed 358D submodule plus a transposed pair",
+    "pairwise_S358_sum_dimension": 364,
+    "unique_S284": 284,
+    "unique_S330": 330
+  }
+}
