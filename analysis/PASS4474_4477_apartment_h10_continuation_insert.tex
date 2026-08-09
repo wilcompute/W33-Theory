@@ -1,0 +1,117 @@
+% Passes 4474--4477: geometric generators, radical filtration, and optimal protected readout.
+\subsection{Geometric generators and optimal protected readout (Passes 4474--4477)}
+\label{sec:pass4474-apartment-h10-continuation}
+
+The incidence isometry of Pass~4469 can be evaluated on the forty most
+geometric coefficient vectors.  For a line $\ell$, let $e_\ell$ denote the
+corresponding line-coordinate unit vector and set
+\[
+ g_\ell=H^Te_\ell,
+ \qquad
+ x_\ell=Ne_\ell.
+\]
+Then $g_\ell$ is the $162$-bit indicator of the apartments containing
+$\ell$, while $x_\ell$ is the four-point incidence vector of $\ell$.
+Pass~201 already owns the fact that the latter are the forty weight-$4$
+minimum logical line classes of the $[[40,10,4]]$ CSS code.  Pass~4474
+makes their relation to apartment parity literal:
+\[
+ \boxed{[g_\ell]\longmapsto[x_\ell].}
+\]
+All forty classes are distinct, span $H_{10}$, and have polar Gram matrix
+$A_*$, the dual $W(3,3)$ line-collinearity graph.  Their natural quadratic
+readings are opposite:
+\[
+ q_{\rm ap}(g_\ell)=1,
+ \qquad
+ q_{H_{10}}(x_\ell)=0
+ \quad\text{for all }\ell.
+\]
+The fixed isotropic defect class $f$ of Pass~4470 is characterized without
+a basis choice by
+\[
+ \boxed{B(x_\ell,f)=1\quad\text{for all forty lines }\ell,}
+\]
+and exhaustive search over the $2^{10}$ classes proves uniqueness.  Hence
+$T_f(x_\ell)=x_\ell+f$ exchanges a singular forty-point $W(3,3)$ set with
+a disjoint anisotropic forty-point set carrying the same polar graph.  This
+is a finite-quadratic-space twin, not a second physical code or particle
+multiplet.
+
+The $29$-dimensional radical of the apartment code also has an exact
+module-theoretic resolution.  In line-coordinate space put
+\[
+ R=\ker N,\qquad I=\operatorname{im}A_*,\qquad
+ K=\ker A_*,\qquad U=R\cap I,\qquad S=R+I,
+\]
+and $J=\langle\mathbf1\rangle$.  Exact binary linear algebra gives
+\[
+ \dim(J,U,S,K)=(1,9,16,30),
+\]
+so
+\[
+ 0<U/J<S/J<K/J=\operatorname{rad}(C_{\rm ap})
+\]
+has layer dimensions
+\[
+ \boxed{8\mid7\mid14,}
+\]
+with the middle factor splitting canonically as
+\[
+ S/U=(R/U)\oplus(I/U)=6\oplus1.
+\]
+Two generators of $PSp(4,3)$ transported to the line action give exhaustive
+cyclic-span certificates that the $8$, $6$, and $14$ factors are irreducible
+over $\mathbb F_2$, while $I/U$ is trivial.  Thus the reviewer-safe profile is
+\[
+ \boxed{8\mid(6\oplus1)\mid14,}
+\]
+with no uniserial claim.  Together with Pass~4469 this is the exact extension
+\[
+ \boxed{0\to K/J\;(29)\to C_{\rm ap}\;(39)\to H_{10}\;(10)\to0.}
+\]
+
+Finally, Pass~4476 produces a sparse geometric coordinate frame for the
+protected quotient.  In the repository's lexicographic line ordering the ten
+lines
+\[
+ \boxed{1,5,14,15,19,23,24,33,35,39}
+\]
+have nonsingular alternating Gram matrix over $\mathbb F_2$.  Their induced
+intersection graph is
+\[
+ \boxed{P_4\sqcup3K_2,}
+\]
+so only six line pairs intersect.  Six is optimal: a nonsingular alternating
+$10\times10$ adjacency matrix has a perfect matching, and a five-edge basis
+graph would therefore have to be an induced $5K_2$.  An exact edge-compatibility
+search proves that the induced-matching number of the dual W33 graph is four.
+
+If $g_1,\ldots,g_{10}$ are the selected weight-$162$ apartment signatures and
+$G=(\langle g_i,g_j\rangle)$, then for any acquired apartment syndrome $y$ the
+ten software parities
+\[
+ p_i=\langle y,g_i\rangle
+\]
+depend only on the protected quotient, and its coordinate vector is
+\[
+ \boxed{c=pG^{-1}.}
+\]
+All $2^{10}$ protected classes are recovered exactly.  Ten output bits are
+information-theoretically minimal for an injective linear readout of a
+10-dimensional quotient.  Each such bit is nevertheless an XOR of $162$
+apartment bits; this is syndrome post-processing, not a theorem that ten
+physical apartment measurements suffice.
+
+\begin{quote}\small
+\textbf{Evidence and priority boundary.}
+Pass~4477 records the rediscovery audit.  The $[[40,10,4]]$ code, its forty
+minimum logical lines, the $H_{10}=1\mid8\mid1$ filtration, and the plus-type
+quadratic space are prior repository results.  The new relative content is the
+explicit apartment/incidence bridge and its consequences above.  Searches of
+the relevant primary incidence-module and generalized-quadrangle code
+literature did not reveal this exact construction; this is recorded only as
+``no occurrence found in the searched sources,'' not as a proof of global
+priority.  None of the modular dimensions $8,6,1,14$ is assigned a particle or
+physical multiplicity by these theorems.
+\end{quote}
