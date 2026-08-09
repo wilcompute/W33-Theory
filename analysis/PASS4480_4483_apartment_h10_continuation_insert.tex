@@ -1,0 +1,74 @@
+% Passes 4480--4483: geometric generators, radical filtration, optimal protected readout.
+\subsection{Geometric generators and optimal protected readout (Passes 4480--4483)}
+\label{sec:pass4480-apartment-h10-continuation}
+
+Pass~4480 evaluates the incidence bridge of Pass~4469 on the forty geometric
+lines.  For line $\ell$,
+\[
+ g_\ell=H^Te_\ell,\qquad x_\ell=Ne_\ell,
+\]
+where $g_\ell$ is the weight-$162$ apartment-incidence signature and $x_\ell$
+is the weight-$4$ line incidence vector.  Pass~201 already owns the minimum
+logical interpretation of the latter.  The bridge now gives the literal
+line-by-line map $[g_\ell]\mapsto[x_\ell]$.  The forty classes are distinct,
+span $H_{10}$, and both forty-sets have polar Gram matrix $A_*$, the dual W33
+line-collinearity graph.
+
+Their natural quadratic readings differ uniformly:
+\[
+ q_{\rm ap}(g_\ell)=1,\qquad q_{H_{10}}(x_\ell)=0.
+\]
+The fixed isotropic class $f$ of Pass~4470 is the unique $H_{10}$ class with
+$B(x_\ell,f)=1$ for all forty lines.  Therefore the fixed-layer transvection
+maps the singular W33 set $\{x_\ell\}$ to the disjoint anisotropic W33 set
+$\{x_\ell+f\}$ without changing the polar graph.  This is a finite
+quadratic-space twin, not a second physical code.
+
+Pass~4481 resolves the $29$-dimensional radical.  In line-coordinate space let
+\[
+ R=\ker N,\quad I=\operatorname{im}A_*,\quad K=\ker A_*,\quad
+ U=R\cap I,\quad S=R+I,\quad J=\langle\mathbf1\rangle.
+\]
+The exact dimensions are
+\[
+ \dim(J,U,S,K)=(1,9,16,30),
+\]
+and the apartment-code extension is
+\[
+ \boxed{0\to K/J\;(29)\to C_{\rm ap}\;(39)\to H_{10}\;(10)\to0.}
+\]
+The radical filtration has layer profile
+\[
+ \boxed{8\mid(6\oplus1)\mid14.}
+\]
+Exhaustive cyclic-span tests for two generators of $PSp(4,3)$ certify the
+$8$-, $6$-, and $14$-dimensional factors as irreducible over $\mathbb F_2$;
+the one-dimensional factor is trivial.  No uniserial claim is made.
+
+Pass~4482 gives a sparse geometric basis of the protected quotient.  In the
+repository's lexicographic line order,
+\[
+ \boxed{1,5,14,15,19,23,24,33,35,39}
+\]
+have nonsingular alternating Gram matrix and induced intersection graph
+\[
+ \boxed{P_4\sqcup3K_2,}
+\]
+with only six intersecting pairs.  Six is optimal: five edges would force an
+induced $5K_2$, while exact search gives induced-matching number four for W33.
+If $g_i$ are these ten apartment signatures and $G=(\langle g_i,g_j\rangle)$,
+then for an acquired apartment syndrome $y$ the ten software parity bits
+\[
+ p_i=\langle y,g_i\rangle,\qquad c=pG^{-1}
+\]
+recover all $2^{10}$ protected classes.  Ten bits are information-theoretically
+minimal for injective linear readout of a 10-dimensional quotient, but each
+$p_i$ is an XOR of $162$ apartment bits: this is post-processing, not a theorem
+that ten physical measurements suffice.
+
+Pass~4483 records the rediscovery boundary.  The CSS code, its forty minimum
+logical lines, the $H_{10}=1\mid8\mid1$ filtration and the plus-type form are
+prior repository results.  Searches of relevant primary incidence-module and
+generalized-quadrangle code literature did not reveal the exact bridge above;
+this is recorded only as ``no occurrence found in the searched sources,'' not
+as proof of global novelty.
