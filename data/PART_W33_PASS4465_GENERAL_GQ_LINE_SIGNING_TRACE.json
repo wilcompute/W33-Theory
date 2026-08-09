@@ -1,0 +1,85 @@
+{
+  "W33_exact_rebuild": {
+    "quadrangles_enumerated": 1620,
+    "status": "PASS",
+    "unsigned_trace4": 24960
+  },
+  "boundary": "The theorem identifies the exact low spectral moments controlled by a line signing on any GQ(s,t). It does not predict Ramanujan probability from s,t alone; the recent Q(5,3) counterexample already shows that such a stronger coarseness law is false.",
+  "examples": {
+    "GQ(2,2)=W(3,2)": {
+      "degree": 6,
+      "lines": 15,
+      "points": 15,
+      "quadrangles": 90,
+      "quadrangles_per_disjoint_line_pair": 3,
+      "quadrangles_per_intersecting_line_pair": 8,
+      "quadrangles_per_line": 24,
+      "random_frustration_sd": 0.05270462766947299,
+      "s": 2,
+      "t": 2,
+      "trace3_line_coefficient": 6,
+      "trace4_constant": 990
+    },
+    "GQ(3,3)=W(3,3)": {
+      "degree": 12,
+      "lines": 40,
+      "points": 40,
+      "quadrangles": 1620,
+      "quadrangles_per_disjoint_line_pair": 6,
+      "quadrangles_per_intersecting_line_pair": 27,
+      "quadrangles_per_line": 162,
+      "random_frustration_sd": 0.012422599874998832,
+      "s": 3,
+      "t": 3,
+      "trace3_line_coefficient": 24,
+      "trace4_constant": 12000
+    },
+    "GQ(3,9)=Q(5,3)": {
+      "degree": 30,
+      "lines": 280,
+      "points": 112,
+      "quadrangles": 102060,
+      "quadrangles_per_disjoint_line_pair": 6,
+      "quadrangles_per_intersecting_line_pair": 81,
+      "quadrangles_per_line": 1458,
+      "random_frustration_sd": 0.0015651004717194752,
+      "s": 3,
+      "t": 9,
+      "trace3_line_coefficient": 24,
+      "trace4_constant": 204960
+    },
+    "GQ(9,3) dual parameter set": {
+      "degree": 36,
+      "lines": 112,
+      "points": 280,
+      "quadrangles": 102060,
+      "quadrangles_per_disjoint_line_pair": 45,
+      "quadrangles_per_intersecting_line_pair": 243,
+      "quadrangles_per_line": 3645,
+      "random_frustration_sd": 0.0015651004717194752,
+      "s": 9,
+      "t": 3,
+      "trace3_line_coefficient": 720,
+      "trace4_constant": 1280160
+    }
+  },
+  "formulas": {
+    "HHt": "(r-beta)I + (alpha-beta)A_dual + beta J",
+    "L": "(t+1)(st+1)",
+    "Q": "n*s^2*t^2*(t+1)/8",
+    "alpha": "s^2*t",
+    "beta": "s(s+1)/2",
+    "d": "s(t+1)",
+    "n": "(s+1)(st+1)",
+    "r": "(s+1)*s^2*t^2/2",
+    "random_WQ_mean": 0,
+    "random_WQ_variance": "Q",
+    "random_frustrated_fraction_mean": 0.5,
+    "random_frustrated_fraction_sd": "1/(2 sqrt(Q))",
+    "trace2": "n*d",
+    "trace3": "6*C(s+1,3)*sum_l sigma_l",
+    "trace4": "n*d*(2d-1) + 24*L*C(s+1,4) + 8*W_Q"
+  },
+  "pass": 4465,
+  "theorem": "general GQ(s,t) line-signing trace and quadrangle-incidence theorem"
+}
