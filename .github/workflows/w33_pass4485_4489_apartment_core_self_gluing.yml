@@ -1,0 +1,50 @@
+name: W33 Passes 4485-4489 apartment-core self-gluing
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - analysis/w33_pass4485_apartment_core_self_gluing.py
+      - analysis/w33_pass4486_repeated_core_form_resurrection.py
+      - analysis/w33_pass4487_parallel_pauli_core_coordinate_weld.py
+      - analysis/w33_pass4488_apartment_extension_nonsplitting.py
+      - analysis/PASS4485_4488_apartment_core_self_gluing_insert.tex
+      - analysis/PASS4485_4488_apartment_core_self_gluing_index_insert.html
+      - data/PART_W33_PASS4485_APARTMENT_CORE_SELF_GLUING.json
+      - data/PART_W33_PASS4486_REPEATED_CORE_FORM_RESURRECTION.json
+      - data/PART_W33_PASS4487_PARALLEL_PAULI_CORE_COORDINATE_WELD.json
+      - data/PART_W33_PASS4488_APARTMENT_EXTENSION_NONSPLITTING.json
+      - tests/test_w33_pass4485_4489_apartment_core_self_gluing.py
+      - .github/workflows/w33_pass4485_4489_apartment_core_self_gluing.yml
+  pull_request:
+    paths:
+      - analysis/w33_pass4485_apartment_core_self_gluing.py
+      - analysis/w33_pass4486_repeated_core_form_resurrection.py
+      - analysis/w33_pass4487_parallel_pauli_core_coordinate_weld.py
+      - analysis/w33_pass4488_apartment_extension_nonsplitting.py
+      - tests/test_w33_pass4485_4489_apartment_core_self_gluing.py
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install focused dependencies
+        run: python -m pip install --upgrade numpy pytest
+      - name: Re-run exact witnesses
+        run: |
+          python analysis/w33_pass4485_apartment_core_self_gluing.py
+          python analysis/w33_pass4486_repeated_core_form_resurrection.py
+          python analysis/w33_pass4487_parallel_pauli_core_coordinate_weld.py
+          python analysis/w33_pass4488_apartment_extension_nonsplitting.py
+      - name: Run focused regression
+        run: pytest -q tests/test_w33_pass4485_4489_apartment_core_self_gluing.py
+      - name: Enforce evidence boundaries
+        run: |
+          grep -q 'No semisimple splitting' data/PART_W33_PASS4485_APARTMENT_CORE_SELF_GLUING.json
+          grep -q 'Same module does not mean same form' data/PART_W33_PASS4486_REPEATED_CORE_FORM_RESURRECTION.json
+          grep -q 'does not turn the radical copy into Pauli hardware' data/PART_W33_PASS4487_PARALLEL_PAULI_CORE_COORDINATE_WELD.json
+          grep -q 'no PSp-equivariant linear section' data/PART_W33_PASS4488_APARTMENT_EXTENSION_NONSPLITTING.json
