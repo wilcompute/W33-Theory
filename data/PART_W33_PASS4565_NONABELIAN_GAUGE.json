@@ -1,0 +1,54 @@
+{
+  "boundary": "500 random gauge fields per group on one graph, W(3,3); densities carry sampling error of about 2 points. The Alon-Boppana bound 2*sqrt(d-1) is used unchanged at k = 2, which is standard for unitary edge weights but is cited rather than derived here. Nothing is claimed about Z2 existence, which is the actual conjecture",
+  "conclusion": "the spectral radius concentrates on the Alon-Boppana edge as the structure group grows -- the mean is nearly invariant while the standard deviation falls monotonically Z2 > Z3 > U(1) > SU(2) -- so the Ramanujan property becomes generic. This makes the DENSITY question easy and leaves the Z2 EXISTENCE conjecture untouched, since the real case is a measure-zero slice",
+  "density_rises_with_group_size": true,
+  "fluctuation_falls_with_group_size": true,
+  "graph": {
+    "bound": 6.633249580711,
+    "degree": 12,
+    "edges": 240,
+    "points": 40
+  },
+  "groups": [
+    {
+      "dim": 40,
+      "fraction_ramanujan": 0.882,
+      "group": "Z2",
+      "k": 1,
+      "mean_rho": 6.362150821972,
+      "min_rho": 5.736709171064,
+      "samples": 500,
+      "std_rho": 0.218567135151
+    },
+    {
+      "dim": 40,
+      "fraction_ramanujan": 0.96,
+      "group": "Z3",
+      "k": 1,
+      "mean_rho": 6.326307889615,
+      "min_rho": 5.877262691265,
+      "samples": 500,
+      "std_rho": 0.161707237226
+    },
+    {
+      "dim": 40,
+      "fraction_ramanujan": 0.972,
+      "group": "U(1)",
+      "k": 1,
+      "mean_rho": 6.32499120527,
+      "min_rho": 5.839357736838,
+      "samples": 500,
+      "std_rho": 0.147903319169
+    },
+    {
+      "dim": 80,
+      "fraction_ramanujan": 0.996,
+      "group": "SU(2)",
+      "k": 2,
+      "mean_rho": 6.290872721452,
+      "min_rho": 6.000580025923,
+      "samples": 500,
+      "std_rho": 0.109924991713
+    }
+  ]
+}
