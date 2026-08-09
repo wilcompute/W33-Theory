@@ -1,0 +1,17 @@
+{
+  "boundary": "This is a GF(2) linear readout circuit, not a physical syndrome-extraction, noise, threshold, or hardware timing theorem.",
+  "decoder_inverse": [[1,1,1,1,0,0,0,0,0,0],[0,1,1,1,0,0,0,1,0,1],[0,0,0,1,0,0,0,1,0,1],[0,0,1,0,0,0,0,1,0,1],[0,1,1,1,0,1,0,0,0,0],[0,1,1,1,1,0,0,0,0,0],[0,1,1,1,0,0,0,1,0,0],[0,1,1,1,0,0,1,0,0,0],[0,1,1,1,1,0,1,1,1,1],[1,0,1,1,0,1,0,1,1,0]],
+  "decoder_total_xor_inputs": 45,
+  "decoder_xor_fanins": [4,5,3,3,4,4,4,4,8,6],
+  "eight_state_boundary": {"borel_orbits":8,"edge_states":240,"orbit_sizes":[3,3,9,9,27,27,81,81],"statement":"The equitable quotient preserves orbit-constant spectral transfer but loses within-orbit identity; it is not the full linear decoder."},
+  "exhausted_protected_vectors": 1024,
+  "first_decoded_bit": "coefficient parity pi from Pass 4536",
+  "local_basis": {"nine_spokes":[[0,1],[0,2],[0,3],[0,4],[0,5],[0,7],[0,8],[0,28],[0,32]],"parity_line_star":[0]},
+  "pass": 4539,
+  "protected_dimension": 10,
+  "remaining_decoded_bits": "nine local Borel-cell spoke coordinates spanning V9",
+  "restricted_basis_matrix": [[0,1,1,1,1,1,1,1,1,1],[1,1,0,0,1,1,1,1,1,1],[1,0,1,0,1,1,1,1,1,1],[1,0,0,1,1,1,1,1,1,1],[1,1,1,1,1,0,1,1,1,1],[1,1,1,1,0,1,1,1,1,1],[1,1,1,1,1,1,1,0,1,1],[1,1,1,1,1,1,0,1,1,1],[0,1,0,0,0,1,0,1,1,0],[0,1,0,0,0,0,1,0,0,0]],
+  "sample_count": 10,
+  "sample_rows": [0,1,2,3,4,5,7,8,10,11],
+  "theorem": "Ten ambient protected bits decode all of H10 exactly in a basis consisting of one local line-star plus nine local spokes; the parity/spoke split is explicit and exhaustive."
+}
