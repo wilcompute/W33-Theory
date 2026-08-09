@@ -1,0 +1,186 @@
+% Passes 4544--4551: dual-module lattice, cubic-surface transport, orbit-native
+% enumerator, Q(5,3) fan code, C7/C8 tomography, and zeta-to-code reconstruction.
+\subsection{The dual-module lattice, cubic transport, and higher zeta tomography (Passes 4544--4551)}
+\label{sec:pass4544-4551-module-cubic-zeta}
+
+The preceding packets exposed a faithful six-dimensional $O^-_6(2)$ quotient of
+the apartment dual, an explicit Schlaefli/double-six realization of its singular
+and anisotropic shells, and primitive-six zeta tomography of generalized
+quadrangles.  Passes~4544--4551 push those bridges in three directions: the
+actual binary submodule lattice above the unresolved core, an explicit
+cubic-surface incidence transport, and higher primitive-prime tensors that
+recover the apartment code itself.
+
+\paragraph{Pass 4544: the $364$-dimensional middle has three $358$-submodules, not one.}
+Let $M$ denote the $364$-dimensional middle quotient from Pass~4522.  Exact
+cyclic-span computation on the standard basis gives
+\[
+  284^2,\qquad330^{10},\qquad358^{49},\qquad364^{303}.
+\]
+There is a unique cyclic $S_{284}$ and a unique cyclic $S_{330}$, but the
+$49$ basis vectors of cyclic dimension $358$ generate exactly three distinct
+submodules $T_0,T_1,T_2$.  All three contain $S_{330}$, every pair sums to all
+of $M$, and every pair has the same intersection
+\[
+  \boxed{K_{352}=T_0\cap T_1=T_0\cap T_2=T_1\cap T_2.}
+\]
+The quotient $M/K_{352}$ has dimension twelve.  Exhausting all $4095$ nonzero
+vectors shows that it has exactly three proper nonzero invariant submodules;
+each has dimension six, every nonzero vector in each cyclically generates the
+whole six-space, and
+\[
+  \boxed{M/K_{352}\simeq U_6\oplus U_6.}
+\]
+The three six-submodules are the three one-dimensional directions in the
+multiplicity space $\mathbb F_2^2$.  The projective outer involution fixes one
+$T_i$ and exchanges the other two.
+
+The next layer also splits exactly:
+\[
+  \boxed{K_{352}/S_{330}\simeq V_8\oplus V_{14},}
+\]
+with irreducibility of both summands verified by exhaustive cyclic generation
+of all $2^8-1$ and $2^{14}-1$ nonzero vectors.  On the $S_{284}$ branch,
+\[
+ \dim(S_{284}\cap S_{330})=256,\qquad
+ \dim(S_{284}\cap K_{352})=278,
+\]
+the intervening $22$-space is again $V_8\oplus V_{14}$, and the top quotient is
+an irreducible six-space.  Inside the $256$-space the exact standard-basis
+census exposes a unique chain
+\[
+  S_{186}<S_{250}<K_{256},
+\]
+with quotient dimensions $64$ and $6$; the six-dimensional top is exhaustively
+irreducible.  The complete Loewy lattice \emph{below} $S_{186}$ and the
+irreducibility/composition structure of the displayed $64$-quotient remain
+open.  No stronger closure is claimed.
+
+\paragraph{Passes 4545 and 4549: the $27$- and $36$-carriers are joined by an exact incidence intertwiner.}
+Use the explicit Passes~4525/4527 conjugations to regard the apartment-derived
+$27$ singular vectors as the cubic-surface lines and the $36$ anisotropic
+vectors as the Schlaefli double-sixes.  Let $R$ be the $27\times36$ incidence
+matrix recording membership of a cubic line in the twelve-line support of a
+double-six.  Exact enumeration gives: every line lies in $16$ double-sixes,
+every double-six contains $12$ lines, a meeting line-pair lies in $8$
+double-sixes, and a skew pair lies in $6$.  Two double-sixes meet in either
+four lines ($270$ pairs) or six lines ($360$ pairs).
+
+Let $A_{27}$ be meet adjacency on the $27$ cubic lines and $A_{36}$ the
+four-line-intersection adjacency on the $36$ double-sixes.  Then
+\[
+ \boxed{RR^T=10I+2A_{27}+6J,}
+ \qquad
+ \boxed{R^TR=6I-2A_{36}+6J,}
+\]
+and, more sharply,
+\[
+ \boxed{3A_{27}R+RA_{36}=20J.}
+\]
+After centering, $R$ is an exact adjacency intertwiner.  Its rational rank is
+$21$: it transmits the common $1\oplus20$ constituent while killing the
+six-dimensional Schlaefli constituent on the $27$-side and the
+fifteen-dimensional constituent on the $36$-side.  A deterministic
+$(a_i,b_i,c_{ij})$ labeling is frozen in the certificate, giving an explicit
+classical-coordinate transport rather than a parameter match.
+
+\paragraph{Pass 4546: an orbit-native exact enumerator engine, with the full run still open.}
+The complete numerical weight enumerator still requires the full
+$10{,}789{,}604$ $PGSp(4,3)$-plus-complement codeword orbits.  The new engine
+turns this into a resumable exact computation rather than a raw
+$\binom{40}{m}$ scan.  A coefficient subset $S$ is encoded by adjoining a fixed
+$41$st marker vertex to dual W33 and connecting it exactly to $S$.  Canonical
+colored-graph certificates therefore classify $PGSp(4,3)=\operatorname{Aut}(W33)$
+subset orbits without permitting an accidental $S\leftrightarrow S^c$ swap.
+Each representative is weighted by
+\[
+  w(S)=162m-12\binom m2-42e(S)+12p_3(S)-8c_4(S),
+\]
+and its multiplicity is $51840/|\operatorname{Stab}(S)|$.
+
+Every support shell must reproduce the exact Burnside schedule
+\[
+1,1,2,5,16,48,165,571,1961,6252,18226,47911,113314,240735,
+460273,793280,1234880,1739041,2218732,2566830,2694464.
+\]
+Supports $0$--$19$ are counted once; the labeled support-$20$ spectrum is
+halved because $S\sim S^c$.  The final acceptance gates are
+\[
+ \sum_w A_w=2^{39},\qquad
+ 9{,}442{,}244+1{,}347{,}360=10{,}789{,}604.
+\]
+The executable and checkpoint contract are complete; the final support-$20$
+run and hence the numerical coefficient table remain \textbf{OPEN} until those
+checksums are emitted.
+
+\paragraph{Passes 4547 and 4550: every $Q(5,3)$ noncollinear pair carries a $9$-dimensional fan code.}
+Fix noncollinear points $x,y$ in $Q(5,3)=GQ(3,9)$.  Their ten common neighbors
+give ten rung pairs.  If $k$ rungs are selected and their protected images are
+summed, exact GQ counting gives
+\[
+  \boxed{w(k)=20(k\bmod2)+4k(10-k).}
+\]
+The only coefficient relation is the full ten-rung fan, so each pair carries a
+binary $[280,9,56]$ code with complete weight enumerator
+\[
+ \boxed{1+10z^{56}+45z^{64}+210z^{96}+120z^{104}+126z^{120}.}
+\]
+The $120$ weight-$104$ words are exactly the three-rung prism images associated
+with that fan.  For two triples, Hamming distance $64$ occurs exactly when they
+intersect in two rungs; hence the distance-$64$ graph is the Johnson graph
+$J(10,3)$ of degree $21$.  Intersections one and zero both give distance $96$,
+so the protected Hamming metric deliberately coarsens the full Johnson scheme.
+Together with Pass~4524's global injectivity, the $4536$ fans account for all
+$544320$ distinct protected prism images without resurrecting the exceptional
+W33 nine-sheet edge collapse.
+
+\paragraph{Pass 4548: $C_7$ sees $P_3$ triples and $C_8$ directly sees apartments.}
+For the primitive signed length-seven coefficient, the degree-three Walsh layer
+has exactly two nonzero support species:
+\[
+ \boxed{c_7=48\text{ on the }4320\text{ one-edge triples},\qquad
+        c_7=204\text{ on the }2160\text{ induced }P_3\text{ triples}.}
+\]
+Independent triples and line-graph triangles have zero coefficient.
+
+The first genuinely four-body layer is stronger.  Primitive length eight has ten
+$PSp(4,3)$ support orbits at Walsh degree four, but
+\[
+ \boxed{c_8=712}
+\]
+occurs on exactly one orbit of size $1620$, and that orbit is exactly the set of
+building apartments.  Thus $C_8^{(4)}$ reconstructs the apartment hypergraph
+directly.  It also detects ambient embedding beyond the induced four-vertex line
+graph: $P_3\sqcup K_1$ supports split between coefficients $56$ and $80$, while
+$2K_2$ supports split between $64$ and $156$; the splits correlate with distinct
+point-union collinearity profiles in the underlying GQ.
+
+\paragraph{Pass 4551 (outside the box): primitive length-eight zeta data reconstructs the apartment code itself.}
+Take the forty Walsh variables as row labels and the coefficient-$712$ supports
+of $C_8^{(4)}$ as binary columns.  The resulting matrix $H_{\zeta}$ has
+\[
+ \boxed{\operatorname{shape}(H_{\zeta})=40\times1620,\qquad
+        \operatorname{rank}_2H_{\zeta}=39,}
+\]
+row weight $162$, column weight four, and
+\[
+ \boxed{H_{\zeta}H_{\zeta}^T=A_*\pmod2.}
+\]
+Its column-support set equals the original apartment incidence matrix exactly.
+Consequently the primitive length-eight Walsh tensor reconstructs the same
+binary apartment code that Pass~4495 independently proved to be
+$[1620,39,162]$; Pass~4500 then reconstructs dual W33 from its forty minimum
+words.  The new theorem is the exact $C_8^{(4)}\to H$ bootstrap.  It is not a
+claim that a physical zeta observable or decoder has been implemented.
+
+\begin{quote}\small
+\textbf{Evidence boundary.}
+Passes~4544--4551 are finite binary-module, cubic-surface incidence,
+generalized-quadrangle coding, and signed graph-zeta statements.  The complete
+numerical W33 weight enumerator remains open until the orbit engine finishes its
+support-$20$ checksum.  The upper $364$-dimensional module lattice is exact
+through the displayed $186<250<256$ frontier, but the lower structure of the
+$186$-space and the $64$-quotient is not silently declared simple.  No finite
+carrier, incidence intertwiner, or zeta tensor is promoted to a physical field,
+particle, energy, or hardware observable without a separate theorem.
+\end{quote}
