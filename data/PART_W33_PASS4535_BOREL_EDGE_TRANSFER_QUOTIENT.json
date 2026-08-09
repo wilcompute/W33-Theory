@@ -1,0 +1,22 @@
+{
+  "Borel_orbit_sizes": [3,3,9,9,27,27,81,81],
+  "boundary": "An equitable graph quotient is not by itself a physical Hamiltonian, Markov transition matrix, decoder, or measured transfer function.",
+  "detailed_balance": "|Oi| Qij = |Oj| Qji for every orbit pair",
+  "equitable_quotient_matrix": [
+    [2,2,9,0,9,0,0,0],
+    [2,2,0,0,18,0,0,0],
+    [3,0,8,2,0,0,9,0],
+    [0,0,2,2,0,0,18,0],
+    [1,2,0,0,8,2,3,6],
+    [0,0,0,0,2,2,6,12],
+    [0,0,1,2,1,2,10,6],
+    [0,0,0,0,2,4,6,10]
+  ],
+  "full_edge_graph": {"construction":"line graph of dual-W33","degree":22,"distinct_spectrum":[22,12,6,-2],"vertices":240},
+  "pass": 4535,
+  "quotient_characteristic_polynomial": "(x-22)(x-12)^2(x-6)(x+2)^4",
+  "quotient_eigenvalue_multiplicities": {"-2":4,"12":2,"22":1,"6":1},
+  "row_sum": 22,
+  "spectral_completeness": "The 8-state quotient contains every distinct eigenvalue of the full 240-state edge line graph.",
+  "theorem": "The Borel eight-orbit partition is equitable and gives an exact 8x8 transfer quotient whose four distinct eigenvalues equal the complete distinct spectrum of the 240-vertex protected-edge line graph."
+}
