@@ -1,0 +1,40 @@
+{
+  "boundary": "T_a is a comparison-map correction between two natural quadratic quotient models. It is not asserted to be a physical gate or a new logical degree of freedom. The fixed layer and H10 plus-type structure are prior results; the new content is their exact role in the apartment/H10 bridge.",
+  "checks": {
+    "passed": 29,
+    "total": 29
+  },
+  "defect_class": {
+    "deterministic_representative_weight_H10": 12,
+    "deterministic_representative_weight_apartment": 324,
+    "existing_module_owner": "Pass 187 fixed 1-layer inside H10 = 1|8|1",
+    "isotropic": true,
+    "target_identification": "Phi(a) spans im(A_point mod 2)/C",
+    "unique_by_nondegeneracy": true
+  },
+  "owners": {
+    "H10_fixed_1_8_1_filtration": "Pass 187",
+    "H10_plus_type_528": "Pass 201",
+    "symplectic_intertwiner": "Pass 4469"
+  },
+  "pass": 4470,
+  "quadratic_refinements": {
+    "H10": "q_H10([x]) = wt(x)/2 mod 2",
+    "H10_singular_classes_including_zero": 528,
+    "apartment": "q_ap([y]) = wt(y)/2 mod 2",
+    "apartment_singular_classes_including_zero": 528,
+    "type": "O+(10,2) on both quotients"
+  },
+  "raw_incidence_map": {
+    "defect_functional": "ell(v) = q_ap(v) + q_H10(Phi(v)) = B(v,a)",
+    "defect_nonzero_classes": 512,
+    "quadratic": false,
+    "symplectic": true
+  },
+  "repair": {
+    "all_1024_classes_verified": true,
+    "equivariance_reason": "im(A_point)/C is a one-dimensional invariant F2 quotient, hence its nonzero class a is fixed; therefore T_a commutes with every incidence automorphism",
+    "formula": "T_a(v)=v+B(v,a)a; Psi=T_a o Phi"
+  },
+  "theorem": "W33 apartment/H10 quadratic fixed-layer correction theorem"
+}
