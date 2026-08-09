@@ -1,0 +1,25 @@
+{
+  "boundary": "Finite O+(10,2) label-space statement only; not a second physical code, particle doubling, or implemented gate.",
+  "checks": {"passed": 14, "total": 14},
+  "owners": {
+    "bridge": "Pass 4469",
+    "fixed_H10_layer": "Pass 187",
+    "minimum_logical_lines": "Pass 201",
+    "quadratic_defect": "Pass 4470"
+  },
+  "pass": 4480,
+  "quadratic_twin": {
+    "apartment_q": 1,
+    "fixed_class_unique": true,
+    "raw_logical_q": 0,
+    "raw_shifted_disjoint": true,
+    "shifted_q": 1
+  },
+  "single_line": {
+    "apartment_weight": 162,
+    "classes": 40,
+    "logical_weight": 4,
+    "pairing_graph": "dual W33"
+  },
+  "theorem": "W33 line-logical / apartment-generator singular-anisotropic twin theorem"
+}
