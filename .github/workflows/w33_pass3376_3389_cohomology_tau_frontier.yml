@@ -10,6 +10,7 @@ on:
       - 'data/PART_BT3376*'
       - 'data/PART_BT3385*'
       - 'data/w33_current_frontier_manifest_v1.json'
+      - 'data/w33_public_frontier_extension_pass4461_4464.json'
       - 'data/w33_pass_namespace_registry_v2.d/3376-3389.json'
       - 'tools/integrate_bt3376_bt3389.py'
       - 'tools/audit_w33_current_frontier.py'
