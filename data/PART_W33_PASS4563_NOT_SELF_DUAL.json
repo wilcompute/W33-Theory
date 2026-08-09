@@ -1,0 +1,48 @@
+{
+  "boundary": "both quadrangles constructed and their SRG parameters verified from the incidence; the percentages are 800 random line-signings each, so they carry sampling error of about 1.5 points. Isomorphism of the two graphs is NOT tested here -- identical SRG parameters and spectra do not decide it, and the classical non-isomorphism at odd q is cited rather than reproved",
+  "correction": {
+    "already_in_corpus": [
+      "CROSS_TRACK_LEDGER.md: W(q) self-dual only for even q",
+      "BREAKTHROUGH_JULY_2026_PERPLEXITY_PASS3.md Pass 1117: the two 540-sets are not conjugate as G-sets"
+    ],
+    "how_it_was_wrong": "equal counts (40 points, 40 lines) read as duality, the exact 'equal size is not correspondence' error CLAUDE.md documents",
+    "pass_4560_claim": "W(3,3) is self-dual",
+    "status": "FALSE -- W(3,q) is self-dual only for even q; the dual of W(3,3) is Q(4,3), a different quadrangle with the same parameters"
+  },
+  "discriminating_test": {
+    "Q(4,3)": {
+      "block": 6,
+      "bound": 6.633249580711,
+      "fraction_ramanujan": 0.2775,
+      "mean_rho": 6.935962944861,
+      "min_rho": 6.020281025609,
+      "samples": 800,
+      "srg": [
+        40,
+        12,
+        2,
+        4
+      ],
+      "std_rho": 0.457444126073
+    },
+    "W(3,3)": {
+      "block": 6,
+      "bound": 6.633249580711,
+      "fraction_ramanujan": 0.26875,
+      "mean_rho": 6.934591299576,
+      "min_rho": 6.028227453547,
+      "samples": 800,
+      "srg": [
+        40,
+        12,
+        2,
+        4
+      ],
+      "std_rho": 0.439739982208
+    },
+    "identical_parameters": true,
+    "identical_spectra": true,
+    "verdict": "coarseness: carriers agree once block size is fixed, so the earlier dual-pair effects were block size, not duality",
+    "z": -0.393
+  }
+}
