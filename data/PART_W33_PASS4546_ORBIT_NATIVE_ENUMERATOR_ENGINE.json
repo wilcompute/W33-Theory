@@ -1,0 +1,23 @@
+{
+  "acceptance_checks": [
+    "support-m PGSp orbit representative count equals the exact Pass4520 Burnside schedule",
+    "sum of orbit sizes in shell m equals C(40,m)",
+    "support-20 complement certificates give exactly 1,347,360 classes",
+    "9,442,244 lower-shell PGSp orbits + 1,347,360 middle complement classes = 10,789,604",
+    "assembled numerical weight-enumerator coefficients sum to 2^39"
+  ],
+  "boundary": "ENGINE_READY, FULL_RUN_OPEN. The complete numerical enumerator is not claimed until a --through 20 checkpoint emits the 2^39 coefficient checksum.",
+  "canonical_orbit_key": "pynauty certificate of W33 plus a fixed 41st marker vertex adjacent exactly to the selected coefficient subset",
+  "complement_assembly": {
+    "codeword_count": 549755813888,
+    "lower_support_PGSp_orbits_0_to_19": 9442244,
+    "support20_PGSp_orbits": 2694464,
+    "support20_PGSp_plus_complement_orbits": 1347360,
+    "total_codeword_orbits": 10789604,
+    "weight_rule": "supports 0..19 counted once; support 20 labeled weight mass divided by two"
+  },
+  "engine": "analysis/w33_pass4546_orbit_native_apartment_enumerator.py",
+  "exact_support_orbit_schedule_0_to_20": [1,1,2,5,16,48,165,571,1961,6252,18226,47911,113314,240735,460273,793280,1234880,1739041,2218732,2566830,2694464],
+  "pass": 4546,
+  "status": "RESUMABLE_FRONTIER"
+}
