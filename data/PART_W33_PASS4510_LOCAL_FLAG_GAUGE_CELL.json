@@ -1,0 +1,13 @@
+{
+  "architectural_reading": "A valid symmetry-broken representative register can be synthesized inside one W33 line cell after fixing an incident flag.",
+  "boundary": "Graph locality in the finite line-intersection geometry is not automatically spatial, optical, or energetic locality in hardware.",
+  "fixed_flag_line": 0,
+  "graph": "K1 join 4K3",
+  "pass": 4510,
+  "pencils_by_point_on_fixed_line": [[1,2,3],[4,5,6],[7,8,9],[28,32,36]],
+  "radius": 1,
+  "relation_to_pass4504": {"best_max_column_weight": 9, "best_total_weight": 42, "minimum_union_support": 13, "sections_exhausted": 64},
+  "support_lines": [0,1,2,3,4,5,6,7,8,9,28,32,36],
+  "support_size": 13,
+  "theorem": "the minimum-union flag-equivariant protected section is supported exactly on one closed line neighborhood"
+}
