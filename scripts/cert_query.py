@@ -63,14 +63,35 @@ def flatten(obj, prefix=""):
 
 
 def build(verbose=True) -> int:
+    """Columnar insert via Arrow.
+
+    The first version used `executemany` over ~10 million tuples and never finished --
+    DuckDB round-trips every row through Python there.  Registering an Arrow table and
+    doing one `INSERT ... SELECT` moves the same data in seconds, because it never leaves
+    C++.  Same rule as everywhere else in this repo: the API you reach for first is not
+    the one that scales.
+    """
     import duckdb
+    import pyarrow as pa
     t0 = time.time()
     files = sorted(f for f in DATA.rglob("*.json") if f.is_file())
     con = duckdb.connect(str(STORE))
     con.execute("DROP TABLE IF EXISTS cert")
     con.execute("CREATE TABLE cert (file VARCHAR, path VARCHAR, "
                 "value VARCHAR, kind VARCHAR)")
-    rows, bad = [], 0
+    fc, pc, vc, kc, bad, total = [], [], [], [], 0, 0
+
+    def drain():
+        nonlocal total
+        if not fc:
+            return
+        tbl = pa.table({"file": fc, "path": pc, "value": vc, "kind": kc})
+        con.register("_chunk", tbl)
+        con.execute("INSERT INTO cert SELECT * FROM _chunk")
+        con.unregister("_chunk")
+        total += len(fc)
+        fc.clear(), pc.clear(), vc.clear(), kc.clear()
+
     for f in files:
         try:
             d = json.loads(f.read_text(encoding="utf-8", errors="replace"))
@@ -84,12 +105,10 @@ def build(verbose=True) -> int:
             s = str(v)
             if len(s) > MAXLEN:
                 continue
-            rows.append((rel, p, s, type(v).__name__))
-        if len(rows) > 400_000:
-            con.executemany("INSERT INTO cert VALUES (?,?,?,?)", rows)
-            rows.clear()
-    if rows:
-        con.executemany("INSERT INTO cert VALUES (?,?,?,?)", rows)
+            fc.append(rel), pc.append(p), vc.append(s), kc.append(type(v).__name__)
+        if len(fc) > 500_000:
+            drain()
+    drain()
     con.execute("CREATE INDEX IF NOT EXISTS i_val ON cert(value)")
     con.execute("CREATE INDEX IF NOT EXISTS i_path ON cert(path)")
     n = con.execute("SELECT count(*) FROM cert").fetchone()[0]
