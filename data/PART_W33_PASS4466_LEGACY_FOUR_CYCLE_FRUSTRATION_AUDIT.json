@@ -1,6 +1,6 @@
 {
   "W33_exact_census": {
-    "direct_scaling_max_residual_64_samples": 0.0,
+    "direct_scaling_max_residual_64_samples": 5.551115123125783e-17,
     "induced_apartments": 1620,
     "legacy_records": 3480,
     "legacy_to_apartment_factor": "27/29",
