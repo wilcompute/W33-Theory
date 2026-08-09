@@ -1,0 +1,28 @@
+{
+  "boundary": "The q=3,5,7 computations are exact. Three anchors are not an infinite proof; the closed odd-q rank formula remains open until the correct elliptic-quadric modular-rank theorem is supplied.",
+  "candidate_all_odd_q": {
+    "rank_N": "q^4+q^2+1",
+    "rank_NtN": "(q^2+1)(q^2-q+1)",
+    "status": "OPEN beyond exact q=3,5,7 anchors"
+  },
+  "exact_new_anchor": {
+    "lines": 3276,
+    "nonsquare_d": 2,
+    "points": 756,
+    "q": 5,
+    "rank_N": 651,
+    "rank_NtN": 546
+  },
+  "literature_scope_correction": {
+    "correction": "Its O(5,q) is the dual of the square Sp(4,q) generalized quadrangle; it is not the elliptic Q^-(5,q)=GQ(q,q^2) family and is not evidence for this formula.",
+    "doi": "10.1007/BF00150760",
+    "paper": "Bagchi-Brouwer-Wilbrink, Geometriae Dedicata 39 (1991), 339-355"
+  },
+  "pass": 4552,
+  "theorem": "Q^-(5,5) has binary incidence rank 651 and line-Gram rank 546, giving a third independent exact anchor for the Pass-4537 rank law.",
+  "three_exact_anchors": [
+    {"q": 3, "rank_N": 91, "rank_NtN": 70},
+    {"q": 5, "rank_N": 651, "rank_NtN": 546},
+    {"q": 7, "rank_N": 2451, "rank_NtN": 2150}
+  ]
+}
