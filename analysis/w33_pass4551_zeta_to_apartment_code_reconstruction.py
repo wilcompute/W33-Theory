@@ -5,18 +5,12 @@ Pass 4548 proves that among degree-four Walsh supports of the primitive signed
 length-eight Ihara coefficient, coefficient 712 occurs on exactly 1620 supports
 and those supports are exactly the W33 building apartments.
 
-This pass turns that tomography statement into a coding theorem.  Treat the 40
+This pass turns that tomography statement into a coding theorem. Treat the 40
 Walsh variables as row labels and each coefficient-712 support as a binary
-column.  The resulting 40 x 1620 matrix H_zeta is exactly the apartment-incidence
-matrix H.  Therefore zeta data alone recovers:
-
-  rank_F2(H_zeta)=39,
-  H_zeta H_zeta^T = A_* mod 2,
-  the [1620,39,162] apartment code certified in Pass 4495,
-  and, through the 40 minimum row-star words, the dual W33 geometry of Pass 4500.
-
-The last distance/automorphism statements are inherited certified theorems, not
-re-proved by this pass.  The new theorem is the explicit C8 -> H reconstruction.
+column. The resulting 40 x 1620 matrix H_zeta is exactly the apartment-incidence
+matrix H. Therefore zeta data alone recovers rank_F2(H_zeta)=39 and
+H_zeta H_zeta^T=A_* mod 2. The [1620,39,162] distance theorem and intrinsic-W33
+minimum-shell reconstruction remain inherited independent certificates.
 """
 from __future__ import annotations
 
@@ -25,12 +19,25 @@ from pathlib import Path
 import numpy as np
 
 import w33_pass4548_c7_c8_higher_body_tomography as p4548
-import w33_pass4522_4525_4527_dual_orthogonal_schlafli as p4522
 from w33_pass4495_4502_distance_prism_reconstruction import geometry
 import w33_pass4511_4514_dual_even_prism_ihara as p4514
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'data'/'PART_W33_PASS4551_ZETA_TO_APARTMENT_CODE.json'
+
+
+def rank2(M):
+    A=np.asarray(M,dtype=np.uint8).copy();m,n=A.shape;r=0
+    for c in range(n):
+        rows=np.flatnonzero(A[r:,c])
+        if not len(rows):continue
+        rr=r+int(rows[0])
+        if rr!=r:A[[r,rr]]=A[[rr,r]]
+        for i in range(m):
+            if i!=r and A[i,c]:A[i]^=A[r]
+        r+=1
+        if r==m:break
+    return r
 
 
 def main()->int:
@@ -40,18 +47,15 @@ def main()->int:
     zeta_masks=set()
     for orb,c,rep in p8:
         inv=p4514.graph_inv(rep,Astar)
-        if inv['support_size']==4 and c==712:
-            zeta_masks|=set(orb)
+        if inv['support_size']==4 and c==712:zeta_masks|=set(orb)
     assert len(zeta_masks)==1620 and zeta_masks==apset
 
-    cols=sorted(zeta_masks)
-    Hz=np.zeros((40,1620),dtype=np.uint8)
+    cols=sorted(zeta_masks);Hz=np.zeros((40,1620),dtype=np.uint8)
     for j,m in enumerate(cols):
         for i in range(40):Hz[i,j]=(m>>i)&1
-    # Compare column sets rather than relying on the original apartment ordering.
     original_cols={sum(int(H[i,j])<<i for i in range(40)) for j in range(1620)}
     assert set(cols)==original_cols
-    rank=p4522.rank2(Hz)[0];assert rank==39
+    rank=rank2(Hz);assert rank==39
     gram=(Hz@Hz.T)%2;assert np.array_equal(gram,Astar)
     row_weights=sorted(set(map(int,Hz.sum(1))));assert row_weights==[162]
 
