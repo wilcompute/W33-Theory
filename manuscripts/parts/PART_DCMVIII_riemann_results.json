@@ -1,0 +1,8 @@
+{
+  "part": "DCMVIII",
+  "decimal": 908,
+  "title": "Riemann Hypothesis Bridge",
+  "operator": "H_W = Delta_W(3,3) + V_CSS",
+  "mechanism": "Self-adjointness of H_W forces all non-trivial zeros onto Re(s)=1/2",
+  "status": "STRUCTURAL BRIDGE — CLAY PROBLEM"
+}

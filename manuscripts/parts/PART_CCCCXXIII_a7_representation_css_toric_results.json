@@ -1,0 +1,343 @@
+{
+  "part": "CCCCXXIII",
+  "title": "A(7) Representation Theory and Csaszar K7 CSS Toric Code",
+  "checks_total": 48,
+  "checks_passed": 48,
+  "verified": true,
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "u7_dim_eq_phi6_sq",
+      "passed": true,
+      "value": 49,
+      "expected": 49
+    },
+    {
+      "name": "su7_dim_eq_phi6_sq_minus_1",
+      "passed": true,
+      "value": 48,
+      "expected": 48
+    },
+    {
+      "name": "g2_dim_eq_2_phi6",
+      "passed": true,
+      "value": 14,
+      "expected": 14
+    },
+    {
+      "name": "g2_contained_in_su7",
+      "passed": true,
+      "value": 14,
+      "expected": "< 48"
+    },
+    {
+      "name": "bond_branching_21_eq_14_plus_7",
+      "passed": true,
+      "value": 21,
+      "expected": 21
+    },
+    {
+      "name": "u7_minus_g2_eq_k7_edges_plus_g2_dim",
+      "passed": true,
+      "value": 35,
+      "expected": 35
+    },
+    {
+      "name": "k7_max_eig_eq_phi6_minus_1",
+      "passed": true,
+      "value": 6,
+      "expected": 6
+    },
+    {
+      "name": "k7_min_eig_eq_minus_1",
+      "passed": true,
+      "value": -1,
+      "expected": -1
+    },
+    {
+      "name": "k7_max_eig_mult_eq_1",
+      "passed": true,
+      "value": 1,
+      "expected": 1
+    },
+    {
+      "name": "k7_min_eig_mult_eq_phi6_minus_1",
+      "passed": true,
+      "value": 6,
+      "expected": 6
+    },
+    {
+      "name": "k7_eig_sum_eq_0",
+      "passed": true,
+      "value": 0,
+      "expected": 0
+    },
+    {
+      "name": "k7_eig_sq_sum_eq_2_k7_edges",
+      "passed": true,
+      "value": 42,
+      "expected": 42
+    },
+    {
+      "name": "ground_energy_eq_neg_phi6_minus_1",
+      "passed": true,
+      "value": -6,
+      "expected": -6
+    },
+    {
+      "name": "excitation_gap_eq_phi6",
+      "passed": true,
+      "value": 7,
+      "expected": 7
+    },
+    {
+      "name": "all_modes_energy_eq_0",
+      "passed": true,
+      "value": 0,
+      "expected": 0
+    },
+    {
+      "name": "adj_det_eq_phi6_minus_1",
+      "passed": true,
+      "value": 6,
+      "expected": 6
+    },
+    {
+      "name": "adj_rank_eq_phi6",
+      "passed": true,
+      "value": 7,
+      "expected": 7
+    },
+    {
+      "name": "spectral_gap_eq_k7_spectral_gap",
+      "passed": true,
+      "value": 7,
+      "expected": 7
+    },
+    {
+      "name": "cubic_op_count_eq_phi6",
+      "passed": true,
+      "value": 7,
+      "expected": 7
+    },
+    {
+      "name": "each_mode_in_q_cubics",
+      "passed": true,
+      "value": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "expected": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "total_fano_flags_eq_k7_edges",
+      "passed": true,
+      "value": 21,
+      "expected": 21
+    },
+    {
+      "name": "g2_automorphism_order_eq_psl27",
+      "passed": true,
+      "value": 168,
+      "expected": 168
+    },
+    {
+      "name": "creation_plus_ann_eq_g2_dim",
+      "passed": true,
+      "value": 14,
+      "expected": 14
+    },
+    {
+      "name": "psl27_line_stabiliser_eq_mu_lam_q",
+      "passed": true,
+      "value": 24,
+      "expected": 24
+    },
+    {
+      "name": "c0_dim_eq_csaszar_v",
+      "passed": true,
+      "value": 7,
+      "expected": 7
+    },
+    {
+      "name": "c1_dim_eq_csaszar_e",
+      "passed": true,
+      "value": 21,
+      "expected": 21
+    },
+    {
+      "name": "c2_dim_eq_csaszar_f",
+      "passed": true,
+      "value": 14,
+      "expected": 14
+    },
+    {
+      "name": "boundary_of_boundary_zero",
+      "passed": true,
+      "value": true,
+      "expected": true
+    },
+    {
+      "name": "rank_hz_eq_v_minus_beta0",
+      "passed": true,
+      "value": 6,
+      "expected": 6
+    },
+    {
+      "name": "rank_hx_eq_f_minus_beta2",
+      "passed": true,
+      "value": 13,
+      "expected": 13
+    },
+    {
+      "name": "css_n_eq_toric_n",
+      "passed": true,
+      "value": 21,
+      "expected": 21
+    },
+    {
+      "name": "css_k_eq_lambda",
+      "passed": true,
+      "value": 2,
+      "expected": 2
+    },
+    {
+      "name": "css_gsd_eq_mu",
+      "passed": true,
+      "value": 4,
+      "expected": 4
+    },
+    {
+      "name": "css_k_eq_2",
+      "passed": true,
+      "value": 2,
+      "expected": 2
+    },
+    {
+      "name": "css_distance_lower_bound_eq_q",
+      "passed": true,
+      "value": 3,
+      "expected": 3
+    },
+    {
+      "name": "css_logical_count_matches_betti_1",
+      "passed": true,
+      "value": 2,
+      "expected": 2
+    },
+    {
+      "name": "beta_0_eq_1",
+      "passed": true,
+      "value": 1,
+      "expected": 1
+    },
+    {
+      "name": "beta_1_eq_lambda",
+      "passed": true,
+      "value": 2,
+      "expected": 2
+    },
+    {
+      "name": "beta_2_eq_1",
+      "passed": true,
+      "value": 1,
+      "expected": 1
+    },
+    {
+      "name": "euler_characteristic_eq_0",
+      "passed": true,
+      "value": 0,
+      "expected": 0
+    },
+    {
+      "name": "total_betti_sum_eq_mu",
+      "passed": true,
+      "value": 4,
+      "expected": 4
+    },
+    {
+      "name": "beta_1_from_chain_ranks",
+      "passed": true,
+      "value": 2,
+      "expected": 2
+    },
+    {
+      "name": "g2_fundamental_rep_dim_eq_phi6",
+      "passed": true,
+      "value": 7,
+      "expected": 7
+    },
+    {
+      "name": "g2_adj_part_of_branching_eq_g2_dim",
+      "passed": true,
+      "value": 14,
+      "expected": 14
+    },
+    {
+      "name": "g2_fund_part_of_branching_eq_phi6",
+      "passed": true,
+      "value": 7,
+      "expected": 7
+    },
+    {
+      "name": "branching_confirms_k7_edges",
+      "passed": true,
+      "value": 21,
+      "expected": 21
+    },
+    {
+      "name": "v_f_g2_invariance_via_psl27",
+      "passed": true,
+      "value": 168,
+      "expected": 168
+    },
+    {
+      "name": "full_algebra_modes_eq_phi6",
+      "passed": true,
+      "value": 7,
+      "expected": 7
+    }
+  ],
+  "algebra": {
+    "modes": 7,
+    "u7_dim": 49,
+    "su7_dim": 48,
+    "g2_dim": 14,
+    "bond_g2_adj": 14,
+    "bond_g2_fund": 7
+  },
+  "k7_spectrum": {
+    "max_eig": 6,
+    "min_eig": -1,
+    "spectral_gap": 7,
+    "ground_energy": -6,
+    "det_adj": 6
+  },
+  "css_code": {
+    "n": 21,
+    "k": 2,
+    "d_lower": 3,
+    "gsd": 4,
+    "rank_hz": 6,
+    "rank_hx": 13
+  },
+  "betti": {
+    "beta_0": 1,
+    "beta_1": 2,
+    "beta_2": 1,
+    "euler": 0
+  }
+}

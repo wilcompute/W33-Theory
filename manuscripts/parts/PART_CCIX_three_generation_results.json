@@ -1,0 +1,55 @@
+{
+  "part": "CCIX",
+  "title": "Three-Generation Fermion Structure from W(3,3)",
+  "srg_params": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4
+  },
+  "atoms": {
+    "M_LAM": 27,
+    "M_NEG": 12,
+    "L_EFF": 1111,
+    "XI_POS": 2,
+    "XI_NEG": -4,
+    "LAP_MID": 10,
+    "LAP_TOP": 16
+  },
+  "generation_count": 3,
+  "Q_cubed": 27,
+  "M_LAM_equals_Q_cubed": true,
+  "eigenvalue_ratio": 3,
+  "koide_exact": 0.6666666666666666,
+  "koide_experimental": 0.6666605114773855,
+  "koide_error": 6.155189281153994e-06,
+  "koide_digits": 5.210758587331081,
+  "lepton_masses_MeV": {
+    "electron": 0.51099895,
+    "muon": 105.6583755,
+    "tau": 1776.86
+  },
+  "laplacian": {
+    "LAP_MID": 10,
+    "LAP_TOP": 16,
+    "ratio": 1.6
+  },
+  "all_checks": {
+    "gen_count_equals_Q": true,
+    "Q_cubed_equals_M_LAM": true,
+    "eigenvalue_ratio_equals_Q": true,
+    "koide_exact_is_2over3": true,
+    "koide_exp_close_to_2over3": true,
+    "koide_exp_5_digits": true,
+    "LAP_MID_equals_K_minus_lam": true,
+    "LAP_TOP_equals_K_plus_xi3": true,
+    "LAP_MID_plus_LAP_TOP_eq_2K_plus_gap": true,
+    "three_eigenvalues": true,
+    "Q_equals_3": true,
+    "M_LAM_equals_27": true,
+    "eig_ratio_exact": true
+  },
+  "verified": true,
+  "free_parameters": 0
+}

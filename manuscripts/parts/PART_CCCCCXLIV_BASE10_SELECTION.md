@@ -1,0 +1,197 @@
+# PART_CCCCCXLIV — Base-10 Selection, Full-Reptend Structure, and Decimal/Topology Separation
+
+## Executive Statement
+
+The decimal hints in the W(3,3) program are **not** base-independent. They arise because our integer notation uses **base 10**, and base 10 is arithmetically special relative to 7 because:
+
+\[
+10 = 2 \times 5,
+\]
+
+and both 2 and 5 are exactly the primes that generate terminating decimals. The cyclic behavior of \(1/7\) in decimal is therefore not a mysterious property of 7 alone; it is a property of the ordered pair \((10,7)\).
+
+The deeper, base-independent structure is the finite multiplicative group
+\((\mathbb{Z}/7\mathbb{Z})^\times\), which has order 6. Base 10 merely makes this structure maximally visible because 10 is a primitive root mod 7.
+
+## The Two-Layer Structure
+
+We must distinguish two levels:
+
+### Layer A — Base-dependent decimal phenomenology
+
+- \(1/7 = 0.\overline{142857}\)
+- period\((1/7) = 6\) in base 10
+- the missing decimal digits \(\{3,6,9\}\)
+- the mixed transition behavior of \(1/6 = 0.1\overline{6}\)
+
+These belong to **representation theory of integers in base 10**.
+
+### Layer B — Base-independent algebra/topology
+
+- \(|(\mathbb{Z}/7\mathbb{Z})^\times| = 6\)
+- the Császár polyhedron has 7 vertices
+- Jungerman–Ringel valid residues are \(\{0,3,4,7\} \pmod{12}\)
+- the lower dual genus is \(g_2 = 6\)
+- W(3,3) is SRG(40,12,2,4)
+
+These are **intrinsic** and do not depend on notation.
+
+## Why Base 10 Makes 7 Special
+
+The decimal period of \(1/p\) in base \(b\) is the multiplicative order:
+
+\[
+\operatorname{period}_b(1/p) = \operatorname{ord}_p(b), \qquad (p \nmid b).
+\]
+
+For \(p=7\) and \(b=10\):
+
+\[
+10^1 \equiv 3,\quad
+10^2 \equiv 2,\quad
+10^3 \equiv 6,\quad
+10^4 \equiv 4,\quad
+10^5 \equiv 5,\quad
+10^6 \equiv 1 \pmod{7}.
+\]
+
+Thus:
+
+\[
+\operatorname{ord}_7(10) = 6 = 7-1.
+\]
+
+So 10 is a **primitive root mod 7**, and 7 is a **full-reptend prime in base 10**.
+
+This means base 10 reveals the full six-element multiplicative group of nonzero residues mod 7 in a single decimal cycle.
+
+## Separation Principle
+
+The correct interpretation is:
+
+> The decimal hints are **diagnostic projections** of a deeper mod-7/mod-12/topological structure through the special arithmetic of base 10.
+
+They are not themselves the fundamental structure.
+
+The fundamental structure is the triangle:
+
+\[
+\text{mod-7 cyclicity} \longleftrightarrow \text{period-6 group structure} \longleftrightarrow g_2 = 6,
+\]
+
+while base 10 provides the visual encoding:
+
+\[
+(10,7) \mapsto 142857.
+\]
+
+## The Role of 2 and 5
+
+Base 10 factors as:
+
+\[
+10 = 2 \cdot 5.
+\]
+
+These are exactly the primes responsible for decimal termination. Every fraction \(1/n\) terminates in base 10 iff \(n\) has no prime factors except 2 and 5.
+
+Hence the terminating fractions among \(1/n\), \(n=1,\dots,9\), are:
+
+- \(1/1\)
+- \(1/2\)
+- \(1/4\)
+- \(1/5\)
+- \(1/8\)
+
+These are precisely the denominators built from the base primes \(\{2,5\}\).
+
+So the decimal scan \(1/n\), \(n=1\ldots 9\), is really partitioned into:
+
+1. **base-compatible denominators** (terminate)
+2. **base-incompatible denominators** (repeat)
+3. the unique **full-reptend denominator 7** (maximal repeat)
+4. the mixed transition denominator **6 = 2\cdot 3**
+
+## Reinterpreting the Missing Digits \(\{3,6,9\}\)
+
+The absence of \(\{3,6,9\}\) from 142857 is not primary. What is primary is:
+
+- 3 generates the mod-3 obstruction class
+- 6 = 2×3 is the mixed base/obstruction denominator
+- 9 = 3² is the quadratic refinement of the same obstruction
+
+So \(\{3,6,9\}\) should be interpreted not merely as “missing digits,” but as the **3-adic obstruction ladder inside base 10**.
+
+This gives a new hierarchy:
+
+- \(3\): pure obstruction (denominator repeat)
+- \(6\): mixed base × obstruction (numerator + denominator echo)
+- \(9\): squared obstruction (numerator repeat only)
+
+## The Real Deeper Structure
+
+The deepest structure discovered here is a **three-way factorization**:
+
+\[
+\text{decimal behavior} = \text{base factorization} + \text{multiplicative order} + \text{topological residue law}.
+\]
+
+For the W(3,3) universe this becomes:
+
+\[
+\text{decimal behavior of }1/n
+= \underbrace{(2,5)}_{\text{base 10}}
++ \underbrace{\operatorname{ord}_7(10)=6}_{\text{full reptend}}
++ \underbrace{\{0,3,4,7\} \bmod 12}_{\text{JR topology}}.
+\]
+
+That is the correct synthesis.
+
+## Lock L52: Base-10 Visibility Theorem
+
+**L52.** The identity
+
+\[
+\operatorname{period}_{10}(1/7) = 6 = g_2
+\]
+
+holds because 10 is a primitive root mod 7. Therefore the equality between cyclic decimal period and lower genus is **representation-visible in base 10**, but the underlying genus identity itself is base-independent.
+
+## Lock L53: Decimal Termination Partition
+
+**L53.** The terminating denominators among \(1/n\), \(n=1,\dots,9\), are exactly those generated by the prime support of the base:
+
+\[
+\{1,2,4,5,8\} = \langle 2,5 \rangle \cap \{1,\dots,9\}.
+\]
+
+Thus the decimal scan is governed first by the factorization of the base, not the denominator alone.
+
+## Lock L54: The 3-adic Obstruction Ladder
+
+**L54.** The triple \(\{3,6,9\}\) forms the obstruction ladder:
+
+\[
+3,\quad 2\cdot 3,\quad 3^2,
+\]
+
+corresponding respectively to:
+- denominator-only repeat,
+- mixed numerator/denominator transition,
+- numerator-only repeat.
+
+This is the arithmetic shadow of the excluded middle at 6 in the mod-12 quarter-clock.
+
+## Lock L55: The Full-Reptend/Császár Correspondence
+
+**L55.** The equality
+
+\[
+7-1 = 6 = g_2
+\]
+
+has two interpretations:
+- algebraic: \(|(\mathbb{Z}/7\mathbb{Z})^\times| = 6\)
+- topological: the lower dual genus equals 6
+
+Base 10 does not create this identity; it merely reveals it maximally through the cyclic decimal 142857.

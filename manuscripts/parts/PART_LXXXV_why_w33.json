@@ -1,0 +1,19 @@
+{
+  "theory": "W33",
+  "part": "LXXXV",
+  "title": "Why W33?",
+  "uniqueness_criteria": [
+    "\u03b1\u207b\u00b9 \u2248 137.036 within 100 ppb",
+    "Multiplicities = 1 + 24 + 15 (SU(5))",
+    "Symplectic origin over F_p",
+    "240 edges (E\u2088 roots)"
+  ],
+  "alternative_srgs_found": 2,
+  "w33_satisfies_all": true,
+  "anthropic_argument": "\u03b1 must be ~137 for life; W33 gives exactly this",
+  "mathematical_uniqueness": {
+    "automorphism_order": 51840,
+    "vertex_transitive": true,
+    "symplectic_origin": "Sp(4, F_3)"
+  }
+}

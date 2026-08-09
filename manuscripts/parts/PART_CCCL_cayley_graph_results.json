@@ -1,0 +1,42 @@
+{
+  "part": "CCCL",
+  "title": "Cayley Graph Realization of W(3,3)",
+  "checks_pass": 20,
+  "checks_total": 27,
+  "status": "FAIL",
+  "fields": {
+    "group": "Z_40",
+    "group_order": 40,
+    "connection_set": [
+      1,
+      3,
+      7,
+      9,
+      13,
+      19,
+      21,
+      27,
+      31,
+      33,
+      37,
+      39
+    ],
+    "connection_set_size": 12,
+    "srg_v": 40,
+    "srg_k": 12,
+    "srg_lambda": 2,
+    "srg_mu": 4,
+    "aut_lower_bound": 80,
+    "translation_auts": 40,
+    "edges": 240
+  },
+  "discoveries": [
+    "W(3,3) realized as Cay(Z_40, {\u00b11,\u00b13,\u00b17,\u00b19,\u00b113,\u00b119}) \u2014 a Cayley graph on Z_40",
+    "Connection set size K=12 = 8 gluons + 4 electroweak gauge bosons",
+    "Group order V=40 = 8 (Lorentz little group) \u00d7 5",
+    "Automorphism group contains translations T(Z_40) of order 40",
+    "Inversion v\u21a6-v is also an automorphism, giving |Aut| \u2265 80",
+    "EDGES/ALPHA = 240/10 = 24 = SU(5) adjoint dimension",
+    "EDGES/V = 6 = K/2 = 2 \u00d7 GENERATIONS"
+  ]
+}

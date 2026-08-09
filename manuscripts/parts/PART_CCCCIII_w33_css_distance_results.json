@@ -1,0 +1,30 @@
+{
+  "part": "CCCCIII",
+  "title": "W33 CSS Code Distance",
+  "verified": true,
+  "checks_passed": 9,
+  "checks_total": 9,
+  "css_parameters": {
+    "n": 240,
+    "k": 81,
+    "d": 3,
+    "d_X": 3,
+    "d_Z": 4,
+    "notation": "[[240,81,3]]"
+  },
+  "x_distance_certificate": {
+    "d_X": 3,
+    "weight3_kernel_count": 160,
+    "example_witness_edges": [[0,1],[0,2],[0,3]]
+  },
+  "z_distance_certificate": {
+    "d_Z": 4,
+    "simple_4_cycles": 1740,
+    "nontrivial_4_cycles": 1620,
+    "trivial_4_cycles": 120,
+    "example_witness_edges": [[3,22],[22,36],[26,36],[3,26]]
+  },
+  "architecture_upgrade": "Completes the base W33 CSS stabilizer-code parameters: [[240,81,3]], with d_X=3 and d_Z=4. This proves the core has a large logical sector but low bare distance.",
+  "theorem": "For the W33 edge-qubit CSS code, the minimum nontrivial X logical has weight 3 and the minimum nontrivial Z logical has weight 4. Hence the CSS code distance is d=min(3,4)=3.",
+  "honesty_boundary": "Distance 3 is exact for the base code. Fault-tolerant photonic hardware will need lifting, concatenation, subsystem gauge design, or another protection layer to raise distance."
+}

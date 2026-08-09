@@ -1,0 +1,30 @@
+{
+  "schema_version": "empirical_data_v1_current_residuals",
+  "module": "PART_CCCXXII_EMPIRICAL_DATA_V1_CURRENT_RESIDUALS",
+  "status": "first current-source residual table for W33 empirical program",
+  "koide_summary": {
+    "target": "2/3",
+    "value_from_current_masses": 0.6666644634026365,
+    "residual": -2.2032640301095086e-06,
+    "sigma": 5.080958195161698e-06,
+    "z_score": -0.43363159968675774,
+    "status": "PASS_WITHIN_1_SIGMA_UNDER_THIS_SCHEME"
+  },
+  "weak_mixing_summary": {
+    "target": "3/8",
+    "z_pole_effective_value": 0.23148,
+    "status": "RG_REQUIRED_NOT_A_DIRECT_PASS_FAIL_TEST"
+  },
+  "checks": {
+    "koide_target": true,
+    "sin2_target": true,
+    "koide_value_window": true,
+    "koide_residual_small": true,
+    "koide_sigma_positive": true,
+    "koide_within_one_sigma": true,
+    "sin2_raw_is_not_gut": true,
+    "records": true
+  },
+  "theorem_statement": "The first current-source empirical residual table confirms that the W33 Koide target Q=2/3 is compatible with current charged-lepton masses under the stated PDG/pdgLive mass scheme, with z about -0.43. The weak-mixing target 3/8 remains an RG-boundary claim, not a direct Z-pole prediction.",
+  "honesty_boundary": "Only Koide is evaluated here as a direct dimensionless comparison. Weak mixing requires a specified RG/unification map before it can be used as pass/fail evidence for or against the W33 interpretation."
+}

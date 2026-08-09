@@ -1,0 +1,1084 @@
+{
+  "part": "MCLXXXI",
+  "theorem": "Q4 plaquette directed-change lift",
+  "input_context": {
+    "q": 3,
+    "history_cells": 9,
+    "directed_change_histories": 6,
+    "now_context_rays": 4,
+    "q4_vertices": 16,
+    "q4_edges": 32,
+    "w33_gap_multiplicity": 24
+  },
+  "plaquette_formula": {
+    "identity": "faces(Q4) = C(4,2)*2^(4-2) = 6*4 = 24",
+    "face_count": 24,
+    "direction_pairs": 6,
+    "frozen_now_slots": 4,
+    "directed_change_factor": 6,
+    "now_context_factor": 4
+  },
+  "incidence_laws": {
+    "face_edge_incidence": "24 faces * 4 edges = 32 edges * 3 faces = 96",
+    "vertex_face_incidence": "24 faces * 4 vertices = 16 vertices * 6 directed changes = 96",
+    "edge_face_counts": {
+      "3": 32
+    },
+    "vertex_face_counts": {
+      "6": 16
+    }
+  },
+  "directed_change_face_packet": {
+    "directed_changes": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "direction_pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "now_slots": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "rows": [
+      {
+        "directed_change": [
+          0,
+          1
+        ],
+        "varying_dims": [
+          0,
+          1
+        ],
+        "now_slots": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "face_count": 4,
+        "faces": [
+          {
+            "frozen_values": [
+              0,
+              0
+            ],
+            "vertices": [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                0,
+                0
+              ]
+            ]
+          },
+          {
+            "frozen_values": [
+              0,
+              1
+            ],
+            "vertices": [
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                1,
+                0,
+                1
+              ]
+            ]
+          },
+          {
+            "frozen_values": [
+              1,
+              0
+            ],
+            "vertices": [
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                1,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                1,
+                1,
+                0
+              ]
+            ]
+          },
+          {
+            "frozen_values": [
+              1,
+              1
+            ],
+            "vertices": [
+              [
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                0,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                1,
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "directed_change": [
+          0,
+          2
+        ],
+        "varying_dims": [
+          0,
+          2
+        ],
+        "now_slots": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "face_count": 4,
+        "faces": [
+          {
+            "frozen_values": [
+              0,
+              0
+            ],
+            "vertices": [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                1,
+                0
+              ]
+            ]
+          },
+          {
+            "frozen_values": [
+              0,
+              1
+            ],
+            "vertices": [
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                0,
+                1,
+                1
+              ]
+            ]
+          },
+          {
+            "frozen_values": [
+              1,
+              0
+            ],
+            "vertices": [
+              [
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                1,
+                0
+              ],
+              [
+                1,
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                1,
+                0
+              ]
+            ]
+          },
+          {
+            "frozen_values": [
+              1,
+              1
+            ],
+            "vertices": [
+              [
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                0,
+                1
+              ],
+              [
+                1,
+                1,
+                1,
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "directed_change": [
+          1,
+          0
+        ],
+        "varying_dims": [
+          0,
+          3
+        ],
+        "now_slots": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "face_count": 4,
+        "faces": [
+          {
+            "frozen_values": [
+              0,
+              0
+            ],
+            "vertices": [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                1
+              ]
+            ]
+          },
+          {
+            "frozen_values": [
+              0,
+              1
+            ],
+            "vertices": [
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                1,
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                1,
+                1
+              ]
+            ]
+          },
+          {
+            "frozen_values": [
+              1,
+              0
+            ],
+            "vertices": [
+              [
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                1,
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                0,
+                1
+              ]
+            ]
+          },
+          {
+            "frozen_values": [
+              1,
+              1
+            ],
+            "vertices": [
+              [
+                0,
+                1,
+                1,
+                0
+              ],
+              [
+                0,
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                1,
+                0
+              ],
+              [
+                1,
+                1,
+                1,
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "directed_change": [
+          1,
+          2
+        ],
+        "varying_dims": [
+          1,
+          2
+        ],
+        "now_slots": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "face_count": 4,
+        "faces": [
+          {
+            "frozen_values": [
+              0,
+              0
+            ],
+            "vertices": [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                1,
+                0
+              ]
+            ]
+          },
+          {
+            "frozen_values": [
+              0,
+              1
+            ],
+            "vertices": [
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                1,
+                1,
+                1
+              ]
+            ]
+          },
+          {
+            "frozen_values": [
+              1,
+              0
+            ],
+            "vertices": [
+              [
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                1,
+                0
+              ]
+            ]
+          },
+          {
+            "frozen_values": [
+              1,
+              1
+            ],
+            "vertices": [
+              [
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                0,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                0,
+                1
+              ],
+              [
+                1,
+                1,
+                1,
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "directed_change": [
+          2,
+          0
+        ],
+        "varying_dims": [
+          1,
+          3
+        ],
+        "now_slots": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "face_count": 4,
+        "faces": [
+          {
+            "frozen_values": [
+              0,
+              0
+            ],
+            "vertices": [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                1
+              ]
+            ]
+          },
+          {
+            "frozen_values": [
+              0,
+              1
+            ],
+            "vertices": [
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                1,
+                1,
+                0
+              ],
+              [
+                0,
+                1,
+                1,
+                1
+              ]
+            ]
+          },
+          {
+            "frozen_values": [
+              1,
+              0
+            ],
+            "vertices": [
+              [
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                0,
+                1
+              ]
+            ]
+          },
+          {
+            "frozen_values": [
+              1,
+              1
+            ],
+            "vertices": [
+              [
+                1,
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                1,
+                0
+              ],
+              [
+                1,
+                1,
+                1,
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "directed_change": [
+          2,
+          1
+        ],
+        "varying_dims": [
+          2,
+          3
+        ],
+        "now_slots": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "face_count": 4,
+        "faces": [
+          {
+            "frozen_values": [
+              0,
+              0
+            ],
+            "vertices": [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                1
+              ]
+            ]
+          },
+          {
+            "frozen_values": [
+              0,
+              1
+            ],
+            "vertices": [
+              [
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                1,
+                1,
+                0
+              ],
+              [
+                0,
+                1,
+                1,
+                1
+              ]
+            ]
+          },
+          {
+            "frozen_values": [
+              1,
+              0
+            ],
+            "vertices": [
+              [
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                1,
+                1
+              ]
+            ]
+          },
+          {
+            "frozen_values": [
+              1,
+              1
+            ],
+            "vertices": [
+              [
+                1,
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                0,
+                1
+              ],
+              [
+                1,
+                1,
+                1,
+                0
+              ],
+              [
+                1,
+                1,
+                1,
+                1
+              ]
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "w33_lock": {
+    "q4_plaquettes": 24,
+    "w33_gap_multiplicity": 24,
+    "su5_adjoint_dimension": 24,
+    "reading": "the Q4 router plaquettes supply a finite square-face model for the 24-dimensional W33 positive gap/gauge shell"
+  },
+  "claim_boundary": "finite Q4 plaquette/router identity; this is not a continuum gauge-field curvature proof and does not upgrade Q4 beyond its local routing role",
+  "checks": {
+    "q4_face_count_is_24": true,
+    "q4_face_count_factors_as_directed_changes_times_now_rays": true,
+    "directed_changes_are_q_factorial": true,
+    "now_context_has_four_rays": true,
+    "history_square_splits_as_now_plus_directed": true,
+    "face_count_matches_w33_gap_multiplicity": true,
+    "six_direction_pairs_match_directed_changes": true,
+    "four_frozen_slots_match_now_context_rays": true,
+    "each_directed_change_owns_four_faces": true,
+    "each_face_is_a_square_cycle": true,
+    "each_edge_lies_in_three_faces": true,
+    "each_vertex_lies_in_six_faces": true,
+    "face_edge_incidence_identity": true,
+    "vertex_face_incidence_identity": true,
+    "router_payload_boundary_preserved": true
+  },
+  "n_verified": 15
+}

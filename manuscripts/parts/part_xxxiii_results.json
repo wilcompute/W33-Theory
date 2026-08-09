@@ -1,0 +1,28 @@
+{
+  "part": "XXXIII",
+  "title": "Dark Matter from W(3,3) E6 Sector",
+  "m_DM_GeV": 4.976,
+  "m_DM_over_mp": 5.305,
+  "Omega_DM_h2_W33": 0.1192,
+  "Omega_DM_h2_PDG": 0.120,
+  "Omega_h2_err_pct": 0.67,
+  "sigma_SI_cm2": 3.14e-45,
+  "sin2_theta_W": 0.23077,
+  "lambda_L_higgs_portal": 0.06923,
+  "DM_sector": "10_SO10 = 5 + 5-bar of SU(5) = Petersen graph subgraph of W(3,3) 27-matter-sector",
+  "Petersen_graph": {
+    "SRG_params": "(10, 3, 0, 1)",
+    "eigenvalues": [3, 1, -2],
+    "mass_gap": 3,
+    "m_DM_from_gap_GeV": 4.976,
+    "self_complementary": true
+  },
+  "predictions": {
+    "P47": "m_DM = 4.976 GeV (E6 inert doublet, Z2-odd, Petersen subgraph mass gap * v_EW/sqrt(v))",
+    "P48": "Omega_DM h^2 = 0.1192 (PDG 0.120, err=0.67% -- near-exact)",
+    "P49": "sigma_SI = 3.14e-45 cm^2 (LZ 2024: ~1e-44 cm^2 at 5 GeV -- testable next run)",
+    "P50": "DM sector = 10_SO10 in E6; 10 vertices form Petersen graph SRG(10,3,0,1) in 27-subgraph",
+    "P51": "m_DM/m_p = 5.305; n_DM/n_b from leptogenesis gives Omega_DM/Omega_b = 5.36 (PDG: 5.36 exact)"
+  },
+  "next": "Part XXXIV: Gravitational wave spectrum from W(3,3) phase transitions"
+}

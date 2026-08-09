@@ -1,0 +1,85 @@
+{
+  "architecture_upgrade": "CCCXL made kappa-calibrated prediction tables.  CCCXLI eliminates kappa from the empirical comparison: all channels must first agree on Lambda, then kappa is recovered only as sqrt(Lambda/M2).",
+  "channel_formulas": {
+    "heat_trace": "Lambda=-log(H/2)/tau",
+    "mass": "Lambda=M_phys^2",
+    "resolvent_trace": "Lambda=s^2-2s/R",
+    "spinor_trace": "Lambda=(arcosh(T/2)/t)^2",
+    "zeta": "Lambda=(2/zeta_p)^(1/p)"
+  },
+  "checks": [
+    {"name":"dimensionless M2=5049/4","passed":true,"value":1262.25},
+    {"name":"Lambda=kappa^2 M2 for sample","passed":true,"value":6872.25},
+    {"name":"mass channel recovers Lambda","passed":true,"value":6872.250000000001},
+    {"name":"heat channel recovers Lambda","passed":true,"value":6872.25},
+    {"name":"spinor channel recovers Lambda","passed":true,"value":6872.2499999999945},
+    {"name":"resolvent channel recovers Lambda","passed":true,"value":6872.249999999998},
+    {"name":"zeta channel recovers Lambda","passed":true,"value":6872.25},
+    {"name":"consistent Lambda packet passes","passed":true,"value":{"consistent":true,"max_abs_deviation":2.7284841053187847e-12,"max_relative_deviation":3.9702898593186436e-16,"mean_Lambda":6872.249999999997,"std_Lambda":2.3735175972130914e-12,"tolerance":1e-08,"values":{"heat_trace":6872.25,"mass":6872.250000000001,"resolvent_trace":6872.249999999998,"spinor_trace":6872.2499999999945,"zeta":6872.25}}},
+    {"name":"corrupted Lambda packet fails","passed":true,"value":{"consistent":false,"max_abs_deviation":15.920732477972007,"max_relative_deviation":0.002321368292703786,"mean_Lambda":6855.806580726388,"std_Lambda":32.886838547218914,"tolerance":1e-08,"values":{"heat_trace":6790.032903631951,"mass":6872.250000000001,"resolvent_trace":6872.249999999998,"spinor_trace":6872.2499999999945,"zeta":6872.25}}},
+    {"name":"kappa recovered from Lambda","passed":true,"value":2.3333333333333335},
+    {"name":"one-channel kappa-free predictions recover same Lambda","passed":true,"value":5.4569682106375694e-12},
+    {"name":"projective gap is 2 sqrt Lambda","passed":true,"value":165.7980699525785}
+  ],
+  "checks_passed": 12,
+  "checks_total": 12,
+  "consistency_report": {
+    "consistent": true,
+    "max_abs_deviation": 2.7284841053187847e-12,
+    "max_relative_deviation": 3.9702898593186436e-16,
+    "mean_Lambda": 6872.249999999997,
+    "std_Lambda": 2.3735175972130914e-12,
+    "tolerance": 1e-08,
+    "values": {"heat_trace":6872.25,"mass":6872.250000000001,"resolvent_trace":6872.249999999998,"spinor_trace":6872.2499999999945,"zeta":6872.25}
+  },
+  "corrupted_report": {
+    "consistent": false,
+    "max_abs_deviation": 15.920732477972007,
+    "max_relative_deviation": 0.002321368292703786,
+    "mean_Lambda": 6855.806580726388,
+    "std_Lambda": 32.886838547218914,
+    "tolerance": 1e-08,
+    "values": {"heat_trace":6790.032903631951,"mass":6872.250000000001,"resolvent_trace":6872.249999999998,"spinor_trace":6872.2499999999945,"zeta":6872.25}
+  },
+  "dimensionless_kernel": {
+    "M": "sqrt(5049)/2",
+    "M2": "5049/4",
+    "kappa_recovery": "kappa=sqrt(Lambda/(5049/4))",
+    "kappa_relation": "Lambda=kappa^2 M2"
+  },
+  "honesty_boundary": "This is still a one-sector observable model. Real physical use requires identifying which measured channels correspond to these finite traces.",
+  "kappa_free_scale": {
+    "meaning": "physical squared spectral scale",
+    "sample_Lambda": 6872.25,
+    "sample_kappa": 2.3333333333333335,
+    "symbol": "Lambda"
+  },
+  "one_anchor_prediction_tables": {
+    "heat_trace": {"Lambda":6872.25,"heat_trace":0.002032961285775859,"mass":82.89903497628925,"projective_gap":165.7980699525785,"recovered_kappa":2.3333333333333335,"resolvent_trace":0.07784653570485622,"samples":{"p":2,"s":100.0,"t":0.01,"tau":0.001},"spinor_trace":2.7000919341649367,"zeta":4.2355317044381655e-08},
+    "mass": {"Lambda":6872.250000000001,"heat_trace":0.002032961285775857,"mass":82.89903497628925,"projective_gap":165.7980699525785,"recovered_kappa":2.3333333333333335,"resolvent_trace":0.07784653570485623,"samples":{"p":2,"s":100.0,"t":0.01,"tau":0.001},"spinor_trace":2.7000919341649367,"zeta":4.235531704438165e-08},
+    "resolvent_trace": {"Lambda":6872.249999999998,"heat_trace":0.002032961285775863,"mass":82.89903497628924,"projective_gap":165.79806995257848,"recovered_kappa":2.333333333333333,"resolvent_trace":0.07784653570485622,"samples":{"p":2,"s":100.0,"t":0.01,"tau":0.001},"spinor_trace":2.7000919341649367,"zeta":4.235531704438168e-08},
+    "spinor_trace": {"Lambda":6872.2499999999945,"heat_trace":0.00203296128577587,"mass":82.89903497628922,"projective_gap":165.79806995257845,"recovered_kappa":2.333333333333332,"resolvent_trace":0.07784653570485615,"samples":{"p":2,"s":100.0,"t":0.01,"tau":0.001},"spinor_trace":2.7000919341649367,"zeta":4.235531704438172e-08},
+    "zeta": {"Lambda":6872.25,"heat_trace":0.002032961285775859,"mass":82.89903497628925,"projective_gap":165.7980699525785,"recovered_kappa":2.3333333333333335,"resolvent_trace":0.07784653570485622,"samples":{"p":2,"s":100.0,"t":0.01,"tau":0.001},"spinor_trace":2.7000919341649367,"zeta":4.2355317044381655e-08}
+  },
+  "part": "CCCXLI",
+  "recovered_Lambdas": {
+    "heat_trace": 6872.25,
+    "mass": 6872.250000000001,
+    "resolvent_trace": 6872.249999999998,
+    "spinor_trace": 6872.2499999999945,
+    "zeta": 6872.25
+  },
+  "sample_channels": {
+    "Lambda": 6872.25,
+    "heat_trace": 0.002032961285775859,
+    "mass": 82.89903497628925,
+    "projective_gap": 165.7980699525785,
+    "resolvent_trace": 0.07784653570485622,
+    "samples": {"p":2,"s":100.0,"t":0.01,"tau":0.001},
+    "spinor_trace": 2.7000919341649367,
+    "zeta": 4.2355317044381655e-08
+  },
+  "theorem": "For the one-sector W33 unit map, the observable response channels depend on the single physical spectral scale Lambda=kappa^2M^2. Mass, heat trace, spinor trace, resolvent trace, and zeta data independently recover Lambda. Agreement of these Lambda values is a kappa-free falsification test; kappa is recovered afterward by sqrt(Lambda/(5049/4)).",
+  "title": "Kappa-Free Observable Consistency Compiler",
+  "verified": true
+}

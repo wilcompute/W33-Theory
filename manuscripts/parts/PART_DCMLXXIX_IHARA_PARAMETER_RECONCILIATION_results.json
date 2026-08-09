@@ -1,0 +1,18 @@
+{
+  "part": "DCMLXXIX",
+  "decimal": 979,
+  "status": "VERIFIED: graph-Ihara parameters reconciled; classical RH boundary preserved",
+  "summary": {
+    "part": "DCMLXXIX",
+    "decimal": 979,
+    "pg23_field_q": 3,
+    "pg23_degree": 4,
+    "pg23_bass_q": 3,
+    "pg23_nontrivial_radius_squared_numerator": 1,
+    "pg23_nontrivial_radius_squared_denominator": 3,
+    "w33_degree": 12,
+    "w33_bass_q": 11,
+    "classical_rh_status": "OPEN: finite graph-Ihara RH does not identify the Riemann zeta zeros",
+    "all_identities_hold": true
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "part": "CCCLVI",
+  "title": "Seidel Switching Classes of W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "V": 40,
+    "seid_trivial_eig": 15,
+    "seid_r_eig": -5,
+    "seid_s_eig": 7,
+    "mult_seid_trivial": 1,
+    "mult_seid_r": 24,
+    "mult_seid_s": 15,
+    "trace_seid": 0,
+    "frobenius_seid": 1560
+  },
+  "discoveries": [
+    "Trivial Seidel eigenvalue = 15 = MULT_S = SU5_MATTER: the switching-class spectrum encodes the SU(5) matter multiplicity",
+    "seid_r_eig = -5 = -(ALPHA/2): half the fine-structure code ALPHA=10, with sign",
+    "seid_s_eig = 7 = MU + GENERATIONS = 4+3: positive Seidel eigenvalue combines SRG mu with the generation count",
+    "seid_trivial + seid_r = 10 = ALPHA = 10",
+    "Frobenius ||S||_F^2 = 1560 = V*(V-1) = 40*39 (all off-diagonal entries \u00b11 implies exact Frobenius identity)"
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "Part": "CCXXIII",
+  "Title": "Quantum Error Correction and Holographic Codes from W(3,3)",
+  "SRG": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "M_LAM": 27,
+    "M_NEG": 12,
+    "XI_POS": 2,
+    "XI_NEG": -4,
+    "LAP_MID": 10,
+    "LAP_TOP": 16,
+    "EDGES": 240,
+    "AUT_ORDER": 51840
+  },
+  "Verified": true,
+  "Checks": [
+    {
+      "name": "QEC code length n (physical qudits)",
+      "value": 40,
+      "expected": 40,
+      "pass": true
+    },
+    {
+      "name": "QEC logical qudits k",
+      "value": 12,
+      "expected": 12,
+      "pass": true
+    },
+    {
+      "name": "QEC code distance d",
+      "value": 4,
+      "expected": 4,
+      "pass": true
+    },
+    {
+      "name": "QEC code rate K/V",
+      "value": 0.3,
+      "expected": 0.3,
+      "pass": true
+    },
+    {
+      "name": "Redundancy factor V/K",
+      "value": 3.33,
+      "expected": 3.33,
+      "pass": true
+    },
+    {
+      "name": "Correctable errors t = floor((d-1)/2)",
+      "value": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "name": "Detectable errors d-1",
+      "value": 3,
+      "expected": 3,
+      "pass": true
+    },
+    {
+      "name": "Error-detecting threshold d/n",
+      "value": 0.1,
+      "expected": 0.1,
+      "pass": true
+    },
+    {
+      "name": "Stabilizer generators n-k",
+      "value": 28,
+      "expected": 28,
+      "pass": true
+    },
+    {
+      "name": "Syndrome space log\u2082 dimension",
+      "value": 28,
+      "expected": 28,
+      "pass": true
+    },
+    {
+      "name": "Logical operator pairs",
+      "value": 12,
+      "expected": 12,
+      "pass": true
+    },
+    {
+      "name": "Perfect tensor half-legs K//2",
+      "value": 6,
+      "expected": 6,
+      "pass": true
+    },
+    {
+      "name": "VN entropy per leg ln(Q)",
+      "value": 1.0986,
+      "expected": 1.0986,
+      "pass": true
+    },
+    {
+      "name": "Bulk-to-boundary ratio V/K",
+      "value": 3.33,
+      "expected": 3.33,
+      "pass": true
+    },
+    {
+      "name": "Subregion recovery threshold K+1",
+      "value": 13,
+      "expected": 13,
+      "pass": true
+    },
+    {
+      "name": "Complement recovery region = M_LAM",
+      "value": 27,
+      "expected": 27,
+      "pass": true
+    },
+    {
+      "name": "Min shares to reconstruct (d)",
+      "value": 4,
+      "expected": 4,
+      "pass": true
+    },
+    {
+      "name": "Max withheld shares V-d",
+      "value": 36,
+      "expected": 36,
+      "pass": true
+    },
+    {
+      "name": "Secret size k",
+      "value": 12,
+      "expected": 12,
+      "pass": true
+    },
+    {
+      "name": "Erasure channel threshold d/(2n)",
+      "value": 0.05,
+      "expected": 0.05,
+      "pass": true
+    },
+    {
+      "name": "Depolarizing threshold d/n",
+      "value": 0.1,
+      "expected": 0.1,
+      "pass": true
+    },
+    {
+      "name": "Scrambling time proxy (K/Q)ln(Q)",
+      "value": 4.394,
+      "expected": 4.394,
+      "pass": true
+    },
+    {
+      "name": "Scrambling log_Q(|Aut|) cycles",
+      "value": 9.9,
+      "expected": 9.9,
+      "pass": true
+    },
+    {
+      "name": "Hayden-Preskill recovery size k+n/2",
+      "value": 32,
+      "expected": 32,
+      "pass": true
+    },
+    {
+      "name": "Page time V/2",
+      "value": 20,
+      "expected": 20,
+      "pass": true
+    },
+    {
+      "name": "Quantum capacity proxy (n-k)/n",
+      "value": 0.7,
+      "expected": 0.7,
+      "pass": true
+    }
+  ],
+  "Bridges": {
+    "1_code_n": 40,
+    "2_code_rate": 0.3,
+    "3_t_errors": 1,
+    "4_stabilizers": 28,
+    "5_half_legs": 6,
+    "5_entropy_per_leg": 1.0986,
+    "6_bulk_to_boundary": 3.33,
+    "6_recovery_threshold": 13,
+    "7_min_shares": 4,
+    "8_erasure_threshold": 0.05,
+    "9_scrambling_time": 4.394,
+    "10_hp_recovery": 32,
+    "10_page_time": 20
+  },
+  "FreeParameters": 0
+}

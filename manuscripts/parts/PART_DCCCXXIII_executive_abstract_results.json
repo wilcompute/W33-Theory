@@ -1,0 +1,52 @@
+{
+  "part": "DCCCXXIII",
+  "decimal": 823,
+  "title": "Executive Abstract and Validation Summary",
+  "date": "2026-05-17",
+  "primitives": {
+    "q": 3,
+    "tau_O": 384,
+    "E_abs": 40,
+    "Aut_W33": 1451520,
+    "Phi6_q": 7
+  },
+  "tally": {
+    "exact_or_sub1sigma": 14,
+    "strong_agreement": 8,
+    "major_theoretical_residuals": 0,
+    "major_experimental_tests": 8
+  },
+  "exact_results": [
+    "alpha_s(MZ)=0.118005",
+    "m_h=125.2 GeV",
+    "m_W=80.38 GeV",
+    "m_t^pole=172.84 GeV",
+    "sin(theta12)_CKM=0.2245",
+    "sin(theta23)_CKM=0.04161",
+    "sin(theta13)_CKM=0.00351",
+    "delta_CP_CKM=1.20 rad",
+    "m3=0.05027 eV",
+    "Delta m32^2 = 2.453e-3 eV^2",
+    "Omega_DM h^2 = 0.120",
+    "n_s = 0.9667",
+    "eta_B = 6e-10",
+    "theta_bar = 0"
+  ],
+  "structural_identities": [
+    "alpha_inv = 137",
+    "sin^2 theta_W = 3/13",
+    "r = 2/90 = 0.0222",
+    "m_a = pi x 1e-14 eV"
+  ],
+  "predictions": [
+    "Scalar at 3215 GeV",
+    "DM fermion at 2143 GeV",
+    "sigma_SI = 2.4e-48 cm^2",
+    "Proton lifetime 1.4e36 yr",
+    "LiteBIRD r = 0.0222",
+    "Axion 3.14e-14 eV",
+    "CTA gamma line at 2142 GeV",
+    "22 GHz SGWB"
+  ],
+  "status": "VALIDATION PHASE"
+}

@@ -1,0 +1,26 @@
+{
+  "part": "CCCCVI",
+  "title": "Triangle-Flat Voltage Cover Solver",
+  "verified": true,
+  "checks_passed": 8,
+  "checks_total": 8,
+  "cover_summaries": {
+    "L2": {
+      "n": 480,
+      "commutes": true,
+      "check_weights": {"X": [12], "Z": [3]},
+      "voltage_meta": {"noncoboundary": true},
+      "status": "triangle-flat noncoboundary cover"
+    },
+    "L3": {
+      "n": 720,
+      "commutes": true,
+      "check_weights": {"X": [12], "Z": [3]},
+      "voltage_meta": {"noncoboundary": true},
+      "status": "triangle-flat noncoboundary cover"
+    }
+  },
+  "architecture_upgrade": "Upgrades cyclic-cover search from arbitrary voltage seeds to triangle-flat cocycle voltages, guaranteeing lifted triangle closure and CSS commutation for the tested L=2,3 covers.",
+  "theorem": "Solving g_ij+g_jk-g_ik=0 on every W33 triangle produces triangle-flat cyclic voltages. The resulting lifted edge-qubit CSS checks commute and preserve local check weights 12 and 3. Non-coboundary solutions give nontrivial cyclic covers of the W33 code complex.",
+  "honesty_boundary": "This proves commutation and reports ranks for deterministic non-coboundary covers. It does not yet optimize distance over the full voltage space."
+}

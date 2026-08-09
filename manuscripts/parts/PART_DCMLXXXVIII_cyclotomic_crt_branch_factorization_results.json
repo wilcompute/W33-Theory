@@ -1,0 +1,31 @@
+{
+    "part": "DCMLXXXVIII",
+    "title": "Cyclotomic CRT Branch Factorization",
+    "status": "verified",
+    "class_count_formula": "2^|S|",
+    "simultaneous_density_formula": "Product_{p in S} 2/p^2",
+    "avoidance_density_formula": "Product_{p in S} (1 - 2/p^2)",
+    "first_nontrivial_packet": {
+        "S": [
+            7,
+            13
+        ],
+        "modulus": 8281,
+        "phi3_classes": [
+            2174,
+            3019,
+            5261,
+            6106
+        ],
+        "simultaneous_density": 0.0004830334500664171
+    },
+    "three_prime_packet": {
+        "S": [
+            7,
+            13,
+            19
+        ],
+        "class_count": 8
+    },
+    "theorem_summary": "For every finite set S of split primes p congruent to 1 mod 3, the cyclotomic defect branches factor exactly by CRT: there are 2^|S| simultaneous classes modulo product p^2, with exact simultaneous density product 2/p^2 and exact avoidance density product (1-2/p^2)."
+}

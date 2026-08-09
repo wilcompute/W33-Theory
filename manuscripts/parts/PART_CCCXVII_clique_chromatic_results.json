@@ -1,0 +1,38 @@
+{
+  "part": "CCCXVII",
+  "title": "Clique Number & Fractional Chromatic Number of W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "MULT_R": 24,
+    "MULT_S": 15,
+    "R_EIG": 2,
+    "S_EIG": -4,
+    "CLIQUE_BOUND": 4,
+    "ALPHA_BOUND": 10,
+    "CHI_FRAC": 4,
+    "CHI_LOWER": 4
+  },
+  "discoveries": [
+    "CLIQUE_BOUND = 4 = EW_GAUGE_4: Delsarte clique bound equals electroweak gauge count",
+    "CLIQUE_BOUND = MU: Delsarte clique bound equals SRG co-degree parameter",
+    "CLIQUE_BOUND**2 = 16 = K+MU: Squared clique bound encodes degree plus co-degree",
+    "ALPHA_BOUND = 10 = ALPHA: Hoffman independence bound equals fine structure constant analogue",
+    "ALPHA_BOUND * CLIQUE_BOUND = V: Perfect clique-coclique partition of all 40 vertices",
+    "ALPHA_BOUND - CLIQUE_BOUND = 6 = 2*GENERATIONS: Bound difference encodes doubled generation count",
+    "CHI_FRAC = 4 = EW_GAUGE_4: Fractional chromatic number equals electroweak gauge count",
+    "CHI_LOWER = CHI_FRAC = 4: Hoffman chromatic and fractional bounds coincide at EW_GAUGE_4",
+    "K // |S_EIG| = 3 = GENERATIONS: Degree-to-eigenvalue ratio equals generation count",
+    "ALPHA_BOUND + CLIQUE_BOUND = 14 = K+LAM: Bound sum equals degree plus triangle parameter",
+    "ALPHA_BOUND * GENERATIONS = 30 = MULT_R + GENERATIONS*LAM: Three-fold independence encodes orbit structure",
+    "CHI_FRAC**LAM = 16 = K+MU: Squared fractional chromatic number equals K+MU",
+    "ALPHA_BOUND // CLIQUE_BOUND = R_EIG: Independence-to-clique ratio equals positive SRG eigenvalue",
+    "CLIQUE_BOUND*MU = 16 = MULT_R - MU*LAM: Clique-co-degree product encodes multiplicity gap",
+    "ALPHA_BOUND - |S|*LAM = LAM: Hoffman bound minus eigenvalue-triangle product equals LAM"
+  ]
+}

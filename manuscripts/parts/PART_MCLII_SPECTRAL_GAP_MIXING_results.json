@@ -1,0 +1,150 @@
+{
+  "parameters": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "r": 2,
+    "s": -4,
+    "m_r": 24,
+    "m_s": 15
+  },
+  "spectral_gap": {
+    "lambda_2_P": {
+      "fraction": "1/6",
+      "numerator": 1,
+      "denominator": 6,
+      "float": 0.16666666666666666
+    },
+    "lambda_min_P": {
+      "fraction": "-1/3",
+      "numerator": -1,
+      "denominator": 3,
+      "float": -0.3333333333333333
+    },
+    "delta": {
+      "fraction": "5/6",
+      "numerator": 5,
+      "denominator": 6,
+      "float": 0.8333333333333334
+    },
+    "delta_formula_k_minus_r_over_k": {
+      "fraction": "5/6",
+      "numerator": 5,
+      "denominator": 6,
+      "float": 0.8333333333333334
+    },
+    "delta_q_form": {
+      "fraction": "5/6",
+      "numerator": 5,
+      "denominator": 6,
+      "float": 0.8333333333333334
+    },
+    "gap_all_forms_equal": true,
+    "inv_delta": {
+      "fraction": "6/5",
+      "numerator": 6,
+      "denominator": 5,
+      "float": 1.2
+    },
+    "delta_s": {
+      "fraction": "4/3",
+      "numerator": 4,
+      "denominator": 3,
+      "float": 1.3333333333333333
+    },
+    "inv_delta_s": {
+      "fraction": "3/4",
+      "numerator": 3,
+      "denominator": 4,
+      "float": 0.75
+    },
+    "k_times_delta": {
+      "fraction": "10",
+      "numerator": 10,
+      "denominator": 1,
+      "float": 10.0
+    },
+    "k_times_delta_equals_k_minus_r": true,
+    "k_times_delta_equals_q2_plus_1": true
+  },
+  "kemeny_decomposition": {
+    "K_r_term": {
+      "fraction": "144/5",
+      "numerator": 144,
+      "denominator": 5,
+      "float": 28.8
+    },
+    "K_s_term": {
+      "fraction": "45/4",
+      "numerator": 45,
+      "denominator": 4,
+      "float": 11.25
+    },
+    "K_total": {
+      "fraction": "801/20",
+      "numerator": 801,
+      "denominator": 20,
+      "float": 40.05
+    },
+    "K_expected": {
+      "fraction": "801/20",
+      "numerator": 801,
+      "denominator": 20,
+      "float": 40.05
+    },
+    "kemeny_decomposed": true,
+    "K_r_term_over_K_s_term": {
+      "fraction": "64/25",
+      "numerator": 64,
+      "denominator": 25,
+      "float": 2.56
+    },
+    "ratio_equals_64_over_25": true,
+    "ratio_formula": "(m_r*(k-s)) / (m_s*(k-r)) = 64/25 = (8/5)^2"
+  },
+  "mixing_time": {
+    "delta_float": 0.8333333333333334,
+    "inv_delta_float": 1.2,
+    "t_mix_eps_half_bound": 5,
+    "t_mix_eps_0.1_bound": 8,
+    "t_mix_eps_inv_v_bound": 9,
+    "formula": "t_mix(eps) <= ceil(log(v/eps) / delta)"
+  },
+  "ramanujan": {
+    "ramanujan_bound_2sqrt_km1": 6.6332495807108,
+    "r_eigenvalue": 2,
+    "s_eigenvalue": -4,
+    "is_ramanujan_r": true,
+    "is_ramanujan_s": true,
+    "both_satisfy_ramanujan": true,
+    "statement": "W(3,3) is a Ramanujan graph: |lambda_j| <= 2*sqrt(k-1) for all j != 0"
+  },
+  "expander": {
+    "spectral_expansion_constant": {
+      "fraction": "1/3",
+      "numerator": 1,
+      "denominator": 3,
+      "float": 0.3333333333333333
+    },
+    "constant_is_1_over_3": true,
+    "statement": "Expander constant = |s|/k = 1/3 (|s| >= |r|, so s-eigenvalue governs)"
+  },
+  "norm_P": {
+    "norm_P_sq": {
+      "fraction": "10/3",
+      "numerator": 10,
+      "denominator": 3,
+      "float": 3.3333333333333335
+    },
+    "norm_P_sq_equals_v_over_k": true
+  },
+  "master_identities_summary": {
+    "gap_forms_equal": true,
+    "k_times_delta_equals_k_minus_r": true,
+    "kemeny_decomposed": true,
+    "K_term_ratio_64_25": true,
+    "is_ramanujan": true,
+    "expander_constant_1_over_3": true,
+    "norm_P_sq_v_over_k": true
+  }
+}

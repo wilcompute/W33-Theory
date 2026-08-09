@@ -1,0 +1,35 @@
+{
+  "part": "CCCLI",
+  "title": "Larger W33 Structure Sector Maps Compiler",
+  "verified": true,
+  "checks_passed": 11,
+  "checks_total": 11,
+  "w33_structural_atoms": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "edges": 240,
+    "directed_edges": 480,
+    "triangles": 160,
+    "k4_lines": 40,
+    "k4_components": 90,
+    "quotient_points": 45,
+    "h1_dim": 81,
+    "e8_grade_dims": [86, 81, 81],
+    "hashimoto_outdegree": 11,
+    "triangle_turns": 2,
+    "open_turns": 9
+  },
+  "derived_maps_summary": {
+    "hashimoto_role": {"sector_count": 2, "blocks": {"0": ["mass", "heat_trace", "zeta"], "1": ["gap", "spinor_trace", "resolvent_trace"]}},
+    "turn_role": {"sector_count": 2, "blocks": {"0": ["mass", "heat_trace", "zeta"], "1": ["gap", "spinor_trace", "resolvent_trace"]}},
+    "tetra_role": {"sector_count": 4, "blocks": {"0": ["mass"], "1": ["gap"], "2": ["heat_trace", "zeta"], "3": ["spinor_trace", "resolvent_trace"]}},
+    "quotient_role": {"sector_count": 4, "blocks": {"0": ["mass"], "1": ["gap"], "2": ["heat_trace", "zeta"], "3": ["spinor_trace", "resolvent_trace"]}},
+    "grading_role": {"sector_count": 2, "blocks": {"0": ["mass", "heat_trace", "zeta"], "1": ["gap", "spinor_trace", "resolvent_trace"]}},
+    "dirac_role": {"sector_count": 2, "blocks": {"0": ["mass", "heat_trace", "zeta"], "1": ["gap", "spinor_trace", "resolvent_trace"]}}
+  },
+  "recommended_test_order": ["dirac_role", "grading_role", "hashimoto_role", "turn_role", "quotient_role", "tetra_role"],
+  "architecture_upgrade": "CCCL tested sector maps from the RG operator registry. CCCLI derives additional sector maps from larger W33 motifs: Hashimoto carrier, turn split, K4/quotient structure, E8/E6 grading, and Dirac/KG factorization.",
+  "theorem": "Larger W33 structures induce additional response-sector hypotheses by assigning each channel a role in the Hashimoto carrier, turn split, K4 local geometry, quotient transport, E8/E6 grading, and Dirac/KG factorization layers. These maps are deterministic consequences of the chosen structural provenance labels and are ready for the same GLS/BIC comparison stack.",
+  "honesty_boundary": "These maps are structural hypotheses derived from known W33 motifs. They still require either empirical response data or deeper representation-theoretic derivation to decide which map is physically active."
+}

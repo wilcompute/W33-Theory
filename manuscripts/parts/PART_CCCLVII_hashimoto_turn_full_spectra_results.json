@@ -1,0 +1,20 @@
+{
+  "part": "CCCLVII",
+  "title": "Hashimoto / Turn Full Spectra Compiler",
+  "verified": true,
+  "checks_passed": 7,
+  "checks_total": 7,
+  "adjacency_spectrum": "12^1, 2^24, (-4)^15",
+  "exact_hashimoto_spectrum": {
+    "dimension": 480,
+    "total_multiplicity": 480,
+    "spectral_radius": 11.0,
+    "description": "roots of x^2-lambda x+11 for lambda in {12,2,-4}, plus Ihara extra roots +1 and -1 each with multiplicity 200; the +1 root also receives the Perron contribution, so total +1 multiplicity is 201"
+  },
+  "optional_turn_spectra": {
+    "note": "T/O dense 480x480 eigensolve is optional and disabled by default for fast CI; sparse moments/ranks/commutator data are in CCCLV"
+  },
+  "architecture_upgrade": "CCCLV built B=T+O. CCCLVII supplies the exact full Hashimoto spectrum from Ihara--Bass and prepares optional numerical spectra for the triangle/open-turn operators.",
+  "theorem": "For W(3,3) with collinearity spectrum 12^1, 2^24, (-4)^15 and k=12, the non-backtracking Hashimoto spectrum consists of roots of x^2-lambda x+11 for each adjacency eigenvalue lambda, plus Ihara extra roots +1 and -1 each with multiplicity E-V=200. Thus the full 480-dimensional B spectrum is determined exactly.",
+  "honesty_boundary": "The exact B spectrum is complete. Dense numerical spectra for T and O are optional because they require a 480x480 eigensolve; the compiler records the path without forcing it in CI."
+}

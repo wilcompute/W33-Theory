@@ -1,0 +1,19 @@
+{
+  "part": "XXIV",
+  "title": "Transport Obstruction and the g3 Holonomy Anomaly",
+  "T2_fractions": {"identity": 0.4, "shear": 0.2, "scale": 0.4},
+  "T3_mismatch_total": 162,
+  "obstruction_class": {"generator": "g3", "charge_sector": 2, "value_mod3": 1},
+  "holonomy_omega3": {"real": -0.5, "imag": 0.8660254037844387, "arg_deg": 120.0},
+  "J_W33_geometric": 7.216878364870322e-2,
+  "J_CKM_experimental": 3.08e-5,
+  "J_ratio": 2343.14,
+  "T4_Z24_connection": true,
+  "shear_A5_conjugacy_match": true,
+  "predictions": {
+    "P13": "Zero CP phase in first-generation quark sector (g2,g5 sectors, z-shift=0)",
+    "P14": "Conjugate phase omega_3* in anti-quark sector (g8,g9 sectors, z-shift=2)",
+    "P15": "T4 block count 24 = |SL(2,Z3)| = |binary tetrahedral group 2T| links to 24-cell polytope",
+    "P16": "Shear fraction 1/5 = 1/|conjugacy classes of A5| connects affine transport to icosahedral symmetry"
+  }
+}

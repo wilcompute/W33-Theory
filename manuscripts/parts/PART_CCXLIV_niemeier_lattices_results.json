@@ -1,0 +1,27 @@
+{
+  "Part": "CCXLIV",
+  "Title": "Niemeier Lattices and the Leech Lattice",
+  "Verified": true,
+  "checks_passed": 36,
+  "checks_total": 36,
+  "niemeier": {
+    "count": 24,
+    "with_roots": 23,
+    "without_roots": 1
+  },
+  "leech": {
+    "rank": 24,
+    "min_norm": 4,
+    "kissing": 196560
+  },
+  "golay_code": {
+    "length": 24,
+    "dimension": 12,
+    "min_distance": 8,
+    "codewords": 4096
+  },
+  "sphere_packing": {
+    "dim_8": 8,
+    "dim_24": 24
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "part": "CCCCXXXIX",
+  "title": "E8 Edge/Root Dictionary Boundary Witness",
+  "Verified": true,
+  "checks_total": 15,
+  "checks_passed": 15,
+  "checks": [
+    [
+      "W33 SRG verified as (40,12,2,4)",
+      true
+    ],
+    [
+      "W33 edge count = 240",
+      true
+    ],
+    [
+      "L(W33) has 240 vertices",
+      true
+    ],
+    [
+      "L(W33) is regular degree 22",
+      true
+    ],
+    [
+      "E8 root count = 240",
+      true
+    ],
+    [
+      "E8 doubled norms all 8",
+      true
+    ],
+    [
+      "Sample root packet dot=8 occurs once",
+      true
+    ],
+    [
+      "Sample root packet dot=-8 occurs once",
+      true
+    ],
+    [
+      "Sample root packet dot=4 occurs 56 times",
+      true
+    ],
+    [
+      "Sample root packet dot=-4 occurs 56 times",
+      true
+    ],
+    [
+      "Sample root packet dot=0 occurs 126 times",
+      true
+    ],
+    [
+      "E8 dot=1 graph degree set is {56}",
+      true
+    ],
+    [
+      "E8 dot=0 graph degree set is {126}",
+      true
+    ],
+    [
+      "E8 dot=-1 graph degree set is {56}",
+      true
+    ],
+    [
+      "No naive one-threshold E8 graph matches L(W33) degree 22",
+      true
+    ]
+  ],
+  "w33": {
+    "vertices": 40,
+    "degree": 12,
+    "edges": 240,
+    "line_graph_vertices": 240,
+    "line_graph_degree_set": [
+      22
+    ]
+  },
+  "e8": {
+    "roots": 240,
+    "doubled_norms": [
+      8
+    ],
+    "sample_dot_packet": {
+      "-8": 1,
+      "-4": 56,
+      "0": 126,
+      "4": 56,
+      "8": 1
+    },
+    "naive_threshold_degree_sets": {
+      "dot_plus_one": [
+        56
+      ],
+      "dot_zero": [
+        126
+      ],
+      "dot_minus_one": [
+        56
+      ]
+    }
+  },
+  "key_observations": [
+    "Count equality 240=240 remains exact (W33 edges vs E8 roots).",
+    "L(W33) is 22-regular on 240 vertices.",
+    "Naive one-threshold E8 root graphs are 56-regular or 126-regular.",
+    "Hence no one-threshold E8 inner-product graph can be L(W33).",
+    "Any explicit dictionary must include extra structure beyond one-threshold adjacency."
+  ],
+  "honesty_boundary": "This part proves a no-go for naive one-threshold graph isomorphisms. It does not construct the full operator-level edge\u2194root dictionary."
+}

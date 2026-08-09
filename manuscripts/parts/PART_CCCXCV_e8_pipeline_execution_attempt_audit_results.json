@@ -1,0 +1,23 @@
+{
+  "part": "CCCXCV",
+  "title": "E8 Pipeline Execution Attempt Audit",
+  "verified": true,
+  "checks_passed": 6,
+  "checks_total": 6,
+  "workflow": ".github/workflows/e8-operation-bridge-pipeline.yml",
+  "runner": "tools/run_e8_operation_bridge_pipeline.py",
+  "run_request_marker": "artifacts/ci/e8_operation_bridge_run_request.json",
+  "commits": {
+    "workflow_update": "7c5b774e3d380eb05c0bc95871013d899acd8e39",
+    "run_request": "cc1a9c0edcadb296fc8aa86baef941c814ef4797"
+  },
+  "execution_status": "REQUESTED_BUT_REMOTE_RUN_NOT_VISIBLE_THROUGH_CONNECTOR",
+  "manual_verification_steps": [
+    "Open GitHub Actions",
+    "Select E8 Operation Bridge Pipeline",
+    "Check run for commit cc1a9c0edcadb296fc8aa86baef941c814ef4797",
+    "Download e8-operation-bridge-artifacts if present"
+  ],
+  "architecture_upgrade": "Records the attempted execution of the E8 operation bridge pipeline after wiring push-mode full runs and pushing a run-request marker.",
+  "honesty_boundary": "This is not a successful remote run log. The GitHub connector returned no workflow runs/statuses for the relevant commits, so the remote execution must be checked directly in GitHub Actions or rerun manually via workflow_dispatch."
+}

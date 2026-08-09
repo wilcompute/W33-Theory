@@ -1,0 +1,39 @@
+{
+  "part": "MCXCIV",
+  "theorem": "Reye horizon symmetry-genus reciprocity lock",
+  "horizon_packet": {
+    "genus": 6,
+    "payload": 66,
+    "parity": 6,
+    "total": 72,
+    "identity": "72 = 66 + 6 with genus=6"
+  },
+  "symmetry_packet": {
+    "aut_reye": 576,
+    "aut_tomotope": 96,
+    "ratio": 6,
+    "identity": "576/96 = 6"
+  },
+  "reciprocity_lock": {
+    "identity": "|Aut(Reye)|/|Aut(T)| = genus = parity = 6 and 72 = 66 + 6"
+  },
+  "finite_universality_surrogate": {
+    "statement": "horizon redundancy equals both topological genus and symmetry lift ratio of the shared Reye spine",
+    "boundary": "finite incidence/topology/symmetry reciprocity; not a continuum dynamics theorem"
+  },
+  "claim_boundary": "finite symmetry-genus-code reciprocity law on MCXCII-MCXCIII packets",
+  "checks": {
+    "mcxcii_genus_is_6": true,
+    "mcxcii_parity_is_6": true,
+    "mcxcii_code_splits_as_66_plus_6": true,
+    "mcxcii_payload_is_k12_edges": true,
+    "mcxciii_symmetry_is_576_over_96": true,
+    "symmetry_ratio_is_6": true,
+    "symmetry_ratio_equals_genus": true,
+    "symmetry_ratio_equals_parity": true,
+    "reye_symmetry_equals_genus_times_tomotope_symmetry": true,
+    "reye_symmetry_equals_parity_times_tomotope_symmetry": true,
+    "total_code_equals_payload_plus_symmetry_ratio": true
+  },
+  "n_verified": 11
+}

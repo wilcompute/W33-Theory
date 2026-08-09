@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "all_checks_pass": true,
+  "check_count": 62,
+  "checks_passing": 62,
+  "failed_checks": [],
+  "category_counts": {
+    "atom_checks": 9,
+    "e8_checks": 15,
+    "leech_checks": 7,
+    "barnes_wall_checks": 4,
+    "d4_checks": 4,
+    "exceptional_dims_checks": 7,
+    "coxeter_checks": 8,
+    "structural_checks": 8
+  },
+  "optimal_packing_dims": [
+    4,
+    8,
+    24
+  ],
+  "e8_kissing": 240,
+  "leech_kissing": 196560,
+  "bw_kissing": 4320,
+  "d4_kissing": 24,
+  "e8_lie_dim": 248,
+  "w33_atoms": {
+    "Q": 3,
+    "LAM": 2,
+    "V": 40,
+    "K": 12,
+    "PHI3": 13,
+    "PHI4": 10,
+    "PHI6": 7,
+    "J_INV": 8,
+    "EDGES": 240,
+    "EIG_MAX": 5
+  },
+  "theorem_cxcvii": "Every fundamental invariant of the optimal sphere packings in dimensions 4, 8, and 24 \u2014 kissing numbers, lattice dimensions, Coxeter numbers, Hermite constants, Lie algebra dimensions \u2014 is an integer polynomial in the W(3,3) atoms {Q,LAM,V,K,PHI3,PHI4,PHI6,J_INV,EDGES,EIG_MAX} with zero free parameters."
+}

@@ -1,0 +1,31 @@
+{
+  "part": "CCCVII",
+  "title": "Line Graph Spectrum of W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "V": 40,
+    "K": 12,
+    "L_V": 240,
+    "L_EDGES": 2640,
+    "L_VALENCY": 22,
+    "L_EIG_0": 22,
+    "L_EIG_1": 12,
+    "L_EIG_2": 6,
+    "L_EIG_3": -2,
+    "MULT_L3": 200,
+    "L_TRACE_SQ": 5280
+  },
+  "discoveries": [
+    "L_EIG_0=22=K+ALPHA: largest line graph eigenvalue encodes SRG valency plus fine-structure constant proxy",
+    "L_EIG_1=K=12: middle line eigenvalue equals SRG valency exactly",
+    "L_EIG_2=6=LAM*GENERATIONS=K//2: smallest positive line eigenvalue encodes generations and SRG lambda",
+    "MULT_L3=200=(ALPHA//2)*V: null-space multiplicity of -2 encodes half-ALPHA times V",
+    "tr(A(L)^2)=5280=V*K*(K-1)=2*EDGES*(K-1): second moment has dual SM encoding",
+    "L_EIG_0=L_VALENCY=22: line graph is regular (always true for regular G), confirming Perron=degree",
+    "L_EIG_0-L_EIG_2=16=K+EW_GAUGE_4: eigenvalue gap encodes electroweak gauge factor",
+    "L_EIG_0+L_EIG_3=20=2*ALPHA: Perron plus (-2) recovers twice the fine-structure proxy",
+    "L_EIG_1-|L_EIG_3|=10=ALPHA: middle eigenvalue minus 2 recovers ALPHA exactly"
+  ]
+}

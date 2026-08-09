@@ -1,0 +1,36 @@
+{
+  "part": "MCLXXXIV",
+  "theorem": "Q4-tomotope index staircase law",
+  "staircase": {
+    "m0_medial_incidences": 48,
+    "m1_q4_incidences": 96,
+    "m2_tomotope_flags": 192,
+    "m3_flag_doubler": 384,
+    "identity": "48 -> 96 -> 192 -> 384 (x2 each step)"
+  },
+  "monodromy_area_lock": {
+    "monodromy": 18432,
+    "outer_rectangle": 18432,
+    "inner_rectangle": 18432,
+    "identity": "18432 = 48*384 = 96*192"
+  },
+  "finite_universality_surrogate": {
+    "statement": "monodromy is an index-area invariant of the Q4/tomotope doubling staircase",
+    "boundary": "finite incidence/index lock; not a continuum field equation"
+  },
+  "claim_boundary": "finite index-staircase factorization law on Q4/tomotope packets",
+  "checks": {
+    "doubling_step_48_to_96": true,
+    "doubling_step_96_to_192": true,
+    "doubling_step_192_to_384": true,
+    "staircase_ratio_is_1_2_4_8": true,
+    "monodromy_equals_outer_rectangle": true,
+    "monodromy_equals_inner_rectangle": true,
+    "outer_inner_rectangles_match": true,
+    "monodromy_over_m0_is_m3": true,
+    "monodromy_over_m1_is_m2": true,
+    "monodromy_over_m2_is_m1": true,
+    "monodromy_over_m3_is_m0": true
+  },
+  "n_verified": 11
+}

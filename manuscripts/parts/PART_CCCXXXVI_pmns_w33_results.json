@@ -1,0 +1,178 @@
+{
+  "part": "CCCXXXVI",
+  "title": "PMNS lepton-mixing angles in W(3,3): sin^2 theta_{12,23,13}",
+  "Verified": true,
+  "checks_total": 22,
+  "checks_passed": 22,
+  "checks": [
+    [
+      "sin^2 theta_12 = mu/Phi_3 = 4/13",
+      true
+    ],
+    [
+      "sin^2 theta_23 = mu/Phi_6 = 4/7",
+      true
+    ],
+    [
+      "sin^2 theta_13 = 9/400",
+      true
+    ],
+    [
+      "sin^2 theta_13 = q^2/(lam*Phi_4)^2",
+      true
+    ],
+    [
+      "Phi_3 = 13",
+      true
+    ],
+    [
+      "Phi_6 = 7",
+      true
+    ],
+    [
+      "MU = 4",
+      true
+    ],
+    [
+      "(lam*Phi_4)^2 = 400",
+      true
+    ],
+    [
+      "sin^2 theta_12 ~ 0.308",
+      true
+    ],
+    [
+      "sin^2 theta_23 ~ 0.571",
+      true
+    ],
+    [
+      "sin^2 theta_13 = 0.0225",
+      true
+    ],
+    [
+      "|z_12| < 1",
+      true
+    ],
+    [
+      "|z_23| < 1",
+      true
+    ],
+    [
+      "|z_13| < 1",
+      true
+    ],
+    [
+      "theta_12 ~ 33.6 deg",
+      true
+    ],
+    [
+      "theta_23 ~ 49.1 deg",
+      true
+    ],
+    [
+      "theta_13 ~ 8.6 deg",
+      true
+    ],
+    [
+      "sin^2 theta_12 / sin^2 theta_23 = Phi_6 / Phi_3 = 7/13",
+      true
+    ],
+    [
+      "ratio = 7/13",
+      true
+    ],
+    [
+      "sin^2 theta_12 numerator = mu = 4",
+      true
+    ],
+    [
+      "sin^2 theta_23 numerator = mu = 4",
+      true
+    ],
+    [
+      "(lam * Phi_4)^2 = 400 = sin^2 theta_13 denominator",
+      true
+    ]
+  ],
+  "constants": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "F": 24,
+    "G": 15,
+    "PHI3": 13,
+    "PHI4": 10,
+    "PHI6": 7
+  },
+  "predictions": {
+    "sin2_theta_12_W33": "4/13",
+    "sin2_theta_23_W33": "4/7",
+    "sin2_theta_13_W33": "9/400",
+    "sin2_theta_12_decimal": 0.3076923076923077,
+    "sin2_theta_23_decimal": 0.5714285714285714,
+    "sin2_theta_13_decimal": 0.0225,
+    "theta_12_deg": 33.69006752597979,
+    "theta_23_deg": 49.10660535086909,
+    "theta_13_deg": 8.626926558678639,
+    "ratio_12_over_23": "7/13"
+  },
+  "external_inputs": {
+    "sin2_theta_12_NuFit5.2_NH": [
+      0.303,
+      0.012
+    ],
+    "sin2_theta_23_NuFit5.2_NH": [
+      0.572,
+      0.018
+    ],
+    "sin2_theta_13_NuFit5.2_NH": [
+      0.02203,
+      0.00056
+    ],
+    "source": "NuFit 5.2 (2023) global oscillation fit, Normal Hierarchy"
+  },
+  "residuals": [
+    {
+      "id": "PMNS_THETA_12_W33",
+      "observable": "sin^2 theta_12 (solar)",
+      "theory_value": "mu / Phi_3 = 4/13",
+      "theory_decimal": 0.3076923076923077,
+      "measured_value": 0.303,
+      "uncertainty": 0.012,
+      "residual": 0.004692307692307718,
+      "z_score": 0.39102564102564313,
+      "status": "PASS_WITHIN_1_SIGMA"
+    },
+    {
+      "id": "PMNS_THETA_23_W33",
+      "observable": "sin^2 theta_23 (atmospheric NH)",
+      "theory_value": "mu / Phi_6 = 4/7",
+      "theory_decimal": 0.5714285714285714,
+      "measured_value": 0.572,
+      "uncertainty": 0.018,
+      "residual": -0.0005714285714285561,
+      "z_score": -0.0317460317460309,
+      "status": "PASS_WITHIN_1_SIGMA"
+    },
+    {
+      "id": "PMNS_THETA_13_W33",
+      "observable": "sin^2 theta_13 (reactor)",
+      "theory_value": "q^2 / (lam*Phi_4)^2 = 9/400",
+      "theory_decimal": 0.0225,
+      "measured_value": 0.02203,
+      "uncertainty": 0.00056,
+      "residual": 0.0004699999999999982,
+      "z_score": 0.8392857142857112,
+      "status": "PASS_WITHIN_1_SIGMA"
+    }
+  ],
+  "structural_observation": {
+    "shared_numerator": "mu = 4 in sin^2 theta_12 and sin^2 theta_23",
+    "ratio": "sin^2 theta_12 / sin^2 theta_23 = Phi_6 / Phi_3 = 7/13",
+    "comment": "Solar and atmospheric lepton-mixing strengths share the W(3,3) numerator mu = 4 and differ only by the choice of cyclotomic prime denominator: Phi_3 = 13 (solar) vs Phi_6 = 7 (atmospheric). Their ratio is therefore Phi_6/Phi_3 = 7/13, a pure W(3,3) integer ratio."
+  },
+  "theorem_statement": "The three PMNS lepton-mixing angles all admit W(3,3) closed forms with numerator and denominator small W(3,3) integers: sin^2 theta_12 = mu/Phi_3 = 4/13, sin^2 theta_23 = mu/Phi_6 = 4/7, sin^2 theta_13 = q^2/(lam*Phi_4)^2 = 9/400.  All three predictions land within 1 sigma of NuFit 5.2 NH best-fit values.",
+  "honesty_boundary": "NuFit 5.2 NH/IH degenerate for theta_23 octant; W(3,3) prediction sin^2 = 4/7 = 0.571 favors the upper octant (NH) over the lower octant (IH).  CP phase delta_CP not yet predicted in W(3,3); future T2K/NOvA improvements and DUNE will sharpen all PMNS predictions to ~0.5 sigma over the next decade."
+}

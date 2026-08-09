@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HoloBox — an executable fractal W33 microVM graph</title>
+  <style>
+    :root { color-scheme: dark; --ink:#eef5ff; --muted:#9fb1c7; --line:#263b55;
+      --blue:#68a9ff; --cyan:#5eead4; --rose:#fb7185; --panel:#101b2a; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:#07111d;
+      font:16px/1.6 Inter,ui-sans-serif,system-ui,sans-serif; }
+    main { width:min(1040px,calc(100% - 34px)); margin:0 auto; padding:48px 0 72px; }
+    a { color:#8bc2ff; }
+    .eyebrow { color:var(--cyan); font-weight:800; letter-spacing:.12em;
+      text-transform:uppercase; font-size:.78rem; }
+    h1 { max-width:850px; margin:.25rem 0 .7rem; font-size:clamp(2.3rem,7vw,5rem);
+      line-height:1.02; letter-spacing:-.045em; }
+    h2 { margin:2.4rem 0 .7rem; font-size:1.45rem; }
+    .lede { max-width:800px; color:#c7d5e8; font-size:1.15rem; }
+    .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+      gap:12px; margin:30px 0; }
+    .card { padding:18px; border:1px solid var(--line); background:var(--panel);
+      border-radius:14px; }
+    .stat { font-size:1.7rem; font-weight:850; color:var(--cyan); }
+    .label,.muted { color:var(--muted); }
+    .flow { display:grid; grid-template-columns:repeat(5,1fr); gap:8px; margin:20px 0; }
+    .flow div { padding:12px 8px; text-align:center; border:1px solid #315170;
+      border-radius:10px; background:#0b1726; }
+    .flow b { display:block; color:var(--blue); }
+    pre { overflow:auto; padding:18px; border:1px solid var(--line); border-radius:12px;
+      background:#050b12; color:#d9e7f7; }
+    code { font-family:ui-monospace,SFMono-Regular,Consolas,monospace; }
+    .boundary { border-left:4px solid var(--rose); padding:14px 18px;
+      background:#24131b; }
+    .proof { border-left:4px solid var(--cyan); padding:14px 18px;
+      background:#0b2525; }
+    ul { padding-left:1.25rem; }
+    footer { margin-top:48px; padding-top:20px; border-top:1px solid var(--line);
+      color:var(--muted); }
+    @media (max-width:760px) { .flow { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">Executable reference runtime · 19/19 Python · 7/7 GAP</div>
+  <h1>A network of microVMs that is itself a microVM.</h1>
+  <p class="lede">HoloBox stores a W33 leaf, a 40-child network, and every deeper
+    recursive network in one immutable state grammar. A nested guest can receive a
+    message, execute, and checkpoint without expanding or rewriting its siblings.</p>
+
+  <div class="stats">
+    <div class="card"><div class="stat">105,025,641</div><div class="label">internal network VMs at level 6</div></div>
+    <div class="card"><div class="stat">4,096,000,000</div><div class="label">addressable leaf VMs</div></div>
+    <div class="card"><div class="stat">4,201,025,641</div><div class="label">total stateful VMs</div></div>
+    <div class="card"><div class="stat">7</div><div class="label">uniform node blobs</div></div>
+    <div class="card"><div class="stat">≤ 2n</div><div class="label">W33 line hops for an n-digit route</div></div>
+  </div>
+
+  <h2>The implemented object</h2>
+  <div class="flow" aria-label="HoloBox lifecycle">
+    <div><b>build</b>seal image graph</div>
+    <div><b>send</b>route mailbox value</div>
+    <div><b>run</b>execute addressed guest</div>
+    <div><b>fork</b>copy one digest path</div>
+    <div><b>verify</b>replay every reachable hash</div>
+  </div>
+  <p>Each guest state is an incident point–line chamber. The six deterministic
+    instructions are named by behavior: <code>HP0..HP2</code> hold the point and
+    change the line; <code>HL0..HL2</code> hold the line and change the point. The
+    selector order is a declared software chart, not an intrinsic ordering supplied
+    by the geometry.</p>
+
+  <div class="proof"><strong>Exact fresh-transition check.</strong> At depth six,
+    delivery of the value <code>13</code> creates seven path-state blobs and one
+    content-addressed receipt. Executing the recipient consumes the value, reaches
+    accumulator 13, and creates seven path-state blobs. These are upper bounds for
+    arbitrary writes because a content-identical replay can reuse every key. Every
+    untouched sibling retains its original digest. The checked route takes 12 line
+    transactions, meeting the level-six bound 12 with zero stored next-hop tables.
+    Here one hop is a logical W33 line-bus transaction. BT827's chart-aware lowering
+    remains an 8n budget because it counts three cube and five chart-web moves per
+    digit.</div>
+
+  <h2>Run it</h2>
+  <pre><code>python3 analysis/holobox.py build --output /tmp/holobox --levels 6 \
+  --program RECV,HALT
+python3 analysis/holobox.py send /tmp/holobox --source 0/0/0/0/0/0 \
+  --target 3/10/17/24/31/38 --message 13 --output /tmp/holobox-message
+python3 analysis/holobox.py run /tmp/holobox-message \
+  --address 3/10/17/24/31/38 --commit /tmp/holobox-run
+python3 analysis/holobox.py verify /tmp/holobox-run</code></pre>
+
+  <h2>What is inherited, and what is new</h2>
+  <p>BT339 already asserted the <code>40^n/2n</code> hierarchy; BT350 supplied the
+    network-as-node nested-VM framing; Passes 2642–2644 built a same-port recursive
+    hardware module; and the Witting architecture designed immutable CID containers,
+    WASM/OCI components, policies, receipts, and a Projection Engine. HoloBox does not
+    rename those ideas. It fills their executable-state gap: nested
+    lifecycle, a content-addressed state DAG, mailbox delivery, addressed execution,
+    path-only copy-on-write, and one loader contract at every depth.</p>
+
+  <h2>Lowering path</h2>
+  <ul>
+    <li><strong>Artifact identity:</strong> the bundle deliberately follows the
+      <a href="https://specs.opencontainers.org/image-spec/">OCI image layout and descriptor shape</a>
+      while using W33-specific media types.</li>
+    <li><strong>Least-authority guest:</strong> a future leaf backend can expose the
+      same mailbox/lifecycle contract as a
+      <a href="https://component-model.bytecodealliance.org/design/components.html">WebAssembly Component</a>.</li>
+    <li><strong>Hardware-isolated guest:</strong> a future adapter can package state
+      around <a href="https://github.com/firecracker-microvm/firecracker/blob/main/docs/snapshotting/snapshot-support.md">Firecracker snapshots</a>
+      or a <a href="https://github.com/kata-containers/kata-containers/blob/main/docs/design/architecture/README.md">Kata sandbox</a>.</li>
+  </ul>
+
+  <div class="boundary"><strong>Scope boundary.</strong> This release is a deterministic
+    Python reference runtime and immutable content graph. “OCI-shaped” does not mean OCI
+    conformance. It provides no Linux namespace, guest kernel, KVM boundary, confidential
+    attestation, portable Firecracker snapshot, adversarial security proof, or measured
+    performance. The finite W33 relations organize state and routing; they do not create
+    isolation by themselves.</div>
+
+  <footer>
+    <a href="index.html">Return to the live atlas</a> ·
+    <a href="W33_FRACTAL_MICROVM_RUNTIME.md">runtime guide</a> ·
+    <a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/holobox.py">CLI source</a> ·
+    <a href="https://github.com/wilcompute/W33-Theory/blob/master/tests/test_w33_fractal_microvm_runtime.py">focused regression</a>
+  </footer>
+</main>
+</body>
+</html>

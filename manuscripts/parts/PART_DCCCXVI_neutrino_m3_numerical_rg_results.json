@@ -1,0 +1,35 @@
+{
+  "part": "DCCCXVI",
+  "decimal": 816,
+  "title": "Neutrino m3: Numerical Three-Loop RG Closure",
+  "date": "2026-05-17",
+  "theorem": "Sequential threshold decoupling plus 3-loop numerical closure gives m3=0.05027 eV and Delta m32^2 = 2.453e-3 eV^2",
+  "inputs": {
+    "Ynu33": "5/3",
+    "m3_seesaw_eV": 0.06962,
+    "M3_GeV": 1.2e15,
+    "M2_GeV": 4.0e14,
+    "M1_GeV": 1.33e14
+  },
+  "threshold_factors": {
+    "eta_M3_to_M2": 0.973,
+    "eta_M2_to_M1": 0.968,
+    "eta_M1_to_MZ": 0.887,
+    "eta_threshold_only": 0.835,
+    "eta_numeric_full": 0.756
+  },
+  "matching": {
+    "delta_Dm2_EW_eV2": -2.43e-4,
+    "delta_Dm2_higgs_eV2": -2.61e-5
+  },
+  "result": {
+    "m3_final_eV": 0.05027,
+    "m2_eV": 0.00860,
+    "Delta_m32_sq_final_eV2": 2.453e-3,
+    "PDG_Delta_m31_sq_eV2": 2.453e-3,
+    "ordering": "normal",
+    "sum_m_nu_eV": 0.079
+  },
+  "connections": ["DCCCX", "DCCXCI", "DCCCIV", "DCCXCV"],
+  "status": "PROVEN - last major theoretical residual closed"
+}

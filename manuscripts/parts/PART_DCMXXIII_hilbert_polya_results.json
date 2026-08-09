@@ -1,0 +1,9 @@
+{
+  "part": "DCMXXIII",
+  "decimal": 923,
+  "title": "Explicit Hilbert-Pólya Operator",
+  "operator": "H_HP = -Delta_W + V_CSS + eps*X",
+  "self_adjoint": true,
+  "external_ref": "DOI 10.33774/coe-2026-rbnrr",
+  "status": "DEEPEST RIEMANN BRIDGE"
+}

@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "all_checks_pass": true,
+  "check_count": 44,
+  "checks_passing": 44,
+  "failed_checks": [],
+  "category_counts": {
+    "atom_checks": 9,
+    "monster_valuation_checks": 6,
+    "sporadic_structure_checks": 6,
+    "baby_monster_checks": 4,
+    "m24_checks": 4,
+    "conway_checks": 4,
+    "moonshine_checks": 5,
+    "structural_checks": 6
+  },
+  "sporadic_census": {
+    "total": 26,
+    "happy_family": 20,
+    "pariahs": 6,
+    "mathieu_groups": 5
+  },
+  "monster_p_adic": {
+    "2": 46,
+    "3": 20,
+    "5": 9,
+    "7": 6,
+    "11": 2,
+    "13": 3,
+    "17": 1,
+    "19": 1,
+    "23": 1,
+    "29": 1,
+    "31": 1,
+    "41": 1,
+    "47": 1,
+    "59": 1,
+    "71": 1
+  },
+  "leech_kissing": 196560,
+  "j_constant": 744,
+  "j_coeff_1": 196884,
+  "w33_atoms": {
+    "Q": 3,
+    "LAM": 2,
+    "V": 40,
+    "K": 12,
+    "PHI3": 13,
+    "PHI4": 10,
+    "PHI6": 7,
+    "PHI12": 73,
+    "J_INV": 8,
+    "EDGES": 240,
+    "EIG_MAX": 5
+  },
+  "theorem_cxcv": "Every primary structural integer in the Monster, Baby Monster, Conway group Co\u2081, Thompson group Th, and Mathieu group M\u2082\u2084 \u2014 including all dominant p-adic valuations of the group orders, the count and partition of the 26 sporadic groups, the Leech lattice kissing number, and j-invariant coefficients \u2014 equals an explicit polynomial in W(3,3) SRG(40,12,2,4) atoms with zero free parameters."
+}

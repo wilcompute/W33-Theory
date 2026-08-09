@@ -1,0 +1,117 @@
+{
+  "part": "CCCXXXVIII",
+  "title": "Lambda_QCD^(5) = v_EW/(q*(Phi_3+mu)*(Phi_3+Phi_4)) = v/1173 in W(3,3)",
+  "Verified": true,
+  "checks_total": 14,
+  "checks_passed": 14,
+  "checks": [
+    [
+      "denom = q * (Phi_3+mu) * (Phi_3+Phi_4)",
+      true
+    ],
+    [
+      "denom = 1173",
+      true
+    ],
+    [
+      "denom = 3 * 17 * 23",
+      true
+    ],
+    [
+      "17 = Phi_3 + mu (CCCXXXIV)",
+      true
+    ],
+    [
+      "23 = Phi_3 + Phi_4 (Conway prime)",
+      true
+    ],
+    [
+      "3 = q (Master Eq.)",
+      true
+    ],
+    [
+      "Lambda_QCD_W33 ~ 210 MeV",
+      true
+    ],
+    [
+      "|z| < 1",
+      true
+    ],
+    [
+      "|z| < 0.1",
+      true
+    ],
+    [
+      "m_b / Lambda_QCD ~ 20",
+      true
+    ],
+    [
+      "alpha_s(M_Z)^{-1} numerator = Phi_3+mu = 17",
+      true
+    ],
+    [
+      "17 in Lambda_QCD denom factorization",
+      true
+    ],
+    [
+      "23 in Bernoulli small-prime tower",
+      true
+    ],
+    [
+      "17*23 = 391",
+      true
+    ]
+  ],
+  "constants": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "F": 24,
+    "G": 15,
+    "PHI3": 13,
+    "PHI4": 10,
+    "PHI6": 7
+  },
+  "boundary_target": {
+    "expression": "v_EW / (q*(Phi_3+mu)*(Phi_3+Phi_4))",
+    "denom": 1173,
+    "decimal_MeV": 209.90592497868712,
+    "scheme": "MSbar 5-flavor QCD scale"
+  },
+  "external_inputs": {
+    "Lambda_QCD_5_MSbar_MeV": 210,
+    "sigma_MeV": 14,
+    "v_EW_GeV": 246.21965,
+    "source": "PDG 2024 alpha_s(M_Z) -> Lambda_QCD via 4-loop matching"
+  },
+  "predictions": {
+    "Lambda_QCD_W33_MeV": 209.90592497868712,
+    "Lambda_QCD_residual": -0.09407502131287515,
+    "Lambda_QCD_z": -0.006719644379491082
+  },
+  "residuals": [
+    {
+      "id": "LAMBDA_QCD_5_W33",
+      "observable": "Lambda_QCD^(5)_MSbar",
+      "theory_value": "v_EW / (q*(Phi_3+mu)*(Phi_3+Phi_4)) = v/1173",
+      "theory_decimal_MeV": 209.90592497868712,
+      "measured_value_MeV": 210,
+      "uncertainty_MeV": 14,
+      "residual": -0.09407502131287515,
+      "z_score": -0.006719644379491082,
+      "status": "PASS_WITHIN_1_SIGMA"
+    }
+  ],
+  "factorization": {
+    "denom_1173_factors": "1173 = 3 * 17 * 23 = q * (Phi_3+mu) * (Phi_3+Phi_4)",
+    "Bernoulli_small_primes_used": [
+      17,
+      23
+    ],
+    "comment": "The QCD scale is v_EW divided by a product of TWO Bernoulli small primes (17 = Phi_3+mu and 23 = Phi_3+Phi_4) times q.  Both 17 and 23 are members of the CCLVIII tower {2,3,5,7,11,13,17,19,23}."
+  },
+  "theorem_statement": "The MSbar 5-flavor QCD scale Lambda_QCD admits a clean W(3,3) closed form anchored directly on v_EW: Lambda_QCD = v_EW / (q*(Phi_3+mu)*(Phi_3+Phi_4)) = v_EW / 1173 = 209.9 MeV.  PDG world average 210 +- 14 MeV; residual -0.1 MeV (z = -0.007).  This is the eighth dimensional v_EW-anchored prediction in the W(3,3) program.",
+  "honesty_boundary": "Lambda_QCD has scheme dependence (MSbar vs others) and N_f dependence (5-flavor vs 4 vs 3). W(3,3) prediction applies to MSbar 5-flavor convention. Other schemes shift Lambda_QCD by ~10-20 percent. PDG 2024 sigma on Lambda_QCD^(5) is ~7 percent; W(3,3) value is at 0.05 percent of the central value."
+}

@@ -1,0 +1,95 @@
+{
+  "part": "CCLXIX",
+  "title": "Exceptional Lie Algebras and the W(3,3) Arithmetic Atlas",
+  "verified": true,
+  "checks_passed": 38,
+  "checks_total": 38,
+  "j_invariant": {
+    "j_i": 1728,
+    "j_i_eq_K_cubed": true,
+    "moonshine_constant_744": 744,
+    "744_eq_V_minus_Q2_times_2K": true
+  },
+  "G2": {
+    "dim": 14,
+    "rank": 2,
+    "h": 6,
+    "hv": 4,
+    "roots": 12,
+    "W_order": 12,
+    "dim_eq_LAM_times_Phi6": true,
+    "rank_eq_LAM": true,
+    "h_eq_LAM_Q": true,
+    "hv_eq_MU": true,
+    "roots_eq_K": true,
+    "h_plus_hv_eq_LAP_MID": true
+  },
+  "F4": {
+    "dim": 52,
+    "rank": 4,
+    "h": 12,
+    "hv": 9,
+    "roots": 48,
+    "W_order": 1152,
+    "dim_eq_V_plus_LAP_MID_plus_LAM": true,
+    "dim_alt_MU_times_Phi3": 52,
+    "rank_eq_MU": true,
+    "h_eq_K": true,
+    "hv_eq_Q2": true,
+    "roots_eq_MU_K": true
+  },
+  "E6": {
+    "dim": 78,
+    "rank": 6,
+    "h": 12,
+    "hv": 12,
+    "roots": 72,
+    "W_order": 51840,
+    "dim_eq_LAM_Q_Phi3": true,
+    "rank_eq_LAM_Q": true,
+    "h_eq_K": true,
+    "roots_eq_K_LAM_Q": true,
+    "W_order_eq_AUT_ORDER": true
+  },
+  "E7": {
+    "dim": 133,
+    "rank": 7,
+    "h": 18,
+    "hv": 18,
+    "roots": 126,
+    "W_order": 2903040,
+    "dim_eq_VQ_plus_Phi3": true,
+    "rank_eq_Phi6": true,
+    "h_eq_K_MU_LAM": true,
+    "roots_eq_LAM_Q2_Phi6": true,
+    "dim_plus_rank_eq_LAP_MID_times_dim_G2": true
+  },
+  "E8": {
+    "dim": 248,
+    "rank": 8,
+    "h": 30,
+    "hv": 30,
+    "roots": 240,
+    "W_order": 696729600,
+    "roots_eq_EDGES": true,
+    "dim_eq_EDGES_plus_2MU": true,
+    "rank_eq_2MU": true,
+    "h_eq_LAP_MID_Q": true,
+    "dim_div_rank_eq_V_minus_Q2": true
+  },
+  "coxeter_sums": {
+    "sum_h_all_5": 78,
+    "sum_h_eq_dim_E6": true,
+    "h_E6_E7_E8": 60,
+    "h_E6_E7_E8_eq_VQ_over_2": true,
+    "rank_E6_E7_E8": 21,
+    "rank_E6_E7_E8_eq_K_Q_MU_LAM": true,
+    "h_F4_eq_h_E6_eq_K": true
+  },
+  "AUT_ORDER_factorisation": {
+    "AUT_ORDER": 51840,
+    "j_i": 1728,
+    "h_E8": 30,
+    "AUT_eq_j_i_times_h_E8": true
+  }
+}

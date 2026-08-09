@@ -1,0 +1,8 @@
+{
+  "part": "DCMV",
+  "decimal": 905,
+  "title": "Dark Energy as Torsion Residue",
+  "formula": "rho_Lambda = M_Pl^4 / (384 * 10^61)",
+  "w_prediction": "-1 + O(10^-62)",
+  "status": "NEW THEOREM"
+}

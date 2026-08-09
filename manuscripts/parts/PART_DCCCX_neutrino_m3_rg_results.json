@@ -1,0 +1,31 @@
+{
+  "part": "DCCCX",
+  "decimal": 810,
+  "title": "Neutrino m3: Full Two-Loop RG Derivation",
+  "date": "2026-05-17",
+  "theorem": "m3 = 0.0594 eV from seesaw (Y_nu)33=5/3 + 2-loop RG; Delta_m32^2 = 3.35e-3 eV^2, factor 1.37 above PDG",
+  "seesaw": {
+    "Y_nu_33": 1.6667,
+    "Y_nu_33_formula": "5/3 = GUT normalization of U(1)_Y",
+    "M3_GeV": 1.2e15,
+    "m3_seesaw_eV": 0.06962
+  },
+  "RG_running": {
+    "eta1_one_loop": 0.8534,
+    "avg_yt2": 0.07,
+    "log_M3_over_mZ": 36.0,
+    "eta2_two_loop": 0.9991,
+    "m3_phys_eV": 0.05943
+  },
+  "comparison": {
+    "m3_W33_eV": 0.0594,
+    "Delta_m32_sq_W33_eV2": 3.35e-3,
+    "PDG_Delta_m31_sq_eV2": 2.453e-3,
+    "PDG_uncertainty_eV2": 0.034e-3,
+    "ratio": 1.37,
+    "status": "factor 1.37 high; needs 3-loop numerical RG"
+  },
+  "open_problem": "3-loop numerical RGE integration needed to close 37% gap",
+  "connections": ["DCCLXXXIV", "DCCXCI", "DCCCIV"],
+  "status": "PARTIAL - 2-loop done; 3-loop numerical needed"
+}

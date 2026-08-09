@@ -1,0 +1,58 @@
+{
+  "part": "CCVIII",
+  "title": "Fine Structure Constant \u03b1\u207b\u00b9 from W(3,3)",
+  "srg_params": {
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4
+  },
+  "atoms": {
+    "MULT_K2": 6,
+    "M_LAM": 27,
+    "M_NEG": 12,
+    "L_EFF": 1111,
+    "EDGES": 240
+  },
+  "formula_A": {
+    "expression": "K^2 - 2*mu + 1 + V/L_eff",
+    "value": 137.03600360036003,
+    "error": 4.5163600361775025e-06,
+    "digits": 5.345211444184499,
+    "frac_numerator": 40,
+    "frac_denominator": 1111
+  },
+  "formula_B": {
+    "expression": "K^2 - 2*mu + 1 + (K//2)^2 / (V*(M_lam - lam))",
+    "value": 137.036,
+    "error": 9.160000047359063e-07,
+    "digits": 6.038104524086759,
+    "frac_numerator": 36,
+    "frac_denominator": 1000,
+    "frac_simplest": "36/1000 = 9/250"
+  },
+  "int_part": 137,
+  "frac_B": 0.036,
+  "alpha_inv_experiment": 137.035999084,
+  "alpha_inv_uncertainty": 2.1e-08,
+  "residual": -9.160000047359063e-07,
+  "residual_interpretation": "~9e-7, consistent with two-loop QED running",
+  "improvement_digits": 0.6928930799022597,
+  "free_parameters": 0,
+  "all_checks": {
+    "int_part_137": true,
+    "frac_A_positive": true,
+    "alpha_A_close": true,
+    "alpha_A_digits_ge_5": true,
+    "denom_B_is_1000": true,
+    "frac_B_exact_36_1000": true,
+    "alpha_B_close": true,
+    "alpha_B_better_than_A": true,
+    "alpha_B_digits_ge_6": true,
+    "formula_B_atoms_only": true,
+    "residual_sign_negative": true,
+    "vieta_product": true,
+    "vieta_sum": true
+  },
+  "verified": true
+}

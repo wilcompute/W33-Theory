@@ -1,0 +1,20 @@
+{
+  "theorem": "Zero-sheet barycentric recurrence-resonance law",
+  "shared_resonance_s": 2.0,
+  "entropy_peak_s": 2.0,
+  "concentration_trough_s": 2.0,
+  "entropy_dominant_nonzero_harmonic_index": 1,
+  "concentration_dominant_nonzero_harmonic_index": 1,
+  "entropy_first_harmonic_ratio": 0.04890644921144053,
+  "concentration_first_harmonic_ratio": 0.04764778751835801,
+  "entropy_recurrence_coefficients": [
+    -0.7930288200175566,
+    1.7579250530757946
+  ],
+  "concentration_recurrence_coefficients": [
+    -0.7838244705016053,
+    1.8194198703813187
+  ],
+  "entropy_max_abs_residual": 0.019827909272741362,
+  "concentration_max_abs_residual": 0.008619228280703717
+}

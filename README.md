@@ -88,6 +88,8 @@ held to, and it is the reason to trust the rest.
 | Controller representations | Abstract `(C₄×C₆):C₂` has order 48 and minimal faithful rational degree 4; the single-`J` image has order 24; the overlapping 3D carrier is `SL₃(Z)` and has no common inverter | [Pass 2306](PASS2306_CONTROLLER_REPRESENTATION_TRICHOTOMY.md) |
 | Complete quadratic map module | Full `PSp(4,3)` Hom dimensions are `Sym=(3,6,5,12)`, `Λ=(3,4,5,12)` on targets `(15,24,30,81)`; the combined `S₃` module is `16·1⊕16·sgn⊕9·std` | [Pass 2301 bases](analysis/w33_pass2301_complete_quadratic_hom_bases.py) · [Pass 2307 character theorem](PASS2307_QUADRATIC_HOM_S3_DECOMPOSITION.md) |
 | Canonical Weil outer action | At `q=7,11`, complex conjugation realizes the nonsquare outer similitude on both parity constituents and reverses the realified complex structure, giving exact `D₄` relations | [Pass 2302](analysis/w33_pass2302_q7_q11_weil_outer_inversion.py) |
+| Chamber Hecke and chiral carrier | The two 160-chamber panels generate the 8D type-`C₂` Hecke image; `Ω` has a literal, uniformly isoclinic point/line `24+24` carrier with squared coupling `3/8` | [Passes 4324–4334](analysis/BT4324_BT4334_CHAMBER_HECKE_AND_AUDITED_CORRECTIONS.md) |
+| Executable recursive runtime | HoloBox gives addressed mailbox/run, immutable path-copy checkpoints, one leaf/network loader, `4,201,025,641` level-six stateful VMs represented by seven uniform node blobs, and independent Python/GAP certificates | [runtime guide](docs/W33_FRACTAL_MICROVM_RUNTIME.md) · [evidence card](docs/holobox-fractal-microvm.html) |
 
 Those are the compact front doors. The larger [certified backbone](#certified-finite-backbone)
 below gives exact statements, tiers, and owning artifacts without forcing a
@@ -102,6 +104,7 @@ reader to guess which of several historical versions is strongest.
 | Reproducer / reviewer | [Reproduction commands](#reproduce-the-flagship-results) | [certificates](data/) · [tests](tests/) · [correction ledger](#things-we-got-wrong-on-purpose-and-in-public) |
 | Lattice / deformation researcher | [Determinant-law paper](docs/pdf/heisenberg_weyl_determinant_law.pdf) | [eigenlattice table](#eigenlattices-gluing-and-the-e₈-boundary--the-2026-07-arc) |
 | Photonic / systems reader | [Photonic Holonet](docs/pdf/photonic_holonet.pdf) · [source](photonic_holonet.tex) | [`HOLONET.md`](HOLONET.md); treat implementation claims as conditional |
+| Runtime / distributed-systems builder | [HoloBox evidence card](docs/holobox-fractal-microvm.html) · [CLI](analysis/holobox.py) | [runtime guide](docs/W33_FRACTAL_MICROVM_RUNTIME.md) · [focused regression](tests/test_w33_fractal_microvm_runtime.py) |
 | Assessing whether to fund this | [Machine blueprint](holonet_machine_blueprint.tex), Part I | then **What is not built** and the **errata index**, both at the end of that document |
 
 The corpus is too large to navigate by filenames. Search the **result itself**
@@ -109,10 +112,11 @@ in [`RESULTS_INDEX.md`](RESULTS_INDEX.md) before re-deriving it.
 
 ### The three manuscripts
 
-All three share one reader convention: **cream** boxes are plain language and are
-self-contained, **blue** boxes carry the exact statement with its scope, and **rose** boxes
-are claims this project published and then withdrew, each with the measurement that
-overturned it. You can read any of them by cream box alone.
+All three share one reader convention: **cream** boxes are plain language, **blue** boxes
+carry exact statements with scope, and **rose** boxes retain claims this project published
+and then withdrew together with the measurement that overturned them. The machine blueprint
+has full plain-language coverage; the two research atlases currently provide a reader guide
+and selected plain-language entries, not a cream-box paraphrase of every section.
 
 | Document | Pages | What it is |
 |---|---:|---|
@@ -124,22 +128,129 @@ All three build with **zero errors and zero undefined references**, enforced in 
 (`.github/workflows/manuscripts-compile.yml`) — an undefined reference is only a *warning*
 in LaTeX, so three of them once shipped through hundreds of clean builds.
 
-### The machine, in one table
+### The finite ISA design space, in one table
 
 Two independent asymmetries in the instruction set mean four possible machines, not one.
 Reported together because no two are the same design and the prices do not substitute:
 
-| machine | opcodes | mixing | ρ(B) | localisation | entropy production |
-|---|---:|---:|---:|---:|---:|
-| A — biased, irreversible (shipped) | 4 | 15 | 5.7469 | 0.6129 | infinite |
-| B — symmetric, irreversible | 6 | 12 | 8.7621 | 0.4604 | infinite |
-| C — biased, reversible | 8 | 16 | 5.7469 | 0.6129 | 0 |
-| D — symmetric, reversible | 12 | 13 | 8.7621 | 0.4604 | 0 |
+| machine | opcodes | p/f swap | mixing | ρ(B) | localisation peak | entropy production |
+|---|---:|:---:|---:|---:|---:|---:|
+| A — biased, irreversible (shipped) | 4 | no | 15 | 5.7469 | 0.6129 | infinite |
+| B — symmetric, irreversible | 6 | yes | 12 | 8.7621 | 0.4604 | infinite |
+| C — biased, reversible | 8 | no | 16 | 5.7469 | 0.6129 | 0 |
+| D — symmetric, reversible | 12 | yes | 13 | 8.7621 | 0.4604 | 0 |
 
 C shares A's spectrum *exactly*: closing an instruction set under inverses adds no new
-undirected edges, so it buys thermodynamics and nothing spectral. The arrow of time can be
-removed exactly; the bias can only be reduced. A zero-asymmetry machine does not exist in
-this family, and the obstruction is counting rather than choice.
+undirected edges, so it changes directed thermodynamic bookkeeping without changing that
+simple graph. Exact conjugation by the p/f pair swap proves B and D are symmetric and A and
+C are not. Machine D therefore removes both named asymmetries in the finite model. Its
+0.4604 peak is symmetric within-pair localisation, not residual p/f bias. These rows are
+analytic opcode/graph measurements; only A/C have earlier generic-cell synthesis, so B/D
+hardware pricing remains open.
+
+### Latest exact closure: the chamber Hecke machine
+
+The 160 W(3,3) chambers carry two native three-way switches: change the line at a fixed
+point (`P`) or the point on a fixed line (`L`). GAP proves
+
+\[
+P^2=2P+3I,\qquad L^2=2L+3I,\qquad PLPL=LPLP,
+\]
+
+and the generated algebra has dimension 8: the full q=3 type-C2 Iwahori–Hecke image. In
+the 320-state oriented Levi basis,
+
+\[
+B_{\rm Levi}=\begin{pmatrix}0&L\\P&0\end{pmatrix},
+\qquad B_{\rm Levi}^2=\operatorname{diag}(LP,PL).
+\]
+
+The chirality `Ω=LP−PL` has rank 48 and exact projector `Π₄₈=−Ω²/60`; on that packet,
+`Ω/√60` is a complex structure. The old folded cubic now has the exact normal form
+
+\[
+F=-68\Pi_{48}-31X-\frac{21}{2}\Omega+\frac23X\Omega,
+\qquad (F+68\Pi_{48})^2=-689\Pi_{48}.
+\]
+
+Pass 4334 makes the `24+24` count literal. Lift the eigenvalue-2 projectors of the W33
+point graph and dual line graph to chamber projectors `Qₚ,Qℓ`. Their rank-24 images meet
+only in zero and span `im Π₄₈`; moreover
+
+\[
+Q_pQ_\ell Q_p=\frac38Q_p,\qquad
+Q_\ell Q_pQ_\ell=\frac38Q_\ell.
+\]
+
+All 24 principal angles therefore have cosine `√6/4`, and for `Q=Qₚ+Qℓ` the orthogonal
+span projector is `Π₄₈=(8/5)(2Q−Q²)`. The conjugate packet is exactly the joined point and
+line eigencarriers, not merely a matching dimension count.
+
+Reproduce it with [the GAP witness](analysis/w33_pass4324_4327_chamber_hecke_hashimoto.g)
+and [focused regression](tests/test_w33_pass4324_4327_chamber_hecke_hashimoto.py), plus the
+[Pass-4334 carrier witness](analysis/w33_pass4334_point_line_chiral_carrier.g) and
+[regression](tests/test_w33_pass4334_point_line_chiral_carrier.py). The
+operators are exact finite relations; a deterministic three-way selector and synthesized
+chamber datapath are not yet built.
+
+### HoloBox: a recursive network that executes as one VM
+
+[`analysis/holobox.py`](analysis/holobox.py) now turns the 40-ary Holonet law into
+an executable, immutable runtime object. A leaf VM and a network of 40 child VMs
+use the same state media type and loader. More importantly, the identity is
+operational: address a nested guest, route it a mailbox value, execute it, and
+checkpoint the result by replacing only the digests on that one path.
+
+At six levels, a uniform HoloBox denotes `105,025,641` internal network VMs plus
+`4,096,000,000` addressable leaf VMs: `4,201,025,641` stateful VMs represented by
+only seven unique node blobs. In the frozen fresh transition, a depth-six
+delivery creates seven path-state blobs plus one receipt; recipient execution
+creates seven path-state blobs. These are upper bounds for arbitrary writes,
+because a content-identical replay may allocate no new CAS key. Untouched
+sibling digests remain byte-identical. Recursive routes use no stored
+next-hop table and take at most two W33 line transactions per radix-40 address
+digit. This `2n` logical metric is distinct from BT827's `8n` chart-aware
+lowering (`3` cube + `5` chart-web moves per digit). The frozen Python reference
+witness is **19/19 PASS**, with an independent **7/7 GAP** route certificate.
+
+```console
+python3 analysis/holobox.py build --output /tmp/holobox --levels 6 \
+  --program RECV,HALT
+python3 analysis/holobox.py send /tmp/holobox --source 0/0/0/0/0/0 \
+  --target 3/10/17/24/31/38 --message 13 --output /tmp/holobox-message
+python3 analysis/holobox.py run /tmp/holobox-message --address 3/10/17/24/31/38 \
+  --commit /tmp/holobox-run
+python3 analysis/holobox.py verify /tmp/holobox-run
+```
+
+BT339 owns the earlier `2n` hierarchy assertion, BT350 the nested-VM framing,
+Passes 2642--2644 the same-port recursive hardware module, and the older Witting
+architecture the CID-container, WASM/OCI, policy, receipt, and Projection Engine
+design. HoloBox implements the previously missing nested lifecycle and content
+graph; it does not claim those earlier ideas. Its bundle is **OCI-shaped, not yet
+OCI-conformant**, and the Python model
+is not Linux/KVM isolation, a guest kernel, confidential-computing attestation,
+or a performance result. See the [runtime guide](docs/W33_FRACTAL_MICROVM_RUNTIME.md),
+[19-check certificate](data/w33_fractal_microvm_runtime.json), and
+[GAP route witness](analysis/w33_fractal_microvm_routing.g).
+
+### Current correction ledger
+
+- Pass 4253's Z₍₂₇₃₁₎ lift has an explicit zero-voltage eight-cycle, hence girth exactly 8,
+  not at least 16. The valid current high-girth construction is the much larger Pass 4261
+  Z₍₇₅₀₀₁₉₎ lift.
+- The irregular Kotani–Sunada non-real-pole annulus has square roots. The former
+  no-square-root “band filling”/“closest irregular Ramanujan” score is withdrawn.
+- Affine translations act on 81 frames but descend to neither projective 40-carrier; they
+  do not force a point-side projective load port.
+- The true incidence comparator detects 1656/1920 = 69/80 differential rail substitutions
+  and 0/960 shared-control substitutions. The former 95.71% result used a golden run.
+- The complete universal-set census is 360, and the shipped ISA is tied 7th–12th by the
+  reported ρ value, not strictly 12th.
+
+The exact correction witness is
+[Passes 4328–4333](analysis/w33_pass4328_4333_audited_corrections.g); the readable evidence
+map is [here](analysis/BT4324_BT4334_CHAMBER_HECKE_AND_AUDITED_CORRECTIONS.md).
 
 ## Evidence tiers
 

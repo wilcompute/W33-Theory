@@ -1,0 +1,15 @@
+{
+  "part": "DCMLXXXI",
+  "decimal": 981,
+  "status": "VERIFIED: Heegner/Ihara coefficient audit and Gaussian division guard",
+  "summary": {
+    "part": "DCMLXXXI",
+    "decimal": 981,
+    "bass_parameter": 11,
+    "corrected_ihara_radius_squared": "1/11",
+    "incorrect_shadow_radius_squared": "1/12",
+    "gaussian_division_is_integral": false,
+    "gaussian_137_divides_74441": false,
+    "all_identities_hold": true
+  }
+}

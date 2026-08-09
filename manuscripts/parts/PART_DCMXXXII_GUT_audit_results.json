@@ -1,0 +1,10 @@
+{
+  "part": "DCMXXXII",
+  "decimal": 932,
+  "title": "Grand Unification Spectral Audit",
+  "parameters_explained": 23,
+  "total_fundamental": 30,
+  "coverage": "77%",
+  "open": ["m_e/m_p", "Yukawa hierarchy", "PMNS theta13 precise", "theta23 octant", "dark matter mass"],
+  "status": "AUDIT COMPLETE"
+}

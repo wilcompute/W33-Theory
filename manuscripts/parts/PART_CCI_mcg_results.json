@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "all_checks_pass": true,
+  "check_count": 49,
+  "checks_passing": 49,
+  "failed_checks": [],
+  "category_counts": {
+    "atom_checks": 9,
+    "homology_checks": 6,
+    "dlh_checks": 8,
+    "sl2z_checks": 6,
+    "teich_checks": 10,
+    "structural_checks": 10
+  },
+  "teichmuller_dims": {
+    "genus_1": 2,
+    "genus_2": 6,
+    "genus_3": 12,
+    "genus_5": 24
+  },
+  "dlh_generators": {
+    "genus_1": 3,
+    "genus_2": 5,
+    "genus_3": 7,
+    "genus_6": 13
+  },
+  "w33_atoms": {
+    "Q": 3,
+    "LAM": 2,
+    "V": 40,
+    "K": 12,
+    "PHI3": 13,
+    "PHI4": 10,
+    "PHI6": 7,
+    "J_INV": 8,
+    "EDGES": 240,
+    "EIG_MAX": 5
+  },
+  "theorem_cci": "The real dimension of Teichm\u00fcller space T_g encodes W(3,3) atoms: T_2=MULT_K2=6, T_3=K=12, T_5=LEECH_DIM=24. DLH generator counts: 2g+1 gives Q(g=1), EIG_MAX(g=2), PHI6(g=3), PHI3(g=6). SL(2,\u2124) orders: |S|=LAM\u00b2=4, |ST|=MULT_K2=6. Pants curve counts: Q(g=2), MULT_K2(g=3), K(g=5)."
+}

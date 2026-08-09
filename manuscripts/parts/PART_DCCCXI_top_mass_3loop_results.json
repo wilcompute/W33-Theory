@@ -1,0 +1,38 @@
+{
+  "part": "DCCCXI",
+  "decimal": 811,
+  "title": "Top Quark Pole Mass at Three-Loop QCD",
+  "date": "2026-05-17",
+  "theorem": "m_t_pole = 175.9 GeV after 3-loop QCD; PDG 172.57 ± 0.29 GeV; 11.5 sigma tension identified",
+  "MSbar_derivation": {
+    "leading_order_GeV": 162.6,
+    "QCD_2loop_GeV": 3.70,
+    "EW_correction_GeV": -0.50,
+    "Yukawa_GeV": 0.81,
+    "3loop_spectral_GeV": -1.712,
+    "Higgs_threshold_GeV": 0.786,
+    "total_MSbar_GeV": 165.6
+  },
+  "pole_mass_conversion": {
+    "K1": 0.04584,
+    "K2": 0.01290,
+    "K3": 0.002980,
+    "conversion_factor": 1.06172,
+    "m_t_pole_GeV": 175.9
+  },
+  "comparison": {
+    "W33_pole_GeV": 175.9,
+    "PDG_pole_GeV": 172.57,
+    "PDG_uncertainty_GeV": 0.29,
+    "residual_GeV": 3.33,
+    "residual_sigma": 11.5
+  },
+  "tension_analysis": {
+    "identified": true,
+    "magnitude_GeV": 3.33,
+    "proposed_resolution": "Graviton sector correction from Part DCCLXXXVII; non-perturbative pole mass string correction ~-3 GeV",
+    "priority": "highest remaining tension"
+  },
+  "connections": ["DCCCII", "DCCXCV", "DCCCVII", "DCCLXXXVII"],
+  "status": "TENSION - 11.5 sigma; graviton correction next"
+}

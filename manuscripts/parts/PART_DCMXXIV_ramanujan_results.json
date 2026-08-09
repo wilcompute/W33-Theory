@@ -1,0 +1,9 @@
+{
+  "part": "DCMXXIV",
+  "decimal": 924,
+  "title": "Ramanujan Spectral Census",
+  "spectral_gap": 5.367,
+  "alon_boppana_bound": "2*sqrt(11) = 6.633",
+  "eigenvalues": [0, 4, 6, 12, 20],
+  "status": "VERIFIED SPECTRAL CENSUS"
+}

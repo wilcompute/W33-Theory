@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Holonet UOR OS Replay</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #18212f;
+      --muted: #586272;
+      --line: #c8d0d9;
+      --paper: #f7f8fa;
+      --panel: #ffffff;
+      --accent: #0f766e;
+      --warn: #b45309;
+      --hot: #9f1239;
+      --blue: #1d4ed8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+    }
+    header {
+      padding: 22px clamp(18px, 4vw, 48px);
+      border-bottom: 1px solid var(--line);
+      background: #ffffff;
+      display: grid;
+      gap: 10px;
+    }
+    h1 { margin: 0; font-size: clamp(24px, 4vw, 42px); letter-spacing: 0; }
+    .subtitle { margin: 0; color: var(--muted); max-width: 980px; line-height: 1.45; }
+    main {
+      padding: 18px clamp(18px, 4vw, 48px) 42px;
+      display: grid;
+      gap: 18px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      padding: 12px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    button {
+      border: 1px solid #8894a3;
+      background: #ffffff;
+      color: var(--ink);
+      border-radius: 7px;
+      min-height: 36px;
+      padding: 0 12px;
+      font-weight: 650;
+      cursor: pointer;
+    }
+    button:hover { border-color: var(--accent); color: var(--accent); }
+    button.active { border-color: var(--accent); color: #fff; background: var(--accent); }
+    input[type="range"] { flex: 1 1 240px; min-width: 180px; accent-color: var(--accent); }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(120px, 1fr));
+      gap: 10px;
+    }
+    .stat, .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    .stat { padding: 12px; }
+    .label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+    .value { font-size: 24px; font-weight: 750; margin-top: 4px; }
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(280px, 1.1fr) minmax(320px, 1.6fr);
+      gap: 18px;
+      align-items: start;
+    }
+    .panel { padding: 14px; }
+    .panel h2 { margin: 0 0 10px; font-size: 18px; }
+    .ticklist { display: grid; gap: 8px; max-height: 520px; overflow: auto; padding-right: 4px; }
+    .tick {
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      padding: 10px;
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: 48px 1fr auto;
+      gap: 10px;
+      align-items: center;
+    }
+    .tick.active { border-color: var(--accent); box-shadow: inset 4px 0 0 var(--accent); }
+    .tick small { color: var(--muted); }
+    .board {
+      display: grid;
+      grid-template-columns: repeat(10, minmax(22px, 1fr));
+      gap: 6px;
+      margin-top: 10px;
+    }
+    .site {
+      aspect-ratio: 1;
+      border: 1px solid #b9c3ce;
+      border-radius: 6px;
+      display: grid;
+      place-items: center;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 10px;
+      color: #334155;
+      background: #f8fafc;
+    }
+    .site.used { background: #ccfbf1; border-color: var(--accent); color: #0f3f3a; font-weight: 700; }
+    .packet-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .packet-table th, .packet-table td { padding: 7px 8px; border-bottom: 1px solid #e2e8f0; text-align: left; }
+    .packet-table th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+    .packet-table tr.highlighted { background: #fff7ed; box-shadow: inset 4px 0 0 var(--hot); }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; }
+    .badge { border: 1px solid var(--line); border-radius: 999px; padding: 5px 9px; background: #fff; font-size: 13px; }
+    .ok { color: var(--accent); border-color: #99d7ce; }
+    .warn { color: var(--warn); border-color: #f1c27d; }
+    .clock-panel {
+      margin-top: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfdff;
+      padding: 10px;
+    }
+    .clock-title {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-bottom: 4px;
+    }
+    .clock-svg { width: 100%; max-height: 300px; display: block; }
+    .clock-link { stroke: #94a3b8; stroke-width: 1.4; opacity: .48; }
+    .clock-link.current { stroke: var(--hot); stroke-width: 3; opacity: .95; }
+    .frame-node { fill: #fff; stroke: #aab6c4; stroke-width: 1.4; }
+    .frame-node.path { fill: #e0f2fe; stroke: var(--blue); }
+    .frame-node.connector { fill: #fef3c7; stroke: var(--warn); }
+    .frame-node.current { fill: #ffe4e6; stroke: var(--hot); stroke-width: 2.6; }
+    .frame-g { cursor: pointer; }
+    .frame-label { font: 9px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #334155; text-anchor: middle; dominant-baseline: central; }
+    .frame-inspect {
+      margin-top: 8px;
+      font-size: 12px;
+      line-height: 1.45;
+      color: var(--muted);
+      max-height: 120px;
+      overflow: auto;
+    }
+    .frame-inspect strong { color: var(--ink); }
+    @media (max-width: 860px) {
+      .stats, .grid { grid-template-columns: 1fr; }
+      .board { grid-template-columns: repeat(5, minmax(34px, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Holonet UOR OS Replay</h1>
+    <p class="subtitle">A deterministic replay of the current Holonet wrapper packets at two layers: the 8-tick coarse site OS trace and the 14-tick strict line-context microkernel, with the 36-frame spread clock underneath.</p>
+  </header>
+  <main>
+    <section class="toolbar">
+      <button id="coarseMode" class="active">OS Ticks</button>
+      <button id="microMode">Microkernel</button>
+      <button id="clockMode">Clock Walk</button>
+      <button id="nativeMode">Clock Native</button>
+      <button id="prev">Prev</button>
+      <button id="play">Play</button>
+      <button id="next">Next</button>
+      <input id="slider" type="range" min="0" value="0">
+      <span id="tickLabel" class="badge"></span>
+    </section>
+    <section class="stats" id="stats"></section>
+    <section class="grid">
+      <div class="panel">
+        <h2 id="listTitle">Spread Ticks</h2>
+        <div class="ticklist" id="tickList"></div>
+      </div>
+      <div class="panel">
+        <h2 id="detailTitle">Tick</h2>
+        <div class="badges" id="badges"></div>
+        <div class="board" id="board"></div>
+        <div class="clock-panel">
+          <div class="clock-title"><span>Frame Clock</span><span id="clockMeta"></span></div>
+          <div id="clockPanel"></div>
+          <div id="frameInspect" class="frame-inspect"></div>
+        </div>
+        <h2 style="margin-top:18px;">Packets</h2>
+        <table class="packet-table">
+          <thead><tr><th>Item</th><th>Sites</th><th>Route</th></tr></thead>
+          <tbody id="packets"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script id="replay-data" type="application/json">{"trace":{"schema":"w33.holonet.os_scheduler_trace.v1","status":"PASS","source_scheduler_status":"PASS","packet_count":33,"spread_count":36,"tick_count":8,"all_packets_dispatched":true,"all_ticks_conflict_free":true,"max_dispatch_per_tick":10,"replay_hash":"1b76e15c0e129c8dde9e334348b088b8be188901de44bdac85e27165741e1dce","ticks":[{"tick":0,"spread_epoch":0,"queue_before":33,"dispatch_count":10,"queue_after":23,"used_site_count":25,"conflict_free":true,"packets":[{"packet_id":"cmd:0","report_index":0,"sites":["0011","1000"],"hops":1},{"packet_id":"cmd:1","report_index":0,"sites":["1101","1212"],"hops":1},{"packet_id":"cmd:2","report_index":0,"sites":["0001","0100","0111"],"hops":2},{"packet_id":"cmd:5","report_index":0,"sites":["0112","0121","1211"],"hops":2},{"packet_id":"cmd:6","report_index":0,"sites":["1110","1120"],"hops":1},{"packet_id":"stdin:0","report_index":0,"sites":["1200","1221"],"hops":1},{"packet_id":"stdout:3","report_index":0,"sites":["0110","1011","1021"],"hops":2},{"packet_id":"stdout:7","report_index":0,"sites":["0120","1202"],"hops":1},{"packet_id":"stderr:0","report_index":0,"sites":["0010","1010","1210"],"hops":2},{"packet_id":"cmd:7","report_index":1,"sites":["0102","1111","1112"],"hops":2}]},{"tick":1,"spread_epoch":1,"queue_before":23,"dispatch_count":6,"queue_after":17,"used_site_count":16,"conflict_free":true,"packets":[{"packet_id":"cmd:3","report_index":0,"sites":["0012","0100","0101"],"hops":2},{"packet_id":"cmd:4","report_index":0,"sites":["0001","1101","1201"],"hops":2},{"packet_id":"stdout:6","report_index":0,"sites":["0121","1011","1120"],"hops":2},{"packet_id":"stdout:8","report_index":0,"sites":["1200","1210"],"hops":1},{"packet_id":"cmd:1","report_index":1,"sites":["0011","1100","1211"],"hops":2},{"packet_id":"cmd:6","report_index":1,"sites":["1111","1202"],"hops":1}]},{"tick":2,"spread_epoch":2,"queue_before":17,"dispatch_count":6,"queue_after":11,"used_site_count":17,"conflict_free":true,"packets":[{"packet_id":"stdout:0","report_index":0,"sites":["0010","0100","0102"],"hops":2},{"packet_id":"stdout:1","report_index":0,"sites":["0012","0121","1102"],"hops":2},{"packet_id":"stdout:4","report_index":0,"sites":["0001","0101","1122"],"hops":2},{"packet_id":"stdout:5","report_index":0,"sites":["0112","1010","1101"],"hops":2},{"packet_id":"cmd:4","report_index":1,"sites":["0122","1202","1210"],"hops":2},{"packet_id":"stdin:0","report_index":1,"sites":["1200","1221"],"hops":1}]},{"tick":3,"spread_epoch":3,"queue_before":11,"dispatch_count":4,"queue_after":7,"used_site_count":12,"conflict_free":true,"packets":[{"packet_id":"stdout:2","report_index":0,"sites":["0011","0100","1111"],"hops":2},{"packet_id":"cmd:3","report_index":1,"sites":["0111","1101","1112"],"hops":2},{"packet_id":"cmd:8","report_index":1,"sites":["0001","1000","1201"],"hops":2},{"packet_id":"stdout:0","report_index":1,"sites":["0101","0102","1010"],"hops":2}]},{"tick":4,"spread_epoch":4,"queue_before":7,"dispatch_count":3,"queue_after":4,"used_site_count":8,"conflict_free":true,"packets":[{"packet_id":"cmd:0","report_index":1,"sites":["0010","0100","1110"],"hops":2},{"packet_id":"stdout:1","report_index":1,"sites":["0001","0102","1112"],"hops":2},{"packet_id":"stdout:2","report_index":1,"sites":["1200","1201"],"hops":1}]},{"tick":5,"spread_epoch":5,"queue_before":4,"dispatch_count":2,"queue_after":2,"used_site_count":6,"conflict_free":true,"packets":[{"packet_id":"cmd:2","report_index":1,"sites":["0001","0100","0120"],"hops":2},{"packet_id":"stderr:0","report_index":1,"sites":["0010","1010","1210"],"hops":2}]},{"tick":6,"spread_epoch":6,"queue_before":2,"dispatch_count":1,"queue_after":1,"used_site_count":3,"conflict_free":true,"packets":[{"packet_id":"cmd:5","report_index":1,"sites":["0100","0110","0111"],"hops":2}]},{"tick":7,"spread_epoch":7,"queue_before":1,"dispatch_count":1,"queue_after":0,"used_site_count":2,"conflict_free":true,"packets":[{"packet_id":"cmd:9","report_index":1,"sites":["0012","0100"],"hops":1}]}],"boundary":"This is the OS-level dispatch trace over spread epochs. It schedules Holonet control packets, not child-process CPU arithmetic."},"micro":{"status":"PASS","tick_count":14,"job_count":56,"schedule_hash":"29f8b1a6ed307f50f59465332afac602277199dc493d0613ef4e9dc32fa05c99","optimality":"optimal_certified","exact_backend":"optimal_certified","ticks":[{"tick":0,"spread_epoch":1,"dispatch_count":5,"used_site_count":10,"jobs":["stdout:1@0:h0","stdout:2@0:h0","stderr:0@0:h0","cmd:2@1:h0","cmd:4@1:h0"],"line_indices":[35,10,5,0,37]},{"tick":1,"spread_epoch":21,"dispatch_count":6,"used_site_count":12,"jobs":["cmd:4@0:h0","cmd:5@0:h0","stdin:0@0:h0","stdout:7@0:h0","cmd:5@1:h0","stderr:0@1:h0"],"line_indices":[2,34,15,33,8,5]},{"tick":2,"spread_epoch":34,"dispatch_count":4,"used_site_count":8,"jobs":["cmd:3@0:h0","cmd:5@0:h1","cmd:0@1:h0","cmd:8@1:h0"],"line_indices":[12,12,6,3]},{"tick":3,"spread_epoch":13,"dispatch_count":5,"used_site_count":10,"jobs":["cmd:2@0:h0","stdout:3@0:h0","stdout:4@0:h0","cmd:6@1:h0","stdout:1@1:h0"],"line_indices":[8,23,17,36,19]},{"tick":4,"spread_epoch":6,"dispatch_count":7,"used_site_count":14,"jobs":["cmd:0@0:h0","cmd:3@0:h1","stdout:5@0:h0","stdout:6@0:h0","stderr:0@0:h1","cmd:3@1:h0","stdout:1@1:h1"],"line_indices":[9,0,29,34,7,27,0]},{"tick":5,"spread_epoch":17,"dispatch_count":4,"used_site_count":8,"jobs":["stdout:8@0:h0","cmd:7@1:h0","cmd:8@1:h1","cmd:9@1:h0"],"line_indices":[7,19,1,12]},{"tick":6,"spread_epoch":0,"dispatch_count":3,"used_site_count":6,"jobs":["cmd:2@0:h1","stdin:0@1:h0","stdout:0@1:h0"],"line_indices":[0,15,0]},{"tick":7,"spread_epoch":25,"dispatch_count":2,"used_site_count":4,"jobs":["stdout:2@0:h1","stderr:0@1:h1"],"line_indices":[8,7]},{"tick":8,"spread_epoch":34,"dispatch_count":5,"used_site_count":10,"jobs":["cmd:4@0:h1","cmd:6@0:h0","stdout:1@0:h1","stdout:3@0:h1","cmd:7@1:h1"],"line_indices":[3,6,12,24,21]},{"tick":9,"spread_epoch":29,"dispatch_count":2,"used_site_count":4,"jobs":["stdout:0@0:h0","stdout:0@1:h1"],"line_indices":[4,19]},{"tick":10,"spread_epoch":29,"dispatch_count":3,"used_site_count":6,"jobs":["cmd:1@0:h0","cmd:2@1:h1","stdout:2@1:h0"],"line_indices":[27,4,3]},{"tick":11,"spread_epoch":2,"dispatch_count":4,"used_site_count":8,"jobs":["stdout:0@0:h1","stdout:4@0:h1","stdout:5@0:h1","cmd:4@1:h1"],"line_indices":[0,0,30,39]},{"tick":12,"spread_epoch":9,"dispatch_count":3,"used_site_count":6,"jobs":["stdout:6@0:h1","cmd:0@1:h1","cmd:1@1:h0"],"line_indices":[35,4,10]},{"tick":13,"spread_epoch":20,"dispatch_count":3,"used_site_count":6,"jobs":["cmd:1@1:h1","cmd:3@1:h1","cmd:5@1:h1"],"line_indices":[11,25,4]}],"jobs":{"cmd:0@0:h0":{"job_id":"cmd:0@0:h0","packet_id":"cmd:0@0","hop_index":0,"line_index":9,"sites":["0011","1000"],"candidate_spread_count":9},"cmd:1@0:h0":{"job_id":"cmd:1@0:h0","packet_id":"cmd:1@0","hop_index":0,"line_index":27,"sites":["1101","1212"],"candidate_spread_count":9},"cmd:2@0:h0":{"job_id":"cmd:2@0:h0","packet_id":"cmd:2@0","hop_index":0,"line_index":8,"sites":["0111","0100"],"candidate_spread_count":9},"cmd:2@0:h1":{"job_id":"cmd:2@0:h1","packet_id":"cmd:2@0","hop_index":1,"line_index":0,"sites":["0100","0001"],"candidate_spread_count":9},"cmd:3@0:h0":{"job_id":"cmd:3@0:h0","packet_id":"cmd:3@0","hop_index":0,"line_index":12,"sites":["0012","0100"],"candidate_spread_count":9},"cmd:3@0:h1":{"job_id":"cmd:3@0:h1","packet_id":"cmd:3@0","hop_index":1,"line_index":0,"sites":["0100","0101"],"candidate_spread_count":9},"cmd:4@0:h0":{"job_id":"cmd:4@0:h0","packet_id":"cmd:4@0","hop_index":0,"line_index":2,"sites":["1101","0001"],"candidate_spread_count":9},"cmd:4@0:h1":{"job_id":"cmd:4@0:h1","packet_id":"cmd:4@0","hop_index":1,"line_index":3,"sites":["0001","1201"],"candidate_spread_count":9},"cmd:5@0:h0":{"job_id":"cmd:5@0:h0","packet_id":"cmd:5@0","hop_index":0,"line_index":34,"sites":["1211","0121"],"candidate_spread_count":9},"cmd:5@0:h1":{"job_id":"cmd:5@0:h1","packet_id":"cmd:5@0","hop_index":1,"line_index":12,"sites":["0121","0112"],"candidate_spread_count":9},"cmd:6@0:h0":{"job_id":"cmd:6@0:h0","packet_id":"cmd:6@0","hop_index":0,"line_index":6,"sites":["1120","1110"],"candidate_spread_count":9},"stdin:0@0:h0":{"job_id":"stdin:0@0:h0","packet_id":"stdin:0@0","hop_index":0,"line_index":15,"sites":["1221","1200"],"candidate_spread_count":9},"stdout:0@0:h0":{"job_id":"stdout:0@0:h0","packet_id":"stdout:0@0","hop_index":0,"line_index":4,"sites":["0010","0100"],"candidate_spread_count":9},"stdout:0@0:h1":{"job_id":"stdout:0@0:h1","packet_id":"stdout:0@0","hop_index":1,"line_index":0,"sites":["0100","0102"],"candidate_spread_count":9},"stdout:1@0:h0":{"job_id":"stdout:1@0:h0","packet_id":"stdout:1@0","hop_index":0,"line_index":35,"sites":["1102","0121"],"candidate_spread_count":9},"stdout:1@0:h1":{"job_id":"stdout:1@0:h1","packet_id":"stdout:1@0","hop_index":1,"line_index":12,"sites":["0121","0012"],"candidate_spread_count":9},"stdout:2@0:h0":{"job_id":"stdout:2@0:h0","packet_id":"stdout:2@0","hop_index":0,"line_index":10,"sites":["1111","0011"],"candidate_spread_count":9},"stdout:2@0:h1":{"job_id":"stdout:2@0:h1","packet_id":"stdout:2@0","hop_index":1,"line_index":8,"sites":["0011","0100"],"candidate_spread_count":9},"stdout:3@0:h0":{"job_id":"stdout:3@0:h0","packet_id":"stdout:3@0","hop_index":0,"line_index":23,"sites":["1011","0110"],"candidate_spread_count":9},"stdout:3@0:h1":{"job_id":"stdout:3@0:h1","packet_id":"stdout:3@0","hop_index":1,"line_index":24,"sites":["0110","1021"],"candidate_spread_count":9},"stdout:4@0:h0":{"job_id":"stdout:4@0:h0","packet_id":"stdout:4@0","hop_index":0,"line_index":17,"sites":["1122","0101"],"candidate_spread_count":9},"stdout:4@0:h1":{"job_id":"stdout:4@0:h1","packet_id":"stdout:4@0","hop_index":1,"line_index":0,"sites":["0101","0001"],"candidate_spread_count":9},"stdout:5@0:h0":{"job_id":"stdout:5@0:h0","packet_id":"stdout:5@0","hop_index":0,"line_index":29,"sites":["1010","0112"],"candidate_spread_count":9},"stdout:5@0:h1":{"job_id":"stdout:5@0:h1","packet_id":"stdout:5@0","hop_index":1,"line_index":30,"sites":["0112","1101"],"candidate_spread_count":9},"stdout:6@0:h0":{"job_id":"stdout:6@0:h0","packet_id":"stdout:6@0","hop_index":0,"line_index":34,"sites":["1120","0121"],"candidate_spread_count":9},"stdout:6@0:h1":{"job_id":"stdout:6@0:h1","packet_id":"stdout:6@0","hop_index":1,"line_index":35,"sites":["0121","1011"],"candidate_spread_count":9},"stdout:7@0:h0":{"job_id":"stdout:7@0:h0","packet_id":"stdout:7@0","hop_index":0,"line_index":33,"sites":["0120","1202"],"candidate_spread_count":9},"stdout:8@0:h0":{"job_id":"stdout:8@0:h0","packet_id":"stdout:8@0","hop_index":0,"line_index":7,"sites":["1200","1210"],"candidate_spread_count":9},"stderr:0@0:h0":{"job_id":"stderr:0@0:h0","packet_id":"stderr:0@0","hop_index":0,"line_index":5,"sites":["1010","0010"],"candidate_spread_count":9},"stderr:0@0:h1":{"job_id":"stderr:0@0:h1","packet_id":"stderr:0@0","hop_index":1,"line_index":7,"sites":["0010","1210"],"candidate_spread_count":9},"cmd:0@1:h0":{"job_id":"cmd:0@1:h0","packet_id":"cmd:0@1","hop_index":0,"line_index":6,"sites":["1110","0010"],"candidate_spread_count":9},"cmd:0@1:h1":{"job_id":"cmd:0@1:h1","packet_id":"cmd:0@1","hop_index":1,"line_index":4,"sites":["0010","0100"],"candidate_spread_count":9},"cmd:1@1:h0":{"job_id":"cmd:1@1:h0","packet_id":"cmd:1@1","hop_index":0,"line_index":10,"sites":["1100","0011"],"candidate_spread_count":9},"cmd:1@1:h1":{"job_id":"cmd:1@1:h1","packet_id":"cmd:1@1","hop_index":1,"line_index":11,"sites":["0011","1211"],"candidate_spread_count":9},"cmd:2@1:h0":{"job_id":"cmd:2@1:h0","packet_id":"cmd:2@1","hop_index":0,"line_index":0,"sites":["0001","0100"],"candidate_spread_count":9},"cmd:2@1:h1":{"job_id":"cmd:2@1:h1","packet_id":"cmd:2@1","hop_index":1,"line_index":4,"sites":["0100","0120"],"candidate_spread_count":9},"cmd:3@1:h0":{"job_id":"cmd:3@1:h0","packet_id":"cmd:3@1","hop_index":0,"line_index":27,"sites":["1101","0111"],"candidate_spread_count":9},"cmd:3@1:h1":{"job_id":"cmd:3@1:h1","packet_id":"cmd:3@1","hop_index":1,"line_index":25,"sites":["0111","1112"],"candidate_spread_count":9},"cmd:4@1:h0":{"job_id":"cmd:4@1:h0","packet_id":"cmd:4@1","hop_index":0,"line_index":37,"sites":["1210","0122"],"candidate_spread_count":9},"cmd:4@1:h1":{"job_id":"cmd:4@1:h1","packet_id":"cmd:4@1","hop_index":1,"line_index":39,"sites":["0122","1202"],"candidate_spread_count":9},"cmd:5@1:h0":{"job_id":"cmd:5@1:h0","packet_id":"cmd:5@1","hop_index":0,"line_index":8,"sites":["0111","0100"],"candidate_spread_count":9},"cmd:5@1:h1":{"job_id":"cmd:5@1:h1","packet_id":"cmd:5@1","hop_index":1,"line_index":4,"sites":["0100","0110"],"candidate_spread_count":9},"cmd:6@1:h0":{"job_id":"cmd:6@1:h0","packet_id":"cmd:6@1","hop_index":0,"line_index":36,"sites":["1111","1202"],"candidate_spread_count":9},"cmd:7@1:h0":{"job_id":"cmd:7@1:h0","packet_id":"cmd:7@1","hop_index":0,"line_index":19,"sites":["1112","0102"],"candidate_spread_count":9},"cmd:7@1:h1":{"job_id":"cmd:7@1:h1","packet_id":"cmd:7@1","hop_index":1,"line_index":21,"sites":["0102","1111"],"candidate_spread_count":9},"cmd:8@1:h0":{"job_id":"cmd:8@1:h0","packet_id":"cmd:8@1","hop_index":0,"line_index":3,"sites":["1201","0001"],"candidate_spread_count":9},"cmd:8@1:h1":{"job_id":"cmd:8@1:h1","packet_id":"cmd:8@1","hop_index":1,"line_index":1,"sites":["0001","1000"],"candidate_spread_count":9},"cmd:9@1:h0":{"job_id":"cmd:9@1:h0","packet_id":"cmd:9@1","hop_index":0,"line_index":12,"sites":["0100","0012"],"candidate_spread_count":9},"stdin:0@1:h0":{"job_id":"stdin:0@1:h0","packet_id":"stdin:0@1","hop_index":0,"line_index":15,"sites":["1221","1200"],"candidate_spread_count":9},"stdout:0@1:h0":{"job_id":"stdout:0@1:h0","packet_id":"stdout:0@1","hop_index":0,"line_index":0,"sites":["0101","0102"],"candidate_spread_count":9},"stdout:0@1:h1":{"job_id":"stdout:0@1:h1","packet_id":"stdout:0@1","hop_index":1,"line_index":19,"sites":["0102","1010"],"candidate_spread_count":9},"stdout:1@1:h0":{"job_id":"stdout:1@1:h0","packet_id":"stdout:1@1","hop_index":0,"line_index":19,"sites":["1112","0102"],"candidate_spread_count":9},"stdout:1@1:h1":{"job_id":"stdout:1@1:h1","packet_id":"stdout:1@1","hop_index":1,"line_index":0,"sites":["0102","0001"],"candidate_spread_count":9},"stdout:2@1:h0":{"job_id":"stdout:2@1:h0","packet_id":"stdout:2@1","hop_index":0,"line_index":3,"sites":["1200","1201"],"candidate_spread_count":9},"stderr:0@1:h0":{"job_id":"stderr:0@1:h0","packet_id":"stderr:0@1","hop_index":0,"line_index":5,"sites":["1010","0010"],"candidate_spread_count":9},"stderr:0@1:h1":{"job_id":"stderr:0@1:h1","packet_id":"stderr:0@1","hop_index":1,"line_index":7,"sites":["0010","1210"],"candidate_spread_count":9}}},"clock":{"status":"PASS","srg_parameters":[36,15,6,6],"coarse_clock_slots":10,"micro_clock_slots":22,"micro_connectors":8,"coarse_connectors":2,"micro_expanded_walk":[{"kind":"active","source_tick":0,"spread_epoch":1},{"kind":"active","source_tick":1,"spread_epoch":21},{"kind":"connector","between_ticks":[1,2],"spread_epoch":12},{"kind":"active","source_tick":2,"spread_epoch":34},{"kind":"connector","between_ticks":[2,3],"spread_epoch":3},{"kind":"active","source_tick":3,"spread_epoch":13},{"kind":"connector","between_ticks":[3,4],"spread_epoch":0},{"kind":"active","source_tick":4,"spread_epoch":6},{"kind":"active","source_tick":5,"spread_epoch":17},{"kind":"active","source_tick":6,"spread_epoch":0},{"kind":"connector","between_ticks":[6,7],"spread_epoch":5},{"kind":"active","source_tick":7,"spread_epoch":25},{"kind":"connector","between_ticks":[7,8],"spread_epoch":5},{"kind":"active","source_tick":8,"spread_epoch":34},{"kind":"connector","between_ticks":[8,9],"spread_epoch":27},{"kind":"active","source_tick":9,"spread_epoch":29},{"kind":"active","source_tick":10,"spread_epoch":29},{"kind":"connector","between_ticks":[10,11],"spread_epoch":1},{"kind":"active","source_tick":11,"spread_epoch":2},{"kind":"active","source_tick":12,"spread_epoch":9},{"kind":"connector","between_ticks":[12,13],"spread_epoch":10},{"kind":"active","source_tick":13,"spread_epoch":20}],"clock_native_slots":15,"clock_native_connectors":0,"frames":[{"spread_epoch":0,"line_indices":[0,5,10,15,23,25,30,32,34,39]},{"spread_epoch":1,"line_indices":[0,5,10,15,24,26,28,33,35,37]},{"spread_epoch":2,"line_indices":[0,5,11,14,22,26,30,31,35,39]},{"spread_epoch":3,"line_indices":[0,6,9,15,24,25,29,32,36,37]},{"spread_epoch":4,"line_indices":[0,6,11,13,22,27,29,33,35,37]},{"spread_epoch":5,"line_indices":[0,6,11,13,23,25,30,31,36,38]},{"spread_epoch":6,"line_indices":[0,7,9,14,22,27,29,32,34,39]},{"spread_epoch":7,"line_indices":[0,7,9,14,24,26,28,31,36,38]},{"spread_epoch":8,"line_indices":[0,7,10,13,23,27,28,33,34,38]},{"spread_epoch":9,"line_indices":[1,4,10,15,16,19,26,30,35,39]},{"spread_epoch":10,"line_indices":[1,4,11,14,17,20,26,30,36,38]},{"spread_epoch":11,"line_indices":[1,4,11,14,18,21,27,29,35,39]},{"spread_epoch":12,"line_indices":[1,6,8,15,16,21,24,29,33,35]},{"spread_epoch":13,"line_indices":[1,6,8,15,17,19,23,30,32,36]},{"spread_epoch":14,"line_indices":[1,6,11,12,17,21,23,27,33,38]},{"spread_epoch":15,"line_indices":[1,7,8,14,18,20,24,29,32,36]},{"spread_epoch":16,"line_indices":[1,7,10,12,16,20,24,26,33,38]},{"spread_epoch":17,"line_indices":[1,7,10,12,18,19,23,27,32,39]},{"spread_epoch":18,"line_indices":[2,4,9,15,16,21,25,29,34,39]},{"spread_epoch":19,"line_indices":[2,4,9,15,17,19,26,28,36,37]},{"spread_epoch":20,"line_indices":[2,4,11,13,18,20,25,29,36,37]},{"spread_epoch":21,"line_indices":[2,5,8,15,17,21,23,28,33,34]},{"spread_epoch":22,"line_indices":[2,5,11,12,17,20,22,26,33,37]},{"spread_epoch":23,"line_indices":[2,5,11,12,18,21,23,25,31,39]},{"spread_epoch":24,"line_indices":[2,7,8,13,16,20,22,29,33,34]},{"spread_epoch":25,"line_indices":[2,7,8,13,18,19,23,28,31,36]},{"spread_epoch":26,"line_indices":[2,7,9,12,16,19,22,26,31,39]},{"spread_epoch":27,"line_indices":[3,4,9,14,17,21,27,28,34,38]},{"spread_epoch":28,"line_indices":[3,4,10,13,16,20,25,30,34,38]},{"spread_epoch":29,"line_indices":[3,4,10,13,18,19,27,28,35,37]},{"spread_epoch":30,"line_indices":[3,5,8,14,17,20,22,30,32,34]},{"spread_epoch":31,"line_indices":[3,5,8,14,18,21,24,28,31,35]},{"spread_epoch":32,"line_indices":[3,5,10,12,18,20,24,25,32,37]},{"spread_epoch":33,"line_indices":[3,6,8,13,16,19,22,30,31,35]},{"spread_epoch":34,"line_indices":[3,6,9,12,16,21,24,25,31,38]},{"spread_epoch":35,"line_indices":[3,6,9,12,17,19,22,27,32,37]}]},"clock_native":{"tick_count":15,"clock_slot_count":15,"connector_slot_count":0,"schedule_hash":"9bb1152d25be46f17a8364c2982e710546873bb3630fd541313a2b8f9b0721c9","ticks":[{"tick":0,"spread_epoch":1,"dispatch_count":8,"used_site_count":16,"jobs":["stdin:0@0:h0","stdout:1@0:h0","stdout:2@0:h0","stdout:7@0:h0","stderr:0@0:h0","cmd:2@1:h0","cmd:4@1:h0","stdout:0@1:h0"],"line_indices":[15,35,10,33,5,0,37,0]},{"tick":1,"spread_epoch":19,"dispatch_count":7,"used_site_count":14,"jobs":["cmd:0@0:h0","cmd:4@0:h0","stdout:0@0:h0","stdout:4@0:h0","cmd:6@1:h0","cmd:7@1:h0","stdin:0@1:h0"],"line_indices":[9,2,4,17,36,19,15]},{"tick":2,"spread_epoch":18,"dispatch_count":5,"used_site_count":10,"jobs":["cmd:5@0:h0","stdout:5@0:h0","cmd:2@1:h1","cmd:4@1:h1","cmd:7@1:h1"],"line_indices":[34,29,4,39,21]},{"tick":3,"spread_epoch":0,"dispatch_count":7,"used_site_count":14,"jobs":["stdout:0@0:h1","stdout:3@0:h0","stdout:4@0:h1","stdout:5@0:h1","stdout:6@0:h0","cmd:1@1:h0","stderr:0@1:h0"],"line_indices":[0,23,0,30,34,10,5]},{"tick":4,"spread_epoch":17,"dispatch_count":5,"used_site_count":10,"jobs":["cmd:1@0:h0","cmd:3@0:h0","cmd:5@0:h1","stdout:8@0:h0","stdout:0@1:h1"],"line_indices":[27,12,12,7,19]},{"tick":5,"spread_epoch":35,"dispatch_count":5,"used_site_count":10,"jobs":["cmd:4@0:h1","cmd:6@0:h0","stdout:1@0:h1","cmd:3@1:h0","stdout:1@1:h0"],"line_indices":[3,6,12,27,19]},{"tick":6,"spread_epoch":3,"dispatch_count":5,"used_site_count":10,"jobs":["cmd:3@0:h1","stdout:3@0:h1","cmd:0@1:h0","cmd:3@1:h1","stdout:1@1:h1"],"line_indices":[0,24,6,25,0]},{"tick":7,"spread_epoch":4,"dispatch_count":2,"used_site_count":4,"jobs":["stdout:6@0:h1","cmd:1@1:h1"],"line_indices":[35,11]},{"tick":8,"spread_epoch":24,"dispatch_count":2,"used_site_count":4,"jobs":["cmd:2@0:h0","stderr:0@0:h1"],"line_indices":[8,7]},{"tick":9,"spread_epoch":24,"dispatch_count":2,"used_site_count":4,"jobs":["stdout:2@0:h1","stderr:0@1:h1"],"line_indices":[8,7]},{"tick":10,"spread_epoch":28,"dispatch_count":2,"used_site_count":4,"jobs":["cmd:0@1:h1","cmd:8@1:h0"],"line_indices":[4,3]},{"tick":11,"spread_epoch":16,"dispatch_count":2,"used_site_count":4,"jobs":["cmd:8@1:h1","cmd:9@1:h0"],"line_indices":[1,12]},{"tick":12,"spread_epoch":1,"dispatch_count":1,"used_site_count":2,"jobs":["cmd:2@0:h1"],"line_indices":[0]},{"tick":13,"spread_epoch":31,"dispatch_count":2,"used_site_count":4,"jobs":["cmd:5@1:h0","stdout:2@1:h0"],"line_indices":[8,3]},{"tick":14,"spread_epoch":11,"dispatch_count":1,"used_site_count":2,"jobs":["cmd:5@1:h1"],"line_indices":[4]}]},"mock":{"status":"PASS","pipeline_complete":true,"responses":["/kernel/address/encode","/bridge/partition","/bridge/trace","/bridge/proof/critical-identity","/bridge/observable/holonomy","/bridge/observable/stream","/bridge/shacl/validate","/cert/issue","/pipeline/run"]},"shacl":{"status":"PASS","results":[{"source":"data\\holonet_uor_certificate.json","conforms":true,"checked_constraints":27,"live_ok":false},{"source":"data\\holonet_uor_rule110_certificate.json","conforms":true,"checked_constraints":27,"live_ok":false}]}}</script>
+  <script>
+    const payload = JSON.parse(document.getElementById('replay-data').textContent);
+    const trace = payload.trace;
+    const micro = payload.micro;
+    const clockNative = payload.clock_native;
+    let mode = 'coarse';
+    let idx = 0;
+    let selectedFrame = null;
+    let highlightedJob = null;
+    let timer = null;
+    const slider = document.getElementById('slider');
+    function layer() {
+      if (mode === 'coarse') {
+        return { label: 'OS Ticks', ticks: trace.ticks, hash: trace.replay_hash, kind: 'coarse' };
+      }
+      if (mode === 'micro') {
+        return { label: 'Microkernel Ticks', ticks: micro.ticks, hash: micro.schedule_hash, kind: 'micro' };
+      }
+      if (mode === 'native') {
+        return { label: 'Clock Native', ticks: clockNative.ticks, hash: clockNative.schedule_hash, kind: 'native' };
+      }
+      const ticks = payload.clock.micro_expanded_walk.map((slot, i) => {
+        const source = slot.kind === 'active' ? micro.ticks[slot.source_tick] : null;
+        return {
+          tick: i,
+          spread_epoch: slot.spread_epoch,
+          kind: slot.kind,
+          source_tick: slot.source_tick,
+          between_ticks: slot.between_ticks,
+          dispatch_count: source ? source.dispatch_count : 0,
+          used_site_count: source ? source.used_site_count : 0,
+          jobs: source ? source.jobs : []
+        };
+      });
+      return { label: 'Clock Walk', ticks, hash: micro.schedule_hash, kind: 'clock' };
+    }
+
+    function syncModeButtons() {
+      document.getElementById('coarseMode').classList.toggle('active', mode === 'coarse');
+      document.getElementById('microMode').classList.toggle('active', mode === 'micro');
+      document.getElementById('clockMode').classList.toggle('active', mode === 'clock');
+      document.getElementById('nativeMode').classList.toggle('active', mode === 'native');
+    }
+
+    function applyInitialQuery() {
+      const params = new URLSearchParams(window.location.search);
+      const requestedMode = params.get('mode');
+      if (['coarse', 'micro', 'clock', 'native'].includes(requestedMode)) {
+        mode = requestedMode;
+      }
+      highlightedJob = params.get('job') || null;
+      const current = layer();
+      const ticks = current.ticks;
+      const tickParam = Number(params.get('tick'));
+      const frameParam = Number(params.get('frame'));
+      if (Number.isInteger(tickParam) && tickParam >= 0 && tickParam < ticks.length) {
+        idx = tickParam;
+      } else if (highlightedJob) {
+        const jobIndex = ticks.findIndex(t => (t.jobs || []).includes(highlightedJob));
+        if (jobIndex >= 0) idx = jobIndex;
+      } else if (Number.isInteger(frameParam)) {
+        const frameIndex = ticks.findIndex(t => Number(t.spread_epoch) === frameParam);
+        if (frameIndex >= 0) idx = frameIndex;
+      }
+      if (Number.isInteger(frameParam) && frameParam >= 0 && frameParam < 36) {
+        selectedFrame = frameParam;
+      }
+    }
+
+    const coarseSites = trace.ticks.flatMap(t => t.packets.flatMap(p => p.sites));
+    const microSites = micro.ticks.flatMap(t => t.jobs.flatMap(id => (micro.jobs[id] || {sites: []}).sites));
+    const nativeSites = clockNative.ticks.flatMap(t => t.jobs.flatMap(id => (micro.jobs[id] || {sites: []}).sites));
+    const allSites = Array.from(new Set([...coarseSites, ...microSites, ...nativeSites])).sort();
+
+    function stat(label, value) {
+      return `<div class="stat"><div class="label">${label}</div><div class="value">${value}</div></div>`;
+    }
+    document.getElementById('stats').innerHTML = [
+      stat('Packets', trace.packet_count),
+      stat('OS Ticks', trace.tick_count),
+      stat('Micro Ticks', micro.tick_count),
+      stat('Clock Slots', `${payload.clock.coarse_clock_slots} / ${payload.clock.micro_clock_slots} / ${payload.clock.clock_native_slots}`)
+    ].join('');
+
+    function normalizedItems(t) {
+      if (mode === 'coarse') {
+        return t.packets.map(p => ({
+          id: p.packet_id,
+          sites: p.sites,
+          route: `${p.hops} hop${p.hops === 1 ? '' : 's'}`
+        }));
+      }
+      if (mode === 'clock' && t.kind === 'connector') {
+        return [{
+          id: `connector ${t.between_ticks[0]}→${t.between_ticks[1]}`,
+          sites: [],
+          route: `spread ${t.spread_epoch} bridge`
+        }];
+      }
+      return t.jobs.map(id => {
+        const job = micro.jobs[id] || { sites: [], line_index: '?', hop_index: '?' };
+        return {
+          id,
+          sites: job.sites,
+          route: `line ${job.line_index}, hop ${job.hop_index}`
+        };
+      });
+    }
+
+    function renderFrameInspect(current, t, pathSlots) {
+      const frame = selectedFrame === null ? Number(t.spread_epoch) : Number(selectedFrame);
+      const hits = pathSlots.filter(slot => slot.spread === frame);
+      const currentItems = Number(t.spread_epoch) === frame ? normalizedItems(t) : [];
+      const slotText = hits.length
+        ? hits.map(slot => `${slot.index}:${slot.kind}`).join(', ')
+        : 'unused by this replay layer';
+      const connectorText = hits
+        .filter(slot => slot.kind === 'connector')
+        .map(slot => `slot ${slot.index} bridges ticks ${(slot.between_ticks || []).join('→')}`)
+        .join('; ');
+      const frameLines = ((payload.clock.frames || [])[frame] || { line_indices: [] }).line_indices || [];
+      const jobText = currentItems.length
+        ? currentItems.map(item => item.id).slice(0, 8).join(', ') + (currentItems.length > 8 ? ' ...' : '')
+        : 'no active jobs at the current selected tick';
+      document.getElementById('frameInspect').innerHTML = [
+        `<div><strong>Frame ${frame}</strong> in ${current.label}</div>`,
+        `<div>Spread lines: ${frameLines.join(', ')}</div>`,
+        `<div>Slots: ${slotText}</div>`,
+        connectorText ? `<div>Connector reason: ${connectorText}</div>` : `<div>Connector reason: none for selected frame in this layer</div>`,
+        `<div>Current active jobs/packets: ${jobText}</div>`
+      ].join('');
+    }
+
+    function renderClockPanel(current, t) {
+      const n = 36;
+      const size = 320;
+      const cx = size / 2;
+      const cy = size / 2;
+      const radius = 126;
+      const points = Array.from({ length: n }, (_, i) => {
+        const angle = -Math.PI / 2 + 2 * Math.PI * i / n;
+        return { x: cx + radius * Math.cos(angle), y: cy + radius * Math.sin(angle) };
+      });
+      const pathSlots = current.ticks.map((slot, i) => ({
+        spread: Number(slot.spread_epoch),
+        kind: slot.kind || 'active',
+        index: i,
+        between_ticks: slot.between_ticks || []
+      }));
+      const seen = new Map();
+      for (const slot of pathSlots) {
+        if (!seen.has(slot.spread)) seen.set(slot.spread, new Set());
+        seen.get(slot.spread).add(slot.kind);
+      }
+      const links = [];
+      for (let i = 1; i < pathSlots.length; i++) {
+        const a = points[pathSlots[i - 1].spread];
+        const b = points[pathSlots[i].spread];
+        links.push(`<line class="clock-link ${i === idx ? 'current' : ''}" x1="${a.x.toFixed(1)}" y1="${a.y.toFixed(1)}" x2="${b.x.toFixed(1)}" y2="${b.y.toFixed(1)}"></line>`);
+      }
+      const nodes = points.map((p, i) => {
+        const classes = ['frame-node'];
+        const kinds = seen.get(i);
+        if (kinds) classes.push('path');
+        if (kinds && kinds.has('connector')) classes.push('connector');
+        if (i === Number(t.spread_epoch)) classes.push('current');
+        return `<g class="frame-g" data-frame="${i}"><circle class="${classes.join(' ')}" cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="8"></circle><text class="frame-label" x="${p.x.toFixed(1)}" y="${p.y.toFixed(1)}">${i}</text></g>`;
+      });
+      document.getElementById('clockPanel').innerHTML = `<svg class="clock-svg" viewBox="0 0 ${size} ${size}" role="img" aria-label="36-frame spread clock walk">${links.join('')}${nodes.join('')}</svg>`;
+      document.querySelectorAll('.frame-g').forEach(el => el.addEventListener('click', () => {
+        selectedFrame = Number(el.dataset.frame);
+        render();
+      }));
+      const connectorCount = pathSlots.filter(slot => slot.kind === 'connector').length;
+      document.getElementById('clockMeta').textContent = `${pathSlots.length} slots / ${connectorCount} connectors`;
+      renderFrameInspect(current, t, pathSlots);
+    }
+
+    function renderList() {
+      const current = layer();
+      document.getElementById('listTitle').textContent = current.label;
+      document.getElementById('tickList').innerHTML = current.ticks.map((t, i) => `
+        <div class="tick ${i === idx ? 'active' : ''}" data-idx="${i}">
+          <strong>${i}</strong>
+          <div><div>Spread ${t.spread_epoch}</div><small>${mode === 'clock' && t.kind === 'connector' ? 'connector frame' : `${t.dispatch_count} ${mode === 'coarse' ? 'packets' : 'jobs'}, ${t.used_site_count} sites`}</small></div>
+          <span class="badge ${mode !== 'coarse' || t.conflict_free ? 'ok' : 'warn'}">${mode !== 'coarse' || t.conflict_free ? 'clean' : 'conflict'}</span>
+        </div>
+      `).join('');
+      document.querySelectorAll('.tick').forEach(el => el.addEventListener('click', () => {
+        idx = Number(el.dataset.idx);
+        render();
+      }));
+    }
+
+    function render() {
+      const current = layer();
+      const t = current.ticks[idx];
+      slider.value = idx;
+      slider.max = Math.max(0, current.ticks.length - 1);
+      document.getElementById('tickLabel').textContent = `${current.label} ${idx + 1} / ${current.ticks.length}`;
+      document.getElementById('detailTitle').textContent = `${mode === 'clock' ? 'Clock slot' : 'Tick'} ${t.tick} - Spread ${t.spread_epoch}`;
+      const items = normalizedItems(t);
+      document.getElementById('badges').innerHTML = [
+        `<span class="badge ok">${mode === 'clock' && t.kind === 'connector' ? 'connector frame' : `${t.dispatch_count} ${mode === 'coarse' ? 'packets' : 'jobs'}`}</span>`,
+        `<span class="badge ok">${t.used_site_count} occupied sites</span>`,
+        `<span class="badge ${mode !== 'coarse' || t.conflict_free ? 'ok' : 'warn'}">${mode !== 'coarse' || t.conflict_free ? 'verified' : 'conflict'}</span>`,
+        `<span class="badge ok">clock SRG(${payload.clock.srg_parameters.join(',')})</span>`,
+        `<span class="badge ${micro.exact_backend === 'unavailable' ? 'warn' : 'ok'}">exact ${micro.exact_backend}</span>`,
+        `<span class="badge ${payload.mock.pipeline_complete ? 'ok' : 'warn'}">mock UOR ${payload.mock.status}</span>`,
+        `<span class="badge ${payload.shacl.status === 'PASS' ? 'ok' : 'warn'}">shape ${payload.shacl.status}</span>`
+      ].join('');
+      const used = new Set(items.flatMap(p => p.sites));
+      document.getElementById('board').innerHTML = allSites.map(s => `<div class="site ${used.has(s) ? 'used' : ''}">${s}</div>`).join('');
+      renderClockPanel(current, t);
+      document.getElementById('packets').innerHTML = items.map(p => `
+        <tr class="${p.id === highlightedJob ? 'highlighted' : ''}"><td>${p.id}</td><td>${p.sites.join(' ')}</td><td>${p.route}</td></tr>
+      `).join('');
+      renderList();
+    }
+    function step(delta) {
+      const count = layer().ticks.length;
+      idx = (idx + delta + count) % count;
+      render();
+    }
+    function setMode(nextMode) {
+      mode = nextMode;
+      idx = 0;
+      selectedFrame = null;
+      highlightedJob = null;
+      syncModeButtons();
+      render();
+    }
+    document.getElementById('coarseMode').onclick = () => setMode('coarse');
+    document.getElementById('microMode').onclick = () => setMode('micro');
+    document.getElementById('clockMode').onclick = () => setMode('clock');
+    document.getElementById('nativeMode').onclick = () => setMode('native');
+    document.getElementById('prev').onclick = () => step(-1);
+    document.getElementById('next').onclick = () => step(1);
+    document.getElementById('play').onclick = () => {
+      if (timer) {
+        clearInterval(timer); timer = null; document.getElementById('play').textContent = 'Play';
+      } else {
+        timer = setInterval(() => step(1), 900); document.getElementById('play').textContent = 'Pause';
+      }
+    };
+    slider.oninput = e => { idx = Number(e.target.value); render(); };
+    applyInitialQuery();
+    syncModeButtons();
+    render();
+  </script>
+</body>
+</html>

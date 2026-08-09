@@ -1,0 +1,42 @@
+{
+  "Part": "CCXXXVIII",
+  "Title": "Exceptional Lie Algebras Tower from W(3,3)",
+  "Verified": true,
+  "checks_passed": 32,
+  "checks_total": 32,
+  "SRG_parameters": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "M_LAM": 27,
+    "EDGES": 240,
+    "AUT_ORDER": 51840
+  },
+  "dimensions": {
+    "G2": 14,
+    "F4": 52,
+    "E6": 78,
+    "E7": 133,
+    "E8": 248
+  },
+  "root_counts": {
+    "G2": 12,
+    "F4": 48,
+    "E6": 72,
+    "E7": 126,
+    "E8": 240
+  },
+  "ranks": {
+    "G2": 2,
+    "F4": 4,
+    "E6": 6,
+    "E7": 7,
+    "E8": 8
+  },
+  "Albert_algebra": {
+    "dim": 27,
+    "matrix_size": 3
+  }
+}

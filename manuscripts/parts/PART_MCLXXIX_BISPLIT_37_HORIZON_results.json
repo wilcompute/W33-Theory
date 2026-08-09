@@ -1,0 +1,99 @@
+{
+  "part": "MCLXXIX",
+  "theorem": "37 bi-split matter horizon lock",
+  "input": {
+    "Q": 21660532934040,
+    "Q_identity": "21660532934040 = 108 * 31# = (q^2*k) * 31#",
+    "horizon_prime": 37,
+    "Q_mod_37": 4,
+    "R": 801439718559480
+  },
+  "w33_witnesses": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "mu": 4,
+    "phi3_q": 13,
+    "phi6_q": 7,
+    "v_minus_q": 37,
+    "q_factorial_squared_plus_one": 37
+  },
+  "bisplit_classification": {
+    "prime": 37,
+    "mod_4": 1,
+    "mod_3": 1,
+    "mod_12": 1,
+    "gaussian_split": true,
+    "eisenstein_split": true,
+    "first_prime_after_31": [
+      37
+    ],
+    "closed_bisplit_primes_through_31": [
+      13
+    ],
+    "first_open_bisplit_after_31": [
+      37
+    ]
+  },
+  "gaussian_matter_witness": {
+    "element": "6+i",
+    "real_part": 6,
+    "imag_part": 1,
+    "norm": 37,
+    "sqrt_minus_one_roots_mod_37": [
+      6,
+      31
+    ]
+  },
+  "eisenstein_mixed_witness": {
+    "element": "7+3omega",
+    "a": 7,
+    "b": 3,
+    "norm": 37,
+    "phi3_roots_mod_37": [
+      10,
+      26
+    ],
+    "phi6_roots_mod_37": [
+      11,
+      27
+    ]
+  },
+  "superbeat_residue": {
+    "Q_mod_37": 4,
+    "mu": 4,
+    "q_plus_1": 4,
+    "square_roots_mod_37": [
+      2,
+      35
+    ],
+    "interpretation": "the 31-closed superbeat lands on the W33 mu channel before the 37 closure"
+  },
+  "minimal_closure": {
+    "R": 801439718559480,
+    "identity": "801439718559480 = 37*Q = 108*37#",
+    "R_over_A_star": 2226221440443,
+    "R_over_cloud": 9894317513080
+  },
+  "claim_boundary": "finite bi-split arithmetic horizon; this identifies a Gaussian/Eisenstein synchronization obstruction and not a continuum dynamics proof",
+  "checks": {
+    "horizon_is_37": true,
+    "horizon_is_first_prime_after_31": true,
+    "horizon_is_first_open_bisplit_prime": true,
+    "prior_closed_bisplit_prime_is_13": true,
+    "horizon_is_prime_and_1_mod_12": true,
+    "horizon_is_v_minus_q": true,
+    "gaussian_matter_norm_is_37": true,
+    "gaussian_roots_are_plus_minus_q_factorial": true,
+    "eisenstein_mixed_norm_is_37": true,
+    "eisenstein_split_roots_are_exact": true,
+    "q_is_not_a_cyclotomic_branch_mod_37": true,
+    "superbeat_residue_is_mu": true,
+    "superbeat_residue_is_square": true,
+    "minimal_bisplit_closure_matches_horizon_result": true,
+    "closure_is_108_times_37_primorial": true,
+    "closure_preserves_scaled_duality": true,
+    "base_beat_remains_before_horizon": true
+  },
+  "n_verified": 17
+}

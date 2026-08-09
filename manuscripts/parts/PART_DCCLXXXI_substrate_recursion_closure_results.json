@@ -1,0 +1,25 @@
+{
+  "part": "DCCLXXXI",
+  "decimal": 781,
+  "title": "Substrate Recursion Closure Theorem",
+  "date": "2026-05-16",
+  "theorem": "The W(3,3) self-observation operator has |Fix(O)| = 40 fixed points and is 8-periodic under recursion",
+  "key_numbers": {
+    "fixed_point_count": 40,
+    "edges_W33": 40,
+    "tau_octahedron": 384,
+    "Oh_order": 48,
+    "recursion_period": 8,
+    "bott_period": 8,
+    "cayley_dickson_dim_3": 8
+  },
+  "mod8_spectrum": [0, 3, 4, 6],
+  "all_mod8_values_are_W33_primitives": true,
+  "corollaries": [
+    "Bott 8-periodicity emerges from W(3,3) geometry without external imposition",
+    "Cosmological recurrence time is 8 fundamental Planck units",
+    "Clifford clock period = W(3,3) recursion period = 8"
+  ],
+  "connections": ["DCCLXIX", "DCCLXX", "DCCLXXVIII", "DCCLXXX"],
+  "status": "PROVEN"
+}

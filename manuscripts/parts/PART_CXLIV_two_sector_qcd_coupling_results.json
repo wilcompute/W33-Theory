@@ -1,0 +1,53 @@
+{
+  "module": "PART_CXLIV_TWO_SECTOR_QCD_COUPLING_COMPILER",
+  "w33_atoms": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "mu": 4,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "Hashimoto_norm": 11,
+    "positive_sector_multiplicity": 24,
+    "negative_sector_multiplicity": 15
+  },
+  "sector_roles": [
+    {
+      "sector": "positive r=2 sector",
+      "adjacency_eigenvalue": 2,
+      "adjacency_multiplicity": 24,
+      "bass_root": "1 ± i√Phi4 = 1 ± i√10",
+      "field": "Q(√-Phi4) = Q(√-10)",
+      "role": "bare SU(3)c embedding carrier",
+      "formula": "k3_bare = multiplicity(r=2)/Phi3 = 24/13",
+      "value": 1.8461538461538463
+    },
+    {
+      "sector": "negative s=-4 sector",
+      "adjacency_eigenvalue": -4,
+      "adjacency_multiplicity": 15,
+      "bass_root": "-2 ± i√Phi6 = -2 ± i√7",
+      "field": "Q(√-Phi6) = Q(√-7)",
+      "role": "QCD-local heavy threshold carrier",
+      "formula": "tau = log(|Re|/|Im|) = log sqrt(mu/Phi6)",
+      "value": -0.27980789396771133
+    }
+  ],
+  "compiled_formula": {
+    "alpha_s_MGUT": "alpha_unified/(m_r/Phi3) * (1 + alpha_unified/(2*pi)*log sqrt(mu/Phi6))",
+    "k3_bare": 1.8461538461538463,
+    "tau_threshold": -0.27980789396771133,
+    "delta_threshold": -0.0017813123776437676,
+    "k3_effective": 1.849448291286928,
+    "alpha_s_gut": 0.021628071565151053
+  },
+  "rg_output": {
+    "alpha_s_MZ": 0.11800503473579949,
+    "pdg_alpha_s_MZ": 0.118,
+    "residual": 5.034735799491763e-06,
+    "sigma": 0.0055941508883241816
+  },
+  "theorem_statement": "The selected W(3,3) QCD coupling is a two-sector Hashimoto object: the positive r=2 sector supplies k3_bare=m_r/Phi3=24/13, while the negative s=-4/Phi6 sector supplies the QCD-local heavy threshold tau=log sqrt(mu/Phi6).",
+  "interpretive_note": "This is deeper than choosing a fitted k3.  Color coupling is compiled by the interaction of the two nontrivial Bass fields Q(sqrt(-10)) and Q(sqrt(-7)): the former gives the visible 24-dimensional carrier, the latter gives the confinement/QCD beta threshold."
+}

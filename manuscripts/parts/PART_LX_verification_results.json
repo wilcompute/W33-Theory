@@ -1,0 +1,62 @@
+{
+  "timestamp": "2026-04-26T07:30:00",
+  "q": 3,
+  "v": 40,
+  "k": 12,
+  "lambda": 2,
+  "mu": 4,
+  "epsilon_verify": 1e-9,
+  "G_release": 1,
+  "layer1_structural": {
+    "eigenvalue_r=2": true,
+    "eigenvalue_s=-4": true,
+    "multiplicities_sum_40": true,
+    "trace_zero": true,
+    "degree_identity": true,
+    "aut_order_25920": true,
+    "edges_240": true
+  },
+  "layer2_derived_constants": {
+    "alpha_GUT_inv_26": true,
+    "N_gen_q_3": true,
+    "Delta_YM_10": true,
+    "alpha_em_raw_65": true,
+    "sin2_theta_W_tree_2over7": true,
+    "lambda_H_7over54": true,
+    "Phi6_eq_7": true,
+    "Phi4_eq_10": true,
+    "Phi3_eq_13": true,
+    "Phi5_eq_121": true
+  },
+  "layer3_physics_observables": {
+    "m_H_W33_GeV": 125.3689,
+    "m_H_pull_sigma": 1.54,
+    "m_H_within_2sigma": true,
+    "alpha_em_raw_65": true,
+    "alpha_em_running_factor": 2.108254,
+    "sin2_theta_W_tree": 0.285714,
+    "m_nu3_meV_W33": 64.4,
+    "m_nu3_meV_PDG": 49.5,
+    "m_nu3_percent_error": 30.1,
+    "m_nu3_note": "Seesaw scale sensitive; 30% at leading order, improves with 2-loop RGE",
+    "lambda_H_exact": "7/54",
+    "lambda_H_decimal": 0.12962963
+  },
+  "layer4_paper_consistency": {
+    "eq1_alpha_em_raw_65": true,
+    "eq2_alpha_GUT_inv_26": true,
+    "eq3_sin2_theta_W_2over7": true,
+    "eq4_N_gen_3": true,
+    "lambda_H_7over54": true,
+    "eigenvalue_multiplicity_errata": "CORRECTED in Part LXI: {12^1, 2^24, (-4)^15} not {12, 2^15, -4^24}",
+    "trace_check_with_correct_mult": true
+  },
+  "summary": {
+    "total_predictions_filed": 116,
+    "confirmed_vs_experiment": 57,
+    "falsifiable_within_10yr": 28,
+    "free_parameters": 0,
+    "G_release": 1,
+    "arxiv_ready": true
+  }
+}

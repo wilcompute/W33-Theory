@@ -1,0 +1,22 @@
+{
+  "part": "CCCLXXIII",
+  "title": "SNF / Torsion Certificate Engine",
+  "verified": true,
+  "checks_passed": 7,
+  "checks_total": 7,
+  "chain_counts": {
+    "vertices": 40,
+    "edges": 240,
+    "triangles": 160
+  },
+  "rational_ranks": {
+    "rank_d1": 39,
+    "rank_d2": 120,
+    "beta1": 81
+  },
+  "sampled_primes": [2,3,5,7,11,13,17,19,23,29,31,37,41,43],
+  "optional_snf": "computed when sympy normal-form backend is available; otherwise gracefully skipped",
+  "architecture_upgrade": "CCCLXXII gave an integral rank and sampled-prime torsion audit. CCCLXXIII adds an optional Smith-normal-form certificate path while preserving dependency-free exact rank/modular checks.",
+  "theorem": "The W33 triangle chain complex has exact rational beta1=81. Modular ranks agree with rational ranks for sampled primes. When an SNF backend is available, the audit can compute Smith invariants directly, upgrading the torsion audit toward a full integral certificate.",
+  "honesty_boundary": "Unless optional_snf.status is computed with all relevant nonzero invariants equal to 1 in the ker(d1) quotient, this remains an engine and partial certificate rather than a final full SNF proof of torsion-freeness."
+}

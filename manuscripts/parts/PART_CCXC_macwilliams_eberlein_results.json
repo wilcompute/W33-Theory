@@ -1,0 +1,66 @@
+{
+  "part_number": "CCXC",
+  "title": "MacWilliams Transform and Eberlein Polynomials",
+  "theme": "Weight enumerator duality Ham<->Sim via Krawtchouk transforms",
+  "verification_status": "ALL CHECKS PASS",
+  "checks_pass": 22,
+  "checks_total": 22,
+  "scheme_parameters": {
+    "scheme": "H(4,3)",
+    "size": 81,
+    "classes": 4,
+    "valencies": [
+      1,
+      8,
+      24,
+      32,
+      16
+    ]
+  },
+  "hamming_weight_dist": {
+    "0": 1,
+    "3": 1040,
+    "4": 18720,
+    "5": 258336,
+    "6": 3026400,
+    "7": 29484000,
+    "8": 243088560,
+    "9": 1728206480,
+    "10": 10716097392
+  },
+  "sim_weight_dist": {
+    "0": 1,
+    "27": 80
+  },
+  "srg_eigenvalues": {
+    "r": 2,
+    "s": -4,
+    "mult_r": 24,
+    "mult_s": 15
+  },
+  "krawtchouk_k1": {
+    "K1(0)": 8,
+    "K1(1)": 5,
+    "K1(2)": 2,
+    "K1(3)": -1,
+    "K1(4)": -4
+  },
+  "key_discoveries": [
+    "MacWilliams transform is exact over the integers via Krawtchouk polynomials",
+    "H(4,3) Hamming scheme has size 81 = 3^4 = |Heisenberg group|",
+    "Krawtchouk P-matrix is orthogonal: P * diag(p_i) * P^T = q^n * diag(p_k)",
+    "W(3,3) SRG eigenvalues r=2, s=-4 derive from Delta = 36 = 6^2",
+    "Ham(4,3) A_0=1, A_1=A_2=0 confirms d=3 (SM generation separation)",
+    "Sim(4,3) is equidistant: all 80 nonzero codewords have weight 27=K2",
+    "MacWilliams duality is the coding-theoretic incarnation of Delsarte LP duality"
+  ],
+  "created": "2026-05-04",
+  "connections": [
+    "Part CCLXXXIX: Ham(4,3) perfect code and PG(3,3) identification",
+    "Part CCLXXXVIII: Delsarte LP bound (Krawtchouk expansion)",
+    "Part CCLXXXVII: W(3,3) SRG spectral analysis",
+    "Part CCLXXXVI: Association scheme intersection numbers",
+    "Part CCLXX: W(3,3) SRG eigenvalue structure",
+    "Part CCLXXI: Strongly regular graph combinatorics"
+  ]
+}

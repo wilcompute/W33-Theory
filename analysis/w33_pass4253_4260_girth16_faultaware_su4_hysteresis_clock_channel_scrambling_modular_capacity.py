@@ -71,7 +71,9 @@ def check_cover():
                 u,v=cyc[i],cyc[(i+1)%L];ei=edge_index[tuple(sorted((u,v)))];s=(s+(1 if u<40 else -1)*full[ei])%prime
             z+=s==0
         zeros[str(L)]=z
-    assert counts==p['short_cycle_counts'] and zeros==p['zero_voltage_cycles'] and p['certified_girth_lower_bound']==16
+    assert counts==p['short_cycle_counts'] and zeros==p['zero_voltage_cycles']
+    assert zeros=={'8':1,'10':0,'12':18,'14':132}
+    assert p['certified_girth_lower_bound']==8 and p['status']=='RETRACTED_BY_PASS_4329'
 
 def loop_leak(theta,r):
     h=math.sqrt(math.sin(theta)**2+(math.cos(theta)-r)**2)
@@ -143,8 +145,11 @@ def check_channel():
 def check_outside_box():
     p=C['pass4258_levi_spectral_form_factor'];assert abs(p['infinite_time_average']-2054/6400)<1e-15 and abs(p['plateau_enhancement_factor']-25.675)<1e-12
     p=C['pass4259_levi_modular_spectrum'];nu4=1/math.sqrt(3);nu6=.25*math.sqrt(2+10/math.sqrt(19));assert abs(math.log((nu4+.5)/(nu4-.5))-p['entanglement_energies']['epsilon4'])<1e-14 and abs(math.log((nu6+.5)/(nu6-.5))-p['entanglement_energies']['epsilon_sqrt6'])<1e-14
-    p=C['pass4260_ballistic_causal_capacity'];assert abs(p['radial_group_velocity_over_J']-2*math.sqrt(3))<1e-15 and p['girth16_tree_ball_vertices']==4373
+    p=C['pass4260_ballistic_causal_capacity'];assert abs(p['radial_group_velocity_over_J']-2*math.sqrt(3))<1e-15 and p['conditional_tree_ball_vertices']==4373
 
 def verify():
-    assert semantic_hash(C)==C['semantic_sha256'] and C['all_checks_hold'];check_cover();check_holonomy();check_hysteresis();check_clock();check_channel();check_outside_box();print('PASS_4253_4260',C['semantic_sha256']);return True
+    assert semantic_hash(C)==C['semantic_sha256'] and not C['all_checks_hold']
+    assert not C['checks']['4253'] and all(C['checks'][str(i)] for i in range(4254,4261))
+    check_cover();check_holonomy();check_hysteresis();check_clock();check_channel();check_outside_box()
+    print('PASS_4253_RETRACTION_4254_4260',C['semantic_sha256']);return True
 if __name__=='__main__':verify()

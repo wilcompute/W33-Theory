@@ -1,0 +1,22 @@
+{
+  "part": "DCCCXXX",
+  "decimal": 830,
+  "title": "The Arrow of Time from W(3,3) Graph Irreversibility",
+  "date": "2026-05-17",
+  "thesis": "The thermodynamic arrow of time is interpreted as information loss under irreversible RG edge contraction.",
+  "graph_inputs": {
+    "spanning_tree_count": 384,
+    "operation": "edge contraction",
+    "flow_direction": "UV to IR"
+  },
+  "entropy_law": {
+    "formula": "S(mu) = k_B ln tau(W(3,3)|_mu)",
+    "monotonicity_claim": "dS/dlnmu > 0 along UV-to-IR coarse graining"
+  },
+  "interpretation": [
+    "Low Big Bang entropy is the UV fixed-point starting state.",
+    "CPT symmetry remains exact; the arrow is computational irreversibility.",
+    "Reversal would require inaccessible contracted-edge information."
+  ],
+  "status": "THEORETICAL FRAMEWORK - ARROW OF TIME"
+}

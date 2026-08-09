@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "all_checks_pass": true,
+  "check_count": 56,
+  "checks_passing": 56,
+  "failed_checks": [],
+  "category_counts": {
+    "atom_checks": 9,
+    "type_a_q_checks": 9,
+    "type_a_eig_checks": 9,
+    "type_a_lam_checks": 6,
+    "type_d_checks": 6,
+    "catalan_checks": 7,
+    "structural_checks": 10
+  },
+  "cluster_vars": {
+    "A_Q": 9,
+    "A_LAM": 5,
+    "A_EIG_MAX": 20,
+    "D_Q": 12,
+    "E_6": 36
+  },
+  "frieze_periods": {
+    "A_LAM": 5,
+    "A_Q": 6,
+    "A_EIG_MAX": 8
+  },
+  "w33_atoms": {
+    "Q": 3,
+    "LAM": 2,
+    "V": 40,
+    "K": 12,
+    "PHI3": 13,
+    "PHI4": 10,
+    "PHI6": 7,
+    "J_INV": 8,
+    "EDGES": 240,
+    "EIG_MAX": 5
+  },
+  "theorem_ccii": "Cluster algebra combinatorics encodes W(3,3) atoms: A_Q cluster vars = Q\u00b2, period = MULT_K2. A_EIG vars = V/2, period = J_INV. D_Q cluster vars = K. C_2=LAM, C_3=EIG_MAX. E_6 vars = LEECH_DIM + K = 36."
+}

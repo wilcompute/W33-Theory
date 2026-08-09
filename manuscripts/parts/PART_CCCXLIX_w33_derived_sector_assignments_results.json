@@ -1,0 +1,67 @@
+{
+  "part": "CCCXLIX",
+  "title": "W33-Derived Sector Assignment Compiler",
+  "verified": true,
+  "checks_passed": 11,
+  "checks_total": 11,
+  "w33_generator": {
+    "G": [["67/2", "140"], ["1", "-67/2"]],
+    "G_squared": [["5049/4", "0"], ["0", "5049/4"]],
+    "trace": "0",
+    "determinant": "-5049/4",
+    "M2": "5049/4"
+  },
+  "derived_sector_maps": {
+    "operator_core": {
+      "assignment": {"mass": 0, "gap": 1, "heat_trace": 0, "spinor_trace": 1, "resolvent_trace": 1, "zeta": 0},
+      "blocks": {"0": ["mass", "heat_trace", "zeta"], "1": ["gap", "spinor_trace", "resolvent_trace"]},
+      "sector_count": 2,
+      "rule": "same sector iff channels use the same core operator G or G^2"
+    },
+    "order_parity": {
+      "assignment": {"mass": 0, "gap": 1, "heat_trace": 0, "spinor_trace": 1, "resolvent_trace": 1, "zeta": 0},
+      "blocks": {"0": ["mass", "heat_trace", "zeta"], "1": ["gap", "spinor_trace", "resolvent_trace"]},
+      "sector_count": 2,
+      "rule": "same sector iff channels are odd/first-order or even/KG"
+    },
+    "transform_class": {
+      "assignment": {"mass": 0, "gap": 1, "heat_trace": 2, "spinor_trace": 2, "resolvent_trace": 3, "zeta": 4},
+      "blocks": {"0": ["mass"], "1": ["gap"], "2": ["heat_trace", "spinor_trace"], "3": ["resolvent_trace"], "4": ["zeta"]},
+      "sector_count": 5,
+      "rule": "same sector iff channels use the same functional transform class"
+    },
+    "trace_flag": {
+      "assignment": {"mass": 0, "gap": 0, "heat_trace": 1, "spinor_trace": 1, "resolvent_trace": 1, "zeta": 1},
+      "blocks": {"0": ["mass", "gap"], "1": ["heat_trace", "spinor_trace", "resolvent_trace", "zeta"]},
+      "sector_count": 2,
+      "rule": "same sector iff channels are spectral readouts or traced kernels"
+    },
+    "minimal_bridge": {
+      "assignment": {"mass": 0, "gap": 0, "heat_trace": 1, "spinor_trace": 2, "resolvent_trace": 2, "zeta": 1},
+      "blocks": {"0": ["mass", "gap"], "1": ["heat_trace", "zeta"], "2": ["spinor_trace", "resolvent_trace"]},
+      "sector_count": 3,
+      "rule": "geometry readout vs first-order traced kernels vs even/KG traced kernels"
+    }
+  },
+  "recommended_next_sector_tests": ["operator_core", "minimal_bridge", "transform_class"],
+  "internal_response_packet": {
+    "mass": 35.5281578469811,
+    "gap": 71.0563156939622,
+    "heat_trace": 0.5658372432569382,
+    "spinor_trace": 2.1271897588648534,
+    "resolvent_trace": 0.022889187720315583,
+    "zeta": 1.2552759915088154e-06,
+    "samples": {"tau": 0.001, "t": 0.01, "s": 100.0, "p": 2}
+  },
+  "anchor_free_scales": {
+    "mass": 1262.25,
+    "gap": 1262.25,
+    "heat_trace": 1262.25,
+    "spinor_trace": 1262.2499999999998,
+    "resolvent_trace": 1262.25,
+    "zeta": 1262.25
+  },
+  "architecture_upgrade": "CCCXLVIII tied response channels to finite W33 operators. CCCXLIX derives sector assignments directly from operator provenance signatures: core operator, order parity, transform class, trace flag, and a minimal bridge rule.",
+  "theorem": "Given the W33 operator-response registry, sector assignments are induced by equivalence relations on operator provenance. The operator-core and parity relations split channels into G and G^2 sectors; the trace relation splits spectral readouts from traced kernels; the transform relation refines by functional calculus; and the minimal bridge map separates geometry readout, first-order kernels, and even/KG kernels.",
+  "honesty_boundary": "These sector maps are mathematically derived from the finite operator registry. Selecting which sector map is physically correct still requires empirical comparison or additional W33 representation-theoretic constraints."
+}

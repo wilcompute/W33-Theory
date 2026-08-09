@@ -1,0 +1,28 @@
+{
+  "part": "CCCLXIII",
+  "title": "Interlacing-Constrained Response Priors",
+  "verified": true,
+  "checks_passed": 7,
+  "checks_total": 7,
+  "structural_prior_penalties": {
+    "operator_core": 0.0,
+    "minimal_bridge": 4.0,
+    "transform_class": 8.0,
+    "one_sector": 12.0,
+    "free_channel": 24.0
+  },
+  "prior_sources": {
+    "operator_core": "operator provenance + E8/E6 + H27/N12 interlacing + two-graph incidence + RG generator derivation",
+    "minimal_bridge": "controlled refinement with partial shell/trace support",
+    "transform_class": "functional-calculus refinement with weaker shell prior",
+    "free_channel": "saturated fallback with no structural support"
+  },
+  "comparison_summary": {
+    "operator_core_packet": "posterior selects operator_core",
+    "close_call_packet": "posterior selects operator_core",
+    "minimal_bridge_packet": "strong likelihood improvement overcomes prior and selects minimal_bridge"
+  },
+  "architecture_upgrade": "CCCLX used interlacing and two-graph certificates as explanatory sector evidence. CCCLXIII turns them into active structural priors in the response-sector likelihood leaderboard.",
+  "theorem": "A response-sector leaderboard can combine empirical BIC with finite W33 structural priors. The operator_core/grading_role map receives full prior support from operator provenance, E8/E6 grading, H27/N12 interlacing, two-graph incidence, and RG-generator derivation; refinements can still win when their likelihood improvement exceeds the structural penalty.",
+  "honesty_boundary": "The prior penalties are transparent finite-model weights, not statistically calibrated experimental Bayesian priors. Real empirical use should calibrate them against data or derive them from a formal model prior."
+}

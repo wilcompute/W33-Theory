@@ -1,0 +1,31 @@
+{
+  "part": "CCCVI",
+  "title": "Distance Matrix Spectrum of W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "V": 40,
+    "K": 12,
+    "D_EIG_0": 66,
+    "D_EIG_1": -4,
+    "D_EIG_2": 2,
+    "D_SPEC_SUM": 0,
+    "D_TRACE_SQ": 4800,
+    "WIENER": 1320,
+    "D_SPREAD": 70,
+    "DIAMETER": 2
+  },
+  "discoveries": [
+    "d_0=66=2*GUT_DIM+K: Perron distance eigenvalue encodes GUT dimension and valency",
+    "d_0=66=(V-1)+GUT_DIM: V-1=K+K2 vertex gap plus GUT dimension",
+    "d_1=-4=S_EIG: restricted distance eigenvalue equals adjacency S eigenvalue",
+    "d_2=2=R_EIG=LAM: restricted distance eigenvalue equals adjacency R eigenvalue",
+    "|d_1|=EW_GAUGE_4=MU: absolute value of second distance eigenvalue = EW factor = codegree",
+    "tr(D^2)=4800=V*ALPHA*K=2*EDGES*ALPHA: second moment has dual SM encoding",
+    "WIENER=1320=GUT_DIM*V+EDGES=MULT_R*MULT_S+4*EDGES: Wiener index has triple SM encoding",
+    "D_SPREAD=70=MULT_R+MULT_S+MU+GUT_DIM: spectral spread is sum of four SM constants",
+    "d_0-|d_1|-d_2=60=2*ALPHA*GENERATIONS: SM-weighted eigenvalue combination",
+    "DIAMETER=2=LAM: graph diameter numerically coincides with first subconstituent parameter"
+  ]
+}

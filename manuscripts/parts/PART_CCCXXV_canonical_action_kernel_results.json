@@ -1,0 +1,62 @@
+{
+  "architecture_upgrade": "CCCXXIV identified the runtime layers.  CCCXXV makes the action layer canonical: once the centered coupling spectrum is fixed, the sector dimensions are forced by runtime degree, triangle trace, and signed imbalance.  The determinant is therefore a derived architecture object, not an isolated ansatz.",
+  "checks": [
+    {"name":"centered coupling middle value is -1","passed":true,"value":-1},
+    {"name":"coupling triple = (-1+2q, -1, -1-2q)","passed":true,"value":[5,-1,-7]},
+    {"name":"runtime sector degree = 2^(q+lambda) = 32","passed":true,"value":32},
+    {"name":"triangle trace = 6T = 960","passed":true,"value":960},
+    {"name":"target signed imbalance = -2^q = -8","passed":true,"value":-8},
+    {"name":"unique positive integer sector solution","passed":true,"value":[[10,16,6]]},
+    {"name":"sector dimensions = (Phi4,(q+1)^2,2q)","passed":true,"value":[10,16,6]},
+    {"name":"sector dimension sum = 32","passed":true,"value":32},
+    {"name":"sector dimension product = tr(A^3)","passed":true,"value":960},
+    {"name":"signed first moment = -2^q","passed":true,"value":-8},
+    {"name":"second moment follows as Phi6(q^4-1)","passed":true,"value":560},
+    {"name":"Z(1)=2^(2q^3)","passed":true,"value":54},
+    {"name":"gauge/action sector dim = Phi4 = 10","passed":true,"value":10},
+    {"name":"middle/fusion sector dim = (q+1)^2 = 16","passed":true,"value":16},
+    {"name":"gap/broken sector dim = 2q = 6","passed":true,"value":6},
+    {"name":"full stabilizer Phi3 exceeds critical Phi6 by 2q","passed":true,"value":6},
+    {"name":"spinor runtime degree decomposes as Phi4+(q+1)^2+2q","passed":true,"value":32}
+  ],
+  "checks_passed": 17,
+  "checks_total": 17,
+  "constants": {
+    "E": 240,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "T": 160,
+    "k": 12,
+    "lambda": 2,
+    "mu": 4,
+    "q": 3,
+    "runtime_degree": 32,
+    "triangle_trace": 960,
+    "v": 40
+  },
+  "constraints": {
+    "couplings": [5,-1,-7],
+    "dimension_product": 960,
+    "dimension_sum": 32,
+    "signed_first_moment": -8
+  },
+  "determinant": "(1-5x)^10(1+x)^16(1+7x)^6",
+  "honesty_boundary": "This is still a finite action kernel.  The continuum Lagrangian and renormalized quantum field theory remain the next required construction.",
+  "moments": {
+    "Z(1)": "2^54",
+    "second_moment": 560,
+    "sector_product": 960,
+    "sector_sum": 32,
+    "signed_first_moment": -8
+  },
+  "part": "CCCXXV",
+  "theorem": "The determinant Z(x)=(1-5x)^10(1+x)^16(1+7x)^6 is the unique positive-integer three-sector action kernel whose couplings are the centered W33 triple (-1+2q,-1,-1-2q), whose total runtime degree is 2^(q+lambda)=32, whose sector product is the triangle trace tr(A^3)=960, and whose signed imbalance is -2^q=-8.  The forced sector dimensions are (10,16,6)=(Phi4,(q+1)^2,2q).",
+  "title": "Canonical Action Kernel Compiler",
+  "unique_solution": {
+    "closed_forms": ["Phi4", "(q+1)^2", "2q"],
+    "sector_dimensions": [10,16,6],
+    "sector_labels": ["gauge/action", "middle/fusion", "gap/broken"]
+  },
+  "verified": true
+}

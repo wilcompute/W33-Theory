@@ -119,7 +119,86 @@
     "irreducibles": [
       {
         "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [
-          [2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0],[2,0]
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ]
         ],
         "dark_multiplicity": 0,
         "degree": 1,
@@ -128,7 +207,88 @@
         "label": "1"
       },
       {
-        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[10,0],[-6,0],[2,0],[1,3],[1,-3],[-2,0],[4,0],[2,0],[-2,0],[0,0],[-3,-1],[-3,1],[0,2],[0,-2],[0,0],[2,0],[1,-1],[1,1],[-1,1],[-1,-1]],
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [
+          [
+            10,
+            0
+          ],
+          [
+            -6,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            -3
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -3,
+            -1
+          ],
+          [
+            -3,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            -1,
+            -1
+          ]
+        ],
         "dark_multiplicity": 1,
         "degree": 5,
         "internal_index": 1,
@@ -136,7 +296,88 @@
         "label": "5a"
       },
       {
-        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[10,0],[-6,0],[2,0],[1,-3],[1,3],[-2,0],[4,0],[2,0],[-2,0],[0,0],[-3,1],[-3,-1],[0,-2],[0,2],[0,0],[2,0],[1,1],[1,-1],[-1,-1],[-1,1]],
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [
+          [
+            10,
+            0
+          ],
+          [
+            -6,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            -3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -3,
+            1
+          ],
+          [
+            -3,
+            -1
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            1
+          ]
+        ],
         "dark_multiplicity": 1,
         "degree": 5,
         "internal_index": 2,
@@ -144,7 +385,88 @@
         "label": "5b"
       },
       {
-        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[12,0],[-4,0],[4,0],[0,0],[0,0],[0,0],[0,0],[4,0],[0,0],[2,0],[0,0],[0,0],[0,0],[0,0],[0,0],[-2,0],[0,0],[0,0],[0,0],[0,0]],
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [
+          [
+            12,
+            0
+          ],
+          [
+            -4,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
         "dark_multiplicity": 2,
         "degree": 6,
         "internal_index": 3,
@@ -152,7 +474,88 @@
         "label": "6"
       },
       {
-        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[20,0],[4,0],[4,0],[-1,-3],[-1,3],[2,0],[2,0],[0,0],[0,0],[-2,0],[1,1],[1,-1],[0,-2],[0,2],[0,0],[-2,0],[-1,1],[-1,-1],[1,-1],[1,1]],
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [
+          [
+            20,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            -1,
+            -3
+          ],
+          [
+            -1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            -1,
+            -1
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
         "dark_multiplicity": 1,
         "degree": 10,
         "internal_index": 4,
@@ -160,7 +563,88 @@
         "label": "10_plus"
       },
       {
-        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[20,0],[4,0],[4,0],[-1,3],[-1,-3],[2,0],[2,0],[0,0],[0,0],[-2,0],[1,-1],[1,1],[0,2],[0,-2],[0,0],[-2,0],[-1,-1],[-1,1],[1,1],[1,-1]],
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [
+          [
+            20,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            -1,
+            3
+          ],
+          [
+            -1,
+            -3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            -1
+          ]
+        ],
         "dark_multiplicity": 1,
         "degree": 10,
         "internal_index": 5,
@@ -168,7 +652,88 @@
         "label": "10_minus"
       },
       {
-        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[30,0],[-2,0],[6,0],[3,0],[3,0],[0,0],[-6,0],[-2,0],[-2,0],[0,0],[-3,0],[-3,0],[0,0],[0,0],[0,0],[2,0],[0,0],[0,0],[1,0],[1,0]],
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [
+          [
+            30,
+            0
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -6,
+            0
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -3,
+            0
+          ],
+          [
+            -3,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
         "dark_multiplicity": 1,
         "degree": 15,
         "internal_index": 6,
@@ -176,7 +741,88 @@
         "label": "15a"
       },
       {
-        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[30,0],[14,0],[-2,0],[3,0],[3,0],[0,0],[2,0],[6,0],[-2,0],[0,0],[1,0],[1,0],[0,0],[0,0],[0,0],[2,0],[0,0],[0,0],[-1,0],[-1,0]],
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [
+          [
+            30,
+            0
+          ],
+          [
+            14,
+            0
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -1,
+            0
+          ],
+          [
+            -1,
+            0
+          ]
+        ],
         "dark_multiplicity": 3,
         "degree": 15,
         "internal_index": 7,
@@ -184,7 +830,88 @@
         "label": "15b"
       },
       {
-        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[60,0],[12,0],[4,0],[-3,9],[-3,-9],[0,0],[0,0],[4,0],[0,0],[0,0],[-3,1],[-3,-1],[0,2],[0,-2],[0,0],[0,0],[0,0],[0,0],[1,1],[1,-1]],
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [
+          [
+            60,
+            0
+          ],
+          [
+            12,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            -3,
+            9
+          ],
+          [
+            -3,
+            -9
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -3,
+            1
+          ],
+          [
+            -3,
+            -1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            -1
+          ]
+        ],
         "dark_multiplicity": 6,
         "degree": 30,
         "internal_index": 8,
@@ -192,7 +919,88 @@
         "label": "30_plus"
       },
       {
-        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[40,0],[8,0],[0,0],[-2,0],[-2,0],[2,0],[-4,0],[0,0],[0,0],[-2,0],[2,0],[2,0],[0,0],[0,0],[0,0],[0,0],[2,0],[2,0],[0,0],[0,0]],
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [
+          [
+            40,
+            0
+          ],
+          [
+            8,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            -4,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
         "dark_multiplicity": 5,
         "degree": 20,
         "internal_index": 9,
@@ -200,7 +1008,88 @@
         "label": "20"
       },
       {
-        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[60,0],[12,0],[4,0],[-3,-9],[-3,9],[0,0],[0,0],[4,0],[0,0],[0,0],[-3,-1],[-3,1],[0,-2],[0,2],[0,0],[0,0],[0,0],[0,0],[1,-1],[1,1]],
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [
+          [
+            60,
+            0
+          ],
+          [
+            12,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            -3,
+            -9
+          ],
+          [
+            -3,
+            9
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -3,
+            -1
+          ],
+          [
+            -3,
+            1
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
         "dark_multiplicity": 6,
         "degree": 30,
         "internal_index": 10,
@@ -208,7 +1097,88 @@
         "label": "30_minus"
       },
       {
-        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[128,0],[0,0],[0,0],[2,0],[2,0],[-4,0],[2,0],[0,0],[0,0],[2,0],[-2,0],[-2,0],[2,0],[2,0],[0,0],[0,0],[-1,0],[-1,0],[0,0],[0,0]],
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [
+          [
+            128,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            -4,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -1,
+            0
+          ],
+          [
+            -1,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
         "dark_multiplicity": 8,
         "degree": 64,
         "internal_index": 11,
@@ -216,7 +1186,88 @@
         "label": "64"
       },
       {
-        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[90,0],[-6,0],[2,0],[9,-9],[9,9],[0,0],[0,0],[-2,0],[2,0],[0,0],[-3,3],[-3,-3],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[-1,1],[-1,-1]],
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [
+          [
+            90,
+            0
+          ],
+          [
+            -6,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            9,
+            -9
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -3,
+            3
+          ],
+          [
+            -3,
+            -3
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            -1,
+            -1
+          ]
+        ],
         "dark_multiplicity": 4,
         "degree": 45,
         "internal_index": 12,
@@ -224,7 +1275,88 @@
         "label": "45_minus"
       },
       {
-        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[90,0],[-6,0],[2,0],[9,9],[9,-9],[0,0],[0,0],[-2,0],[2,0],[0,0],[-3,-3],[-3,3],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[-1,-1],[-1,1]],
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [
+          [
+            90,
+            0
+          ],
+          [
+            -6,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            -9
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -3,
+            -3
+          ],
+          [
+            -3,
+            3
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            1
+          ]
+        ],
         "dark_multiplicity": 4,
         "degree": 45,
         "internal_index": 13,
@@ -232,7 +1364,88 @@
         "label": "45_plus"
       },
       {
-        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[120,0],[-8,0],[8,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [
+          [
+            120,
+            0
+          ],
+          [
+            -8,
+            0
+          ],
+          [
+            8,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
         "dark_multiplicity": 9,
         "degree": 60,
         "internal_index": 14,
@@ -240,7 +1453,88 @@
         "label": "60"
       },
       {
-        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[80,0],[-16,0],[0,0],[-10,-6],[-10,6],[2,0],[2,0],[0,0],[0,0],[-1,-1],[2,-2],[2,2],[2,-2],[2,2],[0,0],[0,0],[-1,-1],[-1,1],[0,0],[0,0]],
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [
+          [
+            80,
+            0
+          ],
+          [
+            -16,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -10,
+            -6
+          ],
+          [
+            -10,
+            6
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -1,
+            -1
+          ],
+          [
+            2,
+            -2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            -2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
         "dark_multiplicity": 4,
         "degree": 40,
         "internal_index": 15,
@@ -248,7 +1542,88 @@
         "label": "40_minus"
       },
       {
-        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[80,0],[-16,0],[0,0],[-10,6],[-10,-6],[2,0],[2,0],[0,0],[0,0],[-1,1],[2,2],[2,-2],[2,2],[2,-2],[0,0],[0,0],[-1,1],[-1,-1],[0,0],[0,0]],
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [
+          [
+            80,
+            0
+          ],
+          [
+            -16,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -10,
+            6
+          ],
+          [
+            -10,
+            -6
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            -2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            -2
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            -1,
+            -1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
         "dark_multiplicity": 4,
         "degree": 40,
         "internal_index": 16,
@@ -256,7 +1631,88 @@
         "label": "40_plus"
       },
       {
-        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[60,0],[-20,0],[4,0],[6,0],[6,0],[0,0],[0,0],[-4,0],[0,0],[0,0],[2,0],[2,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [
+          [
+            60,
+            0
+          ],
+          [
+            -20,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -4,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
         "dark_multiplicity": 3,
         "degree": 30,
         "internal_index": 17,
@@ -264,7 +1720,88 @@
         "label": "30_real"
       },
       {
-        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[162,0],[18,0],[2,0],[0,0],[0,0],[0,0],[0,0],[2,0],[2,0],[2,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [
+          [
+            162,
+            0
+          ],
+          [
+            18,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
         "dark_multiplicity": 9,
         "degree": 81,
         "internal_index": 18,
@@ -272,7 +1809,88 @@
         "label": "81"
       },
       {
-        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [[48,0],[16,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[-2,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],
+        "atlas_character_fingerprint_half_p_plus_q_i_sqrt3": [
+          [
+            48,
+            0
+          ],
+          [
+            16,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
         "dark_multiplicity": 2,
         "degree": 24,
         "internal_index": 19,
@@ -334,25 +1952,120 @@
     "minimal_mark_count": 1,
     "minimality": "Zero marked edges leaves only scalar U(1); one marked edge already yields U(3), so one is minimal in number of marked incidence edges.",
     "restriction_components": [
-      {"block":"U(1)","character_index":2,"degree":1,"multiplicity":1},
-      {"block":"U(2)","character_index":4,"degree":3,"multiplicity":2},
-      {"block":"U(2)","character_index":5,"degree":3,"multiplicity":2},
-      {"block":"U(1)","character_index":6,"degree":3,"multiplicity":1},
-      {"block":"U(1)","character_index":7,"degree":3,"multiplicity":1},
-      {"block":"U(1)","character_index":8,"degree":1,"multiplicity":1},
-      {"block":"U(1)","character_index":9,"degree":2,"multiplicity":1},
-      {"block":"U(1)","character_index":10,"degree":1,"multiplicity":1},
-      {"block":"U(1)","character_index":11,"degree":2,"multiplicity":1},
-      {"block":"U(1)","character_index":12,"degree":2,"multiplicity":1},
-      {"block":"U(2)","character_index":13,"degree":3,"multiplicity":2},
-      {"block":"U(3)","character_index":14,"degree":6,"multiplicity":3},
-      {"block":"U(2)","character_index":15,"degree":3,"multiplicity":2},
-      {"block":"U(1)","character_index":16,"degree":3,"multiplicity":1},
-      {"block":"U(1)","character_index":17,"degree":3,"multiplicity":1},
-      {"block":"U(1)","character_index":18,"degree":3,"multiplicity":1},
-      {"block":"U(1)","character_index":19,"degree":3,"multiplicity":1},
-      {"block":"U(2)","character_index":20,"degree":3,"multiplicity":2},
-      {"block":"U(2)","character_index":21,"degree":3,"multiplicity":2}
+      {
+        "block": "U(1)",
+        "character_index": 2,
+        "degree": 1,
+        "multiplicity": 1
+      },
+      {
+        "block": "U(2)",
+        "character_index": 4,
+        "degree": 3,
+        "multiplicity": 2
+      },
+      {
+        "block": "U(2)",
+        "character_index": 5,
+        "degree": 3,
+        "multiplicity": 2
+      },
+      {
+        "block": "U(1)",
+        "character_index": 6,
+        "degree": 3,
+        "multiplicity": 1
+      },
+      {
+        "block": "U(1)",
+        "character_index": 7,
+        "degree": 3,
+        "multiplicity": 1
+      },
+      {
+        "block": "U(1)",
+        "character_index": 8,
+        "degree": 1,
+        "multiplicity": 1
+      },
+      {
+        "block": "U(1)",
+        "character_index": 9,
+        "degree": 2,
+        "multiplicity": 1
+      },
+      {
+        "block": "U(1)",
+        "character_index": 10,
+        "degree": 1,
+        "multiplicity": 1
+      },
+      {
+        "block": "U(1)",
+        "character_index": 11,
+        "degree": 2,
+        "multiplicity": 1
+      },
+      {
+        "block": "U(1)",
+        "character_index": 12,
+        "degree": 2,
+        "multiplicity": 1
+      },
+      {
+        "block": "U(2)",
+        "character_index": 13,
+        "degree": 3,
+        "multiplicity": 2
+      },
+      {
+        "block": "U(3)",
+        "character_index": 14,
+        "degree": 6,
+        "multiplicity": 3
+      },
+      {
+        "block": "U(2)",
+        "character_index": 15,
+        "degree": 3,
+        "multiplicity": 2
+      },
+      {
+        "block": "U(1)",
+        "character_index": 16,
+        "degree": 3,
+        "multiplicity": 1
+      },
+      {
+        "block": "U(1)",
+        "character_index": 17,
+        "degree": 3,
+        "multiplicity": 1
+      },
+      {
+        "block": "U(1)",
+        "character_index": 18,
+        "degree": 3,
+        "multiplicity": 1
+      },
+      {
+        "block": "U(1)",
+        "character_index": 19,
+        "degree": 3,
+        "multiplicity": 1
+      },
+      {
+        "block": "U(2)",
+        "character_index": 20,
+        "degree": 3,
+        "multiplicity": 2
+      },
+      {
+        "block": "U(2)",
+        "character_index": 21,
+        "degree": 3,
+        "multiplicity": 2
+      }
     ],
     "stabilizer_conjugacy_classes": 22,
     "stabilizer_order": 162,
@@ -373,7 +2086,27 @@
     "dark_dimension": 3161,
     "identity": "ln(3161)=H(label)+sum_label p_label ln(dim_label)",
     "irrep_label_information_nats": 2.3278663282163152,
-    "isotypic_dimensions": [5,5,12,10,10,15,45,180,100,180,512,180,180,540,160,160,90,729,48],
+    "isotypic_dimensions": [
+      5,
+      5,
+      12,
+      10,
+      10,
+      15,
+      45,
+      180,
+      100,
+      180,
+      512,
+      180,
+      180,
+      540,
+      160,
+      160,
+      90,
+      729,
+      48
+    ],
     "no_free_lunch": "Erasing the retained label record costs at least the same kBT H(label), restoring the full Landauer cost.",
     "unconditioned_erasure_work_over_kBT": "ln(3161)",
     "unconditioned_numeric": 8.058643712215618,
@@ -383,11 +2116,26 @@
     "boundary": "An operational causal metric on a finite hopping graph, not an emergent Lorentzian spacetime or gravity theory.",
     "definition": "d(u,v)=min{n>=0 : d^n/dt^n <u|exp(-iHt)|v>|_{t=0} != 0}",
     "exact_metric": "d(u,v) equals line-graph distance because (A^n)_uv=0 below the shortest-path length.",
-    "first_nonzero_path_multiplicity": {"1":1,"2":1,"3":1,"4":2},
+    "first_nonzero_path_multiplicity": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 2
+    },
     "hamiltonian": "H=J A_line on the 160 incidence-link sites",
-    "leading_amplitudes": {"1":"(-i J t)","2":"(-i J t)^2/2!","3":"(-i J t)^3/3!","4":"2(-i J t)^4/4!"},
+    "leading_amplitudes": {
+      "1": "(-i J t)",
+      "2": "(-i J t)^2/2!",
+      "3": "(-i J t)^3/3!",
+      "4": "2(-i J t)^4/4!"
+    },
     "reading": "Short-time response order reconstructs distance; the coefficient reconstructs shortest-path degeneracy.",
-    "shells": {"1":6,"2":18,"3":54,"4":81}
+    "shells": {
+      "1": 6,
+      "2": 18,
+      "3": 54,
+      "4": 81
+    }
   },
   "primary_literature": [
     "ATLAS of Finite Group Representations: U4(2)=PSp(4,3) standard generators, classes, and representations.",
@@ -398,6 +2146,6 @@
     "Landauer principle and information-thermodynamic erasure bounds."
   ],
   "schema": "w33.pass4081_4088.deep_physics.v1",
-  "semantic_sha256": "2f545b68de78b2cc7ab9844834ba5d9275841fce4e8aefa156c0f5388c9a5c9a",
+  "semantic_sha256": "13e93b393633e6ba69ac031ae30dbaf76891a15ff2a26381a192eac79864ba8f",
   "status": "PASS_EXACT_FIVE_TARGETS_THREE_OUTSIDE_BOX_WITH_EXPERIMENTAL_CHIRAL_AND_EMERGENCE_BOUNDARIES"
 }

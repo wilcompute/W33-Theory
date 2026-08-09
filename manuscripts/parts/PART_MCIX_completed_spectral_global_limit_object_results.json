@@ -1,0 +1,58 @@
+{
+  "theorem": "Standalone infinite-cutoff completed spectral L-limit",
+  "uniform_radius_lower_bound": 6.0,
+  "sample_log_tail_bounds": {
+    "rho=1,X=10^6": 2.000000333333333e-06,
+    "rho=2,X=10^6": 4.0000026666666666e-06,
+    "rho=5,X=10^6": 1.000004166666667e-05
+  },
+  "sample_relative_error_bounds": {
+    "rho=1,X=10^6": 2.000002333335333e-06,
+    "rho=2,X=10^6": 4.000010666688e-06,
+    "rho=5,X=10^6": 1.0000091667250004e-05
+  },
+  "sample_rows": {
+    "s=1.0,lambda=1.0": {
+      "prime_limit": 1000000,
+      "value_real": 0.9637482610393804,
+      "value_imag": 0.0,
+      "log_real": -0.03692515847523429,
+      "log_imag": 0.0,
+      "action_real": 0.03692515847523429,
+      "action_imag": -0.0,
+      "abs_jump_from_previous_log": 3.663925817673497e-07,
+      "uniform_radius_lower_bound": 6.0,
+      "log_tail_bound": 2.000000333333333e-06,
+      "relative_value_error_bound": 2.000002333335333e-06,
+      "abs_reciprocity_error": 1.865174681370263e-14
+    },
+    "s=1.0,lambda=2.0": {
+      "prime_limit": 1000000,
+      "value_real": 0.9147987101976583,
+      "value_imag": 0.0,
+      "log_real": -0.08905122676274098,
+      "log_imag": 0.0,
+      "action_real": 0.08905122676274098,
+      "action_imag": -0.0,
+      "abs_jump_from_previous_log": 7.327933837508738e-07,
+      "uniform_radius_lower_bound": 6.0,
+      "log_tail_bound": 4.0000026666666666e-06,
+      "relative_value_error_bound": 4.000010666688e-06,
+      "abs_reciprocity_error": 2.7755575615628914e-14
+    },
+    "s=2.0,lambda=1.0": {
+      "prime_limit": 1000000,
+      "value_real": 0.9590920626847452,
+      "value_imag": 0.0,
+      "log_real": -0.041768210077750396,
+      "log_imag": 0.0,
+      "action_real": 0.041768210077750396,
+      "action_imag": -0.0,
+      "abs_jump_from_previous_log": 3.663946369913962e-07,
+      "uniform_radius_lower_bound": 6.0,
+      "log_tail_bound": 2.000000333333333e-06,
+      "relative_value_error_bound": 2.000002333335333e-06,
+      "abs_reciprocity_error": 6.439293542825908e-15
+    }
+  }
+}

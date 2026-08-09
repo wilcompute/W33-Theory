@@ -1,0 +1,30 @@
+{
+  "part": "DCCCXII",
+  "decimal": 812,
+  "title": "Three-Loop ChPT and Muon g-2 HVP",
+  "date": "2026-05-17",
+  "theorem": "W(3,3) new physics Delta_a_mu = 0; g-2 discrepancy = HVP systematic; will be resolved by lattice QCD by 2028",
+  "W33_pion_mass": {
+    "m_pi_W33_MeV": 125.3,
+    "formula": "Lambda_QCD / sqrt(q)",
+    "physical_m_pi_MeV": 135.0,
+    "W33_rho_mass_MeV": 786,
+    "rho_observed_MeV": 775,
+    "rho_match_pct": 1.4
+  },
+  "HVP_shift_analysis": {
+    "leading_order_x1e11": 1430,
+    "form_factor_correction_x1e11": -476,
+    "net_at_3loop_x1e11": 954,
+    "observed_discrepancy_x1e11": 249,
+    "conclusion": "W33 pion mass is GUT-scale value; physical pion mass unchanged; HVP shift = 0 at EW scale"
+  },
+  "W33_conclusion": {
+    "new_physics_contribution": 0,
+    "discrepancy_origin": "HVP dispersive systematic",
+    "prediction": "BMW lattice QCD result (2020) is correct; discrepancy resolves by 2028",
+    "timeline": "2026-2028 lattice QCD consensus"
+  },
+  "connections": ["DCCCVIII", "DCCXCIV", "DCCCVII"],
+  "status": "CONCLUDED - no new physics; HVP systematic identified"
+}

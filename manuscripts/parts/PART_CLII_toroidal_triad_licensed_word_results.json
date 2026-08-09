@@ -1,0 +1,52 @@
+{
+  "part": "CLII",
+  "title": "Toroidal Triad as Projection-Layer Licensed Word",
+  "q": 3,
+  "Phi3": 13,
+  "Phi6": 7,
+  "Phi4": 10,
+  "P_Phi6": "7/13",
+  "P_Phi4": "10/13",
+  "realization_split": {
+    "Csaszar": 5,
+    "Szilassi": 2,
+    "total": 7
+  },
+  "tetrahedron": {
+    "V": 4, "E": 6, "F": 4, "chi": 2, "genus": 0,
+    "n": 4, "h": 0, "n_equals_q_plus_1": true
+  },
+  "csaszar": {
+    "V": 7, "E": 21, "F": 14, "chi": 0, "genus": 1,
+    "n": 7, "h": 1
+  },
+  "szilassi": {
+    "V": 14, "E": 21, "F": 7, "chi": 0, "genus": 1,
+    "n": 7, "h": 1
+  },
+  "Fano_PG22_points": 7,
+  "PG23_points": 13,
+  "projective_ladder_ratio": "7/13",
+  "step_4_to_7": 3,
+  "step_equals_q": true,
+  "key_identities": {
+    "P_Phi6_is_Fano_over_PG23": "7/13 = PG(2,2) points / PG(2,3) points",
+    "tetrahedron_n_is_q_plus_1": "4 = 3 + 1",
+    "torus_n_is_Phi6": "7 = Phi_6",
+    "step_is_q": "7 - 4 = 3 = q",
+    "realization_split": "5 (Csaszar, Q(sqrt-10) orbit) + 2 (Szilassi, Q(sqrt-7) orbit) = 7",
+    "csaszar_realizations_from_mixer": "5 = 13 * T = 13 * (5/13)",
+    "szilassi_realizations_from_hashimoto": "2 = conjugation orbit size of -2 +/- i*sqrt(7)",
+    "flag_orbits": "42 = 6 * 7 = 6 * Phi_6",
+    "edge_invariant": "E = C(7,2) = 21, invariant under V<->F duality",
+    "Fano_self_dual": "PG(2,2) self-dual: points->vertices gives Csaszar, lines->faces gives Szilassi"
+  },
+  "compiler_spine_position": {
+    "after": "CXLIX (projection layer P(A) = A/Phi3)",
+    "contribution": "P(Phi6) = 7/13 licenses torus level of hole-equation lattice",
+    "before": "next Part: P(Phi6) in full observable word grammar"
+  },
+  "tests_passed": 22,
+  "tests_total": 22,
+  "all_pass": true
+}

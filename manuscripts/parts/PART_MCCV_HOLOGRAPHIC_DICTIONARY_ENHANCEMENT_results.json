@@ -1,0 +1,45 @@
+{
+  "part": "MCCV",
+  "theorem": "Holographic dictionary and enhancement law",
+  "packets": {
+    "k": 12,
+    "n": 72,
+    "k_code": 66,
+    "v": 40,
+    "bulk_edges": 240,
+    "h1": 81
+  },
+  "dictionary": {
+    "boundary_rate": "11/12",
+    "bulk_rate": "27/80",
+    "projection_edges_per_boundary_vertex": 20,
+    "identity": "R_boundary=66/72=11/12, R_bulk=81/240=27/80, projection=240/12=20=v/2"
+  },
+  "enhancement": {
+    "ratio": "220/81",
+    "decimal": 2.7160493827160495,
+    "identity": "R_boundary/R_bulk = (11/12)/(81/240) = 220/81"
+  },
+  "open_boundaries": {
+    "distance_conjecture": "prove d=q=3 for [72,66]_3 in full explicit kernel form",
+    "representation_question": "identify canonical structural realization of the 220 numerator"
+  },
+  "finite_universality_surrogate": {
+    "statement": "boundary and bulk rates are rigidly linked by a finite enhancement fraction",
+    "boundary": "finite coding/combinatorial dictionary; not a full AdS/CFT derivation"
+  },
+  "claim_boundary": "finite holographic dictionary packet with explicit enhancement ratio",
+  "checks": {
+    "horizon_code_is_72_66": true,
+    "boundary_rate_is_11_over_12": true,
+    "bulk_edges_is_240": true,
+    "bulk_rate_is_81_over_240": true,
+    "bulk_rate_reduces_to_27_over_80": true,
+    "projection_is_20": true,
+    "projection_equals_v_over_2": true,
+    "enhancement_is_220_over_81": true,
+    "enhancement_numeric_gt_1": true,
+    "k_minus_1_over_k_lock": true
+  },
+  "n_verified": 10
+}

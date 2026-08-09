@@ -1,0 +1,57 @@
+{
+  "part": "CCCCXLVI",
+  "title": "Ihara Critical-Circle Alpha Localization",
+  "atoms": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "k": 12,
+    "v": 40,
+    "f": 24,
+    "g": 15,
+    "theta_k_minus_1": 11
+  },
+  "ihara_roots": {
+    "perron_roots": ["1", "1/11"],
+    "r_roots": "u=(1 +/- i*sqrt(10))/11",
+    "s_roots": "u=(-2 +/- i*sqrt(7))/11",
+    "critical_radius_squared": "1/11",
+    "r_root_norm_squared": "1/11",
+    "s_root_norm_squared": "1/11"
+  },
+  "mass_channels": {
+    "perron_constant_mass": "1111",
+    "r_critical_mass_mult_24": "11",
+    "s_critical_mass_mult_15": "407",
+    "perron_delta_m": "3/22",
+    "perron_effective_mass": "24445/22"
+  },
+  "alpha_localization": {
+    "alpha_core_yc_inverse": 137,
+    "alpha_slip_perron_channel": "880/24445",
+    "alpha_inverse_refined": "669969/4889",
+    "critical_trace_uncompressed": "9933/4477",
+    "critical_trace_per_vertex": "9933/179080",
+    "critical_trace_per_directed": "3311/716320",
+    "critical_trace_weighted_by_radius": "9933/49247",
+    "localization_statement": "alpha slip localizes in the Perron/constant channel, not in the nontrivial critical-circle channels"
+  },
+  "checks": {
+    "perron_roots_are_1_and_1_over_11": true,
+    "r_roots_on_critical_circle": true,
+    "s_roots_on_critical_circle": true,
+    "m_perron_equals_1111": true,
+    "m_r_equals_11": true,
+    "m_s_equals_407": true,
+    "delta_m_equals_3_over_22": true,
+    "m_perron_eff_equals_24445_over_22": true,
+    "alpha_slip_equals_880_over_24445": true,
+    "alpha_inverse_refined_exact": true,
+    "critical_trace_not_alpha_slip": true,
+    "critical_per_vertex_not_alpha_slip": true,
+    "critical_per_directed_not_alpha_slip": true,
+    "critical_radius_weighted_not_alpha_slip": true
+  },
+  "all_checks_pass": true,
+  "interpretation": "W(3,3)'s nontrivial Ihara roots satisfy the graph RH exactly, but the refined alpha slip is not one of the naive critical-circle Green traces. It is the rank-one Perron/constant-flow Green amplitude v/(1111+3/22). Thus graph RH supplies the nonbacktracking carrier and fixes theta=k-1=11, while alpha is localized at the constant channel of that carrier."
+}

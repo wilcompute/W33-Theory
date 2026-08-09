@@ -1,0 +1,12 @@
+{
+  "f0": 40,
+  "f1": 240,
+  "f2": 160,
+  "f3": 40,
+  "euler_characteristic": "-80",
+  "reduced_euler_characteristic": "-81",
+  "chi_over_v": "-2",
+  "total_simplices": 480,
+  "link_chi": "4",
+  "n_verified": 19
+}

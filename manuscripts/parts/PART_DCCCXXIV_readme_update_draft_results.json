@@ -1,0 +1,16 @@
+{
+  "part": "DCCCXXIV",
+  "decimal": 824,
+  "title": "README Update Draft",
+  "date": "2026-05-17",
+  "contains": [
+    "Core primitives",
+    "Current status tally",
+    "Key validated quantities",
+    "Key predictions",
+    "Repository contents",
+    "Current phase"
+  ],
+  "target": "Repository README front section",
+  "status": "DRAFT READY"
+}

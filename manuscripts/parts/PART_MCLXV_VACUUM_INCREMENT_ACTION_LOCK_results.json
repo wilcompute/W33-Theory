@@ -1,0 +1,37 @@
+{
+  "part": "MCLXV",
+  "theorem": "Vacuum-increment action lock",
+  "constants": {
+    "v": 40,
+    "k": 12,
+    "K": "801/20",
+    "delta_K": "1/20",
+    "S_holo": "20",
+    "E_seidel": "240",
+    "I_temporal": "360",
+    "lambda_spine": "18",
+    "nu_gap": "5/6",
+    "sigma_0": "15",
+    "mult_gap": "24"
+  },
+  "locks": {
+    "deltaK_times_E_seidel": "12",
+    "deltaK_times_I_temporal": "18",
+    "nu_gap_times_lambda_spine": "15",
+    "S_holo_times_lambda_spine": "360",
+    "sigma0_times_mult_gap": "360",
+    "three_halves_E_seidel": "360"
+  },
+  "claim_boundary": "finite transport/spectral conversion law on W33 packets; no continuum EFT claim",
+  "checks": {
+    "vacuum_increment_equals_one_over_S_holo": true,
+    "vacuum_increment_times_seidel_energy_equals_degree": true,
+    "vacuum_increment_times_temporal_incidence_equals_morita_spine_eigenvalue": true,
+    "morita_spine_gap_product_equals_sigma0": true,
+    "temporal_incidence_factorizes_by_holographic_shell": true,
+    "temporal_incidence_factorizes_by_uv_gap_shell": true,
+    "temporal_incidence_is_three_halves_seidel_energy": true,
+    "lambda_spine_half_is_q_squared_history_count": true
+  },
+  "n_verified": 8
+}

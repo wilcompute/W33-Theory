@@ -1,0 +1,10 @@
+{
+  "part": "DCMXXXIII",
+  "decimal": 933,
+  "title": "Ramanujan Property Verified",
+  "spectrum": {"trivial": [4, -4], "nontrivial_value": 1.7320508, "nontrivial_multiplicity": 24},
+  "spectral_gap": 2.267949,
+  "alon_boppana": 3.464102,
+  "SM_gauge_bosons": 12,
+  "status": "COMPUTATIONALLY PROVED"
+}

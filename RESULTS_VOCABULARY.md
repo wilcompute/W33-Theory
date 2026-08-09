@@ -29,7 +29,100 @@ most rediscovery.
 | `q27 spectrum`, `1 mod 9`, `Ree-Tits code`, `[730,5]_27` | complete hyperplane spectra and projective divisible codes for the regular, Kantor, Thas–Payne, and Ree–Tits coordinate families | [Pass 2300](analysis/w33_pass2300_ree_tits_divisible_code.py), [Pass 2304](analysis/w33_pass2304_known_q27_spread_spectra.py) | a classification of every q=27 symplectic spread; only four named families are complete here |
 | `50 quadratic maps`, `Hom bases`, `25+25`, `32+18`, `quadratic S3` | all quadratic maps from the signed-edge 90, with combined phase/outer module \(16\mathbf1\oplus16\mathrm{sgn}\oplus9\mathrm{std}\) | [Pass 2301 bases](analysis/w33_pass2301_complete_quadratic_hom_bases.py), [Pass 2307 character](PASS2307_QUADRATIC_HOM_S3_DECOMPOSITION.md) | the Pass-2200 outer-even half, or physical coupling constants |
 | `controller 48`, `single-J 24`, `R4 U6`, `golden word`, `common inverter` | three distinct objects: abstract \((C_4\times C_6):C_2\), canonical \(C_{12}:C_2\) quotient, and overlapping \(SL_3(\mathbb Z)\) carrier | [Pass 2306](PASS2306_CONTROLLER_REPRESENTATION_TRICHOTOMY.md) | a single group in three coordinate systems, or a selected physical observable |
+| `160 chambers`, `panel P/L`, `C2 Hecke`, `rank-48 chirality`, `Omega`, `shifted square -689` | the exact point/line panel algebra on incident W33 chambers, its Levi-Hashimoto factorization, and the conjugate \(24+24\) folded-cubic packet | [Passes 4324--4334](analysis/BT4324_BT4334_CHAMBER_HECKE_AND_AUDITED_CORRECTIONS.md) | the older adjacency `K operator`, a deterministic panel selector, a constructed \(W(G_2)\) action, or a particle spectrum |
+| `HoloBox`, `fractal microVM`, `network-as-VM`, `105025641`, `4096000000`, `2n route` | executable immutable 40-ary VM state graph with addressed mailbox/run, path-copy checkpoints, and one leaf/network loader | [runtime guide](docs/W33_FRACTAL_MICROVM_RUNTIME.md), [Python witness](analysis/w33_fractal_microvm_runtime.py), [GAP route witness](analysis/w33_fractal_microvm_routing.g) | the older count-only recursion, Witting's roadmap container design, OCI conformance, or a KVM/security boundary |
 | `137 QR`, `quadratic residue CSS`, `[[137,1,d]]` | corrected binary quantum code \([[137,1,21]]\) | [Passes 363–367](PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md) | the retracted unsupported \([[137,1,3]]\) intake claim |
+
+## The 160-chamber Hecke machine and the rank-48 chiral packet
+
+**Aliases:** `incident flags`, `160 chambers`, `320 directed chambers`,
+`panel operators`, `P and L`, `type-C2 Hecke`, `Levi Hashimoto square`,
+`LP versus PL`, `Omega`, `Pi_48`, `24+24 conjugate channel`,
+`folded cubic normal form`, `6455`, `689=13*53`, and `69/80 comparator`.
+
+**Canonical object:** on the 160 incident point--line chambers of
+\(GQ(3,3)\), \(P\) holds the point and changes the line, while \(L\) holds
+the line and changes the point.  They are three-valued relations, not
+deterministic opcodes, and satisfy
+
+\[
+P^2=2P+3I,\qquad L^2=2L+3I,\qquad PLPL=LPLP.
+\]
+
+Their rational image has dimension eight.  On the two orientations of a
+Levi edge,
+
+\[
+B_{\mathrm{Levi}}=\begin{pmatrix}0&L\\P&0\end{pmatrix},\qquad
+B_{\mathrm{Levi}}^2=\operatorname{diag}(LP,PL).
+\]
+
+The difference \(\Omega=LP-PL\) has characteristic polynomial
+\(x^{112}(x^2+60)^{24}\).  Hence
+\(\Pi_{48}=-\Omega^2/60\) is an exact rank-48 projector and
+\(\Omega/\sqrt{60}\) is a complex structure on its image.  The folded
+cubic packet has the exact shifted square
+\((F+68\Pi_{48})^2=-689\Pi_{48}\), not a physical mass or coupling law.
+
+**Audit companion:** the same release freezes the explicit girth-eight
+falsifier for the retracted Pass-4253 cover, the corrected Kotani--Sunada
+square-root annulus, the exact A/B/C/D point-frequency swap verdict
+`false/true/false/true`, and the intrinsic flag-comparator boundary
+\(1656/1920=69/80\) for differential substitutions but \(0/960\) for
+shared-control substitutions.
+
+**Boundary:** do not identify this `P/L` algebra with the older integral
+adjacency `K operator`; do not call either panel relation a selected
+instruction without a selector; and do not turn the finite rank-48 packet
+into a \(W(G_2)\) action, continuum operator, particle, mass, or coupling.
+
+**Primary artifacts:** [Passes 4324--4334 report](analysis/BT4324_BT4334_CHAMBER_HECKE_AND_AUDITED_CORRECTIONS.md),
+the [GAP theorem witness](analysis/w33_pass4324_4327_chamber_hecke_hashimoto.g),
+the [GAP correction witness](analysis/w33_pass4328_4333_audited_corrections.g),
+and the [public correction ledger](docs/chamber-hecke-audited-corrections-4324-4333.html).
+
+## HoloBox, the executable fractal microVM state graph
+
+**Aliases:** `HoloBox`, `fractal microVM`, `network is a VM`, `network-as-VM`,
+`recursive OCI`, `40-ary content graph`, `105,025,641 network VMs`,
+`4,096,000,000 addressable leaf VMs`, `4,201,025,641 total stateful VMs`,
+`path-copy VM`, `delivery receipt`, `2n logical route`, and
+`8n chart-aware route`.
+
+**Canonical object:** an immutable content-addressed DAG in which a leaf state
+and a recursively nested 40-child network use the same media type and loader.
+Any nested radix-40 address can receive a mailbox value and execute its guest;
+the resulting checkpoint replaces only that state and its ancestor digests.
+At level six the uniform DAG denotes (105{,}025{,}641) internal network VMs and
+(4{,}096{,}000{,}000) addressable leaf VMs---(4{,}201{,}025{,}641) total---using
+seven node blobs. In the certified fresh depth-six sample, send creates seven
+path-state blobs plus one reachable receipt and run creates seven path-state
+blobs; these are structural upper bounds, while content-identical replay may
+allocate zero. Sibling identities remain unchanged.
+
+**Two route metrics:** HoloBox's GAP-certified bound (2n) counts logical W33
+collinearity/line-bus transactions. BT827's (8n) counts a distinct chart-aware
+lowering—three cube moves plus five chart-web moves per digit. Neither number
+supersedes the other.
+
+**Prior ownership:** the packet interpreters own finite guest execution; BT339
+owns the first located `40^n`/`2n` assertion, BT350 the network-as-node nested-VM
+framing, Passes 2642--2644 the same-port recursive hardware interface, BT1700
+and the recursive-compression witness the later 40-ary counts, and the Witting
+architecture paper CID containers, WASM/OCI components, policies, receipts,
+and a Projection Engine. HoloBox adds the previously absent executable nested
+lifecycle, mailbox, typed persistent state DAG, and exact GAP route witness.
+
+**Boundary:** `OCI-shaped` is not OCI-conformant. The reference runtime is not a
+Linux namespace, guest kernel, KVM/Firecracker/Kata backend, confidential
+attestation system, adversarial isolation proof, or performance result. The
+rank-24 point/line carriers are coupled observability modes, not security
+domains.
+
+**Primary artifacts:** [runtime](analysis/w33_fractal_microvm_runtime.py),
+[CLI](analysis/holobox.py), [GAP route certificate](analysis/w33_fractal_microvm_routing.g),
+[focused regression](tests/test_w33_fractal_microvm_runtime.py), and
+[public evidence card](docs/holobox-fractal-microvm.html).
 
 ## The 540 — and the trap that there are FIVE transitive species
 

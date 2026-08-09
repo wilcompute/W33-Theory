@@ -1,0 +1,15 @@
+{
+  "part": "DCCCXXVI",
+  "decimal": 826,
+  "title": "W(3,3) as Universal Computation",
+  "date": "2026-05-17",
+  "thesis": "Universe is minimal-complexity computation whose halting certificate is W(3,3); ~21 bits fully determine all physical constants",
+  "kolmogorov_complexity": {
+    "seed_bits": 20.47,
+    "Aut_W33": 1451520,
+    "formula": "log2(|Aut(W(3,3))|)"
+  },
+  "postulate": "Transition function T in Aut(W(3,3)) at fundamental scale; SM gauge group is projection of T onto low-energy modes",
+  "halting": "Universe approaches IR fixed point asymptotically; physical time = computation step count",
+  "status": "THEORETICAL FRAMEWORK"
+}

@@ -1,0 +1,59 @@
+{
+  "part": "MCCXII",
+  "theorem": "Poincare dual code law",
+  "surface": {
+    "primal": {
+      "V": 12,
+      "E": 66,
+      "F": 44,
+      "genus": 6
+    },
+    "dual": {
+      "V": 44,
+      "E": 66,
+      "F": 12,
+      "genus": 6
+    }
+  },
+  "codes": {
+    "edge_code": {
+      "n": 72,
+      "k": 66,
+      "rank_H": 6
+    },
+    "face_code": {
+      "n": 50,
+      "k": 44,
+      "rank_H": 6
+    }
+  },
+  "distance_claim": {
+    "edge": "d=3=q (conditional from MCCXI)",
+    "face": "d=3=q (conditional via Poincare-dual transfer)",
+    "identity": "both edge [72,66,3] and face [50,44,3] are conditional closures at q=3"
+  },
+  "assumptions": {
+    "minimal_symmetric_k12_embedding": true,
+    "no_proportional_edge_columns_under_embedding": true,
+    "poincare_dual_distance_transfer": true
+  },
+  "honesty_boundary": {
+    "statement": "exact d=3 for the face packet is conditional on dual-distance transfer plus MCCXI embedding assumptions"
+  },
+  "claim_boundary": "finite Poincare-dual code packet with explicit conditional distance closure",
+  "checks": {
+    "surface_is_12_66_44_g6": true,
+    "dual_surface_is_44_66_12": true,
+    "dual_genus_is_6": true,
+    "edge_code_is_72_66": true,
+    "face_code_is_50_44": true,
+    "edge_rank_is_6": true,
+    "face_rank_is_6": true,
+    "both_ranks_equal_genus": true,
+    "edge_conditional_d3_from_mccxi": true,
+    "face_conditional_d3_via_duality": true,
+    "conditional_dq3_for_both_codes": true,
+    "assumption_bundle_declared": true
+  },
+  "n_verified": 12
+}

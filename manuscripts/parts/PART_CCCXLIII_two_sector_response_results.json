@@ -1,0 +1,242 @@
+{
+  "checks": [
+    {
+      "name": "R_EIG == 2",
+      "passed": true,
+      "value": 2
+    },
+    {
+      "name": "|S_EIG| == 4",
+      "passed": true,
+      "value": 4
+    },
+    {
+      "name": "|S_EIG| == 2 * R_EIG",
+      "passed": true,
+      "value": {
+        "2r": 4,
+        "abs_s": 4
+      }
+    },
+    {
+      "name": "sector_scale_ratio == 4",
+      "passed": true,
+      "value": 4
+    },
+    {
+      "name": "M2_DIMLESS == 5049/4",
+      "passed": true,
+      "value": "5049/4"
+    },
+    {
+      "name": "R_EIG + |S_EIG| == K // 2",
+      "passed": true,
+      "value": {
+        "K_half": 6,
+        "sum": 6
+      }
+    },
+    {
+      "name": "R-sector: all channels recover same scale",
+      "passed": true,
+      "value": {
+        "gap": 6872.249999999999,
+        "heat_trace": 6872.25,
+        "mass": 6872.249999999999,
+        "resolvent_trace": 6872.25,
+        "spinor_trace": 6872.250000000002,
+        "zeta": 6872.25
+      }
+    },
+    {
+      "name": "R-sector: mass scale == heat scale",
+      "passed": true,
+      "value": {
+        "heat": 6872.25,
+        "mass": 6872.249999999999
+      }
+    },
+    {
+      "name": "R-sector: gap == 2 * mass",
+      "passed": true,
+      "value": {
+        "2mass": 165.79806995257815,
+        "gap": 165.79806995257815
+      }
+    },
+    {
+      "name": "R-sector: spinor scale == heat scale",
+      "passed": true,
+      "value": {
+        "heat": 6872.25,
+        "spinor": 6872.250000000002
+      }
+    },
+    {
+      "name": "R-sector: zeta scale == heat scale",
+      "passed": true,
+      "value": {
+        "heat": 6872.25,
+        "zeta": 6872.25
+      }
+    },
+    {
+      "name": "S-sector: all channels recover same scale",
+      "passed": true,
+      "value": {
+        "gap": 27488.999999999996,
+        "heat_trace": 27489.0,
+        "mass": 27488.999999999996,
+        "resolvent_trace": 27489.0,
+        "spinor_trace": 27488.999999999996,
+        "zeta": 27489.0
+      }
+    },
+    {
+      "name": "S-sector: mass scale == heat scale",
+      "passed": true,
+      "value": {
+        "heat": 27489.0,
+        "mass": 27488.999999999996
+      }
+    },
+    {
+      "name": "S-sector: gap == 2 * mass",
+      "passed": true,
+      "value": {
+        "2mass": 331.5961399051563,
+        "gap": 331.5961399051563
+      }
+    },
+    {
+      "name": "S-sector: spinor scale == heat scale",
+      "passed": true,
+      "value": {
+        "heat": 27489.0,
+        "spinor": 27488.999999999996
+      }
+    },
+    {
+      "name": "S-sector: zeta scale == heat scale",
+      "passed": true,
+      "value": {
+        "heat": 27489.0,
+        "zeta": 27489.0
+      }
+    },
+    {
+      "name": "S-sector scale == 4 * R-sector scale",
+      "passed": true,
+      "value": {
+        "expected": 4,
+        "ratio": 4.0
+      }
+    },
+    {
+      "name": "S-sector mass == 2 * R-sector mass",
+      "passed": true,
+      "value": {
+        "expected": 2,
+        "ratio": 2.0
+      }
+    },
+    {
+      "name": "cross-sector gap ratio == |S_EIG|/R_EIG",
+      "passed": true,
+      "value": {
+        "expected": 2,
+        "ratio": 2.0
+      }
+    },
+    {
+      "name": "R-sector predicts S-sector packet (forward)",
+      "passed": true,
+      "value": {
+        "max_channel_diff": 3.469446951953614e-18
+      }
+    },
+    {
+      "name": "S-sector predicts R-sector packet (reverse)",
+      "passed": true,
+      "value": {
+        "max_channel_diff": 2.7755575615628914e-17
+      }
+    },
+    {
+      "name": "corrupted S-sector fails forward cross-prediction",
+      "passed": true,
+      "value": {
+        "corrupt_diff": 0.16579806995255808
+      }
+    },
+    {
+      "name": "R_EIG == LAM",
+      "passed": true,
+      "value": {
+        "LAM": 2,
+        "R_EIG": 2
+      }
+    },
+    {
+      "name": "|S_EIG| == MU",
+      "passed": true,
+      "value": {
+        "ABS_S": 4,
+        "MU": 4
+      }
+    },
+    {
+      "name": "|S_EIG| == EW_GAUGE_4",
+      "passed": true,
+      "value": {
+        "ABS_S": 4,
+        "EW_GAUGE_4": 4
+      }
+    },
+    {
+      "name": "sector_scale_ratio == MU",
+      "passed": true,
+      "value": {
+        "MU": 4,
+        "ratio": 4
+      }
+    },
+    {
+      "name": "R_EIG == GENERATIONS - 1",
+      "passed": true,
+      "value": {
+        "GENERATIONS_minus_1": 2,
+        "R_EIG": 2
+      }
+    }
+  ],
+  "checks_pass": 27,
+  "checks_total": 27,
+  "discoveries": [
+    "W(3,3) eigenvalues R=2 and |S|=4 grade the observable packet into two sectors.",
+    "Sector scale ratio Lambda_S/Lambda_R = (|S|/R)^2 = 4 = MU is exact and free-parameter-free.",
+    "Each sector independently satisfies anchor-free response identities (CCCXLII).",
+    "Cross-sector predictions are exact: any R-sector channel reconstructs full S-sector packet.",
+    "Reverse cross-prediction is also exact: any S-sector channel reconstructs R-sector.",
+    "SM encoding: R_EIG=LAM=2 (common neighbours), |S_EIG|=MU=EW_GAUGE_4=4 (co-degree/gauge).",
+    "Inter-sector mass ratio =2=LAM; sector scale ratio=4=MU: eigenvalue arithmetic IS gauge arithmetic.",
+    "R_EIG = GENERATIONS-1 = 2 encodes three-generation structure in the spectral sector grading."
+  ],
+  "fields": {
+    "ABS_S": 4,
+    "EW_GAUGE_4": 4,
+    "GENERATIONS": 3,
+    "INTER_MASS_RATIO": 2,
+    "K": 12,
+    "LAM": 2,
+    "M2_DIMLESS": "5049/4",
+    "MU": 4,
+    "R_EIG": 2,
+    "SECTOR_SCALE_RATIO": 4,
+    "S_EIG": -4,
+    "V": 40
+  },
+  "part": "CCCXLIII",
+  "status": "PASS",
+  "title": "Eigenvalue-Graded Two-Sector Response Compiler"
+}

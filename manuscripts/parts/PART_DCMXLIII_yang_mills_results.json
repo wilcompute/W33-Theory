@@ -1,0 +1,12 @@
+{
+  "part": "DCMXLIII",
+  "decimal": 943,
+  "title": "Yang-Mills Mass Gap Exact Prediction",
+  "formula": "Delta = q * Lambda_QCD * sqrt(v/k)",
+  "prediction_MeV": 1818,
+  "lattice_QCD_MeV": 1710,
+  "lattice_error_MeV": 80,
+  "sigma_discrepancy": 1.36,
+  "inputs": {"q": 3, "Lambda_QCD_MeV": 332, "v": 40, "k": 12},
+  "status": "1.36 SIGMA FROM LATTICE QCD — FALSIFIABLE"
+}

@@ -1,0 +1,371 @@
+{
+  "part": "CCLXXVIII",
+  "title": "Gosset Polytope Tower and the W(3,3) Arithmetic Atlas",
+  "headline": "Gosset tower vertices (10,27,56,240) = W(3,3) constants (Φ₄,LINES_27,GEWIRTZ_V,EDGES); Weyl coset indices D₄→D₅→E₆→E₇→E₈ are the same four numbers; E₈ theta weight=4=MU; kissing number 240=EDGES; GEWIRTZ_V = V+K+MU = 56",
+  "constants": {
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "Q": 3,
+    "PHI4": 10,
+    "EDGES": 240,
+    "AUT_ORDER": 51840,
+    "P_1_21": 10,
+    "P_2_21": 27,
+    "P_3_21": 56,
+    "P_4_21": 240,
+    "WD4_ORDER": 192,
+    "WD5_ORDER": 1920,
+    "WE6_ORDER": 51840,
+    "WE7_ORDER": 2903040,
+    "WE8_ORDER": 696729600,
+    "E8_DIM": 248,
+    "E8_ROOTS": 240,
+    "E8_COXETER": 30,
+    "TRANSPORT_EDGES": 270
+  },
+  "all_checks_pass": true,
+  "total_checks": 146,
+  "check_results": {
+    "gosset_vertex_tower": {
+      "pass": true,
+      "details": {
+        "P_1_21_eq_10": true,
+        "P_2_21_eq_27": true,
+        "P_3_21_eq_56": true,
+        "P_4_21_eq_240": true,
+        "tower_is_increasing": true
+      },
+      "sub_checks": 5
+    },
+    "gosset_W33_alignment": {
+      "pass": true,
+      "details": {
+        "P_1_21_eq_PHI4": true,
+        "P_2_21_eq_LINES_27": true,
+        "P_3_21_eq_GEWIRTZ_V": true,
+        "P_4_21_eq_EDGES": true,
+        "P_1_21_eq_SCHLAFLI_K": true,
+        "P_3_21_eq_V_plus_K_plus_MU": true,
+        "GEWIRTZ_formula": "40+12+4=56=56"
+      },
+      "sub_checks": 6
+    },
+    "weyl_group_orders": {
+      "pass": true,
+      "details": {
+        "WD4_from_formula": true,
+        "WD5_from_formula": true,
+        "WE6_eq_AUT_ORDER": true,
+        "WE7_from_WE6": true,
+        "WE8_from_WE7": true,
+        "WD4": 192,
+        "WD5": 1920,
+        "WE6": 51840,
+        "WE7": 2903040,
+        "WE8": 696729600
+      },
+      "sub_checks": 5
+    },
+    "weyl_coset_indices": {
+      "pass": true,
+      "details": {
+        "index_D5_D4_eq_10": true,
+        "index_E6_D5_eq_27": true,
+        "index_E7_E6_eq_56": true,
+        "index_E8_E7_eq_240": true,
+        "i_D5_D4": 10,
+        "i_E6_D5": 27,
+        "i_E7_E6": 56,
+        "i_E8_E7": 240
+      },
+      "sub_checks": 4
+    },
+    "e8_roots_equal_edges": {
+      "pass": true,
+      "details": {
+        "E8_ROOTS_eq_EDGES": true,
+        "E8_ROOTS_eq_P_4_21": true,
+        "E8_positive_roots_eq_EDGES_half": true,
+        "E8_positive_roots_eq_VK_over4": true,
+        "formula": "|E₈ roots| = 240 = 240 = V×K/2"
+      },
+      "sub_checks": 4
+    },
+    "e8_dimension": {
+      "pass": true,
+      "details": {
+        "E8_DIM_from_formula": true,
+        "E8_DIM_eq_248": true,
+        "E8_RANK_eq_DIM_4_21": true,
+        "E8_RANK_eq_V_over5": true,
+        "dim_formula": "8 + 240 = 248"
+      },
+      "sub_checks": 4
+    },
+    "e8_coxeter_number": {
+      "pass": true,
+      "details": {
+        "E8_COXETER_eq_30": true,
+        "coxeter_from_roots": true,
+        "coxeter_from_positive_roots": true,
+        "coxeter_from_edges": true,
+        "positive_roots_eq_rank_times_coxeter_half": true,
+        "h_formula": "|roots| / rank = 240/8 = 30"
+      },
+      "sub_checks": 5
+    },
+    "local_graph_tower": {
+      "pass": true,
+      "details": {
+        "4_21_local_count_eq_56": true,
+        "3_21_local_count_eq_27": true,
+        "2_21_local_count_eq_10": true,
+        "4_21_valency_eq_P_3_21": true,
+        "schlafli_graph_is_2_21_graph": true,
+        "tower": "4₂₁(240) ⊃ 3₂₁(56) ⊃ 2₂₁(27) ⊃ 1₂₁(10)"
+      },
+      "sub_checks": 5
+    },
+    "gosset_edges": {
+      "pass": true,
+      "details": {
+        "EDGES_2_21_eq_216": true,
+        "EDGES_2_21_eq_6cubed": true,
+        "EDGES_3_21_from_formula": true,
+        "EDGES_4_21_from_formula": true,
+        "EDGES_3_21_eq_K_times_E7pos": true,
+        "EDGES_4_21_eq_28_times_EDGES": true,
+        "e3": 756,
+        "e4": 6720
+      },
+      "sub_checks": 6
+    },
+    "gewirtz_V_formula": {
+      "pass": true,
+      "details": {
+        "GEWIRTZ_eq_V_plus_K_plus_MU": true,
+        "GEWIRTZ_eq_P_3_21": true,
+        "GEWIRTZ_K_eq_PHI4": true,
+        "sum_formula_ok": true,
+        "formula": "V(40) + K(12) + MU(4) = 56"
+      },
+      "sub_checks": 4
+    },
+    "e6_data": {
+      "pass": true,
+      "details": {
+        "E6_DIM_from_rank_roots": true,
+        "E6_positive_roots_eq_36": true,
+        "E6_ROOTS_eq_72": true,
+        "E6_RANK_eq_DIM_2_21": true,
+        "WE6_eq_AUT_ORDER": true,
+        "E6_dim_formula": "rank(6) + |roots|(72) = 78"
+      },
+      "sub_checks": 5
+    },
+    "e7_data": {
+      "pass": true,
+      "details": {
+        "E7_DIM_from_rank_roots": true,
+        "E7_positive_roots_eq_63": true,
+        "E7_ROOTS_eq_2x63": true,
+        "E7_RANK_eq_DIM_3_21": true,
+        "WE7_eq_56_times_WE6": true,
+        "E7_dim_formula": "rank(7) + |roots|(126) = 133"
+      },
+      "sub_checks": 5
+    },
+    "e8_we8_factorisation": {
+      "pass": true,
+      "details": {
+        "WE8_factorisation": true,
+        "WE8_div_WE7_eq_240": true,
+        "WE8_div_AUT_eq_P3_times_P4": true,
+        "WE8_div_AUT_eq_13440": true,
+        "WE8": 696729600,
+        "ratio_to_aut": 13440
+      },
+      "sub_checks": 4
+    },
+    "240_factorizations": {
+      "pass": true,
+      "details": {
+        "240_eq_V_times_K_over2": true,
+        "240_eq_P_4_21": true,
+        "240_eq_E8_ROOTS": true,
+        "240_eq_8_times_coxeter": true,
+        "240_eq_2_times_120": true,
+        "240_eq_NUM_DOUBLE_SIXES_times_V_div_6": true,
+        "240_div_V_eq_6": true,
+        "240_div_K_eq_20": true,
+        "240_div_PHI4_eq_24": true
+      },
+      "sub_checks": 9
+    },
+    "transport_via_gosset": {
+      "pass": true,
+      "details": {
+        "product_eq_270": true,
+        "transport_via_gosset": true,
+        "transport_eq_3_x_EDGES_div_8_x_9": true,
+        "270_div_9_eq_E8_COXETER": true,
+        "transport_eq_Qsq_times_coxeter": true,
+        "product": 270
+      },
+      "sub_checks": 5
+    },
+    "wd5_as_stab_line": {
+      "pass": true,
+      "details": {
+        "WD5_eq_1920": true,
+        "WD5_eq_STAB_LINE": true,
+        "index_E6_D5_eq_27": true,
+        "WD5_eq_P_1_21_times_192": true,
+        "WD5_order": 1920,
+        "index": 27
+      },
+      "sub_checks": 4
+    },
+    "e8_theta_series": {
+      "pass": true,
+      "details": {
+        "theta_q2_eq_240": true,
+        "theta_q2_eq_E8_ROOTS": true,
+        "theta_q4_eq_2160": true,
+        "theta_q4_eq_V_times_54": true,
+        "theta_q4_over_theta_q2_eq_9": true,
+        "theta_q4_eq_AUT_div_24": true,
+        "a2": 240,
+        "a4": 2160,
+        "formula": "Θ_{E₈}(τ) = 1 + 240q² + 2160q⁴ + ..."
+      },
+      "sub_checks": 6
+    },
+    "gosset_ambient_dimensions": {
+      "pass": true,
+      "details": {
+        "DIM_1_21_eq_5": true,
+        "DIM_2_21_eq_E6_RANK": true,
+        "DIM_3_21_eq_E7_RANK": true,
+        "DIM_4_21_eq_E8_RANK": true,
+        "DIM_4_21_eq_V_div5": true,
+        "DIM_tower_consecutive": true
+      },
+      "sub_checks": 6
+    },
+    "schlafli_graph_in_gosset": {
+      "pass": true,
+      "details": {
+        "2_21_vertex_count_27": true,
+        "2_21_valency_10": true,
+        "schlafli_is_local_of_3_21": true,
+        "schlafli_graph_SRG_params": true,
+        "2_21_edges_eq_schlafli_complement": true,
+        "note": "2₂₁ graph (27 verts, deg 16) and Schläfli graph (27 verts, deg 10) are complementary"
+      },
+      "sub_checks": 5
+    },
+    "e8_kissing_number": {
+      "pass": true,
+      "details": {
+        "kissing_E8_eq_240": true,
+        "kissing_E8_eq_EDGES": true,
+        "kissing_E8_eq_P_4_21": true,
+        "kissing_E8_eq_V_times_K_div2": true,
+        "statement": "E₈ kissing number = 240 = W(3,3) edge count"
+      },
+      "sub_checks": 4
+    },
+    "gosset_ratio_chain": {
+      "pass": true,
+      "details": {
+        "tower_product_1_2": true,
+        "tower_sum_1_2_3": true,
+        "tower_sum_all": true,
+        "tower_sum_all_eq_333": true,
+        "P1_plus_P2_eq_V_minus_3": true,
+        "P4_minus_rest_eq_147": true
+      },
+      "sub_checks": 6
+    },
+    "e6_e7_e8_dimensions": {
+      "pass": true,
+      "details": {
+        "E6_DIM_eq_78": true,
+        "E7_DIM_eq_133": true,
+        "E8_DIM_eq_248": true,
+        "E8_DIM_minus_E6_DIM_eq_170": true,
+        "dim_differences_increasing": true,
+        "E8_DIM_eq_EDGES_plus_8": true,
+        "E6_dim": 78,
+        "E7_dim": 133,
+        "E8_dim": 248
+      },
+      "sub_checks": 6
+    },
+    "combinatorial_batch": {
+      "pass": true,
+      "details": {
+        "c1_WE8_WE7": true,
+        "c2_WE7_WE6": true,
+        "c3_WE6_WD5": true,
+        "c4_WD5_WD4": true,
+        "c5_E8_dim": true,
+        "c6_edges_3_21": true,
+        "c7_edges_4_21": true,
+        "c8_GEWIRTZ": true,
+        "c9_coxeter": true,
+        "c10_positive_e8": true,
+        "c11_transport": true,
+        "c12_theta": true,
+        "c13_V_div5": true,
+        "c14_kiss": true
+      },
+      "sub_checks": 14
+    },
+    "gosset_and_ternary_golay": {
+      "pass": true,
+      "details": {
+        "golay3_length_eq_K": true,
+        "golay3_dim_eq_E6_RANK": true,
+        "golay3_dist_eq_E6_RANK": true,
+        "golay3_length_eq_P_1_21_plus_2": true,
+        "aut_ternary_golay": true,
+        "M12_order_div_LINES_27_eq_3520": true,
+        "TERNARY_GOLAY_LEN": 12,
+        "TERNARY_GOLAY_DIM": 6
+      },
+      "sub_checks": 6
+    },
+    "e8_modular_connection": {
+      "pass": true,
+      "details": {
+        "E8_theta_weight": true,
+        "E8_theta_a2_eq_EDGES": true,
+        "E8_theta_a4_eq_AUT_div_24": true,
+        "E8_theta_ratio_a4_a2": true,
+        "E8_theta_weight_eq_MU": true,
+        "248_eq_8_times_31": true,
+        "note": "Theta weight = 4 = MU is a novel W(3,3) ↔ E₈ link"
+      },
+      "sub_checks": 6
+    },
+    "gosset_to_w33_vertex_map": {
+      "pass": true,
+      "details": {
+        "total_eq_333": true,
+        "total_eq_Qsq_times_37": true,
+        "37_is_prime": true,
+        "total_minus_EDGES_eq_93": true,
+        "93_eq_Q_times_31": true,
+        "37_eq_V_minus_3": true,
+        "333_div_3_eq_111": true,
+        "total": 333,
+        "factorisation": "333 = Q²(9) × 37 = 333"
+      },
+      "sub_checks": 7
+    }
+  }
+}

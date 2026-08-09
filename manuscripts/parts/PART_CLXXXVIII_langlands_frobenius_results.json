@@ -1,0 +1,1098 @@
+{
+  "part": "CLXXXVIII",
+  "title": "Langlands\u2013Frobenius Bridge for W(3,3)",
+  "status": "PASS",
+  "frobenius_check_count": 9,
+  "all_frobenius_pass": true,
+  "frobenius_checks": [
+    {
+      "name": "alpha_inv_137_mod_12",
+      "prime": 137,
+      "modulus": 12,
+      "residue": 5,
+      "expected_class": "gaussian_sheet_only",
+      "actual_class": "gaussian_sheet_only"
+    },
+    {
+      "name": "beta_0_7_mod_12",
+      "prime": 7,
+      "modulus": 12,
+      "residue": 7,
+      "expected_class": "eisenstein_sheet_only",
+      "actual_class": "eisenstein_sheet_only"
+    },
+    {
+      "name": "beta_1_13_mod_12",
+      "prime": 13,
+      "modulus": 12,
+      "residue": 1,
+      "expected_class": "splits_completely",
+      "actual_class": "splits_completely"
+    },
+    {
+      "name": "p2_ramified",
+      "prime": 2,
+      "modulus": 12,
+      "residue": 2,
+      "expected_class": "ramified",
+      "actual_class": "ramified"
+    },
+    {
+      "name": "p3_ramified",
+      "prime": 3,
+      "modulus": 12,
+      "residue": 3,
+      "expected_class": "ramified",
+      "actual_class": "ramified"
+    },
+    {
+      "name": "p11_inert_both",
+      "prime": 11,
+      "modulus": 12,
+      "residue": 11,
+      "expected_class": "inert_both",
+      "actual_class": "inert_both"
+    },
+    {
+      "name": "p5_gaussian_only",
+      "prime": 5,
+      "modulus": 12,
+      "residue": 5,
+      "expected_class": "gaussian_sheet_only",
+      "actual_class": "gaussian_sheet_only"
+    },
+    {
+      "name": "p19_eisenstein_only",
+      "prime": 19,
+      "modulus": 12,
+      "residue": 7,
+      "expected_class": "eisenstein_sheet_only",
+      "actual_class": "eisenstein_sheet_only"
+    },
+    {
+      "name": "p37_splits_completely",
+      "prime": 37,
+      "modulus": 12,
+      "residue": 1,
+      "expected_class": "splits_completely",
+      "actual_class": "splits_completely"
+    }
+  ],
+  "ring_check_count": 23,
+  "all_ring_checks_pass": true,
+  "ring_checks": [
+    {
+      "name": "galois_order",
+      "value": 4,
+      "formula": "phi(12) = 4",
+      "passes": true
+    },
+    {
+      "name": "phi12_w33",
+      "value": 73,
+      "formula": "Q^4 - Q^2 + 1 = 73",
+      "passes": true
+    },
+    {
+      "name": "phi6_w33",
+      "value": 7,
+      "formula": "Q^2 - Q + 1 = 7 = beta_0",
+      "passes": true
+    },
+    {
+      "name": "phi3_w33",
+      "value": 13,
+      "formula": "Q^2 + Q + 1 = 13 = beta_1",
+      "passes": true
+    },
+    {
+      "name": "alpha_inv_mod4",
+      "value": 1,
+      "formula": "137 mod 4 = 1 (splits in Z[i])",
+      "passes": true
+    },
+    {
+      "name": "alpha_inv_mod3",
+      "value": 2,
+      "formula": "137 mod 3 = 2 (inert in Z[omega])",
+      "passes": true
+    },
+    {
+      "name": "alpha_inv_mod12",
+      "value": 5,
+      "formula": "137 mod 12 = 5 (Gaussian sheet)",
+      "passes": true
+    },
+    {
+      "name": "beta0_mod4",
+      "value": 3,
+      "formula": "7 mod 4 = 3 (inert in Z[i])",
+      "passes": true
+    },
+    {
+      "name": "beta0_mod3",
+      "value": 1,
+      "formula": "7 mod 3 = 1 (splits in Z[omega])",
+      "passes": true
+    },
+    {
+      "name": "beta0_mod12",
+      "value": 7,
+      "formula": "7 mod 12 = 7 (Eisenstein sheet)",
+      "passes": true
+    },
+    {
+      "name": "beta1_mod4",
+      "value": 1,
+      "formula": "13 mod 4 = 1 (splits in Z[i])",
+      "passes": true
+    },
+    {
+      "name": "beta1_mod3",
+      "value": 1,
+      "formula": "13 mod 3 = 1 (splits in Z[omega])",
+      "passes": true
+    },
+    {
+      "name": "beta1_mod12",
+      "value": 1,
+      "formula": "13 mod 12 = 1 (splits completely)",
+      "passes": true
+    },
+    {
+      "name": "alpha_gaussian_sum_of_squares",
+      "value": 137,
+      "formula": "137 = 4^2 + 11^2 (Gaussian prime factorisation)",
+      "passes": true
+    },
+    {
+      "name": "phi12_is_prime",
+      "value": 1,
+      "formula": "is_prime(73) = True (1 \u2261 True)",
+      "passes": true
+    },
+    {
+      "name": "canon_g13_gaussian_norm",
+      "value": 137,
+      "formula": "gaussian_norm((4,6,2,1)) = 137",
+      "passes": true
+    },
+    {
+      "name": "canon_g13_eisenstein_norm",
+      "value": 13,
+      "formula": "eisenstein_norm((4,6,2,1)) = 13",
+      "passes": true
+    },
+    {
+      "name": "canon_g7_gaussian_norm",
+      "value": 137,
+      "formula": "gaussian_norm((6,3,4,0)) = 137",
+      "passes": true
+    },
+    {
+      "name": "canon_g7_eisenstein_norm",
+      "value": 7,
+      "formula": "eisenstein_norm((6,3,4,0)) = 7",
+      "passes": true
+    },
+    {
+      "name": "alpha_layer_consistent",
+      "value": 1,
+      "formula": "frobenius_class(137) == gaussian_sheet_only",
+      "passes": true
+    },
+    {
+      "name": "beta0_layer_consistent",
+      "value": 1,
+      "formula": "frobenius_class(7) == eisenstein_sheet_only",
+      "passes": true
+    },
+    {
+      "name": "beta1_layer_consistent",
+      "value": 1,
+      "formula": "frobenius_class(13) == splits_completely",
+      "passes": true
+    },
+    {
+      "name": "canon_g13_full_norm",
+      "value": 502681,
+      "formula": "full_norm((4,6,2,1)) = 709^2 = 502681",
+      "passes": true
+    }
+  ],
+  "unified_count": 20,
+  "unified_found": true,
+  "unified_with_eisenstein_7": 12,
+  "unified_with_eisenstein_13": 8,
+  "unified_elements": [
+    {
+      "element": [
+        -6,
+        -3,
+        -4,
+        0
+      ],
+      "gaussian_norm": 137,
+      "eisenstein_norm": 7,
+      "full_norm": 20475625,
+      "gaussian_shadow_re": -10.5981,
+      "gaussian_shadow_im": -4.9641,
+      "eisenstein_shadow_re": -2.5,
+      "eisenstein_shadow_im": 0.866,
+      "galois_orbit": {
+        "sigma_1": [
+          -6,
+          -3,
+          -4,
+          0
+        ],
+        "sigma_5": [
+          -10,
+          3,
+          4,
+          -3
+        ],
+        "sigma_7": [
+          -6,
+          3,
+          -4,
+          0
+        ],
+        "sigma_11": [
+          -10,
+          -3,
+          4,
+          3
+        ]
+      }
+    },
+    {
+      "element": [
+        -5,
+        -5,
+        -4,
+        3
+      ],
+      "gaussian_norm": 137,
+      "eisenstein_norm": 7,
+      "full_norm": 9815689,
+      "gaussian_shadow_re": -11.3301,
+      "gaussian_shadow_im": -2.9641,
+      "eisenstein_shadow_re": 2.5,
+      "eisenstein_shadow_im": -0.866,
+      "galois_orbit": {
+        "sigma_1": [
+          -5,
+          -5,
+          -4,
+          3
+        ],
+        "sigma_5": [
+          -9,
+          5,
+          4,
+          -2
+        ],
+        "sigma_7": [
+          -5,
+          5,
+          -4,
+          -3
+        ],
+        "sigma_11": [
+          -9,
+          -5,
+          4,
+          2
+        ]
+      }
+    },
+    {
+      "element": [
+        -4,
+        -6,
+        -2,
+        -1
+      ],
+      "gaussian_norm": 137,
+      "eisenstein_norm": 13,
+      "full_norm": 502681,
+      "gaussian_shadow_re": -10.1962,
+      "gaussian_shadow_im": -5.7321,
+      "eisenstein_shadow_re": -1.0,
+      "eisenstein_shadow_im": -3.4641,
+      "galois_orbit": {
+        "sigma_1": [
+          -4,
+          -6,
+          -2,
+          -1
+        ],
+        "sigma_5": [
+          -6,
+          6,
+          2,
+          -7
+        ],
+        "sigma_7": [
+          -4,
+          6,
+          -2,
+          1
+        ],
+        "sigma_11": [
+          -6,
+          -6,
+          2,
+          7
+        ]
+      }
+    },
+    {
+      "element": [
+        -4,
+        -3,
+        -6,
+        0
+      ],
+      "gaussian_norm": 137,
+      "eisenstein_norm": 7,
+      "full_norm": 20475625,
+      "gaussian_shadow_re": -9.5981,
+      "gaussian_shadow_im": -6.6962,
+      "eisenstein_shadow_re": 0.5,
+      "eisenstein_shadow_im": 2.5981,
+      "galois_orbit": {
+        "sigma_1": [
+          -4,
+          -3,
+          -6,
+          0
+        ],
+        "sigma_5": [
+          -10,
+          3,
+          6,
+          -3
+        ],
+        "sigma_7": [
+          -4,
+          3,
+          -6,
+          0
+        ],
+        "sigma_11": [
+          -10,
+          -3,
+          6,
+          3
+        ]
+      }
+    },
+    {
+      "element": [
+        -4,
+        -3,
+        -4,
+        -3
+      ],
+      "gaussian_norm": 137,
+      "eisenstein_norm": 13,
+      "full_norm": 3017169,
+      "gaussian_shadow_re": -8.5981,
+      "gaussian_shadow_im": -7.9641,
+      "eisenstein_shadow_re": -3.5,
+      "eisenstein_shadow_im": 0.866,
+      "galois_orbit": {
+        "sigma_1": [
+          -4,
+          -3,
+          -4,
+          -3
+        ],
+        "sigma_5": [
+          -8,
+          3,
+          4,
+          -6
+        ],
+        "sigma_7": [
+          -4,
+          3,
+          -4,
+          3
+        ],
+        "sigma_11": [
+          -8,
+          -3,
+          4,
+          6
+        ]
+      }
+    },
+    {
+      "element": [
+        -3,
+        -4,
+        -3,
+        -4
+      ],
+      "gaussian_norm": 137,
+      "eisenstein_norm": 13,
+      "full_norm": 3017169,
+      "gaussian_shadow_re": -7.9641,
+      "gaussian_shadow_im": -8.5981,
+      "eisenstein_shadow_re": -3.5,
+      "eisenstein_shadow_im": -0.866,
+      "galois_orbit": {
+        "sigma_1": [
+          -3,
+          -4,
+          -3,
+          -4
+        ],
+        "sigma_5": [
+          -6,
+          4,
+          3,
+          -8
+        ],
+        "sigma_7": [
+          -3,
+          4,
+          -3,
+          4
+        ],
+        "sigma_11": [
+          -6,
+          -4,
+          3,
+          8
+        ]
+      }
+    },
+    {
+      "element": [
+        -3,
+        4,
+        5,
+        5
+      ],
+      "gaussian_norm": 137,
+      "eisenstein_norm": 7,
+      "full_norm": 9815689,
+      "gaussian_shadow_re": 2.9641,
+      "gaussian_shadow_im": 11.3301,
+      "eisenstein_shadow_re": -2.5,
+      "eisenstein_shadow_im": -0.866,
+      "galois_orbit": {
+        "sigma_1": [
+          -3,
+          4,
+          5,
+          5
+        ],
+        "sigma_5": [
+          2,
+          -4,
+          -5,
+          9
+        ],
+        "sigma_7": [
+          -3,
+          -4,
+          5,
+          -5
+        ],
+        "sigma_11": [
+          2,
+          4,
+          -5,
+          -9
+        ]
+      }
+    },
+    {
+      "element": [
+        -1,
+        -2,
+        -6,
+        -4
+      ],
+      "gaussian_norm": 137,
+      "eisenstein_norm": 13,
+      "full_norm": 502681,
+      "gaussian_shadow_re": -5.7321,
+      "gaussian_shadow_im": -10.1962,
+      "eisenstein_shadow_re": -1.0,
+      "eisenstein_shadow_im": 3.4641,
+      "galois_orbit": {
+        "sigma_1": [
+          -1,
+          -2,
+          -6,
+          -4
+        ],
+        "sigma_5": [
+          -7,
+          2,
+          6,
+          -6
+        ],
+        "sigma_7": [
+          -1,
+          2,
+          -6,
+          4
+        ],
+        "sigma_11": [
+          -7,
+          -2,
+          6,
+          6
+        ]
+      }
+    },
+    {
+      "element": [
+        0,
+        -6,
+        -3,
+        -4
+      ],
+      "gaussian_norm": 137,
+      "eisenstein_norm": 7,
+      "full_norm": 20475625,
+      "gaussian_shadow_re": -6.6962,
+      "gaussian_shadow_im": -9.5981,
+      "eisenstein_shadow_re": 0.5,
+      "eisenstein_shadow_im": -2.5981,
+      "galois_orbit": {
+        "sigma_1": [
+          0,
+          -6,
+          -3,
+          -4
+        ],
+        "sigma_5": [
+          -3,
+          6,
+          3,
+          -10
+        ],
+        "sigma_7": [
+          0,
+          6,
+          -3,
+          4
+        ],
+        "sigma_11": [
+          -3,
+          -6,
+          3,
+          10
+        ]
+      }
+    },
+    {
+      "element": [
+        0,
+        -4,
+        -3,
+        -6
+      ],
+      "gaussian_norm": 137,
+      "eisenstein_norm": 7,
+      "full_norm": 20475625,
+      "gaussian_shadow_re": -4.9641,
+      "gaussian_shadow_im": -10.5981,
+      "eisenstein_shadow_re": -2.5,
+      "eisenstein_shadow_im": -0.866,
+      "galois_orbit": {
+        "sigma_1": [
+          0,
+          -4,
+          -3,
+          -6
+        ],
+        "sigma_5": [
+          -3,
+          4,
+          3,
+          -10
+        ],
+        "sigma_7": [
+          0,
+          4,
+          -3,
+          6
+        ],
+        "sigma_11": [
+          -3,
+          -4,
+          3,
+          10
+        ]
+      }
+    },
+    {
+      "element": [
+        0,
+        4,
+        3,
+        6
+      ],
+      "gaussian_norm": 137,
+      "eisenstein_norm": 7,
+      "full_norm": 20475625,
+      "gaussian_shadow_re": 4.9641,
+      "gaussian_shadow_im": 10.5981,
+      "eisenstein_shadow_re": 2.5,
+      "eisenstein_shadow_im": 0.866,
+      "galois_orbit": {
+        "sigma_1": [
+          0,
+          4,
+          3,
+          6
+        ],
+        "sigma_5": [
+          3,
+          -4,
+          -3,
+          10
+        ],
+        "sigma_7": [
+          0,
+          -4,
+          3,
+          -6
+        ],
+        "sigma_11": [
+          3,
+          4,
+          -3,
+          -10
+        ]
+      }
+    },
+    {
+      "element": [
+        0,
+        6,
+        3,
+        4
+      ],
+      "gaussian_norm": 137,
+      "eisenstein_norm": 7,
+      "full_norm": 20475625,
+      "gaussian_shadow_re": 6.6962,
+      "gaussian_shadow_im": 9.5981,
+      "eisenstein_shadow_re": -0.5,
+      "eisenstein_shadow_im": 2.5981,
+      "galois_orbit": {
+        "sigma_1": [
+          0,
+          6,
+          3,
+          4
+        ],
+        "sigma_5": [
+          3,
+          -6,
+          -3,
+          10
+        ],
+        "sigma_7": [
+          0,
+          -6,
+          3,
+          -4
+        ],
+        "sigma_11": [
+          3,
+          6,
+          -3,
+          -10
+        ]
+      }
+    },
+    {
+      "element": [
+        1,
+        2,
+        6,
+        4
+      ],
+      "gaussian_norm": 137,
+      "eisenstein_norm": 13,
+      "full_norm": 502681,
+      "gaussian_shadow_re": 5.7321,
+      "gaussian_shadow_im": 10.1962,
+      "eisenstein_shadow_re": 1.0,
+      "eisenstein_shadow_im": -3.4641,
+      "galois_orbit": {
+        "sigma_1": [
+          1,
+          2,
+          6,
+          4
+        ],
+        "sigma_5": [
+          7,
+          -2,
+          -6,
+          6
+        ],
+        "sigma_7": [
+          1,
+          -2,
+          6,
+          -4
+        ],
+        "sigma_11": [
+          7,
+          2,
+          -6,
+          -6
+        ]
+      }
+    },
+    {
+      "element": [
+        3,
+        -4,
+        -5,
+        -5
+      ],
+      "gaussian_norm": 137,
+      "eisenstein_norm": 7,
+      "full_norm": 9815689,
+      "gaussian_shadow_re": -2.9641,
+      "gaussian_shadow_im": -11.3301,
+      "eisenstein_shadow_re": 2.5,
+      "eisenstein_shadow_im": 0.866,
+      "galois_orbit": {
+        "sigma_1": [
+          3,
+          -4,
+          -5,
+          -5
+        ],
+        "sigma_5": [
+          -2,
+          4,
+          5,
+          -9
+        ],
+        "sigma_7": [
+          3,
+          4,
+          -5,
+          5
+        ],
+        "sigma_11": [
+          -2,
+          -4,
+          5,
+          9
+        ]
+      }
+    },
+    {
+      "element": [
+        3,
+        4,
+        3,
+        4
+      ],
+      "gaussian_norm": 137,
+      "eisenstein_norm": 13,
+      "full_norm": 3017169,
+      "gaussian_shadow_re": 7.9641,
+      "gaussian_shadow_im": 8.5981,
+      "eisenstein_shadow_re": 3.5,
+      "eisenstein_shadow_im": 0.866,
+      "galois_orbit": {
+        "sigma_1": [
+          3,
+          4,
+          3,
+          4
+        ],
+        "sigma_5": [
+          6,
+          -4,
+          -3,
+          8
+        ],
+        "sigma_7": [
+          3,
+          -4,
+          3,
+          -4
+        ],
+        "sigma_11": [
+          6,
+          4,
+          -3,
+          -8
+        ]
+      }
+    },
+    {
+      "element": [
+        4,
+        3,
+        4,
+        3
+      ],
+      "gaussian_norm": 137,
+      "eisenstein_norm": 13,
+      "full_norm": 3017169,
+      "gaussian_shadow_re": 8.5981,
+      "gaussian_shadow_im": 7.9641,
+      "eisenstein_shadow_re": 3.5,
+      "eisenstein_shadow_im": -0.866,
+      "galois_orbit": {
+        "sigma_1": [
+          4,
+          3,
+          4,
+          3
+        ],
+        "sigma_5": [
+          8,
+          -3,
+          -4,
+          6
+        ],
+        "sigma_7": [
+          4,
+          -3,
+          4,
+          -3
+        ],
+        "sigma_11": [
+          8,
+          3,
+          -4,
+          -6
+        ]
+      }
+    },
+    {
+      "element": [
+        4,
+        3,
+        6,
+        0
+      ],
+      "gaussian_norm": 137,
+      "eisenstein_norm": 7,
+      "full_norm": 20475625,
+      "gaussian_shadow_re": 9.5981,
+      "gaussian_shadow_im": 6.6962,
+      "eisenstein_shadow_re": -0.5,
+      "eisenstein_shadow_im": -2.5981,
+      "galois_orbit": {
+        "sigma_1": [
+          4,
+          3,
+          6,
+          0
+        ],
+        "sigma_5": [
+          10,
+          -3,
+          -6,
+          3
+        ],
+        "sigma_7": [
+          4,
+          -3,
+          6,
+          0
+        ],
+        "sigma_11": [
+          10,
+          3,
+          -6,
+          -3
+        ]
+      }
+    },
+    {
+      "element": [
+        4,
+        6,
+        2,
+        1
+      ],
+      "gaussian_norm": 137,
+      "eisenstein_norm": 13,
+      "full_norm": 502681,
+      "gaussian_shadow_re": 10.1962,
+      "gaussian_shadow_im": 5.7321,
+      "eisenstein_shadow_re": 1.0,
+      "eisenstein_shadow_im": 3.4641,
+      "galois_orbit": {
+        "sigma_1": [
+          4,
+          6,
+          2,
+          1
+        ],
+        "sigma_5": [
+          6,
+          -6,
+          -2,
+          7
+        ],
+        "sigma_7": [
+          4,
+          -6,
+          2,
+          -1
+        ],
+        "sigma_11": [
+          6,
+          6,
+          -2,
+          -7
+        ]
+      }
+    },
+    {
+      "element": [
+        5,
+        5,
+        4,
+        -3
+      ],
+      "gaussian_norm": 137,
+      "eisenstein_norm": 7,
+      "full_norm": 9815689,
+      "gaussian_shadow_re": 11.3301,
+      "gaussian_shadow_im": 2.9641,
+      "eisenstein_shadow_re": -2.5,
+      "eisenstein_shadow_im": 0.866,
+      "galois_orbit": {
+        "sigma_1": [
+          5,
+          5,
+          4,
+          -3
+        ],
+        "sigma_5": [
+          9,
+          -5,
+          -4,
+          2
+        ],
+        "sigma_7": [
+          5,
+          -5,
+          4,
+          3
+        ],
+        "sigma_11": [
+          9,
+          5,
+          -4,
+          -2
+        ]
+      }
+    },
+    {
+      "element": [
+        6,
+        3,
+        4,
+        0
+      ],
+      "gaussian_norm": 137,
+      "eisenstein_norm": 7,
+      "full_norm": 20475625,
+      "gaussian_shadow_re": 10.5981,
+      "gaussian_shadow_im": 4.9641,
+      "eisenstein_shadow_re": 2.5,
+      "eisenstein_shadow_im": -0.866,
+      "galois_orbit": {
+        "sigma_1": [
+          6,
+          3,
+          4,
+          0
+        ],
+        "sigma_5": [
+          10,
+          -3,
+          -4,
+          3
+        ],
+        "sigma_7": [
+          6,
+          -3,
+          4,
+          0
+        ],
+        "sigma_11": [
+          10,
+          3,
+          -4,
+          -3
+        ]
+      }
+    }
+  ],
+  "theorem_clxxxviii": {
+    "statement": "Theorem CLXXXVIII (W(3,3) Bi-Layer Langlands Claim): The three W(3,3) physical constants alpha^{-1}=137, beta_0=7, beta_1=13 are exactly the three Frobenius layers of the cyclotomic field Q(zeta_12): 137 lies on the Gaussian sheet (p\u22615 mod 12), 7 lies on the Eisenstein sheet (p\u22617 mod 12), 13 splits completely (p\u22611 mod 12). Furthermore, a single element z in Z[zeta_12] exists whose Gaussian shadow has norm 137 and whose Eisenstein shadow has norm in {7, 13}, instantiating both layers simultaneously.",
+    "galois_group": "Gal(Q(zeta_12)/Q) ~= Z/2Z x Z/2Z",
+    "galois_order": 4,
+    "subfields": [
+      "Q(i) = Q(zeta_4)",
+      "Q(omega) = Q(zeta_3)"
+    ],
+    "w33_layer_assignment": {
+      "alpha_inv_137": {
+        "layer": "gaussian_sheet_only",
+        "p_mod_12": 5
+      },
+      "beta_0_7": {
+        "layer": "eisenstein_sheet_only",
+        "p_mod_12": 7
+      },
+      "beta_1_13": {
+        "layer": "splits_completely",
+        "p_mod_12": 1
+      }
+    },
+    "canonical_elements": {
+      "gaussian_norm_137_eisenstein_norm_13": [
+        4,
+        6,
+        2,
+        1
+      ],
+      "gaussian_norm_137_eisenstein_norm_7": [
+        6,
+        3,
+        4,
+        0
+      ]
+    },
+    "phi6_equals_beta0": true,
+    "phi3_equals_beta1": true
+  },
+  "w33_atoms": {
+    "Q": 3,
+    "PHI3": 13,
+    "PHI6": 7,
+    "PHI12": 73,
+    "ALPHA_INV": 137,
+    "BETA_0": 7,
+    "BETA_1": 13,
+    "GALOIS_ORDER": 4
+  }
+}

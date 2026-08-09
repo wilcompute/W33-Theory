@@ -1,0 +1,20 @@
+{
+  "part": "DCCCXXXI",
+  "decimal": 831,
+  "title": "The Observer, Consciousness, and Automorphism Stabilizers",
+  "date": "2026-05-17",
+  "thesis": "An observer is interpreted as the stabilizer subgroup of Aut(W(3,3)) that fixes an edge-mode configuration.",
+  "definitions": {
+    "observer": "O(C) = Stab_Aut(W(3,3))(C)",
+    "measurement": "stabilizer restriction from O(C) to O(C')",
+    "collapse": "transition between stabilizer subgroups",
+    "consciousness": "Turing-complete stabilizer sub-computation"
+  },
+  "claims": [
+    "The observer is not external to the theory.",
+    "Wavefunction collapse is modeled as stabilizer restriction.",
+    "Complementarity is modeled by disjoint edge configurations with commuting stabilizers.",
+    "Anthropic selection is replaced by Turing-complete stabilizer selection."
+  ],
+  "status": "THEORETICAL FRAMEWORK - OBSERVER STABILIZER"
+}

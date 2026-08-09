@@ -1,0 +1,88 @@
+{
+  "part": "CCCXXVII",
+  "title": "Mass-Mixing Closure Surface for W(3,3)",
+  "atoms": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "k": 12,
+    "v": 40,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7
+  },
+  "observables": [
+    {
+      "name": "lambda_H_MSbar_MZ",
+      "formula": "Phi_3/Phi_4^2 = 13/100",
+      "predicted": 0.13,
+      "reference": 0.1305,
+      "sigma": 0.0005,
+      "residual": -0.0005000000000000004,
+      "z": -1.0000000000000009
+    },
+    {
+      "name": "wolf_lambda",
+      "formula": "q^2/v = 9/40",
+      "predicted": 0.225,
+      "reference": 0.2248,
+      "sigma": 0.00023,
+      "residual": 0.00020000000000000573,
+      "z": 0.8695652173913292
+    },
+    {
+      "name": "wolf_A",
+      "formula": "q^4/Phi_4^2 = 81/100",
+      "predicted": 0.81,
+      "reference": 0.8109,
+      "sigma": 0.02,
+      "residual": -0.0008999999999999009,
+      "z": -0.044999999999995044
+    },
+    {
+      "name": "wolf_rhobar",
+      "formula": "(lambda/(mu+1))^2 = 4/25",
+      "predicted": 0.16000000000000003,
+      "reference": 0.159,
+      "sigma": 0.01,
+      "residual": 0.0010000000000000286,
+      "z": 0.10000000000000286
+    },
+    {
+      "name": "wolf_etabar",
+      "formula": "(Phi_6/Phi_4)^3 = 343/1000",
+      "predicted": 0.3429999999999999,
+      "reference": 0.348,
+      "sigma": 0.01,
+      "residual": -0.00500000000000006,
+      "z": -0.500000000000006
+    },
+    {
+      "name": "top_yukawa_pole",
+      "formula": "(v/(v+1))^(1/3)",
+      "predicted": 0.9918029100085936,
+      "reference": 0.99172,
+      "sigma": 0.00178,
+      "residual": 8.291000859350639e-05,
+      "z": 0.04657865651320584
+    }
+  ],
+  "chi2": 2.020338238539413,
+  "degrees_of_freedom": 6,
+  "reduced_chi2": 0.3367230397565688,
+  "rms_z": 0.5802784157252179,
+  "max_abs_z": 1.0000000000000009,
+  "all_within_2sigma": true,
+  "all_internal_identities_pass": true,
+  "internal_identities": {
+    "q_factorial_seed": true,
+    "srg_vertex_formula": true,
+    "srg_valency_formula": true,
+    "top_denominator_matches_hypercharge_numerator": true,
+    "higgs_denominator_is_phi4_squared": true,
+    "ckm_lambda_denominator_is_vertex_count": true,
+    "ckm_A_denominator_is_higgs_denominator": true,
+    "eta_uses_phi6_over_phi4_cube": true
+  },
+  "interpretation": "The Higgs quartic, CKM Wolfenstein coordinates, and top Yukawa are not independent add-ons: they form a single W(3,3) mass-mixing sheet whose denominators are controlled by v=40 and Phi4^2=100, while the top cube closes on v/(v+1)."
+}

@@ -1,0 +1,202 @@
+{
+  "module": "PART_CXLI_HEAVY_THRESHOLD_LOG_MATCH",
+  "inputs": {
+    "alpha_unified": 0.04,
+    "loop_unit_alpha_over_2pi": 0.006366197723675814,
+    "k3_eff_from_CXXXIX": 1.849461957178364,
+    "alpha_s_MZ_at_k3_eff": 0.11799999999999984
+  },
+  "w33_atoms": {
+    "q": 3,
+    "mu": 4,
+    "Phi6": 7,
+    "Phi4": 10,
+    "k-1": 11,
+    "k": 12,
+    "Phi3": 13,
+    "v-mu+1": 37,
+    "v": 40,
+    "E": 240,
+    "alpha_integer": 137
+  },
+  "primitive_templates": [
+    {
+      "label": "24/13 primitive sqrt(mu/Phi6)",
+      "bare_k3": 1.8461538461538463,
+      "template": "log sqrt(mu/Phi6) = -1/2 log(7/4)",
+      "target_loop_units": -0.2809665062735239,
+      "template_loop_units": -0.27980789396771133,
+      "loop_units_residual": -0.0011586123058125453,
+      "delta_gut_template": -0.0017813123776437676,
+      "delta_gut_target": -0.001788688332667654,
+      "delta_residual": -7.375955023886365e-06,
+      "effective_k3_from_template": 1.849448291286928,
+      "k3_error": -1.366589143603214e-05,
+      "relative_k3_error_ppm": -7.389117350098395
+    },
+    {
+      "label": "13/7 primitive sqrt((k-1)/q)",
+      "bare_k3": 1.8571428571428572,
+      "template": "log sqrt((k-1)/q) = +1/2 log(11/3)",
+      "target_loop_units": 0.6523588876146764,
+      "template_loop_units": 0.6496414920651304,
+      "loop_units_residual": 0.0027173955495459756,
+      "delta_gut_template": 0.004135746187990393,
+      "delta_gut_target": 0.00415304566535224,
+      "delta_residual": 1.7299477361846366e-05,
+      "effective_k3_from_template": 1.8494938201265572,
+      "k3_error": 3.186294819323976e-05,
+      "relative_k3_error_ppm": 17.228225792642604
+    }
+  ],
+  "best_catalog_templates": [
+    {
+      "label": "24/13 best catalog sqrt(137/240)",
+      "bare_k3": 1.8461538461538463,
+      "template": "log sqrt(137/E) = -1/2 log(240/137)",
+      "target_loop_units": -0.2809665062735239,
+      "template_loop_units": -0.28032899875693323,
+      "loop_units_residual": -0.0006375075165906408,
+      "delta_gut_template": -0.0017846298337667085,
+      "delta_gut_target": -0.001788688332667654,
+      "delta_residual": -4.058498900945439e-06,
+      "effective_k3_from_template": 1.849454437719593,
+      "k3_error": -7.519458770977039e-06,
+      "relative_k3_error_ppm": -4.065754768189933
+    },
+    {
+      "label": "13/7 best catalog sqrt((v-mu+1)/Phi4)",
+      "bare_k3": 1.8571428571428572,
+      "template": "log sqrt((v-mu+1)/Phi4) = +1/2 log(37/10)",
+      "target_loop_units": 0.6523588876146764,
+      "template_loop_units": 0.6541664098250894,
+      "loop_units_residual": -0.0018075222104130262,
+      "delta_gut_template": 0.004164552709133664,
+      "delta_gut_target": 0.00415304566535224,
+      "delta_residual": -1.1507043781424676e-05,
+      "effective_k3_from_template": 1.8494407636004229,
+      "k3_error": -2.1193577941058805e-05,
+      "relative_k3_error_ppm": -11.45932083590484
+    }
+  ],
+  "scanner_top_matches": {
+    "k3_24_over_13": [
+      {
+        "formula": "1/2 log(alpha_integer/E)",
+        "ratio": "137/240",
+        "tau": -0.28032899875693323,
+        "abs_residual": 0.0006375075165906408,
+        "signed_residual": -0.0006375075165906408
+      },
+      {
+        "formula": "1/2 log(Phi6/mu)",
+        "ratio": "7/4",
+        "tau": 0.27980789396771133,
+        "abs_residual": 0.5607744002412352,
+        "signed_residual": -0.5607744002412352
+      },
+      {
+        "formula": "1/2 log(mu/Phi6)",
+        "ratio": "4/7",
+        "tau": -0.27980789396771133,
+        "abs_residual": 0.0011586123058125453,
+        "signed_residual": -0.0011586123058125453
+      },
+      {
+        "formula": "1/2 log(Phi3/k-1)",
+        "ratio": "13/11",
+        "tau": 0.08352704233191302,
+        "abs_residual": 0.36449354860543694,
+        "signed_residual": -0.36449354860543694
+      },
+      {
+        "formula": "1/2 log(k-1/Phi3)",
+        "ratio": "11/13",
+        "tau": -0.08352704233191302,
+        "abs_residual": 0.19743946394161087,
+        "signed_residual": -0.19743946394161087
+      },
+      {
+        "formula": "1/2 log(E/alpha_integer)",
+        "ratio": "240/137",
+        "tau": 0.28032899875693323,
+        "abs_residual": 0.5612955050304571,
+        "signed_residual": -0.5612955050304571
+      },
+      {
+        "formula": "1/2 log(Phi4/Phi6)",
+        "ratio": "10/7",
+        "tau": 0.17833747196936622,
+        "abs_residual": 0.45930397824289013,
+        "signed_residual": -0.45930397824289013
+      },
+      {
+        "formula": "1/2 log(Phi6/Phi4)",
+        "ratio": "7/10",
+        "tau": -0.17833747196936622,
+        "abs_residual": 0.10262903430415769,
+        "signed_residual": -0.10262903430415769
+      }
+    ],
+    "k3_13_over_7": [
+      {
+        "formula": "1/2 log(v-mu+1/Phi4)",
+        "ratio": "37/10",
+        "tau": 0.6541664098250894,
+        "abs_residual": 0.0018075222104130262,
+        "signed_residual": -0.0018075222104130262
+      },
+      {
+        "formula": "1/2 log(k-1/q)",
+        "ratio": "11/3",
+        "tau": 0.6496414920651304,
+        "abs_residual": 0.0027173955495459756,
+        "signed_residual": 0.0027173955495459756
+      },
+      {
+        "formula": "1/2 log(v/k-1)",
+        "ratio": "40/11",
+        "tau": 0.6454920906577829,
+        "abs_residual": 0.006866796956893517,
+        "signed_residual": 0.006866796956893517
+      },
+      {
+        "formula": "1/2 log(E/alpha_integer)",
+        "ratio": "240/137",
+        "tau": 0.28032899875693323,
+        "abs_residual": 0.37202988885774317,
+        "signed_residual": 0.37202988885774317
+      },
+      {
+        "formula": "1/2 log(Phi3/q)",
+        "ratio": "13/3",
+        "tau": 0.7331685343967135,
+        "abs_residual": 0.0808096467820371,
+        "signed_residual": -0.0808096467820371
+      },
+      {
+        "formula": "1/2 log(Phi6/q)",
+        "ratio": "7/3",
+        "tau": 0.42364893019360184,
+        "abs_residual": 0.22870995742107455,
+        "signed_residual": 0.22870995742107455
+      },
+      {
+        "formula": "1/2 log(k/Phi4)",
+        "ratio": "12/10",
+        "tau": 0.0911607783969773,
+        "abs_residual": 0.5611981092176991,
+        "signed_residual": 0.5611981092176991
+      },
+      {
+        "formula": "1/2 log(Phi4/q)",
+        "ratio": "10/3",
+        "tau": 0.601986402162968,
+        "abs_residual": 0.050372485451708415,
+        "signed_residual": 0.050372485451708415
+      }
+    ]
+  },
+  "theorem_statement": "The sub-percent GUT thresholds required by CXL are naturally of one-loop square-root-log size.  The structural templates log sqrt(mu/Phi6) for k3=24/13 and log sqrt((k-1)/q) for k3=13/7 pin the inverse k3 target to ppm-level accuracy in the effective embedding factor.",
+  "interpretive_note": "This does not prove a heavy spectrum yet.  It narrows the search: derive a single quadratic-field threshold from the Hashimoto sectors, with mass ratio sqrt(mu/Phi6) on the 24/13 branch or sqrt((k-1)/q) on the 13/7 branch.  The scanner also finds very close catalog matches sqrt(137/E) and sqrt((v-mu+1)/Phi4), suggesting the threshold may be controlled by the interaction of the Gaussian alpha integer and the Phi4/Phi6 Hashimoto fields."
+}

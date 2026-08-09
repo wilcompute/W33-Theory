@@ -1,0 +1,52 @@
+{
+  "part_number": "CCXCII",
+  "title": "Gleason's Theorem and the Weight Enumerator Ring",
+  "theme": "Gleason generators (degree 4,12) and Ham(4,3) divisibility",
+  "verification_status": "ALL CHECKS PASS",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "gleason_ring": {
+    "degree_low": 4,
+    "degree_high": 12,
+    "degree_sum": 16,
+    "degree_prod": 48
+  },
+  "small_code": {
+    "n": 4,
+    "k": 2,
+    "d": 3,
+    "size": 9,
+    "we": {
+      "A0": 1,
+      "A3": 8
+    }
+  },
+  "ham_we_summary": {
+    "A0": "1",
+    "min_nonzero_weight": 3,
+    "sim_all_weights_div3": true,
+    "total": "150094635296999121"
+  },
+  "sm_interpretation": {
+    "generations": 3,
+    "weyl_per_gen": 16,
+    "total_weyl": 48,
+    "gleason_prod_eq_weyl": true
+  },
+  "key_discoveries": [
+    "Gleason generators have degrees 4 and 12",
+    "Degree 4 = EW_GAUGE_4 (electroweak sector)",
+    "Degree 12 = length of ternary Golay code",
+    "Product 48 = 3 generations \u00d7 16 Weyl fermions",
+    "Sum 16 = 16 (real DOF per SM gauge boson)",
+    "Ham(4,3) WE: all nonzero weights divisible by 3 (Gleason div. condition)",
+    "Smallest ternary self-dual code: [4,2,3]_3, n=4=EW_GAUGE_4"
+  ],
+  "created": "2026-05-04",
+  "connections": [
+    "CCXCI: Covering radius and packing-covering duality",
+    "CCXC: MacWilliams transform and Eberlein polynomials",
+    "CCLXXXIX: Ham(4,3)/Sim(4,3) perfect code identification",
+    "CCLXXXVIII: Delsarte LP bound and weight enumerators"
+  ]
+}

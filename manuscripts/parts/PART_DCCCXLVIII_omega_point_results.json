@@ -1,0 +1,12 @@
+{
+  "part": "DCCCXLVIII",
+  "decimal": 848,
+  "title": "The Omega Point",
+  "date": "2026-05-17",
+  "omega_point": "UV fixed point = initial object = Big Bang state = Omega Point",
+  "cyclic": true,
+  "recurrence_time_years": "~1e79",
+  "invariant": "21-bit W(3,3) seed",
+  "erased_per_cycle": "edge-excitation history (matter positions)",
+  "status": "DERIVED"
+}

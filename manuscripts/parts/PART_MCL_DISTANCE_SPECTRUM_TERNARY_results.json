@@ -1,0 +1,135 @@
+{
+  "parameters": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "r": 2,
+    "s": -4,
+    "edges": 240
+  },
+  "multiplicity_formulae": {
+    "m_r": 24,
+    "m_s": 15,
+    "m_r_formula": "q(q+1)^2/2 = 3\u00b716//2 = 24",
+    "m_s_formula": "q(q^2+1)/2 = 3\u00b710//2 = 15",
+    "m_r_exact": {
+      "fraction": "24",
+      "numerator": 24,
+      "denominator": 1,
+      "float": 24.0
+    },
+    "m_s_exact": {
+      "fraction": "15",
+      "numerator": 15,
+      "denominator": 1,
+      "float": 15.0
+    },
+    "sum_is_v_minus_1": true,
+    "gap_m_r_minus_m_s": 9,
+    "multiplicity_gap_is_q2": true
+  },
+  "distance_2_eigenvalues": {
+    "on_principal": 27,
+    "on_r_eigenspace": -3,
+    "on_s_eigenspace": 3,
+    "a2_r_equals_neg_q": true,
+    "a2_s_equals_pos_q": true,
+    "ternary_spectrum_verified": true,
+    "statement": "A2 has eigenvalues -q, +q on nonprincipal eigenspaces"
+  },
+  "B_matrix": {
+    "definition": "B = A2 / q = (J - I - A) / q",
+    "b_principal": {
+      "fraction": "9",
+      "numerator": 9,
+      "denominator": 1,
+      "float": 9.0
+    },
+    "b_on_r": {
+      "fraction": "-1",
+      "numerator": -1,
+      "denominator": 1,
+      "float": -1.0
+    },
+    "b_on_s": {
+      "fraction": "1",
+      "numerator": 1,
+      "denominator": 1,
+      "float": 1.0
+    },
+    "b_principal_equals_q2": true,
+    "trace_B": {
+      "fraction": "0",
+      "numerator": 0,
+      "denominator": 1,
+      "float": 0.0
+    },
+    "trace_B_zero": true,
+    "statement": "B = A2/q has eigenvalues {q^2, -1, +1}; trace(B) = 0"
+  },
+  "frobenius_norms": {
+    "norm_A_sq": 480,
+    "norm_A_kv": 480,
+    "norm_A_2edges": 480,
+    "frobenius_A_identity": true,
+    "frobenius_A_2edges": true,
+    "norm_A2_sq": 1080,
+    "norm_A2_q3v": 1080,
+    "frobenius_A2_identity": true,
+    "ratio": {
+      "fraction": "9/4",
+      "numerator": 9,
+      "denominator": 4,
+      "float": 2.25
+    },
+    "ratio_formula": {
+      "fraction": "9/4",
+      "numerator": 9,
+      "denominator": 4,
+      "float": 2.25
+    },
+    "ratio_q2_over_qp1": {
+      "fraction": "9/4",
+      "numerator": 9,
+      "denominator": 4,
+      "float": 2.25
+    },
+    "ratio_identity": true
+  },
+  "bm_algebra_square": {
+    "A2_sq_principal": 729,
+    "A2_sq_r_eigen": 9,
+    "A2_sq_s_eigen": 9,
+    "q2_I_plus_2q2J_principal": 729,
+    "q2_I_plus_2q2J_nonprincipal": 9,
+    "principal_check": true,
+    "nonprincipal_check": true,
+    "identity": "A2^2 = q^2 * I + 2*q^2 * J",
+    "B2_minus_I_coeff": {
+      "fraction": "2",
+      "numerator": 2,
+      "denominator": 1,
+      "float": 2.0
+    },
+    "B2_minus_I_equals_2J": true
+  },
+  "annihilator_properties": {
+    "A2_plus_q_on_r_eigenspace": 0,
+    "A2_minus_q_on_s_eigenspace": 0,
+    "A2_plus_q_kills_r_eigenspace": true,
+    "A2_minus_q_kills_s_eigenspace": true
+  },
+  "master_identities_summary": {
+    "m_r_minus_m_s_equals_q2": true,
+    "ternary_spectrum": true,
+    "trace_B_zero": true,
+    "frobenius_A_identity": true,
+    "frobenius_A2_identity": true,
+    "ratio_identity": true,
+    "B2_minus_I_equals_2J": true,
+    "bm_algebra_square_principal": true,
+    "bm_algebra_square_nonprincipal": true,
+    "annihilator_r": true,
+    "annihilator_s": true
+  }
+}

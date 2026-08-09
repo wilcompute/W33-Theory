@@ -1,0 +1,70 @@
+{
+  "architecture_upgrade": "CCCXXXV gave the moment tower.  CCCXXXVI proves the tower is inverse-spectral: the moments alone reconstruct the two branch atoms, equal weights, minimal polynomial, Hankel rank, and Stieltjes transform.",
+  "checks": [
+    {"name":"mass shell atom M2=5049/4","passed":true,"value":"5049/4"},
+    {"name":"moment m0=2","passed":true,"value":"2"},
+    {"name":"moment m1=0","passed":true,"value":"0"},
+    {"name":"moment m2=5049/2","passed":true,"value":"5049/2"},
+    {"name":"moment recurrence m_{n+2}=M2 m_n","passed":true,"value":true},
+    {"name":"minimal polynomial denominator is lambda^2-M2","passed":true,"value":["1","0","-5049/4"]},
+    {"name":"Hankel 2x2 determinant is positive","passed":true,"value":"5049"},
+    {"name":"Hankel 3x3 determinant vanishes","passed":true,"value":"0"},
+    {"name":"shifted Hankel 2x2 determinant is negative","passed":true,"value":"-25492401/4"},
+    {"name":"Hankel rank is exactly two","passed":true,"value":{"det_H2":"5049","det_H3":"0"}},
+    {"name":"reconstructed branch weights are 1 and 1","passed":true,"value":["1","1"]},
+    {"name":"Stieltjes first coefficient is 2","passed":true,"value":{"coefficient":"2","power":"z^-1","r":0}},
+    {"name":"Stieltjes second nonzero coefficient is 5049/2","passed":true,"value":{"coefficient":"5049/2","power":"z^-3","r":1}}
+  ],
+  "checks_passed": 13,
+  "checks_total": 13,
+  "hankel_rank": {
+    "H2": [["2","0"],["0","5049/2"]],
+    "H3": [["2","0","5049/2"],["0","5049/2","0"],["5049/2","0","25492401/8"]],
+    "det_H2": "5049",
+    "det_H3": "0",
+    "rank": 2
+  },
+  "honesty_boundary": "This is a finite inverse-spectral reconstruction theorem. It does not yet supply a continuum limit or physical measurement protocol for reconstructing the same measure experimentally.",
+  "mass_shell": {
+    "M": "sqrt(5049)/2",
+    "M2": "5049/4",
+    "w33_form": "q^3(k-1)(Phi4+Phi6)/4"
+  },
+  "moments": {
+    "formula_even": "m_{2r}=2(5049/4)^r",
+    "formula_odd": "m_{2r+1}=0",
+    "m0_to_m8": [
+      {"moment":"2","n":0},
+      {"moment":"0","n":1},
+      {"moment":"5049/2","n":2},
+      {"moment":"0","n":3},
+      {"moment":"25492401/8","n":4},
+      {"moment":"0","n":5},
+      {"moment":"128708527449/32","n":6},
+      {"moment":"0","n":7},
+      {"moment":"649948356686001/128","n":8}
+    ],
+    "recurrence": "m_{n+2}=(5049/4)m_n"
+  },
+  "part": "CCCXXXVI",
+  "reconstructed_measure": {
+    "atoms": ["+sqrt(5049)/2", "-sqrt(5049)/2"],
+    "measure": "delta_{+sqrt(5049)/2}+delta_{-sqrt(5049)/2}",
+    "minimal_polynomial": "lambda^2 - 5049/4",
+    "weights": ["1", "1"]
+  },
+  "stieltjes_transform": {
+    "formula": "S(z)=2z/(z^2-5049/4)",
+    "large_z_coefficients_r0_to_r4": [
+      {"coefficient":"2","power":"z^-1","r":0},
+      {"coefficient":"5049/2","power":"z^-3","r":1},
+      {"coefficient":"25492401/8","power":"z^-5","r":2},
+      {"coefficient":"128708527449/32","power":"z^-7","r":3},
+      {"coefficient":"649948356686001/128","power":"z^-9","r":4}
+    ],
+    "pade_denominator": "z^2-5049/4"
+  },
+  "theorem": "The W33 RG spinor moment sequence has Hankel rank two and recurrence m_{n+2}=(5049/4)m_n.  Therefore its unique two-atom symmetric spectral measure is delta_{+sqrt(5049)/2}+delta_{-sqrt(5049)/2}, with Stieltjes transform 2z/(z^2-5049/4).",
+  "title": "Finite Spectral Measure Reconstruction Compiler",
+  "verified": true
+}

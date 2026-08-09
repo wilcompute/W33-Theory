@@ -1,0 +1,42 @@
+{
+  "theorem": "Cross-branch gap normalization spine",
+  "source_commit_after_fetch": "3c619a82",
+  "ym_floor": {
+    "fraction": "1/12",
+    "numerator": 1,
+    "denominator": 12,
+    "float": 0.08333333333333333
+  },
+  "ns_delta": {
+    "fraction": "1/12",
+    "numerator": 1,
+    "denominator": 12,
+    "float": 0.08333333333333333
+  },
+  "ns_decay_rate": {
+    "fraction": "1/6",
+    "numerator": 1,
+    "denominator": 6,
+    "float": 0.16666666666666666
+  },
+  "heat_lambda_2": {
+    "fraction": "10",
+    "numerator": 10,
+    "denominator": 1,
+    "float": 10.0
+  },
+  "lambda_2_times_ns_decay_rate": {
+    "fraction": "5/3",
+    "numerator": 5,
+    "denominator": 3,
+    "float": 1.6666666666666667
+  },
+  "integer_gap_over_q": {
+    "fraction": "5/3",
+    "numerator": 5,
+    "denominator": 3,
+    "float": 1.6666666666666667
+  },
+  "normalization_spine_detected": true,
+  "claim_boundary": "finite W33 substrate normalization across the GitHub MCXXXIV-MCXL scripts; not an external continuum Clay proof by itself"
+}

@@ -8,7 +8,7 @@ ROUTES=ROOT/'analysis/w33_pass4248_route_centerline_generator.py'
 def test_pass4245_4252_quick():
     out=json.loads(subprocess.check_output([sys.executable,str(SCRIPT)],text=True))
     assert out['status'].startswith('PASS_EXACT_')
-    assert out['packet_sha256']=='314ff5c6d21bd4f70a6c7a3228a958cc00f6f4991a288c0f293dcedd9146b8c2'
+    assert out['packet_sha256']=='267198b8b02374007865d5c9a3cb52b72f18fb221e886b296ff9047432e55a1f'
     assert out['five_subset_orbits']==43
     assert out['max_anchor_stabilizer']==72
     assert out['ghz_rounds']==7

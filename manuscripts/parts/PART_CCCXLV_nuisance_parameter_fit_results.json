@@ -1,0 +1,103 @@
+{
+  "architecture_upgrade": "CCCXLIV supplied correlated covariance fitting. CCCXLV adds explicit nuisance/systematic parameters, allowing coherent systematic modes to be fit and removed while retaining a residual chi-square falsification test.",
+  "bad_fit": {
+    "bad_extra": 1.0,
+    "fit_with_nuisance": {
+      "beta": [6872.268462854045, 0.003391417681996245],
+      "chi_square": 1744.737617029944,
+      "degrees_of_freedom": 4,
+      "passes_reduced_chi_square_lt_3": false,
+      "reduced_chi_square": 436.184404257486
+    },
+    "fit_without_nuisance": {
+      "beta": [6872.271441978488],
+      "chi_square": 1746.573133458171,
+      "degrees_of_freedom": 5,
+      "passes_reduced_chi_square_lt_3": false,
+      "reduced_chi_square": 349.3146266916342
+    },
+    "scale_values": [6872.250000000002,6872.250000000002,6872.270000000002,6873.240000000002,6872.265000000002,6872.245000000002],
+    "template": [0.0,0.0,1.0,-0.5,0.75,-0.25],
+    "theta_true": 0.02
+  },
+  "checks": [
+    {"name":"dimensionless W33 M2=5049/4","passed":true,"value":1262.25},
+    {"name":"scale covariance inverse valid","passed":true,"value":3.3306690738754696e-16},
+    {"name":"clean nuisance fit recovers scale","passed":true,"value":6872.25},
+    {"name":"clean nuisance amplitude near zero","passed":true,"value":7.275957614183426e-12},
+    {"name":"systematic nuisance fit recovers scale","passed":true,"value":6872.249999999993},
+    {"name":"systematic nuisance fit recovers theta","passed":true,"value":0.02000000001862645},
+    {"name":"systematic packet improves chi-square with nuisance","passed":true,"value":{"with":1.1670955671778964e-16,"without":63.834536322383215}},
+    {"name":"systematic packet passes with nuisance","passed":true,"value":2.917738917944741e-17},
+    {"name":"bad packet still fails with nuisance","passed":true,"value":436.184404257486},
+    {"name":"nuisance design matrix has two columns","passed":true,"value":[1.0,0.0]},
+    {"name":"packet fit with nuisance is well-defined","passed":true,"value":4}
+  ],
+  "checks_passed": 11,
+  "checks_total": 11,
+  "clean_fit": {
+    "bad_extra": 0.0,
+    "fit_with_nuisance": {
+      "beta": [6872.25, 7.275957614183426e-12],
+      "chi_square": 3.664588001419175e-17,
+      "degrees_of_freedom": 4,
+      "passes_reduced_chi_square_lt_3": true,
+      "reduced_chi_square": 9.161470003547938e-18
+    },
+    "fit_without_nuisance": {
+      "beta": [6872.250000000002],
+      "chi_square": 0.0,
+      "degrees_of_freedom": 5,
+      "passes_reduced_chi_square_lt_3": true,
+      "reduced_chi_square": 0.0
+    },
+    "scale_values": [6872.250000000002,6872.250000000002,6872.250000000002,6872.250000000002,6872.250000000002,6872.250000000002],
+    "template": [0.0,0.0,1.0,-0.5,0.75,-0.25],
+    "theta_true": 0.0
+  },
+  "dimensionless_kernel": {
+    "M2": "5049/4",
+    "role": "physical channel estimates fit X=kappa^2M2 with optional nuisance modes"
+  },
+  "honesty_boundary": "The nuisance template here is synthetic. Real empirical use must derive nuisance templates from actual detector, calibration, or modeling systematics.",
+  "nuisance_model": {
+    "chi_square": "chi2=(X-A beta_hat)^T C^-1 (X-A beta_hat)",
+    "degrees_of_freedom": "N-rank(A)",
+    "design_matrix": "A=[1,b]",
+    "estimator": "beta_hat=(A^T C^-1 A)^-1 A^T C^-1 X",
+    "linear_model": "X_i = X*1_i + theta*b_i + noise_i",
+    "template_b": [0.0,0.0,1.0,-0.5,0.75,-0.25]
+  },
+  "packet_fit_with_nuisance": {
+    "beta": [6872.25, 7.275957614183426e-12],
+    "chi_square": 3.6635125324872487e-17,
+    "degrees_of_freedom": 4,
+    "passes_reduced_chi_square_lt_3": true,
+    "reduced_chi_square": 9.158781331218122e-18
+  },
+  "part": "CCCXLV",
+  "systematic_fit": {
+    "bad_extra": 0.0,
+    "fit_with_nuisance": {
+      "beta": [6872.249999999993, 0.02000000001862645],
+      "chi_square": 1.1670955671778964e-16,
+      "degrees_of_freedom": 4,
+      "passes_reduced_chi_square_lt_3": true,
+      "reduced_chi_square": 2.917738917944741e-17
+    },
+    "fit_without_nuisance": {
+      "beta": [6872.267568608275],
+      "chi_square": 63.834536322383215,
+      "degrees_of_freedom": 5,
+      "passes_reduced_chi_square_lt_3": false,
+      "reduced_chi_square": 12.766907264476643
+    },
+    "scale_values": [6872.250000000002,6872.250000000002,6872.270000000002,6872.240000000002,6872.265000000002,6872.245000000002],
+    "template": [0.0,0.0,1.0,-0.5,0.75,-0.25],
+    "theta_true": 0.02
+  },
+  "theorem": "For a one-sector W33 response packet with known systematic templates, the common scale and nuisance amplitudes are estimated by generalized least squares with design matrix A=[1,b1,b2,...]. A coherent systematic lying in the nuisance template subspace is absorbed without falsifying the model; residuals outside that subspace still produce a chi-square failure.",
+  "title": "Nuisance/Systematic Parameter Fit Compiler",
+  "true_scale": 6872.250000000002,
+  "verified": true
+}

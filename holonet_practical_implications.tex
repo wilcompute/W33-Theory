@@ -393,22 +393,32 @@ continuously priced resource, $9^t$ in the magic count $t$. You provision quantu
 you provision storage: as much as you pay for, on a substrate everyone already runs.
 \end{keybox}
 
-The consequence for virtualization is immediate. A classical hypervisor (VMware, KVM, Hyper-V) taxes
-$5$--$30\%$ of CPU because it must translate between a guest ISA and the host ISA. In the holonet a
-virtual machine is a \emph{coset} of a subgroup of $W(E_6)$; a context switch is one coset
-multiplication --- exactly the cost of any other gate. The hypervisor tax is zero, not by optimization
-but by construction. Memory isolation is Schur's lemma on the irreducible Steinberg module: no
-equivariant operator can read across a VM boundary. And because a quantum VM's state lives in a
-no-cloning Hilbert space, the only legal migration is teleportation --- unauthorized migration is
-physically impossible, not merely policy-blocked.
+The finite coset and representation theory suggests a compact scheduler, but it does \emph{not}
+establish zero hypervisor overhead or a memory-isolation boundary. Schur's lemma constrains
+equivariant linear maps on a specified module; real isolation must also cover the host, devices,
+side channels, malformed guests, and non-equivariant code. Likewise, no-cloning constrains copying an
+unknown quantum state, not authorization. Those older virtualization sentences promoted useful
+algebraic structure into an operating-system security theorem before the enforcement map existed.
 
-\emph{(Witness: \texttt{analysis/w33\_fractal\_datacenter.py} for the emulation cost; the VM/coset and
-Steinberg claims are corpus.)}
+The current executable result is narrower and more useful. \texttt{analysis/holobox.py} stores a leaf
+VM and a recursively nested $40$-child network in the same immutable state grammar. At six levels a
+uniform root denotes $105{,}025{,}641$ logical VM instances and $4{,}096{,}000{,}000$ leaf chamber
+slots using six unique node blobs. A mailbox delivery to a depth-five guest, and that guest's later
+execution, each replace exactly six blobs on one content-addressed path while untouched siblings keep
+their digests. The 14-check certificate proves deterministic composition, addressed execution,
+mailbox persistence, copy-on-write, and the $2n$ table-free route bound measured in logical W33
+line-bus transactions. This does not replace BT827's chart-aware $8n$ lowering, whose unit is three
+cube moves plus five chart-web moves per digit. It remains a Python reference
+runtime---not Linux/KVM isolation, a guest kernel, OCI conformance, attestation, or a performance
+measurement.
+
+\emph{(Witnesses: \texttt{analysis/w33\_fractal\_microvm\_runtime.py},
+\texttt{analysis/holobox.py}, and \texttt{tests/test\_w33\_fractal\_microvm\_runtime.py}.)}
 
 \section{Run It Yourself: The Emulator Exists}
 \label{sec:emulator}
-The previous section is not a thought experiment. The repository ships
-\texttt{analysis/holonet\_node.py} --- a runnable universal VM that you can execute right now on the
+The repository also ships
+\texttt{analysis/holonet\_node.py} --- a runnable finite node emulator that you can execute right now on the
 machine you are reading this on. In one file it builds the $40$-node fabric, routes a packet between two
 nodes (\emph{address is route}, two hops, four-way multipath), runs a qutrit register as a Clifford
 stabilizer tableau over $\mathbb{F}_3$ that evolves under the symplectic group in \emph{polynomial}
@@ -417,18 +427,17 @@ commutation; gate timing stays flat from $4$ to $32$ qutrits, with no exponentia
 magic dial (classical cost $9^t$), and \emph{self-reproduces} --- a node spawns a child by splicing a
 $W(3,3)$ copy, growing the address one digit and the diameter by $8$, with no new control logic.
 
-The point of the program is its own execution. A file that builds the network, runs the processor, and
-reproduces itself --- and does so on a laptop --- is the proof that the architecture of life boots on
-ordinary hardware. The same file, run by many people and spliced by the fractal law, \emph{is} the
-planetary computer of \S\ref{sec:planetary}: not a network of programs but, as one
-$W(E_6)$-symmetric object, a single one. The quantum advantage is the only thing the laptop cannot
-supply --- and that is exactly the priced $9^t$ dial, not the architecture.
+The program proves that the finite control path is portable software: it builds the geometry, runs the
+processor model, and constructs a recursively addressed child on an ordinary laptop. It does not by
+itself create the distributed planetary system of \S\ref{sec:planetary}; that requires a real network,
+failure handling, resource accounting, isolation, and deployment evidence. HoloBox supplies the first
+persistent nested-state layer between the finite emulator and that systems goal.
 
-\section{Proof of Life: It Corrects, Teleports, and Reproduces}
+\section{Three Executable Demonstrations: Correction, Teleportation, and Reproduction}
 \label{sec:prooflife}
-The substrate's boldest claim is that it is, in von~Neumann's precise sense, the architecture of life: a
-universal computer, a universal constructor, and a copyable error-corrected description. Three runnable
-programs now \emph{execute} the three components, turning the claim from assertion into demonstration.
+Three runnable programs exercise correction, transport, and source reproduction separately. Together
+they are useful component demonstrations for a von~Neumann-style architecture; they are not a proof
+that the complete substrate is a universal constructor or a living system.
 
 \paragraph{It corrects errors} (\texttt{analysis/holonet\_qec\_demo.py}). An exact state-vector run of
 the qutrit $[[5,1,3]]_3$ perfect code --- a runnable stand-in for the substrate's
@@ -442,38 +451,38 @@ fidelity $1$. The memory is not a parameter triple; it is a running error-correc
 pair; node $A$ Bell-measures an unknown message against its half, gets one of $9$ outcomes $(k,l)$, sends
 two classical trits to $B$, and $B$ applies the single correction $X^kZ^l$ --- after which $B$'s qutrit
 \emph{is} the message, fidelity $1$ for every outcome (verified exactly). The message is destroyed at
-$A$ by no-cloning, which is exactly why a quantum VM can migrate only by teleportation. Chained against
+$A$ by no-cloning. This supplies one exact state-transfer primitive; it is not, by itself, a VM
+authorization or isolation proof. Chained against
 fresh pairs this is entanglement swapping --- the repeater primitive of \S\ref{sec:frontier} executed,
 not asserted.
 
 \paragraph{It reproduces} (\texttt{analysis/holonet\_quine.py}). The program carries its own complete
 source as an internal description (a genome); running it constructs a byte-identical child, the child
 constructs an identical grandchild, and so on --- a verified self-reproduction fixed point. The
-interpreter is the universal computer, the write is the universal constructor, the genome string is the
-copyable description, the $[[66,8,3]]_3$ code (which just corrected errors above) is the
-error-corrected heredity, and the fractal $W(3,3)$ splice is the variation that makes it evolvable. The
-``architecture of life'' is not a slogan but a running fixed point.
+interpreter, write path, and internal source string instantiate the three roles in this deliberately
+small software model. The quine proves a source-level fixed point. It does not prove a general-purpose
+constructor, evolvability, or integration with the separately tested quantum code.
 
-\begin{keybox}{The three von Neumann components, executed}
-Compute-and-correct, construct-and-move, reproduce: the three things a living, self-reproducing system
-must do, each now a program you can run and verify on an ordinary computer (\S\ref{sec:emulator}). The
-quantum advantage is still the priced $9^t$ dial; everything else --- the error correction logic, the
-teleportation protocol, the self-reproduction --- is classical, exact, and runs today.
+\begin{keybox}{Three components, three explicit scopes}
+The code demo corrects every single-qutrit Pauli error in its five-qutrit test code; the teleport demo
+transfers a qutrit with fidelity one for every measurement outcome; the quine reproduces its source
+bytes. Each is exact and runnable. Their composition into one fault-tolerant constructor remains an
+engineering and verification task.
 \end{keybox}
 
 \paragraph{And it agrees under attack, and ships as a tool.} The consensus layer is executed too
 (\texttt{analysis/holonet\_consensus\_demo.py}): on a simulated $40$-node fabric the disagreement
 contracts by $1/3$ per round, five silent nodes do not stop agreement, and five \emph{malicious} nodes
-broadcasting wild values are outvoted by the trimmed-mean rule --- with six the boundary breaks, exactly
-the Dolev bound $t=5$. The whole machine is packaged as a command-line tool
+broadcasting wild values are outvoted by the trimmed-mean rule --- with six the tested configuration
+breaks. The demonstration suite is packaged as a command-line tool
 (\texttt{analysis/holonet\_cli.py}, installable as \texttt{holonet} via \texttt{pip install -e .}):
 \texttt{route A B}, \texttt{teleport}, \texttt{correct}, \texttt{reproduce}, \texttt{verify} (self-tests
 the stack to \textsc{pass}/\textsc{fail}), \texttt{info}, with a $13$-test CI suite covering the VM.
 Even the quantum \emph{advantage} is now executed for small $t$: the Pashayan--Wallman--Bartlett
 quasiprobability simulator (\texttt{analysis/w33\_magic\_dial.py}) runs the magic gates as a signed
 Monte Carlo, unbiased against the exact value, with each $t$-gate sample in $[-3^t,3^t]$ so the sample
-cost scales as $9^t$ --- the priced dial, turned and measured. The architecture of life as something
-anyone can install, run, and verify.
+cost scales as $9^t$ --- the priced dial, turned and measured. These commands make the component claims
+easy to install, replay, and falsify; they do not turn the combined architecture into a completed system.
 
 \section{The Planetary Data Center: Everyone Is a Node}
 \label{sec:planetary}
@@ -1101,6 +1110,65 @@ that a builder can now trace one route decision from four-bit firmware all the
 way to the \(2160\)-slot fabric and know exactly what has been counted.
 \end{honestbox}
 
+\section{The chamber microarchitecture now has an exact instruction algebra}
+
+The strongest new hardware-facing result is smaller than the whole Holonet and therefore
+more buildable. Store one incident point--line pair: a $160$-state chamber register. It has
+two native relation switches:
+
+\begin{itemize}[leftmargin=1.4em]
+\item $P$: hold the point and select one of the other three incident lines;
+\item $L$: hold the line and select one of the other three points on it.
+\end{itemize}
+
+Their exact finite logic is
+\[
+P^2=2P+3I,\qquad L^2=2L+3I,\qquad PLPL=LPLP.
+\]
+The generated operator algebra has dimension eight. On the $320$ oriented flags, the Levi
+non-backtracking operator factors as
+\[
+B_{\rm Levi}=\begin{pmatrix}0&L\\P&0\end{pmatrix}.
+\]
+The rank-$48$ chiral channel also has an implementable two-bank description. Let
+$Q_p$ and $Q_\ell$ project onto the lifted rank-$24$ point and line mode banks.
+Their images have zero intersection but one uniform coupling angle:
+\[
+ Q_pQ_\ell Q_p=\frac38Q_p,\qquad
+ Q_\ell Q_pQ_\ell=\frac38Q_\ell.
+\]
+Thus every paired mode has coupling cosine $\sqrt6/4$, and the orthogonal projector
+onto the combined bank is recovered without diagonalization as
+$\Pi_{48}=\frac85(2Q-Q^2)$ for $Q=Q_p+Q_\ell$. This supplies an exact
+point-bank/line-bank interface; it does not yet choose the three-way panel branch.
+
+This gives a concrete compiler target: a chamber register, a point-panel selector, a
+line-panel selector, and one orientation bit. It is also a safety target. Running point and
+line rails separately and checking incidence detects exactly
+\[
+\frac{1656}{1920}=\frac{69}{80}=86.25\%
+\]
+of differential single-rail opcode substitutions. It detects none of the $960$ shared
+control substitutions, because the same wrong symmetry preserves incidence on both rails.
+An independent control syndrome is therefore required; duplicated shared decode is not
+fault containment.
+
+The analytic $2\times2$ ISA table is now corrected as well. Machine D is exactly invariant
+under the point/frequency pair swap and exactly inverse-closed, so both named asymmetries can
+be removed in the finite model. The remaining localization is symmetric. However, B and D
+have not been synthesized in Yosys, and the three alternatives behind each panel relation
+still require a deterministic selector encoding. Those are implementation tasks, not hidden
+theorems.
+
+\begin{honestbox}
+The GAP witnesses establish a finite Hecke algebra and exact comparator census. They do not
+establish a fabricated chamber processor, switching energy, optical loss, timing closure, or
+physical quantum advantage. The earlier $\mathbb Z_{2731}$ girth-$16$ cover used in one
+capacity estimate is also retracted: an explicit zero-voltage eight-cycle makes its girth
+exactly $8$. The $4373$-node radius-seven tree ball is therefore conditional, not a property
+of that device candidate.
+\end{honestbox}
+
 \section{A Roadmap}
 \label{sec:roadmap}
 \begin{description}[leftmargin=0pt,style=nextline]
@@ -1110,9 +1178,9 @@ Chern number $\lambda=2$. Calibration-free; certifies the Clifford layer and the
 (following Zheng \emph{et al.}); OAM-trit encode/detect; verify Clifford closure to $51840$ by sampling;
 operate the $[[66,8,3]]_3$ code below pseudo-threshold $p_{\mathrm{th}}\approx 5\times10^{-4}$.
 \item[3--7 years --- the level-$n$ holonet.] Each $W(3,3)$ site a photonic chip; inter-chip links OAM
-fiber ($1$~km already demonstrated). Level $2$ ($1{,}600$ cores) for distributed inference; level $3$
-($64{,}000$ cores) for room-temperature quantum chemistry. No new science --- the scaling law is a
-theorem.
+ fiber ($1$~km already demonstrated). Level $2$ has $1{,}600$ combinatorial cores and level $3$
+has $64{,}000$; those counts are theorems, while distributed-inference or quantum-chemistry
+performance at those levels remains an engineering benchmark, not a consequence of the count.
 \item[The classical track --- in parallel, today.] Ship the universal VM (\S\ref{sec:vm}) as software:
 a holonet-node emulator that runs on any device, joins the fractal by splicing, and exposes the magic
 budget $t$ as a dial. The classical network of emulators is useful (decentralized, self-auditing,
@@ -1125,6 +1193,8 @@ leaves come online.
 \begin{itemize}[leftmargin=1.4em]
 \item No physical build of the full holonet exists; the contextual-fraction measurement has not been
 performed on the complete $W(3,3)$ geometry.
+\item The chamber $P/L$ relations are exact, but the deterministic three-way selector, B/D RTL,
+independent shared-control syndrome, and synthesized resource/timing table remain unbuilt.
 \item The fractal scaling laws are combinatorial theorems; physical realization at depth $n\ge 2$ is an
 open engineering problem, and the first hard arithmetic guard band (a desynchronization at $n=5$) is
 computed but not engineered around.
@@ -1144,26 +1214,22 @@ attack models are not yet published.
 \end{itemize}
 
 \section{Conclusion}
-On its technical merits the \emph{Photonic Holonet} is a complete finite architecture: every layer a
-theorem with an executable witness, every constant substrate arithmetic at $q=3$, the device
-specification its own audit. This companion has argued that its practical reach is correspondingly
-total. Data centers face a fabric disruption --- diameter $2$, $11$-fault, table-free routing at
-bisection $100$, belonging in photonics, not silicon. Energy faces a paradigm shift --- a reversible
-datapath, a metabolic floor at the Landauer bound, no distillation factory --- that turns $945$~TWh
-from a forecast into a choice. Decentralization becomes structural, security becomes physical, and
-virtualization loses its tax.
+On its technical merits the \emph{Photonic Holonet} is a large finite architecture with an unusually
+deep executable core: exact incidence carriers, codes, routes, finite operators, compiler contracts,
+and now a two-switch chamber algebra. It is not yet a complete device specification. Loss, selectors,
+shared-control fault detection, fabrication rules, B/D synthesis and end-to-end performance remain
+measured engineering questions.
 
-But the idea that may matter most is the simplest. Because the architecture is classically emulable, it
-\emph{boots on any computer that has ever existed}. Everyone's machine can be a node; the nodes splice
-by a combinatorial law into a single $W(E_6)$-symmetric object; and that object is not a network of
-computers but \emph{one computer} --- a planetary, self-assembling, self-auditing universal machine
-whose minimal logical architecture is, in von Neumann's precise sense, the architecture of life. The
-quantum advantage is a dial each node turns as its photonics allow; the structure is free and already
-runs on the device in your hand.
+That boundary makes the practical wager sharper. The classical emulator, audit trail and finite
+compiler can be built now. The chamber microarchitecture gives the optical program a small testable
+unit. The contextual fraction, loss budget, switching energy and fault census give experiments numbers
+that can disagree with the proposal. If they do, the model has learned something; if they do not, the
+next layer earns the right to be built.
 
-And the whole edifice is decided by a few hundred photons on a bench, measuring the number $1/10$. The
-theory of everything, if it is anywhere, is here: in $40$ points, $40$ lines, one photon, and the
-number three.
+The ambitious vision remains a self-auditing network whose global structure is fixed by one finite
+geometry. It should be presented as a program, not a delivered planetary computer. What is already
+exceptional is enough: $40$ points, $40$ lines and two local switches produce a reproducible algebra
+that keeps revealing both new structure and its own mistakes.
 
 \bigskip
 \noindent\rule{\linewidth}{0.4pt}\\[0.3em]

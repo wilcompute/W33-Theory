@@ -1,0 +1,75 @@
+{
+  "part": "CCCCCXXIII",
+  "title": "Moment-Ratio Scalar Action Theorem",
+  "atoms": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "k": 12,
+    "v": 40,
+    "E": 240,
+    "directed_edges": 480,
+    "triangles": 160,
+    "r": 2,
+    "s": -4,
+    "f": 24,
+    "g": 15,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7
+  },
+  "moment_identity": {
+    "Tr_A2": 480,
+    "Tr_A3": 960,
+    "Tr_A3_over_Tr_A2": "2",
+    "r": 2,
+    "statement": "Tr(A^3)/Tr(A^2)=r=2"
+  },
+  "scalar_action_compression": {
+    "triangle_trace_formula": "lambda_H=(Delta_s/Delta_r)*dim(E6)/Tr(A^3)",
+    "moment_ratio_formula": "lambda_H=(Delta_s/Delta_r)*dim(E6)/(r*Tr(A^2))",
+    "gap_ratio": "8/5",
+    "dim_E6": 78,
+    "lambda_H_triangle": "13/100",
+    "lambda_H_moment_ratio": "13/100",
+    "lambda_H_inverse": "100/13"
+  },
+  "latest_commit_consistency": {
+    "zero_modes": 82,
+    "zero_modes_as_2_det": 82,
+    "a6_Tr_DF6": 191360,
+    "ihara_trivial_exponent": 200,
+    "ihara_factors": {
+      "perron": "1-12u-11u^2",
+      "r": "1-2u+11u^2",
+      "s": "1+4u+11u^2"
+    }
+  },
+  "descendants": {
+    "A_CKM": "81/100",
+    "PMNS_theta13": "9/400",
+    "y_tau": "16029/1562500"
+  },
+  "checks": {
+    "true_master_equation": true,
+    "w33_atoms": true,
+    "spectral_moments": true,
+    "moment_ratio_equals_r": true,
+    "triangle_trace": true,
+    "gap_ratio": true,
+    "dim_E6": true,
+    "lambda_H_triangle": true,
+    "lambda_H_moment_ratio": true,
+    "lambda_H_cyclotomic": true,
+    "inverse_action_forms": true,
+    "zero_modes_perron_identity": true,
+    "a6_corrected": true,
+    "ihara_trivial_exponent": true,
+    "ihara_factors": true,
+    "descendants": true,
+    "heavy_ladder": true,
+    "exceptional_dimensions": true
+  },
+  "all_checks_pass": true,
+  "interpretation": "The latest spectral moment identity compresses the triangle-trace Higgs mechanism by replacing Tr(A^3) with r*Tr(A^2). Thus the scalar coupling can be read directly from the second spectral moment once the Master-Equation identity Tr(A^3)/Tr(A^2)=r is imposed. This fuses the moment-ratio theorem, scalar topology action, zero-mode Perron identity, sixth spectral-action coefficient, and Ihara zeta carrier."
+}

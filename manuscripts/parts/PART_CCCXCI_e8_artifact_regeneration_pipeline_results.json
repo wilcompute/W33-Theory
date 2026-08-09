@@ -1,0 +1,309 @@
+{
+  "architecture_upgrade": "Records the exact regeneration DAG from root metadata to structure constants to Z3/bracket analyzers, turning the artifact blocker into an executable pipeline plan.",
+  "checks": [
+    {
+      "name": "five pipeline steps recorded",
+      "passed": true,
+      "value": [
+        "build_root_metadata",
+        "export_structure_constants",
+        "verify_z3_grading",
+        "analyze_g1g2_to_g0",
+        "analyze_g1g1_cubic_firewall"
+      ]
+    },
+    {
+      "name": "root metadata builder exists",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "structure constants exporter exists",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "z3 verifier exists",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "z3 manifest declares actual verifier JSON",
+      "passed": true,
+      "value": [
+        "artifacts/verify_e8_z3grading_from_structure_constants.json",
+        "artifacts/verify_e8_z3grading_from_structure_constants.md"
+      ]
+    },
+    {
+      "name": "preflight returns five records",
+      "passed": true,
+      "value": [
+        {
+          "name": "build_root_metadata",
+          "produces": [
+            "artifacts/e8_root_metadata_table.json",
+            "artifacts/e8_root_metadata_table.md"
+          ],
+          "ready": true,
+          "requires": {
+            "artifacts/e8_coxeter6_orbits.json": true,
+            "artifacts/e8_root_to_edge.json": true,
+            "artifacts/sage_verify_e8_trinification_closeout.json": true,
+            "artifacts/verify_e8_dynkin_from_trinification.json": true,
+            "tools/verify_e8_root_system_from_trinification.py": true
+          },
+          "script": "tools/build_e8_root_metadata_table.py",
+          "script_exists": true,
+          "step": 1
+        },
+        {
+          "name": "export_structure_constants",
+          "produces": [
+            "artifacts/e8_structure_constants_w33_discrete.json",
+            "artifacts/e8_structure_constants_w33_discrete.md"
+          ],
+          "ready": true,
+          "requires": {
+            "artifacts/e8_root_metadata_table.json": true
+          },
+          "script": "tools/export_e8_structure_constants_from_w33_discrete.py",
+          "script_exists": true,
+          "step": 2
+        },
+        {
+          "name": "verify_z3_grading",
+          "produces": [
+            "artifacts/verify_e8_z3grading_from_structure_constants.json",
+            "artifacts/verify_e8_z3grading_from_structure_constants.md"
+          ],
+          "ready": true,
+          "requires": {
+            "artifacts/e8_root_metadata_table.json": true,
+            "artifacts/e8_structure_constants_w33_discrete.json": true
+          },
+          "script": "tools/verify_e8_z3grading_from_structure_constants.py",
+          "script_exists": true,
+          "step": 3
+        },
+        {
+          "name": "analyze_g1g2_to_g0",
+          "produces": [
+            "artifacts/e8_g1g2_to_g0_couplings.json",
+            "artifacts/e8_g1g2_to_g0_couplings.md"
+          ],
+          "ready": true,
+          "requires": {
+            "artifacts/e8_root_metadata_table.json": true,
+            "artifacts/e8_structure_constants_w33_discrete.json": true
+          },
+          "script": "tools/analyze_e8_g1g2_to_g0_couplings.py",
+          "script_exists": true,
+          "step": 4
+        },
+        {
+          "name": "analyze_g1g1_cubic_firewall",
+          "produces": [
+            "artifacts/e8_g1g1_couplings_cubic_firewall.json",
+            "artifacts/e8_g1g1_couplings_cubic_firewall.md"
+          ],
+          "ready": true,
+          "requires": {
+            "artifacts/canonical_su3_gauge_and_cubic.json": true,
+            "artifacts/e8_root_metadata_table.json": true,
+            "artifacts/e8_structure_constants_w33_discrete.json": true,
+            "artifacts/firewall_bad_triads_mapping.json": true
+          },
+          "script": "tools/analyze_e8_g1g1_couplings_cubic_firewall.py",
+          "script_exists": true,
+          "step": 5
+        }
+      ]
+    },
+    {
+      "name": "next action is defined",
+      "passed": true,
+      "value": {
+        "blocked_at_step": null,
+        "commands": [
+          "python tools/build_e8_root_metadata_table.py",
+          "python tools/export_e8_structure_constants_from_w33_discrete.py",
+          "python tools/verify_e8_z3grading_from_structure_constants.py",
+          "python tools/analyze_e8_g1g2_to_g0_couplings.py",
+          "python tools/analyze_e8_g1g1_couplings_cubic_firewall.py"
+        ],
+        "state": "ALL_STEPS_PREFLIGHT_READY"
+      }
+    }
+  ],
+  "checks_passed": 7,
+  "checks_total": 7,
+  "honesty_boundary": "This is a preflight/pipeline manifest, not a run log. It does not execute subprocesses or fabricate missing artifacts.",
+  "next_action": {
+    "blocked_at_step": null,
+    "commands": [
+      "python tools/build_e8_root_metadata_table.py",
+      "python tools/export_e8_structure_constants_from_w33_discrete.py",
+      "python tools/verify_e8_z3grading_from_structure_constants.py",
+      "python tools/analyze_e8_g1g2_to_g0_couplings.py",
+      "python tools/analyze_e8_g1g1_couplings_cubic_firewall.py"
+    ],
+    "state": "ALL_STEPS_PREFLIGHT_READY"
+  },
+  "part": "CCCXCI",
+  "pipeline": [
+    {
+      "name": "build_root_metadata",
+      "produces": [
+        "artifacts/e8_root_metadata_table.json",
+        "artifacts/e8_root_metadata_table.md"
+      ],
+      "requires": [
+        "tools/verify_e8_root_system_from_trinification.py",
+        "artifacts/verify_e8_dynkin_from_trinification.json",
+        "artifacts/sage_verify_e8_trinification_closeout.json",
+        "artifacts/e8_coxeter6_orbits.json",
+        "artifacts/e8_root_to_edge.json"
+      ],
+      "script": "tools/build_e8_root_metadata_table.py",
+      "step": 1
+    },
+    {
+      "name": "export_structure_constants",
+      "produces": [
+        "artifacts/e8_structure_constants_w33_discrete.json",
+        "artifacts/e8_structure_constants_w33_discrete.md"
+      ],
+      "requires": [
+        "artifacts/e8_root_metadata_table.json"
+      ],
+      "script": "tools/export_e8_structure_constants_from_w33_discrete.py",
+      "step": 2
+    },
+    {
+      "name": "verify_z3_grading",
+      "produces": [
+        "artifacts/verify_e8_z3grading_from_structure_constants.json",
+        "artifacts/verify_e8_z3grading_from_structure_constants.md"
+      ],
+      "requires": [
+        "artifacts/e8_structure_constants_w33_discrete.json",
+        "artifacts/e8_root_metadata_table.json"
+      ],
+      "script": "tools/verify_e8_z3grading_from_structure_constants.py",
+      "step": 3
+    },
+    {
+      "name": "analyze_g1g2_to_g0",
+      "produces": [
+        "artifacts/e8_g1g2_to_g0_couplings.json",
+        "artifacts/e8_g1g2_to_g0_couplings.md"
+      ],
+      "requires": [
+        "artifacts/e8_structure_constants_w33_discrete.json",
+        "artifacts/e8_root_metadata_table.json"
+      ],
+      "script": "tools/analyze_e8_g1g2_to_g0_couplings.py",
+      "step": 4
+    },
+    {
+      "name": "analyze_g1g1_cubic_firewall",
+      "produces": [
+        "artifacts/e8_g1g1_couplings_cubic_firewall.json",
+        "artifacts/e8_g1g1_couplings_cubic_firewall.md"
+      ],
+      "requires": [
+        "artifacts/e8_structure_constants_w33_discrete.json",
+        "artifacts/e8_root_metadata_table.json",
+        "artifacts/canonical_su3_gauge_and_cubic.json",
+        "artifacts/firewall_bad_triads_mapping.json"
+      ],
+      "script": "tools/analyze_e8_g1g1_couplings_cubic_firewall.py",
+      "step": 5
+    }
+  ],
+  "preflight": [
+    {
+      "name": "build_root_metadata",
+      "produces": [
+        "artifacts/e8_root_metadata_table.json",
+        "artifacts/e8_root_metadata_table.md"
+      ],
+      "ready": true,
+      "requires": {
+        "artifacts/e8_coxeter6_orbits.json": true,
+        "artifacts/e8_root_to_edge.json": true,
+        "artifacts/sage_verify_e8_trinification_closeout.json": true,
+        "artifacts/verify_e8_dynkin_from_trinification.json": true,
+        "tools/verify_e8_root_system_from_trinification.py": true
+      },
+      "script": "tools/build_e8_root_metadata_table.py",
+      "script_exists": true,
+      "step": 1
+    },
+    {
+      "name": "export_structure_constants",
+      "produces": [
+        "artifacts/e8_structure_constants_w33_discrete.json",
+        "artifacts/e8_structure_constants_w33_discrete.md"
+      ],
+      "ready": true,
+      "requires": {
+        "artifacts/e8_root_metadata_table.json": true
+      },
+      "script": "tools/export_e8_structure_constants_from_w33_discrete.py",
+      "script_exists": true,
+      "step": 2
+    },
+    {
+      "name": "verify_z3_grading",
+      "produces": [
+        "artifacts/verify_e8_z3grading_from_structure_constants.json",
+        "artifacts/verify_e8_z3grading_from_structure_constants.md"
+      ],
+      "ready": true,
+      "requires": {
+        "artifacts/e8_root_metadata_table.json": true,
+        "artifacts/e8_structure_constants_w33_discrete.json": true
+      },
+      "script": "tools/verify_e8_z3grading_from_structure_constants.py",
+      "script_exists": true,
+      "step": 3
+    },
+    {
+      "name": "analyze_g1g2_to_g0",
+      "produces": [
+        "artifacts/e8_g1g2_to_g0_couplings.json",
+        "artifacts/e8_g1g2_to_g0_couplings.md"
+      ],
+      "ready": true,
+      "requires": {
+        "artifacts/e8_root_metadata_table.json": true,
+        "artifacts/e8_structure_constants_w33_discrete.json": true
+      },
+      "script": "tools/analyze_e8_g1g2_to_g0_couplings.py",
+      "script_exists": true,
+      "step": 4
+    },
+    {
+      "name": "analyze_g1g1_cubic_firewall",
+      "produces": [
+        "artifacts/e8_g1g1_couplings_cubic_firewall.json",
+        "artifacts/e8_g1g1_couplings_cubic_firewall.md"
+      ],
+      "ready": true,
+      "requires": {
+        "artifacts/canonical_su3_gauge_and_cubic.json": true,
+        "artifacts/e8_root_metadata_table.json": true,
+        "artifacts/e8_structure_constants_w33_discrete.json": true,
+        "artifacts/firewall_bad_triads_mapping.json": true
+      },
+      "script": "tools/analyze_e8_g1g1_couplings_cubic_firewall.py",
+      "script_exists": true,
+      "step": 5
+    }
+  ],
+  "theorem": "The E8 operation bridge has a finite regeneration order: root metadata must be built first, structure constants second, grading verification third, and coupling analyzers after that. No bracket-level claim is allowed until the preflight reaches the relevant ready state.",
+  "title": "E8 Artifact Regeneration Pipeline",
+  "verified": true
+}

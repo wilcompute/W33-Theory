@@ -1,0 +1,8 @@
+{
+  "part": "DCMXLV",
+  "decimal": 945,
+  "title": "Von Mangoldt CSS Dictionary",
+  "identification": "Lambda(n) = -d/ds log Z_Ihara(n^{-s})|_{s=1}",
+  "open_step": 2,
+  "status": "RESOLVED"
+}

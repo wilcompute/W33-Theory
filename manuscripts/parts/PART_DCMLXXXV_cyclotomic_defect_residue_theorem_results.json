@@ -1,0 +1,95 @@
+{
+    "part": "DCMLXXXV",
+    "title": "Cyclotomic Defect Residue Theorem",
+    "status": "verified",
+    "exact_classifier_q_le_1000": true,
+    "first_split_prime_residue_classes": {
+        "7": {
+            "order3_units": [
+                18,
+                30
+            ],
+            "phi3_classes": [
+                18,
+                30
+            ],
+            "phi6_classes": [
+                19,
+                31
+            ]
+        },
+        "13": {
+            "order3_units": [
+                22,
+                146
+            ],
+            "phi3_classes": [
+                22,
+                146
+            ],
+            "phi6_classes": [
+                23,
+                147
+            ]
+        },
+        "19": {
+            "order3_units": [
+                68,
+                292
+            ],
+            "phi3_classes": [
+                68,
+                292
+            ],
+            "phi6_classes": [
+                69,
+                293
+            ]
+        }
+    },
+    "first_cube_defect": {
+        "phi3": {
+            "q": 18,
+            "value": 343,
+            "base": 7,
+            "exponent": 3
+        },
+        "phi6": {
+            "q": 19,
+            "value": 343,
+            "base": 7,
+            "exponent": 3
+        }
+    },
+    "eisenstein_norm_factorization": {
+        "Phi3": "Phi3(q) = N(q - omega)",
+        "Phi6": "Phi6(q) = N(q + omega)"
+    },
+    "perfect_power_scan_q_le_1e5": {
+        "phi3_hits": [
+            {
+                "q": 18,
+                "value": 343,
+                "base": 7,
+                "exponent": 3
+            }
+        ],
+        "phi6_hits": [
+            {
+                "q": 19,
+                "value": 343,
+                "base": 7,
+                "exponent": 3
+            }
+        ]
+    },
+    "defect_density": {
+        "formula": "1 - Product_{p ≡ 1 mod 3}(1 - 2/p^2)",
+        "approximate_value": 0.06515763202044067,
+        "empirical_scan_q_le_20000": {
+            "phi3_density": 0.06495649564956496,
+            "phi6_density": 0.06495649564956496
+        }
+    },
+    "theorem_summary": "The nonsquarefree defect locus of Phi3(q)=q^2+q+1 and Phi6(q)=q^2-q+1 is exactly the union over split primes p congruent to 1 mod 3 of the two Hensel-lifted nontrivial cube roots of unity modulo p^2, with the Phi6 classes given by their negatives. Equivalently, Phi3(q)=N(q-omega) and Phi6(q)=N(q+omega) in the Eisenstein integers, so the defect set is the split-prime multiplicity locus of those two norm packets."
+}

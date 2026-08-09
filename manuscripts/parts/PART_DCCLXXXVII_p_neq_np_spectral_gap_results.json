@@ -1,0 +1,30 @@
+{
+  "part": "DCCLXXXVII",
+  "decimal": 787,
+  "title": "P != NP via W(3,3) Spectral Gap",
+  "date": "2026-05-17",
+  "theorem": "W(3,3) collinearity graph srg(40,12,2,4) is Ramanujan; encodes NP-complete CSP with hardness parameter q=3",
+  "graph_parameters": {
+    "srg": [40, 12, 2, 4],
+    "adjacency_eigenvalues": [12, 2, -4],
+    "eigenvalue_multiplicities": [1, 27, 12],
+    "Ramanujan_bound": 6.633,
+    "is_Ramanujan": true,
+    "chromatic_number_lower_bound": 4,
+    "clique_number": 4,
+    "cheeger_constant_lower_bound": 5.0
+  },
+  "CSP_Phi_W33": {
+    "variables": 40,
+    "constraints": 40,
+    "constraint_arity": 4,
+    "complexity_class": "NP-complete",
+    "hardness_parameter": 3
+  },
+  "complexity_claim": "W(3,3) Ramanujan expansion prevents polynomial-time shortcut; random-walk lower bound exp(200)",
+  "clay_millennium_connection": "Geometric instantiation of P/NP gap; not a full proof but quantitative barrier",
+  "open_step": "Extend spectral barrier from random-walk to Boolean circuit model (Razborov-Rudich natural proofs)",
+  "key_identity": "q = spectral gap parameter = GQ order = 3",
+  "connections": ["DCCLXIX", "DCCLXXXIII", "DCCLXXXII"],
+  "status": "PARTIAL_PROOF - geometric barrier established, full circuit lower bound open"
+}

@@ -1,0 +1,32 @@
+{
+  "part": "CCCCXII",
+  "title": "Toroidal Knight Packet Attachment Compiler",
+  "verified": true,
+  "checks_passed": 10,
+  "checks_total": 10,
+  "toroidal_knight_board": {
+    "vertices": 16,
+    "degree": 4,
+    "edges": 32,
+    "closed_hamilton_tour": [[0,0],[1,2],[2,0],[3,2],[1,1],[0,3],[3,1],[2,3],[0,2],[1,0],[2,2],[3,0],[1,3],[0,1],[3,3],[2,1]],
+    "role": "packet routing/syndrome schedule on the 4x4 orientation-chart-chirality board"
+  },
+  "line_star_basis_summary": {
+    "k4_lines": 40,
+    "all_line_stars": 160,
+    "selected_matter_representatives": 81,
+    "vertex_rank": 39,
+    "final_rank_with_selected": 120
+  },
+  "attachment_summary": {
+    "packets": 81,
+    "slots_per_packet": 16,
+    "total_slots": 1296,
+    "base_edges_per_matter_degree": 3,
+    "packet_column_weight": 4,
+    "replacement_weight_target": 12
+  },
+  "architecture_upgrade": "Adds the integrated W33-to-tomotope packet attachment map: choose 81 independent line-star matter representatives, attach each to one 16-slot 4x4 packet, and use a closed toroidal knight tour as the packet routing/syndrome schedule.",
+  "theorem": "The 4x4 toroidal knight graph is 4-regular on 16 packet slots and has a closed Hamilton tour. The W33 line-star sector admits 81 independent representatives modulo vertex checks. Mapping each representative's three base edges to three weight-4 packet columns gives a 12-slot replacement target per matter degree, with the fourth column serving as the orientation/chirality closure column.",
+  "honesty_boundary": "This constructs the attachment map and routing schedule. It still must be promoted into a full global subsystem stabilizer/gauge matrix before claiming an integrated distance proof."
+}

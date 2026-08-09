@@ -1,0 +1,72 @@
+{
+  "part": "MCCCXCV",
+  "theorem": "Automorphism order of the spread/double-six scheme",
+  "input_bridge": "MCCCXCIV explicit spread/double-six scheme isomorphism",
+  "scheme": "36-object overlap-4 graph srg(36,15,6,6)",
+  "orbit_stabilizer": {
+    "orbit_size_of_first_spread": 36,
+    "stabilizer_order_of_first_spread": 1440,
+    "automorphism_order": 51840,
+    "identity": "51840 = 36 * 1440",
+    "factorization": {
+      "2": 7,
+      "3": 4,
+      "5": 1
+    }
+  },
+  "search": {
+    "stabilizer_search_nodes": 44476,
+    "orbit_witness_search_node_profile": {
+      "36": 36
+    },
+    "first_stabilizer_solution": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ]
+  },
+  "claim_boundary": "finite automorphism-order theorem for the 36-object scheme; by the MCCCXCIV isomorphism the double-six scheme has the same order, but this does not choose a unique canonical spread-to-double-six labeling",
+  "reading": "The 36-object spread/double-six scheme has automorphism order 51840. The first spread has a 36-element orbit and a 1440-element stabilizer, so orbit-stabilizer gives 36*1440=51840. This is exactly the E6/W33 symmetry scale already appearing throughout the bridge, now recovered from the spread/double-six association scheme itself.",
+  "checks": {
+    "spread_scheme_has_36_vertices": true,
+    "overlap_4_graph_has_degree_15": true,
+    "stabilizer_of_first_spread_is_1440": true,
+    "orbit_of_first_spread_has_size_36": true,
+    "automorphism_order_is_51840": true,
+    "automorphism_order_factorization_matches": true
+  },
+  "n_verified": 6
+}

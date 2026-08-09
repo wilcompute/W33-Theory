@@ -1,0 +1,8 @@
+{
+  "part": "DCMXXXVIII",
+  "decimal": 938,
+  "title": "PMNS theta23 Octant",
+  "prediction": "lower octant, sin^2(theta23) ~ 0.41",
+  "testable_by": ["Hyper-K 2027", "JUNO 2030"],
+  "status": "FALSIFIABLE PREDICTION"
+}

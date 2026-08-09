@@ -1,0 +1,21 @@
+{
+  "part": "CCCLXXXIX",
+  "title": "E8 Artifact Dependency Resolver",
+  "verified": true,
+  "checks_passed": 5,
+  "checks_total": 5,
+  "required_artifacts": [
+    "artifacts/e8_structure_constants_w33_discrete.json",
+    "artifacts/e8_root_metadata_table.json"
+  ],
+  "analyzer_tools": [
+    "tools/verify_e8_z3grading_from_structure_constants.py",
+    "tools/analyze_e8_g1g2_to_g0_couplings.py",
+    "tools/analyze_e8_g1g1_couplings_cubic_firewall.py",
+    "tools/verify_e8_firewall_filtered_bracket_jacobi.py"
+  ],
+  "next_state_policy": "READY_FOR_BRACKET_VERIFICATION if both required artifacts exist; otherwise MISSING_ARTIFACTS_REGENERATE_OR_RESTORE",
+  "architecture_upgrade": "Turns the operation-preserving H1->E8 bridge into a concrete dependency gate: either the E8 structure artifacts exist and bracket verification can run, or the exact missing files are listed for regeneration/restoration.",
+  "theorem": "Bracket-level H1-to-E8 verification is blocked exactly by the availability of the E8 structure constants and root-grade metadata. Once those two artifacts are present, the existing analyzer tools can test the Z3 grading and g1/g2 coupling rules.",
+  "honesty_boundary": "This is a dependency resolver, not a bracket verification result. Missing artifacts mean no operation-preserving claim is made."
+}

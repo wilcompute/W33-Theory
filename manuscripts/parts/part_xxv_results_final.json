@@ -1,0 +1,25 @@
+{
+  "part": "XXV",
+  "title": "Yukawa Normalisation and CKM Matrix from W(3,3)",
+  "lambda_Cabibbo_W33": 0.22252093395631445,
+  "lambda_Cabibbo_exp": 0.2243,
+  "lambda_pi14_accuracy_pct": 99.21,
+  "pi14_origin": "Z7-stabiliser of W(3,3) 40-line set: 40 = 5 + 7x5 orbit decomposition",
+  "alpha_inverse_W33": 137.510,
+  "alpha_inverse_exp": 137.036,
+  "alpha_error_pct": 0.35,
+  "N_normalisation": 325.2,
+  "N_over_2alpha_inv": 1.183,
+  "delta_CP_W33_deg": 60.0,
+  "delta_CP_PDG_deg": 71.0,
+  "rho_bar_W33": 0.125,
+  "eta_bar_W33": 0.21650635094610966,
+  "Sp43_order": 51840,
+  "A5_order": 60,
+  "predictions": {
+    "P17": "sin(theta_C) = sin(pi/14) = 0.2225, accuracy 0.79% vs PDG lambda=0.2243",
+    "P18": "alpha^{-1} = |Sp(4,3)| / (2pi|A5|) = 51840/(120pi) = 137.5, accuracy 0.35%",
+    "P19": "eta_bar = sin(2pi/3) x (10/40) = 0.217; delta_CP correction in Part XXVI",
+    "P20": "N ~ 2*alpha^{-1} ~ 275; links Jarlskog normalisation to electromagnetic coupling"
+  }
+}

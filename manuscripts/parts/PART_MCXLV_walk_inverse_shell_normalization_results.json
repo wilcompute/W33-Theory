@@ -1,0 +1,73 @@
+{
+  "theorem": "Walk inverse shell normalization",
+  "floor": {
+    "fraction": "1/12",
+    "numerator": 1,
+    "denominator": 12,
+    "float": 0.08333333333333333
+  },
+  "entry_values": {
+    "diagonal": {
+      "fraction": "5/2",
+      "numerator": 5,
+      "denominator": 2,
+      "float": 2.5
+    },
+    "adjacent": {
+      "fraction": "1",
+      "numerator": 1,
+      "denominator": 1,
+      "float": 1.0
+    },
+    "nonedge": {
+      "fraction": "-1/2",
+      "numerator": -1,
+      "denominator": 2,
+      "float": -0.5
+    },
+    "twice_diagonal": {
+      "fraction": "5",
+      "numerator": 5,
+      "denominator": 1,
+      "float": 5.0
+    },
+    "twice_adjacent": {
+      "fraction": "2",
+      "numerator": 2,
+      "denominator": 1,
+      "float": 2.0
+    },
+    "twice_nonedge": {
+      "fraction": "-1",
+      "numerator": -1,
+      "denominator": 1,
+      "float": -1.0
+    }
+  },
+  "row_sum": {
+    "fraction": "1",
+    "numerator": 1,
+    "denominator": 1,
+    "float": 1.0
+  },
+  "positive_integer_ladder": [
+    40,
+    100,
+    1000
+  ],
+  "integer_scaled_relation": "2 P^-1 = 6I + 3A - J",
+  "spectral_trace": {
+    "fraction": "100",
+    "numerator": 100,
+    "denominator": 1,
+    "float": 100.0
+  },
+  "spectral_frobenius_square": {
+    "fraction": "1000",
+    "numerator": 1000,
+    "denominator": 1,
+    "float": 1000.0
+  },
+  "walk_inverse_shell_normalization_detected": true,
+  "claim_boundary": "finite W33 random-walk inverse normalization; P^-1 is a signed inverse kernel, not a stochastic transition matrix"
+}

@@ -1,0 +1,297 @@
+{
+  "module": "PART_CXLVIII_GRAMMAR_TAGGER",
+  "w33_atoms": {
+    "q": 3,
+    "k": 12,
+    "mu": 4,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7
+  },
+  "grammar_dictionary": [
+    {
+      "name": "C",
+      "value": "8/13",
+      "decimal": 0.6153846153846154,
+      "grammar_class": "base/carrier",
+      "operation": "C",
+      "interpretation": "carrier weight"
+    },
+    {
+      "name": "T",
+      "value": "5/13",
+      "decimal": 0.38461538461538464,
+      "grammar_class": "base/threshold",
+      "operation": "T",
+      "interpretation": "threshold weight"
+    },
+    {
+      "name": "D",
+      "value": "3/13",
+      "decimal": 0.23076923076923078,
+      "grammar_class": "imbalance",
+      "operation": "C-T",
+      "interpretation": "carrier-threshold imbalance"
+    },
+    {
+      "name": "Phi4_over_Phi3",
+      "value": "10/13",
+      "decimal": 0.7692307692307693,
+      "grammar_class": "complement",
+      "operation": "1-D",
+      "interpretation": "Phi4/Ko complement"
+    },
+    {
+      "name": "heavy_plus",
+      "value": "16/13",
+      "decimal": 1.2307692307692308,
+      "grammar_class": "plus_branch",
+      "operation": "1+D",
+      "interpretation": "heavy normalized k+mu branch"
+    },
+    {
+      "name": "qC",
+      "value": "24/13",
+      "decimal": 1.8461538461538463,
+      "grammar_class": "q_lift/carrier",
+      "operation": "q*C",
+      "interpretation": "QCD bare embedding factor"
+    },
+    {
+      "name": "qT",
+      "value": "15/13",
+      "decimal": 1.1538461538461537,
+      "grammar_class": "q_lift/threshold",
+      "operation": "q*T",
+      "interpretation": "negative-sector q-lift companion"
+    },
+    {
+      "name": "qD",
+      "value": "9/13",
+      "decimal": 0.6923076923076923,
+      "grammar_class": "q_lift/imbalance",
+      "operation": "q*D",
+      "interpretation": "q-lifted imbalance"
+    },
+    {
+      "name": "inverse_C",
+      "value": "13/8",
+      "decimal": 1.625,
+      "grammar_class": "inverse/base_carrier",
+      "operation": "1/C",
+      "interpretation": "inverse carrier"
+    },
+    {
+      "name": "inverse_T",
+      "value": "13/5",
+      "decimal": 2.6,
+      "grammar_class": "inverse/base_threshold",
+      "operation": "1/T",
+      "interpretation": "inverse threshold"
+    },
+    {
+      "name": "inverse_D",
+      "value": "13/3",
+      "decimal": 4.333333333333333,
+      "grammar_class": "inverse/imbalance",
+      "operation": "1/D",
+      "interpretation": "inverse imbalance"
+    },
+    {
+      "name": "inverse_Phi4_over_Phi3",
+      "value": "13/10",
+      "decimal": 1.3,
+      "grammar_class": "inverse/complement",
+      "operation": "1/(1-D)",
+      "interpretation": "inverse Phi4 complement"
+    },
+    {
+      "name": "inverse_qC",
+      "value": "13/24",
+      "decimal": 0.5416666666666666,
+      "grammar_class": "inverse/q_lift_carrier",
+      "operation": "1/(q*C)",
+      "interpretation": "inverse QCD bare factor"
+    }
+  ],
+  "canonical_observables": [
+    {
+      "label": "carrier_weight",
+      "expression": "8/13",
+      "value": "8/13",
+      "decimal": 0.6153846153846154,
+      "matched": true,
+      "tag_name": "C",
+      "grammar_class": "base/carrier",
+      "operation": "C",
+      "interpretation": "carrier weight"
+    },
+    {
+      "label": "threshold_weight",
+      "expression": "5/13",
+      "value": "5/13",
+      "decimal": 0.38461538461538464,
+      "matched": true,
+      "tag_name": "T",
+      "grammar_class": "base/threshold",
+      "operation": "T",
+      "interpretation": "threshold weight"
+    },
+    {
+      "label": "electroweak_imbalance",
+      "expression": "3/13 = q/Phi3",
+      "value": "3/13",
+      "decimal": 0.23076923076923078,
+      "matched": true,
+      "tag_name": "D",
+      "grammar_class": "imbalance",
+      "operation": "C-T",
+      "interpretation": "carrier-threshold imbalance"
+    },
+    {
+      "label": "phi4_complement",
+      "expression": "Phi4/Phi3 = 10/13",
+      "value": "10/13",
+      "decimal": 0.7692307692307693,
+      "matched": true,
+      "tag_name": "Phi4_over_Phi3",
+      "grammar_class": "complement",
+      "operation": "1-D",
+      "interpretation": "Phi4/Ko complement"
+    },
+    {
+      "label": "heavy_plus_branch",
+      "expression": "(k+mu)/Phi3 = 16/13",
+      "value": "16/13",
+      "decimal": 1.2307692307692308,
+      "matched": true,
+      "tag_name": "heavy_plus",
+      "grammar_class": "plus_branch",
+      "operation": "1+D",
+      "interpretation": "heavy normalized k+mu branch"
+    },
+    {
+      "label": "qcd_bare_k3",
+      "expression": "24/Phi3 = q*C",
+      "value": "24/13",
+      "decimal": 1.8461538461538463,
+      "matched": true,
+      "tag_name": "qC",
+      "grammar_class": "q_lift/carrier",
+      "operation": "q*C",
+      "interpretation": "QCD bare embedding factor"
+    },
+    {
+      "label": "negative_companion",
+      "expression": "15/Phi3 = q*T",
+      "value": "15/13",
+      "decimal": 1.1538461538461537,
+      "matched": true,
+      "tag_name": "qT",
+      "grammar_class": "q_lift/threshold",
+      "operation": "q*T",
+      "interpretation": "negative-sector q-lift companion"
+    },
+    {
+      "label": "q_lifted_imbalance",
+      "expression": "9/Phi3 = q*D",
+      "value": "9/13",
+      "decimal": 0.6923076923076923,
+      "matched": true,
+      "tag_name": "qD",
+      "grammar_class": "q_lift/imbalance",
+      "operation": "q*D",
+      "interpretation": "q-lifted imbalance"
+    },
+    {
+      "label": "inverse_electroweak_imbalance",
+      "expression": "Phi3/q = 13/3",
+      "value": "13/3",
+      "decimal": 4.333333333333333,
+      "matched": true,
+      "tag_name": "inverse_D",
+      "grammar_class": "inverse/imbalance",
+      "operation": "1/D",
+      "interpretation": "inverse imbalance"
+    },
+    {
+      "label": "inverse_phi4_complement",
+      "expression": "Phi3/Phi4 = 13/10",
+      "value": "13/10",
+      "decimal": 1.3,
+      "matched": true,
+      "tag_name": "inverse_Phi4_over_Phi3",
+      "grammar_class": "inverse/complement",
+      "operation": "1/(1-D)",
+      "interpretation": "inverse Phi4 complement"
+    },
+    {
+      "label": "inverse_qcd_bare",
+      "expression": "Phi3/24 = 1/(q*C)",
+      "value": "13/24",
+      "decimal": 0.5416666666666666,
+      "matched": true,
+      "tag_name": "inverse_qC",
+      "grammar_class": "inverse/q_lift_carrier",
+      "operation": "1/(q*C)",
+      "interpretation": "inverse QCD bare factor"
+    }
+  ],
+  "unmatched_probe_values": [
+    {
+      "label": "phi6_over_phi3",
+      "expression": "Phi6/Phi3 = 7/13",
+      "value": "7/13",
+      "decimal": 0.5384615384615384,
+      "matched": false,
+      "tag_name": null,
+      "grammar_class": null,
+      "operation": null,
+      "interpretation": null
+    },
+    {
+      "label": "hashimoto_norm_over_phi3",
+      "expression": "(k-1)/Phi3 = 11/13",
+      "value": "11/13",
+      "decimal": 0.8461538461538461,
+      "matched": false,
+      "tag_name": null,
+      "grammar_class": null,
+      "operation": null,
+      "interpretation": null
+    },
+    {
+      "label": "k_over_phi3",
+      "expression": "k/Phi3 = 12/13",
+      "value": "12/13",
+      "decimal": 0.9230769230769231,
+      "matched": false,
+      "tag_name": null,
+      "grammar_class": null,
+      "operation": null,
+      "interpretation": null
+    },
+    {
+      "label": "phi3_over_phi6",
+      "expression": "Phi3/Phi6 = 13/7",
+      "value": "13/7",
+      "decimal": 1.8571428571428572,
+      "matched": false,
+      "tag_name": null,
+      "grammar_class": null,
+      "operation": null,
+      "interpretation": null
+    }
+  ],
+  "checks": {
+    "all_canonical_match": true,
+    "phi6_over_phi3_not_yet_basic_token": true,
+    "hashimoto_norm_over_phi3_not_yet_basic_token": true,
+    "dictionary_has_qcd_bare": true,
+    "dictionary_has_electroweak_imbalance": true,
+    "dictionary_has_phi4_complement": true,
+    "dictionary_has_heavy_plus": true
+  },
+  "theorem_statement": "The CXLVII observable grammar can be implemented as an exact rational tagger.  The known mixer constants 8/13, 5/13, 3/13, 10/13, 16/13, 24/13, 15/13, and 9/13 are all classified by base, imbalance, complement, plus-branch, or q-lift operations.  Nearby fractions such as 7/13, 11/13, 12/13, and 13/7 are not automatically promoted without an additional grammar operation.",
+  "interpretive_note": "This is an important discipline layer: the grammar is allowed to tag constants it generates exactly, while leaving other attractive W33 fractions unclassified until a new operation is justified."
+}

@@ -1,0 +1,34 @@
+{
+  "euler_characteristic": -200,
+  "betti_1": 201,
+  "tropical_genus": 201,
+  "grassmannian_label": "Gr_trop(3,40)",
+  "grassmannian_dim": 111,
+  "tropical_rank": 20,
+  "k_polygon_lattice_pts": 13,
+  "k_polygon_matches_phi3": true,
+  "satake_tropical": {
+    "12": 2,
+    "2": 0,
+    "-4": 1
+  },
+  "log_spanning_trees": 91.75198272,
+  "spanning_trees_log10": 39.8473798,
+  "minplus_spectral_radius": 12,
+  "dual_cell_dim": 11,
+  "tropical_proj_dim": 39,
+  "tropical_lines": 13,
+  "newton_degree": 12,
+  "verified": true,
+  "failures": [],
+  "w33_atoms": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "PHI3": 13,
+    "EDGES": 240,
+    "EIG_MAX": 5
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "part": "DCMXLIX",
+  "decimal": 949,
+  "title": "P != NP Circuit Depth Bound",
+  "bound": "D_min >= 1.657 * ln(n) (superlogarithmic)",
+  "needed": "Omega(n^eps) for some eps>0",
+  "gap": "logarithmic vs polynomial",
+  "status": "HONEST: CURRENT BOUND INSUFFICIENT FOR P!=NP"
+}

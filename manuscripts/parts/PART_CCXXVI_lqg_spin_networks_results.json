@@ -1,0 +1,247 @@
+{
+  "Part": "CCXXVI",
+  "Title": "Loop Quantum Gravity and Spin Networks from W(3,3)",
+  "SRG": "SRG(40,12,2,4)",
+  "FreeParameters": 0,
+  "Verified": true,
+  "Bridges": {
+    "1_j_max": {
+      "j_max": 5,
+      "hilbert_edge": 11
+    },
+    "2_area": {
+      "gamma_num": 2,
+      "gamma_den": 12,
+      "j_sq_plus_j": 30,
+      "area_proxy_num": 480,
+      "area_proxy_den": 12,
+      "area_proxy": 40
+    },
+    "3_volume": {
+      "vol_int": 150,
+      "vol_mod_K": 6,
+      "half_K": 6
+    },
+    "4_CG": {
+      "CG_channels": 11,
+      "vertex_amplitude": 121,
+      "vertex_amp_mod_V": 1
+    },
+    "5_entropy": {
+      "entropy_int": 120,
+      "half_EDGES": 120
+    },
+    "6_immirzi": {
+      "gamma_red_num": 1,
+      "gamma_red_den": 6
+    },
+    "7_spin_net": {
+      "V_SN": 10,
+      "E_SN": 45,
+      "E_SN_mod_K": 9,
+      "Q_sq": 9
+    },
+    "8_kinematic": {
+      "D_kin_proxy": 11
+    },
+    "9_holonomy": {
+      "holonomy_trace": 6,
+      "K_half": 6
+    },
+    "10_theta": {
+      "theta_nets": 9,
+      "theta_check": 9
+    }
+  },
+  "Checks": [
+    {
+      "id": "B1a",
+      "name": "j_max numerator = K-2",
+      "actual": 10,
+      "expected": 10,
+      "pass": true
+    },
+    {
+      "id": "B1b",
+      "name": "j_max = (K-2)/2 = 5",
+      "actual": 5,
+      "expected": 5,
+      "pass": true
+    },
+    {
+      "id": "B1c",
+      "name": "hilbert_edge = 2*j_max+1 = 11",
+      "actual": 11,
+      "expected": 11,
+      "pass": true
+    },
+    {
+      "id": "B1d",
+      "name": "hilbert_edge = LAP_MID+1",
+      "actual": 11,
+      "expected": 11,
+      "pass": true
+    },
+    {
+      "id": "B2a",
+      "name": "gamma_num = LAM = 2",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "id": "B2b",
+      "name": "j_sq_plus_j = j_max*(j_max+1) = 30",
+      "actual": 30,
+      "expected": 30,
+      "pass": true
+    },
+    {
+      "id": "B2c",
+      "name": "area_proxy_num = 8*gamma_num*j_sq_plus_j = 480",
+      "actual": 480,
+      "expected": 480,
+      "pass": true
+    },
+    {
+      "id": "B2d",
+      "name": "area_proxy = 480//12 = 40 = V",
+      "actual": 40,
+      "expected": 40,
+      "pass": true
+    },
+    {
+      "id": "B3a",
+      "name": "vol_int = j_sq_plus_j * j_max = 150",
+      "actual": 150,
+      "expected": 150,
+      "pass": true
+    },
+    {
+      "id": "B3b",
+      "name": "vol_mod_K = 150 mod 12 = 6 = K//LAM",
+      "actual": 6,
+      "expected": 6,
+      "pass": true
+    },
+    {
+      "id": "B4a",
+      "name": "CG_channels = 2*j_max+1 = 11",
+      "actual": 11,
+      "expected": 11,
+      "pass": true
+    },
+    {
+      "id": "B4b",
+      "name": "vertex_amplitude = 11^2 = 121",
+      "actual": 121,
+      "expected": 121,
+      "pass": true
+    },
+    {
+      "id": "B4c",
+      "name": "vertex_amp mod V = 1",
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "id": "B5a",
+      "name": "entropy_int = Q*V = 120",
+      "actual": 120,
+      "expected": 120,
+      "pass": true
+    },
+    {
+      "id": "B5b",
+      "name": "entropy_int = EDGES//2",
+      "actual": 120,
+      "expected": 120,
+      "pass": true
+    },
+    {
+      "id": "B6a",
+      "name": "gamma reduced numerator = 1",
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "id": "B6b",
+      "name": "gamma reduced denominator = 6",
+      "actual": 6,
+      "expected": 6,
+      "pass": true
+    },
+    {
+      "id": "B6c",
+      "name": "gamma = 1/6: den = 6*num",
+      "actual": 6,
+      "expected": 6,
+      "pass": true
+    },
+    {
+      "id": "B7a",
+      "name": "V_SN = LAP_MID = 10",
+      "actual": 10,
+      "expected": 10,
+      "pass": true
+    },
+    {
+      "id": "B7b",
+      "name": "E_SN = 10*9//2 = 45",
+      "actual": 45,
+      "expected": 45,
+      "pass": true
+    },
+    {
+      "id": "B7c",
+      "name": "E_SN mod K = 9 = Q^2",
+      "actual": 9,
+      "expected": 9,
+      "pass": true
+    },
+    {
+      "id": "B8a",
+      "name": "D_kin_proxy = CG_channels mod V = 11",
+      "actual": 11,
+      "expected": 11,
+      "pass": true
+    },
+    {
+      "id": "B8b",
+      "name": "D_kin_proxy = LAP_MID + 1",
+      "actual": 11,
+      "expected": 11,
+      "pass": true
+    },
+    {
+      "id": "B9a",
+      "name": "holonomy_trace = LAM*Q = 6",
+      "actual": 6,
+      "expected": 6,
+      "pass": true
+    },
+    {
+      "id": "B9b",
+      "name": "holonomy_trace = K//2",
+      "actual": 6,
+      "expected": 6,
+      "pass": true
+    },
+    {
+      "id": "B10a",
+      "name": "theta_nets = M_LAM//Q = 9",
+      "actual": 9,
+      "expected": 9,
+      "pass": true
+    },
+    {
+      "id": "B10b",
+      "name": "theta_nets = Q^2",
+      "actual": 9,
+      "expected": 9,
+      "pass": true
+    }
+  ]
+}

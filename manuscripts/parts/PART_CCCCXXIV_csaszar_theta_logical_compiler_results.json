@@ -1,0 +1,305 @@
+{
+  "ancilla_and_rank_closure": {
+    "ancilla_g2_modes": 14,
+    "rank_120_closure": 120,
+    "rank_120_read": "105 local Csaszar edge qubits + 14 G2 ancilla modes + 1 scalar/control line = W33 triangle-check rank 120",
+    "szilassi_ancilla_modes": 2,
+    "theta_plus_g2": 24
+  },
+  "architecture_upgrade": "Identifies the Lovasz theta=10 register as the ten toric logical qubits carried by the five Csaszar K7 input blocks, and separates the two Szilassi modes as a G2=14 ancilla rail.",
+  "checks": [
+    {
+      "name": "CCCCXIX synthesis verified",
+      "passed": true,
+      "value": 27
+    },
+    {
+      "name": "CCCCXXII toroidal algebra verified",
+      "passed": true,
+      "value": 48
+    },
+    {
+      "name": "CCCCXXIII A7 toric verified",
+      "passed": true,
+      "value": 48
+    },
+    {
+      "name": "W33 CSS topology verified",
+      "passed": true,
+      "value": 9
+    },
+    {
+      "name": "W33 CSS distance verified",
+      "passed": true,
+      "value": 9
+    },
+    {
+      "name": "A(7) has seven modes",
+      "passed": true,
+      "value": {
+        "a7": {
+          "bond_g2_adj": 14,
+          "bond_g2_fund": 7,
+          "g2_dim": 14,
+          "modes": 7,
+          "su7_dim": 48,
+          "u7_dim": 49
+        },
+        "toroidal": {
+          "ancilla_modes_szilassi": 2,
+          "fano_interaction_vertices": 7,
+          "heawood_harmonic_freq_sq": 2,
+          "hopping_edges": 21,
+          "hopping_graph": "K7",
+          "input_modes_csaszar": 5,
+          "k7_spectral_gap": 7,
+          "modes": 7,
+          "name": "A(7)",
+          "symmetry_dim": 14,
+          "symmetry_group": "G2"
+        }
+      }
+    },
+    {
+      "name": "five Csaszar input blocks",
+      "passed": true,
+      "value": 5
+    },
+    {
+      "name": "two Szilassi ancilla modes",
+      "passed": true,
+      "value": 2
+    },
+    {
+      "name": "local Csaszar CSS code is [[21,2,>=3]]",
+      "passed": true,
+      "value": {
+        "d_lower": 3,
+        "gsd": 4,
+        "k": 2,
+        "n": 21,
+        "rank_hx": 13,
+        "rank_hz": 6
+      }
+    },
+    {
+      "name": "local toric GSD is mu",
+      "passed": true,
+      "value": {
+        "complement_theta": 4,
+        "local_gsd": 4
+      }
+    },
+    {
+      "name": "local k equals torus beta1",
+      "passed": true,
+      "value": {
+        "beta_0": 1,
+        "beta_1": 2,
+        "beta_2": 1,
+        "euler": 0
+      }
+    },
+    {
+      "name": "five local blocks have n=105",
+      "passed": true,
+      "value": 105
+    },
+    {
+      "name": "five local blocks have k=10",
+      "passed": true,
+      "value": 10
+    },
+    {
+      "name": "five-block logical size equals Lovasz theta",
+      "passed": true,
+      "value": {
+        "active_protection_code": "[[82320,81,>=81]]",
+        "base_css_code": "[[240,81,3]]",
+        "complement_theta": 4,
+        "controller_bits": 64,
+        "fusion_denominator": 2,
+        "gram_matrix_rank": 3,
+        "heawood_branch_size": 6,
+        "heawood_cycle_rank": 8,
+        "heawood_middle_shell": 12,
+        "heawood_vertices": 14,
+        "klm_denominator": 4,
+        "labeling_dimension": 3,
+        "logical_sector": 81,
+        "lovasz_theta": 10,
+        "q4_routing_code": "[[1296,81,4]]",
+        "selector_trits": 40,
+        "shannon_capacity": 40
+      }
+    },
+    {
+      "name": "theta times local GSD equals Shannon capacity",
+      "passed": true,
+      "value": {
+        "capacity": 40,
+        "global_k": 10,
+        "local_gsd": 4
+      }
+    },
+    {
+      "name": "global GSD is 4^5 = 2^10",
+      "passed": true,
+      "value": 1024
+    },
+    {
+      "name": "direct product check rank closes n-k",
+      "passed": true,
+      "value": {
+        "k": 10,
+        "n": 105,
+        "rank": 95
+      }
+    },
+    {
+      "name": "five Csaszar vertex sets total 35 = U7-G2",
+      "passed": true,
+      "value": {
+        "bond_g2_adj": 14,
+        "bond_g2_fund": 7,
+        "g2_dim": 14,
+        "modes": 7,
+        "su7_dim": 48,
+        "u7_dim": 49
+      }
+    },
+    {
+      "name": "Szilassi ancilla rail is G2",
+      "passed": true,
+      "value": {
+        "ancilla": 14,
+        "g2": 14
+      }
+    },
+    {
+      "name": "theta logicals plus G2 rail gives 24",
+      "passed": true,
+      "value": {
+        "g2": 14,
+        "theta": 10
+      }
+    },
+    {
+      "name": "rank-120 bookkeeping closure matches W33 triangle rank",
+      "passed": true,
+      "value": {
+        "g2": 14,
+        "local_n": 105,
+        "rank": 120,
+        "scalar": 1
+      }
+    },
+    {
+      "name": "W33 base CSS is [[240,81,3]]",
+      "passed": true,
+      "value": {
+        "d": 3,
+        "d_X": 3,
+        "d_Z": 4,
+        "k": 81,
+        "n": 240,
+        "notation": "[[240,81,3]]"
+      }
+    },
+    {
+      "name": "local distance lower bound equals W33 base distance",
+      "passed": true,
+      "value": {
+        "local": 3,
+        "w33": 3
+      }
+    },
+    {
+      "name": "W33 logical sector remains H1=81",
+      "passed": true,
+      "value": {
+        "distance": "not_computed",
+        "k_logical_qubits": 81,
+        "n_physical_edge_qubits": 240,
+        "notation": "[[240,81,d]] with d pending",
+        "rank_X_vertex_checks": 39,
+        "rank_Z_triangle_checks": 120
+      }
+    },
+    {
+      "name": "compiler has four ordered layers",
+      "passed": true,
+      "value": [
+        {
+          "invariant": "5 local K7 toric blocks",
+          "name": "five_csaszar_input_blocks",
+          "output": "[[105,10,>=3]] direct-product lower-bound packet"
+        },
+        {
+          "invariant": "5*2 = 10 = theta(W33)",
+          "name": "lovasz_theta_logical_register",
+          "output": "ten local toric logical qubits"
+        },
+        {
+          "invariant": "2*Phi6 = 14 = dim(G2)",
+          "name": "szilassi_g2_ancilla_rail",
+          "output": "ancilla symmetry rail for A(7)"
+        },
+        {
+          "invariant": "105 + 14 + 1 = 120",
+          "name": "rank_120_bookkeeping_closure",
+          "output": "matches W33 triangle-check rank as a handoff count"
+        }
+      ]
+    }
+  ],
+  "checks_passed": 25,
+  "checks_total": 25,
+  "compiler_layers": [
+    {
+      "invariant": "5 local K7 toric blocks",
+      "name": "five_csaszar_input_blocks",
+      "output": "[[105,10,>=3]] direct-product lower-bound packet"
+    },
+    {
+      "invariant": "5*2 = 10 = theta(W33)",
+      "name": "lovasz_theta_logical_register",
+      "output": "ten local toric logical qubits"
+    },
+    {
+      "invariant": "2*Phi6 = 14 = dim(G2)",
+      "name": "szilassi_g2_ancilla_rail",
+      "output": "ancilla symmetry rail for A(7)"
+    },
+    {
+      "invariant": "105 + 14 + 1 = 120",
+      "name": "rank_120_bookkeeping_closure",
+      "output": "matches W33 triangle-check rank as a handoff count"
+    }
+  ],
+  "five_block_packet": {
+    "blocks": 5,
+    "check_rank": 95,
+    "d_lower": 3,
+    "gsd": 1024,
+    "k": 10,
+    "logical_equals_lovasz_theta": true,
+    "n": 105,
+    "notation": "[[105,10,>=3]]",
+    "theta_times_local_gsd": 40
+  },
+  "honesty_boundary": "This is a local-to-global logical compiler and rank handoff. It does not prove a physical threshold, does not replace the Steane/Phi6 [[82320,81,>=81]] protection layer, and does not make the rank-120 bookkeeping equality into a canonical operator isomorphism.",
+  "local_code": {
+    "d_lower": 3,
+    "gsd": 4,
+    "k": 2,
+    "n": 21,
+    "notation": "[[21,2,>=3]]",
+    "rank_hx": 13,
+    "rank_hz": 6
+  },
+  "part": "CCCCXXIV",
+  "theorem": "The five Csaszar input modes of A(7) compile to a direct-product local toric packet [[105,10,>=3]]. Its ten logical qubits equal Lovasz theta(W33)=10, while the local ground-state degeneracy equals theta(complement)=4 and 10*4=40 equals the W33 Shannon-capacity/vertex count. The two Szilassi ancilla modes supply 14=dim(G2), and the rank bookkeeping closes as 105+14+1=120, matching the W33 triangle-check rank without claiming a canonical isomorphism.",
+  "title": "Csaszar Theta Logical Compiler",
+  "verified": true
+}

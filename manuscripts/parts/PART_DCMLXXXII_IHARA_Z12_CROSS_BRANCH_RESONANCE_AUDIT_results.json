@@ -1,0 +1,23 @@
+{
+  "part": "DCMLXXXII",
+  "decimal": 982,
+  "status": "VERIFIED: Ihara/Z12 cross-branch resonance audit",
+  "summary": {
+    "part": "DCMLXXXII",
+    "decimal": 982,
+    "remote_main_commit": "ec327312",
+    "live_bass_parameter": 11,
+    "shadow_coefficient": 12,
+    "z12_algebraic_norm": 709,
+    "z12_eisenstein_norm": 13,
+    "alpha_inverse_gaussian_norm": 137,
+    "live_nonstructural_709_degrees": [
+      338
+    ],
+    "shadow_nonstructural_709_degrees": [
+      424
+    ],
+    "classical_rh_status": "OPEN",
+    "all_identities_hold": true
+  }
+}

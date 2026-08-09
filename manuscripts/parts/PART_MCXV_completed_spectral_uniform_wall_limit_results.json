@@ -1,0 +1,91 @@
+{
+  "theorem": "Completed spectral uniform-wall limit",
+  "sample_wall_packet": {
+    "prime_limit": 100000.0,
+    "s": 1.0,
+    "deformation": 6.0,
+    "action": 1.1677437832896322,
+    "order_parameter": 0.8852177341457138,
+    "hessian": 1.0181617543771315,
+    "stiffness": 0.9821622111623687,
+    "dual": 4.143562621584651,
+    "uniform_wall": 6.0
+  },
+  "sample_wall_profile": [
+    {
+      "prime_limit": 100000.0,
+      "s": 1.0,
+      "deformation": 5.0,
+      "action": 0.597139841710522,
+      "order_parameter": 0.3709359035000408,
+      "hessian": 0.2607015342649676,
+      "stiffness": 3.835804046260948,
+      "dual": 1.257539675789682,
+      "uniform_wall": 6.0,
+      "wall_gap": 1.0,
+      "order_jump_from_previous": 4.4655990964481695e-06,
+      "hessian_jump_from_previous": 4.980553636180218e-09,
+      "stiffness_jump_from_previous": -7.328084317137495e-08
+    },
+    {
+      "prime_limit": 100000.0,
+      "s": 1.0,
+      "deformation": 5.5,
+      "action": 0.8217697330585124,
+      "order_parameter": 0.5438140072181331,
+      "hessian": 0.45865171490184814,
+      "stiffness": 2.1803036323847627,
+      "dual": 2.1692073066412196,
+      "uniform_wall": 6.0,
+      "wall_gap": 0.5,
+      "order_jump_from_previous": 4.468213886332784e-06,
+      "hessian_jump_from_previous": 5.478609677034285e-09,
+      "stiffness_jump_from_previous": -2.604379822912506e-08
+    },
+    {
+      "prime_limit": 100000.0,
+      "s": 1.0,
+      "deformation": 5.9,
+      "action": 1.0840012385115567,
+      "order_parameter": 0.7925343779143387,
+      "hessian": 0.8437738003189261,
+      "stiffness": 1.18515175467883,
+      "dual": 3.591951591183041,
+      "uniform_wall": 6.0,
+      "wall_gap": 0.09999999999999964,
+      "order_jump_from_previous": 4.470485017393777e-06,
+      "hessian_jump_from_previous": 5.877053954606026e-09,
+      "stiffness_jump_from_previous": -8.254819938713354e-09
+    },
+    {
+      "prime_limit": 100000.0,
+      "s": 1.0,
+      "deformation": 5.99,
+      "action": 1.1589421817733256,
+      "order_parameter": 0.8751355492263264,
+      "hessian": 0.9983732999337964,
+      "stiffness": 1.00162935053082,
+      "dual": 4.083119758092369,
+      "uniform_wall": 6.0,
+      "wall_gap": 0.009999999999999787,
+      "order_jump_from_previous": 4.471017989615689e-06,
+      "hessian_jump_from_previous": 5.966703575666088e-09,
+      "stiffness_jump_from_previous": -5.986163120752508e-09
+    },
+    {
+      "prime_limit": 100000.0,
+      "s": 1.0,
+      "deformation": 6.0,
+      "action": 1.1677437832896322,
+      "order_parameter": 0.8852177341457138,
+      "hessian": 1.0181617543771315,
+      "stiffness": 0.9821622111623687,
+      "dual": 4.143562621584651,
+      "uniform_wall": 6.0,
+      "wall_gap": 0.0,
+      "order_jump_from_previous": 4.471077704071291e-06,
+      "hessian_jump_from_previous": 5.976658723483297e-09,
+      "stiffness_jump_from_previous": -5.765339650132262e-09
+    }
+  ]
+}

@@ -1,0 +1,380 @@
+{
+  "part": "CCLXXV",
+  "title": "Klein Quartic, PSL(2,7) and the E\u2087-56 bridge",
+  "q": 3,
+  "V": 40,
+  "K": 12,
+  "MU": 4,
+  "PHI6": 7,
+  "checks_total": 59,
+  "checks_passed": 59,
+  "checks_failed": 0,
+  "failed_check_names": [],
+  "all_pass": true,
+  "sections": {
+    "A": "PSL(2,7) = GL(3,2) group arithmetic",
+    "B": "Klein quartic {7,3} combinatorics",
+    "C": "Hurwitz (2,3,7)-triangle group",
+    "D": "E\u2087 rank-7 Lie algebra and 56-dim module",
+    "E": "28 bitangents / odd theta characteristics",
+    "F": "Heawood graph bridge (CCLXXIV continuity)",
+    "G": "W(3,3) SRG arithmetic cross-identities"
+  },
+  "key_identity": "V_Klein=56=2\u00d7MU\u00d7PHI6=dim(E\u2087 min rep); E_Klein=84=PHI6\u00d7K; F_Klein=24=K; |PSL(2,7)|=168=PHI6\u00d7F=Q\u00d7V=2\u00d7E; bitangents=28=MU\u00d7PHI6; genus=Q=3",
+  "checks": [
+    {
+      "name": "psl27_order",
+      "pass": true,
+      "lhs": "168",
+      "rhs": "168"
+    },
+    {
+      "name": "psl27_phi6_times_24",
+      "pass": true,
+      "lhs": "168",
+      "rhs": "168"
+    },
+    {
+      "name": "gl32_order",
+      "pass": true,
+      "lhs": "168",
+      "rhs": "168"
+    },
+    {
+      "name": "psl27_eq_gl32",
+      "pass": true,
+      "lhs": "168",
+      "rhs": "168"
+    },
+    {
+      "name": "psl27_factored",
+      "pass": true,
+      "lhs": "168",
+      "rhs": "168"
+    },
+    {
+      "name": "psl27_div_phi6_is_2K",
+      "pass": true,
+      "lhs": "24",
+      "rhs": "24"
+    },
+    {
+      "name": "psl27_is_Q_VK",
+      "pass": true,
+      "lhs": "168",
+      "rhs": "168"
+    },
+    {
+      "name": "psl27_is_phi6_FK",
+      "pass": true,
+      "lhs": "168",
+      "rhs": "168"
+    },
+    {
+      "name": "klein_vertices",
+      "pass": true,
+      "lhs": "56",
+      "rhs": "56"
+    },
+    {
+      "name": "klein_edges",
+      "pass": true,
+      "lhs": "84",
+      "rhs": "84"
+    },
+    {
+      "name": "klein_faces",
+      "pass": true,
+      "lhs": "24",
+      "rhs": "24"
+    },
+    {
+      "name": "klein_euler_char",
+      "pass": true,
+      "lhs": "-4",
+      "rhs": "-4"
+    },
+    {
+      "name": "klein_genus_from_chi",
+      "pass": true,
+      "lhs": "3",
+      "rhs": "3"
+    },
+    {
+      "name": "klein_genus_is_Q",
+      "pass": true,
+      "lhs": "3",
+      "rhs": "3"
+    },
+    {
+      "name": "klein_V_2_MU_PHI6",
+      "pass": true,
+      "lhs": "56",
+      "rhs": "56"
+    },
+    {
+      "name": "klein_E_PHI6_K",
+      "pass": true,
+      "lhs": "84",
+      "rhs": "84"
+    },
+    {
+      "name": "klein_F_2K",
+      "pass": true,
+      "lhs": "24",
+      "rhs": "24"
+    },
+    {
+      "name": "klein_face_val_PHI6",
+      "pass": true,
+      "lhs": "7",
+      "rhs": "7"
+    },
+    {
+      "name": "klein_vertex_deg_Q",
+      "pass": true,
+      "lhs": "3",
+      "rhs": "3"
+    },
+    {
+      "name": "klein_handshaking_E",
+      "pass": true,
+      "lhs": "84",
+      "rhs": "84"
+    },
+    {
+      "name": "klein_handshaking_V",
+      "pass": true,
+      "lhs": "56",
+      "rhs": "56"
+    },
+    {
+      "name": "klein_aut_is_2EK",
+      "pass": true,
+      "lhs": "168",
+      "rhs": "168"
+    },
+    {
+      "name": "hurwitz_r_is_PHI6",
+      "pass": true,
+      "lhs": "7",
+      "rhs": "7"
+    },
+    {
+      "name": "hurwitz_sum_value",
+      "pass": true,
+      "lhs": "41/42",
+      "rhs": "41/42"
+    },
+    {
+      "name": "hurwitz_sum_lt_1",
+      "pass": true,
+      "lhs": "True",
+      "rhs": "True"
+    },
+    {
+      "name": "hurwitz_defect",
+      "pass": true,
+      "lhs": "1/42",
+      "rhs": "1/42"
+    },
+    {
+      "name": "hurwitz_bound",
+      "pass": true,
+      "lhs": "168",
+      "rhs": "168"
+    },
+    {
+      "name": "hurwitz_achieved",
+      "pass": true,
+      "lhs": "168",
+      "rhs": "168"
+    },
+    {
+      "name": "e7_rank_is_PHI6",
+      "pass": true,
+      "lhs": "7",
+      "rhs": "7"
+    },
+    {
+      "name": "e7_dim_phi6_factor",
+      "pass": true,
+      "lhs": "133",
+      "rhs": "133"
+    },
+    {
+      "name": "e7_pos_roots",
+      "pass": true,
+      "lhs": "63",
+      "rhs": "63"
+    },
+    {
+      "name": "e7_dim_from_structure",
+      "pass": true,
+      "lhs": "133",
+      "rhs": "133"
+    },
+    {
+      "name": "e7_min_rep_is_VK",
+      "pass": true,
+      "lhs": "56",
+      "rhs": "56"
+    },
+    {
+      "name": "e7_min_rep_2_MU_PHI6",
+      "pass": true,
+      "lhs": "56",
+      "rhs": "56"
+    },
+    {
+      "name": "theta_total_2_2g",
+      "pass": true,
+      "lhs": "64",
+      "rhs": "64"
+    },
+    {
+      "name": "theta_odd_value",
+      "pass": true,
+      "lhs": "28",
+      "rhs": "28"
+    },
+    {
+      "name": "theta_even_value",
+      "pass": true,
+      "lhs": "36",
+      "rhs": "36"
+    },
+    {
+      "name": "theta_sum",
+      "pass": true,
+      "lhs": "64",
+      "rhs": "64"
+    },
+    {
+      "name": "theta_odd_is_MU_PHI6",
+      "pass": true,
+      "lhs": "28",
+      "rhs": "28"
+    },
+    {
+      "name": "bitangents_eq_theta_odd",
+      "pass": true,
+      "lhs": "28",
+      "rhs": "28"
+    },
+    {
+      "name": "theta_2g_galois_period",
+      "pass": true,
+      "lhs": "6",
+      "rhs": "6"
+    },
+    {
+      "name": "heawood_V_2_PHI6",
+      "pass": true,
+      "lhs": "14",
+      "rhs": "14"
+    },
+    {
+      "name": "heawood_CHR_PHI6",
+      "pass": true,
+      "lhs": "7",
+      "rhs": "7"
+    },
+    {
+      "name": "klein_E_MU_heawood_E",
+      "pass": true,
+      "lhs": "84",
+      "rhs": "84"
+    },
+    {
+      "name": "klein_V_MU_heawood_V",
+      "pass": true,
+      "lhs": "56",
+      "rhs": "56"
+    },
+    {
+      "name": "psl27_div_heawood_V_K",
+      "pass": true,
+      "lhs": "12",
+      "rhs": "12"
+    },
+    {
+      "name": "psl27_2MU_heawood_E",
+      "pass": true,
+      "lhs": "168",
+      "rhs": "168"
+    },
+    {
+      "name": "klein_E_heawood_e7",
+      "pass": true,
+      "lhs": "84",
+      "rhs": "84"
+    },
+    {
+      "name": "cross_VK_minus_V",
+      "pass": true,
+      "lhs": "16",
+      "rhs": "16"
+    },
+    {
+      "name": "cross_psl27_mod_V",
+      "pass": true,
+      "lhs": "8",
+      "rhs": "8"
+    },
+    {
+      "name": "cross_EK_mod_V",
+      "pass": true,
+      "lhs": "4",
+      "rhs": "4"
+    },
+    {
+      "name": "cross_total_4_V1",
+      "pass": true,
+      "lhs": "164",
+      "rhs": "164"
+    },
+    {
+      "name": "cross_e7_rank_hurwitz_r",
+      "pass": true,
+      "lhs": "7",
+      "rhs": "7"
+    },
+    {
+      "name": "cross_genus_from_triple",
+      "pass": true,
+      "lhs": "3",
+      "rhs": "3"
+    },
+    {
+      "name": "cross_EK_Q_bitangents",
+      "pass": true,
+      "lhs": "84",
+      "rhs": "84"
+    },
+    {
+      "name": "cross_VK_2_bitangents",
+      "pass": true,
+      "lhs": "56",
+      "rhs": "56"
+    },
+    {
+      "name": "cross_psl27_6_bitangents",
+      "pass": true,
+      "lhs": "168",
+      "rhs": "168"
+    },
+    {
+      "name": "cross_phi6_unifier",
+      "pass": true,
+      "lhs": "7",
+      "rhs": "7"
+    },
+    {
+      "name": "cross_phi6_unifier2",
+      "pass": true,
+      "lhs": "7",
+      "rhs": "7"
+    }
+  ]
+}

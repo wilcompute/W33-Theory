@@ -1,0 +1,43 @@
+{
+  "part": "DCCCIII",
+  "decimal": 803,
+  "title": "Leptogenesis and Baryon Asymmetry eta_B",
+  "date": "2026-05-17",
+  "theorem": "W(3,3) leptogenesis via M_R seesaw gives eta_B ~ 4e-12; factor 150 below observed 6.12e-10; open tension",
+  "seesaw_spectrum": {
+    "M1_GeV": 1.33e14,
+    "M1_formula": "M_R / q",
+    "M2_GeV": 4e14,
+    "M2_formula": "M_R",
+    "M3_GeV": 1.2e15,
+    "M3_formula": "q * M_R"
+  },
+  "CP_asymmetry": {
+    "epsilon1": 2.16e-8,
+    "formula": "Davidson-Ibarra bound saturated",
+    "delta_CP_nu": -1.5708,
+    "sin_delta_CP": -1.0
+  },
+  "washout": {
+    "K": 25.3,
+    "kappa_K": 4.28e-3,
+    "regime": "moderately strong washout"
+  },
+  "result": {
+    "eta_B_W33": 4e-12,
+    "eta_B_observed": 6.12e-10,
+    "discrepancy_factor": 153,
+    "tension": "factor 150 - significant open problem"
+  },
+  "open_problem": {
+    "description": "W(3,3) leptogenesis tension: eta_B 150x below observed",
+    "proposed_resolutions": [
+      "Flavor leptogenesis with N_tau dominance",
+      "3-loop Yukawa correction to CP asymmetry",
+      "N_2 leptogenesis at M_R scale",
+      "Non-thermal leptogenesis from inflaton decay"
+    ]
+  },
+  "connections": ["DCCLXXXIV", "DCCXCI", "DCCLXXXV"],
+  "status": "PARTIAL - correct order of magnitude; 150x tension identified as open problem"
+}

@@ -1,0 +1,92 @@
+{
+  "anchor_formulas": {
+    "heat": "kappa=sqrt(-log(H/2)/(M2 tau_phys))",
+    "mass": "kappa=M_phys/M",
+    "resolvent": "kappa=sqrt((s^2-2s/R)/M2)",
+    "spinor_trace": "kappa=arcosh(T/2)/(M t_phys)",
+    "zeta": "kappa=(zeta_dimless(p)/zeta_phys(p))^(1/(2p))"
+  },
+  "architecture_upgrade": "CCCXXXVIII established the unit map.  CCCXXXIX makes it falsifiable: independent anchors must return the same kappa, while dimensionless ratios remain invariant under calibration gauge.",
+  "calibration_invariants": {
+    "M_phys_squared_over_kappa_squared": 1262.25,
+    "projective_gap_over_mass": 2.0,
+    "zeta_p2_scaled_back": 1.2552759915088154e-06
+  },
+  "checks": [
+    {"name":"dimensionless M2=5049/4","passed":true,"value":1262.25},
+    {"name":"mass anchor recovers kappa","passed":true,"value":2.3333333333333335},
+    {"name":"heat anchor recovers kappa","passed":true,"value":2.3333333333333335},
+    {"name":"spinor trace anchor recovers kappa","passed":true,"value":2.333333333333332},
+    {"name":"resolvent anchor recovers kappa","passed":true,"value":2.333333333333332},
+    {"name":"zeta anchor recovers kappa","passed":true,"value":2.3333333333333335},
+    {"name":"consistent packet passes","passed":true,"value":{"consistent":true,"kappas":{"heat":2.3333333333333335,"mass":2.3333333333333335,"resolvent":2.333333333333332,"spinor_trace":2.333333333333332,"zeta":2.3333333333333335},"max_abs_deviation":8.881784197001252e-16,"mean_kappa":2.333333333333333,"std_kappa":7.021666937153402e-16,"tolerance":1e-09}},
+    {"name":"corrupted packet fails","passed":true,"value":{"consistent":false,"kappas":{"heat":2.310993881479867,"mass":2.3333333333333335,"resolvent":2.333333333333332,"spinor_trace":2.333333333333332,"zeta":2.3333333333333335},"max_abs_deviation":0.017871561482771508,"mean_kappa":2.328065442162639,"std_kappa":0.008535952490946588,"tolerance":1e-09}},
+    {"name":"projective gap/mass ratio is invariant and equals 2","passed":true,"value":2.0},
+    {"name":"M^2 scaled back is invariant","passed":true,"value":{"M_phys_squared_over_kappa_squared":1262.25,"projective_gap_over_mass":2.0,"zeta_p2_scaled_back":1.2552759915088154e-06}},
+    {"name":"zeta p=2 scaled back is invariant","passed":true,"value":{"M_phys_squared_over_kappa_squared":1262.25,"projective_gap_over_mass":2.0,"zeta_p2_scaled_back":1.2552759915088154e-06}}
+  ],
+  "checks_passed": 11,
+  "checks_total": 11,
+  "consistent_anchor_packet": {
+    "heat": {"tau_phys": 0.001, "trace": 0.002032961285775859},
+    "kappa_true": 2.3333333333333335,
+    "mass": {"M_phys": 82.89903497628925},
+    "resolvent": {"s_phys": 100.0, "trace": 0.07784653570485622},
+    "spinor_trace": {"t_phys": 0.01, "trace": 2.7000919341649367},
+    "zeta": {"p": 2, "value": 1.0637608969385362e-08}
+  },
+  "consistency_report": {
+    "consistent": true,
+    "kappas": {
+      "heat": 2.3333333333333335,
+      "mass": 2.3333333333333335,
+      "resolvent": 2.333333333333332,
+      "spinor_trace": 2.333333333333332,
+      "zeta": 2.3333333333333335
+    },
+    "max_abs_deviation": 8.881784197001252e-16,
+    "mean_kappa": 2.333333333333333,
+    "std_kappa": 7.021666937153402e-16,
+    "tolerance": 1e-09
+  },
+  "dimensionless_kernel": {
+    "M": "sqrt(5049)/2",
+    "M2": "5049/4",
+    "projective_gap": "sqrt(5049)",
+    "projective_gap_over_M": 2
+  },
+  "honesty_boundary": "The compiler proves internal consistency and falsifiability of calibration. It does not choose a real-world anchor or claim that any specific physical quantity is the correct anchor.",
+  "inconsistent_anchor_packet": {
+    "heat": {"tau_phys": 0.001, "trace": 0.0020532908986336178},
+    "kappa_true": 2.3333333333333335,
+    "mass": {"M_phys": 82.89903497628925},
+    "resolvent": {"s_phys": 100.0, "trace": 0.07784653570485622},
+    "spinor_trace": {"t_phys": 0.01, "trace": 2.7000919341649367},
+    "zeta": {"p": 2, "value": 1.0637608969385362e-08}
+  },
+  "inconsistent_report": {
+    "consistent": false,
+    "kappas": {
+      "heat": 2.310993881479867,
+      "mass": 2.3333333333333335,
+      "resolvent": 2.333333333333332,
+      "spinor_trace": 2.333333333333332,
+      "zeta": 2.3333333333333335
+    },
+    "max_abs_deviation": 0.017871561482771508,
+    "mean_kappa": 2.328065442162639,
+    "std_kappa": 0.008535952490946588,
+    "tolerance": 1e-09
+  },
+  "part": "CCCXXXIX",
+  "recovered_kappas": {
+    "heat": 2.3333333333333335,
+    "mass": 2.3333333333333335,
+    "resolvent": 2.333333333333332,
+    "spinor_trace": 2.333333333333332,
+    "zeta": 2.3333333333333335
+  },
+  "theorem": "For the one-sector W33 RG spinor unit map, mass, heat trace, spinor trace, resolvent trace, and zeta anchors each recover kappa independently. The physical interpretation is calibration-consistent iff all recovered kappas agree within tolerance; otherwise the one-sector unit assignment is falsified.",
+  "title": "Multi-Anchor Calibration Consistency Compiler",
+  "verified": true
+}

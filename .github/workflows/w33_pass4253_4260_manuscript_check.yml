@@ -16,7 +16,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: WtfJoke/setup-tectonic@v3
       - name: Compile manuscripts
+        shell: bash
         run: |
+          set -euo pipefail
           mkdir -p /tmp/pass4253-4260
           for f in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
             tectonic --keep-logs --keep-intermediates "$f" |& tee "/tmp/pass4253-4260/${f%.tex}.log"

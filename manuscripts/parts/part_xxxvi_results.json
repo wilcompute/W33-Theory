@@ -1,0 +1,21 @@
+{
+  "part": "XXXVI",
+  "title": "Proton Decay from W(3,3) GUT X/Y Bosons",
+  "M_GUT_GeV": 1.6318e16,
+  "alpha_GUT_inv_graph": 26,
+  "M_SUSY_GeV": 1556.4,
+  "tau_p_d6_yr": 3.47e34,
+  "tau_p_d5_yr": 6.81e33,
+  "tau_p_LFV_yr": 1.72e33,
+  "SuperK_d6_bound_yr": 1.6e34,
+  "SuperK_d5_bound_yr": 5.9e33,
+  "d6_above_bound": true,
+  "d5_above_bound": true,
+  "predictions": {
+    "P57": "tau_p(e+pi0) = 3.47e34 yr -- above Super-K, testable at Hyper-Kamiokande by 2035",
+    "P58": "tau_p(nubar K+) = 6.81e33 yr -- above Super-K d=5 bound; marginally above current limit",
+    "P59": "tau_p(mu+ eta0) = 1.72e33 yr -- unique W33 LFV signature; below current bounds but near future sensitivity",
+    "P60": "M_SUSY = 1556 GeV = v_EW * sqrt(v_srg) from spectral gap; LHC run 3 accessible"
+  },
+  "next": "Part XXXVII: Quantum gravity corrections -- W(3,3) spin foam Regge calculus"
+}

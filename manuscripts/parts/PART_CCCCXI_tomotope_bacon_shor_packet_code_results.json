@@ -1,0 +1,43 @@
+{
+  "part": "CCCCXI",
+  "title": "Tomotope Bacon-Shor Packet Code",
+  "verified": true,
+  "checks_passed": 9,
+  "checks_total": 9,
+  "packet_code": {
+    "n": 16,
+    "k": 1,
+    "d": 4,
+    "d_X": 4,
+    "d_Z": 4,
+    "gauge_qubits": 9,
+    "rank_gauge_generators": 24,
+    "rank_stabilizer_center": 6,
+    "layout": "4 chart rows x 4 columns where columns = 2 orientations x 2 chiralities"
+  },
+  "global_packet_layer": {
+    "packets": 81,
+    "n": 1296,
+    "k": 81,
+    "d": 4,
+    "gauge_qubits": 729,
+    "stabilizer_center_rank": 486,
+    "notation": "[[1296,81,4]] subsystem packet layer"
+  },
+  "concatenated_line_star_target": {
+    "n": 1296,
+    "k": 81,
+    "d_lower_bound": 12,
+    "notation": "[[1296,81,>=12]] line-star replacement target"
+  },
+  "toroidal_tomotope_context": {
+    "tomotope_flags": 192,
+    "tomotope_edges": 12,
+    "local_flags_per_edge": 16,
+    "packet_factorization": "16=4 chart rows x (2 orientations x 2 chiralities) columns",
+    "toroidal_hint": "CLXIV uses H(n)=((n-3)(n-4))/12 with accepted residues {3,4,7,12}; the 4 is the tetrahedral seed and the 12 denominator is 3x4."
+  },
+  "architecture_upgrade": "Constructs the explicit 16-slot tomotope/chirality packet as a 4x4 Bacon-Shor subsystem code. The packet is [[16,1,4]], and 81 copies give a native [[1296,81,4]] packet layer; replacing W33 line-star logical components gives a target lower bound [[1296,81,>=12]].",
+  "theorem": "A 4x4 Bacon-Shor subsystem code has 16 physical slots, one protected logical degree, 9 gauge qubits, stabilizer-center rank 6, and distance 4. Interpreting rows as tetrahedral chart vertices and columns as orientation x chirality realizes the tomotope packet factorization 16=4x(2x2).",
+  "honesty_boundary": "This constructs the local 16-slot packet and its independent 81-packet layer. The final integrated W33-to-packet attachment map and full global subsystem distance still need a dedicated compiler."
+}

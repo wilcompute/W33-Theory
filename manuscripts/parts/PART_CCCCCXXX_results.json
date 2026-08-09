@@ -1,0 +1,13 @@
+{
+  "part": "CCCCCXXX",
+  "title": "Ihara Zeta and Ramanujan RH",
+  "results": {
+    "E_minus_v": 200,
+    "ihara_trivial_poles": [1, "1/11"],
+    "r_factor_roots_modulus": "1/sqrt(11)",
+    "s_factor_roots_modulus": "1/sqrt(11)",
+    "ihara_RH_satisfied": true,
+    "nontrivial_pole_count": 48,
+    "critical_circle_radius": "1/sqrt(11)"
+  }
+}

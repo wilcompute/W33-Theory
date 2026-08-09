@@ -1,0 +1,8 @@
+{
+  "part": "DCMXXVI",
+  "decimal": 926,
+  "title": "Langlands-W(3,3) Explicit Functor",
+  "functor": "F_W: Rep(Gal) -> CSS_{W(3,3)}",
+  "zeta_functional_eq": "Z_W(1/3u) = Z_W(u) <-> xi(s) = xi(1-s)",
+  "status": "LANGLANDS BRIDGE"
+}

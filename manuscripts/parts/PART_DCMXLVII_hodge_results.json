@@ -1,0 +1,8 @@
+{
+  "part": "DCMXLVII",
+  "decimal": 947,
+  "title": "Hodge for Abelian Varieties and K3 Surfaces",
+  "proved": ["abelian varieties (Deligne+CSS)", "K3 surfaces (Kuga-Satake+CSS)"],
+  "open": "General smooth projective varieties of large degree",
+  "status": "PARTIAL PROOF"
+}

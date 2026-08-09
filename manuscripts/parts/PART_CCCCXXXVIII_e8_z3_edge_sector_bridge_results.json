@@ -1,0 +1,141 @@
+{
+  "part": "CCCCXXXVIII",
+  "title": "E8 Z3 Edge-Sector Bridge",
+  "Verified": true,
+  "checks_total": 24,
+  "checks_passed": 24,
+  "checks": [
+    [
+      "W(3,3) has v=40",
+      true
+    ],
+    [
+      "W(3,3) has k=12",
+      true
+    ],
+    [
+      "W(3,3) edges = v*k/2 = 240",
+      true
+    ],
+    [
+      "q=3 selector",
+      true
+    ],
+    [
+      "W33 core packet = 24",
+      true
+    ],
+    [
+      "W33 plus packet = 108",
+      true
+    ],
+    [
+      "W33 minus packet = 108",
+      true
+    ],
+    [
+      "W33 packet sum = 240",
+      true
+    ],
+    [
+      "E8 g0 packet = 78",
+      true
+    ],
+    [
+      "E8 g1 packet = 81",
+      true
+    ],
+    [
+      "E8 g2 packet = 81",
+      true
+    ],
+    [
+      "E8 packet sum = 240",
+      true
+    ],
+    [
+      "g0 decomposition first block = 24",
+      true
+    ],
+    [
+      "g0 decomposition second block = 27",
+      true
+    ],
+    [
+      "g0 decomposition third block = 27",
+      true
+    ],
+    [
+      "g0 = 24 + 27 + 27 = 78",
+      true
+    ],
+    [
+      "dim(E6)=78 bridge anchor",
+      true
+    ],
+    [
+      "excited D_F^2 count = 78 (CCCCXXXVI)",
+      true
+    ],
+    [
+      "g0 matches excited D_F^2 count",
+      true
+    ],
+    [
+      "g1 = g2 symmetry",
+      true
+    ],
+    [
+      "108 = 4 * 27",
+      true
+    ],
+    [
+      "24 = f",
+      true
+    ],
+    [
+      "81 = 3^4",
+      true
+    ],
+    [
+      "total bridge consistency",
+      true
+    ]
+  ],
+  "constants": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "F": 24,
+    "EDGES_W33": 240
+  },
+  "w33_edge_packets": {
+    "core": 24,
+    "plus": 108,
+    "minus": 108,
+    "sum": 240
+  },
+  "e8_z3_packets": {
+    "g0": 78,
+    "g1": 81,
+    "g2": 81,
+    "sum": 240
+  },
+  "g0_decomposition": {
+    "a": 24,
+    "b": 27,
+    "c": 27,
+    "sum": 78,
+    "equals_dim_E6": true
+  },
+  "key_observations": [
+    "W(3,3) edge packet: 240 = 24 + 108 + 108.",
+    "E8 Z3 packet: 240 = 78 + 81 + 81.",
+    "Core bridge identity: g0 = 24 + 27 + 27 = 78 = dim(E6).",
+    "g0 also matches the CCCCXXXVI excited D_F^2 count (78).",
+    "This is an exact count-level bridge, not a full operator isomorphism."
+  ],
+  "honesty_boundary": "This part certifies integer-packet consistency only. The explicit linear operator-level dictionary between W(3,3) edges and E8 roots remains open."
+}

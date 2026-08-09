@@ -1,0 +1,26 @@
+{
+  "omega_so_rank": 12,
+  "omega_o_rank": 7,
+  "signature_shadow": 8,
+  "euler_cobordism": -200,
+  "pontryagin_shadow": -140,
+  "sw_parity": 0,
+  "framed_stem_shadow": 6,
+  "boundary_index": 12,
+  "thom_degree": 24,
+  "mu_grade": 24,
+  "verified": true,
+  "failures": [],
+  "w33_atoms": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "PHI3": 13,
+    "PHI4": 10,
+    "PHI6": 7,
+    "EDGES": 240,
+    "MULT_K2": 6
+  }
+}

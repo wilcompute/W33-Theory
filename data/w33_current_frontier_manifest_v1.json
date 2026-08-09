@@ -1,1 +1,529 @@
-{"schema":"w33.current_frontier_manifest.v1","tex_manifest":"analysis/W33_CURRENT_FRONTIER_MANIFEST.tex","required_ordered_inputs":["analysis/BT3191_chromatic_defect_block_filter_insert","analysis/BT3212_chromatic_closure_insert","analysis/BT3262_BT3265_signature_s3_affine_lift_insert","analysis/BT3286_BT3295_signature_port_common_envelope_insert","analysis/BT3308_BT3319_knight_hypercube_gauge_closure_insert","analysis/BT3330_global_cover_quantum_hypercube_insert","analysis/BT3332_BT3343_seven_front_closure_insert","analysis/BT3363_minimum_gauge_defect_generation_insert","analysis/BT3364_BT3375_clebsch_petersen_resilient_closure_insert","analysis/BT3385_hidden_torus_dalembertian_insert","analysis/BT3387_cohomology_tau_frontier_insert","analysis/BT3404_BT3417_conic_magnetic_closure_insert","analysis/BT3408_edge_commutant_decomposition_insert","analysis/BT3418_BT3429_clebsch_d5_supplement_insert","analysis/BT3444_BT3457_radius_modular_fivechannel_insert","analysis/BT3458_BT3471_face_tower_brauer_tomotope_insert","analysis/BT3486_BT3499_radius_code_biplane_supplement_insert","analysis/BT3500_BT3505_triangle_free_srg_m57_bridge_insert","analysis/BT3506_BT3512_seven_graph_csp_scheme_symmetry_insert","analysis/BT3514_BT3527_multicircuit_rm_biplane_a5_insert","analysis/BT3528_BT3534_borel_star_moore_functor_transplant_insert","analysis/BT3535_BT3541_clique_borel_fourier_factorization_ports_insert","analysis/BT3542_BT3548_borel_commutant_outer_s6_analytic_insert","analysis/BT3549_BT3555_borel_pentad_quantum_walk_insert","analysis/BT3556_BT3569_radius_amplitude_code_fault_c5_insert","analysis/BT3570_BT3576_cyclotomic_core_quadratic_locator_insert","analysis/BT3577_BT3583_petersen_matrix_octad_marked_walk_insert","analysis/BT3600_BT3613_chained_breakthrough_insert","analysis/BT3614_BT3627_monster_u42_steinberg_leech_falsifiers_insert","analysis/BT3628_BT3634_octad_borel_matrix_proof_tomography_insert","analysis/BT3635_BT3648_monster_u42_completion_insert","analysis/BT3649_BT3662_seven_front_closure_insert","analysis/BT3663_BT3669_monster_chamber_spread_bridge_insert","analysis/BT3670_BT3686_monster_tomotope_amalgamation_insert","analysis/BT3687_BT3693_realized_octad_borel_psd_proof_tomography_architecture_insert","analysis/BT3694_BT3700_spread_etf_axial_closure_insert","analysis/BT3701_BT3714_d4_f4_triality_axial_lattice_insert","analysis/BT3715_BT3721_carrier_tournament_process_budget_identification_scheduler_twirl_insert","analysis/BT3722_BT3728_fischer_hadamard_orthogonal_code_insert","analysis/BT3729_BT3742_five_front_website_restore_insert","analysis/BT3743_BT3750_symmetry_os_spacetime_factory_tournament_insert","analysis/BT3751_BT3758_monster_lattice_multiport_cover_insert","analysis/BT3769_BT3786_gq_veldkamp_axial_lattice_monster_insert","analysis/BT3787_BT3794_twirl_floquet_clock_control_hybrid_insert","analysis/BT3795_BT3812_plane_ovoid_scheme_leech_axial_insert","analysis/BT3813_BT3820_quadratic_discriminant_multiport_holonomy_insert","analysis/BT3821_BT3828_maxcode_mesh_scheme_ovoid_insert","analysis/BT3829_BT3836_adaptive_virtual_autonomous_thermo_substrate_insert","analysis/BT3837_BT3854_ovoid_wedderburn_code_leech_triality_insert","analysis/BT3871_BT3886_eight_front_closure_insert","analysis/BT3887_BT3904_unmarked_wedderburn_monster_fouraxis_order192_insert","analysis/BT3905_BT3912_terwilliger_mesh_strata_rank48_insert","analysis/BT3913_BT3920_multidefect_lindbladian_process_fusion_phase_insert","analysis/BT3937_BT3956_rho200_poset_monster_octonion_universal_photon_insert","analysis/BT3957_BT3964_exact_algebra_mesh_code_photon_insert","analysis/BT3965_BT3972_topology_control_causal_density_insert","analysis/BT3973_BT3980_combined_extremal_mesh_photon_tensor_insert","analysis/BT3981_BT3988_five_front_three_photon_closure_insert","analysis/BT3989_BT3996_physical_incidence_photon_breakthrough_insert","analysis/BT4089_BT4096_implementation_outside_box_insert","analysis/BT4169_BT4176_discrete_c2_hawking_backreaction_gray_levi_casimir_axion_insert","analysis/BT4253_BT4260_girth16_faultaware_su4_hysteresis_clock_channel_scrambling_modular_capacity_insert","analysis/BT4261_BT4268_girth18_cd_hysteresis_clock37_nongaussian_search_defect_thermal_insert","analysis/BT4137_BT4144_matrix_horizon_rg_scar_curvature_insert"],"front_doors":{"w33_paper.tex":"w33_paper_body.tex","photonic_holonet.tex":"photonic_holonet_body.tex","holonet_machine_blueprint.tex":"holonet_machine_blueprint_body.tex"},"public_index":"docs/index.html","public_sections":[{"kind":"id","token":"bt3320-3331-global-cover-quantum-hypercube","source":"analysis/BT3330_global_cover_quantum_hypercube_index_insert.html"},{"kind":"id","token":"bt3363-minimum-gauge-defect-generation","source":"analysis/BT3363_minimum_gauge_defect_generation_index_insert.html"},{"kind":"marker","token":"<!-- BT3364-BT3375-CLEBSCH-PETERSEN -->","source":"analysis/BT3364_BT3375_clebsch_petersen_index_insert.html"},{"kind":"id","token":"bt3385-hidden-torus-dalembertian","source":"analysis/BT3385_hidden_torus_dalembertian_index_insert.html"},{"kind":"id","token":"bt3376-3389-cohomology-tau-frontier","source":"analysis/BT3387_cohomology_tau_frontier_index_insert.html"},{"kind":"id","token":"bt3404-3417-conic-magnetic-closure","source":"analysis/BT3404_BT3417_conic_magnetic_closure_index_insert.html"},{"kind":"id","token":"bt3418-3429-clebsch-d5-supplement","source":"analysis/BT3418_BT3429_clebsch_d5_supplement_index_insert.html"},{"kind":"id","token":"bt3444-3457-radius-modular-fivechannel","source":"analysis/BT3444_BT3457_radius_modular_fivechannel_index_insert.html"},{"kind":"id","token":"bt3458-3471-face-tower-brauer-tomotope","source":"analysis/BT3458_BT3471_face_tower_brauer_tomotope_index_insert.html"},{"kind":"id","token":"bt3486-3499-radius-code-biplane-supplement","source":"analysis/BT3486_BT3499_radius_code_biplane_supplement_index_insert.html"},{"kind":"id","token":"bt3506-3512-seven-graph-csp-scheme-symmetry","source":"analysis/BT3506_BT3512_seven_graph_csp_scheme_symmetry_index_insert.html"},{"kind":"id","token":"bt3528-3534-borel-star-moore-transplant","source":"analysis/BT3528_BT3534_borel_star_moore_transplant_index_insert.html"},{"kind":"id","token":"bt3535-3541-clique-borel-fourier-factorization-ports","source":"analysis/BT3535_BT3541_clique_borel_fourier_factorization_ports_index_insert.html"},{"kind":"id","token":"bt3542-3548-borel-commutant-outer-s6-analytic","source":"analysis/BT3542_BT3548_borel_commutant_outer_s6_analytic_index_insert.html"},{"kind":"id","token":"bt3549-3555-borel-pentad-quantum-walk","source":"analysis/BT3549_BT3555_borel_pentad_quantum_walk_index_insert.html"},{"kind":"id","token":"bt3577-3583-petersen-matrix-octad-marked-walk","source":"analysis/BT3577_BT3583_petersen_matrix_octad_marked_walk_index_insert.html"},{"kind":"id","token":"bt3600-3613-chained-breakthrough","source":"analysis/BT3600_BT3613_chained_breakthrough_index_insert.html"},{"kind":"id","token":"bt3614-3627-monster-u42-steinberg","source":"analysis/BT3614_BT3627_monster_u42_steinberg_leech_falsifiers_index_insert.html"},{"kind":"id","token":"bt3628-3634-octad-borel-matrix-proof-tomography","source":"analysis/BT3628_BT3634_octad_borel_matrix_proof_tomography_index_insert.html"},{"kind":"id","token":"bt3635-3648-monster-u42-completion","source":"analysis/BT3635_BT3648_monster_u42_completion_index_insert.html"},{"kind":"id","token":"bt3649-3662-seven-front-closure","source":"analysis/BT3649_BT3662_seven_front_closure_index_insert.html"},{"kind":"id","token":"bt3663-3669-monster-chamber-spread-bridge","source":"analysis/BT3663_BT3669_monster_chamber_spread_bridge_index_insert.html"},{"kind":"id","token":"bt3670-3686-monster-tomotope-amalgamation","source":"analysis/BT3670_BT3686_monster_tomotope_amalgamation_index_insert.html"},{"kind":"id","token":"bt3687-3693-realized-octad-borel-psd-proof-tomography-architecture","source":"analysis/BT3687_BT3693_realized_octad_borel_psd_proof_tomography_architecture_index_insert.html"},{"kind":"id","token":"spread-etf-norton","source":"analysis/BT3694_BT3700_spread_etf_axial_closure_index_insert.html"},{"kind":"id","token":"bt3701-3714-d4-f4-triality","source":"analysis/BT3701_BT3714_d4_f4_triality_axial_lattice_index_insert.html"},{"kind":"id","token":"bt3715-3721-carrier-tournament-process-budget-identification-scheduler-twirl","source":"analysis/BT3715_BT3721_carrier_tournament_process_budget_identification_scheduler_twirl_index_insert.html"},{"kind":"id","token":"bt3722-3728-fischer-hadamard-orthogonal-code","source":"analysis/BT3722_BT3728_fischer_hadamard_orthogonal_code_index_insert.html"},{"kind":"id","token":"bt3743-3750-symmetry-os-spacetime-factory-tournament","source":"analysis/BT3743_BT3750_symmetry_os_spacetime_factory_tournament_index_insert.html"},{"kind":"id","token":"bt3751-3758-monster-lattice-multiport-cover","source":"analysis/BT3751_BT3758_monster_lattice_multiport_cover_index_insert.html"},{"kind":"id","token":"bt3769-3786-gq-veldkamp-axial","source":"analysis/BT3769_BT3786_gq_veldkamp_axial_lattice_monster_index_insert.html"},{"kind":"id","token":"bt3787-3794-twirl-floquet-clock-control-hybrid","source":"analysis/BT3787_BT3794_twirl_floquet_clock_control_hybrid_index_insert.html"},{"kind":"id","token":"bt3795-3812-plane-ovoid-scheme-leech-axial","source":"analysis/BT3795_BT3812_plane_ovoid_scheme_leech_axial_index_insert.html"},{"kind":"id","token":"bt3813-3820-quadratic-discriminant-multiport-holonomy","source":"analysis/BT3813_BT3820_quadratic_discriminant_multiport_holonomy_index_insert.html"},{"kind":"id","token":"bt3821-3828-maxcode-mesh-scheme-ovoid","source":"analysis/BT3821_BT3828_maxcode_mesh_scheme_ovoid_index_insert.html"},{"kind":"id","token":"bt3829-3836-adaptive-virtual-autonomous-thermo-substrate","source":"analysis/BT3829_BT3836_adaptive_virtual_autonomous_thermo_substrate_index_insert.html"},{"kind":"id","token":"bt3837-3854-ovoid-wedderburn-code-leech-triality","source":"analysis/BT3837_BT3854_ovoid_wedderburn_code_leech_triality_index_insert.html"},{"kind":"id","token":"bt3887-3904-unmarked-wedderburn-fouraxis-order192","source":"analysis/BT3887_BT3904_unmarked_wedderburn_monster_fouraxis_order192_index_insert.html"},{"kind":"id","token":"bt3905-3912-terwilliger-mesh-strata-rank48","source":"analysis/BT3905_BT3912_terwilliger_mesh_strata_rank48_index_insert.html"},{"kind":"id","token":"bt3913-3920-multidefect-lindbladian-process-fusion-phase","source":"analysis/BT3913_BT3920_multidefect_lindbladian_process_fusion_phase_index_insert.html"},{"kind":"id","token":"bt3937-3956-rho200-poset-photon","source":"analysis/BT3937_BT3956_rho200_poset_monster_octonion_universal_photon_index_insert.html"},{"kind":"id","token":"bt3957-3964-exact-algebra-mesh-code-photon","source":"analysis/BT3957_BT3964_exact_algebra_mesh_code_photon_index_insert.html"},{"kind":"id","token":"bt3965-3972-topology-control-causal-density","source":"analysis/BT3965_BT3972_topology_control_causal_density_index_insert.html"},{"kind":"id","token":"bt3973-3980-extremal-mesh-photon","source":"analysis/BT3973_BT3980_extremal_mesh_photon_tensor_index_insert.html"},{"kind":"id","token":"bt3973-3980-extremal-mesh-photon-tensor","source":"analysis/BT3973_BT3980_extremal_mesh_photon_tensor_monster_index_insert.html"},{"kind":"id","token":"bt3981-3988-five-front-photon-closure","source":"analysis/BT3981_BT3988_five_front_three_photon_closure_index_insert.html"},{"kind":"id","token":"bt3989-3996-physical-incidence-photon","source":"analysis/BT3989_BT3996_physical_incidence_photon_breakthrough_index_insert.html"},{"kind":"id","token":"bt4169-4176-discrete-c2-hawking-backreaction-gray-levi-casimir-axion","source":"analysis/BT4169_BT4176_discrete_c2_hawking_backreaction_gray_levi_casimir_axion_index_insert.html"},{"kind":"id","token":"bt4089-4096-implementation-outside-box","source":"analysis/BT4089_BT4096_implementation_outside_box_index_insert.html"},{"kind":"id","token":"bt4137-4144-matrix-horizon-rg-scar-curvature","source":"analysis/BT4137_BT4144_matrix_horizon_rg_scar_curvature_index_insert.html"},{"kind":"id","token":"bt4253-4260-girth16-faultaware-holonomy","source":"analysis/BT4253_BT4260_girth16_faultaware_su4_hysteresis_clock_channel_scrambling_modular_capacity_index_insert.html"},{"kind":"id","token":"bt4261-4268-girth18-cd-hysteresis-clock37-nongaussian","source":"analysis/BT4261_BT4268_girth18_cd_hysteresis_clock37_nongaussian_search_defect_thermal_index_insert.html"}],"standalone_public_pages":[{"token":"passes-3500-3505-triangle-free-srg-m57","source":"docs/triangle-free-srg-m57.html"},{"token":"passes-3506-3512-seven-graph-csp-scheme-symmetry","source":"docs/seven-graph-csp-scheme.html"},{"token":"passes-3514-3527-multicircuit-rm-biplane-a5","source":"docs/multicircuit-rm-biplane-a5.html"},{"token":"passes-3528-3534-borel-star-moore-transplant","source":"docs/borel-star-moore-transplant.html"},{"token":"passes-3535-3541-clique-borel-fourier-factorization","source":"docs/clique-borel-fourier-factorization.html"},{"token":"passes-3542-3548-borel-commutant-outer-s6","source":"docs/borel-commutant-outer-s6.html"},{"token":"passes-3549-3555-borel-pentad-quantum-walk","source":"docs/borel-pentad-quantum-walk.html"},{"token":"passes-3577-3583-petersen-matrix-octad-marked-walk","source":"docs/petersen-matrix-octad-marked-walk.html"},{"token":"passes-3614-3627-monster-u42-steinberg","source":"docs/monster-u42-steinberg.html"},{"token":"passes-3628-3634-octad-borel-matrix-proof-tomography","source":"docs/octad-borel-matrix-proof-tomography.html"},{"token":"passes-3635-3648-monster-u42-completion","source":"docs/monster-u42-completion.html"},{"token":"passes-3663-3669-monster-chamber-spread-double-six","source":"docs/monster-a6-spread-double-six.html"},{"token":"passes-3670-3686-monster-tomotope-amalgamation","source":"docs/monster-tomotope-amalgamation.html"},{"token":"passes-3687-3693-realized-octad-borel-psd-proof-tomography-architecture","source":"docs/realized-octad-borel-psd-proof-tomography-architecture.html"},{"token":"passes-3694-3700-spread-etf-axial-closure","source":"docs/spread-etf-axial-atlas.html"},{"token":"passes-3701-3714-d4-f4-triality-45-axis","source":"docs/d4-f4-triality-45-axis.html"},{"token":"passes-3715-3721-carrier-tournament-process-budget-identification-scheduler-twirl","source":"docs/carrier-tournament-process-budget-identification.html"},{"token":"passes-3722-3728-fischer-hadamard-orthogonal-code","source":"docs/fischer-hadamard-orthogonal-code.html"},{"token":"passes-3729-3742-five-front-website-restore","source":"docs/cubic-tomotope-module-website-restore.html"},{"token":"passes-3743-3750-symmetry-os-spacetime-factory-tournament","source":"docs/symmetry-os-spacetime-factory-tournament.html"},{"token":"passes-3751-3758-fischer-quadratic-lattice-multiport","source":"docs/fischer-quadratic-lattice-multiport.html"},{"token":"passes-3769-3786-gq-veldkamp-w33-axial","source":"docs/gq-veldkamp-w33-axial.html"},{"token":"passes-3787-3794-twirl-floquet-clock-control-hybrid","source":"docs/twirl-floquet-clock-control-hybrid.html"},{"token":"passes-3795-3812-plane-ovoid-scheme-leech-axial","source":"docs/plane-ovoid-scheme-leech-axial.html"},{"token":"passes-3813-3820-quadratic-discriminant-multiport-holonomy","source":"docs/quadratic-discriminant-multiport-holonomy.html"},{"token":"passes-3821-3828-maxcode-mesh-holonomy-ovoid-flags","source":"docs/maxcode-mesh-holonomy-ovoid-flags.html"},{"token":"passes-3829-3836-adaptive-virtual-autonomous-thermo-substrate","source":"docs/adaptive-virtual-autonomous-thermo-substrate.html"},{"token":"passes-3837-3854-ovoid-wedderburn-code-leech-triality","source":"docs/ovoid-wedderburn-code-leech-triality.html"},{"token":"passes-3871-3886-cap-tomotope-modular-gewirtz","source":"docs/cap-tomotope-modular-gewirtz-atlas-3871-3886.html"},{"token":"passes-3887-3904-unmarked-wedderburn-fouraxis-order192","source":"docs/unmarked-wedderburn-fouraxis-order192.html"},{"token":"passes-3905-3912-terwilliger-mesh-strata-rank48","source":"docs/maxcode-mesh-strata-rank48.html"},{"token":"passes-3913-3920-multidefect-lindbladian-process-fusion-phase","source":"docs/multidefect-lindbladian-process-fusion-phase.html"},{"token":"passes-3937-3956-rho200-local-algebra-photon-null-processor","source":"docs/rho200-local-algebra-photon-null-processor.html"},{"token":"passes-3957-3964-exact-algebra-mesh-code-photon","source":"docs/exact-algebra-mesh-code-photon-capacity.html"},{"token":"passes-3965-3972-topology-control-causal-density","source":"docs/topology-control-causal-density.html"},{"token":"passes-3973-3980-extremal-mesh-photon-tensor","source":"docs/extremal-mesh-photon-tensor.html"},{"token":"passes-3973-3980-extremal-code-mesh-photon-tensor","source":"docs/extremal-code-mesh-photon-tensor.html"},{"token":"passes-3981-3988-five-front-photon-closure","source":"docs/five-front-photon-closure.html"},{"token":"passes-3989-3996-physical-incidence-photon-processor","source":"docs/physical-incidence-photon-processor.html"},{"token":"passes-4169-4176-discrete-c2-hawking-backreaction-gray-levi-casimir-axion","source":"docs/discrete-c2-hawking-backreaction-gray-levi-casimir-axion-4169-4176.html"},{"token":"passes-4089-4096-implementation-outside-box","source":"docs/implementation-outside-box-4089-4096.html"},{"token":"passes-4137-4144-matrix-horizon-rg-scar-curvature","source":"docs/matrix-horizon-rg-scar-curvature-4137-4144.html"},{"token":"passes-4253-4260-girth16-faultaware-holonomy","source":"docs/girth16-faultaware-holonomy-hysteresis-clock-channel-4253-4260.html"},{"token":"passes-4261-4268-girth18-cd-hysteresis-clock37-nongaussian","source":"docs/girth18-cd-hysteresis-clock37-nongaussian-search-defect-thermal-4261-4268.html"}],"boundary":"The manifest controls source reachability and ordering only; it does not certify PDF, hardware, laboratory, or physical claims."}
+{
+  "boundary": "The manifest controls source reachability and ordering only; it does not certify PDF, hardware, laboratory, or physical claims.",
+  "front_doors": {
+    "holonet_machine_blueprint.tex": "holonet_machine_blueprint_body.tex",
+    "photonic_holonet.tex": "photonic_holonet_body.tex",
+    "w33_paper.tex": "w33_paper_body.tex"
+  },
+  "public_index": "docs/index.html",
+  "public_sections": [
+    {
+      "kind": "id",
+      "source": "analysis/BT3330_global_cover_quantum_hypercube_index_insert.html",
+      "token": "bt3320-3331-global-cover-quantum-hypercube"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3363_minimum_gauge_defect_generation_index_insert.html",
+      "token": "bt3363-minimum-gauge-defect-generation"
+    },
+    {
+      "kind": "marker",
+      "source": "analysis/BT3364_BT3375_clebsch_petersen_index_insert.html",
+      "token": "<!-- BT3364-BT3375-CLEBSCH-PETERSEN -->"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3385_hidden_torus_dalembertian_index_insert.html",
+      "token": "bt3385-hidden-torus-dalembertian"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3387_cohomology_tau_frontier_index_insert.html",
+      "token": "bt3376-3389-cohomology-tau-frontier"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3404_BT3417_conic_magnetic_closure_index_insert.html",
+      "token": "bt3404-3417-conic-magnetic-closure"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3418_BT3429_clebsch_d5_supplement_index_insert.html",
+      "token": "bt3418-3429-clebsch-d5-supplement"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3444_BT3457_radius_modular_fivechannel_index_insert.html",
+      "token": "bt3444-3457-radius-modular-fivechannel"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3458_BT3471_face_tower_brauer_tomotope_index_insert.html",
+      "token": "bt3458-3471-face-tower-brauer-tomotope"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3486_BT3499_radius_code_biplane_supplement_index_insert.html",
+      "token": "bt3486-3499-radius-code-biplane-supplement"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3506_BT3512_seven_graph_csp_scheme_symmetry_index_insert.html",
+      "token": "bt3506-3512-seven-graph-csp-scheme-symmetry"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3528_BT3534_borel_star_moore_transplant_index_insert.html",
+      "token": "bt3528-3534-borel-star-moore-transplant"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3535_BT3541_clique_borel_fourier_factorization_ports_index_insert.html",
+      "token": "bt3535-3541-clique-borel-fourier-factorization-ports"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3542_BT3548_borel_commutant_outer_s6_analytic_index_insert.html",
+      "token": "bt3542-3548-borel-commutant-outer-s6-analytic"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3549_BT3555_borel_pentad_quantum_walk_index_insert.html",
+      "token": "bt3549-3555-borel-pentad-quantum-walk"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3577_BT3583_petersen_matrix_octad_marked_walk_index_insert.html",
+      "token": "bt3577-3583-petersen-matrix-octad-marked-walk"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3600_BT3613_chained_breakthrough_index_insert.html",
+      "token": "bt3600-3613-chained-breakthrough"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3614_BT3627_monster_u42_steinberg_leech_falsifiers_index_insert.html",
+      "token": "bt3614-3627-monster-u42-steinberg"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3628_BT3634_octad_borel_matrix_proof_tomography_index_insert.html",
+      "token": "bt3628-3634-octad-borel-matrix-proof-tomography"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3635_BT3648_monster_u42_completion_index_insert.html",
+      "token": "bt3635-3648-monster-u42-completion"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3649_BT3662_seven_front_closure_index_insert.html",
+      "token": "bt3649-3662-seven-front-closure"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3663_BT3669_monster_chamber_spread_bridge_index_insert.html",
+      "token": "bt3663-3669-monster-chamber-spread-bridge"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3670_BT3686_monster_tomotope_amalgamation_index_insert.html",
+      "token": "bt3670-3686-monster-tomotope-amalgamation"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3687_BT3693_realized_octad_borel_psd_proof_tomography_architecture_index_insert.html",
+      "token": "bt3687-3693-realized-octad-borel-psd-proof-tomography-architecture"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3694_BT3700_spread_etf_axial_closure_index_insert.html",
+      "token": "spread-etf-norton"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3701_BT3714_d4_f4_triality_axial_lattice_index_insert.html",
+      "token": "bt3701-3714-d4-f4-triality"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3715_BT3721_carrier_tournament_process_budget_identification_scheduler_twirl_index_insert.html",
+      "token": "bt3715-3721-carrier-tournament-process-budget-identification-scheduler-twirl"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3722_BT3728_fischer_hadamard_orthogonal_code_index_insert.html",
+      "token": "bt3722-3728-fischer-hadamard-orthogonal-code"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3743_BT3750_symmetry_os_spacetime_factory_tournament_index_insert.html",
+      "token": "bt3743-3750-symmetry-os-spacetime-factory-tournament"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3751_BT3758_monster_lattice_multiport_cover_index_insert.html",
+      "token": "bt3751-3758-monster-lattice-multiport-cover"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3769_BT3786_gq_veldkamp_axial_lattice_monster_index_insert.html",
+      "token": "bt3769-3786-gq-veldkamp-axial"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3787_BT3794_twirl_floquet_clock_control_hybrid_index_insert.html",
+      "token": "bt3787-3794-twirl-floquet-clock-control-hybrid"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3795_BT3812_plane_ovoid_scheme_leech_axial_index_insert.html",
+      "token": "bt3795-3812-plane-ovoid-scheme-leech-axial"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3813_BT3820_quadratic_discriminant_multiport_holonomy_index_insert.html",
+      "token": "bt3813-3820-quadratic-discriminant-multiport-holonomy"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3821_BT3828_maxcode_mesh_scheme_ovoid_index_insert.html",
+      "token": "bt3821-3828-maxcode-mesh-scheme-ovoid"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3829_BT3836_adaptive_virtual_autonomous_thermo_substrate_index_insert.html",
+      "token": "bt3829-3836-adaptive-virtual-autonomous-thermo-substrate"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3837_BT3854_ovoid_wedderburn_code_leech_triality_index_insert.html",
+      "token": "bt3837-3854-ovoid-wedderburn-code-leech-triality"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3887_BT3904_unmarked_wedderburn_monster_fouraxis_order192_index_insert.html",
+      "token": "bt3887-3904-unmarked-wedderburn-fouraxis-order192"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3905_BT3912_terwilliger_mesh_strata_rank48_index_insert.html",
+      "token": "bt3905-3912-terwilliger-mesh-strata-rank48"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3913_BT3920_multidefect_lindbladian_process_fusion_phase_index_insert.html",
+      "token": "bt3913-3920-multidefect-lindbladian-process-fusion-phase"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3937_BT3956_rho200_poset_monster_octonion_universal_photon_index_insert.html",
+      "token": "bt3937-3956-rho200-poset-photon"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3957_BT3964_exact_algebra_mesh_code_photon_index_insert.html",
+      "token": "bt3957-3964-exact-algebra-mesh-code-photon"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3965_BT3972_topology_control_causal_density_index_insert.html",
+      "token": "bt3965-3972-topology-control-causal-density"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3973_BT3980_extremal_mesh_photon_tensor_index_insert.html",
+      "token": "bt3973-3980-extremal-mesh-photon"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3973_BT3980_extremal_mesh_photon_tensor_monster_index_insert.html",
+      "token": "bt3973-3980-extremal-mesh-photon-tensor"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3981_BT3988_five_front_three_photon_closure_index_insert.html",
+      "token": "bt3981-3988-five-front-photon-closure"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT3989_BT3996_physical_incidence_photon_breakthrough_index_insert.html",
+      "token": "bt3989-3996-physical-incidence-photon"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT4169_BT4176_discrete_c2_hawking_backreaction_gray_levi_casimir_axion_index_insert.html",
+      "token": "bt4169-4176-discrete-c2-hawking-backreaction-gray-levi-casimir-axion"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT4089_BT4096_implementation_outside_box_index_insert.html",
+      "token": "bt4089-4096-implementation-outside-box"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT4137_BT4144_matrix_horizon_rg_scar_curvature_index_insert.html",
+      "token": "bt4137-4144-matrix-horizon-rg-scar-curvature"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT4253_BT4260_girth16_faultaware_su4_hysteresis_clock_channel_scrambling_modular_capacity_index_insert.html",
+      "token": "bt4253-4260-girth16-faultaware-holonomy"
+    },
+    {
+      "kind": "id",
+      "source": "analysis/BT4261_BT4268_girth18_cd_hysteresis_clock37_nongaussian_search_defect_thermal_index_insert.html",
+      "token": "bt4261-4268-girth18-cd-hysteresis-clock37-nongaussian"
+    },
+    {
+      "kind": "id",
+      "source": "docs/chamber-hecke-audited-corrections-4324-4333.html",
+      "token": "pass-4324-4333-chamber-hecke-and-audit"
+    }
+  ],
+  "required_ordered_inputs": [
+    "analysis/BT3191_chromatic_defect_block_filter_insert",
+    "analysis/BT3212_chromatic_closure_insert",
+    "analysis/BT3262_BT3265_signature_s3_affine_lift_insert",
+    "analysis/BT3286_BT3295_signature_port_common_envelope_insert",
+    "analysis/BT3308_BT3319_knight_hypercube_gauge_closure_insert",
+    "analysis/BT3330_global_cover_quantum_hypercube_insert",
+    "analysis/BT3332_BT3343_seven_front_closure_insert",
+    "analysis/BT3363_minimum_gauge_defect_generation_insert",
+    "analysis/BT3364_BT3375_clebsch_petersen_resilient_closure_insert",
+    "analysis/BT3385_hidden_torus_dalembertian_insert",
+    "analysis/BT3387_cohomology_tau_frontier_insert",
+    "analysis/BT3404_BT3417_conic_magnetic_closure_insert",
+    "analysis/BT3408_edge_commutant_decomposition_insert",
+    "analysis/BT3418_BT3429_clebsch_d5_supplement_insert",
+    "analysis/BT3444_BT3457_radius_modular_fivechannel_insert",
+    "analysis/BT3458_BT3471_face_tower_brauer_tomotope_insert",
+    "analysis/BT3486_BT3499_radius_code_biplane_supplement_insert",
+    "analysis/BT3500_BT3505_triangle_free_srg_m57_bridge_insert",
+    "analysis/BT3506_BT3512_seven_graph_csp_scheme_symmetry_insert",
+    "analysis/BT3514_BT3527_multicircuit_rm_biplane_a5_insert",
+    "analysis/BT3528_BT3534_borel_star_moore_functor_transplant_insert",
+    "analysis/BT3535_BT3541_clique_borel_fourier_factorization_ports_insert",
+    "analysis/BT3542_BT3548_borel_commutant_outer_s6_analytic_insert",
+    "analysis/BT3549_BT3555_borel_pentad_quantum_walk_insert",
+    "analysis/BT3556_BT3569_radius_amplitude_code_fault_c5_insert",
+    "analysis/BT3570_BT3576_cyclotomic_core_quadratic_locator_insert",
+    "analysis/BT3577_BT3583_petersen_matrix_octad_marked_walk_insert",
+    "analysis/BT3600_BT3613_chained_breakthrough_insert",
+    "analysis/BT3614_BT3627_monster_u42_steinberg_leech_falsifiers_insert",
+    "analysis/BT3628_BT3634_octad_borel_matrix_proof_tomography_insert",
+    "analysis/BT3635_BT3648_monster_u42_completion_insert",
+    "analysis/BT3649_BT3662_seven_front_closure_insert",
+    "analysis/BT3663_BT3669_monster_chamber_spread_bridge_insert",
+    "analysis/BT3670_BT3686_monster_tomotope_amalgamation_insert",
+    "analysis/BT3687_BT3693_realized_octad_borel_psd_proof_tomography_architecture_insert",
+    "analysis/BT3694_BT3700_spread_etf_axial_closure_insert",
+    "analysis/BT3701_BT3714_d4_f4_triality_axial_lattice_insert",
+    "analysis/BT3715_BT3721_carrier_tournament_process_budget_identification_scheduler_twirl_insert",
+    "analysis/BT3722_BT3728_fischer_hadamard_orthogonal_code_insert",
+    "analysis/BT3729_BT3742_five_front_website_restore_insert",
+    "analysis/BT3743_BT3750_symmetry_os_spacetime_factory_tournament_insert",
+    "analysis/BT3751_BT3758_monster_lattice_multiport_cover_insert",
+    "analysis/BT3769_BT3786_gq_veldkamp_axial_lattice_monster_insert",
+    "analysis/BT3787_BT3794_twirl_floquet_clock_control_hybrid_insert",
+    "analysis/BT3795_BT3812_plane_ovoid_scheme_leech_axial_insert",
+    "analysis/BT3813_BT3820_quadratic_discriminant_multiport_holonomy_insert",
+    "analysis/BT3821_BT3828_maxcode_mesh_scheme_ovoid_insert",
+    "analysis/BT3829_BT3836_adaptive_virtual_autonomous_thermo_substrate_insert",
+    "analysis/BT3837_BT3854_ovoid_wedderburn_code_leech_triality_insert",
+    "analysis/BT3871_BT3886_eight_front_closure_insert",
+    "analysis/BT3887_BT3904_unmarked_wedderburn_monster_fouraxis_order192_insert",
+    "analysis/BT3905_BT3912_terwilliger_mesh_strata_rank48_insert",
+    "analysis/BT3913_BT3920_multidefect_lindbladian_process_fusion_phase_insert",
+    "analysis/BT3937_BT3956_rho200_poset_monster_octonion_universal_photon_insert",
+    "analysis/BT3957_BT3964_exact_algebra_mesh_code_photon_insert",
+    "analysis/BT3965_BT3972_topology_control_causal_density_insert",
+    "analysis/BT3973_BT3980_combined_extremal_mesh_photon_tensor_insert",
+    "analysis/BT3981_BT3988_five_front_three_photon_closure_insert",
+    "analysis/BT3989_BT3996_physical_incidence_photon_breakthrough_insert",
+    "analysis/BT4089_BT4096_implementation_outside_box_insert",
+    "analysis/BT4169_BT4176_discrete_c2_hawking_backreaction_gray_levi_casimir_axion_insert",
+    "analysis/BT4253_BT4260_girth16_faultaware_su4_hysteresis_clock_channel_scrambling_modular_capacity_insert",
+    "analysis/BT4261_BT4268_girth18_cd_hysteresis_clock37_nongaussian_search_defect_thermal_insert",
+    "analysis/BT4137_BT4144_matrix_horizon_rg_scar_curvature_insert",
+    "analysis/BT4245_BT4252_residual_symmetry_ghz_hodge_route_lattice_outside_box_insert",
+    "analysis/BT4269_BT4276_h145_fusion_hodge_gds_strata_outside_box_insert",
+    "analysis/BT4324_BT4333_chamber_hecke_and_audited_corrections_insert"
+  ],
+  "schema": "w33.current_frontier_manifest.v1",
+  "standalone_public_pages": [
+    {
+      "source": "docs/triangle-free-srg-m57.html",
+      "token": "passes-3500-3505-triangle-free-srg-m57"
+    },
+    {
+      "source": "docs/seven-graph-csp-scheme.html",
+      "token": "passes-3506-3512-seven-graph-csp-scheme-symmetry"
+    },
+    {
+      "source": "docs/multicircuit-rm-biplane-a5.html",
+      "token": "passes-3514-3527-multicircuit-rm-biplane-a5"
+    },
+    {
+      "source": "docs/borel-star-moore-transplant.html",
+      "token": "passes-3528-3534-borel-star-moore-transplant"
+    },
+    {
+      "source": "docs/clique-borel-fourier-factorization.html",
+      "token": "passes-3535-3541-clique-borel-fourier-factorization"
+    },
+    {
+      "source": "docs/borel-commutant-outer-s6.html",
+      "token": "passes-3542-3548-borel-commutant-outer-s6"
+    },
+    {
+      "source": "docs/borel-pentad-quantum-walk.html",
+      "token": "passes-3549-3555-borel-pentad-quantum-walk"
+    },
+    {
+      "source": "docs/petersen-matrix-octad-marked-walk.html",
+      "token": "passes-3577-3583-petersen-matrix-octad-marked-walk"
+    },
+    {
+      "source": "docs/monster-u42-steinberg.html",
+      "token": "passes-3614-3627-monster-u42-steinberg"
+    },
+    {
+      "source": "docs/octad-borel-matrix-proof-tomography.html",
+      "token": "passes-3628-3634-octad-borel-matrix-proof-tomography"
+    },
+    {
+      "source": "docs/monster-u42-completion.html",
+      "token": "passes-3635-3648-monster-u42-completion"
+    },
+    {
+      "source": "docs/monster-a6-spread-double-six.html",
+      "token": "passes-3663-3669-monster-chamber-spread-double-six"
+    },
+    {
+      "source": "docs/monster-tomotope-amalgamation.html",
+      "token": "passes-3670-3686-monster-tomotope-amalgamation"
+    },
+    {
+      "source": "docs/realized-octad-borel-psd-proof-tomography-architecture.html",
+      "token": "passes-3687-3693-realized-octad-borel-psd-proof-tomography-architecture"
+    },
+    {
+      "source": "docs/spread-etf-axial-atlas.html",
+      "token": "passes-3694-3700-spread-etf-axial-closure"
+    },
+    {
+      "source": "docs/d4-f4-triality-45-axis.html",
+      "token": "passes-3701-3714-d4-f4-triality-45-axis"
+    },
+    {
+      "source": "docs/carrier-tournament-process-budget-identification.html",
+      "token": "passes-3715-3721-carrier-tournament-process-budget-identification-scheduler-twirl"
+    },
+    {
+      "source": "docs/fischer-hadamard-orthogonal-code.html",
+      "token": "passes-3722-3728-fischer-hadamard-orthogonal-code"
+    },
+    {
+      "source": "docs/cubic-tomotope-module-website-restore.html",
+      "token": "passes-3729-3742-five-front-website-restore"
+    },
+    {
+      "source": "docs/symmetry-os-spacetime-factory-tournament.html",
+      "token": "passes-3743-3750-symmetry-os-spacetime-factory-tournament"
+    },
+    {
+      "source": "docs/fischer-quadratic-lattice-multiport.html",
+      "token": "passes-3751-3758-fischer-quadratic-lattice-multiport"
+    },
+    {
+      "source": "docs/gq-veldkamp-w33-axial.html",
+      "token": "passes-3769-3786-gq-veldkamp-w33-axial"
+    },
+    {
+      "source": "docs/twirl-floquet-clock-control-hybrid.html",
+      "token": "passes-3787-3794-twirl-floquet-clock-control-hybrid"
+    },
+    {
+      "source": "docs/plane-ovoid-scheme-leech-axial.html",
+      "token": "passes-3795-3812-plane-ovoid-scheme-leech-axial"
+    },
+    {
+      "source": "docs/quadratic-discriminant-multiport-holonomy.html",
+      "token": "passes-3813-3820-quadratic-discriminant-multiport-holonomy"
+    },
+    {
+      "source": "docs/maxcode-mesh-holonomy-ovoid-flags.html",
+      "token": "passes-3821-3828-maxcode-mesh-holonomy-ovoid-flags"
+    },
+    {
+      "source": "docs/adaptive-virtual-autonomous-thermo-substrate.html",
+      "token": "passes-3829-3836-adaptive-virtual-autonomous-thermo-substrate"
+    },
+    {
+      "source": "docs/ovoid-wedderburn-code-leech-triality.html",
+      "token": "passes-3837-3854-ovoid-wedderburn-code-leech-triality"
+    },
+    {
+      "source": "docs/cap-tomotope-modular-gewirtz-atlas-3871-3886.html",
+      "token": "passes-3871-3886-cap-tomotope-modular-gewirtz"
+    },
+    {
+      "source": "docs/unmarked-wedderburn-fouraxis-order192.html",
+      "token": "passes-3887-3904-unmarked-wedderburn-fouraxis-order192"
+    },
+    {
+      "source": "docs/maxcode-mesh-strata-rank48.html",
+      "token": "passes-3905-3912-terwilliger-mesh-strata-rank48"
+    },
+    {
+      "source": "docs/multidefect-lindbladian-process-fusion-phase.html",
+      "token": "passes-3913-3920-multidefect-lindbladian-process-fusion-phase"
+    },
+    {
+      "source": "docs/rho200-local-algebra-photon-null-processor.html",
+      "token": "passes-3937-3956-rho200-local-algebra-photon-null-processor"
+    },
+    {
+      "source": "docs/exact-algebra-mesh-code-photon-capacity.html",
+      "token": "passes-3957-3964-exact-algebra-mesh-code-photon"
+    },
+    {
+      "source": "docs/topology-control-causal-density.html",
+      "token": "passes-3965-3972-topology-control-causal-density"
+    },
+    {
+      "source": "docs/extremal-mesh-photon-tensor.html",
+      "token": "passes-3973-3980-extremal-mesh-photon-tensor"
+    },
+    {
+      "source": "docs/extremal-code-mesh-photon-tensor.html",
+      "token": "passes-3973-3980-extremal-code-mesh-photon-tensor"
+    },
+    {
+      "source": "docs/five-front-photon-closure.html",
+      "token": "passes-3981-3988-five-front-photon-closure"
+    },
+    {
+      "source": "docs/physical-incidence-photon-processor.html",
+      "token": "passes-3989-3996-physical-incidence-photon-processor"
+    },
+    {
+      "source": "docs/discrete-c2-hawking-backreaction-gray-levi-casimir-axion-4169-4176.html",
+      "token": "passes-4169-4176-discrete-c2-hawking-backreaction-gray-levi-casimir-axion"
+    },
+    {
+      "source": "docs/implementation-outside-box-4089-4096.html",
+      "token": "passes-4089-4096-implementation-outside-box"
+    },
+    {
+      "source": "docs/matrix-horizon-rg-scar-curvature-4137-4144.html",
+      "token": "passes-4137-4144-matrix-horizon-rg-scar-curvature"
+    },
+    {
+      "source": "docs/girth16-faultaware-holonomy-hysteresis-clock-channel-4253-4260.html",
+      "token": "passes-4253-4260-girth16-faultaware-holonomy"
+    },
+    {
+      "source": "docs/girth18-cd-hysteresis-clock37-nongaussian-search-defect-thermal-4261-4268.html",
+      "token": "passes-4261-4268-girth18-cd-hysteresis-clock37-nongaussian"
+    },
+    {
+      "source": "docs/chamber-hecke-audited-corrections-4324-4333.html",
+      "token": "passes-4324-4333-chamber-hecke-and-audited-corrections"
+    }
+  ],
+  "tex_manifest": "analysis/W33_CURRENT_FRONTIER_MANIFEST.tex"
+}

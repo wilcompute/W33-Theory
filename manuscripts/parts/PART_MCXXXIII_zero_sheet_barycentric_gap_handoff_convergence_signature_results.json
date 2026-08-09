@@ -1,0 +1,60 @@
+{
+  "theorem": "Zero-sheet barycentric gap-handoff directional convergence signature",
+  "convergence_signature_detected": true,
+  "directional_signature": {
+    "wall_gap_drop_nondecreasing": true,
+    "secondary_crossing_nondecreasing": true,
+    "order_hessian_crossing_nonincreasing": true,
+    "softening_share_nonincreasing": true,
+    "interior_share_nondecreasing": true,
+    "order_hessian_share_nondecreasing": true,
+    "hessian_third_share_nonincreasing": true,
+    "secondary_reference_offset_nonincreasing": true,
+    "wall_reference_offset_nonincreasing": true
+  },
+  "wall_gap_drop_sequence": [
+    0.3830555271510918,
+    0.38305552720929903,
+    0.38305552720929903
+  ],
+  "secondary_crossing_sequence": [
+    1.7384947346603985,
+    1.7384967227472208,
+    1.7384967374464677
+  ],
+  "order_hessian_crossing_sequence": [
+    2.279430530071676,
+    2.2794301448741012,
+    2.279430142026481
+  ],
+  "softening_share_sequence": [
+    0.5666318302210902,
+    0.5666305882806894,
+    0.5666305790962431
+  ],
+  "interior_share_sequence": [
+    0.10934323438127495,
+    0.10934507387336276,
+    0.10934508776073451
+  ],
+  "order_hessian_share_sequence": [
+    0.2787646217892192,
+    0.27876468590757175,
+    0.27876468636755825
+  ],
+  "hessian_third_share_sequence": [
+    0.04526031360841569,
+    0.0452596519383762,
+    0.045259646775464096
+  ],
+  "secondary_reference_abs_offsets": [
+    2.0027860692106714e-06,
+    1.4699246930760523e-08,
+    0.0
+  ],
+  "wall_reference_abs_offsets": [
+    5.820721682425756e-11,
+    0.0,
+    0.0
+  ]
+}

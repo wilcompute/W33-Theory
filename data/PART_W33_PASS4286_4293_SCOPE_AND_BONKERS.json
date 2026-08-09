@@ -17,8 +17,8 @@
       2,
       4
     ],
-    "passages_tying_78_to_E6": 3,
-    "unscoped": 1
+    "passages_tying_78_to_E6": 2,
+    "unscoped": 0
   },
   "pass_4287_automorphisms": {
     "aut_orders": [
@@ -79,14 +79,14 @@
   },
   "pass_4288_mixing": {
     "correlations": {
-      "E": -0.7193594036016173,
-      "dmax": -0.6022790206783899,
-      "dmin": -0.7356602492163328,
-      "n": -0.5532780839524908,
-      "rho": -0.6840154237356441,
-      "spread": 0.22802542516199664
+      "E": -0.7279363079177261,
+      "dmax": -0.6175547750998459,
+      "dmin": -0.7443630270788804,
+      "n": -0.5698638082353877,
+      "rho": -0.6953330058181458,
+      "spread": 0.23341102285363383
     },
-    "n": 349,
+    "n": 360,
     "strongest": "dmin"
   },
   "pass_4289_coding_gap": {
@@ -149,10 +149,11 @@
     ],
     "instructions": 60,
     "opcodes": 8,
-    "verified": true
+    "verified": null
   },
   "pass_4291_zeta_fingerprint": {
     "distinct_signatures": 89,
+    "exact_characteristic_polynomial_frozen": false,
     "example_class": [
       "CX_fp+CX_pf+F_f+Z0+Z1+Z2",
       "CX_fp+CX_pf+F_f+Z0+Z1+Z3",
@@ -163,16 +164,17 @@
     ],
     "largest_class_size": 12,
     "multiplicity_distribution": {
-      "1": 2,
-      "10": 3,
-      "12": 4,
-      "2": 37,
-      "4": 33,
+      "1": 1,
+      "10": 2,
+      "12": 5,
+      "2": 36,
+      "4": 35,
       "5": 1,
-      "6": 7,
-      "8": 2
+      "6": 5,
+      "8": 4
     },
-    "universal": 349,
+    "signature_key": "edge count plus rounded full complex pencil spectrum",
+    "universal": 360,
     "zeta_is_fingerprint": false
   },
   "pass_4292_fault_sensitivity": {

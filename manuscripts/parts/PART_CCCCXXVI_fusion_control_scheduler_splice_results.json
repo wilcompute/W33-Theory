@@ -1,0 +1,470 @@
+{
+  "architecture_upgrade": "Splices the CCCCVI probabilistic/deterministic/classical runtime scheduler into the CCCCXXV theta/U(5) stabilizer completion. The 240 accepted bonds now split as 105 theta + 135 transport, and the probabilistic 480/960 attempt budgets split accordingly.",
+  "checks": [
+    {
+      "name": "CCCCVI scheduler verified",
+      "passed": true,
+      "value": 34
+    },
+    {
+      "name": "CCCCXXV theta/U5 completion verified",
+      "passed": true,
+      "value": 29
+    },
+    {
+      "name": "CCCCXIX synthesis verified",
+      "passed": true,
+      "value": 27
+    },
+    {
+      "name": "scheduler has eight ticks",
+      "passed": true,
+      "value": 8
+    },
+    {
+      "name": "completion has four splice layers",
+      "passed": true,
+      "value": [
+        {
+          "name": "local_csaszar_toric_checks",
+          "rank": 95,
+          "read": "five [[21,2,>=3]] toric blocks give 95 local checks"
+        },
+        {
+          "name": "u5_input_mode_completion",
+          "rank": 25,
+          "read": "U(5) input-mode algebra completes 95 to W33 triangle rank 120"
+        },
+        {
+          "name": "w33_vertex_star_completion",
+          "rank": 39,
+          "read": "W33 vertex-star rank completes triangle checks to full CSS stabilizer rank"
+        },
+        {
+          "name": "h1_logical_tail",
+          "rank": 81,
+          "read": "remaining H1=81 sector is preserved as logical matter"
+        }
+      ]
+    },
+    {
+      "name": "eight runtime ticks plus four completion layers equal W33 degree",
+      "passed": true,
+      "value": {
+        "K": 12,
+        "layers": 4,
+        "ticks": 8
+      }
+    },
+    {
+      "name": "probabilistic stage count is lambda",
+      "passed": true,
+      "value": {
+        "classical": 1,
+        "deterministic": 1,
+        "operation": 1,
+        "probabilistic": 2,
+        "quantum": 1,
+        "quantum_error_correction": 2
+      }
+    },
+    {
+      "name": "qec stage count is lambda",
+      "passed": true,
+      "value": {
+        "classical": 1,
+        "deterministic": 1,
+        "operation": 1,
+        "probabilistic": 2,
+        "quantum": 1,
+        "quantum_error_correction": 2
+      }
+    },
+    {
+      "name": "deterministic and classical stages are singleton locks",
+      "passed": true,
+      "value": {
+        "classical": 1,
+        "deterministic": 1,
+        "operation": 1,
+        "probabilistic": 2,
+        "quantum": 1,
+        "quantum_error_correction": 2
+      }
+    },
+    {
+      "name": "operation stage is a single E8 gate",
+      "passed": true,
+      "value": {
+        "exact_invariant": "8347 bracket terms checked with zero grade violations",
+        "failure_mode": "empirical Standard Model/gravity fitting remains outside this gate",
+        "input_contract": "protected H1=81 matter sector",
+        "name": "e8_z3_operation_gate",
+        "output_contract": "verified E8 Z3 bracket operation",
+        "regime": "operation",
+        "tick": 7
+      }
+    },
+    {
+      "name": "accepted bond split closes 105+135=240",
+      "passed": true,
+      "value": {
+        "theta_edges": 105,
+        "theta_share": "7/16",
+        "total_edges": 240,
+        "transport_edges": 135,
+        "transport_read": "135 = 45*3 transport bundle complement",
+        "transport_share": "9/16"
+      }
+    },
+    {
+      "name": "theta share remains 7/16",
+      "passed": true,
+      "value": {
+        "theta_edges": 105,
+        "theta_share": "7/16",
+        "total_edges": 240,
+        "transport_edges": 135,
+        "transport_read": "135 = 45*3 transport bundle complement",
+        "transport_share": "9/16"
+      }
+    },
+    {
+      "name": "transport share remains 9/16",
+      "passed": true,
+      "value": {
+        "theta_edges": 105,
+        "theta_share": "7/16",
+        "total_edges": 240,
+        "transport_edges": 135,
+        "transport_read": "135 = 45*3 transport bundle complement",
+        "transport_share": "9/16"
+      }
+    },
+    {
+      "name": "fusion split gives 210+270=480",
+      "passed": true,
+      "value": {
+        "read": "p_fusion=1/2 splits 480 attempts as 210 theta + 270 transport",
+        "theta_expected_attempts": 210,
+        "total_expected_attempts": 480,
+        "transport_expected_attempts": 270
+      }
+    },
+    {
+      "name": "KLM split gives 420+540=960",
+      "passed": true,
+      "value": {
+        "read": "p_KLM=1/4 splits 960 primitives as 420 theta + 540 transport",
+        "theta_expected_primitives": 420,
+        "total_expected_primitives": 960,
+        "transport_expected_primitives": 540
+      }
+    },
+    {
+      "name": "CCCCVI CSS tick is refined by 95+25=120",
+      "passed": true,
+      "value": {
+        "active_code": "[[82320,81,>=81]]",
+        "full_refined_identity": "95 + 25 + 39 + 81 = 240",
+        "scheduler_css_tick": "39 X-rank + 120 Z-rank + 81 logical = 240",
+        "theta_u5_refined_z_rank": "95 + 25 = 120"
+      }
+    },
+    {
+      "name": "refined CSS identity closes 240",
+      "passed": true,
+      "value": {
+        "completion_rank_25_plus_39": 64,
+        "full_stabilizer_rank": 159,
+        "h1_logical_rank": 81,
+        "identity": "95 + 25 + 39 + 81 = 240",
+        "local_csaszar_check_rank": 95,
+        "u5_input_completion_rank": 25,
+        "w33_triangle_rank": 120,
+        "w33_vertex_rank": 39
+      }
+    },
+    {
+      "name": "full stabilizer rank remains 159",
+      "passed": true,
+      "value": {
+        "completion_rank_25_plus_39": 64,
+        "full_stabilizer_rank": 159,
+        "h1_logical_rank": 81,
+        "identity": "95 + 25 + 39 + 81 = 240",
+        "local_csaszar_check_rank": 95,
+        "u5_input_completion_rank": 25,
+        "w33_triangle_rank": 120,
+        "w33_vertex_rank": 39
+      }
+    },
+    {
+      "name": "H1 tail is not stabilized away",
+      "passed": true,
+      "value": {
+        "classical_selector_trits": 40,
+        "correctable_weight": 40,
+        "head_projective_frame_states": 81,
+        "operation_input": "protected H1=81 matter sector",
+        "read": "the runtime starts and ends on the H1=81 information tail while the classical selector stays at V=40",
+        "tail_logical_h1": 81
+      }
+    },
+    {
+      "name": "protected theta/transport split still sums to global protected n",
+      "passed": true,
+      "value": {
+        "active_protection_code": "[[82320,81,>=81]]",
+        "correctable_weight": 40,
+        "distance_lower_bound": 81,
+        "global_protected_n": 82320,
+        "steane_block": 343,
+        "theta_protected_n": 36015,
+        "transport_protected_n": 46305
+      }
+    },
+    {
+      "name": "active protected code remains [[82320,81,>=81]]",
+      "passed": true,
+      "value": {
+        "active_protection_code": "[[82320,81,>=81]]",
+        "correctable_weight": 40,
+        "distance_lower_bound": 81,
+        "global_protected_n": 82320,
+        "steane_block": 343,
+        "theta_protected_n": 36015,
+        "transport_protected_n": 46305
+      }
+    },
+    {
+      "name": "protected distance lower bound is H1",
+      "passed": true,
+      "value": {
+        "active_protection_code": "[[82320,81,>=81]]",
+        "correctable_weight": 40,
+        "distance_lower_bound": 81,
+        "global_protected_n": 82320,
+        "steane_block": 343,
+        "theta_protected_n": 36015,
+        "transport_protected_n": 46305
+      }
+    },
+    {
+      "name": "correctable weight equals W33 vertex selector",
+      "passed": true,
+      "value": {
+        "envelope": {
+          "controller_bits": 64,
+          "measurement_states": "12157665459056928801",
+          "measurement_trits": 40,
+          "pauli_frame_bits": 7,
+          "pauli_frame_states": 81,
+          "projective_frame_bits": 6,
+          "projective_frame_states": 40
+        },
+        "protected": {
+          "active_protection_code": "[[82320,81,>=81]]",
+          "correctable_weight": 40,
+          "distance_lower_bound": 81,
+          "global_protected_n": 82320,
+          "steane_block": 343,
+          "theta_protected_n": 36015,
+          "transport_protected_n": 46305
+        }
+      }
+    },
+    {
+      "name": "classical selector uses 40 trits",
+      "passed": true,
+      "value": {
+        "architecture": {
+          "active_protection_code": "[[82320,81,>=81]]",
+          "base_css_code": "[[240,81,3]]",
+          "complement_theta": 4,
+          "controller_bits": 64,
+          "fusion_denominator": 2,
+          "gram_matrix_rank": 3,
+          "heawood_branch_size": 6,
+          "heawood_cycle_rank": 8,
+          "heawood_middle_shell": 12,
+          "heawood_vertices": 14,
+          "klm_denominator": 4,
+          "labeling_dimension": 3,
+          "logical_sector": 81,
+          "lovasz_theta": 10,
+          "q4_routing_code": "[[1296,81,4]]",
+          "selector_trits": 40,
+          "shannon_capacity": 40
+        },
+        "envelope": {
+          "controller_bits": 64,
+          "measurement_states": "12157665459056928801",
+          "measurement_trits": 40,
+          "pauli_frame_bits": 7,
+          "pauli_frame_states": 81,
+          "projective_frame_bits": 6,
+          "projective_frame_states": 40
+        }
+      }
+    },
+    {
+      "name": "controller bit envelope is 64",
+      "passed": true,
+      "value": {
+        "architecture": {
+          "active_protection_code": "[[82320,81,>=81]]",
+          "base_css_code": "[[240,81,3]]",
+          "complement_theta": 4,
+          "controller_bits": 64,
+          "fusion_denominator": 2,
+          "gram_matrix_rank": 3,
+          "heawood_branch_size": 6,
+          "heawood_cycle_rank": 8,
+          "heawood_middle_shell": 12,
+          "heawood_vertices": 14,
+          "klm_denominator": 4,
+          "labeling_dimension": 3,
+          "logical_sector": 81,
+          "lovasz_theta": 10,
+          "q4_routing_code": "[[1296,81,4]]",
+          "selector_trits": 40,
+          "shannon_capacity": 40
+        },
+        "envelope": {
+          "controller_bits": 64,
+          "measurement_states": "12157665459056928801",
+          "measurement_trits": 40,
+          "pauli_frame_bits": 7,
+          "pauli_frame_states": 81,
+          "projective_frame_bits": 6,
+          "projective_frame_states": 40
+        }
+      }
+    },
+    {
+      "name": "deterministic frame has 81 states",
+      "passed": true,
+      "value": {
+        "controller_bits": 64,
+        "measurement_states": "12157665459056928801",
+        "measurement_trits": 40,
+        "pauli_frame_bits": 7,
+        "pauli_frame_states": 81,
+        "projective_frame_bits": 6,
+        "projective_frame_states": 40
+      }
+    },
+    {
+      "name": "snake head and tail both read H1",
+      "passed": true,
+      "value": {
+        "classical_selector_trits": 40,
+        "correctable_weight": 40,
+        "head_projective_frame_states": 81,
+        "operation_input": "protected H1=81 matter sector",
+        "read": "the runtime starts and ends on the H1=81 information tail while the classical selector stays at V=40",
+        "tail_logical_h1": 81
+      }
+    },
+    {
+      "name": "splice has four regimes",
+      "passed": true,
+      "value": [
+        {
+          "exact": "210+270=480 and 420+540=960",
+          "name": "probabilistic_fusion_budget",
+          "read": "105 theta bonds + 135 transport bonds refine the 240 accepted W33 bonds",
+          "regime": "probabilistic"
+        },
+        {
+          "exact": "95+25=120; 120+39+81=240",
+          "name": "theta_u5_css_refinement",
+          "read": "CCCCXXV refines the CCCCVI CSS tick by resolving 120 as 95+25",
+          "regime": "quantum_error_correction"
+        },
+        {
+          "exact": "3^4=81",
+          "name": "deterministic_frame_lock",
+          "read": "measurement randomness is absorbed into an H1-sized Pauli frame",
+          "regime": "deterministic"
+        },
+        {
+          "exact": "2^63 < 3^40 < 2^64",
+          "name": "classical_selector_commit",
+          "read": "the final record is a 40-trit selector inside a 64-bit envelope",
+          "regime": "classical"
+        }
+      ]
+    },
+    {
+      "name": "external support includes KLM, RHG, and FBQC",
+      "passed": true,
+      "value": {
+        "fusion_based_quantum_computation": "https://arxiv.org/abs/2101.09310",
+        "klm_linear_optics": "https://www.nature.com/articles/35051009",
+        "photonic_switch_feedforward": "https://arxiv.org/abs/2109.13760",
+        "rhg_cluster_surface_code": "https://arxiv.org/abs/quant-ph/0510135"
+      }
+    }
+  ],
+  "checks_passed": 29,
+  "checks_total": 29,
+  "fusion_budget_split": {
+    "read": "p_fusion=1/2 splits 480 attempts as 210 theta + 270 transport",
+    "theta_expected_attempts": 210,
+    "total_expected_attempts": 480,
+    "transport_expected_attempts": 270
+  },
+  "honesty_boundary": "This is a finite scheduler splice and budget refinement. It does not simulate optical loss thresholds, detector dark counts, switch latency, biological chemistry, or empirical particle/gravity fits.",
+  "klm_budget_split": {
+    "read": "p_KLM=1/4 splits 960 primitives as 420 theta + 540 transport",
+    "theta_expected_primitives": 420,
+    "total_expected_primitives": 960,
+    "transport_expected_primitives": 540
+  },
+  "part": "CCCCXXVI",
+  "qec_refinement": {
+    "active_code": "[[82320,81,>=81]]",
+    "full_refined_identity": "95 + 25 + 39 + 81 = 240",
+    "scheduler_css_tick": "39 X-rank + 120 Z-rank + 81 logical = 240",
+    "theta_u5_refined_z_rank": "95 + 25 = 120"
+  },
+  "snake_closure": {
+    "classical_selector_trits": 40,
+    "correctable_weight": 40,
+    "head_projective_frame_states": 81,
+    "operation_input": "protected H1=81 matter sector",
+    "read": "the runtime starts and ends on the H1=81 information tail while the classical selector stays at V=40",
+    "tail_logical_h1": 81
+  },
+  "splice_layers": [
+    {
+      "exact": "210+270=480 and 420+540=960",
+      "name": "probabilistic_fusion_budget",
+      "read": "105 theta bonds + 135 transport bonds refine the 240 accepted W33 bonds",
+      "regime": "probabilistic"
+    },
+    {
+      "exact": "95+25=120; 120+39+81=240",
+      "name": "theta_u5_css_refinement",
+      "read": "CCCCXXV refines the CCCCVI CSS tick by resolving 120 as 95+25",
+      "regime": "quantum_error_correction"
+    },
+    {
+      "exact": "3^4=81",
+      "name": "deterministic_frame_lock",
+      "read": "measurement randomness is absorbed into an H1-sized Pauli frame",
+      "regime": "deterministic"
+    },
+    {
+      "exact": "2^63 < 3^40 < 2^64",
+      "name": "classical_selector_commit",
+      "read": "the final record is a 40-trit selector inside a 64-bit envelope",
+      "regime": "classical"
+    }
+  ],
+  "theorem": "The eight-tick protected photonic runtime and the four-layer theta/U(5) completion close to the W33 degree 12. The accepted carrier is 105+135=240. With p_fusion=1/2 this requires expected attempts 210+270=480, and with p_KLM=1/4 it requires primitive budget 420+540=960. The CSS validation tick is refined by 95+25=120 and 120+39+81=240, while deterministic feed-forward keeps an H1=81 Pauli frame and the classical selector commits 40 trits inside a 64-bit envelope.",
+  "title": "Fusion-Control Scheduler Splice",
+  "verified": true
+}

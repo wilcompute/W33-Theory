@@ -1,0 +1,126 @@
+{
+  "part": "MCCXLV",
+  "theorem": "Flag A2/E6 matter chart bridge",
+  "input_bridge": "w33_e8_spectral_bridge.py MCCXXIX-MCCXLIV",
+  "representative_flag": {
+    "point": 13,
+    "line": 1,
+    "point_vector": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "lines_through_point": [
+      1,
+      13,
+      16,
+      19
+    ],
+    "counts": {
+      "a2_root_singletons": 6,
+      "e6_triplets": 24,
+      "line_adjacent_triplets": 12,
+      "zero_adjacent_triplets": 12,
+      "plus_matter_triplets": 27,
+      "minus_matter_triplets": 27,
+      "all_triplets": 78,
+      "covered_corners": 240,
+      "plus_matter_corners": 81,
+      "minus_matter_corners": 81,
+      "e6_corners": 72
+    },
+    "exact_mod7_chart_certificate": {
+      "rank_A3_plus_2I": 159,
+      "minus2_nullity": 81,
+      "rank_with_plus_sector_zero_constraints": 240,
+      "rank_with_minus_sector_zero_constraints": 240,
+      "reading": "Over GF(7), A3+2I has rank 159. Adding zero-coordinate constraints on either 81-sector gives rank 240, so an exact lambda=-2 eigenvector is determined by its coordinates on either sector."
+    },
+    "triplet_quotient_rank_test": {
+      "golden_24d_triplet_sum_rank": 24,
+      "minus2_triplet_sum_rank": 35,
+      "reading": "The natural A2-triplet-sum quotient preserves rank 24, so it is not the missing rank-8 E8 projection."
+    },
+    "ternary_hypercube_budget": {
+      "vertices_per_matter_sector": 81,
+      "affine_nonneighbor_base": 27,
+      "fiber_size": 3,
+      "hamming_H_4_3_degree": 8,
+      "hamming_H_4_3_edges": 324,
+      "plus_induced_degree_profile": {
+        "8": 81
+      },
+      "minus_induced_degree_profile": {
+        "8": 81
+      },
+      "plus_induced_edges": 324,
+      "minus_induced_edges": 324,
+      "hamming_H_4_3_spectrum": {
+        "-4": 16,
+        "-1": 32,
+        "2": 24,
+        "5": 8,
+        "8": 1
+      },
+      "plus_induced_spectrum": {
+        "-4": 6,
+        "-3.44949": 6,
+        "-2.73205": 6,
+        "-1": 28,
+        "0.627719": 6,
+        "0.732051": 6,
+        "1.44949": 6,
+        "2": 8,
+        "5": 2,
+        "6.37228": 6,
+        "8": 1
+      },
+      "minus_induced_spectrum": {
+        "-4": 8,
+        "-2.37228": 12,
+        "-1.4641": 6,
+        "-1": 28,
+        "2": 8,
+        "3.37228": 12,
+        "5.4641": 6,
+        "8": 1
+      },
+      "same_budget_as_hamming_H_4_3": true,
+      "not_plain_hamming_graph": true
+    }
+  },
+  "all_flag_summary": {
+    "flags_checked": 160,
+    "bad_flags": [],
+    "minus2_chart_rank_profile": {
+      "81": 320
+    },
+    "e6_golden_rank_profile": {
+      "24": 160
+    },
+    "induced_degree_profile": {
+      "8": 25920
+    },
+    "affine_nonneighbor_count_profile": {
+      "27": 40
+    }
+  },
+  "reading": "A W33 point-line flag refines the E8-style 240=6+72+81+81 split into explicit packets: six same-point A2-root corners, twenty-four E6-root triples over adjacent points, and two 27x3 matter sectors over the affine nonneighbor cloud. Each 81 sector is a full exact coordinate chart for the lambda=-2 eigenspace; it has the same vertex/edge budget as the ternary hypercube H(4,3), but a different spectrum, so the sector is a twisted ternary hypercube rather than the plain Hamming network.",
+  "boundary": "This proves the ternary matter-chart layer and rules out the naive A2-triplet-sum projection as the E8 rank-8 bridge. The remaining target is an additional triality quotient/identification.",
+  "checks": {
+    "all_160_flags_checked": true,
+    "all_flags_have_6_24_27_27_triplet_split": true,
+    "all_points_have_27_affine_nonneighbors": true,
+    "minus2_eigenspace_nullity_is_81": true,
+    "plus_81_sector_is_exact_minus2_coordinate_chart": true,
+    "minus_81_sector_is_exact_minus2_coordinate_chart": true,
+    "all_81_sectors_have_numeric_minus2_rank_81": true,
+    "all_e6_sectors_carry_numeric_golden_rank_24": true,
+    "matter_sector_A3_induced_degree_is_8": true,
+    "matter_sector_has_hamming_vertex_edge_budget": true,
+    "matter_sector_is_twisted_not_plain_hamming": true,
+    "naive_triplet_sum_does_not_collapse_24d_to_8d": true
+  },
+  "n_verified": 12
+}

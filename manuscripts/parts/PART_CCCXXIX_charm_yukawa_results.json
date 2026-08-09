@@ -1,0 +1,130 @@
+{
+  "part": "CCCXXIX",
+  "title": "Charm Yukawa  y_c(MSbar, m_c) = 1/137  in W(3,3) constants",
+  "Verified": true,
+  "checks_total": 13,
+  "checks_passed": 13,
+  "checks": [
+    [
+      "y_c = 1 / 137",
+      true
+    ],
+    [
+      "137 = q^q*(mu+1) + lam",
+      true
+    ],
+    [
+      "137 = q^2*g + lam",
+      true
+    ],
+    [
+      "Both 137 forms agree",
+      true
+    ],
+    [
+      "y_c_W33 ~ 0.00730",
+      true
+    ],
+    [
+      "|z_y_c| < 1",
+      true
+    ],
+    [
+      "|z_m_c| < 1",
+      true
+    ],
+    [
+      "|z_y_c| < 0.1",
+      true
+    ],
+    [
+      "1.2 < m_c_pred < 1.4 GeV",
+      true
+    ],
+    [
+      "|y_c_W33 - alpha_em(0)| / alpha_em(0) < 0.05 %",
+      true
+    ],
+    [
+      "135 = q^q*(mu+1) = q^2*g",
+      true
+    ],
+    [
+      "y_b = q/(mu+1)^3 = 3/125 (CCCXXVIII)",
+      true
+    ],
+    [
+      "y_c denom - y_b denom = k = 12",
+      true
+    ]
+  ],
+  "constants": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "F": 24,
+    "G": 15,
+    "PHI3": 13,
+    "PHI4": 10,
+    "PHI6": 7
+  },
+  "boundary_target": {
+    "expression": "1 / (q^q*(mu+1) + lam) = 1 / (q^2*g + lam)",
+    "denominator": 137,
+    "denom_W33_forms": [
+      "q^q*(mu+1) + lam",
+      "q^2*g + lam"
+    ],
+    "fraction": "1/137",
+    "decimal": 0.0072992700729927005,
+    "scheme": "Charm Yukawa MS-bar at m_c ~ 1.27 GeV"
+  },
+  "external_inputs": {
+    "m_c_MSbar_GeV": 1.27,
+    "sigma_m_c": 0.02,
+    "v_EW_GeV": 246.21965,
+    "source": "PDG 2024 m_c(MSbar at m_c)"
+  },
+  "predictions": {
+    "y_c_W33": 0.0072992700729927005,
+    "y_c_data": 0.007294508071203216,
+    "y_c_residual": -4.762001789484528e-06,
+    "y_c_z_score": -0.04145407897017918,
+    "m_c_pred_GeV": 1.2708290815794037,
+    "m_c_residual": 0.0008290815794036455,
+    "m_c_z_score": 0.04145407897018227
+  },
+  "residuals": [
+    {
+      "id": "CHARM_YUKAWA_W33",
+      "observable": "y_c(MSbar, m_c)",
+      "theory_value": "1 / (q^q*(mu+1) + lam) = 1/137",
+      "theory_decimal": 0.0072992700729927005,
+      "measured_value": 0.007294508071203216,
+      "uncertainty": 0.00011487414285359396,
+      "residual": -4.762001789484528e-06,
+      "z_score": -0.04145407897017918,
+      "status": "PASS_WITHIN_1_SIGMA"
+    },
+    {
+      "id": "CHARM_MASS_FROM_W33_AND_V",
+      "observable": "m_c(MSbar) predicted from y_c_W33 and v_EW",
+      "theory_value": "(1/137) * v_EW / sqrt(2)",
+      "theory_decimal": 1.2708290815794037,
+      "measured_value": 1.27,
+      "uncertainty": 0.02,
+      "residual": 0.0008290815794036455,
+      "z_score": 0.04145407897018227,
+      "status": "PASS_WITHIN_1_SIGMA"
+    }
+  ],
+  "fine_structure_link": {
+    "alpha_em_inv_0": 137.036,
+    "y_c_inv": 137,
+    "comment": "y_c(MSbar, m_c) ~= alpha_em(0) at sub-percent precision; both equal 1/137 in W(3,3) closed form (Suzuki tau-alpha CCLVI)."
+  },
+  "theorem_statement": "The W(3,3) closed form for the charm-quark Yukawa coupling at the MS-bar scheme at the c-quark mass scale, y_c(MSbar, m_c) = 1 / (q^q*(mu+1) + lam) = 1/137, predicts m_c = (1/137) * v_EW / sqrt(2) = 1.271 GeV, within 0.05 sigma of the PDG 2024 value 1.27 +- 0.02 GeV.  The denominator 137 is the W(3,3) prime previously identified in the Suzuki tau-alpha bridge (CCLVI) as the fine-structure constant inverse alpha_em^{-1}(0).",
+  "honesty_boundary": "MS-bar at m_c scheme. y_c at higher scales (e.g. M_Z, M_t) differs by RG running. The W33 prediction applies to the renormalization-group-fixed point at m_c. The numerical coincidence with alpha_em^{-1}(0) is unexplained; both quantities equal 1/137 in W(3,3) and within 0.04 sigma in PDG data."
+}

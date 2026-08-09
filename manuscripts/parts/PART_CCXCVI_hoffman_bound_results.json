@@ -1,0 +1,25 @@
+{
+  "part": "CCXCVI",
+  "title": "Hoffman Ratio Bound for W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "ALL_PASS",
+  "lambda_min": -4,
+  "hoffman_numer": 160,
+  "hoffman_denom": 16,
+  "hoffman_bound": 10,
+  "alpha": 10,
+  "omega": 4,
+  "alpha_times_omega": 40,
+  "is_delsarte": true,
+  "clique_bound": 4,
+  "discoveries": [
+    "Hoffman bound \u03b1 \u2264 V|\u03bb_min|/(k+|\u03bb_min|) = 160/16 = 10 is achieved",
+    "W(3,3) is a Delsarte graph: independence number = Hoffman bound",
+    "Denominator 16 = EW_GAUGE_4\u00b2 = (k + |s_eig|)",
+    "Numerator 160 = V \u00d7 EW_GAUGE_4 = EDGES \u00d7 (Q-1)/Q",
+    "ALPHA \u00d7 OMEGA = 10 \u00d7 4 = 40 = V (product identity)",
+    "Clique bound on complement: \u03c9(W(3,3)) \u2264 4 = EW_GAUGE_4 (tight)",
+    "ALPHA = V // EW_GAUGE_4 = 10 (independence = vertices / gauge)"
+  ]
+}

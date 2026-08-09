@@ -1,0 +1,47 @@
+{
+  "theorem": "Poisson-Kemeny Green kernel",
+  "kemeny_constant": {
+    "fraction": "801/20",
+    "numerator": 801,
+    "denominator": 20,
+    "float": 40.05
+  },
+  "centered_diagonal": {
+    "fraction": "801/800",
+    "numerator": 801,
+    "denominator": 800,
+    "float": 1.00125
+  },
+  "hitting_adjacent": {
+    "fraction": "39",
+    "numerator": 39,
+    "denominator": 1,
+    "float": 39.0
+  },
+  "hitting_nonedge": {
+    "fraction": "42",
+    "numerator": 42,
+    "denominator": 1,
+    "float": 42.0
+  },
+  "effective_resistance_adjacent": {
+    "fraction": "13/80",
+    "numerator": 13,
+    "denominator": 80,
+    "float": 0.1625
+  },
+  "effective_resistance_nonedge": {
+    "fraction": "7/40",
+    "numerator": 7,
+    "denominator": 40,
+    "float": 0.175
+  },
+  "kirchhoff_index": {
+    "fraction": "267/2",
+    "numerator": 267,
+    "denominator": 2,
+    "float": 133.5
+  },
+  "poisson_kemeny_green_kernel_detected": true,
+  "claim_boundary": "finite W33 random-walk Poisson/Kemeny kernel and hitting-resistance identity; not a continuum stochastic-process limit"
+}

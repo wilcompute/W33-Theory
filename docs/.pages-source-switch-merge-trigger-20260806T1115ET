@@ -1,3 +1,0 @@
-Trigger the installed Pages source controller through a native merge event.
-target_source=main:/docs
-expected_index_blob=41a8d733f42da18282fa276f5d2fa82bac7516f6

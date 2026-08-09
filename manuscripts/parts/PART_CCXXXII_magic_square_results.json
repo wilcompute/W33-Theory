@@ -1,0 +1,83 @@
+{
+  "Part": "CCXXXII",
+  "Title": "Freudenthal-Tits Magic Square from W(3,3)",
+  "Verified": true,
+  "checks_passed": 32,
+  "checks_total": 32,
+  "SRG_parameters": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "M_LAM": 27,
+    "LAP_MID": 10,
+    "LAP_TOP": 16,
+    "EDGES": 240,
+    "AUT_ORDER": 51840
+  },
+  "exceptional_row_dims": {
+    "F4": 52,
+    "E6": 78,
+    "E7": 133,
+    "E8": 248
+  },
+  "rank_sequence": {
+    "F4": 4,
+    "E6": 6,
+    "E7": 7,
+    "E8": 8
+  },
+  "albert_algebra": {
+    "dimension": 27,
+    "rank": 3,
+    "formula": "3*dim(O)+3*dim(R)"
+  },
+  "key_representations": {
+    "27_E6": 27,
+    "56_E7": 56,
+    "248_E8": 248,
+    "26_F4": 26
+  },
+  "row_sums": {
+    "O": 511,
+    "H": 255,
+    "C": 137,
+    "R": 84
+  },
+  "total_sum": 987,
+  "diagonal_sum": 333,
+  "coxeter_numbers": {
+    "F4": 12,
+    "E6": 12,
+    "E7": 18,
+    "E8": 30,
+    "sum": 72
+  },
+  "magic_square": [
+    [
+      3,
+      8,
+      21,
+      52
+    ],
+    [
+      8,
+      16,
+      35,
+      78
+    ],
+    [
+      21,
+      35,
+      66,
+      133
+    ],
+    [
+      52,
+      78,
+      133,
+      248
+    ]
+  ]
+}

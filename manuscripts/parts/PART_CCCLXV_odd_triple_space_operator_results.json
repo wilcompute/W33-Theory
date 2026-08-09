@@ -1,0 +1,23 @@
+{
+  "part": "CCCLXV",
+  "title": "Odd-Triple Space Operator Compiler",
+  "verified": true,
+  "checks_passed": 9,
+  "checks_total": 9,
+  "operator": "K=M^T M on 4480 odd triples",
+  "entry_rule": "K_ab = size of intersection of odd triples a and b",
+  "odd_type_distribution": {"1": 4320, "3": 160},
+  "global_offdiagonal_intersection_profile": {"0": 7901280, "1": 2028960, "2": 104520},
+  "row_profile_by_odd_triple_type": {
+    "1": {"0": 3523, "1": 907, "2": 49, "3": 1},
+    "3": {"0": 3531, "1": 891, "2": 57, "3": 1}
+  },
+  "nonzero_spectrum": {"1008": 1, "328": 24, "304": 15},
+  "rank": 40,
+  "nullity": 4440,
+  "active_shadow": "40-dimensional vertex shadow from M M^T",
+  "null_kernel": "4440-dimensional odd-triple null/gauge kernel",
+  "architecture_upgrade": "CCCLXIV made M the primitive source of the response generator. CCCLXV analyzes the dual odd-triple operator M^T M and shows that the 4480-dimensional odd-triple space has rank 40 and nullity 4440.",
+  "theorem": "For the W33 odd-triple incidence operator M, the odd-triple operator K=M^T M has entries equal to triple intersection size. Its nonzero spectrum is 1008^1, 328^24, 304^15, equal to the spectrum of M M^T, so rank(K)=40 and nullity(K)=4440. The odd-triple space therefore contains a 40-dimensional active vertex shadow and a large null/gauge kernel.",
+  "honesty_boundary": "This identifies the finite nullspace dimension and nonzero spectrum but does not yet construct an explicit basis for the 4440-dimensional kernel."
+}

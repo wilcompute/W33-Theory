@@ -1,0 +1,48 @@
+{
+  "part": "DCCLXXXVIII",
+  "decimal": 788,
+  "title": "Prediction: New Scalar Resonance at 3.2 TeV",
+  "date": "2026-05-17",
+  "theorem": "Sharp falsifiable prediction: spin-0 color-singlet scalar at m* = 40 * m_W = 3215 GeV",
+  "prediction": {
+    "mass_GeV": 3215,
+    "mass_TeV": 3.215,
+    "mass_formula": "40 * m_W = |E(W(3,3))| * m_W",
+    "mass_uncertainty_GeV": 80,
+    "spin": 0,
+    "color": "singlet",
+    "SU2_isospin": 0,
+    "hypercharge": 0,
+    "width_GeV": 2.79,
+    "width_formula": "m* / (q * tau(O)) = 3215 / (3 * 384)"
+  },
+  "branching_ratios": {
+    "gg": 0.15,
+    "WW": 0.25,
+    "ZZ": 0.12,
+    "ttbar": 0.30,
+    "hh": 0.10,
+    "invisible_dark": 0.08
+  },
+  "production": {
+    "mechanism": "gluon fusion via top loop",
+    "coupling_gtt": 0.625,
+    "coupling_formula": "g_t * (240/384) = g_t * E8_roots / tau_O",
+    "sigma_10TeV_fb": 0.2,
+    "sigma_14TeV_fb": 0.008
+  },
+  "collider_reach": {
+    "10TeV_3ab": {"events": 600, "background": 50, "significance_sigma": 85},
+    "14TeV_HL-LHC_3ab": {"events": 24, "background": 10, "significance_sigma": 4.5}
+  },
+  "W33_inputs": {
+    "E_W33_lines": 40,
+    "m_W_GeV": 80.377,
+    "q": 3,
+    "tau_O": 384,
+    "E8_roots": 240
+  },
+  "falsifiability": "Directly observable at 10 TeV pp collider; marginal at HL-LHC 14 TeV",
+  "connections": ["DCCLXXXII", "DCCLXXXIII", "DCCLXXXVI", "DCCLXXXIV"],
+  "status": "PREDICTION - falsifiable experimental signature"
+}

@@ -1,0 +1,23 @@
+{
+  "part": "XXXII",
+  "title": "Baryon Asymmetry and Leptogenesis from W(3,3) CP Violation",
+  "M_R_GeV": 4.824e13,
+  "epsilon_1": -2.41e-7,
+  "DI_bound": 3.18e-7,
+  "DI_saturation": 0.758,
+  "washout_K": 2.34e3,
+  "kappa": 1.14e-4,
+  "eta_B_W33": 4.89e-10,
+  "eta_B_PDG": 6.10e-10,
+  "eta_B_ratio": 0.802,
+  "omega3_real": -0.5,
+  "omega3_imag": 0.8660254037844387,
+  "predictions": {
+    "P43": "epsilon_1 (CP asymmetry) = -2.41e-7 from g3 holonomy omega3",
+    "P44": "eta_B = 4.89e-10 (PDG: 6.1e-10, ratio=0.80 — within 20%)",
+    "P45": "M_R = 4.82e13 GeV is the leptogenesis scale, same as W(3,3) seesaw",
+    "P46": "Washout K = 2340: strong washout regime, leptogenesis viable in W(3,3)"
+  },
+  "theorem_XXXII_1": "The baryon asymmetry of the universe is determined by the same Z3 holonomy class [omega3 in H^1(W(3,3),Z3)] that fixes the PMNS Dirac CP phase delta=-pi/2.",
+  "next": "Part XXXIII: Dark matter candidate from W(3,3) E6 singlet sector"
+}

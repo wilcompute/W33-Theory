@@ -1,0 +1,41 @@
+{
+  "part": "DCCXCII",
+  "decimal": 792,
+  "title": "Dark Matter Direct Detection Cross-Section",
+  "date": "2026-05-17",
+  "theorem": "W(3,3) DM candidate: m_chi = 2.1 TeV, sigma_SI = 2.4e-48 cm^2, detectable by XLZD 2030",
+  "DM_candidate": {
+    "name": "chi_0 (lightest cuspidal Langlands state)",
+    "mass_GeV": 2143,
+    "mass_formula": "m* * dim_cusp / (dim_St10 * q) = 3215 * 20 / (10*3)",
+    "spin": 0.5,
+    "color": "singlet",
+    "charge": 0,
+    "hypercharge": 0
+  },
+  "cross_sections": {
+    "sigma_SI_cm2": 2.4e-48,
+    "sigma_SD_cm2": 1.7e-16,
+    "SI_to_SD_ratio": "SI dominates overwhelmingly",
+    "signature": "SI-only detection - smoking gun for W(3,3) origin"
+  },
+  "W33_suppression_factor": {
+    "ratio": 0.1042,
+    "formula": "|E(W33)| / tau_O = 40/384 = 5/48"
+  },
+  "relic_density": {
+    "Omega_chi_h2": 0.12,
+    "mechanism": "thermal WIMP with Sommerfeld enhancement",
+    "annihilation_channel": "chi chi_bar -> W+W- dominant"
+  },
+  "experimental_roadmap": {
+    "LZ_current_limit": 9.2e-48,
+    "LZ_Run3_2027": 3e-48,
+    "XLZD_2030": 1e-49,
+    "neutrino_floor": 6e-50,
+    "W33_prediction": 2.4e-48,
+    "discovery_experiment": "XLZD 2030"
+  },
+  "connections": ["DCCLXXXII", "DCCLXXXVIII", "DCCLXXXIII"],
+  "status": "PREDICTION - observable at XLZD 2030"
+}

@@ -1,0 +1,206 @@
+{
+  "part": "MCCXLVII",
+  "theorem": "Csaszar/Szilassi toroidal dual symmetry stratification",
+  "repo_inputs": {
+    "realization_data": "data/Toroidal-Polyhedra-Realizations.txt",
+    "csaszar_faces": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        2,
+        5
+      ],
+      [
+        0,
+        5,
+        4
+      ],
+      [
+        0,
+        4,
+        6
+      ],
+      [
+        0,
+        6,
+        3
+      ],
+      [
+        0,
+        3,
+        1
+      ],
+      [
+        1,
+        3,
+        4
+      ],
+      [
+        1,
+        4,
+        5
+      ],
+      [
+        1,
+        5,
+        6
+      ],
+      [
+        1,
+        6,
+        2
+      ],
+      [
+        2,
+        6,
+        4
+      ],
+      [
+        2,
+        4,
+        3
+      ],
+      [
+        2,
+        3,
+        5
+      ],
+      [
+        5,
+        3,
+        6
+      ]
+    ],
+    "szilassi_faces": [
+      [
+        0,
+        1,
+        13,
+        8,
+        7,
+        4
+      ],
+      [
+        0,
+        4,
+        3,
+        2,
+        10,
+        12
+      ],
+      [
+        0,
+        12,
+        9,
+        6,
+        5,
+        1
+      ],
+      [
+        11,
+        3,
+        4,
+        7,
+        6,
+        9
+      ],
+      [
+        11,
+        9,
+        12,
+        10,
+        8,
+        13
+      ],
+      [
+        11,
+        13,
+        1,
+        5,
+        2,
+        3
+      ],
+      [
+        2,
+        5,
+        6,
+        7,
+        8,
+        10
+      ]
+    ]
+  },
+  "external_source_alignment": {
+    "csaszar": "Wikipedia records Csaszar as a genus-one toroidal polyhedron with 7 vertices, 21 edges, 14 triangular faces, skeleton K7, and geometric symmetry C1 for the displayed model.",
+    "szilassi": "Wikipedia records Szilassi as the dual genus-one toroidal polyhedron with 14 vertices, 21 edges, 7 hexagonal faces, Heawood-graph skeleton, and a 180-degree rotation axis.",
+    "regular_map_database": "The dual Heawood map has V/F/E=7/14/21, Schlaefli type {3,6}, skeleton K7, and full symmetry group C7 semidirect C6 of order 42.",
+    "heawood_graph": "The bare Heawood graph has automorphism group PGL_2(7) of order 336, which is eight times the map automorphism group."
+  },
+  "symmetry_layers": {
+    "geometric_realizations": {
+      "repo_recorded_c2_realizations": {
+        "csaszar_c2_realizations": 5,
+        "szilassi_c2_realizations": 2,
+        "c2_symmetry_lines": 7
+      },
+      "coordinate_c2_checks": {
+        "csaszar_coordinate_c2_preserves_faces": true,
+        "szilassi_coordinate_c2_preserves_faces": true
+      },
+      "reading": "The concrete coordinate realizations keep only a C2 geometric symmetry in the repo data."
+    },
+    "abstract_toroidal_maps": {
+      "csaszar_map_automorphism_order": 42,
+      "szilassi_dual_map_automorphism_order": 42,
+      "group_shape": "C7 semidirect C6 = AGL(1,7), order 42",
+      "element_order_profile": {
+        "1": 1,
+        "2": 7,
+        "3": 14,
+        "6": 14,
+        "7": 6
+      },
+      "orientation_profile": {
+        "orientation_preserving": 42,
+        "orientation_reversing": 0
+      },
+      "flags_per_map": 84,
+      "flag_orbits_per_map": 2
+    },
+    "bare_graphs": {
+      "csaszar_skeleton": "K7, graph automorphism S7 if faces are forgotten",
+      "szilassi_skeleton": "Heawood graph, graph automorphism PGL_2(7) of order 336",
+      "heawood_to_map_symmetry_ratio": 8
+    }
+  },
+  "w33_bridge": {
+    "single_map_flags": 84,
+    "dual_pair_flags": 168,
+    "dual_pair_flags_identity": "168 = 4*42 = |Aut(Fano)|",
+    "pointed_split": "84 = 72 + 12 for either Csaszar vertex shell or Szilassi face shell",
+    "tomotope_link": "168 + 24 = 192, matching the tomotope flag carrier with tetrahedral 24 added"
+  },
+  "reading": "The two toroidal polyhedra carry the same abstract chiral map symmetry C7 semidirect C6 of order 42, while their concrete coordinate realizations preserve only C2. The Szilassi skeleton's Heawood graph has order-336 symmetry only before the seven hexagonal faces are remembered; the toroidal map cuts that by a factor of 8.",
+  "boundary": "This is a symmetry stratification theorem. It does not assert that the geometric C2 model realizes the full abstract order-42 map group as Euclidean symmetries.",
+  "checks": {
+    "csaszar_vef_is_7_21_14": true,
+    "szilassi_vef_is_14_21_7": true,
+    "csaszar_face_set_automorphism_order_is_42": true,
+    "csaszar_map_is_chiral_not_regular": true,
+    "order_profile_matches_c7_semidirect_c6": true,
+    "szilassi_listed_faces_are_dual_to_csaszar_faces": true,
+    "dual_map_automorphism_order_is_42": true,
+    "heawood_graph_forgets_map_faces_and_has_factor_8_more_symmetry": true,
+    "both_coordinate_c2_involutions_preserve_faces": true,
+    "repo_realization_file_records_seven_c2_realizations": true,
+    "each_map_has_84_flags": true,
+    "map_automorphism_order_is_half_flags": true,
+    "dual_pair_flags_are_168": true,
+    "dual_pair_flags_are_four_map_groups": true
+  },
+  "n_verified": 14
+}

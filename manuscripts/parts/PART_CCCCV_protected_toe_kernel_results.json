@@ -1,0 +1,259 @@
+{
+  "architecture_upgrade": "Promotes the scattered photonic, H1/E8, CSS, and Steane-lift artifacts into one protected finite TOE-kernel certificate.",
+  "checks": [
+    {
+      "name": "photonic runtime verified",
+      "passed": true,
+      "value": 63
+    },
+    {
+      "name": "photonic runtime has 63 checks",
+      "passed": true,
+      "value": 63
+    },
+    {
+      "name": "W33 constants match 40/12/240",
+      "passed": true,
+      "value": {
+        "Albert": 27,
+        "Aut": 51840,
+        "H1": 81,
+        "Phi3": 13,
+        "Phi4": 10,
+        "Phi6": 7,
+        "directed": 480,
+        "edges": 240,
+        "k": 12,
+        "lambda": 2,
+        "mu": 4,
+        "q": 3,
+        "triangle_trace": 960,
+        "triangles": 160,
+        "v": 40
+      }
+    },
+    {
+      "name": "H1 certificate is complete",
+      "passed": true,
+      "value": {
+        "architecture_upgrade": "Runs the actual Smith-normal-form invariant-factor computation for the 201 x 160 H1 relation matrix when the backend is available.",
+        "certificate_statement": "The quotient has 120 unit relations and free rank 81, so H1 is Z^81.",
+        "checks_passed": 6,
+        "checks_total": 6,
+        "complete_certificate": true,
+        "free_rank": 81,
+        "honesty_boundary": "The final torsion-free statement is made only when complete_certificate is true; otherwise this file reports exact rank with backend-unavailable status.",
+        "part": "CCCLXXXIII",
+        "rank_Q": 120,
+        "relation_matrix_shape": [
+          201,
+          160
+        ],
+        "smith_report": {
+          "all_nonzero_unit": true,
+          "nonunit_factors": [],
+          "nonzero_count": 120,
+          "status": "computed",
+          "unit_count": 120
+        },
+        "title": "Complete SNF H1 Certificate",
+        "verified": true
+      }
+    },
+    {
+      "name": "H1 free rank = 81",
+      "passed": true,
+      "value": 81
+    },
+    {
+      "name": "photonic E8 audit sees H1 = 81",
+      "passed": true,
+      "value": {
+        "bracket_gate_present": true,
+        "bracket_gate_required_conditions": [
+          "complete H1 Smith-normal-form certificate",
+          "E8 structure constants artifact exists",
+          "E8 root metadata artifact exists",
+          "Z3 bracket verifier output exists and reports status=ok"
+        ],
+        "e8_dims": {
+          "g0": 86,
+          "g1": 81,
+          "g2": 81,
+          "total": 248
+        },
+        "g1g1_firewall_bad_couplings": 162,
+        "g1g1_nonzero_brackets": 810,
+        "g1g1_status": "ok",
+        "g1g2_cartan_outputs": 81,
+        "g1g2_pairs": 6561,
+        "g1g2_status": "ok",
+        "grade_rules": {
+          "g0,g0": "g0",
+          "g0,g1": "g1",
+          "g0,g2": "g2",
+          "g1,g1": "g2",
+          "g1,g2": "g0",
+          "g2,g2": "g1"
+        },
+        "h1_certificate_present": true,
+        "h1_complete_certificate": true,
+        "h1_free_rank": 81,
+        "h1_rank_Q": 120,
+        "h1_unit_relations": 120,
+        "manifest_present": true,
+        "z3_declared_output_present": true,
+        "z3_direct_sum_violations": {
+          "a2_mixes_into_e6": 0,
+          "e6_mixes_into_a2": 0,
+          "noncommuting_e6_a2": 0
+        },
+        "z3_grade_violations": 0,
+        "z3_status": "ok",
+        "z3_terms_checked": 8347,
+        "z3_verifier_present": true
+      }
+    },
+    {
+      "name": "E8 Z3 verifier status ok",
+      "passed": true,
+      "value": "ok"
+    },
+    {
+      "name": "E8 Z3 verifier checked 8347 terms",
+      "passed": true,
+      "value": {
+        "bracket_terms_checked": 8347,
+        "cartan_dim": 8,
+        "direct_sum_violations": {
+          "a2_mixes_into_e6": 0,
+          "e6_mixes_into_a2": 0,
+          "noncommuting_e6_a2": 0
+        },
+        "grade_term_violations": 0,
+        "n": 248,
+        "nonzero_bracket_pairs_i_lt_j": 7752,
+        "root_dim": 240
+      }
+    },
+    {
+      "name": "E8 Z3 grade violations zero",
+      "passed": true,
+      "value": {
+        "bracket_terms_checked": 8347,
+        "cartan_dim": 8,
+        "direct_sum_violations": {
+          "a2_mixes_into_e6": 0,
+          "e6_mixes_into_a2": 0,
+          "noncommuting_e6_a2": 0
+        },
+        "grade_term_violations": 0,
+        "n": 248,
+        "nonzero_bracket_pairs_i_lt_j": 7752,
+        "root_dim": 240
+      }
+    },
+    {
+      "name": "CSS core is [[240,81,3]]",
+      "passed": true,
+      "value": {
+        "d": 3,
+        "d_X": 3,
+        "d_Z": 4,
+        "k": 81,
+        "n": 240,
+        "notation": "[[240,81,3]]"
+      }
+    },
+    {
+      "name": "CSS lift verified",
+      "passed": true,
+      "value": 15
+    },
+    {
+      "name": "Steane length = Phi6 = 7",
+      "passed": true,
+      "value": {
+        "d": 3,
+        "k": 1,
+        "n": 7,
+        "name": "Steane",
+        "notation": "[[7,1,3]]",
+        "w33_read": "7 = Phi6, 3 = q, 6 stabilizers = K/lambda"
+      }
+    },
+    {
+      "name": "three-lift code is [[82320,81,>=81]]",
+      "passed": true,
+      "value": {
+        "guaranteed_correctable_weight": 40,
+        "interpretation": "the third Phi6/Steane lift makes the distance lower bound equal to the H1 matter rank and the correctable weight equal to the W33 vertex count",
+        "logical_sector_count": 81,
+        "three_lift_code": "[[82320,81,>=81]]"
+      }
+    },
+    {
+      "name": "protected distance lower bound equals H1",
+      "passed": true,
+      "value": {
+        "correctable_weight": 40,
+        "distance_lower_bound": 81,
+        "k": 81,
+        "level": 3,
+        "n": 82320,
+        "physical_per_logical": "82320/81"
+      }
+    },
+    {
+      "name": "protected correctable weight equals V",
+      "passed": true,
+      "value": {
+        "guaranteed_correctable_weight": 40,
+        "interpretation": "the third Phi6/Steane lift makes the distance lower bound equal to the H1 matter rank and the correctable weight equal to the W33 vertex count",
+        "logical_sector_count": 81,
+        "three_lift_code": "[[82320,81,>=81]]"
+      }
+    },
+    {
+      "name": "classical record trits equals V",
+      "passed": true,
+      "value": {
+        "directed_environment_fanout": 480,
+        "exact_word_bound": "2^63 < 3^40 < 2^64",
+        "interpretation": "the full W33 measurement record is a single 64-bit-class classical selector word",
+        "measurement_word_trits": 40
+      }
+    },
+    {
+      "name": "logical sector equals protected distance equals H1",
+      "passed": true,
+      "value": {
+        "d3": 81,
+        "k": 81
+      }
+    }
+  ],
+  "checks_passed": 17,
+  "checks_total": 17,
+  "closure_equalities": {
+    "correctable_weight": 40,
+    "e8_z3_terms_checked": 8347,
+    "logical_sector": 81,
+    "protected_distance_lower_bound": 81,
+    "steane_length": 7,
+    "w33_vertices": 40
+  },
+  "honesty_boundary": "This is the solved finite protected information kernel. It does not claim that every empirical Standard Model or gravitational observable has been derived or fit from data.",
+  "kernel_stack": [
+    "W33 projective two-qutrit carrier: 40 points, 240 edges",
+    "photonic runtime: probabilistic assembly -> deterministic MBQC -> 40-trit record",
+    "topological memory: H1(W33;Z)=Z^81",
+    "E8 operation gate: Z3 grading verified on 8347 bracket terms",
+    "bare CSS core: [[240,81,3]]",
+    "protected Steane/Phi6 lift: [[82320,81,>=81]]"
+  ],
+  "part": "CCCCV",
+  "theorem": "The current finite W33 kernel has a verified protected information stack: a 40-point photonic carrier, H1=Z^81 matter memory, an E8 Z3 operation gate verified on 8347 bracket terms, and a protected CSS architecture [[82320,81,>=81]] whose correctable weight is 40.",
+  "title": "Protected W33 / H1 / E8 TOE Kernel",
+  "verified": true
+}

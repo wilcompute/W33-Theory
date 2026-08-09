@@ -1,0 +1,2746 @@
+{
+  "architecture_upgrade": "The CCCCXXVII finite-to-curved handoff now has an exact EH coefficient extractor attached to it. The protected photonic runtime supplies H1=81, the [[82320,81,>=81]] code, and the 40-trit selector; the curved CP2_9/K3_16 refinement tower supplies projectors and residues that recover c6=12480, cEH=320, a2=2240, and x=3/13 exactly.",
+  "checks": [
+    {
+      "name": "CCCCXXVII handoff artifact is verified",
+      "passed": true,
+      "value": 36
+    },
+    {
+      "name": "handoff preserved protected photonic code",
+      "passed": true,
+      "value": {
+        "active_code": "[[82320,81,>=81]]",
+        "edge_carrier": 240,
+        "fusion_budget": {
+          "read": "p_fusion=1/2 splits 480 attempts as 210 theta + 270 transport",
+          "theta_expected_attempts": 210,
+          "total_expected_attempts": 480,
+          "transport_expected_attempts": 270
+        },
+        "h1_logical": 81,
+        "klm_budget": {
+          "read": "p_KLM=1/4 splits 960 primitives as 420 theta + 540 transport",
+          "theta_expected_primitives": 420,
+          "total_expected_primitives": 960,
+          "transport_expected_primitives": 540
+        },
+        "selector_trits": 40
+      }
+    },
+    {
+      "name": "handoff boundary stays conservative",
+      "passed": true,
+      "value": "This proves a finite-to-curved product handoff, not the final Einstein-Hilbert spectral-action asymptotic theorem. The finite kernel does not by itself create a 4D Weyl law; the external curved refinement family supplies the genuine continuum scale."
+    },
+    {
+      "name": "mode projector builder is ok",
+      "passed": true,
+      "value": "The curved refinement tower itself now carries exact mode projectors. The cosmological 120-mode, the Einstein-Hilbert-like 6-mode, and the topological 1-mode are extracted exactly from three successive refinement levels. So the discrete EH channel is not merely an asymptotic fit or a visible correction term; it is a genuine projector on the refinement sequence, and for the full finite package its projector-extracted coefficient is exactly 12480 at every step."
+    },
+    {
+      "name": "mode residue builder is ok",
+      "passed": true,
+      "value": "The curved refinement bridge is now an exact pole theorem. The integrated first-moment tower has a rational generating function with poles only at z = 1/120, 1/6, and 1. The normalized residue at the 6-pole is exactly the EH-like channel. For the full finite W33 package, dividing that residue by the seed six-mode recovers the same discrete EH coefficient 12480 on both CP2_9 and K3_16, and the same rank-39 normalization recovers the continuum coefficient 320. So the curved EH bridge is now visible not only as a barycentric mode and not only as a projector, but also as an exact residue of the refinement generating function."
+    },
+    {
+      "name": "continuum extractor builder is ok",
+      "passed": true,
+      "value": "The curved refinement bridge now has an exact three-sample continuum extractor. From any three successive refinement levels of either CP2_9 or K3_16, the same formulas recover the discrete EH coefficient 12480, the continuum EH coefficient 320, and the topological coefficient a2 = 2240 exactly. So the continuum EH normalization is already a rigid invariant of the discrete refinement tower itself."
+    },
+    {
+      "name": "finite spectral reconstruction builder is ok",
+      "passed": true,
+      "value": "The curved refinement tower now reconstructs the full finite Dirac/Hodge package, not only the graph Rosetta data underneath it. From q = 3, SRG(40,12,2,4), the adjacency spectrum (12,2,-4), the live Betti law b1 = q^4 = 81, and the scalar coexact/high-degree channel q+1 = 4, one recovers the chain dimensions (40,240,160,40), the boundary ranks (39,120,40), the Hodge/Dirac spectrum {0^82, 4^320, 10^48, 16^30}, and the exact moments a0 = 480, a2 = 2240, a4 = 17600. So the curved bridge already recovers the internal finite spectral-action package itself."
+    },
+    {
+      "name": "roundtrip closure builder is ok",
+      "passed": true,
+      "value": "The discrete-to-continuum bridge is now an exact roundtrip closure at the coefficient level. The curved tower reconstructs the full finite internal package, and that finite package predicts back the same curved coefficients c_EH,cont = 320, c_6 = 12480, a2 = 2240, and x = 3/13 on every curved sample."
+    },
+    {
+      "name": "curved Rosetta reconstruction builder is ok",
+      "passed": true,
+      "value": "The curved tower now reconstructs the native graph geometry itself. From the curved electroweak lock x = 3/13, the discrete-to-continuum ratio 39, the topological ratio 7, and the exceptional dimensions 52 and 56, one recovers q = 3, Phi_3 = 13, Phi_6 = 7, the SRG data (v,k,lambda,mu) = (40,12,2,4), and the adjacency spectrum (k,r,s) = (12,2,-4). So the curved refinement tower is already an inverse Rosetta reconstruction of the internal SRG and spectral data, not only of the promoted observables."
+    },
+    {
+      "name": "curved Weinberg lock builder is ok",
+      "passed": true,
+      "value": "The curved refinement tower now reconstructs the electroweak master variable itself. Any three successive refinement levels already give c_6 and c_EH, and therefore x = 9 c_EH / c_6 = 3/13. Through the one-generator closure this recovers the promoted Cabibbo, PMNS, Omega_Lambda, Higgs, and spectral/gravity ratios. Using the exceptional residue dictionary the same statement becomes x = 9*(40*8)/(40*6*52), so the curved exceptional bridge already recovers the electroweak generator, not only the gravity channel."
+    },
+    {
+      "name": "tower characteristic polynomial is exact",
+      "passed": true,
+      "value": "x^3 - 127x^2 + 846x - 720"
+    },
+    {
+      "name": "shift projectors isolate 120, 6, and 1 modes",
+      "passed": true,
+      "value": {
+        "P_1": "((E-120)(E-6))/595",
+        "P_120": "((E-6)(E-1))/13566",
+        "P_6": "-((E-120)(E-1))/570"
+      }
+    },
+    {
+      "name": "projector finite a0 is 480",
+      "passed": true,
+      "value": {
+        "a0": {
+          "exact": "480",
+          "float": 480.0
+        },
+        "a2": {
+          "exact": "2240",
+          "float": 2240.0
+        },
+        "einstein_hilbert_coefficient": {
+          "exact": "12480",
+          "float": 12480.0
+        }
+      }
+    },
+    {
+      "name": "projector finite a2 is 2240",
+      "passed": true,
+      "value": {
+        "a0": {
+          "exact": "480",
+          "float": 480.0
+        },
+        "a2": {
+          "exact": "2240",
+          "float": 2240.0
+        },
+        "einstein_hilbert_coefficient": {
+          "exact": "12480",
+          "float": 12480.0
+        }
+      }
+    },
+    {
+      "name": "projector finite EH coefficient is 12480",
+      "passed": true,
+      "value": {
+        "a0": {
+          "exact": "480",
+          "float": 480.0
+        },
+        "a2": {
+          "exact": "2240",
+          "float": 2240.0
+        },
+        "einstein_hilbert_coefficient": {
+          "exact": "12480",
+          "float": 12480.0
+        }
+      }
+    },
+    {
+      "name": "projector covers CP2_9 and K3_16",
+      "passed": true,
+      "value": [
+        "CP2_9",
+        "K3_16"
+      ]
+    },
+    {
+      "name": "projector recurrence holds on both curved seeds",
+      "passed": true,
+      "value": [
+        {
+          "continuum_eh_from_rank_39_lock": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "eh_extracted_coefficient": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "mode_amplitudes": {
+            "cosmological_120": {
+              "exact": "24537600/19",
+              "float": 1291452.6315789474
+            },
+            "einstein_hilbert_6": {
+              "exact": "1946880/19",
+              "float": 102467.36842105263
+            },
+            "topological_1": {
+              "exact": "6720",
+              "float": 6720.0
+            }
+          },
+          "projector_samples": [
+            {
+              "expected_1": {
+                "exact": "6720",
+                "float": 6720.0
+              },
+              "expected_120": {
+                "exact": "24537600/19",
+                "float": 1291452.6315789474
+              },
+              "expected_6": {
+                "exact": "1946880/19",
+                "float": 102467.36842105263
+              },
+              "projected_1": {
+                "exact": "6720",
+                "float": 6720.0
+              },
+              "projected_120": {
+                "exact": "24537600/19",
+                "float": 1291452.6315789474
+              },
+              "projected_6": {
+                "exact": "1946880/19",
+                "float": 102467.36842105263
+              },
+              "step": 0
+            },
+            {
+              "expected_1": {
+                "exact": "6720",
+                "float": 6720.0
+              },
+              "expected_120": {
+                "exact": "2944512000/19",
+                "float": 154974315.78947368
+              },
+              "expected_6": {
+                "exact": "11681280/19",
+                "float": 614804.2105263158
+              },
+              "projected_1": {
+                "exact": "6720",
+                "float": 6720.0
+              },
+              "projected_120": {
+                "exact": "2944512000/19",
+                "float": 154974315.78947368
+              },
+              "projected_6": {
+                "exact": "11681280/19",
+                "float": 614804.2105263158
+              },
+              "step": 1
+            }
+          ],
+          "recurrence_holds": true,
+          "seed_name": "CP2_9",
+          "sequence": [
+            {
+              "exact": "1400640",
+              "float": 1400640.0
+            },
+            {
+              "exact": "155595840",
+              "float": 155595840.0
+            },
+            {
+              "exact": "18600613440",
+              "float": 18600613440.0
+            },
+            {
+              "exact": "2231652287040",
+              "float": 2231652287040.0
+            }
+          ],
+          "vertices": 9
+        },
+        {
+          "continuum_eh_from_rank_39_lock": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "eh_extracted_coefficient": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "mode_amplitudes": {
+            "cosmological_120": {
+              "exact": "196300800/19",
+              "float": 10331621.05263158
+            },
+            "einstein_hilbert_6": {
+              "exact": "-10982400/19",
+              "float": -578021.052631579
+            },
+            "topological_1": {
+              "exact": "53760",
+              "float": 53760.0
+            }
+          },
+          "projector_samples": [
+            {
+              "expected_1": {
+                "exact": "53760",
+                "float": 53760.0
+              },
+              "expected_120": {
+                "exact": "196300800/19",
+                "float": 10331621.05263158
+              },
+              "expected_6": {
+                "exact": "-10982400/19",
+                "float": -578021.052631579
+              },
+              "projected_1": {
+                "exact": "53760",
+                "float": 53760.0
+              },
+              "projected_120": {
+                "exact": "196300800/19",
+                "float": 10331621.05263158
+              },
+              "projected_6": {
+                "exact": "-10982400/19",
+                "float": -578021.052631579
+              },
+              "step": 0
+            },
+            {
+              "expected_1": {
+                "exact": "53760",
+                "float": 53760.0
+              },
+              "expected_120": {
+                "exact": "23556096000/19",
+                "float": 1239794526.3157895
+              },
+              "expected_6": {
+                "exact": "-65894400/19",
+                "float": -3468126.3157894737
+              },
+              "projected_1": {
+                "exact": "53760",
+                "float": 53760.0
+              },
+              "projected_120": {
+                "exact": "23556096000/19",
+                "float": 1239794526.3157895
+              },
+              "projected_6": {
+                "exact": "-65894400/19",
+                "float": -3468126.3157894737
+              },
+              "step": 1
+            }
+          ],
+          "recurrence_holds": true,
+          "seed_name": "K3_16",
+          "sequence": [
+            {
+              "exact": "9807360",
+              "float": 9807360.0
+            },
+            {
+              "exact": "1236380160",
+              "float": 1236380160.0
+            },
+            {
+              "exact": "148754588160",
+              "float": 148754588160.0
+            },
+            {
+              "exact": "17852916380160",
+              "float": 17852916380160.0
+            }
+          ],
+          "vertices": 16
+        }
+      ]
+    },
+    {
+      "name": "projector samples match all expected mode amplitudes",
+      "passed": true,
+      "value": [
+        {
+          "continuum_eh_from_rank_39_lock": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "eh_extracted_coefficient": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "mode_amplitudes": {
+            "cosmological_120": {
+              "exact": "24537600/19",
+              "float": 1291452.6315789474
+            },
+            "einstein_hilbert_6": {
+              "exact": "1946880/19",
+              "float": 102467.36842105263
+            },
+            "topological_1": {
+              "exact": "6720",
+              "float": 6720.0
+            }
+          },
+          "projector_samples": [
+            {
+              "expected_1": {
+                "exact": "6720",
+                "float": 6720.0
+              },
+              "expected_120": {
+                "exact": "24537600/19",
+                "float": 1291452.6315789474
+              },
+              "expected_6": {
+                "exact": "1946880/19",
+                "float": 102467.36842105263
+              },
+              "projected_1": {
+                "exact": "6720",
+                "float": 6720.0
+              },
+              "projected_120": {
+                "exact": "24537600/19",
+                "float": 1291452.6315789474
+              },
+              "projected_6": {
+                "exact": "1946880/19",
+                "float": 102467.36842105263
+              },
+              "step": 0
+            },
+            {
+              "expected_1": {
+                "exact": "6720",
+                "float": 6720.0
+              },
+              "expected_120": {
+                "exact": "2944512000/19",
+                "float": 154974315.78947368
+              },
+              "expected_6": {
+                "exact": "11681280/19",
+                "float": 614804.2105263158
+              },
+              "projected_1": {
+                "exact": "6720",
+                "float": 6720.0
+              },
+              "projected_120": {
+                "exact": "2944512000/19",
+                "float": 154974315.78947368
+              },
+              "projected_6": {
+                "exact": "11681280/19",
+                "float": 614804.2105263158
+              },
+              "step": 1
+            }
+          ],
+          "recurrence_holds": true,
+          "seed_name": "CP2_9",
+          "sequence": [
+            {
+              "exact": "1400640",
+              "float": 1400640.0
+            },
+            {
+              "exact": "155595840",
+              "float": 155595840.0
+            },
+            {
+              "exact": "18600613440",
+              "float": 18600613440.0
+            },
+            {
+              "exact": "2231652287040",
+              "float": 2231652287040.0
+            }
+          ],
+          "vertices": 9
+        },
+        {
+          "continuum_eh_from_rank_39_lock": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "eh_extracted_coefficient": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "mode_amplitudes": {
+            "cosmological_120": {
+              "exact": "196300800/19",
+              "float": 10331621.05263158
+            },
+            "einstein_hilbert_6": {
+              "exact": "-10982400/19",
+              "float": -578021.052631579
+            },
+            "topological_1": {
+              "exact": "53760",
+              "float": 53760.0
+            }
+          },
+          "projector_samples": [
+            {
+              "expected_1": {
+                "exact": "53760",
+                "float": 53760.0
+              },
+              "expected_120": {
+                "exact": "196300800/19",
+                "float": 10331621.05263158
+              },
+              "expected_6": {
+                "exact": "-10982400/19",
+                "float": -578021.052631579
+              },
+              "projected_1": {
+                "exact": "53760",
+                "float": 53760.0
+              },
+              "projected_120": {
+                "exact": "196300800/19",
+                "float": 10331621.05263158
+              },
+              "projected_6": {
+                "exact": "-10982400/19",
+                "float": -578021.052631579
+              },
+              "step": 0
+            },
+            {
+              "expected_1": {
+                "exact": "53760",
+                "float": 53760.0
+              },
+              "expected_120": {
+                "exact": "23556096000/19",
+                "float": 1239794526.3157895
+              },
+              "expected_6": {
+                "exact": "-65894400/19",
+                "float": -3468126.3157894737
+              },
+              "projected_1": {
+                "exact": "53760",
+                "float": 53760.0
+              },
+              "projected_120": {
+                "exact": "23556096000/19",
+                "float": 1239794526.3157895
+              },
+              "projected_6": {
+                "exact": "-65894400/19",
+                "float": -3468126.3157894737
+              },
+              "step": 1
+            }
+          ],
+          "recurrence_holds": true,
+          "seed_name": "K3_16",
+          "sequence": [
+            {
+              "exact": "9807360",
+              "float": 9807360.0
+            },
+            {
+              "exact": "1236380160",
+              "float": 1236380160.0
+            },
+            {
+              "exact": "148754588160",
+              "float": 148754588160.0
+            },
+            {
+              "exact": "17852916380160",
+              "float": 17852916380160.0
+            }
+          ],
+          "vertices": 16
+        }
+      ]
+    },
+    {
+      "name": "projector extracts c6=12480 on both seeds",
+      "passed": true,
+      "value": [
+        {
+          "continuum_eh_from_rank_39_lock": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "eh_extracted_coefficient": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "mode_amplitudes": {
+            "cosmological_120": {
+              "exact": "24537600/19",
+              "float": 1291452.6315789474
+            },
+            "einstein_hilbert_6": {
+              "exact": "1946880/19",
+              "float": 102467.36842105263
+            },
+            "topological_1": {
+              "exact": "6720",
+              "float": 6720.0
+            }
+          },
+          "projector_samples": [
+            {
+              "expected_1": {
+                "exact": "6720",
+                "float": 6720.0
+              },
+              "expected_120": {
+                "exact": "24537600/19",
+                "float": 1291452.6315789474
+              },
+              "expected_6": {
+                "exact": "1946880/19",
+                "float": 102467.36842105263
+              },
+              "projected_1": {
+                "exact": "6720",
+                "float": 6720.0
+              },
+              "projected_120": {
+                "exact": "24537600/19",
+                "float": 1291452.6315789474
+              },
+              "projected_6": {
+                "exact": "1946880/19",
+                "float": 102467.36842105263
+              },
+              "step": 0
+            },
+            {
+              "expected_1": {
+                "exact": "6720",
+                "float": 6720.0
+              },
+              "expected_120": {
+                "exact": "2944512000/19",
+                "float": 154974315.78947368
+              },
+              "expected_6": {
+                "exact": "11681280/19",
+                "float": 614804.2105263158
+              },
+              "projected_1": {
+                "exact": "6720",
+                "float": 6720.0
+              },
+              "projected_120": {
+                "exact": "2944512000/19",
+                "float": 154974315.78947368
+              },
+              "projected_6": {
+                "exact": "11681280/19",
+                "float": 614804.2105263158
+              },
+              "step": 1
+            }
+          ],
+          "recurrence_holds": true,
+          "seed_name": "CP2_9",
+          "sequence": [
+            {
+              "exact": "1400640",
+              "float": 1400640.0
+            },
+            {
+              "exact": "155595840",
+              "float": 155595840.0
+            },
+            {
+              "exact": "18600613440",
+              "float": 18600613440.0
+            },
+            {
+              "exact": "2231652287040",
+              "float": 2231652287040.0
+            }
+          ],
+          "vertices": 9
+        },
+        {
+          "continuum_eh_from_rank_39_lock": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "eh_extracted_coefficient": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "mode_amplitudes": {
+            "cosmological_120": {
+              "exact": "196300800/19",
+              "float": 10331621.05263158
+            },
+            "einstein_hilbert_6": {
+              "exact": "-10982400/19",
+              "float": -578021.052631579
+            },
+            "topological_1": {
+              "exact": "53760",
+              "float": 53760.0
+            }
+          },
+          "projector_samples": [
+            {
+              "expected_1": {
+                "exact": "53760",
+                "float": 53760.0
+              },
+              "expected_120": {
+                "exact": "196300800/19",
+                "float": 10331621.05263158
+              },
+              "expected_6": {
+                "exact": "-10982400/19",
+                "float": -578021.052631579
+              },
+              "projected_1": {
+                "exact": "53760",
+                "float": 53760.0
+              },
+              "projected_120": {
+                "exact": "196300800/19",
+                "float": 10331621.05263158
+              },
+              "projected_6": {
+                "exact": "-10982400/19",
+                "float": -578021.052631579
+              },
+              "step": 0
+            },
+            {
+              "expected_1": {
+                "exact": "53760",
+                "float": 53760.0
+              },
+              "expected_120": {
+                "exact": "23556096000/19",
+                "float": 1239794526.3157895
+              },
+              "expected_6": {
+                "exact": "-65894400/19",
+                "float": -3468126.3157894737
+              },
+              "projected_1": {
+                "exact": "53760",
+                "float": 53760.0
+              },
+              "projected_120": {
+                "exact": "23556096000/19",
+                "float": 1239794526.3157895
+              },
+              "projected_6": {
+                "exact": "-65894400/19",
+                "float": -3468126.3157894737
+              },
+              "step": 1
+            }
+          ],
+          "recurrence_holds": true,
+          "seed_name": "K3_16",
+          "sequence": [
+            {
+              "exact": "9807360",
+              "float": 9807360.0
+            },
+            {
+              "exact": "1236380160",
+              "float": 1236380160.0
+            },
+            {
+              "exact": "148754588160",
+              "float": 148754588160.0
+            },
+            {
+              "exact": "17852916380160",
+              "float": 17852916380160.0
+            }
+          ],
+          "vertices": 16
+        }
+      ]
+    },
+    {
+      "name": "projector rank-39 normalization extracts 320",
+      "passed": true,
+      "value": [
+        {
+          "continuum_eh_from_rank_39_lock": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "eh_extracted_coefficient": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "mode_amplitudes": {
+            "cosmological_120": {
+              "exact": "24537600/19",
+              "float": 1291452.6315789474
+            },
+            "einstein_hilbert_6": {
+              "exact": "1946880/19",
+              "float": 102467.36842105263
+            },
+            "topological_1": {
+              "exact": "6720",
+              "float": 6720.0
+            }
+          },
+          "projector_samples": [
+            {
+              "expected_1": {
+                "exact": "6720",
+                "float": 6720.0
+              },
+              "expected_120": {
+                "exact": "24537600/19",
+                "float": 1291452.6315789474
+              },
+              "expected_6": {
+                "exact": "1946880/19",
+                "float": 102467.36842105263
+              },
+              "projected_1": {
+                "exact": "6720",
+                "float": 6720.0
+              },
+              "projected_120": {
+                "exact": "24537600/19",
+                "float": 1291452.6315789474
+              },
+              "projected_6": {
+                "exact": "1946880/19",
+                "float": 102467.36842105263
+              },
+              "step": 0
+            },
+            {
+              "expected_1": {
+                "exact": "6720",
+                "float": 6720.0
+              },
+              "expected_120": {
+                "exact": "2944512000/19",
+                "float": 154974315.78947368
+              },
+              "expected_6": {
+                "exact": "11681280/19",
+                "float": 614804.2105263158
+              },
+              "projected_1": {
+                "exact": "6720",
+                "float": 6720.0
+              },
+              "projected_120": {
+                "exact": "2944512000/19",
+                "float": 154974315.78947368
+              },
+              "projected_6": {
+                "exact": "11681280/19",
+                "float": 614804.2105263158
+              },
+              "step": 1
+            }
+          ],
+          "recurrence_holds": true,
+          "seed_name": "CP2_9",
+          "sequence": [
+            {
+              "exact": "1400640",
+              "float": 1400640.0
+            },
+            {
+              "exact": "155595840",
+              "float": 155595840.0
+            },
+            {
+              "exact": "18600613440",
+              "float": 18600613440.0
+            },
+            {
+              "exact": "2231652287040",
+              "float": 2231652287040.0
+            }
+          ],
+          "vertices": 9
+        },
+        {
+          "continuum_eh_from_rank_39_lock": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "eh_extracted_coefficient": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "mode_amplitudes": {
+            "cosmological_120": {
+              "exact": "196300800/19",
+              "float": 10331621.05263158
+            },
+            "einstein_hilbert_6": {
+              "exact": "-10982400/19",
+              "float": -578021.052631579
+            },
+            "topological_1": {
+              "exact": "53760",
+              "float": 53760.0
+            }
+          },
+          "projector_samples": [
+            {
+              "expected_1": {
+                "exact": "53760",
+                "float": 53760.0
+              },
+              "expected_120": {
+                "exact": "196300800/19",
+                "float": 10331621.05263158
+              },
+              "expected_6": {
+                "exact": "-10982400/19",
+                "float": -578021.052631579
+              },
+              "projected_1": {
+                "exact": "53760",
+                "float": 53760.0
+              },
+              "projected_120": {
+                "exact": "196300800/19",
+                "float": 10331621.05263158
+              },
+              "projected_6": {
+                "exact": "-10982400/19",
+                "float": -578021.052631579
+              },
+              "step": 0
+            },
+            {
+              "expected_1": {
+                "exact": "53760",
+                "float": 53760.0
+              },
+              "expected_120": {
+                "exact": "23556096000/19",
+                "float": 1239794526.3157895
+              },
+              "expected_6": {
+                "exact": "-65894400/19",
+                "float": -3468126.3157894737
+              },
+              "projected_1": {
+                "exact": "53760",
+                "float": 53760.0
+              },
+              "projected_120": {
+                "exact": "23556096000/19",
+                "float": 1239794526.3157895
+              },
+              "projected_6": {
+                "exact": "-65894400/19",
+                "float": -3468126.3157894737
+              },
+              "step": 1
+            }
+          ],
+          "recurrence_holds": true,
+          "seed_name": "K3_16",
+          "sequence": [
+            {
+              "exact": "9807360",
+              "float": 9807360.0
+            },
+            {
+              "exact": "1236380160",
+              "float": 1236380160.0
+            },
+            {
+              "exact": "148754588160",
+              "float": 148754588160.0
+            },
+            {
+              "exact": "17852916380160",
+              "float": 17852916380160.0
+            }
+          ],
+          "vertices": 16
+        }
+      ]
+    },
+    {
+      "name": "residue generating function has the three pole channels",
+      "passed": true,
+      "value": {
+        "formula": "A/(1 - 120 z) + B/(1 - 6 z) + C/(1 - z)",
+        "normalized_residue_definition": "R_alpha(G) = -alpha * Res_{z = 1/alpha} G(z)",
+        "pole_channels": {
+          "1": "topological channel",
+          "120": "cosmological/local channel",
+          "6": "Einstein-Hilbert-like curvature channel"
+        }
+      }
+    },
+    {
+      "name": "residue finite EH coefficient is 12480",
+      "passed": true,
+      "value": {
+        "a0": {
+          "exact": "480",
+          "float": 480.0
+        },
+        "a2": {
+          "exact": "2240",
+          "float": 2240.0
+        },
+        "einstein_hilbert_coefficient": {
+          "exact": "12480",
+          "float": 12480.0
+        }
+      }
+    },
+    {
+      "name": "residue covers CP2_9 and K3_16",
+      "passed": true,
+      "value": [
+        "CP2_9",
+        "K3_16"
+      ]
+    },
+    {
+      "name": "residue over six-mode extracts c6=12480",
+      "passed": true,
+      "value": [
+        {
+          "continuum_eh_after_rank39_normalization": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "eh_from_residue_over_six_mode": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "normalized_residue_1": {
+            "exact": "6720",
+            "float": 6720.0
+          },
+          "normalized_residue_120": {
+            "exact": "24537600/19",
+            "float": 1291452.6315789474
+          },
+          "normalized_residue_6": {
+            "exact": "1946880/19",
+            "float": 102467.36842105263
+          },
+          "seed_name": "CP2_9",
+          "six_mode": {
+            "exact": "156/19",
+            "float": 8.210526315789474
+          }
+        },
+        {
+          "continuum_eh_after_rank39_normalization": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "eh_from_residue_over_six_mode": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "normalized_residue_1": {
+            "exact": "53760",
+            "float": 53760.0
+          },
+          "normalized_residue_120": {
+            "exact": "196300800/19",
+            "float": 10331621.05263158
+          },
+          "normalized_residue_6": {
+            "exact": "-10982400/19",
+            "float": -578021.052631579
+          },
+          "seed_name": "K3_16",
+          "six_mode": {
+            "exact": "-880/19",
+            "float": -46.31578947368421
+          }
+        }
+      ]
+    },
+    {
+      "name": "residue rank-39 normalization extracts 320",
+      "passed": true,
+      "value": [
+        {
+          "continuum_eh_after_rank39_normalization": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "eh_from_residue_over_six_mode": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "normalized_residue_1": {
+            "exact": "6720",
+            "float": 6720.0
+          },
+          "normalized_residue_120": {
+            "exact": "24537600/19",
+            "float": 1291452.6315789474
+          },
+          "normalized_residue_6": {
+            "exact": "1946880/19",
+            "float": 102467.36842105263
+          },
+          "seed_name": "CP2_9",
+          "six_mode": {
+            "exact": "156/19",
+            "float": 8.210526315789474
+          }
+        },
+        {
+          "continuum_eh_after_rank39_normalization": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "eh_from_residue_over_six_mode": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "normalized_residue_1": {
+            "exact": "53760",
+            "float": 53760.0
+          },
+          "normalized_residue_120": {
+            "exact": "196300800/19",
+            "float": 10331621.05263158
+          },
+          "normalized_residue_6": {
+            "exact": "-10982400/19",
+            "float": -578021.052631579
+          },
+          "seed_name": "K3_16",
+          "six_mode": {
+            "exact": "-880/19",
+            "float": -46.31578947368421
+          }
+        }
+      ]
+    },
+    {
+      "name": "continuum extractor finite a0 is 480",
+      "passed": true,
+      "value": {
+        "a0": {
+          "exact": "480",
+          "float": 480.0
+        },
+        "a2": {
+          "exact": "2240",
+          "float": 2240.0
+        },
+        "expected_continuum_eh": {
+          "exact": "320",
+          "float": 320.0
+        },
+        "expected_discrete_eh": {
+          "exact": "12480",
+          "float": 12480.0
+        }
+      }
+    },
+    {
+      "name": "continuum extractor finite a2 is 2240",
+      "passed": true,
+      "value": {
+        "a0": {
+          "exact": "480",
+          "float": 480.0
+        },
+        "a2": {
+          "exact": "2240",
+          "float": 2240.0
+        },
+        "expected_continuum_eh": {
+          "exact": "320",
+          "float": 320.0
+        },
+        "expected_discrete_eh": {
+          "exact": "12480",
+          "float": 12480.0
+        }
+      }
+    },
+    {
+      "name": "continuum extractor discrete EH is 12480",
+      "passed": true,
+      "value": {
+        "a0": {
+          "exact": "480",
+          "float": 480.0
+        },
+        "a2": {
+          "exact": "2240",
+          "float": 2240.0
+        },
+        "expected_continuum_eh": {
+          "exact": "320",
+          "float": 320.0
+        },
+        "expected_discrete_eh": {
+          "exact": "12480",
+          "float": 12480.0
+        }
+      }
+    },
+    {
+      "name": "continuum extractor normalized EH is 320",
+      "passed": true,
+      "value": {
+        "a0": {
+          "exact": "480",
+          "float": 480.0
+        },
+        "a2": {
+          "exact": "2240",
+          "float": 2240.0
+        },
+        "expected_continuum_eh": {
+          "exact": "320",
+          "float": 320.0
+        },
+        "expected_discrete_eh": {
+          "exact": "12480",
+          "float": 12480.0
+        }
+      }
+    },
+    {
+      "name": "continuum extractor has six curved samples",
+      "passed": true,
+      "value": [
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "24537600/19",
+            "float": 1291452.6315789474
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "CP2",
+          "step": 0,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        },
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "24537600/19",
+            "float": 1291452.6315789474
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "CP2",
+          "step": 1,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        },
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "24537600/19",
+            "float": 1291452.6315789474
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "CP2",
+          "step": 2,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        },
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "196300800/19",
+            "float": 10331621.05263158
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "K3",
+          "step": 0,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        },
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "196300800/19",
+            "float": 10331621.05263158
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "K3",
+          "step": 1,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        },
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "196300800/19",
+            "float": 10331621.05263158
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "K3",
+          "step": 2,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        }
+      ]
+    },
+    {
+      "name": "continuum samples run steps 0,1,2 on each seed",
+      "passed": true,
+      "value": [
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "24537600/19",
+            "float": 1291452.6315789474
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "CP2",
+          "step": 0,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        },
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "24537600/19",
+            "float": 1291452.6315789474
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "CP2",
+          "step": 1,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        },
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "24537600/19",
+            "float": 1291452.6315789474
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "CP2",
+          "step": 2,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        },
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "196300800/19",
+            "float": 10331621.05263158
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "K3",
+          "step": 0,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        },
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "196300800/19",
+            "float": 10331621.05263158
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "K3",
+          "step": 1,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        },
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "196300800/19",
+            "float": 10331621.05263158
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "K3",
+          "step": 2,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        }
+      ]
+    },
+    {
+      "name": "all continuum samples extract c6=12480",
+      "passed": true,
+      "value": [
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "24537600/19",
+            "float": 1291452.6315789474
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "CP2",
+          "step": 0,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        },
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "24537600/19",
+            "float": 1291452.6315789474
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "CP2",
+          "step": 1,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        },
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "24537600/19",
+            "float": 1291452.6315789474
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "CP2",
+          "step": 2,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        },
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "196300800/19",
+            "float": 10331621.05263158
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "K3",
+          "step": 0,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        },
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "196300800/19",
+            "float": 10331621.05263158
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "K3",
+          "step": 1,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        },
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "196300800/19",
+            "float": 10331621.05263158
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "K3",
+          "step": 2,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        }
+      ]
+    },
+    {
+      "name": "all continuum samples extract cEH=320",
+      "passed": true,
+      "value": [
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "24537600/19",
+            "float": 1291452.6315789474
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "CP2",
+          "step": 0,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        },
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "24537600/19",
+            "float": 1291452.6315789474
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "CP2",
+          "step": 1,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        },
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "24537600/19",
+            "float": 1291452.6315789474
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "CP2",
+          "step": 2,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        },
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "196300800/19",
+            "float": 10331621.05263158
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "K3",
+          "step": 0,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        },
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "196300800/19",
+            "float": 10331621.05263158
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "K3",
+          "step": 1,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        },
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "196300800/19",
+            "float": 10331621.05263158
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "K3",
+          "step": 2,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        }
+      ]
+    },
+    {
+      "name": "all continuum samples extract a2=2240",
+      "passed": true,
+      "value": [
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "24537600/19",
+            "float": 1291452.6315789474
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "CP2",
+          "step": 0,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        },
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "24537600/19",
+            "float": 1291452.6315789474
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "CP2",
+          "step": 1,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        },
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "24537600/19",
+            "float": 1291452.6315789474
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "CP2",
+          "step": 2,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        },
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "196300800/19",
+            "float": 10331621.05263158
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "K3",
+          "step": 0,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        },
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "196300800/19",
+            "float": 10331621.05263158
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "K3",
+          "step": 1,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        },
+        {
+          "continuum_eh": {
+            "exact": "320",
+            "float": 320.0
+          },
+          "cosmological_amplitude": {
+            "exact": "196300800/19",
+            "float": 10331621.05263158
+          },
+          "discrete_eh": {
+            "exact": "12480",
+            "float": 12480.0
+          },
+          "seed_name": "K3",
+          "step": 2,
+          "topological_a2": {
+            "exact": "2240",
+            "float": 2240.0
+          }
+        }
+      ]
+    },
+    {
+      "name": "finite reconstruction recovers graph dimensions",
+      "passed": true,
+      "value": {
+        "edge_count": 240,
+        "edge_count_matches_srg_formula_vk_over_2": true,
+        "line_count": 40,
+        "line_size": 4,
+        "q": 3,
+        "tetrahedron_count": 40,
+        "triangle_count": 160
+      }
+    },
+    {
+      "name": "finite reconstruction edge count matches vk/2",
+      "passed": true,
+      "value": {
+        "edge_count": 240,
+        "edge_count_matches_srg_formula_vk_over_2": true,
+        "line_count": 40,
+        "line_size": 4,
+        "q": 3,
+        "tetrahedron_count": 40,
+        "triangle_count": 160
+      }
+    },
+    {
+      "name": "finite reconstruction recovers Betti b1=81",
+      "passed": true,
+      "value": {
+        "b0": 1,
+        "b1": 81,
+        "b2": 0,
+        "b3": 0
+      }
+    },
+    {
+      "name": "finite reconstruction recovers boundary ranks",
+      "passed": true,
+      "value": {
+        "rank_d1": 39,
+        "rank_d2": 120,
+        "rank_d3": 40
+      }
+    },
+    {
+      "name": "finite reconstruction scalar channel is 4",
+      "passed": true,
+      "value": {
+        "betti_numbers": {
+          "b0": 1,
+          "b1": 81,
+          "b2": 0,
+          "b3": 0
+        },
+        "boundary_ranks": {
+          "rank_d1": 39,
+          "rank_d2": 120,
+          "rank_d3": 40
+        },
+        "coexact_and_high_degree_scalar_channel": 4,
+        "coexact_one_form_dimension": 120,
+        "exact_one_form_dimension": 39
+      }
+    },
+    {
+      "name": "finite reconstruction recovers DF2 spectrum",
+      "passed": true,
+      "value": {
+        "0": 82,
+        "10": 48,
+        "16": 30,
+        "4": 320
+      }
+    },
+    {
+      "name": "finite reconstruction recovers moments 480,2240,17600",
+      "passed": true,
+      "value": {
+        "a0_f": 480,
+        "a2_f": 2240,
+        "a4_f": 17600
+      }
+    },
+    {
+      "name": "finite reconstruction matches live internal package",
+      "passed": true,
+      "value": {
+        "betti_numbers_match": true,
+        "boundary_ranks_match": true,
+        "df2_spectrum_match": true,
+        "exact_one_form_channels_match": true,
+        "moments_match": true,
+        "tetrahedron_count_matches": true,
+        "triangle_count_matches": true,
+        "vertex_channels_match": true
+      }
+    },
+    {
+      "name": "finite reconstruction samples are constant",
+      "passed": true,
+      "value": [
+        {
+          "betti_numbers": {
+            "b0": 1,
+            "b1": 81,
+            "b2": 0,
+            "b3": 0
+          },
+          "chain_dimensions": {
+            "c0": 40,
+            "c1": 240,
+            "c2": 160,
+            "c3": 40,
+            "total": 480
+          },
+          "df2_spectrum": {
+            "0": 82,
+            "4": 320,
+            "10": 48,
+            "16": 30
+          },
+          "seed_name": "CP2",
+          "step": 0
+        },
+        {
+          "betti_numbers": {
+            "b0": 1,
+            "b1": 81,
+            "b2": 0,
+            "b3": 0
+          },
+          "chain_dimensions": {
+            "c0": 40,
+            "c1": 240,
+            "c2": 160,
+            "c3": 40,
+            "total": 480
+          },
+          "df2_spectrum": {
+            "0": 82,
+            "4": 320,
+            "10": 48,
+            "16": 30
+          },
+          "seed_name": "CP2",
+          "step": 1
+        },
+        {
+          "betti_numbers": {
+            "b0": 1,
+            "b1": 81,
+            "b2": 0,
+            "b3": 0
+          },
+          "chain_dimensions": {
+            "c0": 40,
+            "c1": 240,
+            "c2": 160,
+            "c3": 40,
+            "total": 480
+          },
+          "df2_spectrum": {
+            "0": 82,
+            "4": 320,
+            "10": 48,
+            "16": 30
+          },
+          "seed_name": "CP2",
+          "step": 2
+        },
+        {
+          "betti_numbers": {
+            "b0": 1,
+            "b1": 81,
+            "b2": 0,
+            "b3": 0
+          },
+          "chain_dimensions": {
+            "c0": 40,
+            "c1": 240,
+            "c2": 160,
+            "c3": 40,
+            "total": 480
+          },
+          "df2_spectrum": {
+            "0": 82,
+            "4": 320,
+            "10": 48,
+            "16": 30
+          },
+          "seed_name": "K3",
+          "step": 0
+        },
+        {
+          "betti_numbers": {
+            "b0": 1,
+            "b1": 81,
+            "b2": 0,
+            "b3": 0
+          },
+          "chain_dimensions": {
+            "c0": 40,
+            "c1": 240,
+            "c2": 160,
+            "c3": 40,
+            "total": 480
+          },
+          "df2_spectrum": {
+            "0": 82,
+            "4": 320,
+            "10": 48,
+            "16": 30
+          },
+          "seed_name": "K3",
+          "step": 1
+        },
+        {
+          "betti_numbers": {
+            "b0": 1,
+            "b1": 81,
+            "b2": 0,
+            "b3": 0
+          },
+          "chain_dimensions": {
+            "c0": 40,
+            "c1": 240,
+            "c2": 160,
+            "c3": 40,
+            "total": 480
+          },
+          "df2_spectrum": {
+            "0": 82,
+            "4": 320,
+            "10": 48,
+            "16": 30
+          },
+          "seed_name": "K3",
+          "step": 2
+        }
+      ]
+    },
+    {
+      "name": "roundtrip recovers same DF2 spectrum",
+      "passed": true,
+      "value": {
+        "0": 82,
+        "10": 48,
+        "16": 30,
+        "4": 320
+      }
+    },
+    {
+      "name": "roundtrip recovers moments 480,2240,17600",
+      "passed": true,
+      "value": {
+        "a0_f": 480,
+        "a2_f": 2240,
+        "a4_f": 17600,
+        "df2_spectrum": {
+          "0": 82,
+          "4": 320,
+          "10": 48,
+          "16": 30
+        }
+      }
+    },
+    {
+      "name": "roundtrip coefficient package is 320,12480,2240,3/13",
+      "passed": true,
+      "value": {
+        "continuum_eh_from_finite": {
+          "exact": "320",
+          "float": 320.0
+        },
+        "discrete_eh_from_finite": {
+          "exact": "12480",
+          "float": 12480.0
+        },
+        "master_variable_from_roundtrip": {
+          "exact": "3/13",
+          "float": 0.23076923076923078
+        },
+        "topological_from_finite": {
+          "exact": "2240",
+          "float": 2240.0
+        }
+      }
+    },
+    {
+      "name": "roundtrip matches curved extractor profile",
+      "passed": true,
+      "value": {
+        "continuum_matches": true,
+        "discrete_matches": true,
+        "master_variable_matches": true,
+        "topological_matches": true
+      }
+    },
+    {
+      "name": "roundtrip closes every curved sample",
+      "passed": true,
+      "value": [
+        {
+          "matches_roundtrip_continuum": true,
+          "matches_roundtrip_discrete": true,
+          "matches_roundtrip_master_variable": true,
+          "matches_roundtrip_topological": true,
+          "sample_continuum_eh": "320",
+          "sample_discrete_eh": "12480",
+          "sample_topological": "2240",
+          "seed_name": "CP2",
+          "step": 0
+        },
+        {
+          "matches_roundtrip_continuum": true,
+          "matches_roundtrip_discrete": true,
+          "matches_roundtrip_master_variable": true,
+          "matches_roundtrip_topological": true,
+          "sample_continuum_eh": "320",
+          "sample_discrete_eh": "12480",
+          "sample_topological": "2240",
+          "seed_name": "CP2",
+          "step": 1
+        },
+        {
+          "matches_roundtrip_continuum": true,
+          "matches_roundtrip_discrete": true,
+          "matches_roundtrip_master_variable": true,
+          "matches_roundtrip_topological": true,
+          "sample_continuum_eh": "320",
+          "sample_discrete_eh": "12480",
+          "sample_topological": "2240",
+          "seed_name": "CP2",
+          "step": 2
+        },
+        {
+          "matches_roundtrip_continuum": true,
+          "matches_roundtrip_discrete": true,
+          "matches_roundtrip_master_variable": true,
+          "matches_roundtrip_topological": true,
+          "sample_continuum_eh": "320",
+          "sample_discrete_eh": "12480",
+          "sample_topological": "2240",
+          "seed_name": "K3",
+          "step": 0
+        },
+        {
+          "matches_roundtrip_continuum": true,
+          "matches_roundtrip_discrete": true,
+          "matches_roundtrip_master_variable": true,
+          "matches_roundtrip_topological": true,
+          "sample_continuum_eh": "320",
+          "sample_discrete_eh": "12480",
+          "sample_topological": "2240",
+          "seed_name": "K3",
+          "step": 1
+        },
+        {
+          "matches_roundtrip_continuum": true,
+          "matches_roundtrip_discrete": true,
+          "matches_roundtrip_master_variable": true,
+          "matches_roundtrip_topological": true,
+          "sample_continuum_eh": "320",
+          "sample_discrete_eh": "12480",
+          "sample_topological": "2240",
+          "seed_name": "K3",
+          "step": 2
+        }
+      ]
+    },
+    {
+      "name": "Rosetta reconstructs q=3",
+      "passed": true,
+      "value": {
+        "phi3": {
+          "exact": "13",
+          "float": 13.0
+        },
+        "phi3_from_ratio_over_q": {
+          "exact": "13",
+          "float": 13.0
+        },
+        "phi6": {
+          "exact": "7",
+          "float": 7.0
+        },
+        "q": 3,
+        "q_from_sqrt_x_times_ratio": 3
+      }
+    },
+    {
+      "name": "Rosetta reconstructs Phi3=13 and Phi6=7",
+      "passed": true,
+      "value": {
+        "phi3": {
+          "exact": "13",
+          "float": 13.0
+        },
+        "phi3_from_ratio_over_q": {
+          "exact": "13",
+          "float": 13.0
+        },
+        "phi6": {
+          "exact": "7",
+          "float": 7.0
+        },
+        "q": 3,
+        "q_from_sqrt_x_times_ratio": 3
+      }
+    },
+    {
+      "name": "Rosetta reconstructs SRG(40,12,2,4)",
+      "passed": true,
+      "value": {
+        "k": 12,
+        "lambda": 2,
+        "mu": 4,
+        "v": 40
+      }
+    },
+    {
+      "name": "Rosetta reconstructs spectrum (12,2,-4)",
+      "passed": true,
+      "value": {
+        "k": 12,
+        "r": 2,
+        "s": -4
+      }
+    },
+    {
+      "name": "Rosetta matches live data",
+      "passed": true,
+      "value": {
+        "all_promoted_observables_match": true,
+        "spectral_k_matches": true,
+        "spectral_r_matches": true,
+        "spectral_s_matches": true,
+        "srg_k_matches": true,
+        "srg_lambda_matches": true,
+        "srg_mu_matches": true
+      }
+    },
+    {
+      "name": "Rosetta promoted observables all match",
+      "passed": true,
+      "value": {
+        "a2_over_a0": {
+          "exact": {
+            "exact": "14/3",
+            "float": 4.666666666666667
+          },
+          "matches_public_value": true
+        },
+        "a4_over_a0": {
+          "exact": {
+            "exact": "110/3",
+            "float": 36.666666666666664
+          },
+          "matches_public_value": true
+        },
+        "discrete_6_mode_over_a0": {
+          "exact": {
+            "exact": "26",
+            "float": 26.0
+          },
+          "matches_public_value": true
+        },
+        "discrete_to_continuum_ratio": {
+          "exact": {
+            "exact": "39",
+            "float": 39.0
+          },
+          "matches_public_value": true
+        },
+        "higgs_ratio_square": {
+          "exact": {
+            "exact": "14/55",
+            "float": 0.2545454545454545
+          },
+          "matches_public_value": true
+        },
+        "omega_lambda": {
+          "exact": {
+            "exact": "9/13",
+            "float": 0.6923076923076923
+          },
+          "matches_public_value": true
+        },
+        "sin2_theta_12": {
+          "exact": {
+            "exact": "4/13",
+            "float": 0.3076923076923077
+          },
+          "matches_public_value": true
+        },
+        "sin2_theta_13": {
+          "exact": {
+            "exact": "2/91",
+            "float": 0.02197802197802198
+          },
+          "matches_public_value": true
+        },
+        "sin2_theta_23": {
+          "exact": {
+            "exact": "7/13",
+            "float": 0.5384615384615384
+          },
+          "matches_public_value": true
+        },
+        "sin2_theta_w_ew": {
+          "exact": {
+            "exact": "3/13",
+            "float": 0.23076923076923078
+          },
+          "matches_public_value": true
+        },
+        "tan_theta_c": {
+          "exact": {
+            "exact": "3/13",
+            "float": 0.23076923076923078
+          },
+          "matches_public_value": true
+        }
+      }
+    },
+    {
+      "name": "Rosetta samples are constant",
+      "passed": true,
+      "value": [
+        {
+          "k": 12,
+          "lambda": 2,
+          "mu": 4,
+          "phi3": "13",
+          "phi6": "7",
+          "q": 3,
+          "r": 2,
+          "s": -4,
+          "seed_name": "CP2",
+          "step": 0,
+          "v": 40
+        },
+        {
+          "k": 12,
+          "lambda": 2,
+          "mu": 4,
+          "phi3": "13",
+          "phi6": "7",
+          "q": 3,
+          "r": 2,
+          "s": -4,
+          "seed_name": "CP2",
+          "step": 1,
+          "v": 40
+        },
+        {
+          "k": 12,
+          "lambda": 2,
+          "mu": 4,
+          "phi3": "13",
+          "phi6": "7",
+          "q": 3,
+          "r": 2,
+          "s": -4,
+          "seed_name": "CP2",
+          "step": 2,
+          "v": 40
+        },
+        {
+          "k": 12,
+          "lambda": 2,
+          "mu": 4,
+          "phi3": "13",
+          "phi6": "7",
+          "q": 3,
+          "r": 2,
+          "s": -4,
+          "seed_name": "K3",
+          "step": 0,
+          "v": 40
+        },
+        {
+          "k": 12,
+          "lambda": 2,
+          "mu": 4,
+          "phi3": "13",
+          "phi6": "7",
+          "q": 3,
+          "r": 2,
+          "s": -4,
+          "seed_name": "K3",
+          "step": 1,
+          "v": 40
+        },
+        {
+          "k": 12,
+          "lambda": 2,
+          "mu": 4,
+          "phi3": "13",
+          "phi6": "7",
+          "q": 3,
+          "r": 2,
+          "s": -4,
+          "seed_name": "K3",
+          "step": 2,
+          "v": 40
+        }
+      ]
+    },
+    {
+      "name": "Weinberg master variable is 3/13",
+      "passed": true,
+      "value": {
+        "exact": {
+          "exact": "3/13",
+          "float": 0.23076923076923078
+        },
+        "meaning": "sin^2(theta_W)",
+        "symbol": "x"
+      }
+    },
+    {
+      "name": "Weinberg curved formula is x = 9 * c_EH,cont / c_6",
+      "passed": true,
+      "value": "x = 9 * c_EH,cont / c_6"
+    },
+    {
+      "name": "Weinberg reconstruction matches on all curved samples",
+      "passed": true,
+      "value": [
+        {
+          "matches_master_variable": true,
+          "reconstructed_x": {
+            "exact": "3/13",
+            "float": 0.23076923076923078
+          },
+          "seed_name": "CP2",
+          "step": 0
+        },
+        {
+          "matches_master_variable": true,
+          "reconstructed_x": {
+            "exact": "3/13",
+            "float": 0.23076923076923078
+          },
+          "seed_name": "CP2",
+          "step": 1
+        },
+        {
+          "matches_master_variable": true,
+          "reconstructed_x": {
+            "exact": "3/13",
+            "float": 0.23076923076923078
+          },
+          "seed_name": "CP2",
+          "step": 2
+        },
+        {
+          "matches_master_variable": true,
+          "reconstructed_x": {
+            "exact": "3/13",
+            "float": 0.23076923076923078
+          },
+          "seed_name": "K3",
+          "step": 0
+        },
+        {
+          "matches_master_variable": true,
+          "reconstructed_x": {
+            "exact": "3/13",
+            "float": 0.23076923076923078
+          },
+          "seed_name": "K3",
+          "step": 1
+        },
+        {
+          "matches_master_variable": true,
+          "reconstructed_x": {
+            "exact": "3/13",
+            "float": 0.23076923076923078
+          },
+          "seed_name": "K3",
+          "step": 2
+        }
+      ]
+    },
+    {
+      "name": "Weinberg exceptional reconstruction matches",
+      "passed": true,
+      "value": {
+        "formula": "x = 9 * (40*8) / (40*6*52)",
+        "matches_master_variable": true,
+        "reconstructed_x": {
+          "exact": "3/13",
+          "float": 0.23076923076923078
+        }
+      }
+    },
+    {
+      "name": "rank-39 lock is exact",
+      "passed": true,
+      "value": {
+        "continuum_eh": "320",
+        "discrete_eh": "12480",
+        "discrete_to_continuum_ratio": "39",
+        "master_variable": "3/13",
+        "rank39_normalization": "12480 / 39 = 320",
+        "topological_a2": "2240",
+        "topological_ratio": "7",
+        "weinberg_roundtrip": "9"
+      }
+    },
+    {
+      "name": "topological ratio is Phi6=7",
+      "passed": true,
+      "value": {
+        "continuum_eh": "320",
+        "discrete_eh": "12480",
+        "discrete_to_continuum_ratio": "39",
+        "master_variable": "3/13",
+        "rank39_normalization": "12480 / 39 = 320",
+        "topological_a2": "2240",
+        "topological_ratio": "7",
+        "weinberg_roundtrip": "9"
+      }
+    },
+    {
+      "name": "discrete-to-continuum ratio is 39",
+      "passed": true,
+      "value": {
+        "continuum_eh": "320",
+        "discrete_eh": "12480",
+        "discrete_to_continuum_ratio": "39",
+        "master_variable": "3/13",
+        "rank39_normalization": "12480 / 39 = 320",
+        "topological_a2": "2240",
+        "topological_ratio": "7",
+        "weinberg_roundtrip": "9"
+      }
+    },
+    {
+      "name": "curved Weinberg roundtrip gives 9",
+      "passed": true,
+      "value": {
+        "continuum_eh": "320",
+        "discrete_eh": "12480",
+        "discrete_to_continuum_ratio": "39",
+        "master_variable": "3/13",
+        "rank39_normalization": "12480 / 39 = 320",
+        "topological_a2": "2240",
+        "topological_ratio": "7",
+        "weinberg_roundtrip": "9"
+      }
+    }
+  ],
+  "checks_passed": 63,
+  "checks_total": 63,
+  "coefficient_package": {
+    "continuum_eh": "320",
+    "discrete_eh": "12480",
+    "discrete_to_continuum_ratio": "39",
+    "master_variable": "3/13",
+    "rank39_normalization": "12480 / 39 = 320",
+    "topological_a2": "2240",
+    "topological_ratio": "7",
+    "weinberg_roundtrip": "9"
+  },
+  "extractor_stack": {
+    "continuum_formula": "-(M_{r+2} - 121 M_{r+1} + 120 M_r) / (570 * six * 39 * 6^r)",
+    "curved_sample_count": 6,
+    "curved_sample_seeds": [
+      "CP2_9",
+      "K3_16"
+    ],
+    "projector_polynomial": "x^3 - 127x^2 + 846x - 720",
+    "residue_generating_function": "A/(1 - 120 z) + B/(1 - 6 z) + C/(1 - z)",
+    "shift_projectors": {
+      "P_1": "((E-120)(E-6))/595",
+      "P_120": "((E-6)(E-1))/13566",
+      "P_6": "-((E-120)(E-1))/570"
+    }
+  },
+  "finite_roundtrip": {
+    "betti_numbers": {
+      "b0": 1,
+      "b1": 81,
+      "b2": 0,
+      "b3": 0
+    },
+    "boundary_ranks": {
+      "rank_d1": 39,
+      "rank_d2": 120,
+      "rank_d3": 40
+    },
+    "chain_dimensions": {
+      "c0": 40,
+      "c1": 240,
+      "c2": 160,
+      "c3": 40
+    },
+    "df2_spectrum": {
+      "0": 82,
+      "10": 48,
+      "16": 30,
+      "4": 320
+    },
+    "seeley_dewitt_moments": {
+      "a0_f": 480,
+      "a2_f": 2240,
+      "a4_f": 17600
+    }
+  },
+  "honesty_boundary": "This is an exact coefficient-extractor and roundtrip theorem for the current finite-plus-curved package. It is still not the final Einstein-Hilbert spectral-action asymptotic theorem for a smooth continuum limit.",
+  "inverse_rosetta": {
+    "phi3": "13",
+    "phi6": "7",
+    "q": 3,
+    "spectrum": {
+      "k": 12,
+      "r": 2,
+      "s": -4
+    },
+    "srg": {
+      "k": 12,
+      "lambda": 2,
+      "mu": 4,
+      "v": 40
+    }
+  },
+  "part": "CCCCXXVIII",
+  "protected_photonic_handoff": {
+    "active_code": "[[82320,81,>=81]]",
+    "curved_seeds": {
+      "CP2_9": {
+        "betti_numbers": [
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "harmonic_total": 3,
+        "total_chain_dim": 255,
+        "vertices": 9
+      },
+      "K3_16": {
+        "betti_numbers": [
+          1,
+          0,
+          22,
+          0,
+          1
+        ],
+        "h2_signature_split": [
+          3,
+          19
+        ],
+        "harmonic_total": 24,
+        "total_chain_dim": 1704,
+        "vertices": 16
+      }
+    },
+    "edge_carrier": 240,
+    "h1_logical": 81,
+    "logical_harmonic_channels": {
+      "CP2_9_by_degree": [
+        81,
+        0,
+        81,
+        0,
+        81
+      ],
+      "CP2_9_total": 243,
+      "K3_16_by_degree": [
+        81,
+        0,
+        1782,
+        0,
+        81
+      ],
+      "K3_16_middle_h2": 1782,
+      "K3_16_total": 1944
+    },
+    "selector_trits": 40,
+    "source_part": "CCCCXXVII"
+  },
+  "theorem": "On each explicit curved seed, three successive refinement samples split into 120-, 6-, and 1-mode channels. The 6-mode projector and the corresponding residue both recover c6=12480, rank-39 normalization gives cEH=320, and the same samples reconstruct the finite package D_F^2={0^82,4^320,10^48,16^30} with moments (480,2240,17600). The Rosetta inverse recovers SRG(40,12,2,4), Phi3=13, Phi6=7, and x=3/13.",
+  "title": "Photonic Curved Einstein-Hilbert Extractor",
+  "verified": true
+}

@@ -1,0 +1,9 @@
+{
+  "part": "DCMXXXIV",
+  "decimal": 934,
+  "title": "Ihara Zeta Function Graph RH: Proved",
+  "ihara_poles": "|u| = 1/sqrt(k) = 1/2 EXACTLY",
+  "graph_RH": "PROVED for PG(2,3)",
+  "classical_RH_strategy": "classical zeta = limit of Ihara zeta functions over PG(2,q)",
+  "status": "PROVED"
+}

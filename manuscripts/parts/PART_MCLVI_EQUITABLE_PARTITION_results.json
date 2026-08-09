@@ -1,0 +1,80 @@
+{
+  "srg_params_ok": true,
+  "B3": [
+    [
+      "0",
+      "12",
+      "0"
+    ],
+    [
+      "1",
+      "2",
+      "9"
+    ],
+    [
+      "0",
+      "4",
+      "8"
+    ]
+  ],
+  "cell_sizes_3cell": [
+    1,
+    12,
+    27
+  ],
+  "quotient_eigenvalues_3cell": [
+    "12",
+    "2",
+    "-4"
+  ],
+  "eigenvec_k": [
+    "1",
+    "1",
+    "1"
+  ],
+  "eigenvec_r": [
+    "-18",
+    "-3",
+    "2"
+  ],
+  "eigenvec_s": [
+    "-9",
+    "3",
+    "-1"
+  ],
+  "char_poly_trace": "10",
+  "char_poly_sum_minors": "-32",
+  "char_poly_det": "-96",
+  "char_poly": "x^3 - 10x^2 - 32x + 96 = (x-12)(x-2)(x+4)",
+  "B2": [
+    [
+      "3",
+      "9"
+    ],
+    [
+      "1",
+      "11"
+    ]
+  ],
+  "cell_sizes_2cell": [
+    4,
+    36
+  ],
+  "B2_trace": "14",
+  "B2_det": "24",
+  "B2_eigenvalues": [
+    "12",
+    "2"
+  ],
+  "interlacing_sharp": true,
+  "quotient_eigs_in_srg_spectrum": true,
+  "trace_B1": "10",
+  "trace_B2": "164",
+  "trace_B3": "1672",
+  "novel_identity_1": "3-cell partition quotient has eigenvalues exactly {12,2,-4} = SRG spectrum",
+  "novel_identity_2": "2-cell GQ spread partition quotient has eigenvalues {12,2} (misses s=-4)",
+  "novel_identity_3": "det(B3) = -96 = -k*r*s/? = product of eigenvalues = 12*2*(-4) = -96",
+  "novel_identity_4": "char poly of B3 is (x-12)(x-2)(x+4) = minimal polynomial of A",
+  "novel_identity_5": "2-cell spread partition: each off-spread vertex touches exactly 1 spread clique",
+  "n_verified": 14
+}

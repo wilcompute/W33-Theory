@@ -1,0 +1,188 @@
+{
+  "Part": "CCXXIV",
+  "Title": "Topological Quantum Field Theory and Knot Invariants from W(3,3)",
+  "SRG": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "M_LAM": 27,
+    "M_NEG": 12,
+    "XI_POS": 2,
+    "XI_NEG": -4,
+    "LAP_MID": 10,
+    "LAP_TOP": 16,
+    "EDGES": 240,
+    "AUT_ORDER": 51840
+  },
+  "Verified": true,
+  "Checks": [
+    {
+      "name": "TQFT state space log_Q(dim) = V",
+      "value": 40,
+      "expected": 40,
+      "pass": true
+    },
+    {
+      "name": "TQFT state space log2(3^V)",
+      "value": 63.4,
+      "expected": 63.4,
+      "pass": true
+    },
+    {
+      "name": "Partition function proxy K^(K/2)",
+      "value": 2985984,
+      "expected": 2985984,
+      "pass": true
+    },
+    {
+      "name": "Partition function exponent K//2",
+      "value": 6,
+      "expected": 6,
+      "pass": true
+    },
+    {
+      "name": "log_K(Z_proxy) = K//2",
+      "value": 6,
+      "expected": 6,
+      "pass": true
+    },
+    {
+      "name": "WRT invariant level |Aut|/V",
+      "value": 1296,
+      "expected": 1296,
+      "pass": true
+    },
+    {
+      "name": "WRT level = 6^4",
+      "value": 1296,
+      "expected": 1296,
+      "pass": true
+    },
+    {
+      "name": "Chern-Simons level k_CS = K(K-1)/2",
+      "value": 66,
+      "expected": 66,
+      "pass": true
+    },
+    {
+      "name": "CS level mod Q = 0",
+      "value": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "name": "Jones polynomial root Re(t) = cos(2\u03c0/d)",
+      "value": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "name": "Jones polynomial root Im(t) = sin(2\u03c0/d)",
+      "value": 1.0,
+      "expected": 1.0,
+      "pass": true
+    },
+    {
+      "name": "|t|^2 = 1",
+      "value": 1.0,
+      "expected": 1.0,
+      "pass": true
+    },
+    {
+      "name": "Topological charge |Aut|/K",
+      "value": 4320,
+      "expected": 4320,
+      "pass": true
+    },
+    {
+      "name": "Topological charge = 6 * 720",
+      "value": 4320,
+      "expected": 4320,
+      "pass": true
+    },
+    {
+      "name": "Euler characteristic of 1-complex V-E",
+      "value": -200,
+      "expected": -200,
+      "pass": true
+    },
+    {
+      "name": "Euler characteristic value",
+      "value": -200,
+      "expected": -200,
+      "pass": true
+    },
+    {
+      "name": "Embedding genus proxy (2-\u03c7)/2",
+      "value": 101,
+      "expected": 101,
+      "pass": true
+    },
+    {
+      "name": "Linking number proxy (LAM*V)//EDGES",
+      "value": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "name": "Reduced linking EDGES//(V*K//2)",
+      "value": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "name": "Kauffman numerator proxy Q^K - 1",
+      "value": 531440,
+      "expected": 531440,
+      "pass": true
+    },
+    {
+      "name": "Kauffman numerator value",
+      "value": 531440,
+      "expected": 531440,
+      "pass": true
+    },
+    {
+      "name": "Q^K - 1 divisible by Q-1",
+      "value": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "name": "Surgery index M_LAM*MU//K",
+      "value": 9,
+      "expected": 9,
+      "pass": true
+    },
+    {
+      "name": "Surgery index = Q^2",
+      "value": 9,
+      "expected": 9,
+      "pass": true
+    },
+    {
+      "name": "Lens space recovery: surgery*K//MU = M_LAM",
+      "value": 27,
+      "expected": 27,
+      "pass": true
+    }
+  ],
+  "Bridges": {
+    "1_state_space_logQ": 40,
+    "2_Z_proxy": 2985984,
+    "3_k_WRT": 1296,
+    "4_k_CS": 66,
+    "5_t_real": 0.0,
+    "5_t_imag": 1.0,
+    "6_top_charge": 4320,
+    "7_euler_graph": -200,
+    "7_genus_proxy": 101,
+    "8_reduced_link": 1,
+    "9_kauffman_num": 531440,
+    "10_surgery_index": 9,
+    "10_lens_check": 27
+  },
+  "FreeParameters": 0
+}

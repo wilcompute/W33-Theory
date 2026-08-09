@@ -1,0 +1,46 @@
+{
+  "Part": "CCXXXIII",
+  "Title": "McKay Correspondence and ADE Dynkin Diagrams from W(3,3)",
+  "Verified": true,
+  "checks_passed": 30,
+  "checks_total": 30,
+  "SRG_parameters": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "M_LAM": 27,
+    "EDGES": 240,
+    "AUT_ORDER": 51840
+  },
+  "binary_polyhedral_groups": {
+    "2I_order": 120,
+    "2I_irreps": 9,
+    "2T_order": 24,
+    "2T_irreps": 7,
+    "2O_order": 48,
+    "2O_irreps": 8
+  },
+  "coxeter_numbers": {
+    "E6": 12,
+    "E7": 18,
+    "E8": 30
+  },
+  "root_system_sizes": {
+    "E6": 72,
+    "E7": 126,
+    "E8": 240,
+    "F4": 48,
+    "G2": 12
+  },
+  "dynkin_nodes": {
+    "E6": 6,
+    "E7": 7,
+    "E8": 8
+  },
+  "three_generations": 3,
+  "weyl_E6_order": 51840,
+  "lines_on_cubic": 27,
+  "mckay_E8_roots": 240
+}

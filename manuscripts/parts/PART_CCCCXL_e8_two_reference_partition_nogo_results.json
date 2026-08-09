@@ -1,0 +1,55 @@
+{
+  "part": "CCCCXL",
+  "title": "E8 Two-Reference Non-Uniqueness Witness",
+  "Verified": true,
+  "checks_total": 8,
+  "checks_passed": 8,
+  "checks": [
+    [
+      "E8 root count = 240",
+      true
+    ],
+    [
+      "All doubled norms are 8",
+      true
+    ],
+    [
+      "Total unordered pairs with diagonal = 28920",
+      true
+    ],
+    [
+      "At least one signature examined",
+      true
+    ],
+    [
+      "Two-reference family has feasible 24/108/108 partitions",
+      true
+    ],
+    [
+      "Feasible set is non-unique (strict subset of all pairs)",
+      true
+    ],
+    [
+      "Exactly one feasible signature class appears",
+      true
+    ],
+    [
+      "Exhaustive hit count = 15120",
+      true
+    ]
+  ],
+  "search": {
+    "roots": 240,
+    "pairs_including_diagonal": 28920,
+    "distinct_signatures": 3,
+    "feasible_signatures": 1,
+    "hits": 15120
+  },
+  "key_observations": [
+    "Exhaustive pair search completed over all 28,920 unordered (a,b), including a=b.",
+    "A 24/108/108 split exists for 15,120 pairs in this two-reference family.",
+    "So two-reference class assignment is too permissive, not uniquely selecting the bridge.",
+    "Count-level bridge 240=240 remains intact from earlier parts."
+  ],
+  "honesty_boundary": "This part proves non-uniqueness (degeneracy) in two-reference tuple-class construction. It does not yet construct the unique operator-level dictionary."
+}

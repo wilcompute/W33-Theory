@@ -2,35 +2,67 @@
   "pass_4321_design_space": {
     "A  biased, irreversible (shipped)": {
       "entropy_bits": null,
-      "loc": 0.6128670516611174,
+      "hardware_synthesized": false,
+      "loc": 0.612867051661,
       "mix": 15,
       "one_way": 243,
       "ops": 4,
-      "rho": 5.74687267990198
+      "pf_swap_invariant": false,
+      "rho": 5.746872679902,
+      "stir_counts_over_81": [
+        81,
+        72,
+        54,
+        54
+      ]
     },
     "B  symmetric, irreversible": {
       "entropy_bits": null,
-      "loc": 0.46043493157314924,
+      "hardware_synthesized": false,
+      "loc": 0.460434931573,
       "mix": 12,
       "one_way": 342,
       "ops": 6,
-      "rho": 8.762090305812745
+      "pf_swap_invariant": true,
+      "rho": 8.762090305813,
+      "stir_counts_over_81": [
+        81,
+        72,
+        81,
+        72
+      ]
     },
     "C  biased, reversible": {
       "entropy_bits": 0.0,
-      "loc": 0.6128670516611174,
+      "hardware_synthesized": false,
+      "loc": 0.612867051661,
       "mix": 16,
       "one_way": 0,
       "ops": 8,
-      "rho": 5.74687267990198
+      "pf_swap_invariant": false,
+      "rho": 5.746872679902,
+      "stir_counts_over_81": [
+        81,
+        78,
+        54,
+        54
+      ]
     },
     "D  symmetric, reversible": {
       "entropy_bits": 0.0,
-      "loc": 0.46043493157314924,
+      "hardware_synthesized": false,
+      "loc": 0.460434931573,
       "mix": 13,
       "one_way": 0,
       "ops": 12,
-      "rho": 8.762090305812745
+      "pf_swap_invariant": true,
+      "rho": 8.762090305813,
+      "stir_counts_over_81": [
+        81,
+        78,
+        81,
+        78
+      ]
     }
   },
   "pass_4322_flags_are_edges": {
@@ -39,20 +71,30 @@
     "hashimoto_dim": 320,
     "identical": true,
     "levi_edges": 160,
-    "rho": 3.0000000000000058
+    "rho": 3.0
   },
   "pass_4323_zero_asymmetry": {
     "arrow_removed": true,
-    "bias_reduced": true,
-    "bias_removed": false,
+    "hardware_synthesized": false,
+    "localisation_peak_reduced": true,
     "machine_D": {
       "entropy_bits": 0.0,
-      "loc": 0.46043493157314924,
+      "hardware_synthesized": false,
+      "loc": 0.460434931573,
       "mix": 13,
       "one_way": 0,
       "ops": 12,
-      "rho": 8.762090305812745
+      "pf_swap_invariant": true,
+      "rho": 8.762090305813,
+      "stir_counts_over_81": [
+        81,
+        78,
+        81,
+        78
+      ]
     },
-    "uniform_reference": 0.3333333333333333
+    "pf_asymmetry_removed": true,
+    "symmetric_localisation_not_bias": true,
+    "uniform_reference": 0.333333333333
   }
 }

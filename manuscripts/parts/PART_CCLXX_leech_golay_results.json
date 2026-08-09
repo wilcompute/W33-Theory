@@ -1,0 +1,341 @@
+{
+  "part": "CCLXX",
+  "title": "Leech Lattice, Golay Code & Conway/Mathieu Groups",
+  "checks_passed": 40,
+  "checks_total": 40,
+  "verified": true,
+  "w33_constants": {
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "Q": 3,
+    "M_LAM": 27,
+    "EDGES": 240,
+    "AUT_ORDER": 51840,
+    "PHI3": 13,
+    "PHI6": 7,
+    "LAP_MID": 10,
+    "LAP_TOP": 16
+  },
+  "data": {
+    "golay": {
+      "n": 24,
+      "k": 12,
+      "d": 8,
+      "covering_radius": 4,
+      "octads": 759,
+      "dodecads": 2576,
+      "hexadecads": 759
+    },
+    "leech": {
+      "dim": 24,
+      "min_norm": 4,
+      "det": 1,
+      "kissing_number": 196560,
+      "theta_4": 196560,
+      "theta_6": 16773120
+    },
+    "moonshine": {
+      "h_E7": 18,
+      "monster_head_dim": 196884,
+      "j_const_744": 744
+    },
+    "conway": {
+      "Co0": 8315553613086720000,
+      "Co1": 4157776806543360000,
+      "Co2": 42305421312000,
+      "Co3": 495766656000
+    },
+    "mathieu": {
+      "M24": 244823040,
+      "M23": 10200960,
+      "M22": 443520,
+      "M12": 95040,
+      "M11": 7920
+    },
+    "niemeier_count": 24
+  },
+  "checks": [
+    {
+      "id": "B01",
+      "ok": true,
+      "val": 24,
+      "expect": 24,
+      "note": "length = 2K"
+    },
+    {
+      "id": "B02",
+      "ok": true,
+      "val": 12,
+      "expect": 12,
+      "note": "dimension = K"
+    },
+    {
+      "id": "B03",
+      "ok": true,
+      "val": 8,
+      "expect": 8,
+      "note": "min distance = 2\u03bc"
+    },
+    {
+      "id": "B04",
+      "ok": true,
+      "val": 4,
+      "expect": 4,
+      "note": "covering radius = \u03bc"
+    },
+    {
+      "id": "B05",
+      "ok": true,
+      "val": 24,
+      "expect": 24,
+      "note": "n = q \u00d7 d"
+    },
+    {
+      "id": "B06",
+      "ok": true,
+      "val": 4095,
+      "expect": 4095,
+      "note": "weight-distribution sum = 2^K \u2212 1 = 4095"
+    },
+    {
+      "id": "B07",
+      "ok": true,
+      "val": 759,
+      "expect": 759,
+      "note": "octads = q \u00d7 11 \u00d7 23"
+    },
+    {
+      "id": "B08",
+      "ok": true,
+      "val": 2576,
+      "expect": 2576,
+      "note": "dodecads = \u03bc^\u03bb \u00d7 \u03a6\u2086 \u00d7 23 = 16 \u00d7 7 \u00d7 23"
+    },
+    {
+      "id": "B09",
+      "ok": true,
+      "val": 24,
+      "expect": 24,
+      "note": "dim \u039b\u2082\u2084 = 2K"
+    },
+    {
+      "id": "B10",
+      "ok": true,
+      "val": 4,
+      "expect": 4,
+      "note": "min norm = \u03bc"
+    },
+    {
+      "id": "B11",
+      "ok": true,
+      "val": 1,
+      "expect": 1,
+      "note": "det \u039b\u2082\u2084 = 1 (unimodular)"
+    },
+    {
+      "id": "B12",
+      "ok": true,
+      "val": 196560,
+      "expect": 196560,
+      "note": "kissing = EDGES \u00b7 q\u00b2 \u00b7 \u03a6\u2086 \u00b7 \u03a6\u2083 = 240\u00d79\u00d77\u00d713"
+    },
+    {
+      "id": "B13",
+      "ok": true,
+      "val": 819,
+      "expect": 819,
+      "note": "kissing / EDGES = q\u00b2\u00b7\u03a6\u2086\u00b7\u03a6\u2083 = 819"
+    },
+    {
+      "id": "B14",
+      "ok": true,
+      "val": 20,
+      "expect": 20,
+      "note": "dim \u2212 min_norm = EDGES/K = 20"
+    },
+    {
+      "id": "B15",
+      "ok": true,
+      "val": 196560,
+      "expect": 196560,
+      "note": "r(4) = kissing number"
+    },
+    {
+      "id": "B16",
+      "ok": true,
+      "val": 16773120,
+      "expect": 16773120,
+      "note": "r(6) = 2^K \u00d7 (2^K \u2212 1) = 4096 \u00d7 4095"
+    },
+    {
+      "id": "B17",
+      "ok": true,
+      "val": 4095,
+      "expect": 4095,
+      "note": "2^K \u2212 1 = q\u00b2\u00b7\u03a6\u2086\u00b7\u03a6\u2083\u00b75 = 4095"
+    },
+    {
+      "id": "B18",
+      "ok": true,
+      "val": 4095,
+      "expect": 4095,
+      "note": "r(6) / 2^K = 2^K \u2212 1 = non-trivial Golay count"
+    },
+    {
+      "id": "B19",
+      "ok": true,
+      "val": 759,
+      "expect": 759,
+      "note": "Steiner S(5,8,24): C(2K, \u03bc+1) / C(d, \u03bc+1) = octads"
+    },
+    {
+      "id": "B20",
+      "ok": true,
+      "val": 18,
+      "expect": 18,
+      "note": "h(E\u2087) = K + \u03bc + \u03bb = 18"
+    },
+    {
+      "id": "B21",
+      "ok": true,
+      "val": 196884,
+      "expect": 196884,
+      "note": "196884 = kissing + h(E\u2087)\u00b2  (moonshine)"
+    },
+    {
+      "id": "B22",
+      "ok": true,
+      "val": 744,
+      "expect": 744,
+      "note": "744 = (V \u2212 q\u00b2)\u00b72K = 31\u00d724"
+    },
+    {
+      "id": "B23",
+      "ok": true,
+      "val": 4157776806543360000,
+      "expect": 4157776806543360000,
+      "note": "|Co\u2081| = 2\u00b2\u00b9\u00b73\u2079\u00b75\u2074\u00b77\u00b2\u00b711\u00b7\u03a6\u2083\u00b723"
+    },
+    {
+      "id": "B24",
+      "ok": true,
+      "val": 0,
+      "expect": 0,
+      "note": "\u03a6\u2083 = 13 divides |Co\u2081|"
+    },
+    {
+      "id": "B25",
+      "ok": true,
+      "val": 0,
+      "expect": 0,
+      "note": "\u03a6\u2086 = 7 divides |Co\u2081|"
+    },
+    {
+      "id": "B26",
+      "ok": true,
+      "val": 0,
+      "expect": 0,
+      "note": "\u03a6\u2086 = 7 divides |Co\u2082|"
+    },
+    {
+      "id": "B27",
+      "ok": true,
+      "val": 0,
+      "expect": 0,
+      "note": "\u03a6\u2086 = 7 divides |Co\u2083|"
+    },
+    {
+      "id": "B28",
+      "ok": true,
+      "val": 2,
+      "expect": 2,
+      "note": "|Co\u2080| / |Co\u2081| = \u03bb = 2"
+    },
+    {
+      "id": "B29",
+      "ok": true,
+      "val": 244823040,
+      "expect": 244823040,
+      "note": "|M\u2082\u2084| = 2\u00b9\u2070\u00b7M_LAM\u00b75\u00b7\u03a6\u2086\u00b711\u00b723"
+    },
+    {
+      "id": "B30",
+      "ok": true,
+      "val": 24,
+      "expect": 24,
+      "note": "|M\u2082\u2084| / |M\u2082\u2083| = 2K  (degree of M\u2082\u2084 action)"
+    },
+    {
+      "id": "B31",
+      "ok": true,
+      "val": 10200960,
+      "expect": 10200960,
+      "note": "|M\u2082\u2083| = 2\u2077\u00b7q\u00b2\u00b75\u00b7\u03a6\u2086\u00b711\u00b723"
+    },
+    {
+      "id": "B32",
+      "ok": true,
+      "val": 443520,
+      "expect": 443520,
+      "note": "|M\u2082\u2082| = 2\u2077\u00b7q\u00b2\u00b75\u00b7\u03a6\u2086\u00b711"
+    },
+    {
+      "id": "B33",
+      "ok": true,
+      "val": 95040,
+      "expect": 95040,
+      "note": "|M\u2081\u2082| = 2\u2076\u00b7M_LAM\u00b75\u00b711"
+    },
+    {
+      "id": "B34",
+      "ok": true,
+      "val": 12,
+      "expect": 12,
+      "note": "|M\u2081\u2082| / |M\u2081\u2081| = K  (point-stabiliser chain)"
+    },
+    {
+      "id": "B35",
+      "ok": true,
+      "val": 24,
+      "expect": 24,
+      "note": "24 Niemeier lattices = 2K"
+    },
+    {
+      "id": "B36",
+      "ok": true,
+      "val": 16,
+      "expect": 16,
+      "note": "dim(\u039b) \u2212 d(Golay) = LAP_TOP = 16"
+    },
+    {
+      "id": "B37",
+      "ok": true,
+      "val": 4,
+      "expect": 4,
+      "note": "Golay covering radius = Leech min norm = \u03bc = 4"
+    },
+    {
+      "id": "B38",
+      "ok": true,
+      "val": 4095,
+      "expect": 4095,
+      "note": "non-trivial Golay codewords = r(6) / 2^K = 4095"
+    },
+    {
+      "id": "B39",
+      "ok": true,
+      "val": 7920,
+      "expect": 7920,
+      "note": "|M\u2081\u2081| = 2\u2074\u00b7q\u00b2\u00b75\u00b711 = 7920"
+    },
+    {
+      "id": "B40",
+      "ok": true,
+      "val": 0,
+      "expect": 0,
+      "note": "3\u2079 = Q^(Q\u00b2) divides |Co\u2081|"
+    }
+  ]
+}

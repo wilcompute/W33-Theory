@@ -1,0 +1,58 @@
+{
+  "Part": "CCXLII",
+  "Title": "L\u221e Bracket Mass Hierarchy Closure",
+  "Verified": true,
+  "checks_passed": 29,
+  "checks_total": 29,
+  "SRG_parameters": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "M_LAM": 27,
+    "M_NEG": 12,
+    "EDGES": 240,
+    "LAP_MID": 10,
+    "LAP_TOP": 16
+  },
+  "depth1": {
+    "denom_form1_lam_q_plus_lam_phi6": 136,
+    "denom_form2_k2_minus_lam_mu": 136,
+    "ratio_c_over_t": [
+      1,
+      136
+    ]
+  },
+  "depth2": {
+    "numerator_q_phi3": 39,
+    "factors": [
+      512,
+      5,
+      7,
+      11,
+      17
+    ],
+    "denominator": 3351040,
+    "ratio_u_over_t": [
+      39,
+      3351040
+    ]
+  },
+  "observational": {
+    "pred_c_over_t": 0.007352941176470588,
+    "obs_c_over_t": 0.007332140176664165,
+    "rel_err_c": 0.0028369615562760134,
+    "pred_u_over_t": 1.1638177998472117e-05,
+    "obs_u_over_t": 1.2470411639050863e-05,
+    "rel_err_u": 0.06673666152066884
+  },
+  "supplement_R_vs_depth_closure": {
+    "chain_mt_over_mu": 63960,
+    "closure_mt_over_mu": [
+      3351040,
+      39
+    ],
+    "truncation_factor": 1.343403729895287
+  }
+}

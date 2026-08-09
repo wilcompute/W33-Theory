@@ -1,0 +1,30 @@
+{
+  "part": "CCCL",
+  "title": "Spectral Moments and Walk Counting in W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "mu_0": 40,
+    "mu_1": 0,
+    "mu_2": 480,
+    "mu_3": 960,
+    "mu_4": 24960,
+    "num_triangles": 160,
+    "closed_walks_per_vertex_2": "12",
+    "closed_walks_per_vertex_3": "24"
+  },
+  "discoveries": [
+    "mu_0 = V = 40: trace of I",
+    "mu_1 = 0: W(3,3) is K-regular bipartite-like (traceless A)",
+    "mu_2 = V*K = 480 = twice the edge count",
+    "mu_3/V = K*LAM = 24 = SU(5) adjoint dimension MULT_R",
+    "Number of triangles T = 160 = V*K*LAM/6",
+    "mu_4/mu_2 = V+K = 52 (structural identity)",
+    "EDGES/ALPHA = 240/10 = 24 = SU(5) adjoint dimension",
+    "Universal 24: K4 flags=4*3*2=24, |S4|=4!=24, {3,6}_{2,2} has 24 faces",
+    "Two toroidal K_n: K5 (genus-mod-12 numerator 2) and K6 (numerator 6)",
+    "both share complete-graph extremal adjacency with planar K4",
+    "Mathieu M24 on 24 pts, M12 on K=12 pts \u2014 24=2*K=2*TOTAL_GAUGE"
+  ]
+}

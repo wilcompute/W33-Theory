@@ -1,0 +1,49 @@
+{
+  "theorem": "Green-kernel floor reciprocity",
+  "floor": {
+    "fraction": "1/12",
+    "numerator": 1,
+    "denominator": 12,
+    "float": 0.08333333333333333
+  },
+  "green_adjacent_entry": {
+    "fraction": "1/12",
+    "numerator": 1,
+    "denominator": 12,
+    "float": 0.08333333333333333
+  },
+  "green_row_sum": {
+    "fraction": "1/12",
+    "numerator": 1,
+    "denominator": 12,
+    "float": 0.08333333333333333
+  },
+  "green_nonedge_entry": {
+    "fraction": "-1/24",
+    "numerator": -1,
+    "denominator": 24,
+    "float": -0.041666666666666664
+  },
+  "integer_scaled_inverse": {
+    "denominator": 24,
+    "I": 6,
+    "A": 3,
+    "J": -1,
+    "formula": "24 A^-1 = 6I + 3A - J",
+    "identity": "A(6I + 3A - J) = 24I",
+    "lhs_coefficients_after_srg_reduction": {
+      "I": 24,
+      "A": 0,
+      "J": 0
+    },
+    "verified": true
+  },
+  "trace_A_inverse": {
+    "fraction": "25/3",
+    "numerator": 25,
+    "denominator": 3,
+    "float": 8.333333333333334
+  },
+  "green_kernel_floor_reciprocity_detected": true,
+  "claim_boundary": "finite W33 adjacency Green-kernel identity extending the corrected substrate floor; not a new continuum proof by itself"
+}

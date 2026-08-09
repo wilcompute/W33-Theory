@@ -196,7 +196,7 @@ def main():
     data={n:json.loads(p.read_text()) for n,p in P.items()}
     packet=json.loads(PACKET.read_text());manifest=json.loads(MANIFEST.read_text())
     for d in list(data.values())+[packet,manifest]:assert chash(d)==d["semantic_sha256"]
-    assert packet["semantic_sha256"]=="314ff5c6d21bd4f70a6c7a3228a958cc00f6f4991a288c0f293dcedd9146b8c2"
+    assert packet["semantic_sha256"]=="267198b8b02374007865d5c9a3cb52b72f18fb221e886b296ff9047432e55a1f"
     pts,A=geometry();gens,group=group_perms(pts);assert np.all(A.sum(1)==12)
     o5=subset_orbits(5,gens,A);assert len(o5)==43 and sum(x[1] for x in o5)==math.comb(40,5)
     best=max(o5,key=lambda z:z[2]);assert best[2]==72 and best[3]==4 and best[4]==[4,1,1,1,1]

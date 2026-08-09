@@ -1,0 +1,94 @@
+{
+  "part": "CCCCCXII",
+  "title": "Unified Flavor Kernel Theorem",
+  "atoms": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "k": 12,
+    "v": 40,
+    "E": 240,
+    "directed_edges": 480,
+    "r": 2,
+    "s": -4,
+    "f": 24,
+    "g": 15,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7
+  },
+  "kernel_operations": {
+    "perron_determinant_compactification": {
+      "det_I_plus_J": 41,
+      "y_t_cubed": "40/41",
+      "lambda_CKM": "9/40",
+      "lambda_CKM_times_y_t_cubed": "9/41"
+    },
+    "heavy_yukawa_gaussian_ladder": {
+      "D_t": 41,
+      "D_b": 125,
+      "D_c": 137,
+      "y_b": "3/125",
+      "y_c": "1/137",
+      "alpha_core": 137,
+      "alpha_inverse_refined": "669969/4889"
+    },
+    "cumulant_gap_higgs_surface": {
+      "excited_mean": "160/13",
+      "gap_ratio": "8/5",
+      "lambda_H": "13/100",
+      "A_CKM": "81/100",
+      "PMNS_theta13": "9/400",
+      "y_tau": "16029/1562500"
+    },
+    "cyclotomic_angular_surface": {
+      "PMNS_solar": "4/13",
+      "PMNS_atmospheric": "4/7",
+      "PMNS_CP_over_pi": "11/10",
+      "CKM_eta": "343/1000",
+      "CKM_rho": "4/25"
+    }
+  },
+  "cross_identities": {
+    "A_CKM_over_lambda_H": "81/13",
+    "PMNS_solar_over_atmospheric": "7/13",
+    "y_tau_yc_over_yb_squared": "13/100",
+    "alpha_slip": "880/24445"
+  },
+  "structural_dimensions": {
+    "G2": 14,
+    "SU5": 24,
+    "SO10": 45,
+    "E6": 78,
+    "E8": 248
+  },
+  "checks": {
+    "true_master_equation": true,
+    "w33_atoms": true,
+    "perron_det_41": true,
+    "top_cube_40_over_41": true,
+    "lambda_ckm_9_over_40": true,
+    "compactified_ckm_density_9_over_41": true,
+    "bottom_ladder_denominator_125": true,
+    "charm_ladder_denominator_137": true,
+    "yb_yc": true,
+    "excited_E6_mean": true,
+    "gap_ratio": true,
+    "lambda_H_13_over_100": true,
+    "A_CKM_81_over_100": true,
+    "PMNS_theta13_9_over_400": true,
+    "y_tau_forced": true,
+    "yukawa_higgs_ratio": true,
+    "pmns_solar_4_over_13": true,
+    "pmns_atmospheric_4_over_7": true,
+    "pmns_cp_11_over_10": true,
+    "ckm_eta_343_over_1000": true,
+    "ckm_rho_4_over_25": true,
+    "A_over_lambdaH_81_over_13": true,
+    "pmns_solar_atm_ratio_7_over_13": true,
+    "alpha_core_and_refined": true,
+    "structural_dimensions": true
+  },
+  "all_checks_pass": true,
+  "interpretation": "The flavor sector is organized by four W(3,3) operations: Perron determinant compactification; q-dressed/Gaussian heavy-Yukawa ladder; E6 excited cumulant plus restricted gap ratio; and the cyclotomic angular surface. CKM, PMNS, Higgs, alpha/charm, and third-generation Yukawas are therefore not separate tables but projections of one finite flavor kernel."
+}

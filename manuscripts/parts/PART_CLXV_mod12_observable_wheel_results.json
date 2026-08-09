@@ -1,0 +1,69 @@
+{
+  "module": "PART_CLXV_MOD12_OBSERVABLE_WHEEL",
+  "source_links": {
+    "CLXII": "stabilizer field dynamics",
+    "CLXIII": "decimal reptend compiler",
+    "CLXIV": "toroidal genus/reptend bridge"
+  },
+  "w33_atoms": {
+    "q": 3,
+    "q_square": 9,
+    "rank_seed_2q": 6,
+    "k": 12,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "J": 5,
+    "J_inverse": 8,
+    "binary_duality_q_minus_1": 2,
+    "Hashimoto_norm": 11
+  },
+  "orbit_threads": {
+    "q_axis_boundaries": [3, 6, 9, 12],
+    "hole_gate_residues": [3, 4, 7, 12],
+    "decimal_terminating": [1, 2, 4, 5, 8],
+    "decimal_cyclic": [7],
+    "decimal_missing_q_axis": [3, 6, 9],
+    "stabilizer_J_cycle": [1, 5, 12, 8],
+    "bridge_atoms": [7, 10, 11, 12]
+  },
+  "quarter_table": [
+    {"quarter": 1, "residues": [1, 2, 3], "boundary": 3, "contains_hole_residue": [3], "contains_decimal_terminators": [1, 2], "contains_J_cycle": [1]},
+    {"quarter": 2, "residues": [4, 5, 6], "boundary": 6, "contains_hole_residue": [4], "contains_decimal_terminators": [4, 5], "contains_J_cycle": [5]},
+    {"quarter": 3, "residues": [7, 8, 9], "boundary": 9, "contains_hole_residue": [7], "contains_decimal_terminators": [8], "contains_J_cycle": [8]},
+    {"quarter": 4, "residues": [10, 11, 12], "boundary": 12, "contains_hole_residue": [12], "contains_decimal_terminators": [], "contains_J_cycle": [12]}
+  ],
+  "wheel_rows": [
+    {"residue": 1, "quarter": 1, "labels": ["decimal terminating digit", "stabilizer J-cycle"], "primary_role": "unit / J-cycle identity"},
+    {"residue": 2, "quarter": 1, "labels": ["decimal terminating digit"], "primary_role": "binary duality q-1"},
+    {"residue": 3, "quarter": 1, "labels": ["q-axis boundary", "toroidal hole-gate residue", "missing decimal q-axis", "q"], "primary_role": "q boundary and genus zero root"},
+    {"residue": 4, "quarter": 2, "labels": ["toroidal hole-gate residue", "decimal terminating digit", "q+1 tetra seed"], "primary_role": "tetrahedral q+1 root"},
+    {"residue": 5, "quarter": 2, "labels": ["decimal terminating digit", "stabilizer J-cycle", "J stabilizer residue / threshold numerator"], "primary_role": "stabilizer residue threshold numerator"},
+    {"residue": 6, "quarter": 2, "labels": ["q-axis boundary", "missing decimal q-axis", "2q=q! rank middle"], "primary_role": "rank middle 2q=q!"},
+    {"residue": 7, "quarter": 3, "labels": ["toroidal hole-gate residue", "decimal cyclic denominator", "Phi6 torus/cyclic threshold"], "primary_role": "Phi6 torus and decimal cyclic denominator"},
+    {"residue": 8, "quarter": 3, "labels": ["decimal terminating digit", "stabilizer J-cycle", "J inverse / carrier numerator"], "primary_role": "carrier numerator J inverse"},
+    {"residue": 9, "quarter": 3, "labels": ["q-axis boundary", "missing decimal q-axis", "q^2 square axis"], "primary_role": "q^2 square axis"},
+    {"residue": 10, "quarter": 4, "labels": ["Phi4 decimal base / bridge"], "primary_role": "Phi4 bridge/base"},
+    {"residue": 11, "quarter": 4, "labels": ["Hashimoto norm k-1"], "primary_role": "Hashimoto norm"},
+    {"residue": 12, "quarter": 4, "labels": ["q-axis boundary", "toroidal hole-gate residue", "stabilizer J-cycle", "k=12 closure / J^2=-1"], "primary_role": "k closure and -1 quarter-turn state"}
+  ],
+  "checks": {
+    "q_axis_is_quarter_boundaries": true,
+    "hole_gate_is_q_qp1_phi6_k": true,
+    "decimal_partition_1_to_9": true,
+    "decimal_parts_disjoint": true,
+    "j_cycle_is_quarter_turn_thread": true,
+    "j_square_is_k_mod_phi3": true,
+    "j_inverse_is_carrier": true,
+    "phi6_is_j_plus_binary_duality": true,
+    "phi4_is_2j": true,
+    "hashimoto_norm_is_k_minus_one": true,
+    "all_12_residues_tagged": true,
+    "hole_gate_hits_one_residue_per_quarter_or_boundary": true,
+    "q_axis_boundaries_match_quarter_boundaries": true,
+    "cyclic_phi6_is_first_after_rank_middle": true,
+    "base_phi4_sits_after_qsquare": true
+  },
+  "theorem_statement": "The mod-12 wheel is the common finite interface of the decimal reptend, toroidal genus gate, stabilizer quarter-turn, and W(3,3) atoms. Its quarter boundaries are {3,6,9,12}={q,2q,q^2,k}; its toroidal residues are {3,4,7,12}={q,q+1,Phi6,k}; its decimal partition is {1,2,4,5,8} plus {7} plus {3,6,9}; and its stabilizer cycle is 1->5->12->8->1.",
+  "interpretive_note": "This makes the mod-12 wheel explicit. The value 7=Phi6 is not just the decimal cyclic denominator or the torus solution: it is the first residue after the rank middle 6, the CRT recombination in the hole equation, and the realization closure J+(q-1)."
+}

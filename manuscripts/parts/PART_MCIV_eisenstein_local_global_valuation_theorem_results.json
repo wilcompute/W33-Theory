@@ -1,0 +1,4 @@
+{
+  "statement": "For a split prime p \u2261 1 mod 3 and the matching branch residue r, the Eisenstein valuation is exact: v_{pi_r}(q-\u03c9)=n iff q \u2261 r mod p^n but not mod p^(n+1), and similarly v_{pi_r}(q+\u03c9)=n on the Phi6 branch. Equivalently, the exact split-prime exponent in Phi3(q) or Phi6(q) is the exact Hensel depth of q on the chosen branch.",
+  "all_examples_exact": true
+}

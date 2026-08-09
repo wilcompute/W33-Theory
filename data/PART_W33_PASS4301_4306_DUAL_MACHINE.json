@@ -1,5 +1,7 @@
 {
   "pass_4301_dual_machine": {
+    "affine_translation_descends_to_projective_lines": false,
+    "affine_translation_descends_to_projective_points": false,
     "line": {
       "E": 91,
       "V": 40,
@@ -11,9 +13,8 @@
       "label": "line side",
       "nontrivial": 72,
       "on_circle": 0,
-      "rho": 4.078733846523846
+      "rho": 4.078733846524
     },
-    "load_port_has_dual": false,
     "point": {
       "E": 102,
       "V": 40,
@@ -25,8 +26,9 @@
       "label": "point side",
       "nontrivial": 78,
       "on_circle": 0,
-      "rho": 4.620533158134286
+      "rho": 4.620533158134
     },
+    "projective_rows_use_linear_subgroup_only": true,
     "spectrally_identical": false
   },
   "pass_4303_gset": {
@@ -53,20 +55,24 @@
   },
   "pass_4304_dual_rail": {
     "detected": 1897,
-    "detection_rate": 0.9571140262361252,
+    "detection_rate": 0.957114026236,
+    "is_self_contained_dual_rail_comparator": false,
     "missed": 85,
+    "model": "faulty trajectory versus golden trajectory on each rail",
+    "superseded_by": "Pass 4331 exact incidence comparator",
     "trials": 1982
   },
   "pass_4305_duality_stable": {
-    "bias_source": "the load port Z_p, which has no dual and no f-counterpart",
     "f_plane_is_line": false,
     "f_plane_points": 4,
-    "linear_opcode_plane_asymmetry": 0,
-    "linear_part_is_pf_symmetric": true,
+    "linear_opcode_set_pf_swap_invariant": false,
     "omega_on_f": 1,
     "omega_on_p": 1,
     "p_plane_is_line": false,
     "p_plane_points": 4,
-    "planes_are_hyperbolic_not_isotropic": true
+    "planes_are_hyperbolic_not_isotropic": true,
+    "setwise_fixation_test_was_insufficient": true,
+    "setwise_plane_fixation_mismatch_count": 0,
+    "superseded_by": "Pass 4330 exact affine-conjugation audit"
   }
 }

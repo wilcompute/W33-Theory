@@ -1,0 +1,22 @@
+{
+  "part": "CCCLVIII",
+  "title": "Preferred Grading-Role Sector Architecture Compiler",
+  "verified": true,
+  "checks_passed": 7,
+  "checks_total": 7,
+  "architecture_policy": {
+    "preferred": "operator_core/grading_role",
+    "preferred_blocks": {
+      "0": ["mass", "heat_trace", "zeta"],
+      "1": ["gap", "spinor_trace", "resolvent_trace"]
+    },
+    "fallbacks": {
+      "minimal_bridge": "use when data favors separating geometry readout from traced kernels",
+      "transform_class": "use when data favors functional-calculus specific sectors"
+    },
+    "rejection_rule": "if neither preferred nor refinements pass, compare against free_channel and treat response packet as not explained by current sector architecture"
+  },
+  "evidence_sources": ["CCCXLIX", "CCCL", "CCCLII", "CCCLV", "CCCLVI", "CCCLVII"],
+  "promoted_theorem": "The preferred finite W33 response-sector architecture is operator_core/grading_role: G2/even/matter-scale channels {mass, heat_trace, zeta} and G/first-order/action-gap channels {gap, spinor_trace, resolvent_trace}. Minimal_bridge and transform_class are retained as controlled refinements, not replacements, unless model comparison favors them.",
+  "honesty_boundary": "This promotion is based on current structural, graph, spectral, and grading evidence. It remains conditional on future empirical response packets and deeper representation-theoretic checks."
+}

@@ -1,0 +1,69 @@
+{
+  "part": "CCCCXLV",
+  "title": "Refinement Monotonicity Theorem (Exact Consequence)",
+  "Verified": true,
+  "checks_total": 6,
+  "checks_passed": 6,
+  "checks": [
+    [
+      "E8 roots count = 240",
+      true
+    ],
+    [
+      "Exactly one feasible two-reference signature",
+      true
+    ],
+    [
+      "Feasible two-reference pair count = 15120",
+      true
+    ],
+    [
+      "Representative (0,13) lies in feasible signature",
+      true
+    ],
+    [
+      "Inherited refinement preserves targets for all c on representative",
+      true
+    ],
+    [
+      "Feasible signature count-level consequence: all pairs have 240 feasible c by theorem",
+      true
+    ]
+  ],
+  "targets": [
+    24,
+    108,
+    108
+  ],
+  "two_reference": {
+    "distinct_signatures": 3,
+    "feasible_signatures": 1,
+    "feasible_pairs": 15120
+  },
+  "representative": {
+    "pair": [
+      0,
+      13
+    ],
+    "signature": [
+      1,
+      1,
+      1,
+      1,
+      12,
+      12,
+      12,
+      12,
+      32,
+      32,
+      32,
+      32,
+      60
+    ],
+    "inherited_refinement_verified_for_all_c": true,
+    "c_checked": 240
+  },
+  "theorem_statement": "If a parent class partition is feasible for (24,108,108), every refinement is feasible by inheriting block labels from parent classes.",
+  "exact_consequence": "Since exactly one two-reference signature is feasible and contains 15120 pairs, every pair in that signature has 240 feasible third references.",
+  "honesty_boundary": "This part gives an exact theorem for the feasible stratum. It does not yet classify full third-reference rescue distributions for infeasible strata."
+}

@@ -1,0 +1,281 @@
+{
+  "architecture_upgrade": "Identifies the weight-3 X-logical obstruction as the K4 line-star packet and links it to the tomotope local incidence/Fourier-Clifford packet. The corrected rank read is that line-stars span the 81-dimensional matter sector modulo vertex checks, so the protection move is re-encoding, not adding all line-stars as stabilizers.",
+  "checks": [
+    {
+      "name": "W33 counts 40/240/160",
+      "passed": true,
+      "value": {
+        "E": 240,
+        "T": 160,
+        "V": 40
+      }
+    },
+    {
+      "name": "K4 lines count = 40",
+      "passed": true,
+      "value": 40
+    },
+    {
+      "name": "line-star triples count = 160",
+      "passed": true,
+      "value": 160
+    },
+    {
+      "name": "line-star rows have weight 3",
+      "passed": true,
+      "value": [
+        3
+      ]
+    },
+    {
+      "name": "line-star span rank = 120",
+      "passed": true,
+      "value": 120
+    },
+    {
+      "name": "base X rank 39, Z rank 120",
+      "passed": true,
+      "value": {
+        "rx": 39,
+        "rz": 120
+      }
+    },
+    {
+      "name": "X plus line-star gauge rank = 120",
+      "passed": true,
+      "value": 120
+    },
+    {
+      "name": "line-stars commute with triangle Z checks",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "line-star quotient rank = 81",
+      "passed": true,
+      "value": {
+        "base_rank": 39,
+        "combined_rank": 120
+      }
+    },
+    {
+      "name": "adding line-stars as stabilizers collapses k to zero",
+      "passed": true,
+      "value": 0
+    }
+  ],
+  "checks_passed": 10,
+  "checks_total": 10,
+  "honesty_boundary": "This corrects the earlier CCCCVIII rank-effect wording and agrees with CCCCIX. It does not yet construct the final subsystem code distance after re-encoding; that is handled by the later Q4 packet and dressed-logical audits.",
+  "line_star_packet": {
+    "k4_lines": 40,
+    "line_star_span_rank": 120,
+    "line_star_triples": 160,
+    "line_star_weight": 3,
+    "sample_witnesses": [
+      {
+        "center": 0,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "line": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "center": 1,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "line": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "center": 2,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "line": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "center": 3,
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "line": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "center": 0,
+        "edges": [
+          [
+            0,
+            13
+          ],
+          [
+            0,
+            14
+          ],
+          [
+            0,
+            15
+          ]
+        ],
+        "line": [
+          0,
+          13,
+          14,
+          15
+        ]
+      },
+      {
+        "center": 13,
+        "edges": [
+          [
+            0,
+            13
+          ],
+          [
+            13,
+            14
+          ],
+          [
+            13,
+            15
+          ]
+        ],
+        "line": [
+          0,
+          13,
+          14,
+          15
+        ]
+      },
+      {
+        "center": 14,
+        "edges": [
+          [
+            0,
+            14
+          ],
+          [
+            13,
+            14
+          ],
+          [
+            14,
+            15
+          ]
+        ],
+        "line": [
+          0,
+          13,
+          14,
+          15
+        ]
+      },
+      {
+        "center": 15,
+        "edges": [
+          [
+            0,
+            15
+          ],
+          [
+            13,
+            15
+          ],
+          [
+            14,
+            15
+          ]
+        ],
+        "line": [
+          0,
+          13,
+          14,
+          15
+        ]
+      }
+    ],
+    "stars_per_line": 4
+  },
+  "part": "CCCCVIII",
+  "rank_effect": {
+    "X_plus_line_star_rank": 120,
+    "Z_rank": 120,
+    "base_X_rank": 39,
+    "if_added_as_stabilizers_k": 0,
+    "line_star_mod_vertex_rank": 81
+  },
+  "theorem": "W33 has 40 K4 lines and 160 line-star triples of weight 3. These triples span rank 120 and commute with the triangle Z checks. Together with the 39 vertex checks they still span rank 120, so the quotient line-star/vertex sector has rank 81. Adding them all as ordinary stabilizers collapses k to zero.",
+  "title": "Line-Star Gauge / Tomotope Bridge",
+  "tomotope_packet": {
+    "axis_tomotope_block_duality": "48 common <r0,r3> blocks; tomotope (12,4,16,3) dual to axis (16,3,12,4)",
+    "edges": 12,
+    "flags": 192,
+    "local_decomposition": "16=2 orientations * 4 tetrahedral chart vertices * 2 Clifford chiralities",
+    "local_flags_per_edge": 16
+  },
+  "verified": true
+}

@@ -1,0 +1,116 @@
+{
+  "part": "MCLXII",
+  "theorem": "Yang-Mills gap-shell deformation envelope",
+  "parameters": {
+    "v": 40,
+    "k": 12,
+    "lambda": 2,
+    "mu": 4,
+    "r": 2,
+    "s": -4,
+    "m_r": 24,
+    "m_s": 15,
+    "edges": 240
+  },
+  "normalized_laplacian_spectrum": [
+    {
+      "eigenvalue": "0",
+      "multiplicity": 1
+    },
+    {
+      "eigenvalue": "5/6",
+      "multiplicity": 24
+    },
+    {
+      "eigenvalue": "4/3",
+      "multiplicity": 15
+    }
+  ],
+  "gap_shell_lock": {
+    "S_holo": {
+      "fraction": "20",
+      "numerator": 20,
+      "denominator": 1,
+      "float": 20.0
+    },
+    "nu_gap": {
+      "fraction": "5/6",
+      "numerator": 5,
+      "denominator": 6,
+      "float": 0.8333333333333334
+    },
+    "S_holo_over_nu_gap": {
+      "fraction": "24",
+      "numerator": 24,
+      "denominator": 1,
+      "float": 24.0
+    },
+    "gap_multiplicity": 24,
+    "dim_su5_adjoint": 24,
+    "uv_multiplicity": 15,
+    "dim_su4_adjoint": 15,
+    "lock_verified": true
+  },
+  "deformation_envelope": {
+    "davis_kahan_coefficient": {
+      "fraction": "3/5",
+      "numerator": 3,
+      "denominator": 5,
+      "float": 0.6
+    },
+    "gap_lower_bound": "nu_gap - epsilon*(3/5)",
+    "one_parameter_critical_radius": {
+      "fraction": "25/18",
+      "numerator": 25,
+      "denominator": 18,
+      "float": 1.3888888888888888
+    },
+    "e8_rank": 8,
+    "rank_distributed_per_channel_radius": {
+      "fraction": "25/144",
+      "numerator": 25,
+      "denominator": 144,
+      "float": 0.1736111111111111
+    },
+    "eight_channels_saturate_exact_radius": {
+      "fraction": "25/18",
+      "numerator": 25,
+      "denominator": 18,
+      "float": 1.3888888888888888
+    },
+    "gap_lower_at_rank_channel_radius": {
+      "fraction": "35/48",
+      "numerator": 35,
+      "denominator": 48,
+      "float": 0.7291666666666666
+    },
+    "classification": "25/18 is the one-parameter closure radius; 25/144 is the rank-8 per-channel strict safe radius."
+  },
+  "uniform_scaling": {
+    "statement": "A -> cA and D -> cD leave L_hat = I - D^{-1/2} A D^{-1/2} unchanged.",
+    "sample_max_errors": {
+      "1/2": "0.0e+00",
+      "4/3": "0.0e+00",
+      "3": "0.0e+00",
+      "25/18": "0.0e+00"
+    },
+    "invariant": true
+  },
+  "claim_boundary": "finite W33 normalized-Laplacian mass-gap envelope; continuum Yang-Mills remains a limit/identification bridge",
+  "checks": {
+    "srg_parameters_verified": true,
+    "normalized_gap_value_is_5_over_6": true,
+    "normalized_uv_value_is_4_over_3": true,
+    "gap_multiplicity_is_24": true,
+    "S_holo_equals_20": true,
+    "gap_shell_ratio_equals_multiplicity": true,
+    "uv_multiplicity_is_su4_adjoint_count": true,
+    "davis_kahan_coefficient_is_3_over_5": true,
+    "one_parameter_critical_radius_is_25_over_18": true,
+    "rank_channel_radius_is_25_over_144": true,
+    "rank_channel_radius_is_one_eighth_of_critical": true,
+    "safe_radius_keeps_positive_gap": true,
+    "uniform_scaling_is_lhat_invariant": true
+  },
+  "n_verified": 13
+}

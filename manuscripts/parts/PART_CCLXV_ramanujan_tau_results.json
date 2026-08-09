@@ -1,0 +1,215 @@
+{
+  "part": "CCLXV",
+  "title": "Ramanujan \u03c4-Function and W(3,3)",
+  "checks_total": 35,
+  "checks_passed": 35,
+  "Verified": true,
+  "key_identities": {
+    "tau_2_equals_neg_f": "\u03c4(2) = -24 = \u2212f = \u221224",
+    "tau_3_equals_E_plus_k": "\u03c4(3) = 252 = E+k = 240+12",
+    "modular_weight_eq_k": "weight(\u0394) = 12 = k = 12",
+    "eta_exponent_eq_f": "\u0394 = \u03b7^24, exponent = f = 24",
+    "691_W33_form": "691 = k^\u03a6\u2086\u00b7(\u03bc+1)+q\u00b7(\u03a6\u2083+\u03bc) = 691",
+    "ramanujan_graph": "max(|r|,|s|) = 4 < 2\u221a11 \u2248 6.633"
+  },
+  "tau_values": {
+    "1": 1,
+    "2": -24,
+    "3": 252,
+    "4": -1472,
+    "5": 4830,
+    "6": -6048,
+    "7": -16744,
+    "8": 84480,
+    "9": -113643,
+    "10": -115920,
+    "11": 534612,
+    "12": -370944,
+    "13": -577738,
+    "14": 401856,
+    "15": 1217160,
+    "16": 987136,
+    "17": -6905934,
+    "18": 2727432,
+    "19": 10661420,
+    "20": -7109760,
+    "23": 18643272
+  },
+  "checks": [
+    {
+      "check": "B1a: |r| < 2\u221a(K-1)",
+      "passed": true,
+      "detail": "|r|=2.0 < 2\u221a11\u22486.6332: True"
+    },
+    {
+      "check": "B1b: |s| < 2\u221a(K-1)",
+      "passed": true,
+      "detail": "|s|=4.0 < 6.6332: True"
+    },
+    {
+      "check": "B1c: spectral gap = k \u2212 r",
+      "passed": true,
+      "detail": "spectral gap = 12 \u2212 2 = 10"
+    },
+    {
+      "check": "B2: \u03c4(2) = \u2212f",
+      "passed": true,
+      "detail": "\u03c4(2)=-24, \u2212f=-24, equal=True"
+    },
+    {
+      "check": "B2b: \u03c4(2) = \u22122k",
+      "passed": true,
+      "detail": "\u03c4(2)=-24, \u22122k=-24"
+    },
+    {
+      "check": "B3: \u03c4(3) = E + k",
+      "passed": true,
+      "detail": "\u03c4(3)=252, E+k=252, equal=True"
+    },
+    {
+      "check": "B3b: \u03c4(3) = 21k",
+      "passed": true,
+      "detail": "\u03c4(3)=252, 21k=252"
+    },
+    {
+      "check": "B4: modular weight of \u0394 = k",
+      "passed": true,
+      "detail": "weight=12, k=12, equal=True"
+    },
+    {
+      "check": "B5a: \u03c4(4) = \u03c4(2)\u00b2 \u2212 2\u00b9\u00b9  [Hecke]",
+      "passed": true,
+      "detail": "\u03c4(2)\u00b2\u22122\u00b9\u00b9=-1472, \u03c4(4)=-1472, ok=True"
+    },
+    {
+      "check": "B5b: \u03c4(8) = \u03c4(2)\u00b7\u03c4(4) \u2212 2\u00b9\u00b9\u00b7\u03c4(2)  [Hecke]",
+      "passed": true,
+      "detail": "Hecke=84480, \u03c4(8)=84480, ok=True"
+    },
+    {
+      "check": "B5c: \u03c4(9) = \u03c4(3)\u00b2 \u2212 3\u00b9\u00b9  [Hecke]",
+      "passed": true,
+      "detail": "\u03c4(3)\u00b2\u22123\u00b9\u00b9=-113643, \u03c4(9)=-113643, ok=True"
+    },
+    {
+      "check": "B5d: \u03c4(16) = \u03c4(2)\u00b7\u03c4(8) \u2212 2\u00b9\u00b9\u00b7\u03c4(4)  [Hecke]",
+      "passed": true,
+      "detail": "Hecke=987136, \u03c4(16)=987136, ok=True"
+    },
+    {
+      "check": "B6a: 691 = k^\u03a6\u2086\u00b7(\u03bc+1) + q\u00b7(\u03a6\u2083+\u03bc)  [Part CCLVIII]",
+      "passed": true,
+      "detail": "k^7\u00b75 + 3\u00b717 = 691 == 691: True"
+    },
+    {
+      "check": "B6b: \u03c4(2) \u2261 \u03c3\u2081\u2081(2) (mod 691)",
+      "passed": true,
+      "detail": "\u03c4(2) mod 691=667, \u03c3\u2081\u2081(2) mod 691=667, ok=True"
+    },
+    {
+      "check": "B6b: \u03c4(3) \u2261 \u03c3\u2081\u2081(3) (mod 691)",
+      "passed": true,
+      "detail": "\u03c4(3) mod 691=252, \u03c3\u2081\u2081(3) mod 691=252, ok=True"
+    },
+    {
+      "check": "B6b: \u03c4(5) \u2261 \u03c3\u2081\u2081(5) (mod 691)",
+      "passed": true,
+      "detail": "\u03c4(5) mod 691=684, \u03c3\u2081\u2081(5) mod 691=684, ok=True"
+    },
+    {
+      "check": "B6b: \u03c4(7) \u2261 \u03c3\u2081\u2081(7) (mod 691)",
+      "passed": true,
+      "detail": "\u03c4(7) mod 691=531, \u03c3\u2081\u2081(7) mod 691=531, ok=True"
+    },
+    {
+      "check": "B6b: \u03c4(11) \u2261 \u03c3\u2081\u2081(11) (mod 691)",
+      "passed": true,
+      "detail": "\u03c4(11) mod 691=469, \u03c3\u2081\u2081(11) mod 691=469, ok=True"
+    },
+    {
+      "check": "B6b: \u03c4(13) \u2261 \u03c3\u2081\u2081(13) (mod 691)",
+      "passed": true,
+      "detail": "\u03c4(13) mod 691=629, \u03c3\u2081\u2081(13) mod 691=629, ok=True"
+    },
+    {
+      "check": "B7a: Dedekind \u03b7 exponent = f",
+      "passed": true,
+      "detail": "\u03b7-exponent=24, f=24, equal=True"
+    },
+    {
+      "check": "B7b: 1/f in \u03b7-expansion exponent",
+      "passed": true,
+      "detail": "\u03b7(\u03c4) = q^(1/24) \u220f(1\u2212q\u207f), exponent denominator = f = 24"
+    },
+    {
+      "check": "B8a: \u03c4(1) = 1 (normalisation)",
+      "passed": true,
+      "detail": "\u03c4(1)=1"
+    },
+    {
+      "check": "B8b: \u03c4(6) = \u03c4(2)\u00b7\u03c4(3)  [multiplicativity]",
+      "passed": true,
+      "detail": "\u03c4(6)=-6048, \u03c4(2)\u00b7\u03c4(3)=-6048, ok=True"
+    },
+    {
+      "check": "B8c: \u03c4(10) = \u03c4(2)\u00b7\u03c4(5)  [multiplicativity]",
+      "passed": true,
+      "detail": "\u03c4(10)=-115920, \u03c4(2)\u00b7\u03c4(5)=-115920, ok=True"
+    },
+    {
+      "check": "B8d: \u03c4(15) = \u03c4(3)\u00b7\u03c4(5)  [multiplicativity]",
+      "passed": true,
+      "detail": "\u03c4(15)=1217160, \u03c4(3)\u00b7\u03c4(5)=1217160, ok=True"
+    },
+    {
+      "check": "B9a: \u03c4(5) mod V = ?",
+      "passed": true,
+      "detail": "\u03c4(5)=4830, \u03c4(5) mod V = 30"
+    },
+    {
+      "check": "B9b: \u03c3\u2081\u2081(5) = 1 + 5^11",
+      "passed": true,
+      "detail": "\u03c3\u2081\u2081(5) = 1 + 48828125 = 48828126, mod 691 = 684"
+    },
+    {
+      "check": "B9c: \u03c4(7) mod V",
+      "passed": true,
+      "detail": "\u03c4(7)=-16744, \u03c4(7) mod V = 16"
+    },
+    {
+      "check": "B9d: \u03c4(2) + \u03c4(3) = 19k",
+      "passed": true,
+      "detail": "\u03c4(2)+\u03c4(3)=228, 19k=228, ok=True"
+    },
+    {
+      "check": "B10: Petersson |\u03c4(2)| \u2264 2p^(11/2)",
+      "passed": true,
+      "detail": "|\u03c4(2)|=24, bound=90.51, ok=True"
+    },
+    {
+      "check": "B10: Petersson |\u03c4(3)| \u2264 2p^(11/2)",
+      "passed": true,
+      "detail": "|\u03c4(3)|=252, bound=841.78, ok=True"
+    },
+    {
+      "check": "B10: Petersson |\u03c4(5)| \u2264 2p^(11/2)",
+      "passed": true,
+      "detail": "|\u03c4(5)|=4830, bound=13975.42, ok=True"
+    },
+    {
+      "check": "B10: Petersson |\u03c4(7)| \u2264 2p^(11/2)",
+      "passed": true,
+      "detail": "|\u03c4(7)|=16744, bound=88934.28, ok=True"
+    },
+    {
+      "check": "B10: Petersson |\u03c4(11)| \u2264 2p^(11/2)",
+      "passed": true,
+      "detail": "|\u03c4(11)|=534612, bound=1068291.48, ok=True"
+    },
+    {
+      "check": "B10: Petersson |\u03c4(13)| \u2264 2p^(11/2)",
+      "passed": true,
+      "detail": "|\u03c4(13)|=577738, bound=2677431.90, ok=True"
+    }
+  ]
+}

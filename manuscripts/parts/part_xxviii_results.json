@@ -1,0 +1,22 @@
+{
+  "part": "XXVIII",
+  "theorem": "z_phys = z_tree*(1 - c_W33), c_W33 = (1+lambda^2)/4 - i*sqrt(3)/12",
+  "c_W33": {"real": 0.26238, "imag": -0.14434,
+             "formula": "(1+lambda^2)/4 - i*sqrt(3)/12",
+             "Re_meaning": "orbit_small weight + O(lam^2) EW threshold",
+             "Im_meaning": "-R_u*R_t/2 = orbit side-length product"},
+  "rho_phys": 0.1219, "rho_PDG": 0.122, "rho_error_pct": 0.1,
+  "eta_phys": 0.3555, "eta_PDG": 0.355, "eta_error_pct": 0.1,
+  "Vtd_W33": 0.008606, "Vtd_PDG": 0.008600, "Vtd_error_pct": 0.07,
+  "J_CKM_W33": 2.934e-5, "J_PDG": 3.08e-5, "J_error_pct": 4.8,
+  "Vub_W33": 0.003414, "Vub_PDG": 3.82e-3, "Vub_error_pct": 10.6,
+  "score_within_5pct": 8,
+  "score_total": 9,
+  "predictions": {
+    "P29": "rho_phys=0.1219 (PDG 0.122, 0.1%)",
+    "P30": "eta_phys=0.3555 (PDG 0.355, 0.1%)",
+    "P31": "|Vtd|=0.008606 (PDG 0.008600, 0.07%)",
+    "P32": "J_CKM=2.93e-5 (PDG 3.08e-5, 4.8%)"
+  },
+  "next": "Part XXIX: Vub second-order correction, final CKM closure 9/9"
+}

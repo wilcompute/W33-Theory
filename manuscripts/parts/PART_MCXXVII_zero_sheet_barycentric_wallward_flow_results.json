@@ -1,0 +1,16 @@
+{
+  "theorem": "Zero-sheet barycentric wallward flow",
+  "all_coordinate_jumps_positive": true,
+  "all_wall_gap_jumps_negative": true,
+  "dual_softening_midpoint_crossing_interval": {
+    "left_s": 2.5,
+    "right_s": 3.0
+  },
+  "coordinate_offsets": {
+    "dual_softening": 0.04188524023993523,
+    "order": 0.25893621544855705,
+    "hessian": 0.365718569352417,
+    "third_derivative": 0.38305552720929903
+  },
+  "wall_gap_drop": 0.38305552720929903
+}

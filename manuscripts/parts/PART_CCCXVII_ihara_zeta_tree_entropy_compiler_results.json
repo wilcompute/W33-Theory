@@ -1,0 +1,73 @@
+{
+  "module": "PART_CCCXVII_IHARA_ZETA_TREE_ENTROPY_COMPILER",
+  "status": "exact Ihara-Bass bridge from Hashimoto spectrum to Matrix Tree factorization",
+  "w33_atoms": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "V": 40,
+    "K": 12,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "J": 5,
+    "J_inverse": 8,
+    "H1": 81,
+    "Albert": 27,
+    "E": 240,
+    "directed": 480,
+    "Hashimoto_branch": 11,
+    "edge_excess": 200
+  },
+  "ihara_factorization": {
+    "reciprocal_zeta": "(1-u^2)^200(1-12u+11u^2)(1-2u+11u^2)^24(1+4u+11u^2)^15",
+    "restricted_at_u1": "10^24*16^15",
+    "matrix_tree": "tau(W)=10^24*16^15/40=2^81*5^23"
+  },
+  "ihara_tree_layers": [
+    {"name":"ihara_edge_excess","value":200,"formula":"E-V=240-40=200=5V","interpretation":"Ihara prefactor exponent"},
+    {"name":"ihara_branch","value":11,"formula":"K-1=11","interpretation":"Hashimoto branch / Perron value"},
+    {"name":"restricted_factor_r","value":10,"formula":"1-r+11=10=Phi4","interpretation":"Fiedler/Laplacian restricted factor"},
+    {"name":"restricted_factor_s","value":16,"formula":"1-s+11=16=(q+1)^2","interpretation":"Laplacian radius restricted factor"},
+    {"name":"restricted_product","value":"10^24*16^15","formula":"prod_{theta != K}(K-theta)^mult","interpretation":"reduced Laplacian pseudo-determinant"},
+    {"name":"tree_count","value":"2^815^23","formula":"10^24*16^15/40","interpretation":"Matrix Tree count from Ihara at u=1"},
+    {"name":"tree_e2","value":81,"formula":"24+4*15-3=81=q^4","interpretation":"binary exponent from Ihara factors"},
+    {"name":"tree_e5","value":23,"formula":"24-1=23=Phi3+Phi4","interpretation":"five-exponent from r-multiplicity minus vertex denominator"},
+    {"name":"trivial_residue","value":10,"formula":"abs((1-12u+11u^2)/(1-u)) at u=1 = 10","interpretation":"trivial Ihara zero residue"},
+    {"name":"reduced_limit_abs","value":"400*tau(W)","formula":"10*10^24*16^15","interpretation":"absolute reduced Ihara limit after removing one (1-u)"},
+    {"name":"hashimoto_circle","value":"|x|=sqrt(11)","formula":"x^2-theta x+11=0","interpretation":"restricted Hashimoto spectral circle"}
+  ],
+  "bridge_identities": {
+    "u1_laplacian": "1-theta+(K-1)=K-theta, so Ihara restricted factors at u=1 are Laplacian eigenvalues",
+    "tree_pseudodeterminant": "restricted Ihara determinant at u=1 equals reduced Laplacian pseudo-determinant 10^24*16^15",
+    "tree_e2": "e2=24+4*15-v2(40)=81=q^4",
+    "tree_e5": "e5=24-v5(40)=23=Phi3+Phi4",
+    "hashimoto_circle": "restricted Hashimoto roots lie on |x|=sqrt(11)",
+    "reduced_limit": "removing the simple (1-u) zero gives absolute limit 400*tau(W)"
+  },
+  "checks": {
+    "basic_atoms": true,
+    "edge_excess": true,
+    "adjacency_spectrum": true,
+    "laplacian_spectrum": true,
+    "ihara_u1_trivial_zero": true,
+    "ihara_u1_restricted_factors": true,
+    "ihara_restricted_product_equals_laplacian_pseudodet": true,
+    "tree_count": true,
+    "matrix_tree": true,
+    "tree_e2_from_ihara": true,
+    "tree_e5_from_ihara": true,
+    "trivial_factor_residue": true,
+    "signed_reduced_limit": true,
+    "abs_reduced_limit": true,
+    "hashimoto_theta_12_roots": true,
+    "hashimoto_theta_2_circle": true,
+    "hashimoto_theta_minus4_circle": true,
+    "line_second_moment": true,
+    "triangle_trace": true,
+    "threshold_carrier_inverse": true,
+    "phi6_carrier_step": true
+  },
+  "theorem_statement": "Ihara-Bass is the missing bridge between Hashimoto dynamics and Matrix Tree entropy. The W33 reciprocal zeta determinant has restricted factors (1-2u+11u^2)^24 and (1+4u+11u^2)^15. Evaluating these factors at u=1 gives 10^24*16^15, exactly the reduced Laplacian pseudo-determinant. Dividing by V=40 gives tau(W)=2^81*5^23. The exponent 81 is 24+4*15-v2(40), while 23 is 24-v5(40)=Phi3+Phi4.",
+  "interpretive_note": "The Hashimoto spectral circle and the spanning-tree factorization are two faces of the same Ihara-Bass polynomial. Nonbacktracking dynamics supplies the quadratic factors; the u=1 specialization turns them into Laplacian eigenvalues and tree entropy."
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": "empirical_targets_v1",
+  "module": "PART_CCCXXI_EMPIRICAL_TARGETS_V1",
+  "status": "versioned empirical target file with exact predictions and unresolved external-data slots",
+  "status_summary": {
+    "READY_EXACT": 12,
+    "DATA_REQUIRED": 2,
+    "EXPERIMENT_REQUIRED": 2,
+    "ANCHORS_REQUIRED": 1
+  },
+  "exact_ready_targets": {
+    "M0_PROJECTIVE_OBSERVABLES": 40,
+    "M0_CLUSTER_EDGES": 240,
+    "M0_FULL_STABILIZER_WEIGHT": 13,
+    "M0_CRITICAL_EDGE_HALF": 120,
+    "M0_CRITICAL_MEAN_DEGREE": 6,
+    "M0_CRITICAL_DEGREE_VARIANCE": 3,
+    "M0_CRITICAL_STABILIZER_WEIGHT": 7,
+    "M0_EXPECTED_FUSION_TRIALS": 480,
+    "M0_CLIFFORD_RESOURCE_QUOTIENTS": [432, 216, 108, 54],
+    "M1_MARKOV_CONTRACTION": "1/3",
+    "M1_NONREVERSE_PROBABILITY": "11/12",
+    "M1_REVERSE_PROBABILITY": "1/12"
+  },
+  "external_data_required_targets": {
+    "M1_SIN2_THETA_W_GUT": "3/8 with RG/unification data required",
+    "M1_KOIDE_CHARGED_LEPTON": "2/3 with mass scheme/data required"
+  },
+  "residual_policy": {
+    "residual": "measured_value - theory_value",
+    "z_score": "residual / measurement_uncertainty",
+    "rule": "computed only after measured value, uncertainty, scheme, scale, and source are supplied"
+  },
+  "checks": {
+    "w33_atoms": true,
+    "finite_counts": true,
+    "critical_values": true,
+    "expected_trials": true,
+    "clifford_quotients": true,
+    "dimensionless_targets": true,
+    "resource_probabilities": true,
+    "walk_probabilities": true,
+    "target_count": true,
+    "status_summary": true,
+    "no_unverified_measured_values": true,
+    "threshold_carrier_inverse": true,
+    "phi6_carrier_step": true
+  },
+  "theorem_statement": "Empirical Targets v1 is the first versioned comparison layer for the W33 program. It separates exact finite targets from physical targets requiring external data, locks the residual convention, and prevents unverified constants from being treated as evidence.",
+  "honesty_boundary": "This file does not claim agreement with current PDG/CODATA values. It prepares the exact target schema; measured values must be added from a cited, versioned source before physical residuals are interpreted."
+}

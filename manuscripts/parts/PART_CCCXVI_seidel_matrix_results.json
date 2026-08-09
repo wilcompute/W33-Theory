@@ -1,0 +1,35 @@
+{
+  "part": "CCCXVI",
+  "title": "Seidel Matrix & Two-Graph for W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "V": 40,
+    "K": 12,
+    "MULT_R": 24,
+    "MULT_S": 15,
+    "sigma_1": 15,
+    "sigma_2": -5,
+    "sigma_3": 7,
+    "m_sigma1": 1,
+    "m_sigma2": 24,
+    "m_sigma3": 15,
+    "trace_S": 0,
+    "trace_S2": 1560
+  },
+  "discoveries": [
+    "sigma_1 = MULT_S = 15: leading Seidel eigenvalue = smallest SRG multiplicity",
+    "sigma_1 = 5*GENERATIONS: Seidel leading eigenvalue encodes 3-generation structure",
+    "sigma_1 + sigma_2 = ALPHA = 10: Seidel eigenvalue sum encodes fine structure constant",
+    "sigma_3 - sigma_2 = K = 12: eigenvalue difference encodes SRG degree",
+    "sigma_3 = EW_GAUGE_4 + GENERATIONS = 7: electroweak + generational sum",
+    "|sigma_2| = GENERATIONS + 2 = 5: absolute Seidel eigenvalue encodes generations",
+    "sigma_2 * sigma_3 = -(V - MU - 1) = -35: product encodes graph parameters",
+    "m_sigma2 - m_sigma3 = GENERATIONS^2 = 9: multiplicity gap is three squared",
+    "sigma_1 - sigma_3 = 2*EW_GAUGE_4 = 8: eigenvalue gap is twice EW gauge count",
+    "sigma_1 + sigma_3 = K + ALPHA = 22: sum of outer Seidel eigenvalues",
+    "|sigma_2|^2 = MULT_S + ALPHA = 25: squared Seidel eigenvalue = sum of SM constants",
+    "sigma_3^2 = ALPHA*EW_GAUGE_4 + GENERATIONS^2 = 49: squared eigenvalue SM encoding"
+  ]
+}

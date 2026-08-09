@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "all_checks_pass": true,
+  "failed_checks": [],
+  "check_count": 52,
+  "checks_passing": 52,
+  "atom_check_count": 9,
+  "rank_check_count": 5,
+  "root_check_count": 5,
+  "dim_check_count": 5,
+  "coxeter_check_count": 5,
+  "dual_coxeter_check_count": 5,
+  "weyl_check_count": 10,
+  "structural_check_count": 8,
+  "exceptional_algebras": {
+    "G2": {
+      "rank": 2,
+      "n_roots": 12,
+      "dim": 14,
+      "coxeter_h": 6,
+      "dual_coxeter_h_star": 4
+    },
+    "F4": {
+      "rank": 4,
+      "n_roots": 48,
+      "dim": 52,
+      "coxeter_h": 12,
+      "dual_coxeter_h_star": 9
+    },
+    "E6": {
+      "rank": 6,
+      "n_roots": 72,
+      "dim": 78,
+      "coxeter_h": 12,
+      "dual_coxeter_h_star": 12
+    },
+    "E7": {
+      "rank": 7,
+      "n_roots": 126,
+      "dim": 133,
+      "coxeter_h": 18,
+      "dual_coxeter_h_star": 18
+    },
+    "E8": {
+      "rank": 8,
+      "n_roots": 240,
+      "dim": 248,
+      "coxeter_h": 30,
+      "dual_coxeter_h_star": 30
+    }
+  },
+  "w33_atoms": {
+    "Q": 3,
+    "LAM": 2,
+    "V": 40,
+    "K": 12,
+    "PHI3": 13,
+    "PHI4": 10,
+    "PHI6": 7,
+    "J_INV": 8,
+    "EDGES": 240,
+    "EIG_MAX": 5
+  },
+  "theorem_cxciii": "The W(3,3) SRG(40,12,2,4) parameters index all five exceptional simple Lie algebras G2, F4, E6, E7, E8 with zero free parameters. Ranks: LAM, J_INV/2, K/2, PHI6, J_INV. Root counts: K, 4K, V+2K+J_INV, 2Q^2*PHI6, EDGES. Dims: 2*PHI6, 4*PHI3, 2Q*PHI3, EDGES/2+PHI3, EDGES+J_INV. Coxeter: K/2, K, K, 2Q^2, Q*PHI4. Dual Coxeter: LAM^2, Q^2, K, 2Q^2, Q*PHI4."
+}

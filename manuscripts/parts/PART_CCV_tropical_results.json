@@ -1,0 +1,42 @@
+{
+  "bridge": "PART_CCV Tropical Geometry Bridge",
+  "status": "PASS",
+  "check_count": 70,
+  "checks_passing": 70,
+  "all_checks_pass": true,
+  "failed_checks": [],
+  "w33_atoms": {
+    "Q": 3,
+    "LAM": 2,
+    "V": 40,
+    "K": 12,
+    "PHI4": 10,
+    "EIG_MAX": 5,
+    "EDGES": 240
+  },
+  "tropical_invariants": {
+    "trop_genus": 201,
+    "trop_euler": -200,
+    "tg2_dim": 6,
+    "double_fac": 15,
+    "newton_lpts": 10,
+    "mod_dim": 6,
+    "mod2_dim": 20,
+    "hurwitz_g1": 12,
+    "sec_cones": 16,
+    "berg_bases": 10,
+    "jac_dim": 201
+  },
+  "category_counts": {
+    "atom_checks": 9,
+    "tropical_curve": 8,
+    "grassmannian": 6,
+    "newton_polytope": 10,
+    "moduli_space": 10,
+    "hurwitz": 4,
+    "fans_matroids": 9,
+    "jacobian": 4,
+    "structural": 10
+  },
+  "theorem_ccv": "Tropical geometry of SRG(40,12,2,4): trop genus = E-V+1 = 201, dim TropG(2,5) = 6 = MULT_K2, (2*5-5)!! = 15 = EIG_MAX*Q, Newton lattice pts C(5,2) = PHI4 = 10, dim M_{2,3}^trop = 6 = MULT_K2, dim M_{6,5}^trop = 20 = V/LAM, H_1(3,3) = K = 12, sec fan cones = J_INV*LAM = 16, Bergman bases C(5,2) = PHI4 = 10."
+}

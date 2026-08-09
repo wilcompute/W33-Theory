@@ -1,0 +1,15 @@
+{
+  "part": "DCCCXXVII",
+  "decimal": 827,
+  "title": "The Photon as Irreducible Unit of W(3,3) Geometry",
+  "date": "2026-05-17",
+  "thesis": "Photon is the zero-overhead information carrier, clock, and ruler of W(3,3) computation; m_gamma=0 is graph-regularity necessity",
+  "key_identities": {
+    "alpha_inv": "tau(O)/q + q^2 = 128 + 9 = 137",
+    "photon_helicity_states": "2*|E| = 80 = 8 * 10",
+    "graph_regularity": "degree d = 2q = 6; every vertex equal; c is constant",
+    "self_duality": "Stab(E) = Aut(W(3,3)); photon is fixed-point set"
+  },
+  "falsifiability": "m_gamma != 0 falsifies W(3,3) directly and immediately",
+  "status": "THEORETICAL FRAMEWORK"
+}

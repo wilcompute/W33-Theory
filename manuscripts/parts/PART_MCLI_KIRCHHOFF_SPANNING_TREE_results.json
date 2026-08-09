@@ -1,0 +1,114 @@
+{
+  "parameters": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "r": 2,
+    "s": -4,
+    "edges": 240,
+    "m_r": 24,
+    "m_s": 15,
+    "mu_r": 10,
+    "mu_s": 16
+  },
+  "kirchhoff_index": {
+    "K_f": {
+      "fraction": "267/2",
+      "numerator": 267,
+      "denominator": 2,
+      "float": 133.5
+    },
+    "formula": "K_f = v*[m_r/(k-r) + m_s/(k-s)] = 40*[24/10 + 15/16]",
+    "Kf_numerator": 267,
+    "Kf_denominator": 2,
+    "Kf_factored": "267 = 3 * 89 (= q * prime)"
+  },
+  "kemeny_kirchhoff_bridge": {
+    "K": {
+      "fraction": "801/20",
+      "numerator": 801,
+      "denominator": 20,
+      "float": 40.05
+    },
+    "K_f": {
+      "fraction": "267/2",
+      "numerator": 267,
+      "denominator": 2,
+      "float": 133.5
+    },
+    "K_f_from_Kv_k": {
+      "fraction": "267/2",
+      "numerator": 267,
+      "denominator": 2,
+      "float": 133.5
+    },
+    "K_f_equals_vK_k": true,
+    "Kf_k": {
+      "fraction": "1602",
+      "numerator": 1602,
+      "denominator": 1,
+      "float": 1602.0
+    },
+    "vK": {
+      "fraction": "1602",
+      "numerator": 1602,
+      "denominator": 1,
+      "float": 1602.0
+    },
+    "v2_plus_r": 1602,
+    "kirchhoff_volume_identity": true,
+    "K_f_norm": {
+      "fraction": "267/80",
+      "numerator": 267,
+      "denominator": 80,
+      "float": 3.3375
+    },
+    "K_norm": {
+      "fraction": "267/80",
+      "numerator": 267,
+      "denominator": 80,
+      "float": 3.3375
+    },
+    "normalized_bridge_Kf_v_equals_K_k": true,
+    "identity": "K_f * k = v * K = v^2 + r = 1602"
+  },
+  "laplacian_spectral_sum": {
+    "sum": {
+      "fraction": "267/80",
+      "numerator": 267,
+      "denominator": 80,
+      "float": 3.3375
+    },
+    "sum_times_v": {
+      "fraction": "267/2",
+      "numerator": 267,
+      "denominator": 2,
+      "float": 133.5
+    },
+    "equals_Kf": true,
+    "foster_theorem": "Foster: K_f = v * \u03a3 1/mu_j = sum of all edge resistances"
+  },
+  "spanning_trees": {
+    "tau_power_of_2": 81,
+    "tau_power_of_5": 23,
+    "tau_only_2_and_5": true,
+    "tau_factored_form": "2^81 * 5^23",
+    "tau_compact_formula": "(q^2+1)^(m_r-1) * (q+1)^(2*m_s-1) = 10^23 * 4^29",
+    "tau_compact_match": true,
+    "matrix_tree_formula": "tau = (k-r)^m_r * (k-s)^m_s / v = 10^24 * 16^15 / 40"
+  },
+  "spectral_checks": {
+    "spectral_sum_sq": 480,
+    "kv": 480,
+    "spectral_sum_sq_equals_kv": true
+  },
+  "master_identities_summary": {
+    "K_f_equals_vK_k": true,
+    "kirchhoff_volume_identity": true,
+    "normalized_bridge": true,
+    "foster_theorem": true,
+    "spectral_sum_sq_equals_kv": true,
+    "tau_fully_factored": true,
+    "tau_compact_formula": true
+  }
+}

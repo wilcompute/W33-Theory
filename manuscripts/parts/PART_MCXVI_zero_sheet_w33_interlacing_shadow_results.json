@@ -1,0 +1,75 @@
+{
+  "edge_decomposition": {
+    "closed_forms": {
+      "complement_internal_edges": "153 = q^2 * (q^2 + 2^q) = 9 * 17",
+      "cut_edges": "78 = 6 * Phi3 = dim(E6)",
+      "total_edges": "240 = E(W(3,3))"
+    },
+    "complement_internal_edges": 153,
+    "cut_edges": 78,
+    "total": 240,
+    "zero_internal_edges": 9
+  },
+  "identities": {
+    "complement_internal_edges_are_q2_times_odd_instances": true,
+    "cubic_roots_interlace_by_interval_certificate": true,
+    "cut_edges_are_e6_dimension": true,
+    "external_degree_sum_is_78": true,
+    "induced_copy_matches_zero_sheet_adjacency": true,
+    "induced_internal_edges_are_zero_sheet_edges": true,
+    "principal_submatrix_interlacing_bounds_hold": true,
+    "w33_degree_is_12": true,
+    "w33_edge_count_is_240": true,
+    "w33_point_count_is_40": true
+  },
+  "interlacing_certificate": {
+    "cubic_signs": {
+      "f(0)": -8,
+      "f(1)": 1,
+      "f(2)": -2,
+      "f(6)": -14,
+      "f(7)": 13
+    },
+    "full_w33_ordered_spectrum": "[12, 2^24, -4^15]",
+    "reading": "Because the zero sheet is an induced 8x8 principal submatrix of W(3,3), Cauchy interlacing applies.  The cubic sign certificate places its nonzero squared eigenvalues in (0,1), (1,2), and (6,7), so the ordered adjacency eigenvalues fit inside the W(3,3) bounds [12,2,...,2,-4,...,-4].",
+    "root_interval_certificate": {
+      "adjacency_eigenvalue_intervals": [
+        "(-sqrt(7), -sqrt(6))",
+        "(-sqrt(2), -1)",
+        "(-1, 0)",
+        "0",
+        "0",
+        "(0, 1)",
+        "(1, sqrt(2))",
+        "(sqrt(6), sqrt(7))"
+      ],
+      "reason": "sign changes f(0)<0<f(1), f(1)>0>f(2), f(6)<0<f(7)",
+      "squared_roots_lie_in": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          6,
+          7
+        ]
+      ]
+    },
+    "zero_sheet_squared_cubic": "f(y)=y^3-9y^2+17y-8"
+  },
+  "summary": {
+    "all_identities_hold": true,
+    "complement_internal_edges": 153,
+    "cut_edges": 78,
+    "experiment": "zero-sheet induced W(3,3) interlacing shadow",
+    "w33_edges": 240,
+    "w33_vertices": 40,
+    "zero_sheet_internal_edges": 9,
+    "zero_sheet_vertices": 8
+  },
+  "theorem": "Zero-sheet induced W(3,3) interlacing shadow"
+}

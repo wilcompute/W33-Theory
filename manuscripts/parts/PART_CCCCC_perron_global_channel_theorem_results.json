@@ -1,0 +1,71 @@
+{
+  "part": "CCCCC",
+  "title": "Perron Global Channel Theorem",
+  "atoms": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "k": 12,
+    "v": 40,
+    "E": 240,
+    "directed_edges": 480,
+    "theta_k_minus_1": 11,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7
+  },
+  "perron_green_residue_operation": {
+    "carrier": "Hashimoto directed-edge space D, |D|=480",
+    "perron_pole": "1/11",
+    "mass_h_theta": "1111",
+    "Delta_M": "3/22",
+    "M_eff": "24445/22",
+    "uncompressed_green": "10560/24445",
+    "k_compressed_green": "880/24445",
+    "alpha_slip": "880/24445"
+  },
+  "perron_determinant_compactification_operation": {
+    "carrier": "vertex space V, |V|=40",
+    "rank_one_operator": "J=1*1^T",
+    "det_I_plus_J": "41",
+    "finite_weight_top_cube": "40/41",
+    "infinity_weight": "1/41",
+    "compactified_qutrit_square_density": "9/41"
+  },
+  "observable_dictionary": {
+    "y_c_inverse_core": "137",
+    "alpha_inverse_refined": "669969/4889",
+    "alpha_slip": "880/24445",
+    "top_yukawa_cubed": "40/41",
+    "lambda_CKM": "9/40",
+    "lambda_CKM_times_top_cube": "9/41",
+    "det_I_plus_J": "41",
+    "perron_pole_u0": "1/11",
+    "M_eff": "24445/22"
+  },
+  "cross_surface": {
+    "lambda_H": "13/100",
+    "A_CKM": "81/100",
+    "A_CKM_over_lambda_H": "81/13"
+  },
+  "checks": {
+    "true_master_equation": true,
+    "w33_atoms": true,
+    "perron_pole_is_1_over_11": true,
+    "hashimoto_mass_is_1111": true,
+    "delta_m_is_3_over_22": true,
+    "m_eff_is_24445_over_22": true,
+    "compressed_green_is_alpha_slip": true,
+    "gaussian_core_is_137": true,
+    "charm_inverse_core": true,
+    "alpha_inverse_exact": true,
+    "det_I_plus_J_is_41": true,
+    "top_cube_is_40_over_41": true,
+    "lambda_ckm_is_9_over_40": true,
+    "compactified_flavor_is_9_over_41": true,
+    "finite_plus_infinity_is_one": true,
+    "A_over_lambdaH_is_81_over_13": true
+  },
+  "all_checks_pass": true,
+  "interpretation": "The global Perron channel has two operations. Its Green/residue operation gives the alpha correction relative to the charm/Gaussian core. Its determinant/compactification operation gives the top saturation and CKM/top compactified flavor density. This unifies y_c, alpha, y_t, and lambda_CKM under a single rank-one global channel of W(3,3)."
+}

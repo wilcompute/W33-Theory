@@ -1,8 +1,8 @@
-# BT4253-BT4260 — girth-16 covers, fault-aware holonomy, metastable spectrum, clock compression, channel bounds, and three outside-box probes
+# BT4253-BT4260 — retracted cover, surviving finite models, clock compression, channel bounds, and three outside-box probes
 
 This packet executes the five physics targets left by canonical Passes 4214-4221 and adds three independent probes. All statements remain finite-model statements. In particular, no graph velocity is identified with physical c, no analogue-Hawking calculation is promoted to observed radiation, and no effective scale coordinate is promoted to physical spacetime.
 
-## Pass 4253 — explicit girth >= 16 Levi cover
+## Pass 4253 — retracted by the exact Pass 4329 falsifier
 
 The corrected W(3,3) point-line Levi graph has 80 vertices, 160 edges, degree four and girth eight. Gauge fixing a BFS spanning tree leaves 81 cotree voltage variables. The complete short-cycle census through length fourteen is
 
@@ -13,13 +13,17 @@ The corrected W(3,3) point-line Levi graph has 80 vertices, 160 edges, degree fo
 
 for 386,964 simultaneous voltage constraints.
 
-A deterministic Z_2731 assignment frozen in the certificate has nonzero voltage on every one of these cycles. Hence the 2,731-sheet cyclic cover has
+A deterministic Z_2731 assignment was originally reported as nonzero on every cycle. Exact replay instead finds zero-voltage cycles in counts 1, 0, 18, 132 at lengths 8, 10, 12, 14. In particular, the base cycle
+
+`(3,52,4,48,8,66,18,53)`
+
+has signed voltage sum `1328-542+801-1587 = 0 mod 2731`. Hence the 2,731-sheet cyclic lift has
 
 - 218,480 vertices,
 - 436,960 edges,
-- certified girth at least 16.
+- girth exactly 8.
 
-Because the base girth is eight, every reduced closed walk of length less than sixteen is a simple cycle, so the exhaustive simple-cycle audit is sufficient for the stated lower bound. The construction uses 23.9974 times fewer sheets than the earlier Z_65537 cover, although it uses 7.6072 times more sheets than the girth-14 Z_359 construction because it certifies two additional units of girth. A girth-18 certificate remains open.
+The old girth-at-least-16 conclusion is retracted; the historical vector remains useful as a compact falsifier. The valid cover ladder in this corpus is the earlier Z_359 girth-at-least-14 cover and the much larger Z_750019 girth-at-least-18 cover. Pass 4260's 4,373-node radius-seven tree ball is a correct conditional tree calculation but is not realized by this retracted cover.
 
 ## Pass 4254 — fault-aware composite geometric CZ
 
@@ -143,7 +147,7 @@ or
 
 v_max log2 3 = 5.49047115868 J address bits per unit time.
 
-For a girth-16 cover, the radius-seven tree ball contains 4,373 vertices and the ballistic front reaches radius seven at 2.02072594216/J. This sharpens the capacity-versus-speed separation: node count grows exponentially with radius, while radial speed grows only as the square root of branching. The quantity is not a strict Lieb-Robinson velocity and is not physical c.
+Conditionally, any degree-four cover with girth at least 16 has a radius-seven tree ball of 4,373 vertices, and the radial-band front reaches radius seven at 2.02072594216/J. The retracted Z_2731 lift does not realize this premise. The calculation separates exponential tree volume from square-root branching speed; it is not a strict Lieb-Robinson velocity and is not physical c.
 
 ## Evidence boundary
 

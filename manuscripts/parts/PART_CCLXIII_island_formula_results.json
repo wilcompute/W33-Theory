@@ -1,0 +1,19 @@
+{
+  "part": "CCLXIII",
+  "title": "Island Formula and Entropy Islands",
+  "checks_pass": 15,
+  "checks_total": 15,
+  "Verified": true,
+  "page_time_mass_scale": 10,
+  "island_vertex_count": 20,
+  "edge_expansion_coefficient": 1.8974,
+  "k3_handles": 16,
+  "k3_hodge_11": 20,
+  "k3_hodge_21": 21,
+  "k3_central_charge": 24,
+  "island_surface_genus": 1,
+  "island_entropy_bits": 2,
+  "w33_periodic_table_rows": 7,
+  "extremal_surfaces_genus_1": 1,
+  "extremal_surfaces_genus_2": 2
+}

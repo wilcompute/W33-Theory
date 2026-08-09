@@ -1,0 +1,83 @@
+{
+  "module": "PART_CCCVII_OPERATOR_TETRAHEDRON_ENTROPY_BRIDGE",
+  "status": "exact four-operator spectral closure; welds signless/distance moments to Matrix Tree exponents and Hashimoto carrier",
+  "source_links": {
+    "CCCIV": "Spanning Tree Count of W(3,3)",
+    "CCCV_signless": "Signless Laplacian Spectrum of W(3,3)",
+    "CCCVI_distance": "Distance Matrix Spectrum of W(3,3)",
+    "CLXXXII": "CCT / Hashimoto carrier weld",
+    "CCCV_spectral_weld": "Spectral complexity / master ladder weld"
+  },
+  "w33_atoms": {
+    "q": 3,
+    "V": 40,
+    "K": 12,
+    "lambda": 2,
+    "mu": 4,
+    "r": 2,
+    "s": -4,
+    "E": 240,
+    "directed_edges": 480,
+    "Hashimoto_branch": 11,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "J": 5,
+    "J_inverse": 8,
+    "Albert": 27,
+    "H1": 81
+  },
+  "operator_layers": [
+    {"name":"Adjacency A","spectrum":"12^1, 2^24, (-4)^15","key_identity":"spectrum seed {K,r,s}","interpretation":"base W(3,3) collinearity operator"},
+    {"name":"Laplacian L=K I-A","spectrum":"0^1, 10^24, 16^15","key_identity":"tau(W)=10^24*16^15/40=2^81*5^23","interpretation":"global connectedness / Matrix Tree operator"},
+    {"name":"Signless Laplacian Q=K I+A","spectrum":"24^1, 14^24, 8^15","key_identity":"tr(Q)=480; tr(Q^2)=480*Phi3","interpretation":"directed-carrier trace and projective-plane second moment"},
+    {"name":"Distance Delta=2J-2I-A","spectrum":"66^1, (-4)^24, 2^15","key_identity":"tr(Delta^2)=480*Phi4; Wiener=11*120","interpretation":"diameter-two distance geometry and Hashimoto-branch Wiener law"}
+  ],
+  "new_bridge_identities": {
+    "four_operator_closure": "A, L=KI-A, Q=KI+A, Delta=2J-2I-A are affine shadows of the same eigenspace split",
+    "L_Q_duality": "L+Q=2K I, so eigenvalues pair to 24 on every eigenspace",
+    "distance_involution": "on restricted eigenspaces Delta=-2I-A, so r<->s because r+s=-2",
+    "directed_trace": "tr(Q)=480=2E=2q(q^4-1)",
+    "signless_projective_moment": "tr(Q^2)=480*Phi3=6240",
+    "distance_theta_moment": "tr(Delta^2)=480*Phi4=4800",
+    "tree_5_exponent_from_second_moments": "e5(tau)=23=(tr(Q^2)+tr(Delta^2))/(2E)=Phi3+Phi4",
+    "q_clock_from_second_moments": "q=3=(tr(Q^2)-tr(Delta^2))/(2E)=Phi3-Phi4",
+    "wiener_hashimoto_law": "Wiener=1320=(K-1)*Q-energy=11*120",
+    "distance_second_moment_hashimoto_law": "tr(Delta^2)=theta(W)*directed_edges=10*480"
+  },
+  "matrix_tree_exponents": {
+    "tau_factorization": "2^81*5^23",
+    "e2": 81,
+    "e2_interpretation": "q^4=H1=three-generation/triple-Albert carrier",
+    "e5": 23,
+    "e5_interpretation": "Phi3+Phi4, equivalently q^3-(q+1)=27-4, recovered from Q/Delta second moments"
+  },
+  "checks": {
+    "directed_carrier": true,
+    "laplacian_spectrum": true,
+    "signless_spectrum": true,
+    "distance_spectrum": true,
+    "L_plus_Q_pairing": true,
+    "distance_restricted_affine_involution": true,
+    "distance_perron_is_h6_edge_invariant": true,
+    "signless_trace_is_directed_carrier": true,
+    "signless_second_moment": true,
+    "distance_trace_zero": true,
+    "distance_second_moment": true,
+    "Q2_plus_D2_recovers_tree_5_exponent": true,
+    "Q2_minus_D2_recovers_q_clock": true,
+    "normalized_Q2_is_phi3": true,
+    "normalized_D2_is_phi4": true,
+    "recover_phi3_phi4_from_sum_diff": true,
+    "Q_energy": true,
+    "wiener_index": true,
+    "wiener_hashimoto_branch_energy_law": true,
+    "distance_second_moment_theta_directed": true,
+    "signless_second_moment_projective_directed": true,
+    "tree_exponents": true,
+    "threshold_carrier_inverse": true,
+    "phi6_carrier_step": true
+  },
+  "theorem_statement": "The four canonical matrices A, L=KI-A, Q=KI+A, and Delta=2J-2I-A form an exact operator tetrahedron over the same three eigenspaces. The signless trace tr(Q)=480 is the Hashimoto directed carrier. Its second moment is 480*Phi3, while the distance second moment is 480*Phi4. Therefore their normalized sum is Phi3+Phi4=23, exactly the exponent of 5 in the Matrix Tree factorization tau(W)=2^81*5^23, and their normalized difference is Phi3-Phi4=q=3. The Wiener index also closes as 1320=(K-1)*120, i.e. Hashimoto branch times signless Laplacian energy.",
+  "interpretive_note": "This is the deepest current weld: global tree complexity, distance geometry, signless energy, and nonbacktracking carrier are not separate shadows. The tree exponent 23 is literally the sum of normalized second moments of the signless and distance operators; the q-clock is their normalized difference."
+}

@@ -1,0 +1,41 @@
+{
+  "part": "MCCII",
+  "theorem": "Meeting-point law (C331)",
+  "packets": {
+    "aut_tomotope": 96,
+    "reye_points": 12,
+    "genus": 6,
+    "half_wf4": 576,
+    "N_M": 36,
+    "A2": 36864,
+    "E": 32
+  },
+  "meeting_point": {
+    "k_times_N_M": 432,
+    "top_3456_from_8kNM": 3456,
+    "top_3456_from_autNM": 3456,
+    "top_3456_from_genus_halfWf4": 3456,
+    "identity": "3456 = 8*12*36 = 96*36 = 6*576"
+  },
+  "mcci_bridge": {
+    "identity": "(3*A2)/3456 = (3*36864)/3456 = 32 = E"
+  },
+  "finite_universality_surrogate": {
+    "statement": "monodromy tower meeting-point identities are exactly compatible with current post-monodromy packet",
+    "boundary": "finite arithmetic closure law; not a continuum dynamical proof"
+  },
+  "claim_boundary": "finite C331 meeting-point formalization with explicit bridge to MCCI",
+  "checks": {
+    "c331a_orbit_point_lock": true,
+    "c331b_k_nm_is_432": true,
+    "c331c_8_k_nm_is_3456": true,
+    "c331d_aut_nm_is_3456": true,
+    "c331d2_genus_halfwf4_is_3456": true,
+    "c331_all_forms_equal": true,
+    "bridge_a2_is_36864": true,
+    "bridge_q_scaled_a2_over_3456_is_32": true,
+    "bridge_matches_shell": true,
+    "full_bridge_identity": true
+  },
+  "n_verified": 10
+}

@@ -1,0 +1,73 @@
+{
+  "part": "CCXI",
+  "title": "Neutrino Mass Hierarchy from W(3,3)",
+  "verified": true,
+  "free_parameters": 0,
+  "srg_params": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "M_LAM": 27,
+    "M_NEG": 12,
+    "XI_POS": 2,
+    "XI_NEG": -4,
+    "LAP_MID": 10,
+    "LAP_TOP": 16
+  },
+  "pmns": {
+    "pmns_dimension": 3,
+    "n_mixing_angles": 3,
+    "n_dirac_cp_phases": 1,
+    "n_majorana_phases": 2
+  },
+  "theta_12": {
+    "sin2_W33": 0.3333333333333333,
+    "sin2_formula": "1/Q = 1/3",
+    "sin2_exp": 0.307,
+    "relative_error_pct": 8.57763300760043
+  },
+  "theta_23": {
+    "sin2_W33": 0.5,
+    "sin2_formula": "maximal = 1/2",
+    "sin2_exp": 0.546,
+    "relative_error_pct": 8.424908424908432
+  },
+  "theta_13": {
+    "sin2_W33": 0.027777777777777776,
+    "sin2_formula": "(LAM/K)^2 = (1/6)^2 = 1/36",
+    "sin2_exp": 0.0222,
+    "relative_error_pct": 25.125125125125113
+  },
+  "mass_splitting": {
+    "dm2_ratio_exp": 32.57636122177955,
+    "dm2_ratio_W33": 36.0,
+    "formula": "(MU/LAM)*(K/|XI_NEG|) squared = 6^2 = 36",
+    "relative_error_pct": 10.509580105992658
+  },
+  "hierarchy": {
+    "type": "normal",
+    "M_LAM_over_M_NEG": 2.25,
+    "eigenvalue_majority": "positive (normal-ordering)"
+  },
+  "tbm": {
+    "sin2_12": 0.3333333333333333,
+    "sin2_23": 0.5,
+    "sin2_13": 0.0,
+    "origin": "tribimaximal: sin^2=1/Q, 1/2, 0"
+  },
+  "all_checks": {
+    "pmns_dim_equals_Q": true,
+    "n_pmns_angles_is_3": true,
+    "n_dirac_cp_phases_is_1": true,
+    "n_majorana_phases_is_2": true,
+    "mass_splitting_ratio_within_15pct": true,
+    "theta12_sin2_within_12pct": true,
+    "theta23_near_maximal_within_15pct": true,
+    "theta13_within_30pct": true,
+    "normal_hierarchy_eigenvalue_majority": true,
+    "tbm_sin2_12_from_Q": true,
+    "tbm_sin2_23_maximal": true
+  }
+}

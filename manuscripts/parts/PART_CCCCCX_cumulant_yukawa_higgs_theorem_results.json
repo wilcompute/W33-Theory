@@ -1,0 +1,62 @@
+{
+  "part": "CCCCCX",
+  "title": "Cumulant Yukawa-Higgs Theorem",
+  "atoms": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "k": 12,
+    "v": 40,
+    "E": 240,
+    "r": 2,
+    "s": -4,
+    "f": 24,
+    "g": 15,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7
+  },
+  "cumulant_higgs_bridge": {
+    "excited_total": 78,
+    "excited_first_moment": 960,
+    "excited_mean": "160/13",
+    "gap_ratio_Delta_s_over_Delta_r": "8/5",
+    "lambda_H": "13/100",
+    "identity": "lambda_H=(Delta_s/Delta_r)/mu_exc"
+  },
+  "yukawa_identity": {
+    "y_c": "1/137",
+    "y_b": "3/125",
+    "y_tau_forced": "16029/1562500",
+    "y_tau_decimal": 0.01025856,
+    "ratio_y_tau_y_c_over_y_b_squared": "13/100",
+    "identity": "y_tau*y_c/y_b^2=lambda_H=(Delta_s/Delta_r)/mu_exc"
+  },
+  "same_lambda_H_outputs": {
+    "lambda_H": "13/100",
+    "A_CKM": "81/100",
+    "PMNS_theta13": "9/400"
+  },
+  "structural_dimensions": {
+    "SU5": 24,
+    "E6": 78,
+    "E8": 248
+  },
+  "checks": {
+    "true_master_equation": true,
+    "lambda_H_from_cumulant": true,
+    "excited_total_E6": true,
+    "excited_mean_160_over_13": true,
+    "gap_ratio_8_over_5": true,
+    "y_c_1_over_137": true,
+    "y_b_3_over_125": true,
+    "forced_y_tau": true,
+    "forced_y_tau_alt_formula": true,
+    "yukawa_ratio_equals_lambda_H": true,
+    "A_ckm_from_same_lambda_H": true,
+    "pmns_from_same_lambda_H": true,
+    "structural_dims": true
+  },
+  "all_checks_pass": true,
+  "interpretation": "The third-generation Yukawa-Higgs identity is now downstream of the free-energy cumulant bridge. The excited E6 mean and restricted gap ratio generate lambda_H, and the prior W(3,3) charm/bottom Yukawa seeds then force y_tau so that y_tau*y_c/y_b^2=lambda_H exactly."
+}

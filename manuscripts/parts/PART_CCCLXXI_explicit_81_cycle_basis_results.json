@@ -1,0 +1,20 @@
+{
+  "part": "CCCLXXI",
+  "title": "Explicit 81-Cycle Homology Basis",
+  "verified": true,
+  "checks_passed": 7,
+  "checks_total": 7,
+  "counts": {
+    "vertices": 40,
+    "edges": 240,
+    "triangles": 160,
+    "spanning_tree_edges": 39,
+    "fundamental_cycles": 201,
+    "triangle_boundary_rank": 120,
+    "h1_basis_size": 81
+  },
+  "basis_rule": "spanning-tree fundamental cycles reduced modulo triangle-boundary span over GF2",
+  "architecture_upgrade": "CCCLXIX recovered beta1=81. CCCLXXI extracts an explicit reproducible 81-cycle quotient basis from fundamental graph cycles modulo triangle boundaries.",
+  "theorem": "The W33 triangle complex has a GF2 H1 basis of 81 representatives obtained by reducing the 201 spanning-tree fundamental cycles modulo the 120-dimensional triangle-boundary span. This gives an explicit cycle-basis realization of the H1(W33)=81 matter-scale sector.",
+  "honesty_boundary": "This is a GF2 basis. Integral basis and torsion audit are handled separately."
+}

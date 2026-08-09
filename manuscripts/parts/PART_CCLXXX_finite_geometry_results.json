@@ -1,0 +1,31 @@
+{
+  "part": "CCLXXX",
+  "title": "Finite Geometry over GF(3), Incidence Structures, and the W(3,3) Configuration Bridge",
+  "all_checks_pass": true,
+  "total_checks": 247,
+  "failed_checks": [],
+  "section_counts": {
+    "verify_gf3_field_arithmetic": 12,
+    "verify_pg_point_counts": 12,
+    "verify_ag_point_line_counts": 14,
+    "verify_steiner_system_s_2_3_9": 10,
+    "verify_steiner_system_s_2_4_13": 10,
+    "verify_pg3_3_atlas": 12,
+    "verify_collineation_groups": 13,
+    "verify_psl2q_orders_atlas": 9,
+    "verify_elliptic_quadric": 8,
+    "verify_gq_2_4_atlas": 13,
+    "verify_hermitian_variety": 12,
+    "verify_spread_in_pg3_3": 9,
+    "verify_design_theory": 9,
+    "verify_resolvability": 8,
+    "verify_oval_arc": 9,
+    "verify_witt_design_s_5_6_12": 10,
+    "verify_mathieu_groups": 12,
+    "verify_projective_line_atlas": 10,
+    "verify_unital_u3": 10,
+    "verify_transport_incidence": 8,
+    "verify_combinatorial_identities": 16,
+    "verify_w33_geo_atlas": 21
+  }
+}

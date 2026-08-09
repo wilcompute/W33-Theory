@@ -1,0 +1,123 @@
+{
+  "part": "CCXVI",
+  "title": "Supersymmetry Breaking and MSSM Structure from W(3,3)",
+  "verified": true,
+  "free_parameters": 0,
+  "n_checks": 13,
+  "n_pass": 13,
+  "srg_params": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "M_LAM": 27,
+    "M_NEG": 12,
+    "XI_POS": 2,
+    "XI_NEG": -4,
+    "LAP_MID": 10,
+    "LAP_TOP": 16,
+    "AUT_ORDER": 51840
+  },
+  "susy_data": {
+    "MSSM_gauge_doubling": 24,
+    "yukawa_count": 24,
+    "MSSM_total_2V_minus_2": 78,
+    "E6_adjoint": 78,
+    "spec_var": 144.3,
+    "F_proxy": 12.0125,
+    "N_Higgs_doublets": 2,
+    "mu_ratio_MU_over_K": 0.333333,
+    "tan_beta_W33": 2.0,
+    "cos_2beta": -0.6,
+    "PSp43_order": 25920,
+    "Z2_quotient": 25920,
+    "susy_sup_log10": -21.0101,
+    "spectral_sum": 6,
+    "spectral_gap": 6,
+    "goldstino_count": 1,
+    "gravitino_ratio": 0.15,
+    "M2_over_M1_W33": 0.5,
+    "M3_over_M2_W33": 3.0
+  },
+  "checks": [
+    {
+      "check": "MSSM gauge doubling 2\u00d7K = LAM\u00d7M_NEG = 24",
+      "pass": true,
+      "got": 24,
+      "expected": 24
+    },
+    {
+      "check": "2V-2 = 78 = E6 adjoint dimension (MSSM spectrum)",
+      "pass": true,
+      "got": 78,
+      "expected": 78
+    },
+    {
+      "check": "F-term proxy sqrt(E[L\u00b2]) \u2248 K (SUSY scale \u2248 EW scale)",
+      "pass": true,
+      "got": 12.0125,
+      "expected": 12
+    },
+    {
+      "check": "Number of MSSM Higgs doublets = XI_POS = 2",
+      "pass": true,
+      "got": 2,
+      "expected": 2
+    },
+    {
+      "check": "MSSM \u03bc-param ratio MU/K = 1/3 (\u03bc ~ EW/3 ~ 30 GeV)",
+      "pass": true,
+      "got": 0.3333,
+      "expected": 0.3333
+    },
+    {
+      "check": "tan(\u03b2) = |XI_NEG|/XI_POS = 2 (lower SUSY regime)",
+      "pass": true,
+      "got": 2.0,
+      "expected": 2.0
+    },
+    {
+      "check": "cos(2\u03b2) = -3/5 = -0.6 from W(3,3)",
+      "pass": true,
+      "got": -0.6,
+      "expected": -0.6
+    },
+    {
+      "check": "AUT_ORDER/2 = 25920 = |PSp(4,3)| (R-parity quotient)",
+      "pass": true,
+      "got": 25920,
+      "expected": 25920
+    },
+    {
+      "check": "SUSY breaking suppression (LAM/K)^M_LAM log10 < -20",
+      "pass": true,
+      "got": -21.01,
+      "expected": "< -20"
+    },
+    {
+      "check": "Goldstino count = spectral_sum/spectral_gap = 6/6 = 1",
+      "pass": true,
+      "got": 1,
+      "expected": 1
+    },
+    {
+      "check": "Gravitino/EW mass ratio = spectral_sum/V = 0.15",
+      "pass": true,
+      "got": 0.15,
+      "expected": 0.15
+    },
+    {
+      "check": "M2/M1 from W(3,3) = LAM/MU = 0.5 (GUT-scale gaugino ratio)",
+      "pass": true,
+      "got": 0.5,
+      "expected": 0.5
+    },
+    {
+      "check": "M3/M2 from W(3,3) = spectral_gap/LAM = 3",
+      "pass": true,
+      "got": 3.0,
+      "expected": 3.0
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "all_verified": true,
+  "checks": {
+    "derivatives_center_on_phi3_g": true,
+    "derivatives_split_by_q4": true,
+    "dual_now_derivative_is_pisano_alpha": true,
+    "dual_root_is_positive_sheet": true,
+    "gap_is_factorial_clock_only_at_q3": true,
+    "heat_trace_now_is_vertex_count": true,
+    "live_root_is_negative_sheet": true,
+    "nontrivial_gap_factorial_lock": true,
+    "now_value_is_negative_multiplicity": true,
+    "phi4_is_low_energy_and_pi11": true,
+    "phi5_is_ihara_square": true,
+    "ratio_uniqueness_factor": "q^3*(3-q)",
+    "ratio_uniqueness_scanned_q3_to_q14": true,
+    "root_ratio_is_cyclotomic": true,
+    "root_variables_are_reciprocal": true
+  },
+  "constants": {
+    "Phi3": 13,
+    "Phi6": 7,
+    "alpha_inverse_shadow": 137,
+    "f": 24,
+    "g": 15,
+    "g1": 21,
+    "g2": 6,
+    "k": 12,
+    "mu": 4,
+    "p_Ih": 11,
+    "q": 3,
+    "r": 2,
+    "v": 40
+  },
+  "energies": {
+    "E_high": 16,
+    "E_low": 10,
+    "gap": 6,
+    "gap_identity": "E_high-E_low=6=q!=2q"
+  },
+  "now": {
+    "Omega_dual_0": 15.0,
+    "Omega_live_0": 15.0,
+    "Z_0": 40,
+    "derivative_center": "-195",
+    "derivative_half_split": "81",
+    "dual_derivative_0": -276,
+    "live_derivative_0": -114,
+    "pisano_137": 276
+  },
+  "roots": {
+    "beta_minus_live": -0.20879382808256133,
+    "beta_plus_dual": 0.20879382808256133,
+    "x_minus_exp_gap_beta": "2/7",
+    "x_plus_exp_gap_beta": "7/2",
+    "x_plus_times_x_minus": 1
+  },
+  "statement": "The corrected W33 genus oscillator is a reciprocal live/dual two-sheet system.  The live sheet zero is beta=-ln(7/2)/6, the dual sheet zero is beta=+ln(7/2)/6, and the positive sheet's derivative at now equals -pi(137).",
+  "theorem": "MCCLXXVI_CYCLOTOMIC_GENUS_RECIPROCAL_SHEETS",
+  "total_boolean_checks": 14,
+  "uniqueness": {
+    "gap_factorial_scan": [
+      {
+        "equal": false,
+        "q": 1,
+        "q_factorial": 1,
+        "spectral_gap_2q": 2
+      },
+      {
+        "equal": false,
+        "q": 2,
+        "q_factorial": 2,
+        "spectral_gap_2q": 4
+      },
+      {
+        "equal": true,
+        "q": 3,
+        "q_factorial": 6,
+        "spectral_gap_2q": 6
+      },
+      {
+        "equal": false,
+        "q": 4,
+        "q_factorial": 24,
+        "spectral_gap_2q": 8
+      },
+      {
+        "equal": false,
+        "q": 5,
+        "q_factorial": 120,
+        "spectral_gap_2q": 10
+      },
+      {
+        "equal": false,
+        "q": 6,
+        "q_factorial": 720,
+        "spectral_gap_2q": 12
+      },
+      {
+        "equal": false,
+        "q": 7,
+        "q_factorial": 5040,
+        "spectral_gap_2q": 14
+      },
+      {
+        "equal": false,
+        "q": 8,
+        "q_factorial": 40320,
+        "spectral_gap_2q": 16
+      }
+    ],
+    "ratio_factor": "g1/g2=Phi6/r has numerator q^3*(3-q)",
+    "ratio_scan": [
+      {
+        "equal": true,
+        "g1_over_g2": "7/2",
+        "phi6_over_r": "7/2",
+        "q": 3
+      },
+      {
+        "equal": false,
+        "g1_over_g2": "11/5",
+        "phi6_over_r": "13/3",
+        "q": 4
+      },
+      {
+        "equal": false,
+        "g1_over_g2": "16/9",
+        "phi6_over_r": "21/4",
+        "q": 5
+      },
+      {
+        "equal": false,
+        "g1_over_g2": "11/7",
+        "phi6_over_r": "31/5",
+        "q": 6
+      },
+      {
+        "equal": false,
+        "g1_over_g2": "29/20",
+        "phi6_over_r": "43/6",
+        "q": 7
+      },
+      {
+        "equal": false,
+        "g1_over_g2": "37/27",
+        "phi6_over_r": "57/7",
+        "q": 8
+      },
+      {
+        "equal": false,
+        "g1_over_g2": "46/35",
+        "phi6_over_r": "73/8",
+        "q": 9
+      },
+      {
+        "equal": false,
+        "g1_over_g2": "14/11",
+        "phi6_over_r": "91/9",
+        "q": 10
+      },
+      {
+        "equal": false,
+        "g1_over_g2": "67/54",
+        "phi6_over_r": "111/10",
+        "q": 11
+      },
+      {
+        "equal": false,
+        "g1_over_g2": "79/65",
+        "phi6_over_r": "133/11",
+        "q": 12
+      },
+      {
+        "equal": false,
+        "g1_over_g2": "92/77",
+        "phi6_over_r": "157/12",
+        "q": 13
+      },
+      {
+        "equal": false,
+        "g1_over_g2": "53/45",
+        "phi6_over_r": "183/13",
+        "q": 14
+      }
+    ]
+  },
+  "verified_boolean_checks": 14
+}

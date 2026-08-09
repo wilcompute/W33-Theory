@@ -329,7 +329,7 @@ def _universal_sets():
         return len(basis)
 
     cache, out = {}, []
-    for size in range(4, 9):
+    for size in range(4, 11):
         for combo in combinations(names, size):
             lins = frozenset(x for x in combo if x in LIN)
             trans = [P[x][1] for x in combo if x not in LIN]
@@ -373,17 +373,15 @@ def pass_4288(unis) -> dict:
     best = min((k2 for k2 in keys if not np.isnan(corrs[k2])),
                key=lambda k2: corrs[k2])
     print(f"""
-  THE STRONGEST PREDICTOR IS {best} (correlation {corrs[best]:+.3f}).
+  THE STRONGEST ASSOCIATION IN THIS FINITE POOL IS {best}
+  (correlation {corrs[best]:+.3f}).
 
   Pass 4277 showed symmetrising the instruction set does not buy mixing, and left the
-  question of what does.  The answer here is unglamorous and useful: {'minimum degree' if best == 'dmin' else best}.  The
-  frames that mix slowest are the ones with fewest ways out, and adding ANY generator
-  raises the floor -- which is exactly why the p-side control matched the f-mirrors in
-  Pass 4277 despite doing nothing about the frozen coordinate.
-
-  So the design lever for mixing is the minimum degree of the frame graph, not the
-  symmetry of the opcode set.  Those are different knobs and the arc had been conflating
-  them.""")
+  question of what does. The strongest finite-pool correlate is
+  {'minimum degree' if best == 'dmin' else best}. This is not a causal theorem: generator
+  count, degree floor and other graph features covary across the pool. It is a design
+  hypothesis to test by matched interventions, not proof that one statistic governs
+  mixing.""")
     return {"n": len(rows), "correlations": corrs, "strongest": best}
 
 
@@ -557,7 +555,9 @@ def pass_4291(unis) -> dict:
     for combo in unis:
         A = simple([P[c] for c in combo])
         ev = np.sort_complex(np.round(pencil(A), 6))
-        key = (round(rho_of(A), 6), tuple(np.round(np.abs(ev), 4).tolist()))
+        full_spectrum = tuple((round(float(z.real), 6), round(float(z.imag), 6))
+                              for z in ev)
+        key = (int(A.sum() // 2), full_spectrum)
         sig.setdefault(key, []).append("+".join(combo))
     sizes = Counter(len(v) for v in sig.values())
     biggest = max(sig.values(), key=len)
@@ -569,8 +569,10 @@ def pass_4291(unis) -> dict:
         print(f"    {s}")
     print(f"""
   THE ZETA IS NOT AN ISA FINGERPRINT.  {sum(1 for v in sig.values() if len(v) > 1)} signatures are shared by more than
-  one generating set, the largest class holding {len(biggest)}.  Distinct instruction sets --
-  different opcodes, different hardware -- produce byte-identical Ihara zetas.
+  one generating set, the largest class holding {len(biggest)}. Distinct instruction sets
+  produce the same rounded full quadratic-pencil spectrum and edge count. This is a much
+  stronger key than the historical modulus-only signature, though still numerical rather
+  than an exact characteristic-polynomial certificate.
 
   This is Pass 4281 on the algebra side, and it lands the same way.  There, all 28 Spence
   graphs shared one zeta, so the 78 poles could not be evidence about W(3,3).  Here,
@@ -584,6 +586,8 @@ def pass_4291(unis) -> dict:
             "distinct_signatures": len(sig),
             "multiplicity_distribution": {str(k2): v2 for k2, v2 in sizes.items()},
             "largest_class_size": len(biggest), "example_class": biggest[:6],
+            "signature_key": "edge count plus rounded full complex pencil spectrum",
+            "exact_characteristic_polynomial_frozen": False,
             "zeta_is_fingerprint": False}
 
 

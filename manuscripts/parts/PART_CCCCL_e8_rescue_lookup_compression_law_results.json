@@ -1,0 +1,121 @@
+{
+  "part": "CCCCL",
+  "title": "E8 Rescue Lookup Compression Law",
+  "Verified": true,
+  "checks_total": 7,
+  "checks_passed": 7,
+  "checks": [
+    [
+      "E8 roots count = 240",
+      true
+    ],
+    [
+      "Dot histogram exact",
+      true
+    ],
+    [
+      "Lookup dot classes exactly {\u00b18, \u00b14, 0}",
+      true
+    ],
+    [
+      "Canonical representatives match lookup",
+      true
+    ],
+    [
+      "Deterministic sampled direct checks match lookup",
+      true
+    ],
+    [
+      "Lookup constants are 126/234/240",
+      true
+    ],
+    [
+      "Weighted total rescue count is positive",
+      true
+    ]
+  ],
+  "dot_histogram": {
+    "-8": 120,
+    "-4": 6720,
+    "0": 15120,
+    "4": 6720,
+    "8": 240
+  },
+  "canonical_representatives": {
+    "-8": [
+      0,
+      239
+    ],
+    "-4": [
+      0,
+      150
+    ],
+    "0": [
+      0,
+      13
+    ],
+    "4": [
+      0,
+      1
+    ],
+    "8": [
+      0,
+      0
+    ]
+  },
+  "canonical_direct": {
+    "-8": 126,
+    "-4": 234,
+    "0": 240,
+    "4": 234,
+    "8": 126
+  },
+  "canonical_lookup": {
+    "-8": 126,
+    "-4": 234,
+    "0": 240,
+    "4": 234,
+    "8": 126
+  },
+  "sampled_summary": {
+    "-8": {
+      "sample_size": 20,
+      "direct_min": 126,
+      "direct_max": 126,
+      "lookup": 126
+    },
+    "-4": {
+      "sample_size": 20,
+      "direct_min": 234,
+      "direct_max": 234,
+      "lookup": 234
+    },
+    "0": {
+      "sample_size": 20,
+      "direct_min": 240,
+      "direct_max": 240,
+      "lookup": 240
+    },
+    "4": {
+      "sample_size": 20,
+      "direct_min": 234,
+      "direct_max": 234,
+      "lookup": 234
+    },
+    "8": {
+      "sample_size": 20,
+      "direct_min": 126,
+      "direct_max": 126,
+      "lookup": 126
+    }
+  },
+  "sampled_mismatches": [],
+  "lookup_map": {
+    "abs(d)=8": 126,
+    "abs(d)=4": 234,
+    "d=0": 240
+  },
+  "weighted_rescue_total": 6819120,
+  "theorem_statement": "R(a,b), the third-reference rescue count, is a function only of d=a\u00b7b: R=126 for |d|=8, R=234 for |d|=4, and R=240 for d=0.",
+  "honesty_boundary": "This part certifies the closed-form lookup with canonical and deterministic direct checks, not a full brute-force all-pairs direct recomputation."
+}

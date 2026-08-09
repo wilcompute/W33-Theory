@@ -1,0 +1,44 @@
+{
+  "Part": "CCXXXV",
+  "Title": "Leech Lattice, Golay Codes, and Witt Designs from W(3,3)",
+  "Verified": true,
+  "checks_passed": 32,
+  "checks_total": 32,
+  "SRG_parameters": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "M_LAM": 27,
+    "EDGES": 240,
+    "AUT_ORDER": 51840
+  },
+  "leech_lattice": {
+    "dimension": 24,
+    "min_norm": 4,
+    "kissing_number": 196560
+  },
+  "niemeier_lattice_count": 24,
+  "binary_Golay": {
+    "n": 24,
+    "k": 12,
+    "d": 8
+  },
+  "ternary_Golay": {
+    "n": 12,
+    "k": 6,
+    "d": 6,
+    "field": 3
+  },
+  "witt_design": {
+    "t": 5,
+    "k": 8,
+    "v": 24,
+    "lambda": 1,
+    "octads": 759
+  },
+  "leech_from_3E8": 24,
+  "ramanujan_tau_2": -24,
+  "dim_modular_forms_weight_K": 2
+}

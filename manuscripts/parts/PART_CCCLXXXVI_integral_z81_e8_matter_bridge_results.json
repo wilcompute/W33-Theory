@@ -1,0 +1,16 @@
+{
+  "part": "CCCLXXXVI",
+  "title": "Integral Z81 E8 Matter Bridge",
+  "verified": true,
+  "checks_passed": 5,
+  "checks_total": 5,
+  "h1_certificate": {
+    "rank": 81,
+    "torsion_free": true,
+    "certificate": "Smith normal form: 120 unit relations in Z^201 presentation"
+  },
+  "e8_dims": {"g0": 86, "g1": 81, "g2": 81, "total": 248},
+  "architecture_upgrade": "Uses the SNF-certified integral result H1(W33;Z)=Z^81 as the W33-side matter module for the E8 g1/g2 bridge.",
+  "theorem": "The W33 matter-cycle module is integrally free of rank 81, matching each E8 matter grade g1 and g2 and not matching the g0 action sector. Therefore the H1-to-E8 matter bridge can be formulated over Z on the W33 side.",
+  "honesty_boundary": "This is an integral module bridge and slot compatibility statement, not a completed E8 representation isomorphism."
+}

@@ -1,0 +1,62 @@
+{
+  "module": "PART_CLXXVI_FIREWALL_DIAGONAL_FIBER_ALBERT",
+  "source_links": {
+    "CLXXV": "triple Albert / E8 grading bridge",
+    "artifact": "artifacts/e6_cubic_affine_heisenberg_model.json",
+    "legacy_firewall": "36/9 firewall split scripts and archive theorem"
+  },
+  "w33_atoms": {
+    "q": 3,
+    "q2": 9,
+    "q3": 27,
+    "q4": 81,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "J": 5,
+    "J_inverse": 8,
+    "rank_seed_2q": 6
+  },
+  "firewall_layers": [
+    {"name":"Heisenberg_points","value":27,"formula":"q^3=27","interpretation":"H27 cubic/Heisenberg points"},
+    {"name":"u_fibers","value":9,"formula":"q^2=9","interpretation":"vertical z-fibers over u in F3^2"},
+    {"name":"z_levels","value":3,"formula":"q=3","interpretation":"three points per fiber"},
+    {"name":"fiber_triads","value":9,"formula":"q^2=9","interpretation":"firewall/fiber triads"},
+    {"name":"affine_u_lines","value":12,"formula":"q^2+q=12","interpretation":"affine lines in the u-plane AG(2,3)"},
+    {"name":"affine_line_triads","value":36,"formula":"12*3=36","interpretation":"non-firewall affine triads"},
+    {"name":"oriented_affine_roots","value":72,"formula":"2*36=72","interpretation":"oriented affine triads / E6 root directions"},
+    {"name":"cubic_triads_total","value":45,"formula":"36+9=45=5*q^2","interpretation":"E6 cubic tritangent/triad total"},
+    {"name":"triple_albert_diagonal","value":9,"formula":"3*3=9=q^2","interpretation":"diagonal/fiber sector of three Albert copies"},
+    {"name":"triple_albert_offdiagonal","value":72,"formula":"3*24=72","interpretation":"off-diagonal octonion sector / E6 roots"}
+  ],
+  "bridge_identities": {
+    "artifact_split": "36 affine-line triads + 9 fiber triads = 45 cubic triads",
+    "firewall_match": "artifact verifies firewall_bad_triads_match_fiber_triads=true",
+    "albert_split": "3*J_3(O)=9 diagonal + 72 off-diagonal = 81",
+    "identification": "9 fiber triads = triple-Albert diagonal sector; 2*36 oriented affine triads = 72 E6 roots",
+    "h1_bridge": "9 + 72 = 81 = H1(W33)",
+    "e6_bridge": "6 + 72 = 78 = dim(E6)"
+  },
+  "checks": {
+    "one_albert_dim": true,
+    "one_albert_split": true,
+    "triple_albert_split": true,
+    "triple_diagonal_is_q2": true,
+    "triple_offdiagonal_is_e6_roots": true,
+    "heisenberg_points_are_q3": true,
+    "fibers_are_q2": true,
+    "fiber_points_partition_h27": true,
+    "affine_u_lines_count": true,
+    "affine_triads_count": true,
+    "cubic_triads_total": true,
+    "firewall_split": true,
+    "oriented_affine_roots_are_72": true,
+    "affine_orientation_gives_e6_roots": true,
+    "fiber_triads_match_triple_diagonal": true,
+    "fiber_plus_oriented_affine_is_h1": true,
+    "rank_plus_oriented_affine_is_e6": true,
+    "threshold_carrier_inverse": true
+  },
+  "theorem_statement": "The old 36/9 firewall split is the concrete Heisenberg realization of the triple-Albert 72/9 split. The 9 fiber triads are the q^2 vertical z-fibers over F3^2 and match the 3*3 diagonal sector of three Albert copies. The 36 affine-line triads orient to 72 directions, matching the E6 root count. Hence H1(W33)=81 decomposes as 9 firewall/fiber modes plus 72 oriented affine/root modes.",
+  "interpretive_note": "This welds the firewall back into the new algebra instead of treating it as an anomaly. The firewall is the diagonal/fiber sector required to complete the 72 E6-root/off-diagonal directions into the full 81-dimensional three-generation carrier."
+}

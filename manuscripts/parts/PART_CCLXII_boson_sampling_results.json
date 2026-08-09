@@ -1,0 +1,30 @@
+{
+  "part": "CCLXII",
+  "title": "Boson Sampling and Polynomial Invariants",
+  "checks_pass": 24,
+  "checks_total": 24,
+  "Verified": true,
+  "boson_sampling_photons": 2,
+  "adjacency_matrix_size": [
+    40,
+    40
+  ],
+  "permanent_degree_estimate": 12,
+  "permanent_order_estimate": 479001600,
+  "chromatic_number_upper_bound": 5,
+  "k7_minimal_genus": 1,
+  "csaszar_embeddings_genus_1": 1,
+  "spanning_trees_eigenvalue": 16,
+  "link_components": 3,
+  "vertex_connectivity": 12,
+  "edge_connectivity": 12,
+  "sampling_matrix_size": 40,
+  "eigenvalue_1": 12,
+  "eigenvalue_2_multiplicity": 24,
+  "eigenvalue_3": -4,
+  "eigenvalue_3_multiplicity": 15,
+  "trace_a2": 480,
+  "spectral_gap": 10,
+  "ramanujan_bound_value": 6.63,
+  "is_ramanujan": true
+}

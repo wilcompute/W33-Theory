@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "all_checks_pass": true,
+  "failed_checks": [],
+  "check_count": 52,
+  "checks_passing": 52,
+  "atom_check_count": 9,
+  "vertex_check_count": 5,
+  "edge_check_count": 5,
+  "face_check_count": 5,
+  "symmetry_check_count": 5,
+  "euler_check_count": 5,
+  "four_d_check_count": 10,
+  "structural_check_count": 8,
+  "platonic_solids": {
+    "tetrahedron": {
+      "vertices": 4,
+      "edges": 6,
+      "faces": 4,
+      "symmetry_order": 24
+    },
+    "cube": {
+      "vertices": 8,
+      "edges": 12,
+      "faces": 6,
+      "symmetry_order": 48
+    },
+    "octahedron": {
+      "vertices": 6,
+      "edges": 12,
+      "faces": 8,
+      "symmetry_order": 48
+    },
+    "dodecahedron": {
+      "vertices": 20,
+      "edges": 30,
+      "faces": 12,
+      "symmetry_order": 120
+    },
+    "icosahedron": {
+      "vertices": 12,
+      "edges": 30,
+      "faces": 20,
+      "symmetry_order": 120
+    }
+  },
+  "regular_4d_polytopes": {
+    "5-cell": {
+      "n_vertices": 5,
+      "n_cells": 5,
+      "symmetry_order": 120
+    },
+    "8-cell": {
+      "n_vertices": 16,
+      "n_cells": 8,
+      "symmetry_order": 384
+    },
+    "16-cell": {
+      "n_vertices": 8,
+      "n_cells": 16,
+      "symmetry_order": 384
+    },
+    "24-cell": {
+      "n_vertices": 24,
+      "n_cells": 24,
+      "symmetry_order": 1152
+    },
+    "120-cell": {
+      "n_vertices": 600,
+      "n_cells": 120,
+      "symmetry_order": 14400
+    },
+    "600-cell": {
+      "n_vertices": 120,
+      "n_cells": 600,
+      "symmetry_order": 14400
+    }
+  },
+  "w33_atoms": {
+    "Q": 3,
+    "LAM": 2,
+    "V": 40,
+    "K": 12,
+    "PHI4": 10,
+    "J_INV": 8,
+    "EDGES": 240,
+    "EIG_MAX": 5
+  },
+  "theorem_cxciv": "The W(3,3) SRG(40,12,2,4) parameters index all regular polytopes in all dimensions with zero free parameters. Platonic solid counts: 5 = EIG_MAX. Edges: K/2, K, K, Q*PHI4, Q*PHI4 for {tet,cube,oct,dodec,icos}. 4D polytopes: 6 = K/2; 24-cell has 2K vertices, 2K cells; 120-cell has Q*V*EIG_MAX vertices, K*PHI4 cells; Regular polytopes in n>=5: 3 = Q."
+}

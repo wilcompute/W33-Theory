@@ -1,0 +1,73 @@
+{
+  "anchor_free_scales_from_internal_packet": {
+    "gap": 1262.25,
+    "heat_trace": 1262.25,
+    "mass": 1262.25,
+    "resolvent_trace": 1262.25,
+    "spinor_trace": 1262.2499999999998,
+    "zeta": 1262.25
+  },
+  "architecture_upgrade": "CCCXLVII introduced multi-sector response fitting. CCCXLVIII ties abstract response channels back to the W33 RG spinor operator stack by registering candidate internal operators for mass, gap, heat, spinor, resolvent, and zeta responses.",
+  "checks": [
+    {"name":"W33 atoms produce B=67","passed":true,"value":67},
+    {"name":"W33 atoms produce A=140","passed":true,"value":140},
+    {"name":"M2=5049/4","passed":true,"value":"5049/4"},
+    {"name":"G trace zero","passed":true,"value":"0"},
+    {"name":"G determinant -M2","passed":true,"value":"-5049/4"},
+    {"name":"G square equals M2 I","passed":true,"value":[["5049/4","0"],["0","5049/4"]]},
+    {"name":"all six response channels registered","passed":true,"value":["mass","gap","heat_trace","spinor_trace","resolvent_trace","zeta"]},
+    {"name":"all response scales recover internal M2","passed":true,"value":{"gap":1262.25,"heat_trace":1262.25,"mass":1262.25,"resolvent_trace":1262.25,"spinor_trace":1262.2499999999998,"zeta":1262.25}},
+    {"name":"gap over mass equals 2","passed":true,"value":2.0},
+    {"name":"three sector candidate maps exist","passed":true,"value":["one_sector","geometry_vs_kernel","operator_family"]}
+  ],
+  "checks_passed": 10,
+  "checks_total": 10,
+  "dimensionless_kernel": {
+    "operator": "finite W33 RG spinor generator G",
+    "mass_shell": "G^2=(5049/4)I"
+  },
+  "generator": {
+    "G": [["67/2","140"],["1","-67/2"]],
+    "G_squared": [["5049/4","0"],["0","5049/4"]],
+    "determinant": "-5049/4",
+    "trace": "0"
+  },
+  "honesty_boundary": "This bridge identifies mathematically exact finite operators for the response channels. It is not yet a claim that laboratory observables have been matched to those channels.",
+  "internal_response_packet": {
+    "gap": 71.0563156939622,
+    "heat_trace": 0.5658372432569382,
+    "mass": 35.5281578469811,
+    "resolvent_trace": 0.022889187720315583,
+    "samples": {"p":2,"s":100.0,"t":0.01,"tau":0.001},
+    "spinor_trace": 2.1271897588648534,
+    "zeta": 1.2552759915088154e-06
+  },
+  "operator_response_registry": {
+    "gap": {"candidate_internal_operator":"projective eigenvalue gap of G","identity":"gap=sqrt(5049)=2 sqrt(5049)/2","response":"g=2m","status":"proved from spec(G)"},
+    "heat_trace": {"candidate_internal_operator":"finite KG heat kernel","identity":"H=2 exp(-(5049/4)tau)","response":"H(tau)=tr exp(-tau G^2)","status":"proved spectral trace"},
+    "mass": {"candidate_internal_operator":"G^2","identity":"G^2=(5049/4)I","response":"m^2","status":"proved finite RG spinor identity"},
+    "resolvent_trace": {"candidate_internal_operator":"finite Green resolvent","identity":"R=2s/(s^2-5049/4)","response":"R(s)=tr(sI-G)^-1","status":"proved resolvent trace"},
+    "spinor_trace": {"candidate_internal_operator":"finite spinor propagator","identity":"T=2 cosh(sqrt(5049)t/2)","response":"T(t)=tr exp(tG)","status":"proved propagator trace"},
+    "zeta": {"candidate_internal_operator":"finite spectral zeta","identity":"zeta_p=2(5049/4)^-p","response":"zeta_p=tr((G^2)^-p)","status":"proved zeta tower"}
+  },
+  "part": "CCCXLVIII",
+  "sector_candidates": {
+    "geometry_vs_kernel": {"assignment":{"gap":0,"heat_trace":1,"mass":0,"resolvent_trace":1,"spinor_trace":1,"zeta":1},"interpretation":"geometry normalization channels separated from kernel/trace response channels"},
+    "one_sector": {"assignment":{"gap":0,"heat_trace":0,"mass":0,"resolvent_trace":0,"spinor_trace":0,"zeta":0},"interpretation":"all response channels are shadows of the same RG spinor mass shell"},
+    "operator_family": {"assignment":{"gap":0,"heat_trace":1,"mass":0,"resolvent_trace":3,"spinor_trace":2,"zeta":4},"interpretation":"each operator family may carry its own sector scale in a higher model"}
+  },
+  "theorem": "The six response channels used in the empirical layer are exactly realized by the finite W33 RG spinor generator G: mass and gap come from spec(G), heat and zeta from G^2, spinor trace from exp(tG), and resolvent trace from (sI-G)^-1. This provides the first explicit operator-response bridge for the measurement architecture.",
+  "title": "W33 Operator / Response Bridge Compiler",
+  "verified": true,
+  "w33_atoms": {
+    "A": "(v/2)Phi6=140",
+    "B": "2v-Phi3=67",
+    "M2": "5049/4",
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "k": 12,
+    "q": 3,
+    "v": 40
+  }
+}

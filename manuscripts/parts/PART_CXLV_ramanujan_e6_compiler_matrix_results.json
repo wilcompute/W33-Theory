@@ -1,0 +1,67 @@
+{
+  "module": "PART_CXLV_RAMANUJAN_E6_COMPILER_MATRIX",
+  "w33_atoms": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "mu": 4,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "Hashimoto_q": 11
+  },
+  "shell_decomposition": {
+    "complex_dimensions": "24 + 15 = 39 = 3*Phi3",
+    "real_dimensions": "48 + 30 = 78 = dim(E6) = 6*Phi3",
+    "ratio": "24:15 = 48:30 = 8:5"
+  },
+  "compiler_sectors": [
+    {
+      "name": "positive carrier sector",
+      "adjacency_eigenvalue": 2,
+      "complex_multiplicity": 24,
+      "real_dimension": 48,
+      "hashimoto_roots": "1 ± i√Phi4 = 1 ± i√10",
+      "quadratic_field": "Q(√-Phi4) = Q(√-10)",
+      "adjoint_identification": "dim su(5) = 24",
+      "compiler_role": "bare visible/GUT carrier",
+      "qcd_formula_piece": "k3_bare = 24/Phi3"
+    },
+    {
+      "name": "negative threshold sector",
+      "adjacency_eigenvalue": -4,
+      "complex_multiplicity": 15,
+      "real_dimension": 30,
+      "hashimoto_roots": "-2 ± i√Phi6 = -2 ± i√7",
+      "quadratic_field": "Q(√-Phi6) = Q(√-7)",
+      "adjoint_identification": "dim so(6) = dim su(4) = 15",
+      "compiler_role": "QCD/confinement heavy-threshold carrier",
+      "qcd_formula_piece": "tau = log sqrt(mu/Phi6)"
+    }
+  ],
+  "representation_identifications": {
+    "positive_24": "dim su(5) = 5^2 - 1 = 24",
+    "negative_15": "dim so(6) = 6*5/2 = 15 = dim su(4)",
+    "ramanujan_78": "2*(24+15)=78 = dim E6",
+    "complex_39": "24+15=39=3*Phi3"
+  },
+  "qcd_compiler_rule": {
+    "carrier": "positive Q(√-10) / su(5)-adjoint sector gives k3_bare=24/Phi3",
+    "threshold": "negative Q(√-7) / so(6)-adjoint sector gives tau=log sqrt(mu/Phi6)",
+    "compiled_formula": "alpha_s(MGUT)=alpha_unified/(24/Phi3)*(1+alpha_unified/(2π)*log sqrt(mu/Phi6))"
+  },
+  "checks": {
+    "positive_mult_is_su5_adjoint": true,
+    "negative_mult_is_so6_adjoint": true,
+    "negative_mult_is_su4_adjoint": true,
+    "real_shell_is_E6_dim": true,
+    "complex_shell_is_3Phi3": true,
+    "real_shell_is_6Phi3": true,
+    "positive_real_dim": 48,
+    "negative_real_dim": 30,
+    "split_ratio_complex": "24:15=8:5",
+    "split_ratio_real": "48:30=8:5"
+  },
+  "theorem_statement": "The 78-dimensional Hashimoto/Ramanujan shell is an E6-sized two-adjoint compiler: its complex multiplicities 24 and 15 are exactly dim su(5) and dim so(6)=dim su(4).  The selected QCD coupling uses the su(5)-sized positive sector as the bare carrier and the so(6)/Phi6 negative sector as the heavy threshold.",
+  "interpretive_note": "This explains why the successful alpha_s formula uses 24/13 and a Phi6 polar threshold.  The number 24 is not merely convenient; it is the positive Hashimoto multiplicity and the SU(5) adjoint dimension.  The number 15 is not passive; it is the negative Hashimoto multiplicity and the SO(6)/SU(4) adjoint dimension that carries the Phi6 threshold."
+}

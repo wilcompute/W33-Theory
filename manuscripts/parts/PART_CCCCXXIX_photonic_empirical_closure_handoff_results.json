@@ -1,0 +1,679 @@
+{
+  "architecture_upgrade": "This reconciles the CCCC photonic-curved architecture stream with the CCC empirical mass/Yukawa stream. The same W33 atoms that the curved extractor reconstructs from CP2_9/K3_16 samples also drive the Higgs/CKM/top mass-mixing sheet, the light-quark 137^3 Yukawa closures, and the GUT-Planck 24/114 hierarchy.",
+  "checks": [
+    {
+      "name": "photonic curved EH extractor verified",
+      "passed": true,
+      "value": 63
+    },
+    {
+      "name": "mass-mixing closure surface internally verified",
+      "passed": true,
+      "value": {
+        "ckm_A_denominator_is_higgs_denominator": true,
+        "ckm_lambda_denominator_is_vertex_count": true,
+        "eta_uses_phi6_over_phi4_cube": true,
+        "higgs_denominator_is_phi4_squared": true,
+        "q_factorial_seed": true,
+        "srg_valency_formula": true,
+        "srg_vertex_formula": true,
+        "top_denominator_matches_hypercharge_numerator": true
+      }
+    },
+    {
+      "name": "mass-mixing closure surface within two sigma",
+      "passed": true,
+      "value": {
+        "max_abs_z": 1.0000000000000009,
+        "reduced_chi2": 0.3367230397565688
+      }
+    },
+    {
+      "name": "SM empirical audit verified",
+      "passed": true,
+      "value": {
+        "dimensional_predictions_total": 5,
+        "dimensionless_closures_total": 11,
+        "dimensionless_closures_within_1_sigma": 9,
+        "dimensionless_closures_within_2_sigma": 10,
+        "open_boundaries_count": 12
+      }
+    },
+    {
+      "name": "GUT-Planck hierarchy verified",
+      "passed": true,
+      "value": {
+        "M_Pl_over_M_GUT_W33": 114,
+        "M_Pl_predicted_reduced_GeV": 2.445414e+18,
+        "alpha_GUT_inv_W33": 24
+      }
+    },
+    {
+      "name": "light-quark Yukawa bridge verified",
+      "passed": true,
+      "value": {
+        "m_d_pred_MeV": 4.739625750469298,
+        "m_u_pred_MeV": 2.1666860573573934,
+        "y_d_W33": 2.7223022276599128e-05,
+        "y_u_W33": 1.2444810183588173e-05,
+        "y_u_over_y_d_W33": "16/35"
+      }
+    },
+    {
+      "name": "photonic inverse Rosetta q matches mass sheet",
+      "passed": true,
+      "value": {
+        "inverse": {
+          "phi3": "13",
+          "phi6": "7",
+          "q": 3,
+          "spectrum": {
+            "k": 12,
+            "r": 2,
+            "s": -4
+          },
+          "srg": {
+            "k": 12,
+            "lambda": 2,
+            "mu": 4,
+            "v": 40
+          }
+        },
+        "mass_atoms": {
+          "Phi3": 13,
+          "Phi4": 10,
+          "Phi6": 7,
+          "k": 12,
+          "lambda": 2,
+          "mu": 4,
+          "q": 3,
+          "v": 40
+        }
+      }
+    },
+    {
+      "name": "photonic inverse Rosetta Phi3 matches mass sheet",
+      "passed": true,
+      "value": {
+        "phi3": "13",
+        "phi6": "7",
+        "q": 3,
+        "spectrum": {
+          "k": 12,
+          "r": 2,
+          "s": -4
+        },
+        "srg": {
+          "k": 12,
+          "lambda": 2,
+          "mu": 4,
+          "v": 40
+        }
+      }
+    },
+    {
+      "name": "photonic inverse Rosetta Phi6 matches mass sheet",
+      "passed": true,
+      "value": {
+        "phi3": "13",
+        "phi6": "7",
+        "q": 3,
+        "spectrum": {
+          "k": 12,
+          "r": 2,
+          "s": -4
+        },
+        "srg": {
+          "k": 12,
+          "lambda": 2,
+          "mu": 4,
+          "v": 40
+        }
+      }
+    },
+    {
+      "name": "photonic SRG is the same W33 surface",
+      "passed": true,
+      "value": {
+        "k": 12,
+        "lambda": 2,
+        "mu": 4,
+        "v": 40
+      }
+    },
+    {
+      "name": "shared atom table is W33 canonical",
+      "passed": true,
+      "value": {
+        "Phi3": 13,
+        "Phi4": 10,
+        "Phi6": 7,
+        "k": 12,
+        "lambda": 2,
+        "mu": 4,
+        "q": 3,
+        "v": 40
+      }
+    },
+    {
+      "name": "light-quark constants share q lambda mu v",
+      "passed": true,
+      "value": {
+        "ALPHA_INV": 137,
+        "F": 24,
+        "G": 15,
+        "H_0": 70,
+        "K": 12,
+        "LAM": 2,
+        "MU": 4,
+        "PHI3": 13,
+        "PHI4": 10,
+        "PHI6": 7,
+        "Q": 3,
+        "V": 40
+      }
+    },
+    {
+      "name": "c6/cEH is q*Phi3 = 39",
+      "passed": true,
+      "value": {
+        "alpha_inv": 137,
+        "alpha_inv_cubed": 2571353,
+        "down_yukawa_numerator": 70,
+        "gut_alpha_inverse": 24,
+        "gut_planck_ratio": 114,
+        "hubble_fixed_point_h0": 70,
+        "rank39_as_q_phi3": 39,
+        "rank39_lock": "39",
+        "topological_ratio": "7",
+        "topological_ratio_as_phi6": 7,
+        "weinberg_denominator_phi3": 13,
+        "weinberg_x": "3/13"
+      }
+    },
+    {
+      "name": "a2/cEH is Phi6 = 7",
+      "passed": true,
+      "value": {
+        "alpha_inv": 137,
+        "alpha_inv_cubed": 2571353,
+        "down_yukawa_numerator": 70,
+        "gut_alpha_inverse": 24,
+        "gut_planck_ratio": 114,
+        "hubble_fixed_point_h0": 70,
+        "rank39_as_q_phi3": 39,
+        "rank39_lock": "39",
+        "topological_ratio": "7",
+        "topological_ratio_as_phi6": 7,
+        "weinberg_denominator_phi3": 13,
+        "weinberg_x": "3/13"
+      }
+    },
+    {
+      "name": "x is q/Phi3 = 3/13",
+      "passed": true,
+      "value": {
+        "alpha_inv": 137,
+        "alpha_inv_cubed": 2571353,
+        "down_yukawa_numerator": 70,
+        "gut_alpha_inverse": 24,
+        "gut_planck_ratio": 114,
+        "hubble_fixed_point_h0": 70,
+        "rank39_as_q_phi3": 39,
+        "rank39_lock": "39",
+        "topological_ratio": "7",
+        "topological_ratio_as_phi6": 7,
+        "weinberg_denominator_phi3": 13,
+        "weinberg_x": "3/13"
+      }
+    },
+    {
+      "name": "c6 equals cEH*q*Phi3",
+      "passed": true,
+      "value": {
+        "alpha_inv": 137,
+        "alpha_inv_cubed": 2571353,
+        "down_yukawa_numerator": 70,
+        "gut_alpha_inverse": 24,
+        "gut_planck_ratio": 114,
+        "hubble_fixed_point_h0": 70,
+        "rank39_as_q_phi3": 39,
+        "rank39_lock": "39",
+        "topological_ratio": "7",
+        "topological_ratio_as_phi6": 7,
+        "weinberg_denominator_phi3": 13,
+        "weinberg_x": "3/13"
+      }
+    },
+    {
+      "name": "a2 equals cEH*Phi6",
+      "passed": true,
+      "value": {
+        "alpha_inv": 137,
+        "alpha_inv_cubed": 2571353,
+        "down_yukawa_numerator": 70,
+        "gut_alpha_inverse": 24,
+        "gut_planck_ratio": 114,
+        "hubble_fixed_point_h0": 70,
+        "rank39_as_q_phi3": 39,
+        "rank39_lock": "39",
+        "topological_ratio": "7",
+        "topological_ratio_as_phi6": 7,
+        "weinberg_denominator_phi3": 13,
+        "weinberg_x": "3/13"
+      }
+    },
+    {
+      "name": "finite DF2 spectrum preserved",
+      "passed": true,
+      "value": {
+        "betti_numbers": {
+          "b0": 1,
+          "b1": 81,
+          "b2": 0,
+          "b3": 0
+        },
+        "boundary_ranks": {
+          "rank_d1": 39,
+          "rank_d2": 120,
+          "rank_d3": 40
+        },
+        "chain_dimensions": {
+          "c0": 40,
+          "c1": 240,
+          "c2": 160,
+          "c3": 40
+        },
+        "df2_spectrum": {
+          "0": 82,
+          "10": 48,
+          "16": 30,
+          "4": 320
+        },
+        "seeley_dewitt_moments": {
+          "a0_f": 480,
+          "a2_f": 2240,
+          "a4_f": 17600
+        }
+      }
+    },
+    {
+      "name": "protected photonic handoff preserved",
+      "passed": true,
+      "value": {
+        "active_code": "[[82320,81,>=81]]",
+        "curved_seeds": {
+          "CP2_9": {
+            "betti_numbers": [
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "harmonic_total": 3,
+            "total_chain_dim": 255,
+            "vertices": 9
+          },
+          "K3_16": {
+            "betti_numbers": [
+              1,
+              0,
+              22,
+              0,
+              1
+            ],
+            "h2_signature_split": [
+              3,
+              19
+            ],
+            "harmonic_total": 24,
+            "total_chain_dim": 1704,
+            "vertices": 16
+          }
+        },
+        "edge_carrier": 240,
+        "h1_logical": 81,
+        "logical_harmonic_channels": {
+          "CP2_9_by_degree": [
+            81,
+            0,
+            81,
+            0,
+            81
+          ],
+          "CP2_9_total": 243,
+          "K3_16_by_degree": [
+            81,
+            0,
+            1782,
+            0,
+            81
+          ],
+          "K3_16_middle_h2": 1782,
+          "K3_16_total": 1944
+        },
+        "selector_trits": 40,
+        "source_part": "CCCCXXVII"
+      }
+    },
+    {
+      "name": "mass surface Higgs quartic uses Phi3/Phi4^2",
+      "passed": true,
+      "value": {
+        "formula": "Phi_3/Phi_4^2 = 13/100",
+        "name": "lambda_H_MSbar_MZ",
+        "predicted": 0.13,
+        "reference": 0.1305,
+        "residual": -0.0005000000000000004,
+        "sigma": 0.0005,
+        "z": -1.0000000000000009
+      }
+    },
+    {
+      "name": "mass surface CKM lambda uses q^2/v",
+      "passed": true,
+      "value": {
+        "formula": "q^2/v = 9/40",
+        "name": "wolf_lambda",
+        "predicted": 0.225,
+        "reference": 0.2248,
+        "residual": 0.00020000000000000573,
+        "sigma": 0.00023,
+        "z": 0.8695652173913292
+      }
+    },
+    {
+      "name": "mass surface CKM A uses q^4/Phi4^2",
+      "passed": true,
+      "value": {
+        "formula": "q^4/Phi_4^2 = 81/100",
+        "name": "wolf_A",
+        "predicted": 0.81,
+        "reference": 0.8109,
+        "residual": -0.0008999999999999009,
+        "sigma": 0.02,
+        "z": -0.044999999999995044
+      }
+    },
+    {
+      "name": "mass surface eta uses Phi6/Phi4 cubed",
+      "passed": true,
+      "value": {
+        "formula": "(Phi_6/Phi_4)^3 = 343/1000",
+        "name": "wolf_etabar",
+        "predicted": 0.3429999999999999,
+        "reference": 0.348,
+        "residual": -0.00500000000000006,
+        "sigma": 0.01,
+        "z": -0.500000000000006
+      }
+    },
+    {
+      "name": "mass surface top Yukawa uses v/(v+1)",
+      "passed": true,
+      "value": {
+        "formula": "(v/(v+1))^(1/3)",
+        "name": "top_yukawa_pole",
+        "predicted": 0.9918029100085936,
+        "reference": 0.99172,
+        "residual": 8.291000859350639e-05,
+        "sigma": 0.00178,
+        "z": 0.04657865651320584
+      }
+    },
+    {
+      "name": "137 prime formula shared by light quarks",
+      "passed": true,
+      "value": {
+        "alpha_inv": 137,
+        "alpha_inv_cubed": 2571353,
+        "down_yukawa_numerator": 70,
+        "gut_alpha_inverse": 24,
+        "gut_planck_ratio": 114,
+        "hubble_fixed_point_h0": 70,
+        "rank39_as_q_phi3": 39,
+        "rank39_lock": "39",
+        "topological_ratio": "7",
+        "topological_ratio_as_phi6": 7,
+        "weinberg_denominator_phi3": 13,
+        "weinberg_x": "3/13"
+      }
+    },
+    {
+      "name": "137^3 shared denominator is exact",
+      "passed": true,
+      "value": {
+        "alpha_inv": 137,
+        "alpha_inv_cubed": 2571353,
+        "down_yukawa_numerator": 70,
+        "gut_alpha_inverse": 24,
+        "gut_planck_ratio": 114,
+        "hubble_fixed_point_h0": 70,
+        "rank39_as_q_phi3": 39,
+        "rank39_lock": "39",
+        "topological_ratio": "7",
+        "topological_ratio_as_phi6": 7,
+        "weinberg_denominator_phi3": 13,
+        "weinberg_x": "3/13"
+      }
+    },
+    {
+      "name": "H0 equals Phi6*Phi4 and down numerator",
+      "passed": true,
+      "value": {
+        "alpha_inv": 137,
+        "alpha_inv_cubed": 2571353,
+        "down_yukawa_numerator": 70,
+        "gut_alpha_inverse": 24,
+        "gut_planck_ratio": 114,
+        "hubble_fixed_point_h0": 70,
+        "rank39_as_q_phi3": 39,
+        "rank39_lock": "39",
+        "topological_ratio": "7",
+        "topological_ratio_as_phi6": 7,
+        "weinberg_denominator_phi3": 13,
+        "weinberg_x": "3/13"
+      }
+    },
+    {
+      "name": "down Yukawa residual passes",
+      "passed": true,
+      "value": {
+        "id": "DOWN_YUKAWA_W33",
+        "measured_value": 2.699542357059458e-05,
+        "observable": "y_d(MSbar, 2 GeV)",
+        "residual": -2.275987060045489e-07,
+        "status": "PASS_WITHIN_1_SIGMA",
+        "theory_decimal": 2.7223022276599128e-05,
+        "theory_value": "(Phi_6*Phi_4) / 137^3 = 70/2571353",
+        "uncertainty": 4.0205949998757887e-07,
+        "z_score": -0.5660821495613965
+      }
+    },
+    {
+      "name": "up Yukawa residual passes",
+      "passed": true,
+      "value": {
+        "id": "UP_YUKAWA_W33",
+        "measured_value": 1.2406407428188146e-05,
+        "observable": "y_u(MSbar, 2 GeV)",
+        "residual": -3.8402755400026835e-08,
+        "status": "PASS_WITHIN_1_SIGMA",
+        "theory_decimal": 1.2444810183588173e-05,
+        "theory_value": "lam^5 / 137^3 = 32/2571353",
+        "uncertainty": 2.2974828570718788e-06,
+        "z_score": -0.016715143393483598
+      }
+    },
+    {
+      "name": "up/down ratio is 16/35",
+      "passed": true,
+      "value": {
+        "m_d_pred_MeV": 4.739625750469298,
+        "m_u_pred_MeV": 2.1666860573573934,
+        "y_d_W33": 2.7223022276599128e-05,
+        "y_u_W33": 1.2444810183588173e-05,
+        "y_u_over_y_d_W33": "16/35"
+      }
+    },
+    {
+      "name": "GUT inverse coupling is f=24",
+      "passed": true,
+      "value": {
+        "M_Pl_over_M_GUT_W33": 114,
+        "M_Pl_predicted_reduced_GeV": 2.445414e+18,
+        "alpha_GUT_inv_W33": 24
+      }
+    },
+    {
+      "name": "GUT-Planck ratio is 114",
+      "passed": true,
+      "value": {
+        "M_Pl_over_M_GUT_W33": 114,
+        "M_Pl_predicted_reduced_GeV": 2.445414e+18,
+        "alpha_GUT_inv_W33": 24
+      }
+    },
+    {
+      "name": "114 decomposes as lambda*q*(24-mu-1)",
+      "passed": true,
+      "value": {
+        "alpha_inv": 137,
+        "alpha_inv_cubed": 2571353,
+        "down_yukawa_numerator": 70,
+        "gut_alpha_inverse": 24,
+        "gut_planck_ratio": 114,
+        "hubble_fixed_point_h0": 70,
+        "rank39_as_q_phi3": 39,
+        "rank39_lock": "39",
+        "topological_ratio": "7",
+        "topological_ratio_as_phi6": 7,
+        "weinberg_denominator_phi3": 13,
+        "weinberg_x": "3/13"
+      }
+    },
+    {
+      "name": "GUT residuals pass",
+      "passed": true,
+      "value": {
+        "ALPHA_GUT_INV_W33": {
+          "id": "ALPHA_GUT_INV_W33",
+          "measured_value": 24.282,
+          "observable": "alpha_GUT^{-1} (MSSM 1-loop)",
+          "residual": 0.28200000000000003,
+          "status": "PASS_WITHIN_2_SIGMA",
+          "theory_decimal": 24.0,
+          "theory_value": "f = 24 (Leech dimension)",
+          "uncertainty": 0.2,
+          "z_score": 1.4100000000000001
+        },
+        "M_PL_OVER_M_GUT_W33": {
+          "id": "M_PL_OVER_M_GUT_W33",
+          "measured_value": 113.52976551209734,
+          "observable": "M_Pl(reduced) / M_GUT(MSSM)",
+          "residual": -0.4702344879026583,
+          "status": "PASS_WITHIN_1_SIGMA",
+          "theory_decimal": 114.0,
+          "theory_value": "lam*q*(f-mu-1) = 6*19 = 114",
+          "uncertainty": 4.541190620483894,
+          "z_score": -0.10354872261507307
+        }
+      }
+    },
+    {
+      "name": "honesty boundary keeps open problems explicit",
+      "passed": true,
+      "value": {
+        "dark_matter_and_cosmological_constant": "open",
+        "full_lepton_yukawa_packet": "open",
+        "lambda_qcd_and_strong_cp": "open",
+        "neutrino_mass_packet": "open",
+        "smooth_spectral_action_limit": "open",
+        "structural_h0_down_yukawa_derivation": "open"
+      }
+    }
+  ],
+  "checks_passed": 35,
+  "checks_total": 35,
+  "derived_links": {
+    "alpha_inv": 137,
+    "alpha_inv_cubed": 2571353,
+    "down_yukawa_numerator": 70,
+    "gut_alpha_inverse": 24,
+    "gut_planck_ratio": 114,
+    "hubble_fixed_point_h0": 70,
+    "rank39_as_q_phi3": 39,
+    "rank39_lock": "39",
+    "topological_ratio": "7",
+    "topological_ratio_as_phi6": 7,
+    "weinberg_denominator_phi3": 13,
+    "weinberg_x": "3/13"
+  },
+  "empirical_mass_sheet": {
+    "gut_planck": {
+      "M_Pl_over_M_GUT": 114,
+      "alpha_GUT_inverse": 24
+    },
+    "light_quark_yukawas": {
+      "y_d": "70/137^3",
+      "y_u": "32/137^3",
+      "y_u_over_y_d": "16/35"
+    },
+    "max_abs_z": 1.0000000000000009,
+    "reduced_chi2": 0.3367230397565688,
+    "surface_observables": [
+      "lambda_H_MSbar_MZ",
+      "wolf_lambda",
+      "wolf_A",
+      "wolf_rhobar",
+      "wolf_etabar",
+      "top_yukawa_pole"
+    ]
+  },
+  "honesty_boundary": "This is a compatibility handoff between exact photonic-curved finite coefficients and the current empirical mass/Yukawa closure surface. It does not prove the smooth Einstein-Hilbert spectral action limit, and it does not yet structurally derive every remaining Yukawa, neutrino, QCD, dark-matter, or cosmological constant datum.",
+  "open_boundaries": {
+    "dark_matter_and_cosmological_constant": "open",
+    "full_lepton_yukawa_packet": "open",
+    "lambda_qcd_and_strong_cp": "open",
+    "neutrino_mass_packet": "open",
+    "smooth_spectral_action_limit": "open",
+    "structural_h0_down_yukawa_derivation": "open"
+  },
+  "part": "CCCCXXIX",
+  "photonic_curved_exact_layer": {
+    "a2": "2240",
+    "c6": "12480",
+    "cEH": "320",
+    "df2_spectrum": {
+      "0": 82,
+      "10": 48,
+      "16": 30,
+      "4": 320
+    },
+    "h1_logical": 81,
+    "protected_code": "[[82320,81,>=81]]",
+    "x": "3/13"
+  },
+  "shared_w33_atoms": {
+    "H0": 70,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "alpha_inv": 137,
+    "lambda": 2,
+    "mu": 4,
+    "q": 3,
+    "v": 40
+  },
+  "source_streams": {
+    "empirical_audit": "CCCXXXI",
+    "gut_planck": "CCCXXXII",
+    "light_quarks": "CCCXXXIII",
+    "mass_mixing_surface": "CCCXXVII",
+    "photonic_curved": "CCCCXXVIII"
+  },
+  "theorem": "The photonic curved coefficient package and the empirical mass surface use one W(3,3) atom table. In particular c6/cEH=39=q*Phi3, a2/cEH=7=Phi6, x=q/Phi3=3/13, the mass-mixing sheet uses Phi3/Phi4^2, q^2/v, q^4/Phi4^2, (Phi6/Phi4)^3, and v/(v+1), and the light-quark layer uses alpha_inv=137 and H0=Phi6*Phi4=70.",
+  "title": "Photonic Empirical Closure Handoff",
+  "verified": true
+}

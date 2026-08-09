@@ -1,0 +1,14 @@
+{
+  "part": "CCCLXXXVII",
+  "title": "Open-Turn Trace Formula Audit",
+  "verified": true,
+  "checks_passed": 6,
+  "checks_total": 6,
+  "base_moments_p1_to_p6": [0,0,0,12960,51840,518400],
+  "paired_moments_p1_to_p6": [0,0,0,43200,51840,120960],
+  "base_formulas": {"tr4":"27*480", "tr5":"108*480", "tr6":"1080*480"},
+  "paired_formulas": {"tr4":"40*1080", "tr5":"48*1080", "tr6":"112*1080"},
+  "architecture_upgrade": "Derives compact trace-moment formulas for the first six powers of the direct and paired open-turn operators, showing split at p=4 and equality at p=5.",
+  "theorem": "The first six trace moments certify distinct closed-walk structure beyond raw transition counts.",
+  "honesty_boundary": "These are closed formulas for the first six moments, derived by exact enumeration and factorization. A general p-formula remains future work."
+}

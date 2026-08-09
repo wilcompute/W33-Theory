@@ -1,0 +1,148 @@
+{
+  "part": "CCCCXLVII",
+  "title": "E8 Dot-Orbit Transitivity Law",
+  "Verified": true,
+  "checks_total": 9,
+  "checks_passed": 9,
+  "checks": [
+    [
+      "E8 roots count = 240",
+      true
+    ],
+    [
+      "All 14 generators preserve root set",
+      true
+    ],
+    [
+      "Dot histogram exact",
+      true
+    ],
+    [
+      "Orbit decomposition covers every pair class",
+      true
+    ],
+    [
+      "At least one orbit found",
+      true
+    ],
+    [
+      "Generator invariance holds on class representatives",
+      true
+    ],
+    [
+      "Representative rescue constants are 126/234/240",
+      true
+    ],
+    [
+      "Each dot class has a unique orbit constant",
+      true
+    ],
+    [
+      "Dot-to-rescue mapping matches trichotomy",
+      true
+    ]
+  ],
+  "dot_histogram": {
+    "-8": 120,
+    "-4": 6720,
+    "0": 15120,
+    "4": 6720,
+    "8": 240
+  },
+  "orbit_info": {
+    "-8": {
+      "class_size": 120,
+      "orbit_count": 2,
+      "orbit_sizes": [
+        64,
+        56
+      ],
+      "orbit_constants": [
+        126,
+        126
+      ]
+    },
+    "-4": {
+      "class_size": 6720,
+      "orbit_count": 3,
+      "orbit_sizes": [
+        1344,
+        3584,
+        1792
+      ],
+      "orbit_constants": [
+        234,
+        234,
+        234
+      ]
+    },
+    "0": {
+      "class_size": 15120,
+      "orbit_count": 4,
+      "orbit_sizes": [
+        4480,
+        7168,
+        3360,
+        112
+      ],
+      "orbit_constants": [
+        240,
+        240,
+        240,
+        240
+      ]
+    },
+    "4": {
+      "class_size": 6720,
+      "orbit_count": 3,
+      "orbit_sizes": [
+        3584,
+        1792,
+        1344
+      ],
+      "orbit_constants": [
+        234,
+        234,
+        234
+      ]
+    },
+    "8": {
+      "class_size": 240,
+      "orbit_count": 2,
+      "orbit_sizes": [
+        112,
+        128
+      ],
+      "orbit_constants": [
+        126,
+        126
+      ]
+    }
+  },
+  "rescue_by_dot": {
+    "-8": 126,
+    "-4": 234,
+    "0": 240,
+    "4": 234,
+    "8": 126
+  },
+  "dot_unique_constants": {
+    "-8": [
+      126
+    ],
+    "-4": [
+      234
+    ],
+    "0": [
+      240
+    ],
+    "4": [
+      234
+    ],
+    "8": [
+      126
+    ]
+  },
+  "exact_law": "d=\u00b18 ->126, d=\u00b14 ->234, d=0 ->240 for all unordered pairs",
+  "honesty_boundary": "This part proves exact class-wise rescue constants via explicit generator-orbit decomposition. It does not claim this generator set is the full Weyl group presentation."
+}

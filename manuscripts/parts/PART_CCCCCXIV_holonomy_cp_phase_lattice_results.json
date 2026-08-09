@@ -1,0 +1,68 @@
+{
+  "part": "CCCCCXIV",
+  "title": "Holonomy CP Phase Lattice Theorem",
+  "atoms": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "k": 12,
+    "v": 40,
+    "E": 240,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7
+  },
+  "phase_lattice": {
+    "Z12_half_turn_Bargmann_phase": 6,
+    "U12": [1, 5, 7, 11],
+    "W33_unit_realization": {
+      "identity": 1,
+      "mu_plus_1_bottom_unit": 5,
+      "Phi6_CKM_CP_unit": 7,
+      "k_minus_1_PMNS_CP_unit": 11
+    },
+    "unit_squares_mod_12": {
+      "1": 1,
+      "5": 1,
+      "7": 1,
+      "11": 1
+    }
+  },
+  "cp_projections": {
+    "CKM_eta_base": "7/10",
+    "CKM_eta": "343/1000",
+    "PMNS_delta_over_pi": "11/10",
+    "CKM_offset_from_half_turn": 1,
+    "PMNS_offset_from_half_turn": 5,
+    "CKM_eta_base_minus_half_turn_projection": "1/10",
+    "PMNS_delta_minus_half_turn_projection": "1/2"
+  },
+  "unit_group_multiplication": {
+    "Phi6_times_k_minus_1_mod_12": 5,
+    "mu_plus_1_times_Phi6_mod_12": 11,
+    "mu_plus_1_times_k_minus_1_mod_12": 7,
+    "interpretation": "The bottom unit, CKM CP unit, and PMNS CP unit are the three nontrivial involutions of U(12)."
+  },
+  "checks": {
+    "true_master_equation": true,
+    "w33_atoms": true,
+    "bargmann_half_turn_6_mod_12": true,
+    "U12_units": true,
+    "w33_unit_set_equals_U12": true,
+    "bottom_residue_is_mu_plus_1": true,
+    "ckm_residue_is_phi6": true,
+    "pmns_residue_is_k_minus_1": true,
+    "all_nonidentity_units_square_to_one": true,
+    "ckm_eta_base_7_over_10": true,
+    "ckm_eta_343_over_1000": true,
+    "pmns_delta_11_over_10": true,
+    "ckm_offset_from_half_turn_is_1": true,
+    "pmns_offset_from_half_turn_is_mu_plus_1": true,
+    "ckm_times_pmns_gives_bottom_unit": true,
+    "bottom_times_ckm_gives_pmns_unit": true,
+    "bottom_times_pmns_gives_ckm_unit": true,
+    "physical_offsets": true
+  },
+  "all_checks_pass": true,
+  "interpretation": "The CP residues Phi6=7 and k-1=11 are not arbitrary numerators over Phi4=10. Together with mu+1=5 and identity 1 they realize U(12), the automorphism group of the Z12 Bargmann phase lattice. The universal Bargmann half-turn is 6 mod 12; CKM CP is the +1 offset unit 7, while PMNS CP is the +5 offset unit 11."
+}

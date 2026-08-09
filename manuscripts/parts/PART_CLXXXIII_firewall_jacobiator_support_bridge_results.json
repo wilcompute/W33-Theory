@@ -1,0 +1,90 @@
+{
+  "module": "PART_CLXXXIII_FIREWALL_JACOBIATOR_SUPPORT_BRIDGE",
+  "status": "structural audit; numerical tensor-rank artifact rerun still needed",
+  "source_links": {
+    "CLXXVI": "firewall diagonal/fiber Albert bridge",
+    "CLXXVII": "L-infinity firewall homotopy bridge",
+    "CLXXVIII": "E6/H1 firewall closure square",
+    "CLXXXII": "CCT/Hashimoto carrier weld"
+  },
+  "source_tools": [
+    "tools/compute_firewall_jacobiator_tensor.py",
+    "tools/build_linfty_firewall_extension.py",
+    "tools/analyze_firewall_filtered_jacobiator_support.py",
+    "tools/analyze_e8_z3graded_firewall_jacobi_components.py"
+  ],
+  "expected_generated_artifacts": [
+    "artifacts/firewall_jacobiator_tensor.json",
+    "artifacts/firewall_jacobiator_tensor.md",
+    "artifacts/firewall_filtered_jacobiator_support.json",
+    "artifacts/firewall_filtered_jacobiator_support.md",
+    "artifacts/linfty_firewall_extension.json",
+    "artifacts/linfty_firewall_extension.md"
+  ],
+  "w33_atoms": {
+    "q": 3,
+    "q2": 9,
+    "q3": 27,
+    "q4": 81,
+    "k": 12,
+    "lambda": 2,
+    "mu": 4,
+    "Phi3": 13,
+    "Phi6": 7,
+    "J": 5,
+    "J_inverse": 8,
+    "rank_seed_2q": 6
+  },
+  "jacobiator_support_layers": [
+    {"name":"affine_l2_triads","value":36,"formula":"36","interpretation":"strict l2 bracket support after firewall filtering"},
+    {"name":"oriented_l2_roots","value":72,"formula":"2*36=72","interpretation":"oriented affine/root/off-diagonal sector"},
+    {"name":"deleted_fiber_triads","value":9,"formula":"q^2=9","interpretation":"deleted center-coset fibers / firewall sector"},
+    {"name":"cubic_total","value":45,"formula":"36+9=45","interpretation":"full E6 cubic triad set"},
+    {"name":"h1_completion","value":81,"formula":"72+9=81=q^4","interpretation":"full triple-Albert/H1 carrier"},
+    {"name":"e6_completion","value":78,"formula":"72+6=78","interpretation":"E6 Lie closure by rank seed"},
+    {"name":"doob_open_turns","value":9,"formula":"11-2=9","interpretation":"CCT open turns killed by loop conditioning"},
+    {"name":"l3_support","value":9,"formula":"support(l3)=9 fibers","interpretation":"homotopy repair support for filtered Jacobiator"},
+    {"name":"artifact_status","value":"rerun needed","formula":"tensor/support JSON absent","interpretation":"numerical image/kernel ranks not claimed here"}
+  ],
+  "bridge_identities": {
+    "strict_l2_support": "36 affine triads orient to 72 root/off-diagonal modes",
+    "deleted_sector": "9 fiber triads = q^2 firewall/diagonal modes",
+    "jacobi_obstruction": "filtered l2 projects 81 -> 72 and therefore misses 9 diagonal completion modes",
+    "l3_repair": "l3 is supported on the same 9 fiber triads and restores homotopy coherence",
+    "h1_closure": "72 + 9 = 81",
+    "e6_closure": "72 + 6 = 78",
+    "cct_echo": "Doob conditioning 11 -> 2 leaves 9 open turns"
+  },
+  "rerun_protocol": {
+    "step_1": "python tools/analyze_firewall_filtered_jacobiator_support.py --samples 200000 --seed 0",
+    "step_2": "python tools/compute_firewall_jacobiator_tensor.py",
+    "step_3": "python tools/build_linfty_firewall_extension.py",
+    "step_4": "commit artifacts/firewall_filtered_jacobiator_support.json and artifacts/firewall_jacobiator_tensor.json if generated",
+    "desired_measurements": [
+      "rank of observed Jacobiator span",
+      "output-grade histogram",
+      "top output basis indices",
+      "image/kernel relation to the 9 fiber triads",
+      "l3 cancellation residuals"
+    ]
+  },
+  "checks": {
+    "deleted_fibers_are_q2": true,
+    "affine_triads_are_36": true,
+    "cubic_split": true,
+    "oriented_roots": true,
+    "h1_completion": true,
+    "e6_completion": true,
+    "rank_seed_is_2q": true,
+    "h1_minus_e6_is_q": true,
+    "doob_open_turns_match_firewall": true,
+    "hashimoto_branch": true,
+    "l3_support_matches_deleted_sector": true,
+    "source_tools_registered": true,
+    "expected_artifacts_registered": true,
+    "phi6_carrier_step": true,
+    "threshold_carrier_inverse": true
+  },
+  "theorem_statement": "Structurally, the firewall-filtered Jacobiator is the obstruction of projecting the full 81-dimensional triple-Albert/H1 carrier onto the 72-dimensional oriented affine/root sector. The deleted q^2=9 fiber triads are simultaneously the firewall sector, the diagonal completion, the Doob-open-turn sector, and the declared l3 support of the L-infinity repair. Numerical tensor image/kernel ranks require regenerating the missing artifacts.",
+  "interpretive_note": "This bridge is intentionally careful: it does not pretend the uncommitted tensor outputs are available. It locks the structural target and records the exact rerun protocol needed to upgrade the bridge from structural to measured."
+}

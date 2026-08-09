@@ -1,0 +1,60 @@
+{
+  "architecture_upgrade": "CCCXXXVII gave a finite measurement protocol.  CCCXXXVIII adds the unit map: all finite spectral objects scale covariantly under one calibration constant kappa, while branch projectors and weights remain invariant.",
+  "calibration_constant": {
+    "honest_requirement": "must be fixed by one physical anchor measurement or convention",
+    "meaning": "physical units per finite RG/spinor unit",
+    "sample_kappa": "7/3",
+    "symbol": "kappa"
+  },
+  "calibration_recipes": {
+    "from_heat_sample": "kappa=sqrt(-log(H/2)/(M2 tau_phys))",
+    "from_mass_anchor": "kappa=M_phys/M_dimless",
+    "from_resolvent_sample": "solve R=2s/(s^2-kappa^2 M2) for kappa",
+    "from_spinor_trace_sample": "kappa=arcosh(T/2)/(M_dimless t_phys)"
+  },
+  "checks": [
+    {"name":"dimensionless mass shell is 5049/4","passed":true,"value":"5049/4"},
+    {"name":"scaled generator squares to scaled mass shell","passed":true,"value":[["27489/4","0"],["0","27489/4"]]},
+    {"name":"scaled mass squared = kappa^2 M2","passed":true,"value":"27489/4"},
+    {"name":"physical resolvent scales as kappa^-1 dimensionless resolvent","passed":true,"value":[["1602/163049","3920/163049"],["28/163049","670/163049"]]},
+    {"name":"physical heat trace equals dimensionless heat at tau_dimless=kappa^2 tau_phys","passed":true,"value":0.002032961285775859},
+    {"name":"physical spinor trace equals dimensionless trace at t_dimless=kappa t_phys","passed":true,"value":2.7000919341649367},
+    {"name":"zeta scales as kappa^-2p","passed":true,"value":"2592/416915034849"},
+    {"name":"branch P_plus invariant under kappa","passed":true,"value":[[0.9715886199350604,1.9702696667421853],[0.014073354762444181,0.028411380064939538]]},
+    {"name":"branch P_minus invariant under kappa","passed":true,"value":[[0.028411380064939538,-1.9702696667421853],[-0.014073354762444181,0.9715886199350604]]},
+    {"name":"mass calibration recovers kappa","passed":true,"value":2.3333333333333335},
+    {"name":"heat calibration recovers kappa","passed":true,"value":2.3333333333333335}
+  ],
+  "checks_passed": 11,
+  "checks_total": 11,
+  "dimensionless_kernel": {
+    "G": [["67/2","140"],["1","-67/2"]],
+    "M": "sqrt(5049)/2",
+    "M2": "5049/4"
+  },
+  "honesty_boundary": "The finite architecture does not determine absolute physical units internally. It determines dimensionless structure plus covariant scaling laws; a physical anchor is required to set kappa.",
+  "part": "CCCXXXVIII",
+  "sample_scaled_sector": {
+    "G_phys": [["469/6","980/3"],["7/3","-469/6"]],
+    "M_phys_squared": "27489/4",
+    "heat_trace_tau_phys_0_001": 0.002032961285775859,
+    "kappa": "7/3",
+    "resolvent_sample_s_phys_100": [["1602/163049","3920/163049"],["28/163049","670/163049"]],
+    "spinor_trace_t_phys_0_01": 2.7000919341649367,
+    "zeta_phys_p2": "2592/416915034849"
+  },
+  "scaling_laws": {
+    "generator": "G_phys = kappa G",
+    "heat_time": "tau_dimless = kappa^2 tau_phys",
+    "mass": "M_phys = kappa M",
+    "mass_squared": "M_phys^2 = kappa^2 M^2",
+    "projectors": "P_± are invariant under kappa",
+    "resolvent": "(s_phys I-G_phys)^-1 = kappa^-1 ((s_phys/kappa)I-G)^-1",
+    "resolvent_frequency": "s_dimless = s_phys/kappa",
+    "time": "t_dimless = kappa t_phys",
+    "zeta": "zeta_phys(p)=kappa^(-2p) zeta_dimless(p)"
+  },
+  "theorem": "The W33 RG spinor architecture determines dimensionless spectra and projectors. A physical unit assignment is obtained by G_phys=kappa G. Then masses scale by kappa, heat time by kappa^2, RG/spinor time by kappa, resolvents by kappa^-1 after frequency rescaling, zeta values by kappa^(-2p), and branch projectors are invariant. Thus one calibration constant is necessary and sufficient for the one-sector unit map.",
+  "title": "Unit Map / Calibration Compiler",
+  "verified": true
+}

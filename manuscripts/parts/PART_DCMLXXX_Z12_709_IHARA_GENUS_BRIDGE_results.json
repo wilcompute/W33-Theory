@@ -1,0 +1,23 @@
+{
+  "part": "DCMLXXX",
+  "decimal": 980,
+  "status": "VERIFIED: Z12 norm-709, Ihara coefficient resonance, and genus-map guard",
+  "summary": {
+    "part": "DCMLXXX",
+    "decimal": 980,
+    "z12_element": [
+      1,
+      2,
+      6,
+      4
+    ],
+    "algebraic_norm": 709,
+    "script_squared_norm": 502681,
+    "eisenstein_shadow_norm": 13,
+    "nearest_identity_shadow_integer": 137,
+    "w33_ihara_unique_709_coefficient_degree": 338,
+    "critical_line_maps_to_re_n": "5",
+    "genus_axis_maps_to_re_s": "1/8",
+    "all_identities_hold": true
+  }
+}

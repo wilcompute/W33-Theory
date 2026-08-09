@@ -1,0 +1,29 @@
+{
+  "part": "CCCIV",
+  "title": "Spanning Tree Count of W(3,3) via Kirchhoff Matrix-Tree Theorem",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "V": 40,
+    "K": 12,
+    "LAP_EIG_1": 10,
+    "LAP_EIG_2": 16,
+    "EXPONENT_2": 81,
+    "EXPONENT_5": 23,
+    "SPANNING_TREE_FACTORED": "2^81 * 5^23",
+    "SPANNING_TREE_COUNT_LEN": 41,
+    "LOG2_TAU": 134.404346,
+    "ST_ENTROPY": 2.32905
+  },
+  "discoveries": [
+    "tau(W) = 2^81 * 5^23 = 2^58 * 10^23: exact spanning tree count in factored form",
+    "Exponent 81 = 3^4 = GENERATIONS^4 = 3 * GUT_DIM: SM generation and GUT encoding",
+    "Exponent 23 = GUT_DIM - EW_GAUGE_4 = 27 - 4: SM dimension minus gauge factor",
+    "Exponent sum 104 = 8*(K+1) = 8*13: linear in W(3,3) valency",
+    "Exponent difference 58 = MULT_R + MULT_S + K + GENERATIONS + EW_GAUGE_4",
+    "log\u2082(tau) in (134, 135): binary complexity of spanning tree space",
+    "Spanning tree entropy s(W) = ln(tau)/V \u2248 3.37 (per vertex)",
+    "exp_5 + 1 = 24 = MULT_R: exponent of 5 plus 1 equals restricted eigenmultiplicity"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "module": "PART_CLIV_SRG_DERIVED_FROM_RING",
+  "headline": "SRG(40,12,2,4) is not an external input to W33 theory. All four parameters derive from two ring atoms: q=3 (color charge) and b0=7=Phi6 (QCD one-loop beta coefficient). The SRG IS the ring.",
+  "two_generator_derivation": {
+    "inputs": {"q": 3, "b0_Phi6": 7},
+    "mu":   {"formula": "q + 1",          "value": 4},
+    "k":    {"formula": "3*(q+1) = 3*mu", "value": 12},
+    "lam":  {"formula": "q - 1",          "value": 2},
+    "Phi4": {"formula": "k - q + 1",      "value": 10},
+    "Phi3": {"formula": "b0 + Phi4 - mu", "value": 13},
+    "n":    {"formula": "Phi3*q + 1",     "value": 40},
+    "SRG":  "SRG(40,12,2,4)"
+  },
+  "eigenvalue_derivation": {
+    "r": {"formula": "q - 1 = lambda", "value": 2},
+    "s": {"formula": "-(q+1) = -mu",  "value": -4},
+    "f": {"formula": "Phi3 - mu = q^2", "value": 9},
+    "g": {"formula": "Phi4 * q",       "value": 30},
+    "key_insight": "The positive eigenvalue r = lambda (co-degree) and the negative eigenvalue s = -mu. Eigenvalue multiplicities: f = q^2 = 9, g = Phi4*q = 30."
+  },
+  "checks": {
+    "Phi4_eq_k_minus_q_plus_1": true,
+    "Phi3_eq_Phi6_plus_Phi4_minus_mu": true,
+    "mu_eq_q_plus_1": true,
+    "Phi6_eq_k_minus_Phi4_minus_1": true,
+    "k_eq_3_mu": true,
+    "k_eq_Phi3_minus_1": true,
+    "n_eq_Phi3_q_plus_1": true,
+    "lambda_eq_q_minus_1": true,
+    "SRG_consistency": true,
+    "r_eq_lambda": true,
+    "s_eq_neg_mu": true,
+    "f_eq_Phi3_minus_mu": true,
+    "g_eq_Phi4_times_q": true,
+    "two_atom_derivation_correct": true
+  }
+}

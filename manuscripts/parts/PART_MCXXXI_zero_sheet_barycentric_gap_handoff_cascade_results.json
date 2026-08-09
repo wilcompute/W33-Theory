@@ -1,0 +1,73 @@
+{
+  "theorem": "Zero-sheet barycentric gap-handoff cascade",
+  "shared_resonance_s": 2.0,
+  "handoff_cascade_detected": true,
+  "secondary_gap_sequence": [
+    "third_derivative_to_wall",
+    "third_derivative_to_wall",
+    "third_derivative_to_wall",
+    "softening_to_order",
+    "softening_to_order",
+    "softening_to_order"
+  ],
+  "wall_gap_rank_sequence": [
+    2,
+    2,
+    2,
+    3,
+    4,
+    4
+  ],
+  "softening_to_order_gap_rank_sequence": [
+    3,
+    3,
+    3,
+    2,
+    2,
+    2
+  ],
+  "order_to_hessian_gap_rank_sequence": [
+    5,
+    4,
+    4,
+    4,
+    3,
+    3
+  ],
+  "secondary_handoff": {
+    "left_gap": "softening_to_order",
+    "right_gap": "third_derivative_to_wall",
+    "left_s": 1.5,
+    "right_s": 2.0,
+    "left_difference": -0.06671032132544497,
+    "right_difference": 0.0731455149423752,
+    "linear_crossing_s": 1.7384967374464677,
+    "first_sample_after_crossing_s": 2.0
+  },
+  "order_hessian_wall_handoff": {
+    "left_gap": "order_to_hessian",
+    "right_gap": "third_derivative_to_wall",
+    "left_s": 2.0,
+    "right_s": 2.5,
+    "left_difference": -0.03976742418434043,
+    "right_difference": 0.031390654711406896,
+    "linear_crossing_s": 2.279430142026481,
+    "first_sample_after_crossing_s": 2.5
+  },
+  "wall_gap_drop": 0.38305552720929903,
+  "net_gap_offsets": {
+    "interior_to_softening": 0.04188524023993523,
+    "softening_to_order": 0.21705097520862182,
+    "order_to_hessian": 0.10678235390385993,
+    "hessian_to_third_derivative": 0.01733695785688205,
+    "third_derivative_to_wall": -0.38305552720929903
+  },
+  "wall_mass_transfer_shares": {
+    "interior_to_softening": 0.10934508776073451,
+    "softening_to_order": 0.5666305790962431,
+    "order_to_hessian": 0.27876468636755825,
+    "hessian_to_third_derivative": 0.045259646775464096
+  },
+  "dominant_wall_mass_recipient": "softening_to_order",
+  "softening_to_order_receives_majority_wall_transfer": true
+}

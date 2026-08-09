@@ -1,0 +1,25 @@
+{
+    "part": "DCMXC",
+    "title": "Cyclotomic Split-Prime Support Law",
+    "status": "verified",
+    "phi3_support_law": "p | Phi3(q) implies p = 3 or p ≡ 1 (mod 3)",
+    "phi6_support_law": "p | Phi6(q) implies p = 3 or p ≡ 1 (mod 6)",
+    "verified_window": "3 <= q <= 20000",
+    "phi3_exact_support": true,
+    "phi6_exact_support": true,
+    "first_support_primes": [
+        3,
+        7,
+        13,
+        19,
+        31,
+        37,
+        43,
+        61,
+        67,
+        73,
+        79,
+        97
+    ],
+    "theorem_summary": "Every prime divisor of Phi3(q)=q^2+q+1 is either 3 or congruent to 1 mod 3, and every prime divisor of Phi6(q)=q^2-q+1 is either 3 or congruent to 1 mod 6. The split-prime arithmetic is therefore the native support law of the whole cyclotomic packet, not merely its defect locus."
+}

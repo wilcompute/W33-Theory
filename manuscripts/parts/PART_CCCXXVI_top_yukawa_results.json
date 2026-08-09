@@ -1,0 +1,161 @@
+{
+  "part": "CCCXXVI",
+  "title": "Top Yukawa  y_t(pole)^3 = v / (v + 1)  in W(3,3) constants",
+  "Verified": true,
+  "checks_total": 20,
+  "checks_passed": 20,
+  "checks": [
+    [
+      "y_t^3 = v / (v+1)",
+      true
+    ],
+    [
+      "y_t^3 = 40/41",
+      true
+    ],
+    [
+      "V = 40",
+      true
+    ],
+    [
+      "V + 1 = 41",
+      true
+    ],
+    [
+      "y_t^3_W33 \u2248 0.97561",
+      true
+    ],
+    [
+      "y_t_W33   \u2248 0.99180",
+      true
+    ],
+    [
+      "b_1^SM = (v+1)/Phi_4 (CCCXXIII)",
+      true
+    ],
+    [
+      "y_t^3 denominator = b_1^SM numerator",
+      true
+    ],
+    [
+      "v shared by y_t^3 numerator and SRG vertex count",
+      true
+    ],
+    [
+      "|y_t residual / sigma| < 1",
+      true
+    ],
+    [
+      "|m_top residual / sigma| < 1",
+      true
+    ],
+    [
+      "|m_top residual| < 0.5 GeV",
+      true
+    ],
+    [
+      "Predicted m_top in [172, 174] GeV",
+      true
+    ],
+    [
+      "y_t_W33 in (0.99, 1.0)",
+      true
+    ],
+    [
+      "(y_t_W33)^3 == V/(V+1)",
+      true
+    ],
+    [
+      "V = y_t_W33^3 / (1 - y_t_W33^3)",
+      true
+    ],
+    [
+      "CKM lambda = q^2/v (CCCXXV)",
+      true
+    ],
+    [
+      "Higgs lambda_H = Phi_3/Phi_4^2 (CCCXXIV)",
+      true
+    ],
+    [
+      "v denominator in CKM lambda = v numerator in y_t^3",
+      true
+    ],
+    [
+      "v recovered from y_t alone",
+      true
+    ]
+  ],
+  "constants": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "F": 24,
+    "PHI3": 13,
+    "PHI4": 10,
+    "PHI6": 7
+  },
+  "boundary_target": {
+    "expression_cubed": "v / (v + 1)",
+    "value_cubed": "40/41",
+    "decimal_cubed": 0.975609756097561,
+    "expression": "(v / (v + 1))^(1/3)",
+    "decimal": 0.9918029100085936,
+    "scheme": "Top Yukawa coupling at pole-mass scheme; v_EW from G_F"
+  },
+  "external_inputs": {
+    "m_t_pole_GeV": 172.69,
+    "sigma_m_t_pole": 0.3,
+    "v_EW_GeV": 246.21965,
+    "sigma_v_EW_GeV": 6e-05,
+    "source": "PDG 2024 (m_t pole), G_F (v_EW)"
+  },
+  "predictions": {
+    "y_t_W33": 0.9918029100085936,
+    "y_t_data": 0.991880786469357,
+    "y_t_residual": 7.787646076340415e-05,
+    "y_t_z_score": 0.04519523647293252,
+    "m_top_pred_GeV": 172.67644142905812,
+    "m_top_residual_GeV": -0.013558570941881953,
+    "m_top_z_score": -0.04519523647293985
+  },
+  "residuals": [
+    {
+      "id": "TOP_YUKAWA_CUBED_W33",
+      "observable": "y_t(pole)^3",
+      "theory_value": "v / (v+1) = 40/41",
+      "theory_decimal": 0.975609756097561,
+      "measured_value": 0.9758395890613625,
+      "uncertainty": 0.005085735306938596,
+      "residual": 0.00022983296380152396,
+      "z_score": 0.04519168811006682,
+      "status": "PASS_WITHIN_1_SIGMA"
+    },
+    {
+      "id": "TOP_YUKAWA_LINEAR_W33",
+      "observable": "y_t(pole)",
+      "theory_value": "(v/(v+1))^(1/3) = (40/41)^(1/3)",
+      "theory_decimal": 0.9918029100085936,
+      "measured_value": 0.991880786469357,
+      "uncertainty": 0.0017231121428039093,
+      "residual": 7.787646076340415e-05,
+      "z_score": 0.04519523647293252,
+      "status": "PASS_WITHIN_1_SIGMA"
+    },
+    {
+      "id": "TOP_MASS_FROM_W33_AND_V",
+      "observable": "m_t(pole) predicted from y_t_W33 and v_EW",
+      "theory_value": "(v_EW / sqrt(2)) * (40/41)^(1/3)",
+      "theory_decimal": 172.67644142905812,
+      "measured_value": 172.69,
+      "uncertainty": 0.3,
+      "residual": -0.013558570941881953,
+      "z_score": -0.04519523647293985,
+      "status": "PASS_WITHIN_1_SIGMA"
+    }
+  ],
+  "theorem_statement": "The W(3,3) closed form for the top quark pole-mass Yukawa coupling, y_t(pole)^3 = v/(v+1) = 40/41, predicts y_t = (40/41)^(1/3) = 0.99180 and m_t = (v_EW / sqrt(2)) * (40/41)^(1/3) = 172.68 GeV, both within 0.05 sigma of PDG 2024 measurements (y_t = 0.99188 +- 0.00172, m_t = 172.69 +- 0.30 GeV). The denominator 41 = v + 1 is identical to the numerator of the SM hypercharge one-loop beta function b_1^SM = (v+1)/Phi_4 = 41/10 from CCCXXIII, linking the top Yukawa structurally to the gauge-coupling running.",
+  "honesty_boundary": "Pole-mass scheme: well-defined to leading order but has a renormalon ambiguity of order ~50-100 MeV.  At MS-bar scheme, m_t(M_t) ~ 162.5 GeV and y_t(M_t)^MS ~ 0.94 differ from W33 by ~5 percent.  The W33 prediction is at the pole-mass scheme.  Two-loop electroweak corrections to the m_t -> y_t conversion are within the 0.05 sigma residual reported here."
+}

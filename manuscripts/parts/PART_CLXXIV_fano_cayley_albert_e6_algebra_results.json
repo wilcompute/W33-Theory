@@ -1,0 +1,70 @@
+{
+  "module": "PART_CLXXIV_FANO_CAYLEY_ALBERT_E6_ALGEBRA",
+  "source_links": {
+    "CLXVI": "Fano affine completion",
+    "CLXXI_CLXXII": "realization heptad and carrier completion",
+    "CLXXIII": "Eisenstein torus map Phi6 generator"
+  },
+  "w33_atoms": {
+    "q": 3,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "rank_seed_2q": 6,
+    "J_threshold": 5,
+    "J_inverse_carrier": 8
+  },
+  "residue_to_octonion_index": {
+    "1": 1,
+    "5": 5,
+    "12": 3,
+    "8": 7,
+    "3": 4,
+    "6": 2,
+    "9": 6
+  },
+  "oriented_fano_lines_residue_labels": [
+    [1, 6, 12],
+    [1, 3, 5],
+    [1, 8, 9],
+    [6, 3, 9],
+    [6, 5, 8],
+    [12, 3, 8],
+    [12, 9, 5]
+  ],
+  "algebra_layers": [
+    {"name":"imaginary_heptad","dimension":7,"formula":"Phi6=7","interpretation":"Fano/Csaszar/Szilassi heptad as imaginary units"},
+    {"name":"cayley_octonion_carrier","dimension":8,"formula":"1+Phi6=8=J^{-1}","interpretation":"scalar unit plus heptad"},
+    {"name":"albert_generation","dimension":27,"formula":"3+3*8=27=q^3","interpretation":"3x3 Hermitian octonion matrices"},
+    {"name":"traceless_albert","dimension":26,"formula":"27-1=26","interpretation":"trace-free Albert directions"},
+    {"name":"f4_derivations","dimension":52,"formula":"2*(27-1)=52","interpretation":"derivations of the Albert algebra"},
+    {"name":"e6_albert_decomposition","dimension":78,"formula":"52+26=78","interpretation":"E6 as F4 plus traceless Albert"},
+    {"name":"e6_root_split","dimension":78,"formula":"6+72=78","interpretation":"Cartan rank plus roots"}
+  ],
+  "multiplication_summary": {
+    "rule": "on each oriented Fano line (a,b,c), e_a e_b=e_c cyclically and anti-cyclic products are negative",
+    "scalar_unit": "external scalar 1 completes the seven imaginary units to an 8D Cayley algebra",
+    "imaginary_square": "e_r^2=-1 for every heptad residue r",
+    "anticommutative": "e_r e_s=-e_s e_r for distinct imaginary units"
+  },
+  "checks": {
+    "heptad_has_seven_imaginary_units": true,
+    "octonion_carrier_dimension_is_eight": true,
+    "residue_index_map_is_bijection": true,
+    "oriented_lines_match_clxvi_fano_lines_unordered": true,
+    "imaginary_units_square_to_minus_one": true,
+    "imaginary_units_anticommute": true,
+    "basis_alternativity_left": true,
+    "basis_alternativity_right": true,
+    "sample_norm_multiplicativity": true,
+    "albert_dimension_is_generation": true,
+    "traceless_albert_dimension": true,
+    "f4_plus_traceless_albert_is_e6": true,
+    "e6_rank_plus_roots": true,
+    "e6_root_count_from_rank_subtraction": true,
+    "carrier_completion_matches_previous": true,
+    "threshold_carrier_inverse_mod_phi3": true
+  },
+  "theorem_statement": "The CLXVI heptad carries a Cayley/octonion algebra: the seven Fano residues are the imaginary units, and adjoining the scalar unit gives an 8D carrier 1+Phi6=8=J^{-1}. The 3x3 Hermitian matrices over this carrier have dimension 3+3*8=27=q^3, giving one generation slice. The standard Albert decomposition 52+26=78 then matches E6, while 6+72=78 matches the rank/root split.",
+  "interpretive_note": "This is the algebraic object the heptad has been asking for. Csaszar/Szilassi give the geometric torus heptad, the Fano plane gives its multiplication table, the scalar/tetra origin completes it to the octonion carrier, and the Albert algebra gives the q^3=27 generation module connected to E6."
+}

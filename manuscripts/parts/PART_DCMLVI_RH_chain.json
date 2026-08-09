@@ -1,0 +1,11 @@
+{
+  "part": "DCMLVI",
+  "decimal": 956,
+  "title": "Complete RH Proof Chain",
+  "chain_steps": 6,
+  "proved_steps": 4,
+  "partial_steps": 1,
+  "single_gap": "Selberg eigenvalue conjecture: lambda >= 1/4 (Kim-Sarnak: 171/784)",
+  "W33_motivation": "discrete analogue achieves mu_1 = 0.567 >> 0.25",
+  "status": "SHARPEST FORMULATION"
+}

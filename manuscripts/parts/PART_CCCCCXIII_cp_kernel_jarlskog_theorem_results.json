@@ -1,0 +1,61 @@
+{
+  "part": "CCCCCXIII",
+  "title": "CP Kernel Jarlskog Theorem",
+  "atoms": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "k": 12,
+    "v": 40,
+    "E": 240,
+    "r": 2,
+    "s": -4,
+    "f": 24,
+    "g": 15,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7
+  },
+  "ckm_cp_kernel": {
+    "lambda_CKM": "9/40",
+    "A_CKM": "81/100",
+    "rho_bar": "4/25",
+    "eta_bar": "343/1000",
+    "tan_gamma": "343/160",
+    "J_CKM_leading": "1195967049543/40960000000000000",
+    "J_CKM_leading_decimal": 2.9198414295483398e-05
+  },
+  "pmns_cp_kernel": {
+    "sin2_theta12": "4/13",
+    "sin2_theta23": "4/7",
+    "sin2_theta13": "9/400",
+    "delta_CP_over_pi": "11/10",
+    "sin2_delta_CP": "3/8 - 1/8*sqrt(5)",
+    "B_factor": "37150083/33124000000",
+    "J_PMNS_squared": "111450249/264992000000 - 37150083/264992000000*sqrt(5)",
+    "J_PMNS_signed_decimal": -0.010348820883886016
+  },
+  "cross_surface": {
+    "PMNS_solar_over_atmospheric": "7/13",
+    "CKM_eta_base_Phi6_over_Phi4": "7/10",
+    "PMNS_delta_base_kminus1_over_Phi4": "11/10",
+    "abs_J_PMNS_over_J_CKM_leading_decimal": 354.43116440283053
+  },
+  "checks": {
+    "true_master_equation": true,
+    "w33_atoms": true,
+    "ckm_parameters": true,
+    "ckm_tan_gamma": true,
+    "ckm_j_leading_exact": true,
+    "pmns_angles": true,
+    "pmns_B_factor": true,
+    "pmns_sin2_delta_exact": true,
+    "pmns_J_squared_exact_pair": true,
+    "pmns_solar_atm_ratio": true,
+    "ckm_eta_base": true,
+    "pmns_delta_base": true,
+    "cp_hierarchy_positive": true
+  },
+  "all_checks_pass": true,
+  "interpretation": "The CP sector splits cleanly into a rational CKM cyclotomic-slope kernel and an algebraic PMNS angular kernel. CKM CP uses eta=(Phi6/Phi4)^3 and rho=(lambda/(mu+1))^2, giving tan(gamma)=343/160. PMNS CP uses delta/pi=(k-1)/Phi4=11/10, whose sine introduces the exact pentagonal radical sin^2(pi/10)=(3-sqrt(5))/8. Both are projections of the cyclotomic angular surface."
+}

@@ -1,0 +1,47 @@
+{
+  "action_kernel": "Z(x)=(1-5x)^10(1+x)^16(1+7x)^6",
+  "architecture_upgrade": "CCCXXV made the action determinant unique.  CCCXXVI derives the first finite variational/Euler equation from that determinant.  This is the first architecture step from static action kernel toward dynamics.",
+  "checks": [
+    {"name":"canonical couplings = (5,-1,-7)","passed":true,"value":[5,-1,-7]},
+    {"name":"canonical dimensions = (10,16,6)","passed":true,"value":[10,16,6]},
+    {"name":"log-derivative numerator factor = -2^q","passed":true,"value":-8},
+    {"name":"normalized Euler coefficient A = (v/2) Phi6 = 140","passed":true,"value":140},
+    {"name":"normalized Euler coefficient B = 2v - Phi3 = 67","passed":true,"value":67},
+    {"name":"normalized Euler coefficient C = -1","passed":true,"value":-1},
+    {"name":"derived normalized coefficients equal direct expansion","passed":true,"value":[140,67,-1]},
+    {"name":"Euler polynomial is 140x^2 + 67x - 1","passed":true,"value":[140,67,-1]},
+    {"name":"discriminant = 5049","passed":true,"value":5049},
+    {"name":"discriminant = q^3(k-1)(Phi4+Phi6)","passed":true,"value":5049},
+    {"name":"root sum = -B/A = -67/140","passed":true,"value":"-67/140"},
+    {"name":"root product = C/A = -1/140","passed":true,"value":"-1/140"},
+    {"name":"inverse positive scale exact = (67+sqrt(5049))/2","passed":true,"value":"(67+sqrt(5049))/2"},
+    {"name":"inverse negative scale exact = (67-sqrt(5049))/2","passed":true,"value":"(67-sqrt(5049))/2"}
+  ],
+  "checks_passed": 14,
+  "checks_total": 14,
+  "finite_euler_polynomial": {
+    "A": 140,
+    "A_form": "(v/2) Phi6",
+    "B": 67,
+    "B_form": "2v - Phi3",
+    "C": -1,
+    "C_form": "-1",
+    "discriminant": 5049,
+    "discriminant_form": "q^3 (k-1) (Phi4 + Phi6)",
+    "equation": "140x^2 + 67x - 1 = 0"
+  },
+  "honesty_boundary": "The Euler equation is a finite stationarity condition for the determinant kernel, not yet a continuum Euler-Lagrange equation.  The next bridge is to identify the variable x with an invariant runtime/scale parameter and derive a scaling/RG flow around the stationary roots.",
+  "log_derivative_numerator": "-8(140x^2+67x-1)",
+  "part": "CCCXXVI",
+  "roots": {
+    "inverse_scales_exact": ["(67 + sqrt(5049))/2", "(67 - sqrt(5049))/2"],
+    "inverse_x_minus_decimal": -2.0281578469810335,
+    "inverse_x_plus_decimal": 69.02815784698112,
+    "x_minus_decimal": -0.4930582703355788,
+    "x_plus_decimal": 0.014486841764150224
+  },
+  "theorem": "Varying the canonical W33 finite action kernel by d log Z/dx=0 gives the finite Euler equation 140x^2+67x-1=0, with coefficients 140=(v/2)Phi6 and 67=2v-Phi3.  Its discriminant is 5049=q^3(k-1)(Phi4+Phi6), so the equation of motion is itself a closed W33 arithmetic object.",
+  "title": "Finite Euler Variation Compiler",
+  "variation": "d/dx log Z(x)=0",
+  "verified": true
+}

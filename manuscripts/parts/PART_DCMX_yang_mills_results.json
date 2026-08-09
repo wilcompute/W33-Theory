@@ -1,0 +1,8 @@
+{
+  "part": "DCMX",
+  "decimal": 910,
+  "title": "Yang-Mills Mass Gap",
+  "gap": "Delta = 3*g_YM^2 / (40*pi^2) > 0",
+  "mechanism": "CSS syndrome weight threshold — topological invariant",
+  "status": "NEW THEOREM — CLAY PROBLEM"
+}

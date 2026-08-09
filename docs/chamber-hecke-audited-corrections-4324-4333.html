@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Passes 4324–4334 — chamber Hecke machine and audited corrections</title>
+  <style>
+    body{font-family:system-ui,sans-serif;max-width:1000px;margin:40px auto;padding:0 22px;line-height:1.58;color:#18202a}
+    h1,h2{line-height:1.18} code{background:#eef1f4;padding:.1em .3em} .eq{overflow:auto;background:#f7f8fa;padding:.8rem 1rem}
+    .correction{border-left:5px solid #9b2c2c;background:#fff3f3;padding:.8rem 1.1rem}.boundary{border-left:5px solid #315b8a;background:#f1f7ff;padding:.8rem 1.1rem}
+  </style>
+</head>
+<body>
+  <p><a href="index.html">← Back to the W33 atlas</a></p>
+  <h1>Passes 4324–4334: chamber Hecke machine and audited corrections</h1>
+
+  <h2>The exact chamber algebra</h2>
+  <p>On the 160 W(3,3) chambers, P changes the line at fixed point and L changes the point
+    on a fixed line. Native GAP proves:</p>
+  <div class="eq"><code>P²=2P+3I; L²=2L+3I; PLPL=LPLP; dim⟨P,L⟩=8.</code></div>
+  <p>The module decomposes as
+    <code>1χ(3,3)+15χ(3,−1)+15χ(−1,3)+81χ(−1,−1)+24V₂</code>, giving
+    dimensions 1+15+15+81+48=160.</p>
+
+  <h2>Hashimoto factorization and chirality</h2>
+  <p>In the 320 oriented-edge basis, <code>B=[[0,L],[P,0]]</code> and
+    <code>B²=diag(LP,PL)</code>. The two products are disjoint 9-out halves of the chamber
+    distance-two relation. For Ω=LP−PL:</p>
+  <div class="eq"><code>χΩ(x)=x¹¹²(x²+60)²⁴; Π₄₈=−Ω²/60; rank Π₄₈=48.</code></div>
+  <p>Thus Ω/√60 is a canonical complex structure on the rank-48 channel.</p>
+
+  <h2>The 24+24 channel is literally point plus line</h2>
+  <p>Let Q<sub>p</sub> and Q<sub>ℓ</sub> be the chamber lifts of the eigenvalue-2
+    projectors of the point graph and dual line graph. Both have rank 24, their images
+    meet only in zero, and their sum is exactly im Π<sub>48</sub>. They are uniformly
+    isoclinic:</p>
+  <div class="eq"><code>Q<sub>p</sub>Q<sub>ℓ</sub>Q<sub>p</sub>=(3/8)Q<sub>p</sub>;
+    Q<sub>ℓ</sub>Q<sub>p</sub>Q<sub>ℓ</sub>=(3/8)Q<sub>ℓ</sub>.</code></div>
+  <p>All 24 principal angles therefore have cosine √6/4. If
+    Q=Q<sub>p</sub>+Q<sub>ℓ</sub>, then the orthogonal span projector is rational:</p>
+  <div class="eq"><code>Π₄₈=(8/5)(2Q−Q²)=−Ω²/60.</code></div>
+
+  <h2>Folded cubic normal form</h2>
+  <div class="eq"><code>F=−68Π₄₈−31X−(21/2)Ω+(2/3)XΩ;<br>
+    (F+68Π₄₈)²=−689Π₄₈.</code></div>
+  <p>This is an exact finite operator identity. It does not identify a continuum
+    propagator, particle, mass or coupling.</p>
+
+  <section class="correction">
+    <h2>Corrections established in the same release</h2>
+    <ul>
+      <li>The Pass 4253 Z<sub>2731</sub> lift has a zero-voltage eight-cycle and girth
+        exactly 8; its former girth-at-least-16 certificate is retracted.</li>
+      <li>The Kotani–Sunada irregular non-real-pole annulus uses square roots; the former
+        band-filling metric did not.</li>
+      <li>p/f-swap invariance for A/B/C/D is false/true/false/true. Machine D removes both
+        named asymmetries; its remaining localization is symmetric.</li>
+      <li>Affine translation acts on 81 frames but descends to neither projective 40-set.</li>
+      <li>The intrinsic incidence comparator detects 1656/1920 differential substitutions
+        and 0/960 shared-control substitutions.</li>
+      <li>The universal-set census is 360; the shipped ISA is tied 7th–12th, not strictly
+        12th.</li>
+    </ul>
+  </section>
+
+  <h2>The degree-33 bridge</h2>
+  <p>An irreducible degree-33 factor has exactly one root in (5.74,5.75) and exactly one
+    in (3.349,3.350). The global Hashimoto growth root and the reported slow real root are
+    therefore algebraic conjugates. The rational primary projector remains to be built.</p>
+
+  <section class="boundary">
+    <h2>Reproduction and boundary</h2>
+    <p>The three native GAP witnesses replay 31/31, 28/28, and 17/17 exact checks. Their panel
+      switches are three-way relations, not a deterministic selector or synthesized
+      B/D datapath.</p>
+    <ul>
+      <li><a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/w33_pass4324_4327_chamber_hecke_hashimoto.g">Chamber witness</a></li>
+      <li><a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/w33_pass4328_4333_audited_corrections.g">Correction witness</a></li>
+      <li><a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/w33_pass4334_point_line_chiral_carrier.g">Point/line carrier witness</a></li>
+      <li><a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/BT4324_BT4334_CHAMBER_HECKE_AND_AUDITED_CORRECTIONS.md">Full evidence map</a></li>
+    </ul>
+  </section>
+</body>
+</html>

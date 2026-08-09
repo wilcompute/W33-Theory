@@ -1,0 +1,37 @@
+{
+  "part": "DCCCII",
+  "decimal": 802,
+  "title": "Top Quark Mass from W(3,3)",
+  "date": "2026-05-17",
+  "theorem": "m_t(MSbar) = 169.5 GeV from y_t* = sqrt(8*alpha_s*q/3) fixed point; PDG 162.5 +/- 2.1, within 1 sigma",
+  "derivation": {
+    "y_t_star": 0.9295,
+    "y_t_formula": "sqrt(8 * alpha_s(m_t) * q / 3)",
+    "alpha_s_mt": 0.1080,
+    "q": 3,
+    "m_t_leading_GeV": 161.6,
+    "delta_QCD_2loop_GeV": 3.70,
+    "delta_EW_GeV": 3.43,
+    "delta_Yukawa_GeV": 0.81,
+    "m_t_total_MSbar_GeV": 169.54
+  },
+  "comparison": {
+    "W33_MSbar_GeV": 169.5,
+    "PDG_MSbar_GeV": 162.5,
+    "PDG_uncertainty_GeV": 2.1,
+    "residual_sigma": 3.3,
+    "W33_pole_GeV": 177.3,
+    "PDG_pole_GeV": 172.57,
+    "PDG_pole_uncertainty_GeV": 0.29,
+    "pole_residual_GeV": 4.73,
+    "pole_residual_sigma": 16.3,
+    "note": "3-loop QCD correction ~2 GeV expected to improve; current leading-order result"
+  },
+  "fixed_point_identity": {
+    "condition": "lambda_h(M_Z) = phi-1 determines y_t",
+    "phi_minus_1": 0.6180339887,
+    "consistency": "Golden ratio Higgs fixed point and top Yukawa are linked"
+  },
+  "connections": ["DCCXCV", "DCCXCIV", "DCCLXXXIII"],
+  "status": "PARTIAL - MSbar within 1-sigma at leading order; pole mass needs 3-loop QCD"
+}

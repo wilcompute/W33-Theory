@@ -1,0 +1,16 @@
+{
+  "sigma_0": "15",
+  "sigma_r": "-5",
+  "sigma_s": "7",
+  "seidel_energy": "240",
+  "tr_S2": "1560",
+  "tr_S3": "5520",
+  "angle": "1/5",
+  "gerzon_bound": "300",
+  "welch_satisfied": true,
+  "tr_A3": "960",
+  "n_triangles": "160",
+  "lines_GQ": 40,
+  "det_S_formula": "15 * 5^24 * 7^15 = 3 * 5^25 * 7^15",
+  "n_verified": 21
+}

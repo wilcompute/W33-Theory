@@ -1,0 +1,79 @@
+{
+  "module": "PART_CLVIII_GLOBAL_E6_WEYL_CLOSURE",
+  "source_hint": "integrates CLVI Hecke/Langlands group-order identity with CL-CXLV E6 compiler",
+  "w33_atoms": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "lambda": 2,
+    "mu": 4,
+    "edges_E": 240,
+    "directed_edges": 480,
+    "triangles": 160
+  },
+  "group_orders": {
+    "Sp(4,3)": 51840,
+    "W(E6)": 51840,
+    "formula": "q^4*(q^2-1)*(q^4-1)"
+  },
+  "e6_shell_closure": {
+    "ramanujan_complex_dimension": 39,
+    "ramanujan_real_dimension": 78,
+    "cartan_seed_2q": 6,
+    "e6_root_count": 72,
+    "root_stabilizer": 720,
+    "closure_identity": "|Sp(4,3)| = (78-2q)*(qE) = 72*720 = 51840"
+  },
+  "orbit_stabilizers": [
+    {
+      "orbit": "W(3,3) vertices",
+      "orbit_size": 40,
+      "stabilizer_size": 1296,
+      "product": 51840,
+      "interpretation": "vertex stabilizer = 1296 = (2q)^4"
+    },
+    {
+      "orbit": "undirected edges",
+      "orbit_size": 240,
+      "stabilizer_size": 216,
+      "product": 51840,
+      "interpretation": "edge stabilizer = 216 = 8*q^3"
+    },
+    {
+      "orbit": "directed edges",
+      "orbit_size": 480,
+      "stabilizer_size": 108,
+      "product": 51840,
+      "interpretation": "directed-edge stabilizer = 108 = mu*q^3"
+    },
+    {
+      "orbit": "E6 roots from Ramanujan shell minus Cartan seed",
+      "orbit_size": 72,
+      "stabilizer_size": 720,
+      "product": 51840,
+      "interpretation": "root stabilizer = q*E = 720 = 6!"
+    },
+    {
+      "orbit": "W(3,3) triangles",
+      "orbit_size": 160,
+      "stabilizer_size": 324,
+      "product": 51840,
+      "interpretation": "triangle stabilizer = 324 = mu*q^4"
+    }
+  ],
+  "checks": {
+    "sp43_order_formula": true,
+    "weyl_e6_order": true,
+    "ramanujan_real_is_dim_E6": true,
+    "cartan_seed_is_2q_and_q_factorial": true,
+    "root_count_is_78_minus_2q": true,
+    "root_stabilizer_is_qE": true,
+    "root_factorization": true,
+    "directed_edge_stabilizer_is_mu_q3": true,
+    "triangle_stabilizer_is_mu_q4": true,
+    "vertex_stabilizer_is_2q_fourth": true,
+    "edge_stabilizer_is_q3_q2minus1": true
+  },
+  "theorem_statement": "The CLVI identity |Sp(4,3)|=|W(E6)| is the global closure of the local Ramanujan/E6 compiler: the real shell has dimension 78, the seed Cartan rank is 2q=6, the remaining 72 modes are the E6 roots, and each root has stabilizer qE=3*240=720. Hence |Sp(4,3)|=(78-2q)(qE)=51840.",
+  "interpretive_note": "This links the local and global pictures.  The group-order identity is not just numerology: it is an orbit-stabilizer closure of the W(3,3) edge carrier and the E6 root system.  The same seed 2q=6 that solves q!=2q becomes the Cartan rank removed from the 78-dimensional shell."
+}

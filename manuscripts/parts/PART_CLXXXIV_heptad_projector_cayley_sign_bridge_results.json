@@ -1,0 +1,88 @@
+{
+  "module": "PART_CLXXXIV_HEPTAD_PROJECTOR_CAYLEY_SIGN_BRIDGE",
+  "status": "structural sign-capacity audit; projector Gram/sign extraction artifact rerun still needed",
+  "source_links": {
+    "projector_bridge": "exploration/w33_toroidal_heptad_projector_bridge.py",
+    "CLXXII": "realization centroid heptad compiler",
+    "CLXXIV": "Fano-Cayley / Albert / E6 algebra",
+    "CLXXX": "master identity ladder"
+  },
+  "source_tools": [
+    "exploration/w33_toroidal_heptad_projector_bridge.py",
+    "data/Toroidal-Polyhedra-Realizations.txt",
+    "PART_CLXXIV_FANO_CAYLEY_ALBERT_E6_ALGEBRA.py"
+  ],
+  "expected_generated_artifacts": [
+    "data/w33_toroidal_heptad_projector_bridge_summary.json"
+  ],
+  "w33_atoms": {
+    "q": 3,
+    "q2": 9,
+    "q3": 27,
+    "q4": 81,
+    "Phi3": 13,
+    "Phi6": 7,
+    "J": 5,
+    "J_inverse": 8,
+    "k": 12,
+    "rank_seed_2q": 6
+  },
+  "projector_cayley_layers": [
+    {"name":"Csaszar_family","value":5,"formula":"J=5","interpretation":"five vertex-shell projectors"},
+    {"name":"Szilassi_family","value":2,"formula":"q-1=2","interpretation":"two face-centroid shell projectors"},
+    {"name":"projector_heptad","value":7,"formula":"5+2=Phi6=7","interpretation":"seven rank-3 projectors / seven Fano units"},
+    {"name":"mean_line","value":1,"formula":"1","interpretation":"scalar/projector mean line"},
+    {"name":"centered_shell","value":6,"formula":"7-1=6=2q","interpretation":"mean-subtracted projector shell"},
+    {"name":"centered_refinement","value":6,"formula":"4+1+1=6","interpretation":"Cs centered + Sz centered + family separation"},
+    {"name":"full_refinement","value":7,"formula":"4+3=7","interpretation":"Cs internal shell plus three external modes"},
+    {"name":"bivector_match","value":6,"formula":"C(4,2)=6","interpretation":"Clifford bivector shell dimension"},
+    {"name":"orientation_double","value":12,"formula":"2*6=12=k","interpretation":"oriented bivector/sign double cover"},
+    {"name":"Cayley_carrier","value":8,"formula":"1+7=8=J^{-1}","interpretation":"octonion scalar plus heptad"},
+    {"name":"Fano_pairs","value":21,"formula":"C(7,2)=21","interpretation":"unordered imaginary unit products"},
+    {"name":"Fano_lines","value":7,"formula":"7","interpretation":"multiplication triples/sign cycles"},
+    {"name":"Albert_generation","value":27,"formula":"3+3*8=27","interpretation":"one Albert generation after Cayley completion"},
+    {"name":"artifact_status","value":"rerun needed","formula":"projector summary JSON absent","interpretation":"explicit Gram-to-sign extraction not claimed here"}
+  ],
+  "fano_cayley_data": {
+    "heptad_residues": [1, 5, 12, 8, 3, 6, 9],
+    "fano_lines_residue_labels": [[1,5,3],[12,8,3],[1,12,6],[5,8,6],[1,8,9],[5,12,9],[3,6,9]],
+    "pair_coverage_count": 21,
+    "each_unordered_pair_appears_once": true,
+    "multiplication_rule": "each oriented Fano line supplies cyclic positive products and anti-cyclic negative products"
+  },
+  "bridge_identities": {
+    "projector_to_units": "7 projectors = Phi6 = seven imaginary Cayley units",
+    "mean_to_scalar": "mean line supplies the scalar/origin completion 1+7=8",
+    "centered_to_bivectors": "centered projector shell dimension 6 matches C(4,2) bivectors",
+    "orientation_to_signs": "2*6=12 gives the oriented sign/phase double cover needed for Cayley multiplication",
+    "fano_capacity": "7 lines cover C(7,2)=21 pairs exactly once, so the heptad has the combinatorial capacity for octonion products",
+    "measurement_gap": "explicit projector Gram spectra/sign extraction requires regenerating data/w33_toroidal_heptad_projector_bridge_summary.json"
+  },
+  "rerun_protocol": {
+    "step_1": "python exploration/w33_toroidal_heptad_projector_bridge.py",
+    "step_2": "commit data/w33_toroidal_heptad_projector_bridge_summary.json if generated",
+    "step_3": "extract projector overlap matrix and centered Gram eigenvectors",
+    "step_4": "compare Gram/parity orientation with PART_CLXXIV Fano-Cayley oriented lines",
+    "desired_measurements": ["projector overlap matrix","centered Gram eigenvectors/eigenvalues","family separation vector orientation","whether Gram parity determines Fano line signs","residual between projector-induced signs and Cayley signs"]
+  },
+  "checks": {
+    "projector_heptad_is_phi6": true,
+    "family_split_is_5_plus_2": true,
+    "centered_shell_is_2q": true,
+    "centered_refinement_is_4_plus_1_plus_1": true,
+    "full_refinement_is_4_plus_3": true,
+    "bivector_dimension_match": true,
+    "orientation_double_is_k": true,
+    "cayley_carrier_is_eight": true,
+    "albert_generation_is_27": true,
+    "fano_points_are_heptad": true,
+    "fano_lines_are_seven": true,
+    "fano_pair_count_is_21": true,
+    "fano_lines_cover_each_pair_once": true,
+    "source_tools_registered": true,
+    "expected_projector_artifacts_registered": true,
+    "threshold_carrier_inverse": true
+  },
+  "theorem_statement": "Structurally, the toroidal projector heptad has exactly the sign capacity required by the Fano-Cayley algebra. The seven projectors supply the seven imaginary units; the mean supplies the scalar origin; the centered 6D shell matches the C(4,2) bivector space; and its orientation double cover 12 supplies the sign/phase wheel. The Fano line system covers all 21 unordered pairs exactly once, giving the required octonion multiplication skeleton. Numerical projector-Gram extraction is still needed to decide whether the realizations determine the signs uniquely.",
+  "interpretive_note": "This is the careful bridge from geometry to algebra. The projector data is already compatible with Cayley multiplication, but compatibility is weaker than derivation. The next measurable step is to regenerate the projector summary and see whether the overlap/centered-Gram orientation selects the CLXXIV Fano sign convention."
+}

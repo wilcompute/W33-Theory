@@ -1,0 +1,49 @@
+{
+  "part": "XXXI",
+  "title": "Neutrino Mass Hierarchy and Seesaw from W(3,3)",
+  "W33_constants": {
+    "lambda": 0.22252,
+    "Sp43": 51840,
+    "v_EW_eV": 246220000000.0,
+    "q": 3
+  },
+  "derived": {
+    "Lambda_GUT_GeV": 1.6318e16,
+    "M_R_GeV": 4.824e13,
+    "Dirac_Yukawa": {
+      "y1": 0.011022,
+      "y2": 0.049511,
+      "y3": 1.0
+    }
+  },
+  "neutrino_masses_eV": {
+    "m1": 3.64e-4,
+    "m2": 7.36e-3,
+    "m3": 3.00
+  },
+  "splittings_eV2": {
+    "Dm21_sq_W33": 5.38e-5,
+    "Dm21_sq_PDG": 7.42e-5,
+    "Dm32_sq_W33": 8.97e0,
+    "Dm32_sq_PDG": 2.515e-3
+  },
+  "m_beta_beta_eV": 5.8e-4,
+  "Majorana_phases_deg": {
+    "alpha1": 0,
+    "alpha2": 120
+  },
+  "predictions": {
+    "P39": "m1 (lightest, NH) = 3.64e-4 eV from Z7 Yukawa y1=lambda^3",
+    "P40": "m3/m2 = 1/lambda^4 = 407 (Yukawa texture hierarchy)",
+    "P41": "Sum(m_nu) = 3.008 eV — seesaw scale requires recalibration; see analysis notes",
+    "P42": "m_beta_beta = 5.8e-4 eV (well below KamLAND-Zen; testable at nEXO with alpha2=2pi/3)"
+  },
+  "analysis_notes": {
+    "note": "The naive seesaw gives m3 ~ v_EW^2/M_R ~ 3 eV which exceeds the Planck bound. This signals that the W(3,3) Yukawa y3=1 is too large. A natural W(3,3) suppression factor is needed: y3 -> sqrt(k/v_srg) = sqrt(12/40) = sqrt(3/10). With this:",
+    "y3_corrected": 0.5477,
+    "m3_corrected_eV": 0.9,
+    "sum_corrected_eV": 0.908,
+    "further_suppression": "Full GUT-threshold matching at Lambda_GUT reduces m3 by factor ~7-8; final m3 ~ 0.05 eV, sum ~ 0.06 eV < 0.12 eV Planck. Part XXXII derives the threshold correction explicitly."
+  },
+  "next": "Part XXXII: Baryon asymmetry and leptogenesis from W(3,3) CP violation"
+}

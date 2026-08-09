@@ -1,0 +1,39 @@
+{
+  "architecture_upgrade": "CCCXLVI compared one-sector, nuisance, and free-channel alternatives. CCCXLVII generalizes the response identity to multiple spectral sectors X_a, allowing model comparison between one-sector, structured multi-sector, and free-channel alternatives.",
+  "checks": [
+    {"name":"dimensionless W33 M2=5049/4","passed":true,"value":1262.25},
+    {"name":"one-sector data BIC selects one-sector model","passed":true,"value":"one_sector"},
+    {"name":"two-sector data BIC selects geometry/response split","passed":true,"value":"two_sector_geometry_response"},
+    {"name":"two-sector fit recovers X0","passed":true,"value":"recovered"},
+    {"name":"two-sector fit recovers X1","passed":true,"value":"recovered"},
+    {"name":"one-sector rejects two-sector data","passed":true,"value":"reduced_chi_square > 3"},
+    {"name":"free-channel model exactly fits unstructured data","passed":true,"value":0.0}
+  ],
+  "checks_passed": 7,
+  "checks_total": 7,
+  "dimensionless_kernel": {
+    "M2": "5049/4",
+    "multi_sector_identity": "channels share scale by sector assignment a(i)",
+    "one_sector_identity": "all channels share one scale X"
+  },
+  "honesty_boundary": "Sector assignments here are synthetic hypotheses. Real use requires deriving sector maps from W33 operators or physical channel identifications.",
+  "model_formulas": {
+    "free_channel": "X_i=alpha_i+noise_i",
+    "multi_sector": "X_i=X_{a(i)}+noise_i",
+    "one_sector": "X_i=X+noise_i"
+  },
+  "part": "CCCXLVII",
+  "sample_scales": {
+    "X0": 6872.25,
+    "X1": 9415.9825,
+    "ratio_X1_over_X0": 1.37
+  },
+  "summary": {
+    "one_sector_case": "BIC selects one_sector",
+    "two_sector_case": "BIC selects structured geometry/response split",
+    "unstructured_case": "free_channel exactly fits unstructured data"
+  },
+  "theorem": "If a response packet cannot satisfy one common scale, the next controlled extension is a sector map a(i) with X_i=X_{a(i)}+noise_i. Structured multi-sector models can be selected against the one-sector model and against the saturated free-channel alternative by GLS, AIC, and BIC.",
+  "title": "Multi-Sector Extension Compiler",
+  "verified": true
+}

@@ -1,0 +1,72 @@
+{
+  "part": "CCCCCXI",
+  "title": "Heavy Yukawa Ladder Theorem",
+  "atoms": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "k": 12,
+    "v": 40,
+    "E": 240,
+    "r": 2,
+    "s": -4,
+    "f": 24,
+    "g": 15,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7
+  },
+  "perron_determinant_ladder": {
+    "D_t": 41,
+    "D_t_formula": "det(I+J)=v+1",
+    "D_b": 125,
+    "D_b_formula": "q*D_t+lambda=(mu+1)^3",
+    "D_c": 137,
+    "D_c_formula": "D_b+k=|(k-1)+mu*i|^2=Phi3*Phi4+Phi6"
+  },
+  "heavy_yukawa_seeds": {
+    "y_t_cubed": "40/41",
+    "y_b": "3/125",
+    "y_c": "1/137",
+    "y_tau_forced": "16029/1562500",
+    "y_tau_decimal": 0.01025856
+  },
+  "cumulant_higgs_input": {
+    "excited_mean": "160/13",
+    "gap_ratio": "8/5",
+    "lambda_H": "13/100"
+  },
+  "ladder_relations": {
+    "D_b_minus_q_D_t": 2,
+    "D_c_minus_D_b": 12,
+    "y_tau_yc_over_yb_squared": "13/100"
+  },
+  "alpha_crosslink": {
+    "alpha_core_equals_D_c": 137,
+    "M_vac": 1111,
+    "Delta_M": "3/22"
+  },
+  "checks": {
+    "true_master_equation": true,
+    "w33_atoms": true,
+    "top_denominator_det_I_plus_J": true,
+    "bottom_denominator_q_dressed_perron": true,
+    "charm_denominator_valency_shift": true,
+    "charm_denominator_gaussian": true,
+    "charm_denominator_cyclotomic": true,
+    "y_t_cubed": true,
+    "y_b": true,
+    "y_c": true,
+    "bottom_minus_q_top_is_lambda": true,
+    "charm_minus_bottom_is_k": true,
+    "lambda_H_cumulant": true,
+    "y_tau_forced": true,
+    "y_tau_alt": true,
+    "yukawa_higgs_ratio": true,
+    "alpha_core_is_charm_denominator": true,
+    "alpha_vac_denominator_1111": true,
+    "alpha_delta_m_is_3_over_22": true
+  },
+  "all_checks_pass": true,
+  "interpretation": "The heavy Yukawa seeds form a denominator ladder: top uses the Perron determinant D_t=v+1=41; bottom uses the q-dressed Perron determinant D_b=qD_t+lambda=125; charm is the valency-shifted Gaussian core D_c=D_b+k=137. The cumulant-derived Higgs quartic then forces y_tau exactly."
+}

@@ -1,0 +1,66 @@
+{
+  "part": "CCCXLIX",
+  "title": "First Eigenmatrix P and Dual Eigenmatrix Q of W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "P_matrix": [
+      [
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "12",
+        "2",
+        "-4"
+      ],
+      [
+        "27",
+        "-3",
+        "3"
+      ]
+    ],
+    "Q_matrix": [
+      [
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "24",
+        "4",
+        "-8/3"
+      ],
+      [
+        "15",
+        "-5",
+        "5/3"
+      ]
+    ],
+    "det_P": "-240",
+    "abs_det_P": "240",
+    "trace_P": "6",
+    "k_val": [
+      "1",
+      "12",
+      "27"
+    ],
+    "m_mult": [
+      "1",
+      "24",
+      "15"
+    ]
+  },
+  "discoveries": [
+    "det(P) = -240 = -(number of edges of W(3,3))",
+    "|det(P)| / MULT_R = 240/24 = 10 = ALPHA (coupling constant proxy)",
+    "tr(P) = 6 = 2 * GENERATIONS",
+    "P * Q^T = V * I_3: fundamental orthogonality of eigenmatrices",
+    "Q[1][0] = MULT_R = 24 = SU(5) adjoint dimension",
+    "Q[2][0] = MULT_S = 15 = SU(5) matter rep per generation",
+    "P[2][0] = L = 27 = GUT_DIM (complement valency encodes GUT)",
+    "P[1][0] + P[2][0] = K + L = V - 1 = 39 (sum of valencies)"
+  ]
+}

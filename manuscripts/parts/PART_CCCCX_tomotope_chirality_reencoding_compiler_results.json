@@ -1,0 +1,33 @@
+{
+  "part": "CCCCX",
+  "title": "Tomotope/Chirality Re-Encoding Compiler",
+  "verified": true,
+  "checks_passed": 8,
+  "checks_total": 8,
+  "line_star_sector": {
+    "k4_lines": 40,
+    "line_star_triples": 160,
+    "line_star_span_rank": 120,
+    "vertex_rank": 39,
+    "matter_rank": 81,
+    "base_distance": 3
+  },
+  "tomotope_packet": {
+    "flags": 192,
+    "edges": 12,
+    "local_flags_per_edge": 16,
+    "factorization": "16=2 orientations * 4 tetrahedral chart vertices * 2 Clifford chiralities"
+  },
+  "reencoding_parameters": {
+    "packets": 81,
+    "slots_per_packet": 16,
+    "total_packet_slots": 1296,
+    "sector_if_packet_distance_3": {"n": 1296, "k": 81, "d_lower_bound": 3},
+    "concatenated_target_if_packet_distance_3": {"n": 1296, "k": 81, "d_lower_bound": 9},
+    "sector_if_packet_distance_4": {"n": 1296, "k": 81, "d_lower_bound": 4},
+    "concatenated_target_if_packet_distance_4": {"n": 1296, "k": 81, "d_lower_bound": 12}
+  },
+  "architecture_upgrade": "Promotes the corrected line-star matter sector into a tomotope/chirality re-encoding target: 81 protected matter degrees, each wrapped by a 16-slot orientation/chart/chirality packet, for 1296 local packet slots before any additional syndrome ancillas.",
+  "theorem": "Because line-star triples modulo vertex checks have rank 81, the distance-3 obstruction is the matter sector itself. The tomotope packet factorization 16=2*4*2 gives a natural local re-encoding wrapper with one 16-slot packet per protected degree. Any valid packet of distance delta would turn the sector into a [[1296,81,>=delta]] protected packet layer; if used as a true concatenated replacement of the base line-star logical components, the target lower bound becomes >=3 delta.",
+  "honesty_boundary": "This is a re-encoding compiler/target, not yet the final 16-slot packet code. The next step is to construct explicit packet stabilizers/gauge generators and compute the resulting subsystem distance."
+}

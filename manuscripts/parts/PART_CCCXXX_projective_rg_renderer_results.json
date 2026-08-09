@@ -1,0 +1,44 @@
+{
+  "architecture_upgrade": "CCCXXIX integrated the beta flow.  CCCXXX shows the integrated flow is the projectivization of exp(tG) for a traceless 2x2 generator satisfying G^2=(5049/4)I.  Thus the RG renderer is a finite PSL(2)-type action.",
+  "checks": [
+    {"name":"projective generator trace is zero","passed":true,"value":"0"},
+    {"name":"projective generator determinant = -Delta/4","passed":true,"value":"-5049/4"},
+    {"name":"G^2 = (Delta/4) I","passed":true,"value":[["5049/4","0"],["0","5049/4"]]},
+    {"name":"Delta=q^3(k-1)(Phi4+Phi6)","passed":true,"value":5049},
+    {"name":"projective gap = sqrt(Delta)","passed":true,"value":71.05631569396216},
+    {"name":"fixed points are eigenline slopes","passed":true,"value":[69.02815784698112,-2.0281578469810335]},
+    {"name":"Mobius action identity at t=0","passed":true,"value":67.0},
+    {"name":"Mobius derivative equals beta at t=0","passed":true,"value":[140.00000000047374,140.0]},
+    {"name":"forward Mobius action moves toward attracting branch","passed":true,"value":68.90494281285368},
+    {"name":"exp(tG) has determinant 1","passed":true,"value":1.0000000000000002}
+  ],
+  "checks_passed": 10,
+  "checks_total": 10,
+  "generator": {
+    "G": [["67/2","140"],["1","-67/2"]],
+    "determinant": "-5049/4",
+    "eigenvalues": ["+sqrt(5049)/2", "-sqrt(5049)/2"],
+    "square": [["5049/4","0"],["0","5049/4"]],
+    "square_form": "G^2=(5049/4)I",
+    "trace": "0"
+  },
+  "honesty_boundary": "This proves the finite RG renderer is projective/Mobius.  It still does not assign physical continuum units to t or y.",
+  "mobius_renderer": {
+    "action": "y(t)=(a(t)y0+b(t))/(c(t)y0+d(t))",
+    "exp_tG": "cosh(sqrt(5049)t/2) I + (2/sqrt(5049)) sinh(sqrt(5049)t/2) G",
+    "sample_det_exp_tG": 1.0000000000000002,
+    "sample_t": 0.05,
+    "sample_y0": 67.0,
+    "sample_y_t": 68.90494281285368
+  },
+  "part": "CCCXXX",
+  "riccati_flow": {
+    "beta_numerator": "B(y)=67y+140-y^2",
+    "coordinate": "y=u/v",
+    "equation": "dy/dt = 140 + 67y - y^2",
+    "fixed_points": ["(67+sqrt(5049))/2", "(67-sqrt(5049))/2"]
+  },
+  "theorem": "The finite RG flow dy/dt=140+67y-y^2 is the Riccati/projective flow induced by G=[[67/2,140],[1,-67/2]].  Since G^2=(5049/4)I, exp(tG) is closed in hyperbolic form and has projective eigenvalue gap sqrt(5049).",
+  "title": "Projective RG Renderer Compiler",
+  "verified": true
+}

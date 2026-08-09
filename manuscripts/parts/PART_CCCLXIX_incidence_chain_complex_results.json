@@ -1,0 +1,108 @@
+{
+  "architecture_upgrade": "CCCLXVIII split odd triples into one-edge and triangle sectors. CCCLXIX builds the incidence-chain complex across vertices, edges, triangles, and odd triples, recovering beta1=81 and making the closed/open split explicit by separating cycle-like triangle support from open one-edge support.",
+  "boundary_behavior": {
+    "one_edge_support": "single edge has two-vertex boundary over GF2",
+    "three_edge_triangle_support": "cycle boundary zero over GF2"
+  },
+  "chain_counts": {
+    "edges": 240,
+    "odd_triples": 4480,
+    "one_edge_odd_triples": 4320,
+    "three_edge_odd_triples": 160,
+    "triangles": 160,
+    "vertices": 40
+  },
+  "checks": [
+    {
+      "name": "V/E/Tri counts",
+      "passed": true,
+      "value": {
+        "E": 240,
+        "Tri": 160,
+        "V": 40
+      }
+    },
+    {
+      "name": "odd split 4320+160",
+      "passed": true,
+      "value": {
+        "one": 4320,
+        "three": 160
+      }
+    },
+    {
+      "name": "rank d1 = V-1 = 39",
+      "passed": true,
+      "value": 39
+    },
+    {
+      "name": "rank d2 gives beta1=81",
+      "passed": true,
+      "value": {
+        "beta1": 81,
+        "rank_d2": 120
+      }
+    },
+    {
+      "name": "rank d2 = 120",
+      "passed": true,
+      "value": 120
+    },
+    {
+      "name": "vertex incidence odd rank = 40 over GF2",
+      "passed": true,
+      "value": 40
+    },
+    {
+      "name": "vertex incidence one-edge rank = 40 over GF2",
+      "passed": true,
+      "value": 40
+    },
+    {
+      "name": "vertex incidence triangle rank = 40 over GF2",
+      "passed": true,
+      "value": 40
+    },
+    {
+      "name": "triangle edge-support boundaries vanish",
+      "passed": true,
+      "value": [
+        []
+      ]
+    },
+    {
+      "name": "one-edge edge-support boundaries have size 2",
+      "passed": true,
+      "value": [
+        2
+      ]
+    },
+    {
+      "name": "edge-support ranks are positive",
+      "passed": true,
+      "value": {
+        "odd": 240,
+        "one": 240,
+        "three": 120
+      }
+    }
+  ],
+  "checks_passed": 11,
+  "checks_total": 11,
+  "gf2_ranks": {
+    "beta1_triangle_complex": 81,
+    "d1_edges_to_vertices": 39,
+    "d2_triangles_to_edges": 120,
+    "edge_support_odd": 240,
+    "edge_support_one_edge": 240,
+    "edge_support_three_edge": 120,
+    "vertex_incidence_odd": 40,
+    "vertex_incidence_one_edge": 40,
+    "vertex_incidence_three_edge": 40
+  },
+  "honesty_boundary": "This is a GF(2) incidence-chain audit. Integral homology and explicit bases are separate refinements.",
+  "part": "CCCLXIX",
+  "theorem": "The W33 triangle complex has beta1=240-rank(d1)-rank(d2)=81 with rank(d1)=39 and rank(d2)=120 over GF2. Odd-triple incidence has full vertex rank 40, while the edge-support map separates triangle triples, whose boundary vanishes, from one-edge triples, whose boundary is a two-vertex open edge. This gives a chain-complex explanation of the closed/open split seen in the Hashimoto T/O decomposition.",
+  "title": "W33 Incidence Chain Complex Compiler",
+  "verified": true
+}

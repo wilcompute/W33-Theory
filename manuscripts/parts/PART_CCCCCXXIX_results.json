@@ -1,0 +1,13 @@
+{
+  "part": "CCCCCXXIX",
+  "title": "W(2,2)-W(3,3)-W(4,4) Hierarchy and E6-E8 Mirror",
+  "results": {
+    "master_equation": "q! = 2q",
+    "unique_solution": 3,
+    "W22": {"v": 15, "k": 6, "lambda": 1, "mu": 3, "group": "Sp(4,2)", "group_order": 720},
+    "W33": {"v": 40, "k": 12, "lambda": 2, "mu": 4, "group": "PSp(4,3)", "group_order": 25920},
+    "W44": {"v": 85, "k": 20, "lambda": 3, "mu": 5, "group": "PSp(4,4)", "group_order": 979200},
+    "e6_connection": "27 lines of cubic surface via W(2,2)",
+    "e8_connection": "240 roots / 480 directed roots via W(3,3)"
+  }
+}

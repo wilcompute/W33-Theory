@@ -1,0 +1,123 @@
+{
+  "parameters": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "r": 2,
+    "s": -4,
+    "m_r": 24,
+    "m_s": 15,
+    "lambda": 2,
+    "mu": 4,
+    "alpha_coeff": 8,
+    "beta_coeff": -2
+  },
+  "bm_coordinates": {
+    "n_0": {
+      "a": "1",
+      "b": "0",
+      "c": "0",
+      "expression": "1*I + (0)*A + 0*J"
+    },
+    "n_1": {
+      "a": "0",
+      "b": "1",
+      "c": "0",
+      "expression": "0*I + (1)*A + 0*J"
+    },
+    "n_2": {
+      "a": "8",
+      "b": "-2",
+      "c": "4",
+      "expression": "8*I + (-2)*A + 4*J"
+    },
+    "n_3": {
+      "a": "-16",
+      "b": "12",
+      "c": "40",
+      "expression": "-16*I + (12)*A + 40*J"
+    },
+    "n_4": {
+      "a": "96",
+      "b": "-40",
+      "c": "528",
+      "expression": "96*I + (-40)*A + 528*J"
+    },
+    "n_5": {
+      "a": "-320",
+      "b": "176",
+      "c": "6176",
+      "expression": "-320*I + (176)*A + 6176*J"
+    },
+    "n_6": {
+      "a": "1408",
+      "b": "-672",
+      "c": "74816",
+      "expression": "1408*I + (-672)*A + 74816*J"
+    },
+    "n_7": {
+      "a": "-5376",
+      "b": "2752",
+      "c": "895104",
+      "expression": "-5376*I + (2752)*A + 895104*J"
+    }
+  },
+  "fundamental_identity": {
+    "A_squared": "8I - 2A + 4J",
+    "formula": "A^2 = (k-lambda-mu)*I + (lambda-mu)*A + mu*J = 8I + -2A + 4J",
+    "parameters": "k=12, lambda=2, mu=4"
+  },
+  "b_n_analysis": {
+    "closed_form": "b_n = (r^n - s^n)/(r-s) = (2^n - (-4)^n)/6",
+    "characteristic_roots": [
+      2,
+      -4
+    ],
+    "r_minus_s": 6,
+    "first_8_values": [
+      "0",
+      "1",
+      "-2",
+      "12",
+      "-40",
+      "176",
+      "-672",
+      "2752"
+    ],
+    "match": true
+  },
+  "minimal_polynomial": {
+    "expression": "x^3 - 10x^2 - 32x + 96 = (x-12)(x-2)(x+4)",
+    "recurrence": "A^3 = 10*A^2 + 32*A - 96*I",
+    "verified": true
+  },
+  "normalized_traces": {
+    "B_0": "1",
+    "B_1": "0",
+    "B_2": "12",
+    "B_3": "24",
+    "B_4": "624",
+    "B_5": "5856",
+    "B_6": "76224",
+    "B_7": "889728"
+  },
+  "spectral_traces": {
+    "trace_A_0": 40,
+    "trace_A_1": 0,
+    "trace_A_2": 480,
+    "trace_A_3": 960,
+    "trace_A_4": 24960,
+    "trace_A_5": 234240,
+    "trace_A_6": 3048960,
+    "trace_A_7": 35589120
+  },
+  "master_identities_summary": {
+    "bm_coordinates_n0_to_4": true,
+    "trace_bm_equals_trace_spectral": true,
+    "b_n_closed_form": true,
+    "a_n_from_b_n": true,
+    "minimal_polynomial_A3_eq_10A2_32A_minus_96I": true,
+    "B2_normalized_trace_equals_k": true,
+    "B3_normalized_trace_equals_lambda_k": true
+  }
+}

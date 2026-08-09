@@ -13,6 +13,12 @@ eggs/
 lib/__pycache__/
 lib64/
 parts/
+# ...but manuscripts/parts/ is RESEARCH CONTENT, not a zc.buildout artifact.
+# The bare `parts/` above comes from the standard Python .gitignore template and
+# collided with a real directory, hiding 1,793 files for the life of the project.
+# TOPICAL_ALIASES.md links 193 paths into it, ~189 of which dangled on a fresh clone.
+!manuscripts/parts/
+!manuscripts/parts/**
 sdist/
 var/
 wheels/

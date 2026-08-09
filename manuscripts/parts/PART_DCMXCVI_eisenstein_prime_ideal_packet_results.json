@@ -1,0 +1,13 @@
+{
+    "part": "DCMXCVI",
+    "title": "Eisenstein Prime-Ideal Packet",
+    "status": "verified",
+    "ideal_packet_formula": "For split p ≡ 1 mod 3, the roots r,r' of x^2+x+1 mod p^n define the two ideals (p, ω-r) and (p, ω-r') above p in Z[ω].",
+    "phi3_ideal_law": "p^n | Phi3(q) iff one of the split prime ideals above p divides (q-ω)^n",
+    "phi6_ideal_law": "p^n | Phi6(q) iff one of the same split prime ideals divides (q+ω)^n on the negated branch",
+    "sample_witnesses": {
+        "Phi3_q18": "pi_7_1^3 divides (q-ω)",
+        "Phi6_q19": "pi_7_2^3 divides (q+ω)"
+    },
+    "theorem_summary": "The entire residue/Hensel packet rewrites exactly as prime-ideal divisibility in the Eisenstein integers Z[ω]."
+}

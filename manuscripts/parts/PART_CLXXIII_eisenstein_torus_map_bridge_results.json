@@ -1,0 +1,53 @@
+{
+  "module": "PART_CLXXIII_EISENSTEIN_TORUS_MAP_BRIDGE",
+  "source_pdf": "Abstract Polytope Tables Final.pdf bottom map tables for {3,6}_{(b,c)} and {6,3}_{(b,c)}",
+  "w33_atoms": {
+    "q": 3,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "k": 12,
+    "J": 5,
+    "J_inverse": 8
+  },
+  "norm_rule": {
+    "formula": "N(b,c)=b^2+bc+c^2",
+    "map_36_counts": "{3,6}_{(b,c)} has (V,E,F)=(N,3N,2N)",
+    "map_63_counts": "{6,3}_{(b,c)} has (V,E,F)=(2N,3N,N)",
+    "w33_specialization": "N(q-1,1)=q^2-q+1=Phi6"
+  },
+  "map_rows": [
+    {"symbol":"{3,6}","b":1,"c":0,"norm":1,"vertices":1,"edges":3,"faces":2,"role":"origin/fundamental one-cell torus quotient"},
+    {"symbol":"{6,3}","b":1,"c":0,"norm":1,"vertices":2,"edges":3,"faces":1,"role":"dual of origin/fundamental one-cell torus quotient"},
+    {"symbol":"{3,6}","b":2,"c":0,"norm":4,"vertices":4,"edges":12,"faces":8,"role":"q+1=4 tetrahedral/quarter seed quotient"},
+    {"symbol":"{6,3}","b":2,"c":0,"norm":4,"vertices":8,"edges":12,"faces":4,"role":"dual of q+1=4 tetrahedral/quarter seed quotient"},
+    {"symbol":"{3,6}","b":1,"c":1,"norm":3,"vertices":3,"edges":9,"faces":6,"role":"q=3 axis seed quotient"},
+    {"symbol":"{6,3}","b":1,"c":1,"norm":3,"vertices":6,"edges":9,"faces":3,"role":"dual of q=3 axis seed quotient"},
+    {"symbol":"{3,6}","b":2,"c":1,"norm":7,"vertices":7,"edges":21,"faces":14,"role":"Phi6=7 Csaszar/Szilassi torus quotient"},
+    {"symbol":"{6,3}","b":2,"c":1,"norm":7,"vertices":14,"edges":21,"faces":7,"role":"dual of Phi6=7 Csaszar/Szilassi torus quotient"}
+  ],
+  "csaszar_szilassi_identification": {
+    "Csaszar": "{3,6}_{(2,1)}=(7,21,14)",
+    "Szilassi": "{6,3}_{(2,1)}=(14,21,7)",
+    "shared_edge_count": 21,
+    "dual_swap": "V and F swap; E is preserved"
+  },
+  "checks": {
+    "norm_values_match_bottom_pdf_sequence": true,
+    "phi6_from_2_1_norm": true,
+    "phi6_from_q_minus_one_one_norm": true,
+    "csaszar_counts_from_36_2_1": true,
+    "szilassi_counts_from_63_2_1": true,
+    "dual_swap_preserves_edges": true,
+    "dual_swap_vertices_faces": true,
+    "torus_euler_characteristic_cs": true,
+    "torus_euler_characteristic_sz": true,
+    "edge_count_is_three_phi6": true,
+    "face_count_cs_is_two_phi6": true,
+    "vertex_count_sz_is_two_phi6": true,
+    "one_four_three_seven_contains_origin_qp1_q_phi6": true,
+    "phi6_is_norm_after_q_middle": true
+  },
+  "theorem_statement": "The bottom PDF's {3,6}/{6,3} maps are Eisenstein-norm torus quotients. For N(b,c)=b^2+bc+c^2, {3,6}_{(b,c)} has (N,3N,2N) and its dual {6,3}_{(b,c)} has (2N,3N,N). At (b,c)=(2,1)=(q-1,1), N=7=Phi6, giving Csaszar (7,21,14) and Szilassi (14,21,7).",
+  "interpretive_note": "This is the missing map-level generator for Phi6. The toroidal realization count, the decimal denominator, and the Csaszar/Szilassi map size all arise from the same triangular-lattice/Eisenstein norm N(q-1,1)."
+}

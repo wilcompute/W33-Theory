@@ -1,0 +1,43 @@
+{
+  "part": "CCCLII",
+  "title": "Computed W33 Graph Sector Evidence Compiler",
+  "verified": true,
+  "checks_passed": 11,
+  "checks_total": 11,
+  "counts": {
+    "points": 40,
+    "edges": 240,
+    "directed_edges": 480,
+    "triangles": 160,
+    "isotropic_K4_lines": 40,
+    "edge_line_incidences": 240
+  },
+  "srg_parameters": {
+    "v": 40,
+    "degree_set": [12],
+    "lambda_set": [2],
+    "mu_set": [4]
+  },
+  "turn_split": {
+    "triangle_turns_per_directed_edge": [2],
+    "open_turns_per_directed_edge": [9],
+    "hashimoto_outdegree": 11
+  },
+  "derived_sector_evidence": {
+    "operator_core": {
+      "assignment": {"mass":0,"gap":1,"heat_trace":0,"spinor_trace":1,"resolvent_trace":1,"zeta":0},
+      "computed_support": "G2 channels align with state/closed-even invariants; G channels align with transition/open-turn invariants"
+    },
+    "minimal_bridge": {
+      "assignment": {"mass":0,"gap":0,"heat_trace":1,"spinor_trace":2,"resolvent_trace":2,"zeta":1},
+      "computed_support": "mass/gap are spectral readouts; heat/zeta are even scalar functional traces; spinor/resolvent are first-order transition kernels"
+    },
+    "transform_class": {
+      "assignment": {"mass":0,"gap":1,"heat_trace":2,"spinor_trace":2,"resolvent_trace":3,"zeta":4},
+      "computed_support": "separates algebraic readouts, exponential kernels, Green resolvent, and zeta transform"
+    }
+  },
+  "architecture_upgrade": "CCCLI derived larger W33 sector maps from structural motifs. CCCLII constructs W(3,3) directly and computes graph evidence supporting the state/transition, closed/open-turn, and local-line/transport sector hypotheses.",
+  "theorem": "The W33 graph constructed from GF(3)^4 symplectic projective points has SRG(40,12,2,4), 240 edges, 160 triangles, 40 isotropic K4 lines, and a uniform non-backtracking turn split 2+9=11. These computed invariants provide graph-derived evidence for sector maps separating state or even channels from transition or first-order channels.",
+  "honesty_boundary": "The compiler derives graph evidence for sector maps. It still does not prove that a particular sector map is the physically realized one without response data or additional representation constraints."
+}

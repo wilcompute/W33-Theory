@@ -1,0 +1,76 @@
+{
+  "architecture_upgrade": "CCCXXVII gave a fixed-point law.  CCCXXVIII packages it as a finite beta flow with exact W33 coefficients, discriminant, branch derivatives, and basin signs.  This is the first canonical RG-like flow object in the TOE architecture.",
+  "branch_classification": {
+    "above_y_plus": "decreasing-scale",
+    "below_y_minus": "decreasing-scale",
+    "between_roots": "increasing-scale",
+    "negative_fixed_point": "repelling under F(y)=67+140/y",
+    "positive_fixed_point": "attracting under F(y)=67+140/y"
+  },
+  "branch_derivatives": {
+    "beta_prime_y_minus": 71.05631569396216,
+    "beta_prime_y_plus": -71.05631569396223,
+    "fixed_map_prime_y_minus": -34.040256177656765,
+    "fixed_map_prime_y_plus": -0.029385251692818277,
+    "sqrt_discriminant": 71.05631569396222
+  },
+  "checks": [
+    {"name":"B coefficient = 2v-Phi3 = 67","passed":true,"value":67},
+    {"name":"A coefficient = (v/2)Phi6 = 140","passed":true,"value":140},
+    {"name":"beta numerator is 67y+140-y^2","passed":true,"value":[67,140]},
+    {"name":"discriminant = q^3(k-1)(Phi4+Phi6)","passed":true,"value":5049},
+    {"name":"positive fixed point beta numerator vanishes","passed":true,"value":0.0},
+    {"name":"negative fixed point beta numerator vanishes","passed":true,"value":3.126388037344441e-13},
+    {"name":"positive fixed point rational beta vanishes","passed":true,"value":0.0},
+    {"name":"negative fixed point rational beta vanishes","passed":true,"value":-1.5631940186722204e-13},
+    {"name":"beta derivative at y+ is -sqrt(discriminant)","passed":true,"value":-71.05631569396223},
+    {"name":"beta derivative at y- is +sqrt(discriminant)","passed":true,"value":71.05631569396216},
+    {"name":"fixed map derivative at y+ is attracting","passed":true,"value":-0.029385251692818277},
+    {"name":"fixed map derivative at y- is repelling","passed":true,"value":-34.040256177656765},
+    {"name":"beta sign below y- is negative","passed":true,"value":"decreasing-scale"},
+    {"name":"beta sign between y- and y+ is positive","passed":true,"value":"increasing-scale"},
+    {"name":"beta sign above y+ is negative","passed":true,"value":"decreasing-scale"},
+    {"name":"fixed point sum = 67","passed":true,"value":67.0},
+    {"name":"fixed point product = -140","passed":true,"value":-139.9999999999997}
+  ],
+  "checks_passed": 17,
+  "checks_total": 17,
+  "coefficients": {
+    "constant": 140,
+    "constant_form": "(v/2)Phi6",
+    "discriminant": 5049,
+    "discriminant_form": "q^3(k-1)(Phi4+Phi6)",
+    "linear": 67,
+    "linear_form": "2v-Phi3"
+  },
+  "factorization": "B(y)=-(y-y_+)(y-y_-)",
+  "fixed_point_law": "F(y)=67+140/y",
+  "fixed_points": {
+    "product": -139.9999999999997,
+    "sum": 67.0,
+    "y_minus_decimal": -2.0281578469810335,
+    "y_minus_exact": "(67-sqrt(5049))/2",
+    "y_plus_decimal": 69.02815784698112,
+    "y_plus_exact": "(67+sqrt(5049))/2"
+  },
+  "honesty_boundary": "This is a finite beta-flow for the inverse-scale coordinate y.  A physical renormalization-group interpretation requires a unit/scaling map from y to continuum energy, length, or coupling variables.",
+  "inverse_scale_equation": "y^2 - 67y - 140 = 0",
+  "part": "CCCXXVIII",
+  "polynomial_beta_numerator": "B(y)=y beta(y)=67y+140-y^2",
+  "rational_beta": "beta(y)=F(y)-y=67+140/y-y",
+  "sample_flow_grid": [
+    {"beta_num":-630.0,"class":"decreasing-scale","y":-10},
+    {"beta_num":-70.0,"class":"decreasing-scale","y":-3},
+    {"beta_num":3.126388037344441e-13,"class":"fixed","y":-2.0281578469810335},
+    {"beta_num":72.0,"class":"increasing-scale","y":-1},
+    {"beta_num":206.0,"class":"increasing-scale","y":1},
+    {"beta_num":710.0,"class":"increasing-scale","y":10},
+    {"beta_num":140.0,"class":"increasing-scale","y":67},
+    {"beta_num":0.0,"class":"fixed","y":69.02815784698112},
+    {"beta_num":-900.0,"class":"decreasing-scale","y":80},
+    {"beta_num":-10080.0,"class":"decreasing-scale","y":140}
+  ],
+  "theorem": "The inverse-scale fixed-point law y=67+140/y induces the canonical finite beta numerator B(y)=67y+140-y^2.  Its zeros are the same W33 closed roots (67±sqrt(5049))/2, its derivative spectrum is ±sqrt(5049), and the positive branch is attracting while the negative branch is repelling.",
+  "title": "Canonical Beta Flow Compiler",
+  "verified": true
+}

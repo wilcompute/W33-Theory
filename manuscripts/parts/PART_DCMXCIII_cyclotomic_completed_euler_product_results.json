@@ -1,0 +1,15 @@
+{
+    "part": "DCMXCIII",
+    "title": "Cyclotomic Completed Euler Product",
+    "status": "verified",
+    "completed_product_formula": "C_X(t) = G_X(t) * Product_{p<=X, p≡1 mod 3} (1 - 1/p)^(-2(1-t))",
+    "local_factor_expansion": "((p-2+t)/(p-t)) * (1 - 1/p)^(-2(1-t)) = 1 + O_t(1/p^2)",
+    "global_completed_product": "C(t) = Product_{p≡1 mod 3} ((p-2+t)/(p-t)) (1 - 1/p)^(-2(1-t))",
+    "largest_cutoff_completed_constants_at_1e6": {
+        "0.0": 0.9583648560707723,
+        "0.5": 0.9803258952598781,
+        "0.75": 0.9902841393268683
+    },
+    "largest_cutoff_mertens_constant_estimate_at_1e6": 1.4033699520769825,
+    "theorem_summary": "Removing the residue-class Mertens kernel prime-by-prime yields a completed split-prime Euler product with absolute convergence; the old normalized PGF shadow factors exactly into this completed product times the normalized split-prime Mertens kernel."
+}

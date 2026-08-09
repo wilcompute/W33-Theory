@@ -1,0 +1,53 @@
+{
+  "architecture_upgrade": "CCCXXVI produced stationarity.  CCCXXVII turns stationarity into a runtime-scale flow with stable and unstable branches.  This is the first RG-like feedback law extracted from the finite W33 action.",
+  "checks": [
+    {"name":"inverse-scale equation coefficient B = 2v-Phi3 = 67","passed":true,"value":67},
+    {"name":"inverse-scale equation coefficient A = (v/2)Phi6 = 140","passed":true,"value":140},
+    {"name":"inverse-scale equation is y^2 - 67y - 140 = 0","passed":true,"value":[67,140]},
+    {"name":"discriminant = q^3(k-1)(Phi4+Phi6)","passed":true,"value":5049},
+    {"name":"positive root is approximately 69.028","passed":true,"value":69.02815784698112},
+    {"name":"negative root is approximately -2.028","passed":true,"value":-2.0281578469810335},
+    {"name":"root sum y+ + y- = 67","passed":true,"value":67.0},
+    {"name":"root product y+ y- = -140","passed":true,"value":-139.9999999999997},
+    {"name":"positive branch is attracting","passed":true,"value":0.029385251692818277},
+    {"name":"negative branch is repelling","passed":true,"value":34.040256177656765},
+    {"name":"flow from y0=B converges near positive root","passed":true,"value":69.02815784698112},
+    {"name":"continued fraction starts with 69","passed":true,"value":[69,35,1,1,17,3]},
+    {"name":"continued fraction exposes W33 tower entries 17,3,8,7","passed":true,"value":[69,35,1,1,17,3,1,8,7,1,3,1]}
+  ],
+  "checks_passed": 13,
+  "checks_total": 13,
+  "coefficients": {
+    "A": 140,
+    "A_form": "(v/2) Phi6",
+    "B": 67,
+    "B_form": "2v - Phi3",
+    "discriminant": 5049,
+    "discriminant_form": "q^3(k-1)(Phi4+Phi6)"
+  },
+  "continued_fraction_y_plus": [69,35,1,1,17,3,1,8,7,1,3,1],
+  "finite_euler_x_equation": "140x^2 + 67x - 1 = 0",
+  "fixed_point_law": "y = 67 + 140/y",
+  "honesty_boundary": "The inverse-scale variable y is a finite runtime scale, not yet proven to be a physical Hubble, mass, or coupling scale.  Physical identification requires a separately derived unit map and RG/scaling interpretation.",
+  "inverse_scale_equation": "y^2 - 67y - 140 = 0",
+  "inverse_scale_substitution": "y = 1/x",
+  "iteration_from_B": [67.0,69.08955223880596,69.02637006433835,69.0282100961354,69.02815632002341,69.02815789159794,69.02815784567775,69.02815784701921,69.02815784698002],
+  "part": "CCCXXVII",
+  "roots": {
+    "x_minus_decimal": -0.4930582703355788,
+    "x_plus_decimal": 0.014486841764150224,
+    "y_minus_decimal": -2.0281578469810335,
+    "y_minus_exact": "(67 - sqrt(5049))/2",
+    "y_plus_decimal": 69.02815784698112,
+    "y_plus_exact": "(67 + sqrt(5049))/2"
+  },
+  "stability": {
+    "negative_branch": "repelling",
+    "negative_derivative_magnitude": 34.040256177656765,
+    "positive_branch": "attracting",
+    "positive_derivative_magnitude": 0.029385251692818277
+  },
+  "theorem": "Under y=1/x, the finite Euler equation becomes y^2-67y-140=0, equivalently y=67+140/y.  The positive root (67+sqrt(5049))/2 is an attracting fixed point, while the negative root is repelling.  Thus the canonical W33 action kernel induces a finite inverse-scale flow.",
+  "title": "Inverse Scale Flow Compiler",
+  "verified": true
+}

@@ -1,0 +1,36 @@
+{
+  "part": "CCCIII",
+  "title": "Algebraic Connectivity (Fiedler Value) of W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "V": 40,
+    "K": 12,
+    "R_EIG": 2,
+    "S_EIG": -4,
+    "LAP_EIG_0": "0",
+    "LAP_EIG_1": "10",
+    "LAP_EIG_2": "16",
+    "ALGEBRAIC_CONNECTIVITY": "10",
+    "LAP_SPEC_RADIUS": "16",
+    "NORM_LAP_EIG_1": "5/6",
+    "NORM_LAP_EIG_2": "4/3",
+    "KIRCHHOFF_INDEX": "267/2",
+    "CONNECTIVITY_RATIO": "5/8",
+    "CHEEGER_LOWER": "5",
+    "CHEEGER_UPPER_FLOAT": 15.491933
+  },
+  "discoveries": [
+    "Algebraic connectivity a(W) = \u03bb\u2082(L) = K - R = 10 = ALPHA: Fiedler value encodes SM coupling proxy",
+    "Laplacian spectral radius = K - S = 16 = EW_GAUGE_4\u00b2 = 4\u00b2: SM gauge factor squared",
+    "Laplacian spectral gap = a(G) = 10 = ALPHA (coincidence with SM coupling)",
+    "Cheeger upper squared = 2*K*a(G) = 240 = EDGES: isoperimetric constant from edge count",
+    "Normalised Laplacian weighted sum = 40 = V (exact spectral identity)",
+    "Connectivity ratio \u03bb\u2082/\u03bb_max = 10/16 = 5/8: expansion quality measure",
+    "Product of distinct nonzero L-eigenvalues = 160 = V*EW = 40*4",
+    "Kirchhoff index R(W) = 267/2 (exact rational): network connectedness",
+    "L-eigenvalue difference = 6 = K/2: spectral spread equals half valency",
+    "Sum of distinct nonzero L-eigenvalues = 26 = 2K+2: linear in valency"
+  ]
+}

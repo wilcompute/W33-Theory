@@ -1,0 +1,92 @@
+{
+  "summary": {
+    "part_number": "CCLXXXVII",
+    "title": "Krein Array, Non-Self-Duality, and Cometric Structure of W(3,3)",
+    "theme": "Cometric association scheme with rational duality",
+    "key_discoveries": [
+      "Krein array parameters: b*_0=24, c*_1=1, b*_1=65/3, c*_2=15",
+      "Ratio identity: (b*_0-c*_1)/(b*_1-c*_2) = Q = 3 (field order connection)",
+      "Non-self-dual: Q-matrix row 2 has denominators 3, coupled to GF(3)",
+      "Dual eigenvalue ratio: (4-(-8/3))/(24-4) = 1/Q = 1/3",
+      "Krein numerators encode W(3,3) structure: differences are MU, -PHI6, PHI4",
+      "Product identity: q^1_{12} * q^2_{12} = q^1_{22} * q^2_{11}",
+      "All Krein params non-negative (confirms Q-polynomial)",
+      "Absolute bound 325 >> 40 (non-tight Q-polynomial scheme)"
+    ],
+    "connections_to_w33": [
+      "Denominators 3 = Q (field order of underlying geometry)",
+      "Differences in numerators yield MU=4, PHI4=10, PHI6=7",
+      "Sum of Q1 numerators = 89; Q2 numerators = 82",
+      "Dual eigenvalues involve Q-matrix entries as Eberlein polynomial values",
+      "Non-self-duality is fingerprint of symplectic geometry over finite field"
+    ],
+    "w33_constants_used": {
+      "v": 40,
+      "k": 12,
+      "lam": 2,
+      "mu": 4,
+      "q": 3,
+      "k2": 27,
+      "mult_r": 24,
+      "mult_s": 15,
+      "phi4": 10,
+      "phi6": 7,
+      "phi3": 13
+    },
+    "krein_params": {
+      "q0_11": "24",
+      "q0_22": "15",
+      "q1_11": "44/3",
+      "q1_12": "25/3",
+      "q1_22": "20/3",
+      "q2_11": "40/3",
+      "q2_12": "32/3",
+      "q2_22": "10/3"
+    },
+    "krein_array": {
+      "b_star_0": "24",
+      "c_star_1": "1",
+      "b_star_1": "65/3",
+      "c_star_2": "15",
+      "ratio_field_connection": "3"
+    },
+    "verification_status": "ALL CHECKS PASS"
+  },
+  "verification": {
+    "b_star_0_eq_mult_r": true,
+    "c_star_1_eq_1": true,
+    "c_star_2_eq_mult_s": true,
+    "b_star_1_computed": true,
+    "b_star_0_minus_c_star_1_eq_20": true,
+    "b_star_1_minus_c_star_2_eq_20_3": true,
+    "ratio_equals_q": true,
+    "product_b0_c2": true,
+    "q_row2_non_integer": true,
+    "q_row2_denominators_have_3": true,
+    "field_order_connection": true,
+    "dual_eigenvalue_ratio_is_1_over_q": true,
+    "sum_q1_numerators_eq_89": true,
+    "sum_q2_numerators_eq_82": true,
+    "diff_q1_q2_11_eq_mu": true,
+    "diff_q1_q2_22_eq_phi4": true,
+    "diff_q1_q2_12_eq_neg_phi6": true,
+    "ratio_q2_q1_11": true,
+    "product_q1_q2_cross_symmetry": true,
+    "theta_star_0_eq_24": true,
+    "theta_star_1_eq_mu": true,
+    "theta_star_2_eq_minus_8_3": true,
+    "theta_star_sum_computed": true,
+    "krein_q0_11_nonneg": true,
+    "krein_q0_22_nonneg": true,
+    "krein_q1_11_nonneg": true,
+    "krein_q1_12_nonneg": true,
+    "krein_q1_22_nonneg": true,
+    "krein_q2_11_nonneg": true,
+    "krein_q2_12_nonneg": true,
+    "krein_q2_22_nonneg": true,
+    "all_krein_nonneg": true,
+    "v_less_than_absolute_bound": true,
+    "absolute_bound_eq_325": true,
+    "not_tight_qpoly": true
+  }
+}

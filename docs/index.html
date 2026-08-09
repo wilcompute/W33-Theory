@@ -2142,6 +2142,18 @@
             <td><a href="#theory-spread-controller">Controller trichotomy</a></td>
           </tr>
           <tr>
+            <td>Chamber Hecke carrier</td>
+            <td>Two 160-chamber panels generate the 8D type-C<sub>2</sub> image; the chiral packet is a literal,
+              uniformly isoclinic point/line 24+24 carrier</td>
+            <td><a href="#pass-4324-4333-chamber-hecke-and-audit">Chamber theorem and audit</a></td>
+          </tr>
+          <tr>
+            <td>Executable recursive runtime</td>
+            <td>HoloBox gives one leaf/network state grammar, addressed mailbox/run, path-copy checkpoints, and
+              independent Python/GAP certificates</td>
+            <td><a href="#holobox-fractal-microvm">HoloBox frontier</a></td>
+          </tr>
+          <tr>
             <td>Curved external factor</td>
             <td>Explicit finite seeds; continuum spectral-action asymptotics remain open</td>
             <td><a href="#theory-curved-4d">4D boundary</a></td>
@@ -18262,10 +18274,14 @@
             with GAP/Python witnesses and regression certificates. The current frontier includes the all-odd-q
             regular-spread SRG theorem, complete spectra and divisible codes for four named q=27 families, all fifty
             quadratic Hom maps and their <code>S3</code> character, and the exact separation of the order-48 abstract
-            controller, order-24 single-<code>J</code> image, and infinite arithmetic carrier.</p>
-          <p><strong>Holonet software:</strong> the repository contains a runnable finite-geometry VM, routing and
-            scheduling experiments, simulators, and reproducibility tools. These are software artifacts, not evidence
-            that a photonic device or fault-tolerant quantum computer has been physically built.</p>
+            controller, order-24 single-<code>J</code> image, and infinite arithmetic carrier. The 160-chamber Hecke
+            image and its uniformly isoclinic point/line <code>24+24</code> carrier are now exact object-level
+            additions.</p>
+          <p><strong>Holonet software:</strong> the repository contains finite-geometry VMs, routing and scheduling
+            experiments, simulators, reproducibility tools, and HoloBox's executable nested content graph with
+            addressed mailbox/run and path-copy checkpoints. These are software artifacts, not evidence that a
+            photonic device, OCI-conformant runtime, hardware-isolated microVM, or fault-tolerant quantum computer has
+            been physically built.</p>
           <p><strong>Physics interpretation:</strong> Standard-Model, flavour, gravity, and continuum connections are
             research hypotheses unless an explicit map and theorem establish them. Numerical agreement or a shared
             dimension is never promoted by itself.</p>
@@ -28914,7 +28930,7 @@ deliberately &mdash; including the parts that turned out to be wrong.</p>
   <h2>It was never a Cayley graph, and the zeta needed a different theorem</h2>
   <p><strong>The correction.</strong> The 81-frame instruction graph had been called a Cayley graph of ASp(4,3) since Pass 3042. It is not one. The frames are a coset space, so the object is a <strong>Schreier</strong> graph, and Schreier graphs collide by construction: distinct opcodes may send the same frame to the same image. Its degrees run 2 to 8. The computations were unaffected; the wrong name was not, because it made regularity feel like a property the graph had to have.</p>
   <p><strong>Three claims withdrawn, all from that one cause.</strong> Pass 3060's Ihara--Bass pole count applied a k-regular formula to a graph with no single k. Pass 4201's &ldquo;the instruction layer can be Ramanujan&rdquo; measured a five-generator graph whose only Clifford operation draws no edges at all: every edge S_f draws is already a translation edge, so the object measured was the 4-dimensional discrete torus C3^4, and its Ramanujan property is a fact about an abelian group of order 81. Pass 3042's headline &ldquo;the instruction graph misses Ramanujan by 3.23%&rdquo; graded a graph with degrees 2 to 8 against the threshold for a 4-regular one. The <em>measurement</em> behind that last figure survives intact and is exact: the walk is doubly stochastic, its stationary distribution is uniform, |lambda_2| = 0.893992320, relaxation 9.43 and mixing 15 instructions. Only the grade was withdrawn.</p>
-  <p><strong>The zeta, without regularity.</strong> Bass's determinant relation needs a degree; the Ihara zeta does not. For any finite graph, zeta^-1(u) = det(I - uB) with B the Hashimoto non-backtracking matrix on the 2E directed edges, and no vertex degree appears in the definition. The instruction graph has V = 81 and E = 261, so B is 522x522 -- a small eigenvalue problem that was available at Pass 3060. The result: rho(B) = 5.746872680, zeta radius 0.174007683, and of the 160 non-trivial Hashimoto eigenvalues <strong>none</strong> lies on the critical circle. <strong>The instruction graph does not satisfy the graph Riemann Hypothesis.</strong></p>
+  <p><strong>The zeta, without regularity.</strong> Bass's general determinant relation uses the full degree matrix <em>D</em>, not a single regular degree: det(I−uB)=(1−u²)<sup>E−V</sup>det(I−uA+u²(D−I)). The Ihara definition itself is zeta<sup>−1</sup>(u)=det(I−uB) on the 2E directed edges. The instruction graph has V=81 and E=261, so B is 522×522. Its spectral radius is 5.746872680 and zeta radius 0.174007683. The repo's “graph RH” circle test is an internal extension for this irregular graph; the cited RH⇔Ramanujan theorem is the regular case.</p>
   <p><strong>Calibrated against known answers before use.</strong> The same pipeline returns K4's textbook zeta, reproduces the degree-four Levi graph's closed form (1-u^2)^81 (1-9u^2) (1+9u^4)^24 (1+3u^2)^30 exactly, and gives W(3,3) exactly <strong>78</strong> non-trivial poles, all on the critical circle -- 78 = dim(E6), this project's standing count. An earlier draft of the classifier miscounted the Perron root and reported both reference graphs as failing; running graphs whose answer is already known is what caught it.</p>
   <p><strong>A tri-equivalence over the generator pool.</strong> Across all 258 connected generating sets of size four or five, the sets satisfying the graph Riemann Hypothesis are <em>exactly</em> the regular sets -- three of them, all the same torus in different labelling, and none universal. Every other set returns 0 of 160 poles on the circle, not a near miss. So a generating set satisfies the graph RH only by being regular, is regular only by being abelian, and being abelian is exactly what stops it computing. The instruction layer cannot be spectrally extremal for the same reason it can compute at all.</p>
   <p><strong>What the asymmetry actually is.</strong> The address graph W(3,3) is 12-regular and attains the Ramanujan optimum exactly. The instruction graph does not <em>miss</em> that optimum -- it has none to miss, because Ramanujan optimality is a property of k-regular graphs. The difference between the two layers is not a gap in performance but a difference in kind: one is the sort of object that can be optimal, and the other is not. The geometry is built from incidence, which is symmetric by construction; the instruction set is built from whatever generates the group cheaply, which has no reason to be.</p>
@@ -28926,13 +28942,13 @@ deliberately &mdash; including the parts that turned out to be wrong.</p>
 
   <p><strong>The zeta does not identify W(3,3).</strong> Spence classified exactly 28 non-isomorphic SRG(40,12,2,4) graphs. All 28 were run through the same pipeline: every one is Ramanujan, every one satisfies the graph Riemann Hypothesis, every one returns &rho;(B) = 11 with the same 78 poles on the critical circle. The Ihara zeta of a regular graph is fixed by its spectrum and an SRG's spectrum is fixed by its parameters, so all 28 are zeta-identical <em>by construction</em>. The striking coincidence 78 = dim(E<sub>6</sub>) is therefore a property of the parameter set (40,12,2,4) &mdash; not evidence that this particular graph is the exceptional one. Every constant derivable from the parameters alone was listed so the same over-read cannot recur: r,s = 2,&minus;4; f,g = 24,15; the Laplacian spectrum; the spanning-tree count; the Ramanujan criterion.</p>
 
-  <p><strong>What does distinguish it, and what does not.</strong> The automorphism orders of all 28 were computed exactly: they span 1 to 51,840 across 20 distinct values &mdash; an invariant the spectrum discards entirely, which is how a graph can be exceptional and spectrally anonymous at once. But the maximum 51,840 = |Sp(4,3)| is attained by <strong>two</strong> of the 28, not one. Those two agree on every cheap invariant &mdash; rank 3, vertex-transitive, 160 triangles, 40 four-cliques, identical local spectra, both locally 4K<sub>3</sub> &mdash; and an exhaustive search confirms they are genuinely non-isomorphic. Building the generalized quadrangle GQ(3,3) from the symplectic form settles what they are: one is the <strong>point</strong> graph and the other the <strong>line</strong> graph of a single geometry, verified by explicit isomorphism. For odd q the duality W(3,q) &harr; Q(4,q) is not an isomorphism, which is exactly why they share everything measurable and remain distinct.</p>
+  <p><strong>What does distinguish it, and what does not.</strong> The automorphism orders of all 28 span 1 to 51,840 across 20 values, but the maximum 51,840=|Sp(4,3)| is attained by <strong>two</strong> graphs. They agree on the listed local and spectral invariants and are non-isomorphic. Earlier Passes 82–84 had already separated them by ovoid counts and critical groups, so this was a rediscovery, not the first separator. Rebuilding GQ(3,3) identifies the pair explicitly as its point graph W(3,3) and line graph Q(4,3).</p>
 
   <p><strong>The two 40s are different objects.</strong> Both are transitive Sp(4,3)-sets of size 40 with stabilisers of order 1,296, so counting cannot separate them. Comparing permutation characters can: over all 51,840 group elements, <strong>29,950 fix a different number of points than of lines</strong>. The point and line stabilisers are non-conjugate subgroups of the same order. Anywhere a text says &ldquo;the 40&rdquo; without saying which, it names two genuinely different objects at once.</p>
 
-  <p><strong>The machine's bias is one opcode's shadow.</strong> The instruction layer's slow mode localises on a hyperplane, and the cause is not low degree &mdash; the heavy frames sit slightly <em>above</em> average degree. It is a nearly conserved coordinate. Tracing it: all three linear opcodes treat the two halves of the register identically, so the asymmetry is not in the Clifford part at all. It is the load port. Translations act on the affine frames and lines are not a vector space, so a load port exists only on the point side of the duality, and a load port must pick a direction. The machine must be able to write an address; only one side admits that operation; that operation picks a direction; and that direction is the entire bias. Forced, not chosen.</p>
+  <p><strong>The machine's asymmetry, corrected.</strong> A literal p/f conjugation sends F<sub>p</sub> to the missing F<sub>f</sub>; matching plane-fixation booleans did not prove symmetry. Affine translations act on the 81 frames but descend to neither 40-point nor 40-line projective carrier, so they do not force a point-side projective load port. Exact conjugation gives machine symmetry A/B/C/D = no/yes/no/yes. The shipped A remains p/f biased, but the old “one opcode's forced point-side shadow” chain is withdrawn.</p>
 
-  <p><strong>A unification that failed, and is reported as failing.</strong> With the load port implicated in four separate facts &mdash; the only free generator, the only route to connectivity, the sole source of bias, the one operation with no dual &mdash; &ldquo;everything traces to the load port&rdquo; became the obvious story. The test that could refute it did. Localisation does track the load port. The arrow of time does not: one-way transitions go 243 &rarr; 297 &rarr; 378 as load ports are added, and the machine with <em>no</em> load port still has 216. Irreversibility comes from the linear opcodes not being involutions. The machine has two independent asymmetries with two separate prices, and neither purchase substitutes for the other.</p>
+  <p><strong>A unification that failed, and is reported as failing.</strong> Irreversibility does not come from one sector. Linear-only opcodes contribute 216 one-way pairs and the positive translation alone contributes 81; inverse-closing either sector removes only that sector's arrow. The shipped machine has two independent structural questions &mdash; p/f swap and directed inverse closure &mdash; and both can be removed in machine D.</p>
 
   <p><strong>The design space, priced.</strong> Two independent defects means four machines, not one:</p>
   <div style="overflow-x:auto"><table>
@@ -28944,11 +28960,104 @@ deliberately &mdash; including the parts that turned out to be wrong.</p>
       <tr><td>D &mdash; symmetric, reversible</td><td>12</td><td>13</td><td>8.7621</td><td>0.4604</td><td>0</td></tr>
     </tbody>
   </table></div>
-  <p>C shares A's spectrum exactly, because closing an instruction set under inverses adds no new undirected edges &mdash; it buys thermodynamics and nothing spectral. The two axes are visibly orthogonal. Machine D removes the arrow of time <em>exactly</em>, and reduces the bias without abolishing it: a zero-asymmetry machine does not exist in this family, and the obstruction is counting rather than choice.</p>
+  <p>C shares A's undirected spectrum exactly. Machine D removes the directed arrow and p/f structural bias <em>exactly</em>. Its 0.460435 localisation peak occurs equally on the swapped coordinate profiles, so it is symmetric localisation, not residual p/f bias. These are finite analytic rows; B and D were not synthesized in Yosys, so the table is not yet a hardware price table.</p>
 
-  <p><strong>The zeta's domain is a register.</strong> A flag &mdash; an incident point&ndash;line pair &mdash; is exactly an edge of the Levi graph, and there are 160 of each. The 320 directed edges are exactly the basis on which the non-backtracking matrix is written. So the Ihara zeta of the address geometry is not bookkeeping applied from outside: a machine holding a directed incident pair and forbidden to immediately reverse is literally performing the walk whose growth rate is &rho;(B) = 3. That layer, unlike the instruction layer, satisfies the graph Riemann Hypothesis exactly.</p>
+  <p><strong>The zeta carrier is a register candidate.</strong> A flag &mdash; an incident point&ndash;line pair &mdash; is exactly an edge of the Levi graph, and the 320 oriented flags are exactly the Hashimoto basis. This is an object-level carrier identification. Turning the three possible non-backtracking continuations into an executable instruction still requires a selector, encoding and transition circuit; the old prose promoted adjacency to hardware too early.</p>
 
   <p><strong>114 finished write-ups nobody could read.</strong> A census found 114 standalone LaTeX sections that had been written, committed, and never included by any manuscript. Routed to their intended documents and vetted for dangling references, duplicate labels and formatting faults, 108 are now reachable and the remaining six were read and placed. Two silent cross-reference bugs surfaced in the process: a label defined twice, so three references resolved to the wrong section, and two mutually-referencing sections routed into different documents. The count is now zero and a gate keeps it there.</p>
+</section>
+<section id="pass-4324-4333-chamber-hecke-and-audit" class="section theorem-section">
+  <div class="section-number">Passes 4324&ndash;4334</div>
+  <h2>The chamber machine closes algebraically &mdash; and the frontier corrects itself</h2>
+
+  <p><strong>Two switches generate the chamber algebra.</strong> On the 160 incident
+  point&ndash;line chambers, P changes the line at a fixed point and L changes the point on a
+  fixed line. Exact GAP arithmetic gives P&sup2;=2P+3I, L&sup2;=2L+3I and
+  PLPL=LPLP. The eight standard words are independent, so this is the full
+  eight-dimensional q=3 type-C<sub>2</sub> Iwahori&ndash;Hecke image. The chamber module is
+  1+15+15+81+48, explaining the long-standing flag-scheme split 1+30+48+81.</p>
+
+  <p><strong>The Levi Hashimoto walk factors at register level.</strong> In orientation
+  order, B<sub>Levi</sub>=[[0,L],[P,0]], hence B<sub>Levi</sub>&sup2;=diag(LP,PL).
+  K=LP has characteristic polynomial
+  (x−9)(x−1)<sup>81</sup>(x+3)<sup>30</sup>(x&sup2;+9)<sup>24</sup>.
+  The chirality Ω=LP−PL has rank 48 and Π<sub>48</sub>=−Ω&sup2;/60, so
+  Ω/√60 is a canonical complex structure on the conjugate 24+24 channel.</p>
+
+  <p><strong>The 24+24 channel now has literal point/line carriers.</strong> Pull the
+  eigenvalue-2 projectors of the W33 point graph and dual line graph to chambers, obtaining
+  rank-24 projectors Q<sub>p</sub> and Q<sub>ℓ</sub>. Their images meet only in zero and
+  span im Π<sub>48</sub>. They are uniformly isoclinic:
+  Q<sub>p</sub>Q<sub>ℓ</sub>Q<sub>p</sub>=(3/8)Q<sub>p</sub> and conversely, so all
+  24 principal angles have cosine √6/4. For Q=Q<sub>p</sub>+Q<sub>ℓ</sub>,
+  Π<sub>48</sub>=(8/5)(2Q−Q&sup2;). This is an object-level carrier identity, not only
+  a spectral count.</p>
+
+  <p><strong>The old folded cubic now has an exact normal form.</strong> In the packet
+  algebra {Π<sub>48</sub>,X,Ω,XΩ},
+  F=−68Π<sub>48</sub>−31X−(21/2)Ω+(2/3)XΩ and
+  (F+68Π<sub>48</sub>)&sup2;=−689Π<sub>48</sub>. This explains the old numerical
+  −6455 exactly. It is a finite operator identity, not a particle, mass, coupling or
+  continuum-propagator identification.</p>
+
+  <p><strong>Four exact corrections shipped with the theorem.</strong></p>
+  <ul>
+    <li>The stored Z<sub>2731</sub> cover has a zero-voltage eight-cycle and girth exactly
+      8, not at least 16; Pass 4260's 4,373-node tree ball is conditional.</li>
+    <li>The Kotani&ndash;Sunada irregular non-real-pole annulus contains square roots. The
+      old no-square-root band-filling metric is withdrawn.</li>
+    <li>Machines B and D are exactly p/f-swap invariant. D removes both named asymmetries;
+      0.460435 is symmetric localisation. Affine translations descend to neither
+      projective 40-carrier.</li>
+    <li>The incidence comparator detects 1,656/1,920=69/80 differential rail faults and
+      0/960 shared-control faults. The former 95.71% experiment used a golden run.</li>
+  </ul>
+
+  <p><strong>One arithmetic component joins growth and memory.</strong> The irreducible
+  degree-33 factor has one root in (5.74,5.75) and one in (3.349,3.350), exactly isolated
+  by Sturm sequences. Global nonbacktracking growth and the reported slow real mode are
+  Galois conjugates. Constructing the rational 33-dimensional projector is the next
+  representation-theoretic step.</p>
+
+  <p><strong>Reproduce:</strong>
+    <a href="chamber-hecke-audited-corrections-4324-4333.html">standalone evidence card</a>,
+    <code>analysis/w33_pass4324_4327_chamber_hecke_hashimoto.g</code>, and
+    <code>analysis/w33_pass4328_4333_audited_corrections.g</code>, and
+    <code>analysis/w33_pass4334_point_line_chiral_carrier.g</code>. The witnesses replay
+    31/31, 28/28, and 17/17 exact checks.</p>
+</section>
+<section id="holobox-fractal-microvm" class="section theorem-section">
+  <div class="section-number">Executable systems frontier</div>
+  <h2>HoloBox: the recursive network is now an executable VM state</h2>
+
+  <p><strong>One lifecycle at every depth.</strong> A W33 leaf and a recursive network
+    of 40 children use the same immutable state grammar. The runtime can resolve any
+    radix-40 address without expanding siblings, route a mailbox value to it, execute
+    that guest, and checkpoint the result by replacing only the digests on the touched
+    path. This is stronger than the older recursive counting law: nested state now
+    changes and persists.</p>
+
+  <p><strong>The level-six object is enormous logically and tiny structurally.</strong>
+    A uniform root denotes 105,025,641 logical VM instances and 4,096,000,000 leaf
+    chamber slots, yet stores only six unique node blobs. A depth-five mailbox delivery
+    creates six blobs; recipient execution creates six more; every untouched sibling
+    keeps the same digest. The checked six-digit route takes 12 legal W33 line
+    transactions, exactly the bound 2n, with no next-hop tables. That unit is a
+    logical line-bus transaction; BT827's separate chart-aware lowering remains 8n
+    because it counts three cube plus five chart-web moves per digit.</p>
+
+  <p><strong>The claim is intentionally narrow.</strong> The earlier Witting architecture
+    already specified CID containers, WASM/OCI components, policies, receipts, and a
+    Projection Engine. HoloBox implements the missing nested lifecycle and content graph.
+    Its output is OCI-shaped, not OCI-conformant, and the deterministic Python model is
+    not Linux/KVM isolation, a guest kernel, confidential attestation, or a performance
+    result.</p>
+
+  <p><strong>Reproduce:</strong>
+    <a href="holobox-fractal-microvm.html">open the standalone HoloBox evidence card</a>,
+    then run <code>analysis/holobox.py</code> and
+    <code>tests/test_w33_fractal_microvm_runtime.py</code>. The frozen witness reports
+    14/14 exact checks.</p>
 </section>
 </body>
 

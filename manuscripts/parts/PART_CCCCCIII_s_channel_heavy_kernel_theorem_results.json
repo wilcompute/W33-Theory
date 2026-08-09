@@ -1,0 +1,71 @@
+{
+  "part": "CCCCCIII",
+  "title": "s-Channel Heavy Kernel Theorem",
+  "atoms": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "k": 12,
+    "v": 40,
+    "E": 240,
+    "directed_edges": 480,
+    "r": 2,
+    "s": -4,
+    "f": 24,
+    "g": 15,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7
+  },
+  "spectral_gaps": {
+    "Delta_r": 10,
+    "Delta_s": 16,
+    "Delta_s_over_Delta_r": "8/5",
+    "Delta_s_minus_Delta_r": 6,
+    "Delta_s_plus_Delta_r": 26
+  },
+  "equipartition": {
+    "f_times_Delta_r": 240,
+    "g_times_Delta_s": 240,
+    "edge_count": 240,
+    "restricted_total": 480,
+    "directed_edges": 480,
+    "statement": "both restricted channels carry 240 units; together they carry the 480-dimensional directed-edge/spectral-triple carrier"
+  },
+  "heavy_root_channel": {
+    "Delta_s": 16,
+    "multiplicity_g": 15,
+    "g_Delta_s": 240,
+    "E8_roots": 240,
+    "E8_dim_edges_plus_rank": 248,
+    "interpretation": "s-channel gap 16 with multiplicity 15 reconstructs the 240-edge/E8-root carrier"
+  },
+  "two_channel_context": {
+    "lambda_H": "13/100",
+    "A_CKM": "81/100",
+    "PMNS_theta13": "9/400",
+    "SU5_dim": 24,
+    "SO10_dim": 45,
+    "E6_dim": 78
+  },
+  "checks": {
+    "true_master_equation": true,
+    "w33_atoms": true,
+    "restricted_eigenvalues_and_multiplicities": true,
+    "delta_r_is_phi4": true,
+    "delta_s_is_lambda_fourth": true,
+    "delta_s_minus_delta_r_is_q_factorial": true,
+    "delta_s_plus_delta_r_is_2_phi3": true,
+    "gap_ratio_is_8_over_5": true,
+    "r_energy_equals_edges": true,
+    "s_energy_equals_edges": true,
+    "restricted_energy_total_is_480": true,
+    "e8_dim_from_edges_plus_rank": true,
+    "lambda_H_still_13_over_100": true,
+    "A_ckm_still_81_over_100": true,
+    "pmns_theta13_still_9_over_400": true,
+    "su5_so10_e6_dims": true
+  },
+  "all_checks_pass": true,
+  "interpretation": "The missing s=-4 channel is the heavy/root completion channel. Its gap Delta_s=16=lambda^4, and its multiplicity g=15 gives g*Delta_s=240, exactly the W(3,3) edge count and E8 root count. Together with the r-channel identity f*Delta_r=240, the restricted spectrum splits into two equal 240-unit carriers whose sum is the 480 directed-edge/spectral-triple dimension."
+}

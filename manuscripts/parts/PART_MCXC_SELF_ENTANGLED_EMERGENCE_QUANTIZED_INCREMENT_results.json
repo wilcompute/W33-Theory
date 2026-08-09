@@ -1,0 +1,42 @@
+{
+  "part": "MCXC",
+  "theorem": "Self-entangled emergence quantized increment law",
+  "baseline": {
+    "seed": 24,
+    "q4_edges": 32,
+    "monodromy": 18432,
+    "identity": "18432 = 32*24^2"
+  },
+  "quantized_jumps": {
+    "delta_plus": 1568,
+    "delta_minus": 1504,
+    "mean_jump": 1536,
+    "asymmetry": 64,
+    "identity": "Delta+=1568, Delta-=1504, mean=1536, asymmetry=64"
+  },
+  "invertibility": {
+    "m_plus": 20000,
+    "m_minus": 16928,
+    "seed_plus": 25,
+    "seed_minus": 23,
+    "identity": "M+Delta+=32*25^2 and M-Delta-=32*23^2"
+  },
+  "finite_universality_surrogate": {
+    "statement": "unit self-entanglement seed steps induce exact, invertible quantized emergence jumps",
+    "boundary": "finite discrete increment law; not a continuum dynamical equation"
+  },
+  "claim_boundary": "finite quantized increment/inversion law for self-entanglement emergence packets",
+  "checks": {
+    "baseline_identity": true,
+    "delta_plus_formula": true,
+    "delta_minus_formula": true,
+    "mean_jump_is_48_times_32": true,
+    "jump_asymmetry_is_2_edges": true,
+    "forward_plus_step_is_exact": true,
+    "forward_minus_step_is_exact": true,
+    "inverse_plus_recovers_seed_plus_one": true,
+    "inverse_minus_recovers_seed_minus_one": true,
+    "all_packets_integral": true
+  },
+  "n_verified": 10
+}

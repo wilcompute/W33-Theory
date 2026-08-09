@@ -1,0 +1,46 @@
+{
+  "part_number": "CCLXXXIX",
+  "title": "Quantum Error Correcting Codes \u2014 W(3,3) as the Ternary Hamming Code",
+  "theme": "Ham(4,3) = [40,36,3]_3 perfectly encodes the SM fermion partition",
+  "key_discoveries": [
+    "Ham(4,3) = [40,36,3]_3: length=V, dim=QUARKS_36, d=Q",
+    "Sim(4,3) = [40,4,27]_3: dim=EW_GAUGE_4, d=K2",
+    "Perfect code: |B(c,1)| = 81 = Q^EW_GAUGE_4 = 3^4",
+    "|PG(3,3)| = 40 = V = columns of parity-check matrix",
+    "SM partition: 36 info + 4 parity = 40 = V",
+    "Min distance 3 = Q = number of SM generations",
+    "Qutrit Pauli operators: 40 = V (W(3,3) as 2-qutrit phase space)"
+  ],
+  "hamming_code": {
+    "block_length": 40,
+    "dimension": 36,
+    "min_distance": 3,
+    "redundancy": 4,
+    "is_perfect": true,
+    "ball_size": 81,
+    "covering_radius": 1
+  },
+  "simplex_code": {
+    "block_length": 40,
+    "dimension": 4,
+    "min_distance": 27,
+    "num_nonzero": 80,
+    "is_equidistant": true
+  },
+  "sm_correspondence": {
+    "quarks_eq_dimension": true,
+    "ew_gauge_eq_redundancy": true,
+    "generations_eq_min_dist": true,
+    "partition_sum": 40
+  },
+  "verification_status": "ALL CHECKS PASS",
+  "created": "2026-05-04",
+  "connections": [
+    "Part CCLXXXVIII: Delsarte bound 36 = k_Hamming (two independent proofs)",
+    "Part CCLXXXVII: Krein array involves MULT_R=24, MULT_S=15 (Sim wt-spectrum related)",
+    "Part CCLXXXVI: Krein parameters from symplectic structure GF(3)^4",
+    "Part CCLXX: SM bijection 40 vertices <-> 40 SM particles (now code-theoretic)",
+    "Min dist 3 = Q = field order = num generations (triple coincidence)",
+    "Simplex min dist 27 = K2 = non-adjacency number in W(3,3) SRG"
+  ]
+}

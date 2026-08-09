@@ -1,0 +1,97 @@
+{
+  "part": "MCLXXXII",
+  "theorem": "Q4 antipodal tomotope-Reye double cover",
+  "external_source_alignment": {
+    "networkx_hypercube_graph": "Q_n nodes are bit tuples and edges differ in exactly one bit",
+    "mathworld_hypercube": "the tesseract has 16 vertices, 32 edges, 24 squares, and 8 cubes",
+    "tomotope_paper": "the tomotope medial layer I_{1,2} has Reye parameters (12_4, 16_3)"
+  },
+  "q4_source": {
+    "face_nodes": 24,
+    "edge_nodes": 32,
+    "incidences": 96,
+    "degree_profile": {
+      "3": 32,
+      "4": 24
+    },
+    "component_sizes": [
+      56
+    ]
+  },
+  "antipodal_quotient": {
+    "translation": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "face_orbits": 12,
+    "edge_orbits": 16,
+    "incidences": 48,
+    "degree_profile": {
+      "3": 16,
+      "4": 12
+    },
+    "component_sizes": [
+      28
+    ],
+    "incidence_lift_multiplicity_profile": {
+      "2": 48
+    },
+    "isomorphic_to_reye": true
+  },
+  "reye_model": {
+    "points": 12,
+    "lines": 16,
+    "incidences": 48,
+    "point_line_profile": "12_4, 16_3",
+    "degree_profile": {
+      "3": 16,
+      "4": 12
+    },
+    "component_sizes": [
+      28
+    ],
+    "construction": "12 points = cube vertices + center + 3 infinity points; 16 lines = 12 cube edges + 4 body diagonals"
+  },
+  "tomotope_lock": {
+    "vertices": 4,
+    "edges": 12,
+    "triangles": 16,
+    "tetrahedra": 4,
+    "hemioctahedra": 4,
+    "cells": 8,
+    "automorphism_group_order": 96,
+    "monodromy_group_order": 18432,
+    "flags": 192,
+    "edge_triangle_medial_incidences": 48,
+    "q4_to_medial_cover_degree": 2,
+    "q4_incidence_equals_automorphism_group_order": true,
+    "tomotope_flags_over_q4_incidence": 2
+  },
+  "reading": "The MCLXXXI Q4 plaquette packet is a connected two-sheet antipodal cover of the Reye incidence graph that the tomotope paper identifies with the tomotope edge-triangle medial layer. The lifted 96 incidences are exactly the tomotope automorphism order; adjoining the remaining rank-0 vertex choice doubles this to the 192 tomotope flags.",
+  "claim_boundary": "finite incidence-cover theorem only; this proves a Q4/tomotope-Reye combinatorial bridge, not a continuum field equation",
+  "checks": {
+    "q4_source_is_mclxxxi_incidence_graph": true,
+    "q4_source_is_connected": true,
+    "antipodal_has_twelve_face_orbits": true,
+    "antipodal_has_sixteen_edge_orbits": true,
+    "antipodal_has_no_fixed_faces": true,
+    "antipodal_has_no_fixed_edges": true,
+    "quotient_has_reye_size": true,
+    "quotient_degree_profile_is_reye_profile": true,
+    "quotient_is_connected": true,
+    "each_quotient_incidence_has_two_lifts": true,
+    "reye_has_12_points_16_lines": true,
+    "reye_incidence_profile_is_12_4_16_3": true,
+    "reye_is_connected": true,
+    "q4_antipodal_quotient_is_reye": true,
+    "tomotope_medial_count_is_reye": true,
+    "q4_incidence_is_double_tomotope_medial": true,
+    "q4_incidence_equals_tomotope_automorphism_order": true,
+    "tomotope_flags_are_two_q4_incidence_packets": true,
+    "tomotope_cells_match_q4_cube_facets": true,
+    "claim_boundary_preserved": true
+  },
+  "n_verified": 20
+}

@@ -1,0 +1,327 @@
+{
+  "part": "CCLXXVI",
+  "title": "Klein Quartic to the 57-cell / 11-cell / Tomotope Triad",
+  "q": 3,
+  "V": 40,
+  "K": 12,
+  "MU": 4,
+  "PHI6": 7,
+  "checks_total": 50,
+  "checks_passed": 50,
+  "checks_failed": 0,
+  "failed_check_names": [],
+  "all_pass": true,
+  "sections": {
+    "A": "Consecutive trio (E_11, V_K, V_57) = (55, 56, 57)",
+    "B": "57-cell edges from Klein automorphism order",
+    "C": "11-cell automorphisms via Klein vertex count",
+    "D": "57-cell automorphisms via Klein vertex count",
+    "E": "Tomotope / Klein via Klitzing operation ladder",
+    "F": "E\u2087 dimension from 57-cell prime P\u2081\u2089",
+    "G": "PSL(2,p) tower complete with PHI6 slot",
+    "H": "W(3,3) arithmetic cross-identities"
+  },
+  "key_identity": "E_11=55=V_K\u22121; V_K=56=dim(E\u2087); V_57=57=V_K+1 (consecutive triple); E_57=171=|PSL(2,7)|+Q; F_K=24 is Klitzing tomotope rung 2; FLAGS(tomotope)=192=|PSL(2,7)|+F_K; dim(E\u2087)=7\u00d719=PHI6\u00d7P\u2081\u2089",
+  "checks": [
+    {
+      "name": "trio_e11_eq_vk_minus_1",
+      "pass": true,
+      "lhs": "55",
+      "rhs": "55"
+    },
+    {
+      "name": "trio_vk_eq_e7_min_rep",
+      "pass": true,
+      "lhs": "56",
+      "rhs": "56"
+    },
+    {
+      "name": "trio_v57_eq_vk_plus_1",
+      "pass": true,
+      "lhs": "57",
+      "rhs": "57"
+    },
+    {
+      "name": "trio_consecutive",
+      "pass": true,
+      "lhs": "True",
+      "rhs": "True"
+    },
+    {
+      "name": "trio_span",
+      "pass": true,
+      "lhs": "2",
+      "rhs": "2"
+    },
+    {
+      "name": "trio_span_is_LAM",
+      "pass": true,
+      "lhs": "2",
+      "rhs": "2"
+    },
+    {
+      "name": "b_e57_eq_psl27_plus_Q",
+      "pass": true,
+      "lhs": "171",
+      "rhs": "171"
+    },
+    {
+      "name": "b_e57_eq_2ek_plus_Q",
+      "pass": true,
+      "lhs": "171",
+      "rhs": "171"
+    },
+    {
+      "name": "b_e57_eq_v57_times_Q",
+      "pass": true,
+      "lhs": "171",
+      "rhs": "171"
+    },
+    {
+      "name": "b_psl27_eq_e57_minus_Q",
+      "pass": true,
+      "lhs": "168",
+      "rhs": "168"
+    },
+    {
+      "name": "b_ek_eq_e57_minus_psl27",
+      "pass": true,
+      "lhs": "168",
+      "rhs": "168"
+    },
+    {
+      "name": "c_v11_eq_K_minus_1",
+      "pass": true,
+      "lhs": "11",
+      "rhs": "11"
+    },
+    {
+      "name": "c_e11_eq_C_v11_2",
+      "pass": true,
+      "lhs": "55",
+      "rhs": "55"
+    },
+    {
+      "name": "c_ord_psl2_11_eq_K_e11",
+      "pass": true,
+      "lhs": "660",
+      "rhs": "660"
+    },
+    {
+      "name": "c_ord_psl2_11_via_vk",
+      "pass": true,
+      "lhs": "660",
+      "rhs": "660"
+    },
+    {
+      "name": "d_ord_psl2_19_eq_v57_A5",
+      "pass": true,
+      "lhs": "3420",
+      "rhs": "3420"
+    },
+    {
+      "name": "d_ord_psl2_19_via_vk",
+      "pass": true,
+      "lhs": "3420",
+      "rhs": "3420"
+    },
+    {
+      "name": "d_gcd_psl2_19_psl27_eq_K",
+      "pass": true,
+      "lhs": "12",
+      "rhs": "12"
+    },
+    {
+      "name": "d_gcd_psl2_11_psl27_eq_K",
+      "pass": true,
+      "lhs": "12",
+      "rhs": "12"
+    },
+    {
+      "name": "d_gcd_psl2_11_psl2_19",
+      "pass": true,
+      "lhs": "60",
+      "rhs": "60"
+    },
+    {
+      "name": "e_klitzing_rung1_eq_K",
+      "pass": true,
+      "lhs": "12",
+      "rhs": "12"
+    },
+    {
+      "name": "e_klitzing_rung2_eq_FK",
+      "pass": true,
+      "lhs": "24",
+      "rhs": "24"
+    },
+    {
+      "name": "e_klitzing_rung3_eq_4K",
+      "pass": true,
+      "lhs": "48",
+      "rhs": "48"
+    },
+    {
+      "name": "e_klitzing_rung4_eq_8K",
+      "pass": true,
+      "lhs": "96",
+      "rhs": "96"
+    },
+    {
+      "name": "e_klitzing_pure_doubling",
+      "pass": true,
+      "lhs": "True",
+      "rhs": "True"
+    },
+    {
+      "name": "e_tomo_flags_eq_psl27_fk",
+      "pass": true,
+      "lhs": "192",
+      "rhs": "192"
+    },
+    {
+      "name": "e_tomo_flags_minus_psl27",
+      "pass": true,
+      "lhs": "24",
+      "rhs": "24"
+    },
+    {
+      "name": "e_gcd_ord_tomo_psl27",
+      "pass": true,
+      "lhs": "24",
+      "rhs": "24"
+    },
+    {
+      "name": "f_P19_eq_K_plus_Q_plus_MU",
+      "pass": true,
+      "lhs": "19",
+      "rhs": "19"
+    },
+    {
+      "name": "f_v57_eq_Q_times_P19",
+      "pass": true,
+      "lhs": "57",
+      "rhs": "57"
+    },
+    {
+      "name": "f_e7_dim_eq_phi6_P19",
+      "pass": true,
+      "lhs": "133",
+      "rhs": "133"
+    },
+    {
+      "name": "f_e7_dim_div_phi6_eq_P19",
+      "pass": true,
+      "lhs": "19",
+      "rhs": "19"
+    },
+    {
+      "name": "f_v57_div_Q_eq_P19",
+      "pass": true,
+      "lhs": "19",
+      "rhs": "19"
+    },
+    {
+      "name": "f_e7_dim_v57_same_P19",
+      "pass": true,
+      "lhs": "19",
+      "rhs": "19"
+    },
+    {
+      "name": "g_psl_p3_eq_K",
+      "pass": true,
+      "lhs": "12",
+      "rhs": "12"
+    },
+    {
+      "name": "g_psl_p5_eq_A5",
+      "pass": true,
+      "lhs": "60",
+      "rhs": "60"
+    },
+    {
+      "name": "g_psl_p7_eq_psl27",
+      "pass": true,
+      "lhs": "168",
+      "rhs": "168"
+    },
+    {
+      "name": "g_psl_p11_eq_ord_psl2_11",
+      "pass": true,
+      "lhs": "660",
+      "rhs": "660"
+    },
+    {
+      "name": "g_psl_p19_eq_ord_psl2_19",
+      "pass": true,
+      "lhs": "3420",
+      "rhs": "3420"
+    },
+    {
+      "name": "g_psl27_slot_ratio",
+      "pass": true,
+      "lhs": "14",
+      "rhs": "14"
+    },
+    {
+      "name": "g_tower_primes_ascending",
+      "pass": true,
+      "lhs": "1",
+      "rhs": "1"
+    },
+    {
+      "name": "h_v57_minus_e11_eq_LAM",
+      "pass": true,
+      "lhs": "2",
+      "rhs": "2"
+    },
+    {
+      "name": "h_v57_plus_vk_prime",
+      "pass": true,
+      "lhs": "True",
+      "rhs": "True"
+    },
+    {
+      "name": "h_e11_plus_e57_eq_226",
+      "pass": true,
+      "lhs": "226",
+      "rhs": "226"
+    },
+    {
+      "name": "h_11cell_palindrome",
+      "pass": true,
+      "lhs": "True",
+      "rhs": "True"
+    },
+    {
+      "name": "h_57cell_palindrome",
+      "pass": true,
+      "lhs": "True",
+      "rhs": "True"
+    },
+    {
+      "name": "h_57cell_degree_2Q",
+      "pass": true,
+      "lhs": "6",
+      "rhs": "6"
+    },
+    {
+      "name": "h_e57_from_degree",
+      "pass": true,
+      "lhs": "171",
+      "rhs": "171"
+    },
+    {
+      "name": "h_e7_rank_is_PHI6",
+      "pass": true,
+      "lhs": "7",
+      "rhs": "7"
+    },
+    {
+      "name": "h_P19_via_e7_dim",
+      "pass": true,
+      "lhs": "19",
+      "rhs": "19"
+    }
+  ]
+}

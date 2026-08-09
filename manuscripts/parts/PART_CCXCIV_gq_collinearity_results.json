@@ -1,0 +1,28 @@
+{
+  "part": "CCXCIV",
+  "title": "Generalized Quadrangle GQ(3,3) and the W(3,3) Collinearity Graph",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "ALL_PASS",
+  "gq_s": 3,
+  "gq_t": 3,
+  "gq_points": 40,
+  "gq_lines": 40,
+  "gq_points_per_line": 4,
+  "gq_lines_per_point": 4,
+  "ovoid_size": 10,
+  "spread_size": 10,
+  "srg_v": 40,
+  "srg_k": 12,
+  "srg_lam": 2,
+  "srg_mu": 4,
+  "discoveries": [
+    "GQ(3,3) has s = t = 3 = Q: both parameters equal the ternary base",
+    "Points = Lines = 40 = V: self-dual GQ recovers vertex count",
+    "Lines per point = s+1 = 4 = EW_GAUGE_4 (electroweak gauge bosons)",
+    "Points per line = t+1 = 4 = EW_GAUGE_4",
+    "All four SRG parameters (v,k,\u03bb,\u03bc) = (40,12,2,4) recovered from s=t=3",
+    "Ovoid size = st+1 = 10 = \u03b1(W(3,3)) (max independent set from GQ geometry)",
+    "V \u2212 EW_GAUGE_4 = 40 \u2212 4 = 36 = QUARKS_36"
+  ]
+}

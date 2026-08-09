@@ -1,0 +1,99 @@
+{
+  "checks": {
+    "colour_algebra_not_closed_confinement": true,
+    "colour_complement_4_pts_eq_mu": true,
+    "exceptional_g2_dim_from_w33_lambda_phi6": true,
+    "fano_3_lines_per_point_eq_q": true,
+    "fano_3_points_per_line_eq_q": true,
+    "fano_7_lines_eq_phi6": true,
+    "fano_7_points_eq_phi6": true,
+    "fano_7_spacetime_embeddings": true,
+    "fano_aut_order_psl27_168": true,
+    "fano_line_selects_quaternionic_H_dim4": true,
+    "fermions_15_per_generation_eq_mult_s": true,
+    "g2_constraint_rank_35": true,
+    "g2_derivation_dim_14": true,
+    "g2_dim_eq_sl3_plus_6": true,
+    "g2_module_1_plus_3_plus_3bar": true,
+    "g2_sl3_nullity_8": true,
+    "generations_3_from_higgs_fano_lines": true,
+    "octonion_7_imaginary_units_eq_fano_pts": true,
+    "octonion_associator_nonzero": true,
+    "octonion_dim_8_eq_2_pow_q": true,
+    "octonion_is_anticommutative": true,
+    "single_object_sm_params_from_q": true,
+    "sm_gauge_decomp_8_3_1": true,
+    "sm_gauge_dim_k_12": true,
+    "sm_rank_4_eq_mu": true,
+    "su3_dim_8_gluons_eq_2_pow_q": true,
+    "weinberg_angle_exact_3_over_13": true
+  },
+  "checks_passed": 27,
+  "checks_total": 27,
+  "failed_checks": [],
+  "fano_geometry": {
+    "aut_order": 168,
+    "lines_per_point": 3,
+    "n_lines": 7,
+    "n_points": 7,
+    "phi6_eq_n_points_and_lines": true,
+    "pts_per_line": 3
+  },
+  "g2_derivation": {
+    "dim_g2": 14,
+    "dim_sl3": 8,
+    "g2_eq_sl3_plus_6": true,
+    "module_decomp": "1 + 3 + 3bar",
+    "n_vars": 49,
+    "nullity": 14,
+    "rank": 35,
+    "sl3_nullity_fixed_axis": 8
+  },
+  "g2_to_su3_breaking": {
+    "colour_not_closed": true,
+    "colour_plus_higgs_pts": 4,
+    "h_dim": 4,
+    "space_colour_duality": {
+      "e1_leftrightarrow_e7": true,
+      "e2_leftrightarrow_e5": true,
+      "e4_leftrightarrow_e6": true
+    },
+    "spacetime_embeddings": 7,
+    "su3_gluon_count": 8
+  },
+  "grand_unification": {
+    "exceptional_lie_dims": {
+      "E6": 78,
+      "E7": 133,
+      "E8": 248,
+      "F4": 52,
+      "G2": 14
+    },
+    "single_object": "Octonion algebra O (encoded by Fano PG(2,F\u2082))",
+    "weinberg_exact": "3/13",
+    "weinberg_numeric": 0.230769
+  },
+  "octonion_algebra": {
+    "associator_nonzero": true,
+    "dim": 8,
+    "is_anticommutative": true,
+    "n_imaginary": 7,
+    "n_tables": 480,
+    "stabilizer_factored": "168 \u00d7 8",
+    "stabilizer_order": 1344
+  },
+  "part": "CCCCXX",
+  "sm_gauge_emergence": {
+    "decomp": "k = 2^q + q + 1 = 8 + 3 + 1 = 12",
+    "fermions_per_gen": 15,
+    "k": 12,
+    "n_generations": 3,
+    "sm_rank": 4,
+    "su2_dim": 3,
+    "su3_dim": 8,
+    "u1_dim": 1
+  },
+  "status": "PASS",
+  "title": "Fano Plane \u2192 Octonion Algebra \u2192 G\u2082 \u2192 SU(3) \u2192 Standard Model",
+  "verified": true
+}

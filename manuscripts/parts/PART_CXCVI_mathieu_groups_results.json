@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "all_checks_pass": true,
+  "check_count": 47,
+  "checks_passing": 47,
+  "failed_checks": [],
+  "category_counts": {
+    "atom_checks": 9,
+    "degree_checks": 5,
+    "steiner_t_checks": 5,
+    "steiner_k_checks": 5,
+    "steiner_n_checks": 5,
+    "group_order_valuation_checks": 10,
+    "structural_checks": 8
+  },
+  "mathieu_steiner": {
+    "M11": {
+      "degree": 11,
+      "t": 4,
+      "k": 5,
+      "n": 11,
+      "steiner_system": "S(4,5,11)"
+    },
+    "M12": {
+      "degree": 12,
+      "t": 5,
+      "k": 6,
+      "n": 12,
+      "steiner_system": "S(5,6,12)"
+    },
+    "M22": {
+      "degree": 22,
+      "t": 3,
+      "k": 6,
+      "n": 22,
+      "steiner_system": "S(3,6,22)"
+    },
+    "M23": {
+      "degree": 23,
+      "t": 4,
+      "k": 7,
+      "n": 23,
+      "steiner_system": "S(4,7,23)"
+    },
+    "M24": {
+      "degree": 24,
+      "t": 5,
+      "k": 8,
+      "n": 24,
+      "steiner_system": "S(5,8,24)"
+    }
+  },
+  "w33_atoms": {
+    "Q": 3,
+    "LAM": 2,
+    "V": 40,
+    "K": 12,
+    "PHI3": 13,
+    "PHI4": 10,
+    "PHI6": 7,
+    "J_INV": 8,
+    "EDGES": 240,
+    "EIG_MAX": 5
+  },
+  "theorem_cxcvi": "The Steiner system S(t,k,n) for each of the five Mathieu groups M\u2081\u2081, M\u2081\u2082, M\u2082\u2082, M\u2082\u2083, M\u2082\u2084 has every parameter {t, k, n} equal to an explicit W(3,3) SRG(40,12,2,4) atom.  The permutation degrees 11=K\u22121, 12=K, 22=2(K\u22121), 23=K+\u03a6\u2083\u22122, 24=2K and the leading prime valuations v\u2082, v\u2083 of all five group orders are likewise W(3,3) atoms \u2014 zero free parameters."
+}

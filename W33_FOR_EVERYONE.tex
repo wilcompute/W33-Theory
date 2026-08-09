@@ -4767,6 +4767,108 @@ $D_5/W(E_6)$ half-spin obstruction is a separate carrier: it shares the
 orientation-reversal pattern, but it is not automatically the same physical
 object.
 
+\section{The chamber machine: two switches, one exact algebra}
+
+A chamber is the smallest honest address in the geometry: a point together
+with a line through it. There are $160$. From any chamber there are two natural
+three-way moves. Keep the point and choose one of the other three lines, or keep
+the line and choose one of the other three points. Call their adjacency
+operators $P$ and $L$.
+
+Those innocent switches remember the whole rank-two building. Exact GAP
+arithmetic gives
+\[
+ P^2=2P+3I,\qquad L^2=2L+3I,\qquad PLPL=LPLP.
+\]
+The eight alternating words are independent, so this is the complete
+eight-dimensional $q=3$ Hecke algebra of type $C_2$ on the chamber carrier.
+It also explains a decomposition that had appeared repeatedly without one
+organizing object:
+\[
+ 160=1+15+15+81+48=1+30+81+48.
+\]
+
+The $320$ oriented incidences are the states of the Levi non-backtracking
+operator. In orientation order its matrix is simply
+\[
+ B_{\mathrm{Levi}}=\begin{pmatrix}0&L\\P&0\end{pmatrix}.
+\]
+Thus two Hashimoto steps are not a mysterious $320$-state operation: they are
+the two possible orders $LP$ and $PL$ of the native chamber switches. Their
+difference $\Omega=LP-PL$ has rank $48$, and
+\[
+ \Pi_{48}=-\Omega^2/60
+\]
+is an exact projector. On its image, $\Omega/\sqrt{60}$ squares to $-I$.
+The conjugate $24+24$ channel therefore carries a canonical complex structure
+made entirely from incidence and orientation.
+
+The two $24$s are now concrete rather than bookkeeping. Take the familiar
+$24$-dimensional eigenmode space of the point graph and the corresponding
+$24$-dimensional eigenmode space of the line graph, and copy each mode onto
+every chamber containing its point or line. The two lifted spaces meet only at
+zero and together are exactly the image of $\Pi_{48}$. They are not
+perpendicular: every one of their $24$ principal angles is the same, with
+cosine $\sqrt6/4$. If $Q_p,Q_\ell$ are their orthogonal projectors and
+$Q=Q_p+Q_\ell$, then
+\[
+ \Pi_{48}=\frac85(2Q-Q^2).
+\]
+So ``$24+24$'' literally means the point modes joined to the line modes at one
+exact angle. It is not merely two numbers that happen to add to $48$.
+
+This closes an old numerical thread too. If $F$ is the folded cubic
+point-Hashimoto operator on the rank-$48$ packet and
+$X=(P+L-2I)\Pi_{48}$, then
+\[
+ F=-68\Pi_{48}-31X-\frac{21}{2}\Omega+\frac23X\Omega,
+ \qquad (F+68\Pi_{48})^2=-689\Pi_{48}.
+\]
+These are finite operator identities. They do not turn an eigenvalue into a
+mass or a chamber relation into a fabricated processor. A deterministic
+three-way selector still has to be built.
+
+The same audit that found this algebra also corrected the nearby frontier.
+The proposed $\mathbb Z_{2731}$ girth-$16$ cover has an explicit zero-voltage
+eight-cycle and therefore girth exactly $8$; machine D is exactly symmetric
+under exchange of the two register pairs; affine translations descend to
+neither projective $40$-set; and the true incidence comparator detects
+$1656/1920=69/80$ differential rail faults but no shared-control substitution.
+Keeping those retractions beside the theorem is part of the result: the
+machine becomes clearer when the things it cannot yet do are named exactly.
+
+\section{HoloBox: when a network can be loaded like one machine}
+
+The geometry now has a concrete software experiment that is worth separating
+from the more ambitious hardware story. HoloBox stores a small chamber machine
+and a network of forty such machines in the same kind of immutable record. A
+network can contain forty networks, and so on, without inventing a second file
+format or a second loader.
+
+At six levels the uniform record stands for $105{,}025{,}641$ logical machines
+and $4{,}096{,}000{,}000$ leaf chamber slots, but repeated subtrees collapse to
+six stored node blobs. Send the number $13$ to one machine five addresses down:
+only the six records on that path change. Run the recipient: six records change
+again, it consumes the message, and every untouched sibling keeps exactly the
+same cryptographic digest. That is the precise sense in which the network is
+itself a machine: it receives, runs, forks, and checkpoints through the same
+interface as a leaf.
+
+The address is a string of W33 points. GAP independently checks that one W33
+point is at distance at most two from another, so an $n$-digit logical route
+needs at most $2n$ line-bus transactions and no stored next-hop table. This is
+not a contradiction with the older $8n$ budget: that count lowers each logical
+digit through three cube moves and five chart-web moves. The two numbers price
+different layers.
+
+The honest boundary matters. The older Witting architecture already proposed
+content-addressed containers, policies, receipts, and WASM/OCI components.
+HoloBox adds executable nested state, mailbox delivery, persistent execution,
+and copy-on-write to that roadmap. It is a deterministic Python reference, not
+an OCI-certified container engine, Linux or KVM isolation, a photonic machine,
+or a performance benchmark. Its 14 Python checks and seven GAP checks make the
+implemented part reproducible without pretending the missing parts exist.
+
 \section{What the machine cannot do --- and why that is a result}
 
 The weak interaction distinguishes handedness, while our finite construction

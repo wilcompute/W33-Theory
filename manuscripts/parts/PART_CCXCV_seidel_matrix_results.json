@@ -1,0 +1,27 @@
+{
+  "part": "CCXCV",
+  "title": "Seidel Matrix Eigenvalue Structure of W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "ALL_PASS",
+  "tau_0": 15,
+  "tau_r": -5,
+  "tau_s": 7,
+  "mult_tau_0": 1,
+  "mult_tau_r": 24,
+  "mult_tau_s": 15,
+  "seidel_trace": 0,
+  "seidel_trace_sq": 1560,
+  "angle_denom": 5,
+  "embedding_dim": 15,
+  "mult_diff": 9,
+  "discoveries": [
+    "Seidel spectrum {15^1, (-5)^24, 7^15} encodes all SRG parameters",
+    "Maximum Seidel eigenvalue \u03c4_0 = 15 = MULT_S (coincidence)",
+    "40 equiangular lines in R^15 at angle arccos(1/5) = arccos(1/(Q+2))",
+    "MULT_R - MULT_S = 9 = Q\u00b2 (from GQ(3,3) order, Part CCXCIV)",
+    "QUARKS_36 - MULT_R = K = 12 (SM fermionic degrees \u2192 SRG degree)",
+    "|\u03c4_r| = Q + 2 = 5 (smallest Seidel eigenvalue = ternary + 2)",
+    "Trace S\u00b2 = V(V-1) = 1560 (spectral self-consistency)"
+  ]
+}

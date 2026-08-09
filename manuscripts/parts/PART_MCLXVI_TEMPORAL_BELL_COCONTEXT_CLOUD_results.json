@@ -1,0 +1,42 @@
+{
+  "part": "MCLXVI",
+  "theorem": "Temporal Bell co-context cloud law",
+  "bell_line": {
+    "line_index": 19,
+    "line_points": [
+      6,
+      16,
+      27,
+      35
+    ],
+    "spread_count_containing_bell": 9
+  },
+  "bell_local_line_shell": {
+    "total_lines": 40,
+    "bell_line": 1,
+    "intersecting_lines": 12,
+    "disjoint_lines": 27,
+    "identity": "1 + 12 + 27 = 40"
+  },
+  "cocontext_cloud": {
+    "spreads_with_bell": 9,
+    "companions_per_spread": 9,
+    "total_companion_incidences": 81,
+    "distinct_companion_lines": 27,
+    "multiplicity_distribution": {
+      "3": 27
+    },
+    "identity": "9 Bell spreads * 9 companions = 81 incidences = 27 lines * 3"
+  },
+  "claim_boundary": "finite Bell-line local geometry across complete symplectic spreads; no continuum retrocausal dynamics claim",
+  "checks": {
+    "bell_line_is_in_exactly_9_spreads": true,
+    "bell_centered_companion_incidence_total_is_81": true,
+    "distinct_companion_lines_are_exactly_27": true,
+    "all_companion_lines_have_multiplicity_3": true,
+    "companion_set_equals_disjoint_shell": true,
+    "bell_local_shell_is_1_plus_12_plus_27": true,
+    "weighted_companion_multiplicity_matches_incidence": true
+  },
+  "n_verified": 7
+}

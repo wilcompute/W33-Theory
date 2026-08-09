@@ -1,0 +1,93 @@
+{
+  "Part": "CCXXX",
+  "Title": "E6 Exceptional Lie Algebra and Grand Unification from W(3,3)",
+  "Verified": true,
+  "checks_passed": 34,
+  "checks_total": 34,
+  "bridges": {
+    "1_weyl_group": {
+      "weyl_E6": 51840,
+      "anchor": 51840
+    },
+    "2_E6_rank": {
+      "rank_E6": 6,
+      "two_rank_E6": 12,
+      "rank_E6_sq": 36
+    },
+    "3_27_rep_SO10_decomp": {
+      "dim_27": 27,
+      "so10_decomp_16": 16,
+      "so10_decomp_10": 10,
+      "so10_decomp_1": 1,
+      "decomp_sum": 27
+    },
+    "4_SO10_structure": {
+      "rank_SO10": 5,
+      "dim_spinor_SO10": 16,
+      "dim_vector_SO10": 10,
+      "dim_spinor_check": 16
+    },
+    "5_E6_adjoint": {
+      "d_bos_precursor": 26,
+      "dim_E6_adj": 78,
+      "dim_E6_alt": 78
+    },
+    "6_E8_adjoint": {
+      "dim_E8_adj": 248,
+      "dim_E8_residue": 8
+    },
+    "7_SO10_adjoint": {
+      "dim_SO10_adj": 45,
+      "dim_SO10_alt": 45
+    },
+    "8_K3_euler": {
+      "chi_K3": 24,
+      "chi_K3_over_MU": 6
+    },
+    "9_bosonic_string": {
+      "d_bos": 26,
+      "d_bos_mod_K": 2,
+      "d_bos_div_Q": 8
+    },
+    "10_E6_roots": {
+      "n_pos_roots_E6": 36,
+      "n_tot_roots_E6": 72
+    }
+  },
+  "checks": {
+    "B1-weyl_E6-AUT_ORDER": true,
+    "B1-weyl_E6-51840": true,
+    "B2-rank_E6-K//2": true,
+    "B2-rank_E6-6": true,
+    "B2-two_rank_E6-K": true,
+    "B2-rank_E6_sq-36": true,
+    "B3-dim_27-M_LAM": true,
+    "B3-decomp_sum-27": true,
+    "B3-decomp_sum-dim_27": true,
+    "B4-rank_SO10-5": true,
+    "B4-rank_SO10-LAPMID//LAM": true,
+    "B4-dim_spinor-LAPTOP": true,
+    "B4-dim_spinor_check-MU2": true,
+    "B4-dim_vector-LAPMID": true,
+    "B5-d_bos_precursor-26": true,
+    "B5-d_bos_precursor-MLAM-1": true,
+    "B5-dim_E6_adj-78": true,
+    "B5-dim_E6_alt-78": true,
+    "B5-dim_E6_both-equal": true,
+    "B6-dim_E8_adj-248": true,
+    "B6-dim_E8_minus_EDGES-2MU": true,
+    "B7-dim_SO10_adj-45": true,
+    "B7-dim_SO10_alt-45": true,
+    "B7-dim_SO10_both-equal": true,
+    "B8-chi_K3-24": true,
+    "B8-chi_K3-K_LAM": true,
+    "B8-chi_K3_over_MU-rank_E6": true,
+    "B9-d_bos-26": true,
+    "B9-d_bos_mod_K-LAM": true,
+    "B9-d_bos_div_Q-2MU": true,
+    "B10-n_pos_roots-36": true,
+    "B10-n_pos_roots-rank_E6_sq": true,
+    "B10-n_tot_roots-72": true,
+    "B10-n_tot_roots-rank_E6_K": true
+  }
+}

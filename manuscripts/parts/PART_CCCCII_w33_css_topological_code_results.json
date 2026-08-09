@@ -1,0 +1,28 @@
+{
+  "part": "CCCCII",
+  "title": "W33 CSS Topological Code Architecture",
+  "verified": true,
+  "checks_passed": 9,
+  "checks_total": 9,
+  "css_parameters": {
+    "n_physical_edge_qubits": 240,
+    "rank_X_vertex_checks": 39,
+    "rank_Z_triangle_checks": 120,
+    "k_logical_qubits": 81,
+    "distance": "not_computed",
+    "notation": "[[240,81,d]] with d pending"
+  },
+  "check_weights": {
+    "X_vertex_check_weights": [12],
+    "Z_triangle_check_weights": [3]
+  },
+  "architecture_map": {
+    "edge_signs": "physical edge phase/qubit variables",
+    "vertex_switching": "X/star gauge checks, rank 39",
+    "triangle_flatness": "Z/face stabilizer checks, rank 120",
+    "logical_sector": "2^81 residual topological sectors = H1 matter module"
+  },
+  "architecture_upgrade": "Turns the signed-switching quotient into a concrete CSS stabilizer-code architecture for the photonic topological quantum computer: edge qubits, vertex X checks, triangle Z checks, and 81 encoded logical/topological degrees of freedom.",
+  "theorem": "The W33 edge-qubit CSS code with vertex incidence X checks and triangle-boundary Z checks is valid because H_X H_Z^T=0 over GF(2). Its stabilizer ranks are 39 and 120, hence it encodes k=240-39-120=81 logical qubits/sectors.",
+  "honesty_boundary": "The code dimension is exact. The code distance and a physical photonic measurement schedule are not computed here and remain next-step hardware/compiler tasks."
+}

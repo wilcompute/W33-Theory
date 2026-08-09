@@ -1,0 +1,55 @@
+{
+  "module": "PART_CLIII_CYCLOTOMIC_BRIDGE_OPERATOR",
+  "w33_atoms": {
+    "q": 3,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "C": "8/13",
+    "T": "5/13",
+    "D": "3/13"
+  },
+  "operator": {
+    "name": "cyclotomic bridge/complement operator",
+    "formula": "B(x)=1-x",
+    "input": "D=q/Phi3=3/13",
+    "output": "B(D)=10/13"
+  },
+  "identities": [
+    {
+      "name": "cyclotomic_complement",
+      "expression": "Phi4 = Phi3 - q",
+      "value": "10 = 13 - 3",
+      "role": "forces the bridge after Phi3 normalization"
+    },
+    {
+      "name": "mixer_imbalance",
+      "expression": "D = C - T = q/Phi3",
+      "value": "3/13",
+      "role": "mixer layer input to the bridge operator"
+    },
+    {
+      "name": "bridge_output",
+      "expression": "B(D)=1-D=Phi4/Phi3",
+      "value": "10/13",
+      "role": "unique mixer/projection intersection token"
+    },
+    {
+      "name": "projection_target",
+      "expression": "P(Phi4)=Phi4/Phi3",
+      "value": "10/13",
+      "role": "carrier-field projection target"
+    }
+  ],
+  "checks": {
+    "phi4_is_phi3_minus_q": true,
+    "imbalance_is_q_over_phi3": true,
+    "bridge_operator_sends_D_to_10_over_13": true,
+    "bridge_output_is_phi4_projection": true,
+    "bridge_output_is_unique_CL_intersection": true,
+    "phi6_is_phi3_minus_2q": true,
+    "phi4_minus_phi6_is_q": true
+  },
+  "theorem_statement": "The unique CL bridge token 10/13 is forced by the cyclotomic identity Phi4=Phi3-q. Since the mixer imbalance is D=q/Phi3, applying the complement operator B(D)=1-D gives Phi4/Phi3=P(Phi4). Thus the mixer/projection intersection is inevitable.",
+  "interpretive_note": "This makes the two-layer algebra much tighter: the bridge is not an empirical overlap between two lists. It is the normalized cyclotomic complement of the q-imbalance. Phi4 is literally the part of Phi3 left after removing the q-clock."
+}

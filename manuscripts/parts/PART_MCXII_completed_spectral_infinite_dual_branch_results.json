@@ -1,0 +1,54 @@
+{
+  "theorem": "Infinite-cutoff spectral equation of state and dual branch limit",
+  "sample_target_order_parameter": 0.041764615734711484,
+  "sample_interval": {
+    "lower_lambda": 0.9944095701226614,
+    "upper_lambda": 0.995757551206043,
+    "interval_width": 0.001347981083381633,
+    "tail_bound": 2.000348100001212e-05
+  },
+  "sample_profile": [
+    {
+      "prime_limit": 1000,
+      "target_order_parameter": 0.041764615734711484,
+      "reference_deformation": 1.0,
+      "recovered_lambda": 0.999999999973807,
+      "abs_reference_gap": 2.6193047730771468e-11,
+      "lambda_drop_from_previous": null,
+      "dual": 0.00490292407897714,
+      "dual_drop_from_previous": null,
+      "interval_lower_lambda": 0.8519786261225819,
+      "interval_upper_lambda": 0.999999999973807,
+      "interval_width": 0.14802137385122505,
+      "tail_bound": 0.002034811211778282
+    },
+    {
+      "prime_limit": 10000,
+      "target_order_parameter": 0.041764615734711484,
+      "reference_deformation": 1.0,
+      "recovered_lambda": 0.99605740433326,
+      "abs_reference_gap": 0.003942595666740045,
+      "lambda_drop_from_previous": 0.0039425956405469975,
+      "dual": 0.004844392583491619,
+      "dual_drop_from_previous": 5.853149548552122e-05,
+      "interval_lower_lambda": 0.9824714969203342,
+      "interval_upper_lambda": 0.99605740433326,
+      "interval_width": 0.013585907412925757,
+      "tail_bound": 0.00020034810012117365
+    },
+    {
+      "prime_limit": 100000,
+      "target_order_parameter": 0.041764615734711484,
+      "reference_deformation": 1.0,
+      "recovered_lambda": 0.995757551206043,
+      "abs_reference_gap": 0.0042424487939569655,
+      "lambda_drop_from_previous": 0.00029985312721692026,
+      "dual": 0.004839957496362068,
+      "dual_drop_from_previous": 4.435087129550652e-06,
+      "interval_lower_lambda": 0.9944095701226614,
+      "interval_upper_lambda": 0.995757551206043,
+      "interval_width": 0.001347981083381633,
+      "tail_bound": 2.000348100001212e-05
+    }
+  ]
+}

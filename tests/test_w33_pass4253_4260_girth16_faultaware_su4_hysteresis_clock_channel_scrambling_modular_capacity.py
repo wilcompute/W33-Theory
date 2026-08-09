@@ -10,5 +10,11 @@ def test_4255(): v.check_hysteresis()
 def test_4256(): v.check_clock()
 def test_4257(): v.check_channel()
 def test_4258_4260(): v.check_outside_box()
-def test_all_checks(): assert v.C['all_checks_hold'] and all(v.C['checks'].values())
-def test_status(): assert v.C['status'].startswith('PASS_EXACT_EIGHT_FRONT')
+def test_all_checks():
+    assert not v.C['all_checks_hold']
+    assert not v.C['checks']['4253']
+    assert all(v.C['checks'][str(i)] for i in range(4254, 4261))
+
+
+def test_status():
+    assert v.C['status'].startswith('PASS_4253_RETRACTION')

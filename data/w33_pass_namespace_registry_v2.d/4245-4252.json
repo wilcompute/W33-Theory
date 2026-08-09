@@ -10,15 +10,15 @@
   "purpose": "Execute the five open targets after Passes 4205-4212 and add three independent finite exact probes in metrology, Hodge thermodynamics, and quotient coarse-graining.",
   "certificate_status": "PASS_EXACT_RESIDUAL_ANCHOR_SYMMETRY_GHZ_RESOURCE_MIN_TWO_HODGE_ROUTE_GEOMETRY_TRIPLE_STRATA_METROLOGY_EXERGY_QUOTIENT_RG",
   "certificates": {
-    "exact_packet": "314ff5c6d21bd4f70a6c7a3228a958cc00f6f4991a288c0f293dcedd9146b8c2",
-    "combined_manifest": "c66a1d0925d55a599570cfebee2195cc98034c302b6170ed03f863fada52bfe3",
+    "exact_packet": "267198b8b02374007865d5c9a3cb52b72f18fb221e886b296ff9047432e55a1f",
+    "combined_manifest": "1606a634de2438c12e0e53271841e812c8d218d03e2f5d80af888376dfb771ad",
     "residual_anchor_symmetry": "3dc2540de255b447eebbe85c7c243c342cd4abf38ea01f86c112a6735e211948",
-    "ghz_operating_strategy": "374c33ab15c014292a617729e85665512ce256fa4e3ec3ceac0d87d517a811d6",
+    "ghz_operating_strategy": "b8c779842ccb2cbc8215028d453fd2434e587d34de975b011b7b25baaa45f5b3",
     "minimum_hodge_channels": "5bf70fafeb490bff7dc5dfb1389b310406217b0c1d285e905adf5754fdc7f1fc",
-    "routed_delay_geometry": "30119353ea4a7dcaf1f6730e4db6356ba976514ff9de1e61a025642b87df9ad8",
+    "routed_delay_geometry": "0cb26245ad9f3d7912c422d86d669f5c3d77c5aecc9cbab4716ac2b7481441e8",
     "triple_stabilizer_lattice": "9706686c675b6f0dd212ee983ce170f5780220079be715f7fe1e0389c4245404",
     "metrology": "089c42b0c89899ace9b1dac4899e354b744d7df0618a02c5722d3ebb15a111b2",
-    "hodge_exergy": "f919d1dc3ea1df445f76cb0f3471da9e532016f94257f418255513edbbfa6da2",
+    "hodge_exergy": "74d1506423d1a3d976f44a27688224db08cc5e0446527410fbed141d6adb5394",
     "quotient_rg": "9edbfdf7c491203eb5fdaa254a84e9f0075bc45f9db5120f1f4ba20d6512e026"
   },
   "promoted": [

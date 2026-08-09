@@ -1,0 +1,37 @@
+{
+  "part": "MCXCV",
+  "theorem": "Reye horizon octet-factor lock",
+  "packets": {
+    "cells": 8,
+    "horizon_total": 72,
+    "reye_points": 12,
+    "genus": 6,
+    "reye_automorphism": 576,
+    "tomotope_automorphism": 96
+  },
+  "derived_invariants": {
+    "symbols_per_cell": 9,
+    "symmetry_units_per_symbol": 8,
+    "identity": "576 = 8*72 = 8*12*6, with 72/8=9 and 576/72=8"
+  },
+  "finite_universality_surrogate": {
+    "statement": "horizon code volume and Reye symmetry are factor-locked by the tomotope cell octet",
+    "boundary": "finite combinatorial factor law; not a continuum field equation"
+  },
+  "claim_boundary": "finite octet-factor reciprocity on tomotope/Reye horizon packets",
+  "checks": {
+    "cells_is_8": true,
+    "horizon_total_is_72": true,
+    "reye_automorphism_is_576": true,
+    "reye_points_is_12": true,
+    "genus_and_parity_are_6": true,
+    "total_equals_points_times_genus": true,
+    "reye_symmetry_equals_cells_times_total": true,
+    "reye_symmetry_equals_cells_times_points_times_genus": true,
+    "tomotope_symmetry_equals_points_times_cells": true,
+    "symbols_per_cell_is_9": true,
+    "symmetry_units_per_symbol_is_8": true,
+    "octet_nonet_duality": true
+  },
+  "n_verified": 12
+}

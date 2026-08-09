@@ -1,0 +1,71 @@
+{
+  "theorem": "Zero-sheet barycentric recurrence phase split",
+  "shared_resonance_s": 2.0,
+  "phase_split_detected": true,
+  "entropy_phase": {
+    "coefficients": [
+      -0.7930288200175566,
+      1.7579250530757946
+    ],
+    "characteristic_polynomial": "r^2 - a1*r - a2",
+    "discriminant": -0.08181478783869123,
+    "phase_type": "complex_conjugate",
+    "roots": [
+      {
+        "real": 0.8789625265378973,
+        "imag": 0.14301642199297537,
+        "abs": 0.8905216561193539
+      },
+      {
+        "real": 0.8789625265378973,
+        "imag": -0.14301642199297537,
+        "abs": 0.8905216561193539
+      }
+    ],
+    "spectral_radius": 0.8905216561193539,
+    "root_moduli": [
+      0.8905216561193539,
+      0.8905216561193539
+    ],
+    "root_sum": 1.7579250530757946,
+    "root_product": 0.7930288200175566,
+    "sum_matches_a1": true,
+    "product_matches_minus_a2": true,
+    "has_unit_exceeding_root": false,
+    "all_roots_inside_unit_disk": true
+  },
+  "concentration_phase": {
+    "coefficients": [
+      -0.7838244705016053,
+      1.8194198703813187
+    ],
+    "characteristic_polynomial": "r^2 - a1*r - a2",
+    "discriminant": 0.17499078273195323,
+    "phase_type": "real_split",
+    "roots": [
+      {
+        "real": 1.11886943338041,
+        "imag": 0.0,
+        "abs": 1.11886943338041
+      },
+      {
+        "real": 0.7005504370009087,
+        "imag": 0.0,
+        "abs": 0.7005504370009087
+      }
+    ],
+    "spectral_radius": 1.11886943338041,
+    "root_moduli": [
+      1.11886943338041,
+      0.7005504370009087
+    ],
+    "root_sum": 1.8194198703813185,
+    "root_product": 0.7838244705016052,
+    "sum_matches_a1": true,
+    "product_matches_minus_a2": true,
+    "has_unit_exceeding_root": true,
+    "all_roots_inside_unit_disk": false
+  },
+  "entropy_damped_oscillatory": true,
+  "concentration_real_expanding_mode_detected": true
+}

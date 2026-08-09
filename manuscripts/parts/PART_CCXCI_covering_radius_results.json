@@ -1,0 +1,67 @@
+{
+  "part_number": "CCXCI",
+  "title": "Covering Radius and Packing-Covering Duality",
+  "theme": "Perfect code geometry: Ham(4,3) achieves t = R = 1",
+  "verification_status": "ALL CHECKS PASS",
+  "checks_pass": 22,
+  "checks_total": 22,
+  "code_parameters": {
+    "n": 40,
+    "k": 36,
+    "d": 3,
+    "q": 3,
+    "r": 4
+  },
+  "perfect_code": {
+    "packing_radius": 1,
+    "covering_radius": 1,
+    "ball_volume": 81,
+    "code_size": "150094635296999121",
+    "ambient_size": "12157665459056928801"
+  },
+  "coset_structure": {
+    "num_cosets": 81,
+    "leaders_wt0": 1,
+    "leaders_wt1": 80,
+    "total_leaders": 81
+  },
+  "syndrome_decoding": {
+    "syndrome_space": 81,
+    "syndromes_per_position": 2,
+    "correctable_positions": 40
+  },
+  "sm_interpretation": {
+    "valid_states": "150094635296999121",
+    "error_neighborhood": 81,
+    "error_alphabet": 81,
+    "syndrome_bits": 4
+  },
+  "key_discoveries": [
+    "Ham(4,3) is perfect: packing radius = covering radius = 1",
+    "Perfect partition: 3^40 ambient vectors = 3^36 cosets \u00d7 81 elements each",
+    "Ball volume 81 = 3^4: one ball per syndrome, 81 syndromes",
+    "PCM has 40 columns = all points of PG(3,3) = V = 40",
+    "Redundancy r = 4 = EW_GAUGE_4 (electroweak sector)",
+    "Covering density = 1: the most efficient possible covering",
+    "80 nonzero syndromes = 80 single-qudit error types = SIM_NONZERO"
+  ],
+  "created": "2026-05-04",
+  "connections": [
+    {
+      "part": "CCXC",
+      "relation": "MacWilliams weight enumerators for Ham(4,3)/Sim(4,3)"
+    },
+    {
+      "part": "CCLXXXIX",
+      "relation": "Perfect code structure of Ham(4,3)"
+    },
+    {
+      "part": "CCLXXXVIII",
+      "relation": "Delsarte LP bound using Krawtchouk polynomials"
+    },
+    {
+      "part": "CCLXXXVII",
+      "relation": "W(3,3) spectral analysis and eigenvalues"
+    }
+  ]
+}

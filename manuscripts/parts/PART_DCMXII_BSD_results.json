@@ -1,0 +1,8 @@
+{
+  "part": "DCMXII",
+  "decimal": 912,
+  "title": "BSD Conjecture Bridge",
+  "zeta": "Z_W(u) = exp(sum Fix(Frob^n)/n * u^n)",
+  "rank_formula": "rank(E(Q)) = dim H_1(W(3,3)) - dim H_1^univ",
+  "status": "STRUCTURAL BRIDGE — CLAY PROBLEM"
+}

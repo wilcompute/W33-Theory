@@ -1,0 +1,2754 @@
+{
+  "part": "MCCCXCVI",
+  "theorem": "E6 120 Steiner trihedral pairs",
+  "input_bridge": "MCCCXCV spread/double-six automorphism order",
+  "trihedral_pair_identity": "36 double-sixes + 45 tritangents -> 120 Steiner trihedral pairs",
+  "matter_sector_reports": [
+    {
+      "coordinate": 0,
+      "sector": "matter_81_coset_1",
+      "trihedral_pair_count": 120,
+      "double_six_triple_size_profile": {
+        "3": 120
+      },
+      "pairwise_double_six_overlap_profile": {
+        "(6, 6, 6)": 120
+      },
+      "union_size_profile": {
+        "18": 120
+      },
+      "complement_size_profile": {
+        "9": 120
+      },
+      "triple_intersection_size_profile": {
+        "0": 120
+      },
+      "contained_tritangent_count_profile": {
+        "6": 120
+      },
+      "trihedra_partition_pair_count_profile": {
+        "1": 120
+      },
+      "weight_participation_profile": {
+        "40": 27
+      },
+      "tritangent_participation_profile": {
+        "16": 45
+      },
+      "double_six_participation_profile": {
+        "10": 36
+      },
+      "double_six_pair_participation_profile": {
+        "1": 360
+      },
+      "sample_witnesses": [
+        {
+          "double_sixes": [
+            0,
+            1,
+            32
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "contained_tritangents": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            2,
+            29
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            7,
+            8,
+            10,
+            11,
+            13,
+            14,
+            15,
+            18,
+            19
+          ],
+          "contained_tritangents": [
+            34,
+            35,
+            37,
+            38,
+            42,
+            44
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            3,
+            27
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            6,
+            8,
+            10,
+            11,
+            12,
+            16,
+            17,
+            18,
+            19
+          ],
+          "contained_tritangents": [
+            31,
+            32,
+            37,
+            38,
+            41,
+            43
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            4,
+            26
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            6,
+            7,
+            9,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19
+          ],
+          "contained_tritangents": [
+            31,
+            32,
+            34,
+            35,
+            39,
+            40
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            6,
+            23
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            7,
+            8,
+            9,
+            11,
+            12,
+            14,
+            16,
+            18,
+            20
+          ],
+          "contained_tritangents": [
+            33,
+            35,
+            36,
+            38,
+            40,
+            43
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            7,
+            21
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            6,
+            8,
+            9,
+            11,
+            13,
+            15,
+            17,
+            18,
+            20
+          ],
+          "contained_tritangents": [
+            30,
+            32,
+            36,
+            38,
+            39,
+            44
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        }
+      ],
+      "checks": {
+        "trihedral_pair_count_is_120": true,
+        "every_witness_uses_three_double_sixes": true,
+        "pairwise_double_six_overlaps_are_all_6": true,
+        "union_size_is_18_and_complement_size_is_9": true,
+        "triple_intersection_is_empty": true,
+        "each_complement_contains_six_tritangents": true,
+        "each_complement_has_unique_trihedral_pair_partition": true,
+        "each_weight_lies_in_40_trihedral_pairs": true,
+        "each_tritangent_lies_in_16_trihedral_pairs": true,
+        "each_double_six_lies_in_10_trihedral_pairs": true,
+        "each_overlap_6_double_six_pair_lies_in_one_trihedral_pair": true
+      },
+      "n_verified": 11
+    },
+    {
+      "coordinate": 0,
+      "sector": "matter_81_coset_2",
+      "trihedral_pair_count": 120,
+      "double_six_triple_size_profile": {
+        "3": 120
+      },
+      "pairwise_double_six_overlap_profile": {
+        "(6, 6, 6)": 120
+      },
+      "union_size_profile": {
+        "18": 120
+      },
+      "complement_size_profile": {
+        "9": 120
+      },
+      "triple_intersection_size_profile": {
+        "0": 120
+      },
+      "contained_tritangent_count_profile": {
+        "6": 120
+      },
+      "trihedra_partition_pair_count_profile": {
+        "1": 120
+      },
+      "weight_participation_profile": {
+        "40": 27
+      },
+      "tritangent_participation_profile": {
+        "16": 45
+      },
+      "double_six_participation_profile": {
+        "10": 36
+      },
+      "double_six_pair_participation_profile": {
+        "1": 360
+      },
+      "sample_witnesses": [
+        {
+          "double_sixes": [
+            0,
+            1,
+            32
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "contained_tritangents": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            2,
+            29
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            7,
+            8,
+            11,
+            12,
+            13,
+            15,
+            16,
+            18,
+            19
+          ],
+          "contained_tritangents": [
+            34,
+            35,
+            37,
+            38,
+            43,
+            44
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            3,
+            27
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            6,
+            8,
+            10,
+            12,
+            14,
+            15,
+            17,
+            18,
+            19
+          ],
+          "contained_tritangents": [
+            31,
+            32,
+            37,
+            38,
+            41,
+            42
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            4,
+            26
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            6,
+            7,
+            9,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19
+          ],
+          "contained_tritangents": [
+            31,
+            32,
+            34,
+            35,
+            39,
+            40
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            6,
+            23
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            7,
+            8,
+            9,
+            10,
+            14,
+            15,
+            16,
+            18,
+            20
+          ],
+          "contained_tritangents": [
+            33,
+            35,
+            36,
+            38,
+            40,
+            42
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            7,
+            21
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            6,
+            8,
+            9,
+            11,
+            13,
+            15,
+            17,
+            18,
+            20
+          ],
+          "contained_tritangents": [
+            30,
+            32,
+            36,
+            38,
+            39,
+            44
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        }
+      ],
+      "checks": {
+        "trihedral_pair_count_is_120": true,
+        "every_witness_uses_three_double_sixes": true,
+        "pairwise_double_six_overlaps_are_all_6": true,
+        "union_size_is_18_and_complement_size_is_9": true,
+        "triple_intersection_is_empty": true,
+        "each_complement_contains_six_tritangents": true,
+        "each_complement_has_unique_trihedral_pair_partition": true,
+        "each_weight_lies_in_40_trihedral_pairs": true,
+        "each_tritangent_lies_in_16_trihedral_pairs": true,
+        "each_double_six_lies_in_10_trihedral_pairs": true,
+        "each_overlap_6_double_six_pair_lies_in_one_trihedral_pair": true
+      },
+      "n_verified": 11
+    },
+    {
+      "coordinate": 1,
+      "sector": "matter_81_coset_1",
+      "trihedral_pair_count": 120,
+      "double_six_triple_size_profile": {
+        "3": 120
+      },
+      "pairwise_double_six_overlap_profile": {
+        "(6, 6, 6)": 120
+      },
+      "union_size_profile": {
+        "18": 120
+      },
+      "complement_size_profile": {
+        "9": 120
+      },
+      "triple_intersection_size_profile": {
+        "0": 120
+      },
+      "contained_tritangent_count_profile": {
+        "6": 120
+      },
+      "trihedra_partition_pair_count_profile": {
+        "1": 120
+      },
+      "weight_participation_profile": {
+        "40": 27
+      },
+      "tritangent_participation_profile": {
+        "16": 45
+      },
+      "double_six_participation_profile": {
+        "10": 36
+      },
+      "double_six_pair_participation_profile": {
+        "1": 360
+      },
+      "sample_witnesses": [
+        {
+          "double_sixes": [
+            0,
+            1,
+            32
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "contained_tritangents": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            2,
+            29
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            7,
+            8,
+            10,
+            11,
+            13,
+            14,
+            15,
+            18,
+            19
+          ],
+          "contained_tritangents": [
+            34,
+            35,
+            37,
+            38,
+            42,
+            44
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            3,
+            27
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            6,
+            8,
+            10,
+            11,
+            12,
+            16,
+            17,
+            18,
+            19
+          ],
+          "contained_tritangents": [
+            31,
+            32,
+            37,
+            38,
+            41,
+            43
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            4,
+            26
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            6,
+            7,
+            9,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19
+          ],
+          "contained_tritangents": [
+            31,
+            32,
+            34,
+            35,
+            39,
+            40
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            6,
+            23
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            7,
+            8,
+            9,
+            11,
+            12,
+            14,
+            16,
+            18,
+            20
+          ],
+          "contained_tritangents": [
+            33,
+            35,
+            36,
+            38,
+            40,
+            43
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            7,
+            21
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            6,
+            8,
+            9,
+            11,
+            13,
+            15,
+            17,
+            18,
+            20
+          ],
+          "contained_tritangents": [
+            30,
+            32,
+            36,
+            38,
+            39,
+            44
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        }
+      ],
+      "checks": {
+        "trihedral_pair_count_is_120": true,
+        "every_witness_uses_three_double_sixes": true,
+        "pairwise_double_six_overlaps_are_all_6": true,
+        "union_size_is_18_and_complement_size_is_9": true,
+        "triple_intersection_is_empty": true,
+        "each_complement_contains_six_tritangents": true,
+        "each_complement_has_unique_trihedral_pair_partition": true,
+        "each_weight_lies_in_40_trihedral_pairs": true,
+        "each_tritangent_lies_in_16_trihedral_pairs": true,
+        "each_double_six_lies_in_10_trihedral_pairs": true,
+        "each_overlap_6_double_six_pair_lies_in_one_trihedral_pair": true
+      },
+      "n_verified": 11
+    },
+    {
+      "coordinate": 1,
+      "sector": "matter_81_coset_2",
+      "trihedral_pair_count": 120,
+      "double_six_triple_size_profile": {
+        "3": 120
+      },
+      "pairwise_double_six_overlap_profile": {
+        "(6, 6, 6)": 120
+      },
+      "union_size_profile": {
+        "18": 120
+      },
+      "complement_size_profile": {
+        "9": 120
+      },
+      "triple_intersection_size_profile": {
+        "0": 120
+      },
+      "contained_tritangent_count_profile": {
+        "6": 120
+      },
+      "trihedra_partition_pair_count_profile": {
+        "1": 120
+      },
+      "weight_participation_profile": {
+        "40": 27
+      },
+      "tritangent_participation_profile": {
+        "16": 45
+      },
+      "double_six_participation_profile": {
+        "10": 36
+      },
+      "double_six_pair_participation_profile": {
+        "1": 360
+      },
+      "sample_witnesses": [
+        {
+          "double_sixes": [
+            0,
+            1,
+            32
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "contained_tritangents": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            2,
+            29
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            7,
+            8,
+            11,
+            12,
+            13,
+            15,
+            16,
+            18,
+            19
+          ],
+          "contained_tritangents": [
+            34,
+            35,
+            37,
+            38,
+            43,
+            44
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            3,
+            27
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            6,
+            8,
+            10,
+            12,
+            14,
+            15,
+            17,
+            18,
+            19
+          ],
+          "contained_tritangents": [
+            31,
+            32,
+            37,
+            38,
+            41,
+            42
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            4,
+            26
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            6,
+            7,
+            9,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19
+          ],
+          "contained_tritangents": [
+            31,
+            32,
+            34,
+            35,
+            39,
+            40
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            6,
+            23
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            7,
+            8,
+            9,
+            10,
+            14,
+            15,
+            16,
+            18,
+            20
+          ],
+          "contained_tritangents": [
+            33,
+            35,
+            36,
+            38,
+            40,
+            42
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            7,
+            21
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            6,
+            8,
+            9,
+            11,
+            13,
+            15,
+            17,
+            18,
+            20
+          ],
+          "contained_tritangents": [
+            30,
+            32,
+            36,
+            38,
+            39,
+            44
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        }
+      ],
+      "checks": {
+        "trihedral_pair_count_is_120": true,
+        "every_witness_uses_three_double_sixes": true,
+        "pairwise_double_six_overlaps_are_all_6": true,
+        "union_size_is_18_and_complement_size_is_9": true,
+        "triple_intersection_is_empty": true,
+        "each_complement_contains_six_tritangents": true,
+        "each_complement_has_unique_trihedral_pair_partition": true,
+        "each_weight_lies_in_40_trihedral_pairs": true,
+        "each_tritangent_lies_in_16_trihedral_pairs": true,
+        "each_double_six_lies_in_10_trihedral_pairs": true,
+        "each_overlap_6_double_six_pair_lies_in_one_trihedral_pair": true
+      },
+      "n_verified": 11
+    },
+    {
+      "coordinate": 2,
+      "sector": "matter_81_coset_1",
+      "trihedral_pair_count": 120,
+      "double_six_triple_size_profile": {
+        "3": 120
+      },
+      "pairwise_double_six_overlap_profile": {
+        "(6, 6, 6)": 120
+      },
+      "union_size_profile": {
+        "18": 120
+      },
+      "complement_size_profile": {
+        "9": 120
+      },
+      "triple_intersection_size_profile": {
+        "0": 120
+      },
+      "contained_tritangent_count_profile": {
+        "6": 120
+      },
+      "trihedra_partition_pair_count_profile": {
+        "1": 120
+      },
+      "weight_participation_profile": {
+        "40": 27
+      },
+      "tritangent_participation_profile": {
+        "16": 45
+      },
+      "double_six_participation_profile": {
+        "10": 36
+      },
+      "double_six_pair_participation_profile": {
+        "1": 360
+      },
+      "sample_witnesses": [
+        {
+          "double_sixes": [
+            0,
+            1,
+            32
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "contained_tritangents": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            2,
+            29
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            7,
+            8,
+            11,
+            12,
+            13,
+            15,
+            16,
+            18,
+            19
+          ],
+          "contained_tritangents": [
+            34,
+            35,
+            37,
+            38,
+            43,
+            44
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            3,
+            27
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            6,
+            8,
+            10,
+            12,
+            14,
+            15,
+            17,
+            18,
+            19
+          ],
+          "contained_tritangents": [
+            31,
+            32,
+            37,
+            38,
+            41,
+            42
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            4,
+            26
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            6,
+            7,
+            9,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19
+          ],
+          "contained_tritangents": [
+            31,
+            32,
+            34,
+            35,
+            39,
+            40
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            6,
+            23
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            7,
+            8,
+            9,
+            10,
+            14,
+            15,
+            16,
+            18,
+            20
+          ],
+          "contained_tritangents": [
+            33,
+            35,
+            36,
+            38,
+            40,
+            42
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            7,
+            21
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            6,
+            8,
+            9,
+            11,
+            13,
+            15,
+            17,
+            18,
+            20
+          ],
+          "contained_tritangents": [
+            30,
+            32,
+            36,
+            38,
+            39,
+            44
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        }
+      ],
+      "checks": {
+        "trihedral_pair_count_is_120": true,
+        "every_witness_uses_three_double_sixes": true,
+        "pairwise_double_six_overlaps_are_all_6": true,
+        "union_size_is_18_and_complement_size_is_9": true,
+        "triple_intersection_is_empty": true,
+        "each_complement_contains_six_tritangents": true,
+        "each_complement_has_unique_trihedral_pair_partition": true,
+        "each_weight_lies_in_40_trihedral_pairs": true,
+        "each_tritangent_lies_in_16_trihedral_pairs": true,
+        "each_double_six_lies_in_10_trihedral_pairs": true,
+        "each_overlap_6_double_six_pair_lies_in_one_trihedral_pair": true
+      },
+      "n_verified": 11
+    },
+    {
+      "coordinate": 2,
+      "sector": "matter_81_coset_2",
+      "trihedral_pair_count": 120,
+      "double_six_triple_size_profile": {
+        "3": 120
+      },
+      "pairwise_double_six_overlap_profile": {
+        "(6, 6, 6)": 120
+      },
+      "union_size_profile": {
+        "18": 120
+      },
+      "complement_size_profile": {
+        "9": 120
+      },
+      "triple_intersection_size_profile": {
+        "0": 120
+      },
+      "contained_tritangent_count_profile": {
+        "6": 120
+      },
+      "trihedra_partition_pair_count_profile": {
+        "1": 120
+      },
+      "weight_participation_profile": {
+        "40": 27
+      },
+      "tritangent_participation_profile": {
+        "16": 45
+      },
+      "double_six_participation_profile": {
+        "10": 36
+      },
+      "double_six_pair_participation_profile": {
+        "1": 360
+      },
+      "sample_witnesses": [
+        {
+          "double_sixes": [
+            0,
+            1,
+            32
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "contained_tritangents": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            2,
+            29
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            7,
+            8,
+            10,
+            11,
+            13,
+            14,
+            15,
+            18,
+            19
+          ],
+          "contained_tritangents": [
+            34,
+            35,
+            37,
+            38,
+            42,
+            44
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            3,
+            27
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            6,
+            8,
+            10,
+            11,
+            12,
+            16,
+            17,
+            18,
+            19
+          ],
+          "contained_tritangents": [
+            31,
+            32,
+            37,
+            38,
+            41,
+            43
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            4,
+            26
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            6,
+            7,
+            9,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19
+          ],
+          "contained_tritangents": [
+            31,
+            32,
+            34,
+            35,
+            39,
+            40
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            6,
+            23
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            7,
+            8,
+            9,
+            11,
+            12,
+            14,
+            16,
+            18,
+            20
+          ],
+          "contained_tritangents": [
+            33,
+            35,
+            36,
+            38,
+            40,
+            43
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            7,
+            21
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            6,
+            8,
+            9,
+            11,
+            13,
+            15,
+            17,
+            18,
+            20
+          ],
+          "contained_tritangents": [
+            30,
+            32,
+            36,
+            38,
+            39,
+            44
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        }
+      ],
+      "checks": {
+        "trihedral_pair_count_is_120": true,
+        "every_witness_uses_three_double_sixes": true,
+        "pairwise_double_six_overlaps_are_all_6": true,
+        "union_size_is_18_and_complement_size_is_9": true,
+        "triple_intersection_is_empty": true,
+        "each_complement_contains_six_tritangents": true,
+        "each_complement_has_unique_trihedral_pair_partition": true,
+        "each_weight_lies_in_40_trihedral_pairs": true,
+        "each_tritangent_lies_in_16_trihedral_pairs": true,
+        "each_double_six_lies_in_10_trihedral_pairs": true,
+        "each_overlap_6_double_six_pair_lies_in_one_trihedral_pair": true
+      },
+      "n_verified": 11
+    },
+    {
+      "coordinate": 3,
+      "sector": "matter_81_coset_1",
+      "trihedral_pair_count": 120,
+      "double_six_triple_size_profile": {
+        "3": 120
+      },
+      "pairwise_double_six_overlap_profile": {
+        "(6, 6, 6)": 120
+      },
+      "union_size_profile": {
+        "18": 120
+      },
+      "complement_size_profile": {
+        "9": 120
+      },
+      "triple_intersection_size_profile": {
+        "0": 120
+      },
+      "contained_tritangent_count_profile": {
+        "6": 120
+      },
+      "trihedra_partition_pair_count_profile": {
+        "1": 120
+      },
+      "weight_participation_profile": {
+        "40": 27
+      },
+      "tritangent_participation_profile": {
+        "16": 45
+      },
+      "double_six_participation_profile": {
+        "10": 36
+      },
+      "double_six_pair_participation_profile": {
+        "1": 360
+      },
+      "sample_witnesses": [
+        {
+          "double_sixes": [
+            0,
+            1,
+            32
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "contained_tritangents": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            2,
+            29
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            7,
+            8,
+            10,
+            11,
+            13,
+            14,
+            15,
+            18,
+            19
+          ],
+          "contained_tritangents": [
+            34,
+            35,
+            37,
+            38,
+            42,
+            44
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            3,
+            27
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            6,
+            8,
+            10,
+            11,
+            12,
+            16,
+            17,
+            18,
+            19
+          ],
+          "contained_tritangents": [
+            31,
+            32,
+            37,
+            38,
+            41,
+            43
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            4,
+            26
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            6,
+            7,
+            9,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19
+          ],
+          "contained_tritangents": [
+            31,
+            32,
+            34,
+            35,
+            39,
+            40
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            6,
+            23
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            7,
+            8,
+            9,
+            11,
+            12,
+            14,
+            16,
+            18,
+            20
+          ],
+          "contained_tritangents": [
+            33,
+            35,
+            36,
+            38,
+            40,
+            43
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            7,
+            21
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            6,
+            8,
+            9,
+            11,
+            13,
+            15,
+            17,
+            18,
+            20
+          ],
+          "contained_tritangents": [
+            30,
+            32,
+            36,
+            38,
+            39,
+            44
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        }
+      ],
+      "checks": {
+        "trihedral_pair_count_is_120": true,
+        "every_witness_uses_three_double_sixes": true,
+        "pairwise_double_six_overlaps_are_all_6": true,
+        "union_size_is_18_and_complement_size_is_9": true,
+        "triple_intersection_is_empty": true,
+        "each_complement_contains_six_tritangents": true,
+        "each_complement_has_unique_trihedral_pair_partition": true,
+        "each_weight_lies_in_40_trihedral_pairs": true,
+        "each_tritangent_lies_in_16_trihedral_pairs": true,
+        "each_double_six_lies_in_10_trihedral_pairs": true,
+        "each_overlap_6_double_six_pair_lies_in_one_trihedral_pair": true
+      },
+      "n_verified": 11
+    },
+    {
+      "coordinate": 3,
+      "sector": "matter_81_coset_2",
+      "trihedral_pair_count": 120,
+      "double_six_triple_size_profile": {
+        "3": 120
+      },
+      "pairwise_double_six_overlap_profile": {
+        "(6, 6, 6)": 120
+      },
+      "union_size_profile": {
+        "18": 120
+      },
+      "complement_size_profile": {
+        "9": 120
+      },
+      "triple_intersection_size_profile": {
+        "0": 120
+      },
+      "contained_tritangent_count_profile": {
+        "6": 120
+      },
+      "trihedra_partition_pair_count_profile": {
+        "1": 120
+      },
+      "weight_participation_profile": {
+        "40": 27
+      },
+      "tritangent_participation_profile": {
+        "16": 45
+      },
+      "double_six_participation_profile": {
+        "10": 36
+      },
+      "double_six_pair_participation_profile": {
+        "1": 360
+      },
+      "sample_witnesses": [
+        {
+          "double_sixes": [
+            0,
+            1,
+            32
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "contained_tritangents": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            2,
+            29
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            7,
+            8,
+            11,
+            12,
+            13,
+            15,
+            16,
+            18,
+            19
+          ],
+          "contained_tritangents": [
+            34,
+            35,
+            37,
+            38,
+            43,
+            44
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            3,
+            27
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            6,
+            8,
+            10,
+            12,
+            14,
+            15,
+            17,
+            18,
+            19
+          ],
+          "contained_tritangents": [
+            31,
+            32,
+            37,
+            38,
+            41,
+            42
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            4,
+            26
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            6,
+            7,
+            9,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19
+          ],
+          "contained_tritangents": [
+            31,
+            32,
+            34,
+            35,
+            39,
+            40
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            6,
+            23
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            7,
+            8,
+            9,
+            10,
+            14,
+            15,
+            16,
+            18,
+            20
+          ],
+          "contained_tritangents": [
+            33,
+            35,
+            36,
+            38,
+            40,
+            42
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        },
+        {
+          "double_sixes": [
+            0,
+            7,
+            21
+          ],
+          "pairwise_double_six_overlaps": [
+            6,
+            6,
+            6
+          ],
+          "union_size": 18,
+          "triple_intersection_size": 0,
+          "complement_9_weights": [
+            6,
+            8,
+            9,
+            11,
+            13,
+            15,
+            17,
+            18,
+            20
+          ],
+          "contained_tritangents": [
+            30,
+            32,
+            36,
+            38,
+            39,
+            44
+          ],
+          "trihedra_partition_pair_count": 1,
+          "trihedra_partition_pairs_local_indices": [
+            [
+              [
+                0,
+                3,
+                4
+              ],
+              [
+                1,
+                2,
+                5
+              ]
+            ]
+          ]
+        }
+      ],
+      "checks": {
+        "trihedral_pair_count_is_120": true,
+        "every_witness_uses_three_double_sixes": true,
+        "pairwise_double_six_overlaps_are_all_6": true,
+        "union_size_is_18_and_complement_size_is_9": true,
+        "triple_intersection_is_empty": true,
+        "each_complement_contains_six_tritangents": true,
+        "each_complement_has_unique_trihedral_pair_partition": true,
+        "each_weight_lies_in_40_trihedral_pairs": true,
+        "each_tritangent_lies_in_16_trihedral_pairs": true,
+        "each_double_six_lies_in_10_trihedral_pairs": true,
+        "each_overlap_6_double_six_pair_lies_in_one_trihedral_pair": true
+      },
+      "n_verified": 11
+    }
+  ],
+  "claim_boundary": "finite cubic-surface incidence theorem on the W33-derived E6 matter charts; it reconstructs the 120 Steiner trihedral-pair layer without claiming a continuum surface equation",
+  "reading": "Each W33-derived E6 matter chart contains exactly 120 finite Steiner trihedral-pair witnesses. Each witness is a triple of double-sixes with pairwise overlap 6, empty triple intersection, and union size 18. The complementary 9 weights contain exactly six zero-sum tritangent triples, and those six split uniquely into a pair of trihedra. The incidence counts are sharp: every weight appears in 40 such pairs, every tritangent in 16, every double-six in 10, and every overlap-6 double-six pair in exactly one.",
+  "checks": {
+    "all_eight_reports_verify_11_checks": true,
+    "all_eight_reports_have_120_trihedral_pairs": true,
+    "all_eight_reports_have_weight_participation_40": true,
+    "all_eight_reports_have_tritangent_participation_16": true,
+    "all_eight_reports_have_double_six_participation_10": true
+  },
+  "n_verified": 5
+}

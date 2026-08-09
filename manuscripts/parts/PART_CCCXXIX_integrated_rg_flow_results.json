@@ -1,0 +1,53 @@
+{
+  "architecture_upgrade": "CCCXXVIII gave the beta numerator.  CCCXXIX integrates it exactly.  The cross-ratio R(y) linearizes the finite RG flow, and sqrt(5049) is the canonical W33 RG-time eigenvalue.",
+  "beta_flow": "dy/dt = 67y + 140 - y^2 = -(y-y_+)(y-y_-)",
+  "checks": [
+    {"name":"A=(v/2)Phi6=140","passed":true,"value":140},
+    {"name":"B=2v-Phi3=67","passed":true,"value":67},
+    {"name":"Delta=q^3(k-1)(Phi4+Phi6)=5049","passed":true,"value":5049},
+    {"name":"fixed point gap D=sqrt(Delta)=y_plus-y_minus","passed":true,"value":71.05631569396216},
+    {"name":"beta factorization at sample y=10","passed":true,"value":710.0},
+    {"name":"cross ratio at y0=B is positive","passed":true,"value":34.04025617765566},
+    {"name":"integrated flow recovers y0 at t=0","passed":true,"value":67.0},
+    {"name":"integrated derivative equals beta at t=0","passed":true,"value":[140.00000000047374,140.0]},
+    {"name":"forward flow moves toward y_plus","passed":true,"value":69.02637006433835},
+    {"name":"backward flow moves toward y_minus","passed":true,"value":-1.9048543929101494},
+    {"name":"RG time shifts additively","passed":true,"value":0.09999999999999998},
+    {"name":"positive fixed point is forward-time attractor","passed":true,"value":69.02815784698112},
+    {"name":"negative fixed point is backward-time attractor","passed":true,"value":-2.0281578469810335}
+  ],
+  "checks_passed": 13,
+  "checks_total": 13,
+  "fixed_points": {
+    "gap_decimal": 71.05631569396222,
+    "gap_exact": "sqrt(5049)",
+    "y_minus_decimal": -2.0281578469810335,
+    "y_minus_exact": "(67-sqrt(5049))/2",
+    "y_plus_decimal": 69.02815784698112,
+    "y_plus_exact": "(67+sqrt(5049))/2"
+  },
+  "honesty_boundary": "This is an exact finite RG-like flow in the inverse-scale coordinate.  A physical RG interpretation still requires identifying t and y with continuum energy, length, or coupling variables.",
+  "integrated_solution": {
+    "R0": 34.04025617765566,
+    "formula": "y(t)=(y_-+R0 exp(sqrt(5049)t) y_+)/(1+R0 exp(sqrt(5049)t))",
+    "tau_y0": 0.04963942432257992,
+    "y0": 67.0
+  },
+  "linearizing_coordinate": {
+    "RG_time": "tau(y)=log(R(y))/sqrt(5049)",
+    "R(y)": "(y-y_-)/(y_+-y)",
+    "law": "R(y(t)) = R(y0) exp(sqrt(5049)t)"
+  },
+  "part": "CCCXXIX",
+  "sample_flow_from_y0_67": [
+    {"beta": -8.694067597358655,"t": -0.1,"y": -1.9048543929101494},
+    {"beta": 142.98565538985342,"t": -0.05,"y": 41.02481236202465},
+    {"beta": 140.0,"t": 0.0,"y": 67.0},
+    {"beta": 65.19451121406197,"t": 0.02,"y": 68.06883037288316},
+    {"beta": 8.690149301331141,"t": 0.05,"y": 68.90494281285368},
+    {"beta": 0.1269808639779804,"t": 0.1,"y": 69.02637006433835}
+  ],
+  "theorem": "The canonical finite beta flow dy/dt=67y+140-y^2 integrates exactly under R(y)=(y-y_-)/(y_+-y), with d log R/dt=sqrt(5049).  Thus the W33 action architecture contains an explicit finite RG renderer before continuum units are assigned.",
+  "title": "Integrated Finite RG Flow Compiler",
+  "verified": true
+}

@@ -1,0 +1,254 @@
+{
+  "part": "CCLVIII",
+  "title": "Bernoulli, Ramanujan 691, and the W(3,3) Small-Prime Tower",
+  "Verified": true,
+  "checks_total": 36,
+  "checks_passed": 36,
+  "checks": [
+    [
+      "prime 2 = W(3,3) form",
+      true
+    ],
+    [
+      "prime 3 = W(3,3) form",
+      true
+    ],
+    [
+      "prime 5 = W(3,3) form",
+      true
+    ],
+    [
+      "prime 7 = W(3,3) form",
+      true
+    ],
+    [
+      "prime 11 = W(3,3) form",
+      true
+    ],
+    [
+      "prime 13 = W(3,3) form",
+      true
+    ],
+    [
+      "prime 17 = W(3,3) form",
+      true
+    ],
+    [
+      "prime 19 = W(3,3) form",
+      true
+    ],
+    [
+      "prime 23 = W(3,3) form",
+      true
+    ],
+    [
+      "den(B_2) = 6",
+      true
+    ],
+    [
+      "den(B_4) = 30",
+      true
+    ],
+    [
+      "den(B_6) = 42",
+      true
+    ],
+    [
+      "den(B_8) = 30",
+      true
+    ],
+    [
+      "den(B_10) = 66",
+      true
+    ],
+    [
+      "den(B_12) = 2730",
+      true
+    ],
+    [
+      "den(B_14) = 6",
+      true
+    ],
+    [
+      "den(B_16) = 510",
+      true
+    ],
+    [
+      "den(B_18) = 798",
+      true
+    ],
+    [
+      "den(B_20) = 330",
+      true
+    ],
+    [
+      "den(B_22) = 138",
+      true
+    ],
+    [
+      "den(B_24) = 2730",
+      true
+    ],
+    [
+      "den(B_12) = lam*q*(mu+1)*Phi_6*Phi_3 = 2730",
+      true
+    ],
+    [
+      "691 form A: lam*v*lam^q + q*(Phi_3+mu)",
+      true
+    ],
+    [
+      "691 form B: lam^Phi_6*(mu+1) + q*(Phi_3+mu)",
+      true
+    ],
+    [
+      "forms agree",
+      true
+    ],
+    [
+      "691 is prime",
+      true
+    ],
+    [
+      "691 = 640 + 51",
+      true
+    ],
+    [
+      "640 = lam^Phi_6 * (mu+1)",
+      true
+    ],
+    [
+      "640 = lam * v * lam^q",
+      true
+    ],
+    [
+      "51 = q * (Phi_3 + mu)",
+      true
+    ],
+    [
+      "h(E_8) = q*Phi_4 = den(B_4) = 30",
+      true
+    ],
+    [
+      "Five distinct W(3,3) primes in den(B_12)",
+      true
+    ],
+    [
+      "# W(3,3) primes in 2730 = mu+1",
+      true
+    ],
+    [
+      "Ramanujan weight: 11 = k - 1",
+      true
+    ],
+    [
+      "sum of 9 small W(3,3) primes = 100 = Phi_4^2",
+      true
+    ],
+    [
+      "# small W(3,3) primes <= 23 = q^2",
+      true
+    ]
+  ],
+  "constants": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "F": 24,
+    "G": 15,
+    "EDGES": 240,
+    "PHI3": 13,
+    "PHI4": 10,
+    "PHI6": 7
+  },
+  "small_prime_w33_forms": {
+    "2": 2,
+    "3": 3,
+    "5": 5,
+    "7": 7,
+    "11": 11,
+    "13": 13,
+    "17": 17,
+    "19": 19,
+    "23": 23
+  },
+  "bernoulli_denominators": {
+    "B_2": {
+      "denom": 6,
+      "w33_form": 6
+    },
+    "B_4": {
+      "denom": 30,
+      "w33_form": 30
+    },
+    "B_6": {
+      "denom": 42,
+      "w33_form": 42
+    },
+    "B_8": {
+      "denom": 30,
+      "w33_form": 30
+    },
+    "B_10": {
+      "denom": 66,
+      "w33_form": 66
+    },
+    "B_12": {
+      "denom": 2730,
+      "w33_form": 2730
+    },
+    "B_14": {
+      "denom": 6,
+      "w33_form": 6
+    },
+    "B_16": {
+      "denom": 510,
+      "w33_form": 510
+    },
+    "B_18": {
+      "denom": 798,
+      "w33_form": 798
+    },
+    "B_20": {
+      "denom": 330,
+      "w33_form": 330
+    },
+    "B_22": {
+      "denom": 138,
+      "w33_form": 138
+    },
+    "B_24": {
+      "denom": 2730,
+      "w33_form": 2730
+    }
+  },
+  "ramanujan_691": {
+    "value": 691,
+    "form_A": "lam*v*lam^q + q*(Phi_3+mu)",
+    "form_B": "lam^Phi_6*(mu+1) + q*(Phi_3+mu)",
+    "decomposition": {
+      "large_part": 640,
+      "shift": 51,
+      "sum": 691
+    }
+  },
+  "tower_summary": {
+    "small_primes_up_to_23": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23
+    ],
+    "count": 9,
+    "count_eq_q_squared": true,
+    "sum": 100,
+    "sum_eq_phi4_squared": true
+  }
+}

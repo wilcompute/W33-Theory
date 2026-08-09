@@ -1,0 +1,50 @@
+{
+  "part": "CCCXCVIII",
+  "title": "Expander Certificate: Ramanujan Bound, Cheeger Constant, Mixing Rate",
+  "checks_pass": 26,
+  "checks_total": 27,
+  "status": "FAIL",
+  "fields": {
+    "alon_boppana_bound": 44,
+    "ramanujan_certificate": {
+      "ab_squared": 44,
+      "r_squared": 4,
+      "s_squared": 16,
+      "r_ramanujan": true,
+      "s_ramanujan": true,
+      "is_ramanujan": true,
+      "max_nontrivial_sq": 16
+    },
+    "spectral_quantities": {
+      "spectral_gap": 10,
+      "lower_spectral": 8,
+      "gap_product": 160,
+      "normalized_gap": "5/6",
+      "gap_times_mu": 40,
+      "r_times_alpha": 20
+    },
+    "cheeger_bounds": {
+      "cheeger_lower": 5,
+      "cheeger_upper_sq": 240,
+      "lower_sq": 25,
+      "lower_sq_le_upper_sq": true,
+      "upper_sq_eq_edges": true,
+      "double_lower": 10
+    },
+    "mixing_quantities": {
+      "lazy_second_eig": "1/6",
+      "lazy_gap": "5/6",
+      "poincare_constant": "6/5",
+      "walk_bound": 48,
+      "gap_ratio": "5/2"
+    }
+  },
+  "discoveries": [
+    "W(3,3) is Ramanujan: max(r^2,s^2)=16 < 4*(K-1)=44.",
+    "Spectral gap K-r=10=alpha: the Hoffman bound reappears as the gap.",
+    "Cheeger upper bound 2K(K-r)=240 coincides exactly with EDGES.",
+    "Walk bound K*V/(K-r)=48=2*SU5_ADJ ties mixing to SM adjoint dim.",
+    "(K-r)*mu=V and r*alpha=V/2 are concise expansion-physics bridges.",
+    "mult_S * s^2 = 15*16 = 240 = EDGES: matter rep encodes edge count."
+  ]
+}

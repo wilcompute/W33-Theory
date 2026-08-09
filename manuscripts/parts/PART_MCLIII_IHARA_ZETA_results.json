@@ -1,0 +1,71 @@
+{
+  "parameters": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "r": 2,
+    "s": -4,
+    "m_r": 24,
+    "m_s": 15,
+    "edges": 240,
+    "trivial_factor_exp": 200
+  },
+  "ihara_factors": {
+    "principal": "(1 - 12u + 11u^2) = (1-u)(1-11u)",
+    "r_factor": "(1 - 2u + 11u^2)^24",
+    "s_factor": "(1 - -4u + 11u^2)^15  [note: s<0 so this is (1+4u+11u^2)^15]",
+    "trivial_factor": "(1 - u^2)^200"
+  },
+  "riemann_hypothesis": {
+    "disc_r": -40,
+    "disc_s": -28,
+    "r_factor_zeros_on_rh_circle": true,
+    "s_factor_zeros_on_rh_circle": true,
+    "ihara_rh_holds": true,
+    "rh_circle_radius": "1/sqrt(11) = 1/sqrt(11)",
+    "r_zeros_modulus_sq": "1/11",
+    "s_zeros_modulus_sq": "1/11",
+    "equivalence": "Ihara RH \u27fa W(3,3) is Ramanujan \u27fa |r|,|s| \u2264 2\u221a(k-1)"
+  },
+  "spectral_traces": {
+    "trace_A_0": 40,
+    "trace_A_1": 0,
+    "trace_A_2": 480,
+    "trace_A_3": 960,
+    "trace_A_4": 24960,
+    "trace_A_5": 234240,
+    "trace_A_6": 3048960
+  },
+  "trace_identities": {
+    "L0_equals_v": true,
+    "L1_equals_0": true,
+    "L2_equals_kv": true,
+    "L3_equals_lambda_v_k": true,
+    "triangle_count": 160,
+    "triangles_times_6": 960
+  },
+  "hashimoto": {
+    "total_eigenvalues": 480,
+    "two_times_edges": 480,
+    "count_correct": true,
+    "breakdown": {
+      "principal_non_trivial": 2,
+      "r_non_trivial": 48,
+      "s_non_trivial": 30,
+      "trivial": 400
+    }
+  },
+  "master_identities_summary": {
+    "ihara_rh_r_disc_negative": true,
+    "ihara_rh_s_disc_negative": true,
+    "ihara_rh_both": true,
+    "r_zeros_on_circle": true,
+    "s_zeros_on_circle": true,
+    "trace_A0_equals_v": true,
+    "trace_A1_equals_0": true,
+    "trace_A2_equals_kv": true,
+    "trace_A3_equals_triangle_count": true,
+    "hashimoto_eigenvalue_count": true,
+    "jacobi_zero_trace": true
+  }
+}

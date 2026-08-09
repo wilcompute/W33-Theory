@@ -1,0 +1,73 @@
+{
+  "module": "PART_CCCXIII_PHOTONIC_MBQC_W33_BRIDGE",
+  "status": "exact photonic resource bridge from uploaded single-photon paper to W33 operator stack",
+  "source_links": {
+    "uploaded_single_photon_paper": "single_photon_universal_computation.tex/pdf uploaded in chat",
+    "Dirac_CCCXII": "Dirac Determinant / Operator Compiler",
+    "Hashimoto_CLXXXII": "CCT / Hashimoto Carrier Weld",
+    "Operator_Tetrahedron_CCCVII": "Operator Tetrahedron / Entropy Bridge"
+  },
+  "w33_atoms": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "V": 40,
+    "K": 12,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "J": 5,
+    "J_inverse": 8,
+    "H1": 81,
+    "Albert": 27,
+    "E": 240,
+    "directed": 480
+  },
+  "photonic_bridge_layers": [
+    {"name":"single_photon_qubit","value":2,"formula":"dim H_pol=2=lambda","interpretation":"polarisation qubit dimension"},
+    {"name":"dual_rail_modes","value":2,"formula":"two path modes=lambda","interpretation":"loss-heralded logical qubit encoding"},
+    {"name":"su2_generator_count","value":3,"formula":"3=q","interpretation":"Pauli/SU(2) generator count"},
+    {"name":"klm_simple_success","value":"1/4","formula":"1/4=1/mu","interpretation":"simplest post-selected CZ/conditional phase success"},
+    {"name":"fusion_success","value":"1/2","formula":"1/2=lambda/mu","interpretation":"Type-II fusion edge creation probability"},
+    {"name":"fusion_attempts_per_edge","value":"2","formula":"mu/lambda=2","interpretation":"expected attempts per W33 cluster edge"},
+    {"name":"cluster_qubits","value":40,"formula":"V=40","interpretation":"single photons in a W33 graph-state cluster"},
+    {"name":"cluster_edges","value":240,"formula":"E=240=q(q^4-1)","interpretation":"CZ/graph-state edges to create"},
+    {"name":"stabilizer_weight","value":13,"formula":"k+1=13=Phi3","interpretation":"MBQC stabilizer support size on W33"},
+    {"name":"stabilizer_total_support","value":520,"formula":"V*Phi3=40*13=520","interpretation":"total stabilizer incidence"},
+    {"name":"oriented_edge_incidences","value":480,"formula":"2E=480","interpretation":"Hashimoto directed carrier / oriented cluster incidences"},
+    {"name":"expected_fusion_attempts_full_cluster","value":"480","formula":"E/(1/2)=2E=480","interpretation":"expected physical fusion attempts to build W33 cluster"},
+    {"name":"expected_klm_attempts_full_edge_set","value":"960","formula":"E/(1/4)=4E=960=tr(A^3)","interpretation":"simple KLM attempts match triangle trace"}
+  ],
+  "bridge_identities": {
+    "photon_qubit": "polarisation and dual-rail dimensions equal lambda=2",
+    "su2_q_clock": "Pauli/SU(2) generator count equals q=3",
+    "klm_success": "simplest KLM CZ success 1/4 equals 1/mu",
+    "fusion_success": "Type-II fusion success 1/2 equals lambda/mu",
+    "cluster_stabilizer_weight": "W33 cluster stabilizer K_a has support k+1=13=Phi3",
+    "fusion_hashimoto": "expected attempts to create all W33 edges by p=1/2 fusion is 2E=480, the Hashimoto carrier",
+    "klm_triangle_trace": "expected simple KLM attempts for all edges is 4E=960=tr(A^3)"
+  },
+  "checks": {
+    "single_photon_dimension_lambda": true,
+    "su2_generator_count_q": true,
+    "klm_success_is_inverse_mu": true,
+    "fusion_success_lambda_over_mu": true,
+    "fusion_attempts_per_edge": true,
+    "cluster_qubits_v": true,
+    "cluster_edges_edge_shell": true,
+    "stabilizer_weight_phi3": true,
+    "stabilizer_total_support": true,
+    "oriented_incidences_hashimoto": true,
+    "fusion_attempts_full_cluster_hashimoto": true,
+    "klm_attempts_edge_set_triangle_trace": true,
+    "seidel_energy_edge_shell": true,
+    "dirac_degree": true,
+    "dirac_exp_product_triangle_trace": true,
+    "tree_entropy_exponents": true,
+    "hashimoto_branch": true,
+    "threshold_carrier_inverse": true,
+    "phi6_carrier_step": true
+  },
+  "theorem_statement": "Photonic MBQC gives a physical resource interpretation of the W33 operator stack. The single-photon qubit dimension and dual-rail mode count are lambda=2; SU(2)/Pauli control has q=3 generators; the simplest KLM conditional phase success 1/4 is 1/mu; and Type-II fusion success 1/2 is lambda/mu. A W33 cluster state has 40 photons, 240 graph edges, stabilizer weight k+1=Phi3=13, and oriented edge incidences 2E=480. Because fusion succeeds with probability 1/2, the expected number of fusion attempts to build the full W33 cluster is 480, exactly the Hashimoto directed carrier.",
+  "interpretive_note": "This turns the abstract directed carrier into a concrete photonic resource count. Hashimoto's 480 states are not only oriented nonbacktracking edges; they are also the expected fusion-attempt budget for physically assembling the W33 photonic cluster."
+}

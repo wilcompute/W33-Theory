@@ -1,0 +1,77 @@
+{
+  "module": "PART_CXLIII_BRANCH_SELECTION_PHI6_POLAR",
+  "selection_principle": "Because the RG correction is an SU(3)_c/QCD threshold, the selected branch must be localized in the Phi6 sector carrying beta0=Phi6(3)=7, not merely in the global Ihara/Ramanujan shell.",
+  "qcd_beta_atom": {
+    "beta0": 7,
+    "formula": "beta0 = Phi6(3) = q^2-q+1 = 7",
+    "sector": "negative Hashimoto field Q(sqrt(-Phi6)) from x=-2±i√7"
+  },
+  "field_sectors": [
+    {
+      "label": "positive r=2 / Phi4 sector",
+      "adjacency_eigenvalue": 2,
+      "adjacency_multiplicity": 24,
+      "root_label": "1 ± i*sqrt(Phi4) = 1 ± i*sqrt(10)",
+      "real_square": 1,
+      "imaginary_square": 10,
+      "norm_square": 11,
+      "field_label": "Q(sqrt(-Phi4)) = Q(sqrt(-10))"
+    },
+    {
+      "label": "negative s=-4 / Phi6 sector",
+      "adjacency_eigenvalue": -4,
+      "adjacency_multiplicity": 15,
+      "root_label": "-2 ± i*sqrt(Phi6) = -2 ± i*sqrt(7)",
+      "real_square": 4,
+      "imaginary_square": 7,
+      "norm_square": 11,
+      "field_label": "Q(sqrt(-Phi6)) = Q(sqrt(-7))"
+    }
+  ],
+  "branch_scores": [
+    {
+      "branch_label": "24/13 branch from Phi6-sector polar ratio",
+      "bare_k3": 1.8461538461538463,
+      "threshold_tau_source": "log(|Re(-2+i√7)|/|Im(-2+i√7)|)=log sqrt(mu/Phi6)",
+      "relative_k3_error_ppm": -7.389117350098395,
+      "qcd_beta0_locality": 1,
+      "uses_phi6_field": 1,
+      "uses_color_specific_polar_ratio": 1,
+      "uses_global_radial_clock": 0,
+      "branch_score": 3,
+      "decision": "SELECTED"
+    },
+    {
+      "branch_label": "13/7 branch from Ramanujan radial/q-clock ratio",
+      "bare_k3": 1.8571428571428572,
+      "threshold_tau_source": "log(|mu_Hashimoto|/sqrt(q))=log sqrt((k-1)/q)",
+      "relative_k3_error_ppm": 17.228225792642604,
+      "qcd_beta0_locality": 0,
+      "uses_phi6_field": 0,
+      "uses_color_specific_polar_ratio": 0,
+      "uses_global_radial_clock": 1,
+      "branch_score": -1,
+      "decision": "REJECTED_FOR_QCD_THRESHOLD"
+    }
+  ],
+  "selected_branch": {
+    "branch_label": "24/13 branch from Phi6-sector polar ratio",
+    "bare_k3": 1.8461538461538463,
+    "threshold_tau_source": "log(|Re(-2+i√7)|/|Im(-2+i√7)|)=log sqrt(mu/Phi6)",
+    "relative_k3_error_ppm": -7.389117350098395,
+    "qcd_beta0_locality": 1,
+    "uses_phi6_field": 1,
+    "uses_color_specific_polar_ratio": 1,
+    "uses_global_radial_clock": 0,
+    "branch_score": 3,
+    "decision": "SELECTED"
+  },
+  "selected_effective_model": {
+    "k3_bare": "24/13",
+    "threshold_tau": "log sqrt(mu/Phi6)",
+    "threshold_source": "Phi6-sector polar ratio |Re(-2+i√7)|/|Im(-2+i√7)|",
+    "status": "QCD-local selected branch; ppm residual remains as multi-heavy/precision correction target"
+  },
+  "rejected_branch_note": "The 13/7 branch is not discarded mathematically; it is rejected only as the QCD-local threshold because its source is the global Ramanujan radius over the q-clock, not the Phi6 color sector.  It remains useful as an Ihara-clock/universal threshold candidate.",
+  "theorem_statement": "Sector-locality selects the Phi6-polar branch: the QCD beta atom beta0=Phi6 lives in the negative Hashimoto field x=-2±i√Phi6, and the corresponding polar ratio gives tau=log sqrt(mu/Phi6) with bare k3=24/13."
+}

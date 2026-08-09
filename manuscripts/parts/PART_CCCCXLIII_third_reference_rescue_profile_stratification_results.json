@@ -1,0 +1,142 @@
+{
+  "part": "CCCCXLIII",
+  "title": "Third-Reference Rescue-Profile Stratification (Deterministic Sample)",
+  "Verified": true,
+  "checks_total": 6,
+  "checks_passed": 6,
+  "checks": [
+    [
+      "E8 root count = 240",
+      true
+    ],
+    [
+      "Exactly three two-reference signatures",
+      true
+    ],
+    [
+      "Signature multiplicities = 360/13440/15120",
+      true
+    ],
+    [
+      "Each signature contributes 12 sampled pairs",
+      true
+    ],
+    [
+      "Each sampled profile is constant within signature",
+      true
+    ],
+    [
+      "Sampled constants are exactly 126/234/240",
+      true
+    ]
+  ],
+  "sample_per_signature": 12,
+  "profiles": [
+    {
+      "signature": [
+        1,
+        1,
+        56,
+        56,
+        126
+      ],
+      "pair_count": 360,
+      "sample_size": 12,
+      "sample_counts": [
+        126,
+        126,
+        126,
+        126,
+        126,
+        126,
+        126,
+        126,
+        126,
+        126,
+        126,
+        126
+      ],
+      "sample_unique_counts": [
+        126
+      ]
+    },
+    {
+      "signature": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        72
+      ],
+      "pair_count": 13440,
+      "sample_size": 12,
+      "sample_counts": [
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        234
+      ],
+      "sample_unique_counts": [
+        234
+      ]
+    },
+    {
+      "signature": [
+        1,
+        1,
+        1,
+        1,
+        12,
+        12,
+        12,
+        12,
+        32,
+        32,
+        32,
+        32,
+        60
+      ],
+      "pair_count": 15120,
+      "sample_size": 12,
+      "sample_counts": [
+        240,
+        240,
+        240,
+        240,
+        240,
+        240,
+        240,
+        240,
+        240,
+        240,
+        240,
+        240
+      ],
+      "sample_unique_counts": [
+        240
+      ]
+    }
+  ],
+  "key_observations": [
+    "All three two-reference signatures show constant rescue counts on first-12 deterministic samples.",
+    "Sample constants are exactly 126, 234, and 240.",
+    "The sampled rescue profile increases strictly across the three strata."
+  ],
+  "honesty_boundary": "This part certifies deterministic sampled stratification, not full all-pairs third-reference classification."
+}

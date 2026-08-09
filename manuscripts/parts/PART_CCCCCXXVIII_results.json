@@ -1,0 +1,14 @@
+{
+  "part": "CCCCCXXVIII",
+  "title": "Ramanujan Property, Mixing, and Optimal Expansion",
+  "results": {
+    "k": 12,
+    "nontrivial_eigenvalues": [2, -4],
+    "alon_boppana_bound": 6.6332495807108,
+    "is_ramanujan": true,
+    "cheeger_constant": 4,
+    "mixing_time_estimate": 3.36,
+    "log_v_over_log_k_over_s": 3.355272832,
+    "v": 40
+  }
+}

@@ -1,0 +1,19 @@
+{
+    "part": "DCMXCV",
+    "title": "Cyclotomic Completed Defect Dirichlet Series",
+    "status": "verified",
+    "raw_local_factor": "D_p(s) = (p - 2 + p^{-s})/(p - p^{-s})",
+    "completed_local_factor": "Dhat_p(s) = D_p(s) * (1 - 1/p)^(-2(1-p^{-s}))",
+    "global_product": "Dhat_X(s) = Product_{p<=X, p≡1 mod 3} ((p-2+p^{-s})/(p-p^{-s})) (1-1/p)^(-2(1-p^{-s}))",
+    "largest_cutoff_completed_values_at_1e6": {
+        "0.5": 0.9731105378421029,
+        "1.0": 0.9637482610393487,
+        "2.0": 0.9590920626844583
+    },
+    "largest_cutoff_log_derivatives_at_1e6": {
+        "0.5": -0.030655071127807625,
+        "1.0": -0.011233511298034404,
+        "2.0": -0.001509506657529215
+    },
+    "theorem_summary": "The split-prime defect packet has a genuine completed Dirichlet/Euler product for Re(s)>0, together with a convergent completed logarithmic derivative."
+}

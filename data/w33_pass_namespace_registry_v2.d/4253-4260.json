@@ -2,25 +2,38 @@
   "schema": "w33.pass_namespace_registry.v2.entry",
   "range": [4253, 4260],
   "slug": "small_girth16_cover_fault_aware_su4_quantum_hysteresis_spectrum_clock_aux_lower_bounds_full_hawking_channel_bounds_spectral_scrambling_modular_vacuum_causal_capacity",
-  "title": "Five physics closures and three outside-box probes: smaller girth-16 Levi covers, fault-aware SU(4) holonomy, the quantum hysteresis spectrum, exact three-local clock auxiliary compression, full nineteen-mode Hawking communication bounds, plus spectral scrambling, modular vacuum structure, and causal-capacity separation",
-  "status": "completed_exact_with_girth16_composite_holonomy_metastable_spectrum_clock45_channel_bounds_scrambling_modular_capacity_boundaries",
+  "title": "Pass 4253 RETRACTED by Pass 4329: surviving scoped Passes 4254-4259 finite holonomy, hysteresis, clock, channel, spectral-form-factor, and modular-spectrum results; Pass 4260 tree count conditional only",
+  "status": "RETRACTED_BY_PASS4329_PASS4253_GIRTH_EXACTLY_8__PASSES4254_4259_SURVIVE_SCOPED__PASS4260_CONDITIONAL_ONLY",
   "owner": "openai-gpt-5.6-sol",
   "reserved_at": "2026-08-08T01:32:00-04:00",
   "completed_at": "2026-08-08T01:52:00-04:00",
   "purpose": "Execute the five physics targets following canonical Passes 4214-4221 and add three independent outside-box constructions with deterministic finite-model checks and strict evidence boundaries.",
-  "result": "A frozen Z_2731 voltage assignment is nonzero on all 386,964 simple Levi cycles of lengths 8, 10, 12 and 14, producing a 218,480-vertex cover with certified girth at least 16. A two-latitude composite geometric CZ has phase pi cos(delta), cancelling first-order common polar-angle error while exposing differential-gap sensitivity and exact finite-speed leakage. The saturated scale model now has a converged finite-volume Fokker-Planck metastable gap 4.37527494e-8 and a two-state Lindblad underdamped/overdamped crossover. Reusing eight data-operation flags across three repeats of the same eight SWAP supports lowers the exact three-local clock from 61 to 45 auxiliaries while preserving its gap and revival times. The complete nineteen-mode horizon yields a baseline effective signal attenuator tau=0.2830095941; in 512 correlated-disorder samples 510 lie at or below one-half transmissivity, two exceed it, none is entanglement breaking, and no audited single-mode Gaussian input gives positive coherent information in the two high-tau cases. Outside-box probes show an exact high Levi spectral-form-factor plateau, a two-scale point-line modular spectrum, and exponential channel-volume growth separated from sqrt(branching) ballistic speed.",
+  "result": "Pass 4253 is RETRACTED by Pass 4329. The frozen Z_2731 assignment has the simple zero-based Levi 8-cycle [3,52,4,48,8,66,18,53], on zero-based edge indices [48,49,33,34,104,105,54,52], with signed voltages [0,0,0,0,1328,-542,801,-1587] summing to 0 modulo 2731. The frozen cover therefore has girth exactly 8, not at least 16. Passes 4254-4259 retain only their finite-model conclusions: the two-latitude holonomy phase and leakage arithmetic; the specified finite-grid Fokker-Planck metastable gap and two-state crossover; the 45-auxiliary resource count for the stated three-local clock construction; the frozen nineteen-mode Gaussian-channel audit, including its 512 correlated-disorder samples and audited single-mode Gaussian inputs; the finite Levi spectral-form-factor plateau; and the finite point-line modular spectrum. Pass 4260's 4,373-vertex radius-seven 4-regular-tree ball is a conditional collision-free-tree calculation and is not realized by the retracted Z_2731 cover.",
   "certificate": "data/PART_4253_4260_GIRTH16_FAULTAWARE_SU4_HYSTERESIS_CLOCK_CHANNEL_SCRAMBLING_MODULAR_CAPACITY.json",
-  "semantic_sha256": "35e1ba8df34b401ec0092e1f145cc1f5c5618bff7b29c684b869493201b72e18",
+  "semantic_sha256": "3288f5e40029f4742d40f8349de820cd4b3677f1e944838ee1f234ae438fcc40",
+  "historical_retracted_semantic_sha256": "35e1ba8df34b401ec0092e1f145cc1f5c5618bff7b29c684b869493201b72e18",
   "verifier": "analysis/w33_pass4253_4260_girth16_faultaware_su4_hysteresis_clock_channel_scrambling_modular_capacity.py",
   "regression": "tests/test_w33_pass4253_4260_girth16_faultaware_su4_hysteresis_clock_channel_scrambling_modular_capacity.py",
+  "correction_provenance": {
+    "retracted_pass": 4253,
+    "correcting_pass": 4329,
+    "witness": "analysis/w33_pass4328_4333_audited_corrections.g",
+    "certificate": "data/PART_W33_PASS4328_4333_AUDITED_CORRECTIONS.json",
+    "certificate_section": "pass_4329_voltage_cover_retraction",
+    "historical_paths_retained": [
+      "certificate",
+      "verifier",
+      "regression"
+    ]
+  },
   "report": "analysis/BT4253_BT4260_girth16_faultaware_su4_hysteresis_clock_channel_scrambling_modular_capacity.md",
   "manuscript_insert": "analysis/BT4253_BT4260_girth16_faultaware_su4_hysteresis_clock_channel_scrambling_modular_capacity_insert.tex",
   "public_page": "docs/girth16-faultaware-holonomy-hysteresis-clock-channel-4253-4260.html",
-  "coordination": "Preserve all glue-track corrections through 4244 and the active/completing 4245-4252 implementation packet. The numerical-order reconciler sorts this theorem after any BT4245_BT4252 insert when that packet publishes. The Actions-based single Pages publisher and authoritative docs/index.html remain untouched; docs/index.html is never edited directly by this packet.",
+  "coordination": "Pass 4329 supersedes only the false cover and the Pass 4260 realization premise. The original report, insert, public page, current certificate, verifier and registry now expose the retraction. The authoritative docs/index.html also carries the consolidated Passes 4324-4333 correction card.",
   "remote_pending": [
     "GitHub Actions exact regression status",
     "protected frontier reconciliation result",
     "three manuscript PDF artifacts"
   ],
-  "boundary": "Exact finite graph-cover, two-level holonomic, stochastic/Lindblad, clock-compilation, Gaussian-channel, spectral-form-factor, harmonic modular, and tree-band statements only. Girth 18 remains open; the holonomic composite is fault-aware rather than fault-tolerant; the two tau>1/2 thermal-attenuator cases retain open unrestricted quantum capacity; no fabricated device, observed Hawking radiation, physical spacetime memory, global clock minimum, physical scrambling experiment, continuum modular field theory, speed-of-light derivation, gravity, cosmology, or theory of everything is established."
+  "boundary": "The historical Pass 4253 certificate, semantic hash, verifier, and regression paths are retained only as provenance and do not certify girth at least 16; Pass 4329 proves that frozen cover has girth exactly 8. Pass 4260's 4,373-vertex radius-seven ball remains valid only as a calculation for an abstract collision-free 4-regular tree and is not a property of that cover. Surviving Passes 4254-4259 are scoped to the stated finite two-level holonomy arithmetic, finite-grid stochastic and two-state models, one explicit clock resource construction rather than a global minimum, frozen Gaussian-channel samples and audited input family rather than unrestricted quantum capacity, and finite graph spectral/modular calculations. The holonomic composite is fault-aware rather than fault-tolerant; no fabricated device, observed Hawking radiation, physical spacetime memory, physical scrambling experiment, continuum modular field theory, speed-of-light derivation, gravity, cosmology, or theory of everything is established."
 }

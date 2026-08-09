@@ -1,0 +1,28 @@
+{
+  "Part": "CCXL",
+  "Title": "Fischer Groups from W(3,3)",
+  "Verified": true,
+  "checks_passed": 33,
+  "checks_total": 33,
+  "SRG_parameters": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "M_LAM": 27,
+    "EDGES": 240,
+    "AUT_ORDER": 51840
+  },
+  "three_transposition_order": 3,
+  "orders": {
+    "Fi22": 64561751654400,
+    "Fi23": 4089470473293004800,
+    "Fi24p": 1255205709190661721292800
+  },
+  "rep_dims": {
+    "Fi22": 78,
+    "Fi23": 253,
+    "Fi24p": 783
+  }
+}

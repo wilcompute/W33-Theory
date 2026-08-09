@@ -1,0 +1,25 @@
+{
+  "module": "PART_CXXXVII_HASHIMOTO_SPECTRAL_TRICHOTOMY",
+  "graph": {
+    "v": 40,
+    "m": 240,
+    "k": 12,
+    "q": 11,
+    "lambda": 2,
+    "mu": 4
+  },
+  "adjacency_spectrum_W33": {
+    "12": 1,
+    "2": 24,
+    "-4": 15
+  },
+  "hashimoto_trichotomy": {
+    "perron_|mu|=11": 1,
+    "ramanujan_|mu|=sqrt(11)": 78,
+    "trivial_|mu|=1": 401
+  },
+  "total": 480,
+  "ihara_grh_corollary": "All 78 nontrivial Hashimoto eigenvalues have |mu| = sqrt(11); equivalently the Ihara zeta of W(3,3) has all nontrivial zeros on the critical circle |u| = 1/sqrt(11).",
+  "bass_formula_check": "PASS",
+  "direct_diagonalisation_check": "PASS"
+}

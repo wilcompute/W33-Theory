@@ -1,0 +1,50 @@
+{
+  "part": "CCXCIX",
+  "title": "Krein Parameters of the W(3,3) Bose-Mesner Algebra",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "V": 40,
+    "K": 12,
+    "K2": 27,
+    "R_EIG": 2,
+    "S_EIG": -4,
+    "MULT_R": 24,
+    "MULT_S": 15,
+    "ALPHA": 10,
+    "P_DET": -240,
+    "E1_COEFF": [
+      "3/5",
+      "1/10",
+      "-1/15"
+    ],
+    "E2_COEFF": [
+      "3/8",
+      "-1/8",
+      "1/24"
+    ],
+    "Q0_11": "24",
+    "Q1_11": "44/3",
+    "Q2_11": "40/3",
+    "Q0_12": "0",
+    "Q1_12": "25/3",
+    "Q2_12": "32/3",
+    "Q0_22": "15",
+    "Q1_22": "20/3",
+    "Q2_22": "10/3",
+    "ALL_KREIN_NONNEG": true
+  },
+  "discoveries": [
+    "3·q²₁₁ = V = 40  (Krein parameter encodes vertex count)",
+    "3·q²₂₂ = α = 10  (Krein parameter = Hoffman bound from CCXCVI)",
+    "q⁰₁₁ = MULT_R = 24  (trivial Krein parameter = eigenvalue multiplicity)",
+    "q⁰₂₂ = MULT_S = 15  (trivial Krein parameter = eigenvalue multiplicity)",
+    "3·q¹₁₂ = α + MULT_S = 25",
+    "3·q²₁₂ = MULT_R + 2·MU = 32",
+    "3·(q¹₁₁ + q¹₂₂) = EW³ = 64  (cube of electroweak gauge count)",
+    "q¹₁₁ + q²₁₁ = V − K = 28  (complement valency + 1)",
+    "q¹₂₂ + q²₂₂ = α = 10  (cross-pair sum = Hoffman bound)",
+    "All Krein parameters ≥ 0: Delsarte–Krein conditions hold"
+  ]
+}

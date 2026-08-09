@@ -1,0 +1,428 @@
+{
+  "part": "MCCCLXXXVI",
+  "theorem": "E6 triality contrast rank-8 bridge",
+  "input_bridge": "MCCXLV flag A2/E6/matter chart bridge",
+  "representative_point": {
+    "point": 0,
+    "point_vector": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "lines_through_point": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "raw_adjacent_triplet_sum_packet": {
+      "labels": [
+        [
+          0,
+          1,
+          "through"
+        ],
+        [
+          0,
+          1,
+          "away"
+        ],
+        [
+          0,
+          2,
+          "through"
+        ],
+        [
+          0,
+          2,
+          "away"
+        ],
+        [
+          0,
+          3,
+          "through"
+        ],
+        [
+          0,
+          3,
+          "away"
+        ],
+        [
+          1,
+          13,
+          "through"
+        ],
+        [
+          1,
+          13,
+          "away"
+        ],
+        [
+          1,
+          14,
+          "through"
+        ],
+        [
+          1,
+          14,
+          "away"
+        ],
+        [
+          1,
+          15,
+          "through"
+        ],
+        [
+          1,
+          15,
+          "away"
+        ],
+        [
+          2,
+          16,
+          "through"
+        ],
+        [
+          2,
+          16,
+          "away"
+        ],
+        [
+          2,
+          17,
+          "through"
+        ],
+        [
+          2,
+          17,
+          "away"
+        ],
+        [
+          2,
+          18,
+          "through"
+        ],
+        [
+          2,
+          18,
+          "away"
+        ],
+        [
+          3,
+          19,
+          "through"
+        ],
+        [
+          3,
+          19,
+          "away"
+        ],
+        [
+          3,
+          20,
+          "through"
+        ],
+        [
+          3,
+          20,
+          "away"
+        ],
+        [
+          3,
+          21,
+          "through"
+        ],
+        [
+          3,
+          21,
+          "away"
+        ]
+      ],
+      "rows": 24,
+      "rank": 12,
+      "reading": "24 adjacent E6 triplet-sum vectors have rank 12 before ternary line contrasts."
+    },
+    "contrast_modes": {
+      "through": {
+        "labels": [
+          [
+            0,
+            1,
+            2,
+            "through"
+          ],
+          [
+            0,
+            1,
+            3,
+            "through"
+          ],
+          [
+            1,
+            13,
+            14,
+            "through"
+          ],
+          [
+            1,
+            13,
+            15,
+            "through"
+          ],
+          [
+            2,
+            16,
+            17,
+            "through"
+          ],
+          [
+            2,
+            16,
+            18,
+            "through"
+          ],
+          [
+            3,
+            19,
+            20,
+            "through"
+          ],
+          [
+            3,
+            19,
+            21,
+            "through"
+          ]
+        ],
+        "rank": 8,
+        "gram_spectrum": {
+          "0.11459": 4,
+          "0.343769": 4
+        },
+        "gram_diagonal_profile": {
+          "0.22918": 8
+        }
+      },
+      "away": {
+        "labels": [
+          [
+            0,
+            1,
+            2,
+            "away"
+          ],
+          [
+            0,
+            1,
+            3,
+            "away"
+          ],
+          [
+            1,
+            13,
+            14,
+            "away"
+          ],
+          [
+            1,
+            13,
+            15,
+            "away"
+          ],
+          [
+            2,
+            16,
+            17,
+            "away"
+          ],
+          [
+            2,
+            16,
+            18,
+            "away"
+          ],
+          [
+            3,
+            19,
+            20,
+            "away"
+          ],
+          [
+            3,
+            19,
+            21,
+            "away"
+          ]
+        ],
+        "rank": 8,
+        "gram_spectrum": {
+          "0.78541": 4,
+          "2.35623": 4
+        },
+        "gram_diagonal_profile": {
+          "1.57082": 8
+        }
+      },
+      "pair_sum": {
+        "labels": [
+          [
+            0,
+            1,
+            2,
+            "pair_sum"
+          ],
+          [
+            0,
+            1,
+            3,
+            "pair_sum"
+          ],
+          [
+            1,
+            13,
+            14,
+            "pair_sum"
+          ],
+          [
+            1,
+            13,
+            15,
+            "pair_sum"
+          ],
+          [
+            2,
+            16,
+            17,
+            "pair_sum"
+          ],
+          [
+            2,
+            16,
+            18,
+            "pair_sum"
+          ],
+          [
+            3,
+            19,
+            20,
+            "pair_sum"
+          ],
+          [
+            3,
+            19,
+            21,
+            "pair_sum"
+          ]
+        ],
+        "rank": 8,
+        "gram_spectrum": {
+          "1.5": 4,
+          "4.5": 4
+        },
+        "gram_diagonal_profile": {
+          "3": 8
+        }
+      },
+      "pair_diff": {
+        "labels": [
+          [
+            0,
+            1,
+            2,
+            "pair_diff"
+          ],
+          [
+            0,
+            1,
+            3,
+            "pair_diff"
+          ],
+          [
+            1,
+            13,
+            14,
+            "pair_diff"
+          ],
+          [
+            1,
+            13,
+            15,
+            "pair_diff"
+          ],
+          [
+            2,
+            16,
+            17,
+            "pair_diff"
+          ],
+          [
+            2,
+            16,
+            18,
+            "pair_diff"
+          ],
+          [
+            3,
+            19,
+            20,
+            "pair_diff"
+          ],
+          [
+            3,
+            19,
+            21,
+            "pair_diff"
+          ]
+        ],
+        "rank": 8,
+        "gram_spectrum": {
+          "0.3": 4,
+          "0.9": 4
+        },
+        "gram_diagonal_profile": {
+          "0.6": 8
+        }
+      },
+      "relations": {
+        "pair_sum_gram_equals_5_pair_diff_gram_max_error": 3.9968028886505635e-15,
+        "away_gram_equals_phi4_through_gram_max_error": 3.1086244689504383e-15
+      }
+    }
+  },
+  "all_point_rank_profiles": {
+    "raw_e6_triplet_sum_rank": {
+      "12": 40
+    },
+    "through_contrast_rank": {
+      "8": 40
+    },
+    "away_contrast_rank": {
+      "8": 40
+    },
+    "pair_sum_contrast_rank": {
+      "8": 40
+    },
+    "pair_diff_contrast_rank": {
+      "8": 40
+    }
+  },
+  "max_relation_error": 6.217248937900877e-15,
+  "claim_boundary": "finite spectral quotient theorem on the W33 corner scheme; this is not yet a continuum E8 lattice embedding",
+  "reading": "The missing rank-8 bridge is not the naive A2-triplet collapse of the full 78-triplet packet. It appears when the adjacent E6 sector is first summed over its local triplets and then contrasted along the ternary point order on each of the four W33 lines through the anchor point. Four lines times two independent point contrasts gives eight vectors. In the golden 24D eigenspace those vectors have exact clean Gram spectra {3/2,9/2} for the through+away quotient and {3/10,9/10} for the complementary quotient.",
+  "checks": {
+    "representative_raw_e6_triplet_sum_rank_is_12": true,
+    "representative_pair_sum_contrast_rank_is_8": true,
+    "representative_pair_diff_contrast_rank_is_8": true,
+    "representative_through_and_away_contrast_ranks_are_8": true,
+    "pair_sum_gram_spectrum_is_3_over_2_and_9_over_2": true,
+    "pair_diff_gram_spectrum_is_3_over_10_and_9_over_10": true,
+    "pair_sum_gram_is_5_times_pair_diff_gram": true,
+    "all_40_points_have_raw_rank_12": true,
+    "all_40_points_have_pair_sum_rank_8": true,
+    "all_40_points_have_pair_diff_rank_8": true,
+    "all_40_points_have_through_rank_8": true,
+    "all_40_points_have_away_rank_8": true
+  },
+  "n_verified": 12
+}

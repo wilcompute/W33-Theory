@@ -1,0 +1,36 @@
+{
+  "architecture_upgrade": "CCCXLV added nuisance templates. CCCXLVI profiles the nuisance model and compares common-scale, nuisance, and broken/free-channel alternatives by chi-square, AIC, BIC, and likelihood-ratio improvements.",
+  "checks": [
+    {"name":"dimensionless W33 M2=5049/4","passed":true,"value":1262.25},
+    {"name":"clean BIC prefers common-scale model","passed":true,"value":"M0_common_scale"},
+    {"name":"systematic BIC prefers nuisance model","passed":true,"value":"M1_scale_plus_nuisance"},
+    {"name":"systematic nuisance LR improves chi-square","passed":true,"value":"delta_chi_square > 10"},
+    {"name":"systematic nuisance fit recovers theta","passed":true,"value":0.02},
+    {"name":"bad data not accepted by nuisance model","passed":true,"value":"reduced_chi_square > 3"},
+    {"name":"bad AIC falls to free-channel broken model","passed":true,"value":"M2_free_channels"},
+    {"name":"free-channel model has zero residual chi-square","passed":true,"value":0.0}
+  ],
+  "checks_passed": 8,
+  "checks_total": 8,
+  "criteria": {
+    "aic": "chi2+2k",
+    "bic": "chi2+k log N",
+    "lr": "Delta chi2 between nested models"
+  },
+  "honesty_boundary": "The likelihoods here use synthetic covariance and Gaussian residual assumptions. Real use requires experimentally justified covariance, priors, and nuisance templates.",
+  "model_definitions": {
+    "M0": "X_i=X+noise_i",
+    "M1": "X_i=X+theta b_i+noise_i",
+    "M2": "X_i=alpha_i+noise_i (broken/free-channel model)"
+  },
+  "part": "CCCXLVI",
+  "summary": {
+    "clean_case": "parsimony selects the common one-sector model",
+    "systematic_case": "known coherent systematic selects the nuisance model and recovers theta=0.02",
+    "bad_case": "off-template residual is not saved by nuisance fitting; free-channel alternative is selected by AIC"
+  },
+  "theorem": "The one-sector W33 response model can be compared as nested Gaussian GLS models. A coherent modeled systematic should select the nuisance model over the no-nuisance model, while off-template residuals should force rejection or selection of the broken/free-channel alternative.",
+  "title": "Profile Likelihood / Model Comparison Compiler",
+  "true_scale": 6872.25,
+  "verified": true
+}

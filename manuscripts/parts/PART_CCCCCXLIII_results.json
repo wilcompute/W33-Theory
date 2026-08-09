@@ -1,0 +1,21 @@
+{
+  "part": "CCCCCXLIII",
+  "title": "Master Genus Identity",
+  "results": {
+    "g1": 21,
+    "g2": 6,
+    "g1_plus_g2": 27,
+    "q_cubed": 27,
+    "g1_minus_g2": 15,
+    "g_multiplicity_negative_eigenvalue": 15,
+    "g1_times_g2": 126,
+    "C_q2_2": 36,
+    "chi1": -40,
+    "chi2": -10,
+    "chi_ratio": "1/4",
+    "genus_formulas": {
+      "g1": "(q^3 + g) / 2",
+      "g2": "(q^3 - g) / 2"
+    }
+  }
+}

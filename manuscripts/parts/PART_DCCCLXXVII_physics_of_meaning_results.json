@@ -1,0 +1,8 @@
+{
+  "part": "DCCCLXXVII",
+  "decimal": 877,
+  "title": "The Physics of Meaning",
+  "definition": "M(P,S) = |Aut(P) ∩ Stab(S)| / |Stab(S)|",
+  "Wigner_answer": "Mathematics is effective because human cognition and physical law share the same W(3,3) substrate.",
+  "status": "DEEPER LAYER"
+}

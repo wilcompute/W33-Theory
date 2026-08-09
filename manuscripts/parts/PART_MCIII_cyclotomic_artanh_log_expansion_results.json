@@ -1,0 +1,20 @@
+{
+  "statement": "The logarithm of the completed defect Dirichlet package admits an exact artanh expansion: log Dhat_X(s) = 2 Sum_p [atanh((p^{-s}-1)/(p-1)) + (p^{-s}-1) log(1-1/p)]. Because |p^{-s}-1| < p-1 for every split prime p>=7 and Re(s)>0, this global log has an absolutely convergent odd-power series in the centered spectral variables u_p = p^{-s}-1.",
+  "largest_cutoff_exact_logs": {
+    "0.5": {
+      "real": -0.027257598066689558,
+      "imag": 0.0,
+      "series_error": 6.591949208711867e-17
+    },
+    "1.0": {
+      "real": -0.03692515847523429,
+      "imag": 0.0,
+      "series_error": 4.3021142204224816e-16
+    },
+    "2.0": {
+      "real": -0.041768210077750396,
+      "imag": 0.0,
+      "series_error": 4.9682480351975755e-15
+    }
+  }
+}

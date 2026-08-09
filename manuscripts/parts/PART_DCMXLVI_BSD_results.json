@@ -1,0 +1,9 @@
+{
+  "part": "DCMXLVI",
+  "decimal": 946,
+  "title": "BSD Density-One Result",
+  "mechanism": "Serre mod-3 surjectivity + GL2(F3) in PGL3(F3)",
+  "coverage": "density-one set of E/Q",
+  "open": "CM curves and finite exceptional j-invariants",
+  "status": "DENSITY-ONE PROVED"
+}

@@ -1,0 +1,55 @@
+{
+  "part": "CCCCXLVII",
+  "title": "Perron Residue Alpha Theorem",
+  "atoms": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "k": 12,
+    "v": 40,
+    "E": 240,
+    "directed_edges_D": 480,
+    "theta_k_minus_1": 11
+  },
+  "perron_residue": {
+    "perron_pole_u0": "1/11",
+    "resolvent_scalar": "R_theta(u)=1/(1-theta*u)",
+    "ordinary_residue_at_u0": "-1/11",
+    "regularized_projector": "P_perr=lim_{u->u0}(1-theta*u)(I-uB)^-1",
+    "regularized_projector_scalar_on_constant_line": "1",
+    "projector_from_residue_scalar": "1"
+  },
+  "mass_and_green": {
+    "h_theta": "1111",
+    "Delta_M": "3/22",
+    "M_eff": "24445/22",
+    "uncompressed_directed_perron_green": "10560/24445",
+    "k_compressed_perron_green": "880/24445",
+    "vertex_green": "880/24445"
+  },
+  "alpha_identity": {
+    "y_c_inverse_alpha_core": 137,
+    "alpha_slip": "880/24445",
+    "alpha_inverse_refined": "669969/4889",
+    "alpha_inverse_refined_decimal": 137.0359991818378
+  },
+  "checks": {
+    "true_master_equation": true,
+    "perron_pole_is_1_over_11": true,
+    "ordinary_residue_is_minus_1_over_11": true,
+    "regularized_projector_scalar_is_1": true,
+    "projector_from_residue_scalar_is_1": true,
+    "ihara_perron_factor_vanishes_at_u0": true,
+    "other_perron_root_is_1": true,
+    "critical_roots_have_radius_squared_1_over_11": true,
+    "hashimoto_mass_h_theta_equals_vertex_mass": true,
+    "delta_m_equals_3_over_22": true,
+    "m_eff_equals_24445_over_22": true,
+    "uncompressed_perron_green_equals_10560_over_24445": true,
+    "compressed_perron_green_equals_vertex_green": true,
+    "compressed_perron_green_equals_alpha_slip": true,
+    "alpha_inverse_refined_exact": true
+  },
+  "all_checks_pass": true,
+  "interpretation": "The alpha slip is the mass-renormalized Perron residue coefficient of the Hashimoto resolvent. The nontrivial roots certify the graph-RH/Ramanujan carrier, while the observable finite coupling is extracted from the regularized Perron projector at u=1/(k-1)."
+}

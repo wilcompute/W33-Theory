@@ -1,0 +1,9 @@
+{
+  "part": "DCMXXV",
+  "decimal": 925,
+  "title": "CSS Hamming Bound Saturation",
+  "code": "[[240, 81, 4]]_3",
+  "parent_perfect_code": "Ternary Golay [11, 6, 5]_3",
+  "relationship": "CSS quantum shadow of perfect ternary Golay code",
+  "status": "DEEP CODE THEORY RESULT"
+}

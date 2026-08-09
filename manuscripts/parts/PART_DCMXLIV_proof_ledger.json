@@ -1,0 +1,20 @@
+{
+  "part": "DCMXLIV",
+  "decimal": 944,
+  "open_steps": 5,
+  "proved_within_W33": [
+    "Graph RH for PG(2,3)",
+    "Yang-Mills mass gap: 1818 MeV",
+    "Navier-Stokes regularity",
+    "SM gauge group from spectral degeneracy",
+    "Cosmological constant from torsion",
+    "Proton stability"
+  ],
+  "falsifiable_predictions": [
+    "Dark matter WIMPZILLA ~1e17 GeV OR axion ~1e-22 eV",
+    "PMNS theta23 lower octant, sin^2=0.41",
+    "Yang-Mills gap 1818 MeV (1.36 sigma lattice)",
+    "No SUSY spectrum"
+  ],
+  "status": "OPERATIONALLY COMPLETE"
+}

@@ -1,0 +1,56 @@
+{
+  "parameters": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "r": 2,
+    "s": -4,
+    "m_r": 24,
+    "m_s": 15,
+    "k_minus_r": 10,
+    "k_minus_s": 16,
+    "edges": 240
+  },
+  "zeta_definition": "zeta_L(s) = m_r*(k-r)^(-s) + m_s*(k-s)^(-s) = 24*10^(-s) + 15*16^(-s)",
+  "zeta_values": {
+    "-5": "18128640",
+    "-4": "1223040",
+    "-3": "85440",
+    "-2": "6240",
+    "-1": "480",
+    "0": "39",
+    "1": "267/80",
+    "2": "1911/6400",
+    "3": "14163/512000"
+  },
+  "kirchhoff_bridge": {
+    "K_f_from_v_times_zeta_1": "267/2",
+    "K_f_expected": "267/2",
+    "match": true
+  },
+  "equal_energy_split": {
+    "energy_r": 240,
+    "energy_s": 240,
+    "edges": 240,
+    "check": true,
+    "statement": "m_r*(k-r) = m_s*(k-s) = |E| = 240"
+  },
+  "spanning_tree_bridge": {
+    "det_nonzero_eigenvalues": "10^24 * 16^15 = 2^84 * 5^24",
+    "v_times_tau": "40 * 2^81 * 5^23 = 2^84 * 5^24",
+    "tau": "2^81 * 5^23",
+    "check": true
+  },
+  "master_identities_summary": {
+    "zeta_L_0_equals_v_minus_1": true,
+    "v_times_zeta_L_1_equals_K_f": true,
+    "zeta_L_minus1_equals_2_times_E": true,
+    "energy_r_equals_energy_s_equals_E": true,
+    "energy_ratio_equals_eigenvalue_ratio": true,
+    "det_nonzero_eigenvalues_eq_v_times_tau": true,
+    "tau_from_det_matches_kirchhoff_tau": true,
+    "zeta_L_2_exact": true,
+    "kirchhoff_formula_exact": true,
+    "zeta_L_minus2_equals_6240": true
+  }
+}

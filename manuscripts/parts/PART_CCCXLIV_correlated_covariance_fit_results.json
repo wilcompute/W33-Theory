@@ -1,0 +1,89 @@
+{
+  "architecture_upgrade": "CCCXLIII propagated independent channel errors.  CCCXLIV upgrades the measurement layer to full correlated covariance fitting with GLS consensus, covariance propagation C_X=J C_y J^T, and correlated chi-square diagnostics.",
+  "bad_correlated_fit": {
+    "chi_square": 3842.0590791909834,
+    "degrees_of_freedom": 5,
+    "max_abs_marginal_pull": 61.75100331115654,
+    "passes_reduced_chi_square_lt_3": false,
+    "pulls_marginal": [-0.01316244705018669, -0.01316244705018669, -0.0006463632256942121, 61.75100331115654, -0.0011367743884010223, -0.0010910344217987086],
+    "reduced_chi_square": 768.4118158381967,
+    "residuals": [-1.8101245979579547, -1.8101245979579547, -1.8101245979588642, 297.4751707109694, -1.8101245979606832, -1.8101245979588642],
+    "scale_values": [6872.250000000001, 6872.250000000001, 6872.25, 7171.535295308928, 6872.249999999998, 6872.25],
+    "sigma_weighted_scale": 0.0011179472817421307,
+    "weighted_scale": 6874.060124597959
+  },
+  "checks": [
+    {"name":"dimensionless W33 M2=5049/4","passed":true,"value":1262.25},
+    {"name":"value covariance is symmetric","passed":true,"value":true},
+    {"name":"scale covariance is symmetric","passed":true,"value":true},
+    {"name":"scale covariance inverse is valid","passed":true,"value":2.488493939745879e-09},
+    {"name":"positive quadratic form test","passed":true,"value":17.53304078539659},
+    {"name":"clean independent fit recovers true scale","passed":true,"value":6872.249999999997},
+    {"name":"clean correlated fit recovers true scale","passed":true,"value":6872.25},
+    {"name":"clean correlated fit passes chi-square","passed":true,"value":1.3201736273697517e-24},
+    {"name":"small noisy correlated fit passes chi-square","passed":true,"value":0.3287187601558773},
+    {"name":"bad correlated fit fails chi-square","passed":true,"value":768.4118158381967},
+    {"name":"correlated and independent sigmas differ","passed":true,"value":{"correlated":0.0011179472817421307,"independent":0.0008961419735530475}}
+  ],
+  "checks_passed": 11,
+  "checks_total": 11,
+  "clean_correlated_fit": {
+    "chi_square": 6.600868136848758e-24,
+    "degrees_of_freedom": 5,
+    "max_abs_marginal_pull": 1.1304672730990318e-12,
+    "passes_reduced_chi_square_lt_3": true,
+    "pulls_marginal": [6.613282763990214e-15,6.613282763990214e-15,0.0,-1.1304672730990318e-12,-9.13622324182205e-15,0.0],
+    "reduced_chi_square": 1.3201736273697517e-24,
+    "residuals": [9.094947017729282e-13,9.094947017729282e-13,0.0,-5.4569682106375694e-12,-1.8189894035458565e-12,0.0],
+    "scale_values": [6872.250000000001,6872.250000000001,6872.25,6872.2499999999945,6872.249999999998,6872.25],
+    "sigma_weighted_scale": 0.0011179472817421307,
+    "weighted_scale": 6872.25
+  },
+  "clean_independent_fit": {
+    "chi_square": 2.7085910501610865e-24,
+    "degrees_of_freedom": 5,
+    "max_abs_marginal_pull": 1.1304672730990318e-12,
+    "passes_reduced_chi_square_lt_3": true,
+    "pulls_marginal": [2.6468635017533357e-10,2.6468635017533357e-10,2.7284841053187847e-09,-5.663418815356193e-11,3.538036514854638e-10,7.940574474085436e-10],
+    "reduced_chi_square": 5.417182100322173e-25,
+    "residuals": [3.637978807091713e-12,3.637978807091713e-12,2.7284841053187847e-12,-2.7284841053187847e-12,9.094947017729282e-13,2.7284841053187847e-12],
+    "scale_values": [6872.250000000001,6872.250000000001,6872.25,6872.2499999999945,6872.249999999998,6872.25],
+    "sigma_weighted_scale": 0.0008961419735530475,
+    "weighted_scale": 6872.249999999997
+  },
+  "correlated_fit_summary": {
+    "channels": ["mass","gap","heat_trace","spinor_trace","resolvent_trace","zeta"],
+    "jacobian": [165.7980699525785,82.89903497628925,-491891.80519083195,17843.037622344534,32999.6976218754,-81128482275.98033],
+    "scale_covariance": [[0.023362345025000006,0.0033618121048437502,-0.0005109405095625001,0.0007773104137732347,0.00041485296539400614,-0.0005540119250156249],[0.0033618121048437502,0.023362345025000006,-0.0005109405095625001,0.0007773104137732347,0.00041485296539400614,-0.0005540119250156249],[-0.0005109405095625001,-0.0005109405095625001,1.1225,-0.0013613563238141585,-0.0007265731132098144,0.0009709663125],[0.0007773104137732347,0.0007773104137732347,-0.0013613563238141585,0.002839860713907809,0.0011054272747742038,-0.001477148060758004],[0.00041485296539400614,0.00041485296539400614,-0.0007265731132098144,0.0011054272747742038,0.0008065956359419043,-0.0007883972838150395],[-0.0005540119250156249,-0.0005540119250156249,0.0009709663125,-0.001477148060758004,-0.0007883972838150395,0.0013237440749999998]],
+    "value_covariance": [[8.556556155641457e-09,3.826931207917238e-09,4.692124202855313e-14,6.231396057062932e-11,1.7961091144903958e-12,9.76952760625213e-19],[3.826931207917238e-09,3.4226224622565826e-08,9.384248405710626e-14,1.2462792114125864e-10,3.5922182289807915e-12,1.953905521250426e-18],[4.692124202855313e-14,9.384248405710626e-14,4.638939563826554e-18,3.0544828664131416e-15,8.802180572991098e-17,4.786925125778201e-23],[6.231396057062932e-11,1.2462792114125864e-10,3.0544828664131416e-15,8.18918267766767e-12,1.1690938091725241e-13,6.35732462083912e-20],[1.7961091144903958e-12,3.5922182289807915e-12,8.802180572991098e-17,1.1690938091725241e-13,6.811067045638443e-15,1.8325512739749577e-21],[9.76952760625213e-19,1.953905521250426e-18,4.786925125778201e-23,6.35732462083912e-20,1.8325512739749577e-21,2.0129456531953043e-27]]
+  },
+  "dimensionless_kernel": {
+    "M2": "5049/4",
+    "role": "internal W33 dimensionless mass shell; physical channel estimates fit X=kappa^2M2"
+  },
+  "gls_formulas": {
+    "chi_square": "chi2=(X-X_hat 1)^T C_X^-1 (X-X_hat 1)",
+    "covariance_propagation": "C_X = J C_y J^T",
+    "dof": "N-1",
+    "estimator": "X_hat=(1^T C_X^-1 X)/(1^T C_X^-1 1)",
+    "variance": "sigma_Xhat^2=1/(1^T C_X^-1 1)"
+  },
+  "honesty_boundary": "This is a covariance-ready fitting layer, but the covariance used here is synthetic. Real empirical use requires experimentally justified covariance matrices, nuisance parameters, and systematic-error modeling.",
+  "part": "CCCXLIV",
+  "small_noisy_correlated_fit": {
+    "chi_square": 1.6435938007793864,
+    "degrees_of_freedom": 5,
+    "max_abs_marginal_pull": 0.9047079802092463,
+    "passes_reduced_chi_square_lt_3": true,
+    "pulls_marginal": [0.304477229347409,-0.2393792654527677,-0.1421929482514838,-0.9047079802092463,0.21651763925752967,0.398757741216752],
+    "reduced_chi_square": 0.3287187601558773,
+    "residuals": [0.041847475054108014,-0.03289942653855548,-0.15087887098726054,-0.004363724765658786,0.024637920862529834,0.14488553887541662],
+    "scale_values": [6872.253436125001,6872.247251099998,6872.24985,6872.244966885243,6872.25179999825,6872.253025001996],
+    "sigma_weighted_scale": 0.0011179472817421307,
+    "weighted_scale": 6872.211588649947
+  },
+  "theorem": "For a one-sector W33 response packet with correlated channel uncertainties, the channel-value covariance C_y propagates to scale covariance C_X=J C_y J^T. The common physical scale is optimally estimated by generalized least squares, and the one-sector model is tested by the correlated residual chi-square with N-1 degrees of freedom.",
+  "title": "Correlated Covariance Fit Compiler",
+  "true_scale": 6872.25,
+  "verified": true
+}

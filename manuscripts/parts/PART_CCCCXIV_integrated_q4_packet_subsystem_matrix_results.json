@@ -1,0 +1,36 @@
+{
+  "part": "CCCCXIV",
+  "title": "Integrated Q4 Packet Subsystem Matrix",
+  "verified": true,
+  "checks_passed": 10,
+  "checks_total": 10,
+  "global_packet_subsystem": {
+    "n": 1296,
+    "k": 81,
+    "d_packet_layer": 4,
+    "gauge_qubits": 729,
+    "center_rank": 486,
+    "gauge_row_rank": 1944,
+    "notation": "[[1296,81,4]] packet subsystem layer"
+  },
+  "matrix_counts": {
+    "X_gauge_rows": 972,
+    "Z_gauge_rows": 972,
+    "X_center_rows": 243,
+    "Z_center_rows": 243,
+    "X_gauge_rank": 972,
+    "Z_gauge_rank": 972,
+    "X_center_rank": 243,
+    "Z_center_rank": 243
+  },
+  "attachment_summary": {
+    "selected_line_star_reps": 81,
+    "k4_lines": 40,
+    "all_line_stars": 160,
+    "attachments": 81,
+    "replacement_weight_target": 12
+  },
+  "architecture_upgrade": "Builds the explicit global 81-packet Q4/Bacon-Shor subsystem matrices and attaches the selected W33 line-star matter representatives to packet columns. This realizes the [[1296,81,4]] packet layer and the 12-weight line-star replacement target at the matrix/metadata level.",
+  "theorem": "The 81 independent Q4/Bacon-Shor packets have 1296 physical slots, center rank 486, gauge-row rank 1944, 729 gauge qubits, and 81 protected logical degrees. Each selected W33 line-star matter representative attaches to three weight-4 packet columns, giving replacement weight 12.",
+  "honesty_boundary": "This proves the independent packet subsystem matrix and attachment map. The final claim [[1296,81,>=12]] requires the next dressed-logical verifier over the integrated attachment model."
+}

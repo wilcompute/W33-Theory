@@ -1,0 +1,22 @@
+{
+  "Part": "CCXLV",
+  "Title": "Umbral Moonshine and the K3 Surface",
+  "Verified": true,
+  "checks_passed": 33,
+  "checks_total": 33,
+  "k3": {
+    "euler": 24,
+    "h11": 20,
+    "b2": 22,
+    "signature": [
+      3,
+      19
+    ],
+    "real_dim": 4,
+    "complex_dim": 2
+  },
+  "umbral_moonshine": {
+    "cases": 23,
+    "M24_degree": 24
+  }
+}
