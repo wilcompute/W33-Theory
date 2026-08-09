@@ -1,0 +1,12 @@
+{
+  "boundary": "Representation-theoretic fixed-point obstruction only; non-equivariant or symmetry-breaking decoders are not excluded.",
+  "checks": {"passed": 6, "total": 6},
+  "cohomology": "The connecting map V^G -> H^1(G,K/J) is injective on the 1D fixed line, so the extension class is nonzero.",
+  "fixed_dimensions": {"E=M/J": 0, "K/J": 0, "M": 1, "V=H10": 1},
+  "group": "PSp(4,3)",
+  "obstruction": "An equivariant section would lift the unique nonzero fixed H10 class to a nonzero fixed E class, but E^G=0.",
+  "pass": 4490,
+  "relation_to_4488": "Explains conceptually the rank(A)=389, rank([A|b])=390 affine inconsistency.",
+  "sequence": "0 -> K/J (29) -> E=M/J (39) -> V=M/K=H10 (10) -> 0",
+  "theorem": "W33 fixed-point nonsplitting obstruction theorem"
+}
