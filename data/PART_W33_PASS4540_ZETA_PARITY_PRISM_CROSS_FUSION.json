@@ -1,0 +1,13 @@
+{
+  "boundary": "This is a reconstruction theorem for finite Walsh/graph/code data. It does not make the Ihara variable physical time or the parity quotient a physical charge.",
+  "dimensions": {"H10":10,"V9_edge_span":9,"parity_quotient":1},
+  "pass": 4540,
+  "prism_exception": {
+    "Q53_t9": "complement has seven rungs; 544320 prism images are injective and have weight 104",
+    "W33_t3": "complement has one rung, producing the nine-sheet edge collapse",
+    "general_odd_t": "3-rung image equals its (t-2)-rung complement by the full-fan kernel law"
+  },
+  "theorem": "For W33, primitive-six two-body zeta tomography determines not only dual-W33 adjacency but the full embedded protected H10 and its canonical 9+1 coefficient-parity filtration. The prism-to-edge carrier is the t=3 endpoint of the general fan-complement law, not an all-GQ phenomenon.",
+  "w33_c6_degree2": {"adjacent":252,"disjoint":48,"matrix_identity":"M6=48(J-I)+204 A_*","recovers_A_star_exactly":true},
+  "zeta_to_protected_chain": ["primitive-six degree-two Walsh matrix","A_*","H10=im(A_*)","V9=A_*(even coefficients)","H10/V9 coefficient parity pi"]
+}
