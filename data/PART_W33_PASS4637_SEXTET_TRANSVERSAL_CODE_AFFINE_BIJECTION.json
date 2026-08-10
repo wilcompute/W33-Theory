@@ -1,0 +1,17 @@
+{
+  "boundary": "The affine structure is canonical relative to the chosen Golay section/transversal and its K-action; it is not an M24-invariant vector-space structure on all 4096 sextet transversals.",
+  "codeword_orbits": [1,18,45],
+  "equivariant_bijection_certificates": [
+    {"admissible_fixed_targets":1,"base_stabilizer_order":120,"orbit_size":18},
+    {"admissible_fixed_targets":1,"base_stabilizer_order":48,"orbit_size":45}
+  ],
+  "pass": 4637,
+  "section_group_order": 2160,
+  "shell_correspondence": {
+    "18": "transversal orbit <-> weight-12 codewords",
+    "45": "transversal orbit <-> weight-8 octads",
+    "fixed": "zero transversal <-> zero codeword"
+  },
+  "theorem": "There is a unique K-equivariant bijection from the 64 sextet transversals in the chosen orbit to the 64 C6 section codewords, sending the chosen zero transversal to 0. Transporting XOR gives the transversal orbit an F2^6 affine structure.",
+  "transversal_orbits": [1,18,45]
+}
