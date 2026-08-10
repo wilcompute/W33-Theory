@@ -1,0 +1,100 @@
+% Passes 4587--4588: W33-derived finite D4 triality and apartment flag cover.
+\section*{Current protected frontier: finite $D_4$ triality from the W33 lift}
+\addcontentsline{toc}{section}{Current protected frontier: finite $D_4$ triality from the W33 lift}
+
+The protected binary quotient reconstructed from the W33 line/apartment system has
+$256$ classes and a plus-type quadratic form.  Pass~4579 had already shown that its
+$255$ nonzero classes split as $135$ singular apartment classes and $120$
+anisotropic opposite-edge classes.  Passes~4587--4588 now reconstruct the full
+outer-node triality geometry \emph{inside that same W33-derived quotient}, without
+importing an $E_8$ coordinate model.
+
+\paragraph{Exact finite triality theorem.}
+The totally singular subspaces occur in the exact counts
+\[
+  135,\qquad 1575,\qquad 2025,\qquad 270
+\]
+in vector dimensions $1,2,3,4$.  The $270$ maximal totally singular $4$-spaces
+split into two families of $135$.  Thus the three outer $D_4$ types are
+\[
+  \mathcal P_{135},\qquad \mathcal S^+_{135},\qquad \mathcal S^-_{135}.
+\]
+For any two distinct outer types, let $M$ be the $135\times135$ incidence matrix.
+Every row and column has weight $15$, and each outer type carries the same relation
+\[
+  A=\operatorname{SRG}(135,70,37,35),
+  \qquad
+  \operatorname{spec}(A)=70^1\oplus7^{50}\oplus(-5)^{84}.
+\]
+The incidence Gram law is
+\[
+  MM^{\mathsf T}=15I+3A.
+\]
+More strongly, for cyclically ordered outer types,
+\[
+  M_{12}M_{23}=J+6M_{13}.
+\]
+After removing the trivial all-ones constituent with the integral centering
+\[
+  D_{ij}=9M_{ij}-J,
+\]
+the three maps satisfy the exact triality algebra
+\[
+  \boxed{D_{12}D_{23}=54D_{13}}
+\]
+cyclically, and
+\[
+  D_{ij}D_{ij}^{\mathsf T}=1215I+243A-135J=54^2E_{50},
+  \qquad \operatorname{rank}_{\mathbb Q}D_{ij}=50.
+\]
+This is an explicit rank-$50$ intertwiner layer, not a numerical coincidence of
+three cardinalities.
+
+\paragraph{What the $1620$ W33 apartments do inside this triality geometry.}
+For an apartment $\{a,b,c,d\}$ in the W33 line graph, its two opposite line pairs
+give two singular quotient vectors; together with the apartment's Pass~4579
+singular fiber label they form one totally singular projective line.  The resulting
+map has exact multiplicities
+\[
+  1620\longrightarrow270\quad(6\text{-to-}1),
+\]
+where the selected $270$ singular lines form one $\PSp(4,3)$ orbit.  They define a
+regular incidence structure
+\[
+  135_6\;\text{--}\;270_3,
+\]
+and the apartments are a two-sheet cover of its $810$ point--line flags.
+
+\paragraph{A useful obstruction, not an identification.}
+A selected singular line lies in six maximal singular $4$-spaces and has six W33
+apartment lifts.  The equality $6=6$ does \emph{not} define a canonical bridge.
+Its stabilizer has order $96$.  On the six apartments it acts transitively; on the
+six maximal generators its orbit sizes are $3+2+1$.  The two actions have the same
+image order $12$ and even the same kernel of order $8$, but their fixed-point
+characters differ.  Therefore there is no stabilizer-equivariant bijection between
+those two six-sets.
+
+\paragraph{The positive replacement.}
+Under the projective W33 group the $270$ maximal singular generators decompose as
+\[
+  135\;\sqcup\;36\;\sqcup\;36\;\sqcup\;36\;\sqcup\;27.
+\]
+The three degree-$36$ orbits were checked as $G$-sets rather than named from their
+sizes: for each orbit, a representative stabilizer has order $720$ and fixes
+exactly one of the $36$ W33 spreads.  Hence each is genuinely equivariantly
+isomorphic to the W33 spread carrier.  The degree-$27$ orbit is deliberately left
+unnamed until the same stabilizer/permutation-character test identifies it.
+
+\begin{center}
+\fbox{\parbox{0.94\linewidth}{\textbf{Evidence boundary.}
+Everything above is finite W33-derived $O^+(8,2)$ / $D_4$ building geometry and
+exact permutation-module algebra.  ``Half-spinor family'' is the standard finite
+orthogonal-building term.  No physical spinor field, particle generation, $E_8$
+lattice shell, or dynamical triality is inferred here.  Pass~104 already provides
+the separate explicit anisotropic $E_8/2E_8$ isometry and must not be replaced by
+a cardinality argument.}}
+\end{center}
+
+\noindent\textbf{Executable witnesses:}
+\texttt{analysis/w33\_pass4587\_w33\_derived\_d4\_triality.py} and
+\texttt{analysis/w33\_pass4588\_apartment\_triality\_obstruction\_spread\_bridge.py}.
