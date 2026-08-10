@@ -1,0 +1,18 @@
+{
+  "GQ22_explanation": "224+64 = 96+192 = 288, hence both coefficients equal 36",
+  "anchors": [
+    {"geometry":"GQ(2,2)","apartment_raw_signatures":{"1111|22":224,"1115|":64},"star_raw_signatures":{"1111|22":96,"1113|2":192},"apartment_coefficient":36,"star_coefficient":36,"collision":true},
+    {"geometry":"GQ(2,4)=Q^-(5,2)","apartment_raw_signatures":{"1111|22":416,"1115|":64},"star_raw_signatures":{"1111|22":96,"1113|2":192},"apartment_coefficient":60,"star_coefficient":36,"collision":false},
+    {"geometry":"GQ(4,2)=dual Q^-(5,2)","apartment_raw_signatures":{"1111|22":13088,"1111|4":1536,"1115|":4416,"1133|":3456},"star_raw_signatures":{"1111|22":5184,"1113|2":1152},"apartment_coefficient":2812,"star_coefficient":792,"collision":false},
+    {"geometry":"GQ(3,3)=W33","apartment_raw_signatures":{"1111|22":3648,"1111|4":768,"1115|":896,"1133|":384},"star_raw_signatures":{"1111|22":1152,"1113|2":288},"apartment_coefficient":712,"star_coefficient":180,"collision":false}
+  ],
+  "boundary": "Universal local species reduction plus exact anchors. Closed formulas for the six masses as functions of arbitrary (s,t) and embedding data remain OPEN.",
+  "pass": 4635,
+  "theorem": "Primitive-C8 apartment/K1,3 collisions reduce to equality of six local nonbacktracking walk-signature masses. The GQ(2,2) failure is an exact cancellation between different walk species; GQ(2,4), its dual, and W33 break that cancellation.",
+  "universal_support_species": {
+    "K13": ["1111|22","1113|2"],
+    "apartment": ["1111|22","1115|","1133|","1111|4"],
+    "coefficient_rule": "primitive C8 degree-four coefficient = sum(raw signature masses)/8",
+    "collision_criterion": "sum of the four apartment masses equals sum of the two K1,3 masses"
+  }
+}
