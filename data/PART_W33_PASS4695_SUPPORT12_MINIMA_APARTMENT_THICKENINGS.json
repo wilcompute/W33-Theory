@@ -1,0 +1,8 @@
+{
+  "pass": 4695,
+  "objects": {"apartments":1620,"support12_minima":1620,"thickenings_distinct":1620},
+  "corner_star_thickening": {"definition":"all W33 lines through the four corner points of an apartment","size":12,"extra_lines_per_corner":2,"apartment_code_weight":608,"all_1620_have_weight_608":true,"induced_line_graph_degree_census":{"4":8,"6":4}},
+  "intrinsic_inverse": {"contained_apartments":11,"overlap_profile_multiplicities":{"{0:2,2:8}":1,"{0:2,1:4,2:4}":8,"{0:6,2:4}":2},"selected_apartment_profile":"{0:2,2:8}","unique":true},
+  "theorem": "The exact support-12 minimum shell is precisely the 1620 corner-star thickenings T(A) of W33 apartments. The original apartment is uniquely reconstructible from its 12-line minimum support, so the shell and apartment set are canonically PGSp-equivariantly bijective.",
+  "boundary": "Exact finite W33 code/building theorem. The equality 1620 is used only after the explicit thickening map, weight-608 verification, exact minimum-shell count, and intrinsic inverse are certified."
+}
