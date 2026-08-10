@@ -1,0 +1,37 @@
+{
+  "boundary": "BLT class names, completeness, and stabilizers are prior art. The repo contribution here is the transfer to the minimum shell using the independently proved minimum-word=BLT theorem. No claim is made that each full class is one PSp(4,9) orbit.",
+  "canonical_involution_is_minimum": false,
+  "canonical_projective_involution_fixed_lines": 12,
+  "class_count": 3,
+  "complete_classes": [
+    {
+      "Betten_note": "kernel Dihedral",
+      "class_size": 239112,
+      "name": "Linear",
+      "stabilizer_PGammaO": 28800
+    },
+    {
+      "Betten_note": "kernel cyclic",
+      "class_size": 1195560,
+      "name": "K1",
+      "stabilizer_PGammaO": 5760
+    },
+    {
+      "Betten_note": "kernel trivial",
+      "class_size": 17216064,
+      "name": "Fi/Mondello",
+      "stabilizer_PGammaO": 400
+    }
+  ],
+  "complete_minimum_shell_size": 18650736,
+  "first_three_phase_shell": true,
+  "full_group_order": 6886425600,
+  "full_semilinear_equivalence_group": "PGammaO(5,9)",
+  "kernel_length": 820,
+  "kernel_minimum_distance": 10,
+  "minimum_word_model": "BLT sets of size 10 in the dual Q(4,9)",
+  "pass": 4805,
+  "prior_art": "Anton Betten, A Classification of BLT-sets of Small Order (2009), complete q=9 table",
+  "q": 9,
+  "theorem": "At q=9 the complete minimum shell of ker_F2 A_*(W(3,9)) has d=10 and exactly three classes under full projective-semilinear orthogonal equivalence: Linear, K1, and Fi/Mondello, of sizes 239112, 1195560, and 17216064."
+}
