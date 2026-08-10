@@ -1,0 +1,9 @@
+{
+  "boundary":"Exact local combinatorics and permutation-group action. The 1152 extension on rectangles is not asserted to be a new subgroup of PGSp.",
+  "group_action":{"PGSp_grid_stabilizer":1152,"PGSp_image_on_36":576,"PSp_grid_stabilizer":576,"PSp_image_on_36":288,"both_transitive":true,"generated_extension_order":1152,"partner_centralizes_PGSp_image":true,"partner_in_PGSp_image":false,"pointwise_kernel_on_16_lines":2},
+  "implementation_alias":4764,
+  "local_grid":{"coordinate_model":"C(4,2) x C(4,2)","graph":"L_2(4)","lines":16,"overlap_valencies_per_minimum":{"8":1,"12":8,"16":18,"21":8},"partner_pairs":18,"support12_minima_inside":36},
+  "pass":4788,
+  "rectangle_rule":{"partner":"simultaneous complement of both 2-subsets","partner_apartment_equals_grid_minus_thickening":true,"thickening_complement_is_2x2_rectangle":true},
+  "theorem":"Inside every protected 16-line rook grid, the 36 support-12 minima are exactly the C(4,2)xC(4,2) rectangle states. The overlap-8 partner is simultaneous duad complementation; it is a central extra involution on the 36-set, not a PGSp grid motion."
+}
