@@ -1,0 +1,9 @@
+{
+  "boundary":"The 40-coordinate graph here is the W33 line-intersection graph (dual GQ(4,3)), not the nonisomorphic point graph.",
+  "grid_line_incidence":{"TtT":"12 I40 + 3 A_dual + 6 J40","TTt":"12 I45 + 3 A45 + 4 J45","column_weight":18,"rank_F2":24,"rank_F2_A45":14,"rank_F2_A_dual":10,"rank_Q":25,"row_weight":16,"shape":[45,40]},
+  "implementation_alias":4763,
+  "pass":4787,
+  "support12_quotient":{"adjacency_rule":"intersection 7","objects":45,"pair_intersections":{"4":270,"7":720}},
+  "theorem":"The support-12 minimum shell alone reconstructs the 45-object SRG(45,32,22,24). Its 45x40 grid-line incidence has exact Gram identities and ranks 25 over Q and 24 over F2.",
+  "transport_graph":{"eigenvalues":{"-4":20,"2":24,"32":1},"parameters":"SRG(45,32,22,24)"}
+}
