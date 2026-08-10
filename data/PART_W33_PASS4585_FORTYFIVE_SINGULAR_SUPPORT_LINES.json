@@ -1,0 +1,19 @@
+{
+  "boundary": "The 45-set is constructed intrinsically here; identifying it with any pre-existing 45-object E6/center-quad carrier still requires an explicit action intertwiner.",
+  "group": {
+    "PSp_order": 25920,
+    "action_on_three_points": "C3",
+    "kernel_equals_singular_stabilizer_order": true,
+    "kernel_order": 192,
+    "support_orbit": 45,
+    "support_stabilizer_order": 576
+  },
+  "pass": 4585,
+  "support_quotient": {
+    "distinct_16_line_supports": 45,
+    "singular_classes": 135,
+    "singular_classes_per_support": 3,
+    "triple_geometry": "three pairwise-orthogonal singular points summing to zero; a totally singular projective line"
+  },
+  "theorem": "The apartment singular shell canonically fibers 135 -> 45 by common 16-line support; each fiber is a totally singular O+(8,2) line and the resulting 45-set is the PSp orbit with stabilizer 576."
+}
