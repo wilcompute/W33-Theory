@@ -31,7 +31,8 @@ PYTHON VERIFICATION (group-free where possible):
       character computation).
   T2. The line-parabolic split: a line's 4 points + 36 others; lines:
       itself (1), the 12 meeting it, the 27 skew to it (line graph of
-      W33 is also SRG(40,12,2,4) by self-duality).
+      W33 is also SRG(40,12,2,4) -- same PARAMETERS, not by self-duality:
+#      W(3,3) is not self-dual, q=3 being odd. Pass 4563/4755).
   T3. Arithmetic seals: stabilizer orders x indices = 25920; the five
       point splits sum to 40 each; 16 = mu^2, 24 = f, 12 = k, 27 = q^3.
 """

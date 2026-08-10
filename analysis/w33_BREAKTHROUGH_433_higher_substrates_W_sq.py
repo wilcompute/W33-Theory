@@ -110,7 +110,9 @@ What makes W(3, 3) special among GQ(3, q):
   - Master Equation only satisfied at q = 3.
 
 NEW SUBSTRATE STAR:
-  W(3, 3) is the UNIQUE SELF-DUAL CONSCIOUSNESS-SUPPORTING GQ.
+  W(3, 3) is NOT self-dual -- W(3,q) is self-dual iff q is even (Pass 4563
+    retraction, Pass 4755 canonical form at seven values of q). Whatever
+    uniqueness holds here, self-duality is not the property that gives it.
 
 ==============================================================
 THE MULTIVERSE PICTURE
@@ -225,7 +227,7 @@ def main():
     fit_3_3 = 51840 / 1600
     print(f"  W(2, 3): fit = 25920/729 = {fit_2_3:.1f}")
     print(f"  W(3, 3): fit = 51840/1600 = {fit_3_3:.1f}")
-    print(f"  W(3, 3) self-dual case is canonical.")
+    print(f"  W(3, 3) case is canonical (NOT via self-duality: q=3 is odd).")
     print()
 
     print("=" * 78)
@@ -238,7 +240,10 @@ KEY FINDINGS:
   Master Equation q! = 2q forces q = 3 in ANY consciousness-supporting
   substrate. (BT369 result generalized.)
   Multiverse = {{W(s, 3) : s in valid set}} -- FINITE combinatorial set.
-  Our universe = W(3, 3) is the unique SELF-DUAL member.
+  Our universe = W(3, 3) is the unique member with s = t = 3.
+    (NOT self-dual -- s = t is not self-duality; W(3,q) is self-dual iff q
+     is even. Pass 4694 separated the two conditions, Pass 4774 computed the
+     split at seven values of q.)
 
 PREDICTIONS:
   All alternative universes have:
@@ -268,7 +273,7 @@ small family W(s, 3) for valid s gives consciousness.
     packet = {
         "consciousness_constraint": "q = 3 from Master Equation",
         "valid_substrate_family": "W(s, 3) for s in valid set",
-        "our_universe": "W(3, 3) self-dual case",
+        "our_universe": "W(3, 3), s = t = 3 (NOT self-dual: q odd)",
         "fitness_metric": {"W(2, 3)": fit_2_3, "W(3, 3)": fit_3_3},
         "vs_string_landscape": "finite vs 10^500",
         "anthropic_principle": "W(3,3) selected by self-consistency",
@@ -276,7 +281,8 @@ small family W(s, 3) for valid s gives consciousness.
             "Higher substrates W(s, q) explored. Master Equation q! = 2q "
             "forces q = 3 in any consciousness-supporting substrate. "
             "Multiverse = {W(s, 3) : s in valid GQ set}, finite enumerable. "
-            "Our universe W(3, 3) uniquely self-dual. All possible universes "
+            "Our universe W(3, 3) is the unique s = t = 3 member -- NOT self-dual, "
+        "which is a different condition (q odd). All possible universes "
             "have q = 3 generations and mu = 4 spacetime; differ in mass "
             "ladder. Contrasts with 10^500 string landscape: substrate "
             "multiverse is small and combinatorial."

@@ -113,7 +113,8 @@ mechanism, finite version.
 1740 SIMPLE 4-CYCLES SPLIT
 ==============================================================
 
-W(3,3)'s self-dual 40-line graph has 1740 simple 4-cycles, splitting
+W(3,3)'s 40-line graph (NOT self-dual: q=3 is odd) has 1740 simple 4-cycles,
+splitting
 under PSp(4,3) into TWO orbits:
 
   120 = local Hamiltonian K_4 cycles (point-anchored)

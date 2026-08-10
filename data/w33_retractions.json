@@ -12,7 +12,7 @@
         "analysis/w33_pass4767_the_quadrangle_zoo_by_canonical_form.py",
         "scripts/check_retraction_propagation.py"
       ],
-      "exempt_pattern": "not\\s+self[- ]dual|NOT\\s+self[- ]dual|iff?\\s+q\\s+is\\s+even|q\\s+even|only\\s+for\\s+even|retract|withdraw|is\\s+false|Pass\\s*45(6[0-9]|9[0-9])|Pass\\s*47[0-9][0-9]|corrects?\\s+the\\s+old|NOT\\s+self|is\\s+not\\b|cospectral|the\\s+POLYTOPE\\s+is|shorthand|self[- ]dual\\s+(?:lattice|code|latt)",
+      "exempt_pattern": "not\\s+self[- ]dual|NOT\\s+self[- ]dual|iff?\\s+q\\s+is\\s+even|q\\s+even|only\\s+for\\s+even|retract|withdraw|is\\s+false|Pass\\s*45(6[0-9]|9[0-9])|Pass\\s*47[0-9][0-9]|corrects?\\s+the\\s+old|NOT\\s+self|is\\s+not\\b|cospectral|the\\s+POLYTOPE\\s+is|shorthand|self[- ]dual\\s+(?:lattice|code|latt)|non[- ]self[- ]dual|anti[- ]self[- ]dual|\\*not\\*|_not_|\\bnot\\b[^.\\n]{0,24}self[- ]dual|dual but not",
       "retracted_by": "Pass 4563",
       "settled_by": "Pass 4755 (BLISS canonical form, q = 2,3,4,5)",
       "why": "W(3,q) is self-dual iff q is even; q = 3 is odd. Equal point and line counts (40 = 40) and equal SRG parameters are not a duality."

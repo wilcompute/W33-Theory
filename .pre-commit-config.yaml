@@ -170,3 +170,13 @@ repos:
         language: system
         pass_filenames: true
         files: ^(analysis|passes|pillars)/.*\.(py|md)$|^.*\.tex$
+      # Added Pass 4792. Twice now a file has taken a stdlib name and broken imports
+      # somewhere unrelated: scripts/inspect.py (renamed), and a scratch bisect.py that
+      # made igraph unimportable because random imports bisect, tempfile imports random,
+      # igraph imports tempfile. The traceback names the victim, never the cause.
+      - id: stdlib-shadow
+        name: no file shadows a standard-library module
+        entry: py -3 scripts/check_stdlib_shadow.py
+        language: system
+        pass_filenames: true
+        files: \.py$
