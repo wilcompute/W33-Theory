@@ -16,13 +16,12 @@ This avoids smuggling address count into a per-destination loss claim.
 The verifier also evaluates two *component-mixed literature benchmarks*, not
 claimed integrated stacks: 0.38 dB / 14 us experimental MZI switching and
 ~1.05 dB / 1.27 ns experimental EO switching, each plus an illustrative 1 cm
-edge at 1.77 dB/m SiN propagation and a common 98% detector factor.  Those
+edge at 1.77 dB/m SiN propagation and a common 98% detector factor. Those
 numbers are context, while the ordering theorem is symbolic in eta.
 """
 from __future__ import annotations
 
 import json
-import math
 from pathlib import Path
 
 import sympy as sp
@@ -46,7 +45,7 @@ def metrics(shell, hop_db, detector_eff, switch_time_s):
     eta = 10 ** (-hop_db / 10.0)
     v = 1 + sum(shell)
     aggregate = detector_eff * sum(n * eta**d for d,n in enumerate(shell, start=1))
-    avg_hops = sum(n*d for d,n in enumerate(shell, start=1) / (v-1))
+    avg_hops = sum(n*d for d,n in enumerate(shell, start=1)) / (v-1)
     return {
         "vertices": v,
         "per_hop_power_transmission": eta,
@@ -63,7 +62,6 @@ def main():
     A = {k: sp.expand(poly(v,e)) for k,v in SHELLS.items()}
     M = {k: sp.factor(A[k] / sum(SHELLS[k])) for k in SHELLS}
 
-    # Exact normalized-loss hierarchy for every 0<eta<1.
     diffs = {
         "W33_minus_selected135": sp.factor(M["W33"] - M["selected135"]),
         "selected135_minus_selected270": sp.factor(M["selected135"] - M["selected270"]),
@@ -76,44 +74,30 @@ def main():
     }
     for k in expected:
         assert sp.simplify(diffs[k]-expected[k]) == 0
-    # All remaining factors are positive on (0,1), so the hierarchy is strict.
 
-    # Aggregate destination-throughput: selected270 strictly dominates W33 and
-    # selected135 coefficientwise, and also Levi160 throughout 0<eta<=1.
     agg270_w33 = sp.factor(A["selected270"] - A["W33"])
     agg270_135 = sp.factor(A["selected270"] - A["selected135"])
     agg270_levi = sp.factor(A["selected270"] - A["Levi160"])
     assert agg270_w33 == e*(136*e**2+91*e+3)
     assert agg270_135 == e*(70*e**2+62*e+3)
     assert agg270_levi == -e*(81*e**3-82*e**2-100*e-9)
-    # The cubic in parentheses is negative on [0,1]: its derivative has no
-    # positive root below one and its value at one is -110.
     cubic = 81*e**3-82*e**2-100*e-9
     assert float(cubic.subs(e,0)) < 0 and float(cubic.subs(e,1)) < 0
     crit = [complex(z) for z in sp.nroots(sp.diff(cubic,e))]
     assert not any(abs(z.imag)<1e-10 and 0 < z.real < 1 for z in crit)
 
-    # selected135 vs Levi160 has one physical crossover for aggregate delivery.
     cross_poly = 81*e**3 - 12*e**2 - 38*e - 6
     roots = sorted(float(sp.re(z)) for z in sp.nroots(cross_poly) if abs(float(sp.im(z))) < 1e-12 and 0 < float(sp.re(z)) < 1)
     assert len(roots) == 1
     crossover = roots[0]
 
-    # Literature-anchored component benchmarks.  They mix component platforms
-    # deliberately and therefore are sensitivity examples, not a demonstrated stack.
     propagation_db_per_m = 1.77
     edge_length_m = 0.01
     prop_db = propagation_db_per_m * edge_length_m
     detector = 0.98
     scenarios = {
-        "low_loss_MZI_component_mix": {
-            "switch_insertion_loss_db": 0.38,
-            "switch_time_s": 14e-6,
-        },
-        "fast_EO_component_mix": {
-            "switch_insertion_loss_db": 1.05,
-            "switch_time_s": 1.27e-9,
-        },
+        "low_loss_MZI_component_mix": {"switch_insertion_loss_db": 0.38, "switch_time_s": 14e-6},
+        "fast_EO_component_mix": {"switch_insertion_loss_db": 1.05, "switch_time_s": 1.27e-9},
     }
     evaluated = {}
     for name,s in scenarios.items():
