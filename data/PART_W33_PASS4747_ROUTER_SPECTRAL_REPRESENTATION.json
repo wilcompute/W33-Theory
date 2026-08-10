@@ -1,0 +1,22 @@
+{
+  "pass":4747,
+  "vertex_permutation_character":{"1":1,"6":1,"15b":1,"20":2,"24":1,"30b":1,"30c":1,"60":1,"64":1},
+  "cold_graph":{"vertices":270,"edges":1620,"degree":12,
+    "eigenspaces":[
+      {"eigenvalue":"12","multiplicity":1,"PSp":{"1":1}},
+      {"eigenvalue":"8","multiplicity":15,"PSp":{"15b":1}},
+      {"eigenvalue":"1+sqrt(13)","multiplicity":20,"PSp":{"20":1}},
+      {"eigenvalue":"2","multiplicity":84,"PSp":{"24":1,"30b":1,"30c":1}},
+      {"eigenvalue":"-1","multiplicity":64,"PSp":{"64":1}},
+      {"eigenvalue":"1-sqrt(13)","multiplicity":20,"PSp":{"20":1}},
+      {"eigenvalue":"-4","multiplicity":60,"PSp":{"60":1}},
+      {"eigenvalue":"-6","multiplicity":6,"PSp":{"6":1}}
+    ]
+  },
+  "irrational_sector":{"PSp_irrep":"20","degree":20,"multiplicity_in_vertex_module":2,"adjacency_multiplicity_space_trace":2,"adjacency_multiplicity_space_determinant":-12,"minimal_polynomial":"x^2-2x-12","discriminant":52,"eigenvalues":"1 +/- sqrt(13)","each_graph_multiplicity":20},
+  "exact_characteristic_factorization":"(x-12)(x-8)^15(x-2)^84(x+1)^64(x+4)^60(x+6)^6(x^2-2x-12)^20",
+  "derivation":"eigenspace characters identify both irrational 20-spaces as the same degree-20 PSp irreducible; after the rational sectors are removed, tr(A)=0 and tr(A^2)=270*12 force trace 2 and determinant -12 on its 2x2 multiplicity space",
+  "theorem":"The 1 +/- sqrt(13) router eigenvalues are the two eigenvalues of cold adjacency on the multiplicity-two copy of the degree-20 PSp constituent. Every rational eigenspace is simultaneously matched to its exact PSp constituent(s).",
+  "execution":"independent reconstruction of the cold 270 graph, full PSp ordinary character table, numerical eigenspace projectors, class traces and exact trace-moment recovery of the quadratic factor",
+  "boundary":"Exact finite representation/spectral theorem; no physical frequency, mass or dispersion interpretation is attached to the radicals."
+}
