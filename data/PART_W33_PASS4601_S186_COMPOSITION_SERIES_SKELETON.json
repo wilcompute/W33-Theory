@@ -1,0 +1,10 @@
+{
+  "boundary": "Exact deterministic composition series, not a claim that the displayed chain is the unique composition series.",
+  "composition_series_dimensions": [0,14,54,60,74,80,120,126,134,140,146,186],
+  "factor_multiset": {"40":3,"14":2,"8":1,"6":5},
+  "module": "S186",
+  "ordered_simple_factor_dimensions": [14,40,6,14,6,40,6,8,6,6,40],
+  "pass": 4601,
+  "remaining_loewy_frontier": "classify all incomparable submodules, radical/socle layers and extension classes; this pass does not claim the complete unlabeled submodule lattice",
+  "status": "EXPLICIT_COMPOSITION_SERIES_CLOSED"
+}
