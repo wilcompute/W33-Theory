@@ -1,0 +1,22 @@
+{
+  "pass":4720,
+  "local_cycle_code":{
+    "parameters":"[15,6,5]_2",
+    "rate":"2/5",
+    "weight_enumerator":{"0":1,"5":12,"6":10,"8":15,"9":20,"10":6},
+    "minimum_words":12,
+    "minimum_words_are_Petersen_5_cycles":true
+  },
+  "local_cut_code":{"parameters":"[15,9,3]_2","rate":"3/5","dual_of_cycle":true},
+  "symmetry":{"Petersen_automorphism_order":120,"full_group":"S5","cycle_code_invariant":true,"cut_code_invariant":true,"compatibility":"Pass4687 local PSp image A5 and PGSp image S5 are sub/full actions of this automorphism group"},
+  "cycle_erasure_failure_counts":{
+    "0":{"fail":0,"total":1},"1":{"fail":0,"total":15},"2":{"fail":0,"total":105},"3":{"fail":0,"total":455},"4":{"fail":0,"total":1365},
+    "5":{"fail":12,"total":3003},"6":{"fail":130,"total":5005},"7":{"fail":630,"total":6435},"8":{"fail":1755,"total":6435},"9":{"fail":3005,"total":5005},
+    "10":{"fail":3003,"total":3003},"11":{"fail":1365,"total":1365},"12":{"fail":455,"total":455},"13":{"fail":105,"total":105},"14":{"fail":15,"total":15},"15":{"fail":1,"total":1}
+  },
+  "guaranteed_erasure_correction":4,
+  "global_27_fiber_direct_sum":{"cycle_parameters":"[405,162,5]_2","cut_parameters":"[405,243,3]_2","PSp_PGSp_invariant":true},
+  "throughput_boundary":"The code adds redundancy: raw symbol rates are 2/5 (cycle) or 3/5 (cut). It certifies local erasure recovery/load-symmetry but does not increase fault-free edge capacity.",
+  "theorem":"Each Petersen shortcut fiber carries canonical S5-invariant binary cycle/cut codes. The [15,6,5] cycle code corrects every <=4-edge erasure pattern and has the exact failure census above; 27 fibers give a PSp/PGSp-invariant [405,162,5] direct-sum code.",
+  "boundary":"Exact finite coding theorem; no physical implementation, throughput improvement, or fault-tolerance threshold is inferred."
+}
