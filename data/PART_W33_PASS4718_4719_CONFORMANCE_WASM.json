@@ -1,0 +1,30 @@
+{
+  "boundary": "the golden table is exhaustive over all 81 frames and 7 opcodes and is exact; the WebAssembly module's SEMANTICS are verified against it in Python, but the module has NOT been assembled or executed in a wasm runtime -- no toolchain is present",
+  "pass_4686_conformance": {
+    "affine_order": 4199040,
+    "artifact": "data/w33_l2_conformance_vectors.json",
+    "digest": "06f61cbc8171b746bfa374bb282d840cc52d12030756c17bac8236d709bd21b2",
+    "every_opcode_bijective": true,
+    "frames": 81,
+    "linear_group_order": 51840,
+    "minimal_trio_order": 51840,
+    "orders_correct": true,
+    "vectors": 567
+  },
+  "pass_4687_wasm": {
+    "artifact": "rtl/w33_l2_isa.wat",
+    "executed_in_runtime": false,
+    "exported_opcodes": [
+      "CX_fp",
+      "CX_pf",
+      "F_f",
+      "F_p",
+      "S_f",
+      "S_p",
+      "Z_p"
+    ],
+    "mismatches": 0,
+    "semantics_verified_against_golden": true,
+    "to_run": "wat2wasm rtl/w33_l2_isa.wat -o w33.wasm"
+  }
+}

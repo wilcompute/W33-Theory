@@ -2,7 +2,7 @@
 """Passes 4693-4695 -- the exchange test I ran at 4685 could not have failed, and s = t is
 not the condition I said it was.
 
-  4693  RETRACTION OF THE TEST, NOT THE CONSTRAINT.  Pass 4685 reported "the constraint
+  4693  RETRACTION OF THE TEST, NOT THE CONSTRAINT.  Pass 4717 reported "the constraint
         survives the attempt to break it" because tr(A^k) agreed for W(3,3)/Q(4,3) and
         disagreed for the two genuine dual pairs.  But tr(A^k) is a function of the strongly
         regular parameters ALONE -- the spectrum is determined by (v,k,lambda,mu), so the
@@ -12,7 +12,7 @@ not the condition I said it was.
         failure mode 7 -- a vacuous check -- committed two passes after I shipped a checker
         for vacuous checks.
 
-  4694  AND THE CONDITION IS SELF-DUALITY, NOT s = t.  Pass 4682 wrote "the search should be
+  4694  AND THE CONDITION IS SELF-DUALITY, NOT s = t.  Pass 4714 wrote "the search should be
         restricted to s = t."  Wrong: GQ(3,3) has s = t and W(3,3) is NOT self-dual (W(3,q)
         is self-dual iff q is even).  Track C's data already shows this -- their cancellation
         FAILS at GQ(3,3), 712 != 180, exactly where my stated condition predicted it could
@@ -96,7 +96,7 @@ def main() -> int:
     print("=" * 78)
 
     # ---- 4693: the traces were forced --------------------------------------
-    print("\n  PASS 4693 -- was Pass 4685's agreement forced by the parameters?\n")
+    print("\n  PASS 4693 -- was Pass 4717's agreement forced by the parameters?\n")
     fam = [
         ("W(3,3)", (40, 12, 2, 4), lambda: P63.build_w33()),
         ("Q(4,3)", (40, 12, 2, 4), lambda: P63.build_q43()),
@@ -124,7 +124,7 @@ def main() -> int:
               f"  {'OK' if ok else 'MISMATCH'}")
 
     print(f"""
-    EVERY TRACE IS REPRODUCED FROM THE PARAMETERS WITHOUT TOUCHING A MATRIX. So Pass 4685
+    EVERY TRACE IS REPRODUCED FROM THE PARAMETERS WITHOUT TOUCHING A MATRIX. So Pass 4717
     measured parameter equality and reported it as evidence about duality. W(3,3) and Q(4,3)
     are parameter-equal, so they HAD to agree; the dual pairs are not, so they HAD to
     disagree. No arrangement of the data could have broken the constraint, which means the
@@ -147,7 +147,7 @@ def main() -> int:
         print(f"  {nm:12s} {s:3d} {t:3d} {str(eq):>6s} {sd:>11s} {tc:>21s}")
 
     print("""
-    THE FOURTH ROW REFUTES MY STATED CONDITION. GQ(3,3) has s = t, so Pass 4682's rule
+    THE FOURTH ROW REFUTES MY STATED CONDITION. GQ(3,3) has s = t, so Pass 4714's rule
     ("can only hold identically when s = t") permitted the cancellation there -- and Track C
     already measured it failing. I did not notice, because I read their GQ(2,2) result as
     confirming my rule and never checked their GQ(3,3) result against it. The confirming
@@ -172,7 +172,7 @@ def main() -> int:
     Local structure does not separate these two either, which is expected -- both are
     parameter-equal SRGs and locally regular. The separating invariant is the PERMUTATION
     CHARACTER, per this repository's own G-set rule, and comparing characters is the test
-    Pass 4685 should have run instead of comparing traces.""")
+    Pass 4717 should have run instead of comparing traces.""")
 
     # ---- 4695: a prediction stated before computing ------------------------
     print("\n  PASS 4695 -- the prediction, recorded before anyone computes it\n")
@@ -192,14 +192,14 @@ def main() -> int:
 
     out = {
         "boundary": ("4693's trace-from-parameters identity is exact and settles that Pass "
-                     "4685's comparison was determined in advance; the constraint from Pass "
+                     "4717's comparison was determined in advance; the constraint from Pass "
                      "4682 is NOT withdrawn, only the claim that it was tested. 4694's table "
                      "quotes Track C's four cancellation results as stated and does NOT "
                      "re-derive their six walk masses -- the refutation of my s=t rule rests "
                      "on their GQ(3,3) number being correct. 4695 is a prediction, not a "
                      "result: neither W(3,4) nor W(3,5) is computed here"),
         "pass_4693_traces_are_forced": {"rows": rows, "all_reproduced": bool(forced),
-                                        "verdict": "Pass 4685's test had no power"},
+                                        "verdict": "Pass 4717's test had no power"},
         "pass_4694_condition": {
             "old_condition": "s = t",
             "corrected_condition": "self-dual, i.e. W(3,q) with q even",

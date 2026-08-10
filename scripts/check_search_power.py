@@ -9,7 +9,7 @@ was not enough: the search covered 0.0095% of its space and had 0.95% power agai
 hundred-witness set.  A null with 1% power is not weak evidence, it is very nearly none, and
 summing it with a genuinely exhaustive search overstates the case.
 
-Pass 4688 then made the point sharper.  The same space, quotiented by the symmetry the
+Pass 4720 then made the point sharper.  The same space, quotiented by the symmetry the
 problem already had, is 26 objects rather than 315,057,600.  So an unpowered null is often
 not even the best available move -- it is a sample where an enumeration was sitting there.
 

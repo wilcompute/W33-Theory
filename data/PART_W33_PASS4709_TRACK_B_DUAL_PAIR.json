@@ -1,0 +1,63 @@
+{
+  "all_parameters_match": true,
+  "boundary": "the quadrangles are built here and their parameters verified; Track B's graphs are NOT rebuilt from their construction and are known to this pass only as parameter tuples quoted from their report. Equal SRG parameters do NOT imply isomorphism -- W(3,3)/Q(4,3) are the in-repo counterexample -- so this is a parameter match and a lead, not an identification. The Ramanujan densities are quoted from Passes 4562-4563 and not re-measured",
+  "duality": "GQ(4,2) and GQ(2,4) are dual; Track B's two carriers therefore carry the parameters of the point side and line side of one geometry",
+  "falsifier": "if the 45-vertex graph is H(3,4) then |Aut| = 51,840 and every local graph is 3K4; either failing refutes the identification without character theory",
+  "identification_candidates": [
+    {
+      "built": [
+        45,
+        12,
+        3,
+        3
+      ],
+      "is_srg": true,
+      "parameters_match": true,
+      "quadrangle": "H(3,4)",
+      "s": 4,
+      "t": 2,
+      "track_b_label": "45-packet pair graph",
+      "track_b_tuple": [
+        45,
+        12,
+        3,
+        3
+      ]
+    },
+    {
+      "built": [
+        27,
+        10,
+        1,
+        5
+      ],
+      "is_srg": true,
+      "parameters_match": true,
+      "quadrangle": "Q(5,2)",
+      "s": 2,
+      "t": 4,
+      "track_b_label": "27-Schlaefli quotient",
+      "track_b_tuple": [
+        27,
+        10,
+        1,
+        5
+      ]
+    }
+  ],
+  "prior_measurements_this_lane": [
+    {
+      "geometry": "Q(5,2)",
+      "gq": "GQ(2,4)",
+      "points": 27,
+      "ramanujan_density": "85.2%"
+    },
+    {
+      "geometry": "H(3,4)",
+      "gq": "GQ(4,2)",
+      "points": 45,
+      "ramanujan_density": "0.0%"
+    }
+  ],
+  "test_required": "compare permutation characters of the PSp-actions, per the G-set rule in CLAUDE.md; Track B holds the actions"
+}

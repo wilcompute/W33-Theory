@@ -35,9 +35,9 @@ resurrected.** Re-ran the guards over all 400 files touched in the unguarded win
 
 ## I was wrong twice, in my own recent work
 
-### Pass 4685's test could not have failed
+### Pass 4717's test could not have failed
 
-Pass 4685 reported "the exchange constraint survives the attempt to break it" because
+Pass 4717 reported "the exchange constraint survives the attempt to break it" because
 `tr(A^k)` agreed for W(3,3)/Q(4,3) and disagreed for the dual pairs. But **`tr(A^k)` is a
 function of the SRG parameters alone** — the spectrum is determined by (v,k,λ,μ), so the
 traces are too. Verified: every trace reproduced from parameters without building a matrix.
@@ -50,7 +50,7 @@ condition; what is withdrawn is that it was *tested*.
 
 ### And the condition is self-duality, not s = t
 
-Pass 4682 wrote "the search should be restricted to s = t." GQ(3,3) has s = t and W(3,3) is
+Pass 4714 wrote "the search should be restricted to s = t." GQ(3,3) has s = t and W(3,3) is
 **not** self-dual (W(3,q) is self-dual iff q even). Track C's own table already shows their
 cancellation *failing* at GQ(3,3), 712 ≠ 180 — exactly where my rule permitted it. **The
 refuting row was in the same four-row table as the confirming one**; I read the row that
@@ -69,7 +69,7 @@ the null is weaker than the pass criticising it for weakness said.
 
 **The LC premise fails too.** The clean input is a magic state with cube-root-of-unity
 amplitudes; exactly **1 of 576** local Cliffords fixes its ray. The reduction is 6×, not
-12,117,600×. Pass 4688's 26 classes answer a different question — and its refusal to assume
+12,117,600×. Pass 4720's 26 classes answer a different question — and its refusal to assume
 the favourable branch was correct, because asserting it would have claimed a
 nine-order-of-magnitude reduction that does not exist.
 

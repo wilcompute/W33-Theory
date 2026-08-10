@@ -51,6 +51,9 @@ repos:
       # double-quoted YAML scalar whose continuation lines started at column 0, which ends
       # the scalar -- so this FILE did not parse, and every hook in it was dead. The guard
       # was present, documented, and had never run once.  Scripts, not inline entries.
+        # No files: pattern meant pre-commit passed it nothing. Two namespace
+        # collisions happened in one day with this guard registered and disconnected.
+        files: ^(analysis|data)/.*$
       - id: s-min-formula-guard
         name: Guard S_min formula correctness
         entry: py -3 scripts/check_smin_formula.py

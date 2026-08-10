@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Passes 4683-4685 -- every quadrangle's spectrum, the energy of a route, and my own
+"""Passes 4715-4717 -- every quadrangle's spectrum, the energy of a route, and my own
 constraint put at risk.
 
   4683  Bass recovery is general and had been run on three quadrangles. Run it on all six
@@ -11,13 +11,13 @@ constraint put at risk.
         all -- the fraction of point pairs needing a relay is an incidence count. Landauer
         then prices it.
 
-  4685  Pass 4682 proposed a constraint on the other track's open problem: under
+  4685  Pass 4714 proposed a constraint on the other track's open problem: under
         (s,t) -> (t,s) point-side and line-side quantities must EXCHANGE, so a cancellation
         equation symmetric under that swap can hold identically only when s = t. I proposed
         it; here I try to break it, on a quantity I can compute exactly -- the closed
         non-backtracking walk counts of a dual pair.
 
-    py -3 analysis/w33_pass4683_4685_spectra_routes_exchange.py
+    py -3 analysis/w33_pass4715_4685_spectra_routes_exchange.py
 """
 
 from __future__ import annotations
@@ -104,7 +104,7 @@ def bass_recover(A):
 
 def main() -> int:
     print("=" * 78)
-    print("Passes 4683-4685")
+    print("Passes 4715-4685")
     print("=" * 78)
 
     fam = [
@@ -119,7 +119,7 @@ def main() -> int:
         ("H(3,9)", 9, 3, lambda: P89.build_h39()[:2]),
     ]
 
-    print("\n  PASS 4683 -- exact spectra from prime counts, all quadrangles\n")
+    print("\n  PASS 4715 -- exact spectra from prime counts, all quadrangles\n")
     print(f"  {'geometry':10s} {'(s,t)':>8s} {'n':>5s} {'deg':>4s} "
           f"{'exact':>6s}  characteristic polynomial")
     spectra = {}
@@ -144,7 +144,7 @@ def main() -> int:
     statements rather than numerical ones.""")
 
     # ---- 4684: the energy of a route -------------------------------------
-    print("\n  PASS 4684 -- what a route costs, from the geometry alone\n")
+    print("\n  PASS 4716 -- what a route costs, from the geometry alone\n")
     print(f"  {'geometry':10s} {'pairs':>8s} {'1-hop':>8s} {'2-hop':>8s} "
           f"{'relay %':>8s} {'mean hops':>10s} {'J per route':>13s}")
     routes = {}
@@ -177,7 +177,7 @@ def main() -> int:
     are the incidence counts multiplied by an assumption.""")
 
     # ---- 4685: try to break my own exchange constraint --------------------
-    print("\n  PASS 4685 -- can I break the exchange constraint I proposed?\n")
+    print("\n  PASS 4717 -- can I break the exchange constraint I proposed?\n")
     print(f"  {'pair':22s} {'k':>3s} {'tr(A^k) point':>16s} {'tr(A^k) line':>16s} {'equal?':>7s}")
     tests = []
     for a, b in (("Q(5,2)", "H(3,4)"), ("Q(5,3)", "H(3,9)"), ("W(3,3)", "Q(4,3)")):
@@ -201,7 +201,7 @@ def main() -> int:
     A quantity computed on the point carrier and on the line carrier agrees for
     W(3,3)/Q(4,3) -- which have identical SRG parameters -- and disagrees for the genuine
     dual pairs, where exchanging s and t changes the object. That is exactly the behaviour
-    Pass 4682 predicted a cancellation equation must show, and it is the reason GQ(2,2)
+    Pass 4714 predicted a cancellation equation must show, and it is the reason GQ(2,2)
     needs no special explanation: at s = t the two sides are computing the same thing.
 
     WHAT THIS IS NOT. It confirms the constraint on trace quantities I can compute; it does
@@ -209,7 +209,7 @@ def main() -> int:
     necessary condition surviving one test is still only a necessary condition.""")
 
     out = {
-        "boundary": ("4683's recoveries are exact integer arithmetic; 4684's incidence "
+        "boundary": ("4715's recoveries are exact integer arithmetic; 4716's incidence "
                      "counts are exact but the joules multiply them by an assumed one "
                      "erased bit per hop, which is an L5 policy choice and not a "
                      "measurement; 4685 tests trace quantities only and does not "
@@ -219,7 +219,7 @@ def main() -> int:
         "pass_4684_landauer_J": KB_T_LN2,
         "pass_4685_exchange": {"tests": tests, "constraint_survives": bool(holds)},
     }
-    p = ROOT / "data" / "PART_W33_PASS4683_4685_SPECTRA_ROUTES_EXCHANGE.json"
+    p = ROOT / "data" / "PART_W33_PASS4715_4685_SPECTRA_ROUTES_EXCHANGE.json"
     p.parent.mkdir(exist_ok=True)
     p.write_text(cert_util.dumps(out), encoding="utf-8")
     print(f"\nwrote {p.relative_to(ROOT).as_posix()}")

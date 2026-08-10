@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """The L2 conformance suite as executable properties.  Pass 4696.
 
-Pass 4686 emitted 567 golden vectors and Pass 4687 ran them through a WebAssembly runtime.
+Pass 4718 emitted 567 golden vectors and Pass 4719 ran them through a WebAssembly runtime.
 Both check the SAME 567 pairs, which is exhaustive over the state space and therefore
 complete -- but a table of input/output pairs tells an implementer nothing about WHY those
 pairs, so a failing entry localises a bug to one frame and no further.

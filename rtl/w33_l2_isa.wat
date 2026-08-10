@@ -1,6 +1,6 @@
 (module
-  ;; Pass 4687 -- W(3,3) micro-ISA, packed state x = xp + 3*zp + 9*xf + 27*zf.
-  ;; Emitted by analysis/w33_pass4686_4687_conformance_and_wasm.py.
+  ;; Pass 4719 -- W(3,3) micro-ISA, packed state x = xp + 3*zp + 9*xf + 27*zf.
+  ;; Emitted by analysis/w33_pass4718_4687_conformance_and_wasm.py.
   ;; Layer L2 is substrate-independent; this is the claim executed.
   (func (export "CX_fp") (param $x i32) (result i32)
     (local $a i32) (local $b i32) (local $c i32) (local $d i32)

@@ -2,13 +2,13 @@
 """Passes 4705-4706 -- one repackaging caught before it became a mechanism, and one
 coincidence reported as a coincidence.
 
-  4705  Pass 4684 produced relay fractions for seven quadrangles and Passes 4562/4563
+  4705  Pass 4716 produced relay fractions for seven quadrangles and Passes 4562/4563
         produced Ramanujan signing densities for six.  The two columns look strongly
         anti-correlated, and Pass 4564 already showed block size b explains most of the
         density.  The tempting claim is that relay fraction explains the RESIDUAL -- a
         second mechanism.  Before writing that, ask what would make the comparison invalid.
 
-  4706  Pass 4688 found 26 local-complementation classes at six qubits.  26 is a small
+  4706  Pass 4720 found 26 local-complementation classes at six qubits.  26 is a small
         integer in a repository full of small integers, and "26 appears in W(3,3) too" is
         the cheapest possible false result.  Search for it, then say plainly what the search
         licenses.

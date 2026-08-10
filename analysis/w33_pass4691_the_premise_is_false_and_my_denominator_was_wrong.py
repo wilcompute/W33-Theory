@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Pass 4691 -- I checked the premise Pass 4688 refused to assume, and it fails. So does my
+"""Pass 4691 -- I checked the premise Pass 4720 refused to assume, and it fails. So does my
 own denominator.
 
-Pass 4688 computed that the three-copy distillation search collapses from 315,057,600 to 26
+Pass 4720 computed that the three-copy distillation search collapses from 315,057,600 to 26
 IF the condition is invariant under the full local Clifford group, and explicitly refused to
 assert that branch: "the difference is decided by one reading of the protocol, not by more
 computation."  This is that reading, and it goes the unfavourable way twice.
@@ -149,13 +149,13 @@ def main() -> int:
 
     THE REDUCTION IS {group:,}x, NOT 12,117,600x. That takes the search from {total:,}
     to about {total//group:,} orbit representatives -- still far beyond enumeration, and
-    {(total//group)/26:,.0f} times the 26 classes Pass 4688 computed under the favourable branch.
+    {(total//group)/26:,.0f} times the 26 classes Pass 4720 computed under the favourable branch.
 
-    PASS 4688'S NUMBER WAS NOT WRONG; IT WAS ANSWERING A DIFFERENT QUESTION. 26 is the count
+    PASS 4720'S NUMBER WAS NOT WRONG; IT WAS ANSWERING A DIFFERENT QUESTION. 26 is the count
     of local-Clifford classes of stabilizer STATES, and it would be the right count if the
     instance were LC-invariant. The instance is not, because a magic state has almost no
     local-Clifford symmetry -- which is very close to what makes it magic in the first place.
-    That is the whole content of the premise Pass 4688 declined to assume, and declining was
+    That is the whole content of the premise Pass 4720 declined to assume, and declining was
     correct: asserting it would have claimed a nine-order-of-magnitude reduction that does
     not exist.""")
 
@@ -185,11 +185,11 @@ def main() -> int:
             "orbit_representatives": total // group,
             "lc_invariance_holds": False,
             "reason": ("the clean input is a magic state with cube-root-of-unity amplitudes, "
-                       "so its local-Clifford ray stabiliser is tiny; Pass 4688's 26 classes "
+                       "so its local-Clifford ray stabiliser is tiny; Pass 4720's 26 classes "
                        "count LC-classes of stabilizer states and answer a different "
                        "question")},
         "conclusion": (
-            "the favourable branch of Pass 4688 is FALSE: the reduction is a few hundred, "
+            "the favourable branch of Pass 4720 is FALSE: the reduction is a few hundred, "
             "not twelve million, because a magic state has almost no local-Clifford "
             "symmetry. Separately, Pass 4680's denominator was 12.2x too small, so the "
             "30,000-sample null has even less power than that pass reported"),

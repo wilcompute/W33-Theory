@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pass 4688 -- executing 4680's recommendation, and finding the reduction is not a factor
+"""Pass 4720 -- executing 4680's recommendation, and finding the reduction is not a factor
 of the orbit size but nine orders of magnitude.
 
 Pass 4680 showed the three-copy distillation null had ~1% power against a hundred-witness
@@ -20,7 +20,7 @@ reduction depends on, because the reduction is only available if the distillatio
 is actually invariant under the group used -- and that is exactly the kind of untested
 premise CLAUDE.md lists as failure mode 6.
 
-    py -3 analysis/w33_pass4688_the_search_space_is_26_not_315_million.py
+    py -3 analysis/w33_pass4720_the_search_space_is_26_not_315_million.py
 """
 
 from __future__ import annotations
@@ -101,7 +101,7 @@ def lc_classes(n):
 
 def main() -> int:
     print("=" * 78)
-    print("Pass 4688 -- how big is the search after the orbit reduction?")
+    print("Pass 4720 -- how big is the search after the orbit reduction?")
     print("=" * 78)
 
     print(f"\n  {'n':>3s} {'stabilizer states':>20s} {'LC classes':>11s} "
@@ -187,7 +187,7 @@ def main() -> int:
             "infeasible sampling to 26 exhaustive tests; the invariance is a premise about "
             "the protocol's definition and is stated as open rather than assumed"),
     }
-    p = ROOT / "data" / "PART_W33_PASS4688_LC_ORBIT_SEARCH_SPACE.json"
+    p = ROOT / "data" / "PART_W33_PASS4720_LC_ORBIT_SEARCH_SPACE.json"
     p.write_text(cert_util.dumps(out), encoding="utf-8")
     print(f"\nwrote {p.relative_to(ROOT).as_posix()}")
     return 0

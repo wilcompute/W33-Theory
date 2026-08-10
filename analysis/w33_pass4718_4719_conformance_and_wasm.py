@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Passes 4686-4687 -- make the universality claim executable, then run it in a browser.
+"""Passes 4718-4719 -- make the universality claim executable, then run it in a browser.
 
 Part 0 of the blueprint says layers L0--L2 admit no implementation freedom, so any two
 realizations conforming at L2 compute the same function.  That is a testable claim and it
@@ -16,7 +16,7 @@ conformance is asking to be believed.
         trits and verify it against the golden table with the same driver, so the claim is
         settled by execution rather than by assertion.
 
-    py -3 analysis/w33_pass4686_4687_conformance_and_wasm.py
+    py -3 analysis/w33_pass4718_4687_conformance_and_wasm.py
 """
 
 from __future__ import annotations
@@ -82,7 +82,7 @@ def golden_table():
 
 
 WAT = r"""(module
-  ;; Pass 4687 -- the W(3,3) micro-ISA in WebAssembly.
+  ;; Pass 4719 -- the W(3,3) micro-ISA in WebAssembly.
   ;; State is four trits packed as x = xp + 3*zp + 9*xf + 27*zf, so 0 <= x < 81.
   ;; Every opcode is a linear map over GF(3) plus, for Z_p, a translation.
   ;; This exists to settle a claim by execution: layer L2 is substrate-independent,
@@ -122,11 +122,11 @@ WAT = r"""(module
 
 def main() -> int:
     print("=" * 78)
-    print("Passes 4686-4687 -- conformance made executable")
+    print("Passes 4718-4719 -- conformance made executable")
     print("=" * 78)
 
     frames, rows = golden_table()
-    print(f"\n  PASS 4686 -- the golden table\n")
+    print(f"\n  PASS 4718 -- the golden table\n")
     print(f"    frames                     : {len(frames)}   (3^4)")
     print(f"    opcodes in the table       : {len(set(r['op'] for r in rows))}")
     print(f"    golden vectors             : {len(rows)}")
@@ -168,13 +168,13 @@ def main() -> int:
     exhaustion rather than by citing a theorem.""")
 
     # ---- 4687 -------------------------------------------------------------
-    print(f"\n  PASS 4687 -- the same machine, in WebAssembly\n")
+    print(f"\n  PASS 4719 -- the same machine, in WebAssembly\n")
     wat = ROOT / "rtl" / "w33_l2_isa.wat"
     wat.parent.mkdir(exist_ok=True)
     # emit a clean, minimal module: one exported function per opcode over packed state
     lines = ["(module",
-             "  ;; Pass 4687 -- W(3,3) micro-ISA, packed state x = xp + 3*zp + 9*xf + 27*zf.",
-             "  ;; Emitted by analysis/w33_pass4686_4687_conformance_and_wasm.py.",
+             "  ;; Pass 4719 -- W(3,3) micro-ISA, packed state x = xp + 3*zp + 9*xf + 27*zf.",
+             "  ;; Emitted by analysis/w33_pass4718_4687_conformance_and_wasm.py.",
              "  ;; Layer L2 is substrate-independent; this is the claim executed."]
     for name in sorted(GEN) + ["Z_p"]:
         lines.append(f'  (func (export "{name}") (param $x i32) (result i32)')
@@ -264,7 +264,7 @@ def main() -> int:
             "executed_in_runtime": False,
             "to_run": "wat2wasm rtl/w33_l2_isa.wat -o w33.wasm"},
     }
-    p = ROOT / "data" / "PART_W33_PASS4686_4687_CONFORMANCE_WASM.json"
+    p = ROOT / "data" / "PART_W33_PASS4718_4687_CONFORMANCE_WASM.json"
     p.write_text(cert_util.dumps(out), encoding="utf-8")
     print(f"\nwrote {p.relative_to(ROOT).as_posix()}")
     return 0
