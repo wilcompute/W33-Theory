@@ -1,0 +1,15 @@
+{
+  "pass": 4654,
+  "base_plane": [48,208,224],
+  "base_plane_setwise_stabilizer_order": 648,
+  "base_plane_pointwise_stabilizer_order": 216,
+  "fixed_W33_points": [38],
+  "fixed_W33_lines": [],
+  "orbit_size": 40,
+  "equivariant_bijection": "gP0 -> gp0",
+  "target_carrier": "W33 point carrier",
+  "not_target_carrier": "W33 line carrier",
+  "graph_transport": "total polar orthogonality of anisotropic planes iff W33 point collinearity",
+  "theorem": "The 40 anisotropic planes recovered from triality-conjugate PSp intersections are explicitly the W33 point G-set, not the inequivalent W33 line G-set.",
+  "boundary": "Finite G-set/graph intertwiner. This preserves the odd-q point/line distinction and makes no physical identification."
+}
