@@ -5,7 +5,7 @@ on:
     paths:
       - 'analysis/w33_pass4769_modular_h1_head_socle.py'
       - 'analysis/w33_pass4770_4774_s3_moduli_twisted_tangent.py'
-      - 'analysis/w33_pass4771_4775_degree16_cover_hecke.py'
+      - 'analysis/w33_pass4771_4775_degree16_cover_hecke_certified.py'
       - 'analysis/w33_pass4772_4776_global_cube_cell_code.py'
       - 'analysis/w33_pass4773_symmetry_reduced_multicommodity_flow.py'
       - '.github/workflows/w33_pass4769_4776_modular_moduli_cover_code_flow.yml'
@@ -37,7 +37,7 @@ jobs:
           for script in \
             analysis/w33_pass4769_modular_h1_head_socle.py \
             analysis/w33_pass4770_4774_s3_moduli_twisted_tangent.py \
-            analysis/w33_pass4771_4775_degree16_cover_hecke.py \
+            analysis/w33_pass4771_4775_degree16_cover_hecke_certified.py \
             analysis/w33_pass4772_4776_global_cube_cell_code.py \
             analysis/w33_pass4773_symmetry_reduced_multicommodity_flow.py
           do
