@@ -1,0 +1,41 @@
+{
+  "pass": 4713,
+  "group": {
+    "PSp_order": 25920,
+    "flag_stabilizer_order": 32,
+    "PGSp_outer_preserves_base": true,
+    "PGSp_outer_preserves_lift": true
+  },
+  "base": {
+    "vertices": 810,
+    "valency": 16,
+    "edges": 6480,
+    "diameter": 5,
+    "connected": true,
+    "betti_1": 5671,
+    "construction": "smallest connected self-paired PSp orbital"
+  },
+  "lift": {
+    "vertices": 1620,
+    "valency": 16,
+    "edges": 12960,
+    "connected": true,
+    "edges_per_base_edge": 2,
+    "deck_group": "C2"
+  },
+  "nonzero_cycle": {
+    "length": 3,
+    "projected_flag_cycle": [0, 482, 367, 0],
+    "changes_sheet": true
+  },
+  "cohomology": {
+    "group": "H^1(base;F2)",
+    "dimension": 5671,
+    "deck_class_nonzero": true,
+    "PGSp_invariant": true,
+    "generated_submodule_dimension": 1,
+    "module": "trivial"
+  },
+  "theorem": "The smallest connected self-paired PSp orbital on the 810 flags is 16-regular. Its equivariant apartment lift is a connected C2 double cover with nonzero deck class; PGSp preserves the cover, so that class spans an honest one-dimensional trivial PGSp submodule of H^1.",
+  "boundary": "Exact finite graph-cover/cohomology theorem; no optical phase is inferred."
+}
