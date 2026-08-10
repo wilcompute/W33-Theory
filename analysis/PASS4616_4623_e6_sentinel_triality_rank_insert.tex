@@ -1,0 +1,137 @@
+% Passes 4616--4623: explicit protected/E6 45 intertwiner, sentinel minimum-shell
+% transport, outer U6 multiplicity structure, concrete D4 triality lifts,
+% Hermitian binary-rank frontier, and three outside-box consequences.
+\subsection{The forty-five carrier closes, the sentinel shell becomes self-describing, and outer symmetry glues the exceptional six-space (Passes 4616--4623)}
+\label{sec:pass4616-4623-e6-sentinel-triality-rank}
+
+\paragraph{Pass 4616: the protected forty-five is exactly the center-quad/$E_6$ forty-five.}
+The forty-five $16$-line supports constructed from the protected singular shell
+in Pass~4585 and the older forty-five antipodal center-quad quotient points are
+not merely graphs with the same parameters.  In the common W33 model the
+stabilizer of a protected support has order $576$ and fixes exactly one old
+center-quad quotient point.  Sending $gU_0\mapsto gQ_0$ therefore gives an
+explicit $PSp(4,3)$-equivariant bijection of the two $45$-sets; generator
+checks certify well-definedness and equivariance.  Under this bijection the
+Pass~4586 $\operatorname{SRG}(45,32,22,24)$ is exactly the established
+center-quad transport/disjointness graph.  Thus the former parameter-only
+$E_6$/tritangent comparison is now an exact finite $G$-set intertwiner.
+
+\paragraph{Pass 4617: the $45\times40$ transport is the complete minimum shell of the sentinel code.}
+The same row permutation strengthens the previous graph identity to a matrix
+identity: a transport row is exactly the eight-point support of the corresponding
+center-quad quotient point.  Let $T$ be this $45\times40$ support matrix and let
+$N$ be W33 point--line incidence.  Over $\mathbb F_2$,
+\[
+ \operatorname{rank}T=15,\qquad \operatorname{rank}N=25,\qquad TN=0.
+\]
+Consequently
+\[
+ \boxed{\ker T=\operatorname{im}N},\qquad
+ \boxed{\operatorname{row}T=\ker N^T}.
+\]
+The latter is the sentinel $[40,15,8]$ code.  Every row of $T$ has weight eight,
+and the exact sentinel enumerator has exactly forty-five weight-eight words, so
+these rows are the \emph{entire} minimum shell:
+\[
+ 1+45z^8+720z^{12}+6930z^{16}+17376z^{20}
+ +6930z^{24}+720z^{28}+45z^{32}+z^{40}.
+\]
+
+\paragraph{Pass 4618: the three exceptional six-spaces form an $S_3$ multiplicity line, but the W33 outer involution singles out one.}
+Pass~4583 found exactly three $PSp(4,3)$-invariant six-submodules in
+$Q_{12}=K_{27}/K_{15}$.  Their full $PSp$ commutant has dimension four over
+$\mathbb F_2$, hence sixteen elements; exactly six are units, and those six
+realize all six permutations of the three submodules.  Thus the multiplicity
+space is a projective line with
+\[
+ \operatorname{Aut}_{PSp}(Q_{12})_{\rm units}\cong GL(2,2)\cong S_3,
+\]
+and no individual factor is canonical under the inner group.  The actual W33
+outer similitude acts on the three factors with cycle type $1+2$: it fixes one
+and swaps the other two.  The fixed factor has inner image order $25920$ and
+outer image order $51840$, giving a unique $PGSp(4,3)$-stable six-submodule.
+The commutant $S_3$ is a multiplicity-space symmetry; no identification with
+geometric $D_4$ triality is made here.
+
+\paragraph{Pass 4619: both half-spinor families now have concrete W33 lifts.}
+The $270$ maximal totally singular four-spaces of the protected $O^+(8,2)$
+geometry have $PSp(4,3)$ orbit sizes
+\[
+ \boxed{27,36,36,36,135}.
+\]
+For the transitive $135$-orbit, a representative stabilizer has order $192$ and
+fixes exactly three maximal size-eight W33 partial spreads.  Those are exactly
+the three eight-line orbits in its line-orbit decomposition
+$8+8+8+16$, and each has full stabilizer $192$.  Thus this half-spinor object
+has a concrete three-valued lift by maximal partial spreads.  For the other
+half-spinor family, the degree-$27$ orbit is explicitly the $27$ center-quad/$E_6$
+quotient lines via a unique fixed object under the order-$960$ stabilizer, while
+each of the three degree-$36$ orbits is the W33 spread $G$-set via a unique
+fixed spread under the order-$720$ stabilizer.  This covers all $270$ generators
+without collapsing the genuine inner-orbit decomposition.
+
+\paragraph{Pass 4620: the elliptic binary-rank conjecture is exactly a Hermitian generator-code problem.}
+The duality
+\[
+ Q^-(5,q)=GQ(q,q^2)\quad\longleftrightarrow\quad
+ H(3,q^2)=GQ(q^2,q)
+\]
+turns the same incidence matrix into the generator--point matrix of the
+Hermitian surface.  The conjectural all-odd-$q$ rank becomes
+\[
+ \boxed{\dim_{\mathbb F_2}C_1(H(3,q^2))
+       =q^4+q^2+1=\theta_2(q^2)=|PG(2,q^2)|},
+\]
+equivalently $C^\perp\subseteq C$ with
+$\dim C^\perp=q(q^2-q+1)$.  For odd $q$ the line-graph SRG coefficients are all
+even, so its adjacency satisfies $A^2=0$ over $\mathbb F_2$ automatically.
+The exact $q=3,5,7$ anchors continue to satisfy the proposed dimensions, but
+square-zero alone does not determine rank and no all-$q$ proof is claimed.
+
+\paragraph{Pass 4621 (outside the box): the sentinel minimum shell is self-describing.}
+Forget the construction and retain only the forty-five weight-eight sentinel
+words.  Two minimum words meet in either zero or two coordinates; declaring
+intersection two to be adjacency recovers exactly the center-quad/$E_6$
+transport graph, with pair counts $270$ and $720$.  Dually, two of the forty
+coordinate positions occur together in either one or three minimum words;
+declaring co-occurrence three to be adjacency recovers exactly the \emph{point}
+side W33 graph, with pair counts $540$ and $240$.  The recovered point graph is
+explicitly distinct from the protected line-side $A_*$.  Thus the complete
+minimum shell alone reconstructs both sides of the $45\times40$ incidence.
+
+\paragraph{Pass 4622 (outside the box): the $135$ maximal partial spreads carry a second canonical three-cover.}
+Pass~1100's $135$ maximal/unextendable size-eight partial spreads are transitive.
+Pass~4619 shows that an order-$192$ stabilizer $H$ fixes exactly three of them,
+and each of those three has full stabilizer $H$.  Hence there are
+$135/3=45$ conjugacy packets of such stabilizers.  Orbit--stabilizer gives
+\[
+ |N_G(H)|=576,\qquad N_G(H)/H\cong C_3,
+\]
+and the quotient acts regularly on the three spreads in each packet.  This is a
+second exact $135\to45$ cover with a $C_3$ deck action.  It is deliberately not
+identified with the center-quad forty-five without a new explicit intertwiner.
+
+\paragraph{Pass 4623 (outside the box): outer symmetry makes the exceptional $6\mid6$ extension nonsplit.}
+The unique outer-stable six-space of Pass~4618 is a submodule, not an
+outer-equivariant direct summand.  Indeed $Q_{12}$ restricts to $PSp(4,3)$ as
+$U_6\oplus U_6$ and has exactly three inner-invariant six-spaces; the outer
+involution fixes only one of them.  Any $PGSp$-stable complement would therefore
+be a second outer-stable member of that exhaustive three-element set, which does
+not exist.  Thus
+\[
+ \boxed{0\longrightarrow U_6\longrightarrow Q_{12}
+        \longrightarrow U_6\longrightarrow0}
+\]
+splits over $PSp(4,3)$ but is nonsplit over $PGSp(4,3)$.  Accordingly the
+orthogonal-pair wedge map of Pass~4583 is canonically outer-equivariant into
+$Q_{12}$, whereas projection to one six-space necessarily drops to inner
+equivariance or breaks the outer symmetry.
+
+\begin{quote}\small
+\textbf{Evidence boundary.} Passes~4616--4623 are finite incidence,
+characteristic-two coding, and modular representation theory.  The Hermitian
+binary generator-code dimension is an exact reformulation but remains open for
+all odd $q$ beyond the checked $q=3,5,7$ cases.  The $E_6$, $D_4$ and
+$O^-_6(2)$ names refer to explicit finite $G$-sets/modules; no particle,
+spacetime, or dynamical identification follows from these results alone.
+\end{quote}
