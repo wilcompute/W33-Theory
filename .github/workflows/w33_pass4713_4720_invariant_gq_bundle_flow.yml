@@ -1,0 +1,57 @@
+name: W33 Passes 4713-4720 invariant GQ bundle flow evidence
+
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass4713_invariant_flag_cohomology.py'
+      - 'analysis/w33_pass4714_dualshell_gq42_design.py'
+      - 'analysis/w33_pass4715_edge_kernel_character_decomposition.py'
+      - 'analysis/w33_pass4716_selected270_bundle_connection.py'
+      - 'analysis/w33_pass4717_capacity_queue_erasure_router.py'
+      - 'analysis/w33_pass4718_dualshell_petersen_design_spectrum.py'
+      - 'analysis/w33_pass4719_s3_regular_closure.py'
+      - 'analysis/w33_pass4720_petersen_network_code.py'
+      - 'data/PART_W33_PASS4713_*'
+      - 'data/PART_W33_PASS4714_*'
+      - 'data/PART_W33_PASS4715_*'
+      - 'data/PART_W33_PASS4716_*'
+      - 'data/PART_W33_PASS4717_*'
+      - 'data/PART_W33_PASS4718_*'
+      - 'data/PART_W33_PASS4719_*'
+      - 'data/PART_W33_PASS4720_*'
+      - 'tests/test_w33_pass4713_4720_invariant_gq_bundle_flow.py'
+      - '.github/workflows/w33_pass4713_4720_invariant_gq_bundle_flow.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass4713_invariant_flag_cohomology.py'
+      - 'analysis/w33_pass4714_dualshell_gq42_design.py'
+      - 'analysis/w33_pass4715_edge_kernel_character_decomposition.py'
+      - 'analysis/w33_pass4716_selected270_bundle_connection.py'
+      - 'analysis/w33_pass4717_capacity_queue_erasure_router.py'
+      - 'analysis/w33_pass4718_dualshell_petersen_design_spectrum.py'
+      - 'analysis/w33_pass4719_s3_regular_closure.py'
+      - 'analysis/w33_pass4720_petersen_network_code.py'
+      - 'tests/test_w33_pass4713_4720_invariant_gq_bundle_flow.py'
+
+jobs:
+  focused-evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy sympy networkx pytest
+      - name: Frozen certificate regression
+        run: python -m pytest -q tests/test_w33_pass4713_4720_invariant_gq_bundle_flow.py
+      - name: Exact regeneration
+        run: |
+          python analysis/w33_pass4713_invariant_flag_cohomology.py
+          python analysis/w33_pass4714_dualshell_gq42_design.py
+          python analysis/w33_pass4715_edge_kernel_character_decomposition.py
+          python analysis/w33_pass4716_selected270_bundle_connection.py
+          python analysis/w33_pass4717_capacity_queue_erasure_router.py
+          python analysis/w33_pass4718_dualshell_petersen_design_spectrum.py
+          python analysis/w33_pass4719_s3_regular_closure.py
+          python analysis/w33_pass4720_petersen_network_code.py
+          python -m pytest -q tests/test_w33_pass4713_4720_invariant_gq_bundle_flow.py
