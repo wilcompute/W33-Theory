@@ -1,0 +1,50 @@
+{
+  "pass": 4745,
+  "graph": {
+    "vertices": 810,
+    "edges": 6480,
+    "valency": 16,
+    "H1_dimension": 5671,
+    "deterministic_orbital_seed": 173
+  },
+  "ordinary_PSp": {
+    "irreducibles": [
+      {"label":"5a","degree":5,"multiplicity":1},
+      {"label":"5b","degree":5,"multiplicity":1},
+      {"label":"10a","degree":10,"multiplicity":3},
+      {"label":"10b","degree":10,"multiplicity":3},
+      {"label":"15a","degree":15,"multiplicity":4},
+      {"label":"20","degree":20,"multiplicity":1},
+      {"label":"24","degree":24,"multiplicity":4},
+      {"label":"30a","degree":30,"multiplicity":7},
+      {"label":"30b","degree":30,"multiplicity":4},
+      {"label":"30c","degree":30,"multiplicity":4},
+      {"label":"40a","degree":40,"multiplicity":10},
+      {"label":"40b","degree":40,"multiplicity":10},
+      {"label":"45a","degree":45,"multiplicity":12},
+      {"label":"45b","degree":45,"multiplicity":12},
+      {"label":"60","degree":60,"multiplicity":11},
+      {"label":"64","degree":64,"multiplicity":14},
+      {"label":"81","degree":81,"multiplicity":19}
+    ],
+    "trivial_multiplicity": 0,
+    "dimension_check": 5671
+  },
+  "PGSp_outer_on_nonzero_PSp_constituents": [
+    ["5a","5b"], ["10a","10b"], ["15a"], ["20"], ["24"],
+    ["30a"], ["30b","30c"], ["40a","40b"], ["45a","45b"],
+    ["60"], ["64"], ["81"]
+  ],
+  "characteristic_two_boundary": {
+    "edge_stabilizer_order": 4,
+    "endpoint_reversers": 2,
+    "H1_Q_PSp_invariants": 0,
+    "H1_Q_PGSp_invariants": 0,
+    "H1_F2_has_PGSp_fixed_deck_line": true,
+    "deck_line_has_PGSp_invariant_integral_or_rational_lift": false,
+    "reason": "the orientation sign disappears in characteristic two; over characteristic zero the self-paired edge orbital has no invariant oriented 1-chain"
+  },
+  "theorem": "The full ordinary PSp character of the invariant-flag H1 is 5a+5b+3(10a+10b)+4(15a)+20+4(24)+7(30a)+4(30b+30c)+10(40a+40b)+12(45a+45b)+11(60)+14(64)+19(81). It contains no trivial constituent, while the nonzero PGSp-fixed apartment deck class exists over F2. Hence that deck line is an intrinsically characteristic-two invariant with no PGSp-invariant integral/rational lift.",
+  "execution": "independent direct reconstruction from W(3,3), full 25920-element PSp group, 20-class algebra, oriented edge character, and PGSp outer conjugation",
+  "boundary": "Exact graph/cohomology/ordinary-character statement. Modular indecomposable structure beyond the fixed deck line is not claimed."
+}
