@@ -1,0 +1,20 @@
+{
+  "boundary": "Finite F2 PSp(4,3)-module theorem. Equal dimensions are explicitly rejected as an identification.",
+  "equivariant_map_comparison": {
+    "H27_to_Q15": {"hom_dimension": 1, "nonzero_map_ranks": [14]},
+    "H36_to_Q24": {"hom_dimension": 1, "nonzero_map_ranks": [9]},
+    "Q15_to_H27": {"hom_dimension": 1, "nonzero_map_ranks": [1]},
+    "Q24_to_H36": {"hom_dimension": 1, "nonzero_map_ranks": [1]}
+  },
+  "group": "PSp(4,3)",
+  "pass": 4632,
+  "periodic_homology": {"H27_dimension": 15, "H36_dimension": 24},
+  "point_side_W33_modular_layers": {"Q15": "row(A)/<1>", "Q24": "F2^40/row(A)", "rank_A_mod2": 16},
+  "standard_seed_cyclic_dimension_census": {
+    "H27": {"14": 7, "15": 8},
+    "H36": {"23": 9, "24": 15},
+    "Q15": {"14": 12, "15": 3},
+    "Q24": {"24": 24}
+  },
+  "theorem": "The 24D and 15D periodic cubic-incidence homologies are not isomorphic to the equal-dimensional point-side W33 modular layers. The unique comparison maps have ranks 9/1 in dimension 24 and 14/1 in dimension 15, exposing shared subquotients but inequivalent extensions."
+}
