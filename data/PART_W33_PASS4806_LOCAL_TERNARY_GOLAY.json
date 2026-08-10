@@ -1,0 +1,35 @@
+{
+  "boundary": "The identification is established by explicit extension and self-duality/weight checks, not by the [10,6,4] parameters or enumerator alone. No Mathieu-group embedding into the global W33 action is claimed here.",
+  "distance5_extension_functionals": 4,
+  "local_fiber_code": "[10,6,4]_3",
+  "local_weight_enumerator": {
+    "0": 1,
+    "4": 60,
+    "5": 144,
+    "6": 60,
+    "7": 240,
+    "8": 180,
+    "9": 20,
+    "10": 24
+  },
+  "one_coordinate_extension": "[11,6,5]_3 perfect ternary Golay",
+  "one_coordinate_weight_enumerator": {
+    "0": 1,
+    "5": 132,
+    "6": 132,
+    "8": 330,
+    "9": 110,
+    "11": 24
+  },
+  "pass": 4806,
+  "projective_extension_directions": 2,
+  "theorem": "The ten triangle coordinates of every GQ(4,2) K5 carry an explicit punctured ternary Golay code G10=[10,6,4]_3. Exactly two projective extension directions recover G11=[11,6,5]_3, and adjoining both yields the self-dual extended ternary Golay G12=[12,6,6]_3.",
+  "two_coordinate_extension": "[12,6,6]_3 extended ternary Golay",
+  "two_coordinate_self_dual": true,
+  "two_coordinate_weight_enumerator": {
+    "0": 1,
+    "6": 264,
+    "9": 440,
+    "12": 24
+  }
+}
