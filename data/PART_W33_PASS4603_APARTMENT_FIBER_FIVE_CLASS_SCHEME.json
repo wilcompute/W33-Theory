@@ -1,0 +1,11 @@
+{
+  "association_scheme_verified": true,
+  "boundary": "Exact finite association geometry. Equality of quotient SRG parameters with another 45-carrier is not an identification without an explicit equivariant map.",
+  "imprimitive_relation": {"component_graph":"K3","component_size":3,"components":45,"relation":"n2=48"},
+  "pass": 4603,
+  "points": 135,
+  "quotient45": {"cross_patterns":{"6*n2=0 + 3*n2=2":270,"6*n2=12 + 3*n2=6":720},"first_pattern_graph_srg":[45,32,22,24]},
+  "relation_labels": {"0":"diagonal","1":"n2=0","2":"n2=2","3":"n2=6","4":"n2=12","5":"n2=48"},
+  "theorem": "The five apartment-fiber n2 relations form a symmetric 5-class association scheme; its n2=48 imprimitivity quotient is SRG(45,32,22,24).",
+  "valencies": [1,24,12,32,64,2]
+}
