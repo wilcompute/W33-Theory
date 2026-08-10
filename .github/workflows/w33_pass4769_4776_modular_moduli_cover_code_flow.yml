@@ -1,0 +1,79 @@
+name: Passes 4769-4776 modular moduli cover code flow
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4769_modular_h1_head_socle.py'
+      - 'analysis/w33_pass4770_4774_s3_moduli_twisted_tangent.py'
+      - 'analysis/w33_pass4771_4775_degree16_cover_hecke.py'
+      - 'analysis/w33_pass4772_4776_global_cube_cell_code.py'
+      - 'analysis/w33_pass4773_symmetry_reduced_multicommodity_flow.py'
+      - '.github/workflows/w33_pass4769_4776_modular_moduli_cover_code_flow.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pass4769-4776-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install exact-analysis dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy networkx sympy
+      - name: Execute all five scripts covering eight passes
+        shell: bash
+        run: |
+          set +e
+          LOG=analysis/PASS4769_4776_RUN.log
+          STATUS=analysis/PASS4769_4776_RUN.status
+          : > "$LOG"
+          rc=0
+          for script in \
+            analysis/w33_pass4769_modular_h1_head_socle.py \
+            analysis/w33_pass4770_4774_s3_moduli_twisted_tangent.py \
+            analysis/w33_pass4771_4775_degree16_cover_hecke.py \
+            analysis/w33_pass4772_4776_global_cube_cell_code.py \
+            analysis/w33_pass4773_symmetry_reduced_multicommodity_flow.py
+          do
+            echo "===== $script =====" | tee -a "$LOG"
+            python "$script" 2>&1 | tee -a "$LOG"
+            here=${PIPESTATUS[0]}
+            echo "rc=$here" | tee -a "$LOG"
+            if [ "$here" -ne 0 ]; then rc=$here; break; fi
+          done
+          echo "$rc" > "$STATUS"
+          exit 0
+      - name: Commit diagnostics and generated certificates even on failure
+        shell: bash
+        run: |
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add analysis/PASS4769_4776_RUN.log analysis/PASS4769_4776_RUN.status
+          for f in \
+            data/PART_W33_PASS4769_MODULAR_H1_HEAD_SOCLE.json \
+            data/PART_W33_PASS4770_S3_GAUGE_MODULI.json \
+            data/PART_W33_PASS4771_DEGREE16_NORMALIZER_COVER.json \
+            data/PART_W33_PASS4772_GLOBAL_CROSSFIBER_CODE.json \
+            data/PART_W33_PASS4773_SYMMETRY_REDUCED_MULTICOMMODITY_FLOW.json \
+            data/PART_W33_PASS4774_TWISTED_F3_TANGENT.json \
+            data/PART_W33_PASS4775_RESIDUE_M2_HECKE_TRANSFER.json \
+            data/PART_W33_PASS4776_CUBE_CELL_EQUIVARIANT_IDENTIFICATION.json
+          do
+            test -f "$f" && git add "$f"
+          done
+          if ! git diff --cached --quiet; then
+            git commit -m 'Materialize Passes 4769-4776 execution evidence'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
+      - name: Enforce execution status after evidence is preserved
+        shell: bash
+        run: |
+          rc=$(cat analysis/PASS4769_4776_RUN.status)
+          test "$rc" -eq 0
