@@ -1,0 +1,28 @@
+{
+  "F4_cover": {
+    "base_objects": 40,
+    "deck_operation": "J <-> J^2",
+    "fiber": 2,
+    "oriented_objects": 80,
+    "oriented_stabilizer_order": 648,
+    "unoriented_stabilizer_order": 1296
+  },
+  "boundary": "Finite double-cover/G-set statement. The choice between the two global orientation matchings is not canonical without an orientation convention, and no physical chirality is inferred.",
+  "equivalence": {
+    "base": "the Pass4668 F4-structure <-> anisotropic-plane bijection",
+    "number_of_global_equivariant_orientation_matchings": 2,
+    "oriented_lift": "exists and is unique after choosing one base orientation; the only second lift is simultaneous global reversal"
+  },
+  "pass": 4669,
+  "theorem": "The 40-object F4/triality moduli has a natural 80-object orientation double cover on both sides. Oriented J versus J^2 matches the two cyclic orientations of the three nonzero vectors in the associated anisotropic plane; the full outer symmetry reverses both orientations.",
+  "triality_plane_cover": {
+    "base_planes": 40,
+    "cyclic_orientation_group": "648/216 = C3",
+    "fiber": 2,
+    "full_PGSp_plane_stabilizer_order": 1296,
+    "oriented_objects": 80,
+    "outer_operation": "reverses the cyclic order of the three nonzero plane vectors",
+    "plane_pointwise_order": 216,
+    "plane_setwise_PSp_order": 648
+  }
+}
