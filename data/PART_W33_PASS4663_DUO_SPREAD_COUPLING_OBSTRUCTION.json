@@ -1,0 +1,30 @@
+{
+  "pass": 4663,
+  "apartment_stabilizer": {
+    "order": 16,
+    "spread_stabilizer_intersection_profile": {"1":16,"4":16,"8":4},
+    "fixed_spreads": 0,
+    "equivariant_apartment_to_spread_map": false
+  },
+  "transported_order8_relation": {
+    "shape": [1620,36],
+    "row_degree": 4,
+    "column_degree": 180,
+    "distinct_rows": 135,
+    "row_multiplicity": 12,
+    "factors_through": "selected singular apartment fiber",
+    "quotient_incidence": "135_4-36_15"
+  },
+  "comparison_to_code_spread_incidence": {
+    "existing_code_incidence": "135_8-36_30",
+    "new_incidence": "135_4-36_15",
+    "rowwise_intersection": 0
+  },
+  "duo_sign_test": {
+    "deck_sensitive": false,
+    "result": "FAIL_CLOSED",
+    "reason": "the natural stabilizer coupling factors through the 135 singular apartment fibers and is constant on the 12 apartments sharing a fiber; the apartment stabilizer fixes no spread, so no PSp-equivariant set map pushes the C2 sheet to a 36-spread sign"
+  },
+  "theorem": "The apartment C2 duo coordinate does not canonically descend to a binary signing of the 36-spread/minimum-word carrier. The strongest natural stabilizer coupling is instead a deck-blind 135_4-36_15 incidence, rowwise disjoint from the code's 135_8-36_30 spread incidence.",
+  "boundary": "Exact finite equivariance obstruction and incidence theorem; no phase/sign physics is inferred."
+}
