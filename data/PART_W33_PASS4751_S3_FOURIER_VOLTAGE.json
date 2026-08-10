@@ -1,0 +1,22 @@
+{
+  "pass":4751,
+  "selected135_fourier": {
+    "permutation_representation":"1 + Std_2",
+    "trivial_block_dimension":45,
+    "standard_block_dimension":90,
+    "integral_standard_basis_Gram":[[2,-1],[-1,2]],
+    "standard_block_is_Gram_self_adjoint":true,
+    "source_target_orientation_checked":true,
+    "trivial_block_polynomial":"(x-12)(x-3)(x+3)",
+    "standard_block_polynomial":"x(x^2-36)",
+    "trivial_spectrum":{"12":1,"3":20,"-3":24},
+    "standard_spectrum":{"6":15,"0":60,"-6":15},
+    "full_spectrum":{"12":1,"6":15,"3":20,"0":60,"-3":24,"-6":15}
+  },
+  "regular_S3_closure":{"decomposition":"trivial + sign + 2 Std_2","spectrum":{"12":1,"6":30,"3":44,"0":120,"-3":44,"-6":30,"-12":1},"matches_Pass4719":true},
+  "selected270_radical_test":{"factor_x2_minus_2x_minus_12_present_in_any_S3_fourier_block":false,"conclusion":"the 1 +/- sqrt(13) cold-router sector is not the direct S3-cover Fourier block; Pass4747 locates it in the multiplicity-two PSp degree-20 constituent"},
+  "correction_log":"an initial implementation used the column-action permutation matrix in the source-target adjacency block without transposing it, producing spurious radicals. Independent execution caught the mismatch. The corrected block places a 1 at row source-sheet i, column target-sheet sig(i), matches the original 135 adjacency spectrum exactly, and restores the exact polynomial x(x^2-36).",
+  "theorem":"The S3 voltage connection has an exact 2x2 matrix Fourier block over each GQ edge. In the integral standard lattice basis its 90x90 operator is self-adjoint for the natural Gram form and satisfies S(S^2-36I)=0 exactly, explaining the selected135 and regular-closure spectra. The selected270 radical sector is a different representation-theoretic mechanism.",
+  "execution":"independent exact matrix construction plus exact polynomial identities and numerical spectral cross-check against the original selected135 adjacency",
+  "boundary":"Exact finite voltage/Fourier theorem. Fourier means finite-group representation decomposition, not optical frequency."
+}
