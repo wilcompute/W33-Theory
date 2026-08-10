@@ -1,0 +1,8 @@
+{
+  "pass":4688,
+  "source_cohomology":{"base":"Pass4656 five-factor labelled Schreier graph","labelled_edges":4050,"deck_class_nonzero":true},
+  "projection_to_selected270":{"projected_edges":4050,"all_selected270_distance":3,"unique_distance3_pairs":1275,"pair_multiplicity_profile":{"3":1200,"6":75},"routing_edge_intersection":0,"base_edge_hits":0,"Petersen_shortcut_edge_hits":0},
+  "signing_obstruction":{"canonical_direct_routing_signing":false,"reason":"the cohomology cochain lives on flag-Schreier edges whose line projection is distance three, not on selected270 routing edges","extra_data_required":"a choice of length-three routing path/transgression for each projected Schreier edge"},
+  "theorem":"The nonzero apartment deck cohomology does not directly bias or sign either selected270 routing edge orbit: every supporting Schreier edge projects to distance three. Any hot/cold signing would require a noncanonical path-transgression choice.",
+  "boundary":"Exact graph-projection obstruction. No claim is made about couplings after an explicitly specified transgression rule."
+}
