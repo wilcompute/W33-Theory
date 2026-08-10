@@ -1,0 +1,141 @@
+% Passes 4571--4578: close the remaining dual-module composition factors,
+% execute support-8/9 enumerator mass, refute universal C8-alone selection,
+% observe the full Q(5,3) prism action, expose the cubic binary O6-minus code,
+% and three outside-box obstruction/quotient tests.
+\subsection{Composition closure, executed enumerator mass, and exact cross-carrier boundaries (Passes 4571--4578)}
+\label{sec:pass4571-4578-composition-enumerator-crosscarrier}
+
+\paragraph{Pass 4571: the remaining $186$- and $64$-dimensional module frontiers close at the composition-factor level.}
+Inside the unique $S_{186}<S_{250}<K_{256}$ chain of Pass~4544, the $64$-dimensional quotient is irreducible over $\mathbb F_2$.  A deterministic MeatAxe-style verifier finds a group-algebra element with irreducible full-degree characteristic polynomial, which precludes every proper invariant subspace.  The $186$-space is reducible: exactly one standard coordinate seed generates a visible $120$-space while the other $185$ generate all of $S_{186}$.  Recursive primal/contragredient spins and multiplicity-one factor kernels give the exact composition-factor multiset
+\[
+ \boxed{S_{186}:\quad 40^3+14^2+8+6^5.}
+\]
+More specifically,
+\[
+ S_{120}:\quad40^2+14^2+6^2,
+ \qquad
+ S_{186}/S_{120}:\quad40+8+6^3.
+\]
+Every displayed $6$-, $8$-, and $14$-dimensional terminal factor is checked by exhaustive nonzero-vector spin; the $40$- and $64$-dimensional terminal factors use full-degree irreducible group-algebra witnesses.  This closes the composition factors, not every extension class or every node of the complete Loewy lattice.
+
+\paragraph{Pass 4572: the numerical apartment enumerator is now executed through supports eight and nine.}
+Pass~4520 ended the exhaustive labelled-support census at $m=7$, while Pass~4546 supplied a symmetry engine without claiming the complete run.  A compiled incremental XOR/popcount kernel now evaluates all
+\[
+ \binom{40}{8}=76{,}904{,}685,
+ \qquad
+ \binom{40}{9}=273{,}438{,}880
+\]
+coefficient subsets, adding
+\[
+ \boxed{350{,}343{,}565}
+\]
+new exact labelled representatives.  The complete support-$8$ spectrum has $112$ distinct weights, from $528$ to $960$, with
+\[
+ A^{(8)}_{528}=540,\qquad A^{(8)}_{960}=1755.
+\]
+The support-$9$ spectrum has $134$ distinct weights, from $582$ to $1026$, with
+\[
+ A^{(9)}_{582}=4320,\qquad A^{(9)}_{1026}=360.
+\]
+The full spectra are frozen in the Pass~4572 certificate.  A monolithic support-$10$ sweep was attempted but did not complete within the execution window; supports $10$ through $20$ therefore remain open and no $2^{39}$ checksum is claimed.
+
+\paragraph{Pass 4573: the W33 $C_8$ apartment selector is special, not universal.}
+Pass~4548 showed that in $GQ(3,3)$ the primitive degree-four length-eight coefficient $712$ singles out exactly the $1620$ apartments.  Exact nonbacktracking trace arithmetic on the smallest thick symplectic quadrangle refutes the all-GQ extrapolation.  In
+\[
+ W(3,2)=GQ(2,2)
+\]
+all $90$ apartments have primitive $C_8^{(4)}$ coefficient $36$, but so do $60$ non-apartment induced $K_{1,3}$ supports in the line graph.  Thus coefficient value alone does not universally select apartments.  The collision is not forced merely by $s=2$: in
+$Q^-(5,2)=GQ(2,4)$ a sample apartment has coefficient $60$ while a $K_{1,3}$ has coefficient $36$.  The universal theorem that survives is Pass~4523:
+\[
+ C_6^{(2)}\longrightarrow A_{\rm line}\longrightarrow\text{induced }C_4\text{ apartments}
+\]
+for every thick GQ.  W33's $C_8$-alone sufficiency is therefore genuinely stronger and exceptional relative to this counterexample.
+
+\paragraph{Pass 4574: the $544320$ Q(5,3) prisms are one observed projective-unitary orbit.}
+The previously fail-closed Pass~4547 target is independently reproduced without pynauty.  Starting from the repository's explicit $GF(9)$ construction of $H(3,9)$, four concrete unitary transvections generate $PSU(4,3)$ of order $3265920$.  Adding the unitary diagonal $\operatorname{diag}(3,1,1,1)$ gives the full dual action on the $112$ points of $Q(5,3)$ with order
+\[
+ \boxed{13063680.}
+\]
+A noncollinear point pair has pointwise stabilizer $1440$, setwise stabilizer $2880$, and ten common-neighbor rungs.  The setwise stabilizer acts on those ten rungs with image order $1440$ and kernel two; its ordered-distinct-triple orbit has size $720$ and its unordered three-subset orbit has size $120$.  Hence
+\[
+ \boxed{4536\cdot120=544320}
+\]
+prisms form one orbit and a prism stabilizer has order
+\[
+ \boxed{24.}
+\]
+No abstract name is assigned to the order-$1440$ rung image from order alone.
+
+\paragraph{Pass 4575: cubic line--double-six incidence is exactly the binary natural $O^-_6(2)$ code.}
+Let $R$ be the actual $27\times36$ cubic-surface incidence matrix of Passes~4545/4549.  Through the frozen Passes~4525/4527 conjugations to the six-dimensional minus space,
+\[
+ \boxed{R_{s,a}=B(s,a)}
+\]
+for every nonzero singular vector $s$ and anisotropic vector $a$ of $U_6$.  Consequently
+\[
+ \boxed{\operatorname{rank}_2R=6,\qquad RR^T=R^TR=0\pmod2.}
+\]
+Its two natural image codes are
+\[
+ \boxed{[36,6,16],\quad W=1+27z^{16}+36z^{20}},
+\]
+\[
+ \boxed{[27,6,12],\quad W=1+36z^{12}+27z^{16}}.
+\]
+Their dual kernels have dimensions $30$ and $21$, minimum distance three, with low relation counts
+\[
+ (A_3,A_4)=(120,945),\qquad(45,270),
+\]
+respectively.  Thus the rational rank-$21$ incidence transport collapses mod two to the exact natural six-dimensional orthogonal carrier.
+
+\paragraph{Pass 4576 (outside the box): the protected/cubic no-go extends through unary quadratic maps.}
+Take the protected $V_8=O^+(8,2)$ module and cubic $U_6=O^-(6,2)$ module with aligned $PSp(4,3)$ generators.  In the complete square-free Boolean polynomial bases of degree at most two, including constants, equivariance gives linear systems of sizes
+\[
+ 222\times222\quad(V_8\to U_6),
+ \qquad
+ 176\times176\quad(U_6\to V_8).
+\]
+Both have full rank.  Hence
+\[
+ \boxed{\text{no nonzero equivariant Boolean map of degree }\le2}
+\]
+exists in either unary direction.  This does not conflict with the later Pass~4583 alternating-square bridge: $(v,w)\mapsto v\wedge w$ is a bilinear map of two independent inputs into a larger functorial module, not a unary quadratic map $V_8\to U_6$.
+
+\paragraph{Pass 4577 (outside the box): the twelve-apartment fibers reconstruct the $O^+(8,2)$ polar graph themselves.}
+For two distinct Pass~4558 fibers $F_x,F_y$, let $n_2(x,y)$ count cross-fiber apartment pairs sharing exactly two W33 lines.  Exhausting all $\binom{135}{2}$ fiber pairs gives
+\[
+ \boxed{B(x,y)=1\iff n_2(x,y)=12,}
+\]
+while orthogonal pairs have
+\[
+ n_2\in\{0,2,6,48\}
+\]
+with multiplicities $1620,810,2160,135$.  Thus the quotient fibers and their own line-intersection statistics reconstruct the nonzero-singular orthogonality graph
+\[
+ \boxed{\operatorname{SRG}(135,70,37,35)}
+\]
+without supplying external eight-dimensional coordinates.
+
+\paragraph{Pass 4578 (outside the box): the tempting cubic $120$-orbit is a false friend.}
+The $36$ double-sixes have five $PSp(4,3)$ orbits on unordered triples, of sizes
+\[
+ \boxed{120,540,1080,2160,3240.}
+\]
+The unique $120$-orbit is numerically tempting because Pass~4559 has exactly $120$ protected anisotropic classes.  Both transitive actions even have stabilizer order $216$.  They are nevertheless inequivalent: their stabilizer suborbit signatures are
+\[
+ [1,1,1,27,27,27,36]
+ \quad\text{and}\quad
+ [1,2,27,36,54].
+\]
+A generator-by-generator propagation over all possible base identifications finds no equivariant bijection.  The equality $120=120$ is therefore explicitly rejected rather than promoted into a correspondence.
+
+\begin{quote}\small
+\textbf{Evidence boundary.}
+Passes~4571--4578 are exact finite $\mathbb F_2$ module/code computations,
+finite generalized-quadrangle zeta arithmetic, and finite permutation geometry.
+The complete numerical apartment-code enumerator is still open beyond support nine;
+Pass~4573 is a counterexample to an overbroad C8 selector conjecture, not an all-parameter
+classification; and the negative unary protected/cubic results do not forbid higher-functor,
+pair-valued, symmetry-broken, or physical maps.  No finite incidence count is promoted to
+a field, particle, energy, or hardware quantity without a separate implementation theorem.
+\end{quote}
