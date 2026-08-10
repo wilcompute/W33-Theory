@@ -1,0 +1,39 @@
+{
+  "pass": 4771,
+  "homogeneous_cover": {"G":"PSp(4,3)","G_order":25920,"H_order":96,"K_order":48,"base":"G/H","cover":"G/K","base_vertices":270,"cover_vertices":540,"fiber_size":2,"deck_quotient":"H/K=C2"},
+  "degree16_orbital": {
+    "subdegree":16,
+    "intrinsic_selector":"for adjacent residues R,S the product of their unique four-fixed involutions has order 3 and fixes 7 W33 lines; the other subdegree-16 orbital has the same product order but fixes only 1 line",
+    "base_edges":2160,
+    "degree":16,
+    "diameter":4,
+    "triangles":2880,
+    "edge_connectivity":16,
+    "adjacency_rank_F2":78,
+    "cycle_code_dimension":1891,
+    "spectrum":"16^1 + (-8)^6 + 6^24 + (-3)^64 + 0^135 + (2+2sqrt(13))^20 + (2-2sqrt(13))^20"
+  },
+  "two_homogeneous_lifts": {
+    "both_connected_degree16_diameter4":true,
+    "triangle_counts":[1440,4320],
+    "signed_spectra":{"rejected_1440":"(-8)^20 + (-4)^81 + 1^64 + 4^105","selected_4320":"8^20 + 4^81 + (-1)^64 + (-4)^105"},
+    "Pass4752_cocycle_selection":"explicit tree-gauged comparison with the descended beta class selects the 4320-triangle lift"
+  },
+  "selected_cover": {
+    "edges":4320,
+    "degree":16,
+    "diameter":4,
+    "triangles":4320,
+    "edge_connectivity":16,
+    "adjacency_rank_F2":226,
+    "cycle_code_dimension":3781,
+    "spectrum":"base spectrum plus 8^20 + 4^81 + (-1)^64 + (-4)^105"
+  },
+  "ordinary_characters": {
+    "base_G_over_H":"1 + 6 + 15b + 2(20) + 24 + 30b + 30c + 60 + 64",
+    "signed_Ind_H_epsilon":"10a + 10b + 15a + 45a + 45b + 64 + 81"
+  },
+  "execution":"independent reconstruction of G/H and G/K as literal cosets, both degree-16 residue orbitals, both homogeneous graph lifts, exact Pass4752 810->270 cochain descent with beta weight 1172, tree-gauge cohomology comparison, spectra, GF(2) adjacency ranks and ordinary-character decomposition",
+  "theorem":"The Pass4752 base is the unique degree-16 residue orbital selected by the seven-fixed-line involution-product fingerprint. Above it G/K carries two nonisomorphic graph lifts that easy metrics do not distinguish; the descended apartment cohomology class selects the 4320-triangle lift. Its signed sheet spectrum is 8^20+4^81+(-1)^64+(-4)^105 and its binary adjacency rank is 226.",
+  "boundary":"Exact finite homogeneous graph/cohomology/representation theorem. The 1440-triangle lift is retained as a legitimate different homogeneous double cover rather than discarded by count matching."
+}
