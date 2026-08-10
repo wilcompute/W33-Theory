@@ -1,0 +1,8 @@
+{
+  "pass": 4779,
+  "quotient_model": {"graph":"SRG(45,12,3,3)","Gram":"15 I - 5 A + J","rank":24,"nonzero_Gram_eigenvalue":30},
+  "lattice": {"determinant_factorization":"2^10 * 3^10 * 5^23","rational_square_class":5,"basis_saturation_index":1},
+  "obstruction": {"Leech_square_class":1,"rational_basis_change_preserves_square_class":true,"rational_scaling_in_dimension_24_preserves_square_class":true,"same_rational_quadratic_space_as_Leech":false},
+  "theorem": "The repository rank-24 residue constituent has determinant square-class 5, so no commensurable lattice in this rational orthogonal module can be rationally isometric, even up to rational scale, to Leech.",
+  "boundary": "Orthogonal-form no-go only; other abstract 24-dimensional U4(2) representations are not excluded."
+}
