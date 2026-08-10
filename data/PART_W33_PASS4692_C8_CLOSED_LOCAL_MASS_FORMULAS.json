@@ -1,0 +1,25 @@
+{
+  "pass": 4692,
+  "formulas": {
+    "u": "s-1",
+    "rho": "intersecting cross-pairs of the two external-transversal families of an apartment",
+    "sigma": "intersecting external-transversal / single-apartment-hit outside-line pairs",
+    "tau": "outside common transversals of the three K1,3 leaf lines",
+    "A_1111_22": "16*((4u^2+2)rho + u^2 sigma + (4t-2)u^4 + 2(t-1))",
+    "A_1115": "64u(u^3-u^2+2u-1)",
+    "A_1133": "96u^2(u-1)^2",
+    "A_1111_4": "64(u+1)u(u-1)(t-1)",
+    "S_1111_22": "48(u+1)u^3",
+    "S_1113_2": "48(u+1)u tau"
+  },
+  "anchors": [
+    {"geometry":"GQ(2,2)","s":2,"t":2,"rho":1,"sigma":0,"tau":2,"raw":[224,64,0,0,96,192],"coefficients":[36,36]},
+    {"geometry":"GQ(2,4)","s":2,"t":4,"rho":1,"sigma":0,"tau":2,"raw":[416,64,0,0,96,192],"coefficients":[60,36]},
+    {"geometry":"GQ(4,2)","s":4,"t":2,"rho":3,"sigma":24,"tau":2,"raw":[13088,4416,3456,1536,5184,1152],"coefficients":[2812,792]},
+    {"geometry":"W33","s":3,"t":3,"rho":0,"sigma":16,"tau":1,"raw":[3648,896,384,768,1152,288],"coefficients":[712,180]},
+    {"geometry":"dual W33 = Q(4,3)","s":3,"t":3,"rho":4,"sigma":0,"tau":3,"raw":[3776,896,384,768,1152,864],"coefficients":[728,252],"direct_mask_only_coefficients_verified":true}
+  ],
+  "same_parameter_obstruction": "W33 and dual W33 both have order (3,3) but different (rho,sigma,tau) and different exact primitive-C8 apartment/star coefficients.",
+  "theorem": "All six Pass4635 primitive-C8 raw masses have closed local formulas. Four depend only on s,t; apartment 1111|22 requires rho and sigma, and star 1113|2 requires tau. W33 and its dual prove that no (s,t)-only law exists.",
+  "boundary": "Exact generalized-quadrangle local combinatorics. rho, sigma and tau are incidence invariants of the selected embedded support; they are not replaced by numerological functions of s,t."
+}
