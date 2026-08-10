@@ -1,0 +1,121 @@
+% Passes 4769--4776: modular H1, S3 moduli, normalizer cover, global code, flow, and cube-cell bridge.
+\section*{Passes 4769--4776: modular cohomology, nonabelian moduli, the normalizer cover, and globally coupled routing codes}
+\paragraph{Scope.}
+This packet continues the exact finite geometry after Passes 4753--4760.  Every statement below is a graph, group, cohomology, code, semisimple-algebra, or fractional-flow theorem.  In particular, the terms ``gauge'', ``Fourier'', and ``transfer matrix'' refer only to finite covers/representations and do not assert a continuum gauge field or measured photonic dynamics.
+
+\paragraph{Pass 4769: the characteristic-two deck line sits in a nonsplit modular socle.}
+For the invariant $810$-flag graph, $\dim_{\mathbf F_2}H^1=5671$.  Exact spanning-tree coordinates give
+\[
+ \dim (H^1)^{PSp(4,3)}=\dim (H^1)^{PGSp(4,3)}=4,
+ \qquad
+ \dim H^1_{PSp}=\dim H^1_{PGSp}=1,
+\]
+where the latter denotes coinvariants.  The augmentation subspace
+$\sum_g(g-1)H^1$ has dimension $5670$.  All four invariant vectors lie in that augmentation subspace.  The apartment deck class is one of them; in the deterministic tree gauge it has weight $2296$.  Consequently no invariant trivial line, including the deck line, splits as a direct summand.  This sharpens the characteristic-zero no-lift theorem: the mod-$2$ fixed sector is a genuinely nonsplit modular extension.
+
+\paragraph{Pass 4770: the all-triangle-transposition rule has a huge exact moduli space.}
+Put the $S_3$ connection on the $45$-vertex, $270$-edge $GQ(4,2)$ point graph into spanning-tree gauge, leaving $226$ cotree voltages.  Because the odd elements of $S_3$ are exactly its three transpositions, requiring all $270$ base triangles to have transposition holonomy is exactly a binary sign condition.  Its $270\times226$ affine system has rank $162$, hence a $64$-dimensional affine sign space:
+\[
+ 2^{64}\quad\hbox{sign sectors}.
+\]
+For each fixed sign sector every cotree edge has three lifts of the prescribed parity.  Modulo vertex gauge and residual global conjugation, the connected classes in one sign sector number
+\[
+ \frac{3^{225}-1}{2}.
+\]
+Thus before the further $|\operatorname{Aut}(GQ(4,2))|=51840$ quotient, the connected gauge classes number
+\[
+ 2^{64}\frac{3^{225}-1}{2}.
+\]
+All $452$ Hamming-radius-one same-sign changes of the selected tree-gauge representative remain connected.  The triangle rule is therefore strongly non-rigid, not merely nonunique by one exceptional deformation.
+
+\paragraph{Pass 4774: the nonabelian deformation fiber is twisted $\mathbf F_3$ cohomology.}
+Writing an $S_3$ voltage as $r^a s^p$ with $r^3=s^2=1$ and $srs=r^{-1}$ turns the $A_3$ exponent into a rank-one $\mathbf F_3$ local system twisted by the sign cocycle.  Its coboundary has rank $45$ on
+$C^0\cong\mathbf F_3^{45}\to C^1\cong\mathbf F_3^{270}$, so
+\[
+ H^0=0,\qquad \dim H^1=225.
+\]
+Each of the $2^{64}$ binary sign sectors therefore carries the projective point set of nonzero vectors in $\mathbf F_3^{225}$ modulo $\{\pm1\}$, i.e. a $PG(224,3)$ point set, before quotienting by base automorphisms.  There is no nonzero additive linear map from the characteristic-two deck line into this characteristic-three deformation space, so the two effects are explicitly separated rather than identified by shared ``gauge'' language.
+
+\paragraph{Pass 4771: the descended deck graph is a cohomology-selected homogeneous double cover.}
+Let $H$ be a residue stabilizer, $|H|=96$, and let
+$K=C_{PSp(4,3)}(h)$ be the Pass-4738 order-$48$ kernel.  The descended carrier is
+\[
+ PSp(4,3)/K\longrightarrow PSp(4,3)/H,
+ \qquad 540\longrightarrow270.
+\]
+Among the two subdegree-$16$ residue orbitals, the desired base is characterized intrinsically: for adjacent residues the product of their unique four-fixed involutions has order $3$ and fixes seven W33 lines; the other subdegree-$16$ orbital fixes only one.  The selected base has $2160$ edges, degree and edge-connectivity $16$, diameter $4$, $2880$ triangles, binary adjacency rank $78$, cycle-code dimension $1891$, and spectrum
+\[
+ 16^1+(-8)^6+6^{24}+(-3)^{64}+0^{135}
+ +(2+2\sqrt{13})^{20}+(2-2\sqrt{13})^{20}.
+\]
+Above this base there are two connected degree-$16$ homogeneous lifts with the same easy metrics.  They contain $1440$ and $4320$ triangles.  Exact comparison of their tree-gauged cover classes with the Pass-4752 descended cocycle selects the $4320$-triangle lift.  Its signed sheet spectrum is
+\[
+ 8^{20}+4^{81}+(-1)^{64}+(-4)^{105},
+\]
+and its binary adjacency rank is $226$ with cycle-code dimension $3781$.
+
+\paragraph{Pass 4775: the degree-$16$ base uses the unique $M_2(\mathbf Q)$ block, but the sheet sector does not.}
+The residue centralizer algebra remains
+\[
+ \mathbf Q^6\times\mathbf Q(\sqrt{-3})\times M_2(\mathbf Q).
+\]
+Recovering the rank-$40$ projector intrinsically by Chinese-remainder projection of the cold adjacency onto $x^2-2x-12$ and then taking a primitive rank-$20$ idempotent gives a concrete two-dimensional left ideal.  In one exact rational basis the distinguished orbital matrices are
+\[
+ A_{\rm cold}\mapsto
+ \begin{pmatrix}0&12\\1&2\end{pmatrix},\qquad
+ A_{\rm hot}\mapsto
+ \begin{pmatrix}3&6\\0&-2\end{pmatrix},\qquad
+ A_{16}\mapsto
+ \begin{pmatrix}4&-24\\-2&0\end{pmatrix}.
+\]
+Hence $A_{16}$ has polynomial $x^2-4x-48$ and eigenvalues $2\pm2\sqrt{13}$.  In contrast, the signed sheet representation is
+\[
+ 10_a+10_b+15_a+45_a+45_b+64+81,
+\]
+with degree-$20$ multiplicity zero.  Thus the degree-$16$ \emph{base} adjacency acts nontrivially in the unique noncommutative block, while the $C_2$ sheet module itself is representation-theoretically transverse to that block.
+
+\paragraph{Pass 4776: dependency cubes are literally the cross-fiber coding cells.}
+The $135$ dependency $Q_3$ components from Pass 4758 and the $135$ fifteen-edge cells from Pass 4748 are the same $PSp(4,3)$ $G$-set under an explicit equivariant map; representative stabilizers are literally equal subgroups of order $192$.  Each cube uses six residue vertices and is $K_6-3K_2$ in the cold graph.  Under the residue-to-selected270 intertwiner, the three missing pairs are exactly the three Petersen-hot edges.  Adding them completes the physical cell to $K_6$, and the other twelve edges are precisely the three $K_{2,2}$ cold blocks.  The resulting $135$ completed $K_6$ cells partition all $2025$ router edges exactly once.
+
+\paragraph{Pass 4772: GQ-line coupling doubles the cross-fiber code distance.}
+Use the intrinsic $K_6$ cell coordinates.  A basis for the local $[15,3,7]_2$ code is indexed by the three quotient GQ lines through the cell: the generator associated with one line consists of all three hot matching edges plus the cold $K_{2,2}$ block between the other two line fibers.  The $405$ logical coordinates therefore split canonically into $27$ disjoint groups of $15$, one group per quotient line.  Imposing one even-parity check on each group gives
+\[
+ \boxed{[2025,378,14]_2}.
+\]
+The distance is exact: logical weight two must occupy two distinct cells of the same line group and therefore has physical weight $7+7=14$; logical weight at least four has physical weight at least $16$ because the local physical weights for one, two, and three active logical bits are $7,8,15$.  This raises the explicit $K d$ metric from $405\cdot7=2835$ to $378\cdot14=5292$.  Repetition on each $15$-coordinate line group yields the second exact family
+\[
+ \boxed{[2025,27,105]_2}.
+\]
+These are symmetry-preserving code constructions, not universal coding-optimality or fault-tolerance claims.
+
+\paragraph{Pass 4773: exact all-pairs concurrent flow reduces to four resource vertices.}
+For unit demand on every ordered distinct selected270 pair, cold-edge capacity $1$, and hot-edge capacity $\rho$, the eleven nontrivial $PSp(4,3)$ pair orbitals have exact nondominated path signatures.  Orbit averaging makes every cold edge and every hot edge carry uniform load.  Their Minkowski sum has only four lower-frontier vertices, written as total cold/hot traversals per unit concurrent demand:
+\[
+ (113400,64530),\quad(147960,29970),\quad(167400,17010),\quad(201420,0).
+\]
+Consequently the exact fractional concurrent throughput is
+\[
+ \lambda(\rho)=
+ \begin{cases}
+  3(\rho+2)/746,&0<\rho\le 63/155,\\
+  3(3\rho+8)/2858,&63/155\le\rho\le111/137,\\
+  3(\rho+4)/1318,&111/137\le\rho\le239/105,\\
+  1/70,&\rho\ge239/105.
+ \end{cases}
+\]
+At equal capacities,
+\[
+ \boxed{\lambda(1)=15/1318\approx0.01138088}.
+\]
+The 27-fiber quotient has exact ordered-all-pairs throughput $10/7$ when each quotient edge receives its twelve cold physical-edge capacities.  For symmetry-breaking hot-fiber outages and full-fiber removals the packet freezes explicit all-shortest-path feasible lower bounds and cut upper bounds only; those failure-case values are not promoted to optima.
+
+\paragraph{Evidence.}
+Executable witnesses are
+\texttt{w33\_pass4769\_modular\_h1\_head\_socle.py},
+\texttt{w33\_pass4770\_4774\_s3\_moduli\_twisted\_tangent.py},
+\texttt{w33\_pass4771\_4775\_degree16\_cover\_hecke\_certified.py},
+\texttt{w33\_pass4772\_4776\_global\_cube\_cell\_code.py}, and
+\texttt{w33\_pass4773\_symmetry\_reduced\_multicommodity\_flow.py}.
+Frozen certificates live in \texttt{data/PART\_W33\_PASS4769\_*} through
+\texttt{data/PART\_W33\_PASS4776\_*}, with a cross-certificate regression in
+\texttt{tests/test\_w33\_pass4769\_4776\_modular\_moduli\_cover\_code\_flow.py}.
