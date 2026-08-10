@@ -1,0 +1,13 @@
+{
+  "boundary": "The orientation bit does not by itself distinguish cold orbital 1 from the chiral union: cold pairs occur in both local signs. The full router needs the independent cold selector plus this two-sheet orientation structure; no H^2 claim is made.",
+  "chiral_orbitals": {"paired": [8, 9], "cold_orbital_1_uses_both_signs": true},
+  "local_lines_through_point": 3,
+  "orientation_torsor": {"global_choices": 2, "PSp_preserves_each": true, "outer_reverses": true},
+  "pass": 4795,
+  "PGSp_local_image": "S3",
+  "PGSp_point_stabilizer": 1152,
+  "PSp_local_image": "C3",
+  "PSp_point_stabilizer": 576,
+  "quotient": "GQ(4,2) point graph / SRG(45,12,3,3)",
+  "theorem": "The paired residue orbitals 8 and 9 carry a literal global orientation bit. PSp preserves either of two cyclic orientations of the three GQ lines through every quotient point; the outer coset reverses it. Among non-cold cross-line triangle pairs, the two orientation signs distinguish orbitals 8 and 9."
+}
