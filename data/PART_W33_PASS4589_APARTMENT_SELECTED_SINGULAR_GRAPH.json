@@ -1,0 +1,33 @@
+{
+  "boundary": "The rational rank 120 is not an identification with the separate 120 anisotropic quotient classes. No such G-set or module isomorphism is claimed without an explicit intertwiner.",
+  "incidence": {
+    "apartment_lifts_per_line": 6,
+    "line_size": 3,
+    "point_degree": 6,
+    "points": 135,
+    "rank_F2": 119,
+    "rank_Q": 120,
+    "selected_lines": 270
+  },
+  "pass": 4589,
+  "point_graph": {
+    "adjacent_common_neighbors": {"1": 810},
+    "annihilator": "(x-12)(x-6)(x-3)x(x+3)(x+6)",
+    "degree": 12,
+    "edges": 810,
+    "gram": "N N^T = 6 I + A",
+    "nonadjacent_common_neighbors": {"0": 4455, "1": 1620, "3": 2160},
+    "spectrum": {"-6": 15, "-3": 24, "0": 60, "3": 20, "6": 15, "12": 1},
+    "triangles": 270,
+    "triangles_are_exactly_selected_lines": true,
+    "vertices": 135
+  },
+  "selected_line_intersection_graph": {
+    "degree": 15,
+    "edges": 2025,
+    "gram": "N^T N = 3 I + L",
+    "spectrum": {"-3": 165, "0": 24, "3": 60, "6": 20, "9": 15, "15": 1},
+    "vertices": 270
+  },
+  "theorem": "The apartment image is recoverable from a 135-vertex 12-regular graph: its 270 selected singular lines are exactly that graph's triangles. The 135x270 incidence matrix has exact rational rank 120 and binary rank 119."
+}
