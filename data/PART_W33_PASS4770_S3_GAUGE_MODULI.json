@@ -1,0 +1,28 @@
+{
+  "pass": 4770,
+  "base": {"vertices": 45, "edges": 270, "cycle_rank": 226, "triangles": 270},
+  "sign_constraint": {
+    "rank": 162,
+    "affine_dimension": 64,
+    "number_of_sign_solutions": 18446744073709551616,
+    "selected_sign_weight_in_spanning_tree_gauge": 162,
+    "statement": "S3 triangle holonomy is a transposition exactly when its sign around that triangle is odd"
+  },
+  "tree_gauge_moduli": {
+    "cotree_edges": 226,
+    "raw_assignments_per_sign_solution": "3^226",
+    "disconnected_C2_assignments_per_sign_solution": 3,
+    "connected_vertex_gauge_classes_per_sign_solution": "(3^225-1)/2",
+    "connected_vertex_gauge_classes_per_sign_solution_exact": "112525853641624202021632199459978446954265333660156200574003740207440302794263728193626266765193829380550721",
+    "connected_vertex_gauge_classes_total_exact": "2075735623802739616029092330583470811145800980126423034784045719481135677525643208525857476697928433305137648272824676055515136",
+    "radius1_same_sign_deformations": 452,
+    "radius1_connected_deformations": 452
+  },
+  "base_automorphism_quotient": {
+    "Aut_GQ_order": 51840,
+    "status": "not enumerated globally; reduced to the induced finite action on 2^64 sign classes and their twisted-F3 projective fibers"
+  },
+  "execution": "independent spanning-tree reconstruction of the Pass4716 S3 voltage connection; exact GF(2) rank of the 270 triangle-sign equations; exact Burnside count for residual global S3 conjugation; exhaustive radius-one same-sign deformation check",
+  "theorem": "The all-270-triangles-transposition rule leaves a 64-dimensional affine space of binary sign classes. For each sign class the residual A3 choices form connected vertex-gauge classes of cardinality (3^225-1)/2. Thus the triangle rule is extremely non-rigid: even before quotienting by the 51840 base automorphisms there are 2^64*(3^225-1)/2 connected gauge classes, and all 452 one-edge same-sign perturbations of the selected tree-gauge representative remain connected.",
+  "boundary": "Complete classification modulo vertex gauge; quotient by the full base automorphism group is a further finite orbit problem and is not claimed solved here."
+}
