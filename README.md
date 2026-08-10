@@ -74,7 +74,7 @@ held to, and it is the reason to trust the rest.
 
 | Result family | Best current result | Canonical owner |
 |---|---|---|
-| Geometry, topology, and code | The canonical `W(3,3)` model, `H₁ ≅ Z^81`, and the ternary `[[240,81,3]]₃` sector | [master paper](w33_paper.tex) · [Passes 373–374](PASS373_374_W33_BOUNDARY_MLUT_PHASE_SHEET_SYNTHESIS.md) |
+| Geometry, topology, and code | The canonical `W(3,3)` model, `H₁ ≅ Z^81`, and the ternary `[[240,81,3]]₃` sector | [master paper](w33_paper.pdf) · [Passes 373–374](PASS373_374_W33_BOUNDARY_MLUT_PHASE_SHEET_SYNTHESIS.md) |
 | Integral spectral arithmetic | Exact adjacency and signed-turn Smith forms, prime-by-prime gluing, ramified kernel growth, and the coalescence theorem | [integral frontier](#eigenlattices-gluing-and-the-e₈-boundary--the-2026-07-arc) |
 | Exceptional carrier bridge | `432 → 81 → 216`, one-colour Smith profile `1^15,2^6,4^8,8^29,40^23`, colour index `3^81` | [Pass 1147](PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md) |
 | Modular representation closure | The nonsplit `58\|23` frame extension, one-dimensional directed `Ext¹` spaces, exact `H₂₆` radicals, Cartan matrices, PIM dimensions, and lifts through `p^6` | [Pass 1335](PASS1335_BRAUER_TREE_HECKE_CORNER.md) · [Passes 1340–1344](PASS1340_1344_CARTAN_ATLAS_SELECTOR_PADIC_RELEASE.md) |
@@ -99,13 +99,13 @@ reader to guess which of several historical versions is strongest.
 
 | Reader | Start here | Then go deeper |
 |---|---|---|
-| General reader | [Live atlas](https://wilcompute.github.io/W33-Theory/) · [W33 for Everyone](W33_FOR_EVERYONE.tex) | [Practical implications](docs/pdf/holonet_practical_implications.pdf) |
+| General reader | [Live atlas](https://wilcompute.github.io/W33-Theory/) · [W33 for Everyone](W33_FOR_EVERYONE.pdf) | [Practical implications](docs/pdf/holonet_practical_implications.pdf) |
 | Mathematician / researcher | [Master paper](docs/pdf/w33_paper.pdf) · [source](w33_paper.tex) | [Result index](RESULTS_INDEX.md) · [canonical vocabulary](RESULTS_VOCABULARY.md) |
 | Reproducer / reviewer | [Reproduction commands](#reproduce-the-flagship-results) | [certificates](data/) · [tests](tests/) · [correction ledger](#things-we-got-wrong-on-purpose-and-in-public) |
 | Lattice / deformation researcher | [Determinant-law paper](docs/pdf/heisenberg_weyl_determinant_law.pdf) | [eigenlattice table](#eigenlattices-gluing-and-the-e₈-boundary--the-2026-07-arc) |
 | Photonic / systems reader | [Photonic Holonet](docs/pdf/photonic_holonet.pdf) · [source](photonic_holonet.tex) | [`HOLONET.md`](HOLONET.md); treat implementation claims as conditional |
 | Runtime / distributed-systems builder | [HoloBox evidence card](docs/holobox-fractal-microvm.html) · [CLI](analysis/holobox.py) | [runtime guide](docs/W33_FRACTAL_MICROVM_RUNTIME.md) · [focused regression](tests/test_w33_fractal_microvm_runtime.py) |
-| Assessing whether to fund this | [Machine blueprint](holonet_machine_blueprint.tex), Part I | then **What is not built** and the **errata index**, both at the end of that document |
+| Assessing whether to fund this | [Machine blueprint](holonet_machine_blueprint.pdf), Part I | then **What is not built** and the **errata index**, both at the end of that document |
 
 The corpus is too large to navigate by filenames. Search the **result itself**
 in [`RESULTS_INDEX.md`](RESULTS_INDEX.md) before re-deriving it.
@@ -322,7 +322,7 @@ flowchart TD
 
 | Mathematical object | Strongest current result | Tier | Canonical entry |
 |---|---|---|---|
-| Symplectic quadrangle | `SRG(40,12,2,4)`, spectrum `12^1,2^24,(−4)^15`, `Aut ≅ W(E6)` | `PROVED` | [master paper](w33_paper.tex) |
+| Symplectic quadrangle | `SRG(40,12,2,4)`, spectrum `12^1,2^24,(−4)^15`, `Aut ≅ W(E6)` | `PROVED` | [master paper](w33_paper.pdf) |
 | Clique complex | `H₁ ≅ Z^81`; qutrit CSS sector `[[240,81,3]]₃` with `(d_X,d_Z)=(3,4)` | `CERTIFIED` | [Passes 373–374](PASS373_374_W33_BOUNDARY_MLUT_PHASE_SHEET_SYNTHESIS.md) |
 | Integral adjacency | `SNF(A)=diag(1^16,2^8,8^15,24)`; saturated gluing `(Z/2)^6⊕(Z/6)^9⊕Z/120` | `CERTIFIED` | [`pass827`](analysis/w33_pass827_adjacency_kbranch_meets_e8_boundary.py) |
 | Ramified gluing | Kernel growth `40,80,119,158,182` reconstructs `Z/8⊕(Z/2)^15` at `p=2` | `CERTIFIED` | [Pass 1002 release](analysis/BT999_1003_five_frontier_release.md) |

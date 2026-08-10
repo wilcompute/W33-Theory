@@ -1,0 +1,215 @@
+% This part is self-contained: the blueprint's preamble defines no box environment, so
+% `plainbox` is provided here if and only if it does not already exist. Defining it
+% unconditionally would collide with the shared reader boxes the other manuscripts load.
+\makeatletter
+\@ifundefined{plainbox}{%
+  \newenvironment{plainbox}%
+    {\par\medskip\noindent\begin{tabular}{@{}|p{0.96\linewidth}@{}}\hline\rule{0pt}{2.4ex}\itshape\small}%
+    {\\[2pt]\hline\end{tabular}\par\medskip}%
+}{}
+\makeatother
+
+\part{The Layer Map}
+\label{part:layer-map}
+
+\begin{plainbox}
+Read this part first and the rest of the document becomes navigable. It answers one
+question: \emph{what exactly is this machine, and at which level does each claim live?}
+Everything after it is detail attached to one of seven layers, and every layer states what
+is fixed by mathematics, what is a free engineering choice, and which certificate settles
+it. If you only want the hardware, read L3 and L4. If you only want to run it today, read
+L6.
+\end{plainbox}
+
+\section{Why a layer map, and why this one}
+
+A machine specified as a single artefact cannot be ported, audited, or argued with. The
+usual remedy is a layer stack: each layer names an interface, and a claim about one layer
+is silent about the others. That discipline is what lets a program outlive a processor.
+
+This machine needs the discipline more than most, because its layers are unusually
+\emph{different in kind}. The bottom is a finite geometry with no free parameters at all.
+The middle is a netlist with several defensible variants. The top is a program that runs on
+a laptop. Confusing those has already produced errors in this project's own record, and
+several of the corrections in Part~\ref{part:evidence} are exactly that confusion caught
+late.
+
+The stack below is therefore not decoration. It is the object that makes the phrase
+\emph{universal machine blueprint} mean something specific:
+
+\begin{quote}
+\textbf{Universality claim.} Layers L0--L2 are fixed by the geometry and admit no
+implementation freedom. Layers L3--L4 are where a builder chooses. Any two realizations
+that conform at L2 compute the same function, whether one is silicon, one is photonic, and
+one is a Python process on a commodity CPU.
+\end{quote}
+
+\section{The seven layers}
+
+\begin{center}
+\small
+\begin{tabular}{@{}c l l l@{}}
+\toprule
+\textbf{L} & \textbf{Layer} & \textbf{Object} & \textbf{Fixed by} \\
+\midrule
+L0 & Geometry   & $W(3,3)$: 40 points, 40 lines & mathematics; no freedom \\
+L1 & State      & 81 frames $\times$ carrier point & mathematics; no freedom \\
+L2 & ISA        & 8 public opcodes, 3 bits & mathematics; no freedom \\
+\midrule
+L3 & Datapath   & $\mathrm{GF}(3)$ registers and gates & \textbf{engineering choice} \\
+L4 & Physical   & CMOS, photonics, anything & \textbf{engineering choice} \\
+\midrule
+L5 & Kernel     & routing, faults, relocation & policy \\
+L6 & Virtual machine & points as memory, lines as routes & host software \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent The horizontal rules are the two interfaces that matter. Above the first, nothing
+may be chosen. Between the rules, everything may. Below the second, the machine is being
+\emph{used} rather than built.
+
+\subsection{L0 --- Geometry}
+
+The symplectic polar space $W(3,3)$: forty points, forty lines, every point on four lines
+and every line through four points. Its automorphism group is $\mathrm{Sp}(4,3)$ of order
+$51{,}840$, a number this project's certificates record independently in more than a dozen
+places.
+
+There is nothing to choose here. The object is determined up to isomorphism by its
+parameters, and every quantity above it inherits that rigidity. When a later chapter says a
+count is forced, this is what it is forced by.
+
+\subsection{L1 --- State}
+
+A machine state is a \emph{frame} together with a \emph{carrier point}. The frames number
+$81 = 3^4$, and the affine group acting on state has order
+$4{,}199{,}040 = 51{,}840 \times 81$.
+
+The split of the four coordinates into two registers --- written $p$ and $f$ throughout ---
+is the only structural decision at this layer, and it is not free either: a non-degenerate
+symplectic $4$-space decomposes into two hyperbolic planes, and that is what the two
+registers are.
+
+\subsection{L2 --- Instruction set}
+
+Eight public opcodes in three bits. Internally the machine needs only four:
+\[
+  F_p, \qquad \mathrm{CX}_{p\to f}, \qquad \mathrm{CX}_{f\to p}, \qquad Z_p .
+\]
+Three of these are linear and generate $\mathrm{Sp}(4,3)$; the fourth is a translation and
+supplies the load port. Together they generate the full affine group, so the instruction set
+is \emph{complete} in the only sense that matters: every symmetry of the geometry is a
+program.
+
+\begin{plainbox}
+This is the interface. Two machines agree if and only if they agree here. A photonic
+device, a silicon chip and an interpreter are the same machine when they implement these
+eight opcodes on those 81 frames --- and everything below this line in the stack is a
+matter of how, not what.
+\end{plainbox}
+
+\subsection{L3 --- Datapath}
+
+The first layer with genuine freedom, and the design space is small enough to enumerate.
+Two independent binary choices --- whether the two registers are treated symmetrically, and
+whether every opcode is individually invertible --- give four machines, synthesised to a
+technology-independent gate library:
+
+\begin{center}
+\small
+\begin{tabular}{@{}l c c r@{}}
+\toprule
+\textbf{Design} & \textbf{Registers} & \textbf{Reversible} & \textbf{Cells} \\
+\midrule
+A & biased     & no  & 103 \\
+B & symmetric  & no  & 132 \\
+C & biased     & yes & 206 \\
+D & symmetric  & yes & 240 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent Design~A is the one carried through this document. The arithmetic is over
+$\mathrm{GF}(3)$; moving to $\mathrm{GF}(9)$ multiplies the transvection datapath by
+$4.05$, of which a factor $1.93$ is pure width and the remainder is the field's own
+multiplication.
+
+\subsection{L4 --- Physical realization}
+
+Where the machine meets a substrate, and where this blueprint deliberately says least. A
+conforming realization must implement L2 and may do so in any medium. The constraints that
+survive at this layer are thermodynamic rather than technological: erasure costs
+$kT\ln 2 = 2.871\times10^{-21}$\,J at 300\,K, and that bound is indifferent to whether the
+carrier is charge, light, or something not yet built.
+
+\subsection{L5 --- Kernel}
+
+Routing, fault escalation and relocation. Policy, not physics: a different kernel over the
+same L2 is still the same machine, running differently.
+
+\subsection{L6 --- Virtual machine}
+
+\begin{plainbox}
+The layer that makes the blueprint testable today. The virtual machine runs the same
+instruction set as the hardware, on an ordinary computer, and produces identical results ---
+so the design can be exercised long before anything is fabricated.
+\end{plainbox}
+
+The virtual machine does \emph{not} emulate the datapath. It binds to the stack at two
+points and ignores everything between them:
+
+\begin{itemize}
+  \item \textbf{Semantics from L2.} It executes the same eight opcodes, so its results are
+        the hardware's results by construction rather than by testing.
+  \item \textbf{Addressing from L0.} Registers occupy points $0$--$15$ and memory occupies
+        points $16$--$24$; a data movement becomes a \emph{route}, one hop when the two
+        points are collinear and two through a relay when they are not, with each hop a
+        transaction on the unique line joining its endpoints.
+\end{itemize}
+
+This is the precise sense in which the virtual machine is mapped onto a level of the
+hardware: \textbf{it conforms at L2 and borrows its memory model from L0, skipping L3 and
+L4 entirely}. That is also why it is portable to any host --- nothing it needs is below the
+first interface.
+
+\section{What each layer may and may not claim}
+
+\begin{center}
+\small
+\begin{tabular}{@{}c l l@{}}
+\toprule
+\textbf{L} & \textbf{May claim} & \textbf{May \emph{not} claim} \\
+\midrule
+L0--L2 & necessity, exact counts & anything about speed, area or power \\
+L3     & gate counts, relative cost & that the count is unique or minimal \\
+L4     & energy floors, timing & that a floor has been achieved \\
+L5--L6 & behaviour, equivalence & anything about the physics \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent Most of the withdrawn claims recorded in Part~\ref{part:evidence} were violations
+of this table --- a measurement made at one layer and reported as though it constrained
+another. A wattage quoted from an assumed readout cadence is an L4 claim resting on an L5
+policy; a cell count compared against a differently-structured baseline is an L3 claim
+resting on an arithmetic error. Both are visible immediately once the layer is named, and
+neither was visible without it.
+
+\section{How to read the rest of this document}
+
+\begin{center}
+\small
+\begin{tabular}{@{}l l@{}}
+\toprule
+\textbf{If you want} & \textbf{Read} \\
+\midrule
+the mathematics only            & Part~\ref{part:substrate} (L0--L1) \\
+the instruction set             & Part~\ref{part:machine} (L2) \\
+a hardware blueprint            & Part~\ref{part:machine}, L3--L4 sections \\
+to run it today                 & the virtual machine, L6 \\
+what was measured               & Part~\ref{part:measured} \\
+what was withdrawn              & Part~\ref{part:evidence} \\
+\bottomrule
+\end{tabular}
+\end{center}

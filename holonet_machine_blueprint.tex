@@ -1,3 +1,11 @@
+% Pass 4571: inserts from the other track use \PSp and \Sp; the blueprint preamble
+% never defined them, giving 3 'Undefined control sequence' errors on every build.
+% Provided defensively so a later preamble change cannot collide.
+\providecommand{\PSp}{\mathrm{PSp}}
+\providecommand{\Sp}{\mathrm{Sp}}
+\providecommand{\PGU}{\mathrm{PGU}}
+\providecommand{\PSU}{\mathrm{PSU}}
+
 % Lightweight wrapper preserving the complete blueprint body byte-for-byte while
 % integrating the exact chromatic-defect and finite-port theorems after the contents.
 \AtBeginDocument{%
