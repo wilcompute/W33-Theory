@@ -1,0 +1,32 @@
+{
+  "pass": 4655,
+  "inputs": {
+    "selected_geometry": "135_6-270_3",
+    "binary_relation_code": "[135,16,30]_2",
+    "minimum_words": 36,
+    "degree27_maximal_generator_orbit": 27
+  },
+  "internal_intersection_rule": {
+    "generator_nonzero_points": 15,
+    "minimum_word_support": 30,
+    "intersection_census": {"0":432,"6":540},
+    "incidence": "intersection size 0"
+  },
+  "reconstructed_matrix": {
+    "shape": [27,36],
+    "row_sum": 16,
+    "column_sum": 12,
+    "rank_Q": 21,
+    "RRt": "10 I27 + 2 A27 + 6 J27",
+    "RtR": "6 I36 - 2 A36 + 6 J36",
+    "intertwiner": "3 A27 R + R A36 = 20 J27x36"
+  },
+  "reconstructed_graphs": {
+    "A27": "SRG(27,10,1,5) meeting graph",
+    "A36": "SRG(36,15,6,6) double-six graph",
+    "A36_offdiag_RtR_census": {"4":270,"6":360}
+  },
+  "action_level_chain": "Pass4640 identifies the 27 orbit with cubic lines; Pass4651 identifies the 36 minimum words with W33 spreads; Pass4643/4646 identify each spread sheet with the double-six carrier. The zero-intersection rule now reconstructs the same 27x36 incidence directly inside the selected geometry.",
+  "theorem": "The selected 135_6-270_3 geometry internally reconstructs the full Schlaefli-line/double-six 27x36 incidence: zero intersection between a degree-27 maximal singular generator and a minimum [135,16,30] codeword is exactly the Schlaefli incidence relation.",
+  "boundary": "Finite internal reconstruction theorem; no cubic-surface physics is inferred."
+}
