@@ -1,0 +1,7 @@
+{
+  "boundary": "Exact finite symplectic/quadratic geometry. The 28/36 refinement counts are not identified with an external sporadic or algebraic-geometric carrier without a separate intertwiner.",
+  "pass": 4605,
+  "quadratic_coloring": {"anisotropic":36,"color_preserving_group":"O^-(6,2)=PGSp(4,3)","equitable_quotient":[[16,16],[12,20]],"index_in_Sp6":28,"minus_nonzero_singular":27,"order":51840},
+  "quadratic_refinements": {"formula":"q_v(x)=q(x)+B(v,x)","minus_type":28,"plus_type":36,"relative_split":"base q plus 27 other minus refinements and 36 plus refinements","total":64},
+  "uncolored_graph": {"adjacency":"B(x,y)=1","name":"symplectic graph Sp(6,2)","natural_group_order":1451520,"srg":[63,32,16,16],"vertices":63}
+}
