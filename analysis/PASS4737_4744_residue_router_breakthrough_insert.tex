@@ -1,0 +1,175 @@
+\subsection*{The involution residues reconstruct the selected270 router, its optimal check schedule, and a finite parity Hamiltonian}
+\addcontentsline{toc}{subsection}{Passes 4737--4744: involution residues reconstruct selected270}
+
+\paragraph{Pass 4737: the $270$ residue action closes the selected270 router.}
+The four-line residues of Passes~4721--4726 form one transitive
+$\PSp(4,3)$-set with point stabilizer of order $96$ and permutation rank $12$.
+The stabilizer subdegrees are
+\[
+ 1,12,16,48,16,6,24,96,12,12,24,3.
+\]
+Its orbital centralizer algebra has dimension $12$ and center dimension $9$.
+The orbital joining two residues that share exactly two W33 lines is connected,
+$12$-regular, and has diameter $4$, with distance shell
+\[
+ 1,12,67,160,30.
+\]
+Its characteristic polynomial is
+\[
+ (x-12)(x-8)^{15}(x-2)^{84}(x+1)^{64}(x+4)^{60}(x+6)^6
+ (x^2-2x-12)^{20}.
+\]
+A second orbital has degree $3$ and decomposes into $27$ Petersen graphs of
+$10$ vertices.  Each Petersen fiber consists of ten pairwise-disjoint residue
+supports and partitions all forty W33 line coordinates.
+
+This is exactly the independently constructed selected270 router of
+Pass~4716.  The identification is not inferred from the common order or
+spectrum: an order-$96$ selected270 point stabilizer fixes a unique involution
+residue, yielding a well-defined $\PSp(4,3)$-equivariant bijection.  Under it,
+the $1620$ share-two-lines edges are exactly the selected270 \emph{cold} edges
+and the $405$ degree-three edges are exactly its $27$ Petersen \emph{hot}
+fibers.  The quotient of the cold graph by the Petersen fibers is
+$\operatorname{SRG}(27,10,1,5)$; across each quotient edge the twelve cold
+edges split as three disjoint $K_{2,2}$ blocks, recovering the Pass~4716
+finite-connection law from involution residues alone.
+
+\paragraph{Pass 4738: the square-root extension mismatch is the normalizer $C_2$.}
+For a four-fixing outer square root $h$, put
+\[
+ K=C_{\PSp(4,3)}(h),\qquad |K|=48.
+\]
+Exact enumeration gives
+\[
+ N_{\PSp(4,3)}(K)=H,\qquad |H|=96,
+\]
+where $H$ is the residue stabilizer.  Therefore $H/K\cong C_2$ is the intrinsic
+sheet character.  The full $\PGSp(4,3)$ support-triangle stabilizer and root
+centralizer are distinct order-$96$ extensions whose intersection is $K$.
+Representatives may be chosen with
+\[
+ t^2=n^2=1,\qquad n\in H\setminus K,\qquad h=tn,\qquad nt=h^{-1},
+\]
+so $nhn^{-1}=h^{-1}$.  Thus the outer mismatch is the unique nontrivial
+normalizer-quotient twist.  No stronger group-cohomology class is inferred.
+
+\paragraph{Pass 4739: the $q=3$ minimum-shell theorem is exceptional as stated.}
+Direct prime-field tests at $q=2,3,5,7$ give binary line-intersection adjacency
+ranks
+\[
+ 14,\quad 10,\quad 26,\quad 50,
+\]
+respectively; the tested odd values equal $q^2+1$.  At $q=3$ the canonical
+elliptic projective involution fixes the established four-line minimum word.
+At $q=5$, however, an exact MILP proves that the adjacency-kernel minimum is
+\[
+ \boxed{d=6},
+\]
+while the canonical elliptic involution fixes eight lines.  Hence the statement
+``the involution fixed sets are the complete minimum shell'' does not extend
+verbatim to all odd $q$.  At $q=7$ the corresponding involution supplies an
+$8$-line kernel word and hence only the certified upper bound $d\leq8$ here;
+no exact $q=7$ minimum is claimed.
+
+\paragraph{Pass 4740: the standard Golay-coordinate route is blocked.}
+A faithful coordinate-permutation action would embed $\PSp(4,3)$ into the
+extended binary Golay coordinate automorphism group $M_{24}$, but
+\[
+ |\PSp(4,3)|=2^6 3^4 5
+ \quad\hbox{does not divide}\quad
+ |M_{24}|=2^{10}3^3 5\,7\,11\,23.
+\]
+The new involution geometry also supplies a canonical $24$-coordinate minor:
+delete the sixteen W33 lines fixed by a $45$-class involution.  Puncturing
+$H_{10}$ gives
+\[
+ \boxed{[24,10,6]},
+\]
+with enumerator
+\[
+ 1+16z^6+87z^8+240z^{10}+336z^{12}+240z^{14}
+ +87z^{16}+16z^{18}+z^{24}.
+\]
+Its weight-$6$ words preclude it from being a subcode of the extended binary
+Golay $[24,12,8]$ code.  Shortening gives $[24,2,16]$, while puncturing
+$H_{10}^{\perp}$ gives $[24,22,2]$.  This is a coordinate-code no-go only; a
+non-coordinate Conway/Leech representation remains open.
+
+\paragraph{Pass 4741: the Petersen fibers are an optimal $27$-round check schedule.}
+The $27$ Petersen fibers partition all $270$ residue checks.  Each fiber contains
+ten pairwise-disjoint weight-$4$ checks and covers all forty line coordinates
+once.  Since every W33 line participates in exactly $27$ residue checks, any
+single-use-per-coordinate schedule requires at least $27$ layers, and the
+Petersen resolution attains that lower bound.  It is therefore an exact optimal
+$\PSp(4,3)$-equivariant schedule.
+
+The $270$ checks have binary rank $30$.  The $[40,10,12]$ protected code has
+unique syndromes through weight five.  At weight six the only collisions are
+the complementary $6+6$ halves of the forty weight-$12$ codewords: exactly
+$18{,}480$ syndrome classes are doubletons and there are no triple collisions.
+The distinct leader count at weight six is $3{,}819{,}900$.
+
+\paragraph{Pass 4742: the redundant checks carry a $[270,240,3]$ circuit code.}
+The dependency code of the $270$ residue masks is
+\[
+ \boxed{[270,240,3]}.
+\]
+Its complete minimum shell consists of exactly $540$ weight-three dependencies.
+Every such triple has pairwise two-line intersections and six-line union, and
+the $540$ circuit triangles partition all $1620$ cold edges exactly once.  A
+second tempting $540=540$ identification is false: the circuit-triangle
+stabilizer and the Pass~4723 support/root-triangle stabilizer both have order
+$48$, but their element-order censuses are respectively
+\[
+ 1^1 2^{19}3^8 4^{12}6^8
+ \quad\hbox{and}\quad
+ 1^1 2^7 3^8 4^{24}6^8,
+\]
+so the two subgroups are not conjugate and the two $540$-sets are not the same
+$\PSp(4,3)$-set.
+
+\paragraph{Pass 4743: a finite commuting four-body parity model.}
+For each residue $R$ define
+\[
+ S_R=\prod_{i\in R}Z_i,
+ \qquad
+ \mathcal H_R=-\sum_R S_R.
+\]
+The $270$ commuting checks have rank $30$, so the common $+1$ ground space has
+computational-basis degeneracy $2^{40-30}=2^{10}=1024$ and is exactly
+$H_{10}$.  The syndrome code is
+\[
+ \boxed{[270,30,27]}.
+\]
+An exact MILP proves the minimum $27$, and a second exclusion MILP proves that
+the complete weight-$27$ shell is the forty single-line syndrome rows.  Hence
+this finite model has ground energy $-270$, gap $54$, and first-excited
+degeneracy $40\cdot2^{10}=40{,}960$.  One line violates $27$ terms; two skew
+lines violate $48$, while two meeting lines violate $54$.  Thus the two-defect
+spectrum resolves W33 line incidence.  The $540$ Pass~4742 circuits become
+operator identities $S_aS_bS_c=I$, and Pass~4741 gives the optimal $27$-layer
+measurement schedule.  No microscopic or thermodynamic-limit interpretation is
+claimed.
+
+\paragraph{Pass 4744: the second canonical $24$-coordinate family also misses Golay.}
+Deleting the support of any of the $135$ weight-$16$ words of $H_{10}$ gives the
+same puncture/shorten signatures
+\[
+ \boxed{[24,9,4]},\qquad \boxed{[24,1,24]}.
+\]
+Thus both intrinsic $24$-coordinate families tested here contain words below
+Golay distance $8$.  The old W33/Golay parameter equalities remain arithmetic
+observations, but these two canonical coordinate intertwiners are now
+structurally excluded.
+
+\begin{quote}\small
+\textbf{Evidence boundary.}
+Passes~4737--4744 are finite group, graph, binary-code, optimization, and
+commuting-check statements.  The selected270 identification is certified by an
+explicit equivariant bijection through equal point stabilizers, not by matching
+counts.  The $q$-family computation deliberately records the $q=5$ counterexample.
+The Golay obstruction applies only to the standard $24$ coordinate action and
+canonical punctures; it does not rule out a non-coordinate Leech-lattice
+representation.  The parity Hamiltonian is a finite algebraic model and is not
+presented as a microscopic theory of nature.
+\end{quote}
