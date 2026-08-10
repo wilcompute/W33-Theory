@@ -1,0 +1,37 @@
+{
+  "pass": 4772,
+  "logical_geometry": {
+    "local_code": "[15,3,7]_2",
+    "cells": 135,
+    "logical_coordinates": 405,
+    "logical_index": "(selected135/cube cell, one of the three quotient GQ lines through its packet)",
+    "quotient_line_groups": 27,
+    "coordinates_per_group": 15,
+    "local_weight_law": {"1_active": 7, "2_active": 8, "3_active": 15}
+  },
+  "even_line_coupling": {
+    "parameters": "[2025,378,14]_2",
+    "dimension": 378,
+    "distance": 14,
+    "parity_checks": 27,
+    "explicit_weight14_witness": true,
+    "K_times_d": 5292
+  },
+  "repetition_line_coupling": {
+    "parameters": "[2025,27,105]_2",
+    "dimension": 27,
+    "distance": 105,
+    "K_times_d": 2835
+  },
+  "comparisons": {
+    "Pass4748_direct_sum": "[2025,405,7]_2",
+    "Pass4748_K_times_d": 2835,
+    "Pass4748_uncoupled_baseline": "[2025,567,4]_2",
+    "baseline_K_times_d": 2268
+  },
+  "symmetry": "The 405 local logical coordinates split canonically into 27 disjoint groups of 15 indexed by the GQ lines. PSp and the PGSp outer automorphism permute those groups, so the even-line and repetition-line couplings are PGSp-invariant.",
+  "distance_proof": "For the even-line code total logical weight is even. Logical weight two must be two distinct cells in one quotient-line group and therefore has disjoint physical supports of weight 7+7=14. Logical weight at least four has physical weight at least 4W >= 16 because the local weights for h=1,2,3 active logical bits are 7,8,15. For the repetition code, selecting one quotient line activates one logical coordinate in each of 15 cells, giving weight 105; the local weight function 0,7,8,15 is strictly increasing, so adding quotient lines cannot reduce weight.",
+  "execution": "independent reconstruction of the cube/cell K6 partition, all 405 weight-7 logical generators and their GF(2) rank 405, the 27x15 logical grouping, explicit weight-14 witness, and rank-27 repetition rows",
+  "theorem": "Canonical GQ-line coupling of the 135 local [15,3,7]_2 cells yields an exact PGSp-invariant [2025,378,14]_2 code: only 27 dimensions are sacrificed from Pass4748's [2025,405,7]_2 direct sum while the distance doubles from 7 to 14 and K*d rises from 2835 to 5292. The extreme repetition coupling gives [2025,27,105]_2.",
+  "boundary": "Exact binary-code construction and distance proof. No universal coding optimum or physical fault-tolerance threshold is claimed."
+}
