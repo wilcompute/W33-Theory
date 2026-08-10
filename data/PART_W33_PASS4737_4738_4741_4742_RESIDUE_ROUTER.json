@@ -1,0 +1,50 @@
+{
+  "4737_orbital_router": {
+    "action_rank": 12,
+    "subdegrees": [1, 12, 16, 48, 16, 6, 24, 96, 12, 12, 24, 3],
+    "orbital_algebra_center_dimension": 9,
+    "noncommuting_unordered_orbital_pairs": 39,
+    "cold_graph": {"degree": 12, "edges": 1620, "diameter": 4, "distance_shell": [1, 12, 67, 160, 30], "spectrum": {"12": 1, "8": 15, "2": 84, "-1": 64, "-4": 60, "-6": 6, "1+sqrt(13)": 20, "1-sqrt(13)": 20}},
+    "hot_graph": {"degree": 3, "edges": 405, "components": 27, "component": "Petersen", "vertices_per_component": 10},
+    "selected270_identification": {"PSp_equivariant": true, "cold_edges_match_exactly": true, "hot_edges_match_exactly": true, "stabilizers_equal": true}
+  },
+  "4738_normalizer_twist": {
+    "K_order": 48,
+    "H_order": 96,
+    "normalizer_equals_residue_stabilizer": true,
+    "quotient": "N_PSp(K)/K = C2",
+    "triangle_extension_order": 96,
+    "root_extension_order": 96,
+    "intersection_order": 48,
+    "explicit_relations": ["t^2=1", "n^2=1", "h=t n", "n t=h^{-1}"],
+    "interpretation": "The PGSp extension mismatch is the unique nontrivial normalizer-quotient twist, not an asserted H^2 class."
+  },
+  "4741_decoder": {
+    "independent_check_rank": 30,
+    "redundant_checks": 270,
+    "strict_PSp_check_orbit": 270,
+    "optimal_rounds": 27,
+    "checks_per_round": 10,
+    "round_support_lines": 40,
+    "lower_bound_rounds": 27,
+    "PSp_equivariant_round_system": true,
+    "H10": "[40,10,12]",
+    "leader_census_through_6": {"0": 1, "1": 40, "2": 780, "3": 9880, "4": 91390, "5": 658008, "6": 3819900},
+    "weight6_doubleton_syndromes": 18480,
+    "weight6_triple_collisions": 0
+  },
+  "4742_dependency_topology": {
+    "dependency_code": "[270,240,3]",
+    "minimum_words": 540,
+    "circuit_size": 3,
+    "circuits_through_each_check": 6,
+    "cold_edges_partitioned_once": 1620,
+    "circuit_triangle_stabilizer_order": 48,
+    "root_triangle_stabilizer_order": 48,
+    "circuit_stabilizer_order_census": {"1": 1, "2": 19, "3": 8, "4": 12, "6": 8},
+    "root_stabilizer_order_census": {"1": 1, "2": 7, "3": 8, "4": 24, "6": 8},
+    "same_540_G_set": false
+  },
+  "boundary": "Exact finite/group/code statements; the selected270 bridge is an explicit PSp-equivariant bijection, not a spectral/count inference.",
+  "passes": [4737, 4738, 4741, 4742]
+}
