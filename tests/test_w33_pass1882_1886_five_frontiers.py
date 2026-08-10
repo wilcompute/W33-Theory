@@ -13,7 +13,7 @@ def test_frozen_aggregate_verifier():
 
 def test_exact_frontier_values_and_boundaries():
  d={p:json.loads((ROOT/f'data/w33_pass{p}_'+{
- 1882:'decoder_chart_to_global_obstruction',1883:'full_primal_weight_enumerator',1884:'two_adic_maximal_order',1885:'exceptional_s6_carrier_intertwiners',1886:'geometric_c4_clock_model'}[p]+'.json').read_text()) for p in range(1882,1887)}
+ 1882:'decoder_chart_to_global_obstruction',1883:'full_primal_weight_enumerator',1884:'two_adic_maximal_order',1885:'exceptional_s6_carrier_intertwiners',1886:'geometric_c4_clock_model'}[p]+'.json').read_text(encoding="utf-8")) for p in range(1882,1887)}
  assert d[1882]['weight5']['corrected_status']=='upper_bound_only'
  assert d[1882]['weight6']['unique_minimum_coefficient_status']=='OPEN'
  assert [d[1883]['primal_weight_enumerator'][str(w)] for w in (12,14,16)]==[891792940,54326090880,3770230198995]

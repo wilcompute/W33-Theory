@@ -265,7 +265,7 @@ def test_B30_edges_plus_g_equals_27_lines():
 # ═══════════════════════════════════════════════════════════════════
 
 def _load(fname):
-    return json.loads((BUNDLE / fname).read_text())["orbits"]
+    return json.loads((BUNDLE / fname).read_text(encoding="utf-8"))["orbits"]
 
 
 def test_edge_orbits_count_and_size():
@@ -321,7 +321,7 @@ def test_bridge_json_exists_and_verified():
     """PART_CCLXVI_tomotope_results.json must exist and be fully verified."""
     out = Path(__file__).resolve().parent.parent / "PART_CCLXVI_tomotope_results.json"
     assert out.exists(), "Run the bridge script first to generate the JSON"
-    data = json.loads(out.read_text())
+    data = json.loads(out.read_text(encoding="utf-8"))
     assert data["verified"] is True
     assert data["checks_passed"] == data["checks_total"]
 
@@ -329,6 +329,6 @@ def test_bridge_json_exists_and_verified():
 def test_bridge_json_checks_all_pass():
     """Every individual named check in the JSON must be True."""
     out = Path(__file__).resolve().parent.parent / "PART_CCLXVI_tomotope_results.json"
-    data = json.loads(out.read_text())
+    data = json.loads(out.read_text(encoding="utf-8"))
     failed = [k for k, v in data["checks"].items() if not v]
     assert failed == [], f"Failed checks: {failed}"

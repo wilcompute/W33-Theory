@@ -237,7 +237,7 @@ class TestOutputFile:
 
     def test_json_output_valid(self):
         """JSON output contains all expected keys."""
-        data = json.loads((ROOT / "data" / "w33_s3_sheet_transport.json").read_text())
+        data = json.loads((ROOT / "data" / "w33_s3_sheet_transport.json").read_text(encoding="utf-8"))
         required_keys = [
             "T1_L_distribution", "T1_num_pockets",
             "T2_edge_check_ok", "T2_edge_check_fail", "T2_transport_law_exact",

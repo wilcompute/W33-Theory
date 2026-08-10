@@ -2,7 +2,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-def load(n): return json.loads((ROOT/'data'/n).read_text())
+def load(n): return json.loads((ROOT/'data'/n).read_text(encoding="utf-8"))
 def test_summary():
  d=load('PART_BT2967_BT2973_OPTIMAL_INFORMATION_SYSTEM_summary.json'); assert d['check_count']==7 and all(d['checks'].values())
 def test_calibration_identifiability():
@@ -20,4 +20,4 @@ def test_minimal_automaton():
 def test_curvature_clock():
  d=load('PART_BT2973_OPTIMAL_INFORMATION_SYSTEM_results.json'); assert d['clock_order']==12 and d['clock_cycle_count']==540 and d['generated_clock_group']=='D12 of order 24'
 def test_rtl_sources():
- for rel,needle in [('rtl/w33_pass2970_m36_relabel_microcode.sv','module w33_pass2970'),('rtl/w33_pass2973_curvature_clock.sv','module w33_pass2973')]: assert needle in (ROOT/rel).read_text()
+ for rel,needle in [('rtl/w33_pass2970_m36_relabel_microcode.sv','module w33_pass2970'),('rtl/w33_pass2973_curvature_clock.sv','module w33_pass2973')]: assert needle in (ROOT/rel).read_text(encoding="utf-8")

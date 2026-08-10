@@ -14,7 +14,7 @@ def _run_and_load(module_name: str, output_file: str) -> dict:
     import importlib
     mod = importlib.import_module(module_name)
     mod.main()
-    return json.loads(Path(output_file).read_text())
+    return json.loads(Path(output_file).read_text(encoding="utf-8"))
 
 
 def test_track_a_ramanujan() -> None:
@@ -41,6 +41,6 @@ def test_track_c_partition() -> None:
 
 
 def test_cross_track_lambda2_consistency() -> None:
-    dataA = json.loads(Path("w33_pass70_trackA_ramanujan.json").read_text())
-    dataC = json.loads(Path("w33_pass70_trackC_partition.json").read_text())
+    dataA = json.loads(Path("w33_pass70_trackA_ramanujan.json").read_text(encoding="utf-8"))
+    dataC = json.loads(Path("w33_pass70_trackC_partition.json").read_text(encoding="utf-8"))
     assert abs(dataA["lambda2"] - dataC["lambda2"]) < 1e-12

@@ -9,7 +9,7 @@ def load_json(bundle,name):
         with zipfile.ZipFile(bundle) as z:
             return json.loads(z.read(name))
     else:
-        return json.loads((bundle/name).read_text())
+        return json.loads((bundle/name).read_text(encoding="utf-8"))
 gens = load_json(bundle,'psp43_line_generators_6.json')['generators']
 print('number generators', len(gens))
 print('lengths', [len(g) for g in gens])

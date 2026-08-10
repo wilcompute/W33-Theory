@@ -9,7 +9,7 @@ from pathlib import Path
 if not back.exists():
     print("Backtrack file missing")
     raise SystemExit(1)
-nodes = json.loads(back.read_text())[0]["nodes"]
+nodes = json.loads(back.read_text(encoding="utf-8"))[0]["nodes"]
 
 # build E8 roots as rational vectors
 E8 = []

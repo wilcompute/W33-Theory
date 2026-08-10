@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-def load(n):return json.loads((ROOT/'data'/n).read_text())
+def load(n):return json.loads((ROOT/'data'/n).read_text(encoding="utf-8"))
 def test_release():
  p=load('w33_pass588_594_deep_symmetry_release.json');assert p['status']=='PASS' and p['owner_check_total']==86 and all(p['release_checks'].values())
 def test_degree_optimality():

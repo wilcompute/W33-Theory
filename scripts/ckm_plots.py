@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 
 
 def load_json(p: Path):
-    return json.loads(p.read_text()) if p.exists() else None
+    return json.loads(p.read_text(encoding="utf-8")) if p.exists() else None
 
 
 def ensure_reports_dir():

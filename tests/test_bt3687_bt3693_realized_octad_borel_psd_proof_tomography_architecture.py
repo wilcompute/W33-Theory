@@ -12,7 +12,7 @@ def load():
 def packet():return load().build_result()
 
 def test_frozen_semantic_certificate(packet):
- assert json.loads(json.dumps(packet))==json.loads(FROZEN.read_text())
+ assert json.loads(json.dumps(packet))==json.loads(FROZEN.read_text(encoding="utf-8"))
  assert packet['semantic_sha256']=='3ff49c19511ebcf3c9159c1d69f123ae66dd275498c94f501230710634982828'
 
 def test_realized_octad_deck(packet):

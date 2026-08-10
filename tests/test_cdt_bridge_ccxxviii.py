@@ -60,7 +60,7 @@ class TestBridgeMetadata:
         assert (ROOT / "PART_CCXXVIII_cdt_results.json").exists()
 
     def test_json_verified(self):
-        data = json.loads((ROOT / "PART_CCXXVIII_cdt_results.json").read_text())
+        data = json.loads((ROOT / "PART_CCXXVIII_cdt_results.json").read_text(encoding="utf-8"))
         assert data["Verified"] is True
 
 
@@ -266,7 +266,7 @@ class TestDeSitterEntropy:
 # ---------------------------------------------------------------------------
 class TestJSONExport:
     def _data(self):
-        return json.loads((ROOT / "PART_CCXXVIII_cdt_results.json").read_text())
+        return json.loads((ROOT / "PART_CCXXVIII_cdt_results.json").read_text(encoding="utf-8"))
 
     def test_json_part(self):
         assert self._data()["Part"] == "CCXXVIII"

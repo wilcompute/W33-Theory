@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 
 def load(name):
- p=json.loads((ROOT/'data'/name).read_text());assert p['status']=='PASS';assert all(p['checks'].values());return p
+ p=json.loads((ROOT/'data'/name).read_text(encoding="utf-8"));assert p['status']=='PASS';assert all(p['checks'].values());return p
 
 def test_pass682_correction():
  p=load('w33_pass682_flatblock_h1_branch_separation.json');c=p['flatblock_specialization']['pass808_saturated_cyclotomic_correction'];assert c['two_branch_gluing_invariant_factors']==[2,2];assert c['3_primary_rank']==0

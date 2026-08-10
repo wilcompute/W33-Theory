@@ -13,7 +13,7 @@ spec.loader.exec_module(m)
 
 @pytest.fixture(scope="session")
 def frozen():
-    return json.loads((ROOT/"data"/"PART_3965_3972_TOPOLOGY_CONTROL_CAUSAL_DENSITY_results.json").read_text())
+    return json.loads((ROOT/"data"/"PART_3965_3972_TOPOLOGY_CONTROL_CAUSAL_DENSITY_results.json").read_text(encoding="utf-8"))
 
 @pytest.fixture(scope="session")
 def quick(frozen):

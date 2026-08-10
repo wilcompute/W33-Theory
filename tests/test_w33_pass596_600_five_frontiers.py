@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-def load(n):return json.loads((ROOT/'data'/n).read_text())
+def load(n):return json.loads((ROOT/'data'/n).read_text(encoding="utf-8"))
 def test_pass596_connection_family():
  p=load('w33_pass596_connection_universality.json');assert p['status']=='PASS';assert p['wilson_values']==[-168,-84,56,112];assert all(r['holonomy_order']==120 for r in p['records'])
 def test_pass597_twisted_torsion():

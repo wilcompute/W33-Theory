@@ -38,7 +38,7 @@ def test_bt1295_all_faces_pass_with_repaired_formulas():
 
 def test_bt1295_script_regenerates_pass_json():
     subprocess.run([sys.executable, str(SCRIPT)], cwd=ROOT, check=True)
-    data = json.loads(RESULT.read_text())
+    data = json.loads(RESULT.read_text(encoding="utf-8"))
 
     assert data["status"] == "PASS"
     assert data["all_faces_pass"] is True
@@ -49,7 +49,7 @@ def test_bt1295_script_regenerates_pass_json():
 
 
 def test_breakthrough_report_records_bt1298_repair_boundary():
-    text = REPORT.read_text()
+    text = REPORT.read_text(encoding="utf-8")
     assert "(q+1)(q^2+1)" in text
     assert "4q+2" in text
     assert "BT1298 repaired the executable witness" in text

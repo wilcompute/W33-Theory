@@ -2,7 +2,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-def J(name):return json.loads((ROOT/'data'/name).read_text())
+def J(name):return json.loads((ROOT/'data'/name).read_text(encoding="utf-8"))
 
 def test_4616_explicit_45_intertwiner():
     d=J('PART_W33_PASS4616_EXPLICIT_45_E6_INTERTWINER.json')
@@ -64,7 +64,7 @@ def test_release_surfaces_and_namespace_hygiene():
     assert (ROOT/'analysis/PASS4616_4623_e6_sentinel_triality_rank_insert.tex').exists()
     assert (ROOT/'analysis/PASS4616_4623_e6_sentinel_triality_rank_index_insert.html').exists()
     assert (ROOT/'docs/protected-e6-sentinel-triality.html').exists()
-    note=(ROOT/'analysis/PASS4592_4599_NAMESPACE_COLLISION.md').read_text()
+    note=(ROOT/'analysis/PASS4592_4599_NAMESPACE_COLLISION.md').read_text(encoding="utf-8")
     assert 'paired-axis/Golay owns 4592--4615' in note
     assert 'protected E6/sentinel/triality continuation owns 4616--4623' in note
     assert not (ROOT/'analysis/PASS4607_4614_RESERVATION.md').exists()

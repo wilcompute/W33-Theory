@@ -231,31 +231,31 @@ def test_json_file_exists():
 
 
 def test_json_verified_true():
-    data = json.loads(JSON_PATH.read_text())
+    data = json.loads(JSON_PATH.read_text(encoding="utf-8"))
     assert data["verified"] is True
 
 
 def test_json_checks_passed_38():
-    data = json.loads(JSON_PATH.read_text())
+    data = json.loads(JSON_PATH.read_text(encoding="utf-8"))
     assert data["checks_passed"] == 38
     assert data["checks_total"] == 38
 
 
 def test_json_zeta_neg1_value():
-    data = json.loads(JSON_PATH.read_text())
+    data = json.loads(JSON_PATH.read_text(encoding="utf-8"))
     assert data["zeta_values"]["zeta(-1)"] == "-1/12"
 
 
 def test_json_bosonic_D_crit():
-    data = json.loads(JSON_PATH.read_text())
+    data = json.loads(JSON_PATH.read_text(encoding="utf-8"))
     assert data["bosonic_string"]["D_crit"] == 26
 
 
 def test_json_tomotope_chi_zero():
-    data = json.loads(JSON_PATH.read_text())
+    data = json.loads(JSON_PATH.read_text(encoding="utf-8"))
     assert data["tomotope"]["chi"] == 0
 
 
 def test_json_casimir_eq_neg_lam():
-    data = json.loads(JSON_PATH.read_text())
+    data = json.loads(JSON_PATH.read_text(encoding="utf-8"))
     assert data["bosonic_string"]["casimir_eq_neg_LAM"] is True

@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 
-def load(name):return json.loads((ROOT/'data'/name).read_text())
+def load(name):return json.loads((ROOT/'data'/name).read_text(encoding="utf-8"))
 
 def test_release_lock():
  p=load('w33_pass563_567_triality_quadratic_order_walsh_bayesian_release.json');assert p['status']=='PASS';assert p['owner_check_total']==53;assert all(p['release_checks'].values())

@@ -43,19 +43,19 @@ def test_scalar5_obstruction_allows_scalar1_fixed_rail():
 
 
 def test_full_incidence_functor():
-    out=json.loads((ROOT/'data/PART_2026_07_10_LEVI_NEXT5_V4_functor.json').read_text()); assert out['status']=='PASS'
+    out=json.loads((ROOT/'data/PART_2026_07_10_LEVI_NEXT5_V4_functor.json').read_text(encoding="utf-8")); assert out['status']=='PASS'
     assert out['E8_decomposition_under_W_E6']['orbit_sizes']==[1]*6+[27]*6+[72]
     assert out['objects']['middleware_fiber']==48
 
 
 def test_foundry_self_calibration():
-    out=json.loads((ROOT/'data/PART_2026_07_10_LEVI_NEXT5_V4_foundry.json').read_text()); assert out['status']=='PASS'
+    out=json.loads((ROOT/'data/PART_2026_07_10_LEVI_NEXT5_V4_foundry.json').read_text(encoding="utf-8")); assert out['status']=='PASS'
     assert out['foundry_corners']['p05']>0.995
     assert out['drift_tracking']['tracked_min']>0.995
 
 
 def test_hil_runtime_certificate():
-    out=json.loads((ROOT/'data/PART_2026_07_10_LEVI_NEXT5_V4_hil.json').read_text())
+    out=json.loads((ROOT/'data/PART_2026_07_10_LEVI_NEXT5_V4_hil.json').read_text(encoding="utf-8"))
     assert out['status']=='PASS'
     assert out['outcomes']=={'accepted':126,'retry':2}
     assert out['attacks']['sentinel']==224
@@ -76,7 +76,7 @@ def test_all_python_sources_compile():
 
 
 def test_v4_cli_routes_are_installed():
-    source=(ROOT/'holonet_cmd.py').read_text()
+    source=(ROOT/'holonet_cmd.py').read_text(encoding="utf-8")
     for command in ('formal-rank-v4','discriminant-cohomology-v4','e8-incidence-functor-v4','foundry-calibrate-v4','hil-runtime-v4','levi-next5-v4'):
         assert command in source
     proc=subprocess.run(

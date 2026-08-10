@@ -114,11 +114,11 @@ def test_negative_literal_detection_and_pruned_walk(tmp_path: Path) -> None:
     )
 
     (tmp_path / "analysis").mkdir()
-    (tmp_path / "analysis" / "visible.tex").write_text("visible")
+    (tmp_path / "analysis" / "visible.tex").write_text("visible", encoding="utf-8")
     (tmp_path / "formal" / ".lake").mkdir(parents=True)
-    (tmp_path / "formal" / ".lake" / "hidden.tex").write_text("hidden")
+    (tmp_path / "formal" / ".lake" / "hidden.tex").write_text("hidden", encoding="utf-8")
     (tmp_path / ".git").mkdir()
-    (tmp_path / ".git" / "object.txt").write_text("hidden")
+    (tmp_path / ".git" / "object.txt").write_text("hidden", encoding="utf-8")
     found = {
         path.relative_to(tmp_path).as_posix()
         for path in guard.iter_files(tmp_path)

@@ -5,7 +5,7 @@ ROOT=Path(__file__).resolve().parents[1]
 
 def load(n):
  p=next((ROOT/'data').glob(f'w33_pass{n}_*.json'))
- return json.loads(p.read_text())
+ return json.loads(p.read_text(encoding="utf-8"))
 
 def test_pass553_core_geometry():
  p=load(553); assert p['status']=='PASS'
@@ -33,7 +33,7 @@ def test_pass557_formal_support():
  assert p['formalized']['periods_first7']==[312,1560,1560,7800,7800,39000,39000]
 
 def test_combined_release():
- p=json.loads((ROOT/'data'/'w33_pass553_557_intrinsic_automaton_formal_control_release.json').read_text())
+ p=json.loads((ROOT/'data'/'w33_pass553_557_intrinsic_automaton_formal_control_release.json').read_text(encoding="utf-8"))
  assert p['status']=='PASS'
  assert p['owner_check_total']==56
  assert all(p['release_checks'].values())

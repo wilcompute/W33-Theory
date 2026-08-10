@@ -50,7 +50,7 @@ def main():
         print("ERROR: data/ckm_from_grams.json not found. Run scripts/ckm_from_grams.py first.")
         return 1
 
-    d = json.loads(p.read_text())
+    d = json.loads(p.read_text(encoding="utf-8"))
     M = np.array(d["overlap_matrix"], dtype=float)
     exp = np.array(d.get("experimental", []), dtype=float)
 

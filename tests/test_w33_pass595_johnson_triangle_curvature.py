@@ -5,7 +5,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def test_pass595_johnson_triangle_curvature():
-    payload = json.loads((ROOT / 'data' / 'w33_pass595_johnson_triangle_curvature.json').read_text())
+    payload = json.loads((ROOT / 'data' / 'w33_pass595_johnson_triangle_curvature.json').read_text(encoding="utf-8"))
     assert payload['status'] == 'PASS'
     assert payload['base']['triangles'] == 840
     assert payload['base']['triangle_types'] == {'top': 560, 'tetrahedral': 280}

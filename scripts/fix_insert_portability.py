@@ -84,7 +84,7 @@ def insert_block(p: Path) -> bool:
     while i < len(lines) and (lines[i].startswith("%") or not lines[i].strip()):
         i += 1
     lines.insert(i, BLOCK)
-    p.write_text("\n".join(lines), encoding="utf-8")
+    p.write_text("\n".join(lines, encoding="utf-8"), encoding="utf-8")
     return True
 
 

@@ -26,8 +26,7 @@ def builders():
 
     def build_census_bundle():
         rows, _ = build_census()
-        (ROOT / "data" / "w33_elliptic_frobenius_census_p10000.csv").write_text(
-            csv_text(rows), encoding="utf-8"
+        (ROOT / "data" / "w33_elliptic_frobenius_census_p10000.csv").write_text(csv_text(rows, encoding="utf-8"), encoding="utf-8"
         )
         return build_certificate()
 

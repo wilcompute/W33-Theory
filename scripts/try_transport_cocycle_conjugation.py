@@ -91,7 +91,7 @@ def main():
     out.parent.mkdir(parents=True, exist_ok=True)
     import json
 
-    out.write_text(json.dumps({"found": bool(results), "cases": results}, indent=2))
+    out.write_text(json.dumps({"found": bool(results, encoding="utf-8"), "cases": results}, indent=2))
     print(f"Wrote {out}; found={bool(results)}; cases={len(results)}")
 
 

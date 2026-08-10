@@ -3,7 +3,7 @@ import json
 ROOT=Path(__file__).resolve().parents[1]
 
 def load(name):
-    p=json.loads((ROOT/'data'/name).read_text())
+    p=json.loads((ROOT/'data'/name).read_text(encoding="utf-8"))
     assert p['status']=='PASS'
     assert all(p['checks'].values())
     return p

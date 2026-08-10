@@ -2,7 +2,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]; DATA=ROOT/'data'
-def read(name): return json.loads((DATA/name).read_text())
+def read(name): return json.loads((DATA/name).read_text(encoding="utf-8"))
 def summary(): return read('w33_pass1320_1324_transport_linking.json')
 def p1320(): return read('w33_pass1320_six_channel_diagonalization.json')['pass1320_six_channel_diagonalization']
 def p1322(): return read('w33_pass1322_species20_hashimoto_dynamics.json')['pass1322_species20_hashimoto_dynamics']
@@ -38,4 +38,4 @@ def test_linking_algebra_and_morita_context():
 def test_both_manuscript_ledgers_contain_theorem_proof_and_retractions():
  d=p1324()
  for key in ('shared_insert','w33_paper_ledger','photonic_holonet_ledger'):
-  text=(ROOT/d[key]).read_text(); assert 'Exact transport/linking theorem' in text; assert 'Exact computational proof' in text; assert 'Historical claim & Active status & Exact replacement' in text; assert 'Hashimoto does not choose a preferred species-$20$ copy' in text
+  text=(ROOT/d[key]).read_text(encoding="utf-8"); assert 'Exact transport/linking theorem' in text; assert 'Exact computational proof' in text; assert 'Historical claim & Active status & Exact replacement' in text; assert 'Hashimoto does not choose a preferred species-$20$ copy' in text

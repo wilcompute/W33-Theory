@@ -30,7 +30,7 @@ def main():
 
         # create a file and write
         f = repo / "foo.txt"
-        f.write_text("hello")
+        f.write_text("hello", encoding="utf-8")
 
         # call git_add_commit inside the repo
         cwd = os.getcwd()

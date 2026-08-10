@@ -6,7 +6,7 @@ def test_hammer_pocket_lift_results():
     bundle = repo / 'TOE_hammer_pocket_lift_g2_v01_20260227_bundle' / 'TOE_hammer_pocket_lift_g2_v01_20260227'
     results_file = bundle / 'RESULTS.json'
     assert results_file.exists(), "Hammer results missing"
-    res = json.loads(results_file.read_text())
+    res = json.loads(results_file.read_text(encoding="utf-8"))
     # basic counts
     assert res['g2_derivations_basis_14']
     assert len(res['g2_derivations_basis_14']) == 14

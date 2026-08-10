@@ -2,7 +2,7 @@ from __future__ import annotations
 import hashlib,json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-def load(n):return json.loads((ROOT/'data'/n).read_text())
+def load(n):return json.loads((ROOT/'data'/n).read_text(encoding="utf-8"))
 def digest(d):
  x=dict(d);x.pop('sha256_without_hash_field',None);return hashlib.sha256(json.dumps(x,sort_keys=True,separators=(',',':')).encode()).hexdigest()
 def test_frozen_certificates():

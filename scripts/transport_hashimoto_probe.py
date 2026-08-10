@@ -95,7 +95,7 @@ def main():
         print(json.dumps({"status": "missing_assignment", "path": str(path)}))
         return
 
-    data = json.loads(path.read_text())
+    data = json.loads(path.read_text(encoding="utf-8"))
     assignment = data.get("assignment") or data.get("assignments") or {}
 
     cycles, directed = build_directed_edge_list()

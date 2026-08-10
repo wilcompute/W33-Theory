@@ -89,7 +89,7 @@ def test_block_guess_actual(load_all):
 
 def test_guess_to_flag_mapping(load_all):
     # ensure the summary file reports guess counts
-    summary = json.loads((repo / "SUMMARY_54sheet.json").read_text())
+    summary = json.loads((repo / "SUMMARY_54sheet.json").read_text(encoding="utf-8"))
     gmap = summary.get("guess_to_actual_flag_counts", {})
     # every entry should have a nonzero count and at least one flag
     for k,v in gmap.items():
@@ -98,7 +98,7 @@ def test_guess_to_flag_mapping(load_all):
 
 
 def test_t4_cycle_statistics():
-    summary = json.loads((repo / "SUMMARY_54sheet.json").read_text())
+    summary = json.loads((repo / "SUMMARY_54sheet.json").read_text(encoding="utf-8"))
     cycles = summary.get("canonical_flag_t4_cycle_vs_L", {})
     # there should be both 1-cycle and 3-cycle entries
     assert any(k.startswith("(1,") for k in cycles)

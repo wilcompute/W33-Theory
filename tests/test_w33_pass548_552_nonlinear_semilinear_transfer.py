@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
-DATA=json.loads((ROOT/'data'/'w33_pass548_552_nonlinear_semilinear_transfer.json').read_text())
+DATA=json.loads((ROOT/'data'/'w33_pass548_552_nonlinear_semilinear_transfer.json').read_text(encoding="utf-8"))
 
 def test_release_green():
     assert DATA['status']=='PASS'

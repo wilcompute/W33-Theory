@@ -9,7 +9,7 @@ def test_golay_clifford_mapping(tmp_path):
     jsonf = repo / "artifacts" / "golay_clifford_mapping.json"
     csvf = repo / "artifacts" / "golay_clifford_mapping.csv"
     assert jsonf.exists() and csvf.exists()
-    mapping = json.loads(jsonf.read_text())
+    mapping = json.loads(jsonf.read_text(encoding="utf-8"))
     assert len(mapping) == 1 << 12
     # keys should be stringified integers, values tuples of ints
     for k, v in mapping.items():

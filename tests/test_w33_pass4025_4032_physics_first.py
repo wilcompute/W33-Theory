@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 DATA=ROOT/'data/PART_4025_4032_PHYSICS_FIRST_UNIVERSAL_COMPUTER.json'
-def load():return json.loads(DATA.read_text())
+def load():return json.loads(DATA.read_text(encoding="utf-8"))
 def test_certificate_and_five_fronts():
  x=load();assert x['semantic_sha256']=='cc50a83926bd9d32770c33dcfb48ba04640d3601a3fbf64b29f34bb22f940a2f'
  assert x['status']=='PASS_EXACT_PHYSICS_FIRST_FIVE_FRONT_THREE_BONKERS_TOE_NOT_ESTABLISHED'

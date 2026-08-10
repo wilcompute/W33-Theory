@@ -46,7 +46,7 @@ else:
     report_lines.append(" (none detected)")
 
 out_path = SCRIPTS_DIR / "fragile_imports_report.txt"
-out_path.write_text("\n".join(report_lines), encoding="utf-8")
+out_path.write_text("\n".join(report_lines, encoding="utf-8"), encoding="utf-8")
 
 print("\n".join(report_lines))
 print(f"\nWrote report to: {out_path}")

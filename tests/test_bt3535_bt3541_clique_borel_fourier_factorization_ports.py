@@ -20,7 +20,7 @@ def load(path,name):
 def test_exact_packet_matches_frozen_certificate():
     mod=load(MAIN,'bt3535_main')
     generated=mod.build()
-    frozen=json.loads(FROZEN.read_text())
+    frozen=json.loads(FROZEN.read_text(encoding="utf-8"))
     assert generated==frozen
     assert generated['semantic_sha256']=='34ea459ab6acea3a2b5624ba6523016cfb914ffb54220ed64230f74f78a1fb6b'
     assert len(generated['pass3537_bonkers_four_archetypes']['four_action_archetypes'])==4

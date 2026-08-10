@@ -64,6 +64,6 @@ def test_exact_group_resolution() -> None:
 
 def test_certificate_matches_recomputed_status() -> None:
     certificate = json.loads(
-        (ROOT / "data" / "PART_2026_07_10_LEVI_CLOSURE_results.json").read_text()
+        (ROOT / "data" / "PART_2026_07_10_LEVI_CLOSURE_results.json").read_text(encoding="utf-8")
     )
     assert certificate["status"] == result()["status"] == "PASS"

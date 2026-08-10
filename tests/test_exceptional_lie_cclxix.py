@@ -269,35 +269,35 @@ def test_json_file_exists():
 
 
 def test_json_verified_true():
-    data = json.loads(JSON_PATH.read_text())
+    data = json.loads(JSON_PATH.read_text(encoding="utf-8"))
     assert data["verified"] is True
 
 
 def test_json_checks_passed_38():
-    data = json.loads(JSON_PATH.read_text())
+    data = json.loads(JSON_PATH.read_text(encoding="utf-8"))
     assert data["checks_passed"] == 38
     assert data["checks_total"] == 38
 
 
 def test_json_j_i_eq_K_cubed():
-    data = json.loads(JSON_PATH.read_text())
+    data = json.loads(JSON_PATH.read_text(encoding="utf-8"))
     assert data["j_invariant"]["j_i"] == 1728
     assert data["j_invariant"]["j_i_eq_K_cubed"] is True
 
 
 def test_json_W_E6_eq_AUT_ORDER():
-    data = json.loads(JSON_PATH.read_text())
+    data = json.loads(JSON_PATH.read_text(encoding="utf-8"))
     assert data["E6"]["W_order"] == 51840
     assert data["E6"]["W_order_eq_AUT_ORDER"] is True
 
 
 def test_json_E8_roots_eq_EDGES():
-    data = json.loads(JSON_PATH.read_text())
+    data = json.loads(JSON_PATH.read_text(encoding="utf-8"))
     assert data["E8"]["roots"] == 240
     assert data["E8"]["roots_eq_EDGES"] is True
 
 
 def test_json_sum_h_eq_dim_E6():
-    data = json.loads(JSON_PATH.read_text())
+    data = json.loads(JSON_PATH.read_text(encoding="utf-8"))
     assert data["coxeter_sums"]["sum_h_all_5"] == 78
     assert data["coxeter_sums"]["sum_h_eq_dim_E6"] is True

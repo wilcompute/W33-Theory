@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 CERT=ROOT/"data/PART_4137_4144_MATRIX_HORIZON_RG_SCAR_CURVATURE.json"
 SCRIPT=ROOT/"analysis/w33_pass4137_4144_matrix_horizon_rg_scar_curvature.py"
 @pytest.fixture(scope="module")
-def frozen(): return json.loads(CERT.read_text())
+def frozen(): return json.loads(CERT.read_text(encoding="utf-8"))
 @pytest.fixture(scope="module")
 def regen():
     s=importlib.util.spec_from_file_location("m",SCRIPT);m=importlib.util.module_from_spec(s);s.loader.exec_module(m);return m.verify()

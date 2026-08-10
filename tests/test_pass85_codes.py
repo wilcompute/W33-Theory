@@ -17,7 +17,7 @@ def _data() -> dict:
     import w33_pass85_codes as mod
 
     mod.main()
-    return json.loads(Path("w33_pass85_codes.json").read_text())
+    return json.loads(Path("w33_pass85_codes.json").read_text(encoding="utf-8"))
 
 
 def test_status_pass() -> None:

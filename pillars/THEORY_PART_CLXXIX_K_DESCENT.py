@@ -98,7 +98,7 @@ def subgroup_closure(gens: list[tuple]) -> set[tuple]:
 
 def _load_H():
     path = ROOT / "axis_line_stabilizer_192.json"
-    data = json.loads(path.read_text())
+    data = json.loads(path.read_text(encoding="utf-8"))
     elems = data["elements"]
     assert len(elems) == 192
 
@@ -149,7 +149,7 @@ def build_K_descent_report() -> dict:
     # ------------------------------------------------------------------
     # T1: K order, transitivity, Schreier edges = 270 = W(E6)/W(D4)
     # ------------------------------------------------------------------
-    gen_data = json.loads((BUNDLE / "K_generators_action_on_pockets_54.json").read_text())
+    gen_data = json.loads((BUNDLE / "K_generators_action_on_pockets_54.json").read_text(encoding="utf-8"))
     gen_names = ["g2", "g3", "g5", "g8", "g9"]
     gens_K = [tuple(gen_data[name]) for name in gen_names]
     n_pockets = 54
@@ -315,7 +315,7 @@ def build_K_descent_report() -> dict:
         i for i in range(192) if all(H_mul[i][j] == j for j in range(192))
     )
 
-    weld_data = json.loads((BUNDLE / "C3_torsor_right_multiplication_weld.json").read_text())
+    weld_data = json.loads((BUNDLE / "C3_torsor_right_multiplication_weld.json").read_text(encoding="utf-8"))
     sigma_to_r = weld_data["sigma_to_r"]
 
     weld_orders = {}

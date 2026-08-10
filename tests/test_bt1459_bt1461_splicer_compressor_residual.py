@@ -8,14 +8,14 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def run_tool(script: str, data: str) -> dict:
     subprocess.run([sys.executable, str(ROOT / 'tools' / script)], check=True, cwd=ROOT)
-    return json.loads((ROOT / 'data' / data).read_text())
+    return json.loads((ROOT / 'data' / data).read_text(encoding="utf-8"))
 
 
 def test_bt1459_holonet_splicer():
     # The splicer is intentionally idempotent and performs the source edit in a checkout.
     script = ROOT / 'tools' / 'bt1459_holonet_splicer.py'
     assert script.exists()
-    data = json.loads((ROOT / 'data' / 'bt1459_holonet_splicer.json').read_text())
+    data = json.loads((ROOT / 'data' / 'bt1459_holonet_splicer.json').read_text(encoding="utf-8"))
     assert data['verified'] is True
     assert data['checks']['splicer_committed'] is True
 

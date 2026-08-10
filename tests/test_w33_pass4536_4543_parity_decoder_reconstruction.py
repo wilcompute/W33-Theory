@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
-def load(name):return json.loads((ROOT/'data'/name).read_text())
+def load(name):return json.loads((ROOT/'data'/name).read_text(encoding="utf-8"))
 
 def test_pass4536_missing_bit_is_parity():
     c=load('PART_W33_PASS4536_MISSING_TENTH_PARITY_LINE_STAR.json')

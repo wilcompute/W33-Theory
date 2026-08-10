@@ -35,7 +35,7 @@ def test_derive_7pocket_derivations(tmp_path):
     # read report if created and verify expected pocket counts
     rpt = outdir / 'REPORT.json'
     if rpt.exists():
-        data = json.loads(rpt.read_text())
+        data = json.loads(rpt.read_text(encoding="utf-8"))
         # there should be 540 pockets (36*15 as discovered)
         assert data.get('pockets7_count') == 540
         assert data.get('derivation_dim_Q') == 8 or data.get('derivation_dim_Q') == 7 or data.get('derivation_dim_Q') is not None

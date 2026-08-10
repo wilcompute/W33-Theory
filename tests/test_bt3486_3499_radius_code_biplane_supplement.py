@@ -10,8 +10,8 @@ def frozen_certificate() -> dict:
     root = Path(__file__).resolve().parents[1]
     path = root / "data/PART_BT3486_BT3499_RADIUS_CODE_BIPLANE_SUPPLEMENT_results.json"
     if path.exists():
-        return json.loads(path.read_text())
-    encoded = (root / "bootstrap/pass3486_3499/results.json.zlib.b64").read_text().strip()
+        return json.loads(path.read_text(encoding="utf-8"))
+    encoded = (root / "bootstrap/pass3486_3499/results.json.zlib.b64").read_text(encoding="utf-8").strip()
     return json.loads(zlib.decompress(base64.b64decode(encoded)))
 
 

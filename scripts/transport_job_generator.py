@@ -66,7 +66,7 @@ def generate_powershell_runner(seeds: List[int], time_limit: int, workers: int, 
     for s in seeds:
         lines.append(f"Write-Host 'Running seed {s}'")
         lines.append(f"& $python $script --seed {s} --time_limit {time_limit} --workers {workers}")
-    out_path.write_text("\n".join(lines))
+    out_path.write_text("\n".join(lines, encoding="utf-8"))
     try:
         out_path.chmod(0o755)
     except Exception:
@@ -93,7 +93,7 @@ def generate_slurm_runner(seeds: List[int], time_limit: int, workers: int, out_p
         "echo Running seed $SEED",
         "$PY $SCRIPT --seed $SEED --time_limit {0} --workers {1}".format(time_limit, workers),
     ]
-    out_path.write_text("\n".join(lines))
+    out_path.write_text("\n".join(lines, encoding="utf-8"))
     try:
         out_path.chmod(0o755)
     except Exception:

@@ -15,13 +15,13 @@ def main():
             f.write("ERROR: jsonschema not available: %s\n" % (e,))
             raise
 
-        s = json.loads(Path("schemas/summary_results.schema.json").read_text())
-        d = json.loads(Path("SUMMARY_RESULTS.json").read_text())
+        s = json.loads(Path("schemas/summary_results.schema.json").read_text(encoding="utf-8"))
+        d = json.loads(Path("SUMMARY_RESULTS.json").read_text(encoding="utf-8"))
         jsonschema.validate(instance=d, schema=s)
         f.write("SUMMARY_RESULTS.json validates OK\n")
 
-        s2 = json.loads(Path("schemas/numeric_comparisons.schema.json").read_text())
-        d2 = json.loads(Path("NUMERIC_COMPARISONS.json").read_text())
+        s2 = json.loads(Path("schemas/numeric_comparisons.schema.json").read_text(encoding="utf-8"))
+        d2 = json.loads(Path("NUMERIC_COMPARISONS.json").read_text(encoding="utf-8"))
         jsonschema.validate(instance=d2, schema=s2)
         f.write("NUMERIC_COMPARISONS.json validates OK\n")
         f.flush()

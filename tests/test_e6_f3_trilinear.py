@@ -71,8 +71,8 @@ def test_build_e6_f3_trilinear_map_cli(tmp_path: Path):
             "4": {"u": [0, 2], "z": 1},
         }
     }
-    cubic_path.write_text(json.dumps(cubic_payload), encoding="utf-8")
-    heis_path.write_text(json.dumps(heis_payload), encoding="utf-8")
+    cubic_path.write_text(json.dumps(cubic_payload, encoding="utf-8"), encoding="utf-8")
+    heis_path.write_text(json.dumps(heis_payload, encoding="utf-8"), encoding="utf-8")
 
     cmd = [
         sys.executable,

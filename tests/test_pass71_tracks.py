@@ -13,7 +13,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 def _run(module: str, outfile: str) -> dict:
     mod = importlib.import_module(module)
     mod.main()
-    return json.loads(Path(outfile).read_text())
+    return json.loads(Path(outfile).read_text(encoding="utf-8"))
 
 
 def test_track_d_css_obstruction():
@@ -52,7 +52,7 @@ def test_track_f_pmns_angles():
 
 
 def test_cross_track_vertex_count():
-    dD = json.loads(Path("w33_pass71_trackD_css_matrices.json").read_text())
-    dE = json.loads(Path("w33_pass71_trackE_ihara_zeta_poles.json").read_text())
-    dF = json.loads(Path("w33_pass71_trackF_pmns_angles.json").read_text())
+    dD = json.loads(Path("w33_pass71_trackD_css_matrices.json").read_text(encoding="utf-8"))
+    dE = json.loads(Path("w33_pass71_trackE_ihara_zeta_poles.json").read_text(encoding="utf-8"))
+    dF = json.loads(Path("w33_pass71_trackF_pmns_angles.json").read_text(encoding="utf-8"))
     assert dD["n_points"] == dE["n_vertices"] == dF["spectral_parameters"]["k"] + 28

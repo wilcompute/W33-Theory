@@ -3,7 +3,7 @@ from pathlib import Path
 import networkx as nx
 
 ROOT=Path('c:/Repos/Theory of Everything')
-edge_to_root = json.loads((ROOT/'artifacts'/'edge_to_e8_root.json').read_text())
+edge_to_root = json.loads((ROOT/'artifacts'/'edge_to_e8_root.json').read_text(encoding="utf-8"))
 edges=[]
 for k,v in edge_to_root.items():
     i,j=[int(x.strip()) for x in k.strip()[1:-1].split(',')]

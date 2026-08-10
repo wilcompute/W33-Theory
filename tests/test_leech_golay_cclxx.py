@@ -219,7 +219,7 @@ JSON_PATH = ROOT / "PART_CCLXX_leech_golay_results.json"
 
 @pytest.fixture(scope="module")
 def results():
-    return json.loads(JSON_PATH.read_text())
+    return json.loads(JSON_PATH.read_text(encoding="utf-8"))
 
 def test_json_exists():
     assert JSON_PATH.exists()

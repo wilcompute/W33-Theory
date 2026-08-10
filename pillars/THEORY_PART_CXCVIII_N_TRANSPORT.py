@@ -66,7 +66,7 @@ def element_order(p: tuple) -> int:
 
 def connect_N_transport() -> dict:
     # Load N
-    N = [tuple(n) for n in json.loads((PILLARS_DIR / "N_subgroup.json").read_text())]
+    N = [tuple(n) for n in json.loads((PILLARS_DIR / "N_subgroup.json").read_text(encoding="utf-8"))]
     idp = tuple(range(192))
 
     # Load r-generators

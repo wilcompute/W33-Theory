@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 DATA=ROOT/'data'
-def load(name):return json.loads((DATA/name).read_text())
+def load(name):return json.loads((DATA/name).read_text(encoding="utf-8"))
 
 def test_release_total_and_status():
     files=['w33_pass1087_canonical_steinberg_parity.json','w33_pass1088_frame_adjacency_wedderburn.json','w33_pass1089_dual_hesse_triple_hyperplanes.json','w33_pass1090_controller_protocol_boundary.json','w33_pass1091_formal_orbital_intertwiner_lock.json']
@@ -55,7 +55,7 @@ def test_controller_protocol_boundary_fails_closed():
 
 def test_formal_lock_and_hashes():
     d=load('w33_pass1091_formal_orbital_intertwiner_lock.json')
-    lean=(ROOT/'formal/W33/Pass1091FrameOrbitalIntertwiner.lean').read_text()
+    lean=(ROOT/'formal/W33/Pass1091FrameOrbitalIntertwiner.lean').read_text(encoding="utf-8")
     assert d['counts']=={'inner_self_paired':12,'inner_nonself_paired':20,'inner_transpose_pairs':10,'outer_fusion_orbits':22,'outer_self_paired':14}
     assert d['tensor_hashes']['Steinberg_plus'] in lean
     assert d['tensor_hashes']['Steinberg_minus'] in lean

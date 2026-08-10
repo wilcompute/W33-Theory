@@ -36,7 +36,7 @@ def test_check_min_cert_orbit_involution_rule_smoke(tmp_path: Path):
             {"canonical_repr": REDUCED_ORBIT_REP, "orbit_size": 1296, "hit_count": 1},
         ],
     }
-    in_json.write_text(json.dumps(payload), encoding="utf-8")
+    in_json.write_text(json.dumps(payload, encoding="utf-8"), encoding="utf-8")
 
     cmd = [
         sys.executable,

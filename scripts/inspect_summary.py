@@ -4,7 +4,7 @@ import pathlib
 if not p.exists():
     print("MISSING")
 else:
-    d = json.loads(p.read_text())
+    d = json.loads(p.read_text(encoding="utf-8"))
     print("top_keys:", list(d.keys())[:10])
     print("has_total:", "total_part_json_files" in d)
     if "total_part_json_files" in d:

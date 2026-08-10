@@ -43,12 +43,12 @@ def test_true_functional_calculus_rebuild():
 
 
 def test_stabilizer_and_kernel_theorems():
-    stabilizer = json.loads((ROOT / "data" / "w33_pass1134_we6_432_stabilizers.json").read_text())
+    stabilizer = json.loads((ROOT / "data" / "w33_pass1134_we6_432_stabilizers.json").read_text(encoding="utf-8"))
     assert all(record["stabilizer"]["order"] == 120 for record in stabilizer["records"])
     assert all(record["stabilizer"]["small_group_identification"].startswith("S5") for record in stabilizer["records"])
     assert all(item["conjugate_in_WE6"] for item in stabilizer["pairwise_conjugacy"])
 
-    kernel = json.loads((ROOT / "data" / "w33_pass1135_cubic_kernel_decomposition.json").read_text())
+    kernel = json.loads((ROOT / "data" / "w33_pass1135_cubic_kernel_decomposition.json").read_text(encoding="utf-8"))
     assert kernel["kernel_dimension"] == 2195
     assert kernel["cubic_module_decomposition"] == [
         {"name": "1", "degree": 1, "multiplicity": 1},

@@ -4,8 +4,8 @@ import json
 import sympy as sp
 
 ROOT=Path(__file__).resolve().parents[1]
-DATA=json.loads((ROOT/'data/w33_pass1340_1344_cartan_atlas_selector_padic.json').read_text())
-ATLAS=json.loads((ROOT/'data/w33_pass1341_atlas_standard_20_matrices.json').read_text())
+DATA=json.loads((ROOT/'data/w33_pass1340_1344_cartan_atlas_selector_padic.json').read_text(encoding="utf-8"))
+ATLAS=json.loads((ROOT/'data/w33_pass1341_atlas_standard_20_matrices.json').read_text(encoding="utf-8"))
 
 
 def test_release_status_and_scope():
@@ -76,6 +76,6 @@ def test_manuscript_integrator_contract():
     insert=ROOT/DATA['pass1344_manuscript_closure']['insert']
     tool=ROOT/DATA['pass1344_manuscript_closure']['integrator']
     assert insert.exists() and tool.exists()
-    text=insert.read_text()
+    text=insert.read_text(encoding="utf-8")
     assert 'Exact modular and selector closure' in text
     assert 'runtime checks' in text

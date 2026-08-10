@@ -8,7 +8,7 @@ DATA = ROOT / "data"
 
 
 def read(name):
-    return json.loads((DATA / name).read_text())
+    return json.loads((DATA / name).read_text(encoding="utf-8"))
 
 
 def test_pass400_minimal_control_certificate():

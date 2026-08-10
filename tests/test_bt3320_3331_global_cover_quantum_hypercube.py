@@ -25,5 +25,5 @@ def test_regenerate_exact_packet(tmp_path):
  assert d['live_chromatic_boundary']=='10 <= chi(H) <= 11'
 
 def test_frozen_result_matches_regeneration():
- m=load();d=m.certificate();f=json.loads((ROOT/'data/PART_BT3320_BT3329_GLOBAL_COVER_QUANTUM_HYPERCUBE_results.json').read_text())
+ m=load();d=m.certificate();f=json.loads((ROOT/'data/PART_BT3320_BT3329_GLOBAL_COVER_QUANTUM_HYPERCUBE_results.json').read_text(encoding="utf-8"))
  assert d==f

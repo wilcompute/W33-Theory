@@ -37,7 +37,7 @@ def test_exact_eight_front_certificate(generated):
 
 
 def test_frozen_result_matches_generator(generated):
-    frozen = json.loads((ROOT / "data/PART_BT3226_BT3234_PORT_SPIRAL_results.json").read_text())
+    frozen = json.loads((ROOT / "data/PART_BT3226_BT3234_PORT_SPIRAL_results.json").read_text(encoding="utf-8"))
     assert frozen["sha256_without_hash_field"] == generated["sha256_without_hash_field"]
 
 
@@ -46,5 +46,5 @@ def test_rom_is_exact_geometry_output(tmp_path):
     sha = MOD.emit_rom(out)
     frozen = ROOT / "data/bt3232_port_rom.mem"
     assert out.read_bytes() == frozen.read_bytes()
-    assert len(out.read_text().splitlines()) == 720
+    assert len(out.read_text(encoding="utf-8").splitlines()) == 720
     assert len(sha) == 64

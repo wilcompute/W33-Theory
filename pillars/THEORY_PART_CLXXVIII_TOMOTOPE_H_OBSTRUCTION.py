@@ -91,7 +91,7 @@ def orbit_count(sub_gens: list[tuple], n: int) -> int:
 
 def _load_H():
     path = ROOT / "axis_line_stabilizer_192.json"
-    data = json.loads(path.read_text())
+    data = json.loads(path.read_text(encoding="utf-8"))
     elems = data["elements"]
     assert len(elems) == 192
 

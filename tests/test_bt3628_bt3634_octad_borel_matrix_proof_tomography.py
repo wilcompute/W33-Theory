@@ -17,7 +17,7 @@ def load(path,name):
 
 def test_seven_front_certificate_matches_frozen():
  mod=load(MAIN,'bt3628_3634')
- got=mod.build_result();old=json.loads(RESULT.read_text())
+ got=mod.build_result();old=json.loads(RESULT.read_text(encoding="utf-8"))
  assert got==old
  assert got['semantic_sha256']=='58b7e205ee0a1409230d50df6efc3abe8d67caf3125b9eaa654dd6600b7b1d25'
 
@@ -47,7 +47,7 @@ def test_perkel_units_and_positive_form():
 
 def test_all_frozen_proof_DAGs_independently_verify():
  mod=load(BATCH,'bt3631_proofs')
- packed=''.join(p.read_text().strip() for p in sorted(PROOFS.glob('part*.b85')));batch=json.loads(lzma.decompress(base64.b85decode(packed)).decode())
+ packed=''.join(p.read_text(encoding="utf-8").strip() for p in sorted(PROOFS.glob('part*.b85')));batch=json.loads(lzma.decompress(base64.b85decode(packed)).decode())
  assert batch['instances']==16
  leaves=[]
  for row in batch['rows']:

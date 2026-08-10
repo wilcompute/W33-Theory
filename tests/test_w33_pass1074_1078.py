@@ -4,7 +4,7 @@ ROOT=Path(__file__).resolve().parents[1]
 DATA=ROOT/'data'
 sys.path.insert(0,str(ROOT/'analysis'))
 
-def load(name):return json.loads((DATA/name).read_text())
+def load(name):return json.loads((DATA/name).read_text(encoding="utf-8"))
 
 def test_release_check_total():
     files=['w33_pass1074_schur_extension_formal_certificate.json','w33_pass1075_gsp43_character_fingerprint.json','w33_pass1076_spread_frame_incidence_algebra.json','w33_pass1077_g32_g25_invariant_restriction.json','w33_pass1078_photonic_hardware_backend.json']
@@ -50,7 +50,7 @@ def test_hardware_backend_fail_closed():
     assert d['synthetic_fixtures']['bad_calibration']['decision']=='inconclusive_no_claim'
 
 def test_lean_and_hardware_wiring():
-    lean=(ROOT/'formal/W33/Pass1074SchurCocycleExtension.lean').read_text()
+    lean=(ROOT/'formal/W33/Pass1074SchurCocycleExtension.lean').read_text(encoding="utf-8")
     assert 'structure NormalizedCocycle' in lean
     assert 'theorem extensionMul_assoc' in lean
     assert 'theorem kernel_central' in lean

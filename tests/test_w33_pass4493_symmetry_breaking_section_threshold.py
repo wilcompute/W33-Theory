@@ -13,7 +13,7 @@ CERT=ROOT/'data/PART_W33_PASS4493_SYMMETRY_BREAKING_SECTION_THRESHOLD.json'
 def test_pass4493_corrected_exact_subgroup_census():
     proc=subprocess.run([sys.executable,str(SCRIPT)],cwd=ROOT,text=True,capture_output=True)
     assert proc.returncode==0,proc.stdout+'\n'+proc.stderr
-    d=json.loads(CERT.read_text())
+    d=json.loads(CERT.read_text(encoding="utf-8"))
     assert d['pass']==4493 and d['status']=='CORRECTED_BY_PASSES_4503_4507'
     full=d['tested_subgroups']['full_PSp']
     line=d['tested_subgroups']['one_line_stabilizer']
@@ -30,12 +30,12 @@ def test_pass4493_corrected_exact_subgroup_census():
 
 
 def test_pass4493_public_and_manuscript_sources_are_corrected():
-    insert=(ROOT/'analysis/PASS4493_symmetry_breaking_section_insert.tex').read_text()
-    page=(ROOT/'docs/apartment-symmetry-breaking-section.html').read_text()
-    card=(ROOT/'analysis/PASS4493_symmetry_breaking_section_index_insert.html').read_text()
+    insert=(ROOT/'analysis/PASS4493_symmetry_breaking_section_insert.tex').read_text(encoding="utf-8")
+    page=(ROOT/'docs/apartment-symmetry-breaking-section.html').read_text(encoding="utf-8")
+    card=(ROOT/'analysis/PASS4493_symmetry_breaking_section_index_insert.html').read_text(encoding="utf-8")
     assert '386/387' in insert and '384/384' in insert
     assert 'false positive' in page.lower() and '386 / 387' in page and '384' in page
     assert 'withdrawn' in card.lower() and '386/387' in card
     assert 'rank(A)=rank([A|b])=370' not in page
-    cfg=json.loads((ROOT/'data/w33_public_frontier_extension_pass4461_4464.json').read_text())
+    cfg=json.loads((ROOT/'data/w33_public_frontier_extension_pass4461_4464.json').read_text(encoding="utf-8"))
     assert 'pass4493-symmetry-breaking-section-threshold' in [x['token'] for x in cfg['public_sections']]

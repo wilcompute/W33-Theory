@@ -131,7 +131,7 @@ def compute_correlation() -> dict:
     r = load_generators()
 
     # Load N
-    N_raw = json.loads((ROOT / "N_subgroup.json").read_text())
+    N_raw = json.loads((ROOT / "N_subgroup.json").read_text(encoding="utf-8"))
     N: List[tuple] = [tuple(n) for n in N_raw]
     assert len(N) == 192
 

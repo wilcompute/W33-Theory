@@ -12,7 +12,7 @@ def cert():
     return runpy.run_path(str(SOURCE))["build_certificate"]()
 
 def test_frozen_semantic_certificate():
-    assert cert() == json.loads(FROZEN.read_text())
+    assert cert() == json.loads(FROZEN.read_text(encoding="utf-8"))
 
 def test_minimum_observable_twirl():
     p = cert()["passes"]["3787_minimum_exact_observable_twirl_design"]

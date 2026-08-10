@@ -4,7 +4,7 @@ from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
 
-def load(name):return json.loads((ROOT/'data'/name).read_text())
+def load(name):return json.loads((ROOT/'data'/name).read_text(encoding="utf-8"))
 
 def test_pass4571_composition_boundary():
     d=load('PART_W33_PASS4571_DUAL_MIDDLE_MODULE_COMPOSITION.json')

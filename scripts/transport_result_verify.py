@@ -34,7 +34,7 @@ def main() -> None:
         print(json.dumps({"status": "missing_result_file", "path": str(path)}))
         return
 
-    result = json.loads(path.read_text())
+    result = json.loads(path.read_text(encoding="utf-8"))
     assignment = result.get("assignment")
     if not assignment:
         print(json.dumps({"status": "no_assignment_in_result", "result": result}, indent=2))

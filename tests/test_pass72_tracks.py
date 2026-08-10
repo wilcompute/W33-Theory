@@ -13,7 +13,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 def _run(module: str, outfile: str) -> dict:
     mod = importlib.import_module(module)
     mod.main()
-    return json.loads(Path(outfile).read_text())
+    return json.loads(Path(outfile).read_text(encoding="utf-8"))
 
 
 def test_track_g_gap_positive() -> None:

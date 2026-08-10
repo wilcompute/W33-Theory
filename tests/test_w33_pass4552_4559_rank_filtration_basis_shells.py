@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-def cert(name):return json.loads((ROOT/'data'/name).read_text())
+def cert(name):return json.loads((ROOT/'data'/name).read_text(encoding="utf-8"))
 def test_pass4552_4559_frontier_invariants():
     c=cert('PART_W33_PASS4552_QMINUS5_RANK_THIRD_ANCHOR.json')
     assert [(x['q'],x['rank_N'],x['rank_NtN']) for x in c['three_exact_anchors']]==[(3,91,70),(5,651,546),(7,2451,2150)]

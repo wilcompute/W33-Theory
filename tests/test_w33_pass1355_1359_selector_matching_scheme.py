@@ -66,11 +66,11 @@ def test_cli_check_mode():
 
 def test_integrator_is_idempotent(tmp_path):
     for name in ("w33_paper.tex", "photonic_holonet.tex"):
-        (tmp_path / name).write_text("\\documentclass{article}\n\\begin{document}\nfixture\n\\end{document}\n")
+        (tmp_path / name).write_text("\\documentclass{article}\n\\begin{document}\nfixture\n\\end{document}\n", encoding="utf-8")
     integrator = ROOT / "tools" / "integrate_pass1355_1359.py"
     for _ in range(2):
         subprocess.run([sys.executable, str(integrator), "--root", str(tmp_path)], check=True)
     subprocess.run([sys.executable, str(integrator), "--root", str(tmp_path), "--check"], check=True)
     marker = r"\input{analysis/BT1355_BT1359_selector_matching_scheme}"
     for name in ("w33_paper.tex", "photonic_holonet.tex"):
-        assert (tmp_path / name).read_text().count(marker) == 1
+        assert (tmp_path / name).read_text(encoding="utf-8").count(marker) == 1

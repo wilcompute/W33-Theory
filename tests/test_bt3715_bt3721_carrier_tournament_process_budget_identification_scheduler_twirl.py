@@ -10,7 +10,7 @@ mod = importlib.util.module_from_spec(spec)
 assert spec.loader is not None
 spec.loader.exec_module(mod)
 DATA = mod.build()
-OLD = json.loads(FROZEN.read_text())
+OLD = json.loads(FROZEN.read_text(encoding="utf-8"))
 
 
 def test_frozen_semantic_certificate():

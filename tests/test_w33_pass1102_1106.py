@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-def load(name):return json.loads((ROOT/'data'/name).read_text())
+def load(name):return json.loads((ROOT/'data'/name).read_text(encoding="utf-8"))
 def test_release_total():
  r=load('w33_pass1102_1106_release.json');assert r['status']=='PASS';assert r['total_exact_checks']==86
 def test_clifford_matrices():
@@ -13,6 +13,6 @@ def test_e8_pair_carriers():
 def test_keysight_fail_closed():
  x=load('w33_pass1105_keysight_n7731a_transport.json');assert x['status']=='PASS';assert x['receipt']['processed_commands']==240;assert x['receipt']['physical_hardware_connected'] is False;assert all(x['negative_probes'].values())
 def test_formal_lock_and_parallel_baseline():
- x=load('w33_pass1106_formal_clifford_firewall_carrier.json');assert x['status']=='PASS';assert x['parallel_observed_baseline']['commit'].startswith('7bd164a');src=(ROOT/'formal/W33/Pass1106CliffordFirewallCarrier.lean').read_text();assert 'native_decide' not in src;assert 'rootLine3360_contains_four_81Minus' in src
+ x=load('w33_pass1106_formal_clifford_firewall_carrier.json');assert x['status']=='PASS';assert x['parallel_observed_baseline']['commit'].startswith('7bd164a');src=(ROOT/'formal/W33/Pass1106CliffordFirewallCarrier.lean').read_text(encoding="utf-8");assert 'native_decide' not in src;assert 'rootLine3360_contains_four_81Minus' in src
 def test_all_pass_ledgers_sum_to_release():
  names=['w33_pass1102_ctbllib_clifford_naming.json','w33_pass1103_hesse_firewall_cubic_transport.json','w33_pass1104_e8_pair_carrier_census.json','w33_pass1105_keysight_n7731a_transport.json','w33_pass1106_formal_clifford_firewall_carrier.json'];xs=[load(n) for n in names];assert all(x['status']=='PASS' for x in xs);assert sum(x['check_count'] for x in xs)==86

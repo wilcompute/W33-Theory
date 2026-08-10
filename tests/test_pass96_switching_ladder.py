@@ -14,7 +14,7 @@ def _data() -> dict:
     import w33_pass96_switching_ladder as mod
 
     mod.main()
-    return json.loads(Path("w33_pass96_switching_ladder.json").read_text())
+    return json.loads(Path("w33_pass96_switching_ladder.json").read_text(encoding="utf-8"))
 
 
 def test_status_pass() -> None:

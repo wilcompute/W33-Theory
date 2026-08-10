@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 CERT=ROOT/'data'/'w33_pass1531_1535_frame_resolution_continuation.json'
-def load():return json.loads(CERT.read_text())
+def load():return json.loads(CERT.read_text(encoding="utf-8"))
 def test_release_status_and_boundaries():
  c=load();assert c['status']=='PASS_WITH_OPEN_RESOLUTION'
  assert c['pass1531_resolution_cnf']['status']=='FORMULATED_OPEN'

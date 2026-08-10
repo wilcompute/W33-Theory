@@ -14,7 +14,7 @@ def load(name: str):
     if p.suffix == ".gz":
         with gzip.open(p, "rt") as f:
             return json.load(f)
-    return json.loads(p.read_text())
+    return json.loads(p.read_text(encoding="utf-8"))
 
 
 def test_m36_rom_exact_and_typed():

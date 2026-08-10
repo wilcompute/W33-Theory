@@ -92,7 +92,7 @@ def test_vogel_snapshot_with_firewall(tmp_path: Path):
     # create dummy firewall file with 9 triads
     fw_path = tmp_path / "firewall_bad_triads_mapping.json"
     dummy = {"bad_triangles_Schlafli_orbit_index": [[0,1,2]] * 9}
-    fw_path.write_text(json.dumps(dummy), encoding="utf-8")
+    fw_path.write_text(json.dumps(dummy, encoding="utf-8"), encoding="utf-8")
 
     snapshot = vogel.build_snapshot(
         s12_report_path=s12_report_path,

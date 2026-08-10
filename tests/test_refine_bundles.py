@@ -22,5 +22,5 @@ def test_closure_file_exists():
     from pathlib import Path
     path = Path(__file__).resolve().parent.parent / "closure_info.json"
     assert path.exists()
-    data = json.loads(path.read_text())
+    data = json.loads(path.read_text(encoding="utf-8"))
     assert data["closure_size"] == info["closure_size"]

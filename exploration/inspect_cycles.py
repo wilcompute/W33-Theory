@@ -5,7 +5,7 @@ ROOT=pathlib.Path('c:/Repos/Theory of Everything')
 # reuse code from driver to rebuild cycles quickly
 
 # load adjacency
-lines=[l.strip() for l in (ROOT/'W33_adjacency_matrix.txt').read_text().splitlines() if l.strip()]
+lines=[l.strip() for l in (ROOT/'W33_adjacency_matrix.txt').read_text(encoding="utf-8").splitlines() if l.strip()]
 adj={i:[j for j,v in enumerate(line.split()) if v=='1'] for i,line in enumerate(lines)}
 G=nx.Graph()
 G.add_nodes_from(range(40))

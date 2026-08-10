@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def run_tool(script: str, data: str) -> dict:
     subprocess.run([sys.executable, str(ROOT / 'tools' / script)], check=True, cwd=ROOT)
-    return json.loads((ROOT / 'data' / data).read_text())
+    return json.loads((ROOT / 'data' / data).read_text(encoding="utf-8"))
 
 
 def test_bt1453_order18_closure_group_classifier():

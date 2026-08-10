@@ -37,7 +37,7 @@ E6_basis = np.load(
 proj = toe.E6Projector(E6_basis)
 all_triads = toe._load_signed_cubic_triads()
 rat = json.loads(
-    (ROOT / "artifacts" / "linfty_coord_search_results_rationalized.json").read_text()
+    (ROOT / "artifacts" / "linfty_coord_search_results_rationalized.json").read_text(encoding="utf-8")
 )
 bad9 = set(tuple(sorted(t)) for t in rat["original"]["fiber_triads"])
 br_l2 = toe.E8Z3Bracket(

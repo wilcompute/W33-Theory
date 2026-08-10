@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-def load(name):return json.loads((ROOT/'data'/name).read_text())
+def load(name):return json.loads((ROOT/'data'/name).read_text(encoding="utf-8"))
 def test_minimal_isa():
  d=load('PART_BT2803_MINIMAL_AFFINE_FRAME_ISA_results.json');assert d['linear_order']==51840;assert d['affine_order']==4199040;assert d['selected_micro_isa']==['F_p','CX_pf','CX_fp','Z_p'];assert d['word_lengths']['maximum']==17
 def test_m36_distillation():

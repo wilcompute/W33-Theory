@@ -8,7 +8,7 @@ spec=importlib.util.spec_from_file_location('bt2937',SOURCE); assert spec and sp
 bt=importlib.util.module_from_spec(spec); spec.loader.exec_module(bt)
 _RESULT=bt.build_result()
 def result(): return _RESULT
-def test_frozen(): assert json.loads(CERT.read_text())==result()
+def test_frozen(): assert json.loads(CERT.read_text(encoding="utf-8"))==result()
 def test_global():
  d=result()['global_affine_support_code']; assert (d['global_lower_bound'],d['global_upper_bound'],d['binary_minimum_distance'])==(13,16,4)
 def test_outer():
@@ -20,4 +20,4 @@ def test_landauer(): assert abs(result()['landauer']['state_entropy_bits']-6.339
 def test_oam():
  d=result()['oam']['group_theoretic_addressing_obstruction']; assert d['projective_similitude_actions']==51840 and d['maximum_single_orbit']==12 and not d['forty_cycle_exists']
 def test_rtl_contract_files():
- rtl=(ROOT/'rtl'/'w33_pass2938_isodual_support_codec.sv').read_text(); tb=(ROOT/'rtl'/'tb_w33_pass2938_isodual_support_codec.sv').read_text(); assert 'module w33_pass2938_isodual_support_encoder' in rtl; assert 'module w33_pass2938_isodual_support_decoder' in rtl; assert '16-entry correction' in rtl; assert 'PASS 81 clean + 1296 one-bit corrections' in tb
+ rtl=(ROOT/'rtl'/'w33_pass2938_isodual_support_codec.sv').read_text(encoding="utf-8"); tb=(ROOT/'rtl'/'tb_w33_pass2938_isodual_support_codec.sv').read_text(encoding="utf-8"); assert 'module w33_pass2938_isodual_support_encoder' in rtl; assert 'module w33_pass2938_isodual_support_decoder' in rtl; assert '16-entry correction' in rtl; assert 'PASS 81 clean + 1296 one-bit corrections' in tb

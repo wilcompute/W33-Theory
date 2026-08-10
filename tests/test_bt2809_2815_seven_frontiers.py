@@ -19,7 +19,7 @@ def load(path: str, name: str):
 
 
 def data(name: str):
-    return json.loads((ROOT / 'data' / name).read_text())
+    return json.loads((ROOT / 'data' / name).read_text(encoding="utf-8"))
 
 
 def test_aggregate_certificate_has_78_checks():

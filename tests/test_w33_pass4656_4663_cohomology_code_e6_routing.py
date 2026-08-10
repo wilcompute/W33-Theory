@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]; DATA=ROOT/'data'
-def load(name):return json.loads((DATA/name).read_text())
+def load(name):return json.loads((DATA/name).read_text(encoding="utf-8"))
 
 def test_4656_nonzero_duo_cohomology():
     d=load('PART_W33_PASS4656_APARTMENT_C2_VOLTAGE_COHOMOLOGY.json')

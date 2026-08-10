@@ -35,7 +35,7 @@ out = {"weyl_subgroup_order": int(order), "orbit_sizes": [len(o) for o in orbits
 
 
 def main():
-    data = json.loads(Path("PART_CVII_e6_via_A2.json").read_text())
+    data = json.loads(Path("PART_CVII_e6_via_A2.json").read_text(encoding="utf-8"))
     print("orth size", len(orth))
     for i in range(8):
         for j in range(i + 1, 8):

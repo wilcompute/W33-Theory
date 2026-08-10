@@ -17,7 +17,7 @@ EXPECTED_WORKERS = {
 
 
 def payload():
-    return json.loads(CERT.read_text())
+    return json.loads(CERT.read_text(encoding="utf-8"))
 
 
 def test_certificate_digest_and_schema():
@@ -86,7 +86,7 @@ def test_linking_algebra():
 
 def test_canonical_source_namespace():
     source = "\n".join(
-        path.read_text()
+        path.read_text(encoding="utf-8")
         for path in [
             ROOT / "analysis" / "w33_pass1500_1504_five_frontiers.py",
             *sorted((ROOT / "analysis" / "pass1500_1504").glob("*.py")),
@@ -99,8 +99,8 @@ def test_canonical_source_namespace():
 
 def test_report_and_registry_certificate_lock():
     digest = hashlib.sha256(CERT.read_bytes()).hexdigest()
-    report = (ROOT / "analysis" / "BT1500_BT1504_five_frontiers.md").read_text()
-    registry = json.loads((ROOT / "data" / "w33_pass_namespace_registry_v2.d" / "1500-1504.json").read_text())
+    report = (ROOT / "analysis" / "BT1500_BT1504_five_frontiers.md").read_text(encoding="utf-8")
+    registry = json.loads((ROOT / "data" / "w33_pass_namespace_registry_v2.d" / "1500-1504.json").read_text(encoding="utf-8"))
     assert digest in report
     block = registry["canonical_blocks"][0]
     assert block["range"] == "1500-1504"

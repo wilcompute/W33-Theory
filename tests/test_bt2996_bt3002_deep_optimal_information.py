@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 DATA=ROOT/'data'
 
 def load(name):
-    return json.loads((DATA/name).read_text())
+    return json.loads((DATA/name).read_text(encoding="utf-8"))
 
 def test_2996_adaptive_d4_dominates_fixed_29():
     d=load('PART_BT2996_D4_STATIC_ADAPTIVE_LOCALIZATION_results.json')

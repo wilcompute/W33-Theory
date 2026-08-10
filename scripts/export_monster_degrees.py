@@ -38,5 +38,5 @@ if __name__ == "__main__":
     if degs is None:
         raise SystemExit("Failed to obtain Monster degrees from GAP")
 
-    OUT.write_text(str(degs))
+    OUT.write_text(str(degs, encoding="utf-8"))
     print(f"Wrote {len(degs)} Monster degrees to {OUT}")

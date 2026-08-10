@@ -12,7 +12,7 @@ DATA = ROOT / "data" / "w33_pass1421_1424_outer_integral_cover_extension.json"
 
 def test_exact_certificate_is_frozen() -> None:
     subprocess.run([sys.executable, str(SCRIPT), "--check"], cwd=ROOT, check=True)
-    payload = json.loads(DATA.read_text())
+    payload = json.loads(DATA.read_text(encoding="utf-8"))
     assert payload["status"] == "PASS"
     assert all(payload["checks"].values())
     assert payload["passes"]["1421"]["group_order"] == 51840

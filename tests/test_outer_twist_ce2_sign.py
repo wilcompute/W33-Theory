@@ -45,7 +45,7 @@ def branch_type(c, match, other):
 def test_outer_twist_pushes_ce2_sign():
     # compute permutation P on e6 ids by reading the certified outer bundle
     bundle = Path("H27_OUTER_TWIST_ACTION_BUNDLE_v01")
-    perm_data = json.loads((bundle / "perm40_and_H27_pg_ids.json").read_text())
+    perm_data = json.loads((bundle / "perm40_and_H27_pg_ids.json").read_text(encoding="utf-8"))
     perm_pg = {int(k): int(v) for k, v in perm_data["perm_on_H27_pg_ids"].items()}
 
     # convert pg ids -> vertex_id using fusion bundle
@@ -58,7 +58,7 @@ def test_outer_twist_pushes_ce2_sign():
     vid_to_xyz = {int(r.vertex): (int(r.x), int(r.y), int(r.t)) for r in coords.itertuples(index=False)}
 
     # E6-id -> vid via schlafli artifact
-    sch = json.loads((Path("artifacts") / "schlafli_e6id_to_w33_h27.json").read_text())
+    sch = json.loads((Path("artifacts") / "schlafli_e6id_to_w33_h27.json").read_text(encoding="utf-8"))
     e6_to_vid = list(sch["maps"]["e6id_to_w33_bundle"])
     vid_to_e6 = {v: i for i, v in enumerate(e6_to_vid)}
 

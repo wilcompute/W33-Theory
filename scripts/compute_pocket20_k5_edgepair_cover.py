@@ -17,7 +17,7 @@ import pandas as pd
 
 # load stabilizer A5 generators on lines
 BASE = Path("TOE_line_polarization_A5_v01_20260227_bundle/TOE_line_polarization_A5_v01_20260227")
-stab = json.loads((BASE/"stabilizer_A5_generators.json").read_text())
+stab = json.loads((BASE/"stabilizer_A5_generators.json").read_text(encoding="utf-8"))
 gens_line = [tuple(g) for g in stab['generators']]
 
 # compute line orbits
@@ -63,7 +63,7 @@ special_faces = {tuple(int(x) for x in f.split(',')) for f,c in face_counts.item
 line_to_face = {}
 # we need to know which face corresponds to which line; face->line mapping exists via relation scheme earlier
 # easier: read w33_line_to_e6pair_triangles, which includes triangle_blocks (faces)
-lineinfo = json.loads((Path("TOE_E6pair_SRG_triangle_decomp_v01_20260227_bundle")/"TOE_E6pair_SRG_triangle_decomp_v01_20260227"/"w33_line_to_e6pair_triangles.json").read_text())
+lineinfo = json.loads((Path("TOE_E6pair_SRG_triangle_decomp_v01_20260227_bundle")/"TOE_E6pair_SRG_triangle_decomp_v01_20260227"/"w33_line_to_e6pair_triangles.json").read_text(encoding="utf-8"))
 face_to_line = {tuple(sorted(tb)): item['line_id'] for item in lineinfo for tb in item['triangle_blocks']}
 # invert to map face tuple -> line
 
@@ -98,7 +98,7 @@ for v,els in vertex_to_edges.items():
     assert len(els)==1 or len(els)==2
 
 # Now analyse pockets containing 20
-pockets = json.loads(Path('pocket_geometry.json').read_text())['pockets']
+pockets = json.loads(Path('pocket_geometry.json').read_text(encoding="utf-8"))['pockets']
 pockets20=[p for p in pockets if 20 in p]
 # for each such pocket, intersect with vertices20
 records=[]

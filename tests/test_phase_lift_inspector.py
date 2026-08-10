@@ -14,7 +14,7 @@ def test_phase_lift_inspector_on_11a(tmp_path):
     b21 = perm_from_cycles(12, [[1, 8, 9], [2, 3, 4], [5, 12, 11], [6, 10, 7]])
     data = {"11A": [list(b11), list(b21)]}
     file = tmp_path / "gens.json"
-    file.write_text(json.dumps(data), encoding="utf-8")
+    file.write_text(json.dumps(data, encoding="utf-8"), encoding="utf-8")
 
     # run inspector as a subprocess to simulate CLI
     proc = subprocess.run(

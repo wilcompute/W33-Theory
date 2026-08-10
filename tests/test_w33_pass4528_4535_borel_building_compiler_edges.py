@@ -5,7 +5,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def load(name):
-    return json.loads((ROOT / "data" / name).read_text())
+    return json.loads((ROOT / "data" / name).read_text(encoding="utf-8"))
 
 
 def test_borel_overgroup_interval_and_obstruction_axes():
@@ -47,12 +47,12 @@ def test_edge_locality_nine_layer_and_eight_state_spectrum():
 
 
 def test_manuscript_and_public_chains_are_live():
-    p4519 = (ROOT / "analysis/PASS4519_flag_borel_sylow3_normalizer_insert.tex").read_text()
+    p4519 = (ROOT / "analysis/PASS4519_flag_borel_sylow3_normalizer_insert.tex").read_text(encoding="utf-8")
     assert r"\input{analysis/PASS4528_4535_borel_building_compiler_edge_insert}" in p4519
-    insert = (ROOT / "analysis/PASS4528_4535_borel_building_compiler_edge_insert.tex").read_text()
+    insert = (ROOT / "analysis/PASS4528_4535_borel_building_compiler_edge_insert.tex").read_text(encoding="utf-8")
     for p in range(4528,4536):
         assert f"Pass {p}" in insert or f"Pass~{p}" in insert
-    page = (ROOT / "docs/apartment-obstruction-cohomology-gq.html").read_text()
+    page = (ROOT / "docs/apartment-obstruction-cohomology-gq.html").read_text(encoding="utf-8")
     assert "Pass 4528" in page and "Bonkers #3" in page
-    card = (ROOT / "analysis/PASS4528_4535_borel_building_compiler_edge_index_insert.html").read_text()
+    card = (ROOT / "analysis/PASS4528_4535_borel_building_compiler_edge_index_insert.html").read_text(encoding="utf-8")
     assert 'id="pass4528-4535-borel-building-compiler-edge"' in card

@@ -142,7 +142,7 @@ def architecture_analysis() -> dict:
 
     # ── A4: Transitivity on QIDs ─────────────────────────────────
     N_perms = [tuple(n) for n in json.loads(
-        (ROOT / "N_subgroup.json").read_text())]
+        (ROOT / "N_subgroup.json").read_text(encoding="utf-8"))]
 
     flag_qid: Dict[int, int] = {}
     with open(ROOT / "K54_54sheet_coords_refined.csv") as f:

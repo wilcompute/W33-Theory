@@ -7,7 +7,7 @@ def test_golay_stabilizer(tmp_path):
     assert res.returncode == 0
     outfile = repo / "artifacts" / "golay_stabilizer_generators.txt"
     assert outfile.exists()
-    lines = outfile.read_text().strip().splitlines()
+    lines = outfile.read_text(encoding="utf-8").strip().splitlines()
     assert len(lines) == 12
     for line in lines:
         xs, zs = line.split()

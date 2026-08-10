@@ -74,7 +74,7 @@ def summarize():
         for w, msg in issues:
             lines.append(f"- W={w}: {msg}")
 
-    OUT_MD.write_text("\n".join(lines), encoding="utf-8")
+    OUT_MD.write_text("\n".join(lines, encoding="utf-8"), encoding="utf-8")
     print("Wrote", OUT_JSON, "and", OUT_MD)
     return 0
 

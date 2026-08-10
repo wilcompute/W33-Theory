@@ -3,7 +3,7 @@ import json,hashlib
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 
-def load(name):return json.loads((ROOT/'data'/name).read_text())
+def load(name):return json.loads((ROOT/'data'/name).read_text(encoding="utf-8"))
 
 def test_pass573_c3_and_600cell():
  p=load('w33_pass573_hjelmslev_c3_600cell_apex.json')
@@ -21,7 +21,7 @@ def test_pass574_association_scheme():
 
 def test_pass575_principal_kernel_source():
  p=load('w33_pass575_cyclotomic_dvr_kernel_formal.json')
- s=(ROOT/'formal/W33/Pass575CyclotomicDVRKernel.lean').read_text()
+ s=(ROOT/'formal/W33/Pass575CyclotomicDVRKernel.lean').read_text(encoding="utf-8")
  assert p['status']=='PASS'
  assert 'theorem residueIdeal_eq_lambda_span' in s
  assert not any(x in s for x in ('sorry','admit','axiom'))

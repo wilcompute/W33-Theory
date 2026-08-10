@@ -72,8 +72,8 @@ def test_boundary_flags_keep_new_layer_honest() -> None:
 
 
 def test_repaired_result_json_files_are_valid() -> None:
-    silence = json.loads((ROOT / "PART_DCCCLXXXII_deepest_silence_results.json").read_text())
-    open_hand = json.loads((ROOT / "PART_DCCCXCII_open_hand_results.json").read_text())
+    silence = json.loads((ROOT / "PART_DCCCLXXXII_deepest_silence_results.json").read_text(encoding="utf-8"))
+    open_hand = json.loads((ROOT / "PART_DCCCXCII_open_hand_results.json").read_text(encoding="utf-8"))
 
     assert silence["decimal"] == 882
     assert open_hand["decimal"] == 892

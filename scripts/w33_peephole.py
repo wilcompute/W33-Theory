@@ -150,7 +150,7 @@ def main() -> int:
     p = ROOT / "data" / "PART_W33_PASS4248_PEEPHOLE_TABLE.json"
     p.parent.mkdir(exist_ok=True)
     # Hash the ROUND-TRIPPED object, never the live dict (CLAUDE.md, Pass 2482).
-    p.write_text(json.dumps(json.loads(json.dumps(out)), indent=2, sort_keys=True) + "\n",
+    p.write_text(json.dumps(json.loads(json.dumps(out, encoding="utf-8")), indent=2, sort_keys=True) + "\n",
                  encoding="utf-8")
     print(f"\nwrote {p.relative_to(ROOT).as_posix()}")
     return 0

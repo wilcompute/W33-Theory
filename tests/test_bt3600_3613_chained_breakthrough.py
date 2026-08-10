@@ -7,7 +7,7 @@ from analysis.bt3600_3613_chained_breakthrough import build_certificate
 def test_chained_certificate_matches_frozen():
     generated = build_certificate()
     frozen = json.loads(
-        Path("data/PART_BT3600_BT3613_CHAINED_BREAKTHROUGH_results.json").read_text()
+        Path("data/PART_BT3600_BT3613_CHAINED_BREAKTHROUGH_results.json").read_text(encoding="utf-8")
     )
     assert generated == frozen
     assert generated["semantic_sha256"] == (

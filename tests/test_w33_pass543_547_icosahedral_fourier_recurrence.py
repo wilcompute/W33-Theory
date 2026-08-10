@@ -36,6 +36,6 @@ def test_pass547_recurrence():
 def test_static_release_certificate_present_and_pass():
  import json
  p=ROOT/'data'/'w33_pass543_547_icosahedral_fourier_recurrence.json'
- d=json.loads(p.read_text())
+ d=json.loads(p.read_text(encoding="utf-8"))
  assert d['status']=='PASS'
  assert d['total_exact_checks']==46

@@ -19,7 +19,7 @@ def _data() -> dict:
 
     with redirect_stdout(StringIO()):
         mod.main()
-    return json.loads(Path("w33_pass78_equivariant_closure.json").read_text())
+    return json.loads(Path("w33_pass78_equivariant_closure.json").read_text(encoding="utf-8"))
 
 
 def test_pass78_status() -> None:

@@ -117,7 +117,7 @@ def build_voltage_functor_report() -> dict:
 
     # Load K generators on 54 pockets
     gen_data = json.loads(
-        (WELD_BUNDLE / "K_generators_action_on_pockets_54.json").read_text()
+        (WELD_BUNDLE / "K_generators_action_on_pockets_54.json").read_text(encoding="utf-8")
     )
     gens_K = {name: tuple(gen_data[name]) for name in ["g2", "g3", "g5", "g8", "g9"]}
     n_pockets = 54

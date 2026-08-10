@@ -22,9 +22,9 @@ def test_exact_monster_u42_completion(tmp_path: Path) -> None:
     )
     assert f"PASS_3635_3648 {EXPECTED_SHA}" in completed.stdout
     generated = json.loads(
-        (tmp_path / "data" / "PART_3635_3648_MONSTER_U42_COMPLETION_results.json").read_text()
+        (tmp_path / "data" / "PART_3635_3648_MONSTER_U42_COMPLETION_results.json").read_text(encoding="utf-8")
     )
-    frozen = json.loads(FROZEN.read_text())
+    frozen = json.loads(FROZEN.read_text(encoding="utf-8"))
     assert generated == frozen
     assert generated["semantic_sha256"] == EXPECTED_SHA
     assert generated["u42_carrier"]["group_order"] == 25920
@@ -35,7 +35,7 @@ def test_exact_monster_u42_completion(tmp_path: Path) -> None:
 
 
 def test_evidence_boundary_is_fail_closed() -> None:
-    frozen = json.loads(FROZEN.read_text())
+    frozen = json.loads(FROZEN.read_text(encoding="utf-8"))
     pending = set(frozen["evidence_boundary"]["not_proved_here"])
     assert "concrete mmgroup words for U4(2) inside M" in pending
     assert "unique Monster class fusion" in pending

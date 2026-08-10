@@ -16,17 +16,17 @@ def test_octonion_g2(tmp_path):
     deriv_file = repo / 'octonion_derivations.json'
     assert stats_file.exists()
     assert deriv_file.exists()
-    stats = json.loads(stats_file.read_text())
+    stats = json.loads(stats_file.read_text(encoding="utf-8"))
     assert stats.get('orbit_size') == 480
     assert stats.get('null_dim') == 14
     assert stats.get('fix_dim') == 8
-    deriv = json.loads(deriv_file.read_text())
+    deriv = json.loads(deriv_file.read_text(encoding="utf-8"))
     assert deriv.get('null_dim') == 14
     assert deriv.get('fix_dim') == 8
     # also verify the so7-specific output
     so7_file = repo / 'octonion_g2_so7.json'
     assert so7_file.exists()
-    so7 = json.loads(so7_file.read_text())
+    so7 = json.loads(so7_file.read_text(encoding="utf-8"))
     assert so7.get('null_dim') == 14
     assert so7.get('fix_dim') == 8
     assert len(so7.get('basis7', [])) == 14

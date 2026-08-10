@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 def load(path,name):
  s=importlib.util.spec_from_file_location(name,path);m=importlib.util.module_from_spec(s);s.loader.exec_module(m);return m
 
-def cert(n):return json.loads((ROOT/'data'/n).read_text())
+def cert(n):return json.loads((ROOT/'data'/n).read_text(encoding="utf-8"))
 
 def test_all_frozen_certificates_pass():
  for name in ('w33_pass1505_exact_cover_census_frontier.json','w33_pass1506_bridge_local_arithmetic.json','w33_pass1507_joint_algebra_morita.json','w33_pass1508_contextuality_protocol.json','w33_pass1509_qutrit_hamming_m20_chart.json'):

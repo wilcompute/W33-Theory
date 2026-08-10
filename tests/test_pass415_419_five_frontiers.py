@@ -56,7 +56,7 @@ def test_pass419_hardened_chain_and_attacks():
     module = load("w33_pass419_adversarial_replication")
     payload, fixture, attack_matrix, raw = module.build_payload()
     assert payload["status"] == "PASS"
-    schema = json.loads((ROOT / "schemas/w33_pass419_hardened_handoff_v2.schema.json").read_text())
+    schema = json.loads((ROOT / "schemas/w33_pass419_hardened_handoff_v2.schema.json").read_text(encoding="utf-8"))
     jsonschema.validate(fixture, schema)
     assert module.verify_manifest(fixture) == []
     assert len(attack_matrix["attacks"]) == 12
@@ -74,6 +74,6 @@ def test_all_frozen_primary_certificates_pass():
         "w33_pass419_adversarial_replication.json",
     ]
     for name in names:
-        payload = json.loads((ROOT / "data" / name).read_text())
+        payload = json.loads((ROOT / "data" / name).read_text(encoding="utf-8"))
         assert payload["status"] == "PASS"
         assert all(payload["checks"].values())

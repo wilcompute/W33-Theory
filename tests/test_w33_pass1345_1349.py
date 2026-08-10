@@ -8,7 +8,7 @@ sys.path.insert(0, str(ROOT / "analysis"))
 
 
 def load():
-    return json.loads((DATA / "w33_pass1345_1349_basic_mixed_selector_runtime_fusion.json").read_text())
+    return json.loads((DATA / "w33_pass1345_1349_basic_mixed_selector_runtime_fusion.json").read_text(encoding="utf-8"))
 
 
 def test_release_status_and_scope():
@@ -18,7 +18,7 @@ def test_release_status_and_scope():
 
 
 def test_modular_cartan_and_basic_dimensions():
-    records = json.loads((DATA / "w33_pass1345_modular_basic_algebras.json").read_text())["records"]
+    records = json.loads((DATA / "w33_pass1345_modular_basic_algebras.json").read_text(encoding="utf-8"))["records"]
     assert {p: records[p]["basic_algebra_dimension"] for p in records} == {"2": 23, "3": 26, "5": 15}
     for record in records.values():
         assert record["cartan_equals_D_transpose_D"]
@@ -26,7 +26,7 @@ def test_modular_cartan_and_basic_dimensions():
 
 
 def test_ext_quivers_and_minimal_relations():
-    records = json.loads((DATA / "w33_pass1345_modular_basic_algebras.json").read_text())["records"]
+    records = json.loads((DATA / "w33_pass1345_modular_basic_algebras.json").read_text(encoding="utf-8"))["records"]
     assert records["2"]["quiver_and_associated_graded_relations"]["ext1_adjacency"] == [[0, 0], [0, 4]]
     assert records["3"]["quiver_and_associated_graded_relations"]["ext1_adjacency"] == [[1,0,1,0],[0,0,1,0],[1,1,1,0],[0,0,0,0]]
     counts = {
@@ -38,7 +38,7 @@ def test_ext_quivers_and_minimal_relations():
 
 def test_mixed_26x4_constants_and_closure():
     summary = load()["pass1346_mixed_hecke_triality"]
-    manifest = json.loads((ROOT / summary["mixed_constants_file"]).read_text())
+    manifest = json.loads((ROOT / summary["mixed_constants_file"]).read_text(encoding="utf-8"))
     assert summary["generated_algebra_dimension"] == 18
     assert summary["commutator_span_dimension"] == 8
     assert summary["mixed_denominator_lcm"] == 64
@@ -46,15 +46,15 @@ def test_mixed_26x4_constants_and_closure():
     assert len(manifest["left_chunks"]) == len(manifest["right_chunks"]) == 4
     left_rows=[]
     for info in manifest["left_chunks"]:
-        chunk=json.loads((ROOT/info["path"]).read_text())
+        chunk=json.loads((ROOT/info["path"]).read_text(encoding="utf-8"))
         left_rows.extend(chunk["rows"])
     assert len(left_rows)==26
     assert all(len(row)==4 and all(len(vector)==18 for vector in row) for row in left_rows)
 
 
 def test_cycle_copy_observables_are_one_hot():
-    manifest=json.loads((DATA/"w33_pass1347_cycle_copy_observables.json").read_text())
-    records={length:json.loads((ROOT/info["path"]).read_text())["record"] for length,info in manifest["record_files"].items()}
+    manifest=json.loads((DATA/"w33_pass1347_cycle_copy_observables.json").read_text(encoding="utf-8"))
+    records={length:json.loads((ROOT/info["path"]).read_text(encoding="utf-8"))["record"] for length,info in manifest["record_files"].items()}
     assert records["7"]["cosine_quadrature"]["basis_invariant_frobenius_energy"] == "131/3456"
     assert records["8"]["cosine_quadrature"]["basis_invariant_frobenius_energy"] == "5/144"
     for record in records.values():
@@ -89,7 +89,7 @@ def test_modular_triality_mechanisms_are_distinct():
 
 
 def test_rebuild_killshot_figure_is_present_and_typed():
-    text = (ROOT / "analysis" / "w33_killshot_dashboard_fig.tex").read_text()
+    text = (ROOT / "analysis" / "w33_killshot_dashboard_fig.tex").read_text(encoding="utf-8")
     assert "label{fig:killshot-dashboard}" in text
 
 

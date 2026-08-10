@@ -31,4 +31,4 @@ def test_pass424_model_checker():
 def test_frozen_current_certificates():
  names=['w33_pass420_integral_conductor_gluing.json','w33_pass421_qutrit_phase_portrait.json','w33_pass422_telemetry_coding_theorem.json','w33_pass423_hardware_inverse_compiler.json','w33_pass424_custody_model_checker.json']
  for name in names:
-  p=json.loads((ROOT/'data'/name).read_text());assert p['status']=='PASS';assert all(p['checks'].values())
+  p=json.loads((ROOT/'data'/name).read_text(encoding="utf-8"));assert p['status']=='PASS';assert all(p['checks'].values())

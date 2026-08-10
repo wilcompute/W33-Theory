@@ -2,7 +2,7 @@ from __future__ import annotations
 import hashlib,json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-def load(name):return json.loads((ROOT/'data'/name).read_text())
+def load(name):return json.loads((ROOT/'data'/name).read_text(encoding="utf-8"))
 def test_cover_augmentation_lower_bound_and_frontier():
  d=load('PART_BT3250_BT3251_COVER_AUGMENTATION_results.json');s=d['summary']
  assert s['processed_orbit_species']==10

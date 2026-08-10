@@ -222,7 +222,7 @@ class TestOutputFile:
 
     def test_json_has_required_keys(self):
         data = json.loads(
-            (ROOT / "data" / "w33_e6_antipode_pairs.json").read_text()
+            (ROOT / "data" / "w33_e6_antipode_pairs.json").read_text(encoding="utf-8")
         )
         required = [
             "T1_num_pairs", "T1_pairs_antipodal", "T1_correct",

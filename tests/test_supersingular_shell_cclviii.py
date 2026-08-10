@@ -85,7 +85,7 @@ def _prime_factors(n):
 def _load_monster_degrees():
     """Load all 194 Monster irrep dimensions from bundled data."""
     p = Path(__file__).resolve().parent.parent / "data" / "monster_degrees.json"
-    return json.loads(p.read_text())
+    return json.loads(p.read_text(encoding="utf-8"))
 
 
 # ================================================================

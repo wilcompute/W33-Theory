@@ -9,7 +9,7 @@ from pathlib import Path
 from sage.all_cmdline import *
 
 # load backtrack result
-info = json.loads(Path("PART_CVII_e6_in_e8_backtrack.json").read_text())
+info = json.loads(Path("PART_CVII_e6_in_e8_backtrack.json").read_text(encoding="utf-8"))
 if not info:
     print("No backtrack solution found")
     raise SystemExit(1)

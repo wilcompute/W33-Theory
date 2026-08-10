@@ -19,7 +19,7 @@ def test_bt865_dual_torsor_steinberg_compiler() -> None:
         check=True,
     )
     data = json.loads(
-        (ROOT / "data/bt865_dual_torsor_steinberg_compiler.json").read_text()
+        (ROOT / "data/bt865_dual_torsor_steinberg_compiler.json").read_text(encoding="utf-8")
     )
     assert all(data["checks"].values())
     assert data["chain_complex"]["dim_H1_mod3"] == 81
@@ -38,11 +38,11 @@ def test_bt865_dual_torsor_steinberg_compiler() -> None:
     assert data["direction_census"]["point_c3_directions"] == 13
     assert data["direction_census"]["line_c3_directions"] == 13
 
-    note = (ROOT / "analysis/BT865_dual_torsor_steinberg_compiler.md").read_text()
+    note = (ROOT / "analysis/BT865_dual_torsor_steinberg_compiler.md").read_text(encoding="utf-8")
     assert "H1(F3) restricted to O3" in note
     assert "rank(N), rank(N^2), rank(N^3) = 54, 27, 0" in note
-    paper = (ROOT / "photonic_holonet.tex").read_text()
-    docs = (ROOT / "docs/index.html").read_text()
+    paper = (ROOT / "photonic_holonet.tex").read_text(encoding="utf-8")
+    docs = (ROOT / "docs/index.html").read_text(encoding="utf-8")
     assert "The dual-torsor Steinberg compiler" in paper
     assert "27\\subset54\\subset81" in paper
     assert "BT858&ndash;BT865" in docs

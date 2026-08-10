@@ -231,7 +231,7 @@ class TestOutputFile:
 
     def test_json_has_required_keys(self):
         data = json.loads(
-            (ROOT / "data" / "w33_outer_twist.json").read_text()
+            (ROOT / "data" / "w33_outer_twist.json").read_text(encoding="utf-8")
         )
         required = [
             "T1_order_p", "T1_not_symplectic", "T1_twisted_form_correct",

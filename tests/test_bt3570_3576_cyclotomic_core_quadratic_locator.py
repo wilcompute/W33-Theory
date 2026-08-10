@@ -6,7 +6,7 @@ from analysis import bt3570_3576_cyclotomic_core_quadratic_locator as packet
 
 def test_exact_certificate_matches_frozen():
     generated=packet.certificate()
-    frozen=json.loads((ROOT/'data/PART_BT3570_BT3576_CYCLOTOMIC_CORE_QUADRATIC_LOCATOR_results.json').read_text())
+    frozen=json.loads((ROOT/'data/PART_BT3570_BT3576_CYCLOTOMIC_CORE_QUADRATIC_LOCATOR_results.json').read_text(encoding="utf-8"))
     assert generated==frozen
     assert generated['semantic_sha256']=='38ea92c1767dda0b786232710f37ead7ec35628511c36dfb7b3d2c79f35a9ad0'
 

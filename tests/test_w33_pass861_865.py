@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 
 def load(name):
- p=json.loads((ROOT/'data'/name).read_text())
+ p=json.loads((ROOT/'data'/name).read_text(encoding="utf-8"))
  # Some passes may have a single failing check due to arithmetic note — allow
  # but require status key present
  assert 'status' in p

@@ -297,7 +297,7 @@ def analyze() -> dict:
 def main():
     summary = analyze()
     out = ROOT / "data" / "w33_bose_mesner_algebra.json"
-    out.write_text(__import__("json").dumps(summary, indent=2))
+    out.write_text(__import__("json", encoding="utf-8").dumps(summary, indent=2))
     print("T1 n=120 rank=5 Gelfand:", summary["T1_gelfand"],
           " val_sum:", summary["T1_val_sum"],
           " mult_sum:", summary["T1_mult_sum"])

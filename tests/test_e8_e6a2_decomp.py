@@ -221,7 +221,7 @@ class TestOutputFile:
 
     def test_json_has_required_keys(self):
         data = json.loads(
-            (ROOT / "data" / "w33_e8_e6a2_decomp.json").read_text()
+            (ROOT / "data" / "w33_e8_e6a2_decomp.json").read_text(encoding="utf-8")
         )
         required = [
             "T1_n_classes", "T1_total_roots", "T1_correct",

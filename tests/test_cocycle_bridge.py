@@ -39,8 +39,8 @@ def load_data():
             r["predicted"] = int(r["predicted"])
             r["ok"] = int(r["ok"])
             edges.append(r)
-    stab = json.loads(STAB_JSON.read_text()) if STAB_JSON.exists() else {}
-    t4 = json.loads(T4_JSON.read_text()) if T4_JSON.exists() else {}
+    stab = json.loads(STAB_JSON.read_text(encoding="utf-8")) if STAB_JSON.exists() else {}
+    t4 = json.loads(T4_JSON.read_text(encoding="utf-8")) if T4_JSON.exists() else {}
     return L, edges, stab, t4
 
 

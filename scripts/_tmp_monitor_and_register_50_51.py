@@ -45,8 +45,7 @@ try:
                 f.write(f"{time.time()}: found {len(new)} new result(s) -> {new}\n")
             # Persist seen
             seen.update(new)
-            SEEN_FILE.write_text(
-                json.dumps(sorted(list(seen)), indent=2), encoding="utf-8"
+            SEEN_FILE.write_text(json.dumps(sorted(list(seen, encoding="utf-8")), indent=2), encoding="utf-8"
             )
             # Run register (commit-only)
             with open(LOG, "a", encoding="utf-8") as f:

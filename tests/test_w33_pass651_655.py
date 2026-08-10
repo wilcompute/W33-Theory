@@ -11,7 +11,7 @@ CASES=[
  ('w33_pass655_minimax_policy_stability.py','w33_pass655_minimax_policy_stability.json'),
 ]
 
-def load(name):return json.loads((ROOT/'data'/name).read_text())
+def load(name):return json.loads((ROOT/'data'/name).read_text(encoding="utf-8"))
 
 def test_certificates_are_reproducible():
     for script,_ in CASES:

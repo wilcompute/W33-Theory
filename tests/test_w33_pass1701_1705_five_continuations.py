@@ -18,7 +18,7 @@ def load_module():
 def test_frozen_certificate():
     module = load_module()
     actual = module.certificate()
-    expected = json.loads(FROZEN.read_text())
+    expected = json.loads(FROZEN.read_text(encoding="utf-8"))
     assert json.loads(json.dumps(actual)) == expected
     assert actual["status"] == "PASS"
     assert all(actual["checks"].values())

@@ -35,7 +35,7 @@ def write_authorization(root: Path, old: bytes, new: bytes, archive_data: bytes 
     }
     path = root / "data/website_migration_authorization.json"
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(authorization), encoding="utf-8")
+    path.write_text(json.dumps(authorization, encoding="utf-8"), encoding="utf-8")
     return Path("data/website_migration_authorization.json")
 
 

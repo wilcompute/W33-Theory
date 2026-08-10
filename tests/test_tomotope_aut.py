@@ -39,7 +39,7 @@ def test_write_results(tmp_path):
     summ = analyze()
     # temporarily override write location by calling analyze and writing manually
     p = tmp_path / "s.json"
-    p.write_text(json.dumps(summ))
+    p.write_text(json.dumps(summ, encoding="utf-8"))
     assert p.exists()
 
 

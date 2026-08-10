@@ -44,11 +44,11 @@ class TestBridgeMetadata:
         assert (ROOT / "PART_CCXXXV_leech_golay_witt_results.json").exists()
 
     def test_json_verified(self):
-        d = json.loads((ROOT / "PART_CCXXXV_leech_golay_witt_results.json").read_text())
+        d = json.loads((ROOT / "PART_CCXXXV_leech_golay_witt_results.json").read_text(encoding="utf-8"))
         assert d["Verified"] is True
 
     def test_json_checks_passed_equals_total(self):
-        d = json.loads((ROOT / "PART_CCXXXV_leech_golay_witt_results.json").read_text())
+        d = json.loads((ROOT / "PART_CCXXXV_leech_golay_witt_results.json").read_text(encoding="utf-8"))
         assert d["checks_passed"] == d["checks_total"]
 
 

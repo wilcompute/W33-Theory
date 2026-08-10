@@ -18,7 +18,7 @@ def test_bt859_bell_compass_parabolic_router() -> None:
         check=True,
     )
     data = json.loads(
-        (ROOT / "data/bt859_bell_compass_parabolic_router.json").read_text()
+        (ROOT / "data/bt859_bell_compass_parabolic_router.json").read_text(encoding="utf-8")
     )
     assert all(data["checks"].values())
     assert data["gap"]["line_projective_orbits"] == [162, 162, 324, 648]
@@ -29,8 +29,8 @@ def test_bt859_bell_compass_parabolic_router() -> None:
     assert {
         row["word"] for row in data["prefix_decoder"].values()
     } == {"0", "10", "110", "111"}
-    paper = (ROOT / "photonic_holonet.tex").read_text()
-    docs = (ROOT / "docs/index.html").read_text()
+    paper = (ROOT / "photonic_holonet.tex").read_text(encoding="utf-8")
+    docs = (ROOT / "docs/index.html").read_text(encoding="utf-8")
     assert "Bell--compass parabolic router" in paper
     assert "162_L+162_R+324+648" in paper
     assert "BT857 and BT859" in docs

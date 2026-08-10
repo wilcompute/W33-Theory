@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 DATA=ROOT/'data/PART_4065_4072_EXPLICIT_QSP_DIRAC_MAGIC_GAUGE_BONKERS.json'
-def load():return json.loads(DATA.read_text())
+def load():return json.loads(DATA.read_text(encoding="utf-8"))
 def test_five_fronts():
  x=load();assert x['semantic_sha256']=='342e8e7ae8f3ef06750716a1d3bdb25f2db432ee55e3ca35482086e16d6544ed'
  assert x['pass4065_explicit_qsp_phases']['max_top_left_residual']<1.3e-15

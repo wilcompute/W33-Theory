@@ -11,7 +11,7 @@ MOD=importlib.util.module_from_spec(SPEC);SPEC.loader.exec_module(MOD)
 @lru_cache(maxsize=1)
 def result():return MOD.verify()
 
-def cert():return json.loads(CERT.read_text())
+def cert():return json.loads(CERT.read_text(encoding="utf-8"))
 
 def test_full_exact_verifier():assert result()['all_checks_hold']
 def test_counterdiabatic_actions():

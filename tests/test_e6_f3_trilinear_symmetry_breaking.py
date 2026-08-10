@@ -367,7 +367,7 @@ def test_e6_f3_trilinear_symmetry_breaking_closed_form_fixture(tmp_path: Path):
     in_json = tmp_path / "e6_f3_trilinear_map.json"
     out_json = tmp_path / "out.json"
     out_md = tmp_path / "out.md"
-    in_json.write_text(json.dumps(payload), encoding="utf-8")
+    in_json.write_text(json.dumps(payload, encoding="utf-8"), encoding="utf-8")
 
     cmd = [
         sys.executable,

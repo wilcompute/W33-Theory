@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
-def load(name):return json.loads((ROOT/'data'/name).read_text())
+def load(name):return json.loads((ROOT/'data'/name).read_text(encoding="utf-8"))
 
 def test_paired_simplex_hexacode_golay():
     c=load('PART_W33_PASS4592_PAIRED_AXES_SIMPLEX_HEXACODE_GOLAY.json')

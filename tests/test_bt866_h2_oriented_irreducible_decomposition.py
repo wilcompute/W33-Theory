@@ -19,7 +19,7 @@ def test_bt866_h2_oriented_irreducible_decomposition() -> None:
         check=True,
     )
     data = json.loads(
-        (ROOT / "data/bt866_h2_oriented_irreducible_decomposition.json").read_text()
+        (ROOT / "data/bt866_h2_oriented_irreducible_decomposition.json").read_text(encoding="utf-8")
     )
     assert all(data["checks"].values())
     assert data["plain_line_module"]["decomposition_degrees"] == [1, 15, 24]
@@ -33,10 +33,10 @@ def test_bt866_h2_oriented_irreducible_decomposition() -> None:
 
     note = (
         ROOT / "analysis/BT866_h2_oriented_irreducible_decomposition.md"
-    ).read_text()
+    ).read_text(encoding="utf-8")
     assert "5_{\\omega}+5_{\\omega^2}+30" in note
-    paper = (ROOT / "photonic_holonet.tex").read_text()
-    docs = (ROOT / "docs/index.html").read_text()
+    paper = (ROOT / "photonic_holonet.tex").read_text(encoding="utf-8")
+    docs = (ROOT / "docs/index.html").read_text(encoding="utf-8")
     assert "The oriented timetable spectrum" in paper
     assert "1-81+(5+5+30)=-40=-v" in paper
     assert "BT866: the oriented timetable carrier" in docs

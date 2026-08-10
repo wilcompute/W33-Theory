@@ -13,7 +13,7 @@ CERT = ROOT / "data" / "w33_pass1335_brauer_tree_hecke_corner.json"
 
 
 def test_frozen_certificate_has_closed_ext_boundary():
-    data = json.loads(CERT.read_text())
+    data = json.loads(CERT.read_text(encoding="utf-8"))
     assert data["status"] == "PASS"
     assert len(data["group_block_records"]) == 3
     assert data["outer_81_relation"]["ordinary_positions"] == [24, 25]
@@ -27,7 +27,7 @@ def test_frozen_certificate_has_closed_ext_boundary():
 
 
 def test_hecke_corner_and_color_boundary():
-    data = json.loads(CERT.read_text())
+    data = json.loads(CERT.read_text(encoding="utf-8"))
     literal = data["literal_432_character"]
     assert literal["hecke_rank"] == 26
     assert literal["cyclic_defect_corner_dimension"] == 9
@@ -61,6 +61,6 @@ def test_gap_witness_reproduces_certificate():
         timeout=180,
     )
     assert "PASS 1335 COMPLETE" in completed.stdout
-    data = json.loads(CERT.read_text())
+    data = json.loads(CERT.read_text(encoding="utf-8"))
     assert data["failed_checks"] == []
     assert data["check_count"] == 32

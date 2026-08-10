@@ -4,7 +4,7 @@ ROOT=Path(__file__).resolve().parents[1]
 CERT=ROOT/'data'/'w33_pass1400_1404_five_frontiers.json'
 REPORT=ROOT/'analysis'/'BT1400_BT1404_five_frontiers.md'
 DIGEST='6a6f5e3fb2eb441214057186c974573e99e983e9b665994842538b2647587b2b'
-def load(): return json.loads(CERT.read_text())
+def load(): return json.loads(CERT.read_text(encoding="utf-8"))
 def test_frozen():
  d=load(); assert d['schema']=='w33.pass1400_1404.five_frontiers.v1' and d['status']=='PASS'
  assert hashlib.sha256(CERT.read_bytes()).hexdigest()==DIGEST
@@ -30,9 +30,9 @@ def test_1404():
  assert p['local']=={'2':False,'3':False,'5':True}
 def test_sources():
  parts=sorted((ROOT/'analysis'/'_selector_five_frontiers_impl.src').glob('part*.pyfrag'))
- assert len(parts)==9 and sum(len(p.read_text().splitlines()) for p in parts)==678
+ assert len(parts)==9 and sum(len(p.read_text(encoding="utf-8").splitlines()) for p in parts)==678
 def test_report_digest_is_current():
- text=REPORT.read_text()
+ text=REPORT.read_text(encoding="utf-8")
  assert DIGEST in text
  assert 'a2e8a580576d6c38cb584f402c1d16ee49a029a4fe545cf239d39043fc890afd' not in text
  assert (ROOT/'tools'/'check_pass1400_1404_worker.py').exists()

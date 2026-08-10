@@ -92,7 +92,7 @@ def test_explicit_runtime_gsets() -> None:
 
 
 def test_bt982_basis_is_materialized() -> None:
-    data = json.loads((ROOT / "data/bt982_explicit_integral_e8_basis.json").read_text())
+    data = json.loads((ROOT / "data/bt982_explicit_integral_e8_basis.json").read_text(encoding="utf-8"))
     assert data["det_B"] == 1
     assert data["matches_standard_e8_cartan"] is True
     assert len(data["final_integral_basis_B"]) == 8
@@ -106,5 +106,5 @@ def test_mapper_uses_materialized_basis_and_closed_controls() -> None:
 
 
 def test_certificate_matches_recomputation() -> None:
-    certificate = json.loads((ROOT / "data/PART_2026_07_10_LEVI_NEXT5_results.json").read_text())
+    certificate = json.loads((ROOT / "data/PART_2026_07_10_LEVI_NEXT5_results.json").read_text(encoding="utf-8"))
     assert certificate["status"] == result()["status"] == "PASS"

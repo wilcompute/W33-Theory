@@ -40,13 +40,13 @@ class TestBridgeMetadata:
 
     def test_json_verified(self):
         d = json.loads(
-            (ROOT / "PART_CCXXXVIII_exceptional_lie_algebras_results.json").read_text()
+            (ROOT / "PART_CCXXXVIII_exceptional_lie_algebras_results.json").read_text(encoding="utf-8")
         )
         assert d["Verified"] is True
 
     def test_json_checks_equal(self):
         d = json.loads(
-            (ROOT / "PART_CCXXXVIII_exceptional_lie_algebras_results.json").read_text()
+            (ROOT / "PART_CCXXXVIII_exceptional_lie_algebras_results.json").read_text(encoding="utf-8")
         )
         assert d["checks_passed"] == d["checks_total"]
 

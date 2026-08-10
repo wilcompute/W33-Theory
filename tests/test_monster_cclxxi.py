@@ -325,7 +325,7 @@ def test_A12_monster_order_divisible_by_all_baby_primes():
 @pytest.fixture(scope="module")
 def result_json():
     assert JSON_PATH.exists(), f"JSON not found: {JSON_PATH}"
-    return json.loads(JSON_PATH.read_text())
+    return json.loads(JSON_PATH.read_text(encoding="utf-8"))
 
 
 def test_json_exists():

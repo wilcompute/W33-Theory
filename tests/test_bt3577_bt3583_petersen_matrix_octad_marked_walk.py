@@ -23,4 +23,4 @@ def test_real_proof_canary():
  m=load(CANARY,'p3580');x=m.run();assert x['compatibility_vertices']==52;assert x['maximum_clique']==11;assert x['proof_sha256']=='a07611183bd01fad1b60134aebba7dc3a8ec0ce7bc29fd7c46ea8c4146010b50';assert x['record_sha256']=='2a984b9a2f51646691657a8dfe5d01b9e33496f75500ba9b79abdd5a68385390'
 
 def test_frozen_semantic_result():
- m=load(SRC,'p3583e');got=json.loads(json.dumps(m.build_result()));frozen=json.loads((ROOT/'data/PART_BT3577_BT3583_PETERSEN_MATRIX_OCTAD_MARKED_WALK_results.json').read_text());assert got==frozen;assert got['semantic_sha256']=='2a4a06836164c6eb92d971aa18ecd1369990c7bf501ae1aaf342e7b5e5bc23a4'
+ m=load(SRC,'p3583e');got=json.loads(json.dumps(m.build_result()));frozen=json.loads((ROOT/'data/PART_BT3577_BT3583_PETERSEN_MATRIX_OCTAD_MARKED_WALK_results.json').read_text(encoding="utf-8"));assert got==frozen;assert got['semantic_sha256']=='2a4a06836164c6eb92d971aa18ecd1369990c7bf501ae1aaf342e7b5e5bc23a4'

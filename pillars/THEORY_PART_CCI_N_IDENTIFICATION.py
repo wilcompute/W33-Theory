@@ -291,7 +291,7 @@ def group_fingerprint(perms: List[tuple]) -> dict:
 
 def load_N_fingerprint() -> dict:
     """Load N from N_subgroup.json and compute its fingerprint."""
-    N = [tuple(n) for n in json.loads((ROOT / "N_subgroup.json").read_text())]
+    N = [tuple(n) for n in json.loads((ROOT / "N_subgroup.json").read_text(encoding="utf-8"))]
     return group_fingerprint(N)
 
 

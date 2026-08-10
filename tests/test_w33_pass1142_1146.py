@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 DATA=ROOT/"data"/"w33_pass1142_1146_exact_release.json"
 
 def load():
-    return json.loads(DATA.read_text())
+    return json.loads(DATA.read_text(encoding="utf-8"))
 
 def test_hecke_wedderburn_certificate():
     d=load(); h=d["hecke"]

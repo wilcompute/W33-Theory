@@ -66,7 +66,7 @@ def test_copy_selector_boundary():
 
 
 def test_json_certificate_matches_execution():
-    frozen = json.loads((ROOT / "data" / "w33_pass1330_1334_modular_triality_cycle_atlas.json").read_text())
+    frozen = json.loads((ROOT / "data" / "w33_pass1330_1334_modular_triality_cycle_atlas.json").read_text(encoding="utf-8"))
     assert frozen == payload()
 
 
@@ -82,7 +82,7 @@ def test_central_blocks_are_executably_reconstructed():
 
 def test_gap_atlasrep_certificate():
     certificate = json.loads(
-        (ROOT / "data" / "w33_pass1333_atlasrep_species20.json").read_text()
+        (ROOT / "data" / "w33_pass1333_atlasrep_species20.json").read_text(encoding="utf-8")
     )
     assert certificate["status"] == "PASS"
     assert certificate["group_order"] == 51840
@@ -106,11 +106,11 @@ def test_integrator_is_idempotent(tmp_path):
     shutil.copy(insert, analysis / insert.name)
     shutil.copy(ROOT / "tools" / "integrate_pass1330_1334.py", tools / "integrate_pass1330_1334.py")
     for name in ("w33_paper.tex", "photonic_holonet.tex"):
-        (tmp_path / name).write_text("\\documentclass{article}\n\\begin{document}\nX\n\\end{document}\n")
+        (tmp_path / name).write_text("\\documentclass{article}\n\\begin{document}\nX\n\\end{document}\n", encoding="utf-8")
     subprocess.run([sys.executable, str(tools / "integrate_pass1330_1334.py")], cwd=tmp_path, check=True)
     subprocess.run([sys.executable, str(tools / "integrate_pass1330_1334.py")], cwd=tmp_path, check=True)
     for name in ("w33_paper.tex", "photonic_holonet.tex"):
-        text = (tmp_path / name).read_text()
+        text = (tmp_path / name).read_text(encoding="utf-8")
         assert text.count(r"\input{analysis/BT1330_BT1334_modular_triality_cycle_atlas}") == 1
 
 
@@ -121,9 +121,7 @@ def test_insert_compiles_minimally(tmp_path):
         ROOT / "analysis" / "BT1330_BT1334_modular_triality_cycle_atlas.tex",
         tmp_path / "insert.tex",
     )
-    (tmp_path / "main.tex").write_text(
-        "\\documentclass{article}\n\\begin{document}\n\\input{insert}\n\\end{document}\n"
-    )
+    (tmp_path / "main.tex").write_text("\\documentclass{article}\n\\begin{document}\n\\input{insert}\n\\end{document}\n", encoding="utf-8")
     subprocess.run(
         ["pdflatex", "-interaction=nonstopmode", "-halt-on-error", "main.tex"],
         cwd=tmp_path,

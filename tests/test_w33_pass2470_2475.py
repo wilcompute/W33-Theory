@@ -2,7 +2,7 @@ import importlib.util,json,hashlib
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def load(name):
- p=ROOT/'data'/name;d=json.loads(p.read_text());x=dict(d);x.pop('sha256_without_hash_field',None);assert hashlib.sha256(json.dumps(x,sort_keys=True,separators=(',',':')).encode()).hexdigest()==d['sha256_without_hash_field'];return d
+ p=ROOT/'data'/name;d=json.loads(p.read_text(encoding="utf-8"));x=dict(d);x.pop('sha256_without_hash_field',None);assert hashlib.sha256(json.dumps(x,sort_keys=True,separators=(',',':')).encode()).hexdigest()==d['sha256_without_hash_field'];return d
 def test_u6_union():
  d=load('w33_pass2470_multishard_u6_union_engine.json');assert d['runs']['8']['unique_representatives']==16762010;assert d['runs']['8']['collision_unmarked_union_representatives']==11354885
 def test_signature_radius4():

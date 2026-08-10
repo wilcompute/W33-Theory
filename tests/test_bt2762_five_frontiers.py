@@ -46,7 +46,7 @@ def test_d12_contract_and_magic_handshake():
 
 
 def test_frozen_certificates_are_complete():
-    cert = json.loads((ROOT / "data" / "PART_BT2762_BT2766_FIVE_FRONTIERS_results.json").read_text())
+    cert = json.loads((ROOT / "data" / "PART_BT2762_BT2766_FIVE_FRONTIERS_results.json").read_text(encoding="utf-8"))
     atlas = json.loads(gzip.decompress((ROOT / 'data' / 'PART_BT2764_SP43_GEOMETRIC_GATE_CLASS_ATLAS.json.gz').read_bytes()))
     assert all(cert["checks"].values())
     assert cert["centralizer"]["structure"] == "C6 x C3 x S3"
@@ -61,7 +61,7 @@ def test_frozen_certificates_are_complete():
 
 
 def test_physical_qutrit_sum_permutation():
-    cert = json.loads((ROOT / "data" / "PART_BT2762_BT2766_FIVE_FRONTIERS_results.json").read_text())
+    cert = json.loads((ROOT / "data" / "PART_BT2762_BT2766_FIVE_FRONTIERS_results.json").read_text(encoding="utf-8"))
     perm = cert["physical_sum_compiler"]["permutation"]
     assert sorted(perm) == list(range(9))
     for f in range(3):

@@ -15,7 +15,7 @@ def test_exact_certificate():
     assert all(observed["checks"].values())
 
 def test_manifest_firewalls():
-    manifest=json.loads(RESULT.read_text())
+    manifest=json.loads(RESULT.read_text(encoding="utf-8"))
     assert manifest["status"].endswith("PENDING")
     assert "Monster" in " ".join(manifest["pending"])
     assert "node count alone cannot alter vacuum c" in manifest["headline_results"]["photon_null_processor"]

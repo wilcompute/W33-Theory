@@ -15,15 +15,15 @@ def digest(d):
 
 def test_frozen_semantic_hashes():
     for path,h in CERTS.items():
-        d=json.loads((ROOT/path).read_text())
+        d=json.loads((ROOT/path).read_text(encoding="utf-8"))
         assert d['sha256_without_hash_field']==h==digest(d)
         assert all(d['checks'].values())
 
 def test_ree_code_and_family_spectra():
-    r=json.loads((ROOT/'data/w33_pass2300_ree_tits_divisible_code.json').read_text())
+    r=json.loads((ROOT/'data/w33_pass2300_ree_tits_divisible_code.json').read_text(encoding="utf-8"))
     assert sum(r['complete_hyperplane_intersection_spectrum'].values())==551881
     assert r['projective_code']['weight_gcd']==9
-    f=json.loads((ROOT/'data/w33_pass2304_known_q27_symplectic_spread_spectra.json').read_text())
+    f=json.loads((ROOT/'data/w33_pass2304_known_q27_symplectic_spread_spectra.json').read_text(encoding="utf-8"))
     assert f['complete_results']['regular']['projective_code']['parameters']=='[730,4]_27'
     assert f['complete_results']['regular']['projective_code']['weight_gcd']==27
     for name in ('kantor','thas_payne','ree_tits'):
@@ -31,7 +31,7 @@ def test_ree_code_and_family_spectra():
         assert f['complete_results'][name]['projective_code']['weight_gcd']==9
 
 def test_complete_hom_outer_split():
-    d=json.loads((ROOT/'data/w33_pass2301_complete_quadratic_hom_bases.json').read_text())
+    d=json.loads((ROOT/'data/w33_pass2301_complete_quadratic_hom_bases.json').read_text(encoding="utf-8"))
     assert d['total_dimensions']=={'Sym2':26,'Lambda2':24,'combined':50}
     for kind in ('Sym','Lambda'):
         for target,m in d['full_PSp_Hom_dimensions'][kind].items():

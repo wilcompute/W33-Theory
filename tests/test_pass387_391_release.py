@@ -86,16 +86,16 @@ def test_pass391_prediction_registry_is_frozen_and_honest():
 
 def test_committed_outputs_are_verified():
     pass387 = json.loads(
-        (ROOT / "data/w33_pass387_pluecker_duality_certificate.json").read_text()
+        (ROOT / "data/w33_pass387_pluecker_duality_certificate.json").read_text(encoding="utf-8")
     )
     pass388 = json.loads(
-        (ROOT / "data/w33_pass388_css_matrix_release.json").read_text()
+        (ROOT / "data/w33_pass388_css_matrix_release.json").read_text(encoding="utf-8")
     )
     pass390 = json.loads(
-        (ROOT / "data/w33_pass390_choi_visibility_results.json").read_text()
+        (ROOT / "data/w33_pass390_choi_visibility_results.json").read_text(encoding="utf-8")
     )
     pass391 = json.loads(
-        (ROOT / "data/w33_prediction_registry_v1.json").read_text()
+        (ROOT / "data/w33_prediction_registry_v1.json").read_text(encoding="utf-8")
     )
     assert pass387["verified"] is True
     assert pass388["verified"] is True

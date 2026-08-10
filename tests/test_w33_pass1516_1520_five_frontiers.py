@@ -12,7 +12,7 @@ EXPECTED_CERT_SHA = "603380fbc9370b97b08273a67785b43f9c52960610d84661f99228bbe02
 
 
 def payload() -> dict:
-    return json.loads(CERT.read_text())
+    return json.loads(CERT.read_text(encoding="utf-8"))
 
 
 def load_worker():
@@ -85,8 +85,8 @@ def test_pass1520_equivariant_morita_refinement():
 
 
 def test_report_and_insert_preserve_boundaries():
-    report = (ROOT / "analysis" / "BT1516_BT1520_five_frontiers.md").read_text()
-    insert = (ROOT / "paper" / "sections" / "sec_bt1516_bt1520_five_frontiers.tex").read_text()
+    report = (ROOT / "analysis" / "BT1516_BT1520_five_frontiers.md").read_text(encoding="utf-8")
+    insert = (ROOT / "paper" / "sections" / "sec_bt1516_bt1520_five_frontiers.tex").read_text(encoding="utf-8")
     assert EXPECTED_CERT_SHA in report
     assert r"complete Ext\(^2\) or Yoneda multiplication table" in report
     assert "no global rank-preserving" in report

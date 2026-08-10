@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 
 def load(name):
- p=json.loads((ROOT/'data'/name).read_text());assert p['status']=='PASS';assert all(p['checks'].values());return p
+ p=json.loads((ROOT/'data'/name).read_text(encoding="utf-8"));assert p['status']=='PASS';assert all(p['checks'].values());return p
 
 def test_pass856_h27_middle_layer():
  p=load('w33_pass856_h27_middle_layer_identification.json')

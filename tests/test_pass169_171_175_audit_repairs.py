@@ -29,7 +29,7 @@ def test_repaired_witness_runs(number):
 
 def test_pass169_orbital_is_not_selected_by_intersections():
     payload = json.loads(
-        (ROOT / "data" / "w33_pass169_canonical_cycles.json").read_text()
+        (ROOT / "data" / "w33_pass169_canonical_cycles.json").read_text(encoding="utf-8")
     )
     assert payload["status"] == "PASS"
     assert payload["partner_rule"]["four_partner_signature"] == {
@@ -44,7 +44,7 @@ def test_pass169_orbital_is_not_selected_by_intersections():
 
 def test_pass171_headline_checks_are_executable():
     payload = json.loads(
-        (ROOT / "data" / "w33_pass171_even_q_rank_ladder.json").read_text()
+        (ROOT / "data" / "w33_pass171_even_q_rank_ladder.json").read_text(encoding="utf-8")
     )
     assert payload["status"] == "PASS"
     assert payload["table"]["16"]["rank2_M"] == 1890
@@ -63,7 +63,7 @@ def test_pass171_headline_checks_are_executable():
 
 def test_pass175_shell_generates_the_full_dual_lattice():
     payload = json.loads(
-        (ROOT / "data" / "w33_pass175_dual_shell_720.json").read_text()
+        (ROOT / "data" / "w33_pass175_dual_shell_720.json").read_text(encoding="utf-8")
     )
     assert payload["status"] == "PASS"
     structure = payload["structure"]

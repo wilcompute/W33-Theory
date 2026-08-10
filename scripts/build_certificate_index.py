@@ -162,7 +162,7 @@ def main(argv: list[str]) -> int:
         if len(keep[v]) > 4:
             where += f" (+{len(keep[v]) - 4} more)"
         lines.append(f"| `{v}` | {where} |")
-    OUT.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    OUT.write_text("\n".join(lines, encoding="utf-8") + "\n", encoding="utf-8")
     print(f"wrote {OUT.name}: {len(keep)} values from "
           f"{len(list(DATA.glob('*.json')))} certificates")
     return 0

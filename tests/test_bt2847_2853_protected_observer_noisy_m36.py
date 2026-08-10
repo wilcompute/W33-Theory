@@ -47,8 +47,8 @@ def test_adaptive_and_soft_decoder_boundaries() -> None:
 
 
 def test_rtl_contracts_present() -> None:
-    encoder = (ROOT / "rtl" / "w33_pass2848_affine_square_feature_encoder.sv").read_text()
-    decoder = (ROOT / "rtl" / "w33_pass2853_affine_square_nn_decoder.sv").read_text()
+    encoder = (ROOT / "rtl" / "w33_pass2848_affine_square_feature_encoder.sv").read_text(encoding="utf-8")
+    decoder = (ROOT / "rtl" / "w33_pass2853_affine_square_nn_decoder.sv").read_text(encoding="utf-8")
     assert "feature[11]" in encoder and "code[2*i+1]" in encoder
     assert "candidate_index == 7'd80" in decoder
     assert "corrected_valid" in decoder

@@ -266,7 +266,7 @@ print(f"36 double-sixes:     |Stab| = {stab_ds} = {WE6}/ 36")
 print("\n═══ PART 4: Verify with Tomotope Data ═══")
 
 # Load N
-N_perms = [tuple(n) for n in json.loads((ROOT / "N_subgroup.json").read_text())]
+N_perms = [tuple(n) for n in json.loads((ROOT / "N_subgroup.json").read_text(encoding="utf-8"))]
 print(f"|N| = {len(N_perms)}")
 
 # Load flag→QID map

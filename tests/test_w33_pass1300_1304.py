@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 
 def load(name):
-    return json.loads((ROOT/'data'/name).read_text())
+    return json.loads((ROOT/'data'/name).read_text(encoding="utf-8"))
 
 def test_pass1300_sign_twist_intertwiner():
     d=load('w33_pass1300_81_sign_twist_intertwiner.json')

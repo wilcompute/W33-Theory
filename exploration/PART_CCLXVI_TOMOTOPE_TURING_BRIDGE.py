@@ -105,7 +105,7 @@ def load_edge_orbits() -> list:
               / "axis_bundle_content"
               / "TOE_tomotope_axis_block_twist_v02_20260228"
               / "tomotope_edge_orbits_12.json")
-    data = json.loads(bundle.read_text())
+    data = json.loads(bundle.read_text(encoding="utf-8"))
     return data["orbits"]
 
 def load_vertex_orbits() -> list:
@@ -113,21 +113,21 @@ def load_vertex_orbits() -> list:
               / "axis_bundle_content"
               / "TOE_tomotope_axis_block_twist_v02_20260228"
               / "tomotope_vertex_orbits_4.json")
-    return json.loads(bundle.read_text())["orbits"]
+    return json.loads(bundle.read_text(encoding="utf-8"))["orbits"]
 
 def load_face_orbits() -> list:
     bundle = (Path(__file__).resolve().parent.parent
               / "axis_bundle_content"
               / "TOE_tomotope_axis_block_twist_v02_20260228"
               / "tomotope_face_orbits_16.json")
-    return json.loads(bundle.read_text())["orbits"]
+    return json.loads(bundle.read_text(encoding="utf-8"))["orbits"]
 
 def load_cell_orbits() -> list:
     bundle = (Path(__file__).resolve().parent.parent
               / "axis_bundle_content"
               / "TOE_tomotope_axis_block_twist_v02_20260228"
               / "tomotope_cell_orbits_8.json")
-    return json.loads(bundle.read_text())["orbits"]
+    return json.loads(bundle.read_text(encoding="utf-8"))["orbits"]
 
 # ═══════════════════════════════════════════════════════════════════
 #  MAIN

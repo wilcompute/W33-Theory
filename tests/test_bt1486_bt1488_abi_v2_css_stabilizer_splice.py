@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def run_tool(script: str, data: str) -> dict:
     subprocess.run([sys.executable, str(ROOT / "tools" / script)], check=True, cwd=ROOT)
-    return json.loads((ROOT / "data" / data).read_text())
+    return json.loads((ROOT / "data" / data).read_text(encoding="utf-8"))
 
 
 def test_bt1484_e6_dag_claim_table_v2_rerunnable():
@@ -91,10 +91,10 @@ def test_bt1488_paper_splice_v2_manifest():
 def test_bt1486_bt1488_publication_anchors():
     analysis = (
         ROOT / "analysis" / "BT1486_BT1488_abi_v2_css_stabilizer_splice.md"
-    ).read_text()
-    insert = (ROOT / "analysis" / "BT1486_BT1488_holonet_insert.tex").read_text()
-    manifest = (ROOT / "analysis" / "BT1488_paper_splice_v2_manifest.md").read_text()
-    focused = (ROOT / "scripts" / "run_focused_bridge_tests.py").read_text()
+    ).read_text(encoding="utf-8")
+    insert = (ROOT / "analysis" / "BT1486_BT1488_holonet_insert.tex").read_text(encoding="utf-8")
+    manifest = (ROOT / "analysis" / "BT1488_paper_splice_v2_manifest.md").read_text(encoding="utf-8")
+    focused = (ROOT / "scripts" / "run_focused_bridge_tests.py").read_text(encoding="utf-8")
 
     assert "Fano-native" in analysis
     assert "BT1486 reruns the CSS join" in insert

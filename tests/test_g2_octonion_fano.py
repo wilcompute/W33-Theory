@@ -229,7 +229,7 @@ class TestOutputFile:
 
     def test_json_has_required_keys(self):
         data = json.loads(
-            (ROOT / "data" / "w33_g2_octonion_fano.json").read_text()
+            (ROOT / "data" / "w33_g2_octonion_fano.json").read_text(encoding="utf-8")
         )
         required = [
             "T1_deriv_dim", "T1_rank", "T1_nullity", "T1_correct",

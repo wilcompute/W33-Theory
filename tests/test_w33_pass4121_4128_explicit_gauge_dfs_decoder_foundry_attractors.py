@@ -11,7 +11,7 @@ VERIFY=ROOT/"analysis/w33_pass4121_4128_explicit_gauge_dfs_decoder_foundry_attra
 
 
 def test_certificate_boundaries_and_status():
-    d=json.loads(CERT.read_text())
+    d=json.loads(CERT.read_text(encoding="utf-8"))
     assert d["status"]=="PASS_EXACT_FULL_CARRIER_ANOMALY_CORRECTION_RELATIONAL_DFS_DECODER_FOUNDRY_AUDIT_ATTRACTOR_ORBITS_ISING_MIRROR_EP"
     assert d["pass4121_explicit_145_gauge_matrices"]["full_carrier_anomalies"]["SU3_cubed"]==-28
     assert d["pass4123_graph_aware_decoder"]["maximum_candidate_edges"]==20

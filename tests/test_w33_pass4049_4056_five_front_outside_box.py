@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 DATA=ROOT/'data/PART_4049_4056_FIVE_FRONT_OUTSIDE_BOX.json'
-def load():return json.loads(DATA.read_text())
+def load():return json.loads(DATA.read_text(encoding="utf-8"))
 def test_five_fronts():
  x=load();assert x['semantic_sha256']=='5f99f47f1a899b76c5e3e464a56440a63f51396a94c5d1ba9978ca65303b6946'
  assert x['pass4049_minimal_bounded_qsvt_compiler']['minimal_degree_five']['query_degree']==5

@@ -225,6 +225,6 @@ def _build_results():
 if __name__ == "__main__":
     results = _build_results()
     out = ROOT / "PART_CCXLVII_ftheory_elliptic_results.json"
-    out.write_text(__import__("json").dumps(results, indent=2), encoding="utf-8")
+    out.write_text(__import__("json", encoding="utf-8").dumps(results, indent=2), encoding="utf-8")
     print(f"Verified={Verified}  checks={results['checks_passed']}/{results['checks_total']}")
     print(f"Wrote {out}")

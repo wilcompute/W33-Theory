@@ -13,7 +13,7 @@ def run_tool(name: str) -> dict:
         'bt1420_d4_quartic_injection_algebra.py': 'bt1420_d4_quartic_injection_algebra.json',
         'bt1421_s3_gauge_frontend_optimizer_frontier.py': 'bt1421_s3_gauge_frontend_optimizer_frontier.json',
     }[name]
-    return json.loads((ROOT / 'data' / data_name).read_text())
+    return json.loads((ROOT / 'data' / data_name).read_text(encoding="utf-8"))
 
 
 def test_bt1419_symbolic_unitaries():

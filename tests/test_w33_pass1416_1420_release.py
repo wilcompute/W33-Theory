@@ -9,15 +9,15 @@ def load(path,name):
 
 def test_frozen_certificates_pass():
     for name in ('w33_pass1416_cokernel_signed_turn_intertwiner.json','w33_pass1417_exact_cover_orbit_frontier.json','w33_pass1418_mod2_bridge_loewy_flag.json'):
-        p=json.loads((ROOT/'data'/name).read_text())
+        p=json.loads((ROOT/'data'/name).read_text(encoding="utf-8"))
         assert p['status']=='PASS'
         assert all(p['checks'].values())
 
 def test_key_release_values():
-    p=json.loads((ROOT/'data'/'w33_pass1416_cokernel_signed_turn_intertwiner.json').read_text())
+    p=json.loads((ROOT/'data'/'w33_pass1416_cokernel_signed_turn_intertwiner.json').read_text(encoding="utf-8"))
     assert p['dimensions']['cokernel_Q']==15
     assert p['dimensions']['rank_F_F2']==14
-    q=json.loads((ROOT/'data'/'w33_pass1417_exact_cover_orbit_frontier.json').read_text())
+    q=json.loads((ROOT/'data'/'w33_pass1417_exact_cover_orbit_frontier.json').read_text(encoding="utf-8"))
     assert q['lower_bounds']['from_16_distinct_C2_orbits_plus_four_other_types']==226800
     assert set(q['explicit_orbit_types'])=={'C2','C4','C2xC2','D8','C4xC2'}
 

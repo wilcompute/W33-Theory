@@ -13,12 +13,12 @@ CASES=[
 def checked(i):
     script,ledger=CASES[i]
     subprocess.run([sys.executable,str(ROOT/'analysis'/script),'--check'],check=True,timeout=180,capture_output=True,text=True)
-    return json.loads((ROOT/'data'/ledger).read_text())
+    return json.loads((ROOT/'data'/ledger).read_text(encoding="utf-8"))
 
 def test_pass685_hybrid_symbolic_complex():
     # The workflow runs the Pass 685 --check separately. Read the locked ledger here so
     # the focused pytest suite uses only four child Python processes in constrained CI.
-    p=json.loads((ROOT/'data'/CASES[4][1]).read_text());assert p['status']=='PASS';assert p['hybrid_seven_dimensional_complex']['declared_integer_atlas_cells']==7776;assert p['hybrid_seven_dimensional_complex']['distinct_root_phases']==22;assert p['exact_nominal_science_chamber']['integer_box_mismatches']==0;assert p['calibration_redesign']['tested_coefficients'][-1]['unique_pair']
+    p=json.loads((ROOT/'data'/CASES[4][1]).read_text(encoding="utf-8"));assert p['status']=='PASS';assert p['hybrid_seven_dimensional_complex']['declared_integer_atlas_cells']==7776;assert p['hybrid_seven_dimensional_complex']['distinct_root_phases']==22;assert p['exact_nominal_science_chamber']['integer_box_mismatches']==0;assert p['calibration_redesign']['tested_coefficients'][-1]['unique_pair']
 
 def test_pass681_h1_rigidity_and_scalar_h2():
     p=checked(0);assert p['status']=='PASS';assert p['degree_one']['H1_dimension']==0;assert p['degree_two']['ambient_lower_bound_dimension']==1;assert p['checks']['selected_relations_sufficient_by_dimension_squeeze']

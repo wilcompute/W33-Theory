@@ -93,7 +93,7 @@ def _load_monster_irreps_via_gap() -> list | None:
             Path(__file__).resolve().parents[1] / "data" / "monster_degrees.json"
         )
         if static_path.exists():
-            vals = json.loads(static_path.read_text())
+            vals = json.loads(static_path.read_text(encoding="utf-8"))
             return [int(x) for x in vals]
     except Exception:
         pass

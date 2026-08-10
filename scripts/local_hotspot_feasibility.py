@@ -497,8 +497,7 @@ def main():
             logging.exception("Ortools import failed before testing pairs")
             results["error"] = err
             try:
-                outp.write_text(
-                    json.dumps(_make_json_serializable(results), indent=2),
+                outp.write_text(json.dumps(_make_json_serializable(results, encoding="utf-8"), indent=2),
                     encoding="utf-8",
                 )
                 print("Wrote error results to", outp, flush=True)
@@ -614,8 +613,7 @@ def main():
                                 "error": err,
                             }
                         )
-                        outp.write_text(
-                            json.dumps(_make_json_serializable(results), indent=2),
+                        outp.write_text(json.dumps(_make_json_serializable(results, encoding="utf-8"), indent=2),
                             encoding="utf-8",
                         )
                         print(
@@ -683,8 +681,7 @@ def main():
         # attempt to write to a fallback file in current dir
         try:
             fallback = Path(f"local_hotspot_fallback_{ts}.json")
-            fallback.write_text(
-                json.dumps(_make_json_serializable(results), indent=2), encoding="utf-8"
+            fallback.write_text(json.dumps(_make_json_serializable(results, encoding="utf-8"), indent=2), encoding="utf-8"
             )
             print("Wrote fallback results to", fallback, flush=True)
         except Exception:

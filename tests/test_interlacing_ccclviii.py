@@ -159,13 +159,13 @@ class TestVerifyAllAndSummary:
         assert JSON_PATH.exists()
 
     def test_json_status_pass(self):
-        data = json.loads(JSON_PATH.read_text())
+        data = json.loads(JSON_PATH.read_text(encoding="utf-8"))
         assert data["status"] == "PASS"
 
     def test_json_checks_pass_27(self):
-        data = json.loads(JSON_PATH.read_text())
+        data = json.loads(JSON_PATH.read_text(encoding="utf-8"))
         assert data["checks_pass"] == 27
 
     def test_json_part_label(self):
-        data = json.loads(JSON_PATH.read_text())
+        data = json.loads(JSON_PATH.read_text(encoding="utf-8"))
         assert data["part"] == "CCCLVIII"

@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];DATA=ROOT/'data'
-def load(n):return json.loads((DATA/n).read_text())
+def load(n):return json.loads((DATA/n).read_text(encoding="utf-8"))
 
 def test_total_checks_74():
  files=[f'w33_pass108{i}_'+s for i,s in [(1,'frame_module_lattice.json'),(2,'frame_coherent_configuration.json'),(3,'levi_frame_steinberg_intertwiner.json'),(4,'g32_g25_parabolic_normalizer.json'),(5,'hardware_in_loop_rehearsal.json'),(6,'contextuality_claim_firewall.json')]]
@@ -17,4 +17,4 @@ def test_parabolic_normalizer():
 def test_hardware_rehearsal_and_claim_firewall():
  h=load('w33_pass1085_hardware_in_loop_rehearsal.json');assert h['telemetry_event_count']==240;assert h['analysis']['decision']=='contextual_positive';assert h['analysis']['contextual_fraction_claim'] is None;f=load('w33_pass1086_contextuality_claim_firewall.json');assert f['correct_CF']=={'W33':1.0,'doily':0.0};assert 'not a contextual fraction' in f['one_tenth_status']
 def test_legacy_estimator_renamed():
- text=(ROOT/'analysis/bt1901_contextual_fraction_estimator.py').read_text();assert 'TARGET_CLICK_RATE' in text;assert 'corrected_signal_click_rate' in text;assert 'corrected_contextual_fraction' not in text;assert 'does NOT estimate the' in text
+ text=(ROOT/'analysis/bt1901_contextual_fraction_estimator.py').read_text(encoding="utf-8");assert 'TARGET_CLICK_RATE' in text;assert 'corrected_signal_click_rate' in text;assert 'corrected_contextual_fraction' not in text;assert 'does NOT estimate the' in text

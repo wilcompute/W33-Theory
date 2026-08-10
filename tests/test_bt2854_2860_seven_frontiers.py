@@ -48,5 +48,5 @@ def test_hadamard_and_green():
 
 def test_frozen_files():
     result = MOD.build_all()
-    aggregate = json.loads((ROOT / "data" / "PART_BT2854_BT2860_SEVEN_FRONTIERS_results.json").read_text())
+    aggregate = json.loads((ROOT / "data" / "PART_BT2854_BT2860_SEVEN_FRONTIERS_results.json").read_text(encoding="utf-8"))
     assert aggregate == result

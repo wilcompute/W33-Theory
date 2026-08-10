@@ -64,7 +64,7 @@ def load_summary(filename: str) -> dict:
     """Load a JSON summary file, returning empty dict if missing."""
     path = ROOT / filename
     if path.exists():
-        return json.loads(path.read_text())
+        return json.loads(path.read_text(encoding="utf-8"))
     return {}
 
 

@@ -35,7 +35,7 @@ d_in.append("x")
 
 d_in_text = "\n".join(d_in) + "\n"
 stdin_path = repo / "bundles" / "v23_toe_finish" / "v23" / "w33_dreadnaut_input.txt"
-stdin_path.write_text(d_in_text)
+stdin_path.write_text(d_in_text, encoding="utf-8")
 
 # determine dreadnaut path candidates
 candidates = [

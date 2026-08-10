@@ -28,7 +28,7 @@ def main():
 
     for jf in json_files:
         try:
-            data = json.loads(jf.read_text())
+            data = json.loads(jf.read_text(encoding="utf-8"))
             summary["summaries"][jf.name] = data
         except Exception as e:
             summary["summaries"][jf.name] = {"error": str(e)}

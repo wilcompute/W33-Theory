@@ -6,4 +6,4 @@ def load():
 def test_frozen_packet():assert load().verify()['status']=='PASS'
 def test_boundary_flags():
  import json
- d=json.loads((ROOT/'data/w33_pass1856_1860_five_frontiers.json').read_text());assert d['status']=='PASS_WITH_PROOF_BOUNDARIES';assert len(d['boundaries'])==3
+ d=json.loads((ROOT/'data/w33_pass1856_1860_five_frontiers.json').read_text(encoding="utf-8"));assert d['status']=='PASS_WITH_PROOF_BOUNDARIES';assert len(d['boundaries'])==3

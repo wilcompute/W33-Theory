@@ -236,7 +236,7 @@ class TestOutputFile:
 
     def test_json_has_required_keys(self):
         data = json.loads(
-            (ROOT / "data" / "w33_z3_curvature_cohomology.json").read_text()
+            (ROOT / "data" / "w33_z3_curvature_cohomology.json").read_text(encoding="utf-8")
         )
         required = [
             "T1_n_vertices", "T1_total_edges", "T1_single_edge_orbit",

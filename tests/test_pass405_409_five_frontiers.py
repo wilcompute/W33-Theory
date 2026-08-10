@@ -9,7 +9,7 @@ DATA = ROOT / "data"
 
 
 def read(name: str):
-    return json.loads((DATA / name).read_text())
+    return json.loads((DATA / name).read_text(encoding="utf-8"))
 
 
 def test_pass405_universal_critical_group():

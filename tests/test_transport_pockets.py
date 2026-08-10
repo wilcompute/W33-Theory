@@ -14,5 +14,5 @@ def test_transport_pockets(tmp_path):
     # also ensure report file created
     report = repo / 'out' / 'transport_report.json'
     assert report.exists()
-    data = report.read_text()
+    data = report.read_text(encoding="utf-8")
     assert '"successful_extensions": 480' in data

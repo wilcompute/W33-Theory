@@ -21,7 +21,7 @@ def load_module():
 
 def test_main_recomputes_all_certificates():
     subprocess.run([sys.executable, str(SCRIPT)], cwd=ROOT, check=True)
-    payload = json.loads((DATA / 'w33_pass1325_1329_triality_integral_gauge.json').read_text())
+    payload = json.loads((DATA / 'w33_pass1325_1329_triality_integral_gauge.json').read_text(encoding="utf-8"))
     assert payload['status'] == 'PASS'
     assert all(payload['checks'].values())
 
@@ -84,7 +84,7 @@ def test_independent_standard_library_checker():
 
 
 def test_gap_certificate_is_full_matrix_certificate():
-    text = (ROOT / 'analysis' / 'w33_pass1329_triality_integral_check.g').read_text()
+    text = (ROOT / 'analysis' / 'w33_pass1329_triality_integral_check.g').read_text(encoding="utf-8")
     assert 'SmithNormalFormIntegerMat(C)' in text
     assert 'SmithNormalFormIntegerMat(H)' in text
     assert 'ExpectedH :=' in text

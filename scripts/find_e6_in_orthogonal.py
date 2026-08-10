@@ -10,7 +10,7 @@ E6_edges = {(0, 2), (1, 2), (2, 3), (3, 4), (4, 5)}
 
 
 def main():
-    data = json.loads(Path("PART_CVII_e6_via_A2.json").read_text())
+    data = json.loads(Path("PART_CVII_e6_via_A2.json").read_text(encoding="utf-8"))
     if not data:
         print("No A2 complement found")
         raise SystemExit(1)

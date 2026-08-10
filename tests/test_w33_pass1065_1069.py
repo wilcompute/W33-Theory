@@ -7,7 +7,7 @@ ROOT=Path(__file__).resolve().parents[1]
 NAMES={1065:'schur_cocycle',1066:'outer_lift',1067:'outer_class_geometry',1068:'chevie_g25_g32_matrices',1069:'photonic_pipeline'}
 
 def load_all():
-    return {p:json.loads((ROOT/'data'/f'w33_pass{p}_{NAMES[p]}.json').read_text()) for p in NAMES}
+    return {p:json.loads((ROOT/'data'/f'w33_pass{p}_{NAMES[p]}.json').read_text(encoding="utf-8")) for p in NAMES}
 
 def test_all_five_passes_are_green():
     R=load_all();assert all(r['status']=='PASS' and all(r['checks'].values()) for r in R.values())
@@ -35,8 +35,8 @@ def test_photonic_pipeline_hits_all_fail_closed_branches():
     assert R[1069]['invalid_calibration_test']['joint_verdict']=='inconclusive_no_claim'
 
 def test_generated_hardware_artifacts_are_wired():
-    manifest=json.loads((ROOT/'hardware'/'w33_pass1069_photonic_manifest.json').read_text())
-    fixture=json.loads((ROOT/'hardware'/'w33_pass1069_synthetic_blinded.json').read_text())
+    manifest=json.loads((ROOT/'hardware'/'w33_pass1069_photonic_manifest.json').read_text(encoding="utf-8"))
+    fixture=json.loads((ROOT/'hardware'/'w33_pass1069_synthetic_blinded.json').read_text(encoding="utf-8"))
     with (ROOT/'hardware'/'w33_pass1069_control_schedule.csv').open() as f: rows=list(csv.DictReader(f))
     assert manifest['schema']=='w33.pass1069.photonic_protocol_manifest.v1'
     assert len(fixture['datasets'])==4 and fixture['synthetic_fixture_only']

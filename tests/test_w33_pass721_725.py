@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 
 def load(n,name):
  p=ROOT/'data'/f'w33_pass{n}_{name}.json'
- d=json.loads(p.read_text());assert d['status']=='PASS';assert all(d['checks'].values());return d
+ d=json.loads(p.read_text(encoding="utf-8"));assert d['status']=='PASS';assert all(d['checks'].values());return d
 
 def test_pass721_formal_rigidity_local_h2():
  d=load(721,'formal_rigidity_local_h2_census')

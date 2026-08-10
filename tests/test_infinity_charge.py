@@ -250,7 +250,7 @@ class TestOutputFile:
 
     def test_json_has_required_keys(self):
         data = json.loads(
-            (ROOT / "data" / "w33_infinity_charge.json").read_text()
+            (ROOT / "data" / "w33_infinity_charge.json").read_text(encoding="utf-8")
         )
         required = [
             "T1_n_pg33", "T1_n_affine", "T1_n_infinity", "T1_n_edges", "T1_correct",

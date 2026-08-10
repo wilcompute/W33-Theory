@@ -2,7 +2,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-def ledger(name):return json.loads((ROOT/'data'/name).read_text())
+def ledger(name):return json.loads((ROOT/'data'/name).read_text(encoding="utf-8"))
 
 def test_pass671_actual_h1_rigidity():
  p=ledger('w33_pass671_integral_h1_psp_rigidity.json');assert p['status']=='PASS';assert p['integral_homology']['H1_rank']==81;assert p['symmetry']['projective_action_order']==25920;assert p['commutant_rigidity']['centralizer_dimension_over_F2']==1

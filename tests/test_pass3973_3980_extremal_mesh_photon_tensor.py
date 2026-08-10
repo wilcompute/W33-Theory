@@ -34,7 +34,7 @@ def test_quick_exact_packet():
 
 
 def test_frozen_full_transposition_audit():
-    frozen = json.loads(FROZEN.read_text())
+    frozen = json.loads(FROZEN.read_text(encoding="utf-8"))
     mesh = frozen["pass3974_mesh_radius_one"]
     assert mesh["tested"] == 630
     assert sum(mesh["rotation_histogram"].values()) == 630

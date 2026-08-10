@@ -26,7 +26,7 @@ def test_pass435_integral_theorem():
 
 
 def test_pass436_literature_gate_closed():
-    p=json.loads((ROOT/'data'/'w33_pass436_polhill_full_table_audit.json').read_text())
+    p=json.loads((ROOT/'data'/'w33_pass436_polhill_full_table_audit.json').read_text(encoding="utf-8"))
     assert p['status']=='PASS'
     assert p['findings']['exact_parameter_family_present']
     assert p['findings']['family_novelty_claim_rejected']

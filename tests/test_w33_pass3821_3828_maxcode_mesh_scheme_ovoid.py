@@ -22,13 +22,13 @@ def certificate() -> dict[str, object]:
 
 def test_frozen_certificate_and_component_hashes() -> None:
     generated = certificate()
-    frozen = json.loads(FROZEN.read_text())
+    frozen = json.loads(FROZEN.read_text(encoding="utf-8"))
     assert generated == frozen
     assert generated["semantic_sha256"] == "b141dd0f82e4a6b1ee62d1c57f0e92bdfc9f58d3b32515f9521a0175fdca88a1"
     import hashlib
     for name in ("maxcode", "mesh", "monster", "ovoid", "scheme"):
         path = ROOT / "data" / f"PART_3821_3828_COMPONENT_{name.upper()}.json"
-        payload = json.loads(path.read_text())
+        payload = json.loads(path.read_text(encoding="utf-8"))
         canonical = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
         assert hashlib.sha256(canonical.encode()).hexdigest() == generated["component_sha256"][name]
 

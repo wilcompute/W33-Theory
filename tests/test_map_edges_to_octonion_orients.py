@@ -43,7 +43,7 @@ def test_map_edges_synthetic(tmp_path):
         '--out', str(outpath)
     ], cwd=repo)
     assert res.returncode == 0
-    data = json.loads(outpath.read_text())
+    data = json.loads(outpath.read_text(encoding="utf-8"))
     assert 'edge_to_orient' in data
     assert len(data['edge_to_orient']) == 5
     # values may be None if orientation not available

@@ -9,7 +9,7 @@ from pathlib import Path
 
 from sage.all_cmdline import *
 
-data = json.loads(Path("PART_CVII_e6_via_A2.json").read_text())
+data = json.loads(Path("PART_CVII_e6_via_A2.json").read_text(encoding="utf-8"))
 orth = data[0]["orth_indices"]
 
 E8 = RootSystem(["E", 8])

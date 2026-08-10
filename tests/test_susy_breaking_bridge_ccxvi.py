@@ -3,7 +3,7 @@ import json, math, pytest
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
-DATA = json.loads((ROOT / "PART_CCXVI_susy_breaking_results.json").read_text())
+DATA = json.loads((ROOT / "PART_CCXVI_susy_breaking_results.json").read_text(encoding="utf-8"))
 SUSY = DATA["susy_data"]
 SRG  = DATA["srg_params"]
 

@@ -114,7 +114,7 @@ def get_orbits(gens: list[tuple], n: int) -> list[int]:
 
 def _load_H():
     path = ROOT / "axis_line_stabilizer_192.json"
-    data = json.loads(path.read_text())
+    data = json.loads(path.read_text(encoding="utf-8"))
     elems = data["elements"]
     assert len(elems) == 192
 
@@ -177,7 +177,7 @@ def build_triality_bridge_report() -> dict:
     # ==================================================================
     # T1: [K,K] is extraspecial 3^{1+2}
     # ==================================================================
-    gen_data = json.loads((WELD_BUNDLE / "K_generators_action_on_pockets_54.json").read_text())
+    gen_data = json.loads((WELD_BUNDLE / "K_generators_action_on_pockets_54.json").read_text(encoding="utf-8"))
     gen_names = ["g2", "g3", "g5", "g8", "g9"]
     gens_K = [tuple(gen_data[name]) for name in gen_names]
     n_pockets = 54

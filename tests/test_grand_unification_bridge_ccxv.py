@@ -3,7 +3,7 @@ import json, math, pytest
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
-DATA = json.loads((ROOT / "PART_CCXV_grand_unification_results.json").read_text())
+DATA = json.loads((ROOT / "PART_CCXV_grand_unification_results.json").read_text(encoding="utf-8"))
 GUT  = DATA["gut_data"]
 SRG  = DATA["srg_params"]
 

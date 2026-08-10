@@ -30,7 +30,7 @@ def test_pocket_g2_extension_geometry(tmp_path):
     assert res.returncode == 0, res.stderr
     geom_file = Path('pocket_geometry.json')
     assert geom_file.exists(), "geometry output missing"
-    geom = json.loads(geom_file.read_text())
+    geom = json.loads(geom_file.read_text(encoding="utf-8"))
     assert geom['total_pockets'] == 540
     assert len(geom['by_silent_counts']) == 36
     assert geom['twin_pairs_count'] == 270
@@ -51,6 +51,6 @@ def test_pocket_g2_extension_geometry(tmp_path):
         '--full_basis', str(repo / 'full_derivations_basis.json')
     ], cwd=repo)
     assert res2.returncode == 0, res2.stderr
-    summary = json.loads(Path('axis_shift_summary.json').read_text())
+    summary = json.loads(Path('axis_shift_summary.json').read_text(encoding="utf-8"))
     assert len(summary) == 36
     assert all('fix_dim' in info for info in summary.values())

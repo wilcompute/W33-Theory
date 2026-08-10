@@ -17,7 +17,7 @@ def test_find_N_files_exist():
 
 def test_N_properties():
     repo = Path(__file__).resolve().parent.parent
-    N = json.loads((repo / "N_subgroup.json").read_text())
+    N = json.loads((repo / "N_subgroup.json").read_text(encoding="utf-8"))
     assert len(N) == 192
     # closure test
     closure = subgroup_generated_by([tuple(p) for p in N])
@@ -28,7 +28,7 @@ def test_N_properties():
 
 def test_flag_map():
     repo = Path(__file__).resolve().parent.parent
-    fmap = json.loads((repo / "N_flag_map.json").read_text())
+    fmap = json.loads((repo / "N_flag_map.json").read_text(encoding="utf-8"))
     assert set(int(k) for k in fmap.keys()) == set(range(192))
     # each value should be a 192-permutation
     for v in fmap.values():
@@ -37,7 +37,7 @@ def test_flag_map():
 
 def test_orders_distribution():
     repo = Path(__file__).resolve().parent.parent
-    N = json.loads((repo / "N_subgroup.json").read_text())
+    N = json.loads((repo / "N_subgroup.json").read_text(encoding="utf-8"))
     def order(p):
         cur = list(range(192))
         for i in range(1,1000):

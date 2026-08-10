@@ -60,7 +60,7 @@ def test_pass202_gap_arithmetic_never_overwrites_or_overclaims_lean() -> None:
         "higher_q_module_structure": "prediction only",
     }
     assert cert["lean_source_written"] is False
-    launcher = (ROOT / "analysis" / "w33_pass202_shadow_dichotomy_arithmetic.py").read_text()
+    launcher = (ROOT / "analysis" / "w33_pass202_shadow_dichotomy_arithmetic.py").read_text(encoding="utf-8")
     assert '"gap", "-q"' in launcher
     assert "LEAN.write_text" not in launcher
 
@@ -71,7 +71,7 @@ def test_pass206_is_a_gap_owned_withdrawal_not_a_subsystem_certificate() -> None
     assert cert["status"] == "WITHDRAWN"
     assert cert["checks"]["unsupported_subsystem_claim_present"] is False
     assert "not established" in cert["withdrawn_claims"]["subsystem_parameters"]
-    launcher = (ROOT / "analysis" / "w33_pass206_subsystem_distance_boost.py").read_text()
+    launcher = (ROOT / "analysis" / "w33_pass206_subsystem_distance_boost.py").read_text(encoding="utf-8")
     assert '"gap", "-q"' in launcher
     assert "numpy" not in launcher
 

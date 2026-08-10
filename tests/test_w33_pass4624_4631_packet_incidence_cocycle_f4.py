@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
-def load(name):return json.loads((ROOT/'data'/name).read_text())
+def load(name):return json.loads((ROOT/'data'/name).read_text(encoding="utf-8"))
 
 def test_pass4624_packet_is_support_e6_45():
     d=load('PART_W33_PASS4624_PACKET45_SUPPORT_E6_INTERTWINER.json')
@@ -66,7 +66,7 @@ def test_pass4631_f4_moduli_incidence():
 def test_integration_surfaces():
     needle='\\input{analysis/PASS4624_4631_packet_incidence_cocycle_f4_insert}%'
     for name in ('w33_paper.tex','photonic_holonet.tex','holonet_machine_blueprint.tex'):
-        assert needle in (ROOT/name).read_text()
-    reg=json.loads((ROOT/'data/w33_public_frontier_extension_pass4461_4464.json').read_text())
+        assert needle in (ROOT/name).read_text(encoding="utf-8")
+    reg=json.loads((ROOT/'data/w33_public_frontier_extension_pass4461_4464.json').read_text(encoding="utf-8"))
     assert any(x['token']=='pass4624-4631-packet-incidence-f4-h10' for x in reg['public_sections'])
     assert any(x['token']=='pass4624-4631-packet-incidence-f4-h10-page' for x in reg['standalone_public_pages'])

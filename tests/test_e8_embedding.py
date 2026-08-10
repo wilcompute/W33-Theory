@@ -7608,7 +7608,7 @@ class TestLeechMonster:
             ],
         }
         p = tmp_path / "monster_characters.json"
-        p.write_text(json.dumps(payload))
+        p.write_text(json.dumps(payload, encoding="utf-8"))
 
         # file loader should find it
         tbl = load_monster_characters(str(p))

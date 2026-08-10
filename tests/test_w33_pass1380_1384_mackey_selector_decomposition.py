@@ -7,7 +7,7 @@ DATA = ROOT / "data" / "w33_pass1380_1384_mackey_selector_decomposition.json"
 
 
 def load():
-    result = json.loads(DATA.read_text())
+    result = json.loads(DATA.read_text(encoding="utf-8"))
     assert result["schema"] == "w33.pass1380_1384.mackey_selector_decomposition.compact.v1"
     assert result["status"] == "PASS"
     return result

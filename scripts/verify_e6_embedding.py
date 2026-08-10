@@ -14,7 +14,7 @@ back = Path("PART_CVII_e6_in_e8_backtrack.json")
 if not back.exists():
     print("Backtrack result missing")
     raise SystemExit(1)
-info = json.loads(back.read_text())
+info = json.loads(back.read_text(encoding="utf-8"))
 if not info:
     print("No solutions found by backtrack script")
     raise SystemExit(1)

@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 DATA=Path(__file__).resolve().parents[1]/'data'
 NAMES={1939:'u6_supershard',1940:'split_macwilliams',1941:'gaussian_solver_transport',1942:'integral_phase_order',1943:'hodge_eisenstein_carrier_separator'}
-def load(n):return json.loads((DATA/f'w33_pass{n}_{NAMES[n]}.json').read_text())
+def load(n):return json.loads((DATA/f'w33_pass{n}_{NAMES[n]}.json').read_text(encoding="utf-8"))
 def test_five_frontiers():
  a,b,c,d,e=[load(n) for n in range(1939,1944)]
  assert a['combined_supershard']['records']==58282126

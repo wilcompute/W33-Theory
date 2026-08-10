@@ -37,7 +37,7 @@ def test_make_min_cert_gallery_smoke(tmp_path: Path):
             }
         ],
     }
-    in_json.write_text(json.dumps(payload), encoding="utf-8")
+    in_json.write_text(json.dumps(payload, encoding="utf-8"), encoding="utf-8")
 
     cmd = [
         sys.executable,

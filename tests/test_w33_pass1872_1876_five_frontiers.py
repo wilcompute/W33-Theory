@@ -33,7 +33,7 @@ def test_five_frontiers(tmp_path):
 
 
 def test_exact_dual_certificate():
-    dual = json.loads(DUAL.read_text())
+    dual = json.loads(DUAL.read_text(encoding="utf-8"))
     assert dual["status"] == "PASS"
     assert dual["n_verified"] == dual["n_checks"] == 8
     assert dual["enumerated_word_total"] == 1 << 45

@@ -196,7 +196,7 @@ class TestOutputFile:
 
     def test_json_has_required_keys(self):
         data = json.loads(
-            (ROOT / "data" / "w33_klein_correspondence.json").read_text()
+            (ROOT / "data" / "w33_klein_correspondence.json").read_text(encoding="utf-8")
         )
         required = [
             "T1_num_W33_points", "T1_num_W33_lines",

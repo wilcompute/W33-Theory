@@ -80,7 +80,7 @@ def commutator(a: tuple, b: tuple) -> tuple:
 
 def find_presentation() -> dict:
     # Load N
-    N_raw = json.loads((ROOT / "N_subgroup.json").read_text())
+    N_raw = json.loads((ROOT / "N_subgroup.json").read_text(encoding="utf-8"))
     N: List[tuple] = [tuple(n) for n in N_raw]
     N_set = set(N)
     idp = tuple(range(192))

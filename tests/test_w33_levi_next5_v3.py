@@ -58,7 +58,7 @@ def test_machine_certificate_written(tmp_path):
     out=result();p=tmp_path/'result.json'
     import json
     p.write_text(json.dumps(out,sort_keys=True))
-    assert json.loads(p.read_text())['status']=='PASS'
+    assert json.loads(p.read_text(encoding="utf-8"))['status']=='PASS'
 
 def test_v3_cli_dispatch_table():
     sys.path.insert(0,str(ROOT))

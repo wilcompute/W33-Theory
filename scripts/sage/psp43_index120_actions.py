@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def build_line_perms_from_we6():
-    data = json.loads((ROOT / "artifacts" / "we6_true_action.json").read_text())
+    data = json.loads((ROOT / "artifacts" / "we6_true_action.json").read_text(encoding="utf-8"))
     roots = [tuple(r) for r in data["roots_int2"]]
     root_to_idx = {r: i for i, r in enumerate(roots)}
 

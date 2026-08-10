@@ -243,7 +243,7 @@ class TestOutputFile:
         assert (ROOT / "data" / "w33_27x10_quotient.json").exists()
 
     def test_json_has_required_keys(self):
-        data = json.loads((ROOT / "data" / "w33_27x10_quotient.json").read_text())
+        data = json.loads((ROOT / "data" / "w33_27x10_quotient.json").read_text(encoding="utf-8"))
         required = [
             "T1_total_edges", "T1_unique_qid_orient_pairs", "T1_bijective",
             "T2_orient_split_consistent", "T2_tb0_orient_indices", "T2_tb1_orient_indices",

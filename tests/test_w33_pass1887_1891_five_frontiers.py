@@ -14,7 +14,7 @@ def digest(d: dict) -> str:
 
 
 def load(name: str) -> dict:
-    return json.loads((ROOT / "data" / name).read_text())
+    return json.loads((ROOT / "data" / name).read_text(encoding="utf-8"))
 
 
 def test_pass1887_exact_global_decoder_partition() -> None:

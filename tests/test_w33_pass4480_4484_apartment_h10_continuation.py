@@ -77,7 +77,7 @@ def test_collision_cleanup_and_manuscript_integration() -> None:
 
 
 def test_public_extension_registers_parallel_and_renumbered_cards() -> None:
-    cfg = json.loads((ROOT / "data/w33_public_frontier_extension_pass4461_4464.json").read_text())
+    cfg = json.loads((ROOT / "data/w33_public_frontier_extension_pass4461_4464.json").read_text(encoding="utf-8"))
     tokens = [x["token"] for x in cfg["public_sections"]]
     assert "pass4472-4479-apartment-module-thermo-ihara-pauli" in tokens
     assert "pass4480-4483-apartment-h10-geometric-readout" in tokens

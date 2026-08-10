@@ -56,7 +56,7 @@ def test_4104_thermodynamic_geometry(cert):
     assert x["canonical_path_excess_over_geodesic_fraction"]<0.024
 
 def test_frozen_semantic_certificate(cert):
-    frozen=json.loads(FROZEN.read_text())
+    frozen=json.loads(FROZEN.read_text(encoding="utf-8"))
     raw={k:v for k,v in frozen.items() if k!="semantic_sha256"}
     digest=hashlib.sha256(json.dumps(raw,sort_keys=True,separators=(",",":")).encode()).hexdigest()
     assert cert["all_checks_hold"]

@@ -27,7 +27,7 @@ def test_verify_and_register_pairs_happy_path(tmp_path, monkeypatch):
     # monkeypatch subprocess.run to simulate solver writing PART_CVII_e8_embedding_cpsat.json
     def fake_run(cmd, check=False, stdout=None, stderr=None, text=True, timeout=None):
         outp = checks / "PART_CVII_e8_embedding_cpsat.json"
-        outp.write_text(json.dumps({"status": "INFEASIBLE"}))
+        outp.write_text(json.dumps({"status": "INFEASIBLE"}, encoding="utf-8"))
 
         class Dummy:
             returncode = 0
@@ -58,7 +58,7 @@ def test_verify_and_register_pairs_happy_path(tmp_path, monkeypatch):
     mod.main()
 
     # verify forbid file exists and contains the pair
-    forb = json.loads((checks / "forbids.json").read_text())
+    forb = json.loads((checks / "forbids.json").read_text(encoding="utf-8"))
     assert "obstruction_sets" in forb
     assert any(
         [

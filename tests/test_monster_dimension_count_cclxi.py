@@ -81,7 +81,7 @@ class TestT1_MonsterIrrepCount:
     def test_load_and_count(self):
         """Cross-check against bundled data."""
         p = Path(__file__).resolve().parent.parent / "data" / "monster_degrees.json"
-        degs = json.loads(p.read_text())
+        degs = json.loads(p.read_text(encoding="utf-8"))
         assert len(degs) == 194
         assert len(degs) == lam * (Phi12 + f)
 

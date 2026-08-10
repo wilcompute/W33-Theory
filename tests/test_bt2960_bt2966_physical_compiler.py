@@ -2,7 +2,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-def load(name):return json.loads((ROOT/'data'/name).read_text())
+def load(name):return json.loads((ROOT/'data'/name).read_text(encoding="utf-8"))
 def test_summary():
  d=load('PART_BT2960_BT2966_PHYSICAL_COMPILER_summary.json');assert d['check_count']==7 and all(d['checks'].values())
 def test_factorized_observer():

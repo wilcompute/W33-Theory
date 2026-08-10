@@ -18,7 +18,7 @@ def load():
 def test_frozen_reconciliation_certificate():
     module = load()
     fresh = module.certificate(write_xor=False)
-    frozen = json.loads(FROZEN.read_text())
+    frozen = json.loads(FROZEN.read_text(encoding="utf-8"))
     assert json.loads(json.dumps(fresh)) == frozen
     assert frozen["status"] == "PASS" and all(frozen["checks"].values())
     assert frozen["pass1806"]["alternative_composition_series"] == [1, 8, 1, 6, 14]

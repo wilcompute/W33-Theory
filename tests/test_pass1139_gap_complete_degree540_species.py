@@ -211,8 +211,7 @@ def test_classifier_prunes_repository_metadata_and_build_trees(
     ]
     for hidden in hidden_files:
         hidden.parent.mkdir(parents=True, exist_ok=True)
-        hidden.write_text(
-            "An ambiguous " + str(54 * 10) + ".\n",
+        hidden.write_text("An ambiguous " + str(54 * 10, encoding="utf-8") + ".\n",
             encoding="utf-8",
         )
 

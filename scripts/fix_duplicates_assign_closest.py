@@ -71,9 +71,8 @@ def main():
     duplicates = [r for r, c in cnt.items() if c > 1]
     if not duplicates:
         print("No duplicates found; writing copy of input to", outpath)
-        outpath.write_text(
-            json.dumps(
-                {"bijection": {str(k): int(v) for k, v in bij.items()}}, indent=2
+        outpath.write_text(json.dumps(
+                {"bijection": {str(k, encoding="utf-8"): int(v) for k, v in bij.items()}}, indent=2
             ),
             encoding="utf-8",
         )

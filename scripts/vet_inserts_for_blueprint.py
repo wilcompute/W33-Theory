@@ -158,7 +158,7 @@ def main(argv: list[str]) -> int:
              ""]
         for s, _, _ in sorted(safe, key=lambda t: t[0]):
             L.append(f"\\input{{analysis/{s}}}%")
-        APPENDIX.write_text("\n".join(L) + "\n", encoding="utf-8")
+        APPENDIX.write_text("\n".join(L, encoding="utf-8") + "\n", encoding="utf-8")
         print(f"\n  wrote {APPENDIX.relative_to(ROOT).as_posix()} "
               f"({len(safe)} inserts)")
     return 0

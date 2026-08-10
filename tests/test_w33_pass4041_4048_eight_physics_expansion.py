@@ -17,7 +17,7 @@ def payload():
 
 def test_frozen_certificate(payload):
     assert payload['semantic_sha256']==SHA
-    frozen=json.loads(DATA.read_text())
+    frozen=json.loads(DATA.read_text(encoding="utf-8"))
     assert frozen['semantic_sha256']==SHA
     assert frozen==payload
 

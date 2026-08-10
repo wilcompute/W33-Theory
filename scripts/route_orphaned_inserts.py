@@ -219,7 +219,7 @@ def main(argv: list[str]) -> int:
                  ""]
             for s in stems:
                 L.append(f"\\input{{analysis/{s}}}%")
-            appendix.write_text("\n".join(L) + "\n", encoding="utf-8")
+            appendix.write_text("\n".join(L, encoding="utf-8") + "\n", encoding="utf-8")
             print(f"\n  wrote {appendix.relative_to(ROOT).as_posix()} ({len(stems)})")
     return 0
 

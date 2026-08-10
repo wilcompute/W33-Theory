@@ -10,8 +10,8 @@ except Exception as e:
 
 
 def do(path, schema_path):
-    d = json.loads(Path(path).read_text())
-    s = json.loads(Path(schema_path).read_text())
+    d = json.loads(Path(path).read_text(encoding="utf-8"))
+    s = json.loads(Path(schema_path).read_text(encoding="utf-8"))
     try:
         jsonschema.validate(instance=d, schema=s)
         print(f"VALID {path}")

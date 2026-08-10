@@ -14,7 +14,7 @@ def generated():
 def frozen_fallback():
     parts=sorted((ROOT/'bootstrap/pass3556_3569').glob('results.legacy.*.zlib.b64'))
     assert len(parts)==2
-    saved=json.loads(zlib.decompress(base64.b64decode(''.join(p.read_text().strip() for p in parts))))
+    saved=json.loads(zlib.decompress(base64.b64decode(''.join(p.read_text(encoding="utf-8").strip() for p in parts))))
     assert saved['schema']=='w33.pass3542_3555.radius_amplitude_code_fault_c5.v1'
     saved['schema']='w33.pass3556_3569.radius_amplitude_code_fault_c5.v1'
     saved['semantic_sha256']=packet.semantic_hash(saved)

@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-def load(p):return json.loads((ROOT/p).read_text())
+def load(p):return json.loads((ROOT/p).read_text(encoding="utf-8"))
 def test_layout_tomography_certificate():
  p=load('data/PART_3997_4004_LAYOUT_TOMOGRAPHY_EDGE_MEMORY.json')
  assert p['semantic_sha256']=='ed4eddab150575ec2a719bc55974ac24e0b1852b1a3bec4a08204bc9114f4960'

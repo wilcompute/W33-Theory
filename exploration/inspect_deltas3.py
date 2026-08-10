@@ -1,5 +1,5 @@
 import json, pathlib
 ROOT=pathlib.Path('c:/Repos/Theory of Everything')
-out=json.loads((ROOT/'artifacts'/'outer_twist_rootword_cocycle_defect.json').read_text())
+out=json.loads((ROOT/'artifacts'/'outer_twist_rootword_cocycle_defect.json').read_text(encoding="utf-8"))
 for entry in out['cycles']:
     print('A2',entry['a2_index'],'stats',entry['delta_stats'])

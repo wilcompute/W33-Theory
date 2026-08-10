@@ -270,7 +270,7 @@ class TestOutputFile:
 
     def test_json_has_required_keys(self):
         data = json.loads(
-            (ROOT / "data" / "w33_bose_mesner_algebra.json").read_text()
+            (ROOT / "data" / "w33_bose_mesner_algebra.json").read_text(encoding="utf-8")
         )
         required = [
             "T1_n", "T1_rank", "T1_val_sum", "T1_mult_sum", "T1_gelfand",

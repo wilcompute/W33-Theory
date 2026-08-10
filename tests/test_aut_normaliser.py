@@ -36,7 +36,7 @@ def test_summary_files_created(tmp_path):
     # mimic main behaviour
     summ = analyze()
     repo = Path(__file__).resolve().parent.parent
-    repo.joinpath("aut_normaliser_summary.json").write_text(json.dumps(summ))
+    repo.joinpath("aut_normaliser_summary.json").write_text(json.dumps(summ, encoding="utf-8"))
     assert (repo / "aut_normaliser_summary.json").exists()
     assert (repo / "aut_normaliser_report.md").exists() or True
 

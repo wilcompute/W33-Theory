@@ -59,7 +59,7 @@ def test_4120_redshift(packet):
 
 def test_frozen_semantic_certificate(packet):
     mod,x=packet
-    frozen=json.loads(CERT.read_text())
+    frozen=json.loads(CERT.read_text(encoding="utf-8"))
     assert frozen['all_checks_hold']
     assert mod.semantic_sha(frozen)==frozen['semantic_sha256']
     assert frozen['semantic_sha256']==x['semantic_sha256']=='28391f98e03ec20cc688cc8692579ff0cf352930d085b2d33d979de7ef9a3e2a'

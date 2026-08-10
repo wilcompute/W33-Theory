@@ -25,7 +25,7 @@ def compute_jarlskog(V: np.ndarray) -> float:
 def load_prev_unitary(path: Path) -> np.ndarray | None:
     if not path.exists():
         return None
-    d = json.loads(path.read_text())
+    d = json.loads(path.read_text(encoding="utf-8"))
     real = np.array(d.get("unitary_real"))
     imag = np.array(d.get("unitary_imag"))
     if real.size == 0 or imag.size == 0:
@@ -39,7 +39,7 @@ def main():
         print("ERROR: data/ckm_fitted_scalings.json not found; run scripts/ckm_fit_scalings.py first")
         return 1
 
-    d = json.loads(p.read_text())
+    d = json.loads(p.read_text(encoding="utf-8"))
     A = np.array(d.get("scaled_matrix", []), dtype=float)
     if A.size == 0:
         print("ERROR: scaled_matrix missing from data/ckm_fitted_scalings.json")

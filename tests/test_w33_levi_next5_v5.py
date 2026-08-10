@@ -12,7 +12,7 @@ sys.path.insert(0,str(ROOT/"analysis"))
 
 
 def load(name):
-    return json.loads((DATA / f"PART_2026_07_11_LEVI_NEXT5_V5_{name}.json").read_text())
+    return json.loads((DATA / f"PART_2026_07_11_LEVI_NEXT5_V5_{name}.json").read_text(encoding="utf-8"))
 
 
 def fresh(name):
@@ -107,8 +107,8 @@ def test_phase_word_ranges_and_rtl_snapshot_sources():
     assert words.min()>=-32767 and words.max()<=32767
     for bad,signed in (([32768],True),([-32768],True),([-1],False),([65536],False)):
         with pytest.raises(ValueError):decode_phase_words(bad,16,signed=signed)
-    rtl=(ROOT/"hardware/holonet_v5_frame_reducer.sv").read_text()
-    tb=(ROOT/"hardware/tb_holonet_v5_frame_reducer.sv").read_text()
+    rtl=(ROOT/"hardware/holonet_v5_frame_reducer.sv").read_text(encoding="utf-8")
+    tb=(ROOT/"hardware/tb_holonet_v5_frame_reducer.sv").read_text(encoding="utf-8")
     assert all(token in rtl for token in ("frame_counts","accum_overflow","m_axis_frame_id <= frame_counter"))
     assert "c0!==2" in tb and "fid!==0" in tb and "bad second frame snapshot" in tb
 
@@ -123,9 +123,9 @@ def test_all_fresh_witnesses():
 def test_sources_compile_and_formal_imported():
     for p in (ROOT/"analysis").glob("w33_levi_next5_v5*.py"):
         py_compile.compile(str(p), doraise=True)
-    assert "import W33.HeisenbergQ3" in (ROOT/"formal/W33.lean").read_text()
-    blocks=(ROOT/"formal/W33/FourierBlocks.lean").read_text()
-    q3=(ROOT/"formal/W33/HeisenbergQ3.lean").read_text()
+    assert "import W33.HeisenbergQ3" in (ROOT/"formal/W33.lean").read_text(encoding="utf-8")
+    blocks=(ROOT/"formal/W33/FourierBlocks.lean").read_text(encoding="utf-8")
+    q3=(ROOT/"formal/W33/HeisenbergQ3.lean").read_text(encoding="utf-8")
     assert "structure TrivialBlock" not in blocks
     assert "finite-field Fourier transform" in blocks
     assert "q3_nontrivial_block_ranks" not in q3
@@ -133,7 +133,7 @@ def test_sources_compile_and_formal_imported():
 
 
 def test_cli_routes_and_aggregate():
-    source=(ROOT/"holonet_cmd.py").read_text()
+    source=(ROOT/"holonet_cmd.py").read_text(encoding="utf-8")
     for cmd in ("fourier-geometry-v5","extension-cohomology-v5","e8-lanes-v5","hybrid-compiler-v5","hardware-runtime-v5","levi-next5-v5"):
         assert cmd in source
     d=load("results"); assert d["status"]=="PASS" and all(d["checks"].values())

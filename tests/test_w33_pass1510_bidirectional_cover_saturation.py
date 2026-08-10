@@ -2,7 +2,7 @@ import hashlib,json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 P=ROOT/'data'/'w33_pass1510_bidirectional_cover_saturation.json'
-def cert():return json.loads(P.read_text())
+def cert():return json.loads(P.read_text(encoding="utf-8"))
 def test_frozen_certificate_passes():
  p=cert();assert p['status']=='PASS';assert all(p['checks'].values());assert len(p['checks'])==13
 def test_objectwise_saturation_frontier():

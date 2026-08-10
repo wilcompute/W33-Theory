@@ -1,7 +1,7 @@
 import hashlib,json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];DATA=ROOT/'data'
-def load(n,s):return json.loads((DATA/f'w33_pass{n}_{s}.json').read_text())
+def load(n,s):return json.loads((DATA/f'w33_pass{n}_{s}.json').read_text(encoding="utf-8"))
 def chash(d):x=dict(d);x.pop('sha256_without_hash_field',None);return hashlib.sha256(json.dumps(x,sort_keys=True,separators=(',',':')).encode()).hexdigest()
 def test_canonical_hashes_and_statuses():
  files={1907:'u6_exact_shard_and_resource',1908:'complete_mixed_trivariate_certificate_v2',1909:'complete_s6_subgroup_phase_poset_certificate',1910:'gaussian_lines_sigma_phase_cuts',1911:'stabilizer_weighted_primitive_holonomy'}

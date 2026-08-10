@@ -246,7 +246,7 @@ def analyze() -> dict:
 def main():
     summary = analyze()
     out = ROOT / "data" / "w33_outer_twist.json"
-    out.write_text(__import__("json").dumps(summary, indent=2))
+    out.write_text(__import__("json", encoding="utf-8").dumps(summary, indent=2))
     print("T1 outer twist order p:", summary["T1_order_p"],
           "  not symplectic:", summary["T1_not_symplectic"])
     print("T2 inner residual order a:", summary["T2_order_a"],

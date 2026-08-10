@@ -41,7 +41,7 @@ def _fixture_payload() -> dict:
 def test_enumerate_minimal_certificates_smoke(tmp_path: Path):
     payload = _fixture_payload()
     in_json = tmp_path / "in.json"
-    in_json.write_text(json.dumps(payload), encoding="utf-8")
+    in_json.write_text(json.dumps(payload, encoding="utf-8"), encoding="utf-8")
     out = tmp_path / "enum.json"
     cmd = [
         sys.executable,
@@ -69,7 +69,7 @@ def test_enumerate_minimal_certificates_smoke(tmp_path: Path):
 def test_enumerate_minimal_certificates_exact_smoke(tmp_path: Path):
     payload = _fixture_payload()
     in_json = tmp_path / "in.json"
-    in_json.write_text(json.dumps(payload), encoding="utf-8")
+    in_json.write_text(json.dumps(payload, encoding="utf-8"), encoding="utf-8")
     out = tmp_path / "enum_exact.json"
     cmd = [
         sys.executable,

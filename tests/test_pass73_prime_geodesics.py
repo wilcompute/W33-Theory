@@ -16,7 +16,7 @@ def _run_and_load(module_name: str, output_file: str) -> dict:
 
     mod = importlib.import_module(module_name)
     mod.main()
-    return json.loads(Path(output_file).read_text())
+    return json.loads(Path(output_file).read_text(encoding="utf-8"))
 
 
 def _data() -> dict:

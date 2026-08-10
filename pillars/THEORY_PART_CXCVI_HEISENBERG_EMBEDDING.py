@@ -74,7 +74,7 @@ def conjugacy_classes(N: List[tuple]) -> List[Set[tuple]]:
 
 
 def build_embedding() -> dict:
-    N_raw = json.loads((ROOT / "N_subgroup.json").read_text())
+    N_raw = json.loads((ROOT / "N_subgroup.json").read_text(encoding="utf-8"))
     N: List[tuple] = [tuple(n) for n in N_raw]
     idp = tuple(range(192))
     assert len(N) == 192
@@ -87,7 +87,7 @@ def build_embedding() -> dict:
     # T3: Action on blocks (from correlation data)
     summary_path = ROOT / "N_heis_correlation_summary.json"
     if summary_path.exists():
-        corr = json.loads(summary_path.read_text())
+        corr = json.loads(summary_path.read_text(encoding="utf-8"))
         num_blocks = corr.get("T2_num_blocks", -1)
         stab_size = corr.get("T2_stab_block0_size", -1)
     else:

@@ -200,11 +200,10 @@ def main():
                         / "checks"
                         / f"PART_CVII_e8_bijection_intermediate_{stamp}.json"
                     )
-                    outpath.write_text(
-                        json.dumps(
+                    outpath.write_text(json.dumps(
                             {
                                 "bijection": {
-                                    str(k): int(v) for k, v in current_bij.items()
+                                    str(k, encoding="utf-8"): int(v) for k, v in current_bij.items()
                                 }
                             },
                             indent=2,
@@ -215,11 +214,10 @@ def main():
                     # Mirror to tracked artifacts/ to avoid git-ignored checks/
                     artifact_out = Path.cwd() / "committed_artifacts" / outpath.name
                     artifact_out.parent.mkdir(parents=True, exist_ok=True)
-                    artifact_out.write_text(
-                        json.dumps(
+                    artifact_out.write_text(json.dumps(
                             {
                                 "bijection": {
-                                    str(k): int(v) for k, v in current_bij.items()
+                                    str(k, encoding="utf-8"): int(v) for k, v in current_bij.items()
                                 }
                             },
                             indent=2,

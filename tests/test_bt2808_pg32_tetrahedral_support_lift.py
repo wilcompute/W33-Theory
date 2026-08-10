@@ -75,6 +75,6 @@ def test_frozen_certificate_is_semantically_exact():
             ROOT
             / "data"
             / "PART_BT2808_PG32_TETRAHEDRAL_SUPPORT_LIFT_results.json"
-        ).read_text()
+        ).read_text(encoding="utf-8")
     )
     assert frozen == computed

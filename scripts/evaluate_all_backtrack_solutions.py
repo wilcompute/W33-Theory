@@ -88,7 +88,7 @@ for sol in solutions:
 
 def main():
     back = Path("PART_CVII_e6_in_e8_backtrack.json")
-    solutions = json.loads(back.read_text())
+    solutions = json.loads(back.read_text(encoding="utf-8"))
     for i in range(8):
         for j in range(i + 1, 8):
             for si in (-1, 1):

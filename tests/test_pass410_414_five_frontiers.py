@@ -55,7 +55,7 @@ def test_pass414_custody_and_schema():
     module = load("w33_pass414_independent_lab_packet")
     packet, fixture, template = module.build_payload()
     assert packet["status"] == "PASS"
-    schema = json.loads((ROOT / "schemas/w33_pass414_independent_lab_handoff_v1.schema.json").read_text())
+    schema = json.loads((ROOT / "schemas/w33_pass414_independent_lab_handoff_v1.schema.json").read_text(encoding="utf-8"))
     jsonschema.validate(fixture, schema)
     jsonschema.validate(template, schema)
     assert fixture["claim_eligible"] is False
@@ -71,6 +71,6 @@ def test_frozen_artifacts_are_all_pass():
         "w33_pass414_independent_lab_packet.json",
     ]
     for name in names:
-        payload = json.loads((ROOT / "data" / name).read_text())
+        payload = json.loads((ROOT / "data" / name).read_text(encoding="utf-8"))
         assert payload["status"] == "PASS"
         assert all(payload["checks"].values())

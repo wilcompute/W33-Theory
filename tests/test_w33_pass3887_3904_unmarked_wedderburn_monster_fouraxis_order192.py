@@ -12,7 +12,7 @@ LEDGER = ROOT / "data" / "PART_3887_3904_UNMARKED_WEDDERBURN_MONSTER_FOURAXIS_OR
 
 
 def load_result():
-    return json.loads(RESULT.read_text())
+    return json.loads(RESULT.read_text(encoding="utf-8"))
 
 
 def test_semantic_hash_and_promoted_checks():
@@ -47,7 +47,7 @@ def test_four_axis_correction_and_safe_source():
         "12": 5040, "14": 27000, "16": 14040, "24": 84240,
     }
     assert len({tuple(values) for values in result["prime_stability"].values()}) == 1
-    source = SOURCE.read_text()
+    source = SOURCE.read_text(encoding="utf-8")
     assert "np.einsum('kab,a,b->k'" not in source
     assert "np.tensordot(structure,x,axes=([1],[0]))" in source
 
@@ -73,7 +73,7 @@ def test_k43_hidden_character_and_monster_firewall():
     assert seed["orthogonal_residual_degree"] == 200
     assert seed["orthogonal_residual_character_norm"] == 4
     assert set(seed["orthogonal_residual_inner_products"].values()) == {0}
-    candidate = json.loads(CANDIDATE.read_text())
+    candidate = json.loads(CANDIDATE.read_text(encoding="utf-8"))
     assert candidate["status"] == "PENDING"
     assert candidate["mm_strings"] == []
     assert candidate["direct_key_hits"] == 0
@@ -89,6 +89,6 @@ def test_order_192_barcodes_and_claims_ledger():
     assert groups["octonion_axis_line_stabilizer"]["center_order"] == 1
     assert groups["octonion_axis_line_stabilizer"]["order8_elements"] == 48
     assert groups["exceptional_tomotope_completion"]["structure"] == "2^4:D12"
-    ledger = json.loads(LEDGER.read_text())
+    ledger = json.loads(LEDGER.read_text(encoding="utf-8"))
     assert len(ledger["withdrawn_or_corrected"]) == 1
     assert "overflowed" in ledger["withdrawn_or_corrected"][0]["reason"]

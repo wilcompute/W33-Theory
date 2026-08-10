@@ -26,7 +26,7 @@ def test_frozen_certificate_and_exact_verifier(capsys):
 
 
 def test_eight_promoted_fronts_and_boundaries():
-    data = json.loads(DATA.read_text())
+    data = json.loads(DATA.read_text(encoding="utf-8"))
     for number in range(4073, 4081):
         assert any(key.startswith(f"pass{number}_") for key in data)
     assert data["pass4073_physical_four_router_block_encoding"]["exact_matrix_residual"] == 0

@@ -275,7 +275,7 @@ def write_markdown_report(out, path=OUT_MD):
         "- Candidate matches: Mathon (1996), Coolsaet & Degraer (2006), Crnković et al. (2016)."
     )
     lines.append("")
-    path.write_text("\n".join(lines), encoding="utf-8")
+    path.write_text("\n".join(lines, encoding="utf-8"), encoding="utf-8")
 
 
 def main():

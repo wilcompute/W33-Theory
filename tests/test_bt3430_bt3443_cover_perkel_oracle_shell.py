@@ -9,7 +9,7 @@ RESULT = ROOT / "data/PART_BT3430_BT3441_COVER_PERKEL_ORACLE_SHELL_results.json"
 
 def run_exact():
     subprocess.run([sys.executable, "analysis/bt3430_3441_validated_runner.py"], cwd=ROOT, check=True)
-    return json.loads(RESULT.read_text())
+    return json.loads(RESULT.read_text(encoding="utf-8"))
 
 
 def test_exact_packet_status_and_boundary():

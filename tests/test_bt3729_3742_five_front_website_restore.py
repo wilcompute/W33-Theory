@@ -7,7 +7,7 @@ from analysis.bt3729_3742_five_front_website_restore import build_certificate
 def test_pass3729_3742_certificate_matches_frozen():
     generated = build_certificate()
     frozen = json.loads(
-        Path("data/PART_BT3729_BT3742_FIVE_FRONT_WEBSITE_RESTORE_results.json").read_text()
+        Path("data/PART_BT3729_BT3742_FIVE_FRONT_WEBSITE_RESTORE_results.json").read_text(encoding="utf-8")
     )
     assert json.loads(json.dumps(generated)) == frozen
     assert generated["semantic_sha256"] == (

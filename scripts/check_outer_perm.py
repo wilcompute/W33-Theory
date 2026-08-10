@@ -12,7 +12,7 @@ sm = _simple_family_sign_map()
 print('len sign_map', len(sm))
 print('(1,21,0) present?', (1,21,0) in sm)
 
-model=json.loads(Path('artifacts/e6_cubic_affine_heisenberg_model.json').read_text())
+model=json.loads(Path('artifacts/e6_cubic_affine_heisenberg_model.json').read_text(encoding="utf-8"))
 vec_to_eid={ (int(v['u'][0])%3,int(v['u'][1])%3,int(v['z'])%3): int(k) for k,v in model['e6id_to_heisenberg'].items() }
 def outer(u,t):
     A=np.array([[1,2],[2,0]],dtype=int)%3

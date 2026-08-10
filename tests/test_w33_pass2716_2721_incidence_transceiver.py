@@ -33,7 +33,7 @@ def test_exact_certificate_recomputes() -> None:
 
 def test_frozen_certificate_matches_live_reconstruction() -> None:
     module = load_module()
-    frozen = json.loads(DATA.read_text())
+    frozen = json.loads(DATA.read_text(encoding="utf-8"))
     assert frozen == module.certificate()
 
 
@@ -44,7 +44,7 @@ def test_rtl_masks_match_exact_geometry() -> None:
         result["geometry"]["forward_masks_hex"]
         + result["geometry"]["reverse_masks_hex"]
     )
-    text = RTL.read_text()
+    text = RTL.read_text(encoding="utf-8")
     found = Counter(value.lower() for value in re.findall(r"40'h([0-9a-fA-F]{10})", text))
     assert found == expected
     assert "module w33_pass2717_incidence_core" in text

@@ -43,7 +43,7 @@ def _ensure_analysis():
         tmp_dir = Path(tempfile.mkdtemp(prefix="w33_min_cert_fixture_"))
         in_json = tmp_dir / "e6_f3_trilinear_map.json"
         out_json = tmp_dir / "e6_f3_trilinear_symmetry_breaking.json"
-        in_json.write_text(json.dumps(payload), encoding="utf-8")
+        in_json.write_text(json.dumps(payload, encoding="utf-8"), encoding="utf-8")
     if not out_json.exists():
         r = subprocess.run(
             [

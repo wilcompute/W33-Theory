@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 RESULT=ROOT/'data/PART_4005_4007_4010_4012_EXACT_PHOTON_REVIVAL.json'
 
-def load(): return json.loads(RESULT.read_text())
+def load(): return json.loads(RESULT.read_text(encoding="utf-8"))
 
 def test_exact_finite_detuning_revival():
     x=load(); r=x['pass4005_exact_nondispersive_revival']

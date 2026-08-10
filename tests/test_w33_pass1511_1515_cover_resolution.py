@@ -9,7 +9,7 @@ CERT = ROOT / "data" / "w33_pass1511_1515_cover_resolution_frontiers.json"
 
 
 def payload():
-    return json.loads(CERT.read_text())
+    return json.loads(CERT.read_text(encoding="utf-8"))
 
 
 def load_base():
@@ -86,7 +86,7 @@ def test_residual_fractional_integral_gap():
 
 
 def test_release_manifest():
-    p = json.loads((ROOT / "data" / "w33_pass1511_1515_release_manifest.json").read_text())
+    p = json.loads((ROOT / "data" / "w33_pass1511_1515_release_manifest.json").read_text(encoding="utf-8"))
     assert p["status"] == "PASS"
     assert p["validation"] == {
         "certificate_checks": 17,

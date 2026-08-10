@@ -2,7 +2,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-def load(n):return json.loads((ROOT/'data'/n).read_text())
+def load(n):return json.loads((ROOT/'data'/n).read_text(encoding="utf-8"))
 
 def test_4664_two_s3s_are_transverse():
     d=load('PART_W33_PASS4664_TWO_S3S_JOINT_STRUCTURE.json')
@@ -54,8 +54,8 @@ def test_4671_local_s3_tower():
 def test_release_surfaces():
     needle='\\input{analysis/PASS4664_4671_s3_automorphism_eigenlattice_triality_insert}%'
     # Wrapper attachment can coexist with active 4656-4663 predecessor; once attached it must be present everywhere.
-    present=[needle in (ROOT/n).read_text() for n in ('w33_paper.tex','photonic_holonet.tex','holonet_machine_blueprint.tex')]
+    present=[needle in (ROOT/n).read_text(encoding="utf-8") for n in ('w33_paper.tex','photonic_holonet.tex','holonet_machine_blueprint.tex')]
     assert len(set(present))==1
-    reg=json.loads((ROOT/'data/w33_public_frontier_extension_pass4461_4464.json').read_text())
+    reg=json.loads((ROOT/'data/w33_public_frontier_extension_pass4461_4464.json').read_text(encoding="utf-8"))
     assert any(x['token']=='pass4664-4671-s3-automorphism-eigenlattice-triality' for x in reg['public_sections'])
     assert any(x['token']=='pass4664-4671-s3-automorphism-eigenlattice-triality-page' for x in reg['standalone_public_pages'])

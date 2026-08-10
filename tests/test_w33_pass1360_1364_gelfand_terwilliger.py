@@ -26,7 +26,7 @@ def test_frozen_certificate(result):
     assert hashlib.sha256(encoded.encode()).hexdigest() == (
         "501863c5aafb0b32c37f295778243c0e1227b7fd981723f9d51a536e98f8c52a"
     )
-    assert DATA.read_text() == encoded
+    assert DATA.read_text(encoding="utf-8") == encoded
 
 
 def test_gelfand_pair(result):

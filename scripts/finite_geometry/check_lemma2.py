@@ -58,7 +58,7 @@ sage_script.append("print(orbits)")
 sage_code = "\n".join(sage_script)
 # write to temporary file
 tmp = repo / "tmp_w33_lemma2.sage"
-tmp.write_text(sage_code)
+tmp.write_text(sage_code, encoding="utf-8")
 # map Windows path to WSL path (C: -> /mnt/c)
 wsl_tmp = tmp.as_posix().replace("C:", "/mnt/c")
 # write sage script into WSL /tmp via a heredoc then execute it

@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 P=ROOT/'analysis/w33_pass4213_4220_small_cover_su4_quantum_hysteresis_clock_hawking_pell_vacuum_velocity.py'
 spec=importlib.util.spec_from_file_location('p4213',P);m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
-C=json.loads(m.OUT.read_text())
+C=json.loads(m.OUT.read_text(encoding="utf-8"))
 def test_00_semantic_hash(): assert m.semantic_hash(C)==C['semantic_sha256'] and C['all_checks_hold']
 def test_4213_cover(): m.cover_check(C)
 def test_4214_su4(): m.su4_check(C)

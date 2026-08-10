@@ -12,9 +12,9 @@ def generated():
 
 def frozen():
     path=ROOT/'data/PART_BT3514_BT3527_MULTICIRCUIT_RM_BIPLANE_A5_results.json'
-    if path.exists(): return json.loads(path.read_text())
+    if path.exists(): return json.loads(path.read_text(encoding="utf-8"))
     parts=sorted((ROOT/'bootstrap/pass3514_3527').glob('results.*.zlib.b64'))
-    return json.loads(zlib.decompress(base64.b64decode(''.join(p.read_text().strip() for p in parts))))
+    return json.loads(zlib.decompress(base64.b64decode(''.join(p.read_text(encoding="utf-8").strip() for p in parts))))
 
 def test_exact_packet_matches_frozen_certificate():
     data=generated(); saved=frozen()

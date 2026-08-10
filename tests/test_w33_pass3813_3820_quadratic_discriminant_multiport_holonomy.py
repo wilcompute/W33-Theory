@@ -17,11 +17,11 @@ def load_module():
 
 def test_frozen_certificate_exact():
     module = load_module()
-    assert module.build_certificate() == json.loads(CERT_PATH.read_text())
+    assert module.build_certificate() == json.loads(CERT_PATH.read_text(encoding="utf-8"))
 
 
 def test_eight_front_invariants():
-    cert = json.loads(CERT_PATH.read_text())
+    cert = json.loads(CERT_PATH.read_text(encoding="utf-8"))
     assert all(cert['checks'].values())
     assert cert['quadratic_parent']['bent_cayley_graph']['parameters'] == [64, 36, 20, 20]
     assert cert['discriminant_and_overlattices']['maximal_isotropic_rank'] == 11

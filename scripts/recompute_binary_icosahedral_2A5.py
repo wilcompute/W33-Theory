@@ -51,7 +51,7 @@ for r in rows:
 
 # load stabilizer generators on lines
 genfile = BASE / "stabilizer_A5_generators.json"
-stab_data = json.loads(genfile.read_text())
+stab_data = json.loads(genfile.read_text(encoding="utf-8"))
 gens_line = [tuple(g) for g in stab_data['generators']]
 
 # build W33 vertices and line sets
@@ -161,7 +161,7 @@ if len(gens_points) == len(gens_line):
     faces_file = bundle_path("TOE_E6pair_SRG_triangle_decomp_v01_20260227_bundle/TOE_E6pair_SRG_triangle_decomp_v01_20260227/triangle_decomposition_120_blocks.json")
     faces=[]
     if faces_file.exists():
-        data=json.loads(faces_file.read_text())
+        data=json.loads(faces_file.read_text(encoding="utf-8"))
         faces=[tuple(sorted(tri)) for tri in data.get('blocks',[])]
     face_orbs=[]
     if faces:
