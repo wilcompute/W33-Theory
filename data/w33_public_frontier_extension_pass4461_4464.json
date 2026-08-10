@@ -22,7 +22,8 @@
     {"kind":"id","token":"pass4592-4615-paired-axes-golay","source":"analysis/PASS4592_4615_paired_axes_golay_index_insert.html"},
     {"kind":"id","token":"pass4616-4623-e6-sentinel-triality-rank","source":"analysis/PASS4616_4623_e6_sentinel_triality_rank_index_insert.html"},
     {"kind":"id","token":"pass4624-4631-packet-incidence-f4-h10","source":"analysis/PASS4624_4631_packet_incidence_cocycle_f4_index_insert.html"},
-    {"kind":"id","token":"pass4640-4647-d4-schlaefli-spread-holonomy","source":"analysis/PASS4640_4647_d4_schlaefli_spread_holonomy_index_insert.html"}
+    {"kind":"id","token":"pass4640-4647-d4-schlaefli-spread-holonomy","source":"analysis/PASS4640_4647_d4_schlaefli_spread_holonomy_index_insert.html"},
+    {"kind":"id","token":"pass4648-4655-dark-triality-code-routing","source":"analysis/PASS4648_4655_dark_triality_code_routing_index_insert.html"}
   ],
   "standalone_public_pages": [
     {"token":"pass4461-4471-line-signing-apartment-parity-page","source":"docs/line-signing-apartment-parity.html"},
@@ -44,6 +45,7 @@
     {"token":"pass4592-4615-paired-axes-golay-page","source":"docs/apartment-paired-axes-golay.html"},
     {"token":"pass4616-4623-e6-sentinel-triality-rank-page","source":"docs/protected-e6-sentinel-triality.html"},
     {"token":"pass4624-4631-packet-incidence-f4-h10-page","source":"docs/packet-incidence-f4-h10.html"},
-    {"token":"pass4640-4647-d4-schlaefli-spread-holonomy-page","source":"docs/d4-schlaefli-spread-holonomy.html"}
+    {"token":"pass4640-4647-d4-schlaefli-spread-holonomy-page","source":"docs/d4-schlaefli-spread-holonomy.html"},
+    {"token":"pass4648-4655-dark-triality-code-routing-page","source":"docs/triality-self-reconstruction-code-routing.html"}
   ]
 }
