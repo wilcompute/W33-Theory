@@ -1,0 +1,24 @@
+{
+  "pass": 4683,
+  "fixed_base": "Pass4656 five-factor labelled Schreier multigraph on 810 flags",
+  "cohomology": {"dimension":3241,"deck_class_nonzero":true},
+  "natural_factor_normalizer": {
+    "inside_PSp_order": 1,
+    "inside_PGSp_order": 2,
+    "isomorphism": "C2",
+    "nontrivial_element_order": 2,
+    "nontrivial_element_outer_coset": true,
+    "standard_outer_itself_normalizes": false
+  },
+  "class_action": {
+    "normalizer_fixes_deck_class": true,
+    "reason": "the nontrivial normalizer element lifts to the same apartment C2 cover, so pullback preserves its isomorphism class"
+  },
+  "scope_obstruction": {
+    "PSp_action_on_fixed_labelled_base": false,
+    "PSp_orbit_of_alpha_in_this_H1": "not defined",
+    "small_PSp_module_generated_by_alpha": "not defined until a PSp-invariant base complex is chosen"
+  },
+  "theorem": "The nonzero Pass4656 deck class is stabilized by the C2 natural PGSp normalizer of its frozen five-factor Schreier presentation. Full PSp does not act on that fixed labelled base, so promoting the 3241-dimensional H1 to a PSp module would be invalid.",
+  "boundary": "Exact normalizer/scope theorem for the frozen labelled Schreier presentation; it does not deny that a different PSp-invariant complex may carry an equivariant cover class."
+}
