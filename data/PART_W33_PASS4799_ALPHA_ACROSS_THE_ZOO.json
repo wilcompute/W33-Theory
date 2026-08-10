@@ -1,0 +1,148 @@
+{
+  "boundary": "independence numbers computed exhaustively where they finished inside 240s; larger members of the zoo (Q(5,3), H(3,9), W(3,5)) are absent, not zero. The syntheme/total reading of the 6 ovoids is a LEAD supported by counts and group orders only -- no bijection is exhibited, and Pass 4797 refuted a count-based reading one pass ago",
+  "hoffman_equals_st_plus_1": true,
+  "rows": [
+    {
+      "alpha": 5,
+      "geometry": "W(3,2)",
+      "hoffman": 5,
+      "meets_bound": true,
+      "n": 15,
+      "s": 2,
+      "seconds": 0.0,
+      "srg": [
+        15,
+        6,
+        1,
+        3
+      ],
+      "st_plus_1": 5,
+      "t": 2
+    },
+    {
+      "alpha": 5,
+      "geometry": "Q(4,2)",
+      "hoffman": 5,
+      "meets_bound": true,
+      "n": 15,
+      "s": 2,
+      "seconds": 0.0,
+      "srg": [
+        15,
+        6,
+        1,
+        3
+      ],
+      "st_plus_1": 5,
+      "t": 2
+    },
+    {
+      "alpha": 6,
+      "geometry": "Q(5,2)",
+      "hoffman": 9,
+      "meets_bound": false,
+      "n": 27,
+      "s": 2,
+      "seconds": 0.0,
+      "srg": [
+        27,
+        10,
+        1,
+        5
+      ],
+      "st_plus_1": 9,
+      "t": 4
+    },
+    {
+      "alpha": 7,
+      "geometry": "W(3,3)",
+      "hoffman": 10,
+      "meets_bound": false,
+      "n": 40,
+      "s": 3,
+      "seconds": 0.0,
+      "srg": [
+        40,
+        12,
+        2,
+        4
+      ],
+      "st_plus_1": 10,
+      "t": 3
+    },
+    {
+      "alpha": 10,
+      "geometry": "Q(4,3)",
+      "hoffman": 10,
+      "meets_bound": true,
+      "n": 40,
+      "s": 3,
+      "seconds": 0.0,
+      "srg": [
+        40,
+        12,
+        2,
+        4
+      ],
+      "st_plus_1": 10,
+      "t": 3
+    },
+    {
+      "alpha": 9,
+      "geometry": "H(3,4)",
+      "hoffman": 9,
+      "meets_bound": true,
+      "n": 45,
+      "s": 4,
+      "seconds": 0.0,
+      "srg": [
+        45,
+        12,
+        3,
+        3
+      ],
+      "st_plus_1": 9,
+      "t": 2
+    },
+    {
+      "alpha": 17,
+      "geometry": "W(3,4)",
+      "hoffman": 17,
+      "meets_bound": true,
+      "n": 85,
+      "s": 4,
+      "seconds": 1.4,
+      "srg": [
+        85,
+        20,
+        3,
+        5
+      ],
+      "st_plus_1": 17,
+      "t": 4
+    },
+    {
+      "alpha": 17,
+      "geometry": "Q(4,4)",
+      "hoffman": 17,
+      "meets_bound": true,
+      "n": 85,
+      "s": 4,
+      "seconds": 1.3,
+      "srg": [
+        85,
+        20,
+        3,
+        5
+      ],
+      "st_plus_1": 17,
+      "t": 4
+    }
+  ],
+  "second_pair_splits": true,
+  "syntheme_lead": "6 ovoids of 5 points each, with S6 acting and stabiliser S5, matches the 6 synthematic TOTALS of a 6-set (each a set of 5 synthemes), not the 15 synthemes. Counts and orders agree; no bijection is exhibited",
+  "w32_max_independent_sets": {
+    "count": 6,
+    "size": 5
+  }
+}
