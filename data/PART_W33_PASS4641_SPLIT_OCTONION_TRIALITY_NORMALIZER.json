@@ -1,0 +1,40 @@
+{
+  "pass": 4641,
+  "explicit_triality": {
+    "model": "split octonions over F2 in Zorn-vector-matrix coordinates",
+    "quadratic_norm": "N(a,b,u,v)=ab+u dot v",
+    "norm_multiplicative_exhaustive_pairs": 65536,
+    "nonzero_singular_vectors": 135,
+    "left_annihilators": 135,
+    "right_annihilators": 135,
+    "annihilator_size": 16,
+    "all_annihilators_totally_singular": true,
+    "two_annihilator_families_exhaust_270_maximal_singular_4_spaces": true,
+    "type_cycle": "P(x) -> LAnn(x) -> RAnn(x) -> P(x)",
+    "order": 3,
+    "incidence_failures": {"point_left_to_left_right":0,"point_right_to_left_point":0,"left_right_to_right_point":0},
+    "cross_edges_per_type_pair": 2025
+  },
+  "W33_transport": {
+    "quotient_classes": 256,
+    "hyperbolic_dimension": 8,
+    "canonical_form": "q=c0*c1+c2*c3+c4*c5+c6*c7",
+    "left_family_matches_W33_half_spinor_family": 135,
+    "right_family_matches_W33_half_spinor_family": 135
+  },
+  "type_preserving_normalizer": {
+    "PSp_order": 25920,
+    "PSp_centralizer": "C3",
+    "centralizer_maps": 3,
+    "centralizer_orders": [1,3,3],
+    "PGSp_involution_order": 2,
+    "PGSp_sheet_action": "1+2",
+    "conjugation_law": "s c s^{-1}=c^{-1}",
+    "structure": "(3 x PSp(4,3)):2",
+    "order": 155520,
+    "quotient_by_PSp": "S3"
+  },
+  "external_cross_check": "GAP Character Table Library lists (3 x U4(2)):2 of order 155520 among maximal subgroups of O8+(2); U4(2) is isomorphic to PSp(4,3).",
+  "theorem": "The W33-derived plus-type V8 admits an explicit split-octonion order-three D4 triality cycling its three outer node types. Independently, the type-preserving normalizer of the embedded PSp(4,3) is realized as (3 x PSp(4,3)):2.",
+  "boundary": "Type-cycling triality and the type-preserving normalizer are distinct statements. No physical spinor/generation interpretation is inferred."
+}
