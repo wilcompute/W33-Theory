@@ -1,0 +1,34 @@
+{
+  "pass": 4682,
+  "incidences": {
+    "Q": "135_4-36_15 Pass4663",
+    "M": "135_8-36_30 code minima",
+    "rowwise_intersection": 0,
+    "same_rational_column_space_dimension": 36
+  },
+  "column_gram": {
+    "QtQ": "15 I + 3 A36",
+    "MtM": "24 I + 6 J",
+    "QtM": "6 (J-I-A36)",
+    "sum_gram": "9 (3 I + 2 J - A36)",
+    "A36": "SRG(36,15,6,6)",
+    "sum_kernel": "+3 eigenspace of A36, dimension 15"
+  },
+  "rank_smith": {
+    "Q4": {"Q":36,"F2":29,"F3":36,"F5":36,"smith":{"1":29,"2":6,"4":1}},
+    "M8": {"Q":36,"F2":15,"F3":36,"F5":36,"smith":{"1":15,"2":14,"4":6,"8":1}},
+    "sum12": {"Q":21,"F2":21,"F3":14,"F5":21,"smith":{"1":14,"3":7}}
+  },
+  "row_gram_algebra": {
+    "dimension": 4,
+    "relation": "M M^T = 2 Q Q^T + Q M^T",
+    "joint_multiplicities": [1,15,20,99],
+    "eigenvalues": {
+      "QQt": {"60":1,"24":15,"6":20,"0":99},
+      "MMt": {"240":1,"24":35,"0":99},
+      "QMt": {"120":1,"-24":15,"12":20,"0":99}
+    }
+  },
+  "theorem": "The complementary 4- and 8-spread incidences are two integral lattices in the same rational 36-space. Their 36-side products close in the rank-3 spread algebra, while their sum annihilates exactly the 15-dimensional +3 spread eigenspace and has Smith profile 1^14 3^7.",
+  "boundary": "Exact integral/rational incidence algebra only."
+}
