@@ -1,0 +1,23 @@
+{
+  "pass": 4775,
+  "wedderburn": "Q^6 x Q(sqrt(-3)) x M2(Q)",
+  "rank40_projector_recovered_by": "Chinese-remainder spectral projector of the cold adjacency onto x^2-2x-12",
+  "left_ideal_dimension": 2,
+  "distinguished_matrices": {
+    "degree16": [["4","-24"],["-2","0"]],
+    "degree16_charpoly": "x^2-4x-48",
+    "degree16_eigenvalues": "2 +/- 2sqrt(13)",
+    "cold": [["0","12"],["1","2"]],
+    "cold_charpoly": "x^2-2x-12",
+    "hot": [["3","6"],["0","-2"]]
+  },
+  "algebra_check": "all 12 exact 2x2 orbital matrices reproduce the complete 12x12x12 orbital multiplication tensor on the two-dimensional left ideal",
+  "cover_sheet_comparison": {
+    "signed_sheet_character": "10a + 10b + 15a + 45a + 45b + 64 + 81",
+    "degree20_multiplicity": 0,
+    "conclusion": "the degree-16 BASE adjacency acts nontrivially on the unique M2(Q) residue block, but the signed G/K->G/H sheet module contains no degree-20 constituent and lies outside that noncommutative block"
+  },
+  "execution": "independent reconstruction of the residue orbital multiplication tensor; rational CRT projector onto the multiplicity-two degree-20 sector; exact F20 primitive idempotent; two-dimensional left-ideal representation; ordinary-character decomposition of the homogeneous cover sheet sector",
+  "theorem": "The new degree-16 base orbital lives directly in the same split M2(Q) Wedderburn block that carries the radical cold-router sector: on a concrete rational left ideal it acts by [[4,-24],[-2,0]] with characteristic polynomial x^2-4x-48. However the signed normalizer-cover sheet module has degree-20 multiplicity zero. Thus the base relation uses the noncommutative M2 block while the C2 sheet sector itself is representation-theoretically transverse to it.",
+  "boundary": "Exact finite semisimple-algebra and induced-module theorem. The 2x2 matrices are Hecke/Wedderburn coordinates, not physical transfer matrices."
+}
