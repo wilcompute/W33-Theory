@@ -1,0 +1,18 @@
+{
+  "pass":4687,
+  "PSp_local": {
+    "component_stabilizer_order":960,"kernel_on_10_vertices":16,"image_order":60,"image":"A5",
+    "image_element_orders":{"1":1,"2":15,"3":20,"5":24},"Petersen_edges":15,
+    "edge_stabilizer_image":"V4","edge_stabilizer_upstairs_order":64
+  },
+  "PGSp_local": {
+    "component_stabilizer_order":1920,"kernel_on_10_vertices":16,"image_order":120,"image":"S5",
+    "edge_stabilizer_image":"D8","edge_stabilizer_upstairs_order":128
+  },
+  "induction": {
+    "PSp":"Q[405 hot] = Ind_{H960}^{PSp} Q[A5/V4] = Q[PSp/H64]",
+    "PGSp":"Q[405 hot] = Ind_{H1920}^{PGSp} Q[S5/D8] = Q[PGSp/H128]"
+  },
+  "theorem":"The 27xPetersen shortcut fabric is a literal induced local Petersen-edge module: the PSp component stabilizer acts through A5 and the PGSp extension through S5, with common kernel 16.",
+  "boundary":"Exact finite permutation-module induction statement; no physical S5/A5 symmetry is inferred."
+}
