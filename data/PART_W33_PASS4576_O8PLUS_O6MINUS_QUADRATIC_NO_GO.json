@@ -1,0 +1,15 @@
+{
+  "boolean_degree_le2": {
+    "U6_to_V8": {"equation_rank":176,"solution_dimension":0,"unknown_coefficients":176},
+    "V8_to_U6": {"equation_rank":222,"solution_dimension":0,"unknown_coefficients":222}
+  },
+  "boundary": "Finite modular-representation obstruction. It does not exclude non-polynomial physical maps or maps after enlarging/breaking symmetry.",
+  "group": "PSp(4,3)",
+  "next_possible_bridge": "degree >=3, a larger intermediate/permutation module, or explicit symmetry breaking",
+  "pass": 4576,
+  "source_modules": {
+    "cubic": "U6=O-(6,2) cubic incidence factor",
+    "protected": "V8=O+(8,2) middle protected factor"
+  },
+  "theorem": "No nonzero PSp(4,3)-equivariant Boolean polynomial map of degree <=2 exists in either direction between V8 and U6."
+}
