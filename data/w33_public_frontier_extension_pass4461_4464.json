@@ -20,7 +20,8 @@
     {"kind":"id","token":"pass4579-4586-o8plus-exceptional-bridge","source":"analysis/PASS4579_4586_o8plus_exceptional_bridge_index_insert.html"},
     {"kind":"id","token":"pass4587-4589-d4-triality-apartment-graph","source":"analysis/PASS4587_4589_d4_triality_index_insert.html"},
     {"kind":"id","token":"pass4592-4615-paired-axes-golay","source":"analysis/PASS4592_4615_paired_axes_golay_index_insert.html"},
-    {"kind":"id","token":"pass4616-4623-e6-sentinel-triality-rank","source":"analysis/PASS4616_4623_e6_sentinel_triality_rank_index_insert.html"}
+    {"kind":"id","token":"pass4616-4623-e6-sentinel-triality-rank","source":"analysis/PASS4616_4623_e6_sentinel_triality_rank_index_insert.html"},
+    {"kind":"id","token":"pass4640-4647-d4-schlaefli-spread-holonomy","source":"analysis/PASS4640_4647_d4_schlaefli_spread_holonomy_index_insert.html"}
   ],
   "standalone_public_pages": [
     {"token":"pass4461-4471-line-signing-apartment-parity-page","source":"docs/line-signing-apartment-parity.html"},
@@ -40,6 +41,7 @@
     {"token":"pass4579-4586-o8plus-exceptional-bridge-page","source":"docs/protected-o8plus-exceptional-bridge.html"},
     {"token":"pass4587-4589-d4-triality-apartment-graph-page","source":"docs/w33-d4-triality-apartment-geometry.html"},
     {"token":"pass4592-4615-paired-axes-golay-page","source":"docs/apartment-paired-axes-golay.html"},
-    {"token":"pass4616-4623-e6-sentinel-triality-rank-page","source":"docs/protected-e6-sentinel-triality.html"}
+    {"token":"pass4616-4623-e6-sentinel-triality-rank-page","source":"docs/protected-e6-sentinel-triality.html"},
+    {"token":"pass4640-4647-d4-schlaefli-spread-holonomy-page","source":"docs/d4-schlaefli-spread-holonomy.html"}
   ]
 }
