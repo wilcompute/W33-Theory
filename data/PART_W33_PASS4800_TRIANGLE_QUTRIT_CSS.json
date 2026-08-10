@@ -1,0 +1,16 @@
+{
+  "boundary": "Finite CSS/stabilizer theorem only. No fault-tolerance threshold, local hardware realization, or physical energy scale is inferred from these algebraic parameters.",
+  "check_matrix": "45 x 270 point-triangle incidence B with rank 44",
+  "classical_stabilizer_row_code": "[270,44,18]_3",
+  "commutation": "B B^T = 0 mod 3",
+  "distance": 4,
+  "dual_distance": 4,
+  "dual_weight4_witness_model": "four 3-subsets of any chosen 4-set inside one GQ K5; every point occurs three times",
+  "field": "F3",
+  "Hx_rank": 44,
+  "Hz_rank": 44,
+  "logical_qutrits": 182,
+  "pass": 4800,
+  "quantum_code": "[[270,182,4]]_3",
+  "theorem": "Taking the intrinsic triangle-incidence matrix as both CSS check families gives a valid qutrit [[270,182,4]]_3 stabilizer code. Self-orthogonality supplies commutation; rank 44 gives k=182; the dual distance is exactly 4 and d(C)=18 keeps the weight-4 dual witnesses outside the stabilizer."
+}
