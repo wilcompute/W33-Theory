@@ -1,0 +1,94 @@
+name: Passes 4592-4615 Paired Axes Golay
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4592_paired_axes_simplex_hexacode_golay.py'
+      - 'analysis/w33_pass4593_support10_exact.py'
+      - 'analysis/w33_pass4601_s186_composition_series_skeleton.py'
+      - 'analysis/w33_pass4602_c8_selector_phase_boundary.py'
+      - 'analysis/w33_pass4603_apartment_fiber_five_class_scheme.py'
+      - 'analysis/w33_pass4604_no_unary_equivariant_map_any_degree.py'
+      - 'analysis/w33_pass4605_paired_axis_sp6_quadratic_refinements.py'
+      - 'analysis/w33_pass4606_paired_axis_periodic_complex_quantum_hamming.py'
+      - 'analysis/w33_pass4615_hexacode_section_reconstructs_mog_sextet.py'
+      - 'analysis/PASS4592_4615_paired_axes_golay_enumerator_scheme_insert.tex'
+      - 'analysis/PASS4592_4615_paired_axes_golay_index_insert.html'
+      - 'data/PART_W33_PASS459*.json'
+      - 'data/PART_W33_PASS460*.json'
+      - 'data/PART_W33_PASS4615*.json'
+      - 'data/w33_public_frontier_extension_pass4461_4464.json'
+      - 'docs/apartment-paired-axes-golay.html'
+      - 'tests/test_w33_pass4592_4615_paired_axes_golay.py'
+      - '.github/workflows/w33_pass4592_4615_paired_axes_golay.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pass4592-4615-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install verifier dependencies
+        run: python -m pip install --disable-pip-version-check numpy sympy pytest
+      - name: Frozen semantic regression
+        run: pytest -q tests/test_w33_pass4592_4615_paired_axes_golay.py
+      - name: Recompute paired simplex, hexacode, and Golay subcode
+        run: python analysis/w33_pass4592_paired_axes_simplex_hexacode_golay.py | tee /tmp/pass4592.log
+      - name: Recompute complete support-10 spectrum
+        run: python analysis/w33_pass4593_support10_exact.py | tee /tmp/pass4593.log
+      - name: Recompute S186 composition series
+        run: python analysis/w33_pass4601_s186_composition_series_skeleton.py | tee /tmp/pass4601.log
+      - name: Recompute C8 phase boundary and fiber scheme
+        run: |
+          python analysis/w33_pass4602_c8_selector_phase_boundary.py | tee /tmp/pass4602.log
+          python analysis/w33_pass4603_apartment_fiber_five_class_scheme.py | tee /tmp/pass4603.log
+      - name: Recompute all-degree unary no-go and paired-axis algebra
+        run: |
+          python analysis/w33_pass4604_no_unary_equivariant_map_any_degree.py | tee /tmp/pass4604.log
+          python analysis/w33_pass4605_paired_axis_sp6_quadratic_refinements.py | tee /tmp/pass4605.log
+          python analysis/w33_pass4606_paired_axis_periodic_complex_quantum_hamming.py | tee /tmp/pass4606.log
+      - name: Recompute unique Golay sextet completion
+        run: python analysis/w33_pass4615_hexacode_section_reconstructs_mog_sextet.py | tee /tmp/pass4615.log
+      - name: Re-run semantic regression
+        run: pytest -q tests/test_w33_pass4592_4615_paired_axes_golay.py
+      - name: Dry-run safe restored-site materializer
+        run: |
+          mkdir -p evidence/pass4592_4615
+          python tools/integrate_bt3376_bt3389.py --report evidence/pass4592_4615/site.json
+          test "$(grep -c 'id=\"pass4592-4615-paired-axes-golay\"' docs/index.html)" -eq 1
+          grep -q '\[63,6,32\]' docs/apartment-paired-axes-golay.html
+          grep -q 'full apartment weight enumerator' analysis/PASS4592_4615_paired_axes_golay_index_insert.html
+      - uses: WtfJoke/setup-tectonic@v3
+        with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
+      - name: Compile canonical manuscripts
+        run: |
+          mkdir -p evidence/pass4592_4615
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass4592_4615/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+      - name: Evidence boundaries
+        run: |
+          grep -q 'supports $11$ through $20$' analysis/PASS4592_4615_paired_axes_golay_enumerator_scheme_insert.tex
+          grep -q 'not a claim that $O^-(6,2)$ embeds in $M_{24}$' analysis/PASS4592_4615_paired_axes_golay_enumerator_scheme_insert.tex
+          grep -q 'complete unlabeled submodule lattice' analysis/PASS4592_4615_paired_axes_golay_enumerator_scheme_insert.tex
+          grep -q 'PASS4592_4615_paired_axes_golay_enumerator_scheme_insert' w33_paper.tex
+          grep -q 'PASS4592_4615_paired_axes_golay_enumerator_scheme_insert' photonic_holonet.tex
+          grep -q 'PASS4592_4615_paired_axes_golay_enumerator_scheme_insert' holonet_machine_blueprint.tex
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pass4592-4615-paired-axes-golay-evidence
+          path: |
+            evidence/pass4592_4615/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
