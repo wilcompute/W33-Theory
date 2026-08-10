@@ -1,0 +1,167 @@
+% Passes 4579--4586: full protected O8+ reconstruction, elliptic-rank reduction,
+% apartment-fiber symmetry, optimal erasure readout, alternating-square U6 bridge,
+% and three outside-box incidence/support constructions.
+\subsection{The protected shells close into $O^+(8,2)$ and reach the exceptional six-space (Passes 4579--4586)}
+\label{sec:pass4579-4586-o8plus-exceptional}
+
+\paragraph{Pass 4579: the W33 lifts reconstruct all $255$ nonzero vectors of $O^+(8,2)$.}
+Start only from the two geometric lifts established in Passes~4558--4559: the
+$1620$ apartments map $12$-to-$1$ onto $135$ singular classes, while the $240$
+protected edges map $2$-to-$1$ onto $120$ anisotropic classes.  These two sets
+are disjoint and exhaust the $255$ nonzero classes of
+$V_8=V_9/\langle j\rangle$.  With
+\[
+ q([x])=\frac{\operatorname{wt}(x)}4\pmod2,\qquad
+ B(x,y)=q(x+y)+q(x)+q(y),
+\]
+the lift-native polar degrees are
+\[
+\begin{array}{c|cc}
+ &\text{singular}&\text{anisotropic}\\ \hline
+\text{singular}&70&56\\
+\text{anisotropic}&63&63
+\end{array}.
+\]
+Every two distinct nonzero vectors determine a binary projective line; the
+$10795$ lines split into $1575$ all-singular triples, $3780$ triples with one
+singular and two anisotropic points, and $5440$ all-anisotropic triples.  Thus
+the W33 lifts reconstruct the complete projective quadratic incidence geometry,
+not merely its two shell cardinalities.
+
+\paragraph{Pass 4580: the elliptic binary-rank problem reduces to one exact dual-containing code theorem.}
+Let $N$ be the point--line incidence matrix of
+$Q^-(5,q)=GQ(q,q^2)$ for odd $q$ and let
+$C=\operatorname{im}N\subseteq\mathbb F_2^{|\mathcal P|}$.  The candidate formulas
+from Passes~4537/4552 are equivalent to
+\[
+ \dim C=q^4+q^2+1,\qquad
+ C^\perp=\ker N^T\subseteq C,\qquad
+ \dim C^\perp=q(q^2-q+1).
+\]
+Indeed these imply
+\[
+ \boxed{\operatorname{rank}_2(N^TN)
+       =\dim(C/C^\perp)=(q^2+1)(q^2-q+1).}
+\]
+The exact $q=3,5,7$ computations satisfy the full dual-containing identity,
+with radical dimensions $21,105,301$.  A targeted literature audit did not
+locate the required cross-characteristic binary point--line theorem for the
+elliptic family; defining-characteristic rank theorems for related polar spaces
+do not supply it.  The infinite rank formula therefore remains open, now as one
+precisely isolated code-theoretic statement.
+
+\paragraph{Pass 4581: every twelve-apartment fiber is an equivariant $3\times4$ resolution.}
+For a singular class, the three independent sets of four in its
+$K_{4,4,4}$ fiber are not arbitrary: each set consists of four pairwise-disjoint
+apartments and each of the three sets partitions the same canonical $16$-line
+support.  The singular-class stabilizer has order $192$ and line-orbit sizes
+\[
+ 16,8,8,8,
+\]
+with the common support the unique $16$-orbit.  Its action on the twelve
+apartments has image order $96$ and kernel order two; the induced action on the
+three four-sets is the full $S_3$, with elementary-abelian $2^4$ kernel.  A
+setwise stabilizer of one four-set acts on its four apartments as $D_8$.
+
+\paragraph{Pass 4582: optimal protected readout needs $11$ channels for one erasure and $14$ for two.}
+Allow the natural $280$ protected carriers: forty line-stars and $240$ edge
+vectors.  A selected carrier set survives $t$ arbitrary erasures precisely when
+every nonzero linear functional on $H_{10}$ has support at least $t+1$ on the
+selected columns.  Equivalently its ten-dimensional binary row code has minimum
+distance at least $t+1$.  Exact witnesses give
+\[
+ \boxed{n_{t=1}=11},\qquad \boxed{n_{t=2}=14}.
+\]
+The first is optimal because deleting one carrier must still leave ten
+independent channels.  For two erasures, lengths $12$ and $13$ are excluded by
+the binary Hamming bound for a $[n,10,d\ge3]$ code, while the fourteen-carrier
+witness survives every pair deletion.  The parity coordinate is therefore no
+longer tied to one distinguished center line-star.
+
+\paragraph{Pass 4583: the alternating square supplies the first equivariant protected-to-$O^-_6(2)$ bridge.}
+Pass~4556 rules out every nonzero equivariant \emph{linear} map
+$H_{10}\leftrightarrow U_6$.  The correct next functor is instead
+$\Lambda^2V_8$.  Contraction with the protected alternating form gives an
+invariant hyperplane
+\[
+ K_{27}=\ker\!\left(B:\Lambda^2V_8\to\mathbb F_2\right).
+\]
+It contains a $15$-dimensional invariant core $K_{15}$ and exact exhaustion of
+the quotient gives
+\[
+ \boxed{K_{27}/K_{15}\cong U_6\oplus U_6}.
+\]
+There are exactly three invariant six-submodules in this twelve-space.  Each is
+irreducible, has faithful $PSp(4,3)$ image of order $25920$, and has nonzero
+orbits of sizes $27$ and $36$, reproducing the natural $O^-_6(2)$ singular and
+anisotropic shells.  Hence every distinct orthogonal protected pair has the
+bilinear equivariant route
+\[
+ (v,w)\longmapsto v\wedge w\longmapsto K_{27}/K_{15}
+ \longmapsto U_6.
+\]
+For a fixed invariant factor, all $64$ target vectors occur: zero has $945$
+unordered orthogonal-pair preimages and each nonzero target has exactly $240$.
+This is a pair-valued bridge; choosing one of the three $U_6$ factors is an
+additional equivariant splitting choice.
+
+\paragraph{Pass 4584 (outside the box): singular--anisotropic incidence is a new $[120,9,56]$ code.}
+Let $R$ be the $135\times120$ matrix with $R_{sa}=1$ when singular class $s$ is
+polar-orthogonal to anisotropic class $a$.  Then
+\[
+ \operatorname{rank}_2R=9,\qquad RR^T=0,\qquad R^TR=J_{120},
+\]
+and the row code is the self-orthogonal code
+\[
+ \boxed{[120,9,56],\qquad
+ W(z)=1+255z^{56}+255z^{64}+z^{120}.}
+\]
+It contains the all-ones word, so quotienting by that fixed line gives another
+eight-dimensional realization of the protected orthogonal geometry.
+
+\paragraph{Pass 4585 (outside the box): the singular shell has a canonical $135\to45$ quotient.}
+The twelve apartments over a singular class use sixteen W33 lines, but only
+$45$ distinct sixteen-line supports occur.  Each support is shared by exactly
+three singular classes; the three are pairwise orthogonal and sum to zero in
+$V_8$, hence form a totally singular projective line.  The $45$ supports form one
+$PSp(4,3)$ orbit with stabilizer order $576$.  Its action on the three singular
+points is $C_3$, with kernel order $192$, exactly the singular-point stabilizer
+of Pass~4581.  Thus the $135$ shell is an explicit three-sheeted lift of a
+natural forty-five-object orbit.
+
+\paragraph{Pass 4586 (outside the box): a rank-$15$ $45\times40$ incidence crosses the non-self-dual W33 boundary.}
+For each original W33 point, its four incident line-vertices form a $K_4$ pencil;
+the three opposite-edge pairs define three anisotropic classes, an
+all-anisotropic projective line.  There are forty such lines.  Declare one of
+the forty-five singular support-lines incident with one of these forty
+anisotropic lines iff all nine cross pairs are polar-orthogonal.  The resulting
+matrix $T$ has row weight eight, column weight nine, and
+\[
+ \boxed{\operatorname{rank}_2T=15}.
+\]
+Its integer Gram identities are
+\[
+ \boxed{TT^T=8I_{45}+2A_{45}},\qquad
+ \boxed{T^TT=8I_{40}+2A_{\rm point}+J_{40}},
+\]
+where
+\[
+ A_{45}=\operatorname{SRG}(45,32,22,24)
+\]
+and $A_{\rm point}$ is \emph{exactly} the point-side
+$\operatorname{SRG}(40,12,2,4)$ of W33.  The executable explicitly checks that
+$A_{\rm point}\ne A_*$, the protected line-side graph.  Thus this construction
+crosses the odd-$q$ point/line non-self-duality instead of identifying the two
+forty-sets.  The repository already contains natural forty-five-object carriers
+with the same SRG parameters; identity with any particular $E_6$/center-quad
+carrier is deliberately withheld until an action intertwiner is certified.
+
+\begin{quote}\small
+\textbf{Evidence boundary.} Passes~4579--4586 are exact finite binary geometry,
+incidence coding, and representation theory.  The all-$q$ elliptic binary-rank
+formula remains open beyond $q=3,5,7$.  The exceptional bridge is bilinear on
+orthogonal pairs, not a canonical unary state map.  The forty-five-object
+parameter match is not promoted to an $E_6$ identification without an explicit
+intertwiner.  Erasure bounds and Hamming/polar incidence are not physical fault
+thresholds or spacetime locality.
+\end{quote}
