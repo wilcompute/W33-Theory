@@ -1,0 +1,16 @@
+{
+  "Levi_H1_dim_F3": 64,
+  "Levi_boundary_rank_F3": 71,
+  "Levi_edges": 135,
+  "Levi_vertices": 72,
+  "boundary": "The short exact sequence 0 -> L/C -> C^perp/C -> H_1(Levi;F3) -> 0 is canonical from incidence. A direct-sum splitting of the 182 logical dimensions is not promoted as canonical.",
+  "canonical_isomorphism": "C^perp / (direct_sum_27 G10) ~= H_1(Levi(GQ(4,2));F3)",
+  "dual_dim": 226,
+  "filtration": "C_[270,44,18] <= G10^27_[270,162,4] <= C^perp_[270,226,4]",
+  "global_quotient_dim": 64,
+  "local_golay_sum_dim": 162,
+  "local_logical_quotient_dim": 118,
+  "pass": 4807,
+  "stabilizer_code_dim": 44,
+  "theorem": "The qutrit logical space has a canonical local-to-global filtration. The 27 punctured ternary Golay fibers form a 162-dimensional intermediate code containing the 44-dimensional stabilizer row code; the remaining 64-dimensional quotient is canonically the first homology of the GQ(4,2) Levi graph."
+}
