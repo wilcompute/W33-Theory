@@ -1,0 +1,99 @@
+\section{Passes 4801--4808: exact H10 radius and the local-Golay/global-homology triangle code}
+\label{sec:pass4801-4808}
+
+The 45-point $GQ(4,2)$ triangle carrier from Passes 4795--4800 supports a sharper local-to-global code decomposition, while the binary $H_{10}$ covering-radius problem also closes exactly.
+
+\paragraph{Exact covering radius.}
+Pass 4794 had proved $14\le \rho(H_{10})\le 15$ and exhibited a distance-$14$ coset.  A distance-$15$ coset would contain a leader $x$ of weight exactly $15$.  For each $c\in H_{10}$,
+\[
+ d(x,c)=15+\mathrm{wt}(c)-2|\operatorname{supp}(x)\cap\operatorname{supp}(c)|,
+\]
+so a weight-$15$ leader is exactly a $40$-variable cardinality-feasibility problem.  Coordinate transitivity fixes one selected coordinate.  Its intersection with the corresponding weight-$12$ neighborhood codeword has size $a\in\{1,\ldots,6\}$.  The order-$648$ point stabilizer has respectively
+\[
+1,2,3,6,6,7
+\]
+orbits on those neighbor subsets.  Exhaustive exact propagation over the resulting $25$ symmetry representatives rejects every case.  Hence
+\[
+\boxed{\rho(H_{10})=14.}
+\]
+The independent PySAT producer \texttt{w33\_pass4801\_h10\_covering\_radius\_sat.py} encodes the same finite decision directly.
+
+\paragraph{Complete weight-four logical shell.}
+Let $B$ be the $45\times270$ point--triangle incidence matrix and $C=\operatorname{row}_{\mathbb F_3}(B)=[270,44,18]_3$.  For the CSS code $H_X=H_Z=B$, all projective weight-four words of $C^\perp$ were enumerated exactly.  There are
+\[
+810=135+270+405
+\]
+projective minimum logicals, or $1620$ including nonzero scalar multiples, and every one is supported inside exactly one of the $27$ maximal $K_5$ fibers.  Per fiber the split is $5+10+15$.
+
+\paragraph{Decoder and optimal interaction schedule.}
+The $270$ columns of $B$ are distinct weight-three vectors.  Consequently the ordered $X/Z$ syndrome pair uniquely identifies all
+\[
+270(3^2-1)=2160
+\]
+nontrivial single-qutrit Pauli errors.  The combined $X/Z$ Tanner graph has $90$ real checks of degree $18$ and $270$ data vertices of degree $6$.  An exact regular completion and one-factorization yields $18$ conflict-free layers, each containing all $90$ checks on $90$ distinct data qutrits.  The check weight gives the matching lower bound, so $18$ layers are optimal in this interaction model.
+
+\paragraph{Equivariant $F_4/E_6$ bridge and extension firewall.}
+The Pass-4797 dependency-cube/F4 quotient crosswalk upgrades projectively to a $PSp(4,3)$-equivariant identification of the degree-$45$ simple-group images,
+\[
+U_4(2)\cong PSp(4,3),\qquad |U_4(2)|=25920.
+\]
+The two order-$51840$ extensions remain distinct: the central double cover $Sp(4,3)=2.U_4(2)$ has degree-$45$ image $25920$ with kernel $2$, whereas the outer projective extension has $51840$ distinct permutations.  No central/outer extension identification is made.
+
+\paragraph{$q=9$ minimum shell.}
+The general odd-$q$ theorem from Pass 4754 identifies the minimum line-kernel words with BLT sets.  For $q=9$ the code has length $820$ and minimum distance $10$.  Transferring Betten's complete BLT classification gives three full projective-semilinear orthogonal classes: Linear, K1, and Fi/Mondello, with class sizes
+\[
+239112,\qquad1195560,\qquad17216064,
+\]
+for a total shell of $18650736$.  This is a transfer of prior-art BLT classification; no finer $PSp(4,9)$ orbit splitting is asserted.
+
+\paragraph{Local punctured ternary Golay.}
+The ten triangle coordinates inside one $K_5$ carry a local kernel
+\[
+G_{10}=[10,6,4]_3
+\]
+with enumerator
+\[
+1+60z^4+144z^5+60z^6+240z^7+180z^8+20z^9+24z^{10}.
+\]
+This is not identified from parameters alone.  Exhausting all linear one-coordinate extensions gives exactly two projective extension directions to the perfect ternary Golay
+\[
+G_{11}=[11,6,5]_3.
+\]
+Adjoining both directions gives the self-dual extended ternary Golay
+\[
+G_{12}=[12,6,6]_3,
+\]
+with enumerator $1+264z^6+440z^9+24z^{12}$.  Hence every $K_5$ fiber is explicitly a punctured ternary-Golay block.
+
+\paragraph{Canonical local-to-global filtration.}
+Let
+\[
+L=G_{10}^{\oplus27}.
+\]
+Exact ranks and orthogonality give
+\[
+C=[270,44,18]_3\subset L=[270,162,4]_3\subset C^\perp=[270,226,4]_3.
+\]
+The $GQ(4,2)$ Levi graph has $45+27=72$ vertices and $135$ edges, hence
+\[
+\dim_{\mathbb F_3}H_1=135-72+1=64.
+\]
+The line-local point-sum incidence map has kernel exactly $L$ and induces the canonical quotient isomorphism
+\[
+\boxed{C^\perp/L\cong H_1(\operatorname{Levi}(GQ(4,2));\mathbb F_3).}
+\]
+Thus the $182$-dimensional logical space fits into the canonical exact sequence
+\[
+0\longrightarrow L/C\longrightarrow C^\perp/C\longrightarrow H_1(\operatorname{Levi};\mathbb F_3)\longrightarrow0,
+\]
+with dimensions $118$, $182$, and $64$.  No canonical direct-sum splitting is asserted.
+
+\paragraph{First nonlocal logical sector.}
+Modulo $L$, each $K_5$ block has $81$ possible point-sum syndromes with minimum lift costs distributed as $1$ state of cost $0$, $20$ of cost $1$, and $60$ of cost $2$.  An exact symmetry-broken MILP excludes every nonzero global homology class of triangle-lift weight at most $5$.  Weight $6$ is attained by induced $K_{3,3}$ subgraphs of the $27$-line intersection graph: opposite signs are assigned to the two three-line parts, and each line contributes the triangle of its three intersections with the opposite part.  There are exactly $360$ induced $K_{3,3}$ subgraphs, furnishing a canonical projective witness family.  Therefore
+\[
+\boxed{d_{\mathrm{lift}}(C^\perp/L)=6.}
+\]
+The $360$ witnesses are not claimed to exhaust the full weight-six quotient shell.
+
+\paragraph{Interpretive boundary.}
+The overall CSS distance $4$ is therefore entirely local to the punctured-Golay fibers, while the first genuinely nonlocal/Levi-homological sector occurs at lift weight $6$.  This is an exact finite-code statement.  It does not imply a fault-tolerance threshold, a microscopic Hamiltonian, or a physical energy scale.
