@@ -8,6 +8,7 @@ on:
       - 'analysis/w33_pass4771_4775_degree16_cover_hecke_certified.py'
       - 'analysis/w33_pass4772_4776_global_cube_cell_code.py'
       - 'analysis/w33_pass4773_symmetry_reduced_multicommodity_flow.py'
+      - 'tests/test_w33_pass4769_4776_modular_moduli_cover_code_flow.py'
       - '.github/workflows/w33_pass4769_4776_modular_moduli_cover_code_flow.yml'
   workflow_dispatch:
 permissions:
@@ -25,8 +26,8 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
       - name: Install exact-analysis dependencies
-        run: python -m pip install --disable-pip-version-check numpy scipy networkx sympy
-      - name: Execute all five scripts covering eight passes
+        run: python -m pip install --disable-pip-version-check numpy scipy networkx sympy pytest
+      - name: Execute all five scripts covering eight passes and frozen regression
         shell: bash
         run: |
           set +e
@@ -47,6 +48,12 @@ jobs:
             echo "rc=$here" | tee -a "$LOG"
             if [ "$here" -ne 0 ]; then rc=$here; break; fi
           done
+          if [ "$rc" -eq 0 ]; then
+            echo "===== frozen regression =====" | tee -a "$LOG"
+            python -m pytest -q tests/test_w33_pass4769_4776_modular_moduli_cover_code_flow.py 2>&1 | tee -a "$LOG"
+            rc=${PIPESTATUS[0]}
+            echo "pytest_rc=$rc" | tee -a "$LOG"
+          fi
           echo "$rc" > "$STATUS"
           exit 0
       - name: Commit diagnostics and generated certificates even on failure
