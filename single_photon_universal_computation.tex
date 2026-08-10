@@ -2385,13 +2385,25 @@ the graph-theoretic analogue of the mixing bandwidth.  The automorphism group or
 $51840 = |\Sp(4,\FF_3)|$ is verified computationally.
 \end{proof}
 
-\begin{corollary}[Compression of physical law]
-The parameters $(q=3, k=12, \lambda=2, \mu=4, v=40, E=240)$ can be encoded in fewer
-than $64$ bits (Kolmogorov complexity $K(W(3,3)) < 64$), whereas independent
-specification of the full Standard Model plus quantum optics parameter set requires
-$\gtrsim 260$ bits.  The $W(3,3)$ skeleton achieves a $6.5\times$ compression of the
-fundamental constants governing photonic universality.
-\end{corollary}
+\begin{remark}[Description length, and what it does \emph{not} measure]
+The parameters $(q=3, k=12, \lambda=2, \mu=4, v=40, E=240)$ fit in fewer than $64$ bits,
+and they determine $W(3,3)$ up to isomorphism --- so the whole substrate is recoverable
+from that many bits. That is the defensible statement, and it is a statement about
+\emph{this geometry}.
+
+Three things it is not. It is not a Kolmogorov complexity: $K$ is uncomputable, and a
+bit-count of six small integers is an upper bound on a description length in one chosen
+encoding, not the quantity $K$. It is not a comparison with the Standard Model's parameter
+budget, because the two lists do not specify the same thing --- no mass, mixing angle or
+coupling is recoverable from the six integers above, so a ratio between the two bit-counts
+prices objects that are not substitutes. And it is therefore not a ``compression of the
+fundamental constants'': a compression claim requires that the shorter description
+reproduce what the longer one described.
+
+Recorded here as an observation because the previous version of this passage stated the
+ratio as a corollary, which gave an unlicensed comparison the standing of a proof. Flagged
+by \texttt{scripts/check\_layer\_conformance.py}.
+\end{remark}
 
 %======================================================================
 \section{Conclusions}

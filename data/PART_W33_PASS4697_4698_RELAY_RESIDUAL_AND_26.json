@@ -1,0 +1,89 @@
+{
+  "boundary": "4697's densities are quoted from Passes 4562/4563 (600-1000 samples per carrier) and not re-measured; the within-b comparison rests on three geometries in one group and one each in two others, which is too few for a fitted law and is not fitted. 4698 is a negative result about a coincidence and establishes nothing beyond the absence of a link that was never predicted",
+  "pass_4697": {
+    "rows": [
+      {
+        "b": 3,
+        "geometry": "Q(5,2)",
+        "ramanujan_pct": 85.2,
+        "relay_fraction": 0.615384615385,
+        "s": 2,
+        "source": "4562",
+        "t": 4
+      },
+      {
+        "b": 10,
+        "geometry": "H(3,4)",
+        "ramanujan_pct": 0.0,
+        "relay_fraction": 0.727272727273,
+        "s": 4,
+        "source": "4562",
+        "t": 2
+      },
+      {
+        "b": 6,
+        "geometry": "W(3,3)",
+        "ramanujan_pct": 26.9,
+        "relay_fraction": 0.692307692308,
+        "s": 3,
+        "source": "4563",
+        "t": 3
+      },
+      {
+        "b": 6,
+        "geometry": "Q(4,3)",
+        "ramanujan_pct": 27.8,
+        "relay_fraction": 0.692307692308,
+        "s": 3,
+        "source": "4563",
+        "t": 3
+      },
+      {
+        "b": 6,
+        "geometry": "Q(5,3)",
+        "ramanujan_pct": 7.2,
+        "relay_fraction": 0.72972972973,
+        "s": 3,
+        "source": "4562",
+        "t": 9
+      },
+      {
+        "b": 45,
+        "geometry": "H(3,9)",
+        "ramanujan_pct": 0.0,
+        "relay_fraction": 0.870967741935,
+        "s": 9,
+        "source": "4562",
+        "t": 3
+      }
+    ],
+    "supported_claim": "at fixed s, Ramanujan density falls as t rises",
+    "verdict": "relay fraction is a bijective function of (s,t) and therefore cannot add information beyond the parameters; 'relay explains the residual after b' is exactly 't explains the residual after s', and is a reparametrisation, not a mechanism",
+    "within_block_groups": [
+      {
+        "b": 6,
+        "members": [
+          "W(3,3)",
+          "Q(4,3)",
+          "Q(5,3)"
+        ],
+        "monotone_decreasing": false
+      }
+    ]
+  },
+  "pass_4698": {
+    "any_match": false,
+    "lc_classes_n6": 26,
+    "verdict": "26 counts local-complementation classes of graphs on six vertices, a fact independent of W(3,3); no quantity in the geometry equals it and none was predicted to. Coincidence, closed",
+    "w33_quantities": {
+      "W(3,3) lines": 40,
+      "W(3,3) points": 40,
+      "degree": 12,
+      "edges": 240,
+      "eigenvalue multiplicities": 24,
+      "frames": 81,
+      "lines through a point": 4,
+      "|Sp(4,3)|": 51840
+    }
+  }
+}

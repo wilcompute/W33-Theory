@@ -1,0 +1,135 @@
+{
+  "boundary": "4693's trace-from-parameters identity is exact and settles that Pass 4685's comparison was determined in advance; the constraint from Pass 4682 is NOT withdrawn, only the claim that it was tested. 4694's table quotes Track C's four cancellation results as stated and does NOT re-derive their six walk masses -- the refutation of my s=t rule rests on their GQ(3,3) number being correct. 4695 is a prediction, not a result: neither W(3,4) nor W(3,5) is computed here",
+  "local_profiles_separate": false,
+  "pass_4693_traces_are_forced": {
+    "all_reproduced": true,
+    "rows": [
+      {
+        "geometry": "W(3,3)",
+        "match": true,
+        "params": [
+          40,
+          12,
+          2,
+          4
+        ],
+        "tr3_built": 960,
+        "tr3_from_params": 960,
+        "tr4_built": 24960,
+        "tr4_from_params": 24960
+      },
+      {
+        "geometry": "Q(4,3)",
+        "match": true,
+        "params": [
+          40,
+          12,
+          2,
+          4
+        ],
+        "tr3_built": 960,
+        "tr3_from_params": 960,
+        "tr4_built": 24960,
+        "tr4_from_params": 24960
+      },
+      {
+        "geometry": "Q(5,2)",
+        "match": true,
+        "params": [
+          27,
+          10,
+          1,
+          5
+        ],
+        "tr3_built": 270,
+        "tr3_from_params": 270,
+        "tr4_built": 13770,
+        "tr4_from_params": 13770
+      },
+      {
+        "geometry": "H(3,4)",
+        "match": true,
+        "params": [
+          45,
+          12,
+          3,
+          3
+        ],
+        "tr3_built": 1620,
+        "tr3_from_params": 1620,
+        "tr4_built": 24300,
+        "tr4_from_params": 24300
+      }
+    ],
+    "verdict": "Pass 4685's test had no power"
+  },
+  "pass_4694_condition": {
+    "corrected_condition": "self-dual, i.e. W(3,q) with q even",
+    "old_condition": "s = t",
+    "refuting_case": "GQ(3,3) has s=t, is not self-dual, and Track C's cancellation fails there (712 != 180)",
+    "table": [
+      {
+        "quadrangle": "GQ(2,2)=W(3,2)",
+        "s": 2,
+        "s_eq_t": true,
+        "self_dual": "yes (q even)",
+        "t": 2,
+        "track_c": "HOLDS  288 = 288"
+      },
+      {
+        "quadrangle": "GQ(2,4)=Q(5,2)",
+        "s": 2,
+        "s_eq_t": false,
+        "self_dual": "no",
+        "t": 4,
+        "track_c": "fails  60 != 36"
+      },
+      {
+        "quadrangle": "GQ(4,2)=H(3,4)",
+        "s": 4,
+        "s_eq_t": false,
+        "self_dual": "no",
+        "t": 2,
+        "track_c": "fails  2812 != 792"
+      },
+      {
+        "quadrangle": "GQ(3,3)=W(3,3)",
+        "s": 3,
+        "s_eq_t": true,
+        "self_dual": "NO (q odd)",
+        "t": 3,
+        "track_c": "fails  712 != 180"
+      }
+    ]
+  },
+  "pass_4695_prediction": [
+    {
+      "duality": "SELF-DUAL",
+      "parity": "even",
+      "prediction": "cancellation HOLDS",
+      "q": 4,
+      "quadrangle": "W(3,4)"
+    },
+    {
+      "duality": "not self-dual",
+      "parity": "odd",
+      "prediction": "cancellation FAILS",
+      "q": 5,
+      "quadrangle": "W(3,5)"
+    },
+    {
+      "duality": "SELF-DUAL",
+      "parity": "even",
+      "prediction": "cancellation HOLDS",
+      "q": 8,
+      "quadrangle": "W(3,8)"
+    },
+    {
+      "duality": "not self-dual",
+      "parity": "odd",
+      "prediction": "cancellation FAILS",
+      "q": 9,
+      "quadrangle": "W(3,9)"
+    }
+  ]
+}

@@ -47,17 +47,14 @@ repos:
           the current exact certificates pass, prior synthesis remains clean, and
           obsolete transport scaffolds are absent.
 
+      # Moved out of an inline `entry:` at Pass 4692.  The inline form opened a
+      # double-quoted YAML scalar whose continuation lines started at column 0, which ends
+      # the scalar -- so this FILE did not parse, and every hook in it was dead. The guard
+      # was present, documented, and had never run once.  Scripts, not inline entries.
       - id: s-min-formula-guard
         name: Guard S_min formula correctness
-        entry: python -c "
-import sys, re
-for f in sys.argv[1:]:
-    txt = open(f, errors='replace').read()
-    if re.search(r'log_2\\s*2160\\s*-\\s*log_2\\s*40.*2\\.07', txt):
-        print(f'ERROR in {f}: log2(2160)-log2(40)=log2(54), not 2.0704')
-        raise SystemExit(1)
-"
-        language: python
+        entry: py -3 scripts/check_smin_formula.py
+        language: system
         pass_filenames: true
         files: '\.(tex|md|py)$'
         stages: [pre-commit]
@@ -104,3 +101,35 @@ for f in sys.argv[1:]:
         language: system
         pass_filenames: true
         files: ^rtl/.*\.sv$
+      # Added Pass 4689, after Pass 4680 found a null reported as evidence that covered
+      # 0.0008% of its space -- and Pass 4691 then found that pass's own denominator was
+      # 12.2x too small, so the real power was 0.078%, not 0.95%.  A sample size without a
+      # denominator is not a hedge; it is an omission that reads as one.  Warns, never blocks.
+      # Registered Pass 4692.  CLAUDE.md describes this as the core artifact of the
+      # two-agent protocol -- "pre-commit hook; warns when a staged file asserts a code
+      # parameter that exists elsewhere uncited" -- and it was never in the config. The
+      # script existed, executable, documented, and wired to nothing. Warns, never blocks:
+      # collisions are candidates, and blocking trains --no-verify.
+      - id: rediscovery
+        name: staged results are checked against the corpus index
+        entry: py -3 scripts/check_rediscovery.py
+        language: system
+        pass_filenames: true
+        files: ^(analysis|passes|pillars)/.*\.(py|md)$
+      - id: search-power
+        name: null results from sampling state their denominator
+        entry: py -3 scripts/check_search_power.py
+        language: system
+        pass_filenames: true
+        files: ^(analysis|passes|pillars)/.*\.(py|md)$
+      # Added Pass 4690.  Part 0 of the blueprint ends with a table saying what each layer
+      # may and may not claim, and asserts most withdrawn claims were violations of it.
+      # That makes it a decision procedure, and one that ran only in a reader's head.
+      # Scoped to the blueprint and manuscripts.  Known limit: detection is sentence-local,
+      # and the two examples Part 0 itself gives are both cross-sentence.  Warns, never blocks.
+      - id: layer-conformance
+        name: claims stay inside their layer's may-claim row
+        entry: py -3 scripts/check_layer_conformance.py
+        language: system
+        pass_filenames: true
+        files: ^(.*\.tex)$

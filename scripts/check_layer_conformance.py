@@ -61,16 +61,27 @@ LAYER_VOCAB = {
         r"\b(?:kernel|virtual machine|interpreter|routing policy|scheduler|"
         r"fault escalation|relocation|host software)\b", re.I),
 }
+LAYER_VOCAB["L0-L2-cs"] = LAYER_VOCAB["L0-L2"]      # same layer, case-sensitive triggers
 
 # vocabulary each layer is forbidden to use
 FORBIDDEN = {
+    # GHz is CASE-SENSITIVE here, and finding out why cost one false positive worth more
+    # than the rule: a corpus sweep flagged "boson-sampling complexity ... GHZ" because a
+    # case-insensitive match reads a Greenberger-Horne-Zeilinger state as a gigahertz clock.
+    # Two of the most common tokens in quantum computing differ only in capitalisation.
     "L0-L2": (re.compile(
-        r"\b(?:watts?|milliwatts?|\bW\b(?=\s*(?:of|at|per))|nanoseconds?|\bns\b|"
-        r"megahertz|\bMHz\b|\bGHz\b|clock (?:rate|speed)|throughput|latency|"
-        r"square millimet\w+|mm\^?2|die area|power (?:draw|budget|consumption))\b", re.I),
+        r"\b(?:watts?|milliwatts?|nanoseconds?|\bns\b|megahertz|clock (?:rate|speed)|"
+        r"throughput|latency|square millimet\w+|die area|"
+        r"power (?:draw|budget|consumption))\b", re.I),
         "speed, area or power at a layer with no physical realization"),
+    "L0-L2-cs": (re.compile(r"\b(?:MHz|GHz|mm\^?2)\b"),
+                 "speed, area or power at a layer with no physical realization"),
+    # `minimal` bare is ordinary mathematical English here -- minimal polytopes, minimal
+    # words, a "minimal Intel-4004-flavoured machine". Three of eight corpus hits were that.
+    # The forbidden move is minimality asserted OF A COUNT, so the noun must be present.
     "L3": (re.compile(
-        r"\b(?:minimal|minimum possible|optimal|fewest possible|smallest possible|"
+        r"\b(?:minimal (?:cell|gate|area|logic|LUT|design)|minimum possible|optimal|"
+        r"fewest possible|smallest possible|"
         r"cannot be (?:beaten|improved)|provably (?:smallest|fewest)|unique(?:ly)? "
         r"(?:smallest|minimal))\b", re.I),
         "minimality or uniqueness of a gate count that was synthesised, not proved minimal"),
@@ -80,7 +91,10 @@ FORBIDDEN = {
         re.I),
         "a thermodynamic floor described as achieved rather than as a bound"),
     "L5-L6": (re.compile(
-        r"\b(?:joules?|watts?|kT\s*\\?ln|Landauer|temperature|photon|dissipat\w+|"
+        # `photon` and `temperature` are the corpus's most ordinary nouns; all three
+        # L5-L6 corpus hits were sentences DRAWING the architecture boundary, not crossing
+        # it -- the same failure as the "minimal engine" family, one document over.
+        r"\b(?:joules?|watts?|kT\s*\\?ln|Landauer|dissipat\w+|"
         r"energy (?:cost|per))\b", re.I),
         "physics from a layer that is policy or host software"),
 }
@@ -97,6 +111,10 @@ TEXCMD = re.compile(r"\\[a-zA-Z@]+\s*|[{}$&%~^_]|\\\\")
 #     L2 statement that is proved -- not a minimal cell count. Six hits were this, and one
 #     of them was the document's own warning box explaining the distinction. Flagging a
 #     passage for correctly drawing the line it draws is the checker being wrong twice.
+#  3. TITLES.  The only hit in a sweep of every manuscript was the cover line "One Photon's
+#     Architecture as Universal Virtual Machine" -- a name, not a claim. Flagging it would
+#     be flagging a document for being about its subject.
+TITLE = re.compile(r"\\(?:title|author|date|subtitle|Large|LARGE|huge|Huge)\b")
 SKIP_ENV = re.compile(r"\\begin\{(tabular|tabularx|array|longtable|spec|verbatim|"
                       r"lstlisting|tikzpicture)\}")
 END_ENV = re.compile(r"\\end\{(tabular|tabularx|array|longtable|spec|verbatim|"
@@ -112,7 +130,12 @@ def sentences(text: str):
     for block in text.split("\n"):
         if SKIP_ENV.search(block):
             depth += 1
-        keep = depth == 0 and not block.lstrip().startswith("%")
+        # A title is a name, not a claim: 'One Photon's Architecture as Universal
+        # Virtual Machine' is the only hit in the whole manuscript sweep and it is a
+        # cover line. Flagging it would be flagging the document for being about its
+        # subject.
+        keep = (depth == 0 and not block.lstrip().startswith("%")
+                and not TITLE.search(block))
         if END_ENV.search(block):
             depth = max(0, depth - 1)
         if keep:

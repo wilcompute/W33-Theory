@@ -1,0 +1,44 @@
+{
+  "boundary": "both corrections are exact counts. The isotropic-subspace formula is standard and the ray-stabiliser is found by exhaustion over all 576 local Cliffords per copy, modulo global phase. This pass does NOT run the distillation search, does not settle whether a witness exists, and does not claim the 3!-copy-permutation factor is the full non-local symmetry -- only that the LOCAL Clifford part is 3 per copy",
+  "conclusion": "the favourable branch of Pass 4688 is FALSE: the reduction is a few hundred, not twelve million, because a magic state has almost no local-Clifford symmetry. Separately, Pass 4680's denominator was 12.2x too small, so the 30,000-sample null has even less power than that pass reported",
+  "correction_1_denominator": {
+    "actual_projector_space": 3830918130,
+    "note": "Pass 2881 samples syndrome projectors from k<=4 commuting generators with signs, not maximal stabilizer groups; 4680's power figures were optimistic by this factor",
+    "pass_4680_used": 315057600,
+    "per_k": [
+      {
+        "k": 1,
+        "projectors": 8190,
+        "subspaces": 4095
+      },
+      {
+        "k": 2,
+        "projectors": 5585580,
+        "subspaces": 1396395
+      },
+      {
+        "k": 3,
+        "projectors": 406949400,
+        "subspaces": 50868675
+      },
+      {
+        "k": 4,
+        "projectors": 3418374960,
+        "subspaces": 213648435
+      }
+    ],
+    "true_coverage_fraction": 7.831021e-06,
+    "true_power_vs_100_witnesses": 0.000782795559,
+    "understatement_factor": 12.159421420083
+  },
+  "correction_2_symmetry": {
+    "copy_permutations": 6,
+    "fixing_the_ray": 1,
+    "instance_symmetry_group": 6,
+    "lc_invariance_holds": false,
+    "local_cliffords_per_copy": 576,
+    "orbit_representatives": 638486355,
+    "reason": "the clean input is a magic state with cube-root-of-unity amplitudes, so its local-Clifford ray stabiliser is tiny; Pass 4688's 26 classes count LC-classes of stabilizer states and answer a different question",
+    "single_qubit_cliffords": 24
+  }
+}
