@@ -1,0 +1,27 @@
+{
+  "pass": 4765,
+  "carriers": {
+    "point_graph_edges": 240,
+    "dual_line_graph_edges": 240,
+    "point_adjacency_rank_F2": 16,
+    "dual_line_adjacency_rank_F2": 10
+  },
+  "line_edge_stabilizer": {
+    "order": 108,
+    "suborbits_on_line_edges": [1,1,2,2,18,18,18,18,27,27,54,54],
+    "suborbits_on_point_edges": [6,6,6,6,54,54,54,54],
+    "fixed_point_edges": 0
+  },
+  "outer_twist": {
+    "point_edge_suborbits": [6,6,6,6,54,54,54,54],
+    "fixed_point_edges": 0,
+    "repairs_equivariant_bijection": false
+  },
+  "code_boundary": {
+    "Pass4761": "[240,200,4]_2 even-cycle code on dual line graph",
+    "existing_edge_CSS_Hodge": "240 point-collinearity edges",
+    "canonical_PSp_coordinate_identification": false
+  },
+  "theorem": "The two 240-edge carriers are inequivalent under the canonical PSp action: a line-edge stabilizer fixes no point edge, and the PGSp outer twist does not change that obstruction. Pass4761 is therefore a dual-line graph code, not the point-edge CSS code in disguise.",
+  "boundary": "Exact G-set separation. Abstract code equivalences that ignore the canonical group action are not classified here."
+}
