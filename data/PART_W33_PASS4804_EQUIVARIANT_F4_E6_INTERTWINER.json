@@ -1,0 +1,15 @@
+{
+  "PSp_images_conjugate_exactly": true,
+  "boundary": "The PSp-equivariant statement is projective. It does not identify the two order-51840 extensions. The executable producer checks complete permutation-image equality under the explicit Pass4797 45-point graph isomorphism.",
+  "compiler_Sp_degree45_image_order": 25920,
+  "compiler_Sp_matrix_group_order": 51840,
+  "compiler_central_kernel_order": 2,
+  "degree": 45,
+  "extension_firewall": "Central Sp(4,3)=2.U4(2): 51840 matrices -> 25920 degree-45 permutations with central kernel 2. Outer PGSp/U4(2):2: 51840 distinct projective permutations on the 45-point quotient.",
+  "outer_extension_degree45_image_order": 51840,
+  "pass": 4804,
+  "source_PGSp_outer_image_order": 51840,
+  "source_PSp_permutation_image_order": 25920,
+  "target_compiler_permutation_image_order": 25920,
+  "theorem": "The dependency-cube/F4-E6 GQ(4,2) crosswalk is PSp(4,3)-equivariant: under the explicit 45-point incidence isomorphism, the projective simple U4(2)=PSp(4,3) permutation images coincide. The central Sp(4,3) double cover and the outer PGSp extension remain sharply distinguished by their kernels on the same 45-point set."
+}
