@@ -1,0 +1,39 @@
+{
+  "boundary": "Finite O+(8,2)/D4 building triality only. No identification with physical spinors, particle generations, or an E8 lattice shell is made here.",
+  "cross_incidence": {
+    "centered_integer_matrices": "D=9M-J",
+    "centered_rank_Q": 50,
+    "centered_triality": "D_PA D_AB = 54 D_PB, cyclically",
+    "column_degree": 15,
+    "raw_composition": "M_PA M_AB = J + 6 M_PB, cyclically",
+    "row_degree": 15
+  },
+  "outer_D4_types": [
+    "135 singular points",
+    "135 maximal generators A",
+    "135 maximal generators B"
+  ],
+  "outer_relation_graph": {
+    "centered_gram": "D D^T = 1215 I + 243 A - 135 J = 54^2 E_50",
+    "gram": "M M^T = 15 I + 3 A",
+    "parameters": "SRG(135,70,37,35)",
+    "spectrum": {
+      "-5": 84,
+      "7": 50,
+      "70": 1
+    }
+  },
+  "pass": 4587,
+  "source": "W33-derived V8 quotient reconstructed exactly as in Pass 4579",
+  "theorem": "The W33-protected plus-type quotient reconstructs all three 135-element outer-node sets of finite D4 triality. Their centered incidence maps are exact rank-50 intertwiners satisfying a cyclic multiplication law.",
+  "totally_singular_subspaces": {
+    "dimension_1": 135,
+    "dimension_2": 1575,
+    "dimension_3": 2025,
+    "dimension_4": 270,
+    "maximal_families": [
+      135,
+      135
+    ]
+  }
+}
