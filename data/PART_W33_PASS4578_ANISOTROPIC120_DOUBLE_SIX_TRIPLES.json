@@ -1,0 +1,10 @@
+{
+  "boundary": "Exact negative G-set result. Equal cardinality and equal stabilizer order are insufficient for identification.",
+  "candidate_count_match": {"protected_anisotropic_classes":120,"unique_double_six_triple_orbit":120},
+  "double_six_triple_Gset": {"stabilizer_order":216,"suborbits":[1,2,27,36,54]},
+  "double_six_triple_orbit_sizes": [120,540,1080,2160,3240],
+  "equivariant_bijection": false,
+  "pass": 4578,
+  "protected_Gset": {"stabilizer_order":216,"suborbits":[1,1,1,27,27,27,36]},
+  "theorem": "The unique 120-orbit of cubic double-six triples is not PSp(4,3)-equivariantly isomorphic to the 120 protected anisotropic O+(8,2) classes."
+}
