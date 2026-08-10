@@ -1,0 +1,33 @@
+{
+  "pass": 4630,
+  "binary_complex": {
+    "complex": "F2^45 --T^T--> F2^40 --T--> F2^45",
+    "TTt_zero": true,
+    "rank_T": 15,
+    "kernel_T_dimension": 25,
+    "middle_homology_dimension": 10,
+    "identification": "ker(T)/im(T^T)=Cperp/C=H10"
+  },
+  "integer_lift": {
+    "rank_Z": 25,
+    "kernel_Z_rank": 15,
+    "reduction_of_kernel_Z_equals_row_T_mod2": true,
+    "smith": "1^15 2^10 0^15",
+    "coker_2_primary_torsion": "(Z/2)^10"
+  },
+  "bockstein": {
+    "map": "for x mod2 in ker(T), beta(x)=[T x / 2] in Tor_2 coker_Z(T)",
+    "kernel": "reduction of ker_Z(T)=row_F2(T)",
+    "domain_quotient_dimension": 10,
+    "target_dimension": 10,
+    "isomorphism": true
+  },
+  "CSS": {
+    "checks": "H_X=H_Z=T with redundant 45 rows, rank 15 each",
+    "parameters": "[[40,10,4]]",
+    "k_reason": "40-15-15=10",
+    "distance_reason": "ker(T)=Cperp has weight-4 line words while row(T)=C has minimum weight 8"
+  },
+  "theorem": "The same 45x40 incidence realizes the protected H10 simultaneously as binary middle homology, as the logical space of the [[40,10,4]] CSS code, and via the canonical Bockstein as the ten-dimensional 2-torsion defect of the integer incidence lattice.",
+  "boundary": "Exact finite integral/binary coding theorem; the Bockstein is attached to this incidence matrix and is not a spacetime or physical anomaly interpretation."
+}
