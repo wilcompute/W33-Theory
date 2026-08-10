@@ -1,6 +1,6 @@
 {
-  "boundary": "4697's densities are quoted from Passes 4562/4563 (600-1000 samples per carrier) and not re-measured; the within-b comparison rests on three geometries in one group and one each in two others, which is too few for a fitted law and is not fitted. 4698 is a negative result about a coincidence and establishes nothing beyond the absence of a link that was never predicted",
-  "pass_4697": {
+  "boundary": "4705's densities are quoted from Passes 4562/4563 (600-1000 samples per carrier) and not re-measured; the within-b comparison rests on three geometries in one group and one each in two others, which is too few for a fitted law and is not fitted. 4706 is a negative result about a coincidence and establishes nothing beyond the absence of a link that was never predicted",
+  "pass_4705": {
     "rows": [
       {
         "b": 3,
@@ -71,7 +71,7 @@
       }
     ]
   },
-  "pass_4698": {
+  "pass_4706": {
     "any_match": false,
     "lc_classes_n6": 26,
     "verdict": "26 counts local-complementation classes of graphs on six vertices, a fact independent of W(3,3); no quantity in the geometry equals it and none was predicted to. Coincidence, closed",

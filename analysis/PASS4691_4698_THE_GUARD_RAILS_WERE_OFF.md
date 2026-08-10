@@ -1,4 +1,4 @@
-# Passes 4691–4698 — every hook in this repository was dead, and two of my own results were wrong
+# Passes 4691–4696, 4705–4706 — every hook in this repository was dead, and two of my own results were wrong
 
 Eight items executed. The largest finding was not in the physics.
 

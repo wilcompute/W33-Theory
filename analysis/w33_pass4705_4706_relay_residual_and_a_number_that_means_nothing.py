@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
-"""Passes 4697-4698 -- one repackaging caught before it became a mechanism, and one
+"""Passes 4705-4706 -- one repackaging caught before it became a mechanism, and one
 coincidence reported as a coincidence.
 
-  4697  Pass 4684 produced relay fractions for seven quadrangles and Passes 4562/4563
+  4705  Pass 4684 produced relay fractions for seven quadrangles and Passes 4562/4563
         produced Ramanujan signing densities for six.  The two columns look strongly
         anti-correlated, and Pass 4564 already showed block size b explains most of the
         density.  The tempting claim is that relay fraction explains the RESIDUAL -- a
         second mechanism.  Before writing that, ask what would make the comparison invalid.
 
-  4698  Pass 4688 found 26 local-complementation classes at six qubits.  26 is a small
+  4706  Pass 4688 found 26 local-complementation classes at six qubits.  26 is a small
         integer in a repository full of small integers, and "26 appears in W(3,3) too" is
         the cheapest possible false result.  Search for it, then say plainly what the search
         licenses.
 
-    py -3 analysis/w33_pass4697_4698_relay_residual_and_a_number_that_means_nothing.py
+    py -3 analysis/w33_pass4705_4706_relay_residual_and_a_number_that_means_nothing.py
 """
 
 from __future__ import annotations
@@ -53,10 +53,10 @@ def block_size(s):
 
 def main() -> int:
     print("=" * 78)
-    print("Passes 4697-4698")
+    print("Passes 4705-4706")
     print("=" * 78)
 
-    print("\n  PASS 4697 -- does relay fraction explain anything block size does not?\n")
+    print("\n  PASS 4705 -- does relay fraction explain anything block size does not?\n")
     print(f"  {'geometry':9s} {'s':>2s} {'t':>2s} {'b':>3s} {'relay %':>8s} "
           f"{'Ramanujan %':>12s}")
     rows = []
@@ -112,7 +112,7 @@ def main() -> int:
     interpretation is a story told over that, not a finding.""")
 
     # ---- 4698: the number ------------------------------------------------
-    print("\n  PASS 4698 -- does 26 mean anything here?\n")
+    print("\n  PASS 4706 -- does 26 mean anything here?\n")
     facts = [
         ("W(3,3) points", 40), ("W(3,3) lines", 40), ("degree", 12),
         ("edges", 240), ("|Sp(4,3)|", 51840), ("frames", 81),
@@ -133,20 +133,20 @@ def main() -> int:
     open as a hunch.""")
 
     out = {
-        "boundary": ("4697's densities are quoted from Passes 4562/4563 (600-1000 samples "
+        "boundary": ("4705's densities are quoted from Passes 4562/4563 (600-1000 samples "
                      "per carrier) and not re-measured; the within-b comparison rests on "
                      "three geometries in one group and one each in two others, which is "
-                     "too few for a fitted law and is not fitted. 4698 is a negative result "
+                     "too few for a fitted law and is not fitted. 4706 is a negative result "
                      "about a coincidence and establishes nothing beyond the absence of a "
                      "link that was never predicted"),
-        "pass_4697": {
+        "pass_4705": {
             "rows": rows, "within_block_groups": residual,
             "verdict": ("relay fraction is a bijective function of (s,t) and therefore "
                         "cannot add information beyond the parameters; 'relay explains the "
                         "residual after b' is exactly 't explains the residual after s', "
                         "and is a reparametrisation, not a mechanism"),
             "supported_claim": "at fixed s, Ramanujan density falls as t rises"},
-        "pass_4698": {
+        "pass_4706": {
             "lc_classes_n6": 26,
             "w33_quantities": {n: v for n, v in facts},
             "any_match": False,
@@ -154,7 +154,7 @@ def main() -> int:
                         "a fact independent of W(3,3); no quantity in the geometry equals "
                         "it and none was predicted to. Coincidence, closed")},
     }
-    p = ROOT / "data" / "PART_W33_PASS4697_4698_RELAY_RESIDUAL_AND_26.json"
+    p = ROOT / "data" / "PART_W33_PASS4705_4706_RELAY_RESIDUAL_AND_26.json"
     p.write_text(cert_util.dumps(out), encoding="utf-8")
     print(f"\nwrote {p.relative_to(ROOT).as_posix()}")
     return 0
