@@ -1,0 +1,26 @@
+{
+  "pass": 4753,
+  "action": {
+    "degree": 270,
+    "rank": 12,
+    "subdegrees": [1,12,16,48,16,6,24,96,12,12,24,3]
+  },
+  "orbital_algebra": {
+    "dimension_Q": 12,
+    "center_dimension_Q": 9,
+    "generic_central_charpoly": "(x-616)^4 (x-436)(x+68)(x+74)(x+500)(x+578)(x+584)(x^2-308x+23824)",
+    "quadratic_center_field": "Q(sqrt(-3))",
+    "wedderburn_Q": "Q^6 x Q(sqrt(-3)) x M2(Q)",
+    "wedderburn_C": "C^8 x M2(C)",
+    "matrix_block_split_witness": {
+      "central_rank": 40,
+      "rational_noncentral_idempotent_rank": 20
+    }
+  },
+  "rank24_projector": {
+    "orbital_coefficients": ["4/45","2/135","1/30","2/135","-1/45","-1/270","2/135","-1/45","2/135","2/135","-1/45","-8/135"],
+    "normalized_orbit_inner_products": ["1","1/6","3/8","1/6","-1/4","-1/24","1/6","-1/4","1/6","1/6","-1/4","-2/3"]
+  },
+  "theorem": "The complete rational residue orbital algebra is Q^6 x Q(sqrt(-3)) x M2(Q). The unique noncommutative simple block is the multiplicity-two degree-20 constituent; a canonical rational primitive rank-24 projector is frozen for the lattice continuation.",
+  "boundary": "Exact finite semisimple algebra statement; the Eisenstein quadratic character field is not by itself a physical phase."
+}
