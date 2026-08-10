@@ -1,0 +1,29 @@
+{
+  "pass": 4598,
+  "natural_relation": "A degree-27 maximal singular generator X is incident with a degree-36 generator Y iff |X intersect Y| = 1 in the protected V8 quotient.",
+  "per_sheet_incidence": {
+    "shape": [27,36],
+    "row_sum": 16,
+    "column_sum": 12,
+    "rank_Q": 21,
+    "pair_intersection_profile": {"1": 432, "4": 540},
+    "RRt": "10 I27 + 2 A27 + 6 J27",
+    "A27_degree": 10,
+    "RtR": "6 I36 - 2 A36 + 6 J36",
+    "A36_degree": 15
+  },
+  "comparison_to_pass4545_4549": "These are exactly the frozen Schlaefli-line/double-six incidence identities from Passes 4545-4549: 27x36, line degree 16, double-six size 12, rational rank 21, and the same two Gram identities.",
+  "three_sheet_collapse": {
+    "canonical_column_chart": "Use the unique PSp-equivariant bijection from each degree-36 orbit to the same 36 W33 spreads.",
+    "R1_equals_R2_equals_R3": true,
+    "stacked_matrix": "[R R R]",
+    "stacked_shape": [27,108],
+    "stacked_rank_Q": 21,
+    "sheet_difference_kernel_dimension": 72,
+    "total_kernel_dimension": 87,
+    "external_sheet_symmetry_of_coupling": "S3"
+  },
+  "theorem": "The previously unnamed degree-27 orbit and each of the three degree-36 half-spinor/spread copies reproduce the exact classical cubic-line/double-six incidence carrier. After the canonical spread identification all three matrices are literally identical, so the cubic incidence sees only the symmetric sheet combination and annihilates the two sheet-difference modes.",
+  "verification": "Independently recomputed in this run and cross-checked against data/PART_W33_PASS4545_4549_SCHLAFLI_DOUBLE_SIX_INTERTWINER.json.",
+  "boundary": "The S3 here is an automorphism of the three identical incidence sheets. Only a C2 transposition is presently shown to come from the PGSp ambient action; an ambient order-three lift is a separate question."
+}
