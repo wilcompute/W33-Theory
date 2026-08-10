@@ -1,0 +1,14 @@
+{
+  "pass": 4640,
+  "group_order": 25920,
+  "degree27_orbit": 27,
+  "point_stabilizer_order": 960,
+  "subdegrees": [1,10,16],
+  "degree16_orbital_graph": {
+    "parameters": "SRG(27,16,10,8)",
+    "spectrum": {"16":1,"4":6,"-2":20}
+  },
+  "theorem": "The previously unnamed degree-27 orbit of maximal singular generators carries the Schlaefli/cubic-surface-line permutation carrier under PSp(4,3). The identification is certified by the orbit action, order-960 stabilizer, subdegrees 1,10,16 and exact SRG(27,16,10,8) orbital graph, not by cardinality.",
+  "verification": "Independent GF(3)^4 -> W33 -> protected V8 -> maximal singular generator reconstruction in the execution run; transient source helper analysis/w33_pass4592_degree27_schlaefli_interrogation.py.",
+  "boundary": "Finite permutation-carrier identification only; no physical particle or field interpretation."
+}
