@@ -2,6 +2,16 @@
 """Pass 4795 -- the same characteristic-2 dichotomy, seen a third time, as a gap between
 W(3,3)'s independence number and its own Hoffman bound.
 
+  ** TWO CLAIMS IN THIS FILE WERE SUBSEQUENTLY REFUTED, BOTH BY THE COMPUTATIONS THEY
+     THEMSELVES NAMED AS MISSING. **
+
+     1. The "deficit = q" law proposed below is FALSE. alpha(W(3,5)) = 18, not the
+        predicted 21, so the deficit is 8 rather than 5.  See Pass 4800.
+     2. The 720 = 36 x 20 coset reading floated below is FALSE. There are 6 ovoids, not
+        36, with stabiliser of order 120, not 20.  See Pass 4797.
+
+     The independence numbers, the Hoffman gap, and the parity result are unaffected.
+
 Three questions about W(3,q) have now been asked and each split the family differently:
 
     duality exists?      q even                    (Pass 4774, seven values)

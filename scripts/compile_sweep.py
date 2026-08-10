@@ -43,17 +43,57 @@ ERR = re.compile(r"^error: ([^\n]+)", re.M)
 NOISE = re.compile(r"Fontconfig|^warning:", re.M)
 
 
+INPUT_RE = re.compile(r"\\(?:input|include)\s*\{([^}]+)\}")
+
+
 def standalone_tex():
-    """Standalone documents only: *_body.tex and *_sections.tex are includes."""
-    out = []
-    for p in sorted(ROOT.glob("*.tex")):
-        if p.stem.endswith("_body") or p.stem.endswith("_sections"):
-            continue
-        src = p.read_text(encoding="utf-8", errors="replace")
-        live = "\n".join(l for l in src.splitlines() if not l.lstrip().startswith("%"))
-        if "\\documentclass" in live and "\\begin{document}" in live:
-            out.append(p)
-    return out
+    r"""Root .tex files that nothing else \input.
+
+    THE FIRST TWO VERSIONS OF THIS FUNCTION BOTH SKIPPED THE THREE MAIN MANUSCRIPTS.
+    They looked for \documentclass and \begin{document} in the file itself, and excluded
+    *_body.tex as "obviously an include". That is backwards here: holonet_machine_blueprint,
+    photonic_holonet and w33_paper are WRAPPERS -- they set up macros and \input a body, and
+    the body is where \documentclass lives. So the wrapper failed the content test, the body
+    failed the name test, and the repository's three largest documents were swept by nothing
+    while the sweep reported 20/20 and was wired into CI.
+
+    NEITHER TEST ALONE IS ENOUGH, and the third version learned that too. "Not included by
+    anything" alone sweeps in orphan fragments -- section2_uniqueness.tex, the supplements,
+    the inserts -- which open with \section and were never documents. "Has \documentclass"
+    alone misses the wrappers. A standalone document is a file that nothing includes AND
+    from which a \documentclass is reachable, in itself or through its include chain.
+    """
+    roots = sorted(ROOT.glob("*.tex"))
+
+    def live_text(p):
+        try:
+            src = p.read_text(encoding="utf-8", errors="replace")
+        except OSError:
+            return ""
+        return "\n".join(l for l in src.splitlines() if not l.lstrip().startswith("%"))
+
+    included = set()
+    for p in roots:
+        for tgt in INPUT_RE.findall(live_text(p)):
+            name = tgt.split("/")[-1]
+            included.add(name if name.endswith(".tex") else name + ".tex")
+
+    def reaches_documentclass(p, depth=0):
+        if depth > 4:
+            return False
+        t = live_text(p)
+        if "\\documentclass" in t:
+            return True
+        for tgt in INPUT_RE.findall(t):
+            name = tgt.split("/")[-1]
+            name = name if name.endswith(".tex") else name + ".tex"
+            child = ROOT / name
+            if child.is_file() and reaches_documentclass(child, depth + 1):
+                return True
+        return False
+
+    return [p for p in roots
+            if p.name not in included and reaches_documentclass(p)]
 
 
 def compile_one(p: Path):

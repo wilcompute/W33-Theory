@@ -16,6 +16,19 @@
       "retracted_by": "Pass 4563",
       "settled_by": "Pass 4755 (BLISS canonical form, q = 2,3,4,5)",
       "why": "W(3,q) is self-dual iff q is even; q = 3 is odd. Equal point and line counts (40 = 40) and equal SRG parameters are not a duality."
+    },
+    {
+      "assert_pattern": "(?:Hoffman|ratio bound|independence number|\\balpha\\b|ovoid)[^.\\n]{0,80}(?:deficit|gap)[^.\\n]{0,30}(?:equals?|is|=|exactly)\\s*q(?![\\^0-9_])\\b|(?:deficit|gap)[^.\\n]{0,30}(?:equals?|is|=|exactly)\\s*q(?![\\^0-9_])\\b[^.\\n]{0,80}(?:Hoffman|ratio bound|independence number|ovoid)|alpha[^.\\n]{0,30}=\\s*q\\^?2\\s*-\\s*q\\s*\\+\\s*1",
+      "claim": "the Hoffman deficit of W(3,q) at odd q equals q",
+      "exempt_files": [
+        "analysis/w33_pass4800_the_deficit_law_is_false.py",
+        "analysis/w33_pass4795_the_ovoid_gap_and_the_polarity_coset.py",
+        "data/w33_retractions.json"
+      ],
+      "exempt_pattern": "false|refut|not\\s+q\\b|Pass\\s*4800|does not generalise|was a coincidence|18,?\\s*not\\s*21|Pass~4800|4800|18,?\\s*not\\s*21|neither extends|Scope",
+      "retracted_by": "Pass 4800",
+      "settled_by": "exhaustive alpha(W(3,5)) = 18 against a predicted 21",
+      "why": "the q=3 agreement 7 = q^2-q+1 was a single data point; at q=5 the value is 18, not 21, so the deficit is 8 rather than q. Two points do not determine a formula and no replacement is proposed."
     }
   ],
   "schema": "w33.retractions.v1"

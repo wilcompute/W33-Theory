@@ -1,0 +1,54 @@
+{
+  "boundary": "alpha values are exhaustive independence numbers via igraph and are exact; q = 5 took 2,075 s on SRG(156,30,4,6). No odd q beyond 5 is computed, so 'not q' is established while no replacement formula is proposed -- two points do not determine one",
+  "deficit_q_law": false,
+  "q3_was_coincidence": "alpha(W(3,3)) = 7 = q^2-q+1 holds; alpha(W(3,5)) = 18 != 21, so the formula does not generalise and the q=3 agreement was a single point",
+  "refutes": "Pass 4795's proposal that the Hoffman deficit at odd q equals q",
+  "rows": [
+    {
+      "alpha": 5,
+      "even": true,
+      "gap": 0,
+      "hoffman": 5,
+      "predicted_gap": 0,
+      "prediction_holds": true,
+      "q": 2,
+      "q2_minus_q_plus_1": 3
+    },
+    {
+      "alpha": 7,
+      "even": false,
+      "gap": 3,
+      "hoffman": 10,
+      "predicted_gap": 3,
+      "prediction_holds": true,
+      "q": 3,
+      "q2_minus_q_plus_1": 7
+    },
+    {
+      "alpha": 17,
+      "even": true,
+      "gap": 0,
+      "hoffman": 17,
+      "predicted_gap": 0,
+      "prediction_holds": true,
+      "q": 4,
+      "q2_minus_q_plus_1": 13
+    },
+    {
+      "alpha": 18,
+      "even": false,
+      "gap": 8,
+      "hoffman": 26,
+      "predicted_gap": 5,
+      "prediction_holds": false,
+      "q": 5,
+      "q2_minus_q_plus_1": 21
+    }
+  ],
+  "strengthened": "the odd-q failure widens with q -- deficit 3 at q=3, 8 at q=5 -- so it is not a marginal near-miss that might close at larger q",
+  "unaffected": [
+    "W(3,q) meets its Hoffman bound iff q is even (q = 2,3,4,5)",
+    "alpha separates W(3,3) from Q(4,3) at identical parameters (Pass 4797)",
+    "both dual pairs split on having an ovoid (Pass 4799)"
+  ]
+}
