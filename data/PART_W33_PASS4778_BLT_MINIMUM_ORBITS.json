@@ -1,0 +1,8 @@
+{
+  "pass": 4778,
+  "identification": "minimum words of ker_F2 A_*(W(3,q)) are exactly BLT-sets",
+  "q3": {"minimum_words":270,"PSp_orbits":[270],"Plucker_span_ranks":[3],"class":"Linear"},
+  "q5": {"minimum_words":19500,"PSp_orbits":[6500,13000],"PSp_stabilizers":[720,360],"Plucker_span_ranks":[3,5],"classes":["Linear","Fisher/Fi"],"MILP_excluding_both_orbits":"infeasible"},
+  "theorem": "At q=5 the minimum shell consists of one planar Linear BLT orbit and one nonplanar Fisher BLT orbit; all-minima-are-conics is false.",
+  "prior_art_boundary": "BLT terminology and the Linear/Fisher small-q classification are classical; the repository certificate is the code-kernel equivalence plus independent PSp/MILP reconstruction."
+}
