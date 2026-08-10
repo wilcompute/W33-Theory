@@ -1,0 +1,63 @@
+{
+  "4725_kernel_code": {
+    "identity": "span_F2(270 involution residue masks) = ker_F2(A_*) = im_F2(A_*)^perp",
+    "length": 40,
+    "low_weight_kernel_census": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 270
+    },
+    "minimum_shell": "exactly the 270 four-line fixed sets of the inner involution class",
+    "minimum_shell_size": 270,
+    "parameters": "[40,30,4]",
+    "rank_Astar_F2": 10,
+    "residue_span_dimension": 30
+  },
+  "4726_H10_dual_reconstruction": {
+    "H10": "im_F2(A_*)",
+    "H10_parameters": "[40,10,12]",
+    "H10_weight_enumerator": {
+      "0": 1,
+      "12": 40,
+      "16": 135,
+      "20": 672,
+      "24": 135,
+      "28": 40,
+      "40": 1
+    },
+    "all_one_in_dual": true,
+    "complement_shell": "the complements of the 270 weight-4 residues are the 270 weight-36 words",
+    "dual_code": "H10^perp = ker_F2(A_*)",
+    "dual_parameters": "[40,30,4]",
+    "dual_weight_enumerator": {
+      "0": 1,
+      "4": 270,
+      "6": 6720,
+      "8": 152685,
+      "10": 1651392,
+      "12": 10921000,
+      "14": 45288000,
+      "16": 122873490,
+      "18": 221227200,
+      "20": 269500308,
+      "22": 221227200,
+      "24": 122873490,
+      "26": 45288000,
+      "28": 10921000,
+      "30": 1651392,
+      "32": 152685,
+      "34": 6720,
+      "36": 270,
+      "40": 1
+    },
+    "minimum_parity_checks": 270,
+    "reconstruction": "H10 is the common orthogonal kernel of the 270 minimum residue checks"
+  },
+  "boundary": "Exact binary coding and W33 incidence. The equality is proved by annihilation plus dimension and by exhaustive weight-1..4 census; the full dual enumerator follows from the exact 2^10 H10 enumerator via MacWilliams. No physical meaning is inferred from the code duality.",
+  "passes": [
+    4725,
+    4726
+  ],
+  "theorem": "The old 270 inner-involution fixed-line orbit is exactly the complete weight-4 shell of the canonical dual H10^perp=[40,30,4]. Equivalently, the 270 involutions are the complete minimum parity-check shell that reconstructs the protected H10=im(A_*) code."
+}
