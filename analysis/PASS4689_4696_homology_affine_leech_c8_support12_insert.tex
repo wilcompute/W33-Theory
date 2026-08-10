@@ -1,0 +1,63 @@
+% Passes 4689--4696: exact five-plus-three continuation.
+\subsection{Cross-shell separation, affine Golay geometry, Leech neighbor, and support-12 closure (Passes 4689--4696)}
+\label{sec:pass4689-4696-homology-affine-leech-c8-support12}
+
+\paragraph{Pass 4689: the two $39$-dimensional carriers are not the same module.}
+The periodic cross-shell homology splits canonically as $H_{27}\oplus H_{36}$ of dimensions $15+24=39$, whereas the apartment coefficient module is $\mathbb F_2^{40}/\langle\mathbf 1\rangle$, also dimension $39$.  Direct $\PSp(4,3)$ intertwiner equations give two-dimensional Hom spaces in both directions.  Every nonzero map $H_{27}\oplus H_{36}\to C_{\rm apt}$ has rank $14$, while every nonzero reverse map has rank $1$.  Hence there is no equivariant isomorphism.
+
+\paragraph{Pass 4690: the corrected sextet stabilizer is internally affine.}
+Inside the exact $M_{24}$ sextet stabilizer $H$ of order $138240$, the identity together with the $63$ involutions of the tetrad kernel forms a normal elementary abelian subgroup $N\cong C_2^6$.  It acts regularly on the $64$ sextet transversals.  The chosen-transversal stabilizer $K$ has order $2160$, intersects $N$ trivially, maps onto $S_6$ with kernel $C_3$, and has nonzero translation orbits $18+45$.  Thus
+\[
+ H=N\rtimes K\cong 2^6\!:\!(3.S_6)
+\]
+is recovered from the actual permutation action rather than inferred from the order.
+
+\paragraph{Pass 4691: an explicit rootless two-neighbor closes the Leech step.}
+Let $N_{24}$ be the Golay Construction--A $A_1^{24}$ Niemeier lattice and put
+\[
+ a=(3,1^{23}),\qquad v=a/\sqrt2,\qquad M=\{x\in N_{24}:(x,v)\equiv0\pmod2\},\qquad L=M+\mathbb Z(v/2).
+\]
+The verifier freezes an explicit $24$-vector numerator basis for $L$ at scale $1/(2\sqrt2)$.  Its numerator determinant is $2^{36}$, so the Gram determinant is one; the Gram matrix is integral and even.  All $48$ coordinate roots of $N_{24}$ pair oddly with $v$ and disappear, while the new coset has minimum norm at least four and an explicit norm-four vector.  Hence $L$ is the rootless even unimodular $24$-lattice, i.e. the Leech lattice.  The $24$ distinguished-coordinate neighbors form one orbit of the corrected sextet stabilizer.
+
+\paragraph{Pass 4692: the primitive-$C_8$ six-mass problem closes, and $(s,t)$ alone is insufficient.}
+With $u=s-1$, define $\rho$ and $\sigma$ from the two external-transversal families of an apartment and $\tau$ as the number of outside common transversals of the three leaves of an induced $K_{1,3}$.  The six raw masses are
+\[
+\begin{aligned}
+ A_{1111|22}&=16\bigl[(4u^2+2)\rho+u^2\sigma+(4t-2)u^4+2(t-1)\bigr],\\
+ A_{1115}&=64u(u^3-u^2+2u-1),\\
+ A_{1133}&=96u^2(u-1)^2,\\
+ A_{1111|4}&=64(u+1)u(u-1)(t-1),\\
+ S_{1111|22}&=48(u+1)u^3,\\
+ S_{1113|2}&=48(u+1)u\tau.
+\end{aligned}
+\]
+The need for support-level embedding data is decisive: W33 and dual-W33 both have order $(3,3)$, but their $(\rho,\sigma,\tau)$ values are $(0,16,1)$ and $(4,0,3)$, giving exact apartment/star coefficients $(712,180)$ and $(728,252)$.  Thus no primitive-$C_8$ law depending only on $(s,t)$ can describe both.
+
+\paragraph{Pass 4693: the complete labelled support-$12$ spectrum is exact.}
+Coefficient transitivity reduces the census by fixing one of the $40$ generator positions.  If $A_w$ counts all support-$12$ coefficient sets of output weight $w$ and $B_w$ counts those containing the fixed position, then
+\[
+ 12A_w=40B_w,\qquad A_w=\frac{10}{3}B_w.
+\]
+The native fixed-point sweep exhausts $\binom{39}{11}=1{,}676{,}056{,}044$ subsets and reconstructs all $\binom{40}{12}=5{,}586{,}853{,}480$ labelled supports.  There are $151$ distinct output weights, with minimum $608$ occurring $1620$ times and maximum $990$ occurring $4320$ times.  The exact labelled-support frontier is therefore complete through support $12$; supports $13$--$20$ and the full $2^{39}$ enumerator remain open.
+
+\paragraph{Pass 4694 (outside the box): the Golay affine six-space is not the cubic orthogonal six-space.}
+For the faithful $6$-dimensional translation module of $K$, the complete invariance equations have zero-dimensional solution spaces both for quadratic functions $q:\mathbb F_2^6\to\mathbb F_2$ with $q(0)=0$ and for arbitrary bilinear forms.  Therefore this module carries no nonzero $K$-invariant quadratic or bilinear form and cannot be identified with the cubic natural $O^-_6(2)$ module merely because both have dimension six.
+
+\paragraph{Pass 4695 (outside the box): the support-$12$ minima are exactly apartment corner-star thickenings.}
+For an apartment $A$, let $T(A)$ be the set of all W33 lines through its four corner points.  Then $|T(A)|=12$.  The $1620$ sets $T(A)$ are distinct and every one produces apartment-code weight $608$; Pass~4693 proves that there are exactly $1620$ such minima.  Moreover $T(A)$ contains eleven apartments, and exactly one has overlap profile $\{0:2,2:8\}$ against the other ten, so $A$ is intrinsically recoverable from $T(A)$.  Thus the support-$12$ minimum shell is canonically $\PGSp(4,3)$-equivariantly bijective with the apartment carrier.
+
+\paragraph{Pass 4696 (outside the box): the thickenings generate the canonical even apartment subcode.}
+The $1620$ thickening coefficient masks have even weight $12$ and rank $39$, hence span the full even hyperplane $E_{40}\subset\mathbb F_2^{40}$.  Because the unique apartment-generator relation $\mathbf1$ also lies in $E_{40}$, their codeword images span
+\[
+ E_{40}/\langle\mathbf1\rangle,
+\]
+a canonical $[1620,38,270]$ subcode.  Its $240$ minimum words are exactly the adjacent generator-pair sums, i.e. the W33 edge carrier.  This gives the explicit finite chain
+\[
+ \text{apartments}\longrightarrow\text{corner-star thickenings}\longrightarrow
+ [1620,38,270]\longrightarrow\text{W33 edges}.
+\]
+
+\begin{quote}\small
+\textbf{Evidence boundary.}
+All statements above are exact finite module, permutation-group, lattice, generalized-quadrangle, or binary-code theorems with executable/frozen witnesses.  Equal dimensions and carrier counts are rejected unless an explicit equivariant map and inverse are certified.  The Leech step uses an explicit rootless even unimodular neighbor; the $C_8$ formulas explicitly retain the support invariants $\rho,\sigma,\tau$; and the numerical apartment-code enumerator remains open beyond support $12$.
+\end{quote}
