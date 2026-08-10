@@ -1,0 +1,53 @@
+{
+  "acceptance_threshold": 0.503988709429,
+  "boundary": "this pass computes the statistical power of a search reported elsewhere; it does NOT settle the open problem, run any new search, or claim a witness exists. The power model assumes uniform sampling with replacement over maximal stabilizer groups -- if the reported sampling was non-uniform or structured, the power differs and the sampling procedure would need to be read",
+  "conclusion": "30,000 uniform samples cover 0.0095% of the 315,057,600 maximal stabilizer groups on six qubits and have 0.95% power against a hundred-witness set. The null excludes only abundant witnesses, while the exact annihilation condition predicts a thin one. The two-copy exhaustive result is decisive; the three-copy sample is not comparable evidence",
+  "fraction_sampled": 9.5220683e-05,
+  "power_by_witness_count": [
+    {
+      "density": 3.174e-09,
+      "power": 9.5216151e-05,
+      "witnesses": 1
+    },
+    {
+      "density": 3.174e-08,
+      "power": 0.000951753643,
+      "witnesses": 10
+    },
+    {
+      "density": 3.17402e-07,
+      "power": 0.009476878503,
+      "witnesses": 100
+    },
+    {
+      "density": 3.174023e-06,
+      "power": 0.090827864342,
+      "witnesses": 1000
+    },
+    {
+      "density": 3.1740228e-05,
+      "power": 0.614117340441,
+      "witnesses": 10000
+    },
+    {
+      "density": 9.9981718e-05,
+      "power": 0.950193086736,
+      "witnesses": 31500
+    }
+  ],
+  "recommendation": "enumerate ORBIT REPRESENTATIVES under the symmetry group of the error model rather than sampling groups: exact conditions are symmetry-stable so witnesses occur in orbits, and uniform sampling spends nearly every draw inside orbits already visited",
+  "samples": 30000,
+  "samples_for_95pct_power": {
+    "1": 943828207,
+    "10": 94382821,
+    "100": 9438281,
+    "1000": 943827
+  },
+  "space_n6": 315057600,
+  "stabilizer_group_counts": {
+    "4": 36720,
+    "5": 2423520,
+    "6": 315057600,
+    "7": 81284860800
+  }
+}
