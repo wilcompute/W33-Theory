@@ -1,0 +1,28 @@
+{
+  "pass": 4774,
+  "twisted_local_system": {
+    "field": "F3",
+    "sign_monodromy": "the A3 exponent is inverted across odd S3 edges",
+    "C0_dimension": 45,
+    "C1_dimension": 270,
+    "rank_twisted_coboundary": 45,
+    "H0_dimension": 0,
+    "H1_dimension": 225
+  },
+  "moduli_interpretation": {
+    "binary_sign_affine_dimension": 64,
+    "number_of_sign_sectors": "2^64",
+    "connected_classes_per_sign_sector": "(3^225-1)/2",
+    "fiber_geometry": "nonzero vectors of F3^225 modulo +/-1 = PG(224,3) point set",
+    "total_structure_before_base_automorphisms": "2^64 sign sectors, each carrying a PG(224,3) point set of connected S3 gauge classes"
+  },
+  "comparison_with_characteristic_two_deck": {
+    "deck_field": "F2",
+    "deformation_field": "F3",
+    "nonzero_additive_linear_map_F2_to_F3_exists": false,
+    "reason": "the additive F3 space has no nonzero element of order two"
+  },
+  "execution": "exact 270x45 twisted coboundary matrix over F3 for the selected sign cocycle; Gaussian rank 45; comparison with the Pass4769 characteristic-two fixed deck line",
+  "theorem": "The nonabelian deformation direction of an admissible S3 connection is a sign-twisted F3 graph-cohomology space of dimension 225. Every one of the 2^64 binary sign sectors carries the projective point set PG(224,3) of connected A3-deformation classes modulo residual +/-1 conjugation. This characteristic-three sector cannot be linearly identified with the characteristic-two apartment deck line.",
+  "boundary": "Finite local-system cohomology and gauge-classification statement. Projective-space language is combinatorial/representation-theoretic; it is not a continuum gauge field or physical phase space."
+}
