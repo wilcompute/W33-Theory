@@ -1,0 +1,9 @@
+{
+  "boundary":"Exact Construction-A/M24 lattice-character theorem. The 24 neighbors are a transitive sextet-stabilizer G-set; no physical state interpretation is inferred.",
+  "implementation_alias":4767,
+  "neighbors":{"count":24,"one_neighbor_stabilizer_order":5760,"point_suborbits":[1,3,20],"sextet_stabilizer_order":138240,"transitive":true},
+  "parity_characters":{"all_subsets_size_at_most_7_independent":true,"count":24,"minimum_relation_weight":8,"minimum_relations":759,"relation_space":"extended binary Golay G24","relation_space_dimension":12,"span_dimension":12},
+  "pass":4791,
+  "sextet_relations":{"all_are_octad_relations":true,"tetrads":6,"two_tetrad_unions":15},
+  "theorem":"The 24 Leech-neighbor parity characters have exactly the extended Golay code as their binary relation space. Their first dependencies are the 759 Golay octads; the corrected sextet supplies 15 explicit two-tetrad octad relations."
+}
