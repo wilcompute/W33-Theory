@@ -1,0 +1,45 @@
+name: W33 Passes 4656-4663 cohomology code E6 routing
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass4656_apartment_c2_voltage_cohomology.py'
+      - 'analysis/w33_pass4657_triality_intersection_group.py'
+      - 'analysis/w33_pass4658_selected_code_dual_automorphism.py'
+      - 'analysis/w33_pass4659_internal_e6_27_36_45_triangle.py'
+      - 'analysis/w33_pass4660_topology_aware_holonet_optimizer.py'
+      - 'analysis/w33_pass4661_anisotropic_120_scheme_duality.py'
+      - 'analysis/w33_pass4662_code_intrinsic_45_k4_triangle.py'
+      - 'analysis/w33_pass4663_duo_spread_coupling_obstruction.py'
+      - 'data/PART_W33_PASS4656_*'
+      - 'data/PART_W33_PASS4657_*'
+      - 'data/PART_W33_PASS4658_*'
+      - 'data/PART_W33_PASS4659_*'
+      - 'data/PART_W33_PASS4660_*'
+      - 'data/PART_W33_PASS4661_*'
+      - 'data/PART_W33_PASS4662_*'
+      - 'data/PART_W33_PASS4663_*'
+      - 'tests/test_w33_pass4656_4663_cohomology_code_e6_routing.py'
+      - '.github/workflows/w33_pass4656_4663_cohomology_code_e6_routing.yml'
+  workflow_dispatch:
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy sympy networkx pytest
+      - name: Regenerate exact witnesses
+        run: |
+          python analysis/w33_pass4656_apartment_c2_voltage_cohomology.py
+          python analysis/w33_pass4657_triality_intersection_group.py
+          python analysis/w33_pass4658_selected_code_dual_automorphism.py
+          python analysis/w33_pass4659_internal_e6_27_36_45_triangle.py
+          python analysis/w33_pass4660_topology_aware_holonet_optimizer.py
+          python analysis/w33_pass4661_anisotropic_120_scheme_duality.py
+          python analysis/w33_pass4662_code_intrinsic_45_k4_triangle.py
+          python analysis/w33_pass4663_duo_spread_coupling_obstruction.py
+      - name: Frozen regression
+        run: pytest -q tests/test_w33_pass4656_4663_cohomology_code_e6_routing.py
