@@ -1,0 +1,23 @@
+{
+  "pass": 4689,
+  "group": "PSp(4,3)",
+  "canonical_cross_shell_split": {
+    "D0_block_form": "[[0,R],[R^T,0]]",
+    "Hcross": "H27 direct-sum H36",
+    "dimensions": [15, 24, 39],
+    "status": "canonical shell decomposition, not a dimension inference"
+  },
+  "apartment_code_module": {
+    "dimension": 39,
+    "coefficient_model": "F2^40/<all-ones>",
+    "reason": "the 40 apartment incidence rows have rank 39 and their unique coefficient relation is the all-ones vector"
+  },
+  "equivariant_comparison": {
+    "Hom_Hcross_to_Cap_dimension": 2,
+    "ranks_of_three_nonzero_maps_Hcross_to_Cap": [14,14,14],
+    "Hom_Cap_to_Hcross_dimension": 2,
+    "ranks_of_three_nonzero_maps_Cap_to_Hcross": [1,1,1]
+  },
+  "theorem": "The 39D cross-shell homology is canonically H27 plus H36, but it is not isomorphic to the 39D apartment code. The two-dimensional Hom spaces contain only rank-14 maps forward and rank-1 maps backward.",
+  "boundary": "Exact F2 PSp(4,3)-module theorem. The common dimension 39 is explicitly rejected as an apartment/periodic identification."
+}
