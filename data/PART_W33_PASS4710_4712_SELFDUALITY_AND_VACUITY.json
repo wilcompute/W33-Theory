@@ -1,0 +1,170 @@
+{
+  "boundary": "4710 decides isomorphism outright at q = 2 and q = 3 only; q = 4 and q = 5 are NOT tested and the Pass 4695 prediction lives there, so the self-duality rule remains cited for the cases that matter most to it. 4712 is a triage filter, not a defect detector: it flags co-occurrence of a spectral comparison with an SRG-parameter statement, which correct passes also exhibit, and its output is a reading list",
+  "pass_4710_selfduality": {
+    "prediction_holds_where_tested": true,
+    "rows": [
+      {
+        "agrees": true,
+        "even": true,
+        "isomorphic_to_dual": true,
+        "points": 15,
+        "predicted": true,
+        "q": 2
+      },
+      {
+        "agrees": true,
+        "even": false,
+        "isomorphic_to_dual": false,
+        "points": 40,
+        "predicted": false,
+        "q": 3
+      }
+    ],
+    "untested": [
+      4,
+      5
+    ]
+  },
+  "pass_4712_sweep": {
+    "candidates": 27,
+    "files_scanned": 5332,
+    "hits": [
+      {
+        "file": "analysis/2026-07-27_cubic_map_kernel_decomposition.md",
+        "line": 16,
+        "text": "Independently, their disjointness graph is `SRG(45,32,22,24)` with spectrum"
+      },
+      {
+        "file": "analysis/BT1536_frame_dual_k44_code.md",
+        "line": 111,
+        "text": "8. Verify both strongly regular overlap graphs, the Gram spectrum/ranks, and the Tanner parameters."
+      },
+      {
+        "file": "analysis/BT3364_BT3375_external_source_notes.md",
+        "line": 5,
+        "text": "- Standard graph references identify the Clebsch graph as the unique `SRG(16,5,0,2)`, the folded 5-c"
+      },
+      {
+        "file": "analysis/BT3694_BT3700_spread_etf_axial_closure.md",
+        "line": 159,
+        "text": "It has four eigenvalues and is not strongly regular. Its four blocks of nine rays form an equitable "
+      },
+      {
+        "file": "analysis/PASS4592_4600_RESERVATION.md",
+        "line": 20,
+        "text": "- **Pass4593 \u2014 apartment enumerator:** complete exact support-10 census. All `C(40,10)=847,660,528` "
+      },
+      {
+        "file": "analysis/PASS4691_4698_THE_GUARD_RAILS_WERE_OFF.md",
+        "line": 41,
+        "text": "`tr(A^k)` agreed for W(3,3)/Q(4,3) and disagreed for the dual pairs. But **`tr(A^k)` is a"
+      },
+      {
+        "file": "analysis/w33_axes_e8_rootline_spectral_bridge.py",
+        "line": 11,
+        "text": "and spectrum"
+      },
+      {
+        "file": "analysis/w33_cheap_channel_spectrum.py",
+        "line": 14,
+        "text": "moments: for every k, sum_i m_i * lambda_i^k equals the integer trace(A^k) computed directly from th"
+      },
+      {
+        "file": "analysis/w33_contextuality_simulation.py",
+        "line": 112,
+        "text": "# SRG spectrum"
+      },
+      {
+        "file": "analysis/w33_defect_spread_tensor.py",
+        "line": 201,
+        "text": "\"spectrum\": spectrum_counts(row_graph),"
+      },
+      {
+        "file": "analysis/w33_interconnect_network.py",
+        "line": 9,
+        "text": "link failures (maximal fault tolerance, the best a degree-12 graph can have); its second eigenvalue"
+      },
+      {
+        "file": "analysis/w33_last_link_closed.py",
+        "line": 37,
+        "text": "-> Dodziuk-Patodi (eigenvalues) + Gromov-Hausdorff/FEEC (metric)"
+      },
+      {
+        "file": "analysis/w33_pass1004_cross_track_verification.py",
+        "line": 41,
+        "text": "nonzero Laplacian eigenvalue k - r = 12 - 2 = 10."
+      },
+      {
+        "file": "analysis/w33_pass1262_universal_shifted_adjacency_theorem.py",
+        "line": 14,
+        "text": "# For SRG(40,12,2,4), adjacency eigenvalues are 12, 2, -4."
+      },
+      {
+        "file": "analysis/w33_pass1286_levi_incidence_absorption.py",
+        "line": 34,
+        "text": "# 6. The adjacency spectrum of the Levi graph:"
+      },
+      {
+        "file": "analysis/w33_pass1287_theorem_ledger_v9.py",
+        "line": 33,
+        "text": "'EXACT-18: The three primitive idempotents of M_3(Q)_20 are E_ii = P_i(S) for i=0,1,2, where P_i is "
+      },
+      {
+        "file": "analysis/w33_pass2789_2795_three_grades_and_a_two_bit_isa.md",
+        "line": 190,
+        "text": "| `8+24+4` is the stabilizer-fidelity spectrum | **computed**, 60 stabilizer states |"
+      },
+      {
+        "file": "analysis/w33_pass4277_4284_f_register_bands_and_the_28.py",
+        "line": 22,
+        "text": "4283  BAND STRUCTURE.  (bonkers) The Hashimoto spectrum in the complex plane is a"
+      },
+      {
+        "file": "analysis/w33_pass4296_separate_the_final_pair.py",
+        "line": 9,
+        "text": "So neither the spectrum nor the group order picks a graph, and the residual ambiguity was"
+      },
+      {
+        "file": "analysis/w33_pass4563_w33_is_not_self_dual.py",
+        "line": 177,
+        "text": "# spectra -- identical for SRGs with identical parameters, so NOT a distinguisher"
+      },
+      {
+        "file": "analysis/w33_pass4592_degree27_schlaefli_interrogation.py",
+        "line": 84,
+        "text": "'degree16_orbital_graph':{'parameters':'SRG(27,16,10,8)','spectrum':{'16':1,'4':6,'-2':20}},"
+      },
+      {
+        "file": "analysis/w33_pass4682_complementary_135x36_algebra.py",
+        "line": 166,
+        "text": "'row_gram_algebra':{'dimension':4,'relation':'M M^T = 2 Q Q^T + Q M^T','joint_multiplicities':[1,15,"
+      },
+      {
+        "file": "analysis/w33_pass4693_4695_my_own_test_was_vacuous.py",
+        "line": 6,
+        "text": "survives the attempt to break it\" because tr(A^k) agreed for W(3,3)/Q(4,3) and"
+      },
+      {
+        "file": "analysis/w33_pass4710_4712_selfduality_verified_and_a_vacuity_sweep.py",
+        "line": 110,
+        "text": "r\"\\b(?:tr\\(A|trace\\(|np\\.trace|eigenvalue|eigenvalues|spectrum|spectra|\""
+      },
+      {
+        "file": "analysis/w33_pass479_det_congruence_sheet_census_and_orbit_burnside.py",
+        "line": 26,
+        "text": "{q-2, -(q+2)}, the SRG(q^3,(q-1)(q+2),q-2,q+2) restricted eigenvalues)."
+      },
+      {
+        "file": "analysis/w33_pass983_coalescence_is_a_classical_prank.py",
+        "line": 11,
+        "text": "THE APPARENT LAW.  For W(3,3), SRG(40,12,2,4) with non-trivial eigenvalues"
+      },
+      {
+        "file": "analysis/w33_tensor_product.py",
+        "line": 4,
+        "text": "- Eigenvalues: all products lambda_i * lambda_j"
+      }
+    ],
+    "reading_rule": "if the two objects have the same (v,k,lambda,mu), could this comparison have come out any other way? if not it restates the parameters"
+  }
+}
