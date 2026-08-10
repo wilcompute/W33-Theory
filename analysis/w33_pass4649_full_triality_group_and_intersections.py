@@ -15,19 +15,15 @@ It proves:
 
 It then computes the pairwise/triple intersections of the three PSp copies.
 A pairwise intersection has order 216 and fixes pointwise one anisotropic F2
-2-plane (three nonsingular vectors).  The orbit of that plane contains exactly
-40 disjoint anisotropic planes partitioning all 120 nonsingular vectors.  The
+2-plane (three nonsingular vectors). The orbit of that plane contains exactly
+40 disjoint anisotropic planes partitioning all 120 nonsingular vectors. The
 mutual-polar-orthogonality graph on those 40 planes is exactly SRG(40,12,2,4),
 thereby reconstructing W(3,3) from triality-subgroup intersection geometry.
-
-Evidence boundary: group names are justified by exact order plus the explicit
-D4 orthogonal-building action.  No physical triality or particle assignment is
-inferred.
 """
 from __future__ import annotations
 
 import json
-from collections import Counter, deque
+from collections import Counter
 from itertools import combinations
 from pathlib import Path
 
@@ -35,12 +31,11 @@ import numpy as np
 from sympy.combinatorics import Permutation, PermutationGroup
 
 from w33_pass4472_4479_apartment_module_thermo_ihara_pauli import (
-    J3, build_geometry, build_line_perm, perm_group, transvection_matrix,
+    build_geometry, build_line_perm, perm_group, transvection_matrix,
 )
 from w33_pass4587_w33_derived_d4_triality import rank_basis_int, span
 from w33_pass4641_split_octonion_triality import (
-    L if False else cross,  # keeps import boundary explicit; L is built below
-    dot, mask, norm, tup, zmul, zorn_to_hyper_mask,
+    mask, norm, tup, zmul, zorn_to_hyper_mask,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -49,8 +44,7 @@ OUT = ROOT / "data/PART_W33_PASS4649_FULL_TRIALITY_GROUP_INTERSECTIONS.json"
 
 def hyper_to_zorn_mask(hm):
     h = tup(hm)
-    z = (h[0], h[1], h[2], h[4], h[6], h[3], h[5], h[7])
-    return mask(z)
+    return mask((h[0], h[1], h[2], h[4], h[6], h[3], h[5], h[7]))
 
 
 def permute_mask40(m, p, j):
@@ -70,18 +64,10 @@ def zconj(m):
     return mask(z)
 
 
-def array405(g):
-    a = list(g.array_form)
-    if len(a) < 405:
-        a += list(range(len(a), 405))
-    return a
-
-
 def main():
     pts, pidx, lines, lidx, _, Astar, _, _, _ = build_geometry()
     Astar = np.asarray(Astar, dtype=np.uint8)
 
-    # Deterministic five-generator PSp line action.
     all_trans = [build_line_perm(transvection_matrix(v), pts, pidx, lines, lidx) for v in pts]
     selected = []
     line_group = {tuple(range(40))}
@@ -94,8 +80,6 @@ def main():
             break
     assert len(selected) == 5 and len(line_group) == 25920
 
-    # Rebuild the protected V8 as V9/<1>, then the same greedy hyperbolic chart
-    # used in Pass4641.
     n = 40
     j = (1 << n) - 1
     cols = []
@@ -136,7 +120,6 @@ def main():
         h = tup(c)
         assert q(rr) == ((h[0]*h[1] + h[2]*h[3] + h[4]*h[5] + h[6]*h[7]) & 1)
 
-    # PSp action in Zorn coordinates.
     zorn_gen_maps = []
     for p in selected:
         hyper_map = []
@@ -147,11 +130,9 @@ def main():
         assert all(norm(tup(zmap[m])) == norm(tup(m)) for m in range(256))
         zorn_gen_maps.append(zmap)
 
-    # Split-octonion left/right annihilator labels.
     sing_z = sorted(m for m in range(1, 256) if norm(tup(m)) == 0)
     assert len(sing_z) == 135
-    L = {}
-    R = {}
+    L, R = {}, {}
     zero = (0,) * 8
     elems = [tup(m) for m in range(256)]
     for x in sing_z:
@@ -161,35 +142,29 @@ def main():
         assert len(L[x]) == len(R[x]) == 16
     L_lookup = {S: x for x, S in L.items()}
     R_lookup = {S: x for x, S in R.items()}
-    assert len(L_lookup) == len(R_lookup) == 135
     sidx = {x: i for i, x in enumerate(sing_z)}
 
-    # Lift each PSp generator to all three D4 outer types.
     type_gens = []
     for zm in zorn_gen_maps:
         perm = [None] * 405
         for x in sing_z:
             i = sidx[x]
-            imL = frozenset(zm[y] for y in L[x])
-            imR = frozenset(zm[y] for y in R[x])
-            lx = L_lookup[imL]
-            rx = R_lookup[imR]
+            lx = L_lookup[frozenset(zm[y] for y in L[x])]
+            rx = R_lookup[frozenset(zm[y] for y in R[x])]
             perm[i] = sidx[zm[x]]
             perm[135 + i] = 135 + sidx[lx]
             perm[270 + i] = 270 + sidx[rx]
         type_gens.append(Permutation(perm))
-
     G0 = PermutationGroup(type_gens)
     assert G0.order() == 25920
 
-    # Explicit order-three triality P_x -> L_x -> R_x -> P_x.
-    tau = [None] * 405
+    tau_arr = [None] * 405
     for x in sing_z:
         i = sidx[x]
-        tau[i] = 135 + i
-        tau[135 + i] = 270 + i
-        tau[270 + i] = i
-    tau = Permutation(tau)
+        tau_arr[i] = 135 + i
+        tau_arr[135 + i] = 270 + i
+        tau_arr[270 + i] = i
+    tau = Permutation(tau_arr)
     assert tau.order() == 3
 
     G1_gens = [tau * g * (tau**2) for g in type_gens]
@@ -204,28 +179,25 @@ def main():
     omega3 = PermutationGroup(type_gens + [tau])
     assert omega3.order() == 522547200
 
-    # Octonion conjugation is an anti-automorphism and swaps L/R while fixing
-    # the point type.  It supplies a D4 diagram transposition.
     for a in range(256):
         for b in range(256):
             assert zconj(mask(zmul(tup(a), tup(b)))) == mask(zmul(tup(zconj(b)), tup(zconj(a))))
-    sigma = [None] * 405
+    sigma_arr = [None] * 405
     for x in sing_z:
         i = sidx[x]
         xc = zconj(x)
         jx = sidx[xc]
         assert frozenset(zconj(y) for y in L[x]) == R[xc]
         assert frozenset(zconj(y) for y in R[x]) == L[xc]
-        sigma[i] = jx
-        sigma[135 + i] = 270 + jx
-        sigma[270 + i] = 135 + jx
-    sigma = Permutation(sigma)
+        sigma_arr[i] = jx
+        sigma_arr[135 + i] = 270 + jx
+        sigma_arr[270 + i] = 135 + jx
+    sigma = Permutation(sigma_arr)
     assert sigma.order() == 2
     assert sigma * tau * sigma == tau**2
     full = PermutationGroup(type_gens + [tau, sigma])
     assert full.order() == 1045094400
 
-    # Pairwise and triple intersections of the three triality-conjugate PSp's.
     G1.schreier_sims(); G2.schreier_sims()
     inter01 = [g for g in G0.generate_schreier_sims() if G1.contains(g)]
     inter012 = [g for g in inter01 if G2.contains(g)]
@@ -240,7 +212,6 @@ def main():
     assert I01.center().order() == 3 and I01.derived_subgroup().order() == 54
     assert (not I012.is_abelian) and I012.center().order() == 1 and I012.derived_subgroup().order() == 3
 
-    # Recover an 8x8 linear action from any type-preserving 405 permutation.
     def lincols(g):
         arr = list(g.array_form)
         if len(arr) < 405:
@@ -273,8 +244,6 @@ def main():
     assert len(fixed) == 3 and fixed[0] ^ fixed[1] ^ fixed[2] == 0
     base_plane = frozenset(fixed)
 
-    # Orbit under PSp: 40 disjoint anisotropic planes partition all 120
-    # nonsingular vectors.  Setwise stabilizer 648, pointwise stabilizer 216.
     planes = set()
     setwise = pointwise = 0
     for g in G0.generate_schreier_sims():
@@ -290,7 +259,6 @@ def main():
     assert len(set().union(*planes)) == 120
     assert all(len(A & B) == 0 for A, B in combinations(planes, 2))
 
-    # Mutual total polar orthogonality on the 40 planes is exactly W33.
     plist = list(planes)
     AW = np.zeros((40, 40), dtype=np.int64)
     cross_orth = Counter()
@@ -301,7 +269,7 @@ def main():
             AW[i, j2] = AW[j2, i] = 1
     assert cross_orth == Counter({3:540,9:240})
     assert set(map(int, AW.sum(axis=1))) == {12}
-    adj = Counter(); non = Counter()
+    adj, non = Counter(), Counter()
     for i, j2 in combinations(range(40), 2):
         c = int(AW[i] @ AW[j2])
         (adj if AW[i,j2] else non)[c] += 1
@@ -345,7 +313,7 @@ def main():
             "identification": "W(3,3) reconstructed from triality-conjugate PSp intersection geometry"
         },
         "theorem": "The explicit W33-derived octonion triality closes to Omega_8^+(2):S3. Pairwise triality-conjugate PSp intersections recover a 40-plane partition of the 120 anisotropic vectors whose total-orthogonality graph is W33 itself.",
-        "literature_context": "Pellegrini--Tamburini Bellani, J. Group Theory 2022, gives the order-three D4 triality automorphism of P Omega_8^+(q) in Steinberg generators; the present q=2 subgroup/intersection computation is explicit and independent.",
+        "literature_context": "Pellegrini--Tamburini Bellani, J. Group Theory 2022: order-three D4 triality of P Omega_8^+(q) in Steinberg generators. The q=2 subgroup/intersection computation here is explicit and independent.",
         "boundary": "Finite group/building theorem only; no physical triality or particle interpretation."
     }
     OUT.write_text(json.dumps(out, indent=2, sort_keys=True) + "\n", encoding="utf-8")
