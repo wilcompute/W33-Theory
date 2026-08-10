@@ -1,0 +1,25 @@
+{
+  "pass": 4624,
+  "source": {
+    "maximal_size8_partial_spreads": 135,
+    "spreads_per_packet": 3,
+    "packet_count": 45,
+    "common_H_order": 192
+  },
+  "map": "packet {S1,S2,S3} -> complement in the 40 W33 lines of S1 union S2 union S3",
+  "representative": {
+    "union_size": 24,
+    "complement_size": 16,
+    "complement_is_Pass4585_support": true
+  },
+  "equivariance": {
+    "PSp_order": 25920,
+    "support_orbit_size": 45,
+    "support_stabilizer_order": 576,
+    "H_index_in_support_stabilizer": 3,
+    "all_45_supports_hit": true
+  },
+  "composition_with_Pass4616": "45 packet complements = 45 protected supports = center-quad/E6-tritangent 45 by the frozen Pass4616 intertwiner",
+  "theorem": "The Pass4622 stabilizer-packet quotient and Pass4585 protected-support quotient are the same PSp 45-carrier: the explicit equivariant map is the 16-line complement of the union of the packet three maximal 8-line partial spreads. Composing with Pass4616 identifies this carrier with the center-quad/E6-tritangent 45.",
+  "boundary": "Exact finite support/G-set theorem only; E6 denotes the already certified cubic-surface carrier, not a physical field identification."
+}
