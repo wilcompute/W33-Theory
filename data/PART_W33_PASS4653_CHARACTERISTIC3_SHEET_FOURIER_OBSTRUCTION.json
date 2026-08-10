@@ -1,0 +1,27 @@
+{
+  "pass": 4653,
+  "generic_characteristic_not_3": {
+    "sheet_module": "trivial_1 + Std_2",
+    "bright_projector": "J/3",
+    "dark_projector": "I-J/3",
+    "identity": "J^2=3J"
+  },
+  "characteristic_3": {
+    "J_rank": 1,
+    "J_square": "0",
+    "image_J": "T=<111>",
+    "kernel_J": "W={x1+x2+x3=0}, dimension 2",
+    "containment": "T subset W",
+    "filtration": "0 < T(trivial) < W < V, with factors trivial | sign | trivial",
+    "top_extension_split": false,
+    "lower_extension_split": false,
+    "diagonal_bright_vector_is_dark": true,
+    "coupling_statement": "[R R R] factors through the trivial quotient V/W, but there is no S3-equivariant bright section"
+  },
+  "characteristic_2": {
+    "bright_dark_split_survives": true,
+    "dark_C3_module": "irreducible 2D, minimal polynomial x^2+x+1"
+  },
+  "theorem": "Characteristic three destroys the semisimple bright/dark sheet Fourier decomposition: the diagonal sheet vector lies inside the dark plane and the S3 permutation module becomes the nonsplit filtration trivial|sign|trivial.",
+  "boundary": "Modular representation theorem only; it is not a physical three-generation or phase-decoherence claim."
+}
