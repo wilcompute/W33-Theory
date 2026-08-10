@@ -1,0 +1,119 @@
+name: Passes 4753-4760 algebra q dependency 24D
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4753_orbital_wedderburn.py'
+      - 'analysis/w33_pass4754_oddq_kernel_distance_theorem.py'
+      - 'analysis/w33_pass4755_4759_noncoordinate_24d_lattice.py'
+      - 'analysis/w33_pass4756_4758_4760_dependency_cube_reconstruction.py'
+      - 'analysis/w33_pass4756_4758_4760_dependency_cube_fast_verify.py'
+      - 'analysis/w33_pass4757_hamiltonian_low_energy_noise.py'
+      - 'analysis/PASS4753_4760_*'
+      - 'analysis/PASS4754_oddq_kernel_distance_theorem.md'
+      - 'data/PART_W33_PASS4753_ORBITAL_WEDDERBURN.json'
+      - 'data/PART_W33_PASS4754_ODDQ_KERNEL_DISTANCE.json'
+      - 'data/PART_W33_PASS4755_4759_NONCOORDINATE_24D_LATTICE.json'
+      - 'data/PART_W33_PASS4756_4758_4760_DEPENDENCY_CUBES.json'
+      - 'data/PART_W33_PASS4757_HAMILTONIAN_LOW_ENERGY_NOISE.json'
+      - 'analysis/PASS4753_4760_algebra_q_dependency_index_insert.html'
+      - 'docs/residue-algebra-q-dependency-24d.html'
+      - 'tools/integrate_pass4753_4760.py'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'holonet_machine_blueprint.tex'
+      - '.github/workflows/w33_pass4753_4760_algebra_q_dependency.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pass4753-4760-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install analysis dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy networkx sympy
+      - name: Execute exact passes and fast dependency regression
+        shell: bash
+        run: |
+          set +e
+          LOG=analysis/PASS4753_4760_RUN.log
+          STATUS=analysis/PASS4753_4760_RUN.status
+          : > "$LOG"
+          rc=0
+          for script in \
+            analysis/w33_pass4753_orbital_wedderburn.py \
+            analysis/w33_pass4754_oddq_kernel_distance_theorem.py \
+            analysis/w33_pass4755_4759_noncoordinate_24d_lattice.py \
+            analysis/w33_pass4756_4758_4760_dependency_cube_fast_verify.py \
+            analysis/w33_pass4757_hamiltonian_low_energy_noise.py
+          do
+            echo "===== $script =====" | tee -a "$LOG"
+            python "$script" 2>&1 | tee -a "$LOG"
+            here=${PIPESTATUS[0]}
+            echo "rc=$here" | tee -a "$LOG"
+            if [ "$here" -ne 0 ]; then rc=$here; break; fi
+          done
+          echo "$rc" > "$STATUS"
+          exit 0
+      - name: Check theorem boundaries
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          D=Path('data')
+          a=json.loads((D/'PART_W33_PASS4753_ORBITAL_WEDDERBURN.json').read_text())
+          assert a['orbital_algebra']['wedderburn_Q']=='Q^6 x Q(sqrt(-3)) x M2(Q)'
+          b=json.loads((D/'PART_W33_PASS4754_ODDQ_KERNEL_DISTANCE.json').read_text())
+          assert b['cases']['5']['proved_distance_by_general_theorem']==6
+          assert b['cases']['5']['canonical_involution_fixed_lines']==8
+          c=json.loads((D/'PART_W33_PASS4755_4759_NONCOORDINATE_24D_LATTICE.json').read_text())
+          assert c['4755_canonical_24d_lattice']['factorization']=='2^10 * 3^10 * 5^23'
+          d=json.loads((D/'PART_W33_PASS4756_4758_4760_DEPENDENCY_CUBES.json').read_text())
+          assert d['4758_cube_reconstruction']['cube_union_words']==135
+          assert d['4760_binary_intersection_code']['parameters']=='[40,24,6]'
+          e=json.loads((D/'PART_W33_PASS4757_HAMILTONIAN_LOW_ENERGY_NOISE.json').read_text())
+          assert e['two_defect_sector']['skew_W33_lines']['binding_vs_two_singles']==-12
+          PY
+      - name: Materialize public theorem card
+        run: |
+          python tools/integrate_pass4753_4760.py
+          test "$(grep -c 'id=\"pass4753-4760-algebra-q-dependency\"' docs/index.html)" -eq 1
+          test -s docs/residue-algebra-q-dependency-24d.html
+      - uses: WtfJoke/setup-tectonic@v3
+        with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
+      - name: Compile canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "/tmp/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+      - name: Commit execution evidence and generated index even on theorem failure
+        shell: bash
+        run: |
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add analysis/PASS4753_4760_RUN.log analysis/PASS4753_4760_RUN.status docs/index.html
+          for f in \
+            data/PART_W33_PASS4753_ORBITAL_WEDDERBURN.json \
+            data/PART_W33_PASS4754_ODDQ_KERNEL_DISTANCE.json \
+            data/PART_W33_PASS4755_4759_NONCOORDINATE_24D_LATTICE.json \
+            data/PART_W33_PASS4756_4758_4760_DEPENDENCY_CUBES.json \
+            data/PART_W33_PASS4757_HAMILTONIAN_LOW_ENERGY_NOISE.json
+          do
+            test -f "$f" && git add "$f"
+          done
+          if ! git diff --cached --quiet; then
+            git commit -m 'Materialize Passes 4753-4760 execution evidence and theorem card'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
+      - name: Enforce execution result after evidence is preserved
+        run: test "$(cat analysis/PASS4753_4760_RUN.status)" -eq 0
