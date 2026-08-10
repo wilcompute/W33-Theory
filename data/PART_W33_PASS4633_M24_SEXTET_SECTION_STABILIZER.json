@@ -1,0 +1,27 @@
+{
+  "M24_action": {
+    "computed_order_from_orbit_stabilizer": 244823040,
+    "sextet_orbit": 1771,
+    "sextet_stabilizer_order": 138240,
+    "six_tetrad_image_order": 720,
+    "six_tetrad_kernel_order": 192,
+    "standard_structure": "2^6:3.S6"
+  },
+  "boundary": "Exact permutation/code theorem in the repository coordinate model. The paired cubic O^-(6,2) group is not identified as a subgroup of M24.",
+  "corrected_Pass4615": {
+    "stale_frozen_assignment_retracted": [21,22,17,18,20,19],
+    "zero_coordinate_assignment": [21,20,19,18,22,17],
+    "six_tetrads": [[0,2,7,21],[1,6,16,20],[3,4,13,19],[5,8,18,23],[9,11,14,22],[10,12,15,17]]
+  },
+  "pass": 4633,
+  "section_stabilizer": {
+    "active18": "transitive faithful, point stabilizer 120",
+    "order": 2160,
+    "section_codeword_orbits": [1,18,45],
+    "section_octads45": "transitive faithful, stabilizer 48",
+    "zero_coordinate_image_order": 720,
+    "zero_coordinate_kernel_order": 3,
+    "zero_transversal_orbit_inside_sextet": 64
+  },
+  "theorem": "The corrected Golay sextet has M24 stabilizer order 138240 with S6 tetrad image and kernel 192. Stabilizing the actual six-zero-coordinate transversal cuts this to a faithful order-2160 section group, transitive on the 18 active points and 45 section octads, with codeword orbits 1+18+45."
+}
