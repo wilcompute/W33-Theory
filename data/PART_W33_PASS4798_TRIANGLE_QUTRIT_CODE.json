@@ -1,0 +1,13 @@
+{
+  "Gram_identity": "B B^T = 18 I + 3 A45",
+  "F3_code": {"dimension": 44, "dual_dimension": 226, "known_codeword_weight_upper_bound_for_minimum": 18, "length": 270, "self_orthogonal": true},
+  "boundary": "Minimum distance is closed separately in Pass4799. No quantum-code parameters are inferred here without a second commuting check family.",
+  "column_weight": 3,
+  "matrix": "45 x 270 GQ(4,2) point-triangle incidence",
+  "pair_overlap_adjacent": 3,
+  "pair_overlap_nonadjacent": 0,
+  "pass": 4798,
+  "ranks": {"F2": 45, "F3": 44, "F5": 45},
+  "row_weight": 18,
+  "theorem": "The intrinsic 270-triangle carrier supports a characteristic-3 self-orthogonal incidence code of length 270 and dimension 44. The rank defect is exactly one and occurs at characteristic 3; the same 45 rows are independent over F2 and F5."
+}
