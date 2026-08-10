@@ -1,0 +1,22 @@
+{
+  "note": "Claims this repository has withdrawn. Each entry makes the retraction permanent: check_retraction_propagation.py reports any file that reasserts one. Entries are written by hand -- deciding that a sentence withdraws a claim is a reading task, not a pattern match.",
+  "retractions": [
+    {
+      "assert_pattern": "(?:W\\(3,\\s*3\\)|\\bW33\\b|GQ\\(3,\\s*3\\)|SRG\\(40,\\s*12,\\s*2,\\s*4\\))[^\\n]{0,70}?self[- ]dual|self[- ]dual[^\\n]{0,70}?(?:W\\(3,\\s*3\\)|\\bW33\\b|GQ\\(3,\\s*3\\))",
+      "claim": "W(3,3) is self-dual",
+      "exempt_files": [
+        "analysis/w33_pass4560_the_dual_pair_unifies_two_asymmetries.py",
+        "analysis/w33_pass4563_w33_is_not_self_dual.py",
+        "analysis/w33_pass4761_reading_the_candidates_found_a_retraction_that_did_not_take.py",
+        "analysis/w33_pass4754_4755_prime_power_quadrangles_and_bliss.py",
+        "analysis/w33_pass4767_the_quadrangle_zoo_by_canonical_form.py",
+        "scripts/check_retraction_propagation.py"
+      ],
+      "exempt_pattern": "not\\s+self[- ]dual|NOT\\s+self[- ]dual|iff?\\s+q\\s+is\\s+even|q\\s+even|only\\s+for\\s+even|retract|withdraw|is\\s+false|Pass\\s*45(6[0-9]|9[0-9])|Pass\\s*47[0-9][0-9]|corrects?\\s+the\\s+old|NOT\\s+self|is\\s+not\\b|cospectral|the\\s+POLYTOPE\\s+is|shorthand|self[- ]dual\\s+(?:lattice|code|latt)",
+      "retracted_by": "Pass 4563",
+      "settled_by": "Pass 4755 (BLISS canonical form, q = 2,3,4,5)",
+      "why": "W(3,q) is self-dual iff q is even; q = 3 is odd. Equal point and line counts (40 = 40) and equal SRG parameters are not a duality."
+    }
+  ],
+  "schema": "w33.retractions.v1"
+}

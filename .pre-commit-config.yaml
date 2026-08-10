@@ -158,3 +158,15 @@ repos:
         language: system
         pass_filenames: true
         files: ^(scripts|analysis)/.*\.py$
+      # Added Pass 4770. Every other guard here checks a NEW file against prior art; none
+      # checked OLD files against a new correction. Pass 4563 withdrew "W(3,3) is
+      # self-dual" and Pass 4761 found 20 files still asserting it, one load-bearing. A
+      # retraction is written in one file on one day, in a corpus indexed by date, and
+      # nothing carried it backwards. Registry at data/w33_retractions.json is hand-written
+      # because deciding a sentence withdraws a claim is a reading task. Warns, never blocks.
+      - id: retraction-propagation
+        name: retracted claims are not reasserted
+        entry: py -3 scripts/check_retraction_propagation.py
+        language: system
+        pass_filenames: true
+        files: ^(analysis|passes|pillars)/.*\.(py|md)$|^.*\.tex$

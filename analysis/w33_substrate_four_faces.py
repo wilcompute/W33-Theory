@@ -24,7 +24,7 @@ substrate, unified by the shared integer spine, and the deepest statement is the
 dynamics' invariant equals the matter it protects (27 = E6 = QCA index).
 
 THE FOUR FACES.
-  (i)   Combinatorics : SRG(40,12,2,4) = GQ(3,3) generalized quadrangle (self-dual).
+  (i)   Combinatorics : SRG(40,12,2,4) = GQ(3,3) generalized quadrangle (not self-dual (q=3 odd; W(3,q) is self-dual iff q even -- Pass 4563/4755)).
   (ii)  Physics       : KO-dim-6 spectral triple -> 4D + Standard Model + cosmology.
   (iii) Computation   : [[66,8,3;5]]_3 code on the genus-6 K_12 surface (E6 roots).
   (iv)  Dynamics      : QCA, topological index 27, universal (Rule-110) computation.
@@ -69,7 +69,8 @@ def main():
     print("== the architecture as a whole: one object, four faces ==")
 
     faces = {
-        "combinatorics": "SRG(40,12,2,4) = GQ(3,3) generalized quadrangle (self-dual)",
+        "combinatorics": "SRG(40,12,2,4) = GQ(3,3) generalized quadrangle "
+                     "(NOT self-dual: q=3 is odd)",
         "physics": "KO-dim-6 spectral triple -> 4D + Standard Model + cosmology",
         "computation": "[[66,8,3;5]]_3 code on the genus-6 K_12 surface (E6 roots)",
         "dynamics": "QCA, topological index 27, universal (Rule-110) computation",

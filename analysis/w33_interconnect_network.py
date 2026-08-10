@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
 """
+NOTE (Pass 4769): self-duality was removed from every load-balancing claim below.
+W(3,3) is NOT self-dual -- W(3,q) is self-dual iff q is even, retracted at Pass 4563
+and settled by canonical form at Pass 4755. The conclusion is unaffected: vertex- and
+edge-transitivity under Sp(4,3) is what makes every node and link interchangeable,
+and that half is true. The self-duality half was inert, which is the only reason the
+claim survived being false.
+
 The interconnect, as a network engineer reads it: GQ(3,3) is a diameter-2, maximally fault-tolerant,
 better-than-Ramanujan fabric. Stripped of physics, the substrate W(3,3) = SRG(40,12,2,4) = GQ(3,3)
 is first of all a NETWORK TOPOLOGY -- the wiring diagram of the machine -- and by the standard
@@ -9,7 +16,7 @@ vertex and edge connectivity both equal the degree, 12, so it survives any 11 si
 link failures (maximal fault tolerance, the best a degree-12 graph can have); its second eigenvalue
 is 2, far below the Ramanujan bound 2*sqrt(11) = 6.63, so it is a BETTER-than-Ramanujan expander
 (near-optimal bisection bandwidth and mixing); and it is vertex- and edge-transitive under Sp(4,3)
-and self-dual as a generalized quadrangle, so every node and every link is interchangeable -- there
+-- so every node and every link is interchangeable, and there
 are no hot spots, routing and load are perfectly balanced. Compared to the textbook topologies at
 the same scale -- a 6x6 torus (degree 4, diameter 6), a hypercube Q6 (degree 6, diameter 6) -- the
 GQ(3,3) fabric trades a higher radix (12) for a far lower diameter (2) and maximal resilience: it is
@@ -30,7 +37,7 @@ THE FABRIC METRICS (computed from the GQ(3,3) collinearity graph).
     bisection/expand   lambda_2 = 2 << Ramanujan 2*sqrt(11) = 6.63; spectral gap k - lambda_2 = 10;
                        edge expansion h >= (k - lambda_2)/2 = 5
     fault tolerance    vertex connectivity = edge connectivity = k = 12 -> survives 11 failures
-    symmetry           vertex- and edge-transitive (Sp(4,3)), self-dual GQ -> perfect load balancing
+    symmetry           vertex- and edge-transitive (Sp(4,3)) -> perfect load balancing
     links              |E| = n k / 2 = 240
 
 THE COMPARISON (same-scale textbook topologies).
@@ -113,7 +120,7 @@ def main():
         f"  links |E| = n k / 2 = {n*k//2}; edge expansion h >= (k-lambda_2)/2 = {(k-lam2)/2:.0f}"
     )
     print(
-        f"  vertex- & edge-transitive (Sp(4,3)), self-dual GQ -> perfect load balancing"
+        f"  vertex- & edge-transitive (Sp(4,3)) -> perfect load balancing"
     )
     assert n == 40 and k == 12 and lam == {2} and mu == {4} and lam2 == 2
     out["fabric"] = {
@@ -129,7 +136,7 @@ def main():
         "fault_tolerance": f"survives {k-1} failures",
         "links": n * k // 2,
         "edge_expansion": (k - lam2) / 2,
-        "symmetry": "vertex- & edge-transitive (Sp(4,3)), self-dual GQ -> perfect load balancing",
+        "symmetry": "vertex- & edge-transitive (Sp(4,3)) -> perfect load balancing",
     }
 
     comparison = [
@@ -171,7 +178,7 @@ def main():
         "  Ramanujan expander (near-optimal bisection and mixing); and it is vertex- and edge-"
     )
     print(
-        "  transitive under Sp(4,3) and self-dual as a generalized quadrangle, so every node and"
+        "  transitive under Sp(4,3), so every node and"
     )
     print(
         "  link is interchangeable -- no hot spots, perfectly balanced routing and load. Against"
@@ -204,7 +211,7 @@ def main():
         "diameter 2 (two-hop any-to-any, deterministic via line incidence); vertex/edge connectivity "
         "= 12 = degree -> survives 11 failures (maximal for degree 12); second eigenvalue lambda_2 = "
         "2 << Ramanujan 2*sqrt(11) = 6.63 -> better-than-Ramanujan expander (near-optimal bisection "
-        "and mixing); vertex- & edge-transitive (Sp(4,3)), self-dual GQ -> perfect load balancing, no "
+        "and mixing); vertex- & edge-transitive (Sp(4,3)) -> perfect load balancing, no "
         "hot spots; 240 links. Vs textbook same-scale topologies (6x6 torus radix 4 diameter 6; Q6 "
         "radix 6 diameter 6), GQ(3,3) trades higher radix (12) for far lower diameter (2) and maximal "
         "resilience -- the low-diameter, high-resilience, symmetric corner (flattened-butterfly/"

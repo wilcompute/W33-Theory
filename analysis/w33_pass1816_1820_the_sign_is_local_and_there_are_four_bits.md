@@ -55,7 +55,7 @@ every colour class of every resolution in exactly `|T|/9`. Testing every natural
 > class contains exactly **12** of the 108 frames having a line through any given
 > point. Forty such identities, one per point.
 
-Note the asymmetry: **points are free, lines are not.** `W(3,3)` is self-dual, so
+Note the asymmetry: **points are free, lines are not.** `W(3,3)` is **not self-dual (q=3 odd; W(3,q) is self-dual iff q even -- Pass 4563/4755)**, so
 this cannot come from the geometry alone — it comes from the frame construction,
 which is built from pairs of *lines* and therefore breaks the point/line duality.
 

@@ -124,7 +124,7 @@ def main():
     )
     out["sources"] = [
         "Kochen-Specker; Abramsky-Brandenburger contextual fraction; "
-        "two-qutrit Pauli geometry = W(3,3); GQ(3,3) self-dual lines; "
+        "two-qutrit Pauli geometry = W(3,3); GQ(3,3) lines (NOT self-dual, q odd); "
         "corpus BT82 CF=1/Phi_4; w33_demonstrator_measures_substrate.py"
     ]
     with open("data/w33_kochen_specker_protocol.json", "w") as fh:

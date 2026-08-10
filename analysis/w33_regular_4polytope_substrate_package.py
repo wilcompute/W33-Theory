@@ -20,7 +20,8 @@ EACH OF FOUR DISTINCT SUMS IS SUBSTRATE-PRIMITIVE.
 
   Smallest (5-cell):   30  = 2 g_neg = X-scheme gauge multiplicity
   Dual pair (8/16):    80  = 2 v       (twice W(3,3) vertex count)
-  Self-dual (24-cell): 240 = |E|       (W(3,3) edge count = E_8 roots)
+  Self-dual (24-cell -- the POLYTOPE is self-dual; W(3,3) is not):
+#   240 = |E|       (W(3,3) edge count = E_8 roots)
   Largest (120/600):  2640 = p_Ih * |E| (Ihara prime times edge count)
 
 MULTIPLICATIVE CHAIN OF DISTINCT SUMS.

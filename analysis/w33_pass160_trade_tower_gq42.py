@@ -16,7 +16,8 @@ one group while descending a geometry ladder.  This witness iterates:
    (incidence rank 21), and its exact Gram Smith form, determinant, parity,
    and minimal shell are computed by staged Fincke-Pohst.
 
-3. THE LINE RELATIONS.  Unlike self-dual W(3,3), the 27 lines of GQ(4,2)
+3. THE LINE RELATIONS.  W(3,3) is NOT self-dual either (q=3 is odd); the 27 lines
+   of GQ(4,2)
    are integrally dependent: the dual kernel (relations among lines) has
    rank 6, computed exactly with its own Gram data.
 

@@ -21,7 +21,8 @@ line/route kernel ker_Z(N^T).  This witness computes both and proves:
 
 The last item upgrades the old pentad census to an intrinsic lattice
 identification.  It also gives an integral obstruction to the stale claim
-that W(3,3) is self-dual: an incidence duality would permutation-identify
+that W(3,3) is self-dual -- IT IS NOT (q=3 is odd; Pass 4563/4755). An incidence
+duality would permutation-identify
 the two kernels and preserve these invariants, but they differ.
 """
 

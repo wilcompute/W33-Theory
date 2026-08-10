@@ -11,7 +11,7 @@ theorem package:
    has Gram N^T N = mu*I + A with exact spectrum {16, 6, 0} and
    multiplicities {1, 24, 15}: readout gain 16 = 2^mu on the Perron mode,
    6 = q! on the gauge sector, 0 on the sentinel sector.  The line-side
-   Gram N N^T is the concurrence graph, again SRG(40,12,2,4) (self-dual).
+   Gram N N^T is the concurrence graph, again SRG(40,12,2,4) -- same parameters, not self-dual (q=3 odd; W(3,q) is self-dual iff q even -- Pass 4563/4755).
 
 2. READOUT/DARK DUALITY.  The context-generated code lattice im(N^T) is
    saturated (SNF of N = diag(1^25, 0^15)) and its determinant equals the

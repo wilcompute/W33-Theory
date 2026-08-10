@@ -8,7 +8,8 @@ argument that the substrate is physical, not numerological.
 SELECTION 1 (geometric): the master equation q! = 2q.
   The substrate's defining relation q! = 2q is equivalent to (q-1)! = 2, whose
   UNIQUE solution is q-1 = 2, i.e. q = 3. (q=2: 2!=2 != 4; q=4: 24 != 8.) So the
-  self-dual generalized quadrangle GQ(q,q) = W(3,3) at the master point is q=3.
+  generalized quadrangle GQ(q,q) = W(3,3) at the master point is q=3.
+(GQ(q,q) has s=t; that is NOT self-duality -- W(3,q) is self-dual iff q is even.)
 
 SELECTION 2 (quantum resource): the minimal magic dimension.
   Discrete Wigner negativity (= contextuality = the resource for quantum
