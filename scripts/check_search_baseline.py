@@ -63,8 +63,12 @@ BASELINE = re.compile(
     r"z[- ]score|sigma from random|standard deviations? from)\b", re.I)
 
 # The trap: numpy's RNG is how you GENERATE a search, not how you control it.
-RNG_ONLY = re.compile(r"\b(default_rng|np\.random|RNG\.|rng\.|random\.(?:seed|choice|"
-                      r"randint|integers|uniform|permutation|sample))\b")
+# No trailing \b: `RNG\.` and `rng\.` end in an escaped '.', a non-word literal, so with
+# one they could never match. Found by scripts/check_regex_deadends.py, Pass 4742 -- the
+# same fault that made a 51,840 statistic read 12.5% when it was 44%.
+RNG_ONLY = re.compile(r"(?:\bdefault_rng\b|\bnp\.random\b|\bRNG\.|\brng\.|"
+                      r"\brandom\.(?:seed|choice|randint|integers|uniform|permutation|"
+                      r"sample)\b)")
 
 
 def scan(text: str) -> tuple[bool, bool, bool]:

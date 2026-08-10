@@ -147,3 +147,14 @@ repos:
         language: system
         pass_filenames: false
         always_run: true
+      # Added Pass 4742. A regex alternative that can never match fails SILENTLY -- the
+      # pattern compiles, runs, and returns fewer results. Nothing distinguishes "no
+      # matches because the corpus is clean" from "no matches because the pattern is
+      # impossible". Found in three of this repo's own checkers, one of which reported a
+      # statistic of 12.5% whose true value was 44%.
+      - id: regex-deadends
+        name: no regex alternative is unmatchable
+        entry: py -3 scripts/check_regex_deadends.py
+        language: system
+        pass_filenames: true
+        files: ^(scripts|analysis)/.*\.py$

@@ -106,12 +106,18 @@ def main() -> int:
     # ---- 4712: sweep for the vacuous comparison --------------------------
     print("\n  PASS 4712 -- where else did I compare parameter-determined quantities?\n")
 
+    # NO OUTER \b on these two. Found by scripts/check_regex_deadends.py (Pass 4742): with
+    # a trailing \b the alternatives tr\(A, trace\(, np\.trace and SRG\( are UNMATCHABLE --
+    # each ends in an escaped non-word literal, and there is no word boundary between '('
+    # and whatever follows it. The four most specific tokens in the spectral vocabulary and
+    # the single most specific one in the SRG vocabulary all silently never fired, so the
+    # candidate count this pass first reported was too low.
     SPECTRAL = re.compile(
-        r"\b(?:tr\(A|trace\(|np\.trace|eigenvalue|eigenvalues|spectrum|spectra|"
-        r"charpoly|characteristic polynomial|matrix_power)\b", re.I)
+        r"(?:tr\(A|trace\(|np\.trace|\beigenvalue\b|\beigenvalues\b|\bspectrum\b|"
+        r"\bspectra\b|\bcharpoly\b|\bcharacteristic polynomial\b|\bmatrix_power\b)", re.I)
     SRGPAIR = re.compile(
-        r"\b(?:SRG\(|strongly regular|same parameters|identical parameters|"
-        r"parameter-equal|equal parameters)\b", re.I)
+        r"(?:SRG\(|\bstrongly regular\b|\bsame parameters\b|\bidentical parameters\b|"
+        r"\bparameter-equal\b|\bequal parameters\b)", re.I)
     COMPARE = re.compile(
         r"\b(?:agree|agrees|match|matches|identical|equal|same|differ|distinguish|"
         r"separate)\b", re.I)

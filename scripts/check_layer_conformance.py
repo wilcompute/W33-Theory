@@ -47,10 +47,17 @@ ROOT = Path(__file__).resolve().parents[1]
 
 # vocabulary that places a sentence at a layer
 LAYER_VOCAB = {
+    # NO OUTER \b. Found by scripts/check_regex_deadends.py, Pass 4742: with a trailing \b
+    # the alternatives W\(3,3\) and Sp\(4,3\) were UNMATCHABLE -- an escaped ')' is a
+    # literal non-word character and the space after it is too, so no boundary exists
+    # between them. The two most important tokens in this vocabulary never fired, for the
+    # whole of this checker's life. \b is applied per-alternative below.
     "L0-L2": re.compile(
-        r"\b(?:W\(3,3\)|symplectic polar|40 points|forty points|81 frames|opcode|"
-        r"instruction set|Sp\(4,3\)|51,?840|4,?199,?040|frame|carrier point|"
-        r"generalis\w+ quadrangle|generaliz\w+ quadrangle)\b", re.I),
+        r"(?:W\(3,3\)|\bsymplectic polar\b|\b40 points\b|\bforty points\b|"
+        r"\b81 frames\b|\bopcode\b|\binstruction set\b|Sp\(4,3\)|\b51,?840\b|"
+        r"\b4,?199,?040\b|\b81 frames\b|\bPauli frame\b|\bmachine frame\b|"
+        r"\bcarrier point\b|"
+        r"\bgeneralis\w+ quadrangle\b|\bgeneraliz\w+ quadrangle\b)", re.I),
     "L3": re.compile(
         r"\b(?:datapath|netlist|gate count|cells?\b|synthesi[sz]\w*|standard cell|"
         r"yosys|LUTs?|flip-?flops?|register file)\b", re.I),
