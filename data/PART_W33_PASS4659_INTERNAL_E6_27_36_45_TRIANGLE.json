@@ -1,0 +1,32 @@
+{
+  "pass": 4659,
+  "internal_carriers": {"lines27": 27, "double_sixes36": 36, "tritangents45": 45},
+  "27x36": {
+    "intersection_census": {"0": 432, "6": 540},
+    "R_shape": [27, 36],
+    "row_degree": 16,
+    "column_degree": 12,
+    "rank_Q": 21,
+    "meeting_graph": "SRG(27,10,1,5)"
+  },
+  "27x45": {
+    "tritangents_as_meeting_triangles": 45,
+    "tritangents_per_line": 5,
+    "lines_per_tritangent": 3
+  },
+  "45x36": {
+    "triangle_double_six_line_intersection_census": {"0": 540, "2": 1080},
+    "disjointness_row_degree": 12,
+    "disjointness_column_degree": 15,
+    "identity": "T^T R = 2 (J-D)"
+  },
+  "action_level_45_bridge": {
+    "internal_triangle_orbit": 45,
+    "stabilizer_order": 576,
+    "fixed_protected_supports": 1,
+    "PSp_equivariant_bijection_to_protected45": true,
+    "composition_with_Pass4616": "protected45 = center-quad/E6-tritangent45"
+  },
+  "theorem": "The selected 135_6-270_3 geometry internally reconstructs the complete 27-36-45 cubic-surface incidence triangle. The 45 meeting triangles are PSp-equivariantly identical to the protected center-quad/E6 tritangent carrier, and the 45-by-36 cross-incidence obeys T^T R = 2(J-D).",
+  "boundary": "Exact finite incidence/G-set theorem; no physical E6 field is inferred."
+}
