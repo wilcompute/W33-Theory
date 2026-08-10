@@ -1,0 +1,11 @@
+{
+  "pass":4752,
+  "equivariant_projection":{"flags":810,"selected_lines_or_residues":270,"fiber_size":3,"projected_base_edge_pairs":2160,"projected_relation_degree":16,"projected_relation":"distinct degree-16 orbital; disjoint from the 405 hot and 1620 cold router relations"},
+  "global_cochain_descent":{"deck_voltage_descends_after_flag_gauge":true,"flag_gauge_weight":350,"projected_beta_weight":1172,"projected_beta_zero_edges":988,"projected_beta_one_edges":1172},
+  "descended_double_cover":{"vertices":540,"edges":4320,"degree":16,"connected":true,"diameter":4,"PSp_image_order":25920,"PSp_vertex_orbit":540,"point_stabilizer_order":48},
+  "local_stabilizer":{"H_order":96,"three_flag_sheet_gauge":[0,1,1],"sheet_character_nontrivial":true,"sheet_character_kernel_order":48,"Pass4738_normalizer_kernel_order":48,"kernels_equal_as_subgroups":true,"fixed_residue_index":233},
+  "comparison":{"same_local_C2_character":true,"same_global_homogeneous_cover":true,"homogeneous_description":"PSp(4,3)/K -> PSp(4,3)/H with |K|=48, |H|=96","meaning":"the descended apartment deck character is exactly the Pass4738 normalizer quotient H/K"},
+  "theorem":"The apartment deck cocycle descends through the canonical 810->270 projection to a connected 540->270 double cover of a degree-16 orbital graph. Its descended PSp action is transitive with order-48 point stabilizer, and that stabilizer is literally the Pass4738 kernel K=C_PSp(h) inside the order-96 residue stabilizer H. Hence the descended apartment deck cover is the homogeneous normalizer cover PSp/K -> PSp/H.",
+  "execution":"independent reconstruction of the 1620-apartment cover, exact 6480-equation GF(2) descent solve, 540-cover construction, induced PSp action, transitivity check, local sheet character, outer order-four roots and literal subgroup equality ker(epsilon)=K",
+  "boundary":"Exact finite graph-cover/group-cohomology identification. The descended degree-16 orbital is distinct from the hot and cold router relations; no optical or gauge-field interpretation is inferred."
+}
