@@ -1,0 +1,53 @@
+{
+  "pass": 4652,
+  "shell_profiles": {"W33":[12,27],"selected135":[12,56,66],"selected270":[15,118,136],"Levi160":[6,18,54,81]},
+  "symbolic": {
+    "aggregate_polynomials": {
+      "W33": "27*eta**2 + 12*eta",
+      "selected135": "66*eta**3 + 56*eta**2 + 12*eta",
+      "selected270": "136*eta**3 + 118*eta**2 + 15*eta",
+      "Levi160": "81*eta**4 + 54*eta**3 + 18*eta**2 + 6*eta"
+    },
+    "normalized_delivery_order_for_0_eta_1": "W33 > selected135 > selected270 > Levi160",
+    "normalized_difference_factorizations": {
+      "W33_minus_selected135": "-eta*(eta - 1)*(429*eta + 190)/871",
+      "selected135_minus_selected270": "-eta*(eta - 1)*(235*eta + 609)/18023",
+      "selected270_minus_Levi160": "-eta*(eta - 1)*(7263*eta**2 + 4897*eta + 257)/14257"
+    },
+    "aggregate_selected270_order": "selected270 > W33, selected135, and Levi160 for every 0<eta<=1",
+    "selected135_vs_Levi160_aggregate_crossover_eta": 0.825322652163084,
+    "pareto_statement": "W33 is loss/latency-optimal per destination under identical hop physics; selected270 is aggregate-address-throughput and connectivity dominant. No single scalar winner exists without a workload objective."
+  },
+  "literature_component_benchmarks": {
+    "propagation": "1.77 dB/m anneal-free SiN waveguide loss (Bose et al., Light Sci Appl 2024); illustrative edge length 1 cm",
+    "switch_low_loss": "0.38 dB insertion loss, 14 us switching (Nature Communications 2024 scalable silicon photonic chip)",
+    "switch_fast": "1.04-1.06 dB insertion loss, 0.43/1.27 ns switching (Zhong et al., npj Nanophotonics 2024); model uses 1.05 dB and 1.27 ns",
+    "detector": "98% SNSPD system detection efficiency benchmark (Hu et al. 2020 / Optics Express)",
+    "warning": "These components were not demonstrated as one integrated stack; numbers are sensitivity anchors only."
+  },
+  "benchmark_evaluation": {
+    "low_loss_MZI_component_mix": {
+      "hop_loss_db": 0.3977,
+      "detector_efficiency": 0.98,
+      "graphs": {
+        "W33": {"vertices":40,"per_hop_power_transmission":0.9124939632640879,"aggregate_delivered_destination_equivalents":32.76272187299111,"mean_destination_success":0.8400697916151566,"mean_hops":1.6923076923076923,"worst_shortest_path_success":0.8159923283335346,"mean_switching_latency_s":2.369230769230769e-05},
+        "selected135": {"vertices":135,"per_hop_power_transmission":0.9124939632640879,"aggregate_delivered_destination_equivalents":105.56931225715803,"mean_destination_success":0.7878306884862539,"mean_hops":2.4029850746268657,"worst_shortest_path_success":0.7445880736741579,"mean_switching_latency_s":3.364179104477612e-05},
+        "selected270": {"vertices":270,"per_hop_power_transmission":0.9124939632640879,"aggregate_delivered_destination_equivalents":210.96473402302465,"mean_destination_success":0.784255516814218,"mean_hops":2.449814126394052,"worst_shortest_path_success":0.7445880736741579,"mean_switching_latency_s":3.429739776951673e-05},
+        "Levi160": {"vertices":160,"per_hop_power_transmission":0.9124939632640879,"aggregate_delivered_destination_equivalents":115.2950843024355,"mean_destination_success":0.7251263163675189,"mean_hops":3.3207547169811322,"worst_shortest_path_success":0.6794321223461051,"mean_switching_latency_s":4.649056603773585e-05}
+      }
+    },
+    "fast_EO_component_mix": {
+      "hop_loss_db": 1.0677,
+      "detector_efficiency": 0.98,
+      "graphs": {
+        "W33": {"vertices":40,"per_hop_power_transmission":0.782041860061574,"aggregate_delivered_destination_equivalents":25.379469674035576,"mean_destination_success":0.6507556326675789,"mean_hops":1.6923076923076923,"worst_shortest_path_success":0.599357681470795,"mean_switching_latency_s":2.149230769230769e-09},
+        "selected135": {"vertices":135,"per_hop_power_transmission":0.782041860061574,"aggregate_delivered_destination_equivalents":73.69654697662308,"mean_destination_success":0.5499742311688289,"mean_hops":2.4029850746268657,"worst_shortest_path_success":0.4687227960596129,"mean_switching_latency_s":3.0517910447761193e-09},
+        "selected270": {"vertices":270,"per_hop_power_transmission":0.782041860061574,"aggregate_delivered_destination_equivalents":145.96652202056634,"mean_destination_success":0.542626475912886,"mean_hops":2.449814126394052,"worst_shortest_path_success":0.4687227960596129,"mean_switching_latency_s":3.111263940520446e-09},
+        "Levi160": {"vertices":160,"per_hop_power_transmission":0.782041860061574,"aggregate_delivered_destination_equivalents":70.38930402083692,"mean_destination_success":0.4427000252882825,"mean_hops":3.3207547169811322,"worst_shortest_path_success":0.36656084728372146,"mean_switching_latency_s":4.217358490566038e-09}
+      }
+    }
+  },
+  "phase_error_boundary": "No universal per-hop phase-error number is assigned. A common multiplicative coherence factor can be absorbed into eta; architecture-specific coherent error needs a concrete circuit/layout measurement.",
+  "theorem": "The routing comparison is Pareto, not scalar: for any common lossy hop, W33 strictly maximizes mean destination transmission while selected270 strictly maximizes aggregate delivered-destination score among the four exact shell profiles.",
+  "boundary": "Graph-shell plus component-sensitivity model only; no measured Holonet hardware superiority is claimed."
+}
