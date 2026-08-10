@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Passes 4801–4808 — Radius 14, ternary Golay, Levi homology</title>
+<style>
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.55;max-width:980px;margin:0 auto;padding:32px 22px;background:#0b1020;color:#eef2ff}a{color:#8bd5ff}h1,h2{line-height:1.15}code,.eq{background:#151d34;border-radius:7px;padding:.15em .35em}.card{background:#111a30;border:1px solid #2b385a;border-radius:14px;padding:20px;margin:18px 0}.big{font-size:1.25rem;font-weight:700}.muted{color:#b6c0dc}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.stat{background:#151f39;border-radius:10px;padding:14px}.stat b{display:block;font-size:1.35rem}</style>
+</head>
+<body id="pass4801-4808-radius-golay-homology-page">
+<p><a href="index.html">← W33 Theory</a></p>
+<h1>Passes 4801–4808: exact H10 radius and the local-Golay/global-homology triangle code</h1>
+<p class="muted">Exact finite computations and structural theorems on the W33 residue/GQ(4,2) carrier.</p>
+<div class="grid">
+ <div class="stat"><b>ρ(H10)=14</b>exact covering radius</div>
+ <div class="stat"><b>[[270,182,4]]₃</b>triangle CSS code</div>
+ <div class="stat"><b>810</b>projective weight-4 logicals</div>
+ <div class="stat"><b>18 layers</b>optimal X/Z interaction schedule</div>
+ <div class="stat"><b>27 × G10</b>punctured ternary Golay fibers</div>
+ <div class="stat"><b>64</b>Levi-homology quotient dimension</div>
+</div>
+<div class="card"><h2>H10 deep holes close at radius 14</h2>
+<p>Pass 4794 left <span class="eq">14 ≤ ρ(H10) ≤ 15</span>.  A distance-15 hole would have a weight-15 leader.  PSp coordinate transitivity fixes one selected coordinate; its order-648 stabilizer reduces the six possible intersections with the 12-neighbor block to only 25 subset-orbit representatives. Exact cardinality propagation rejects all 25. Together with the frozen distance-14 witness, this gives <strong>ρ(H10)=14</strong>.</p></div>
+<div class="card"><h2>The minimum qutrit logical shell is entirely local</h2>
+<p>For the 45×270 point–triangle matrix B, the self-orthogonal ternary row code is <code>C=[270,44,18]₃</code>, and using H<sub>X</sub>=H<sub>Z</sub>=B gives <strong>[[270,182,4]]₃</strong>.  The complete projective weight-4 shell contains exactly <strong>810=135+270+405</strong> words. Every one is supported inside a single one of the 27 maximal K5 fibers.</p></div>
+<div class="card"><h2>Each K5 fiber is punctured ternary Golay</h2>
+<p>The ten triangle coordinates of a K5 carry <code>G10=[10,6,4]₃</code>. Exhausting all linear extension functionals finds exactly two projective directions that extend it to the perfect ternary Golay <code>G11=[11,6,5]₃</code>; adjoining both gives the self-dual extended ternary Golay <code>G12=[12,6,6]₃</code>.</p></div>
+<div class="card"><h2>Local Golay → global Levi homology</h2>
+<p>Let L be the direct sum of the 27 local G10 blocks. Then</p>
+<p class="big">C<sub>44</sub> ⊂ L<sub>162</sub> ⊂ C<sup>⊥</sup><sub>226</sub></p>
+<p>and the line-local point-sum map induces the canonical quotient</p>
+<p class="big">C<sup>⊥</sup>/L ≅ H<sub>1</sub>(Levi(GQ(4,2)); F<sub>3</sub>), &nbsp; dim = 64.</p>
+<p>The overall distance-4 logicals are therefore local-Golay. The first genuinely nonlocal quotient class has minimum triangle-lift weight <strong>6</strong>. The 27-line intersection graph contains exactly 360 induced K3,3 subgraphs, each giving a canonical projective weight-6 homology witness.</p></div>
+<div class="card"><h2>Decoder and scheduling</h2>
+<p>The ordered X/Z syndrome pair distinguishes all <strong>2160</strong> nontrivial single-qutrit Pauli errors. The combined X/Z Tanner graph admits an exact <strong>18-layer</strong> conflict-free interaction schedule, meeting the lower bound forced by check weight 18.</p></div>
+<div class="card"><h2>q=9 BLT shell and equivariant F4/E6 bridge</h2>
+<p>The odd-q minimum-word theorem transfers the complete q=9 BLT classification to the length-820 line-kernel minimum shell: Linear, K1 and Fi/Mondello. Separately, the dependency-cube/F4-E6 45-point crosswalk is PSp-equivariant. The two order-51840 extensions remain distinct: the central Sp double cover has a central kernel on projective objects, whereas the outer PGSp extension acts faithfully on the 45-point quotient.</p></div>
+<div class="card"><h2>Evidence boundary</h2>
+<p>These are finite geometry, coding and group-action statements with executable producers and frozen certificates. BLT class completeness and the standard ternary Golay parameters are prior art used explicitly as such. No fault-tolerance threshold, physical energy scale, or central/outer extension identification is claimed.</p></div>
+</body></html>
