@@ -1,0 +1,18 @@
+{
+  "F4_action": "The C2 quotient exchanges J and J^2; the orientation-preserving index-two subgroup is H648.",
+  "boundary": "Finite subgroup and local-orientation theorem only; S3 is not promoted to a physical family or chirality symmetry.",
+  "exact_sequence": "1 -> (3^{1+2}:Q8)_216 -> H1296 -> S3 -> 1, with H648 the preimage of A3",
+  "pass": 4671,
+  "quotients": {
+    "H1296_over_H216": "S3",
+    "H1296_over_H648": "C2",
+    "H648_over_H216": "C3=A3"
+  },
+  "theorem": "The local stabilizer shared by the F4-choice and triality-plane descriptions has an exact S3 quotient. Its 216-kernel is the triality-conjugate PSp intersection, its 648 orientation-preserving layer is the W33 point stabilizer, and the 1296 semilinear layer adds the orientation-reversing outer involution.",
+  "tower": [
+    {"group":"H216=3^{1+2}:Q8","order":216,"role":"pointwise stabilizer of the three nonzero anisotropic-plane vectors; derived subgroup of H648"},
+    {"group":"H648=3^{1+2}:SL(2,3)","order":648,"role":"PSp W33-point / triality-plane stabilizer; quotient H648/H216=C3 gives cyclic orientation"},
+    {"group":"H1296","order":1296,"role":"full PGSp W33-point / semilinear compatible-F4 stabilizer; outer coset reverses orientation"}
+  ],
+  "triality_plane_action": "The C3 quotient rotates the three nonzero plane vectors; adjoining the outer C2 gives all S3 permutations."
+}
