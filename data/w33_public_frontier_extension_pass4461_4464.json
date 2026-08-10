@@ -34,6 +34,7 @@
     {"kind":"id","token":"pass4725-4726-involution-residue-dual-code","source":"analysis/PASS4725_4726_involution_residue_dual_code_index_insert.html"},
     {"kind":"id","token":"pass4737-4744-residue-router-breakthrough","source":"analysis/PASS4737_4744_residue_router_breakthrough_index_insert.html"},
     {"kind":"id","token":"pass4745-4752-invariant-bundle-code-capacity","source":"analysis/PASS4745_4752_invariant_bundle_code_capacity_index_insert.html"},
+    {"kind":"id","token":"pass4769-4776-modular-moduli-cover-code-flow","source":"analysis/PASS4769_4776_modular_moduli_cover_code_flow_index_insert.html"},
     {"kind":"id","token":"pass4785-4792-support12-grid-cycle-golay","source":"analysis/PASS4785_4792_support12_grid_cycle_golay_index_insert.html"}
   ],
   "standalone_public_pages": [
@@ -67,6 +68,7 @@
     {"token":"pass4721-4726-support12-involution-cover-page","source":"docs/support12-involution-square-root-cover.html"},
     {"token":"pass4737-4744-residue-router-breakthrough-page","source":"docs/residue-router-involution-code.html"},
     {"token":"pass4745-4752-invariant-bundle-code-capacity-page","source":"docs/invariant-cohomology-router-spectrum-coding-capacity.html"},
+    {"token":"pass4769-4776-modular-moduli-cover-code-flow-page","source":"docs/modular-h1-s3-moduli-normalizer-code-flow.html"},
     {"token":"pass4785-4792-support12-grid-cycle-golay-page","source":"docs/support12-grid-cycle-golay.html"}
   ]
 }
