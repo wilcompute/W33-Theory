@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 """Pass 4746 — classify the GQ(4,2) S3 connection up to gauge/base automorphism.
 
-The Pass4716 connection is put in spanning-tree gauge.  Its monodromy is
-presented by two fundamental cycles carrying distinct transpositions.  Rather
+The Pass4716 connection is put in spanning-tree gauge. Its monodromy is
+presented by two fundamental cycles carrying distinct transpositions. Rather
 than re-enumerating 51,840 graph automorphisms with VF2, we use two exact facts:
 Pass4714 already computed |Aut(GQ(4,2))|=51,840, while the explicit PGSp(4,3)
 action constructed here has image 51,840 on the 45 packets and lifts to the
-135-sheet graph generator-by-generator.  Hence every base automorphism lifts.
+135-sheet graph generator-by-generator. Hence every base automorphism lifts.
 
 Uniqueness under the 270 triangle-holonomy constraints is then attacked as a
-falsifier.  An exhaustive one-cotree-edge deformation search already finds a
+falsifier. An exhaustive one-cotree-edge deformation search already finds a
 distinct connected S3 connection preserving transposition holonomy on every
-base triangle.  Thus that local rule does NOT characterize the selected cover.
+base triangle. Thus that local rule does NOT characterize the selected cover.
 """
 from __future__ import annotations
 import itertools,json
@@ -69,20 +69,16 @@ def main():
     assert all(z[(a,b)]==ID for a,b in tree)
     cot=sorted(e for e in G45.edges() if e not in tree)
     census=Counter(z[e] for e in cot);assert len(cot)==226 and census==X['cot']
-
     nz=[e for e in cot if z[e]!=ID];pair=None
     for a,b in itertools.combinations(nz,2):
         if z[a]!=z[b] and len(gen_group([z[a],z[b]]))==6:pair=(a,b);break
     assert pair is not None
     mgens=[z[pair[0]],z[pair[1]]]
-    presentation={'generator_edges':[list(pair[0]),list(pair[1])],
-      'generator_voltages':[list(g) for g in mgens],
-      'fundamental_cycle_lengths':[tree_path_len(parent,*e)+1 for e in pair],
-      'orders':[orderperm(g) for g in mgens],
+    presentation={'generator_edges':[list(pair[0]),list(pair[1])],'generator_voltages':[list(g) for g in mgens],
+      'fundamental_cycle_lengths':[tree_path_len(parent,*e)+1 for e in pair],'orders':[orderperm(g) for g in mgens],
       'product_order':orderperm(compose(mgens[0],mgens[1]))}
     assert presentation['orders']==[2,2] and presentation['product_order']==3
 
-    # Build the explicit PGSp action on the 45 packet fibers.
     pts,pidx,lines,lidx,_,Astar,_,apartments,_=build_geometry();Astar=np.asarray(Astar,dtype=np.uint8)
     all40=(1<<40)-1;cols=[]
     for c in range(40):
@@ -92,7 +88,7 @@ def main():
     B9=rank_basis_int([cols[i]^cols[k] for i in range(40) for k in range(i+1,40) if Astar[i,k]])
     V=set(span(B9));rep=lambda x:min(int(x),int(x)^all40)
     singular=sorted(x for x in {rep(v) for v in V} if x and ((rep(x).bit_count()//4)&1)==0)
-    assert len(singular)==135;sidx={x:i for i,x in enumerate(singular)}
+    assert len(singular)==135
     packet_sets=[tuple(singular[i] for i in T) for T in packets];pindex={frozenset(T):i for i,T in enumerate(packet_sets)}
     coord={(p,x):i for p,T in enumerate(packet_sets) for i,x in enumerate(T)}
     candidates=[build_line_perm(transvection_matrix(v),pts,pidx,lines,lidx) for v in pts];inner_gens=[];PSp={tuple(range(40))}
@@ -100,8 +96,7 @@ def main():
         trial=perm_group(inner_gens+[q])
         if len(trial)>len(PSp):inner_gens.append(q);PSp=trial
         if len(PSp)==25920:break
-    outer=build_line_perm(np.diag([1,2,1,2])%3,pts,pidx,lines,lidx)
-    PGSp=perm_group(inner_gens+[outer]);assert len(PGSp)==51840
+    outer=build_line_perm(np.diag([1,2,1,2])%3,pts,pidx,lines,lidx);PGSp=perm_group(inner_gens+[outer]);assert len(PGSp)==51840
     def actv(x,g):return rep(pmask(x,g))
     def packet_action(g):
         phi=[];local=[]
@@ -109,17 +104,12 @@ def main():
             U=tuple(actv(x,g) for x in T);q=pindex[frozenset(U)];phi.append(q)
             local.append(tuple(coord[(q,actv(x,g))] for x in T))
         return tuple(phi),local
-    # The explicit base image has the same order as PGSp.
     images={packet_action(g)[0] for g in PGSp};assert len(images)==51840
-    # Pass4714 independently computed the full graph automorphism order.
-    cert=json.loads((ROOT/'data/PART_W33_PASS4714_DUALSHELL_GQ42_DESIGN_REGEN.json').read_text())
-    assert cert['automorphism_group_order']==51840
-    # Generator-by-generator lift equation; closure then proves every PGSp/base automorphism lifts.
+    cert=json.loads((ROOT/'data/PART_W33_PASS4714_DUALSHELL_GQ42_DESIGN.json').read_text());assert cert['automorphism_group_order']==51840
     for g in inner_gens+[outer]:
         phi,h=packet_action(g)
         for p,q in G45.edges():
             assert tuple(h[q][sig[(p,q)][i]] for i in range(3)) == tuple(sig[(phi[p],phi[q])][h[p][i]] for i in range(3))
-    all_base_aut_lift=True
 
     def hol(T,over=None):
         a,b,c=T
@@ -135,7 +125,6 @@ def main():
     for k,T in enumerate(projected):
         for e in itertools.combinations(T,2):etri[tuple(sorted(e))].append(k)
     assert set(len(v) for v in etri.values())=={3}
-
     orig_tuple=tuple(z[e] for e in cot)
     def canonical(vals):return min(tuple(conj(a,x) for x in vals) for a in S3)
     orig_can=canonical(orig_tuple);one_valid=[]
@@ -149,19 +138,14 @@ def main():
                 if len(gen_group(vals))==6 and canonical(tuple(vals))!=orig_can:
                     one_valid.append((i,e,w,Counter(orderperm(hol(T,over)) for T in projected)));break
         if one_valid:break
-    assert one_valid
-    # Independent execution fixes this first canonical witness for the current tree/gauge.
-    assert one_valid[0][1]==(1,12)
-
+    assert one_valid and one_valid[0][1]==(1,12) and one_valid[0][3]==Counter({2:270})
     out={'pass':4746,'base':{'vertices':45,'edges':270,'automorphism_group_order':51840,'explicit_PGSp_image_order':len(images)},
-      'connection':{'cotree_edges':226,'voltage_census':{str(k):v for k,v in census.items()},'monodromy_order':6,
-                    'minimal_two_cycle_S3_presentation':presentation},
-      'base_automorphisms':{'all_lift':all_base_aut_lift,'reason':'explicit PGSp image on packets has order 51840, equal to the independently computed full base automorphism order; inner generators plus outer each satisfy the fiber connection lift equation'},
-      'triangle_constraint_falsifier':{'all_270_original_triangle_holonomies_transpositions':True,
-        'single_cotree_edge_distinct_deformation_found':True,
+      'connection':{'cotree_edges':226,'voltage_census':{str(k):v for k,v in census.items()},'monodromy_order':6,'minimal_two_cycle_S3_presentation':presentation},
+      'base_automorphisms':{'all_lift':True,'reason':'explicit PGSp image has order 51840, equal to the independently frozen full base automorphism order; inner generators plus outer satisfy the fiber lift equation'},
+      'triangle_constraint_falsifier':{'all_270_original_triangle_holonomies_transpositions':True,'single_cotree_edge_distinct_deformation_found':True,
         'first_single_witness':{'cotree_index':one_valid[0][0],'edge':list(one_valid[0][1]),'new_voltage':list(one_valid[0][2]),'triangle_order_census_after_deformation':dict(one_valid[0][3])},
-        'conclusion':'the all-triangles-transposition condition is not sufficient to characterize the selected S3 cover, even locally at Hamming radius one in cotree-voltage space'},
-      'theorem':'The selected connection has full base symmetry: every automorphism of GQ(4,2) lifts, and its monodromy has the two-generator S3 presentation <a,b | a^2=b^2=(ab)^3=1>. But the 270 transposition-holonomy triangle constraints do not determine the connection: a one-cotree-edge deformation already yields a distinct connected S3 cover satisfying them all.',
+        'conclusion':'the all-triangles-transposition condition is not sufficient to characterize the selected S3 cover, even at Hamming radius one in cotree-voltage space'},
+      'theorem':'Every automorphism of GQ(4,2) lifts to the selected cover, and its monodromy has the presentation <a,b | a^2=b^2=(ab)^3=1>. But the 270 transposition-holonomy triangle constraints do not determine the connection: a one-cotree-edge deformation already yields a distinct connected S3 cover satisfying them all.',
       'boundary':'Exact finite connection/gauge theorem plus explicit nonuniqueness witness. No global classification of all S3 connections is claimed.'}
     OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps(out,indent=2,sort_keys=True));return 0
 if __name__=='__main__':raise SystemExit(main())
