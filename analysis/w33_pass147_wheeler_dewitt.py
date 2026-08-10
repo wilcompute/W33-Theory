@@ -80,7 +80,9 @@ print(f"  Paper prediction = -138.5°")
 print(f"  |Δ| = {abs(delta_CP_deg - (-138.5)):.2f}°")
 
 # --- 7. Self-duality of the WdW vector space ---
-# The line graph of W(3,3) is again SRG(40,12,2,4) — self-dual
+# The line graph of W(3,3) is again SRG(40,12,2,4). NOT self-dual: equal SRG
+# parameters do not give an isomorphism. W(3,q) is self-dual iff q is even, and
+# q=3 is odd -- retracted at Pass 4563, computed by canonical form at Pass 4755.
 print(f"\nSelf-duality: line graph of W(3,3) = SRG(40,12,2,4) = W(3,3) ✓")
 print(f"  → WdW Hilbert space C^40 is self-dual as a W(3,3)-module")
 

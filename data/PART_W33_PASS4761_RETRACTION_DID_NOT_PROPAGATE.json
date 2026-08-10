@@ -1,0 +1,169 @@
+{
+  "boundary": "assertion-vs-discussion is decided by whether the parity rule, the retraction, or an even-q qualifier appears within four lines; a file that qualifies its claim further away is counted as an unqualified assertion. No file is edited by this pass. The reading of the 26 vacuity candidates is reported in prose above and is a judgement, not a computation",
+  "counts": {
+    "qualified": 11,
+    "unqualified": 20
+  },
+  "load_bearing_example": "w33_interconnect_network.py derives perfect load balancing from vertex-transitivity AND self-duality; transitivity carries the conclusion, self-duality is false and inert",
+  "self_duality_assertions": [
+    {
+      "file": "analysis/2026-07-29_pass1298_1302_session_summary.md",
+      "line": 41,
+      "text": "- W(3,3) non-self-duality explained by Sp(4,3) lacking full D\u2084 triality"
+    },
+    {
+      "file": "analysis/bt758_q43_plucker_model_verifier.py",
+      "line": 11,
+      "text": "For q=3, Q(4,3) and W(3,3) are dual but not point-line self-dual.  Therefore"
+    },
+    {
+      "file": "analysis/bt812_five_vacua.py",
+      "line": 34,
+      "text": "W33 is also SRG(40,12,2,4) by self-duality)."
+    },
+    {
+      "file": "analysis/PASS4579_4586_RESERVATION.md",
+      "line": 26,
+      "text": "## 4586 \u2014 outside box: a rank-15 45x40 transport crosses W33 point/line non-self-duality"
+    },
+    {
+      "file": "analysis/PASS4714_THREE_TRACKS_FOUND_THE_SAME_ASYMMETRY.md",
+      "line": 29,
+      "text": "`W(3,3)` is *not* self-dual."
+    },
+    {
+      "file": "analysis/w33_BREAKTHROUGH_127_Trh_reheating_closure.py",
+      "line": 41,
+      "text": "- g_neg = 15 = anti-self-dual eigenmult of W(3,3) adjacency"
+    },
+    {
+      "file": "analysis/w33_BREAKTHROUGH_433_higher_substrates_W_sq.py",
+      "line": 113,
+      "text": "W(3, 3) is the UNIQUE SELF-DUAL CONSCIOUSNESS-SUPPORTING GQ."
+    },
+    {
+      "file": "analysis/w33_BREAKTHROUGH_64_coxeter_spine_H4_shadow.py",
+      "line": 116,
+      "text": "W(3,3)'s self-dual 40-line graph has 1740 simple 4-cycles, splitting"
+    },
+    {
+      "file": "analysis/w33_BREAKTHROUGH_65_codes_spin_twistor_cosmo_quarks.py",
+      "line": 251,
+      "text": "W(3,3) anti-self-dual spectrum IS the maximally supersymmetric"
+    },
+    {
+      "file": "analysis/w33_heterotic_narain_bridge.py",
+      "line": 2,
+      "text": "W(3,3) Heterotic-Narain Bridge: Self-Dual Lattice, Galois Shadow & Fundamental Theorem"
+    },
+    {
+      "file": "analysis/w33_kochen_specker_protocol.py",
+      "line": 127,
+      "text": "\"two-qutrit Pauli geometry = W(3,3); GQ(3,3) self-dual lines; \""
+    },
+    {
+      "file": "analysis/w33_pass159_sentinel_dark_modes.py",
+      "line": 14,
+      "text": "Gram N N^T is the concurrence graph, again SRG(40,12,2,4) (self-dual)."
+    },
+    {
+      "file": "analysis/w33_pass160_trade_tower_gq42.py",
+      "line": 19,
+      "text": "3. THE LINE RELATIONS.  Unlike self-dual W(3,3), the 27 lines of GQ(4,2)"
+    },
+    {
+      "file": "analysis/w33_pass173_incidence_transceiver_route_dark_lattice.py",
+      "line": 24,
+      "text": "that W(3,3) is self-dual: an incidence duality would permutation-identify"
+    },
+    {
+      "file": "analysis/w33_pass1816_1820_the_sign_is_local_and_there_are_four_bits.md",
+      "line": 58,
+      "text": "Note the asymmetry: **points are free, lines are not.** `W(3,3)` is self-dual, so"
+    },
+    {
+      "file": "analysis/w33_pass4597_sentinel_minimum_shell_self_reconstruction.py",
+      "line": 36,
+      "text": "'theorem':'The complete minimum shell of the W33 sentinel code intrinsically reconstructs both the 45-po"
+    },
+    {
+      "file": "analysis/w33_pass856_h27_middle_layer_identification.py",
+      "line": 70,
+      "text": "'theorem':'The four-dimensional middle Loewy layer of the ten-dimensional W33 coalescence module, upon r"
+    },
+    {
+      "file": "analysis/w33_regular_4polytope_substrate_package.py",
+      "line": 23,
+      "text": "Self-dual (24-cell): 240 = |E|       (W(3,3) edge count = E_8 roots)"
+    },
+    {
+      "file": "analysis/w33_substrate_four_faces.py",
+      "line": 27,
+      "text": "(i)   Combinatorics : SRG(40,12,2,4) = GQ(3,3) generalized quadrangle (self-dual)."
+    },
+    {
+      "file": "holonet_practical_implications.tex",
+      "line": 353,
+      "text": "corrects the old ``self-dual'' shorthand.  At $q=3$, $W(3,3)$ and its dual $Q(4,3)$ are cospectral and"
+    }
+  ],
+  "self_duality_discussed_correctly": [
+    {
+      "file": "analysis/PASS4561_CROSS_TRACK_Q53_DUALITY.md",
+      "line": 42,
+      "text": "quadrangle has two inequivalent carriers. `W(3,3)` is self-dual and shows neither, which is"
+    },
+    {
+      "file": "analysis/w33_generalized_quadrangle_ladder.py",
+      "line": 17,
+      "text": "- GQ(3,3) = W(3,3): order (3,3), 40 points and 40 lines. NOT self-dual --"
+    },
+    {
+      "file": "analysis/w33_pass1117_1119_aliases_orbits_trees.md",
+      "line": 50,
+      "text": "W(3,3) is **not self-dual**, so \"nonedge\" of the *point* graph and of the *line*"
+    },
+    {
+      "file": "analysis/w33_pass147_wheeler_dewitt.py",
+      "line": 83,
+      "text": "# The line graph of W(3,3) is again SRG(40,12,2,4). NOT self-dual: equal SRG"
+    },
+    {
+      "file": "analysis/w33_pass153_grassmann_codes.py",
+      "line": 32,
+      "text": "f\" -- same parameters, NOT isomorphic: W(3,3) is not self-dual\")"
+    },
+    {
+      "file": "analysis/w33_pass4560_the_dual_pair_unifies_two_asymmetries.py",
+      "line": 109,
+      "text": "carrier and its line carrier are genuinely different objects. W(3,3) is self-dual and"
+    },
+    {
+      "file": "analysis/w33_pass4563_w33_is_not_self_dual.py",
+      "line": 2,
+      "text": "\"\"\"Pass 4563 -- W(3,3) is NOT self-dual, and that gives the discriminating experiment."
+    },
+    {
+      "file": "analysis/w33_pass4586_fortyfive_by_forty_point_duality_bridge.py",
+      "line": 19,
+      "text": "LINE-side graph A_*; W(3,3) is not self-dual at q=3."
+    },
+    {
+      "file": "analysis/w33_pass4693_4695_my_own_test_was_vacuous.py",
+      "line": 16,
+      "text": "restricted to s = t.\"  Wrong: GQ(3,3) has s = t and W(3,3) is NOT self-dual (W(3,q)"
+    },
+    {
+      "file": "analysis/w33_pass4761_reading_the_candidates_found_a_retraction_that_did_not_take.py",
+      "line": 14,
+      "text": "Three files infer SELF-DUALITY FROM EQUAL PARAMETERS -- \"the line graph of W(3,3) is again"
+    },
+    {
+      "file": "analysis/w33_q3_triple_selection.py",
+      "line": 11,
+      "text": "self-dual generalized quadrangle GQ(q,q) = W(3,3) at the master point is q=3."
+    }
+  ],
+  "vacuity_candidates_read": 26,
+  "vacuity_verdict": "THREE instances found, in the form 'equal SRG parameters therefore self-dual' -- the Pass 4560 inference, not the Pass 4685 vacuous comparison. Corrected in w33_pass147_wheeler_dewitt.py, w33_pass153_grassmann_codes.py and w33_generalized_quadrangle_ladder.py. One further redundancy: w33_axes_e8_rootline_spectral_bridge.py reports 'the same parameters and spectrum' as two facts when the spectrum follows from the parameters; its conclusion is correctly scoped to a spectral bridge and not an isomorphism"
+}

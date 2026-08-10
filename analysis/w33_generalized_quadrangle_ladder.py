@@ -14,7 +14,8 @@ Three classical generalized quadrangles meet the substrate:
     SRG(27,10,1,5), built and verified here). Aut(GQ(2,4)) = W(E6), order 51840 =
     |Sp(4,3)|; GQ(2,4) underlies the D=5 E6-symmetric black-hole/qubit entropy
     formula.
-  - GQ(3,3) = W(3,3): order (3,3), 40 points and 40 lines (self-dual), the
+  - GQ(3,3) = W(3,3): order (3,3), 40 points and 40 lines. NOT self-dual --
+    equal counts are not a duality; W(3,q) is self-dual iff q is even. The
     substrate. The collinearity graph is SRG(40,12,2,4) (built/verified here);
     Aut = Sp(4,3) = 51840.
   - GQ(4,2): order (4,2), 45 points and 27 lines, the dual of GQ(2,4) (the
@@ -157,7 +158,8 @@ def main():
     print(f"\n[GQ(3,3) = W(3,3) substrate]  collinearity graph = SRG{p40}")
     assert n40 == 40 and p40 == (40, 12, 2, 4)
     assert gq_points(3, 3) == 40
-    print(f"  points = lines = 40 (self-dual); Aut = Sp(4,3) = 51840")
+    print(f"  points = lines = 40 (NOT self-dual: q=3 is odd); "
+          f"Aut = Sp(4,3) = 51840")
     out["GQ_3_3"] = {"points": 40, "srg": list(p40), "aut": "Sp(4,3)=51840"}
 
     # the ladder 27 - 40 - 45 and the E6 matter piece

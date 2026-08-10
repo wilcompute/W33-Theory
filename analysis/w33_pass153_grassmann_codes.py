@@ -26,7 +26,10 @@ print(f"   Clarification:")
 print(f"   - Points of W(3,3) = totally isotropic 1-subspaces of F_3^4")
 print(f"   - Lines of W(3,3) = totally isotropic 2-subspaces of F_3^4")
 print(f"   - The 40 LINES of W(3,3) = points of LG(2,4,3) = SpGr(2,2,3)")
-print(f"   - The line graph of W(3,3) is again SRG(40,12,2,4) (self-dual!)")
+# NOT self-dual: equal SRG parameters are not an isomorphism. W(3,q) is self-dual
+# iff q is even (Pass 4563 retraction, Pass 4755 canonical form). q=3 is odd.
+print(f"   - The line graph of W(3,3) is again SRG(40,12,2,4)"
+      f" -- same parameters, NOT isomorphic: W(3,3) is not self-dual")
 print(f"   So BOTH the point graph AND line graph of W(3,3) are SRG(40,12,2,4)")
 print(f"   The Symplectic Grassmann code uses the 40 Lagrangian planes as codewords")
 
