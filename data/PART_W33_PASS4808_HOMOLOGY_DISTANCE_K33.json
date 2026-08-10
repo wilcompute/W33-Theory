@@ -1,0 +1,34 @@
+{
+  "boundary": "The 360 K3,3 witnesses are a certified canonical family, not claimed to exhaust all projective weight-6 quotient classes. The distance is the minimum weight of a triangle-coordinate lift modulo the local Golay sum L.",
+  "induced_K33_count": 360,
+  "local_minimum_cost_distribution": {
+    "0": 1,
+    "1": 20,
+    "2": 60
+  },
+  "local_syndrome_state_count": 81,
+  "milp_certificate": {
+    "cost_bound": 5,
+    "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+    "status": 2,
+    "symmetry_break": "line 0 carries normalized cost-1 state (0,0,1,1,1)"
+  },
+  "no_nonzero_quotient_weight_le5": true,
+  "pass": 4808,
+  "projective_K33_witnesses": 360,
+  "quotient": "C^perp / (direct_sum_27 G10) ~= H_1(Levi(GQ(4,2));F3)",
+  "quotient_minimum_lift_weight": 6,
+  "representative_K33": {
+    "left": [1,15,19],
+    "right": [14,18,26],
+    "signed_line_triangles": [
+      [1,2,[7,8,9]],
+      [14,1,[7,43,44]],
+      [15,2,[31,41,43]],
+      [18,1,[3,8,31]],
+      [19,2,[3,33,44]],
+      [26,1,[9,33,41]]
+    ]
+  },
+  "theorem": "The first nonlocal/homological logical sector of the [[270,182,4]]_3 triangle CSS code appears at minimum triangle-lift weight 6. The overall distance-4 logicals are entirely local punctured-Golay operators. Every induced K3,3 in the 27-line intersection graph supplies a canonical projective weight-6 homology witness; there are 360 such K3,3 subgraphs."
+}
