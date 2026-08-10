@@ -1,0 +1,14 @@
+{
+  "H10_parameters": "[40,10,12]",
+  "K4_values_by_abs_t": {"0": 190, "1": 152, "2": 46, "3": -104, "4": -258, "5": -360},
+  "boundary": "This pass does not decide whether an odd distance-15 coset exists; rho=14 is not claimed.",
+  "even_min16_case": {"K4_MacWilliams_relation": "a=1760-8s", "OA_solution": "A16=A24=a; A18=A22=1280-4a; A20=6a-1536", "feasible": false, "nonnegative_a_interval": [256, 320], "syndrome_ceiling_forces_a_at_least": 328},
+  "new_covering_radius_bracket": [14, 15],
+  "odd_min15_case": {"K4_MacWilliams_relation": "a=812-4s", "OA_solution": "A15=A25=a; A17=A23=576-3a; A19=A21=2a-64", "feasible_after_these_moments": true, "nonnegative_a_interval": [32, 192], "syndrome_ceiling_forces_a_at_least": 96},
+  "pass": 4794,
+  "previous_bracket": [14, 16],
+  "radius14_witness": 253626779097,
+  "syndrome_weight_ceiling_from_pass4781": 179,
+  "theorem": "Every even H10 coset has minimum at most 14. Together with the explicit distance-14 witness and the previous general upper bound, 14 <= rho(H10) <= 15. A distance-15 obstruction, if it exists, must be an odd coset.",
+  "weight4_dual_checks": 270
+}
