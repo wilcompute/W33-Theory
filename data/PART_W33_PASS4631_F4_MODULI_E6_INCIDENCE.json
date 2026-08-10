@@ -1,0 +1,29 @@
+{
+  "pass": 4631,
+  "moduli_points": {
+    "objects": "compatible unoriented F4 structures {J,J^2} on U6",
+    "count": 40,
+    "G_set": "point-side W33 by Pass4628"
+  },
+  "E6_rows": {
+    "objects": "center-quad/E6-tritangent 45 carrier",
+    "count": 45,
+    "F4_structures_per_row": 8,
+    "rows_per_F4_structure": 9
+  },
+  "pair_cooccurrence": {
+    "three_common_E6_rows": 240,
+    "one_common_E6_row": 540,
+    "rule": "co-occurrence 3 reconstructs point-side W33 adjacency"
+  },
+  "minimal_even_tetrads": {
+    "definition": "four F4 structures whose incidence vector lies in ker_F2(T)",
+    "minimum_weight": 4,
+    "count": 40,
+    "identification": "exactly the W33 lines",
+    "reading": "every E6 row meets each tetrad in even cardinality"
+  },
+  "Golay_boundary": "A chosen F4-structure feeds the Pass4592 hexacode and the frozen Pass4615 Golay/MOG completion. The PGSp action on the 40 choice structures is not transported to an M24 action on the frozen Golay coordinates.",
+  "theorem": "The 45x40 sentinel/center-quad matrix is an exact incidence geometry between 45 E6 carrier objects and the 40 compatible F4 structures on U6. Its 40 minimal binary-even tetrads are precisely the W33 lines, so both W33 point/line geometry is recovered inside the moduli of hexacode-compatible choices.",
+  "boundary": "Finite moduli/incidence statement. It does not produce 40 PGSp-related MOG sextets inside one fixed Golay coordinate model."
+}
