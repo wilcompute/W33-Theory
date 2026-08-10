@@ -51,6 +51,8 @@ def test_pass4589_selected_graph_certificate():
     assert g["spectrum"] == {"-6": 15, "-3": 24, "0": 60, "3": 20, "6": 15, "12": 1}
     l = d["selected_line_intersection_graph"]
     assert (l["vertices"], l["degree"], l["edges"]) == (270, 15, 2025)
+    assert l["spectrum"] == {"-3": 150, "0": 24, "3": 60, "6": 20, "9": 15, "15": 1}
+    assert sum(l["spectrum"].values()) == 270
 
 
 def test_pass4591_rank120_module_no_go():
