@@ -1,0 +1,84 @@
+{
+  "boundary": "independence numbers are exact (igraph exhaustive). q = 5 and above are not computed -- alpha on a 156-vertex SRG is expensive and the classical result is cited for the general pattern. The polarity coset claim is ARITHMETIC ONLY: 720 = 36 x 20 is exact, but no stabiliser is computed here, so the partition into Sz(2)-cosets is inferred from the count and not exhibited",
+  "gap_formula": {
+    "alpha_odd_q": "q^2 - q + 1 (cited; matched at q = 3 only)",
+    "deficit": "q",
+    "hoffman": "q^2 + 1",
+    "prediction_q5": {
+      "alpha": 21,
+      "computed": false,
+      "gap": 5,
+      "hoffman": 26
+    }
+  },
+  "hoffman_gap_at_q3": 3,
+  "polarity_coset": {
+    "dualities": 720,
+    "missing_computation": "stabilise one ovoid, check orbit size 36",
+    "polarities": 36,
+    "product_exact": true,
+    "sz2_order": 20
+  },
+  "rows": [
+    {
+      "agrees": true,
+      "alpha": 5,
+      "even": true,
+      "gap": 0,
+      "hoffman": 5,
+      "n": 15,
+      "ovoid_exists": true,
+      "q": 2,
+      "q2_plus_1": 5,
+      "seconds": 0.0,
+      "srg": [
+        15,
+        6,
+        1,
+        3
+      ]
+    },
+    {
+      "agrees": true,
+      "alpha": 7,
+      "even": false,
+      "gap": 3,
+      "hoffman": 10,
+      "n": 40,
+      "ovoid_exists": false,
+      "q": 3,
+      "q2_plus_1": 10,
+      "seconds": 0.0,
+      "srg": [
+        40,
+        12,
+        2,
+        4
+      ]
+    },
+    {
+      "agrees": true,
+      "alpha": 17,
+      "even": true,
+      "gap": 0,
+      "hoffman": 17,
+      "n": 85,
+      "ovoid_exists": true,
+      "q": 4,
+      "q2_plus_1": 17,
+      "seconds": 1.1,
+      "srg": [
+        85,
+        20,
+        3,
+        5
+      ]
+    }
+  ],
+  "third_split_matches": true,
+  "three_questions": {
+    "duality_exists": "q even",
+    "ovoid_exists": "q even",
+    "polarity_exists": "q an odd power of 2"
+  }
+}
