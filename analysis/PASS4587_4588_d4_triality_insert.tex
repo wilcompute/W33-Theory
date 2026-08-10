@@ -1,11 +1,11 @@
-% Passes 4587--4588: W33-derived finite D4 triality and apartment flag cover.
+% Passes 4587--4589: W33-derived finite D4 triality, apartment flag cover, and selected singular graph.
 \section*{Current protected frontier: finite $D_4$ triality from the W33 lift}
 \addcontentsline{toc}{section}{Current protected frontier: finite $D_4$ triality from the W33 lift}
 
 The protected binary quotient reconstructed from the W33 line/apartment system has
 $256$ classes and a plus-type quadratic form.  Pass~4579 had already shown that its
 $255$ nonzero classes split as $135$ singular apartment classes and $120$
-anisotropic opposite-edge classes.  Passes~4587--4588 now reconstruct the full
+anisotropic opposite-edge classes.  Passes~4587--4589 now reconstruct the full
 outer-node triality geometry \emph{inside that same W33-derived quotient}, without
 importing an $E_8$ coordinate model.
 
@@ -65,6 +65,34 @@ regular incidence structure
 \]
 and the apartments are a two-sheet cover of its $810$ point--line flags.
 
+\paragraph{The apartment-selected singular graph.}
+Let $N\in\{0,1\}^{135\times270}$ be the incidence matrix of the $135$ singular
+points against those $270$ selected lines.  Then every row has weight $6$ and
+every column has weight $3$.  Writing
+\[
+  NN^{\mathsf T}=6I+A_{\rm sel},
+\]
+the selected point graph is $12$-regular on $135$ vertices and has exact spectrum
+\[
+  \boxed{12^1\oplus6^{15}\oplus3^{20}\oplus0^{60}\oplus(-3)^{24}\oplus(-6)^{15}}.
+\]
+Its annihilator is
+\[
+  (x-12)(x-6)(x-3)x(x+3)(x+6).
+\]
+Every adjacent pair has exactly one common neighbor.  Hence every edge lies in a
+unique triangle and the graph has exactly $810/3=270$ triangles.  These are
+precisely the $270$ selected totally singular lines, so the apartment image can be
+recovered from the graph alone.  Moreover,
+\[
+  \operatorname{rank}_{\mathbb Q}N=120,
+  \qquad
+  \operatorname{rank}_{\mathbb F_2}N=119.
+\]
+The equality $\operatorname{rank}_{\mathbb Q}N=120$ is recorded only as an
+incidence-rank theorem; it is \emph{not} used to identify this module with the
+separate $120$ anisotropic quotient classes.
+
 \paragraph{A useful obstruction, not an identification.}
 A selected singular line lies in six maximal singular $4$-spaces and has six W33
 apartment lifts.  The equality $6=6$ does \emph{not} define a canonical bridge.
@@ -96,5 +124,6 @@ a cardinality argument.}}
 \end{center}
 
 \noindent\textbf{Executable witnesses:}
-\texttt{analysis/w33\_pass4587\_w33\_derived\_d4\_triality.py} and
-\texttt{analysis/w33\_pass4588\_apartment\_triality\_obstruction\_spread\_bridge.py}.
+\texttt{analysis/w33\_pass4587\_w33\_derived\_d4\_triality.py},
+\texttt{analysis/w33\_pass4588\_apartment\_triality\_obstruction\_spread\_bridge.py}, and
+\texttt{analysis/w33\_pass4589\_apartment\_selected\_singular\_graph.py}.
