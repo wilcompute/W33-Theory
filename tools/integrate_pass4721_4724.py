@@ -1,39 +1,57 @@
 #!/usr/bin/env python3
-"""Idempotently materialize the Passes 4721--4724 theorem card into docs/index.html."""
+"""Idempotently materialize the Passes 4721--4726 theorem cards into docs/index.html."""
 from __future__ import annotations
 
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 INDEX = ROOT / "docs" / "index.html"
-SOURCE = ROOT / "analysis" / "PASS4721_4724_support12_involution_square_root_cover_index_insert.html"
-TOKEN = 'id="pass4721-4724-support12-involution-cover"'
+CARDS = [
+    (
+        ROOT / "analysis" / "PASS4721_4724_support12_involution_square_root_cover_index_insert.html",
+        'id="pass4721-4724-support12-involution-cover"',
+    ),
+    (
+        ROOT / "analysis" / "PASS4725_4726_involution_residue_dual_code_index_insert.html",
+        'id="pass4725-4726-involution-residue-dual-code"',
+    ),
+]
 
 
-def integrate() -> str:
-    text = INDEX.read_text(encoding="utf-8")
-    count = text.count(TOKEN)
+def insert_one(text: str, source: Path, token: str) -> tuple[str, str]:
+    count = text.count(token)
     if count == 1:
-        return "already_materialized"
+        return text, "already_materialized"
     if count > 1:
-        raise RuntimeError("duplicate Pass 4721--4724 theorem cards in docs/index.html")
-    html = SOURCE.read_text(encoding="utf-8").rstrip() + "\n"
+        raise RuntimeError(f"duplicate theorem card in docs/index.html: {token}")
+    html = source.read_text(encoding="utf-8").rstrip() + "\n"
     lower = text.lower()
     pos = lower.rfind("</main>")
     if pos < 0:
         pos = lower.rfind("</body>")
     if pos < 0:
         raise RuntimeError("docs/index.html has no </main> or </body> insertion point")
-    INDEX.write_text(text[:pos] + html + text[pos:], encoding="utf-8")
+    return text[:pos] + html + text[pos:], "inserted"
+
+
+def integrate() -> dict[str, str]:
+    text = INDEX.read_text(encoding="utf-8")
+    modes: dict[str, str] = {}
+    for source, token in CARDS:
+        text, mode = insert_one(text, source, token)
+        modes[token] = mode
+    INDEX.write_text(text, encoding="utf-8")
     check = INDEX.read_text(encoding="utf-8")
-    if check.count(TOKEN) != 1:
-        raise RuntimeError("Pass 4721--4724 theorem card failed uniqueness check")
-    return "inserted"
+    for _source, token in CARDS:
+        if check.count(token) != 1:
+            raise RuntimeError(f"theorem card failed uniqueness check: {token}")
+    return modes
 
 
 def main() -> int:
-    mode = integrate()
-    print(f"PASS pass4721-4724 index materializer: {mode}")
+    modes = integrate()
+    for token, mode in modes.items():
+        print(f"PASS {token}: {mode}")
     return 0
 
 
