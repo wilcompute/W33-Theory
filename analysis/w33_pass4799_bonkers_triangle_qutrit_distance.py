@@ -29,14 +29,14 @@ def main()->int:
     L=[tuple(i for i,Q in enumerate(ql) if p in Q) for p in qp];assert len(set(L))==27 and {len(x) for x in L}=={5}
     inc={v:tuple(k for k,C in enumerate(L) if v in C) for v in range(45)};assert {len(x) for x in inc.values()}=={3}
 
-    # Exhaust local five-point coefficient patterns modulo permutations.
+    # Exhaust local five-point coefficient patterns.
     local=Counter()
     for a in itertools.product(range(3),repeat=5):
         w=sum(1 for T in itertools.combinations(range(5),3) if sum(a[i] for i in T)%3)
         local[w]+=1
     assert set(local)=={0,6,9}
     assert local[0]==3  # the three constant patterns
-    assert min(w for w in local if w)>0==6
+    assert min(w for w in local if w>0)==6
 
     def graph_without_lines(remove):
         G=nx.Graph();G.add_nodes_from(range(45))
