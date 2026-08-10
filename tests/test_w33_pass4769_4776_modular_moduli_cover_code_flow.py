@@ -53,7 +53,8 @@ def test_4774_twisted_f3_deformation_cohomology():
     assert (t['rank_twisted_coboundary'],t['H0_dimension'],t['H1_dimension'])==(45,0,225)
     m=x['moduli_interpretation']
     assert int(m.get('binary_sign_affine_dimension',m.get('sign_affine_dimension')))==64
-    assert x['comparison_with_characteristic_two_deck']['nonzero_additive_linear_map_F2_to_F3_exists'] is False
+    c=x.get('comparison_with_characteristic_two_deck',x.get('comparison_with_deck_line'))
+    assert c['nonzero_additive_linear_map_F2_to_F3_exists'] is False
 
 def test_4775_degree16_m2_block_but_sheet_transverse():
     x=J('PART_W33_PASS4775_RESIDUE_M2_HECKE_TRANSFER.json')
