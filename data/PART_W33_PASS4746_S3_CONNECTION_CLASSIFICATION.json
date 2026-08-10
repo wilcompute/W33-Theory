@@ -1,0 +1,30 @@
+{
+  "pass": 4746,
+  "base": {"vertices":45,"edges":270,"automorphism_group_order":51840,"explicit_PGSp_image_order":51840},
+  "connection": {
+    "cotree_edges":226,
+    "voltage_census": {"identity":64,"(01)":54,"(02)":54,"(12)":54},
+    "monodromy_order":6,
+    "minimal_two_cycle_S3_presentation": {
+      "generator_edges":[[1,12],[1,20]],
+      "generator_voltages":[[2,1,0],[1,0,2]],
+      "fundamental_cycle_lengths":[3,3],
+      "orders":[2,2],
+      "product_order":3,
+      "presentation":"<a,b | a^2=b^2=(ab)^3=1>"
+    }
+  },
+  "base_automorphisms": {
+    "all_lift":true,
+    "reason":"the explicit PGSp action on the 45 packets has order 51840, equal to the independently frozen full automorphism order of GQ(4,2); the PSp generators and PGSp outer generator satisfy the connection lift equation"
+  },
+  "triangle_constraint_falsifier": {
+    "all_270_original_triangle_holonomies_transpositions":true,
+    "single_cotree_edge_distinct_deformation_found":true,
+    "first_single_witness":{"cotree_index":0,"edge":[1,12],"new_voltage":[0,2,1],"triangle_order_census_after_deformation":{"2":270}},
+    "conclusion":"the all-triangles-transposition condition is not sufficient to characterize the selected S3 cover, even at Hamming radius one in cotree-voltage space"
+  },
+  "theorem":"Every automorphism of GQ(4,2) lifts to the selected cover, and its monodromy has the two-cycle S3 presentation. But the 270 transposition-holonomy triangle constraints do not determine the connection: a one-cotree-edge deformation already yields a distinct connected S3 cover satisfying them all.",
+  "execution":"independent spanning-tree voltage reconstruction, explicit PGSp packet action, generator lift equations, and exhaustive one-cotree-edge deformation sweep",
+  "boundary":"Exact finite connection/gauge theorem plus explicit nonuniqueness witness. No global classification of all S3 connections is claimed."
+}
