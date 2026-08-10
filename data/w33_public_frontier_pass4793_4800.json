@@ -1,0 +1,23 @@
+{
+  "schema": "w33.public_frontier_extension.v1",
+  "passes": [4793,4794,4795,4796,4797,4798,4799,4800],
+  "public_sections": [
+    {"kind":"id","token":"pass4793-4800-blt-radius-triangle-css","source":"analysis/PASS4793_4800_blt_radius_triangle_css_index_insert.html"}
+  ],
+  "standalone_public_pages": [
+    {"token":"pass4793-4800-triangle-css-page","source":"docs/gq42-triangle-qutrit-css.html"}
+  ],
+  "materializer": "tools/integrate_pass4793_4800.py",
+  "manuscript_insert": "analysis/PASS4793_4800_blt_radius_chirality_qutrit_insert.tex",
+  "evidence": [
+    "data/PART_W33_PASS4793_Q7_BLT_SHELL.json",
+    "data/PART_W33_PASS4794_COVERING_RADIUS_K4.json",
+    "data/PART_W33_PASS4794_COVERING_RADIUS_EXACT_MILP.json",
+    "data/PART_W33_PASS4795_TRIANGLE_CHIRALITY_ORIENTATION.json",
+    "data/PART_W33_PASS4796_INTRINSIC_GQ42_TRIANGLE_CARRIER.json",
+    "data/PART_W33_PASS4797_CUBE_F4_E6_CROSSWALK.json",
+    "data/PART_W33_PASS4798_TRIANGLE_QUTRIT_CODE.json",
+    "data/PART_W33_PASS4799_TRIANGLE_QUTRIT_DISTANCE.json",
+    "data/PART_W33_PASS4800_TRIANGLE_QUTRIT_CSS.json"
+  ]
+}
