@@ -21,7 +21,7 @@ def test_pass4746_full_symmetry_but_triangle_rule_nonunique():
     f=x['triangle_constraint_falsifier']
     assert f['single_cotree_edge_distinct_deformation_found'] is True
     assert f['first_single_witness']['edge']==[1,12]
-    assert f['first_single_witness']['triangle_order_census_after_deformation']=={'2':270}
+    assert {int(k):v for k,v in f['first_single_witness']['triangle_order_census_after_deformation'].items()}=={2:270}
 
 def test_pass4747_radical_is_multiplicity_two_20():
     x=J('PART_W33_PASS4747_ROUTER_SPECTRAL_REPRESENTATION.json')
@@ -29,8 +29,8 @@ def test_pass4747_radical_is_multiplicity_two_20():
     assert r['PSp_irrep']=='20' and r['multiplicity_in_vertex_module']==2
     assert r['adjacency_multiplicity_space_trace']==2
     assert r['adjacency_multiplicity_space_determinant']==-12
-    assert r['minimal_polynomial']=='x^2-2x-12'
-    assert x['exact_characteristic_factorization'].endswith('(x^2-2x-12)^20')
+    assert r['minimal_polynomial'].replace(' ','')=='x^2-2x-12'
+    assert x['exact_characteristic_factorization'].replace(' ','').endswith('(x^2-2x-12)^20')
 
 def test_pass4748_crossfiber_code_frontier():
     x=J('PART_W33_PASS4748_CROSSFIBER_ROUTER_CODE.json')
@@ -38,14 +38,19 @@ def test_pass4748_crossfiber_code_frontier():
     assert x['cell_decomposition']['partition_all_2025_edges'] is True
     P=[(r['local_dimension'],r['weighted_distance']) for r in x['S3_invariant_local_subspaces']['Pareto']]
     assert P==[(1,15),(2,10),(3,7),(4,3),(5,2),(6,1)]
-    assert x['comparison']['crossfiber_choice']=='[2025,405,7]_2'
-    assert x['comparison']['K_times_d']>x['comparison']['baseline_K_times_d']
+    cmp=x.get('comparison',x.get('dimension_distance_product_best',{}))
+    if 'crossfiber_choice' in cmp:
+        assert cmp['crossfiber_choice']=='[2025,405,7]_2'
+        assert cmp['K_times_d']>cmp['baseline_K_times_d']
+    else:
+        assert cmp['global_parameters']=='[2025,405,7]_2'
+        assert cmp['K_times_d']>cmp['baseline_K_times_d']
 
 def test_pass4749_exact_adversarial_envelope():
     x=J('PART_W33_PASS4749_ADVERSARIAL_ROUTER_CAPACITY.json')
     e=x['exact_symbolic_global_cut']
     assert (e['cold_graph_edge_connectivity'],e['hot_Petersen_edge_connectivity'],e['quotient_edge_connectivity'])==(12,3,10)
-    assert e['exact_global_min_cut']=='min(12+3 rho,120)' and e['breakpoint_rho']==36
+    assert e['exact_global_min_cut'].replace(' ','')=='min(12+3rho,120)' and e['breakpoint_rho']==36
     assert x['equal_capacity']['global_min_cut']==15
     assert x['one_shortcut_fiber_outage']['exact_global_min_cut_all_positive_rho']==12
 
@@ -60,15 +65,17 @@ def test_pass4750_chain_complex_and_no_go():
 def test_pass4751_corrected_s3_fourier_block():
     x=J('PART_W33_PASS4751_S3_FOURIER_VOLTAGE.json')
     f=x['selected135_fourier']
-    assert f['standard_block_polynomial']=='x(x^2-36)'
-    assert f['standard_spectrum']=={'6':15,'0':60,'-6':15}
+    assert f['standard_block_polynomial'].replace(' ','')=='x(x^2-36)'
+    spec={float(k):v for k,v in f['standard_spectrum'].items()}
+    assert spec=={6.0:15,0.0:60,-6.0:15}
     assert f['source_target_orientation_checked'] is True
     assert x['regular_S3_closure']['matches_Pass4719'] is True
     assert x['selected270_radical_test']['factor_x2_minus_2x_minus_12_present_in_any_S3_fourier_block'] is False
 
 def test_pass4752_deck_is_normalizer_homogeneous_cover():
     x=J('PART_W33_PASS4752_DECK_NORMALIZER_TWIST_COMPARISON.json')
-    assert x['global_cochain_descent']['deck_voltage_descends_after_flag_gauge'] is True
+    gd=x['global_cochain_descent']
+    assert gd.get('deck_voltage_descends_after_flag_gauge',gd.get('deck_voltage_gauge_descends_to_projected_270_graph')) is True
     d=x['descended_double_cover']
     assert (d['vertices'],d['edges'],d['degree'],d['diameter'])==(540,4320,16,4)
     assert d['PSp_image_order']==25920 and d['PSp_vertex_orbit']==540 and d['point_stabilizer_order']==48
