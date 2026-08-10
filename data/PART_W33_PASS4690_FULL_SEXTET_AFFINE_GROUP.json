@@ -1,0 +1,9 @@
+{
+  "pass": 4690,
+  "sextet_stabilizer": {"order":138240,"tetrad_kernel_order":192,"tetrad_kernel_element_orders":{"1":1,"2":63,"3":128}},
+  "translation_subgroup": {"order":64,"structure":"C2^6","construction":"identity plus the 63 involutions in the tetrad kernel","normal_in_H":true,"transversal_orbit":64,"regular_on_transversals":true},
+  "point_stabilizer": {"order":2160,"intersection_with_translation_order":1,"tetrad_image":"S6","tetrad_image_order":720,"tetrad_kernel":"C3","tetrad_kernel_order":3,"C3_nonzero_translation_fixed_points":0,"nonzero_translation_orbits":[18,45]},
+  "affine_action": {"faithful_H_order":138240,"faithful_K_order":2160,"factorization":"H = C2^6 semidirect K","atlas_structure":"2^6:3.S6"},
+  "theorem": "The corrected M24 sextet stabilizer is internally recovered as a faithful affine group on its 64 transversals: a normal regular C2^6 translation subgroup with 2160-point stabilizer K. K maps onto S6 with C3 kernel, and its faithful linear action on the 63 nonzero translations has the 18+45 shell split.",
+  "boundary": "Exact permutation-group theorem in the repository M24 model. The ATLAS name 2^6:3.S6 is used only after the internal normal/complement/action structure is certified."
+}
