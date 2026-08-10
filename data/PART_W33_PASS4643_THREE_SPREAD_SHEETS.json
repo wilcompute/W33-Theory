@@ -1,0 +1,19 @@
+{
+  "pass": 4643,
+  "spread_carrier": {
+    "W33_spreads": 36,
+    "degree36_half_spinor_orbits": 3,
+    "representative_stabilizer_order": 720,
+    "fixed_spreads_per_representative_stabilizer": 1,
+    "unique_PSp_equivariant_bijections": 3,
+    "bijection_sizes": [36,36,36]
+  },
+  "sheet_symmetry": {
+    "PSp_equivariant_sheet_permutation_group": "S3 on the three identical copies",
+    "PGSp_outer_involution_action": "1+2",
+    "PSp_building_centralizer_C3_action": "3-cycle",
+    "combined_ambient_type_preserving_quotient": "S3"
+  },
+  "theorem": "The three degree-36 half-spinor orbits are three genuine PSp-equivariant copies of the same 36-spread carrier. The PSp building centralizer supplies a sheet 3-cycle and the PGSp involution supplies a transposition, realizing S3 on the copy fiber inside the type-preserving normalizer.",
+  "boundary": "Finite G-set transport only."
+}
