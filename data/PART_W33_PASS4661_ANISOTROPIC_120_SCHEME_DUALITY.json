@@ -1,0 +1,20 @@
+{
+  "pass": 4661,
+  "anisotropic_planes": {"total":1120,"PSp_orbits":[40,1080],"small_orbit_partitions_nonsingular120":"40 x 3"},
+  "scheme": {
+    "vertices": 120,
+    "valencies": [1,2,36,27,54],
+    "relations": ["identity","same_anisotropic_plane","totally_orthogonal_plane_pair","nonadjacent_plane_orthogonal_pair","nonadjacent_plane_nonorthogonal_pair"],
+    "intersection_tensor_equals_Pass1355": true,
+    "quotient": "SRG(40,12,2,4) W33 point carrier"
+  },
+  "comparison_to_Pass1355": {
+    "same_Bose_Mesner_intersection_algebra": true,
+    "Pass1355_quotient": "40 isotropic W33 lines",
+    "new_quotient": "40 W33 points",
+    "PSp_equivariant_isomorphism": false,
+    "obstruction": "the intrinsic 3-fiber quotient would force the inequivalent W33 point and line G-sets to be isomorphic; Pass4654 proves the new fiber stabilizer fixes no W33 line"
+  },
+  "theorem": "The 120 nonsingular vectors carry a 40x3 four-class association scheme with exactly the historical Pass1355 selector intersection algebra, but on the dual PSp action type: its quotient is W33 points rather than W33 lines. This is an exact Bose-Mesner equality together with an action-level non-identification.",
+  "boundary": "Finite association-scheme/action duality; no physical selector interpretation."
+}
