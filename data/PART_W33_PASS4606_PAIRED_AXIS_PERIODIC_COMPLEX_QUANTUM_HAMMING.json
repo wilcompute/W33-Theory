@@ -1,0 +1,8 @@
+{
+  "axis_CSS": {"C27":"[[27,15,3]]","C36":"[[36,24,3]]"},
+  "boundary": "Exact binary chain-complex/CSS coding statement. The homology-dimension match to W33 spectral multiplicities is recorded as a target for an equivariant comparison, not an identification.",
+  "fused_CSS": {"classical_check_code":"[63,6,32] simplex","family":"binary quantum Hamming m=6","normalizer_code":"[63,57,3] Hamming","quantum_parameters":"[[63,51,3]]"},
+  "pass": 4606,
+  "periodic_complex": {"H27_dimension":15,"H36_dimension":24,"Euler_difference":9,"d_even":"R: F2^36 -> F2^27","d_odd":"R^T: F2^27 -> F2^36","d_squared_zero":["R R^T=0","R^T R=0"],"rank":6},
+  "W33_dimension_echo": "24 and 15 equal the nontrivial W33 adjacency multiplicities; no module isomorphism is claimed here without an explicit intertwiner"
+}
