@@ -5,15 +5,19 @@ on:
     paths:
       - 'analysis/w33_pass4721_4724_support12_involution_square_root_cover.py'
       - 'analysis/w33_pass4725_4726_involution_residue_dual_code.py'
+      - 'analysis/w33_pass4726_regulus_residue_falsifier.py'
       - 'analysis/PASS4721_4724_support12_involution_square_root_cover*'
       - 'analysis/PASS4725_4726_involution_residue_dual_code*'
+      - 'analysis/PASS4725_4726_CODING_PRIOR_ART_BOUNDARY.md'
       - 'analysis/PASS1830_ERRATUM_PASS4722_LINE_ACTION.md'
       - 'data/PART_W33_PASS4721_4724_SUPPORT12_INVOLUTION_SQUARE_ROOT_COVER.json'
       - 'data/PART_W33_PASS4725_4726_INVOLUTION_RESIDUE_DUAL_CODE.json'
+      - 'data/PART_W33_PASS4726_REGULUS_RESIDUE_FALSIFIER.json'
       - 'data/w33_public_frontier_extension_pass4461_4464.json'
       - 'docs/support12-involution-square-root-cover.html'
       - 'tests/test_w33_pass4721_4724_support12_involution_square_root_cover.py'
       - 'tests/test_w33_pass4725_4726_involution_residue_dual_code.py'
+      - 'tests/test_w33_pass4726_regulus_residue_falsifier.py'
       - 'tools/integrate_pass4721_4724.py'
       - 'w33_paper.tex'
       - 'photonic_holonet.tex'
@@ -40,14 +44,22 @@ jobs:
         run: |
           pytest -q tests/test_w33_pass4721_4724_support12_involution_square_root_cover.py
           pytest -q tests/test_w33_pass4725_4726_involution_residue_dual_code.py
+          pytest -q tests/test_w33_pass4726_regulus_residue_falsifier.py
       - name: Recompute exact certificates
         run: |
           python analysis/w33_pass4721_4724_support12_involution_square_root_cover.py | tee /tmp/pass4721_4724.log
           python analysis/w33_pass4725_4726_involution_residue_dual_code.py | tee /tmp/pass4725_4726.log
+          python analysis/w33_pass4726_regulus_residue_falsifier.py | tee /tmp/pass4726_regulus.log
       - name: Re-run regressions after recomputation
         run: |
           pytest -q tests/test_w33_pass4721_4724_support12_involution_square_root_cover.py
           pytest -q tests/test_w33_pass4725_4726_involution_residue_dual_code.py
+          pytest -q tests/test_w33_pass4726_regulus_residue_falsifier.py
+      - name: Prior-art and erratum boundary checks
+        run: |
+          grep -q 'Haemers' analysis/PASS4725_4726_CODING_PRIOR_ART_BOUNDARY.md
+          grep -q 'point positions' analysis/PASS1830_ERRATUM_PASS4722_LINE_ACTION.md
+          grep -q 'not the BT794' analysis/w33_pass4726_regulus_residue_falsifier.py
       - name: Materialize theorem cards into index
         run: |
           python tools/integrate_pass4721_4724.py
