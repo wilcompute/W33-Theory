@@ -1,0 +1,41 @@
+{
+  "pass": 4625,
+  "matrix": {
+    "shape": [45, 40],
+    "row_weight": 8,
+    "column_weight": 9,
+    "rank_Q": 25,
+    "rank_F2": 15,
+    "smith_normal_form": {"1": 15, "2": 10, "0": 15},
+    "rank_over_every_odd_characteristic": 25
+  },
+  "row_carrier": {
+    "rule": "join rows iff support intersection is 2",
+    "graph": "SRG(45,32,22,24)",
+    "identity": "TT^T=8I+2A45"
+  },
+  "point_carrier": {
+    "rule": "join columns iff co-occurrence is 3",
+    "graph": "point-side W33 SRG(40,12,2,4)",
+    "identity": "T^TT=8I+2A_point+J"
+  },
+  "line_carrier": {
+    "binary_kernel_dimension": 25,
+    "minimum_weight": 4,
+    "minimum_words": 40,
+    "minimum_words_are_exactly_W33_lines": true,
+    "intersection_graph": "line-side W33 SRG(40,12,2,4)"
+  },
+  "binary_complex": {
+    "TTt_zero": true,
+    "im_Tt_dimension": 15,
+    "ker_T_dimension": 25,
+    "middle_homology_dimension": 10
+  },
+  "bipartite_spectrum": {
+    "nonzero": "(+/-6 sqrt(2))^1, (+/-2 sqrt(3))^24",
+    "zero_multiplicity": 35
+  },
+  "theorem": "The unlabeled 45x40 support incidence intrinsically reconstructs the E6/center-quad 45, the point-side W33 40, and the inequivalent line-side W33 40. Its Smith form is 1^15 2^10 0^15, so characteristic two is the unique rank-drop prime and the resulting middle binary homology has dimension ten.",
+  "boundary": "The incidence determines the three finite carriers. A full automorphism-group equality is not claimed here without a separate exact automorphism computation."
+}
