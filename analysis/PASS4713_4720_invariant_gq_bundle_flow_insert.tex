@@ -1,0 +1,169 @@
+% Passes 4713--4720: invariant cohomology, dual-shell GQ(4,2), exact edge kernels,
+% selected270 bundle connection, capacity envelope, and three outside-box closures.
+\subsection{Invariant flag cohomology and the dual-shell $GQ(4,2)$ closure}
+
+The apartment double cover can be placed over a base carrying the \emph{full}
+$\PSp(4,3)$ action.  On the 810 selected point--line flags, the smallest
+connected self-paired $\PSp$ orbital graph is 16-regular, with 6480 edges,
+diameter five and
+\[
+ b_1=6480-810+1=5671.
+\]
+Its equivariant lift to the 1620 apartments is a connected regular $C_2$ cover,
+also 16-regular, with exactly two lift edges above each base edge.  A base
+triangle $0\to482\to367\to0$ lifts between the two apartments over flag zero,
+so the deck class is nonzero.  The $\PGSp(4,3)$ outer similitude preserves both
+base and lift; consequently the deck class spans an honest one-dimensional
+trivial $\PGSp$ submodule of $H^1(-;\mathbb F_2)$.  This replaces the earlier
+five-generator Schreier base, for which no full $\PSp$ action on the frozen
+cohomology space existed.
+
+Independently, the selected binary code reconstructs a classical generalized
+quadrangle without importing the protected-45 labeling.  The 45 complements of
+the dual weight-132 shell partition the 135 selected coordinates into
+$45\times3$.  Projecting the 270 dual weight-three words to those packets gives
+270 triples.  Their pair graph is
+\[
+ \operatorname{SRG}(45,12,3,3),
+\]
+and its maximal cliques are exactly 27 copies of $K_5$.  Every projected triple
+is a three-subset of a unique $K_5$, and each $K_5$ contributes all
+$\binom53=10$ triples.  Hence the dual shells intrinsically recover
+$GQ(4,2)$: 45 points, 27 lines, three lines per point and five points per line.
+The dual line graph is $\operatorname{SRG}(27,10,1,5)$.  If $H$ is the
+$45\times270$ point--triangle incidence and $B$ the $45\times27$ point--line
+incidence, then
+\[
+ HH^{T}=18I+3A_{45},\qquad BB^{T}=3I+A_{45},
+\]
+with Smith profiles
+\[
+ \operatorname{SNF}(H)_{\ne0}=1^{44}3,
+ \qquad
+ \operatorname{SNF}(B)_{\ne0}=1^{21}.
+\]
+The reconstructed 27-vertex graph has full automorphism order 51840.
+
+\subsection{Exact routing-edge character kernels}
+
+The two homogeneous routing-edge carriers admit complete ordinary-character
+resolution.  The 405 Petersen shortcut edges have rank 24 and permutation
+character
+\[
+ 1\oplus 6\oplus2(15_L)\oplus2(20)\oplus24
+ \oplus2(30_C)\oplus2(\overline{30_C})\oplus2(60)\oplus64.
+\]
+Subtracting the 27-object quotient $1\oplus6\oplus20$ gives
+\[
+ \boxed{378=2(15_L)\oplus20\oplus24\oplus2(30_C)
+ \oplus2(\overline{30_C})\oplus2(60)\oplus64.}
+\]
+Locally the Petersen-edge permutation module is $1\oplus4\oplus5\oplus5$
+under $A_5$, so the same kernel is
+$\operatorname{Ind}_{H_{960}}^{\PSp}(4\oplus5\oplus5)$.
+
+The 1620 base edges have orbital rank 146.  Their 135-edge quotient has
+character
+\[
+ 1\oplus6\oplus2(20)\oplus24\oplus64.
+\]
+The resulting 1485-dimensional fiber kernel is
+\[
+\boxed{\begin{aligned}
+1485={}&4(15_L)\oplus2(20)\oplus2(24)\oplus30_R
+\oplus4(30_C)\oplus4(\overline{30_C})\\
+&\oplus40_C\oplus\overline{40_C}
+\oplus45_C\oplus\overline{45_C}
+\oplus5(60)\oplus3(64)\oplus5(81).
+\end{aligned}}
+\]
+The independent 12-edge local fiber has image order 96 and complex permutation
+split $1\oplus\omega\oplus\bar\omega\oplus3\oplus6$, giving the induced-kernel
+check
+\[
+ \operatorname{Ind}_{H_{192}}^{\PSp}
+ (\omega\oplus\bar\omega\oplus3\oplus6),
+\]
+with induced dimensions $135+135+405+810=1485$.
+
+\subsection{The $S_3$ connection reconstructs the selected geometry}
+
+The selected135 graph is a connected three-sheet cover of the
+$GQ(4,2)$ point graph.  Each base edge carries a perfect matching between its
+two three-point packets, hence an $S_3$ connection.  After spanning-tree gauge,
+the 226 cotree voltages comprise 64 identities and 54 copies of each of the
+three transpositions; the generated monodromy is all of $S_3$.
+
+Every one of the 270 base triangles has transposition holonomy, with the three
+transpositions occurring $90+90+90$ times.  Its unique fixed sheet recovers one
+selected singular three-point line.  Recovering all 270 fixed-sheet triangles
+reproduces the original $135_6$--$270_3$ incidence, and their intersection graph
+is exactly selected270.
+
+The 27 $GQ(4,2)$ lines are precisely the ten-vertex Petersen fibers.  Adjacent
+fibers share one 45-packet.  Their 12 cross-fiber base edges split as
+\[
+ 3K_{2,2},
+\]
+one $K_{2,2}$ for each of the packet's three singular coordinates.  Thus the
+full selected270 router is recoverable from its 27-object quotient together
+with this coordinate-preserving connection law.
+
+The regular six-sheet $S_3$ closure gives a second canonical 270-vertex graph.
+A parity gauge makes every edge voltage odd, yielding an explicit isomorphism
+with the bipartite/Kronecker double cover of selected135.  Its spectrum is
+\[
+ \{12^1,6^{30},3^{44},0^{120},(-3)^{44},(-6)^{30},(-12)^1\}.
+\]
+It is \emph{not} the 1620-edge selected270 base graph, which is non-bipartite;
+this closes the tempting $270=270$ identification by an action-level graph
+invariant rather than by count.
+
+\subsection{Capacity envelope and local Petersen coding}
+
+Let one unit of base-edge service have capacity $C_b=1$ and write
+$\rho=C_s/C_b$ for shortcut capacity.  The four exact all-pairs path policies
+have uniform per-edge load vectors
+\[
+ P_0=(35,239/3),\quad P_1=(137/3,37),\quad
+ P_2=(155/3,21),\quad P_3=(373/6,0).
+\]
+Convexifying this exact two-resource frontier gives the maximum symmetric
+all-pairs demand
+\[
+\lambda_{\max}(\rho)=
+\begin{cases}
+3(\rho+2)/373,&0<\rho<63/155,\\
+3(3\rho+8)/1429,&63/155<\rho<111/137,\\
+3(\rho+4)/659,&111/137<\rho<239/105,\\
+1/35,&\rho\ge239/105.
+\end{cases}
+\]
+For equal capacities the optimal mixture is $13P_0/80+67P_1/80$, equalizing
+both edge-orbit loads at $659/15$ and giving $\lambda_{\max}=15/659$.
+Independent erasure/retransmission is incorporated, as an explicit model, by
+replacing $C_i$ with $C_iq_i$; an independent M/M/1 layer gives the corresponding
+queue divergence at the capacity boundary.
+
+Finally, each 15-edge Petersen fiber carries its canonical binary cycle and cut
+codes
+\[
+ [15,6,5]_2,\qquad [15,9,3]_2.
+\]
+The cycle-code enumerator is
+\[
+ 1+12z^5+10z^6+15z^8+20z^9+6z^{10};
+\]
+its 12 minimum words are the Petersen five-cycles.  The code is invariant under
+the full local $S_5$, and therefore under the certified $A_5/S_5$ local actions.
+It corrects every pattern of at most four erased edge symbols.  Over all 27
+fibers the direct sum is $[405,162,5]_2$.  This is redundancy, not free
+throughput: the raw cycle-code rate is $2/5$, so no fault-free capacity increase
+is inferred.
+
+\paragraph{Evidence boundary.}
+All statements above are finite graph, graph-cover, group-character, design,
+binary-code, or explicitly parameterized network-model statements.  In
+particular, the $C_2$ and $S_3$ holonomies are not identified with optical phase
+or gauge fields, and the queue/erasure formulas are not measured Holonet
+performance.
