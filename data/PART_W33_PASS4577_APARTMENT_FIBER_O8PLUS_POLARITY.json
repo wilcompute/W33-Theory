@@ -1,0 +1,17 @@
+{
+  "apartments": 1620,
+  "boundary": "Finite quotient/association geometry. Cross-fiber intersection multiplicities are not physical couplings or transition rates.",
+  "cross_statistic": "n2(x,y)=number of cross-fiber apartment pairs sharing exactly two W33 lines",
+  "fiber_size": 12,
+  "fibers": 135,
+  "orthogonal_pair_n2_distribution": {"0":1620,"2":810,"6":2160,"48":135},
+  "pass": 4577,
+  "polar_reconstruction": {
+    "B0_pair_count": 4725,
+    "B1_pair_count": 4320,
+    "nonorthogonal_B1": "n2=12 exactly",
+    "orthogonal_B0": "n2 in {0,2,6,48}"
+  },
+  "reconstructed_singular_polar_graph_srg": [135,70,37,35],
+  "theorem": "The 12-fold apartment quotient plus cross-fiber line-intersection counts reconstructs the 135-point O+(8,2) singular polar graph intrinsically."
+}
