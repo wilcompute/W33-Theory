@@ -1,0 +1,70 @@
+name: W33 Passes 4624-4631 packet-incidence-cocycle-F4
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass4624_packet45_support_e6_intertwiner.py'
+      - 'analysis/w33_pass4625_intrinsic_45x40_three_carrier.py'
+      - 'analysis/w33_pass4626_outer_u6_descent_cocycle.py'
+      - 'analysis/w33_pass4627_hermitian_rank_two_saturation_frontier.py'
+      - 'analysis/w33_pass4628_f4_choice_is_w33_point_carrier.py'
+      - 'analysis/w33_pass4629_full_outer_packet_s3_fiber.py'
+      - 'analysis/w33_pass4630_t_bockstein_h10_css.py'
+      - 'analysis/w33_pass4631_f4_moduli_e6_incidence.py'
+      - 'data/PART_W33_PASS462*.json'
+      - 'data/PART_W33_PASS463*.json'
+      - 'tests/test_w33_pass4624_4631_packet_incidence_cocycle_f4.py'
+      - '.github/workflows/w33_pass4624_4631_packet_incidence_cocycle_f4.yml'
+  workflow_dispatch:
+jobs:
+  exact-regeneration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --upgrade pip && python -m pip install numpy sympy networkx pytest
+      - name: Snapshot frozen certificates
+        run: |
+          mkdir -p /tmp/pass4624_4631
+          cp data/PART_W33_PASS4624_PACKET45_SUPPORT_E6_INTERTWINER.json /tmp/pass4624_4631/
+          cp data/PART_W33_PASS4625_INTRINSIC_45X40_THREE_CARRIER.json /tmp/pass4624_4631/
+          cp data/PART_W33_PASS4626_OUTER_U6_DESCENT_COCYCLE.json /tmp/pass4624_4631/
+          cp data/PART_W33_PASS4627_HERMITIAN_RANK_TWO_SATURATION_FRONTIER.json /tmp/pass4624_4631/
+          cp data/PART_W33_PASS4628_F4_CHOICE_IS_W33_POINT_CARRIER.json /tmp/pass4624_4631/
+          cp data/PART_W33_PASS4629_FULL_OUTER_PACKET_S3_FIBER.json /tmp/pass4624_4631/
+          cp data/PART_W33_PASS4630_T_BOCKSTEIN_H10_CSS.json /tmp/pass4624_4631/
+          cp data/PART_W33_PASS4631_F4_MODULI_E6_INCIDENCE.json /tmp/pass4624_4631/
+      - name: Regenerate all eight witnesses
+        env:
+          PYTHONPATH: analysis:exploration
+        run: |
+          python analysis/w33_pass4624_packet45_support_e6_intertwiner.py
+          python analysis/w33_pass4625_intrinsic_45x40_three_carrier.py
+          python analysis/w33_pass4626_outer_u6_descent_cocycle.py
+          python analysis/w33_pass4627_hermitian_rank_two_saturation_frontier.py
+          python analysis/w33_pass4628_f4_choice_is_w33_point_carrier.py
+          python analysis/w33_pass4629_full_outer_packet_s3_fiber.py
+          python analysis/w33_pass4630_t_bockstein_h10_css.py
+          python analysis/w33_pass4631_f4_moduli_e6_incidence.py
+      - name: Semantic certificate equality
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          root=pathlib.Path('data'); snap=pathlib.Path('/tmp/pass4624_4631')
+          names=[
+            'PART_W33_PASS4624_PACKET45_SUPPORT_E6_INTERTWINER.json',
+            'PART_W33_PASS4625_INTRINSIC_45X40_THREE_CARRIER.json',
+            'PART_W33_PASS4626_OUTER_U6_DESCENT_COCYCLE.json',
+            'PART_W33_PASS4627_HERMITIAN_RANK_TWO_SATURATION_FRONTIER.json',
+            'PART_W33_PASS4628_F4_CHOICE_IS_W33_POINT_CARRIER.json',
+            'PART_W33_PASS4629_FULL_OUTER_PACKET_S3_FIBER.json',
+            'PART_W33_PASS4630_T_BOCKSTEIN_H10_CSS.json',
+            'PART_W33_PASS4631_F4_MODULI_E6_INCIDENCE.json']
+          for n in names:
+              assert json.loads((root/n).read_text()) == json.loads((snap/n).read_text()), n
+          PY
+      - name: Focused regression
+        env:
+          PYTHONPATH: analysis:exploration
+        run: pytest -q tests/test_w33_pass4624_4631_packet_incidence_cocycle_f4.py
