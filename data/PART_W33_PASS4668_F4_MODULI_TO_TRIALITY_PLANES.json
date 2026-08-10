@@ -1,0 +1,23 @@
+{
+  "PSp_equivariant_bijection": true,
+  "boundary": "Finite G-set/stabilizer transport. The frozen Golay coordinate embedding remains non-PGSp-equivariant; no M24 subgroup or physical spinor identification is claimed.",
+  "explicit_composition": "{J,J^2} -> p(J) -> P(p(J)), using the two frozen equivariant W33-point charts",
+  "graph_transport": "total polar orthogonality of the anisotropic planes transports to W33 point collinearity, hence to the adjacency geometry of compatible F4 choices",
+  "half_spinor_reading": "The three triality-conjugate PSp copies have pairwise order-216 intersections. For either half-spinor-side conjugate paired with the distinguished PSp copy, the resulting 40-plane carrier is a triality-conjugate realization of this same W33-point/F4-moduli G-set.",
+  "pass": 4668,
+  "source_moduli": {
+    "PGSp_stabilizer_order": 1296,
+    "chart": "unique W33 point fixed by the semilinear normalizer",
+    "count": 40,
+    "objects": "compatible unoriented F4 structures {J,J^2} on U6"
+  },
+  "stabilizer_tower": "216 (pointwise triality-plane intersection) < 648 (PSp point/plane stabilizer) < 1296 (PGSp semilinear F4 normalizer)",
+  "theorem": "The noncanonical F4 choice needed by the hexacode/Golay lane has a concrete D4 realization: it is exactly the PSp G-set of anisotropic two-planes cut out by pairwise triality-conjugate PSp intersections. The identification is the composition of two explicit W33-point intertwiners, with stabilizer tower 216<648<1296.",
+  "triality_moduli": {
+    "PSp_setwise_stabilizer_order": 648,
+    "chart": "unique W33 point fixed by the setwise stabilizer",
+    "count": 40,
+    "objects": "anisotropic F2 two-planes fixed pointwise by pairwise triality-conjugate PSp intersections",
+    "pointwise_stabilizer_order": 216
+  }
+}
