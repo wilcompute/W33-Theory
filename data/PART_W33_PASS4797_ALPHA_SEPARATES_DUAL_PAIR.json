@@ -1,0 +1,78 @@
+{
+  "alpha_separates_dual_pair": true,
+  "boundary": "independence numbers and group orders are exact by exhaustion. The ovoid stabiliser is computed to have order 120 and the orbit 6, REFUTING the 36 x 20 coset reading Pass 4795 floated and declined to assert. The identification of the order-120 stabiliser with S5 is by ORDER and by the S6 context only -- no group structure is verified. Only q = 2 and q = 3 are treated",
+  "independence": [
+    {
+      "alpha": 5,
+      "geometry": "W(3,2)",
+      "hoffman": 5,
+      "meets": true,
+      "n": 15,
+      "q": 2,
+      "seconds": 0.0,
+      "srg": [
+        15,
+        6,
+        1,
+        3
+      ]
+    },
+    {
+      "alpha": 5,
+      "geometry": "Q(4,2)",
+      "hoffman": 5,
+      "meets": true,
+      "n": 15,
+      "q": 2,
+      "seconds": 0.0,
+      "srg": [
+        15,
+        6,
+        1,
+        3
+      ]
+    },
+    {
+      "alpha": 7,
+      "geometry": "W(3,3)",
+      "hoffman": 10,
+      "meets": false,
+      "n": 40,
+      "q": 3,
+      "seconds": 0.0,
+      "srg": [
+        40,
+        12,
+        2,
+        4
+      ]
+    },
+    {
+      "alpha": 10,
+      "geometry": "Q(4,3)",
+      "hoffman": 10,
+      "meets": true,
+      "n": 40,
+      "q": 3,
+      "seconds": 0.0,
+      "srg": [
+        40,
+        12,
+        2,
+        4
+      ]
+    }
+  ],
+  "ovoid_stabiliser": {
+    "aut_point_graph": 720,
+    "distinct_ovoids": 6,
+    "orbit": 6,
+    "polarities": 36,
+    "polarities_per_ovoid": 6,
+    "product_equals_group": true,
+    "refutes_pass_4795_coset_reading": true,
+    "stabiliser": 120,
+    "what_720_eq_36x20_was": "a numerical coincidence. The real decomposition is |Aut| = stabiliser x orbit = 120 x 6, with 6 ovoids and 6 polarities each. |Sz(2)| = 20 is a SUBGROUP of the order-120 ovoid stabiliser, not the stabiliser"
+  },
+  "why": "ovoids of Q(4,q) are spreads of W(3,q); W(3,q) has spreads at every q but ovoids only at even q, so the dual meets the Hoffman bound exactly where the original fails it"
+}
