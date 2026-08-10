@@ -1,0 +1,12 @@
+{
+  "boundary": "Exact F2 chain-complex/code theorem. The cancellation is algebraic in characteristic two and is not by itself a dynamical or physical interference mechanism.",
+  "cancellation": {"commute":true,"cross_and_within_images_equal":true,"homology_jump":12,"rank_12_plus_rank_12_to_rank_6":true},
+  "operators": {
+    "D0_cross": {"homology_dimension":39,"rank":12,"square_zero":true},
+    "Delta_within": {"homology_dimension":39,"rank":12,"square_zero":true},
+    "D_full_polar": {"homology_dimension":51,"rank":6,"square_zero":true}
+  },
+  "pass": 4639,
+  "simplex_CSS": {"CSS":"[[63,51,3]]","dual":"[63,57,3] Hamming","row_code":"[63,6,32] simplex"},
+  "theorem": "The singular/anisotropic split of the 63-point polar matrix yields two commuting square-zero rank-12 differentials with the same image. Their characteristic-two sum cancels to rank 6, raising homology from 39 to 51 and producing the fused simplex/Hamming [[63,51,3]] CSS code."
+}
