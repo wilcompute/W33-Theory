@@ -1,0 +1,41 @@
+{
+  "pass": 4649,
+  "triality_closure": {
+    "PSp_order": 25920,
+    "three_triality_conjugates": 3,
+    "two_conjugates_generate_type_preserving_order": 174182400,
+    "type_preserving_group": "Omega_8^+(2)",
+    "PSp_plus_order3_triality_order": 522547200,
+    "PSp_plus_order3_triality_group": "Omega_8^+(2):3",
+    "octonion_conjugation_order": 2,
+    "diagram_relation": "sigma*tau*sigma=tau^-1",
+    "full_group_order": 1045094400,
+    "full_group": "Omega_8^+(2):S3",
+    "diagram_quotient": "S3"
+  },
+  "PSp_intersections": {
+    "pairwise_order": 216,
+    "pairwise_center_order": 3,
+    "pairwise_derived_order": 54,
+    "pairwise_element_order_census": {"1": 1, "2": 9, "3": 26, "4": 54, "6": 18, "12": 108},
+    "triple_order": 6,
+    "triple_isomorphism": "S3",
+    "triple_element_order_census": {"1": 1, "2": 3, "3": 2}
+  },
+  "anisotropic_plane_reconstruction": {
+    "pairwise_intersection_fixed_nonsingular_vectors": 3,
+    "fixed_vectors_form_anisotropic_2space_nonzero_shell": true,
+    "plane_orbit_size": 40,
+    "setwise_stabilizer_order": 648,
+    "pointwise_stabilizer_order": 216,
+    "partition_of_120_nonsingular_vectors": "40 x 3",
+    "pair_cross_orthogonality_counts": {"3": 540, "9": 240},
+    "total_orthogonality_graph": "SRG(40,12,2,4)",
+    "adjacent_common_neighbors": 2,
+    "nonadjacent_common_neighbors": 4,
+    "identification": "W(3,3) reconstructed from triality-conjugate PSp intersection geometry"
+  },
+  "theorem": "The explicit W33-derived octonion triality closes to Omega_8^+(2):S3. Pairwise triality-conjugate PSp intersections recover a 40-plane partition of the 120 anisotropic vectors whose total-orthogonality graph is W33 itself.",
+  "literature_context": "Pellegrini--Tamburini Bellani, J. Group Theory 2022: order-three D4 triality of P Omega_8^+(q) in Steinberg generators. The q=2 subgroup/intersection computation here is explicit and independent.",
+  "boundary": "Finite group/building theorem only; no physical triality or particle interpretation."
+}
