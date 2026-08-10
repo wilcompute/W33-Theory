@@ -1,0 +1,22 @@
+{
+  "pass": 4597,
+  "input": {
+    "centered_incidence": "D_ij = 9 M_ij - J",
+    "rank_Q": 50,
+    "gram": "D_ij D_ij^T = 54^2 E_50",
+    "cyclic_composition": "D_PA D_AB = 54 D_PB, cyclically"
+  },
+  "normalized_partial_isometries": {
+    "U_PA": "D_PA^T / 54 : P_50 -> A_50",
+    "U_AB": "D_AB^T / 54 : A_50 -> B_50",
+    "U_BP": "D_PB / 54 : B_50 -> P_50"
+  },
+  "three_cycle": {
+    "P_sector": "U_BP U_AB U_PA = E_P",
+    "A_sector": "U_PA U_BP U_AB = E_A",
+    "B_sector": "U_AB U_PA U_BP = E_B",
+    "holonomy": "identity on each active 50-dimensional constituent"
+  },
+  "theorem": "The centered D4 triality intertwiners define a flat normalized three-leg connection on the common 50-dimensional constituent. The triality Fourier three-cycle has trivial holonomy rather than a hidden phase.",
+  "boundary": "The identity holonomy is a theorem of the finite incidence algebra. It is not a dynamical Berry phase, optical phase, or physical spinor transport claim."
+}
