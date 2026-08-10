@@ -1,0 +1,14 @@
+{
+  "boundary": "Classical ternary code theorem only; CSS parameters are closed separately in Pass4800.",
+  "code": "[270,44,18]_3",
+  "cut_component_profile": {"1+44": 45},
+  "minimum_nonconstant_local_weight": 6,
+  "minimum_number_nonconstant_GQ_lines": 3,
+  "minimum_word_model": "choose one of 45 points and one of two nonzero F3 coefficient differences from the global constant",
+  "minimum_words": 90,
+  "pass": 4799,
+  "self_orthogonal": true,
+  "three_line_cut_count": 45,
+  "three_line_cuts_exactly_point_pencils": true,
+  "theorem": "The characteristic-3 GQ(4,2) triangle-incidence code is exactly [270,44,18]_3 and self-orthogonal. Its 90 minimum words are the two nonzero single-point perturbations at each of the 45 quotient points."
+}
