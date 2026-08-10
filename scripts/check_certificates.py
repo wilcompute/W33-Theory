@@ -135,7 +135,91 @@ def sweep(paths: list[Path], quiet: bool = False) -> int:
     return 0  # never blocks
 
 
+def selftest() -> int:
+    """Planted faults this checker must detect, and clean files it must stay silent on.
+
+    Added Pass 4725. This guard reports 14 problems across 4,229 certificates and had no
+    self-test, so a reader could not tell whether 14 meant "14 faults" or "14 of however
+    many this checker happens to notice". CLAUDE.md failure mode 7: a clean report from a
+    broken checker is indistinguishable from a clean corpus -- and a NON-clean report from
+    a partly-broken one is worse, because it looks like evidence of working.
+
+    The int-key case is the Pass 2482 trap and is the one that matters: it is not a stale
+    digest, it is a certificate that never could reproduce and never will.
+    """
+    import tempfile
+
+    tmp = Path(tempfile.mkdtemp(prefix="certtest_"))
+    cases = []
+
+    def write(name, obj, digest_key="sha256"):
+        canonical = json.dumps(json.loads(json.dumps(obj)), indent=2,
+                               sort_keys=True) + "\n"
+        obj = dict(obj)
+        obj[digest_key] = hashlib.sha256(canonical.encode()).hexdigest()
+        p = tmp / name
+        p.write_text(json.dumps(obj, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+        return p
+
+    # 1. clean: digest computed the round-trip way, must NOT be flagged
+    good = write("clean.json", {"result": 42, "checks": {"ok": True}})
+    cases.append(("clean certificate", good, False))
+
+    # 2. planted: digest corrupted, MUST be flagged
+    bad = tmp / "stale.json"
+    d = json.loads(good.read_text(encoding="utf-8"))
+    d["sha256"] = "0" * 64
+    bad.write_text(json.dumps(d, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    cases.append(("stale digest", bad, True))
+
+    # 3. planted: a false entry in checks, MUST be flagged
+    fc = tmp / "falsecheck.json"
+    d2 = json.loads(good.read_text(encoding="utf-8"))
+    d2["checks"] = {"ok": True, "the_one_that_matters": False}
+    fc.write_text(json.dumps(d2, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    cases.append(("false check", fc, True))
+
+    # 4. planted: the Pass 2482 integer-key trap -- hashed live with int keys, so the
+    #    digest can never be reproduced from the bytes on disk
+    live = {"hist": {i: i * i for i in range(1, 12)}, "note": "int keys"}
+    wrong = json.dumps(live, indent=2, sort_keys=True) + "\n"   # ints sort numerically
+    live_out = dict(live)
+    live_out["sha256"] = hashlib.sha256(wrong.encode()).hexdigest()
+    ik = tmp / "intkeys.json"
+    ik.write_text(json.dumps(live_out, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    cases.append(("integer-key trap (Pass 2482)", ik, True))
+
+    ok = True
+    print("  selftest -- planted-fault recall\n")
+    for name, path, want in cases:
+        import io
+        import contextlib
+        buf = io.StringIO()
+        with contextlib.redirect_stdout(buf):
+            sweep([path], quiet=True)
+        got = "MISMATCH" in buf.getvalue() or "FALSE CHECK" in buf.getvalue()
+        good_case = got == want
+        ok &= good_case
+        print(f"    {name:32s} flagged={str(got):5s} want={str(want):5s} "
+              f"{'PASS' if good_case else 'FAIL'}")
+
+    print("""
+  The clean case and the stale case are byte-identical apart from the digest, so a checker
+  that flagged both would be reporting on the presence of a digest field rather than on its
+  correctness. The integer-key case is the one worth having: it is indistinguishable from a
+  stale digest in the report, and the fix is completely different -- re-running the producer
+  repairs a stale digest and cannot repair this one.
+
+  ITS LIMIT: recall is measured against the four fault shapes above. A certificate that is
+  wrong in some other way -- right digest over wrong content -- passes every one of them.""")
+    import shutil
+    shutil.rmtree(tmp, ignore_errors=True)
+    return 0 if ok else 1
+
+
 def main(argv: list[str]) -> int:
+    if "--selftest" in argv:
+        return selftest()
     quiet = "--quiet" in argv
     args = [a for a in argv if not a.startswith("--")]
     if args:

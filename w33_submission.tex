@@ -41,6 +41,10 @@
 \newcommand{\Aut}{\mathrm{Aut}}
 \newcommand{\tr}{\operatorname{tr}}
 \DeclareMathOperator{\lcm}{lcm}
+% \FF is used by the included sections (PAPER_SECTION5_MODULAR writes $\FF_3$, $\FF_2$) and
+% is defined in three sibling manuscripts but was never defined here, so this submission
+% halted at the first field symbol.
+\newcommand{\FF}{\mathbb{F}}
 
 % ====================================================================
 \begin{document}
@@ -105,7 +109,11 @@ uncertainty.
 % ====================================================================
 % SECTION 4: E6/E8 Confluence and Standard Model
 % ====================================================================
-\input{PAPER_SECTION4}
+% Three files match the PAPER_SECTION4 prefix; the section comment above names this one,
+% and PAPER_SECTION4_E6E8.tex opens with \section{The E_6/E_8 Arithmetic Confluence}.
+% The other two (4B_MW_ONELOOP, 4_VCB_THEOREM) open at \section and \subsection level on
+% different subjects and are not included by this submission.
+\input{PAPER_SECTION4_E6E8}
 
 % ====================================================================
 % SECTION 5: Modular Forms and Moonshine

@@ -9,7 +9,7 @@
     {
       "file": "BT407_PAPER.tex",
       "ok": true,
-      "pdf_bytes": 125906,
+      "pdf_bytes": 125905,
       "error": ""
     },
     {
@@ -27,7 +27,7 @@
     {
       "file": "holonet_parity_control.tex",
       "ok": true,
-      "pdf_bytes": 65612,
+      "pdf_bytes": 65608,
       "error": ""
     },
     {
@@ -51,7 +51,7 @@
     {
       "file": "self_entanglement_companion.tex",
       "ok": true,
-      "pdf_bytes": 91294,
+      "pdf_bytes": 91295,
       "error": ""
     },
     {
@@ -81,13 +81,13 @@
     {
       "file": "w33_everything.tex",
       "ok": true,
-      "pdf_bytes": 140034,
+      "pdf_bytes": 140033,
       "error": ""
     },
     {
       "file": "W33_FOR_EVERYONE.tex",
       "ok": true,
-      "pdf_bytes": 652944,
+      "pdf_bytes": 652946,
       "error": ""
     },
     {
@@ -98,9 +98,9 @@
     },
     {
       "file": "w33_submission.tex",
-      "ok": false,
-      "pdf_bytes": 0,
-      "error": "w33_submission.tex:108: ! LaTeX Error: File `PAPER_SECTION4.tex' not found."
+      "ok": true,
+      "pdf_bytes": 210053,
+      "error": ""
     },
     {
       "file": "W36_PAPER.tex",
@@ -111,15 +111,15 @@
     {
       "file": "W36_PAPER_arxiv.tex",
       "ok": true,
-      "pdf_bytes": 236412,
+      "pdf_bytes": 236404,
       "error": ""
     },
     {
       "file": "W36_PRL_LETTER.tex",
-      "ok": false,
-      "pdf_bytes": 0,
-      "error": "W36_PRL_LETTER.tex:384: TeX capacity exceeded, sorry [input stack size=5000]"
+      "ok": true,
+      "pdf_bytes": 164000,
+      "error": ""
     }
   ],
-  "failing": 2
+  "failing": 0
 }

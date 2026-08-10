@@ -1,0 +1,74 @@
+# Scheduled manuscript build check.  Pass 4736.
+#
+# WHY THIS EXISTS
+# ---------------
+# `single_photon_universal_computation.tex` sat in the repository root, linked from the
+# README, and could not compile at all -- one line put bare underscores inside \textbf{},
+# which LaTeX reads as math subscripts.  It was found by accident while editing an unrelated
+# paragraph, and nothing in the repository would ever have reported it.
+#
+# The failure mode is silent by construction: a stale PDF committed next to a broken source
+# looks exactly like a working document.  When the sweep was first run, 6 of 20 standalone
+# manuscripts did not build.  They all do now, and this is what keeps that true.
+#
+# Weekly rather than per-push: a full sweep is ~20 tectonic runs, and manuscript sources
+# change far less often than analysis code.
+
+name: manuscript compile sweep
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"          # Mondays, 06:17 UTC
+  workflow_dispatch:
+  push:
+    paths:
+      - "**/*.tex"
+      - "scripts/compile_sweep.py"
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install tectonic
+        run: |
+          curl -fsSL https://drop-sh.fullyjustified.net | sh
+          sudo mv tectonic /usr/local/bin/
+          tectonic --version
+
+      - name: Sweep
+        run: |
+          # the script looks for tectonic at a Windows path by default
+          python - <<'PY'
+          import pathlib, re
+          p = pathlib.Path("scripts/compile_sweep.py")
+          t = p.read_text(encoding="utf-8")
+          t = re.sub(r'TECTONIC = Path\([^)]*\)',
+                     'TECTONIC = Path("/usr/local/bin/tectonic")', t)
+          p.write_text(t, encoding="utf-8")
+          PY
+          python scripts/compile_sweep.py --jobs 2
+
+      - name: Fail if any manuscript does not build
+        run: |
+          python - <<'PY'
+          import json, sys
+          d = json.load(open("data/w33_compile_sweep.json", encoding="utf-8"))
+          bad = [r for r in d["results"] if not r["ok"]]
+          for r in bad:
+              print(f"::error file={r['file']}::{r['error']}")
+          print(f"{len(d['results']) - len(bad)}/{len(d['results'])} build")
+          sys.exit(1 if bad else 0)
+          PY
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: compile-sweep-report
+          path: data/w33_compile_sweep.json

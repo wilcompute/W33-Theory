@@ -1,0 +1,76 @@
+{
+  "bare_examples": [
+    {
+      "file": "analysis/2026-05-18_mckay_heptad_noncommutation_bridge.md",
+      "line": 58,
+      "text": "\\boxed{51840=(B_2+1)H_1\\cdot5.}"
+    },
+    {
+      "file": "analysis/2026-05-18_mckay_heptad_noncommutation_bridge.md",
+      "line": 64,
+      "text": "\\boxed{51840=128\\cdot81\\cdot5.}"
+    },
+    {
+      "file": "analysis/2026-05-18_minimal_logical_e6_pairing.md",
+      "line": 72,
+      "text": "25920+25920=51840."
+    },
+    {
+      "file": "analysis/2026-05-18_minimal_logical_e6_pairing.md",
+      "line": 84,
+      "text": "320\\cdot162=3240\\cdot16=51840."
+    },
+    {
+      "file": "analysis/2026-05-18_minimal_logical_e6_pairing.md",
+      "line": 134,
+      "text": "\\boxed{320\\cdot162=3240\\cdot16=51840.}"
+    },
+    {
+      "file": "analysis/2026-05-18_w33_tqc_hodge_audit.md",
+      "line": 34,
+      "text": "| Aut(W(3,3)) = 1,451,520 as full braid representation order | CONFLICT_OR_UNSPECIFIED_EXTEN"
+    },
+    {
+      "file": "analysis/2026-05-29_ade_q4_router_lift.md",
+      "line": 77,
+      "text": "51840 = 40 * 16 * 81."
+    },
+    {
+      "file": "analysis/2026-05-29_index_guided_dirac_shell_bridge.md",
+      "line": 175,
+      "text": "51840 = 40 * 16 * 81"
+    }
+  ],
+  "boundary": "this pass counts textual co-occurrence within three lines and does not read the sightings; a file that names its object further away is counted as bare. It establishes nothing about whether any particular claim is wrong -- only that the integer alone does not identify its source. The list of order-51,840 objects is not claimed exhaustive",
+  "rule": "a bare 51,840 is evidence of contact with a group of that order, not with W(3,3); at least three distinct constructions in this project reach it, and the exceptional isomorphism PSU(4,2) = PSp(4,3) is why",
+  "sightings_bare": 964,
+  "sightings_naming_object": 769,
+  "sightings_total": 1733,
+  "sources": [
+    {
+      "object": "|Sp(4,3)|",
+      "order": 51840,
+      "provenance": "symplectic group over GF(3); Aut of W(3,3)"
+    },
+    {
+      "object": "|PSU(4,2)|x2",
+      "order": 51840,
+      "provenance": "unitary group over GF(4); Aut of H(3,4). PSU(4,2) = PSp(4,3), order 25,920, doubled by the field automorphism"
+    },
+    {
+      "object": "|W(E6)|",
+      "order": 51840,
+      "provenance": "Weyl group of E6"
+    },
+    {
+      "object": "|Aut(GQ(2,4))|",
+      "order": 51840,
+      "provenance": "Aut of Q(5,2), the dual of H(3,4)"
+    },
+    {
+      "object": "|O5(3)| x 2",
+      "order": 51840,
+      "provenance": "orthogonal group in dimension 5 over GF(3); O5(3) = Sp(4,3)"
+    }
+  ]
+}

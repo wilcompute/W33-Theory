@@ -12,7 +12,10 @@
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{microtype}
-\usepackage{hyperref}
+% hyperref is NOT loaded here. revtex4-2 provides its own hyperref integration, and loading
+% the package again overflows TeX's input stack at \begin{thebibliography} (input stack
+% size=5000). Found by bisecting the package list: removing cleveref changed nothing,
+% removing hyperref built immediately. cleveref works without it.
 \usepackage{cleveref}
 
 %% ---------------------------------------------------------------

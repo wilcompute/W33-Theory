@@ -58,6 +58,12 @@ def main() -> int:
         if not m:
             continue
         p = ROOT / m.group(1)
+        if p.resolve() == Path(__file__).resolve():
+            # This script contains the literal string "--selftest" because it searches for
+            # it, so it detects itself as self-testing and then invokes itself with a flag
+            # it does not accept. Skip; a self-test runner is not its own subject.
+            print(f"  {h['id']:32s} (this runner; skipped)")
+            continue
         if not p.exists():
             print(f"  {h['id']:32s} SCRIPT MISSING {m.group(1)}")
             failed += 1
