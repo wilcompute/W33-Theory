@@ -1,0 +1,41 @@
+{
+  "pass": 4716,
+  "selected135_cover": {
+    "base": "SRG(45,12,3,3) = GQ(4,2) point graph",
+    "base_vertices": 45,
+    "lift_vertices": 135,
+    "sheets": 3,
+    "connection_group": "S3",
+    "spanning_tree_gauged_cotree_voltage_census": {
+      "(0, 1, 2)": 64,
+      "(1, 0, 2)": 54,
+      "(0, 2, 1)": 54,
+      "(2, 1, 0)": 54
+    }
+  },
+  "triangle_holonomy": {
+    "base_triangles": 270,
+    "all_order": 2,
+    "transposition_census": {
+      "(2, 1, 0)": 90,
+      "(0, 2, 1)": 90,
+      "(1, 0, 2)": 90
+    },
+    "unique_fixed_sheet_reconstructs_selected_line": true
+  },
+  "selected270_reconstruction": {
+    "vertices": 270,
+    "intersection_graph_recovered_exactly": true,
+    "Petersen_fibers": 27,
+    "vertices_per_fiber": 10,
+    "hot_edges": 405,
+    "cold_edges": 1620
+  },
+  "interfiber_connection": {
+    "quotient_edges": 135,
+    "cold_edges_per_quotient_edge": 12,
+    "law": "3 disjoint K2,2 indexed by the three singular coordinates of the shared packet"
+  },
+  "theorem": "The selected135 graph is a connected nonregular S3 three-cover of the GQ(4,2) point graph. Every base triangle has transposition holonomy and its unique fixed sheet reconstructs one selected singular line; their intersection graph is selected270. The 27 Petersen fibers are coupled across each quotient edge by three coordinate-preserving K2,2 blocks.",
+  "boundary": "Exact finite graph-cover/bundle theorem; selected270 is not claimed to be a regular 10-sheet cover of the 27 quotient."
+}
