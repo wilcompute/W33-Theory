@@ -1,0 +1,21 @@
+{
+  "allowed_carriers": {"line_stars":40,"protected_edges":240,"total_distinct":280},
+  "boundary": "These are exact binary carrier/readout erasure bounds, not hardware fault-tolerance thresholds.",
+  "interpretation": "Parity anchoring is distributed across several line-stars and edge carriers; no single center line-star is a coloop of the robust readout.",
+  "one_erasure": {
+    "exact_minimum_channels": 11,
+    "functional_weight_profile": {"2":55,"4":330,"6":462,"8":165,"10":11},
+    "lower_bound": "n-1>=10",
+    "minimum_nonzero_functional_support": 2,
+    "witness": [["star",8],["star",12],["star",20],["star",38],["edge",[3,31]],["edge",[4,12]],["edge",[9,24]],["edge",[9,26]],["edge",[19,21]],["edge",[25,28]],["edge",[28,32]]]
+  },
+  "pass": 4582,
+  "theorem": "Within the 280 natural protected carriers, 11 channels are necessary and sufficient to survive any one loss, and 14 are necessary and sufficient to survive any two arbitrary losses.",
+  "two_erasures": {
+    "exact_minimum_channels": 14,
+    "functional_weight_profile": {"3":28,"4":77,"5":112,"6":168,"7":232,"8":203,"9":112,"10":56,"11":28,"12":7},
+    "lower_bound": "[n,10,d>=3] plus Hamming bound excludes n=12,13",
+    "minimum_nonzero_functional_support": 3,
+    "witness": [["star",3],["star",7],["star",10],["star",13],["star",16],["star",19],["star",38],["edge",[3,17]],["edge",[4,5]],["edge",[9,14]],["edge",[11,12]],["edge",[17,18]],["edge",[18,27]],["edge",[37,38]]]
+  }
+}
