@@ -1,0 +1,125 @@
+% Passes 4624--4631: explicit packet/support intertwiner, intrinsic 45x40
+% classification, outer U6 descent cocycle, Hermitian 2-saturation frontier,
+% F4-choice/W33 bridge, and three outside-box consequences.
+\subsection{The packet 45 closes onto the E6 carrier, while the 45-by-40 incidence exposes H10 and the hexacode choice space (Passes 4624--4631)}
+\label{sec:pass4624-4631-packet-incidence-f4}
+
+\paragraph{Pass 4624: the maximal-partial-spread packet 45 is exactly the protected/E6 45.}
+For a packet of the three maximal size-eight partial spreads fixed by the same
+order-$192$ subgroup $H$, their union contains $24$ W33 lines.  Its complement
+among the $40$ lines is one of the Pass~4585 protected $16$-line supports.
+The full orbit of this complement is exactly the $45$ protected supports; its
+$PSp(4,3)$ stabilizer has order $576$ and contains $H$ with index three.
+Consequently the complement map is an explicit equivariant bijection
+\[
+ 135\text{ maximal partial spreads}\longrightarrow45\text{ packets}
+ \cong45\text{ protected supports}\cong45\text{ center-quad/E6 objects}.
+\]
+The final identification is the frozen Pass~4616 intertwiner.
+
+\paragraph{Pass 4625: one unlabeled $45\times40$ matrix reconstructs all three carriers.}
+Let $T$ be the center-quad eight-point support incidence.  Its exact integer
+Smith form is
+\[
+ \boxed{\operatorname{SNF}(T)=1^{15}\,2^{10}\,0^{15}},
+\]
+so $\operatorname{rank}_{\mathbb Q}T=25$, every odd-characteristic rank is $25$,
+and only characteristic two drops to $15$.  Row intersections reconstruct
+$\operatorname{SRG}(45,32,22,24)$ through $TT^T=8I+2A_{45}$; column
+co-occurrences reconstruct the point-side W33 graph through
+$T^TT=8I+2A_{\rm point}+J$.  Over $\mathbb F_2$, $\ker T$ is the
+$[40,25,4]$ context code; its exactly $40$ minimum words are the W33 lines,
+and their intersection graph reconstructs the inequivalent line-side W33
+carrier.  Thus the single incidence object intrinsically contains the E6 $45$,
+W33 points, and W33 lines.
+
+\paragraph{Pass 4626: the outer nonsplitting is one explicit descent bit.}
+Choose a $PSp$ splitting $Q_{12}=U\oplus W$ with $U$ the unique outer-stable
+six-space.  Every inner generator is block diagonal, whereas the W33 outer
+involution is
+\[
+ \begin{pmatrix}A&B\\0&D\end{pmatrix},\qquad \operatorname{rank}B=6.
+\]
+Direct intertwiner equations give
+$\dim_{\mathbb F_2}\operatorname{Hom}_{PSp}(W,U)=1$.  The two $PSp$-equivariant
+complements therefore form an $\mathbb F_2$ torsor and the outer involution
+exchanges them.  The obstruction restricts to zero on $PSp$ and is the nonzero
+affine $C_2$ cocycle on this one-dimensional complement torsor.  This computes
+the descent class in the already split inner problem; it is not asserted to be
+a complete computation of $\operatorname{Ext}^1_{PGSp}(U_6,U_6)$.
+
+\paragraph{Pass 4627: the Hermitian rank problem is exactly a two-saturation theorem.}
+For $Q^-(5,q)=GQ(q,q^2)$ with point-line incidence $N$, the point graph has
+nontrivial eigenvalues $q-1$ and $-(q^2+1)$, the latter with multiplicity
+$q(q^2-q+1)$.  Since
+\[
+ NN^T=(q^2+1)I+A_{\rm point},
+\]
+the rational kernel is exactly the negative eigenspace and therefore
+\[
+ \boxed{\operatorname{rank}_{\mathbb Q}N=q^4+q^2+1}.
+\]
+For odd $q$, the still-open binary formula is now equivalent to saying that
+modulo two introduces no extra rank loss: all nonzero Smith invariant factors
+are odd, or equivalently the integral incidence image is $2$-saturated.  The
+$q=3,5,7$ cases satisfy this exactly; no all-$q$ proof is claimed.
+
+\paragraph{Pass 4628: the noncanonical $\mathbb F_4$ choice in the Golay bridge is the W33 point carrier.}
+On the outer-stable $U_6$, compatible unoriented $\mathbb F_4$ structures are
+pairs $\{J,J^2\}$ with $J^2+J+I=0$.  The actual $PGSp$ action contains $80$
+oriented $J$, hence $40$ such structures.  For a representative,
+\[
+ |C_{PGSp}(J)|=648,\qquad |N_{PGSp}(\langle J\rangle)|=1296.
+\]
+That normalizer fixes exactly one W33 point and no W33 line, proving by an
+explicit stabilizer-fixed-point orbit map that the $40$ compatible $\mathbb F_4$
+structures are exactly the point-side W33 $G$-set.  Thus W33 points parameterize
+the extra choice used in Pass~4592 before the hexacode $[18,6,8]$ and frozen
+Pass~4615 MOG-sextet completion.  The Golay coordinate embedding itself is not
+$PGSp$-equivariant.
+
+\paragraph{Pass 4629 (outside the box): the three-spread lift is a genuine outer $S_3$ fiber.}
+The $PSp$ support stabilizer has order $576$ and quotient $C_3$ over the common
+$H_{192}$.  Adjoining the outer similitude doubles the support stabilizer to
+$1152$.  Its induced action on the three maximal partial spreads is all six
+permutations, with kernel exactly $H$.  Hence
+\[
+ \boxed{1\longrightarrow H_{192}\longrightarrow\widetilde H_{1152}
+ \longrightarrow S_3\longrightarrow1},
+\]
+and the $PSp$ image is the even subgroup $A_3=C_3$.
+
+\paragraph{Pass 4630 (outside the box): $H_{10}$ is binary homology, CSS logic, and Smith two-torsion at once.}
+Because $TT^T=0$ over $\mathbb F_2$,
+\[
+ \mathbb F_2^{45}\xrightarrow{T^T}\mathbb F_2^{40}
+ \xrightarrow{T}\mathbb F_2^{45}
+\]
+is a complex with middle homology
+$\ker T/\operatorname{im}T^T=C^\perp/C=H_{10}$.  The reduction modulo two of
+the integral kernel of $T$ is exactly $\operatorname{row}_{\mathbb F_2}T$.
+Therefore the Bockstein $[x]\mapsto[Tx/2]$ identifies $H_{10}$ with the
+$(\mathbb Z/2)^{10}$ torsion supplied by the ten Smith factors $2$.  Taking
+$H_X=H_Z=T$ gives the same $[[40,10,4]]$ CSS code, with the ten-dimensional
+middle homology as its logical space.
+
+\paragraph{Pass 4631 (outside the box): the $45\times40$ matrix is E6 incidence on $\mathbb F_4$-choice moduli.}
+Combining Passes~4625 and 4628, the $40$ columns of $T$ are the compatible
+$\mathbb F_4$ structures on $U_6$.  Every E6/center-quad row contains eight of
+them and every structure lies on nine rows.  A pair of structures lies together
+on three rows for exactly the $240$ W33-adjacent pairs and on one row for the
+other $540$.  Finally the exactly $40$ minimum weight-four words of $\ker T$ are
+minimal even tetrads of $\mathbb F_4$ structures and are precisely the W33
+lines.  Thus both W33 point and line geometry sits inside the finite moduli of
+hexacode-compatible choices.
+
+\begin{quote}\small
+\textbf{Evidence boundary.}
+All positive claims above are exact finite incidence, integral-lattice,
+representation, code, or group-action statements with executable certificates.
+The all-odd-$q$ Hermitian binary-rank equality remains open and has only been
+reduced to $2$-saturation.  The $\mathbb F_4$/Golay bridge identifies a choice
+space, not an embedding $PGSp(4,3)\subset M_{24}$, and none of the finite E6,
+D4, $S_3$, Bockstein, or CSS structures is promoted to a physical field,
+particle, spacetime, or anomaly without an independent dynamics theorem.
+\end{quote}
