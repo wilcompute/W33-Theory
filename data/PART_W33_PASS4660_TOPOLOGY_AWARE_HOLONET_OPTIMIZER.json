@@ -1,0 +1,37 @@
+{
+  "pass": 4660,
+  "exact_topology": {
+    "W33": {"vertices":40,"edges":240,"degree":12,"diameter":2,"mean_distance":1.6923076923076923,"edge_connectivity":12,"edge_load_census":{"5.5":240},"max_fractional_shortest_path_edge_load":5.5},
+    "selected135": {"vertices":135,"edges":810,"degree":12,"diameter":3,"mean_distance":2.4029850746268657,"edge_connectivity":12,"edge_load_census":{"26.833333333333":810},"max_fractional_shortest_path_edge_load":26.833333333333385},
+    "selected270": {"vertices":270,"edges":2025,"degree":15,"diameter":3,"mean_distance":2.449814126394052,"edge_connectivity":15,"edge_load_census":{"38.377777777778":1620,"66.155555555556":405},"max_fractional_shortest_path_edge_load":66.15555555555568},
+    "Levi160": {"vertices":160,"edges":480,"degree":6,"diameter":4,"mean_distance":3.3207547169811322,"edge_connectivity":6,"edge_load_census":{"88.0":480},"max_fractional_shortest_path_edge_load":88.0}
+  },
+  "selected270_shortcut_layer": {
+    "high_load_edges": 405,
+    "low_load_edges": 1620,
+    "high_load_components": 27,
+    "component_vertices": 10,
+    "component_graph": "Petersen",
+    "components_equal_internal_degree27_ten-line_carriers": true,
+    "after_removing_high_orbit": {"connected":true,"degree":12,"diameter":4,"edge_connectivity":12,"uniform_shell":"1,12,67,160,30"}
+  },
+  "hardware_model": {
+    "published_sensitivity_anchors": {"waveguide_loss_db_per_m":1.77,"detector_efficiency":0.98,"MZI_switch":"0.38 dB, 14 us","EO_switch":"1.05 dB midpoint, 1.27 ns fall time"},
+    "design_assumptions": {"edge_length_m":0.01,"group_index":1.4642,"switch_stages_per_hop":"ceil(log2 degree)"},
+    "warning": "These published component values come from different demonstrations and are used only as sensitivity anchors."
+  },
+  "MZI_sensitivity": {
+    "W33":{"hop_loss_db":1.5377,"mean_end_to_end_success":0.5458114754778085,"mean_end_to_end_latency_s":0.00009476931342230815},
+    "selected135":{"hop_loss_db":1.5377,"mean_end_to_end_success":0.4301837577592773,"mean_end_to_end_latency_s":0.00013456728154198844},
+    "selected270":{"hop_loss_db":1.5377,"mean_end_to_end_success":0.42137735029512385,"mean_end_to_end_latency_s":0.00013718971072810307},
+    "Levi160":{"hop_loss_db":1.1577,"mean_end_to_end_success":0.41490160909709545,"mean_end_to_end_latency_s":0.00013947186030037828}
+  },
+  "EO_sensitivity": {
+    "W33":{"hop_loss_db":4.2177,"mean_end_to_end_success":0.21144686029670232,"mean_end_to_end_latency_s":8.67957615430893e-9},
+    "selected135":{"hop_loss_db":4.2177,"mean_end_to_end_success":0.11815115644702298,"mean_end_to_end_latency_s":1.2324527063072314e-8},
+    "selected270":{"hop_loss_db":4.2177,"mean_end_to_end_success":0.10922193031141965,"mean_end_to_end_latency_s":1.2564705798236669e-8},
+    "Levi160":{"hop_loss_db":3.1677,"mean_end_to_end_success":0.107938402957542,"mean_end_to_end_latency_s":1.2814262642417523e-8}
+  },
+  "theorem": "The topology-aware optimizer exposes an exact 405-edge high-load shortcut layer in the selected270 router. It decomposes into 27 Petersen graphs carried by the internal 27 Schlaefli objects; removing it leaves a connected 12-regular, 12-edge-connected diameter-4 base. Under explicit component-mixed sensitivity assumptions the architecture remains Pareto rather than admitting a universal scalar winner.",
+  "boundary": "Exact finite routing/congestion plus parameterized hardware sensitivity; no measured Holonet performance is claimed."
+}
