@@ -1,0 +1,40 @@
+{
+  "pass": 4714,
+  "packets": 45,
+  "projected_triples": 270,
+  "pair_graph": {
+    "parameters": [45, 12, 3, 3],
+    "maximal_K5": 27,
+    "local_graph": "3 K4"
+  },
+  "hypergraph": {
+    "description": "all 10 three-subsets of each of the 27 K5 lines",
+    "point_degree": 18,
+    "triple_size": 3
+  },
+  "GQ": {
+    "order": [4, 2],
+    "points": 45,
+    "lines": 27,
+    "point_lines": 3,
+    "line_points": 5,
+    "dual_point_graph": [27, 10, 1, 5]
+  },
+  "triangle_incidence": {
+    "shape": [45, 270],
+    "rank_Q": 45,
+    "ranks_mod": {"2": 45, "3": 44, "5": 45, "7": 45},
+    "SNF_nonzero": {"1": 44, "3": 1},
+    "gram": "18 I + 3 A45"
+  },
+  "point_line_incidence": {
+    "shape": [45, 27],
+    "rank_Q": 21,
+    "ranks_mod": {"2": 21, "3": 21, "5": 21, "7": 21},
+    "SNF_nonzero": {"1": 21},
+    "gram": "3 I + A45"
+  },
+  "automorphism_group_order": 51840,
+  "theorem": "The weight-132 packet shell plus the weight-3 dual minimum shell intrinsically reconstruct GQ(4,2): the 45-packet pair graph is SRG(45,12,3,3), its 27 maximal K5s are the GQ lines, and the 270 projected triples are exactly all three-subsets of those lines. The dual line graph is SRG(27,10,1,5).",
+  "boundary": "Exact binary-code/design theorem; no protected-45 identification is used in the reconstruction."
+}
