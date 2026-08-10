@@ -1,0 +1,10 @@
+{
+  "apartment_deck_class":{"PGSp_fixed_F2_line":true,"PGSp_invariant_Q_lift":false,"PSp_vertex_stabilizer":96,"descended_base_vertices":270},
+  "boundary":"Exact obstruction to the natural equivariant pullback/pushforward route. It does not forbid unrelated nonlinear correspondences.",
+  "comparison":{"abstract_1D_F2_module_isomorphism_not_promoted":true,"same_cohomology_object":false,"shared_feature":"nonzero characteristic-two invariant with no invariant rational oriented lift"},
+  "equivariant_base_map_test":{"270_to_40":false,"40_to_270":false,"reason":"transitive G-map requires stabilizer inclusion; 648 and 96 are mutually nondivisible"},
+  "implementation_alias":4768,
+  "pass":4792,
+  "support12_parity_class":{"PSp_vertex_stabilizer":648,"cohomology_representative":"all-edge F2 cochain","cycle_dimension":201,"edge_stabilizer":108,"edges":240,"endpoint_reversers":54,"even_cycle_dimension":200,"invariant_characteristic_zero_oriented_lift":false,"nonzero_triangle_witness":true,"base":"40-vertex W33 line-intersection graph"},
+  "theorem":"The even-cycle parity quotient and the apartment deck line are parallel characteristic-two orientation-collapse invariants, but they live on inequivalent homogeneous bases. Stabilizer orders 648 and 96 forbid any PSp-equivariant base map in either direction, so there is no canonical cohomological identification."
+}
