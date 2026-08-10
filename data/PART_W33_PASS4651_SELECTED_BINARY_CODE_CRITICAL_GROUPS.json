@@ -1,0 +1,20 @@
+{
+  "pass": 4651,
+  "binary_left_kernel_code": {
+    "parameters": "[135,16,30]_2",
+    "weight_enumerator": {"0":1,"30":36,"45":432,"48":630,"54":1120,"57":2160,"61":4320,"62":3780,"64":7695,"65":5616,"69":11520,"70":10368,"72":7680,"73":6480,"77":2160,"78":1080,"80":378,"81":80},
+    "minimum_words": 36,
+    "minimum_word_pair_intersection": "6 for all 630 pairs",
+    "minimum_word_point_degree": 8,
+    "minimum_word_stabilizer_order": 720,
+    "fixed_W33_spreads_per_minimum_stabilizer": 1,
+    "G_set_identification": "36 minimum words are PSp(4,3)-equivariantly the W33 spread carrier"
+  },
+  "critical_groups": {
+    "selected_point_graph": {"order_factorization":"2^150 * 3^166 * 5^23","p_ranks":{"2":62,"3":74,"5":23}},
+    "selected_line_graph": {"order_factorization":"2^284 * 3^436 * 5^23","p_ranks":{"2":164,"3":164,"5":23}},
+    "line_over_point_order_ratio": "2^134 * 3^270"
+  },
+  "theorem": "The binary relation code of the selected 135_6-270_3 geometry is [135,16,30] with exactly 36 minimum words, and those minimum words are the W33 spread G-set. The associated point/line critical-group orders and 2,3,5-ranks are exact.",
+  "boundary": "Finite coding/critical-group theorem; no physical error threshold follows from minimum distance alone."
+}
