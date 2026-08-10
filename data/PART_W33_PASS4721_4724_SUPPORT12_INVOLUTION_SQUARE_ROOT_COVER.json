@@ -1,0 +1,67 @@
+{
+  "4721_support12_disjointness": {
+    "component_graph": "K3",
+    "components": 540,
+    "degree": 2,
+    "distinct_residues": 270,
+    "residual_lines": 4,
+    "triangle_union_lines": 36,
+    "triangles_per_residue": 2,
+    "vertices": 1620
+  },
+  "4722_involution_resolution": {
+    "PSp_order": 25920,
+    "fixed_line_census": {
+      "16": 45,
+      "4": 270
+    },
+    "inner_involutions_total": 315,
+    "old_pass1830_erratum": "Its 2880 orbit used a permutation group on W33 point positions on a set of W33 line indices. Under the induced line action the four-line residues form the correct 270-orbit.",
+    "residue_stabilizer_order_PSp": 96,
+    "residues_equal_four_fixed_line_sets": true,
+    "unique_involution_per_residue": true
+  },
+  "4723_square_root_double_cover": {
+    "PGSp_order": 51840,
+    "equivariance_boundary": "Canonical as a PSp(4,3)-G-set after choosing one of the two inverse root sheets. The full PGSp(4,3) extensions differ by the outer twist; no untwisted PGSp identification is claimed.",
+    "four_fixed_line_square_roots": 2,
+    "four_fixed_roots_are_inverse_pair": true,
+    "full_PGSp_root_centralizer": 96,
+    "full_PGSp_triangle_stabilizer": 96,
+    "full_extensions_equal": false,
+    "full_extensions_intersection_order": 48,
+    "inner_stabilizers_equal": true,
+    "outer_order4_orbit_PSp": 540,
+    "outer_square_roots_per_representative_involution": 8,
+    "root_centralizer_order_PSp": 48,
+    "triangle_orbit_PSp": 540,
+    "triangle_stabilizer_order_PSp": 48,
+    "two_covers_share_base": "270 four-line involution residues"
+  },
+  "4724_residual_incidence": {
+    "binary_residue_span_rank": 30,
+    "block_size": 4,
+    "blocks": 270,
+    "gram_identity": "B B^T = 27 I + 3 (J-I-A_*)",
+    "involution_fixed_disjointness_triangles": 8,
+    "involution_fixed_support12_thickenings": 24,
+    "real_gram_spectrum": {
+      "108": 1,
+      "18": 24,
+      "36": 15
+    },
+    "real_rank": 40,
+    "replication_per_line": 27,
+    "residues_per_meeting_pair": 0,
+    "residues_per_skew_pair": 3,
+    "skew_line_pairs": 540
+  },
+  "boundary": "Exact finite geometry/group/code theorem. The correction is to an action-domain error in Pass 1830. Cardinalities alone are not used: fixed sets, stabilizers, centralizers, square maps, orbits, and the incidence Gram identity are all checked explicitly. No physical interpretation is inferred.",
+  "passes": [
+    4721,
+    4722,
+    4723,
+    4724
+  ],
+  "theorem": "The 1620 support-12 apartment thickenings carry a canonical 2-regular disjointness relation whose 540 K3 components and the 540 four-fixed-line outer order-four elements are isomorphic PSp(4,3)-sets. Both are two-fold covers of the 270 four-line fixed sets of the inner involution class, resolving the old unnamed-270 frontier. The 270 residues additionally factor the complement of the W33 line graph by B B^T = 27I + 3(J-I-A_*)."
+}
