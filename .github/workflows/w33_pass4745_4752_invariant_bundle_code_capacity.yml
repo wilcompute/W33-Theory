@@ -11,6 +11,7 @@ on:
       - 'analysis/w33_pass4750_residue_circuit_chain_complex.py'
       - 'analysis/w33_pass4751_s3_fourier_voltage.py'
       - 'analysis/w33_pass4752_deck_normalizer_twist_comparison.py'
+      - 'tests/test_w33_pass4745_4752_invariant_bundle_code_capacity.py'
       - '.github/workflows/w33_pass4745_4752_invariant_bundle_code_capacity.yml'
   workflow_dispatch:
 permissions:
@@ -28,8 +29,8 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
       - name: Install exact-analysis dependencies
-        run: python -m pip install --disable-pip-version-check numpy scipy networkx sympy
-      - name: Execute all eight passes and retain diagnostics
+        run: python -m pip install --disable-pip-version-check numpy scipy networkx sympy pytest
+      - name: Execute all eight passes and frozen regression
         shell: bash
         run: |
           set +e
@@ -53,6 +54,12 @@ jobs:
             echo "rc=$here" | tee -a "$LOG"
             if [ "$here" -ne 0 ]; then rc=$here; break; fi
           done
+          if [ "$rc" -eq 0 ]; then
+            echo '===== frozen cross-certificate regression =====' | tee -a "$LOG"
+            python -m pytest -q tests/test_w33_pass4745_4752_invariant_bundle_code_capacity.py 2>&1 | tee -a "$LOG"
+            rc=${PIPESTATUS[0]}
+            echo "pytest_rc=$rc" | tee -a "$LOG"
+          fi
           echo "$rc" > "$STATUS"
           exit 0
       - name: Commit execution evidence even on theorem failure
