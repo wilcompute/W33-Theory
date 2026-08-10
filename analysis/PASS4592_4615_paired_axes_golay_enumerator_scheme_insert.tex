@@ -1,0 +1,190 @@
+% Passes 4592--4615 (collision-safe canonical numbering): paired cubic axes,
+% exact Golay/hexacode/MOG bridge, support-10 enumerator, S186 composition
+% series, C8 phase boundary, apartment-fiber association scheme, all-degree
+% unary no-go, Sp(6,2) enlargement, and periodic/CSS coding.
+\subsection{The two cubic incidence axes fuse to simplex/Hamming and enter Golay through the hexacode (Passes 4592--4615)}
+\label{sec:pass4592-4615-paired-axes-golay}
+
+\paragraph{Pass 4592: the two self-orthogonal cubic axes are complementary restrictions of one simplex code.}
+Pass~4575 gave the two rank-six binary codes
+\[
+ C_{36}=[36,6,16],\qquad C_{27}=[27,6,12]
+\]
+by evaluating the same $x\in U_6\cong\mathbb F_2^6$ on, respectively, the
+$36$ anisotropic and $27$ nonzero singular vectors of the minus quadratic
+space.  Keep the same message $x$ on both coordinate sets and concatenate.
+For nonzero singular $x$ the two partial weights are $16+16$, while for
+anisotropic $x$ they are $20+12$.  Hence every nonzero concatenated word has
+weight $32$ and
+\[
+ \boxed{C_{63}=[63,6,32],\qquad W_{C_{63}}(z)=1+63z^{32}.}
+\]
+Thus $C_{63}$ is the binary six-dimensional simplex code and
+$C_{63}^{\perp}=[63,57,3]$ is the Hamming code.  Its $63$ coordinates are
+literally all nonzero vectors of $\mathbb F_2^6$; the original $27\mid36$
+split is the singular/anisotropic coloring supplied by the minus quadratic form.
+The full coordinate symmetry of the uncolored simplex is $GL(6,2)$, whereas
+$O^-(6,2)\cong PGSp(4,3)$ is the subgroup preserving this quadratic coloring.
+
+Choose a compatible $\mathbb F_4$-structure
+$\mathbb F_2^6\cong\mathbb F_4^3$.  The standard hexacode
+$\mathcal H_6=[6,3,4]_{4}$ has
+\[
+ W_{\mathcal H_6}(z)=1+45z^4+18z^6.
+\]
+Concatenating each $\mathbb F_4$ symbol with the binary inner simplex
+$[3,2,2]$ produces a binary
+\[
+ \boxed{[18,6,8],\qquad 1+45z^8+18z^{12}.}
+\]
+The repository's explicit cyclic construction of the extended binary Golay
+code $G_{24}$ contains exactly such a six-dimensional subcode: the first six
+message generators vanish on six coordinates, and after restriction to the
+other eighteen an explicit frozen coordinate permutation identifies the code
+word-for-word with the binary concatenated hexacode.  This is an actual code
+embedding, not a parameter match:
+\[
+ C_{36}\oplus_x C_{27}
+ \longrightarrow [63,6,32]
+ \longrightarrow \mathcal H_6
+ \longrightarrow [18,6,8]\subset G_{24}.
+\]
+The middle arrow requires a choice of compatible $\mathbb F_4$ structure and is
+therefore not claimed canonical under $O^-(6,2)$.
+
+\paragraph{Pass 4593: the exact apartment-code census reaches support ten.}
+A native fixed-weight XOR/popcount kernel exhausts all
+\[
+ \binom{40}{10}=847660528
+\]
+ten-row coefficient subsets.  The complete support-ten spectrum has $147$
+distinct weights, ranging from $582$ to $1080$, with multiplicities $2160$ at
+$582$ and $36$ at $1080$.  Together with Pass~4572, all labelled support
+spectra are now exact through support ten.  The complete numerical
+$[1620,39,162]$ enumerator remains open because supports $11$ through $20$ have
+not all been accumulated.
+
+\paragraph{Pass 4601: one complete eleven-factor extension skeleton is explicit inside $S_{186}$.}
+Lifting the deterministic MeatAxe witnesses of Pass~4571 gives the exact
+composition series
+\[
+ \boxed{0<14<54<60<74<80<120<126<134<140<146<186}
+\]
+with ordered simple factor dimensions
+\[
+ \boxed{14,40,6,14,6,40,6,8,6,6,40.}
+\]
+This refines the previously proved multiset $40^3+14^2+8+6^5$.  The displayed
+series is exact, but the complete unlabeled submodule lattice, radical/socle
+series and all extension classes are not claimed classified.
+
+\paragraph{Pass 4602: the exceptional $GQ(2,2)$ $C_8$ collision disappears already in $GQ(2,4)$.}
+Pass~4573 showed that in $GQ(2,2)$ coefficient $36$ is shared by all $90$
+apartments and $60$ non-apartment $K_{1,3}$ supports.  Exhausting every
+four-line support of $Q^-(5,2)=GQ(2,4)$ gives the full primitive-$C_8$
+degree-four spectrum and finds exactly $1080$ supports with coefficient $60$;
+they are exactly the $1080$ apartments.  Thus the three exact anchors are
+\[
+ GQ(2,2):\text{ fail},\qquad GQ(2,4):\text{ succeed},\qquad
+ GQ(3,3):\text{ succeed at coefficient }712.
+\]
+A closed symbolic criterion in arbitrary $(s,t)$ remains open.  The universal
+fallback remains Pass~4523: $C_6^{(2)}$ reconstructs line adjacency for every
+thick GQ, after which apartments are induced $C_4$s.
+
+\paragraph{Pass 4603: the $135$ apartment fibers form an imprimitive five-class association scheme.}
+For two distinct twelve-apartment fibers, let $n_2$ count cross-fiber pairs
+sharing exactly two W33 lines.  The five values
+\[
+ n_2\in\{0,2,6,12,48\}
+\]
+together with the diagonal satisfy every intersection-number axiom of a
+symmetric five-class association scheme.  The nontrivial valencies are
+\[
+ \boxed{24,12,32,64,2.}
+\]
+The valency-two $n_2=48$ relation is $45K_3$.  Quotienting these $45$ triples,
+there are only two cross-patterns: $6$ relations of type $n_2=12$ plus $3$ of
+type $n_2=6$, or $6$ of type $n_2=0$ plus $3$ of type $n_2=2$.  Joining the
+first type gives
+\[
+ \boxed{\operatorname{SRG}(45,32,22,24)}.
+\]
+Hence the earlier $135\to45$ support quotient is an exact imprimitivity quotient
+of the apartment-fiber association scheme.
+
+\paragraph{Pass 4604: the unary protected-to-cubic bridge is impossible at every degree.}
+Under $G=PSp(4,3)$, the protected $V_8$ has nonzero orbits of sizes $135$ and
+$120$, while the natural cubic $U_6$ has nonzero orbits of sizes $27$ and $36$.
+Constant-fiber arithmetic rules out every nonzero orbit map except potentially
+$135\to27$, which would require a block system of block size five.  The actual
+stabilizer of a protected singular point has order $192$ and suborbit sizes
+\[
+ \boxed{1,1,1,12,12,12,32,32,32},
+\]
+so no block containing the point can have size five.  Therefore every unary
+$PSp(4,3)$-equivariant set map
+\[
+ \boxed{V_8\longleftrightarrow U_6}
+\]
+is zero.  This supersedes the degree-$\le2$ polynomial no-go.  The Pass~4583
+exterior-square bridge survives because it is intrinsically a two-input map
+$(v,w)\mapsto v\wedge w$ through a larger module.
+
+\paragraph{Pass 4605 (outside the box): forgetting the quadratic color enlarges the $63$-point carrier to symplectic geometry.}
+Keep the alternating polar form $B$ on the $63$ nonzero vectors of
+$\mathbb F_2^6$ and join $x,y$ when $B(x,y)=1$.  The resulting graph is
+\[
+ \boxed{\operatorname{SRG}(63,32,16,16)},
+\]
+the symplectic graph for $Sp(6,2)$, whose natural linear group has order
+$1451520$.  The minus-quadratic color-preserving group $O^-(6,2)$ has order
+$51840$ and index $28$.  The $64$ quadratic refinements
+$q_v(x)=q(x)+B(v,x)$ split into $28$ minus and $36$ plus refinements; relative
+to a chosen minus form, the $63$ nonzero shifts split as $27+36$.
+
+\paragraph{Pass 4606 (outside the box): the two axes are a two-periodic differential and yield CSS codes.}
+Because Pass~4575 proved
+$RR^T=R^TR=0$ over $\mathbb F_2$, the cubic incidence gives the exact
+$2$-periodic complex
+\[
+ \cdots\to\mathbb F_2^{27}\xrightarrow{R^T}\mathbb F_2^{36}
+ \xrightarrow{R}\mathbb F_2^{27}\xrightarrow{R^T}\cdots .
+\]
+With $\operatorname{rank}R=6$, its two homology dimensions are
+\[
+ \boxed{24\quad\text{and}\quad15.}
+\]
+These happen to equal the two nontrivial W33 adjacency multiplicities, but no
+module identification is inferred from dimension alone.  The two individual
+self-orthogonal axes give CSS codes $[[36,24,3]]$ and $[[27,15,3]]$, while the
+fused simplex check space gives
+\[
+ \boxed{[[63,51,3]]},
+\]
+the binary quantum Hamming code for $m=6$.
+
+\paragraph{Pass 4615 (outside the box): the Golay ambient code uniquely completes the six-dimensional section to a MOG sextet.}
+The $45$ weight-eight words of the embedded $[18,6,8]$ section are Golay octads.
+On the eighteen active coordinates every point lies in $20$ of them, and pair
+frequencies are $10$ on exactly $18$ pairs and $8$ on the other $135$.  The
+frequency-$10$ graph is exactly six disjoint triangles, reconstructing the six
+binary $[3,2,2]$ inner-code columns.  The section is zero on six Golay
+coordinates.  Testing all $6!=720$ assignments of these six positions to the
+six triangles yields exactly one assignment for which the six resulting tetrads
+form a Golay sextet, i.e. every union of two tetrads is a Golay octad.  Thus the
+paired-axis hexacode section internally reconstructs and is uniquely completed
+to a six-column MOG/sextet in the repository's frozen coordinate model.
+
+\begin{quote}\small
+\textbf{Evidence boundary.}
+All claims above are exact finite code, group-action, association-scheme or
+binary-module statements backed by executable certificates.  The full apartment
+weight enumerator remains open beyond support ten, the all-$(s,t)$ $C_8$
+criterion remains open, and the complete $S_{186}$ submodule/Ext lattice is not
+claimed closed.  The Golay bridge is a code embedding after choosing an
+$\mathbb F_4$ structure; it is not a claim that $O^-(6,2)$ embeds in $M_{24}$.
+Indeed the group orders do not permit such an embedding.  None of these finite
+structures is promoted to a physical particle, field or hardware channel without
+an additional dynamics theorem.
+\end{quote}
