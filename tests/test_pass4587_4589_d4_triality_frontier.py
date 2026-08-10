@@ -51,3 +51,16 @@ def test_pass4589_selected_graph_certificate():
     assert g["spectrum"] == {"-6": 15, "-3": 24, "0": 60, "3": 20, "6": 15, "12": 1}
     l = d["selected_line_intersection_graph"]
     assert (l["vertices"], l["degree"], l["edges"]) == (270, 15, 2025)
+
+
+def test_pass4591_rank120_module_no_go():
+    d = load("PART_W33_PASS4591_RANK120_ANISOTROPIC_MODULE_NO_GO.json")
+    assert d["modules"] == {
+        "anisotropic_permutation_degree": 120,
+        "selected_line_incidence_rowspace_dimension_Q": 120,
+    }
+    assert d["shallow_generator_trace_pairs"] == [[3, 3]] * 5
+    w = d["separating_element"]
+    assert w["order"] == 6
+    assert w["selected_incidence_rowspace_character"] == -1
+    assert w["anisotropic_permutation_character"] == 3
