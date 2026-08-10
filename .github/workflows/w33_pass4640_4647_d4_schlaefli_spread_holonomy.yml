@@ -1,0 +1,59 @@
+name: W33 Passes 4640-4647 evidence
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass4592_degree27_schlaefli_interrogation.py'
+      - 'analysis/w33_pass4641_split_octonion_triality.py'
+      - 'analysis/w33_pass4589_apartment_selected_singular_graph.py'
+      - 'analysis/PASS4640_4647_d4_schlaefli_spread_holonomy_insert.tex'
+      - 'data/PART_W33_PASS4640_*'
+      - 'data/PART_W33_PASS4641_*'
+      - 'data/PART_W33_PASS4642_*'
+      - 'data/PART_W33_PASS4643_*'
+      - 'data/PART_W33_PASS4644_*'
+      - 'data/PART_W33_PASS4645_*'
+      - 'data/PART_W33_PASS4646_*'
+      - 'data/PART_W33_PASS4647_*'
+      - 'tests/test_w33_pass4640_4647_d4_schlaefli_spread_holonomy.py'
+      - '.github/workflows/w33_pass4640_4647_d4_schlaefli_spread_holonomy.yml'
+  workflow_dispatch:
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install focused dependencies
+        run: python -m pip install --upgrade pip numpy pytest
+      - name: Regenerate action-level Schlaefli witness
+        run: PYTHONPATH=analysis python analysis/w33_pass4592_degree27_schlaefli_interrogation.py
+      - name: Regenerate explicit split-octonion triality witness
+        run: PYTHONPATH=analysis python analysis/w33_pass4641_split_octonion_triality.py
+      - name: Regenerate corrected selected-line graph witness
+        run: PYTHONPATH=analysis python analysis/w33_pass4589_apartment_selected_singular_graph.py
+      - name: Compare regenerated cores to canonical certificates
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          d=pathlib.Path('data')
+          p4640=json.loads((d/'PART_W33_PASS4640_DEGREE27_SCHLAEFLI_CARRIER.json').read_text())
+          p4592=json.loads((d/'PART_W33_PASS4592_DEGREE27_SCHLAEFLI_INTERROGATION.json').read_text())
+          assert p4592['group_order']==p4640['group_order']==25920
+          assert p4592['point_stabilizer_order']==p4640['point_stabilizer_order']==960
+          assert p4592['subdegrees']==p4640['subdegrees']==[1,10,16]
+          assert p4592['degree16_orbital_graph']==p4640['degree16_orbital_graph']
+          p4641=json.loads((d/'PART_W33_PASS4641_SPLIT_OCTONION_TRIALITY_NORMALIZER.json').read_text())
+          r4641=json.loads((d/'PART_W33_PASS4641_SPLIT_OCTONION_TRIALITY_REGEN.json').read_text())
+          assert r4641['norm_multiplicative_pairs']==p4641['explicit_triality']['norm_multiplicative_exhaustive_pairs']==65536
+          assert r4641['maximal_singular_spaces_exhausted']==270
+          assert r4641['incidence_failures']==[0,0,0]
+          p4642=json.loads((d/'PART_W33_PASS4642_SELECTED_LINE_SMITH_COHERENT.json').read_text())
+          p4589=json.loads((d/'PART_W33_PASS4589_APARTMENT_SELECTED_SINGULAR_GRAPH.json').read_text())
+          assert p4589['incidence']['rank_Q']==p4642['incidence']['rank_Q']==120
+          assert p4589['incidence']['rank_F2']==p4642['incidence']['rank_F2']==119
+          assert p4589['selected_line_intersection_graph']['spectrum']==p4642['corrected_selected_line_graph_spectrum']
+          PY
+      - name: Run focused frozen regression
+        run: PYTHONPATH=analysis pytest -q tests/test_w33_pass4640_4647_d4_schlaefli_spread_holonomy.py
