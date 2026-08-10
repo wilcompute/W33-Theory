@@ -1,0 +1,69 @@
+name: Passes 4785-4792 Support12 Grid Cycle Golay
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4761_thickening_even_cycle_code.py'
+      - 'analysis/w33_pass4762_thickening_partner_rook45.py'
+      - 'analysis/w33_pass4763_support12_reconstructs_srg45.py'
+      - 'analysis/w33_pass4764_rook36_rectangle_partner_action.py'
+      - 'analysis/w33_pass4765_dual_edge_code_css_carrier_separation.py'
+      - 'analysis/w33_pass4766_grid_code_point_edge_bridge.py'
+      - 'analysis/w33_pass4767_leech_neighbor_golay_parity_matroid.py'
+      - 'analysis/w33_pass4768_deck_vs_even_cycle_parity_boundary.py'
+      - 'analysis/w33_pass4785_4792_canonical_relay.py'
+      - 'analysis/PASS4785_4792_support12_grid_cycle_golay_insert.tex'
+      - 'analysis/PASS4785_4792_support12_grid_cycle_golay_index_insert.html'
+      - 'data/PART_W33_PASS478*.json'
+      - 'data/PART_W33_PASS479*.json'
+      - 'docs/support12-grid-cycle-golay.html'
+      - 'tests/test_w33_pass4785_4792_support12_grid_cycle_golay.py'
+      - '.github/workflows/w33_pass4785_4792_support12_grid_cycle_golay.yml'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'holonet_machine_blueprint.tex'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pass4785-4792-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check numpy networkx pytest
+      - name: Recompute implementation witnesses and canonical relay
+        run: python analysis/w33_pass4785_4792_canonical_relay.py | tee /tmp/pass4785_4792.log
+      - name: Frozen canonical regressions
+        run: pytest -q tests/test_w33_pass4785_4792_support12_grid_cycle_golay.py
+      - name: Safe public materializer dry-run
+        run: |
+          mkdir -p evidence/pass4785_4792
+          python tools/integrate_bt3376_bt3389.py --report evidence/pass4785_4792/site.json
+          test "$(grep -c 'id=\"pass4785-4792-support12-grid-cycle-golay\"' docs/index.html)" -eq 1
+          grep -q '759 Golay octads' docs/support12-grid-cycle-golay.html
+      - uses: WtfJoke/setup-tectonic@v3
+        with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
+      - name: Compile canonical manuscripts
+        run: |
+          mkdir -p evidence/pass4785_4792
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass4785_4792/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pass4785-4792-evidence
+          path: |
+            evidence/pass4785_4792/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
