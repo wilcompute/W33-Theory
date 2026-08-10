@@ -1,0 +1,93 @@
+name: Passes 4737-4744 Residue Router Breakthrough
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4737_4738_4741_4742_residue_router_cocycle_decoder.py'
+      - 'analysis/w33_pass4739_w3q_involution_minimum_shell_probe.py'
+      - 'analysis/w33_pass4740_4744_golay_intertwiner_minor_no_go.py'
+      - 'analysis/w33_pass4743_residue_parity_hamiltonian.py'
+      - 'analysis/PASS4737_4744_*'
+      - 'docs/residue-router-involution-code.html'
+      - 'tools/integrate_pass4737_4744.py'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'holonet_machine_blueprint.tex'
+      - '.github/workflows/w33_pass4737_4744_residue_router.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pass4737-4744-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-and-public:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install exact-analysis dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy networkx sympy
+      - name: Recompute Passes 4737-4744
+        run: |
+          python analysis/w33_pass4737_4738_4741_4742_residue_router_cocycle_decoder.py | tee /tmp/pass4737_4742.log
+          python analysis/w33_pass4739_w3q_involution_minimum_shell_probe.py | tee /tmp/pass4739.log
+          python analysis/w33_pass4740_4744_golay_intertwiner_minor_no_go.py | tee /tmp/pass4740_4744.log
+          python analysis/w33_pass4743_residue_parity_hamiltonian.py | tee /tmp/pass4743.log
+      - name: Check frozen theorem boundaries
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          R=Path('data')
+          a=json.loads((R/'PART_W33_PASS4737_4738_4741_4742_RESIDUE_ROUTER.json').read_text())
+          assert a['4737_orbital_router']['action_rank']==12
+          assert a['4737_orbital_router']['cold_graph']['diameter']==4
+          assert a['4737_orbital_router']['selected270_identification']['cold_edges_match_exactly']
+          assert a['4741_decoder']['optimal_rounds']==27
+          assert a['4742_dependency_topology']['dependency_code']=='[270,240,3]'
+          assert not a['4742_dependency_topology']['same_540_G_set']
+          b=json.loads((R/'PART_W33_PASS4739_W3Q_INVOLUTION_MINIMUM_SHELL.json').read_text())
+          assert b['cases']['5']['exact_kernel_minimum']==6
+          assert b['cases']['5']['elliptic_fixed_lines']==8
+          c=json.loads((R/'PART_W33_PASS4740_4744_GOLAY_INTERTWINER_MINOR_NO_GO.json').read_text())
+          assert not c['4740_coordinate_intertwiner_no_go']['PSp_order_divides_M24']
+          assert c['4740_coordinate_intertwiner_no_go']['involution_fixed16_complement']['punctured_H10']['minimum_distance']==6
+          d=json.loads((R/'PART_W33_PASS4743_RESIDUE_PARITY_HAMILTONIAN.json').read_text())
+          assert d['syndrome_code']['parameters']=='[270,30,27]'
+          assert d['spectral_floor']['gap']==54
+          PY
+      - name: Materialize public theorem card
+        run: |
+          python tools/integrate_pass4737_4744.py
+          test "$(grep -c 'id=\"pass4737-4744-residue-router-breakthrough\"' docs/index.html)" -eq 1
+          grep -q 'selected270 router' analysis/PASS4737_4744_residue_router_breakthrough_index_insert.html
+          test -s docs/residue-router-involution-code.html
+      - uses: WtfJoke/setup-tectonic@v3
+        with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
+      - name: Compile canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "/tmp/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+      - name: Commit generated evidence and public index
+        run: |
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add \
+            data/PART_W33_PASS4737_4738_4741_4742_RESIDUE_ROUTER.json \
+            data/PART_W33_PASS4739_W3Q_INVOLUTION_MINIMUM_SHELL.json \
+            data/PART_W33_PASS4740_4744_GOLAY_INTERTWINER_MINOR_NO_GO.json \
+            data/PART_W33_PASS4743_RESIDUE_PARITY_HAMILTONIAN.json \
+            docs/index.html
+          if git diff --cached --quiet; then
+            echo 'generated evidence already materialized'
+            exit 0
+          fi
+          git commit -m 'Materialize Passes 4737-4744 exact evidence and theorem card'
+          git pull --rebase origin master
+          git push origin HEAD:master
