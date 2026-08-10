@@ -1,0 +1,36 @@
+{
+  "pass": 4766,
+  "grid_code": {
+    "parameters": "[40,24,6]_2",
+    "weight_enumerator": {
+      "0":1,"6":240,"8":1485,"10":27792,"12":169600,"14":707760,"16":1909170,"18":3491280,"20":4162560,"22":3491280,"24":1909170,"26":707760,"28":169600,"30":27792,"32":1485,"34":240,"40":1
+    }
+  },
+  "dual": {
+    "parameters": "[40,16,10]_2",
+    "description": "{y : B y in <1_points>}",
+    "weight_enumerator": {
+      "0":1,"10":252,"12":310,"14":2700,"16":7695,"18":15480,"20":12660,"22":15480,"24":7695,"26":2700,"28":310,"30":252,"40":1
+    },
+    "minimum_shell": {
+      "total":252,
+      "kernel_degree_0_2_words":216,
+      "spreads":36
+    }
+  },
+  "point_edge_bridge": {
+    "point_edges":240,
+    "star_difference_weight":6,
+    "distinct_star_differences":240,
+    "equals_complete_grid_code_minimum_shell":true,
+    "formula":"w_{pq}=Star(p) XOR Star(q) for p~q"
+  },
+  "algebraic_description": {
+    "C":"B^T(Even point coefficients)",
+    "rank_B":25,
+    "rank_C":24,
+    "dual_condition":"B y is either 0 or all-ones"
+  },
+  "theorem":"The 45 support-12 rook grids generate a [40,24,6]_2 code whose 240 minimum words are exactly the symmetric differences of point stars along the 240 W33 point edges. Its [40,16,10]_2 dual has 36 spreads and 216 kernel minimum words.",
+  "boundary":"This is a code-mediated recovery of the point-edge G-set from line coordinates; it does not contradict Pass4765, which excludes a coordinate-level PSp bijection between point edges and line edges."
+}
