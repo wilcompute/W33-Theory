@@ -1,0 +1,13 @@
+{
+  "pass": 4718,
+  "triangle_incidence_spectrum": {"54":1,"27":20,"9":24},
+  "fiber_relations": {
+    "fibers":27,
+    "triples_per_fiber":10,
+    "intersection_1":{"graph":"Petersen","degree":3,"edges_total":405},
+    "intersection_2":{"graph":"J(5,3) = complement Petersen","degree":6,"edges_total":810}
+  },
+  "shortcut_identification":{"intersection_1_relation_equals_selected270_shortcut_edges":true},
+  "theorem":"The dual-shell GQ(4,2) triangle design already contains the entire 27xPetersen shortcut fabric: within each five-point GQ line, the ten 3-subsets form a Petersen graph under intersection size one. The singular-sheet S3 connection is required only to reconstruct the cross-fiber base edges.",
+  "boundary":"Exact finite design/spectral theorem; this reveals no additional physical shortcut mechanism beyond the certified graph relation."
+}
