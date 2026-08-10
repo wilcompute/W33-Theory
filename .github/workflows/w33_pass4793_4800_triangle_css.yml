@@ -11,6 +11,20 @@ on:
       - 'analysis/w33_pass4798_*'
       - 'analysis/w33_pass4799_*'
       - 'analysis/w33_pass4800_*'
+      - 'analysis/PASS4793_4800_*'
+      - 'data/PART_W33_PASS4793_*'
+      - 'data/PART_W33_PASS4794_*'
+      - 'data/PART_W33_PASS4795_*'
+      - 'data/PART_W33_PASS4796_*'
+      - 'data/PART_W33_PASS4797_*'
+      - 'data/PART_W33_PASS4798_*'
+      - 'data/PART_W33_PASS4799_*'
+      - 'data/PART_W33_PASS4800_*'
+      - 'docs/gq42-triangle-qutrit-css.html'
+      - 'tools/integrate_pass4793_4800.py'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'holonet_machine_blueprint.tex'
       - '.github/workflows/w33_pass4793_4800_triangle_css.yml'
   workflow_dispatch:
 permissions:
@@ -62,17 +76,30 @@ jobs:
           python analysis/w33_pass4794_covering_radius_exact_milp.py 2>&1 | tee analysis/PASS4794_EXACT_MILP.log
           echo ${PIPESTATUS[0]} > analysis/PASS4794_EXACT_MILP.status
           exit 0
+      - name: Materialize public theorem card
+        run: |
+          python tools/integrate_pass4793_4800.py
+          test "$(grep -c 'id=\"pass4793-4800-blt-radius-triangle-css\"' docs/index.html)" -eq 1
+          test -s docs/gq42-triangle-qutrit-css.html
+      - uses: WtfJoke/setup-tectonic@v3
+        with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
+      - name: Compile canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "/tmp/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
       - name: Commit generated evidence before enforcing primary status
         shell: bash
         run: |
           git config user.name 'w33-evidence-bot'
           git config user.email 'w33-evidence-bot@users.noreply.github.com'
-          git add analysis/PASS4793_4800_RUN.log analysis/PASS4793_4800_RUN.status analysis/PASS4794_EXACT_MILP.log analysis/PASS4794_EXACT_MILP.status
+          git add analysis/PASS4793_4800_RUN.log analysis/PASS4793_4800_RUN.status analysis/PASS4794_EXACT_MILP.log analysis/PASS4794_EXACT_MILP.status docs/index.html
           for f in data/PART_W33_PASS4793_*.json data/PART_W33_PASS4794_*.json data/PART_W33_PASS4795_*.json data/PART_W33_PASS4796_*.json data/PART_W33_PASS4797_*.json data/PART_W33_PASS4798_*.json data/PART_W33_PASS4799_*.json data/PART_W33_PASS4800_*.json; do
             test -f "$f" && git add "$f"
           done
           if ! git diff --cached --quiet; then
-            git commit -m 'Materialize Passes 4793-4800 exact execution evidence'
+            git commit -m 'Materialize Passes 4793-4800 exact execution evidence and theorem card'
             git pull --rebase origin master
             git push origin HEAD:master
           fi
