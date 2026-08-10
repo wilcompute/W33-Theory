@@ -1,0 +1,39 @@
+{
+  "pass": 4717,
+  "edge_orbits": {"base_edges":1620,"shortcut_edges":405},
+  "policy_edge_loads": {
+    "P0":{"base":"35","shortcut":"239/3"},
+    "P1":{"base":"137/3","shortcut":"37"},
+    "P2":{"base":"155/3","shortcut":"21"},
+    "P3":{"base":"373/6","shortcut":"0"}
+  },
+  "capacity": {
+    "normalization":"C_b=1, rho=C_s/C_b",
+    "breakpoints":["63/155","111/137","239/105"],
+    "regions":[
+      {"rho":"0 < rho < 63/155","mix":"P2-P3","lambda_max":"3(rho+2)/373"},
+      {"rho":"63/155 < rho < 111/137","mix":"P1-P2","lambda_max":"3(3rho+8)/1429"},
+      {"rho":"111/137 < rho < 239/105","mix":"P0-P1","lambda_max":"3(rho+4)/659"},
+      {"rho":"rho >= 239/105","mix":"P0","lambda_max":"1/35"}
+    ]
+  },
+  "equal_capacity": {
+    "optimal_mix":{"P0":"13/80","P1":"67/80"},
+    "per_edge_load":"659/15",
+    "lambda_max":"15/659",
+    "half_capacity_MM1_mean_system_time_per_pair":"1318/269"
+  },
+  "erasure_retransmission_example": {
+    "C_b":1,
+    "C_s":1,
+    "q_b":"199/200",
+    "q_s":"49/50",
+    "rho_eff":"196/199",
+    "region":"P0-P1",
+    "normalized_lambda_per_Cb_qb":"2976/131141",
+    "lambda_effective":"372/16475"
+  },
+  "queue_model":"Independent symmetric M/M/1 edge servers; D=(mean base hops)/(C_b-d ell_b)+(mean shortcut hops)/(C_s-d ell_s). Queueing diverges at the max-concurrent-flow boundary.",
+  "theorem":"For uniform all-pairs traffic, PSp averaging reduces the selected270 multicommodity capacity problem to the exact two-edge-orbit path frontier. The maximum concurrent-flow envelope has breakpoints rho=63/155,111/137,239/105 and the stated closed forms. Equal capacities are optimally balanced by the 13/80 P0 + 67/80 P1 mixture.",
+  "boundary":"Exact symmetric routing/capacity theorem plus explicitly assumed M/M/1 and independent-retransmission models; no measured hardware queueing or failure rate is claimed."
+}
