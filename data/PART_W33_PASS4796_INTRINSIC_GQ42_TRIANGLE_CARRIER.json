@@ -1,0 +1,16 @@
+{
+  "base_model": "Q^-(5,2) / GQ(4,2)",
+  "boundary": "The unoriented SRG determines the carrier and hot relation but not the PSp 8-versus-9 chirality label. The latter requires choosing one of the two global orientation sheets of Pass4795. No 40-line W33 coordinates are needed for this intrinsic reconstruction.",
+  "hot_relation": {"component_graph": "Petersen", "components": 27, "edges": 405},
+  "lines_through_each_point": 3,
+  "lossless_reconstruction": {"45_point_stars_recovered": true, "SRG_edges_recovered_by_triangle_cooccurrence_3": true},
+  "maximal_K5_lines": 27,
+  "pass": 4796,
+  "quotient_points": 45,
+  "triangle_incidence_ranks": {"2": 45, "3": 44, "5": 45},
+  "triangle_to_complement_duad_bijection": true,
+  "triangles": 270,
+  "triangles_per_K5": 10,
+  "triangles_through_each_point": 18,
+  "theorem": "The 270-object carrier and all 27 hot Petersen fibers are intrinsic to GQ(4,2): the objects are exactly the 270 graph triangles, equivalently the complement duads inside the 27 maximal K5 lines. The triangle hypergraph recovers the original 45-point SRG exactly."
+}
