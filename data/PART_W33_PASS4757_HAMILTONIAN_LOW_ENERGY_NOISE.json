@@ -1,0 +1,27 @@
+{
+  "pass": 4757,
+  "hamiltonian": {"terms":270,"ground_syndrome_weight":0,"ground_configuration_degeneracy":1024,"single_defect_cost":54},
+  "coset_leader_microcanonical_through_weight6": {
+    "0": {"0":1},
+    "1": {"27":40},
+    "2": {"48":540,"54":240},
+    "3": {"63":2160,"67":1080,"69":4320,"75":2160,"81":160},
+    "4": {"72":2700,"78":12960,"80":6750,"82":12960,"84":18360,"88":12960,"90":18720,"96":5940,"108":40},
+    "5": {"75":432,"81":12960,"87":30240,"89":25920,"91":38880,"93":77760,"95":80352,"97":90720,"99":56520,"101":38880,"103":97200,"105":69984,"107":6480,"109":12960,"111":17280,"117":1440},
+    "6": {"84":14040,"90":25920,"92":12960,"94":25920,"96":129060,"98":168480,"100":213840,"102":222480,"104":412020,"106":362880,"108":425640,"110":453600,"112":422280,"114":293760,"116":280800,"118":194400,"120":99900,"122":25920,"124":25920,"126":10080}
+  },
+  "weight6_collision_pairs_by_syndrome_weight": {"84":9720,"90":4320,"96":4320,"108":120},
+  "distinct_weight6_syndromes": 3819900,
+  "distinct_syndromes_with_leader_weight_at_most6": 4579999,
+  "two_defect_sector": {
+    "skew_W33_lines": {"count":540,"violated_checks":48,"energy_cost":96,"binding_vs_two_singles":-12},
+    "meeting_W33_lines": {"count":240,"violated_checks":54,"energy_cost":108,"binding_vs_two_singles":0}
+  },
+  "independent_bit_flip_response": {
+    "let_a": "a=1-2p",
+    "mean_H": "-270 a^4",
+    "variance_H": "270(1-a^8) + 21600(a^6-a^8) + 3240(a^4-a^8)",
+    "residue_overlap_unordered_pairs": {"intersection_0":23895,"intersection_1":10800,"intersection_2":1620}
+  },
+  "boundary": "The radius-six table is an exact coset-leader sector, not a proof of the complete 2^30 syndrome weight enumerator. The p-response is for an independent classical bit-flip ensemble, not a thermal-equilibrium claim."
+}
