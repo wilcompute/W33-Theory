@@ -24,6 +24,7 @@
     {"kind":"id","token":"pass4624-4631-packet-incidence-f4-h10","source":"analysis/PASS4624_4631_packet_incidence_cocycle_f4_index_insert.html"},
     {"kind":"id","token":"pass4640-4647-d4-schlaefli-spread-holonomy","source":"analysis/PASS4640_4647_d4_schlaefli_spread_holonomy_index_insert.html"},
     {"kind":"id","token":"pass4648-4655-dark-triality-code-routing","source":"analysis/PASS4648_4655_dark_triality_code_routing_index_insert.html"},
+    {"kind":"id","token":"pass4664-4671-s3-automorphism-eigenlattice-triality","source":"analysis/PASS4664_4671_s3_automorphism_eigenlattice_triality_index_insert.html"},
     {"kind":"id","token":"pass4632-4639-homology-m24-c8-lattice","source":"analysis/PASS4632_4639_homology_m24_enumerator_c8_lattice_index_insert.html"}
   ],
   "standalone_public_pages": [
@@ -48,6 +49,7 @@
     {"token":"pass4624-4631-packet-incidence-f4-h10-page","source":"docs/packet-incidence-f4-h10.html"},
     {"token":"pass4640-4647-d4-schlaefli-spread-holonomy-page","source":"docs/d4-schlaefli-spread-holonomy.html"},
     {"token":"pass4648-4655-dark-triality-code-routing-page","source":"docs/triality-self-reconstruction-code-routing.html"},
+    {"token":"pass4664-4671-s3-automorphism-eigenlattice-triality-page","source":"docs/s3-automorphism-eigenlattice-triality.html"},
     {"token":"pass4632-4639-homology-m24-c8-lattice-page","source":"docs/paired-axes-homology-m24-lattice.html"}
   ]
 }
