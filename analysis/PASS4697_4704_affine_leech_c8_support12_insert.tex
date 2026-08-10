@@ -1,0 +1,125 @@
+% Canonical Passes 4697--4704.  The implementation was first developed under
+% collision-alias filenames 4689--4696; public theorem numbering is 4697--4704.
+\section*{Affine Golay, Leech neighbor, and support-twelve apartment closure}
+\addcontentsline{toc}{section}{Affine Golay, Leech neighbor, and support-twelve apartment closure}
+
+\paragraph{Pass 4697: the three dimension-$39$ carriers.}
+For the cross-shell differential
+\[
+D_0=\begin{pmatrix}0&R\\R^{\mathsf T}&0\end{pmatrix}
+\]
+the homology splits canonically as
+\[
+H_{\rm cross}\cong H_{27}\oplus H_{36},\qquad 15+24=39.
+\]
+The rank-$39$ apartment code, however, is the permutation quotient
+\[
+C_{\rm ap}\cong \mathbb F_2^{40}/\langle\mathbf1\rangle.
+\]
+Exact $\PSp(4,3)$ equivariance gives two-dimensional Hom spaces in both directions.  The three nonzero maps $H_{\rm cross}\to C_{\rm ap}$ all have rank $14$, while the three nonzero maps in the reverse direction all have rank $1$.  Hence the periodic direct sum and cross-shell homology are the same module, but the apartment code is not.
+
+\paragraph{Pass 4698: the corrected Golay sextet stabilizer is internally affine.}
+Inside the order-$138240$ sextet stabilizer $H$, the kernel of the six-tetrad action has order $192$ and element-order census
+\[
+1^1\,2^{63}\,3^{128}.
+\]
+Identity plus the $63$ involutions form a normal elementary abelian subgroup
+\[
+N\cong C_2^6,
+\]
+which acts regularly on the $64$ sextet transversals.  If $K$ is the stabilizer of the chosen zero transversal, then
+\[
+|K|=2160,\qquad N\cap K=1,\qquad H=N\rtimes K.
+\]
+The action $K\to S_6$ on the tetrads has kernel $C_3$, and the two nonzero $K$-orbits on $N$ have sizes $18$ and $45$.  This internally recovers the affine structure conventionally denoted $2^6{:}3.S_6$.
+
+\paragraph{Pass 4699: an explicit $A_1^{24}$-to-Leech two-neighbor.}
+Let
+\[
+N_{A_1^{24}}=\frac1{\sqrt2}\{x\in\mathbb Z^{24}:x\bmod2\in G_{24}\}
+\]
+and choose one corrected-sextet coordinate $i$.  For
+\[
+v_i=\frac1{\sqrt2}(1,\ldots,1,\underset{i}{3},1,\ldots,1),\qquad v_i^2=16,
+\]
+define
+\[
+M_i=\{x\in N_{A_1^{24}}:(x,v_i)\equiv0\pmod2\},\qquad
+L_i=M_i+\mathbb Z\,v_i/2.
+\]
+A frozen $24$-vector basis has integer numerator determinant $2^{36}$ at scale $1/(2\sqrt2)$, hence Gram determinant $1$; its Gram matrix is integral and even.  All $48$ coordinate roots of $N_{A_1^{24}}$ have odd pairing with $v_i$ and disappear.  Every vector in the new coset has odd numerator in all $24$ coordinates and therefore norm at least $3$, which evenness strengthens to at least $4$; a norm-$4$ basis vector is exhibited.  Thus $L_i$ is the rootless even unimodular $24$-lattice, i.e. the Leech lattice.  The $24$ distinguished-coordinate neighbors form one orbit under the corrected sextet stabilizer.
+
+\paragraph{Pass 4700: the primitive-$C_8$ masses close only after adding embedding invariants.}
+Put $u=s-1$.  For an apartment let $\rho$ count intersecting cross-pairs between its two external-transversal families and let $\sigma$ count intersecting transversal/single-hit outside-line pairs.  For an induced $K_{1,3}$ let $\tau$ count outside common transversals to the three leaves.  The six Pass~4635 raw masses are
+\[
+A_{1111|22}=16\big((4u^2+2)\rho+u^2\sigma+(4t-2)u^4+2(t-1)\big),
+\]
+\[
+A_{1115}=64u(u^3-u^2+2u-1),\quad
+A_{1133}=96u^2(u-1)^2,
+\]
+\[
+A_{1111|4}=64(u+1)u(u-1)(t-1),
+\]
+\[
+S_{1111|22}=48(u+1)u^3,\qquad
+S_{1113|2}=48(u+1)u\tau.
+\]
+The primitive coefficient is one eighth of the appropriate raw sum.  W33 and its dual have the same order $(3,3)$ but
+\[
+(\rho,\sigma,\tau)=(0,16,1)\quad\hbox{versus}\quad(4,0,3),
+\]
+and exact apartment/star coefficients
+\[
+(712,180)\quad\hbox{versus}\quad(728,252).
+\]
+Therefore no formula in $(s,t)$ alone can encode primitive-$C_8$ apartment tomography for both embeddings.
+
+\paragraph{Pass 4701: the exact apartment-code enumerator reaches support twelve.}
+Let $A_w$ count all support-$12$ coefficient sets producing codeword weight $w$, and $B_w$ those containing one fixed coefficient position.  Coefficient transitivity gives the exact double count
+\[
+12A_w=40B_w,
+\qquad A_w=\frac{10}{3}B_w.
+\]
+Thus only
+\[
+\binom{39}{11}=1676056044
+\]
+fixed-position subsets need be exhausted.  The native XOR/popcount census yields, after exact rescaling,
+\[
+\binom{40}{12}=5586853480
+\]
+subsets in $151$ weight classes.  The extremes are
+\[
+608\;(1620),\qquad 990\;(4320).
+\]
+Complete labelled spectra are now exact through support $12$; supports $13$--$20$ remain open.
+
+\paragraph{Pass 4702: the Golay affine six-space is not the cubic orthogonal six-space.}
+The faithful six-dimensional $K$-module carried by the translation subgroup $N$ admits neither a nonzero invariant quadratic form nor a nonzero invariant bilinear form: both full invariance systems have nullity zero.  Hence it cannot be identified with the cubic $O^-_6(2)$ module merely because both are six-dimensional.
+
+\paragraph{Pass 4703: all support-$12$ minima are apartment corner-star thickenings.}
+For an apartment $A$, let $\mathcal T(A)$ consist of all W33 lines through the four corner points of $A$.  Since there are two additional lines at each corner,
+\[
+|\mathcal T(A)|=4+4\cdot2=12.
+\]
+All $1620$ thickenings are distinct and have apartment-code weight $608$.  Pass~4701 proves there are exactly $1620$ support-$12$ minima, so these are all of them.  Each thickening contains eleven apartments; exactly one has overlap profile $\{0{:}2,2{:}8\}$ against the other ten, providing an intrinsic inverse $\mathcal T(A)\mapsto A$.
+
+\paragraph{Pass 4704: the thickening shell generates the even apartment subcode and recovers the edge carrier.}
+The $1620$ thickening coefficient masks have weight $12$ and rank $39$, hence span the full even-weight hyperplane $E_{40}\subset\mathbb F_2^{40}$.  Because the all-ones kernel also lies in $E_{40}$, their codeword span is
+\[
+E_{40}/\langle\mathbf1\rangle,
+\]
+a $38$-dimensional subcode.  The exhaustive low-weight apartment certificate gives
+\[
+\boxed{[1620,38,270]},
+\]
+with exactly $240$ minimum words, the adjacent generator-pair sums corresponding to the $240$ W33 edges.  Thus
+\[
+1620\text{ apartment thickenings}\longrightarrow [1620,38,270]\longrightarrow240\text{ edges}.
+\]
+
+\begin{center}
+\fbox{\parbox{0.94\linewidth}{\textbf{Evidence boundary.}
+The canonical theorem numbers are Passes~4697--4704; the first implementation files were created under collision aliases 4689--4696 before a parallel namespace conflict surfaced.  Equal dimensions are not treated as representation identities.  The Leech statement is an explicit lattice two-neighbor with determinant, evenness, rootlessness, and minimum-norm certificates.  Primitive-$C_8$ requires the embedding invariants $\rho,\sigma,\tau$.  The full apartment enumerator remains open beyond support $12$.}}
+\end{center}
