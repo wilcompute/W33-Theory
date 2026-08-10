@@ -1,5 +1,6 @@
 {
   "boundary": "The rational rank 120 is not an identification with the separate 120 anisotropic quotient classes. No such G-set or module isomorphism is claimed without an explicit intertwiner.",
+  "correction": "The selected-line intersection graph -3 eigenspace has multiplicity 150, not 165. The previous value double-counted the 15-dimensional nullity already shifted to eigenvalue -3; multiplicities must sum to 270.",
   "incidence": {
     "apartment_lifts_per_line": 6,
     "line_size": 3,
@@ -26,7 +27,7 @@
     "degree": 15,
     "edges": 2025,
     "gram": "N^T N = 3 I + L",
-    "spectrum": {"-3": 165, "0": 24, "3": 60, "6": 20, "9": 15, "15": 1},
+    "spectrum": {"-3": 150, "0": 24, "3": 60, "6": 20, "9": 15, "15": 1},
     "vertices": 270
   },
   "theorem": "The apartment image is recoverable from a 135-vertex 12-regular graph: its 270 selected singular lines are exactly that graph's triangles. The 135x270 incidence matrix has exact rational rank 120 and binary rank 119."
