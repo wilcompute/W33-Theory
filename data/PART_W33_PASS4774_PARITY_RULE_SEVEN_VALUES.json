@@ -1,0 +1,135 @@
+{
+  "all_parameters_correct": true,
+  "boundary": "all seven are constructed and their SRG parameters verified against theory; isomorphism is exact via BLISS canonical form. The reason given (characteristic 2 makes the symplectic and orthogonal forms coincide) is standard theory cited to explain the pattern, NOT derived here -- what is computed is the pattern",
+  "parity_rule_holds_everywhere_tested": true,
+  "rows": [
+    {
+      "agrees": true,
+      "even": true,
+      "k": 1,
+      "n": 15,
+      "p": 2,
+      "prime": true,
+      "q": 2,
+      "seconds": 0.0,
+      "self_dual": true,
+      "srg": [
+        15,
+        6,
+        1,
+        3
+      ],
+      "srg_correct": true
+    },
+    {
+      "agrees": true,
+      "even": false,
+      "k": 1,
+      "n": 40,
+      "p": 3,
+      "prime": true,
+      "q": 3,
+      "seconds": 0.0,
+      "self_dual": false,
+      "srg": [
+        40,
+        12,
+        2,
+        4
+      ],
+      "srg_correct": true
+    },
+    {
+      "agrees": true,
+      "even": true,
+      "k": 2,
+      "n": 85,
+      "p": 2,
+      "prime": false,
+      "q": 4,
+      "seconds": 0.0,
+      "self_dual": true,
+      "srg": [
+        85,
+        20,
+        3,
+        5
+      ],
+      "srg_correct": true
+    },
+    {
+      "agrees": true,
+      "even": false,
+      "k": 1,
+      "n": 156,
+      "p": 5,
+      "prime": true,
+      "q": 5,
+      "seconds": 0.1,
+      "self_dual": false,
+      "srg": [
+        156,
+        30,
+        4,
+        6
+      ],
+      "srg_correct": true
+    },
+    {
+      "agrees": true,
+      "even": false,
+      "k": 1,
+      "n": 400,
+      "p": 7,
+      "prime": true,
+      "q": 7,
+      "seconds": 1.1,
+      "self_dual": false,
+      "srg": [
+        400,
+        56,
+        6,
+        8
+      ],
+      "srg_correct": true
+    },
+    {
+      "agrees": true,
+      "even": true,
+      "k": 3,
+      "n": 585,
+      "p": 2,
+      "prime": false,
+      "q": 8,
+      "seconds": 2.9,
+      "self_dual": true,
+      "srg": [
+        585,
+        72,
+        7,
+        9
+      ],
+      "srg_correct": true
+    },
+    {
+      "agrees": true,
+      "even": false,
+      "k": 2,
+      "n": 820,
+      "p": 3,
+      "prime": false,
+      "q": 9,
+      "seconds": 6.1,
+      "self_dual": false,
+      "srg": [
+        820,
+        90,
+        8,
+        10
+      ],
+      "srg_correct": true
+    }
+  ],
+  "what_the_new_values_settle": "q=8=2^3 is even, non-prime, and self-dual, so the rule is not about primality or about q=2^2; q=9=3^2 is odd, non-prime, and not self-dual, so primality is irrelevant on that side too. The characteristic decides it",
+  "why_not_s_equals_t": "GQ(q,q) has s=t at every q, and self-duality picks out exactly the even half; the two conditions are not the same, which is what Pass 4694 corrected"
+}
