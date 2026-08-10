@@ -1,0 +1,29 @@
+{
+  "pass":4749,
+  "exact_symbolic_global_cut": {
+    "cold_graph_edge_connectivity":12,
+    "hot_Petersen_edge_connectivity":3,
+    "quotient_edge_connectivity":10,
+    "cold_edges_per_quotient_edge":12,
+    "split_fiber_lower_bound":"12+3 rho",
+    "whole_fiber_union_lower_bound":"120",
+    "exact_global_min_cut":"min(12+3 rho,120)",
+    "breakpoint_rho":36,
+    "witness_below_breakpoint":"single router vertex: 12 cold plus 3 hot boundary edges",
+    "witness_above_breakpoint":"one complete Petersen fiber: 120 cold boundary edges and zero hot boundary edges"
+  },
+  "equal_capacity":{"global_min_cut":15,"all_pair_min_cut_distribution":{"15":36315}},
+  "one_shortcut_fiber_outage":{"removed_hot_edges":15,"exact_global_min_cut_all_positive_rho":12,"all_pair_min_cut_distribution_at_rho1":{"12":2645,"15":33670}},
+  "two_shortcut_fiber_outages": {
+    "adjacent":{"representative_fibers":[0,1],"removed_hot_edges":30,"global_min_cut_equal_capacity":12},
+    "nonadjacent":{"representative_fibers":[0,4],"removed_hot_edges":30,"global_min_cut_equal_capacity":12}
+  },
+  "full_vertex_fiber_removal": {
+    "one":{"representative_fibers":[0],"removed_vertices":10,"survivors":260,"global_min_cut":13,"minimum_degree":13,"diameter":3},
+    "two_adjacent":{"representative_fibers":[0,1],"removed_vertices":20,"survivors":250,"global_min_cut":11,"minimum_degree":11,"diameter":3},
+    "two_nonadjacent":{"representative_fibers":[0,4],"removed_vertices":20,"survivors":250,"global_min_cut":11,"minimum_degree":11,"diameter":3}
+  },
+  "theorem":"For cold capacity 1 and hot capacity rho>0, the exact worst-pair min-cut is min(12+3 rho,120), with breakpoint rho=36. The proof uses edge-connectivity 12 of the cold graph, edge-connectivity 3 of every Petersen fiber, edge-connectivity 10 of the 27-vertex quotient, and exactly 12 cold physical edges per quotient edge. Failure of all shortcut edges in even one Petersen fiber collapses the global min-cut to exactly 12 for every positive rho.",
+  "execution":"independent NetworkX edge-connectivity, Stoer-Wagner and Gomory-Hu computations on the reconstructed two-orbit 270-router, plus the structural quotient proof",
+  "boundary":"Exact undirected edge-capacity/min-cut theorem for the finite router. It is not a queueing, latency, directed-switch or measured-hardware claim."
+}
