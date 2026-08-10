@@ -1,0 +1,21 @@
+{
+  "binary": {
+    "RRt": "zero",
+    "RtR": "all-ones J120",
+    "all_ones_quotient_dimension": 8,
+    "contains_all_ones": true,
+    "rank": 9,
+    "row_code": "[120,9,56] self-orthogonal",
+    "weight_enumerator": "1 + 255 z^56 + 255 z^64 + z^120"
+  },
+  "boundary": "This is an incidence-code realization, not a physical measurement code or an identification with the apartment code.",
+  "incidence": {
+    "column_pair_intersections": {"polar0":31,"polar1":27},
+    "column_weight": 63,
+    "row_pair_intersections": {"polar0":24,"polar1":28},
+    "row_weight": 56,
+    "shape": [135,120]
+  },
+  "pass": 4584,
+  "theorem": "Singular-anisotropic orthogonality in the W33-derived O+(8,2) shell produces a new self-orthogonal [120,9,56] binary code whose fixed-word quotient is 8-dimensional."
+}
