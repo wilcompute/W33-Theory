@@ -1,0 +1,16 @@
+{
+  "pass":4686,
+  "dual132_hypergraph_alone": {
+    "vertices":135,"hyperedges":45,"edge_size":3,"structure":"45 disjoint 3-sets",
+    "automorphism_group":"S3 wr S45 = S3^45 : S45",
+    "automorphism_order":"12434208011101142745800297866258209857527581172828914008585963468573071374035189760000000000",
+    "automorphism_order_digits":92,"selects_protected_E6_action":false
+  },
+  "add_dual3_shell": {
+    "dual_minimum_words":270,"packet_projected_triples":270,"two_section":"SRG(45,12,3,3)",
+    "upper_bound_from_two_section":51840,"explicit_lower_group":"PGSp(4,3)","automorphism_group_order":51840,"identification":"PGSp(4,3)"
+  },
+  "symmetry_breaking":"The weight-132 shell supplies the 45 packet partition but no distinguished PGSp geometry by itself; the dual weight-3 shell is exactly the extra relation that breaks the wreath symmetry down to the protected 51840 action.",
+  "theorem":"The 45 complement triples alone do not reconstruct E6: their hypergraph automorphism group is S3 wr S45. The pair of dual shells at weights 132 and 3 does reconstruct the protected 45 action, with full automorphism group PGSp(4,3) of order 51840.",
+  "boundary":"Exact finite hypergraph/code-shell symmetry theorem; no physical symmetry breaking is inferred."
+}
