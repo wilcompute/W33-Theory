@@ -17,6 +17,9 @@
 \newtcolorbox{honestbox}{colback=Orange!8,colframe=Orange!75!black,boxrule=0.6pt,arc=2pt,
   title=\textbf{Honest scope},fonttitle=\bfseries,left=4pt,right=4pt,top=3pt,bottom=3pt}
 
+% amsthm supplies the proof environment used below; the file declared theorems
+% without loading it and could not build at all.
+\usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{proposition}[theorem]{Proposition}

@@ -22,7 +22,9 @@
 \usepackage{xcolor}
 \usepackage{enumitem}
 \usepackage{microtype}
-\usepackage{natbib}
+% unsrtnat is a NUMERIC bibliography style; bare natbib defaults to author-year, and the
+% two are incompatible -- the build halted at the bibliography with exactly that message.
+\usepackage[numbers]{natbib}
 \usepackage{cleveref}
 \usepackage{lmodern}
 \usepackage{float}        %% [H] placement
@@ -48,7 +50,9 @@
 \newcommand{\Eone}{E_8}
 \newcommand{\Esix}{E_6}
 \newcommand{\nv}{n_{\!v}}
-\newcommand{\ne}{n_{\!e}}
+% \ne is a LaTeX kernel macro (not-equal); redefining it halted the build.
+% Renamed to \nelec, and every use rewritten with it.
+\newcommand{\nelec}{n_{\!e}}
 \newcommand{\fr}{f_{\!r}}
 \newcommand{\fs}{f_{\!s}}
 \newcommand{\zetaW}{\zeta_{\!W}}
@@ -91,6 +95,9 @@ The W(3,3) Geometric Framework}}
 \date{April 2026 \quad\textit{(Preprint --- submitted to arXiv:hep-th)}}
 
 %% ===============================================================
+% \lcm is not a LaTeX macro; this file used it undefined and halted here.
+\DeclareMathOperator{\lcm}{lcm}
+
 \begin{document}
 %% ===============================================================
 
@@ -198,7 +205,7 @@ listed in Table~\ref{tab:params}.
 Symbol & Value & Description & Physical role \\
 \midrule
 $\nv$ & 40 & Vertices & Dimension of spectral space \\
-$\ne$ & 60 & Edges & \\
+$\nelec$ & 60 & Edges & \\
 $k$ & 12 & Degree (largest eigenvalue) & Master coupling \\
 $r$ & $+2$ & Second eigenvalue & Quark/lepton sector \\
 $s$ & $-4$ & Third eigenvalue & Strong / colour sector \\

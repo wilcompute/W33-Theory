@@ -1,0 +1,321 @@
+{
+  "boundary": "4727 computes the local-graph invariant and automorphism order of H(3,4) as built here; it does NOT test Track B's graph, which this lane does not have. 4728 detects a structural hazard by inspecting stored JSON and recomputes NO digests, so it does not identify which of the eight reported mismatches are born-broken versus stale",
+  "pass_4727_falsifier": {
+    "automorphism_order": 51840,
+    "degree": 12,
+    "falsifier_stands": true,
+    "geometry": "H(3,4) = GQ(4,2)",
+    "i_told_track_b": 51840,
+    "local_graph_shapes": [
+      [
+        4,
+        4,
+        4,
+        true
+      ]
+    ],
+    "local_is_3K4": true,
+    "that_was_correct": true,
+    "vertices": 45,
+    "why_51840_is_correct_here": "the exceptional isomorphism PSU(4,2) = PSp(4,3): H(3,4) is Hermitian over GF(4) with a unitary group, W(3,3) is symplectic over GF(3), and those two simple groups coincide at order 25,920. The number was taken from the wrong geometry and is right anyway, for a reason independent of how it was got"
+  },
+  "pass_4728_certificates": {
+    "certificates_with_digest": 35,
+    "findings": [
+      {
+        "file": "w33_pass1801_component.json",
+        "hazards": [
+          {
+            "lex_first": [
+              "14",
+              "6"
+            ],
+            "n_keys": 2,
+            "num_first": [
+              "6",
+              "14"
+            ],
+            "path": "$.result.factor_certificates"
+          }
+        ]
+      },
+      {
+        "file": "w33_pass1828_weight_frontier.json",
+        "hazards": [
+          {
+            "lex_first": [
+              "0",
+              "1",
+              "10",
+              "2"
+            ],
+            "n_keys": 11,
+            "num_first": [
+              "0",
+              "1",
+              "2",
+              "3"
+            ],
+            "path": "$.layer_histograms"
+          },
+          {
+            "lex_first": [
+              "100",
+              "102",
+              "104",
+              "106"
+            ],
+            "n_keys": 30,
+            "num_first": [
+              "76",
+              "80",
+              "82",
+              "84"
+            ],
+            "path": "$.layer_histograms.10"
+          },
+          {
+            "lex_first": [
+              "100",
+              "104",
+              "70",
+              "72"
+            ],
+            "n_keys": 17,
+            "num_first": [
+              "70",
+              "72",
+              "74",
+              "76"
+            ],
+            "path": "$.layer_histograms.7"
+          }
+        ]
+      },
+      {
+        "file": "w33_pass1829_weight4_decoder.json",
+        "hazards": [
+          {
+            "lex_first": [
+              "1",
+              "10",
+              "11",
+              "12"
+            ],
+            "n_keys": 23,
+            "num_first": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ],
+            "path": "$.run_error_hist"
+          },
+          {
+            "lex_first": [
+              "1",
+              "10",
+              "11",
+              "12"
+            ],
+            "n_keys": 23,
+            "num_first": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ],
+            "path": "$.run_syndrome_hist"
+          }
+        ]
+      },
+      {
+        "file": "w33_pass1837_middle_layer_compression.json",
+        "hazards": [
+          {
+            "lex_first": [
+              "10",
+              "11",
+              "16",
+              "18"
+            ],
+            "n_keys": 15,
+            "num_first": [
+              "4",
+              "6",
+              "8",
+              "10"
+            ],
+            "path": "$.residual_to_duad_index"
+          }
+        ]
+      },
+      {
+        "file": "w33_pass1847_exact_weight5_decoder_completion.json",
+        "hazards": [
+          {
+            "lex_first": [
+              "1",
+              "10",
+              "11",
+              "12"
+            ],
+            "n_keys": 16,
+            "num_first": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ],
+            "path": "$.decoder.minimum_syndrome_group_histogram"
+          },
+          {
+            "lex_first": [
+              "10",
+              "4",
+              "6",
+              "8"
+            ],
+            "n_keys": 4,
+            "num_first": [
+              "4",
+              "6",
+              "8",
+              "10"
+            ],
+            "path": "$.dfs_nodes"
+          },
+          {
+            "lex_first": [
+              "10",
+              "4",
+              "6",
+              "8"
+            ],
+            "n_keys": 4,
+            "num_first": [
+              "4",
+              "6",
+              "8",
+              "10"
+            ],
+            "path": "$.fixed_coordinate_counts"
+          }
+        ]
+      },
+      {
+        "file": "w33_pass1856_duad_syntheme_contraction_frontier.json",
+        "hazards": [
+          {
+            "lex_first": [
+              "0",
+              "1",
+              "10",
+              "11"
+            ],
+            "n_keys": 12,
+            "num_first": [
+              "0",
+              "1",
+              "2",
+              "3"
+            ],
+            "path": "$.global_rowspace_binomial_moments_through_11"
+          },
+          {
+            "lex_first": [
+              "0",
+              "100",
+              "102",
+              "104"
+            ],
+            "n_keys": 61,
+            "num_first": [
+              "0",
+              "16",
+              "30",
+              "32"
+            ],
+            "path": "$.residual_subcode_weight_enumerator"
+          }
+        ]
+      },
+      {
+        "file": "w33_pass1857_weight5_syndrome_orbit_atlas.json",
+        "hazards": [
+          {
+            "lex_first": [
+              "1",
+              "10",
+              "11",
+              "12"
+            ],
+            "n_keys": 16,
+            "num_first": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ],
+            "path": "$.fixed_coordinate_weight5.minimum_syndrome_group_histogram"
+          }
+        ]
+      },
+      {
+        "file": "w33_pass1860_weight6_decoder_frontier.json",
+        "hazards": [
+          {
+            "lex_first": [
+              "10",
+              "4",
+              "6",
+              "8"
+            ],
+            "n_keys": 4,
+            "num_first": [
+              "4",
+              "6",
+              "8",
+              "10"
+            ],
+            "path": "$.known_dual_coefficients"
+          },
+          {
+            "lex_first": [
+              "10",
+              "4",
+              "6",
+              "8"
+            ],
+            "n_keys": 4,
+            "num_first": [
+              "4",
+              "6",
+              "8",
+              "10"
+            ],
+            "path": "$.lower_shadow_incidence_counts.weight4_terms"
+          },
+          {
+            "lex_first": [
+              "10",
+              "4",
+              "6",
+              "8"
+            ],
+            "n_keys": 4,
+            "num_first": [
+              "4",
+              "6",
+              "8",
+              "10"
+            ],
+            "path": "$.weight6_equal_syndrome_collision_edges.known_terms"
+          }
+        ]
+      }
+    ],
+    "integer_key_hazard": 8,
+    "meaning": "a certificate with this hazard was unverifiable from birth: re-running the producer cannot fix it, the producer must adopt the round-trip serialisation first"
+  }
+}

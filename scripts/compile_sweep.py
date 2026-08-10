@@ -57,19 +57,19 @@ def standalone_tex():
 
 
 def compile_one(p: Path):
+    # Compile IN THE REPO ROOT with --outdir, not in a copied tree.
+    #
+    # The first version copied the source into a scratch directory along with a guessed list
+    # of dependencies, and guessed wrong: it did not copy analysis/*.tex or root *.png, so
+    # three manuscripts were reported as missing files that are present and tracked. Between
+    # that and the Fontconfig noise, this script produced false failures twice before it
+    # produced a true one. Relative \input and \includegraphics paths are resolved against
+    # the source's directory, so the only way to be sure they resolve is to be there.
     tmp = Path(tempfile.mkdtemp(prefix="sweep_"))
     try:
-        # copy the source plus anything it might \input from the root
-        shutil.copy2(p, tmp / p.name)
-        for extra in list(ROOT.glob("*_body.tex")) + list(ROOT.glob("*.sty")) + \
-                list(ROOT.glob("*.bib")) + list(ROOT.glob("*.cls")):
-            shutil.copy2(extra, tmp / extra.name)
-        for d in ("manuscripts", "figures", "img"):
-            src = ROOT / d
-            if src.is_dir():
-                shutil.copytree(src, tmp / d, dirs_exist_ok=True)
-        r = subprocess.run([str(TECTONIC), "-X", "compile", p.name],
-                           cwd=tmp, capture_output=True, text=True, timeout=900)
+        r = subprocess.run([str(TECTONIC), "-X", "compile", p.name,
+                            "--outdir", str(tmp)],
+                           cwd=ROOT, capture_output=True, text=True, timeout=900)
         pdf = tmp / (p.stem + ".pdf")
         ok = r.returncode == 0 and pdf.exists()
         msg = ""

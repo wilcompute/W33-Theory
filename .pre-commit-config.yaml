@@ -136,3 +136,14 @@ repos:
         language: system
         pass_filenames: true
         files: ^(.*\.tex)$
+      # Added Pass 4726. Pass 4708 found 9 of 12 guards have no self-test, and Pass 4692
+      # found one that had never executed at all because the config it lived in did not
+      # parse. A self-test that runs only when someone types --selftest is the next thing
+      # to rot. Non-strict on purpose: failing on the 9 missing ones would block every
+      # commit until they are retrofitted, which trains --no-verify.
+      - id: guard-selftests
+        name: every guard's own self-test still passes
+        entry: py -3 scripts/check_guard_selftests.py
+        language: system
+        pass_filenames: false
+        always_run: true

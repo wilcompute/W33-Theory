@@ -9,20 +9,20 @@
     {
       "file": "BT407_PAPER.tex",
       "ok": true,
-      "pdf_bytes": 125905,
+      "pdf_bytes": 125906,
       "error": ""
     },
     {
       "file": "holonet_demonstrator_protocol_v1.tex",
       "ok": true,
-      "pdf_bytes": 62947,
+      "pdf_bytes": 62945,
       "error": ""
     },
     {
       "file": "holonet_machine.tex",
-      "ok": false,
-      "pdf_bytes": 0,
-      "error": "holonet_machine.tex:119: Unable to load picture or PDF file 'holonet_scorecard.png'"
+      "ok": true,
+      "pdf_bytes": 219408,
+      "error": ""
     },
     {
       "file": "holonet_parity_control.tex",
@@ -33,14 +33,14 @@
     {
       "file": "holonet_practical_implications.tex",
       "ok": true,
-      "pdf_bytes": 225197,
+      "pdf_bytes": 225196,
       "error": ""
     },
     {
       "file": "holonet_shannon_capacity.tex",
-      "ok": false,
-      "pdf_bytes": 0,
-      "error": "holonet_shannon_capacity.tex:79: LaTeX Error: Environment proof undefined."
+      "ok": true,
+      "pdf_bytes": 84464,
+      "error": ""
     },
     {
       "file": "main.tex",
@@ -57,7 +57,7 @@
     {
       "file": "single_photon_universal_computation.tex",
       "ok": true,
-      "pdf_bytes": 299122,
+      "pdf_bytes": 299123,
       "error": ""
     },
     {
@@ -69,25 +69,25 @@
     {
       "file": "toe_constants_companion.tex",
       "ok": true,
-      "pdf_bytes": 120003,
+      "pdf_bytes": 120002,
       "error": ""
     },
     {
       "file": "toe_master_synthesis.tex",
       "ok": true,
-      "pdf_bytes": 245559,
+      "pdf_bytes": 245558,
       "error": ""
     },
     {
       "file": "w33_everything.tex",
-      "ok": false,
-      "pdf_bytes": 0,
-      "error": "w33_everything.tex:88: ! LaTeX Error: File `analysis/w33_inflation_joint_forecast_fig.tex' not found."
+      "ok": true,
+      "pdf_bytes": 140034,
+      "error": ""
     },
     {
       "file": "W33_FOR_EVERYONE.tex",
       "ok": true,
-      "pdf_bytes": 652946,
+      "pdf_bytes": 652944,
       "error": ""
     },
     {
@@ -100,26 +100,26 @@
       "file": "w33_submission.tex",
       "ok": false,
       "pdf_bytes": 0,
-      "error": "w33_submission.tex:93: ! LaTeX Error: File `PAPER_INTRODUCTION.tex' not found."
+      "error": "w33_submission.tex:108: ! LaTeX Error: File `PAPER_SECTION4.tex' not found."
     },
     {
       "file": "W36_PAPER.tex",
       "ok": true,
-      "pdf_bytes": 610113,
+      "pdf_bytes": 610111,
       "error": ""
     },
     {
       "file": "W36_PAPER_arxiv.tex",
-      "ok": false,
-      "pdf_bytes": 0,
-      "error": "W36_PAPER_arxiv.tex:51: LaTeX Error: Command \\ne already defined."
+      "ok": true,
+      "pdf_bytes": 236412,
+      "error": ""
     },
     {
       "file": "W36_PRL_LETTER.tex",
       "ok": false,
       "pdf_bytes": 0,
-      "error": "W36_PRL_LETTER.tex:107: LaTeX Error: Environment definition undefined."
+      "error": "W36_PRL_LETTER.tex:384: TeX capacity exceeded, sorry [input stack size=5000]"
     }
   ],
-  "failing": 6
+  "failing": 2
 }

@@ -10,7 +10,6 @@
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{graphicx}
-\usepackage{svg}
 \usepackage{xcolor}
 \usepackage{microtype}
 \usepackage{hyperref}
@@ -32,6 +31,27 @@
 %% ---------------------------------------------------------------
 %%  DOCUMENT
 %% ---------------------------------------------------------------
+% This letter uses definition/theorem/lemma/proof environments and declared none of them,
+% so it halted at the first \begin{definition}. revtex4-2 does not supply them.
+%
+% amsthm is deliberately NOT loaded: it builds past the definitions and then blows the
+% input stack at the bibliography. These plain environments give the same four names with
+% none of the interaction.
+%
+% The counter name must be LETTERS ONLY. Naming it w36thm makes TeX build \thew36thm, which
+% it then parses as \thew followed by the literal text 36thm -- an undefined control
+% sequence at every single theorem.
+\newcounter{prlthm}
+\newenvironment{theorem}[1][]{\par\medskip\refstepcounter{prlthm}%
+  \noindent\textbf{Theorem \theprlthm#1.}\itshape\ }{\par\medskip}
+\newenvironment{lemma}[1][]{\par\medskip\refstepcounter{prlthm}%
+  \noindent\textbf{Lemma \theprlthm#1.}\itshape\ }{\par\medskip}
+\newenvironment{proposition}[1][]{\par\medskip\refstepcounter{prlthm}%
+  \noindent\textbf{Proposition \theprlthm#1.}\itshape\ }{\par\medskip}
+\newenvironment{definition}[1][]{\par\medskip\refstepcounter{prlthm}%
+  \noindent\textbf{Definition \theprlthm#1.}\ }{\par\medskip}
+\newenvironment{proof}{\par\medskip\noindent\textit{Proof.}\ }{\hfill$\square$\par\medskip}
+
 \begin{document}
 
 \preprint{hep-th/2026}
@@ -136,7 +156,9 @@ indicates both quantities.
 
 \begin{figure}[h]
   \centering
-  \includesvg[width=\columnwidth]{figures/fig1_spectral_diagram}
+  % the svg package needs an inkscape-generated _svg-tex.pdf that is not in
+% the repository; figures/fig1_spectral_diagram.pdf is, so use it directly.
+\includegraphics[width=\columnwidth]{figures/fig1_spectral_diagram}
   \caption{\textbf{W(3,3) eigenvalue tower.}
   Three spectral levels at $\lambda=12$, $r=2$, $s=-4$ with
   multiplicities $\{1,24,15\}$. Spectral gaps $\Delta_1=10$,
@@ -282,7 +304,9 @@ and illustrated in Figure~\ref{fig:timeline}.
 
 \begin{figure}[h]
   \centering
-  \includesvg[width=\columnwidth]{figures/fig2_predictions_timeline}
+  % the svg package needs an inkscape-generated _svg-tex.pdf that is not in
+% the repository; figures/fig2_predictions_timeline.pdf is, so use it directly.
+\includegraphics[width=\columnwidth]{figures/fig2_predictions_timeline}
   \caption{\textbf{Falsifiability timeline 2026--2045.}
   All eight predictions mapped to planned experiments.
   The shaded NOW marker indicates the present date.}
