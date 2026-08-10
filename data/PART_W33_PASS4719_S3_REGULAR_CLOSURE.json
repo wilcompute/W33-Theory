@@ -1,0 +1,16 @@
+{
+  "pass":4719,
+  "monodromy":"S3",
+  "regular_closure":{
+    "vertices":270,"edges":1620,"degree":12,"connected":true,"deck_group":"S3","bipartite":true,
+    "parity_gauge":{"0_packets":41,"1_packets":4},
+    "identification":"Kronecker/bipartite double cover of selected135",
+    "spectrum":{"12":1,"6":30,"3":44,"0":120,"-3":44,"-6":30,"-12":1}
+  },
+  "selected270_base_nonidentification":{
+    "vertices":270,"edges":1620,"bipartite":false,
+    "spectrum":{"12":1,"8":15,"1+sqrt(13)":20,"2":84,"-1":64,"1-sqrt(13)":20,"-4":60,"-6":6}
+  },
+  "theorem":"The S3 connection of selected135 has a canonical connected six-sheet regular closure with deck group S3. A parity gauge makes every voltage odd, giving an explicit isomorphism to the bipartite double cover of selected135. Despite also having 270 vertices and 1620 edges, it is not the selected270 base router.",
+  "boundary":"Exact finite voltage-cover theorem and explicit count-coincidence obstruction; no physical doubling is inferred."
+}
