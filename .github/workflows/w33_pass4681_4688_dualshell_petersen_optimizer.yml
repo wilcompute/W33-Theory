@@ -1,0 +1,47 @@
+name: W33 Passes 4681-4688 dual-shell Petersen optimizer
+
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass4681_dual132_protected45.py'
+      - 'analysis/w33_pass4682_complementary_135x36_algebra.py'
+      - 'analysis/w33_pass4683_voltage_normalizer_scope.py'
+      - 'analysis/w33_pass4684_petersen_edge_module_quotients.py'
+      - 'analysis/w33_pass4685_mixed_technology_petersen_optimizer.py'
+      - 'analysis/w33_pass4686_dual132_hypergraph_symmetry_breaking.py'
+      - 'analysis/w33_pass4687_petersen_induced_A5_S5.py'
+      - 'analysis/w33_pass4688_voltage_routing_projection_obstruction.py'
+      - 'data/PART_W33_PASS468*.json'
+      - 'tests/test_w33_pass4681_4688_dualshell_petersen_optimizer.py'
+      - '.github/workflows/w33_pass4681_4688_dualshell_petersen_optimizer.yml'
+  workflow_dispatch:
+
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact-analysis dependencies
+        run: python -m pip install numpy sympy networkx pytest
+      - name: Regenerate Pass 4681
+        run: python analysis/w33_pass4681_dual132_protected45.py
+      - name: Regenerate Pass 4682
+        run: python analysis/w33_pass4682_complementary_135x36_algebra.py
+      - name: Regenerate Pass 4683
+        run: python analysis/w33_pass4683_voltage_normalizer_scope.py
+      - name: Regenerate Pass 4684
+        run: python analysis/w33_pass4684_petersen_edge_module_quotients.py
+      - name: Regenerate Pass 4685
+        run: python analysis/w33_pass4685_mixed_technology_petersen_optimizer.py
+      - name: Regenerate Pass 4686
+        run: python analysis/w33_pass4686_dual132_hypergraph_symmetry_breaking.py
+      - name: Regenerate Pass 4687
+        run: python analysis/w33_pass4687_petersen_induced_A5_S5.py
+      - name: Regenerate Pass 4688
+        run: python analysis/w33_pass4688_voltage_routing_projection_obstruction.py
+      - name: Frozen regression
+        run: python -m pytest -q tests/test_w33_pass4681_4688_dualshell_petersen_optimizer.py
