@@ -271,7 +271,7 @@ def verify():
     assert abs(x["pass4119_transport_quantum_speed_limit"]["principal_log_operator_norm"]-2*math.pi/3)<1e-12
     assert abs(x["pass4120_spectral_redshift"]["z_m_for_m1_to_4"][3]-79)<1e-10
     if CERT.exists():
-        frozen=json.loads(CERT.read_text())
+        frozen=json.loads(CERT.read_text(encoding="utf-8"))
         assert semantic_sha(frozen)==frozen["semantic_sha256"]
         assert frozen["semantic_sha256"]==x["semantic_sha256"]
     return x

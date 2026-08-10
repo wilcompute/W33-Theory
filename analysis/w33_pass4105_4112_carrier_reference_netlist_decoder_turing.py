@@ -69,13 +69,13 @@ def nonlinear(A,J,T=500.0):
     return energies,float(np.linalg.norm(rhs(T,sol.y[:,-1])))
 
 def main():
-    cert=json.loads(CERT.read_text())
+    cert=json.loads(CERT.read_text(encoding="utf-8"))
     assert canonical_hash(cert)==cert["semantic_sha256"]
-    carrier=json.loads(CARRIER.read_text())
+    carrier=json.loads(CARRIER.read_text(encoding="utf-8"))
     assert carrier["candidate_99"]["dimension"]==6+3*15+2*24==99
     assert carrier["corrected_145"]["dimension"]==7+6*15+2*24==145
     assert anomaly_checks()==(Fraction(0),Fraction(0),Fraction(0),Fraction(0))
-    net=json.loads(NET.read_text())
+    net=json.loads(NET.read_text(encoding="utf-8"))
     assert sum(b["parallel_swap_cells"] for b in net["branches"])==160
     assert net["recirculating_qsp"]["swap_cells"]==160
     assert net["spatially_unrolled_qsp"]["swap_cells"]==800

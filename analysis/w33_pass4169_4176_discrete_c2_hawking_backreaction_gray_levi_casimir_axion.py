@@ -9,7 +9,7 @@ from scipy.optimize import brentq, root
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/"data/PART_4169_4176_DISCRETE_C2_HAWKING_BACKREACTION_GRAY_LEVI_CASIMIR_AXION.json"
-CERT=json.loads(OUT.read_text())
+CERT=json.loads(OUT.read_text(encoding="utf-8"))
 
 def semantic_hash(c):
     x=dict(c); x.pop("semantic_sha256",None)
@@ -226,7 +226,7 @@ def verify():
 
 def main():
     verify()
-    frozen=json.loads(OUT.read_text()); assert frozen==CERT
+    frozen=json.loads(OUT.read_text(encoding="utf-8")); assert frozen==CERT
     print("PASS_4169_4176",CERT["semantic_sha256"])
     return 0
 
