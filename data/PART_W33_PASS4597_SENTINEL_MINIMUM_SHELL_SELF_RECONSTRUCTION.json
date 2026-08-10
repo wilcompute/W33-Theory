@@ -1,0 +1,17 @@
+{
+  "boundary": "Self-reconstruction is a finite code/incidence theorem; coordinate labels remain the point-side W33 carrier, not the inequivalent line-side carrier.",
+  "coordinate_reconstruction": {
+    "cooccurrence_profile": {"1":540,"3":240},
+    "different_from_line_side_Astar": true,
+    "graph": "point-side W33 SRG(40,12,2,4)",
+    "rule": "two coordinates adjacent iff they co-occur in 3 A8 words"
+  },
+  "minimum_shell": {"code":"sentinel ker(N^T)=[40,15,8]","minimum_words":45,"weight":8},
+  "pass": 4597,
+  "row_reconstruction": {
+    "graph": "center-quad/E6 transport SRG(45,32,22,24)",
+    "intersection_profile": {"0":270,"2":720},
+    "rule": "two A8 words adjacent iff support intersection=2"
+  },
+  "theorem": "The complete minimum shell of the W33 sentinel code intrinsically reconstructs both the 45-point center-quad transport graph and the non-self-dual 40-point W33 graph."
+}
