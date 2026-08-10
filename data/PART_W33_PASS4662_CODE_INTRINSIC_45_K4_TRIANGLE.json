@@ -1,0 +1,23 @@
+{
+  "pass": 4662,
+  "code_intrinsic_chain": {
+    "minimum_words": 36,
+    "Jacobi_graph": "SRG(36,15,6,6)",
+    "maximal_K4": 135,
+    "K4_anticompleteness_edges": 135,
+    "K4_anticompleteness_graph": "45 C3",
+    "union_supports": 45,
+    "union_size": 12,
+    "induced_graph_per_union": "3 K4",
+    "external_degree_into_union": 6
+  },
+  "action_bridge": {
+    "PSp_orbit_size": 45,
+    "stabilizer_order": 576,
+    "fixed_protected45_supports": 1,
+    "equivariant_bijection_to_protected45": true,
+    "Pass4616_target": "center-quad/E6-tritangent45"
+  },
+  "theorem": "The protected/E6 45 is reconstructible from the binary code alone. The code-intrinsic 36-minimum-word Jacobi graph has 135 maximal K4s; their anticompleteness graph is exactly 45 disjoint triangles, and each triangle's three K4s unite to one 12-subset of the 36 carrier. The 45 unions form the protected/E6 45 under an explicit PSp-equivariant stabilizer map.",
+  "boundary": "Exact finite code/graph/G-set reconstruction only."
+}
