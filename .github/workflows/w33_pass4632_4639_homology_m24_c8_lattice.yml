@@ -1,0 +1,93 @@
+name: Passes 4632-4639 Homology M24 C8 Lattice
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass463[2-9]*.py'
+      - 'analysis/PASS4632_4639_homology_m24_enumerator_c8_lattice_insert.tex'
+      - 'analysis/PASS4632_4639_homology_m24_enumerator_c8_lattice_index_insert.html'
+      - 'data/PART_W33_PASS463*.json'
+      - 'data/PART_W33_PASS4615_HEXACODE_SECTION_RECONSTRUCTS_MOG_SEXTET.json'
+      - 'docs/paired-axes-homology-m24-lattice.html'
+      - 'tests/test_w33_pass4632_4639_homology_m24_c8_lattice.py'
+      - '.github/workflows/w33_pass4632_4639_homology_m24_c8_lattice.yml'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'holonet_machine_blueprint.tex'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pass4632-4639-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-core:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check numpy pytest
+      - name: Frozen regression first
+        run: pytest -q tests/test_w33_pass4632_4639_homology_m24_c8_lattice.py
+      - name: Recompute module and M24 certificates
+        run: |
+          python analysis/w33_pass4632_periodic_homology_module_separation.py | tee /tmp/pass4632.log
+          python analysis/w33_pass4633_m24_sextet_section_stabilizer.py | tee /tmp/pass4633.log
+      - name: Recompute C8 and Construction-A certificates
+        run: |
+          python analysis/w33_pass4635_c8_six_signature_collision_criterion.py | tee /tmp/pass4635.log
+          python analysis/w33_pass4636_construction_a_golay_leech_obstruction.py | tee /tmp/pass4636.log
+      - name: Recompute three outside-box certificates
+        run: |
+          python analysis/w33_pass4637_sextet_transversal_code_affine_bijection.py | tee /tmp/pass4637.log
+          python analysis/w33_pass4638_golay_glue_tetrad_module.py | tee /tmp/pass4638.log
+          python analysis/w33_pass4639_simplex_double_differential_cancellation.py | tee /tmp/pass4639.log
+      - name: Re-run regression on regenerated outputs
+        run: pytest -q tests/test_w33_pass4632_4639_homology_m24_c8_lattice.py
+      - name: Safe public materializer dry-run
+        run: |
+          mkdir -p evidence/pass4632_4639
+          python tools/integrate_bt3376_bt3389.py --report evidence/pass4632_4639/site.json
+          test "$(grep -c 'id=\"pass4632-4639-homology-m24-c8-lattice\"' docs/index.html)" -eq 1
+          grep -q '2,311,801,440' docs/paired-axes-homology-m24-lattice.html
+      - uses: WtfJoke/setup-tectonic@v3
+        with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
+      - name: Compile canonical manuscripts
+        run: |
+          mkdir -p evidence/pass4632_4639
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass4632_4639/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pass4632-4639-core-evidence
+          path: |
+            evidence/pass4632_4639/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
+  support11-exhaustive:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install NumPy
+        run: python -m pip install --disable-pip-version-check numpy
+      - name: Recompute all 2,311,801,440 support-11 subsets
+        run: python analysis/w33_pass4634_support11_exact.py | tee /tmp/pass4634.log
+      - name: Verify frozen support-11 checksum
+        run: python - <<'PY'
+          import json,math
+          d=json.load(open('data/PART_W33_PASS4634_SUPPORT11_EXACT.json'))
+          assert d['subsets']==math.comb(40,11)==2311801440
+          assert sum(d['spectrum'].values())==2311801440
+          assert len(d['spectrum'])==153
+          PY
